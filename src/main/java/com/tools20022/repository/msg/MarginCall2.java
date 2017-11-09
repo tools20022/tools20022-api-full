@@ -19,10 +19,15 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.colr.MarginCallRequestV04;
 import com.tools20022.repository.choice.ExpectedCollateral2Choice;
 import com.tools20022.repository.choice.MarginRequirement1Choice;
+import com.tools20022.repository.entity.Collateral;
+import com.tools20022.repository.entity.CollateralManagement;
 import com.tools20022.repository.entity.ExpectedCollateralType;
 import com.tools20022.repository.entity.MarginCall;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -128,11 +133,11 @@ public class MarginCall2 {
 	 */
 	public static final MMMessageAssociationEnd mmCollateralAccountIdentification = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Collateral.mmCollateralAccount;
+			businessElementTrace_lazy = () -> Collateral.mmCollateralAccount;
 			componentContext_lazy = () -> MarginCall2.mmObject();
 			isDerived = false;
 			xmlTag = "CollAcctId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralAccountIdentification";
 			definition = "Provides additional information on the collateral account of the party delivering/receiving the collateral.";
 			maxOccurs = 1;
@@ -182,7 +187,7 @@ public class MarginCall2 {
 			componentContext_lazy = () -> MarginCall2.mmObject();
 			isDerived = false;
 			xmlTag = "MrgnCallRslt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarginCallResult";
 			definition = "Summation of the call amounts per margin type. It is provided for the purposes of carrying forward for future messages that are used to compare the margin call results to determine whether a call is agreed or full/partially disputed.";
 			maxOccurs = 1;
@@ -230,7 +235,7 @@ public class MarginCall2 {
 			componentContext_lazy = () -> MarginCall2.mmObject();
 			isDerived = false;
 			xmlTag = "MrgnDtlDueToA";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarginDetailDueToA";
 			definition = "Provides details about the margin calculation that would be due to party A.";
 			maxOccurs = 1;
@@ -278,7 +283,7 @@ public class MarginCall2 {
 			componentContext_lazy = () -> MarginCall2.mmObject();
 			isDerived = false;
 			xmlTag = "MrgnDtlDueToB";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarginDetailDueToB";
 			definition = "Provides details about the margin calculation that would be due to party B.";
 			maxOccurs = 1;
@@ -324,11 +329,11 @@ public class MarginCall2 {
 	 */
 	public static final MMMessageAssociationEnd mmRequirementDetailsDueToA = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CollateralManagement.mmRiskToCover;
+			businessElementTrace_lazy = () -> CollateralManagement.mmRiskToCover;
 			componentContext_lazy = () -> MarginCall2.mmObject();
 			isDerived = false;
 			xmlTag = "RqrmntDtlsDueToA";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequirementDetailsDueToA";
 			definition = "Amount of expected margin that will be either delivered to party A by party B or recalled to party A from party B.";
 			maxOccurs = 1;
@@ -374,11 +379,11 @@ public class MarginCall2 {
 	 */
 	public static final MMMessageAssociationEnd mmRequirementDetailsDueToB = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CollateralManagement.mmRiskToCover;
+			businessElementTrace_lazy = () -> CollateralManagement.mmRiskToCover;
 			componentContext_lazy = () -> MarginCall2.mmObject();
 			isDerived = false;
 			xmlTag = "RqrmntDtlsDueToB";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequirementDetailsDueToB";
 			definition = "Amount of expected margin that will be either delivered to party B by party A or recalled to party B from party A.";
 			maxOccurs = 1;
@@ -428,7 +433,7 @@ public class MarginCall2 {
 			componentContext_lazy = () -> MarginCall2.mmObject();
 			isDerived = false;
 			xmlTag = "XpctdCollDueToA";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExpectedCollateralDueToA";
 			definition = "Provides details about the type of collateral that will be either delivered to party A by party B or recalled to party A from party B.";
 			maxOccurs = 1;
@@ -478,7 +483,7 @@ public class MarginCall2 {
 			componentContext_lazy = () -> MarginCall2.mmObject();
 			isDerived = false;
 			xmlTag = "XpctdCollDueToB";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExpectedCollateralDueToB";
 			definition = "Provides details about the type of collateral that will be either delivered to party B by party A or recalled to party B from party A.";
 			maxOccurs = 1;
@@ -491,13 +496,12 @@ public class MarginCall2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MarginCall2.mmCollateralAccountIdentification, com.tools20022.repository.msg.MarginCall2.mmMarginCallResult,
-						com.tools20022.repository.msg.MarginCall2.mmMarginDetailDueToA, com.tools20022.repository.msg.MarginCall2.mmMarginDetailDueToB, com.tools20022.repository.msg.MarginCall2.mmRequirementDetailsDueToA,
-						com.tools20022.repository.msg.MarginCall2.mmRequirementDetailsDueToB, com.tools20022.repository.msg.MarginCall2.mmExpectedCollateralDueToA, com.tools20022.repository.msg.MarginCall2.mmExpectedCollateralDueToB);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.colr.MarginCallRequestV04.mmMarginCallDetails);
+				messageElement_lazy = () -> Arrays.asList(MarginCall2.mmCollateralAccountIdentification, MarginCall2.mmMarginCallResult, MarginCall2.mmMarginDetailDueToA, MarginCall2.mmMarginDetailDueToB,
+						MarginCall2.mmRequirementDetailsDueToA, MarginCall2.mmRequirementDetailsDueToB, MarginCall2.mmExpectedCollateralDueToA, MarginCall2.mmExpectedCollateralDueToB);
+				messageBuildingBlock_lazy = () -> Arrays.asList(MarginCallRequestV04.mmMarginCallDetails);
 				trace_lazy = () -> MarginCall.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MarginCall2";
 				definition = "Specifies the calculation and the resulting margin and independent amount needed to cover the risk exposure of one party versus another.";
 			}

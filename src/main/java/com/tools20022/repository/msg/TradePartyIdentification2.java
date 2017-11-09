@@ -20,12 +20,14 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.PartyIdentification7Choice;
 import com.tools20022.repository.codeset.OptionParty1Code;
 import com.tools20022.repository.datatype.BICIdentifier;
 import com.tools20022.repository.entity.SubmittingPartyRole;
 import com.tools20022.repository.entity.TradePartyRole;
 import com.tools20022.repository.entity.TreasuryTradingParty;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -109,11 +111,11 @@ public class TradePartyIdentification2 {
 	 */
 	public static final MMMessageAttribute mmRole = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradePartyRole.mmBuyerOrSeller;
+			businessElementTrace_lazy = () -> TradePartyRole.mmBuyerOrSeller;
 			componentContext_lazy = () -> TradePartyIdentification2.mmObject();
 			isDerived = false;
 			xmlTag = "Role";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Role";
 			definition = "Specifies the party which is the buyer or the seller.";
 			maxOccurs = 1;
@@ -164,7 +166,7 @@ public class TradePartyIdentification2 {
 			componentContext_lazy = () -> TradePartyIdentification2.mmObject();
 			isDerived = false;
 			xmlTag = "SubmitgPty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubmittingParty";
 			definition = "Party that negotiates and executes treasury transactions on behalf of the counterparty.";
 			maxOccurs = 1;
@@ -207,11 +209,11 @@ public class TradePartyIdentification2 {
 	 */
 	public static final MMMessageAssociationEnd mmFundInformation = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TreasuryTradingParty.mmInvestmentFund;
+			businessElementTrace_lazy = () -> TreasuryTradingParty.mmInvestmentFund;
 			componentContext_lazy = () -> TradePartyIdentification2.mmObject();
 			isDerived = false;
 			xmlTag = "FndInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FundInformation";
 			definition = "Identifies the fund which is one of the parties in a treasury trade.";
 			maxOccurs = 1;
@@ -262,7 +264,7 @@ public class TradePartyIdentification2 {
 			componentContext_lazy = () -> TradePartyIdentification2.mmObject();
 			isDerived = false;
 			xmlTag = "TradPty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeParty";
 			definition = "Specifies the party which originated a treasury trade. This party may be the same as the submitting party.";
 			maxOccurs = 1;
@@ -275,11 +277,10 @@ public class TradePartyIdentification2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TradePartyIdentification2.mmRole, com.tools20022.repository.msg.TradePartyIdentification2.mmSubmittingParty,
-						com.tools20022.repository.msg.TradePartyIdentification2.mmFundInformation, com.tools20022.repository.msg.TradePartyIdentification2.mmTradeParty);
+				messageElement_lazy = () -> Arrays.asList(TradePartyIdentification2.mmRole, TradePartyIdentification2.mmSubmittingParty, TradePartyIdentification2.mmFundInformation, TradePartyIdentification2.mmTradeParty);
 				trace_lazy = () -> TradePartyRole.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "TradePartyIdentification2";
 				definition = "Entity involved in an activity.";
 			}

@@ -19,7 +19,10 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.entity.PaymentPartyRole;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -97,11 +100,11 @@ public class CashParties23 {
 	 */
 	public static final MMMessageAssociationEnd mmCreditor = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> CashParties23.mmObject();
 			isDerived = false;
 			xmlTag = "Cdtr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Creditor";
 			definition = "Party to which an amount of money is due.";
 			maxOccurs = 1;
@@ -145,11 +148,11 @@ public class CashParties23 {
 	 */
 	public static final MMMessageAssociationEnd mmCreditorAgent = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> CashParties23.mmObject();
 			isDerived = false;
 			xmlTag = "CdtrAgt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditorAgent";
 			definition = "Financial institution servicing an account for the creditor.";
 			maxOccurs = 1;
@@ -195,11 +198,11 @@ public class CashParties23 {
 	 */
 	public static final MMMessageAssociationEnd mmMarketClaimCounterparty = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> CashParties23.mmObject();
 			isDerived = false;
 			xmlTag = "MktClmCtrPty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketClaimCounterparty";
 			definition = "Party that has reimbursed the account owner with funds to which they were legally entitled.";
 			maxOccurs = 1;
@@ -212,11 +215,10 @@ public class CashParties23 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashParties23.mmCreditor, com.tools20022.repository.msg.CashParties23.mmCreditorAgent,
-						com.tools20022.repository.msg.CashParties23.mmMarketClaimCounterparty);
+				messageElement_lazy = () -> Arrays.asList(CashParties23.mmCreditor, CashParties23.mmCreditorAgent, CashParties23.mmMarketClaimCounterparty);
 				trace_lazy = () -> PaymentPartyRole.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CashParties23";
 				definition = "Specifies cash parties in the framework of a corporate action event.";
 			}

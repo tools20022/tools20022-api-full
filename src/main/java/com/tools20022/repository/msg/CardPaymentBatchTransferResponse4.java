@@ -19,6 +19,9 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.caaa.AcceptorBatchTransferResponseV05;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -129,11 +132,11 @@ public class CardPaymentBatchTransferResponse4 {
 			componentContext_lazy = () -> CardPaymentBatchTransferResponse4.mmObject();
 			isDerived = false;
 			xmlTag = "TxTtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionTotals";
 			definition = "Totals of transactions of all the data sets.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardPaymentBatchTransferResponse5.mmTransactionTotals);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CardPaymentBatchTransferResponse3.mmTransactionTotals;
+			nextVersions_lazy = () -> Arrays.asList(CardPaymentBatchTransferResponse5.mmTransactionTotals);
+			previousVersion_lazy = () -> CardPaymentBatchTransferResponse3.mmTransactionTotals;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.TransactionTotals7.mmObject();
 		}
@@ -186,11 +189,11 @@ public class CardPaymentBatchTransferResponse4 {
 			componentContext_lazy = () -> CardPaymentBatchTransferResponse4.mmObject();
 			isDerived = false;
 			xmlTag = "DataSet";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DataSet";
 			definition = "Information related to the previously sent set of transaction.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardPaymentBatchTransferResponse5.mmDataSet);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CardPaymentBatchTransferResponse3.mmDataSet;
+			nextVersions_lazy = () -> Arrays.asList(CardPaymentBatchTransferResponse5.mmDataSet);
+			previousVersion_lazy = () -> CardPaymentBatchTransferResponse3.mmDataSet;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.CardPaymentDataSet14.mmObject();
 		}
@@ -199,10 +202,10 @@ public class CardPaymentBatchTransferResponse4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardPaymentBatchTransferResponse4.mmTransactionTotals, com.tools20022.repository.msg.CardPaymentBatchTransferResponse4.mmDataSet);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.caaa.AcceptorBatchTransferResponseV05.mmBatchTransferResponse);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(CardPaymentBatchTransferResponse4.mmTransactionTotals, CardPaymentBatchTransferResponse4.mmDataSet);
+				messageBuildingBlock_lazy = () -> Arrays.asList(AcceptorBatchTransferResponseV05.mmBatchTransferResponse);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CardPaymentBatchTransferResponse4";
 				definition = "Status of the transactions sent in a previous batch of card payment transactions.";
 				nextVersions_lazy = () -> Arrays.asList(CardPaymentBatchTransferResponse5.mmObject());

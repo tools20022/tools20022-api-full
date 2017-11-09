@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.MarginTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -112,7 +114,7 @@ public class MarginType1Code extends MarginTypeCode {
 	 */
 	public static final MMCode mmSettlementRiskMargin = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementRiskMargin";
 			owner_lazy = () -> MarginType1Code.mmObject();
 		}
@@ -135,7 +137,7 @@ public class MarginType1Code extends MarginTypeCode {
 	 */
 	public static final MMCode mmAdditionalDefaultFundMargin = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDefaultFundMargin";
 			owner_lazy = () -> MarginType1Code.mmObject();
 		}
@@ -158,7 +160,7 @@ public class MarginType1Code extends MarginTypeCode {
 	 */
 	public static final MMCode mmShortChargeMargin = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ShortChargeMargin";
 			owner_lazy = () -> MarginType1Code.mmObject();
 		}
@@ -181,7 +183,7 @@ public class MarginType1Code extends MarginTypeCode {
 	 */
 	public static final MMCode mmCouponMargin = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CouponMargin";
 			owner_lazy = () -> MarginType1Code.mmObject();
 		}
@@ -204,7 +206,7 @@ public class MarginType1Code extends MarginTypeCode {
 	 */
 	public static final MMCode mmUpfrontMargin = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UpfrontMargin";
 			owner_lazy = () -> MarginType1Code.mmObject();
 		}
@@ -227,7 +229,7 @@ public class MarginType1Code extends MarginTypeCode {
 	 */
 	public static final MMCode mmCreditEventMargin = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditEventMargin";
 			owner_lazy = () -> MarginType1Code.mmObject();
 		}
@@ -250,7 +252,7 @@ public class MarginType1Code extends MarginTypeCode {
 	 */
 	public static final MMCode mmInitialDeposit = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InitialDeposit";
 			owner_lazy = () -> MarginType1Code.mmObject();
 		}
@@ -273,7 +275,7 @@ public class MarginType1Code extends MarginTypeCode {
 	 */
 	public static final MMCode mmNegociationMargin = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NegociationMargin";
 			owner_lazy = () -> MarginType1Code.mmObject();
 		}
@@ -296,7 +298,7 @@ public class MarginType1Code extends MarginTypeCode {
 	 */
 	public static final MMCode mmInitialMargin = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InitialMargin";
 			owner_lazy = () -> MarginType1Code.mmObject();
 		}
@@ -319,7 +321,7 @@ public class MarginType1Code extends MarginTypeCode {
 	 */
 	public static final MMCode mmVariationMargin = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VariationMargin";
 			owner_lazy = () -> MarginType1Code.mmObject();
 		}
@@ -342,7 +344,7 @@ public class MarginType1Code extends MarginTypeCode {
 	 */
 	public static final MMCode mmIncreaseCoverageAmount = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncreaseCoverageAmount";
 			owner_lazy = () -> MarginType1Code.mmObject();
 		}
@@ -351,15 +353,14 @@ public class MarginType1Code extends MarginTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("SEMA");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MarginType1Code";
 				definition = "Indicates the type of margin, for example, initial margin, variation margin, initial deposit or coupon margin.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MarginType1Code.mmSettlementRiskMargin, com.tools20022.repository.codeset.MarginType1Code.mmAdditionalDefaultFundMargin,
-						com.tools20022.repository.codeset.MarginType1Code.mmShortChargeMargin, com.tools20022.repository.codeset.MarginType1Code.mmCouponMargin, com.tools20022.repository.codeset.MarginType1Code.mmUpfrontMargin,
-						com.tools20022.repository.codeset.MarginType1Code.mmCreditEventMargin, com.tools20022.repository.codeset.MarginType1Code.mmInitialDeposit, com.tools20022.repository.codeset.MarginType1Code.mmNegociationMargin,
-						com.tools20022.repository.codeset.MarginType1Code.mmInitialMargin, com.tools20022.repository.codeset.MarginType1Code.mmVariationMargin, com.tools20022.repository.codeset.MarginType1Code.mmIncreaseCoverageAmount);
+				code_lazy = () -> Arrays.asList(MarginType1Code.mmSettlementRiskMargin, MarginType1Code.mmAdditionalDefaultFundMargin, MarginType1Code.mmShortChargeMargin, MarginType1Code.mmCouponMargin, MarginType1Code.mmUpfrontMargin,
+						MarginType1Code.mmCreditEventMargin, MarginType1Code.mmInitialDeposit, MarginType1Code.mmNegociationMargin, MarginType1Code.mmInitialMargin, MarginType1Code.mmVariationMargin,
+						MarginType1Code.mmIncreaseCoverageAmount);
 				trace_lazy = () -> MarginTypeCode.mmObject();
 			}
 		});

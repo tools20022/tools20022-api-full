@@ -19,9 +19,12 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.reda.NettingCutOffReferenceDataReportV01;
 import com.tools20022.repository.choice.PartyIdentification73Choice;
 import com.tools20022.repository.entity.ClearingMemberRole;
 import com.tools20022.repository.entity.Netting;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -113,7 +116,7 @@ public class CutOffData1 {
 			componentContext_lazy = () -> CutOffData1.mmObject();
 			isDerived = false;
 			xmlTag = "PtcptId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ParticipantIdentification";
 			definition = "Describes the participant receiving the net report.";
 			maxOccurs = 1;
@@ -159,7 +162,7 @@ public class CutOffData1 {
 			componentContext_lazy = () -> CutOffData1.mmObject();
 			isDerived = false;
 			xmlTag = "NetgCutOffDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NettingCutOffDetails";
 			definition = "Specifies the information regarding the updated netting cut off.";
 			minOccurs = 1;
@@ -171,11 +174,11 @@ public class CutOffData1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CutOffData1.mmParticipantIdentification, com.tools20022.repository.msg.CutOffData1.mmNettingCutOffDetails);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.reda.NettingCutOffReferenceDataReportV01.mmParticipantNettingCutOffData);
+				messageElement_lazy = () -> Arrays.asList(CutOffData1.mmParticipantIdentification, CutOffData1.mmNettingCutOffDetails);
+				messageBuildingBlock_lazy = () -> Arrays.asList(NettingCutOffReferenceDataReportV01.mmParticipantNettingCutOffData);
 				trace_lazy = () -> Netting.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CutOffData1";
 				definition = "Contains the new, current and previous cut offs for a netting cut off held at the central system.";
 			}

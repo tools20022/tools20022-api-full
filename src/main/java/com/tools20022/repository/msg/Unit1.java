@@ -20,10 +20,15 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.UKTaxGroupUnitCode;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.entity.SecuritiesCertificate;
+import com.tools20022.repository.entity.SecuritiesEntry;
 import com.tools20022.repository.entity.SecuritiesQuantity;
+import com.tools20022.repository.entity.Security;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -105,11 +110,11 @@ public class Unit1 {
 	 */
 	public static final MMMessageAttribute mmUnitsNumber = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmUnit;
+			businessElementTrace_lazy = () -> SecuritiesQuantity.mmUnit;
 			componentContext_lazy = () -> Unit1.mmObject();
 			isDerived = false;
 			xmlTag = "UnitsNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnitsNumber";
 			definition = "Total quantity of securities to be settled.";
 			maxOccurs = 1;
@@ -152,11 +157,11 @@ public class Unit1 {
 	 */
 	public static final MMMessageAttribute mmAcquisitionDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesEntry.mmAcquisitionDate;
+			businessElementTrace_lazy = () -> SecuritiesEntry.mmAcquisitionDate;
 			componentContext_lazy = () -> Unit1.mmObject();
 			isDerived = false;
 			xmlTag = "AcqstnDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcquisitionDate";
 			definition = "Date upon which the investor purchased the financial instrument.";
 			maxOccurs = 1;
@@ -198,11 +203,11 @@ public class Unit1 {
 	 */
 	public static final MMMessageAttribute mmCertificateNumber = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesCertificate.mmNumber;
+			businessElementTrace_lazy = () -> SecuritiesCertificate.mmNumber;
 			componentContext_lazy = () -> Unit1.mmObject();
 			isDerived = false;
 			xmlTag = "CertNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CertificateNumber";
 			definition = "Certificate representing the security that is delivered.";
 			minOccurs = 0;
@@ -248,11 +253,11 @@ public class Unit1 {
 	 */
 	public static final MMMessageAttribute mmGroup1Or2Units = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmGroup1Or2Units;
+			businessElementTrace_lazy = () -> SecuritiesQuantity.mmGroup1Or2Units;
 			componentContext_lazy = () -> Unit1.mmObject();
 			isDerived = false;
 			xmlTag = "Grp1Or2Units";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Group1Or2Units";
 			definition = "Tax group to which the purchased investment fund units belong. The investor indicates to the intermediary operating pooled nominees, which type of unit is to be sold.";
 			maxOccurs = 1;
@@ -293,11 +298,11 @@ public class Unit1 {
 	 */
 	public static final MMMessageAssociationEnd mmPriceDetails = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmPricing;
+			businessElementTrace_lazy = () -> Security.mmPricing;
 			componentContext_lazy = () -> Unit1.mmObject();
 			isDerived = false;
 			xmlTag = "PricDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PriceDetails";
 			definition = "Information related to the price of the transferred units.";
 			maxOccurs = 1;
@@ -310,11 +315,10 @@ public class Unit1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Unit1.mmUnitsNumber, com.tools20022.repository.msg.Unit1.mmAcquisitionDate, com.tools20022.repository.msg.Unit1.mmCertificateNumber,
-						com.tools20022.repository.msg.Unit1.mmGroup1Or2Units, com.tools20022.repository.msg.Unit1.mmPriceDetails);
+				messageElement_lazy = () -> Arrays.asList(Unit1.mmUnitsNumber, Unit1.mmAcquisitionDate, Unit1.mmCertificateNumber, Unit1.mmGroup1Or2Units, Unit1.mmPriceDetails);
 				trace_lazy = () -> SecuritiesQuantity.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Unit1";
 				definition = "Information about the units to settle.";
 			}

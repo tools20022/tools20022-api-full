@@ -20,8 +20,11 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ExternalPendingProcessingReason1Code;
 import com.tools20022.repository.entity.SecuritiesTradeStatusReason;
+import com.tools20022.repository.entity.StatusReason;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification36;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -102,11 +105,11 @@ public class PendingProcessingReason8Choice {
 	 */
 	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmAcknowledgedAcceptedReason;
+			businessElementTrace_lazy = () -> StatusReason.mmAcknowledgedAcceptedReason;
 			componentContext_lazy = () -> PendingProcessingReason8Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Cd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Reason for the pending status expressed as an ISO 20022 code.";
 			maxOccurs = 1;
@@ -148,7 +151,7 @@ public class PendingProcessingReason8Choice {
 			componentContext_lazy = () -> PendingProcessingReason8Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Reason for the pending status expressed as a proprietary code.";
 			maxOccurs = 1;
@@ -161,10 +164,10 @@ public class PendingProcessingReason8Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PendingProcessingReason8Choice.mmCode, com.tools20022.repository.choice.PendingProcessingReason8Choice.mmProprietary);
+				messageElement_lazy = () -> Arrays.asList(PendingProcessingReason8Choice.mmCode, PendingProcessingReason8Choice.mmProprietary);
 				trace_lazy = () -> SecuritiesTradeStatusReason.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PendingProcessingReason8Choice";
 				definition = "Choice of formats for the reason of a pending status.";
 			}

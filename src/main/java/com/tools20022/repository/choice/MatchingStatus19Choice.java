@@ -19,7 +19,11 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.sese.SecuritiesSettlementTransactionStatusAdviceV05;
+import com.tools20022.repository.area.sese.SecuritiesSettlementTransactionStatusAdviceV06;
 import com.tools20022.repository.entity.SecuritiesTradeStatus;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.ProprietaryReason1;
 import com.tools20022.repository.msg.ProprietaryStatusAndReason1;
 import java.util.Arrays;
@@ -142,15 +146,15 @@ public class MatchingStatus19Choice {
 	 */
 	public static final MMMessageAssociationEnd mmMatched = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeStatus.mmMatchingStatus;
+			businessElementTrace_lazy = () -> SecuritiesTradeStatus.mmMatchingStatus;
 			componentContext_lazy = () -> MatchingStatus19Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Mtchd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Matched";
 			definition = "Status is matched.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.MatchingStatus24Choice.mmMatched);
-			previousVersion_lazy = () -> com.tools20022.repository.choice.MatchingStatus7Choice.mmMatched;
+			nextVersions_lazy = () -> Arrays.asList(MatchingStatus24Choice.mmMatched);
+			previousVersion_lazy = () -> MatchingStatus7Choice.mmMatched;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -205,15 +209,15 @@ public class MatchingStatus19Choice {
 	 */
 	public static final MMMessageAssociationEnd mmUnmatched = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeStatus.mmReason;
+			businessElementTrace_lazy = () -> SecuritiesTradeStatus.mmReason;
 			componentContext_lazy = () -> MatchingStatus19Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Umtchd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unmatched";
 			definition = "Status is unmatched.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.MatchingStatus24Choice.mmUnmatched);
-			previousVersion_lazy = () -> com.tools20022.repository.choice.MatchingStatus7Choice.mmUnmatched;
+			nextVersions_lazy = () -> Arrays.asList(MatchingStatus24Choice.mmUnmatched);
+			previousVersion_lazy = () -> MatchingStatus7Choice.mmUnmatched;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -272,11 +276,11 @@ public class MatchingStatus19Choice {
 			componentContext_lazy = () -> MatchingStatus19Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Proprietary status.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.MatchingStatus24Choice.mmProprietary);
-			previousVersion_lazy = () -> com.tools20022.repository.choice.MatchingStatus7Choice.mmProprietary;
+			nextVersions_lazy = () -> Arrays.asList(MatchingStatus24Choice.mmProprietary);
+			previousVersion_lazy = () -> MatchingStatus7Choice.mmProprietary;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -287,14 +291,12 @@ public class MatchingStatus19Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.MatchingStatus19Choice.mmMatched, com.tools20022.repository.choice.MatchingStatus19Choice.mmUnmatched,
-						com.tools20022.repository.choice.MatchingStatus19Choice.mmProprietary);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesSettlementTransactionStatusAdviceV05.mmInferredMatchingStatus,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionStatusAdviceV05.mmMatchingStatus, com.tools20022.repository.area.sese.SecuritiesSettlementTransactionStatusAdviceV06.mmInferredMatchingStatus,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionStatusAdviceV06.mmMatchingStatus);
+				messageElement_lazy = () -> Arrays.asList(MatchingStatus19Choice.mmMatched, MatchingStatus19Choice.mmUnmatched, MatchingStatus19Choice.mmProprietary);
+				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesSettlementTransactionStatusAdviceV05.mmInferredMatchingStatus, SecuritiesSettlementTransactionStatusAdviceV05.mmMatchingStatus,
+						SecuritiesSettlementTransactionStatusAdviceV06.mmInferredMatchingStatus, SecuritiesSettlementTransactionStatusAdviceV06.mmMatchingStatus);
 				trace_lazy = () -> SecuritiesTradeStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MatchingStatus19Choice";
 				definition = "Choice of format for the matching status.";
 				nextVersions_lazy = () -> Arrays.asList(MatchingStatus24Choice.mmObject());

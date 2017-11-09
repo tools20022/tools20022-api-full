@@ -20,9 +20,11 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.PartyIdentification111Choice;
 import com.tools20022.repository.datatype.RestrictedFINXMax16Text;
 import com.tools20022.repository.entity.PartyIdentificationInformation;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -123,10 +125,10 @@ public class PartyIdentification102 {
 			componentContext_lazy = () -> PartyIdentification102.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Identification of a party.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyIdentification120.mmIdentification);
+			nextVersions_lazy = () -> Arrays.asList(PartyIdentification120.mmIdentification);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -175,10 +177,10 @@ public class PartyIdentification102 {
 			componentContext_lazy = () -> PartyIdentification102.mmObject();
 			isDerived = false;
 			xmlTag = "PrcgId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProcessingIdentification";
 			definition = "Reference meaningful to the party identified.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyIdentification120.mmProcessingIdentification);
+			nextVersions_lazy = () -> Arrays.asList(PartyIdentification120.mmProcessingIdentification);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINXMax16Text.mmObject();
@@ -234,10 +236,10 @@ public class PartyIdentification102 {
 			componentContext_lazy = () -> PartyIdentification102.mmObject();
 			isDerived = false;
 			xmlTag = "AltrnId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AlternateIdentification";
 			definition = "Provides alternate identification for a party using an id type, a country code and a text field.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyIdentification120.mmAlternateIdentification);
+			nextVersions_lazy = () -> Arrays.asList(PartyIdentification120.mmAlternateIdentification);
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.AlternatePartyIdentification9.mmObject();
@@ -247,11 +249,10 @@ public class PartyIdentification102 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyIdentification102.mmIdentification, com.tools20022.repository.msg.PartyIdentification102.mmProcessingIdentification,
-						com.tools20022.repository.msg.PartyIdentification102.mmAlternateIdentification);
+				messageElement_lazy = () -> Arrays.asList(PartyIdentification102.mmIdentification, PartyIdentification102.mmProcessingIdentification, PartyIdentification102.mmAlternateIdentification);
 				trace_lazy = () -> PartyIdentificationInformation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PartyIdentification102";
 				definition = "Provides information about identification of the party .";
 				nextVersions_lazy = () -> Arrays.asList(PartyIdentification120.mmObject());

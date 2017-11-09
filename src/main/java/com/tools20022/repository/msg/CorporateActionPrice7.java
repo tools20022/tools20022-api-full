@@ -19,10 +19,13 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.PriceFormat12Choice;
 import com.tools20022.repository.choice.PriceFormat13Choice;
 import com.tools20022.repository.choice.PriceFormat17Choice;
 import com.tools20022.repository.entity.CorporateActionPrice;
+import com.tools20022.repository.entity.SecuritiesTax;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -117,11 +120,11 @@ public class CorporateActionPrice7 {
 	 */
 	public static final MMMessageAssociationEnd mmExercisePrice = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionPrice.mmCorporateActionExercisePrice;
+			businessElementTrace_lazy = () -> CorporateActionPrice.mmCorporateActionExercisePrice;
 			componentContext_lazy = () -> CorporateActionPrice7.mmObject();
 			isDerived = false;
 			xmlTag = "ExrcPric";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExercisePrice";
 			definition = "1. Price at which security will be purchased/sold if warrant is exercised, either as an actual amount or a percentage.\n2. Price at which a bond is converted to underlying security either as an actual amount or a percentage.\n3. Strike price of an option, represented either as an actual amount, a percentage or a number of points above an index.";
 			maxOccurs = 1;
@@ -167,11 +170,11 @@ public class CorporateActionPrice7 {
 	 */
 	public static final MMMessageAssociationEnd mmGenericCashPriceReceivedPerProduct = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionPrice.mmGenericCashPriceReceivedPerProduct;
+			businessElementTrace_lazy = () -> CorporateActionPrice.mmGenericCashPriceReceivedPerProduct;
 			componentContext_lazy = () -> CorporateActionPrice7.mmObject();
 			isDerived = false;
 			xmlTag = "GncCshPricRcvdPerPdct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GenericCashPriceReceivedPerProduct";
 			definition = "Generic cash price received per product by the underlying security holder either as a percentage or an amount, for example, redemption price.";
 			minOccurs = 0;
@@ -216,11 +219,11 @@ public class CorporateActionPrice7 {
 	 */
 	public static final MMMessageAssociationEnd mmGenericCashPricePaidPerProduct = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionPrice.mmGenericCashPricePaidPerProduct;
+			businessElementTrace_lazy = () -> CorporateActionPrice.mmGenericCashPricePaidPerProduct;
 			componentContext_lazy = () -> CorporateActionPrice7.mmObject();
 			isDerived = false;
 			xmlTag = "GncCshPricPdPerPdct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GenericCashPricePaidPerProduct";
 			definition = "Generic cash price paid per product by the underlying security holder either as a percentage or an amount, for example, reinvestment price.";
 			maxOccurs = 1;
@@ -267,11 +270,11 @@ public class CorporateActionPrice7 {
 	 */
 	public static final MMMessageAssociationEnd mmTaxableIncomePerDividendShare = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTax.mmTaxableIncomePerDividendShare;
+			businessElementTrace_lazy = () -> SecuritiesTax.mmTaxableIncomePerDividendShare;
 			componentContext_lazy = () -> CorporateActionPrice7.mmObject();
 			isDerived = false;
 			xmlTag = "TaxblIncmPerDvddShr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxableIncomePerDividendShare";
 			definition = "Amount included in the dividend/NAV that is identified as gains directly or indirectly derived from interest payments within the scope of the EU Savings directive.";
 			maxOccurs = 1;
@@ -317,11 +320,11 @@ public class CorporateActionPrice7 {
 	 */
 	public static final MMMessageAssociationEnd mmCashInLieuOfSharePrice = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionPrice.mmCashInLieuOfSharePrice;
+			businessElementTrace_lazy = () -> CorporateActionPrice.mmCashInLieuOfSharePrice;
 			componentContext_lazy = () -> CorporateActionPrice7.mmObject();
 			isDerived = false;
 			xmlTag = "CshInLieuOfShrPric";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashInLieuOfSharePrice";
 			definition = "Cash disbursement in lieu of equities; usually in lieu of fractional quantity.";
 			maxOccurs = 1;
@@ -367,11 +370,11 @@ public class CorporateActionPrice7 {
 	 */
 	public static final MMMessageAssociationEnd mmOverSubscriptionDepositPrice = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionPrice.mmOverSubscriptionDepositPrice;
+			businessElementTrace_lazy = () -> CorporateActionPrice.mmOverSubscriptionDepositPrice;
 			componentContext_lazy = () -> CorporateActionPrice7.mmObject();
 			isDerived = false;
 			xmlTag = "OverSbcptDpstPric";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OverSubscriptionDepositPrice";
 			definition = "Amount of money required per over-subscribed equity as defined by the issuer.";
 			maxOccurs = 1;
@@ -384,12 +387,11 @@ public class CorporateActionPrice7 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionPrice7.mmExercisePrice, com.tools20022.repository.msg.CorporateActionPrice7.mmGenericCashPriceReceivedPerProduct,
-						com.tools20022.repository.msg.CorporateActionPrice7.mmGenericCashPricePaidPerProduct, com.tools20022.repository.msg.CorporateActionPrice7.mmTaxableIncomePerDividendShare,
-						com.tools20022.repository.msg.CorporateActionPrice7.mmCashInLieuOfSharePrice, com.tools20022.repository.msg.CorporateActionPrice7.mmOverSubscriptionDepositPrice);
+				messageElement_lazy = () -> Arrays.asList(CorporateActionPrice7.mmExercisePrice, CorporateActionPrice7.mmGenericCashPriceReceivedPerProduct, CorporateActionPrice7.mmGenericCashPricePaidPerProduct,
+						CorporateActionPrice7.mmTaxableIncomePerDividendShare, CorporateActionPrice7.mmCashInLieuOfSharePrice, CorporateActionPrice7.mmOverSubscriptionDepositPrice);
 				trace_lazy = () -> CorporateActionPrice.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionPrice7";
 				definition = "Specifies prices.";
 			}

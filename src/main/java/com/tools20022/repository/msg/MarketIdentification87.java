@@ -20,9 +20,11 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.ClassificationType1Choice;
 import com.tools20022.repository.choice.Purpose3Choice;
 import com.tools20022.repository.codeset.CountryCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -98,7 +100,7 @@ public class MarketIdentification87 {
 			componentContext_lazy = () -> MarketIdentification87.mmObject();
 			isDerived = false;
 			xmlTag = "Ctry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Country";
 			definition = "Country in which the financial instrument is to be settled. ";
 			maxOccurs = 1;
@@ -139,7 +141,7 @@ public class MarketIdentification87 {
 			componentContext_lazy = () -> MarketIdentification87.mmObject();
 			isDerived = false;
 			xmlTag = "ClssfctnTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClassificationType";
 			definition = "Type of instrument covered by the SSI instruction.";
 			maxOccurs = 1;
@@ -184,7 +186,7 @@ public class MarketIdentification87 {
 			componentContext_lazy = () -> MarketIdentification87.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmPurp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementPurpose";
 			definition = "Purpose of the instruction,  for example, whether for regular payments, margin payments related to a collateral movement, securities settlements , securities lending. ";
 			maxOccurs = 1;
@@ -197,10 +199,9 @@ public class MarketIdentification87 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MarketIdentification87.mmCountry, com.tools20022.repository.msg.MarketIdentification87.mmClassificationType,
-						com.tools20022.repository.msg.MarketIdentification87.mmSettlementPurpose);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(MarketIdentification87.mmCountry, MarketIdentification87.mmClassificationType, MarketIdentification87.mmSettlementPurpose);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MarketIdentification87";
 				definition = "Identifies the market and purpose for the settlement. ";
 			}

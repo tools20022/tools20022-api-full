@@ -19,8 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.seev.MeetingNotificationV05;
 import com.tools20022.repository.codeset.NotificationStatus2Code;
 import com.tools20022.repository.entity.MeetingStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -118,14 +121,14 @@ public class NotificationStatus2 {
 	 */
 	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.MeetingStatus.mmNotificationStatus;
+			businessElementTrace_lazy = () -> MeetingStatus.mmNotificationStatus;
 			componentContext_lazy = () -> NotificationStatus2.mmObject();
 			isDerived = false;
 			xmlTag = "Sts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Status";
 			definition = "Status to define if the occurrence of the event contained in the notification is confirmed or unconfirmed.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.NotificationStatus1.mmStatus;
+			previousVersion_lazy = () -> NotificationStatus1.mmStatus;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> NotificationStatus2Code.mmObject();
@@ -135,11 +138,11 @@ public class NotificationStatus2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.NotificationStatus2.mmStatus);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.MeetingNotificationV05.mmNotificationStatus);
+				messageElement_lazy = () -> Arrays.asList(NotificationStatus2.mmStatus);
+				messageBuildingBlock_lazy = () -> Arrays.asList(MeetingNotificationV05.mmNotificationStatus);
 				trace_lazy = () -> MeetingStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "NotificationStatus2";
 				definition = "Specifies if the occurrence of the event contained in the notification is confirmed or unconfirmed. Details of the event can be complete or incomplete.";
 				previousVersion_lazy = () -> NotificationStatus1.mmObject();

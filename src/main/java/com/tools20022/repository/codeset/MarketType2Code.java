@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.MarketTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -93,7 +95,7 @@ public class MarketType2Code extends MarketTypeCode {
 	 */
 	public static final MMCode mmPrimaryMarket = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PrimaryMarket";
 			owner_lazy = () -> MarketType2Code.mmObject();
 		}
@@ -116,7 +118,7 @@ public class MarketType2Code extends MarketTypeCode {
 	 */
 	public static final MMCode mmSecondaryMarket = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecondaryMarket";
 			owner_lazy = () -> MarketType2Code.mmObject();
 		}
@@ -139,7 +141,7 @@ public class MarketType2Code extends MarketTypeCode {
 	 */
 	public static final MMCode mmOverTheCounter = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OverTheCounter";
 			owner_lazy = () -> MarketType2Code.mmObject();
 		}
@@ -162,7 +164,7 @@ public class MarketType2Code extends MarketTypeCode {
 	 */
 	public static final MMCode mmVarious = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Various";
 			owner_lazy = () -> MarketType2Code.mmObject();
 		}
@@ -185,7 +187,7 @@ public class MarketType2Code extends MarketTypeCode {
 	 */
 	public static final MMCode mmStockExchange = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StockExchange";
 			owner_lazy = () -> MarketType2Code.mmObject();
 		}
@@ -194,13 +196,12 @@ public class MarketType2Code extends MarketTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("PRIM");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MarketType2Code";
 				definition = "Specifies the type of market in which transactions take place, for example, primary.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MarketType2Code.mmPrimaryMarket, com.tools20022.repository.codeset.MarketType2Code.mmSecondaryMarket,
-						com.tools20022.repository.codeset.MarketType2Code.mmOverTheCounter, com.tools20022.repository.codeset.MarketType2Code.mmVarious, com.tools20022.repository.codeset.MarketType2Code.mmStockExchange);
+				code_lazy = () -> Arrays.asList(MarketType2Code.mmPrimaryMarket, MarketType2Code.mmSecondaryMarket, MarketType2Code.mmOverTheCounter, MarketType2Code.mmVarious, MarketType2Code.mmStockExchange);
 				trace_lazy = () -> MarketTypeCode.mmObject();
 			}
 		});

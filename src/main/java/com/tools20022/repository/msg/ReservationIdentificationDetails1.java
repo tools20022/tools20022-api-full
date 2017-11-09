@@ -20,11 +20,16 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.AccountIdentification1Choice;
 import com.tools20022.repository.choice.SystemIdentificationChoice;
 import com.tools20022.repository.codeset.ReservationType1Code;
 import com.tools20022.repository.datatype.BICIdentifier;
+import com.tools20022.repository.entity.Account;
+import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.entity.Reservation;
+import com.tools20022.repository.entity.System;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -109,11 +114,11 @@ public class ReservationIdentificationDetails1 {
 	 */
 	public static final MMMessageAttribute mmSystemIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.System.mmSystemIdentification;
+			businessElementTrace_lazy = () -> System.mmSystemIdentification;
 			componentContext_lazy = () -> ReservationIdentificationDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "SysId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SystemIdentification";
 			definition = "Identification of a particular cash clearing system.";
 			maxOccurs = 1;
@@ -157,11 +162,11 @@ public class ReservationIdentificationDetails1 {
 	 */
 	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Reservation.mmReservationType;
+			businessElementTrace_lazy = () -> Reservation.mmReservationType;
 			componentContext_lazy = () -> ReservationIdentificationDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Nature of the reservation.";
 			maxOccurs = 1;
@@ -205,11 +210,11 @@ public class ReservationIdentificationDetails1 {
 	 */
 	public static final MMMessageAttribute mmAccountOwner = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> ReservationIdentificationDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "AcctOwnr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountOwner";
 			definition = "Owner of the account which is being queried.";
 			maxOccurs = 1;
@@ -255,11 +260,11 @@ public class ReservationIdentificationDetails1 {
 	 */
 	public static final MMMessageAssociationEnd mmAccountIdentification = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.mmIdentification;
+			businessElementTrace_lazy = () -> Account.mmIdentification;
 			componentContext_lazy = () -> ReservationIdentificationDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "AcctId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountIdentification";
 			definition = "Unique and unambiguous identification for the account between the account owner and the account servicer.";
 			maxOccurs = 1;
@@ -272,11 +277,11 @@ public class ReservationIdentificationDetails1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReservationIdentificationDetails1.mmSystemIdentification, com.tools20022.repository.msg.ReservationIdentificationDetails1.mmType,
-						com.tools20022.repository.msg.ReservationIdentificationDetails1.mmAccountOwner, com.tools20022.repository.msg.ReservationIdentificationDetails1.mmAccountIdentification);
+				messageElement_lazy = () -> Arrays.asList(ReservationIdentificationDetails1.mmSystemIdentification, ReservationIdentificationDetails1.mmType, ReservationIdentificationDetails1.mmAccountOwner,
+						ReservationIdentificationDetails1.mmAccountIdentification);
 				trace_lazy = () -> Reservation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ReservationIdentificationDetails1";
 				definition = "Liquidity set aside by the account owner for specific purposes.";
 			}

@@ -17,11 +17,10 @@
 
 package com.tools20022.repository.entity;
 
-import com.tools20022.metamodel.MMBusinessAssociationEnd;
-import com.tools20022.metamodel.MMBusinessAttribute;
-import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.*;
 import com.tools20022.repository.datatype.ISOTime;
 import com.tools20022.repository.datatype.PlusOrMinusIndicator;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.UTCOffset1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -35,15 +34,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.UTCOffset#mmSign
- * UTCOffset.mmSign}</li>
- * <li>{@linkplain com.tools20022.repository.entity.UTCOffset#mmNumberOfHours
- * UTCOffset.mmNumberOfHours}</li>
- * <li>{@linkplain com.tools20022.repository.entity.UTCOffset#mmLocation
- * UTCOffset.mmLocation}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.UTCOffset1 UTCOffset1}</li>
  * </ul>
  * </li>
  * <li>
@@ -54,11 +49,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * Location.mmTimeZone}</li>
  * </ul>
  * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.UTCOffset1 UTCOffset1}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.UTCOffset#mmSign
+ * UTCOffset.mmSign}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.UTCOffset#mmNumberOfHours
+ * UTCOffset.mmNumberOfHours}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.UTCOffset#mmLocation
+ * UTCOffset.mmLocation}</li>
  * </ul>
  * </li>
  * <li>
@@ -115,10 +114,10 @@ public class UTCOffset {
 	 */
 	public static final MMBusinessAttribute mmSign = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UTCOffset1.mmSign);
+			derivation_lazy = () -> Arrays.asList(UTCOffset1.mmSign);
 			elementContext_lazy = () -> UTCOffset.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Sign";
 			definition = "Indicates whether the offset is before or after 00:00 hour UTC.";
 			maxOccurs = 1;
@@ -162,10 +161,10 @@ public class UTCOffset {
 	 */
 	public static final MMBusinessAttribute mmNumberOfHours = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UTCOffset1.mmNumberOfHours);
+			derivation_lazy = () -> Arrays.asList(UTCOffset1.mmNumberOfHours);
 			elementContext_lazy = () -> UTCOffset.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NumberOfHours";
 			definition = "Offset of the reporting time, in hours,  before or after 00:00 hour UTC.";
 			maxOccurs = 1;
@@ -209,13 +208,13 @@ public class UTCOffset {
 		{
 			elementContext_lazy = () -> UTCOffset.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Location";
 			definition = "Location to which the time zone applies.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.Location.mmTimeZone;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Location.mmObject();
 		}
 	};
@@ -223,12 +222,12 @@ public class UTCOffset {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "UTCOffset";
 				definition = "Offset of the time before or after 00:00 hour UTC.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Location.mmTimeZone);
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.UTCOffset.mmSign, com.tools20022.repository.entity.UTCOffset.mmNumberOfHours, com.tools20022.repository.entity.UTCOffset.mmLocation);
+				element_lazy = () -> Arrays.asList(UTCOffset.mmSign, UTCOffset.mmNumberOfHours, UTCOffset.mmLocation);
 				derivationComponent_lazy = () -> Arrays.asList(UTCOffset1.mmObject());
 			}
 		});

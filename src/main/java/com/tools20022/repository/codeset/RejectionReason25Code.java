@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.RejectionReasonV2Code;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -180,7 +182,7 @@ public class RejectionReason25Code extends RejectionReasonV2Code {
 	 */
 	public static final MMCode mmSafekeepingAccountRejection = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingAccountRejection";
 			owner_lazy = () -> RejectionReason25Code.mmObject();
 		}
@@ -203,7 +205,7 @@ public class RejectionReason25Code extends RejectionReasonV2Code {
 	 */
 	public static final MMCode mmQuantityRejection = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuantityRejection";
 			owner_lazy = () -> RejectionReason25Code.mmObject();
 		}
@@ -226,7 +228,7 @@ public class RejectionReason25Code extends RejectionReasonV2Code {
 	 */
 	public static final MMCode mmAccountServicerDeadlineMissed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountServicerDeadlineMissed";
 			owner_lazy = () -> RejectionReason25Code.mmObject();
 		}
@@ -249,7 +251,7 @@ public class RejectionReason25Code extends RejectionReasonV2Code {
 	 */
 	public static final MMCode mmInvalidSecurity = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvalidSecurity";
 			owner_lazy = () -> RejectionReason25Code.mmObject();
 		}
@@ -272,7 +274,7 @@ public class RejectionReason25Code extends RejectionReasonV2Code {
 	 */
 	public static final MMCode mmMarketDeadlineMissed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketDeadlineMissed";
 			owner_lazy = () -> RejectionReason25Code.mmObject();
 		}
@@ -295,7 +297,7 @@ public class RejectionReason25Code extends RejectionReasonV2Code {
 	 */
 	public static final MMCode mmCashAccount = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashAccount";
 			owner_lazy = () -> RejectionReason25Code.mmObject();
 		}
@@ -318,7 +320,7 @@ public class RejectionReason25Code extends RejectionReasonV2Code {
 	 */
 	public static final MMCode mmDealPrice = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DealPrice";
 			owner_lazy = () -> RejectionReason25Code.mmObject();
 		}
@@ -341,7 +343,7 @@ public class RejectionReason25Code extends RejectionReasonV2Code {
 	 */
 	public static final MMCode mmTradeDate = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeDate";
 			owner_lazy = () -> RejectionReason25Code.mmObject();
 		}
@@ -364,7 +366,7 @@ public class RejectionReason25Code extends RejectionReasonV2Code {
 	 */
 	public static final MMCode mmPlaceOfTrade = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceOfTrade";
 			owner_lazy = () -> RejectionReason25Code.mmObject();
 		}
@@ -387,7 +389,7 @@ public class RejectionReason25Code extends RejectionReasonV2Code {
 	 */
 	public static final MMCode mmImpossibleToUseTheRTGSSystemInstructed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ImpossibleToUseTheRTGSSystemInstructed";
 			owner_lazy = () -> RejectionReason25Code.mmObject();
 		}
@@ -410,7 +412,7 @@ public class RejectionReason25Code extends RejectionReasonV2Code {
 	 */
 	public static final MMCode mmSettlementAmountCurrencyRejection = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementAmountCurrencyRejection";
 			owner_lazy = () -> RejectionReason25Code.mmObject();
 		}
@@ -433,7 +435,7 @@ public class RejectionReason25Code extends RejectionReasonV2Code {
 	 */
 	public static final MMCode mmPhysicalSettlementImpossible = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PhysicalSettlementImpossible";
 			owner_lazy = () -> RejectionReason25Code.mmObject();
 		}
@@ -456,7 +458,7 @@ public class RejectionReason25Code extends RejectionReasonV2Code {
 	 */
 	public static final MMCode mmReferenceRejection = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReferenceRejection";
 			owner_lazy = () -> RejectionReason25Code.mmObject();
 		}
@@ -479,7 +481,7 @@ public class RejectionReason25Code extends RejectionReasonV2Code {
 	 */
 	public static final MMCode mmSettlementAmountRejection = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementAmountRejection";
 			owner_lazy = () -> RejectionReason25Code.mmObject();
 		}
@@ -502,7 +504,7 @@ public class RejectionReason25Code extends RejectionReasonV2Code {
 	 */
 	public static final MMCode mmMinimumSettlementQuantity = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MinimumSettlementQuantity";
 			owner_lazy = () -> RejectionReason25Code.mmObject();
 		}
@@ -525,7 +527,7 @@ public class RejectionReason25Code extends RejectionReasonV2Code {
 	 */
 	public static final MMCode mmProcessingBatchRejection = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProcessingBatchRejection";
 			owner_lazy = () -> RejectionReason25Code.mmObject();
 		}
@@ -548,7 +550,7 @@ public class RejectionReason25Code extends RejectionReasonV2Code {
 	 */
 	public static final MMCode mmMultipleSettlementQuantity = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MultipleSettlementQuantity";
 			owner_lazy = () -> RejectionReason25Code.mmObject();
 		}
@@ -571,7 +573,7 @@ public class RejectionReason25Code extends RejectionReasonV2Code {
 	 */
 	public static final MMCode mmTaxStatusRejection = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxStatusRejection";
 			owner_lazy = () -> RejectionReason25Code.mmObject();
 		}
@@ -594,7 +596,7 @@ public class RejectionReason25Code extends RejectionReasonV2Code {
 	 */
 	public static final MMCode mmSettlementSystemMethodRejection = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementSystemMethodRejection";
 			owner_lazy = () -> RejectionReason25Code.mmObject();
 		}
@@ -617,7 +619,7 @@ public class RejectionReason25Code extends RejectionReasonV2Code {
 	 */
 	public static final MMCode mmCommonReferenceRejection = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommonReferenceRejection";
 			owner_lazy = () -> RejectionReason25Code.mmObject();
 		}
@@ -640,7 +642,7 @@ public class RejectionReason25Code extends RejectionReasonV2Code {
 	 */
 	public static final MMCode mmCorporateActionRejection = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorporateActionRejection";
 			owner_lazy = () -> RejectionReason25Code.mmObject();
 		}
@@ -663,7 +665,7 @@ public class RejectionReason25Code extends RejectionReasonV2Code {
 	 */
 	public static final MMCode mmImpossibleCashSettlementSystem = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ImpossibleCashSettlementSystem";
 			owner_lazy = () -> RejectionReason25Code.mmObject();
 		}
@@ -686,7 +688,7 @@ public class RejectionReason25Code extends RejectionReasonV2Code {
 	 */
 	public static final MMCode mmSettlementDateRejection = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementDateRejection";
 			owner_lazy = () -> RejectionReason25Code.mmObject();
 		}
@@ -709,7 +711,7 @@ public class RejectionReason25Code extends RejectionReasonV2Code {
 	 */
 	public static final MMCode mmSettlementTransactionRejection = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementTransactionRejection";
 			owner_lazy = () -> RejectionReason25Code.mmObject();
 		}
@@ -732,7 +734,7 @@ public class RejectionReason25Code extends RejectionReasonV2Code {
 	 */
 	public static final MMCode mmLackOfStampDuty = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LackOfStampDuty";
 			owner_lazy = () -> RejectionReason25Code.mmObject();
 		}
@@ -755,7 +757,7 @@ public class RejectionReason25Code extends RejectionReasonV2Code {
 	 */
 	public static final MMCode mmPlaceOfSafekeeping = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceOfSafekeeping";
 			owner_lazy = () -> RejectionReason25Code.mmObject();
 		}
@@ -778,7 +780,7 @@ public class RejectionReason25Code extends RejectionReasonV2Code {
 	 */
 	public static final MMCode mmOther = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
 			owner_lazy = () -> RejectionReason25Code.mmObject();
 		}
@@ -801,7 +803,7 @@ public class RejectionReason25Code extends RejectionReasonV2Code {
 	 */
 	public static final MMCode mmReceivingDeliveringParty2 = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceivingDeliveringParty2";
 			owner_lazy = () -> RejectionReason25Code.mmObject();
 		}
@@ -824,7 +826,7 @@ public class RejectionReason25Code extends RejectionReasonV2Code {
 	 */
 	public static final MMCode mmReceivingDeliveringParty1 = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceivingDeliveringParty1";
 			owner_lazy = () -> RejectionReason25Code.mmObject();
 		}
@@ -847,7 +849,7 @@ public class RejectionReason25Code extends RejectionReasonV2Code {
 	 */
 	public static final MMCode mmReceivingDeliveringDepository = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceivingDeliveringDepository";
 			owner_lazy = () -> RejectionReason25Code.mmObject();
 		}
@@ -870,7 +872,7 @@ public class RejectionReason25Code extends RejectionReasonV2Code {
 	 */
 	public static final MMCode mmReceivingDeliveringParty3 = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceivingDeliveringParty3";
 			owner_lazy = () -> RejectionReason25Code.mmObject();
 		}
@@ -879,27 +881,20 @@ public class RejectionReason25Code extends RejectionReasonV2Code {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("SAFE");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RejectionReason25Code";
 				definition = "Specifies the reason why the settlement instruction has a rejected status.";
 				nextVersions_lazy = () -> Arrays.asList(RejectionReason30Code.mmObject(), RejectionReason31Code.mmObject());
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RejectionReason25Code.mmSafekeepingAccountRejection, com.tools20022.repository.codeset.RejectionReason25Code.mmQuantityRejection,
-						com.tools20022.repository.codeset.RejectionReason25Code.mmAccountServicerDeadlineMissed, com.tools20022.repository.codeset.RejectionReason25Code.mmInvalidSecurity,
-						com.tools20022.repository.codeset.RejectionReason25Code.mmMarketDeadlineMissed, com.tools20022.repository.codeset.RejectionReason25Code.mmCashAccount,
-						com.tools20022.repository.codeset.RejectionReason25Code.mmDealPrice, com.tools20022.repository.codeset.RejectionReason25Code.mmTradeDate, com.tools20022.repository.codeset.RejectionReason25Code.mmPlaceOfTrade,
-						com.tools20022.repository.codeset.RejectionReason25Code.mmImpossibleToUseTheRTGSSystemInstructed, com.tools20022.repository.codeset.RejectionReason25Code.mmSettlementAmountCurrencyRejection,
-						com.tools20022.repository.codeset.RejectionReason25Code.mmPhysicalSettlementImpossible, com.tools20022.repository.codeset.RejectionReason25Code.mmReferenceRejection,
-						com.tools20022.repository.codeset.RejectionReason25Code.mmSettlementAmountRejection, com.tools20022.repository.codeset.RejectionReason25Code.mmMinimumSettlementQuantity,
-						com.tools20022.repository.codeset.RejectionReason25Code.mmProcessingBatchRejection, com.tools20022.repository.codeset.RejectionReason25Code.mmMultipleSettlementQuantity,
-						com.tools20022.repository.codeset.RejectionReason25Code.mmTaxStatusRejection, com.tools20022.repository.codeset.RejectionReason25Code.mmSettlementSystemMethodRejection,
-						com.tools20022.repository.codeset.RejectionReason25Code.mmCommonReferenceRejection, com.tools20022.repository.codeset.RejectionReason25Code.mmCorporateActionRejection,
-						com.tools20022.repository.codeset.RejectionReason25Code.mmImpossibleCashSettlementSystem, com.tools20022.repository.codeset.RejectionReason25Code.mmSettlementDateRejection,
-						com.tools20022.repository.codeset.RejectionReason25Code.mmSettlementTransactionRejection, com.tools20022.repository.codeset.RejectionReason25Code.mmLackOfStampDuty,
-						com.tools20022.repository.codeset.RejectionReason25Code.mmPlaceOfSafekeeping, com.tools20022.repository.codeset.RejectionReason25Code.mmOther,
-						com.tools20022.repository.codeset.RejectionReason25Code.mmReceivingDeliveringParty2, com.tools20022.repository.codeset.RejectionReason25Code.mmReceivingDeliveringParty1,
-						com.tools20022.repository.codeset.RejectionReason25Code.mmReceivingDeliveringDepository, com.tools20022.repository.codeset.RejectionReason25Code.mmReceivingDeliveringParty3);
+				code_lazy = () -> Arrays.asList(RejectionReason25Code.mmSafekeepingAccountRejection, RejectionReason25Code.mmQuantityRejection, RejectionReason25Code.mmAccountServicerDeadlineMissed, RejectionReason25Code.mmInvalidSecurity,
+						RejectionReason25Code.mmMarketDeadlineMissed, RejectionReason25Code.mmCashAccount, RejectionReason25Code.mmDealPrice, RejectionReason25Code.mmTradeDate, RejectionReason25Code.mmPlaceOfTrade,
+						RejectionReason25Code.mmImpossibleToUseTheRTGSSystemInstructed, RejectionReason25Code.mmSettlementAmountCurrencyRejection, RejectionReason25Code.mmPhysicalSettlementImpossible,
+						RejectionReason25Code.mmReferenceRejection, RejectionReason25Code.mmSettlementAmountRejection, RejectionReason25Code.mmMinimumSettlementQuantity, RejectionReason25Code.mmProcessingBatchRejection,
+						RejectionReason25Code.mmMultipleSettlementQuantity, RejectionReason25Code.mmTaxStatusRejection, RejectionReason25Code.mmSettlementSystemMethodRejection, RejectionReason25Code.mmCommonReferenceRejection,
+						RejectionReason25Code.mmCorporateActionRejection, RejectionReason25Code.mmImpossibleCashSettlementSystem, RejectionReason25Code.mmSettlementDateRejection, RejectionReason25Code.mmSettlementTransactionRejection,
+						RejectionReason25Code.mmLackOfStampDuty, RejectionReason25Code.mmPlaceOfSafekeeping, RejectionReason25Code.mmOther, RejectionReason25Code.mmReceivingDeliveringParty2,
+						RejectionReason25Code.mmReceivingDeliveringParty1, RejectionReason25Code.mmReceivingDeliveringDepository, RejectionReason25Code.mmReceivingDeliveringParty3);
 				trace_lazy = () -> RejectionReasonV2Code.mmObject();
 			}
 		});

@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.NotificationStatusCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -86,7 +88,7 @@ public class NotificationStatus2Code extends NotificationStatusCode {
 	 */
 	public static final MMCode mmEventConfirmed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventConfirmed";
 			owner_lazy = () -> NotificationStatus2Code.mmObject();
 		}
@@ -109,7 +111,7 @@ public class NotificationStatus2Code extends NotificationStatusCode {
 	 */
 	public static final MMCode mmEventUnconfirmed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventUnconfirmed";
 			owner_lazy = () -> NotificationStatus2Code.mmObject();
 		}
@@ -118,12 +120,12 @@ public class NotificationStatus2Code extends NotificationStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ECON");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "NotificationStatus2Code";
 				definition = "Status to define if the occurrence of the event contained in the notification is confirmed or unconfirmed.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.NotificationStatus2Code.mmEventConfirmed, com.tools20022.repository.codeset.NotificationStatus2Code.mmEventUnconfirmed);
+				code_lazy = () -> Arrays.asList(NotificationStatus2Code.mmEventConfirmed, NotificationStatus2Code.mmEventUnconfirmed);
 				trace_lazy = () -> NotificationStatusCode.mmObject();
 			}
 		});

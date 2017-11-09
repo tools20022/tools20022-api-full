@@ -20,7 +20,9 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.Algorithm7Code;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -105,10 +107,10 @@ public class AlgorithmIdentification11 {
 			componentContext_lazy = () -> AlgorithmIdentification11.mmObject();
 			isDerived = false;
 			xmlTag = "Algo";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Algorithm";
 			definition = "Asymmetric encryption algorithm of a transport key.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AlgorithmIdentification7.mmAlgorithm;
+			previousVersion_lazy = () -> AlgorithmIdentification7.mmAlgorithm;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Algorithm7Code.mmObject();
@@ -150,10 +152,10 @@ public class AlgorithmIdentification11 {
 			componentContext_lazy = () -> AlgorithmIdentification11.mmObject();
 			isDerived = false;
 			xmlTag = "Param";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Parameter";
 			definition = "Parameters of the encryption algorithm.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AlgorithmIdentification7.mmParameter;
+			previousVersion_lazy = () -> AlgorithmIdentification7.mmParameter;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -164,9 +166,9 @@ public class AlgorithmIdentification11 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AlgorithmIdentification11.mmAlgorithm, com.tools20022.repository.msg.AlgorithmIdentification11.mmParameter);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(AlgorithmIdentification11.mmAlgorithm, AlgorithmIdentification11.mmParameter);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AlgorithmIdentification11";
 				definition = "Cryptographic algorithms and parameters for the protection of transported keys by an asymmetric key.";
 				previousVersion_lazy = () -> AlgorithmIdentification7.mmObject();

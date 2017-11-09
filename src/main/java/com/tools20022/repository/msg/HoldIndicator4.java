@@ -20,8 +20,11 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.SecuritiesSettlement;
+import com.tools20022.repository.entity.Security;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -114,14 +117,14 @@ public class HoldIndicator4 {
 	 */
 	public static final MMMessageAttribute mmIndicator = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmHoldIndicator;
+			businessElementTrace_lazy = () -> SecuritiesSettlement.mmHoldIndicator;
 			componentContext_lazy = () -> HoldIndicator4.mmObject();
 			isDerived = false;
 			xmlTag = "Ind";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Indicator";
 			definition = "Specifies whether the transaction is on hold/blocked/frozen.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.HoldIndicator6.mmIndicator);
+			nextVersions_lazy = () -> Arrays.asList(HoldIndicator6.mmIndicator);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
@@ -167,14 +170,14 @@ public class HoldIndicator4 {
 	 */
 	public static final MMMessageAssociationEnd mmReason = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmRegistration;
+			businessElementTrace_lazy = () -> Security.mmRegistration;
 			componentContext_lazy = () -> HoldIndicator4.mmObject();
 			isDerived = false;
 			xmlTag = "Rsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reason";
 			definition = "Specifies the reason of the registration staus.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.HoldIndicator6.mmReason);
+			nextVersions_lazy = () -> Arrays.asList(HoldIndicator6.mmReason);
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.RegistrationReason3.mmObject();
@@ -184,10 +187,10 @@ public class HoldIndicator4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.HoldIndicator4.mmIndicator, com.tools20022.repository.msg.HoldIndicator4.mmReason);
+				messageElement_lazy = () -> Arrays.asList(HoldIndicator4.mmIndicator, HoldIndicator4.mmReason);
 				trace_lazy = () -> SecuritiesSettlement.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "HoldIndicator4";
 				definition = "Specifies whether the transaction is on hold/blocked/frozen.";
 				nextVersions_lazy = () -> Arrays.asList(HoldIndicator6.mmObject());

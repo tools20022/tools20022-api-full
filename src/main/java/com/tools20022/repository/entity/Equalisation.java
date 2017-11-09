@@ -17,15 +17,13 @@
 
 package com.tools20022.repository.entity;
 
-import com.tools20022.metamodel.MMBusinessAssociationEnd;
-import com.tools20022.metamodel.MMBusinessAttribute;
-import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.*;
 import com.tools20022.repository.codeset.DebitCreditCode;
 import com.tools20022.repository.datatype.CurrencyAndAmount;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.PercentageRate;
-import com.tools20022.repository.msg.Equalisation1;
-import com.tools20022.repository.msg.Equalisation2;
+import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -39,6 +37,23 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.Equalisation1 Equalisation1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Equalisation2 Equalisation2}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InvestmentFundClass#mmEqualisation
+ * InvestmentFundClass.mmEqualisation}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -54,23 +69,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.entity.Equalisation#mmCreditDebitIndicator
  * Equalisation.mmCreditDebitIndicator}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InvestmentFundClass#mmEqualisation
- * InvestmentFundClass.mmEqualisation}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Equalisation1 Equalisation1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Equalisation2 Equalisation2}</li>
  * </ul>
  * </li>
  * <li>
@@ -209,20 +207,15 @@ public class Equalisation {
 	 */
 	public static final MMBusinessAttribute mmAmount = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionAmounts23.mmEqualisationAmount, com.tools20022.repository.msg.RateDetails11.mmEqualisationRate,
-					com.tools20022.repository.msg.CorporateActionAmounts24.mmEqualisationAmount, com.tools20022.repository.msg.RateDetails12.mmEqualisationRate, com.tools20022.repository.msg.CorporateActionAmounts22.mmEqualisationAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts25.mmEqualisationAmount, com.tools20022.repository.msg.CorporateActionAmounts21.mmEqualisationAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts26.mmEqualisationAmount, com.tools20022.repository.msg.Equalisation1.mmAmount, com.tools20022.repository.msg.Equalisation2.mmAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts29.mmEqualisationAmount, com.tools20022.repository.msg.RateDetails15.mmEqualisationRate, com.tools20022.repository.msg.CorporateActionAmounts27.mmEqualisationAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts28.mmEqualisationAmount, com.tools20022.repository.msg.CorporateActionAmounts33.mmEqualisationAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts32.mmEqualisationAmount, com.tools20022.repository.msg.RateDetails21.mmEqualisationRate, com.tools20022.repository.msg.CorporateActionAmounts35.mmEqualisationAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts37.mmEqualisationAmount, com.tools20022.repository.msg.RateDetails23.mmEqualisationRate, com.tools20022.repository.msg.CorporateActionAmounts36.mmEqualisationAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts38.mmEqualisationAmount, com.tools20022.repository.msg.RateDetails24.mmEqualisationRate, com.tools20022.repository.msg.CorporateActionAmounts39.mmEqualisationAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts41.mmEqualisationAmount, com.tools20022.repository.msg.CorporateActionAmounts40.mmEqualisationAmount, com.tools20022.repository.msg.RateDetails27.mmEqualisationRate,
-					com.tools20022.repository.msg.RateDetails30.mmEqualisationRate);
+			derivation_lazy = () -> Arrays.asList(CorporateActionAmounts23.mmEqualisationAmount, RateDetails11.mmEqualisationRate, CorporateActionAmounts24.mmEqualisationAmount, RateDetails12.mmEqualisationRate,
+					CorporateActionAmounts22.mmEqualisationAmount, CorporateActionAmounts25.mmEqualisationAmount, CorporateActionAmounts21.mmEqualisationAmount, CorporateActionAmounts26.mmEqualisationAmount, Equalisation1.mmAmount,
+					Equalisation2.mmAmount, CorporateActionAmounts29.mmEqualisationAmount, RateDetails15.mmEqualisationRate, CorporateActionAmounts27.mmEqualisationAmount, CorporateActionAmounts28.mmEqualisationAmount,
+					CorporateActionAmounts33.mmEqualisationAmount, CorporateActionAmounts32.mmEqualisationAmount, RateDetails21.mmEqualisationRate, CorporateActionAmounts35.mmEqualisationAmount,
+					CorporateActionAmounts37.mmEqualisationAmount, RateDetails23.mmEqualisationRate, CorporateActionAmounts36.mmEqualisationAmount, CorporateActionAmounts38.mmEqualisationAmount, RateDetails24.mmEqualisationRate,
+					CorporateActionAmounts39.mmEqualisationAmount, CorporateActionAmounts41.mmEqualisationAmount, CorporateActionAmounts40.mmEqualisationAmount, RateDetails27.mmEqualisationRate, RateDetails30.mmEqualisationRate);
 			elementContext_lazy = () -> Equalisation.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Amount";
 			definition = "Amount of money resulting from the calculation of the equalisation.";
 			maxOccurs = 1;
@@ -299,13 +292,12 @@ public class Equalisation {
 	 */
 	public static final MMBusinessAttribute mmDate = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionDate1.mmEqualisationDate, com.tools20022.repository.msg.CorporateActionDate13.mmEqualisationDate,
-					com.tools20022.repository.msg.CorporateActionDate14.mmEqualisationDate, com.tools20022.repository.msg.CorporateActionDate21.mmEqualisationDate, com.tools20022.repository.msg.CorporateActionDate22.mmEqualisationDate,
-					com.tools20022.repository.msg.CorporateActionDate25.mmEqualisationDate, com.tools20022.repository.msg.CorporateActionDate27.mmEqualisationDate, com.tools20022.repository.msg.CorporateActionDate28.mmEqualisationDate,
-					com.tools20022.repository.msg.CorporateActionDate2.mmEqualisationDate, com.tools20022.repository.msg.CorporateActionDate44.mmEqualisationDate, com.tools20022.repository.msg.CorporateActionDate58.mmEqualisationDate);
+			derivation_lazy = () -> Arrays.asList(CorporateActionDate1.mmEqualisationDate, CorporateActionDate13.mmEqualisationDate, CorporateActionDate14.mmEqualisationDate, CorporateActionDate21.mmEqualisationDate,
+					CorporateActionDate22.mmEqualisationDate, CorporateActionDate25.mmEqualisationDate, CorporateActionDate27.mmEqualisationDate, CorporateActionDate28.mmEqualisationDate, CorporateActionDate2.mmEqualisationDate,
+					CorporateActionDate44.mmEqualisationDate, CorporateActionDate58.mmEqualisationDate);
 			elementContext_lazy = () -> Equalisation.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Date";
 			definition = "Date on which all or part of any holding bought in a unit trust is subject to being treated as capital rather than income. This is normally one day after the previous distribution's ex date.";
 			maxOccurs = 1;
@@ -374,13 +366,11 @@ public class Equalisation {
 	 */
 	public static final MMBusinessAttribute mmRate = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RateDetails10.mmEqualisationRate, com.tools20022.repository.msg.RateDetails13.mmEqualisationRate, com.tools20022.repository.msg.Equalisation1.mmRate,
-					com.tools20022.repository.msg.Equalisation2.mmRate, com.tools20022.repository.msg.RateDetails14.mmEqualisationRate, com.tools20022.repository.msg.RateDetails18.mmEqualisationRate,
-					com.tools20022.repository.msg.RateDetails22.mmEqualisationRate, com.tools20022.repository.msg.RateDetails25.mmEqualisationRate, com.tools20022.repository.msg.RateDetails26.mmEqualisationRate,
-					com.tools20022.repository.msg.RateDetails28.mmEqualisationRate);
+			derivation_lazy = () -> Arrays.asList(RateDetails10.mmEqualisationRate, RateDetails13.mmEqualisationRate, Equalisation1.mmRate, Equalisation2.mmRate, RateDetails14.mmEqualisationRate, RateDetails18.mmEqualisationRate,
+					RateDetails22.mmEqualisationRate, RateDetails25.mmEqualisationRate, RateDetails26.mmEqualisationRate, RateDetails28.mmEqualisationRate);
 			elementContext_lazy = () -> Equalisation.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Rate";
 			definition = "Rate used for calculation of the equalisation.";
 			maxOccurs = 1;
@@ -426,13 +416,13 @@ public class Equalisation {
 		{
 			elementContext_lazy = () -> Equalisation.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedInvestmentFundTransaction";
 			definition = "Investment fund transaction for which equalisation is specified.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmEqualisation;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmObject();
 		}
 	};
@@ -467,7 +457,7 @@ public class Equalisation {
 		{
 			elementContext_lazy = () -> Equalisation.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CreditDebitIndicator";
 			definition = "Debit for a negative amount or credit for a positive amount.";
 			maxOccurs = 1;
@@ -479,13 +469,12 @@ public class Equalisation {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Equalisation";
 				definition = "Part of an investor's subscription amount that is held by the fund in order to pay incentive / performance fees at the end of the fiscal year.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.InvestmentFundClass.mmEqualisation);
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Equalisation.mmAmount, com.tools20022.repository.entity.Equalisation.mmDate, com.tools20022.repository.entity.Equalisation.mmRate,
-						com.tools20022.repository.entity.Equalisation.mmRelatedInvestmentFundTransaction, com.tools20022.repository.entity.Equalisation.mmCreditDebitIndicator);
+				element_lazy = () -> Arrays.asList(Equalisation.mmAmount, Equalisation.mmDate, Equalisation.mmRate, Equalisation.mmRelatedInvestmentFundTransaction, Equalisation.mmCreditDebitIndicator);
 				derivationComponent_lazy = () -> Arrays.asList(Equalisation1.mmObject(), Equalisation2.mmObject());
 			}
 		});

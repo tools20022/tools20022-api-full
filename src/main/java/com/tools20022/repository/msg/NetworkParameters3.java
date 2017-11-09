@@ -20,11 +20,13 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max140Binary;
 import com.tools20022.repository.datatype.Max3000Binary;
 import com.tools20022.repository.datatype.Max35Binary;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.NetworkAccess;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -129,10 +131,10 @@ public class NetworkParameters3 {
 			componentContext_lazy = () -> NetworkParameters3.mmObject();
 			isDerived = false;
 			xmlTag = "Adr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Address";
 			definition = "Network addresses of the host.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.NetworkParameters5.mmAddress);
+			nextVersions_lazy = () -> Arrays.asList(NetworkParameters5.mmAddress);
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.NetworkParameters4.mmObject();
@@ -186,15 +188,15 @@ public class NetworkParameters3 {
 	 */
 	public static final MMMessageAttribute mmUserName = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.NetworkAccess.mmUserName;
+			businessElementTrace_lazy = () -> NetworkAccess.mmUserName;
 			componentContext_lazy = () -> NetworkParameters3.mmObject();
 			isDerived = false;
 			xmlTag = "UsrNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UserName";
 			definition = "User name identifying the client.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.NetworkParameters5.mmUserName);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.NetworkParameters1.mmUserName;
+			nextVersions_lazy = () -> Arrays.asList(NetworkParameters5.mmUserName);
+			previousVersion_lazy = () -> NetworkParameters1.mmUserName;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -251,15 +253,15 @@ public class NetworkParameters3 {
 	 */
 	public static final MMMessageAttribute mmAccessCode = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.NetworkAccess.mmAccessCode;
+			businessElementTrace_lazy = () -> NetworkAccess.mmAccessCode;
 			componentContext_lazy = () -> NetworkParameters3.mmObject();
 			isDerived = false;
 			xmlTag = "AccsCd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccessCode";
 			definition = "Password authenticating the client.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.NetworkParameters5.mmAccessCode, com.tools20022.repository.msg.NetworkParameters6.mmAccess);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.NetworkParameters1.mmAccessCode;
+			nextVersions_lazy = () -> Arrays.asList(NetworkParameters5.mmAccessCode, NetworkParameters6.mmAccess);
+			previousVersion_lazy = () -> NetworkParameters1.mmAccessCode;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Binary.mmObject();
@@ -307,10 +309,10 @@ public class NetworkParameters3 {
 			componentContext_lazy = () -> NetworkParameters3.mmObject();
 			isDerived = false;
 			xmlTag = "SvrCert";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ServerCertificate";
 			definition = "X.509 Certificate required to authenticate the server.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.NetworkParameters5.mmServerCertificate);
+			nextVersions_lazy = () -> Arrays.asList(NetworkParameters5.mmServerCertificate);
 			minOccurs = 0;
 			simpleType_lazy = () -> Max3000Binary.mmObject();
 		}
@@ -360,10 +362,10 @@ public class NetworkParameters3 {
 			componentContext_lazy = () -> NetworkParameters3.mmObject();
 			isDerived = false;
 			xmlTag = "SvrCertIdr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ServerCertificateIdentifier";
 			definition = "Identification of the X.509 Certificate required to authenticate the server, for instance a digest of the certificate.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.NetworkParameters5.mmServerCertificateIdentifier);
+			nextVersions_lazy = () -> Arrays.asList(NetworkParameters5.mmServerCertificateIdentifier);
 			minOccurs = 0;
 			simpleType_lazy = () -> Max140Binary.mmObject();
 		}
@@ -372,11 +374,11 @@ public class NetworkParameters3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.NetworkParameters3.mmAddress, com.tools20022.repository.msg.NetworkParameters3.mmUserName,
-						com.tools20022.repository.msg.NetworkParameters3.mmAccessCode, com.tools20022.repository.msg.NetworkParameters3.mmServerCertificate, com.tools20022.repository.msg.NetworkParameters3.mmServerCertificateIdentifier);
+				messageElement_lazy = () -> Arrays.asList(NetworkParameters3.mmAddress, NetworkParameters3.mmUserName, NetworkParameters3.mmAccessCode, NetworkParameters3.mmServerCertificate,
+						NetworkParameters3.mmServerCertificateIdentifier);
 				trace_lazy = () -> NetworkAccess.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "NetworkParameters3";
 				definition = "Parameters to communicate with a host.";
 				nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.NetworkParameters4.mmObject(), NetworkParameters5.mmObject(), NetworkParameters6.mmObject());

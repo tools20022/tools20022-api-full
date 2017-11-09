@@ -19,9 +19,13 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CountryCode;
 import com.tools20022.repository.datatype.AnyBICIdentifier;
+import com.tools20022.repository.entity.Country;
+import com.tools20022.repository.entity.OrganisationIdentification;
 import com.tools20022.repository.entity.PartyIdentificationInformation;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.NameAndAddress5;
 import java.text.DateFormat;
 import java.util.Arrays;
@@ -127,14 +131,14 @@ public class PartyIdentification34Choice {
 	 */
 	public static final MMMessageAttribute mmBIC = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.mmBICFI;
+			businessElementTrace_lazy = () -> OrganisationIdentification.mmBICFI;
 			componentContext_lazy = () -> PartyIdentification34Choice.mmObject();
 			isDerived = false;
 			xmlTag = "BIC";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BIC";
 			definition = "Unique and unambiguous way to identify an organisation.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PartyIdentification102Choice.mmAnyBIC);
+			nextVersions_lazy = () -> Arrays.asList(PartyIdentification102Choice.mmAnyBIC);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AnyBICIdentifier.mmObject();
@@ -190,10 +194,10 @@ public class PartyIdentification34Choice {
 			componentContext_lazy = () -> PartyIdentification34Choice.mmObject();
 			isDerived = false;
 			xmlTag = "NmAndAdr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NameAndAddress";
 			definition = "Unique and unambiguous way to identify an organisation, using the name and address.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PartyIdentification102Choice.mmNameAndAddress);
+			nextVersions_lazy = () -> Arrays.asList(PartyIdentification102Choice.mmNameAndAddress);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> NameAndAddress5.mmObject();
@@ -245,14 +249,14 @@ public class PartyIdentification34Choice {
 	 */
 	public static final MMMessageAttribute mmCountry = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Country.mmCode;
+			businessElementTrace_lazy = () -> Country.mmCode;
 			componentContext_lazy = () -> PartyIdentification34Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Ctry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Country";
 			definition = "Unique and unambiguous way to identify an organisation using the country code, using the country code.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PartyIdentification102Choice.mmCountry);
+			nextVersions_lazy = () -> Arrays.asList(PartyIdentification102Choice.mmCountry);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CountryCode.mmObject();
@@ -262,11 +266,10 @@ public class PartyIdentification34Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PartyIdentification34Choice.mmBIC, com.tools20022.repository.choice.PartyIdentification34Choice.mmNameAndAddress,
-						com.tools20022.repository.choice.PartyIdentification34Choice.mmCountry);
+				messageElement_lazy = () -> Arrays.asList(PartyIdentification34Choice.mmBIC, PartyIdentification34Choice.mmNameAndAddress, PartyIdentification34Choice.mmCountry);
 				trace_lazy = () -> PartyIdentificationInformation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
 						return DateFormat.getDateInstance(java.text.DateFormat.LONG).parse("September 9, 2016");

@@ -19,7 +19,9 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.RiskManagementLimit;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.LimitIdentification1;
 import com.tools20022.repository.msg.LimitIdentification2;
 import java.util.Arrays;
@@ -110,7 +112,7 @@ public class LimitIdentification1Choice {
 			componentContext_lazy = () -> LimitIdentification1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Cur";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Current";
 			definition = "Identification of the current limit.";
 			maxOccurs = 1;
@@ -157,7 +159,7 @@ public class LimitIdentification1Choice {
 			componentContext_lazy = () -> LimitIdentification1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Dflt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Default";
 			definition = "Identification of the default limit.";
 			maxOccurs = 1;
@@ -204,7 +206,7 @@ public class LimitIdentification1Choice {
 			componentContext_lazy = () -> LimitIdentification1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "AllCur";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AllCurrent";
 			definition = "Identification of all current limits.";
 			maxOccurs = 1;
@@ -251,7 +253,7 @@ public class LimitIdentification1Choice {
 			componentContext_lazy = () -> LimitIdentification1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "AllDflt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AllDefault";
 			definition = "Identification of all default limits.";
 			maxOccurs = 1;
@@ -264,11 +266,10 @@ public class LimitIdentification1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.LimitIdentification1Choice.mmCurrent, com.tools20022.repository.choice.LimitIdentification1Choice.mmDefault,
-						com.tools20022.repository.choice.LimitIdentification1Choice.mmAllCurrent, com.tools20022.repository.choice.LimitIdentification1Choice.mmAllDefault);
+				messageElement_lazy = () -> Arrays.asList(LimitIdentification1Choice.mmCurrent, LimitIdentification1Choice.mmDefault, LimitIdentification1Choice.mmAllCurrent, LimitIdentification1Choice.mmAllDefault);
 				trace_lazy = () -> RiskManagementLimit.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "LimitIdentification1Choice";
 				definition = "Limit details of one particular limit set by the member and managed by the transaction administrator.";
 			}

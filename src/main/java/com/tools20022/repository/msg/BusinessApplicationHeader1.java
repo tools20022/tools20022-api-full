@@ -20,6 +20,8 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.head.BusinessApplicationHeaderV01;
 import com.tools20022.repository.choice.Party9Choice;
 import com.tools20022.repository.codeset.BusinessMessagePriorityCode;
 import com.tools20022.repository.codeset.CopyDuplicate1Code;
@@ -27,6 +29,7 @@ import com.tools20022.repository.codeset.UnicodeChartsCode;
 import com.tools20022.repository.datatype.ISONormalisedDateTime;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.YesNoIndicator;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.other.SignatureEnvelope;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -143,7 +146,7 @@ public class BusinessApplicationHeader1 {
 			componentContext_lazy = () -> BusinessApplicationHeader1.mmObject();
 			isDerived = false;
 			xmlTag = "CharSet";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CharacterSet";
 			definition = "Contains the character set of the text-based elements used in the Business Message.";
 			maxOccurs = 1;
@@ -190,7 +193,7 @@ public class BusinessApplicationHeader1 {
 			componentContext_lazy = () -> BusinessApplicationHeader1.mmObject();
 			isDerived = false;
 			xmlTag = "Fr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "From";
 			definition = "The sending MessagingEndpoint that has created this Business Message for the receiving MessagingEndpoint that will process this Business Message.\r\n\r\nNote\tthe sending MessagingEndpoint might be different from the sending address potentially contained in the transport header (as defined in the transport layer).";
 			maxOccurs = 1;
@@ -238,7 +241,7 @@ public class BusinessApplicationHeader1 {
 			componentContext_lazy = () -> BusinessApplicationHeader1.mmObject();
 			isDerived = false;
 			xmlTag = "To";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "To";
 			definition = "The MessagingEndpoint designated by the sending MessagingEndpoint to be the recipient who will ultimately process this Business Message.\r\n\r\nNote the receiving MessagingEndpoint might be different from the receiving address potentially contained in the transport header (as defined in the transport layer).";
 			maxOccurs = 1;
@@ -283,7 +286,7 @@ public class BusinessApplicationHeader1 {
 			componentContext_lazy = () -> BusinessApplicationHeader1.mmObject();
 			isDerived = false;
 			xmlTag = "BizMsgIdr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BusinessMessageIdentifier";
 			definition = "Unambiguously identifies the Business Message to the MessagingEndpoint that has created the Business Message.";
 			maxOccurs = 1;
@@ -329,7 +332,7 @@ public class BusinessApplicationHeader1 {
 			componentContext_lazy = () -> BusinessApplicationHeader1.mmObject();
 			isDerived = false;
 			xmlTag = "MsgDefIdr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageDefinitionIdentifier";
 			definition = "Contains the MessageIdentifier that defines the BusinessMessage.\r\nIt must contain a MessageIdentifier published on the ISO 20022 website.\r\n\r\nexample\tcamt.001.001.03";
 			maxOccurs = 1;
@@ -376,7 +379,7 @@ public class BusinessApplicationHeader1 {
 			componentContext_lazy = () -> BusinessApplicationHeader1.mmObject();
 			isDerived = false;
 			xmlTag = "BizSvc";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BusinessService";
 			definition = "Specifies the business service agreed between the two MessagingEndpoints under which rules this Business Message is exchanged.\r\n To be used when there is a choice of processing services or processing service levels.\r\nExample: E&I";
 			maxOccurs = 1;
@@ -421,7 +424,7 @@ public class BusinessApplicationHeader1 {
 			componentContext_lazy = () -> BusinessApplicationHeader1.mmObject();
 			isDerived = false;
 			xmlTag = "CreDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreationDate";
 			definition = "Date and time when this Business Message (header) was created.\r\nNote    Times must be normalized, using the \"Z\" annotation.";
 			maxOccurs = 1;
@@ -466,7 +469,7 @@ public class BusinessApplicationHeader1 {
 			componentContext_lazy = () -> BusinessApplicationHeader1.mmObject();
 			isDerived = false;
 			xmlTag = "CpyDplct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CopyDuplicate";
 			definition = "Indicates whether the message is a Copy, a Duplicate or a copy of a duplicate of a previously sent ISO 20022 Message.";
 			maxOccurs = 1;
@@ -522,7 +525,7 @@ public class BusinessApplicationHeader1 {
 			componentContext_lazy = () -> BusinessApplicationHeader1.mmObject();
 			isDerived = false;
 			xmlTag = "PssblDplct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PossibleDuplicate";
 			definition = "Flag indicating if the Business Message exchanged between the MessagingEndpoints is possibly a duplicate. \r\nIf the receiving MessagingEndpoint  did not receive the original, then this Business Message should be processed as if it were the original. \r\n\r\nIf the receiving MessagingEndpoint did receive the original, then it should perform necessary actions to avoid processing this Business Message again.\r\n\r\nThis will guarantee business idempotent behaviour.\r\n\r\nNOTE: this is named \"PossResend\" in FIX - this is an application level resend not a network level retransmission";
 			maxOccurs = 1;
@@ -567,7 +570,7 @@ public class BusinessApplicationHeader1 {
 			componentContext_lazy = () -> BusinessApplicationHeader1.mmObject();
 			isDerived = false;
 			xmlTag = "Prty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Priority";
 			definition = "Relative indication of the processing precedence of the message over a (set of) Business Messages with assigned priorities.";
 			maxOccurs = 1;
@@ -610,7 +613,7 @@ public class BusinessApplicationHeader1 {
 			componentContext_lazy = () -> BusinessApplicationHeader1.mmObject();
 			isDerived = false;
 			xmlTag = "Sgntr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Signature";
 			definition = "Contains the digital signature of the Business Entity authorised to sign this Business Message.";
 			maxOccurs = 1;
@@ -623,15 +626,12 @@ public class BusinessApplicationHeader1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays
-						.asList(com.tools20022.repository.msg.BusinessApplicationHeader1.mmCharacterSet, com.tools20022.repository.msg.BusinessApplicationHeader1.mmFrom, com.tools20022.repository.msg.BusinessApplicationHeader1.mmTo,
-								com.tools20022.repository.msg.BusinessApplicationHeader1.mmBusinessMessageIdentifier, com.tools20022.repository.msg.BusinessApplicationHeader1.mmMessageDefinitionIdentifier,
-								com.tools20022.repository.msg.BusinessApplicationHeader1.mmBusinessService, com.tools20022.repository.msg.BusinessApplicationHeader1.mmCreationDate,
-								com.tools20022.repository.msg.BusinessApplicationHeader1.mmCopyDuplicate, com.tools20022.repository.msg.BusinessApplicationHeader1.mmPossibleDuplicate,
-								com.tools20022.repository.msg.BusinessApplicationHeader1.mmPriority, com.tools20022.repository.msg.BusinessApplicationHeader1.mmSignature);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.head.BusinessApplicationHeaderV01.mmRelated);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(BusinessApplicationHeader1.mmCharacterSet, BusinessApplicationHeader1.mmFrom, BusinessApplicationHeader1.mmTo, BusinessApplicationHeader1.mmBusinessMessageIdentifier,
+						BusinessApplicationHeader1.mmMessageDefinitionIdentifier, BusinessApplicationHeader1.mmBusinessService, BusinessApplicationHeader1.mmCreationDate, BusinessApplicationHeader1.mmCopyDuplicate,
+						BusinessApplicationHeader1.mmPossibleDuplicate, BusinessApplicationHeader1.mmPriority, BusinessApplicationHeader1.mmSignature);
+				messageBuildingBlock_lazy = () -> Arrays.asList(BusinessApplicationHeaderV01.mmRelated);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "BusinessApplicationHeader1";
 				definition = "Specifies the Business Application Header of the Business Message.\r\nCan be used when replying to a query;  can also be used when canceling or amending.";
 			}

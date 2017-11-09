@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.PriceValueTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -115,7 +117,7 @@ public class PriceValueType7Code extends PriceValueTypeCode {
 	 */
 	public static final MMCode mmDiscount = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Discount";
 			owner_lazy = () -> PriceValueType7Code.mmObject();
 		}
@@ -138,7 +140,7 @@ public class PriceValueType7Code extends PriceValueTypeCode {
 	 */
 	public static final MMCode mmPremium = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Premium";
 			owner_lazy = () -> PriceValueType7Code.mmObject();
 		}
@@ -161,7 +163,7 @@ public class PriceValueType7Code extends PriceValueTypeCode {
 	 */
 	public static final MMCode mmPar = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Par";
 			owner_lazy = () -> PriceValueType7Code.mmObject();
 		}
@@ -184,7 +186,7 @@ public class PriceValueType7Code extends PriceValueTypeCode {
 	 */
 	public static final MMCode mmYield = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Yield";
 			owner_lazy = () -> PriceValueType7Code.mmObject();
 		}
@@ -207,7 +209,7 @@ public class PriceValueType7Code extends PriceValueTypeCode {
 	 */
 	public static final MMCode mmSpread = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Spread";
 			owner_lazy = () -> PriceValueType7Code.mmObject();
 		}
@@ -230,7 +232,7 @@ public class PriceValueType7Code extends PriceValueTypeCode {
 	 */
 	public static final MMCode mmPerUnit = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PerUnit";
 			owner_lazy = () -> PriceValueType7Code.mmObject();
 		}
@@ -253,7 +255,7 @@ public class PriceValueType7Code extends PriceValueTypeCode {
 	 */
 	public static final MMCode mmAbsolute = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Absolute";
 			owner_lazy = () -> PriceValueType7Code.mmObject();
 		}
@@ -276,7 +278,7 @@ public class PriceValueType7Code extends PriceValueTypeCode {
 	 */
 	public static final MMCode mmTEDPrice = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TEDPrice";
 			owner_lazy = () -> PriceValueType7Code.mmObject();
 		}
@@ -299,7 +301,7 @@ public class PriceValueType7Code extends PriceValueTypeCode {
 	 */
 	public static final MMCode mmTEDYield = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TEDYield";
 			owner_lazy = () -> PriceValueType7Code.mmObject();
 		}
@@ -322,7 +324,7 @@ public class PriceValueType7Code extends PriceValueTypeCode {
 	 */
 	public static final MMCode mmFixedCabinetTrade = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FixedCabinetTrade";
 			owner_lazy = () -> PriceValueType7Code.mmObject();
 		}
@@ -345,7 +347,7 @@ public class PriceValueType7Code extends PriceValueTypeCode {
 	 */
 	public static final MMCode mmVariableCabinetTrade = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VariableCabinetTrade";
 			owner_lazy = () -> PriceValueType7Code.mmObject();
 		}
@@ -368,7 +370,7 @@ public class PriceValueType7Code extends PriceValueTypeCode {
 	 */
 	public static final MMCode mmPercentage = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Percentage";
 			owner_lazy = () -> PriceValueType7Code.mmObject();
 		}
@@ -391,7 +393,7 @@ public class PriceValueType7Code extends PriceValueTypeCode {
 	 */
 	public static final MMCode mmActualAmount = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ActualAmount";
 			owner_lazy = () -> PriceValueType7Code.mmObject();
 		}
@@ -400,16 +402,14 @@ public class PriceValueType7Code extends PriceValueTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("DISC");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PriceValueType7Code";
 				definition = "Specifies a type of value of the price.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PriceValueType7Code.mmDiscount, com.tools20022.repository.codeset.PriceValueType7Code.mmPremium, com.tools20022.repository.codeset.PriceValueType7Code.mmPar,
-						com.tools20022.repository.codeset.PriceValueType7Code.mmYield, com.tools20022.repository.codeset.PriceValueType7Code.mmSpread, com.tools20022.repository.codeset.PriceValueType7Code.mmPerUnit,
-						com.tools20022.repository.codeset.PriceValueType7Code.mmAbsolute, com.tools20022.repository.codeset.PriceValueType7Code.mmTEDPrice, com.tools20022.repository.codeset.PriceValueType7Code.mmTEDYield,
-						com.tools20022.repository.codeset.PriceValueType7Code.mmFixedCabinetTrade, com.tools20022.repository.codeset.PriceValueType7Code.mmVariableCabinetTrade,
-						com.tools20022.repository.codeset.PriceValueType7Code.mmPercentage, com.tools20022.repository.codeset.PriceValueType7Code.mmActualAmount);
+				code_lazy = () -> Arrays.asList(PriceValueType7Code.mmDiscount, PriceValueType7Code.mmPremium, PriceValueType7Code.mmPar, PriceValueType7Code.mmYield, PriceValueType7Code.mmSpread, PriceValueType7Code.mmPerUnit,
+						PriceValueType7Code.mmAbsolute, PriceValueType7Code.mmTEDPrice, PriceValueType7Code.mmTEDYield, PriceValueType7Code.mmFixedCabinetTrade, PriceValueType7Code.mmVariableCabinetTrade, PriceValueType7Code.mmPercentage,
+						PriceValueType7Code.mmActualAmount);
 				trace_lazy = () -> PriceValueTypeCode.mmObject();
 			}
 		});

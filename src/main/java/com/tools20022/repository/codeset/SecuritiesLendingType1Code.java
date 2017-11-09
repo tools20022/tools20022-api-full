@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.SecuritiesLendingTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -86,7 +88,7 @@ public class SecuritiesLendingType1Code extends SecuritiesLendingTypeCode {
 	 */
 	public static final MMCode mmNewRegistration = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewRegistration";
 			owner_lazy = () -> SecuritiesLendingType1Code.mmObject();
 		}
@@ -109,7 +111,7 @@ public class SecuritiesLendingType1Code extends SecuritiesLendingTypeCode {
 	 */
 	public static final MMCode mmRollOverRenewal = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RollOverRenewal";
 			owner_lazy = () -> SecuritiesLendingType1Code.mmObject();
 		}
@@ -132,7 +134,7 @@ public class SecuritiesLendingType1Code extends SecuritiesLendingTypeCode {
 	 */
 	public static final MMCode mmCallBack = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CallBack";
 			owner_lazy = () -> SecuritiesLendingType1Code.mmObject();
 		}
@@ -141,13 +143,12 @@ public class SecuritiesLendingType1Code extends SecuritiesLendingTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("NWRG");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesLendingType1Code";
 				definition = "Type of securities lending contract.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SecuritiesLendingType1Code.mmNewRegistration, com.tools20022.repository.codeset.SecuritiesLendingType1Code.mmRollOverRenewal,
-						com.tools20022.repository.codeset.SecuritiesLendingType1Code.mmCallBack);
+				code_lazy = () -> Arrays.asList(SecuritiesLendingType1Code.mmNewRegistration, SecuritiesLendingType1Code.mmRollOverRenewal, SecuritiesLendingType1Code.mmCallBack);
 				trace_lazy = () -> SecuritiesLendingTypeCode.mmObject();
 			}
 		});

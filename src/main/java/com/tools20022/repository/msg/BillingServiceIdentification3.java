@@ -20,10 +20,14 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max12Text;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.Max70Text;
 import com.tools20022.repository.entity.CashAccountService;
+import com.tools20022.repository.entity.Entry;
+import com.tools20022.repository.entity.Product;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -126,14 +130,14 @@ public class BillingServiceIdentification3 {
 	 */
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Product.mmName;
+			businessElementTrace_lazy = () -> Product.mmName;
 			componentContext_lazy = () -> BillingServiceIdentification3.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Financial institution's own, internal service identification code, different from the common code.\nUsage: The financial institution own code is used to uniquely identify the service within the financial institution.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.BillingServiceIdentification1.mmIdentification;
+			previousVersion_lazy = () -> BillingServiceIdentification1.mmIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -188,10 +192,10 @@ public class BillingServiceIdentification3 {
 			componentContext_lazy = () -> BillingServiceIdentification3.mmObject();
 			isDerived = false;
 			xmlTag = "SubSvc";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubService";
 			definition = "Defines the financial institution sub-service identification if the financial institution service identification code is used for more than one service.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.BillingServiceIdentification1.mmSubService;
+			previousVersion_lazy = () -> BillingServiceIdentification1.mmSubService;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.BillingSubServiceIdentification1.mmObject();
@@ -239,10 +243,10 @@ public class BillingServiceIdentification3 {
 			componentContext_lazy = () -> BillingServiceIdentification3.mmObject();
 			isDerived = false;
 			xmlTag = "Desc";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Description";
 			definition = "Specifies further details to describe the financial institution service description, which is not the standard description related to the common code.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.BillingServiceIdentification1.mmDescription;
+			previousVersion_lazy = () -> BillingServiceIdentification1.mmDescription;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max70Text.mmObject();
@@ -291,10 +295,10 @@ public class BillingServiceIdentification3 {
 			componentContext_lazy = () -> BillingServiceIdentification3.mmObject();
 			isDerived = false;
 			xmlTag = "CmonCd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommonCode";
 			definition = "Standard reference code used to uniquely identify this service across financial institutions. This is not the financial institution’s internal bank service identification.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.BillingServiceIdentification1.mmCommonCode;
+			previousVersion_lazy = () -> BillingServiceIdentification1.mmCommonCode;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.BillingServiceCommonIdentification1.mmObject();
@@ -338,11 +342,11 @@ public class BillingServiceIdentification3 {
 	 */
 	public static final MMMessageAssociationEnd mmBankTransactionCode = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Entry.mmBankTransactionCode;
+			businessElementTrace_lazy = () -> Entry.mmBankTransactionCode;
 			componentContext_lazy = () -> BillingServiceIdentification3.mmObject();
 			isDerived = false;
 			xmlTag = "BkTxCd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BankTransactionCode";
 			definition = "Full identification of the type of underlying transaction resulting in an service billing.";
 			maxOccurs = 1;
@@ -392,10 +396,10 @@ public class BillingServiceIdentification3 {
 			componentContext_lazy = () -> BillingServiceIdentification3.mmObject();
 			isDerived = false;
 			xmlTag = "SvcTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ServiceType";
 			definition = "Type used to classify or organise different services by common characteristics.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.BillingServiceIdentification1.mmServiceType;
+			previousVersion_lazy = () -> BillingServiceIdentification1.mmServiceType;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max12Text.mmObject();
@@ -405,12 +409,11 @@ public class BillingServiceIdentification3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BillingServiceIdentification3.mmIdentification, com.tools20022.repository.msg.BillingServiceIdentification3.mmSubService,
-						com.tools20022.repository.msg.BillingServiceIdentification3.mmDescription, com.tools20022.repository.msg.BillingServiceIdentification3.mmCommonCode,
-						com.tools20022.repository.msg.BillingServiceIdentification3.mmBankTransactionCode, com.tools20022.repository.msg.BillingServiceIdentification3.mmServiceType);
+				messageElement_lazy = () -> Arrays.asList(BillingServiceIdentification3.mmIdentification, BillingServiceIdentification3.mmSubService, BillingServiceIdentification3.mmDescription, BillingServiceIdentification3.mmCommonCode,
+						BillingServiceIdentification3.mmBankTransactionCode, BillingServiceIdentification3.mmServiceType);
 				trace_lazy = () -> CashAccountService.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "BillingServiceIdentification3";
 				definition = "Identification of the service to be billed.";
 				previousVersion_lazy = () -> BillingServiceIdentification1.mmObject();

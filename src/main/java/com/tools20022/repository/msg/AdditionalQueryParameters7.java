@@ -19,9 +19,14 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.semt.SecuritiesStatementQueryV04;
 import com.tools20022.repository.choice.Reason12Choice;
 import com.tools20022.repository.choice.Status8Choice;
 import com.tools20022.repository.entity.SecuritiesTradeStatus;
+import com.tools20022.repository.entity.Security;
+import com.tools20022.repository.entity.StatusReason;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -141,11 +146,11 @@ public class AdditionalQueryParameters7 {
 			componentContext_lazy = () -> AdditionalQueryParameters7.mmObject();
 			isDerived = false;
 			xmlTag = "Sts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Status";
 			definition = "Request to obtain a Securities Transaction Pending Report for transactions with the specified status.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AdditionalQueryParameters9.mmStatus);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AdditionalQueryParameters5.mmStatus;
+			nextVersions_lazy = () -> Arrays.asList(AdditionalQueryParameters9.mmStatus);
+			previousVersion_lazy = () -> AdditionalQueryParameters5.mmStatus;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -202,15 +207,15 @@ public class AdditionalQueryParameters7 {
 	 */
 	public static final MMMessageAssociationEnd mmReason = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmReason;
+			businessElementTrace_lazy = () -> StatusReason.mmReason;
 			componentContext_lazy = () -> AdditionalQueryParameters7.mmObject();
 			isDerived = false;
 			xmlTag = "Rsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reason";
 			definition = "Request to obtain a Securities Transaction Pending Report for transactions with the specified status reason.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AdditionalQueryParameters9.mmReason);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AdditionalQueryParameters5.mmReason;
+			nextVersions_lazy = () -> Arrays.asList(AdditionalQueryParameters9.mmReason);
+			previousVersion_lazy = () -> AdditionalQueryParameters5.mmReason;
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> Reason12Choice.mmObject();
@@ -267,15 +272,15 @@ public class AdditionalQueryParameters7 {
 	 */
 	public static final MMMessageAssociationEnd mmFinancialInstrumentIdentification = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmIdentification;
+			businessElementTrace_lazy = () -> Security.mmIdentification;
 			componentContext_lazy = () -> AdditionalQueryParameters7.mmObject();
 			isDerived = false;
 			xmlTag = "FinInstrmId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentIdentification";
 			definition = "Financial instruments representing a sum of rights of the investor vis-a-vis the issuer.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AdditionalQueryParameters9.mmFinancialInstrumentIdentification);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AdditionalQueryParameters5.mmFinancialInstrumentIdentification;
+			nextVersions_lazy = () -> Arrays.asList(AdditionalQueryParameters9.mmFinancialInstrumentIdentification);
+			previousVersion_lazy = () -> AdditionalQueryParameters5.mmFinancialInstrumentIdentification;
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.SecurityIdentification14.mmObject();
@@ -285,12 +290,11 @@ public class AdditionalQueryParameters7 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AdditionalQueryParameters7.mmStatus, com.tools20022.repository.msg.AdditionalQueryParameters7.mmReason,
-						com.tools20022.repository.msg.AdditionalQueryParameters7.mmFinancialInstrumentIdentification);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.SecuritiesStatementQueryV04.mmAdditionalQueryParameters);
+				messageElement_lazy = () -> Arrays.asList(AdditionalQueryParameters7.mmStatus, AdditionalQueryParameters7.mmReason, AdditionalQueryParameters7.mmFinancialInstrumentIdentification);
+				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesStatementQueryV04.mmAdditionalQueryParameters);
 				trace_lazy = () -> SecuritiesTradeStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AdditionalQueryParameters7";
 				definition = "Additional specific query criteria.";
 				nextVersions_lazy = () -> Arrays.asList(AdditionalQueryParameters9.mmObject());

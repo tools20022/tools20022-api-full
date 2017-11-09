@@ -20,9 +20,13 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Min6Max8Text;
 import com.tools20022.repository.datatype.TrueFalseIndicator;
+import com.tools20022.repository.entity.CardPaymentAcquiring;
 import com.tools20022.repository.entity.CardPaymentValidation;
+import com.tools20022.repository.entity.PartyIdentificationInformation;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -135,15 +139,15 @@ public class AuthorisationResult4 {
 	 */
 	public static final MMMessageAssociationEnd mmAuthorisationEntity = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.mmOtherIdentification;
+			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmOtherIdentification;
 			componentContext_lazy = () -> AuthorisationResult4.mmObject();
 			isDerived = false;
 			xmlTag = "AuthstnNtty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AuthorisationEntity";
 			definition = "Type of party that has delivered or declined the card payment authorisation (the party is not identified).";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AuthorisationResult10.mmAuthorisationEntity);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AuthorisationResult1.mmAuthorisationEntity;
+			nextVersions_lazy = () -> Arrays.asList(AuthorisationResult10.mmAuthorisationEntity);
+			previousVersion_lazy = () -> AuthorisationResult1.mmAuthorisationEntity;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -197,15 +201,15 @@ public class AuthorisationResult4 {
 	 */
 	public static final MMMessageAssociationEnd mmResponseToAuthorisation = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPaymentValidation.mmResponse;
+			businessElementTrace_lazy = () -> CardPaymentValidation.mmResponse;
 			componentContext_lazy = () -> AuthorisationResult4.mmObject();
 			isDerived = false;
 			xmlTag = "RspnToAuthstn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ResponseToAuthorisation";
 			definition = "Response to an authorisation request.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AuthorisationResult10.mmResponseToAuthorisation);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AuthorisationResult1.mmResponseToAuthorisation;
+			nextVersions_lazy = () -> Arrays.asList(AuthorisationResult10.mmResponseToAuthorisation);
+			previousVersion_lazy = () -> AuthorisationResult1.mmResponseToAuthorisation;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -261,15 +265,15 @@ public class AuthorisationResult4 {
 	 */
 	public static final MMMessageAttribute mmAuthorisationCode = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPaymentValidation.mmAuthorisationCode;
+			businessElementTrace_lazy = () -> CardPaymentValidation.mmAuthorisationCode;
 			componentContext_lazy = () -> AuthorisationResult4.mmObject();
 			isDerived = false;
 			xmlTag = "AuthstnCd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AuthorisationCode";
 			definition = "Value assigned by the authorising party.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AuthorisationResult10.mmAuthorisationCode);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AuthorisationResult1.mmAuthorisationCode;
+			nextVersions_lazy = () -> Arrays.asList(AuthorisationResult10.mmAuthorisationCode);
+			previousVersion_lazy = () -> AuthorisationResult1.mmAuthorisationCode;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Min6Max8Text.mmObject();
@@ -327,15 +331,15 @@ public class AuthorisationResult4 {
 	 */
 	public static final MMMessageAttribute mmCompletionRequired = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.mmCompletionRequired;
+			businessElementTrace_lazy = () -> CardPaymentAcquiring.mmCompletionRequired;
 			componentContext_lazy = () -> AuthorisationResult4.mmObject();
 			isDerived = false;
 			xmlTag = "CmpltnReqrd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CompletionRequired";
 			definition = "Indicates whether the acquirer requires a further exchange completion after the completion of the transaction.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AuthorisationResult10.mmCompletionRequired);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AuthorisationResult1.mmCompletionRequired;
+			nextVersions_lazy = () -> Arrays.asList(AuthorisationResult10.mmCompletionRequired);
+			previousVersion_lazy = () -> AuthorisationResult1.mmCompletionRequired;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
@@ -391,15 +395,15 @@ public class AuthorisationResult4 {
 	 */
 	public static final MMMessageAssociationEnd mmTMSTrigger = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.mmTMSTrigger;
+			businessElementTrace_lazy = () -> CardPaymentAcquiring.mmTMSTrigger;
 			componentContext_lazy = () -> AuthorisationResult4.mmObject();
 			isDerived = false;
 			xmlTag = "TMSTrggr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TMSTrigger";
 			definition = "Instructs the point of interaction (POI) how to contact the host to initiate the maintenance of the terminal.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AuthorisationResult10.mmTMSTrigger);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AuthorisationResult1.mmTMSTrigger;
+			nextVersions_lazy = () -> Arrays.asList(AuthorisationResult10.mmTMSTrigger);
+			previousVersion_lazy = () -> AuthorisationResult1.mmTMSTrigger;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -410,11 +414,11 @@ public class AuthorisationResult4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AuthorisationResult4.mmAuthorisationEntity, com.tools20022.repository.msg.AuthorisationResult4.mmResponseToAuthorisation,
-						com.tools20022.repository.msg.AuthorisationResult4.mmAuthorisationCode, com.tools20022.repository.msg.AuthorisationResult4.mmCompletionRequired, com.tools20022.repository.msg.AuthorisationResult4.mmTMSTrigger);
+				messageElement_lazy = () -> Arrays.asList(AuthorisationResult4.mmAuthorisationEntity, AuthorisationResult4.mmResponseToAuthorisation, AuthorisationResult4.mmAuthorisationCode, AuthorisationResult4.mmCompletionRequired,
+						AuthorisationResult4.mmTMSTrigger);
 				trace_lazy = () -> CardPaymentValidation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AuthorisationResult4";
 				definition = "Outcome of the authorisation, and actions to perform.";
 				nextVersions_lazy = () -> Arrays.asList(AuthorisationResult10.mmObject());

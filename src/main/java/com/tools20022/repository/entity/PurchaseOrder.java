@@ -17,11 +17,10 @@
 
 package com.tools20022.repository.entity;
 
-import com.tools20022.metamodel.MMBusinessAssociationEnd;
-import com.tools20022.metamodel.MMBusinessAttribute;
-import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.*;
 import com.tools20022.repository.datatype.CurrencyAndAmount;
 import com.tools20022.repository.entity.Order;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -37,19 +36,17 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.PurchaseOrder#mmTotalAmount
- * PurchaseOrder.mmTotalAmount}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.PurchaseOrder#mmResultingCommercialTrade
- * PurchaseOrder.mmResultingCommercialTrade}</li>
- * <li>{@linkplain com.tools20022.repository.entity.PurchaseOrder#mmProduct
- * PurchaseOrder.mmProduct}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.PurchaseOrder#mmIdentification
- * PurchaseOrder.mmIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ReportLine3 ReportLine3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ReportLine2 ReportLine2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ReportLine4 ReportLine4}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ReportLine1 ReportLine1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ReportLine7 ReportLine7}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ReportLine6 ReportLine6}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ReportLine5 ReportLine5}</li>
  * </ul>
  * </li>
  * <li>
@@ -68,17 +65,19 @@ import java.util.List;
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
  * superType} = {@linkplain com.tools20022.repository.entity.Order Order}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.ReportLine3 ReportLine3}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ReportLine2 ReportLine2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ReportLine4 ReportLine4}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ReportLine1 ReportLine1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ReportLine7 ReportLine7}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ReportLine6 ReportLine6}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ReportLine5 ReportLine5}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.PurchaseOrder#mmTotalAmount
+ * PurchaseOrder.mmTotalAmount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PurchaseOrder#mmResultingCommercialTrade
+ * PurchaseOrder.mmResultingCommercialTrade}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.PurchaseOrder#mmProduct
+ * PurchaseOrder.mmProduct}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PurchaseOrder#mmIdentification
+ * PurchaseOrder.mmIdentification}</li>
  * </ul>
  * </li>
  * <li>
@@ -156,12 +155,11 @@ public class PurchaseOrder extends Order {
 	 */
 	public static final MMBusinessAttribute mmTotalAmount = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LineItemDetails5.mmOrderedAmount, com.tools20022.repository.msg.LineItem6.mmOrderedLineItemsTotalAmount,
-					com.tools20022.repository.msg.LineItemDetails8.mmOrderedAmount, com.tools20022.repository.msg.LineItem8.mmOrderedLineItemsTotalAmount, com.tools20022.repository.msg.ReportLine1.mmPurchaseOrderTotalNetAmount,
-					com.tools20022.repository.msg.LineItem14.mmOrderedLineItemsTotalAmount, com.tools20022.repository.msg.LineItemDetails12.mmOrderedAmount);
+			derivation_lazy = () -> Arrays.asList(LineItemDetails5.mmOrderedAmount, LineItem6.mmOrderedLineItemsTotalAmount, LineItemDetails8.mmOrderedAmount, LineItem8.mmOrderedLineItemsTotalAmount,
+					ReportLine1.mmPurchaseOrderTotalNetAmount, LineItem14.mmOrderedLineItemsTotalAmount, LineItemDetails12.mmOrderedAmount);
 			elementContext_lazy = () -> PurchaseOrder.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TotalAmount";
 			definition = "Line items total amount.";
 			maxOccurs = 1;
@@ -207,12 +205,12 @@ public class PurchaseOrder extends Order {
 		{
 			elementContext_lazy = () -> PurchaseOrder.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ResultingCommercialTrade";
 			definition = "Execution of the purchase order.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.CommercialTrade.mmPurchaseOrder;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.CommercialTrade.mmObject();
 		}
 	};
@@ -256,12 +254,12 @@ public class PurchaseOrder extends Order {
 		{
 			elementContext_lazy = () -> PurchaseOrder.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Product";
 			definition = "Specifies the items which are sold by the seller to the buyer in a commercial trade.";
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.Product.mmPurchaseOrder;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Product.mmObject();
 		}
 	};
@@ -352,20 +350,18 @@ public class PurchaseOrder extends Order {
 	 */
 	public static final MMBusinessAssociationEnd mmIdentification = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Baseline2.mmPurchaseOrderReference, com.tools20022.repository.msg.Baseline3.mmPurchaseOrderReference,
-					com.tools20022.repository.msg.LineItem4.mmPurchaseOrderReference, com.tools20022.repository.msg.TransportedGoods1.mmPurchaseOrderReference, com.tools20022.repository.msg.LineItem9.mmPurchaseOrderReference,
-					com.tools20022.repository.msg.ReportLine3.mmPurchaseOrderReference, com.tools20022.repository.msg.ReportLine2.mmPurchaseOrderReference, com.tools20022.repository.msg.ReportLine1.mmPurchaseOrderReference,
-					com.tools20022.repository.msg.Baseline4.mmPurchaseOrderReference, com.tools20022.repository.msg.ReportLine7.mmPurchaseOrderReference, com.tools20022.repository.msg.LineItem12.mmPurchaseOrderReference,
-					com.tools20022.repository.msg.ReportLine5.mmPurchaseOrderReference, com.tools20022.repository.msg.Baseline5.mmPurchaseOrderReference, com.tools20022.repository.msg.LineItem15.mmPurchaseOrderReference);
+			derivation_lazy = () -> Arrays.asList(Baseline2.mmPurchaseOrderReference, Baseline3.mmPurchaseOrderReference, LineItem4.mmPurchaseOrderReference, TransportedGoods1.mmPurchaseOrderReference, LineItem9.mmPurchaseOrderReference,
+					ReportLine3.mmPurchaseOrderReference, ReportLine2.mmPurchaseOrderReference, ReportLine1.mmPurchaseOrderReference, Baseline4.mmPurchaseOrderReference, ReportLine7.mmPurchaseOrderReference,
+					LineItem12.mmPurchaseOrderReference, ReportLine5.mmPurchaseOrderReference, Baseline5.mmPurchaseOrderReference, LineItem15.mmPurchaseOrderReference);
 			elementContext_lazy = () -> PurchaseOrder.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Identification";
 			definition = "Identification of the purchase order that can be used for reconciliation or to link tasks relating to the commercial trade.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmRelatedPurchaseOrder;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmObject();
 		}
 	};
@@ -373,15 +369,14 @@ public class PurchaseOrder extends Order {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PurchaseOrder";
 				definition = "Document issued by a buyer and containing the details of a purchase, including description of goods, transport information, payment terms, etc.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.GenericIdentification.mmRelatedPurchaseOrder, com.tools20022.repository.entity.Product.mmPurchaseOrder,
 						com.tools20022.repository.entity.CommercialTrade.mmPurchaseOrder);
 				superType_lazy = () -> Order.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.PurchaseOrder.mmTotalAmount, com.tools20022.repository.entity.PurchaseOrder.mmResultingCommercialTrade,
-						com.tools20022.repository.entity.PurchaseOrder.mmProduct, com.tools20022.repository.entity.PurchaseOrder.mmIdentification);
+				element_lazy = () -> Arrays.asList(PurchaseOrder.mmTotalAmount, PurchaseOrder.mmResultingCommercialTrade, PurchaseOrder.mmProduct, PurchaseOrder.mmIdentification);
 				derivationComponent_lazy = () -> Arrays.asList(ReportLine3.mmObject(), ReportLine2.mmObject(), ReportLine4.mmObject(), ReportLine1.mmObject(), ReportLine7.mmObject(), ReportLine6.mmObject(), ReportLine5.mmObject());
 			}
 		});

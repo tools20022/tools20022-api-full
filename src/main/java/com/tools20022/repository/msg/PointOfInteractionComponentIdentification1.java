@@ -19,8 +19,12 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.entity.GenericIdentification;
 import com.tools20022.repository.entity.PointOfInteraction;
+import com.tools20022.repository.entity.SystemIdentification;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -106,7 +110,7 @@ public class PointOfInteractionComponentIdentification1 {
 			componentContext_lazy = () -> PointOfInteractionComponentIdentification1.mmObject();
 			isDerived = false;
 			xmlTag = "ItmNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ItemNumber";
 			definition = "Hierarchical identification of a hardware component inside all the hardware component of the POI. It is composed of all item numbers of the upper level components, separated by the '.' character, ended by the item number of the current component.";
 			maxOccurs = 1;
@@ -152,11 +156,11 @@ public class PointOfInteractionComponentIdentification1 {
 	 */
 	public static final MMMessageAttribute mmProviderIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmIdentification;
+			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> PointOfInteractionComponentIdentification1.mmObject();
 			isDerived = false;
 			xmlTag = "PrvdrId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProviderIdentification";
 			definition = "Identifies the provider of the software, hardware or parameters of the POI component.";
 			maxOccurs = 1;
@@ -200,11 +204,11 @@ public class PointOfInteractionComponentIdentification1 {
 	 */
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PointOfInteraction.mmComponentIdentification;
+			businessElementTrace_lazy = () -> PointOfInteraction.mmComponentIdentification;
 			componentContext_lazy = () -> PointOfInteractionComponentIdentification1.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Identification of the POI component assigned by its provider.";
 			maxOccurs = 1;
@@ -248,11 +252,11 @@ public class PointOfInteractionComponentIdentification1 {
 	 */
 	public static final MMMessageAttribute mmSerialNumber = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SystemIdentification.mmSerialNumber;
+			businessElementTrace_lazy = () -> SystemIdentification.mmSerialNumber;
 			componentContext_lazy = () -> PointOfInteractionComponentIdentification1.mmObject();
 			isDerived = false;
 			xmlTag = "SrlNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SerialNumber";
 			definition = "Serial number identifying an occurrence of an hardware component.";
 			maxOccurs = 1;
@@ -264,12 +268,11 @@ public class PointOfInteractionComponentIdentification1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PointOfInteractionComponentIdentification1.mmItemNumber,
-						com.tools20022.repository.msg.PointOfInteractionComponentIdentification1.mmProviderIdentification, com.tools20022.repository.msg.PointOfInteractionComponentIdentification1.mmIdentification,
-						com.tools20022.repository.msg.PointOfInteractionComponentIdentification1.mmSerialNumber);
+				messageElement_lazy = () -> Arrays.asList(PointOfInteractionComponentIdentification1.mmItemNumber, PointOfInteractionComponentIdentification1.mmProviderIdentification,
+						PointOfInteractionComponentIdentification1.mmIdentification, PointOfInteractionComponentIdentification1.mmSerialNumber);
 				trace_lazy = () -> PointOfInteraction.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PointOfInteractionComponentIdentification1";
 				definition = "Identification of a POI (Point of Interaction) component.";
 			}

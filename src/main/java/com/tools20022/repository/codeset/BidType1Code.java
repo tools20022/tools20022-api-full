@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.BidTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -82,7 +84,7 @@ public class BidType1Code extends BidTypeCode {
 	 */
 	public static final MMCode mmNonDisclosed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonDisclosed";
 			owner_lazy = () -> BidType1Code.mmObject();
 		}
@@ -104,7 +106,7 @@ public class BidType1Code extends BidTypeCode {
 	 */
 	public static final MMCode mmDisclosed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Disclosed";
 			owner_lazy = () -> BidType1Code.mmObject();
 		}
@@ -126,7 +128,7 @@ public class BidType1Code extends BidTypeCode {
 	 */
 	public static final MMCode mmNoBid = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoBid";
 			owner_lazy = () -> BidType1Code.mmObject();
 		}
@@ -135,12 +137,12 @@ public class BidType1Code extends BidTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("NDIS");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "BidType1Code";
 				definition = "Identifies the type of bid request.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.BidType1Code.mmNonDisclosed, com.tools20022.repository.codeset.BidType1Code.mmDisclosed, com.tools20022.repository.codeset.BidType1Code.mmNoBid);
+				code_lazy = () -> Arrays.asList(BidType1Code.mmNonDisclosed, BidType1Code.mmDisclosed, BidType1Code.mmNoBid);
 				trace_lazy = () -> BidTypeCode.mmObject();
 			}
 		});

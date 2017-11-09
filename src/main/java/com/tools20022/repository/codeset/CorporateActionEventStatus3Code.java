@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CorporateActionEventStatusCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -83,7 +85,7 @@ public class CorporateActionEventStatus3Code extends CorporateActionEventStatusC
 	 */
 	public static final MMCode mmCancelled = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cancelled";
 			owner_lazy = () -> CorporateActionEventStatus3Code.mmObject();
 		}
@@ -106,7 +108,7 @@ public class CorporateActionEventStatus3Code extends CorporateActionEventStatusC
 	 */
 	public static final MMCode mmInactive = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Inactive";
 			owner_lazy = () -> CorporateActionEventStatus3Code.mmObject();
 		}
@@ -115,12 +117,12 @@ public class CorporateActionEventStatus3Code extends CorporateActionEventStatusC
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CANC");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionEventStatus3Code";
 				definition = "Specifies the status of the CA event.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CorporateActionEventStatus3Code.mmCancelled, com.tools20022.repository.codeset.CorporateActionEventStatus3Code.mmInactive);
+				code_lazy = () -> Arrays.asList(CorporateActionEventStatus3Code.mmCancelled, CorporateActionEventStatus3Code.mmInactive);
 				trace_lazy = () -> CorporateActionEventStatusCode.mmObject();
 			}
 		});

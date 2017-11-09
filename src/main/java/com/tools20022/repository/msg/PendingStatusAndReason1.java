@@ -19,9 +19,12 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.ProcessingStatus34Choice;
 import com.tools20022.repository.choice.SettlementStatus9Choice;
 import com.tools20022.repository.entity.PaymentStatus;
+import com.tools20022.repository.entity.Status;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -100,11 +103,11 @@ public class PendingStatusAndReason1 {
 	 */
 	public static final MMMessageAssociationEnd mmProcessingStatus = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.mmTransactionProcessingStatus;
+			businessElementTrace_lazy = () -> Status.mmTransactionProcessingStatus;
 			componentContext_lazy = () -> PendingStatusAndReason1.mmObject();
 			isDerived = false;
 			xmlTag = "PrcgSts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProcessingStatus";
 			definition = "Provides details on the processing status of the transaction.";
 			minOccurs = 0;
@@ -147,11 +150,11 @@ public class PendingStatusAndReason1 {
 	 */
 	public static final MMMessageAssociationEnd mmSettlementStatus = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.mmSettlementStatus;
+			businessElementTrace_lazy = () -> Status.mmSettlementStatus;
 			componentContext_lazy = () -> PendingStatusAndReason1.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmSts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementStatus";
 			definition = "Provides the settlement status of a transaction";
 			minOccurs = 0;
@@ -163,10 +166,10 @@ public class PendingStatusAndReason1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PendingStatusAndReason1.mmProcessingStatus, com.tools20022.repository.msg.PendingStatusAndReason1.mmSettlementStatus);
+				messageElement_lazy = () -> Arrays.asList(PendingStatusAndReason1.mmProcessingStatus, PendingStatusAndReason1.mmSettlementStatus);
 				trace_lazy = () -> PaymentStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "PendingStatusAndReason1";
 				definition = "Choice of the intra-balance movement status type.";
 			}

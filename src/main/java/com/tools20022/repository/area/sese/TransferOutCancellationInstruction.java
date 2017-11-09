@@ -20,6 +20,7 @@ package com.tools20022.repository.area.sese;
 import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.SecuritiesSettlementArchive;
 import com.tools20022.repository.msg.AdditionalReference2;
 import com.tools20022.repository.msg.TransferOut2;
@@ -42,6 +43,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code sese.002.001.01}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.SecuritiesSettlementArchive
@@ -76,9 +80,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * TransferOutCancellationInstruction.mmTransferOutToBeCancelled}</li>
  * </ul>
  * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code sese.002.001.01}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -129,7 +130,7 @@ public class TransferOutCancellationInstruction {
 	public static final MMMessageBuildingBlock mmPreviousReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "PrvsRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousReference";
 			definition = "Reference to a linked message that was previously sent.";
 			maxOccurs = 1;
@@ -164,7 +165,7 @@ public class TransferOutCancellationInstruction {
 	public static final MMMessageBuildingBlock mmPoolReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "PoolRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PoolReference";
 			definition = "Collective reference identifying a set of messages.";
 			maxOccurs = 1;
@@ -200,7 +201,7 @@ public class TransferOutCancellationInstruction {
 	public static final MMMessageBuildingBlock mmRelatedReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "RltdRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedReference";
 			definition = "Reference to a linked message that was previously received.";
 			maxOccurs = 1;
@@ -231,7 +232,7 @@ public class TransferOutCancellationInstruction {
 	public static final MMMessageBuildingBlock mmTransferOutToBeCancelled = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "TrfOutToBeCanc";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransferOutToBeCancelled";
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -242,7 +243,7 @@ public class TransferOutCancellationInstruction {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TransferOutCancellationInstruction";
 				definition = "Scope\r\nThe TransferOutCancellationInstruction message is sent by an instructing party or an instructing party's designated agent to the executing party.\r\nThis message is used to request the cancellation of a TransferOutInstruction that was previously sent by the instructing party.\r\nUsage\r\nThe TransferOutCancellationInstruction message is sent by an instructing party to request cancellation of a previously sent TransferOutInstruction.\r\nThis message must contain the reference of the message to be cancelled. The message may also contain all the details of the message to be cancelled, but this is not recommended.";
 				nextVersions_lazy = () -> Arrays.asList(TransferOutCancellationRequestV02.mmObject());
@@ -251,9 +252,8 @@ public class TransferOutCancellationInstruction {
 				xmlTag = "sese.002.001.01";
 				businessArea_lazy = () -> SecuritiesSettlementArchive.mmObject();
 				xmlName = "sese.002.001.01";
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.TransferOutCancellationInstruction.mmPreviousReference,
-						com.tools20022.repository.area.sese.TransferOutCancellationInstruction.mmPoolReference, com.tools20022.repository.area.sese.TransferOutCancellationInstruction.mmRelatedReference,
-						com.tools20022.repository.area.sese.TransferOutCancellationInstruction.mmTransferOutToBeCancelled);
+				messageBuildingBlock_lazy = () -> Arrays.asList(TransferOutCancellationInstruction.mmPreviousReference, TransferOutCancellationInstruction.mmPoolReference, TransferOutCancellationInstruction.mmRelatedReference,
+						TransferOutCancellationInstruction.mmTransferOutToBeCancelled);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "sese";

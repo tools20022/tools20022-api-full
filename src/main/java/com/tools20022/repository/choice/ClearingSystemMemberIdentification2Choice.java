@@ -19,8 +19,11 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.*;
+import com.tools20022.repository.entity.AustralianBSBIdentification;
 import com.tools20022.repository.entity.CashClearingSystemMember;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -180,11 +183,11 @@ public class ClearingSystemMemberIdentification2Choice {
 	 */
 	public static final MMMessageAttribute mmCHIPSUniversalIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashClearingSystemMember.mmCHIPSUniversalIdentification;
+			businessElementTrace_lazy = () -> CashClearingSystemMember.mmCHIPSUniversalIdentification;
 			componentContext_lazy = () -> ClearingSystemMemberIdentification2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "USCHU";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CHIPSUniversalIdentification";
 			definition = "(United States) Clearing House Interbank Payments System (CHIPS) Universal Identification (UID) - identifies entities that own accounts at CHIPS participating financial institutions, through which CHIPS payments are effected. The CHIPS UID is assigned by the New York Clearing House.";
 			maxOccurs = 1;
@@ -232,11 +235,11 @@ public class ClearingSystemMemberIdentification2Choice {
 	 */
 	public static final MMMessageAttribute mmNewZealandNCCIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashClearingSystemMember.mmNewZealandNCC;
+			businessElementTrace_lazy = () -> CashClearingSystemMember.mmNewZealandNCC;
 			componentContext_lazy = () -> ClearingSystemMemberIdentification2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "NZNCC";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewZealandNCCIdentification";
 			definition = "New Zealand Bank/Branch Code - identifies New Zealand institutions on the New Zealand national clearing system. The code is assigned by the New Zealand Bankers' Association (NZBA).";
 			maxOccurs = 1;
@@ -284,11 +287,11 @@ public class ClearingSystemMemberIdentification2Choice {
 	 */
 	public static final MMMessageAttribute mmIrishNSCIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashClearingSystemMember.mmIrishNSC;
+			businessElementTrace_lazy = () -> CashClearingSystemMember.mmIrishNSC;
 			componentContext_lazy = () -> ClearingSystemMemberIdentification2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "IENSC";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IrishNSCIdentification";
 			definition = "Irish National Sorting Code - identifies Irish financial institutions on the Irish national clearing system. The code is assigned by the Irish Payments Services Organisation (IPSO).";
 			maxOccurs = 1;
@@ -336,11 +339,11 @@ public class ClearingSystemMemberIdentification2Choice {
 	 */
 	public static final MMMessageAttribute mmUKDomesticSortCode = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashClearingSystemMember.mmUKSortCode;
+			businessElementTrace_lazy = () -> CashClearingSystemMember.mmUKSortCode;
 			componentContext_lazy = () -> ClearingSystemMemberIdentification2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "GBSC";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UKDomesticSortCode";
 			definition = "United Kingdom (UK) Sort Code - identifies British financial institutions on the British national clearing systems. The sort code is assigned by the Association for Payments and Clearing Services (APACS).";
 			maxOccurs = 1;
@@ -389,11 +392,11 @@ public class ClearingSystemMemberIdentification2Choice {
 	 */
 	public static final MMMessageAttribute mmCHIPSParticipantIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashClearingSystemMember.mmCHIPSParticipantIdentification;
+			businessElementTrace_lazy = () -> CashClearingSystemMember.mmCHIPSParticipantIdentification;
 			componentContext_lazy = () -> ClearingSystemMemberIdentification2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "USCH";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CHIPSParticipantIdentification";
 			definition = "(United States) Clearing House Interbank Payment System (CHIPS) Participant Identifier (ID) - identifies financial institutions participating on CHIPS. The CHIPS Participant ID is assigned by the New York Clearing House.";
 			maxOccurs = 1;
@@ -440,11 +443,11 @@ public class ClearingSystemMemberIdentification2Choice {
 	 */
 	public static final MMMessageAttribute mmSwissBCIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashClearingSystemMember.mmSwissBC;
+			businessElementTrace_lazy = () -> CashClearingSystemMember.mmSwissBC;
 			componentContext_lazy = () -> ClearingSystemMemberIdentification2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "CHBC";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SwissBCIdentification";
 			definition = "Swiss Bank Code - identifies Swiss institutions on the Swiss national clearing system.";
 			maxOccurs = 1;
@@ -492,11 +495,11 @@ public class ClearingSystemMemberIdentification2Choice {
 	 */
 	public static final MMMessageAttribute mmFedwireRoutingNumberIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashClearingSystemMember.mmFedwireRoutingNumber;
+			businessElementTrace_lazy = () -> CashClearingSystemMember.mmFedwireRoutingNumber;
 			componentContext_lazy = () -> ClearingSystemMemberIdentification2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "USFW";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FedwireRoutingNumberIdentification";
 			definition = "Fedwire Routing Number - identifies financial institutions, in the US, on the FedWire system. The routing number is assigned by the American Bankers Association (ABA).";
 			maxOccurs = 1;
@@ -543,11 +546,11 @@ public class ClearingSystemMemberIdentification2Choice {
 	 */
 	public static final MMMessageAttribute mmPortugueseNCCIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashClearingSystemMember.mmPortugueseNCC;
+			businessElementTrace_lazy = () -> CashClearingSystemMember.mmPortugueseNCC;
 			componentContext_lazy = () -> ClearingSystemMemberIdentification2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "PTNCC";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PortugueseNCCIdentification";
 			definition = "Portuguese National Clearing Code - identifies Portuguese financial institutions on the Portuguese national clearing system.";
 			maxOccurs = 1;
@@ -594,11 +597,11 @@ public class ClearingSystemMemberIdentification2Choice {
 	 */
 	public static final MMMessageAttribute mmRussianCentralBankIdentificationCode = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashClearingSystemMember.mmRussianCentralBankIdentificationCode;
+			businessElementTrace_lazy = () -> CashClearingSystemMember.mmRussianCentralBankIdentificationCode;
 			componentContext_lazy = () -> ClearingSystemMemberIdentification2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "RUCB";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RussianCentralBankIdentificationCode";
 			definition = "Russian Central Bank Identification Code - identifies Russian financial institutions on the Russian national clearing system.";
 			maxOccurs = 1;
@@ -646,11 +649,11 @@ public class ClearingSystemMemberIdentification2Choice {
 	 */
 	public static final MMMessageAttribute mmItalianDomesticIdentificationCode = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashClearingSystemMember.mmItalianDomesticIdentificationCode;
+			businessElementTrace_lazy = () -> CashClearingSystemMember.mmItalianDomesticIdentificationCode;
 			componentContext_lazy = () -> ClearingSystemMemberIdentification2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "ITNCC";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ItalianDomesticIdentificationCode";
 			definition = "Italian Domestic Identification Code - identifies Italian financial institutions on the Italian national clearing system. The code is assigned by the Associazione Bancaria Italiana (ABI).";
 			maxOccurs = 1;
@@ -697,11 +700,11 @@ public class ClearingSystemMemberIdentification2Choice {
 	 */
 	public static final MMMessageAttribute mmAustrianBankleitzahlIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashClearingSystemMember.mmAustrianBankleitzahl;
+			businessElementTrace_lazy = () -> CashClearingSystemMember.mmAustrianBankleitzahl;
 			componentContext_lazy = () -> ClearingSystemMemberIdentification2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "ATBLZ";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AustrianBankleitzahlIdentification";
 			definition = "Austrian Bankleitzahl - identifies Austrian financial institutions on the Austrian national clearing system.";
 			maxOccurs = 1;
@@ -748,11 +751,11 @@ public class ClearingSystemMemberIdentification2Choice {
 	 */
 	public static final MMMessageAttribute mmCanadianPaymentsAssociationRoutingNumberIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashClearingSystemMember.mmCanadianPaymentsAssociationRoutingNumber;
+			businessElementTrace_lazy = () -> CashClearingSystemMember.mmCanadianPaymentsAssociationRoutingNumber;
 			componentContext_lazy = () -> ClearingSystemMemberIdentification2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "CACPA";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CanadianPaymentsAssociationRoutingNumberIdentification";
 			definition = "Canadian Payments Association Routing Number - identifies Canadian financial institutions on the Canadian national clearing system.";
 			maxOccurs = 1;
@@ -799,11 +802,11 @@ public class ClearingSystemMemberIdentification2Choice {
 	 */
 	public static final MMMessageAttribute mmSwissSICIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashClearingSystemMember.mmSwissSIC;
+			businessElementTrace_lazy = () -> CashClearingSystemMember.mmSwissSIC;
 			componentContext_lazy = () -> ClearingSystemMemberIdentification2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "CHSIC";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SwissSICIdentification";
 			definition = "Swiss Interbank Clearing (SIC) Code - identifies Swiss financial institutions domestically, on the Swiss national clearing system.";
 			maxOccurs = 1;
@@ -850,11 +853,11 @@ public class ClearingSystemMemberIdentification2Choice {
 	 */
 	public static final MMMessageAttribute mmGermanBankleitzahlIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashClearingSystemMember.mmGermanBankleitzahl;
+			businessElementTrace_lazy = () -> CashClearingSystemMember.mmGermanBankleitzahl;
 			componentContext_lazy = () -> ClearingSystemMemberIdentification2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "DEBLZ";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GermanBankleitzahlIdentification";
 			definition = "German Bankleitzahl - identifies German financial institutions on the German national clearing systems.";
 			maxOccurs = 1;
@@ -902,11 +905,11 @@ public class ClearingSystemMemberIdentification2Choice {
 	 */
 	public static final MMMessageAttribute mmSpanishDomesticInterbankingIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashClearingSystemMember.mmSpanishDomesticInterbankingCode;
+			businessElementTrace_lazy = () -> CashClearingSystemMember.mmSpanishDomesticInterbankingCode;
 			componentContext_lazy = () -> ClearingSystemMemberIdentification2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "ESNCC";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SpanishDomesticInterbankingIdentification";
 			definition = "Spanish Domestic Interbanking Code - identifies Spanish financial institutions on the Spanish national clearing system. The code is assigned by the Centro de Cooperacion Interbancaria (CCI).";
 			maxOccurs = 1;
@@ -955,11 +958,11 @@ public class ClearingSystemMemberIdentification2Choice {
 	 */
 	public static final MMMessageAttribute mmSouthAfricanNCCIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashClearingSystemMember.mmSouthAfricanNCC;
+			businessElementTrace_lazy = () -> CashClearingSystemMember.mmSouthAfricanNCC;
 			componentContext_lazy = () -> ClearingSystemMemberIdentification2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "ZANCC";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SouthAfricanNCCIdentification";
 			definition = "South African National Clearing Code (NCC) - identifies South African financial institutions on the South African national clearing system. The code is assigned by the South African Bankers Services Company Ltd. (BankServ).";
 			maxOccurs = 1;
@@ -1006,11 +1009,11 @@ public class ClearingSystemMemberIdentification2Choice {
 	 */
 	public static final MMMessageAttribute mmHongKongBankCode = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashClearingSystemMember.mmHongKongBankCode;
+			businessElementTrace_lazy = () -> CashClearingSystemMember.mmHongKongBankCode;
 			componentContext_lazy = () -> ClearingSystemMemberIdentification2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "HKNCC";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HongKongBankCode";
 			definition = "Hong Kong Bank Code - identifies Hong Kong financial institutions on the Hong Kong local clearing system.";
 			maxOccurs = 1;
@@ -1059,11 +1062,11 @@ public class ClearingSystemMemberIdentification2Choice {
 	 */
 	public static final MMMessageAttribute mmAustralianExtensiveBranchNetworkIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AustralianBSBIdentification.mmExtensiveBranchNetworkIdentification;
+			businessElementTrace_lazy = () -> AustralianBSBIdentification.mmExtensiveBranchNetworkIdentification;
 			componentContext_lazy = () -> ClearingSystemMemberIdentification2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "AUBSBx";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AustralianExtensiveBranchNetworkIdentification";
 			definition = "Extensive branch network list of the Australian Bank State Branch (BSB) Code. The codes are used for identifying Australian financial institutions, as assigned by the Australian Payments Clearing Association (APCA).";
 			maxOccurs = 1;
@@ -1111,11 +1114,11 @@ public class ClearingSystemMemberIdentification2Choice {
 	 */
 	public static final MMMessageAttribute mmAustralianSmallNetworkIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AustralianBSBIdentification.mmSmallNetworkIdentification;
+			businessElementTrace_lazy = () -> AustralianBSBIdentification.mmSmallNetworkIdentification;
 			componentContext_lazy = () -> ClearingSystemMemberIdentification2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "AUBSBs";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AustralianSmallNetworkIdentification";
 			definition = "Small network list of the Australian Bank State Branch (BSB) Code. The codes are used for identifying Australian financial institutions , as assigned by the Australian Payments Clearing Association (APCA).";
 			maxOccurs = 1;
@@ -1162,11 +1165,11 @@ public class ClearingSystemMemberIdentification2Choice {
 	 */
 	public static final MMMessageAttribute mmIndianFinancialSystemCode = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashClearingSystemMember.mmIndianFinancialSystemCode;
+			businessElementTrace_lazy = () -> CashClearingSystemMember.mmIndianFinancialSystemCode;
 			componentContext_lazy = () -> ClearingSystemMemberIdentification2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "INIFSC";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IndianFinancialSystemCode";
 			definition = "Indian Financial System Code - identifies Indian financial institutions on the Indian local clearing system.";
 			maxOccurs = 1;
@@ -1213,11 +1216,11 @@ public class ClearingSystemMemberIdentification2Choice {
 	 */
 	public static final MMMessageAttribute mmHellenicBankIdentificationCode = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashClearingSystemMember.mmHellenicBankIdentificationCode;
+			businessElementTrace_lazy = () -> CashClearingSystemMember.mmHellenicBankIdentificationCode;
 			componentContext_lazy = () -> ClearingSystemMemberIdentification2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "GRHEBIC";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HellenicBankIdentificationCode";
 			definition = "Hellenic Bank Identification Code - identifies Hellenic financial institutions on the Hellenic national clearing system.";
 			maxOccurs = 1;
@@ -1264,11 +1267,11 @@ public class ClearingSystemMemberIdentification2Choice {
 	 */
 	public static final MMMessageAttribute mmPolishNationalClearingCode = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashClearingSystemMember.mmPolishNationalClearingCode;
+			businessElementTrace_lazy = () -> CashClearingSystemMember.mmPolishNationalClearingCode;
 			componentContext_lazy = () -> ClearingSystemMemberIdentification2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "PLKNR";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PolishNationalClearingCode";
 			definition = "Polish National Clearing Code - identifies Polish financial institutions on the Polish national clearing system.";
 			maxOccurs = 1;
@@ -1318,7 +1321,7 @@ public class ClearingSystemMemberIdentification2Choice {
 			componentContext_lazy = () -> ClearingSystemMemberIdentification2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "OthrClrCdId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherClearingCodeIdentification";
 			definition = "Identification Code for a clearing system, that has not yet been identified in the list of clearing systems.";
 			maxOccurs = 1;
@@ -1330,25 +1333,20 @@ public class ClearingSystemMemberIdentification2Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ClearingSystemMemberIdentification2Choice.mmCHIPSUniversalIdentification,
-						com.tools20022.repository.choice.ClearingSystemMemberIdentification2Choice.mmNewZealandNCCIdentification, com.tools20022.repository.choice.ClearingSystemMemberIdentification2Choice.mmIrishNSCIdentification,
-						com.tools20022.repository.choice.ClearingSystemMemberIdentification2Choice.mmUKDomesticSortCode, com.tools20022.repository.choice.ClearingSystemMemberIdentification2Choice.mmCHIPSParticipantIdentification,
-						com.tools20022.repository.choice.ClearingSystemMemberIdentification2Choice.mmSwissBCIdentification, com.tools20022.repository.choice.ClearingSystemMemberIdentification2Choice.mmFedwireRoutingNumberIdentification,
-						com.tools20022.repository.choice.ClearingSystemMemberIdentification2Choice.mmPortugueseNCCIdentification,
-						com.tools20022.repository.choice.ClearingSystemMemberIdentification2Choice.mmRussianCentralBankIdentificationCode,
-						com.tools20022.repository.choice.ClearingSystemMemberIdentification2Choice.mmItalianDomesticIdentificationCode,
-						com.tools20022.repository.choice.ClearingSystemMemberIdentification2Choice.mmAustrianBankleitzahlIdentification,
-						com.tools20022.repository.choice.ClearingSystemMemberIdentification2Choice.mmCanadianPaymentsAssociationRoutingNumberIdentification,
-						com.tools20022.repository.choice.ClearingSystemMemberIdentification2Choice.mmSwissSICIdentification, com.tools20022.repository.choice.ClearingSystemMemberIdentification2Choice.mmGermanBankleitzahlIdentification,
-						com.tools20022.repository.choice.ClearingSystemMemberIdentification2Choice.mmSpanishDomesticInterbankingIdentification,
-						com.tools20022.repository.choice.ClearingSystemMemberIdentification2Choice.mmSouthAfricanNCCIdentification, com.tools20022.repository.choice.ClearingSystemMemberIdentification2Choice.mmHongKongBankCode,
-						com.tools20022.repository.choice.ClearingSystemMemberIdentification2Choice.mmAustralianExtensiveBranchNetworkIdentification,
-						com.tools20022.repository.choice.ClearingSystemMemberIdentification2Choice.mmAustralianSmallNetworkIdentification,
-						com.tools20022.repository.choice.ClearingSystemMemberIdentification2Choice.mmIndianFinancialSystemCode, com.tools20022.repository.choice.ClearingSystemMemberIdentification2Choice.mmHellenicBankIdentificationCode,
-						com.tools20022.repository.choice.ClearingSystemMemberIdentification2Choice.mmPolishNationalClearingCode, com.tools20022.repository.choice.ClearingSystemMemberIdentification2Choice.mmOtherClearingCodeIdentification);
+				messageElement_lazy = () -> Arrays.asList(ClearingSystemMemberIdentification2Choice.mmCHIPSUniversalIdentification, ClearingSystemMemberIdentification2Choice.mmNewZealandNCCIdentification,
+						ClearingSystemMemberIdentification2Choice.mmIrishNSCIdentification, ClearingSystemMemberIdentification2Choice.mmUKDomesticSortCode, ClearingSystemMemberIdentification2Choice.mmCHIPSParticipantIdentification,
+						ClearingSystemMemberIdentification2Choice.mmSwissBCIdentification, ClearingSystemMemberIdentification2Choice.mmFedwireRoutingNumberIdentification,
+						ClearingSystemMemberIdentification2Choice.mmPortugueseNCCIdentification, ClearingSystemMemberIdentification2Choice.mmRussianCentralBankIdentificationCode,
+						ClearingSystemMemberIdentification2Choice.mmItalianDomesticIdentificationCode, ClearingSystemMemberIdentification2Choice.mmAustrianBankleitzahlIdentification,
+						ClearingSystemMemberIdentification2Choice.mmCanadianPaymentsAssociationRoutingNumberIdentification, ClearingSystemMemberIdentification2Choice.mmSwissSICIdentification,
+						ClearingSystemMemberIdentification2Choice.mmGermanBankleitzahlIdentification, ClearingSystemMemberIdentification2Choice.mmSpanishDomesticInterbankingIdentification,
+						ClearingSystemMemberIdentification2Choice.mmSouthAfricanNCCIdentification, ClearingSystemMemberIdentification2Choice.mmHongKongBankCode,
+						ClearingSystemMemberIdentification2Choice.mmAustralianExtensiveBranchNetworkIdentification, ClearingSystemMemberIdentification2Choice.mmAustralianSmallNetworkIdentification,
+						ClearingSystemMemberIdentification2Choice.mmIndianFinancialSystemCode, ClearingSystemMemberIdentification2Choice.mmHellenicBankIdentificationCode,
+						ClearingSystemMemberIdentification2Choice.mmPolishNationalClearingCode, ClearingSystemMemberIdentification2Choice.mmOtherClearingCodeIdentification);
 				trace_lazy = () -> CashClearingSystemMember.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ClearingSystemMemberIdentification2Choice";
 				definition = "Choice of identifiers for a clearing system member, as assigned by the clearing system. In some clearing systems, the accounts of the clearing system members are also assigned an identifier.";
 			}

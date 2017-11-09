@@ -20,11 +20,15 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CardPaymentServiceType7Code;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.entity.CardPayment;
+import com.tools20022.repository.entity.CardPaymentAcquiring;
+import com.tools20022.repository.entity.CardPaymentValidation;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -142,14 +146,14 @@ public class CardTransaction8 {
 	 */
 	public static final MMMessageAttribute mmTransactionType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.mmCardPaymentService;
+			businessElementTrace_lazy = () -> CardPaymentAcquiring.mmCardPaymentService;
 			componentContext_lazy = () -> CardTransaction8.mmObject();
 			isDerived = false;
 			xmlTag = "TxTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionType";
 			definition = "Type of transaction being undertaken for the main service. \r\nIt correspond partially to the ISO 8583, field number 3.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CardTransaction4.mmTransactionType;
+			previousVersion_lazy = () -> CardTransaction4.mmTransactionType;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CardPaymentServiceType7Code.mmObject();
@@ -205,15 +209,15 @@ public class CardTransaction8 {
 	 */
 	public static final MMMessageAssociationEnd mmReconciliation = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPayment.mmReconciliation;
+			businessElementTrace_lazy = () -> CardPayment.mmReconciliation;
 			componentContext_lazy = () -> CardTransaction8.mmObject();
 			isDerived = false;
 			xmlTag = "Rcncltn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reconciliation";
 			definition = "Identification of the reconciliation period between the acquirer and the issuer or their respective agents.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardTransaction9.mmReconciliation);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CardTransaction4.mmReconciliation;
+			nextVersions_lazy = () -> Arrays.asList(CardTransaction9.mmReconciliation);
+			previousVersion_lazy = () -> CardTransaction4.mmReconciliation;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -265,14 +269,14 @@ public class CardTransaction8 {
 	 */
 	public static final MMMessageAttribute mmAcceptorTransactionDateTime = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.mmTransactionDateTime;
+			businessElementTrace_lazy = () -> CardPaymentAcquiring.mmTransactionDateTime;
 			componentContext_lazy = () -> CardTransaction8.mmObject();
 			isDerived = false;
 			xmlTag = "AccptrTxDtTm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcceptorTransactionDateTime";
 			definition = "Date and time of the transaction transported unchanged by the acquirer from the card acceptor to the issuer. Corresponds to the CAPE data element TransactionIdentification/ TransactionDateTime.\r\nIt correspond to the ISO 8583, field number 12.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CardTransaction4.mmAcceptorTransactionDateTime;
+			previousVersion_lazy = () -> CardTransaction4.mmAcceptorTransactionDateTime;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
@@ -331,15 +335,15 @@ public class CardTransaction8 {
 	 */
 	public static final MMMessageAttribute mmInitiatorTransactionIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.mmTransactionIdentification;
+			businessElementTrace_lazy = () -> CardPaymentAcquiring.mmTransactionIdentification;
 			componentContext_lazy = () -> CardTransaction8.mmObject();
 			isDerived = false;
 			xmlTag = "InitrTxId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InitiatorTransactionIdentification";
 			definition = "Number generated by the transaction Initiator to assist in identifying a transaction uniquely. This value remains unchanged for all messages within a message pair exchange, for instance an initiation/response. It corresponds to the ISO 8583 field number 11.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardTransaction9.mmInitiatorTransactionIdentification);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CardTransaction4.mmInitiatorTransactionIdentification;
+			nextVersions_lazy = () -> Arrays.asList(CardTransaction9.mmInitiatorTransactionIdentification);
+			previousVersion_lazy = () -> CardTransaction4.mmInitiatorTransactionIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -399,15 +403,15 @@ public class CardTransaction8 {
 	 */
 	public static final MMMessageAttribute mmTransactionLifeCycleIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.mmTransactionIdentification;
+			businessElementTrace_lazy = () -> CardPaymentAcquiring.mmTransactionIdentification;
 			componentContext_lazy = () -> CardTransaction8.mmObject();
 			isDerived = false;
 			xmlTag = "TxLifeCyclId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionLifeCycleIdentification";
 			definition = "Unique identification to match transactions throughout their life cycle (for example, authorisation to financial presentment, financial presentment to chargeback). It shall contain the same value in all messages throughout a transaction’s life cycle. It corresponds partially to ISO 8583:2003 field number 21.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardTransaction9.mmTransactionLifeCycleIdentification);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CardTransaction4.mmTransactionLifeCycleIdentification;
+			nextVersions_lazy = () -> Arrays.asList(CardTransaction9.mmTransactionLifeCycleIdentification);
+			previousVersion_lazy = () -> CardTransaction4.mmTransactionLifeCycleIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -455,10 +459,10 @@ public class CardTransaction8 {
 			componentContext_lazy = () -> CardTransaction8.mmObject();
 			isDerived = false;
 			xmlTag = "TxLifeCyclSeqNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionLifeCycleSequenceNumber";
 			definition = "Life cycle transaction sequence number when multiple authorisations are performed for the same presentment.\r\nIt corresponds partially to ISO 8583:2003, field number 21.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CardTransaction4.mmTransactionLifeCycleSequenceNumber;
+			previousVersion_lazy = () -> CardTransaction4.mmTransactionLifeCycleSequenceNumber;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
@@ -500,7 +504,7 @@ public class CardTransaction8 {
 			componentContext_lazy = () -> CardTransaction8.mmObject();
 			isDerived = false;
 			xmlTag = "TxLifeCyclSeqCntr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionLifeCycleSequenceCounter";
 			definition = "Total number of transactions under the same life cycle transaction sequence number.";
 			maxOccurs = 1;
@@ -550,10 +554,10 @@ public class CardTransaction8 {
 			componentContext_lazy = () -> CardTransaction8.mmObject();
 			isDerived = false;
 			xmlTag = "TxDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionDetails";
 			definition = "Details of the card transaction.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CardTransaction4.mmTransactionDetails;
+			previousVersion_lazy = () -> CardTransaction4.mmTransactionDetails;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -594,11 +598,11 @@ public class CardTransaction8 {
 	 */
 	public static final MMMessageAssociationEnd mmTransactionResponse = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPaymentValidation.mmResponse;
+			businessElementTrace_lazy = () -> CardPaymentValidation.mmResponse;
 			componentContext_lazy = () -> CardTransaction8.mmObject();
 			isDerived = false;
 			xmlTag = "TxRspn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionResponse";
 			definition = "Response to the reversal.";
 			maxOccurs = 1;
@@ -611,14 +615,12 @@ public class CardTransaction8 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardTransaction8.mmTransactionType, com.tools20022.repository.msg.CardTransaction8.mmReconciliation,
-						com.tools20022.repository.msg.CardTransaction8.mmAcceptorTransactionDateTime, com.tools20022.repository.msg.CardTransaction8.mmInitiatorTransactionIdentification,
-						com.tools20022.repository.msg.CardTransaction8.mmTransactionLifeCycleIdentification, com.tools20022.repository.msg.CardTransaction8.mmTransactionLifeCycleSequenceNumber,
-						com.tools20022.repository.msg.CardTransaction8.mmTransactionLifeCycleSequenceCounter, com.tools20022.repository.msg.CardTransaction8.mmTransactionDetails,
-						com.tools20022.repository.msg.CardTransaction8.mmTransactionResponse);
+				messageElement_lazy = () -> Arrays.asList(CardTransaction8.mmTransactionType, CardTransaction8.mmReconciliation, CardTransaction8.mmAcceptorTransactionDateTime, CardTransaction8.mmInitiatorTransactionIdentification,
+						CardTransaction8.mmTransactionLifeCycleIdentification, CardTransaction8.mmTransactionLifeCycleSequenceNumber, CardTransaction8.mmTransactionLifeCycleSequenceCounter, CardTransaction8.mmTransactionDetails,
+						CardTransaction8.mmTransactionResponse);
 				trace_lazy = () -> CardPayment.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CardTransaction8";
 				definition = "Card transaction for which the authorisation has been requested.";
 				nextVersions_lazy = () -> Arrays.asList(CardTransaction9.mmObject());

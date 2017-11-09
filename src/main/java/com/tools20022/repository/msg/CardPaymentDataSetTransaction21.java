@@ -20,8 +20,10 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max9NumericText;
 import com.tools20022.repository.entity.CardPayment;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -117,10 +119,10 @@ public class CardPaymentDataSetTransaction21 {
 			componentContext_lazy = () -> CardPaymentDataSetTransaction21.mmObject();
 			isDerived = false;
 			xmlTag = "TxSeqCntr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionSequenceCounter";
 			definition = "Sequential counter of the transaction.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CardPaymentDataSetTransaction17.mmTransactionSequenceCounter;
+			previousVersion_lazy = () -> CardPaymentDataSetTransaction17.mmTransactionSequenceCounter;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max9NumericText.mmObject();
@@ -166,10 +168,10 @@ public class CardPaymentDataSetTransaction21 {
 			componentContext_lazy = () -> CardPaymentDataSetTransaction21.mmObject();
 			isDerived = false;
 			xmlTag = "Tracblt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Traceability";
 			definition = "Identification of partners involved in the exchange from the merchant to the issuer, with the corresponding timestamp of their exchanges.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CardPaymentDataSetTransaction17.mmTraceability;
+			previousVersion_lazy = () -> CardPaymentDataSetTransaction17.mmTraceability;
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.Traceability5.mmObject();
@@ -219,10 +221,10 @@ public class CardPaymentDataSetTransaction21 {
 			componentContext_lazy = () -> CardPaymentDataSetTransaction21.mmObject();
 			isDerived = false;
 			xmlTag = "Envt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Environment";
 			definition = "Data related to the environment of the card payment transaction.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CardPaymentDataSetTransaction17.mmEnvironment;
+			previousVersion_lazy = () -> CardPaymentDataSetTransaction17.mmEnvironment;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -272,10 +274,10 @@ public class CardPaymentDataSetTransaction21 {
 			componentContext_lazy = () -> CardPaymentDataSetTransaction21.mmObject();
 			isDerived = false;
 			xmlTag = "Tx";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Transaction";
 			definition = "Card payment transaction authorisation result.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CardPaymentDataSetTransaction17.mmTransaction;
+			previousVersion_lazy = () -> CardPaymentDataSetTransaction17.mmTransaction;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -326,10 +328,10 @@ public class CardPaymentDataSetTransaction21 {
 			componentContext_lazy = () -> CardPaymentDataSetTransaction21.mmObject();
 			isDerived = false;
 			xmlTag = "TxRspn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionResponse";
 			definition = "Response to the authorisation request from the acquirer.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CardPaymentDataSetTransaction17.mmTransactionResponse;
+			previousVersion_lazy = () -> CardPaymentDataSetTransaction17.mmTransactionResponse;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> com.tools20022.repository.msg.CardPaymentTransaction67.mmObject();
@@ -339,12 +341,11 @@ public class CardPaymentDataSetTransaction21 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardPaymentDataSetTransaction21.mmTransactionSequenceCounter, com.tools20022.repository.msg.CardPaymentDataSetTransaction21.mmTraceability,
-						com.tools20022.repository.msg.CardPaymentDataSetTransaction21.mmEnvironment, com.tools20022.repository.msg.CardPaymentDataSetTransaction21.mmTransaction,
-						com.tools20022.repository.msg.CardPaymentDataSetTransaction21.mmTransactionResponse);
+				messageElement_lazy = () -> Arrays.asList(CardPaymentDataSetTransaction21.mmTransactionSequenceCounter, CardPaymentDataSetTransaction21.mmTraceability, CardPaymentDataSetTransaction21.mmEnvironment,
+						CardPaymentDataSetTransaction21.mmTransaction, CardPaymentDataSetTransaction21.mmTransactionResponse);
 				trace_lazy = () -> CardPayment.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CardPaymentDataSetTransaction21";
 				definition = "Card payment transaction including an authorisation response.";
 				previousVersion_lazy = () -> CardPaymentDataSetTransaction17.mmObject();

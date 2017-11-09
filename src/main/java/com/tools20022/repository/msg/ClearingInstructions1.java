@@ -19,6 +19,8 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -94,7 +96,7 @@ public class ClearingInstructions1 {
 			componentContext_lazy = () -> ClearingInstructions1.mmObject();
 			isDerived = false;
 			xmlTag = "FIToFICdtTrfTxInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FIToFICreditTransferTransactionInformation";
 			definition = "Set of elements providing information specific to the individual credit transfer(s).";
 			minOccurs = 1;
@@ -138,7 +140,7 @@ public class ClearingInstructions1 {
 			componentContext_lazy = () -> ClearingInstructions1.mmObject();
 			isDerived = false;
 			xmlTag = "FIToFIDrctDbtTxInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FIToFIDirectDebitTransactionInformation";
 			definition = "Set of elements providing information specific to the individual direct debit(s).";
 			minOccurs = 1;
@@ -150,10 +152,9 @@ public class ClearingInstructions1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ClearingInstructions1.mmFIToFICreditTransferTransactionInformation,
-						com.tools20022.repository.msg.ClearingInstructions1.mmFIToFIDirectDebitTransactionInformation);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(ClearingInstructions1.mmFIToFICreditTransferTransactionInformation, ClearingInstructions1.mmFIToFIDirectDebitTransactionInformation);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ClearingInstructions1";
 				definition = "Clearing instructions transactions list.";
 			}

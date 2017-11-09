@@ -20,9 +20,11 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ActiveCurrencyAnd13DecimalAmount;
 import com.tools20022.repository.entity.Dividend;
 import com.tools20022.repository.entity.RateAndAmount;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.AmountAndRateStatus1;
 import com.tools20022.repository.msg.RateTypeAndAmountAndStatus25;
 import java.util.Arrays;
@@ -104,11 +106,11 @@ public class NetDividendRateFormat23Choice {
 	 */
 	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Dividend.mmNetDividend;
+			businessElementTrace_lazy = () -> Dividend.mmNetDividend;
 			componentContext_lazy = () -> NetDividendRateFormat23Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Amt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Number of monetary units specified in a currency.";
 			maxOccurs = 1;
@@ -154,7 +156,7 @@ public class NetDividendRateFormat23Choice {
 			componentContext_lazy = () -> NetDividendRateFormat23Choice.mmObject();
 			isDerived = false;
 			xmlTag = "AmtAndRateSts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmountAndRateStatus";
 			definition = "Specifies an amount and a rate status.";
 			maxOccurs = 1;
@@ -196,7 +198,7 @@ public class NetDividendRateFormat23Choice {
 			componentContext_lazy = () -> NetDividendRateFormat23Choice.mmObject();
 			isDerived = false;
 			xmlTag = "RateTpAndAmtAndRateSts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RateTypeAndAmountAndRateStatus";
 			definition = "Specifies different formats for the net dividend rate.";
 			maxOccurs = 1;
@@ -209,11 +211,10 @@ public class NetDividendRateFormat23Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.NetDividendRateFormat23Choice.mmAmount, com.tools20022.repository.choice.NetDividendRateFormat23Choice.mmAmountAndRateStatus,
-						com.tools20022.repository.choice.NetDividendRateFormat23Choice.mmRateTypeAndAmountAndRateStatus);
+				messageElement_lazy = () -> Arrays.asList(NetDividendRateFormat23Choice.mmAmount, NetDividendRateFormat23Choice.mmAmountAndRateStatus, NetDividendRateFormat23Choice.mmRateTypeAndAmountAndRateStatus);
 				trace_lazy = () -> Dividend.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "NetDividendRateFormat23Choice";
 				definition = "Choice between an amount or an unspecified rate.";
 			}

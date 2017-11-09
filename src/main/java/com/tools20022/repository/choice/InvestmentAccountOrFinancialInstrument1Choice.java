@@ -19,7 +19,9 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.InvestmentFundTransaction;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.FinancialInstrument6;
 import com.tools20022.repository.msg.InvestmentAccount13;
 import java.util.Arrays;
@@ -104,11 +106,11 @@ public class InvestmentAccountOrFinancialInstrument1Choice {
 	 */
 	public static final MMMessageAssociationEnd mmInvestmentAccount = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundTransaction.mmInvestmentAccount;
+			businessElementTrace_lazy = () -> InvestmentFundTransaction.mmInvestmentAccount;
 			componentContext_lazy = () -> InvestmentAccountOrFinancialInstrument1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "InvstmtAcct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestmentAccount";
 			definition = "Account between an investor(s) and a fund manager or a fund. The account can contain holdings in any investment fund or investment fund class managed (or distributed) by the fund manager, within the same fund family.";
 			maxOccurs = 1;
@@ -155,11 +157,11 @@ public class InvestmentAccountOrFinancialInstrument1Choice {
 	 */
 	public static final MMMessageAssociationEnd mmFinancialInstrument = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundTransaction.mmInvestmentFundClass;
+			businessElementTrace_lazy = () -> InvestmentFundTransaction.mmInvestmentFundClass;
 			componentContext_lazy = () -> InvestmentAccountOrFinancialInstrument1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "FinInstrm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrument";
 			definition = "Instrument that has intrinsic monetary value, and may transfer value, the price of which may be obtained from a financial market, eg, a bond or a cheque.";
 			maxOccurs = 1;
@@ -172,11 +174,10 @@ public class InvestmentAccountOrFinancialInstrument1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.InvestmentAccountOrFinancialInstrument1Choice.mmInvestmentAccount,
-						com.tools20022.repository.choice.InvestmentAccountOrFinancialInstrument1Choice.mmFinancialInstrument);
+				messageElement_lazy = () -> Arrays.asList(InvestmentAccountOrFinancialInstrument1Choice.mmInvestmentAccount, InvestmentAccountOrFinancialInstrument1Choice.mmFinancialInstrument);
 				trace_lazy = () -> InvestmentFundTransaction.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InvestmentAccountOrFinancialInstrument1Choice";
 				definition = "Choice between the investment account and the financial instrument.";
 			}

@@ -19,8 +19,10 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.DeniedReason4Code;
 import com.tools20022.repository.entity.SecuritiesTradeStatusReason;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification20;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -119,14 +121,14 @@ public class DeniedReason2Choice {
 	 */
 	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeStatusReason.mmDeniedReason;
+			businessElementTrace_lazy = () -> SecuritiesTradeStatusReason.mmDeniedReason;
 			componentContext_lazy = () -> DeniedReason2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Cd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Specifies the reason why the request was denied.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.DeniedReason7Choice.mmCode, com.tools20022.repository.choice.DeniedReason16Choice.mmCode);
+			nextVersions_lazy = () -> Arrays.asList(DeniedReason7Choice.mmCode, DeniedReason16Choice.mmCode);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DeniedReason4Code.mmObject();
@@ -179,14 +181,14 @@ public class DeniedReason2Choice {
 	 */
 	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeStatusReason.mmDeniedReason;
+			businessElementTrace_lazy = () -> SecuritiesTradeStatusReason.mmDeniedReason;
 			componentContext_lazy = () -> DeniedReason2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Specifies the reason why the request was denied.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.DeniedReason7Choice.mmProprietary, com.tools20022.repository.choice.DeniedReason16Choice.mmProprietary);
+			nextVersions_lazy = () -> Arrays.asList(DeniedReason7Choice.mmProprietary, DeniedReason16Choice.mmProprietary);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification20.mmObject();
@@ -196,10 +198,10 @@ public class DeniedReason2Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.DeniedReason2Choice.mmCode, com.tools20022.repository.choice.DeniedReason2Choice.mmProprietary);
+				messageElement_lazy = () -> Arrays.asList(DeniedReason2Choice.mmCode, DeniedReason2Choice.mmProprietary);
 				trace_lazy = () -> SecuritiesTradeStatusReason.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DeniedReason2Choice";
 				definition = "Choice of format for the denied reason.";
 				nextVersions_lazy = () -> Arrays.asList(DeniedReason7Choice.mmObject(), DeniedReason16Choice.mmObject());

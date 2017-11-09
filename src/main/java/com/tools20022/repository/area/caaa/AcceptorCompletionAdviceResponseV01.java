@@ -20,6 +20,7 @@ package com.tools20022.repository.area.caaa;
 import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.AcceptortoAcquirerCardTransactionArchive;
 import com.tools20022.repository.msg.AcceptorCompletionAdviceResponse1;
 import com.tools20022.repository.msg.ContentInformationType3;
@@ -40,6 +41,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code caaa.004.001.01}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.AcceptortoAcquirerCardTransactionArchive
@@ -69,9 +73,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * AcceptorCompletionAdviceResponseV01.mmSecurityTrailer}</li>
  * </ul>
  * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code caaa.004.001.01}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -122,7 +123,7 @@ public class AcceptorCompletionAdviceResponseV01 {
 	public static final MMMessageBuildingBlock mmHeader = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Hdr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Header";
 			definition = "Completion advice response message management information.";
 			maxOccurs = 1;
@@ -157,7 +158,7 @@ public class AcceptorCompletionAdviceResponseV01 {
 	public static final MMMessageBuildingBlock mmCompletionAdviceResponse = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CmpltnAdvcRspn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CompletionAdviceResponse";
 			definition = "Information related to the completion advice response.";
 			maxOccurs = 1;
@@ -192,7 +193,7 @@ public class AcceptorCompletionAdviceResponseV01 {
 	public static final MMMessageBuildingBlock mmSecurityTrailer = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SctyTrlr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityTrailer";
 			definition = "Trailer of the message containing a MAC.";
 			maxOccurs = 1;
@@ -204,7 +205,7 @@ public class AcceptorCompletionAdviceResponseV01 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AcceptorCompletionAdviceResponseV01";
 				definition = "Scope\r\nThe AcceptorCompletionAdviceResponse message is sent by the acquirer to acknowledge the proper receipt of an AcceptorCompletionAdvice. The message can be sent directly to the card acceptor or through an agent.\r\nUsage\r\nThe AcceptorCompletionAdviceResponse message is used to acknowledge the data capture process performed by the acquirer based on the data required to carry out the financial clearing and settlement of the transaction.";
 				nextVersions_lazy = () -> Arrays.asList(AcceptorCompletionAdviceResponseV02.mmObject());
@@ -212,8 +213,7 @@ public class AcceptorCompletionAdviceResponseV01 {
 				rootElement = "Document";
 				xmlTag = "AccptrCmpltnAdvcRspn";
 				businessArea_lazy = () -> AcceptortoAcquirerCardTransactionArchive.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.caaa.AcceptorCompletionAdviceResponseV01.mmHeader,
-						com.tools20022.repository.area.caaa.AcceptorCompletionAdviceResponseV01.mmCompletionAdviceResponse, com.tools20022.repository.area.caaa.AcceptorCompletionAdviceResponseV01.mmSecurityTrailer);
+				messageBuildingBlock_lazy = () -> Arrays.asList(AcceptorCompletionAdviceResponseV01.mmHeader, AcceptorCompletionAdviceResponseV01.mmCompletionAdviceResponse, AcceptorCompletionAdviceResponseV01.mmSecurityTrailer);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "caaa";

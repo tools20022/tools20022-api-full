@@ -20,15 +20,16 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.auth.FinancialInstrumentReportingNonEquityTransparencyDataReportV01;
 import com.tools20022.repository.choice.Derivative2Choice;
 import com.tools20022.repository.codeset.EmissionAllowanceProductType2Code;
 import com.tools20022.repository.codeset.FinancialInstrumentContractType1Code;
 import com.tools20022.repository.codeset.NonEquityInstrumentReportingClassification1Code;
 import com.tools20022.repository.codeset.ProductType5Code;
 import com.tools20022.repository.datatype.*;
-import com.tools20022.repository.entity.Commodity;
-import com.tools20022.repository.entity.Debt;
-import com.tools20022.repository.entity.Security;
+import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -151,7 +152,7 @@ public class TransparencyDataReport10 {
 			componentContext_lazy = () -> TransparencyDataReport10.mmObject();
 			isDerived = false;
 			xmlTag = "TechRcrdId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TechnicalRecordIdentification";
 			definition = "Unique identifier of a record in a message used as part of error management and status advice messages.\r\n\r\nUsage:\r\nThis identification will be used in the status advice report sent back.";
 			maxOccurs = 1;
@@ -195,11 +196,11 @@ public class TransparencyDataReport10 {
 	 */
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesIdentification.mmSecurityIdentification;
+			businessElementTrace_lazy = () -> SecuritiesIdentification.mmSecurityIdentification;
 			componentContext_lazy = () -> TransparencyDataReport10.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Identifies the financial instrument using an ISIN.";
 			maxOccurs = 1;
@@ -242,11 +243,11 @@ public class TransparencyDataReport10 {
 	 */
 	public static final MMMessageAttribute mmFullName = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.LocalName.mmFullName;
+			businessElementTrace_lazy = () -> LocalName.mmFullName;
 			componentContext_lazy = () -> TransparencyDataReport10.mmObject();
 			isDerived = false;
 			xmlTag = "FullNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FullName";
 			definition = "Full name or description of the financial instrument.";
 			maxOccurs = 1;
@@ -293,11 +294,11 @@ public class TransparencyDataReport10 {
 	 */
 	public static final MMMessageAttribute mmTradingVenue = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmPlaceOfListing;
+			businessElementTrace_lazy = () -> Security.mmPlaceOfListing;
 			componentContext_lazy = () -> TransparencyDataReport10.mmObject();
 			isDerived = false;
 			xmlTag = "TradgVn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradingVenue";
 			definition = "Segment MIC for the trading venue where applicable, otherwise the operational MIC.";
 			maxOccurs = 1;
@@ -340,11 +341,11 @@ public class TransparencyDataReport10 {
 	 */
 	public static final MMMessageAttribute mmReportingDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Trade.mmTradeDateTime;
+			businessElementTrace_lazy = () -> Trade.mmTradeDateTime;
 			componentContext_lazy = () -> TransparencyDataReport10.mmObject();
 			isDerived = false;
 			xmlTag = "RptgDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportingDate";
 			definition = "Date this information is reported in relation to.";
 			maxOccurs = 1;
@@ -392,11 +393,11 @@ public class TransparencyDataReport10 {
 	 */
 	public static final MMMessageAttribute mmMaturityDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Asset.mmMaturityDate;
+			businessElementTrace_lazy = () -> Asset.mmMaturityDate;
 			componentContext_lazy = () -> TransparencyDataReport10.mmObject();
 			isDerived = false;
 			xmlTag = "MtrtyDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaturityDate";
 			definition = "Maturity date of the financial instrument. Field applicable for the asset classes of bonds, interest rate derivatives, equity derivatives, commodity derivatives, foreign exchange derivatives, credit derivatives, C10 derivatives and derivatives on emission allowances.";
 			maxOccurs = 1;
@@ -440,11 +441,11 @@ public class TransparencyDataReport10 {
 	 */
 	public static final MMMessageAttribute mmFinancialInstrumentClassification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AssetClassification.mmClassificationType;
+			businessElementTrace_lazy = () -> AssetClassification.mmClassificationType;
 			componentContext_lazy = () -> TransparencyDataReport10.mmObject();
 			isDerived = false;
 			xmlTag = "FinInstrmClssfctn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentClassification";
 			definition = "Identification of non-equity financial instruments.";
 			maxOccurs = 1;
@@ -491,11 +492,11 @@ public class TransparencyDataReport10 {
 	 */
 	public static final MMMessageAttribute mmUnderlyingInstrumentAssetClass = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Derivative.mmUnderlyingAsset;
+			businessElementTrace_lazy = () -> Derivative.mmUnderlyingAsset;
 			componentContext_lazy = () -> TransparencyDataReport10.mmObject();
 			isDerived = false;
 			xmlTag = "UndrlygInstrmAsstClss";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnderlyingInstrumentAssetClass";
 			definition = "Details on the type of asset class a non-equity financial instrument can be classified as.";
 			maxOccurs = 1;
@@ -542,11 +543,11 @@ public class TransparencyDataReport10 {
 	 */
 	public static final MMMessageAttribute mmDerivativeContractType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AssetClassification.mmProductType;
+			businessElementTrace_lazy = () -> AssetClassification.mmProductType;
 			componentContext_lazy = () -> TransparencyDataReport10.mmObject();
 			isDerived = false;
 			xmlTag = "DerivCtrctTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DerivativeContractType";
 			definition = "Details on the contract type a derivative non-equity financial instrument can be classified as.";
 			maxOccurs = 1;
@@ -591,7 +592,7 @@ public class TransparencyDataReport10 {
 			componentContext_lazy = () -> TransparencyDataReport10.mmObject();
 			isDerived = false;
 			xmlTag = "Bd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Bond";
 			definition = "Details specific to a bond / debt instrument.";
 			maxOccurs = 1;
@@ -640,7 +641,7 @@ public class TransparencyDataReport10 {
 			componentContext_lazy = () -> TransparencyDataReport10.mmObject();
 			isDerived = false;
 			xmlTag = "EmssnAllwncTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EmissionAllowanceType";
 			definition = "Details the reporting of the emission allowance sub type.";
 			maxOccurs = 1;
@@ -682,11 +683,11 @@ public class TransparencyDataReport10 {
 	 */
 	public static final MMMessageAssociationEnd mmDerivative = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Asset.mmDerivative;
+			businessElementTrace_lazy = () -> Asset.mmDerivative;
 			componentContext_lazy = () -> TransparencyDataReport10.mmObject();
 			isDerived = false;
 			xmlTag = "Deriv";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Derivative";
 			definition = "Derivative specific details.";
 			maxOccurs = 1;
@@ -699,15 +700,13 @@ public class TransparencyDataReport10 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransparencyDataReport10.mmTechnicalRecordIdentification, com.tools20022.repository.msg.TransparencyDataReport10.mmIdentification,
-						com.tools20022.repository.msg.TransparencyDataReport10.mmFullName, com.tools20022.repository.msg.TransparencyDataReport10.mmTradingVenue, com.tools20022.repository.msg.TransparencyDataReport10.mmReportingDate,
-						com.tools20022.repository.msg.TransparencyDataReport10.mmMaturityDate, com.tools20022.repository.msg.TransparencyDataReport10.mmFinancialInstrumentClassification,
-						com.tools20022.repository.msg.TransparencyDataReport10.mmUnderlyingInstrumentAssetClass, com.tools20022.repository.msg.TransparencyDataReport10.mmDerivativeContractType,
-						com.tools20022.repository.msg.TransparencyDataReport10.mmBond, com.tools20022.repository.msg.TransparencyDataReport10.mmEmissionAllowanceType, com.tools20022.repository.msg.TransparencyDataReport10.mmDerivative);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.auth.FinancialInstrumentReportingNonEquityTransparencyDataReportV01.mmNonEquityTransparencyData);
+				messageElement_lazy = () -> Arrays.asList(TransparencyDataReport10.mmTechnicalRecordIdentification, TransparencyDataReport10.mmIdentification, TransparencyDataReport10.mmFullName, TransparencyDataReport10.mmTradingVenue,
+						TransparencyDataReport10.mmReportingDate, TransparencyDataReport10.mmMaturityDate, TransparencyDataReport10.mmFinancialInstrumentClassification, TransparencyDataReport10.mmUnderlyingInstrumentAssetClass,
+						TransparencyDataReport10.mmDerivativeContractType, TransparencyDataReport10.mmBond, TransparencyDataReport10.mmEmissionAllowanceType, TransparencyDataReport10.mmDerivative);
+				messageBuildingBlock_lazy = () -> Arrays.asList(FinancialInstrumentReportingNonEquityTransparencyDataReportV01.mmNonEquityTransparencyData);
 				trace_lazy = () -> Security.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TransparencyDataReport10";
 				definition = "Provides for reporting details of non-equity instruments as part of transparency calculations.";
 			}

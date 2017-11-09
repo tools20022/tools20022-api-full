@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.TerminalManagementActionCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -117,9 +119,9 @@ public class TerminalManagementAction1Code extends TerminalManagementActionCode 
 	 */
 	public static final MMCode mmActivate = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Activate";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TerminalManagementAction2Code.mmActivate);
+			nextVersions_lazy = () -> Arrays.asList(TerminalManagementAction2Code.mmActivate);
 			owner_lazy = () -> TerminalManagementAction1Code.mmObject();
 		}
 	};
@@ -149,9 +151,9 @@ public class TerminalManagementAction1Code extends TerminalManagementActionCode 
 	 */
 	public static final MMCode mmDeactivate = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Deactivate";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TerminalManagementAction2Code.mmDeactivate);
+			nextVersions_lazy = () -> Arrays.asList(TerminalManagementAction2Code.mmDeactivate);
 			owner_lazy = () -> TerminalManagementAction1Code.mmObject();
 		}
 	};
@@ -181,9 +183,9 @@ public class TerminalManagementAction1Code extends TerminalManagementActionCode 
 	 */
 	public static final MMCode mmDelete = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Delete";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TerminalManagementAction2Code.mmDelete);
+			nextVersions_lazy = () -> Arrays.asList(TerminalManagementAction2Code.mmDelete);
 			owner_lazy = () -> TerminalManagementAction1Code.mmObject();
 		}
 	};
@@ -213,9 +215,9 @@ public class TerminalManagementAction1Code extends TerminalManagementActionCode 
 	 */
 	public static final MMCode mmDownload = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Download";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TerminalManagementAction2Code.mmDownload);
+			nextVersions_lazy = () -> Arrays.asList(TerminalManagementAction2Code.mmDownload);
 			owner_lazy = () -> TerminalManagementAction1Code.mmObject();
 		}
 	};
@@ -245,9 +247,9 @@ public class TerminalManagementAction1Code extends TerminalManagementActionCode 
 	 */
 	public static final MMCode mmInstall = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Install";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TerminalManagementAction2Code.mmInstall);
+			nextVersions_lazy = () -> Arrays.asList(TerminalManagementAction2Code.mmInstall);
 			owner_lazy = () -> TerminalManagementAction1Code.mmObject();
 		}
 	};
@@ -277,9 +279,9 @@ public class TerminalManagementAction1Code extends TerminalManagementActionCode 
 	 */
 	public static final MMCode mmRestart = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Restart";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TerminalManagementAction2Code.mmRestart);
+			nextVersions_lazy = () -> Arrays.asList(TerminalManagementAction2Code.mmRestart);
 			owner_lazy = () -> TerminalManagementAction1Code.mmObject();
 		}
 	};
@@ -309,9 +311,9 @@ public class TerminalManagementAction1Code extends TerminalManagementActionCode 
 	 */
 	public static final MMCode mmUpload = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Upload";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TerminalManagementAction2Code.mmUpload);
+			nextVersions_lazy = () -> Arrays.asList(TerminalManagementAction2Code.mmUpload);
 			owner_lazy = () -> TerminalManagementAction1Code.mmObject();
 		}
 	};
@@ -319,16 +321,14 @@ public class TerminalManagementAction1Code extends TerminalManagementActionCode 
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ACTV");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TerminalManagementAction1Code";
 				definition = "Types of terminal management action to be performed by a point of interaction.";
 				nextVersions_lazy = () -> Arrays.asList(TerminalManagementAction2Code.mmObject());
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TerminalManagementAction1Code.mmActivate, com.tools20022.repository.codeset.TerminalManagementAction1Code.mmDeactivate,
-						com.tools20022.repository.codeset.TerminalManagementAction1Code.mmDelete, com.tools20022.repository.codeset.TerminalManagementAction1Code.mmDownload,
-						com.tools20022.repository.codeset.TerminalManagementAction1Code.mmInstall, com.tools20022.repository.codeset.TerminalManagementAction1Code.mmRestart,
-						com.tools20022.repository.codeset.TerminalManagementAction1Code.mmUpload);
+				code_lazy = () -> Arrays.asList(TerminalManagementAction1Code.mmActivate, TerminalManagementAction1Code.mmDeactivate, TerminalManagementAction1Code.mmDelete, TerminalManagementAction1Code.mmDownload,
+						TerminalManagementAction1Code.mmInstall, TerminalManagementAction1Code.mmRestart, TerminalManagementAction1Code.mmUpload);
 				trace_lazy = () -> TerminalManagementActionCode.mmObject();
 			}
 		});

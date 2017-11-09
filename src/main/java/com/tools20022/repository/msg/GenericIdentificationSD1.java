@@ -19,8 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CountryCode;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.entity.GenericIdentification;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -99,7 +102,7 @@ public class GenericIdentificationSD1 {
 			componentContext_lazy = () -> GenericIdentificationSD1.mmObject();
 			isDerived = false;
 			xmlTag = "FsclDmcl";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FiscalDomicile";
 			definition = "Country in which the account owner has one's fiscal domicile.";
 			maxOccurs = 1;
@@ -143,11 +146,11 @@ public class GenericIdentificationSD1 {
 	 */
 	public static final MMMessageAttribute mmAccountServicerIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmIdentification;
+			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> GenericIdentificationSD1.mmObject();
 			isDerived = false;
 			xmlTag = "AcctSvcrId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountServicerIdentification";
 			definition = "Identification of the document assigned by the account servicer.";
 			maxOccurs = 1;
@@ -191,11 +194,11 @@ public class GenericIdentificationSD1 {
 	 */
 	public static final MMMessageAttribute mmAccountOwnerIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmIdentification;
+			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> GenericIdentificationSD1.mmObject();
 			isDerived = false;
 			xmlTag = "AcctOwnrId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountOwnerIdentification";
 			definition = "Identification of the document assigned by the account owner.";
 			maxOccurs = 1;
@@ -207,10 +210,9 @@ public class GenericIdentificationSD1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GenericIdentificationSD1.mmFiscalDomicile, com.tools20022.repository.msg.GenericIdentificationSD1.mmAccountServicerIdentification,
-						com.tools20022.repository.msg.GenericIdentificationSD1.mmAccountOwnerIdentification);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(GenericIdentificationSD1.mmFiscalDomicile, GenericIdentificationSD1.mmAccountServicerIdentification, GenericIdentificationSD1.mmAccountOwnerIdentification);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "GenericIdentificationSD1";
 				definition = "Identification information expressed as a country of fiscal domicile and a reference.";
 			}

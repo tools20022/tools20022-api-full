@@ -20,6 +20,7 @@ package com.tools20022.repository.area.secl;
 import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.SecuritiesClearingLatestVersion;
 import com.tools20022.repository.choice.PartyIdentification35Choice;
 import com.tools20022.repository.choice.SettlementParties2Choice;
@@ -49,6 +50,9 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code secl.010.001.03}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.SecuritiesClearingLatestVersion
@@ -96,9 +100,6 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code secl.010.001.03}</li>
- * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -143,7 +144,7 @@ public class SettlementObligationReportV03 {
 	public static final MMMessageBuildingBlock mmReportParameters = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "RptParams";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportParameters";
 			definition = "Provides details about the report such as the report identification, the creation date and time.";
 			maxOccurs = 1;
@@ -181,7 +182,7 @@ public class SettlementObligationReportV03 {
 	public static final MMMessageBuildingBlock mmPagination = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Pgntn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Pagination";
 			definition = "Page number of the message (within a report) and continuation indicator to indicate that the report is to continue or that the message is the last page of the report.";
 			maxOccurs = 1;
@@ -219,7 +220,7 @@ public class SettlementObligationReportV03 {
 	public static final MMMessageBuildingBlock mmClearingMember = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "ClrMmb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClearingMember";
 			definition = "Provides the identification of the clearing member (individual clearing member or general clearing member).";
 			maxOccurs = 1;
@@ -260,7 +261,7 @@ public class SettlementObligationReportV03 {
 	public static final MMMessageBuildingBlock mmClearingSegment = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "ClrSgmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClearingSegment";
 			definition = "Clearing organisation that will clear the trade.\r\nNote: This field allows Clearing Member Firm to segregate flows coming from clearing counterparty's clearing system. Indeed, Clearing Member Firms receive messages from the same system (same sender) and this field allows them to know if the message is related to equities or derivatives.";
 			maxOccurs = 1;
@@ -301,7 +302,7 @@ public class SettlementObligationReportV03 {
 	public static final MMMessageBuildingBlock mmDeliveryAccount = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "DlvryAcct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeliveryAccount";
 			definition = "Provides the identification of the account used for netting. This is an account opened by the central counterparty in the name of the clearing member or its settlement agent within the account structure, for settlement purposes (gives information about the clearing member/its settlement agent account at the central securities depository).";
 			maxOccurs = 1;
@@ -335,7 +336,7 @@ public class SettlementObligationReportV03 {
 	public static final MMMessageBuildingBlock mmReportDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "RptDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportDetails";
 			definition = "Provides details on the settlement obligation report.";
 			minOccurs = 1;
@@ -372,7 +373,7 @@ public class SettlementObligationReportV03 {
 	public static final MMMessageBuildingBlock mmSettlementParties = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SttlmPties";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementParties";
 			definition = "Provides details about the receiving parties involved in the settlement chain.";
 			maxOccurs = 1;
@@ -410,7 +411,7 @@ public class SettlementObligationReportV03 {
 	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SplmtryData";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryData";
 			definition = "Additional information that can not be captured in the structured fields and/or any other specific block. ";
 			minOccurs = 0;
@@ -421,17 +422,16 @@ public class SettlementObligationReportV03 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SettlementObligationReportV03";
 				definition = "Scope\r\nThe SettlementObligationReport message is sent by the central counterparty (CCP) to a clearing member to report on the settlement obligation that will be submitted for settlement.\r\n\r\nThe message definition is intended for use with the ISO20022 Business Application Header.\r\n\r\nUsage\r\nThe SettlementObligationReport message may also be sent to a third party processing the settlement obligation(s) on behalf of more than one clearing member.\r\nThe Settlement Obligation Report message is provided per delivery account and per instrument. The report can be provided for one specific delivering party or one specific receiving party. It can also be generated per non clearing member.";
 				messageSet_lazy = () -> Arrays.asList(CentralCounterPartyCCPSecuritiesClearingISOLatestversion.mmObject());
 				rootElement = "Document";
 				xmlTag = "SttlmOblgtnRpt";
 				businessArea_lazy = () -> SecuritiesClearingLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.secl.SettlementObligationReportV03.mmReportParameters, com.tools20022.repository.area.secl.SettlementObligationReportV03.mmPagination,
-						com.tools20022.repository.area.secl.SettlementObligationReportV03.mmClearingMember, com.tools20022.repository.area.secl.SettlementObligationReportV03.mmClearingSegment,
-						com.tools20022.repository.area.secl.SettlementObligationReportV03.mmDeliveryAccount, com.tools20022.repository.area.secl.SettlementObligationReportV03.mmReportDetails,
-						com.tools20022.repository.area.secl.SettlementObligationReportV03.mmSettlementParties, com.tools20022.repository.area.secl.SettlementObligationReportV03.mmSupplementaryData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(SettlementObligationReportV03.mmReportParameters, SettlementObligationReportV03.mmPagination, SettlementObligationReportV03.mmClearingMember,
+						SettlementObligationReportV03.mmClearingSegment, SettlementObligationReportV03.mmDeliveryAccount, SettlementObligationReportV03.mmReportDetails, SettlementObligationReportV03.mmSettlementParties,
+						SettlementObligationReportV03.mmSupplementaryData);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "secl";

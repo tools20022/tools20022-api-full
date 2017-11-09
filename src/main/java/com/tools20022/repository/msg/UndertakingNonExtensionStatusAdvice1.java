@@ -19,7 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.tsrv.UndertakingNonExtensionNotificationV01;
+import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.entity.UndertakingStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -105,11 +109,11 @@ public class UndertakingNonExtensionStatusAdvice1 {
 	 */
 	public static final MMMessageAssociationEnd mmNotifyingParty = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> UndertakingNonExtensionStatusAdvice1.mmObject();
 			isDerived = false;
 			xmlTag = "NtifngPty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotifyingParty";
 			definition = "Details related to the notifying party.";
 			maxOccurs = 1;
@@ -153,11 +157,11 @@ public class UndertakingNonExtensionStatusAdvice1 {
 	 */
 	public static final MMMessageAssociationEnd mmUndertakingIdentification = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.UndertakingStatus.mmUndertaking;
+			businessElementTrace_lazy = () -> UndertakingStatus.mmUndertaking;
 			componentContext_lazy = () -> UndertakingNonExtensionStatusAdvice1.mmObject();
 			isDerived = false;
 			xmlTag = "UdrtkgId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UndertakingIdentification";
 			definition = "Details related to the identification of the undertaking.";
 			maxOccurs = 1;
@@ -170,11 +174,11 @@ public class UndertakingNonExtensionStatusAdvice1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UndertakingNonExtensionStatusAdvice1.mmNotifyingParty, com.tools20022.repository.msg.UndertakingNonExtensionStatusAdvice1.mmUndertakingIdentification);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsrv.UndertakingNonExtensionNotificationV01.mmUndertakingNonExtensionNotificationDetails);
+				messageElement_lazy = () -> Arrays.asList(UndertakingNonExtensionStatusAdvice1.mmNotifyingParty, UndertakingNonExtensionStatusAdvice1.mmUndertakingIdentification);
+				messageBuildingBlock_lazy = () -> Arrays.asList(UndertakingNonExtensionNotificationV01.mmUndertakingNonExtensionNotificationDetails);
 				trace_lazy = () -> UndertakingStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "UndertakingNonExtensionStatusAdvice1";
 				definition = "Details of a non-extension advice.";
 			}

@@ -19,7 +19,10 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ISODate;
+import com.tools20022.repository.entity.DateTimePeriod;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.DatePeriodDetails;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -102,11 +105,11 @@ public class DateSearchChoice {
 	 */
 	public static final MMMessageAttribute mmFromDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmFromDateTime;
+			businessElementTrace_lazy = () -> DateTimePeriod.mmFromDateTime;
 			componentContext_lazy = () -> DateSearchChoice.mmObject();
 			isDerived = false;
 			xmlTag = "FrDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FromDate";
 			definition = "Start date of the range.";
 			maxOccurs = 1;
@@ -149,11 +152,11 @@ public class DateSearchChoice {
 	 */
 	public static final MMMessageAttribute mmToDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmToDateTime;
+			businessElementTrace_lazy = () -> DateTimePeriod.mmToDateTime;
 			componentContext_lazy = () -> DateSearchChoice.mmObject();
 			isDerived = false;
 			xmlTag = "ToDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ToDate";
 			definition = "End date of the range.";
 			maxOccurs = 1;
@@ -196,7 +199,7 @@ public class DateSearchChoice {
 			componentContext_lazy = () -> DateSearchChoice.mmObject();
 			isDerived = false;
 			xmlTag = "FrToDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FromToDate";
 			definition = "Particular time span specified between a start date and an end date.";
 			maxOccurs = 1;
@@ -237,7 +240,7 @@ public class DateSearchChoice {
 			componentContext_lazy = () -> DateSearchChoice.mmObject();
 			isDerived = false;
 			xmlTag = "EQDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EqualDate";
 			definition = "Specified date to match.";
 			maxOccurs = 1;
@@ -278,7 +281,7 @@ public class DateSearchChoice {
 			componentContext_lazy = () -> DateSearchChoice.mmObject();
 			isDerived = false;
 			xmlTag = "NEQDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotEqualDate";
 			definition = "Specified date to be excluded from the search.";
 			maxOccurs = 1;
@@ -290,10 +293,9 @@ public class DateSearchChoice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.DateSearchChoice.mmFromDate, com.tools20022.repository.choice.DateSearchChoice.mmToDate,
-						com.tools20022.repository.choice.DateSearchChoice.mmFromToDate, com.tools20022.repository.choice.DateSearchChoice.mmEqualDate, com.tools20022.repository.choice.DateSearchChoice.mmNotEqualDate);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(DateSearchChoice.mmFromDate, DateSearchChoice.mmToDate, DateSearchChoice.mmFromToDate, DateSearchChoice.mmEqualDate, DateSearchChoice.mmNotEqualDate);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DateSearchChoice";
 				definition = "Choice between search criteria based on dates and date ranges.";
 			}

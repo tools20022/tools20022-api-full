@@ -20,8 +20,10 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.SecurityIdentification10Choice;
 import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -104,7 +106,7 @@ public class SecurityCharacteristics1 {
 			componentContext_lazy = () -> SecurityCharacteristics1.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Unique identification, as known by the account owner, to unambiguously identify the security.";
 			minOccurs = 0;
@@ -144,7 +146,7 @@ public class SecurityCharacteristics1 {
 			componentContext_lazy = () -> SecurityCharacteristics1.mmObject();
 			isDerived = false;
 			xmlTag = "Pos";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Position";
 			definition = "Specifies the position for the security.";
 			minOccurs = 0;
@@ -187,7 +189,7 @@ public class SecurityCharacteristics1 {
 			componentContext_lazy = () -> SecurityCharacteristics1.mmObject();
 			isDerived = false;
 			xmlTag = "ValtnPric";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValuationPrice";
 			definition = "Specifies the price of the security for valuation purposes.";
 			maxOccurs = 1;
@@ -230,7 +232,7 @@ public class SecurityCharacteristics1 {
 			componentContext_lazy = () -> SecurityCharacteristics1.mmObject();
 			isDerived = false;
 			xmlTag = "CollVal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralValue";
 			definition = "Specifies the value of the security for collateral purposes.";
 			maxOccurs = 1;
@@ -242,10 +244,9 @@ public class SecurityCharacteristics1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecurityCharacteristics1.mmIdentification, com.tools20022.repository.msg.SecurityCharacteristics1.mmPosition,
-						com.tools20022.repository.msg.SecurityCharacteristics1.mmValuationPrice, com.tools20022.repository.msg.SecurityCharacteristics1.mmCollateralValue);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(SecurityCharacteristics1.mmIdentification, SecurityCharacteristics1.mmPosition, SecurityCharacteristics1.mmValuationPrice, SecurityCharacteristics1.mmCollateralValue);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SecurityCharacteristics1";
 				definition = "Set of elements used to provide detailed information about the security.";
 			}

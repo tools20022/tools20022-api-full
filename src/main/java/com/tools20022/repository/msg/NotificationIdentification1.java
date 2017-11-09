@@ -19,9 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.DateAndDateTimeChoice;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.CorporateActionNotification;
+import com.tools20022.repository.GeneratedRepository;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -124,14 +126,14 @@ public class NotificationIdentification1 {
 	 */
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionNotification.mmCorporateActionNotificationIdentification;
+			businessElementTrace_lazy = () -> CorporateActionNotification.mmCorporateActionNotificationIdentification;
 			componentContext_lazy = () -> NotificationIdentification1.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Unique identifier of the last notification document (message) assigned by the sender of the document.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.NotificationIdentification3.mmIdentification);
+			nextVersions_lazy = () -> Arrays.asList(NotificationIdentification3.mmIdentification);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -184,14 +186,14 @@ public class NotificationIdentification1 {
 	 */
 	public static final MMMessageAttribute mmCreationDateTime = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionNotification.mmCreationDateTime;
+			businessElementTrace_lazy = () -> CorporateActionNotification.mmCreationDateTime;
 			componentContext_lazy = () -> NotificationIdentification1.mmObject();
 			isDerived = false;
 			xmlTag = "CreDtTm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreationDateTime";
 			definition = "Date and time at which the last notification document (message) was created by the sender.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.NotificationIdentification3.mmCreationDateTime);
+			nextVersions_lazy = () -> Arrays.asList(NotificationIdentification3.mmCreationDateTime);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
@@ -201,10 +203,10 @@ public class NotificationIdentification1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.NotificationIdentification1.mmIdentification, com.tools20022.repository.msg.NotificationIdentification1.mmCreationDateTime);
+				messageElement_lazy = () -> Arrays.asList(NotificationIdentification1.mmIdentification, NotificationIdentification1.mmCreationDateTime);
 				trace_lazy = () -> CorporateActionNotification.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
 						return DateFormat.getDateInstance(java.text.DateFormat.LONG).parse("May 5, 2016");

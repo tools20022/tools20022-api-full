@@ -20,8 +20,10 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max6Text;
 import com.tools20022.repository.entity.TransportByAir;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.AirportDescription1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -105,11 +107,11 @@ public class AirportName1Choice {
 	 */
 	public static final MMMessageAttribute mmAirportCode = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TransportByAir.mmAirportName;
+			businessElementTrace_lazy = () -> TransportByAir.mmAirportName;
 			componentContext_lazy = () -> AirportName1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "AirprtCd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AirportCode";
 			definition = "Identifies an airport by means of its IATA identification code. Example: LHR.";
 			maxOccurs = 1;
@@ -151,11 +153,11 @@ public class AirportName1Choice {
 	 */
 	public static final MMMessageAssociationEnd mmOtherAirportDescription = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TransportByAir.mmAirportName;
+			businessElementTrace_lazy = () -> TransportByAir.mmAirportName;
 			componentContext_lazy = () -> AirportName1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "OthrAirprtDesc";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherAirportDescription";
 			definition = "Identifies an airport by its location and by its name.";
 			maxOccurs = 1;
@@ -168,10 +170,10 @@ public class AirportName1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AirportName1Choice.mmAirportCode, com.tools20022.repository.choice.AirportName1Choice.mmOtherAirportDescription);
+				messageElement_lazy = () -> Arrays.asList(AirportName1Choice.mmAirportCode, AirportName1Choice.mmOtherAirportDescription);
 				trace_lazy = () -> TransportByAir.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AirportName1Choice";
 				definition = "Identifies an airport by its code or by its name and the town where it is located.";
 			}

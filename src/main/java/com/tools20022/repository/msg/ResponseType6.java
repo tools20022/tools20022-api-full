@@ -19,10 +19,12 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.Response2Code;
 import com.tools20022.repository.codeset.ResultDetail3Code;
 import com.tools20022.repository.datatype.Max140Text;
 import com.tools20022.repository.entity.Response;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -105,10 +107,10 @@ public class ResponseType6 {
 			componentContext_lazy = () -> ResponseType6.mmObject();
 			isDerived = false;
 			xmlTag = "Rspn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Response";
 			definition = "Response of the terminal manager.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ResponseType5.mmResponse;
+			previousVersion_lazy = () -> ResponseType5.mmResponse;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Response2Code.mmObject();
@@ -154,14 +156,14 @@ public class ResponseType6 {
 	 */
 	public static final MMMessageAttribute mmResponseDetail = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Response.mmResponseReason;
+			businessElementTrace_lazy = () -> Response.mmResponseReason;
 			componentContext_lazy = () -> ResponseType6.mmObject();
 			isDerived = false;
 			xmlTag = "RspnDtl";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ResponseDetail";
 			definition = "Detail of the response.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ResponseType5.mmResponseReason;
+			previousVersion_lazy = () -> ResponseType5.mmResponseReason;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ResultDetail3Code.mmObject();
@@ -205,10 +207,10 @@ public class ResponseType6 {
 			componentContext_lazy = () -> ResponseType6.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlRspn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalResponse";
 			definition = "Additional information on the response for further examination.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ResponseType5.mmAdditionalResponseInformation;
+			previousVersion_lazy = () -> ResponseType5.mmAdditionalResponseInformation;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
@@ -218,11 +220,10 @@ public class ResponseType6 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ResponseType6.mmResponse, com.tools20022.repository.msg.ResponseType6.mmResponseDetail,
-						com.tools20022.repository.msg.ResponseType6.mmAdditionalResponse);
+				messageElement_lazy = () -> Arrays.asList(ResponseType6.mmResponse, ResponseType6.mmResponseDetail, ResponseType6.mmAdditionalResponse);
 				trace_lazy = () -> Response.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ResponseType6";
 				definition = "Response of a requested service.";
 				previousVersion_lazy = () -> ResponseType5.mmObject();

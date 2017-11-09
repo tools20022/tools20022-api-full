@@ -20,6 +20,7 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CustodianAction1Code;
 import com.tools20022.repository.codeset.CustodianRecordAgreementType1Code;
 import com.tools20022.repository.codeset.CustodianRecordCompletenessType1Code;
@@ -28,6 +29,7 @@ import com.tools20022.repository.datatype.AnyBICIdentifier;
 import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.YesNoIndicator;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -124,7 +126,7 @@ public class CustodianDetailsSD1 {
 			componentContext_lazy = () -> CustodianDetailsSD1.mmObject();
 			isDerived = false;
 			xmlTag = "PlcAndNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "xPath to the element that is being extended.";
 			maxOccurs = 1;
@@ -168,7 +170,7 @@ public class CustodianDetailsSD1 {
 			componentContext_lazy = () -> CustodianDetailsSD1.mmObject();
 			isDerived = false;
 			xmlTag = "CtdnCorpActnRcrdId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CustodianCorporateActionRecordIdentification";
 			definition = "Unique identifier of a custodian corporate action record. Applicable to custodian service only.";
 			maxOccurs = 1;
@@ -213,7 +215,7 @@ public class CustodianDetailsSD1 {
 			componentContext_lazy = () -> CustodianDetailsSD1.mmObject();
 			isDerived = false;
 			xmlTag = "AgrInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AgreeIndicator";
 			definition = "Indicates the state of the agreement of the custodian record when compared to composite record. Applicable to custodian service only.";
 			maxOccurs = 1;
@@ -258,7 +260,7 @@ public class CustodianDetailsSD1 {
 			componentContext_lazy = () -> CustodianDetailsSD1.mmObject();
 			isDerived = false;
 			xmlTag = "CmpltnsInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CompletenessIndicator";
 			definition = "Indicates state of the details of the custodian record on the system. Applicable to custodian service only.";
 			maxOccurs = 1;
@@ -301,7 +303,7 @@ public class CustodianDetailsSD1 {
 			componentContext_lazy = () -> CustodianDetailsSD1.mmObject();
 			isDerived = false;
 			xmlTag = "CtdnActnInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CustodianActionIndicator";
 			definition = "Represents the status of custodian activity when applicable.";
 			maxOccurs = 1;
@@ -347,7 +349,7 @@ public class CustodianDetailsSD1 {
 			componentContext_lazy = () -> CustodianDetailsSD1.mmObject();
 			isDerived = false;
 			xmlTag = "GCAActnInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GCAActionIndicator";
 			definition = "Indicates what action needs to be taken by the GCA (Global Corporate Action) validation service for this particular record. Applicable to custodian service only.";
 			maxOccurs = 1;
@@ -392,7 +394,7 @@ public class CustodianDetailsSD1 {
 			componentContext_lazy = () -> CustodianDetailsSD1.mmObject();
 			isDerived = false;
 			xmlTag = "RcvgBIC";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceivingBIC";
 			definition = "BIC which is configured as a recipient of the custodian record. Applicable to custodian service only.";
 			maxOccurs = 1;
@@ -437,7 +439,7 @@ public class CustodianDetailsSD1 {
 			componentContext_lazy = () -> CustodianDetailsSD1.mmObject();
 			isDerived = false;
 			xmlTag = "OrgtgBIC";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginatingBIC";
 			definition = "BIC which is configured as a sender of the custodian record. Applicable to custodian service only.";
 			maxOccurs = 1;
@@ -483,7 +485,7 @@ public class CustodianDetailsSD1 {
 			componentContext_lazy = () -> CustodianDetailsSD1.mmObject();
 			isDerived = false;
 			xmlTag = "CmpsitNotInSbcptFlg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CompositeNotInSubscriptionFlag";
 			definition = "Indicates whether the event security of the  corresponding composite record is on SOI (security of interest) subscription. Applicable to custodian service only.";
 			maxOccurs = 1;
@@ -528,7 +530,7 @@ public class CustodianDetailsSD1 {
 			componentContext_lazy = () -> CustodianDetailsSD1.mmObject();
 			isDerived = false;
 			xmlTag = "RltdCtdnMsgDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedCustodianMessageDetails";
 			definition = "Provides selected corporate action events message details extracted from the related custodian messages received. Applicable to custodian service only.";
 			minOccurs = 0;
@@ -540,13 +542,11 @@ public class CustodianDetailsSD1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CustodianDetailsSD1.mmPlaceAndName, com.tools20022.repository.msg.CustodianDetailsSD1.mmCustodianCorporateActionRecordIdentification,
-						com.tools20022.repository.msg.CustodianDetailsSD1.mmAgreeIndicator, com.tools20022.repository.msg.CustodianDetailsSD1.mmCompletenessIndicator,
-						com.tools20022.repository.msg.CustodianDetailsSD1.mmCustodianActionIndicator, com.tools20022.repository.msg.CustodianDetailsSD1.mmGCAActionIndicator, com.tools20022.repository.msg.CustodianDetailsSD1.mmReceivingBIC,
-						com.tools20022.repository.msg.CustodianDetailsSD1.mmOriginatingBIC, com.tools20022.repository.msg.CustodianDetailsSD1.mmCompositeNotInSubscriptionFlag,
-						com.tools20022.repository.msg.CustodianDetailsSD1.mmRelatedCustodianMessageDetails);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(CustodianDetailsSD1.mmPlaceAndName, CustodianDetailsSD1.mmCustodianCorporateActionRecordIdentification, CustodianDetailsSD1.mmAgreeIndicator,
+						CustodianDetailsSD1.mmCompletenessIndicator, CustodianDetailsSD1.mmCustodianActionIndicator, CustodianDetailsSD1.mmGCAActionIndicator, CustodianDetailsSD1.mmReceivingBIC, CustodianDetailsSD1.mmOriginatingBIC,
+						CustodianDetailsSD1.mmCompositeNotInSubscriptionFlag, CustodianDetailsSD1.mmRelatedCustodianMessageDetails);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CustodianDetailsSD1";
 				definition = "Provides information regarding custodian service record.";
 			}

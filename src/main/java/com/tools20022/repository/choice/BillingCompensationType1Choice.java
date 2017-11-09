@@ -19,9 +19,11 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ExternalBillingCompensationType1Code;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.Invoice;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -101,11 +103,11 @@ public class BillingCompensationType1Choice {
 	 */
 	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Invoice.mmBillingCompensationType;
+			businessElementTrace_lazy = () -> Invoice.mmBillingCompensationType;
 			componentContext_lazy = () -> BillingCompensationType1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Cd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Defines the type of billing compensation, as published in an external billing compensation type code list.";
 			maxOccurs = 1;
@@ -151,11 +153,11 @@ public class BillingCompensationType1Choice {
 	 */
 	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Invoice.mmBillingCompensationType;
+			businessElementTrace_lazy = () -> Invoice.mmBillingCompensationType;
 			componentContext_lazy = () -> BillingCompensationType1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Defines the type of billing compensation, as defined in a proprietary format.";
 			maxOccurs = 1;
@@ -167,10 +169,10 @@ public class BillingCompensationType1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.BillingCompensationType1Choice.mmCode, com.tools20022.repository.choice.BillingCompensationType1Choice.mmProprietary);
+				messageElement_lazy = () -> Arrays.asList(BillingCompensationType1Choice.mmCode, BillingCompensationType1Choice.mmProprietary);
 				trace_lazy = () -> Invoice.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "BillingCompensationType1Choice";
 				definition = "Defines the type of billing compensation.";
 			}

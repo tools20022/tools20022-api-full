@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.OperatorCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -93,7 +95,7 @@ public class Operator1Code extends OperatorCode {
 	 */
 	public static final MMCode mmSmallerThan = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SmallerThan";
 			owner_lazy = () -> Operator1Code.mmObject();
 		}
@@ -116,7 +118,7 @@ public class Operator1Code extends OperatorCode {
 	 */
 	public static final MMCode mmSmallerOrEqualTo = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SmallerOrEqualTo";
 			owner_lazy = () -> Operator1Code.mmObject();
 		}
@@ -139,7 +141,7 @@ public class Operator1Code extends OperatorCode {
 	 */
 	public static final MMCode mmGreaterThan = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GreaterThan";
 			owner_lazy = () -> Operator1Code.mmObject();
 		}
@@ -162,7 +164,7 @@ public class Operator1Code extends OperatorCode {
 	 */
 	public static final MMCode mmGreaterOrEqualTo = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GreaterOrEqualTo";
 			owner_lazy = () -> Operator1Code.mmObject();
 		}
@@ -185,7 +187,7 @@ public class Operator1Code extends OperatorCode {
 	 */
 	public static final MMCode mmEqualTo = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EqualTo";
 			owner_lazy = () -> Operator1Code.mmObject();
 		}
@@ -194,13 +196,12 @@ public class Operator1Code extends OperatorCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("SMAL");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Operator1Code";
 				definition = "Code containing the operator used to indicate the relationship between a variable and a fixed value.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Operator1Code.mmSmallerThan, com.tools20022.repository.codeset.Operator1Code.mmSmallerOrEqualTo,
-						com.tools20022.repository.codeset.Operator1Code.mmGreaterThan, com.tools20022.repository.codeset.Operator1Code.mmGreaterOrEqualTo, com.tools20022.repository.codeset.Operator1Code.mmEqualTo);
+				code_lazy = () -> Arrays.asList(Operator1Code.mmSmallerThan, Operator1Code.mmSmallerOrEqualTo, Operator1Code.mmGreaterThan, Operator1Code.mmGreaterOrEqualTo, Operator1Code.mmEqualTo);
 				trace_lazy = () -> OperatorCode.mmObject();
 			}
 		});

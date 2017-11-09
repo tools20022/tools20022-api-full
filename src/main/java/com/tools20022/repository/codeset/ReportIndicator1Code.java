@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ReportIndicatorCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -84,7 +86,7 @@ public class ReportIndicator1Code extends ReportIndicatorCode {
 	 */
 	public static final MMCode mmStandard = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Standard";
 			owner_lazy = () -> ReportIndicator1Code.mmObject();
 		}
@@ -107,7 +109,7 @@ public class ReportIndicator1Code extends ReportIndicatorCode {
 	 */
 	public static final MMCode mmProprietary = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			owner_lazy = () -> ReportIndicator1Code.mmObject();
 		}
@@ -116,12 +118,12 @@ public class ReportIndicator1Code extends ReportIndicatorCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("STND");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ReportIndicator1Code";
 				definition = "Specifies the nature of the report, ie, standard or proprietary.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ReportIndicator1Code.mmStandard, com.tools20022.repository.codeset.ReportIndicator1Code.mmProprietary);
+				code_lazy = () -> Arrays.asList(ReportIndicator1Code.mmStandard, ReportIndicator1Code.mmProprietary);
 				trace_lazy = () -> ReportIndicatorCode.mmObject();
 			}
 		});

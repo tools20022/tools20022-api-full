@@ -19,8 +19,10 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.PercentageRate;
 import com.tools20022.repository.entity.ValuationStatistics;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -107,11 +109,11 @@ public class StatisticsByUserDefinedTimePeriod1 {
 	 */
 	public static final MMMessageAttribute mmPeriod = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ValuationStatistics.mmPeriod;
+			businessElementTrace_lazy = () -> ValuationStatistics.mmPeriod;
 			componentContext_lazy = () -> StatisticsByUserDefinedTimePeriod1.mmObject();
 			isDerived = false;
 			xmlTag = "Prd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Period";
 			definition = "Reference period for the valuation.";
 			maxOccurs = 1;
@@ -154,11 +156,11 @@ public class StatisticsByUserDefinedTimePeriod1 {
 	 */
 	public static final MMMessageAttribute mmHighestPriceValue = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ValuationStatistics.mmHighestPriceValue;
+			businessElementTrace_lazy = () -> ValuationStatistics.mmHighestPriceValue;
 			componentContext_lazy = () -> StatisticsByUserDefinedTimePeriod1.mmObject();
 			isDerived = false;
 			xmlTag = "HghstPricVal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HighestPriceValue";
 			definition = "Highest price for the referenced period.";
 			maxOccurs = 1;
@@ -201,11 +203,11 @@ public class StatisticsByUserDefinedTimePeriod1 {
 	 */
 	public static final MMMessageAttribute mmLowestPriceValue = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ValuationStatistics.mmLowestPriceValue;
+			businessElementTrace_lazy = () -> ValuationStatistics.mmLowestPriceValue;
 			componentContext_lazy = () -> StatisticsByUserDefinedTimePeriod1.mmObject();
 			isDerived = false;
 			xmlTag = "LwstPricVal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LowestPriceValue";
 			definition = "Lowest price for the referenced period.";
 			maxOccurs = 1;
@@ -248,11 +250,11 @@ public class StatisticsByUserDefinedTimePeriod1 {
 	 */
 	public static final MMMessageAttribute mmPriceChange = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ValuationStatistics.mmPriceChange;
+			businessElementTrace_lazy = () -> ValuationStatistics.mmPriceChange;
 			componentContext_lazy = () -> StatisticsByUserDefinedTimePeriod1.mmObject();
 			isDerived = false;
 			xmlTag = "PricChng";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PriceChange";
 			definition = "Change in price since the last valuation.";
 			maxOccurs = 1;
@@ -300,11 +302,11 @@ public class StatisticsByUserDefinedTimePeriod1 {
 	 */
 	public static final MMMessageAttribute mmYield = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ValuationStatistics.mmYield;
+			businessElementTrace_lazy = () -> ValuationStatistics.mmYield;
 			componentContext_lazy = () -> StatisticsByUserDefinedTimePeriod1.mmObject();
 			isDerived = false;
 			xmlTag = "Yld";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Yield";
 			definition = "Rate of income from the financial instrument, usually calculated as total dividends or coupon interest available to investors in the last year,divided by the current price.";
 			maxOccurs = 1;
@@ -316,12 +318,11 @@ public class StatisticsByUserDefinedTimePeriod1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StatisticsByUserDefinedTimePeriod1.mmPeriod, com.tools20022.repository.msg.StatisticsByUserDefinedTimePeriod1.mmHighestPriceValue,
-						com.tools20022.repository.msg.StatisticsByUserDefinedTimePeriod1.mmLowestPriceValue, com.tools20022.repository.msg.StatisticsByUserDefinedTimePeriod1.mmPriceChange,
-						com.tools20022.repository.msg.StatisticsByUserDefinedTimePeriod1.mmYield);
+				messageElement_lazy = () -> Arrays.asList(StatisticsByUserDefinedTimePeriod1.mmPeriod, StatisticsByUserDefinedTimePeriod1.mmHighestPriceValue, StatisticsByUserDefinedTimePeriod1.mmLowestPriceValue,
+						StatisticsByUserDefinedTimePeriod1.mmPriceChange, StatisticsByUserDefinedTimePeriod1.mmYield);
 				trace_lazy = () -> ValuationStatistics.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "StatisticsByUserDefinedTimePeriod1";
 				definition = "Statistical data related to the price change of a security.";
 			}

@@ -19,9 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CommissionType5Code;
 import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.entity.Commission;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -97,11 +99,11 @@ public class CommissionType1 {
 	 */
 	public static final MMMessageAttribute mmStructured = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Commission.mmCommissionType;
+			businessElementTrace_lazy = () -> Commission.mmCommissionType;
 			componentContext_lazy = () -> CommissionType1.mmObject();
 			isDerived = false;
 			xmlTag = "Strd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Structured";
 			definition = "Structured format.";
 			maxOccurs = 1;
@@ -144,11 +146,11 @@ public class CommissionType1 {
 	 */
 	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Commission.mmCommissionType;
+			businessElementTrace_lazy = () -> Commission.mmCommissionType;
 			componentContext_lazy = () -> CommissionType1.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInformation";
 			definition = "Additional information about the type of commission.";
 			maxOccurs = 1;
@@ -160,10 +162,10 @@ public class CommissionType1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CommissionType1.mmStructured, com.tools20022.repository.msg.CommissionType1.mmAdditionalInformation);
+				messageElement_lazy = () -> Arrays.asList(CommissionType1.mmStructured, CommissionType1.mmAdditionalInformation);
 				trace_lazy = () -> Commission.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CommissionType1";
 				definition = "Specification of the commission type.";
 			}

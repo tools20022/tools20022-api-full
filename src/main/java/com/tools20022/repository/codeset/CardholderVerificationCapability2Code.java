@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CardholderVerificationCapabilityCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -139,9 +141,9 @@ public class CardholderVerificationCapability2Code extends CardholderVerificatio
 	 */
 	public static final MMCode mmAccountDigitalSignature = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountDigitalSignature";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CardholderVerificationCapability4Code.mmAccountDigitalSignature);
+			nextVersions_lazy = () -> Arrays.asList(CardholderVerificationCapability4Code.mmAccountDigitalSignature);
 			owner_lazy = () -> CardholderVerificationCapability2Code.mmObject();
 		}
 	};
@@ -171,9 +173,9 @@ public class CardholderVerificationCapability2Code extends CardholderVerificatio
 	 */
 	public static final MMCode mmCardholderData = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CardholderData";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CardholderVerificationCapability4Code.mmCardholderData);
+			nextVersions_lazy = () -> Arrays.asList(CardholderVerificationCapability4Code.mmCardholderData);
 			owner_lazy = () -> CardholderVerificationCapability2Code.mmObject();
 		}
 	};
@@ -203,9 +205,9 @@ public class CardholderVerificationCapability2Code extends CardholderVerificatio
 	 */
 	public static final MMCode mmManualSignature = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ManualSignature";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CardholderVerificationCapability4Code.mmManualSignature);
+			nextVersions_lazy = () -> Arrays.asList(CardholderVerificationCapability4Code.mmManualSignature);
 			owner_lazy = () -> CardholderVerificationCapability2Code.mmObject();
 		}
 	};
@@ -235,9 +237,9 @@ public class CardholderVerificationCapability2Code extends CardholderVerificatio
 	 */
 	public static final MMCode mmManualVerification = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ManualVerification";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CardholderVerificationCapability4Code.mmManualVerification);
+			nextVersions_lazy = () -> Arrays.asList(CardholderVerificationCapability4Code.mmManualVerification);
 			owner_lazy = () -> CardholderVerificationCapability2Code.mmObject();
 		}
 	};
@@ -267,9 +269,9 @@ public class CardholderVerificationCapability2Code extends CardholderVerificatio
 	 */
 	public static final MMCode mmOfflineBiographics = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OfflineBiographics";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CardholderVerificationCapability4Code.mmOfflineBiographics);
+			nextVersions_lazy = () -> Arrays.asList(CardholderVerificationCapability4Code.mmOfflineBiographics);
 			owner_lazy = () -> CardholderVerificationCapability2Code.mmObject();
 		}
 	};
@@ -299,9 +301,9 @@ public class CardholderVerificationCapability2Code extends CardholderVerificatio
 	 */
 	public static final MMCode mmOfflineBiometrics = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OfflineBiometrics";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CardholderVerificationCapability4Code.mmOfflineBiometrics);
+			nextVersions_lazy = () -> Arrays.asList(CardholderVerificationCapability4Code.mmOfflineBiometrics);
 			owner_lazy = () -> CardholderVerificationCapability2Code.mmObject();
 		}
 	};
@@ -331,9 +333,9 @@ public class CardholderVerificationCapability2Code extends CardholderVerificatio
 	 */
 	public static final MMCode mmOfflineDigitalSignature = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OfflineDigitalSignature";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CardholderVerificationCapability4Code.mmOfflineDigitalSignature);
+			nextVersions_lazy = () -> Arrays.asList(CardholderVerificationCapability4Code.mmOfflineDigitalSignature);
 			owner_lazy = () -> CardholderVerificationCapability2Code.mmObject();
 		}
 	};
@@ -363,9 +365,9 @@ public class CardholderVerificationCapability2Code extends CardholderVerificatio
 	 */
 	public static final MMCode mmOfflinePINClear = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OfflinePINClear";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CardholderVerificationCapability4Code.mmOfflinePINClear);
+			nextVersions_lazy = () -> Arrays.asList(CardholderVerificationCapability4Code.mmOfflinePINClear);
 			owner_lazy = () -> CardholderVerificationCapability2Code.mmObject();
 		}
 	};
@@ -395,9 +397,9 @@ public class CardholderVerificationCapability2Code extends CardholderVerificatio
 	 */
 	public static final MMCode mmOfflinePINEncrypted = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OfflinePINEncrypted";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CardholderVerificationCapability4Code.mmOfflinePINEncrypted);
+			nextVersions_lazy = () -> Arrays.asList(CardholderVerificationCapability4Code.mmOfflinePINEncrypted);
 			owner_lazy = () -> CardholderVerificationCapability2Code.mmObject();
 		}
 	};
@@ -427,9 +429,9 @@ public class CardholderVerificationCapability2Code extends CardholderVerificatio
 	 */
 	public static final MMCode mmOnLinePIN = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OnLinePIN";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CardholderVerificationCapability4Code.mmOnLinePIN);
+			nextVersions_lazy = () -> Arrays.asList(CardholderVerificationCapability4Code.mmOnLinePIN);
 			owner_lazy = () -> CardholderVerificationCapability2Code.mmObject();
 		}
 	};
@@ -459,9 +461,9 @@ public class CardholderVerificationCapability2Code extends CardholderVerificatio
 	 */
 	public static final MMCode mmPKISignature = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PKISignature";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CardholderVerificationCapability4Code.mmPKISignature);
+			nextVersions_lazy = () -> Arrays.asList(CardholderVerificationCapability4Code.mmPKISignature);
 			owner_lazy = () -> CardholderVerificationCapability2Code.mmObject();
 		}
 	};
@@ -491,9 +493,9 @@ public class CardholderVerificationCapability2Code extends CardholderVerificatio
 	 */
 	public static final MMCode mmSecureElectronicCommerce = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecureElectronicCommerce";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CardholderVerificationCapability4Code.mmSecureElectronicCommerce);
+			nextVersions_lazy = () -> Arrays.asList(CardholderVerificationCapability4Code.mmSecureElectronicCommerce);
 			owner_lazy = () -> CardholderVerificationCapability2Code.mmObject();
 		}
 	};
@@ -515,7 +517,7 @@ public class CardholderVerificationCapability2Code extends CardholderVerificatio
 	 */
 	public static final MMCode mmUnknown = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unknown";
 			owner_lazy = () -> CardholderVerificationCapability2Code.mmObject();
 		}
@@ -546,9 +548,9 @@ public class CardholderVerificationCapability2Code extends CardholderVerificatio
 	 */
 	public static final MMCode mmOnLineBiometrics = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OnLineBiometrics";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CardholderVerificationCapability4Code.mmOnLineBiometrics);
+			nextVersions_lazy = () -> Arrays.asList(CardholderVerificationCapability4Code.mmOnLineBiometrics);
 			owner_lazy = () -> CardholderVerificationCapability2Code.mmObject();
 		}
 	};
@@ -578,9 +580,9 @@ public class CardholderVerificationCapability2Code extends CardholderVerificatio
 	 */
 	public static final MMCode mmNoCapabilities = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoCapabilities";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CardholderVerificationCapability4Code.mmNoCapabilities);
+			nextVersions_lazy = () -> Arrays.asList(CardholderVerificationCapability4Code.mmNoCapabilities);
 			owner_lazy = () -> CardholderVerificationCapability2Code.mmObject();
 		}
 	};
@@ -610,9 +612,9 @@ public class CardholderVerificationCapability2Code extends CardholderVerificatio
 	 */
 	public static final MMCode mmOther = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CardholderVerificationCapability4Code.mmOther);
+			nextVersions_lazy = () -> Arrays.asList(CardholderVerificationCapability4Code.mmOther);
 			owner_lazy = () -> CardholderVerificationCapability2Code.mmObject();
 		}
 	};
@@ -620,19 +622,16 @@ public class CardholderVerificationCapability2Code extends CardholderVerificatio
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CardholderVerificationCapability2Code";
 				definition = "Cardholder verification capabilities by the terminal. \r\nIt correspond to the ISO 8583, field number 22-2 for the versions 87 and 93, and 27-2 for the version 2003.";
 				nextVersions_lazy = () -> Arrays.asList(CardholderVerificationCapability4Code.mmObject());
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CardholderVerificationCapability2Code.mmAccountDigitalSignature, com.tools20022.repository.codeset.CardholderVerificationCapability2Code.mmCardholderData,
-						com.tools20022.repository.codeset.CardholderVerificationCapability2Code.mmManualSignature, com.tools20022.repository.codeset.CardholderVerificationCapability2Code.mmManualVerification,
-						com.tools20022.repository.codeset.CardholderVerificationCapability2Code.mmOfflineBiographics, com.tools20022.repository.codeset.CardholderVerificationCapability2Code.mmOfflineBiometrics,
-						com.tools20022.repository.codeset.CardholderVerificationCapability2Code.mmOfflineDigitalSignature, com.tools20022.repository.codeset.CardholderVerificationCapability2Code.mmOfflinePINClear,
-						com.tools20022.repository.codeset.CardholderVerificationCapability2Code.mmOfflinePINEncrypted, com.tools20022.repository.codeset.CardholderVerificationCapability2Code.mmOnLinePIN,
-						com.tools20022.repository.codeset.CardholderVerificationCapability2Code.mmPKISignature, com.tools20022.repository.codeset.CardholderVerificationCapability2Code.mmSecureElectronicCommerce,
-						com.tools20022.repository.codeset.CardholderVerificationCapability2Code.mmUnknown, com.tools20022.repository.codeset.CardholderVerificationCapability2Code.mmOnLineBiometrics,
-						com.tools20022.repository.codeset.CardholderVerificationCapability2Code.mmNoCapabilities, com.tools20022.repository.codeset.CardholderVerificationCapability2Code.mmOther);
+				code_lazy = () -> Arrays.asList(CardholderVerificationCapability2Code.mmAccountDigitalSignature, CardholderVerificationCapability2Code.mmCardholderData, CardholderVerificationCapability2Code.mmManualSignature,
+						CardholderVerificationCapability2Code.mmManualVerification, CardholderVerificationCapability2Code.mmOfflineBiographics, CardholderVerificationCapability2Code.mmOfflineBiometrics,
+						CardholderVerificationCapability2Code.mmOfflineDigitalSignature, CardholderVerificationCapability2Code.mmOfflinePINClear, CardholderVerificationCapability2Code.mmOfflinePINEncrypted,
+						CardholderVerificationCapability2Code.mmOnLinePIN, CardholderVerificationCapability2Code.mmPKISignature, CardholderVerificationCapability2Code.mmSecureElectronicCommerce,
+						CardholderVerificationCapability2Code.mmUnknown, CardholderVerificationCapability2Code.mmOnLineBiometrics, CardholderVerificationCapability2Code.mmNoCapabilities, CardholderVerificationCapability2Code.mmOther);
 				trace_lazy = () -> CardholderVerificationCapabilityCode.mmObject();
 			}
 		});

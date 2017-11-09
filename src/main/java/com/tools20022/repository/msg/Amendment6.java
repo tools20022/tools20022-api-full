@@ -20,9 +20,12 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.tsrv.UndertakingAmendmentNotificationV01;
 import com.tools20022.repository.datatype.Max2000Text;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.AmendmentOfUndertaking;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -117,7 +120,7 @@ public class Amendment6 {
 			componentContext_lazy = () -> Amendment6.mmObject();
 			isDerived = false;
 			xmlTag = "UdrtkgAmdmntMsg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UndertakingAmendmentMessage";
 			definition = "Contents of the related proposed Undertaking Amendment message.";
 			maxOccurs = 1;
@@ -161,7 +164,7 @@ public class Amendment6 {
 			componentContext_lazy = () -> Amendment6.mmObject();
 			isDerived = false;
 			xmlTag = "ApplcntRefNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ApplicantReferenceNumber";
 			definition = "Unique and unambiguous identifier assigned by the applicant to the undertaking.";
 			maxOccurs = 1;
@@ -201,7 +204,7 @@ public class Amendment6 {
 			componentContext_lazy = () -> Amendment6.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInformation";
 			definition = "Additional information related to the notification.";
 			maxOccurs = 5;
@@ -213,12 +216,11 @@ public class Amendment6 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Amendment6.mmUndertakingAmendmentMessage, com.tools20022.repository.msg.Amendment6.mmApplicantReferenceNumber,
-						com.tools20022.repository.msg.Amendment6.mmAdditionalInformation);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsrv.UndertakingAmendmentNotificationV01.mmUndertakingAmendmentNotificationDetails);
+				messageElement_lazy = () -> Arrays.asList(Amendment6.mmUndertakingAmendmentMessage, Amendment6.mmApplicantReferenceNumber, Amendment6.mmAdditionalInformation);
+				messageBuildingBlock_lazy = () -> Arrays.asList(UndertakingAmendmentNotificationV01.mmUndertakingAmendmentNotificationDetails);
 				trace_lazy = () -> AmendmentOfUndertaking.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Amendment6";
 				definition = "Details of the amendment.";
 			}

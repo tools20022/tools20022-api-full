@@ -19,9 +19,12 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ActiveOrHistoricCurrencyAndAmount;
 import com.tools20022.repository.datatype.PercentageRate;
 import com.tools20022.repository.entity.InvestmentFundOrder;
+import com.tools20022.repository.entity.SecuritiesOrder;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.FinancialInstrumentQuantity1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -112,11 +115,11 @@ public class FinancialInstrumentQuantity8Choice {
 	 */
 	public static final MMMessageAttribute mmUnitsNumber = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrder.mmUnitsNumber;
+			businessElementTrace_lazy = () -> InvestmentFundOrder.mmUnitsNumber;
 			componentContext_lazy = () -> FinancialInstrumentQuantity8Choice.mmObject();
 			isDerived = false;
 			xmlTag = "UnitsNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnitsNumber";
 			definition = "Total quantity of securities to be settled.";
 			maxOccurs = 1;
@@ -163,11 +166,11 @@ public class FinancialInstrumentQuantity8Choice {
 	 */
 	public static final MMMessageAttribute mmOrderedAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmOrderedAmount;
+			businessElementTrace_lazy = () -> SecuritiesOrder.mmOrderedAmount;
 			componentContext_lazy = () -> FinancialInstrumentQuantity8Choice.mmObject();
 			isDerived = false;
 			xmlTag = "OrdrdAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrderedAmount";
 			definition = "Amount of money used to derive the quantity of investment fund units to be sold.";
 			maxOccurs = 1;
@@ -215,11 +218,11 @@ public class FinancialInstrumentQuantity8Choice {
 	 */
 	public static final MMMessageAttribute mmNetAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrder.mmNetAmount;
+			businessElementTrace_lazy = () -> InvestmentFundOrder.mmNetAmount;
 			componentContext_lazy = () -> FinancialInstrumentQuantity8Choice.mmObject();
 			isDerived = false;
 			xmlTag = "NetAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetAmount";
 			definition = "Amount of money remaining after deduction of charges, commissions and taxes and  used to determine the quantity of investment fund units to be subscribed.\n[Quantity * Price]";
 			maxOccurs = 1;
@@ -268,11 +271,11 @@ public class FinancialInstrumentQuantity8Choice {
 	 */
 	public static final MMMessageAttribute mmGrossAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrder.mmGrossAmount;
+			businessElementTrace_lazy = () -> InvestmentFundOrder.mmGrossAmount;
 			componentContext_lazy = () -> FinancialInstrumentQuantity8Choice.mmObject();
 			isDerived = false;
 			xmlTag = "GrssAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GrossAmount";
 			definition = "Amount of money to be invested in a specific financial instrument by an investor before deduction of charges, commissions and taxes and used to determine the quantity of investment fund units to be subscribed.\n[(Quantity * Price) + (Charges + Commissions +Taxes)]";
 			maxOccurs = 1;
@@ -317,11 +320,11 @@ public class FinancialInstrumentQuantity8Choice {
 	 */
 	public static final MMMessageAttribute mmHoldingsRate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrder.mmHoldingsRate;
+			businessElementTrace_lazy = () -> InvestmentFundOrder.mmHoldingsRate;
 			componentContext_lazy = () -> FinancialInstrumentQuantity8Choice.mmObject();
 			isDerived = false;
 			xmlTag = "HldgsRate";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HoldingsRate";
 			definition = "Percentage of the financial quantity to be invested or redeemed.";
 			maxOccurs = 1;
@@ -333,12 +336,11 @@ public class FinancialInstrumentQuantity8Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.FinancialInstrumentQuantity8Choice.mmUnitsNumber, com.tools20022.repository.choice.FinancialInstrumentQuantity8Choice.mmOrderedAmount,
-						com.tools20022.repository.choice.FinancialInstrumentQuantity8Choice.mmNetAmount, com.tools20022.repository.choice.FinancialInstrumentQuantity8Choice.mmGrossAmount,
-						com.tools20022.repository.choice.FinancialInstrumentQuantity8Choice.mmHoldingsRate);
+				messageElement_lazy = () -> Arrays.asList(FinancialInstrumentQuantity8Choice.mmUnitsNumber, FinancialInstrumentQuantity8Choice.mmOrderedAmount, FinancialInstrumentQuantity8Choice.mmNetAmount,
+						FinancialInstrumentQuantity8Choice.mmGrossAmount, FinancialInstrumentQuantity8Choice.mmHoldingsRate);
 				trace_lazy = () -> InvestmentFundOrder.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "FinancialInstrumentQuantity8Choice";
 				definition = "Choice between ways to express the quantity of the financial instrument to be redeemed.";
 			}

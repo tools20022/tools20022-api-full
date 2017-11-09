@@ -18,8 +18,13 @@
 package com.tools20022.repository.entity;
 
 import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.choice.Party12Choice;
+import com.tools20022.repository.choice.Party28Choice;
+import com.tools20022.repository.choice.Party7Choice;
 import com.tools20022.repository.entity.Organisation;
-import com.tools20022.repository.msg.BICIdentification1;
+import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -32,6 +37,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.BICIdentification1
+ * BICIdentification1}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
  * derivationElement} =
@@ -111,14 +124,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * superType} = {@linkplain com.tools20022.repository.entity.Organisation
  * Organisation}</li>
  * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.BICIdentification1
- * BICIdentification1}</li>
- * </ul>
- * </li>
- * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
@@ -141,19 +146,15 @@ public class FinancialInstitution extends Organisation {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FinancialInstitution";
 				definition = "Organisation established primarily to provide financial services.";
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SystemMember2.mmMemberIdentification, com.tools20022.repository.choice.Party7Choice.mmAgent, com.tools20022.repository.choice.Party12Choice.mmAgent,
-						com.tools20022.repository.msg.DocumentIdentification5.mmIdentificationIssuer, com.tools20022.repository.msg.DocumentIdentification1.mmSubmitter, com.tools20022.repository.msg.RequiredSubmission1.mmSubmitter,
-						com.tools20022.repository.msg.Baseline2.mmBuyerBank, com.tools20022.repository.msg.Baseline2.mmSellerBank, com.tools20022.repository.msg.PaymentObligation1.mmObligorBank,
-						com.tools20022.repository.msg.PaymentObligation1.mmRecipientBank, com.tools20022.repository.msg.RequiredSubmission3.mmSubmitter, com.tools20022.repository.msg.RequiredSubmission4.mmSubmitter,
-						com.tools20022.repository.msg.RequiredSubmission5.mmSubmitter, com.tools20022.repository.msg.Baseline3.mmBuyerBank, com.tools20022.repository.msg.Baseline3.mmSellerBank,
-						com.tools20022.repository.msg.DocumentIdentification4.mmSubmitter, com.tools20022.repository.msg.DocumentIdentification2.mmSubmitter, com.tools20022.repository.msg.Member2.mmReturnAddress,
-						com.tools20022.repository.msg.Baseline4.mmBuyerBank, com.tools20022.repository.msg.Baseline4.mmSellerBank, com.tools20022.repository.msg.PaymentObligation2.mmObligorBank,
-						com.tools20022.repository.msg.PaymentObligation2.mmRecipientBank, com.tools20022.repository.msg.Baseline5.mmBuyerBank, com.tools20022.repository.msg.Baseline5.mmSellerBank,
-						com.tools20022.repository.msg.RequiredSubmission6.mmSubmitter, com.tools20022.repository.msg.Acquirer7.mmAcquiringInstitution, com.tools20022.repository.choice.Party28Choice.mmAgent);
+				derivationElement_lazy = () -> Arrays.asList(SystemMember2.mmMemberIdentification, Party7Choice.mmAgent, Party12Choice.mmAgent, DocumentIdentification5.mmIdentificationIssuer, DocumentIdentification1.mmSubmitter,
+						RequiredSubmission1.mmSubmitter, Baseline2.mmBuyerBank, Baseline2.mmSellerBank, PaymentObligation1.mmObligorBank, PaymentObligation1.mmRecipientBank, RequiredSubmission3.mmSubmitter, RequiredSubmission4.mmSubmitter,
+						RequiredSubmission5.mmSubmitter, Baseline3.mmBuyerBank, Baseline3.mmSellerBank, DocumentIdentification4.mmSubmitter, DocumentIdentification2.mmSubmitter, Member2.mmReturnAddress, Baseline4.mmBuyerBank,
+						Baseline4.mmSellerBank, PaymentObligation2.mmObligorBank, PaymentObligation2.mmRecipientBank, Baseline5.mmBuyerBank, Baseline5.mmSellerBank, RequiredSubmission6.mmSubmitter, Acquirer7.mmAcquiringInstitution,
+						Party28Choice.mmAgent);
 				superType_lazy = () -> Organisation.mmObject();
 				derivationComponent_lazy = () -> Arrays.asList(BICIdentification1.mmObject());
 			}

@@ -19,6 +19,8 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.IssuerAndSerialNumber1;
 import com.tools20022.repository.msg.KEKIdentifier2;
 import java.util.Arrays;
@@ -96,7 +98,7 @@ public class Recipient5Choice {
 			componentContext_lazy = () -> Recipient5Choice.mmObject();
 			isDerived = false;
 			xmlTag = "IssrAndSrlNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssuerAndSerialNumber";
 			definition = "Certificate issuer name and serial number (see ITU X.509).";
 			maxOccurs = 1;
@@ -145,10 +147,10 @@ public class Recipient5Choice {
 			componentContext_lazy = () -> Recipient5Choice.mmObject();
 			isDerived = false;
 			xmlTag = "KeyIdr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "KeyIdentifier";
 			definition = "Identifier of a cryptographic asymmetric key, previously exchanged between initiator and recipient.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.Recipient4Choice.mmKeyIdentifier;
+			previousVersion_lazy = () -> Recipient4Choice.mmKeyIdentifier;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -159,9 +161,9 @@ public class Recipient5Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Recipient5Choice.mmIssuerAndSerialNumber, com.tools20022.repository.choice.Recipient5Choice.mmKeyIdentifier);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(Recipient5Choice.mmIssuerAndSerialNumber, Recipient5Choice.mmKeyIdentifier);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Recipient5Choice";
 				definition = "Identification of a cryptographic asymmetric key.";
 				previousVersion_lazy = () -> Recipient4Choice.mmObject();

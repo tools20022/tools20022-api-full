@@ -19,6 +19,8 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.CashAccountAuditTrailReport1;
 import com.tools20022.repository.msg.ErrorHandling3;
 import java.util.Arrays;
@@ -97,7 +99,7 @@ public class CashAccountAuditTrailOrOperationalError1Choice {
 			componentContext_lazy = () -> CashAccountAuditTrailOrOperationalError1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "CshAcctAudtTrlRpt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashAccountAuditTrailReport";
 			definition = "Report information about cash account reference data.";
 			minOccurs = 1;
@@ -137,7 +139,7 @@ public class CashAccountAuditTrailOrOperationalError1Choice {
 			componentContext_lazy = () -> CashAccountAuditTrailOrOperationalError1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "OprlErr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OperationalError";
 			definition = "Operational error resulting from a rejection.";
 			minOccurs = 1;
@@ -149,10 +151,9 @@ public class CashAccountAuditTrailOrOperationalError1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CashAccountAuditTrailOrOperationalError1Choice.mmCashAccountAuditTrailReport,
-						com.tools20022.repository.choice.CashAccountAuditTrailOrOperationalError1Choice.mmOperationalError);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(CashAccountAuditTrailOrOperationalError1Choice.mmCashAccountAuditTrailReport, CashAccountAuditTrailOrOperationalError1Choice.mmOperationalError);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CashAccountAuditTrailOrOperationalError1Choice";
 				definition = "Used to report between the cash account reference data or an operational error.";
 			}

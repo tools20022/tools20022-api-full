@@ -20,7 +20,9 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.Algorithm9Code;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -120,11 +122,11 @@ public class AlgorithmIdentification9 {
 			componentContext_lazy = () -> AlgorithmIdentification9.mmObject();
 			isDerived = false;
 			xmlTag = "Algo";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Algorithm";
 			definition = "Identification of the algorithm.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AlgorithmIdentification13.mmAlgorithm);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AlgorithmIdentification2.mmAlgorithm;
+			nextVersions_lazy = () -> Arrays.asList(AlgorithmIdentification13.mmAlgorithm);
+			previousVersion_lazy = () -> AlgorithmIdentification2.mmAlgorithm;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Algorithm9Code.mmObject();
@@ -174,11 +176,11 @@ public class AlgorithmIdentification9 {
 			componentContext_lazy = () -> AlgorithmIdentification9.mmObject();
 			isDerived = false;
 			xmlTag = "Param";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Parameter";
 			definition = "Parameters associated to the algorithm.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AlgorithmIdentification13.mmParameter);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AlgorithmIdentification2.mmParameter;
+			nextVersions_lazy = () -> Arrays.asList(AlgorithmIdentification13.mmParameter);
+			previousVersion_lazy = () -> AlgorithmIdentification2.mmParameter;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -189,9 +191,9 @@ public class AlgorithmIdentification9 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AlgorithmIdentification9.mmAlgorithm, com.tools20022.repository.msg.AlgorithmIdentification9.mmParameter);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(AlgorithmIdentification9.mmAlgorithm, AlgorithmIdentification9.mmParameter);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AlgorithmIdentification9";
 				definition = "Cryptographic algorithm and parameters for the protection of the transported key.";
 				nextVersions_lazy = () -> Arrays.asList(AlgorithmIdentification13.mmObject());

@@ -19,7 +19,10 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.entity.CollateralMovement;
 import com.tools20022.repository.entity.CollateralProposal;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.CollateralMovement10;
 import com.tools20022.repository.msg.CollateralProposal6;
 import java.util.Arrays;
@@ -112,14 +115,14 @@ public class CollateralProposal5Choice {
 	 */
 	public static final MMMessageAssociationEnd mmCollateralProposalDetails = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CollateralProposal.mmProposedCollateralMovement;
+			businessElementTrace_lazy = () -> CollateralProposal.mmProposedCollateralMovement;
 			componentContext_lazy = () -> CollateralProposal5Choice.mmObject();
 			isDerived = false;
 			xmlTag = "CollPrpslDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralProposalDetails";
 			definition = "Provides details about the proposal for the variation margin and optionally the segregated independent amount.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.CollateralProposal4Choice.mmCollateralProposalDetails;
+			previousVersion_lazy = () -> CollateralProposal4Choice.mmCollateralProposalDetails;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -168,14 +171,14 @@ public class CollateralProposal5Choice {
 	 */
 	public static final MMMessageAssociationEnd mmSegregatedIndependentAmount = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CollateralMovement.mmSegregatedIndependentAmount;
+			businessElementTrace_lazy = () -> CollateralMovement.mmSegregatedIndependentAmount;
 			componentContext_lazy = () -> CollateralProposal5Choice.mmObject();
 			isDerived = false;
 			xmlTag = "SgrtdIndpdntAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SegregatedIndependentAmount";
 			definition = "Provides details about the proposal for the segregated independent amount.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.CollateralProposal4Choice.mmSegregatedIndependentAmount;
+			previousVersion_lazy = () -> CollateralProposal4Choice.mmSegregatedIndependentAmount;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -186,10 +189,10 @@ public class CollateralProposal5Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CollateralProposal5Choice.mmCollateralProposalDetails, com.tools20022.repository.choice.CollateralProposal5Choice.mmSegregatedIndependentAmount);
+				messageElement_lazy = () -> Arrays.asList(CollateralProposal5Choice.mmCollateralProposalDetails, CollateralProposal5Choice.mmSegregatedIndependentAmount);
 				trace_lazy = () -> CollateralProposal.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CollateralProposal5Choice";
 				definition = "Provides details about the proposal for the variation margin and optionally the segregated independent amount, or the segregated independent amount only.";
 				previousVersion_lazy = () -> CollateralProposal4Choice.mmObject();

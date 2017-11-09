@@ -19,9 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.FractionDispositionType12Code;
 import com.tools20022.repository.datatype.DecimalNumber;
 import com.tools20022.repository.datatype.Max350Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -99,7 +101,7 @@ public class CorporateActionConfirmationDetailsSD1 {
 			componentContext_lazy = () -> CorporateActionConfirmationDetailsSD1.mmObject();
 			isDerived = false;
 			xmlTag = "PlcAndNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "xPath to the element that is being extended.";
 			maxOccurs = 1;
@@ -144,7 +146,7 @@ public class CorporateActionConfirmationDetailsSD1 {
 			componentContext_lazy = () -> CorporateActionConfirmationDetailsSD1.mmObject();
 			isDerived = false;
 			xmlTag = "PrratnRndgInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProrationRoundingIndicator";
 			definition = "Indicates how fractional positions will be handled for events with prorated options.";
 			maxOccurs = 1;
@@ -189,7 +191,7 @@ public class CorporateActionConfirmationDetailsSD1 {
 			componentContext_lazy = () -> CorporateActionConfirmationDetailsSD1.mmObject();
 			isDerived = false;
 			xmlTag = "PrratnFrctn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProrationFraction";
 			definition = "Decimal above which numbers are rounded for prorated options.  (e.g., if the rounding factor is 0.5, numbers of 0.5 and above will be rounded up).";
 			maxOccurs = 1;
@@ -201,10 +203,9 @@ public class CorporateActionConfirmationDetailsSD1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionConfirmationDetailsSD1.mmPlaceAndName, com.tools20022.repository.msg.CorporateActionConfirmationDetailsSD1.mmProrationRoundingIndicator,
-						com.tools20022.repository.msg.CorporateActionConfirmationDetailsSD1.mmProrationFraction);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(CorporateActionConfirmationDetailsSD1.mmPlaceAndName, CorporateActionConfirmationDetailsSD1.mmProrationRoundingIndicator, CorporateActionConfirmationDetailsSD1.mmProrationFraction);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CorporateActionConfirmationDetailsSD1";
 				definition = "Provides additional information regarding corporate action confirmation details.";
 			}

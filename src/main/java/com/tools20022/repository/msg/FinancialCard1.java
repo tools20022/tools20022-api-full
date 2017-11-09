@@ -19,9 +19,13 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.CurrencyAndAmount;
 import com.tools20022.repository.datatype.PercentageRate;
+import com.tools20022.repository.entity.Interest;
+import com.tools20022.repository.entity.Limit;
 import com.tools20022.repository.entity.PaymentCard;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -106,11 +110,11 @@ public class FinancialCard1 {
 	 */
 	public static final MMMessageAttribute mmCreditLimitAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Limit.mmAmount;
+			businessElementTrace_lazy = () -> Limit.mmAmount;
 			componentContext_lazy = () -> FinancialCard1.mmObject();
 			isDerived = false;
 			xmlTag = "CdtLmtAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditLimitAmount";
 			definition = "Monetary value of the credit limit for this financial card.";
 			minOccurs = 0;
@@ -153,11 +157,11 @@ public class FinancialCard1 {
 	 */
 	public static final MMMessageAttribute mmCreditAvailableAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentCard.mmCreditAvailableAmount;
+			businessElementTrace_lazy = () -> PaymentCard.mmCreditAvailableAmount;
 			componentContext_lazy = () -> FinancialCard1.mmObject();
 			isDerived = false;
 			xmlTag = "CdtAvlblAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditAvailableAmount";
 			definition = "Monetary value of the credit available for this financial card.";
 			minOccurs = 0;
@@ -200,11 +204,11 @@ public class FinancialCard1 {
 	 */
 	public static final MMMessageAttribute mmInterestRatePercent = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Interest.mmRate;
+			businessElementTrace_lazy = () -> Interest.mmRate;
 			componentContext_lazy = () -> FinancialCard1.mmObject();
 			isDerived = false;
 			xmlTag = "IntrstRatePct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterestRatePercent";
 			definition = "Interest rate expressed as a percentage for this financial card.";
 			maxOccurs = 1;
@@ -216,11 +220,10 @@ public class FinancialCard1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialCard1.mmCreditLimitAmount, com.tools20022.repository.msg.FinancialCard1.mmCreditAvailableAmount,
-						com.tools20022.repository.msg.FinancialCard1.mmInterestRatePercent);
+				messageElement_lazy = () -> Arrays.asList(FinancialCard1.mmCreditLimitAmount, FinancialCard1.mmCreditAvailableAmount, FinancialCard1.mmInterestRatePercent);
 				trace_lazy = () -> PaymentCard.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FinancialCard1";
 				definition = "Card used to represent a financial account for the purpose of payment settlement.";
 			}

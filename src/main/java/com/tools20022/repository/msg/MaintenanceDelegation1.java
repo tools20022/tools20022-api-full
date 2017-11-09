@@ -20,11 +20,13 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.DataSetCategory6Code;
 import com.tools20022.repository.datatype.Max3000Binary;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.Max5000Binary;
 import com.tools20022.repository.datatype.TrueFalseIndicator;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -145,10 +147,10 @@ public class MaintenanceDelegation1 {
 			componentContext_lazy = () -> MaintenanceDelegation1.mmObject();
 			isDerived = false;
 			xmlTag = "MntncSvc";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaintenanceService";
 			definition = "Maintenance service to be delegated.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MaintenanceDelegation2.mmMaintenanceService, com.tools20022.repository.msg.MaintenanceDelegation3.mmMaintenanceService);
+			nextVersions_lazy = () -> Arrays.asList(MaintenanceDelegation2.mmMaintenanceService, MaintenanceDelegation3.mmMaintenanceService);
 			minOccurs = 1;
 			simpleType_lazy = () -> DataSetCategory6Code.mmObject();
 		}
@@ -198,10 +200,10 @@ public class MaintenanceDelegation1 {
 			componentContext_lazy = () -> MaintenanceDelegation1.mmObject();
 			isDerived = false;
 			xmlTag = "PrtlDlgtn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartialDelegation";
 			definition = "Flag to indicate that the delegated maintenance must be performed on a subset of the terminal estate. ";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MaintenanceDelegation3.mmPartialDelegation);
+			nextVersions_lazy = () -> Arrays.asList(MaintenanceDelegation3.mmPartialDelegation);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
@@ -255,10 +257,10 @@ public class MaintenanceDelegation1 {
 			componentContext_lazy = () -> MaintenanceDelegation1.mmObject();
 			isDerived = false;
 			xmlTag = "POISubset";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "POISubset";
 			definition = "Subset of the terminal estate for the delegated actions, for instance for pilot or key deactivation). The subset may be expressed as a list of POI or terminal estate subset identifier.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MaintenanceDelegation2.mmPOISubset, com.tools20022.repository.msg.MaintenanceDelegation3.mmPOISubset);
+			nextVersions_lazy = () -> Arrays.asList(MaintenanceDelegation2.mmPOISubset, MaintenanceDelegation3.mmPOISubset);
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
@@ -307,10 +309,10 @@ public class MaintenanceDelegation1 {
 			componentContext_lazy = () -> MaintenanceDelegation1.mmObject();
 			isDerived = false;
 			xmlTag = "DlgtdActn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DelegatedAction";
 			definition = "Information for the MTM to build or include delegated actions in the management plan of the POI.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MaintenanceDelegation3.mmDelegatedAction);
+			nextVersions_lazy = () -> Arrays.asList(MaintenanceDelegation3.mmDelegatedAction);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -362,10 +364,10 @@ public class MaintenanceDelegation1 {
 			componentContext_lazy = () -> MaintenanceDelegation1.mmObject();
 			isDerived = false;
 			xmlTag = "ParamsSubsetId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ParametersSubsetIdentification";
 			definition = "Identification of the parameters subset assigned by the MTM.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MaintenanceDelegation2.mmParametersSubsetIdentification, com.tools20022.repository.msg.MaintenanceDelegation3.mmDelegationScopeIdentification);
+			nextVersions_lazy = () -> Arrays.asList(MaintenanceDelegation2.mmParametersSubsetIdentification, MaintenanceDelegation3.mmDelegationScopeIdentification);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -420,10 +422,10 @@ public class MaintenanceDelegation1 {
 			componentContext_lazy = () -> MaintenanceDelegation1.mmObject();
 			isDerived = false;
 			xmlTag = "ParamsSubsetDef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ParametersSubsetDefinition";
 			definition = "Definition of the subset of application parameters, for instance the range of application profiles, the RID (registered application provider identification).";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MaintenanceDelegation2.mmParametersSubsetDefinition, com.tools20022.repository.msg.MaintenanceDelegation3.mmDelegationScopeDefinition);
+			nextVersions_lazy = () -> Arrays.asList(MaintenanceDelegation2.mmParametersSubsetDefinition, MaintenanceDelegation3.mmDelegationScopeDefinition);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max3000Binary.mmObject();
@@ -471,10 +473,10 @@ public class MaintenanceDelegation1 {
 			componentContext_lazy = () -> MaintenanceDelegation1.mmObject();
 			isDerived = false;
 			xmlTag = "Cert";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Certificate";
 			definition = "Certificate path of the terminal manager.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MaintenanceDelegation3.mmCertificate);
+			nextVersions_lazy = () -> Arrays.asList(MaintenanceDelegation3.mmCertificate);
 			minOccurs = 0;
 			simpleType_lazy = () -> Max5000Binary.mmObject();
 		}
@@ -524,10 +526,10 @@ public class MaintenanceDelegation1 {
 			componentContext_lazy = () -> MaintenanceDelegation1.mmObject();
 			isDerived = false;
 			xmlTag = "POIIdAssoctn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "POIIdentificationAssociation";
 			definition = "Association of the TM identifier and the MTM identifier of a POI.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MaintenanceDelegation2.mmPOIIdentificationAssociation, com.tools20022.repository.msg.MaintenanceDelegation3.mmPOIIdentificationAssociation);
+			nextVersions_lazy = () -> Arrays.asList(MaintenanceDelegation2.mmPOIIdentificationAssociation, MaintenanceDelegation3.mmPOIIdentificationAssociation);
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.MaintenanceIdentificationAssociation1.mmObject();
@@ -573,10 +575,10 @@ public class MaintenanceDelegation1 {
 			componentContext_lazy = () -> MaintenanceDelegation1.mmObject();
 			isDerived = false;
 			xmlTag = "SmmtrcKey";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SymmetricKey";
 			definition = "Identification of the key to manage or to download.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MaintenanceDelegation3.mmSymmetricKey);
+			nextVersions_lazy = () -> Arrays.asList(MaintenanceDelegation3.mmSymmetricKey);
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.KEKIdentifier2.mmObject();
@@ -625,10 +627,10 @@ public class MaintenanceDelegation1 {
 			componentContext_lazy = () -> MaintenanceDelegation1.mmObject();
 			isDerived = false;
 			xmlTag = "ParamDataSet";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ParameterDataSet";
 			definition = "Configuration parameters of the terminal manager to be sent by the MTM.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MaintenanceDelegation3.mmParameterDataSet);
+			nextVersions_lazy = () -> Arrays.asList(MaintenanceDelegation3.mmParameterDataSet);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -639,13 +641,11 @@ public class MaintenanceDelegation1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MaintenanceDelegation1.mmMaintenanceService, com.tools20022.repository.msg.MaintenanceDelegation1.mmPartialDelegation,
-						com.tools20022.repository.msg.MaintenanceDelegation1.mmPOISubset, com.tools20022.repository.msg.MaintenanceDelegation1.mmDelegatedAction,
-						com.tools20022.repository.msg.MaintenanceDelegation1.mmParametersSubsetIdentification, com.tools20022.repository.msg.MaintenanceDelegation1.mmParametersSubsetDefinition,
-						com.tools20022.repository.msg.MaintenanceDelegation1.mmCertificate, com.tools20022.repository.msg.MaintenanceDelegation1.mmPOIIdentificationAssociation,
-						com.tools20022.repository.msg.MaintenanceDelegation1.mmSymmetricKey, com.tools20022.repository.msg.MaintenanceDelegation1.mmParameterDataSet);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(MaintenanceDelegation1.mmMaintenanceService, MaintenanceDelegation1.mmPartialDelegation, MaintenanceDelegation1.mmPOISubset, MaintenanceDelegation1.mmDelegatedAction,
+						MaintenanceDelegation1.mmParametersSubsetIdentification, MaintenanceDelegation1.mmParametersSubsetDefinition, MaintenanceDelegation1.mmCertificate, MaintenanceDelegation1.mmPOIIdentificationAssociation,
+						MaintenanceDelegation1.mmSymmetricKey, MaintenanceDelegation1.mmParameterDataSet);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MaintenanceDelegation1";
 				definition = "Information on the delegation of a maintenance action or maintenance function.";
 				nextVersions_lazy = () -> Arrays.asList(MaintenanceDelegation2.mmObject(), MaintenanceDelegation3.mmObject());

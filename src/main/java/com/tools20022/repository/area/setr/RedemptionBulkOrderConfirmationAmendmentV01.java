@@ -20,6 +20,7 @@ package com.tools20022.repository.area.setr;
 import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.SecuritiesTradeLatestVersion;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.InvestmentFundsISOPreviousversion;
@@ -47,6 +48,9 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code setr.054.001.01}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.SecuritiesTradeLatestVersion
@@ -94,9 +98,6 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code setr.054.001.01}</li>
- * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -141,7 +142,7 @@ public class RedemptionBulkOrderConfirmationAmendmentV01 {
 	public static final MMMessageBuildingBlock mmMessageIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "MsgId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageIdentification";
 			definition = "Reference that uniquely identifies a message from a business application standpoint. ";
 			maxOccurs = 1;
@@ -176,7 +177,7 @@ public class RedemptionBulkOrderConfirmationAmendmentV01 {
 	public static final MMMessageBuildingBlock mmPoolReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "PoolRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PoolReference";
 			definition = "Collective reference identifying a set of messages.";
 			maxOccurs = 1;
@@ -211,7 +212,7 @@ public class RedemptionBulkOrderConfirmationAmendmentV01 {
 	public static final MMMessageBuildingBlock mmPreviousReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "PrvsRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousReference";
 			definition = "Reference to a linked message that was previously sent.";
 			minOccurs = 0;
@@ -246,7 +247,7 @@ public class RedemptionBulkOrderConfirmationAmendmentV01 {
 	public static final MMMessageBuildingBlock mmRelatedReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "RltdRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedReference";
 			definition = "Reference to a linked message that was previously received.";
 			maxOccurs = 1;
@@ -283,7 +284,7 @@ public class RedemptionBulkOrderConfirmationAmendmentV01 {
 	public static final MMMessageBuildingBlock mmBulkExecutionDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "BlkExctnDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BulkExecutionDetails";
 			definition = "General information related to the execution of investment fund orders.";
 			maxOccurs = 1;
@@ -317,7 +318,7 @@ public class RedemptionBulkOrderConfirmationAmendmentV01 {
 	public static final MMMessageBuildingBlock mmRelatedPartyDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "RltdPtyDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedPartyDetails";
 			definition = "Information about parties related to the transaction.";
 			maxOccurs = 10;
@@ -353,7 +354,7 @@ public class RedemptionBulkOrderConfirmationAmendmentV01 {
 	public static final MMMessageBuildingBlock mmCopyDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CpyDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CopyDetails";
 			definition = "Information provided when the message is a copy of a previous message.";
 			maxOccurs = 1;
@@ -390,7 +391,7 @@ public class RedemptionBulkOrderConfirmationAmendmentV01 {
 	public static final MMMessageBuildingBlock mmExtension = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Xtnsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Extension";
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
 			minOccurs = 0;
@@ -401,18 +402,16 @@ public class RedemptionBulkOrderConfirmationAmendmentV01 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RedemptionBulkOrderConfirmationAmendmentV01";
 				definition = "Scope\r\nAn executing party, for example,  a transfer agent, sends the RedemptionBulkOrderConfirmationAmendment message to the instructing party, for example, an investment manager or its authorised representative to amend a previously sent RedemptionBulkOrderConfirmation message.\r\nUsage\r\nThe RedemptionBulkOrderConfirmationAmendment message is used to amend one or more previously sent redemption bulk order confirmations.\r\nEach bulk order confirmation amendment specified is identified in DealReference. The reference of the original individual order is specified in OrderReference.\r\nThe message identification of the RedemptionBulkOrder message in which the orders were conveyed may also be quoted in RelatedReference. The message identification of the RedemptionBulkOrderConfirmation message in which the original order confirmations were conveyed may also be quoted in PreviousReference.";
 				messageSet_lazy = () -> Arrays.asList(InvestmentFundsISOPreviousversion.mmObject());
 				rootElement = "Document";
 				xmlTag = "RedBlkOrdrConfAmdmntV01";
 				businessArea_lazy = () -> SecuritiesTradeLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.RedemptionBulkOrderConfirmationAmendmentV01.mmMessageIdentification,
-						com.tools20022.repository.area.setr.RedemptionBulkOrderConfirmationAmendmentV01.mmPoolReference, com.tools20022.repository.area.setr.RedemptionBulkOrderConfirmationAmendmentV01.mmPreviousReference,
-						com.tools20022.repository.area.setr.RedemptionBulkOrderConfirmationAmendmentV01.mmRelatedReference, com.tools20022.repository.area.setr.RedemptionBulkOrderConfirmationAmendmentV01.mmBulkExecutionDetails,
-						com.tools20022.repository.area.setr.RedemptionBulkOrderConfirmationAmendmentV01.mmRelatedPartyDetails, com.tools20022.repository.area.setr.RedemptionBulkOrderConfirmationAmendmentV01.mmCopyDetails,
-						com.tools20022.repository.area.setr.RedemptionBulkOrderConfirmationAmendmentV01.mmExtension);
+				messageBuildingBlock_lazy = () -> Arrays.asList(RedemptionBulkOrderConfirmationAmendmentV01.mmMessageIdentification, RedemptionBulkOrderConfirmationAmendmentV01.mmPoolReference,
+						RedemptionBulkOrderConfirmationAmendmentV01.mmPreviousReference, RedemptionBulkOrderConfirmationAmendmentV01.mmRelatedReference, RedemptionBulkOrderConfirmationAmendmentV01.mmBulkExecutionDetails,
+						RedemptionBulkOrderConfirmationAmendmentV01.mmRelatedPartyDetails, RedemptionBulkOrderConfirmationAmendmentV01.mmCopyDetails, RedemptionBulkOrderConfirmationAmendmentV01.mmExtension);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "setr";

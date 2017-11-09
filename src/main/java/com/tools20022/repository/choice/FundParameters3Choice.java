@@ -20,8 +20,11 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.reda.InvestmentFundReportRequestV02;
 import com.tools20022.repository.codeset.NoCriteria1Code;
 import com.tools20022.repository.entity.InvestmentFund;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.FundParameters4;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -111,7 +114,7 @@ public class FundParameters3Choice {
 			componentContext_lazy = () -> FundParameters3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "NoCrit";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoCriteria";
 			definition = "Specifies that there is no criteria for the report. The request is a request for all reports, rather than reports attributed to a specific fund manager, date or financial instrument.";
 			maxOccurs = 1;
@@ -151,7 +154,7 @@ public class FundParameters3Choice {
 			componentContext_lazy = () -> FundParameters3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Params";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Parameters";
 			definition = "Report parameters.";
 			maxOccurs = 1;
@@ -164,11 +167,11 @@ public class FundParameters3Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.FundParameters3Choice.mmNoCriteria, com.tools20022.repository.choice.FundParameters3Choice.mmParameters);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.reda.InvestmentFundReportRequestV02.mmFundProcessingPassportReport);
+				messageElement_lazy = () -> Arrays.asList(FundParameters3Choice.mmNoCriteria, FundParameters3Choice.mmParameters);
+				messageBuildingBlock_lazy = () -> Arrays.asList(InvestmentFundReportRequestV02.mmFundProcessingPassportReport);
 				trace_lazy = () -> InvestmentFund.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FundParameters3Choice";
 				definition = "Choice of fund parameters.";
 			}

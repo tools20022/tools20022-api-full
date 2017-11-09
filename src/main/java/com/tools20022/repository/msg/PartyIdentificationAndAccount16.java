@@ -20,10 +20,12 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.PartyIdentification10Choice;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.PartyIdentificationInformation;
 import com.tools20022.repository.entity.SecuritiesAccount;
+import com.tools20022.repository.GeneratedRepository;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -113,7 +115,7 @@ public class PartyIdentificationAndAccount16 {
 			componentContext_lazy = () -> PartyIdentificationAndAccount16.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Identification of the party.";
 			maxOccurs = 1;
@@ -159,7 +161,7 @@ public class PartyIdentificationAndAccount16 {
 			componentContext_lazy = () -> PartyIdentificationAndAccount16.mmObject();
 			isDerived = false;
 			xmlTag = "SfkpgAcct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingAccount";
 			definition = "Account to or from which a securities entry is made.";
 			maxOccurs = 1;
@@ -203,7 +205,7 @@ public class PartyIdentificationAndAccount16 {
 			componentContext_lazy = () -> PartyIdentificationAndAccount16.mmObject();
 			isDerived = false;
 			xmlTag = "PrcgId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProcessingIdentification";
 			definition = "Unambiguous identification of the transaction for the party identified.";
 			maxOccurs = 1;
@@ -215,11 +217,10 @@ public class PartyIdentificationAndAccount16 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyIdentificationAndAccount16.mmIdentification, com.tools20022.repository.msg.PartyIdentificationAndAccount16.mmSafekeepingAccount,
-						com.tools20022.repository.msg.PartyIdentificationAndAccount16.mmProcessingIdentification);
+				messageElement_lazy = () -> Arrays.asList(PartyIdentificationAndAccount16.mmIdentification, PartyIdentificationAndAccount16.mmSafekeepingAccount, PartyIdentificationAndAccount16.mmProcessingIdentification);
 				trace_lazy = () -> PartyIdentificationInformation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
 						return DateFormat.getDateInstance(java.text.DateFormat.LONG).parse("May 5, 2016");

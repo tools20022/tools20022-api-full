@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.SubscriptionChargeApplicationTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -86,7 +88,7 @@ public class SubscriptionChargeApplicationType1Code extends SubscriptionChargeAp
 	 */
 	public static final MMCode mmAccumulated = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Accumulated";
 			owner_lazy = () -> SubscriptionChargeApplicationType1Code.mmObject();
 		}
@@ -109,7 +111,7 @@ public class SubscriptionChargeApplicationType1Code extends SubscriptionChargeAp
 	 */
 	public static final MMCode mmImmediate = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Immediate";
 			owner_lazy = () -> SubscriptionChargeApplicationType1Code.mmObject();
 		}
@@ -118,12 +120,12 @@ public class SubscriptionChargeApplicationType1Code extends SubscriptionChargeAp
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ACCU");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SubscriptionChargeApplicationType1Code";
 				definition = "Indicates whether the cash debit for the subscription charge is made immediately or accumulated.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SubscriptionChargeApplicationType1Code.mmAccumulated, com.tools20022.repository.codeset.SubscriptionChargeApplicationType1Code.mmImmediate);
+				code_lazy = () -> Arrays.asList(SubscriptionChargeApplicationType1Code.mmAccumulated, SubscriptionChargeApplicationType1Code.mmImmediate);
 				trace_lazy = () -> SubscriptionChargeApplicationTypeCode.mmObject();
 			}
 		});

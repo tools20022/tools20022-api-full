@@ -20,6 +20,7 @@ package com.tools20022.repository.area.tsmt;
 import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.TradeServicesManagementLatestVersion;
 import com.tools20022.repository.msg.MessageIdentification1;
 import com.tools20022.repository.msg.Reason2;
@@ -40,6 +41,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code tsmt.050.001.01}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.TradeServicesManagementLatestVersion
@@ -77,9 +81,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * RoleAndBaselineRejectionV01.mmRejectionReason}</li>
  * </ul>
  * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code tsmt.050.001.01}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -122,7 +123,7 @@ public class RoleAndBaselineRejectionV01 {
 	public static final MMMessageBuildingBlock mmRejectionIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "RjctnId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RejectionIdentification";
 			definition = "Identifies the rejection message.";
 			maxOccurs = 1;
@@ -158,7 +159,7 @@ public class RoleAndBaselineRejectionV01 {
 	public static final MMMessageBuildingBlock mmRelatedMessageReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "RltdMsgRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedMessageReference";
 			definition = "Reference to the message that contained the baseline and is rejected.";
 			maxOccurs = 1;
@@ -197,7 +198,7 @@ public class RoleAndBaselineRejectionV01 {
 	public static final MMMessageBuildingBlock mmTransactionIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "TxId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionIdentification";
 			definition = "Unique identification assigned by the matching application to the transaction.\nThis identification is to be used in any communication between the parties.\n";
 			maxOccurs = 1;
@@ -231,7 +232,7 @@ public class RoleAndBaselineRejectionV01 {
 	public static final MMMessageBuildingBlock mmRejectionReason = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "RjctnRsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RejectionReason";
 			definition = "Reason why the user cannot accept the request.";
 			maxOccurs = 1;
@@ -243,16 +244,15 @@ public class RoleAndBaselineRejectionV01 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RoleAndBaselineRejectionV01";
 				definition = "Scope\r\nThe RoleAndBaselineRejection message is sent by a secondary bank to the matching application if it rejects to join the transaction based on the baseline and the role that it is expected to play.\r\nUsage\r\nThe RoleAndBaselineRejection message is sent in response to a message that is a direct request to join a transaction.";
 				messageSet_lazy = () -> Arrays.asList(TradeServicesManagementISOPreviousversion.mmObject(), TradeServicesManagementISOLatestversion.mmObject());
 				rootElement = "Document";
 				xmlTag = "RoleAndBaselnRjctn";
 				businessArea_lazy = () -> TradeServicesManagementLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.RoleAndBaselineRejectionV01.mmRejectionIdentification,
-						com.tools20022.repository.area.tsmt.RoleAndBaselineRejectionV01.mmRelatedMessageReference, com.tools20022.repository.area.tsmt.RoleAndBaselineRejectionV01.mmTransactionIdentification,
-						com.tools20022.repository.area.tsmt.RoleAndBaselineRejectionV01.mmRejectionReason);
+				messageBuildingBlock_lazy = () -> Arrays.asList(RoleAndBaselineRejectionV01.mmRejectionIdentification, RoleAndBaselineRejectionV01.mmRelatedMessageReference, RoleAndBaselineRejectionV01.mmTransactionIdentification,
+						RoleAndBaselineRejectionV01.mmRejectionReason);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "tsmt";

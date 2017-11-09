@@ -19,10 +19,13 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.DiscountOrChargeType1Choice;
 import com.tools20022.repository.datatype.CurrencyAndAmount;
 import com.tools20022.repository.datatype.YesNoIndicator;
+import com.tools20022.repository.entity.Adjustment;
 import com.tools20022.repository.entity.Allowance;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -107,11 +110,11 @@ public class SettlementAllowanceCharge1 {
 	 */
 	public static final MMMessageAttribute mmAllowanceChargeIndicator = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Adjustment.mmAllowanceChargeIndicator;
+			businessElementTrace_lazy = () -> Adjustment.mmAllowanceChargeIndicator;
 			componentContext_lazy = () -> SettlementAllowanceCharge1.mmObject();
 			isDerived = false;
 			xmlTag = "AllwncChrgInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AllowanceChargeIndicator";
 			definition = "Indication of whether or not this allowance charge is a charge.";
 			maxOccurs = 1;
@@ -156,11 +159,11 @@ public class SettlementAllowanceCharge1 {
 	 */
 	public static final MMMessageAttribute mmActualAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Adjustment.mmAmount;
+			businessElementTrace_lazy = () -> Adjustment.mmAmount;
 			componentContext_lazy = () -> SettlementAllowanceCharge1.mmObject();
 			isDerived = false;
 			xmlTag = "ActlAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ActualAmount";
 			definition = "Actual monetary amount specified for the allowance or charge.";
 			minOccurs = 0;
@@ -203,11 +206,11 @@ public class SettlementAllowanceCharge1 {
 	 */
 	public static final MMMessageAttribute mmReason = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Adjustment.mmReason;
+			businessElementTrace_lazy = () -> Adjustment.mmReason;
 			componentContext_lazy = () -> SettlementAllowanceCharge1.mmObject();
 			isDerived = false;
 			xmlTag = "Rsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reason";
 			definition = "Reason, expressed as text, for this allowance or charge.";
 			maxOccurs = 1;
@@ -219,11 +222,10 @@ public class SettlementAllowanceCharge1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SettlementAllowanceCharge1.mmAllowanceChargeIndicator, com.tools20022.repository.msg.SettlementAllowanceCharge1.mmActualAmount,
-						com.tools20022.repository.msg.SettlementAllowanceCharge1.mmReason);
+				messageElement_lazy = () -> Arrays.asList(SettlementAllowanceCharge1.mmAllowanceChargeIndicator, SettlementAllowanceCharge1.mmActualAmount, SettlementAllowanceCharge1.mmReason);
 				trace_lazy = () -> Allowance.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SettlementAllowanceCharge1";
 				definition = "Specifies a pricing component, such as a service, promotion, allowance or charge, for this trade settlement.";
 			}

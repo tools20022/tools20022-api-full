@@ -19,6 +19,9 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.sese.SecuritiesSettlementTransactionModificationRequestV01;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails2;
 import com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails3;
 import com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails4;
@@ -115,7 +118,7 @@ public class UpdateType5Choice {
 			componentContext_lazy = () -> UpdateType5Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Addtn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Addition";
 			definition = "Addition of information to the securities transaction.";
 			maxOccurs = 1;
@@ -157,7 +160,7 @@ public class UpdateType5Choice {
 			componentContext_lazy = () -> UpdateType5Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Deltn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Deletion";
 			definition = "Deletion of information in the securities transaction.";
 			maxOccurs = 1;
@@ -200,7 +203,7 @@ public class UpdateType5Choice {
 			componentContext_lazy = () -> UpdateType5Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Mod";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Modification";
 			definition = "Modification of information in the securities transaction.";
 			maxOccurs = 1;
@@ -213,11 +216,10 @@ public class UpdateType5Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.UpdateType5Choice.mmAddition, com.tools20022.repository.choice.UpdateType5Choice.mmDeletion,
-						com.tools20022.repository.choice.UpdateType5Choice.mmModification);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesSettlementTransactionModificationRequestV01.mmUpdateType);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(UpdateType5Choice.mmAddition, UpdateType5Choice.mmDeletion, UpdateType5Choice.mmModification);
+				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesSettlementTransactionModificationRequestV01.mmUpdateType);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "UpdateType5Choice";
 				definition = "Specifies the type of update requested. That is addition, deletion or modification.";
 				nextVersions_lazy = () -> Arrays.asList(UpdateType9Choice.mmObject());

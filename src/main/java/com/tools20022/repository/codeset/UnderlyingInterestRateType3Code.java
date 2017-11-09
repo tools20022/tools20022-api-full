@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.UnderlyingTypeV3Code;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -85,7 +87,7 @@ public class UnderlyingInterestRateType3Code extends UnderlyingTypeV3Code {
 	 */
 	public static final MMCode mmBond = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Bond";
 			owner_lazy = () -> UnderlyingInterestRateType3Code.mmObject();
 		}
@@ -108,7 +110,7 @@ public class UnderlyingInterestRateType3Code extends UnderlyingTypeV3Code {
 	 */
 	public static final MMCode mmBondFuture = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BondFuture";
 			owner_lazy = () -> UnderlyingInterestRateType3Code.mmObject();
 		}
@@ -131,7 +133,7 @@ public class UnderlyingInterestRateType3Code extends UnderlyingTypeV3Code {
 	 */
 	public static final MMCode mmInterestRate = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterestRate";
 			owner_lazy = () -> UnderlyingInterestRateType3Code.mmObject();
 		}
@@ -154,7 +156,7 @@ public class UnderlyingInterestRateType3Code extends UnderlyingTypeV3Code {
 	 */
 	public static final MMCode mmInterestRateFutureFRA = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterestRateFutureFRA";
 			owner_lazy = () -> UnderlyingInterestRateType3Code.mmObject();
 		}
@@ -163,12 +165,11 @@ public class UnderlyingInterestRateType3Code extends UnderlyingTypeV3Code {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "UnderlyingInterestRateType3Code";
 				definition = "Specifies the type of an underlying contract for interest rate derivatives.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnderlyingInterestRateType3Code.mmBond, com.tools20022.repository.codeset.UnderlyingInterestRateType3Code.mmBondFuture,
-						com.tools20022.repository.codeset.UnderlyingInterestRateType3Code.mmInterestRate, com.tools20022.repository.codeset.UnderlyingInterestRateType3Code.mmInterestRateFutureFRA);
+				code_lazy = () -> Arrays.asList(UnderlyingInterestRateType3Code.mmBond, UnderlyingInterestRateType3Code.mmBondFuture, UnderlyingInterestRateType3Code.mmInterestRate, UnderlyingInterestRateType3Code.mmInterestRateFutureFRA);
 				trace_lazy = () -> UnderlyingTypeV3Code.mmObject();
 			}
 		});

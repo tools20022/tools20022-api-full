@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.TypeOfAmountCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -85,7 +87,7 @@ public class TypeOfAmount7Code extends TypeOfAmountCode {
 	 */
 	public static final MMCode mmFees = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Fees";
 			owner_lazy = () -> TypeOfAmount7Code.mmObject();
 		}
@@ -108,7 +110,7 @@ public class TypeOfAmount7Code extends TypeOfAmountCode {
 	 */
 	public static final MMCode mmIssuerFees = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssuerFees";
 			owner_lazy = () -> TypeOfAmount7Code.mmObject();
 		}
@@ -131,7 +133,7 @@ public class TypeOfAmount7Code extends TypeOfAmountCode {
 	 */
 	public static final MMCode mmInterchangeFees = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterchangeFees";
 			owner_lazy = () -> TypeOfAmount7Code.mmObject();
 		}
@@ -154,7 +156,7 @@ public class TypeOfAmount7Code extends TypeOfAmountCode {
 	 */
 	public static final MMCode mmProcessingFees = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProcessingFees";
 			owner_lazy = () -> TypeOfAmount7Code.mmObject();
 		}
@@ -177,7 +179,7 @@ public class TypeOfAmount7Code extends TypeOfAmountCode {
 	 */
 	public static final MMCode mmInternationalServiceAssessmentFees = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InternationalServiceAssessmentFees";
 			owner_lazy = () -> TypeOfAmount7Code.mmObject();
 		}
@@ -186,13 +188,11 @@ public class TypeOfAmount7Code extends TypeOfAmountCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TypeOfAmount7Code";
 				definition = "Type or class of amount. ";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TypeOfAmount7Code.mmFees, com.tools20022.repository.codeset.TypeOfAmount7Code.mmIssuerFees,
-						com.tools20022.repository.codeset.TypeOfAmount7Code.mmInterchangeFees, com.tools20022.repository.codeset.TypeOfAmount7Code.mmProcessingFees,
-						com.tools20022.repository.codeset.TypeOfAmount7Code.mmInternationalServiceAssessmentFees);
+				code_lazy = () -> Arrays.asList(TypeOfAmount7Code.mmFees, TypeOfAmount7Code.mmIssuerFees, TypeOfAmount7Code.mmInterchangeFees, TypeOfAmount7Code.mmProcessingFees, TypeOfAmount7Code.mmInternationalServiceAssessmentFees);
 				trace_lazy = () -> TypeOfAmountCode.mmObject();
 			}
 		});

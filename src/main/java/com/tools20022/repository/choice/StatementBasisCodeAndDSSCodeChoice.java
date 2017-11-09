@@ -19,7 +19,9 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.StatementBasis1Code;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification7;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -93,7 +95,7 @@ public class StatementBasisCodeAndDSSCodeChoice {
 			componentContext_lazy = () -> StatementBasisCodeAndDSSCodeChoice.mmObject();
 			isDerived = false;
 			xmlTag = "StmtBsisAsCd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatementBasisAsCode";
 			definition = "Statement basis expressed as a code.";
 			maxOccurs = 1;
@@ -138,7 +140,7 @@ public class StatementBasisCodeAndDSSCodeChoice {
 			componentContext_lazy = () -> StatementBasisCodeAndDSSCodeChoice.mmObject();
 			isDerived = false;
 			xmlTag = "StmtBsisAsDSS";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatementBasisAsDSS";
 			definition = "Statement basis expressed as a data source scheme and a code used within the data source scheme.";
 			maxOccurs = 1;
@@ -150,10 +152,9 @@ public class StatementBasisCodeAndDSSCodeChoice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays
-						.asList(com.tools20022.repository.choice.StatementBasisCodeAndDSSCodeChoice.mmStatementBasisAsCode, com.tools20022.repository.choice.StatementBasisCodeAndDSSCodeChoice.mmStatementBasisAsDSS);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(StatementBasisCodeAndDSSCodeChoice.mmStatementBasisAsCode, StatementBasisCodeAndDSSCodeChoice.mmStatementBasisAsDSS);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "StatementBasisCodeAndDSSCodeChoice";
 				definition = "Choice between formats for the statement basis.";
 			}

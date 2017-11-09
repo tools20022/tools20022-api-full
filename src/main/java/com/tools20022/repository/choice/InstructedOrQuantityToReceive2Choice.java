@@ -19,7 +19,11 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.entity.CorporateActionEntitlement;
 import com.tools20022.repository.entity.CorporateActionEvent;
+import com.tools20022.repository.entity.SecuritiesProceedsDefinition;
+import com.tools20022.repository.GeneratedRepository;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -101,11 +105,11 @@ public class InstructedOrQuantityToReceive2Choice {
 	 */
 	public static final MMMessageAssociationEnd mmInstructedQuantity = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEntitlement.mmInstructedBalance;
+			businessElementTrace_lazy = () -> CorporateActionEntitlement.mmInstructedBalance;
 			componentContext_lazy = () -> InstructedOrQuantityToReceive2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "InstdQty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructedQuantity";
 			definition = "Quantity of underlying securities to which this instruction applies.";
 			maxOccurs = 1;
@@ -151,11 +155,11 @@ public class InstructedOrQuantityToReceive2Choice {
 	 */
 	public static final MMMessageAssociationEnd mmQuantityToReceive = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesProceedsDefinition.mmQuantityToReceive;
+			businessElementTrace_lazy = () -> SecuritiesProceedsDefinition.mmQuantityToReceive;
 			componentContext_lazy = () -> InstructedOrQuantityToReceive2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "QtyToRcv";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuantityToReceive";
 			definition = "Quantity of the benefits that the account owner wants to receive, for example, as a result of dividend reinvestment.";
 			maxOccurs = 1;
@@ -168,11 +172,10 @@ public class InstructedOrQuantityToReceive2Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays
-						.asList(com.tools20022.repository.choice.InstructedOrQuantityToReceive2Choice.mmInstructedQuantity, com.tools20022.repository.choice.InstructedOrQuantityToReceive2Choice.mmQuantityToReceive);
+				messageElement_lazy = () -> Arrays.asList(InstructedOrQuantityToReceive2Choice.mmInstructedQuantity, InstructedOrQuantityToReceive2Choice.mmQuantityToReceive);
 				trace_lazy = () -> CorporateActionEvent.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
 						return DateFormat.getDateInstance(java.text.DateFormat.LONG).parse("May 5, 2016");

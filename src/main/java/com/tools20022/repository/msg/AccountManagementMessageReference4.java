@@ -20,9 +20,12 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.acmt.RequestForAccountManagementStatusReportV05;
 import com.tools20022.repository.choice.LinkedMessage4Choice;
 import com.tools20022.repository.codeset.AccountManagementType3Code;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -124,10 +127,10 @@ public class AccountManagementMessageReference4 {
 			componentContext_lazy = () -> AccountManagementMessageReference4.mmObject();
 			isDerived = false;
 			xmlTag = "LkdRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LinkedReference";
 			definition = "Reference to a linked message.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AccountManagementMessageReference3.mmLinkedReference;
+			previousVersion_lazy = () -> AccountManagementMessageReference3.mmLinkedReference;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -176,10 +179,10 @@ public class AccountManagementMessageReference4 {
 			componentContext_lazy = () -> AccountManagementMessageReference4.mmObject();
 			isDerived = false;
 			xmlTag = "StsReqTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusRequestType";
 			definition = "Type of account management instruction for which the status  is requested or a request to know the status of the account.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AccountManagementMessageReference3.mmStatusRequestType;
+			previousVersion_lazy = () -> AccountManagementMessageReference3.mmStatusRequestType;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AccountManagementType3Code.mmObject();
@@ -226,10 +229,10 @@ public class AccountManagementMessageReference4 {
 			componentContext_lazy = () -> AccountManagementMessageReference4.mmObject();
 			isDerived = false;
 			xmlTag = "AcctApplId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountApplicationIdentification";
 			definition = "Unique and unambiguous identifier of the account opening or account modification instruction at application level.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AccountManagementMessageReference3.mmAccountApplicationIdentification;
+			previousVersion_lazy = () -> AccountManagementMessageReference3.mmAccountApplicationIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -271,10 +274,10 @@ public class AccountManagementMessageReference4 {
 			componentContext_lazy = () -> AccountManagementMessageReference4.mmObject();
 			isDerived = false;
 			xmlTag = "ExstgAcctId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExistingAccountIdentification";
 			definition = "Account to which the account opening is related.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AccountManagementMessageReference3.mmExistingAccountIdentification;
+			previousVersion_lazy = () -> AccountManagementMessageReference3.mmExistingAccountIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -321,10 +324,10 @@ public class AccountManagementMessageReference4 {
 			componentContext_lazy = () -> AccountManagementMessageReference4.mmObject();
 			isDerived = false;
 			xmlTag = "InvstmtAcct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestmentAccount";
 			definition = "Account information for which the status of an account management instruction is requested.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AccountManagementMessageReference3.mmInvestmentAccount;
+			previousVersion_lazy = () -> AccountManagementMessageReference3.mmInvestmentAccount;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -335,12 +338,11 @@ public class AccountManagementMessageReference4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountManagementMessageReference4.mmLinkedReference, com.tools20022.repository.msg.AccountManagementMessageReference4.mmStatusRequestType,
-						com.tools20022.repository.msg.AccountManagementMessageReference4.mmAccountApplicationIdentification, com.tools20022.repository.msg.AccountManagementMessageReference4.mmExistingAccountIdentification,
-						com.tools20022.repository.msg.AccountManagementMessageReference4.mmInvestmentAccount);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.RequestForAccountManagementStatusReportV05.mmRequestDetails);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(AccountManagementMessageReference4.mmLinkedReference, AccountManagementMessageReference4.mmStatusRequestType, AccountManagementMessageReference4.mmAccountApplicationIdentification,
+						AccountManagementMessageReference4.mmExistingAccountIdentification, AccountManagementMessageReference4.mmInvestmentAccount);
+				messageBuildingBlock_lazy = () -> Arrays.asList(RequestForAccountManagementStatusReportV05.mmRequestDetails);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AccountManagementMessageReference4";
 				definition = "Information about the references of an account management instruction message.";
 				previousVersion_lazy = () -> AccountManagementMessageReference3.mmObject();

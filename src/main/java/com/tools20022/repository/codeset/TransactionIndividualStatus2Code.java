@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.PaymentStatusCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -80,7 +82,7 @@ public class TransactionIndividualStatus2Code extends PaymentStatusCode {
 	 */
 	public static final MMCode mmRejected = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rejected";
 			owner_lazy = () -> TransactionIndividualStatus2Code.mmObject();
 		}
@@ -89,12 +91,12 @@ public class TransactionIndividualStatus2Code extends PaymentStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("RJCT");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TransactionIndividualStatus2Code";
 				definition = "Specifies the status of a single payment transaction.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TransactionIndividualStatus2Code.mmRejected);
+				code_lazy = () -> Arrays.asList(TransactionIndividualStatus2Code.mmRejected);
 				trace_lazy = () -> PaymentStatusCode.mmObject();
 			}
 		});

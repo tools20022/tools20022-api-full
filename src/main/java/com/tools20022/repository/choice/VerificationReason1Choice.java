@@ -19,8 +19,10 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ExternalVerificationReason1Code;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -99,7 +101,7 @@ public class VerificationReason1Choice {
 			componentContext_lazy = () -> VerificationReason1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Cd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Reason why the verified identification information is incorrect, as published in an external reason code list.";
 			maxOccurs = 1;
@@ -143,7 +145,7 @@ public class VerificationReason1Choice {
 			componentContext_lazy = () -> VerificationReason1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Reason why the verified identification information is incorrect, in a proprietary form.";
 			maxOccurs = 1;
@@ -155,9 +157,9 @@ public class VerificationReason1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.VerificationReason1Choice.mmCode, com.tools20022.repository.choice.VerificationReason1Choice.mmProprietary);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(VerificationReason1Choice.mmCode, VerificationReason1Choice.mmProprietary);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "VerificationReason1Choice";
 				definition = "Specifies the reason why the verified identification information is incorrect.";
 			}

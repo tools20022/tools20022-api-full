@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionOperationType1Code
+ * TransactionOperationType1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -62,14 +72,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.TransactionOperationTypeCode#mmOther
  * TransactionOperationTypeCode.mmOther}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionOperationType1Code
- * TransactionOperationType1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -114,7 +116,7 @@ public class TransactionOperationTypeCode {
 	 */
 	public static final MMCode mmNewTransaction = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewTransaction";
 			definition = "Transaction is a new transaction.";
 			owner_lazy = () -> TransactionOperationTypeCode.mmObject();
@@ -147,7 +149,7 @@ public class TransactionOperationTypeCode {
 	 */
 	public static final MMCode mmCancellation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cancellation";
 			definition = "Transaction requests the deletion/cancellation of a previously sent transaction.";
 			owner_lazy = () -> TransactionOperationTypeCode.mmObject();
@@ -177,7 +179,7 @@ public class TransactionOperationTypeCode {
 	 */
 	public static final MMCode mmAmendment = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amendment";
 			definition = "Transaction amends a previously sent transaction.";
 			owner_lazy = () -> TransactionOperationTypeCode.mmObject();
@@ -208,7 +210,7 @@ public class TransactionOperationTypeCode {
 	 */
 	public static final MMCode mmCorrection = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Correction";
 			definition = "Transaction corrects errors in a previously sent transaction.";
 			owner_lazy = () -> TransactionOperationTypeCode.mmObject();
@@ -238,7 +240,7 @@ public class TransactionOperationTypeCode {
 	 */
 	public static final MMCode mmEarlyTermination = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EarlyTermination";
 			definition = "Transaction is an early termination.";
 			owner_lazy = () -> TransactionOperationTypeCode.mmObject();
@@ -273,7 +275,7 @@ public class TransactionOperationTypeCode {
 	 */
 	public static final MMCode mmError = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Error";
 			definition = "Cancellation of a wrongly submitted entire report in case the contract never came into existence or was not subject to regulatory reporting requirements but was reported to a regulatory authority by mistake, in which case, it will be identified as ‘error’.";
 			owner_lazy = () -> TransactionOperationTypeCode.mmObject();
@@ -303,7 +305,7 @@ public class TransactionOperationTypeCode {
 	 */
 	public static final MMCode mmModification = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Modification";
 			definition = "Transaction modifies in a previously sent transaction.";
 			owner_lazy = () -> TransactionOperationTypeCode.mmObject();
@@ -333,7 +335,7 @@ public class TransactionOperationTypeCode {
 	 */
 	public static final MMCode mmCompression = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Compression";
 			definition = "Transaction is a compression.";
 			owner_lazy = () -> TransactionOperationTypeCode.mmObject();
@@ -363,7 +365,7 @@ public class TransactionOperationTypeCode {
 	 */
 	public static final MMCode mmValuationUpdate = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValuationUpdate";
 			definition = "Update of a contract valuation or collateral.";
 			owner_lazy = () -> TransactionOperationTypeCode.mmObject();
@@ -396,7 +398,7 @@ public class TransactionOperationTypeCode {
 	 */
 	public static final MMCode mmPositionComponent = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PositionComponent";
 			definition = "Contract to be reported as a new trade and included in a separate position report on the same day.";
 			owner_lazy = () -> TransactionOperationTypeCode.mmObject();
@@ -426,7 +428,7 @@ public class TransactionOperationTypeCode {
 	 */
 	public static final MMCode mmOther = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
 			definition = "Other.";
 			owner_lazy = () -> TransactionOperationTypeCode.mmObject();
@@ -437,16 +439,13 @@ public class TransactionOperationTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TransactionOperationTypeCode";
 				definition = "Specifies the type of process related to a specific transaction.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TransactionOperationTypeCode.mmNewTransaction, com.tools20022.repository.codeset.TransactionOperationTypeCode.mmCancellation,
-						com.tools20022.repository.codeset.TransactionOperationTypeCode.mmAmendment, com.tools20022.repository.codeset.TransactionOperationTypeCode.mmCorrection,
-						com.tools20022.repository.codeset.TransactionOperationTypeCode.mmEarlyTermination, com.tools20022.repository.codeset.TransactionOperationTypeCode.mmError,
-						com.tools20022.repository.codeset.TransactionOperationTypeCode.mmModification, com.tools20022.repository.codeset.TransactionOperationTypeCode.mmCompression,
-						com.tools20022.repository.codeset.TransactionOperationTypeCode.mmValuationUpdate, com.tools20022.repository.codeset.TransactionOperationTypeCode.mmPositionComponent,
-						com.tools20022.repository.codeset.TransactionOperationTypeCode.mmOther);
+				code_lazy = () -> Arrays.asList(TransactionOperationTypeCode.mmNewTransaction, TransactionOperationTypeCode.mmCancellation, TransactionOperationTypeCode.mmAmendment, TransactionOperationTypeCode.mmCorrection,
+						TransactionOperationTypeCode.mmEarlyTermination, TransactionOperationTypeCode.mmError, TransactionOperationTypeCode.mmModification, TransactionOperationTypeCode.mmCompression,
+						TransactionOperationTypeCode.mmValuationUpdate, TransactionOperationTypeCode.mmPositionComponent, TransactionOperationTypeCode.mmOther);
 				derivation_lazy = () -> Arrays.asList(TransactionOperationType1Code.mmObject());
 			}
 		});

@@ -19,7 +19,9 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.BookEntry;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -94,7 +96,7 @@ public class IntraBalancePosting1 {
 			componentContext_lazy = () -> IntraBalancePosting1.mmObject();
 			isDerived = false;
 			xmlTag = "BalFr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BalanceFrom";
 			definition = "Balance from which the amount of money is moved.";
 			maxOccurs = 1;
@@ -135,7 +137,7 @@ public class IntraBalancePosting1 {
 			componentContext_lazy = () -> IntraBalancePosting1.mmObject();
 			isDerived = false;
 			xmlTag = "Mvmnt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Movement";
 			definition = "Identifies the individual transaction.";
 			minOccurs = 1;
@@ -147,10 +149,10 @@ public class IntraBalancePosting1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IntraBalancePosting1.mmBalanceFrom, com.tools20022.repository.msg.IntraBalancePosting1.mmMovement);
+				messageElement_lazy = () -> Arrays.asList(IntraBalancePosting1.mmBalanceFrom, IntraBalancePosting1.mmMovement);
 				trace_lazy = () -> BookEntry.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "IntraBalancePosting1";
 				definition = "Provides the transactions in the report.";
 			}

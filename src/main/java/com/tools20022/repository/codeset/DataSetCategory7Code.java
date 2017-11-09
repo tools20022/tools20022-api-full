@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.DataSetCategoryCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -98,7 +100,7 @@ public class DataSetCategory7Code extends DataSetCategoryCode {
 	 */
 	public static final MMCode mmATMConfiguration = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ATMConfiguration";
 			owner_lazy = () -> DataSetCategory7Code.mmObject();
 		}
@@ -121,7 +123,7 @@ public class DataSetCategory7Code extends DataSetCategoryCode {
 	 */
 	public static final MMCode mmATMProtocol = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ATMProtocol";
 			owner_lazy = () -> DataSetCategory7Code.mmObject();
 		}
@@ -144,7 +146,7 @@ public class DataSetCategory7Code extends DataSetCategoryCode {
 	 */
 	public static final MMCode mmApplicationParameters = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ApplicationParameters";
 			owner_lazy = () -> DataSetCategory7Code.mmObject();
 		}
@@ -167,7 +169,7 @@ public class DataSetCategory7Code extends DataSetCategoryCode {
 	 */
 	public static final MMCode mmCardApplication = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CardApplication";
 			owner_lazy = () -> DataSetCategory7Code.mmObject();
 		}
@@ -190,7 +192,7 @@ public class DataSetCategory7Code extends DataSetCategoryCode {
 	 */
 	public static final MMCode mmCardConfiguration = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CardConfiguration";
 			owner_lazy = () -> DataSetCategory7Code.mmObject();
 		}
@@ -213,7 +215,7 @@ public class DataSetCategory7Code extends DataSetCategoryCode {
 	 */
 	public static final MMCode mmOfflineExchangeRate = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OfflineExchangeRate";
 			owner_lazy = () -> DataSetCategory7Code.mmObject();
 		}
@@ -236,7 +238,7 @@ public class DataSetCategory7Code extends DataSetCategoryCode {
 	 */
 	public static final MMCode mmPreDefinedAmount = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreDefinedAmount";
 			owner_lazy = () -> DataSetCategory7Code.mmObject();
 		}
@@ -259,7 +261,7 @@ public class DataSetCategory7Code extends DataSetCategoryCode {
 	 */
 	public static final MMCode mmLocationConfiguration = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LocationConfiguration";
 			owner_lazy = () -> DataSetCategory7Code.mmObject();
 		}
@@ -282,7 +284,7 @@ public class DataSetCategory7Code extends DataSetCategoryCode {
 	 */
 	public static final MMCode mmMobileOperator = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MobileOperator";
 			owner_lazy = () -> DataSetCategory7Code.mmObject();
 		}
@@ -291,15 +293,12 @@ public class DataSetCategory7Code extends DataSetCategoryCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DataSetCategory7Code";
 				definition = "Type of an ATM configuration.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DataSetCategory7Code.mmATMConfiguration, com.tools20022.repository.codeset.DataSetCategory7Code.mmATMProtocol,
-						com.tools20022.repository.codeset.DataSetCategory7Code.mmApplicationParameters, com.tools20022.repository.codeset.DataSetCategory7Code.mmCardApplication,
-						com.tools20022.repository.codeset.DataSetCategory7Code.mmCardConfiguration, com.tools20022.repository.codeset.DataSetCategory7Code.mmOfflineExchangeRate,
-						com.tools20022.repository.codeset.DataSetCategory7Code.mmPreDefinedAmount, com.tools20022.repository.codeset.DataSetCategory7Code.mmLocationConfiguration,
-						com.tools20022.repository.codeset.DataSetCategory7Code.mmMobileOperator);
+				code_lazy = () -> Arrays.asList(DataSetCategory7Code.mmATMConfiguration, DataSetCategory7Code.mmATMProtocol, DataSetCategory7Code.mmApplicationParameters, DataSetCategory7Code.mmCardApplication,
+						DataSetCategory7Code.mmCardConfiguration, DataSetCategory7Code.mmOfflineExchangeRate, DataSetCategory7Code.mmPreDefinedAmount, DataSetCategory7Code.mmLocationConfiguration, DataSetCategory7Code.mmMobileOperator);
 				trace_lazy = () -> DataSetCategoryCode.mmObject();
 			}
 		});

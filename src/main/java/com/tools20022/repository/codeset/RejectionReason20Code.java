@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.RejectionReasonCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -93,7 +95,7 @@ public class RejectionReason20Code extends RejectionReasonCode {
 	 */
 	public static final MMCode mmFailedValidation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FailedValidation";
 			owner_lazy = () -> RejectionReason20Code.mmObject();
 		}
@@ -116,7 +118,7 @@ public class RejectionReason20Code extends RejectionReasonCode {
 	 */
 	public static final MMCode mmNotIdentifiedCashAccount = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotIdentifiedCashAccount";
 			owner_lazy = () -> RejectionReason20Code.mmObject();
 		}
@@ -139,7 +141,7 @@ public class RejectionReason20Code extends RejectionReasonCode {
 	 */
 	public static final MMCode mmNotIdentifiedCorrespondentBank = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotIdentifiedCorrespondentBank";
 			owner_lazy = () -> RejectionReason20Code.mmObject();
 		}
@@ -162,7 +164,7 @@ public class RejectionReason20Code extends RejectionReasonCode {
 	 */
 	public static final MMCode mmInvalidStandingInstructionType = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvalidStandingInstructionType";
 			owner_lazy = () -> RejectionReason20Code.mmObject();
 		}
@@ -185,7 +187,7 @@ public class RejectionReason20Code extends RejectionReasonCode {
 	 */
 	public static final MMCode mmNoHolding = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoHolding";
 			owner_lazy = () -> RejectionReason20Code.mmObject();
 		}
@@ -194,14 +196,13 @@ public class RejectionReason20Code extends RejectionReasonCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("FAIL");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RejectionReason20Code";
 				definition = "Specifies the reason of a rejection of the standing instruction request.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RejectionReason20Code.mmFailedValidation, com.tools20022.repository.codeset.RejectionReason20Code.mmNotIdentifiedCashAccount,
-						com.tools20022.repository.codeset.RejectionReason20Code.mmNotIdentifiedCorrespondentBank, com.tools20022.repository.codeset.RejectionReason20Code.mmInvalidStandingInstructionType,
-						com.tools20022.repository.codeset.RejectionReason20Code.mmNoHolding);
+				code_lazy = () -> Arrays.asList(RejectionReason20Code.mmFailedValidation, RejectionReason20Code.mmNotIdentifiedCashAccount, RejectionReason20Code.mmNotIdentifiedCorrespondentBank,
+						RejectionReason20Code.mmInvalidStandingInstructionType, RejectionReason20Code.mmNoHolding);
 				trace_lazy = () -> RejectionReasonCode.mmObject();
 			}
 		});

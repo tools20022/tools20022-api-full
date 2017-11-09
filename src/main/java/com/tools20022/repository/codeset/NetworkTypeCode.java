@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.NetworkType1Code
+ * NetworkType1Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.NetworkType2Code
+ * NetworkType2Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -41,15 +52,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * NetworkTypeCode.mmSock4}</li>
  * <li>{@linkplain com.tools20022.repository.codeset.NetworkTypeCode#mmSock5
  * NetworkTypeCode.mmSock5}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.NetworkType1Code
- * NetworkType1Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.NetworkType2Code
- * NetworkType2Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -93,7 +95,7 @@ public class NetworkTypeCode {
 	 */
 	public static final MMCode mmInternetProtocol = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InternetProtocol";
 			definition = "Protocol of an IP network.";
 			owner_lazy = () -> NetworkTypeCode.mmObject();
@@ -123,7 +125,7 @@ public class NetworkTypeCode {
 	 */
 	public static final MMCode mmPublicTelephone = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PublicTelephone";
 			definition = "Protocol of a Public Switched Telephone Network (PSTN).";
 			owner_lazy = () -> NetworkTypeCode.mmObject();
@@ -153,7 +155,7 @@ public class NetworkTypeCode {
 	 */
 	public static final MMCode mmHTTP = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HTTP";
 			definition = "HTTP proxy.";
 			owner_lazy = () -> NetworkTypeCode.mmObject();
@@ -183,7 +185,7 @@ public class NetworkTypeCode {
 	 */
 	public static final MMCode mmSock4 = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Sock4";
 			definition = "Sock4 proxy.";
 			owner_lazy = () -> NetworkTypeCode.mmObject();
@@ -213,7 +215,7 @@ public class NetworkTypeCode {
 	 */
 	public static final MMCode mmSock5 = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Sock5";
 			definition = "Sock5 proxy.";
 			owner_lazy = () -> NetworkTypeCode.mmObject();
@@ -224,12 +226,11 @@ public class NetworkTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "NetworkTypeCode";
 				definition = "Type of communication network.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.NetworkTypeCode.mmInternetProtocol, com.tools20022.repository.codeset.NetworkTypeCode.mmPublicTelephone,
-						com.tools20022.repository.codeset.NetworkTypeCode.mmHTTP, com.tools20022.repository.codeset.NetworkTypeCode.mmSock4, com.tools20022.repository.codeset.NetworkTypeCode.mmSock5);
+				code_lazy = () -> Arrays.asList(NetworkTypeCode.mmInternetProtocol, NetworkTypeCode.mmPublicTelephone, NetworkTypeCode.mmHTTP, NetworkTypeCode.mmSock4, NetworkTypeCode.mmSock5);
 				derivation_lazy = () -> Arrays.asList(NetworkType1Code.mmObject(), NetworkType2Code.mmObject());
 			}
 		});

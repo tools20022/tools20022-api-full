@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.RelativeSizeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -87,7 +89,7 @@ public class RelativeSize1Code extends RelativeSizeCode {
 	 */
 	public static final MMCode mmSmall = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Small";
 			owner_lazy = () -> RelativeSize1Code.mmObject();
 		}
@@ -110,7 +112,7 @@ public class RelativeSize1Code extends RelativeSizeCode {
 	 */
 	public static final MMCode mmMedium = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Medium";
 			owner_lazy = () -> RelativeSize1Code.mmObject();
 		}
@@ -133,7 +135,7 @@ public class RelativeSize1Code extends RelativeSizeCode {
 	 */
 	public static final MMCode mmLarge = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Large";
 			owner_lazy = () -> RelativeSize1Code.mmObject();
 		}
@@ -156,7 +158,7 @@ public class RelativeSize1Code extends RelativeSizeCode {
 	 */
 	public static final MMCode mmUndisclosed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Undisclosed";
 			owner_lazy = () -> RelativeSize1Code.mmObject();
 		}
@@ -165,13 +167,12 @@ public class RelativeSize1Code extends RelativeSizeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("SMAL");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RelativeSize1Code";
 				definition = "A type of quantity of financial instrument expressed in a relative size.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RelativeSize1Code.mmSmall, com.tools20022.repository.codeset.RelativeSize1Code.mmMedium, com.tools20022.repository.codeset.RelativeSize1Code.mmLarge,
-						com.tools20022.repository.codeset.RelativeSize1Code.mmUndisclosed);
+				code_lazy = () -> Arrays.asList(RelativeSize1Code.mmSmall, RelativeSize1Code.mmMedium, RelativeSize1Code.mmLarge, RelativeSize1Code.mmUndisclosed);
 				trace_lazy = () -> RelativeSizeCode.mmObject();
 			}
 		});

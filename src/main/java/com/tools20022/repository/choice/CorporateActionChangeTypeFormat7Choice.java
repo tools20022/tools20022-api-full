@@ -20,8 +20,10 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CorporateActionChangeType2Code;
 import com.tools20022.repository.entity.SecuritiesModification;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification47;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -103,11 +105,11 @@ public class CorporateActionChangeTypeFormat7Choice {
 	 */
 	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesModification.mmChangeType;
+			businessElementTrace_lazy = () -> SecuritiesModification.mmChangeType;
 			componentContext_lazy = () -> CorporateActionChangeTypeFormat7Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Cd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Standard code to specify the type of changes.";
 			maxOccurs = 1;
@@ -150,11 +152,11 @@ public class CorporateActionChangeTypeFormat7Choice {
 	 */
 	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesModification.mmChangeType;
+			businessElementTrace_lazy = () -> SecuritiesModification.mmChangeType;
 			componentContext_lazy = () -> CorporateActionChangeTypeFormat7Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Proprietary identification of the type of changes.";
 			maxOccurs = 1;
@@ -167,10 +169,10 @@ public class CorporateActionChangeTypeFormat7Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CorporateActionChangeTypeFormat7Choice.mmCode, com.tools20022.repository.choice.CorporateActionChangeTypeFormat7Choice.mmProprietary);
+				messageElement_lazy = () -> Arrays.asList(CorporateActionChangeTypeFormat7Choice.mmCode, CorporateActionChangeTypeFormat7Choice.mmProprietary);
 				trace_lazy = () -> SecuritiesModification.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionChangeTypeFormat7Choice";
 				definition = "Choice between a standard code or a proprietary code to specify a type of change.";
 			}

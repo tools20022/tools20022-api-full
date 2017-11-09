@@ -19,7 +19,11 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.Adjustment;
+import com.tools20022.repository.entity.Charges;
+import com.tools20022.repository.entity.Discount;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -95,11 +99,11 @@ public class DiscountOrChargeType1Choice {
 	 */
 	public static final MMMessageAssociationEnd mmChargeType = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Charges.mmChargeType;
+			businessElementTrace_lazy = () -> Charges.mmChargeType;
 			componentContext_lazy = () -> DiscountOrChargeType1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "ChrgTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChargeType";
 			definition = "Type of charge.";
 			maxOccurs = 1;
@@ -143,11 +147,11 @@ public class DiscountOrChargeType1Choice {
 	 */
 	public static final MMMessageAssociationEnd mmDiscountType = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Discount.mmDiscountType;
+			businessElementTrace_lazy = () -> Discount.mmDiscountType;
 			componentContext_lazy = () -> DiscountOrChargeType1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "DscntTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DiscountType";
 			definition = "Type of discount.";
 			maxOccurs = 1;
@@ -160,10 +164,10 @@ public class DiscountOrChargeType1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.DiscountOrChargeType1Choice.mmChargeType, com.tools20022.repository.choice.DiscountOrChargeType1Choice.mmDiscountType);
+				messageElement_lazy = () -> Arrays.asList(DiscountOrChargeType1Choice.mmChargeType, DiscountOrChargeType1Choice.mmDiscountType);
 				trace_lazy = () -> Adjustment.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DiscountOrChargeType1Choice";
 				definition = "Choice between a type of discount or a type of charge.";
 			}

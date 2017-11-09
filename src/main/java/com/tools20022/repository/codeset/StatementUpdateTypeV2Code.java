@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.StatementUpdateType1Code
+ * StatementUpdateType1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -35,13 +44,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.StatementUpdateTypeV2Code#mmDelta
  * StatementUpdateTypeV2Code.mmDelta}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.StatementUpdateType1Code
- * StatementUpdateType1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -93,7 +95,7 @@ public class StatementUpdateTypeV2Code {
 	 */
 	public static final MMCode mmComplete = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Complete";
 			definition = "Statement is complete.";
 			owner_lazy = () -> StatementUpdateTypeV2Code.mmObject();
@@ -123,7 +125,7 @@ public class StatementUpdateTypeV2Code {
 	 */
 	public static final MMCode mmDelta = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Delta";
 			definition = "Statement contains changes only.";
 			owner_lazy = () -> StatementUpdateTypeV2Code.mmObject();
@@ -134,12 +136,12 @@ public class StatementUpdateTypeV2Code {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("COMP");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "StatementUpdateTypeV2Code";
 				definition = "Specifies the nature of a statement update, eg, it is a complete statement.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.StatementUpdateTypeV2Code.mmComplete, com.tools20022.repository.codeset.StatementUpdateTypeV2Code.mmDelta);
+				code_lazy = () -> Arrays.asList(StatementUpdateTypeV2Code.mmComplete, StatementUpdateTypeV2Code.mmDelta);
 				derivation_lazy = () -> Arrays.asList(StatementUpdateType1Code.mmObject());
 			}
 		});

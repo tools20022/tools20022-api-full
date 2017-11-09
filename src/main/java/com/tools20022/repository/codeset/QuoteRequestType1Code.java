@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.QuoteRequestTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -86,7 +88,7 @@ public class QuoteRequestType1Code extends QuoteRequestTypeCode {
 	 */
 	public static final MMCode mmManual = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Manual";
 			owner_lazy = () -> QuoteRequestType1Code.mmObject();
 		}
@@ -109,7 +111,7 @@ public class QuoteRequestType1Code extends QuoteRequestTypeCode {
 	 */
 	public static final MMCode mmAutomatic = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Automatic";
 			owner_lazy = () -> QuoteRequestType1Code.mmObject();
 		}
@@ -118,12 +120,12 @@ public class QuoteRequestType1Code extends QuoteRequestTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("MANU");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "QuoteRequestType1Code";
 				definition = "Indicates the type of quote request (e.g. manual vs. automatic) being generated.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.QuoteRequestType1Code.mmManual, com.tools20022.repository.codeset.QuoteRequestType1Code.mmAutomatic);
+				code_lazy = () -> Arrays.asList(QuoteRequestType1Code.mmManual, QuoteRequestType1Code.mmAutomatic);
 				trace_lazy = () -> QuoteRequestTypeCode.mmObject();
 			}
 		});

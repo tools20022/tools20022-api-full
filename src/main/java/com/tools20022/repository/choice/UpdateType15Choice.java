@@ -19,7 +19,9 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.StatementUpdateType1Code;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification30;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -102,10 +104,10 @@ public class UpdateType15Choice {
 			componentContext_lazy = () -> UpdateType15Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Cd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Indicates whether the report is complete or contains changes only.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.UpdateType2Choice.mmCode;
+			previousVersion_lazy = () -> UpdateType2Choice.mmCode;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> StatementUpdateType1Code.mmObject();
@@ -151,10 +153,10 @@ public class UpdateType15Choice {
 			componentContext_lazy = () -> UpdateType15Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Indicates whether the report is complete or contains changes only.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.UpdateType2Choice.mmProprietary;
+			previousVersion_lazy = () -> UpdateType2Choice.mmProprietary;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification30.mmObject();
@@ -164,9 +166,9 @@ public class UpdateType15Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.UpdateType15Choice.mmCode, com.tools20022.repository.choice.UpdateType15Choice.mmProprietary);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(UpdateType15Choice.mmCode, UpdateType15Choice.mmProprietary);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "UpdateType15Choice";
 				definition = "Choice of format for the update information.";
 				previousVersion_lazy = () -> UpdateType2Choice.mmObject();

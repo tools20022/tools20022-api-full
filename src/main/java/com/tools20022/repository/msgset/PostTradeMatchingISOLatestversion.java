@@ -18,11 +18,13 @@
 package com.tools20022.repository.msgset;
 
 import com.tools20022.metamodel.MMMessageSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.semt.SecuritiesEndOfProcessReportV01;
 import com.tools20022.repository.area.setr.SecuritiesTradeConfirmationCancellationV01;
 import com.tools20022.repository.area.setr.SecuritiesTradeConfirmationResponseV01;
 import com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV02;
 import com.tools20022.repository.area.setr.SecuritiesTradeConfirmationV03;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -79,8 +81,8 @@ public class PostTradeMatchingISOLatestversion {
 	final static public MMMessageSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageSet() {
 			{
-				businessProcessCatalogue_lazy = () -> com.tools20022.repository.GeneratedRepository.mmcatalogue;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				businessProcessCatalogue_lazy = () -> GeneratedRepository.mmcatalogue;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Post Trade Matching - ISO - Latest version";
 				definition = "Set of messages exchanged between executing broker, Central Matching Utility (CMU), investment manager and trustee, to submit trade confirmation details for matching or affirmation. The messages support the cancellation of previously sent trade confirmation messagse and the advice of the status of the confirmation. ";
 				messageDefinition_lazy = () -> Arrays.asList(SecuritiesTradeConfirmationCancellationV01.mmObject(), SecuritiesTradeConfirmationResponseV01.mmObject(), SecuritiesEndOfProcessReportV01.mmObject(),

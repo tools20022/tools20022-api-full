@@ -20,8 +20,10 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.AdditionalBusinessProcess1Code;
 import com.tools20022.repository.entity.CorporateActionEvent;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification20;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -122,14 +124,14 @@ public class AdditionalBusinessProcessFormat1Choice {
 	 */
 	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmAdditionalBusinessProcess;
+			businessElementTrace_lazy = () -> CorporateActionEvent.mmAdditionalBusinessProcess;
 			componentContext_lazy = () -> AdditionalBusinessProcessFormat1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Cd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Standard code to specify the additional business process linked to a corporate action event.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AdditionalBusinessProcessFormat9Choice.mmCode);
+			nextVersions_lazy = () -> Arrays.asList(AdditionalBusinessProcessFormat9Choice.mmCode);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AdditionalBusinessProcess1Code.mmObject();
@@ -181,14 +183,14 @@ public class AdditionalBusinessProcessFormat1Choice {
 	 */
 	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmAdditionalBusinessProcess;
+			businessElementTrace_lazy = () -> CorporateActionEvent.mmAdditionalBusinessProcess;
 			componentContext_lazy = () -> AdditionalBusinessProcessFormat1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Proprietary identification of the additional business process linked to a corporate action event.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AdditionalBusinessProcessFormat9Choice.mmProprietary);
+			nextVersions_lazy = () -> Arrays.asList(AdditionalBusinessProcessFormat9Choice.mmProprietary);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -199,10 +201,10 @@ public class AdditionalBusinessProcessFormat1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AdditionalBusinessProcessFormat1Choice.mmCode, com.tools20022.repository.choice.AdditionalBusinessProcessFormat1Choice.mmProprietary);
+				messageElement_lazy = () -> Arrays.asList(AdditionalBusinessProcessFormat1Choice.mmCode, AdditionalBusinessProcessFormat1Choice.mmProprietary);
 				trace_lazy = () -> CorporateActionEvent.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AdditionalBusinessProcessFormat1Choice";
 				definition = "Choice between a standard code or proprietary code to specify the type of the additional business process.";
 				nextVersions_lazy = () -> Arrays.asList(AdditionalBusinessProcessFormat9Choice.mmObject());

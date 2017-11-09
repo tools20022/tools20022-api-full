@@ -18,7 +18,9 @@
 package com.tools20022.repository.msgset;
 
 import com.tools20022.metamodel.MMMessageSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.trea.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -96,8 +98,8 @@ public class ForexNotificationsISOArchive {
 	final static public MMMessageSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageSet() {
 			{
-				businessProcessCatalogue_lazy = () -> com.tools20022.repository.GeneratedRepository.mmcatalogue;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				businessProcessCatalogue_lazy = () -> GeneratedRepository.mmcatalogue;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Forex Notifications - ISO - Archive";
 				definition = "Set of messages used to notify Non Deliverable Forward and Foreign Exchange Option operations (such as creation, valuation, amendment, cancellation) to and from a central settlement system.\r\n";
 				messageDefinition_lazy = () -> Arrays.asList(StatusNotificationV02.mmObject(), WithdrawalNotificationV01.mmObject(), CreateNonDeliverableForwardOpeningV02.mmObject(), AmendNonDeliverableForwardOpeningV02.mmObject(),

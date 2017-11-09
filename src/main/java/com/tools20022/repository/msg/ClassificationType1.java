@@ -19,9 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ExternalFinancialInstrumentProductType1Code;
 import com.tools20022.repository.datatype.CFIIdentifier;
 import com.tools20022.repository.entity.AssetClassification;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -107,11 +109,11 @@ public class ClassificationType1 {
 	 */
 	public static final MMMessageAttribute mmClassificationFinancialInstrument = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AssetClassification.mmClassificationType;
+			businessElementTrace_lazy = () -> AssetClassification.mmClassificationType;
 			componentContext_lazy = () -> ClassificationType1.mmObject();
 			isDerived = false;
 			xmlTag = "ClssfctnFinInstrm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClassificationFinancialInstrument";
 			definition = "Classification type of the financial instrument, as per the ISO Classification of Financial Instrument (CFI) codification, for example, common share with voting rights, fully paid, or registered.";
 			maxOccurs = 1;
@@ -158,11 +160,11 @@ public class ClassificationType1 {
 	 */
 	public static final MMMessageAttribute mmFinancialInstrumentProductTypeCode = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AssetClassification.mmProductType;
+			businessElementTrace_lazy = () -> AssetClassification.mmProductType;
 			componentContext_lazy = () -> ClassificationType1.mmObject();
 			isDerived = false;
 			xmlTag = "FinInstrmPdctTpCd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentProductTypeCode";
 			definition = "Name of the identification scheme, in a coded form as published in an external list.";
 			maxOccurs = 1;
@@ -206,11 +208,11 @@ public class ClassificationType1 {
 	 */
 	public static final MMMessageAttribute mmAlternateClassification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AssetClassification.mmClassificationType;
+			businessElementTrace_lazy = () -> AssetClassification.mmClassificationType;
 			componentContext_lazy = () -> ClassificationType1.mmObject();
 			isDerived = false;
 			xmlTag = "AltrnClssfctn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AlternateClassification";
 			definition = "Proprietary classification of financial instrument.";
 			minOccurs = 0;
@@ -221,11 +223,10 @@ public class ClassificationType1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ClassificationType1.mmClassificationFinancialInstrument, com.tools20022.repository.msg.ClassificationType1.mmFinancialInstrumentProductTypeCode,
-						com.tools20022.repository.msg.ClassificationType1.mmAlternateClassification);
+				messageElement_lazy = () -> Arrays.asList(ClassificationType1.mmClassificationFinancialInstrument, ClassificationType1.mmFinancialInstrumentProductTypeCode, ClassificationType1.mmAlternateClassification);
 				trace_lazy = () -> AssetClassification.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ClassificationType1";
 				definition = "Choice of format for the classification.";
 			}

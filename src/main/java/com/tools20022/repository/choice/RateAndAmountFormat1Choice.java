@@ -19,8 +19,10 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
 import com.tools20022.repository.datatype.PercentageRate;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -96,7 +98,7 @@ public class RateAndAmountFormat1Choice {
 			componentContext_lazy = () -> RateAndAmountFormat1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Rate";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rate";
 			definition = "The value is expressed as a rate.";
 			maxOccurs = 1;
@@ -138,7 +140,7 @@ public class RateAndAmountFormat1Choice {
 			componentContext_lazy = () -> RateAndAmountFormat1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Amt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "The value is expressed as a currency and amount.";
 			maxOccurs = 1;
@@ -180,7 +182,7 @@ public class RateAndAmountFormat1Choice {
 			componentContext_lazy = () -> RateAndAmountFormat1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "NotSpcfdRate";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotSpecifiedRate";
 			definition = "No value is specified.";
 			maxOccurs = 1;
@@ -192,10 +194,9 @@ public class RateAndAmountFormat1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.RateAndAmountFormat1Choice.mmRate, com.tools20022.repository.choice.RateAndAmountFormat1Choice.mmAmount,
-						com.tools20022.repository.choice.RateAndAmountFormat1Choice.mmNotSpecifiedRate);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(RateAndAmountFormat1Choice.mmRate, RateAndAmountFormat1Choice.mmAmount, RateAndAmountFormat1Choice.mmNotSpecifiedRate);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RateAndAmountFormat1Choice";
 				definition = "Choice of format between rate, amount and not specified.";
 			}

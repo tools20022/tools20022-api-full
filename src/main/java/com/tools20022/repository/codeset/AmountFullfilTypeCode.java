@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -87,7 +89,7 @@ public class AmountFullfilTypeCode {
 	 */
 	public static final MMCode mmCompletely = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Completely";
 			definition = "Full redemption.";
 			owner_lazy = () -> AmountFullfilTypeCode.mmObject();
@@ -117,7 +119,7 @@ public class AmountFullfilTypeCode {
 	 */
 	public static final MMCode mmPartial = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Partial";
 			definition = "Partial redemption.";
 			owner_lazy = () -> AmountFullfilTypeCode.mmObject();
@@ -147,7 +149,7 @@ public class AmountFullfilTypeCode {
 	 */
 	public static final MMCode mmTotalOrPartial = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TotalOrPartial";
 			definition = "Full or partial redemption.";
 			owner_lazy = () -> AmountFullfilTypeCode.mmObject();
@@ -158,13 +160,12 @@ public class AmountFullfilTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("COMP");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AmountFullfilTypeCode";
 				definition = "Specifies if the redemption is partly or fully.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AmountFullfilTypeCode.mmCompletely, com.tools20022.repository.codeset.AmountFullfilTypeCode.mmPartial,
-						com.tools20022.repository.codeset.AmountFullfilTypeCode.mmTotalOrPartial);
+				code_lazy = () -> Arrays.asList(AmountFullfilTypeCode.mmCompletely, AmountFullfilTypeCode.mmPartial, AmountFullfilTypeCode.mmTotalOrPartial);
 			}
 		});
 		return mmObject_lazy.get();

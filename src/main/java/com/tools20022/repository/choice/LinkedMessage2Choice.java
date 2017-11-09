@@ -19,6 +19,8 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.AdditionalReference3;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -114,11 +116,11 @@ public class LinkedMessage2Choice {
 			componentContext_lazy = () -> LinkedMessage2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "PrvsRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousReference";
 			definition = "Reference to a linked message that was previously sent.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.LinkedMessage3Choice.mmPreviousReference);
-			previousVersion_lazy = () -> com.tools20022.repository.choice.LinkedMessage1Choice.mmPreviousReference;
+			nextVersions_lazy = () -> Arrays.asList(LinkedMessage3Choice.mmPreviousReference);
+			previousVersion_lazy = () -> LinkedMessage1Choice.mmPreviousReference;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -173,11 +175,11 @@ public class LinkedMessage2Choice {
 			componentContext_lazy = () -> LinkedMessage2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "OthrRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherReference";
 			definition = "Reference to a linked message sent in a proprietary way or reference of a system.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.LinkedMessage3Choice.mmOtherReference);
-			previousVersion_lazy = () -> com.tools20022.repository.choice.LinkedMessage1Choice.mmOtherReference;
+			nextVersions_lazy = () -> Arrays.asList(LinkedMessage3Choice.mmOtherReference);
+			previousVersion_lazy = () -> LinkedMessage1Choice.mmOtherReference;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -188,9 +190,9 @@ public class LinkedMessage2Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.LinkedMessage2Choice.mmPreviousReference, com.tools20022.repository.choice.LinkedMessage2Choice.mmOtherReference);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(LinkedMessage2Choice.mmPreviousReference, LinkedMessage2Choice.mmOtherReference);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "LinkedMessage2Choice";
 				definition = "Reference to a message.";
 				nextVersions_lazy = () -> Arrays.asList(LinkedMessage3Choice.mmObject());

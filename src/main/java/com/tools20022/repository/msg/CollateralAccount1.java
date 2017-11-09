@@ -19,10 +19,13 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.CollateralAccountIdentificationType1Choice;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.Max70Text;
 import com.tools20022.repository.entity.Account;
+import com.tools20022.repository.entity.AccountIdentification;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -117,14 +120,14 @@ public class CollateralAccount1 {
 	 */
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.mmIdentification;
+			businessElementTrace_lazy = () -> Account.mmIdentification;
 			componentContext_lazy = () -> CollateralAccount1.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Unique identification of the Collateral Account.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CollateralAccount2.mmIdentification);
+			nextVersions_lazy = () -> Arrays.asList(CollateralAccount2.mmIdentification);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -173,14 +176,14 @@ public class CollateralAccount1 {
 	 */
 	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.mmCollateralAccountType;
+			businessElementTrace_lazy = () -> Account.mmCollateralAccountType;
 			componentContext_lazy = () -> CollateralAccount1.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Indicates the Type of Collateral Account.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CollateralAccount2.mmType);
+			nextVersions_lazy = () -> Arrays.asList(CollateralAccount2.mmType);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> CollateralAccountIdentificationType1Choice.mmObject();
@@ -228,14 +231,14 @@ public class CollateralAccount1 {
 	 */
 	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AccountIdentification.mmName;
+			businessElementTrace_lazy = () -> AccountIdentification.mmName;
 			componentContext_lazy = () -> CollateralAccount1.mmObject();
 			isDerived = false;
 			xmlTag = "Nm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Name";
 			definition = "Description of the account.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CollateralAccount2.mmName);
+			nextVersions_lazy = () -> Arrays.asList(CollateralAccount2.mmName);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max70Text.mmObject();
@@ -245,10 +248,10 @@ public class CollateralAccount1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CollateralAccount1.mmIdentification, com.tools20022.repository.msg.CollateralAccount1.mmType, com.tools20022.repository.msg.CollateralAccount1.mmName);
+				messageElement_lazy = () -> Arrays.asList(CollateralAccount1.mmIdentification, CollateralAccount1.mmType, CollateralAccount1.mmName);
 				trace_lazy = () -> Account.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CollateralAccount1";
 				definition = "The Collateral Account provides additional information on the Collateral Account of the Party delivering the collateral.";
 				nextVersions_lazy = () -> Arrays.asList(CollateralAccount2.mmObject());

@@ -19,7 +19,9 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max16Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -98,7 +100,7 @@ public class GeographicCoordinates1 {
 			componentContext_lazy = () -> GeographicCoordinates1.mmObject();
 			isDerived = false;
 			xmlTag = "Lat";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Latitude";
 			definition = "Latitude measured in degrees, minutes and seconds, following by 'N' for the north and 'S' for the south of the equator (for example 48°51'29\" N for the Eiffel Tower latitude).";
 			maxOccurs = 1;
@@ -145,7 +147,7 @@ public class GeographicCoordinates1 {
 			componentContext_lazy = () -> GeographicCoordinates1.mmObject();
 			isDerived = false;
 			xmlTag = "Long";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Longitude";
 			definition = "Angular measurement of the distance of a location on the earth east or west of the Greenwich observatory.\r\nThe longitude is measured in degrees, minutes and seconds, following by 'E' for the east and 'W' for the west (for example 2°17'40\" E for the Eiffel Tower longitude).";
 			maxOccurs = 1;
@@ -157,9 +159,9 @@ public class GeographicCoordinates1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GeographicCoordinates1.mmLatitude, com.tools20022.repository.msg.GeographicCoordinates1.mmLongitude);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(GeographicCoordinates1.mmLatitude, GeographicCoordinates1.mmLongitude);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "GeographicCoordinates1";
 				definition = "Location on the Earth specified by two numbers representing vertical and horizontal position.";
 			}

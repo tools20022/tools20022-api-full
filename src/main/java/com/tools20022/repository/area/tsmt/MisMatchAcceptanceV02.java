@@ -20,6 +20,7 @@ package com.tools20022.repository.area.tsmt;
 import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.TradeServicesManagementLatestVersion;
 import com.tools20022.repository.msg.MessageIdentification1;
 import com.tools20022.repository.msg.SimpleIdentificationInformation;
@@ -47,6 +48,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code tsmt.020.001.02}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.TradeServicesManagementLatestVersion
@@ -84,9 +88,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * MisMatchAcceptanceV02.mmDataSetMatchReportReference}</li>
  * </ul>
  * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code tsmt.020.001.02}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -129,7 +130,7 @@ public class MisMatchAcceptanceV02 {
 	public static final MMMessageBuildingBlock mmAcceptanceIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "AccptncId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcceptanceIdentification";
 			definition = "Identifies the acceptance message.";
 			maxOccurs = 1;
@@ -168,7 +169,7 @@ public class MisMatchAcceptanceV02 {
 	public static final MMMessageBuildingBlock mmTransactionIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "TxId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionIdentification";
 			definition = "Unique identification assigned by the matching application to the transaction.\nThis identification is to be used in any communication between the parties.";
 			maxOccurs = 1;
@@ -204,7 +205,7 @@ public class MisMatchAcceptanceV02 {
 	public static final MMMessageBuildingBlock mmSubmitterTransactionReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SubmitrTxRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubmitterTransactionReference";
 			definition = "Reference to the transaction for the requesting financial institution.";
 			maxOccurs = 1;
@@ -242,7 +243,7 @@ public class MisMatchAcceptanceV02 {
 	public static final MMMessageBuildingBlock mmDataSetMatchReportReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "DataSetMtchRptRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DataSetMatchReportReference";
 			definition = "Reference to the identification of the report that contained the difference. ";
 			maxOccurs = 1;
@@ -254,15 +255,15 @@ public class MisMatchAcceptanceV02 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MisMatchAcceptanceV02";
 				definition = "Scope\r\nThe MisMatchAcceptance message is sent by the party requested to accept or reject data set mis-matches to the matching application.\r\nThis message is used to accept mis-matches between data sets and the related baseline.\r\nUsage\r\nThe MisMatchAcceptance message can be sent by the party requested to accept or reject data set mis-matches to inform that it accepts the data sets.\r\nThe message can be sent in response to a DataSetMatchReport message conveying mis-matches.\r\nThe information about the acceptance of the mis-matched data sets will be forwarded by the matching application to the submitter of the data sets by a MisMatchAcceptanceNotification message.\r\nThe rejection of mis-matched data sets can be achieved by sending a MisMatchRejection message.";
 				messageSet_lazy = () -> Arrays.asList(TradeServicesManagementISOPreviousversion.mmObject(), TradeServicesManagementISOLatestversion.mmObject());
 				rootElement = "Document";
 				xmlTag = "MisMtchAccptnc";
 				businessArea_lazy = () -> TradeServicesManagementLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.MisMatchAcceptanceV02.mmAcceptanceIdentification, com.tools20022.repository.area.tsmt.MisMatchAcceptanceV02.mmTransactionIdentification,
-						com.tools20022.repository.area.tsmt.MisMatchAcceptanceV02.mmSubmitterTransactionReference, com.tools20022.repository.area.tsmt.MisMatchAcceptanceV02.mmDataSetMatchReportReference);
+				messageBuildingBlock_lazy = () -> Arrays.asList(MisMatchAcceptanceV02.mmAcceptanceIdentification, MisMatchAcceptanceV02.mmTransactionIdentification, MisMatchAcceptanceV02.mmSubmitterTransactionReference,
+						MisMatchAcceptanceV02.mmDataSetMatchReportReference);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "tsmt";

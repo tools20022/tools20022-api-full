@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.CalculationType1Code
+ * CalculationType1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -287,13 +296,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * CalculationTypeCode.mmToWorstConvention}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.CalculationType1Code
- * CalculationType1Code}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -346,7 +348,7 @@ public class CalculationTypeCode {
 	 */
 	public static final MMCode mmConvexity = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Convexity";
 			definition = "Measure of change in duration (linear measure of changes in bond price in reaction to interest rate changes) of a bond as interest rate changes over time.";
 			owner_lazy = () -> CalculationTypeCode.mmObject();
@@ -381,7 +383,7 @@ public class CalculationTypeCode {
 	 */
 	public static final MMCode mmVolatility = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Volatility";
 			definition = "A statistical measure of the dispersion of returns for a given security or market index. Volatility can either be measured by using the standard deviation or variance between returns from that same security or market index.";
 			owner_lazy = () -> CalculationTypeCode.mmObject();
@@ -414,7 +416,7 @@ public class CalculationTypeCode {
 	 */
 	public static final MMCode mmAlpha = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Alpha";
 			definition = "Excess return on an investment attributed to an investment managers performance.";
 			owner_lazy = () -> CalculationTypeCode.mmObject();
@@ -447,7 +449,7 @@ public class CalculationTypeCode {
 	 */
 	public static final MMCode mmBeta = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Beta";
 			definition = "Volatility of an instrument relative to a particular market set of instruments.";
 			owner_lazy = () -> CalculationTypeCode.mmObject();
@@ -480,7 +482,7 @@ public class CalculationTypeCode {
 	 */
 	public static final MMCode mmDelta = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Delta";
 			definition = "First order (linear) sensitivity to changes in an underlying security price.";
 			owner_lazy = () -> CalculationTypeCode.mmObject();
@@ -513,7 +515,7 @@ public class CalculationTypeCode {
 	 */
 	public static final MMCode mmGamma = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Gamma";
 			definition = "Second order (quadratic) sensitivity to changes in an underlying security price.";
 			owner_lazy = () -> CalculationTypeCode.mmObject();
@@ -544,7 +546,7 @@ public class CalculationTypeCode {
 	 */
 	public static final MMCode mmSpeed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Speed";
 			definition = "Third order sensitivity to changes in an underlying security price.";
 			owner_lazy = () -> CalculationTypeCode.mmObject();
@@ -577,7 +579,7 @@ public class CalculationTypeCode {
 	 */
 	public static final MMCode mmRho = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Rho";
 			definition = "First order (linear) sensitivity to changes in the risk free rate of return.";
 			owner_lazy = () -> CalculationTypeCode.mmObject();
@@ -607,7 +609,7 @@ public class CalculationTypeCode {
 	 */
 	public static final MMCode mmTheta = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Theta";
 			definition = "First order (linear) sensitivity to the passage of time.";
 			owner_lazy = () -> CalculationTypeCode.mmObject();
@@ -640,7 +642,7 @@ public class CalculationTypeCode {
 	 */
 	public static final MMCode mmVega = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Vega";
 			definition = "First order (linear) sensitivity to changes in implied volatility of an underlying security.  Sometimes called kappa or tau.";
 			owner_lazy = () -> CalculationTypeCode.mmObject();
@@ -673,7 +675,7 @@ public class CalculationTypeCode {
 	 */
 	public static final MMCode mmPriceEarningRatio = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PriceEarningRatio";
 			definition = "A ratio used to determine a stock's value while taking into account earnings growth.";
 			owner_lazy = () -> CalculationTypeCode.mmObject();
@@ -704,7 +706,7 @@ public class CalculationTypeCode {
 	 */
 	public static final MMCode mmLambda = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Lambda";
 			definition = "Percent change in option value per change in underlying price.";
 			owner_lazy = () -> CalculationTypeCode.mmObject();
@@ -737,7 +739,7 @@ public class CalculationTypeCode {
 	 */
 	public static final MMCode mmVegaGamma = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "VegaGamma";
 			definition = "Second order (quadratic) sensitivity to changes in implied volatility in an underlying security price. Also called Volga.";
 			owner_lazy = () -> CalculationTypeCode.mmObject();
@@ -767,7 +769,7 @@ public class CalculationTypeCode {
 	 */
 	public static final MMCode mmVanna = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Vanna";
 			definition = "Sensitivity of delta to a change in volatility.";
 			owner_lazy = () -> CalculationTypeCode.mmObject();
@@ -797,7 +799,7 @@ public class CalculationTypeCode {
 	 */
 	public static final MMCode mmDeltaDecay = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DeltaDecay";
 			definition = "Measures time decay of Delta.";
 			owner_lazy = () -> CalculationTypeCode.mmObject();
@@ -827,7 +829,7 @@ public class CalculationTypeCode {
 	 */
 	public static final MMCode mmColor = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Color";
 			definition = "Sensitivity of Delta Decay to underlying price.";
 			owner_lazy = () -> CalculationTypeCode.mmObject();
@@ -861,7 +863,7 @@ public class CalculationTypeCode {
 	 */
 	public static final MMCode mmPriceBookRatio = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PriceBookRatio";
 			definition = "A ratio used to compare a stock's market value to its book value. It is calculated by dividing the current closing price of the stock by the latest quarter's book value per share.";
 			owner_lazy = () -> CalculationTypeCode.mmObject();
@@ -896,7 +898,7 @@ public class CalculationTypeCode {
 	 */
 	public static final MMCode mmPriceSalesRatio = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PriceSalesRatio";
 			definition = "A ratio for valuing a stock relative to its own past performance, other companies or the market itself. Price to sales is calculated by dividing a stock's current price by its revenue per share for the trailing 12 months.";
 			owner_lazy = () -> CalculationTypeCode.mmObject();
@@ -929,7 +931,7 @@ public class CalculationTypeCode {
 	 */
 	public static final MMCode mmEarningPerShare = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "EarningPerShare";
 			definition = "The portion of a company's profit allocated to each outstanding share of common stock. EPS serves as an indicator of a company's profitability.";
 			owner_lazy = () -> CalculationTypeCode.mmObject();
@@ -959,7 +961,7 @@ public class CalculationTypeCode {
 	 */
 	public static final MMCode mmEPSPercentChange = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "EPSPercentChange";
 			definition = "Percent Change in EPS Trailing Twelve Months.";
 			owner_lazy = () -> CalculationTypeCode.mmObject();
@@ -989,7 +991,7 @@ public class CalculationTypeCode {
 	 */
 	public static final MMCode mmNetIncomeSalesRatio = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NetIncomeSalesRatio";
 			definition = "Net income as percent of sales.";
 			owner_lazy = () -> CalculationTypeCode.mmObject();
@@ -1022,7 +1024,7 @@ public class CalculationTypeCode {
 	 */
 	public static final MMCode mmPriceEarningsGrowth = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PriceEarningsGrowth";
 			definition = "A ratio used to determine a stock's value while taking into account earnings growth.";
 			owner_lazy = () -> CalculationTypeCode.mmObject();
@@ -1055,7 +1057,7 @@ public class CalculationTypeCode {
 	 */
 	public static final MMCode mmQuickRatio = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "QuickRatio";
 			definition = "The current assets minus the inventory and the result is divided by the liabilities.\n(Current Assets - Inventory)/Liabilities.";
 			owner_lazy = () -> CalculationTypeCode.mmObject();
@@ -1086,7 +1088,7 @@ public class CalculationTypeCode {
 	 */
 	public static final MMCode mmCurrentRatio = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CurrentRatio";
 			definition = "The current assets are divided by the current liabilities.";
 			owner_lazy = () -> CalculationTypeCode.mmObject();
@@ -1116,7 +1118,7 @@ public class CalculationTypeCode {
 	 */
 	public static final MMCode mmDividendPayoutRatio = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DividendPayoutRatio";
 			definition = "Dividends per Share divided by EPS.";
 			owner_lazy = () -> CalculationTypeCode.mmObject();
@@ -1146,7 +1148,7 @@ public class CalculationTypeCode {
 	 */
 	public static final MMCode mmDebtEquityRatio = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DebtEquityRatio";
 			definition = "Total Liabilities divided by the shareholder equity.";
 			owner_lazy = () -> CalculationTypeCode.mmObject();
@@ -1179,7 +1181,7 @@ public class CalculationTypeCode {
 	 */
 	public static final MMCode mmReturnOnEquity = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ReturnOnEquity";
 			definition = "A measure of a corporation's profitability that reveals how much profit a company generates with the money shareholders have invested. ";
 			owner_lazy = () -> CalculationTypeCode.mmObject();
@@ -1215,7 +1217,7 @@ public class CalculationTypeCode {
 	 */
 	public static final MMCode mmReturnOnAssets = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ReturnOnAssets";
 			definition = "An indicator of how profitable a company is relative to its total assets. Return On Assets gives an idea as to how efficient management is at using its assets to generate earnings. Calculated by dividing a company's annual earnings by its total assets, Return On Assets is displayed as a percentage.";
 			owner_lazy = () -> CalculationTypeCode.mmObject();
@@ -1245,7 +1247,7 @@ public class CalculationTypeCode {
 	 */
 	public static final MMCode mmReturnOnInvestment = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ReturnOnInvestment";
 			definition = "Return on investment.";
 			owner_lazy = () -> CalculationTypeCode.mmObject();
@@ -1278,7 +1280,7 @@ public class CalculationTypeCode {
 	 */
 	public static final MMCode mmSalesEmployee = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SalesEmployee";
 			definition = "Important ratio that looks at a company's sales in relation to the number of employees they have.";
 			owner_lazy = () -> CalculationTypeCode.mmObject();
@@ -1314,7 +1316,7 @@ public class CalculationTypeCode {
 	 */
 	public static final MMCode mmCurrentAssets = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CurrentAssets";
 			definition = "Balance sheet account that represents the value of all assets that are reasonably expected to be converted into cash within one year in the normal course of business. Current assets include cash, accounts receivable, inventory, marketable securities, prepaid expenses and other liquid assets that can be readily converted to cash.";
 			owner_lazy = () -> CalculationTypeCode.mmObject();
@@ -1344,7 +1346,7 @@ public class CalculationTypeCode {
 	 */
 	public static final MMCode mmLongTermDebt = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "LongTermDebt";
 			definition = "Loans and financial obligations lasting over one year.";
 			owner_lazy = () -> CalculationTypeCode.mmObject();
@@ -1378,7 +1380,7 @@ public class CalculationTypeCode {
 	 */
 	public static final MMCode mmCurrentLiabilities = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CurrentLiabilities";
 			definition = "Company's debts or obligations that are due within one year. Current liabilities appear on the company's balance sheet and include short term debt, accounts payable, accrued liabilities and other debts.";
 			owner_lazy = () -> CalculationTypeCode.mmObject();
@@ -1408,7 +1410,7 @@ public class CalculationTypeCode {
 	 */
 	public static final MMCode mmSalesRevenue = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SalesRevenue";
 			definition = "Amount of sales.";
 			owner_lazy = () -> CalculationTypeCode.mmObject();
@@ -1443,7 +1445,7 @@ public class CalculationTypeCode {
 	 */
 	public static final MMCode mmSalesMargin = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SalesMargin";
 			definition = "Financial metric used to assess a firm's financial health by revealing the proportion of money left over from revenues after accounting for the cost of goods sold. Gross profit margin serves as the source for paying additional expenses and future savings.";
 			owner_lazy = () -> CalculationTypeCode.mmObject();
@@ -1473,7 +1475,7 @@ public class CalculationTypeCode {
 	 */
 	public static final MMCode mmFundAnnualReturn = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "FundAnnualReturn";
 			definition = "Last twelve months or calendar year.";
 			owner_lazy = () -> CalculationTypeCode.mmObject();
@@ -1506,7 +1508,7 @@ public class CalculationTypeCode {
 	 */
 	public static final MMCode mmFundCumReturn = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "FundCumReturn";
 			definition = "Requires timeframe - generally from inception or in 3, 5, and 10 year periods.";
 			owner_lazy = () -> CalculationTypeCode.mmObject();
@@ -1536,7 +1538,7 @@ public class CalculationTypeCode {
 	 */
 	public static final MMCode mmFundStandardDeviation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "FundStandardDeviation";
 			definition = "Portfolio volatility as a percentage.";
 			owner_lazy = () -> CalculationTypeCode.mmObject();
@@ -1566,7 +1568,7 @@ public class CalculationTypeCode {
 	 */
 	public static final MMCode mmFundBenchExcessAnnualReturn = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "FundBenchExcessAnnualReturn";
 			definition = "Variance between the fund annual return and a benchmark.";
 			owner_lazy = () -> CalculationTypeCode.mmObject();
@@ -1599,7 +1601,7 @@ public class CalculationTypeCode {
 	 */
 	public static final MMCode mmFundBenchExcessCumReturn = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "FundBenchExcessCumReturn";
 			definition = "Requires timeframe - generally from inception or in 3, 5, and 10 year periods.";
 			owner_lazy = () -> CalculationTypeCode.mmObject();
@@ -1629,7 +1631,7 @@ public class CalculationTypeCode {
 	 */
 	public static final MMCode mmFundBenchTrackingError = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "FundBenchTrackingError";
 			definition = "Volatility of fund excess return.";
 			owner_lazy = () -> CalculationTypeCode.mmObject();
@@ -1659,7 +1661,7 @@ public class CalculationTypeCode {
 	 */
 	public static final MMCode mmFundPortfolioStandardDeviation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "FundPortfolioStandardDeviation";
 			definition = "Portfolio volatility as a percentage.";
 			owner_lazy = () -> CalculationTypeCode.mmObject();
@@ -1689,7 +1691,7 @@ public class CalculationTypeCode {
 	 */
 	public static final MMCode mmFundBenchAnnualReturn = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "FundBenchAnnualReturn";
 			definition = "Last twelve months or calendar year.";
 			owner_lazy = () -> CalculationTypeCode.mmObject();
@@ -1722,7 +1724,7 @@ public class CalculationTypeCode {
 	 */
 	public static final MMCode mmFundBenchCumReturn = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "FundBenchCumReturn";
 			definition = "Requires timeframe - generally from inception or in 3, 5, and 10 year periods.";
 			owner_lazy = () -> CalculationTypeCode.mmObject();
@@ -1752,7 +1754,7 @@ public class CalculationTypeCode {
 	 */
 	public static final MMCode mmLifeToNextProbableCall = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "LifeToNextProbableCall";
 			definition = "Life of the bond to next probable call.";
 			owner_lazy = () -> CalculationTypeCode.mmObject();
@@ -1785,7 +1787,7 @@ public class CalculationTypeCode {
 	 */
 	public static final MMCode mmAverageLife = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AverageLife";
 			definition = "Weighted average time to redemption of an amortising bond using relative redemption cash flows as weights.";
 			owner_lazy = () -> CalculationTypeCode.mmObject();
@@ -1819,7 +1821,7 @@ public class CalculationTypeCode {
 	 */
 	public static final MMCode mmMacaulyDuration = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MacaulyDuration";
 			definition = "Weighted-average term to maturity of the cash flows from a bond. The weight of each cash flow is determined by dividing the present value of the cash flow by the price.";
 			owner_lazy = () -> CalculationTypeCode.mmObject();
@@ -1852,7 +1854,7 @@ public class CalculationTypeCode {
 	 */
 	public static final MMCode mmModifiedDuration = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ModifiedDuration";
 			definition = "Formula that expresses the measurable change in the value of a security in response to a change in interest rates.";
 			owner_lazy = () -> CalculationTypeCode.mmObject();
@@ -1885,7 +1887,7 @@ public class CalculationTypeCode {
 	 */
 	public static final MMCode mmDuration = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Duration";
 			definition = "Measurement of how long, in years, it takes for the price of a bond to be repaid by its internal cash flows.";
 			owner_lazy = () -> CalculationTypeCode.mmObject();
@@ -1918,7 +1920,7 @@ public class CalculationTypeCode {
 	 */
 	public static final MMCode mmYield = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Yield";
 			definition = "Yield is the annual rate of return for any investment and is expressed as a percentage.";
 			owner_lazy = () -> CalculationTypeCode.mmObject();
@@ -1952,7 +1954,7 @@ public class CalculationTypeCode {
 	 */
 	public static final MMCode mmYieldToMaturity = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "YieldToMaturity";
 			definition = "Internal rate of return an investor would achieve if he or she purchased that bond at its current dirty price, and held it to maturity, assuming all coupon and principal payments are received as scheduled.";
 			owner_lazy = () -> CalculationTypeCode.mmObject();
@@ -1983,7 +1985,7 @@ public class CalculationTypeCode {
 	 */
 	public static final MMCode mmCurrentYield = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CurrentYield";
 			definition = "The ratio of the interest payment amount to the clean price.";
 			owner_lazy = () -> CalculationTypeCode.mmObject();
@@ -2017,7 +2019,7 @@ public class CalculationTypeCode {
 	 */
 	public static final MMCode mmDiscountYield = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DiscountYield";
 			definition = "Yield quoted for a discount instrument. This is the ratio of the discount to the face value, divided by the period to maturity as a fraction of a year.";
 			owner_lazy = () -> CalculationTypeCode.mmObject();
@@ -2047,7 +2049,7 @@ public class CalculationTypeCode {
 	 */
 	public static final MMCode mmDirectYield = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DirectYield";
 			definition = "Dividend related to the price.";
 			owner_lazy = () -> CalculationTypeCode.mmObject();
@@ -2077,7 +2079,7 @@ public class CalculationTypeCode {
 	 */
 	public static final MMCode mmYieldToNextCall = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "YieldToNextCall";
 			definition = "Yield of a bond to the next possible call date.";
 			owner_lazy = () -> CalculationTypeCode.mmObject();
@@ -2110,7 +2112,7 @@ public class CalculationTypeCode {
 	 */
 	public static final MMCode mmYieldToAverageLife = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "YieldToAverageLife";
 			definition = "The yield achieved by substituting a bond's average life for the issue's final maturity date.";
 			owner_lazy = () -> CalculationTypeCode.mmObject();
@@ -2143,7 +2145,7 @@ public class CalculationTypeCode {
 	 */
 	public static final MMCode mmBondEquivalentYield = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BondEquivalentYield";
 			definition = "Calculation for restating semi-annual, quarterly, or monthly discount-bond or note yields into an annual yield.";
 			owner_lazy = () -> CalculationTypeCode.mmObject();
@@ -2177,7 +2179,7 @@ public class CalculationTypeCode {
 	 */
 	public static final MMCode mmAfterTax = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AfterTax";
 			definition = "The yield on the bond net of any tax consequences from holding the bond. The discount on municipal securities can be subject to both capital gains taxes and ordinary income taxes. Calculated from dollar price.";
 			owner_lazy = () -> CalculationTypeCode.mmObject();
@@ -2210,7 +2212,7 @@ public class CalculationTypeCode {
 	 */
 	public static final MMCode mmAnnual = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Annual";
 			definition = "The annual interest or dividend income an investment earns, expressed as a percentage of the investment's total value.";
 			owner_lazy = () -> CalculationTypeCode.mmObject();
@@ -2240,7 +2242,7 @@ public class CalculationTypeCode {
 	 */
 	public static final MMCode mmAtIssue = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AtIssue";
 			definition = "The yield of the bond offered on the issue date.";
 			owner_lazy = () -> CalculationTypeCode.mmObject();
@@ -2274,7 +2276,7 @@ public class CalculationTypeCode {
 	 */
 	public static final MMCode mmBook = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Book";
 			definition = "The yield of a security calculated by using its book value instead of the current market price.  This term is typically used in the US domestic market.";
 			owner_lazy = () -> CalculationTypeCode.mmObject();
@@ -2307,7 +2309,7 @@ public class CalculationTypeCode {
 	 */
 	public static final MMCode mmToAverageMaturity = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ToAverageMaturity";
 			definition = "The yield achieved by substituting a bond's average maturity for the issue's final maturity date.";
 			owner_lazy = () -> CalculationTypeCode.mmObject();
@@ -2338,7 +2340,7 @@ public class CalculationTypeCode {
 	 */
 	public static final MMCode mmChangeSinceClose = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChangeSinceClose";
 			definition = "The change in the yield since the previous day's closing yield.";
 			owner_lazy = () -> CalculationTypeCode.mmObject();
@@ -2368,7 +2370,7 @@ public class CalculationTypeCode {
 	 */
 	public static final MMCode mmClosing = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Closing";
 			definition = "The yield of a bond based on the closing price.";
 			owner_lazy = () -> CalculationTypeCode.mmObject();
@@ -2402,7 +2404,7 @@ public class CalculationTypeCode {
 	 */
 	public static final MMCode mmCompound = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Compound";
 			definition = "The yield of certain Japanese bonds based on its price. Certain Japanese bonds have irregular first or last coupons, and the yield is calculated compound for these irregular periods.";
 			owner_lazy = () -> CalculationTypeCode.mmObject();
@@ -2435,7 +2437,7 @@ public class CalculationTypeCode {
 	 */
 	public static final MMCode mmTrueGross = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TrueGross";
 			definition = "Yield calculated using the price including accrued interest, where coupon dates are moved from holidays and weekends to the next trading day.";
 			owner_lazy = () -> CalculationTypeCode.mmObject();
@@ -2468,7 +2470,7 @@ public class CalculationTypeCode {
 	 */
 	public static final MMCode mmGovernmentEquivalent = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GovernmentEquivalent";
 			definition = "Ask yield based on semi-annual coupons compounding in all periods and actual/actual calendar.";
 			owner_lazy = () -> CalculationTypeCode.mmObject();
@@ -2502,7 +2504,7 @@ public class CalculationTypeCode {
 	 */
 	public static final MMCode mmInflationAssumption = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InflationAssumption";
 			definition = "Based on price, the return an investor would require on a normal bond that would make the real return equal to that of the inflation-indexed bond, assuming a constant inflation rate.";
 			owner_lazy = () -> CalculationTypeCode.mmObject();
@@ -2535,7 +2537,7 @@ public class CalculationTypeCode {
 	 */
 	public static final MMCode mmInverseFloater = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InverseFloater";
 			definition = "Inverse Floater Bond Yield - Inverse floater semi-annual bond equivalent rate.";
 			owner_lazy = () -> CalculationTypeCode.mmObject();
@@ -2568,7 +2570,7 @@ public class CalculationTypeCode {
 	 */
 	public static final MMCode mmLastClose = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LastClose";
 			definition = "Most Recent Closing Yield - The last available yield stored in history, computed using price.";
 			owner_lazy = () -> CalculationTypeCode.mmObject();
@@ -2601,7 +2603,7 @@ public class CalculationTypeCode {
 	 */
 	public static final MMCode mmLastMonth = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LastMonth";
 			definition = "Closing Yield Most Recent Month - The yield of a bond based on the closing price as of the most recent month's end.";
 			owner_lazy = () -> CalculationTypeCode.mmObject();
@@ -2634,7 +2636,7 @@ public class CalculationTypeCode {
 	 */
 	public static final MMCode mmLastQuarter = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LastQuarter";
 			definition = "Closing Yield Most Recent Quarter - The yield of a bond based on the closing price as of the most recent quarter's end.";
 			owner_lazy = () -> CalculationTypeCode.mmObject();
@@ -2667,7 +2669,7 @@ public class CalculationTypeCode {
 	 */
 	public static final MMCode mmLastYear = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LastYear";
 			definition = "Closing Yield Most Recent Year - The yield of a bond based on the closing price as of the most recent year's end.";
 			owner_lazy = () -> CalculationTypeCode.mmObject();
@@ -2701,7 +2703,7 @@ public class CalculationTypeCode {
 	 */
 	public static final MMCode mmLongestAverageLife = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LongestAverageLife";
 			definition = "The yield assuming only mandatory sinks are taken.  This results in a lower paydown of debt; the yield is then calculated to the final payment date.";
 			owner_lazy = () -> CalculationTypeCode.mmObject();
@@ -2734,7 +2736,7 @@ public class CalculationTypeCode {
 	 */
 	public static final MMCode mmMarkToMarket = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarkToMarket";
 			definition = "An adjustment in the valuation of a securities portfolio to reflect the current market values of the respective securities in the portfolio.";
 			owner_lazy = () -> CalculationTypeCode.mmObject();
@@ -2767,7 +2769,7 @@ public class CalculationTypeCode {
 	 */
 	public static final MMCode mmToNextRefund = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ToNextRefund";
 			definition = "Yield To Next Refund (Sinking Fund Bonds) - Yield assuming all bonds are redeemed at the next refund date at the redemption price.";
 			owner_lazy = () -> CalculationTypeCode.mmObject();
@@ -2798,7 +2800,7 @@ public class CalculationTypeCode {
 	 */
 	public static final MMCode mmOpenAverage = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OpenAverage";
 			definition = "The average yield of the respective securities in the portfolio.";
 			owner_lazy = () -> CalculationTypeCode.mmObject();
@@ -2831,7 +2833,7 @@ public class CalculationTypeCode {
 	 */
 	public static final MMCode mmToNextPut = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ToNextPut";
 			definition = "The yield to the date at which the bond holder can next put the bond to the issuer.";
 			owner_lazy = () -> CalculationTypeCode.mmObject();
@@ -2862,7 +2864,7 @@ public class CalculationTypeCode {
 	 */
 	public static final MMCode mmPreviousClose = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousClose";
 			definition = "The yield of a bond based on the closing price 1 day ago.";
 			owner_lazy = () -> CalculationTypeCode.mmObject();
@@ -2895,7 +2897,7 @@ public class CalculationTypeCode {
 	 */
 	public static final MMCode mmProceeds = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proceeds";
 			definition = "The CD equivalent yield when the remaining time to maturity is less than two years.";
 			owner_lazy = () -> CalculationTypeCode.mmObject();
@@ -2927,7 +2929,7 @@ public class CalculationTypeCode {
 	 */
 	public static final MMCode mmSemiAnnual = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SemiAnnual";
 			definition = "The yield of a bond whose coupon payments are reinvested semi-annually.";
 			owner_lazy = () -> CalculationTypeCode.mmObject();
@@ -2961,7 +2963,7 @@ public class CalculationTypeCode {
 	 */
 	public static final MMCode mmShortestAverageLife = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ShortestAverageLife";
 			definition = "The yield assuming that all sinks (mandatory and voluntary) are taken at par. This results in a faster paydown of debt; the yield is then calculated to the shortest average life date.";
 			owner_lazy = () -> CalculationTypeCode.mmObject();
@@ -2994,7 +2996,7 @@ public class CalculationTypeCode {
 	 */
 	public static final MMCode mmSimple = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Simple";
 			definition = "The yield of a bond assuming no reinvestment of coupon payments. (Act/360 day count).";
 			owner_lazy = () -> CalculationTypeCode.mmObject();
@@ -3027,7 +3029,7 @@ public class CalculationTypeCode {
 	 */
 	public static final MMCode mmTaxEquivalent = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxEquivalent";
 			definition = "The after tax yield grossed up by the maximum federal tax rate of 39.6%.  For comparison to taxable yields.";
 			owner_lazy = () -> CalculationTypeCode.mmObject();
@@ -3058,7 +3060,7 @@ public class CalculationTypeCode {
 	 */
 	public static final MMCode mmToTenderDate = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ToTenderDate";
 			definition = "The yield on a Municipal bond to its mandatory tender date.";
 			owner_lazy = () -> CalculationTypeCode.mmObject();
@@ -3091,7 +3093,7 @@ public class CalculationTypeCode {
 	 */
 	public static final MMCode mmTrue = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "True";
 			definition = "The yield calculated with coupon dates moved from a weekend or holiday to the next valid settlement date.";
 			owner_lazy = () -> CalculationTypeCode.mmObject();
@@ -3122,7 +3124,7 @@ public class CalculationTypeCode {
 	 */
 	public static final MMCode mmToWorstConvention = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ToWorstConvention";
 			definition = "The lowest yield to all possible redemption date scenarios.";
 			owner_lazy = () -> CalculationTypeCode.mmObject();
@@ -3133,45 +3135,27 @@ public class CalculationTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CNVX");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CalculationTypeCode";
 				definition = "Specifies calculation types such as yield, duration, analytics etc.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CalculationTypeCode.mmConvexity, com.tools20022.repository.codeset.CalculationTypeCode.mmVolatility,
-						com.tools20022.repository.codeset.CalculationTypeCode.mmAlpha, com.tools20022.repository.codeset.CalculationTypeCode.mmBeta, com.tools20022.repository.codeset.CalculationTypeCode.mmDelta,
-						com.tools20022.repository.codeset.CalculationTypeCode.mmGamma, com.tools20022.repository.codeset.CalculationTypeCode.mmSpeed, com.tools20022.repository.codeset.CalculationTypeCode.mmRho,
-						com.tools20022.repository.codeset.CalculationTypeCode.mmTheta, com.tools20022.repository.codeset.CalculationTypeCode.mmVega, com.tools20022.repository.codeset.CalculationTypeCode.mmPriceEarningRatio,
-						com.tools20022.repository.codeset.CalculationTypeCode.mmLambda, com.tools20022.repository.codeset.CalculationTypeCode.mmVegaGamma, com.tools20022.repository.codeset.CalculationTypeCode.mmVanna,
-						com.tools20022.repository.codeset.CalculationTypeCode.mmDeltaDecay, com.tools20022.repository.codeset.CalculationTypeCode.mmColor, com.tools20022.repository.codeset.CalculationTypeCode.mmPriceBookRatio,
-						com.tools20022.repository.codeset.CalculationTypeCode.mmPriceSalesRatio, com.tools20022.repository.codeset.CalculationTypeCode.mmEarningPerShare,
-						com.tools20022.repository.codeset.CalculationTypeCode.mmEPSPercentChange, com.tools20022.repository.codeset.CalculationTypeCode.mmNetIncomeSalesRatio,
-						com.tools20022.repository.codeset.CalculationTypeCode.mmPriceEarningsGrowth, com.tools20022.repository.codeset.CalculationTypeCode.mmQuickRatio, com.tools20022.repository.codeset.CalculationTypeCode.mmCurrentRatio,
-						com.tools20022.repository.codeset.CalculationTypeCode.mmDividendPayoutRatio, com.tools20022.repository.codeset.CalculationTypeCode.mmDebtEquityRatio,
-						com.tools20022.repository.codeset.CalculationTypeCode.mmReturnOnEquity, com.tools20022.repository.codeset.CalculationTypeCode.mmReturnOnAssets,
-						com.tools20022.repository.codeset.CalculationTypeCode.mmReturnOnInvestment, com.tools20022.repository.codeset.CalculationTypeCode.mmSalesEmployee,
-						com.tools20022.repository.codeset.CalculationTypeCode.mmCurrentAssets, com.tools20022.repository.codeset.CalculationTypeCode.mmLongTermDebt,
-						com.tools20022.repository.codeset.CalculationTypeCode.mmCurrentLiabilities, com.tools20022.repository.codeset.CalculationTypeCode.mmSalesRevenue, com.tools20022.repository.codeset.CalculationTypeCode.mmSalesMargin,
-						com.tools20022.repository.codeset.CalculationTypeCode.mmFundAnnualReturn, com.tools20022.repository.codeset.CalculationTypeCode.mmFundCumReturn,
-						com.tools20022.repository.codeset.CalculationTypeCode.mmFundStandardDeviation, com.tools20022.repository.codeset.CalculationTypeCode.mmFundBenchExcessAnnualReturn,
-						com.tools20022.repository.codeset.CalculationTypeCode.mmFundBenchExcessCumReturn, com.tools20022.repository.codeset.CalculationTypeCode.mmFundBenchTrackingError,
-						com.tools20022.repository.codeset.CalculationTypeCode.mmFundPortfolioStandardDeviation, com.tools20022.repository.codeset.CalculationTypeCode.mmFundBenchAnnualReturn,
-						com.tools20022.repository.codeset.CalculationTypeCode.mmFundBenchCumReturn, com.tools20022.repository.codeset.CalculationTypeCode.mmLifeToNextProbableCall,
-						com.tools20022.repository.codeset.CalculationTypeCode.mmAverageLife, com.tools20022.repository.codeset.CalculationTypeCode.mmMacaulyDuration, com.tools20022.repository.codeset.CalculationTypeCode.mmModifiedDuration,
-						com.tools20022.repository.codeset.CalculationTypeCode.mmDuration, com.tools20022.repository.codeset.CalculationTypeCode.mmYield, com.tools20022.repository.codeset.CalculationTypeCode.mmYieldToMaturity,
-						com.tools20022.repository.codeset.CalculationTypeCode.mmCurrentYield, com.tools20022.repository.codeset.CalculationTypeCode.mmDiscountYield, com.tools20022.repository.codeset.CalculationTypeCode.mmDirectYield,
-						com.tools20022.repository.codeset.CalculationTypeCode.mmYieldToNextCall, com.tools20022.repository.codeset.CalculationTypeCode.mmYieldToAverageLife,
-						com.tools20022.repository.codeset.CalculationTypeCode.mmBondEquivalentYield, com.tools20022.repository.codeset.CalculationTypeCode.mmAfterTax, com.tools20022.repository.codeset.CalculationTypeCode.mmAnnual,
-						com.tools20022.repository.codeset.CalculationTypeCode.mmAtIssue, com.tools20022.repository.codeset.CalculationTypeCode.mmBook, com.tools20022.repository.codeset.CalculationTypeCode.mmToAverageMaturity,
-						com.tools20022.repository.codeset.CalculationTypeCode.mmChangeSinceClose, com.tools20022.repository.codeset.CalculationTypeCode.mmClosing, com.tools20022.repository.codeset.CalculationTypeCode.mmCompound,
-						com.tools20022.repository.codeset.CalculationTypeCode.mmTrueGross, com.tools20022.repository.codeset.CalculationTypeCode.mmGovernmentEquivalent,
-						com.tools20022.repository.codeset.CalculationTypeCode.mmInflationAssumption, com.tools20022.repository.codeset.CalculationTypeCode.mmInverseFloater, com.tools20022.repository.codeset.CalculationTypeCode.mmLastClose,
-						com.tools20022.repository.codeset.CalculationTypeCode.mmLastMonth, com.tools20022.repository.codeset.CalculationTypeCode.mmLastQuarter, com.tools20022.repository.codeset.CalculationTypeCode.mmLastYear,
-						com.tools20022.repository.codeset.CalculationTypeCode.mmLongestAverageLife, com.tools20022.repository.codeset.CalculationTypeCode.mmMarkToMarket, com.tools20022.repository.codeset.CalculationTypeCode.mmToNextRefund,
-						com.tools20022.repository.codeset.CalculationTypeCode.mmOpenAverage, com.tools20022.repository.codeset.CalculationTypeCode.mmToNextPut, com.tools20022.repository.codeset.CalculationTypeCode.mmPreviousClose,
-						com.tools20022.repository.codeset.CalculationTypeCode.mmProceeds, com.tools20022.repository.codeset.CalculationTypeCode.mmSemiAnnual, com.tools20022.repository.codeset.CalculationTypeCode.mmShortestAverageLife,
-						com.tools20022.repository.codeset.CalculationTypeCode.mmSimple, com.tools20022.repository.codeset.CalculationTypeCode.mmTaxEquivalent, com.tools20022.repository.codeset.CalculationTypeCode.mmToTenderDate,
-						com.tools20022.repository.codeset.CalculationTypeCode.mmTrue, com.tools20022.repository.codeset.CalculationTypeCode.mmToWorstConvention);
+				code_lazy = () -> Arrays.asList(CalculationTypeCode.mmConvexity, CalculationTypeCode.mmVolatility, CalculationTypeCode.mmAlpha, CalculationTypeCode.mmBeta, CalculationTypeCode.mmDelta, CalculationTypeCode.mmGamma,
+						CalculationTypeCode.mmSpeed, CalculationTypeCode.mmRho, CalculationTypeCode.mmTheta, CalculationTypeCode.mmVega, CalculationTypeCode.mmPriceEarningRatio, CalculationTypeCode.mmLambda,
+						CalculationTypeCode.mmVegaGamma, CalculationTypeCode.mmVanna, CalculationTypeCode.mmDeltaDecay, CalculationTypeCode.mmColor, CalculationTypeCode.mmPriceBookRatio, CalculationTypeCode.mmPriceSalesRatio,
+						CalculationTypeCode.mmEarningPerShare, CalculationTypeCode.mmEPSPercentChange, CalculationTypeCode.mmNetIncomeSalesRatio, CalculationTypeCode.mmPriceEarningsGrowth, CalculationTypeCode.mmQuickRatio,
+						CalculationTypeCode.mmCurrentRatio, CalculationTypeCode.mmDividendPayoutRatio, CalculationTypeCode.mmDebtEquityRatio, CalculationTypeCode.mmReturnOnEquity, CalculationTypeCode.mmReturnOnAssets,
+						CalculationTypeCode.mmReturnOnInvestment, CalculationTypeCode.mmSalesEmployee, CalculationTypeCode.mmCurrentAssets, CalculationTypeCode.mmLongTermDebt, CalculationTypeCode.mmCurrentLiabilities,
+						CalculationTypeCode.mmSalesRevenue, CalculationTypeCode.mmSalesMargin, CalculationTypeCode.mmFundAnnualReturn, CalculationTypeCode.mmFundCumReturn, CalculationTypeCode.mmFundStandardDeviation,
+						CalculationTypeCode.mmFundBenchExcessAnnualReturn, CalculationTypeCode.mmFundBenchExcessCumReturn, CalculationTypeCode.mmFundBenchTrackingError, CalculationTypeCode.mmFundPortfolioStandardDeviation,
+						CalculationTypeCode.mmFundBenchAnnualReturn, CalculationTypeCode.mmFundBenchCumReturn, CalculationTypeCode.mmLifeToNextProbableCall, CalculationTypeCode.mmAverageLife, CalculationTypeCode.mmMacaulyDuration,
+						CalculationTypeCode.mmModifiedDuration, CalculationTypeCode.mmDuration, CalculationTypeCode.mmYield, CalculationTypeCode.mmYieldToMaturity, CalculationTypeCode.mmCurrentYield, CalculationTypeCode.mmDiscountYield,
+						CalculationTypeCode.mmDirectYield, CalculationTypeCode.mmYieldToNextCall, CalculationTypeCode.mmYieldToAverageLife, CalculationTypeCode.mmBondEquivalentYield, CalculationTypeCode.mmAfterTax,
+						CalculationTypeCode.mmAnnual, CalculationTypeCode.mmAtIssue, CalculationTypeCode.mmBook, CalculationTypeCode.mmToAverageMaturity, CalculationTypeCode.mmChangeSinceClose, CalculationTypeCode.mmClosing,
+						CalculationTypeCode.mmCompound, CalculationTypeCode.mmTrueGross, CalculationTypeCode.mmGovernmentEquivalent, CalculationTypeCode.mmInflationAssumption, CalculationTypeCode.mmInverseFloater,
+						CalculationTypeCode.mmLastClose, CalculationTypeCode.mmLastMonth, CalculationTypeCode.mmLastQuarter, CalculationTypeCode.mmLastYear, CalculationTypeCode.mmLongestAverageLife, CalculationTypeCode.mmMarkToMarket,
+						CalculationTypeCode.mmToNextRefund, CalculationTypeCode.mmOpenAverage, CalculationTypeCode.mmToNextPut, CalculationTypeCode.mmPreviousClose, CalculationTypeCode.mmProceeds, CalculationTypeCode.mmSemiAnnual,
+						CalculationTypeCode.mmShortestAverageLife, CalculationTypeCode.mmSimple, CalculationTypeCode.mmTaxEquivalent, CalculationTypeCode.mmToTenderDate, CalculationTypeCode.mmTrue, CalculationTypeCode.mmToWorstConvention);
 				derivation_lazy = () -> Arrays.asList(CalculationType1Code.mmObject());
 			}
 		});

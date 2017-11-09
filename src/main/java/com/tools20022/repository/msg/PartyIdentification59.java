@@ -20,13 +20,13 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.ClearingSystemIdentification2Choice;
 import com.tools20022.repository.datatype.LEIIdentifier;
 import com.tools20022.repository.datatype.Max105Text;
 import com.tools20022.repository.datatype.Max34Text;
-import com.tools20022.repository.entity.OrganisationIdentification;
-import com.tools20022.repository.entity.PartyIdentificationInformation;
-import com.tools20022.repository.entity.PostalAddress;
+import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -120,11 +120,11 @@ public class PartyIdentification59 {
 	 */
 	public static final MMMessageAttribute mmPartyName = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyName.mmName;
+			businessElementTrace_lazy = () -> PartyName.mmName;
 			componentContext_lazy = () -> PartyIdentification59.mmObject();
 			isDerived = false;
 			xmlTag = "PtyNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartyName";
 			definition = "Identification of the party expressed as the party's name.";
 			maxOccurs = 1;
@@ -169,11 +169,11 @@ public class PartyIdentification59 {
 	 */
 	public static final MMMessageAssociationEnd mmAnyBIC = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.mmAnyBIC;
+			businessElementTrace_lazy = () -> OrganisationIdentification.mmAnyBIC;
 			componentContext_lazy = () -> PartyIdentification59.mmObject();
 			isDerived = false;
 			xmlTag = "AnyBIC";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AnyBIC";
 			definition = "Identification of the party expressed as a BIC and an optional alternative identifier.";
 			maxOccurs = 1;
@@ -217,11 +217,11 @@ public class PartyIdentification59 {
 	 */
 	public static final MMMessageAttribute mmAccountNumber = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AccountPartyRole.mmAccount;
+			businessElementTrace_lazy = () -> AccountPartyRole.mmAccount;
 			componentContext_lazy = () -> PartyIdentification59.mmObject();
 			isDerived = false;
 			xmlTag = "AcctNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountNumber";
 			definition = "Identification of the party's account number.";
 			maxOccurs = 1;
@@ -268,7 +268,7 @@ public class PartyIdentification59 {
 			componentContext_lazy = () -> PartyIdentification59.mmObject();
 			isDerived = false;
 			xmlTag = "Adr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Address";
 			definition = "Identification of the party's address.";
 			maxOccurs = 1;
@@ -312,11 +312,11 @@ public class PartyIdentification59 {
 	 */
 	public static final MMMessageAttribute mmClearingSystemIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.mmClearingSystemMemberIdentificationType;
+			businessElementTrace_lazy = () -> OrganisationIdentification.mmClearingSystemMemberIdentificationType;
 			componentContext_lazy = () -> PartyIdentification59.mmObject();
 			isDerived = false;
 			xmlTag = "ClrSysId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClearingSystemIdentification";
 			definition = "Choice of a clearing system identifier.";
 			maxOccurs = 1;
@@ -368,7 +368,7 @@ public class PartyIdentification59 {
 			componentContext_lazy = () -> PartyIdentification59.mmObject();
 			isDerived = false;
 			xmlTag = "LglNttyIdr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LegalEntityIdentifier";
 			definition = "Identification of the Legal Entity Identifier. This is a code allocated to a party as described in ISO 17442 \"Financial Services - Legal Entity Identifier (LEI)\".";
 			maxOccurs = 1;
@@ -380,12 +380,11 @@ public class PartyIdentification59 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyIdentification59.mmPartyName, com.tools20022.repository.msg.PartyIdentification59.mmAnyBIC,
-						com.tools20022.repository.msg.PartyIdentification59.mmAccountNumber, com.tools20022.repository.msg.PartyIdentification59.mmAddress, com.tools20022.repository.msg.PartyIdentification59.mmClearingSystemIdentification,
-						com.tools20022.repository.msg.PartyIdentification59.mmLegalEntityIdentifier);
+				messageElement_lazy = () -> Arrays.asList(PartyIdentification59.mmPartyName, PartyIdentification59.mmAnyBIC, PartyIdentification59.mmAccountNumber, PartyIdentification59.mmAddress,
+						PartyIdentification59.mmClearingSystemIdentification, PartyIdentification59.mmLegalEntityIdentifier);
 				trace_lazy = () -> PartyIdentificationInformation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PartyIdentification59";
 				definition = "Identification of a party. The party can be identified by providing the party's name and optionally, the BIC, account number, address, clearing system identification or LEI can also be provided.";
 			}

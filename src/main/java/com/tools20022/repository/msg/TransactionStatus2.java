@@ -19,9 +19,12 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.BaselineStatus1Code;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.entity.BaselineStatus;
+import com.tools20022.repository.entity.Status;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -102,11 +105,11 @@ public class TransactionStatus2 {
 	 */
 	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BaselineStatus.mmStatus;
+			businessElementTrace_lazy = () -> BaselineStatus.mmStatus;
 			componentContext_lazy = () -> TransactionStatus2.mmObject();
 			isDerived = false;
 			xmlTag = "Sts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Status";
 			definition = "Identifies the status of the transaction by means of a code.";
 			maxOccurs = 1;
@@ -149,11 +152,11 @@ public class TransactionStatus2 {
 	 */
 	public static final MMMessageAttribute mmChangeDateTime = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.mmStatusDateTime;
+			businessElementTrace_lazy = () -> Status.mmStatusDateTime;
 			componentContext_lazy = () -> TransactionStatus2.mmObject();
 			isDerived = false;
 			xmlTag = "ChngDtTm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChangeDateTime";
 			definition = "Date and time at which the current status will change.";
 			maxOccurs = 1;
@@ -165,10 +168,10 @@ public class TransactionStatus2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionStatus2.mmStatus, com.tools20022.repository.msg.TransactionStatus2.mmChangeDateTime);
+				messageElement_lazy = () -> Arrays.asList(TransactionStatus2.mmStatus, TransactionStatus2.mmChangeDateTime);
 				trace_lazy = () -> BaselineStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "TransactionStatus2";
 				definition = "Identifies the future status of the transaction by means of a code and a period.";
 			}

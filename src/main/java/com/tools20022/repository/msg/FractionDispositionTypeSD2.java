@@ -19,8 +19,10 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.DecimalNumber;
 import com.tools20022.repository.datatype.Max350Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -95,7 +97,7 @@ public class FractionDispositionTypeSD2 {
 			componentContext_lazy = () -> FractionDispositionTypeSD2.mmObject();
 			isDerived = false;
 			xmlTag = "PlcAndNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "xPath to the element that is being extended.";
 			maxOccurs = 1;
@@ -141,7 +143,7 @@ public class FractionDispositionTypeSD2 {
 			componentContext_lazy = () -> FractionDispositionTypeSD2.mmObject();
 			isDerived = false;
 			xmlTag = "RndgFctr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RoundingFactor";
 			definition = "Decimal above which numbers are rounded. For an example if rounding factor is 0.6 this means that fractional units greater than or equal to 6 will be rounded up and  less than 6 will be rounded down.";
 			maxOccurs = 1;
@@ -153,9 +155,9 @@ public class FractionDispositionTypeSD2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FractionDispositionTypeSD2.mmPlaceAndName, com.tools20022.repository.msg.FractionDispositionTypeSD2.mmRoundingFactor);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(FractionDispositionTypeSD2.mmPlaceAndName, FractionDispositionTypeSD2.mmRoundingFactor);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FractionDispositionTypeSD2";
 				definition = "Provides additional information regarding corporate action securities movement fraction disposition details.";
 			}

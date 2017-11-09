@@ -19,8 +19,10 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.Max350Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -99,7 +101,7 @@ public class CorporateActionDateDetailsExtension2 {
 			componentContext_lazy = () -> CorporateActionDateDetailsExtension2.mmObject();
 			isDerived = false;
 			xmlTag = "PlcAndNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "xPath to the element that is being extended.";
 			maxOccurs = 1;
@@ -141,7 +143,7 @@ public class CorporateActionDateDetailsExtension2 {
 			componentContext_lazy = () -> CorporateActionDateDetailsExtension2.mmObject();
 			isDerived = false;
 			xmlTag = "DueBllRedDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DueBillRedemptionDate";
 			definition = "Date on which accounting for due bills and associated tracking ends.";
 			maxOccurs = 1;
@@ -186,7 +188,7 @@ public class CorporateActionDateDetailsExtension2 {
 			componentContext_lazy = () -> CorporateActionDateDetailsExtension2.mmObject();
 			isDerived = false;
 			xmlTag = "NewYorkCutOffDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewYorkCutOffDate";
 			definition = "Last day to deposit securities at DTC and receive the entitlement for an event approaching record date. Issues that have a New York cut-off date have an out-of-town agent on DTC's records.";
 			maxOccurs = 1;
@@ -227,7 +229,7 @@ public class CorporateActionDateDetailsExtension2 {
 			componentContext_lazy = () -> CorporateActionDateDetailsExtension2.mmObject();
 			isDerived = false;
 			xmlTag = "PmtDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentDate";
 			definition = "Payable date as declared by the issuer/offeror.";
 			maxOccurs = 1;
@@ -239,10 +241,10 @@ public class CorporateActionDateDetailsExtension2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionDateDetailsExtension2.mmPlaceAndName, com.tools20022.repository.msg.CorporateActionDateDetailsExtension2.mmDueBillRedemptionDate,
-						com.tools20022.repository.msg.CorporateActionDateDetailsExtension2.mmNewYorkCutOffDate, com.tools20022.repository.msg.CorporateActionDateDetailsExtension2.mmPaymentDate);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(CorporateActionDateDetailsExtension2.mmPlaceAndName, CorporateActionDateDetailsExtension2.mmDueBillRedemptionDate, CorporateActionDateDetailsExtension2.mmNewYorkCutOffDate,
+						CorporateActionDateDetailsExtension2.mmPaymentDate);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CorporateActionDateDetailsExtension2";
 				definition = "Provides additional information regarding corporate action date details.";
 			}

@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.OfferType1Code
+ * OfferType1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -48,13 +57,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.OfferTypeCode#mmSqueezeOutBid
  * OfferTypeCode.mmSqueezeOutBid}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.OfferType1Code
- * OfferType1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -115,7 +117,7 @@ public class OfferTypeCode {
 	 */
 	public static final MMCode mmDissenterRights = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DissenterRights";
 			definition = "Securities holder has the right to disagree with a mandatory event. This right is not inherent in all offers and therefore must be noted in announcements only when applicable.";
 			owner_lazy = () -> OfferTypeCode.mmObject();
@@ -145,7 +147,7 @@ public class OfferTypeCode {
 	 */
 	public static final MMCode mmRestrictionExchange = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RestrictionExchange";
 			definition = "Exchange of Restricted to Unrestricted (or vice versa).";
 			owner_lazy = () -> OfferTypeCode.mmObject();
@@ -178,7 +180,7 @@ public class OfferTypeCode {
 	 */
 	public static final MMCode mmFirstComeFirstServed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "FirstComeFirstServed";
 			definition = "Securities will be accepted in the order they have been submitted until the target number of quantity sought is reached.";
 			owner_lazy = () -> OfferTypeCode.mmObject();
@@ -211,7 +213,7 @@ public class OfferTypeCode {
 	 */
 	public static final MMCode mmFinalOffer = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "FinalOffer";
 			definition = "Final or last offer to holders subject to offer conditions being reached, for example, 50 percent accepted on a tender.";
 			owner_lazy = () -> OfferTypeCode.mmObject();
@@ -244,7 +246,7 @@ public class OfferTypeCode {
 	 */
 	public static final MMCode mmMiniTender = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MiniTender";
 			definition = "Tender offer for a security that is priced below the current trading price of that instrument.";
 			owner_lazy = () -> OfferTypeCode.mmObject();
@@ -277,7 +279,7 @@ public class OfferTypeCode {
 	 */
 	public static final MMCode mmPartialOffer = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PartialOffer";
 			definition = "Offer made by the offeror for a portion of the outstanding shares not already owned by the offeror.";
 			owner_lazy = () -> OfferTypeCode.mmObject();
@@ -311,7 +313,7 @@ public class OfferTypeCode {
 	 */
 	public static final MMCode mmSqueezeOutBid = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SqueezeOutBid";
 			definition = "Offer launched by a company, in possession of a large number of the shares (90% - 95%) of a company (generally as a result of a tender offer), in order to acquire the remaining shares of that company.";
 			owner_lazy = () -> OfferTypeCode.mmObject();
@@ -322,15 +324,14 @@ public class OfferTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("DISS");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OfferTypeCode";
 				definition = "Specifies the conditions that apply to the offer.";
 				nextVersions_lazy = () -> Arrays.asList(OfferTypeV2Code.mmObject());
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OfferTypeCode.mmDissenterRights, com.tools20022.repository.codeset.OfferTypeCode.mmRestrictionExchange,
-						com.tools20022.repository.codeset.OfferTypeCode.mmFirstComeFirstServed, com.tools20022.repository.codeset.OfferTypeCode.mmFinalOffer, com.tools20022.repository.codeset.OfferTypeCode.mmMiniTender,
-						com.tools20022.repository.codeset.OfferTypeCode.mmPartialOffer, com.tools20022.repository.codeset.OfferTypeCode.mmSqueezeOutBid);
+				code_lazy = () -> Arrays.asList(OfferTypeCode.mmDissenterRights, OfferTypeCode.mmRestrictionExchange, OfferTypeCode.mmFirstComeFirstServed, OfferTypeCode.mmFinalOffer, OfferTypeCode.mmMiniTender,
+						OfferTypeCode.mmPartialOffer, OfferTypeCode.mmSqueezeOutBid);
 				derivation_lazy = () -> Arrays.asList(OfferType1Code.mmObject());
 			}
 		});

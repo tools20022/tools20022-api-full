@@ -19,7 +19,13 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV06;
+import com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV07;
+import com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV06;
+import com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV07;
 import com.tools20022.repository.entity.AccountIdentification;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.AccountIdentification10;
 import com.tools20022.repository.msg.AccountIdentification31;
 import java.util.Arrays;
@@ -136,10 +142,10 @@ public class AccountIdentification29Choice {
 			componentContext_lazy = () -> AccountIdentification29Choice.mmObject();
 			isDerived = false;
 			xmlTag = "ForAllAccts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForAllAccounts";
 			definition = "All safekeeping accounts that own underlying financial instrument.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.AccountIdentification13Choice.mmForAllAccounts;
+			previousVersion_lazy = () -> AccountIdentification13Choice.mmForAllAccounts;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -193,10 +199,10 @@ public class AccountIdentification29Choice {
 			componentContext_lazy = () -> AccountIdentification29Choice.mmObject();
 			isDerived = false;
 			xmlTag = "AcctsList";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountsList";
 			definition = "Selected safekeeping accounts list to which the corporate action event applies.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.AccountIdentification13Choice.mmAccountsList;
+			previousVersion_lazy = () -> AccountIdentification13Choice.mmAccountsList;
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> AccountIdentification31.mmObject();
@@ -206,13 +212,12 @@ public class AccountIdentification29Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AccountIdentification29Choice.mmForAllAccounts, com.tools20022.repository.choice.AccountIdentification29Choice.mmAccountsList);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV06.mmAccountDetails,
-						com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV06.mmAccountsDetails, com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV07.mmAccountsDetails,
-						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV07.mmAccountDetails);
+				messageElement_lazy = () -> Arrays.asList(AccountIdentification29Choice.mmForAllAccounts, AccountIdentification29Choice.mmAccountsList);
+				messageBuildingBlock_lazy = () -> Arrays.asList(CorporateActionMovementPreliminaryAdviceCancellationAdviceV06.mmAccountDetails, CorporateActionCancellationAdviceV06.mmAccountsDetails,
+						CorporateActionCancellationAdviceV07.mmAccountsDetails, CorporateActionMovementPreliminaryAdviceCancellationAdviceV07.mmAccountDetails);
 				trace_lazy = () -> AccountIdentification.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AccountIdentification29Choice";
 				definition = "Choice between all accounts (GENR - General in ISO 15022) or one or more selected accounts.";
 				previousVersion_lazy = () -> AccountIdentification13Choice.mmObject();

@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.InterestRejectionReasonCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -86,7 +88,7 @@ public class InterestRejectionReason1Code extends InterestRejectionReasonCode {
 	 */
 	public static final MMCode mmValueDate = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValueDate";
 			owner_lazy = () -> InterestRejectionReason1Code.mmObject();
 		}
@@ -109,7 +111,7 @@ public class InterestRejectionReason1Code extends InterestRejectionReasonCode {
 	 */
 	public static final MMCode mmDisputeAmount = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DisputeAmount";
 			owner_lazy = () -> InterestRejectionReason1Code.mmObject();
 		}
@@ -118,12 +120,12 @@ public class InterestRejectionReason1Code extends InterestRejectionReasonCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("VADA");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InterestRejectionReason1Code";
 				definition = "Indicates whether the interest request is rejected due a value date or an interest amount difference.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.InterestRejectionReason1Code.mmValueDate, com.tools20022.repository.codeset.InterestRejectionReason1Code.mmDisputeAmount);
+				code_lazy = () -> Arrays.asList(InterestRejectionReason1Code.mmValueDate, InterestRejectionReason1Code.mmDisputeAmount);
 				trace_lazy = () -> InterestRejectionReasonCode.mmObject();
 			}
 		});

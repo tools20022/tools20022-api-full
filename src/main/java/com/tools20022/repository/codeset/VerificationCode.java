@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.Verification1Code
+ * Verification1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -45,13 +54,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * VerificationCode.mmMissing}</li>
  * <li>{@linkplain com.tools20022.repository.codeset.VerificationCode#mmFailed
  * VerificationCode.mmFailed}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.Verification1Code
- * Verification1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -96,7 +98,7 @@ public class VerificationCode {
 	 */
 	public static final MMCode mmTechnicalError = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TechnicalError";
 			definition = "Device or entity to perform the verification was unavailable.";
 			owner_lazy = () -> VerificationCode.mmObject();
@@ -126,7 +128,7 @@ public class VerificationCode {
 	 */
 	public static final MMCode mmSuccessful = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Successful";
 			definition = "Verification was successful.";
 			owner_lazy = () -> VerificationCode.mmObject();
@@ -156,7 +158,7 @@ public class VerificationCode {
 	 */
 	public static final MMCode mmPartialMatch = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartialMatch";
 			definition = "Verification was partially successful.";
 			owner_lazy = () -> VerificationCode.mmObject();
@@ -186,7 +188,7 @@ public class VerificationCode {
 	 */
 	public static final MMCode mmNotPerformed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotPerformed";
 			definition = "Verification has not been performed.";
 			owner_lazy = () -> VerificationCode.mmObject();
@@ -217,7 +219,7 @@ public class VerificationCode {
 	 */
 	public static final MMCode mmMissing = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Missing";
 			definition = "Information required to perform the verification was missing.";
 			owner_lazy = () -> VerificationCode.mmObject();
@@ -247,7 +249,7 @@ public class VerificationCode {
 	 */
 	public static final MMCode mmFailed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Failed";
 			definition = "Verification failed.";
 			owner_lazy = () -> VerificationCode.mmObject();
@@ -258,13 +260,11 @@ public class VerificationCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "VerificationCode";
 				definition = "Result of a verification.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.VerificationCode.mmTechnicalError, com.tools20022.repository.codeset.VerificationCode.mmSuccessful,
-						com.tools20022.repository.codeset.VerificationCode.mmPartialMatch, com.tools20022.repository.codeset.VerificationCode.mmNotPerformed, com.tools20022.repository.codeset.VerificationCode.mmMissing,
-						com.tools20022.repository.codeset.VerificationCode.mmFailed);
+				code_lazy = () -> Arrays.asList(VerificationCode.mmTechnicalError, VerificationCode.mmSuccessful, VerificationCode.mmPartialMatch, VerificationCode.mmNotPerformed, VerificationCode.mmMissing, VerificationCode.mmFailed);
 				derivation_lazy = () -> Arrays.asList(Verification1Code.mmObject());
 			}
 		});

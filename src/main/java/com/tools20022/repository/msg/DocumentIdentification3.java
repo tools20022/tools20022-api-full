@@ -19,9 +19,13 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.tsmt.*;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.entity.Document;
+import com.tools20022.repository.entity.GenericIdentification;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -181,11 +185,11 @@ public class DocumentIdentification3 {
 	 */
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmIdentification;
+			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> DocumentIdentification3.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Identification of a set of data.";
 			maxOccurs = 1;
@@ -231,11 +235,11 @@ public class DocumentIdentification3 {
 	 */
 	public static final MMMessageAttribute mmVersion = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Document.mmDocumentVersion;
+			businessElementTrace_lazy = () -> Document.mmDocumentVersion;
 			componentContext_lazy = () -> DocumentIdentification3.mmObject();
 			isDerived = false;
 			xmlTag = "Vrsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Version";
 			definition = "Unambiguous identification of the version of a set of data. Example: Version 1.";
 			maxOccurs = 1;
@@ -247,25 +251,20 @@ public class DocumentIdentification3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DocumentIdentification3.mmIdentification, com.tools20022.repository.msg.DocumentIdentification3.mmVersion);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.AcknowledgementV03.mmEstablishedBaselineIdentification,
-						com.tools20022.repository.area.tsmt.AmendmentAcceptanceNotificationV03.mmEstablishedBaselineIdentification, com.tools20022.repository.area.tsmt.AmendmentRejectionNotificationV03.mmEstablishedBaselineIdentification,
-						com.tools20022.repository.area.tsmt.BaselineMatchReportV03.mmEstablishedBaselineIdentification, com.tools20022.repository.area.tsmt.DataSetMatchReportV03.mmEstablishedBaselineIdentification,
-						com.tools20022.repository.area.tsmt.DeltaReportV03.mmEstablishedBaselineIdentification, com.tools20022.repository.area.tsmt.ErrorReportV03.mmEstablishedBaselineIdentification,
-						com.tools20022.repository.area.tsmt.FullPushThroughReportV03.mmEstablishedBaselineIdentification, com.tools20022.repository.area.tsmt.MisMatchAcceptanceNotificationV03.mmEstablishedBaselineIdentification,
-						com.tools20022.repository.area.tsmt.MisMatchRejectionNotificationV03.mmEstablishedBaselineIdentification, com.tools20022.repository.area.tsmt.ActionReminderV03.mmEstablishedBaselineIdentification,
-						com.tools20022.repository.area.tsmt.StatusChangeNotificationV03.mmEstablishedBaselineIdentification, com.tools20022.repository.area.tsmt.StatusChangeRequestNotificationV03.mmEstablishedBaselineIdentification,
-						com.tools20022.repository.area.tsmt.StatusChangeRequestRejectionNotificationV03.mmEstablishedBaselineIdentification,
-						com.tools20022.repository.area.tsmt.StatusExtensionNotificationV03.mmEstablishedBaselineIdentification,
-						com.tools20022.repository.area.tsmt.StatusExtensionRejectionNotificationV03.mmEstablishedBaselineIdentification,
-						com.tools20022.repository.area.tsmt.StatusExtensionRequestNotificationV03.mmEstablishedBaselineIdentification, com.tools20022.repository.area.tsmt.TimeOutNotificationV03.mmEstablishedBaselineIdentification,
-						com.tools20022.repository.area.tsmt.ForwardIntentToPayNotificationV01.mmEstablishedBaselineIdentification, com.tools20022.repository.area.tsmt.SpecialNotificationV01.mmEstablishedBaselineIdentification,
-						com.tools20022.repository.area.tsmt.RoleAndBaselineAcceptanceNotificationV01.mmEstablishedBaselineIdentification,
-						com.tools20022.repository.area.tsmt.RoleAndBaselineRejectionNotificationV01.mmEstablishedBaselineIdentification, com.tools20022.repository.area.tsmt.FullPushThroughReportV04.mmEstablishedBaselineIdentification,
-						com.tools20022.repository.area.tsmt.ForwardIntentToPayNotificationV02.mmEstablishedBaselineIdentification, com.tools20022.repository.area.tsmt.FullPushThroughReportV05.mmEstablishedBaselineIdentification);
+				messageElement_lazy = () -> Arrays.asList(DocumentIdentification3.mmIdentification, DocumentIdentification3.mmVersion);
+				messageBuildingBlock_lazy = () -> Arrays.asList(AcknowledgementV03.mmEstablishedBaselineIdentification, AmendmentAcceptanceNotificationV03.mmEstablishedBaselineIdentification,
+						AmendmentRejectionNotificationV03.mmEstablishedBaselineIdentification, BaselineMatchReportV03.mmEstablishedBaselineIdentification, DataSetMatchReportV03.mmEstablishedBaselineIdentification,
+						DeltaReportV03.mmEstablishedBaselineIdentification, ErrorReportV03.mmEstablishedBaselineIdentification, FullPushThroughReportV03.mmEstablishedBaselineIdentification,
+						MisMatchAcceptanceNotificationV03.mmEstablishedBaselineIdentification, MisMatchRejectionNotificationV03.mmEstablishedBaselineIdentification, ActionReminderV03.mmEstablishedBaselineIdentification,
+						StatusChangeNotificationV03.mmEstablishedBaselineIdentification, StatusChangeRequestNotificationV03.mmEstablishedBaselineIdentification,
+						StatusChangeRequestRejectionNotificationV03.mmEstablishedBaselineIdentification, StatusExtensionNotificationV03.mmEstablishedBaselineIdentification,
+						StatusExtensionRejectionNotificationV03.mmEstablishedBaselineIdentification, StatusExtensionRequestNotificationV03.mmEstablishedBaselineIdentification, TimeOutNotificationV03.mmEstablishedBaselineIdentification,
+						ForwardIntentToPayNotificationV01.mmEstablishedBaselineIdentification, SpecialNotificationV01.mmEstablishedBaselineIdentification, RoleAndBaselineAcceptanceNotificationV01.mmEstablishedBaselineIdentification,
+						RoleAndBaselineRejectionNotificationV01.mmEstablishedBaselineIdentification, FullPushThroughReportV04.mmEstablishedBaselineIdentification, ForwardIntentToPayNotificationV02.mmEstablishedBaselineIdentification,
+						FullPushThroughReportV05.mmEstablishedBaselineIdentification);
 				trace_lazy = () -> Document.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DocumentIdentification3";
 				definition = "Identifies a document by a unique identification and a version.";
 			}

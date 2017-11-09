@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.OrganisationType1Code
+ * OrganisationType1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -41,13 +50,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.OrganisationTypeCode#mmPublicFund
  * OrganisationTypeCode.mmPublicFund}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.OrganisationType1Code
- * OrganisationType1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -91,7 +93,7 @@ public class OrganisationTypeCode {
 	 */
 	public static final MMCode mmPublic = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Public";
 			definition = "Organisation is a public company.";
 			owner_lazy = () -> OrganisationTypeCode.mmObject();
@@ -121,7 +123,7 @@ public class OrganisationTypeCode {
 	 */
 	public static final MMCode mmPrivateAssociation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PrivateAssociation";
 			definition = "Organisation is a private association.";
 			owner_lazy = () -> OrganisationTypeCode.mmObject();
@@ -151,7 +153,7 @@ public class OrganisationTypeCode {
 	 */
 	public static final MMCode mmInvestmentFund = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestmentFund";
 			definition = "Organisation is an investment fund.";
 			owner_lazy = () -> OrganisationTypeCode.mmObject();
@@ -181,7 +183,7 @@ public class OrganisationTypeCode {
 	 */
 	public static final MMCode mmPublicFund = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PublicFund";
 			definition = "Organisation is a public fund.";
 			owner_lazy = () -> OrganisationTypeCode.mmObject();
@@ -192,12 +194,11 @@ public class OrganisationTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OrganisationTypeCode";
 				definition = "Specifies a type of organisation.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OrganisationTypeCode.mmPublic, com.tools20022.repository.codeset.OrganisationTypeCode.mmPrivateAssociation,
-						com.tools20022.repository.codeset.OrganisationTypeCode.mmInvestmentFund, com.tools20022.repository.codeset.OrganisationTypeCode.mmPublicFund);
+				code_lazy = () -> Arrays.asList(OrganisationTypeCode.mmPublic, OrganisationTypeCode.mmPrivateAssociation, OrganisationTypeCode.mmInvestmentFund, OrganisationTypeCode.mmPublicFund);
 				derivation_lazy = () -> Arrays.asList(OrganisationType1Code.mmObject());
 			}
 		});

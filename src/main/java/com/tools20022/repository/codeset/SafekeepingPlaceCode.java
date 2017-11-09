@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.SafekeepingPlace3Code
+ * SafekeepingPlace3Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.SafekeepingPlace1Code
+ * SafekeepingPlace1Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.SafekeepingPlace2Code
+ * SafekeepingPlace2Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -44,17 +57,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.SafekeepingPlaceCode#mmAllPlaces
  * SafekeepingPlaceCode.mmAllPlaces}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.SafekeepingPlace3Code
- * SafekeepingPlace3Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.SafekeepingPlace1Code
- * SafekeepingPlace1Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.SafekeepingPlace2Code
- * SafekeepingPlace2Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -104,7 +106,7 @@ public class SafekeepingPlaceCode {
 	 */
 	public static final MMCode mmSharesHeldAtLocalCustodian = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SharesHeldAtLocalCustodian";
 			definition = "Financial instruments held at a local custodian.";
 			owner_lazy = () -> SafekeepingPlaceCode.mmObject();
@@ -137,7 +139,7 @@ public class SafekeepingPlaceCode {
 	 */
 	public static final MMCode mmSharesHeldAtICSD = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SharesHeldAtICSD";
 			definition = "Financial instruments held at an International Central Securities Depository.";
 			owner_lazy = () -> SafekeepingPlaceCode.mmObject();
@@ -169,7 +171,7 @@ public class SafekeepingPlaceCode {
 	 */
 	public static final MMCode mmSharesHeldAtNCSD = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SharesHeldAtNCSD";
 			definition = "Financial instruments held at a National Central Securities Depository.";
 			owner_lazy = () -> SafekeepingPlaceCode.mmObject();
@@ -203,7 +205,7 @@ public class SafekeepingPlaceCode {
 	 */
 	public static final MMCode mmSharesHeldElsewhere = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SharesHeldElsewhere";
 			definition = "Used for certain financial instruments, for example, US mutual funds, where settlement is internal only, that is, there is no external movement of securities.";
 			owner_lazy = () -> SafekeepingPlaceCode.mmObject();
@@ -234,7 +236,7 @@ public class SafekeepingPlaceCode {
 	 */
 	public static final MMCode mmAllPlaces = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AllPlaces";
 			definition = "All places of safekeeping where the financial instrument is held.";
 			owner_lazy = () -> SafekeepingPlaceCode.mmObject();
@@ -245,14 +247,13 @@ public class SafekeepingPlaceCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CUST");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SafekeepingPlaceCode";
 				definition = "Specifies the type of place of safekeeping.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SafekeepingPlaceCode.mmSharesHeldAtLocalCustodian, com.tools20022.repository.codeset.SafekeepingPlaceCode.mmSharesHeldAtICSD,
-						com.tools20022.repository.codeset.SafekeepingPlaceCode.mmSharesHeldAtNCSD, com.tools20022.repository.codeset.SafekeepingPlaceCode.mmSharesHeldElsewhere,
-						com.tools20022.repository.codeset.SafekeepingPlaceCode.mmAllPlaces);
+				code_lazy = () -> Arrays.asList(SafekeepingPlaceCode.mmSharesHeldAtLocalCustodian, SafekeepingPlaceCode.mmSharesHeldAtICSD, SafekeepingPlaceCode.mmSharesHeldAtNCSD, SafekeepingPlaceCode.mmSharesHeldElsewhere,
+						SafekeepingPlaceCode.mmAllPlaces);
 				derivation_lazy = () -> Arrays.asList(SafekeepingPlace3Code.mmObject(), SafekeepingPlace1Code.mmObject(), SafekeepingPlace2Code.mmObject());
 			}
 		});

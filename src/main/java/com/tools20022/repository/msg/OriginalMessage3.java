@@ -20,11 +20,15 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.Party28Choice;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.InitiatingPartyRole;
 import com.tools20022.repository.entity.Payment;
+import com.tools20022.repository.entity.PaymentExecution;
+import com.tools20022.repository.entity.PaymentIdentification;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -118,10 +122,10 @@ public class OriginalMessage3 {
 			componentContext_lazy = () -> OriginalMessage3.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlSndr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalSender";
 			definition = "Original message sender used to identify the message. ";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.OriginalMessage2.mmOriginalSender;
+			previousVersion_lazy = () -> OriginalMessage2.mmOriginalSender;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -171,14 +175,14 @@ public class OriginalMessage3 {
 	 */
 	public static final MMMessageAttribute mmOriginalMessageIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentIdentification.mmExecutionIdentification;
+			businessElementTrace_lazy = () -> PaymentIdentification.mmExecutionIdentification;
 			componentContext_lazy = () -> OriginalMessage3.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlMsgId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalMessageIdentification";
 			definition = "Point to point reference assigned by the original instructing party to unambiguously identify the original group of individual transactions.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.OriginalMessage2.mmOriginalMessageIdentification;
+			previousVersion_lazy = () -> OriginalMessage2.mmOriginalMessageIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -225,10 +229,10 @@ public class OriginalMessage3 {
 			componentContext_lazy = () -> OriginalMessage3.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlMsgNmId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalMessageNameIdentification";
 			definition = "Specifies the original message name identifier to which the message refers, such as pacs.003.001.01 or MT103.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.OriginalMessage2.mmOriginalMessageNameIdentification;
+			previousVersion_lazy = () -> OriginalMessage2.mmOriginalMessageNameIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -274,14 +278,14 @@ public class OriginalMessage3 {
 	 */
 	public static final MMMessageAttribute mmOriginalCreationDateTime = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentExecution.mmCreationDate;
+			businessElementTrace_lazy = () -> PaymentExecution.mmCreationDate;
 			componentContext_lazy = () -> OriginalMessage3.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlCreDtTm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalCreationDateTime";
 			definition = "Original date and time at which the message was created.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.OriginalMessage2.mmOriginalCreationDateTime;
+			previousVersion_lazy = () -> OriginalMessage2.mmOriginalCreationDateTime;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
@@ -291,11 +295,11 @@ public class OriginalMessage3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OriginalMessage3.mmOriginalSender, com.tools20022.repository.msg.OriginalMessage3.mmOriginalMessageIdentification,
-						com.tools20022.repository.msg.OriginalMessage3.mmOriginalMessageNameIdentification, com.tools20022.repository.msg.OriginalMessage3.mmOriginalCreationDateTime);
+				messageElement_lazy = () -> Arrays.asList(OriginalMessage3.mmOriginalSender, OriginalMessage3.mmOriginalMessageIdentification, OriginalMessage3.mmOriginalMessageNameIdentification,
+						OriginalMessage3.mmOriginalCreationDateTime);
 				trace_lazy = () -> Payment.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OriginalMessage3";
 				definition = "Unique and unambiguous identification of the original message references.";
 				previousVersion_lazy = () -> OriginalMessage2.mmObject();

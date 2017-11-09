@@ -19,7 +19,9 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.Transport;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -114,10 +116,10 @@ public class TransportMeans1 {
 			componentContext_lazy = () -> TransportMeans1.mmObject();
 			isDerived = false;
 			xmlTag = "IndvTrnsprt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IndividualTransport";
 			definition = "Moving of goods or people from one place to another by vehicle.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransportMeans5.mmIndividualTransport);
+			nextVersions_lazy = () -> Arrays.asList(TransportMeans5.mmIndividualTransport);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -172,10 +174,10 @@ public class TransportMeans1 {
 			componentContext_lazy = () -> TransportMeans1.mmObject();
 			isDerived = false;
 			xmlTag = "MltmdlTrnsprt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MultimodalTransport";
 			definition = "Specifies the different movements and places and their role in a multimodal conveyance of goods.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransportMeans5.mmMultimodalTransport);
+			nextVersions_lazy = () -> Arrays.asList(TransportMeans5.mmMultimodalTransport);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -186,10 +188,10 @@ public class TransportMeans1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransportMeans1.mmIndividualTransport, com.tools20022.repository.msg.TransportMeans1.mmMultimodalTransport);
+				messageElement_lazy = () -> Arrays.asList(TransportMeans1.mmIndividualTransport, TransportMeans1.mmMultimodalTransport);
 				trace_lazy = () -> Transport.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TransportMeans1";
 				definition = "Describes the multimodal or the individual transport of goods.";
 				nextVersions_lazy = () -> Arrays.asList(TransportMeans5.mmObject());

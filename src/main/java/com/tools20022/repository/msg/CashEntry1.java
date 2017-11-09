@@ -19,13 +19,17 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.DateAndDateTimeChoice;
 import com.tools20022.repository.codeset.EntryStatus1Code;
 import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
 import com.tools20022.repository.datatype.Max140Text;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.Number;
+import com.tools20022.repository.entity.AccountStatus;
 import com.tools20022.repository.entity.CashEntry;
+import com.tools20022.repository.entity.Entry;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -116,11 +120,11 @@ public class CashEntry1 {
 	 */
 	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashEntry.mmAmount;
+			businessElementTrace_lazy = () -> CashEntry.mmAmount;
 			componentContext_lazy = () -> CashEntry1.mmObject();
 			isDerived = false;
 			xmlTag = "Amt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Amount of money in the cash entry.";
 			maxOccurs = 1;
@@ -166,11 +170,11 @@ public class CashEntry1 {
 	 */
 	public static final MMMessageAttribute mmDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Entry.mmEntryDate;
+			businessElementTrace_lazy = () -> Entry.mmEntryDate;
 			componentContext_lazy = () -> CashEntry1.mmObject();
 			isDerived = false;
 			xmlTag = "Dt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Date";
 			definition = "Date at which an entry is posted to an account on the account servicer's books.";
 			maxOccurs = 1;
@@ -213,11 +217,11 @@ public class CashEntry1 {
 	 */
 	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AccountStatus.mmEntryStatus;
+			businessElementTrace_lazy = () -> AccountStatus.mmEntryStatus;
 			componentContext_lazy = () -> CashEntry1.mmObject();
 			isDerived = false;
 			xmlTag = "Sts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Status";
 			definition = "Status of an entry on the books of the account servicer.";
 			maxOccurs = 1;
@@ -262,11 +266,11 @@ public class CashEntry1 {
 	 */
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Entry.mmIdentification;
+			businessElementTrace_lazy = () -> Entry.mmIdentification;
 			componentContext_lazy = () -> CashEntry1.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Unique and unambiguous identifier for an entry, as assigned by the account servicer. ";
 			maxOccurs = 1;
@@ -309,7 +313,7 @@ public class CashEntry1 {
 			componentContext_lazy = () -> CashEntry1.mmObject();
 			isDerived = false;
 			xmlTag = "StmtId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatementIdentification";
 			definition = "Unique identification, as assigned by the account servicer, to unambiguously identify the account statement.";
 			maxOccurs = 1;
@@ -353,7 +357,7 @@ public class CashEntry1 {
 			componentContext_lazy = () -> CashEntry1.mmObject();
 			isDerived = false;
 			xmlTag = "AcctSvcrRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountServicerReference";
 			definition = "Sequential number of the statement, as assigned by the account servicer.\nUsage: The sequential number is increased incrementally for each statement sent electronically.";
 			maxOccurs = 1;
@@ -393,7 +397,7 @@ public class CashEntry1 {
 			componentContext_lazy = () -> CashEntry1.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlNtryInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalEntryInformation";
 			definition = "Further details of the entry.";
 			minOccurs = 0;
@@ -404,12 +408,11 @@ public class CashEntry1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashEntry1.mmAmount, com.tools20022.repository.msg.CashEntry1.mmDate, com.tools20022.repository.msg.CashEntry1.mmStatus,
-						com.tools20022.repository.msg.CashEntry1.mmIdentification, com.tools20022.repository.msg.CashEntry1.mmStatementIdentification, com.tools20022.repository.msg.CashEntry1.mmAccountServicerReference,
-						com.tools20022.repository.msg.CashEntry1.mmAdditionalEntryInformation);
+				messageElement_lazy = () -> Arrays.asList(CashEntry1.mmAmount, CashEntry1.mmDate, CashEntry1.mmStatus, CashEntry1.mmIdentification, CashEntry1.mmStatementIdentification, CashEntry1.mmAccountServicerReference,
+						CashEntry1.mmAdditionalEntryInformation);
 				trace_lazy = () -> CashEntry.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CashEntry1";
 				definition = "Posting of an item to a cash account, in the context of a cash transaction, that results in an increase or decrease to the balance of the account. ";
 			}

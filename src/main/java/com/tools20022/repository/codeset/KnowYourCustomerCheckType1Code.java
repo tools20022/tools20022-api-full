@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.KnowYourCustomerCheckTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -83,7 +85,7 @@ public class KnowYourCustomerCheckType1Code extends KnowYourCustomerCheckTypeCod
 	 */
 	public static final MMCode mmEnhanced = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Enhanced";
 			owner_lazy = () -> KnowYourCustomerCheckType1Code.mmObject();
 		}
@@ -106,7 +108,7 @@ public class KnowYourCustomerCheckType1Code extends KnowYourCustomerCheckTypeCod
 	 */
 	public static final MMCode mmOrdinary = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Ordinary";
 			owner_lazy = () -> KnowYourCustomerCheckType1Code.mmObject();
 		}
@@ -129,7 +131,7 @@ public class KnowYourCustomerCheckType1Code extends KnowYourCustomerCheckTypeCod
 	 */
 	public static final MMCode mmSimple = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Simple";
 			owner_lazy = () -> KnowYourCustomerCheckType1Code.mmObject();
 		}
@@ -138,12 +140,11 @@ public class KnowYourCustomerCheckType1Code extends KnowYourCustomerCheckTypeCod
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "KnowYourCustomerCheckType1Code";
 				definition = "Specifies the type of Know Your Customer (KYC) or anti-money laundering due diligence to which the investor has been subjected.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.KnowYourCustomerCheckType1Code.mmEnhanced, com.tools20022.repository.codeset.KnowYourCustomerCheckType1Code.mmOrdinary,
-						com.tools20022.repository.codeset.KnowYourCustomerCheckType1Code.mmSimple);
+				code_lazy = () -> Arrays.asList(KnowYourCustomerCheckType1Code.mmEnhanced, KnowYourCustomerCheckType1Code.mmOrdinary, KnowYourCustomerCheckType1Code.mmSimple);
 				trace_lazy = () -> KnowYourCustomerCheckTypeCode.mmObject();
 			}
 		});

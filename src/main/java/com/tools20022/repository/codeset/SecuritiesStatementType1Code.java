@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.SecuritiesStatementTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -84,7 +86,7 @@ public class SecuritiesStatementType1Code extends SecuritiesStatementTypeCode {
 	 */
 	public static final MMCode mmCustody = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Custody";
 			owner_lazy = () -> SecuritiesStatementType1Code.mmObject();
 		}
@@ -107,7 +109,7 @@ public class SecuritiesStatementType1Code extends SecuritiesStatementTypeCode {
 	 */
 	public static final MMCode mmAccounting = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Accounting";
 			owner_lazy = () -> SecuritiesStatementType1Code.mmObject();
 		}
@@ -116,12 +118,12 @@ public class SecuritiesStatementType1Code extends SecuritiesStatementTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CUST");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesStatementType1Code";
 				definition = "Specifies whether the statement is an accounting or a custody statement.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SecuritiesStatementType1Code.mmCustody, com.tools20022.repository.codeset.SecuritiesStatementType1Code.mmAccounting);
+				code_lazy = () -> Arrays.asList(SecuritiesStatementType1Code.mmCustody, SecuritiesStatementType1Code.mmAccounting);
 				trace_lazy = () -> SecuritiesStatementTypeCode.mmObject();
 			}
 		});

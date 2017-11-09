@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.InformationTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -83,7 +85,7 @@ public class InformationType1Code extends InformationTypeCode {
 	 */
 	public static final MMCode mmProcessingInstructions = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProcessingInstructions";
 			owner_lazy = () -> InformationType1Code.mmObject();
 		}
@@ -106,7 +108,7 @@ public class InformationType1Code extends InformationTypeCode {
 	 */
 	public static final MMCode mmRelayInstructions = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelayInstructions";
 			owner_lazy = () -> InformationType1Code.mmObject();
 		}
@@ -115,12 +117,12 @@ public class InformationType1Code extends InformationTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("INST");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InformationType1Code";
 				definition = "Specifies the coded type of additional information provided.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.InformationType1Code.mmProcessingInstructions, com.tools20022.repository.codeset.InformationType1Code.mmRelayInstructions);
+				code_lazy = () -> Arrays.asList(InformationType1Code.mmProcessingInstructions, InformationType1Code.mmRelayInstructions);
 				trace_lazy = () -> InformationTypeCode.mmObject();
 			}
 		});

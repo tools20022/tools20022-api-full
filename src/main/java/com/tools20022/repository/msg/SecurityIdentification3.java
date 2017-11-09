@@ -19,8 +19,14 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.seev.MeetingInstructionCancellationRequestV02;
+import com.tools20022.repository.area.seev.MeetingInstructionStatusV02;
+import com.tools20022.repository.area.seev.MeetingInstructionV02;
+import com.tools20022.repository.area.seev.MeetingVoteExecutionConfirmationV02;
 import com.tools20022.repository.datatype.*;
 import com.tools20022.repository.entity.SecuritiesIdentification;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -136,11 +142,11 @@ public class SecurityIdentification3 {
 	 */
 	public static final MMMessageAttribute mmISIN = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesIdentification.mmSecurityIdentification;
+			businessElementTrace_lazy = () -> SecuritiesIdentification.mmSecurityIdentification;
 			componentContext_lazy = () -> SecurityIdentification3.mmObject();
 			isDerived = false;
 			xmlTag = "ISIN";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ISIN";
 			definition = "International Securities Identification Number (ISIN).  A numbering system designed by the United Nation's International Organisation for Standardisation (ISO). The ISIN is composed of a 2-character prefix representing the country of issue, followed by the national security number (if one exists), and a check digit. Each country has a national numbering agency that assigns ISIN numbers for securities in that country.";
 			maxOccurs = 1;
@@ -188,11 +194,11 @@ public class SecurityIdentification3 {
 	 */
 	public static final MMMessageAttribute mmTickerSymbol = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesIdentification.mmTickerSymbol;
+			businessElementTrace_lazy = () -> SecuritiesIdentification.mmTickerSymbol;
 			componentContext_lazy = () -> SecurityIdentification3.mmObject();
 			isDerived = false;
 			xmlTag = "TckrSymb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TickerSymbol";
 			definition = "Letters that identify a stock traded on a stock exchange. The Ticker Symbol is a short and convenient way of identifying a stock, eg, RTR.L for Reuters quoted in London.";
 			maxOccurs = 1;
@@ -242,11 +248,11 @@ public class SecurityIdentification3 {
 	 */
 	public static final MMMessageAttribute mmCUSIP = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesIdentification.mmCUSIP;
+			businessElementTrace_lazy = () -> SecuritiesIdentification.mmCUSIP;
 			componentContext_lazy = () -> SecurityIdentification3.mmObject();
 			isDerived = false;
 			xmlTag = "CUSIP";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CUSIP";
 			definition = "Committee on Uniform Securities and Identification Procedures (CUSIP). The standards body that created and maintains the securities classification system in the US. The CUSIP is composed of a 9-character number that uniquely identifies a particular security.  Non-US securities have a similar number called the CINS number.";
 			maxOccurs = 1;
@@ -294,11 +300,11 @@ public class SecurityIdentification3 {
 	 */
 	public static final MMMessageAttribute mmSEDOL = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesIdentification.mmSEDOL;
+			businessElementTrace_lazy = () -> SecuritiesIdentification.mmSEDOL;
 			componentContext_lazy = () -> SecurityIdentification3.mmObject();
 			isDerived = false;
 			xmlTag = "SEDOL";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SEDOL";
 			definition = "Stock Exchange Daily Official List (SEDOL) number.  A code used by the London Stock Exchange to identify foreign stocks, especially those that aren't actively traded in the US and don't have a CUSIP number.";
 			maxOccurs = 1;
@@ -345,11 +351,11 @@ public class SecurityIdentification3 {
 	 */
 	public static final MMMessageAttribute mmQUICK = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesIdentification.mmQUICK;
+			businessElementTrace_lazy = () -> SecuritiesIdentification.mmQUICK;
 			componentContext_lazy = () -> SecurityIdentification3.mmObject();
 			isDerived = false;
 			xmlTag = "QUICK";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QUICK";
 			definition = "Identifier of a security assigned by the Japanese QUICK identification scheme for financial instruments.";
 			maxOccurs = 1;
@@ -400,7 +406,7 @@ public class SecurityIdentification3 {
 			componentContext_lazy = () -> SecurityIdentification3.mmObject();
 			isDerived = false;
 			xmlTag = "OthrId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherIdentification";
 			definition = "Proprietary identification of a security assigned by an institution or organisation.";
 			maxOccurs = 1;
@@ -412,15 +418,13 @@ public class SecurityIdentification3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecurityIdentification3.mmISIN, com.tools20022.repository.msg.SecurityIdentification3.mmTickerSymbol,
-						com.tools20022.repository.msg.SecurityIdentification3.mmCUSIP, com.tools20022.repository.msg.SecurityIdentification3.mmSEDOL, com.tools20022.repository.msg.SecurityIdentification3.mmQUICK,
-						com.tools20022.repository.msg.SecurityIdentification3.mmOtherIdentification);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.MeetingInstructionV02.mmSecurityIdentification,
-						com.tools20022.repository.area.seev.MeetingInstructionCancellationRequestV02.mmSecurityIdentification, com.tools20022.repository.area.seev.MeetingInstructionStatusV02.mmSecurityIdentification,
-						com.tools20022.repository.area.seev.MeetingVoteExecutionConfirmationV02.mmSecurityIdentification);
+				messageElement_lazy = () -> Arrays.asList(SecurityIdentification3.mmISIN, SecurityIdentification3.mmTickerSymbol, SecurityIdentification3.mmCUSIP, SecurityIdentification3.mmSEDOL, SecurityIdentification3.mmQUICK,
+						SecurityIdentification3.mmOtherIdentification);
+				messageBuildingBlock_lazy = () -> Arrays.asList(MeetingInstructionV02.mmSecurityIdentification, MeetingInstructionCancellationRequestV02.mmSecurityIdentification, MeetingInstructionStatusV02.mmSecurityIdentification,
+						MeetingVoteExecutionConfirmationV02.mmSecurityIdentification);
 				trace_lazy = () -> SecuritiesIdentification.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecurityIdentification3";
 				definition = "Identification of a security by its symbol.";
 			}

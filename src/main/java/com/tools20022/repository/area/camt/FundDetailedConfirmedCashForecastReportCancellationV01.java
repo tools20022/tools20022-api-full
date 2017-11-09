@@ -20,6 +20,7 @@ package com.tools20022.repository.area.camt;
 import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.CashManagementArchive;
 import com.tools20022.repository.msg.AdditionalReference3;
 import com.tools20022.repository.msg.FundDetailedConfirmedCashForecastReport1;
@@ -46,6 +47,9 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code camt.045.001.01}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.CashManagementArchive
@@ -81,9 +85,6 @@ import java.util.List;
  * mmCashForecastReportToBeCancelled}</li>
  * </ul>
  * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code camt.045.001.01}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -134,7 +135,7 @@ public class FundDetailedConfirmedCashForecastReportCancellationV01 {
 	public static final MMMessageBuildingBlock mmPoolReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "PoolRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PoolReference";
 			definition = "Collective reference identifying a set of messages.";
 			maxOccurs = 1;
@@ -169,7 +170,7 @@ public class FundDetailedConfirmedCashForecastReportCancellationV01 {
 	public static final MMMessageBuildingBlock mmPreviousReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "PrvsRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousReference";
 			definition = "Reference to a linked message that was previously sent.";
 			maxOccurs = 1;
@@ -205,7 +206,7 @@ public class FundDetailedConfirmedCashForecastReportCancellationV01 {
 	public static final MMMessageBuildingBlock mmRelatedReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "RltdRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedReference";
 			definition = "Reference to a linked message that was previously received.";
 			minOccurs = 0;
@@ -240,7 +241,7 @@ public class FundDetailedConfirmedCashForecastReportCancellationV01 {
 	public static final MMMessageBuildingBlock mmCashForecastReportToBeCancelled = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CshFcstRptToBeCanc";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashForecastReportToBeCancelled";
 			definition = "The FundDetailedConfirmedCashForecastReport to be cancelled.";
 			maxOccurs = 1;
@@ -252,7 +253,7 @@ public class FundDetailedConfirmedCashForecastReportCancellationV01 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FundDetailedConfirmedCashForecastReportCancellationV01";
 				definition = "Scope\r\nThe FundDetailedConfirmedCashForecastReportCancellation message is sent by a report provider, such as a transfer agent or a designated agent of the fund, to a report user, such as an investment manager, a fund accountant or any other interested party.\r\nThis message is used to cancel a previously sent FundDetailedConfirmedCashForecastReport message.\r\nUsage\r\nThe FundDetailedConfirmedCashForecastReportCancellation message is used to cancel an entire FundDetailedConfirmedCashForecastReport message that was previously sent by the report provider.\r\nThis message must contain the reference of the message to be cancelled. This message may also contain details of the message to be cancelled, but this is not recommended.";
 				nextVersions_lazy = () -> Arrays.asList(FundDetailedConfirmedCashForecastReportCancellationV02.mmObject());
@@ -261,10 +262,8 @@ public class FundDetailedConfirmedCashForecastReportCancellationV01 {
 				xmlTag = "camt.045.001.01";
 				businessArea_lazy = () -> CashManagementArchive.mmObject();
 				xmlName = "camt.045.001.01";
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.FundDetailedConfirmedCashForecastReportCancellationV01.mmPoolReference,
-						com.tools20022.repository.area.camt.FundDetailedConfirmedCashForecastReportCancellationV01.mmPreviousReference,
-						com.tools20022.repository.area.camt.FundDetailedConfirmedCashForecastReportCancellationV01.mmRelatedReference,
-						com.tools20022.repository.area.camt.FundDetailedConfirmedCashForecastReportCancellationV01.mmCashForecastReportToBeCancelled);
+				messageBuildingBlock_lazy = () -> Arrays.asList(FundDetailedConfirmedCashForecastReportCancellationV01.mmPoolReference, FundDetailedConfirmedCashForecastReportCancellationV01.mmPreviousReference,
+						FundDetailedConfirmedCashForecastReportCancellationV01.mmRelatedReference, FundDetailedConfirmedCashForecastReportCancellationV01.mmCashForecastReportToBeCancelled);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "camt";

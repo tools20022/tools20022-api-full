@@ -20,7 +20,9 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.PartyIdentification2Choice;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -119,10 +121,10 @@ public class BreakdownByParty1 {
 			componentContext_lazy = () -> BreakdownByParty1.mmObject();
 			isDerived = false;
 			xmlTag = "Pty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Party";
 			definition = "Party, eg, fund management company, for which the cash flow is being reported.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BreakdownByParty3.mmParty);
+			nextVersions_lazy = () -> Arrays.asList(BreakdownByParty3.mmParty);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> PartyIdentification2Choice.mmObject();
@@ -169,10 +171,10 @@ public class BreakdownByParty1 {
 			componentContext_lazy = () -> BreakdownByParty1.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlParams";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalParameters";
 			definition = "Additional parameter/s applied to the cash flow by party.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BreakdownByParty3.mmAdditionalParameters);
+			nextVersions_lazy = () -> Arrays.asList(BreakdownByParty3.mmAdditionalParameters);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -222,10 +224,10 @@ public class BreakdownByParty1 {
 			componentContext_lazy = () -> BreakdownByParty1.mmObject();
 			isDerived = false;
 			xmlTag = "CshInFcst";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashInForecast";
 			definition = "Cash movement into the fund as a result of investment funds transactions, eg, subscriptions or switch-in.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BreakdownByParty3.mmCashInForecast);
+			nextVersions_lazy = () -> Arrays.asList(BreakdownByParty3.mmCashInForecast);
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.CashInForecast3.mmObject();
@@ -274,10 +276,10 @@ public class BreakdownByParty1 {
 			componentContext_lazy = () -> BreakdownByParty1.mmObject();
 			isDerived = false;
 			xmlTag = "CshOutFcst";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashOutForecast";
 			definition = "Cash movement out of the fund as a result of investment funds transactions, eg, redemptions or switch-out.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BreakdownByParty3.mmCashOutForecast);
+			nextVersions_lazy = () -> Arrays.asList(BreakdownByParty3.mmCashOutForecast);
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.CashOutForecast3.mmObject();
@@ -326,10 +328,10 @@ public class BreakdownByParty1 {
 			componentContext_lazy = () -> BreakdownByParty1.mmObject();
 			isDerived = false;
 			xmlTag = "NetCshFcst";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetCashForecast";
 			definition = "Net cash as a result of the cash-in and cash-out flows specified for the party.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BreakdownByParty3.mmNetCashForecast);
+			nextVersions_lazy = () -> Arrays.asList(BreakdownByParty3.mmNetCashForecast);
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.NetCashForecast2.mmObject();
@@ -339,10 +341,9 @@ public class BreakdownByParty1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BreakdownByParty1.mmParty, com.tools20022.repository.msg.BreakdownByParty1.mmAdditionalParameters,
-						com.tools20022.repository.msg.BreakdownByParty1.mmCashInForecast, com.tools20022.repository.msg.BreakdownByParty1.mmCashOutForecast, com.tools20022.repository.msg.BreakdownByParty1.mmNetCashForecast);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(BreakdownByParty1.mmParty, BreakdownByParty1.mmAdditionalParameters, BreakdownByParty1.mmCashInForecast, BreakdownByParty1.mmCashOutForecast, BreakdownByParty1.mmNetCashForecast);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "BreakdownByParty1";
 				definition = "Specifies the cash-in and cash-out flows by party.";
 				nextVersions_lazy = () -> Arrays.asList(BreakdownByParty3.mmObject());

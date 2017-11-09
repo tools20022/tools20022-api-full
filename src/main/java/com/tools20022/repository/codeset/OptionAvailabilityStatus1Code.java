@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.OptionAvailabilityStatusCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -83,7 +85,7 @@ public class OptionAvailabilityStatus1Code extends OptionAvailabilityStatusCode 
 	 */
 	public static final MMCode mmInactive = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Inactive";
 			owner_lazy = () -> OptionAvailabilityStatus1Code.mmObject();
 		}
@@ -106,7 +108,7 @@ public class OptionAvailabilityStatus1Code extends OptionAvailabilityStatusCode 
 	 */
 	public static final MMCode mmCancelled = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cancelled";
 			owner_lazy = () -> OptionAvailabilityStatus1Code.mmObject();
 		}
@@ -115,12 +117,12 @@ public class OptionAvailabilityStatus1Code extends OptionAvailabilityStatusCode 
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("INTV");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OptionAvailabilityStatus1Code";
 				definition = "Specifies the status of the option availability.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OptionAvailabilityStatus1Code.mmInactive, com.tools20022.repository.codeset.OptionAvailabilityStatus1Code.mmCancelled);
+				code_lazy = () -> Arrays.asList(OptionAvailabilityStatus1Code.mmInactive, OptionAvailabilityStatus1Code.mmCancelled);
 				trace_lazy = () -> OptionAvailabilityStatusCode.mmObject();
 			}
 		});

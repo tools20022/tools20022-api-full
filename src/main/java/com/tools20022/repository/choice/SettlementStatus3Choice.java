@@ -20,8 +20,10 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.SecuritiesSettlementStatus1Code;
 import com.tools20022.repository.entity.Status;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification25;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -102,11 +104,11 @@ public class SettlementStatus3Choice {
 	 */
 	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.mmSettlementStatus;
+			businessElementTrace_lazy = () -> Status.mmSettlementStatus;
 			componentContext_lazy = () -> SettlementStatus3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Cd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Provides the status of settlement of an instruction/financial instrument movement.";
 			maxOccurs = 1;
@@ -152,11 +154,11 @@ public class SettlementStatus3Choice {
 	 */
 	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.mmSettlementStatus;
+			businessElementTrace_lazy = () -> Status.mmSettlementStatus;
 			componentContext_lazy = () -> SettlementStatus3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Provides the status of settlement of an instruction/financial instrument movement.";
 			maxOccurs = 1;
@@ -169,10 +171,10 @@ public class SettlementStatus3Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SettlementStatus3Choice.mmCode, com.tools20022.repository.choice.SettlementStatus3Choice.mmProprietary);
+				messageElement_lazy = () -> Arrays.asList(SettlementStatus3Choice.mmCode, SettlementStatus3Choice.mmProprietary);
 				trace_lazy = () -> Status.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SettlementStatus3Choice";
 				definition = "Choice of format for the settlement status.";
 			}

@@ -18,7 +18,9 @@
 package com.tools20022.repository.area;
 
 import com.tools20022.metamodel.MMBusinessArea;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.caaa.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -29,8 +31,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessArea#getCode code} =
- * "caaa"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessArea#getMessageDefinition
  * messageDefinition} =
  * <ul>
@@ -85,6 +85,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * AcceptorAuthorisationResponseV03}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessArea#getCode code} =
+ * "caaa"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelCatalogueEntry#getBusinessProcessCatalogue
  * businessProcessCatalogue} =
@@ -109,8 +111,8 @@ public class AcceptortoAcquirerCardTransactionPreviousVersion {
 	final static public MMBusinessArea mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessArea() {
 			{
-				businessProcessCatalogue_lazy = () -> com.tools20022.repository.GeneratedRepository.mmcatalogue;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				businessProcessCatalogue_lazy = () -> GeneratedRepository.mmcatalogue;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Acceptor to Acquirer Card Transaction - Previous version - master";
 				definition = "Messages that support any card payment related transactions and services between a card acceptor and a card transaction acquirer. It includes the authorisation, cancellation and capture of card transactions.";
 				messageDefinition_lazy = () -> Arrays.asList(AcceptorCancellationAdviceResponseV03.mmObject(), AcceptorDiagnosticResponseV03.mmObject(), AcceptorCurrencyConversionResponseV01.mmObject(),

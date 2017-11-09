@@ -20,9 +20,14 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.PartyIdentification7Choice;
 import com.tools20022.repository.datatype.MICIdentifier;
 import com.tools20022.repository.entity.Meeting;
+import com.tools20022.repository.entity.OrganisationIdentification;
+import com.tools20022.repository.entity.Person;
+import com.tools20022.repository.entity.Role;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -104,11 +109,11 @@ public class MeetingContactPerson {
 	 */
 	public static final MMMessageAssociationEnd mmContactPerson = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Role.mmContactPersonRole;
+			businessElementTrace_lazy = () -> Role.mmContactPersonRole;
 			componentContext_lazy = () -> MeetingContactPerson.mmObject();
 			isDerived = false;
 			xmlTag = "CtctPrsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ContactPerson";
 			definition = "Identifies a contact person by a name, a given name and an address.";
 			maxOccurs = 1;
@@ -155,11 +160,11 @@ public class MeetingContactPerson {
 	 */
 	public static final MMMessageAssociationEnd mmEmployingParty = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Person.mmEmployingParty;
+			businessElementTrace_lazy = () -> Person.mmEmployingParty;
 			componentContext_lazy = () -> MeetingContactPerson.mmObject();
 			isDerived = false;
 			xmlTag = "EmplngPty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EmployingParty";
 			definition = "Identifies the organisation which is represented by a person or for which a person works.";
 			maxOccurs = 1;
@@ -207,11 +212,11 @@ public class MeetingContactPerson {
 	 */
 	public static final MMMessageAttribute mmPlaceOfListing = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.mmMIC;
+			businessElementTrace_lazy = () -> OrganisationIdentification.mmMIC;
 			componentContext_lazy = () -> MeetingContactPerson.mmObject();
 			isDerived = false;
 			xmlTag = "PlcOfListg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceOfListing";
 			definition = "The identification of a financial market, as stipulated in the norm ISO 10383 'Codes for exchanges and market identifications'.";
 			maxOccurs = 1;
@@ -223,11 +228,10 @@ public class MeetingContactPerson {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MeetingContactPerson.mmContactPerson, com.tools20022.repository.msg.MeetingContactPerson.mmEmployingParty,
-						com.tools20022.repository.msg.MeetingContactPerson.mmPlaceOfListing);
+				messageElement_lazy = () -> Arrays.asList(MeetingContactPerson.mmContactPerson, MeetingContactPerson.mmEmployingParty, MeetingContactPerson.mmPlaceOfListing);
 				trace_lazy = () -> Meeting.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "MeetingContactPerson";
 				definition = "Contact person at the party organising the meeting, at the issuer or at an intermediary.";
 			}

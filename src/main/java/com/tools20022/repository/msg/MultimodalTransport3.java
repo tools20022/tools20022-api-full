@@ -19,8 +19,10 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.Transport;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -99,11 +101,11 @@ public class MultimodalTransport3 {
 	 */
 	public static final MMMessageAttribute mmTakingInCharge = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Transport.mmPlaceOfDeparture;
+			businessElementTrace_lazy = () -> Transport.mmPlaceOfDeparture;
 			componentContext_lazy = () -> MultimodalTransport3.mmObject();
 			isDerived = false;
 			xmlTag = "TakngInChrg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TakingInCharge";
 			definition = "Identifies the location where the goods are take in charge for transportation.";
 			maxOccurs = 1;
@@ -147,11 +149,11 @@ public class MultimodalTransport3 {
 	 */
 	public static final MMMessageAttribute mmPlaceOfFinalDestination = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Transport.mmPlaceOfDestination;
+			businessElementTrace_lazy = () -> Transport.mmPlaceOfDestination;
 			componentContext_lazy = () -> MultimodalTransport3.mmObject();
 			isDerived = false;
 			xmlTag = "PlcOfFnlDstn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceOfFinalDestination";
 			definition = "Identifies the location of the final destination of the goods.";
 			maxOccurs = 1;
@@ -163,10 +165,10 @@ public class MultimodalTransport3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MultimodalTransport3.mmTakingInCharge, com.tools20022.repository.msg.MultimodalTransport3.mmPlaceOfFinalDestination);
+				messageElement_lazy = () -> Arrays.asList(MultimodalTransport3.mmTakingInCharge, MultimodalTransport3.mmPlaceOfFinalDestination);
 				trace_lazy = () -> Transport.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MultimodalTransport3";
 				definition = "Information related to multimodal transportation of goods.";
 			}

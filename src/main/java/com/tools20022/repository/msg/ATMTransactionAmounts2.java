@@ -20,10 +20,12 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ActiveCurrencyCode;
 import com.tools20022.repository.datatype.ImpliedCurrencyAndAmount;
 import com.tools20022.repository.entity.CardPayment;
 import com.tools20022.repository.entity.Limit;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -133,14 +135,14 @@ public class ATMTransactionAmounts2 {
 	 */
 	public static final MMMessageAttribute mmCurrency = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Limit.mmCurrency;
+			businessElementTrace_lazy = () -> Limit.mmCurrency;
 			componentContext_lazy = () -> ATMTransactionAmounts2.mmObject();
 			isDerived = false;
 			xmlTag = "Ccy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Currency";
 			definition = "Currency of the limits, if different from the requested amount.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMTransactionAmounts3.mmCurrency);
+			nextVersions_lazy = () -> Arrays.asList(ATMTransactionAmounts3.mmCurrency);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyCode.mmObject();
@@ -193,14 +195,14 @@ public class ATMTransactionAmounts2 {
 	 */
 	public static final MMMessageAttribute mmMaximumAuthorisableAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Limit.mmAvailableAmount;
+			businessElementTrace_lazy = () -> Limit.mmAvailableAmount;
 			componentContext_lazy = () -> ATMTransactionAmounts2.mmObject();
 			isDerived = false;
 			xmlTag = "MaxAuthsbAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaximumAuthorisableAmount";
 			definition = "Maximum amount allowed in the authorised currency if the withdrawal was not approved.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMTransactionAmounts3.mmMaximumAmount);
+			nextVersions_lazy = () -> Arrays.asList(ATMTransactionAmounts3.mmMaximumAmount);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
@@ -251,14 +253,14 @@ public class ATMTransactionAmounts2 {
 	 */
 	public static final MMMessageAttribute mmMinimumAllowedAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Limit.mmAmount;
+			businessElementTrace_lazy = () -> Limit.mmAmount;
 			componentContext_lazy = () -> ATMTransactionAmounts2.mmObject();
 			isDerived = false;
 			xmlTag = "MinAllwdAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MinimumAllowedAmount";
 			definition = "Minimum amount allowed for a withdrawal in the authorised currency.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMTransactionAmounts3.mmMinimumAmount);
+			nextVersions_lazy = () -> Arrays.asList(ATMTransactionAmounts3.mmMinimumAmount);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
@@ -309,14 +311,14 @@ public class ATMTransactionAmounts2 {
 	 */
 	public static final MMMessageAttribute mmMaximumAllowedAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Limit.mmAmount;
+			businessElementTrace_lazy = () -> Limit.mmAmount;
 			componentContext_lazy = () -> ATMTransactionAmounts2.mmObject();
 			isDerived = false;
 			xmlTag = "MaxAllwdAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaximumAllowedAmount";
 			definition = "Maximum amount allowed for a withdrawal in the authorised currency.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMTransactionAmounts4.mmAvailableAmount);
+			nextVersions_lazy = () -> Arrays.asList(ATMTransactionAmounts4.mmAvailableAmount);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
@@ -368,10 +370,10 @@ public class ATMTransactionAmounts2 {
 			componentContext_lazy = () -> ATMTransactionAmounts2.mmObject();
 			isDerived = false;
 			xmlTag = "DalyBal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DailyBalance";
 			definition = "Remaining daily amount of the customer totals after the withdrawal.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMTransactionAmounts4.mmDailyBalance);
+			nextVersions_lazy = () -> Arrays.asList(ATMTransactionAmounts4.mmDailyBalance);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -424,10 +426,10 @@ public class ATMTransactionAmounts2 {
 			componentContext_lazy = () -> ATMTransactionAmounts2.mmObject();
 			isDerived = false;
 			xmlTag = "WklyBal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WeeklyBalance";
 			definition = "Remaining weekly amount of the customer totals after the withdrawal.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMTransactionAmounts4.mmWeeklyBalance);
+			nextVersions_lazy = () -> Arrays.asList(ATMTransactionAmounts4.mmWeeklyBalance);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -480,10 +482,10 @@ public class ATMTransactionAmounts2 {
 			componentContext_lazy = () -> ATMTransactionAmounts2.mmObject();
 			isDerived = false;
 			xmlTag = "MnthlyBal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MonthlyBalance";
 			definition = "Remaining monthly amount of the customer totals after the withdrawal.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMTransactionAmounts4.mmMonthlyBalance);
+			nextVersions_lazy = () -> Arrays.asList(ATMTransactionAmounts4.mmMonthlyBalance);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -494,12 +496,11 @@ public class ATMTransactionAmounts2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMTransactionAmounts2.mmCurrency, com.tools20022.repository.msg.ATMTransactionAmounts2.mmMaximumAuthorisableAmount,
-						com.tools20022.repository.msg.ATMTransactionAmounts2.mmMinimumAllowedAmount, com.tools20022.repository.msg.ATMTransactionAmounts2.mmMaximumAllowedAmount,
-						com.tools20022.repository.msg.ATMTransactionAmounts2.mmDailyBalance, com.tools20022.repository.msg.ATMTransactionAmounts2.mmWeeklyBalance, com.tools20022.repository.msg.ATMTransactionAmounts2.mmMonthlyBalance);
+				messageElement_lazy = () -> Arrays.asList(ATMTransactionAmounts2.mmCurrency, ATMTransactionAmounts2.mmMaximumAuthorisableAmount, ATMTransactionAmounts2.mmMinimumAllowedAmount, ATMTransactionAmounts2.mmMaximumAllowedAmount,
+						ATMTransactionAmounts2.mmDailyBalance, ATMTransactionAmounts2.mmWeeklyBalance, ATMTransactionAmounts2.mmMonthlyBalance);
 				trace_lazy = () -> Limit.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ATMTransactionAmounts2";
 				definition = "Limit of amounts for the customer.";
 				nextVersions_lazy = () -> Arrays.asList(ATMTransactionAmounts4.mmObject(), ATMTransactionAmounts3.mmObject());

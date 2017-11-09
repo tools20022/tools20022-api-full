@@ -20,6 +20,7 @@ package com.tools20022.repository.area.reda;
 import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.ReferenceDataLatestVersion;
 import com.tools20022.repository.msg.NettingCutOff1;
 import com.tools20022.repository.msg.RequestData1;
@@ -37,6 +38,9 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code reda.060.001.01}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.ReferenceDataLatestVersion
@@ -71,9 +75,6 @@ import java.util.List;
  * NettingCutOffReferenceDataUpdateRequestV01.mmSupplementaryData}</li>
  * </ul>
  * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code reda.060.001.01}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -116,7 +117,7 @@ public class NettingCutOffReferenceDataUpdateRequestV01 {
 	public static final MMMessageBuildingBlock mmRequestData = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "ReqData";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestData";
 			definition = "Specifies the meta data for the netting cut off update request.";
 			maxOccurs = 1;
@@ -152,7 +153,7 @@ public class NettingCutOffReferenceDataUpdateRequestV01 {
 	public static final MMMessageBuildingBlock mmNettingCutOffRequest = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "NetgCutOffReq";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NettingCutOffRequest";
 			definition = "Specifies the information regarding the changes to the netting cut off.";
 			minOccurs = 1;
@@ -189,7 +190,7 @@ public class NettingCutOffReferenceDataUpdateRequestV01 {
 	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SplmtryData";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryData";
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
 			minOccurs = 0;
@@ -200,15 +201,15 @@ public class NettingCutOffReferenceDataUpdateRequestV01 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "NettingCutOffReferenceDataUpdateRequestV01";
 				definition = "The Netting Cut Off Reference Data Update Request message is sent to a central system by a participant to request an update to a participant's netting cut off held at the central system.";
 				messageSet_lazy = () -> Arrays.asList(PostTradeForeignExchangeISOLatestversion.mmObject(), PostTradeForeignExchangeMaintenance20162017andSupplement.mmObject());
 				rootElement = "Document";
 				xmlTag = "NetgCutOffRefDataUpdReq";
 				businessArea_lazy = () -> ReferenceDataLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.reda.NettingCutOffReferenceDataUpdateRequestV01.mmRequestData,
-						com.tools20022.repository.area.reda.NettingCutOffReferenceDataUpdateRequestV01.mmNettingCutOffRequest, com.tools20022.repository.area.reda.NettingCutOffReferenceDataUpdateRequestV01.mmSupplementaryData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(NettingCutOffReferenceDataUpdateRequestV01.mmRequestData, NettingCutOffReferenceDataUpdateRequestV01.mmNettingCutOffRequest,
+						NettingCutOffReferenceDataUpdateRequestV01.mmSupplementaryData);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "reda";

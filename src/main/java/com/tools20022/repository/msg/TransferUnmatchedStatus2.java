@@ -17,15 +17,13 @@
 
 package com.tools20022.repository.msg;
 
-import com.tools20022.metamodel.MMMessageAssociationEnd;
-import com.tools20022.metamodel.MMMessageAttribute;
-import com.tools20022.metamodel.MMMessageComponent;
-import com.tools20022.metamodel.MMXor;
+import com.tools20022.metamodel.*;
 import com.tools20022.repository.choice.TransferUnmatchedStatus3Choice;
 import com.tools20022.repository.codeset.NoReasonCode;
 import com.tools20022.repository.codeset.TransferUnmatchedReason2Code;
 import com.tools20022.repository.datatype.Extended350Code;
 import com.tools20022.repository.entity.StatusReason;
+import com.tools20022.repository.GeneratedRepository;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -136,14 +134,14 @@ public class TransferUnmatchedStatus2 {
 	 */
 	public static final MMMessageAttribute mmNoSpecifiedReason = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmNoSpecifiedReason;
+			businessElementTrace_lazy = () -> StatusReason.mmNoSpecifiedReason;
 			componentContext_lazy = () -> TransferUnmatchedStatus2.mmObject();
 			isDerived = false;
 			xmlTag = "NoSpcfdRsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoSpecifiedReason";
 			definition = "Indicates that there is no reason available or to report.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.TransferUnmatchedStatus3Choice.mmNoSpecifiedReason);
+			nextVersions_lazy = () -> Arrays.asList(TransferUnmatchedStatus3Choice.mmNoSpecifiedReason);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> NoReasonCode.mmObject();
@@ -196,10 +194,10 @@ public class TransferUnmatchedStatus2 {
 			componentContext_lazy = () -> TransferUnmatchedStatus2.mmObject();
 			isDerived = false;
 			xmlTag = "Rsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reason";
 			definition = "Reason for the unmatched status.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.TransferUnmatchedStatus3Choice.mmReason);
+			nextVersions_lazy = () -> Arrays.asList(TransferUnmatchedStatus3Choice.mmReason);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TransferUnmatchedReason2Code.mmObject();
@@ -252,10 +250,10 @@ public class TransferUnmatchedStatus2 {
 			componentContext_lazy = () -> TransferUnmatchedStatus2.mmObject();
 			isDerived = false;
 			xmlTag = "XtndedRsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExtendedReason";
 			definition = "Reason for the unmatched status.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.TransferUnmatchedStatus3Choice.mmExtendedReason);
+			nextVersions_lazy = () -> Arrays.asList(TransferUnmatchedStatus3Choice.mmExtendedReason);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Extended350Code.mmObject();
@@ -304,14 +302,14 @@ public class TransferUnmatchedStatus2 {
 	 */
 	public static final MMMessageAssociationEnd mmDataSourceScheme = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmDataSourceScheme;
+			businessElementTrace_lazy = () -> StatusReason.mmDataSourceScheme;
 			componentContext_lazy = () -> TransferUnmatchedStatus2.mmObject();
 			isDerived = false;
 			xmlTag = "DataSrcSchme";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DataSourceScheme";
 			definition = "Proprietary identification of the reason for the unmatched status.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.TransferUnmatchedStatus3Choice.mmDataSourceScheme);
+			nextVersions_lazy = () -> Arrays.asList(TransferUnmatchedStatus3Choice.mmDataSourceScheme);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -324,6 +322,10 @@ public class TransferUnmatchedStatus2 {
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
+	 * messageComponent} =
+	 * {@linkplain com.tools20022.repository.msg.TransferUnmatchedStatus2
+	 * TransferUnmatchedStatus2}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getImpactedElements
 	 * impactedElements} =
 	 * <ul>
@@ -341,10 +343,6 @@ public class TransferUnmatchedStatus2 {
 	 * TransferUnmatchedStatus2.mmDataSourceScheme}</li>
 	 * </ul>
 	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
-	 * messageComponent} =
-	 * {@linkplain com.tools20022.repository.msg.TransferUnmatchedStatus2
-	 * TransferUnmatchedStatus2}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -360,23 +358,21 @@ public class TransferUnmatchedStatus2 {
 	 */
 	public static final MMXor mmNoSpecifiedOrExtendeOrReasonOrDssRule = new MMXor() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoSpecifiedOrExtendeOrReasonOrDssRule";
 			definition = "One and only one message element in the list (Reason, ExtendedReason, DataSourceScheme, NoSpecifiedReason) must be present.";
 			messageComponent_lazy = () -> TransferUnmatchedStatus2.mmObject();
-			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransferUnmatchedStatus2.mmNoSpecifiedReason, com.tools20022.repository.msg.TransferUnmatchedStatus2.mmReason,
-					com.tools20022.repository.msg.TransferUnmatchedStatus2.mmExtendedReason, com.tools20022.repository.msg.TransferUnmatchedStatus2.mmDataSourceScheme);
+			impactedElements_lazy = () -> Arrays.asList(TransferUnmatchedStatus2.mmNoSpecifiedReason, TransferUnmatchedStatus2.mmReason, TransferUnmatchedStatus2.mmExtendedReason, TransferUnmatchedStatus2.mmDataSourceScheme);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransferUnmatchedStatus2.mmNoSpecifiedReason, com.tools20022.repository.msg.TransferUnmatchedStatus2.mmReason,
-						com.tools20022.repository.msg.TransferUnmatchedStatus2.mmExtendedReason, com.tools20022.repository.msg.TransferUnmatchedStatus2.mmDataSourceScheme);
+				messageElement_lazy = () -> Arrays.asList(TransferUnmatchedStatus2.mmNoSpecifiedReason, TransferUnmatchedStatus2.mmReason, TransferUnmatchedStatus2.mmExtendedReason, TransferUnmatchedStatus2.mmDataSourceScheme);
 				trace_lazy = () -> StatusReason.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
 						return DateFormat.getDateInstance(java.text.DateFormat.LONG).parse("September 9, 2016");
@@ -387,7 +383,7 @@ public class TransferUnmatchedStatus2 {
 				name = "TransferUnmatchedStatus2";
 				definition = "Reason for the unmatched status.";
 				nextVersions_lazy = () -> Arrays.asList(TransferUnmatchedStatus3Choice.mmObject());
-				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransferUnmatchedStatus2.mmNoSpecifiedOrExtendeOrReasonOrDssRule);
+				xors_lazy = () -> Arrays.asList(TransferUnmatchedStatus2.mmNoSpecifiedOrExtendeOrReasonOrDssRule);
 			}
 		});
 		return mmObject_lazy.get();

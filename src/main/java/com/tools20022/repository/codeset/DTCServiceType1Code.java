@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.DTCServiceType;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -88,7 +90,7 @@ public class DTCServiceType1Code extends DTCServiceType {
 	 */
 	public static final MMCode mmCashInLieuRoundUp = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashInLieuRoundUp";
 			owner_lazy = () -> DTCServiceType1Code.mmObject();
 		}
@@ -111,7 +113,7 @@ public class DTCServiceType1Code extends DTCServiceType {
 	 */
 	public static final MMCode mmUSTaxWithholding = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "USTaxWithholding";
 			owner_lazy = () -> DTCServiceType1Code.mmObject();
 		}
@@ -134,7 +136,7 @@ public class DTCServiceType1Code extends DTCServiceType {
 	 */
 	public static final MMCode mmForeignTaxRelief = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForeignTaxRelief";
 			owner_lazy = () -> DTCServiceType1Code.mmObject();
 		}
@@ -143,13 +145,12 @@ public class DTCServiceType1Code extends DTCServiceType {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CILR");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DTCServiceType1Code";
 				definition = "Indicates the type of DTC (The Depository Trust Company) service  for example Cash In Lieu/ Round Up, Foreign Tax Relief, etc.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DTCServiceType1Code.mmCashInLieuRoundUp, com.tools20022.repository.codeset.DTCServiceType1Code.mmUSTaxWithholding,
-						com.tools20022.repository.codeset.DTCServiceType1Code.mmForeignTaxRelief);
+				code_lazy = () -> Arrays.asList(DTCServiceType1Code.mmCashInLieuRoundUp, DTCServiceType1Code.mmUSTaxWithholding, DTCServiceType1Code.mmForeignTaxRelief);
 				trace_lazy = () -> DTCServiceType.mmObject();
 			}
 		});

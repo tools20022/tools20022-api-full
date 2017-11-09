@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CalculationBasisCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -86,7 +88,7 @@ public class CalculationBasis1Code extends CalculationBasisCode {
 	 */
 	public static final MMCode mmAverage = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Average";
 			owner_lazy = () -> CalculationBasis1Code.mmObject();
 		}
@@ -109,7 +111,7 @@ public class CalculationBasis1Code extends CalculationBasisCode {
 	 */
 	public static final MMCode mmDaily = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Daily";
 			owner_lazy = () -> CalculationBasis1Code.mmObject();
 		}
@@ -132,7 +134,7 @@ public class CalculationBasis1Code extends CalculationBasisCode {
 	 */
 	public static final MMCode mmOther = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
 			owner_lazy = () -> CalculationBasis1Code.mmObject();
 		}
@@ -141,13 +143,12 @@ public class CalculationBasis1Code extends CalculationBasisCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("AVER");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CalculationBasis1Code";
 				definition = "Specifies the calculation basis.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CalculationBasis1Code.mmAverage, com.tools20022.repository.codeset.CalculationBasis1Code.mmDaily,
-						com.tools20022.repository.codeset.CalculationBasis1Code.mmOther);
+				code_lazy = () -> Arrays.asList(CalculationBasis1Code.mmAverage, CalculationBasis1Code.mmDaily, CalculationBasis1Code.mmOther);
 				trace_lazy = () -> CalculationBasisCode.mmObject();
 			}
 		});

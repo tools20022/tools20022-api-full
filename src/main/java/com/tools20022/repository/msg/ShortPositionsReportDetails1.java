@@ -20,7 +20,9 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -95,7 +97,7 @@ public class ShortPositionsReportDetails1 {
 			componentContext_lazy = () -> ShortPositionsReportDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "PtcptId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ParticipantIdentification";
 			definition = "Identification of participant account.";
 			maxOccurs = 1;
@@ -136,7 +138,7 @@ public class ShortPositionsReportDetails1 {
 			componentContext_lazy = () -> ShortPositionsReportDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "PtcptAcct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ParticipantAccount";
 			definition = "Information about participant account number.";
 			maxOccurs = 1;
@@ -179,7 +181,7 @@ public class ShortPositionsReportDetails1 {
 			componentContext_lazy = () -> ShortPositionsReportDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "ShrtPosAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ShortPositionAmount";
 			definition = "Information about participant account balance.";
 			maxOccurs = 1;
@@ -191,10 +193,9 @@ public class ShortPositionsReportDetails1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ShortPositionsReportDetails1.mmParticipantIdentification, com.tools20022.repository.msg.ShortPositionsReportDetails1.mmParticipantAccount,
-						com.tools20022.repository.msg.ShortPositionsReportDetails1.mmShortPositionAmount);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(ShortPositionsReportDetails1.mmParticipantIdentification, ShortPositionsReportDetails1.mmParticipantAccount, ShortPositionsReportDetails1.mmShortPositionAmount);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ShortPositionsReportDetails1";
 				definition = "Information about short positions.";
 			}

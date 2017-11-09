@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.Qualifier1Code
+ * Qualifier1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>{@linkplain com.tools20022.repository.codeset.QualifierCode#mmAllOrNone
@@ -72,13 +81,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * QualifierCode.mmAtMidpoint}</li>
  * <li>{@linkplain com.tools20022.repository.codeset.QualifierCode#mmPreOpen
  * QualifierCode.mmPreOpen}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.Qualifier1Code
- * Qualifier1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -138,7 +140,7 @@ public class QualifierCode {
 	 */
 	public static final MMCode mmAllOrNone = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AllOrNone";
 			definition = "A limit order that is to be executed in its entirety or not at all (no partial transaction), and thus is testing the strength/conviction of the counterparty.  Unlike a fill or kill order, all or none orders are not to be treated as cancelled if not executed as soon as it is represented in the trading crowd.  Instead it remains alive until executed or cancelled.  The making of \"all or none\" bids or offers in stocks is prohibited, and the making of \"all or none\" bids or offers in bonds is subject to the restrictions of Rule 61.";
 			owner_lazy = () -> QualifierCode.mmObject();
@@ -171,7 +173,7 @@ public class QualifierCode {
 	 */
 	public static final MMCode mmMarketOnClose = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketOnClose";
 			definition = "An order to trade stocks, options, or futures as close as possible to the market close.";
 			owner_lazy = () -> QualifierCode.mmObject();
@@ -208,7 +210,7 @@ public class QualifierCode {
 	 */
 	public static final MMCode mmAtClose = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AtClose";
 			definition = "An all or none market order that is to be executed at the closing price of the security on the exchange.  If the execution cannot be made under this condition, the order is to be treated as cancelled.\n\nNote that this attribute does not apply to trading of fixed income securities.";
 			owner_lazy = () -> QualifierCode.mmObject();
@@ -243,7 +245,7 @@ public class QualifierCode {
 	 */
 	public static final MMCode mmVolumeWeightedAveragePrice = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VolumeWeightedAveragePrice";
 			definition = "A trading benchmark particularly used in pension plans. Calculated by adding up the dollars traded for every transaction (price times shares traded) and then dividing by the total shares traded for the day for the particular security.";
 			owner_lazy = () -> QualifierCode.mmObject();
@@ -276,7 +278,7 @@ public class QualifierCode {
 	 */
 	public static final MMCode mmInTouchWith = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InTouchWith";
 			definition = "Having a sell inquiry in a security (not a firm customer sell order), often entailing a capital commitment.";
 			owner_lazy = () -> QualifierCode.mmObject();
@@ -312,7 +314,7 @@ public class QualifierCode {
 	 */
 	public static final MMCode mmLimit = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Limit";
 			definition = "An order to buy a stock at or below a specified price, or to sell a stock at or above a specified price.  The customer specifies a price, and the order can be executed only if the market reaches or betters that price.  A conditional trading order designed to avoid the danger of adverse unexpected price movements.";
 			owner_lazy = () -> QualifierCode.mmObject();
@@ -348,7 +350,7 @@ public class QualifierCode {
 	 */
 	public static final MMCode mmMoreBehind = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MoreBehind";
 			definition = "More security exists to be bought or sold by the same buyer or seller, respectively.  Often, the buyer or seller does not disclose the full size of his buy or sell interest as not to affect the market adversely.\n\nInformation that the execution is taking place in waves/iceberg.";
 			owner_lazy = () -> QualifierCode.mmObject();
@@ -382,7 +384,7 @@ public class QualifierCode {
 	 */
 	public static final MMCode mmAtOpen = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AtOpen";
 			definition = "An order that is to be executed at the opening (and corresponding price) of the security or not at all, and any such order or portion thereof not executed is to be treated as cancelled.";
 			owner_lazy = () -> QualifierCode.mmObject();
@@ -412,7 +414,7 @@ public class QualifierCode {
 	 */
 	public static final MMCode mmTakingPosition = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TakingPosition";
 			definition = "A market commitment to purchase or sell securities.";
 			owner_lazy = () -> QualifierCode.mmObject();
@@ -447,7 +449,7 @@ public class QualifierCode {
 	 */
 	public static final MMCode mmAtMarket = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AtMarket";
 			definition = "An order to buy or sell a security at the most advantageous price obtainable after the order is represented in the trading crowd.  Other special restrictions, such as all or none (AON) or good 'til cancelled (GTC), cannot be specified on a market order.";
 			owner_lazy = () -> QualifierCode.mmObject();
@@ -480,7 +482,7 @@ public class QualifierCode {
 	 */
 	public static final MMCode mmReadyToTrade = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReadyToTrade";
 			definition = "All of the information necessary to generate an order is present and is considered an offer.";
 			owner_lazy = () -> QualifierCode.mmObject();
@@ -513,7 +515,7 @@ public class QualifierCode {
 	 */
 	public static final MMCode mmPortfolioShown = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PortfolioShown";
 			definition = "A collection of investments, real and/or financial, with distribution by geographic region or by asset type of the portfolio's holdings.";
 			owner_lazy = () -> QualifierCode.mmObject();
@@ -543,7 +545,7 @@ public class QualifierCode {
 	 */
 	public static final MMCode mmThroughDay = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ThroughDay";
 			definition = "Working the order through the day.";
 			owner_lazy = () -> QualifierCode.mmObject();
@@ -573,7 +575,7 @@ public class QualifierCode {
 	 */
 	public static final MMCode mmVersus = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Versus";
 			definition = "Indication sent versus the current quote.";
 			owner_lazy = () -> QualifierCode.mmObject();
@@ -603,7 +605,7 @@ public class QualifierCode {
 	 */
 	public static final MMCode mmWorkingAway = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WorkingAway";
 			definition = "Transacting with another broker/dealer.";
 			owner_lazy = () -> QualifierCode.mmObject();
@@ -637,7 +639,7 @@ public class QualifierCode {
 	 */
 	public static final MMCode mmCrossing = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Crossing";
 			definition = "Securities transaction in which the same broker acts as agent for both sides of the trade; a legal practice only if the broker first offers the securities publicly at a price higher than the bid.";
 			owner_lazy = () -> QualifierCode.mmObject();
@@ -671,7 +673,7 @@ public class QualifierCode {
 	 */
 	public static final MMCode mmAtMidpoint = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AtMidpoint";
 			definition = "An all or none market order that is to be executed at the mid price spread of the security on the exchange.  If the execution cannot be made under this condition, the order is to be treated as cancelled.";
 			owner_lazy = () -> QualifierCode.mmObject();
@@ -701,7 +703,7 @@ public class QualifierCode {
 	 */
 	public static final MMCode mmPreOpen = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreOpen";
 			definition = "Price of security prior to a market opening.";
 			owner_lazy = () -> QualifierCode.mmObject();
@@ -712,17 +714,14 @@ public class QualifierCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ALNO");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "QualifierCode";
 				definition = "Qualifies the use of the quote or the indication of interest.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.QualifierCode.mmAllOrNone, com.tools20022.repository.codeset.QualifierCode.mmMarketOnClose, com.tools20022.repository.codeset.QualifierCode.mmAtClose,
-						com.tools20022.repository.codeset.QualifierCode.mmVolumeWeightedAveragePrice, com.tools20022.repository.codeset.QualifierCode.mmInTouchWith, com.tools20022.repository.codeset.QualifierCode.mmLimit,
-						com.tools20022.repository.codeset.QualifierCode.mmMoreBehind, com.tools20022.repository.codeset.QualifierCode.mmAtOpen, com.tools20022.repository.codeset.QualifierCode.mmTakingPosition,
-						com.tools20022.repository.codeset.QualifierCode.mmAtMarket, com.tools20022.repository.codeset.QualifierCode.mmReadyToTrade, com.tools20022.repository.codeset.QualifierCode.mmPortfolioShown,
-						com.tools20022.repository.codeset.QualifierCode.mmThroughDay, com.tools20022.repository.codeset.QualifierCode.mmVersus, com.tools20022.repository.codeset.QualifierCode.mmWorkingAway,
-						com.tools20022.repository.codeset.QualifierCode.mmCrossing, com.tools20022.repository.codeset.QualifierCode.mmAtMidpoint, com.tools20022.repository.codeset.QualifierCode.mmPreOpen);
+				code_lazy = () -> Arrays.asList(QualifierCode.mmAllOrNone, QualifierCode.mmMarketOnClose, QualifierCode.mmAtClose, QualifierCode.mmVolumeWeightedAveragePrice, QualifierCode.mmInTouchWith, QualifierCode.mmLimit,
+						QualifierCode.mmMoreBehind, QualifierCode.mmAtOpen, QualifierCode.mmTakingPosition, QualifierCode.mmAtMarket, QualifierCode.mmReadyToTrade, QualifierCode.mmPortfolioShown, QualifierCode.mmThroughDay,
+						QualifierCode.mmVersus, QualifierCode.mmWorkingAway, QualifierCode.mmCrossing, QualifierCode.mmAtMidpoint, QualifierCode.mmPreOpen);
 				derivation_lazy = () -> Arrays.asList(Qualifier1Code.mmObject());
 			}
 		});

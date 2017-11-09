@@ -20,11 +20,16 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.camt.NotificationToReceiveStatusReportV03;
 import com.tools20022.repository.codeset.NotificationStatus3Code;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Max140Text;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.entity.PaymentExecution;
 import com.tools20022.repository.entity.PaymentInstruction;
+import com.tools20022.repository.entity.PaymentStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -140,10 +145,10 @@ public class OriginalNotification5 {
 			componentContext_lazy = () -> OriginalNotification5.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlMsgId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalMessageIdentification";
 			definition = "Point to point reference, as assigned by the original sender, to unambiguously identify the original notification to receive message.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OriginalNotification7.mmOriginalMessageIdentification);
+			nextVersions_lazy = () -> Arrays.asList(OriginalNotification7.mmOriginalMessageIdentification);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -192,14 +197,14 @@ public class OriginalNotification5 {
 	 */
 	public static final MMMessageAttribute mmOriginalCreationDateTime = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentExecution.mmCreationDate;
+			businessElementTrace_lazy = () -> PaymentExecution.mmCreationDate;
 			componentContext_lazy = () -> OriginalNotification5.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlCreDtTm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalCreationDateTime";
 			definition = "Date and time at which the original message was created.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OriginalNotification7.mmOriginalCreationDateTime);
+			nextVersions_lazy = () -> Arrays.asList(OriginalNotification7.mmOriginalCreationDateTime);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
@@ -246,10 +251,10 @@ public class OriginalNotification5 {
 			componentContext_lazy = () -> OriginalNotification5.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlNtfctnId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalNotificationIdentification";
 			definition = "Identification of the original notification.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OriginalNotification7.mmOriginalNotificationIdentification);
+			nextVersions_lazy = () -> Arrays.asList(OriginalNotification7.mmOriginalNotificationIdentification);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -300,14 +305,14 @@ public class OriginalNotification5 {
 	 */
 	public static final MMMessageAttribute mmNotificationStatus = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentStatus.mmNotificationStatus;
+			businessElementTrace_lazy = () -> PaymentStatus.mmNotificationStatus;
 			componentContext_lazy = () -> OriginalNotification5.mmObject();
 			isDerived = false;
 			xmlTag = "NtfctnSts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotificationStatus";
 			definition = "Specifies the status of the notification in a coded form.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OriginalNotification7.mmNotificationStatus);
+			nextVersions_lazy = () -> Arrays.asList(OriginalNotification7.mmNotificationStatus);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> NotificationStatus3Code.mmObject();
@@ -354,10 +359,10 @@ public class OriginalNotification5 {
 			componentContext_lazy = () -> OriginalNotification5.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlStsInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalStatusInformation";
 			definition = "Further details of the notification status.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OriginalNotification7.mmAdditionalStatusInformation);
+			nextVersions_lazy = () -> Arrays.asList(OriginalNotification7.mmAdditionalStatusInformation);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
@@ -411,10 +416,10 @@ public class OriginalNotification5 {
 			componentContext_lazy = () -> OriginalNotification5.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlNtfctnRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalNotificationReference";
 			definition = "Identifies the original notification item and provides the status.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OriginalNotification7.mmOriginalNotificationReference);
+			nextVersions_lazy = () -> Arrays.asList(OriginalNotification7.mmOriginalNotificationReference);
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.OriginalNotificationReference3.mmObject();
@@ -424,13 +429,12 @@ public class OriginalNotification5 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OriginalNotification5.mmOriginalMessageIdentification, com.tools20022.repository.msg.OriginalNotification5.mmOriginalCreationDateTime,
-						com.tools20022.repository.msg.OriginalNotification5.mmOriginalNotificationIdentification, com.tools20022.repository.msg.OriginalNotification5.mmNotificationStatus,
-						com.tools20022.repository.msg.OriginalNotification5.mmAdditionalStatusInformation, com.tools20022.repository.msg.OriginalNotification5.mmOriginalNotificationReference);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.NotificationToReceiveStatusReportV03.mmOriginalNotificationAndStatus);
+				messageElement_lazy = () -> Arrays.asList(OriginalNotification5.mmOriginalMessageIdentification, OriginalNotification5.mmOriginalCreationDateTime, OriginalNotification5.mmOriginalNotificationIdentification,
+						OriginalNotification5.mmNotificationStatus, OriginalNotification5.mmAdditionalStatusInformation, OriginalNotification5.mmOriginalNotificationReference);
+				messageBuildingBlock_lazy = () -> Arrays.asList(NotificationToReceiveStatusReportV03.mmOriginalNotificationAndStatus);
 				trace_lazy = () -> PaymentInstruction.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OriginalNotification5";
 				definition = "Identifies the original notification and to provide the status.";
 				nextVersions_lazy = () -> Arrays.asList(OriginalNotification7.mmObject());

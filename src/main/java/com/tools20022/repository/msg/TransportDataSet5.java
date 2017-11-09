@@ -19,7 +19,12 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.tsmt.DataSetSubmissionV05;
+import com.tools20022.repository.area.tsmt.ForwardDataSetSubmissionReportV05;
+import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.entity.Transport;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -127,10 +132,10 @@ public class TransportDataSet5 {
 			componentContext_lazy = () -> TransportDataSet5.mmObject();
 			isDerived = false;
 			xmlTag = "DataSetId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DataSetIdentification";
 			definition = "Identifies the submitted transport data set.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TransportDataSet4.mmDataSetIdentification;
+			previousVersion_lazy = () -> TransportDataSet4.mmDataSetIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -177,14 +182,14 @@ public class TransportDataSet5 {
 	 */
 	public static final MMMessageAssociationEnd mmBuyer = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> TransportDataSet5.mmObject();
 			isDerived = false;
 			xmlTag = "Buyr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Buyer";
 			definition = "Party that buys goods or services, or a financial instrument.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TransportDataSet4.mmBuyer;
+			previousVersion_lazy = () -> TransportDataSet4.mmBuyer;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -231,14 +236,14 @@ public class TransportDataSet5 {
 	 */
 	public static final MMMessageAssociationEnd mmSeller = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> TransportDataSet5.mmObject();
 			isDerived = false;
 			xmlTag = "Sellr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Seller";
 			definition = "Party that sells goods or services, or a financial instrument.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TransportDataSet4.mmSeller;
+			previousVersion_lazy = () -> TransportDataSet4.mmSeller;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -284,14 +289,14 @@ public class TransportDataSet5 {
 	 */
 	public static final MMMessageAssociationEnd mmConsignor = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> TransportDataSet5.mmObject();
 			isDerived = false;
 			xmlTag = "Consgnr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Consignor";
 			definition = "Party responsible for dispatching the goods.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TransportDataSet4.mmConsignor;
+			previousVersion_lazy = () -> TransportDataSet4.mmConsignor;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -337,14 +342,14 @@ public class TransportDataSet5 {
 	 */
 	public static final MMMessageAssociationEnd mmConsignee = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> TransportDataSet5.mmObject();
 			isDerived = false;
 			xmlTag = "Consgn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Consignee";
 			definition = "Party to whom the goods must be delivered.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TransportDataSet4.mmConsignee;
+			previousVersion_lazy = () -> TransportDataSet4.mmConsignee;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -390,14 +395,14 @@ public class TransportDataSet5 {
 	 */
 	public static final MMMessageAssociationEnd mmShipTo = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> TransportDataSet5.mmObject();
 			isDerived = false;
 			xmlTag = "ShipTo";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ShipTo";
 			definition = "Party to whom the goods must be delivered in the end.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TransportDataSet4.mmShipTo;
+			previousVersion_lazy = () -> TransportDataSet4.mmShipTo;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -449,10 +454,10 @@ public class TransportDataSet5 {
 			componentContext_lazy = () -> TransportDataSet5.mmObject();
 			isDerived = false;
 			xmlTag = "TrnsprtInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransportInformation";
 			definition = "Specifies the shipment date, the charges, the routing and the goods that are described in the transport document.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TransportDataSet4.mmTransportInformation;
+			previousVersion_lazy = () -> TransportDataSet4.mmTransportInformation;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -463,13 +468,12 @@ public class TransportDataSet5 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransportDataSet5.mmDataSetIdentification, com.tools20022.repository.msg.TransportDataSet5.mmBuyer,
-						com.tools20022.repository.msg.TransportDataSet5.mmSeller, com.tools20022.repository.msg.TransportDataSet5.mmConsignor, com.tools20022.repository.msg.TransportDataSet5.mmConsignee,
-						com.tools20022.repository.msg.TransportDataSet5.mmShipTo, com.tools20022.repository.msg.TransportDataSet5.mmTransportInformation);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.ForwardDataSetSubmissionReportV05.mmTransportDataSet, com.tools20022.repository.area.tsmt.DataSetSubmissionV05.mmTransportDataSet);
+				messageElement_lazy = () -> Arrays.asList(TransportDataSet5.mmDataSetIdentification, TransportDataSet5.mmBuyer, TransportDataSet5.mmSeller, TransportDataSet5.mmConsignor, TransportDataSet5.mmConsignee,
+						TransportDataSet5.mmShipTo, TransportDataSet5.mmTransportInformation);
+				messageBuildingBlock_lazy = () -> Arrays.asList(ForwardDataSetSubmissionReportV05.mmTransportDataSet, DataSetSubmissionV05.mmTransportDataSet);
 				trace_lazy = () -> Transport.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TransportDataSet5";
 				definition = "Provides details on the transportation of goods that are part of a commercial trade agreement.";
 				previousVersion_lazy = () -> TransportDataSet4.mmObject();

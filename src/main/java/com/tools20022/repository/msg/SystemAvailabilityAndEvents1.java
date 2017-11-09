@@ -20,10 +20,11 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ActiveCurrencyCode;
 import com.tools20022.repository.entity.System;
-import com.tools20022.repository.entity.SystemEventInformation;
-import com.tools20022.repository.entity.SystemStatus;
+import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -113,11 +114,11 @@ public class SystemAvailabilityAndEvents1 {
 	 */
 	public static final MMMessageAttribute mmSystemCurrency = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TransactionAdministrator.mmCurrency;
+			businessElementTrace_lazy = () -> TransactionAdministrator.mmCurrency;
 			componentContext_lazy = () -> SystemAvailabilityAndEvents1.mmObject();
 			isDerived = false;
 			xmlTag = "SysCcy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SystemCurrency";
 			definition = "Currency which may be processed by the system. A system may process transactions in a single currency or in multiple currencies.";
 			maxOccurs = 1;
@@ -161,11 +162,11 @@ public class SystemAvailabilityAndEvents1 {
 	 */
 	public static final MMMessageAttribute mmSessionPeriod = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SystemAvailability.mmAvailableSessionPeriod;
+			businessElementTrace_lazy = () -> SystemAvailability.mmAvailableSessionPeriod;
 			componentContext_lazy = () -> SystemAvailabilityAndEvents1.mmObject();
 			isDerived = false;
 			xmlTag = "SsnPrd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SessionPeriod";
 			definition = "Time window of system activity.";
 			maxOccurs = 1;
@@ -216,7 +217,7 @@ public class SystemAvailabilityAndEvents1 {
 			componentContext_lazy = () -> SystemAvailabilityAndEvents1.mmObject();
 			isDerived = false;
 			xmlTag = "Evt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Event";
 			definition = "Detailed information about an event occurring on a system, whether planned, such as the cut-off time for a specific type of eligible transfer, or unplanned (an unsolicited failure), as stipulated in the specifications of the system.";
 			minOccurs = 0;
@@ -261,7 +262,7 @@ public class SystemAvailabilityAndEvents1 {
 			componentContext_lazy = () -> SystemAvailabilityAndEvents1.mmObject();
 			isDerived = false;
 			xmlTag = "ClsrInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClosureInformation";
 			definition = "Information regarding the closure time of a system.";
 			minOccurs = 0;
@@ -273,11 +274,10 @@ public class SystemAvailabilityAndEvents1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SystemAvailabilityAndEvents1.mmSystemCurrency, com.tools20022.repository.msg.SystemAvailabilityAndEvents1.mmSessionPeriod,
-						com.tools20022.repository.msg.SystemAvailabilityAndEvents1.mmEvent, com.tools20022.repository.msg.SystemAvailabilityAndEvents1.mmClosureInformation);
+				messageElement_lazy = () -> Arrays.asList(SystemAvailabilityAndEvents1.mmSystemCurrency, SystemAvailabilityAndEvents1.mmSessionPeriod, SystemAvailabilityAndEvents1.mmEvent, SystemAvailabilityAndEvents1.mmClosureInformation);
 				trace_lazy = () -> System.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SystemAvailabilityAndEvents1";
 				definition = "Specifies the details about the system availability and the related system events that might impact the availability.";
 			}

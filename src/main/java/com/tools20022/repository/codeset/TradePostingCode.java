@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -28,19 +30,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.TradePosting1Code
+ * TradePosting1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>{@linkplain com.tools20022.repository.codeset.TradePostingCode#mmGross
  * TradePostingCode.mmGross}</li>
  * <li>{@linkplain com.tools20022.repository.codeset.TradePostingCode#mmNet
  * TradePostingCode.mmNet}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.TradePosting1Code
- * TradePosting1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -95,7 +97,7 @@ public class TradePostingCode {
 	 */
 	public static final MMCode mmGross = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Gross";
 			definition = "Trade is maintained as a separate individual position in the clearing account.";
 			owner_lazy = () -> TradePostingCode.mmObject();
@@ -126,7 +128,7 @@ public class TradePostingCode {
 	 */
 	public static final MMCode mmNet = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Net";
 			definition = "Trade is maintained as a net position in the clearing account.";
 			owner_lazy = () -> TradePostingCode.mmObject();
@@ -137,12 +139,12 @@ public class TradePostingCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("GROS");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TradePostingCode";
 				definition = "Specifies the trade is maintained as a separate individual position in the clearing account, or not.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TradePostingCode.mmGross, com.tools20022.repository.codeset.TradePostingCode.mmNet);
+				code_lazy = () -> Arrays.asList(TradePostingCode.mmGross, TradePostingCode.mmNet);
 				derivation_lazy = () -> Arrays.asList(TradePosting1Code.mmObject());
 			}
 		});

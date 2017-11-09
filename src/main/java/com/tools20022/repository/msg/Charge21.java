@@ -20,10 +20,13 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.AmountRate1Choice;
 import com.tools20022.repository.choice.ChargeType1Choice;
 import com.tools20022.repository.choice.PartyIdentification2Choice;
 import com.tools20022.repository.entity.Charges;
+import com.tools20022.repository.entity.Party;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -98,11 +101,11 @@ public class Charge21 {
 	 */
 	public static final MMMessageAssociationEnd mmChargeType = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Charges.mmChargeType;
+			businessElementTrace_lazy = () -> Charges.mmChargeType;
 			componentContext_lazy = () -> Charge21.mmObject();
 			isDerived = false;
 			xmlTag = "ChrgTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChargeType";
 			definition = "Type of charge.";
 			maxOccurs = 1;
@@ -147,7 +150,7 @@ public class Charge21 {
 			componentContext_lazy = () -> Charge21.mmObject();
 			isDerived = false;
 			xmlTag = "ChrgAmtOrRate";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChargeAmountOrRate";
 			definition = "Amount or rate of the charge.";
 			maxOccurs = 1;
@@ -192,11 +195,11 @@ public class Charge21 {
 	 */
 	public static final MMMessageAttribute mmRecipientIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> Charge21.mmObject();
 			isDerived = false;
 			xmlTag = "RcptId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RecipientIdentification";
 			definition = "Party entitled to the amount of money resulting from a charge.";
 			maxOccurs = 1;
@@ -208,10 +211,10 @@ public class Charge21 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Charge21.mmChargeType, com.tools20022.repository.msg.Charge21.mmChargeAmountOrRate, com.tools20022.repository.msg.Charge21.mmRecipientIdentification);
+				messageElement_lazy = () -> Arrays.asList(Charge21.mmChargeType, Charge21.mmChargeAmountOrRate, Charge21.mmRecipientIdentification);
 				trace_lazy = () -> Charges.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Charge21";
 				definition = "Amount of money associated with a service.";
 			}

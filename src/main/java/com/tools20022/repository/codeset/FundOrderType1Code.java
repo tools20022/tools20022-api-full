@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.FundOrderTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -86,7 +88,7 @@ public class FundOrderType1Code extends FundOrderTypeCode {
 	 */
 	public static final MMCode mmSubscription = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Subscription";
 			owner_lazy = () -> FundOrderType1Code.mmObject();
 		}
@@ -109,7 +111,7 @@ public class FundOrderType1Code extends FundOrderTypeCode {
 	 */
 	public static final MMCode mmRedemption = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Redemption";
 			owner_lazy = () -> FundOrderType1Code.mmObject();
 		}
@@ -132,7 +134,7 @@ public class FundOrderType1Code extends FundOrderTypeCode {
 	 */
 	public static final MMCode mmSwitch = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Switch";
 			owner_lazy = () -> FundOrderType1Code.mmObject();
 		}
@@ -141,13 +143,12 @@ public class FundOrderType1Code extends FundOrderTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("SUBS");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FundOrderType1Code";
 				definition = "Specifies the type of the investment fund order.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.FundOrderType1Code.mmSubscription, com.tools20022.repository.codeset.FundOrderType1Code.mmRedemption,
-						com.tools20022.repository.codeset.FundOrderType1Code.mmSwitch);
+				code_lazy = () -> Arrays.asList(FundOrderType1Code.mmSubscription, FundOrderType1Code.mmRedemption, FundOrderType1Code.mmSwitch);
 				trace_lazy = () -> FundOrderTypeCode.mmObject();
 			}
 		});

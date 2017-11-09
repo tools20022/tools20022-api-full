@@ -19,6 +19,8 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.BusinessDay2;
 import com.tools20022.repository.msg.ErrorHandling3;
 import java.util.Arrays;
@@ -117,10 +119,10 @@ public class BusinessDayReportOrError2Choice {
 			componentContext_lazy = () -> BusinessDayReportOrError2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "BizDayInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BusinessDayInformation";
 			definition = "Requested system details for a specific business day.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.BusinessDayReportOrError6Choice.mmBusinessDayInformation, com.tools20022.repository.choice.BusinessDayReportOrError4Choice.mmBusinessDayInformation);
+			nextVersions_lazy = () -> Arrays.asList(BusinessDayReportOrError6Choice.mmBusinessDayInformation, BusinessDayReportOrError4Choice.mmBusinessDayInformation);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -170,10 +172,10 @@ public class BusinessDayReportOrError2Choice {
 			componentContext_lazy = () -> BusinessDayReportOrError2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "BizErr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BusinessError";
 			definition = "Reason the requested business information is not given. ";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.BusinessDayReportOrError6Choice.mmBusinessError, com.tools20022.repository.choice.BusinessDayReportOrError4Choice.mmBusinessError);
+			nextVersions_lazy = () -> Arrays.asList(BusinessDayReportOrError6Choice.mmBusinessError, BusinessDayReportOrError4Choice.mmBusinessError);
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ErrorHandling3.mmObject();
@@ -183,9 +185,9 @@ public class BusinessDayReportOrError2Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.BusinessDayReportOrError2Choice.mmBusinessDayInformation, com.tools20022.repository.choice.BusinessDayReportOrError2Choice.mmBusinessError);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(BusinessDayReportOrError2Choice.mmBusinessDayInformation, BusinessDayReportOrError2Choice.mmBusinessError);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "BusinessDayReportOrError2Choice";
 				definition = "Choice between business day information details or a business error when the requested data cannot be retrieved.";
 				nextVersions_lazy = () -> Arrays.asList(BusinessDayReportOrError6Choice.mmObject(), BusinessDayReportOrError4Choice.mmObject());

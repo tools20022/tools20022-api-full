@@ -20,10 +20,13 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.entity.BulkPayment;
 import com.tools20022.repository.entity.CardPayment;
+import com.tools20022.repository.entity.Payment;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -116,14 +119,14 @@ public class AggregationTransaction2 {
 	 */
 	public static final MMMessageAttribute mmFirstPaymentDateTime = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.mmValueDate;
+			businessElementTrace_lazy = () -> Payment.mmValueDate;
 			componentContext_lazy = () -> AggregationTransaction2.mmObject();
 			isDerived = false;
 			xmlTag = "FrstPmtDtTm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FirstPaymentDateTime";
 			definition = "Date and time of the first payment.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AggregationTransaction1.mmFirstPaymentDateTime;
+			previousVersion_lazy = () -> AggregationTransaction1.mmFirstPaymentDateTime;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
@@ -169,14 +172,14 @@ public class AggregationTransaction2 {
 	 */
 	public static final MMMessageAttribute mmLastPaymentDateTime = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.mmValueDate;
+			businessElementTrace_lazy = () -> Payment.mmValueDate;
 			componentContext_lazy = () -> AggregationTransaction2.mmObject();
 			isDerived = false;
 			xmlTag = "LastPmtDtTm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LastPaymentDateTime";
 			definition = "Date and time of the last payment.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AggregationTransaction1.mmLastPaymentDateTime;
+			previousVersion_lazy = () -> AggregationTransaction1.mmLastPaymentDateTime;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
@@ -220,10 +223,10 @@ public class AggregationTransaction2 {
 			componentContext_lazy = () -> AggregationTransaction2.mmObject();
 			isDerived = false;
 			xmlTag = "NbOfPmts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NumberOfPayments";
 			definition = "Total number of payments that has been aggregated.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AggregationTransaction1.mmNumberOfPayments;
+			previousVersion_lazy = () -> AggregationTransaction1.mmNumberOfPayments;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
@@ -271,10 +274,10 @@ public class AggregationTransaction2 {
 			componentContext_lazy = () -> AggregationTransaction2.mmObject();
 			isDerived = false;
 			xmlTag = "IndvPmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IndividualPayment";
 			definition = "Individual payment that has been aggregated.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AggregationTransaction1.mmIndividualPayment;
+			previousVersion_lazy = () -> AggregationTransaction1.mmIndividualPayment;
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.DetailedAmount14.mmObject();
@@ -284,11 +287,11 @@ public class AggregationTransaction2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AggregationTransaction2.mmFirstPaymentDateTime, com.tools20022.repository.msg.AggregationTransaction2.mmLastPaymentDateTime,
-						com.tools20022.repository.msg.AggregationTransaction2.mmNumberOfPayments, com.tools20022.repository.msg.AggregationTransaction2.mmIndividualPayment);
+				messageElement_lazy = () -> Arrays.asList(AggregationTransaction2.mmFirstPaymentDateTime, AggregationTransaction2.mmLastPaymentDateTime, AggregationTransaction2.mmNumberOfPayments,
+						AggregationTransaction2.mmIndividualPayment);
 				trace_lazy = () -> BulkPayment.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AggregationTransaction2";
 				definition = "Payment transaction with an aggregated amount.";
 				previousVersion_lazy = () -> AggregationTransaction1.mmObject();

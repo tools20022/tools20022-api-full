@@ -20,11 +20,13 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.QualifiedDividendTax1Code;
 import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.datatype.Max70Text;
 import com.tools20022.repository.datatype.RestrictedFINActiveCurrencyAnd13DecimalAmount;
 import com.tools20022.repository.datatype.YesNoIndicator;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -121,7 +123,7 @@ public class CorporateActionSD4 {
 			componentContext_lazy = () -> CorporateActionSD4.mmObject();
 			isDerived = false;
 			xmlTag = "PlcAndNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "xPath to the element that is being extended.";
 			maxOccurs = 1;
@@ -163,7 +165,7 @@ public class CorporateActionSD4 {
 			componentContext_lazy = () -> CorporateActionSD4.mmObject();
 			isDerived = false;
 			xmlTag = "NewParVal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewParValue";
 			definition = "New par value of a security.";
 			maxOccurs = 1;
@@ -209,7 +211,7 @@ public class CorporateActionSD4 {
 			componentContext_lazy = () -> CorporateActionSD4.mmObject();
 			isDerived = false;
 			xmlTag = "OdParVal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OldParValue";
 			definition = "Old par value of the event security represents the previously established par value that has changed in par value event. Used in combination with new par value element to represent the difference.";
 			maxOccurs = 1;
@@ -254,7 +256,7 @@ public class CorporateActionSD4 {
 			componentContext_lazy = () -> CorporateActionSD4.mmObject();
 			isDerived = false;
 			xmlTag = "XchgFeeReqrdFlg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExchangeFeeRequiredFlag";
 			definition = "Indicates whether the event agent is charging a cancellation and or issuance fee upon the exchange of securities.";
 			maxOccurs = 1;
@@ -300,7 +302,7 @@ public class CorporateActionSD4 {
 			componentContext_lazy = () -> CorporateActionSD4.mmObject();
 			isDerived = false;
 			xmlTag = "CtdnShellFlg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CustodianShellFlag";
 			definition = "GCA VS-specific flag that indicates whether a composite record has been generated as a result of custodian information that has not yet been confirmed in the market.";
 			maxOccurs = 1;
@@ -345,7 +347,7 @@ public class CorporateActionSD4 {
 			componentContext_lazy = () -> CorporateActionSD4.mmObject();
 			isDerived = false;
 			xmlTag = "MustAllShrsBeSubmittdFlg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MustAllSharesBeSubmittedFlag";
 			definition = "Indicates whether the issuer requires a holder to present the entire account balance in order to be eligible for the offer.";
 			maxOccurs = 1;
@@ -388,7 +390,7 @@ public class CorporateActionSD4 {
 			componentContext_lazy = () -> CorporateActionSD4.mmObject();
 			isDerived = false;
 			xmlTag = "LtryDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LotteryDetails";
 			definition = "Provides details about the lottery that has been drawn as a part of the corporate action event.";
 			maxOccurs = 1;
@@ -434,7 +436,7 @@ public class CorporateActionSD4 {
 			componentContext_lazy = () -> CorporateActionSD4.mmObject();
 			isDerived = false;
 			xmlTag = "QlfdDvddTaxInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QualifiedDividendTaxIndicator";
 			definition = "Indicates whether the dividend as whole or in part qualifies for lower/ favourable tax rate.";
 			maxOccurs = 1;
@@ -478,7 +480,7 @@ public class CorporateActionSD4 {
 			componentContext_lazy = () -> CorporateActionSD4.mmObject();
 			isDerived = false;
 			xmlTag = "SrvvgCpny";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SurvivingCompany";
 			definition = "Name of the company that will remain (possibly a new name), usually designated after a merger.";
 			maxOccurs = 1;
@@ -523,7 +525,7 @@ public class CorporateActionSD4 {
 			componentContext_lazy = () -> CorporateActionSD4.mmObject();
 			isDerived = false;
 			xmlTag = "FrgnIncmSrcFlg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForeignIncomeSourceFlag";
 			definition = "Indicates when all or part of the distribution is paid from foreign sourced income of the issuer.";
 			maxOccurs = 1;
@@ -535,13 +537,11 @@ public class CorporateActionSD4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionSD4.mmPlaceAndName, com.tools20022.repository.msg.CorporateActionSD4.mmNewParValue,
-						com.tools20022.repository.msg.CorporateActionSD4.mmOldParValue, com.tools20022.repository.msg.CorporateActionSD4.mmExchangeFeeRequiredFlag, com.tools20022.repository.msg.CorporateActionSD4.mmCustodianShellFlag,
-						com.tools20022.repository.msg.CorporateActionSD4.mmMustAllSharesBeSubmittedFlag, com.tools20022.repository.msg.CorporateActionSD4.mmLotteryDetails,
-						com.tools20022.repository.msg.CorporateActionSD4.mmQualifiedDividendTaxIndicator, com.tools20022.repository.msg.CorporateActionSD4.mmSurvivingCompany,
-						com.tools20022.repository.msg.CorporateActionSD4.mmForeignIncomeSourceFlag);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(CorporateActionSD4.mmPlaceAndName, CorporateActionSD4.mmNewParValue, CorporateActionSD4.mmOldParValue, CorporateActionSD4.mmExchangeFeeRequiredFlag,
+						CorporateActionSD4.mmCustodianShellFlag, CorporateActionSD4.mmMustAllSharesBeSubmittedFlag, CorporateActionSD4.mmLotteryDetails, CorporateActionSD4.mmQualifiedDividendTaxIndicator,
+						CorporateActionSD4.mmSurvivingCompany, CorporateActionSD4.mmForeignIncomeSourceFlag);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CorporateActionSD4";
 				definition = "Provides additional information regarding corporate action details.";
 			}

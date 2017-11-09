@@ -19,7 +19,12 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.reda.StandingSettlementInstructionCancellationV01;
+import com.tools20022.repository.area.reda.StandingSettlementInstructionDeletionV01;
+import com.tools20022.repository.area.reda.StandingSettlementInstructionStatusAdviceV01;
 import com.tools20022.repository.codeset.ActiveCurrencyCode;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.PartyIdentification63;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -113,7 +118,7 @@ public class PartyOrCurrency1Choice {
 			componentContext_lazy = () -> PartyOrCurrency1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Dpstry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Depository";
 			definition = "First party in the settlement chain. In a plain vanilla settlement, it is the Central Securities Depository where the counterparty requests to receive the financial instrument or from where the counterparty delivers the financial instruments.";
 			maxOccurs = 1;
@@ -155,7 +160,7 @@ public class PartyOrCurrency1Choice {
 			componentContext_lazy = () -> PartyOrCurrency1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmCcy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementCurrency";
 			definition = "Currency for the settlement.";
 			maxOccurs = 1;
@@ -167,11 +172,11 @@ public class PartyOrCurrency1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PartyOrCurrency1Choice.mmDepository, com.tools20022.repository.choice.PartyOrCurrency1Choice.mmSettlementCurrency);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.reda.StandingSettlementInstructionCancellationV01.mmSettlementDetails,
-						com.tools20022.repository.area.reda.StandingSettlementInstructionStatusAdviceV01.mmSettlementDetails, com.tools20022.repository.area.reda.StandingSettlementInstructionDeletionV01.mmSettlementDetails);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(PartyOrCurrency1Choice.mmDepository, PartyOrCurrency1Choice.mmSettlementCurrency);
+				messageBuildingBlock_lazy = () -> Arrays.asList(StandingSettlementInstructionCancellationV01.mmSettlementDetails, StandingSettlementInstructionStatusAdviceV01.mmSettlementDetails,
+						StandingSettlementInstructionDeletionV01.mmSettlementDetails);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PartyOrCurrency1Choice";
 				definition = "Choice of a depostory or settlement currency.";
 			}

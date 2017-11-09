@@ -19,7 +19,9 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.SecuritiesQuantity2Code;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -96,7 +98,7 @@ public class PlannedQuantity1Choice {
 			componentContext_lazy = () -> PlannedQuantity1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Qty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Quantity";
 			definition = "Planned quantity of financial instrument or lot of rights/warrants to be purchased.";
 			maxOccurs = 1;
@@ -141,7 +143,7 @@ public class PlannedQuantity1Choice {
 			componentContext_lazy = () -> PlannedQuantity1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Cd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Code for the planned quantity of financial instrument or lot of rights/warrants to be purchased.";
 			maxOccurs = 1;
@@ -153,9 +155,9 @@ public class PlannedQuantity1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PlannedQuantity1Choice.mmQuantity, com.tools20022.repository.choice.PlannedQuantity1Choice.mmCode);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(PlannedQuantity1Choice.mmQuantity, PlannedQuantity1Choice.mmCode);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PlannedQuantity1Choice";
 				definition = "Planned number of shares to be purchased\r\n 買付予定株式数";
 			}

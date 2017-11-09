@@ -19,9 +19,12 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.trea.*;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.Max35Text;
-import com.tools20022.repository.entity.TreasuryTrade;
+import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -136,11 +139,11 @@ public class TradeAgreement2 {
 	 */
 	public static final MMMessageAttribute mmTradeDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Trade.mmTradeDateTime;
+			businessElementTrace_lazy = () -> Trade.mmTradeDateTime;
 			componentContext_lazy = () -> TradeAgreement2.mmObject();
 			isDerived = false;
 			xmlTag = "TradDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeDate";
 			definition = "Date at which the trading parties have agreed to amend or cancel a treasury trade.";
 			maxOccurs = 1;
@@ -184,7 +187,7 @@ public class TradeAgreement2 {
 			componentContext_lazy = () -> TradeAgreement2.mmObject();
 			isDerived = false;
 			xmlTag = "NtfctnId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotificationIdentification";
 			definition = "Identification of a notification.This identification must be unique amongst all notifications of same type confirmed by the same party.";
 			maxOccurs = 1;
@@ -227,11 +230,11 @@ public class TradeAgreement2 {
 	 */
 	public static final MMMessageAttribute mmCommonReference = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradeIdentification.mmCommonIdentification;
+			businessElementTrace_lazy = () -> TradeIdentification.mmCommonIdentification;
 			componentContext_lazy = () -> TradeAgreement2.mmObject();
 			isDerived = false;
 			xmlTag = "CmonRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommonReference";
 			definition = "Reference common to the parties of a trade.";
 			maxOccurs = 1;
@@ -275,11 +278,11 @@ public class TradeAgreement2 {
 	 */
 	public static final MMMessageAttribute mmAmendOrCancelReason = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmReason;
+			businessElementTrace_lazy = () -> StatusReason.mmReason;
 			componentContext_lazy = () -> TradeAgreement2.mmObject();
 			isDerived = false;
 			xmlTag = "AmdOrCclRsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmendOrCancelReason";
 			definition = "Describes the reason for the cancellation or the amendment.";
 			maxOccurs = 1;
@@ -325,11 +328,11 @@ public class TradeAgreement2 {
 	 */
 	public static final MMMessageAttribute mmRelatedReference = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmIdentification;
+			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> TradeAgreement2.mmObject();
 			isDerived = false;
 			xmlTag = "RltdRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedReference";
 			definition = "Refers to the identification of a previous event in the life of a trade which is amended or cancelled.";
 			maxOccurs = 1;
@@ -341,15 +344,13 @@ public class TradeAgreement2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TradeAgreement2.mmTradeDate, com.tools20022.repository.msg.TradeAgreement2.mmNotificationIdentification,
-						com.tools20022.repository.msg.TradeAgreement2.mmCommonReference, com.tools20022.repository.msg.TradeAgreement2.mmAmendOrCancelReason, com.tools20022.repository.msg.TradeAgreement2.mmRelatedReference);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.trea.AmendNonDeliverableForwardOpeningV02.mmTradeInformation,
-						com.tools20022.repository.area.trea.CancelNonDeliverableForwardOpeningV02.mmTradeInformation, com.tools20022.repository.area.trea.AmendNonDeliverableForwardValuationV02.mmTradeInformation,
-						com.tools20022.repository.area.trea.CancelNonDeliverableForwardValuationV02.mmTradeInformation, com.tools20022.repository.area.trea.AmendForeignExchangeOptionV02.mmTradeInformation,
-						com.tools20022.repository.area.trea.CancelForeignExchangeOptionV02.mmTradeInformation);
+				messageElement_lazy = () -> Arrays.asList(TradeAgreement2.mmTradeDate, TradeAgreement2.mmNotificationIdentification, TradeAgreement2.mmCommonReference, TradeAgreement2.mmAmendOrCancelReason,
+						TradeAgreement2.mmRelatedReference);
+				messageBuildingBlock_lazy = () -> Arrays.asList(AmendNonDeliverableForwardOpeningV02.mmTradeInformation, CancelNonDeliverableForwardOpeningV02.mmTradeInformation, AmendNonDeliverableForwardValuationV02.mmTradeInformation,
+						CancelNonDeliverableForwardValuationV02.mmTradeInformation, AmendForeignExchangeOptionV02.mmTradeInformation, CancelForeignExchangeOptionV02.mmTradeInformation);
 				trace_lazy = () -> TreasuryTrade.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TradeAgreement2";
 				definition = "Date and identification of a trade together with references to previous events in its life.";
 			}

@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.OriginatorRoleCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -93,7 +95,7 @@ public class OriginatorRole1Code extends OriginatorRoleCode {
 	 */
 	public static final MMCode mmSystematicInternaliser = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SystematicInternaliser";
 			owner_lazy = () -> OriginatorRole1Code.mmObject();
 		}
@@ -116,7 +118,7 @@ public class OriginatorRole1Code extends OriginatorRoleCode {
 	 */
 	public static final MMCode mmMultilateralTradingFacility = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MultilateralTradingFacility";
 			owner_lazy = () -> OriginatorRole1Code.mmObject();
 		}
@@ -139,7 +141,7 @@ public class OriginatorRole1Code extends OriginatorRoleCode {
 	 */
 	public static final MMCode mmRegulatedMarket = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RegulatedMarket";
 			owner_lazy = () -> OriginatorRole1Code.mmObject();
 		}
@@ -162,7 +164,7 @@ public class OriginatorRole1Code extends OriginatorRoleCode {
 	 */
 	public static final MMCode mmMarketMaker = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketMaker";
 			owner_lazy = () -> OriginatorRole1Code.mmObject();
 		}
@@ -185,7 +187,7 @@ public class OriginatorRole1Code extends OriginatorRoleCode {
 	 */
 	public static final MMCode mmInvestor = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Investor";
 			owner_lazy = () -> OriginatorRole1Code.mmObject();
 		}
@@ -194,13 +196,13 @@ public class OriginatorRole1Code extends OriginatorRoleCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("SINT");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OriginatorRole1Code";
 				definition = "Specifies in what capacity (role) the originator of a quote is acting.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OriginatorRole1Code.mmSystematicInternaliser, com.tools20022.repository.codeset.OriginatorRole1Code.mmMultilateralTradingFacility,
-						com.tools20022.repository.codeset.OriginatorRole1Code.mmRegulatedMarket, com.tools20022.repository.codeset.OriginatorRole1Code.mmMarketMaker, com.tools20022.repository.codeset.OriginatorRole1Code.mmInvestor);
+				code_lazy = () -> Arrays.asList(OriginatorRole1Code.mmSystematicInternaliser, OriginatorRole1Code.mmMultilateralTradingFacility, OriginatorRole1Code.mmRegulatedMarket, OriginatorRole1Code.mmMarketMaker,
+						OriginatorRole1Code.mmInvestor);
 				trace_lazy = () -> OriginatorRoleCode.mmObject();
 			}
 		});

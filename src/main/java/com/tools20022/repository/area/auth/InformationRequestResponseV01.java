@@ -20,6 +20,7 @@ package com.tools20022.repository.area.auth;
 import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.AuthoritiesLatestVersion;
 import com.tools20022.repository.choice.SearchCriteria1Choice;
 import com.tools20022.repository.codeset.StatusResponse1Code;
@@ -45,6 +46,9 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code auth.002.001.01}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.AuthoritiesLatestVersion
@@ -85,9 +89,6 @@ import java.util.List;
  * InformationRequestResponseV01.mmSupplementaryData}</li>
  * </ul>
  * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code auth.002.001.01}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -132,7 +133,7 @@ public class InformationRequestResponseV01 {
 	public static final MMMessageBuildingBlock mmResponseIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "RspnId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ResponseIdentification";
 			definition = "Unique identification for the specific investigation as know by the responding party.";
 			maxOccurs = 1;
@@ -169,7 +170,7 @@ public class InformationRequestResponseV01 {
 	public static final MMMessageBuildingBlock mmInvestigationIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "InvstgtnId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestigationIdentification";
 			definition = "Unique identification for the specific investigation as known by the requesting party.";
 			maxOccurs = 1;
@@ -204,7 +205,7 @@ public class InformationRequestResponseV01 {
 	public static final MMMessageBuildingBlock mmResponseStatus = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "RspnSts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ResponseStatus";
 			definition = "Provides the status of the response.";
 			maxOccurs = 1;
@@ -243,7 +244,7 @@ public class InformationRequestResponseV01 {
 	public static final MMMessageBuildingBlock mmSearchCriteria = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SchCrit";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SearchCriteria";
 			definition = "Specifies the the search criteria for the financial institution to perform the search on. The search criteria can be an account, a customer identification or a payment instrument type.";
 			maxOccurs = 1;
@@ -279,7 +280,7 @@ public class InformationRequestResponseV01 {
 	public static final MMMessageBuildingBlock mmReturnIndicator = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "RtrInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReturnIndicator";
 			definition = "Provides the return indicators and the investigation result.";
 			minOccurs = 1;
@@ -316,7 +317,7 @@ public class InformationRequestResponseV01 {
 	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SplmtryData";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryData";
 			definition = "Additional information that can not be captured in the structured fields and/or any other specific block.";
 			minOccurs = 0;
@@ -327,17 +328,15 @@ public class InformationRequestResponseV01 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InformationRequestResponseV01";
 				definition = "This message is sent by the financial institution to the authorities (police, customs, tax authorities, enforcement authorities) to provide a part or all of the requested information.\r\nThe financial institution previously received a request for financial information in the scope of a financial investigation.\r\n\r\nDepending on whether the response can be provided STP within the authorities financial investigations messages, the requested information may be \r\n•\tprovided in part or in full within the response message itself, or \r\n•\tonly referred to in the response message";
 				messageSet_lazy = () -> Arrays.asList(AuthoritiesFinancialInvestigationsISOLatestversion.mmObject());
 				rootElement = "Document";
 				xmlTag = "InfReqRspn";
 				businessArea_lazy = () -> AuthoritiesLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.auth.InformationRequestResponseV01.mmResponseIdentification,
-						com.tools20022.repository.area.auth.InformationRequestResponseV01.mmInvestigationIdentification, com.tools20022.repository.area.auth.InformationRequestResponseV01.mmResponseStatus,
-						com.tools20022.repository.area.auth.InformationRequestResponseV01.mmSearchCriteria, com.tools20022.repository.area.auth.InformationRequestResponseV01.mmReturnIndicator,
-						com.tools20022.repository.area.auth.InformationRequestResponseV01.mmSupplementaryData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(InformationRequestResponseV01.mmResponseIdentification, InformationRequestResponseV01.mmInvestigationIdentification, InformationRequestResponseV01.mmResponseStatus,
+						InformationRequestResponseV01.mmSearchCriteria, InformationRequestResponseV01.mmReturnIndicator, InformationRequestResponseV01.mmSupplementaryData);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "auth";

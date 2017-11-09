@@ -20,10 +20,13 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.caaa.*;
 import com.tools20022.repository.codeset.MessageFunction10Code;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Max6Text;
 import com.tools20022.repository.datatype.Number;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -173,10 +176,10 @@ public class Header30 {
 			componentContext_lazy = () -> Header30.mmObject();
 			isDerived = false;
 			xmlTag = "MsgFctn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageFunction";
 			definition = "Identifies the type of process related to the message.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Header10.mmMessageFunction;
+			previousVersion_lazy = () -> Header10.mmMessageFunction;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> MessageFunction10Code.mmObject();
@@ -219,10 +222,10 @@ public class Header30 {
 			componentContext_lazy = () -> Header30.mmObject();
 			isDerived = false;
 			xmlTag = "PrtcolVrsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProtocolVersion";
 			definition = "Version of the acquirer protocol specifications.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Header10.mmProtocolVersion;
+			previousVersion_lazy = () -> Header10.mmProtocolVersion;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max6Text.mmObject();
@@ -265,10 +268,10 @@ public class Header30 {
 			componentContext_lazy = () -> Header30.mmObject();
 			isDerived = false;
 			xmlTag = "XchgId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExchangeIdentification";
 			definition = "Unique identification of an exchange occurrence.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Header10.mmExchangeIdentification;
+			previousVersion_lazy = () -> Header10.mmExchangeIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
@@ -311,10 +314,10 @@ public class Header30 {
 			componentContext_lazy = () -> Header30.mmObject();
 			isDerived = false;
 			xmlTag = "CreDtTm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreationDateTime";
 			definition = "Date and time at which the message was created.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Header10.mmCreationDateTime;
+			previousVersion_lazy = () -> Header10.mmCreationDateTime;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
@@ -358,10 +361,10 @@ public class Header30 {
 			componentContext_lazy = () -> Header30.mmObject();
 			isDerived = false;
 			xmlTag = "InitgPty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InitiatingParty";
 			definition = "Unique identification of the partner that has initiated the exchange.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Header10.mmInitiatingParty;
+			previousVersion_lazy = () -> Header10.mmInitiatingParty;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -408,10 +411,10 @@ public class Header30 {
 			componentContext_lazy = () -> Header30.mmObject();
 			isDerived = false;
 			xmlTag = "RcptPty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RecipientParty";
 			definition = "Unique identification of the partner that is the recipient of the message exchange.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Header10.mmRecipientParty;
+			previousVersion_lazy = () -> Header10.mmRecipientParty;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -458,10 +461,10 @@ public class Header30 {
 			componentContext_lazy = () -> Header30.mmObject();
 			isDerived = false;
 			xmlTag = "Tracblt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Traceability";
 			definition = "Identification of partners involved in exchange from the merchant to the issuer, with the relative timestamp of their exchanges.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Header10.mmTraceability;
+			previousVersion_lazy = () -> Header10.mmTraceability;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.Traceability5.mmObject();
 		}
@@ -470,20 +473,15 @@ public class Header30 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Header30.mmMessageFunction, com.tools20022.repository.msg.Header30.mmProtocolVersion, com.tools20022.repository.msg.Header30.mmExchangeIdentification,
-						com.tools20022.repository.msg.Header30.mmCreationDateTime, com.tools20022.repository.msg.Header30.mmInitiatingParty, com.tools20022.repository.msg.Header30.mmRecipientParty,
-						com.tools20022.repository.msg.Header30.mmTraceability);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.caaa.AcceptorReconciliationRequestV05.mmHeader, com.tools20022.repository.area.caaa.AcceptorCurrencyConversionResponseV03.mmHeader,
-						com.tools20022.repository.area.caaa.AcceptorCancellationResponseV05.mmHeader, com.tools20022.repository.area.caaa.AcceptorCancellationRequestV05.mmHeader,
-						com.tools20022.repository.area.caaa.AcceptorAuthorisationRequestV05.mmHeader, com.tools20022.repository.area.caaa.AcceptorCurrencyConversionRequestV03.mmHeader,
-						com.tools20022.repository.area.caaa.AcceptorDiagnosticRequestV05.mmHeader, com.tools20022.repository.area.caaa.AcceptorReconciliationResponseV05.mmHeader,
-						com.tools20022.repository.area.caaa.AcceptorDiagnosticResponseV05.mmHeader, com.tools20022.repository.area.caaa.AcceptorAuthorisationResponseV05.mmHeader,
-						com.tools20022.repository.area.caaa.AcceptorAuthorisationResponseV06.mmHeader, com.tools20022.repository.area.caaa.AcceptorAuthorisationRequestV06.mmHeader,
-						com.tools20022.repository.area.caaa.AcceptorCancellationRequestV06.mmHeader, com.tools20022.repository.area.caaa.AcceptorCurrencyConversionResponseV04.mmHeader,
-						com.tools20022.repository.area.caaa.AcceptorCurrencyConversionRequestV04.mmHeader, com.tools20022.repository.area.caaa.AcceptorCancellationResponseV06.mmHeader,
-						com.tools20022.repository.area.caaa.AcceptorReconciliationRequestV06.mmHeader, com.tools20022.repository.area.caaa.AcceptorDiagnosticRequestV06.mmHeader);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(Header30.mmMessageFunction, Header30.mmProtocolVersion, Header30.mmExchangeIdentification, Header30.mmCreationDateTime, Header30.mmInitiatingParty, Header30.mmRecipientParty,
+						Header30.mmTraceability);
+				messageBuildingBlock_lazy = () -> Arrays.asList(AcceptorReconciliationRequestV05.mmHeader, AcceptorCurrencyConversionResponseV03.mmHeader, AcceptorCancellationResponseV05.mmHeader, AcceptorCancellationRequestV05.mmHeader,
+						AcceptorAuthorisationRequestV05.mmHeader, AcceptorCurrencyConversionRequestV03.mmHeader, AcceptorDiagnosticRequestV05.mmHeader, AcceptorReconciliationResponseV05.mmHeader, AcceptorDiagnosticResponseV05.mmHeader,
+						AcceptorAuthorisationResponseV05.mmHeader, AcceptorAuthorisationResponseV06.mmHeader, AcceptorAuthorisationRequestV06.mmHeader, AcceptorCancellationRequestV06.mmHeader,
+						AcceptorCurrencyConversionResponseV04.mmHeader, AcceptorCurrencyConversionRequestV04.mmHeader, AcceptorCancellationResponseV06.mmHeader, AcceptorReconciliationRequestV06.mmHeader,
+						AcceptorDiagnosticRequestV06.mmHeader);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Header30";
 				definition = "Set of characteristics related to the protocol.";
 				previousVersion_lazy = () -> Header10.mmObject();

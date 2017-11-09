@@ -19,8 +19,10 @@ package com.tools20022.repository.entity;
 
 import com.tools20022.metamodel.MMBusinessAttribute;
 import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.DecimalNumber;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -92,7 +94,7 @@ public class ShareholderRegister {
 		{
 			elementContext_lazy = () -> ShareholderRegister.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Identification";
 			definition = "Uniquely identifies the shareholder registry.";
 			maxOccurs = 1;
@@ -133,7 +135,7 @@ public class ShareholderRegister {
 		{
 			elementContext_lazy = () -> ShareholderRegister.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Entry";
 			definition = "Number of securities issued by the same entity and registered by owner.";
 			maxOccurs = 1;
@@ -145,11 +147,11 @@ public class ShareholderRegister {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ShareholderRegister";
 				definition = "Contains a list of owners and the quantity of securities they own.";
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.ShareholderRegister.mmIdentification, com.tools20022.repository.entity.ShareholderRegister.mmEntry);
+				element_lazy = () -> Arrays.asList(ShareholderRegister.mmIdentification, ShareholderRegister.mmEntry);
 			}
 		});
 		return mmObject_lazy.get();

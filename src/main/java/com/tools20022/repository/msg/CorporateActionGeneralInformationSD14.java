@@ -19,8 +19,10 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max10NumericText;
 import com.tools20022.repository.datatype.Max350Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -111,10 +113,10 @@ public class CorporateActionGeneralInformationSD14 {
 			componentContext_lazy = () -> CorporateActionGeneralInformationSD14.mmObject();
 			isDerived = false;
 			xmlTag = "PlcAndNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "xPath to the element that is being extended.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionGeneralInformationSD21.mmPlaceAndName);
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionGeneralInformationSD21.mmPlaceAndName);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
@@ -166,10 +168,10 @@ public class CorporateActionGeneralInformationSD14 {
 			componentContext_lazy = () -> CorporateActionGeneralInformationSD14.mmObject();
 			isDerived = false;
 			xmlTag = "RedId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RedemptionIdentification";
 			definition = "Unique number systemically assigned to all Lottery and Non-Lottery events announced in DTC Redemptions (REDS) Participant Terminal System (PTS)/ Particinant Browser System(PBS) function. ";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionGeneralInformationSD21.mmRedemptionIdentification);
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionGeneralInformationSD21.mmRedemptionIdentification);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max10NumericText.mmObject();
@@ -179,9 +181,9 @@ public class CorporateActionGeneralInformationSD14 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionGeneralInformationSD14.mmPlaceAndName, com.tools20022.repository.msg.CorporateActionGeneralInformationSD14.mmRedemptionIdentification);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(CorporateActionGeneralInformationSD14.mmPlaceAndName, CorporateActionGeneralInformationSD14.mmRedemptionIdentification);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionGeneralInformationSD14";
 				definition = "Provides additional information regarding corporate action general information details.";
 				nextVersions_lazy = () -> Arrays.asList(CorporateActionGeneralInformationSD21.mmObject());

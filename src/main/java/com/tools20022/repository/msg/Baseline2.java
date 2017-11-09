@@ -20,9 +20,10 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.TradeFinanceService2Code;
-import com.tools20022.repository.entity.CommercialTrade;
-import com.tools20022.repository.entity.FinancialInstitution;
+import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -122,7 +123,7 @@ public class Baseline2 {
 			componentContext_lazy = () -> Baseline2.mmObject();
 			isDerived = false;
 			xmlTag = "SubmitrBaselnId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubmitterBaselineIdentification";
 			definition = "Identifies the baseline provided by the submitter.";
 			maxOccurs = 1;
@@ -165,7 +166,7 @@ public class Baseline2 {
 			componentContext_lazy = () -> Baseline2.mmObject();
 			isDerived = false;
 			xmlTag = "SvcCd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ServiceCode";
 			definition = "Identifies the service requested by the submitter by means of a code.";
 			maxOccurs = 1;
@@ -208,11 +209,11 @@ public class Baseline2 {
 	 */
 	public static final MMMessageAssociationEnd mmPurchaseOrderReference = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PurchaseOrder.mmIdentification;
+			businessElementTrace_lazy = () -> PurchaseOrder.mmIdentification;
 			componentContext_lazy = () -> Baseline2.mmObject();
 			isDerived = false;
 			xmlTag = "PurchsOrdrRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PurchaseOrderReference";
 			definition = "Reference to the purchase order of the underlying transaction.";
 			maxOccurs = 1;
@@ -255,11 +256,11 @@ public class Baseline2 {
 	 */
 	public static final MMMessageAssociationEnd mmBuyer = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> Baseline2.mmObject();
 			isDerived = false;
 			xmlTag = "Buyr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Buyer";
 			definition = "Party that buys goods or services, or a financial instrument.";
 			maxOccurs = 1;
@@ -302,11 +303,11 @@ public class Baseline2 {
 	 */
 	public static final MMMessageAssociationEnd mmSeller = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> Baseline2.mmObject();
 			isDerived = false;
 			xmlTag = "Sellr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Seller";
 			definition = "Party that sells goods or services, or a financial instrument.";
 			maxOccurs = 1;
@@ -353,7 +354,7 @@ public class Baseline2 {
 			componentContext_lazy = () -> Baseline2.mmObject();
 			isDerived = false;
 			xmlTag = "BuyrBk";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BuyerBank";
 			definition = "Financial institution of the buyer, uniquely identified by its BIC.";
 			maxOccurs = 1;
@@ -400,7 +401,7 @@ public class Baseline2 {
 			componentContext_lazy = () -> Baseline2.mmObject();
 			isDerived = false;
 			xmlTag = "SellrBk";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SellerBank";
 			definition = "Financial institution of the seller, uniquely identified by its BIC.";
 			maxOccurs = 1;
@@ -442,11 +443,11 @@ public class Baseline2 {
 	 */
 	public static final MMMessageAssociationEnd mmBillTo = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> Baseline2.mmObject();
 			isDerived = false;
 			xmlTag = "BllTo";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BillTo";
 			definition = "Party to be invoiced for the purchase.";
 			maxOccurs = 1;
@@ -488,11 +489,11 @@ public class Baseline2 {
 	 */
 	public static final MMMessageAssociationEnd mmShipTo = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> Baseline2.mmObject();
 			isDerived = false;
 			xmlTag = "ShipTo";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ShipTo";
 			definition = "Party to whom the goods must be delivered in the end.";
 			maxOccurs = 1;
@@ -534,11 +535,11 @@ public class Baseline2 {
 	 */
 	public static final MMMessageAssociationEnd mmConsignee = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> Baseline2.mmObject();
 			isDerived = false;
 			xmlTag = "Consgn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Consignee";
 			definition = "Party to whom the goods must be delivered.";
 			maxOccurs = 1;
@@ -584,7 +585,7 @@ public class Baseline2 {
 			componentContext_lazy = () -> Baseline2.mmObject();
 			isDerived = false;
 			xmlTag = "Goods";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Goods";
 			definition = "Goods or services that are part of a commercial trade agreement.";
 			maxOccurs = 1;
@@ -627,11 +628,11 @@ public class Baseline2 {
 	 */
 	public static final MMMessageAssociationEnd mmPaymentTerms = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CommercialTrade.mmPaymentObligation;
+			businessElementTrace_lazy = () -> CommercialTrade.mmPaymentObligation;
 			componentContext_lazy = () -> Baseline2.mmObject();
 			isDerived = false;
 			xmlTag = "PmtTerms";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentTerms";
 			definition = "Specifies the payment terms by means of a code and a limit in time.";
 			minOccurs = 1;
@@ -673,11 +674,11 @@ public class Baseline2 {
 	 */
 	public static final MMMessageAssociationEnd mmSettlementTerms = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentInstruction.mmSettlementInstruction;
+			businessElementTrace_lazy = () -> PaymentInstruction.mmSettlementInstruction;
 			componentContext_lazy = () -> Baseline2.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmTerms";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementTerms";
 			definition = "Specifies how the underlying transaction should be settled.";
 			maxOccurs = 1;
@@ -720,7 +721,7 @@ public class Baseline2 {
 			componentContext_lazy = () -> Baseline2.mmObject();
 			isDerived = false;
 			xmlTag = "DataSetReqrd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DataSetRequired";
 			definition = "Specifies the type of data set required in order to complete the transaction, as per the underlying commercial agreement.";
 			maxOccurs = 1;
@@ -733,14 +734,11 @@ public class Baseline2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Baseline2.mmSubmitterBaselineIdentification, com.tools20022.repository.msg.Baseline2.mmServiceCode,
-						com.tools20022.repository.msg.Baseline2.mmPurchaseOrderReference, com.tools20022.repository.msg.Baseline2.mmBuyer, com.tools20022.repository.msg.Baseline2.mmSeller,
-						com.tools20022.repository.msg.Baseline2.mmBuyerBank, com.tools20022.repository.msg.Baseline2.mmSellerBank, com.tools20022.repository.msg.Baseline2.mmBillTo, com.tools20022.repository.msg.Baseline2.mmShipTo,
-						com.tools20022.repository.msg.Baseline2.mmConsignee, com.tools20022.repository.msg.Baseline2.mmGoods, com.tools20022.repository.msg.Baseline2.mmPaymentTerms,
-						com.tools20022.repository.msg.Baseline2.mmSettlementTerms, com.tools20022.repository.msg.Baseline2.mmDataSetRequired);
+				messageElement_lazy = () -> Arrays.asList(Baseline2.mmSubmitterBaselineIdentification, Baseline2.mmServiceCode, Baseline2.mmPurchaseOrderReference, Baseline2.mmBuyer, Baseline2.mmSeller, Baseline2.mmBuyerBank,
+						Baseline2.mmSellerBank, Baseline2.mmBillTo, Baseline2.mmShipTo, Baseline2.mmConsignee, Baseline2.mmGoods, Baseline2.mmPaymentTerms, Baseline2.mmSettlementTerms, Baseline2.mmDataSetRequired);
 				trace_lazy = () -> CommercialTrade.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Baseline2";
 				definition = "Specifies the commercial details of the underlying transaction.";
 			}

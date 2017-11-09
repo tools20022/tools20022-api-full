@@ -19,8 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.sese.SecuritiesTransactionStatusQueryV04;
 import com.tools20022.repository.choice.DocumentNumber5Choice;
 import com.tools20022.repository.entity.Document;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -110,10 +113,10 @@ public class DocumentNumber12 {
 			componentContext_lazy = () -> DocumentNumber12.mmObject();
 			isDerived = false;
 			xmlTag = "Nb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Number";
 			definition = "Number used to identify a message or document.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.DocumentNumber9.mmNumber;
+			previousVersion_lazy = () -> DocumentNumber9.mmNumber;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -158,10 +161,10 @@ public class DocumentNumber12 {
 			componentContext_lazy = () -> DocumentNumber12.mmObject();
 			isDerived = false;
 			xmlTag = "Refs";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "References";
 			definition = "References of transaction for which the status is requested.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.DocumentNumber9.mmReferences;
+			previousVersion_lazy = () -> DocumentNumber9.mmReferences;
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.Identification15.mmObject();
@@ -171,11 +174,11 @@ public class DocumentNumber12 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DocumentNumber12.mmNumber, com.tools20022.repository.msg.DocumentNumber12.mmReferences);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesTransactionStatusQueryV04.mmStatusAdviceRequested);
+				messageElement_lazy = () -> Arrays.asList(DocumentNumber12.mmNumber, DocumentNumber12.mmReferences);
+				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesTransactionStatusQueryV04.mmStatusAdviceRequested);
 				trace_lazy = () -> Document.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DocumentNumber12";
 				definition = "Identification of the status being requested.";
 				previousVersion_lazy = () -> DocumentNumber9.mmObject();

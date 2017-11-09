@@ -19,8 +19,12 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.PartyIdentification34Choice;
+import com.tools20022.repository.entity.BuyIn;
+import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.entity.SecuritiesQuantity;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -102,11 +106,11 @@ public class SecuritiesCompensation1 {
 	 */
 	public static final MMMessageAssociationEnd mmDepository = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> SecuritiesCompensation1.mmObject();
 			isDerived = false;
 			xmlTag = "Dpstry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Depository";
 			definition = "Place where settlement of the securities takes place.";
 			maxOccurs = 1;
@@ -149,11 +153,11 @@ public class SecuritiesCompensation1 {
 	 */
 	public static final MMMessageAssociationEnd mmSettlementAmount = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmAmount;
+			businessElementTrace_lazy = () -> SecuritiesQuantity.mmAmount;
 			componentContext_lazy = () -> SecuritiesCompensation1.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementAmount";
 			definition = "Provides the total amount of money to be settled.";
 			maxOccurs = 1;
@@ -196,11 +200,11 @@ public class SecuritiesCompensation1 {
 	 */
 	public static final MMMessageAssociationEnd mmFees = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BuyIn.mmFees;
+			businessElementTrace_lazy = () -> BuyIn.mmFees;
 			componentContext_lazy = () -> SecuritiesCompensation1.mmObject();
 			isDerived = false;
 			xmlTag = "Fees";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Fees";
 			definition = "Amount of money related to the fees for the securities compensation.";
 			maxOccurs = 1;
@@ -213,11 +217,10 @@ public class SecuritiesCompensation1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesCompensation1.mmDepository, com.tools20022.repository.msg.SecuritiesCompensation1.mmSettlementAmount,
-						com.tools20022.repository.msg.SecuritiesCompensation1.mmFees);
+				messageElement_lazy = () -> Arrays.asList(SecuritiesCompensation1.mmDepository, SecuritiesCompensation1.mmSettlementAmount, SecuritiesCompensation1.mmFees);
 				trace_lazy = () -> SecuritiesQuantity.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesCompensation1";
 				definition = "Provides details about the securities compensation such as the depository and the total settlement amount.";
 			}

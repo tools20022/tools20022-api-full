@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.SecuritiesLendingType1Code
+ * SecuritiesLendingType1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -38,13 +47,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.SecuritiesLendingTypeCode#mmCallBack
  * SecuritiesLendingTypeCode.mmCallBack}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.SecuritiesLendingType1Code
- * SecuritiesLendingType1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -94,7 +96,7 @@ public class SecuritiesLendingTypeCode {
 	 */
 	public static final MMCode mmNewRegistration = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewRegistration";
 			definition = "Securities lending contract is new and registered.";
 			owner_lazy = () -> SecuritiesLendingTypeCode.mmObject();
@@ -124,7 +126,7 @@ public class SecuritiesLendingTypeCode {
 	 */
 	public static final MMCode mmRollOverRenewal = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RollOverRenewal";
 			definition = "Securities lending contract is renewed.";
 			owner_lazy = () -> SecuritiesLendingTypeCode.mmObject();
@@ -154,7 +156,7 @@ public class SecuritiesLendingTypeCode {
 	 */
 	public static final MMCode mmCallBack = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CallBack";
 			definition = "Securities lending contract is called back.";
 			owner_lazy = () -> SecuritiesLendingTypeCode.mmObject();
@@ -165,13 +167,12 @@ public class SecuritiesLendingTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("NWRG");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesLendingTypeCode";
 				definition = "Type of securities lending contract.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SecuritiesLendingTypeCode.mmNewRegistration, com.tools20022.repository.codeset.SecuritiesLendingTypeCode.mmRollOverRenewal,
-						com.tools20022.repository.codeset.SecuritiesLendingTypeCode.mmCallBack);
+				code_lazy = () -> Arrays.asList(SecuritiesLendingTypeCode.mmNewRegistration, SecuritiesLendingTypeCode.mmRollOverRenewal, SecuritiesLendingTypeCode.mmCallBack);
 				derivation_lazy = () -> Arrays.asList(SecuritiesLendingType1Code.mmObject());
 			}
 		});

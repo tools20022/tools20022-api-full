@@ -20,8 +20,14 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.seev.AgentCADeactivationCancellationRequestV01;
+import com.tools20022.repository.area.seev.AgentCADeactivationInstructionV01;
 import com.tools20022.repository.datatype.ISODateTime;
+import com.tools20022.repository.entity.ChoiceCorporateAction;
 import com.tools20022.repository.entity.CorporateActionEvent;
+import com.tools20022.repository.entity.CorporateActionStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -114,11 +120,11 @@ public class CorporateActionDeactivationInstruction1 {
 	 */
 	public static final MMMessageAttribute mmDeactivationDateAndTime = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionStatus.mmDeactivationDateAndTime;
+			businessElementTrace_lazy = () -> CorporateActionStatus.mmDeactivationDateAndTime;
 			componentContext_lazy = () -> CorporateActionDeactivationInstruction1.mmObject();
 			isDerived = false;
 			xmlTag = "DeactvtnDtAndTm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeactivationDateAndTime";
 			definition = "Date and time at which the CSD must deactivate the corporate action event or the option.";
 			maxOccurs = 1;
@@ -163,11 +169,11 @@ public class CorporateActionDeactivationInstruction1 {
 	 */
 	public static final MMMessageAssociationEnd mmOptionDetails = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ChoiceCorporateAction.mmCorporateActionOptionDefinition;
+			businessElementTrace_lazy = () -> ChoiceCorporateAction.mmCorporateActionOptionDefinition;
 			componentContext_lazy = () -> CorporateActionDeactivationInstruction1.mmObject();
 			isDerived = false;
 			xmlTag = "OptnDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionDetails";
 			definition = "Provides information about the option, when the deactivation instruction applies at the level of a corporate action option.";
 			minOccurs = 0;
@@ -179,13 +185,11 @@ public class CorporateActionDeactivationInstruction1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionDeactivationInstruction1.mmDeactivationDateAndTime,
-						com.tools20022.repository.msg.CorporateActionDeactivationInstruction1.mmOptionDetails);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.AgentCADeactivationInstructionV01.mmDeactivationDetails,
-						com.tools20022.repository.area.seev.AgentCADeactivationCancellationRequestV01.mmDeactivationInstructionDetails);
+				messageElement_lazy = () -> Arrays.asList(CorporateActionDeactivationInstruction1.mmDeactivationDateAndTime, CorporateActionDeactivationInstruction1.mmOptionDetails);
+				messageBuildingBlock_lazy = () -> Arrays.asList(AgentCADeactivationInstructionV01.mmDeactivationDetails, AgentCADeactivationCancellationRequestV01.mmDeactivationInstructionDetails);
 				trace_lazy = () -> CorporateActionEvent.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionDeactivationInstruction1";
 				definition = "Provides information about the deactivation.";
 			}

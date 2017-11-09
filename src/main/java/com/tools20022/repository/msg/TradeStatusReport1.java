@@ -20,9 +20,12 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.tsrv.TradeStatusReportV01;
 import com.tools20022.repository.codeset.UndertakingStatus1Code;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.UndertakingStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -114,7 +117,7 @@ public class TradeStatusReport1 {
 			componentContext_lazy = () -> TradeStatusReport1.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlMsgDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalMessageDetails";
 			definition = "Information concerning the original message to which the TradeStatusReport is sent in response.";
 			maxOccurs = 1;
@@ -159,11 +162,11 @@ public class TradeStatusReport1 {
 	 */
 	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.UndertakingStatus.mmStatus;
+			businessElementTrace_lazy = () -> UndertakingStatus.mmStatus;
 			componentContext_lazy = () -> TradeStatusReport1.mmObject();
 			isDerived = false;
 			xmlTag = "Sts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Status";
 			definition = "Specifies the processing status of the original message.";
 			maxOccurs = 1;
@@ -209,11 +212,11 @@ public class TradeStatusReport1 {
 	 */
 	public static final MMMessageAssociationEnd mmStatusReason = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.UndertakingStatus.mmUndertakingStatusReason;
+			businessElementTrace_lazy = () -> UndertakingStatus.mmUndertakingStatusReason;
 			componentContext_lazy = () -> TradeStatusReport1.mmObject();
 			isDerived = false;
 			xmlTag = "StsRsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusReason";
 			definition = "Set of elements used to provide detailed information on the status reason.";
 			minOccurs = 0;
@@ -254,7 +257,7 @@ public class TradeStatusReport1 {
 			componentContext_lazy = () -> TradeStatusReport1.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInformation";
 			definition = "Additional information related to the report.";
 			maxOccurs = 1;
@@ -266,12 +269,11 @@ public class TradeStatusReport1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TradeStatusReport1.mmOriginalMessageDetails, com.tools20022.repository.msg.TradeStatusReport1.mmStatus,
-						com.tools20022.repository.msg.TradeStatusReport1.mmStatusReason, com.tools20022.repository.msg.TradeStatusReport1.mmAdditionalInformation);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsrv.TradeStatusReportV01.mmTradeStatusAdviceDetails);
+				messageElement_lazy = () -> Arrays.asList(TradeStatusReport1.mmOriginalMessageDetails, TradeStatusReport1.mmStatus, TradeStatusReport1.mmStatusReason, TradeStatusReport1.mmAdditionalInformation);
+				messageBuildingBlock_lazy = () -> Arrays.asList(TradeStatusReportV01.mmTradeStatusAdviceDetails);
 				trace_lazy = () -> UndertakingStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TradeStatusReport1";
 				definition = "Details of the trade status report.";
 			}

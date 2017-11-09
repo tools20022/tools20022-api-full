@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.OptionDefinitionTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -85,7 +87,7 @@ public class OptionTypeCode extends OptionDefinitionTypeCode {
 	 */
 	public static final MMCode mmCall = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Call";
 			owner_lazy = () -> OptionTypeCode.mmObject();
 		}
@@ -108,7 +110,7 @@ public class OptionTypeCode extends OptionDefinitionTypeCode {
 	 */
 	public static final MMCode mmPut = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Put";
 			owner_lazy = () -> OptionTypeCode.mmObject();
 		}
@@ -117,12 +119,12 @@ public class OptionTypeCode extends OptionDefinitionTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CALL");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OptionTypeCode";
 				definition = "Indicates whether it is a Call option (right to purchase a specific underlying asset) or a Put option (right to sell a specific underlying asset).";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OptionTypeCode.mmCall, com.tools20022.repository.codeset.OptionTypeCode.mmPut);
+				code_lazy = () -> Arrays.asList(OptionTypeCode.mmCall, OptionTypeCode.mmPut);
 				trace_lazy = () -> OptionDefinitionTypeCode.mmObject();
 			}
 		});

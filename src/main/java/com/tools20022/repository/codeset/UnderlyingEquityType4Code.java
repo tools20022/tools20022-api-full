@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.UnderlyingTypeV2Code;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -83,7 +85,7 @@ public class UnderlyingEquityType4Code extends UnderlyingTypeV2Code {
 	 */
 	public static final MMCode mmStockIndex = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StockIndex";
 			owner_lazy = () -> UnderlyingEquityType4Code.mmObject();
 		}
@@ -106,7 +108,7 @@ public class UnderlyingEquityType4Code extends UnderlyingTypeV2Code {
 	 */
 	public static final MMCode mmDividendIndex = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DividendIndex";
 			owner_lazy = () -> UnderlyingEquityType4Code.mmObject();
 		}
@@ -129,7 +131,7 @@ public class UnderlyingEquityType4Code extends UnderlyingTypeV2Code {
 	 */
 	public static final MMCode mmOther = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
 			owner_lazy = () -> UnderlyingEquityType4Code.mmObject();
 		}
@@ -152,7 +154,7 @@ public class UnderlyingEquityType4Code extends UnderlyingTypeV2Code {
 	 */
 	public static final MMCode mmVolatilityIndex = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VolatilityIndex";
 			owner_lazy = () -> UnderlyingEquityType4Code.mmObject();
 		}
@@ -161,12 +163,11 @@ public class UnderlyingEquityType4Code extends UnderlyingTypeV2Code {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "UnderlyingEquityType4Code";
 				definition = "Specifies the type for a contract for equity derivatives.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnderlyingEquityType4Code.mmStockIndex, com.tools20022.repository.codeset.UnderlyingEquityType4Code.mmDividendIndex,
-						com.tools20022.repository.codeset.UnderlyingEquityType4Code.mmOther, com.tools20022.repository.codeset.UnderlyingEquityType4Code.mmVolatilityIndex);
+				code_lazy = () -> Arrays.asList(UnderlyingEquityType4Code.mmStockIndex, UnderlyingEquityType4Code.mmDividendIndex, UnderlyingEquityType4Code.mmOther, UnderlyingEquityType4Code.mmVolatilityIndex);
 				trace_lazy = () -> UnderlyingTypeV2Code.mmObject();
 			}
 		});

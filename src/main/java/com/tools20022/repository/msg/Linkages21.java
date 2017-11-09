@@ -19,8 +19,10 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.References1Choice;
 import com.tools20022.repository.entity.SecuritiesTradeIdentification;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -109,10 +111,10 @@ public class Linkages21 {
 			componentContext_lazy = () -> Linkages21.mmObject();
 			isDerived = false;
 			xmlTag = "Ref";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reference";
 			definition = "Reference to the linked transaction.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Linkages40.mmReference);
+			nextVersions_lazy = () -> Arrays.asList(Linkages40.mmReference);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -123,10 +125,10 @@ public class Linkages21 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Linkages21.mmReference);
+				messageElement_lazy = () -> Arrays.asList(Linkages21.mmReference);
 				trace_lazy = () -> SecuritiesTradeIdentification.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Linkages21";
 				definition = "Information related to a linked transaction.";
 				nextVersions_lazy = () -> Arrays.asList(Linkages40.mmObject());

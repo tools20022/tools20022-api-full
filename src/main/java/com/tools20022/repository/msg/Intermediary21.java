@@ -19,9 +19,17 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV04;
+import com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV05;
+import com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV04;
+import com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV05;
 import com.tools20022.repository.choice.PartyIdentification49Choice;
 import com.tools20022.repository.choice.Role2Choice;
+import com.tools20022.repository.entity.AccountPartyRole;
 import com.tools20022.repository.entity.IntermediaryRole;
+import com.tools20022.repository.entity.Party;
+import com.tools20022.repository.GeneratedRepository;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -129,11 +137,11 @@ public class Intermediary21 {
 	 */
 	public static final MMMessageAssociationEnd mmIdentification = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> Intermediary21.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Unique and unambiguous identifier of the intermediary.";
 			maxOccurs = 1;
@@ -180,7 +188,7 @@ public class Intermediary21 {
 			componentContext_lazy = () -> Intermediary21.mmObject();
 			isDerived = false;
 			xmlTag = "Role";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Role";
 			definition = "Function performed by the intermediary (investment funds).";
 			maxOccurs = 1;
@@ -224,11 +232,11 @@ public class Intermediary21 {
 	 */
 	public static final MMMessageAssociationEnd mmAccount = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AccountPartyRole.mmAccount;
+			businessElementTrace_lazy = () -> AccountPartyRole.mmAccount;
 			componentContext_lazy = () -> Intermediary21.mmObject();
 			isDerived = false;
 			xmlTag = "Acct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Account";
 			definition = "Business relationship between two entities; one entity is the account owner, the other entity is the account servicer.";
 			maxOccurs = 1;
@@ -241,13 +249,12 @@ public class Intermediary21 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Intermediary21.mmIdentification, com.tools20022.repository.msg.Intermediary21.mmRole, com.tools20022.repository.msg.Intermediary21.mmAccount);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV04.mmIntermediaryInformation,
-						com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV05.mmIntermediaryInformation, com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV04.mmIntermediaryInformation,
-						com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV05.mmIntermediaryInformation);
+				messageElement_lazy = () -> Arrays.asList(Intermediary21.mmIdentification, Intermediary21.mmRole, Intermediary21.mmAccount);
+				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesBalanceAccountingReportV04.mmIntermediaryInformation, SecuritiesBalanceAccountingReportV05.mmIntermediaryInformation,
+						SecuritiesBalanceCustodyReportV04.mmIntermediaryInformation, SecuritiesBalanceCustodyReportV05.mmIntermediaryInformation);
 				trace_lazy = () -> IntermediaryRole.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
 						return DateFormat.getDateInstance(java.text.DateFormat.LONG).parse("September 9, 2016");

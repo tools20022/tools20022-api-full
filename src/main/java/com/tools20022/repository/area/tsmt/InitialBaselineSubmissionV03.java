@@ -17,10 +17,7 @@
 
 package com.tools20022.repository.area.tsmt;
 
-import com.tools20022.metamodel.MMMessageBuildingBlock;
-import com.tools20022.metamodel.MMMessageDefinition;
-import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
-import com.tools20022.metamodel.MMXor;
+import com.tools20022.metamodel.*;
 import com.tools20022.repository.area.TradeServicesManagementArchive;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.ISOArchive;
@@ -57,6 +54,9 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code tsmt.019.001.03}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.TradeServicesManagementArchive
@@ -111,9 +111,6 @@ import java.util.List;
  * InitialBaselineSubmissionV03.mmOtherBankContactPerson}</li>
  * </ul>
  * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code tsmt.019.001.03}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -175,12 +172,11 @@ public class InitialBaselineSubmissionV03 {
 	 */
 	public static final MMXor mmBuyerBankOrSellerBankContactPersonRule = new MMXor() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BuyerBankOrSellerBankContactPersonRule";
 			definition = "If BuyerBankContactPerson is present, then SellerBankContactPerson may not be present. If BuyerBankContactPerson is absent, then SellerBankContactPerson must be present.";
 			messageDefinition_lazy = () -> InitialBaselineSubmissionV03.mmObject();
-			impactedMessageBuildingBlocks_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.InitialBaselineSubmissionV03.mmBuyerBankContactPerson,
-					com.tools20022.repository.area.tsmt.InitialBaselineSubmissionV03.mmSellerBankContactPerson);
+			impactedMessageBuildingBlocks_lazy = () -> Arrays.asList(InitialBaselineSubmissionV03.mmBuyerBankContactPerson, InitialBaselineSubmissionV03.mmSellerBankContactPerson);
 		}
 	};
 	protected MessageIdentification1 submissionIdentification;
@@ -218,10 +214,10 @@ public class InitialBaselineSubmissionV03 {
 	public static final MMMessageBuildingBlock mmSubmissionIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SubmissnId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubmissionIdentification";
 			definition = "Identifies the submitted information";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.InitialBaselineSubmissionV04.mmSubmissionIdentification);
+			nextVersions_lazy = () -> Arrays.asList(InitialBaselineSubmissionV04.mmSubmissionIdentification);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
@@ -263,10 +259,10 @@ public class InitialBaselineSubmissionV03 {
 	public static final MMMessageBuildingBlock mmSubmitterTransactionReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SubmitrTxRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubmitterTransactionReference";
 			definition = "Reference to the transaction for the requesting financial institution.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.InitialBaselineSubmissionV04.mmSubmitterTransactionReference);
+			nextVersions_lazy = () -> Arrays.asList(InitialBaselineSubmissionV04.mmSubmitterTransactionReference);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> SimpleIdentificationInformation.mmObject();
@@ -309,10 +305,10 @@ public class InitialBaselineSubmissionV03 {
 	public static final MMMessageBuildingBlock mmInstruction = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Instr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Instruction";
 			definition = "Specifies the instruction requested by the submitter by means of a code. ";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.InitialBaselineSubmissionV04.mmInstruction);
+			nextVersions_lazy = () -> Arrays.asList(InitialBaselineSubmissionV04.mmInstruction);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> InstructionType1.mmObject();
@@ -353,10 +349,10 @@ public class InitialBaselineSubmissionV03 {
 	public static final MMMessageBuildingBlock mmBaseline = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Baseln";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Baseline";
 			definition = "Specifies the commercial details of the underlying transaction.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.InitialBaselineSubmissionV04.mmBaseline);
+			nextVersions_lazy = () -> Arrays.asList(InitialBaselineSubmissionV04.mmBaseline);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> Baseline3.mmObject();
@@ -398,10 +394,10 @@ public class InitialBaselineSubmissionV03 {
 	public static final MMMessageBuildingBlock mmBuyerContactPerson = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "BuyrCtctPrsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BuyerContactPerson";
 			definition = "Person to be contacted in the organisation of the buyer. ";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.InitialBaselineSubmissionV04.mmBuyerContactPerson);
+			nextVersions_lazy = () -> Arrays.asList(InitialBaselineSubmissionV04.mmBuyerContactPerson);
 			minOccurs = 0;
 			complexType_lazy = () -> ContactIdentification1.mmObject();
 		}
@@ -442,10 +438,10 @@ public class InitialBaselineSubmissionV03 {
 	public static final MMMessageBuildingBlock mmSellerContactPerson = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SellrCtctPrsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SellerContactPerson";
 			definition = "Person to be contacted in the organisation of the seller.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.InitialBaselineSubmissionV04.mmSellerContactPerson);
+			nextVersions_lazy = () -> Arrays.asList(InitialBaselineSubmissionV04.mmSellerContactPerson);
 			minOccurs = 0;
 			complexType_lazy = () -> ContactIdentification1.mmObject();
 		}
@@ -477,7 +473,7 @@ public class InitialBaselineSubmissionV03 {
 	public static final MMMessageBuildingBlock mmBuyerBankContactPerson = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "BuyrBkCtctPrsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BuyerBankContactPerson";
 			definition = "Person to be contacted in the buyer's bank.";
 			minOccurs = 1;
@@ -511,7 +507,7 @@ public class InitialBaselineSubmissionV03 {
 	public static final MMMessageBuildingBlock mmSellerBankContactPerson = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SellrBkCtctPrsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SellerBankContactPerson";
 			definition = "Person to be contacted in the seller's bank.";
 			minOccurs = 1;
@@ -554,10 +550,10 @@ public class InitialBaselineSubmissionV03 {
 	public static final MMMessageBuildingBlock mmOtherBankContactPerson = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "OthrBkCtctPrsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherBankContactPerson";
 			definition = "Person to be contacted in another bank than seller or buyer's bank.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.InitialBaselineSubmissionV04.mmOtherBankContactPerson);
+			nextVersions_lazy = () -> Arrays.asList(InitialBaselineSubmissionV04.mmOtherBankContactPerson);
 			minOccurs = 0;
 			complexType_lazy = () -> ContactIdentification3.mmObject();
 		}
@@ -566,20 +562,18 @@ public class InitialBaselineSubmissionV03 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InitialBaselineSubmissionV03";
 				definition = "Scope\r\nThe InitialBaselineSubmission message is sent by the initiator of a transaction to the matching application.\r\nThis message is used to initiate a transaction.\r\nUsage\r\nThe InitialBaselineSubmission message can be sent by a party to register a transaction in the matching application. The message can be submitted with either lodge or push-through instruction.\r\nWhen the push-through instruction is present, the matching application acknowledges the receipt of the message to the sender by sending an Acknowledgement message, stores the submitted information and informs the counterparty about the registration of the transaction by sending a FullPushThroughReport message. With the BaselineReSubmission message the counterparty responds with matching baseline information in order to establish the transaction (baseline).\r\nWhen the lodge instruction is present, the matching application acknowledges the receipt of the message to the sender by sending an Acknowledgement message and stores the submitted information. No matching of the submitted baseline data with other baseline information will take place. For example the submission of an InitialBaselineSubmission message containing a lodge instruction establishes the transaction (baseline) in the matching application.\r\nThe InitialBaselineSubmission message consists of data which relates to the purchasing agreement covered by the transaction, for example line item details, shipping details.";
 				nextVersions_lazy = () -> Arrays.asList(InitialBaselineSubmissionV04.mmObject());
 				messageSet_lazy = () -> Arrays.asList(ISOArchive.mmObject());
-				xors_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.InitialBaselineSubmissionV03.mmBuyerBankOrSellerBankContactPersonRule);
+				xors_lazy = () -> Arrays.asList(InitialBaselineSubmissionV03.mmBuyerBankOrSellerBankContactPersonRule);
 				rootElement = "Document";
 				xmlTag = "InitlBaselnSubmissn";
 				businessArea_lazy = () -> TradeServicesManagementArchive.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.InitialBaselineSubmissionV03.mmSubmissionIdentification,
-						com.tools20022.repository.area.tsmt.InitialBaselineSubmissionV03.mmSubmitterTransactionReference, com.tools20022.repository.area.tsmt.InitialBaselineSubmissionV03.mmInstruction,
-						com.tools20022.repository.area.tsmt.InitialBaselineSubmissionV03.mmBaseline, com.tools20022.repository.area.tsmt.InitialBaselineSubmissionV03.mmBuyerContactPerson,
-						com.tools20022.repository.area.tsmt.InitialBaselineSubmissionV03.mmSellerContactPerson, com.tools20022.repository.area.tsmt.InitialBaselineSubmissionV03.mmBuyerBankContactPerson,
-						com.tools20022.repository.area.tsmt.InitialBaselineSubmissionV03.mmSellerBankContactPerson, com.tools20022.repository.area.tsmt.InitialBaselineSubmissionV03.mmOtherBankContactPerson);
+				messageBuildingBlock_lazy = () -> Arrays.asList(InitialBaselineSubmissionV03.mmSubmissionIdentification, InitialBaselineSubmissionV03.mmSubmitterTransactionReference, InitialBaselineSubmissionV03.mmInstruction,
+						InitialBaselineSubmissionV03.mmBaseline, InitialBaselineSubmissionV03.mmBuyerContactPerson, InitialBaselineSubmissionV03.mmSellerContactPerson, InitialBaselineSubmissionV03.mmBuyerBankContactPerson,
+						InitialBaselineSubmissionV03.mmSellerBankContactPerson, InitialBaselineSubmissionV03.mmOtherBankContactPerson);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "tsmt";

@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.TradeTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -94,7 +96,7 @@ public class TradeType1Code extends TradeTypeCode {
 	 */
 	public static final MMCode mmOnOrderBookTrade = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OnOrderBookTrade";
 			owner_lazy = () -> TradeType1Code.mmObject();
 		}
@@ -117,7 +119,7 @@ public class TradeType1Code extends TradeTypeCode {
 	 */
 	public static final MMCode mmOffOrderBookTrade = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OffOrderBookTrade";
 			owner_lazy = () -> TradeType1Code.mmObject();
 		}
@@ -140,7 +142,7 @@ public class TradeType1Code extends TradeTypeCode {
 	 */
 	public static final MMCode mmBackUpTrade = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BackUpTrade";
 			owner_lazy = () -> TradeType1Code.mmObject();
 		}
@@ -163,7 +165,7 @@ public class TradeType1Code extends TradeTypeCode {
 	 */
 	public static final MMCode mmCorrectiveTrade = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorrectiveTrade";
 			owner_lazy = () -> TradeType1Code.mmObject();
 		}
@@ -186,7 +188,7 @@ public class TradeType1Code extends TradeTypeCode {
 	 */
 	public static final MMCode mmTradeGiveUp = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeGiveUp";
 			owner_lazy = () -> TradeType1Code.mmObject();
 		}
@@ -209,7 +211,7 @@ public class TradeType1Code extends TradeTypeCode {
 	 */
 	public static final MMCode mmLinkedTrade = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LinkedTrade";
 			owner_lazy = () -> TradeType1Code.mmObject();
 		}
@@ -218,14 +220,13 @@ public class TradeType1Code extends TradeTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("OOBK");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TradeType1Code";
 				definition = "Specifies the type of executed order.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TradeType1Code.mmOnOrderBookTrade, com.tools20022.repository.codeset.TradeType1Code.mmOffOrderBookTrade,
-						com.tools20022.repository.codeset.TradeType1Code.mmBackUpTrade, com.tools20022.repository.codeset.TradeType1Code.mmCorrectiveTrade, com.tools20022.repository.codeset.TradeType1Code.mmTradeGiveUp,
-						com.tools20022.repository.codeset.TradeType1Code.mmLinkedTrade);
+				code_lazy = () -> Arrays.asList(TradeType1Code.mmOnOrderBookTrade, TradeType1Code.mmOffOrderBookTrade, TradeType1Code.mmBackUpTrade, TradeType1Code.mmCorrectiveTrade, TradeType1Code.mmTradeGiveUp,
+						TradeType1Code.mmLinkedTrade);
 				trace_lazy = () -> TradeTypeCode.mmObject();
 			}
 		});

@@ -19,10 +19,12 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Exact4AlphaNumericText;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.TrueFalseIndicator;
 import com.tools20022.repository.datatype.YesNoIndicator;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -109,7 +111,7 @@ public class SystemSecuritiesAccount2 {
 			componentContext_lazy = () -> SystemSecuritiesAccount2.mmObject();
 			isDerived = false;
 			xmlTag = "ClsgDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClosingDate";
 			definition = "Legal closing date for the securities account.";
 			maxOccurs = 1;
@@ -154,7 +156,7 @@ public class SystemSecuritiesAccount2 {
 			componentContext_lazy = () -> SystemSecuritiesAccount2.mmObject();
 			isDerived = false;
 			xmlTag = "HldInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HoldIndicator";
 			definition = "Meaning when true : Account is in Hold status.\r\nMeaning when false : Account is in Release status.";
 			maxOccurs = 1;
@@ -199,7 +201,7 @@ public class SystemSecuritiesAccount2 {
 			componentContext_lazy = () -> SystemSecuritiesAccount2.mmObject();
 			isDerived = false;
 			xmlTag = "NegPos";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NegativePosition";
 			definition = "Specifies whether the securities account can hold a negative position in a security.";
 			maxOccurs = 1;
@@ -244,7 +246,7 @@ public class SystemSecuritiesAccount2 {
 			componentContext_lazy = () -> SystemSecuritiesAccount2.mmObject();
 			isDerived = false;
 			xmlTag = "EndInvstrFlg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EndInvestorFlag";
 			definition = "Specifies information to identify securities accounts where allocation instructions are posted.";
 			maxOccurs = 1;
@@ -287,7 +289,7 @@ public class SystemSecuritiesAccount2 {
 			componentContext_lazy = () -> SystemSecuritiesAccount2.mmObject();
 			isDerived = false;
 			xmlTag = "PricgSchme";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PricingScheme";
 			definition = "Defines how the price is applied to the securities account.";
 			maxOccurs = 1;
@@ -299,11 +301,10 @@ public class SystemSecuritiesAccount2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SystemSecuritiesAccount2.mmClosingDate, com.tools20022.repository.msg.SystemSecuritiesAccount2.mmHoldIndicator,
-						com.tools20022.repository.msg.SystemSecuritiesAccount2.mmNegativePosition, com.tools20022.repository.msg.SystemSecuritiesAccount2.mmEndInvestorFlag,
-						com.tools20022.repository.msg.SystemSecuritiesAccount2.mmPricingScheme);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(SystemSecuritiesAccount2.mmClosingDate, SystemSecuritiesAccount2.mmHoldIndicator, SystemSecuritiesAccount2.mmNegativePosition, SystemSecuritiesAccount2.mmEndInvestorFlag,
+						SystemSecuritiesAccount2.mmPricingScheme);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SystemSecuritiesAccount2";
 				definition = "Account to or from which a securities entry is made.\nIt holds information such as opening and closing date and whether it can hold negative positions.\nDefinition of the entity includes the default setting for holding of settlement instructions involving positions related to the account.\nSet of MarketSpecificAttributes define specific properties for the account.";
 			}

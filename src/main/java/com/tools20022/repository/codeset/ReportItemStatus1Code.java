@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ReportItemStatusCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -77,7 +79,7 @@ public class ReportItemStatus1Code extends ReportItemStatusCode {
 	 */
 	public static final MMCode mmAccepted = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Accepted";
 			owner_lazy = () -> ReportItemStatus1Code.mmObject();
 		}
@@ -100,7 +102,7 @@ public class ReportItemStatus1Code extends ReportItemStatusCode {
 	 */
 	public static final MMCode mmRejected = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rejected";
 			owner_lazy = () -> ReportItemStatus1Code.mmObject();
 		}
@@ -109,11 +111,11 @@ public class ReportItemStatus1Code extends ReportItemStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ReportItemStatus1Code";
 				definition = "Specifies the status of an entry in a report.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ReportItemStatus1Code.mmAccepted, com.tools20022.repository.codeset.ReportItemStatus1Code.mmRejected);
+				code_lazy = () -> Arrays.asList(ReportItemStatus1Code.mmAccepted, ReportItemStatus1Code.mmRejected);
 				trace_lazy = () -> ReportItemStatusCode.mmObject();
 			}
 		});

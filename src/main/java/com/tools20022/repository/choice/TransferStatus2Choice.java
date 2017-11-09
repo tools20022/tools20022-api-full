@@ -19,7 +19,12 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.SecuritiesTradeStatus;
+import com.tools20022.repository.entity.SecuritiesTradeStatusReason;
+import com.tools20022.repository.entity.Status;
+import com.tools20022.repository.entity.StatusReason;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.RejectionReason32;
 import com.tools20022.repository.msg.TransferInstructionStatus4;
 import java.util.Arrays;
@@ -136,10 +141,10 @@ public class TransferStatus2Choice {
 			componentContext_lazy = () -> TransferStatus2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Sts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Status";
 			definition = "Status of the transfer is received, accepted, sent to next party, matched, already executed, or settled.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.TransferStatus1Choice.mmStatus;
+			previousVersion_lazy = () -> TransferStatus1Choice.mmStatus;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -186,14 +191,14 @@ public class TransferStatus2Choice {
 	 */
 	public static final MMMessageAssociationEnd mmPendingSettlement = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeStatusReason.mmPendingSettlementReason;
+			businessElementTrace_lazy = () -> SecuritiesTradeStatusReason.mmPendingSettlementReason;
 			componentContext_lazy = () -> TransferStatus2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "PdgSttlm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingSettlement";
 			definition = "Status of the transfer is pending settlement.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.TransferStatus1Choice.mmPendingSettlement;
+			previousVersion_lazy = () -> TransferStatus1Choice.mmPendingSettlement;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -240,14 +245,14 @@ public class TransferStatus2Choice {
 	 */
 	public static final MMMessageAssociationEnd mmUnmatched = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.mmStatusReason;
+			businessElementTrace_lazy = () -> Status.mmStatusReason;
 			componentContext_lazy = () -> TransferStatus2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Umtchd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unmatched";
 			definition = "Status of the transfer is unmatched.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.TransferStatus1Choice.mmUnmatched;
+			previousVersion_lazy = () -> TransferStatus1Choice.mmUnmatched;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -294,14 +299,14 @@ public class TransferStatus2Choice {
 	 */
 	public static final MMMessageAssociationEnd mmInRepair = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.mmStatusReason;
+			businessElementTrace_lazy = () -> Status.mmStatusReason;
 			componentContext_lazy = () -> TransferStatus2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "InRpr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InRepair";
 			definition = "Status of the transfer is in repair.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.TransferStatus1Choice.mmInRepair;
+			previousVersion_lazy = () -> TransferStatus1Choice.mmInRepair;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -347,14 +352,14 @@ public class TransferStatus2Choice {
 	 */
 	public static final MMMessageAssociationEnd mmRejected = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmRejectedStatusReason;
+			businessElementTrace_lazy = () -> StatusReason.mmRejectedStatusReason;
 			componentContext_lazy = () -> TransferStatus2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Rjctd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rejected";
 			definition = "Status of the transfer is rejected.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.TransferStatus1Choice.mmRejected;
+			previousVersion_lazy = () -> TransferStatus1Choice.mmRejected;
 			maxOccurs = 10;
 			minOccurs = 1;
 			isComposite = true;
@@ -405,14 +410,14 @@ public class TransferStatus2Choice {
 	 */
 	public static final MMMessageAssociationEnd mmFailedSettlement = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.mmStatusReason;
+			businessElementTrace_lazy = () -> Status.mmStatusReason;
 			componentContext_lazy = () -> TransferStatus2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "FaildSttlm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FailedSettlement";
 			definition = "Status of the transfer is failed settlement, that is, settlement in the International Central Securities Depository (ICSD) or Central Securities Depository (CSD) failed.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.TransferStatus1Choice.mmFailedSettlement;
+			previousVersion_lazy = () -> TransferStatus1Choice.mmFailedSettlement;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -459,14 +464,14 @@ public class TransferStatus2Choice {
 	 */
 	public static final MMMessageAssociationEnd mmCancelled = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmCancellationReason;
+			businessElementTrace_lazy = () -> StatusReason.mmCancellationReason;
 			componentContext_lazy = () -> TransferStatus2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Canc";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cancelled";
 			definition = "Status of the transfer is cancelled.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.TransferStatus1Choice.mmCancelled;
+			previousVersion_lazy = () -> TransferStatus1Choice.mmCancelled;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -513,14 +518,14 @@ public class TransferStatus2Choice {
 	 */
 	public static final MMMessageAssociationEnd mmReversed = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeStatus.mmReason;
+			businessElementTrace_lazy = () -> SecuritiesTradeStatus.mmReason;
 			componentContext_lazy = () -> TransferStatus2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Rvsd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reversed";
 			definition = "Status of the transfer is reversed.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.TransferStatus1Choice.mmReversed;
+			previousVersion_lazy = () -> TransferStatus1Choice.mmReversed;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -567,14 +572,14 @@ public class TransferStatus2Choice {
 	 */
 	public static final MMMessageAssociationEnd mmCancellationPending = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.mmStatusReason;
+			businessElementTrace_lazy = () -> Status.mmStatusReason;
 			componentContext_lazy = () -> TransferStatus2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "CxlPdg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationPending";
 			definition = "Status of the transfer is cancellation pending.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.TransferStatus1Choice.mmCancellationPending;
+			previousVersion_lazy = () -> TransferStatus1Choice.mmCancellationPending;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -585,13 +590,11 @@ public class TransferStatus2Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.TransferStatus2Choice.mmStatus, com.tools20022.repository.choice.TransferStatus2Choice.mmPendingSettlement,
-						com.tools20022.repository.choice.TransferStatus2Choice.mmUnmatched, com.tools20022.repository.choice.TransferStatus2Choice.mmInRepair, com.tools20022.repository.choice.TransferStatus2Choice.mmRejected,
-						com.tools20022.repository.choice.TransferStatus2Choice.mmFailedSettlement, com.tools20022.repository.choice.TransferStatus2Choice.mmCancelled, com.tools20022.repository.choice.TransferStatus2Choice.mmReversed,
-						com.tools20022.repository.choice.TransferStatus2Choice.mmCancellationPending);
+				messageElement_lazy = () -> Arrays.asList(TransferStatus2Choice.mmStatus, TransferStatus2Choice.mmPendingSettlement, TransferStatus2Choice.mmUnmatched, TransferStatus2Choice.mmInRepair, TransferStatus2Choice.mmRejected,
+						TransferStatus2Choice.mmFailedSettlement, TransferStatus2Choice.mmCancelled, TransferStatus2Choice.mmReversed, TransferStatus2Choice.mmCancellationPending);
 				trace_lazy = () -> SecuritiesTradeStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TransferStatus2Choice";
 				definition = "Choice of statuses for the status of the transfer.";
 				previousVersion_lazy = () -> TransferStatus1Choice.mmObject();

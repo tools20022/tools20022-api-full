@@ -20,6 +20,7 @@ package com.tools20022.repository.area.seev;
 import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.SecuritiesEventsLatestVersion;
 import com.tools20022.repository.choice.InstructionType1Choice;
 import com.tools20022.repository.choice.InstructionTypeStatus2Choice;
@@ -62,6 +63,9 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code seev.006.001.05}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.SecuritiesEventsLatestVersion
@@ -98,9 +102,6 @@ import java.util.List;
  * MeetingInstructionStatusV05.mmSupplementaryData}</li>
  * </ul>
  * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code seev.006.001.05}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -152,10 +153,10 @@ public class MeetingInstructionStatusV05 {
 	public static final MMMessageBuildingBlock mmInstructionType = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "InstrTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructionType";
 			definition = "Type of instruction.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.seev.MeetingInstructionStatusV04.mmInstructionType;
+			previousVersion_lazy = () -> MeetingInstructionStatusV04.mmInstructionType;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> InstructionType1Choice.mmObject();
@@ -193,10 +194,10 @@ public class MeetingInstructionStatusV05 {
 	public static final MMMessageBuildingBlock mmMeetingReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "MtgRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MeetingReference";
 			definition = "Series of elements which allow to identify a meeting.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.seev.MeetingInstructionStatusV04.mmMeetingReference;
+			previousVersion_lazy = () -> MeetingInstructionStatusV04.mmMeetingReference;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> MeetingReference7.mmObject();
@@ -235,10 +236,10 @@ public class MeetingInstructionStatusV05 {
 	public static final MMMessageBuildingBlock mmFinancialInstrumentIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "FinInstrmId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentIdentification";
 			definition = "Identifies the securities for which the meeting is organised. ";
-			previousVersion_lazy = () -> com.tools20022.repository.area.seev.MeetingInstructionStatusV04.mmSecurityIdentification;
+			previousVersion_lazy = () -> MeetingInstructionStatusV04.mmSecurityIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> SecurityIdentification14.mmObject();
@@ -276,10 +277,10 @@ public class MeetingInstructionStatusV05 {
 	public static final MMMessageBuildingBlock mmInstructionTypeStatus = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "InstrTpSts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructionTypeStatus";
 			definition = "Type of instruction status.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.seev.MeetingInstructionStatusV04.mmInstructionTypeStatus;
+			previousVersion_lazy = () -> MeetingInstructionStatusV04.mmInstructionTypeStatus;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> InstructionTypeStatus2Choice.mmObject();
@@ -315,7 +316,7 @@ public class MeetingInstructionStatusV05 {
 	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SplmtryData";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryData";
 			definition = "Additional information that can not be captured in the structured fields and/or any other specific block.";
 			minOccurs = 0;
@@ -326,7 +327,7 @@ public class MeetingInstructionStatusV05 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MeetingInstructionStatusV05";
 				definition = "Scope\r\nThe Receiver of the MeetingInstruction or MeetingInstructionCancellationRequest sends the MeetingInstructionStatus message to the Sender of these messages.\r\nThe message gives the status of a complete message or of one or more specific instructions within the message.\r\nUsage\r\nThe MeetingInstructionStatus message is used for four purposes.\r\nFirst, it provides the status on the processing of a MeetingInstructionCancellationRequest message, for example, whether the request message is rejected or accepted.\r\nSecond, it is used to provide a global processing or rejection status of a MeetingInstruction message.\r\nThird, it is used to provide a detailed processing or rejection status of a MeetingInstruction message, for example, for each instruction in the MeetingInstruction message the processing or rejection status is individually reported by using the InstructionIdentification element. This identification allows the receiver of the status message to link the status confirmation to its original instruction.\r\nThe blocking of securities should be confirmed via an MT 508 (Intra-Position Advice).\r\nFourth, it is used as a reminder to request voting instructions. This is done by indicating NONREF in the Identification element of the InstructionIdentification component and by using the status code NotReceived in the ProcessingStatus.\r\nThis message definition is intended for use with the Business Application Header (head.001.001.01).";
 				previousVersion_lazy = () -> MeetingInstructionStatusV04.mmObject();
@@ -334,9 +335,8 @@ public class MeetingInstructionStatusV05 {
 				rootElement = "Document";
 				xmlTag = "MtgInstrSts";
 				businessArea_lazy = () -> SecuritiesEventsLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.MeetingInstructionStatusV05.mmInstructionType, com.tools20022.repository.area.seev.MeetingInstructionStatusV05.mmMeetingReference,
-						com.tools20022.repository.area.seev.MeetingInstructionStatusV05.mmFinancialInstrumentIdentification, com.tools20022.repository.area.seev.MeetingInstructionStatusV05.mmInstructionTypeStatus,
-						com.tools20022.repository.area.seev.MeetingInstructionStatusV05.mmSupplementaryData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(MeetingInstructionStatusV05.mmInstructionType, MeetingInstructionStatusV05.mmMeetingReference, MeetingInstructionStatusV05.mmFinancialInstrumentIdentification,
+						MeetingInstructionStatusV05.mmInstructionTypeStatus, MeetingInstructionStatusV05.mmSupplementaryData);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "seev";

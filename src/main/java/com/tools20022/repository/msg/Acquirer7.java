@@ -19,9 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.AcquirerRole;
 import com.tools20022.repository.entity.FinancialInstitution;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -124,11 +126,11 @@ public class Acquirer7 {
 			componentContext_lazy = () -> Acquirer7.mmObject();
 			isDerived = false;
 			xmlTag = "AcqrgInstn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcquiringInstitution";
 			definition = "Identification of the acquirer.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Acquirer8.mmIdentification);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Acquirer6.mmIdentification;
+			nextVersions_lazy = () -> Arrays.asList(Acquirer8.mmIdentification);
+			previousVersion_lazy = () -> Acquirer6.mmIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -179,11 +181,11 @@ public class Acquirer7 {
 			componentContext_lazy = () -> Acquirer7.mmObject();
 			isDerived = false;
 			xmlTag = "Brnch";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Branch";
 			definition = "Identification of the acquirer branch.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Acquirer8.mmApplicationVersion);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Acquirer6.mmIssuer;
+			nextVersions_lazy = () -> Arrays.asList(Acquirer8.mmApplicationVersion);
+			previousVersion_lazy = () -> Acquirer6.mmIssuer;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -193,10 +195,10 @@ public class Acquirer7 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Acquirer7.mmAcquiringInstitution, com.tools20022.repository.msg.Acquirer7.mmBranch);
+				messageElement_lazy = () -> Arrays.asList(Acquirer7.mmAcquiringInstitution, Acquirer7.mmBranch);
 				trace_lazy = () -> AcquirerRole.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Acquirer7";
 				definition = "Acquirer of the withdrawal transaction, in charge of the funds settlement with the issuer.";
 				nextVersions_lazy = () -> Arrays.asList(Acquirer8.mmObject());

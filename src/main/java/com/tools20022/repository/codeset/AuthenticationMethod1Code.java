@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.AuthenticationMethodCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -110,7 +112,7 @@ public class AuthenticationMethod1Code extends AuthenticationMethodCode {
 	 */
 	public static final MMCode mmUnknownMethod = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnknownMethod";
 			owner_lazy = () -> AuthenticationMethod1Code.mmObject();
 		}
@@ -133,7 +135,7 @@ public class AuthenticationMethod1Code extends AuthenticationMethodCode {
 	 */
 	public static final MMCode mmBypass = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Bypass";
 			owner_lazy = () -> AuthenticationMethod1Code.mmObject();
 		}
@@ -156,7 +158,7 @@ public class AuthenticationMethod1Code extends AuthenticationMethodCode {
 	 */
 	public static final MMCode mmOnLinePIN = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OnLinePIN";
 			owner_lazy = () -> AuthenticationMethod1Code.mmObject();
 		}
@@ -179,7 +181,7 @@ public class AuthenticationMethod1Code extends AuthenticationMethodCode {
 	 */
 	public static final MMCode mmOfflinePIN = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OfflinePIN";
 			owner_lazy = () -> AuthenticationMethod1Code.mmObject();
 		}
@@ -202,7 +204,7 @@ public class AuthenticationMethod1Code extends AuthenticationMethodCode {
 	 */
 	public static final MMCode mmSignatureCapture = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SignatureCapture";
 			owner_lazy = () -> AuthenticationMethod1Code.mmObject();
 		}
@@ -225,7 +227,7 @@ public class AuthenticationMethod1Code extends AuthenticationMethodCode {
 	 */
 	public static final MMCode mmPaperSignature = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaperSignature";
 			owner_lazy = () -> AuthenticationMethod1Code.mmObject();
 		}
@@ -248,7 +250,7 @@ public class AuthenticationMethod1Code extends AuthenticationMethodCode {
 	 */
 	public static final MMCode mmManualVerification = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ManualVerification";
 			owner_lazy = () -> AuthenticationMethod1Code.mmObject();
 		}
@@ -271,7 +273,7 @@ public class AuthenticationMethod1Code extends AuthenticationMethodCode {
 	 */
 	public static final MMCode mmMerchantAuthentication = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MerchantAuthentication";
 			owner_lazy = () -> AuthenticationMethod1Code.mmObject();
 		}
@@ -294,7 +296,7 @@ public class AuthenticationMethod1Code extends AuthenticationMethodCode {
 	 */
 	public static final MMCode mmSecureCertificate = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecureCertificate";
 			owner_lazy = () -> AuthenticationMethod1Code.mmObject();
 		}
@@ -317,7 +319,7 @@ public class AuthenticationMethod1Code extends AuthenticationMethodCode {
 	 */
 	public static final MMCode mmSecureNoCertificate = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecureNoCertificate";
 			owner_lazy = () -> AuthenticationMethod1Code.mmObject();
 		}
@@ -340,7 +342,7 @@ public class AuthenticationMethod1Code extends AuthenticationMethodCode {
 	 */
 	public static final MMCode mmSecuredChannel = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuredChannel";
 			owner_lazy = () -> AuthenticationMethod1Code.mmObject();
 		}
@@ -349,17 +351,14 @@ public class AuthenticationMethod1Code extends AuthenticationMethodCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("UKNW");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AuthenticationMethod1Code";
 				definition = "Method used to authenticate a cardholder.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AuthenticationMethod1Code.mmUnknownMethod, com.tools20022.repository.codeset.AuthenticationMethod1Code.mmBypass,
-						com.tools20022.repository.codeset.AuthenticationMethod1Code.mmOnLinePIN, com.tools20022.repository.codeset.AuthenticationMethod1Code.mmOfflinePIN,
-						com.tools20022.repository.codeset.AuthenticationMethod1Code.mmSignatureCapture, com.tools20022.repository.codeset.AuthenticationMethod1Code.mmPaperSignature,
-						com.tools20022.repository.codeset.AuthenticationMethod1Code.mmManualVerification, com.tools20022.repository.codeset.AuthenticationMethod1Code.mmMerchantAuthentication,
-						com.tools20022.repository.codeset.AuthenticationMethod1Code.mmSecureCertificate, com.tools20022.repository.codeset.AuthenticationMethod1Code.mmSecureNoCertificate,
-						com.tools20022.repository.codeset.AuthenticationMethod1Code.mmSecuredChannel);
+				code_lazy = () -> Arrays.asList(AuthenticationMethod1Code.mmUnknownMethod, AuthenticationMethod1Code.mmBypass, AuthenticationMethod1Code.mmOnLinePIN, AuthenticationMethod1Code.mmOfflinePIN,
+						AuthenticationMethod1Code.mmSignatureCapture, AuthenticationMethod1Code.mmPaperSignature, AuthenticationMethod1Code.mmManualVerification, AuthenticationMethod1Code.mmMerchantAuthentication,
+						AuthenticationMethod1Code.mmSecureCertificate, AuthenticationMethod1Code.mmSecureNoCertificate, AuthenticationMethod1Code.mmSecuredChannel);
 				trace_lazy = () -> AuthenticationMethodCode.mmObject();
 			}
 		});

@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,31 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.EventFrequency2Code
+ * EventFrequency2Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.EventFrequency5Code
+ * EventFrequency5Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.EventFrequency1Code
+ * EventFrequency1Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.EventFrequency3Code
+ * EventFrequency3Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.EventFrequency4Code
+ * EventFrequency4Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.EventFrequency7Code
+ * EventFrequency7Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.EventFrequency6Code
+ * EventFrequency6Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.EventFrequency8Code
+ * EventFrequency8Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.EventFrequency10Code
+ * EventFrequency10Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.EventFrequency9Code
+ * EventFrequency9Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -79,31 +106,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * EventFrequencyCode.mmNone}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.EventFrequency2Code
- * EventFrequency2Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.EventFrequency5Code
- * EventFrequency5Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.EventFrequency1Code
- * EventFrequency1Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.EventFrequency3Code
- * EventFrequency3Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.EventFrequency4Code
- * EventFrequency4Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.EventFrequency7Code
- * EventFrequency7Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.EventFrequency6Code
- * EventFrequency6Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.EventFrequency8Code
- * EventFrequency8Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.EventFrequency10Code
- * EventFrequency10Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.EventFrequency9Code
- * EventFrequency9Code}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -151,7 +153,7 @@ public class EventFrequencyCode {
 	 */
 	public static final MMCode mmAnnual = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Annual";
 			definition = "Event takes place every year or once a year.";
 			owner_lazy = () -> EventFrequencyCode.mmObject();
@@ -181,7 +183,7 @@ public class EventFrequencyCode {
 	 */
 	public static final MMCode mmSemiAnnual = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SemiAnnual";
 			definition = "Event takes place every six months or two times a year.";
 			owner_lazy = () -> EventFrequencyCode.mmObject();
@@ -212,7 +214,7 @@ public class EventFrequencyCode {
 	 */
 	public static final MMCode mmQuarterly = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Quarterly";
 			definition = "Event takes place every three months or four times a year.";
 			owner_lazy = () -> EventFrequencyCode.mmObject();
@@ -242,7 +244,7 @@ public class EventFrequencyCode {
 	 */
 	public static final MMCode mmEveryTwoMonths = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "EveryTwoMonths";
 			definition = "Event takes place every two months.";
 			owner_lazy = () -> EventFrequencyCode.mmObject();
@@ -272,7 +274,7 @@ public class EventFrequencyCode {
 	 */
 	public static final MMCode mmMonthly = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Monthly";
 			definition = "Event takes place every month or once a month.";
 			owner_lazy = () -> EventFrequencyCode.mmObject();
@@ -302,7 +304,7 @@ public class EventFrequencyCode {
 	 */
 	public static final MMCode mmTwiceAMonth = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TwiceAMonth";
 			definition = "Event takes place two times a month.";
 			owner_lazy = () -> EventFrequencyCode.mmObject();
@@ -332,7 +334,7 @@ public class EventFrequencyCode {
 	 */
 	public static final MMCode mmEveryTwoWeeks = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "EveryTwoWeeks";
 			definition = "Event takes place every two weeks.";
 			owner_lazy = () -> EventFrequencyCode.mmObject();
@@ -362,7 +364,7 @@ public class EventFrequencyCode {
 	 */
 	public static final MMCode mmWeekly = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Weekly";
 			definition = "Event takes place once a week.";
 			owner_lazy = () -> EventFrequencyCode.mmObject();
@@ -392,7 +394,7 @@ public class EventFrequencyCode {
 	 */
 	public static final MMCode mmDaily = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Daily";
 			definition = "Event takes place every day.";
 			owner_lazy = () -> EventFrequencyCode.mmObject();
@@ -422,7 +424,7 @@ public class EventFrequencyCode {
 	 */
 	public static final MMCode mmIntraDay = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "IntraDay";
 			definition = "Event takes place several times a day.";
 			owner_lazy = () -> EventFrequencyCode.mmObject();
@@ -452,7 +454,7 @@ public class EventFrequencyCode {
 	 */
 	public static final MMCode mmOvernight = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Overnight";
 			definition = "Event takes place overnight.";
 			owner_lazy = () -> EventFrequencyCode.mmObject();
@@ -482,7 +484,7 @@ public class EventFrequencyCode {
 	 */
 	public static final MMCode mmAdhoc = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Adhoc";
 			definition = "Event takes place as necessary.";
 			owner_lazy = () -> EventFrequencyCode.mmObject();
@@ -512,7 +514,7 @@ public class EventFrequencyCode {
 	 */
 	public static final MMCode mmOnDemand = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "OnDemand";
 			definition = "Event takes place on demand.";
 			owner_lazy = () -> EventFrequencyCode.mmObject();
@@ -543,7 +545,7 @@ public class EventFrequencyCode {
 	 */
 	public static final MMCode mmClosed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Closed";
 			definition = "Event cannot take place, because, for example, the fund is closed.";
 			owner_lazy = () -> EventFrequencyCode.mmObject();
@@ -574,7 +576,7 @@ public class EventFrequencyCode {
 	 */
 	public static final MMCode mmEveryFourMonths = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EveryFourMonths";
 			definition = "Event takes place every four months or three times a year.";
 			owner_lazy = () -> EventFrequencyCode.mmObject();
@@ -604,7 +606,7 @@ public class EventFrequencyCode {
 	 */
 	public static final MMCode mmEveryTwoYears = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EveryTwoYears";
 			definition = "Event takes place every two years.";
 			owner_lazy = () -> EventFrequencyCode.mmObject();
@@ -634,7 +636,7 @@ public class EventFrequencyCode {
 	 */
 	public static final MMCode mmNone = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "None";
 			definition = "Event does not take place";
 			owner_lazy = () -> EventFrequencyCode.mmObject();
@@ -645,17 +647,14 @@ public class EventFrequencyCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("YEAR");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "EventFrequencyCode";
 				definition = "Specifies the regularity of an event.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.EventFrequencyCode.mmAnnual, com.tools20022.repository.codeset.EventFrequencyCode.mmSemiAnnual,
-						com.tools20022.repository.codeset.EventFrequencyCode.mmQuarterly, com.tools20022.repository.codeset.EventFrequencyCode.mmEveryTwoMonths, com.tools20022.repository.codeset.EventFrequencyCode.mmMonthly,
-						com.tools20022.repository.codeset.EventFrequencyCode.mmTwiceAMonth, com.tools20022.repository.codeset.EventFrequencyCode.mmEveryTwoWeeks, com.tools20022.repository.codeset.EventFrequencyCode.mmWeekly,
-						com.tools20022.repository.codeset.EventFrequencyCode.mmDaily, com.tools20022.repository.codeset.EventFrequencyCode.mmIntraDay, com.tools20022.repository.codeset.EventFrequencyCode.mmOvernight,
-						com.tools20022.repository.codeset.EventFrequencyCode.mmAdhoc, com.tools20022.repository.codeset.EventFrequencyCode.mmOnDemand, com.tools20022.repository.codeset.EventFrequencyCode.mmClosed,
-						com.tools20022.repository.codeset.EventFrequencyCode.mmEveryFourMonths, com.tools20022.repository.codeset.EventFrequencyCode.mmEveryTwoYears, com.tools20022.repository.codeset.EventFrequencyCode.mmNone);
+				code_lazy = () -> Arrays.asList(EventFrequencyCode.mmAnnual, EventFrequencyCode.mmSemiAnnual, EventFrequencyCode.mmQuarterly, EventFrequencyCode.mmEveryTwoMonths, EventFrequencyCode.mmMonthly,
+						EventFrequencyCode.mmTwiceAMonth, EventFrequencyCode.mmEveryTwoWeeks, EventFrequencyCode.mmWeekly, EventFrequencyCode.mmDaily, EventFrequencyCode.mmIntraDay, EventFrequencyCode.mmOvernight,
+						EventFrequencyCode.mmAdhoc, EventFrequencyCode.mmOnDemand, EventFrequencyCode.mmClosed, EventFrequencyCode.mmEveryFourMonths, EventFrequencyCode.mmEveryTwoYears, EventFrequencyCode.mmNone);
 				derivation_lazy = () -> Arrays.asList(EventFrequency2Code.mmObject(), EventFrequency5Code.mmObject(), EventFrequency1Code.mmObject(), EventFrequency3Code.mmObject(), EventFrequency4Code.mmObject(),
 						EventFrequency7Code.mmObject(), EventFrequency6Code.mmObject(), EventFrequency8Code.mmObject(), EventFrequency10Code.mmObject(), EventFrequency9Code.mmObject());
 			}

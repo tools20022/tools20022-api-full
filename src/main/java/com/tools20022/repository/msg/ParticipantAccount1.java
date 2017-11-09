@@ -20,10 +20,12 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.LiquidityPoolMembers1Choice;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Max140Text;
 import com.tools20022.repository.datatype.Max40Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -124,7 +126,7 @@ public class ParticipantAccount1 {
 			componentContext_lazy = () -> ParticipantAccount1.mmObject();
 			isDerived = false;
 			xmlTag = "AcctTpNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountTypeName";
 			definition = "Type of the account";
 			maxOccurs = 1;
@@ -165,7 +167,7 @@ public class ParticipantAccount1 {
 			componentContext_lazy = () -> ParticipantAccount1.mmObject();
 			isDerived = false;
 			xmlTag = "AcctTpShrtNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountTypeShortName";
 			definition = "Short name for the account type.";
 			maxOccurs = 1;
@@ -206,7 +208,7 @@ public class ParticipantAccount1 {
 			componentContext_lazy = () -> ParticipantAccount1.mmObject();
 			isDerived = false;
 			xmlTag = "OpngDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OpeningDate";
 			definition = "Date the account was open.";
 			maxOccurs = 1;
@@ -247,7 +249,7 @@ public class ParticipantAccount1 {
 			componentContext_lazy = () -> ParticipantAccount1.mmObject();
 			isDerived = false;
 			xmlTag = "ClsgDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClosingDate";
 			definition = "Date the account was closed.";
 			maxOccurs = 1;
@@ -288,7 +290,7 @@ public class ParticipantAccount1 {
 			componentContext_lazy = () -> ParticipantAccount1.mmObject();
 			isDerived = false;
 			xmlTag = "DeltnDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeletionDate";
 			definition = "Date the information about the account was deleted.";
 			maxOccurs = 1;
@@ -329,7 +331,7 @@ public class ParticipantAccount1 {
 			componentContext_lazy = () -> ParticipantAccount1.mmObject();
 			isDerived = false;
 			xmlTag = "LicWdrwlDoc";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LicenseWithdrawalDocument";
 			definition = "Details related to license withdrawal.";
 			maxOccurs = 1;
@@ -370,7 +372,7 @@ public class ParticipantAccount1 {
 			componentContext_lazy = () -> ParticipantAccount1.mmObject();
 			isDerived = false;
 			xmlTag = "AcctRstrctns";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountRestrictions";
 			definition = "Details regarding intraday account restrictions.";
 			minOccurs = 0;
@@ -413,7 +415,7 @@ public class ParticipantAccount1 {
 			componentContext_lazy = () -> ParticipantAccount1.mmObject();
 			isDerived = false;
 			xmlTag = "DsgntdAcct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DesignatedAccount";
 			definition = "Balance sweeping account used for automated funds transfer when the receiver account is not available.";
 			maxOccurs = 1;
@@ -455,7 +457,7 @@ public class ParticipantAccount1 {
 			componentContext_lazy = () -> ParticipantAccount1.mmObject();
 			isDerived = false;
 			xmlTag = "LqdtyPoolPtcptDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LiquidityPoolParticipantDetails";
 			definition = "Information about account and account owner.";
 			maxOccurs = 1;
@@ -496,7 +498,7 @@ public class ParticipantAccount1 {
 			componentContext_lazy = () -> ParticipantAccount1.mmObject();
 			isDerived = false;
 			xmlTag = "Lmts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Limits";
 			definition = "Values and types of limits set on the account.";
 			minOccurs = 0;
@@ -536,7 +538,7 @@ public class ParticipantAccount1 {
 			componentContext_lazy = () -> ParticipantAccount1.mmObject();
 			isDerived = false;
 			xmlTag = "Arrsts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Arrests";
 			definition = "Information related to the arrest.";
 			minOccurs = 0;
@@ -576,7 +578,7 @@ public class ParticipantAccount1 {
 			componentContext_lazy = () -> ParticipantAccount1.mmObject();
 			isDerived = false;
 			xmlTag = "Mgrtn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Migration";
 			definition = "Information related for participant migration process. ";
 			maxOccurs = 1;
@@ -589,13 +591,11 @@ public class ParticipantAccount1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ParticipantAccount1.mmAccountTypeName, com.tools20022.repository.msg.ParticipantAccount1.mmAccountTypeShortName,
-						com.tools20022.repository.msg.ParticipantAccount1.mmOpeningDate, com.tools20022.repository.msg.ParticipantAccount1.mmClosingDate, com.tools20022.repository.msg.ParticipantAccount1.mmDeletionDate,
-						com.tools20022.repository.msg.ParticipantAccount1.mmLicenseWithdrawalDocument, com.tools20022.repository.msg.ParticipantAccount1.mmAccountRestrictions,
-						com.tools20022.repository.msg.ParticipantAccount1.mmDesignatedAccount, com.tools20022.repository.msg.ParticipantAccount1.mmLiquidityPoolParticipantDetails, com.tools20022.repository.msg.ParticipantAccount1.mmLimits,
-						com.tools20022.repository.msg.ParticipantAccount1.mmArrests, com.tools20022.repository.msg.ParticipantAccount1.mmMigration);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(ParticipantAccount1.mmAccountTypeName, ParticipantAccount1.mmAccountTypeShortName, ParticipantAccount1.mmOpeningDate, ParticipantAccount1.mmClosingDate,
+						ParticipantAccount1.mmDeletionDate, ParticipantAccount1.mmLicenseWithdrawalDocument, ParticipantAccount1.mmAccountRestrictions, ParticipantAccount1.mmDesignatedAccount,
+						ParticipantAccount1.mmLiquidityPoolParticipantDetails, ParticipantAccount1.mmLimits, ParticipantAccount1.mmArrests, ParticipantAccount1.mmMigration);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ParticipantAccount1";
 				definition = "Details from participant profile account.";
 			}

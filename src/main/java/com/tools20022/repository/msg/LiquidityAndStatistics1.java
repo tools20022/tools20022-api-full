@@ -19,11 +19,16 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.LiquidityIndicatorType1Code;
 import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
 import com.tools20022.repository.datatype.PercentageRate;
 import com.tools20022.repository.datatype.TrueFalseIndicator;
+import com.tools20022.repository.entity.ExchangeForPhysicalTrade;
 import com.tools20022.repository.entity.Liquidity;
+import com.tools20022.repository.entity.ListTrading;
+import com.tools20022.repository.entity.NonDisclosedListTrading;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -121,11 +126,11 @@ public class LiquidityAndStatistics1 {
 	 */
 	public static final MMMessageAttribute mmGrossIndicator = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ListTrading.mmGrossAmountIndicator;
+			businessElementTrace_lazy = () -> ListTrading.mmGrossAmountIndicator;
 			componentContext_lazy = () -> LiquidityAndStatistics1.mmObject();
 			isDerived = false;
 			xmlTag = "GrssInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GrossIndicator";
 			definition = "Indicates whether an amount is a gross amount (including all charges, commissions and tax), or a net amount.";
 			maxOccurs = 1;
@@ -170,11 +175,11 @@ public class LiquidityAndStatistics1 {
 	 */
 	public static final MMMessageAttribute mmIndicatorType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Liquidity.mmIndicatorType;
+			businessElementTrace_lazy = () -> Liquidity.mmIndicatorType;
 			componentContext_lazy = () -> LiquidityAndStatistics1.mmObject();
 			isDerived = false;
 			xmlTag = "IndTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IndicatorType";
 			definition = "Type of liquidity measure, of a financial instrument, on a market.";
 			maxOccurs = 1;
@@ -221,11 +226,11 @@ public class LiquidityAndStatistics1 {
 	 */
 	public static final MMMessageAttribute mmWeightedAverageLiquidity = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Liquidity.mmWeightedAverageLiquidity;
+			businessElementTrace_lazy = () -> Liquidity.mmWeightedAverageLiquidity;
 			componentContext_lazy = () -> LiquidityAndStatistics1.mmObject();
 			isDerived = false;
 			xmlTag = "WghtdAvrgLqdty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WeightedAverageLiquidity";
 			definition = "Indicates the overall weighted average liquidity expressed as a percentage of average daily volume.";
 			maxOccurs = 1;
@@ -272,11 +277,11 @@ public class LiquidityAndStatistics1 {
 	 */
 	public static final MMMessageAttribute mmOutMainCountryIndex = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ExchangeForPhysicalTrade.mmOutMainCountryIndex;
+			businessElementTrace_lazy = () -> ExchangeForPhysicalTrade.mmOutMainCountryIndex;
 			componentContext_lazy = () -> LiquidityAndStatistics1.mmObject();
 			isDerived = false;
 			xmlTag = "OutMainCtryIndx";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OutMainCountryIndex";
 			definition = "Accepted value of stocks composing an index located outside its country of origin.";
 			maxOccurs = 1;
@@ -318,7 +323,7 @@ public class LiquidityAndStatistics1 {
 			componentContext_lazy = () -> LiquidityAndStatistics1.mmObject();
 			isDerived = false;
 			xmlTag = "CrossPct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CrossPercent";
 			definition = "Percentage of program that crosses in Currency.";
 			maxOccurs = 1;
@@ -366,11 +371,11 @@ public class LiquidityAndStatistics1 {
 	 */
 	public static final MMMessageAttribute mmSideValue1 = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.NonDisclosedListTrading.mmSideValue;
+			businessElementTrace_lazy = () -> NonDisclosedListTrading.mmSideValue;
 			componentContext_lazy = () -> LiquidityAndStatistics1.mmObject();
 			isDerived = false;
 			xmlTag = "SdVal1";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SideValue1";
 			definition = "SideValue1 is used to show the monetary total value in either direction (buy or sell) of the transaction without revealing whether it is the buy-side institutions intention to buy or sell.";
 			maxOccurs = 1;
@@ -418,11 +423,11 @@ public class LiquidityAndStatistics1 {
 	 */
 	public static final MMMessageAttribute mmSideValue2 = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.NonDisclosedListTrading.mmSideValue;
+			businessElementTrace_lazy = () -> NonDisclosedListTrading.mmSideValue;
 			componentContext_lazy = () -> LiquidityAndStatistics1.mmObject();
 			isDerived = false;
 			xmlTag = "SdVal2";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SideValue2";
 			definition = "SideValue2 is used to show the monetary total value in either direction (buy or sell) of the transaction without revealing whether it is the buy-side institutions intention to buy or sell.";
 			maxOccurs = 1;
@@ -434,12 +439,11 @@ public class LiquidityAndStatistics1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LiquidityAndStatistics1.mmGrossIndicator, com.tools20022.repository.msg.LiquidityAndStatistics1.mmIndicatorType,
-						com.tools20022.repository.msg.LiquidityAndStatistics1.mmWeightedAverageLiquidity, com.tools20022.repository.msg.LiquidityAndStatistics1.mmOutMainCountryIndex,
-						com.tools20022.repository.msg.LiquidityAndStatistics1.mmCrossPercent, com.tools20022.repository.msg.LiquidityAndStatistics1.mmSideValue1, com.tools20022.repository.msg.LiquidityAndStatistics1.mmSideValue2);
+				messageElement_lazy = () -> Arrays.asList(LiquidityAndStatistics1.mmGrossIndicator, LiquidityAndStatistics1.mmIndicatorType, LiquidityAndStatistics1.mmWeightedAverageLiquidity, LiquidityAndStatistics1.mmOutMainCountryIndex,
+						LiquidityAndStatistics1.mmCrossPercent, LiquidityAndStatistics1.mmSideValue1, LiquidityAndStatistics1.mmSideValue2);
 				trace_lazy = () -> Liquidity.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "LiquidityAndStatistics1";
 				definition = "Ability of a financial instrument to be easily traded and converted to cash, at conditions that do not affect its price.";
 			}

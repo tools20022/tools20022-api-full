@@ -20,13 +20,18 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.camt.BankToCustomerDebitCreditNotificationV04;
 import com.tools20022.repository.choice.ReportingSource1Choice;
 import com.tools20022.repository.codeset.CopyDuplicate1Code;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.Max500Text;
 import com.tools20022.repository.datatype.Number;
+import com.tools20022.repository.entity.Account;
 import com.tools20022.repository.entity.CashBalance;
+import com.tools20022.repository.entity.Interest;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -167,10 +172,10 @@ public class AccountNotification7 {
 			componentContext_lazy = () -> AccountNotification7.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Unique identification, as assigned by the account servicer, to unambiguously identify the account notification.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountNotification11.mmIdentification);
+			nextVersions_lazy = () -> Arrays.asList(AccountNotification11.mmIdentification);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -222,10 +227,10 @@ public class AccountNotification7 {
 			componentContext_lazy = () -> AccountNotification7.mmObject();
 			isDerived = false;
 			xmlTag = "NtfctnPgntn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotificationPagination";
 			definition = "Provides details on the page number of the notification.\r\n\r\nUsage: The pagination of the notification is only allowed when agreed between the parties.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountNotification11.mmNotificationPagination);
+			nextVersions_lazy = () -> Arrays.asList(AccountNotification11.mmNotificationPagination);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.Pagination.mmObject();
@@ -276,10 +281,10 @@ public class AccountNotification7 {
 			componentContext_lazy = () -> AccountNotification7.mmObject();
 			isDerived = false;
 			xmlTag = "ElctrncSeqNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ElectronicSequenceNumber";
 			definition = "Sequential number of the notification, as assigned by the account servicer. \nUsage: The sequential number is increased incrementally for each notification sent electronically.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountNotification11.mmElectronicSequenceNumber);
+			nextVersions_lazy = () -> Arrays.asList(AccountNotification11.mmElectronicSequenceNumber);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
@@ -329,10 +334,10 @@ public class AccountNotification7 {
 			componentContext_lazy = () -> AccountNotification7.mmObject();
 			isDerived = false;
 			xmlTag = "LglSeqNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LegalSequenceNumber";
 			definition = "Legal sequential number of the notification, as assigned by the account servicer. It is increased incrementally for each notification sent.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountNotification11.mmLegalSequenceNumber);
+			nextVersions_lazy = () -> Arrays.asList(AccountNotification11.mmLegalSequenceNumber);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
@@ -379,10 +384,10 @@ public class AccountNotification7 {
 			componentContext_lazy = () -> AccountNotification7.mmObject();
 			isDerived = false;
 			xmlTag = "CreDtTm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreationDateTime";
 			definition = "Date and time at which the message was created.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountNotification11.mmCreationDateTime);
+			nextVersions_lazy = () -> Arrays.asList(AccountNotification11.mmCreationDateTime);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
@@ -433,14 +438,14 @@ public class AccountNotification7 {
 	 */
 	public static final MMMessageAssociationEnd mmFromToDate = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.mmReportedPeriod;
+			businessElementTrace_lazy = () -> Account.mmReportedPeriod;
 			componentContext_lazy = () -> AccountNotification7.mmObject();
 			isDerived = false;
 			xmlTag = "FrToDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FromToDate";
 			definition = "Range of time between a start date and an end date for which the account notification is issued.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountNotification11.mmFromToDate);
+			nextVersions_lazy = () -> Arrays.asList(AccountNotification11.mmFromToDate);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -492,10 +497,10 @@ public class AccountNotification7 {
 			componentContext_lazy = () -> AccountNotification7.mmObject();
 			isDerived = false;
 			xmlTag = "CpyDplctInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CopyDuplicateIndicator";
 			definition = "Indicates whether the document is a copy, a duplicate, or a duplicate of a copy.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountNotification11.mmCopyDuplicateIndicator);
+			nextVersions_lazy = () -> Arrays.asList(AccountNotification11.mmCopyDuplicateIndicator);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CopyDuplicate1Code.mmObject();
@@ -543,10 +548,10 @@ public class AccountNotification7 {
 			componentContext_lazy = () -> AccountNotification7.mmObject();
 			isDerived = false;
 			xmlTag = "RptgSrc";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportingSource";
 			definition = "Specifies the application used to generate the reporting.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountNotification11.mmReportingSource);
+			nextVersions_lazy = () -> Arrays.asList(AccountNotification11.mmReportingSource);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -598,14 +603,14 @@ public class AccountNotification7 {
 	 */
 	public static final MMMessageAssociationEnd mmAccount = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashBalance.mmCashAccount;
+			businessElementTrace_lazy = () -> CashBalance.mmCashAccount;
 			componentContext_lazy = () -> AccountNotification7.mmObject();
 			isDerived = false;
 			xmlTag = "Acct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Account";
 			definition = "Unambiguous identification of the account to which credit and debit entries are made.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountNotification11.mmAccount);
+			nextVersions_lazy = () -> Arrays.asList(AccountNotification11.mmAccount);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -657,14 +662,14 @@ public class AccountNotification7 {
 	 */
 	public static final MMMessageAssociationEnd mmRelatedAccount = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashBalance.mmCashAccount;
+			businessElementTrace_lazy = () -> CashBalance.mmCashAccount;
 			componentContext_lazy = () -> AccountNotification7.mmObject();
 			isDerived = false;
 			xmlTag = "RltdAcct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedAccount";
 			definition = "Identifies the parent account of the account for which the notification has been issued.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountNotification11.mmRelatedAccount);
+			nextVersions_lazy = () -> Arrays.asList(AccountNotification11.mmRelatedAccount);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -716,14 +721,14 @@ public class AccountNotification7 {
 	 */
 	public static final MMMessageAssociationEnd mmInterest = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Interest.mmInterestCalculation;
+			businessElementTrace_lazy = () -> Interest.mmInterestCalculation;
 			componentContext_lazy = () -> AccountNotification7.mmObject();
 			isDerived = false;
 			xmlTag = "Intrst";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Interest";
 			definition = "Provides general interest information that applies to the account at a particular moment in time.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountNotification11.mmInterest);
+			nextVersions_lazy = () -> Arrays.asList(AccountNotification11.mmInterest);
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.AccountInterest2.mmObject();
@@ -769,10 +774,10 @@ public class AccountNotification7 {
 			componentContext_lazy = () -> AccountNotification7.mmObject();
 			isDerived = false;
 			xmlTag = "TxsSummry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionsSummary";
 			definition = "Provides summary information on entries.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountNotification11.mmTransactionsSummary);
+			nextVersions_lazy = () -> Arrays.asList(AccountNotification11.mmTransactionsSummary);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -825,14 +830,14 @@ public class AccountNotification7 {
 	 */
 	public static final MMMessageAssociationEnd mmEntry = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashBalance.mmCashBalanceEntry;
+			businessElementTrace_lazy = () -> CashBalance.mmCashBalanceEntry;
 			componentContext_lazy = () -> AccountNotification7.mmObject();
 			isDerived = false;
 			xmlTag = "Ntry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Entry";
 			definition = "Set of elements used to specify an entry in the debit credit notification.\nUsage: At least one reference must be provided to identify the entry and its underlying transaction(s).";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountNotification11.mmEntry);
+			nextVersions_lazy = () -> Arrays.asList(AccountNotification11.mmEntry);
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.ReportEntry4.mmObject();
@@ -879,10 +884,10 @@ public class AccountNotification7 {
 			componentContext_lazy = () -> AccountNotification7.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlNtfctnInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalNotificationInformation";
 			definition = "Further details of the account notification.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountNotification11.mmAdditionalNotificationInformation);
+			nextVersions_lazy = () -> Arrays.asList(AccountNotification11.mmAdditionalNotificationInformation);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max500Text.mmObject();
@@ -892,16 +897,13 @@ public class AccountNotification7 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountNotification7.mmIdentification, com.tools20022.repository.msg.AccountNotification7.mmNotificationPagination,
-						com.tools20022.repository.msg.AccountNotification7.mmElectronicSequenceNumber, com.tools20022.repository.msg.AccountNotification7.mmLegalSequenceNumber,
-						com.tools20022.repository.msg.AccountNotification7.mmCreationDateTime, com.tools20022.repository.msg.AccountNotification7.mmFromToDate, com.tools20022.repository.msg.AccountNotification7.mmCopyDuplicateIndicator,
-						com.tools20022.repository.msg.AccountNotification7.mmReportingSource, com.tools20022.repository.msg.AccountNotification7.mmAccount, com.tools20022.repository.msg.AccountNotification7.mmRelatedAccount,
-						com.tools20022.repository.msg.AccountNotification7.mmInterest, com.tools20022.repository.msg.AccountNotification7.mmTransactionsSummary, com.tools20022.repository.msg.AccountNotification7.mmEntry,
-						com.tools20022.repository.msg.AccountNotification7.mmAdditionalNotificationInformation);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.BankToCustomerDebitCreditNotificationV04.mmNotification);
+				messageElement_lazy = () -> Arrays.asList(AccountNotification7.mmIdentification, AccountNotification7.mmNotificationPagination, AccountNotification7.mmElectronicSequenceNumber, AccountNotification7.mmLegalSequenceNumber,
+						AccountNotification7.mmCreationDateTime, AccountNotification7.mmFromToDate, AccountNotification7.mmCopyDuplicateIndicator, AccountNotification7.mmReportingSource, AccountNotification7.mmAccount,
+						AccountNotification7.mmRelatedAccount, AccountNotification7.mmInterest, AccountNotification7.mmTransactionsSummary, AccountNotification7.mmEntry, AccountNotification7.mmAdditionalNotificationInformation);
+				messageBuildingBlock_lazy = () -> Arrays.asList(BankToCustomerDebitCreditNotificationV04.mmNotification);
 				trace_lazy = () -> CashBalance.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AccountNotification7";
 				definition = "Provides further details of the account notification.";
 				nextVersions_lazy = () -> Arrays.asList(AccountNotification11.mmObject());

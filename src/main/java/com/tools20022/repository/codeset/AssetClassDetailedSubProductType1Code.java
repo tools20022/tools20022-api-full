@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.AssetClassDetailedSubProductTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -90,7 +92,7 @@ public class AssetClassDetailedSubProductType1Code extends AssetClassDetailedSub
 	 */
 	public static final MMCode mmFeedWheat = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FeedWheat";
 			owner_lazy = () -> AssetClassDetailedSubProductType1Code.mmObject();
 		}
@@ -113,7 +115,7 @@ public class AssetClassDetailedSubProductType1Code extends AssetClassDetailedSub
 	 */
 	public static final MMCode mmSoybeans = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Soybeans";
 			owner_lazy = () -> AssetClassDetailedSubProductType1Code.mmObject();
 		}
@@ -136,7 +138,7 @@ public class AssetClassDetailedSubProductType1Code extends AssetClassDetailedSub
 	 */
 	public static final MMCode mmRapeseed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rapeseed";
 			owner_lazy = () -> AssetClassDetailedSubProductType1Code.mmObject();
 		}
@@ -159,7 +161,7 @@ public class AssetClassDetailedSubProductType1Code extends AssetClassDetailedSub
 	 */
 	public static final MMCode mmOther = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
 			owner_lazy = () -> AssetClassDetailedSubProductType1Code.mmObject();
 		}
@@ -182,7 +184,7 @@ public class AssetClassDetailedSubProductType1Code extends AssetClassDetailedSub
 	 */
 	public static final MMCode mmMaize = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Maize";
 			owner_lazy = () -> AssetClassDetailedSubProductType1Code.mmObject();
 		}
@@ -205,7 +207,7 @@ public class AssetClassDetailedSubProductType1Code extends AssetClassDetailedSub
 	 */
 	public static final MMCode mmRice = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rice";
 			owner_lazy = () -> AssetClassDetailedSubProductType1Code.mmObject();
 		}
@@ -214,13 +216,12 @@ public class AssetClassDetailedSubProductType1Code extends AssetClassDetailedSub
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AssetClassDetailedSubProductType1Code";
 				definition = "Further sub product code list for commodity derivative Grains Oil Seeds.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AssetClassDetailedSubProductType1Code.mmFeedWheat, com.tools20022.repository.codeset.AssetClassDetailedSubProductType1Code.mmSoybeans,
-						com.tools20022.repository.codeset.AssetClassDetailedSubProductType1Code.mmRapeseed, com.tools20022.repository.codeset.AssetClassDetailedSubProductType1Code.mmOther,
-						com.tools20022.repository.codeset.AssetClassDetailedSubProductType1Code.mmMaize, com.tools20022.repository.codeset.AssetClassDetailedSubProductType1Code.mmRice);
+				code_lazy = () -> Arrays.asList(AssetClassDetailedSubProductType1Code.mmFeedWheat, AssetClassDetailedSubProductType1Code.mmSoybeans, AssetClassDetailedSubProductType1Code.mmRapeseed,
+						AssetClassDetailedSubProductType1Code.mmOther, AssetClassDetailedSubProductType1Code.mmMaize, AssetClassDetailedSubProductType1Code.mmRice);
 				trace_lazy = () -> AssetClassDetailedSubProductTypeCode.mmObject();
 			}
 		});

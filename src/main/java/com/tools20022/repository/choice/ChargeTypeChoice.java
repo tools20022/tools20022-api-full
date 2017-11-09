@@ -19,9 +19,11 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ChargeType1Code;
 import com.tools20022.repository.datatype.Max4AlphaNumericText;
 import com.tools20022.repository.entity.Charges;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -97,11 +99,11 @@ public class ChargeTypeChoice {
 	 */
 	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Charges.mmChargeType;
+			businessElementTrace_lazy = () -> Charges.mmChargeType;
 			componentContext_lazy = () -> ChargeTypeChoice.mmObject();
 			isDerived = false;
 			xmlTag = "Cd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Type of service for which a charge is asked or paid.";
 			maxOccurs = 1;
@@ -145,11 +147,11 @@ public class ChargeTypeChoice {
 	 */
 	public static final MMMessageAttribute mmProprietaryCode = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Charges.mmChargeType;
+			businessElementTrace_lazy = () -> Charges.mmChargeType;
 			componentContext_lazy = () -> ChargeTypeChoice.mmObject();
 			isDerived = false;
 			xmlTag = "PrtryCd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProprietaryCode";
 			definition = "Type of charge is a bilaterally agreed code.";
 			maxOccurs = 1;
@@ -161,10 +163,10 @@ public class ChargeTypeChoice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ChargeTypeChoice.mmCode, com.tools20022.repository.choice.ChargeTypeChoice.mmProprietaryCode);
+				messageElement_lazy = () -> Arrays.asList(ChargeTypeChoice.mmCode, ChargeTypeChoice.mmProprietaryCode);
 				trace_lazy = () -> Charges.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ChargeTypeChoice";
 				definition = "Charge is expressed as a code or a bilaterally agreed code.";
 			}

@@ -19,8 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.UnitOrFaceAmount1Choice;
 import com.tools20022.repository.entity.CorporateActionSecuritiesEntitlement;
+import com.tools20022.repository.entity.Security;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -99,11 +102,11 @@ public class SecuritiesEntitlement1 {
 	 */
 	public static final MMMessageAttribute mmSecurityIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmIdentification;
+			businessElementTrace_lazy = () -> Security.mmIdentification;
 			componentContext_lazy = () -> SecuritiesEntitlement1.mmObject();
 			isDerived = false;
 			xmlTag = "SctyId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityIdentification";
 			definition = "Identification of the financial instrument.";
 			maxOccurs = 1;
@@ -151,11 +154,11 @@ public class SecuritiesEntitlement1 {
 	 */
 	public static final MMMessageAttribute mmEntitledSecuritiesQuantity = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionSecuritiesEntitlement.mmEntitledSecuritiesQuantity;
+			businessElementTrace_lazy = () -> CorporateActionSecuritiesEntitlement.mmEntitledSecuritiesQuantity;
 			componentContext_lazy = () -> SecuritiesEntitlement1.mmObject();
 			isDerived = false;
 			xmlTag = "EntitldSctiesQty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EntitledSecuritiesQuantity";
 			definition = "Quantity of securities based on the terms of the corporate action event and balance of underlying securities entitled to the account owner. (This quantity can be positive or negative).";
 			maxOccurs = 1;
@@ -167,10 +170,10 @@ public class SecuritiesEntitlement1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesEntitlement1.mmSecurityIdentification, com.tools20022.repository.msg.SecuritiesEntitlement1.mmEntitledSecuritiesQuantity);
+				messageElement_lazy = () -> Arrays.asList(SecuritiesEntitlement1.mmSecurityIdentification, SecuritiesEntitlement1.mmEntitledSecuritiesQuantity);
 				trace_lazy = () -> CorporateActionSecuritiesEntitlement.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesEntitlement1";
 				definition = "Provides entitlement information.";
 			}

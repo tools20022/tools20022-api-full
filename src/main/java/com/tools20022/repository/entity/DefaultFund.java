@@ -17,10 +17,10 @@
 
 package com.tools20022.repository.entity;
 
-import com.tools20022.metamodel.MMBusinessAssociationEnd;
-import com.tools20022.metamodel.MMBusinessAttribute;
-import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.*;
 import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
+import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.Contribution1;
 import com.tools20022.repository.msg.DefaultFund1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -36,16 +36,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.DefaultFund#mmTotalAmount
- * DefaultFund.mmTotalAmount}</li>
- * <li>{@linkplain com.tools20022.repository.entity.DefaultFund#mmContribution
- * DefaultFund.mmContribution}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.DefaultFund#mmClearingSystem
- * DefaultFund.mmClearingSystem}</li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.DefaultFund1 DefaultFund1}</li>
  * </ul>
  * </li>
  * <li>
@@ -60,11 +55,16 @@ import java.util.concurrent.atomic.AtomicReference;
  * DefaultFundContribution.mmDefaultFund}</li>
  * </ul>
  * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.DefaultFund1 DefaultFund1}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.DefaultFund#mmTotalAmount
+ * DefaultFund.mmTotalAmount}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.DefaultFund#mmContribution
+ * DefaultFund.mmContribution}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.DefaultFund#mmClearingSystem
+ * DefaultFund.mmClearingSystem}</li>
  * </ul>
  * </li>
  * <li>
@@ -129,10 +129,10 @@ public class DefaultFund {
 	 */
 	public static final MMBusinessAttribute mmTotalAmount = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Contribution1.mmRequiredAmount, com.tools20022.repository.msg.DefaultFund1.mmTotalDefaultFundAmount);
+			derivation_lazy = () -> Arrays.asList(Contribution1.mmRequiredAmount, DefaultFund1.mmTotalDefaultFundAmount);
 			elementContext_lazy = () -> DefaultFund.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TotalAmount";
 			definition = "Total amount required by the Clearing Member to participate to the Default Fund.";
 			maxOccurs = 1;
@@ -184,16 +184,16 @@ public class DefaultFund {
 	 */
 	public static final MMBusinessAssociationEnd mmContribution = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DefaultFund1.mmContribution);
+			derivation_lazy = () -> Arrays.asList(DefaultFund1.mmContribution);
 			elementContext_lazy = () -> DefaultFund.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Contribution";
 			definition = "Contribution information for a default fund.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.DefaultFundContribution.mmDefaultFund;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.DefaultFundContribution.mmObject();
 		}
 	};
@@ -237,13 +237,13 @@ public class DefaultFund {
 		{
 			elementContext_lazy = () -> DefaultFund.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClearingSystem";
 			definition = "Clearing system for which assets are posted by participants in the default fund.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.ClearingSystem.mmDefaultFund;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.ClearingSystem.mmObject();
 		}
 	};
@@ -251,12 +251,12 @@ public class DefaultFund {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DefaultFund";
 				definition = "Assets posted by participants in a clearing fund that can be used in the event of a default by a participant to compensate non-defaulting participants for losses they suffer due to this default.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.ClearingSystem.mmDefaultFund, com.tools20022.repository.entity.DefaultFundContribution.mmDefaultFund);
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.DefaultFund.mmTotalAmount, com.tools20022.repository.entity.DefaultFund.mmContribution, com.tools20022.repository.entity.DefaultFund.mmClearingSystem);
+				element_lazy = () -> Arrays.asList(DefaultFund.mmTotalAmount, DefaultFund.mmContribution, DefaultFund.mmClearingSystem);
 				derivationComponent_lazy = () -> Arrays.asList(DefaultFund1.mmObject());
 			}
 		});

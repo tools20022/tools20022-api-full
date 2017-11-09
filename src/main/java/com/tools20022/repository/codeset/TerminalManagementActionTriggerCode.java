@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -28,6 +30,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.TerminalManagementActionTrigger1Code
+ * TerminalManagementActionTrigger1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -42,14 +52,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.TerminalManagementActionTriggerCode#mmSaleEvent
  * TerminalManagementActionTriggerCode.mmSaleEvent}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.TerminalManagementActionTrigger1Code
- * TerminalManagementActionTrigger1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -101,7 +103,7 @@ public class TerminalManagementActionTriggerCode {
 	 */
 	public static final MMCode mmDateTime = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DateTime";
 			definition = "Date and time trigger the terminal management action.";
 			owner_lazy = () -> TerminalManagementActionTriggerCode.mmObject();
@@ -131,7 +133,7 @@ public class TerminalManagementActionTriggerCode {
 	 */
 	public static final MMCode mmHostEvent = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "HostEvent";
 			definition = "Acquirer triggers the terminal management action.";
 			owner_lazy = () -> TerminalManagementActionTriggerCode.mmObject();
@@ -161,7 +163,7 @@ public class TerminalManagementActionTriggerCode {
 	 */
 	public static final MMCode mmManual = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Manual";
 			definition = "Acceptor triggers the terminal management action.";
 			owner_lazy = () -> TerminalManagementActionTriggerCode.mmObject();
@@ -191,7 +193,7 @@ public class TerminalManagementActionTriggerCode {
 	 */
 	public static final MMCode mmSaleEvent = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SaleEvent";
 			definition = "Sale system triggers the terminal management action.";
 			owner_lazy = () -> TerminalManagementActionTriggerCode.mmObject();
@@ -202,13 +204,12 @@ public class TerminalManagementActionTriggerCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("DATE");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TerminalManagementActionTriggerCode";
 				definition = "Event to start a terminal management action by the point of interaction (POI).";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TerminalManagementActionTriggerCode.mmDateTime, com.tools20022.repository.codeset.TerminalManagementActionTriggerCode.mmHostEvent,
-						com.tools20022.repository.codeset.TerminalManagementActionTriggerCode.mmManual, com.tools20022.repository.codeset.TerminalManagementActionTriggerCode.mmSaleEvent);
+				code_lazy = () -> Arrays.asList(TerminalManagementActionTriggerCode.mmDateTime, TerminalManagementActionTriggerCode.mmHostEvent, TerminalManagementActionTriggerCode.mmManual, TerminalManagementActionTriggerCode.mmSaleEvent);
 				derivation_lazy = () -> Arrays.asList(TerminalManagementActionTrigger1Code.mmObject());
 			}
 		});

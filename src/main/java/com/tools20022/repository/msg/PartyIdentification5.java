@@ -17,14 +17,14 @@
 
 package com.tools20022.repository.msg;
 
-import com.tools20022.metamodel.MMMessageAssociationEnd;
-import com.tools20022.metamodel.MMMessageAttribute;
-import com.tools20022.metamodel.MMMessageComponent;
-import com.tools20022.metamodel.MMXor;
+import com.tools20022.metamodel.*;
 import com.tools20022.repository.datatype.BEIIdentifier;
 import com.tools20022.repository.datatype.Max70Text;
+import com.tools20022.repository.entity.OrganisationIdentification;
 import com.tools20022.repository.entity.PartyIdentificationInformation;
+import com.tools20022.repository.entity.PartyName;
 import com.tools20022.repository.entity.PostalAddress;
+import com.tools20022.repository.GeneratedRepository;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -117,11 +117,11 @@ public class PartyIdentification5 {
 	 */
 	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyName.mmName;
+			businessElementTrace_lazy = () -> PartyName.mmName;
 			componentContext_lazy = () -> PartyIdentification5.mmObject();
 			isDerived = false;
 			xmlTag = "Nm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Name";
 			definition = "Name by which a party is known and which is usually used to identify that party.";
 			maxOccurs = 1;
@@ -165,11 +165,11 @@ public class PartyIdentification5 {
 	 */
 	public static final MMMessageAttribute mmBEI = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.mmBICNonFI;
+			businessElementTrace_lazy = () -> OrganisationIdentification.mmBICNonFI;
 			componentContext_lazy = () -> PartyIdentification5.mmObject();
 			isDerived = false;
 			xmlTag = "BEI";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BEI";
 			definition = "Identification of a non-financial institution.";
 			maxOccurs = 1;
@@ -218,7 +218,7 @@ public class PartyIdentification5 {
 			componentContext_lazy = () -> PartyIdentification5.mmObject();
 			isDerived = false;
 			xmlTag = "PstlAdr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PostalAddress";
 			definition = "Information that locates and identifies a specific address, as defined by postal services.";
 			maxOccurs = 1;
@@ -233,6 +233,10 @@ public class PartyIdentification5 {
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
+	 * messageComponent} =
+	 * {@linkplain com.tools20022.repository.msg.PartyIdentification5
+	 * PartyIdentification5}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getImpactedElements
 	 * impactedElements} =
 	 * <ul>
@@ -243,10 +247,6 @@ public class PartyIdentification5 {
 	 * PartyIdentification5.mmBEI}</li>
 	 * </ul>
 	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
-	 * messageComponent} =
-	 * {@linkplain com.tools20022.repository.msg.PartyIdentification5
-	 * PartyIdentification5}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -262,22 +262,21 @@ public class PartyIdentification5 {
 	 */
 	public static final MMXor mmNameOrBEIRule = new MMXor() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NameOrBEIRule";
 			definition = "If Name is present, then BEI is not allowed. If Name is not present, then BEI is mandatory.";
 			messageComponent_lazy = () -> PartyIdentification5.mmObject();
-			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyIdentification5.mmName, com.tools20022.repository.msg.PartyIdentification5.mmBEI);
+			impactedElements_lazy = () -> Arrays.asList(PartyIdentification5.mmName, PartyIdentification5.mmBEI);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyIdentification5.mmName, com.tools20022.repository.msg.PartyIdentification5.mmBEI,
-						com.tools20022.repository.msg.PartyIdentification5.mmPostalAddress);
+				messageElement_lazy = () -> Arrays.asList(PartyIdentification5.mmName, PartyIdentification5.mmBEI, PartyIdentification5.mmPostalAddress);
 				trace_lazy = () -> PartyIdentificationInformation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
 						return DateFormat.getDateInstance(java.text.DateFormat.LONG).parse("September 9, 2016");
@@ -287,7 +286,7 @@ public class PartyIdentification5 {
 				})).get();
 				name = "PartyIdentification5";
 				definition = "Entity involved in an activity.";
-				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyIdentification5.mmNameOrBEIRule);
+				xors_lazy = () -> Arrays.asList(PartyIdentification5.mmNameOrBEIRule);
 			}
 		});
 		return mmObject_lazy.get();

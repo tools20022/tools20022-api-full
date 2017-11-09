@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.VerificationCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -88,7 +90,7 @@ public class Verification1Code extends VerificationCode {
 	 */
 	public static final MMCode mmFailed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Failed";
 			owner_lazy = () -> Verification1Code.mmObject();
 		}
@@ -111,7 +113,7 @@ public class Verification1Code extends VerificationCode {
 	 */
 	public static final MMCode mmMissing = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Missing";
 			owner_lazy = () -> Verification1Code.mmObject();
 		}
@@ -134,7 +136,7 @@ public class Verification1Code extends VerificationCode {
 	 */
 	public static final MMCode mmNotPerformed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotPerformed";
 			owner_lazy = () -> Verification1Code.mmObject();
 		}
@@ -157,7 +159,7 @@ public class Verification1Code extends VerificationCode {
 	 */
 	public static final MMCode mmPartialMatch = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartialMatch";
 			owner_lazy = () -> Verification1Code.mmObject();
 		}
@@ -180,7 +182,7 @@ public class Verification1Code extends VerificationCode {
 	 */
 	public static final MMCode mmSuccessful = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Successful";
 			owner_lazy = () -> Verification1Code.mmObject();
 		}
@@ -203,7 +205,7 @@ public class Verification1Code extends VerificationCode {
 	 */
 	public static final MMCode mmTechnicalError = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TechnicalError";
 			owner_lazy = () -> Verification1Code.mmObject();
 		}
@@ -212,13 +214,12 @@ public class Verification1Code extends VerificationCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Verification1Code";
 				definition = "Result of the verification.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Verification1Code.mmFailed, com.tools20022.repository.codeset.Verification1Code.mmMissing,
-						com.tools20022.repository.codeset.Verification1Code.mmNotPerformed, com.tools20022.repository.codeset.Verification1Code.mmPartialMatch, com.tools20022.repository.codeset.Verification1Code.mmSuccessful,
-						com.tools20022.repository.codeset.Verification1Code.mmTechnicalError);
+				code_lazy = () -> Arrays
+						.asList(Verification1Code.mmFailed, Verification1Code.mmMissing, Verification1Code.mmNotPerformed, Verification1Code.mmPartialMatch, Verification1Code.mmSuccessful, Verification1Code.mmTechnicalError);
 				trace_lazy = () -> VerificationCode.mmObject();
 			}
 		});

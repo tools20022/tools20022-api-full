@@ -19,7 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.acmt.AccountDetailsConfirmationV02;
+import com.tools20022.repository.area.acmt.AccountOpeningInstructionV02;
 import com.tools20022.repository.entity.Payment;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -129,7 +133,7 @@ public class InvestmentFundCashSettlementInformation3 {
 			componentContext_lazy = () -> InvestmentFundCashSettlementInformation3.mmObject();
 			isDerived = false;
 			xmlTag = "SbcptPmtInstrm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubscriptionPaymentInstrument";
 			definition = "Instrument that has or represents monetary value and is used to process a payment instruction for a subscription payment.";
 			maxOccurs = 1;
@@ -178,7 +182,7 @@ public class InvestmentFundCashSettlementInformation3 {
 			componentContext_lazy = () -> InvestmentFundCashSettlementInformation3.mmObject();
 			isDerived = false;
 			xmlTag = "RedPmtInstrm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RedemptionPaymentInstrument";
 			definition = "Instrument that has or represents monetary value and is used to process a payment instruction for a redemption payment.";
 			maxOccurs = 1;
@@ -227,7 +231,7 @@ public class InvestmentFundCashSettlementInformation3 {
 			componentContext_lazy = () -> InvestmentFundCashSettlementInformation3.mmObject();
 			isDerived = false;
 			xmlTag = "DvddPmtInstrm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DividendPaymentInstrument";
 			definition = "Instrument that has or represents monetary value and is used to process a payment instruction for a dividend payment.";
 			maxOccurs = 1;
@@ -276,7 +280,7 @@ public class InvestmentFundCashSettlementInformation3 {
 			componentContext_lazy = () -> InvestmentFundCashSettlementInformation3.mmObject();
 			isDerived = false;
 			xmlTag = "SvgsPlanPmtInstrm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SavingsPlanPaymentInstrument";
 			definition = "Instrument that has or represents monetary value and is used to process a payment instruction for a savings plan payment.";
 			maxOccurs = 1;
@@ -289,13 +293,12 @@ public class InvestmentFundCashSettlementInformation3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentFundCashSettlementInformation3.mmSubscriptionPaymentInstrument,
-						com.tools20022.repository.msg.InvestmentFundCashSettlementInformation3.mmRedemptionPaymentInstrument, com.tools20022.repository.msg.InvestmentFundCashSettlementInformation3.mmDividendPaymentInstrument,
-						com.tools20022.repository.msg.InvestmentFundCashSettlementInformation3.mmSavingsPlanPaymentInstrument);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountDetailsConfirmationV02.mmCashSettlement, com.tools20022.repository.area.acmt.AccountOpeningInstructionV02.mmCashSettlement);
+				messageElement_lazy = () -> Arrays.asList(InvestmentFundCashSettlementInformation3.mmSubscriptionPaymentInstrument, InvestmentFundCashSettlementInformation3.mmRedemptionPaymentInstrument,
+						InvestmentFundCashSettlementInformation3.mmDividendPaymentInstrument, InvestmentFundCashSettlementInformation3.mmSavingsPlanPaymentInstrument);
+				messageBuildingBlock_lazy = () -> Arrays.asList(AccountDetailsConfirmationV02.mmCashSettlement, AccountOpeningInstructionV02.mmCashSettlement);
 				trace_lazy = () -> Payment.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InvestmentFundCashSettlementInformation3";
 				definition = "Settlement instructions to be used to transfer cash from the Debtor to the Creditor.";
 				nextVersions_lazy = () -> Arrays.asList(InvestmentFundCashSettlementInformation5.mmObject());

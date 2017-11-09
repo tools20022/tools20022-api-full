@@ -19,8 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.AssetClassSubProductType19Code;
+import com.tools20022.repository.entity.Commodity;
 import com.tools20022.repository.entity.Derivative;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -99,11 +102,11 @@ public class ForeignExchangeDerivative2 {
 	 */
 	public static final MMMessageAttribute mmContractSubType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Commodity.mmSubProduct;
+			businessElementTrace_lazy = () -> Commodity.mmSubProduct;
 			componentContext_lazy = () -> ForeignExchangeDerivative2.mmObject();
 			isDerived = false;
 			xmlTag = "CtrctSubTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ContractSubType";
 			definition = "Type of deliverable and non-deliverable forwards, options and swaps contract.\t";
 			maxOccurs = 1;
@@ -115,10 +118,10 @@ public class ForeignExchangeDerivative2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ForeignExchangeDerivative2.mmContractSubType);
+				messageElement_lazy = () -> Arrays.asList(ForeignExchangeDerivative2.mmContractSubType);
 				trace_lazy = () -> Derivative.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ForeignExchangeDerivative2";
 				definition = "Foreign Exchange Derivative which is either deliverable or non-deliverable.";
 			}

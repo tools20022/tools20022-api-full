@@ -19,7 +19,9 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.YesNoIndicator;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -98,7 +100,7 @@ public class AcknowledgementOfExemption1Choice {
 			componentContext_lazy = () -> AcknowledgementOfExemption1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "DcmnttnWillBeSntInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DocumentationWillBeSentIndicator";
 			definition = "Acknowledgement of exempt instruction specifying that the documentation will be sent to DTC  (The Depository Trust Corporation).";
 			maxOccurs = 1;
@@ -143,7 +145,7 @@ public class AcknowledgementOfExemption1Choice {
 			componentContext_lazy = () -> AcknowledgementOfExemption1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "DcmnttnWillNotBeSntInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DocumentationWillNotBeSentIndicator";
 			definition = "Acknowledgement of exempt instruction specifying that the documentation will not be sent to DTC (The Depository Trust Corporation).";
 			maxOccurs = 1;
@@ -155,10 +157,9 @@ public class AcknowledgementOfExemption1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AcknowledgementOfExemption1Choice.mmDocumentationWillBeSentIndicator,
-						com.tools20022.repository.choice.AcknowledgementOfExemption1Choice.mmDocumentationWillNotBeSentIndicator);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(AcknowledgementOfExemption1Choice.mmDocumentationWillBeSentIndicator, AcknowledgementOfExemption1Choice.mmDocumentationWillNotBeSentIndicator);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "AcknowledgementOfExemption1Choice";
 				definition = "Acknowledgement of exempt instruction specifying whether the documentation will be sent to DTCC or not (not maintained by DTCC).";
 			}

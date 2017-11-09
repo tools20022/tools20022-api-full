@@ -17,9 +17,12 @@
 
 package com.tools20022.repository.entity;
 
+import com.tools20022.metamodel.MMAggregation;
 import com.tools20022.metamodel.MMBusinessAssociationEnd;
 import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.Role;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -32,14 +35,16 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.UndertakingPartyRole#mmUndertaking
- * UndertakingPartyRole.mmUndertaking}</li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.Undertaking#mmPartyRole
+ * Undertaking.mmPartyRole}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.Role Role}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
  * subType} =
  * <ul>
@@ -66,16 +71,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * UndertakingInstructingParty}</li>
  * </ul>
  * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Undertaking#mmPartyRole
- * Undertaking.mmPartyRole}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.UndertakingPartyRole#mmUndertaking
+ * UndertakingPartyRole.mmUndertaking}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.Role Role}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -133,13 +136,13 @@ public class UndertakingPartyRole extends Role {
 		{
 			elementContext_lazy = () -> UndertakingPartyRole.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Undertaking";
 			definition = "Identifies the undertaking for which a party plays a role.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.Undertaking.mmPartyRole;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Undertaking.mmObject();
 		}
 	};
@@ -147,15 +150,15 @@ public class UndertakingPartyRole extends Role {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "UndertakingPartyRole";
 				definition = "Role played by a party in the context of an undertaking.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Undertaking.mmPartyRole);
 				subType_lazy = () -> Arrays.asList(UndertakingIssuer.mmObject(), UndertakingDeliveryToParty.mmObject(), UndertakingAdvisingParty.mmObject(), UndertakingBeneficiary.mmObject(), UndertakingUltimateObligor.mmObject(),
 						UndertakingApplicant.mmObject(), UndertakingConfirmer.mmObject(), UndertakingPresenter.mmObject(), UndertakingPlaceOfPresentation.mmObject(), UndertakingInstructingParty.mmObject());
 				superType_lazy = () -> Role.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.UndertakingPartyRole.mmUndertaking);
+				element_lazy = () -> Arrays.asList(UndertakingPartyRole.mmUndertaking);
 			}
 		});
 		return mmObject_lazy.get();

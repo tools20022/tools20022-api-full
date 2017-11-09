@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.TaxTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -83,7 +85,7 @@ public class TaxType2Code extends TaxTypeCode {
 	 */
 	public static final MMCode mmStampDuty = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StampDuty";
 			owner_lazy = () -> TaxType2Code.mmObject();
 		}
@@ -105,7 +107,7 @@ public class TaxType2Code extends TaxTypeCode {
 	 */
 	public static final MMCode mmWithholdingTax = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WithholdingTax";
 			owner_lazy = () -> TaxType2Code.mmObject();
 		}
@@ -127,7 +129,7 @@ public class TaxType2Code extends TaxTypeCode {
 	 */
 	public static final MMCode mmEUTaxRetention = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EUTaxRetention";
 			owner_lazy = () -> TaxType2Code.mmObject();
 		}
@@ -136,12 +138,12 @@ public class TaxType2Code extends TaxTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("STAM");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TaxType2Code";
 				definition = "Specifies the type of tax.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TaxType2Code.mmStampDuty, com.tools20022.repository.codeset.TaxType2Code.mmWithholdingTax, com.tools20022.repository.codeset.TaxType2Code.mmEUTaxRetention);
+				code_lazy = () -> Arrays.asList(TaxType2Code.mmStampDuty, TaxType2Code.mmWithholdingTax, TaxType2Code.mmEUTaxRetention);
 				trace_lazy = () -> TaxTypeCode.mmObject();
 			}
 		});

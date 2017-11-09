@@ -19,9 +19,16 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV06;
+import com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV07;
+import com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV06;
+import com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV07;
 import com.tools20022.repository.choice.CorporateActionEventStageFormat14Choice;
 import com.tools20022.repository.choice.LotteryTypeFormat4Choice;
 import com.tools20022.repository.entity.CorporateActionEvent;
+import com.tools20022.repository.entity.Lottery;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -125,7 +132,7 @@ public class CorporateAction34 {
 			componentContext_lazy = () -> CorporateAction34.mmObject();
 			isDerived = false;
 			xmlTag = "DtDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DateDetails";
 			definition = "Provides information about the dates related to a corporate action event.";
 			maxOccurs = 1;
@@ -169,11 +176,11 @@ public class CorporateAction34 {
 	 */
 	public static final MMMessageAssociationEnd mmEventStage = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmEventStage;
+			businessElementTrace_lazy = () -> CorporateActionEvent.mmEventStage;
 			componentContext_lazy = () -> CorporateAction34.mmObject();
 			isDerived = false;
 			xmlTag = "EvtStag";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventStage";
 			definition = "Stage in the corporate action event life cycle.";
 			maxOccurs = 1;
@@ -217,11 +224,11 @@ public class CorporateAction34 {
 	 */
 	public static final MMMessageAssociationEnd mmLotteryType = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Lottery.mmLotteryType;
+			businessElementTrace_lazy = () -> Lottery.mmLotteryType;
 			componentContext_lazy = () -> CorporateAction34.mmObject();
 			isDerived = false;
 			xmlTag = "LtryTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LotteryType";
 			definition = "Specifies the type of lottery announced.";
 			maxOccurs = 1;
@@ -234,14 +241,12 @@ public class CorporateAction34 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateAction34.mmDateDetails, com.tools20022.repository.msg.CorporateAction34.mmEventStage,
-						com.tools20022.repository.msg.CorporateAction34.mmLotteryType);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV06.mmCorporateActionDetails,
-						com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV06.mmCorporateActionDetails, com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV07.mmCorporateActionDetails,
-						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV07.mmCorporateActionDetails);
+				messageElement_lazy = () -> Arrays.asList(CorporateAction34.mmDateDetails, CorporateAction34.mmEventStage, CorporateAction34.mmLotteryType);
+				messageBuildingBlock_lazy = () -> Arrays.asList(CorporateActionMovementPreliminaryAdviceCancellationAdviceV06.mmCorporateActionDetails, CorporateActionCancellationAdviceV06.mmCorporateActionDetails,
+						CorporateActionCancellationAdviceV07.mmCorporateActionDetails, CorporateActionMovementPreliminaryAdviceCancellationAdviceV07.mmCorporateActionDetails);
 				trace_lazy = () -> CorporateActionEvent.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateAction34";
 				definition = "Provides information about the corporate action event.";
 			}

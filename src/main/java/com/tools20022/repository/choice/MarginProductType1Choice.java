@@ -19,8 +19,10 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.MarginProduct1Code;
 import com.tools20022.repository.entity.MarginCall;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification30;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -100,11 +102,11 @@ public class MarginProductType1Choice {
 	 */
 	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.MarginCall.mmMarginProduct;
+			businessElementTrace_lazy = () -> MarginCall.mmMarginProduct;
 			componentContext_lazy = () -> MarginProductType1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Cd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Specifies the underlying product of the margin using a code.";
 			maxOccurs = 1;
@@ -151,11 +153,11 @@ public class MarginProductType1Choice {
 	 */
 	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.MarginCall.mmMarginProduct;
+			businessElementTrace_lazy = () -> MarginCall.mmMarginProduct;
 			componentContext_lazy = () -> MarginProductType1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Specifies the underlying product of the margin using a proprietary format.";
 			maxOccurs = 1;
@@ -167,10 +169,10 @@ public class MarginProductType1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.MarginProductType1Choice.mmCode, com.tools20022.repository.choice.MarginProductType1Choice.mmProprietary);
+				messageElement_lazy = () -> Arrays.asList(MarginProductType1Choice.mmCode, MarginProductType1Choice.mmProprietary);
 				trace_lazy = () -> MarginCall.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MarginProductType1Choice";
 				definition = "Provides specification for the underlying product of the margin.";
 			}

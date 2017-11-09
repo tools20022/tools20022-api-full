@@ -19,10 +19,13 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.admi.SystemEventAcknowledgementV01;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.Max4AlphaNumericText;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -120,10 +123,10 @@ public class Event1 {
 			componentContext_lazy = () -> Event1.mmObject();
 			isDerived = false;
 			xmlTag = "EvtCd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventCode";
 			definition = "Proprietary code used to specify an event that occurred in a system.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Event2.mmEventCode);
+			nextVersions_lazy = () -> Arrays.asList(Event2.mmEventCode);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max4AlphaNumericText.mmObject();
@@ -169,10 +172,10 @@ public class Event1 {
 			componentContext_lazy = () -> Event1.mmObject();
 			isDerived = false;
 			xmlTag = "EvtParam";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventParameter";
 			definition = "Describes the parameters of an event which occurred in a system.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Event2.mmEventParameter);
+			nextVersions_lazy = () -> Arrays.asList(Event2.mmEventParameter);
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
@@ -217,10 +220,10 @@ public class Event1 {
 			componentContext_lazy = () -> Event1.mmObject();
 			isDerived = false;
 			xmlTag = "EvtDesc";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventDescription";
 			definition = "Free text used to describe an event which occurred in a system.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Event2.mmEventDescription);
+			nextVersions_lazy = () -> Arrays.asList(Event2.mmEventDescription);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
@@ -265,10 +268,10 @@ public class Event1 {
 			componentContext_lazy = () -> Event1.mmObject();
 			isDerived = false;
 			xmlTag = "EvtTm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventTime";
 			definition = "Date and time at which the event occurred.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Event2.mmEventTime);
+			nextVersions_lazy = () -> Arrays.asList(Event2.mmEventTime);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
@@ -278,11 +281,10 @@ public class Event1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Event1.mmEventCode, com.tools20022.repository.msg.Event1.mmEventParameter, com.tools20022.repository.msg.Event1.mmEventDescription,
-						com.tools20022.repository.msg.Event1.mmEventTime);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.admi.SystemEventAcknowledgementV01.mmAcknowledgementDetails);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(Event1.mmEventCode, Event1.mmEventParameter, Event1.mmEventDescription, Event1.mmEventTime);
+				messageBuildingBlock_lazy = () -> Arrays.asList(SystemEventAcknowledgementV01.mmAcknowledgementDetails);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Event1";
 				definition = "Provides information on an event that happened in a system.";
 				nextVersions_lazy = () -> Arrays.asList(Event2.mmObject());

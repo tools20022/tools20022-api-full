@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ResponseCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -85,7 +87,7 @@ public class Response3Code extends ResponseCode {
 	 */
 	public static final MMCode mmApproved = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Approved";
 			owner_lazy = () -> Response3Code.mmObject();
 		}
@@ -108,7 +110,7 @@ public class Response3Code extends ResponseCode {
 	 */
 	public static final MMCode mmDeclined = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Declined";
 			owner_lazy = () -> Response3Code.mmObject();
 		}
@@ -131,7 +133,7 @@ public class Response3Code extends ResponseCode {
 	 */
 	public static final MMCode mmFurtherAction = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FurtherAction";
 			owner_lazy = () -> Response3Code.mmObject();
 		}
@@ -154,7 +156,7 @@ public class Response3Code extends ResponseCode {
 	 */
 	public static final MMCode mmPartialApproved = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartialApproved";
 			owner_lazy = () -> Response3Code.mmObject();
 		}
@@ -177,7 +179,7 @@ public class Response3Code extends ResponseCode {
 	 */
 	public static final MMCode mmProcessed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Processed";
 			owner_lazy = () -> Response3Code.mmObject();
 		}
@@ -200,7 +202,7 @@ public class Response3Code extends ResponseCode {
 	 */
 	public static final MMCode mmNotProcessed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotProcessed";
 			owner_lazy = () -> Response3Code.mmObject();
 		}
@@ -209,12 +211,11 @@ public class Response3Code extends ResponseCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Response3Code";
 				definition = "Result of the request message or advice message.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Response3Code.mmApproved, com.tools20022.repository.codeset.Response3Code.mmDeclined, com.tools20022.repository.codeset.Response3Code.mmFurtherAction,
-						com.tools20022.repository.codeset.Response3Code.mmPartialApproved, com.tools20022.repository.codeset.Response3Code.mmProcessed, com.tools20022.repository.codeset.Response3Code.mmNotProcessed);
+				code_lazy = () -> Arrays.asList(Response3Code.mmApproved, Response3Code.mmDeclined, Response3Code.mmFurtherAction, Response3Code.mmPartialApproved, Response3Code.mmProcessed, Response3Code.mmNotProcessed);
 				trace_lazy = () -> ResponseCode.mmObject();
 			}
 		});

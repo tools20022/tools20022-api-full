@@ -20,7 +20,9 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.OptionAvailabilityStatus1Code;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification30;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -107,10 +109,10 @@ public class OptionAvailabilityStatus3Choice {
 			componentContext_lazy = () -> OptionAvailabilityStatus3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Cd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Standard code to specify the status of the option availability.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.OptionAvailabilityStatus1Choice.mmCode;
+			previousVersion_lazy = () -> OptionAvailabilityStatus1Choice.mmCode;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> OptionAvailabilityStatus1Code.mmObject();
@@ -155,10 +157,10 @@ public class OptionAvailabilityStatus3Choice {
 			componentContext_lazy = () -> OptionAvailabilityStatus3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Proprietary identification of the status of the option availability.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.OptionAvailabilityStatus1Choice.mmProprietary;
+			previousVersion_lazy = () -> OptionAvailabilityStatus1Choice.mmProprietary;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -169,9 +171,9 @@ public class OptionAvailabilityStatus3Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.OptionAvailabilityStatus3Choice.mmCode, com.tools20022.repository.choice.OptionAvailabilityStatus3Choice.mmProprietary);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(OptionAvailabilityStatus3Choice.mmCode, OptionAvailabilityStatus3Choice.mmProprietary);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OptionAvailabilityStatus3Choice";
 				definition = "Choice between a standard code or proprietary code to specify the option availability status.";
 				previousVersion_lazy = () -> OptionAvailabilityStatus1Choice.mmObject();

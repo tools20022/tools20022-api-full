@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.OfferTypeV2Code;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -89,7 +91,7 @@ public class OfferType3Code extends OfferTypeV2Code {
 	 */
 	public static final MMCode mmSqueezeOutBid = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SqueezeOutBid";
 			owner_lazy = () -> OfferType3Code.mmObject();
 		}
@@ -112,7 +114,7 @@ public class OfferType3Code extends OfferTypeV2Code {
 	 */
 	public static final MMCode mmRestrictionExchange = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RestrictionExchange";
 			owner_lazy = () -> OfferType3Code.mmObject();
 		}
@@ -135,7 +137,7 @@ public class OfferType3Code extends OfferTypeV2Code {
 	 */
 	public static final MMCode mmPartialOffer = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartialOffer";
 			owner_lazy = () -> OfferType3Code.mmObject();
 		}
@@ -158,7 +160,7 @@ public class OfferType3Code extends OfferTypeV2Code {
 	 */
 	public static final MMCode mmFirstComeFirstServed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FirstComeFirstServed";
 			owner_lazy = () -> OfferType3Code.mmObject();
 		}
@@ -181,7 +183,7 @@ public class OfferType3Code extends OfferTypeV2Code {
 	 */
 	public static final MMCode mmFinalOffer = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinalOffer";
 			owner_lazy = () -> OfferType3Code.mmObject();
 		}
@@ -204,7 +206,7 @@ public class OfferType3Code extends OfferTypeV2Code {
 	 */
 	public static final MMCode mmDissenterRights = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DissenterRights";
 			owner_lazy = () -> OfferType3Code.mmObject();
 		}
@@ -213,13 +215,12 @@ public class OfferType3Code extends OfferTypeV2Code {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OfferType3Code";
 				definition = "Specifies the conditions that apply to the offer.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OfferType3Code.mmSqueezeOutBid, com.tools20022.repository.codeset.OfferType3Code.mmRestrictionExchange,
-						com.tools20022.repository.codeset.OfferType3Code.mmPartialOffer, com.tools20022.repository.codeset.OfferType3Code.mmFirstComeFirstServed, com.tools20022.repository.codeset.OfferType3Code.mmFinalOffer,
-						com.tools20022.repository.codeset.OfferType3Code.mmDissenterRights);
+				code_lazy = () -> Arrays.asList(OfferType3Code.mmSqueezeOutBid, OfferType3Code.mmRestrictionExchange, OfferType3Code.mmPartialOffer, OfferType3Code.mmFirstComeFirstServed, OfferType3Code.mmFinalOffer,
+						OfferType3Code.mmDissenterRights);
 				trace_lazy = () -> OfferTypeV2Code.mmObject();
 			}
 		});

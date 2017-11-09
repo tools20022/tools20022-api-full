@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.TradingVenueCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -86,7 +88,7 @@ public class TradingVenue1Code extends TradingVenueCode {
 	 */
 	public static final MMCode mmSystematicInternaliser = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SystematicInternaliser";
 			owner_lazy = () -> TradingVenue1Code.mmObject();
 		}
@@ -109,7 +111,7 @@ public class TradingVenue1Code extends TradingVenueCode {
 	 */
 	public static final MMCode mmMultilateralTradingFacility = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MultilateralTradingFacility";
 			owner_lazy = () -> TradingVenue1Code.mmObject();
 		}
@@ -132,7 +134,7 @@ public class TradingVenue1Code extends TradingVenueCode {
 	 */
 	public static final MMCode mmOrganisedTradingFacility = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrganisedTradingFacility";
 			owner_lazy = () -> TradingVenue1Code.mmObject();
 		}
@@ -155,7 +157,7 @@ public class TradingVenue1Code extends TradingVenueCode {
 	 */
 	public static final MMCode mmRegulatedMarket = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RegulatedMarket";
 			owner_lazy = () -> TradingVenue1Code.mmObject();
 		}
@@ -164,12 +166,11 @@ public class TradingVenue1Code extends TradingVenueCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TradingVenue1Code";
 				definition = "Specifies the type of a trading venue which must use the market identification code (MIC). ";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TradingVenue1Code.mmSystematicInternaliser, com.tools20022.repository.codeset.TradingVenue1Code.mmMultilateralTradingFacility,
-						com.tools20022.repository.codeset.TradingVenue1Code.mmOrganisedTradingFacility, com.tools20022.repository.codeset.TradingVenue1Code.mmRegulatedMarket);
+				code_lazy = () -> Arrays.asList(TradingVenue1Code.mmSystematicInternaliser, TradingVenue1Code.mmMultilateralTradingFacility, TradingVenue1Code.mmOrganisedTradingFacility, TradingVenue1Code.mmRegulatedMarket);
 				trace_lazy = () -> TradingVenueCode.mmObject();
 			}
 		});

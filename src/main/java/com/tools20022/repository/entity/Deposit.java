@@ -17,11 +17,11 @@
 
 package com.tools20022.repository.entity;
 
-import com.tools20022.metamodel.MMBusinessAssociationEnd;
-import com.tools20022.metamodel.MMBusinessAttribute;
-import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.*;
 import com.tools20022.repository.codeset.DepositTypeCode;
 import com.tools20022.repository.entity.Money;
+import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -37,22 +37,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Deposit#mmDepositType
- * Deposit.mmDepositType}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Deposit#mmInterest
- * Deposit.mmInterest}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
- * subType} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.CashLoanDeposit
- * CashLoanDeposit}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
  * associationDomain} =
@@ -63,6 +47,22 @@ import java.util.List;
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
  * superType} = {@linkplain com.tools20022.repository.entity.Money Money}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
+ * subType} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.CashLoanDeposit
+ * CashLoanDeposit}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.Deposit#mmDepositType
+ * Deposit.mmDepositType}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Deposit#mmInterest
+ * Deposit.mmInterest}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -132,11 +132,10 @@ public class Deposit extends Money {
 	 */
 	public static final MMBusinessAttribute mmDepositType = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashCollateral1.mmDepositType, com.tools20022.repository.msg.CashCollateral3.mmDepositType, com.tools20022.repository.msg.CashCollateral4.mmDepositType,
-					com.tools20022.repository.msg.CashCollateral2.mmDepositType, com.tools20022.repository.msg.CashCollateral5.mmDepositType);
+			derivation_lazy = () -> Arrays.asList(CashCollateral1.mmDepositType, CashCollateral3.mmDepositType, CashCollateral4.mmDepositType, CashCollateral2.mmDepositType, CashCollateral5.mmDepositType);
 			elementContext_lazy = () -> Deposit.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DepositType";
 			definition = "Specifies whether the deposit is fixed term or call/notice.";
 			maxOccurs = 1;
@@ -183,12 +182,12 @@ public class Deposit extends Money {
 		{
 			elementContext_lazy = () -> Deposit.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Interest";
 			definition = "Interest amount linked to a deposit. It is derived from the relationship between AssetHolding and Interest.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.Interest.mmDeposit;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Interest.mmObject();
 		}
 	};
@@ -196,14 +195,14 @@ public class Deposit extends Money {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Deposit";
 				definition = "An arrangement in which a lender gives money or property to a borrower, and the borrower agrees to return the property or repay the money, usually along with interest, at some future point(s) in time.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Interest.mmDeposit);
 				subType_lazy = () -> Arrays.asList(CashLoanDeposit.mmObject());
 				superType_lazy = () -> Money.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Deposit.mmDepositType, com.tools20022.repository.entity.Deposit.mmInterest);
+				element_lazy = () -> Arrays.asList(Deposit.mmDepositType, Deposit.mmInterest);
 			}
 		});
 		return mmObject_lazy.get();

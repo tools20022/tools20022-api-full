@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.OrderStatusCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -97,7 +99,7 @@ public class OrderStatus6Code extends OrderStatusCode {
 	 */
 	public static final MMCode mmDoneForDay = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DoneForDay";
 			owner_lazy = () -> OrderStatus6Code.mmObject();
 		}
@@ -120,7 +122,7 @@ public class OrderStatus6Code extends OrderStatusCode {
 	 */
 	public static final MMCode mmRejected = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rejected";
 			owner_lazy = () -> OrderStatus6Code.mmObject();
 		}
@@ -143,7 +145,7 @@ public class OrderStatus6Code extends OrderStatusCode {
 	 */
 	public static final MMCode mmExecuting = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Executing";
 			owner_lazy = () -> OrderStatus6Code.mmObject();
 		}
@@ -166,7 +168,7 @@ public class OrderStatus6Code extends OrderStatusCode {
 	 */
 	public static final MMCode mmCancelling = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cancelling";
 			owner_lazy = () -> OrderStatus6Code.mmObject();
 		}
@@ -189,7 +191,7 @@ public class OrderStatus6Code extends OrderStatusCode {
 	 */
 	public static final MMCode mmAlert = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Alert";
 			owner_lazy = () -> OrderStatus6Code.mmObject();
 		}
@@ -212,7 +214,7 @@ public class OrderStatus6Code extends OrderStatusCode {
 	 */
 	public static final MMCode mmAccepted = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Accepted";
 			owner_lazy = () -> OrderStatus6Code.mmObject();
 		}
@@ -235,7 +237,7 @@ public class OrderStatus6Code extends OrderStatusCode {
 	 */
 	public static final MMCode mmAcceptedForBidding = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcceptedForBidding";
 			owner_lazy = () -> OrderStatus6Code.mmObject();
 		}
@@ -244,14 +246,13 @@ public class OrderStatus6Code extends OrderStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("DONE");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OrderStatus6Code";
 				definition = "Identifies current status of order.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OrderStatus6Code.mmDoneForDay, com.tools20022.repository.codeset.OrderStatus6Code.mmRejected, com.tools20022.repository.codeset.OrderStatus6Code.mmExecuting,
-						com.tools20022.repository.codeset.OrderStatus6Code.mmCancelling, com.tools20022.repository.codeset.OrderStatus6Code.mmAlert, com.tools20022.repository.codeset.OrderStatus6Code.mmAccepted,
-						com.tools20022.repository.codeset.OrderStatus6Code.mmAcceptedForBidding);
+				code_lazy = () -> Arrays.asList(OrderStatus6Code.mmDoneForDay, OrderStatus6Code.mmRejected, OrderStatus6Code.mmExecuting, OrderStatus6Code.mmCancelling, OrderStatus6Code.mmAlert, OrderStatus6Code.mmAccepted,
+						OrderStatus6Code.mmAcceptedForBidding);
 				trace_lazy = () -> OrderStatusCode.mmObject();
 			}
 		});

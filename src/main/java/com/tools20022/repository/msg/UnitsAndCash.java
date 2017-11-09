@@ -20,11 +20,14 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.DecimalNumber;
 import com.tools20022.repository.datatype.ImpliedCurrencyAndAmount;
 import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.InvestmentFundClass;
 import com.tools20022.repository.entity.InvestmentFundOrderExecution;
+import com.tools20022.repository.entity.SecuritiesQuantity;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -115,7 +118,7 @@ public class UnitsAndCash {
 			componentContext_lazy = () -> UnitsAndCash.mmObject();
 			isDerived = false;
 			xmlTag = "Instrm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Instrument";
 			definition = "Specifies the type of underlying assets for the PEP or ISA.";
 			maxOccurs = 1;
@@ -163,11 +166,11 @@ public class UnitsAndCash {
 	 */
 	public static final MMMessageAttribute mmGrandTotalAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmAmount;
+			businessElementTrace_lazy = () -> SecuritiesQuantity.mmAmount;
 			componentContext_lazy = () -> UnitsAndCash.mmObject();
 			isDerived = false;
 			xmlTag = "GrdTtlAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GrandTotalAmount";
 			definition = "Quantity expressed as an amount, eg,  in the investment fund business, a quantity of a financial instrument may be expressed as an amount of money.";
 			maxOccurs = 1;
@@ -210,11 +213,11 @@ public class UnitsAndCash {
 	 */
 	public static final MMMessageAttribute mmGroup1Number = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrderExecution.mmUnitsNumber;
+			businessElementTrace_lazy = () -> InvestmentFundOrderExecution.mmUnitsNumber;
 			componentContext_lazy = () -> UnitsAndCash.mmObject();
 			isDerived = false;
 			xmlTag = "Grp1Nb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Group1Number";
 			definition = "Quantity expressed as a number, eg, a number of shares.";
 			maxOccurs = 1;
@@ -257,11 +260,11 @@ public class UnitsAndCash {
 	 */
 	public static final MMMessageAttribute mmGroup2Number = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrderExecution.mmUnitsNumber;
+			businessElementTrace_lazy = () -> InvestmentFundOrderExecution.mmUnitsNumber;
 			componentContext_lazy = () -> UnitsAndCash.mmObject();
 			isDerived = false;
 			xmlTag = "Grp2Nb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Group2Number";
 			definition = "Quantity expressed as a number, eg, a number of shares.";
 			maxOccurs = 1;
@@ -305,7 +308,7 @@ public class UnitsAndCash {
 			componentContext_lazy = () -> UnitsAndCash.mmObject();
 			isDerived = false;
 			xmlTag = "CmpltInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CompleteIndicator";
 			definition = "Specifies whether the transfer of the asset is final or not, eg whether dividends or units are still to be delivered.";
 			maxOccurs = 1;
@@ -317,11 +320,10 @@ public class UnitsAndCash {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UnitsAndCash.mmInstrument, com.tools20022.repository.msg.UnitsAndCash.mmGrandTotalAmount, com.tools20022.repository.msg.UnitsAndCash.mmGroup1Number,
-						com.tools20022.repository.msg.UnitsAndCash.mmGroup2Number, com.tools20022.repository.msg.UnitsAndCash.mmCompleteIndicator);
+				messageElement_lazy = () -> Arrays.asList(UnitsAndCash.mmInstrument, UnitsAndCash.mmGrandTotalAmount, UnitsAndCash.mmGroup1Number, UnitsAndCash.mmGroup2Number, UnitsAndCash.mmCompleteIndicator);
 				trace_lazy = () -> InvestmentFundOrderExecution.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "UnitsAndCash";
 				definition = "Completion of a securities settlement instruction, wherein securities are delivered/debited from a securities account and received/credited to the designated securities account.";
 			}

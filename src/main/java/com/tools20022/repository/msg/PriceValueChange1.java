@@ -19,10 +19,13 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ActiveOrHistoricCurrencyAnd13DecimalAmount;
 import com.tools20022.repository.datatype.PercentageRate;
 import com.tools20022.repository.datatype.PlusOrMinusIndicator;
 import com.tools20022.repository.entity.Price;
+import com.tools20022.repository.entity.SecuritiesPricing;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -99,11 +102,11 @@ public class PriceValueChange1 {
 	 */
 	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Price.mmAmount;
+			businessElementTrace_lazy = () -> Price.mmAmount;
 			componentContext_lazy = () -> PriceValueChange1.mmObject();
 			isDerived = false;
 			xmlTag = "Amt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Amount by which the price has changed.";
 			maxOccurs = 1;
@@ -145,7 +148,7 @@ public class PriceValueChange1 {
 			componentContext_lazy = () -> PriceValueChange1.mmObject();
 			isDerived = false;
 			xmlTag = "AmtSgn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmountSign";
 			definition = "Indicates a positive or negative amount change.";
 			maxOccurs = 1;
@@ -189,11 +192,11 @@ public class PriceValueChange1 {
 	 */
 	public static final MMMessageAttribute mmRate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmRate;
+			businessElementTrace_lazy = () -> SecuritiesPricing.mmRate;
 			componentContext_lazy = () -> PriceValueChange1.mmObject();
 			isDerived = false;
 			xmlTag = "Rate";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rate";
 			definition = "Rate by which the price has changed.";
 			maxOccurs = 1;
@@ -205,10 +208,10 @@ public class PriceValueChange1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PriceValueChange1.mmAmount, com.tools20022.repository.msg.PriceValueChange1.mmAmountSign, com.tools20022.repository.msg.PriceValueChange1.mmRate);
+				messageElement_lazy = () -> Arrays.asList(PriceValueChange1.mmAmount, PriceValueChange1.mmAmountSign, PriceValueChange1.mmRate);
 				trace_lazy = () -> Price.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PriceValueChange1";
 				definition = "Value given to a positive or negative price change.";
 			}

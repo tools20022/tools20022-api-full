@@ -20,9 +20,13 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max45Text;
 import com.tools20022.repository.datatype.Max70Text;
 import com.tools20022.repository.entity.CardholderRole;
+import com.tools20022.repository.entity.Party;
+import com.tools20022.repository.entity.PersonName;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -111,11 +115,11 @@ public class Cardholder2 {
 	 */
 	public static final MMMessageAssociationEnd mmIdentification = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> Cardholder2.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Identification of the cardholder involved in a transaction.";
 			minOccurs = 0;
@@ -157,11 +161,11 @@ public class Cardholder2 {
 	 */
 	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PersonName.mmGivenName;
+			businessElementTrace_lazy = () -> PersonName.mmGivenName;
 			componentContext_lazy = () -> Cardholder2.mmObject();
 			isDerived = false;
 			xmlTag = "Nm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Name";
 			definition = "Cardholder name associated with the card.";
 			maxOccurs = 1;
@@ -203,11 +207,11 @@ public class Cardholder2 {
 	 */
 	public static final MMMessageAssociationEnd mmAuthentication = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardholderRole.mmAuthentication;
+			businessElementTrace_lazy = () -> CardholderRole.mmAuthentication;
 			componentContext_lazy = () -> Cardholder2.mmObject();
 			isDerived = false;
 			xmlTag = "Authntcn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Authentication";
 			definition = "Data related to the authentication of the cardholder.";
 			minOccurs = 0;
@@ -247,7 +251,7 @@ public class Cardholder2 {
 			componentContext_lazy = () -> Cardholder2.mmObject();
 			isDerived = false;
 			xmlTag = "AdrVrfctn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AddressVerification";
 			definition = "Numeric characters of the cardholder's address for verification.";
 			maxOccurs = 1;
@@ -288,7 +292,7 @@ public class Cardholder2 {
 			componentContext_lazy = () -> Cardholder2.mmObject();
 			isDerived = false;
 			xmlTag = "PrsnlData";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PersonalData";
 			definition = "Identifies personal data related to the cardholder.";
 			maxOccurs = 1;
@@ -300,11 +304,10 @@ public class Cardholder2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Cardholder2.mmIdentification, com.tools20022.repository.msg.Cardholder2.mmName, com.tools20022.repository.msg.Cardholder2.mmAuthentication,
-						com.tools20022.repository.msg.Cardholder2.mmAddressVerification, com.tools20022.repository.msg.Cardholder2.mmPersonalData);
+				messageElement_lazy = () -> Arrays.asList(Cardholder2.mmIdentification, Cardholder2.mmName, Cardholder2.mmAuthentication, Cardholder2.mmAddressVerification, Cardholder2.mmPersonalData);
 				trace_lazy = () -> CardholderRole.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Cardholder2";
 				definition = "Data related to the cardholder.";
 				nextVersions_lazy = () -> Arrays.asList(Cardholder4.mmObject());

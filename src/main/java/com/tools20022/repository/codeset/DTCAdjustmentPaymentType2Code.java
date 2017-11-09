@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -182,7 +184,7 @@ public class DTCAdjustmentPaymentType2Code extends DTCAdjustmentPaymentTypeV2Cod
 	 */
 	public static final MMCode mmAdjustedForRightsSubscription = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdjustedForRightsSubscription";
 			owner_lazy = () -> DTCAdjustmentPaymentType2Code.mmObject();
 		}
@@ -205,7 +207,7 @@ public class DTCAdjustmentPaymentType2Code extends DTCAdjustmentPaymentTypeV2Cod
 	 */
 	public static final MMCode mmADRIssueFeeCharge = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ADRIssueFeeCharge";
 			owner_lazy = () -> DTCAdjustmentPaymentType2Code.mmObject();
 		}
@@ -228,7 +230,7 @@ public class DTCAdjustmentPaymentType2Code extends DTCAdjustmentPaymentTypeV2Cod
 	 */
 	public static final MMCode mmADRIssueFeeReversal = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ADRIssueFeeReversal";
 			owner_lazy = () -> DTCAdjustmentPaymentType2Code.mmObject();
 		}
@@ -251,7 +253,7 @@ public class DTCAdjustmentPaymentType2Code extends DTCAdjustmentPaymentTypeV2Cod
 	 */
 	public static final MMCode mmCashInLieu = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashInLieu";
 			owner_lazy = () -> DTCAdjustmentPaymentType2Code.mmObject();
 		}
@@ -274,7 +276,7 @@ public class DTCAdjustmentPaymentType2Code extends DTCAdjustmentPaymentTypeV2Cod
 	 */
 	public static final MMCode mmClaimSettlement = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClaimSettlement";
 			owner_lazy = () -> DTCAdjustmentPaymentType2Code.mmObject();
 		}
@@ -297,7 +299,7 @@ public class DTCAdjustmentPaymentType2Code extends DTCAdjustmentPaymentTypeV2Cod
 	 */
 	public static final MMCode mmCustodyDividendPayment = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CustodyDividendPayment";
 			owner_lazy = () -> DTCAdjustmentPaymentType2Code.mmObject();
 		}
@@ -320,7 +322,7 @@ public class DTCAdjustmentPaymentType2Code extends DTCAdjustmentPaymentTypeV2Cod
 	 */
 	public static final MMCode mmCustodyReorganizationDeposit = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CustodyReorganizationDeposit";
 			owner_lazy = () -> DTCAdjustmentPaymentType2Code.mmObject();
 		}
@@ -343,7 +345,7 @@ public class DTCAdjustmentPaymentType2Code extends DTCAdjustmentPaymentTypeV2Cod
 	 */
 	public static final MMCode mmDynamicRateChange = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DynamicRateChange";
 			owner_lazy = () -> DTCAdjustmentPaymentType2Code.mmObject();
 		}
@@ -366,7 +368,7 @@ public class DTCAdjustmentPaymentType2Code extends DTCAdjustmentPaymentTypeV2Cod
 	 */
 	public static final MMCode mmFailSettlement = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FailSettlement";
 			owner_lazy = () -> DTCAdjustmentPaymentType2Code.mmObject();
 		}
@@ -389,7 +391,7 @@ public class DTCAdjustmentPaymentType2Code extends DTCAdjustmentPaymentTypeV2Cod
 	 */
 	public static final MMCode mmFailTrackingTaxWithholding = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FailTrackingTaxWithholding";
 			owner_lazy = () -> DTCAdjustmentPaymentType2Code.mmObject();
 		}
@@ -412,7 +414,7 @@ public class DTCAdjustmentPaymentType2Code extends DTCAdjustmentPaymentTypeV2Cod
 	 */
 	public static final MMCode mmIntraDayReversalOfOriginalTaxWithholding = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IntraDayReversalOfOriginalTaxWithholding";
 			owner_lazy = () -> DTCAdjustmentPaymentType2Code.mmObject();
 		}
@@ -435,7 +437,7 @@ public class DTCAdjustmentPaymentType2Code extends DTCAdjustmentPaymentTypeV2Cod
 	 */
 	public static final MMCode mmLastDayProtect = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LastDayProtect";
 			owner_lazy = () -> DTCAdjustmentPaymentType2Code.mmObject();
 		}
@@ -458,7 +460,7 @@ public class DTCAdjustmentPaymentType2Code extends DTCAdjustmentPaymentTypeV2Cod
 	 */
 	public static final MMCode mmLegalReorganizationDeposits = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LegalReorganizationDeposits";
 			owner_lazy = () -> DTCAdjustmentPaymentType2Code.mmObject();
 		}
@@ -481,7 +483,7 @@ public class DTCAdjustmentPaymentType2Code extends DTCAdjustmentPaymentTypeV2Cod
 	 */
 	public static final MMCode mmMandatoryLegalReorgDeposit = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MandatoryLegalReorgDeposit";
 			owner_lazy = () -> DTCAdjustmentPaymentType2Code.mmObject();
 		}
@@ -504,7 +506,7 @@ public class DTCAdjustmentPaymentType2Code extends DTCAdjustmentPaymentTypeV2Cod
 	 */
 	public static final MMCode mmMandatoryReorganizationDeposit = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MandatoryReorganizationDeposit";
 			owner_lazy = () -> DTCAdjustmentPaymentType2Code.mmObject();
 		}
@@ -527,7 +529,7 @@ public class DTCAdjustmentPaymentType2Code extends DTCAdjustmentPaymentTypeV2Cod
 	 */
 	public static final MMCode mmManualUserTax = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ManualUserTax";
 			owner_lazy = () -> DTCAdjustmentPaymentType2Code.mmObject();
 		}
@@ -550,7 +552,7 @@ public class DTCAdjustmentPaymentType2Code extends DTCAdjustmentPaymentTypeV2Cod
 	 */
 	public static final MMCode mmMiscellaneousSettlement = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MiscellaneousSettlement";
 			owner_lazy = () -> DTCAdjustmentPaymentType2Code.mmObject();
 		}
@@ -573,7 +575,7 @@ public class DTCAdjustmentPaymentType2Code extends DTCAdjustmentPaymentTypeV2Cod
 	 */
 	public static final MMCode mmOriginalInitialTaxWithholding = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalInitialTaxWithholding";
 			owner_lazy = () -> DTCAdjustmentPaymentType2Code.mmObject();
 		}
@@ -596,7 +598,7 @@ public class DTCAdjustmentPaymentType2Code extends DTCAdjustmentPaymentTypeV2Cod
 	 */
 	public static final MMCode mmMandatoryOverThreeYearReorganizationDeposit = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MandatoryOverThreeYearReorganizationDeposit";
 			owner_lazy = () -> DTCAdjustmentPaymentType2Code.mmObject();
 		}
@@ -619,7 +621,7 @@ public class DTCAdjustmentPaymentType2Code extends DTCAdjustmentPaymentTypeV2Cod
 	 */
 	public static final MMCode mmOriginalLateTaxWithholding = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalLateTaxWithholding";
 			owner_lazy = () -> DTCAdjustmentPaymentType2Code.mmObject();
 		}
@@ -642,7 +644,7 @@ public class DTCAdjustmentPaymentType2Code extends DTCAdjustmentPaymentTypeV2Cod
 	 */
 	public static final MMCode mmOther = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
 			owner_lazy = () -> DTCAdjustmentPaymentType2Code.mmObject();
 		}
@@ -665,7 +667,7 @@ public class DTCAdjustmentPaymentType2Code extends DTCAdjustmentPaymentTypeV2Cod
 	 */
 	public static final MMCode mmRateChangeTaxWithholding = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RateChangeTaxWithholding";
 			owner_lazy = () -> DTCAdjustmentPaymentType2Code.mmObject();
 		}
@@ -688,7 +690,7 @@ public class DTCAdjustmentPaymentType2Code extends DTCAdjustmentPaymentTypeV2Cod
 	 */
 	public static final MMCode mmReclassificationTaxWithholding = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReclassificationTaxWithholding";
 			owner_lazy = () -> DTCAdjustmentPaymentType2Code.mmObject();
 		}
@@ -711,7 +713,7 @@ public class DTCAdjustmentPaymentType2Code extends DTCAdjustmentPaymentTypeV2Cod
 	 */
 	public static final MMCode mmReorganisationDepositPhaseOne = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReorganisationDepositPhaseOne";
 			owner_lazy = () -> DTCAdjustmentPaymentType2Code.mmObject();
 		}
@@ -734,7 +736,7 @@ public class DTCAdjustmentPaymentType2Code extends DTCAdjustmentPaymentTypeV2Cod
 	 */
 	public static final MMCode mmReorgDepositPhaseTwo = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReorgDepositPhaseTwo";
 			owner_lazy = () -> DTCAdjustmentPaymentType2Code.mmObject();
 		}
@@ -757,7 +759,7 @@ public class DTCAdjustmentPaymentType2Code extends DTCAdjustmentPaymentTypeV2Cod
 	 */
 	public static final MMCode mmRepoSettlement = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RepoSettlement";
 			owner_lazy = () -> DTCAdjustmentPaymentType2Code.mmObject();
 		}
@@ -780,7 +782,7 @@ public class DTCAdjustmentPaymentType2Code extends DTCAdjustmentPaymentTypeV2Cod
 	 */
 	public static final MMCode mmReversal = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reversal";
 			owner_lazy = () -> DTCAdjustmentPaymentType2Code.mmObject();
 		}
@@ -803,7 +805,7 @@ public class DTCAdjustmentPaymentType2Code extends DTCAdjustmentPaymentTypeV2Cod
 	 */
 	public static final MMCode mmReversalOfTaxWithholding = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReversalOfTaxWithholding";
 			owner_lazy = () -> DTCAdjustmentPaymentType2Code.mmObject();
 		}
@@ -826,7 +828,7 @@ public class DTCAdjustmentPaymentType2Code extends DTCAdjustmentPaymentTypeV2Cod
 	 */
 	public static final MMCode mmRightsProtect = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RightsProtect";
 			owner_lazy = () -> DTCAdjustmentPaymentType2Code.mmObject();
 		}
@@ -849,7 +851,7 @@ public class DTCAdjustmentPaymentType2Code extends DTCAdjustmentPaymentTypeV2Cod
 	 */
 	public static final MMCode mmRightsSales = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RightsSales";
 			owner_lazy = () -> DTCAdjustmentPaymentType2Code.mmObject();
 		}
@@ -872,7 +874,7 @@ public class DTCAdjustmentPaymentType2Code extends DTCAdjustmentPaymentTypeV2Cod
 	 */
 	public static final MMCode mmRightsStepUp = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RightsStepUp";
 			owner_lazy = () -> DTCAdjustmentPaymentType2Code.mmObject();
 		}
@@ -895,7 +897,7 @@ public class DTCAdjustmentPaymentType2Code extends DTCAdjustmentPaymentTypeV2Cod
 	 */
 	public static final MMCode mmRightsSubscription = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RightsSubscription";
 			owner_lazy = () -> DTCAdjustmentPaymentType2Code.mmObject();
 		}
@@ -918,7 +920,7 @@ public class DTCAdjustmentPaymentType2Code extends DTCAdjustmentPaymentTypeV2Cod
 	 */
 	public static final MMCode mmStockLoanSettlement = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StockLoanSettlement";
 			owner_lazy = () -> DTCAdjustmentPaymentType2Code.mmObject();
 		}
@@ -941,7 +943,7 @@ public class DTCAdjustmentPaymentType2Code extends DTCAdjustmentPaymentTypeV2Cod
 	 */
 	public static final MMCode mmTaxInstructionChange = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxInstructionChange";
 			owner_lazy = () -> DTCAdjustmentPaymentType2Code.mmObject();
 		}
@@ -964,7 +966,7 @@ public class DTCAdjustmentPaymentType2Code extends DTCAdjustmentPaymentTypeV2Cod
 	 */
 	public static final MMCode mmTenderOfferFraction = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TenderOfferFraction";
 			owner_lazy = () -> DTCAdjustmentPaymentType2Code.mmObject();
 		}
@@ -987,7 +989,7 @@ public class DTCAdjustmentPaymentType2Code extends DTCAdjustmentPaymentTypeV2Cod
 	 */
 	public static final MMCode mmWarrantParticipantDelete = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WarrantParticipantDelete";
 			owner_lazy = () -> DTCAdjustmentPaymentType2Code.mmObject();
 		}
@@ -1010,7 +1012,7 @@ public class DTCAdjustmentPaymentType2Code extends DTCAdjustmentPaymentTypeV2Cod
 	 */
 	public static final MMCode mmWarrantRateChange = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WarrantRateChange";
 			owner_lazy = () -> DTCAdjustmentPaymentType2Code.mmObject();
 		}
@@ -1019,29 +1021,21 @@ public class DTCAdjustmentPaymentType2Code extends DTCAdjustmentPaymentTypeV2Cod
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DTCAdjustmentPaymentType2Code";
 				definition = "Specifies the type of the payment adjustment.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DTCAdjustmentPaymentType2Code.mmAdjustedForRightsSubscription, com.tools20022.repository.codeset.DTCAdjustmentPaymentType2Code.mmADRIssueFeeCharge,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentType2Code.mmADRIssueFeeReversal, com.tools20022.repository.codeset.DTCAdjustmentPaymentType2Code.mmCashInLieu,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentType2Code.mmClaimSettlement, com.tools20022.repository.codeset.DTCAdjustmentPaymentType2Code.mmCustodyDividendPayment,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentType2Code.mmCustodyReorganizationDeposit, com.tools20022.repository.codeset.DTCAdjustmentPaymentType2Code.mmDynamicRateChange,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentType2Code.mmFailSettlement, com.tools20022.repository.codeset.DTCAdjustmentPaymentType2Code.mmFailTrackingTaxWithholding,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentType2Code.mmIntraDayReversalOfOriginalTaxWithholding, com.tools20022.repository.codeset.DTCAdjustmentPaymentType2Code.mmLastDayProtect,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentType2Code.mmLegalReorganizationDeposits, com.tools20022.repository.codeset.DTCAdjustmentPaymentType2Code.mmMandatoryLegalReorgDeposit,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentType2Code.mmMandatoryReorganizationDeposit, com.tools20022.repository.codeset.DTCAdjustmentPaymentType2Code.mmManualUserTax,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentType2Code.mmMiscellaneousSettlement, com.tools20022.repository.codeset.DTCAdjustmentPaymentType2Code.mmOriginalInitialTaxWithholding,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentType2Code.mmMandatoryOverThreeYearReorganizationDeposit, com.tools20022.repository.codeset.DTCAdjustmentPaymentType2Code.mmOriginalLateTaxWithholding,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentType2Code.mmOther, com.tools20022.repository.codeset.DTCAdjustmentPaymentType2Code.mmRateChangeTaxWithholding,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentType2Code.mmReclassificationTaxWithholding, com.tools20022.repository.codeset.DTCAdjustmentPaymentType2Code.mmReorganisationDepositPhaseOne,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentType2Code.mmReorgDepositPhaseTwo, com.tools20022.repository.codeset.DTCAdjustmentPaymentType2Code.mmRepoSettlement,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentType2Code.mmReversal, com.tools20022.repository.codeset.DTCAdjustmentPaymentType2Code.mmReversalOfTaxWithholding,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentType2Code.mmRightsProtect, com.tools20022.repository.codeset.DTCAdjustmentPaymentType2Code.mmRightsSales,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentType2Code.mmRightsStepUp, com.tools20022.repository.codeset.DTCAdjustmentPaymentType2Code.mmRightsSubscription,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentType2Code.mmStockLoanSettlement, com.tools20022.repository.codeset.DTCAdjustmentPaymentType2Code.mmTaxInstructionChange,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentType2Code.mmTenderOfferFraction, com.tools20022.repository.codeset.DTCAdjustmentPaymentType2Code.mmWarrantParticipantDelete,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentType2Code.mmWarrantRateChange);
+				code_lazy = () -> Arrays.asList(DTCAdjustmentPaymentType2Code.mmAdjustedForRightsSubscription, DTCAdjustmentPaymentType2Code.mmADRIssueFeeCharge, DTCAdjustmentPaymentType2Code.mmADRIssueFeeReversal,
+						DTCAdjustmentPaymentType2Code.mmCashInLieu, DTCAdjustmentPaymentType2Code.mmClaimSettlement, DTCAdjustmentPaymentType2Code.mmCustodyDividendPayment, DTCAdjustmentPaymentType2Code.mmCustodyReorganizationDeposit,
+						DTCAdjustmentPaymentType2Code.mmDynamicRateChange, DTCAdjustmentPaymentType2Code.mmFailSettlement, DTCAdjustmentPaymentType2Code.mmFailTrackingTaxWithholding,
+						DTCAdjustmentPaymentType2Code.mmIntraDayReversalOfOriginalTaxWithholding, DTCAdjustmentPaymentType2Code.mmLastDayProtect, DTCAdjustmentPaymentType2Code.mmLegalReorganizationDeposits,
+						DTCAdjustmentPaymentType2Code.mmMandatoryLegalReorgDeposit, DTCAdjustmentPaymentType2Code.mmMandatoryReorganizationDeposit, DTCAdjustmentPaymentType2Code.mmManualUserTax,
+						DTCAdjustmentPaymentType2Code.mmMiscellaneousSettlement, DTCAdjustmentPaymentType2Code.mmOriginalInitialTaxWithholding, DTCAdjustmentPaymentType2Code.mmMandatoryOverThreeYearReorganizationDeposit,
+						DTCAdjustmentPaymentType2Code.mmOriginalLateTaxWithholding, DTCAdjustmentPaymentType2Code.mmOther, DTCAdjustmentPaymentType2Code.mmRateChangeTaxWithholding,
+						DTCAdjustmentPaymentType2Code.mmReclassificationTaxWithholding, DTCAdjustmentPaymentType2Code.mmReorganisationDepositPhaseOne, DTCAdjustmentPaymentType2Code.mmReorgDepositPhaseTwo,
+						DTCAdjustmentPaymentType2Code.mmRepoSettlement, DTCAdjustmentPaymentType2Code.mmReversal, DTCAdjustmentPaymentType2Code.mmReversalOfTaxWithholding, DTCAdjustmentPaymentType2Code.mmRightsProtect,
+						DTCAdjustmentPaymentType2Code.mmRightsSales, DTCAdjustmentPaymentType2Code.mmRightsStepUp, DTCAdjustmentPaymentType2Code.mmRightsSubscription, DTCAdjustmentPaymentType2Code.mmStockLoanSettlement,
+						DTCAdjustmentPaymentType2Code.mmTaxInstructionChange, DTCAdjustmentPaymentType2Code.mmTenderOfferFraction, DTCAdjustmentPaymentType2Code.mmWarrantParticipantDelete, DTCAdjustmentPaymentType2Code.mmWarrantRateChange);
 				trace_lazy = () -> DTCAdjustmentPaymentTypeV2Code.mmObject();
 			}
 		});

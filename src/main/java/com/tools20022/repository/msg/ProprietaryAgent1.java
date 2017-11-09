@@ -20,8 +20,10 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.OrganisationIdentification;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -95,7 +97,7 @@ public class ProprietaryAgent1 {
 			componentContext_lazy = () -> ProprietaryAgent1.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Identifies the type of proprietary agent reported.";
 			maxOccurs = 1;
@@ -142,7 +144,7 @@ public class ProprietaryAgent1 {
 			componentContext_lazy = () -> ProprietaryAgent1.mmObject();
 			isDerived = false;
 			xmlTag = "Agt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Agent";
 			definition = "Proprietary agent.";
 			maxOccurs = 1;
@@ -155,10 +157,10 @@ public class ProprietaryAgent1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ProprietaryAgent1.mmType, com.tools20022.repository.msg.ProprietaryAgent1.mmAgent);
+				messageElement_lazy = () -> Arrays.asList(ProprietaryAgent1.mmType, ProprietaryAgent1.mmAgent);
 				trace_lazy = () -> OrganisationIdentification.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ProprietaryAgent1";
 				definition = "Set of elements to identify a proprietary party.";
 			}

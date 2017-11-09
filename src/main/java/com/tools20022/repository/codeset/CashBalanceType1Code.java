@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.BalanceTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -83,7 +85,7 @@ public class CashBalanceType1Code extends BalanceTypeCode {
 	 */
 	public static final MMCode mmAvailable = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Available";
 			owner_lazy = () -> CashBalanceType1Code.mmObject();
 		}
@@ -106,7 +108,7 @@ public class CashBalanceType1Code extends BalanceTypeCode {
 	 */
 	public static final MMCode mmRestricted = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Restricted";
 			owner_lazy = () -> CashBalanceType1Code.mmObject();
 		}
@@ -115,12 +117,12 @@ public class CashBalanceType1Code extends BalanceTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("AVLB");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CashBalanceType1Code";
 				definition = "Specifies the type of cash balance.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CashBalanceType1Code.mmAvailable, com.tools20022.repository.codeset.CashBalanceType1Code.mmRestricted);
+				code_lazy = () -> Arrays.asList(CashBalanceType1Code.mmAvailable, CashBalanceType1Code.mmRestricted);
 				trace_lazy = () -> BalanceTypeCode.mmObject();
 			}
 		});

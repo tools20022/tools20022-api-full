@@ -20,8 +20,11 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.entity.GenericIdentification;
 import com.tools20022.repository.entity.MeetingStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -115,11 +118,11 @@ public class MeetingInstructionDetailedStatus {
 	 */
 	public static final MMMessageAttribute mmAccountIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmIdentification;
+			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> MeetingInstructionDetailedStatus.mmObject();
 			isDerived = false;
 			xmlTag = "AcctId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountIdentification";
 			definition = "Unique and unambiguous identification for the account between the account owner and the account servicer.";
 			maxOccurs = 1;
@@ -166,7 +169,7 @@ public class MeetingInstructionDetailedStatus {
 			componentContext_lazy = () -> MeetingInstructionDetailedStatus.mmObject();
 			isDerived = false;
 			xmlTag = "PrtcptnRegnConf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ParticipationRegistrationConfirmation";
 			definition = "Status relative to vote participation instruction(s).";
 			minOccurs = 0;
@@ -213,7 +216,7 @@ public class MeetingInstructionDetailedStatus {
 			componentContext_lazy = () -> MeetingInstructionDetailedStatus.mmObject();
 			isDerived = false;
 			xmlTag = "VtngInstrConf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VotingInstructionConfirmation";
 			definition = "Status relative to vote instruction(s).";
 			minOccurs = 0;
@@ -260,7 +263,7 @@ public class MeetingInstructionDetailedStatus {
 			componentContext_lazy = () -> MeetingInstructionDetailedStatus.mmObject();
 			isDerived = false;
 			xmlTag = "PrxyAssgnmtConf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProxyAssignmentConfirmation";
 			definition = "Status relative to proxy assignment instruction(s).";
 			minOccurs = 0;
@@ -308,7 +311,7 @@ public class MeetingInstructionDetailedStatus {
 			componentContext_lazy = () -> MeetingInstructionDetailedStatus.mmObject();
 			isDerived = false;
 			xmlTag = "MtgAttndncConf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MeetingAttendanceConfirmation";
 			definition = "Status relative to attendance registration instruction(s).";
 			minOccurs = 0;
@@ -356,7 +359,7 @@ public class MeetingInstructionDetailedStatus {
 			componentContext_lazy = () -> MeetingInstructionDetailedStatus.mmObject();
 			isDerived = false;
 			xmlTag = "SctiesRegnConf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesRegistrationConfirmation";
 			definition = "Status relative to securities registration instruction(s).";
 			minOccurs = 0;
@@ -368,13 +371,12 @@ public class MeetingInstructionDetailedStatus {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MeetingInstructionDetailedStatus.mmAccountIdentification,
-						com.tools20022.repository.msg.MeetingInstructionDetailedStatus.mmParticipationRegistrationConfirmation, com.tools20022.repository.msg.MeetingInstructionDetailedStatus.mmVotingInstructionConfirmation,
-						com.tools20022.repository.msg.MeetingInstructionDetailedStatus.mmProxyAssignmentConfirmation, com.tools20022.repository.msg.MeetingInstructionDetailedStatus.mmMeetingAttendanceConfirmation,
-						com.tools20022.repository.msg.MeetingInstructionDetailedStatus.mmSecuritiesRegistrationConfirmation);
+				messageElement_lazy = () -> Arrays.asList(MeetingInstructionDetailedStatus.mmAccountIdentification, MeetingInstructionDetailedStatus.mmParticipationRegistrationConfirmation,
+						MeetingInstructionDetailedStatus.mmVotingInstructionConfirmation, MeetingInstructionDetailedStatus.mmProxyAssignmentConfirmation, MeetingInstructionDetailedStatus.mmMeetingAttendanceConfirmation,
+						MeetingInstructionDetailedStatus.mmSecuritiesRegistrationConfirmation);
 				trace_lazy = () -> MeetingStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "MeetingInstructionDetailedStatus";
 				definition = "Status applying to individual instructions of a MeetingInstruction.";
 			}

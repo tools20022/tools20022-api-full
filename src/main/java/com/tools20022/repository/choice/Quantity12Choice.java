@@ -19,9 +19,11 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.DecimalNumber;
 import com.tools20022.repository.datatype.PercentageRate;
 import com.tools20022.repository.entity.SecuritiesQuantity;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -107,11 +109,11 @@ public class Quantity12Choice {
 	 */
 	public static final MMMessageAttribute mmUnit = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmUnit;
+			businessElementTrace_lazy = () -> SecuritiesQuantity.mmUnit;
 			componentContext_lazy = () -> Quantity12Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Unit";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unit";
 			definition = "Quantity of assets to be transferred.";
 			maxOccurs = 1;
@@ -153,7 +155,7 @@ public class Quantity12Choice {
 			componentContext_lazy = () -> Quantity12Choice.mmObject();
 			isDerived = false;
 			xmlTag = "PctgRate";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PercentageRate";
 			definition = "Percentage rate of assets to be transferred.";
 			maxOccurs = 1;
@@ -165,10 +167,10 @@ public class Quantity12Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Quantity12Choice.mmUnit, com.tools20022.repository.choice.Quantity12Choice.mmPercentageRate);
+				messageElement_lazy = () -> Arrays.asList(Quantity12Choice.mmUnit, Quantity12Choice.mmPercentageRate);
 				trace_lazy = () -> SecuritiesQuantity.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Quantity12Choice";
 				definition = "Choice of quantity of assets to be transferred in percentage rate or units.";
 				nextVersions_lazy = () -> Arrays.asList(Quantity14Choice.mmObject());

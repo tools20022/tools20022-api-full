@@ -19,8 +19,10 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max140Text;
 import com.tools20022.repository.datatype.Max30Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -96,7 +98,7 @@ public class DuplicateIndication {
 			componentContext_lazy = () -> DuplicateIndication.mmObject();
 			isDerived = false;
 			xmlTag = "Ref";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reference";
 			definition = "Reference of the original message, in case this is a duplicate.";
 			maxOccurs = 1;
@@ -137,7 +139,7 @@ public class DuplicateIndication {
 			componentContext_lazy = () -> DuplicateIndication.mmObject();
 			isDerived = false;
 			xmlTag = "Info";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Justification";
 			definition = "Information about the duplicate.";
 			maxOccurs = 1;
@@ -149,9 +151,9 @@ public class DuplicateIndication {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DuplicateIndication.mmReference, com.tools20022.repository.msg.DuplicateIndication.mmJustification);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(DuplicateIndication.mmReference, DuplicateIndication.mmJustification);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "DuplicateIndication";
 				definition = "Reference to another message indicating that the containing message is a\tduplicate of the referenced message.";
 			}

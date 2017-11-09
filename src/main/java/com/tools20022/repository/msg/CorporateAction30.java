@@ -19,9 +19,12 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.CorporateActionEventStageFormat12Choice;
 import com.tools20022.repository.choice.LotteryTypeFormat3Choice;
 import com.tools20022.repository.entity.CorporateActionEvent;
+import com.tools20022.repository.entity.Lottery;
+import com.tools20022.repository.GeneratedRepository;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -109,7 +112,7 @@ public class CorporateAction30 {
 			componentContext_lazy = () -> CorporateAction30.mmObject();
 			isDerived = false;
 			xmlTag = "DtDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DateDetails";
 			definition = "Provides information about the dates related to a corporate action event.";
 			maxOccurs = 1;
@@ -153,11 +156,11 @@ public class CorporateAction30 {
 	 */
 	public static final MMMessageAssociationEnd mmEventStage = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmEventStage;
+			businessElementTrace_lazy = () -> CorporateActionEvent.mmEventStage;
 			componentContext_lazy = () -> CorporateAction30.mmObject();
 			isDerived = false;
 			xmlTag = "EvtStag";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventStage";
 			definition = "Stage in the corporate action event life cycle.";
 			maxOccurs = 1;
@@ -201,11 +204,11 @@ public class CorporateAction30 {
 	 */
 	public static final MMMessageAssociationEnd mmLotteryType = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Lottery.mmLotteryType;
+			businessElementTrace_lazy = () -> Lottery.mmLotteryType;
 			componentContext_lazy = () -> CorporateAction30.mmObject();
 			isDerived = false;
 			xmlTag = "LtryTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LotteryType";
 			definition = "Specifies the type of lottery announced.";
 			maxOccurs = 1;
@@ -218,11 +221,10 @@ public class CorporateAction30 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateAction30.mmDateDetails, com.tools20022.repository.msg.CorporateAction30.mmEventStage,
-						com.tools20022.repository.msg.CorporateAction30.mmLotteryType);
+				messageElement_lazy = () -> Arrays.asList(CorporateAction30.mmDateDetails, CorporateAction30.mmEventStage, CorporateAction30.mmLotteryType);
 				trace_lazy = () -> CorporateActionEvent.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
 						return DateFormat.getDateInstance(java.text.DateFormat.LONG).parse("September 9, 2016");

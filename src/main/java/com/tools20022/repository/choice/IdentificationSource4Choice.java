@@ -19,9 +19,13 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ExternalFinancialInstrumentIdentificationType1Code;
 import com.tools20022.repository.datatype.RestrictedFINExact2Text;
 import com.tools20022.repository.entity.IdentificationIssuerRole;
+import com.tools20022.repository.entity.PartyName;
+import com.tools20022.repository.entity.Scheme;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -104,11 +108,11 @@ public class IdentificationSource4Choice {
 	 */
 	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Scheme.mmCode;
+			businessElementTrace_lazy = () -> Scheme.mmCode;
 			componentContext_lazy = () -> IdentificationSource4Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Cd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Unique and unambiguous identification source, as assigned via a pre-determined code list.";
 			maxOccurs = 1;
@@ -155,11 +159,11 @@ public class IdentificationSource4Choice {
 	 */
 	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyName.mmName;
+			businessElementTrace_lazy = () -> PartyName.mmName;
 			componentContext_lazy = () -> IdentificationSource4Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Unique and unambiguous identification source using a proprietary identification scheme.";
 			maxOccurs = 1;
@@ -171,10 +175,10 @@ public class IdentificationSource4Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.IdentificationSource4Choice.mmCode, com.tools20022.repository.choice.IdentificationSource4Choice.mmProprietary);
+				messageElement_lazy = () -> Arrays.asList(IdentificationSource4Choice.mmCode, IdentificationSource4Choice.mmProprietary);
 				trace_lazy = () -> IdentificationIssuerRole.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "IdentificationSource4Choice";
 				definition = "Choice between source of identification of a financial instrument.";
 			}

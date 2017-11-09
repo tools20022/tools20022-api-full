@@ -19,8 +19,10 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.entity.ShipmentDateRange;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -113,14 +115,14 @@ public class ShipmentDateRange1 {
 	 */
 	public static final MMMessageAttribute mmEarliestShipmentDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ShipmentDateRange.mmEarliestShipmentDate;
+			businessElementTrace_lazy = () -> ShipmentDateRange.mmEarliestShipmentDate;
 			componentContext_lazy = () -> ShipmentDateRange1.mmObject();
 			isDerived = false;
 			xmlTag = "EarlstShipmntDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EarliestShipmentDate";
 			definition = "Earliest date whereby the goods must be shipped.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentDateRange1.mmExpectedDate);
+			nextVersions_lazy = () -> Arrays.asList(PaymentDateRange1.mmExpectedDate);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
@@ -169,14 +171,14 @@ public class ShipmentDateRange1 {
 	 */
 	public static final MMMessageAttribute mmLatestShipmentDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ShipmentDateRange.mmLatestShipmentDate;
+			businessElementTrace_lazy = () -> ShipmentDateRange.mmLatestShipmentDate;
 			componentContext_lazy = () -> ShipmentDateRange1.mmObject();
 			isDerived = false;
 			xmlTag = "LatstShipmntDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LatestShipmentDate";
 			definition = "Latest date whereby the goods must be shipped.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentDateRange1.mmDueDate);
+			nextVersions_lazy = () -> Arrays.asList(PaymentDateRange1.mmDueDate);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
@@ -186,10 +188,10 @@ public class ShipmentDateRange1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ShipmentDateRange1.mmEarliestShipmentDate, com.tools20022.repository.msg.ShipmentDateRange1.mmLatestShipmentDate);
+				messageElement_lazy = () -> Arrays.asList(ShipmentDateRange1.mmEarliestShipmentDate, ShipmentDateRange1.mmLatestShipmentDate);
 				trace_lazy = () -> ShipmentDateRange.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ShipmentDateRange1";
 				definition = "Specifies an earliest shipment date and a latest shipment date.";
 				nextVersions_lazy = () -> Arrays.asList(PaymentDateRange1.mmObject());

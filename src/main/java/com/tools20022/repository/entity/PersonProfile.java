@@ -17,13 +17,15 @@
 
 package com.tools20022.repository.entity;
 
-import com.tools20022.metamodel.MMBusinessAssociationEnd;
-import com.tools20022.metamodel.MMBusinessAttribute;
-import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.*;
+import com.tools20022.repository.choice.KYCCheckType1Choice;
+import com.tools20022.repository.choice.PoliticalExposureType1Choice;
 import com.tools20022.repository.codeset.*;
 import com.tools20022.repository.datatype.Max140Text;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.YesNoIndicator;
+import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -37,6 +39,16 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.Person#mmPersonProfile
+ * Person.mmPersonProfile}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.PrivateCertificate#mmPerson
+ * PrivateCertificate.mmPerson}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -70,16 +82,6 @@ import java.util.List;
  * PersonProfile.mmSourceOfWealth}</li>
  * <li>{@linkplain com.tools20022.repository.entity.PersonProfile#mmSalaryRange
  * PersonProfile.mmSalaryRange}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Person#mmPersonProfile
- * Person.mmPersonProfile}</li>
- * <li>{@linkplain com.tools20022.repository.entity.PrivateCertificate#mmPerson
- * PrivateCertificate.mmPerson}</li>
  * </ul>
  * </li>
  * <li>
@@ -133,7 +135,7 @@ public class PersonProfile {
 		{
 			elementContext_lazy = () -> PersonProfile.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForeignStatusCertification";
 			definition = "Specifies if documentary evidence has been provided for the foreign resident.";
 			maxOccurs = 1;
@@ -179,10 +181,10 @@ public class PersonProfile {
 	 */
 	public static final MMBusinessAttribute mmEmployeeTerminationIndicator = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Garnishment1.mmEmployeeTerminationIndicator);
+			derivation_lazy = () -> Arrays.asList(Garnishment1.mmEmployeeTerminationIndicator);
 			elementContext_lazy = () -> PersonProfile.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "EmployeeTerminationIndicator";
 			definition = "Indicates if the employment of the person has been terminated.";
 			maxOccurs = 1;
@@ -243,12 +245,11 @@ public class PersonProfile {
 	 */
 	public static final MMBusinessAttribute mmKnowYourCustomerCheckType = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyProfileInformation3.mmKnowYourCustomerCheckType, com.tools20022.repository.choice.KYCCheckType1Choice.mmCode,
-					com.tools20022.repository.choice.KYCCheckType1Choice.mmProprietary, com.tools20022.repository.msg.PartyProfileInformation4.mmKnowYourCustomerCheckType,
-					com.tools20022.repository.msg.PartyProfileInformation5.mmKnowYourCustomerCheckType);
+			derivation_lazy = () -> Arrays.asList(PartyProfileInformation3.mmKnowYourCustomerCheckType, KYCCheckType1Choice.mmCode, KYCCheckType1Choice.mmProprietary, PartyProfileInformation4.mmKnowYourCustomerCheckType,
+					PartyProfileInformation5.mmKnowYourCustomerCheckType);
 			elementContext_lazy = () -> PersonProfile.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "KnowYourCustomerCheckType";
 			definition = "Specifies the type of due diligence checks carried out on a party. For definitions of ordinary, simple and enhanced know your customer checks, local market regulations should be consulted.";
 			maxOccurs = 1;
@@ -287,7 +288,7 @@ public class PersonProfile {
 		{
 			elementContext_lazy = () -> PersonProfile.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RiskLevel";
 			definition = "Specifies the customer’s money laundering risk.";
 			maxOccurs = 1;
@@ -332,13 +333,13 @@ public class PersonProfile {
 		{
 			elementContext_lazy = () -> PersonProfile.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Person";
 			definition = "Person for which the profile parameters are described.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.Person.mmPersonProfile;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Person.mmObject();
 		}
 	};
@@ -412,14 +413,12 @@ public class PersonProfile {
 	 */
 	public static final MMBusinessAttribute mmPoliticalExposureType = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IndividualPerson21.mmPoliticallyExposedPersonType, com.tools20022.repository.choice.PoliticalExposureType1Choice.mmCode,
-					com.tools20022.repository.choice.PoliticalExposureType1Choice.mmProprietary, com.tools20022.repository.msg.IndividualPerson22.mmPoliticallyExposedPersonType,
-					com.tools20022.repository.msg.IndividualPerson23.mmPoliticallyExposedPersonType, com.tools20022.repository.msg.IndividualPerson24.mmPoliticallyExposedPersonType,
-					com.tools20022.repository.msg.IndividualPerson28.mmPoliticallyExposedPersonType, com.tools20022.repository.msg.IndividualPerson27.mmPoliticallyExposedPersonType,
-					com.tools20022.repository.msg.IndividualPerson33.mmPoliticallyExposedPersonType, com.tools20022.repository.msg.IndividualPerson34.mmPoliticallyExposedPersonType);
+			derivation_lazy = () -> Arrays.asList(IndividualPerson21.mmPoliticallyExposedPersonType, PoliticalExposureType1Choice.mmCode, PoliticalExposureType1Choice.mmProprietary, IndividualPerson22.mmPoliticallyExposedPersonType,
+					IndividualPerson23.mmPoliticallyExposedPersonType, IndividualPerson24.mmPoliticallyExposedPersonType, IndividualPerson28.mmPoliticallyExposedPersonType, IndividualPerson27.mmPoliticallyExposedPersonType,
+					IndividualPerson33.mmPoliticallyExposedPersonType, IndividualPerson34.mmPoliticallyExposedPersonType);
 			elementContext_lazy = () -> PersonProfile.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PoliticalExposureType";
 			definition = "Specifies if due diligence checks on the political exposure of the investor have been carried out and whether these checks are national or foreign. (A politically exposed person is someone who has been entrusted with a prominent public function, or an individual who is closely related to such a person.)";
 			maxOccurs = 1;
@@ -461,7 +460,7 @@ public class PersonProfile {
 		{
 			elementContext_lazy = () -> PersonProfile.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CustomerConductClassification";
 			definition = "Assessment of the customer’s behaviour at the time of the account opening application.";
 			maxOccurs = 1;
@@ -508,10 +507,10 @@ public class PersonProfile {
 	 */
 	public static final MMBusinessAttribute mmFamilyMedicalInsuranceIndicator = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Garnishment1.mmFamilyMedicalInsuranceIndicator);
+			derivation_lazy = () -> Arrays.asList(Garnishment1.mmFamilyMedicalInsuranceIndicator);
 			elementContext_lazy = () -> PersonProfile.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "FamilyMedicalInsuranceIndicator";
 			definition = "Indicates if the person has family medical insurance coverage available. ";
 			maxOccurs = 1;
@@ -595,20 +594,19 @@ public class PersonProfile {
 	 */
 	public static final MMBusinessAssociationEnd mmProfileCertification = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentAccountOwnershipInformation6.mmInvestorProfileValidation,
-					com.tools20022.repository.msg.InvestmentAccountOwnershipInformation7.mmModifiedInvestorProfileValidation, com.tools20022.repository.msg.InvestmentAccountOwnershipInformation8.mmModifiedInvestorProfileValidation,
-					com.tools20022.repository.msg.InvestmentAccountOwnershipInformation9.mmInvestorProfileValidation, com.tools20022.repository.msg.InvestmentAccountOwnershipInformation10.mmInvestorProfileValidation,
-					com.tools20022.repository.msg.InvestmentAccountOwnershipInformation11.mmModifiedInvestorProfileValidation, com.tools20022.repository.msg.InvestmentAccountOwnershipInformation12.mmInvestorProfileValidation,
-					com.tools20022.repository.msg.InvestmentAccountOwnershipInformation13.mmModifiedInvestorProfileValidation, com.tools20022.repository.msg.InvestmentAccountOwnershipInformation15.mmModifiedInvestorProfileValidation,
-					com.tools20022.repository.msg.InvestmentAccountOwnershipInformation14.mmInvestorProfileValidation);
+			derivation_lazy = () -> Arrays.asList(InvestmentAccountOwnershipInformation6.mmInvestorProfileValidation, InvestmentAccountOwnershipInformation7.mmModifiedInvestorProfileValidation,
+					InvestmentAccountOwnershipInformation8.mmModifiedInvestorProfileValidation, InvestmentAccountOwnershipInformation9.mmInvestorProfileValidation, InvestmentAccountOwnershipInformation10.mmInvestorProfileValidation,
+					InvestmentAccountOwnershipInformation11.mmModifiedInvestorProfileValidation, InvestmentAccountOwnershipInformation12.mmInvestorProfileValidation,
+					InvestmentAccountOwnershipInformation13.mmModifiedInvestorProfileValidation, InvestmentAccountOwnershipInformation15.mmModifiedInvestorProfileValidation,
+					InvestmentAccountOwnershipInformation14.mmInvestorProfileValidation);
 			elementContext_lazy = () -> PersonProfile.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ProfileCertification";
 			definition = "Information to support the Know Your Customer processes.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.PrivateCertificate.mmPerson;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.PrivateCertificate.mmObject();
 		}
 	};
@@ -660,11 +658,11 @@ public class PersonProfile {
 	 */
 	public static final MMBusinessAttribute mmSourceOfWealth = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyProfileInformation1.mmSourceOfWealth, com.tools20022.repository.msg.PartyProfileInformation2.mmSourceOfWealth,
-					com.tools20022.repository.msg.PartyProfileInformation3.mmSourceOfWealth, com.tools20022.repository.msg.PartyProfileInformation4.mmSourceOfWealth, com.tools20022.repository.msg.PartyProfileInformation5.mmSourceOfWealth);
+			derivation_lazy = () -> Arrays.asList(PartyProfileInformation1.mmSourceOfWealth, PartyProfileInformation2.mmSourceOfWealth, PartyProfileInformation3.mmSourceOfWealth, PartyProfileInformation4.mmSourceOfWealth,
+					PartyProfileInformation5.mmSourceOfWealth);
 			elementContext_lazy = () -> PersonProfile.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SourceOfWealth";
 			definition = "Indicates the main sources of the money.";
 			maxOccurs = 1;
@@ -720,11 +718,11 @@ public class PersonProfile {
 	 */
 	public static final MMBusinessAttribute mmSalaryRange = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyProfileInformation1.mmSalaryRange, com.tools20022.repository.msg.PartyProfileInformation2.mmSalaryRange,
-					com.tools20022.repository.msg.PartyProfileInformation3.mmSalaryRange, com.tools20022.repository.msg.PartyProfileInformation4.mmSalaryRange, com.tools20022.repository.msg.PartyProfileInformation5.mmSalaryRange);
+			derivation_lazy = () -> Arrays.asList(PartyProfileInformation1.mmSalaryRange, PartyProfileInformation2.mmSalaryRange, PartyProfileInformation3.mmSalaryRange, PartyProfileInformation4.mmSalaryRange,
+					PartyProfileInformation5.mmSalaryRange);
 			elementContext_lazy = () -> PersonProfile.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SalaryRange";
 			definition = "Specifies the level of salary.";
 			maxOccurs = 1;
@@ -736,16 +734,14 @@ public class PersonProfile {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PersonProfile";
 				definition = "Information to support Know Your Customer (KYC) processes.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Person.mmPersonProfile, com.tools20022.repository.entity.PrivateCertificate.mmPerson);
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.PersonProfile.mmForeignStatusCertification, com.tools20022.repository.entity.PersonProfile.mmEmployeeTerminationIndicator,
-						com.tools20022.repository.entity.PersonProfile.mmKnowYourCustomerCheckType, com.tools20022.repository.entity.PersonProfile.mmRiskLevel, com.tools20022.repository.entity.PersonProfile.mmPerson,
-						com.tools20022.repository.entity.PersonProfile.mmPoliticalExposureType, com.tools20022.repository.entity.PersonProfile.mmCustomerConductClassification,
-						com.tools20022.repository.entity.PersonProfile.mmFamilyMedicalInsuranceIndicator, com.tools20022.repository.entity.PersonProfile.mmProfileCertification,
-						com.tools20022.repository.entity.PersonProfile.mmSourceOfWealth, com.tools20022.repository.entity.PersonProfile.mmSalaryRange);
+				element_lazy = () -> Arrays.asList(PersonProfile.mmForeignStatusCertification, PersonProfile.mmEmployeeTerminationIndicator, PersonProfile.mmKnowYourCustomerCheckType, PersonProfile.mmRiskLevel, PersonProfile.mmPerson,
+						PersonProfile.mmPoliticalExposureType, PersonProfile.mmCustomerConductClassification, PersonProfile.mmFamilyMedicalInsuranceIndicator, PersonProfile.mmProfileCertification, PersonProfile.mmSourceOfWealth,
+						PersonProfile.mmSalaryRange);
 			}
 		});
 		return mmObject_lazy.get();

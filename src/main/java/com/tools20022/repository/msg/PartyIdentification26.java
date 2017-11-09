@@ -20,9 +20,13 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.tsmt.*;
 import com.tools20022.repository.datatype.Max70Text;
 import com.tools20022.repository.entity.PartyIdentificationInformation;
+import com.tools20022.repository.entity.PartyName;
 import com.tools20022.repository.entity.PostalAddress;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -139,11 +143,11 @@ public class PartyIdentification26 {
 	 */
 	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyName.mmName;
+			businessElementTrace_lazy = () -> PartyName.mmName;
 			componentContext_lazy = () -> PartyIdentification26.mmObject();
 			isDerived = false;
 			xmlTag = "Nm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Name";
 			definition = "Name by which a party is known and which is usually used to identify that party.";
 			maxOccurs = 1;
@@ -190,11 +194,11 @@ public class PartyIdentification26 {
 	 */
 	public static final MMMessageAttribute mmProprietaryIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.mmOtherIdentification;
+			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmOtherIdentification;
 			componentContext_lazy = () -> PartyIdentification26.mmObject();
 			isDerived = false;
 			xmlTag = "PrtryId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProprietaryIdentification";
 			definition = "Unique and unambiguous identifier assigned to a party using a proprietary identification scheme.";
 			maxOccurs = 1;
@@ -243,7 +247,7 @@ public class PartyIdentification26 {
 			componentContext_lazy = () -> PartyIdentification26.mmObject();
 			isDerived = false;
 			xmlTag = "PstlAdr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PostalAddress";
 			definition = "Information that locates and identifies a specific address, as defined by postal services.";
 			maxOccurs = 1;
@@ -256,15 +260,12 @@ public class PartyIdentification26 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyIdentification26.mmName, com.tools20022.repository.msg.PartyIdentification26.mmProprietaryIdentification,
-						com.tools20022.repository.msg.PartyIdentification26.mmPostalAddress);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.BaselineMatchReportV03.mmBuyer, com.tools20022.repository.area.tsmt.BaselineMatchReportV03.mmSeller,
-						com.tools20022.repository.area.tsmt.BaselineReportV03.mmBuyer, com.tools20022.repository.area.tsmt.BaselineReportV03.mmSeller, com.tools20022.repository.area.tsmt.DataSetMatchReportV03.mmBuyer,
-						com.tools20022.repository.area.tsmt.DataSetMatchReportV03.mmSeller, com.tools20022.repository.area.tsmt.DeltaReportV03.mmBuyer, com.tools20022.repository.area.tsmt.DeltaReportV03.mmSeller,
-						com.tools20022.repository.area.tsmt.BaselineReportV04.mmBuyer, com.tools20022.repository.area.tsmt.BaselineReportV04.mmSeller);
+				messageElement_lazy = () -> Arrays.asList(PartyIdentification26.mmName, PartyIdentification26.mmProprietaryIdentification, PartyIdentification26.mmPostalAddress);
+				messageBuildingBlock_lazy = () -> Arrays.asList(BaselineMatchReportV03.mmBuyer, BaselineMatchReportV03.mmSeller, BaselineReportV03.mmBuyer, BaselineReportV03.mmSeller, DataSetMatchReportV03.mmBuyer,
+						DataSetMatchReportV03.mmSeller, DeltaReportV03.mmBuyer, DeltaReportV03.mmSeller, BaselineReportV04.mmBuyer, BaselineReportV04.mmSeller);
 				trace_lazy = () -> PartyIdentificationInformation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PartyIdentification26";
 				definition = "Entity involved in an activity.";
 			}

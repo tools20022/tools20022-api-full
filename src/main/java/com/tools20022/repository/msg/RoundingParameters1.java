@@ -19,9 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.RoundingDirection1Code;
 import com.tools20022.repository.datatype.DecimalNumber;
 import com.tools20022.repository.entity.RoundingParameters;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -103,11 +105,11 @@ public class RoundingParameters1 {
 	 */
 	public static final MMMessageAttribute mmRoundingModulus = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.RoundingParameters.mmRoundingModulus;
+			businessElementTrace_lazy = () -> RoundingParameters.mmRoundingModulus;
 			componentContext_lazy = () -> RoundingParameters1.mmObject();
 			isDerived = false;
 			xmlTag = "RndgMdlus";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RoundingModulus";
 			definition = "Float value specifying the value to which rounding is required, eg, 10 means round to a multiple of 10 units/shares, 0.5 means round to a multiple of 0.5 units/shares.";
 			maxOccurs = 1;
@@ -152,11 +154,11 @@ public class RoundingParameters1 {
 	 */
 	public static final MMMessageAttribute mmRoundingDirection = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.RoundingParameters.mmRoundingDirection;
+			businessElementTrace_lazy = () -> RoundingParameters.mmRoundingDirection;
 			componentContext_lazy = () -> RoundingParameters1.mmObject();
 			isDerived = false;
 			xmlTag = "RndgDrctn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RoundingDirection";
 			definition = "Rounding direction applied to fractional numbers, eg, round up.";
 			maxOccurs = 1;
@@ -168,10 +170,10 @@ public class RoundingParameters1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RoundingParameters1.mmRoundingModulus, com.tools20022.repository.msg.RoundingParameters1.mmRoundingDirection);
+				messageElement_lazy = () -> Arrays.asList(RoundingParameters1.mmRoundingModulus, RoundingParameters1.mmRoundingDirection);
 				trace_lazy = () -> RoundingParameters.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RoundingParameters1";
 				definition = "Parameters applied to a fractional number.";
 			}

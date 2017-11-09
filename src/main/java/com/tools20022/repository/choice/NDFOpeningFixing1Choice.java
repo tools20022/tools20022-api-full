@@ -20,7 +20,9 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.OpeningConditions1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -96,7 +98,7 @@ public class NDFOpeningFixing1Choice {
 			componentContext_lazy = () -> NDFOpeningFixing1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "OpngConds";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OpeningConditions";
 			definition = "Used to provide the opening information associated with an NDF trade.";
 			maxOccurs = 1;
@@ -141,7 +143,7 @@ public class NDFOpeningFixing1Choice {
 			componentContext_lazy = () -> NDFOpeningFixing1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "OpngConfRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OpeningConfirmationReference";
 			definition = "Reference of the opening confirmation provided on an NDF fixing instruction to link back to the original NDF opening confirmation.";
 			maxOccurs = 1;
@@ -153,9 +155,9 @@ public class NDFOpeningFixing1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.NDFOpeningFixing1Choice.mmOpeningConditions, com.tools20022.repository.choice.NDFOpeningFixing1Choice.mmOpeningConfirmationReference);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(NDFOpeningFixing1Choice.mmOpeningConditions, NDFOpeningFixing1Choice.mmOpeningConfirmationReference);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "NDFOpeningFixing1Choice";
 				definition = "Choice of providing the opening conditions or fixing conditions for an NDF instruction.";
 			}

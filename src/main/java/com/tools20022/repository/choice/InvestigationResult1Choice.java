@@ -19,7 +19,9 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.InvestigationStatus1Code;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.other.SupplementaryDataEnvelope1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -93,7 +95,7 @@ public class InvestigationResult1Choice {
 			componentContext_lazy = () -> InvestigationResult1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Rslt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Result";
 			definition = "Provides the result.";
 			maxOccurs = 1;
@@ -135,7 +137,7 @@ public class InvestigationResult1Choice {
 			componentContext_lazy = () -> InvestigationResult1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "InvstgtnSts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestigationStatus";
 			definition = "Provides the investigation status.";
 			maxOccurs = 1;
@@ -147,9 +149,9 @@ public class InvestigationResult1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.InvestigationResult1Choice.mmResult, com.tools20022.repository.choice.InvestigationResult1Choice.mmInvestigationStatus);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(InvestigationResult1Choice.mmResult, InvestigationResult1Choice.mmInvestigationStatus);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InvestigationResult1Choice";
 				definition = "Provides the investigation results.";
 			}

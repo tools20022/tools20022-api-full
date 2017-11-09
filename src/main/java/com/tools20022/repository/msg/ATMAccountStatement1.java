@@ -20,9 +20,12 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.AccountIdentification31Choice;
 import com.tools20022.repository.datatype.Max70Text;
 import com.tools20022.repository.entity.Account;
+import com.tools20022.repository.entity.AccountIdentification;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -110,11 +113,11 @@ public class ATMAccountStatement1 {
 	 */
 	public static final MMMessageAssociationEnd mmAccountIdentifier = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.mmIdentification;
+			businessElementTrace_lazy = () -> Account.mmIdentification;
 			componentContext_lazy = () -> ATMAccountStatement1.mmObject();
 			isDerived = false;
 			xmlTag = "AcctIdr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountIdentifier";
 			definition = "Unique identifier of the account, as assigned by the account servicer.";
 			maxOccurs = 1;
@@ -166,11 +169,11 @@ public class ATMAccountStatement1 {
 	 */
 	public static final MMMessageAttribute mmAccountName = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AccountIdentification.mmName;
+			businessElementTrace_lazy = () -> AccountIdentification.mmName;
 			componentContext_lazy = () -> ATMAccountStatement1.mmObject();
 			isDerived = false;
 			xmlTag = "AcctNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountName";
 			definition = "Name of the account, as assigned by the account servicing institution, in agreement with the account owner in order to provide an additional means of identification of the account.\r\nUsage: The account name is different from the account owner name. The account name is used in certain user communities to provide a means of identifying the account, in addition to the account owner's identity and the account number.";
 			maxOccurs = 1;
@@ -212,11 +215,11 @@ public class ATMAccountStatement1 {
 	 */
 	public static final MMMessageAssociationEnd mmAccountStatement = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.mmEntry;
+			businessElementTrace_lazy = () -> Account.mmEntry;
 			componentContext_lazy = () -> ATMAccountStatement1.mmObject();
 			isDerived = false;
 			xmlTag = "AcctStmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountStatement";
 			definition = "Statement information.";
 			minOccurs = 0;
@@ -228,11 +231,10 @@ public class ATMAccountStatement1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMAccountStatement1.mmAccountIdentifier, com.tools20022.repository.msg.ATMAccountStatement1.mmAccountName,
-						com.tools20022.repository.msg.ATMAccountStatement1.mmAccountStatement);
+				messageElement_lazy = () -> Arrays.asList(ATMAccountStatement1.mmAccountIdentifier, ATMAccountStatement1.mmAccountName, ATMAccountStatement1.mmAccountStatement);
 				trace_lazy = () -> Account.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ATMAccountStatement1";
 				definition = "Statement information of an account.";
 				nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMAccountStatement2.mmObject());

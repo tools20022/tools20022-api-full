@@ -19,9 +19,12 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CollateralType1Code;
 import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
+import com.tools20022.repository.entity.AssetHolding;
 import com.tools20022.repository.entity.Collateral;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -101,11 +104,11 @@ public class Collateral6 {
 	 */
 	public static final MMMessageAttribute mmPostHaircutValue = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmPostHaircutValue;
+			businessElementTrace_lazy = () -> AssetHolding.mmPostHaircutValue;
 			componentContext_lazy = () -> Collateral6.mmObject();
 			isDerived = false;
 			xmlTag = "PstHrcutVal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PostHaircutValue";
 			definition = "Value of the collateral after deduction of a percentage (the haircut) that reflects the perceived risk associated with holding this collateral.";
 			maxOccurs = 1;
@@ -151,11 +154,11 @@ public class Collateral6 {
 	 */
 	public static final MMMessageAttribute mmMarketValue = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmMarketValue;
+			businessElementTrace_lazy = () -> AssetHolding.mmMarketValue;
 			componentContext_lazy = () -> Collateral6.mmObject();
 			isDerived = false;
 			xmlTag = "MktVal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketValue";
 			definition = "Value of the underlying collateral (cash, securities, Letter of credit..) based on current market prices.";
 			maxOccurs = 1;
@@ -199,11 +202,11 @@ public class Collateral6 {
 	 */
 	public static final MMMessageAttribute mmCollateralType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Collateral.mmCollateralType;
+			businessElementTrace_lazy = () -> Collateral.mmCollateralType;
 			componentContext_lazy = () -> Collateral6.mmObject();
 			isDerived = false;
 			xmlTag = "CollTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralType";
 			definition = "Provides the type of collateral, such as securities or cash.";
 			maxOccurs = 1;
@@ -215,10 +218,10 @@ public class Collateral6 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Collateral6.mmPostHaircutValue, com.tools20022.repository.msg.Collateral6.mmMarketValue, com.tools20022.repository.msg.Collateral6.mmCollateralType);
+				messageElement_lazy = () -> Arrays.asList(Collateral6.mmPostHaircutValue, Collateral6.mmMarketValue, Collateral6.mmCollateralType);
 				trace_lazy = () -> Collateral.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Collateral6";
 				definition = "Provides the current and market value of the collateral held.";
 			}

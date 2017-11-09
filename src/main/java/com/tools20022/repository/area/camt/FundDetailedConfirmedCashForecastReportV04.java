@@ -20,6 +20,7 @@ package com.tools20022.repository.area.camt;
 import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.CashManagementLatestVersion;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.InvestmentFundsISOLatestversion;
@@ -64,6 +65,9 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code camt.043.001.04}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.CashManagementLatestVersion
@@ -113,9 +117,6 @@ import java.util.List;
  * FundDetailedConfirmedCashForecastReportV04.mmExtension}</li>
  * </ul>
  * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code camt.043.001.04}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -167,10 +168,10 @@ public class FundDetailedConfirmedCashForecastReportV04 {
 	public static final MMMessageBuildingBlock mmMessageIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "MsgId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageIdentification";
 			definition = "Identifies the message.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.camt.FundDetailedConfirmedCashForecastReportV03.mmMessageIdentification;
+			previousVersion_lazy = () -> FundDetailedConfirmedCashForecastReportV03.mmMessageIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
@@ -208,10 +209,10 @@ public class FundDetailedConfirmedCashForecastReportV04 {
 	public static final MMMessageBuildingBlock mmPoolReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "PoolRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PoolReference";
 			definition = "Collective reference identifying a set of messages.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.camt.FundDetailedConfirmedCashForecastReportV03.mmPoolReference;
+			previousVersion_lazy = () -> FundDetailedConfirmedCashForecastReportV03.mmPoolReference;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference3.mmObject();
@@ -249,10 +250,10 @@ public class FundDetailedConfirmedCashForecastReportV04 {
 	public static final MMMessageBuildingBlock mmPreviousReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "PrvsRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousReference";
 			definition = "Reference to a linked message that was previously sent.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.camt.FundDetailedConfirmedCashForecastReportV03.mmPreviousReference;
+			previousVersion_lazy = () -> FundDetailedConfirmedCashForecastReportV03.mmPreviousReference;
 			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference3.mmObject();
 		}
@@ -290,10 +291,10 @@ public class FundDetailedConfirmedCashForecastReportV04 {
 	public static final MMMessageBuildingBlock mmRelatedReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "RltdRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedReference";
 			definition = "Reference to a linked message that was previously received.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.camt.FundDetailedConfirmedCashForecastReportV03.mmRelatedReference;
+			previousVersion_lazy = () -> FundDetailedConfirmedCashForecastReportV03.mmRelatedReference;
 			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference3.mmObject();
 		}
@@ -329,10 +330,10 @@ public class FundDetailedConfirmedCashForecastReportV04 {
 	public static final MMMessageBuildingBlock mmMessagePagination = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "MsgPgntn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessagePagination";
 			definition = "Pagination of the message.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.camt.FundDetailedConfirmedCashForecastReportV03.mmMessagePagination;
+			previousVersion_lazy = () -> FundDetailedConfirmedCashForecastReportV03.mmMessagePagination;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> Pagination.mmObject();
@@ -366,7 +367,7 @@ public class FundDetailedConfirmedCashForecastReportV04 {
 	public static final MMMessageBuildingBlock mmFundOrSubFundDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "FndOrSubFndDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FundOrSubFundDetails";
 			definition = "Information about the fund/sub fund when the report either specifies cash flow for the fund/sub fund or for a share class of the fund/sub fund.";
 			maxOccurs = 1;
@@ -412,10 +413,10 @@ public class FundDetailedConfirmedCashForecastReportV04 {
 	public static final MMMessageBuildingBlock mmFundCashForecastDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "FndCshFcstDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FundCashForecastDetails";
 			definition = "Information related to the cash-in and cash-out flows for a specific trade date as a result of transactions in shares in an investment fund, for example, subscriptions, redemptions or switches. The information provided is sorted by pre-defined criteria such as country, institution, currency or user defined criteria.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.camt.FundDetailedConfirmedCashForecastReportV03.mmFundCashForecastDetails;
+			previousVersion_lazy = () -> FundDetailedConfirmedCashForecastReportV03.mmFundCashForecastDetails;
 			minOccurs = 1;
 			complexType_lazy = () -> FundCashForecast6.mmObject();
 		}
@@ -456,10 +457,10 @@ public class FundDetailedConfirmedCashForecastReportV04 {
 	public static final MMMessageBuildingBlock mmConsolidatedNetCashForecast = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CnsltdNetCshFcst";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConsolidatedNetCashForecast";
 			definition = "Net cash as a result of the cash-in and cash-out flows specified in the fund cash forecast details.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.camt.FundDetailedConfirmedCashForecastReportV03.mmConsolidatedNetCashForecast;
+			previousVersion_lazy = () -> FundDetailedConfirmedCashForecastReportV03.mmConsolidatedNetCashForecast;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> NetCashForecast3.mmObject();
@@ -499,10 +500,10 @@ public class FundDetailedConfirmedCashForecastReportV04 {
 	public static final MMMessageBuildingBlock mmExtension = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Xtnsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Extension";
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.camt.FundDetailedConfirmedCashForecastReportV03.mmExtension;
+			previousVersion_lazy = () -> FundDetailedConfirmedCashForecastReportV03.mmExtension;
 			minOccurs = 0;
 			complexType_lazy = () -> Extension1.mmObject();
 		}
@@ -511,7 +512,7 @@ public class FundDetailedConfirmedCashForecastReportV04 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FundDetailedConfirmedCashForecastReportV04";
 				definition = "Scope\r\nA report provider, such as a transfer agent, sends the FundDetailedConfirmedCashForecastReport message to the report user, such as an investment manager or pricing agent, to report the confirmed cash incomings and outgoings, sorted by country, institution name or other criteria defined by the user of one or more share classes of an investment fund on one or more trade dates.\r\nThe cash movements may result from, for example, redemption, subscription, switch transactions or reinvestment of dividends.\r\nUsage\r\nThe FundDetailedConfirmedCashForecastReport is used to provide definitive cash movements, that is, it is sent after the cut-off time and/or the price valuation of the fund. \r\nIf the price is not yet definitive, then the FundDetailedEstimatedCashForecastReport message must be used.\r\nThe message structure allows for the following uses:\r\n-\tto provide cash in and cash out amounts for a fund/sub fund and one or more share classes (a FundOrSubFundDetails sequence and one or FundCashForecastDetails sequences are used),\r\n-\tto provide cash in and cash out amounts for one or more share classes (one or more FundCashForecastDetails sequences are used).\r\nIf the report is to provide cash in and cash out for a fund/sub fund only and not for one or more share classes, then the FundConfirmedCashForecastReport message must be used.\r\nThe FundDetailedConfirmedCashForecastReport message is used to report cash movements in or out of a fund, organised by party, such as fund management company, country, currency or by some other criteria defined by the report provider. If the report is used to given the cash-in and cash-out for a party, then additional criteria, such as currency and country, can be specified.\r\nIn addition, the underlying transaction type for the cash-in or cash-out movement can be specified, as well as information about the cash movement's underlying orders, such as commission and charges.";
 				previousVersion_lazy = () -> FundDetailedConfirmedCashForecastReportV03.mmObject();
@@ -519,11 +520,10 @@ public class FundDetailedConfirmedCashForecastReportV04 {
 				rootElement = "Document";
 				xmlTag = "FndDtldConfdCshFcstRpt";
 				businessArea_lazy = () -> CashManagementLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.FundDetailedConfirmedCashForecastReportV04.mmMessageIdentification,
-						com.tools20022.repository.area.camt.FundDetailedConfirmedCashForecastReportV04.mmPoolReference, com.tools20022.repository.area.camt.FundDetailedConfirmedCashForecastReportV04.mmPreviousReference,
-						com.tools20022.repository.area.camt.FundDetailedConfirmedCashForecastReportV04.mmRelatedReference, com.tools20022.repository.area.camt.FundDetailedConfirmedCashForecastReportV04.mmMessagePagination,
-						com.tools20022.repository.area.camt.FundDetailedConfirmedCashForecastReportV04.mmFundOrSubFundDetails, com.tools20022.repository.area.camt.FundDetailedConfirmedCashForecastReportV04.mmFundCashForecastDetails,
-						com.tools20022.repository.area.camt.FundDetailedConfirmedCashForecastReportV04.mmConsolidatedNetCashForecast, com.tools20022.repository.area.camt.FundDetailedConfirmedCashForecastReportV04.mmExtension);
+				messageBuildingBlock_lazy = () -> Arrays.asList(FundDetailedConfirmedCashForecastReportV04.mmMessageIdentification, FundDetailedConfirmedCashForecastReportV04.mmPoolReference,
+						FundDetailedConfirmedCashForecastReportV04.mmPreviousReference, FundDetailedConfirmedCashForecastReportV04.mmRelatedReference, FundDetailedConfirmedCashForecastReportV04.mmMessagePagination,
+						FundDetailedConfirmedCashForecastReportV04.mmFundOrSubFundDetails, FundDetailedConfirmedCashForecastReportV04.mmFundCashForecastDetails, FundDetailedConfirmedCashForecastReportV04.mmConsolidatedNetCashForecast,
+						FundDetailedConfirmedCashForecastReportV04.mmExtension);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "camt";

@@ -20,11 +20,12 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.setr.SubscriptionMultipleOrderV02;
 import com.tools20022.repository.codeset.CountryCode;
 import com.tools20022.repository.datatype.ISODateTime;
-import com.tools20022.repository.entity.BulkPayment;
-import com.tools20022.repository.entity.Person;
-import com.tools20022.repository.entity.SubscriptionOrder;
+import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -131,11 +132,11 @@ public class SubscriptionMultipleOrder2 {
 	 */
 	public static final MMMessageAttribute mmPlaceOfTrade = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Country.mmCode;
+			businessElementTrace_lazy = () -> Country.mmCode;
 			componentContext_lazy = () -> SubscriptionMultipleOrder2.mmObject();
 			isDerived = false;
 			xmlTag = "PlcOfTrad";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceOfTrade";
 			definition = "Market in which the advised trade transaction was executed.";
 			maxOccurs = 1;
@@ -178,11 +179,11 @@ public class SubscriptionMultipleOrder2 {
 	 */
 	public static final MMMessageAttribute mmOrderDateTime = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrder.mmOrderDateTime;
+			businessElementTrace_lazy = () -> InvestmentFundOrder.mmOrderDateTime;
 			componentContext_lazy = () -> SubscriptionMultipleOrder2.mmObject();
 			isDerived = false;
 			xmlTag = "OrdrDtTm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrderDateTime";
 			definition = "Date the investor places the order.";
 			maxOccurs = 1;
@@ -225,11 +226,11 @@ public class SubscriptionMultipleOrder2 {
 	 */
 	public static final MMMessageAttribute mmExpiryDateTime = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrder.mmExpiryDateTime;
+			businessElementTrace_lazy = () -> InvestmentFundOrder.mmExpiryDateTime;
 			componentContext_lazy = () -> SubscriptionMultipleOrder2.mmObject();
 			isDerived = false;
 			xmlTag = "XpryDtTm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExpiryDateTime";
 			definition = "Date on which the order expires.";
 			maxOccurs = 1;
@@ -276,11 +277,11 @@ public class SubscriptionMultipleOrder2 {
 	 */
 	public static final MMMessageAttribute mmCancellationRight = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrder.mmCancellationRight;
+			businessElementTrace_lazy = () -> InvestmentFundOrder.mmCancellationRight;
 			componentContext_lazy = () -> SubscriptionMultipleOrder2.mmObject();
 			isDerived = false;
 			xmlTag = "CxlRght";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationRight";
 			definition = "Cancellation right of an investor with respect to an investment fund order.";
 			maxOccurs = 1;
@@ -322,11 +323,11 @@ public class SubscriptionMultipleOrder2 {
 	 */
 	public static final MMMessageAssociationEnd mmInvestmentAccountDetails = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundTransaction.mmInvestmentAccount;
+			businessElementTrace_lazy = () -> InvestmentFundTransaction.mmInvestmentAccount;
 			componentContext_lazy = () -> SubscriptionMultipleOrder2.mmObject();
 			isDerived = false;
 			xmlTag = "InvstmtAcctDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestmentAccountDetails";
 			definition = "Account impacted by an investment fund order.";
 			maxOccurs = 1;
@@ -372,7 +373,7 @@ public class SubscriptionMultipleOrder2 {
 			componentContext_lazy = () -> SubscriptionMultipleOrder2.mmObject();
 			isDerived = false;
 			xmlTag = "BnfcryDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BeneficiaryDetails";
 			definition = "Additional information about the beneficial owner.";
 			maxOccurs = 1;
@@ -420,7 +421,7 @@ public class SubscriptionMultipleOrder2 {
 			componentContext_lazy = () -> SubscriptionMultipleOrder2.mmObject();
 			isDerived = false;
 			xmlTag = "IndvOrdrDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IndividualOrderDetails";
 			definition = "Order to invest the investor's principal in an investment fund.";
 			minOccurs = 1;
@@ -467,7 +468,7 @@ public class SubscriptionMultipleOrder2 {
 			componentContext_lazy = () -> SubscriptionMultipleOrder2.mmObject();
 			isDerived = false;
 			xmlTag = "BlkCshSttlmDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BulkCashSettlementDetails";
 			definition = "Payment transaction resulting from the investment fund order execution.";
 			maxOccurs = 1;
@@ -480,14 +481,12 @@ public class SubscriptionMultipleOrder2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SubscriptionMultipleOrder2.mmPlaceOfTrade, com.tools20022.repository.msg.SubscriptionMultipleOrder2.mmOrderDateTime,
-						com.tools20022.repository.msg.SubscriptionMultipleOrder2.mmExpiryDateTime, com.tools20022.repository.msg.SubscriptionMultipleOrder2.mmCancellationRight,
-						com.tools20022.repository.msg.SubscriptionMultipleOrder2.mmInvestmentAccountDetails, com.tools20022.repository.msg.SubscriptionMultipleOrder2.mmBeneficiaryDetails,
-						com.tools20022.repository.msg.SubscriptionMultipleOrder2.mmIndividualOrderDetails, com.tools20022.repository.msg.SubscriptionMultipleOrder2.mmBulkCashSettlementDetails);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.SubscriptionMultipleOrderV02.mmMultipleOrderDetails);
+				messageElement_lazy = () -> Arrays.asList(SubscriptionMultipleOrder2.mmPlaceOfTrade, SubscriptionMultipleOrder2.mmOrderDateTime, SubscriptionMultipleOrder2.mmExpiryDateTime, SubscriptionMultipleOrder2.mmCancellationRight,
+						SubscriptionMultipleOrder2.mmInvestmentAccountDetails, SubscriptionMultipleOrder2.mmBeneficiaryDetails, SubscriptionMultipleOrder2.mmIndividualOrderDetails, SubscriptionMultipleOrder2.mmBulkCashSettlementDetails);
+				messageBuildingBlock_lazy = () -> Arrays.asList(SubscriptionMultipleOrderV02.mmMultipleOrderDetails);
 				trace_lazy = () -> SubscriptionOrder.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SubscriptionMultipleOrder2";
 				definition = "Order to invest the investor's principal in an investment fund.";
 			}

@@ -19,7 +19,9 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -97,7 +99,7 @@ public class Reference19 {
 			componentContext_lazy = () -> Reference19.mmObject();
 			isDerived = false;
 			xmlTag = "TradLegNtfctnId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeLegNotificationIdentification";
 			definition = "Reference allocated by the central counterparty - central counterpatry trade leg reference identification that uniquely identifies the trade.";
 			minOccurs = 0;
@@ -139,7 +141,7 @@ public class Reference19 {
 			componentContext_lazy = () -> Reference19.mmObject();
 			isDerived = false;
 			xmlTag = "NetPosId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetPositionIdentification";
 			definition = "After netting, reference that is common to a net transaction to settle and all its underlying trades";
 			maxOccurs = 1;
@@ -151,9 +153,9 @@ public class Reference19 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Reference19.mmTradeLegNotificationIdentification, com.tools20022.repository.msg.Reference19.mmNetPositionIdentification);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(Reference19.mmTradeLegNotificationIdentification, Reference19.mmNetPositionIdentification);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Reference19";
 				definition = "Provides the references of the underlying trade leg(s) and/or the reference to the related NetPosition report message.";
 			}

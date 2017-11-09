@@ -19,8 +19,10 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.Max70Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -101,7 +103,7 @@ public class OriginalMessageAndIssuer1 {
 			componentContext_lazy = () -> OriginalMessageAndIssuer1.mmObject();
 			isDerived = false;
 			xmlTag = "MsgId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageIdentification";
 			definition = "Unambiguous identification of the original message to which the message refers. ";
 			maxOccurs = 1;
@@ -145,7 +147,7 @@ public class OriginalMessageAndIssuer1 {
 			componentContext_lazy = () -> OriginalMessageAndIssuer1.mmObject();
 			isDerived = false;
 			xmlTag = "MsgNmId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageNameIdentification";
 			definition = "Specifies the original message name identifier to which the message refers.";
 			maxOccurs = 1;
@@ -189,7 +191,7 @@ public class OriginalMessageAndIssuer1 {
 			componentContext_lazy = () -> OriginalMessageAndIssuer1.mmObject();
 			isDerived = false;
 			xmlTag = "OrgtrNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginatorName";
 			definition = "Name of the original party that assigned the original message identification. ";
 			maxOccurs = 1;
@@ -201,10 +203,9 @@ public class OriginalMessageAndIssuer1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OriginalMessageAndIssuer1.mmMessageIdentification, com.tools20022.repository.msg.OriginalMessageAndIssuer1.mmMessageNameIdentification,
-						com.tools20022.repository.msg.OriginalMessageAndIssuer1.mmOriginatorName);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(OriginalMessageAndIssuer1.mmMessageIdentification, OriginalMessageAndIssuer1.mmMessageNameIdentification, OriginalMessageAndIssuer1.mmOriginatorName);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "OriginalMessageAndIssuer1";
 				definition = "Business reference(s) to one or more relevant messages previously sent by other parties, or by the same party issuing this message.\n\n";
 			}

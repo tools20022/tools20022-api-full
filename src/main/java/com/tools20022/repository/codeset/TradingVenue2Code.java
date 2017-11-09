@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.TradingVenueCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -78,7 +80,7 @@ public class TradingVenue2Code extends TradingVenueCode {
 	 */
 	public static final MMCode mmApprovedPublicationArrangement = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ApprovedPublicationArrangement";
 			owner_lazy = () -> TradingVenue2Code.mmObject();
 		}
@@ -101,7 +103,7 @@ public class TradingVenue2Code extends TradingVenueCode {
 	 */
 	public static final MMCode mmConsolidatedTapeProvider = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConsolidatedTapeProvider";
 			owner_lazy = () -> TradingVenue2Code.mmObject();
 		}
@@ -110,11 +112,11 @@ public class TradingVenue2Code extends TradingVenueCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TradingVenue2Code";
 				definition = "Specifies the type of a trading venue which can submit the report.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TradingVenue2Code.mmApprovedPublicationArrangement, com.tools20022.repository.codeset.TradingVenue2Code.mmConsolidatedTapeProvider);
+				code_lazy = () -> Arrays.asList(TradingVenue2Code.mmApprovedPublicationArrangement, TradingVenue2Code.mmConsolidatedTapeProvider);
 				trace_lazy = () -> TradingVenueCode.mmObject();
 			}
 		});

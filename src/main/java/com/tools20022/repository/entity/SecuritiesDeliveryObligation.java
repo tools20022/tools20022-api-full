@@ -17,15 +17,15 @@
 
 package com.tools20022.repository.entity;
 
-import com.tools20022.metamodel.MMBusinessAssociationEnd;
-import com.tools20022.metamodel.MMBusinessAttribute;
-import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.*;
 import com.tools20022.repository.choice.*;
 import com.tools20022.repository.codeset.CurrencyCode;
 import com.tools20022.repository.codeset.SettlementDateCode;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.Obligation;
+import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -40,6 +40,49 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.choice.NettingEligibility1Choice
+ * NettingEligibility1Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.NettingEligibility2Choice
+ * NettingEligibility2Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.NettingEligibility3Choice
+ * NettingEligibility3Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.NettingEligibility4Choice
+ * NettingEligibility4Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.NettingEligibility5Choice
+ * NettingEligibility5Choice}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesTransfer#mmSecuritiesDeliveryObligation
+ * SecuritiesTransfer.mmSecuritiesDeliveryObligation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PortfolioTransfer#mmSecuritiesDeliveryObligation
+ * PortfolioTransfer.mmSecuritiesDeliveryObligation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesTradeExecution#mmSecuritiesDeliveryObligation
+ * SecuritiesTradeExecution.mmSecuritiesDeliveryObligation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionProceedsDeliveryInstruction#mmSecuritiesProceedsMovement
+ * CorporateActionProceedsDeliveryInstruction.mmSecuritiesProceedsMovement}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesLending#mmSecuritiesDeliveryObligation
+ * SecuritiesLending.mmSecuritiesDeliveryObligation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CollateralMovement#mmSecuritiesCollateralMovement
+ * CollateralMovement.mmSecuritiesCollateralMovement}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.Obligation
+ * Obligation}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -79,49 +122,6 @@ import java.util.List;
  * <li>
  * {@linkplain com.tools20022.repository.entity.SecuritiesDeliveryObligation#mmSecuritiesLending
  * SecuritiesDeliveryObligation.mmSecuritiesLending}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesTransfer#mmSecuritiesDeliveryObligation
- * SecuritiesTransfer.mmSecuritiesDeliveryObligation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.PortfolioTransfer#mmSecuritiesDeliveryObligation
- * PortfolioTransfer.mmSecuritiesDeliveryObligation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesTradeExecution#mmSecuritiesDeliveryObligation
- * SecuritiesTradeExecution.mmSecuritiesDeliveryObligation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionProceedsDeliveryInstruction#mmSecuritiesProceedsMovement
- * CorporateActionProceedsDeliveryInstruction.mmSecuritiesProceedsMovement}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesLending#mmSecuritiesDeliveryObligation
- * SecuritiesLending.mmSecuritiesDeliveryObligation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CollateralMovement#mmSecuritiesCollateralMovement
- * CollateralMovement.mmSecuritiesCollateralMovement}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.Obligation
- * Obligation}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.choice.NettingEligibility1Choice
- * NettingEligibility1Choice}</li>
- * <li>{@linkplain com.tools20022.repository.choice.NettingEligibility2Choice
- * NettingEligibility2Choice}</li>
- * <li>{@linkplain com.tools20022.repository.choice.NettingEligibility3Choice
- * NettingEligibility3Choice}</li>
- * <li>{@linkplain com.tools20022.repository.choice.NettingEligibility4Choice
- * NettingEligibility4Choice}</li>
- * <li>{@linkplain com.tools20022.repository.choice.NettingEligibility5Choice
- * NettingEligibility5Choice}</li>
  * </ul>
  * </li>
  * <li>
@@ -513,47 +513,32 @@ public class SecuritiesDeliveryObligation extends Obligation {
 	 */
 	public static final MMBusinessAttribute mmCCPEligibility = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SettlementDetails50.mmCCPEligibility, com.tools20022.repository.msg.SettlementDetails51.mmCCPEligibility,
-					com.tools20022.repository.msg.SettlementDetails9.mmCCPEligibility, com.tools20022.repository.msg.SettlementDetails17.mmCCPEligibility, com.tools20022.repository.msg.SettlementDetails30.mmCCPEligibility,
-					com.tools20022.repository.msg.SettlementDetails32.mmCCPEligibility, com.tools20022.repository.msg.SettlementDetails60.mmCCPEligibility, com.tools20022.repository.msg.SettlementDetails64.mmCCPEligibility,
-					com.tools20022.repository.msg.SettlementDetails3.mmCCPEligibility, com.tools20022.repository.msg.SettlementDetails16.mmCCPEligibility, com.tools20022.repository.msg.SettlementDetails31.mmCCPEligibility,
-					com.tools20022.repository.msg.SettlementDetails40.mmCCPEligibility, com.tools20022.repository.msg.SettlementDetails62.mmCCPEligibility, com.tools20022.repository.msg.SettlementDetails63.mmCCPEligibility,
-					com.tools20022.repository.msg.SettlementDetails6.mmCCPEligibility, com.tools20022.repository.msg.SettlementDetails20.mmCCPEligibility, com.tools20022.repository.msg.SettlementDetails24.mmCCPEligibility,
-					com.tools20022.repository.msg.SettlementDetails33.mmCCPEligibility, com.tools20022.repository.msg.SettlementDetails45.mmCCPEligibility, com.tools20022.repository.msg.SettlementDetails54.mmCCPEligibility,
-					com.tools20022.repository.msg.SettlementDetails1.mmCCPEligibility, com.tools20022.repository.msg.SettlementDetails19.mmCCPEligibility, com.tools20022.repository.msg.SettlementDetails22.mmCCPEligibility,
-					com.tools20022.repository.msg.SettlementDetails35.mmCCPEligibility, com.tools20022.repository.msg.SettlementDetails42.mmCCPEligibility, com.tools20022.repository.msg.SettlementDetails52.mmCCPEligibility,
-					com.tools20022.repository.msg.SettlementDetails8.mmCCPEligibility, com.tools20022.repository.msg.SettlementDetails11.mmCCPEligibility, com.tools20022.repository.msg.SettlementDetails23.mmCCPEligibility,
-					com.tools20022.repository.msg.SettlementDetails37.mmCCPEligibility, com.tools20022.repository.msg.SettlementDetails44.mmCCPEligibility, com.tools20022.repository.msg.SettlementDetails53.mmCCPEligibility,
-					com.tools20022.repository.msg.SettlementDetails7.mmCCPEligibility, com.tools20022.repository.msg.SettlementDetails12.mmCCPEligibility, com.tools20022.repository.msg.SettlementDetails28.mmCCPEligibility,
-					com.tools20022.repository.msg.SettlementDetails38.mmCCPEligibility, com.tools20022.repository.msg.SettlementDetails47.mmCCPEligibility, com.tools20022.repository.msg.SettlementDetails56.mmCCPEligibility,
-					com.tools20022.repository.msg.SettlementDetails2.mmCCPEligibility, com.tools20022.repository.msg.SettlementDetails13.mmCCPEligibility, com.tools20022.repository.msg.SettlementDetails27.mmCCPEligibility,
-					com.tools20022.repository.msg.SettlementDetails39.mmCCPEligibility, com.tools20022.repository.msg.SettlementDetails48.mmCCPEligibility, com.tools20022.repository.msg.SettlementDetails57.mmCCPEligibility,
-					com.tools20022.repository.msg.SettlementDetails43.mmCCPEligibility, com.tools20022.repository.msg.SettlementDetails10.mmCCPEligibility, com.tools20022.repository.msg.SettlementDetails29.mmCCPEligibility,
-					com.tools20022.repository.msg.SettlementDetails5.mmCCPEligibility, com.tools20022.repository.msg.SettlementDetails26.mmCCPEligibility, com.tools20022.repository.msg.SettlementDetails65.mmCCPEligibility,
-					com.tools20022.repository.msg.SettlementDetails14.mmCCPEligibility, com.tools20022.repository.msg.SettlementDetails41.mmCCPEligibility, com.tools20022.repository.msg.SettlementDetails61.mmCCPEligibility,
-					com.tools20022.repository.msg.SettlementDetails59.mmCCPEligibility, com.tools20022.repository.msg.SettlementDetails15.mmCCPEligibility, com.tools20022.repository.msg.SettlementDetails36.mmCCPEligibility,
-					com.tools20022.repository.msg.SettlementDetails66.mmCCPEligibility, com.tools20022.repository.msg.SettlementDetails67.mmCCPEligibility, com.tools20022.repository.msg.SettlementDetails70.mmCCPEligibility,
-					com.tools20022.repository.msg.SettlementDetails68.mmCCPEligibility, com.tools20022.repository.msg.SettlementDetails69.mmCCPEligibility, com.tools20022.repository.msg.SettlementDetails71.mmCCPEligibility,
-					com.tools20022.repository.msg.SettlementDetails72.mmCCPEligibility, com.tools20022.repository.msg.SettlementDetails75.mmCCPEligibility, com.tools20022.repository.msg.SettlementDetails73.mmCCPEligibility,
-					com.tools20022.repository.msg.SettlementDetails74.mmCCPEligibility, com.tools20022.repository.msg.SettlementDetails81.mmCCPEligibility, com.tools20022.repository.msg.SettlementDetails76.mmCCPEligibility,
-					com.tools20022.repository.msg.SettlementDetails80.mmCCPEligibility, com.tools20022.repository.msg.SettlementDetails78.mmCCPEligibility, com.tools20022.repository.msg.SettlementDetails77.mmCCPEligibility,
-					com.tools20022.repository.msg.SettlementDetails79.mmCCPEligibility, com.tools20022.repository.msg.SettlementDetails87.mmCCPEligibility, com.tools20022.repository.msg.SettlementDetails83.mmCCPEligibility,
-					com.tools20022.repository.msg.SettlementDetails86.mmCCPEligibility, com.tools20022.repository.msg.SettlementDetails85.mmCCPEligibility, com.tools20022.repository.msg.SettlementDetails93.mmCCPEligibility,
-					com.tools20022.repository.msg.SettlementDetails90.mmCCPEligibility, com.tools20022.repository.msg.SettlementDetails96.mmCCPEligibility, com.tools20022.repository.msg.SettlementDetails97.mmCCPEligibility,
-					com.tools20022.repository.msg.SettlementDetails94.mmCCPEligibility, com.tools20022.repository.msg.SettlementDetails95.mmCCPEligibility, com.tools20022.repository.msg.SettlementDetails91.mmCCPEligibility,
-					com.tools20022.repository.msg.SettlementDetails92.mmCCPEligibility, com.tools20022.repository.msg.SettlementDetails98.mmCCPEligibility, com.tools20022.repository.msg.SettlementDetails101.mmCCPEligibility,
-					com.tools20022.repository.msg.SettlementDetails105.mmCCPEligibility, com.tools20022.repository.msg.SettlementDetails106.mmCCPEligibility, com.tools20022.repository.msg.SettlementDetails104.mmCCPEligibility,
-					com.tools20022.repository.msg.SettlementDetails111.mmCCPEligibility, com.tools20022.repository.msg.SettlementDetails112.mmCCPEligibility, com.tools20022.repository.msg.SettlementDetails110.mmCCPEligibility,
-					com.tools20022.repository.msg.SettlementDetails107.mmCCPEligibility, com.tools20022.repository.msg.SettlementDetails115.mmCCPEligibility, com.tools20022.repository.msg.SettlementDetails117.mmCCPEligibility,
-					com.tools20022.repository.msg.SettlementDetails116.mmCCPEligibility, com.tools20022.repository.msg.SettlementDetails113.mmCCPEligibility, com.tools20022.repository.msg.SettlementDetails128.mmCCPEligibility,
-					com.tools20022.repository.msg.SettlementDetails120.mmCCPEligibility, com.tools20022.repository.msg.SettlementDetails119.mmCCPEligibility, com.tools20022.repository.msg.SettlementDetails126.mmCCPEligibility,
-					com.tools20022.repository.msg.SettlementDetails122.mmCCPEligibility, com.tools20022.repository.msg.SettlementDetails127.mmCCPEligibility, com.tools20022.repository.msg.SettlementDetails121.mmCCPEligibility,
-					com.tools20022.repository.msg.SettlementDetails134.mmCCPEligibility, com.tools20022.repository.msg.SettlementDetails137.mmCCPEligibility, com.tools20022.repository.msg.SettlementDetails132.mmCCPEligibility,
-					com.tools20022.repository.msg.SettlementDetails138.mmCCPEligibility, com.tools20022.repository.msg.SettlementDetails130.mmCCPEligibility, com.tools20022.repository.msg.SettlementDetails133.mmCCPEligibility,
-					com.tools20022.repository.msg.SettlementDetails139.mmCCPEligibility);
+			derivation_lazy = () -> Arrays.asList(SettlementDetails50.mmCCPEligibility, SettlementDetails51.mmCCPEligibility, SettlementDetails9.mmCCPEligibility, SettlementDetails17.mmCCPEligibility, SettlementDetails30.mmCCPEligibility,
+					SettlementDetails32.mmCCPEligibility, SettlementDetails60.mmCCPEligibility, SettlementDetails64.mmCCPEligibility, SettlementDetails3.mmCCPEligibility, SettlementDetails16.mmCCPEligibility,
+					SettlementDetails31.mmCCPEligibility, SettlementDetails40.mmCCPEligibility, SettlementDetails62.mmCCPEligibility, SettlementDetails63.mmCCPEligibility, SettlementDetails6.mmCCPEligibility,
+					SettlementDetails20.mmCCPEligibility, SettlementDetails24.mmCCPEligibility, SettlementDetails33.mmCCPEligibility, SettlementDetails45.mmCCPEligibility, SettlementDetails54.mmCCPEligibility,
+					SettlementDetails1.mmCCPEligibility, SettlementDetails19.mmCCPEligibility, SettlementDetails22.mmCCPEligibility, SettlementDetails35.mmCCPEligibility, SettlementDetails42.mmCCPEligibility,
+					SettlementDetails52.mmCCPEligibility, SettlementDetails8.mmCCPEligibility, SettlementDetails11.mmCCPEligibility, SettlementDetails23.mmCCPEligibility, SettlementDetails37.mmCCPEligibility,
+					SettlementDetails44.mmCCPEligibility, SettlementDetails53.mmCCPEligibility, SettlementDetails7.mmCCPEligibility, SettlementDetails12.mmCCPEligibility, SettlementDetails28.mmCCPEligibility,
+					SettlementDetails38.mmCCPEligibility, SettlementDetails47.mmCCPEligibility, SettlementDetails56.mmCCPEligibility, SettlementDetails2.mmCCPEligibility, SettlementDetails13.mmCCPEligibility,
+					SettlementDetails27.mmCCPEligibility, SettlementDetails39.mmCCPEligibility, SettlementDetails48.mmCCPEligibility, SettlementDetails57.mmCCPEligibility, SettlementDetails43.mmCCPEligibility,
+					SettlementDetails10.mmCCPEligibility, SettlementDetails29.mmCCPEligibility, SettlementDetails5.mmCCPEligibility, SettlementDetails26.mmCCPEligibility, SettlementDetails65.mmCCPEligibility,
+					SettlementDetails14.mmCCPEligibility, SettlementDetails41.mmCCPEligibility, SettlementDetails61.mmCCPEligibility, SettlementDetails59.mmCCPEligibility, SettlementDetails15.mmCCPEligibility,
+					SettlementDetails36.mmCCPEligibility, SettlementDetails66.mmCCPEligibility, SettlementDetails67.mmCCPEligibility, SettlementDetails70.mmCCPEligibility, SettlementDetails68.mmCCPEligibility,
+					SettlementDetails69.mmCCPEligibility, SettlementDetails71.mmCCPEligibility, SettlementDetails72.mmCCPEligibility, SettlementDetails75.mmCCPEligibility, SettlementDetails73.mmCCPEligibility,
+					SettlementDetails74.mmCCPEligibility, SettlementDetails81.mmCCPEligibility, SettlementDetails76.mmCCPEligibility, SettlementDetails80.mmCCPEligibility, SettlementDetails78.mmCCPEligibility,
+					SettlementDetails77.mmCCPEligibility, SettlementDetails79.mmCCPEligibility, SettlementDetails87.mmCCPEligibility, SettlementDetails83.mmCCPEligibility, SettlementDetails86.mmCCPEligibility,
+					SettlementDetails85.mmCCPEligibility, SettlementDetails93.mmCCPEligibility, SettlementDetails90.mmCCPEligibility, SettlementDetails96.mmCCPEligibility, SettlementDetails97.mmCCPEligibility,
+					SettlementDetails94.mmCCPEligibility, SettlementDetails95.mmCCPEligibility, SettlementDetails91.mmCCPEligibility, SettlementDetails92.mmCCPEligibility, SettlementDetails98.mmCCPEligibility,
+					SettlementDetails101.mmCCPEligibility, SettlementDetails105.mmCCPEligibility, SettlementDetails106.mmCCPEligibility, SettlementDetails104.mmCCPEligibility, SettlementDetails111.mmCCPEligibility,
+					SettlementDetails112.mmCCPEligibility, SettlementDetails110.mmCCPEligibility, SettlementDetails107.mmCCPEligibility, SettlementDetails115.mmCCPEligibility, SettlementDetails117.mmCCPEligibility,
+					SettlementDetails116.mmCCPEligibility, SettlementDetails113.mmCCPEligibility, SettlementDetails128.mmCCPEligibility, SettlementDetails120.mmCCPEligibility, SettlementDetails119.mmCCPEligibility,
+					SettlementDetails126.mmCCPEligibility, SettlementDetails122.mmCCPEligibility, SettlementDetails127.mmCCPEligibility, SettlementDetails121.mmCCPEligibility, SettlementDetails134.mmCCPEligibility,
+					SettlementDetails137.mmCCPEligibility, SettlementDetails132.mmCCPEligibility, SettlementDetails138.mmCCPEligibility, SettlementDetails130.mmCCPEligibility, SettlementDetails133.mmCCPEligibility,
+					SettlementDetails139.mmCCPEligibility);
 			elementContext_lazy = () -> SecuritiesDeliveryObligation.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CCPEligibility";
 			definition = "Specifies whether the settlement transaction is CCP (Central Counterparty) eligible.";
 			maxOccurs = 1;
@@ -944,48 +929,33 @@ public class SecuritiesDeliveryObligation extends Obligation {
 	 */
 	public static final MMBusinessAttribute mmNettingEligibility = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.NettingEligibility1Choice.mmIndicator, com.tools20022.repository.msg.SettlementDetails50.mmNettingEligibility,
-					com.tools20022.repository.choice.NettingEligibility2Choice.mmIndicator, com.tools20022.repository.msg.SettlementDetails51.mmNettingEligibility, com.tools20022.repository.msg.SettlementDetails9.mmNettingEligibility,
-					com.tools20022.repository.msg.SettlementDetails17.mmNettingEligibility, com.tools20022.repository.msg.SettlementDetails30.mmNettingEligibility, com.tools20022.repository.msg.SettlementDetails32.mmNettingEligibility,
-					com.tools20022.repository.msg.SettlementDetails60.mmNettingEligibility, com.tools20022.repository.msg.SettlementDetails64.mmNettingEligibility, com.tools20022.repository.msg.SettlementDetails3.mmNettingEligibility,
-					com.tools20022.repository.msg.SettlementDetails16.mmNettingEligibility, com.tools20022.repository.msg.SettlementDetails31.mmNettingEligibility, com.tools20022.repository.msg.SettlementDetails40.mmNettingEligibility,
-					com.tools20022.repository.msg.SettlementDetails62.mmNettingEligibility, com.tools20022.repository.msg.SettlementDetails63.mmNettingEligibility, com.tools20022.repository.msg.SettlementDetails6.mmNettingEligibility,
-					com.tools20022.repository.msg.SettlementDetails20.mmNettingEligibility, com.tools20022.repository.msg.SettlementDetails24.mmNettingEligibility, com.tools20022.repository.msg.SettlementDetails33.mmNettingEligibility,
-					com.tools20022.repository.msg.SettlementDetails45.mmNettingEligibility, com.tools20022.repository.msg.SettlementDetails54.mmNettingEligibility, com.tools20022.repository.msg.SettlementDetails1.mmNettingEligibility,
-					com.tools20022.repository.msg.SettlementDetails19.mmNettingEligibility, com.tools20022.repository.msg.SettlementDetails22.mmNettingEligibility, com.tools20022.repository.msg.SettlementDetails35.mmNettingEligibility,
-					com.tools20022.repository.msg.SettlementDetails42.mmNettingEligibility, com.tools20022.repository.msg.SettlementDetails52.mmNettingEligibility, com.tools20022.repository.msg.SettlementDetails8.mmNettingEligibility,
-					com.tools20022.repository.msg.SettlementDetails11.mmNettingEligibility, com.tools20022.repository.msg.SettlementDetails23.mmNettingEligibility, com.tools20022.repository.msg.SettlementDetails37.mmNettingEligibility,
-					com.tools20022.repository.msg.SettlementDetails44.mmNettingEligibility, com.tools20022.repository.msg.SettlementDetails53.mmNettingEligibility, com.tools20022.repository.msg.SettlementDetails7.mmNettingEligibility,
-					com.tools20022.repository.msg.SettlementDetails12.mmNettingEligibility, com.tools20022.repository.msg.SettlementDetails28.mmNettingEligibility, com.tools20022.repository.msg.SettlementDetails38.mmNettingEligibility,
-					com.tools20022.repository.msg.SettlementDetails47.mmNettingEligibility, com.tools20022.repository.msg.SettlementDetails56.mmNettingEligibility, com.tools20022.repository.msg.SettlementDetails2.mmNettingEligibility,
-					com.tools20022.repository.msg.SettlementDetails13.mmNettingEligibility, com.tools20022.repository.msg.SettlementDetails27.mmNettingEligibility, com.tools20022.repository.msg.SettlementDetails39.mmNettingEligibility,
-					com.tools20022.repository.msg.SettlementDetails48.mmNettingEligibility, com.tools20022.repository.msg.SettlementDetails57.mmNettingEligibility, com.tools20022.repository.choice.NettingEligibility3Choice.mmIndicator,
-					com.tools20022.repository.msg.SettlementDetails43.mmNettingEligibility, com.tools20022.repository.msg.SettlementDetails10.mmNettingEligibility, com.tools20022.repository.msg.SettlementDetails29.mmNettingEligibility,
-					com.tools20022.repository.msg.SettlementDetails5.mmNettingEligibility, com.tools20022.repository.msg.SettlementDetails26.mmNettingEligibility, com.tools20022.repository.msg.SettlementDetails65.mmNettingEligibility,
-					com.tools20022.repository.msg.SettlementDetails14.mmNettingEligibility, com.tools20022.repository.msg.SettlementDetails41.mmNettingEligibility, com.tools20022.repository.msg.SettlementDetails61.mmNettingEligibility,
-					com.tools20022.repository.msg.SettlementDetails59.mmNettingEligibility, com.tools20022.repository.msg.SettlementDetails15.mmNettingEligibility, com.tools20022.repository.msg.SettlementDetails36.mmNettingEligibility,
-					com.tools20022.repository.msg.SettlementDetails66.mmNettingEligibility, com.tools20022.repository.msg.SettlementDetails67.mmNettingEligibility, com.tools20022.repository.msg.SettlementDetails70.mmNettingEligibility,
-					com.tools20022.repository.msg.SettlementDetails68.mmNettingEligibility, com.tools20022.repository.msg.SettlementDetails69.mmNettingEligibility, com.tools20022.repository.msg.SettlementDetails71.mmNettingEligibility,
-					com.tools20022.repository.msg.SettlementDetails72.mmNettingEligibility, com.tools20022.repository.msg.SettlementDetails75.mmNettingEligibility, com.tools20022.repository.msg.SettlementDetails73.mmNettingEligibility,
-					com.tools20022.repository.msg.SettlementDetails74.mmNettingEligibility, com.tools20022.repository.msg.SettlementDetails81.mmNettingEligibility, com.tools20022.repository.msg.SettlementDetails76.mmNettingEligibility,
-					com.tools20022.repository.msg.SettlementDetails80.mmNettingEligibility, com.tools20022.repository.msg.SettlementDetails78.mmNettingEligibility, com.tools20022.repository.msg.SettlementDetails77.mmNettingEligibility,
-					com.tools20022.repository.msg.SettlementDetails79.mmNettingEligibility, com.tools20022.repository.msg.SettlementDetails87.mmNettingEligibility, com.tools20022.repository.msg.SettlementDetails83.mmNettingEligibility,
-					com.tools20022.repository.msg.SettlementDetails86.mmNettingEligibility, com.tools20022.repository.msg.SettlementDetails85.mmNettingEligibility, com.tools20022.repository.msg.SettlementDetails93.mmNettingEligibility,
-					com.tools20022.repository.msg.SettlementDetails90.mmNettingEligibility, com.tools20022.repository.msg.SettlementDetails96.mmNettingEligibility, com.tools20022.repository.msg.SettlementDetails97.mmNettingEligibility,
-					com.tools20022.repository.msg.SettlementDetails94.mmNettingEligibility, com.tools20022.repository.choice.NettingEligibility4Choice.mmIndicator, com.tools20022.repository.msg.SettlementDetails95.mmNettingEligibility,
-					com.tools20022.repository.msg.SettlementDetails91.mmNettingEligibility, com.tools20022.repository.msg.SettlementDetails92.mmNettingEligibility, com.tools20022.repository.msg.SettlementDetails98.mmNettingEligibility,
-					com.tools20022.repository.msg.SettlementDetails101.mmNettingEligibility, com.tools20022.repository.msg.SettlementDetails105.mmNettingEligibility, com.tools20022.repository.msg.SettlementDetails106.mmNettingEligibility,
-					com.tools20022.repository.msg.SettlementDetails104.mmNettingEligibility, com.tools20022.repository.msg.SettlementDetails111.mmNettingEligibility, com.tools20022.repository.msg.SettlementDetails112.mmNettingEligibility,
-					com.tools20022.repository.msg.SettlementDetails110.mmNettingEligibility, com.tools20022.repository.msg.SettlementDetails107.mmNettingEligibility, com.tools20022.repository.msg.SettlementDetails115.mmNettingEligibility,
-					com.tools20022.repository.msg.SettlementDetails117.mmNettingEligibility, com.tools20022.repository.msg.SettlementDetails116.mmNettingEligibility, com.tools20022.repository.choice.NettingEligibility5Choice.mmIndicator,
-					com.tools20022.repository.msg.SettlementDetails113.mmNettingEligibility, com.tools20022.repository.msg.SettlementDetails128.mmNettingEligibility, com.tools20022.repository.msg.SettlementDetails120.mmNettingEligibility,
-					com.tools20022.repository.msg.SettlementDetails119.mmNettingEligibility, com.tools20022.repository.msg.SettlementDetails126.mmNettingEligibility, com.tools20022.repository.msg.SettlementDetails122.mmNettingEligibility,
-					com.tools20022.repository.msg.SettlementDetails127.mmNettingEligibility, com.tools20022.repository.msg.SettlementDetails121.mmNettingEligibility, com.tools20022.repository.msg.SettlementDetails134.mmNettingEligibility,
-					com.tools20022.repository.msg.SettlementDetails137.mmNettingEligibility, com.tools20022.repository.msg.SettlementDetails132.mmNettingEligibility, com.tools20022.repository.msg.SettlementDetails138.mmNettingEligibility,
-					com.tools20022.repository.msg.SettlementDetails130.mmNettingEligibility, com.tools20022.repository.msg.SettlementDetails133.mmNettingEligibility, com.tools20022.repository.msg.SettlementDetails139.mmNettingEligibility);
+			derivation_lazy = () -> Arrays.asList(NettingEligibility1Choice.mmIndicator, SettlementDetails50.mmNettingEligibility, NettingEligibility2Choice.mmIndicator, SettlementDetails51.mmNettingEligibility,
+					SettlementDetails9.mmNettingEligibility, SettlementDetails17.mmNettingEligibility, SettlementDetails30.mmNettingEligibility, SettlementDetails32.mmNettingEligibility, SettlementDetails60.mmNettingEligibility,
+					SettlementDetails64.mmNettingEligibility, SettlementDetails3.mmNettingEligibility, SettlementDetails16.mmNettingEligibility, SettlementDetails31.mmNettingEligibility, SettlementDetails40.mmNettingEligibility,
+					SettlementDetails62.mmNettingEligibility, SettlementDetails63.mmNettingEligibility, SettlementDetails6.mmNettingEligibility, SettlementDetails20.mmNettingEligibility, SettlementDetails24.mmNettingEligibility,
+					SettlementDetails33.mmNettingEligibility, SettlementDetails45.mmNettingEligibility, SettlementDetails54.mmNettingEligibility, SettlementDetails1.mmNettingEligibility, SettlementDetails19.mmNettingEligibility,
+					SettlementDetails22.mmNettingEligibility, SettlementDetails35.mmNettingEligibility, SettlementDetails42.mmNettingEligibility, SettlementDetails52.mmNettingEligibility, SettlementDetails8.mmNettingEligibility,
+					SettlementDetails11.mmNettingEligibility, SettlementDetails23.mmNettingEligibility, SettlementDetails37.mmNettingEligibility, SettlementDetails44.mmNettingEligibility, SettlementDetails53.mmNettingEligibility,
+					SettlementDetails7.mmNettingEligibility, SettlementDetails12.mmNettingEligibility, SettlementDetails28.mmNettingEligibility, SettlementDetails38.mmNettingEligibility, SettlementDetails47.mmNettingEligibility,
+					SettlementDetails56.mmNettingEligibility, SettlementDetails2.mmNettingEligibility, SettlementDetails13.mmNettingEligibility, SettlementDetails27.mmNettingEligibility, SettlementDetails39.mmNettingEligibility,
+					SettlementDetails48.mmNettingEligibility, SettlementDetails57.mmNettingEligibility, NettingEligibility3Choice.mmIndicator, SettlementDetails43.mmNettingEligibility, SettlementDetails10.mmNettingEligibility,
+					SettlementDetails29.mmNettingEligibility, SettlementDetails5.mmNettingEligibility, SettlementDetails26.mmNettingEligibility, SettlementDetails65.mmNettingEligibility, SettlementDetails14.mmNettingEligibility,
+					SettlementDetails41.mmNettingEligibility, SettlementDetails61.mmNettingEligibility, SettlementDetails59.mmNettingEligibility, SettlementDetails15.mmNettingEligibility, SettlementDetails36.mmNettingEligibility,
+					SettlementDetails66.mmNettingEligibility, SettlementDetails67.mmNettingEligibility, SettlementDetails70.mmNettingEligibility, SettlementDetails68.mmNettingEligibility, SettlementDetails69.mmNettingEligibility,
+					SettlementDetails71.mmNettingEligibility, SettlementDetails72.mmNettingEligibility, SettlementDetails75.mmNettingEligibility, SettlementDetails73.mmNettingEligibility, SettlementDetails74.mmNettingEligibility,
+					SettlementDetails81.mmNettingEligibility, SettlementDetails76.mmNettingEligibility, SettlementDetails80.mmNettingEligibility, SettlementDetails78.mmNettingEligibility, SettlementDetails77.mmNettingEligibility,
+					SettlementDetails79.mmNettingEligibility, SettlementDetails87.mmNettingEligibility, SettlementDetails83.mmNettingEligibility, SettlementDetails86.mmNettingEligibility, SettlementDetails85.mmNettingEligibility,
+					SettlementDetails93.mmNettingEligibility, SettlementDetails90.mmNettingEligibility, SettlementDetails96.mmNettingEligibility, SettlementDetails97.mmNettingEligibility, SettlementDetails94.mmNettingEligibility,
+					NettingEligibility4Choice.mmIndicator, SettlementDetails95.mmNettingEligibility, SettlementDetails91.mmNettingEligibility, SettlementDetails92.mmNettingEligibility, SettlementDetails98.mmNettingEligibility,
+					SettlementDetails101.mmNettingEligibility, SettlementDetails105.mmNettingEligibility, SettlementDetails106.mmNettingEligibility, SettlementDetails104.mmNettingEligibility, SettlementDetails111.mmNettingEligibility,
+					SettlementDetails112.mmNettingEligibility, SettlementDetails110.mmNettingEligibility, SettlementDetails107.mmNettingEligibility, SettlementDetails115.mmNettingEligibility, SettlementDetails117.mmNettingEligibility,
+					SettlementDetails116.mmNettingEligibility, NettingEligibility5Choice.mmIndicator, SettlementDetails113.mmNettingEligibility, SettlementDetails128.mmNettingEligibility, SettlementDetails120.mmNettingEligibility,
+					SettlementDetails119.mmNettingEligibility, SettlementDetails126.mmNettingEligibility, SettlementDetails122.mmNettingEligibility, SettlementDetails127.mmNettingEligibility, SettlementDetails121.mmNettingEligibility,
+					SettlementDetails134.mmNettingEligibility, SettlementDetails137.mmNettingEligibility, SettlementDetails132.mmNettingEligibility, SettlementDetails138.mmNettingEligibility, SettlementDetails130.mmNettingEligibility,
+					SettlementDetails133.mmNettingEligibility, SettlementDetails139.mmNettingEligibility);
 			elementContext_lazy = () -> SecuritiesDeliveryObligation.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NettingEligibility";
 			definition = "Specifies whether the settlement transaction is eligible for netting.";
 			maxOccurs = 1;
@@ -1043,12 +1013,11 @@ public class SecuritiesDeliveryObligation extends Obligation {
 	 */
 	public static final MMBusinessAttribute mmTransferInstructionDate = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Transfer3.mmTransferDate, com.tools20022.repository.msg.Transfer6.mmTransferDate, com.tools20022.repository.msg.Transfer16.mmTransferDate,
-					com.tools20022.repository.msg.Transfer22.mmTransferDate, com.tools20022.repository.msg.Transfer5.mmTransferDate, com.tools20022.repository.msg.Transfer15.mmTransferDate,
-					com.tools20022.repository.msg.Transfer21.mmTransferDate, com.tools20022.repository.msg.Transfer32.mmTransferDate);
+			derivation_lazy = () -> Arrays.asList(Transfer3.mmTransferDate, Transfer6.mmTransferDate, Transfer16.mmTransferDate, Transfer22.mmTransferDate, Transfer5.mmTransferDate, Transfer15.mmTransferDate, Transfer21.mmTransferDate,
+					Transfer32.mmTransferDate);
 			elementContext_lazy = () -> SecuritiesDeliveryObligation.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TransferInstructionDate";
 			definition = "Date at which the instructing party places the transfer instruction.";
 			maxOccurs = 1;
@@ -1138,15 +1107,12 @@ public class SecuritiesDeliveryObligation extends Obligation {
 	 */
 	public static final MMBusinessAttribute mmTransferCurrency = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Transfer18.mmTransferCurrency, com.tools20022.repository.msg.Transfer26.mmTransferCurrency, com.tools20022.repository.msg.Transfer13.mmTransferCurrency,
-					com.tools20022.repository.msg.Transfer23.mmTransferCurrency, com.tools20022.repository.msg.Transfer11.mmTransferCurrency, com.tools20022.repository.msg.Transfer19.mmTransferCurrency,
-					com.tools20022.repository.msg.Transfer27.mmTransferCurrency, com.tools20022.repository.msg.Transfer28.mmTransferCurrency, com.tools20022.repository.msg.Transfer29.mmTransferCurrency,
-					com.tools20022.repository.msg.FinancialInstrument40.mmTransferCurrency, com.tools20022.repository.msg.FinancialInstrument39.mmTransferCurrency, com.tools20022.repository.msg.Transfer31.mmTransferCurrency,
-					com.tools20022.repository.msg.Transfer30.mmTransferCurrency, com.tools20022.repository.msg.Transfer33.mmTransferCurrency, com.tools20022.repository.msg.FinancialInstrument48.mmTransferCurrency,
-					com.tools20022.repository.msg.FinancialInstrument46.mmTransferCurrency);
+			derivation_lazy = () -> Arrays.asList(Transfer18.mmTransferCurrency, Transfer26.mmTransferCurrency, Transfer13.mmTransferCurrency, Transfer23.mmTransferCurrency, Transfer11.mmTransferCurrency, Transfer19.mmTransferCurrency,
+					Transfer27.mmTransferCurrency, Transfer28.mmTransferCurrency, Transfer29.mmTransferCurrency, FinancialInstrument40.mmTransferCurrency, FinancialInstrument39.mmTransferCurrency, Transfer31.mmTransferCurrency,
+					Transfer30.mmTransferCurrency, Transfer33.mmTransferCurrency, FinancialInstrument48.mmTransferCurrency, FinancialInstrument46.mmTransferCurrency);
 			elementContext_lazy = () -> SecuritiesDeliveryObligation.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TransferCurrency";
 			definition = "Identifies the currency to be used to transfer the holdings.";
 			maxOccurs = 1;
@@ -1196,13 +1162,13 @@ public class SecuritiesDeliveryObligation extends Obligation {
 		{
 			elementContext_lazy = () -> SecuritiesDeliveryObligation.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedCorporateAction";
 			definition = "Corporate action processes which are the source of the securities delivery obligation.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.CorporateActionProceedsDeliveryInstruction.mmSecuritiesProceedsMovement;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.CorporateActionProceedsDeliveryInstruction.mmObject();
 		}
 	};
@@ -1245,13 +1211,13 @@ public class SecuritiesDeliveryObligation extends Obligation {
 		{
 			elementContext_lazy = () -> SecuritiesDeliveryObligation.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedCollateralMovement";
 			definition = "Collateral movement which is the source of the obligation.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.CollateralMovement.mmSecuritiesCollateralMovement;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.CollateralMovement.mmObject();
 		}
 	};
@@ -1295,13 +1261,13 @@ public class SecuritiesDeliveryObligation extends Obligation {
 		{
 			elementContext_lazy = () -> SecuritiesDeliveryObligation.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SecuritiesTradeExecution";
 			definition = "Specifies the trade which originates the delivery obligation.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeExecution.mmSecuritiesDeliveryObligation;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeExecution.mmObject();
 		}
 	};
@@ -1346,12 +1312,12 @@ public class SecuritiesDeliveryObligation extends Obligation {
 		{
 			elementContext_lazy = () -> SecuritiesDeliveryObligation.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedPortfolioTransfer";
 			definition = "Portfolio transfer which is the source of the securities delivery obligation.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.PortfolioTransfer.mmSecuritiesDeliveryObligation;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.PortfolioTransfer.mmObject();
 		}
 	};
@@ -1403,15 +1369,15 @@ public class SecuritiesDeliveryObligation extends Obligation {
 	 */
 	public static final MMBusinessAssociationEnd mmSecuritiesTransfer = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionElection3.mmSecuritiesMovementDetails);
+			derivation_lazy = () -> Arrays.asList(CorporateActionElection3.mmSecuritiesMovementDetails);
 			elementContext_lazy = () -> SecuritiesDeliveryObligation.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SecuritiesTransfer";
 			definition = "Completion of a securities settlement instruction, wherein securities are delivered/debited from a securities account and received/credited to the designated securities account.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesTransfer.mmSecuritiesDeliveryObligation;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SecuritiesTransfer.mmObject();
 		}
 	};
@@ -1449,7 +1415,7 @@ public class SecuritiesDeliveryObligation extends Obligation {
 		{
 			elementContext_lazy = () -> SecuritiesDeliveryObligation.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SettlementInstructionGeneration";
 			definition = "Specifies whether the ETC provider should generate settlement instructions or not.";
 			maxOccurs = 1;
@@ -1497,10 +1463,10 @@ public class SecuritiesDeliveryObligation extends Obligation {
 	 */
 	public static final MMBusinessAttribute mmSettlementDateCode = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InstrumentLeg2.mmLegSettlementDateCode);
+			derivation_lazy = () -> Arrays.asList(InstrumentLeg2.mmLegSettlementDateCode);
 			elementContext_lazy = () -> SecuritiesDeliveryObligation.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SettlementDateCode";
 			definition = "Requested date of trade settlement, in coded form, for example, trade date +1).";
 			maxOccurs = 1;
@@ -1549,13 +1515,13 @@ public class SecuritiesDeliveryObligation extends Obligation {
 		{
 			elementContext_lazy = () -> SecuritiesDeliveryObligation.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SecuritiesLending";
 			definition = "Securities lending process which covers the delivery of securities by the seller.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesLending.mmSecuritiesDeliveryObligation;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SecuritiesLending.mmObject();
 		}
 	};
@@ -1563,20 +1529,18 @@ public class SecuritiesDeliveryObligation extends Obligation {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesDeliveryObligation";
 				definition = "Obligation for one party to deliver securities to another party.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesTransfer.mmSecuritiesDeliveryObligation, com.tools20022.repository.entity.PortfolioTransfer.mmSecuritiesDeliveryObligation,
 						com.tools20022.repository.entity.SecuritiesTradeExecution.mmSecuritiesDeliveryObligation, com.tools20022.repository.entity.CorporateActionProceedsDeliveryInstruction.mmSecuritiesProceedsMovement,
 						com.tools20022.repository.entity.SecuritiesLending.mmSecuritiesDeliveryObligation, com.tools20022.repository.entity.CollateralMovement.mmSecuritiesCollateralMovement);
 				superType_lazy = () -> Obligation.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesDeliveryObligation.mmCCPEligibility, com.tools20022.repository.entity.SecuritiesDeliveryObligation.mmNettingEligibility,
-						com.tools20022.repository.entity.SecuritiesDeliveryObligation.mmTransferInstructionDate, com.tools20022.repository.entity.SecuritiesDeliveryObligation.mmTransferCurrency,
-						com.tools20022.repository.entity.SecuritiesDeliveryObligation.mmRelatedCorporateAction, com.tools20022.repository.entity.SecuritiesDeliveryObligation.mmRelatedCollateralMovement,
-						com.tools20022.repository.entity.SecuritiesDeliveryObligation.mmSecuritiesTradeExecution, com.tools20022.repository.entity.SecuritiesDeliveryObligation.mmRelatedPortfolioTransfer,
-						com.tools20022.repository.entity.SecuritiesDeliveryObligation.mmSecuritiesTransfer, com.tools20022.repository.entity.SecuritiesDeliveryObligation.mmSettlementInstructionGeneration,
-						com.tools20022.repository.entity.SecuritiesDeliveryObligation.mmSettlementDateCode, com.tools20022.repository.entity.SecuritiesDeliveryObligation.mmSecuritiesLending);
+				element_lazy = () -> Arrays.asList(SecuritiesDeliveryObligation.mmCCPEligibility, SecuritiesDeliveryObligation.mmNettingEligibility, SecuritiesDeliveryObligation.mmTransferInstructionDate,
+						SecuritiesDeliveryObligation.mmTransferCurrency, SecuritiesDeliveryObligation.mmRelatedCorporateAction, SecuritiesDeliveryObligation.mmRelatedCollateralMovement,
+						SecuritiesDeliveryObligation.mmSecuritiesTradeExecution, SecuritiesDeliveryObligation.mmRelatedPortfolioTransfer, SecuritiesDeliveryObligation.mmSecuritiesTransfer,
+						SecuritiesDeliveryObligation.mmSettlementInstructionGeneration, SecuritiesDeliveryObligation.mmSettlementDateCode, SecuritiesDeliveryObligation.mmSecuritiesLending);
 				derivationComponent_lazy = () -> Arrays.asList(NettingEligibility1Choice.mmObject(), NettingEligibility2Choice.mmObject(), NettingEligibility3Choice.mmObject(), NettingEligibility4Choice.mmObject(),
 						NettingEligibility5Choice.mmObject());
 			}

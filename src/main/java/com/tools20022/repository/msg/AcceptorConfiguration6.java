@@ -19,7 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.catm.AcceptorConfigurationUpdateV06;
 import com.tools20022.repository.entity.AcceptorConfiguration;
+import com.tools20022.repository.entity.System;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -120,14 +124,14 @@ public class AcceptorConfiguration6 {
 	 */
 	public static final MMMessageAssociationEnd mmTerminalManagerIdentification = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.System.mmSystemIdentification;
+			businessElementTrace_lazy = () -> System.mmSystemIdentification;
 			componentContext_lazy = () -> AcceptorConfiguration6.mmObject();
 			isDerived = false;
 			xmlTag = "TermnlMgrId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TerminalManagerIdentification";
 			definition = "Identification of the terminal management system (TMS) sending the acceptor parameters.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AcceptorConfiguration5.mmTerminalManagerIdentification;
+			previousVersion_lazy = () -> AcceptorConfiguration5.mmTerminalManagerIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -175,10 +179,10 @@ public class AcceptorConfiguration6 {
 			componentContext_lazy = () -> AcceptorConfiguration6.mmObject();
 			isDerived = false;
 			xmlTag = "DataSet";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DataSet";
 			definition = "Data set containing the acceptor parameters of a point of interaction (POI).";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AcceptorConfiguration5.mmDataSet;
+			previousVersion_lazy = () -> AcceptorConfiguration5.mmDataSet;
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.TerminalManagementDataSet20.mmObject();
@@ -188,11 +192,11 @@ public class AcceptorConfiguration6 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcceptorConfiguration6.mmTerminalManagerIdentification, com.tools20022.repository.msg.AcceptorConfiguration6.mmDataSet);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.catm.AcceptorConfigurationUpdateV06.mmAcceptorConfiguration);
+				messageElement_lazy = () -> Arrays.asList(AcceptorConfiguration6.mmTerminalManagerIdentification, AcceptorConfiguration6.mmDataSet);
+				messageBuildingBlock_lazy = () -> Arrays.asList(AcceptorConfigurationUpdateV06.mmAcceptorConfiguration);
 				trace_lazy = () -> AcceptorConfiguration.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AcceptorConfiguration6";
 				definition = "Acceptor configuration to be downloaded from the terminal management system.";
 				previousVersion_lazy = () -> AcceptorConfiguration5.mmObject();

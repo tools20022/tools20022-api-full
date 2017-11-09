@@ -19,8 +19,10 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -92,7 +94,7 @@ public class MarketSpecificAttribute1 {
 			componentContext_lazy = () -> MarketSpecificAttribute1.mmObject();
 			isDerived = false;
 			xmlTag = "Nm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Name";
 			definition = "Specifies the name of the market-specific attribute.";
 			maxOccurs = 1;
@@ -133,7 +135,7 @@ public class MarketSpecificAttribute1 {
 			componentContext_lazy = () -> MarketSpecificAttribute1.mmObject();
 			isDerived = false;
 			xmlTag = "Val";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Value";
 			definition = "Specifies the value of the market-specific attribute.";
 			maxOccurs = 1;
@@ -145,9 +147,9 @@ public class MarketSpecificAttribute1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MarketSpecificAttribute1.mmName, com.tools20022.repository.msg.MarketSpecificAttribute1.mmValue);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(MarketSpecificAttribute1.mmName, MarketSpecificAttribute1.mmValue);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "MarketSpecificAttribute1";
 				definition = "Defines additional attributes for party reference data.";
 			}

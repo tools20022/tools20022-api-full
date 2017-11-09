@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.DataTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -79,7 +81,7 @@ public class DataType1Code extends DataTypeCode {
 	 */
 	public static final MMCode mmExerciseData = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExerciseData";
 			owner_lazy = () -> DataType1Code.mmObject();
 		}
@@ -102,7 +104,7 @@ public class DataType1Code extends DataTypeCode {
 	 */
 	public static final MMCode mmTradingData = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradingData";
 			owner_lazy = () -> DataType1Code.mmObject();
 		}
@@ -111,11 +113,11 @@ public class DataType1Code extends DataTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DataType1Code";
 				definition = "Type of data to indicate whether a trade is an option or resulted by an option exercise.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DataType1Code.mmExerciseData, com.tools20022.repository.codeset.DataType1Code.mmTradingData);
+				code_lazy = () -> Arrays.asList(DataType1Code.mmExerciseData, DataType1Code.mmTradingData);
 				trace_lazy = () -> DataTypeCode.mmObject();
 			}
 		});

@@ -19,8 +19,10 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.TradeIdentification;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -103,11 +105,11 @@ public class MatchingSystemReference1Choice {
 	 */
 	public static final MMMessageAttribute mmMatchingSystemUniqueReference = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradeIdentification.mmMatchingReference;
+			businessElementTrace_lazy = () -> TradeIdentification.mmMatchingReference;
 			componentContext_lazy = () -> MatchingSystemReference1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "MtchgSysUnqRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MatchingSystemUniqueReference";
 			definition = "Reference to the unique system identification assigned to the trade  by the central matching system.";
 			maxOccurs = 1;
@@ -153,11 +155,11 @@ public class MatchingSystemReference1Choice {
 	 */
 	public static final MMMessageAttribute mmRelatedReference = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradeIdentification.mmIdentification;
+			businessElementTrace_lazy = () -> TradeIdentification.mmIdentification;
 			componentContext_lazy = () -> MatchingSystemReference1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "RltdRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedReference";
 			definition = "Refers to the identification of a previous event in the life of a trade which is amended or cancelled. ";
 			maxOccurs = 1;
@@ -169,10 +171,10 @@ public class MatchingSystemReference1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.MatchingSystemReference1Choice.mmMatchingSystemUniqueReference, com.tools20022.repository.choice.MatchingSystemReference1Choice.mmRelatedReference);
+				messageElement_lazy = () -> Arrays.asList(MatchingSystemReference1Choice.mmMatchingSystemUniqueReference, MatchingSystemReference1Choice.mmRelatedReference);
 				trace_lazy = () -> TradeIdentification.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MatchingSystemReference1Choice";
 				definition = "Choice between a matching system unique identification or the related reference. ";
 			}

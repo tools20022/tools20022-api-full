@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CRSFormTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -95,7 +97,7 @@ public class CRSFormType1Code extends CRSFormTypeCode {
 	 */
 	public static final MMCode mmCertificateIdentificationGovernment = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CertificateIdentificationGovernment";
 			owner_lazy = () -> CRSFormType1Code.mmObject();
 		}
@@ -118,7 +120,7 @@ public class CRSFormType1Code extends CRSFormTypeCode {
 	 */
 	public static final MMCode mmCertificateOfResidence = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CertificateOfResidence";
 			owner_lazy = () -> CRSFormType1Code.mmObject();
 		}
@@ -141,7 +143,7 @@ public class CRSFormType1Code extends CRSFormTypeCode {
 	 */
 	public static final MMCode mmOfficialDocumentGovernmentForEntity = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OfficialDocumentGovernmentForEntity";
 			owner_lazy = () -> CRSFormType1Code.mmObject();
 		}
@@ -164,7 +166,7 @@ public class CRSFormType1Code extends CRSFormTypeCode {
 	 */
 	public static final MMCode mmOtherDocumentOrReport = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherDocumentOrReport";
 			owner_lazy = () -> CRSFormType1Code.mmObject();
 		}
@@ -187,7 +189,7 @@ public class CRSFormType1Code extends CRSFormTypeCode {
 	 */
 	public static final MMCode mmPublicInformationEntity = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PublicInformationEntity";
 			owner_lazy = () -> CRSFormType1Code.mmObject();
 		}
@@ -210,7 +212,7 @@ public class CRSFormType1Code extends CRSFormTypeCode {
 	 */
 	public static final MMCode mmSelfCertificationSeparateDocument = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SelfCertificationSeparateDocument";
 			owner_lazy = () -> CRSFormType1Code.mmObject();
 		}
@@ -233,7 +235,7 @@ public class CRSFormType1Code extends CRSFormTypeCode {
 	 */
 	public static final MMCode mmSelfCertificationWithAccountOpeningContract = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SelfCertificationWithAccountOpeningContract";
 			owner_lazy = () -> CRSFormType1Code.mmObject();
 		}
@@ -256,7 +258,7 @@ public class CRSFormType1Code extends CRSFormTypeCode {
 	 */
 	public static final MMCode mmStandardised = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Standardised";
 			owner_lazy = () -> CRSFormType1Code.mmObject();
 		}
@@ -265,14 +267,13 @@ public class CRSFormType1Code extends CRSFormTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CRSFormType1Code";
 				definition = "Specifies the type of Common Reporting Standard  (CRS) form.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CRSFormType1Code.mmCertificateIdentificationGovernment, com.tools20022.repository.codeset.CRSFormType1Code.mmCertificateOfResidence,
-						com.tools20022.repository.codeset.CRSFormType1Code.mmOfficialDocumentGovernmentForEntity, com.tools20022.repository.codeset.CRSFormType1Code.mmOtherDocumentOrReport,
-						com.tools20022.repository.codeset.CRSFormType1Code.mmPublicInformationEntity, com.tools20022.repository.codeset.CRSFormType1Code.mmSelfCertificationSeparateDocument,
-						com.tools20022.repository.codeset.CRSFormType1Code.mmSelfCertificationWithAccountOpeningContract, com.tools20022.repository.codeset.CRSFormType1Code.mmStandardised);
+				code_lazy = () -> Arrays.asList(CRSFormType1Code.mmCertificateIdentificationGovernment, CRSFormType1Code.mmCertificateOfResidence, CRSFormType1Code.mmOfficialDocumentGovernmentForEntity,
+						CRSFormType1Code.mmOtherDocumentOrReport, CRSFormType1Code.mmPublicInformationEntity, CRSFormType1Code.mmSelfCertificationSeparateDocument, CRSFormType1Code.mmSelfCertificationWithAccountOpeningContract,
+						CRSFormType1Code.mmStandardised);
 				trace_lazy = () -> CRSFormTypeCode.mmObject();
 			}
 		});

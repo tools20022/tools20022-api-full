@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CollateralCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -76,7 +78,7 @@ public class Collateral1Code extends CollateralCode {
 	 */
 	public static final MMCode mmCollateral = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Collateral";
 			owner_lazy = () -> Collateral1Code.mmObject();
 		}
@@ -99,7 +101,7 @@ public class Collateral1Code extends CollateralCode {
 	 */
 	public static final MMCode mmNotCollateral = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotCollateral";
 			owner_lazy = () -> Collateral1Code.mmObject();
 		}
@@ -108,11 +110,11 @@ public class Collateral1Code extends CollateralCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Collateral1Code";
 				definition = "Specifies whether the item is used as collateral.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Collateral1Code.mmCollateral, com.tools20022.repository.codeset.Collateral1Code.mmNotCollateral);
+				code_lazy = () -> Arrays.asList(Collateral1Code.mmCollateral, Collateral1Code.mmNotCollateral);
 				trace_lazy = () -> CollateralCode.mmObject();
 			}
 		});

@@ -20,8 +20,12 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.seev.AgentCAMovementInstructionV01;
 import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
+import com.tools20022.repository.entity.CashEntry;
 import com.tools20022.repository.entity.Payment;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -105,11 +109,11 @@ public class CashMovement2 {
 	 */
 	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.mmAmount;
+			businessElementTrace_lazy = () -> Payment.mmAmount;
 			componentContext_lazy = () -> CashMovement2.mmObject();
 			isDerived = false;
 			xmlTag = "Amt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Cash amount.";
 			maxOccurs = 1;
@@ -151,11 +155,11 @@ public class CashMovement2 {
 	 */
 	public static final MMMessageAssociationEnd mmAccountDetails = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashEntry.mmCashAccount;
+			businessElementTrace_lazy = () -> CashEntry.mmCashAccount;
 			componentContext_lazy = () -> CashMovement2.mmObject();
 			isDerived = false;
 			xmlTag = "AcctDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountDetails";
 			definition = "Provides information about the account which is debited/credited.";
 			maxOccurs = 2;
@@ -168,11 +172,11 @@ public class CashMovement2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashMovement2.mmAmount, com.tools20022.repository.msg.CashMovement2.mmAccountDetails);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.AgentCAMovementInstructionV01.mmUnderlyingCashMovementDetails);
+				messageElement_lazy = () -> Arrays.asList(CashMovement2.mmAmount, CashMovement2.mmAccountDetails);
+				messageBuildingBlock_lazy = () -> Arrays.asList(AgentCAMovementInstructionV01.mmUnderlyingCashMovementDetails);
 				trace_lazy = () -> Payment.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CashMovement2";
 				definition = "Provides information about the cash movement.";
 			}

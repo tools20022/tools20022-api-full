@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.SignatureTypeV2Code;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -82,7 +84,7 @@ public class SignatureType2Code extends SignatureTypeV2Code {
 	 */
 	public static final MMCode mmDigital = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Digital";
 			owner_lazy = () -> SignatureType2Code.mmObject();
 		}
@@ -105,7 +107,7 @@ public class SignatureType2Code extends SignatureTypeV2Code {
 	 */
 	public static final MMCode mmElectronic = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Electronic";
 			owner_lazy = () -> SignatureType2Code.mmObject();
 		}
@@ -128,7 +130,7 @@ public class SignatureType2Code extends SignatureTypeV2Code {
 	 */
 	public static final MMCode mmNone = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "None";
 			owner_lazy = () -> SignatureType2Code.mmObject();
 		}
@@ -151,7 +153,7 @@ public class SignatureType2Code extends SignatureTypeV2Code {
 	 */
 	public static final MMCode mmOriginal = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Original";
 			owner_lazy = () -> SignatureType2Code.mmObject();
 		}
@@ -160,12 +162,11 @@ public class SignatureType2Code extends SignatureTypeV2Code {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SignatureType2Code";
 				definition = "Type of signature.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SignatureType2Code.mmDigital, com.tools20022.repository.codeset.SignatureType2Code.mmElectronic, com.tools20022.repository.codeset.SignatureType2Code.mmNone,
-						com.tools20022.repository.codeset.SignatureType2Code.mmOriginal);
+				code_lazy = () -> Arrays.asList(SignatureType2Code.mmDigital, SignatureType2Code.mmElectronic, SignatureType2Code.mmNone, SignatureType2Code.mmOriginal);
 				trace_lazy = () -> SignatureTypeV2Code.mmObject();
 			}
 		});

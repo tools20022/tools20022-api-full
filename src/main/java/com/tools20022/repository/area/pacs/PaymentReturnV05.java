@@ -20,6 +20,7 @@ package com.tools20022.repository.area.pacs;
 import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.PaymentsClearingandSettlementArchive;
 import com.tools20022.repository.msg.GroupHeader54;
 import com.tools20022.repository.msg.OriginalGroupHeader2;
@@ -53,6 +54,9 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code pacs.004.001.05}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.PaymentsClearingandSettlementArchive
@@ -85,9 +89,6 @@ import java.util.List;
  * PaymentReturnV05.mmSupplementaryData}</li>
  * </ul>
  * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code pacs.004.001.05}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -156,11 +157,11 @@ public class PaymentReturnV05 {
 	public static final MMMessageBuildingBlock mmGroupHeader = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "GrpHdr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GroupHeader";
 			definition = "Set of characteristics shared by all individual transactions included in the message.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.pacs.PaymentReturnV06.mmGroupHeader);
-			previousVersion_lazy = () -> com.tools20022.repository.area.pacs.PaymentReturnV04.mmGroupHeader;
+			nextVersions_lazy = () -> Arrays.asList(PaymentReturnV06.mmGroupHeader);
+			previousVersion_lazy = () -> PaymentReturnV04.mmGroupHeader;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GroupHeader54.mmObject();
@@ -209,11 +210,11 @@ public class PaymentReturnV05 {
 	public static final MMMessageBuildingBlock mmOriginalGroupInformation = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "OrgnlGrpInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalGroupInformation";
 			definition = "Information concerning the original group of transactions, to which the message refers.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.pacs.PaymentReturnV06.mmOriginalGroupInformation);
-			previousVersion_lazy = () -> com.tools20022.repository.area.pacs.PaymentReturnV04.mmOriginalGroupInformation;
+			nextVersions_lazy = () -> Arrays.asList(PaymentReturnV06.mmOriginalGroupInformation);
+			previousVersion_lazy = () -> PaymentReturnV04.mmOriginalGroupInformation;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> OriginalGroupHeader2.mmObject();
@@ -262,11 +263,11 @@ public class PaymentReturnV05 {
 	public static final MMMessageBuildingBlock mmTransactionInformation = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "TxInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionInformation";
 			definition = "Information concerning the original transactions, to which the return message refers.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.pacs.PaymentReturnV06.mmTransactionInformation);
-			previousVersion_lazy = () -> com.tools20022.repository.area.pacs.PaymentReturnV04.mmTransactionInformation;
+			nextVersions_lazy = () -> Arrays.asList(PaymentReturnV06.mmTransactionInformation);
+			previousVersion_lazy = () -> PaymentReturnV04.mmTransactionInformation;
 			minOccurs = 0;
 			complexType_lazy = () -> PaymentTransaction50.mmObject();
 		}
@@ -314,11 +315,11 @@ public class PaymentReturnV05 {
 	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SplmtryData";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryData";
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.pacs.PaymentReturnV06.mmSupplementaryData);
-			previousVersion_lazy = () -> com.tools20022.repository.area.pacs.PaymentReturnV04.mmSupplementaryData;
+			nextVersions_lazy = () -> Arrays.asList(PaymentReturnV06.mmSupplementaryData);
+			previousVersion_lazy = () -> PaymentReturnV04.mmSupplementaryData;
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
@@ -327,7 +328,7 @@ public class PaymentReturnV05 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PaymentReturnV05";
 				definition = "Scope\r\nThe PaymentReturn message is sent by an agent to the previous agent in the payment chain to undo a payment previously settled.\r\nUsage\r\nThe PaymentReturn message is exchanged between agents to return funds after settlement of credit transfer instructions (i.e. FIToFICustomerCreditTransfer message and FinancialInstitutionCreditTransfer message) or direct debit instructions (FIToFICustomerDirectDebit message).\r\nThe PaymentReturn message should not be used between agents and non-financial institution customers. Non-financial institution customers will be informed about a debit or a credit on their account(s) through a BankToCustomerDebitCreditNotification message ('notification') and/or BankToCustomerAccountReport/BankToCustomerStatement message ('statement').\r\nThe PaymentReturn message can be used to return single instructions or multiple instructions from one or different files.\r\nThe PaymentReturn message can be used in domestic and cross-border scenarios.\r\nThe PaymentReturn message refers to the original instruction(s) by means of references only or by means of references and a set of elements from the original instruction.";
 				nextVersions_lazy = () -> Arrays.asList(PaymentReturnV06.mmObject());
@@ -336,8 +337,7 @@ public class PaymentReturnV05 {
 				rootElement = "Document";
 				xmlTag = "PmtRtr";
 				businessArea_lazy = () -> PaymentsClearingandSettlementArchive.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.pacs.PaymentReturnV05.mmGroupHeader, com.tools20022.repository.area.pacs.PaymentReturnV05.mmOriginalGroupInformation,
-						com.tools20022.repository.area.pacs.PaymentReturnV05.mmTransactionInformation, com.tools20022.repository.area.pacs.PaymentReturnV05.mmSupplementaryData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(PaymentReturnV05.mmGroupHeader, PaymentReturnV05.mmOriginalGroupInformation, PaymentReturnV05.mmTransactionInformation, PaymentReturnV05.mmSupplementaryData);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "pacs";

@@ -19,9 +19,13 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.AccountIdentificationOrNameChoice;
 import com.tools20022.repository.choice.FinancialInstitutionIdentification4Choice;
+import com.tools20022.repository.entity.Account;
 import com.tools20022.repository.entity.CashSettlement;
+import com.tools20022.repository.entity.Organisation;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -103,11 +107,11 @@ public class SettlementTerms1 {
 	 */
 	public static final MMMessageAssociationEnd mmFinalAgent = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Organisation.mmOrganisationIdentification;
+			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> SettlementTerms1.mmObject();
 			isDerived = false;
 			xmlTag = "FnlAgt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinalAgent";
 			definition = "Financial institution that receives the payment transaction on behalf of an account owner, and posts the transaction into the account.";
 			maxOccurs = 1;
@@ -151,11 +155,11 @@ public class SettlementTerms1 {
 	 */
 	public static final MMMessageAssociationEnd mmBeneficiaryAccount = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.mmIdentification;
+			businessElementTrace_lazy = () -> Account.mmIdentification;
 			componentContext_lazy = () -> SettlementTerms1.mmObject();
 			isDerived = false;
 			xmlTag = "BnfcryAcct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BeneficiaryAccount";
 			definition = "Account to be credited as a result of an instruction.";
 			maxOccurs = 1;
@@ -168,10 +172,10 @@ public class SettlementTerms1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SettlementTerms1.mmFinalAgent, com.tools20022.repository.msg.SettlementTerms1.mmBeneficiaryAccount);
+				messageElement_lazy = () -> Arrays.asList(SettlementTerms1.mmFinalAgent, SettlementTerms1.mmBeneficiaryAccount);
 				trace_lazy = () -> CashSettlement.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SettlementTerms1";
 				definition = "Specifies the beneficiary's account information for the settlement of a purchase of goods or services.";
 			}

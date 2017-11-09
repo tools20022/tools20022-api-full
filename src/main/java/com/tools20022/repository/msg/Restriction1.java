@@ -19,9 +19,12 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.CodeOrProprietary1Choice;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.entity.AccountRestriction;
+import com.tools20022.repository.entity.DateTimePeriod;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -102,7 +105,7 @@ public class Restriction1 {
 			componentContext_lazy = () -> Restriction1.mmObject();
 			isDerived = false;
 			xmlTag = "RstrctnTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RestrictionType";
 			definition = "Type of the restriction.";
 			maxOccurs = 1;
@@ -144,11 +147,11 @@ public class Restriction1 {
 	 */
 	public static final MMMessageAttribute mmValidFrom = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmFromDateTime;
+			businessElementTrace_lazy = () -> DateTimePeriod.mmFromDateTime;
 			componentContext_lazy = () -> Restriction1.mmObject();
 			isDerived = false;
 			xmlTag = "VldFr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValidFrom";
 			definition = "Date from when the restriction is valid.";
 			maxOccurs = 1;
@@ -190,11 +193,11 @@ public class Restriction1 {
 	 */
 	public static final MMMessageAttribute mmValidUntil = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmToDateTime;
+			businessElementTrace_lazy = () -> DateTimePeriod.mmToDateTime;
 			componentContext_lazy = () -> Restriction1.mmObject();
 			isDerived = false;
 			xmlTag = "VldUntil";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValidUntil";
 			definition = "Date until when the restriction is valid.";
 			maxOccurs = 1;
@@ -206,10 +209,10 @@ public class Restriction1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Restriction1.mmRestrictionType, com.tools20022.repository.msg.Restriction1.mmValidFrom, com.tools20022.repository.msg.Restriction1.mmValidUntil);
+				messageElement_lazy = () -> Arrays.asList(Restriction1.mmRestrictionType, Restriction1.mmValidFrom, Restriction1.mmValidUntil);
 				trace_lazy = () -> AccountRestriction.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Restriction1";
 				definition = "Restriction on capability or operations allowed.";
 			}

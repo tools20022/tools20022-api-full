@@ -20,8 +20,12 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CountryCode;
+import com.tools20022.repository.entity.Country;
+import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.entity.TradingMarket;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -98,11 +102,11 @@ public class LocalMarketAnnex {
 	 */
 	public static final MMMessageAttribute mmCountry = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Country.mmCode;
+			businessElementTrace_lazy = () -> Country.mmCode;
 			componentContext_lazy = () -> LocalMarketAnnex.mmObject();
 			isDerived = false;
 			xmlTag = "Ctry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Country";
 			definition = "Country in which the processing characteristic applies.";
 			minOccurs = 1;
@@ -144,11 +148,11 @@ public class LocalMarketAnnex {
 	 */
 	public static final MMMessageAssociationEnd mmLocalOrderDesk = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmContactPoint;
+			businessElementTrace_lazy = () -> Party.mmContactPoint;
 			componentContext_lazy = () -> LocalMarketAnnex.mmObject();
 			isDerived = false;
 			xmlTag = "LclOrdrDsk";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LocalOrderDesk";
 			definition = "Contact information for the local fund order desk.";
 			maxOccurs = 1;
@@ -161,10 +165,10 @@ public class LocalMarketAnnex {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LocalMarketAnnex.mmCountry, com.tools20022.repository.msg.LocalMarketAnnex.mmLocalOrderDesk);
+				messageElement_lazy = () -> Arrays.asList(LocalMarketAnnex.mmCountry, LocalMarketAnnex.mmLocalOrderDesk);
 				trace_lazy = () -> TradingMarket.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "LocalMarketAnnex";
 				definition = "Processing information specific to a local market.";
 			}

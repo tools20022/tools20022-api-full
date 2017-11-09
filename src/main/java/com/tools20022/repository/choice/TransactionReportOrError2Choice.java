@@ -19,6 +19,8 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.ErrorHandling4;
 import com.tools20022.repository.msg.Transactions6;
 import java.util.Arrays;
@@ -105,10 +107,10 @@ public class TransactionReportOrError2Choice {
 			componentContext_lazy = () -> TransactionReportOrError2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "BizRpt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BusinessReport";
 			definition = "Reports on payment transactions.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.TransactionReportOrError1Choice.mmBusinessReport;
+			previousVersion_lazy = () -> TransactionReportOrError1Choice.mmBusinessReport;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -155,10 +157,10 @@ public class TransactionReportOrError2Choice {
 			componentContext_lazy = () -> TransactionReportOrError2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "OprlErr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OperationalError";
 			definition = "Indicates that an operational error has been issued during the processing of the related request.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.TransactionReportOrError1Choice.mmOperationalError;
+			previousVersion_lazy = () -> TransactionReportOrError1Choice.mmOperationalError;
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ErrorHandling4.mmObject();
@@ -168,9 +170,9 @@ public class TransactionReportOrError2Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.TransactionReportOrError2Choice.mmBusinessReport, com.tools20022.repository.choice.TransactionReportOrError2Choice.mmOperationalError);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(TransactionReportOrError2Choice.mmBusinessReport, TransactionReportOrError2Choice.mmOperationalError);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TransactionReportOrError2Choice";
 				definition = "Choice between transactions and booked entries held at the transaction administrator or an operational error when the requested data cannot be retrieved.";
 				previousVersion_lazy = () -> TransactionReportOrError1Choice.mmObject();

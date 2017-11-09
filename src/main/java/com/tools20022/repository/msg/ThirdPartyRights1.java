@@ -20,8 +20,11 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.PartyIdentification70Choice;
 import com.tools20022.repository.datatype.*;
+import com.tools20022.repository.entity.PartyIdentificationInformation;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -101,7 +104,7 @@ public class ThirdPartyRights1 {
 			componentContext_lazy = () -> ThirdPartyRights1.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Type of third party right.";
 			maxOccurs = 1;
@@ -142,7 +145,7 @@ public class ThirdPartyRights1 {
 			componentContext_lazy = () -> ThirdPartyRights1.mmObject();
 			isDerived = false;
 			xmlTag = "DtTm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DateTime";
 			definition = "Timestamp for the third party right.";
 			maxOccurs = 1;
@@ -183,7 +186,7 @@ public class ThirdPartyRights1 {
 			componentContext_lazy = () -> ThirdPartyRights1.mmObject();
 			isDerived = false;
 			xmlTag = "Hldr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Holder";
 			definition = "Party that holds the third party right.";
 			maxOccurs = 1;
@@ -232,11 +235,11 @@ public class ThirdPartyRights1 {
 	 */
 	public static final MMMessageAttribute mmLegalEntityIdentifier = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.mmLEI;
+			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmLEI;
 			componentContext_lazy = () -> ThirdPartyRights1.mmObject();
 			isDerived = false;
 			xmlTag = "LglNttyIdr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LegalEntityIdentifier";
 			definition = "Identification of the holder with a Legal Entity Identifier. This is a code allocated to a party as described in ISO 17442 \"Financial Services - Legal Entity Identifier (LEI)\".";
 			maxOccurs = 1;
@@ -278,7 +281,7 @@ public class ThirdPartyRights1 {
 			componentContext_lazy = () -> ThirdPartyRights1.mmObject();
 			isDerived = false;
 			xmlTag = "Amt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Amount of the third party right.";
 			maxOccurs = 1;
@@ -319,7 +322,7 @@ public class ThirdPartyRights1 {
 			componentContext_lazy = () -> ThirdPartyRights1.mmObject();
 			isDerived = false;
 			xmlTag = "Desc";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Description";
 			definition = "Description of the third party right.";
 			maxOccurs = 1;
@@ -331,10 +334,10 @@ public class ThirdPartyRights1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ThirdPartyRights1.mmType, com.tools20022.repository.msg.ThirdPartyRights1.mmDateTime, com.tools20022.repository.msg.ThirdPartyRights1.mmHolder,
-						com.tools20022.repository.msg.ThirdPartyRights1.mmLegalEntityIdentifier, com.tools20022.repository.msg.ThirdPartyRights1.mmAmount, com.tools20022.repository.msg.ThirdPartyRights1.mmDescription);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(ThirdPartyRights1.mmType, ThirdPartyRights1.mmDateTime, ThirdPartyRights1.mmHolder, ThirdPartyRights1.mmLegalEntityIdentifier, ThirdPartyRights1.mmAmount,
+						ThirdPartyRights1.mmDescription);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ThirdPartyRights1";
 				definition = "Information about third party rights.";
 			}

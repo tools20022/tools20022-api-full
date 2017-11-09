@@ -20,9 +20,12 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.IdentificationSource1Choice;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.entity.GenericIdentification;
 import com.tools20022.repository.entity.SecuritiesIdentification;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -112,14 +115,14 @@ public class AlternateSecurityIdentification7 {
 	 */
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmIdentification;
+			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> AlternateSecurityIdentification7.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Unique and unambiguous identifier of a security.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AlternateSecurityIdentification1.mmIdentification;
+			previousVersion_lazy = () -> AlternateSecurityIdentification1.mmIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -163,11 +166,11 @@ public class AlternateSecurityIdentification7 {
 	 */
 	public static final MMMessageAssociationEnd mmIdentificationSource = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesIdentification.mmGenericIdentification;
+			businessElementTrace_lazy = () -> SecuritiesIdentification.mmGenericIdentification;
 			componentContext_lazy = () -> AlternateSecurityIdentification7.mmObject();
 			isDerived = false;
 			xmlTag = "IdSrc";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IdentificationSource";
 			definition = "Source of the identification, that is, domestic (national) or proprietary.";
 			maxOccurs = 1;
@@ -180,10 +183,10 @@ public class AlternateSecurityIdentification7 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AlternateSecurityIdentification7.mmIdentification, com.tools20022.repository.msg.AlternateSecurityIdentification7.mmIdentificationSource);
+				messageElement_lazy = () -> Arrays.asList(AlternateSecurityIdentification7.mmIdentification, AlternateSecurityIdentification7.mmIdentificationSource);
 				trace_lazy = () -> SecuritiesIdentification.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AlternateSecurityIdentification7";
 				definition = "Proprietary or domestic identification scheme that uniquely identifies a security.";
 				previousVersion_lazy = () -> AlternateSecurityIdentification1.mmObject();

@@ -17,16 +17,17 @@
 
 package com.tools20022.repository.msg;
 
-import com.tools20022.metamodel.MMMessageAssociationEnd;
-import com.tools20022.metamodel.MMMessageAttribute;
-import com.tools20022.metamodel.MMMessageComponent;
-import com.tools20022.metamodel.MMXor;
+import com.tools20022.metamodel.*;
+import com.tools20022.repository.area.setr.*;
 import com.tools20022.repository.choice.PartyIdentification2Choice;
 import com.tools20022.repository.codeset.InvestmentFundRole2Code;
 import com.tools20022.repository.codeset.OrderOriginatorEligibility1Code;
 import com.tools20022.repository.codeset.TradingCapacity2Code;
 import com.tools20022.repository.datatype.Extended350Code;
+import com.tools20022.repository.entity.InvestorRole;
+import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.entity.TradePartyRole;
+import com.tools20022.repository.GeneratedRepository;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -167,14 +168,14 @@ public class Intermediary9 {
 	 */
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> Intermediary9.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Unique and unambiguous identifier of the intermediary.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Intermediary39.mmIdentification);
+			nextVersions_lazy = () -> Arrays.asList(Intermediary39.mmIdentification);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> PartyIdentification2Choice.mmObject();
@@ -222,14 +223,14 @@ public class Intermediary9 {
 	 */
 	public static final MMMessageAssociationEnd mmAccount = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradePartyRole.mmAccount;
+			businessElementTrace_lazy = () -> TradePartyRole.mmAccount;
 			componentContext_lazy = () -> Intermediary9.mmObject();
 			isDerived = false;
 			xmlTag = "Acct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Account";
 			definition = "Business relationship between two entities; one entity is the account owner, the other entity is the account servicer.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Intermediary39.mmAccount);
+			nextVersions_lazy = () -> Arrays.asList(Intermediary39.mmAccount);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -283,14 +284,14 @@ public class Intermediary9 {
 	 */
 	public static final MMMessageAttribute mmOrderOriginatorEligibility = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestorRole.mmCapacity;
+			businessElementTrace_lazy = () -> InvestorRole.mmCapacity;
 			componentContext_lazy = () -> Intermediary9.mmObject();
 			isDerived = false;
 			xmlTag = "OrdrOrgtrElgblty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrderOriginatorEligibility";
 			definition = "Counterparties eligibility as defined by article 24 of the EU MiFID Directive applicable to transactions executed by investment firms for eligible counterparties.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Intermediary39.mmOrderOriginatorEligibility);
+			nextVersions_lazy = () -> Arrays.asList(Intermediary39.mmOrderOriginatorEligibility);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> OrderOriginatorEligibility1Code.mmObject();
@@ -339,14 +340,14 @@ public class Intermediary9 {
 	 */
 	public static final MMMessageAttribute mmTradingPartyCapacity = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradePartyRole.mmTradingPartyCapacity;
+			businessElementTrace_lazy = () -> TradePartyRole.mmTradingPartyCapacity;
 			componentContext_lazy = () -> Intermediary9.mmObject();
 			isDerived = false;
 			xmlTag = "TradgPtyCpcty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradingPartyCapacity";
 			definition = "Capacity of the party executing an order.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Intermediary39.mmTradingPartyCapacity);
+			nextVersions_lazy = () -> Arrays.asList(Intermediary39.mmTradingPartyCapacity);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> TradingCapacity2Code.mmObject();
@@ -398,10 +399,10 @@ public class Intermediary9 {
 			componentContext_lazy = () -> Intermediary9.mmObject();
 			isDerived = false;
 			xmlTag = "Role";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Role";
 			definition = "Function performed by the intermediary.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Intermediary39.mmRole);
+			nextVersions_lazy = () -> Arrays.asList(Intermediary39.mmRole);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> InvestmentFundRole2Code.mmObject();
@@ -446,7 +447,7 @@ public class Intermediary9 {
 			componentContext_lazy = () -> Intermediary9.mmObject();
 			isDerived = false;
 			xmlTag = "XtndedRole";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExtendedRole";
 			definition = "Function performed by the intermediary.";
 			maxOccurs = 1;
@@ -459,6 +460,9 @@ public class Intermediary9 {
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
+	 * messageComponent} =
+	 * {@linkplain com.tools20022.repository.msg.Intermediary9 Intermediary9}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getImpactedElements
 	 * impactedElements} =
 	 * <ul>
@@ -469,9 +473,6 @@ public class Intermediary9 {
 	 * Intermediary9.mmExtendedRole}</li>
 	 * </ul>
 	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
-	 * messageComponent} =
-	 * {@linkplain com.tools20022.repository.msg.Intermediary9 Intermediary9}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -486,28 +487,25 @@ public class Intermediary9 {
 	 */
 	public static final MMXor mmRoleOrExtendedRoleRule = new MMXor() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RoleOrExtendedRoleRule";
 			definition = "Either Role or ExtendedRole may be present, but not both.";
 			messageComponent_lazy = () -> Intermediary9.mmObject();
-			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Intermediary9.mmRole, com.tools20022.repository.msg.Intermediary9.mmExtendedRole);
+			impactedElements_lazy = () -> Arrays.asList(Intermediary9.mmRole, Intermediary9.mmExtendedRole);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Intermediary9.mmIdentification, com.tools20022.repository.msg.Intermediary9.mmAccount,
-						com.tools20022.repository.msg.Intermediary9.mmOrderOriginatorEligibility, com.tools20022.repository.msg.Intermediary9.mmTradingPartyCapacity, com.tools20022.repository.msg.Intermediary9.mmRole,
-						com.tools20022.repository.msg.Intermediary9.mmExtendedRole);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.RedemptionBulkOrderConfirmationAmendmentV01.mmRelatedPartyDetails,
-						com.tools20022.repository.area.setr.RedemptionBulkOrderConfirmationV03.mmRelatedPartyDetails, com.tools20022.repository.area.setr.RedemptionOrderConfirmationAmendmentV01.mmRelatedPartyDetails,
-						com.tools20022.repository.area.setr.RedemptionOrderConfirmationV03.mmRelatedPartyDetails, com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationAmendmentV01.mmRelatedPartyDetails,
-						com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationV03.mmRelatedPartyDetails, com.tools20022.repository.area.setr.SubscriptionOrderConfirmationAmendmentV01.mmRelatedPartyDetails,
-						com.tools20022.repository.area.setr.SubscriptionOrderConfirmationV03.mmRelatedPartyDetails);
+				messageElement_lazy = () -> Arrays.asList(Intermediary9.mmIdentification, Intermediary9.mmAccount, Intermediary9.mmOrderOriginatorEligibility, Intermediary9.mmTradingPartyCapacity, Intermediary9.mmRole,
+						Intermediary9.mmExtendedRole);
+				messageBuildingBlock_lazy = () -> Arrays.asList(RedemptionBulkOrderConfirmationAmendmentV01.mmRelatedPartyDetails, RedemptionBulkOrderConfirmationV03.mmRelatedPartyDetails,
+						RedemptionOrderConfirmationAmendmentV01.mmRelatedPartyDetails, RedemptionOrderConfirmationV03.mmRelatedPartyDetails, SubscriptionBulkOrderConfirmationAmendmentV01.mmRelatedPartyDetails,
+						SubscriptionBulkOrderConfirmationV03.mmRelatedPartyDetails, SubscriptionOrderConfirmationAmendmentV01.mmRelatedPartyDetails, SubscriptionOrderConfirmationV03.mmRelatedPartyDetails);
 				trace_lazy = () -> TradePartyRole.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
 						return DateFormat.getDateInstance(java.text.DateFormat.LONG).parse("September 9, 2016");
@@ -518,7 +516,7 @@ public class Intermediary9 {
 				name = "Intermediary9";
 				definition = "Party that provides services to investors relating to financial products.";
 				nextVersions_lazy = () -> Arrays.asList(Intermediary39.mmObject());
-				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Intermediary9.mmRoleOrExtendedRoleRule);
+				xors_lazy = () -> Arrays.asList(Intermediary9.mmRoleOrExtendedRoleRule);
 			}
 		});
 		return mmObject_lazy.get();

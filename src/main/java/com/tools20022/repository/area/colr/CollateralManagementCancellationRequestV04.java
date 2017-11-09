@@ -20,6 +20,7 @@ package com.tools20022.repository.area.colr;
 import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.CollateralManagementLatestVersion;
 import com.tools20022.repository.choice.Reference2Choice;
 import com.tools20022.repository.datatype.Max35Text;
@@ -58,6 +59,9 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code colr.005.001.04}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.CollateralManagementLatestVersion
@@ -98,9 +102,6 @@ import java.util.List;
  * CollateralManagementCancellationRequestV04.mmSupplementaryData}</li>
  * </ul>
  * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code colr.005.001.04}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -154,10 +155,10 @@ public class CollateralManagementCancellationRequestV04 {
 	public static final MMMessageBuildingBlock mmTransactionIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "TxId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionIdentification";
 			definition = "Unambiguous identification of the transaction as know by the instructing party.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.colr.CollateralManagementCancellationRequestV03.mmTransactionIdentification;
+			previousVersion_lazy = () -> CollateralManagementCancellationRequestV03.mmTransactionIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -195,10 +196,10 @@ public class CollateralManagementCancellationRequestV04 {
 	public static final MMMessageBuildingBlock mmReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Ref";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reference";
 			definition = "Reference to the message advised to be cancelled.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.colr.CollateralManagementCancellationRequestV03.mmReference;
+			previousVersion_lazy = () -> CollateralManagementCancellationRequestV03.mmReference;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> Reference2Choice.mmObject();
@@ -239,10 +240,10 @@ public class CollateralManagementCancellationRequestV04 {
 	public static final MMMessageBuildingBlock mmObligation = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Oblgtn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Obligation";
 			definition = "Provides information like the identification of the party or parties associated with the collateral agreement, the exposure type and the valuation date.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.colr.CollateralManagementCancellationRequestV03.mmObligation;
+			previousVersion_lazy = () -> CollateralManagementCancellationRequestV03.mmObligation;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> Obligation4.mmObject();
@@ -283,10 +284,10 @@ public class CollateralManagementCancellationRequestV04 {
 	public static final MMMessageBuildingBlock mmCancellationReason = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CxlRsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationReason";
 			definition = "It is used to detail the reason for the cancellation of a previously sent request.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.colr.CollateralManagementCancellationRequestV03.mmCancellationReason;
+			previousVersion_lazy = () -> CollateralManagementCancellationRequestV03.mmCancellationReason;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> CollateralCancellationReason1.mmObject();
@@ -327,10 +328,10 @@ public class CollateralManagementCancellationRequestV04 {
 	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SplmtryData";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryData";
 			definition = "Additional information that can not be captured in the structured fields and/or any other specific block.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.colr.CollateralManagementCancellationRequestV03.mmSupplementaryData;
+			previousVersion_lazy = () -> CollateralManagementCancellationRequestV03.mmSupplementaryData;
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
@@ -339,7 +340,7 @@ public class CollateralManagementCancellationRequestV04 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CollateralManagementCancellationRequestV04";
 				definition = "Scope\r\nThe CollateralManagementCancellationRequest message is sent by:\r\n- the collateral taker or its collateral manager to the collateral giver or its collateral manager,\r\n- the collateral giver or its collateral manager to the collateral taker or its collateral manager\r\nThis message is used to request the cancellation of a previously sent MarginCallRequest message, MarginCallResponse message, CollateralProposal message, CollateralProposalResponse message, MarginCallDisputeNotification message or a CollateralSubstitutionRequest message.\r\n\r\nThe message definition is intended for use with the ISO20022 Business Application Header.\r\n\r\nUsage\r\nThe CollateralManagementCancellationRequest message is used to request the cancellation of a collateral message. When requesting the cancellation of a message there must be a cancellation reason specified.\r\nWhen the CollateralManagementCancellationRequest message is used to cancel a collateral message the reference of the original message must be specified. The rejection or acceptance of a CollateralManagementCancellationRequest message is made using a CollateralManagementCancellationStatus message.";
 				previousVersion_lazy = () -> CollateralManagementCancellationRequestV03.mmObject();
@@ -347,9 +348,8 @@ public class CollateralManagementCancellationRequestV04 {
 				rootElement = "Document";
 				xmlTag = "CollMgmtCxlReq";
 				businessArea_lazy = () -> CollateralManagementLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.colr.CollateralManagementCancellationRequestV04.mmTransactionIdentification,
-						com.tools20022.repository.area.colr.CollateralManagementCancellationRequestV04.mmReference, com.tools20022.repository.area.colr.CollateralManagementCancellationRequestV04.mmObligation,
-						com.tools20022.repository.area.colr.CollateralManagementCancellationRequestV04.mmCancellationReason, com.tools20022.repository.area.colr.CollateralManagementCancellationRequestV04.mmSupplementaryData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(CollateralManagementCancellationRequestV04.mmTransactionIdentification, CollateralManagementCancellationRequestV04.mmReference,
+						CollateralManagementCancellationRequestV04.mmObligation, CollateralManagementCancellationRequestV04.mmCancellationReason, CollateralManagementCancellationRequestV04.mmSupplementaryData);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "colr";

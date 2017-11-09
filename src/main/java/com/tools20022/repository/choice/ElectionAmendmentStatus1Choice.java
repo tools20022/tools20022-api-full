@@ -19,7 +19,10 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.seev.AgentCAElectionStatusAdviceV01;
 import com.tools20022.repository.entity.CorporateActionStatus;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.CorporateActionAmendmentProcessingStatus1;
 import com.tools20022.repository.msg.CorporateActionAmendmentRejectionStatus1;
 import java.util.Arrays;
@@ -113,7 +116,7 @@ public class ElectionAmendmentStatus1Choice {
 			componentContext_lazy = () -> ElectionAmendmentStatus1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "PrcdSts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProcessedStatus";
 			definition = "Provides information about the processing status of the request.";
 			maxOccurs = 1;
@@ -161,7 +164,7 @@ public class ElectionAmendmentStatus1Choice {
 			componentContext_lazy = () -> ElectionAmendmentStatus1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "RjctdSts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RejectedStatus";
 			definition = "Provides information about the rejection status.";
 			maxOccurs = 1;
@@ -174,11 +177,11 @@ public class ElectionAmendmentStatus1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ElectionAmendmentStatus1Choice.mmProcessedStatus, com.tools20022.repository.choice.ElectionAmendmentStatus1Choice.mmRejectedStatus);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.AgentCAElectionStatusAdviceV01.mmElectionAmendmentRequestStatus);
+				messageElement_lazy = () -> Arrays.asList(ElectionAmendmentStatus1Choice.mmProcessedStatus, ElectionAmendmentStatus1Choice.mmRejectedStatus);
+				messageBuildingBlock_lazy = () -> Arrays.asList(AgentCAElectionStatusAdviceV01.mmElectionAmendmentRequestStatus);
 				trace_lazy = () -> CorporateActionStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ElectionAmendmentStatus1Choice";
 				definition = "Choice between the different statuses of an election amendment request.";
 			}

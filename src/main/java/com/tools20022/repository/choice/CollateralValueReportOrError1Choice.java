@@ -19,6 +19,8 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.CollateralValueReport1;
 import com.tools20022.repository.msg.ErrorHandling3;
 import java.util.Arrays;
@@ -98,7 +100,7 @@ public class CollateralValueReportOrError1Choice {
 			componentContext_lazy = () -> CollateralValueReportOrError1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "BizRpt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BusinessReport";
 			definition = "Provides information specific to the collateral value reports included in the message.";
 			minOccurs = 1;
@@ -141,7 +143,7 @@ public class CollateralValueReportOrError1Choice {
 			componentContext_lazy = () -> CollateralValueReportOrError1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "OprlErr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OperationalError";
 			definition = "Indicates whether an operational error has been issued during the processing of the related request.";
 			minOccurs = 1;
@@ -153,9 +155,9 @@ public class CollateralValueReportOrError1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CollateralValueReportOrError1Choice.mmBusinessReport, com.tools20022.repository.choice.CollateralValueReportOrError1Choice.mmOperationalError);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(CollateralValueReportOrError1Choice.mmBusinessReport, CollateralValueReportOrError1Choice.mmOperationalError);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CollateralValueReportOrError1Choice";
 				definition = "Report on collateral values or error report in case of business processing of the related request.";
 			}

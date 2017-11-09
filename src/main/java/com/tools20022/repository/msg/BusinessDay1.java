@@ -19,8 +19,10 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.BusinessDayReportOrError2Choice;
 import com.tools20022.repository.choice.SystemIdentification2Choice;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -110,10 +112,10 @@ public class BusinessDay1 {
 			componentContext_lazy = () -> BusinessDay1.mmObject();
 			isDerived = false;
 			xmlTag = "SysId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SystemIdentification";
 			definition = "Identification of a particular market infrastructure.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BusinessDay3.mmSystemIdentification, com.tools20022.repository.msg.BusinessDay5.mmSystemIdentification);
+			nextVersions_lazy = () -> Arrays.asList(BusinessDay3.mmSystemIdentification, BusinessDay5.mmSystemIdentification);
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> SystemIdentification2Choice.mmObject();
@@ -165,10 +167,10 @@ public class BusinessDay1 {
 			componentContext_lazy = () -> BusinessDay1.mmObject();
 			isDerived = false;
 			xmlTag = "BizDayOrErr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BusinessDayOrError";
 			definition = "Requested information on the system availability for a specific business day or business error when information has not been found.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BusinessDay3.mmBusinessDayOrError, com.tools20022.repository.msg.BusinessDay5.mmBusinessDayOrError);
+			nextVersions_lazy = () -> Arrays.asList(BusinessDay3.mmBusinessDayOrError, BusinessDay5.mmBusinessDayOrError);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -179,9 +181,9 @@ public class BusinessDay1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BusinessDay1.mmSystemIdentification, com.tools20022.repository.msg.BusinessDay1.mmBusinessDayOrError);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(BusinessDay1.mmSystemIdentification, BusinessDay1.mmBusinessDayOrError);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "BusinessDay1";
 				definition = "Reports on business day information.";
 				nextVersions_lazy = () -> Arrays.asList(BusinessDay3.mmObject(), BusinessDay5.mmObject());

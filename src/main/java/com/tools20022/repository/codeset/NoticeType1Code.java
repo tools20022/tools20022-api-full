@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.NoticeTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -85,7 +87,7 @@ public class NoticeType1Code extends NoticeTypeCode {
 	 */
 	public static final MMCode mmUniversal = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Universal";
 			owner_lazy = () -> NoticeType1Code.mmObject();
 		}
@@ -108,7 +110,7 @@ public class NoticeType1Code extends NoticeTypeCode {
 	 */
 	public static final MMCode mmCedeAndCo = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CedeAndCo";
 			owner_lazy = () -> NoticeType1Code.mmObject();
 		}
@@ -117,12 +119,12 @@ public class NoticeType1Code extends NoticeTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("UNVL");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "NoticeType1Code";
 				definition = "Specifies DTCC (The Depository Trust and Clearing Corporation) defined notice type.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.NoticeType1Code.mmUniversal, com.tools20022.repository.codeset.NoticeType1Code.mmCedeAndCo);
+				code_lazy = () -> Arrays.asList(NoticeType1Code.mmUniversal, NoticeType1Code.mmCedeAndCo);
 				trace_lazy = () -> NoticeTypeCode.mmObject();
 			}
 		});

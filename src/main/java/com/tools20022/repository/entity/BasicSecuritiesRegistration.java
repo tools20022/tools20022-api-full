@@ -17,13 +17,12 @@
 
 package com.tools20022.repository.entity;
 
-import com.tools20022.metamodel.MMBusinessAssociationEnd;
-import com.tools20022.metamodel.MMBusinessAttribute;
-import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.*;
 import com.tools20022.repository.choice.*;
 import com.tools20022.repository.codeset.RegistrationCode;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -39,43 +38,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.BasicSecuritiesRegistration#mmSecurity
- * BasicSecuritiesRegistration.mmSecurity}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.BasicSecuritiesRegistration#mmRegistrationInstruction
- * BasicSecuritiesRegistration.mmRegistrationInstruction}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.BasicSecuritiesRegistration#mmCertificationIdentification
- * BasicSecuritiesRegistration.mmCertificationIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.BasicSecuritiesRegistration#mmCertificationDate
- * BasicSecuritiesRegistration.mmCertificationDate}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.BasicSecuritiesRegistration#mmSecuritiesCertificate
- * BasicSecuritiesRegistration.mmSecuritiesCertificate}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.BasicSecuritiesRegistration#mmSplitPeriod
- * BasicSecuritiesRegistration.mmSplitPeriod}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Security#mmRegistration
- * Security.mmRegistration}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.DateTimePeriod#mmRelatedSecuritiesRegistration
- * DateTimePeriod.mmRelatedSecuritiesRegistration}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesCertificate#mmBasicRegistration
- * SecuritiesCertificate.mmBasicRegistration}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -118,6 +80,43 @@ import java.util.List;
  * Registration11Choice}</li>
  * <li>{@linkplain com.tools20022.repository.msg.RegistrationReason6
  * RegistrationReason6}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.Security#mmRegistration
+ * Security.mmRegistration}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.DateTimePeriod#mmRelatedSecuritiesRegistration
+ * DateTimePeriod.mmRelatedSecuritiesRegistration}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesCertificate#mmBasicRegistration
+ * SecuritiesCertificate.mmBasicRegistration}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.BasicSecuritiesRegistration#mmSecurity
+ * BasicSecuritiesRegistration.mmSecurity}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.BasicSecuritiesRegistration#mmRegistrationInstruction
+ * BasicSecuritiesRegistration.mmRegistrationInstruction}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.BasicSecuritiesRegistration#mmCertificationIdentification
+ * BasicSecuritiesRegistration.mmCertificationIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.BasicSecuritiesRegistration#mmCertificationDate
+ * BasicSecuritiesRegistration.mmCertificationDate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.BasicSecuritiesRegistration#mmSecuritiesCertificate
+ * BasicSecuritiesRegistration.mmSecuritiesCertificate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.BasicSecuritiesRegistration#mmSplitPeriod
+ * BasicSecuritiesRegistration.mmSplitPeriod}</li>
  * </ul>
  * </li>
  * <li>
@@ -175,13 +174,13 @@ public class BasicSecuritiesRegistration {
 		{
 			elementContext_lazy = () -> BasicSecuritiesRegistration.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Security";
 			definition = "Security for which registration information is provided.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.Security.mmRegistration;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 		}
 	};
@@ -304,19 +303,14 @@ public class BasicSecuritiesRegistration {
 	 */
 	public static final MMBusinessAttribute mmRegistrationInstruction = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Registration1Choice.mmCode, com.tools20022.repository.choice.Registration1Choice.mmProprietary, com.tools20022.repository.choice.Registration2Choice.mmCode,
-					com.tools20022.repository.choice.Registration2Choice.mmProprietary, com.tools20022.repository.choice.Registration3Choice.mmCode, com.tools20022.repository.choice.Registration3Choice.mmProprietary,
-					com.tools20022.repository.msg.RegistrationReason1.mmCode, com.tools20022.repository.choice.Registration4Choice.mmCode, com.tools20022.repository.choice.Registration4Choice.mmProprietary,
-					com.tools20022.repository.msg.RegistrationReason2.mmCode, com.tools20022.repository.choice.Registration7Choice.mmCode, com.tools20022.repository.choice.Registration7Choice.mmProprietary,
-					com.tools20022.repository.msg.RegistrationReason3.mmCode, com.tools20022.repository.choice.Registration8Choice.mmCode, com.tools20022.repository.choice.Registration8Choice.mmProprietary,
-					com.tools20022.repository.msg.RegistrationReason4.mmCode, com.tools20022.repository.choice.Registration6Choice.mmCode, com.tools20022.repository.choice.Registration6Choice.mmProprietary,
-					com.tools20022.repository.choice.Registration5Choice.mmCode, com.tools20022.repository.choice.Registration5Choice.mmProprietary, com.tools20022.repository.choice.Registration9Choice.mmCode,
-					com.tools20022.repository.choice.Registration9Choice.mmProprietary, com.tools20022.repository.msg.RegistrationReason5.mmCode, com.tools20022.repository.choice.Registration10Choice.mmCode,
-					com.tools20022.repository.choice.Registration10Choice.mmProprietary, com.tools20022.repository.choice.Registration12Choice.mmCode, com.tools20022.repository.choice.Registration12Choice.mmProprietary,
-					com.tools20022.repository.choice.Registration11Choice.mmCode, com.tools20022.repository.choice.Registration11Choice.mmProprietary, com.tools20022.repository.msg.RegistrationReason6.mmCode);
+			derivation_lazy = () -> Arrays.asList(Registration1Choice.mmCode, Registration1Choice.mmProprietary, Registration2Choice.mmCode, Registration2Choice.mmProprietary, Registration3Choice.mmCode, Registration3Choice.mmProprietary,
+					RegistrationReason1.mmCode, Registration4Choice.mmCode, Registration4Choice.mmProprietary, RegistrationReason2.mmCode, Registration7Choice.mmCode, Registration7Choice.mmProprietary, RegistrationReason3.mmCode,
+					Registration8Choice.mmCode, Registration8Choice.mmProprietary, RegistrationReason4.mmCode, Registration6Choice.mmCode, Registration6Choice.mmProprietary, Registration5Choice.mmCode, Registration5Choice.mmProprietary,
+					Registration9Choice.mmCode, Registration9Choice.mmProprietary, RegistrationReason5.mmCode, Registration10Choice.mmCode, Registration10Choice.mmProprietary, Registration12Choice.mmCode,
+					Registration12Choice.mmProprietary, Registration11Choice.mmCode, Registration11Choice.mmProprietary, RegistrationReason6.mmCode);
 			elementContext_lazy = () -> BasicSecuritiesRegistration.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RegistrationInstruction";
 			definition = "Specifies whether registration should occur upon receipt.";
 			maxOccurs = 1;
@@ -372,12 +366,11 @@ public class BasicSecuritiesRegistration {
 	 */
 	public static final MMBusinessAttribute mmCertificationIdentification = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RegistrationParameters1.mmCertificationIdentification, com.tools20022.repository.msg.RegistrationParameters2.mmCertificationIdentification,
-					com.tools20022.repository.msg.RegistrationParameters3.mmCertificationIdentification, com.tools20022.repository.msg.RegistrationParameters4.mmCertificationIdentification,
-					com.tools20022.repository.msg.RegistrationParameters5.mmCertificationIdentification);
+			derivation_lazy = () -> Arrays.asList(RegistrationParameters1.mmCertificationIdentification, RegistrationParameters2.mmCertificationIdentification, RegistrationParameters3.mmCertificationIdentification,
+					RegistrationParameters4.mmCertificationIdentification, RegistrationParameters5.mmCertificationIdentification);
 			elementContext_lazy = () -> BasicSecuritiesRegistration.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CertificationIdentification";
 			definition = "Identification assigned to a deposit.";
 			maxOccurs = 1;
@@ -436,12 +429,11 @@ public class BasicSecuritiesRegistration {
 	 */
 	public static final MMBusinessAttribute mmCertificationDate = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RegistrationParameters1.mmCertificationDateTime, com.tools20022.repository.msg.RegistrationParameters2.mmCertificationDateTime,
-					com.tools20022.repository.msg.RegistrationParameters3.mmCertificationDateTime, com.tools20022.repository.msg.RegistrationParameters4.mmCertificationDateTime,
-					com.tools20022.repository.msg.RegistrationParameters5.mmCertificationDateTime);
+			derivation_lazy = () -> Arrays.asList(RegistrationParameters1.mmCertificationDateTime, RegistrationParameters2.mmCertificationDateTime, RegistrationParameters3.mmCertificationDateTime,
+					RegistrationParameters4.mmCertificationDateTime, RegistrationParameters5.mmCertificationDateTime);
 			elementContext_lazy = () -> BasicSecuritiesRegistration.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CertificationDate";
 			definition = "Date/time at which the certificates in the deposit were validated by the agent.";
 			maxOccurs = 1;
@@ -509,16 +501,16 @@ public class BasicSecuritiesRegistration {
 	 */
 	public static final MMBusinessAssociationEnd mmSecuritiesCertificate = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RegistrationParameters3.mmCertificateNumber, com.tools20022.repository.msg.QuantityAndAccount3.mmCertificateNumber,
-					com.tools20022.repository.msg.QuantityAndAccount8.mmCertificateNumber, com.tools20022.repository.msg.QuantityAndAccount4.mmCertificateNumber, com.tools20022.repository.msg.QuantityAndAccount9.mmCertificateNumber);
+			derivation_lazy = () -> Arrays.asList(RegistrationParameters3.mmCertificateNumber, QuantityAndAccount3.mmCertificateNumber, QuantityAndAccount8.mmCertificateNumber, QuantityAndAccount4.mmCertificateNumber,
+					QuantityAndAccount9.mmCertificateNumber);
 			elementContext_lazy = () -> BasicSecuritiesRegistration.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SecuritiesCertificate";
 			definition = "Unique and unambiguous identification of a certificate assigned by the issuer.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesCertificate.mmBasicRegistration;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SecuritiesCertificate.mmObject();
 		}
 	};
@@ -566,16 +558,16 @@ public class BasicSecuritiesRegistration {
 	 */
 	public static final MMBusinessAssociationEnd mmSplitPeriod = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionPeriod10.mmSplitPeriod);
+			derivation_lazy = () -> Arrays.asList(CorporateActionPeriod10.mmSplitPeriod);
 			elementContext_lazy = () -> BasicSecuritiesRegistration.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SplitPeriod";
 			definition = "Period during which a physical certificate can be split.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmRelatedSecuritiesRegistration;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmObject();
 		}
 	};
@@ -583,15 +575,14 @@ public class BasicSecuritiesRegistration {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "BasicSecuritiesRegistration";
 				definition = "Information related to registration of securities.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Security.mmRegistration, com.tools20022.repository.entity.DateTimePeriod.mmRelatedSecuritiesRegistration,
 						com.tools20022.repository.entity.SecuritiesCertificate.mmBasicRegistration);
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.BasicSecuritiesRegistration.mmSecurity, com.tools20022.repository.entity.BasicSecuritiesRegistration.mmRegistrationInstruction,
-						com.tools20022.repository.entity.BasicSecuritiesRegistration.mmCertificationIdentification, com.tools20022.repository.entity.BasicSecuritiesRegistration.mmCertificationDate,
-						com.tools20022.repository.entity.BasicSecuritiesRegistration.mmSecuritiesCertificate, com.tools20022.repository.entity.BasicSecuritiesRegistration.mmSplitPeriod);
+				element_lazy = () -> Arrays.asList(BasicSecuritiesRegistration.mmSecurity, BasicSecuritiesRegistration.mmRegistrationInstruction, BasicSecuritiesRegistration.mmCertificationIdentification,
+						BasicSecuritiesRegistration.mmCertificationDate, BasicSecuritiesRegistration.mmSecuritiesCertificate, BasicSecuritiesRegistration.mmSplitPeriod);
 				derivationComponent_lazy = () -> Arrays.asList(Registration1Choice.mmObject(), RegistrationParameters1.mmObject(), Registration2Choice.mmObject(), RegistrationParameters2.mmObject(), RegistrationReason1.mmObject(),
 						RegistrationReason2.mmObject(), Registration7Choice.mmObject(), RegistrationReason3.mmObject(), Registration8Choice.mmObject(), RegistrationReason4.mmObject(), RegistrationParameters3.mmObject(),
 						RegistrationParameters4.mmObject(), Registration9Choice.mmObject(), RegistrationReason5.mmObject(), Registration10Choice.mmObject(), RegistrationParameters5.mmObject(), Registration12Choice.mmObject(),

@@ -19,7 +19,9 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max140Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -99,7 +101,7 @@ public class FinancialInstrumentAttributesSD2 {
 			componentContext_lazy = () -> FinancialInstrumentAttributesSD2.mmObject();
 			isDerived = false;
 			xmlTag = "DclrdDsbrsdSctyId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeclaredDisbursedSecurityIdentification";
 			definition = "Security identification of the security that is being distributed as a result of a corporate action as declared by the issuer or offeror on the market.";
 			maxOccurs = 1;
@@ -140,7 +142,7 @@ public class FinancialInstrumentAttributesSD2 {
 			componentContext_lazy = () -> FinancialInstrumentAttributesSD2.mmObject();
 			isDerived = false;
 			xmlTag = "DclrdDsbrsdSctyDesc";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeclaredDisbursedSecurityDescription";
 			definition = "Declared disbursed security description.";
 			maxOccurs = 1;
@@ -152,10 +154,9 @@ public class FinancialInstrumentAttributesSD2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrumentAttributesSD2.mmDeclaredDisbursedSecurityIdentification,
-						com.tools20022.repository.msg.FinancialInstrumentAttributesSD2.mmDeclaredDisbursedSecurityDescription);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(FinancialInstrumentAttributesSD2.mmDeclaredDisbursedSecurityIdentification, FinancialInstrumentAttributesSD2.mmDeclaredDisbursedSecurityDescription);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FinancialInstrumentAttributesSD2";
 				definition = "Provides additional information regarding security that will be distributed as part of entitlement.";
 			}

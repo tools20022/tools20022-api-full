@@ -20,12 +20,14 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.pain.CreditorPaymentActivationRequestV04;
 import com.tools20022.repository.codeset.ChargeBearerType1Code;
 import com.tools20022.repository.codeset.PaymentMethod7Code;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.Max35Text;
-import com.tools20022.repository.entity.CreditTransfer;
-import com.tools20022.repository.entity.PaymentInstruction;
+import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -166,15 +168,15 @@ public class PaymentInstruction17 {
 	 */
 	public static final MMMessageAttribute mmPaymentInformationIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradeIdentification.mmIdentification;
+			businessElementTrace_lazy = () -> TradeIdentification.mmIdentification;
 			componentContext_lazy = () -> PaymentInstruction17.mmObject();
 			isDerived = false;
 			xmlTag = "PmtInfId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentInformationIdentification";
 			definition = "Reference assigned by a sending party to unambiguously identify the payment information block within the message.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentInstruction19.mmPaymentInformationIdentification);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PaymentInstruction11.mmPaymentInformationIdentification;
+			nextVersions_lazy = () -> Arrays.asList(PaymentInstruction19.mmPaymentInformationIdentification);
+			previousVersion_lazy = () -> PaymentInstruction11.mmPaymentInformationIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -232,15 +234,15 @@ public class PaymentInstruction17 {
 	 */
 	public static final MMMessageAttribute mmPaymentMethod = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CreditInstrument.mmMethod;
+			businessElementTrace_lazy = () -> CreditInstrument.mmMethod;
 			componentContext_lazy = () -> PaymentInstruction17.mmObject();
 			isDerived = false;
 			xmlTag = "PmtMtd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentMethod";
 			definition = "Specifies the means of payment that will be used to move the amount of money.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentInstruction19.mmPaymentMethod);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PaymentInstruction11.mmPaymentMethod;
+			nextVersions_lazy = () -> Arrays.asList(PaymentInstruction19.mmPaymentMethod);
+			previousVersion_lazy = () -> PaymentInstruction11.mmPaymentMethod;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PaymentMethod7Code.mmObject();
@@ -295,15 +297,15 @@ public class PaymentInstruction17 {
 	 */
 	public static final MMMessageAssociationEnd mmPaymentTypeInformation = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentExecution.mmProcessingInstructions;
+			businessElementTrace_lazy = () -> PaymentExecution.mmProcessingInstructions;
 			componentContext_lazy = () -> PaymentInstruction17.mmObject();
 			isDerived = false;
 			xmlTag = "PmtTpInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentTypeInformation";
 			definition = "Set of elements used to further specify the type of transaction.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentInstruction19.mmPaymentTypeInformation);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PaymentInstruction11.mmPaymentTypeInformation;
+			nextVersions_lazy = () -> Arrays.asList(PaymentInstruction19.mmPaymentTypeInformation);
+			previousVersion_lazy = () -> PaymentInstruction11.mmPaymentTypeInformation;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -365,15 +367,15 @@ public class PaymentInstruction17 {
 	 */
 	public static final MMMessageAttribute mmRequestedExecutionDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentExecution.mmRequestedExecutionDate;
+			businessElementTrace_lazy = () -> PaymentExecution.mmRequestedExecutionDate;
 			componentContext_lazy = () -> PaymentInstruction17.mmObject();
 			isDerived = false;
 			xmlTag = "ReqdExctnDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestedExecutionDate";
 			definition = "Date at which the initiating party requests the clearing agent to process the payment. If payment by cheque, the date when the cheque must be generated by the bank.\r\n\r\nUsage: This is the date on which the debtor's account(s) is (are) to be debited.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentInstruction19.mmRequestedExecutionDate);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PaymentInstruction11.mmRequestedExecutionDate;
+			nextVersions_lazy = () -> Arrays.asList(PaymentInstruction19.mmRequestedExecutionDate);
+			previousVersion_lazy = () -> PaymentInstruction11.mmRequestedExecutionDate;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
@@ -427,15 +429,15 @@ public class PaymentInstruction17 {
 	 */
 	public static final MMMessageAssociationEnd mmDebtor = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> PaymentInstruction17.mmObject();
 			isDerived = false;
 			xmlTag = "Dbtr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Debtor";
 			definition = "Party that owes an amount of money to the (ultimate) creditor.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentInstruction19.mmDebtor);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PaymentInstruction11.mmDebtor;
+			nextVersions_lazy = () -> Arrays.asList(PaymentInstruction19.mmDebtor);
+			previousVersion_lazy = () -> PaymentInstruction11.mmDebtor;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -490,15 +492,15 @@ public class PaymentInstruction17 {
 	 */
 	public static final MMMessageAssociationEnd mmDebtorAccount = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentPartyRole.mmCashAccount;
+			businessElementTrace_lazy = () -> PaymentPartyRole.mmCashAccount;
 			componentContext_lazy = () -> PaymentInstruction17.mmObject();
 			isDerived = false;
 			xmlTag = "DbtrAcct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DebtorAccount";
 			definition = "Account used to process charges associated with a transaction.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentInstruction19.mmDebtorAccount);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PaymentInstruction11.mmDebtorAccount;
+			nextVersions_lazy = () -> Arrays.asList(PaymentInstruction19.mmDebtorAccount);
+			previousVersion_lazy = () -> PaymentInstruction11.mmDebtorAccount;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -554,15 +556,15 @@ public class PaymentInstruction17 {
 	 */
 	public static final MMMessageAssociationEnd mmDebtorAgent = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Organisation.mmOrganisationIdentification;
+			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> PaymentInstruction17.mmObject();
 			isDerived = false;
 			xmlTag = "DbtrAgt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DebtorAgent";
 			definition = "Financial institution servicing an account for the debtor.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentInstruction19.mmDebtorAgent);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PaymentInstruction11.mmDebtorAgent;
+			nextVersions_lazy = () -> Arrays.asList(PaymentInstruction19.mmDebtorAgent);
+			previousVersion_lazy = () -> PaymentInstruction11.mmDebtorAgent;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -618,15 +620,15 @@ public class PaymentInstruction17 {
 	 */
 	public static final MMMessageAssociationEnd mmUltimateDebtor = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> PaymentInstruction17.mmObject();
 			isDerived = false;
 			xmlTag = "UltmtDbtr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UltimateDebtor";
 			definition = "Ultimate party that owes an amount of money to the (ultimate) creditor.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentInstruction19.mmUltimateDebtor);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PaymentInstruction11.mmUltimateDebtor;
+			nextVersions_lazy = () -> Arrays.asList(PaymentInstruction19.mmUltimateDebtor);
+			previousVersion_lazy = () -> PaymentInstruction11.mmUltimateDebtor;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -685,15 +687,15 @@ public class PaymentInstruction17 {
 	 */
 	public static final MMMessageAttribute mmChargeBearer = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Charges.mmBearerType;
+			businessElementTrace_lazy = () -> Charges.mmBearerType;
 			componentContext_lazy = () -> PaymentInstruction17.mmObject();
 			isDerived = false;
 			xmlTag = "ChrgBr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChargeBearer";
 			definition = "Specifies which party/parties will bear the charges associated with the processing of the payment transaction.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentInstruction19.mmChargeBearer);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PaymentInstruction11.mmChargeBearer;
+			nextVersions_lazy = () -> Arrays.asList(PaymentInstruction19.mmChargeBearer);
+			previousVersion_lazy = () -> PaymentInstruction11.mmChargeBearer;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ChargeBearerType1Code.mmObject();
@@ -754,11 +756,11 @@ public class PaymentInstruction17 {
 			componentContext_lazy = () -> PaymentInstruction17.mmObject();
 			isDerived = false;
 			xmlTag = "CdtTrfTx";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditTransferTransaction";
 			definition = "Payment processes required to transfer cash from the debtor to the creditor.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentInstruction19.mmCreditTransferTransaction);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PaymentInstruction11.mmCreditTransferTransaction;
+			nextVersions_lazy = () -> Arrays.asList(PaymentInstruction19.mmCreditTransferTransaction);
+			previousVersion_lazy = () -> PaymentInstruction11.mmCreditTransferTransaction;
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.CreditTransferTransaction21.mmObject();
@@ -768,14 +770,13 @@ public class PaymentInstruction17 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentInstruction17.mmPaymentInformationIdentification, com.tools20022.repository.msg.PaymentInstruction17.mmPaymentMethod,
-						com.tools20022.repository.msg.PaymentInstruction17.mmPaymentTypeInformation, com.tools20022.repository.msg.PaymentInstruction17.mmRequestedExecutionDate, com.tools20022.repository.msg.PaymentInstruction17.mmDebtor,
-						com.tools20022.repository.msg.PaymentInstruction17.mmDebtorAccount, com.tools20022.repository.msg.PaymentInstruction17.mmDebtorAgent, com.tools20022.repository.msg.PaymentInstruction17.mmUltimateDebtor,
-						com.tools20022.repository.msg.PaymentInstruction17.mmChargeBearer, com.tools20022.repository.msg.PaymentInstruction17.mmCreditTransferTransaction);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.pain.CreditorPaymentActivationRequestV04.mmPaymentInformation);
+				messageElement_lazy = () -> Arrays.asList(PaymentInstruction17.mmPaymentInformationIdentification, PaymentInstruction17.mmPaymentMethod, PaymentInstruction17.mmPaymentTypeInformation,
+						PaymentInstruction17.mmRequestedExecutionDate, PaymentInstruction17.mmDebtor, PaymentInstruction17.mmDebtorAccount, PaymentInstruction17.mmDebtorAgent, PaymentInstruction17.mmUltimateDebtor,
+						PaymentInstruction17.mmChargeBearer, PaymentInstruction17.mmCreditTransferTransaction);
+				messageBuildingBlock_lazy = () -> Arrays.asList(CreditorPaymentActivationRequestV04.mmPaymentInformation);
 				trace_lazy = () -> PaymentInstruction.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PaymentInstruction17";
 				definition = "Instruction to pay an amount of money to an ultimate beneficiary, on behalf of an originator. This instruction may have to be forwarded several times to complete the settlement chain.";
 				nextVersions_lazy = () -> Arrays.asList(PaymentInstruction19.mmObject());

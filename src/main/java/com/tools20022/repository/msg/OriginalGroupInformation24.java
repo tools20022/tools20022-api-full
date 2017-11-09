@@ -20,12 +20,14 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.GroupCancellationStatus1Code;
 import com.tools20022.repository.datatype.DecimalNumber;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Max15NumericText;
 import com.tools20022.repository.datatype.Max35Text;
-import com.tools20022.repository.entity.Payment;
+import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -132,11 +134,11 @@ public class OriginalGroupInformation24 {
 	 */
 	public static final MMMessageAttribute mmOriginalGroupCancellationIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentIdentification.mmExecutionIdentification;
+			businessElementTrace_lazy = () -> PaymentIdentification.mmExecutionIdentification;
 			componentContext_lazy = () -> OriginalGroupInformation24.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlGrpCxlId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalGroupCancellationIdentification";
 			definition = "Unique identification, as assigned by the original assigner, to unambiguously identify the original group cancellation request.";
 			maxOccurs = 1;
@@ -177,11 +179,11 @@ public class OriginalGroupInformation24 {
 	 */
 	public static final MMMessageAssociationEnd mmResolvedCase = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestigationResolution.mmInvestigationCase;
+			businessElementTrace_lazy = () -> InvestigationResolution.mmInvestigationCase;
 			componentContext_lazy = () -> OriginalGroupInformation24.mmObject();
 			isDerived = false;
 			xmlTag = "RslvdCase";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ResolvedCase";
 			definition = "Identifies the case.";
 			maxOccurs = 1;
@@ -228,11 +230,11 @@ public class OriginalGroupInformation24 {
 	 */
 	public static final MMMessageAttribute mmOriginalMessageIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentIdentification.mmExecutionIdentification;
+			businessElementTrace_lazy = () -> PaymentIdentification.mmExecutionIdentification;
 			componentContext_lazy = () -> OriginalGroupInformation24.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlMsgId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalMessageIdentification";
 			definition = "Point to point reference, as assigned by the original instructing party, to unambiguously identify the original message.";
 			maxOccurs = 1;
@@ -276,7 +278,7 @@ public class OriginalGroupInformation24 {
 			componentContext_lazy = () -> OriginalGroupInformation24.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlMsgNmId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalMessageNameIdentification";
 			definition = "Specifies the original message name identifier to which the message refers.";
 			maxOccurs = 1;
@@ -319,11 +321,11 @@ public class OriginalGroupInformation24 {
 	 */
 	public static final MMMessageAttribute mmOriginalCreationDateTime = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentExecution.mmCreationDate;
+			businessElementTrace_lazy = () -> PaymentExecution.mmCreationDate;
 			componentContext_lazy = () -> OriginalGroupInformation24.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlCreDtTm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalCreationDateTime";
 			definition = "Date and time at which the original message was created.";
 			maxOccurs = 1;
@@ -366,7 +368,7 @@ public class OriginalGroupInformation24 {
 			componentContext_lazy = () -> OriginalGroupInformation24.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlNbOfTxs";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalNumberOfTransactions";
 			definition = "Number of individual transactions contained in the original message.";
 			maxOccurs = 1;
@@ -411,7 +413,7 @@ public class OriginalGroupInformation24 {
 			componentContext_lazy = () -> OriginalGroupInformation24.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlCtrlSum";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalControlSum";
 			definition = "Total of all individual amounts included in the original message, irrespective of currencies.";
 			maxOccurs = 1;
@@ -455,11 +457,11 @@ public class OriginalGroupInformation24 {
 	 */
 	public static final MMMessageAttribute mmGroupCancellationStatus = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentStatus.mmStatus;
+			businessElementTrace_lazy = () -> PaymentStatus.mmStatus;
 			componentContext_lazy = () -> OriginalGroupInformation24.mmObject();
 			isDerived = false;
 			xmlTag = "GrpCxlSts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GroupCancellationStatus";
 			definition = "Specifies the status of a group cancellation request.";
 			maxOccurs = 1;
@@ -505,11 +507,11 @@ public class OriginalGroupInformation24 {
 	 */
 	public static final MMMessageAssociationEnd mmCancellationStatusReasonInformation = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentInvestigationCaseRejection.mmRejectedCancellation;
+			businessElementTrace_lazy = () -> PaymentInvestigationCaseRejection.mmRejectedCancellation;
 			componentContext_lazy = () -> OriginalGroupInformation24.mmObject();
 			isDerived = false;
 			xmlTag = "CxlStsRsnInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationStatusReasonInformation";
 			definition = "Set of elements used to provide detailed information on the cancellation status reason.";
 			minOccurs = 0;
@@ -553,7 +555,7 @@ public class OriginalGroupInformation24 {
 			componentContext_lazy = () -> OriginalGroupInformation24.mmObject();
 			isDerived = false;
 			xmlTag = "NbOfTxsPerCxlSts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NumberOfTransactionsPerCancellationStatus";
 			definition = "Detailed information on the number of transactions for each identical cancellation status.";
 			minOccurs = 0;
@@ -565,14 +567,13 @@ public class OriginalGroupInformation24 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OriginalGroupInformation24.mmOriginalGroupCancellationIdentification, com.tools20022.repository.msg.OriginalGroupInformation24.mmResolvedCase,
-						com.tools20022.repository.msg.OriginalGroupInformation24.mmOriginalMessageIdentification, com.tools20022.repository.msg.OriginalGroupInformation24.mmOriginalMessageNameIdentification,
-						com.tools20022.repository.msg.OriginalGroupInformation24.mmOriginalCreationDateTime, com.tools20022.repository.msg.OriginalGroupInformation24.mmOriginalNumberOfTransactions,
-						com.tools20022.repository.msg.OriginalGroupInformation24.mmOriginalControlSum, com.tools20022.repository.msg.OriginalGroupInformation24.mmGroupCancellationStatus,
-						com.tools20022.repository.msg.OriginalGroupInformation24.mmCancellationStatusReasonInformation, com.tools20022.repository.msg.OriginalGroupInformation24.mmNumberOfTransactionsPerCancellationStatus);
+				messageElement_lazy = () -> Arrays.asList(OriginalGroupInformation24.mmOriginalGroupCancellationIdentification, OriginalGroupInformation24.mmResolvedCase, OriginalGroupInformation24.mmOriginalMessageIdentification,
+						OriginalGroupInformation24.mmOriginalMessageNameIdentification, OriginalGroupInformation24.mmOriginalCreationDateTime, OriginalGroupInformation24.mmOriginalNumberOfTransactions,
+						OriginalGroupInformation24.mmOriginalControlSum, OriginalGroupInformation24.mmGroupCancellationStatus, OriginalGroupInformation24.mmCancellationStatusReasonInformation,
+						OriginalGroupInformation24.mmNumberOfTransactionsPerCancellationStatus);
 				trace_lazy = () -> Payment.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OriginalGroupInformation24";
 				definition = "Set of elements used to provide information on the original group, to which the message refers.";
 			}

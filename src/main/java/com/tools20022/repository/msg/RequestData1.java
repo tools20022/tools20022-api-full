@@ -20,10 +20,13 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.reda.NettingCutOffReferenceDataUpdateRequestV01;
 import com.tools20022.repository.choice.PartyIdentification73Choice;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.Max4Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -115,7 +118,7 @@ public class RequestData1 {
 			componentContext_lazy = () -> RequestData1.mmObject();
 			isDerived = false;
 			xmlTag = "MsgId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageIdentification";
 			definition = "Unique identification of the message";
 			maxOccurs = 1;
@@ -155,7 +158,7 @@ public class RequestData1 {
 			componentContext_lazy = () -> RequestData1.mmObject();
 			isDerived = false;
 			xmlTag = "ReqTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestType";
 			definition = "Description of the type of request.";
 			maxOccurs = 1;
@@ -198,7 +201,7 @@ public class RequestData1 {
 			componentContext_lazy = () -> RequestData1.mmObject();
 			isDerived = false;
 			xmlTag = "ReqdActvtnDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestedActivationDate";
 			definition = "Specifies the business date on which the new netting cut off(s) is (are) to be activated.";
 			maxOccurs = 1;
@@ -238,7 +241,7 @@ public class RequestData1 {
 			componentContext_lazy = () -> RequestData1.mmObject();
 			isDerived = false;
 			xmlTag = "ReqSvcr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestServicer";
 			definition = "Describes the central system servicing the request.";
 			maxOccurs = 1;
@@ -279,7 +282,7 @@ public class RequestData1 {
 			componentContext_lazy = () -> RequestData1.mmObject();
 			isDerived = false;
 			xmlTag = "NetSvcPtcptId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetServiceParticipantIdentification";
 			definition = "Describes the participant issuing the request.";
 			maxOccurs = 1;
@@ -321,7 +324,7 @@ public class RequestData1 {
 			componentContext_lazy = () -> RequestData1.mmObject();
 			isDerived = false;
 			xmlTag = "NetSvcTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetServiceType";
 			definition = "Describes the type of netting service supporting the net report.";
 			maxOccurs = 1;
@@ -333,12 +336,11 @@ public class RequestData1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RequestData1.mmMessageIdentification, com.tools20022.repository.msg.RequestData1.mmRequestType,
-						com.tools20022.repository.msg.RequestData1.mmRequestedActivationDate, com.tools20022.repository.msg.RequestData1.mmRequestServicer, com.tools20022.repository.msg.RequestData1.mmNetServiceParticipantIdentification,
-						com.tools20022.repository.msg.RequestData1.mmNetServiceType);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.reda.NettingCutOffReferenceDataUpdateRequestV01.mmRequestData);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(RequestData1.mmMessageIdentification, RequestData1.mmRequestType, RequestData1.mmRequestedActivationDate, RequestData1.mmRequestServicer,
+						RequestData1.mmNetServiceParticipantIdentification, RequestData1.mmNetServiceType);
+				messageBuildingBlock_lazy = () -> Arrays.asList(NettingCutOffReferenceDataUpdateRequestV01.mmRequestData);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RequestData1";
 				definition = "Contains the meta data for a netting cut off update request: message identification, request servicer and a request type.";
 			}

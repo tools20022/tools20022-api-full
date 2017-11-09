@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ReceiveDeliveryCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -84,7 +86,7 @@ public class ReceiveDelivery1Code extends ReceiveDeliveryCode {
 	 */
 	public static final MMCode mmDelivery = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Delivery";
 			owner_lazy = () -> ReceiveDelivery1Code.mmObject();
 		}
@@ -107,7 +109,7 @@ public class ReceiveDelivery1Code extends ReceiveDeliveryCode {
 	 */
 	public static final MMCode mmReceive = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Receive";
 			owner_lazy = () -> ReceiveDelivery1Code.mmObject();
 		}
@@ -116,12 +118,12 @@ public class ReceiveDelivery1Code extends ReceiveDeliveryCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("DELI");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ReceiveDelivery1Code";
 				definition = "Specifies whether the settlement transaction is a delivery or receipt.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ReceiveDelivery1Code.mmDelivery, com.tools20022.repository.codeset.ReceiveDelivery1Code.mmReceive);
+				code_lazy = () -> Arrays.asList(ReceiveDelivery1Code.mmDelivery, ReceiveDelivery1Code.mmReceive);
 				trace_lazy = () -> ReceiveDeliveryCode.mmObject();
 			}
 		});

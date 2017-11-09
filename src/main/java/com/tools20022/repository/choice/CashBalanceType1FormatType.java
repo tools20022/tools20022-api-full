@@ -19,8 +19,11 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CashBalanceType1Code;
+import com.tools20022.repository.entity.Balance;
 import com.tools20022.repository.entity.CashBalance;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification13;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -99,11 +102,11 @@ public class CashBalanceType1FormatType {
 	 */
 	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Balance.mmType;
+			businessElementTrace_lazy = () -> Balance.mmType;
 			componentContext_lazy = () -> CashBalanceType1FormatType.mmObject();
 			isDerived = false;
 			xmlTag = "Cd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Standard code to  specify the type of cash balance.";
 			maxOccurs = 1;
@@ -147,11 +150,11 @@ public class CashBalanceType1FormatType {
 	 */
 	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Balance.mmType;
+			businessElementTrace_lazy = () -> Balance.mmType;
 			componentContext_lazy = () -> CashBalanceType1FormatType.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Proprietary code to  express the type of cash balance.";
 			maxOccurs = 1;
@@ -163,10 +166,10 @@ public class CashBalanceType1FormatType {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CashBalanceType1FormatType.mmCode, com.tools20022.repository.choice.CashBalanceType1FormatType.mmProprietary);
+				messageElement_lazy = () -> Arrays.asList(CashBalanceType1FormatType.mmCode, CashBalanceType1FormatType.mmProprietary);
 				trace_lazy = () -> CashBalance.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CashBalanceType1FormatType";
 				definition = "Choice of formats to  express the type of cash balance.";
 			}

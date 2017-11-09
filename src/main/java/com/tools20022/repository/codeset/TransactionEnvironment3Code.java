@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.TransactionEnvironmentCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -81,7 +83,7 @@ public class TransactionEnvironment3Code extends TransactionEnvironmentCode {
 	 */
 	public static final MMCode mmBranch = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Branch";
 			owner_lazy = () -> TransactionEnvironment3Code.mmObject();
 		}
@@ -104,7 +106,7 @@ public class TransactionEnvironment3Code extends TransactionEnvironmentCode {
 	 */
 	public static final MMCode mmMerchant = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Merchant";
 			owner_lazy = () -> TransactionEnvironment3Code.mmObject();
 		}
@@ -127,7 +129,7 @@ public class TransactionEnvironment3Code extends TransactionEnvironmentCode {
 	 */
 	public static final MMCode mmOther = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
 			owner_lazy = () -> TransactionEnvironment3Code.mmObject();
 		}
@@ -136,12 +138,11 @@ public class TransactionEnvironment3Code extends TransactionEnvironmentCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TransactionEnvironment3Code";
 				definition = "Indicates the entity hosting the terminal performing the transaction. ";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TransactionEnvironment3Code.mmBranch, com.tools20022.repository.codeset.TransactionEnvironment3Code.mmMerchant,
-						com.tools20022.repository.codeset.TransactionEnvironment3Code.mmOther);
+				code_lazy = () -> Arrays.asList(TransactionEnvironment3Code.mmBranch, TransactionEnvironment3Code.mmMerchant, TransactionEnvironment3Code.mmOther);
 				trace_lazy = () -> TransactionEnvironmentCode.mmObject();
 			}
 		});

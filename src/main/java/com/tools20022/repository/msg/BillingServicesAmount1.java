@@ -19,7 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.CashAccountService;
+import com.tools20022.repository.entity.Product;
+import com.tools20022.repository.entity.Service;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -98,11 +102,11 @@ public class BillingServicesAmount1 {
 	 */
 	public static final MMMessageAssociationEnd mmHostAmount = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Service.mmAmount;
+			businessElementTrace_lazy = () -> Service.mmAmount;
 			componentContext_lazy = () -> BillingServicesAmount1.mmObject();
 			isDerived = false;
 			xmlTag = "HstAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HostAmount";
 			definition = "Sum of all the individual taxes on the service expressed in the host currency.";
 			maxOccurs = 1;
@@ -150,11 +154,11 @@ public class BillingServicesAmount1 {
 	 */
 	public static final MMMessageAssociationEnd mmPricingAmount = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Product.mmUnitPrice;
+			businessElementTrace_lazy = () -> Product.mmUnitPrice;
 			componentContext_lazy = () -> BillingServicesAmount1.mmObject();
 			isDerived = false;
 			xmlTag = "PricgAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PricingAmount";
 			definition = "Amount of the tax obligation expressed in the tax region's pricing currency.\nUsage: This is the same amount as carried in the host amount but allows the sender to optionally express the value in the pricing currency.";
 			maxOccurs = 1;
@@ -167,10 +171,10 @@ public class BillingServicesAmount1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BillingServicesAmount1.mmHostAmount, com.tools20022.repository.msg.BillingServicesAmount1.mmPricingAmount);
+				messageElement_lazy = () -> Arrays.asList(BillingServicesAmount1.mmHostAmount, BillingServicesAmount1.mmPricingAmount);
 				trace_lazy = () -> CashAccountService.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "BillingServicesAmount1";
 				definition = "Taxable service charge amount conversions to host currency.";
 			}

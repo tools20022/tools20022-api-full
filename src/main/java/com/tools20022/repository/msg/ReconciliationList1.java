@@ -20,9 +20,12 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.tsmt.InvoicePaymentReconciliationAdviceV01;
+import com.tools20022.repository.area.tsmt.InvoicePaymentReconciliationStatusV01;
 import com.tools20022.repository.datatype.*;
-import com.tools20022.repository.entity.Document;
-import com.tools20022.repository.entity.Invoice;
+import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -151,11 +154,11 @@ public class ReconciliationList1 {
 	 */
 	public static final MMMessageAttribute mmDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Document.mmIssueDate;
+			businessElementTrace_lazy = () -> Document.mmIssueDate;
 			componentContext_lazy = () -> ReconciliationList1.mmObject();
 			isDerived = false;
 			xmlTag = "Dt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Date";
 			definition = "Date of creation of this document.";
 			maxOccurs = 1;
@@ -204,7 +207,7 @@ public class ReconciliationList1 {
 			componentContext_lazy = () -> ReconciliationList1.mmObject();
 			isDerived = false;
 			xmlTag = "RltdDoc";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedDocument";
 			definition = "Reference to related documents for example to original assignment in a status response or retry.";
 			minOccurs = 0;
@@ -247,11 +250,11 @@ public class ReconciliationList1 {
 	 */
 	public static final MMMessageAssociationEnd mmRecipient = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> ReconciliationList1.mmObject();
 			isDerived = false;
 			xmlTag = "Rcpt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Recipient";
 			definition = "Party to be advised.";
 			maxOccurs = 1;
@@ -295,11 +298,11 @@ public class ReconciliationList1 {
 	 */
 	public static final MMMessageAssociationEnd mmAdvisor = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> ReconciliationList1.mmObject();
 			isDerived = false;
 			xmlTag = "Advsr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Advisor";
 			definition = "Informing party.";
 			maxOccurs = 1;
@@ -346,7 +349,7 @@ public class ReconciliationList1 {
 			componentContext_lazy = () -> ReconciliationList1.mmObject();
 			isDerived = false;
 			xmlTag = "Params";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Parameters";
 			definition = "Identification parameters.";
 			maxOccurs = 1;
@@ -389,11 +392,11 @@ public class ReconciliationList1 {
 	 */
 	public static final MMMessageAssociationEnd mmPaymentReference = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.mmPaymentRelatedIdentifications;
+			businessElementTrace_lazy = () -> Payment.mmPaymentRelatedIdentifications;
 			componentContext_lazy = () -> ReconciliationList1.mmObject();
 			isDerived = false;
 			xmlTag = "PmtRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentReference";
 			definition = "Reference to a payment instruction.";
 			maxOccurs = 1;
@@ -437,11 +440,11 @@ public class ReconciliationList1 {
 	 */
 	public static final MMMessageAssociationEnd mmPaymentMeans = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Invoice.mmPayment;
+			businessElementTrace_lazy = () -> Invoice.mmPayment;
 			componentContext_lazy = () -> ReconciliationList1.mmObject();
 			isDerived = false;
 			xmlTag = "PmtMeans";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentMeans";
 			definition = "Set of elements used to further specify the type of transaction.";
 			maxOccurs = 1;
@@ -485,11 +488,11 @@ public class ReconciliationList1 {
 	 */
 	public static final MMMessageAttribute mmPaymentDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ObligationFulfilment.mmDate;
+			businessElementTrace_lazy = () -> ObligationFulfilment.mmDate;
 			componentContext_lazy = () -> ReconciliationList1.mmObject();
 			isDerived = false;
 			xmlTag = "PmtDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentDate";
 			definition = "Effective date of payment.";
 			maxOccurs = 1;
@@ -531,11 +534,11 @@ public class ReconciliationList1 {
 	 */
 	public static final MMMessageAssociationEnd mmPaymentTerms = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Document.mmPaymentObligation;
+			businessElementTrace_lazy = () -> Document.mmPaymentObligation;
 			componentContext_lazy = () -> ReconciliationList1.mmObject();
 			isDerived = false;
 			xmlTag = "PmtTerms";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentTerms";
 			definition = "Terms of the payment.";
 			maxOccurs = 1;
@@ -580,11 +583,11 @@ public class ReconciliationList1 {
 	 */
 	public static final MMMessageAttribute mmPaymentAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.mmAmount;
+			businessElementTrace_lazy = () -> Payment.mmAmount;
 			componentContext_lazy = () -> ReconciliationList1.mmObject();
 			isDerived = false;
 			xmlTag = "PmtAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentAmount";
 			definition = "Amount of the referenced payment.";
 			maxOccurs = 1;
@@ -629,7 +632,7 @@ public class ReconciliationList1 {
 			componentContext_lazy = () -> ReconciliationList1.mmObject();
 			isDerived = false;
 			xmlTag = "Itm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Item";
 			definition = "Financial item impacted by the payment.";
 			minOccurs = 1;
@@ -671,7 +674,7 @@ public class ReconciliationList1 {
 			componentContext_lazy = () -> ReconciliationList1.mmObject();
 			isDerived = false;
 			xmlTag = "ItmCnt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ItemCount";
 			definition = "Number of individual items contained in the list.";
 			maxOccurs = 1;
@@ -716,7 +719,7 @@ public class ReconciliationList1 {
 			componentContext_lazy = () -> ReconciliationList1.mmObject();
 			isDerived = false;
 			xmlTag = "CtrlSum";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ControlSum";
 			definition = "Total of all individual amounts included in the list, irrespective of currencies.";
 			maxOccurs = 1;
@@ -762,7 +765,7 @@ public class ReconciliationList1 {
 			componentContext_lazy = () -> ReconciliationList1.mmObject();
 			isDerived = false;
 			xmlTag = "AssoctdDoc";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AssociatedDocument";
 			definition = "Associated free form document.";
 			minOccurs = 0;
@@ -804,7 +807,7 @@ public class ReconciliationList1 {
 			componentContext_lazy = () -> ReconciliationList1.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInformation";
 			definition = "Additional proprietary formal information concerning the list.";
 			maxOccurs = 1;
@@ -847,11 +850,11 @@ public class ReconciliationList1 {
 	 */
 	public static final MMMessageAssociationEnd mmValidationStatusInformation = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvoiceFinancingAgreement.mmInvoiceFinancingStatus;
+			businessElementTrace_lazy = () -> InvoiceFinancingAgreement.mmInvoiceFinancingStatus;
 			componentContext_lazy = () -> ReconciliationList1.mmObject();
 			isDerived = false;
 			xmlTag = "VldtnStsInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValidationStatusInformation";
 			definition = "Validation status of the list.";
 			maxOccurs = 1;
@@ -864,17 +867,13 @@ public class ReconciliationList1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReconciliationList1.mmDate, com.tools20022.repository.msg.ReconciliationList1.mmRelatedDocument,
-						com.tools20022.repository.msg.ReconciliationList1.mmRecipient, com.tools20022.repository.msg.ReconciliationList1.mmAdvisor, com.tools20022.repository.msg.ReconciliationList1.mmParameters,
-						com.tools20022.repository.msg.ReconciliationList1.mmPaymentReference, com.tools20022.repository.msg.ReconciliationList1.mmPaymentMeans, com.tools20022.repository.msg.ReconciliationList1.mmPaymentDate,
-						com.tools20022.repository.msg.ReconciliationList1.mmPaymentTerms, com.tools20022.repository.msg.ReconciliationList1.mmPaymentAmount, com.tools20022.repository.msg.ReconciliationList1.mmItem,
-						com.tools20022.repository.msg.ReconciliationList1.mmItemCount, com.tools20022.repository.msg.ReconciliationList1.mmControlSum, com.tools20022.repository.msg.ReconciliationList1.mmAssociatedDocument,
-						com.tools20022.repository.msg.ReconciliationList1.mmAdditionalInformation, com.tools20022.repository.msg.ReconciliationList1.mmValidationStatusInformation);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.InvoicePaymentReconciliationAdviceV01.mmReconciliationList,
-						com.tools20022.repository.area.tsmt.InvoicePaymentReconciliationStatusV01.mmReconciliationList);
+				messageElement_lazy = () -> Arrays.asList(ReconciliationList1.mmDate, ReconciliationList1.mmRelatedDocument, ReconciliationList1.mmRecipient, ReconciliationList1.mmAdvisor, ReconciliationList1.mmParameters,
+						ReconciliationList1.mmPaymentReference, ReconciliationList1.mmPaymentMeans, ReconciliationList1.mmPaymentDate, ReconciliationList1.mmPaymentTerms, ReconciliationList1.mmPaymentAmount, ReconciliationList1.mmItem,
+						ReconciliationList1.mmItemCount, ReconciliationList1.mmControlSum, ReconciliationList1.mmAssociatedDocument, ReconciliationList1.mmAdditionalInformation, ReconciliationList1.mmValidationStatusInformation);
+				messageBuildingBlock_lazy = () -> Arrays.asList(InvoicePaymentReconciliationAdviceV01.mmReconciliationList, InvoicePaymentReconciliationStatusV01.mmReconciliationList);
 				trace_lazy = () -> Document.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ReconciliationList1";
 				definition = "Specifies a list of reconciliation information concerning financial items.";
 			}

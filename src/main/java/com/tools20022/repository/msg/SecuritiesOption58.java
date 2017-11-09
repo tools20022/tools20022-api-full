@@ -20,10 +20,15 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.DateAndDateTimeChoice;
 import com.tools20022.repository.choice.Quantity10Choice;
 import com.tools20022.repository.codeset.CreditDebitCode;
+import com.tools20022.repository.entity.CorporateActionDistribution;
 import com.tools20022.repository.entity.CorporateActionOption;
+import com.tools20022.repository.entity.ProceedsDefinition;
+import com.tools20022.repository.entity.Security;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -110,11 +115,11 @@ public class SecuritiesOption58 {
 	 */
 	public static final MMMessageAssociationEnd mmFinancialInstrumentIdentification = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmIdentification;
+			businessElementTrace_lazy = () -> Security.mmIdentification;
 			componentContext_lazy = () -> SecuritiesOption58.mmObject();
 			isDerived = false;
 			xmlTag = "FinInstrmId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentIdentification";
 			definition = "Identification of the financial instrument.";
 			maxOccurs = 1;
@@ -159,11 +164,11 @@ public class SecuritiesOption58 {
 	 */
 	public static final MMMessageAttribute mmCreditDebitIndicator = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ProceedsDefinition.mmCreditDebitIndicator;
+			businessElementTrace_lazy = () -> ProceedsDefinition.mmCreditDebitIndicator;
 			componentContext_lazy = () -> SecuritiesOption58.mmObject();
 			isDerived = false;
 			xmlTag = "CdtDbtInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditDebitIndicator";
 			definition = "Specifies whether the value is a debit or credit.";
 			maxOccurs = 1;
@@ -208,11 +213,11 @@ public class SecuritiesOption58 {
 	 */
 	public static final MMMessageAssociationEnd mmPostingQuantity = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionDistribution.mmPostingQuantity;
+			businessElementTrace_lazy = () -> CorporateActionDistribution.mmPostingQuantity;
 			componentContext_lazy = () -> SecuritiesOption58.mmObject();
 			isDerived = false;
 			xmlTag = "PstngQty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PostingQuantity";
 			definition = "Quantity of securities that have been posted (credit or debit) to the safekeeping account.";
 			maxOccurs = 1;
@@ -256,11 +261,11 @@ public class SecuritiesOption58 {
 	 */
 	public static final MMMessageAssociationEnd mmPostingDate = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionDistribution.mmPostingDateTime;
+			businessElementTrace_lazy = () -> CorporateActionDistribution.mmPostingDateTime;
 			componentContext_lazy = () -> SecuritiesOption58.mmObject();
 			isDerived = false;
 			xmlTag = "PstngDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PostingDate";
 			definition = "Date of the posting (credit or debit) to the account.";
 			maxOccurs = 1;
@@ -307,11 +312,11 @@ public class SecuritiesOption58 {
 	 */
 	public static final MMMessageAssociationEnd mmOriginalPostingDate = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionDistribution.mmPostingDateTime;
+			businessElementTrace_lazy = () -> CorporateActionDistribution.mmPostingDateTime;
 			componentContext_lazy = () -> SecuritiesOption58.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlPstngDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalPostingDate";
 			definition = "Date/Time of the posting (credit or debit) to the account that was initially communicated in the confirmation.";
 			maxOccurs = 1;
@@ -324,11 +329,11 @@ public class SecuritiesOption58 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesOption58.mmFinancialInstrumentIdentification, com.tools20022.repository.msg.SecuritiesOption58.mmCreditDebitIndicator,
-						com.tools20022.repository.msg.SecuritiesOption58.mmPostingQuantity, com.tools20022.repository.msg.SecuritiesOption58.mmPostingDate, com.tools20022.repository.msg.SecuritiesOption58.mmOriginalPostingDate);
+				messageElement_lazy = () -> Arrays.asList(SecuritiesOption58.mmFinancialInstrumentIdentification, SecuritiesOption58.mmCreditDebitIndicator, SecuritiesOption58.mmPostingQuantity, SecuritiesOption58.mmPostingDate,
+						SecuritiesOption58.mmOriginalPostingDate);
 				trace_lazy = () -> CorporateActionOption.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesOption58";
 				definition = "Provides information about the corporate action security option.";
 			}

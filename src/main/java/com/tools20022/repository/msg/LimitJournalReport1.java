@@ -19,7 +19,9 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.LimitJournalReportOrError2Choice;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -92,7 +94,7 @@ public class LimitJournalReport1 {
 			componentContext_lazy = () -> LimitJournalReport1.mmObject();
 			isDerived = false;
 			xmlTag = "LmtId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LimitIdentification";
 			definition = "Identification of the limit on which information is requested.";
 			maxOccurs = 1;
@@ -137,7 +139,7 @@ public class LimitJournalReport1 {
 			componentContext_lazy = () -> LimitJournalReport1.mmObject();
 			isDerived = false;
 			xmlTag = "LmtRpt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LimitReport";
 			definition = "Specifies the business report either as a limit utilisation journal or a business error.";
 			maxOccurs = 1;
@@ -150,9 +152,9 @@ public class LimitJournalReport1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LimitJournalReport1.mmLimitIdentification, com.tools20022.repository.msg.LimitJournalReport1.mmLimitReport);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(LimitJournalReport1.mmLimitIdentification, LimitJournalReport1.mmLimitReport);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "LimitJournalReport1";
 				definition = "Reports either on the risk management limit or on a business error.";
 			}

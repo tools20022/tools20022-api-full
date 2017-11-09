@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.DayTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -81,7 +83,7 @@ public class DayType1Code extends DayTypeCode {
 	 */
 	public static final MMCode mmElapsedCalendarDays = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ElapsedCalendarDays";
 			owner_lazy = () -> DayType1Code.mmObject();
 		}
@@ -103,7 +105,7 @@ public class DayType1Code extends DayTypeCode {
 	 */
 	public static final MMCode mmElapsedBusinessDays = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ElapsedBusinessDays";
 			owner_lazy = () -> DayType1Code.mmObject();
 		}
@@ -112,12 +114,12 @@ public class DayType1Code extends DayTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ACTU");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DayType1Code";
 				definition = "Specifies the type of day.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DayType1Code.mmElapsedCalendarDays, com.tools20022.repository.codeset.DayType1Code.mmElapsedBusinessDays);
+				code_lazy = () -> Arrays.asList(DayType1Code.mmElapsedCalendarDays, DayType1Code.mmElapsedBusinessDays);
 				trace_lazy = () -> DayTypeCode.mmObject();
 			}
 		});

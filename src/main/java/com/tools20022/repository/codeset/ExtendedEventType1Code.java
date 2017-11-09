@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ExtendedEventTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -98,7 +100,7 @@ public class ExtendedEventType1Code extends ExtendedEventTypeCode {
 	 */
 	public static final MMCode mmRightsPlanAdoption = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RightsPlanAdoption";
 			owner_lazy = () -> ExtendedEventType1Code.mmObject();
 		}
@@ -121,7 +123,7 @@ public class ExtendedEventType1Code extends ExtendedEventTypeCode {
 	 */
 	public static final MMCode mmTermination = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Termination";
 			owner_lazy = () -> ExtendedEventType1Code.mmObject();
 		}
@@ -144,7 +146,7 @@ public class ExtendedEventType1Code extends ExtendedEventTypeCode {
 	 */
 	public static final MMCode mmBonusRightsIssue = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BonusRightsIssue";
 			owner_lazy = () -> ExtendedEventType1Code.mmObject();
 		}
@@ -167,7 +169,7 @@ public class ExtendedEventType1Code extends ExtendedEventTypeCode {
 	 */
 	public static final MMCode mmFullPrerefunding = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FullPrerefunding";
 			owner_lazy = () -> ExtendedEventType1Code.mmObject();
 		}
@@ -190,7 +192,7 @@ public class ExtendedEventType1Code extends ExtendedEventTypeCode {
 	 */
 	public static final MMCode mmPartialDefeasance = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartialDefeasance";
 			owner_lazy = () -> ExtendedEventType1Code.mmObject();
 		}
@@ -213,7 +215,7 @@ public class ExtendedEventType1Code extends ExtendedEventTypeCode {
 	 */
 	public static final MMCode mmPartialPrerefunding = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartialPrerefunding";
 			owner_lazy = () -> ExtendedEventType1Code.mmObject();
 		}
@@ -222,14 +224,13 @@ public class ExtendedEventType1Code extends ExtendedEventTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("RPLA");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ExtendedEventType1Code";
 				definition = "Specifies DTCC (The Depository Trust and Clearing Corporation) defined corporate action event type.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ExtendedEventType1Code.mmRightsPlanAdoption, com.tools20022.repository.codeset.ExtendedEventType1Code.mmTermination,
-						com.tools20022.repository.codeset.ExtendedEventType1Code.mmBonusRightsIssue, com.tools20022.repository.codeset.ExtendedEventType1Code.mmFullPrerefunding,
-						com.tools20022.repository.codeset.ExtendedEventType1Code.mmPartialDefeasance, com.tools20022.repository.codeset.ExtendedEventType1Code.mmPartialPrerefunding);
+				code_lazy = () -> Arrays.asList(ExtendedEventType1Code.mmRightsPlanAdoption, ExtendedEventType1Code.mmTermination, ExtendedEventType1Code.mmBonusRightsIssue, ExtendedEventType1Code.mmFullPrerefunding,
+						ExtendedEventType1Code.mmPartialDefeasance, ExtendedEventType1Code.mmPartialPrerefunding);
 				trace_lazy = () -> ExtendedEventTypeCode.mmObject();
 			}
 		});

@@ -19,8 +19,10 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.metamodel.MMXor;
 import com.tools20022.repository.entity.RiskManagementLimit;
+import com.tools20022.repository.GeneratedRepository;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -118,7 +120,7 @@ public class LimitDetailsStructure1 {
 			componentContext_lazy = () -> LimitDetailsStructure1.mmObject();
 			isDerived = false;
 			xmlTag = "CurLmtId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrentLimitIdentification";
 			definition = "Identification of the current limit.";
 			maxOccurs = 1;
@@ -166,7 +168,7 @@ public class LimitDetailsStructure1 {
 			componentContext_lazy = () -> LimitDetailsStructure1.mmObject();
 			isDerived = false;
 			xmlTag = "DfltLmtId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DefaultLimitIdentification";
 			definition = "Identification of the default limit.";
 			maxOccurs = 1;
@@ -213,7 +215,7 @@ public class LimitDetailsStructure1 {
 			componentContext_lazy = () -> LimitDetailsStructure1.mmObject();
 			isDerived = false;
 			xmlTag = "NewLmtValSet";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewLimitValueSet";
 			definition = "New limit values.";
 			maxOccurs = 1;
@@ -227,6 +229,10 @@ public class LimitDetailsStructure1 {
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
+	 * messageComponent} =
+	 * {@linkplain com.tools20022.repository.msg.LimitDetailsStructure1
+	 * LimitDetailsStructure1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getImpactedElements
 	 * impactedElements} =
 	 * <ul>
@@ -238,10 +244,6 @@ public class LimitDetailsStructure1 {
 	 * LimitDetailsStructure1.mmDefaultLimitIdentification}</li>
 	 * </ul>
 	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
-	 * messageComponent} =
-	 * {@linkplain com.tools20022.repository.msg.LimitDetailsStructure1
-	 * LimitDetailsStructure1}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -256,22 +258,21 @@ public class LimitDetailsStructure1 {
 	 */
 	public static final MMXor mmSingleLimitRule = new MMXor() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SingleLimitRule";
 			definition = "Each ModifyLimit message can only modify one type of limit.";
 			messageComponent_lazy = () -> LimitDetailsStructure1.mmObject();
-			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LimitDetailsStructure1.mmCurrentLimitIdentification, com.tools20022.repository.msg.LimitDetailsStructure1.mmDefaultLimitIdentification);
+			impactedElements_lazy = () -> Arrays.asList(LimitDetailsStructure1.mmCurrentLimitIdentification, LimitDetailsStructure1.mmDefaultLimitIdentification);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LimitDetailsStructure1.mmCurrentLimitIdentification, com.tools20022.repository.msg.LimitDetailsStructure1.mmDefaultLimitIdentification,
-						com.tools20022.repository.msg.LimitDetailsStructure1.mmNewLimitValueSet);
+				messageElement_lazy = () -> Arrays.asList(LimitDetailsStructure1.mmCurrentLimitIdentification, LimitDetailsStructure1.mmDefaultLimitIdentification, LimitDetailsStructure1.mmNewLimitValueSet);
 				trace_lazy = () -> RiskManagementLimit.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
 						return DateFormat.getDateInstance(java.text.DateFormat.LONG).parse("September 9, 2016");
@@ -281,7 +282,7 @@ public class LimitDetailsStructure1 {
 				})).get();
 				name = "LimitDetailsStructure1";
 				definition = "Limit details of one particular limit set by the member and managed by the transaction administrator.";
-				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LimitDetailsStructure1.mmSingleLimitRule);
+				xors_lazy = () -> Arrays.asList(LimitDetailsStructure1.mmSingleLimitRule);
 			}
 		});
 		return mmObject_lazy.get();

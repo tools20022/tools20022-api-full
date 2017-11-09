@@ -19,9 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.InstructionProcessingStatus10Choice;
 import com.tools20022.repository.choice.MatchingStatus7Choice;
 import com.tools20022.repository.choice.SettlementStatus7Choice;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -108,7 +110,7 @@ public class StatusAndReason15 {
 			componentContext_lazy = () -> StatusAndReason15.mmObject();
 			isDerived = false;
 			xmlTag = "IfrrdMtchgSts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InferredMatchingStatus";
 			definition = "Provides the matching status of an instruction as known by the account servicer based on an allegement. At this time no matching took place on the market (at the CSD/ICSD).";
 			maxOccurs = 1;
@@ -150,7 +152,7 @@ public class StatusAndReason15 {
 			componentContext_lazy = () -> StatusAndReason15.mmObject();
 			isDerived = false;
 			xmlTag = "MtchgSts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MatchingStatus";
 			definition = "Provides the matching status of the instruction.";
 			maxOccurs = 1;
@@ -192,7 +194,7 @@ public class StatusAndReason15 {
 			componentContext_lazy = () -> StatusAndReason15.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmSts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementStatus";
 			definition = "Provides the status of settlement of a transaction.";
 			maxOccurs = 1;
@@ -234,7 +236,7 @@ public class StatusAndReason15 {
 			componentContext_lazy = () -> StatusAndReason15.mmObject();
 			isDerived = false;
 			xmlTag = "InstrPrcgSts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructionProcessingStatus";
 			definition = "Provides the status of an instruction.";
 			maxOccurs = 1;
@@ -275,7 +277,7 @@ public class StatusAndReason15 {
 			componentContext_lazy = () -> StatusAndReason15.mmObject();
 			isDerived = false;
 			xmlTag = "Sttld";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Settled";
 			definition = "Specifies the state or the condition.";
 			maxOccurs = 1;
@@ -317,7 +319,7 @@ public class StatusAndReason15 {
 			componentContext_lazy = () -> StatusAndReason15.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Proprietary status.";
 			maxOccurs = 1;
@@ -330,11 +332,10 @@ public class StatusAndReason15 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StatusAndReason15.mmInferredMatchingStatus, com.tools20022.repository.msg.StatusAndReason15.mmMatchingStatus,
-						com.tools20022.repository.msg.StatusAndReason15.mmSettlementStatus, com.tools20022.repository.msg.StatusAndReason15.mmInstructionProcessingStatus, com.tools20022.repository.msg.StatusAndReason15.mmSettled,
-						com.tools20022.repository.msg.StatusAndReason15.mmProprietary);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(StatusAndReason15.mmInferredMatchingStatus, StatusAndReason15.mmMatchingStatus, StatusAndReason15.mmSettlementStatus, StatusAndReason15.mmInstructionProcessingStatus,
+						StatusAndReason15.mmSettled, StatusAndReason15.mmProprietary);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "StatusAndReason15";
 				definition = "Choice of status.";
 			}

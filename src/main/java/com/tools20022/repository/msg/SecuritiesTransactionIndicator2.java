@@ -19,10 +19,12 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ReportingWaiverType1Code;
 import com.tools20022.repository.codeset.ReportingWaiverType3Code;
 import com.tools20022.repository.codeset.Side5Code;
 import com.tools20022.repository.datatype.TrueFalseIndicator;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -107,7 +109,7 @@ public class SecuritiesTransactionIndicator2 {
 			componentContext_lazy = () -> SecuritiesTransactionIndicator2.mmObject();
 			isDerived = false;
 			xmlTag = "WvrInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WaiverIndicator";
 			definition = "Indicates whether the transaction was executed under a pre-trade waiver.";
 			minOccurs = 0;
@@ -150,7 +152,7 @@ public class SecuritiesTransactionIndicator2 {
 			componentContext_lazy = () -> SecuritiesTransactionIndicator2.mmObject();
 			isDerived = false;
 			xmlTag = "ShrtSellgInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ShortSellingIndicator";
 			definition = "Indicates a short sell concluded by the investment agent on its own accounts or on behalf of a client, as described in the local regulation.";
 			maxOccurs = 1;
@@ -195,7 +197,7 @@ public class SecuritiesTransactionIndicator2 {
 			componentContext_lazy = () -> SecuritiesTransactionIndicator2.mmObject();
 			isDerived = false;
 			xmlTag = "OTCPstTradInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OTCPostTradeIndicator";
 			definition = "Indicates the type of transaction in accordance with the local regulation.";
 			minOccurs = 0;
@@ -240,7 +242,7 @@ public class SecuritiesTransactionIndicator2 {
 			componentContext_lazy = () -> SecuritiesTransactionIndicator2.mmObject();
 			isDerived = false;
 			xmlTag = "RskRdcgTx";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RiskReducingTransaction";
 			definition = "Indicates whether the transaction is objectively measurable as reducing risks directly relating to the commercial activity of the entity executing the transaction.";
 			maxOccurs = 1;
@@ -285,7 +287,7 @@ public class SecuritiesTransactionIndicator2 {
 			componentContext_lazy = () -> SecuritiesTransactionIndicator2.mmObject();
 			isDerived = false;
 			xmlTag = "SctiesFincgTxInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesFinancingTransactionIndicator";
 			definition = "Indicates whether the transaction falls within the scope of activity to be reported under the Securities Financing Transactions Regulation.";
 			maxOccurs = 1;
@@ -297,11 +299,10 @@ public class SecuritiesTransactionIndicator2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesTransactionIndicator2.mmWaiverIndicator, com.tools20022.repository.msg.SecuritiesTransactionIndicator2.mmShortSellingIndicator,
-						com.tools20022.repository.msg.SecuritiesTransactionIndicator2.mmOTCPostTradeIndicator, com.tools20022.repository.msg.SecuritiesTransactionIndicator2.mmRiskReducingTransaction,
-						com.tools20022.repository.msg.SecuritiesTransactionIndicator2.mmSecuritiesFinancingTransactionIndicator);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(SecuritiesTransactionIndicator2.mmWaiverIndicator, SecuritiesTransactionIndicator2.mmShortSellingIndicator, SecuritiesTransactionIndicator2.mmOTCPostTradeIndicator,
+						SecuritiesTransactionIndicator2.mmRiskReducingTransaction, SecuritiesTransactionIndicator2.mmSecuritiesFinancingTransactionIndicator);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesTransactionIndicator2";
 				definition = "Provides additional indicators on the transaction.";
 			}

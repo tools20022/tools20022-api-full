@@ -20,9 +20,11 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -107,7 +109,7 @@ public class PartyReferenceDataChange1 {
 			componentContext_lazy = () -> PartyReferenceDataChange1.mmObject();
 			isDerived = false;
 			xmlTag = "PtyId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartyIdentification";
 			definition = "Identifies the party for which the changes are listed in the advice.";
 			maxOccurs = 1;
@@ -152,7 +154,7 @@ public class PartyReferenceDataChange1 {
 			componentContext_lazy = () -> PartyReferenceDataChange1.mmObject();
 			isDerived = false;
 			xmlTag = "FldNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FieldName";
 			definition = "Name of the element, as specified in the short tag name for the field in the message.";
 			maxOccurs = 1;
@@ -194,7 +196,7 @@ public class PartyReferenceDataChange1 {
 			componentContext_lazy = () -> PartyReferenceDataChange1.mmObject();
 			isDerived = false;
 			xmlTag = "OdFldVal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OldFieldValue";
 			definition = "Value of the related field before the change was applied.";
 			maxOccurs = 1;
@@ -235,7 +237,7 @@ public class PartyReferenceDataChange1 {
 			componentContext_lazy = () -> PartyReferenceDataChange1.mmObject();
 			isDerived = false;
 			xmlTag = "NewFldVal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewFieldValue";
 			definition = "Value of the related field after the change was applied.";
 			maxOccurs = 1;
@@ -276,7 +278,7 @@ public class PartyReferenceDataChange1 {
 			componentContext_lazy = () -> PartyReferenceDataChange1.mmObject();
 			isDerived = false;
 			xmlTag = "OprTmStmp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OperationTimeStamp";
 			definition = "Specifies the timestamp of the operation.";
 			maxOccurs = 1;
@@ -288,11 +290,10 @@ public class PartyReferenceDataChange1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyReferenceDataChange1.mmPartyIdentification, com.tools20022.repository.msg.PartyReferenceDataChange1.mmFieldName,
-						com.tools20022.repository.msg.PartyReferenceDataChange1.mmOldFieldValue, com.tools20022.repository.msg.PartyReferenceDataChange1.mmNewFieldValue,
-						com.tools20022.repository.msg.PartyReferenceDataChange1.mmOperationTimeStamp);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(PartyReferenceDataChange1.mmPartyIdentification, PartyReferenceDataChange1.mmFieldName, PartyReferenceDataChange1.mmOldFieldValue, PartyReferenceDataChange1.mmNewFieldValue,
+						PartyReferenceDataChange1.mmOperationTimeStamp);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "PartyReferenceDataChange1";
 				definition = "Describes the comparison between the currently established baseline elements and the proposed ones.";
 			}

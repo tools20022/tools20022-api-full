@@ -19,9 +19,11 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.RateValueType7Code;
 import com.tools20022.repository.datatype.ActiveCurrencyAnd13DecimalAmount;
 import com.tools20022.repository.datatype.PercentageRate;
+import com.tools20022.repository.GeneratedRepository;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -122,10 +124,10 @@ public class RateAndAmountFormat14Choice {
 			componentContext_lazy = () -> RateAndAmountFormat14Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Rate";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rate";
 			definition = "Value expressed as a rate.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.RateAndAmountFormat19Choice.mmRate, com.tools20022.repository.choice.RateAndAmountFormat37Choice.mmRate);
+			nextVersions_lazy = () -> Arrays.asList(RateAndAmountFormat19Choice.mmRate, RateAndAmountFormat37Choice.mmRate);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
@@ -176,10 +178,10 @@ public class RateAndAmountFormat14Choice {
 			componentContext_lazy = () -> RateAndAmountFormat14Choice.mmObject();
 			isDerived = false;
 			xmlTag = "NotSpcfdRate";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotSpecifiedRate";
 			definition = "Value of the rate not specified.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.RateAndAmountFormat19Choice.mmNotSpecifiedRate, com.tools20022.repository.choice.RateAndAmountFormat37Choice.mmNotSpecifiedRate);
+			nextVersions_lazy = () -> Arrays.asList(RateAndAmountFormat19Choice.mmNotSpecifiedRate, RateAndAmountFormat37Choice.mmNotSpecifiedRate);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RateValueType7Code.mmObject();
@@ -230,10 +232,10 @@ public class RateAndAmountFormat14Choice {
 			componentContext_lazy = () -> RateAndAmountFormat14Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Amt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Value is expressed as a currency and amount.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.RateAndAmountFormat19Choice.mmAmount, com.tools20022.repository.choice.RateAndAmountFormat37Choice.mmAmount);
+			nextVersions_lazy = () -> Arrays.asList(RateAndAmountFormat19Choice.mmAmount, RateAndAmountFormat37Choice.mmAmount);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAnd13DecimalAmount.mmObject();
@@ -243,10 +245,9 @@ public class RateAndAmountFormat14Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.RateAndAmountFormat14Choice.mmRate, com.tools20022.repository.choice.RateAndAmountFormat14Choice.mmNotSpecifiedRate,
-						com.tools20022.repository.choice.RateAndAmountFormat14Choice.mmAmount);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+				messageElement_lazy = () -> Arrays.asList(RateAndAmountFormat14Choice.mmRate, RateAndAmountFormat14Choice.mmNotSpecifiedRate, RateAndAmountFormat14Choice.mmAmount);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
 						return DateFormat.getDateInstance(java.text.DateFormat.LONG).parse("May 5, 2016");

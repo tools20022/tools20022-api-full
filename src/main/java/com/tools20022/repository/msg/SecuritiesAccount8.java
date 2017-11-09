@@ -19,6 +19,7 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.CorporateActionOption1FormatChoice;
 import com.tools20022.repository.choice.PartyIdentification2Choice;
 import com.tools20022.repository.choice.SecuritiesBalanceType10FormatChoice;
@@ -27,7 +28,8 @@ import com.tools20022.repository.codeset.CreditDebitCode;
 import com.tools20022.repository.codeset.FormOfSecurity1Code;
 import com.tools20022.repository.datatype.Exact3NumericText;
 import com.tools20022.repository.datatype.Max35Text;
-import com.tools20022.repository.entity.SecuritiesAccount;
+import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -122,11 +124,11 @@ public class SecuritiesAccount8 {
 	 */
 	public static final MMMessageAttribute mmCreditDebitIndicator = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Balance.mmCreditDebitIndicator;
+			businessElementTrace_lazy = () -> Balance.mmCreditDebitIndicator;
 			componentContext_lazy = () -> SecuritiesAccount8.mmObject();
 			isDerived = false;
 			xmlTag = "CdtDbtInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditDebitIndicator";
 			definition = "Specifies whether the value is a debit or credit.";
 			maxOccurs = 1;
@@ -170,11 +172,11 @@ public class SecuritiesAccount8 {
 	 */
 	public static final MMMessageAttribute mmAccountOwnerIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> SecuritiesAccount8.mmObject();
 			isDerived = false;
 			xmlTag = "AcctOwnrId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountOwnerIdentification";
 			definition = "Identification of the party that owns the account.";
 			maxOccurs = 1;
@@ -219,11 +221,11 @@ public class SecuritiesAccount8 {
 	 */
 	public static final MMMessageAttribute mmAccountIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmIdentification;
+			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> SecuritiesAccount8.mmObject();
 			isDerived = false;
 			xmlTag = "AcctId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountIdentification";
 			definition = "Idenfitication of the account where financial instruments are maintained.";
 			maxOccurs = 1;
@@ -267,11 +269,11 @@ public class SecuritiesAccount8 {
 	 */
 	public static final MMMessageAttribute mmBalanceType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesBalance.mmSecuritiesBalanceType;
+			businessElementTrace_lazy = () -> SecuritiesBalance.mmSecuritiesBalanceType;
 			componentContext_lazy = () -> SecuritiesAccount8.mmObject();
 			isDerived = false;
 			xmlTag = "BalTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BalanceType";
 			definition = "Type of balance.";
 			maxOccurs = 1;
@@ -316,11 +318,11 @@ public class SecuritiesAccount8 {
 	 */
 	public static final MMMessageAttribute mmOptionType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionOption.mmOptionType;
+			businessElementTrace_lazy = () -> CorporateActionOption.mmOptionType;
 			componentContext_lazy = () -> SecuritiesAccount8.mmObject();
 			isDerived = false;
 			xmlTag = "OptnTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionType";
 			definition = "Specifies the corporate action options available to the account owner.";
 			maxOccurs = 1;
@@ -365,11 +367,11 @@ public class SecuritiesAccount8 {
 	 */
 	public static final MMMessageAttribute mmOptionNumber = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionOption.mmOptionNumber;
+			businessElementTrace_lazy = () -> CorporateActionOption.mmOptionNumber;
 			componentContext_lazy = () -> SecuritiesAccount8.mmObject();
 			isDerived = false;
 			xmlTag = "OptnNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionNumber";
 			definition = "Number identifying the available corporate action options.";
 			maxOccurs = 1;
@@ -413,11 +415,11 @@ public class SecuritiesAccount8 {
 	 */
 	public static final MMMessageAttribute mmSecurityHoldingForm = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmRegistrationForm;
+			businessElementTrace_lazy = () -> Security.mmRegistrationForm;
 			componentContext_lazy = () -> SecuritiesAccount8.mmObject();
 			isDerived = false;
 			xmlTag = "SctyHldgForm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityHoldingForm";
 			definition = "Specifies the form of the financial instrument.";
 			maxOccurs = 1;
@@ -461,11 +463,11 @@ public class SecuritiesAccount8 {
 	 */
 	public static final MMMessageAttribute mmStampDuty = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmTaxDetails;
+			businessElementTrace_lazy = () -> Security.mmTaxDetails;
 			componentContext_lazy = () -> SecuritiesAccount8.mmObject();
 			isDerived = false;
 			xmlTag = "StmpDty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StampDuty";
 			definition = "Specifies if the stamp duty is applicable.";
 			maxOccurs = 1;
@@ -477,12 +479,11 @@ public class SecuritiesAccount8 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesAccount8.mmCreditDebitIndicator, com.tools20022.repository.msg.SecuritiesAccount8.mmAccountOwnerIdentification,
-						com.tools20022.repository.msg.SecuritiesAccount8.mmAccountIdentification, com.tools20022.repository.msg.SecuritiesAccount8.mmBalanceType, com.tools20022.repository.msg.SecuritiesAccount8.mmOptionType,
-						com.tools20022.repository.msg.SecuritiesAccount8.mmOptionNumber, com.tools20022.repository.msg.SecuritiesAccount8.mmSecurityHoldingForm, com.tools20022.repository.msg.SecuritiesAccount8.mmStampDuty);
+				messageElement_lazy = () -> Arrays.asList(SecuritiesAccount8.mmCreditDebitIndicator, SecuritiesAccount8.mmAccountOwnerIdentification, SecuritiesAccount8.mmAccountIdentification, SecuritiesAccount8.mmBalanceType,
+						SecuritiesAccount8.mmOptionType, SecuritiesAccount8.mmOptionNumber, SecuritiesAccount8.mmSecurityHoldingForm, SecuritiesAccount8.mmStampDuty);
 				trace_lazy = () -> SecuritiesAccount.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesAccount8";
 				definition = "Provides information about the securities account.";
 			}

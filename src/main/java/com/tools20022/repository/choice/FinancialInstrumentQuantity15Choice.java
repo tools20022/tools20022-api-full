@@ -19,9 +19,12 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.RestrictedFINDecimalNumber;
 import com.tools20022.repository.datatype.RestrictedFINImpliedCurrencyAndAmount;
+import com.tools20022.repository.entity.AssetHolding;
 import com.tools20022.repository.entity.SecuritiesQuantity;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -102,11 +105,11 @@ public class FinancialInstrumentQuantity15Choice {
 	 */
 	public static final MMMessageAttribute mmUnit = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmUnit;
+			businessElementTrace_lazy = () -> SecuritiesQuantity.mmUnit;
 			componentContext_lazy = () -> FinancialInstrumentQuantity15Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Unit";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unit";
 			definition = "Quantity expressed as a number, eg, a number of shares.";
 			maxOccurs = 1;
@@ -153,11 +156,11 @@ public class FinancialInstrumentQuantity15Choice {
 	 */
 	public static final MMMessageAttribute mmFaceAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmFaceAmount;
+			businessElementTrace_lazy = () -> AssetHolding.mmFaceAmount;
 			componentContext_lazy = () -> FinancialInstrumentQuantity15Choice.mmObject();
 			isDerived = false;
 			xmlTag = "FaceAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FaceAmount";
 			definition = "Quantity expressed as an amount representing the face amount, ie, the principal, of a debt instrument.";
 			maxOccurs = 1;
@@ -205,11 +208,11 @@ public class FinancialInstrumentQuantity15Choice {
 	 */
 	public static final MMMessageAttribute mmAmortisedValue = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmAmortisedFaceValue;
+			businessElementTrace_lazy = () -> AssetHolding.mmAmortisedFaceValue;
 			componentContext_lazy = () -> FinancialInstrumentQuantity15Choice.mmObject();
 			isDerived = false;
 			xmlTag = "AmtsdVal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmortisedValue";
 			definition = "Quantity expressed as an amount representing the current amortised face amount of a bond, for example, a periodic reduction/increase of a bond's principal amount.";
 			maxOccurs = 1;
@@ -221,11 +224,10 @@ public class FinancialInstrumentQuantity15Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.FinancialInstrumentQuantity15Choice.mmUnit, com.tools20022.repository.choice.FinancialInstrumentQuantity15Choice.mmFaceAmount,
-						com.tools20022.repository.choice.FinancialInstrumentQuantity15Choice.mmAmortisedValue);
+				messageElement_lazy = () -> Arrays.asList(FinancialInstrumentQuantity15Choice.mmUnit, FinancialInstrumentQuantity15Choice.mmFaceAmount, FinancialInstrumentQuantity15Choice.mmAmortisedValue);
 				trace_lazy = () -> SecuritiesQuantity.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FinancialInstrumentQuantity15Choice";
 				definition = "Choice between formats for the quantity of security.";
 			}

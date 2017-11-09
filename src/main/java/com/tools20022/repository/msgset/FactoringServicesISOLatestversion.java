@@ -18,10 +18,12 @@
 package com.tools20022.repository.msgset;
 
 import com.tools20022.metamodel.MMMessageSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.tsin.*;
 import com.tools20022.repository.area.tsmt.InvoicePaymentReconciliationAdviceV01;
 import com.tools20022.repository.area.tsmt.InvoicePaymentReconciliationStatusV01;
 import com.tools20022.repository.area.tsmt.PartyEventAdviceV01;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -96,8 +98,8 @@ public class FactoringServicesISOLatestversion {
 	final static public MMMessageSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageSet() {
 			{
-				businessProcessCatalogue_lazy = () -> com.tools20022.repository.GeneratedRepository.mmcatalogue;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				businessProcessCatalogue_lazy = () -> GeneratedRepository.mmcatalogue;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FactoringServices - ISO - Latest version";
 				definition = "Set of messages enabling entities involved in factoring transactions to operate dematerialized services such as invoice discounting, full factoring, with recourse or without recourse, reverse factoring, etc. The message set covers party, account and guarantee management, invoice assignment and payment reconciliation. The messages represent formal business letters and can be secured in order to be compliant with legal requirements.";
 				messageDefinition_lazy = () -> Arrays.asList(InvoicePaymentReconciliationAdviceV01.mmObject(), InvoiceAssignmentRequestV01.mmObject(), PartyRegistrationAndGuaranteeAcknowledgementV01.mmObject(),

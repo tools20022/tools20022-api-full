@@ -19,8 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.sese.SecuritiesStatusOrStatementQueryStatusAdviceV04;
 import com.tools20022.repository.choice.DocumentNumber5Choice;
 import com.tools20022.repository.entity.Document;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -117,10 +120,10 @@ public class DocumentIdentification30 {
 			componentContext_lazy = () -> DocumentIdentification30.mmObject();
 			isDerived = false;
 			xmlTag = "MsgNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageNumber";
 			definition = "Message type number/message identifier of the message referenced in the linkage sequence.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.DocumentIdentification24.mmMessageNumber;
+			previousVersion_lazy = () -> DocumentIdentification24.mmMessageNumber;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DocumentNumber5Choice.mmObject();
@@ -165,10 +168,10 @@ public class DocumentIdentification30 {
 			componentContext_lazy = () -> DocumentIdentification30.mmObject();
 			isDerived = false;
 			xmlTag = "Ref";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reference";
 			definition = "Reference to the query identification.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.DocumentIdentification24.mmReference;
+			previousVersion_lazy = () -> DocumentIdentification24.mmReference;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> com.tools20022.repository.msg.Identification14.mmObject();
@@ -178,11 +181,11 @@ public class DocumentIdentification30 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DocumentIdentification30.mmMessageNumber, com.tools20022.repository.msg.DocumentIdentification30.mmReference);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesStatusOrStatementQueryStatusAdviceV04.mmQueryDetails);
+				messageElement_lazy = () -> Arrays.asList(DocumentIdentification30.mmMessageNumber, DocumentIdentification30.mmReference);
+				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesStatusOrStatementQueryStatusAdviceV04.mmQueryDetails);
 				trace_lazy = () -> Document.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DocumentIdentification30";
 				definition = "Identification of the message number and the query identification.";
 				previousVersion_lazy = () -> DocumentIdentification24.mmObject();

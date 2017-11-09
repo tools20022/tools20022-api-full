@@ -19,7 +19,9 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.TransactionReportOrError2Choice;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -99,7 +101,7 @@ public class ReturnTransactionCopy1 {
 			componentContext_lazy = () -> ReturnTransactionCopy1.mmObject();
 			isDerived = false;
 			xmlTag = "MsgHdr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageHeader";
 			definition = "Common business identification for the message.";
 			maxOccurs = 1;
@@ -141,7 +143,7 @@ public class ReturnTransactionCopy1 {
 			componentContext_lazy = () -> ReturnTransactionCopy1.mmObject();
 			isDerived = false;
 			xmlTag = "RptOrErr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportOrError";
 			definition = "Reports on transactions.";
 			maxOccurs = 1;
@@ -154,9 +156,9 @@ public class ReturnTransactionCopy1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReturnTransactionCopy1.mmMessageHeader, com.tools20022.repository.msg.ReturnTransactionCopy1.mmReportOrError);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(ReturnTransactionCopy1.mmMessageHeader, ReturnTransactionCopy1.mmReportOrError);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ReturnTransactionCopy1";
 				definition = "The ReturnTransaction message is sent by the transaction administrator to a member of the system.\r\nIt is used to provide information on transactions and booked entries held at the transaction administrator.\r\nThe Return Transaction message can be sent as a response to a related GetTransaction message (pull mode) or initiated by the transaction administrator (push mode). The push of information can take place either at prearranged times or as a warning or alarm when a problem has occurred.";
 			}

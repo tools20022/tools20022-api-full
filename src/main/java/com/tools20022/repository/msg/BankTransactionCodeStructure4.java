@@ -19,7 +19,9 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.BankTransaction;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -110,7 +112,7 @@ public class BankTransactionCodeStructure4 {
 			componentContext_lazy = () -> BankTransactionCodeStructure4.mmObject();
 			isDerived = false;
 			xmlTag = "Domn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Domain";
 			definition = "Set of elements used to provide the domain, the family and the sub-family of the bank transaction code, in a structured and hierarchical format.\n\nUsage: If a specific family or sub-family code cannot be provided, the generic family code defined for the domain or the generic sub-family code defined for the family should be provided.";
 			maxOccurs = 1;
@@ -155,11 +157,11 @@ public class BankTransactionCodeStructure4 {
 	 */
 	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BankTransaction.mmProprietaryIdentification;
+			businessElementTrace_lazy = () -> BankTransaction.mmProprietaryIdentification;
 			componentContext_lazy = () -> BankTransactionCodeStructure4.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Bank transaction code in a proprietary form, as defined by the issuer.";
 			maxOccurs = 1;
@@ -172,10 +174,10 @@ public class BankTransactionCodeStructure4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BankTransactionCodeStructure4.mmDomain, com.tools20022.repository.msg.BankTransactionCodeStructure4.mmProprietary);
+				messageElement_lazy = () -> Arrays.asList(BankTransactionCodeStructure4.mmDomain, BankTransactionCodeStructure4.mmProprietary);
 				trace_lazy = () -> BankTransaction.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "BankTransactionCodeStructure4";
 				definition = "Set of elements used to identify the type or operations code of a transaction entry.";
 			}

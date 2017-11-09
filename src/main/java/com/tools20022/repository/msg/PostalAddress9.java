@@ -19,12 +19,16 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CountryCode;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.Max16Text;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.Max70Text;
+import com.tools20022.repository.entity.Country;
+import com.tools20022.repository.entity.DateTimePeriod;
 import com.tools20022.repository.entity.PostalAddress;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -113,11 +117,11 @@ public class PostalAddress9 {
 	 */
 	public static final MMMessageAttribute mmStreetName = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PostalAddress.mmStreetName;
+			businessElementTrace_lazy = () -> PostalAddress.mmStreetName;
 			componentContext_lazy = () -> PostalAddress9.mmObject();
 			isDerived = false;
 			xmlTag = "StrtNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StreetName";
 			definition = "Name of a street or thoroughfare.";
 			maxOccurs = 1;
@@ -160,11 +164,11 @@ public class PostalAddress9 {
 	 */
 	public static final MMMessageAttribute mmBuildingNumber = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PostalAddress.mmStreetBuildingIdentification;
+			businessElementTrace_lazy = () -> PostalAddress.mmStreetBuildingIdentification;
 			componentContext_lazy = () -> PostalAddress9.mmObject();
 			isDerived = false;
 			xmlTag = "BldgNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BuildingNumber";
 			definition = "Number that identifies the position of a building on a street.";
 			maxOccurs = 1;
@@ -209,11 +213,11 @@ public class PostalAddress9 {
 	 */
 	public static final MMMessageAttribute mmPostCode = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PostalAddress.mmPostCodeIdentification;
+			businessElementTrace_lazy = () -> PostalAddress.mmPostCodeIdentification;
 			componentContext_lazy = () -> PostalAddress9.mmObject();
 			isDerived = false;
 			xmlTag = "PstCd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PostCode";
 			definition = "Identifier consisting of a group of letters and/or numbers that is added to a postal address to assist the sorting of mail.";
 			maxOccurs = 1;
@@ -257,11 +261,11 @@ public class PostalAddress9 {
 	 */
 	public static final MMMessageAttribute mmTownName = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PostalAddress.mmTownName;
+			businessElementTrace_lazy = () -> PostalAddress.mmTownName;
 			componentContext_lazy = () -> PostalAddress9.mmObject();
 			isDerived = false;
 			xmlTag = "TwnNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TownName";
 			definition = "Name of a built-up area, with defined boundaries, and a local government.\n";
 			maxOccurs = 1;
@@ -304,11 +308,11 @@ public class PostalAddress9 {
 	 */
 	public static final MMMessageAttribute mmCountrySubDivision = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PostalAddress.mmState;
+			businessElementTrace_lazy = () -> PostalAddress.mmState;
 			componentContext_lazy = () -> PostalAddress9.mmObject();
 			isDerived = false;
 			xmlTag = "CtrySubDvsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CountrySubDivision";
 			definition = "Identifies a subdivision of a country such as state, region, county.";
 			maxOccurs = 1;
@@ -350,11 +354,11 @@ public class PostalAddress9 {
 	 */
 	public static final MMMessageAttribute mmCountry = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Country.mmCode;
+			businessElementTrace_lazy = () -> Country.mmCode;
 			componentContext_lazy = () -> PostalAddress9.mmObject();
 			isDerived = false;
 			xmlTag = "Ctry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Country";
 			definition = "Nation with its own government.";
 			maxOccurs = 1;
@@ -396,11 +400,11 @@ public class PostalAddress9 {
 	 */
 	public static final MMMessageAttribute mmValidFrom = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmFromDateTime;
+			businessElementTrace_lazy = () -> DateTimePeriod.mmFromDateTime;
 			componentContext_lazy = () -> PostalAddress9.mmObject();
 			isDerived = false;
 			xmlTag = "VldFr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValidFrom";
 			definition = "Starting date from which the address is valid.";
 			maxOccurs = 1;
@@ -412,12 +416,11 @@ public class PostalAddress9 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PostalAddress9.mmStreetName, com.tools20022.repository.msg.PostalAddress9.mmBuildingNumber, com.tools20022.repository.msg.PostalAddress9.mmPostCode,
-						com.tools20022.repository.msg.PostalAddress9.mmTownName, com.tools20022.repository.msg.PostalAddress9.mmCountrySubDivision, com.tools20022.repository.msg.PostalAddress9.mmCountry,
-						com.tools20022.repository.msg.PostalAddress9.mmValidFrom);
+				messageElement_lazy = () -> Arrays.asList(PostalAddress9.mmStreetName, PostalAddress9.mmBuildingNumber, PostalAddress9.mmPostCode, PostalAddress9.mmTownName, PostalAddress9.mmCountrySubDivision, PostalAddress9.mmCountry,
+						PostalAddress9.mmValidFrom);
 				trace_lazy = () -> PostalAddress.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "PostalAddress9";
 				definition = "Information that locates and identifies a specific address, as defined by postal services.";
 			}

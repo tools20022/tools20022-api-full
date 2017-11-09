@@ -19,9 +19,13 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ActiveOrHistoricCurrencyAndAmount;
 import com.tools20022.repository.datatype.DecimalNumber;
 import com.tools20022.repository.datatype.PercentageRate;
+import com.tools20022.repository.entity.InvestmentFundOrder;
+import com.tools20022.repository.entity.RedemptionOrder;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -114,14 +118,14 @@ public class FinancialInstrumentQuantity28Choice {
 	 */
 	public static final MMMessageAttribute mmUnitsNumber = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrder.mmUnitsNumber;
+			businessElementTrace_lazy = () -> InvestmentFundOrder.mmUnitsNumber;
 			componentContext_lazy = () -> FinancialInstrumentQuantity28Choice.mmObject();
 			isDerived = false;
 			xmlTag = "UnitsNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnitsNumber";
 			definition = "Number of investment fund units redeemed.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.FinancialInstrumentQuantity27Choice.mmUnitsNumber;
+			previousVersion_lazy = () -> FinancialInstrumentQuantity27Choice.mmUnitsNumber;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
@@ -171,14 +175,14 @@ public class FinancialInstrumentQuantity28Choice {
 	 */
 	public static final MMMessageAttribute mmGrossAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrder.mmGrossAmount;
+			businessElementTrace_lazy = () -> InvestmentFundOrder.mmGrossAmount;
 			componentContext_lazy = () -> FinancialInstrumentQuantity28Choice.mmObject();
 			isDerived = false;
 			xmlTag = "GrssAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GrossAmount";
 			definition = "Amount of money to be redeemed from the fund. \r\nGross Amount = Quantity * Price.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.FinancialInstrumentQuantity27Choice.mmGrossAmount;
+			previousVersion_lazy = () -> FinancialInstrumentQuantity27Choice.mmGrossAmount;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
@@ -228,14 +232,14 @@ public class FinancialInstrumentQuantity28Choice {
 	 */
 	public static final MMMessageAttribute mmNetAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrder.mmNetAmount;
+			businessElementTrace_lazy = () -> InvestmentFundOrder.mmNetAmount;
 			componentContext_lazy = () -> FinancialInstrumentQuantity28Choice.mmObject();
 			isDerived = false;
 			xmlTag = "NetAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetAmount";
 			definition = "Amount of money to be received following redemption of fund units. \r\nNet Amount = (Quantity * Price) - (Fees + Taxes).";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.FinancialInstrumentQuantity27Choice.mmNetAmount;
+			previousVersion_lazy = () -> FinancialInstrumentQuantity27Choice.mmNetAmount;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
@@ -277,11 +281,11 @@ public class FinancialInstrumentQuantity28Choice {
 	 */
 	public static final MMMessageAttribute mmHoldingsRedemptionRate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.RedemptionOrder.mmHoldingsRedemptionRate;
+			businessElementTrace_lazy = () -> RedemptionOrder.mmHoldingsRedemptionRate;
 			componentContext_lazy = () -> FinancialInstrumentQuantity28Choice.mmObject();
 			isDerived = false;
 			xmlTag = "HldgsRedRate";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HoldingsRedemptionRate";
 			definition = "Portion of the investor's holdings to be redeemed.";
 			maxOccurs = 1;
@@ -293,10 +297,10 @@ public class FinancialInstrumentQuantity28Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.FinancialInstrumentQuantity28Choice.mmUnitsNumber, com.tools20022.repository.choice.FinancialInstrumentQuantity28Choice.mmGrossAmount,
-						com.tools20022.repository.choice.FinancialInstrumentQuantity28Choice.mmNetAmount, com.tools20022.repository.choice.FinancialInstrumentQuantity28Choice.mmHoldingsRedemptionRate);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(FinancialInstrumentQuantity28Choice.mmUnitsNumber, FinancialInstrumentQuantity28Choice.mmGrossAmount, FinancialInstrumentQuantity28Choice.mmNetAmount,
+						FinancialInstrumentQuantity28Choice.mmHoldingsRedemptionRate);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FinancialInstrumentQuantity28Choice";
 				definition = "Choice between formats for the specification of the number of units, amount of money or percentage..";
 				previousVersion_lazy = () -> FinancialInstrumentQuantity27Choice.mmObject();

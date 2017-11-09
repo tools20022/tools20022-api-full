@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -28,6 +30,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.BillingTaxCalculationMethod1Code
+ * BillingTaxCalculationMethod1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -48,14 +58,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.BillingTaxCalculationMethodCode#mmUndefined
  * BillingTaxCalculationMethodCode.mmUndefined}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.BillingTaxCalculationMethod1Code
- * BillingTaxCalculationMethod1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -107,7 +109,7 @@ public class BillingTaxCalculationMethodCode {
 	 */
 	public static final MMCode mmNoTaxes = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoTaxes";
 			definition = "No taxes are calculated or due on this account.";
 			owner_lazy = () -> BillingTaxCalculationMethodCode.mmObject();
@@ -139,7 +141,7 @@ public class BillingTaxCalculationMethodCode {
 	 */
 	public static final MMCode mmMethodA = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MethodA";
 			definition = "Line-by-line per service calculation and settlement currency translation.";
 			owner_lazy = () -> BillingTaxCalculationMethodCode.mmObject();
@@ -172,7 +174,7 @@ public class BillingTaxCalculationMethodCode {
 	 */
 	public static final MMCode mmMethodB = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MethodB";
 			definition = "Line-by-line per service calculation with settlement currency translation performed on the statement tax total.";
 			owner_lazy = () -> BillingTaxCalculationMethodCode.mmObject();
@@ -203,7 +205,7 @@ public class BillingTaxCalculationMethodCode {
 	 */
 	public static final MMCode mmMethodC = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MethodC";
 			definition = "Group tax calculation with group settlement currency translation.";
 			owner_lazy = () -> BillingTaxCalculationMethodCode.mmObject();
@@ -236,7 +238,7 @@ public class BillingTaxCalculationMethodCode {
 	 */
 	public static final MMCode mmMethodD = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MethodD";
 			definition = "Line-by-line per service calculation with all charges and taxes due in the pricing currency.";
 			owner_lazy = () -> BillingTaxCalculationMethodCode.mmObject();
@@ -266,7 +268,7 @@ public class BillingTaxCalculationMethodCode {
 	 */
 	public static final MMCode mmUndefined = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Undefined";
 			definition = "Tax calculation method is not defined or unknown.";
 			owner_lazy = () -> BillingTaxCalculationMethodCode.mmObject();
@@ -277,14 +279,13 @@ public class BillingTaxCalculationMethodCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("NTAX");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "BillingTaxCalculationMethodCode";
 				definition = "Defines the tax calculation method to be used for the billing of the services.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.BillingTaxCalculationMethodCode.mmNoTaxes, com.tools20022.repository.codeset.BillingTaxCalculationMethodCode.mmMethodA,
-						com.tools20022.repository.codeset.BillingTaxCalculationMethodCode.mmMethodB, com.tools20022.repository.codeset.BillingTaxCalculationMethodCode.mmMethodC,
-						com.tools20022.repository.codeset.BillingTaxCalculationMethodCode.mmMethodD, com.tools20022.repository.codeset.BillingTaxCalculationMethodCode.mmUndefined);
+				code_lazy = () -> Arrays.asList(BillingTaxCalculationMethodCode.mmNoTaxes, BillingTaxCalculationMethodCode.mmMethodA, BillingTaxCalculationMethodCode.mmMethodB, BillingTaxCalculationMethodCode.mmMethodC,
+						BillingTaxCalculationMethodCode.mmMethodD, BillingTaxCalculationMethodCode.mmUndefined);
 				derivation_lazy = () -> Arrays.asList(BillingTaxCalculationMethod1Code.mmObject());
 			}
 		});

@@ -20,6 +20,7 @@ package com.tools20022.repository.area.seev;
 import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.SecuritiesEventsLatestVersion;
 import com.tools20022.repository.msg.CorporateActionInformation1;
 import com.tools20022.repository.msg.DocumentIdentification8;
@@ -49,6 +50,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code seev.017.001.01}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.SecuritiesEventsLatestVersion
@@ -82,9 +86,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code seev.017.001.01}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -130,7 +131,7 @@ public class AgentCAGlobalDistributionAuthorisationRequestV01 {
 	public static final MMMessageBuildingBlock mmIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Identification assigned by the Sender to unambiguously identify the request.";
 			maxOccurs = 1;
@@ -165,7 +166,7 @@ public class AgentCAGlobalDistributionAuthorisationRequestV01 {
 	public static final MMMessageBuildingBlock mmCorporateActionGeneralInformation = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CorpActnGnlInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorporateActionGeneralInformation";
 			definition = "General information about the corporate action event.";
 			maxOccurs = 1;
@@ -201,7 +202,7 @@ public class AgentCAGlobalDistributionAuthorisationRequestV01 {
 	public static final MMMessageBuildingBlock mmGlobalDistributionDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "GblDstrbtnDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GlobalDistributionDetails";
 			definition = "Provides detailed information about the global distribution.";
 			maxOccurs = 1;
@@ -213,16 +214,15 @@ public class AgentCAGlobalDistributionAuthorisationRequestV01 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AgentCAGlobalDistributionAuthorisationRequestV01";
 				definition = "Scope\r\nThis message is sent by a CSD to an issuer (or its agent) to request the authorisation to process the entitlement movements (cash and/or securities) calculated by the CSD for a given corporate action entire event, a given corporate action option and optionally a given resource.\r\nThis message can also be sent to request the issuer (or its agent) to make available / deliver the relevant resources to the CSD.\r\nUsage\r\nThis message is used to request the authorisation to process the entitlement movements calculated by the CSD for a given corporate action event and option. An Agent Corporate Action Global Distribution Authorisation Request message must be sent for each option and if several resources are associated to an option, an Agent Corporate Action Global Distribution Authorisation Request message can be sent for each resource.\r\nThis message can also be used to pre-advise a global distribution authorisation request, in which case the value of the field pre-advice indicator must be set to yes.";
 				messageSet_lazy = () -> Arrays.asList(IssuersAgentsCommunicationISOLatestversion.mmObject());
 				rootElement = "Document";
 				xmlTag = "AgtCAGblDstrbtnAuthstnReq";
 				businessArea_lazy = () -> SecuritiesEventsLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.AgentCAGlobalDistributionAuthorisationRequestV01.mmIdentification,
-						com.tools20022.repository.area.seev.AgentCAGlobalDistributionAuthorisationRequestV01.mmCorporateActionGeneralInformation,
-						com.tools20022.repository.area.seev.AgentCAGlobalDistributionAuthorisationRequestV01.mmGlobalDistributionDetails);
+				messageBuildingBlock_lazy = () -> Arrays.asList(AgentCAGlobalDistributionAuthorisationRequestV01.mmIdentification, AgentCAGlobalDistributionAuthorisationRequestV01.mmCorporateActionGeneralInformation,
+						AgentCAGlobalDistributionAuthorisationRequestV01.mmGlobalDistributionDetails);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "seev";

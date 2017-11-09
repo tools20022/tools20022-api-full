@@ -20,6 +20,7 @@ package com.tools20022.repository.area.seev;
 import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.SecuritiesEventsArchive;
 import com.tools20022.repository.choice.PartyIdentification9Choice;
 import com.tools20022.repository.msg.*;
@@ -43,6 +44,9 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code seev.008.001.02}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.SecuritiesEventsArchive
@@ -87,9 +91,6 @@ import java.util.List;
  * MeetingResultDisseminationV02.mmAdditionalInformation}</li>
  * </ul>
  * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code seev.008.001.02}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -141,7 +142,7 @@ public class MeetingResultDisseminationV02 {
 	public static final MMMessageBuildingBlock mmMeetingResultDisseminationIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "MtgRsltDssmntnId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MeetingResultDisseminationIdentification";
 			definition = "Identifies the meeting dissemination notification message.";
 			maxOccurs = 1;
@@ -176,7 +177,7 @@ public class MeetingResultDisseminationV02 {
 	public static final MMMessageBuildingBlock mmAmendment = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Amdmnt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amendment";
 			definition = "Information specific to an amemdment.";
 			maxOccurs = 1;
@@ -211,7 +212,7 @@ public class MeetingResultDisseminationV02 {
 	public static final MMMessageBuildingBlock mmMeetingReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "MtgRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MeetingReference";
 			definition = "Series of elements which allow to identify a meeting.";
 			maxOccurs = 1;
@@ -246,7 +247,7 @@ public class MeetingResultDisseminationV02 {
 	public static final MMMessageBuildingBlock mmReportingParty = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "RptgPty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportingParty";
 			definition = "Party reporting the meeting results.";
 			maxOccurs = 1;
@@ -282,7 +283,7 @@ public class MeetingResultDisseminationV02 {
 	public static final MMMessageBuildingBlock mmSecurity = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Scty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Security";
 			definition = "Identifies the securities for which the meeting is organised.";
 			maxOccurs = 200;
@@ -315,7 +316,7 @@ public class MeetingResultDisseminationV02 {
 	public static final MMMessageBuildingBlock mmVoteResult = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "VoteRslt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VoteResult";
 			definition = "Results per resolution.";
 			maxOccurs = 200;
@@ -350,7 +351,7 @@ public class MeetingResultDisseminationV02 {
 	public static final MMMessageBuildingBlock mmParticipation = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Prtcptn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Participation";
 			definition = "Information about the participation to the voting process.";
 			maxOccurs = 1;
@@ -386,7 +387,7 @@ public class MeetingResultDisseminationV02 {
 	public static final MMMessageBuildingBlock mmAdditionalInformation = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "AddtlInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInformation";
 			definition = "Information on where additionnal information can be received.";
 			maxOccurs = 1;
@@ -398,7 +399,7 @@ public class MeetingResultDisseminationV02 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MeetingResultDisseminationV02";
 				definition = "Scope\r\nAn issuer, its agent or an intermediary sends the MeetingResultDissemination message to another intermediary, to a party holding the right to vote, to a registered security holder or to a beneficial holder to provide information on the voting results of a shareholders meeting.\r\nUsage\r\nThe MeetingResultDissemination message is used to provide the vote results per resolution. It may also provide information on the level of participation.\r\nThis message is also used to notify an update or amendment to a previously sent MeetingResultDissemination message.";
 				nextVersions_lazy = () -> Arrays.asList(MeetingResultDisseminationV03.mmObject());
@@ -406,11 +407,9 @@ public class MeetingResultDisseminationV02 {
 				rootElement = "Document";
 				xmlTag = "MtgRsltDssmntn";
 				businessArea_lazy = () -> SecuritiesEventsArchive.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.MeetingResultDisseminationV02.mmMeetingResultDisseminationIdentification,
-						com.tools20022.repository.area.seev.MeetingResultDisseminationV02.mmAmendment, com.tools20022.repository.area.seev.MeetingResultDisseminationV02.mmMeetingReference,
-						com.tools20022.repository.area.seev.MeetingResultDisseminationV02.mmReportingParty, com.tools20022.repository.area.seev.MeetingResultDisseminationV02.mmSecurity,
-						com.tools20022.repository.area.seev.MeetingResultDisseminationV02.mmVoteResult, com.tools20022.repository.area.seev.MeetingResultDisseminationV02.mmParticipation,
-						com.tools20022.repository.area.seev.MeetingResultDisseminationV02.mmAdditionalInformation);
+				messageBuildingBlock_lazy = () -> Arrays.asList(MeetingResultDisseminationV02.mmMeetingResultDisseminationIdentification, MeetingResultDisseminationV02.mmAmendment, MeetingResultDisseminationV02.mmMeetingReference,
+						MeetingResultDisseminationV02.mmReportingParty, MeetingResultDisseminationV02.mmSecurity, MeetingResultDisseminationV02.mmVoteResult, MeetingResultDisseminationV02.mmParticipation,
+						MeetingResultDisseminationV02.mmAdditionalInformation);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "seev";

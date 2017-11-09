@@ -18,7 +18,10 @@
 package com.tools20022.repository.entity;
 
 import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.MeetingPartyRole;
+import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.SecurityPosition2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -66,11 +69,11 @@ public class ProxyAgent extends MeetingPartyRole {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ProxyAgent";
 				definition = "Party appointed to organise the issuer meeting. Also called vote tabulator.";
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecurityPosition2.mmProxy);
+				derivationElement_lazy = () -> Arrays.asList(SecurityPosition2.mmProxy);
 				superType_lazy = () -> MeetingPartyRole.mmObject();
 			}
 		});

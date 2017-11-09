@@ -19,9 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ExternalRelativeTo1Code;
 import com.tools20022.repository.datatype.PercentageRate;
 import com.tools20022.repository.entity.Payment;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -93,7 +95,7 @@ public class Percentage1 {
 			componentContext_lazy = () -> Percentage1.mmObject();
 			isDerived = false;
 			xmlTag = "Rate";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rate";
 			definition = "Percentage of an amount.";
 			maxOccurs = 1;
@@ -134,7 +136,7 @@ public class Percentage1 {
 			componentContext_lazy = () -> Percentage1.mmObject();
 			isDerived = false;
 			xmlTag = "RltvTo";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelativeTo";
 			definition = "Indication of what the percentage is relative to.";
 			maxOccurs = 1;
@@ -146,10 +148,10 @@ public class Percentage1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Percentage1.mmRate, com.tools20022.repository.msg.Percentage1.mmRelativeTo);
+				messageElement_lazy = () -> Arrays.asList(Percentage1.mmRate, Percentage1.mmRelativeTo);
 				trace_lazy = () -> Payment.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Percentage1";
 				definition = "Rate information.";
 			}

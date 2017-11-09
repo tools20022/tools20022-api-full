@@ -19,8 +19,10 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ATMServiceType3Code;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -113,10 +115,10 @@ public class ATMService15 {
 			componentContext_lazy = () -> ATMService15.mmObject();
 			isDerived = false;
 			xmlTag = "SvcRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ServiceReference";
 			definition = "Unique identification of the withdrawal service provided by the ATM inside the session.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMService22.mmServiceReference);
+			nextVersions_lazy = () -> Arrays.asList(ATMService22.mmServiceReference);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -162,10 +164,10 @@ public class ATMService15 {
 			componentContext_lazy = () -> ATMService15.mmObject();
 			isDerived = false;
 			xmlTag = "ATMSvcCd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ATMServiceCode";
 			definition = "Codification of the type of service for the ATM.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMService22.mmATMServiceCode);
+			nextVersions_lazy = () -> Arrays.asList(ATMService22.mmATMServiceCode);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -212,10 +214,10 @@ public class ATMService15 {
 			componentContext_lazy = () -> ATMService15.mmObject();
 			isDerived = false;
 			xmlTag = "SvcTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ServiceType";
 			definition = "Describes the type of inquiry selected by the customer or the ATM.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMService22.mmServiceType);
+			nextVersions_lazy = () -> Arrays.asList(ATMService22.mmServiceType);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ATMServiceType3Code.mmObject();
@@ -261,10 +263,10 @@ public class ATMService15 {
 			componentContext_lazy = () -> ATMService15.mmObject();
 			isDerived = false;
 			xmlTag = "SvcVarntId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ServiceVariantIdentification";
 			definition = "Identification of the variant of the service.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMService22.mmServiceVariantIdentification);
+			nextVersions_lazy = () -> Arrays.asList(ATMService22.mmServiceVariantIdentification);
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
@@ -273,10 +275,9 @@ public class ATMService15 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMService15.mmServiceReference, com.tools20022.repository.msg.ATMService15.mmATMServiceCode, com.tools20022.repository.msg.ATMService15.mmServiceType,
-						com.tools20022.repository.msg.ATMService15.mmServiceVariantIdentification);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(ATMService15.mmServiceReference, ATMService15.mmATMServiceCode, ATMService15.mmServiceType, ATMService15.mmServiceVariantIdentification);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ATMService15";
 				definition = "Inquiry service provided by the ATM inside the session.";
 				nextVersions_lazy = () -> Arrays.asList(ATMService22.mmObject());

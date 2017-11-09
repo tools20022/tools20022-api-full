@@ -19,6 +19,8 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -106,10 +108,10 @@ public class TerminationDate2Choice {
 			componentContext_lazy = () -> TerminationDate2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Dt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Date";
 			definition = "Date in ISO format.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.TerminationDate4Choice.mmDate);
+			nextVersions_lazy = () -> Arrays.asList(TerminationDate4Choice.mmDate);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> com.tools20022.repository.choice.DateAndDateTimeChoice.mmObject();
@@ -160,10 +162,10 @@ public class TerminationDate2Choice {
 			componentContext_lazy = () -> TerminationDate2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Cd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Closing date/time or maturity date/time of the transaction expressed as an ISO 20022 code.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.TerminationDate4Choice.mmCode);
+			nextVersions_lazy = () -> Arrays.asList(TerminationDate4Choice.mmCode);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> com.tools20022.repository.choice.DateCode1Choice.mmObject();
@@ -173,9 +175,9 @@ public class TerminationDate2Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.TerminationDate2Choice.mmDate, com.tools20022.repository.choice.TerminationDate2Choice.mmCode);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(TerminationDate2Choice.mmDate, TerminationDate2Choice.mmCode);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TerminationDate2Choice";
 				definition = "Choice of format for the termination date.";
 				nextVersions_lazy = () -> Arrays.asList(TerminationDate4Choice.mmObject());

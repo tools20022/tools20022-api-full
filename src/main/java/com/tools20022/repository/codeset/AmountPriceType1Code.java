@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.AmountPriceTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -88,7 +90,7 @@ public class AmountPriceType1Code extends AmountPriceTypeCode {
 	 */
 	public static final MMCode mmActualAmount = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ActualAmount";
 			owner_lazy = () -> AmountPriceType1Code.mmObject();
 		}
@@ -111,7 +113,7 @@ public class AmountPriceType1Code extends AmountPriceTypeCode {
 	 */
 	public static final MMCode mmDiscount = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Discount";
 			owner_lazy = () -> AmountPriceType1Code.mmObject();
 		}
@@ -134,7 +136,7 @@ public class AmountPriceType1Code extends AmountPriceTypeCode {
 	 */
 	public static final MMCode mmLot = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Lot";
 			owner_lazy = () -> AmountPriceType1Code.mmObject();
 		}
@@ -157,7 +159,7 @@ public class AmountPriceType1Code extends AmountPriceTypeCode {
 	 */
 	public static final MMCode mmPremium = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Premium";
 			owner_lazy = () -> AmountPriceType1Code.mmObject();
 		}
@@ -166,13 +168,12 @@ public class AmountPriceType1Code extends AmountPriceTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ACTU");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AmountPriceType1Code";
 				definition = "Specifies the amount price type.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AmountPriceType1Code.mmActualAmount, com.tools20022.repository.codeset.AmountPriceType1Code.mmDiscount,
-						com.tools20022.repository.codeset.AmountPriceType1Code.mmLot, com.tools20022.repository.codeset.AmountPriceType1Code.mmPremium);
+				code_lazy = () -> Arrays.asList(AmountPriceType1Code.mmActualAmount, AmountPriceType1Code.mmDiscount, AmountPriceType1Code.mmLot, AmountPriceType1Code.mmPremium);
 				trace_lazy = () -> AmountPriceTypeCode.mmObject();
 			}
 		});

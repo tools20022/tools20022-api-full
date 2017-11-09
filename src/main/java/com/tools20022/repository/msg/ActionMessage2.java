@@ -19,11 +19,13 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.OutputFormat1Code;
 import com.tools20022.repository.codeset.UserInterface4Code;
 import com.tools20022.repository.datatype.Max140Binary;
 import com.tools20022.repository.datatype.Max20000Text;
 import com.tools20022.repository.entity.CardPaymentAcquiring;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -127,15 +129,15 @@ public class ActionMessage2 {
 	 */
 	public static final MMMessageAttribute mmMessageDestination = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.mmPointOfInteraction;
+			businessElementTrace_lazy = () -> CardPaymentAcquiring.mmPointOfInteraction;
 			componentContext_lazy = () -> ActionMessage2.mmObject();
 			isDerived = false;
 			xmlTag = "MsgDstn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageDestination";
 			definition = "Destination of the message.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ActionMessage3.mmDestination);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ActionMessage1.mmMessageDestination;
+			nextVersions_lazy = () -> Arrays.asList(ActionMessage3.mmDestination);
+			previousVersion_lazy = () -> ActionMessage1.mmMessageDestination;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> UserInterface4Code.mmObject();
@@ -181,10 +183,10 @@ public class ActionMessage2 {
 			componentContext_lazy = () -> ActionMessage2.mmObject();
 			isDerived = false;
 			xmlTag = "Frmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Format";
 			definition = "Message format.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ActionMessage3.mmFormat);
+			nextVersions_lazy = () -> Arrays.asList(ActionMessage3.mmFormat);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> OutputFormat1Code.mmObject();
@@ -237,15 +239,15 @@ public class ActionMessage2 {
 	 */
 	public static final MMMessageAttribute mmMessageContent = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.mmActionMessage;
+			businessElementTrace_lazy = () -> CardPaymentAcquiring.mmActionMessage;
 			componentContext_lazy = () -> ActionMessage2.mmObject();
 			isDerived = false;
 			xmlTag = "MsgCntt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageContent";
 			definition = "Content or reference of the message.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ActionMessage3.mmContent);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ActionMessage1.mmMessageContent;
+			nextVersions_lazy = () -> Arrays.asList(ActionMessage3.mmContent);
+			previousVersion_lazy = () -> ActionMessage1.mmMessageContent;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max20000Text.mmObject();
@@ -289,10 +291,10 @@ public class ActionMessage2 {
 			componentContext_lazy = () -> ActionMessage2.mmObject();
 			isDerived = false;
 			xmlTag = "MsgCnttSgntr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageContentSignature";
 			definition = "Digital signature of the message.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ActionMessage1.mmMessageContentSignature;
+			previousVersion_lazy = () -> ActionMessage1.mmMessageContentSignature;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max140Binary.mmObject();
@@ -302,11 +304,10 @@ public class ActionMessage2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ActionMessage2.mmMessageDestination, com.tools20022.repository.msg.ActionMessage2.mmFormat,
-						com.tools20022.repository.msg.ActionMessage2.mmMessageContent, com.tools20022.repository.msg.ActionMessage2.mmMessageContentSignature);
+				messageElement_lazy = () -> Arrays.asList(ActionMessage2.mmMessageDestination, ActionMessage2.mmFormat, ActionMessage2.mmMessageContent, ActionMessage2.mmMessageContentSignature);
 				trace_lazy = () -> CardPaymentAcquiring.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ActionMessage2";
 				definition = "Information to display, print or store.";
 				nextVersions_lazy = () -> Arrays.asList(ActionMessage3.mmObject());

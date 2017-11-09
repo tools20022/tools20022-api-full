@@ -18,7 +18,13 @@
 package com.tools20022.repository.entity;
 
 import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.TradePartyRole;
+import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.ConfirmationParties2;
+import com.tools20022.repository.msg.ConfirmationParties3;
+import com.tools20022.repository.msg.ConfirmationParties4;
+import com.tools20022.repository.msg.SyndicatedLoan1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -76,12 +82,11 @@ public class Borrower extends TradePartyRole {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Borrower";
 				definition = "Party that has applied, met specific requirements, and received a monetary or securities loan from a lender.";
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ConfirmationParties3.mmBorrower, com.tools20022.repository.msg.ConfirmationParties4.mmBorrower,
-						com.tools20022.repository.msg.ConfirmationParties2.mmBorrower, com.tools20022.repository.msg.SyndicatedLoan1.mmBorrower);
+				derivationElement_lazy = () -> Arrays.asList(ConfirmationParties3.mmBorrower, ConfirmationParties4.mmBorrower, ConfirmationParties2.mmBorrower, SyndicatedLoan1.mmBorrower);
 				superType_lazy = () -> TradePartyRole.mmObject();
 			}
 		});

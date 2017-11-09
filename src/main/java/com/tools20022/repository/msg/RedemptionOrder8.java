@@ -17,13 +17,11 @@
 
 package com.tools20022.repository.msg;
 
-import com.tools20022.metamodel.MMMessageAssociationEnd;
-import com.tools20022.metamodel.MMMessageAttribute;
-import com.tools20022.metamodel.MMMessageComponent;
-import com.tools20022.metamodel.MMXor;
+import com.tools20022.metamodel.*;
 import com.tools20022.repository.codeset.*;
 import com.tools20022.repository.datatype.*;
-import com.tools20022.repository.entity.RedemptionOrder;
+import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -213,14 +211,14 @@ public class RedemptionOrder8 {
 	 */
 	public static final MMMessageAttribute mmOrderReference = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmIdentification;
+			businessElementTrace_lazy = () -> SecuritiesOrder.mmIdentification;
 			componentContext_lazy = () -> RedemptionOrder8.mmObject();
 			isDerived = false;
 			xmlTag = "OrdrRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrderReference";
 			definition = "Unique and unambiguous identifier for an order, as assigned by the instructing party.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RedemptionOrder14.mmOrderReference);
+			nextVersions_lazy = () -> Arrays.asList(RedemptionOrder14.mmOrderReference);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -273,14 +271,14 @@ public class RedemptionOrder8 {
 	 */
 	public static final MMMessageAttribute mmClientReference = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundTransaction.mmClientReference;
+			businessElementTrace_lazy = () -> InvestmentFundTransaction.mmClientReference;
 			componentContext_lazy = () -> RedemptionOrder8.mmObject();
 			isDerived = false;
 			xmlTag = "ClntRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClientReference";
 			definition = "Unique and unambiguous investor's identification of an order. This reference can typically be used in a hub scenario to give the reference of the order as assigned by the underlying client.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RedemptionOrder14.mmClientReference);
+			nextVersions_lazy = () -> Arrays.asList(RedemptionOrder14.mmClientReference);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -328,14 +326,14 @@ public class RedemptionOrder8 {
 	 */
 	public static final MMMessageAssociationEnd mmOrderType = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrder.mmOrderType;
+			businessElementTrace_lazy = () -> InvestmentFundOrder.mmOrderType;
 			componentContext_lazy = () -> RedemptionOrder8.mmObject();
 			isDerived = false;
 			xmlTag = "OrdrTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrderType";
 			definition = "Specifies the category of the investment fund order.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RedemptionOrder14.mmOrderType);
+			nextVersions_lazy = () -> Arrays.asList(RedemptionOrder14.mmOrderType);
 			maxOccurs = 10;
 			minOccurs = 0;
 			isComposite = true;
@@ -384,14 +382,14 @@ public class RedemptionOrder8 {
 	 */
 	public static final MMMessageAssociationEnd mmFinancialInstrumentDetails = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundTransaction.mmInvestmentFundClass;
+			businessElementTrace_lazy = () -> InvestmentFundTransaction.mmInvestmentFundClass;
 			componentContext_lazy = () -> RedemptionOrder8.mmObject();
 			isDerived = false;
 			xmlTag = "FinInstrmDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentDetails";
 			definition = "Investment fund class related to an order.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RedemptionOrder14.mmFinancialInstrumentDetails);
+			nextVersions_lazy = () -> Arrays.asList(RedemptionOrder14.mmFinancialInstrumentDetails);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -441,14 +439,14 @@ public class RedemptionOrder8 {
 	 */
 	public static final MMMessageAssociationEnd mmSubAccountForHolding = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.mmSubAccount;
+			businessElementTrace_lazy = () -> Account.mmSubAccount;
 			componentContext_lazy = () -> RedemptionOrder8.mmObject();
 			isDerived = false;
 			xmlTag = "SubAcctForHldg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubAccountForHolding";
 			definition = "Subdivision of an account used to segregate specific holdings.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RedemptionOrder14.mmSubAccountForHolding);
+			nextVersions_lazy = () -> Arrays.asList(RedemptionOrder14.mmSubAccountForHolding);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -491,11 +489,11 @@ public class RedemptionOrder8 {
 	 */
 	public static final MMMessageAttribute mmUnitsNumber = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrder.mmUnitsNumber;
+			businessElementTrace_lazy = () -> InvestmentFundOrder.mmUnitsNumber;
 			componentContext_lazy = () -> RedemptionOrder8.mmObject();
 			isDerived = false;
 			xmlTag = "UnitsNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnitsNumber";
 			definition = "Quantity of investment fund units redeemed.";
 			maxOccurs = 1;
@@ -543,11 +541,11 @@ public class RedemptionOrder8 {
 	 */
 	public static final MMMessageAttribute mmGrossAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrder.mmGrossAmount;
+			businessElementTrace_lazy = () -> InvestmentFundOrder.mmGrossAmount;
 			componentContext_lazy = () -> RedemptionOrder8.mmObject();
 			isDerived = false;
 			xmlTag = "GrssAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GrossAmount";
 			definition = "Amount of money used to derive the quantity of investment fund units to be sold, before deduction of charges, commissions, and taxes.\n[Quantity * Price]";
 			maxOccurs = 1;
@@ -596,11 +594,11 @@ public class RedemptionOrder8 {
 	 */
 	public static final MMMessageAttribute mmNetAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrder.mmNetAmount;
+			businessElementTrace_lazy = () -> InvestmentFundOrder.mmNetAmount;
 			componentContext_lazy = () -> RedemptionOrder8.mmObject();
 			isDerived = false;
 			xmlTag = "NetAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetAmount";
 			definition = "Amount of money to be received following redemption after deduction of charges, commissions and taxes and used to derive the quantity of investment fund units to be sold.\n[(Quantity * Price) - (Charges + Commissions +Taxes)]";
 			maxOccurs = 1;
@@ -647,11 +645,11 @@ public class RedemptionOrder8 {
 	 */
 	public static final MMMessageAttribute mmHoldingsRedemptionRate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.RedemptionOrder.mmHoldingsRedemptionRate;
+			businessElementTrace_lazy = () -> RedemptionOrder.mmHoldingsRedemptionRate;
 			componentContext_lazy = () -> RedemptionOrder8.mmObject();
 			isDerived = false;
 			xmlTag = "HldgsRedRate";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HoldingsRedemptionRate";
 			definition = "Portion of the investor's holdings, in a specific investment fund/ fund class, that is redeemed.";
 			maxOccurs = 1;
@@ -704,14 +702,14 @@ public class RedemptionOrder8 {
 	 */
 	public static final MMMessageAttribute mmRounding = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.RoundingParameters.mmRoundingDirection;
+			businessElementTrace_lazy = () -> RoundingParameters.mmRoundingDirection;
 			componentContext_lazy = () -> RedemptionOrder8.mmObject();
 			isDerived = false;
 			xmlTag = "Rndg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rounding";
 			definition = "Indicates the rounding direction applied to nearest unit.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RedemptionOrder14.mmRounding);
+			nextVersions_lazy = () -> Arrays.asList(RedemptionOrder14.mmRounding);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RoundingDirection2Code.mmObject();
@@ -764,14 +762,14 @@ public class RedemptionOrder8 {
 	 */
 	public static final MMMessageAttribute mmSettlementAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmSettlementAmount;
+			businessElementTrace_lazy = () -> SecuritiesSettlement.mmSettlementAmount;
 			componentContext_lazy = () -> RedemptionOrder8.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementAmount";
 			definition = "Total amount of money paid /to be paid or received in exchange for the financial instrument in the individual order.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RedemptionOrder14.mmSettlementAmount);
+			nextVersions_lazy = () -> Arrays.asList(RedemptionOrder14.mmSettlementAmount);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
@@ -820,14 +818,14 @@ public class RedemptionOrder8 {
 	 */
 	public static final MMMessageAttribute mmCashSettlementDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.mmValueDate;
+			businessElementTrace_lazy = () -> Payment.mmValueDate;
 			componentContext_lazy = () -> RedemptionOrder8.mmObject();
 			isDerived = false;
 			xmlTag = "CshSttlmDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashSettlementDate";
 			definition = "Date on which cash is available.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RedemptionOrder14.mmCashSettlementDate);
+			nextVersions_lazy = () -> Arrays.asList(RedemptionOrder14.mmCashSettlementDate);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
@@ -877,14 +875,14 @@ public class RedemptionOrder8 {
 	 */
 	public static final MMMessageAttribute mmSettlementMethod = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmSettlementType;
+			businessElementTrace_lazy = () -> SecuritiesSettlement.mmSettlementType;
 			componentContext_lazy = () -> RedemptionOrder8.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmMtd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementMethod";
 			definition = "Method by which the transaction is settled.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RedemptionOrder14.mmSettlementMethod);
+			nextVersions_lazy = () -> Arrays.asList(RedemptionOrder14.mmSettlementMethod);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> DeliveryReceiptType2Code.mmObject();
@@ -933,14 +931,14 @@ public class RedemptionOrder8 {
 	 */
 	public static final MMMessageAssociationEnd mmForeignExchangeDetails = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ForeignExchangeTrade.mmAgreedRate;
+			businessElementTrace_lazy = () -> ForeignExchangeTrade.mmAgreedRate;
 			componentContext_lazy = () -> RedemptionOrder8.mmObject();
 			isDerived = false;
 			xmlTag = "FXDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForeignExchangeDetails";
 			definition = "Information needed to process a currency exchange or conversion.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RedemptionOrder14.mmForeignExchangeDetails);
+			nextVersions_lazy = () -> Arrays.asList(RedemptionOrder14.mmForeignExchangeDetails);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -994,14 +992,14 @@ public class RedemptionOrder8 {
 	 */
 	public static final MMMessageAttribute mmIncomePreference = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentAccountService.mmIncomePreference;
+			businessElementTrace_lazy = () -> InvestmentAccountService.mmIncomePreference;
 			componentContext_lazy = () -> RedemptionOrder8.mmObject();
 			isDerived = false;
 			xmlTag = "IncmPref";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncomePreference";
 			definition = "Dividend option chosen by the account owner based on the options offered in the prospectus.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RedemptionOrder14.mmIncomePreference);
+			nextVersions_lazy = () -> Arrays.asList(RedemptionOrder14.mmIncomePreference);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> IncomePreference1Code.mmObject();
@@ -1055,14 +1053,14 @@ public class RedemptionOrder8 {
 	 */
 	public static final MMMessageAttribute mmGroup1Or2Units = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmGroup1Or2Units;
+			businessElementTrace_lazy = () -> SecuritiesQuantity.mmGroup1Or2Units;
 			componentContext_lazy = () -> RedemptionOrder8.mmObject();
 			isDerived = false;
 			xmlTag = "Grp1Or2Units";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Group1Or2Units";
 			definition = "Tax group to which the purchased investment fund units belong. The investor indicates to the intermediary operating pooled nominees, which type of unit is to be sold.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RedemptionOrder14.mmGroup1Or2Units);
+			nextVersions_lazy = () -> Arrays.asList(RedemptionOrder14.mmGroup1Or2Units);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> UKTaxGroupUnitCode.mmObject();
@@ -1101,11 +1099,11 @@ public class RedemptionOrder8 {
 	 */
 	public static final MMMessageAssociationEnd mmChargeDetails = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundTransaction.mmTransactionCharge;
+			businessElementTrace_lazy = () -> InvestmentFundTransaction.mmTransactionCharge;
 			componentContext_lazy = () -> RedemptionOrder8.mmObject();
 			isDerived = false;
 			xmlTag = "ChrgDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChargeDetails";
 			definition = "Charge for the placement of an order.";
 			minOccurs = 0;
@@ -1148,11 +1146,11 @@ public class RedemptionOrder8 {
 	 */
 	public static final MMMessageAssociationEnd mmCommissionDetails = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Trade.mmTradeCommission;
+			businessElementTrace_lazy = () -> Trade.mmTradeCommission;
 			componentContext_lazy = () -> RedemptionOrder8.mmObject();
 			isDerived = false;
 			xmlTag = "ComssnDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommissionDetails";
 			definition = "Amount of money due to a party as compensation for a service.";
 			minOccurs = 0;
@@ -1193,11 +1191,11 @@ public class RedemptionOrder8 {
 	 */
 	public static final MMMessageAssociationEnd mmTaxDetails = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundTransaction.mmTransactionTax;
+			businessElementTrace_lazy = () -> InvestmentFundTransaction.mmTransactionTax;
 			componentContext_lazy = () -> RedemptionOrder8.mmObject();
 			isDerived = false;
 			xmlTag = "TaxDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxDetails";
 			definition = "Tax applicable to an investment fund order.";
 			minOccurs = 0;
@@ -1249,14 +1247,14 @@ public class RedemptionOrder8 {
 	 */
 	public static final MMMessageAssociationEnd mmSettlementAndCustodyDetails = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeExecution.mmSecuritiesSettlement;
+			businessElementTrace_lazy = () -> SecuritiesTradeExecution.mmSecuritiesSettlement;
 			componentContext_lazy = () -> RedemptionOrder8.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmAndCtdyDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementAndCustodyDetails";
 			definition = "Parameters used to execute the settlement of an investment fund order.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RedemptionOrder14.mmSettlementAndCustodyDetails);
+			nextVersions_lazy = () -> Arrays.asList(RedemptionOrder14.mmSettlementAndCustodyDetails);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -1307,10 +1305,10 @@ public class RedemptionOrder8 {
 			componentContext_lazy = () -> RedemptionOrder8.mmObject();
 			isDerived = false;
 			xmlTag = "PhysDlvryInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PhysicalDeliveryIndicator";
 			definition = "Indicates whether the financial instrument is to be physically delivered.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RedemptionOrder14.mmPhysicalDeliveryIndicator);
+			nextVersions_lazy = () -> Arrays.asList(RedemptionOrder14.mmPhysicalDeliveryIndicator);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
@@ -1359,14 +1357,14 @@ public class RedemptionOrder8 {
 	 */
 	public static final MMMessageAssociationEnd mmPhysicalDeliveryDetails = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTransfer.mmPhysicalDelivery;
+			businessElementTrace_lazy = () -> SecuritiesTransfer.mmPhysicalDelivery;
 			componentContext_lazy = () -> RedemptionOrder8.mmObject();
 			isDerived = false;
 			xmlTag = "PhysDlvryDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PhysicalDeliveryDetails";
 			definition = "Information related to physical delivery of the securities.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RedemptionOrder14.mmPhysicalDeliveryDetails);
+			nextVersions_lazy = () -> Arrays.asList(RedemptionOrder14.mmPhysicalDeliveryDetails);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -1417,14 +1415,14 @@ public class RedemptionOrder8 {
 	 */
 	public static final MMMessageAttribute mmRequestedSettlementCurrency = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrder.mmRequestedSettlementCurrency;
+			businessElementTrace_lazy = () -> InvestmentFundOrder.mmRequestedSettlementCurrency;
 			componentContext_lazy = () -> RedemptionOrder8.mmObject();
 			isDerived = false;
 			xmlTag = "ReqdSttlmCcy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestedSettlementCurrency";
 			definition = "Currency requested for settlement of cash proceeds.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RedemptionOrder14.mmRequestedSettlementCurrency);
+			nextVersions_lazy = () -> Arrays.asList(RedemptionOrder14.mmRequestedSettlementCurrency);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyCode.mmObject();
@@ -1478,14 +1476,14 @@ public class RedemptionOrder8 {
 	 */
 	public static final MMMessageAttribute mmRequestedNAVCurrency = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmRequestedNAVCurrency;
+			businessElementTrace_lazy = () -> InvestmentFundClass.mmRequestedNAVCurrency;
 			componentContext_lazy = () -> RedemptionOrder8.mmObject();
 			isDerived = false;
 			xmlTag = "ReqdNAVCcy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestedNAVCurrency";
 			definition = "Currency to be used for pricing the fund. This currency must be among the set of currencies in which the price may be expressed, as stated in the prospectus.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RedemptionOrder14.mmRequestedNAVCurrency);
+			nextVersions_lazy = () -> Arrays.asList(RedemptionOrder14.mmRequestedNAVCurrency);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyCode.mmObject();
@@ -1536,14 +1534,14 @@ public class RedemptionOrder8 {
 	 */
 	public static final MMMessageAssociationEnd mmCashSettlementDetails = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentObligation.mmPaymentOffset;
+			businessElementTrace_lazy = () -> PaymentObligation.mmPaymentOffset;
 			componentContext_lazy = () -> RedemptionOrder8.mmObject();
 			isDerived = false;
 			xmlTag = "CshSttlmDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashSettlementDetails";
 			definition = "Payment processes required to transfer cash from the debtor to the creditor.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RedemptionOrder14.mmCashSettlementDetails);
+			nextVersions_lazy = () -> Arrays.asList(RedemptionOrder14.mmCashSettlementDetails);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -1596,14 +1594,14 @@ public class RedemptionOrder8 {
 	 */
 	public static final MMMessageAttribute mmNonStandardSettlementInformation = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrderExecution.mmNonStandardSettlementInformation;
+			businessElementTrace_lazy = () -> InvestmentFundOrderExecution.mmNonStandardSettlementInformation;
 			componentContext_lazy = () -> RedemptionOrder8.mmObject();
 			isDerived = false;
 			xmlTag = "NonStdSttlmInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonStandardSettlementInformation";
 			definition = "Additional specific settlement information for non-regulated traded funds.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RedemptionOrder14.mmNonStandardSettlementInformation);
+			nextVersions_lazy = () -> Arrays.asList(RedemptionOrder14.mmNonStandardSettlementInformation);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
@@ -1656,10 +1654,10 @@ public class RedemptionOrder8 {
 			componentContext_lazy = () -> RedemptionOrder8.mmObject();
 			isDerived = false;
 			xmlTag = "StffClntBrkdwn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StaffClientBreakdown";
 			definition = "Breakdown of the net amount per type of order.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RedemptionOrder14.mmStaffClientBreakdown);
+			nextVersions_lazy = () -> Arrays.asList(RedemptionOrder14.mmStaffClientBreakdown);
 			maxOccurs = 4;
 			minOccurs = 0;
 			isComposite = true;
@@ -1713,14 +1711,14 @@ public class RedemptionOrder8 {
 	 */
 	public static final MMMessageAttribute mmFinancialAdvice = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrder.mmFinancialAdvice;
+			businessElementTrace_lazy = () -> InvestmentFundOrder.mmFinancialAdvice;
 			componentContext_lazy = () -> RedemptionOrder8.mmObject();
 			isDerived = false;
 			xmlTag = "FinAdvc";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialAdvice";
 			definition = "Specifies if advice has been received from an independent financial advisor.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RedemptionOrder14.mmFinancialAdvice);
+			nextVersions_lazy = () -> Arrays.asList(RedemptionOrder14.mmFinancialAdvice);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> FinancialAdvice1Code.mmObject();
@@ -1770,14 +1768,14 @@ public class RedemptionOrder8 {
 	 */
 	public static final MMMessageAttribute mmNegotiatedTrade = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrder.mmNegotiatedTrade;
+			businessElementTrace_lazy = () -> InvestmentFundOrder.mmNegotiatedTrade;
 			componentContext_lazy = () -> RedemptionOrder8.mmObject();
 			isDerived = false;
 			xmlTag = "NgtdTrad";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NegotiatedTrade";
 			definition = "Specifies whether the trade is negotiated.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RedemptionOrder14.mmNegotiatedTrade);
+			nextVersions_lazy = () -> Arrays.asList(RedemptionOrder14.mmNegotiatedTrade);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> NegotiatedTrade1Code.mmObject();
@@ -1825,14 +1823,14 @@ public class RedemptionOrder8 {
 	 */
 	public static final MMMessageAssociationEnd mmRelatedPartyDetails = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Trade.mmTradePartyRole;
+			businessElementTrace_lazy = () -> Trade.mmTradePartyRole;
 			componentContext_lazy = () -> RedemptionOrder8.mmObject();
 			isDerived = false;
 			xmlTag = "RltdPtyDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedPartyDetails";
 			definition = "Information about parties related to the transaction.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RedemptionOrder14.mmRelatedPartyDetails);
+			nextVersions_lazy = () -> Arrays.asList(RedemptionOrder14.mmRelatedPartyDetails);
 			maxOccurs = 10;
 			minOccurs = 0;
 			isComposite = true;
@@ -1884,14 +1882,14 @@ public class RedemptionOrder8 {
 	 */
 	public static final MMMessageAssociationEnd mmEqualisation = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmEqualisation;
+			businessElementTrace_lazy = () -> InvestmentFundClass.mmEqualisation;
 			componentContext_lazy = () -> RedemptionOrder8.mmObject();
 			isDerived = false;
 			xmlTag = "Equlstn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Equalisation";
 			definition = "Part of an investor's subscription amount that is held by the fund in order to pay incentive / performance fees at the end of the fiscal year.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RedemptionOrder14.mmEqualisation);
+			nextVersions_lazy = () -> Arrays.asList(RedemptionOrder14.mmEqualisation);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -1904,6 +1902,10 @@ public class RedemptionOrder8 {
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
+	 * messageComponent} =
+	 * {@linkplain com.tools20022.repository.msg.RedemptionOrder8
+	 * RedemptionOrder8}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getImpactedElements
 	 * impactedElements} =
 	 * <ul>
@@ -1921,10 +1923,6 @@ public class RedemptionOrder8 {
 	 * RedemptionOrder8.mmHoldingsRedemptionRate}</li>
 	 * </ul>
 	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
-	 * messageComponent} =
-	 * {@linkplain com.tools20022.repository.msg.RedemptionOrder8
-	 * RedemptionOrder8}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1940,33 +1938,27 @@ public class RedemptionOrder8 {
 	 */
 	public static final MMXor mmUnitsNumberOrGrossAmountOrNetAmountOrRateRule = new MMXor() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnitsNumberOrGrossAmountOrNetAmountOrRateRule";
 			definition = "One and only one Message Element in the list (UnitsNumber, GrossAmount, NetAmount, HoldingsRedemptionRate) must be present.";
 			messageComponent_lazy = () -> RedemptionOrder8.mmObject();
-			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RedemptionOrder8.mmUnitsNumber, com.tools20022.repository.msg.RedemptionOrder8.mmGrossAmount, com.tools20022.repository.msg.RedemptionOrder8.mmNetAmount,
-					com.tools20022.repository.msg.RedemptionOrder8.mmHoldingsRedemptionRate);
+			impactedElements_lazy = () -> Arrays.asList(RedemptionOrder8.mmUnitsNumber, RedemptionOrder8.mmGrossAmount, RedemptionOrder8.mmNetAmount, RedemptionOrder8.mmHoldingsRedemptionRate);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RedemptionOrder8.mmOrderReference, com.tools20022.repository.msg.RedemptionOrder8.mmClientReference,
-						com.tools20022.repository.msg.RedemptionOrder8.mmOrderType, com.tools20022.repository.msg.RedemptionOrder8.mmFinancialInstrumentDetails, com.tools20022.repository.msg.RedemptionOrder8.mmSubAccountForHolding,
-						com.tools20022.repository.msg.RedemptionOrder8.mmUnitsNumber, com.tools20022.repository.msg.RedemptionOrder8.mmGrossAmount, com.tools20022.repository.msg.RedemptionOrder8.mmNetAmount,
-						com.tools20022.repository.msg.RedemptionOrder8.mmHoldingsRedemptionRate, com.tools20022.repository.msg.RedemptionOrder8.mmRounding, com.tools20022.repository.msg.RedemptionOrder8.mmSettlementAmount,
-						com.tools20022.repository.msg.RedemptionOrder8.mmCashSettlementDate, com.tools20022.repository.msg.RedemptionOrder8.mmSettlementMethod, com.tools20022.repository.msg.RedemptionOrder8.mmForeignExchangeDetails,
-						com.tools20022.repository.msg.RedemptionOrder8.mmIncomePreference, com.tools20022.repository.msg.RedemptionOrder8.mmGroup1Or2Units, com.tools20022.repository.msg.RedemptionOrder8.mmChargeDetails,
-						com.tools20022.repository.msg.RedemptionOrder8.mmCommissionDetails, com.tools20022.repository.msg.RedemptionOrder8.mmTaxDetails, com.tools20022.repository.msg.RedemptionOrder8.mmSettlementAndCustodyDetails,
-						com.tools20022.repository.msg.RedemptionOrder8.mmPhysicalDeliveryIndicator, com.tools20022.repository.msg.RedemptionOrder8.mmPhysicalDeliveryDetails,
-						com.tools20022.repository.msg.RedemptionOrder8.mmRequestedSettlementCurrency, com.tools20022.repository.msg.RedemptionOrder8.mmRequestedNAVCurrency,
-						com.tools20022.repository.msg.RedemptionOrder8.mmCashSettlementDetails, com.tools20022.repository.msg.RedemptionOrder8.mmNonStandardSettlementInformation,
-						com.tools20022.repository.msg.RedemptionOrder8.mmStaffClientBreakdown, com.tools20022.repository.msg.RedemptionOrder8.mmFinancialAdvice, com.tools20022.repository.msg.RedemptionOrder8.mmNegotiatedTrade,
-						com.tools20022.repository.msg.RedemptionOrder8.mmRelatedPartyDetails, com.tools20022.repository.msg.RedemptionOrder8.mmEqualisation);
+				messageElement_lazy = () -> Arrays.asList(RedemptionOrder8.mmOrderReference, RedemptionOrder8.mmClientReference, RedemptionOrder8.mmOrderType, RedemptionOrder8.mmFinancialInstrumentDetails,
+						RedemptionOrder8.mmSubAccountForHolding, RedemptionOrder8.mmUnitsNumber, RedemptionOrder8.mmGrossAmount, RedemptionOrder8.mmNetAmount, RedemptionOrder8.mmHoldingsRedemptionRate, RedemptionOrder8.mmRounding,
+						RedemptionOrder8.mmSettlementAmount, RedemptionOrder8.mmCashSettlementDate, RedemptionOrder8.mmSettlementMethod, RedemptionOrder8.mmForeignExchangeDetails, RedemptionOrder8.mmIncomePreference,
+						RedemptionOrder8.mmGroup1Or2Units, RedemptionOrder8.mmChargeDetails, RedemptionOrder8.mmCommissionDetails, RedemptionOrder8.mmTaxDetails, RedemptionOrder8.mmSettlementAndCustodyDetails,
+						RedemptionOrder8.mmPhysicalDeliveryIndicator, RedemptionOrder8.mmPhysicalDeliveryDetails, RedemptionOrder8.mmRequestedSettlementCurrency, RedemptionOrder8.mmRequestedNAVCurrency,
+						RedemptionOrder8.mmCashSettlementDetails, RedemptionOrder8.mmNonStandardSettlementInformation, RedemptionOrder8.mmStaffClientBreakdown, RedemptionOrder8.mmFinancialAdvice, RedemptionOrder8.mmNegotiatedTrade,
+						RedemptionOrder8.mmRelatedPartyDetails, RedemptionOrder8.mmEqualisation);
 				trace_lazy = () -> RedemptionOrder.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
 						return DateFormat.getDateInstance(java.text.DateFormat.LONG).parse("September 9, 2016");
@@ -1977,7 +1969,7 @@ public class RedemptionOrder8 {
 				name = "RedemptionOrder8";
 				definition = "Instruction from an investor to sell investment fund units back to the fund.";
 				nextVersions_lazy = () -> Arrays.asList(RedemptionOrder14.mmObject());
-				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RedemptionOrder8.mmUnitsNumberOrGrossAmountOrNetAmountOrRateRule);
+				xors_lazy = () -> Arrays.asList(RedemptionOrder8.mmUnitsNumberOrGrossAmountOrNetAmountOrRateRule);
 			}
 		});
 		return mmObject_lazy.get();

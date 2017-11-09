@@ -19,10 +19,9 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
-import com.tools20022.repository.entity.Debt;
-import com.tools20022.repository.entity.Equity;
-import com.tools20022.repository.entity.Security;
-import com.tools20022.repository.entity.Warrant;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -111,7 +110,7 @@ public class FinancialInstrument28 {
 			componentContext_lazy = () -> FinancialInstrument28.mmObject();
 			isDerived = false;
 			xmlTag = "Eqty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Equity";
 			definition = "Financial instrument which represents a title of ownership  in a company, ie,  the shareholder is entitled to a part of the company's profit - usually by payment of a dividend - and to voting rights, if any. Each company issues generally different classes of shares, eg, ordinary or common shares, which have no guaranteed amount of dividend but carry voting rights, or preferred shares, which receive dividends before ordinary shares but have no voting right.";
 			maxOccurs = 1;
@@ -159,7 +158,7 @@ public class FinancialInstrument28 {
 			componentContext_lazy = () -> FinancialInstrument28.mmObject();
 			isDerived = false;
 			xmlTag = "Warrt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Warrant";
 			definition = "Financial instrument that gives the holder the right to purchase shares or bonds at a given price within a specified time.";
 			maxOccurs = 1;
@@ -207,7 +206,7 @@ public class FinancialInstrument28 {
 			componentContext_lazy = () -> FinancialInstrument28.mmObject();
 			isDerived = false;
 			xmlTag = "Debt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Debt";
 			definition = "Financial instruments evidencing moneys owed by the issuer to the holder on terms as specified.";
 			maxOccurs = 1;
@@ -250,11 +249,11 @@ public class FinancialInstrument28 {
 	 */
 	public static final MMMessageAssociationEnd mmDerivative = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Asset.mmDerivative;
+			businessElementTrace_lazy = () -> Asset.mmDerivative;
 			componentContext_lazy = () -> FinancialInstrument28.mmObject();
 			isDerived = false;
 			xmlTag = "Deriv";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Derivative";
 			definition = "Choice between type of derivatives.";
 			maxOccurs = 1;
@@ -267,11 +266,10 @@ public class FinancialInstrument28 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrument28.mmEquity, com.tools20022.repository.msg.FinancialInstrument28.mmWarrant,
-						com.tools20022.repository.msg.FinancialInstrument28.mmDebt, com.tools20022.repository.msg.FinancialInstrument28.mmDerivative);
+				messageElement_lazy = () -> Arrays.asList(FinancialInstrument28.mmEquity, FinancialInstrument28.mmWarrant, FinancialInstrument28.mmDebt, FinancialInstrument28.mmDerivative);
 				trace_lazy = () -> Security.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "FinancialInstrument28";
 				definition = "Tangible items of value to a business.";
 			}

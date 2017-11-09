@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.BlockTradeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -83,7 +85,7 @@ public class BlockTrade1Code extends BlockTradeCode {
 	 */
 	public static final MMCode mmParent = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Parent";
 			owner_lazy = () -> BlockTrade1Code.mmObject();
 		}
@@ -106,7 +108,7 @@ public class BlockTrade1Code extends BlockTradeCode {
 	 */
 	public static final MMCode mmChild = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Child";
 			owner_lazy = () -> BlockTrade1Code.mmObject();
 		}
@@ -115,12 +117,12 @@ public class BlockTrade1Code extends BlockTradeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("BLPA");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "BlockTrade1Code";
 				definition = "Specifies whether the instruction is the parent or a children of a block trade.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.BlockTrade1Code.mmParent, com.tools20022.repository.codeset.BlockTrade1Code.mmChild);
+				code_lazy = () -> Arrays.asList(BlockTrade1Code.mmParent, BlockTrade1Code.mmChild);
 				trace_lazy = () -> BlockTradeCode.mmObject();
 			}
 		});

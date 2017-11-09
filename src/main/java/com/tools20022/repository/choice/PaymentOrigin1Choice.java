@@ -19,10 +19,12 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.PaymentInstrument1Code;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.Max3NumericText;
 import com.tools20022.repository.entity.Payment;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -109,7 +111,7 @@ public class PaymentOrigin1Choice {
 			componentContext_lazy = () -> PaymentOrigin1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "FINMT";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FINMessageType";
 			definition = "Specifies that the payment was included in a SWIFT FIN format message eg, MT 103.";
 			maxOccurs = 1;
@@ -151,7 +153,7 @@ public class PaymentOrigin1Choice {
 			componentContext_lazy = () -> PaymentOrigin1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "XMLMsgNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "XMLMessageName";
 			definition = "Specifies that the payment was included in a SWIFT XML message.";
 			maxOccurs = 1;
@@ -194,7 +196,7 @@ public class PaymentOrigin1Choice {
 			componentContext_lazy = () -> PaymentOrigin1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Specifies that the payment was included in a proprietary format message.";
 			maxOccurs = 1;
@@ -241,11 +243,11 @@ public class PaymentOrigin1Choice {
 	 */
 	public static final MMMessageAttribute mmInstrument = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.mmPaymentInstrument;
+			businessElementTrace_lazy = () -> Payment.mmPaymentInstrument;
 			componentContext_lazy = () -> PaymentOrigin1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Instrm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Instrument";
 			definition = "Specifies the type of payment when not included in a SWIFT or proprietary format.";
 			maxOccurs = 1;
@@ -257,11 +259,10 @@ public class PaymentOrigin1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PaymentOrigin1Choice.mmFINMessageType, com.tools20022.repository.choice.PaymentOrigin1Choice.mmXMLMessageName,
-						com.tools20022.repository.choice.PaymentOrigin1Choice.mmProprietary, com.tools20022.repository.choice.PaymentOrigin1Choice.mmInstrument);
+				messageElement_lazy = () -> Arrays.asList(PaymentOrigin1Choice.mmFINMessageType, PaymentOrigin1Choice.mmXMLMessageName, PaymentOrigin1Choice.mmProprietary, PaymentOrigin1Choice.mmInstrument);
 				trace_lazy = () -> Payment.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PaymentOrigin1Choice";
 				definition = "Specifies the format under which the payment that generated the entry was transmitted.";
 			}

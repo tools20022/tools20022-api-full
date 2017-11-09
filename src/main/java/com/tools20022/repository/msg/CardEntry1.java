@@ -19,7 +19,10 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.CardPayment;
+import com.tools20022.repository.entity.CardPaymentAcquiring;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -110,14 +113,14 @@ public class CardEntry1 {
 	 */
 	public static final MMMessageAssociationEnd mmCard = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPayment.mmPaymentCard;
+			businessElementTrace_lazy = () -> CardPayment.mmPaymentCard;
 			componentContext_lazy = () -> CardEntry1.mmObject();
 			isDerived = false;
 			xmlTag = "Card";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Card";
 			definition = "Electronic money product that provides the cardholder with a portable and specialised computer device, which typically contains a microprocessor.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardEntry2.mmCard);
+			nextVersions_lazy = () -> Arrays.asList(CardEntry2.mmCard);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -167,14 +170,14 @@ public class CardEntry1 {
 	 */
 	public static final MMMessageAssociationEnd mmPOI = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.mmPointOfInteraction;
+			businessElementTrace_lazy = () -> CardPaymentAcquiring.mmPointOfInteraction;
 			componentContext_lazy = () -> CardEntry1.mmObject();
 			isDerived = false;
 			xmlTag = "POI";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "POI";
 			definition = "Physical or logical card payment terminal containing software and hardware components.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardEntry2.mmPOI);
+			nextVersions_lazy = () -> Arrays.asList(CardEntry2.mmPOI);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -228,10 +231,10 @@ public class CardEntry1 {
 			componentContext_lazy = () -> CardEntry1.mmObject();
 			isDerived = false;
 			xmlTag = "AggtdNtry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AggregatedEntry";
 			definition = "Card entry details, based on card transaction aggregated data performed by the account servicer.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardEntry2.mmAggregatedEntry);
+			nextVersions_lazy = () -> Arrays.asList(CardEntry2.mmAggregatedEntry);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -242,10 +245,10 @@ public class CardEntry1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardEntry1.mmCard, com.tools20022.repository.msg.CardEntry1.mmPOI, com.tools20022.repository.msg.CardEntry1.mmAggregatedEntry);
+				messageElement_lazy = () -> Arrays.asList(CardEntry1.mmCard, CardEntry1.mmPOI, CardEntry1.mmAggregatedEntry);
 				trace_lazy = () -> CardPayment.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CardEntry1";
 				definition = "Card transaction entry.";
 				nextVersions_lazy = () -> Arrays.asList(CardEntry2.mmObject());

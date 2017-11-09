@@ -19,12 +19,14 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.DateFormat22Choice;
 import com.tools20022.repository.choice.FinancialInstrumentQuantity15Choice;
 import com.tools20022.repository.codeset.CreditDebitCode;
 import com.tools20022.repository.codeset.DTCAdjustmentPaymentType1Code;
 import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.datatype.Max8Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -128,10 +130,10 @@ public class CorporateActionMovementSecuritiesMovementDetailsSD1 {
 			componentContext_lazy = () -> CorporateActionMovementSecuritiesMovementDetailsSD1.mmObject();
 			isDerived = false;
 			xmlTag = "PlcAndNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "xPath to the element that is being extended.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionMovementSecuritiesMovementDetailsSD2.mmPlaceAndName);
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionMovementSecuritiesMovementDetailsSD2.mmPlaceAndName);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
@@ -180,10 +182,10 @@ public class CorporateActionMovementSecuritiesMovementDetailsSD1 {
 			componentContext_lazy = () -> CorporateActionMovementSecuritiesMovementDetailsSD1.mmObject();
 			isDerived = false;
 			xmlTag = "CdtDbtInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditDebitIndicator";
 			definition = "Indicates whether the value is a debit or a credit.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionMovementSecuritiesMovementDetailsSD2.mmCreditDebitIndicator);
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionMovementSecuritiesMovementDetailsSD2.mmCreditDebitIndicator);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CreditDebitCode.mmObject();
@@ -233,10 +235,10 @@ public class CorporateActionMovementSecuritiesMovementDetailsSD1 {
 			componentContext_lazy = () -> CorporateActionMovementSecuritiesMovementDetailsSD1.mmObject();
 			isDerived = false;
 			xmlTag = "TxQty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionQuantity";
 			definition = "Resulting quantity of securities concerned in this transaction.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionMovementSecuritiesMovementDetailsSD2.mmTransactionQuantity);
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionMovementSecuritiesMovementDetailsSD2.mmTransactionQuantity);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> FinancialInstrumentQuantity15Choice.mmObject();
@@ -284,10 +286,10 @@ public class CorporateActionMovementSecuritiesMovementDetailsSD1 {
 			componentContext_lazy = () -> CorporateActionMovementSecuritiesMovementDetailsSD1.mmObject();
 			isDerived = false;
 			xmlTag = "RsnCd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReasonCode";
 			definition = "Transaction reason.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionMovementSecuritiesMovementDetailsSD2.mmReasonCode);
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionMovementSecuritiesMovementDetailsSD2.mmReasonCode);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> DTCAdjustmentPaymentType1Code.mmObject();
@@ -338,10 +340,10 @@ public class CorporateActionMovementSecuritiesMovementDetailsSD1 {
 			componentContext_lazy = () -> CorporateActionMovementSecuritiesMovementDetailsSD1.mmObject();
 			isDerived = false;
 			xmlTag = "ContraPtcptNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ContraParticipantNumber";
 			definition = "Transaction contra participant identification when shares are distributed / delivered to / from another participant.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionMovementSecuritiesMovementDetailsSD2.mmContraParticipantNumber);
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionMovementSecuritiesMovementDetailsSD2.mmContraParticipantNumber);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max8Text.mmObject();
@@ -393,10 +395,10 @@ public class CorporateActionMovementSecuritiesMovementDetailsSD1 {
 			componentContext_lazy = () -> CorporateActionMovementSecuritiesMovementDetailsSD1.mmObject();
 			isDerived = false;
 			xmlTag = "EarlstPmtDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EarliestPaymentDate";
 			definition = "Date/Time on which the posting / draft of the securities is scheduled to take place for a transaction.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionMovementSecuritiesMovementDetailsSD2.mmEarliestPaymentDate);
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionMovementSecuritiesMovementDetailsSD2.mmEarliestPaymentDate);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateFormat22Choice.mmObject();
@@ -406,12 +408,11 @@ public class CorporateActionMovementSecuritiesMovementDetailsSD1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionMovementSecuritiesMovementDetailsSD1.mmPlaceAndName,
-						com.tools20022.repository.msg.CorporateActionMovementSecuritiesMovementDetailsSD1.mmCreditDebitIndicator, com.tools20022.repository.msg.CorporateActionMovementSecuritiesMovementDetailsSD1.mmTransactionQuantity,
-						com.tools20022.repository.msg.CorporateActionMovementSecuritiesMovementDetailsSD1.mmReasonCode, com.tools20022.repository.msg.CorporateActionMovementSecuritiesMovementDetailsSD1.mmContraParticipantNumber,
-						com.tools20022.repository.msg.CorporateActionMovementSecuritiesMovementDetailsSD1.mmEarliestPaymentDate);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(CorporateActionMovementSecuritiesMovementDetailsSD1.mmPlaceAndName, CorporateActionMovementSecuritiesMovementDetailsSD1.mmCreditDebitIndicator,
+						CorporateActionMovementSecuritiesMovementDetailsSD1.mmTransactionQuantity, CorporateActionMovementSecuritiesMovementDetailsSD1.mmReasonCode,
+						CorporateActionMovementSecuritiesMovementDetailsSD1.mmContraParticipantNumber, CorporateActionMovementSecuritiesMovementDetailsSD1.mmEarliestPaymentDate);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CorporateActionMovementSecuritiesMovementDetailsSD1";
 				definition = "Provides additional information regarding corporate action movement securities movement rate details.";
 				nextVersions_lazy = () -> Arrays.asList(CorporateActionMovementSecuritiesMovementDetailsSD2.mmObject());

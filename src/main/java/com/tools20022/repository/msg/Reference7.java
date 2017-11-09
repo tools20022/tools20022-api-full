@@ -19,7 +19,9 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -96,7 +98,7 @@ public class Reference7 {
 			componentContext_lazy = () -> Reference7.mmObject();
 			isDerived = false;
 			xmlTag = "QtId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuoteIdentification";
 			definition = "Unique identifier for quote.";
 			maxOccurs = 1;
@@ -136,7 +138,7 @@ public class Reference7 {
 			componentContext_lazy = () -> Reference7.mmObject();
 			isDerived = false;
 			xmlTag = "QtStsReqId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuoteStatusRequestIdentification";
 			definition = "Unique identifier for quote status request.";
 			maxOccurs = 1;
@@ -176,7 +178,7 @@ public class Reference7 {
 			componentContext_lazy = () -> Reference7.mmObject();
 			isDerived = false;
 			xmlTag = "QtReqId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuoteRequestIdentification";
 			definition = "Unique identifier for quote request.";
 			maxOccurs = 1;
@@ -216,7 +218,7 @@ public class Reference7 {
 			componentContext_lazy = () -> Reference7.mmObject();
 			isDerived = false;
 			xmlTag = "QtRspnId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuoteResponseIdentification";
 			definition = "Unique identifier for quote response.";
 			maxOccurs = 1;
@@ -228,10 +230,9 @@ public class Reference7 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Reference7.mmQuoteIdentification, com.tools20022.repository.msg.Reference7.mmQuoteStatusRequestIdentification,
-						com.tools20022.repository.msg.Reference7.mmQuoteRequestIdentification, com.tools20022.repository.msg.Reference7.mmQuoteResponseIdentification);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(Reference7.mmQuoteIdentification, Reference7.mmQuoteStatusRequestIdentification, Reference7.mmQuoteRequestIdentification, Reference7.mmQuoteResponseIdentification);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Reference7";
 				definition = "Additional references linked to the quote status report.";
 			}

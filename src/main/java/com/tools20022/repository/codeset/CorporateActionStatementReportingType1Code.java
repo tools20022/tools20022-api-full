@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CorporateActionStatementReportingTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -86,7 +88,7 @@ public class CorporateActionStatementReportingType1Code extends CorporateActionS
 	 */
 	public static final MMCode mmMultipleAccounts = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MultipleAccounts";
 			owner_lazy = () -> CorporateActionStatementReportingType1Code.mmObject();
 		}
@@ -109,7 +111,7 @@ public class CorporateActionStatementReportingType1Code extends CorporateActionS
 	 */
 	public static final MMCode mmMultipleEvents = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MultipleEvents";
 			owner_lazy = () -> CorporateActionStatementReportingType1Code.mmObject();
 		}
@@ -118,12 +120,12 @@ public class CorporateActionStatementReportingType1Code extends CorporateActionS
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("MASE");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionStatementReportingType1Code";
 				definition = "Type of statement reporting on account holdings  for corporate action events eg. reporting on multiple accounts or multiple events.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CorporateActionStatementReportingType1Code.mmMultipleAccounts, com.tools20022.repository.codeset.CorporateActionStatementReportingType1Code.mmMultipleEvents);
+				code_lazy = () -> Arrays.asList(CorporateActionStatementReportingType1Code.mmMultipleAccounts, CorporateActionStatementReportingType1Code.mmMultipleEvents);
 				trace_lazy = () -> CorporateActionStatementReportingTypeCode.mmObject();
 			}
 		});

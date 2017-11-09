@@ -20,8 +20,12 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.CreditTransfer;
+import com.tools20022.repository.entity.Party;
+import com.tools20022.repository.entity.PaymentIdentification;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -107,11 +111,11 @@ public class CreditTransfer3 {
 	 */
 	public static final MMMessageAttribute mmReference = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentIdentification.mmCreditorReference;
+			businessElementTrace_lazy = () -> PaymentIdentification.mmCreditorReference;
 			componentContext_lazy = () -> CreditTransfer3.mmObject();
 			isDerived = false;
 			xmlTag = "Ref";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reference";
 			definition = "Information supplied to enable the matching of an entry with the items that the transfer is intended to settle, such as commercial invoices in an accounts' receivable system.";
 			maxOccurs = 1;
@@ -155,11 +159,11 @@ public class CreditTransfer3 {
 	 */
 	public static final MMMessageAssociationEnd mmCreditorDetails = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> CreditTransfer3.mmObject();
 			isDerived = false;
 			xmlTag = "CdtrDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditorDetails";
 			definition = "Party that receives an amount of money from the debtor. The creditor is also the credit account owner.";
 			maxOccurs = 1;
@@ -204,11 +208,11 @@ public class CreditTransfer3 {
 	 */
 	public static final MMMessageAssociationEnd mmDebtorDetails = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> CreditTransfer3.mmObject();
 			isDerived = false;
 			xmlTag = "DbtrDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DebtorDetails";
 			definition = "Party that owes an amount of money to the creditor. The debtor is also the debit account owner.";
 			maxOccurs = 1;
@@ -221,11 +225,10 @@ public class CreditTransfer3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CreditTransfer3.mmReference, com.tools20022.repository.msg.CreditTransfer3.mmCreditorDetails,
-						com.tools20022.repository.msg.CreditTransfer3.mmDebtorDetails);
+				messageElement_lazy = () -> Arrays.asList(CreditTransfer3.mmReference, CreditTransfer3.mmCreditorDetails, CreditTransfer3.mmDebtorDetails);
 				trace_lazy = () -> CreditTransfer.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CreditTransfer3";
 				definition = "Payment instrument between a debtor and a creditor, which flows through one or more financial institutions or systems.";
 			}

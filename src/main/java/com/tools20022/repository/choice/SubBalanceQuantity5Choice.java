@@ -19,7 +19,9 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.SecuritiesBalance;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification56;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -107,14 +109,14 @@ public class SubBalanceQuantity5Choice {
 	 */
 	public static final MMMessageAttribute mmQuantity = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesBalance.mmSubBalanceQuantity;
+			businessElementTrace_lazy = () -> SecuritiesBalance.mmSubBalanceQuantity;
 			componentContext_lazy = () -> SubBalanceQuantity5Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Qty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Quantity";
 			definition = "Quantity of financial instrument in the sub-balance.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.SubBalanceQuantity3Choice.mmQuantity;
+			previousVersion_lazy = () -> SubBalanceQuantity3Choice.mmQuantity;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> com.tools20022.repository.choice.FinancialInstrumentQuantity1Choice.mmObject();
@@ -164,14 +166,14 @@ public class SubBalanceQuantity5Choice {
 	 */
 	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesBalance.mmSubBalanceQuantity;
+			businessElementTrace_lazy = () -> SecuritiesBalance.mmSubBalanceQuantity;
 			componentContext_lazy = () -> SubBalanceQuantity5Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Quantity of financial instrument in the sub-balance expressed in a proprietary format.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.SubBalanceQuantity3Choice.mmProprietary;
+			previousVersion_lazy = () -> SubBalanceQuantity3Choice.mmProprietary;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification56.mmObject();
@@ -181,10 +183,10 @@ public class SubBalanceQuantity5Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SubBalanceQuantity5Choice.mmQuantity, com.tools20022.repository.choice.SubBalanceQuantity5Choice.mmProprietary);
+				messageElement_lazy = () -> Arrays.asList(SubBalanceQuantity5Choice.mmQuantity, SubBalanceQuantity5Choice.mmProprietary);
 				trace_lazy = () -> SecuritiesBalance.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SubBalanceQuantity5Choice";
 				definition = "Choice between formats for the balance information.";
 				previousVersion_lazy = () -> SubBalanceQuantity3Choice.mmObject();

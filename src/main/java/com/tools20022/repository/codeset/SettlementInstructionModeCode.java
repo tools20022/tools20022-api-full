@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -93,7 +95,7 @@ public class SettlementInstructionModeCode {
 	 */
 	public static final MMCode mmDefault = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+			registrationStatus = MMRegistrationStatus.OBSOLETE;
 			name = "Default";
 			definition = "Settlement takes place according to the standard market rules.";
 			owner_lazy = () -> SettlementInstructionModeCode.mmObject();
@@ -125,7 +127,7 @@ public class SettlementInstructionModeCode {
 	 */
 	public static final MMCode mmStandingInstruction = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+			registrationStatus = MMRegistrationStatus.OBSOLETE;
 			name = "StandingInstruction";
 			definition = "Settlement takes place according to the standing instructions provided.";
 			owner_lazy = () -> SettlementInstructionModeCode.mmObject();
@@ -159,7 +161,7 @@ public class SettlementInstructionModeCode {
 	 */
 	public static final MMCode mmAllocationAccountOverriding = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+			registrationStatus = MMRegistrationStatus.OBSOLETE;
 			name = "AllocationAccountOverriding";
 			definition = "Settlement takes place according to the allocation account details provided, and is therefore overriding the standing allocation account details.";
 			owner_lazy = () -> SettlementInstructionModeCode.mmObject();
@@ -192,7 +194,7 @@ public class SettlementInstructionModeCode {
 	 */
 	public static final MMCode mmAllocationAccountStanding = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+			registrationStatus = MMRegistrationStatus.OBSOLETE;
 			name = "AllocationAccountStanding";
 			definition = "Settlement takes place according to the standing allocation account details.";
 			owner_lazy = () -> SettlementInstructionModeCode.mmObject();
@@ -225,7 +227,7 @@ public class SettlementInstructionModeCode {
 	 */
 	public static final MMCode mmCIVSingleAccount = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+			registrationStatus = MMRegistrationStatus.OBSOLETE;
 			name = "CIVSingleAccount";
 			definition = "Settlement takes place using the single account of the collective investment vehicle (CIV).";
 			owner_lazy = () -> SettlementInstructionModeCode.mmObject();
@@ -236,14 +238,13 @@ public class SettlementInstructionModeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("DFLT");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				name = "SettlementInstructionModeCode";
 				definition = "Specifies the mode used for settlement.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SettlementInstructionModeCode.mmDefault, com.tools20022.repository.codeset.SettlementInstructionModeCode.mmStandingInstruction,
-						com.tools20022.repository.codeset.SettlementInstructionModeCode.mmAllocationAccountOverriding, com.tools20022.repository.codeset.SettlementInstructionModeCode.mmAllocationAccountStanding,
-						com.tools20022.repository.codeset.SettlementInstructionModeCode.mmCIVSingleAccount);
+				code_lazy = () -> Arrays.asList(SettlementInstructionModeCode.mmDefault, SettlementInstructionModeCode.mmStandingInstruction, SettlementInstructionModeCode.mmAllocationAccountOverriding,
+						SettlementInstructionModeCode.mmAllocationAccountStanding, SettlementInstructionModeCode.mmCIVSingleAccount);
 			}
 		});
 		return mmObject_lazy.get();

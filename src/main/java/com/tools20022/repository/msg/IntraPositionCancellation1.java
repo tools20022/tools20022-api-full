@@ -20,8 +20,12 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.ProcessingStatus32Choice;
 import com.tools20022.repository.entity.IntraPositionTransfer;
+import com.tools20022.repository.entity.SecuritiesTransfer;
+import com.tools20022.repository.entity.System;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -106,11 +110,11 @@ public class IntraPositionCancellation1 {
 	 */
 	public static final MMMessageAttribute mmAccountOwner = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.System.mmPartyRole;
+			businessElementTrace_lazy = () -> System.mmPartyRole;
 			componentContext_lazy = () -> IntraPositionCancellation1.mmObject();
 			isDerived = false;
 			xmlTag = "AcctOwnr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountOwner";
 			definition = "Party that owns the account.";
 			maxOccurs = 1;
@@ -154,11 +158,11 @@ public class IntraPositionCancellation1 {
 	 */
 	public static final MMMessageAttribute mmSafekeepingAccount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTransfer.mmAccount;
+			businessElementTrace_lazy = () -> SecuritiesTransfer.mmAccount;
 			componentContext_lazy = () -> IntraPositionCancellation1.mmObject();
 			isDerived = false;
 			xmlTag = "SfkpgAcct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingAccount";
 			definition = "Account to or from which a securities entry is made.";
 			maxOccurs = 1;
@@ -201,11 +205,11 @@ public class IntraPositionCancellation1 {
 	 */
 	public static final MMMessageAssociationEnd mmProcessingStatus = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTransfer.mmStatus;
+			businessElementTrace_lazy = () -> SecuritiesTransfer.mmStatus;
 			componentContext_lazy = () -> IntraPositionCancellation1.mmObject();
 			isDerived = false;
 			xmlTag = "PrcgSts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProcessingStatus";
 			definition = "Status and status reason of the transaction.";
 			maxOccurs = 1;
@@ -253,7 +257,7 @@ public class IntraPositionCancellation1 {
 			componentContext_lazy = () -> IntraPositionCancellation1.mmObject();
 			isDerived = false;
 			xmlTag = "Cxl";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cancellation";
 			definition = "Identifies the individual transaction.";
 			minOccurs = 1;
@@ -265,11 +269,10 @@ public class IntraPositionCancellation1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IntraPositionCancellation1.mmAccountOwner, com.tools20022.repository.msg.IntraPositionCancellation1.mmSafekeepingAccount,
-						com.tools20022.repository.msg.IntraPositionCancellation1.mmProcessingStatus, com.tools20022.repository.msg.IntraPositionCancellation1.mmCancellation);
+				messageElement_lazy = () -> Arrays.asList(IntraPositionCancellation1.mmAccountOwner, IntraPositionCancellation1.mmSafekeepingAccount, IntraPositionCancellation1.mmProcessingStatus, IntraPositionCancellation1.mmCancellation);
 				trace_lazy = () -> IntraPositionTransfer.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "IntraPositionCancellation1";
 				definition = "Provides the transactions in the report.";
 			}

@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.SettlementAdviceTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -101,7 +103,7 @@ public class SettlementAdviceType1Code extends SettlementAdviceTypeCode {
 	 */
 	public static final MMCode mmUndertakingAmendment = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UndertakingAmendment";
 			owner_lazy = () -> SettlementAdviceType1Code.mmObject();
 		}
@@ -124,7 +126,7 @@ public class SettlementAdviceType1Code extends SettlementAdviceTypeCode {
 	 */
 	public static final MMCode mmAutomaticChargesBooking = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AutomaticChargesBooking";
 			owner_lazy = () -> SettlementAdviceType1Code.mmObject();
 		}
@@ -147,7 +149,7 @@ public class SettlementAdviceType1Code extends SettlementAdviceTypeCode {
 	 */
 	public static final MMCode mmPaymentClaim = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentClaim";
 			owner_lazy = () -> SettlementAdviceType1Code.mmObject();
 		}
@@ -170,7 +172,7 @@ public class SettlementAdviceType1Code extends SettlementAdviceTypeCode {
 	 */
 	public static final MMCode mmCorrespondentBankCharges = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorrespondentBankCharges";
 			owner_lazy = () -> SettlementAdviceType1Code.mmObject();
 		}
@@ -193,7 +195,7 @@ public class SettlementAdviceType1Code extends SettlementAdviceTypeCode {
 	 */
 	public static final MMCode mmUndertakingIssuance = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UndertakingIssuance";
 			owner_lazy = () -> SettlementAdviceType1Code.mmObject();
 		}
@@ -216,7 +218,7 @@ public class SettlementAdviceType1Code extends SettlementAdviceTypeCode {
 	 */
 	public static final MMCode mmManualChargesBooking = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ManualChargesBooking";
 			owner_lazy = () -> SettlementAdviceType1Code.mmObject();
 		}
@@ -239,7 +241,7 @@ public class SettlementAdviceType1Code extends SettlementAdviceTypeCode {
 	 */
 	public static final MMCode mmRefund = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Refund";
 			owner_lazy = () -> SettlementAdviceType1Code.mmObject();
 		}
@@ -262,7 +264,7 @@ public class SettlementAdviceType1Code extends SettlementAdviceTypeCode {
 	 */
 	public static final MMCode mmTermination = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Termination";
 			owner_lazy = () -> SettlementAdviceType1Code.mmObject();
 		}
@@ -271,15 +273,14 @@ public class SettlementAdviceType1Code extends SettlementAdviceTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("AMND");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SettlementAdviceType1Code";
 				definition = "Specifies the type of settlement advice.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SettlementAdviceType1Code.mmUndertakingAmendment, com.tools20022.repository.codeset.SettlementAdviceType1Code.mmAutomaticChargesBooking,
-						com.tools20022.repository.codeset.SettlementAdviceType1Code.mmPaymentClaim, com.tools20022.repository.codeset.SettlementAdviceType1Code.mmCorrespondentBankCharges,
-						com.tools20022.repository.codeset.SettlementAdviceType1Code.mmUndertakingIssuance, com.tools20022.repository.codeset.SettlementAdviceType1Code.mmManualChargesBooking,
-						com.tools20022.repository.codeset.SettlementAdviceType1Code.mmRefund, com.tools20022.repository.codeset.SettlementAdviceType1Code.mmTermination);
+				code_lazy = () -> Arrays.asList(SettlementAdviceType1Code.mmUndertakingAmendment, SettlementAdviceType1Code.mmAutomaticChargesBooking, SettlementAdviceType1Code.mmPaymentClaim,
+						SettlementAdviceType1Code.mmCorrespondentBankCharges, SettlementAdviceType1Code.mmUndertakingIssuance, SettlementAdviceType1Code.mmManualChargesBooking, SettlementAdviceType1Code.mmRefund,
+						SettlementAdviceType1Code.mmTermination);
 				trace_lazy = () -> SettlementAdviceTypeCode.mmObject();
 			}
 		});

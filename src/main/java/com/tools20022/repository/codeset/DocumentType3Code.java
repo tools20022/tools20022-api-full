@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.DocumentTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -95,7 +97,7 @@ public class DocumentType3Code extends DocumentTypeCode {
 	 */
 	public static final MMCode mmRemittanceAdviceMessage = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RemittanceAdviceMessage";
 			owner_lazy = () -> DocumentType3Code.mmObject();
 		}
@@ -118,7 +120,7 @@ public class DocumentType3Code extends DocumentTypeCode {
 	 */
 	public static final MMCode mmRelatedPaymentInstruction = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedPaymentInstruction";
 			owner_lazy = () -> DocumentType3Code.mmObject();
 		}
@@ -141,7 +143,7 @@ public class DocumentType3Code extends DocumentTypeCode {
 	 */
 	public static final MMCode mmForeignExchangeDealReference = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForeignExchangeDealReference";
 			owner_lazy = () -> DocumentType3Code.mmObject();
 		}
@@ -164,7 +166,7 @@ public class DocumentType3Code extends DocumentTypeCode {
 	 */
 	public static final MMCode mmDispatchAdvice = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DispatchAdvice";
 			owner_lazy = () -> DocumentType3Code.mmObject();
 		}
@@ -187,7 +189,7 @@ public class DocumentType3Code extends DocumentTypeCode {
 	 */
 	public static final MMCode mmPurchaseOrder = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PurchaseOrder";
 			owner_lazy = () -> DocumentType3Code.mmObject();
 		}
@@ -210,7 +212,7 @@ public class DocumentType3Code extends DocumentTypeCode {
 	 */
 	public static final MMCode mmStructuredCommunicationReference = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StructuredCommunicationReference";
 			owner_lazy = () -> DocumentType3Code.mmObject();
 		}
@@ -219,14 +221,13 @@ public class DocumentType3Code extends DocumentTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("RADM");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DocumentType3Code";
 				definition = "Specifies a type of financial or commercial document.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DocumentType3Code.mmRemittanceAdviceMessage, com.tools20022.repository.codeset.DocumentType3Code.mmRelatedPaymentInstruction,
-						com.tools20022.repository.codeset.DocumentType3Code.mmForeignExchangeDealReference, com.tools20022.repository.codeset.DocumentType3Code.mmDispatchAdvice,
-						com.tools20022.repository.codeset.DocumentType3Code.mmPurchaseOrder, com.tools20022.repository.codeset.DocumentType3Code.mmStructuredCommunicationReference);
+				code_lazy = () -> Arrays.asList(DocumentType3Code.mmRemittanceAdviceMessage, DocumentType3Code.mmRelatedPaymentInstruction, DocumentType3Code.mmForeignExchangeDealReference, DocumentType3Code.mmDispatchAdvice,
+						DocumentType3Code.mmPurchaseOrder, DocumentType3Code.mmStructuredCommunicationReference);
 				trace_lazy = () -> DocumentTypeCode.mmObject();
 			}
 		});

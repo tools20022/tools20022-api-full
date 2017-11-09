@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.RoundingDirection1Code
+ * RoundingDirection1Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.RoundingDirection2Code
+ * RoundingDirection2Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -62,15 +73,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.RoundingDirectionCode#mmRetain
  * RoundingDirectionCode.mmRetain}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.RoundingDirection1Code
- * RoundingDirection1Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.RoundingDirection2Code
- * RoundingDirection2Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -120,7 +122,7 @@ public class RoundingDirectionCode {
 	 */
 	public static final MMCode mmFull = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Full";
 			definition = "Pre-allocate shares only if fully dealt.";
 			owner_lazy = () -> RoundingDirectionCode.mmObject();
@@ -150,7 +152,7 @@ public class RoundingDirectionCode {
 	 */
 	public static final MMCode mmNoFraction = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NoFraction";
 			definition = "No fractional shares are allowed.";
 			owner_lazy = () -> RoundingDirectionCode.mmObject();
@@ -180,7 +182,7 @@ public class RoundingDirectionCode {
 	 */
 	public static final MMCode mmProRate = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ProRate";
 			definition = "In case of a partial fill, pro-rate the allocations.";
 			owner_lazy = () -> RoundingDirectionCode.mmObject();
@@ -210,7 +212,7 @@ public class RoundingDirectionCode {
 	 */
 	public static final MMCode mmRoundUp = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RoundUp";
 			definition = "Round up to the nearest whole number.";
 			owner_lazy = () -> RoundingDirectionCode.mmObject();
@@ -240,7 +242,7 @@ public class RoundingDirectionCode {
 	 */
 	public static final MMCode mmRoundDown = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RoundDown";
 			definition = "Round down to the nearest whole number.";
 			owner_lazy = () -> RoundingDirectionCode.mmObject();
@@ -270,7 +272,7 @@ public class RoundingDirectionCode {
 	 */
 	public static final MMCode mmRoundToNearest = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RoundToNearest";
 			definition = "Round up or down to the nearest whole number.";
 			owner_lazy = () -> RoundingDirectionCode.mmObject();
@@ -300,7 +302,7 @@ public class RoundingDirectionCode {
 	 */
 	public static final MMCode mmIssueFraction = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "IssueFraction";
 			definition = "Do not round.";
 			owner_lazy = () -> RoundingDirectionCode.mmObject();
@@ -330,7 +332,7 @@ public class RoundingDirectionCode {
 	 */
 	public static final MMCode mmDiscussFirst = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DiscussFirst";
 			definition = "Do not pro-rate; discuss first.";
 			owner_lazy = () -> RoundingDirectionCode.mmObject();
@@ -363,7 +365,7 @@ public class RoundingDirectionCode {
 	 */
 	public static final MMCode mmSpecific = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Specific";
 			definition = "Pre-allocate according to the amounts shown in a linked allocation instruction.";
 			owner_lazy = () -> RoundingDirectionCode.mmObject();
@@ -396,7 +398,7 @@ public class RoundingDirectionCode {
 	 */
 	public static final MMCode mmStandard = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Standard";
 			definition = "Indicates that if the fraction is greater than or equal to 0.5 of the value should be rounded up; otherwise rounded down.";
 			owner_lazy = () -> RoundingDirectionCode.mmObject();
@@ -427,7 +429,7 @@ public class RoundingDirectionCode {
 	 */
 	public static final MMCode mmRetain = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Retain";
 			definition = "Indicates that fractional value should be retained; no rounding.";
 			owner_lazy = () -> RoundingDirectionCode.mmObject();
@@ -438,16 +440,14 @@ public class RoundingDirectionCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("FULL");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RoundingDirectionCode";
 				definition = "Specifies the rounding direction.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RoundingDirectionCode.mmFull, com.tools20022.repository.codeset.RoundingDirectionCode.mmNoFraction,
-						com.tools20022.repository.codeset.RoundingDirectionCode.mmProRate, com.tools20022.repository.codeset.RoundingDirectionCode.mmRoundUp, com.tools20022.repository.codeset.RoundingDirectionCode.mmRoundDown,
-						com.tools20022.repository.codeset.RoundingDirectionCode.mmRoundToNearest, com.tools20022.repository.codeset.RoundingDirectionCode.mmIssueFraction,
-						com.tools20022.repository.codeset.RoundingDirectionCode.mmDiscussFirst, com.tools20022.repository.codeset.RoundingDirectionCode.mmSpecific, com.tools20022.repository.codeset.RoundingDirectionCode.mmStandard,
-						com.tools20022.repository.codeset.RoundingDirectionCode.mmRetain);
+				code_lazy = () -> Arrays
+						.asList(RoundingDirectionCode.mmFull, RoundingDirectionCode.mmNoFraction, RoundingDirectionCode.mmProRate, RoundingDirectionCode.mmRoundUp, RoundingDirectionCode.mmRoundDown, RoundingDirectionCode.mmRoundToNearest,
+								RoundingDirectionCode.mmIssueFraction, RoundingDirectionCode.mmDiscussFirst, RoundingDirectionCode.mmSpecific, RoundingDirectionCode.mmStandard, RoundingDirectionCode.mmRetain);
 				derivation_lazy = () -> Arrays.asList(RoundingDirection1Code.mmObject(), RoundingDirection2Code.mmObject());
 			}
 		});

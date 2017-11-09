@@ -19,6 +19,8 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.FinancialInstrumentQuantity1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -93,7 +95,7 @@ public class OpeningBalance3Choice {
 			componentContext_lazy = () -> OpeningBalance3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "FrstOpngBal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FirstOpeningBalance";
 			definition = "Opening balance of the financial instrument in the statement.";
 			maxOccurs = 1;
@@ -138,7 +140,7 @@ public class OpeningBalance3Choice {
 			componentContext_lazy = () -> OpeningBalance3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "IntrmyOpngBal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IntermediaryOpeningBalance";
 			definition = "Opening balance of this page only. It must be the intermediary closing balance of the previous page (part of the same statement).";
 			maxOccurs = 1;
@@ -150,9 +152,9 @@ public class OpeningBalance3Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.OpeningBalance3Choice.mmFirstOpeningBalance, com.tools20022.repository.choice.OpeningBalance3Choice.mmIntermediaryOpeningBalance);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(OpeningBalance3Choice.mmFirstOpeningBalance, OpeningBalance3Choice.mmIntermediaryOpeningBalance);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OpeningBalance3Choice";
 				definition = "Choice of opening and intermediary balances";
 			}

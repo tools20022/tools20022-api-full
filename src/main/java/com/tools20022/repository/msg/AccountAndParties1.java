@@ -19,8 +19,10 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.InvestigatedParties1Choice;
 import com.tools20022.repository.entity.CashAccount;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -107,7 +109,7 @@ public class AccountAndParties1 {
 			componentContext_lazy = () -> AccountAndParties1.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Specifies the account for the investigation.";
 			maxOccurs = 1;
@@ -153,7 +155,7 @@ public class AccountAndParties1 {
 			componentContext_lazy = () -> AccountAndParties1.mmObject();
 			isDerived = false;
 			xmlTag = "InvstgtdPties";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestigatedParties";
 			definition = "Specifies the investigated parties related to the account such as the owner, beneficiary, signatory or any party playing a role in that account for which the investigation needs to be done.";
 			maxOccurs = 1;
@@ -195,7 +197,7 @@ public class AccountAndParties1 {
 			componentContext_lazy = () -> AccountAndParties1.mmObject();
 			isDerived = false;
 			xmlTag = "AuthrtyReqTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AuthorityRequestType";
 			definition = "Identifies the authority request type as a code.";
 			minOccurs = 1;
@@ -206,11 +208,10 @@ public class AccountAndParties1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountAndParties1.mmIdentification, com.tools20022.repository.msg.AccountAndParties1.mmInvestigatedParties,
-						com.tools20022.repository.msg.AccountAndParties1.mmAuthorityRequestType);
+				messageElement_lazy = () -> Arrays.asList(AccountAndParties1.mmIdentification, AccountAndParties1.mmInvestigatedParties, AccountAndParties1.mmAuthorityRequestType);
 				trace_lazy = () -> CashAccount.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AccountAndParties1";
 				definition = "Identifies the account as the search criteria for the financial institution to do the investigation.";
 			}

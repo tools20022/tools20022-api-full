@@ -19,11 +19,13 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max10Text;
 import com.tools20022.repository.datatype.Max140Text;
 import com.tools20022.repository.datatype.Min2Max3NumericText;
 import com.tools20022.repository.datatype.Min8Max28NumericText;
 import com.tools20022.repository.entity.PaymentCard;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -120,14 +122,14 @@ public class PlainCardData14 {
 	 */
 	public static final MMMessageAttribute mmPAN = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentCard.mmNumber;
+			businessElementTrace_lazy = () -> PaymentCard.mmNumber;
 			componentContext_lazy = () -> PlainCardData14.mmObject();
 			isDerived = false;
 			xmlTag = "PAN";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PAN";
 			definition = "Primary Account Number (PAN) of the card.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PlainCardData13.mmPAN;
+			previousVersion_lazy = () -> PlainCardData13.mmPAN;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Min8Max28NumericText.mmObject();
@@ -177,14 +179,14 @@ public class PlainCardData14 {
 	 */
 	public static final MMMessageAttribute mmCardSequenceNumber = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentCard.mmSequenceNumber;
+			businessElementTrace_lazy = () -> PaymentCard.mmSequenceNumber;
 			componentContext_lazy = () -> PlainCardData14.mmObject();
 			isDerived = false;
 			xmlTag = "CardSeqNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CardSequenceNumber";
 			definition = "Identify a card or a payment token inside a set of cards with the same PAN.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PlainCardData13.mmCardSequenceNumber;
+			previousVersion_lazy = () -> PlainCardData13.mmCardSequenceNumber;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Min2Max3NumericText.mmObject();
@@ -236,10 +238,10 @@ public class PlainCardData14 {
 			componentContext_lazy = () -> PlainCardData14.mmObject();
 			isDerived = false;
 			xmlTag = "FctvDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EffectiveDate";
 			definition = "Date from which the card can be used, expressed either in the YYYY-MM format, or in the YYYY-MM-DD format.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PlainCardData13.mmEffectiveDate;
+			previousVersion_lazy = () -> PlainCardData13.mmEffectiveDate;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max10Text.mmObject();
@@ -291,10 +293,10 @@ public class PlainCardData14 {
 			componentContext_lazy = () -> PlainCardData14.mmObject();
 			isDerived = false;
 			xmlTag = "XpryDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExpiryDate";
 			definition = "Expiry date of the card expressed either in the YYYY-MM format, or in the YYYY-MM-DD format.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PlainCardData13.mmExpiryDate;
+			previousVersion_lazy = () -> PlainCardData13.mmExpiryDate;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max10Text.mmObject();
@@ -338,10 +340,10 @@ public class PlainCardData14 {
 			componentContext_lazy = () -> PlainCardData14.mmObject();
 			isDerived = false;
 			xmlTag = "Trck1";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Track1";
 			definition = "Track number 1 from magnetic stripe card.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PlainCardData13.mmTrack1;
+			previousVersion_lazy = () -> PlainCardData13.mmTrack1;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
@@ -381,7 +383,7 @@ public class PlainCardData14 {
 			componentContext_lazy = () -> PlainCardData14.mmObject();
 			isDerived = false;
 			xmlTag = "Trck2";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Track2";
 			definition = "Track number 2 without control characters (start /end and LRC).";
 			maxOccurs = 1;
@@ -427,10 +429,10 @@ public class PlainCardData14 {
 			componentContext_lazy = () -> PlainCardData14.mmObject();
 			isDerived = false;
 			xmlTag = "Trck3";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Track3";
 			definition = "Track number 3 from magnetic stripe card.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PlainCardData13.mmTrack3;
+			previousVersion_lazy = () -> PlainCardData13.mmTrack3;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
@@ -440,12 +442,11 @@ public class PlainCardData14 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PlainCardData14.mmPAN, com.tools20022.repository.msg.PlainCardData14.mmCardSequenceNumber,
-						com.tools20022.repository.msg.PlainCardData14.mmEffectiveDate, com.tools20022.repository.msg.PlainCardData14.mmExpiryDate, com.tools20022.repository.msg.PlainCardData14.mmTrack1,
-						com.tools20022.repository.msg.PlainCardData14.mmTrack2, com.tools20022.repository.msg.PlainCardData14.mmTrack3);
+				messageElement_lazy = () -> Arrays.asList(PlainCardData14.mmPAN, PlainCardData14.mmCardSequenceNumber, PlainCardData14.mmEffectiveDate, PlainCardData14.mmExpiryDate, PlainCardData14.mmTrack1, PlainCardData14.mmTrack2,
+						PlainCardData14.mmTrack3);
 				trace_lazy = () -> PaymentCard.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PlainCardData14";
 				definition = "Sensible data associated with the payment card performing the transaction.";
 				previousVersion_lazy = () -> PlainCardData13.mmObject();

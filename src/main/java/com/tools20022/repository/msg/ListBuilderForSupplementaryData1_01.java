@@ -17,39 +17,45 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.repository.area.auth.*;
+import com.tools20022.repository.area.seev.CorporateActionMovementConfirmation002V08;
+import com.tools20022.repository.area.sese.SecuritiesFinancingModificationInstruction002V06;
+import com.tools20022.repository.area.sese.SecuritiesSettlementTransactionConfirmation002V07;
+import com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotification002V07;
+import com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdvice002V06;
 import java.util.List;
 
 class ListBuilderForSupplementaryData1_01 {
 
 	@SuppressWarnings("unchecked")
 	static <T> List<T> addElems(List<T> list) {
-		list.add((T) com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotification002V07.mmSupplementaryData);
-		list.add((T) com.tools20022.repository.area.sese.SecuritiesFinancingModificationInstruction002V06.mmSupplementaryData);
-		list.add((T) com.tools20022.repository.area.seev.CorporateActionMovementConfirmation002V08.mmSupplementaryData);
-		list.add((T) com.tools20022.repository.area.sese.SecuritiesSettlementTransactionConfirmation002V07.mmSupplementaryData);
-		list.add((T) com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdvice002V06.mmSupplementaryData);
-		list.add((T) com.tools20022.repository.area.auth.MoneyMarketUnsecuredMarketStatisticalReportV02.mmSupplementaryData);
-		list.add((T) com.tools20022.repository.area.auth.MoneyMarketForeignExchangeSwapsStatisticalReportV02.mmSupplementaryData);
-		list.add((T) com.tools20022.repository.area.auth.MoneyMarketSecuredMarketStatisticalReportV02.mmSupplementaryData);
-		list.add((T) com.tools20022.repository.area.auth.MoneyMarketOvernightIndexSwapsStatisticalReportV02.mmSupplementaryData);
-		list.add((T) com.tools20022.repository.area.auth.FinancialInstrumentReportingTradingVolumeCapDataReportV01.mmSupplementaryData);
-		list.add((T) com.tools20022.repository.area.auth.FinancialInstrumentReportingInstrumentClassificationReportV01.mmSupplementaryData);
-		list.add((T) com.tools20022.repository.area.auth.FinancialInstrumentReportingNonEquityTradingActivityResultV01.mmSupplementaryData);
-		list.add((T) com.tools20022.repository.area.auth.FinancialInstrumentReportingEquityTradingActivityResultV01.mmSupplementaryData);
-		list.add((T) com.tools20022.repository.area.auth.FinancialInstrumentReportingEquityTransparencyDataReportV01.mmSupplementaryData);
-		list.add((T) com.tools20022.repository.area.auth.FinancialInstrumentReportingReferenceDataReportV01.mmSupplementaryData);
-		list.add((T) com.tools20022.repository.area.auth.FinancialInstrumentReportingInvalidReferenceDataReportV01.mmSupplementaryData);
-		list.add((T) com.tools20022.repository.area.auth.FinancialInstrumentReportingStatusAdviceV01.mmSupplementaryData);
-		list.add((T) com.tools20022.repository.area.auth.FinancialInstrumentReportingNonWorkingDayReportV01.mmSupplementaryData);
-		list.add((T) com.tools20022.repository.area.auth.FinancialInstrumentReportingTransactionReportV01.mmSupplementaryData);
-		list.add((T) com.tools20022.repository.area.auth.FinancialInstrumentReportingEquityTradingActivityReportV01.mmSupplementaryData);
-		list.add((T) com.tools20022.repository.area.auth.FinancialInstrumentReportingCurrencyCodeReportV01.mmSupplementaryData);
-		list.add((T) com.tools20022.repository.area.auth.FinancialInstrumentReportingReferenceDataIndexReportV01.mmSupplementaryData);
-		list.add((T) com.tools20022.repository.area.auth.FinancialInstrumentReportingMarketIdentificationCodeReportV01.mmSupplementaryData);
-		list.add((T) com.tools20022.repository.area.auth.FinancialInstrumentReportingNonEquityTransparencyDataReportV01.mmSupplementaryData);
-		list.add((T) com.tools20022.repository.area.auth.FinancialInstrumentReportingReferenceDataDeltaReportV01.mmSupplementaryData);
-		list.add((T) com.tools20022.repository.area.auth.FinancialInstrumentReportingCountryCodeReportV01.mmSupplementaryData);
-		list.add((T) com.tools20022.repository.area.auth.FinancialInstrumentReportingNonEquityTradingActivityReportV01.mmSupplementaryData);
+		list.add((T) SecuritiesSettlementTransactionGenerationNotification002V07.mmSupplementaryData);
+		list.add((T) SecuritiesFinancingModificationInstruction002V06.mmSupplementaryData);
+		list.add((T) CorporateActionMovementConfirmation002V08.mmSupplementaryData);
+		list.add((T) SecuritiesSettlementTransactionConfirmation002V07.mmSupplementaryData);
+		list.add((T) SecuritiesSettlementTransactionReversalAdvice002V06.mmSupplementaryData);
+		list.add((T) MoneyMarketUnsecuredMarketStatisticalReportV02.mmSupplementaryData);
+		list.add((T) MoneyMarketForeignExchangeSwapsStatisticalReportV02.mmSupplementaryData);
+		list.add((T) MoneyMarketSecuredMarketStatisticalReportV02.mmSupplementaryData);
+		list.add((T) MoneyMarketOvernightIndexSwapsStatisticalReportV02.mmSupplementaryData);
+		list.add((T) FinancialInstrumentReportingTradingVolumeCapDataReportV01.mmSupplementaryData);
+		list.add((T) FinancialInstrumentReportingInstrumentClassificationReportV01.mmSupplementaryData);
+		list.add((T) FinancialInstrumentReportingNonEquityTradingActivityResultV01.mmSupplementaryData);
+		list.add((T) FinancialInstrumentReportingEquityTradingActivityResultV01.mmSupplementaryData);
+		list.add((T) FinancialInstrumentReportingEquityTransparencyDataReportV01.mmSupplementaryData);
+		list.add((T) FinancialInstrumentReportingReferenceDataReportV01.mmSupplementaryData);
+		list.add((T) FinancialInstrumentReportingInvalidReferenceDataReportV01.mmSupplementaryData);
+		list.add((T) FinancialInstrumentReportingStatusAdviceV01.mmSupplementaryData);
+		list.add((T) FinancialInstrumentReportingNonWorkingDayReportV01.mmSupplementaryData);
+		list.add((T) FinancialInstrumentReportingTransactionReportV01.mmSupplementaryData);
+		list.add((T) FinancialInstrumentReportingEquityTradingActivityReportV01.mmSupplementaryData);
+		list.add((T) FinancialInstrumentReportingCurrencyCodeReportV01.mmSupplementaryData);
+		list.add((T) FinancialInstrumentReportingReferenceDataIndexReportV01.mmSupplementaryData);
+		list.add((T) FinancialInstrumentReportingMarketIdentificationCodeReportV01.mmSupplementaryData);
+		list.add((T) FinancialInstrumentReportingNonEquityTransparencyDataReportV01.mmSupplementaryData);
+		list.add((T) FinancialInstrumentReportingReferenceDataDeltaReportV01.mmSupplementaryData);
+		list.add((T) FinancialInstrumentReportingCountryCodeReportV01.mmSupplementaryData);
+		list.add((T) FinancialInstrumentReportingNonEquityTradingActivityReportV01.mmSupplementaryData);
 		return list;
 	}
 }

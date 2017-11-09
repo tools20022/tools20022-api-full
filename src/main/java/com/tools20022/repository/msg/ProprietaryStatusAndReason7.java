@@ -20,7 +20,9 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.Status;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -105,7 +107,7 @@ public class ProprietaryStatusAndReason7 {
 			componentContext_lazy = () -> ProprietaryStatusAndReason7.mmObject();
 			isDerived = false;
 			xmlTag = "PrtrySts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProprietaryStatus";
 			definition = "Proprietary identification of the status related to an instruction.";
 			maxOccurs = 1;
@@ -149,11 +151,11 @@ public class ProprietaryStatusAndReason7 {
 	 */
 	public static final MMMessageAssociationEnd mmProprietaryReason = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.mmStatusReason;
+			businessElementTrace_lazy = () -> Status.mmStatusReason;
 			componentContext_lazy = () -> ProprietaryStatusAndReason7.mmObject();
 			isDerived = false;
 			xmlTag = "PrtryRsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProprietaryReason";
 			definition = "Proprietary identification of the reason related to a proprietary status.";
 			minOccurs = 0;
@@ -165,10 +167,10 @@ public class ProprietaryStatusAndReason7 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ProprietaryStatusAndReason7.mmProprietaryStatus, com.tools20022.repository.msg.ProprietaryStatusAndReason7.mmProprietaryReason);
+				messageElement_lazy = () -> Arrays.asList(ProprietaryStatusAndReason7.mmProprietaryStatus, ProprietaryStatusAndReason7.mmProprietaryReason);
 				trace_lazy = () -> Status.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ProprietaryStatusAndReason7";
 				definition = "Provides the proprietary status and reason of an instruction or an instruction cancellation.";
 			}

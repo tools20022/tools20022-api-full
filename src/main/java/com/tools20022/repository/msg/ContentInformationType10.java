@@ -20,7 +20,11 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.caam.*;
+import com.tools20022.repository.area.catp.*;
 import com.tools20022.repository.codeset.ContentType2Code;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -252,10 +256,10 @@ public class ContentInformationType10 {
 			componentContext_lazy = () -> ContentInformationType10.mmObject();
 			isDerived = false;
 			xmlTag = "CnttTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ContentType";
 			definition = "Type of data protection.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ContentInformationType7.mmContentType;
+			previousVersion_lazy = () -> ContentInformationType7.mmContentType;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ContentType2Code.mmObject();
@@ -301,10 +305,10 @@ public class ContentInformationType10 {
 			componentContext_lazy = () -> ContentInformationType10.mmObject();
 			isDerived = false;
 			xmlTag = "EnvlpdData";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EnvelopedData";
 			definition = "Data protection by encryption or by a digital envelope, with an encryption key.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ContentInformationType7.mmEnvelopedData;
+			previousVersion_lazy = () -> ContentInformationType7.mmEnvelopedData;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -315,36 +319,25 @@ public class ContentInformationType10 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ContentInformationType10.mmContentType, com.tools20022.repository.msg.ContentInformationType10.mmEnvelopedData);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.caam.ATMReconciliationAdviceV01.mmProtectedATMReconciliationAdvice,
-						com.tools20022.repository.area.caam.ATMReconciliationAcknowledgementV01.mmProtectedATMReconciliationAcknowledgement,
-						com.tools20022.repository.area.caam.HostToATMAcknowledgementV01.mmProtectedHostToATMAcknowledgement, com.tools20022.repository.area.caam.ATMDiagnosticResponseV01.mmProtectedATMDiagnosticResponse,
-						com.tools20022.repository.area.caam.ATMDiagnosticRequestV01.mmProtectedATMDiagnosticRequest, com.tools20022.repository.area.caam.ATMKeyDownloadResponseV01.mmProtectedATMKeyDownloadResponse,
-						com.tools20022.repository.area.caam.ATMDeviceReportV01.mmProtectedATMDeviceReport, com.tools20022.repository.area.caam.HostToATMRequestV01.mmProtectedHostToATMRequest,
-						com.tools20022.repository.area.caam.ATMKeyDownloadRequestV01.mmProtectedATMKeyDownloadRequest, com.tools20022.repository.area.caam.ATMDeviceControlV01.mmProtectedATMDeviceControl,
-						com.tools20022.repository.area.catp.ATMInquiryResponseV01.mmProtectedATMInquiryResponse, com.tools20022.repository.area.catp.ATMInquiryRequestV01.mmProtectedATMInquiryRequest,
-						com.tools20022.repository.area.catp.ATMCompletionAdviceV01.mmProtectedATMCompletionAdvice, com.tools20022.repository.area.catp.ATMWithdrawalResponseV01.mmProtectedATMWithdrawalResponse,
-						com.tools20022.repository.area.catp.ATMCompletionAcknowledgementV01.mmProtectedATMCompletionAcknowledgement,
-						com.tools20022.repository.area.catp.ATMWithdrawalCompletionAdviceV01.mmProtectedATMWithdrawalCompletionAdvice,
-						com.tools20022.repository.area.catp.ATMWithdrawalCompletionAcknowledgementV01.mmProtectedATMWithdrawalCompletionAcknowledgement,
-						com.tools20022.repository.area.catp.ATMWithdrawalRequestV01.mmProtectedATMWithdrawalRequest, com.tools20022.repository.area.catp.ATMPINManagementRequestV01.mmProtectedATMPINManagementRequest,
-						com.tools20022.repository.area.catp.ATMPINManagementResponseV01.mmProtectedATMPINManagementResponse, com.tools20022.repository.area.caam.ATMExceptionAcknowledgementV01.mmProtectedATMExceptionAcknowledgement,
-						com.tools20022.repository.area.catp.ATMWithdrawalRequestV02.mmProtectedATMWithdrawalRequest, com.tools20022.repository.area.caam.ATMExceptionAdviceV01.mmProtectedATMExceptionAdvice,
-						com.tools20022.repository.area.caam.ATMDeviceControlV02.mmProtectedATMDeviceControl, com.tools20022.repository.area.caam.ATMReconciliationAdviceV02.mmProtectedATMReconciliationAdvice,
-						com.tools20022.repository.area.caam.ATMReconciliationAcknowledgementV02.mmProtectedATMReconciliationAcknowledgement, com.tools20022.repository.area.catp.ATMDepositResponseV01.mmProtectedATMDepositResponse,
-						com.tools20022.repository.area.catp.ATMDepositRequestV01.mmProtectedATMDepositRequest, com.tools20022.repository.area.catp.ATMWithdrawalCompletionAdviceV02.mmProtectedATMWithdrawalCompletionAdvice,
-						com.tools20022.repository.area.catp.ATMInquiryResponseV02.mmProtectedATMInquiryResponse, com.tools20022.repository.area.catp.ATMDepositCompletionAcknowledgementV01.mmProtectedATMDepositCompletionAcknowledgement,
-						com.tools20022.repository.area.caam.ATMDeviceReportV02.mmProtectedATMDeviceReport, com.tools20022.repository.area.catp.ATMPINManagementRequestV02.mmProtectedATMPINManagementRequest,
-						com.tools20022.repository.area.catp.ATMTransferRequestV01.mmProtectedATMTransferRequest, com.tools20022.repository.area.caam.ATMDiagnosticResponseV02.mmProtectedATMDiagnosticResponse,
-						com.tools20022.repository.area.caam.ATMDiagnosticRequestV02.mmProtectedATMDiagnosticRequest, com.tools20022.repository.area.caam.ATMKeyDownloadRequestV02.mmProtectedATMKeyDownloadRequest,
-						com.tools20022.repository.area.catp.ATMWithdrawalResponseV02.mmProtectedATMWithdrawalResponse,
-						com.tools20022.repository.area.catp.ATMWithdrawalCompletionAcknowledgementV02.mmProtectedATMWithdrawalCompletionAcknowledgement,
-						com.tools20022.repository.area.catp.ATMPINManagementResponseV02.mmProtectedATMPINManagementResponse, com.tools20022.repository.area.catp.ATMDepositCompletionAdviceV01.mmProtectedATMDepositCompletionAdvice,
-						com.tools20022.repository.area.catp.ATMInquiryRequestV02.mmProtectedATMInquiryRequest, com.tools20022.repository.area.catp.ATMCompletionAcknowledgementV02.mmProtectedATMCompletionAcknowledgement,
-						com.tools20022.repository.area.catp.ATMCompletionAdviceV02.mmProtectedATMCompletionAdvice, com.tools20022.repository.area.catp.ATMTransferResponseV01.mmProtectedATMTransferResponse,
-						com.tools20022.repository.area.caam.ATMKeyDownloadResponseV02.mmProtectedATMKeyDownloadResponse);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(ContentInformationType10.mmContentType, ContentInformationType10.mmEnvelopedData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(ATMReconciliationAdviceV01.mmProtectedATMReconciliationAdvice, ATMReconciliationAcknowledgementV01.mmProtectedATMReconciliationAcknowledgement,
+						HostToATMAcknowledgementV01.mmProtectedHostToATMAcknowledgement, ATMDiagnosticResponseV01.mmProtectedATMDiagnosticResponse, ATMDiagnosticRequestV01.mmProtectedATMDiagnosticRequest,
+						ATMKeyDownloadResponseV01.mmProtectedATMKeyDownloadResponse, ATMDeviceReportV01.mmProtectedATMDeviceReport, HostToATMRequestV01.mmProtectedHostToATMRequest, ATMKeyDownloadRequestV01.mmProtectedATMKeyDownloadRequest,
+						ATMDeviceControlV01.mmProtectedATMDeviceControl, ATMInquiryResponseV01.mmProtectedATMInquiryResponse, ATMInquiryRequestV01.mmProtectedATMInquiryRequest, ATMCompletionAdviceV01.mmProtectedATMCompletionAdvice,
+						ATMWithdrawalResponseV01.mmProtectedATMWithdrawalResponse, ATMCompletionAcknowledgementV01.mmProtectedATMCompletionAcknowledgement, ATMWithdrawalCompletionAdviceV01.mmProtectedATMWithdrawalCompletionAdvice,
+						ATMWithdrawalCompletionAcknowledgementV01.mmProtectedATMWithdrawalCompletionAcknowledgement, ATMWithdrawalRequestV01.mmProtectedATMWithdrawalRequest, ATMPINManagementRequestV01.mmProtectedATMPINManagementRequest,
+						ATMPINManagementResponseV01.mmProtectedATMPINManagementResponse, ATMExceptionAcknowledgementV01.mmProtectedATMExceptionAcknowledgement, ATMWithdrawalRequestV02.mmProtectedATMWithdrawalRequest,
+						ATMExceptionAdviceV01.mmProtectedATMExceptionAdvice, ATMDeviceControlV02.mmProtectedATMDeviceControl, ATMReconciliationAdviceV02.mmProtectedATMReconciliationAdvice,
+						ATMReconciliationAcknowledgementV02.mmProtectedATMReconciliationAcknowledgement, ATMDepositResponseV01.mmProtectedATMDepositResponse, ATMDepositRequestV01.mmProtectedATMDepositRequest,
+						ATMWithdrawalCompletionAdviceV02.mmProtectedATMWithdrawalCompletionAdvice, ATMInquiryResponseV02.mmProtectedATMInquiryResponse, ATMDepositCompletionAcknowledgementV01.mmProtectedATMDepositCompletionAcknowledgement,
+						ATMDeviceReportV02.mmProtectedATMDeviceReport, ATMPINManagementRequestV02.mmProtectedATMPINManagementRequest, ATMTransferRequestV01.mmProtectedATMTransferRequest,
+						ATMDiagnosticResponseV02.mmProtectedATMDiagnosticResponse, ATMDiagnosticRequestV02.mmProtectedATMDiagnosticRequest, ATMKeyDownloadRequestV02.mmProtectedATMKeyDownloadRequest,
+						ATMWithdrawalResponseV02.mmProtectedATMWithdrawalResponse, ATMWithdrawalCompletionAcknowledgementV02.mmProtectedATMWithdrawalCompletionAcknowledgement,
+						ATMPINManagementResponseV02.mmProtectedATMPINManagementResponse, ATMDepositCompletionAdviceV01.mmProtectedATMDepositCompletionAdvice, ATMInquiryRequestV02.mmProtectedATMInquiryRequest,
+						ATMCompletionAcknowledgementV02.mmProtectedATMCompletionAcknowledgement, ATMCompletionAdviceV02.mmProtectedATMCompletionAdvice, ATMTransferResponseV01.mmProtectedATMTransferResponse,
+						ATMKeyDownloadResponseV02.mmProtectedATMKeyDownloadResponse);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ContentInformationType10";
 				definition = "General cryptographic message syntax (CMS) containing encrypted data.";
 				previousVersion_lazy = () -> ContentInformationType7.mmObject();

@@ -20,9 +20,12 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.FinancialInstrumentQuantity1Choice;
 import com.tools20022.repository.choice.InstructedOrQuantityToReceive1Choice;
 import com.tools20022.repository.entity.CorporateActionOption;
+import com.tools20022.repository.entity.SecuritiesProceedsDefinition;
+import com.tools20022.repository.GeneratedRepository;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -126,14 +129,14 @@ public class SecuritiesOption2 {
 	 */
 	public static final MMMessageAttribute mmConditionalQuantity = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesProceedsDefinition.mmConditionalQuantity;
+			businessElementTrace_lazy = () -> SecuritiesProceedsDefinition.mmConditionalQuantity;
 			componentContext_lazy = () -> SecuritiesOption2.mmObject();
 			isDerived = false;
 			xmlTag = "CondlQty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConditionalQuantity";
 			definition = "Minimum quantity of securities to be accepted (used in the framework of conditional privilege on election). In case of proration, if this minimum quantity is not reached then the instruction is void.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesOption52.mmConditionalQuantity);
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesOption52.mmConditionalQuantity);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> FinancialInstrumentQuantity1Choice.mmObject();
@@ -179,11 +182,11 @@ public class SecuritiesOption2 {
 	 */
 	public static final MMMessageAttribute mmOverAndAboveNormalEnsuredEntitlementQuantity = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesProceedsDefinition.mmOverAndAboveNormalEnsuredEntitlementQuantity;
+			businessElementTrace_lazy = () -> SecuritiesProceedsDefinition.mmOverAndAboveNormalEnsuredEntitlementQuantity;
 			componentContext_lazy = () -> SecuritiesOption2.mmObject();
 			isDerived = false;
 			xmlTag = "OverAndAbovNrmlNsrdEntitlmntQty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OverAndAboveNormalEnsuredEntitlementQuantity";
 			definition = "Quantity instructed to be received over and above normal ensured entitlement.";
 			maxOccurs = 1;
@@ -227,7 +230,7 @@ public class SecuritiesOption2 {
 			componentContext_lazy = () -> SecuritiesOption2.mmObject();
 			isDerived = false;
 			xmlTag = "InstdOrQtyToRcv";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructedOrQuantityToReceive";
 			definition = "Specifies whether the quantity of financial instrument is a quantity of securities instructed or a quantity to receive.";
 			maxOccurs = 1;
@@ -240,11 +243,10 @@ public class SecuritiesOption2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesOption2.mmConditionalQuantity, com.tools20022.repository.msg.SecuritiesOption2.mmOverAndAboveNormalEnsuredEntitlementQuantity,
-						com.tools20022.repository.msg.SecuritiesOption2.mmInstructedOrQuantityToReceive);
+				messageElement_lazy = () -> Arrays.asList(SecuritiesOption2.mmConditionalQuantity, SecuritiesOption2.mmOverAndAboveNormalEnsuredEntitlementQuantity, SecuritiesOption2.mmInstructedOrQuantityToReceive);
 				trace_lazy = () -> CorporateActionOption.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
 						return DateFormat.getDateInstance(java.text.DateFormat.LONG).parse("May 5, 2016");

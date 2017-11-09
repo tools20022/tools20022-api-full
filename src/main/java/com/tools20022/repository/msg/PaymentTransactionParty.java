@@ -19,8 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.BICIdentifier;
+import com.tools20022.repository.entity.Organisation;
 import com.tools20022.repository.entity.PaymentPartyRole;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -117,11 +120,11 @@ public class PaymentTransactionParty {
 	 */
 	public static final MMMessageAttribute mmDebtor = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Organisation.mmOrganisationIdentification;
+			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> PaymentTransactionParty.mmObject();
 			isDerived = false;
 			xmlTag = "Dbtr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Debtor";
 			definition = "Party that owes assets to the creditor, eg, as a result of receipt of goods or services, gifts, or charity payments. The debtor may also be the debit account owner.";
 			maxOccurs = 1;
@@ -168,11 +171,11 @@ public class PaymentTransactionParty {
 	 */
 	public static final MMMessageAttribute mmFirstAgent = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Organisation.mmOrganisationIdentification;
+			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> PaymentTransactionParty.mmObject();
 			isDerived = false;
 			xmlTag = "FrstAgt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FirstAgent";
 			definition = "Financial institution that receives the payment transaction from the account owner, or other authorised party, and processes the instruction.";
 			maxOccurs = 1;
@@ -219,11 +222,11 @@ public class PaymentTransactionParty {
 	 */
 	public static final MMMessageAttribute mmInstructingAgentCorrespondent = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Organisation.mmOrganisationIdentification;
+			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> PaymentTransactionParty.mmObject();
 			isDerived = false;
 			xmlTag = "InstgAgtCrspdt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructingAgentCorrespondent";
 			definition = "Correspondent of the Instructing Agent that sends the payment instruction.";
 			maxOccurs = 1;
@@ -270,11 +273,11 @@ public class PaymentTransactionParty {
 	 */
 	public static final MMMessageAttribute mmInstructedAgentCorrespondent = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Organisation.mmOrganisationIdentification;
+			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> PaymentTransactionParty.mmObject();
 			isDerived = false;
 			xmlTag = "InstdAgtCrspdt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructedAgentCorrespondent";
 			definition = "Correspondent of the Instructed Agent that receives the payment instruction.";
 			maxOccurs = 1;
@@ -319,11 +322,11 @@ public class PaymentTransactionParty {
 	 */
 	public static final MMMessageAttribute mmIntermediary = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Organisation.mmOrganisationIdentification;
+			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> PaymentTransactionParty.mmObject();
 			isDerived = false;
 			xmlTag = "Intrmy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Intermediary";
 			definition = "Party within the settlement chain between the first and final agents.";
 			maxOccurs = 1;
@@ -370,11 +373,11 @@ public class PaymentTransactionParty {
 	 */
 	public static final MMMessageAttribute mmFinalAgent = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Organisation.mmOrganisationIdentification;
+			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> PaymentTransactionParty.mmObject();
 			isDerived = false;
 			xmlTag = "FnlAgt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinalAgent";
 			definition = "Financial institution that receives the payment transaction on behalf of an account owner, or other nominated party, and credits the account.";
 			maxOccurs = 1;
@@ -421,11 +424,11 @@ public class PaymentTransactionParty {
 	 */
 	public static final MMMessageAttribute mmCreditor = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Organisation.mmOrganisationIdentification;
+			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> PaymentTransactionParty.mmObject();
 			isDerived = false;
 			xmlTag = "Cdtr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Creditor";
 			definition = "Party that receives an amount of money from the debtor. In the context of the payment model, the creditor is also the credit account owner.";
 			maxOccurs = 1;
@@ -437,12 +440,11 @@ public class PaymentTransactionParty {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentTransactionParty.mmDebtor, com.tools20022.repository.msg.PaymentTransactionParty.mmFirstAgent,
-						com.tools20022.repository.msg.PaymentTransactionParty.mmInstructingAgentCorrespondent, com.tools20022.repository.msg.PaymentTransactionParty.mmInstructedAgentCorrespondent,
-						com.tools20022.repository.msg.PaymentTransactionParty.mmIntermediary, com.tools20022.repository.msg.PaymentTransactionParty.mmFinalAgent, com.tools20022.repository.msg.PaymentTransactionParty.mmCreditor);
+				messageElement_lazy = () -> Arrays.asList(PaymentTransactionParty.mmDebtor, PaymentTransactionParty.mmFirstAgent, PaymentTransactionParty.mmInstructingAgentCorrespondent,
+						PaymentTransactionParty.mmInstructedAgentCorrespondent, PaymentTransactionParty.mmIntermediary, PaymentTransactionParty.mmFinalAgent, PaymentTransactionParty.mmCreditor);
 				trace_lazy = () -> PaymentPartyRole.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "PaymentTransactionParty";
 				definition = "Defines the party fields used to search for a payment.";
 			}

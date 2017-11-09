@@ -19,10 +19,12 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.AdjustedBalanceTypeSD2Choice;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.datatype.Max8Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -108,7 +110,7 @@ public class AccountBalanceExtensionSD2 {
 			componentContext_lazy = () -> AccountBalanceExtensionSD2.mmObject();
 			isDerived = false;
 			xmlTag = "PlcAndNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "xPath to the element that is being extended.";
 			maxOccurs = 1;
@@ -150,7 +152,7 @@ public class AccountBalanceExtensionSD2 {
 			componentContext_lazy = () -> AccountBalanceExtensionSD2.mmObject();
 			isDerived = false;
 			xmlTag = "TxPos";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionPosition";
 			definition = "Position that is concerned in transaction.";
 			maxOccurs = 1;
@@ -191,7 +193,7 @@ public class AccountBalanceExtensionSD2 {
 			componentContext_lazy = () -> AccountBalanceExtensionSD2.mmObject();
 			isDerived = false;
 			xmlTag = "AsOfDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AsOfDate";
 			definition = "Effective date of the transaction. ";
 			maxOccurs = 1;
@@ -235,7 +237,7 @@ public class AccountBalanceExtensionSD2 {
 			componentContext_lazy = () -> AccountBalanceExtensionSD2.mmObject();
 			isDerived = false;
 			xmlTag = "ContraPtcptNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ContraParticipantNumber";
 			definition = "Transaction contra participant identification for stock loans, repurchase agreements (REPOs).";
 			maxOccurs = 1;
@@ -247,10 +249,10 @@ public class AccountBalanceExtensionSD2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountBalanceExtensionSD2.mmPlaceAndName, com.tools20022.repository.msg.AccountBalanceExtensionSD2.mmTransactionPosition,
-						com.tools20022.repository.msg.AccountBalanceExtensionSD2.mmAsOfDate, com.tools20022.repository.msg.AccountBalanceExtensionSD2.mmContraParticipantNumber);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(AccountBalanceExtensionSD2.mmPlaceAndName, AccountBalanceExtensionSD2.mmTransactionPosition, AccountBalanceExtensionSD2.mmAsOfDate,
+						AccountBalanceExtensionSD2.mmContraParticipantNumber);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "AccountBalanceExtensionSD2";
 				definition = "Provides additional information regarding account balance. Contains transaction details of the stock loans, repurchase agreements (REPOs) and undelivered trades (FAILs).  ";
 				previousVersion_lazy = () -> AccountBalanceExtensionSD1.mmObject();

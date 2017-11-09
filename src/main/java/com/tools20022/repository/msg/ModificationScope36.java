@@ -20,7 +20,9 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.DataModification2Code;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -104,10 +106,10 @@ public class ModificationScope36 {
 			componentContext_lazy = () -> ModificationScope36.mmObject();
 			isDerived = false;
 			xmlTag = "ModScpIndctn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ModificationScopeIndication";
 			definition = "Type of modification to be applied.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ModificationScope29.mmModificationScopeIndication;
+			previousVersion_lazy = () -> ModificationScope29.mmModificationScopeIndication;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DataModification2Code.mmObject();
@@ -153,10 +155,10 @@ public class ModificationScope36 {
 			componentContext_lazy = () -> ModificationScope36.mmObject();
 			isDerived = false;
 			xmlTag = "FinInstrmDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentDetails";
 			definition = "Detailed information about the investment fund or security associated to the account.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ModificationScope29.mmFinancialInstrumentDetails;
+			previousVersion_lazy = () -> ModificationScope29.mmFinancialInstrumentDetails;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -167,9 +169,9 @@ public class ModificationScope36 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ModificationScope36.mmModificationScopeIndication, com.tools20022.repository.msg.ModificationScope36.mmFinancialInstrumentDetails);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(ModificationScope36.mmModificationScopeIndication, ModificationScope36.mmFinancialInstrumentDetails);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ModificationScope36";
 				definition = "Scope of the modification to be applied on an identified set of information.";
 				previousVersion_lazy = () -> ModificationScope29.mmObject();

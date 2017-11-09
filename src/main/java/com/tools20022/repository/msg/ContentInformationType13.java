@@ -20,7 +20,12 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.caam.*;
+import com.tools20022.repository.area.catm.CertificateManagementRequestV01;
+import com.tools20022.repository.area.catm.CertificateManagementResponseV01;
 import com.tools20022.repository.codeset.ContentType2Code;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -144,10 +149,10 @@ public class ContentInformationType13 {
 			componentContext_lazy = () -> ContentInformationType13.mmObject();
 			isDerived = false;
 			xmlTag = "CnttTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ContentType";
 			definition = "Type of data protection.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ContentInformationType12.mmContentType;
+			previousVersion_lazy = () -> ContentInformationType12.mmContentType;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ContentType2Code.mmObject();
@@ -190,10 +195,10 @@ public class ContentInformationType13 {
 			componentContext_lazy = () -> ContentInformationType13.mmObject();
 			isDerived = false;
 			xmlTag = "AuthntcdData";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AuthenticatedData";
 			definition = "Data protection by a message authentication code (MAC).";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ContentInformationType12.mmAuthenticatedData;
+			previousVersion_lazy = () -> ContentInformationType12.mmAuthenticatedData;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -237,10 +242,10 @@ public class ContentInformationType13 {
 			componentContext_lazy = () -> ContentInformationType13.mmObject();
 			isDerived = false;
 			xmlTag = "SgndData";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SignedData";
 			definition = "Data protected by a digital signatures.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ContentInformationType12.mmSignedData;
+			previousVersion_lazy = () -> ContentInformationType12.mmSignedData;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -251,15 +256,12 @@ public class ContentInformationType13 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ContentInformationType13.mmContentType, com.tools20022.repository.msg.ContentInformationType13.mmAuthenticatedData,
-						com.tools20022.repository.msg.ContentInformationType13.mmSignedData);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.caam.ATMKeyDownloadResponseV01.mmSecurityTrailer, com.tools20022.repository.area.caam.ATMDeviceReportV01.mmSecurityTrailer,
-						com.tools20022.repository.area.caam.ATMKeyDownloadRequestV01.mmSecurityTrailer, com.tools20022.repository.area.caam.ATMDeviceControlV01.mmSecurityTrailer,
-						com.tools20022.repository.area.catm.CertificateManagementResponseV01.mmSecurityTrailer, com.tools20022.repository.area.catm.CertificateManagementRequestV01.mmSecurityTrailer,
-						com.tools20022.repository.area.caam.ATMDeviceControlV02.mmSecurityTrailer, com.tools20022.repository.area.caam.ATMDeviceReportV02.mmSecurityTrailer,
-						com.tools20022.repository.area.caam.ATMKeyDownloadRequestV02.mmSecurityTrailer, com.tools20022.repository.area.caam.ATMKeyDownloadResponseV02.mmSecurityTrailer);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(ContentInformationType13.mmContentType, ContentInformationType13.mmAuthenticatedData, ContentInformationType13.mmSignedData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(ATMKeyDownloadResponseV01.mmSecurityTrailer, ATMDeviceReportV01.mmSecurityTrailer, ATMKeyDownloadRequestV01.mmSecurityTrailer, ATMDeviceControlV01.mmSecurityTrailer,
+						CertificateManagementResponseV01.mmSecurityTrailer, CertificateManagementRequestV01.mmSecurityTrailer, ATMDeviceControlV02.mmSecurityTrailer, ATMDeviceReportV02.mmSecurityTrailer,
+						ATMKeyDownloadRequestV02.mmSecurityTrailer, ATMKeyDownloadResponseV02.mmSecurityTrailer);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ContentInformationType13";
 				definition = "General cryptographic message syntax (CMS) containing data. protected by a MAC or a digital signature";
 				previousVersion_lazy = () -> ContentInformationType12.mmObject();

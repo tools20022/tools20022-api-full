@@ -19,8 +19,12 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.semt.*;
+import com.tools20022.repository.area.sese.*;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.SecuritiesTradeIdentification;
+import com.tools20022.repository.GeneratedRepository;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -212,7 +216,7 @@ public class Identification1 {
 			componentContext_lazy = () -> Identification1.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Unique identifier of a document, message or transaction.";
 			maxOccurs = 1;
@@ -224,39 +228,25 @@ public class Identification1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Identification1.mmIdentification);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAuditTrailReportV01.mmQueryReference,
-						com.tools20022.repository.area.sese.SecuritiesSettlementConditionModificationStatusAdviceV01.mmRequestReference,
-						com.tools20022.repository.area.sese.SecuritiesSettlementConditionModificationStatusAdviceV02.mmRequestReference,
-						com.tools20022.repository.area.sese.SecuritiesSettlementConditionModificationStatusAdviceV03.mmRequestReference,
-						com.tools20022.repository.area.sese.SecuritiesSettlementConditionModificationStatusAdviceV04.mmRequestReference,
-						com.tools20022.repository.area.semt.IntraPositionMovementInstructionV01.mmCorporateActionEventIdentification,
-						com.tools20022.repository.area.semt.IntraPositionMovementInstructionV02.mmCorporateActionEventIdentification,
-						com.tools20022.repository.area.sese.SecuritiesSettlementAllegementRemovalAdviceV02.mmMarketInfrastructureTransactionIdentification,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotificationV01.mmMarketInfrastructureTransactionIdentification,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotificationV02.mmMarketInfrastructureTransactionIdentification,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdviceV01.mmConfirmationReference,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdviceV02.mmConfirmationReference, com.tools20022.repository.area.sese.SecuritiesStatusOrStatementQueryStatusAdviceV01.mmQueryReference,
-						com.tools20022.repository.area.sese.SecuritiesStatusOrStatementQueryStatusAdviceV02.mmQueryReference,
-						com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestStatusAdviceV01.mmCancellationRequestReference,
-						com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestStatusAdviceV02.mmCancellationRequestReference,
-						com.tools20022.repository.area.sese.SecuritiesSettlementAllegementRemovalAdviceV03.mmMarketInfrastructureTransactionIdentification,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotificationV03.mmMarketInfrastructureTransactionIdentification,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdviceV03.mmConfirmationReference,
-						com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestStatusAdviceV03.mmCancellationRequestReference,
-						com.tools20022.repository.area.semt.IntraPositionMovementInstructionV03.mmCorporateActionEventIdentification,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionModificationRequestStatusAdviceV01.mmModificationRequestReference,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotificationV04.mmMarketInfrastructureTransactionIdentification,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdviceV04.mmConfirmationReference,
-						com.tools20022.repository.area.sese.SecuritiesSettlementConditionModificationStatusAdviceV05.mmRequestReference,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionModificationRequestStatusAdviceV02.mmModificationRequestReference,
-						com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestStatusAdviceV04.mmCancellationRequestReference,
-						com.tools20022.repository.area.sese.SecuritiesSettlementConditionModificationStatusAdviceV06.mmRequestReference,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionModificationRequestStatusAdviceV03.mmModificationRequestReference,
-						com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAuditTrailReportV02.mmQueryReference);
+				messageElement_lazy = () -> Arrays.asList(Identification1.mmIdentification);
+				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesSettlementTransactionAuditTrailReportV01.mmQueryReference, SecuritiesSettlementConditionModificationStatusAdviceV01.mmRequestReference,
+						SecuritiesSettlementConditionModificationStatusAdviceV02.mmRequestReference, SecuritiesSettlementConditionModificationStatusAdviceV03.mmRequestReference,
+						SecuritiesSettlementConditionModificationStatusAdviceV04.mmRequestReference, IntraPositionMovementInstructionV01.mmCorporateActionEventIdentification,
+						IntraPositionMovementInstructionV02.mmCorporateActionEventIdentification, SecuritiesSettlementAllegementRemovalAdviceV02.mmMarketInfrastructureTransactionIdentification,
+						SecuritiesSettlementTransactionAllegementNotificationV01.mmMarketInfrastructureTransactionIdentification, SecuritiesSettlementTransactionAllegementNotificationV02.mmMarketInfrastructureTransactionIdentification,
+						SecuritiesSettlementTransactionReversalAdviceV01.mmConfirmationReference, SecuritiesSettlementTransactionReversalAdviceV02.mmConfirmationReference, SecuritiesStatusOrStatementQueryStatusAdviceV01.mmQueryReference,
+						SecuritiesStatusOrStatementQueryStatusAdviceV02.mmQueryReference, SecuritiesTransactionCancellationRequestStatusAdviceV01.mmCancellationRequestReference,
+						SecuritiesTransactionCancellationRequestStatusAdviceV02.mmCancellationRequestReference, SecuritiesSettlementAllegementRemovalAdviceV03.mmMarketInfrastructureTransactionIdentification,
+						SecuritiesSettlementTransactionAllegementNotificationV03.mmMarketInfrastructureTransactionIdentification, SecuritiesSettlementTransactionReversalAdviceV03.mmConfirmationReference,
+						SecuritiesTransactionCancellationRequestStatusAdviceV03.mmCancellationRequestReference, IntraPositionMovementInstructionV03.mmCorporateActionEventIdentification,
+						SecuritiesSettlementTransactionModificationRequestStatusAdviceV01.mmModificationRequestReference, SecuritiesSettlementTransactionAllegementNotificationV04.mmMarketInfrastructureTransactionIdentification,
+						SecuritiesSettlementTransactionReversalAdviceV04.mmConfirmationReference, SecuritiesSettlementConditionModificationStatusAdviceV05.mmRequestReference,
+						SecuritiesSettlementTransactionModificationRequestStatusAdviceV02.mmModificationRequestReference, SecuritiesTransactionCancellationRequestStatusAdviceV04.mmCancellationRequestReference,
+						SecuritiesSettlementConditionModificationStatusAdviceV06.mmRequestReference, SecuritiesSettlementTransactionModificationRequestStatusAdviceV03.mmModificationRequestReference,
+						SecuritiesSettlementTransactionAuditTrailReportV02.mmQueryReference);
 				trace_lazy = () -> SecuritiesTradeIdentification.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
 						return DateFormat.getDateInstance(java.text.DateFormat.LONG).parse("May 5, 2016");

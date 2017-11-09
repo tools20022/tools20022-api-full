@@ -19,9 +19,12 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.PaymentTime3Code;
 import com.tools20022.repository.datatype.Number;
+import com.tools20022.repository.entity.DateTimePeriod;
 import com.tools20022.repository.entity.PaymentTerms;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -117,15 +120,15 @@ public class PaymentPeriod3 {
 	 */
 	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentTerms.mmPaymentTime;
+			businessElementTrace_lazy = () -> PaymentTerms.mmPaymentTime;
 			componentContext_lazy = () -> PaymentPeriod3.mmObject();
 			isDerived = false;
 			xmlTag = "Cd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Code for the payment.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentPeriod4.mmCode);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PaymentPeriod2.mmCode;
+			nextVersions_lazy = () -> Arrays.asList(PaymentPeriod4.mmCode);
+			previousVersion_lazy = () -> PaymentPeriod2.mmCode;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PaymentTime3Code.mmObject();
@@ -178,15 +181,15 @@ public class PaymentPeriod3 {
 	 */
 	public static final MMMessageAttribute mmNumberOfDays = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmNumberOfDays;
+			businessElementTrace_lazy = () -> DateTimePeriod.mmNumberOfDays;
 			componentContext_lazy = () -> PaymentPeriod3.mmObject();
 			isDerived = false;
 			xmlTag = "NbOfDays";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NumberOfDays";
 			definition = "Number of days after which the payment must be effected.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentPeriod4.mmNumberOfDays);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PaymentPeriod2.mmNumberOfDays;
+			nextVersions_lazy = () -> Arrays.asList(PaymentPeriod4.mmNumberOfDays);
+			previousVersion_lazy = () -> PaymentPeriod2.mmNumberOfDays;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
@@ -196,10 +199,10 @@ public class PaymentPeriod3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentPeriod3.mmCode, com.tools20022.repository.msg.PaymentPeriod3.mmNumberOfDays);
+				messageElement_lazy = () -> Arrays.asList(PaymentPeriod3.mmCode, PaymentPeriod3.mmNumberOfDays);
 				trace_lazy = () -> PaymentTerms.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PaymentPeriod3";
 				definition = "Specifies the payment terms by means of a code and a period.";
 				nextVersions_lazy = () -> Arrays.asList(PaymentPeriod4.mmObject());

@@ -20,11 +20,16 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.NotificationStatus3Code;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Max140Text;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.entity.CashEntry;
+import com.tools20022.repository.entity.PaymentExecution;
 import com.tools20022.repository.entity.PaymentInstruction;
+import com.tools20022.repository.entity.PaymentStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -121,7 +126,7 @@ public class OriginalNotification2 {
 			componentContext_lazy = () -> OriginalNotification2.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlMsgId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalMessageIdentification";
 			definition = "Point to point reference, as assigned by the original sender, to unambiguously identify the original notification to receive message.";
 			maxOccurs = 1;
@@ -164,11 +169,11 @@ public class OriginalNotification2 {
 	 */
 	public static final MMMessageAttribute mmOriginalCreationDateTime = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentExecution.mmCreationDate;
+			businessElementTrace_lazy = () -> PaymentExecution.mmCreationDate;
 			componentContext_lazy = () -> OriginalNotification2.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlCreDtTm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalCreationDateTime";
 			definition = "Date and time at which the original message was created.";
 			maxOccurs = 1;
@@ -209,7 +214,7 @@ public class OriginalNotification2 {
 			componentContext_lazy = () -> OriginalNotification2.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlNtfctnId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalNotificationIdentification";
 			definition = "Identification of the original notification.";
 			maxOccurs = 1;
@@ -252,11 +257,11 @@ public class OriginalNotification2 {
 	 */
 	public static final MMMessageAssociationEnd mmAccount = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashEntry.mmCashAccount;
+			businessElementTrace_lazy = () -> CashEntry.mmCashAccount;
 			componentContext_lazy = () -> OriginalNotification2.mmObject();
 			isDerived = false;
 			xmlTag = "Acct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Account";
 			definition = "Identifies the account to be credited with the incoming funds.";
 			maxOccurs = 1;
@@ -302,11 +307,11 @@ public class OriginalNotification2 {
 	 */
 	public static final MMMessageAttribute mmNotificationStatus = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentStatus.mmNotificationStatus;
+			businessElementTrace_lazy = () -> PaymentStatus.mmNotificationStatus;
 			componentContext_lazy = () -> OriginalNotification2.mmObject();
 			isDerived = false;
 			xmlTag = "NtfctnSts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotificationStatus";
 			definition = "Specifies the status of the notification in a coded form.";
 			maxOccurs = 1;
@@ -347,7 +352,7 @@ public class OriginalNotification2 {
 			componentContext_lazy = () -> OriginalNotification2.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlStsInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalStatusInformation";
 			definition = "Further details of the notification status.";
 			maxOccurs = 1;
@@ -392,11 +397,11 @@ public class OriginalNotification2 {
 	 */
 	public static final MMMessageAssociationEnd mmOriginalItemAndStatus = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentExecution.mmPayment;
+			businessElementTrace_lazy = () -> PaymentExecution.mmPayment;
 			componentContext_lazy = () -> OriginalNotification2.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlItmAndSts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalItemAndStatus";
 			definition = "Set of elements used to identify the original notification item and to provide the status.";
 			minOccurs = 0;
@@ -408,13 +413,11 @@ public class OriginalNotification2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OriginalNotification2.mmOriginalMessageIdentification, com.tools20022.repository.msg.OriginalNotification2.mmOriginalCreationDateTime,
-						com.tools20022.repository.msg.OriginalNotification2.mmOriginalNotificationIdentification, com.tools20022.repository.msg.OriginalNotification2.mmAccount,
-						com.tools20022.repository.msg.OriginalNotification2.mmNotificationStatus, com.tools20022.repository.msg.OriginalNotification2.mmAdditionalStatusInformation,
-						com.tools20022.repository.msg.OriginalNotification2.mmOriginalItemAndStatus);
+				messageElement_lazy = () -> Arrays.asList(OriginalNotification2.mmOriginalMessageIdentification, OriginalNotification2.mmOriginalCreationDateTime, OriginalNotification2.mmOriginalNotificationIdentification,
+						OriginalNotification2.mmAccount, OriginalNotification2.mmNotificationStatus, OriginalNotification2.mmAdditionalStatusInformation, OriginalNotification2.mmOriginalItemAndStatus);
 				trace_lazy = () -> PaymentInstruction.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OriginalNotification2";
 				definition = "Set of elements used to identify the original notification and to provide the status.";
 			}

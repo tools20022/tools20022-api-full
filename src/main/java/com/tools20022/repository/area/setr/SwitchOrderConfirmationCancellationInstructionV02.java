@@ -20,6 +20,7 @@ package com.tools20022.repository.area.setr;
 import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.SecuritiesTradeLatestVersion;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.YesNoIndicator;
@@ -49,6 +50,9 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code setr.055.001.02}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.SecuritiesTradeLatestVersion
@@ -95,9 +99,6 @@ import java.util.List;
  * SwitchOrderConfirmationCancellationInstructionV02.mmCopyDetails}</li>
  * </ul>
  * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code setr.055.001.02}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -153,10 +154,10 @@ public class SwitchOrderConfirmationCancellationInstructionV02 {
 	public static final MMMessageBuildingBlock mmMessageIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "MsgId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageIdentification";
 			definition = "Reference that uniquely identifies the message from a business application standpoint. ";
-			previousVersion_lazy = () -> com.tools20022.repository.area.setr.SwitchOrderConfirmationCancellationInstructionV01.mmMessageIdentification;
+			previousVersion_lazy = () -> SwitchOrderConfirmationCancellationInstructionV01.mmMessageIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
@@ -194,10 +195,10 @@ public class SwitchOrderConfirmationCancellationInstructionV02 {
 	public static final MMMessageBuildingBlock mmPoolReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "PoolRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PoolReference";
 			definition = "Collective reference identifying a set of messages.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.setr.SwitchOrderConfirmationCancellationInstructionV01.mmPoolReference;
+			previousVersion_lazy = () -> SwitchOrderConfirmationCancellationInstructionV01.mmPoolReference;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference9.mmObject();
@@ -235,10 +236,10 @@ public class SwitchOrderConfirmationCancellationInstructionV02 {
 	public static final MMMessageBuildingBlock mmPreviousReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "PrvsRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousReference";
 			definition = "Reference to a linked message that was previously sent.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.setr.SwitchOrderConfirmationCancellationInstructionV01.mmPreviousReference;
+			previousVersion_lazy = () -> SwitchOrderConfirmationCancellationInstructionV01.mmPreviousReference;
 			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference8.mmObject();
 		}
@@ -276,10 +277,10 @@ public class SwitchOrderConfirmationCancellationInstructionV02 {
 	public static final MMMessageBuildingBlock mmRelatedReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "RltdRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedReference";
 			definition = "Reference to a linked message that was previously received.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.setr.SwitchOrderConfirmationCancellationInstructionV01.mmRelatedReference;
+			previousVersion_lazy = () -> SwitchOrderConfirmationCancellationInstructionV01.mmRelatedReference;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference8.mmObject();
@@ -315,7 +316,7 @@ public class SwitchOrderConfirmationCancellationInstructionV02 {
 	public static final MMMessageBuildingBlock mmAmendmentIndicator = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "AmdmntInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmendmentIndicator";
 			definition = "Indicates whether a confirmation amendment message will follow the confirmation cancellation instruction or not.";
 			maxOccurs = 1;
@@ -352,7 +353,7 @@ public class SwitchOrderConfirmationCancellationInstructionV02 {
 	public static final MMMessageBuildingBlock mmMasterReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "MstrRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MasterReference";
 			definition = "Reference assigned to a set of orders or trades in order to link them together.";
 			maxOccurs = 1;
@@ -388,7 +389,7 @@ public class SwitchOrderConfirmationCancellationInstructionV02 {
 	public static final MMMessageBuildingBlock mmOrderReferences = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "OrdrRefs";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrderReferences";
 			definition = "Identification of the individual order confirmation to be cancelled.";
 			minOccurs = 1;
@@ -428,10 +429,10 @@ public class SwitchOrderConfirmationCancellationInstructionV02 {
 	public static final MMMessageBuildingBlock mmCopyDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CpyDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CopyDetails";
 			definition = "Information provided when the message is a copy of a previous message.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.setr.SwitchOrderConfirmationCancellationInstructionV01.mmCopyDetails;
+			previousVersion_lazy = () -> SwitchOrderConfirmationCancellationInstructionV01.mmCopyDetails;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> CopyInformation4.mmObject();
@@ -441,7 +442,7 @@ public class SwitchOrderConfirmationCancellationInstructionV02 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SwitchOrderConfirmationCancellationInstructionV02";
 				definition = "Scope\r\nThe SwitchOrderConfirmationCancellationInstruction message is sent by an executing party, for example, a transfer agent, to the instructing party, for example, an investment manager or its authorised representative, to cancel a previously sent SwitchOrderConfirmation.\r\nUsage\r\nTo request the cancellation of one or more individual order executions, the order reference and deal reference of each individual order execution in the original SwitchOrderConfirmation are specified in the order reference and deal reference elements respectively. The message identification of the SwitchOrderConfirmation message in which the individual order execution was conveyed may also be quoted in PreviousReference but this is not recommended. The AmendmentIndicator is used to specify whether the switch order confirmation cancellation is to be followed by an amendment An amendment of a switch order confirmation is carried out by sending a SwitchOrderConfirmation message in which the AmendmentIndicator contains the value ‘true’.";
 				previousVersion_lazy = () -> SwitchOrderConfirmationCancellationInstructionV01.mmObject();
@@ -449,11 +450,9 @@ public class SwitchOrderConfirmationCancellationInstructionV02 {
 				rootElement = "Document";
 				xmlTag = "SwtchOrdrConfCxlInstr";
 				businessArea_lazy = () -> SecuritiesTradeLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.SwitchOrderConfirmationCancellationInstructionV02.mmMessageIdentification,
-						com.tools20022.repository.area.setr.SwitchOrderConfirmationCancellationInstructionV02.mmPoolReference, com.tools20022.repository.area.setr.SwitchOrderConfirmationCancellationInstructionV02.mmPreviousReference,
-						com.tools20022.repository.area.setr.SwitchOrderConfirmationCancellationInstructionV02.mmRelatedReference, com.tools20022.repository.area.setr.SwitchOrderConfirmationCancellationInstructionV02.mmAmendmentIndicator,
-						com.tools20022.repository.area.setr.SwitchOrderConfirmationCancellationInstructionV02.mmMasterReference, com.tools20022.repository.area.setr.SwitchOrderConfirmationCancellationInstructionV02.mmOrderReferences,
-						com.tools20022.repository.area.setr.SwitchOrderConfirmationCancellationInstructionV02.mmCopyDetails);
+				messageBuildingBlock_lazy = () -> Arrays.asList(SwitchOrderConfirmationCancellationInstructionV02.mmMessageIdentification, SwitchOrderConfirmationCancellationInstructionV02.mmPoolReference,
+						SwitchOrderConfirmationCancellationInstructionV02.mmPreviousReference, SwitchOrderConfirmationCancellationInstructionV02.mmRelatedReference, SwitchOrderConfirmationCancellationInstructionV02.mmAmendmentIndicator,
+						SwitchOrderConfirmationCancellationInstructionV02.mmMasterReference, SwitchOrderConfirmationCancellationInstructionV02.mmOrderReferences, SwitchOrderConfirmationCancellationInstructionV02.mmCopyDetails);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "setr";

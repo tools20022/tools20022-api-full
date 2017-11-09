@@ -19,6 +19,8 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -89,7 +91,7 @@ public class Receipt1 {
 			componentContext_lazy = () -> Receipt1.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlMsgId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalMessageIdentification";
 			definition = "Identification of the original request message.";
 			maxOccurs = 1;
@@ -129,7 +131,7 @@ public class Receipt1 {
 			componentContext_lazy = () -> Receipt1.mmObject();
 			isDerived = false;
 			xmlTag = "ReqHdlg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestHandling";
 			definition = "Gives the status of the request.";
 			minOccurs = 0;
@@ -141,9 +143,9 @@ public class Receipt1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Receipt1.mmOriginalMessageIdentification, com.tools20022.repository.msg.Receipt1.mmRequestHandling);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(Receipt1.mmOriginalMessageIdentification, Receipt1.mmRequestHandling);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Receipt1";
 				definition = "Provides details on the request.";
 			}

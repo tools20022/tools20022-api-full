@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.TradeCertificateTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -98,7 +100,7 @@ public class TradeCertificateType1Code extends TradeCertificateTypeCode {
 	 */
 	public static final MMCode mmAnalysis = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Analysis";
 			owner_lazy = () -> TradeCertificateType1Code.mmObject();
 		}
@@ -121,7 +123,7 @@ public class TradeCertificateType1Code extends TradeCertificateTypeCode {
 	 */
 	public static final MMCode mmQuality = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Quality";
 			owner_lazy = () -> TradeCertificateType1Code.mmObject();
 		}
@@ -144,7 +146,7 @@ public class TradeCertificateType1Code extends TradeCertificateTypeCode {
 	 */
 	public static final MMCode mmQuantity = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Quantity";
 			owner_lazy = () -> TradeCertificateType1Code.mmObject();
 		}
@@ -167,7 +169,7 @@ public class TradeCertificateType1Code extends TradeCertificateTypeCode {
 	 */
 	public static final MMCode mmWeight = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Weight";
 			owner_lazy = () -> TradeCertificateType1Code.mmObject();
 		}
@@ -190,7 +192,7 @@ public class TradeCertificateType1Code extends TradeCertificateTypeCode {
 	 */
 	public static final MMCode mmOrigin = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Origin";
 			owner_lazy = () -> TradeCertificateType1Code.mmObject();
 		}
@@ -213,7 +215,7 @@ public class TradeCertificateType1Code extends TradeCertificateTypeCode {
 	 */
 	public static final MMCode mmHealth = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Health";
 			owner_lazy = () -> TradeCertificateType1Code.mmObject();
 		}
@@ -236,7 +238,7 @@ public class TradeCertificateType1Code extends TradeCertificateTypeCode {
 	 */
 	public static final MMCode mmPhytosanitary = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Phytosanitary";
 			owner_lazy = () -> TradeCertificateType1Code.mmObject();
 		}
@@ -245,14 +247,13 @@ public class TradeCertificateType1Code extends TradeCertificateTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ANLY");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TradeCertificateType1Code";
 				definition = "Specifies the type of trade certificate.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TradeCertificateType1Code.mmAnalysis, com.tools20022.repository.codeset.TradeCertificateType1Code.mmQuality,
-						com.tools20022.repository.codeset.TradeCertificateType1Code.mmQuantity, com.tools20022.repository.codeset.TradeCertificateType1Code.mmWeight, com.tools20022.repository.codeset.TradeCertificateType1Code.mmOrigin,
-						com.tools20022.repository.codeset.TradeCertificateType1Code.mmHealth, com.tools20022.repository.codeset.TradeCertificateType1Code.mmPhytosanitary);
+				code_lazy = () -> Arrays.asList(TradeCertificateType1Code.mmAnalysis, TradeCertificateType1Code.mmQuality, TradeCertificateType1Code.mmQuantity, TradeCertificateType1Code.mmWeight, TradeCertificateType1Code.mmOrigin,
+						TradeCertificateType1Code.mmHealth, TradeCertificateType1Code.mmPhytosanitary);
 				trace_lazy = () -> TradeCertificateTypeCode.mmObject();
 			}
 		});

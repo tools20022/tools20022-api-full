@@ -20,10 +20,11 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.Side1Code;
 import com.tools20022.repository.datatype.TrueFalseIndicator;
-import com.tools20022.repository.entity.NonDisclosedListTrading;
-import com.tools20022.repository.entity.Quote;
+import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -117,11 +118,11 @@ public class BidResponsePrice2 {
 	 */
 	public static final MMMessageAttribute mmCommission = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesQuoteVariable.mmCommission;
+			businessElementTrace_lazy = () -> SecuritiesQuoteVariable.mmCommission;
 			componentContext_lazy = () -> BidResponsePrice2.mmObject();
 			isDerived = false;
 			xmlTag = "Comssn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Commission";
 			definition = "Amount of money due to a party as compensation for a service.";
 			maxOccurs = 1;
@@ -166,11 +167,11 @@ public class BidResponsePrice2 {
 	 */
 	public static final MMMessageAttribute mmGrossIndicator = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ListTrading.mmGrossAmountIndicator;
+			businessElementTrace_lazy = () -> ListTrading.mmGrossAmountIndicator;
 			componentContext_lazy = () -> BidResponsePrice2.mmObject();
 			isDerived = false;
 			xmlTag = "GrssInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GrossIndicator";
 			definition = "Indicates whether the price is gross of commission and tax.";
 			maxOccurs = 1;
@@ -212,11 +213,11 @@ public class BidResponsePrice2 {
 	 */
 	public static final MMMessageAttribute mmPrice = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Quote.mmPrice;
+			businessElementTrace_lazy = () -> Quote.mmPrice;
 			componentContext_lazy = () -> BidResponsePrice2.mmObject();
 			isDerived = false;
 			xmlTag = "Pric";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Price";
 			definition = "Proposition of price for a financial instrument.";
 			maxOccurs = 1;
@@ -259,11 +260,11 @@ public class BidResponsePrice2 {
 	 */
 	public static final MMMessageAttribute mmSide = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmSide;
+			businessElementTrace_lazy = () -> SecuritiesOrder.mmSide;
 			componentContext_lazy = () -> BidResponsePrice2.mmObject();
 			isDerived = false;
 			xmlTag = "Sd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Side";
 			definition = "Indicates the side of the bid.";
 			maxOccurs = 1;
@@ -314,7 +315,7 @@ public class BidResponsePrice2 {
 			componentContext_lazy = () -> BidResponsePrice2.mmObject();
 			isDerived = false;
 			xmlTag = "NonDscldBidDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonDisclosedBidDetails";
 			definition = "List trading by which the buy-side provides details to the sell-side information about the sector, country, index and potential market impact of the financial instrument to be bought or sold. Using this information, the sell-side firms bid for the trade.";
 			maxOccurs = 1;
@@ -327,11 +328,10 @@ public class BidResponsePrice2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BidResponsePrice2.mmCommission, com.tools20022.repository.msg.BidResponsePrice2.mmGrossIndicator,
-						com.tools20022.repository.msg.BidResponsePrice2.mmPrice, com.tools20022.repository.msg.BidResponsePrice2.mmSide, com.tools20022.repository.msg.BidResponsePrice2.mmNonDisclosedBidDetails);
+				messageElement_lazy = () -> Arrays.asList(BidResponsePrice2.mmCommission, BidResponsePrice2.mmGrossIndicator, BidResponsePrice2.mmPrice, BidResponsePrice2.mmSide, BidResponsePrice2.mmNonDisclosedBidDetails);
 				trace_lazy = () -> Quote.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "BidResponsePrice2";
 				definition = "Provides the details for negotiating and trading a large number of securities contained in or comprising a portfolio. \n\nOne example is index arbitrage, which consists in the purchase or sale of a basket of stocks in conjunction with the sale or purchase of\na derivative product (for example index futures) to profit from price differences between the basket and the derivative product. \n\nOther examples include liquidation of EFP (Exchange for Physical) stock positions, portfolio realignment and portfolio liquidation.";
 			}

@@ -19,9 +19,11 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ISAType1Code;
 import com.tools20022.repository.datatype.Extended350Code;
 import com.tools20022.repository.entity.PortfolioTransfer;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -104,11 +106,11 @@ public class CurrentYearType1Choice {
 	 */
 	public static final MMMessageAttribute mmCurrentYearType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PortfolioTransfer.mmCurrentYearISAType;
+			businessElementTrace_lazy = () -> PortfolioTransfer.mmCurrentYearISAType;
 			componentContext_lazy = () -> CurrentYearType1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "CurYrTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrentYearType";
 			definition = "Current year ISA is an ISA that was issued during the current fiscal year.";
 			maxOccurs = 1;
@@ -155,11 +157,11 @@ public class CurrentYearType1Choice {
 	 */
 	public static final MMMessageAttribute mmExtendedCurrentYearType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PortfolioTransfer.mmCurrentYearISAType;
+			businessElementTrace_lazy = () -> PortfolioTransfer.mmCurrentYearISAType;
 			componentContext_lazy = () -> CurrentYearType1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "XtndedCurYrTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExtendedCurrentYearType";
 			definition = "Current year ISA is an ISA that was issued during the current fiscal year.";
 			maxOccurs = 1;
@@ -171,10 +173,10 @@ public class CurrentYearType1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CurrentYearType1Choice.mmCurrentYearType, com.tools20022.repository.choice.CurrentYearType1Choice.mmExtendedCurrentYearType);
+				messageElement_lazy = () -> Arrays.asList(CurrentYearType1Choice.mmCurrentYearType, CurrentYearType1Choice.mmExtendedCurrentYearType);
 				trace_lazy = () -> PortfolioTransfer.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CurrentYearType1Choice";
 				definition = "Choice between the selections of individual saving accounts issued during the current fiscal year.";
 			}

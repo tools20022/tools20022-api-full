@@ -19,7 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.entity.Party;
+import com.tools20022.repository.entity.Presentation;
 import com.tools20022.repository.entity.Undertaking;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -105,11 +109,11 @@ public class Undertaking11 {
 	 */
 	public static final MMMessageAttribute mmNewUndertakingAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Undertaking.mmUndertakingAmount;
+			businessElementTrace_lazy = () -> Undertaking.mmUndertakingAmount;
 			componentContext_lazy = () -> Undertaking11.mmObject();
 			isDerived = false;
 			xmlTag = "NewUdrtkgAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewUndertakingAmount";
 			definition = "Details related to the requested new amount for the local undertaking.";
 			maxOccurs = 1;
@@ -154,11 +158,11 @@ public class Undertaking11 {
 	 */
 	public static final MMMessageAttribute mmNewExpiryDetails = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Undertaking.mmExpiry;
+			businessElementTrace_lazy = () -> Undertaking.mmExpiry;
 			componentContext_lazy = () -> Undertaking11.mmObject();
 			isDerived = false;
 			xmlTag = "NewXpryDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewExpiryDetails";
 			definition = "Details related to the requested new expiry terms for the local undertaking.";
 			maxOccurs = 1;
@@ -204,11 +208,11 @@ public class Undertaking11 {
 	 */
 	public static final MMMessageAttribute mmNewBeneficiary = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> Undertaking11.mmObject();
 			isDerived = false;
 			xmlTag = "NewBnfcry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewBeneficiary";
 			definition = "Details related to the requested new beneficiary for the local undertaking.";
 			maxOccurs = 1;
@@ -251,7 +255,7 @@ public class Undertaking11 {
 			componentContext_lazy = () -> Undertaking11.mmObject();
 			isDerived = false;
 			xmlTag = "NewUdrtkgTermsAndConds";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewUndertakingTermsAndConditions";
 			definition = "Details related to the requested new terms and conditions for the local undertaking.";
 			maxOccurs = 1;
@@ -297,11 +301,11 @@ public class Undertaking11 {
 	 */
 	public static final MMMessageAttribute mmDeliveryChannel = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Presentation.mmCommunicationMethod;
+			businessElementTrace_lazy = () -> Presentation.mmCommunicationMethod;
 			componentContext_lazy = () -> Undertaking11.mmObject();
 			isDerived = false;
 			xmlTag = "DlvryChanl";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeliveryChannel";
 			definition = "Details related to the delivery channel for the amended local undertaking.";
 			maxOccurs = 1;
@@ -313,11 +317,11 @@ public class Undertaking11 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Undertaking11.mmNewUndertakingAmount, com.tools20022.repository.msg.Undertaking11.mmNewExpiryDetails,
-						com.tools20022.repository.msg.Undertaking11.mmNewBeneficiary, com.tools20022.repository.msg.Undertaking11.mmNewUndertakingTermsAndConditions, com.tools20022.repository.msg.Undertaking11.mmDeliveryChannel);
+				messageElement_lazy = () -> Arrays.asList(Undertaking11.mmNewUndertakingAmount, Undertaking11.mmNewExpiryDetails, Undertaking11.mmNewBeneficiary, Undertaking11.mmNewUndertakingTermsAndConditions,
+						Undertaking11.mmDeliveryChannel);
 				trace_lazy = () -> Undertaking.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Undertaking11";
 				definition = "Details related to the local undertaking.";
 			}

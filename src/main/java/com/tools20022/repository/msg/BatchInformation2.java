@@ -19,10 +19,12 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CreditDebitCode;
 import com.tools20022.repository.datatype.ActiveOrHistoricCurrencyAndAmount;
 import com.tools20022.repository.datatype.Max15NumericText;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -106,7 +108,7 @@ public class BatchInformation2 {
 			componentContext_lazy = () -> BatchInformation2.mmObject();
 			isDerived = false;
 			xmlTag = "MsgId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageIdentification";
 			definition = "Point to point reference, as assigned by the sending party, to unambiguously identify the batch of transactions.";
 			maxOccurs = 1;
@@ -150,7 +152,7 @@ public class BatchInformation2 {
 			componentContext_lazy = () -> BatchInformation2.mmObject();
 			isDerived = false;
 			xmlTag = "PmtInfId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentInformationIdentification";
 			definition = "Unique identification, as assigned by a sending party, to unambiguously identify the payment information group within the message.";
 			maxOccurs = 1;
@@ -192,7 +194,7 @@ public class BatchInformation2 {
 			componentContext_lazy = () -> BatchInformation2.mmObject();
 			isDerived = false;
 			xmlTag = "NbOfTxs";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NumberOfTransactions";
 			definition = "Number of individual transactions included in the batch.";
 			maxOccurs = 1;
@@ -234,7 +236,7 @@ public class BatchInformation2 {
 			componentContext_lazy = () -> BatchInformation2.mmObject();
 			isDerived = false;
 			xmlTag = "TtlAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalAmount";
 			definition = "Total amount of money reported in the batch entry.";
 			maxOccurs = 1;
@@ -277,7 +279,7 @@ public class BatchInformation2 {
 			componentContext_lazy = () -> BatchInformation2.mmObject();
 			isDerived = false;
 			xmlTag = "CdtDbtInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditDebitIndicator";
 			definition = "Indicates whether the batch entry is a credit or a debit entry.";
 			maxOccurs = 1;
@@ -289,10 +291,10 @@ public class BatchInformation2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BatchInformation2.mmMessageIdentification, com.tools20022.repository.msg.BatchInformation2.mmPaymentInformationIdentification,
-						com.tools20022.repository.msg.BatchInformation2.mmNumberOfTransactions, com.tools20022.repository.msg.BatchInformation2.mmTotalAmount, com.tools20022.repository.msg.BatchInformation2.mmCreditDebitIndicator);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(BatchInformation2.mmMessageIdentification, BatchInformation2.mmPaymentInformationIdentification, BatchInformation2.mmNumberOfTransactions, BatchInformation2.mmTotalAmount,
+						BatchInformation2.mmCreditDebitIndicator);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "BatchInformation2";
 				definition = "Set of elements used to identify the underlying batches.";
 			}

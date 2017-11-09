@@ -18,7 +18,10 @@
 package com.tools20022.repository.entity;
 
 import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.choice.SubscriptionOrRedemptionOrSwitchOrderDataChoice;
 import com.tools20022.repository.entity.InvestmentFundOrder;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -32,11 +35,62 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
- * subType} =
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.SwitchSubscriptionLeg
- * SwitchSubscriptionLeg}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SubscriptionOrder3
+ * SubscriptionOrder3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SubscriptionBulkOrder2
+ * SubscriptionBulkOrder2}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SubscriptionBulkOrderInstruction1
+ * SubscriptionBulkOrderInstruction1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SubscriptionOrder5
+ * SubscriptionOrder5}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SubscriptionBulkOrder3
+ * SubscriptionBulkOrder3}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SubscriptionBulkOrderInstruction2
+ * SubscriptionBulkOrderInstruction2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SubscriptionOrder7
+ * SubscriptionOrder7}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SubscriptionBulkOrder4
+ * SubscriptionBulkOrder4}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SubscriptionOrder4
+ * SubscriptionOrder4}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SubscriptionMultipleOrder2
+ * SubscriptionMultipleOrder2}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SubscriptionMultipleOrderInstruction1
+ * SubscriptionMultipleOrderInstruction1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SubscriptionOrder6
+ * SubscriptionOrder6}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SubscriptionMultipleOrder3
+ * SubscriptionMultipleOrder3}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SubscriptionMultipleOrderInstruction2
+ * SubscriptionMultipleOrderInstruction2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SubscriptionOrder8
+ * SubscriptionOrder8}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SubscriptionMultipleOrder4
+ * SubscriptionMultipleOrder4}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SubscriptionOrder9
+ * SubscriptionOrder9}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SubscriptionOrder10
+ * SubscriptionOrder10}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SubscriptionOrder11
+ * SubscriptionOrder11}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SubscriptionMultipleOrder5
+ * SubscriptionMultipleOrder5}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SubscriptionBulkOrder5
+ * SubscriptionBulkOrder5}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SubscriptionMultipleOrder6
+ * SubscriptionMultipleOrder6}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SubscriptionOrder15
+ * SubscriptionOrder15}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SubscriptionOrder14
+ * SubscriptionOrder14}</li>
  * </ul>
  * </li>
  * <li>
@@ -121,62 +175,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * superType} =
  * {@linkplain com.tools20022.repository.entity.InvestmentFundOrder
  * InvestmentFundOrder}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
+ * subType} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.SubscriptionOrder3
- * SubscriptionOrder3}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SubscriptionBulkOrder2
- * SubscriptionBulkOrder2}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.SubscriptionBulkOrderInstruction1
- * SubscriptionBulkOrderInstruction1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SubscriptionOrder5
- * SubscriptionOrder5}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SubscriptionBulkOrder3
- * SubscriptionBulkOrder3}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.SubscriptionBulkOrderInstruction2
- * SubscriptionBulkOrderInstruction2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SubscriptionOrder7
- * SubscriptionOrder7}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SubscriptionBulkOrder4
- * SubscriptionBulkOrder4}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SubscriptionOrder4
- * SubscriptionOrder4}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SubscriptionMultipleOrder2
- * SubscriptionMultipleOrder2}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.SubscriptionMultipleOrderInstruction1
- * SubscriptionMultipleOrderInstruction1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SubscriptionOrder6
- * SubscriptionOrder6}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SubscriptionMultipleOrder3
- * SubscriptionMultipleOrder3}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.SubscriptionMultipleOrderInstruction2
- * SubscriptionMultipleOrderInstruction2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SubscriptionOrder8
- * SubscriptionOrder8}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SubscriptionMultipleOrder4
- * SubscriptionMultipleOrder4}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SubscriptionOrder9
- * SubscriptionOrder9}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SubscriptionOrder10
- * SubscriptionOrder10}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SubscriptionOrder11
- * SubscriptionOrder11}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SubscriptionMultipleOrder5
- * SubscriptionMultipleOrder5}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SubscriptionBulkOrder5
- * SubscriptionBulkOrder5}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SubscriptionMultipleOrder6
- * SubscriptionMultipleOrder6}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SubscriptionOrder15
- * SubscriptionOrder15}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SubscriptionOrder14
- * SubscriptionOrder14}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.SwitchSubscriptionLeg
+ * SwitchSubscriptionLeg}</li>
  * </ul>
  * </li>
  * <li>
@@ -202,22 +205,17 @@ public class SubscriptionOrder extends InvestmentFundOrder {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SubscriptionOrder";
 				definition = "Order to invest the investor's principal in an investment fund.";
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SubscriptionBulkOrder2.mmIndividualOrderDetails, com.tools20022.repository.msg.SubscriptionBulkOrderInstruction1.mmBulkOrderDetails,
-						com.tools20022.repository.msg.SubscriptionOrder5.mmStaffClientBreakdown, com.tools20022.repository.msg.SubscriptionBulkOrder3.mmIndividualOrderDetails,
-						com.tools20022.repository.msg.SubscriptionBulkOrderInstruction2.mmBulkOrderDetails, com.tools20022.repository.msg.SubscriptionExecution5.mmStaffClientBreakdown,
-						com.tools20022.repository.msg.SubscriptionOrder7.mmStaffClientBreakdown, com.tools20022.repository.msg.SubscriptionBulkOrder4.mmIndividualOrderDetails,
-						com.tools20022.repository.msg.SubscriptionMultipleOrder2.mmIndividualOrderDetails, com.tools20022.repository.msg.SubscriptionMultipleOrderInstruction1.mmMultipleOrderDetails,
-						com.tools20022.repository.msg.SubscriptionOrder6.mmStaffClientBreakdown, com.tools20022.repository.msg.SubscriptionMultipleOrder3.mmIndividualOrderDetails,
-						com.tools20022.repository.msg.SubscriptionMultipleOrderInstruction2.mmMultipleOrderDetails, com.tools20022.repository.msg.SubscriptionExecution6.mmStaffClientBreakdown,
-						com.tools20022.repository.msg.SubscriptionOrder8.mmStaffClientBreakdown, com.tools20022.repository.msg.SubscriptionMultipleOrder4.mmIndividualOrderDetails,
-						com.tools20022.repository.choice.SubscriptionOrRedemptionOrSwitchOrderDataChoice.mmSubscriptionDetails, com.tools20022.repository.msg.SubscriptionMultipleOrder5.mmIndividualOrderDetails,
-						com.tools20022.repository.msg.SubscriptionBulkOrder5.mmIndividualOrderDetails, com.tools20022.repository.msg.SubscriptionMultipleOrder6.mmIndividualOrderDetails,
-						com.tools20022.repository.msg.SubscriptionExecution13.mmStaffClientBreakdown, com.tools20022.repository.msg.SubscriptionExecution12.mmStaffClientBreakdown,
-						com.tools20022.repository.msg.SubscriptionOrder15.mmStaffClientBreakdown, com.tools20022.repository.msg.SubscriptionOrder14.mmStaffClientBreakdown);
+				derivationElement_lazy = () -> Arrays.asList(SubscriptionBulkOrder2.mmIndividualOrderDetails, SubscriptionBulkOrderInstruction1.mmBulkOrderDetails, SubscriptionOrder5.mmStaffClientBreakdown,
+						SubscriptionBulkOrder3.mmIndividualOrderDetails, SubscriptionBulkOrderInstruction2.mmBulkOrderDetails, SubscriptionExecution5.mmStaffClientBreakdown, SubscriptionOrder7.mmStaffClientBreakdown,
+						SubscriptionBulkOrder4.mmIndividualOrderDetails, SubscriptionMultipleOrder2.mmIndividualOrderDetails, SubscriptionMultipleOrderInstruction1.mmMultipleOrderDetails, SubscriptionOrder6.mmStaffClientBreakdown,
+						SubscriptionMultipleOrder3.mmIndividualOrderDetails, SubscriptionMultipleOrderInstruction2.mmMultipleOrderDetails, SubscriptionExecution6.mmStaffClientBreakdown, SubscriptionOrder8.mmStaffClientBreakdown,
+						SubscriptionMultipleOrder4.mmIndividualOrderDetails, SubscriptionOrRedemptionOrSwitchOrderDataChoice.mmSubscriptionDetails, SubscriptionMultipleOrder5.mmIndividualOrderDetails,
+						SubscriptionBulkOrder5.mmIndividualOrderDetails, SubscriptionMultipleOrder6.mmIndividualOrderDetails, SubscriptionExecution13.mmStaffClientBreakdown, SubscriptionExecution12.mmStaffClientBreakdown,
+						SubscriptionOrder15.mmStaffClientBreakdown, SubscriptionOrder14.mmStaffClientBreakdown);
 				subType_lazy = () -> Arrays.asList(SwitchSubscriptionLeg.mmObject());
 				superType_lazy = () -> InvestmentFundOrder.mmObject();
 				derivationComponent_lazy = () -> Arrays.asList(SubscriptionOrder3.mmObject(), SubscriptionBulkOrder2.mmObject(), SubscriptionBulkOrderInstruction1.mmObject(), SubscriptionOrder5.mmObject(),

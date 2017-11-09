@@ -18,7 +18,9 @@
 package com.tools20022.repository.msgset;
 
 import com.tools20022.metamodel.MMMessageSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.acmt.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -101,8 +103,8 @@ public class BankAccountManagementISOLatestversion {
 	final static public MMMessageSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageSet() {
 			{
-				businessProcessCatalogue_lazy = () -> com.tools20022.repository.GeneratedRepository.mmcatalogue;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				businessProcessCatalogue_lazy = () -> GeneratedRepository.mmcatalogue;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Bank Account Management - ISO - Latest version ";
 				definition = "Set of messages that allows an organisation to open, maintain and close cash accounts serviced by a financial institution. It is designed for existing customers that have an established relationship with a bank or for a new legal entity of this customer. It covers mandates, allows electronic signature, and references to supporting documents.\r\n";
 				messageDefinition_lazy = () -> Arrays.asList(AccountAdditionalInformationRequestV02.mmObject(), AccountClosingAdditionalInformationRequestV02.mmObject(), AccountClosingAmendmentRequestV02.mmObject(),

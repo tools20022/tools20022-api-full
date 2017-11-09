@@ -19,8 +19,10 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.RegisteredNumberType1Code;
 import com.tools20022.repository.datatype.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -108,7 +110,7 @@ public class IssuerAttributesSD1 {
 			componentContext_lazy = () -> IssuerAttributesSD1.mmObject();
 			isDerived = false;
 			xmlTag = "PlcAndNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "Unambiguous reference to the location where the supplementary data must be inserted in the message instance. \n\nIn the case of XML, this is expressed by a valid XPath.\r\n";
 			maxOccurs = 1;
@@ -153,7 +155,7 @@ public class IssuerAttributesSD1 {
 			componentContext_lazy = () -> IssuerAttributesSD1.mmObject();
 			isDerived = false;
 			xmlTag = "Nm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Name";
 			definition = "Name by which a party is known and which is usually used to identify that party.\r\n";
 			maxOccurs = 1;
@@ -195,7 +197,7 @@ public class IssuerAttributesSD1 {
 			componentContext_lazy = () -> IssuerAttributesSD1.mmObject();
 			isDerived = false;
 			xmlTag = "RegdNbTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RegisteredNumberType";
 			definition = "Registered number type of the entity.";
 			maxOccurs = 1;
@@ -236,7 +238,7 @@ public class IssuerAttributesSD1 {
 			componentContext_lazy = () -> IssuerAttributesSD1.mmObject();
 			isDerived = false;
 			xmlTag = "OthrRegdNbTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherRegisteredNumberType";
 			definition = "Other type of Registered Number.";
 			maxOccurs = 1;
@@ -279,7 +281,7 @@ public class IssuerAttributesSD1 {
 			componentContext_lazy = () -> IssuerAttributesSD1.mmObject();
 			isDerived = false;
 			xmlTag = "RegnNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RegistrationNumber";
 			definition = "Equivalent, unique number of the entity for the  Registered Number Type.";
 			maxOccurs = 1;
@@ -321,7 +323,7 @@ public class IssuerAttributesSD1 {
 			componentContext_lazy = () -> IssuerAttributesSD1.mmObject();
 			isDerived = false;
 			xmlTag = "IssrId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssuerIdentification";
 			definition = "ASX  Issuer Code.";
 			maxOccurs = 1;
@@ -333,11 +335,10 @@ public class IssuerAttributesSD1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IssuerAttributesSD1.mmPlaceAndName, com.tools20022.repository.msg.IssuerAttributesSD1.mmName,
-						com.tools20022.repository.msg.IssuerAttributesSD1.mmRegisteredNumberType, com.tools20022.repository.msg.IssuerAttributesSD1.mmOtherRegisteredNumberType,
-						com.tools20022.repository.msg.IssuerAttributesSD1.mmRegistrationNumber, com.tools20022.repository.msg.IssuerAttributesSD1.mmIssuerIdentification);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(IssuerAttributesSD1.mmPlaceAndName, IssuerAttributesSD1.mmName, IssuerAttributesSD1.mmRegisteredNumberType, IssuerAttributesSD1.mmOtherRegisteredNumberType,
+						IssuerAttributesSD1.mmRegistrationNumber, IssuerAttributesSD1.mmIssuerIdentification);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "IssuerAttributesSD1";
 				definition = "Details of the issuer, as required by ASX.";
 			}

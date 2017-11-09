@@ -19,9 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Exact10Text;
 import com.tools20022.repository.datatype.Max140Text;
 import com.tools20022.repository.datatype.Max35Binary;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -99,7 +101,7 @@ public class CryptographicKey3 {
 			componentContext_lazy = () -> CryptographicKey3.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Name of the cryptographic key.";
 			maxOccurs = 1;
@@ -145,7 +147,7 @@ public class CryptographicKey3 {
 			componentContext_lazy = () -> CryptographicKey3.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalIdentification";
 			definition = "Additional identification of the key.\r\nUsage\r\nFor derived unique key per transaction (DUKPT) keys, the key serial number (KSN) with the 21 bits of the transaction counter set to zero.";
 			maxOccurs = 1;
@@ -186,7 +188,7 @@ public class CryptographicKey3 {
 			componentContext_lazy = () -> CryptographicKey3.mmObject();
 			isDerived = false;
 			xmlTag = "Vrsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Version";
 			definition = "Version of the cryptographic key.";
 			maxOccurs = 1;
@@ -198,10 +200,9 @@ public class CryptographicKey3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CryptographicKey3.mmIdentification, com.tools20022.repository.msg.CryptographicKey3.mmAdditionalIdentification,
-						com.tools20022.repository.msg.CryptographicKey3.mmVersion);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(CryptographicKey3.mmIdentification, CryptographicKey3.mmAdditionalIdentification, CryptographicKey3.mmVersion);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CryptographicKey3";
 				definition = "Indetification of a cryptographic Key to use.";
 				previousVersion_lazy = () -> CryptographicKey2.mmObject();

@@ -18,7 +18,9 @@
 package com.tools20022.repository.msgset;
 
 import com.tools20022.metamodel.MMMessageSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.colr.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -98,8 +100,8 @@ public class CollateralManagementISOPreviousversion {
 	final static public MMMessageSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageSet() {
 			{
-				businessProcessCatalogue_lazy = () -> com.tools20022.repository.GeneratedRepository.mmcatalogue;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				businessProcessCatalogue_lazy = () -> GeneratedRepository.mmcatalogue;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Collateral Management - ISO - Previous version";
 				definition = "The Collateral Management message set includes all messages exchanged between a collateral taker and a collateral giver to support collateral management activities such as collateral claim, collateral substitution, collateral recall, collateral reporting and collateral interest payment.";
 				messageDefinition_lazy = () -> Arrays.asList(CollateralSubstitutionRequestV03.mmObject(), InterestPaymentStatementV03.mmObject(), CollateralAndExposureReportV02.mmObject(), MarginCallResponseV03.mmObject(),

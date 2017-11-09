@@ -20,9 +20,11 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.Undertaking;
 import com.tools20022.repository.entity.UndertakingIssuer;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -102,11 +104,11 @@ public class Undertaking9 {
 	 */
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Undertaking.mmIdentification;
+			businessElementTrace_lazy = () -> Undertaking.mmIdentification;
 			componentContext_lazy = () -> Undertaking9.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Unique and unambiguous identifier assigned by the issuer to the undertaking, for example the guarantee or standby number.";
 			maxOccurs = 1;
@@ -151,7 +153,7 @@ public class Undertaking9 {
 			componentContext_lazy = () -> Undertaking9.mmObject();
 			isDerived = false;
 			xmlTag = "Issr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Issuer";
 			definition = "Party that issues the undertaking.";
 			maxOccurs = 1;
@@ -195,7 +197,7 @@ public class Undertaking9 {
 			componentContext_lazy = () -> Undertaking9.mmObject();
 			isDerived = false;
 			xmlTag = "ApplcntRefNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ApplicantReferenceNumber";
 			definition = "Unique and unambiguous identifier assigned by the applicant to the undertaking.";
 			maxOccurs = 1;
@@ -207,11 +209,10 @@ public class Undertaking9 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Undertaking9.mmIdentification, com.tools20022.repository.msg.Undertaking9.mmIssuer,
-						com.tools20022.repository.msg.Undertaking9.mmApplicantReferenceNumber);
+				messageElement_lazy = () -> Arrays.asList(Undertaking9.mmIdentification, Undertaking9.mmIssuer, Undertaking9.mmApplicantReferenceNumber);
 				trace_lazy = () -> Undertaking.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Undertaking9";
 				definition = "Information about an undertaking.";
 			}

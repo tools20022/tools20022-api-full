@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.PartyRoleCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -97,7 +99,7 @@ public class PaymentRole1Code extends PartyRoleCode {
 	 */
 	public static final MMCode mmLiquidityManager = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LiquidityManager";
 			owner_lazy = () -> PaymentRole1Code.mmObject();
 		}
@@ -120,7 +122,7 @@ public class PaymentRole1Code extends PartyRoleCode {
 	 */
 	public static final MMCode mmLimitManager = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LimitManager";
 			owner_lazy = () -> PaymentRole1Code.mmObject();
 		}
@@ -143,7 +145,7 @@ public class PaymentRole1Code extends PartyRoleCode {
 	 */
 	public static final MMCode mmPaymentManager = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentManager";
 			owner_lazy = () -> PaymentRole1Code.mmObject();
 		}
@@ -166,7 +168,7 @@ public class PaymentRole1Code extends PartyRoleCode {
 	 */
 	public static final MMCode mmReader = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reader";
 			owner_lazy = () -> PaymentRole1Code.mmObject();
 		}
@@ -189,7 +191,7 @@ public class PaymentRole1Code extends PartyRoleCode {
 	 */
 	public static final MMCode mmBackupManager = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BackupManager";
 			owner_lazy = () -> PaymentRole1Code.mmObject();
 		}
@@ -212,7 +214,7 @@ public class PaymentRole1Code extends PartyRoleCode {
 	 */
 	public static final MMCode mmSettlementManager = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementManager";
 			owner_lazy = () -> PaymentRole1Code.mmObject();
 		}
@@ -221,14 +223,13 @@ public class PaymentRole1Code extends PartyRoleCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("LQMG");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PaymentRole1Code";
 				definition = "Role associated with a specific party in relation to a payment instruction. The role identifies either the specific function of the party, or the party's rights regarding management of the instruction.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PaymentRole1Code.mmLiquidityManager, com.tools20022.repository.codeset.PaymentRole1Code.mmLimitManager,
-						com.tools20022.repository.codeset.PaymentRole1Code.mmPaymentManager, com.tools20022.repository.codeset.PaymentRole1Code.mmReader, com.tools20022.repository.codeset.PaymentRole1Code.mmBackupManager,
-						com.tools20022.repository.codeset.PaymentRole1Code.mmSettlementManager);
+				code_lazy = () -> Arrays.asList(PaymentRole1Code.mmLiquidityManager, PaymentRole1Code.mmLimitManager, PaymentRole1Code.mmPaymentManager, PaymentRole1Code.mmReader, PaymentRole1Code.mmBackupManager,
+						PaymentRole1Code.mmSettlementManager);
 				trace_lazy = () -> PartyRoleCode.mmObject();
 			}
 		});

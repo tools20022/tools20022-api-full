@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.FundOrderTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -97,7 +99,7 @@ public class FundOrderType6Code extends FundOrderTypeCode {
 	 */
 	public static final MMCode mmAll = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "All";
 			owner_lazy = () -> FundOrderType6Code.mmObject();
 		}
@@ -120,7 +122,7 @@ public class FundOrderType6Code extends FundOrderTypeCode {
 	 */
 	public static final MMCode mmRedemption = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Redemption";
 			owner_lazy = () -> FundOrderType6Code.mmObject();
 		}
@@ -143,7 +145,7 @@ public class FundOrderType6Code extends FundOrderTypeCode {
 	 */
 	public static final MMCode mmSubscription = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Subscription";
 			owner_lazy = () -> FundOrderType6Code.mmObject();
 		}
@@ -166,7 +168,7 @@ public class FundOrderType6Code extends FundOrderTypeCode {
 	 */
 	public static final MMCode mmSwitchFrom = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SwitchFrom";
 			owner_lazy = () -> FundOrderType6Code.mmObject();
 		}
@@ -189,7 +191,7 @@ public class FundOrderType6Code extends FundOrderTypeCode {
 	 */
 	public static final MMCode mmSwitchTo = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SwitchTo";
 			owner_lazy = () -> FundOrderType6Code.mmObject();
 		}
@@ -212,7 +214,7 @@ public class FundOrderType6Code extends FundOrderTypeCode {
 	 */
 	public static final MMCode mmTransferIn = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransferIn";
 			owner_lazy = () -> FundOrderType6Code.mmObject();
 		}
@@ -235,7 +237,7 @@ public class FundOrderType6Code extends FundOrderTypeCode {
 	 */
 	public static final MMCode mmTransferOut = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransferOut";
 			owner_lazy = () -> FundOrderType6Code.mmObject();
 		}
@@ -244,14 +246,13 @@ public class FundOrderType6Code extends FundOrderTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ALLL");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FundOrderType6Code";
 				definition = "Specifies the category of the investment fund order.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.FundOrderType6Code.mmAll, com.tools20022.repository.codeset.FundOrderType6Code.mmRedemption,
-						com.tools20022.repository.codeset.FundOrderType6Code.mmSubscription, com.tools20022.repository.codeset.FundOrderType6Code.mmSwitchFrom, com.tools20022.repository.codeset.FundOrderType6Code.mmSwitchTo,
-						com.tools20022.repository.codeset.FundOrderType6Code.mmTransferIn, com.tools20022.repository.codeset.FundOrderType6Code.mmTransferOut);
+				code_lazy = () -> Arrays.asList(FundOrderType6Code.mmAll, FundOrderType6Code.mmRedemption, FundOrderType6Code.mmSubscription, FundOrderType6Code.mmSwitchFrom, FundOrderType6Code.mmSwitchTo, FundOrderType6Code.mmTransferIn,
+						FundOrderType6Code.mmTransferOut);
 				trace_lazy = () -> FundOrderTypeCode.mmObject();
 			}
 		});

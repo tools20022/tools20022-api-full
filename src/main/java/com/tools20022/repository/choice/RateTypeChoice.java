@@ -19,9 +19,11 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.PercentageRate;
 import com.tools20022.repository.entity.InterestCalculation;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -104,11 +106,11 @@ public class RateTypeChoice {
 	 */
 	public static final MMMessageAttribute mmPercentageRate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InterestCalculation.mmRate;
+			businessElementTrace_lazy = () -> InterestCalculation.mmRate;
 			componentContext_lazy = () -> RateTypeChoice.mmObject();
 			isDerived = false;
 			xmlTag = "PctgRate";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PercentageRate";
 			definition = "Percentage charged for the use of an amount of money, usually expressed at an annual rate. The interest rate is the ratio of the amount of interest paid during a certain period of time compared to the principal amount of the interest bearing financial instrument.";
 			maxOccurs = 1;
@@ -151,11 +153,11 @@ public class RateTypeChoice {
 	 */
 	public static final MMMessageAttribute mmTextualRate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InterestCalculation.mmRateType;
+			businessElementTrace_lazy = () -> InterestCalculation.mmRateType;
 			componentContext_lazy = () -> RateTypeChoice.mmObject();
 			isDerived = false;
 			xmlTag = "TxtlRate";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TextualRate";
 			definition = "Rate is expressed as a text.";
 			maxOccurs = 1;
@@ -167,10 +169,10 @@ public class RateTypeChoice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.RateTypeChoice.mmPercentageRate, com.tools20022.repository.choice.RateTypeChoice.mmTextualRate);
+				messageElement_lazy = () -> Arrays.asList(RateTypeChoice.mmPercentageRate, RateTypeChoice.mmTextualRate);
 				trace_lazy = () -> InterestCalculation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RateTypeChoice";
 				definition = "Rate is expressed as a percentage or a text.";
 			}

@@ -17,9 +17,14 @@
 
 package com.tools20022.repository.entity;
 
+import com.tools20022.metamodel.MMAggregation;
 import com.tools20022.metamodel.MMBusinessAssociationEnd;
 import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.MeetingPartyRole;
+import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.SecurityPosition1;
+import com.tools20022.repository.msg.SecurityPosition2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -35,14 +40,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.MeetingAttendeeRole#mmPerson
- * MeetingAttendeeRole.mmPerson}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
  * associationDomain} =
@@ -66,6 +63,14 @@ import java.util.List;
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
  * superType} = {@linkplain com.tools20022.repository.entity.MeetingPartyRole
  * MeetingPartyRole}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.MeetingAttendeeRole#mmPerson
+ * MeetingAttendeeRole.mmPerson}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -124,12 +129,12 @@ public class MeetingAttendeeRole extends MeetingPartyRole {
 		{
 			elementContext_lazy = () -> MeetingAttendeeRole.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Person";
 			definition = "Specifies the person who is registered to attend a meeting.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.Person.mmMeetingAttendee;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Person.mmObject();
 		}
 	};
@@ -137,14 +142,14 @@ public class MeetingAttendeeRole extends MeetingPartyRole {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MeetingAttendeeRole";
 				definition = "Security holder who will attend and vote at the meeting in person and/or a person assigned by the security holder to attend the meeting without having any voting rights or taking any action.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Person.mmMeetingAttendee);
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecurityPosition2.mmMeetingAttendee, com.tools20022.repository.msg.SecurityPosition1.mmMeetingAttendee);
+				derivationElement_lazy = () -> Arrays.asList(SecurityPosition2.mmMeetingAttendee, SecurityPosition1.mmMeetingAttendee);
 				superType_lazy = () -> MeetingPartyRole.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.MeetingAttendeeRole.mmPerson);
+				element_lazy = () -> Arrays.asList(MeetingAttendeeRole.mmPerson);
 			}
 		});
 		return mmObject_lazy.get();

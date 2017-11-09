@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.RateTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -120,7 +122,7 @@ public class RateType2Code extends RateTypeCode {
 	 */
 	public static final MMCode mmAdditionalTax = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalTax";
 			owner_lazy = () -> RateType2Code.mmObject();
 		}
@@ -143,7 +145,7 @@ public class RateType2Code extends RateTypeCode {
 	 */
 	public static final MMCode mmCharges = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Charges";
 			owner_lazy = () -> RateType2Code.mmObject();
 		}
@@ -166,7 +168,7 @@ public class RateType2Code extends RateTypeCode {
 	 */
 	public static final MMCode mmCashInLieuOfSecurities = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashInLieuOfSecurities";
 			owner_lazy = () -> RateType2Code.mmObject();
 		}
@@ -189,7 +191,7 @@ public class RateType2Code extends RateTypeCode {
 	 */
 	public static final MMCode mmGross = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Gross";
 			owner_lazy = () -> RateType2Code.mmObject();
 		}
@@ -212,7 +214,7 @@ public class RateType2Code extends RateTypeCode {
 	 */
 	public static final MMCode mmCashIncentive = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashIncentive";
 			owner_lazy = () -> RateType2Code.mmObject();
 		}
@@ -235,7 +237,7 @@ public class RateType2Code extends RateTypeCode {
 	 */
 	public static final MMCode mmNet = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Net";
 			owner_lazy = () -> RateType2Code.mmObject();
 		}
@@ -258,7 +260,7 @@ public class RateType2Code extends RateTypeCode {
 	 */
 	public static final MMCode mmSollication = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Sollication";
 			owner_lazy = () -> RateType2Code.mmObject();
 		}
@@ -281,7 +283,7 @@ public class RateType2Code extends RateTypeCode {
 	 */
 	public static final MMCode mmStampDuty = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StampDuty";
 			owner_lazy = () -> RateType2Code.mmObject();
 		}
@@ -304,7 +306,7 @@ public class RateType2Code extends RateTypeCode {
 	 */
 	public static final MMCode mmStockExchangeTax = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StockExchangeTax";
 			owner_lazy = () -> RateType2Code.mmObject();
 		}
@@ -327,7 +329,7 @@ public class RateType2Code extends RateTypeCode {
 	 */
 	public static final MMCode mmTransferTax = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransferTax";
 			owner_lazy = () -> RateType2Code.mmObject();
 		}
@@ -350,7 +352,7 @@ public class RateType2Code extends RateTypeCode {
 	 */
 	public static final MMCode mmTransactionTax = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionTax";
 			owner_lazy = () -> RateType2Code.mmObject();
 		}
@@ -373,7 +375,7 @@ public class RateType2Code extends RateTypeCode {
 	 */
 	public static final MMCode mmTaxDeferred = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxDeferred";
 			owner_lazy = () -> RateType2Code.mmObject();
 		}
@@ -396,7 +398,7 @@ public class RateType2Code extends RateTypeCode {
 	 */
 	public static final MMCode mmTaxFeeAmount = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxFeeAmount";
 			owner_lazy = () -> RateType2Code.mmObject();
 		}
@@ -419,7 +421,7 @@ public class RateType2Code extends RateTypeCode {
 	 */
 	public static final MMCode mmWithholdingOfForeignTax = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WithholdingOfForeignTax";
 			owner_lazy = () -> RateType2Code.mmObject();
 		}
@@ -442,7 +444,7 @@ public class RateType2Code extends RateTypeCode {
 	 */
 	public static final MMCode mmWithholdingOfLocalTax = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WithholdingOfLocalTax";
 			owner_lazy = () -> RateType2Code.mmObject();
 		}
@@ -465,7 +467,7 @@ public class RateType2Code extends RateTypeCode {
 	 */
 	public static final MMCode mmWithholdingTax = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WithholdingTax";
 			owner_lazy = () -> RateType2Code.mmObject();
 		}
@@ -474,17 +476,14 @@ public class RateType2Code extends RateTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ATAX");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RateType2Code";
 				definition = "Specifies the type of rate.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RateType2Code.mmAdditionalTax, com.tools20022.repository.codeset.RateType2Code.mmCharges,
-						com.tools20022.repository.codeset.RateType2Code.mmCashInLieuOfSecurities, com.tools20022.repository.codeset.RateType2Code.mmGross, com.tools20022.repository.codeset.RateType2Code.mmCashIncentive,
-						com.tools20022.repository.codeset.RateType2Code.mmNet, com.tools20022.repository.codeset.RateType2Code.mmSollication, com.tools20022.repository.codeset.RateType2Code.mmStampDuty,
-						com.tools20022.repository.codeset.RateType2Code.mmStockExchangeTax, com.tools20022.repository.codeset.RateType2Code.mmTransferTax, com.tools20022.repository.codeset.RateType2Code.mmTransactionTax,
-						com.tools20022.repository.codeset.RateType2Code.mmTaxDeferred, com.tools20022.repository.codeset.RateType2Code.mmTaxFeeAmount, com.tools20022.repository.codeset.RateType2Code.mmWithholdingOfForeignTax,
-						com.tools20022.repository.codeset.RateType2Code.mmWithholdingOfLocalTax, com.tools20022.repository.codeset.RateType2Code.mmWithholdingTax);
+				code_lazy = () -> Arrays.asList(RateType2Code.mmAdditionalTax, RateType2Code.mmCharges, RateType2Code.mmCashInLieuOfSecurities, RateType2Code.mmGross, RateType2Code.mmCashIncentive, RateType2Code.mmNet,
+						RateType2Code.mmSollication, RateType2Code.mmStampDuty, RateType2Code.mmStockExchangeTax, RateType2Code.mmTransferTax, RateType2Code.mmTransactionTax, RateType2Code.mmTaxDeferred, RateType2Code.mmTaxFeeAmount,
+						RateType2Code.mmWithholdingOfForeignTax, RateType2Code.mmWithholdingOfLocalTax, RateType2Code.mmWithholdingTax);
 				trace_lazy = () -> RateTypeCode.mmObject();
 			}
 		});

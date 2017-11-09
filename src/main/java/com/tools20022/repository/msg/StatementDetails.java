@@ -19,12 +19,16 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.metamodel.MMXor;
 import com.tools20022.repository.choice.*;
 import com.tools20022.repository.codeset.StatementType1Code;
 import com.tools20022.repository.datatype.Extended350Code;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.entity.Account;
+import com.tools20022.repository.entity.Party;
+import com.tools20022.repository.entity.ReportingService;
+import com.tools20022.repository.GeneratedRepository;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -141,11 +145,11 @@ public class StatementDetails {
 	 */
 	public static final MMMessageAttribute mmAccountIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.mmIdentification;
+			businessElementTrace_lazy = () -> Account.mmIdentification;
 			componentContext_lazy = () -> StatementDetails.mmObject();
 			isDerived = false;
 			xmlTag = "AcctId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountIdentification";
 			definition = "Unique and unambiguous identification for the account between the account owner and the account servicer.";
 			maxOccurs = 1;
@@ -192,11 +196,11 @@ public class StatementDetails {
 	 */
 	public static final MMMessageAttribute mmSubAccountIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.mmIdentification;
+			businessElementTrace_lazy = () -> Account.mmIdentification;
 			componentContext_lazy = () -> StatementDetails.mmObject();
 			isDerived = false;
 			xmlTag = "SubAcctId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubAccountIdentification";
 			definition = "Unique and unambiguous identification for the account between the account owner and the account servicer.";
 			maxOccurs = 1;
@@ -240,11 +244,11 @@ public class StatementDetails {
 	 */
 	public static final MMMessageAttribute mmAccountOwner = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> StatementDetails.mmObject();
 			isDerived = false;
 			xmlTag = "AcctOwnr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountOwner";
 			definition = "Party that legally owns the account.";
 			maxOccurs = 1;
@@ -286,7 +290,7 @@ public class StatementDetails {
 			componentContext_lazy = () -> StatementDetails.mmObject();
 			isDerived = false;
 			xmlTag = "StmtTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatementType";
 			definition = "Specifes the statement message.";
 			maxOccurs = 1;
@@ -328,7 +332,7 @@ public class StatementDetails {
 			componentContext_lazy = () -> StatementDetails.mmObject();
 			isDerived = false;
 			xmlTag = "XtndedStmtTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExtendedStatementType";
 			definition = "Specifes the statement message.";
 			maxOccurs = 1;
@@ -369,7 +373,7 @@ public class StatementDetails {
 			componentContext_lazy = () -> StatementDetails.mmObject();
 			isDerived = false;
 			xmlTag = "StmtDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatementDate";
 			definition = "Date of the statement.";
 			maxOccurs = 1;
@@ -413,11 +417,11 @@ public class StatementDetails {
 	 */
 	public static final MMMessageAttribute mmStatementPeriod = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.mmReportedPeriod;
+			businessElementTrace_lazy = () -> Account.mmReportedPeriod;
 			componentContext_lazy = () -> StatementDetails.mmObject();
 			isDerived = false;
 			xmlTag = "StmtPrd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatementPeriod";
 			definition = "Period on which the statement is reporting.";
 			maxOccurs = 1;
@@ -461,11 +465,11 @@ public class StatementDetails {
 	 */
 	public static final MMMessageAttribute mmFrequency = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ReportingService.mmStatementFrequency;
+			businessElementTrace_lazy = () -> ReportingService.mmStatementFrequency;
 			componentContext_lazy = () -> StatementDetails.mmObject();
 			isDerived = false;
 			xmlTag = "Frqcy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Frequency";
 			definition = "Frequency of the statement.";
 			maxOccurs = 1;
@@ -508,7 +512,7 @@ public class StatementDetails {
 			componentContext_lazy = () -> StatementDetails.mmObject();
 			isDerived = false;
 			xmlTag = "UpdTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UpdateType";
 			definition = "Indicates whether the report is complete or contains changes only.";
 			maxOccurs = 1;
@@ -550,7 +554,7 @@ public class StatementDetails {
 			componentContext_lazy = () -> StatementDetails.mmObject();
 			isDerived = false;
 			xmlTag = "StmtBsis";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatementBasis";
 			definition = "Type of balance on which the statement is prepared.";
 			maxOccurs = 1;
@@ -563,6 +567,10 @@ public class StatementDetails {
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
+	 * messageComponent} =
+	 * {@linkplain com.tools20022.repository.msg.StatementDetails
+	 * StatementDetails}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getImpactedElements
 	 * impactedElements} =
 	 * <ul>
@@ -574,10 +582,6 @@ public class StatementDetails {
 	 * StatementDetails.mmExtendedStatementType}</li>
 	 * </ul>
 	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
-	 * messageComponent} =
-	 * {@linkplain com.tools20022.repository.msg.StatementDetails
-	 * StatementDetails}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -592,11 +596,11 @@ public class StatementDetails {
 	 */
 	public static final MMXor mmStatementTypeOrExtendedStatementType = new MMXor() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatementTypeOrExtendedStatementType";
 			definition = "Either StatementType or ExtendedStatementType must be present.";
 			messageComponent_lazy = () -> StatementDetails.mmObject();
-			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StatementDetails.mmStatementType, com.tools20022.repository.msg.StatementDetails.mmExtendedStatementType);
+			impactedElements_lazy = () -> Arrays.asList(StatementDetails.mmStatementType, StatementDetails.mmExtendedStatementType);
 		}
 	};
 	/**
@@ -604,6 +608,10 @@ public class StatementDetails {
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
+	 * messageComponent} =
+	 * {@linkplain com.tools20022.repository.msg.StatementDetails
+	 * StatementDetails}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getImpactedElements
 	 * impactedElements} =
 	 * <ul>
@@ -615,10 +623,6 @@ public class StatementDetails {
 	 * StatementDetails.mmStatementPeriod}</li>
 	 * </ul>
 	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
-	 * messageComponent} =
-	 * {@linkplain com.tools20022.repository.msg.StatementDetails
-	 * StatementDetails}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -632,24 +636,22 @@ public class StatementDetails {
 	 */
 	public static final MMXor mmStatementDateOrPeriod = new MMXor() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatementDateOrPeriod";
 			definition = "Either StatementDate or StatementPeriod may be present.";
 			messageComponent_lazy = () -> StatementDetails.mmObject();
-			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StatementDetails.mmStatementDate, com.tools20022.repository.msg.StatementDetails.mmStatementPeriod);
+			impactedElements_lazy = () -> Arrays.asList(StatementDetails.mmStatementDate, StatementDetails.mmStatementPeriod);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StatementDetails.mmAccountIdentification, com.tools20022.repository.msg.StatementDetails.mmSubAccountIdentification,
-						com.tools20022.repository.msg.StatementDetails.mmAccountOwner, com.tools20022.repository.msg.StatementDetails.mmStatementType, com.tools20022.repository.msg.StatementDetails.mmExtendedStatementType,
-						com.tools20022.repository.msg.StatementDetails.mmStatementDate, com.tools20022.repository.msg.StatementDetails.mmStatementPeriod, com.tools20022.repository.msg.StatementDetails.mmFrequency,
-						com.tools20022.repository.msg.StatementDetails.mmUpdateType, com.tools20022.repository.msg.StatementDetails.mmStatementBasis);
+				messageElement_lazy = () -> Arrays.asList(StatementDetails.mmAccountIdentification, StatementDetails.mmSubAccountIdentification, StatementDetails.mmAccountOwner, StatementDetails.mmStatementType,
+						StatementDetails.mmExtendedStatementType, StatementDetails.mmStatementDate, StatementDetails.mmStatementPeriod, StatementDetails.mmFrequency, StatementDetails.mmUpdateType, StatementDetails.mmStatementBasis);
 				trace_lazy = () -> Account.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
 						return DateFormat.getDateInstance(java.text.DateFormat.LONG).parse("September 9, 2016");
@@ -659,7 +661,7 @@ public class StatementDetails {
 				})).get();
 				name = "StatementDetails";
 				definition = "Account and statement parameters for which a statement is requested.";
-				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StatementDetails.mmStatementTypeOrExtendedStatementType, com.tools20022.repository.msg.StatementDetails.mmStatementDateOrPeriod);
+				xors_lazy = () -> Arrays.asList(StatementDetails.mmStatementTypeOrExtendedStatementType, StatementDetails.mmStatementDateOrPeriod);
 			}
 		});
 		return mmObject_lazy.get();

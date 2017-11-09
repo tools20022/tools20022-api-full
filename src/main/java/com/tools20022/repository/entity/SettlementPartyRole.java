@@ -17,9 +17,13 @@
 
 package com.tools20022.repository.entity;
 
+import com.tools20022.metamodel.MMAggregation;
 import com.tools20022.metamodel.MMBusinessAssociationEnd;
 import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.Role;
+import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -32,17 +36,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SettlementPartyRole#mmSettlementAccount
- * SettlementPartyRole.mmSettlementAccount}</li>
+ * {@linkplain com.tools20022.repository.entity.Account#mmSettlementPartyRole
+ * Account.mmSettlementPartyRole}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SettlementPartyRole#mmSettlement
- * SettlementPartyRole.mmSettlement}</li>
+ * {@linkplain com.tools20022.repository.entity.Settlement#mmSettlementPartyRole
+ * Settlement.mmSettlementPartyRole}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.Role Role}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
  * subType} =
  * <ul>
@@ -69,20 +76,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * GiveUpClearingFirm}</li>
  * </ul>
  * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.Account#mmSettlementPartyRole
- * Account.mmSettlementPartyRole}</li>
+ * {@linkplain com.tools20022.repository.entity.SettlementPartyRole#mmSettlementAccount
+ * SettlementPartyRole.mmSettlementAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.Settlement#mmSettlementPartyRole
- * Settlement.mmSettlementPartyRole}</li>
+ * {@linkplain com.tools20022.repository.entity.SettlementPartyRole#mmSettlement
+ * SettlementPartyRole.mmSettlement}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.Role Role}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -156,18 +160,17 @@ public class SettlementPartyRole extends Role {
 	 */
 	public static final MMBusinessAssociationEnd mmSettlementAccount = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DeliveringPartiesAndAccount1.mmDelivererDetails, com.tools20022.repository.msg.DeliveringPartiesAndAccount4.mmDelivererDetails,
-					com.tools20022.repository.msg.DeliveringPartiesAndAccount8.mmDelivererDetails, com.tools20022.repository.msg.DeliveringPartiesAndAccount9.mmDelivererDetails,
-					com.tools20022.repository.msg.DeliveringPartiesAndAccount13.mmDelivererDetails);
+			derivation_lazy = () -> Arrays.asList(DeliveringPartiesAndAccount1.mmDelivererDetails, DeliveringPartiesAndAccount4.mmDelivererDetails, DeliveringPartiesAndAccount8.mmDelivererDetails,
+					DeliveringPartiesAndAccount9.mmDelivererDetails, DeliveringPartiesAndAccount13.mmDelivererDetails);
 			elementContext_lazy = () -> SettlementPartyRole.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SettlementAccount";
 			definition = "Account which is used for settlement.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.Account.mmSettlementPartyRole;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Account.mmObject();
 		}
 	};
@@ -210,13 +213,13 @@ public class SettlementPartyRole extends Role {
 		{
 			elementContext_lazy = () -> SettlementPartyRole.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Settlement";
 			definition = "Specifies the settlement process for which the party plays a role.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.Settlement.mmSettlementPartyRole;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Settlement.mmObject();
 		}
 	};
@@ -224,15 +227,15 @@ public class SettlementPartyRole extends Role {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SettlementPartyRole";
 				definition = "Role played by a party in a settlement process.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Account.mmSettlementPartyRole, com.tools20022.repository.entity.Settlement.mmSettlementPartyRole);
 				subType_lazy = () -> Arrays.asList(SecuritiesSettlementPartyRole.mmObject(), CashSettlementInstructionPartyRole.mmObject(), TreasurySettlementPartyRole.mmObject(), SSIDatabaseProvider.mmObject(),
 						CentralClearingCounterpartyRole.mmObject(), ClearingPlace.mmObject(), ContraClearingFirm.mmObject(), CorrespondentClearingFirm.mmObject(), GiveUpClearingFirm.mmObject());
 				superType_lazy = () -> Role.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SettlementPartyRole.mmSettlementAccount, com.tools20022.repository.entity.SettlementPartyRole.mmSettlement);
+				element_lazy = () -> Arrays.asList(SettlementPartyRole.mmSettlementAccount, SettlementPartyRole.mmSettlement);
 			}
 		});
 		return mmObject_lazy.get();

@@ -19,8 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.PartyIdentification102Choice;
+import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.entity.SecuritiesSettlementPartyRole;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -120,14 +123,14 @@ public class DeliveringPartiesAndAccount15 {
 	 */
 	public static final MMMessageAssociationEnd mmDepository = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> DeliveringPartiesAndAccount15.mmObject();
 			isDerived = false;
 			xmlTag = "Dpstry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Depository";
 			definition = "First party in the settlement chain. In a plain vanilla settlement, it is the Central Securities Depository where the counterparty requests to receive the financial instrument or from where the counterparty delivers the financial instruments.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.DeliveringPartiesAndAccount10.mmDepository;
+			previousVersion_lazy = () -> DeliveringPartiesAndAccount10.mmDepository;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -175,14 +178,14 @@ public class DeliveringPartiesAndAccount15 {
 	 */
 	public static final MMMessageAssociationEnd mmParty1 = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> DeliveringPartiesAndAccount15.mmObject();
 			isDerived = false;
 			xmlTag = "Pty1";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Party1";
 			definition = "Party that, in a settlement chain interacts with the depository.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.DeliveringPartiesAndAccount10.mmParty1;
+			previousVersion_lazy = () -> DeliveringPartiesAndAccount10.mmParty1;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -230,14 +233,14 @@ public class DeliveringPartiesAndAccount15 {
 	 */
 	public static final MMMessageAssociationEnd mmParty2 = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> DeliveringPartiesAndAccount15.mmObject();
 			isDerived = false;
 			xmlTag = "Pty2";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Party2";
 			definition = "Party that, in a settlement chain interacts with the party 1.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.DeliveringPartiesAndAccount10.mmParty2;
+			previousVersion_lazy = () -> DeliveringPartiesAndAccount10.mmParty2;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -248,11 +251,10 @@ public class DeliveringPartiesAndAccount15 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DeliveringPartiesAndAccount15.mmDepository, com.tools20022.repository.msg.DeliveringPartiesAndAccount15.mmParty1,
-						com.tools20022.repository.msg.DeliveringPartiesAndAccount15.mmParty2);
+				messageElement_lazy = () -> Arrays.asList(DeliveringPartiesAndAccount15.mmDepository, DeliveringPartiesAndAccount15.mmParty1, DeliveringPartiesAndAccount15.mmParty2);
 				trace_lazy = () -> SecuritiesSettlementPartyRole.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DeliveringPartiesAndAccount15";
 				definition = "Chain of parties involved in the settlement of a transaction, including receipts and deliveries, book transfers, treasury deals, or other activities, resulting in the movement of a security or amount of money from one account to another.";
 				previousVersion_lazy = () -> DeliveringPartiesAndAccount10.mmObject();

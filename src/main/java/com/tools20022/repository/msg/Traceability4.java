@@ -20,8 +20,10 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -108,10 +110,10 @@ public class Traceability4 {
 			componentContext_lazy = () -> Traceability4.mmObject();
 			isDerived = false;
 			xmlTag = "RlayId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelayIdentification";
 			definition = "Identification of a partner of a message exchange.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Traceability2.mmRelayIdentification;
+			previousVersion_lazy = () -> Traceability2.mmRelayIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -153,7 +155,7 @@ public class Traceability4 {
 			componentContext_lazy = () -> Traceability4.mmObject();
 			isDerived = false;
 			xmlTag = "SeqNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SequenceNumber";
 			definition = "Identification of the relay node in the path, to enable identification of several hosts in parallel.";
 			maxOccurs = 1;
@@ -199,10 +201,10 @@ public class Traceability4 {
 			componentContext_lazy = () -> Traceability4.mmObject();
 			isDerived = false;
 			xmlTag = "TracDtTmIn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TraceDateTimeIn";
 			definition = "Date and time of incoming data exchange for relaying or processing.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Traceability2.mmTraceDateTimeIn;
+			previousVersion_lazy = () -> Traceability2.mmTraceDateTimeIn;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
@@ -246,10 +248,10 @@ public class Traceability4 {
 			componentContext_lazy = () -> Traceability4.mmObject();
 			isDerived = false;
 			xmlTag = "TracDtTmOut";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TraceDateTimeOut";
 			definition = "Date and time of the outgoing exchange for relaying or processing.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Traceability2.mmTraceDateTimeOut;
+			previousVersion_lazy = () -> Traceability2.mmTraceDateTimeOut;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
@@ -259,10 +261,9 @@ public class Traceability4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Traceability4.mmRelayIdentification, com.tools20022.repository.msg.Traceability4.mmSequenceNumber,
-						com.tools20022.repository.msg.Traceability4.mmTraceDateTimeIn, com.tools20022.repository.msg.Traceability4.mmTraceDateTimeOut);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(Traceability4.mmRelayIdentification, Traceability4.mmSequenceNumber, Traceability4.mmTraceDateTimeIn, Traceability4.mmTraceDateTimeOut);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Traceability4";
 				definition = "Identification of partners involved in exchange from the ATM to the issuer, with the relative timestamp of their exchanges.";
 				previousVersion_lazy = () -> Traceability2.mmObject();

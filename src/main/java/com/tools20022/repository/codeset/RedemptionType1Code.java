@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.RedemptionTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -93,7 +95,7 @@ public class RedemptionType1Code extends RedemptionTypeCode {
 	 */
 	public static final MMCode mmPreFunded = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreFunded";
 			owner_lazy = () -> RedemptionType1Code.mmObject();
 		}
@@ -116,7 +118,7 @@ public class RedemptionType1Code extends RedemptionTypeCode {
 	 */
 	public static final MMCode mmEscrowed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Escrowed";
 			owner_lazy = () -> RedemptionType1Code.mmObject();
 		}
@@ -139,7 +141,7 @@ public class RedemptionType1Code extends RedemptionTypeCode {
 	 */
 	public static final MMCode mmConvertible = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Convertible";
 			owner_lazy = () -> RedemptionType1Code.mmObject();
 		}
@@ -162,7 +164,7 @@ public class RedemptionType1Code extends RedemptionTypeCode {
 	 */
 	public static final MMCode mmCallable = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Callable";
 			owner_lazy = () -> RedemptionType1Code.mmObject();
 		}
@@ -185,7 +187,7 @@ public class RedemptionType1Code extends RedemptionTypeCode {
 	 */
 	public static final MMCode mmPutable = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Putable";
 			owner_lazy = () -> RedemptionType1Code.mmObject();
 		}
@@ -194,13 +196,12 @@ public class RedemptionType1Code extends RedemptionTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("PFIN");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RedemptionType1Code";
 				definition = "Indicates the redemption type of the interest bearing instrument.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RedemptionType1Code.mmPreFunded, com.tools20022.repository.codeset.RedemptionType1Code.mmEscrowed,
-						com.tools20022.repository.codeset.RedemptionType1Code.mmConvertible, com.tools20022.repository.codeset.RedemptionType1Code.mmCallable, com.tools20022.repository.codeset.RedemptionType1Code.mmPutable);
+				code_lazy = () -> Arrays.asList(RedemptionType1Code.mmPreFunded, RedemptionType1Code.mmEscrowed, RedemptionType1Code.mmConvertible, RedemptionType1Code.mmCallable, RedemptionType1Code.mmPutable);
 				trace_lazy = () -> RedemptionTypeCode.mmObject();
 			}
 		});

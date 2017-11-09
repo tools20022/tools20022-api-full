@@ -20,9 +20,11 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.Max6Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -112,10 +114,10 @@ public class Traceability5 {
 			componentContext_lazy = () -> Traceability5.mmObject();
 			isDerived = false;
 			xmlTag = "RlayId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelayIdentification";
 			definition = "Identification of a partner of a message exchange.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Traceability2.mmRelayIdentification;
+			previousVersion_lazy = () -> Traceability2.mmRelayIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -154,7 +156,7 @@ public class Traceability5 {
 			componentContext_lazy = () -> Traceability5.mmObject();
 			isDerived = false;
 			xmlTag = "PrtcolNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProtocolName";
 			definition = "Name of the outgoing protocol used by the node.";
 			maxOccurs = 1;
@@ -194,7 +196,7 @@ public class Traceability5 {
 			componentContext_lazy = () -> Traceability5.mmObject();
 			isDerived = false;
 			xmlTag = "PrtcolVrsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProtocolVersion";
 			definition = "Version of the protocol.";
 			maxOccurs = 1;
@@ -240,10 +242,10 @@ public class Traceability5 {
 			componentContext_lazy = () -> Traceability5.mmObject();
 			isDerived = false;
 			xmlTag = "TracDtTmIn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TraceDateTimeIn";
 			definition = "Date and time of incoming data exchange for relaying or processing.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Traceability2.mmTraceDateTimeIn;
+			previousVersion_lazy = () -> Traceability2.mmTraceDateTimeIn;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
@@ -287,10 +289,10 @@ public class Traceability5 {
 			componentContext_lazy = () -> Traceability5.mmObject();
 			isDerived = false;
 			xmlTag = "TracDtTmOut";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TraceDateTimeOut";
 			definition = "Date and time of the outgoing exchange for relaying or processing.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Traceability2.mmTraceDateTimeOut;
+			previousVersion_lazy = () -> Traceability2.mmTraceDateTimeOut;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
@@ -300,10 +302,9 @@ public class Traceability5 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Traceability5.mmRelayIdentification, com.tools20022.repository.msg.Traceability5.mmProtocolName,
-						com.tools20022.repository.msg.Traceability5.mmProtocolVersion, com.tools20022.repository.msg.Traceability5.mmTraceDateTimeIn, com.tools20022.repository.msg.Traceability5.mmTraceDateTimeOut);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(Traceability5.mmRelayIdentification, Traceability5.mmProtocolName, Traceability5.mmProtocolVersion, Traceability5.mmTraceDateTimeIn, Traceability5.mmTraceDateTimeOut);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Traceability5";
 				definition = "Identification of partners involved in exchange from the merchant to the issuer, with the relative timestamp of their exchanges.";
 				previousVersion_lazy = () -> Traceability2.mmObject();

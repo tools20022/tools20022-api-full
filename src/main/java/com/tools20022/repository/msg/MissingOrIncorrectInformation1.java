@@ -19,8 +19,10 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.UnableToApplyIncorrectInfo2Code;
 import com.tools20022.repository.codeset.UnableToApplyMissingInfo1Code;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -97,7 +99,7 @@ public class MissingOrIncorrectInformation1 {
 			componentContext_lazy = () -> MissingOrIncorrectInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "MssngInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MissingInformation";
 			definition = "Indicates the missing information.";
 			maxOccurs = 10;
@@ -139,7 +141,7 @@ public class MissingOrIncorrectInformation1 {
 			componentContext_lazy = () -> MissingOrIncorrectInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "IncrrctInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncorrectInformation";
 			definition = "Indicates the incorrect information.";
 			maxOccurs = 10;
@@ -151,9 +153,9 @@ public class MissingOrIncorrectInformation1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MissingOrIncorrectInformation1.mmMissingInformation, com.tools20022.repository.msg.MissingOrIncorrectInformation1.mmIncorrectInformation);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(MissingOrIncorrectInformation1.mmMissingInformation, MissingOrIncorrectInformation1.mmIncorrectInformation);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "MissingOrIncorrectInformation1";
 				definition = "Indicates the reason for the UnableToApply. It can be missing and/or incorrect information.";
 			}

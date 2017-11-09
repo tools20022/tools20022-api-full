@@ -19,6 +19,8 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -95,7 +97,7 @@ public class CustomerIdentification1 {
 			componentContext_lazy = () -> CustomerIdentification1.mmObject();
 			isDerived = false;
 			xmlTag = "Pty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Party";
 			definition = "Identifies the customer for the investigation.";
 			maxOccurs = 1;
@@ -140,7 +142,7 @@ public class CustomerIdentification1 {
 			componentContext_lazy = () -> CustomerIdentification1.mmObject();
 			isDerived = false;
 			xmlTag = "AuthrtyReq";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AuthorityRequest";
 			definition = "Specifies the authority request related to the identified investigation party.";
 			minOccurs = 1;
@@ -151,9 +153,9 @@ public class CustomerIdentification1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CustomerIdentification1.mmParty, com.tools20022.repository.msg.CustomerIdentification1.mmAuthorityRequest);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(CustomerIdentification1.mmParty, CustomerIdentification1.mmAuthorityRequest);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CustomerIdentification1";
 				definition = "Identifies a customer identification as the search criteria for the financial institution to do the investigation.";
 			}

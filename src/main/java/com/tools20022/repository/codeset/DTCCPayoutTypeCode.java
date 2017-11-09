@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -28,6 +30,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.DTCCPayoutType2Code
+ * DTCCPayoutType2Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.DTCCPayoutType1Code
+ * DTCCPayoutType1Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.DTCCPayoutType3Code
+ * DTCCPayoutType3Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.DTCCPayoutType4Code
+ * DTCCPayoutType4Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.DTCCPayoutType5Code
+ * DTCCPayoutType5Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>{@linkplain com.tools20022.repository.codeset.DTCCPayoutTypeCode#mmCash
@@ -70,21 +87,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.DTCCPayoutTypeCode#mmTaxCredit
  * DTCCPayoutTypeCode.mmTaxCredit}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.DTCCPayoutType2Code
- * DTCCPayoutType2Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.DTCCPayoutType1Code
- * DTCCPayoutType1Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.DTCCPayoutType3Code
- * DTCCPayoutType3Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.DTCCPayoutType4Code
- * DTCCPayoutType4Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.DTCCPayoutType5Code
- * DTCCPayoutType5Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -136,7 +138,7 @@ public class DTCCPayoutTypeCode {
 	 */
 	public static final MMCode mmCash = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cash";
 			definition = "Payout consisting of cash.";
 			owner_lazy = () -> DTCCPayoutTypeCode.mmObject();
@@ -166,7 +168,7 @@ public class DTCCPayoutTypeCode {
 	 */
 	public static final MMCode mmSecurities = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Securities";
 			definition = "Payout consisting of securities.";
 			owner_lazy = () -> DTCCPayoutTypeCode.mmObject();
@@ -199,7 +201,7 @@ public class DTCCPayoutTypeCode {
 	 */
 	public static final MMCode mmDividend = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Dividend";
 			definition = "Distribution of earnings to shareholders categorised by company as dividend.";
 			owner_lazy = () -> DTCCPayoutTypeCode.mmObject();
@@ -232,7 +234,7 @@ public class DTCCPayoutTypeCode {
 	 */
 	public static final MMCode mmReturnOfCapital = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReturnOfCapital";
 			definition = "Distribution that doesn't represent earnings and is categorized by the company as return of capital.";
 			owner_lazy = () -> DTCCPayoutTypeCode.mmObject();
@@ -265,7 +267,7 @@ public class DTCCPayoutTypeCode {
 	 */
 	public static final MMCode mmShortTermCapitalGains = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ShortTermCapitalGains";
 			definition = "Distribution of earnings to shareholders categorized by the company as short-term capital gains.";
 			owner_lazy = () -> DTCCPayoutTypeCode.mmObject();
@@ -298,7 +300,7 @@ public class DTCCPayoutTypeCode {
 	 */
 	public static final MMCode mmLongTermCapitalGains = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LongTermCapitalGains";
 			definition = "Distribution of earnings to shareholders categorized by the company as long-term capital gains.";
 			owner_lazy = () -> DTCCPayoutTypeCode.mmObject();
@@ -331,7 +333,7 @@ public class DTCCPayoutTypeCode {
 	 */
 	public static final MMCode mmCapitalGains = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CapitalGains";
 			definition = "Distribution of earnings to shareholders categorized by the company as capital gains.";
 			owner_lazy = () -> DTCCPayoutTypeCode.mmObject();
@@ -364,7 +366,7 @@ public class DTCCPayoutTypeCode {
 	 */
 	public static final MMCode mmPremium = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Premium";
 			definition = "Cash payment that is categorised by the issuer as premium, usually offered as incentive for early participation in an offer.";
 			owner_lazy = () -> DTCCPayoutTypeCode.mmObject();
@@ -397,7 +399,7 @@ public class DTCCPayoutTypeCode {
 	 */
 	public static final MMCode mmPrincipal = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Principal";
 			definition = "Cash payment on a debt instrument that represents a return of principal to the holder.";
 			owner_lazy = () -> DTCCPayoutTypeCode.mmObject();
@@ -430,7 +432,7 @@ public class DTCCPayoutTypeCode {
 	 */
 	public static final MMCode mmInterest = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Interest";
 			definition = "Cash payment on a debt instrument calculated using the coupon rate, principal and period of time.";
 			owner_lazy = () -> DTCCPayoutTypeCode.mmObject();
@@ -464,7 +466,7 @@ public class DTCCPayoutTypeCode {
 	 */
 	public static final MMCode mmFranked = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Franked";
 			definition = "In some markets, companies further categorize dividends as franked or unfranked. \"Franked\" means that a tax credit is attached to that part of the dividend.";
 			owner_lazy = () -> DTCCPayoutTypeCode.mmObject();
@@ -498,7 +500,7 @@ public class DTCCPayoutTypeCode {
 	 */
 	public static final MMCode mmUnfranked = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unfranked";
 			definition = "In some markets, companies further categorize dividends as franked or unfranked. \"Unfranked\" means that there is no tax credit attached to the dividend.";
 			owner_lazy = () -> DTCCPayoutTypeCode.mmObject();
@@ -528,7 +530,7 @@ public class DTCCPayoutTypeCode {
 	 */
 	public static final MMCode mmOther = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
 			definition = "Applies when a specific payout code cannot be used.";
 			owner_lazy = () -> DTCCPayoutTypeCode.mmObject();
@@ -558,7 +560,7 @@ public class DTCCPayoutTypeCode {
 	 */
 	public static final MMCode mmTaxCredit = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxCredit";
 			definition = "Payout consisting of a tax credit.";
 			owner_lazy = () -> DTCCPayoutTypeCode.mmObject();
@@ -569,16 +571,14 @@ public class DTCCPayoutTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CASH");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DTCCPayoutTypeCode";
 				definition = "Specifies DTCC (The Depository Trust and Clearing Corporation) defined payout types.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DTCCPayoutTypeCode.mmCash, com.tools20022.repository.codeset.DTCCPayoutTypeCode.mmSecurities,
-						com.tools20022.repository.codeset.DTCCPayoutTypeCode.mmDividend, com.tools20022.repository.codeset.DTCCPayoutTypeCode.mmReturnOfCapital, com.tools20022.repository.codeset.DTCCPayoutTypeCode.mmShortTermCapitalGains,
-						com.tools20022.repository.codeset.DTCCPayoutTypeCode.mmLongTermCapitalGains, com.tools20022.repository.codeset.DTCCPayoutTypeCode.mmCapitalGains, com.tools20022.repository.codeset.DTCCPayoutTypeCode.mmPremium,
-						com.tools20022.repository.codeset.DTCCPayoutTypeCode.mmPrincipal, com.tools20022.repository.codeset.DTCCPayoutTypeCode.mmInterest, com.tools20022.repository.codeset.DTCCPayoutTypeCode.mmFranked,
-						com.tools20022.repository.codeset.DTCCPayoutTypeCode.mmUnfranked, com.tools20022.repository.codeset.DTCCPayoutTypeCode.mmOther, com.tools20022.repository.codeset.DTCCPayoutTypeCode.mmTaxCredit);
+				code_lazy = () -> Arrays.asList(DTCCPayoutTypeCode.mmCash, DTCCPayoutTypeCode.mmSecurities, DTCCPayoutTypeCode.mmDividend, DTCCPayoutTypeCode.mmReturnOfCapital, DTCCPayoutTypeCode.mmShortTermCapitalGains,
+						DTCCPayoutTypeCode.mmLongTermCapitalGains, DTCCPayoutTypeCode.mmCapitalGains, DTCCPayoutTypeCode.mmPremium, DTCCPayoutTypeCode.mmPrincipal, DTCCPayoutTypeCode.mmInterest, DTCCPayoutTypeCode.mmFranked,
+						DTCCPayoutTypeCode.mmUnfranked, DTCCPayoutTypeCode.mmOther, DTCCPayoutTypeCode.mmTaxCredit);
 				derivation_lazy = () -> Arrays.asList(DTCCPayoutType2Code.mmObject(), DTCCPayoutType1Code.mmObject(), DTCCPayoutType3Code.mmObject(), DTCCPayoutType4Code.mmObject(), DTCCPayoutType5Code.mmObject());
 			}
 		});

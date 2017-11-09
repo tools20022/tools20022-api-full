@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.BalanceAdjustmentTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -86,7 +88,7 @@ public class BalanceAdjustmentType1Code extends BalanceAdjustmentTypeCode {
 	 */
 	public static final MMCode mmLedger = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Ledger";
 			owner_lazy = () -> BalanceAdjustmentType1Code.mmObject();
 		}
@@ -109,7 +111,7 @@ public class BalanceAdjustmentType1Code extends BalanceAdjustmentTypeCode {
 	 */
 	public static final MMCode mmFloat = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Float";
 			owner_lazy = () -> BalanceAdjustmentType1Code.mmObject();
 		}
@@ -132,7 +134,7 @@ public class BalanceAdjustmentType1Code extends BalanceAdjustmentTypeCode {
 	 */
 	public static final MMCode mmCollected = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Collected";
 			owner_lazy = () -> BalanceAdjustmentType1Code.mmObject();
 		}
@@ -141,13 +143,12 @@ public class BalanceAdjustmentType1Code extends BalanceAdjustmentTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("LDGR");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "BalanceAdjustmentType1Code";
 				definition = "Defines the type of allowed balance adjustment.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.BalanceAdjustmentType1Code.mmLedger, com.tools20022.repository.codeset.BalanceAdjustmentType1Code.mmFloat,
-						com.tools20022.repository.codeset.BalanceAdjustmentType1Code.mmCollected);
+				code_lazy = () -> Arrays.asList(BalanceAdjustmentType1Code.mmLedger, BalanceAdjustmentType1Code.mmFloat, BalanceAdjustmentType1Code.mmCollected);
 				trace_lazy = () -> BalanceAdjustmentTypeCode.mmObject();
 			}
 		});

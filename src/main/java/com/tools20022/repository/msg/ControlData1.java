@@ -19,8 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.camt.*;
 import com.tools20022.repository.datatype.DecimalNumber;
 import com.tools20022.repository.datatype.Max15NumericText;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -137,7 +140,7 @@ public class ControlData1 {
 			componentContext_lazy = () -> ControlData1.mmObject();
 			isDerived = false;
 			xmlTag = "NbOfTxs";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NumberOfTransactions";
 			definition = "Number of individual transactions contained in the message.";
 			maxOccurs = 1;
@@ -181,7 +184,7 @@ public class ControlData1 {
 			componentContext_lazy = () -> ControlData1.mmObject();
 			isDerived = false;
 			xmlTag = "CtrlSum";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ControlSum";
 			definition = "Total of all individual amounts included in the message, irrespective of currencies.";
 			maxOccurs = 1;
@@ -193,16 +196,13 @@ public class ControlData1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ControlData1.mmNumberOfTransactions, com.tools20022.repository.msg.ControlData1.mmControlSum);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.CustomerPaymentCancellationRequestV01.mmControlData,
-						com.tools20022.repository.area.camt.CustomerPaymentCancellationRequestV02.mmControlData, com.tools20022.repository.area.camt.CustomerPaymentCancellationRequestV03.mmControlData,
-						com.tools20022.repository.area.camt.FIToFIPaymentCancellationRequestV01.mmControlData, com.tools20022.repository.area.camt.FIToFIPaymentCancellationRequestV02.mmControlData,
-						com.tools20022.repository.area.camt.FIToFIPaymentCancellationRequestV03.mmControlData, com.tools20022.repository.area.camt.FIToFIPaymentCancellationRequestV04.mmControlData,
-						com.tools20022.repository.area.camt.CustomerPaymentCancellationRequestV04.mmControlData, com.tools20022.repository.area.camt.FIToFIPaymentCancellationRequestV05.mmControlData,
-						com.tools20022.repository.area.camt.CustomerPaymentCancellationRequestV05.mmControlData, com.tools20022.repository.area.camt.CustomerPaymentCancellationRequestV06.mmControlData,
-						com.tools20022.repository.area.camt.FIToFIPaymentCancellationRequestV06.mmControlData);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(ControlData1.mmNumberOfTransactions, ControlData1.mmControlSum);
+				messageBuildingBlock_lazy = () -> Arrays.asList(CustomerPaymentCancellationRequestV01.mmControlData, CustomerPaymentCancellationRequestV02.mmControlData, CustomerPaymentCancellationRequestV03.mmControlData,
+						FIToFIPaymentCancellationRequestV01.mmControlData, FIToFIPaymentCancellationRequestV02.mmControlData, FIToFIPaymentCancellationRequestV03.mmControlData, FIToFIPaymentCancellationRequestV04.mmControlData,
+						CustomerPaymentCancellationRequestV04.mmControlData, FIToFIPaymentCancellationRequestV05.mmControlData, CustomerPaymentCancellationRequestV05.mmControlData, CustomerPaymentCancellationRequestV06.mmControlData,
+						FIToFIPaymentCancellationRequestV06.mmControlData);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ControlData1";
 				definition = "Provides details of the number of transactions and the control sum of the message.";
 			}

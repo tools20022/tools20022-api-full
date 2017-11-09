@@ -20,10 +20,12 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.DateAndDateTimeChoice;
 import com.tools20022.repository.codeset.Priority4Code;
 import com.tools20022.repository.datatype.Max13AlphaNumericText;
 import com.tools20022.repository.datatype.Max6Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -114,7 +116,7 @@ public class IsabelPaymentHeader2 {
 			componentContext_lazy = () -> IsabelPaymentHeader2.mmObject();
 			isDerived = false;
 			xmlTag = "ActlSndrId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ActualSenderIdentification";
 			definition = "Unique identification of the actual sender of the file.";
 			maxOccurs = 1;
@@ -159,7 +161,7 @@ public class IsabelPaymentHeader2 {
 			componentContext_lazy = () -> IsabelPaymentHeader2.mmObject();
 			isDerived = false;
 			xmlTag = "SndrPKIId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SenderPKIIdentification";
 			definition = "Unique identification of the public key identification user identification of the sender of the file.";
 			maxOccurs = 1;
@@ -205,7 +207,7 @@ public class IsabelPaymentHeader2 {
 			componentContext_lazy = () -> IsabelPaymentHeader2.mmObject();
 			isDerived = false;
 			xmlTag = "CtrctId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ContractIdentification";
 			definition = "Administrative contract identification of the e-banking contract in which context this payment has been sent (and as such should be validated and executed).";
 			maxOccurs = 1;
@@ -247,7 +249,7 @@ public class IsabelPaymentHeader2 {
 			componentContext_lazy = () -> IsabelPaymentHeader2.mmObject();
 			isDerived = false;
 			xmlTag = "PyldCreDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PayloadCreationDate";
 			definition = "Date and time at which the file in the payload was actually created.";
 			maxOccurs = 1;
@@ -288,7 +290,7 @@ public class IsabelPaymentHeader2 {
 			componentContext_lazy = () -> IsabelPaymentHeader2.mmObject();
 			isDerived = false;
 			xmlTag = "File";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "File";
 			definition = "Characteristics of the file contained in the payload.";
 			maxOccurs = 1;
@@ -333,7 +335,7 @@ public class IsabelPaymentHeader2 {
 			componentContext_lazy = () -> IsabelPaymentHeader2.mmObject();
 			isDerived = false;
 			xmlTag = "QlfdTxTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QualifiedTransactionType";
 			definition = "High level category of transactions provided in the payload file, such as a salary payment.";
 			maxOccurs = 1;
@@ -375,7 +377,7 @@ public class IsabelPaymentHeader2 {
 			componentContext_lazy = () -> IsabelPaymentHeader2.mmObject();
 			isDerived = false;
 			xmlTag = "UrgcyCd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UrgencyCode";
 			definition = "Urgency level of file in the payload.";
 			maxOccurs = 1;
@@ -416,7 +418,7 @@ public class IsabelPaymentHeader2 {
 			componentContext_lazy = () -> IsabelPaymentHeader2.mmObject();
 			isDerived = false;
 			xmlTag = "Nhncd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Enhanced";
 			definition = "Enhanced parameters for an Isabel payment initiation file.";
 			maxOccurs = 1;
@@ -429,11 +431,10 @@ public class IsabelPaymentHeader2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IsabelPaymentHeader2.mmActualSenderIdentification, com.tools20022.repository.msg.IsabelPaymentHeader2.mmSenderPKIIdentification,
-						com.tools20022.repository.msg.IsabelPaymentHeader2.mmContractIdentification, com.tools20022.repository.msg.IsabelPaymentHeader2.mmPayloadCreationDate, com.tools20022.repository.msg.IsabelPaymentHeader2.mmFile,
-						com.tools20022.repository.msg.IsabelPaymentHeader2.mmQualifiedTransactionType, com.tools20022.repository.msg.IsabelPaymentHeader2.mmUrgencyCode, com.tools20022.repository.msg.IsabelPaymentHeader2.mmEnhanced);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(IsabelPaymentHeader2.mmActualSenderIdentification, IsabelPaymentHeader2.mmSenderPKIIdentification, IsabelPaymentHeader2.mmContractIdentification,
+						IsabelPaymentHeader2.mmPayloadCreationDate, IsabelPaymentHeader2.mmFile, IsabelPaymentHeader2.mmQualifiedTransactionType, IsabelPaymentHeader2.mmUrgencyCode, IsabelPaymentHeader2.mmEnhanced);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "IsabelPaymentHeader2";
 				definition = "Specifies the header information for a payment initiation file.";
 			}

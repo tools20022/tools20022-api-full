@@ -18,8 +18,10 @@
 package com.tools20022.repository.area;
 
 import com.tools20022.metamodel.MMBusinessArea;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.colr.CollateralProposalResponseV03;
 import com.tools20022.repository.area.colr.CollateralProposalV03;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -28,8 +30,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessArea#getCode code} =
- * "colr"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessArea#getMessageDefinition
  * messageDefinition} =
  * <ul>
@@ -40,6 +40,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * CollateralProposalV03}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessArea#getCode code} =
+ * "colr"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelCatalogueEntry#getBusinessProcessCatalogue
  * businessProcessCatalogue} =
@@ -62,8 +64,8 @@ public class CollateralManagementArchive {
 	final static public MMBusinessArea mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessArea() {
 			{
-				businessProcessCatalogue_lazy = () -> com.tools20022.repository.GeneratedRepository.mmcatalogue;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				businessProcessCatalogue_lazy = () -> GeneratedRepository.mmcatalogue;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Collateral Management - Archive - master";
 				definition = "Messages that support collateral management actions";
 				messageDefinition_lazy = () -> Arrays.asList(CollateralProposalResponseV03.mmObject(), CollateralProposalV03.mmObject());

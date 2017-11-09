@@ -20,9 +20,11 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.FinancialInstrumentQuantity15Choice;
 import com.tools20022.repository.codeset.ShortLong1Code;
 import com.tools20022.repository.entity.SecuritiesBalance;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -100,11 +102,11 @@ public class SignedQuantityFormat9 {
 	 */
 	public static final MMMessageAttribute mmShortLongPosition = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesBalance.mmShortLong;
+			businessElementTrace_lazy = () -> SecuritiesBalance.mmShortLong;
 			componentContext_lazy = () -> SignedQuantityFormat9.mmObject();
 			isDerived = false;
 			xmlTag = "ShrtLngPos";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ShortLongPosition";
 			definition = "Sign of the quantity of security.";
 			maxOccurs = 1;
@@ -147,11 +149,11 @@ public class SignedQuantityFormat9 {
 	 */
 	public static final MMMessageAssociationEnd mmQuantity = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesBalance.mmAggregateQuantity;
+			businessElementTrace_lazy = () -> SecuritiesBalance.mmAggregateQuantity;
 			componentContext_lazy = () -> SignedQuantityFormat9.mmObject();
 			isDerived = false;
 			xmlTag = "Qty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Quantity";
 			definition = "Quantity of security.";
 			maxOccurs = 1;
@@ -164,10 +166,10 @@ public class SignedQuantityFormat9 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SignedQuantityFormat9.mmShortLongPosition, com.tools20022.repository.msg.SignedQuantityFormat9.mmQuantity);
+				messageElement_lazy = () -> Arrays.asList(SignedQuantityFormat9.mmShortLongPosition, SignedQuantityFormat9.mmQuantity);
 				trace_lazy = () -> SecuritiesBalance.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SignedQuantityFormat9";
 				definition = "Signed quantity of security formats.";
 			}

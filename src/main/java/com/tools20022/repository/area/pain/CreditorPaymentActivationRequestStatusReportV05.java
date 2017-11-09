@@ -20,6 +20,7 @@ package com.tools20022.repository.area.pain;
 import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.PaymentsInitiationPreviousVersion;
 import com.tools20022.repository.msg.GroupHeader46;
 import com.tools20022.repository.msg.OriginalGroupInformation25;
@@ -38,6 +39,9 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code pain.014.001.05}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.PaymentsInitiationPreviousVersion
@@ -74,9 +78,6 @@ import java.util.List;
  * CreditorPaymentActivationRequestStatusReportV05.mmSupplementaryData}</li>
  * </ul>
  * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code pain.014.001.05}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -146,11 +147,11 @@ public class CreditorPaymentActivationRequestStatusReportV05 {
 	public static final MMMessageBuildingBlock mmGroupHeader = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "GrpHdr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GroupHeader";
 			definition = "Set of characteristics shared by all individual transactions included in the message.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.pain.CreditorPaymentActivationRequestStatusReportV06.mmGroupHeader);
-			previousVersion_lazy = () -> com.tools20022.repository.area.pain.CreditorPaymentActivationRequestStatusReportV04.mmGroupHeader;
+			nextVersions_lazy = () -> Arrays.asList(CreditorPaymentActivationRequestStatusReportV06.mmGroupHeader);
+			previousVersion_lazy = () -> CreditorPaymentActivationRequestStatusReportV04.mmGroupHeader;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GroupHeader46.mmObject();
@@ -201,11 +202,11 @@ public class CreditorPaymentActivationRequestStatusReportV05 {
 	public static final MMMessageBuildingBlock mmOriginalGroupInformationAndStatus = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "OrgnlGrpInfAndSts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalGroupInformationAndStatus";
 			definition = "Original group information concerning the group of transactions, to which the status report message refers to.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.pain.CreditorPaymentActivationRequestStatusReportV06.mmOriginalGroupInformationAndStatus);
-			previousVersion_lazy = () -> com.tools20022.repository.area.pain.CreditorPaymentActivationRequestStatusReportV04.mmOriginalGroupInformationAndStatus;
+			nextVersions_lazy = () -> Arrays.asList(CreditorPaymentActivationRequestStatusReportV06.mmOriginalGroupInformationAndStatus);
+			previousVersion_lazy = () -> CreditorPaymentActivationRequestStatusReportV04.mmOriginalGroupInformationAndStatus;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> OriginalGroupInformation25.mmObject();
@@ -256,11 +257,11 @@ public class CreditorPaymentActivationRequestStatusReportV05 {
 	public static final MMMessageBuildingBlock mmOriginalPaymentInformationAndStatus = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "OrgnlPmtInfAndSts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalPaymentInformationAndStatus";
 			definition = "Information concerning the original payment information, to which the status report message refers.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.pain.CreditorPaymentActivationRequestStatusReportV06.mmOriginalPaymentInformationAndStatus);
-			previousVersion_lazy = () -> com.tools20022.repository.area.pain.CreditorPaymentActivationRequestStatusReportV04.mmOriginalPaymentInformationAndStatus;
+			nextVersions_lazy = () -> Arrays.asList(CreditorPaymentActivationRequestStatusReportV06.mmOriginalPaymentInformationAndStatus);
+			previousVersion_lazy = () -> CreditorPaymentActivationRequestStatusReportV04.mmOriginalPaymentInformationAndStatus;
 			minOccurs = 0;
 			complexType_lazy = () -> OriginalPaymentInstruction19.mmObject();
 		}
@@ -308,11 +309,11 @@ public class CreditorPaymentActivationRequestStatusReportV05 {
 	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SplmtryData";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryData";
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.pain.CreditorPaymentActivationRequestStatusReportV06.mmSupplementaryData);
-			previousVersion_lazy = () -> com.tools20022.repository.area.pain.CreditorPaymentActivationRequestStatusReportV04.mmSupplementaryData;
+			nextVersions_lazy = () -> Arrays.asList(CreditorPaymentActivationRequestStatusReportV06.mmSupplementaryData);
+			previousVersion_lazy = () -> CreditorPaymentActivationRequestStatusReportV04.mmSupplementaryData;
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
@@ -321,7 +322,7 @@ public class CreditorPaymentActivationRequestStatusReportV05 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CreditorPaymentActivationRequestStatusReportV05";
 				definition = "The CreditorPaymentActivationRequestStatusReport message is sent by a party to the next party in the creditor payment activation request chain. It is used to inform the latter about the positive or negative status of a creditor payment activation request (either single or file).";
 				nextVersions_lazy = () -> Arrays.asList(CreditorPaymentActivationRequestStatusReportV06.mmObject());
@@ -330,10 +331,8 @@ public class CreditorPaymentActivationRequestStatusReportV05 {
 				rootElement = "Document";
 				xmlTag = "CdtrPmtActvtnReqStsRpt";
 				businessArea_lazy = () -> PaymentsInitiationPreviousVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.pain.CreditorPaymentActivationRequestStatusReportV05.mmGroupHeader,
-						com.tools20022.repository.area.pain.CreditorPaymentActivationRequestStatusReportV05.mmOriginalGroupInformationAndStatus,
-						com.tools20022.repository.area.pain.CreditorPaymentActivationRequestStatusReportV05.mmOriginalPaymentInformationAndStatus,
-						com.tools20022.repository.area.pain.CreditorPaymentActivationRequestStatusReportV05.mmSupplementaryData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(CreditorPaymentActivationRequestStatusReportV05.mmGroupHeader, CreditorPaymentActivationRequestStatusReportV05.mmOriginalGroupInformationAndStatus,
+						CreditorPaymentActivationRequestStatusReportV05.mmOriginalPaymentInformationAndStatus, CreditorPaymentActivationRequestStatusReportV05.mmSupplementaryData);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "pain";

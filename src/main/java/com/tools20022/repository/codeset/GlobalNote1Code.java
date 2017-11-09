@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.GlobalNoteCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -85,7 +87,7 @@ public class GlobalNote1Code extends GlobalNoteCode {
 	 */
 	public static final MMCode mmNewGlobalNote = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewGlobalNote";
 			owner_lazy = () -> GlobalNote1Code.mmObject();
 		}
@@ -108,7 +110,7 @@ public class GlobalNote1Code extends GlobalNoteCode {
 	 */
 	public static final MMCode mmClassicalGlobalNote = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClassicalGlobalNote";
 			owner_lazy = () -> GlobalNote1Code.mmObject();
 		}
@@ -117,12 +119,12 @@ public class GlobalNote1Code extends GlobalNoteCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("NGNO");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "GlobalNote1Code";
 				definition = "Identifies if the security will be issued in New Global Note (NGN) or Classical Global Note (CGN).";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.GlobalNote1Code.mmNewGlobalNote, com.tools20022.repository.codeset.GlobalNote1Code.mmClassicalGlobalNote);
+				code_lazy = () -> Arrays.asList(GlobalNote1Code.mmNewGlobalNote, GlobalNote1Code.mmClassicalGlobalNote);
 				trace_lazy = () -> GlobalNoteCode.mmObject();
 			}
 		});

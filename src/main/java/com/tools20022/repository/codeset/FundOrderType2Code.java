@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.FundOrderTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -94,7 +96,7 @@ public class FundOrderType2Code extends FundOrderTypeCode {
 	 */
 	public static final MMCode mmBedAndBreakfast = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BedAndBreakfast";
 			owner_lazy = () -> FundOrderType2Code.mmObject();
 		}
@@ -117,7 +119,7 @@ public class FundOrderType2Code extends FundOrderTypeCode {
 	 */
 	public static final MMCode mmInvestmentPlan = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestmentPlan";
 			owner_lazy = () -> FundOrderType2Code.mmObject();
 		}
@@ -140,7 +142,7 @@ public class FundOrderType2Code extends FundOrderTypeCode {
 	 */
 	public static final MMCode mmPreAdvice = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreAdvice";
 			owner_lazy = () -> FundOrderType2Code.mmObject();
 		}
@@ -163,7 +165,7 @@ public class FundOrderType2Code extends FundOrderTypeCode {
 	 */
 	public static final MMCode mmStaffOrder = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StaffOrder";
 			owner_lazy = () -> FundOrderType2Code.mmObject();
 		}
@@ -186,7 +188,7 @@ public class FundOrderType2Code extends FundOrderTypeCode {
 	 */
 	public static final MMCode mmRegularSavingsPlan = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RegularSavingsPlan";
 			owner_lazy = () -> FundOrderType2Code.mmObject();
 		}
@@ -209,7 +211,7 @@ public class FundOrderType2Code extends FundOrderTypeCode {
 	 */
 	public static final MMCode mmOther = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
 			owner_lazy = () -> FundOrderType2Code.mmObject();
 		}
@@ -218,14 +220,13 @@ public class FundOrderType2Code extends FundOrderTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("BEDB");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FundOrderType2Code";
 				definition = "Specifies the category of the investment fund order.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.FundOrderType2Code.mmBedAndBreakfast, com.tools20022.repository.codeset.FundOrderType2Code.mmInvestmentPlan,
-						com.tools20022.repository.codeset.FundOrderType2Code.mmPreAdvice, com.tools20022.repository.codeset.FundOrderType2Code.mmStaffOrder, com.tools20022.repository.codeset.FundOrderType2Code.mmRegularSavingsPlan,
-						com.tools20022.repository.codeset.FundOrderType2Code.mmOther);
+				code_lazy = () -> Arrays.asList(FundOrderType2Code.mmBedAndBreakfast, FundOrderType2Code.mmInvestmentPlan, FundOrderType2Code.mmPreAdvice, FundOrderType2Code.mmStaffOrder, FundOrderType2Code.mmRegularSavingsPlan,
+						FundOrderType2Code.mmOther);
 				trace_lazy = () -> FundOrderTypeCode.mmObject();
 			}
 		});

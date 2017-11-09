@@ -20,8 +20,10 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -123,7 +125,7 @@ public class DirectoryParticipantInformation1 {
 			componentContext_lazy = () -> DirectoryParticipantInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "PtcptNmAndAdr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ParticipantNameAndAddress";
 			definition = "Name and address as in participant profile.";
 			maxOccurs = 1;
@@ -165,7 +167,7 @@ public class DirectoryParticipantInformation1 {
 			componentContext_lazy = () -> DirectoryParticipantInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "AcctSvcr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountServicer";
 			definition = "Branch and Head branch of the CBR servicing the account.";
 			maxOccurs = 1;
@@ -207,7 +209,7 @@ public class DirectoryParticipantInformation1 {
 			componentContext_lazy = () -> DirectoryParticipantInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "DrctPtcpt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DirectParticipant";
 			definition = "Direct participant of the CBR payment system.";
 			maxOccurs = 1;
@@ -249,7 +251,7 @@ public class DirectoryParticipantInformation1 {
 			componentContext_lazy = () -> DirectoryParticipantInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "NtryCreDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EntryCreationDate";
 			definition = "Date when the entry was created.";
 			maxOccurs = 1;
@@ -290,7 +292,7 @@ public class DirectoryParticipantInformation1 {
 			componentContext_lazy = () -> DirectoryParticipantInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "NtryDeltnDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EntryDeletionDate";
 			definition = "Date entry was deleted.";
 			maxOccurs = 1;
@@ -331,7 +333,7 @@ public class DirectoryParticipantInformation1 {
 			componentContext_lazy = () -> DirectoryParticipantInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "SvcrTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ServicerType";
 			definition = "Specifies the type of the funds transfer participant.";
 			maxOccurs = 1;
@@ -373,7 +375,7 @@ public class DirectoryParticipantInformation1 {
 			componentContext_lazy = () -> DirectoryParticipantInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "SvcTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ServiceType";
 			definition = "Specifies available types of the funds transfer services.";
 			maxOccurs = 1;
@@ -415,7 +417,7 @@ public class DirectoryParticipantInformation1 {
 			componentContext_lazy = () -> DirectoryParticipantInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "XchgTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExchangeType";
 			definition = "Specifies whether the participant is a member of the exchange.";
 			maxOccurs = 1;
@@ -456,7 +458,7 @@ public class DirectoryParticipantInformation1 {
 			componentContext_lazy = () -> DirectoryParticipantInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "RstrctnTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RestrictionType";
 			definition = "Type of the restriction applied.";
 			maxOccurs = 1;
@@ -497,7 +499,7 @@ public class DirectoryParticipantInformation1 {
 			componentContext_lazy = () -> DirectoryParticipantInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "RstrctnFctvDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RestrictionEffectiveDate";
 			definition = "Effective date of the restriction.";
 			maxOccurs = 1;
@@ -538,7 +540,7 @@ public class DirectoryParticipantInformation1 {
 			componentContext_lazy = () -> DirectoryParticipantInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "PtcptId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ParticipantIdentification";
 			definition = "Identifier of participant.";
 			maxOccurs = 1;
@@ -579,7 +581,7 @@ public class DirectoryParticipantInformation1 {
 			componentContext_lazy = () -> DirectoryParticipantInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "MgrtnDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MigrationDetails";
 			definition = "Details related to migration to new payment system.";
 			maxOccurs = 1;
@@ -592,14 +594,12 @@ public class DirectoryParticipantInformation1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DirectoryParticipantInformation1.mmParticipantNameAndAddress, com.tools20022.repository.msg.DirectoryParticipantInformation1.mmAccountServicer,
-						com.tools20022.repository.msg.DirectoryParticipantInformation1.mmDirectParticipant, com.tools20022.repository.msg.DirectoryParticipantInformation1.mmEntryCreationDate,
-						com.tools20022.repository.msg.DirectoryParticipantInformation1.mmEntryDeletionDate, com.tools20022.repository.msg.DirectoryParticipantInformation1.mmServicerType,
-						com.tools20022.repository.msg.DirectoryParticipantInformation1.mmServiceType, com.tools20022.repository.msg.DirectoryParticipantInformation1.mmExchangeType,
-						com.tools20022.repository.msg.DirectoryParticipantInformation1.mmRestrictionType, com.tools20022.repository.msg.DirectoryParticipantInformation1.mmRestrictionEffectiveDate,
-						com.tools20022.repository.msg.DirectoryParticipantInformation1.mmParticipantIdentification, com.tools20022.repository.msg.DirectoryParticipantInformation1.mmMigrationDetails);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(DirectoryParticipantInformation1.mmParticipantNameAndAddress, DirectoryParticipantInformation1.mmAccountServicer, DirectoryParticipantInformation1.mmDirectParticipant,
+						DirectoryParticipantInformation1.mmEntryCreationDate, DirectoryParticipantInformation1.mmEntryDeletionDate, DirectoryParticipantInformation1.mmServicerType, DirectoryParticipantInformation1.mmServiceType,
+						DirectoryParticipantInformation1.mmExchangeType, DirectoryParticipantInformation1.mmRestrictionType, DirectoryParticipantInformation1.mmRestrictionEffectiveDate,
+						DirectoryParticipantInformation1.mmParticipantIdentification, DirectoryParticipantInformation1.mmMigrationDetails);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "DirectoryParticipantInformation1";
 				definition = "Information from the National BIC Directory.";
 			}

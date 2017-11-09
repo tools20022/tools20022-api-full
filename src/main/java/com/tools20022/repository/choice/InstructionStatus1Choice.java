@@ -19,7 +19,11 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.seev.MeetingInstructionStatusV02;
 import com.tools20022.repository.entity.MeetingStatus;
+import com.tools20022.repository.entity.Status;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.DetailedInstructionStatus1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -110,11 +114,11 @@ public class InstructionStatus1Choice {
 	 */
 	public static final MMMessageAssociationEnd mmGlobalInstructionStatus = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.mmTransactionProcessingStatus;
+			businessElementTrace_lazy = () -> Status.mmTransactionProcessingStatus;
 			componentContext_lazy = () -> InstructionStatus1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "GblInstrSts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GlobalInstructionStatus";
 			definition = "Status applying globally to the instruction received. The instruction is identified by the InstructionIdentification.";
 			maxOccurs = 1;
@@ -159,11 +163,11 @@ public class InstructionStatus1Choice {
 	 */
 	public static final MMMessageAssociationEnd mmDetailedInstructionStatus = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.mmTransactionProcessingStatus;
+			businessElementTrace_lazy = () -> Status.mmTransactionProcessingStatus;
 			componentContext_lazy = () -> InstructionStatus1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "DtldInstrSts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DetailedInstructionStatus";
 			definition = "Status applying to individual instructions of a MeetingInstruction.";
 			minOccurs = 1;
@@ -175,11 +179,11 @@ public class InstructionStatus1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.InstructionStatus1Choice.mmGlobalInstructionStatus, com.tools20022.repository.choice.InstructionStatus1Choice.mmDetailedInstructionStatus);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.MeetingInstructionStatusV02.mmInstructionStatus);
+				messageElement_lazy = () -> Arrays.asList(InstructionStatus1Choice.mmGlobalInstructionStatus, InstructionStatus1Choice.mmDetailedInstructionStatus);
+				messageBuildingBlock_lazy = () -> Arrays.asList(MeetingInstructionStatusV02.mmInstructionStatus);
 				trace_lazy = () -> MeetingStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InstructionStatus1Choice";
 				definition = "Status applying to the instruction request received.";
 			}

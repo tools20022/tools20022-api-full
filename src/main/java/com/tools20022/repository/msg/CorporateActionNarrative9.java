@@ -19,8 +19,12 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max350Text;
+import com.tools20022.repository.entity.BiddingConditions;
 import com.tools20022.repository.entity.CorporateActionEvent;
+import com.tools20022.repository.entity.Role;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -107,7 +111,7 @@ public class CorporateActionNarrative9 {
 			componentContext_lazy = () -> CorporateActionNarrative9.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlTxt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalText";
 			definition = "Provides additional information or specifies in more detail the content of a message. This field may only be used when the information to be transmitted, cannot be coded.";
 			minOccurs = 0;
@@ -153,11 +157,11 @@ public class CorporateActionNarrative9 {
 	 */
 	public static final MMMessageAttribute mmInformationConditions = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmInformationConditions;
+			businessElementTrace_lazy = () -> CorporateActionEvent.mmInformationConditions;
 			componentContext_lazy = () -> CorporateActionNarrative9.mmObject();
 			isDerived = false;
 			xmlTag = "InfConds";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InformationConditions";
 			definition = "Provides conditional information related to the event, for example, an offer is subject to 50 percent acceptance, the offeror allows the securities holder to set some conditions.";
 			minOccurs = 0;
@@ -204,11 +208,11 @@ public class CorporateActionNarrative9 {
 	 */
 	public static final MMMessageAttribute mmInformationToComplyWith = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BiddingConditions.mmInformationToComplyWith;
+			businessElementTrace_lazy = () -> BiddingConditions.mmInformationToComplyWith;
 			componentContext_lazy = () -> CorporateActionNarrative9.mmObject();
 			isDerived = false;
 			xmlTag = "InfToCmplyWth";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InformationToComplyWith";
 			definition = "Provides information conditions to the account owner that are to be complied with, for example, not open to US/Canadian residents, Qualified Institutional Buyers (QIB) or Sophisticated Investor Letter (SIL) to be provided.";
 			minOccurs = 0;
@@ -254,11 +258,11 @@ public class CorporateActionNarrative9 {
 	 */
 	public static final MMMessageAttribute mmPartyContactNarrative = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Role.mmContactPersonRole;
+			businessElementTrace_lazy = () -> Role.mmContactPersonRole;
 			componentContext_lazy = () -> CorporateActionNarrative9.mmObject();
 			isDerived = false;
 			xmlTag = "PtyCtctNrrtv";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartyContactNarrative";
 			definition = "Provides additional information regarding the party, for example, the contact unit or person responsible for the transaction identified in the message.";
 			minOccurs = 0;
@@ -269,11 +273,11 @@ public class CorporateActionNarrative9 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionNarrative9.mmAdditionalText, com.tools20022.repository.msg.CorporateActionNarrative9.mmInformationConditions,
-						com.tools20022.repository.msg.CorporateActionNarrative9.mmInformationToComplyWith, com.tools20022.repository.msg.CorporateActionNarrative9.mmPartyContactNarrative);
+				messageElement_lazy = () -> Arrays.asList(CorporateActionNarrative9.mmAdditionalText, CorporateActionNarrative9.mmInformationConditions, CorporateActionNarrative9.mmInformationToComplyWith,
+						CorporateActionNarrative9.mmPartyContactNarrative);
 				trace_lazy = () -> CorporateActionEvent.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CorporateActionNarrative9";
 				definition = "Provides additional information such as the information conditions.";
 			}

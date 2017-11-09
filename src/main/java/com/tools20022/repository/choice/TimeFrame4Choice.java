@@ -19,8 +19,10 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.entity.TimeFrame;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -103,11 +105,11 @@ public class TimeFrame4Choice {
 	 */
 	public static final MMMessageAttribute mmTradePlus = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TimeFrame.mmTradePlus;
+			businessElementTrace_lazy = () -> TimeFrame.mmTradePlus;
 			componentContext_lazy = () -> TimeFrame4Choice.mmObject();
 			isDerived = false;
 			xmlTag = "TPlus";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradePlus";
 			definition = "An agreed number of days after the Trade date (T) used to define standard timeframes e.g T+3 settlement period. \n\nWhere = T is the date that the price is applied to a transaction.";
 			maxOccurs = 1;
@@ -154,11 +156,11 @@ public class TimeFrame4Choice {
 	 */
 	public static final MMMessageAttribute mmRenunciationPlus = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TimeFrame.mmRenunciationPlus;
+			businessElementTrace_lazy = () -> TimeFrame.mmRenunciationPlus;
 			componentContext_lazy = () -> TimeFrame4Choice.mmObject();
 			isDerived = false;
 			xmlTag = "RPlus";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RenunciationPlus";
 			definition = "An agreed number of days after the renunciation of title documents are received used to define standard timeframes in Redemption e.g R+3 Redemption settlement cycle.";
 			maxOccurs = 1;
@@ -170,10 +172,10 @@ public class TimeFrame4Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.TimeFrame4Choice.mmTradePlus, com.tools20022.repository.choice.TimeFrame4Choice.mmRenunciationPlus);
+				messageElement_lazy = () -> Arrays.asList(TimeFrame4Choice.mmTradePlus, TimeFrame4Choice.mmRenunciationPlus);
 				trace_lazy = () -> TimeFrame.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TimeFrame4Choice";
 				definition = "TimeFrame elements that define a period as number of days after an activity.";
 			}

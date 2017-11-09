@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.AccountUsageTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -83,7 +85,7 @@ public class AccountUsageType2Code extends AccountUsageTypeCode {
 	 */
 	public static final MMCode mmInvestor = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Investor";
 			owner_lazy = () -> AccountUsageType2Code.mmObject();
 		}
@@ -106,7 +108,7 @@ public class AccountUsageType2Code extends AccountUsageTypeCode {
 	 */
 	public static final MMCode mmIssuingParticipant = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssuingParticipant";
 			owner_lazy = () -> AccountUsageType2Code.mmObject();
 		}
@@ -129,7 +131,7 @@ public class AccountUsageType2Code extends AccountUsageTypeCode {
 	 */
 	public static final MMCode mmSettlementParticipant = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementParticipant";
 			owner_lazy = () -> AccountUsageType2Code.mmObject();
 		}
@@ -152,7 +154,7 @@ public class AccountUsageType2Code extends AccountUsageTypeCode {
 	 */
 	public static final MMCode mmTradingParticipant = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradingParticipant";
 			owner_lazy = () -> AccountUsageType2Code.mmObject();
 		}
@@ -161,12 +163,11 @@ public class AccountUsageType2Code extends AccountUsageTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AccountUsageType2Code";
 				definition = "Specifies the type of usage of the account.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AccountUsageType2Code.mmInvestor, com.tools20022.repository.codeset.AccountUsageType2Code.mmIssuingParticipant,
-						com.tools20022.repository.codeset.AccountUsageType2Code.mmSettlementParticipant, com.tools20022.repository.codeset.AccountUsageType2Code.mmTradingParticipant);
+				code_lazy = () -> Arrays.asList(AccountUsageType2Code.mmInvestor, AccountUsageType2Code.mmIssuingParticipant, AccountUsageType2Code.mmSettlementParticipant, AccountUsageType2Code.mmTradingParticipant);
 				trace_lazy = () -> AccountUsageTypeCode.mmObject();
 			}
 		});

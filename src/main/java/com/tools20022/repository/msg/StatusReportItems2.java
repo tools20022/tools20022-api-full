@@ -20,9 +20,13 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.tsmt.StatusReportV03;
 import com.tools20022.repository.codeset.BaselineStatus3Code;
 import com.tools20022.repository.datatype.Max140Text;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.entity.BaselineStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -112,7 +116,7 @@ public class StatusReportItems2 {
 			componentContext_lazy = () -> StatusReportItems2.mmObject();
 			isDerived = false;
 			xmlTag = "TxId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionIdentification";
 			definition = "Unique identification assigned by the matching application to the transaction.\nThis identification is to be used in any communication between the parties.";
 			maxOccurs = 1;
@@ -153,7 +157,7 @@ public class StatusReportItems2 {
 			componentContext_lazy = () -> StatusReportItems2.mmObject();
 			isDerived = false;
 			xmlTag = "RptdNtty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportedEntity";
 			definition = "Entity for which the matching application has generated a report.";
 			maxOccurs = 2;
@@ -199,11 +203,11 @@ public class StatusReportItems2 {
 	 */
 	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BaselineStatus.mmStatus;
+			businessElementTrace_lazy = () -> BaselineStatus.mmStatus;
 			componentContext_lazy = () -> StatusReportItems2.mmObject();
 			isDerived = false;
 			xmlTag = "Sts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Status";
 			definition = "Identifies the status of the transaction by means of a code.";
 			maxOccurs = 1;
@@ -244,7 +248,7 @@ public class StatusReportItems2 {
 			componentContext_lazy = () -> StatusReportItems2.mmObject();
 			isDerived = false;
 			xmlTag = "SubSts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubStatus";
 			definition = "Further description of the transaction status.";
 			maxOccurs = 1;
@@ -256,11 +260,10 @@ public class StatusReportItems2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StatusReportItems2.mmTransactionIdentification, com.tools20022.repository.msg.StatusReportItems2.mmReportedEntity,
-						com.tools20022.repository.msg.StatusReportItems2.mmStatus, com.tools20022.repository.msg.StatusReportItems2.mmSubStatus);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.StatusReportV03.mmReportedItems);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(StatusReportItems2.mmTransactionIdentification, StatusReportItems2.mmReportedEntity, StatusReportItems2.mmStatus, StatusReportItems2.mmSubStatus);
+				messageBuildingBlock_lazy = () -> Arrays.asList(StatusReportV03.mmReportedItems);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "StatusReportItems2";
 				definition = "Describes a transaction and its status.";
 			}

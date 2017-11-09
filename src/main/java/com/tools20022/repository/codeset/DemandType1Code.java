@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.DemandTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -81,7 +83,7 @@ public class DemandType1Code extends DemandTypeCode {
 	 */
 	public static final MMCode mmPayOnly = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PayOnly";
 			owner_lazy = () -> DemandType1Code.mmObject();
 		}
@@ -104,7 +106,7 @@ public class DemandType1Code extends DemandTypeCode {
 	 */
 	public static final MMCode mmPayOrExtend = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PayOrExtend";
 			owner_lazy = () -> DemandType1Code.mmObject();
 		}
@@ -113,12 +115,12 @@ public class DemandType1Code extends DemandTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("PAYM");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DemandType1Code";
 				definition = "Specifies the type of demand for payment";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DemandType1Code.mmPayOnly, com.tools20022.repository.codeset.DemandType1Code.mmPayOrExtend);
+				code_lazy = () -> Arrays.asList(DemandType1Code.mmPayOnly, DemandType1Code.mmPayOrExtend);
 				trace_lazy = () -> DemandTypeCode.mmObject();
 			}
 		});

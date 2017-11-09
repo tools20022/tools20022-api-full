@@ -19,9 +19,12 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.DecimalNumber;
 import com.tools20022.repository.datatype.MICIdentifier;
+import com.tools20022.repository.entity.OrganisationIdentification;
 import com.tools20022.repository.entity.TradingMarket;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -103,11 +106,11 @@ public class MarketDetail2 {
 	 */
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.mmMIC;
+			businessElementTrace_lazy = () -> OrganisationIdentification.mmMIC;
 			componentContext_lazy = () -> MarketDetail2.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Most relevant market in terms of liquidity as defined in the local regulation.";
 			maxOccurs = 1;
@@ -151,7 +154,7 @@ public class MarketDetail2 {
 			componentContext_lazy = () -> MarketDetail2.mmObject();
 			isDerived = false;
 			xmlTag = "AvrgDalyNbOfTxs";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AverageDailyNumberOfTransactions";
 			definition = "Average daily number of transactions that have been performed on the most relevant market in terms of liquidity.";
 			maxOccurs = 1;
@@ -163,10 +166,10 @@ public class MarketDetail2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MarketDetail2.mmIdentification, com.tools20022.repository.msg.MarketDetail2.mmAverageDailyNumberOfTransactions);
+				messageElement_lazy = () -> Arrays.asList(MarketDetail2.mmIdentification, MarketDetail2.mmAverageDailyNumberOfTransactions);
 				trace_lazy = () -> TradingMarket.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MarketDetail2";
 				definition = "Details specific to a market including which market identification and average number of transactions on the venue.";
 			}

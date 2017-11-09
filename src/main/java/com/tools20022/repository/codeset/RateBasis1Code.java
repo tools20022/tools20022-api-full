@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.RateBasisCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -78,7 +80,7 @@ public class RateBasis1Code extends RateBasisCode {
 	 */
 	public static final MMCode mmDays = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Days";
 			owner_lazy = () -> RateBasis1Code.mmObject();
 		}
@@ -101,7 +103,7 @@ public class RateBasis1Code extends RateBasisCode {
 	 */
 	public static final MMCode mmMonths = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Months";
 			owner_lazy = () -> RateBasis1Code.mmObject();
 		}
@@ -124,7 +126,7 @@ public class RateBasis1Code extends RateBasisCode {
 	 */
 	public static final MMCode mmWeeks = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Weeks";
 			owner_lazy = () -> RateBasis1Code.mmObject();
 		}
@@ -147,7 +149,7 @@ public class RateBasis1Code extends RateBasisCode {
 	 */
 	public static final MMCode mmYears = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Years";
 			owner_lazy = () -> RateBasis1Code.mmObject();
 		}
@@ -156,12 +158,11 @@ public class RateBasis1Code extends RateBasisCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RateBasis1Code";
 				definition = "Specifies a rate basis.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RateBasis1Code.mmDays, com.tools20022.repository.codeset.RateBasis1Code.mmMonths, com.tools20022.repository.codeset.RateBasis1Code.mmWeeks,
-						com.tools20022.repository.codeset.RateBasis1Code.mmYears);
+				code_lazy = () -> Arrays.asList(RateBasis1Code.mmDays, RateBasis1Code.mmMonths, RateBasis1Code.mmWeeks, RateBasis1Code.mmYears);
 				trace_lazy = () -> RateBasisCode.mmObject();
 			}
 		});

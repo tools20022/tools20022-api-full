@@ -19,7 +19,9 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.SecuritiesQuantity;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.FinancialInstrumentQuantitySearch1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -98,7 +100,7 @@ public class QuantitySearch1Choice {
 			componentContext_lazy = () -> QuantitySearch1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Qty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Quantity";
 			definition = "Quantity of financial instrument in units, original face amount or current face amount.";
 			maxOccurs = 1;
@@ -140,7 +142,7 @@ public class QuantitySearch1Choice {
 			componentContext_lazy = () -> QuantitySearch1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlAndCurFace";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalAndCurrentFace";
 			definition = "Original and current value of an asset-back instrument.";
 			maxOccurs = 1;
@@ -153,10 +155,10 @@ public class QuantitySearch1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.QuantitySearch1Choice.mmQuantity, com.tools20022.repository.choice.QuantitySearch1Choice.mmOriginalAndCurrentFace);
+				messageElement_lazy = () -> Arrays.asList(QuantitySearch1Choice.mmQuantity, QuantitySearch1Choice.mmOriginalAndCurrentFace);
 				trace_lazy = () -> SecuritiesQuantity.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "QuantitySearch1Choice";
 				definition = "Choice of format for the quantity.";
 			}

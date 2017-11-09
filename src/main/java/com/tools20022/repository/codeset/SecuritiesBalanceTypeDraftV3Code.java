@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType14Code
+ * SecuritiesBalanceType14Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -160,14 +170,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * SecuritiesBalanceTypeDraftV3Code.mmPurchasedInvestmentFundTaxGroupUnit2}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType14Code
- * SecuritiesBalanceType14Code}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -219,7 +221,7 @@ public class SecuritiesBalanceTypeDraftV3Code {
 	 */
 	public static final MMCode mmAvailableWithNoAdditionalStatus = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AvailableWithNoAdditionalStatus";
 			definition = "Balance of financial instruments that are freely available with no specific additional status.";
 			owner_lazy = () -> SecuritiesBalanceTypeDraftV3Code.mmObject();
@@ -249,7 +251,7 @@ public class SecuritiesBalanceTypeDraftV3Code {
 	 */
 	public static final MMCode mmBlocked = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Blocked";
 			definition = "Balance of financial instruments that are blocked.";
 			owner_lazy = () -> SecuritiesBalanceTypeDraftV3Code.mmObject();
@@ -279,7 +281,7 @@ public class SecuritiesBalanceTypeDraftV3Code {
 	 */
 	public static final MMCode mmAvailable = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Available";
 			definition = "Balance of financial instruments that are available.";
 			owner_lazy = () -> SecuritiesBalanceTypeDraftV3Code.mmObject();
@@ -312,7 +314,7 @@ public class SecuritiesBalanceTypeDraftV3Code {
 	 */
 	public static final MMCode mmBlockedCorporateAction = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BlockedCorporateAction";
 			definition = "Balance of financial instrument blocked following a corporate action, including proxy activities.";
 			owner_lazy = () -> SecuritiesBalanceTypeDraftV3Code.mmObject();
@@ -343,7 +345,7 @@ public class SecuritiesBalanceTypeDraftV3Code {
 	 */
 	public static final MMCode mmBlockedTrading = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BlockedTrading";
 			definition = "Balance of financial instruments that are blocked for trading.";
 			owner_lazy = () -> SecuritiesBalanceTypeDraftV3Code.mmObject();
@@ -376,7 +378,7 @@ public class SecuritiesBalanceTypeDraftV3Code {
 	 */
 	public static final MMCode mmBlockedAuthenticity = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BlockedAuthenticity";
 			definition = "Balance of financial instruments that are blocked for verification of authenticity.";
 			owner_lazy = () -> SecuritiesBalanceTypeDraftV3Code.mmObject();
@@ -409,7 +411,7 @@ public class SecuritiesBalanceTypeDraftV3Code {
 	 */
 	public static final MMCode mmBorrowed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Borrowed";
 			definition = "Balance of financial instruments that have been borrowed from another party.";
 			owner_lazy = () -> SecuritiesBalanceTypeDraftV3Code.mmObject();
@@ -442,7 +444,7 @@ public class SecuritiesBalanceTypeDraftV3Code {
 	 */
 	public static final MMCode mmPendingBorrowedDelivery = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingBorrowedDelivery";
 			definition = "Balance of financial instruments that are pending delivery in relation to a borrow transaction.";
 			owner_lazy = () -> SecuritiesBalanceTypeDraftV3Code.mmObject();
@@ -475,7 +477,7 @@ public class SecuritiesBalanceTypeDraftV3Code {
 	 */
 	public static final MMCode mmPendingBorrowedReceipt = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingBorrowedReceipt";
 			definition = "Balance of financial instruments that are pending receipt in relation to a borrow transaction.";
 			owner_lazy = () -> SecuritiesBalanceTypeDraftV3Code.mmObject();
@@ -508,7 +510,7 @@ public class SecuritiesBalanceTypeDraftV3Code {
 	 */
 	public static final MMCode mmCollateralIn = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralIn";
 			definition = "Balance of securities that belong to a third party and that are held for the purpose of collateralisation.";
 			owner_lazy = () -> SecuritiesBalanceTypeDraftV3Code.mmObject();
@@ -542,7 +544,7 @@ public class SecuritiesBalanceTypeDraftV3Code {
 	 */
 	public static final MMCode mmCollateralOut = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralOut";
 			definition = "Balance of securities that belong to the safekeeping account indicated within this message, and are deposited with a third party for the purpose of collateralisation.";
 			owner_lazy = () -> SecuritiesBalanceTypeDraftV3Code.mmObject();
@@ -574,7 +576,7 @@ public class SecuritiesBalanceTypeDraftV3Code {
 	 */
 	public static final MMCode mmEligibleForCollateralPurposes = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EligibleForCollateralPurposes";
 			definition = "Balance of securities that are eligible for use for collateral purposes.";
 			owner_lazy = () -> SecuritiesBalanceTypeDraftV3Code.mmObject();
@@ -604,7 +606,7 @@ public class SecuritiesBalanceTypeDraftV3Code {
 	 */
 	public static final MMCode mmOnLoan = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OnLoan";
 			definition = "Loan for consumption.";
 			owner_lazy = () -> SecuritiesBalanceTypeDraftV3Code.mmObject();
@@ -637,7 +639,7 @@ public class SecuritiesBalanceTypeDraftV3Code {
 	 */
 	public static final MMCode mmPendingOnLoanDelivery = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingOnLoanDelivery";
 			definition = "Balance of financial instruments that are pending delivery in relation to a lending transaction.";
 			owner_lazy = () -> SecuritiesBalanceTypeDraftV3Code.mmObject();
@@ -670,7 +672,7 @@ public class SecuritiesBalanceTypeDraftV3Code {
 	 */
 	public static final MMCode mmPendingOnLoanReceipt = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingOnLoanReceipt";
 			definition = "Balance of financial instruments that are pending receipt in relation to a lending transaction.";
 			owner_lazy = () -> SecuritiesBalanceTypeDraftV3Code.mmObject();
@@ -700,7 +702,7 @@ public class SecuritiesBalanceTypeDraftV3Code {
 	 */
 	public static final MMCode mmDerivativesMargin = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DerivativesMargin";
 			definition = "Account is used when financing is by the broker/dealer.";
 			owner_lazy = () -> SecuritiesBalanceTypeDraftV3Code.mmObject();
@@ -732,7 +734,7 @@ public class SecuritiesBalanceTypeDraftV3Code {
 	 */
 	public static final MMCode mmPendingDeliveryMatchedBalance = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingDeliveryMatchedBalance";
 			definition = "Balance of financial instruments pending delivery that have been matched.";
 			owner_lazy = () -> SecuritiesBalanceTypeDraftV3Code.mmObject();
@@ -765,7 +767,7 @@ public class SecuritiesBalanceTypeDraftV3Code {
 	 */
 	public static final MMCode mmPendingDeliveryUnmatchedBalance = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingDeliveryUnmatchedBalance";
 			definition = "Balance of financial instruments pending delivery that have been unmatched.";
 			owner_lazy = () -> SecuritiesBalanceTypeDraftV3Code.mmObject();
@@ -797,7 +799,7 @@ public class SecuritiesBalanceTypeDraftV3Code {
 	 */
 	public static final MMCode mmPendingReceiptMatchedBalance = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingReceiptMatchedBalance";
 			definition = "Balance of financial instruments pending receipt that have been matched.";
 			owner_lazy = () -> SecuritiesBalanceTypeDraftV3Code.mmObject();
@@ -828,7 +830,7 @@ public class SecuritiesBalanceTypeDraftV3Code {
 	 */
 	public static final MMCode mmPendingReceiptUnmatchedBalance = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingReceiptUnmatchedBalance";
 			definition = "Balance of financial instruments pending receipt that are unmatched.";
 			owner_lazy = () -> SecuritiesBalanceTypeDraftV3Code.mmObject();
@@ -861,7 +863,7 @@ public class SecuritiesBalanceTypeDraftV3Code {
 	 */
 	public static final MMCode mmPendingCorporateActionReceipt = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingCorporateActionReceipt";
 			definition = "Balance of financial instrument pending receipt following a corporate action.";
 			owner_lazy = () -> SecuritiesBalanceTypeDraftV3Code.mmObject();
@@ -894,7 +896,7 @@ public class SecuritiesBalanceTypeDraftV3Code {
 	 */
 	public static final MMCode mmPendingCorporateActionDelivery = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingCorporateActionDelivery";
 			definition = "Balance of financial instrument pending delivery following a corporate action.";
 			owner_lazy = () -> SecuritiesBalanceTypeDraftV3Code.mmObject();
@@ -924,7 +926,7 @@ public class SecuritiesBalanceTypeDraftV3Code {
 	 */
 	public static final MMCode mmPendingDelivery = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingDelivery";
 			definition = "Processing has not been completed.";
 			owner_lazy = () -> SecuritiesBalanceTypeDraftV3Code.mmObject();
@@ -957,7 +959,7 @@ public class SecuritiesBalanceTypeDraftV3Code {
 	 */
 	public static final MMCode mmPendingReceipt = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingReceipt";
 			definition = "The instruction is pending receipt of securities, for example, from a purchase, loan etc.";
 			owner_lazy = () -> SecuritiesBalanceTypeDraftV3Code.mmObject();
@@ -990,7 +992,7 @@ public class SecuritiesBalanceTypeDraftV3Code {
 	 */
 	public static final MMCode mmPledged = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Pledged";
 			definition = "Balance of securities that belong to and is kept in the safekeeping account indicated within this message, and that are pledged.";
 			owner_lazy = () -> SecuritiesBalanceTypeDraftV3Code.mmObject();
@@ -1024,7 +1026,7 @@ public class SecuritiesBalanceTypeDraftV3Code {
 	 */
 	public static final MMCode mmOutForRegistration = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OutForRegistration";
 			definition = "Balance of financial instruments currently being processed by the institution responsible for registering the new beneficial owner (or nominee).";
 			owner_lazy = () -> SecuritiesBalanceTypeDraftV3Code.mmObject();
@@ -1057,7 +1059,7 @@ public class SecuritiesBalanceTypeDraftV3Code {
 	 */
 	public static final MMCode mmRestricted = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Restricted";
 			definition = "Balance of financial instruments that may only be sold under certain conditions or require legal documents.";
 			owner_lazy = () -> SecuritiesBalanceTypeDraftV3Code.mmObject();
@@ -1087,7 +1089,7 @@ public class SecuritiesBalanceTypeDraftV3Code {
 	 */
 	public static final MMCode mmUnclassified = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unclassified";
 			definition = "Other. See Narrative.";
 			owner_lazy = () -> SecuritiesBalanceTypeDraftV3Code.mmObject();
@@ -1120,7 +1122,7 @@ public class SecuritiesBalanceTypeDraftV3Code {
 	 */
 	public static final MMCode mmInTransshipment = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InTransshipment";
 			definition = "Transaction has been generated due to transformation following a corporate action.";
 			owner_lazy = () -> SecuritiesBalanceTypeDraftV3Code.mmObject();
@@ -1150,7 +1152,7 @@ public class SecuritiesBalanceTypeDraftV3Code {
 	 */
 	public static final MMCode mmDrawn = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Drawn";
 			definition = "Settlement transactions relates to drawn securities.";
 			owner_lazy = () -> SecuritiesBalanceTypeDraftV3Code.mmObject();
@@ -1180,7 +1182,7 @@ public class SecuritiesBalanceTypeDraftV3Code {
 	 */
 	public static final MMCode mmTaxExempt = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxExempt";
 			definition = "Tax-exempt financial instruments are to be settled.";
 			owner_lazy = () -> SecuritiesBalanceTypeDraftV3Code.mmObject();
@@ -1210,7 +1212,7 @@ public class SecuritiesBalanceTypeDraftV3Code {
 	 */
 	public static final MMCode mmNonTaxExempt = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonTaxExempt";
 			definition = "Taxable financial instruments are to be settled.";
 			owner_lazy = () -> SecuritiesBalanceTypeDraftV3Code.mmObject();
@@ -1243,7 +1245,7 @@ public class SecuritiesBalanceTypeDraftV3Code {
 	 */
 	public static final MMCode mmRegistered = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Registered";
 			definition = "Balance of financial instruments that are registered (in nominee name or in the name of the beneficial owner).";
 			owner_lazy = () -> SecuritiesBalanceTypeDraftV3Code.mmObject();
@@ -1276,7 +1278,7 @@ public class SecuritiesBalanceTypeDraftV3Code {
 	 */
 	public static final MMCode mmStreetPosition = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StreetPosition";
 			definition = "Balance of financial instruments that remain registered in the name of the prior beneficial owner.";
 			owner_lazy = () -> SecuritiesBalanceTypeDraftV3Code.mmObject();
@@ -1309,7 +1311,7 @@ public class SecuritiesBalanceTypeDraftV3Code {
 	 */
 	public static final MMCode mmUnregistered = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unregistered";
 			definition = "Balance of securities that could not be registered due to foreign ownership limitation.";
 			owner_lazy = () -> SecuritiesBalanceTypeDraftV3Code.mmObject();
@@ -1343,7 +1345,7 @@ public class SecuritiesBalanceTypeDraftV3Code {
 	 */
 	public static final MMCode mmWaitingDocumentation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WaitingDocumentation";
 			definition = "Financial instrument is unavailable due to missing or incomplete documentation pertaining to the account, or due to a missing or incomplete order.";
 			owner_lazy = () -> SecuritiesBalanceTypeDraftV3Code.mmObject();
@@ -1376,7 +1378,7 @@ public class SecuritiesBalanceTypeDraftV3Code {
 	 */
 	public static final MMCode mmBeingTransferred = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BeingTransferred";
 			definition = "Financial instrument is unavailable as a result of a transfer order, pending movement in the shareholders' register.";
 			owner_lazy = () -> SecuritiesBalanceTypeDraftV3Code.mmObject();
@@ -1409,7 +1411,7 @@ public class SecuritiesBalanceTypeDraftV3Code {
 	 */
 	public static final MMCode mmIssued = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Issued";
 			definition = "In issuer agent / depository communication, balance of issued financial instruments for which legal documentation has been received.";
 			owner_lazy = () -> SecuritiesBalanceTypeDraftV3Code.mmObject();
@@ -1442,7 +1444,7 @@ public class SecuritiesBalanceTypeDraftV3Code {
 	 */
 	public static final MMCode mmQuasiIssued = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuasiIssued";
 			definition = "In Issuer Agent / Depository communication, balance of issued financial instruments for which legal documentation has not yet been received.";
 			owner_lazy = () -> SecuritiesBalanceTypeDraftV3Code.mmObject();
@@ -1475,7 +1477,7 @@ public class SecuritiesBalanceTypeDraftV3Code {
 	 */
 	public static final MMCode mmOverdueNetPending = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OverdueNetPending";
 			definition = "Net balance of financial instrument that is traded pending settlement and settlement is overdue.";
 			owner_lazy = () -> SecuritiesBalanceTypeDraftV3Code.mmObject();
@@ -1506,7 +1508,7 @@ public class SecuritiesBalanceTypeDraftV3Code {
 	 */
 	public static final MMCode mmNetPending = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetPending";
 			definition = "Net balance of financial instrument that is traded pending settlement.";
 			owner_lazy = () -> SecuritiesBalanceTypeDraftV3Code.mmObject();
@@ -1539,7 +1541,7 @@ public class SecuritiesBalanceTypeDraftV3Code {
 	 */
 	public static final MMCode mmPurchasedInvestmentFundTaxGroupUnit1 = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PurchasedInvestmentFundTaxGroupUnit1";
 			definition = "Purchased investment fund units that were purchased prior to the last ex-div date.\r\n";
 			owner_lazy = () -> SecuritiesBalanceTypeDraftV3Code.mmObject();
@@ -1572,7 +1574,7 @@ public class SecuritiesBalanceTypeDraftV3Code {
 	 */
 	public static final MMCode mmPurchasedInvestmentFundTaxGroupUnit2 = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PurchasedInvestmentFundTaxGroupUnit2";
 			definition = "Purchased investment fund units that were purchased since the ex-div date, and that benefit from the tax exemption.";
 			owner_lazy = () -> SecuritiesBalanceTypeDraftV3Code.mmObject();
@@ -1583,33 +1585,24 @@ public class SecuritiesBalanceTypeDraftV3Code {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("AWAS");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesBalanceTypeDraftV3Code";
 				definition = "Specifies the nature of the securities or investment fund balance.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SecuritiesBalanceTypeDraftV3Code.mmAvailableWithNoAdditionalStatus, com.tools20022.repository.codeset.SecuritiesBalanceTypeDraftV3Code.mmBlocked,
-						com.tools20022.repository.codeset.SecuritiesBalanceTypeDraftV3Code.mmAvailable, com.tools20022.repository.codeset.SecuritiesBalanceTypeDraftV3Code.mmBlockedCorporateAction,
-						com.tools20022.repository.codeset.SecuritiesBalanceTypeDraftV3Code.mmBlockedTrading, com.tools20022.repository.codeset.SecuritiesBalanceTypeDraftV3Code.mmBlockedAuthenticity,
-						com.tools20022.repository.codeset.SecuritiesBalanceTypeDraftV3Code.mmBorrowed, com.tools20022.repository.codeset.SecuritiesBalanceTypeDraftV3Code.mmPendingBorrowedDelivery,
-						com.tools20022.repository.codeset.SecuritiesBalanceTypeDraftV3Code.mmPendingBorrowedReceipt, com.tools20022.repository.codeset.SecuritiesBalanceTypeDraftV3Code.mmCollateralIn,
-						com.tools20022.repository.codeset.SecuritiesBalanceTypeDraftV3Code.mmCollateralOut, com.tools20022.repository.codeset.SecuritiesBalanceTypeDraftV3Code.mmEligibleForCollateralPurposes,
-						com.tools20022.repository.codeset.SecuritiesBalanceTypeDraftV3Code.mmOnLoan, com.tools20022.repository.codeset.SecuritiesBalanceTypeDraftV3Code.mmPendingOnLoanDelivery,
-						com.tools20022.repository.codeset.SecuritiesBalanceTypeDraftV3Code.mmPendingOnLoanReceipt, com.tools20022.repository.codeset.SecuritiesBalanceTypeDraftV3Code.mmDerivativesMargin,
-						com.tools20022.repository.codeset.SecuritiesBalanceTypeDraftV3Code.mmPendingDeliveryMatchedBalance, com.tools20022.repository.codeset.SecuritiesBalanceTypeDraftV3Code.mmPendingDeliveryUnmatchedBalance,
-						com.tools20022.repository.codeset.SecuritiesBalanceTypeDraftV3Code.mmPendingReceiptMatchedBalance, com.tools20022.repository.codeset.SecuritiesBalanceTypeDraftV3Code.mmPendingReceiptUnmatchedBalance,
-						com.tools20022.repository.codeset.SecuritiesBalanceTypeDraftV3Code.mmPendingCorporateActionReceipt, com.tools20022.repository.codeset.SecuritiesBalanceTypeDraftV3Code.mmPendingCorporateActionDelivery,
-						com.tools20022.repository.codeset.SecuritiesBalanceTypeDraftV3Code.mmPendingDelivery, com.tools20022.repository.codeset.SecuritiesBalanceTypeDraftV3Code.mmPendingReceipt,
-						com.tools20022.repository.codeset.SecuritiesBalanceTypeDraftV3Code.mmPledged, com.tools20022.repository.codeset.SecuritiesBalanceTypeDraftV3Code.mmOutForRegistration,
-						com.tools20022.repository.codeset.SecuritiesBalanceTypeDraftV3Code.mmRestricted, com.tools20022.repository.codeset.SecuritiesBalanceTypeDraftV3Code.mmUnclassified,
-						com.tools20022.repository.codeset.SecuritiesBalanceTypeDraftV3Code.mmInTransshipment, com.tools20022.repository.codeset.SecuritiesBalanceTypeDraftV3Code.mmDrawn,
-						com.tools20022.repository.codeset.SecuritiesBalanceTypeDraftV3Code.mmTaxExempt, com.tools20022.repository.codeset.SecuritiesBalanceTypeDraftV3Code.mmNonTaxExempt,
-						com.tools20022.repository.codeset.SecuritiesBalanceTypeDraftV3Code.mmRegistered, com.tools20022.repository.codeset.SecuritiesBalanceTypeDraftV3Code.mmStreetPosition,
-						com.tools20022.repository.codeset.SecuritiesBalanceTypeDraftV3Code.mmUnregistered, com.tools20022.repository.codeset.SecuritiesBalanceTypeDraftV3Code.mmWaitingDocumentation,
-						com.tools20022.repository.codeset.SecuritiesBalanceTypeDraftV3Code.mmBeingTransferred, com.tools20022.repository.codeset.SecuritiesBalanceTypeDraftV3Code.mmIssued,
-						com.tools20022.repository.codeset.SecuritiesBalanceTypeDraftV3Code.mmQuasiIssued, com.tools20022.repository.codeset.SecuritiesBalanceTypeDraftV3Code.mmOverdueNetPending,
-						com.tools20022.repository.codeset.SecuritiesBalanceTypeDraftV3Code.mmNetPending, com.tools20022.repository.codeset.SecuritiesBalanceTypeDraftV3Code.mmPurchasedInvestmentFundTaxGroupUnit1,
-						com.tools20022.repository.codeset.SecuritiesBalanceTypeDraftV3Code.mmPurchasedInvestmentFundTaxGroupUnit2);
+				code_lazy = () -> Arrays.asList(SecuritiesBalanceTypeDraftV3Code.mmAvailableWithNoAdditionalStatus, SecuritiesBalanceTypeDraftV3Code.mmBlocked, SecuritiesBalanceTypeDraftV3Code.mmAvailable,
+						SecuritiesBalanceTypeDraftV3Code.mmBlockedCorporateAction, SecuritiesBalanceTypeDraftV3Code.mmBlockedTrading, SecuritiesBalanceTypeDraftV3Code.mmBlockedAuthenticity, SecuritiesBalanceTypeDraftV3Code.mmBorrowed,
+						SecuritiesBalanceTypeDraftV3Code.mmPendingBorrowedDelivery, SecuritiesBalanceTypeDraftV3Code.mmPendingBorrowedReceipt, SecuritiesBalanceTypeDraftV3Code.mmCollateralIn,
+						SecuritiesBalanceTypeDraftV3Code.mmCollateralOut, SecuritiesBalanceTypeDraftV3Code.mmEligibleForCollateralPurposes, SecuritiesBalanceTypeDraftV3Code.mmOnLoan,
+						SecuritiesBalanceTypeDraftV3Code.mmPendingOnLoanDelivery, SecuritiesBalanceTypeDraftV3Code.mmPendingOnLoanReceipt, SecuritiesBalanceTypeDraftV3Code.mmDerivativesMargin,
+						SecuritiesBalanceTypeDraftV3Code.mmPendingDeliveryMatchedBalance, SecuritiesBalanceTypeDraftV3Code.mmPendingDeliveryUnmatchedBalance, SecuritiesBalanceTypeDraftV3Code.mmPendingReceiptMatchedBalance,
+						SecuritiesBalanceTypeDraftV3Code.mmPendingReceiptUnmatchedBalance, SecuritiesBalanceTypeDraftV3Code.mmPendingCorporateActionReceipt, SecuritiesBalanceTypeDraftV3Code.mmPendingCorporateActionDelivery,
+						SecuritiesBalanceTypeDraftV3Code.mmPendingDelivery, SecuritiesBalanceTypeDraftV3Code.mmPendingReceipt, SecuritiesBalanceTypeDraftV3Code.mmPledged, SecuritiesBalanceTypeDraftV3Code.mmOutForRegistration,
+						SecuritiesBalanceTypeDraftV3Code.mmRestricted, SecuritiesBalanceTypeDraftV3Code.mmUnclassified, SecuritiesBalanceTypeDraftV3Code.mmInTransshipment, SecuritiesBalanceTypeDraftV3Code.mmDrawn,
+						SecuritiesBalanceTypeDraftV3Code.mmTaxExempt, SecuritiesBalanceTypeDraftV3Code.mmNonTaxExempt, SecuritiesBalanceTypeDraftV3Code.mmRegistered, SecuritiesBalanceTypeDraftV3Code.mmStreetPosition,
+						SecuritiesBalanceTypeDraftV3Code.mmUnregistered, SecuritiesBalanceTypeDraftV3Code.mmWaitingDocumentation, SecuritiesBalanceTypeDraftV3Code.mmBeingTransferred, SecuritiesBalanceTypeDraftV3Code.mmIssued,
+						SecuritiesBalanceTypeDraftV3Code.mmQuasiIssued, SecuritiesBalanceTypeDraftV3Code.mmOverdueNetPending, SecuritiesBalanceTypeDraftV3Code.mmNetPending,
+						SecuritiesBalanceTypeDraftV3Code.mmPurchasedInvestmentFundTaxGroupUnit1, SecuritiesBalanceTypeDraftV3Code.mmPurchasedInvestmentFundTaxGroupUnit2);
 				derivation_lazy = () -> Arrays.asList(SecuritiesBalanceType14Code.mmObject());
 			}
 		});

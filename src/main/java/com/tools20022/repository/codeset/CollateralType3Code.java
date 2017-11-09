@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CollateralTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -99,7 +101,7 @@ public class CollateralType3Code extends CollateralTypeCode {
 	 */
 	public static final MMCode mmCash = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cash";
 			owner_lazy = () -> CollateralType3Code.mmObject();
 		}
@@ -122,7 +124,7 @@ public class CollateralType3Code extends CollateralTypeCode {
 	 */
 	public static final MMCode mmSecurities = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Securities";
 			owner_lazy = () -> CollateralType3Code.mmObject();
 		}
@@ -145,7 +147,7 @@ public class CollateralType3Code extends CollateralTypeCode {
 	 */
 	public static final MMCode mmPhysicalEntities = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PhysicalEntities";
 			owner_lazy = () -> CollateralType3Code.mmObject();
 		}
@@ -168,7 +170,7 @@ public class CollateralType3Code extends CollateralTypeCode {
 	 */
 	public static final MMCode mmInsurance = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Insurance";
 			owner_lazy = () -> CollateralType3Code.mmObject();
 		}
@@ -191,7 +193,7 @@ public class CollateralType3Code extends CollateralTypeCode {
 	 */
 	public static final MMCode mmStockCertificate = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StockCertificate";
 			owner_lazy = () -> CollateralType3Code.mmObject();
 		}
@@ -214,7 +216,7 @@ public class CollateralType3Code extends CollateralTypeCode {
 	 */
 	public static final MMCode mmBond = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Bond";
 			owner_lazy = () -> CollateralType3Code.mmObject();
 		}
@@ -237,7 +239,7 @@ public class CollateralType3Code extends CollateralTypeCode {
 	 */
 	public static final MMCode mmBankGuarantee = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BankGuarantee";
 			owner_lazy = () -> CollateralType3Code.mmObject();
 		}
@@ -260,7 +262,7 @@ public class CollateralType3Code extends CollateralTypeCode {
 	 */
 	public static final MMCode mmOther = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
 			owner_lazy = () -> CollateralType3Code.mmObject();
 		}
@@ -269,14 +271,13 @@ public class CollateralType3Code extends CollateralTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CASH");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CollateralType3Code";
 				definition = "Specifies the type of collateral.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CollateralType3Code.mmCash, com.tools20022.repository.codeset.CollateralType3Code.mmSecurities,
-						com.tools20022.repository.codeset.CollateralType3Code.mmPhysicalEntities, com.tools20022.repository.codeset.CollateralType3Code.mmInsurance, com.tools20022.repository.codeset.CollateralType3Code.mmStockCertificate,
-						com.tools20022.repository.codeset.CollateralType3Code.mmBond, com.tools20022.repository.codeset.CollateralType3Code.mmBankGuarantee, com.tools20022.repository.codeset.CollateralType3Code.mmOther);
+				code_lazy = () -> Arrays.asList(CollateralType3Code.mmCash, CollateralType3Code.mmSecurities, CollateralType3Code.mmPhysicalEntities, CollateralType3Code.mmInsurance, CollateralType3Code.mmStockCertificate,
+						CollateralType3Code.mmBond, CollateralType3Code.mmBankGuarantee, CollateralType3Code.mmOther);
 				trace_lazy = () -> CollateralTypeCode.mmObject();
 			}
 		});

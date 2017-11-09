@@ -20,9 +20,11 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.Recipient3Choice;
 import com.tools20022.repository.datatype.Max35Binary;
 import com.tools20022.repository.datatype.Number;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -128,11 +130,11 @@ public class AuthenticatedData3 {
 			componentContext_lazy = () -> AuthenticatedData3.mmObject();
 			isDerived = false;
 			xmlTag = "Vrsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Version";
 			definition = "Version of the data structure.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AuthenticatedData4.mmVersion);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AuthenticatedData2.mmVersion;
+			nextVersions_lazy = () -> Arrays.asList(AuthenticatedData4.mmVersion);
+			previousVersion_lazy = () -> AuthenticatedData2.mmVersion;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
@@ -183,11 +185,11 @@ public class AuthenticatedData3 {
 			componentContext_lazy = () -> AuthenticatedData3.mmObject();
 			isDerived = false;
 			xmlTag = "Rcpt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Recipient";
 			definition = "Information related to the transport key.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AuthenticatedData4.mmRecipient);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AuthenticatedData2.mmRecipient;
+			nextVersions_lazy = () -> Arrays.asList(AuthenticatedData4.mmRecipient);
+			previousVersion_lazy = () -> AuthenticatedData2.mmRecipient;
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> Recipient3Choice.mmObject();
@@ -239,11 +241,11 @@ public class AuthenticatedData3 {
 			componentContext_lazy = () -> AuthenticatedData3.mmObject();
 			isDerived = false;
 			xmlTag = "MACAlgo";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MACAlgorithm";
 			definition = "Algorithm to compute message authentication code (MAC).";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AuthenticatedData4.mmMACAlgorithm);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AuthenticatedData2.mmMACAlgorithm;
+			nextVersions_lazy = () -> Arrays.asList(AuthenticatedData4.mmMACAlgorithm);
+			previousVersion_lazy = () -> AuthenticatedData2.mmMACAlgorithm;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -295,11 +297,11 @@ public class AuthenticatedData3 {
 			componentContext_lazy = () -> AuthenticatedData3.mmObject();
 			isDerived = false;
 			xmlTag = "NcpsltdCntt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EncapsulatedContent";
 			definition = "Data to authenticate.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AuthenticatedData4.mmEncapsulatedContent);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AuthenticatedData2.mmEncapsulatedContent;
+			nextVersions_lazy = () -> Arrays.asList(AuthenticatedData4.mmEncapsulatedContent);
+			previousVersion_lazy = () -> AuthenticatedData2.mmEncapsulatedContent;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -351,11 +353,11 @@ public class AuthenticatedData3 {
 			componentContext_lazy = () -> AuthenticatedData3.mmObject();
 			isDerived = false;
 			xmlTag = "MAC";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MAC";
 			definition = "Encrypted data which authenticates the data.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AuthenticatedData4.mmMAC);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AuthenticatedData2.mmMAC;
+			nextVersions_lazy = () -> Arrays.asList(AuthenticatedData4.mmMAC);
+			previousVersion_lazy = () -> AuthenticatedData2.mmMAC;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Binary.mmObject();
@@ -365,10 +367,9 @@ public class AuthenticatedData3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AuthenticatedData3.mmVersion, com.tools20022.repository.msg.AuthenticatedData3.mmRecipient,
-						com.tools20022.repository.msg.AuthenticatedData3.mmMACAlgorithm, com.tools20022.repository.msg.AuthenticatedData3.mmEncapsulatedContent, com.tools20022.repository.msg.AuthenticatedData3.mmMAC);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(AuthenticatedData3.mmVersion, AuthenticatedData3.mmRecipient, AuthenticatedData3.mmMACAlgorithm, AuthenticatedData3.mmEncapsulatedContent, AuthenticatedData3.mmMAC);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AuthenticatedData3";
 				definition = "Message authentication code (MAC), computed on the data to protect with an encryption key.";
 				nextVersions_lazy = () -> Arrays.asList(AuthenticatedData4.mmObject());

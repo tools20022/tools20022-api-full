@@ -17,15 +17,13 @@
 
 package com.tools20022.repository.entity;
 
-import com.tools20022.metamodel.MMBusinessAssociationEnd;
-import com.tools20022.metamodel.MMBusinessAttribute;
-import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.*;
+import com.tools20022.repository.choice.ShipmentDate1Choice;
 import com.tools20022.repository.choice.ShipmentSchedule1Choice;
 import com.tools20022.repository.choice.ShipmentSchedule2Choice;
 import com.tools20022.repository.datatype.ISODateTime;
-import com.tools20022.repository.msg.ShipmentAttribute1;
-import com.tools20022.repository.msg.ShipmentDateRange1;
-import com.tools20022.repository.msg.ShipmentDateRange2;
+import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -38,21 +36,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
  * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ShipmentDateRange#mmLatestShipmentDate
- * ShipmentDateRange.mmLatestShipmentDate}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ShipmentDateRange#mmRelatedTransport
- * ShipmentDateRange.mmRelatedTransport}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ShipmentDateRange#mmEarliestShipmentDate
- * ShipmentDateRange.mmEarliestShipmentDate}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ShipmentDateRange#mmShipmentDate
- * ShipmentDateRange.mmShipmentDate}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ShipmentDateRange1
+ * ShipmentDateRange1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ShipmentDateRange2
+ * ShipmentDateRange2}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.ShipmentSchedule1Choice
+ * ShipmentSchedule1Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.ShipmentSchedule2Choice
+ * ShipmentSchedule2Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ShipmentAttribute1
+ * ShipmentAttribute1}</li>
  * </ul>
  * </li>
  * <li>
@@ -81,20 +78,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * ShipmentSchedule2Choice.mmShipmentSubSchedule}</li>
  * </ul>
  * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.ShipmentDateRange1
- * ShipmentDateRange1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ShipmentDateRange2
- * ShipmentDateRange2}</li>
- * <li>{@linkplain com.tools20022.repository.choice.ShipmentSchedule1Choice
- * ShipmentSchedule1Choice}</li>
- * <li>{@linkplain com.tools20022.repository.choice.ShipmentSchedule2Choice
- * ShipmentSchedule2Choice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ShipmentAttribute1
- * ShipmentAttribute1}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ShipmentDateRange#mmLatestShipmentDate
+ * ShipmentDateRange.mmLatestShipmentDate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ShipmentDateRange#mmRelatedTransport
+ * ShipmentDateRange.mmRelatedTransport}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ShipmentDateRange#mmEarliestShipmentDate
+ * ShipmentDateRange.mmEarliestShipmentDate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ShipmentDateRange#mmShipmentDate
+ * ShipmentDateRange.mmShipmentDate}</li>
  * </ul>
  * </li>
  * <li>
@@ -163,11 +161,10 @@ public class ShipmentDateRange {
 	 */
 	public static final MMBusinessAttribute mmLatestShipmentDate = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LineItemDetails4.mmLatestShipmentDate, com.tools20022.repository.msg.LineItem5.mmLatestShipmentDate,
-					com.tools20022.repository.msg.ShipmentDateRange1.mmLatestShipmentDate, com.tools20022.repository.msg.ShipmentDateRange2.mmLatestShipmentDate, com.tools20022.repository.msg.ShipmentAttribute1.mmExpectedDate);
+			derivation_lazy = () -> Arrays.asList(LineItemDetails4.mmLatestShipmentDate, LineItem5.mmLatestShipmentDate, ShipmentDateRange1.mmLatestShipmentDate, ShipmentDateRange2.mmLatestShipmentDate, ShipmentAttribute1.mmExpectedDate);
 			elementContext_lazy = () -> ShipmentDateRange.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "LatestShipmentDate";
 			definition = "Latest date whereby the goods must be shipped.";
 			maxOccurs = 1;
@@ -214,13 +211,13 @@ public class ShipmentDateRange {
 		{
 			elementContext_lazy = () -> ShipmentDateRange.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedTransport";
 			definition = "Specifies the transport process to which the dates apply.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.Transport.mmShipmentDates;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Transport.mmObject();
 		}
 	};
@@ -263,10 +260,10 @@ public class ShipmentDateRange {
 	 */
 	public static final MMBusinessAttribute mmEarliestShipmentDate = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ShipmentDateRange1.mmEarliestShipmentDate, com.tools20022.repository.msg.ShipmentDateRange2.mmEarliestShipmentDate);
+			derivation_lazy = () -> Arrays.asList(ShipmentDateRange1.mmEarliestShipmentDate, ShipmentDateRange2.mmEarliestShipmentDate);
 			elementContext_lazy = () -> ShipmentDateRange.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "EarliestShipmentDate";
 			definition = "Earliest date whereby the items must be shipped.";
 			maxOccurs = 1;
@@ -328,12 +325,11 @@ public class ShipmentDateRange {
 	 */
 	public static final MMBusinessAttribute mmShipmentDate = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransportDetails1.mmProposedShipmentDate, com.tools20022.repository.msg.TransportDetails1.mmActualShipmentDate,
-					com.tools20022.repository.msg.TransportDetails2.mmProposedShipmentDate, com.tools20022.repository.msg.TransportDetails2.mmActualShipmentDate, com.tools20022.repository.choice.ShipmentDate1Choice.mmProposedShipmentDate,
-					com.tools20022.repository.choice.ShipmentDate1Choice.mmActualShipmentDate, com.tools20022.repository.msg.TransactionCertificateContract1.mmExpectedShipmentDate);
+			derivation_lazy = () -> Arrays.asList(TransportDetails1.mmProposedShipmentDate, TransportDetails1.mmActualShipmentDate, TransportDetails2.mmProposedShipmentDate, TransportDetails2.mmActualShipmentDate,
+					ShipmentDate1Choice.mmProposedShipmentDate, ShipmentDate1Choice.mmActualShipmentDate, TransactionCertificateContract1.mmExpectedShipmentDate);
 			elementContext_lazy = () -> ShipmentDateRange.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ShipmentDate";
 			definition = "Date at which the goods are shipped.";
 			maxOccurs = 1;
@@ -345,15 +341,14 @@ public class ShipmentDateRange {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ShipmentDateRange";
 				definition = "Specifies a shipment period or a shipment date.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Transport.mmShipmentDates);
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ShipmentSchedule1Choice.mmShipmentDateRange, com.tools20022.repository.choice.ShipmentSchedule1Choice.mmShipmentSubSchedule,
-						com.tools20022.repository.choice.ShipmentSchedule2Choice.mmShipmentDateRange, com.tools20022.repository.choice.ShipmentSchedule2Choice.mmShipmentSubSchedule);
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.ShipmentDateRange.mmLatestShipmentDate, com.tools20022.repository.entity.ShipmentDateRange.mmRelatedTransport,
-						com.tools20022.repository.entity.ShipmentDateRange.mmEarliestShipmentDate, com.tools20022.repository.entity.ShipmentDateRange.mmShipmentDate);
+				derivationElement_lazy = () -> Arrays.asList(ShipmentSchedule1Choice.mmShipmentDateRange, ShipmentSchedule1Choice.mmShipmentSubSchedule, ShipmentSchedule2Choice.mmShipmentDateRange,
+						ShipmentSchedule2Choice.mmShipmentSubSchedule);
+				element_lazy = () -> Arrays.asList(ShipmentDateRange.mmLatestShipmentDate, ShipmentDateRange.mmRelatedTransport, ShipmentDateRange.mmEarliestShipmentDate, ShipmentDateRange.mmShipmentDate);
 				derivationComponent_lazy = () -> Arrays.asList(ShipmentDateRange1.mmObject(), ShipmentDateRange2.mmObject(), ShipmentSchedule1Choice.mmObject(), ShipmentSchedule2Choice.mmObject(), ShipmentAttribute1.mmObject());
 			}
 		});

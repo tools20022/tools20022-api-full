@@ -19,7 +19,9 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.CardPaymentAcquiring;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -106,10 +108,10 @@ public class CardTransactionContext3 {
 			componentContext_lazy = () -> CardTransactionContext3.mmObject();
 			isDerived = false;
 			xmlTag = "TxCntxt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionContext";
 			definition = "Context of the card transaction.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CardTransactionContext1.mmTransactionContext;
+			previousVersion_lazy = () -> CardTransactionContext1.mmTransactionContext;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -120,10 +122,10 @@ public class CardTransactionContext3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardTransactionContext3.mmTransactionContext);
+				messageElement_lazy = () -> Arrays.asList(CardTransactionContext3.mmTransactionContext);
 				trace_lazy = () -> CardPaymentAcquiring.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CardTransactionContext3";
 				definition = "Context in which the card transaction is performed.";
 				previousVersion_lazy = () -> CardTransactionContext1.mmObject();

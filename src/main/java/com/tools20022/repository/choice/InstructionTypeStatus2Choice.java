@@ -19,7 +19,11 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.seev.MeetingInstructionStatusV05;
 import com.tools20022.repository.entity.MeetingStatus;
+import com.tools20022.repository.entity.Status;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -117,14 +121,14 @@ public class InstructionTypeStatus2Choice {
 	 */
 	public static final MMMessageAssociationEnd mmInstructionStatus = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.mmInstructionProcessingStatus;
+			businessElementTrace_lazy = () -> Status.mmInstructionProcessingStatus;
 			componentContext_lazy = () -> InstructionTypeStatus2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "InstrSts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructionStatus";
 			definition = "Status applying to the instruction request received. The instruction is identified by the InstructionIdentification.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.InstructionTypeStatus1Choice.mmInstructionStatus;
+			previousVersion_lazy = () -> InstructionTypeStatus1Choice.mmInstructionStatus;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -175,14 +179,14 @@ public class InstructionTypeStatus2Choice {
 	 */
 	public static final MMMessageAssociationEnd mmCancellationStatus = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.MeetingStatus.mmInstructionCancellationStatus;
+			businessElementTrace_lazy = () -> MeetingStatus.mmInstructionCancellationStatus;
 			componentContext_lazy = () -> InstructionTypeStatus2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "CxlSts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationStatus";
 			definition = "Status applying to the instruction cancellation request received. The instruction cancellation is identified by the InstructionCancellationIdentification.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.InstructionTypeStatus1Choice.mmCancellationStatus;
+			previousVersion_lazy = () -> InstructionTypeStatus1Choice.mmCancellationStatus;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -193,11 +197,11 @@ public class InstructionTypeStatus2Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.InstructionTypeStatus2Choice.mmInstructionStatus, com.tools20022.repository.choice.InstructionTypeStatus2Choice.mmCancellationStatus);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.MeetingInstructionStatusV05.mmInstructionTypeStatus);
+				messageElement_lazy = () -> Arrays.asList(InstructionTypeStatus2Choice.mmInstructionStatus, InstructionTypeStatus2Choice.mmCancellationStatus);
+				messageBuildingBlock_lazy = () -> Arrays.asList(MeetingInstructionStatusV05.mmInstructionTypeStatus);
 				trace_lazy = () -> MeetingStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InstructionTypeStatus2Choice";
 				definition = "Choice of instruction type status.";
 				previousVersion_lazy = () -> InstructionTypeStatus1Choice.mmObject();

@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.FATCAStatusCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -105,7 +107,7 @@ public class FATCAStatus1Code extends FATCAStatusCode {
 	 */
 	public static final MMCode mmFATCA101 = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FATCA101";
 			owner_lazy = () -> FATCAStatus1Code.mmObject();
 		}
@@ -128,7 +130,7 @@ public class FATCAStatus1Code extends FATCAStatusCode {
 	 */
 	public static final MMCode mmFATCA102 = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FATCA102";
 			owner_lazy = () -> FATCAStatus1Code.mmObject();
 		}
@@ -151,7 +153,7 @@ public class FATCAStatus1Code extends FATCAStatusCode {
 	 */
 	public static final MMCode mmFATCA103 = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FATCA103";
 			owner_lazy = () -> FATCAStatus1Code.mmObject();
 		}
@@ -174,7 +176,7 @@ public class FATCAStatus1Code extends FATCAStatusCode {
 	 */
 	public static final MMCode mmFATCA104 = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FATCA104";
 			owner_lazy = () -> FATCAStatus1Code.mmObject();
 		}
@@ -197,7 +199,7 @@ public class FATCAStatus1Code extends FATCAStatusCode {
 	 */
 	public static final MMCode mmFATCA105 = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FATCA105";
 			owner_lazy = () -> FATCAStatus1Code.mmObject();
 		}
@@ -220,7 +222,7 @@ public class FATCAStatus1Code extends FATCAStatusCode {
 	 */
 	public static final MMCode mmFATCA201 = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FATCA201";
 			owner_lazy = () -> FATCAStatus1Code.mmObject();
 		}
@@ -243,7 +245,7 @@ public class FATCAStatus1Code extends FATCAStatusCode {
 	 */
 	public static final MMCode mmFATCA202 = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FATCA202";
 			owner_lazy = () -> FATCAStatus1Code.mmObject();
 		}
@@ -266,7 +268,7 @@ public class FATCAStatus1Code extends FATCAStatusCode {
 	 */
 	public static final MMCode mmFATCA203 = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FATCA203";
 			owner_lazy = () -> FATCAStatus1Code.mmObject();
 		}
@@ -289,7 +291,7 @@ public class FATCAStatus1Code extends FATCAStatusCode {
 	 */
 	public static final MMCode mmFATCA204 = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FATCA204";
 			owner_lazy = () -> FATCAStatus1Code.mmObject();
 		}
@@ -312,7 +314,7 @@ public class FATCAStatus1Code extends FATCAStatusCode {
 	 */
 	public static final MMCode mmFATCA205 = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FATCA205";
 			owner_lazy = () -> FATCAStatus1Code.mmObject();
 		}
@@ -335,7 +337,7 @@ public class FATCAStatus1Code extends FATCAStatusCode {
 	 */
 	public static final MMCode mmFATCA206 = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FATCA206";
 			owner_lazy = () -> FATCAStatus1Code.mmObject();
 		}
@@ -344,14 +346,12 @@ public class FATCAStatus1Code extends FATCAStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FATCAStatus1Code";
 				definition = "Specifies the Foreign Account Tax Compliance Act (FATCA) status.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.FATCAStatus1Code.mmFATCA101, com.tools20022.repository.codeset.FATCAStatus1Code.mmFATCA102, com.tools20022.repository.codeset.FATCAStatus1Code.mmFATCA103,
-						com.tools20022.repository.codeset.FATCAStatus1Code.mmFATCA104, com.tools20022.repository.codeset.FATCAStatus1Code.mmFATCA105, com.tools20022.repository.codeset.FATCAStatus1Code.mmFATCA201,
-						com.tools20022.repository.codeset.FATCAStatus1Code.mmFATCA202, com.tools20022.repository.codeset.FATCAStatus1Code.mmFATCA203, com.tools20022.repository.codeset.FATCAStatus1Code.mmFATCA204,
-						com.tools20022.repository.codeset.FATCAStatus1Code.mmFATCA205, com.tools20022.repository.codeset.FATCAStatus1Code.mmFATCA206);
+				code_lazy = () -> Arrays.asList(FATCAStatus1Code.mmFATCA101, FATCAStatus1Code.mmFATCA102, FATCAStatus1Code.mmFATCA103, FATCAStatus1Code.mmFATCA104, FATCAStatus1Code.mmFATCA105, FATCAStatus1Code.mmFATCA201,
+						FATCAStatus1Code.mmFATCA202, FATCAStatus1Code.mmFATCA203, FATCAStatus1Code.mmFATCA204, FATCAStatus1Code.mmFATCA205, FATCAStatus1Code.mmFATCA206);
 				trace_lazy = () -> FATCAStatusCode.mmObject();
 			}
 		});

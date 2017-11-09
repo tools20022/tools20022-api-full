@@ -19,7 +19,9 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -96,7 +98,7 @@ public class RegulatoryInformation1 {
 			componentContext_lazy = () -> RegulatoryInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "Sctr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Sector";
 			definition = "Sector of economic activity, for example, SAE in the Italian market.";
 			maxOccurs = 1;
@@ -138,7 +140,7 @@ public class RegulatoryInformation1 {
 			componentContext_lazy = () -> RegulatoryInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "Brnch";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Branch";
 			definition = "Branch of economic activity, for example, RAE in the Italian market.";
 			maxOccurs = 1;
@@ -180,7 +182,7 @@ public class RegulatoryInformation1 {
 			componentContext_lazy = () -> RegulatoryInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "Grp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Group";
 			definition = "Group of economic activity, for example, a code issued by a regulator.";
 			maxOccurs = 1;
@@ -221,7 +223,7 @@ public class RegulatoryInformation1 {
 			componentContext_lazy = () -> RegulatoryInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "Othr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
 			definition = "Other regulatory information.";
 			maxOccurs = 1;
@@ -233,10 +235,9 @@ public class RegulatoryInformation1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RegulatoryInformation1.mmSector, com.tools20022.repository.msg.RegulatoryInformation1.mmBranch,
-						com.tools20022.repository.msg.RegulatoryInformation1.mmGroup, com.tools20022.repository.msg.RegulatoryInformation1.mmOther);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(RegulatoryInformation1.mmSector, RegulatoryInformation1.mmBranch, RegulatoryInformation1.mmGroup, RegulatoryInformation1.mmOther);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RegulatoryInformation1";
 				definition = "Regulatory information.";
 			}

@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.UserInterfaceCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -83,7 +85,7 @@ public class UserInterface2Code extends UserInterfaceCode {
 	 */
 	public static final MMCode mmMerchantDisplay = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MerchantDisplay";
 			owner_lazy = () -> UserInterface2Code.mmObject();
 		}
@@ -106,7 +108,7 @@ public class UserInterface2Code extends UserInterfaceCode {
 	 */
 	public static final MMCode mmCardholderDisplay = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CardholderDisplay";
 			owner_lazy = () -> UserInterface2Code.mmObject();
 		}
@@ -115,12 +117,12 @@ public class UserInterface2Code extends UserInterfaceCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("MDSP");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "UserInterface2Code";
 				definition = "Type of interface to display a message.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UserInterface2Code.mmMerchantDisplay, com.tools20022.repository.codeset.UserInterface2Code.mmCardholderDisplay);
+				code_lazy = () -> Arrays.asList(UserInterface2Code.mmMerchantDisplay, UserInterface2Code.mmCardholderDisplay);
 				trace_lazy = () -> UserInterfaceCode.mmObject();
 			}
 		});

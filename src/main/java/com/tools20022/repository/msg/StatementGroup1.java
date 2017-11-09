@@ -20,7 +20,10 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.camt.BankServicesBillingStatementV01;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -131,10 +134,10 @@ public class StatementGroup1 {
 			componentContext_lazy = () -> StatementGroup1.mmObject();
 			isDerived = false;
 			xmlTag = "GrpId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GroupIdentification";
 			definition = "Identification of a group of customer billing statements.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StatementGroup2.mmGroupIdentification);
+			nextVersions_lazy = () -> Arrays.asList(StatementGroup2.mmGroupIdentification);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -179,10 +182,10 @@ public class StatementGroup1 {
 			componentContext_lazy = () -> StatementGroup1.mmObject();
 			isDerived = false;
 			xmlTag = "Sndr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Sender";
 			definition = "Originating financial institution sending the statement.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StatementGroup2.mmSender);
+			nextVersions_lazy = () -> Arrays.asList(StatementGroup2.mmSender);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -233,10 +236,10 @@ public class StatementGroup1 {
 			componentContext_lazy = () -> StatementGroup1.mmObject();
 			isDerived = false;
 			xmlTag = "SndrIndvCtct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SenderIndividualContact";
 			definition = "Specifies the individual to contact in case of technical problems at the sender's location.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StatementGroup2.mmSenderIndividualContact);
+			nextVersions_lazy = () -> Arrays.asList(StatementGroup2.mmSenderIndividualContact);
 			maxOccurs = 2;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.ContactDetails3.mmObject();
@@ -281,10 +284,10 @@ public class StatementGroup1 {
 			componentContext_lazy = () -> StatementGroup1.mmObject();
 			isDerived = false;
 			xmlTag = "Rcvr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Receiver";
 			definition = "Financial institution customer receiving the statement.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StatementGroup2.mmReceiver);
+			nextVersions_lazy = () -> Arrays.asList(StatementGroup2.mmReceiver);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -335,10 +338,10 @@ public class StatementGroup1 {
 			componentContext_lazy = () -> StatementGroup1.mmObject();
 			isDerived = false;
 			xmlTag = "RcvrIndvCtct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceiverIndividualContact";
 			definition = "Specifies the individual to contact in case of technical problems at the receiver's location.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StatementGroup2.mmReceiverIndividualContact);
+			nextVersions_lazy = () -> Arrays.asList(StatementGroup2.mmReceiverIndividualContact);
 			maxOccurs = 2;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.ContactDetails3.mmObject();
@@ -388,10 +391,10 @@ public class StatementGroup1 {
 			componentContext_lazy = () -> StatementGroup1.mmObject();
 			isDerived = false;
 			xmlTag = "BllgStmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BillingStatement";
 			definition = "Provides the bank services billing statement recounting of all service chargeable events that occurred during a reporting cycle, such as the end of the month reporting.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StatementGroup2.mmBillingStatement);
+			nextVersions_lazy = () -> Arrays.asList(StatementGroup2.mmBillingStatement);
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.BillingStatement1.mmObject();
@@ -401,12 +404,11 @@ public class StatementGroup1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StatementGroup1.mmGroupIdentification, com.tools20022.repository.msg.StatementGroup1.mmSender,
-						com.tools20022.repository.msg.StatementGroup1.mmSenderIndividualContact, com.tools20022.repository.msg.StatementGroup1.mmReceiver, com.tools20022.repository.msg.StatementGroup1.mmReceiverIndividualContact,
-						com.tools20022.repository.msg.StatementGroup1.mmBillingStatement);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.BankServicesBillingStatementV01.mmBillingStatementGroup);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(StatementGroup1.mmGroupIdentification, StatementGroup1.mmSender, StatementGroup1.mmSenderIndividualContact, StatementGroup1.mmReceiver, StatementGroup1.mmReceiverIndividualContact,
+						StatementGroup1.mmBillingStatement);
+				messageBuildingBlock_lazy = () -> Arrays.asList(BankServicesBillingStatementV01.mmBillingStatementGroup);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "StatementGroup1";
 				definition = "Group of the statement header reporting the bank services billing and the billing statement.";
 				nextVersions_lazy = () -> Arrays.asList(StatementGroup2.mmObject());

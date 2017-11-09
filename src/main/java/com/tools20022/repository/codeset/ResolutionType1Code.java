@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ResolutionTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -86,7 +88,7 @@ public class ResolutionType1Code extends ResolutionTypeCode {
 	 */
 	public static final MMCode mmExtraordinary = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Extraordinary";
 			owner_lazy = () -> ResolutionType1Code.mmObject();
 		}
@@ -109,7 +111,7 @@ public class ResolutionType1Code extends ResolutionTypeCode {
 	 */
 	public static final MMCode mmOrdinary = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Ordinary";
 			owner_lazy = () -> ResolutionType1Code.mmObject();
 		}
@@ -132,7 +134,7 @@ public class ResolutionType1Code extends ResolutionTypeCode {
 	 */
 	public static final MMCode mmSpecial = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Special";
 			owner_lazy = () -> ResolutionType1Code.mmObject();
 		}
@@ -141,13 +143,12 @@ public class ResolutionType1Code extends ResolutionTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("EXTR");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ResolutionType1Code";
 				definition = "Specifies the type of resolution.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ResolutionType1Code.mmExtraordinary, com.tools20022.repository.codeset.ResolutionType1Code.mmOrdinary,
-						com.tools20022.repository.codeset.ResolutionType1Code.mmSpecial);
+				code_lazy = () -> Arrays.asList(ResolutionType1Code.mmExtraordinary, ResolutionType1Code.mmOrdinary, ResolutionType1Code.mmSpecial);
 				trace_lazy = () -> ResolutionTypeCode.mmObject();
 			}
 		});

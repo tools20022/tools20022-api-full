@@ -34,15 +34,15 @@ import java.util.concurrent.atomic.AtomicReference;
  <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepository#getDataDictionary
+ * dataDictionary} =
+ * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
+ * GeneratedRepository.mmdataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepository#getBusinessProcessCatalogue
  * businessProcessCatalogue} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#mmcatalogue
  * GeneratedRepository.mmcatalogue}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMRepository#getDataDictionary
- * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
  * </ul>
  */
 public class GeneratedRepository extends ReflectionBasedRepository {
@@ -53,10 +53,6 @@ public class GeneratedRepository extends ReflectionBasedRepository {
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMBusinessProcessCatalogue#getRepository
-	 * repository} = {@linkplain com.tools20022.repository.GeneratedRepository
-	 * GeneratedRepository}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessProcessCatalogue#getTopLevelCatalogueEntry
 	 * topLevelCatalogueEntry} =
@@ -499,11 +495,14 @@ public class GeneratedRepository extends ReflectionBasedRepository {
 	 * BUSINESSPROCESS_FOR_ROLES}</li>
 	 * </ul>
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessProcessCatalogue#getRepository
+	 * repository} = {@linkplain com.tools20022.repository.GeneratedRepository
+	 * GeneratedRepository}</li>
 	 * </ul>
 	 */
 	public static final MMBusinessProcessCatalogue mmcatalogue = new MMBusinessProcessCatalogue() {
 		{
-			repository_lazy = () -> GeneratedRepository.mmObject();
 			topLevelCatalogueEntry_lazy = () -> Arrays.asList(CreditorPaymentActivationRequestISOPreviousversion.mmObject(), CreditorPaymentActivationRequestISOLatestversion.mmObject(),
 					CardPaymentsExchangesTerminalManagementISOPreviousversion.mmObject(), CardPaymentsExchangesAcceptortoAcquirerISOPreviousversion.mmObject(), DemandGuaranteesandStandbyLettersofCreditISOLatestversion.mmObject(),
 					InvestmentFundsISOPreviousversion.mmObject(), ProxyVotingISOLatestversion.mmObject(), IssuersAgentsCommunicationISOLatestversion.mmObject(), TransactionRegulatoryReportingISOArchive.mmObject(),
@@ -545,6 +544,7 @@ public class GeneratedRepository extends ReflectionBasedRepository {
 					PaymentsRemittanceAdviceLatestVersion.mmObject(), ForeignExchangeTradePreviousVersion.mmObject(), ATMManagementLatestVersion.mmObject(), ATMCardTransactionLatestVersion.mmObject(),
 					CollateralManagementPreviousVersion.mmObject(), TerminalManagementArchive.mmObject(), AcceptortoAcquirerCardTransactionArchive.mmObject(), AcquirertoIssuerCardTransactionLatestVersion.mmObject(),
 					PaymentsRemittanceAdvicePreviousVersion.mmObject(), CollateralManagementArchive.mmObject(), PaymentsRemittanceAdviceArchive.mmObject(), BUSINESSPROCESS_FOR_ROLES.mmObject());
+			repository_lazy = () -> GeneratedRepository.mmObject();
 		}
 	};
 	/**
@@ -562,8 +562,8 @@ public class GeneratedRepository extends ReflectionBasedRepository {
 	 */
 	public static final MMDataDictionary mmdataDict = new MMDataDictionary() {
 		{
-			topLevelDictionaryEntry_lazy = () -> ListBuilderForGeneratedRepository_00.addElems(new ArrayList<>());
 			repository_lazy = () -> GeneratedRepository.mmObject();
+			topLevelDictionaryEntry_lazy = () -> ListBuilderForGeneratedRepository_00.addElems(new ArrayList<>());
 		}
 	};
 
@@ -574,8 +574,8 @@ public class GeneratedRepository extends ReflectionBasedRepository {
 	final static public MMRepository mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMRepository() {
 			{
-				businessProcessCatalogue_lazy = () -> com.tools20022.repository.GeneratedRepository.mmcatalogue;
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				businessProcessCatalogue_lazy = () -> GeneratedRepository.mmcatalogue;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 			}
 		});
 		return mmObject_lazy.get();

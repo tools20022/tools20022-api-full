@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.SystemPartyTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -92,7 +94,7 @@ public class SystemPartyType1Code extends SystemPartyTypeCode {
 	 */
 	public static final MMCode mmCentralSecuritiesDepository = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CentralSecuritiesDepository";
 			owner_lazy = () -> SystemPartyType1Code.mmObject();
 		}
@@ -115,7 +117,7 @@ public class SystemPartyType1Code extends SystemPartyTypeCode {
 	 */
 	public static final MMCode mmNationalCentralBank = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NationalCentralBank";
 			owner_lazy = () -> SystemPartyType1Code.mmObject();
 		}
@@ -138,7 +140,7 @@ public class SystemPartyType1Code extends SystemPartyTypeCode {
 	 */
 	public static final MMCode mmPaymentBank = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentBank";
 			owner_lazy = () -> SystemPartyType1Code.mmObject();
 		}
@@ -161,7 +163,7 @@ public class SystemPartyType1Code extends SystemPartyTypeCode {
 	 */
 	public static final MMCode mmCentralSecuritiesDepositoryParticipant = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CentralSecuritiesDepositoryParticipant";
 			owner_lazy = () -> SystemPartyType1Code.mmObject();
 		}
@@ -184,7 +186,7 @@ public class SystemPartyType1Code extends SystemPartyTypeCode {
 	 */
 	public static final MMCode mmExternalCentralSecuritiesDepository = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExternalCentralSecuritiesDepository";
 			owner_lazy = () -> SystemPartyType1Code.mmObject();
 		}
@@ -193,14 +195,13 @@ public class SystemPartyType1Code extends SystemPartyTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CSDY");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SystemPartyType1Code";
 				definition = "Specifies the type of the party within a system.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SystemPartyType1Code.mmCentralSecuritiesDepository, com.tools20022.repository.codeset.SystemPartyType1Code.mmNationalCentralBank,
-						com.tools20022.repository.codeset.SystemPartyType1Code.mmPaymentBank, com.tools20022.repository.codeset.SystemPartyType1Code.mmCentralSecuritiesDepositoryParticipant,
-						com.tools20022.repository.codeset.SystemPartyType1Code.mmExternalCentralSecuritiesDepository);
+				code_lazy = () -> Arrays.asList(SystemPartyType1Code.mmCentralSecuritiesDepository, SystemPartyType1Code.mmNationalCentralBank, SystemPartyType1Code.mmPaymentBank,
+						SystemPartyType1Code.mmCentralSecuritiesDepositoryParticipant, SystemPartyType1Code.mmExternalCentralSecuritiesDepository);
 				trace_lazy = () -> SystemPartyTypeCode.mmObject();
 			}
 		});

@@ -18,7 +18,9 @@
 package com.tools20022.repository.area;
 
 import com.tools20022.metamodel.MMBusinessArea;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.catp.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -30,8 +32,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessArea#getCode code} =
- * "catp"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessArea#getMessageDefinition
  * messageDefinition} =
  * <ul>
@@ -105,6 +105,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * ATMTransferResponseV01}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessArea#getCode code} =
+ * "catp"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelCatalogueEntry#getBusinessProcessCatalogue
  * businessProcessCatalogue} =
@@ -129,8 +131,8 @@ public class ATMCardTransactionLatestVersion {
 	final static public MMBusinessArea mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessArea() {
 			{
-				businessProcessCatalogue_lazy = () -> com.tools20022.repository.GeneratedRepository.mmcatalogue;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				businessProcessCatalogue_lazy = () -> GeneratedRepository.mmcatalogue;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ATM Card Transaction - Latest version - master";
 				definition = "Messages that support any card related Automated Teller Machine (ATM) transactions and services between an ATM equipment and an ATM acquirer. These services include cash withdrawals, kiosk functions and card account management transactions.";
 				messageDefinition_lazy = () -> Arrays.asList(ATMInquiryResponseV01.mmObject(), ATMInquiryRequestV01.mmObject(), ATMCompletionAdviceV01.mmObject(), ATMWithdrawalResponseV01.mmObject(), ATMRejectV01.mmObject(),

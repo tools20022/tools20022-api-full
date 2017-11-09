@@ -19,9 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.EventType1Code;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Max350Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -99,7 +101,7 @@ public class EventGroup1 {
 			componentContext_lazy = () -> EventGroup1.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Represents the type of event.";
 			maxOccurs = 1;
@@ -139,7 +141,7 @@ public class EventGroup1 {
 			componentContext_lazy = () -> EventGroup1.mmObject();
 			isDerived = false;
 			xmlTag = "Dt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Date";
 			definition = "Date of event.";
 			maxOccurs = 1;
@@ -178,7 +180,7 @@ public class EventGroup1 {
 			componentContext_lazy = () -> EventGroup1.mmObject();
 			isDerived = false;
 			xmlTag = "Pric";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Price";
 			definition = "Predetermined price of issue at event, if applicable.";
 			maxOccurs = 1;
@@ -218,7 +220,7 @@ public class EventGroup1 {
 			componentContext_lazy = () -> EventGroup1.mmObject();
 			isDerived = false;
 			xmlTag = "Desc";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Description";
 			definition = "Comments related to the event.";
 			maxOccurs = 1;
@@ -230,10 +232,9 @@ public class EventGroup1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.EventGroup1.mmType, com.tools20022.repository.msg.EventGroup1.mmDate, com.tools20022.repository.msg.EventGroup1.mmPrice,
-						com.tools20022.repository.msg.EventGroup1.mmDescription);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(EventGroup1.mmType, EventGroup1.mmDate, EventGroup1.mmPrice, EventGroup1.mmDescription);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "EventGroup1";
 				definition = "Provides the significant events scheduled during the life of a security. Eg, a callable bond may list one or more dates at which the issuer may call the bond. An option may list put, tender or call dates.";
 			}

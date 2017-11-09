@@ -20,8 +20,11 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max2000Text;
 import com.tools20022.repository.entity.Expiry;
+import com.tools20022.repository.entity.Undertaking;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -96,11 +99,11 @@ public class ExpiryDetails1 {
 	 */
 	public static final MMMessageAssociationEnd mmExpiryTerms = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Undertaking.mmExpiry;
+			businessElementTrace_lazy = () -> Undertaking.mmExpiry;
 			componentContext_lazy = () -> ExpiryDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "XpryTerms";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExpiryTerms";
 			definition = "Terms defining when the undertaking will cease to be available.";
 			maxOccurs = 1;
@@ -142,7 +145,7 @@ public class ExpiryDetails1 {
 			componentContext_lazy = () -> ExpiryDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlXpryInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalExpiryInformation";
 			definition = "Additional information related to the expiry and expiry extension.";
 			maxOccurs = 5;
@@ -154,10 +157,10 @@ public class ExpiryDetails1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ExpiryDetails1.mmExpiryTerms, com.tools20022.repository.msg.ExpiryDetails1.mmAdditionalExpiryInformation);
+				messageElement_lazy = () -> Arrays.asList(ExpiryDetails1.mmExpiryTerms, ExpiryDetails1.mmAdditionalExpiryInformation);
 				trace_lazy = () -> Expiry.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ExpiryDetails1";
 				definition = "Expiry and extension information.";
 			}

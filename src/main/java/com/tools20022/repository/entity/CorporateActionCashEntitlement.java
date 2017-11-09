@@ -17,12 +17,11 @@
 
 package com.tools20022.repository.entity;
 
-import com.tools20022.metamodel.MMBusinessAssociationEnd;
-import com.tools20022.metamodel.MMBusinessAttribute;
-import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.*;
 import com.tools20022.repository.datatype.CurrencyAndAmount;
 import com.tools20022.repository.entity.CorporateActionEntitlement;
-import com.tools20022.repository.msg.CashEntitlement1;
+import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -38,27 +37,12 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
  * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionCashEntitlement#mmGrossCashAmount
- * CorporateActionCashEntitlement.mmGrossCashAmount}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionCashEntitlement#mmNetCashAmount
- * CorporateActionCashEntitlement.mmNetCashAmount}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionCashEntitlement#mmCashInLieuOfShare
- * CorporateActionCashEntitlement.mmCashInLieuOfShare}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionCashEntitlement#mmCapitalGain
- * CorporateActionCashEntitlement.mmCapitalGain}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionCashEntitlement#mmEntitledCashAmount
- * CorporateActionCashEntitlement.mmEntitledCashAmount}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionCashEntitlement#mmExchangeRate
- * CorporateActionCashEntitlement.mmExchangeRate}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashEntitlement1
+ * CashEntitlement1}</li>
  * </ul>
  * </li>
  * <li>
@@ -83,12 +67,27 @@ import java.util.List;
  * superType} =
  * {@linkplain com.tools20022.repository.entity.CorporateActionEntitlement
  * CorporateActionEntitlement}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.CashEntitlement1
- * CashEntitlement1}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionCashEntitlement#mmGrossCashAmount
+ * CorporateActionCashEntitlement.mmGrossCashAmount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionCashEntitlement#mmNetCashAmount
+ * CorporateActionCashEntitlement.mmNetCashAmount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionCashEntitlement#mmCashInLieuOfShare
+ * CorporateActionCashEntitlement.mmCashInLieuOfShare}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionCashEntitlement#mmCapitalGain
+ * CorporateActionCashEntitlement.mmCapitalGain}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionCashEntitlement#mmEntitledCashAmount
+ * CorporateActionCashEntitlement.mmEntitledCashAmount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionCashEntitlement#mmExchangeRate
+ * CorporateActionCashEntitlement.mmExchangeRate}</li>
  * </ul>
  * </li>
  * <li>
@@ -257,27 +256,17 @@ public class CorporateActionCashEntitlement extends CorporateActionEntitlement {
 	 */
 	public static final MMBusinessAttribute mmGrossCashAmount = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionAmounts2.mmGrossCashAmount, com.tools20022.repository.msg.CorporateActionAmounts5.mmGrossCashAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts11.mmGrossCashAmount, com.tools20022.repository.msg.CorporateActionAmounts12.mmGrossCashAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts17.mmGrossCashAmount, com.tools20022.repository.msg.CorporateActionAmounts20.mmGrossCashAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts23.mmGrossCashAmount, com.tools20022.repository.msg.CorporateActionAmounts24.mmGrossCashAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts3.mmGrossCashAmount, com.tools20022.repository.msg.CorporateActionAmounts6.mmGrossCashAmount, com.tools20022.repository.msg.CorporateActionAmounts9.mmGrossCashAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts13.mmGrossCashAmount, com.tools20022.repository.msg.CorporateActionAmounts16.mmGrossCashAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts19.mmGrossCashAmount, com.tools20022.repository.msg.CorporateActionAmounts22.mmGrossCashAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts25.mmGrossCashAmount, com.tools20022.repository.msg.CorporateActionAmounts4.mmGrossCashAmount, com.tools20022.repository.msg.CorporateActionAmounts7.mmGrossCashAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts10.mmGrossCashAmount, com.tools20022.repository.msg.CorporateActionAmounts14.mmGrossCashAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts15.mmGrossCashAmount, com.tools20022.repository.msg.CorporateActionAmounts18.mmGrossCashAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts21.mmGrossCashAmount, com.tools20022.repository.msg.CorporateActionAmounts26.mmGrossCashAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts1.mmGrossCashAmount, com.tools20022.repository.msg.CorporateActionAmounts29.mmGrossCashAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts27.mmGrossCashAmount, com.tools20022.repository.msg.CorporateActionAmounts28.mmGrossCashAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts33.mmGrossCashAmount, com.tools20022.repository.msg.CorporateActionAmounts32.mmGrossCashAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts35.mmGrossCashAmount, com.tools20022.repository.msg.CorporateActionAmounts37.mmGrossCashAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts36.mmGrossCashAmount, com.tools20022.repository.msg.CorporateActionAmounts38.mmGrossCashAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts39.mmGrossCashAmount, com.tools20022.repository.msg.CorporateActionAmounts41.mmGrossCashAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts40.mmGrossCashAmount);
+			derivation_lazy = () -> Arrays.asList(CorporateActionAmounts2.mmGrossCashAmount, CorporateActionAmounts5.mmGrossCashAmount, CorporateActionAmounts11.mmGrossCashAmount, CorporateActionAmounts12.mmGrossCashAmount,
+					CorporateActionAmounts17.mmGrossCashAmount, CorporateActionAmounts20.mmGrossCashAmount, CorporateActionAmounts23.mmGrossCashAmount, CorporateActionAmounts24.mmGrossCashAmount, CorporateActionAmounts3.mmGrossCashAmount,
+					CorporateActionAmounts6.mmGrossCashAmount, CorporateActionAmounts9.mmGrossCashAmount, CorporateActionAmounts13.mmGrossCashAmount, CorporateActionAmounts16.mmGrossCashAmount, CorporateActionAmounts19.mmGrossCashAmount,
+					CorporateActionAmounts22.mmGrossCashAmount, CorporateActionAmounts25.mmGrossCashAmount, CorporateActionAmounts4.mmGrossCashAmount, CorporateActionAmounts7.mmGrossCashAmount, CorporateActionAmounts10.mmGrossCashAmount,
+					CorporateActionAmounts14.mmGrossCashAmount, CorporateActionAmounts15.mmGrossCashAmount, CorporateActionAmounts18.mmGrossCashAmount, CorporateActionAmounts21.mmGrossCashAmount, CorporateActionAmounts26.mmGrossCashAmount,
+					CorporateActionAmounts1.mmGrossCashAmount, CorporateActionAmounts29.mmGrossCashAmount, CorporateActionAmounts27.mmGrossCashAmount, CorporateActionAmounts28.mmGrossCashAmount, CorporateActionAmounts33.mmGrossCashAmount,
+					CorporateActionAmounts32.mmGrossCashAmount, CorporateActionAmounts35.mmGrossCashAmount, CorporateActionAmounts37.mmGrossCashAmount, CorporateActionAmounts36.mmGrossCashAmount, CorporateActionAmounts38.mmGrossCashAmount,
+					CorporateActionAmounts39.mmGrossCashAmount, CorporateActionAmounts41.mmGrossCashAmount, CorporateActionAmounts40.mmGrossCashAmount);
 			elementContext_lazy = () -> CorporateActionCashEntitlement.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "GrossCashAmount";
 			definition = "Amount of money before any deductions and allowances have been made.";
 			maxOccurs = 1;
@@ -433,22 +422,17 @@ public class CorporateActionCashEntitlement extends CorporateActionEntitlement {
 	 */
 	public static final MMBusinessAttribute mmNetCashAmount = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionAmounts2.mmNetCashAmount, com.tools20022.repository.msg.CorporateActionAmounts5.mmNetCashAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts11.mmNetCashAmount, com.tools20022.repository.msg.CorporateActionAmounts12.mmNetCashAmount, com.tools20022.repository.msg.CorporateActionAmounts17.mmNetCashAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts20.mmNetCashAmount, com.tools20022.repository.msg.CorporateActionAmounts23.mmNetCashAmount, com.tools20022.repository.msg.CorporateActionAmounts24.mmNetCashAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts3.mmNetCashAmount, com.tools20022.repository.msg.CorporateActionAmounts6.mmNetCashAmount, com.tools20022.repository.msg.CorporateActionAmounts9.mmNetCashAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts13.mmNetCashAmount, com.tools20022.repository.msg.CorporateActionAmounts16.mmNetCashAmount, com.tools20022.repository.msg.CorporateActionAmounts19.mmNetCashAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts22.mmNetCashAmount, com.tools20022.repository.msg.CorporateActionAmounts25.mmNetCashAmount, com.tools20022.repository.msg.CorporateActionAmounts4.mmNetCashAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts7.mmNetCashAmount, com.tools20022.repository.msg.CorporateActionAmounts10.mmNetCashAmount, com.tools20022.repository.msg.CorporateActionAmounts14.mmNetCashAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts15.mmNetCashAmount, com.tools20022.repository.msg.CorporateActionAmounts18.mmNetCashAmount, com.tools20022.repository.msg.CorporateActionAmounts21.mmNetCashAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts26.mmNetCashAmount, com.tools20022.repository.msg.CorporateActionAmounts1.mmNetCashAmount, com.tools20022.repository.msg.CorporateActionAmounts29.mmNetCashAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts27.mmNetCashAmount, com.tools20022.repository.msg.CorporateActionAmounts28.mmNetCashAmount, com.tools20022.repository.msg.CorporateActionAmounts33.mmNetCashAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts32.mmNetCashAmount, com.tools20022.repository.msg.CorporateActionAmounts35.mmNetCashAmount, com.tools20022.repository.msg.CorporateActionAmounts37.mmNetCashAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts36.mmNetCashAmount, com.tools20022.repository.msg.CorporateActionAmounts38.mmNetCashAmount, com.tools20022.repository.msg.CorporateActionAmounts39.mmNetCashAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts41.mmNetCashAmount, com.tools20022.repository.msg.CorporateActionAmounts40.mmNetCashAmount);
+			derivation_lazy = () -> Arrays.asList(CorporateActionAmounts2.mmNetCashAmount, CorporateActionAmounts5.mmNetCashAmount, CorporateActionAmounts11.mmNetCashAmount, CorporateActionAmounts12.mmNetCashAmount,
+					CorporateActionAmounts17.mmNetCashAmount, CorporateActionAmounts20.mmNetCashAmount, CorporateActionAmounts23.mmNetCashAmount, CorporateActionAmounts24.mmNetCashAmount, CorporateActionAmounts3.mmNetCashAmount,
+					CorporateActionAmounts6.mmNetCashAmount, CorporateActionAmounts9.mmNetCashAmount, CorporateActionAmounts13.mmNetCashAmount, CorporateActionAmounts16.mmNetCashAmount, CorporateActionAmounts19.mmNetCashAmount,
+					CorporateActionAmounts22.mmNetCashAmount, CorporateActionAmounts25.mmNetCashAmount, CorporateActionAmounts4.mmNetCashAmount, CorporateActionAmounts7.mmNetCashAmount, CorporateActionAmounts10.mmNetCashAmount,
+					CorporateActionAmounts14.mmNetCashAmount, CorporateActionAmounts15.mmNetCashAmount, CorporateActionAmounts18.mmNetCashAmount, CorporateActionAmounts21.mmNetCashAmount, CorporateActionAmounts26.mmNetCashAmount,
+					CorporateActionAmounts1.mmNetCashAmount, CorporateActionAmounts29.mmNetCashAmount, CorporateActionAmounts27.mmNetCashAmount, CorporateActionAmounts28.mmNetCashAmount, CorporateActionAmounts33.mmNetCashAmount,
+					CorporateActionAmounts32.mmNetCashAmount, CorporateActionAmounts35.mmNetCashAmount, CorporateActionAmounts37.mmNetCashAmount, CorporateActionAmounts36.mmNetCashAmount, CorporateActionAmounts38.mmNetCashAmount,
+					CorporateActionAmounts39.mmNetCashAmount, CorporateActionAmounts41.mmNetCashAmount, CorporateActionAmounts40.mmNetCashAmount);
 			elementContext_lazy = () -> CorporateActionCashEntitlement.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NetCashAmount";
 			definition = "Amount of money after deductions and allowances have been made, if any, ie, the total amount +/- charges/fees.";
 			maxOccurs = 1;
@@ -605,28 +589,19 @@ public class CorporateActionCashEntitlement extends CorporateActionEntitlement {
 	 */
 	public static final MMBusinessAttribute mmCashInLieuOfShare = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionAmounts2.mmCashInLieuOfShare, com.tools20022.repository.msg.CorporateActionAmounts5.mmCashInLieuOfShare,
-					com.tools20022.repository.msg.CorporateActionAmounts11.mmCashInLieuOfShare, com.tools20022.repository.msg.CorporateActionAmounts12.mmCashInLieuOfShare,
-					com.tools20022.repository.msg.CorporateActionAmounts17.mmCashInLieuOfShare, com.tools20022.repository.msg.CorporateActionAmounts20.mmCashInLieuOfShare,
-					com.tools20022.repository.msg.CorporateActionAmounts23.mmCashInLieuOfShare, com.tools20022.repository.msg.CorporateActionAmounts24.mmCashInLieuOfShare,
-					com.tools20022.repository.msg.CorporateActionAmounts3.mmCashInLieuOfShare, com.tools20022.repository.msg.CorporateActionAmounts6.mmCashInLieuOfShare,
-					com.tools20022.repository.msg.CorporateActionAmounts9.mmCashInLieuOfShare, com.tools20022.repository.msg.CorporateActionAmounts13.mmCashInLieuOfShare,
-					com.tools20022.repository.msg.CorporateActionAmounts16.mmCashInLieuOfShare, com.tools20022.repository.msg.CorporateActionAmounts19.mmCashInLieuOfShare,
-					com.tools20022.repository.msg.CorporateActionAmounts22.mmCashInLieuOfShare, com.tools20022.repository.msg.CorporateActionAmounts25.mmCashInLieuOfShare,
-					com.tools20022.repository.msg.CorporateActionAmounts4.mmCashInLieuOfShare, com.tools20022.repository.msg.CorporateActionAmounts7.mmCashInLieuOfShare,
-					com.tools20022.repository.msg.CorporateActionAmounts10.mmCashInLieuOfShare, com.tools20022.repository.msg.CorporateActionAmounts14.mmCashInLieuOfShare,
-					com.tools20022.repository.msg.CorporateActionAmounts15.mmCashInLieuOfShare, com.tools20022.repository.msg.CorporateActionAmounts18.mmCashInLieuOfShare,
-					com.tools20022.repository.msg.CorporateActionAmounts21.mmCashInLieuOfShare, com.tools20022.repository.msg.CorporateActionAmounts26.mmCashInLieuOfShare,
-					com.tools20022.repository.msg.CorporateActionAmounts1.mmCashInLieuOfShare, com.tools20022.repository.msg.CorporateActionAmounts29.mmCashInLieuOfShare,
-					com.tools20022.repository.msg.CorporateActionAmounts27.mmCashInLieuOfShare, com.tools20022.repository.msg.CorporateActionAmounts28.mmCashInLieuOfShare,
-					com.tools20022.repository.msg.CorporateActionAmounts33.mmCashInLieuOfShare, com.tools20022.repository.msg.CorporateActionAmounts32.mmCashInLieuOfShare,
-					com.tools20022.repository.msg.CorporateActionAmounts35.mmCashInLieuOfShare, com.tools20022.repository.msg.CorporateActionAmounts37.mmCashInLieuOfShare,
-					com.tools20022.repository.msg.CorporateActionAmounts36.mmCashInLieuOfShare, com.tools20022.repository.msg.CorporateActionAmounts38.mmCashInLieuOfShare,
-					com.tools20022.repository.msg.CorporateActionAmounts39.mmCashInLieuOfShare, com.tools20022.repository.msg.CorporateActionAmounts41.mmCashInLieuOfShare,
-					com.tools20022.repository.msg.CorporateActionAmounts40.mmCashInLieuOfShare, com.tools20022.repository.msg.OptionTransactionDetailsSD2.mmCashInLieuOfShare);
+			derivation_lazy = () -> Arrays.asList(CorporateActionAmounts2.mmCashInLieuOfShare, CorporateActionAmounts5.mmCashInLieuOfShare, CorporateActionAmounts11.mmCashInLieuOfShare, CorporateActionAmounts12.mmCashInLieuOfShare,
+					CorporateActionAmounts17.mmCashInLieuOfShare, CorporateActionAmounts20.mmCashInLieuOfShare, CorporateActionAmounts23.mmCashInLieuOfShare, CorporateActionAmounts24.mmCashInLieuOfShare,
+					CorporateActionAmounts3.mmCashInLieuOfShare, CorporateActionAmounts6.mmCashInLieuOfShare, CorporateActionAmounts9.mmCashInLieuOfShare, CorporateActionAmounts13.mmCashInLieuOfShare,
+					CorporateActionAmounts16.mmCashInLieuOfShare, CorporateActionAmounts19.mmCashInLieuOfShare, CorporateActionAmounts22.mmCashInLieuOfShare, CorporateActionAmounts25.mmCashInLieuOfShare,
+					CorporateActionAmounts4.mmCashInLieuOfShare, CorporateActionAmounts7.mmCashInLieuOfShare, CorporateActionAmounts10.mmCashInLieuOfShare, CorporateActionAmounts14.mmCashInLieuOfShare,
+					CorporateActionAmounts15.mmCashInLieuOfShare, CorporateActionAmounts18.mmCashInLieuOfShare, CorporateActionAmounts21.mmCashInLieuOfShare, CorporateActionAmounts26.mmCashInLieuOfShare,
+					CorporateActionAmounts1.mmCashInLieuOfShare, CorporateActionAmounts29.mmCashInLieuOfShare, CorporateActionAmounts27.mmCashInLieuOfShare, CorporateActionAmounts28.mmCashInLieuOfShare,
+					CorporateActionAmounts33.mmCashInLieuOfShare, CorporateActionAmounts32.mmCashInLieuOfShare, CorporateActionAmounts35.mmCashInLieuOfShare, CorporateActionAmounts37.mmCashInLieuOfShare,
+					CorporateActionAmounts36.mmCashInLieuOfShare, CorporateActionAmounts38.mmCashInLieuOfShare, CorporateActionAmounts39.mmCashInLieuOfShare, CorporateActionAmounts41.mmCashInLieuOfShare,
+					CorporateActionAmounts40.mmCashInLieuOfShare, OptionTransactionDetailsSD2.mmCashInLieuOfShare);
 			elementContext_lazy = () -> CorporateActionCashEntitlement.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CashInLieuOfShare";
 			definition = "Cash disbursement in lieu of a fractional quantity of, eg, equity.";
 			maxOccurs = 1;
@@ -780,22 +755,17 @@ public class CorporateActionCashEntitlement extends CorporateActionEntitlement {
 	 */
 	public static final MMBusinessAttribute mmCapitalGain = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionAmounts2.mmCapitalGain, com.tools20022.repository.msg.CorporateActionAmounts5.mmCapitalGain,
-					com.tools20022.repository.msg.CorporateActionAmounts11.mmCapitalGain, com.tools20022.repository.msg.CorporateActionAmounts12.mmCapitalGain, com.tools20022.repository.msg.CorporateActionAmounts17.mmCapitalGain,
-					com.tools20022.repository.msg.CorporateActionAmounts20.mmCapitalGain, com.tools20022.repository.msg.CorporateActionAmounts23.mmCapitalGain, com.tools20022.repository.msg.CorporateActionAmounts24.mmCapitalGain,
-					com.tools20022.repository.msg.CorporateActionAmounts3.mmCapitalGain, com.tools20022.repository.msg.CorporateActionAmounts6.mmCapitalGain, com.tools20022.repository.msg.CorporateActionAmounts9.mmCapitalGain,
-					com.tools20022.repository.msg.CorporateActionAmounts13.mmCapitalGain, com.tools20022.repository.msg.CorporateActionAmounts16.mmCapitalGain, com.tools20022.repository.msg.CorporateActionAmounts19.mmCapitalGain,
-					com.tools20022.repository.msg.CorporateActionAmounts22.mmCapitalGain, com.tools20022.repository.msg.CorporateActionAmounts25.mmCapitalGain, com.tools20022.repository.msg.CorporateActionAmounts4.mmCapitalGain,
-					com.tools20022.repository.msg.CorporateActionAmounts7.mmCapitalGain, com.tools20022.repository.msg.CorporateActionAmounts10.mmCapitalGain, com.tools20022.repository.msg.CorporateActionAmounts14.mmCapitalGain,
-					com.tools20022.repository.msg.CorporateActionAmounts15.mmCapitalGain, com.tools20022.repository.msg.CorporateActionAmounts18.mmCapitalGain, com.tools20022.repository.msg.CorporateActionAmounts21.mmCapitalGain,
-					com.tools20022.repository.msg.CorporateActionAmounts26.mmCapitalGain, com.tools20022.repository.msg.CorporateActionAmounts1.mmCapitalGain, com.tools20022.repository.msg.CorporateActionAmounts29.mmCapitalGain,
-					com.tools20022.repository.msg.CorporateActionAmounts27.mmCapitalGain, com.tools20022.repository.msg.CorporateActionAmounts28.mmCapitalGain, com.tools20022.repository.msg.CorporateActionAmounts33.mmCapitalGain,
-					com.tools20022.repository.msg.CorporateActionAmounts32.mmCapitalGain, com.tools20022.repository.msg.CorporateActionAmounts35.mmCapitalGain, com.tools20022.repository.msg.CorporateActionAmounts37.mmCapitalGain,
-					com.tools20022.repository.msg.CorporateActionAmounts36.mmCapitalGain, com.tools20022.repository.msg.CorporateActionAmounts38.mmCapitalGain, com.tools20022.repository.msg.CorporateActionAmounts39.mmCapitalGain,
-					com.tools20022.repository.msg.CorporateActionAmounts41.mmCapitalGain, com.tools20022.repository.msg.CorporateActionAmounts40.mmCapitalGain);
+			derivation_lazy = () -> Arrays.asList(CorporateActionAmounts2.mmCapitalGain, CorporateActionAmounts5.mmCapitalGain, CorporateActionAmounts11.mmCapitalGain, CorporateActionAmounts12.mmCapitalGain,
+					CorporateActionAmounts17.mmCapitalGain, CorporateActionAmounts20.mmCapitalGain, CorporateActionAmounts23.mmCapitalGain, CorporateActionAmounts24.mmCapitalGain, CorporateActionAmounts3.mmCapitalGain,
+					CorporateActionAmounts6.mmCapitalGain, CorporateActionAmounts9.mmCapitalGain, CorporateActionAmounts13.mmCapitalGain, CorporateActionAmounts16.mmCapitalGain, CorporateActionAmounts19.mmCapitalGain,
+					CorporateActionAmounts22.mmCapitalGain, CorporateActionAmounts25.mmCapitalGain, CorporateActionAmounts4.mmCapitalGain, CorporateActionAmounts7.mmCapitalGain, CorporateActionAmounts10.mmCapitalGain,
+					CorporateActionAmounts14.mmCapitalGain, CorporateActionAmounts15.mmCapitalGain, CorporateActionAmounts18.mmCapitalGain, CorporateActionAmounts21.mmCapitalGain, CorporateActionAmounts26.mmCapitalGain,
+					CorporateActionAmounts1.mmCapitalGain, CorporateActionAmounts29.mmCapitalGain, CorporateActionAmounts27.mmCapitalGain, CorporateActionAmounts28.mmCapitalGain, CorporateActionAmounts33.mmCapitalGain,
+					CorporateActionAmounts32.mmCapitalGain, CorporateActionAmounts35.mmCapitalGain, CorporateActionAmounts37.mmCapitalGain, CorporateActionAmounts36.mmCapitalGain, CorporateActionAmounts38.mmCapitalGain,
+					CorporateActionAmounts39.mmCapitalGain, CorporateActionAmounts41.mmCapitalGain, CorporateActionAmounts40.mmCapitalGain);
 			elementContext_lazy = () -> CorporateActionCashEntitlement.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CapitalGain";
 			definition = "Amount of money distributed as the result of a capital gain.";
 			maxOccurs = 1;
@@ -919,18 +889,15 @@ public class CorporateActionCashEntitlement extends CorporateActionEntitlement {
 	 */
 	public static final MMBusinessAttribute mmEntitledCashAmount = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionAmounts3.mmEntitledAmount, com.tools20022.repository.msg.CorporateActionAmounts6.mmEntitledAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts9.mmEntitledAmount, com.tools20022.repository.msg.CorporateActionAmounts13.mmEntitledAmount, com.tools20022.repository.msg.CorporateActionAmounts16.mmEntitledAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts19.mmEntitledAmount, com.tools20022.repository.msg.CorporateActionAmounts22.mmEntitledAmount, com.tools20022.repository.msg.CorporateActionAmounts25.mmEntitledAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts4.mmEntitledAmount, com.tools20022.repository.msg.CorporateActionAmounts7.mmEntitledAmount, com.tools20022.repository.msg.CorporateActionAmounts10.mmEntitledAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts14.mmEntitledAmount, com.tools20022.repository.msg.CorporateActionAmounts15.mmEntitledAmount, com.tools20022.repository.msg.CorporateActionAmounts18.mmEntitledAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts21.mmEntitledAmount, com.tools20022.repository.msg.CorporateActionAmounts26.mmEntitledAmount, com.tools20022.repository.msg.CorporateActionAmounts1.mmEntitledAmount,
-					com.tools20022.repository.msg.CashEntitlement1.mmCashAmount, com.tools20022.repository.msg.CorporateActionAmounts27.mmEntitledAmount, com.tools20022.repository.msg.CorporateActionAmounts28.mmEntitledAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts33.mmEntitledAmount, com.tools20022.repository.msg.CorporateActionAmounts32.mmEntitledAmount, com.tools20022.repository.msg.CorporateActionAmounts36.mmEntitledAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts38.mmEntitledAmount, com.tools20022.repository.msg.CorporateActionAmounts41.mmEntitledAmount, com.tools20022.repository.msg.CorporateActionAmounts40.mmEntitledAmount);
+			derivation_lazy = () -> Arrays.asList(CorporateActionAmounts3.mmEntitledAmount, CorporateActionAmounts6.mmEntitledAmount, CorporateActionAmounts9.mmEntitledAmount, CorporateActionAmounts13.mmEntitledAmount,
+					CorporateActionAmounts16.mmEntitledAmount, CorporateActionAmounts19.mmEntitledAmount, CorporateActionAmounts22.mmEntitledAmount, CorporateActionAmounts25.mmEntitledAmount, CorporateActionAmounts4.mmEntitledAmount,
+					CorporateActionAmounts7.mmEntitledAmount, CorporateActionAmounts10.mmEntitledAmount, CorporateActionAmounts14.mmEntitledAmount, CorporateActionAmounts15.mmEntitledAmount, CorporateActionAmounts18.mmEntitledAmount,
+					CorporateActionAmounts21.mmEntitledAmount, CorporateActionAmounts26.mmEntitledAmount, CorporateActionAmounts1.mmEntitledAmount, CashEntitlement1.mmCashAmount, CorporateActionAmounts27.mmEntitledAmount,
+					CorporateActionAmounts28.mmEntitledAmount, CorporateActionAmounts33.mmEntitledAmount, CorporateActionAmounts32.mmEntitledAmount, CorporateActionAmounts36.mmEntitledAmount, CorporateActionAmounts38.mmEntitledAmount,
+					CorporateActionAmounts41.mmEntitledAmount, CorporateActionAmounts40.mmEntitledAmount);
 			elementContext_lazy = () -> CorporateActionCashEntitlement.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "EntitledCashAmount";
 			definition = "Cash amount based on terms of corporate action event and balance of underlying securities, entitled to/from account owner (which may be positive or negative).";
 			maxOccurs = 1;
@@ -979,12 +946,12 @@ public class CorporateActionCashEntitlement extends CorporateActionEntitlement {
 		{
 			elementContext_lazy = () -> CorporateActionCashEntitlement.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ExchangeRate";
 			definition = "Specifies the exchange rate used to convert the cash entitlement value in another currency.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmCurrencyExchangeForCorporateActionCashEntitlement;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmObject();
 		}
 	};
@@ -992,16 +959,15 @@ public class CorporateActionCashEntitlement extends CorporateActionEntitlement {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionCashEntitlement";
 				definition = "Rights for cash entitled to the account owner based on the terms of the corporate action event and the balance of underlying securities.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CurrencyExchange.mmCurrencyExchangeForCorporateActionCashEntitlement);
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Entitlement1.mmCashDistributionDetails);
+				derivationElement_lazy = () -> Arrays.asList(Entitlement1.mmCashDistributionDetails);
 				superType_lazy = () -> CorporateActionEntitlement.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CorporateActionCashEntitlement.mmGrossCashAmount, com.tools20022.repository.entity.CorporateActionCashEntitlement.mmNetCashAmount,
-						com.tools20022.repository.entity.CorporateActionCashEntitlement.mmCashInLieuOfShare, com.tools20022.repository.entity.CorporateActionCashEntitlement.mmCapitalGain,
-						com.tools20022.repository.entity.CorporateActionCashEntitlement.mmEntitledCashAmount, com.tools20022.repository.entity.CorporateActionCashEntitlement.mmExchangeRate);
+				element_lazy = () -> Arrays.asList(CorporateActionCashEntitlement.mmGrossCashAmount, CorporateActionCashEntitlement.mmNetCashAmount, CorporateActionCashEntitlement.mmCashInLieuOfShare,
+						CorporateActionCashEntitlement.mmCapitalGain, CorporateActionCashEntitlement.mmEntitledCashAmount, CorporateActionCashEntitlement.mmExchangeRate);
 				derivationComponent_lazy = () -> Arrays.asList(CashEntitlement1.mmObject());
 			}
 		});

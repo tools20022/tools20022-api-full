@@ -19,9 +19,11 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.PercentageRate;
 import com.tools20022.repository.entity.InterestCalculation;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -102,11 +104,11 @@ public class RateType4Choice {
 	 */
 	public static final MMMessageAttribute mmPercentage = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InterestCalculation.mmRate;
+			businessElementTrace_lazy = () -> InterestCalculation.mmRate;
 			componentContext_lazy = () -> RateType4Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Pctg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Percentage";
 			definition = "Ratio of the amount of interest paid during a certain period of time compared to the principal amount of the interest bearing financial instrument.";
 			maxOccurs = 1;
@@ -149,11 +151,11 @@ public class RateType4Choice {
 	 */
 	public static final MMMessageAttribute mmOther = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InterestCalculation.mmRateType;
+			businessElementTrace_lazy = () -> InterestCalculation.mmRateType;
 			componentContext_lazy = () -> RateType4Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Othr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
 			definition = "Rate type expressed, in an other form.";
 			maxOccurs = 1;
@@ -165,10 +167,10 @@ public class RateType4Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.RateType4Choice.mmPercentage, com.tools20022.repository.choice.RateType4Choice.mmOther);
+				messageElement_lazy = () -> Arrays.asList(RateType4Choice.mmPercentage, RateType4Choice.mmOther);
 				trace_lazy = () -> InterestCalculation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RateType4Choice";
 				definition = "Specifies the rate as a percentage or a text.";
 			}

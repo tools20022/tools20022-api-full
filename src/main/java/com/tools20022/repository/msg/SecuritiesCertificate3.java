@@ -19,8 +19,12 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.entity.IdentificationIssuerRole;
+import com.tools20022.repository.entity.Scheme;
 import com.tools20022.repository.entity.SecuritiesCertificate;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -103,11 +107,11 @@ public class SecuritiesCertificate3 {
 	 */
 	public static final MMMessageAttribute mmNumber = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesCertificate.mmNumber;
+			businessElementTrace_lazy = () -> SecuritiesCertificate.mmNumber;
 			componentContext_lazy = () -> SecuritiesCertificate3.mmObject();
 			isDerived = false;
 			xmlTag = "Nb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Number";
 			definition = "Unique and unambiguous identifier of a certificate assigned by the issuer.";
 			maxOccurs = 1;
@@ -150,11 +154,11 @@ public class SecuritiesCertificate3 {
 	 */
 	public static final MMMessageAttribute mmIssuer = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.IdentificationIssuerRole.mmEntityName;
+			businessElementTrace_lazy = () -> IdentificationIssuerRole.mmEntityName;
 			componentContext_lazy = () -> SecuritiesCertificate3.mmObject();
 			isDerived = false;
 			xmlTag = "Issr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Issuer";
 			definition = "Entity that assigns the identification.";
 			maxOccurs = 1;
@@ -197,11 +201,11 @@ public class SecuritiesCertificate3 {
 	 */
 	public static final MMMessageAttribute mmSchemeName = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Scheme.mmNameShort;
+			businessElementTrace_lazy = () -> Scheme.mmNameShort;
 			componentContext_lazy = () -> SecuritiesCertificate3.mmObject();
 			isDerived = false;
 			xmlTag = "SchmeNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SchemeName";
 			definition = "Short textual description of the scheme.";
 			maxOccurs = 1;
@@ -213,11 +217,10 @@ public class SecuritiesCertificate3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesCertificate3.mmNumber, com.tools20022.repository.msg.SecuritiesCertificate3.mmIssuer,
-						com.tools20022.repository.msg.SecuritiesCertificate3.mmSchemeName);
+				messageElement_lazy = () -> Arrays.asList(SecuritiesCertificate3.mmNumber, SecuritiesCertificate3.mmIssuer, SecuritiesCertificate3.mmSchemeName);
 				trace_lazy = () -> SecuritiesCertificate.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesCertificate3";
 				definition = "Physical representation of a security.";
 			}

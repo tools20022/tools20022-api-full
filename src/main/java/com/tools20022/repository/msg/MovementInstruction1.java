@@ -19,6 +19,9 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.seev.AgentCAMovementCancellationRequestV01;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -106,7 +109,7 @@ public class MovementInstruction1 {
 			componentContext_lazy = () -> MovementInstruction1.mmObject();
 			isDerived = false;
 			xmlTag = "MvmntGnlInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MovementGeneralInformation";
 			definition = "Provides general information about the movement.";
 			maxOccurs = 1;
@@ -149,7 +152,7 @@ public class MovementInstruction1 {
 			componentContext_lazy = () -> MovementInstruction1.mmObject();
 			isDerived = false;
 			xmlTag = "UndrlygSctiesMvmntDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnderlyingSecuritiesMovementDetails";
 			definition = "Provides information about the underlying securities movement.";
 			minOccurs = 0;
@@ -189,7 +192,7 @@ public class MovementInstruction1 {
 			componentContext_lazy = () -> MovementInstruction1.mmObject();
 			isDerived = false;
 			xmlTag = "UndrlygCshMvmntDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnderlyingCashMovementDetails";
 			definition = "Provides information about the underlying cash movement.";
 			minOccurs = 0;
@@ -230,7 +233,7 @@ public class MovementInstruction1 {
 			componentContext_lazy = () -> MovementInstruction1.mmObject();
 			isDerived = false;
 			xmlTag = "PrcdsMvmntDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProceedsMovementDetails";
 			definition = "Provides information about the proceeds, ie, outturned resources.";
 			minOccurs = 0;
@@ -242,11 +245,11 @@ public class MovementInstruction1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MovementInstruction1.mmMovementGeneralInformation, com.tools20022.repository.msg.MovementInstruction1.mmUnderlyingSecuritiesMovementDetails,
-						com.tools20022.repository.msg.MovementInstruction1.mmUnderlyingCashMovementDetails, com.tools20022.repository.msg.MovementInstruction1.mmProceedsMovementDetails);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.AgentCAMovementCancellationRequestV01.mmMovementDetails);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(MovementInstruction1.mmMovementGeneralInformation, MovementInstruction1.mmUnderlyingSecuritiesMovementDetails, MovementInstruction1.mmUnderlyingCashMovementDetails,
+						MovementInstruction1.mmProceedsMovementDetails);
+				messageBuildingBlock_lazy = () -> Arrays.asList(AgentCAMovementCancellationRequestV01.mmMovementDetails);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MovementInstruction1";
 				definition = "Details of the movement instructions.";
 			}

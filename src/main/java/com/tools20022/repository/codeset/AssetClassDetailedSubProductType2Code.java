@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.AssetClassDetailedSubProductTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -87,7 +89,7 @@ public class AssetClassDetailedSubProductType2Code extends AssetClassDetailedSub
 	 */
 	public static final MMCode mmRobustaCoffee = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RobustaCoffee";
 			owner_lazy = () -> AssetClassDetailedSubProductType2Code.mmObject();
 		}
@@ -110,7 +112,7 @@ public class AssetClassDetailedSubProductType2Code extends AssetClassDetailedSub
 	 */
 	public static final MMCode mmCocoa = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cocoa";
 			owner_lazy = () -> AssetClassDetailedSubProductType2Code.mmObject();
 		}
@@ -133,7 +135,7 @@ public class AssetClassDetailedSubProductType2Code extends AssetClassDetailedSub
 	 */
 	public static final MMCode mmRawSugar = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RawSugar";
 			owner_lazy = () -> AssetClassDetailedSubProductType2Code.mmObject();
 		}
@@ -156,7 +158,7 @@ public class AssetClassDetailedSubProductType2Code extends AssetClassDetailedSub
 	 */
 	public static final MMCode mmWhiteSugar = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WhiteSugar";
 			owner_lazy = () -> AssetClassDetailedSubProductType2Code.mmObject();
 		}
@@ -179,7 +181,7 @@ public class AssetClassDetailedSubProductType2Code extends AssetClassDetailedSub
 	 */
 	public static final MMCode mmOther = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
 			owner_lazy = () -> AssetClassDetailedSubProductType2Code.mmObject();
 		}
@@ -188,13 +190,12 @@ public class AssetClassDetailedSubProductType2Code extends AssetClassDetailedSub
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AssetClassDetailedSubProductType2Code";
 				definition = "Further sub product code list for commodity derivative Softs.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AssetClassDetailedSubProductType2Code.mmRobustaCoffee, com.tools20022.repository.codeset.AssetClassDetailedSubProductType2Code.mmCocoa,
-						com.tools20022.repository.codeset.AssetClassDetailedSubProductType2Code.mmRawSugar, com.tools20022.repository.codeset.AssetClassDetailedSubProductType2Code.mmWhiteSugar,
-						com.tools20022.repository.codeset.AssetClassDetailedSubProductType2Code.mmOther);
+				code_lazy = () -> Arrays.asList(AssetClassDetailedSubProductType2Code.mmRobustaCoffee, AssetClassDetailedSubProductType2Code.mmCocoa, AssetClassDetailedSubProductType2Code.mmRawSugar,
+						AssetClassDetailedSubProductType2Code.mmWhiteSugar, AssetClassDetailedSubProductType2Code.mmOther);
 				trace_lazy = () -> AssetClassDetailedSubProductTypeCode.mmObject();
 			}
 		});

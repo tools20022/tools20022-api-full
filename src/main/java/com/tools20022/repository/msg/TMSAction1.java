@@ -20,10 +20,13 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.TerminalManagementAction1Code;
 import com.tools20022.repository.codeset.TerminalManagementActionTrigger1Code;
 import com.tools20022.repository.codeset.TerminalManagementAdditionalProcess1Code;
 import com.tools20022.repository.entity.TerminalManagementAction;
+import com.tools20022.repository.entity.TerminalManagementSystem;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -121,11 +124,11 @@ public class TMSAction1 {
 	 */
 	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TerminalManagementAction.mmType;
+			businessElementTrace_lazy = () -> TerminalManagementAction.mmType;
 			componentContext_lazy = () -> TMSAction1.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Types of action to be performed by a point of interaction (POI).";
 			maxOccurs = 1;
@@ -167,11 +170,11 @@ public class TMSAction1 {
 	 */
 	public static final MMMessageAssociationEnd mmAddress = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TerminalManagementSystem.mmNetworkAccess;
+			businessElementTrace_lazy = () -> TerminalManagementSystem.mmNetworkAccess;
 			componentContext_lazy = () -> TMSAction1.mmObject();
 			isDerived = false;
 			xmlTag = "Adr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Address";
 			definition = "Communication parameters of the terminal management system to contact.";
 			maxOccurs = 1;
@@ -211,7 +214,7 @@ public class TMSAction1 {
 			componentContext_lazy = () -> TMSAction1.mmObject();
 			isDerived = false;
 			xmlTag = "DataSetId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DataSetIdentification";
 			definition = "Data set on which the action has to be performed.";
 			maxOccurs = 1;
@@ -258,11 +261,11 @@ public class TMSAction1 {
 	 */
 	public static final MMMessageAttribute mmTrigger = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TerminalManagementAction.mmTrigger;
+			businessElementTrace_lazy = () -> TerminalManagementAction.mmTrigger;
 			componentContext_lazy = () -> TMSAction1.mmObject();
 			isDerived = false;
 			xmlTag = "Trggr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Trigger";
 			definition = "Event on which the action has to be activated by the point of interaction (POI).";
 			maxOccurs = 1;
@@ -308,11 +311,11 @@ public class TMSAction1 {
 	 */
 	public static final MMMessageAttribute mmAdditionalProcess = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TerminalManagementAction.mmAdditionalProcess;
+			businessElementTrace_lazy = () -> TerminalManagementAction.mmAdditionalProcess;
 			componentContext_lazy = () -> TMSAction1.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlPrc";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalProcess";
 			definition = "Additional process to perform before starting or after completing the action by the point of interaction (POI).";
 			maxOccurs = 1;
@@ -351,7 +354,7 @@ public class TMSAction1 {
 			componentContext_lazy = () -> TMSAction1.mmObject();
 			isDerived = false;
 			xmlTag = "TmCond";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TimeCondition";
 			definition = "Date and time the action has to be performed.";
 			maxOccurs = 1;
@@ -398,7 +401,7 @@ public class TMSAction1 {
 			componentContext_lazy = () -> TMSAction1.mmObject();
 			isDerived = false;
 			xmlTag = "ErrActn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ErrorAction";
 			definition = "Action to perform in case of error on the related action in progress.";
 			minOccurs = 0;
@@ -410,12 +413,11 @@ public class TMSAction1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TMSAction1.mmType, com.tools20022.repository.msg.TMSAction1.mmAddress, com.tools20022.repository.msg.TMSAction1.mmDataSetIdentification,
-						com.tools20022.repository.msg.TMSAction1.mmTrigger, com.tools20022.repository.msg.TMSAction1.mmAdditionalProcess, com.tools20022.repository.msg.TMSAction1.mmTimeCondition,
-						com.tools20022.repository.msg.TMSAction1.mmErrorAction);
+				messageElement_lazy = () -> Arrays.asList(TMSAction1.mmType, TMSAction1.mmAddress, TMSAction1.mmDataSetIdentification, TMSAction1.mmTrigger, TMSAction1.mmAdditionalProcess, TMSAction1.mmTimeCondition,
+						TMSAction1.mmErrorAction);
 				trace_lazy = () -> TerminalManagementAction.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TMSAction1";
 				definition = "Single terminal management action to be performed by the point of interaction.";
 				nextVersions_lazy = () -> Arrays.asList(TMSAction2.mmObject());

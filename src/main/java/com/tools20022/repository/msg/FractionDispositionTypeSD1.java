@@ -19,9 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.FractionalSecurityRule1Code;
 import com.tools20022.repository.datatype.DecimalNumber;
 import com.tools20022.repository.datatype.Max350Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -99,7 +101,7 @@ public class FractionDispositionTypeSD1 {
 			componentContext_lazy = () -> FractionDispositionTypeSD1.mmObject();
 			isDerived = false;
 			xmlTag = "PlcAndNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "xPath to the element that is being extended.";
 			maxOccurs = 1;
@@ -149,7 +151,7 @@ public class FractionDispositionTypeSD1 {
 			componentContext_lazy = () -> FractionDispositionTypeSD1.mmObject();
 			isDerived = false;
 			xmlTag = "FrctnlSctyRule";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FractionalSecurityRule";
 			definition = "Used for the fractional rule that cannot be classified in ISO (fractional disposition) in the event that fractional disposition is calculated specific to the beneficial owner positions.  Identifies a scenario where the issuer / market announced fractional security rounding at beneficial holder level. Used in conjunction with a rounding factor. For an example if rounding factor is 0.6, this means that fractional units greater than or equal to 6 will be rounded up and  less than 6 will be rounded down.";
 			maxOccurs = 1;
@@ -195,7 +197,7 @@ public class FractionDispositionTypeSD1 {
 			componentContext_lazy = () -> FractionDispositionTypeSD1.mmObject();
 			isDerived = false;
 			xmlTag = "RndgFctr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RoundingFactor";
 			definition = "Decimal above which numbers are rounded. For an example if rounding factor is 0.6 this means that fractional units greater than or equal to 6 will be rounded up and  less than 6 will be rounded down.";
 			maxOccurs = 1;
@@ -207,10 +209,9 @@ public class FractionDispositionTypeSD1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FractionDispositionTypeSD1.mmPlaceAndName, com.tools20022.repository.msg.FractionDispositionTypeSD1.mmFractionalSecurityRule,
-						com.tools20022.repository.msg.FractionDispositionTypeSD1.mmRoundingFactor);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(FractionDispositionTypeSD1.mmPlaceAndName, FractionDispositionTypeSD1.mmFractionalSecurityRule, FractionDispositionTypeSD1.mmRoundingFactor);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "FractionDispositionTypeSD1";
 				definition = "Provides additional information regarding corporate action securities movement fraction disposition details.";
 			}

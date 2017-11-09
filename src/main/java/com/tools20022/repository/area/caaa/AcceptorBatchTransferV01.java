@@ -20,6 +20,7 @@ package com.tools20022.repository.area.caaa;
 import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.AcceptortoAcquirerCardTransactionArchive;
 import com.tools20022.repository.msg.CardPaymentDataSet1;
 import com.tools20022.repository.msg.ContentInformationType1;
@@ -41,6 +42,9 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code caaa.011.001.01}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.AcceptortoAcquirerCardTransactionArchive
@@ -70,9 +74,6 @@ import java.util.List;
  * AcceptorBatchTransferV01.mmSecurityTrailer}</li>
  * </ul>
  * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code caaa.011.001.01}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -121,7 +122,7 @@ public class AcceptorBatchTransferV01 {
 	public static final MMMessageBuildingBlock mmHeader = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Hdr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Header";
 			definition = "Batch capture message management information.";
 			maxOccurs = 1;
@@ -156,7 +157,7 @@ public class AcceptorBatchTransferV01 {
 	public static final MMMessageBuildingBlock mmDataSet = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "DataSet";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DataSet";
 			definition = "Information related to the set of transaction.";
 			minOccurs = 1;
@@ -191,7 +192,7 @@ public class AcceptorBatchTransferV01 {
 	public static final MMMessageBuildingBlock mmSecurityTrailer = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SctyTrlr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityTrailer";
 			definition = "Trailer of the message containing a MAC or a digital signature.";
 			maxOccurs = 1;
@@ -203,7 +204,7 @@ public class AcceptorBatchTransferV01 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AcceptorBatchTransferV01";
 				definition = "Scope\r\nThe AcceptorBatchTransfer message is sent by the card acceptor to the acquirer to capture a collection of previously completed card payment transactions.\r\nUsage\r\nThe AcceptorBatchTransfer message embeds the information required for transferring to the acquirer the data needed to perform the financial settlement of these transactions (capture).";
 				nextVersions_lazy = () -> Arrays.asList(AcceptorBatchTransferV02.mmObject());
@@ -211,8 +212,7 @@ public class AcceptorBatchTransferV01 {
 				rootElement = "Document";
 				xmlTag = "AccptrBtchTrf";
 				businessArea_lazy = () -> AcceptortoAcquirerCardTransactionArchive.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.caaa.AcceptorBatchTransferV01.mmHeader, com.tools20022.repository.area.caaa.AcceptorBatchTransferV01.mmDataSet,
-						com.tools20022.repository.area.caaa.AcceptorBatchTransferV01.mmSecurityTrailer);
+				messageBuildingBlock_lazy = () -> Arrays.asList(AcceptorBatchTransferV01.mmHeader, AcceptorBatchTransferV01.mmDataSet, AcceptorBatchTransferV01.mmSecurityTrailer);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "caaa";

@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.InstructionTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -83,7 +85,7 @@ public class InstructionType1Code extends InstructionTypeCode {
 	 */
 	public static final MMCode mmLodge = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Lodge";
 			owner_lazy = () -> InstructionType1Code.mmObject();
 		}
@@ -106,7 +108,7 @@ public class InstructionType1Code extends InstructionTypeCode {
 	 */
 	public static final MMCode mmFullPushThrough = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FullPushThrough";
 			owner_lazy = () -> InstructionType1Code.mmObject();
 		}
@@ -115,12 +117,12 @@ public class InstructionType1Code extends InstructionTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("LODG");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InstructionType1Code";
 				definition = "Specifies the action that the TSU must take on a baseline.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.InstructionType1Code.mmLodge, com.tools20022.repository.codeset.InstructionType1Code.mmFullPushThrough);
+				code_lazy = () -> Arrays.asList(InstructionType1Code.mmLodge, InstructionType1Code.mmFullPushThrough);
 				trace_lazy = () -> InstructionTypeCode.mmObject();
 			}
 		});

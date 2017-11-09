@@ -19,9 +19,12 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.CashAccountIdentification5Choice;
 import com.tools20022.repository.choice.PartyIdentification38Choice;
+import com.tools20022.repository.entity.Account;
 import com.tools20022.repository.entity.PartyIdentificationInformation;
+import com.tools20022.repository.GeneratedRepository;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -138,10 +141,10 @@ public class PartyIdentificationAndAccount50 {
 			componentContext_lazy = () -> PartyIdentificationAndAccount50.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Identification of the party.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyIdentificationAndAccount112.mmIdentification);
+			nextVersions_lazy = () -> Arrays.asList(PartyIdentificationAndAccount112.mmIdentification);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -195,10 +198,10 @@ public class PartyIdentificationAndAccount50 {
 			componentContext_lazy = () -> PartyIdentificationAndAccount50.mmObject();
 			isDerived = false;
 			xmlTag = "AltrnId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AlternateIdentification";
 			definition = "Alternate identification for a party.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyIdentificationAndAccount112.mmAlternateIdentification);
+			nextVersions_lazy = () -> Arrays.asList(PartyIdentificationAndAccount112.mmAlternateIdentification);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -248,14 +251,14 @@ public class PartyIdentificationAndAccount50 {
 	 */
 	public static final MMMessageAssociationEnd mmCashAccount = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.mmIdentification;
+			businessElementTrace_lazy = () -> Account.mmIdentification;
 			componentContext_lazy = () -> PartyIdentificationAndAccount50.mmObject();
 			isDerived = false;
 			xmlTag = "CshAcct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashAccount";
 			definition = "Account to or from which a cash entry is made.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyIdentificationAndAccount112.mmCashAccount);
+			nextVersions_lazy = () -> Arrays.asList(PartyIdentificationAndAccount112.mmCashAccount);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -308,14 +311,14 @@ public class PartyIdentificationAndAccount50 {
 	 */
 	public static final MMMessageAssociationEnd mmChargesAccount = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.mmIdentification;
+			businessElementTrace_lazy = () -> Account.mmIdentification;
 			componentContext_lazy = () -> PartyIdentificationAndAccount50.mmObject();
 			isDerived = false;
 			xmlTag = "ChrgsAcct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChargesAccount";
 			definition = "Account to be used for charges/fees if different from the account for payment.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyIdentificationAndAccount112.mmChargesAccount);
+			nextVersions_lazy = () -> Arrays.asList(PartyIdentificationAndAccount112.mmChargesAccount);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -368,14 +371,14 @@ public class PartyIdentificationAndAccount50 {
 	 */
 	public static final MMMessageAssociationEnd mmCommissionAccount = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.mmIdentification;
+			businessElementTrace_lazy = () -> Account.mmIdentification;
 			componentContext_lazy = () -> PartyIdentificationAndAccount50.mmObject();
 			isDerived = false;
 			xmlTag = "ComssnAcct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommissionAccount";
 			definition = "Account to be used for commission if different from the account for payment.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyIdentificationAndAccount112.mmCommissionAccount);
+			nextVersions_lazy = () -> Arrays.asList(PartyIdentificationAndAccount112.mmCommissionAccount);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -427,14 +430,14 @@ public class PartyIdentificationAndAccount50 {
 	 */
 	public static final MMMessageAssociationEnd mmTaxAccount = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.mmIdentification;
+			businessElementTrace_lazy = () -> Account.mmIdentification;
 			componentContext_lazy = () -> PartyIdentificationAndAccount50.mmObject();
 			isDerived = false;
 			xmlTag = "TaxAcct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxAccount";
 			definition = "Account to be used for taxes if different from the account for payment.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyIdentificationAndAccount112.mmTaxAccount);
+			nextVersions_lazy = () -> Arrays.asList(PartyIdentificationAndAccount112.mmTaxAccount);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -482,10 +485,10 @@ public class PartyIdentificationAndAccount50 {
 			componentContext_lazy = () -> PartyIdentificationAndAccount50.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInformation";
 			definition = "Provides additional information to a party identification.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyIdentificationAndAccount112.mmAdditionalInformation);
+			nextVersions_lazy = () -> Arrays.asList(PartyIdentificationAndAccount112.mmAdditionalInformation);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -496,13 +499,11 @@ public class PartyIdentificationAndAccount50 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyIdentificationAndAccount50.mmIdentification, com.tools20022.repository.msg.PartyIdentificationAndAccount50.mmAlternateIdentification,
-						com.tools20022.repository.msg.PartyIdentificationAndAccount50.mmCashAccount, com.tools20022.repository.msg.PartyIdentificationAndAccount50.mmChargesAccount,
-						com.tools20022.repository.msg.PartyIdentificationAndAccount50.mmCommissionAccount, com.tools20022.repository.msg.PartyIdentificationAndAccount50.mmTaxAccount,
-						com.tools20022.repository.msg.PartyIdentificationAndAccount50.mmAdditionalInformation);
+				messageElement_lazy = () -> Arrays.asList(PartyIdentificationAndAccount50.mmIdentification, PartyIdentificationAndAccount50.mmAlternateIdentification, PartyIdentificationAndAccount50.mmCashAccount,
+						PartyIdentificationAndAccount50.mmChargesAccount, PartyIdentificationAndAccount50.mmCommissionAccount, PartyIdentificationAndAccount50.mmTaxAccount, PartyIdentificationAndAccount50.mmAdditionalInformation);
 				trace_lazy = () -> PartyIdentificationInformation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
 						return DateFormat.getDateInstance(java.text.DateFormat.LONG).parse("September 9, 2016");

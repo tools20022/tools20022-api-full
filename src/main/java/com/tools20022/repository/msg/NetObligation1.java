@@ -20,14 +20,16 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.camt.NetReportV01;
 import com.tools20022.repository.choice.NettingIdentification1Choice;
 import com.tools20022.repository.choice.PartyIdentification73Choice;
 import com.tools20022.repository.codeset.PaymentReceipt1Code;
 import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
 import com.tools20022.repository.datatype.Max10NumericText;
 import com.tools20022.repository.datatype.Max35Text;
-import com.tools20022.repository.entity.ClearingMemberRole;
-import com.tools20022.repository.entity.Obligation;
+import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -135,7 +137,7 @@ public class NetObligation1 {
 			componentContext_lazy = () -> NetObligation1.mmObject();
 			isDerived = false;
 			xmlTag = "OblgtnId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ObligationIdentification";
 			definition = "Unique identification for the obligation.";
 			maxOccurs = 1;
@@ -178,11 +180,11 @@ public class NetObligation1 {
 	 */
 	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Obligation.mmRequestedSettlementAmount;
+			businessElementTrace_lazy = () -> Obligation.mmRequestedSettlementAmount;
 			componentContext_lazy = () -> NetObligation1.mmObject();
 			isDerived = false;
 			xmlTag = "Amt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Amount and currency of the obligation";
 			maxOccurs = 1;
@@ -225,7 +227,7 @@ public class NetObligation1 {
 			componentContext_lazy = () -> NetObligation1.mmObject();
 			isDerived = false;
 			xmlTag = "PtcptNetgId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ParticipantNettingIdentification";
 			definition = "Describes the party or netting group (of the participant receiving the report) involved in the calculation of the obligation.";
 			maxOccurs = 1;
@@ -269,11 +271,11 @@ public class NetObligation1 {
 	 */
 	public static final MMMessageAttribute mmObligationDirection = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Netting.mmAmountDirection;
+			businessElementTrace_lazy = () -> Netting.mmAmountDirection;
 			componentContext_lazy = () -> NetObligation1.mmObject();
 			isDerived = false;
 			xmlTag = "OblgtnDrctn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ObligationDirection";
 			definition = "Specifies the direction of the obligation. ";
 			maxOccurs = 1;
@@ -318,11 +320,11 @@ public class NetObligation1 {
 	 */
 	public static final MMMessageAssociationEnd mmCounterpartyNettingIdentification = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Trade.mmTradeRelatedIdentifications;
+			businessElementTrace_lazy = () -> Trade.mmTradeRelatedIdentifications;
 			componentContext_lazy = () -> NetObligation1.mmObject();
 			isDerived = false;
 			xmlTag = "CtrPtyNetgId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CounterpartyNettingIdentification";
 			definition = "Describes the party or netting group (of the counterparty in the obligation) involved in the calculation of the obligation.";
 			maxOccurs = 1;
@@ -370,7 +372,7 @@ public class NetObligation1 {
 			componentContext_lazy = () -> NetObligation1.mmObject();
 			isDerived = false;
 			xmlTag = "NetSvcCtrPtyId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetServiceCounterpartyIdentification";
 			definition = "Describes the counterparty participant involved in the obligation.";
 			maxOccurs = 1;
@@ -415,11 +417,11 @@ public class NetObligation1 {
 	 */
 	public static final MMMessageAssociationEnd mmCounterpartySettlementInstructions = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Settlement.mmSettlementPartyRole;
+			businessElementTrace_lazy = () -> Settlement.mmSettlementPartyRole;
 			componentContext_lazy = () -> NetObligation1.mmObject();
 			isDerived = false;
 			xmlTag = "CtrPtySttlmInstrs";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CounterpartySettlementInstructions";
 			definition = "Specifies the standard settlement instructions used to issue payment to the counterparty in order to settle the obligation.";
 			maxOccurs = 1;
@@ -465,7 +467,7 @@ public class NetObligation1 {
 			componentContext_lazy = () -> NetObligation1.mmObject();
 			isDerived = false;
 			xmlTag = "TxsNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionsNumber";
 			definition = "Number of transactions used to calculate the obligation. This is used in reconciliation between the net report obligation and the previously provided transaction status updates.";
 			maxOccurs = 1;
@@ -477,14 +479,12 @@ public class NetObligation1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.NetObligation1.mmObligationIdentification, com.tools20022.repository.msg.NetObligation1.mmAmount,
-						com.tools20022.repository.msg.NetObligation1.mmParticipantNettingIdentification, com.tools20022.repository.msg.NetObligation1.mmObligationDirection,
-						com.tools20022.repository.msg.NetObligation1.mmCounterpartyNettingIdentification, com.tools20022.repository.msg.NetObligation1.mmNetServiceCounterpartyIdentification,
-						com.tools20022.repository.msg.NetObligation1.mmCounterpartySettlementInstructions, com.tools20022.repository.msg.NetObligation1.mmTransactionsNumber);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.NetReportV01.mmNetObligation);
+				messageElement_lazy = () -> Arrays.asList(NetObligation1.mmObligationIdentification, NetObligation1.mmAmount, NetObligation1.mmParticipantNettingIdentification, NetObligation1.mmObligationDirection,
+						NetObligation1.mmCounterpartyNettingIdentification, NetObligation1.mmNetServiceCounterpartyIdentification, NetObligation1.mmCounterpartySettlementInstructions, NetObligation1.mmTransactionsNumber);
+				messageBuildingBlock_lazy = () -> Arrays.asList(NetReportV01.mmNetObligation);
 				trace_lazy = () -> Obligation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "NetObligation1";
 				definition = "Describes the amount, direction and parties involved in a payment obligation between two participants (and their netting group or trading party) of a netting service.";
 			}

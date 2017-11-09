@@ -19,8 +19,10 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.ExposureTerm;
 import com.tools20022.repository.entity.IndependentAmountTerm;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.Margin1;
 import com.tools20022.repository.msg.SegregatedIndependentAmountMargin1;
 import java.util.Arrays;
@@ -106,7 +108,7 @@ public class MarginTerms1Choice {
 			componentContext_lazy = () -> MarginTerms1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "MrgnDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarginDetails";
 			definition = "Elements used to calculate the collateral margin call for the variation margin and optionally the segregated independent amount.";
 			maxOccurs = 1;
@@ -157,7 +159,7 @@ public class MarginTerms1Choice {
 			componentContext_lazy = () -> MarginTerms1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "SgrtdIndpdntAmtMrgn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SegregatedIndependentAmountMargin";
 			definition = "Elements used to calculate the collateral margin call for the segregated independent amount.";
 			maxOccurs = 1;
@@ -170,10 +172,10 @@ public class MarginTerms1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.MarginTerms1Choice.mmMarginDetails, com.tools20022.repository.choice.MarginTerms1Choice.mmSegregatedIndependentAmountMargin);
+				messageElement_lazy = () -> Arrays.asList(MarginTerms1Choice.mmMarginDetails, MarginTerms1Choice.mmSegregatedIndependentAmountMargin);
 				trace_lazy = () -> ExposureTerm.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MarginTerms1Choice";
 				definition = "Provides the margin terms for the variation margin and the segregated independent amount, or the segregated independent amount only.";
 			}

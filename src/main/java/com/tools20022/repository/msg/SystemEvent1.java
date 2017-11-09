@@ -19,9 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.SystemEventType1Choice;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.entity.SystemEventInformation;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -102,11 +104,11 @@ public class SystemEvent1 {
 	 */
 	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SystemEventInformation.mmType;
+			businessElementTrace_lazy = () -> SystemEventInformation.mmType;
 			componentContext_lazy = () -> SystemEvent1.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Nature of the event that has occurred.";
 			maxOccurs = 1;
@@ -148,11 +150,11 @@ public class SystemEvent1 {
 	 */
 	public static final MMMessageAttribute mmScheduledTime = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SystemEventInformation.mmTime;
+			businessElementTrace_lazy = () -> SystemEventInformation.mmTime;
 			componentContext_lazy = () -> SystemEvent1.mmObject();
 			isDerived = false;
 			xmlTag = "SchdldTm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ScheduledTime";
 			definition = "Date and time at which the event is foreseen to occur.";
 			maxOccurs = 1;
@@ -195,11 +197,11 @@ public class SystemEvent1 {
 	 */
 	public static final MMMessageAttribute mmEffectiveTime = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SystemEventInformation.mmTime;
+			businessElementTrace_lazy = () -> SystemEventInformation.mmTime;
 			componentContext_lazy = () -> SystemEvent1.mmObject();
 			isDerived = false;
 			xmlTag = "FctvTm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EffectiveTime";
 			definition = "Date and time at which the event effectively takes place.";
 			maxOccurs = 1;
@@ -211,10 +213,10 @@ public class SystemEvent1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SystemEvent1.mmType, com.tools20022.repository.msg.SystemEvent1.mmScheduledTime, com.tools20022.repository.msg.SystemEvent1.mmEffectiveTime);
+				messageElement_lazy = () -> Arrays.asList(SystemEvent1.mmType, SystemEvent1.mmScheduledTime, SystemEvent1.mmEffectiveTime);
 				trace_lazy = () -> SystemEventInformation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SystemEvent1";
 				definition = "Detailed information about an event occurring on a system, whether planned, eg, cut-off time for a specific type of eligible transfer, or unplanned, eg, an unsolicited failure, as stipulated in the specifications of the system.";
 			}

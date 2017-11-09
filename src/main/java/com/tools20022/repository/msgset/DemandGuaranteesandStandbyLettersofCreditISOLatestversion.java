@@ -18,8 +18,10 @@
 package com.tools20022.repository.msgset;
 
 import com.tools20022.metamodel.MMMessageSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.tsin.UndertakingApplicationV01;
 import com.tools20022.repository.area.tsrv.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -114,8 +116,8 @@ public class DemandGuaranteesandStandbyLettersofCreditISOLatestversion {
 	final static public MMMessageSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageSet() {
 			{
-				businessProcessCatalogue_lazy = () -> com.tools20022.repository.GeneratedRepository.mmcatalogue;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				businessProcessCatalogue_lazy = () -> GeneratedRepository.mmcatalogue;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Demand Guarantees and Standby Letters of Credit – ISO – Latest version";
 				definition = "Set of messages to support the exchange of data concerning demand guarantees and standby letters of credit including the application, issuance, advising, amendment, non-extension, termination and processing of demands associated with these financial instruments.";
 				messageDefinition_lazy = () -> Arrays.asList(DemandRefusalNotificationV01.mmObject(), DemandWithdrawalNotificationV01.mmObject(), ExtendOrPayRequestV01.mmObject(), ExtendOrPayResponseV01.mmObject(),

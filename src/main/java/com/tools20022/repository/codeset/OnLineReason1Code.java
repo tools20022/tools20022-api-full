@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.OnLineReasonCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -116,7 +118,7 @@ public class OnLineReason1Code extends OnLineReasonCode {
 	 */
 	public static final MMCode mmRandomSelection = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RandomSelection";
 			owner_lazy = () -> OnLineReason1Code.mmObject();
 		}
@@ -139,7 +141,7 @@ public class OnLineReason1Code extends OnLineReasonCode {
 	 */
 	public static final MMCode mmICCForced = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ICCForced";
 			owner_lazy = () -> OnLineReason1Code.mmObject();
 		}
@@ -162,7 +164,7 @@ public class OnLineReason1Code extends OnLineReasonCode {
 	 */
 	public static final MMCode mmMerchantForced = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MerchantForced";
 			owner_lazy = () -> OnLineReason1Code.mmObject();
 		}
@@ -185,7 +187,7 @@ public class OnLineReason1Code extends OnLineReasonCode {
 	 */
 	public static final MMCode mmTerminalForced = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TerminalForced";
 			owner_lazy = () -> OnLineReason1Code.mmObject();
 		}
@@ -208,7 +210,7 @@ public class OnLineReason1Code extends OnLineReasonCode {
 	 */
 	public static final MMCode mmIssuerForced = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssuerForced";
 			owner_lazy = () -> OnLineReason1Code.mmObject();
 		}
@@ -231,7 +233,7 @@ public class OnLineReason1Code extends OnLineReasonCode {
 	 */
 	public static final MMCode mmFloorLimit = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FloorLimit";
 			owner_lazy = () -> OnLineReason1Code.mmObject();
 		}
@@ -254,7 +256,7 @@ public class OnLineReason1Code extends OnLineReasonCode {
 	 */
 	public static final MMCode mmExceptionFile = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExceptionFile";
 			owner_lazy = () -> OnLineReason1Code.mmObject();
 		}
@@ -277,7 +279,7 @@ public class OnLineReason1Code extends OnLineReasonCode {
 	 */
 	public static final MMCode mmTotalAmount = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalAmount";
 			owner_lazy = () -> OnLineReason1Code.mmObject();
 		}
@@ -300,7 +302,7 @@ public class OnLineReason1Code extends OnLineReasonCode {
 	 */
 	public static final MMCode mmControlledBIN = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ControlledBIN";
 			owner_lazy = () -> OnLineReason1Code.mmObject();
 		}
@@ -323,7 +325,7 @@ public class OnLineReason1Code extends OnLineReasonCode {
 	 */
 	public static final MMCode mmUnknownBIN = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnknownBIN";
 			owner_lazy = () -> OnLineReason1Code.mmObject();
 		}
@@ -346,7 +348,7 @@ public class OnLineReason1Code extends OnLineReasonCode {
 	 */
 	public static final MMCode mmControlledPAN = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ControlledPAN";
 			owner_lazy = () -> OnLineReason1Code.mmObject();
 		}
@@ -369,7 +371,7 @@ public class OnLineReason1Code extends OnLineReasonCode {
 	 */
 	public static final MMCode mmFlowControl = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FlowControl";
 			owner_lazy = () -> OnLineReason1Code.mmObject();
 		}
@@ -392,7 +394,7 @@ public class OnLineReason1Code extends OnLineReasonCode {
 	 */
 	public static final MMCode mmUnavailableCurrency = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnavailableCurrency";
 			owner_lazy = () -> OnLineReason1Code.mmObject();
 		}
@@ -401,16 +403,14 @@ public class OnLineReason1Code extends OnLineReasonCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("RNDM");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OnLineReason1Code";
 				definition = "Reason to process an online authorisation.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OnLineReason1Code.mmRandomSelection, com.tools20022.repository.codeset.OnLineReason1Code.mmICCForced,
-						com.tools20022.repository.codeset.OnLineReason1Code.mmMerchantForced, com.tools20022.repository.codeset.OnLineReason1Code.mmTerminalForced, com.tools20022.repository.codeset.OnLineReason1Code.mmIssuerForced,
-						com.tools20022.repository.codeset.OnLineReason1Code.mmFloorLimit, com.tools20022.repository.codeset.OnLineReason1Code.mmExceptionFile, com.tools20022.repository.codeset.OnLineReason1Code.mmTotalAmount,
-						com.tools20022.repository.codeset.OnLineReason1Code.mmControlledBIN, com.tools20022.repository.codeset.OnLineReason1Code.mmUnknownBIN, com.tools20022.repository.codeset.OnLineReason1Code.mmControlledPAN,
-						com.tools20022.repository.codeset.OnLineReason1Code.mmFlowControl, com.tools20022.repository.codeset.OnLineReason1Code.mmUnavailableCurrency);
+				code_lazy = () -> Arrays.asList(OnLineReason1Code.mmRandomSelection, OnLineReason1Code.mmICCForced, OnLineReason1Code.mmMerchantForced, OnLineReason1Code.mmTerminalForced, OnLineReason1Code.mmIssuerForced,
+						OnLineReason1Code.mmFloorLimit, OnLineReason1Code.mmExceptionFile, OnLineReason1Code.mmTotalAmount, OnLineReason1Code.mmControlledBIN, OnLineReason1Code.mmUnknownBIN, OnLineReason1Code.mmControlledPAN,
+						OnLineReason1Code.mmFlowControl, OnLineReason1Code.mmUnavailableCurrency);
 				trace_lazy = () -> OnLineReasonCode.mmObject();
 			}
 		});

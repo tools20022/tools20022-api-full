@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -28,6 +30,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.CancellationRight2Code
+ * CancellationRight2Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.CancellationRight1Code
+ * CancellationRight1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -45,15 +56,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.CancellationRightCode#mmOther
  * CancellationRightCode.mmOther}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.CancellationRight2Code
- * CancellationRight2Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.CancellationRight1Code
- * CancellationRight1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -108,7 +110,7 @@ public class CancellationRightCode {
 	 */
 	public static final MMCode mmEntitled = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Entitled";
 			definition = "Investor is entitled to a \"cooling off\" period with cancellation rights under compliance rules.";
 			owner_lazy = () -> CancellationRightCode.mmObject();
@@ -141,7 +143,7 @@ public class CancellationRightCode {
 	 */
 	public static final MMCode mmExecutionOnly = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ExecutionOnly";
 			definition = "Investor is not entitled to cancellation rights under compliance rules, as the investor is an execution's only client.";
 			owner_lazy = () -> CancellationRightCode.mmObject();
@@ -174,7 +176,7 @@ public class CancellationRightCode {
 	 */
 	public static final MMCode mmWaiverAgreement = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "WaiverAgreement";
 			definition = "Investor is not entitled to cancellation rights under compliance rules as the investor has agreed to waive those rights.";
 			owner_lazy = () -> CancellationRightCode.mmObject();
@@ -207,7 +209,7 @@ public class CancellationRightCode {
 	 */
 	public static final MMCode mmInstitutional = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Institutional";
 			definition = "Investor is not entitled to cancellation rights under compliance rules as the investor is a financial institution.";
 			owner_lazy = () -> CancellationRightCode.mmObject();
@@ -237,7 +239,7 @@ public class CancellationRightCode {
 	 */
 	public static final MMCode mmOther = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Other";
 			definition = "Another type of cancellation right.";
 			owner_lazy = () -> CancellationRightCode.mmObject();
@@ -248,13 +250,12 @@ public class CancellationRightCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("VALI");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CancellationRightCode";
 				definition = "Specifies if the investor has the right to cancel an instruction or, if not, the reason the investor cannot cancel.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CancellationRightCode.mmEntitled, com.tools20022.repository.codeset.CancellationRightCode.mmExecutionOnly,
-						com.tools20022.repository.codeset.CancellationRightCode.mmWaiverAgreement, com.tools20022.repository.codeset.CancellationRightCode.mmInstitutional, com.tools20022.repository.codeset.CancellationRightCode.mmOther);
+				code_lazy = () -> Arrays.asList(CancellationRightCode.mmEntitled, CancellationRightCode.mmExecutionOnly, CancellationRightCode.mmWaiverAgreement, CancellationRightCode.mmInstitutional, CancellationRightCode.mmOther);
 				derivation_lazy = () -> Arrays.asList(CancellationRight2Code.mmObject(), CancellationRight1Code.mmObject());
 			}
 		});

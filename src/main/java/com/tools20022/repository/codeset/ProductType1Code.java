@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ProductTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -107,7 +109,7 @@ public class ProductType1Code extends ProductTypeCode {
 	 */
 	public static final MMCode mmAgency = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Agency";
 			owner_lazy = () -> ProductType1Code.mmObject();
 		}
@@ -130,7 +132,7 @@ public class ProductType1Code extends ProductTypeCode {
 	 */
 	public static final MMCode mmCommodity = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Commodity";
 			owner_lazy = () -> ProductType1Code.mmObject();
 		}
@@ -153,7 +155,7 @@ public class ProductType1Code extends ProductTypeCode {
 	 */
 	public static final MMCode mmCorporate = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Corporate";
 			owner_lazy = () -> ProductType1Code.mmObject();
 		}
@@ -176,7 +178,7 @@ public class ProductType1Code extends ProductTypeCode {
 	 */
 	public static final MMCode mmCurrency = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Currency";
 			owner_lazy = () -> ProductType1Code.mmObject();
 		}
@@ -199,7 +201,7 @@ public class ProductType1Code extends ProductTypeCode {
 	 */
 	public static final MMCode mmEquity = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Equity";
 			owner_lazy = () -> ProductType1Code.mmObject();
 		}
@@ -222,7 +224,7 @@ public class ProductType1Code extends ProductTypeCode {
 	 */
 	public static final MMCode mmGovernment = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Government";
 			owner_lazy = () -> ProductType1Code.mmObject();
 		}
@@ -245,7 +247,7 @@ public class ProductType1Code extends ProductTypeCode {
 	 */
 	public static final MMCode mmLoan = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Loan";
 			owner_lazy = () -> ProductType1Code.mmObject();
 		}
@@ -268,7 +270,7 @@ public class ProductType1Code extends ProductTypeCode {
 	 */
 	public static final MMCode mmMoneyMarket = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MoneyMarket";
 			owner_lazy = () -> ProductType1Code.mmObject();
 		}
@@ -291,7 +293,7 @@ public class ProductType1Code extends ProductTypeCode {
 	 */
 	public static final MMCode mmMortgage = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Mortgage";
 			owner_lazy = () -> ProductType1Code.mmObject();
 		}
@@ -314,7 +316,7 @@ public class ProductType1Code extends ProductTypeCode {
 	 */
 	public static final MMCode mmMunicipal = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Municipal";
 			owner_lazy = () -> ProductType1Code.mmObject();
 		}
@@ -337,7 +339,7 @@ public class ProductType1Code extends ProductTypeCode {
 	 */
 	public static final MMCode mmFinancing = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Financing";
 			owner_lazy = () -> ProductType1Code.mmObject();
 		}
@@ -346,15 +348,13 @@ public class ProductType1Code extends ProductTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("AGEN");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ProductType1Code";
 				definition = "Specifies the type of product or financial instrument.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ProductType1Code.mmAgency, com.tools20022.repository.codeset.ProductType1Code.mmCommodity, com.tools20022.repository.codeset.ProductType1Code.mmCorporate,
-						com.tools20022.repository.codeset.ProductType1Code.mmCurrency, com.tools20022.repository.codeset.ProductType1Code.mmEquity, com.tools20022.repository.codeset.ProductType1Code.mmGovernment,
-						com.tools20022.repository.codeset.ProductType1Code.mmLoan, com.tools20022.repository.codeset.ProductType1Code.mmMoneyMarket, com.tools20022.repository.codeset.ProductType1Code.mmMortgage,
-						com.tools20022.repository.codeset.ProductType1Code.mmMunicipal, com.tools20022.repository.codeset.ProductType1Code.mmFinancing);
+				code_lazy = () -> Arrays.asList(ProductType1Code.mmAgency, ProductType1Code.mmCommodity, ProductType1Code.mmCorporate, ProductType1Code.mmCurrency, ProductType1Code.mmEquity, ProductType1Code.mmGovernment,
+						ProductType1Code.mmLoan, ProductType1Code.mmMoneyMarket, ProductType1Code.mmMortgage, ProductType1Code.mmMunicipal, ProductType1Code.mmFinancing);
 				trace_lazy = () -> ProductTypeCode.mmObject();
 			}
 		});

@@ -18,7 +18,9 @@
 package com.tools20022.repository.area;
 
 import com.tools20022.metamodel.MMBusinessArea;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.semt.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -30,8 +32,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessArea#getCode code} =
- * "semt"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessArea#getMessageDefinition
  * messageDefinition} =
  * <ul>
@@ -55,6 +55,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * IntraPositionMovementConfirmation002V05}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessArea#getCode code} =
+ * "semt"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelCatalogueEntry#getBusinessProcessCatalogue
  * businessProcessCatalogue} =
@@ -79,8 +81,8 @@ public class SecuritiesManagementPreviousversionsubsetvariant {
 	final static public MMBusinessArea mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessArea() {
 			{
-				businessProcessCatalogue_lazy = () -> com.tools20022.repository.GeneratedRepository.mmcatalogue;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				businessProcessCatalogue_lazy = () -> GeneratedRepository.mmcatalogue;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Securities Management - Previous version - subset / variant";
 				definition = "Messages that support post-settlement processes for securities (including reporting on securities movements, trades and balances), the processes required to protect beneficial owner's rights throughout settlement, plus any exceptions and investigations related to securities transactions.";
 				messageDefinition_lazy = () -> Arrays.asList(SecuritiesSettlementTransactionAllegementReport002V05.mmObject(), SecuritiesTransactionPostingReport002V06.mmObject(), IntraPositionMovementStatusAdvice002V04.mmObject(),

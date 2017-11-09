@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ModifiedStatusReasonCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -83,7 +85,7 @@ public class ModifiedStatusReason1Code extends ModifiedStatusReasonCode {
 	 */
 	public static final MMCode mmModifiedByYourself = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ModifiedByYourself";
 			owner_lazy = () -> ModifiedStatusReason1Code.mmObject();
 		}
@@ -106,7 +108,7 @@ public class ModifiedStatusReason1Code extends ModifiedStatusReasonCode {
 	 */
 	public static final MMCode mmOther = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
 			owner_lazy = () -> ModifiedStatusReason1Code.mmObject();
 		}
@@ -115,12 +117,12 @@ public class ModifiedStatusReason1Code extends ModifiedStatusReasonCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("MDBY");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ModifiedStatusReason1Code";
 				definition = "Specifies that the transaction has been modified.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ModifiedStatusReason1Code.mmModifiedByYourself, com.tools20022.repository.codeset.ModifiedStatusReason1Code.mmOther);
+				code_lazy = () -> Arrays.asList(ModifiedStatusReason1Code.mmModifiedByYourself, ModifiedStatusReason1Code.mmOther);
 				trace_lazy = () -> ModifiedStatusReasonCode.mmObject();
 			}
 		});

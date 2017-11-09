@@ -19,10 +19,13 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.Max70Text;
 import com.tools20022.repository.entity.Instalment;
+import com.tools20022.repository.entity.PaymentObligation;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -102,11 +105,11 @@ public class Instalment1 {
 	 */
 	public static final MMMessageAttribute mmSequenceIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Instalment.mmSequenceIdentification;
+			businessElementTrace_lazy = () -> Instalment.mmSequenceIdentification;
 			componentContext_lazy = () -> Instalment1.mmObject();
 			isDerived = false;
 			xmlTag = "SeqId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SequenceIdentification";
 			definition = "Specifies the progressive number of the single instalment related to an invoice.";
 			maxOccurs = 1;
@@ -148,11 +151,11 @@ public class Instalment1 {
 	 */
 	public static final MMMessageAttribute mmPaymentDueDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentObligation.mmPaymentDueDate;
+			businessElementTrace_lazy = () -> PaymentObligation.mmPaymentDueDate;
 			componentContext_lazy = () -> Instalment1.mmObject();
 			isDerived = false;
 			xmlTag = "PmtDueDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentDueDate";
 			definition = "Due date for the payment of the  invoice instalment.";
 			maxOccurs = 1;
@@ -195,11 +198,11 @@ public class Instalment1 {
 	 */
 	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentObligation.mmAmount;
+			businessElementTrace_lazy = () -> PaymentObligation.mmAmount;
 			componentContext_lazy = () -> Instalment1.mmObject();
 			isDerived = false;
 			xmlTag = "Amt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Amount of a single instalment related to an invoice.";
 			maxOccurs = 1;
@@ -211,10 +214,10 @@ public class Instalment1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Instalment1.mmSequenceIdentification, com.tools20022.repository.msg.Instalment1.mmPaymentDueDate, com.tools20022.repository.msg.Instalment1.mmAmount);
+				messageElement_lazy = () -> Arrays.asList(Instalment1.mmSequenceIdentification, Instalment1.mmPaymentDueDate, Instalment1.mmAmount);
 				trace_lazy = () -> Instalment.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Instalment1";
 				definition = "Information of a single instalment related to an invoice settlement.";
 			}

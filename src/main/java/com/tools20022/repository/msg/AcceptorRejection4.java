@@ -20,9 +20,12 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.cain.AcquirerRejection;
 import com.tools20022.repository.codeset.RejectReason1Code;
 import com.tools20022.repository.datatype.Max100KBinary;
 import com.tools20022.repository.entity.CardPaymentStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -122,14 +125,14 @@ public class AcceptorRejection4 {
 	 */
 	public static final MMMessageAttribute mmRejectReason = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPaymentStatus.mmRejectionReason;
+			businessElementTrace_lazy = () -> CardPaymentStatus.mmRejectionReason;
 			componentContext_lazy = () -> AcceptorRejection4.mmObject();
 			isDerived = false;
 			xmlTag = "RjctRsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RejectReason";
 			definition = "Reject reason of the message.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AcceptorRejection2.mmRejectReason;
+			previousVersion_lazy = () -> AcceptorRejection2.mmRejectReason;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RejectReason1Code.mmObject();
@@ -170,7 +173,7 @@ public class AcceptorRejection4 {
 			componentContext_lazy = () -> AcceptorRejection4.mmObject();
 			isDerived = false;
 			xmlTag = "ErrRptg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ErrorReporting";
 			definition = "Detailed description of an error that caused the rejection for further analysis.";
 			minOccurs = 0;
@@ -217,10 +220,10 @@ public class AcceptorRejection4 {
 			componentContext_lazy = () -> AcceptorRejection4.mmObject();
 			isDerived = false;
 			xmlTag = "MsgInErr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageInError";
 			definition = "Original request that caused the party to reject it.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AcceptorRejection2.mmMessageInError;
+			previousVersion_lazy = () -> AcceptorRejection2.mmMessageInError;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max100KBinary.mmObject();
@@ -230,12 +233,11 @@ public class AcceptorRejection4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcceptorRejection4.mmRejectReason, com.tools20022.repository.msg.AcceptorRejection4.mmErrorReporting,
-						com.tools20022.repository.msg.AcceptorRejection4.mmMessageInError);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.cain.AcquirerRejection.mmReject);
+				messageElement_lazy = () -> Arrays.asList(AcceptorRejection4.mmRejectReason, AcceptorRejection4.mmErrorReporting, AcceptorRejection4.mmMessageInError);
+				messageBuildingBlock_lazy = () -> Arrays.asList(AcquirerRejection.mmReject);
 				trace_lazy = () -> CardPaymentStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AcceptorRejection4";
 				definition = "Reject of an exchange.";
 				previousVersion_lazy = () -> AcceptorRejection2.mmObject();

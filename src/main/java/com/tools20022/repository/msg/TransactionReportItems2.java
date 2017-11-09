@@ -20,9 +20,11 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CountryCode;
 import com.tools20022.repository.datatype.CurrencyAndAmount;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -135,7 +137,7 @@ public class TransactionReportItems2 {
 			componentContext_lazy = () -> TransactionReportItems2.mmObject();
 			isDerived = false;
 			xmlTag = "TxId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionIdentification";
 			definition = "Unique identification assigned by the TSU to the transaction.\nThis identification is to be used in any communication between the parties and with the TSU.";
 			maxOccurs = 1;
@@ -179,7 +181,7 @@ public class TransactionReportItems2 {
 			componentContext_lazy = () -> TransactionReportItems2.mmObject();
 			isDerived = false;
 			xmlTag = "TSUBaselnId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TSUBaselineIdentification";
 			definition = "Unique Identification assigned by the TSU to the baseline included in the transaction.";
 			maxOccurs = 1;
@@ -221,7 +223,7 @@ public class TransactionReportItems2 {
 			componentContext_lazy = () -> TransactionReportItems2.mmObject();
 			isDerived = false;
 			xmlTag = "TxSts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionStatus";
 			definition = "Identifies the status of the transaction by means of a code.";
 			maxOccurs = 1;
@@ -266,7 +268,7 @@ public class TransactionReportItems2 {
 			componentContext_lazy = () -> TransactionReportItems2.mmObject();
 			isDerived = false;
 			xmlTag = "UsrTxRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UserTransactionReference";
 			definition = "Reference to the transaction for each financial institution which is a party to the transaction.";
 			maxOccurs = 2;
@@ -309,7 +311,7 @@ public class TransactionReportItems2 {
 			componentContext_lazy = () -> TransactionReportItems2.mmObject();
 			isDerived = false;
 			xmlTag = "PurchsOrdrRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PurchaseOrderReference";
 			definition = "Reference to the purchase order of the underlying transaction.";
 			maxOccurs = 1;
@@ -351,7 +353,7 @@ public class TransactionReportItems2 {
 			componentContext_lazy = () -> TransactionReportItems2.mmObject();
 			isDerived = false;
 			xmlTag = "Buyr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Buyer";
 			definition = "Party that buys goods or services, or a financial instrument.";
 			maxOccurs = 1;
@@ -393,7 +395,7 @@ public class TransactionReportItems2 {
 			componentContext_lazy = () -> TransactionReportItems2.mmObject();
 			isDerived = false;
 			xmlTag = "Sellr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Seller";
 			definition = "Party that sells goods or services, or a financial instrument.";
 			maxOccurs = 1;
@@ -434,7 +436,7 @@ public class TransactionReportItems2 {
 			componentContext_lazy = () -> TransactionReportItems2.mmObject();
 			isDerived = false;
 			xmlTag = "BuyrBk";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BuyerBank";
 			definition = "Financial institution of the buyer.";
 			maxOccurs = 1;
@@ -476,7 +478,7 @@ public class TransactionReportItems2 {
 			componentContext_lazy = () -> TransactionReportItems2.mmObject();
 			isDerived = false;
 			xmlTag = "BuyrBkCtry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BuyerBankCountry";
 			definition = "Country of the buyer bank.";
 			maxOccurs = 1;
@@ -516,7 +518,7 @@ public class TransactionReportItems2 {
 			componentContext_lazy = () -> TransactionReportItems2.mmObject();
 			isDerived = false;
 			xmlTag = "SellrBk";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SellerBank";
 			definition = "Financial institution of the seller.";
 			maxOccurs = 1;
@@ -558,7 +560,7 @@ public class TransactionReportItems2 {
 			componentContext_lazy = () -> TransactionReportItems2.mmObject();
 			isDerived = false;
 			xmlTag = "SellrBkCtry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SellerBankCountry";
 			definition = "Country of the seller bank.";
 			maxOccurs = 1;
@@ -600,7 +602,7 @@ public class TransactionReportItems2 {
 			componentContext_lazy = () -> TransactionReportItems2.mmObject();
 			isDerived = false;
 			xmlTag = "OutsdngAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OutstandingAmount";
 			definition = "Amount of baseline not yet utilised.";
 			maxOccurs = 1;
@@ -640,7 +642,7 @@ public class TransactionReportItems2 {
 			componentContext_lazy = () -> TransactionReportItems2.mmObject();
 			isDerived = false;
 			xmlTag = "PdgReqForActn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingRequestForAction";
 			definition = "Next processing step required.";
 			minOccurs = 0;
@@ -652,14 +654,12 @@ public class TransactionReportItems2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionReportItems2.mmTransactionIdentification, com.tools20022.repository.msg.TransactionReportItems2.mmTSUBaselineIdentification,
-						com.tools20022.repository.msg.TransactionReportItems2.mmTransactionStatus, com.tools20022.repository.msg.TransactionReportItems2.mmUserTransactionReference,
-						com.tools20022.repository.msg.TransactionReportItems2.mmPurchaseOrderReference, com.tools20022.repository.msg.TransactionReportItems2.mmBuyer, com.tools20022.repository.msg.TransactionReportItems2.mmSeller,
-						com.tools20022.repository.msg.TransactionReportItems2.mmBuyerBank, com.tools20022.repository.msg.TransactionReportItems2.mmBuyerBankCountry, com.tools20022.repository.msg.TransactionReportItems2.mmSellerBank,
-						com.tools20022.repository.msg.TransactionReportItems2.mmSellerBankCountry, com.tools20022.repository.msg.TransactionReportItems2.mmOutstandingAmount,
-						com.tools20022.repository.msg.TransactionReportItems2.mmPendingRequestForAction);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(TransactionReportItems2.mmTransactionIdentification, TransactionReportItems2.mmTSUBaselineIdentification, TransactionReportItems2.mmTransactionStatus,
+						TransactionReportItems2.mmUserTransactionReference, TransactionReportItems2.mmPurchaseOrderReference, TransactionReportItems2.mmBuyer, TransactionReportItems2.mmSeller, TransactionReportItems2.mmBuyerBank,
+						TransactionReportItems2.mmBuyerBankCountry, TransactionReportItems2.mmSellerBank, TransactionReportItems2.mmSellerBankCountry, TransactionReportItems2.mmOutstandingAmount,
+						TransactionReportItems2.mmPendingRequestForAction);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "TransactionReportItems2";
 				definition = "Detailed description of the items that correspond to the parameters set in a request and for which a report has been generated.";
 			}

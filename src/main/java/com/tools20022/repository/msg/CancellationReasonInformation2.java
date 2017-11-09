@@ -20,9 +20,13 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.MandateReason1Choice;
 import com.tools20022.repository.datatype.Max105Text;
+import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.entity.PaymentStatus;
+import com.tools20022.repository.entity.StatusReason;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -105,11 +109,11 @@ public class CancellationReasonInformation2 {
 	 */
 	public static final MMMessageAssociationEnd mmOriginator = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> CancellationReasonInformation2.mmObject();
 			isDerived = false;
 			xmlTag = "Orgtr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Originator";
 			definition = "Party that issues the cancellation request.";
 			maxOccurs = 1;
@@ -153,11 +157,11 @@ public class CancellationReasonInformation2 {
 	 */
 	public static final MMMessageAssociationEnd mmReason = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentStatus.mmMandateRejectionReason;
+			businessElementTrace_lazy = () -> PaymentStatus.mmMandateRejectionReason;
 			componentContext_lazy = () -> CancellationReasonInformation2.mmObject();
 			isDerived = false;
 			xmlTag = "Rsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reason";
 			definition = "Specifies the reason for the cancellation request.";
 			maxOccurs = 1;
@@ -201,11 +205,11 @@ public class CancellationReasonInformation2 {
 	 */
 	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmReason;
+			businessElementTrace_lazy = () -> StatusReason.mmReason;
 			componentContext_lazy = () -> CancellationReasonInformation2.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInformation";
 			definition = "Further details on the cancellation request reason.";
 			minOccurs = 0;
@@ -216,11 +220,10 @@ public class CancellationReasonInformation2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CancellationReasonInformation2.mmOriginator, com.tools20022.repository.msg.CancellationReasonInformation2.mmReason,
-						com.tools20022.repository.msg.CancellationReasonInformation2.mmAdditionalInformation);
+				messageElement_lazy = () -> Arrays.asList(CancellationReasonInformation2.mmOriginator, CancellationReasonInformation2.mmReason, CancellationReasonInformation2.mmAdditionalInformation);
 				trace_lazy = () -> PaymentStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CancellationReasonInformation2";
 				definition = "Set of elements used to provide information on the reason of the mandate cancellation request.";
 			}

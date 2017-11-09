@@ -20,8 +20,10 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.ISOYearMonth;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.Period2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -99,7 +101,7 @@ public class DatePeriod1Choice {
 			componentContext_lazy = () -> DatePeriod1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Dt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Date";
 			definition = "Time span defined by a specific date.";
 			maxOccurs = 1;
@@ -141,7 +143,7 @@ public class DatePeriod1Choice {
 			componentContext_lazy = () -> DatePeriod1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "DtMnth";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DateMonth";
 			definition = "Time span defined by a month and a year.";
 			maxOccurs = 1;
@@ -180,7 +182,7 @@ public class DatePeriod1Choice {
 			componentContext_lazy = () -> DatePeriod1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "FrDtToDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FromDateToDate";
 			definition = "Time span defined by a start date and an end date.";
 			maxOccurs = 1;
@@ -193,10 +195,9 @@ public class DatePeriod1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.DatePeriod1Choice.mmDate, com.tools20022.repository.choice.DatePeriod1Choice.mmDateMonth,
-						com.tools20022.repository.choice.DatePeriod1Choice.mmFromDateToDate);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(DatePeriod1Choice.mmDate, DatePeriod1Choice.mmDateMonth, DatePeriod1Choice.mmFromDateToDate);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DatePeriod1Choice";
 				definition = "Period as a date, a month or a date time span for which the statement is provided.";
 			}

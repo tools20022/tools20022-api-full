@@ -20,6 +20,7 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.ATMCommandParameters2Choice;
 import com.tools20022.repository.codeset.ATMCommand2Code;
 import com.tools20022.repository.codeset.ATMCommandReason1Code;
@@ -27,6 +28,7 @@ import com.tools20022.repository.codeset.TMSContactLevel2Code;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Max70Text;
 import com.tools20022.repository.entity.TerminalManagementSystem;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -124,10 +126,10 @@ public class ATMCommand4 {
 			componentContext_lazy = () -> ATMCommand4.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Type of command to be performed by the ATM.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMCommand1.mmType;
+			previousVersion_lazy = () -> ATMCommand1.mmType;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ATMCommand2Code.mmObject();
@@ -173,14 +175,14 @@ public class ATMCommand4 {
 	 */
 	public static final MMMessageAttribute mmUrgency = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TerminalManagementSystem.mmContactLevel;
+			businessElementTrace_lazy = () -> TerminalManagementSystem.mmContactLevel;
 			componentContext_lazy = () -> ATMCommand4.mmObject();
 			isDerived = false;
 			xmlTag = "Urgcy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Urgency";
 			definition = "Urgency of the command.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMCommand1.mmUrgency;
+			previousVersion_lazy = () -> ATMCommand1.mmUrgency;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TMSContactLevel2Code.mmObject();
@@ -223,10 +225,10 @@ public class ATMCommand4 {
 			componentContext_lazy = () -> ATMCommand4.mmObject();
 			isDerived = false;
 			xmlTag = "DtTm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DateTime";
 			definition = "Date time on which the command must be performed.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMCommand1.mmDateTime;
+			previousVersion_lazy = () -> ATMCommand1.mmDateTime;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
@@ -269,10 +271,10 @@ public class ATMCommand4 {
 			componentContext_lazy = () -> ATMCommand4.mmObject();
 			isDerived = false;
 			xmlTag = "CmdId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommandIdentification";
 			definition = "Identification of the entity issuing the command.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMCommand1.mmCommandIdentification;
+			previousVersion_lazy = () -> ATMCommand1.mmCommandIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -312,7 +314,7 @@ public class ATMCommand4 {
 			componentContext_lazy = () -> ATMCommand4.mmObject();
 			isDerived = false;
 			xmlTag = "Rsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reason";
 			definition = "Reason for sending the command.";
 			maxOccurs = 1;
@@ -356,7 +358,7 @@ public class ATMCommand4 {
 			componentContext_lazy = () -> ATMCommand4.mmObject();
 			isDerived = false;
 			xmlTag = "TracRsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TraceReason";
 			definition = "Trace of reasons by the entities in the path from the origin of the command to the ATM.";
 			minOccurs = 0;
@@ -396,7 +398,7 @@ public class ATMCommand4 {
 			componentContext_lazy = () -> ATMCommand4.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlRsnInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalReasonInformation";
 			definition = "Additional information about the reason to request this command.";
 			maxOccurs = 1;
@@ -441,10 +443,10 @@ public class ATMCommand4 {
 			componentContext_lazy = () -> ATMCommand4.mmObject();
 			isDerived = false;
 			xmlTag = "CmdParams";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommandParameters";
 			definition = "Specific parameters attached to the command.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMCommand1.mmCommandParameters;
+			previousVersion_lazy = () -> ATMCommand1.mmCommandParameters;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -455,12 +457,11 @@ public class ATMCommand4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMCommand4.mmType, com.tools20022.repository.msg.ATMCommand4.mmUrgency, com.tools20022.repository.msg.ATMCommand4.mmDateTime,
-						com.tools20022.repository.msg.ATMCommand4.mmCommandIdentification, com.tools20022.repository.msg.ATMCommand4.mmReason, com.tools20022.repository.msg.ATMCommand4.mmTraceReason,
-						com.tools20022.repository.msg.ATMCommand4.mmAdditionalReasonInformation, com.tools20022.repository.msg.ATMCommand4.mmCommandParameters);
+				messageElement_lazy = () -> Arrays.asList(ATMCommand4.mmType, ATMCommand4.mmUrgency, ATMCommand4.mmDateTime, ATMCommand4.mmCommandIdentification, ATMCommand4.mmReason, ATMCommand4.mmTraceReason,
+						ATMCommand4.mmAdditionalReasonInformation, ATMCommand4.mmCommandParameters);
 				trace_lazy = () -> TerminalManagementSystem.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ATMCommand4";
 				definition = "Maintenance command the ATM must perform.";
 				previousVersion_lazy = () -> ATMCommand1.mmObject();

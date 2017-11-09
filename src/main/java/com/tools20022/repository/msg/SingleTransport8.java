@@ -19,7 +19,9 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -114,10 +116,10 @@ public class SingleTransport8 {
 			componentContext_lazy = () -> SingleTransport8.mmObject();
 			isDerived = false;
 			xmlTag = "TrnsprtByAir";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransportByAir";
 			definition = "Information related to the transportation of goods by air.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SingleTransport6.mmTransportByAir;
+			previousVersion_lazy = () -> SingleTransport6.mmTransportByAir;
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.TransportByAir4.mmObject();
@@ -167,10 +169,10 @@ public class SingleTransport8 {
 			componentContext_lazy = () -> SingleTransport8.mmObject();
 			isDerived = false;
 			xmlTag = "TrnsprtBySea";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransportBySea";
 			definition = "Information related for the transportation of goods by sea.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SingleTransport6.mmTransportBySea;
+			previousVersion_lazy = () -> SingleTransport6.mmTransportBySea;
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.TransportBySea5.mmObject();
@@ -220,10 +222,10 @@ public class SingleTransport8 {
 			componentContext_lazy = () -> SingleTransport8.mmObject();
 			isDerived = false;
 			xmlTag = "TrnsprtByRoad";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransportByRoad";
 			definition = "Moving of goods or people from one place to another by vehicle.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SingleTransport6.mmTransportByRoad;
+			previousVersion_lazy = () -> SingleTransport6.mmTransportByRoad;
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.TransportByRoad4.mmObject();
@@ -273,10 +275,10 @@ public class SingleTransport8 {
 			componentContext_lazy = () -> SingleTransport8.mmObject();
 			isDerived = false;
 			xmlTag = "TrnsprtByRail";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransportByRail";
 			definition = "Information related to the transportation of goods by rail.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SingleTransport6.mmTransportByRail;
+			previousVersion_lazy = () -> SingleTransport6.mmTransportByRail;
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.TransportByRail4.mmObject();
@@ -286,11 +288,10 @@ public class SingleTransport8 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SingleTransport8.mmTransportByAir, com.tools20022.repository.msg.SingleTransport8.mmTransportBySea,
-						com.tools20022.repository.msg.SingleTransport8.mmTransportByRoad, com.tools20022.repository.msg.SingleTransport8.mmTransportByRail);
+				messageElement_lazy = () -> Arrays.asList(SingleTransport8.mmTransportByAir, SingleTransport8.mmTransportBySea, SingleTransport8.mmTransportByRoad, SingleTransport8.mmTransportByRail);
 				trace_lazy = () -> Transport.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SingleTransport8";
 				definition = "Specifies individually each leg of a transport of goods.";
 				previousVersion_lazy = () -> SingleTransport6.mmObject();

@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -28,18 +30,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.UnaffirmedReasonCode#mmCounterpartyNotAffirmed
- * UnaffirmedReasonCode.mmCounterpartyNotAffirmed}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
  * =
  * <ul>
  * <li>{@linkplain com.tools20022.repository.codeset.UnaffirmedReason1Code
  * UnaffirmedReason1Code}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.UnaffirmedReasonCode#mmCounterpartyNotAffirmed
+ * UnaffirmedReasonCode.mmCounterpartyNotAffirmed}</li>
  * </ul>
  * </li>
  * <li>
@@ -91,7 +93,7 @@ public class UnaffirmedReasonCode {
 	 */
 	public static final MMCode mmCounterpartyNotAffirmed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CounterpartyNotAffirmed";
 			definition = "Specifies the reason the counterparty has not affirmed.";
 			owner_lazy = () -> UnaffirmedReasonCode.mmObject();
@@ -102,12 +104,12 @@ public class UnaffirmedReasonCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("NAFF");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "UnaffirmedReasonCode";
 				definition = "Specifies the reason the transaction, transfer or settlement instruction is unaffirmed.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnaffirmedReasonCode.mmCounterpartyNotAffirmed);
+				code_lazy = () -> Arrays.asList(UnaffirmedReasonCode.mmCounterpartyNotAffirmed);
 				derivation_lazy = () -> Arrays.asList(UnaffirmedReason1Code.mmObject());
 			}
 		});

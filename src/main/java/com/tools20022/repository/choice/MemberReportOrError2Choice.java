@@ -19,7 +19,9 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.SystemMemberRole;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.ErrorHandling3;
 import com.tools20022.repository.msg.Member1;
 import java.util.Arrays;
@@ -100,7 +102,7 @@ public class MemberReportOrError2Choice {
 			componentContext_lazy = () -> MemberReportOrError2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Mmb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Member";
 			definition = "Requested member data when found in the system.";
 			maxOccurs = 1;
@@ -141,7 +143,7 @@ public class MemberReportOrError2Choice {
 			componentContext_lazy = () -> MemberReportOrError2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "BizErr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BusinessError";
 			definition = "Reason the requested business information is not given.";
 			maxOccurs = 1;
@@ -154,10 +156,10 @@ public class MemberReportOrError2Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.MemberReportOrError2Choice.mmMember, com.tools20022.repository.choice.MemberReportOrError2Choice.mmBusinessError);
+				messageElement_lazy = () -> Arrays.asList(MemberReportOrError2Choice.mmMember, MemberReportOrError2Choice.mmBusinessError);
 				trace_lazy = () -> SystemMemberRole.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "MemberReportOrError2Choice";
 				definition = "Reports either on a member or a business error.";
 			}

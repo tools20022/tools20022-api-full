@@ -19,7 +19,10 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.seev.AgentCANotificationCancellationRequestV01;
 import com.tools20022.repository.codeset.CorporateActionNotificationType2Code;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -105,7 +108,7 @@ public class NotificationCancellation1 {
 			componentContext_lazy = () -> NotificationCancellation1.mmObject();
 			isDerived = false;
 			xmlTag = "NtfctnCxlTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotificationCancellationType";
 			definition = "The function of the notification e.g. new notification.";
 			maxOccurs = 1;
@@ -147,7 +150,7 @@ public class NotificationCancellation1 {
 			componentContext_lazy = () -> NotificationCancellation1.mmObject();
 			isDerived = false;
 			xmlTag = "LkdAgtCANtfctnAdvcId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LinkedAgentCANotificationAdviceIdentification";
 			definition = "The identification of the linked notification advice.";
 			maxOccurs = 1;
@@ -159,11 +162,10 @@ public class NotificationCancellation1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.NotificationCancellation1.mmNotificationCancellationType,
-						com.tools20022.repository.msg.NotificationCancellation1.mmLinkedAgentCANotificationAdviceIdentification);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.AgentCANotificationCancellationRequestV01.mmNotificationCancellationTypeAndLinkage);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(NotificationCancellation1.mmNotificationCancellationType, NotificationCancellation1.mmLinkedAgentCANotificationAdviceIdentification);
+				messageBuildingBlock_lazy = () -> Arrays.asList(AgentCANotificationCancellationRequestV01.mmNotificationCancellationTypeAndLinkage);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "NotificationCancellation1";
 				definition = "Information about the cancellation of a notification advice or the withdrawal of a CA event.";
 			}

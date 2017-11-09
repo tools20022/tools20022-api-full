@@ -19,6 +19,9 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.catp.ATMWithdrawalCompletionAcknowledgementV01;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -106,7 +109,7 @@ public class ATMWithdrawalCompletionAcknowledgement1 {
 			componentContext_lazy = () -> ATMWithdrawalCompletionAcknowledgement1.mmObject();
 			isDerived = false;
 			xmlTag = "ATM";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ATM";
 			definition = "ATM information.";
 			maxOccurs = 1;
@@ -147,7 +150,7 @@ public class ATMWithdrawalCompletionAcknowledgement1 {
 			componentContext_lazy = () -> ATMWithdrawalCompletionAcknowledgement1.mmObject();
 			isDerived = false;
 			xmlTag = "Cntxt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Context";
 			definition = "Context in which the transaction is performed.";
 			maxOccurs = 1;
@@ -188,7 +191,7 @@ public class ATMWithdrawalCompletionAcknowledgement1 {
 			componentContext_lazy = () -> ATMWithdrawalCompletionAcknowledgement1.mmObject();
 			isDerived = false;
 			xmlTag = "Tx";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Transaction";
 			definition = "Acknowledgement of the withdrawal completion advice.";
 			maxOccurs = 1;
@@ -201,11 +204,10 @@ public class ATMWithdrawalCompletionAcknowledgement1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMWithdrawalCompletionAcknowledgement1.mmATM, com.tools20022.repository.msg.ATMWithdrawalCompletionAcknowledgement1.mmContext,
-						com.tools20022.repository.msg.ATMWithdrawalCompletionAcknowledgement1.mmTransaction);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.catp.ATMWithdrawalCompletionAcknowledgementV01.mmATMWithdrawalCompletionAcknowledgement);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(ATMWithdrawalCompletionAcknowledgement1.mmATM, ATMWithdrawalCompletionAcknowledgement1.mmContext, ATMWithdrawalCompletionAcknowledgement1.mmTransaction);
+				messageBuildingBlock_lazy = () -> Arrays.asList(ATMWithdrawalCompletionAcknowledgementV01.mmATMWithdrawalCompletionAcknowledgement);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ATMWithdrawalCompletionAcknowledgement1";
 				definition = "Information related to the acknowledgement  of an ATM withdrawal from the ATM manager.";
 			}

@@ -20,6 +20,7 @@ package com.tools20022.repository.area.sese;
 import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.SecuritiesSettlementArchive;
 import com.tools20022.repository.msg.Extension1;
 import com.tools20022.repository.msg.MessageAndBusinessReference6;
@@ -42,6 +43,9 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code sese.009.001.03}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.SecuritiesSettlementArchive
@@ -71,9 +75,6 @@ import java.util.List;
  * RequestForTransferStatusReportV03.mmExtension}</li>
  * </ul>
  * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code sese.009.001.03}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -139,10 +140,10 @@ public class RequestForTransferStatusReportV03 {
 	public static final MMMessageBuildingBlock mmMessageIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "MsgId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageIdentification";
 			definition = "Reference that uniquely identifies a message from a business application standpoint. ";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.RequestForTransferStatusReportV04.mmMessageIdentification);
+			nextVersions_lazy = () -> Arrays.asList(RequestForTransferStatusReportV04.mmMessageIdentification);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
@@ -185,10 +186,10 @@ public class RequestForTransferStatusReportV03 {
 	public static final MMMessageBuildingBlock mmRequestDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "ReqDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestDetails";
 			definition = "Information to identify the transfer for which the status is requested.\n";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.RequestForTransferStatusReportV04.mmRequestDetails);
+			nextVersions_lazy = () -> Arrays.asList(RequestForTransferStatusReportV04.mmRequestDetails);
 			minOccurs = 1;
 			complexType_lazy = () -> MessageAndBusinessReference6.mmObject();
 		}
@@ -230,10 +231,10 @@ public class RequestForTransferStatusReportV03 {
 	public static final MMMessageBuildingBlock mmExtension = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Xtnsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Extension";
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.RequestForTransferStatusReportV04.mmExtension);
+			nextVersions_lazy = () -> Arrays.asList(RequestForTransferStatusReportV04.mmExtension);
 			minOccurs = 0;
 			complexType_lazy = () -> Extension1.mmObject();
 		}
@@ -242,7 +243,7 @@ public class RequestForTransferStatusReportV03 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RequestForTransferStatusReportV03";
 				definition = "Scope\r\nAn instructing party, for example, an investment manager or its authorised representative, sends the RequestForTransferStatusReport to the executing party, for example, a transfer agent to request the status of a previously instructed transfer.\r\nUsage\r\nThe RequestForTransferStatusReport is used to request either:\r\n- the status of one or several transfer instructions or,\r\n- the status of one or several transfer cancellation instructions.";
 				nextVersions_lazy = () -> Arrays.asList(RequestForTransferStatusReportV04.mmObject());
@@ -251,8 +252,7 @@ public class RequestForTransferStatusReportV03 {
 				rootElement = "Document";
 				xmlTag = "ReqForTrfStsRpt";
 				businessArea_lazy = () -> SecuritiesSettlementArchive.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.RequestForTransferStatusReportV03.mmMessageIdentification,
-						com.tools20022.repository.area.sese.RequestForTransferStatusReportV03.mmRequestDetails, com.tools20022.repository.area.sese.RequestForTransferStatusReportV03.mmExtension);
+				messageBuildingBlock_lazy = () -> Arrays.asList(RequestForTransferStatusReportV03.mmMessageIdentification, RequestForTransferStatusReportV03.mmRequestDetails, RequestForTransferStatusReportV03.mmExtension);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "sese";

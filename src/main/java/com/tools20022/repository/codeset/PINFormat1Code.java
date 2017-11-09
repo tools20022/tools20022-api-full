@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.PINFormatCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -85,7 +87,7 @@ public class PINFormat1Code extends PINFormatCode {
 	 */
 	public static final MMCode mmISO0 = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ISO0";
 			owner_lazy = () -> PINFormat1Code.mmObject();
 		}
@@ -108,7 +110,7 @@ public class PINFormat1Code extends PINFormatCode {
 	 */
 	public static final MMCode mmISO1 = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ISO1";
 			owner_lazy = () -> PINFormat1Code.mmObject();
 		}
@@ -131,7 +133,7 @@ public class PINFormat1Code extends PINFormatCode {
 	 */
 	public static final MMCode mmISO2 = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ISO2";
 			owner_lazy = () -> PINFormat1Code.mmObject();
 		}
@@ -154,7 +156,7 @@ public class PINFormat1Code extends PINFormatCode {
 	 */
 	public static final MMCode mmISO3 = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ISO3";
 			owner_lazy = () -> PINFormat1Code.mmObject();
 		}
@@ -163,13 +165,12 @@ public class PINFormat1Code extends PINFormatCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ISO0");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PINFormat1Code";
 				definition = "PIN (Personal Identification Number) format used to encrypt the PIN block.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PINFormat1Code.mmISO0, com.tools20022.repository.codeset.PINFormat1Code.mmISO1, com.tools20022.repository.codeset.PINFormat1Code.mmISO2,
-						com.tools20022.repository.codeset.PINFormat1Code.mmISO3);
+				code_lazy = () -> Arrays.asList(PINFormat1Code.mmISO0, PINFormat1Code.mmISO1, PINFormat1Code.mmISO2, PINFormat1Code.mmISO3);
 				trace_lazy = () -> PINFormatCode.mmObject();
 			}
 		});

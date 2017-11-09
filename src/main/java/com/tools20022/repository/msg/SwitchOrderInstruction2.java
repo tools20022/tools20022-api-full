@@ -19,7 +19,10 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.setr.SwitchOrderCancellationRequestV03;
 import com.tools20022.repository.entity.SwitchOrder;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -108,7 +111,7 @@ public class SwitchOrderInstruction2 {
 			componentContext_lazy = () -> SwitchOrderInstruction2.mmObject();
 			isDerived = false;
 			xmlTag = "SwtchOrdrDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SwitchOrderDetails";
 			definition = "Information related to the switch order";
 			minOccurs = 1;
@@ -150,7 +153,7 @@ public class SwitchOrderInstruction2 {
 			componentContext_lazy = () -> SwitchOrderInstruction2.mmObject();
 			isDerived = false;
 			xmlTag = "Xtnsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Extension";
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
 			minOccurs = 0;
@@ -162,11 +165,11 @@ public class SwitchOrderInstruction2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SwitchOrderInstruction2.mmSwitchOrderDetails, com.tools20022.repository.msg.SwitchOrderInstruction2.mmExtension);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.SwitchOrderCancellationRequestV03.mmCancellationByOrderDetails);
+				messageElement_lazy = () -> Arrays.asList(SwitchOrderInstruction2.mmSwitchOrderDetails, SwitchOrderInstruction2.mmExtension);
+				messageBuildingBlock_lazy = () -> Arrays.asList(SwitchOrderCancellationRequestV03.mmCancellationByOrderDetails);
 				trace_lazy = () -> SwitchOrder.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SwitchOrderInstruction2";
 				definition = "Information about a switch order.";
 			}

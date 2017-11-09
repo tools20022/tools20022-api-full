@@ -19,6 +19,8 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.ErrorHandling3;
 import com.tools20022.repository.msg.SecuritiesAuditTrailReport1;
 import java.util.Arrays;
@@ -95,7 +97,7 @@ public class SecuritiesAuditTrailOrOperationalError1Choice {
 			componentContext_lazy = () -> SecuritiesAuditTrailOrOperationalError1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "SctiesAudtTrlRpt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesAuditTrailReport";
 			definition = "Report information about securities reference data.";
 			minOccurs = 1;
@@ -135,7 +137,7 @@ public class SecuritiesAuditTrailOrOperationalError1Choice {
 			componentContext_lazy = () -> SecuritiesAuditTrailOrOperationalError1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "OprlErr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OperationalError";
 			definition = "Operational error resulting from a rejection.";
 			minOccurs = 1;
@@ -147,10 +149,9 @@ public class SecuritiesAuditTrailOrOperationalError1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SecuritiesAuditTrailOrOperationalError1Choice.mmSecuritiesAuditTrailReport,
-						com.tools20022.repository.choice.SecuritiesAuditTrailOrOperationalError1Choice.mmOperationalError);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(SecuritiesAuditTrailOrOperationalError1Choice.mmSecuritiesAuditTrailReport, SecuritiesAuditTrailOrOperationalError1Choice.mmOperationalError);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SecuritiesAuditTrailOrOperationalError1Choice";
 				definition = "Used to report between the securities reference data or an operational error.";
 			}

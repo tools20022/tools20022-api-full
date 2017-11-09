@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.MessageFunctionCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -83,7 +85,7 @@ public class MessageFunction2Code extends MessageFunctionCode {
 	 */
 	public static final MMCode mmRequest = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Request";
 			owner_lazy = () -> MessageFunction2Code.mmObject();
 		}
@@ -106,7 +108,7 @@ public class MessageFunction2Code extends MessageFunctionCode {
 	 */
 	public static final MMCode mmResponse = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Response";
 			owner_lazy = () -> MessageFunction2Code.mmObject();
 		}
@@ -115,12 +117,12 @@ public class MessageFunction2Code extends MessageFunctionCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("REQU");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MessageFunction2Code";
 				definition = "Specifies the function of the message.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MessageFunction2Code.mmRequest, com.tools20022.repository.codeset.MessageFunction2Code.mmResponse);
+				code_lazy = () -> Arrays.asList(MessageFunction2Code.mmRequest, MessageFunction2Code.mmResponse);
 				trace_lazy = () -> MessageFunctionCode.mmObject();
 			}
 		});

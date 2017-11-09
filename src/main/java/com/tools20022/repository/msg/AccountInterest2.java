@@ -20,9 +20,11 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.InterestType1Choice;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.InterestCalculation;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -104,11 +106,11 @@ public class AccountInterest2 {
 	 */
 	public static final MMMessageAssociationEnd mmType = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InterestCalculation.mmInterestType;
+			businessElementTrace_lazy = () -> InterestCalculation.mmInterestType;
 			componentContext_lazy = () -> AccountInterest2.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Specifies the type of interest.";
 			maxOccurs = 1;
@@ -150,11 +152,11 @@ public class AccountInterest2 {
 	 */
 	public static final MMMessageAssociationEnd mmRate = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InterestCalculation.mmRate;
+			businessElementTrace_lazy = () -> InterestCalculation.mmRate;
 			componentContext_lazy = () -> AccountInterest2.mmObject();
 			isDerived = false;
 			xmlTag = "Rate";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rate";
 			definition = "Set of elements used to qualify the interest rate.";
 			minOccurs = 0;
@@ -199,11 +201,11 @@ public class AccountInterest2 {
 	 */
 	public static final MMMessageAssociationEnd mmFromToDate = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InterestCalculation.mmInterestPeriod;
+			businessElementTrace_lazy = () -> InterestCalculation.mmInterestPeriod;
 			componentContext_lazy = () -> AccountInterest2.mmObject();
 			isDerived = false;
 			xmlTag = "FrToDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FromToDate";
 			definition = "Range of time between a start date and an end date for the calculation of the interest.";
 			maxOccurs = 1;
@@ -245,7 +247,7 @@ public class AccountInterest2 {
 			componentContext_lazy = () -> AccountInterest2.mmObject();
 			isDerived = false;
 			xmlTag = "Rsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reason";
 			definition = "Specifies the reason for the interest.";
 			maxOccurs = 1;
@@ -257,11 +259,10 @@ public class AccountInterest2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountInterest2.mmType, com.tools20022.repository.msg.AccountInterest2.mmRate, com.tools20022.repository.msg.AccountInterest2.mmFromToDate,
-						com.tools20022.repository.msg.AccountInterest2.mmReason);
+				messageElement_lazy = () -> Arrays.asList(AccountInterest2.mmType, AccountInterest2.mmRate, AccountInterest2.mmFromToDate, AccountInterest2.mmReason);
 				trace_lazy = () -> InterestCalculation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AccountInterest2";
 				definition = "Set of elements used to provide details of the interest that applies to the account at a particular moment in time.";
 			}

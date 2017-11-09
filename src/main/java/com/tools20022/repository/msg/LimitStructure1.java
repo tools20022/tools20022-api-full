@@ -19,8 +19,10 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.LimitIdentification1Choice;
 import com.tools20022.repository.entity.RiskManagementLimit;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -104,7 +106,7 @@ public class LimitStructure1 {
 			componentContext_lazy = () -> LimitStructure1.mmObject();
 			isDerived = false;
 			xmlTag = "LmtId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LimitIdentification";
 			definition = "Identification of the default limit.";
 			maxOccurs = 1;
@@ -150,7 +152,7 @@ public class LimitStructure1 {
 			componentContext_lazy = () -> LimitStructure1.mmObject();
 			isDerived = false;
 			xmlTag = "NewLmtValSet";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewLimitValueSet";
 			definition = "New limit values.";
 			maxOccurs = 1;
@@ -163,10 +165,10 @@ public class LimitStructure1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LimitStructure1.mmLimitIdentification, com.tools20022.repository.msg.LimitStructure1.mmNewLimitValueSet);
+				messageElement_lazy = () -> Arrays.asList(LimitStructure1.mmLimitIdentification, LimitStructure1.mmNewLimitValueSet);
 				trace_lazy = () -> RiskManagementLimit.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "LimitStructure1";
 				definition = "Limit details of one particular limit set by the member and managed by the transaction administrator.";
 			}

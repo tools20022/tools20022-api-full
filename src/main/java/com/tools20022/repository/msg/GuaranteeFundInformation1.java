@@ -19,6 +19,8 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -89,7 +91,7 @@ public class GuaranteeFundInformation1 {
 			componentContext_lazy = () -> GuaranteeFundInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "GrntFndAcct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GuaranteeFundAccount";
 			definition = "Guarantee fund account identifier.";
 			maxOccurs = 1;
@@ -131,7 +133,7 @@ public class GuaranteeFundInformation1 {
 			componentContext_lazy = () -> GuaranteeFundInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "GrntFndAcctOwnr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GuaranteeFundAccountOwner";
 			definition = "Owner identification of the guarantee fund.";
 			maxOccurs = 1;
@@ -144,9 +146,9 @@ public class GuaranteeFundInformation1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GuaranteeFundInformation1.mmGuaranteeFundAccount, com.tools20022.repository.msg.GuaranteeFundInformation1.mmGuaranteeFundAccountOwner);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(GuaranteeFundInformation1.mmGuaranteeFundAccount, GuaranteeFundInformation1.mmGuaranteeFundAccountOwner);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "GuaranteeFundInformation1";
 				definition = "Owner and account number of the guarantee fund.";
 			}

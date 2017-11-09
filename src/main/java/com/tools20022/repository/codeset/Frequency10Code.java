@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.FrequencyCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -82,7 +84,7 @@ public class Frequency10Code extends FrequencyCode {
 	 */
 	public static final MMCode mmNever = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Never";
 			owner_lazy = () -> Frequency10Code.mmObject();
 		}
@@ -105,7 +107,7 @@ public class Frequency10Code extends FrequencyCode {
 	 */
 	public static final MMCode mmAnnual = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Annual";
 			owner_lazy = () -> Frequency10Code.mmObject();
 		}
@@ -128,7 +130,7 @@ public class Frequency10Code extends FrequencyCode {
 	 */
 	public static final MMCode mmRate = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rate";
 			owner_lazy = () -> Frequency10Code.mmObject();
 		}
@@ -151,7 +153,7 @@ public class Frequency10Code extends FrequencyCode {
 	 */
 	public static final MMCode mmSemiAnnual = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SemiAnnual";
 			owner_lazy = () -> Frequency10Code.mmObject();
 		}
@@ -174,7 +176,7 @@ public class Frequency10Code extends FrequencyCode {
 	 */
 	public static final MMCode mmQuarterly = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Quarterly";
 			owner_lazy = () -> Frequency10Code.mmObject();
 		}
@@ -183,12 +185,11 @@ public class Frequency10Code extends FrequencyCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Frequency10Code";
 				definition = "Specifies the regularity of an event.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Frequency10Code.mmNever, com.tools20022.repository.codeset.Frequency10Code.mmAnnual, com.tools20022.repository.codeset.Frequency10Code.mmRate,
-						com.tools20022.repository.codeset.Frequency10Code.mmSemiAnnual, com.tools20022.repository.codeset.Frequency10Code.mmQuarterly);
+				code_lazy = () -> Arrays.asList(Frequency10Code.mmNever, Frequency10Code.mmAnnual, Frequency10Code.mmRate, Frequency10Code.mmSemiAnnual, Frequency10Code.mmQuarterly);
 				trace_lazy = () -> FrequencyCode.mmObject();
 			}
 		});

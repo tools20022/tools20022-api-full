@@ -17,11 +17,10 @@
 
 package com.tools20022.repository.entity;
 
-import com.tools20022.metamodel.MMBusinessAssociationEnd;
-import com.tools20022.metamodel.MMBusinessAttribute;
-import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.*;
 import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -35,6 +34,30 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.TaxRecord1 TaxRecord1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ServiceTaxDesignation1
+ * ServiceTaxDesignation1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.BillingServicesTax1
+ * BillingServicesTax1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.BillingServicesTax2
+ * BillingServicesTax2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.BillingServicesTax3
+ * BillingServicesTax3}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.Tax#mmRecord Tax.mmRecord}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.TaxPeriod#mmTaxRecord
+ * TaxPeriod.mmTaxRecord}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -55,30 +78,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.entity.TaxRecord#mmCategoryDescription
  * TaxRecord.mmCategoryDescription}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Tax#mmRecord Tax.mmRecord}</li>
- * <li>{@linkplain com.tools20022.repository.entity.TaxPeriod#mmTaxRecord
- * TaxPeriod.mmTaxRecord}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.TaxRecord1 TaxRecord1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ServiceTaxDesignation1
- * ServiceTaxDesignation1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.BillingServicesTax1
- * BillingServicesTax1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.BillingServicesTax2
- * BillingServicesTax2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.BillingServicesTax3
- * BillingServicesTax3}</li>
  * </ul>
  * </li>
  * <li>
@@ -139,16 +138,16 @@ public class TaxRecord {
 	 */
 	public static final MMBusinessAssociationEnd mmTax = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TaxRecord1.mmTaxAmount);
+			derivation_lazy = () -> Arrays.asList(TaxRecord1.mmTaxAmount);
 			elementContext_lazy = () -> TaxRecord.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Tax";
 			definition = "Tax for which tax record information is provided.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.Tax.mmRecord;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Tax.mmObject();
 		}
 	};
@@ -186,10 +185,10 @@ public class TaxRecord {
 	 */
 	public static final MMBusinessAttribute mmTaxRecordType = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TaxRecord1.mmType);
+			derivation_lazy = () -> Arrays.asList(TaxRecord1.mmType);
 			elementContext_lazy = () -> TaxRecord.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TaxRecordType";
 			definition = "High level code to identify the type of tax details.";
 			maxOccurs = 1;
@@ -234,10 +233,10 @@ public class TaxRecord {
 	 */
 	public static final MMBusinessAttribute mmCategory = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TaxRecord1.mmCategory);
+			derivation_lazy = () -> Arrays.asList(TaxRecord1.mmCategory);
 			elementContext_lazy = () -> TaxRecord.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Category";
 			definition = "Description of the tax that is being paid, including specific representation (code) required by the tax authority.";
 			maxOccurs = 1;
@@ -282,10 +281,10 @@ public class TaxRecord {
 	 */
 	public static final MMBusinessAttribute mmStatus = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TaxRecord1.mmDebtorStatus);
+			derivation_lazy = () -> Arrays.asList(TaxRecord1.mmDebtorStatus);
 			elementContext_lazy = () -> TaxRecord.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Status";
 			definition = "Code provided by local authority to identify the status of the party that has drawn up the settlement document.";
 			maxOccurs = 1;
@@ -328,10 +327,10 @@ public class TaxRecord {
 	 */
 	public static final MMBusinessAttribute mmFormsCode = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TaxRecord1.mmFormsCode);
+			derivation_lazy = () -> Arrays.asList(TaxRecord1.mmFormsCode);
 			elementContext_lazy = () -> TaxRecord.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "FormsCode";
 			definition = "Code to identify on which template the tax report is to be provided";
 			maxOccurs = 1;
@@ -381,16 +380,16 @@ public class TaxRecord {
 	 */
 	public static final MMBusinessAssociationEnd mmPeriod = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TaxRecord1.mmPeriod);
+			derivation_lazy = () -> Arrays.asList(TaxRecord1.mmPeriod);
 			elementContext_lazy = () -> TaxRecord.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Period";
 			definition = "Period of time details related to the tax payment.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.TaxPeriod.mmTaxRecord;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.TaxPeriod.mmObject();
 		}
 	};
@@ -439,11 +438,10 @@ public class TaxRecord {
 	 */
 	public static final MMBusinessAttribute mmAmount = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BillingServicesTax1.mmHostAmount, com.tools20022.repository.msg.BillingServicesTax1.mmPricingAmount,
-					com.tools20022.repository.msg.BillingServicesTax2.mmPricingAmount, com.tools20022.repository.msg.BillingMethod3.mmServiceTaxPriceAmount);
+			derivation_lazy = () -> Arrays.asList(BillingServicesTax1.mmHostAmount, BillingServicesTax1.mmPricingAmount, BillingServicesTax2.mmPricingAmount, BillingMethod3.mmServiceTaxPriceAmount);
 			elementContext_lazy = () -> TaxRecord.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Amount";
 			definition = "Amount of the tax record.";
 			maxOccurs = 1;
@@ -483,7 +481,7 @@ public class TaxRecord {
 		{
 			elementContext_lazy = () -> TaxRecord.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CategoryDescription";
 			definition = "Description of the tax that is being paid, including specific representation required by taxing authority.";
 			maxOccurs = 1;
@@ -495,14 +493,12 @@ public class TaxRecord {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TaxRecord";
 				definition = "Record of tax details.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Tax.mmRecord, com.tools20022.repository.entity.TaxPeriod.mmTaxRecord);
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.TaxRecord.mmTax, com.tools20022.repository.entity.TaxRecord.mmTaxRecordType, com.tools20022.repository.entity.TaxRecord.mmCategory,
-						com.tools20022.repository.entity.TaxRecord.mmStatus, com.tools20022.repository.entity.TaxRecord.mmFormsCode, com.tools20022.repository.entity.TaxRecord.mmPeriod, com.tools20022.repository.entity.TaxRecord.mmAmount,
-						com.tools20022.repository.entity.TaxRecord.mmCategoryDescription);
+				element_lazy = () -> Arrays.asList(TaxRecord.mmTax, TaxRecord.mmTaxRecordType, TaxRecord.mmCategory, TaxRecord.mmStatus, TaxRecord.mmFormsCode, TaxRecord.mmPeriod, TaxRecord.mmAmount, TaxRecord.mmCategoryDescription);
 				derivationComponent_lazy = () -> Arrays.asList(TaxRecord1.mmObject(), ServiceTaxDesignation1.mmObject(), BillingServicesTax1.mmObject(), BillingServicesTax2.mmObject(), BillingServicesTax3.mmObject());
 			}
 		});

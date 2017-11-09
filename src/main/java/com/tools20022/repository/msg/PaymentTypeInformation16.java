@@ -20,10 +20,12 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.LocalInstrument1Choice;
 import com.tools20022.repository.codeset.PaymentCategoryPurpose1Code;
 import com.tools20022.repository.codeset.Priority2Code;
 import com.tools20022.repository.entity.PaymentProcessing;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -114,11 +116,11 @@ public class PaymentTypeInformation16 {
 	 */
 	public static final MMMessageAttribute mmInstructionPriority = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentProcessing.mmPriority;
+			businessElementTrace_lazy = () -> PaymentProcessing.mmPriority;
 			componentContext_lazy = () -> PaymentTypeInformation16.mmObject();
 			isDerived = false;
 			xmlTag = "InstrPrty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructionPriority";
 			definition = "Indicator of the urgency or order of importance that the instructing party would like the instructed party to apply to the processing of the instruction.";
 			maxOccurs = 1;
@@ -163,11 +165,11 @@ public class PaymentTypeInformation16 {
 	 */
 	public static final MMMessageAssociationEnd mmServiceLevel = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentProcessing.mmServiceLevel;
+			businessElementTrace_lazy = () -> PaymentProcessing.mmServiceLevel;
 			componentContext_lazy = () -> PaymentTypeInformation16.mmObject();
 			isDerived = false;
 			xmlTag = "SvcLvl";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ServiceLevel";
 			definition = "Agreement under which or rules under which the transaction should be processed.";
 			maxOccurs = 1;
@@ -216,11 +218,11 @@ public class PaymentTypeInformation16 {
 	 */
 	public static final MMMessageAssociationEnd mmLocalInstrument = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentProcessing.mmLocalInstrument;
+			businessElementTrace_lazy = () -> PaymentProcessing.mmLocalInstrument;
 			componentContext_lazy = () -> PaymentTypeInformation16.mmObject();
 			isDerived = false;
 			xmlTag = "LclInstrm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LocalInstrument";
 			definition = "User community specific instrument.\n\nUsage : When available, codes provided by local authorities should be used.";
 			maxOccurs = 1;
@@ -268,11 +270,11 @@ public class PaymentTypeInformation16 {
 	 */
 	public static final MMMessageAttribute mmCategoryPurpose = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentProcessing.mmCategoryPurpose;
+			businessElementTrace_lazy = () -> PaymentProcessing.mmCategoryPurpose;
 			componentContext_lazy = () -> PaymentTypeInformation16.mmObject();
 			isDerived = false;
 			xmlTag = "CtgyPurp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CategoryPurpose";
 			definition = "Specifies the high level purpose of the instruction based on a set of pre-defined categories.";
 			maxOccurs = 1;
@@ -284,11 +286,10 @@ public class PaymentTypeInformation16 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentTypeInformation16.mmInstructionPriority, com.tools20022.repository.msg.PaymentTypeInformation16.mmServiceLevel,
-						com.tools20022.repository.msg.PaymentTypeInformation16.mmLocalInstrument, com.tools20022.repository.msg.PaymentTypeInformation16.mmCategoryPurpose);
+				messageElement_lazy = () -> Arrays.asList(PaymentTypeInformation16.mmInstructionPriority, PaymentTypeInformation16.mmServiceLevel, PaymentTypeInformation16.mmLocalInstrument, PaymentTypeInformation16.mmCategoryPurpose);
 				trace_lazy = () -> PaymentProcessing.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "PaymentTypeInformation16";
 				definition = "Set of elements that further details the information related to the type of payment.";
 			}

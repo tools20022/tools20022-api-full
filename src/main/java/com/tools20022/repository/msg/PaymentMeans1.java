@@ -19,8 +19,10 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.PaymentMethod4Code;
-import com.tools20022.repository.entity.Payment;
+import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -108,11 +110,11 @@ public class PaymentMeans1 {
 	 */
 	public static final MMMessageAttribute mmPaymentType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentExecution.mmProcessingInstructions;
+			businessElementTrace_lazy = () -> PaymentExecution.mmProcessingInstructions;
 			componentContext_lazy = () -> PaymentMeans1.mmObject();
 			isDerived = false;
 			xmlTag = "PmtTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentType";
 			definition = "Type, or nature, of the payment, eg, express payment.";
 			maxOccurs = 1;
@@ -155,11 +157,11 @@ public class PaymentMeans1 {
 	 */
 	public static final MMMessageAttribute mmPaymentMethodCode = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CreditInstrument.mmMethod;
+			businessElementTrace_lazy = () -> CreditInstrument.mmMethod;
 			componentContext_lazy = () -> PaymentMeans1.mmObject();
 			isDerived = false;
 			xmlTag = "PmtMtdCd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentMethodCode";
 			definition = "Transfer method to be used for the transfer.";
 			maxOccurs = 1;
@@ -202,11 +204,11 @@ public class PaymentMeans1 {
 	 */
 	public static final MMMessageAttribute mmPayeeCreditorAccount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentPartyRole.mmCashAccount;
+			businessElementTrace_lazy = () -> PaymentPartyRole.mmCashAccount;
 			componentContext_lazy = () -> PaymentMeans1.mmObject();
 			isDerived = false;
 			xmlTag = "PyeeCdtrAcct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PayeeCreditorAccount";
 			definition = "Creditor financial account of the payee party for this payment means.";
 			maxOccurs = 1;
@@ -252,11 +254,11 @@ public class PaymentMeans1 {
 	 */
 	public static final MMMessageAttribute mmPayeeFinancialInstitution = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Organisation.mmOrganisationIdentification;
+			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> PaymentMeans1.mmObject();
 			isDerived = false;
 			xmlTag = "PyeeFI";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PayeeFinancialInstitution";
 			definition = "Creditor financial institution of the payee party specified for this payment means.";
 			maxOccurs = 1;
@@ -299,11 +301,11 @@ public class PaymentMeans1 {
 	 */
 	public static final MMMessageAttribute mmPayerDebtorAccount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentPartyRole.mmCashAccount;
+			businessElementTrace_lazy = () -> PaymentPartyRole.mmCashAccount;
 			componentContext_lazy = () -> PaymentMeans1.mmObject();
 			isDerived = false;
 			xmlTag = "PyerDbtrAcct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PayerDebtorAccount";
 			definition = "Debtor financial account of the payer party for this payment means.";
 			maxOccurs = 1;
@@ -349,11 +351,11 @@ public class PaymentMeans1 {
 	 */
 	public static final MMMessageAttribute mmPayerFinancialInstitution = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Organisation.mmOrganisationIdentification;
+			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> PaymentMeans1.mmObject();
 			isDerived = false;
 			xmlTag = "PyerFI";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PayerFinancialInstitution";
 			definition = "Debtor financial institution of the payer party specified for this payment means.";
 			maxOccurs = 1;
@@ -365,12 +367,11 @@ public class PaymentMeans1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentMeans1.mmPaymentType, com.tools20022.repository.msg.PaymentMeans1.mmPaymentMethodCode,
-						com.tools20022.repository.msg.PaymentMeans1.mmPayeeCreditorAccount, com.tools20022.repository.msg.PaymentMeans1.mmPayeeFinancialInstitution, com.tools20022.repository.msg.PaymentMeans1.mmPayerDebtorAccount,
-						com.tools20022.repository.msg.PaymentMeans1.mmPayerFinancialInstitution);
+				messageElement_lazy = () -> Arrays.asList(PaymentMeans1.mmPaymentType, PaymentMeans1.mmPaymentMethodCode, PaymentMeans1.mmPayeeCreditorAccount, PaymentMeans1.mmPayeeFinancialInstitution, PaymentMeans1.mmPayerDebtorAccount,
+						PaymentMeans1.mmPayerFinancialInstitution);
 				trace_lazy = () -> Payment.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PaymentMeans1";
 				definition = "Means by which a payment will be or has been made for settlement purposes.";
 			}

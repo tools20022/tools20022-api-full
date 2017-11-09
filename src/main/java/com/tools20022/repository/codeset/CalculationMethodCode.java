@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.CalculationMethod1Code
+ * CalculationMethod1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -35,13 +44,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.CalculationMethodCode#mmCompounding
  * CalculationMethodCode.mmCompounding}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.CalculationMethod1Code
- * CalculationMethod1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -97,7 +99,7 @@ public class CalculationMethodCode {
 	 */
 	public static final MMCode mmSimple = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Simple";
 			definition = "Calculation method by which interest is calculated on the original principal only. Accumulated interest from prior periods is not used in calculations for the following periods.";
 			owner_lazy = () -> CalculationMethodCode.mmObject();
@@ -130,7 +132,7 @@ public class CalculationMethodCode {
 	 */
 	public static final MMCode mmCompounding = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Compounding";
 			definition = "Calculation method by which interest is calculated each period on the original principal and all interest accumulated during past periods.";
 			owner_lazy = () -> CalculationMethodCode.mmObject();
@@ -141,12 +143,12 @@ public class CalculationMethodCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("SIMP");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CalculationMethodCode";
 				definition = "Specifies whether the interest calculation method is simple or compounding.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CalculationMethodCode.mmSimple, com.tools20022.repository.codeset.CalculationMethodCode.mmCompounding);
+				code_lazy = () -> Arrays.asList(CalculationMethodCode.mmSimple, CalculationMethodCode.mmCompounding);
 				derivation_lazy = () -> Arrays.asList(CalculationMethod1Code.mmObject());
 			}
 		});

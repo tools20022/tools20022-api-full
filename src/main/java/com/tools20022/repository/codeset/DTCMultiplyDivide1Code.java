@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.DTCMultiplyDivideCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -85,7 +87,7 @@ public class DTCMultiplyDivide1Code extends DTCMultiplyDivideCode {
 	 */
 	public static final MMCode mmMultiply = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Multiply";
 			owner_lazy = () -> DTCMultiplyDivide1Code.mmObject();
 		}
@@ -108,7 +110,7 @@ public class DTCMultiplyDivide1Code extends DTCMultiplyDivideCode {
 	 */
 	public static final MMCode mmDivide = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Divide";
 			owner_lazy = () -> DTCMultiplyDivide1Code.mmObject();
 		}
@@ -117,12 +119,12 @@ public class DTCMultiplyDivide1Code extends DTCMultiplyDivideCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("MULT");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DTCMultiplyDivide1Code";
 				definition = "Specifies DTC (The Depository Trust Company) entitlement calculation logic.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DTCMultiplyDivide1Code.mmMultiply, com.tools20022.repository.codeset.DTCMultiplyDivide1Code.mmDivide);
+				code_lazy = () -> Arrays.asList(DTCMultiplyDivide1Code.mmMultiply, DTCMultiplyDivide1Code.mmDivide);
 				trace_lazy = () -> DTCMultiplyDivideCode.mmObject();
 			}
 		});

@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ATMMediaTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -103,9 +105,9 @@ public class ATMMediaType1Code extends ATMMediaTypeCode {
 	 */
 	public static final MMCode mmCards = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cards";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ATMMediaType2Code.mmCards);
+			nextVersions_lazy = () -> Arrays.asList(ATMMediaType2Code.mmCards);
 			owner_lazy = () -> ATMMediaType1Code.mmObject();
 		}
 	};
@@ -135,9 +137,9 @@ public class ATMMediaType1Code extends ATMMediaTypeCode {
 	 */
 	public static final MMCode mmCoins = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Coins";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ATMMediaType2Code.mmCoins);
+			nextVersions_lazy = () -> Arrays.asList(ATMMediaType2Code.mmCoins);
 			owner_lazy = () -> ATMMediaType1Code.mmObject();
 		}
 	};
@@ -167,9 +169,9 @@ public class ATMMediaType1Code extends ATMMediaTypeCode {
 	 */
 	public static final MMCode mmCommodity = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Commodity";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ATMMediaType2Code.mmCommodity);
+			nextVersions_lazy = () -> Arrays.asList(ATMMediaType2Code.mmCommodity);
 			owner_lazy = () -> ATMMediaType1Code.mmObject();
 		}
 	};
@@ -199,9 +201,9 @@ public class ATMMediaType1Code extends ATMMediaTypeCode {
 	 */
 	public static final MMCode mmCoupons = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Coupons";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ATMMediaType2Code.mmCoupons);
+			nextVersions_lazy = () -> Arrays.asList(ATMMediaType2Code.mmCoupons);
 			owner_lazy = () -> ATMMediaType1Code.mmObject();
 		}
 	};
@@ -231,9 +233,9 @@ public class ATMMediaType1Code extends ATMMediaTypeCode {
 	 */
 	public static final MMCode mmNotes = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Notes";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ATMMediaType2Code.mmNotes);
+			nextVersions_lazy = () -> Arrays.asList(ATMMediaType2Code.mmNotes);
 			owner_lazy = () -> ATMMediaType1Code.mmObject();
 		}
 	};
@@ -263,9 +265,9 @@ public class ATMMediaType1Code extends ATMMediaTypeCode {
 	 */
 	public static final MMCode mmStamps = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Stamps";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ATMMediaType2Code.mmStamps);
+			nextVersions_lazy = () -> Arrays.asList(ATMMediaType2Code.mmStamps);
 			owner_lazy = () -> ATMMediaType1Code.mmObject();
 		}
 	};
@@ -295,9 +297,9 @@ public class ATMMediaType1Code extends ATMMediaTypeCode {
 	 */
 	public static final MMCode mmUndetermined = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Undetermined";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ATMMediaType2Code.mmUndetermined);
+			nextVersions_lazy = () -> Arrays.asList(ATMMediaType2Code.mmUndetermined);
 			owner_lazy = () -> ATMMediaType1Code.mmObject();
 		}
 	};
@@ -305,14 +307,13 @@ public class ATMMediaType1Code extends ATMMediaTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ATMMediaType1Code";
 				definition = "Type of media inside an ATM cassette.";
 				nextVersions_lazy = () -> Arrays.asList(ATMMediaType2Code.mmObject());
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ATMMediaType1Code.mmCards, com.tools20022.repository.codeset.ATMMediaType1Code.mmCoins, com.tools20022.repository.codeset.ATMMediaType1Code.mmCommodity,
-						com.tools20022.repository.codeset.ATMMediaType1Code.mmCoupons, com.tools20022.repository.codeset.ATMMediaType1Code.mmNotes, com.tools20022.repository.codeset.ATMMediaType1Code.mmStamps,
-						com.tools20022.repository.codeset.ATMMediaType1Code.mmUndetermined);
+				code_lazy = () -> Arrays.asList(ATMMediaType1Code.mmCards, ATMMediaType1Code.mmCoins, ATMMediaType1Code.mmCommodity, ATMMediaType1Code.mmCoupons, ATMMediaType1Code.mmNotes, ATMMediaType1Code.mmStamps,
+						ATMMediaType1Code.mmUndetermined);
 				trace_lazy = () -> ATMMediaTypeCode.mmObject();
 			}
 		});

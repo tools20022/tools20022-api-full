@@ -20,6 +20,7 @@ package com.tools20022.repository.area.catp;
 import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.ATMCardTransactionLatestVersion;
 import com.tools20022.repository.msg.ATMWithdrawalRequest1;
 import com.tools20022.repository.msg.ContentInformationType10;
@@ -35,6 +36,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code catp.001.001.01}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.ATMCardTransactionLatestVersion
@@ -69,9 +73,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * ATMWithdrawalRequestV01.mmSecurityTrailer}</li>
  * </ul>
  * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code catp.001.001.01}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -123,7 +124,7 @@ public class ATMWithdrawalRequestV01 {
 	public static final MMMessageBuildingBlock mmHeader = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Hdr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Header";
 			definition = "Information related to the protocol management on a segment of the path from the ATM to the acquirer.";
 			maxOccurs = 1;
@@ -158,7 +159,7 @@ public class ATMWithdrawalRequestV01 {
 	public static final MMMessageBuildingBlock mmProtectedATMWithdrawalRequest = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "PrtctdATMWdrwlReq";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProtectedATMWithdrawalRequest";
 			definition = "Encrypted body of the message.";
 			maxOccurs = 1;
@@ -196,7 +197,7 @@ public class ATMWithdrawalRequestV01 {
 	public static final MMMessageBuildingBlock mmATMWithdrawalRequest = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "ATMWdrwlReq";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ATMWithdrawalRequest";
 			definition = "Information related to the request of a withdrawal transaction from an ATM.";
 			maxOccurs = 1;
@@ -231,7 +232,7 @@ public class ATMWithdrawalRequestV01 {
 	public static final MMMessageBuildingBlock mmSecurityTrailer = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SctyTrlr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityTrailer";
 			definition = "Trailer of the message containing a MAC.";
 			maxOccurs = 1;
@@ -243,7 +244,7 @@ public class ATMWithdrawalRequestV01 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ATMWithdrawalRequestV01";
 				definition = "The ATMWithdrawalRequest message is sent by an ATM to an acquirer or its agent to request the approval of a withdrawal transaction at an ATM.";
 				nextVersions_lazy = () -> Arrays.asList(ATMWithdrawalRequestV02.mmObject());
@@ -251,8 +252,8 @@ public class ATMWithdrawalRequestV01 {
 				rootElement = "Document";
 				xmlTag = "ATMWdrwlReq";
 				businessArea_lazy = () -> ATMCardTransactionLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.catp.ATMWithdrawalRequestV01.mmHeader, com.tools20022.repository.area.catp.ATMWithdrawalRequestV01.mmProtectedATMWithdrawalRequest,
-						com.tools20022.repository.area.catp.ATMWithdrawalRequestV01.mmATMWithdrawalRequest, com.tools20022.repository.area.catp.ATMWithdrawalRequestV01.mmSecurityTrailer);
+				messageBuildingBlock_lazy = () -> Arrays.asList(ATMWithdrawalRequestV01.mmHeader, ATMWithdrawalRequestV01.mmProtectedATMWithdrawalRequest, ATMWithdrawalRequestV01.mmATMWithdrawalRequest,
+						ATMWithdrawalRequestV01.mmSecurityTrailer);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "catp";

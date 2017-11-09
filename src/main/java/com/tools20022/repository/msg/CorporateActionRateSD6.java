@@ -19,10 +19,12 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.CorporateActionRateSD6Choice;
 import com.tools20022.repository.choice.PriceFormatSD1Choice;
 import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.datatype.YesNoIndicator;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -118,10 +120,10 @@ public class CorporateActionRateSD6 {
 			componentContext_lazy = () -> CorporateActionRateSD6.mmObject();
 			isDerived = false;
 			xmlTag = "PlcAndNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "xPath to the element that is being extended.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionRateSD8.mmPlaceAndName);
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionRateSD8.mmPlaceAndName);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
@@ -172,10 +174,10 @@ public class CorporateActionRateSD6 {
 			componentContext_lazy = () -> CorporateActionRateSD6.mmObject();
 			isDerived = false;
 			xmlTag = "DclrdSctyRate";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeclaredSecurityRate";
 			definition = "Corresponding rate of the security being disbursed as a result of the corporate action as declared by the issuer or offeror on the market.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionRateSD8.mmDeclaredSecurityRate);
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionRateSD8.mmDeclaredSecurityRate);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> CorporateActionRateSD6Choice.mmObject();
@@ -223,10 +225,10 @@ public class CorporateActionRateSD6 {
 			componentContext_lazy = () -> CorporateActionRateSD6.mmObject();
 			isDerived = false;
 			xmlTag = "EstmtdRateFlg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EstimatedRateFlag";
 			definition = "Denotes whether the rate is approximate.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionRateSD8.mmEstimatedRateFlag);
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionRateSD8.mmEstimatedRateFlag);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
@@ -275,10 +277,10 @@ public class CorporateActionRateSD6 {
 			componentContext_lazy = () -> CorporateActionRateSD6.mmObject();
 			isDerived = false;
 			xmlTag = "DclrdFeeRate";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeclaredFeeRate";
 			definition = "Rate at which the fee will be charged to a DTC participant.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionRateSD8.mmDeclaredFeeRate);
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionRateSD8.mmDeclaredFeeRate);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> PriceFormatSD1Choice.mmObject();
@@ -288,10 +290,9 @@ public class CorporateActionRateSD6 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionRateSD6.mmPlaceAndName, com.tools20022.repository.msg.CorporateActionRateSD6.mmDeclaredSecurityRate,
-						com.tools20022.repository.msg.CorporateActionRateSD6.mmEstimatedRateFlag, com.tools20022.repository.msg.CorporateActionRateSD6.mmDeclaredFeeRate);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(CorporateActionRateSD6.mmPlaceAndName, CorporateActionRateSD6.mmDeclaredSecurityRate, CorporateActionRateSD6.mmEstimatedRateFlag, CorporateActionRateSD6.mmDeclaredFeeRate);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionRateSD6";
 				definition = "Provides additional information regarding corporate action option securities movement rate details.";
 				nextVersions_lazy = () -> Arrays.asList(CorporateActionRateSD8.mmObject());

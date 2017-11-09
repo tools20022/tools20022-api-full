@@ -20,6 +20,7 @@ package com.tools20022.repository.area.tsmt;
 import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.TradeServicesManagementArchive;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.ISOArchive;
@@ -59,6 +60,9 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code tsmt.014.001.03}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.TradeServicesManagementArchive
@@ -112,9 +116,6 @@ import java.util.List;
  * DataSetSubmissionV03.mmOtherCertificateDataSet}</li>
  * </ul>
  * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code tsmt.014.001.03}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -172,10 +173,10 @@ public class DataSetSubmissionV03 {
 	public static final MMMessageBuildingBlock mmSubmissionIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SubmissnId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubmissionIdentification";
 			definition = "Identifies the submitted information.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.DataSetSubmissionV04.mmSubmissionIdentification);
+			nextVersions_lazy = () -> Arrays.asList(DataSetSubmissionV04.mmSubmissionIdentification);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
@@ -219,10 +220,10 @@ public class DataSetSubmissionV03 {
 	public static final MMMessageBuildingBlock mmRelatedTransactionReferences = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "RltdTxRefs";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedTransactionReferences";
 			definition = "Identifies the transactions that this submission relates to and provides associated information.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.DataSetSubmissionV04.mmRelatedTransactionReferences);
+			nextVersions_lazy = () -> Arrays.asList(DataSetSubmissionV04.mmRelatedTransactionReferences);
 			minOccurs = 1;
 			complexType_lazy = () -> DataSetSubmissionReferences3.mmObject();
 		}
@@ -265,10 +266,10 @@ public class DataSetSubmissionV03 {
 	public static final MMMessageBuildingBlock mmCommonSubmissionReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CmonSubmissnRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommonSubmissionReference";
 			definition = "This reference must be used for all data sets belonging to the same submission group.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.DataSetSubmissionV04.mmCommonSubmissionReference);
+			nextVersions_lazy = () -> Arrays.asList(DataSetSubmissionV04.mmCommonSubmissionReference);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> SimpleIdentificationInformation.mmObject();
@@ -309,10 +310,10 @@ public class DataSetSubmissionV03 {
 	public static final MMMessageBuildingBlock mmInstruction = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Instr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Instruction";
 			definition = "Specifies the instruction given by the submitter. ";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.DataSetSubmissionV04.mmInstruction);
+			nextVersions_lazy = () -> Arrays.asList(DataSetSubmissionV04.mmInstruction);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> InstructionType3.mmObject();
@@ -355,10 +356,10 @@ public class DataSetSubmissionV03 {
 	public static final MMMessageBuildingBlock mmBuyerBank = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "BuyrBk";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BuyerBank";
 			definition = "The financial institution of the buyer, uniquely identified by its BIC. ";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.DataSetSubmissionV04.mmBuyerBank);
+			nextVersions_lazy = () -> Arrays.asList(DataSetSubmissionV04.mmBuyerBank);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> BICIdentification1.mmObject();
@@ -401,10 +402,10 @@ public class DataSetSubmissionV03 {
 	public static final MMMessageBuildingBlock mmSellerBank = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SellrBk";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SellerBank";
 			definition = "The financial institution of the seller, uniquely identified by its BIC. ";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.DataSetSubmissionV04.mmSellerBank);
+			nextVersions_lazy = () -> Arrays.asList(DataSetSubmissionV04.mmSellerBank);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> BICIdentification1.mmObject();
@@ -448,10 +449,10 @@ public class DataSetSubmissionV03 {
 	public static final MMMessageBuildingBlock mmCommercialDataSet = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "ComrclDataSet";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommercialDataSet";
 			definition = "Commercial information that is submitted to the matching application for processing.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.DataSetSubmissionV04.mmCommercialDataSet);
+			nextVersions_lazy = () -> Arrays.asList(DataSetSubmissionV04.mmCommercialDataSet);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> CommercialDataSet3.mmObject();
@@ -495,10 +496,10 @@ public class DataSetSubmissionV03 {
 	public static final MMMessageBuildingBlock mmTransportDataSet = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "TrnsprtDataSet";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransportDataSet";
 			definition = "Transport information that is submitted to the matching application for processing.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.DataSetSubmissionV04.mmTransportDataSet);
+			nextVersions_lazy = () -> Arrays.asList(DataSetSubmissionV04.mmTransportDataSet);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> TransportDataSet3.mmObject();
@@ -542,10 +543,10 @@ public class DataSetSubmissionV03 {
 	public static final MMMessageBuildingBlock mmInsuranceDataSet = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "InsrncDataSet";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InsuranceDataSet";
 			definition = "Insurance information that is submitted to the matching application for processing.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.DataSetSubmissionV04.mmInsuranceDataSet);
+			nextVersions_lazy = () -> Arrays.asList(DataSetSubmissionV04.mmInsuranceDataSet);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> InsuranceDataSet1.mmObject();
@@ -589,10 +590,10 @@ public class DataSetSubmissionV03 {
 	public static final MMMessageBuildingBlock mmCertificateDataSet = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CertDataSet";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CertificateDataSet";
 			definition = "Certificate information that is submitted to the matching application for processing.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.DataSetSubmissionV04.mmCertificateDataSet);
+			nextVersions_lazy = () -> Arrays.asList(DataSetSubmissionV04.mmCertificateDataSet);
 			minOccurs = 0;
 			complexType_lazy = () -> CertificateDataSet1.mmObject();
 		}
@@ -635,10 +636,10 @@ public class DataSetSubmissionV03 {
 	public static final MMMessageBuildingBlock mmOtherCertificateDataSet = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "OthrCertDataSet";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherCertificateDataSet";
 			definition = "Other certificate information that is submitted to the matching application for processing.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.DataSetSubmissionV04.mmOtherCertificateDataSet);
+			nextVersions_lazy = () -> Arrays.asList(DataSetSubmissionV04.mmOtherCertificateDataSet);
 			minOccurs = 0;
 			complexType_lazy = () -> OtherCertificateDataSet1.mmObject();
 		}
@@ -647,7 +648,7 @@ public class DataSetSubmissionV03 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DataSetSubmissionV03";
 				definition = "Scope\r\nThe DataSetSubmission message is sent by a party involved in the transaction to the matching application.\r\nThis message is used to trigger either a match or a pre-match of the information submitted with the message.\r\nUsage\r\nThe DataSetSubmission message can be sent by either party with the instruction pre-match. In the outlined scenario, the matching application will compare the data set(s) conveyed by the DataSetSubmission message with the established baseline and report the matching result to the requester of the data set pre-match by sending a DataSetMatchReport message.\r\nor\r\nThe DataSetSubmission message can be sent by the party specified in the baseline as data set submitter with the instruction match. In the outlined scenario, the matching application will compare the data set(s) conveyed by the DataSetSubmission message with the established baseline and report the matching result to\r\n- the parties involved in a transaction established in the push-through mode, or\r\n- the initiator of a transaction established in the lodge mode.\r\nThe DataSetSubmission message can be used to submit multiple data sets for multiple transactions (baselines) at the same time. However, all transactions (baselines) covered by the message must be for the same parties, that is transaction initiator and counterparty, as well as for the same buyer and seller.\r\nThe DataSetSubmission message consists of data reflecting trade information related to the purchasing agreement covered by the transaction(s), for example shipment date, invoice amount.";
 				nextVersions_lazy = () -> Arrays.asList(DataSetSubmissionV04.mmObject());
@@ -655,12 +656,9 @@ public class DataSetSubmissionV03 {
 				rootElement = "Document";
 				xmlTag = "DataSetSubmissn";
 				businessArea_lazy = () -> TradeServicesManagementArchive.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.DataSetSubmissionV03.mmSubmissionIdentification, com.tools20022.repository.area.tsmt.DataSetSubmissionV03.mmRelatedTransactionReferences,
-						com.tools20022.repository.area.tsmt.DataSetSubmissionV03.mmCommonSubmissionReference, com.tools20022.repository.area.tsmt.DataSetSubmissionV03.mmInstruction,
-						com.tools20022.repository.area.tsmt.DataSetSubmissionV03.mmBuyerBank, com.tools20022.repository.area.tsmt.DataSetSubmissionV03.mmSellerBank,
-						com.tools20022.repository.area.tsmt.DataSetSubmissionV03.mmCommercialDataSet, com.tools20022.repository.area.tsmt.DataSetSubmissionV03.mmTransportDataSet,
-						com.tools20022.repository.area.tsmt.DataSetSubmissionV03.mmInsuranceDataSet, com.tools20022.repository.area.tsmt.DataSetSubmissionV03.mmCertificateDataSet,
-						com.tools20022.repository.area.tsmt.DataSetSubmissionV03.mmOtherCertificateDataSet);
+				messageBuildingBlock_lazy = () -> Arrays.asList(DataSetSubmissionV03.mmSubmissionIdentification, DataSetSubmissionV03.mmRelatedTransactionReferences, DataSetSubmissionV03.mmCommonSubmissionReference,
+						DataSetSubmissionV03.mmInstruction, DataSetSubmissionV03.mmBuyerBank, DataSetSubmissionV03.mmSellerBank, DataSetSubmissionV03.mmCommercialDataSet, DataSetSubmissionV03.mmTransportDataSet,
+						DataSetSubmissionV03.mmInsuranceDataSet, DataSetSubmissionV03.mmCertificateDataSet, DataSetSubmissionV03.mmOtherCertificateDataSet);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "tsmt";

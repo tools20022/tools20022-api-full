@@ -19,12 +19,15 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.metamodel.MMXor;
 import com.tools20022.repository.codeset.UnitOfMeasure3Code;
 import com.tools20022.repository.datatype.DecimalNumber;
 import com.tools20022.repository.datatype.Max15NumericText;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.ProductQuantity;
+import com.tools20022.repository.entity.SecuritiesQuantity;
+import com.tools20022.repository.GeneratedRepository;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -115,11 +118,11 @@ public class Quantity2 {
 	 */
 	public static final MMMessageAttribute mmUnitOfMeasureCode = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ProductQuantity.mmUnitOfMeasure;
+			businessElementTrace_lazy = () -> ProductQuantity.mmUnitOfMeasure;
 			componentContext_lazy = () -> Quantity2.mmObject();
 			isDerived = false;
 			xmlTag = "UnitOfMeasrCd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnitOfMeasureCode";
 			definition = "Specifies the unit of measurement. For example, kilo, tons.";
 			maxOccurs = 1;
@@ -162,11 +165,11 @@ public class Quantity2 {
 	 */
 	public static final MMMessageAttribute mmOtherUnitOfMeasure = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ProductQuantity.mmUnitOfMeasure;
+			businessElementTrace_lazy = () -> ProductQuantity.mmUnitOfMeasure;
 			componentContext_lazy = () -> Quantity2.mmObject();
 			isDerived = false;
 			xmlTag = "OthrUnitOfMeasr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherUnitOfMeasure";
 			definition = "Identifies the unit of measure not present in the code list.";
 			maxOccurs = 1;
@@ -212,11 +215,11 @@ public class Quantity2 {
 	 */
 	public static final MMMessageAttribute mmValue = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmUnit;
+			businessElementTrace_lazy = () -> SecuritiesQuantity.mmUnit;
 			componentContext_lazy = () -> Quantity2.mmObject();
 			isDerived = false;
 			xmlTag = "Val";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Value";
 			definition = "Quantity of a product on a line specified by a number. For example, 100 (kgs), 50 (pieces).";
 			maxOccurs = 1;
@@ -262,11 +265,11 @@ public class Quantity2 {
 	 */
 	public static final MMMessageAttribute mmFactor = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ProductQuantity.mmFactor;
+			businessElementTrace_lazy = () -> ProductQuantity.mmFactor;
 			componentContext_lazy = () -> Quantity2.mmObject();
 			isDerived = false;
 			xmlTag = "Fctr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Factor";
 			definition = "Multiplication factor of measurement values. For example: goods that can be ordered by 36 pieces.";
 			maxOccurs = 1;
@@ -281,6 +284,9 @@ public class Quantity2 {
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
+	 * messageComponent} = {@linkplain com.tools20022.repository.msg.Quantity2
+	 * Quantity2}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getImpactedElements
 	 * impactedElements} =
 	 * <ul>
@@ -292,9 +298,6 @@ public class Quantity2 {
 	 * Quantity2.mmOtherUnitOfMeasure}</li>
 	 * </ul>
 	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
-	 * messageComponent} = {@linkplain com.tools20022.repository.msg.Quantity2
-	 * Quantity2}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -310,22 +313,21 @@ public class Quantity2 {
 	 */
 	public static final MMXor mmUnitOfMeasureCodeOrOtherUnitOfMeasureRule = new MMXor() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnitOfMeasureCodeOrOtherUnitOfMeasureRule";
 			definition = "If UnitOfMeasureCode is present, then OtherUnitOfMeasure is not allowed. If UnitOfMeasureCode is not present, then OtherUnitOfMeasure is mandatory.";
 			messageComponent_lazy = () -> Quantity2.mmObject();
-			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Quantity2.mmUnitOfMeasureCode, com.tools20022.repository.msg.Quantity2.mmOtherUnitOfMeasure);
+			impactedElements_lazy = () -> Arrays.asList(Quantity2.mmUnitOfMeasureCode, Quantity2.mmOtherUnitOfMeasure);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Quantity2.mmUnitOfMeasureCode, com.tools20022.repository.msg.Quantity2.mmOtherUnitOfMeasure, com.tools20022.repository.msg.Quantity2.mmValue,
-						com.tools20022.repository.msg.Quantity2.mmFactor);
+				messageElement_lazy = () -> Arrays.asList(Quantity2.mmUnitOfMeasureCode, Quantity2.mmOtherUnitOfMeasure, Quantity2.mmValue, Quantity2.mmFactor);
 				trace_lazy = () -> ProductQuantity.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
 						return DateFormat.getDateInstance(java.text.DateFormat.LONG).parse("September 9, 2016");
@@ -335,7 +337,7 @@ public class Quantity2 {
 				})).get();
 				name = "Quantity2";
 				definition = "Specifies the quantity of a product in a trade transaction.";
-				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Quantity2.mmUnitOfMeasureCodeOrOtherUnitOfMeasureRule);
+				xors_lazy = () -> Arrays.asList(Quantity2.mmUnitOfMeasureCodeOrOtherUnitOfMeasureRule);
 			}
 		});
 		return mmObject_lazy.get();

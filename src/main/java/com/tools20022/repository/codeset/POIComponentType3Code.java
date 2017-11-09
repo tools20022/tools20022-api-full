@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.POIComponentTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -138,9 +140,9 @@ public class POIComponentType3Code extends POIComponentTypeCode {
 	 */
 	public static final MMCode mmAcquirerProtocolParameters = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcquirerProtocolParameters";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.POIComponentType4Code.mmAcquirerProtocolParameters);
+			nextVersions_lazy = () -> Arrays.asList(POIComponentType4Code.mmAcquirerProtocolParameters);
 			owner_lazy = () -> POIComponentType3Code.mmObject();
 		}
 	};
@@ -170,9 +172,9 @@ public class POIComponentType3Code extends POIComponentTypeCode {
 	 */
 	public static final MMCode mmApplicationParameters = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ApplicationParameters";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.POIComponentType4Code.mmApplicationParameters);
+			nextVersions_lazy = () -> Arrays.asList(POIComponentType4Code.mmApplicationParameters);
 			owner_lazy = () -> POIComponentType3Code.mmObject();
 		}
 	};
@@ -202,9 +204,9 @@ public class POIComponentType3Code extends POIComponentTypeCode {
 	 */
 	public static final MMCode mmTerminalParameters = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TerminalParameters";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.POIComponentType4Code.mmTerminalParameters);
+			nextVersions_lazy = () -> Arrays.asList(POIComponentType4Code.mmTerminalParameters);
 			owner_lazy = () -> POIComponentType3Code.mmObject();
 		}
 	};
@@ -234,9 +236,9 @@ public class POIComponentType3Code extends POIComponentTypeCode {
 	 */
 	public static final MMCode mmSecurityParameters = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityParameters";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.POIComponentType4Code.mmSecurityParameters);
+			nextVersions_lazy = () -> Arrays.asList(POIComponentType4Code.mmSecurityParameters);
 			owner_lazy = () -> POIComponentType3Code.mmObject();
 		}
 	};
@@ -266,9 +268,9 @@ public class POIComponentType3Code extends POIComponentTypeCode {
 	 */
 	public static final MMCode mmServer = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Server";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.POIComponentType4Code.mmServer);
+			nextVersions_lazy = () -> Arrays.asList(POIComponentType4Code.mmServer);
 			owner_lazy = () -> POIComponentType3Code.mmObject();
 		}
 	};
@@ -298,9 +300,9 @@ public class POIComponentType3Code extends POIComponentTypeCode {
 	 */
 	public static final MMCode mmTerminal = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Terminal";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.POIComponentType4Code.mmTerminal);
+			nextVersions_lazy = () -> Arrays.asList(POIComponentType4Code.mmTerminal);
 			owner_lazy = () -> POIComponentType3Code.mmObject();
 		}
 	};
@@ -330,9 +332,9 @@ public class POIComponentType3Code extends POIComponentTypeCode {
 	 */
 	public static final MMCode mmDevice = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Device";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.POIComponentType4Code.mmDevice);
+			nextVersions_lazy = () -> Arrays.asList(POIComponentType4Code.mmDevice);
 			owner_lazy = () -> POIComponentType3Code.mmObject();
 		}
 	};
@@ -362,9 +364,9 @@ public class POIComponentType3Code extends POIComponentTypeCode {
 	 */
 	public static final MMCode mmSecureModule = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecureModule";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.POIComponentType4Code.mmSecureModule);
+			nextVersions_lazy = () -> Arrays.asList(POIComponentType4Code.mmSecureModule);
 			owner_lazy = () -> POIComponentType3Code.mmObject();
 		}
 	};
@@ -394,9 +396,9 @@ public class POIComponentType3Code extends POIComponentTypeCode {
 	 */
 	public static final MMCode mmPaymentApplication = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentApplication";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.POIComponentType4Code.mmPaymentApplication);
+			nextVersions_lazy = () -> Arrays.asList(POIComponentType4Code.mmPaymentApplication);
 			owner_lazy = () -> POIComponentType3Code.mmObject();
 		}
 	};
@@ -426,9 +428,9 @@ public class POIComponentType3Code extends POIComponentTypeCode {
 	 */
 	public static final MMCode mmEMVKernel = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EMVKernel";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.POIComponentType4Code.mmEMVKernel);
+			nextVersions_lazy = () -> Arrays.asList(POIComponentType4Code.mmEMVKernel);
 			owner_lazy = () -> POIComponentType3Code.mmObject();
 		}
 	};
@@ -458,9 +460,9 @@ public class POIComponentType3Code extends POIComponentTypeCode {
 	 */
 	public static final MMCode mmEMVLevel1 = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EMVLevel1";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.POIComponentType4Code.mmEMVLevel1);
+			nextVersions_lazy = () -> Arrays.asList(POIComponentType4Code.mmEMVLevel1);
 			owner_lazy = () -> POIComponentType3Code.mmObject();
 		}
 	};
@@ -490,9 +492,9 @@ public class POIComponentType3Code extends POIComponentTypeCode {
 	 */
 	public static final MMCode mmMiddleware = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Middleware";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.POIComponentType4Code.mmMiddleware);
+			nextVersions_lazy = () -> Arrays.asList(POIComponentType4Code.mmMiddleware);
 			owner_lazy = () -> POIComponentType3Code.mmObject();
 		}
 	};
@@ -522,9 +524,9 @@ public class POIComponentType3Code extends POIComponentTypeCode {
 	 */
 	public static final MMCode mmDriver = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Driver";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.POIComponentType4Code.mmDriver);
+			nextVersions_lazy = () -> Arrays.asList(POIComponentType4Code.mmDriver);
 			owner_lazy = () -> POIComponentType3Code.mmObject();
 		}
 	};
@@ -554,9 +556,9 @@ public class POIComponentType3Code extends POIComponentTypeCode {
 	 */
 	public static final MMCode mmOperatingSystem = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OperatingSystem";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.POIComponentType4Code.mmOperatingSystem);
+			nextVersions_lazy = () -> Arrays.asList(POIComponentType4Code.mmOperatingSystem);
 			owner_lazy = () -> POIComponentType3Code.mmObject();
 		}
 	};
@@ -586,9 +588,9 @@ public class POIComponentType3Code extends POIComponentTypeCode {
 	 */
 	public static final MMCode mmMerchantParameters = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MerchantParameters";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.POIComponentType4Code.mmMerchantParameters);
+			nextVersions_lazy = () -> Arrays.asList(POIComponentType4Code.mmMerchantParameters);
 			owner_lazy = () -> POIComponentType3Code.mmObject();
 		}
 	};
@@ -596,19 +598,15 @@ public class POIComponentType3Code extends POIComponentTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("AQPP");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "POIComponentType3Code";
 				definition = "Type of component belonging to a POI (Point of Interaction) Terminal.";
 				nextVersions_lazy = () -> Arrays.asList(POIComponentType4Code.mmObject());
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.POIComponentType3Code.mmAcquirerProtocolParameters, com.tools20022.repository.codeset.POIComponentType3Code.mmApplicationParameters,
-						com.tools20022.repository.codeset.POIComponentType3Code.mmTerminalParameters, com.tools20022.repository.codeset.POIComponentType3Code.mmSecurityParameters,
-						com.tools20022.repository.codeset.POIComponentType3Code.mmServer, com.tools20022.repository.codeset.POIComponentType3Code.mmTerminal, com.tools20022.repository.codeset.POIComponentType3Code.mmDevice,
-						com.tools20022.repository.codeset.POIComponentType3Code.mmSecureModule, com.tools20022.repository.codeset.POIComponentType3Code.mmPaymentApplication,
-						com.tools20022.repository.codeset.POIComponentType3Code.mmEMVKernel, com.tools20022.repository.codeset.POIComponentType3Code.mmEMVLevel1, com.tools20022.repository.codeset.POIComponentType3Code.mmMiddleware,
-						com.tools20022.repository.codeset.POIComponentType3Code.mmDriver, com.tools20022.repository.codeset.POIComponentType3Code.mmOperatingSystem,
-						com.tools20022.repository.codeset.POIComponentType3Code.mmMerchantParameters);
+				code_lazy = () -> Arrays.asList(POIComponentType3Code.mmAcquirerProtocolParameters, POIComponentType3Code.mmApplicationParameters, POIComponentType3Code.mmTerminalParameters, POIComponentType3Code.mmSecurityParameters,
+						POIComponentType3Code.mmServer, POIComponentType3Code.mmTerminal, POIComponentType3Code.mmDevice, POIComponentType3Code.mmSecureModule, POIComponentType3Code.mmPaymentApplication, POIComponentType3Code.mmEMVKernel,
+						POIComponentType3Code.mmEMVLevel1, POIComponentType3Code.mmMiddleware, POIComponentType3Code.mmDriver, POIComponentType3Code.mmOperatingSystem, POIComponentType3Code.mmMerchantParameters);
 				trace_lazy = () -> POIComponentTypeCode.mmObject();
 			}
 		});

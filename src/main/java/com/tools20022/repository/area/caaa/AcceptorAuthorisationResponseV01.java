@@ -20,6 +20,7 @@ package com.tools20022.repository.area.caaa;
 import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.AcceptortoAcquirerCardTransactionArchive;
 import com.tools20022.repository.msg.AcceptorAuthorisationResponse1;
 import com.tools20022.repository.msg.ContentInformationType3;
@@ -43,6 +44,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code caaa.002.001.01}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.AcceptortoAcquirerCardTransactionArchive
@@ -72,9 +76,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * AcceptorAuthorisationResponseV01.mmSecurityTrailer}</li>
  * </ul>
  * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code caaa.002.001.01}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -124,7 +125,7 @@ public class AcceptorAuthorisationResponseV01 {
 	public static final MMMessageBuildingBlock mmHeader = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Hdr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Header";
 			definition = "Authorisation response message management information.";
 			maxOccurs = 1;
@@ -160,7 +161,7 @@ public class AcceptorAuthorisationResponseV01 {
 	public static final MMMessageBuildingBlock mmAuthorisationResponse = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "AuthstnRspn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AuthorisationResponse";
 			definition = "Information related to the response of the authorisation.";
 			maxOccurs = 1;
@@ -195,7 +196,7 @@ public class AcceptorAuthorisationResponseV01 {
 	public static final MMMessageBuildingBlock mmSecurityTrailer = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SctyTrlr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityTrailer";
 			definition = "Trailer of the message containing a MAC.";
 			maxOccurs = 1;
@@ -207,7 +208,7 @@ public class AcceptorAuthorisationResponseV01 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AcceptorAuthorisationResponseV01";
 				definition = "Scope\r\nThe AcceptorAuthorisationResponse message is sent by the acquirer to inform the card acceptor of the outcome of the authorisation process. The message can be sent directly to the acceptor or through an agent.\r\nUsage\r\nThe AcceptorAuthorisationResponse message is used to indicate one of the possible outcomes of an authorisation process:\r\n- a successful authorisation;\r\n- a decline from the acquirer for financial reasons;\r\n- a decline from the acquirer for technical reasons (for instance, a timeout).";
 				nextVersions_lazy = () -> Arrays.asList(AcceptorAuthorisationResponseV02.mmObject());
@@ -215,8 +216,7 @@ public class AcceptorAuthorisationResponseV01 {
 				rootElement = "Document";
 				xmlTag = "AccptrAuthstnRspn";
 				businessArea_lazy = () -> AcceptortoAcquirerCardTransactionArchive.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.caaa.AcceptorAuthorisationResponseV01.mmHeader, com.tools20022.repository.area.caaa.AcceptorAuthorisationResponseV01.mmAuthorisationResponse,
-						com.tools20022.repository.area.caaa.AcceptorAuthorisationResponseV01.mmSecurityTrailer);
+				messageBuildingBlock_lazy = () -> Arrays.asList(AcceptorAuthorisationResponseV01.mmHeader, AcceptorAuthorisationResponseV01.mmAuthorisationResponse, AcceptorAuthorisationResponseV01.mmSecurityTrailer);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "caaa";

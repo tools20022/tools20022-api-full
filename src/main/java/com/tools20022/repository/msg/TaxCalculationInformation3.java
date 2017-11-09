@@ -19,8 +19,12 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ActiveCurrencyAnd13DecimalAmount;
 import com.tools20022.repository.entity.InvestmentFundTax;
+import com.tools20022.repository.entity.SecuritiesTax;
+import com.tools20022.repository.entity.Tax;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -101,11 +105,11 @@ public class TaxCalculationInformation3 {
 	 */
 	public static final MMMessageAttribute mmBasis = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.mmBasis;
+			businessElementTrace_lazy = () -> Tax.mmBasis;
 			componentContext_lazy = () -> TaxCalculationInformation3.mmObject();
 			isDerived = false;
 			xmlTag = "Bsis";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Basis";
 			definition = "Basis used to determine the capital gain or loss, eg, the purchase price.";
 			maxOccurs = 1;
@@ -153,11 +157,11 @@ public class TaxCalculationInformation3 {
 	 */
 	public static final MMMessageAttribute mmEUCapitalGain = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTax.mmEUCapitalGain;
+			businessElementTrace_lazy = () -> SecuritiesTax.mmEUCapitalGain;
 			componentContext_lazy = () -> TaxCalculationInformation3.mmObject();
 			isDerived = false;
 			xmlTag = "EUCptlGn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EUCapitalGain";
 			definition = "Specifies whether capital gain is in the scope of the European directive on taxation of savings income in the form of interest payments (Council Directive 2003/48/EC 3 June), or an income realised upon sale, a refund or redemption of shares and units, etc.";
 			maxOccurs = 1;
@@ -201,11 +205,11 @@ public class TaxCalculationInformation3 {
 	 */
 	public static final MMMessageAttribute mmTaxableAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.mmTaxableBaseAmount;
+			businessElementTrace_lazy = () -> Tax.mmTaxableBaseAmount;
 			componentContext_lazy = () -> TaxCalculationInformation3.mmObject();
 			isDerived = false;
 			xmlTag = "TaxblAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxableAmount";
 			definition = "Amount of money that it is to be taxed.";
 			maxOccurs = 1;
@@ -217,11 +221,10 @@ public class TaxCalculationInformation3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TaxCalculationInformation3.mmBasis, com.tools20022.repository.msg.TaxCalculationInformation3.mmEUCapitalGain,
-						com.tools20022.repository.msg.TaxCalculationInformation3.mmTaxableAmount);
+				messageElement_lazy = () -> Arrays.asList(TaxCalculationInformation3.mmBasis, TaxCalculationInformation3.mmEUCapitalGain, TaxCalculationInformation3.mmTaxableAmount);
 				trace_lazy = () -> InvestmentFundTax.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TaxCalculationInformation3";
 				definition = "Information used to calculate the tax.";
 			}

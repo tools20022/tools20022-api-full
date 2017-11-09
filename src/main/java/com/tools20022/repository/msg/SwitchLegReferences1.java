@@ -17,13 +17,14 @@
 
 package com.tools20022.repository.msg;
 
-import com.tools20022.metamodel.MMMessageAssociationEnd;
-import com.tools20022.metamodel.MMMessageAttribute;
-import com.tools20022.metamodel.MMMessageComponent;
-import com.tools20022.metamodel.MMXor;
+import com.tools20022.metamodel.*;
 import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.InvestmentFundOrder;
+import com.tools20022.repository.entity.InvestmentFundTransaction;
+import com.tools20022.repository.entity.SecuritiesOrder;
+import com.tools20022.repository.entity.StatusReason;
+import com.tools20022.repository.GeneratedRepository;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -131,11 +132,11 @@ public class SwitchLegReferences1 {
 	 */
 	public static final MMMessageAttribute mmRedemptionLegIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmIdentification;
+			businessElementTrace_lazy = () -> SecuritiesOrder.mmIdentification;
 			componentContext_lazy = () -> SwitchLegReferences1.mmObject();
 			isDerived = false;
 			xmlTag = "RedLegId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RedemptionLegIdentification";
 			definition = "Unique technical identifier for an instance of a leg within a switch.";
 			maxOccurs = 1;
@@ -179,11 +180,11 @@ public class SwitchLegReferences1 {
 	 */
 	public static final MMMessageAttribute mmSubscriptionLegIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmIdentification;
+			businessElementTrace_lazy = () -> SecuritiesOrder.mmIdentification;
 			componentContext_lazy = () -> SwitchLegReferences1.mmObject();
 			isDerived = false;
 			xmlTag = "SbcptLegId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubscriptionLegIdentification";
 			definition = "Unique technical identifier for an instance of a leg within a switch.";
 			maxOccurs = 1;
@@ -235,14 +236,14 @@ public class SwitchLegReferences1 {
 	 */
 	public static final MMMessageAttribute mmLegRejectionReason = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmRejectionReason;
+			businessElementTrace_lazy = () -> StatusReason.mmRejectionReason;
 			componentContext_lazy = () -> SwitchLegReferences1.mmObject();
 			isDerived = false;
 			xmlTag = "LegRjctnRsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LegRejectionReason";
 			definition = "Additional information about the reason for the rejection of a leg.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SwitchLegReferences2.mmLegRejectionReason);
+			nextVersions_lazy = () -> Arrays.asList(SwitchLegReferences2.mmLegRejectionReason);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
@@ -285,11 +286,11 @@ public class SwitchLegReferences1 {
 	 */
 	public static final MMMessageAssociationEnd mmRepairedConditions = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrder.mmOrderStatus;
+			businessElementTrace_lazy = () -> InvestmentFundOrder.mmOrderStatus;
 			componentContext_lazy = () -> SwitchLegReferences1.mmObject();
 			isDerived = false;
 			xmlTag = "RprdConds";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RepairedConditions";
 			definition = "Elements from the original switch order that have been repaired so that the switch order can be accepted.";
 			maxOccurs = 1;
@@ -341,14 +342,14 @@ public class SwitchLegReferences1 {
 	 */
 	public static final MMMessageAssociationEnd mmInvestmentAccountDetails = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundTransaction.mmInvestmentAccount;
+			businessElementTrace_lazy = () -> InvestmentFundTransaction.mmInvestmentAccount;
 			componentContext_lazy = () -> SwitchLegReferences1.mmObject();
 			isDerived = false;
 			xmlTag = "InvstmtAcctDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestmentAccountDetails";
 			definition = "Account identification of the switch leg that is rejected or repaired.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SwitchLegReferences2.mmInvestmentAccountDetails);
+			nextVersions_lazy = () -> Arrays.asList(SwitchLegReferences2.mmInvestmentAccountDetails);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -400,14 +401,14 @@ public class SwitchLegReferences1 {
 	 */
 	public static final MMMessageAssociationEnd mmFinancialInstrumentDetails = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundTransaction.mmInvestmentFundClass;
+			businessElementTrace_lazy = () -> InvestmentFundTransaction.mmInvestmentFundClass;
 			componentContext_lazy = () -> SwitchLegReferences1.mmObject();
 			isDerived = false;
 			xmlTag = "FinInstrmDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentDetails";
 			definition = "Financial instrument identification of the switch leg that is rejected or repaired.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SwitchLegReferences2.mmFinancialInstrumentDetails);
+			nextVersions_lazy = () -> Arrays.asList(SwitchLegReferences2.mmFinancialInstrumentDetails);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -420,6 +421,10 @@ public class SwitchLegReferences1 {
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
+	 * messageComponent} =
+	 * {@linkplain com.tools20022.repository.msg.SwitchLegReferences1
+	 * SwitchLegReferences1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getImpactedElements
 	 * impactedElements} =
 	 * <ul>
@@ -431,10 +436,6 @@ public class SwitchLegReferences1 {
 	 * SwitchLegReferences1.mmSubscriptionLegIdentification}</li>
 	 * </ul>
 	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
-	 * messageComponent} =
-	 * {@linkplain com.tools20022.repository.msg.SwitchLegReferences1
-	 * SwitchLegReferences1}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -450,23 +451,22 @@ public class SwitchLegReferences1 {
 	 */
 	public static final MMXor mmLegIdentificationRule = new MMXor() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LegIdentificationRule";
 			definition = "Either RedemptionLegIdentification or SubscriptionLegIdentification must be present, but not both.";
 			messageComponent_lazy = () -> SwitchLegReferences1.mmObject();
-			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SwitchLegReferences1.mmRedemptionLegIdentification, com.tools20022.repository.msg.SwitchLegReferences1.mmSubscriptionLegIdentification);
+			impactedElements_lazy = () -> Arrays.asList(SwitchLegReferences1.mmRedemptionLegIdentification, SwitchLegReferences1.mmSubscriptionLegIdentification);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SwitchLegReferences1.mmRedemptionLegIdentification, com.tools20022.repository.msg.SwitchLegReferences1.mmSubscriptionLegIdentification,
-						com.tools20022.repository.msg.SwitchLegReferences1.mmLegRejectionReason, com.tools20022.repository.msg.SwitchLegReferences1.mmRepairedConditions,
-						com.tools20022.repository.msg.SwitchLegReferences1.mmInvestmentAccountDetails, com.tools20022.repository.msg.SwitchLegReferences1.mmFinancialInstrumentDetails);
+				messageElement_lazy = () -> Arrays.asList(SwitchLegReferences1.mmRedemptionLegIdentification, SwitchLegReferences1.mmSubscriptionLegIdentification, SwitchLegReferences1.mmLegRejectionReason,
+						SwitchLegReferences1.mmRepairedConditions, SwitchLegReferences1.mmInvestmentAccountDetails, SwitchLegReferences1.mmFinancialInstrumentDetails);
 				trace_lazy = () -> InvestmentFundOrder.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
 						return DateFormat.getDateInstance(java.text.DateFormat.LONG).parse("September 9, 2016");
@@ -477,7 +477,7 @@ public class SwitchLegReferences1 {
 				name = "SwitchLegReferences1";
 				definition = "Information about a switch leg that is rejected or repaired.";
 				nextVersions_lazy = () -> Arrays.asList(SwitchLegReferences2.mmObject());
-				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SwitchLegReferences1.mmLegIdentificationRule);
+				xors_lazy = () -> Arrays.asList(SwitchLegReferences1.mmLegIdentificationRule);
 			}
 		});
 		return mmObject_lazy.get();

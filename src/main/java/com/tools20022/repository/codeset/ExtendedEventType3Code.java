@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ExtendedEventTypeV2Code;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -92,9 +94,9 @@ public class ExtendedEventType3Code extends ExtendedEventTypeV2Code {
 	 */
 	public static final MMCode mmTermination = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Termination";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ExtendedEventType4Code.mmTermination);
+			nextVersions_lazy = () -> Arrays.asList(ExtendedEventType4Code.mmTermination);
 			owner_lazy = () -> ExtendedEventType3Code.mmObject();
 		}
 	};
@@ -102,12 +104,12 @@ public class ExtendedEventType3Code extends ExtendedEventTypeV2Code {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ExtendedEventType3Code";
 				definition = "Specifies DTCC (The Depository Trust and Clearing Corporation) defined corporate action event type.";
 				nextVersions_lazy = () -> Arrays.asList(ExtendedEventType4Code.mmObject());
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ExtendedEventType3Code.mmTermination);
+				code_lazy = () -> Arrays.asList(ExtendedEventType3Code.mmTermination);
 				trace_lazy = () -> ExtendedEventTypeV2Code.mmObject();
 			}
 		});

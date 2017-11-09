@@ -20,12 +20,14 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.sese.TransferOutInstructionV04;
 import com.tools20022.repository.codeset.PhysicalTransferType1Code;
 import com.tools20022.repository.codeset.StampDutyType2Code;
 import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
 import com.tools20022.repository.datatype.ISODate;
-import com.tools20022.repository.entity.InvestmentFundTax;
-import com.tools20022.repository.entity.SecuritiesSettlement;
+import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -159,14 +161,14 @@ public class ReceiveInformation9 {
 	 */
 	public static final MMMessageAttribute mmRequestedSettlementDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Obligation.mmRequestedSettlementDate;
+			businessElementTrace_lazy = () -> Obligation.mmRequestedSettlementDate;
 			componentContext_lazy = () -> ReceiveInformation9.mmObject();
 			isDerived = false;
 			xmlTag = "ReqdSttlmDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestedSettlementDate";
 			definition = "Date and time at which the securities are to be exchanged at the International Central Securities Depository (ICSD) or Central Securities Depository (CSD).";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReceiveInformation13.mmRequestedSettlementDate);
+			nextVersions_lazy = () -> Arrays.asList(ReceiveInformation13.mmRequestedSettlementDate);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
@@ -219,14 +221,14 @@ public class ReceiveInformation9 {
 	 */
 	public static final MMMessageAttribute mmSettlementAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmSettlementAmount;
+			businessElementTrace_lazy = () -> SecuritiesSettlement.mmSettlementAmount;
 			componentContext_lazy = () -> ReceiveInformation9.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementAmount";
 			definition = "Total amount of money paid /to be paid or received in exchange for the financial instrument in the individual order.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReceiveInformation13.mmSettlementAmount);
+			nextVersions_lazy = () -> Arrays.asList(ReceiveInformation13.mmSettlementAmount);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
@@ -278,14 +280,14 @@ public class ReceiveInformation9 {
 	 */
 	public static final MMMessageAttribute mmStampDuty = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTax.mmStampDutyType;
+			businessElementTrace_lazy = () -> SecuritiesTax.mmStampDutyType;
 			componentContext_lazy = () -> ReceiveInformation9.mmObject();
 			isDerived = false;
 			xmlTag = "StmpDty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StampDuty";
 			definition = "Indicates whether the settlement amount includes the stamp duty amount.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReceiveInformation13.mmStampDuty);
+			nextVersions_lazy = () -> Arrays.asList(ReceiveInformation13.mmStampDuty);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> StampDutyType2Code.mmObject();
@@ -335,14 +337,14 @@ public class ReceiveInformation9 {
 	 */
 	public static final MMMessageAttribute mmNetAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTrade.mmTradeAmount;
+			businessElementTrace_lazy = () -> SecuritiesTrade.mmTradeAmount;
 			componentContext_lazy = () -> ReceiveInformation9.mmObject();
 			isDerived = false;
 			xmlTag = "NetAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetAmount";
 			definition = "Deal amount.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReceiveInformation13.mmNetAmount);
+			nextVersions_lazy = () -> Arrays.asList(ReceiveInformation13.mmNetAmount);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
@@ -392,14 +394,14 @@ public class ReceiveInformation9 {
 	 */
 	public static final MMMessageAssociationEnd mmSettlementPartiesDetails = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmPartyRole;
+			businessElementTrace_lazy = () -> SecuritiesSettlement.mmPartyRole;
 			componentContext_lazy = () -> ReceiveInformation9.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmPtiesDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementPartiesDetails";
 			definition = "Chain of parties involved in the settlement of a transaction.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReceiveInformation13.mmSettlementPartiesDetails);
+			nextVersions_lazy = () -> Arrays.asList(ReceiveInformation13.mmSettlementPartiesDetails);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -448,14 +450,14 @@ public class ReceiveInformation9 {
 	 */
 	public static final MMMessageAssociationEnd mmChargeDetails = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmFees;
+			businessElementTrace_lazy = () -> Security.mmFees;
 			componentContext_lazy = () -> ReceiveInformation9.mmObject();
 			isDerived = false;
 			xmlTag = "ChrgDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChargeDetails";
 			definition = "Charge related to the transfer of a financial instrument.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReceiveInformation13.mmChargeDetails);
+			nextVersions_lazy = () -> Arrays.asList(ReceiveInformation13.mmChargeDetails);
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.Charge20.mmObject();
@@ -504,14 +506,14 @@ public class ReceiveInformation9 {
 	 */
 	public static final MMMessageAssociationEnd mmCommissionDetails = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Trade.mmTradeCommission;
+			businessElementTrace_lazy = () -> Trade.mmTradeCommission;
 			componentContext_lazy = () -> ReceiveInformation9.mmObject();
 			isDerived = false;
 			xmlTag = "ComssnDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommissionDetails";
 			definition = "Commission related to the transfer of a financial instrument.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReceiveInformation13.mmCommissionDetails);
+			nextVersions_lazy = () -> Arrays.asList(ReceiveInformation13.mmCommissionDetails);
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.Commission12.mmObject();
@@ -562,10 +564,10 @@ public class ReceiveInformation9 {
 			componentContext_lazy = () -> ReceiveInformation9.mmObject();
 			isDerived = false;
 			xmlTag = "TaxDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxDetails";
 			definition = "Tax related to the transfer of a financial instrument.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReceiveInformation13.mmTaxDetails);
+			nextVersions_lazy = () -> Arrays.asList(ReceiveInformation13.mmTaxDetails);
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.Tax15.mmObject();
@@ -617,14 +619,14 @@ public class ReceiveInformation9 {
 	 */
 	public static final MMMessageAttribute mmPhysicalTransfer = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PhysicalDelivery.mmType;
+			businessElementTrace_lazy = () -> PhysicalDelivery.mmType;
 			componentContext_lazy = () -> ReceiveInformation9.mmObject();
 			isDerived = false;
 			xmlTag = "PhysTrf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PhysicalTransfer";
 			definition = "Indicates whether the financial instrument is to be physically delivered.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReceiveInformation13.mmPhysicalTransfer);
+			nextVersions_lazy = () -> Arrays.asList(ReceiveInformation13.mmPhysicalTransfer);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PhysicalTransferType1Code.mmObject();
@@ -672,14 +674,14 @@ public class ReceiveInformation9 {
 	 */
 	public static final MMMessageAssociationEnd mmPhysicalTransferDetails = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTransfer.mmPhysicalDelivery;
+			businessElementTrace_lazy = () -> SecuritiesTransfer.mmPhysicalDelivery;
 			componentContext_lazy = () -> ReceiveInformation9.mmObject();
 			isDerived = false;
 			xmlTag = "PhysTrfDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PhysicalTransferDetails";
 			definition = "Parameters of a physical delivery.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReceiveInformation13.mmPhysicalTransferDetails);
+			nextVersions_lazy = () -> Arrays.asList(ReceiveInformation13.mmPhysicalTransferDetails);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -690,14 +692,13 @@ public class ReceiveInformation9 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReceiveInformation9.mmRequestedSettlementDate, com.tools20022.repository.msg.ReceiveInformation9.mmSettlementAmount,
-						com.tools20022.repository.msg.ReceiveInformation9.mmStampDuty, com.tools20022.repository.msg.ReceiveInformation9.mmNetAmount, com.tools20022.repository.msg.ReceiveInformation9.mmSettlementPartiesDetails,
-						com.tools20022.repository.msg.ReceiveInformation9.mmChargeDetails, com.tools20022.repository.msg.ReceiveInformation9.mmCommissionDetails, com.tools20022.repository.msg.ReceiveInformation9.mmTaxDetails,
-						com.tools20022.repository.msg.ReceiveInformation9.mmPhysicalTransfer, com.tools20022.repository.msg.ReceiveInformation9.mmPhysicalTransferDetails);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.TransferOutInstructionV04.mmSettlementDetails);
+				messageElement_lazy = () -> Arrays.asList(ReceiveInformation9.mmRequestedSettlementDate, ReceiveInformation9.mmSettlementAmount, ReceiveInformation9.mmStampDuty, ReceiveInformation9.mmNetAmount,
+						ReceiveInformation9.mmSettlementPartiesDetails, ReceiveInformation9.mmChargeDetails, ReceiveInformation9.mmCommissionDetails, ReceiveInformation9.mmTaxDetails, ReceiveInformation9.mmPhysicalTransfer,
+						ReceiveInformation9.mmPhysicalTransferDetails);
+				messageBuildingBlock_lazy = () -> Arrays.asList(TransferOutInstructionV04.mmSettlementDetails);
 				trace_lazy = () -> SecuritiesSettlement.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ReceiveInformation9";
 				definition = "Parameters applied to the settlement of a security transfer.";
 				nextVersions_lazy = () -> Arrays.asList(ReceiveInformation13.mmObject());

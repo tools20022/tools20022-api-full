@@ -19,8 +19,10 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.OptionStyle2Code;
 import com.tools20022.repository.entity.Option;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification20;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -112,14 +114,14 @@ public class OptionStyle4Choice {
 	 */
 	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Option.mmOptionStyle;
+			businessElementTrace_lazy = () -> Option.mmOptionStyle;
 			componentContext_lazy = () -> OptionStyle4Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Cd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Option style expressed as an ISO 20022 code.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.OptionStyle8Choice.mmCode);
+			nextVersions_lazy = () -> Arrays.asList(OptionStyle8Choice.mmCode);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> OptionStyle2Code.mmObject();
@@ -169,14 +171,14 @@ public class OptionStyle4Choice {
 	 */
 	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Option.mmOptionStyle;
+			businessElementTrace_lazy = () -> Option.mmOptionStyle;
 			componentContext_lazy = () -> OptionStyle4Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Option style expressed as a proprietary code.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.OptionStyle8Choice.mmProprietary);
+			nextVersions_lazy = () -> Arrays.asList(OptionStyle8Choice.mmProprietary);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification20.mmObject();
@@ -186,10 +188,10 @@ public class OptionStyle4Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.OptionStyle4Choice.mmCode, com.tools20022.repository.choice.OptionStyle4Choice.mmProprietary);
+				messageElement_lazy = () -> Arrays.asList(OptionStyle4Choice.mmCode, OptionStyle4Choice.mmProprietary);
 				trace_lazy = () -> Option.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OptionStyle4Choice";
 				definition = "Choice of format for the option style.";
 				nextVersions_lazy = () -> Arrays.asList(OptionStyle8Choice.mmObject());

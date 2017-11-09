@@ -17,11 +17,13 @@
 
 package com.tools20022.repository.entity;
 
-import com.tools20022.metamodel.MMBusinessAssociationEnd;
-import com.tools20022.metamodel.MMBusinessAttribute;
-import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.*;
 import com.tools20022.repository.datatype.ISODate;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.CutOff1;
+import com.tools20022.repository.msg.NettingCutOff1;
+import com.tools20022.repository.msg.SystemAvailabilityAndEvents1;
+import com.tools20022.repository.msg.SystemAvailabilityAndEventsDetails1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -34,22 +36,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
  * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SystemAvailability#mmAvailableSessionPeriod
- * SystemAvailability.mmAvailableSessionPeriod}</li>
- * <li>{@linkplain com.tools20022.repository.entity.SystemAvailability#mmSystem
- * SystemAvailability.mmSystem}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SystemAvailability#mmClosureInformation
- * SystemAvailability.mmClosureInformation}</li>
- * <li>{@linkplain com.tools20022.repository.entity.SystemAvailability#mmDate
- * SystemAvailability.mmDate}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SystemAvailability#mmClosurePeriod
- * SystemAvailability.mmClosurePeriod}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CutOff1 CutOff1}</li>
  * </ul>
  * </li>
  * <li>
@@ -77,11 +68,22 @@ import java.util.concurrent.atomic.AtomicReference;
  * NettingCutOff1.mmNewCutOff}</li>
  * </ul>
  * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.CutOff1 CutOff1}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SystemAvailability#mmAvailableSessionPeriod
+ * SystemAvailability.mmAvailableSessionPeriod}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.SystemAvailability#mmSystem
+ * SystemAvailability.mmSystem}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SystemAvailability#mmClosureInformation
+ * SystemAvailability.mmClosureInformation}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.SystemAvailability#mmDate
+ * SystemAvailability.mmDate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SystemAvailability#mmClosurePeriod
+ * SystemAvailability.mmClosurePeriod}</li>
  * </ul>
  * </li>
  * <li>
@@ -150,16 +152,16 @@ public class SystemAvailability {
 	 */
 	public static final MMBusinessAssociationEnd mmAvailableSessionPeriod = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SystemAvailabilityAndEventsDetails1.mmSessionPeriod, com.tools20022.repository.msg.SystemAvailabilityAndEvents1.mmSessionPeriod);
+			derivation_lazy = () -> Arrays.asList(SystemAvailabilityAndEventsDetails1.mmSessionPeriod, SystemAvailabilityAndEvents1.mmSessionPeriod);
 			elementContext_lazy = () -> SystemAvailability.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AvailableSessionPeriod";
 			definition = "Time window of system activity.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.TimePeriod.mmSystemAvailability;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.TimePeriod.mmObject();
 		}
 	};
@@ -200,13 +202,13 @@ public class SystemAvailability {
 		{
 			elementContext_lazy = () -> SystemAvailability.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "System";
 			definition = "System for which the system availability is provided.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.System.mmAvailability;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.System.mmObject();
 		}
 	};
@@ -250,13 +252,13 @@ public class SystemAvailability {
 		{
 			elementContext_lazy = () -> SystemAvailability.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ClosureInformation";
 			definition = "System availability parameters which contain closure information.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.SystemClosureInformation.mmSystemAvailability;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SystemClosureInformation.mmObject();
 		}
 	};
@@ -290,7 +292,7 @@ public class SystemAvailability {
 		{
 			elementContext_lazy = () -> SystemAvailability.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Date";
 			definition = "Date for which the availability information is provided.";
 			maxOccurs = 1;
@@ -336,13 +338,13 @@ public class SystemAvailability {
 		{
 			elementContext_lazy = () -> SystemAvailability.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ClosurePeriod";
 			definition = "Period for which the system is closed/not operating.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmRelatedSystemAvailability;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmObject();
 		}
 	};
@@ -350,15 +352,14 @@ public class SystemAvailability {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SystemAvailability";
 				definition = "information about the periods of activity and non-activity of a system.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.DateTimePeriod.mmRelatedSystemAvailability, com.tools20022.repository.entity.System.mmAvailability,
 						com.tools20022.repository.entity.TimePeriod.mmSystemAvailability, com.tools20022.repository.entity.SystemClosureInformation.mmSystemAvailability);
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.NettingCutOff1.mmNewCutOff);
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SystemAvailability.mmAvailableSessionPeriod, com.tools20022.repository.entity.SystemAvailability.mmSystem,
-						com.tools20022.repository.entity.SystemAvailability.mmClosureInformation, com.tools20022.repository.entity.SystemAvailability.mmDate, com.tools20022.repository.entity.SystemAvailability.mmClosurePeriod);
+				derivationElement_lazy = () -> Arrays.asList(NettingCutOff1.mmNewCutOff);
+				element_lazy = () -> Arrays.asList(SystemAvailability.mmAvailableSessionPeriod, SystemAvailability.mmSystem, SystemAvailability.mmClosureInformation, SystemAvailability.mmDate, SystemAvailability.mmClosurePeriod);
 				derivationComponent_lazy = () -> Arrays.asList(CutOff1.mmObject());
 			}
 		});

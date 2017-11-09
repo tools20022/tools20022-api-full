@@ -19,7 +19,9 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.Reservation;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.ReservationIdentification1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -103,7 +105,7 @@ public class CurrentOrDefaultReservation1Choice {
 			componentContext_lazy = () -> CurrentOrDefaultReservation1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Cur";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Current";
 			definition = "Identification of the current reservation.";
 			maxOccurs = 1;
@@ -150,7 +152,7 @@ public class CurrentOrDefaultReservation1Choice {
 			componentContext_lazy = () -> CurrentOrDefaultReservation1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Dflt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Default";
 			definition = "Identification of the default reservation.";
 			maxOccurs = 1;
@@ -163,10 +165,10 @@ public class CurrentOrDefaultReservation1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CurrentOrDefaultReservation1Choice.mmCurrent, com.tools20022.repository.choice.CurrentOrDefaultReservation1Choice.mmDefault);
+				messageElement_lazy = () -> Arrays.asList(CurrentOrDefaultReservation1Choice.mmCurrent, CurrentOrDefaultReservation1Choice.mmDefault);
 				trace_lazy = () -> Reservation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CurrentOrDefaultReservation1Choice";
 				definition = "Current or default reservation set by the member and managed by the transaction administrator.";
 			}

@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CardFallbackCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -80,7 +82,7 @@ public class CardFallback1Code extends CardFallbackCode {
 	 */
 	public static final MMCode mmFallbackAfterFailure = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FallbackAfterFailure";
 			owner_lazy = () -> CardFallback1Code.mmObject();
 		}
@@ -103,7 +105,7 @@ public class CardFallback1Code extends CardFallbackCode {
 	 */
 	public static final MMCode mmFallbackAfterSuccess = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FallbackAfterSuccess";
 			owner_lazy = () -> CardFallback1Code.mmObject();
 		}
@@ -126,7 +128,7 @@ public class CardFallback1Code extends CardFallbackCode {
 	 */
 	public static final MMCode mmNoFallback = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoFallback";
 			owner_lazy = () -> CardFallback1Code.mmObject();
 		}
@@ -135,12 +137,11 @@ public class CardFallback1Code extends CardFallbackCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CardFallback1Code";
 				definition = "Information about card entry mode fallback.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CardFallback1Code.mmFallbackAfterFailure, com.tools20022.repository.codeset.CardFallback1Code.mmFallbackAfterSuccess,
-						com.tools20022.repository.codeset.CardFallback1Code.mmNoFallback);
+				code_lazy = () -> Arrays.asList(CardFallback1Code.mmFallbackAfterFailure, CardFallback1Code.mmFallbackAfterSuccess, CardFallback1Code.mmNoFallback);
 				trace_lazy = () -> CardFallbackCode.mmObject();
 			}
 		});

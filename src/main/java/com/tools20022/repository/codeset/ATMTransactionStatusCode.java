@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.ATMTransactionStatus1Code
+ * ATMTransactionStatus1Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ATMTransactionStatus2Code
+ * ATMTransactionStatus2Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -47,15 +58,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.ATMTransactionStatusCode#mmNone
  * ATMTransactionStatusCode.mmNone}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.ATMTransactionStatus1Code
- * ATMTransactionStatus1Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ATMTransactionStatus2Code
- * ATMTransactionStatus2Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -99,7 +101,7 @@ public class ATMTransactionStatusCode {
 	 */
 	public static final MMCode mmSuccess = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Success";
 			definition = "Transaction was successfully completed.";
 			owner_lazy = () -> ATMTransactionStatusCode.mmObject();
@@ -130,7 +132,7 @@ public class ATMTransactionStatusCode {
 	 */
 	public static final MMCode mmDoubt = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Doubt";
 			definition = "Undetermined status, for instance possibly forgotten notes.";
 			owner_lazy = () -> ATMTransactionStatusCode.mmObject();
@@ -160,7 +162,7 @@ public class ATMTransactionStatusCode {
 	 */
 	public static final MMCode mmFailure = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Failure";
 			definition = "Transaction failed.";
 			owner_lazy = () -> ATMTransactionStatusCode.mmObject();
@@ -191,7 +193,7 @@ public class ATMTransactionStatusCode {
 	 */
 	public static final MMCode mmFull = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Full";
 			definition = "Total presented amount is equal to the amount to dispense.";
 			owner_lazy = () -> ATMTransactionStatusCode.mmObject();
@@ -222,7 +224,7 @@ public class ATMTransactionStatusCode {
 	 */
 	public static final MMCode mmPartial = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Partial";
 			definition = "Total presented amount is lower than the amount to dispense.";
 			owner_lazy = () -> ATMTransactionStatusCode.mmObject();
@@ -252,7 +254,7 @@ public class ATMTransactionStatusCode {
 	 */
 	public static final MMCode mmNone = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "None";
 			definition = "Total presented amount is equal to zero.";
 			owner_lazy = () -> ATMTransactionStatusCode.mmObject();
@@ -263,13 +265,12 @@ public class ATMTransactionStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ATMTransactionStatusCode";
 				definition = "Status of an ATM transaction.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ATMTransactionStatusCode.mmSuccess, com.tools20022.repository.codeset.ATMTransactionStatusCode.mmDoubt,
-						com.tools20022.repository.codeset.ATMTransactionStatusCode.mmFailure, com.tools20022.repository.codeset.ATMTransactionStatusCode.mmFull, com.tools20022.repository.codeset.ATMTransactionStatusCode.mmPartial,
-						com.tools20022.repository.codeset.ATMTransactionStatusCode.mmNone);
+				code_lazy = () -> Arrays.asList(ATMTransactionStatusCode.mmSuccess, ATMTransactionStatusCode.mmDoubt, ATMTransactionStatusCode.mmFailure, ATMTransactionStatusCode.mmFull, ATMTransactionStatusCode.mmPartial,
+						ATMTransactionStatusCode.mmNone);
 				derivation_lazy = () -> Arrays.asList(ATMTransactionStatus1Code.mmObject(), ATMTransactionStatus2Code.mmObject());
 			}
 		});

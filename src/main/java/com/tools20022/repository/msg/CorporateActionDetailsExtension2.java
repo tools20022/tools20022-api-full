@@ -19,8 +19,10 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.datatype.Max8Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -93,7 +95,7 @@ public class CorporateActionDetailsExtension2 {
 			componentContext_lazy = () -> CorporateActionDetailsExtension2.mmObject();
 			isDerived = false;
 			xmlTag = "PlcAndNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "xPath to the element that is being extended.";
 			maxOccurs = 1;
@@ -137,7 +139,7 @@ public class CorporateActionDetailsExtension2 {
 			componentContext_lazy = () -> CorporateActionDetailsExtension2.mmObject();
 			isDerived = false;
 			xmlTag = "ContraPtcptNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ContraParticipantNumber";
 			definition = "Contra participant identification for stock loans reorganisation transactions.";
 			maxOccurs = 1;
@@ -149,9 +151,9 @@ public class CorporateActionDetailsExtension2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionDetailsExtension2.mmPlaceAndName, com.tools20022.repository.msg.CorporateActionDetailsExtension2.mmContraParticipantNumber);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(CorporateActionDetailsExtension2.mmPlaceAndName, CorporateActionDetailsExtension2.mmContraParticipantNumber);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CorporateActionDetailsExtension2";
 				definition = "Provides additional information regarding corporate action details.";
 			}

@@ -20,8 +20,10 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max35Text;
-import com.tools20022.repository.entity.DirectDebitMandate;
+import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -107,11 +109,11 @@ public class AmendmentInformationDetails4 {
 	 */
 	public static final MMMessageAttribute mmOriginalMandateIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Mandate.mmMandateIdentification;
+			businessElementTrace_lazy = () -> Mandate.mmMandateIdentification;
 			componentContext_lazy = () -> AmendmentInformationDetails4.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlMndtId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalMandateIdentification";
 			definition = "Original mandate identification that has been modified.";
 			maxOccurs = 1;
@@ -154,11 +156,11 @@ public class AmendmentInformationDetails4 {
 	 */
 	public static final MMMessageAssociationEnd mmOriginalCreditorSchemeIdentification = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> AmendmentInformationDetails4.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlCdtrSchmeId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalCreditorSchemeIdentification";
 			definition = "Original creditor scheme identification that has been modified.";
 			maxOccurs = 1;
@@ -201,11 +203,11 @@ public class AmendmentInformationDetails4 {
 	 */
 	public static final MMMessageAssociationEnd mmOriginalDebtorAccount = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentPartyRole.mmCashAccount;
+			businessElementTrace_lazy = () -> PaymentPartyRole.mmCashAccount;
 			componentContext_lazy = () -> AmendmentInformationDetails4.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlDbtrAcct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalDebtorAccount";
 			definition = "Original debtor account that has been modified.";
 			maxOccurs = 1;
@@ -248,11 +250,11 @@ public class AmendmentInformationDetails4 {
 	 */
 	public static final MMMessageAssociationEnd mmOriginalDebtorAgent = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Organisation.mmOrganisationIdentification;
+			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> AmendmentInformationDetails4.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlDbtrAgt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalDebtorAgent";
 			definition = "Original debtor's agent that has been modified.";
 			maxOccurs = 1;
@@ -265,12 +267,11 @@ public class AmendmentInformationDetails4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AmendmentInformationDetails4.mmOriginalMandateIdentification,
-						com.tools20022.repository.msg.AmendmentInformationDetails4.mmOriginalCreditorSchemeIdentification, com.tools20022.repository.msg.AmendmentInformationDetails4.mmOriginalDebtorAccount,
-						com.tools20022.repository.msg.AmendmentInformationDetails4.mmOriginalDebtorAgent);
+				messageElement_lazy = () -> Arrays.asList(AmendmentInformationDetails4.mmOriginalMandateIdentification, AmendmentInformationDetails4.mmOriginalCreditorSchemeIdentification,
+						AmendmentInformationDetails4.mmOriginalDebtorAccount, AmendmentInformationDetails4.mmOriginalDebtorAgent);
 				trace_lazy = () -> DirectDebitMandate.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "AmendmentInformationDetails4";
 				definition = "Amendment information details providing the list of direct debit mandate elements that have been modified when the amendment indicator has been set.";
 			}

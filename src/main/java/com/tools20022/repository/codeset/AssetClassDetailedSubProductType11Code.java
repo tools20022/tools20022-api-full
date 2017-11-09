@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.AssetClassDetailedSubProductTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -87,7 +89,7 @@ public class AssetClassDetailedSubProductType11Code extends AssetClassDetailedSu
 	 */
 	public static final MMCode mmGold = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Gold";
 			owner_lazy = () -> AssetClassDetailedSubProductType11Code.mmObject();
 		}
@@ -110,7 +112,7 @@ public class AssetClassDetailedSubProductType11Code extends AssetClassDetailedSu
 	 */
 	public static final MMCode mmOther = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
 			owner_lazy = () -> AssetClassDetailedSubProductType11Code.mmObject();
 		}
@@ -133,7 +135,7 @@ public class AssetClassDetailedSubProductType11Code extends AssetClassDetailedSu
 	 */
 	public static final MMCode mmPalladium = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Palladium";
 			owner_lazy = () -> AssetClassDetailedSubProductType11Code.mmObject();
 		}
@@ -156,7 +158,7 @@ public class AssetClassDetailedSubProductType11Code extends AssetClassDetailedSu
 	 */
 	public static final MMCode mmPlatinum = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Platinum";
 			owner_lazy = () -> AssetClassDetailedSubProductType11Code.mmObject();
 		}
@@ -179,7 +181,7 @@ public class AssetClassDetailedSubProductType11Code extends AssetClassDetailedSu
 	 */
 	public static final MMCode mmSilver = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Silver";
 			owner_lazy = () -> AssetClassDetailedSubProductType11Code.mmObject();
 		}
@@ -188,13 +190,12 @@ public class AssetClassDetailedSubProductType11Code extends AssetClassDetailedSu
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AssetClassDetailedSubProductType11Code";
 				definition = "Further sub product code list for commodity derivative Precious.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AssetClassDetailedSubProductType11Code.mmGold, com.tools20022.repository.codeset.AssetClassDetailedSubProductType11Code.mmOther,
-						com.tools20022.repository.codeset.AssetClassDetailedSubProductType11Code.mmPalladium, com.tools20022.repository.codeset.AssetClassDetailedSubProductType11Code.mmPlatinum,
-						com.tools20022.repository.codeset.AssetClassDetailedSubProductType11Code.mmSilver);
+				code_lazy = () -> Arrays.asList(AssetClassDetailedSubProductType11Code.mmGold, AssetClassDetailedSubProductType11Code.mmOther, AssetClassDetailedSubProductType11Code.mmPalladium,
+						AssetClassDetailedSubProductType11Code.mmPlatinum, AssetClassDetailedSubProductType11Code.mmSilver);
 				trace_lazy = () -> AssetClassDetailedSubProductTypeCode.mmObject();
 			}
 		});

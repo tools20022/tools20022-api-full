@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.TypeOfPriceCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -103,7 +105,7 @@ public class TypeOfPrice2Code extends TypeOfPriceCode {
 	 */
 	public static final MMCode mmBid = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Bid";
 			owner_lazy = () -> TypeOfPrice2Code.mmObject();
 		}
@@ -126,7 +128,7 @@ public class TypeOfPrice2Code extends TypeOfPriceCode {
 	 */
 	public static final MMCode mmOffer = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Offer";
 			owner_lazy = () -> TypeOfPrice2Code.mmObject();
 		}
@@ -149,7 +151,7 @@ public class TypeOfPrice2Code extends TypeOfPriceCode {
 	 */
 	public static final MMCode mmNetAssetValue = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetAssetValue";
 			owner_lazy = () -> TypeOfPrice2Code.mmObject();
 		}
@@ -172,7 +174,7 @@ public class TypeOfPrice2Code extends TypeOfPriceCode {
 	 */
 	public static final MMCode mmCreation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Creation";
 			owner_lazy = () -> TypeOfPrice2Code.mmObject();
 		}
@@ -195,7 +197,7 @@ public class TypeOfPrice2Code extends TypeOfPriceCode {
 	 */
 	public static final MMCode mmCancellation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cancellation";
 			owner_lazy = () -> TypeOfPrice2Code.mmObject();
 		}
@@ -218,7 +220,7 @@ public class TypeOfPrice2Code extends TypeOfPriceCode {
 	 */
 	public static final MMCode mmInterim = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Interim";
 			owner_lazy = () -> TypeOfPrice2Code.mmObject();
 		}
@@ -241,7 +243,7 @@ public class TypeOfPrice2Code extends TypeOfPriceCode {
 	 */
 	public static final MMCode mmSwing = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Swing";
 			owner_lazy = () -> TypeOfPrice2Code.mmObject();
 		}
@@ -264,7 +266,7 @@ public class TypeOfPrice2Code extends TypeOfPriceCode {
 	 */
 	public static final MMCode mmOther = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
 			owner_lazy = () -> TypeOfPrice2Code.mmObject();
 		}
@@ -287,7 +289,7 @@ public class TypeOfPrice2Code extends TypeOfPriceCode {
 	 */
 	public static final MMCode mmMid = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Mid";
 			owner_lazy = () -> TypeOfPrice2Code.mmObject();
 		}
@@ -310,7 +312,7 @@ public class TypeOfPrice2Code extends TypeOfPriceCode {
 	 */
 	public static final MMCode mmReinvestment = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reinvestment";
 			owner_lazy = () -> TypeOfPrice2Code.mmObject();
 		}
@@ -333,7 +335,7 @@ public class TypeOfPrice2Code extends TypeOfPriceCode {
 	 */
 	public static final MMCode mmSwitch = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Switch";
 			owner_lazy = () -> TypeOfPrice2Code.mmObject();
 		}
@@ -342,15 +344,13 @@ public class TypeOfPrice2Code extends TypeOfPriceCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("BIDE");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TypeOfPrice2Code";
 				definition = "Specifies the type of price and information about the price.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TypeOfPrice2Code.mmBid, com.tools20022.repository.codeset.TypeOfPrice2Code.mmOffer, com.tools20022.repository.codeset.TypeOfPrice2Code.mmNetAssetValue,
-						com.tools20022.repository.codeset.TypeOfPrice2Code.mmCreation, com.tools20022.repository.codeset.TypeOfPrice2Code.mmCancellation, com.tools20022.repository.codeset.TypeOfPrice2Code.mmInterim,
-						com.tools20022.repository.codeset.TypeOfPrice2Code.mmSwing, com.tools20022.repository.codeset.TypeOfPrice2Code.mmOther, com.tools20022.repository.codeset.TypeOfPrice2Code.mmMid,
-						com.tools20022.repository.codeset.TypeOfPrice2Code.mmReinvestment, com.tools20022.repository.codeset.TypeOfPrice2Code.mmSwitch);
+				code_lazy = () -> Arrays.asList(TypeOfPrice2Code.mmBid, TypeOfPrice2Code.mmOffer, TypeOfPrice2Code.mmNetAssetValue, TypeOfPrice2Code.mmCreation, TypeOfPrice2Code.mmCancellation, TypeOfPrice2Code.mmInterim,
+						TypeOfPrice2Code.mmSwing, TypeOfPrice2Code.mmOther, TypeOfPrice2Code.mmMid, TypeOfPrice2Code.mmReinvestment, TypeOfPrice2Code.mmSwitch);
 				trace_lazy = () -> TypeOfPriceCode.mmObject();
 			}
 		});

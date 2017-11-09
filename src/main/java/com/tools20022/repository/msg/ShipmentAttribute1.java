@@ -19,11 +19,14 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CountryCode;
 import com.tools20022.repository.codeset.ExternalShipmentCondition1Code;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.entity.Incoterms;
+import com.tools20022.repository.entity.PostalAddress;
 import com.tools20022.repository.entity.ShipmentDateRange;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -107,7 +110,7 @@ public class ShipmentAttribute1 {
 			componentContext_lazy = () -> ShipmentAttribute1.mmObject();
 			isDerived = false;
 			xmlTag = "Conds";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Conditions";
 			definition = "Shipment conditions.";
 			maxOccurs = 1;
@@ -150,11 +153,11 @@ public class ShipmentAttribute1 {
 	 */
 	public static final MMMessageAttribute mmExpectedDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ShipmentDateRange.mmLatestShipmentDate;
+			businessElementTrace_lazy = () -> ShipmentDateRange.mmLatestShipmentDate;
 			componentContext_lazy = () -> ShipmentAttribute1.mmObject();
 			isDerived = false;
 			xmlTag = "XpctdDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExpectedDate";
 			definition = "Expected shipment date.";
 			maxOccurs = 1;
@@ -197,11 +200,11 @@ public class ShipmentAttribute1 {
 	 */
 	public static final MMMessageAttribute mmCountryOfCounterParty = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PostalAddress.mmCountry;
+			businessElementTrace_lazy = () -> PostalAddress.mmCountry;
 			componentContext_lazy = () -> ShipmentAttribute1.mmObject();
 			isDerived = false;
 			xmlTag = "CtryOfCntrPty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CountryOfCounterParty";
 			definition = "Country in which the counter party is located.";
 			maxOccurs = 1;
@@ -213,11 +216,10 @@ public class ShipmentAttribute1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ShipmentAttribute1.mmConditions, com.tools20022.repository.msg.ShipmentAttribute1.mmExpectedDate,
-						com.tools20022.repository.msg.ShipmentAttribute1.mmCountryOfCounterParty);
+				messageElement_lazy = () -> Arrays.asList(ShipmentAttribute1.mmConditions, ShipmentAttribute1.mmExpectedDate, ShipmentAttribute1.mmCountryOfCounterParty);
 				trace_lazy = () -> ShipmentDateRange.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ShipmentAttribute1";
 				definition = "Further details on the shipment conditions.";
 			}

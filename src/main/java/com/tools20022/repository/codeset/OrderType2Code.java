@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.OrderTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -121,7 +123,7 @@ public class OrderType2Code extends OrderTypeCode {
 	 */
 	public static final MMCode mmMarket = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Market";
 			owner_lazy = () -> OrderType2Code.mmObject();
 		}
@@ -144,7 +146,7 @@ public class OrderType2Code extends OrderTypeCode {
 	 */
 	public static final MMCode mmLimit = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Limit";
 			owner_lazy = () -> OrderType2Code.mmObject();
 		}
@@ -167,7 +169,7 @@ public class OrderType2Code extends OrderTypeCode {
 	 */
 	public static final MMCode mmStop = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Stop";
 			owner_lazy = () -> OrderType2Code.mmObject();
 		}
@@ -190,7 +192,7 @@ public class OrderType2Code extends OrderTypeCode {
 	 */
 	public static final MMCode mmLimitWith = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LimitWith";
 			owner_lazy = () -> OrderType2Code.mmObject();
 		}
@@ -213,7 +215,7 @@ public class OrderType2Code extends OrderTypeCode {
 	 */
 	public static final MMCode mmLimitWithout = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LimitWithout";
 			owner_lazy = () -> OrderType2Code.mmObject();
 		}
@@ -236,7 +238,7 @@ public class OrderType2Code extends OrderTypeCode {
 	 */
 	public static final MMCode mmOnBasisPrice = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OnBasisPrice";
 			owner_lazy = () -> OrderType2Code.mmObject();
 		}
@@ -259,7 +261,7 @@ public class OrderType2Code extends OrderTypeCode {
 	 */
 	public static final MMCode mmMarketTouched = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketTouched";
 			owner_lazy = () -> OrderType2Code.mmObject();
 		}
@@ -282,7 +284,7 @@ public class OrderType2Code extends OrderTypeCode {
 	 */
 	public static final MMCode mmWithOrWithout = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WithOrWithout";
 			owner_lazy = () -> OrderType2Code.mmObject();
 		}
@@ -305,7 +307,7 @@ public class OrderType2Code extends OrderTypeCode {
 	 */
 	public static final MMCode mmPreviouslyQuoted = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviouslyQuoted";
 			owner_lazy = () -> OrderType2Code.mmObject();
 		}
@@ -328,7 +330,7 @@ public class OrderType2Code extends OrderTypeCode {
 	 */
 	public static final MMCode mmPreviouslyIndicated = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviouslyIndicated";
 			owner_lazy = () -> OrderType2Code.mmObject();
 		}
@@ -351,7 +353,7 @@ public class OrderType2Code extends OrderTypeCode {
 	 */
 	public static final MMCode mmForexSwap = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForexSwap";
 			owner_lazy = () -> OrderType2Code.mmObject();
 		}
@@ -374,7 +376,7 @@ public class OrderType2Code extends OrderTypeCode {
 	 */
 	public static final MMCode mmFunari = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Funari";
 			owner_lazy = () -> OrderType2Code.mmObject();
 		}
@@ -397,7 +399,7 @@ public class OrderType2Code extends OrderTypeCode {
 	 */
 	public static final MMCode mmMarketWithLeftover = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketWithLeftover";
 			owner_lazy = () -> OrderType2Code.mmObject();
 		}
@@ -420,7 +422,7 @@ public class OrderType2Code extends OrderTypeCode {
 	 */
 	public static final MMCode mmPegged = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Pegged";
 			owner_lazy = () -> OrderType2Code.mmObject();
 		}
@@ -443,7 +445,7 @@ public class OrderType2Code extends OrderTypeCode {
 	 */
 	public static final MMCode mmStopLoss = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StopLoss";
 			owner_lazy = () -> OrderType2Code.mmObject();
 		}
@@ -466,7 +468,7 @@ public class OrderType2Code extends OrderTypeCode {
 	 */
 	public static final MMCode mmStopLimit = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StopLimit";
 			owner_lazy = () -> OrderType2Code.mmObject();
 		}
@@ -489,7 +491,7 @@ public class OrderType2Code extends OrderTypeCode {
 	 */
 	public static final MMCode mmCounterOrderSelection = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CounterOrderSelection";
 			owner_lazy = () -> OrderType2Code.mmObject();
 		}
@@ -498,17 +500,14 @@ public class OrderType2Code extends OrderTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("MRKT");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OrderType2Code";
 				definition = "Specifies a type of order based on the Financial Information Exchange Protocol.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OrderType2Code.mmMarket, com.tools20022.repository.codeset.OrderType2Code.mmLimit, com.tools20022.repository.codeset.OrderType2Code.mmStop,
-						com.tools20022.repository.codeset.OrderType2Code.mmLimitWith, com.tools20022.repository.codeset.OrderType2Code.mmLimitWithout, com.tools20022.repository.codeset.OrderType2Code.mmOnBasisPrice,
-						com.tools20022.repository.codeset.OrderType2Code.mmMarketTouched, com.tools20022.repository.codeset.OrderType2Code.mmWithOrWithout, com.tools20022.repository.codeset.OrderType2Code.mmPreviouslyQuoted,
-						com.tools20022.repository.codeset.OrderType2Code.mmPreviouslyIndicated, com.tools20022.repository.codeset.OrderType2Code.mmForexSwap, com.tools20022.repository.codeset.OrderType2Code.mmFunari,
-						com.tools20022.repository.codeset.OrderType2Code.mmMarketWithLeftover, com.tools20022.repository.codeset.OrderType2Code.mmPegged, com.tools20022.repository.codeset.OrderType2Code.mmStopLoss,
-						com.tools20022.repository.codeset.OrderType2Code.mmStopLimit, com.tools20022.repository.codeset.OrderType2Code.mmCounterOrderSelection);
+				code_lazy = () -> Arrays.asList(OrderType2Code.mmMarket, OrderType2Code.mmLimit, OrderType2Code.mmStop, OrderType2Code.mmLimitWith, OrderType2Code.mmLimitWithout, OrderType2Code.mmOnBasisPrice,
+						OrderType2Code.mmMarketTouched, OrderType2Code.mmWithOrWithout, OrderType2Code.mmPreviouslyQuoted, OrderType2Code.mmPreviouslyIndicated, OrderType2Code.mmForexSwap, OrderType2Code.mmFunari,
+						OrderType2Code.mmMarketWithLeftover, OrderType2Code.mmPegged, OrderType2Code.mmStopLoss, OrderType2Code.mmStopLimit, OrderType2Code.mmCounterOrderSelection);
 				trace_lazy = () -> OrderTypeCode.mmObject();
 			}
 		});

@@ -19,7 +19,10 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.caaa.AcceptorAuthorisationResponseV01;
 import com.tools20022.repository.entity.CardPayment;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -118,7 +121,7 @@ public class AcceptorAuthorisationResponse1 {
 			componentContext_lazy = () -> AcceptorAuthorisationResponse1.mmObject();
 			isDerived = false;
 			xmlTag = "Envt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Environment";
 			definition = "Environment of the transaction.";
 			maxOccurs = 1;
@@ -168,7 +171,7 @@ public class AcceptorAuthorisationResponse1 {
 			componentContext_lazy = () -> AcceptorAuthorisationResponse1.mmObject();
 			isDerived = false;
 			xmlTag = "Tx";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Transaction";
 			definition = "Authorisation of a card payment transaction between an acceptor and an acquirer.";
 			maxOccurs = 1;
@@ -219,7 +222,7 @@ public class AcceptorAuthorisationResponse1 {
 			componentContext_lazy = () -> AcceptorAuthorisationResponse1.mmObject();
 			isDerived = false;
 			xmlTag = "TxRspn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionResponse";
 			definition = "Authorisation response from the acquirer.\r\nAuthorisation of a card payment transaction between an acceptor and an acquirer.";
 			maxOccurs = 1;
@@ -232,12 +235,11 @@ public class AcceptorAuthorisationResponse1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcceptorAuthorisationResponse1.mmEnvironment, com.tools20022.repository.msg.AcceptorAuthorisationResponse1.mmTransaction,
-						com.tools20022.repository.msg.AcceptorAuthorisationResponse1.mmTransactionResponse);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.caaa.AcceptorAuthorisationResponseV01.mmAuthorisationResponse);
+				messageElement_lazy = () -> Arrays.asList(AcceptorAuthorisationResponse1.mmEnvironment, AcceptorAuthorisationResponse1.mmTransaction, AcceptorAuthorisationResponse1.mmTransactionResponse);
+				messageBuildingBlock_lazy = () -> Arrays.asList(AcceptorAuthorisationResponseV01.mmAuthorisationResponse);
 				trace_lazy = () -> CardPayment.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AcceptorAuthorisationResponse1";
 				definition = "Authorisation response from the acquirer.";
 				nextVersions_lazy = () -> Arrays.asList(AcceptorAuthorisationResponse2.mmObject());

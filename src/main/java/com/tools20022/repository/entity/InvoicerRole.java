@@ -18,7 +18,11 @@
 package com.tools20022.repository.entity;
 
 import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.InvoicePartyRole;
+import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.StructuredRemittanceInformation10;
+import com.tools20022.repository.msg.TradeSettlement1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -68,11 +72,11 @@ public class InvoicerRole extends InvoicePartyRole {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InvoicerRole";
 				definition = "Party identified as the liable party on the face of a commercial invoice.";
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TradeSettlement1.mmInvoicer, com.tools20022.repository.msg.StructuredRemittanceInformation10.mmInvoicer);
+				derivationElement_lazy = () -> Arrays.asList(TradeSettlement1.mmInvoicer, StructuredRemittanceInformation10.mmInvoicer);
 				superType_lazy = () -> InvoicePartyRole.mmObject();
 			}
 		});

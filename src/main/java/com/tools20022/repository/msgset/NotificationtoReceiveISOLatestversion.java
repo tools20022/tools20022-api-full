@@ -18,9 +18,11 @@
 package com.tools20022.repository.msgset;
 
 import com.tools20022.metamodel.MMMessageSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.camt.NotificationToReceiveCancellationAdviceV05;
 import com.tools20022.repository.area.camt.NotificationToReceiveStatusReportV05;
 import com.tools20022.repository.area.camt.NotificationToReceiveV05;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -69,8 +71,8 @@ public class NotificationtoReceiveISOLatestversion {
 	final static public MMMessageSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageSet() {
 			{
-				businessProcessCatalogue_lazy = () -> com.tools20022.repository.GeneratedRepository.mmcatalogue;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				businessProcessCatalogue_lazy = () -> GeneratedRepository.mmcatalogue;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Notification to Receive  - ISO - Latest version";
 				definition = "Set of messages that allows an account owner or a party acting on its behalf to advise an account servicing institution that it will receive funds to be credited to the account of the account owner, cancel such an advice and receive a report on the status of the receipt of funds.\r\n";
 				messageDefinition_lazy = () -> Arrays.asList(NotificationToReceiveStatusReportV05.mmObject(), NotificationToReceiveCancellationAdviceV05.mmObject(), NotificationToReceiveV05.mmObject());

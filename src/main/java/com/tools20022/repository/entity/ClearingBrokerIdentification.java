@@ -17,10 +17,9 @@
 
 package com.tools20022.repository.entity;
 
-import com.tools20022.metamodel.MMBusinessAssociationEnd;
-import com.tools20022.metamodel.MMBusinessAttribute;
-import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.*;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.ClearingBrokerIdentification1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -38,6 +37,23 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.ClearingBrokerIdentification1
+ * ClearingBrokerIdentification1}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.TradeIdentification#mmClearingBrokerIdentification
+ * TradeIdentification.mmClearingBrokerIdentification}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -50,23 +66,6 @@ import java.util.List;
  * <li>
  * {@linkplain com.tools20022.repository.entity.ClearingBrokerIdentification#mmIdentification
  * ClearingBrokerIdentification.mmIdentification}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.TradeIdentification#mmClearingBrokerIdentification
- * TradeIdentification.mmClearingBrokerIdentification}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.ClearingBrokerIdentification1
- * ClearingBrokerIdentification1}</li>
  * </ul>
  * </li>
  * <li>
@@ -130,12 +129,12 @@ public class ClearingBrokerIdentification {
 		{
 			elementContext_lazy = () -> ClearingBrokerIdentification.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedTradeIdentification";
 			definition = "Other identifications of a trade for which clearing broker identifications are provided.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.TradeIdentification.mmClearingBrokerIdentification;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.TradeIdentification.mmObject();
 		}
 	};
@@ -178,10 +177,10 @@ public class ClearingBrokerIdentification {
 	 */
 	public static final MMBusinessAttribute mmSideIndicator = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ClearingBrokerIdentification1.mmSideIndicator);
+			derivation_lazy = () -> Arrays.asList(ClearingBrokerIdentification1.mmSideIndicator);
 			elementContext_lazy = () -> ClearingBrokerIdentification.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SideIndicator";
 			definition = "Distinguishes the client leg from the central counterpatry (CCP) leg in the clearing broker identification.";
 			maxOccurs = 1;
@@ -225,10 +224,10 @@ public class ClearingBrokerIdentification {
 	 */
 	public static final MMBusinessAttribute mmIdentification = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ClearingBrokerIdentification1.mmClearingBrokerIdentification);
+			derivation_lazy = () -> Arrays.asList(ClearingBrokerIdentification1.mmClearingBrokerIdentification);
 			elementContext_lazy = () -> ClearingBrokerIdentification.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Identification";
 			definition = "Identification assigned by the clearing broker.";
 			maxOccurs = 1;
@@ -240,13 +239,12 @@ public class ClearingBrokerIdentification {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ClearingBrokerIdentification";
 				definition = "Reference number assigned by the clearing broker. A distinction can be made between the reference for the Central Counterparty (CCP) leg and the reference for the client leg of the transaction.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.TradeIdentification.mmClearingBrokerIdentification);
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.ClearingBrokerIdentification.mmRelatedTradeIdentification, com.tools20022.repository.entity.ClearingBrokerIdentification.mmSideIndicator,
-						com.tools20022.repository.entity.ClearingBrokerIdentification.mmIdentification);
+				element_lazy = () -> Arrays.asList(ClearingBrokerIdentification.mmRelatedTradeIdentification, ClearingBrokerIdentification.mmSideIndicator, ClearingBrokerIdentification.mmIdentification);
 				derivationComponent_lazy = () -> Arrays.asList(ClearingBrokerIdentification1.mmObject());
 			}
 		});

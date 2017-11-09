@@ -20,11 +20,13 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.AccountIdentificationSearchCriteria2Choice;
 import com.tools20022.repository.choice.DateSearchChoice;
 import com.tools20022.repository.choice.DateTimePeriodChoice;
 import com.tools20022.repository.choice.PartyIdentification71Choice;
 import com.tools20022.repository.datatype.Max4AlphaNumericText;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -115,7 +117,7 @@ public class ReportQuerySearchCriteria1 {
 			componentContext_lazy = () -> ReportQuerySearchCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "AcctId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountIdentification";
 			definition = "Unique and unambiguous identification for the account between the account owner and the account servicer.";
 			minOccurs = 0;
@@ -159,7 +161,7 @@ public class ReportQuerySearchCriteria1 {
 			componentContext_lazy = () -> ReportQuerySearchCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "Bal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Balance";
 			definition = "Numerical representation of the net increases and decreases in an account at a specific point in time. A cash balance is calculated from a sum of cash credits minus a sum of cash debits.";
 			minOccurs = 0;
@@ -201,7 +203,7 @@ public class ReportQuerySearchCriteria1 {
 			componentContext_lazy = () -> ReportQuerySearchCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "RptNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportName";
 			definition = "Values of possible reports.";
 			maxOccurs = 1;
@@ -243,7 +245,7 @@ public class ReportQuerySearchCriteria1 {
 			componentContext_lazy = () -> ReportQuerySearchCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "PtyId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartyIdentification";
 			definition = "Report owning party.";
 			maxOccurs = 1;
@@ -285,7 +287,7 @@ public class ReportQuerySearchCriteria1 {
 			componentContext_lazy = () -> ReportQuerySearchCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "RspnsblPtyId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ResponsiblePartyIdentification";
 			definition = "Responsible Party of the report owning party.";
 			maxOccurs = 1;
@@ -327,7 +329,7 @@ public class ReportQuerySearchCriteria1 {
 			componentContext_lazy = () -> ReportQuerySearchCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "DtSch";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DateSearch";
 			definition = "Date and time when the report was created.";
 			maxOccurs = 1;
@@ -372,7 +374,7 @@ public class ReportQuerySearchCriteria1 {
 			componentContext_lazy = () -> ReportQuerySearchCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "SchdldTm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ScheduledTime";
 			definition = "Time when the (business) event, which triggered the report, was scheduled.";
 			maxOccurs = 1;
@@ -384,12 +386,10 @@ public class ReportQuerySearchCriteria1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReportQuerySearchCriteria1.mmAccountIdentification, com.tools20022.repository.msg.ReportQuerySearchCriteria1.mmBalance,
-						com.tools20022.repository.msg.ReportQuerySearchCriteria1.mmReportName, com.tools20022.repository.msg.ReportQuerySearchCriteria1.mmPartyIdentification,
-						com.tools20022.repository.msg.ReportQuerySearchCriteria1.mmResponsiblePartyIdentification, com.tools20022.repository.msg.ReportQuerySearchCriteria1.mmDateSearch,
-						com.tools20022.repository.msg.ReportQuerySearchCriteria1.mmScheduledTime);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(ReportQuerySearchCriteria1.mmAccountIdentification, ReportQuerySearchCriteria1.mmBalance, ReportQuerySearchCriteria1.mmReportName, ReportQuerySearchCriteria1.mmPartyIdentification,
+						ReportQuerySearchCriteria1.mmResponsiblePartyIdentification, ReportQuerySearchCriteria1.mmDateSearch, ReportQuerySearchCriteria1.mmScheduledTime);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ReportQuerySearchCriteria1";
 				definition = "Defines the criteria used to search for a report.";
 			}

@@ -20,10 +20,15 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.auth.FinancialInstrumentReportingReferenceDataReportV01;
 import com.tools20022.repository.datatype.LEIIdentifier;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.entity.Asset;
 import com.tools20022.repository.entity.Debt;
+import com.tools20022.repository.entity.PartyIdentificationInformation;
 import com.tools20022.repository.entity.Security;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -131,7 +136,7 @@ public class SecuritiesReferenceDataReport5 {
 			componentContext_lazy = () -> SecuritiesReferenceDataReport5.mmObject();
 			isDerived = false;
 			xmlTag = "TechRcrdId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TechnicalRecordIdentification";
 			definition = "Unique identifier of a record in a message used as part of error management and status advice message.\r\n\r\nUsage:\r\nThis identification will be used in the status advice report sent back.";
 			maxOccurs = 1;
@@ -178,7 +183,7 @@ public class SecuritiesReferenceDataReport5 {
 			componentContext_lazy = () -> SecuritiesReferenceDataReport5.mmObject();
 			isDerived = false;
 			xmlTag = "FinInstrmGnlAttrbts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentGeneralAttributes";
 			definition = "Attributes and characteristics of the financial instrument.";
 			maxOccurs = 1;
@@ -223,11 +228,11 @@ public class SecuritiesReferenceDataReport5 {
 	 */
 	public static final MMMessageAttribute mmIssuer = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.mmLEI;
+			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmLEI;
 			componentContext_lazy = () -> SecuritiesReferenceDataReport5.mmObject();
 			isDerived = false;
 			xmlTag = "Issr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Issuer";
 			definition = "LEI of Issuer or trading venue operator.";
 			maxOccurs = 1;
@@ -270,11 +275,11 @@ public class SecuritiesReferenceDataReport5 {
 	 */
 	public static final MMMessageAssociationEnd mmTradingVenueRelatedAttributes = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmPlaceOfListing;
+			businessElementTrace_lazy = () -> Security.mmPlaceOfListing;
 			componentContext_lazy = () -> SecuritiesReferenceDataReport5.mmObject();
 			isDerived = false;
 			xmlTag = "TradgVnRltdAttrbts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradingVenueRelatedAttributes";
 			definition = "Traded venue related attributes.";
 			minOccurs = 1;
@@ -319,7 +324,7 @@ public class SecuritiesReferenceDataReport5 {
 			componentContext_lazy = () -> SecuritiesReferenceDataReport5.mmObject();
 			isDerived = false;
 			xmlTag = "DebtInstrmAttrbts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DebtInstrumentAttributes";
 			definition = "Attributes specific to debt instruments.";
 			maxOccurs = 1;
@@ -362,11 +367,11 @@ public class SecuritiesReferenceDataReport5 {
 	 */
 	public static final MMMessageAssociationEnd mmDerivativeInstrumentAttributes = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Asset.mmDerivative;
+			businessElementTrace_lazy = () -> Asset.mmDerivative;
 			componentContext_lazy = () -> SecuritiesReferenceDataReport5.mmObject();
 			isDerived = false;
 			xmlTag = "DerivInstrmAttrbts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DerivativeInstrumentAttributes";
 			definition = "Attributes specific to derivative instruments.";
 			maxOccurs = 1;
@@ -407,7 +412,7 @@ public class SecuritiesReferenceDataReport5 {
 			componentContext_lazy = () -> SecuritiesReferenceDataReport5.mmObject();
 			isDerived = false;
 			xmlTag = "TechAttrbts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TechnicalAttributes";
 			definition = "Technical attributes.";
 			maxOccurs = 1;
@@ -420,14 +425,13 @@ public class SecuritiesReferenceDataReport5 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesReferenceDataReport5.mmTechnicalRecordIdentification,
-						com.tools20022.repository.msg.SecuritiesReferenceDataReport5.mmFinancialInstrumentGeneralAttributes, com.tools20022.repository.msg.SecuritiesReferenceDataReport5.mmIssuer,
-						com.tools20022.repository.msg.SecuritiesReferenceDataReport5.mmTradingVenueRelatedAttributes, com.tools20022.repository.msg.SecuritiesReferenceDataReport5.mmDebtInstrumentAttributes,
-						com.tools20022.repository.msg.SecuritiesReferenceDataReport5.mmDerivativeInstrumentAttributes, com.tools20022.repository.msg.SecuritiesReferenceDataReport5.mmTechnicalAttributes);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.auth.FinancialInstrumentReportingReferenceDataReportV01.mmReferenceData);
+				messageElement_lazy = () -> Arrays.asList(SecuritiesReferenceDataReport5.mmTechnicalRecordIdentification, SecuritiesReferenceDataReport5.mmFinancialInstrumentGeneralAttributes, SecuritiesReferenceDataReport5.mmIssuer,
+						SecuritiesReferenceDataReport5.mmTradingVenueRelatedAttributes, SecuritiesReferenceDataReport5.mmDebtInstrumentAttributes, SecuritiesReferenceDataReport5.mmDerivativeInstrumentAttributes,
+						SecuritiesReferenceDataReport5.mmTechnicalAttributes);
+				messageBuildingBlock_lazy = () -> Arrays.asList(FinancialInstrumentReportingReferenceDataReportV01.mmReferenceData);
 				trace_lazy = () -> Security.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesReferenceDataReport5";
 				definition = "Provides details on the securities reference data for the required financial instruments.";
 			}

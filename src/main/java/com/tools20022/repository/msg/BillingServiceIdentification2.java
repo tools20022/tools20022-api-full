@@ -19,9 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.Max70Text;
 import com.tools20022.repository.entity.CashAccountService;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -110,7 +112,7 @@ public class BillingServiceIdentification2 {
 			componentContext_lazy = () -> BillingServiceIdentification2.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Financial institution's own, internal service identification code, different from the common code.\nUsage: The financial institution own code is used to uniquely identify the service within the financial institution.";
 			maxOccurs = 1;
@@ -162,7 +164,7 @@ public class BillingServiceIdentification2 {
 			componentContext_lazy = () -> BillingServiceIdentification2.mmObject();
 			isDerived = false;
 			xmlTag = "SubSvc";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubService";
 			definition = "Defines the financial institution sub-service identification if the financial institution service identification code is used for more than one service.";
 			maxOccurs = 1;
@@ -207,7 +209,7 @@ public class BillingServiceIdentification2 {
 			componentContext_lazy = () -> BillingServiceIdentification2.mmObject();
 			isDerived = false;
 			xmlTag = "Desc";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Description";
 			definition = "Specifies further details to describe the financial institution service description, which is not the standard description related to the common code.";
 			maxOccurs = 1;
@@ -219,11 +221,10 @@ public class BillingServiceIdentification2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BillingServiceIdentification2.mmIdentification, com.tools20022.repository.msg.BillingServiceIdentification2.mmSubService,
-						com.tools20022.repository.msg.BillingServiceIdentification2.mmDescription);
+				messageElement_lazy = () -> Arrays.asList(BillingServiceIdentification2.mmIdentification, BillingServiceIdentification2.mmSubService, BillingServiceIdentification2.mmDescription);
 				trace_lazy = () -> CashAccountService.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "BillingServiceIdentification2";
 				definition = "Identification of the service to be billed.";
 			}

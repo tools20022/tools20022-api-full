@@ -19,8 +19,11 @@ package com.tools20022.repository.entity;
 
 import com.tools20022.metamodel.MMBusinessAttribute;
 import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.ContactPoint;
+import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -33,17 +36,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.PhoneAddress#mmPhoneNumber
- * PhoneAddress.mmPhoneNumber}</li>
- * <li>{@linkplain com.tools20022.repository.entity.PhoneAddress#mmFaxNumber
- * PhoneAddress.mmFaxNumber}</li>
- * <li>{@linkplain com.tools20022.repository.entity.PhoneAddress#mmMobileNumber
- * PhoneAddress.mmMobileNumber}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
  * derivationElement} =
@@ -57,6 +49,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
  * superType} = {@linkplain com.tools20022.repository.entity.ContactPoint
  * ContactPoint}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.PhoneAddress#mmPhoneNumber
+ * PhoneAddress.mmPhoneNumber}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.PhoneAddress#mmFaxNumber
+ * PhoneAddress.mmFaxNumber}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.PhoneAddress#mmMobileNumber
+ * PhoneAddress.mmMobileNumber}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -158,15 +161,12 @@ public class PhoneAddress extends ContactPoint {
 	 */
 	public static final MMBusinessAttribute mmPhoneNumber = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ContactDetails1.mmPhoneNumber, com.tools20022.repository.msg.OrderDeskContactDetails.mmPhoneNumber,
-					com.tools20022.repository.msg.ContactAttributes1.mmPhoneNumber, com.tools20022.repository.msg.CommunicationAddress3.mmPhone, com.tools20022.repository.msg.ContactDetails2.mmPhoneNumber,
-					com.tools20022.repository.msg.ContactIdentification2.mmPhoneNumber, com.tools20022.repository.msg.ContactIdentification1.mmPhoneNumber, com.tools20022.repository.msg.Contacts3.mmPhoneNumber,
-					com.tools20022.repository.msg.ContactInformation1.mmTelephoneNumber, com.tools20022.repository.msg.ContactIdentification4.mmPhoneNumber, com.tools20022.repository.msg.ContactIdentification3.mmPhoneNumber,
-					com.tools20022.repository.msg.CommunicationAddressDetails.mmPhoneNumber, com.tools20022.repository.msg.ContactDetails3.mmPhoneNumber, com.tools20022.repository.msg.CommunicationAddress5.mmPhone,
-					com.tools20022.repository.msg.CommunicationAddress5.mmCustomerService, com.tools20022.repository.msg.CommunicationAddress6.mmPhone);
+			derivation_lazy = () -> Arrays.asList(ContactDetails1.mmPhoneNumber, OrderDeskContactDetails.mmPhoneNumber, ContactAttributes1.mmPhoneNumber, CommunicationAddress3.mmPhone, ContactDetails2.mmPhoneNumber,
+					ContactIdentification2.mmPhoneNumber, ContactIdentification1.mmPhoneNumber, Contacts3.mmPhoneNumber, ContactInformation1.mmTelephoneNumber, ContactIdentification4.mmPhoneNumber, ContactIdentification3.mmPhoneNumber,
+					CommunicationAddressDetails.mmPhoneNumber, ContactDetails3.mmPhoneNumber, CommunicationAddress5.mmPhone, CommunicationAddress5.mmCustomerService, CommunicationAddress6.mmPhone);
 			elementContext_lazy = () -> PhoneAddress.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PhoneNumber";
 			definition = "Collection of information that identifies a phone number, as defined by telecom services.\r\nIt is recommended to use only numbers and limited punctuation +,-.(.).";
 			maxOccurs = 1;
@@ -251,14 +251,12 @@ public class PhoneAddress extends ContactPoint {
 	 */
 	public static final MMBusinessAttribute mmFaxNumber = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ContactDetails1.mmFaxNumber, com.tools20022.repository.msg.OrderDeskContactDetails.mmFaxNumber, com.tools20022.repository.msg.ContactAttributes1.mmFaxNumber,
-					com.tools20022.repository.msg.CommunicationAddress3.mmFaxNumber, com.tools20022.repository.msg.ContactDetails2.mmFaxNumber, com.tools20022.repository.msg.ContactIdentification2.mmFaxNumber,
-					com.tools20022.repository.msg.ContactIdentification1.mmFaxNumber, com.tools20022.repository.msg.Contacts3.mmFaxNumber, com.tools20022.repository.msg.ContactInformation1.mmFaxNumber,
-					com.tools20022.repository.msg.ContactIdentification4.mmFaxNumber, com.tools20022.repository.msg.ContactIdentification3.mmFaxNumber, com.tools20022.repository.msg.CommunicationAddressDetails.mmFaxNumber,
-					com.tools20022.repository.msg.ContactDetails3.mmFaxNumber, com.tools20022.repository.msg.CommunicationAddress6.mmFaxNumber);
+			derivation_lazy = () -> Arrays.asList(ContactDetails1.mmFaxNumber, OrderDeskContactDetails.mmFaxNumber, ContactAttributes1.mmFaxNumber, CommunicationAddress3.mmFaxNumber, ContactDetails2.mmFaxNumber,
+					ContactIdentification2.mmFaxNumber, ContactIdentification1.mmFaxNumber, Contacts3.mmFaxNumber, ContactInformation1.mmFaxNumber, ContactIdentification4.mmFaxNumber, ContactIdentification3.mmFaxNumber,
+					CommunicationAddressDetails.mmFaxNumber, ContactDetails3.mmFaxNumber, CommunicationAddress6.mmFaxNumber);
 			elementContext_lazy = () -> PhoneAddress.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "FaxNumber";
 			definition = "Collection of information that identifies a FAX number, as defined by telecom services.\r\nIt is recommended to use only numbers and limited punctuation +,-.(.).";
 			maxOccurs = 1;
@@ -319,12 +317,11 @@ public class PhoneAddress extends ContactPoint {
 	 */
 	public static final MMBusinessAttribute mmMobileNumber = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CommunicationAddress3.mmMobile, com.tools20022.repository.msg.ContactDetails2.mmMobileNumber,
-					com.tools20022.repository.msg.ContactIdentification2.mmMobileNumber, com.tools20022.repository.msg.Contacts3.mmMobileNumber, com.tools20022.repository.msg.ContactDetails3.mmMobileNumber,
-					com.tools20022.repository.msg.CommunicationAddress6.mmMobile);
+			derivation_lazy = () -> Arrays.asList(CommunicationAddress3.mmMobile, ContactDetails2.mmMobileNumber, ContactIdentification2.mmMobileNumber, Contacts3.mmMobileNumber, ContactDetails3.mmMobileNumber,
+					CommunicationAddress6.mmMobile);
 			elementContext_lazy = () -> PhoneAddress.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MobileNumber";
 			definition = "Collection of information that identifies a mobile phone number, as defined by telecom services.\r\nIt is recommended to use only numbers and limited punctuation +,-.(.).";
 			maxOccurs = 1;
@@ -336,13 +333,13 @@ public class PhoneAddress extends ContactPoint {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PhoneAddress";
 				definition = "Collection of information that identifies a phone address.";
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.VoteMethods.mmVoteByTelephone, com.tools20022.repository.msg.VoteMethods2.mmVoteByTelephone);
+				derivationElement_lazy = () -> Arrays.asList(VoteMethods.mmVoteByTelephone, VoteMethods2.mmVoteByTelephone);
 				superType_lazy = () -> ContactPoint.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.PhoneAddress.mmPhoneNumber, com.tools20022.repository.entity.PhoneAddress.mmFaxNumber, com.tools20022.repository.entity.PhoneAddress.mmMobileNumber);
+				element_lazy = () -> Arrays.asList(PhoneAddress.mmPhoneNumber, PhoneAddress.mmFaxNumber, PhoneAddress.mmMobileNumber);
 			}
 		});
 		return mmObject_lazy.get();

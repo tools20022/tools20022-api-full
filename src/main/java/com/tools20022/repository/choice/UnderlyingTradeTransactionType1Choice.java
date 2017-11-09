@@ -20,8 +20,10 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ExternalUnderlyingTradeTransactionType1Code;
 import com.tools20022.repository.entity.UnderlyingTransaction;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -100,11 +102,11 @@ public class UnderlyingTradeTransactionType1Choice {
 	 */
 	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.UnderlyingTransaction.mmType;
+			businessElementTrace_lazy = () -> UnderlyingTransaction.mmType;
 			componentContext_lazy = () -> UnderlyingTradeTransactionType1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Cd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Type of commercial contract.\r\n";
 			maxOccurs = 1;
@@ -147,11 +149,11 @@ public class UnderlyingTradeTransactionType1Choice {
 	 */
 	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.UnderlyingTransaction.mmType;
+			businessElementTrace_lazy = () -> UnderlyingTransaction.mmType;
 			componentContext_lazy = () -> UnderlyingTradeTransactionType1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Type of commercial contract expressed as a proprietary code.";
 			maxOccurs = 1;
@@ -164,10 +166,10 @@ public class UnderlyingTradeTransactionType1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.UnderlyingTradeTransactionType1Choice.mmCode, com.tools20022.repository.choice.UnderlyingTradeTransactionType1Choice.mmProprietary);
+				messageElement_lazy = () -> Arrays.asList(UnderlyingTradeTransactionType1Choice.mmCode, UnderlyingTradeTransactionType1Choice.mmProprietary);
 				trace_lazy = () -> UnderlyingTransaction.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "UnderlyingTradeTransactionType1Choice";
 				definition = "Choice of format for the commercial contract type.";
 			}

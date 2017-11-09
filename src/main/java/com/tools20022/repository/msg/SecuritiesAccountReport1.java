@@ -19,7 +19,9 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.SecuritiesAccountOrBusinessError1Choice;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -96,7 +98,7 @@ public class SecuritiesAccountReport1 {
 			componentContext_lazy = () -> SecuritiesAccountReport1.mmObject();
 			isDerived = false;
 			xmlTag = "SctiesAcctId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesAccountIdentification";
 			definition = "Unique and unambiguous identification for the account between the account owner and the account servicer.";
 			maxOccurs = 1;
@@ -141,7 +143,7 @@ public class SecuritiesAccountReport1 {
 			componentContext_lazy = () -> SecuritiesAccountReport1.mmObject();
 			isDerived = false;
 			xmlTag = "SctiesAcctOrErr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesAccountOrError";
 			definition = "Identifies the returned securities account reference data or error information.";
 			maxOccurs = 1;
@@ -154,9 +156,9 @@ public class SecuritiesAccountReport1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesAccountReport1.mmSecuritiesAccountIdentification, com.tools20022.repository.msg.SecuritiesAccountReport1.mmSecuritiesAccountOrError);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(SecuritiesAccountReport1.mmSecuritiesAccountIdentification, SecuritiesAccountReport1.mmSecuritiesAccountOrError);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SecuritiesAccountReport1";
 				definition = "Set of elements used to report information about securities account reference data.";
 			}

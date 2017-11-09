@@ -20,10 +20,12 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.PartyIdentification2Choice;
 import com.tools20022.repository.choice.PartyIdentification90Choice;
 import com.tools20022.repository.datatype.LEIIdentifier;
 import com.tools20022.repository.entity.PartyIdentificationInformation;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -107,7 +109,7 @@ public class PartyIdentification113 {
 			componentContext_lazy = () -> PartyIdentification113.mmObject();
 			isDerived = false;
 			xmlTag = "Pty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Party";
 			definition = "Unique identification of the party.";
 			maxOccurs = 1;
@@ -152,7 +154,7 @@ public class PartyIdentification113 {
 			componentContext_lazy = () -> PartyIdentification113.mmObject();
 			isDerived = false;
 			xmlTag = "LEI";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LEI";
 			definition = "Legal entity identification as an alternate identification for the party.";
 			maxOccurs = 1;
@@ -164,10 +166,10 @@ public class PartyIdentification113 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyIdentification113.mmParty, com.tools20022.repository.msg.PartyIdentification113.mmLEI);
+				messageElement_lazy = () -> Arrays.asList(PartyIdentification113.mmParty, PartyIdentification113.mmLEI);
 				trace_lazy = () -> PartyIdentificationInformation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PartyIdentification113";
 				definition = "Identification of a party.";
 				previousVersion_lazy = () -> PartyIdentification2Choice.mmObject();

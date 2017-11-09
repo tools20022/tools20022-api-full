@@ -20,9 +20,13 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.DecimalNumber;
 import com.tools20022.repository.datatype.PercentageRate;
+import com.tools20022.repository.entity.Index;
 import com.tools20022.repository.entity.SecuritiesPricing;
+import com.tools20022.repository.entity.YieldCalculation;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.AmountAndDirection61;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -105,11 +109,11 @@ public class SecuritiesTransactionPrice2Choice {
 	 */
 	public static final MMMessageAssociationEnd mmMonetaryValue = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmPrice;
+			businessElementTrace_lazy = () -> SecuritiesPricing.mmPrice;
 			componentContext_lazy = () -> SecuritiesTransactionPrice2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "MntryVal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MonetaryValue";
 			definition = "Price expressed as a monetary value.";
 			maxOccurs = 1;
@@ -154,11 +158,11 @@ public class SecuritiesTransactionPrice2Choice {
 	 */
 	public static final MMMessageAttribute mmPercentage = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmRate;
+			businessElementTrace_lazy = () -> SecuritiesPricing.mmRate;
 			componentContext_lazy = () -> SecuritiesTransactionPrice2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Pctg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Percentage";
 			definition = "Price expressed as a rate, that is a percentage.";
 			maxOccurs = 1;
@@ -202,11 +206,11 @@ public class SecuritiesTransactionPrice2Choice {
 	 */
 	public static final MMMessageAttribute mmYield = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.YieldCalculation.mmValue;
+			businessElementTrace_lazy = () -> YieldCalculation.mmValue;
 			componentContext_lazy = () -> SecuritiesTransactionPrice2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Yld";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Yield";
 			definition = "Price expressed as a yield.";
 			maxOccurs = 1;
@@ -250,11 +254,11 @@ public class SecuritiesTransactionPrice2Choice {
 	 */
 	public static final MMMessageAttribute mmBasisPoints = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Index.mmIndexPoints;
+			businessElementTrace_lazy = () -> Index.mmIndexPoints;
 			componentContext_lazy = () -> SecuritiesTransactionPrice2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "BsisPts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BasisPoints";
 			definition = "Price expressed as basis points.";
 			maxOccurs = 1;
@@ -266,11 +270,11 @@ public class SecuritiesTransactionPrice2Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SecuritiesTransactionPrice2Choice.mmMonetaryValue, com.tools20022.repository.choice.SecuritiesTransactionPrice2Choice.mmPercentage,
-						com.tools20022.repository.choice.SecuritiesTransactionPrice2Choice.mmYield, com.tools20022.repository.choice.SecuritiesTransactionPrice2Choice.mmBasisPoints);
+				messageElement_lazy = () -> Arrays.asList(SecuritiesTransactionPrice2Choice.mmMonetaryValue, SecuritiesTransactionPrice2Choice.mmPercentage, SecuritiesTransactionPrice2Choice.mmYield,
+						SecuritiesTransactionPrice2Choice.mmBasisPoints);
 				trace_lazy = () -> SecuritiesPricing.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesTransactionPrice2Choice";
 				definition = "Choice to define the price of the securities transaction.";
 			}

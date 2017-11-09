@@ -19,7 +19,9 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.CashAccount;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -92,11 +94,11 @@ public class Accounts4 {
 	 */
 	public static final MMMessageAssociationEnd mmAccountReport = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashAccount.mmCashAccountContract;
+			businessElementTrace_lazy = () -> CashAccount.mmCashAccountContract;
 			componentContext_lazy = () -> Accounts4.mmObject();
 			isDerived = false;
 			xmlTag = "AcctRpt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountReport";
 			definition = "Reports either on the account information or on a business error.";
 			minOccurs = 1;
@@ -108,10 +110,10 @@ public class Accounts4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Accounts4.mmAccountReport);
+				messageElement_lazy = () -> Arrays.asList(Accounts4.mmAccountReport);
 				trace_lazy = () -> CashAccount.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Accounts4";
 				definition = "Reports on accounts.";
 			}

@@ -20,9 +20,12 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.Quantity1Choice;
 import com.tools20022.repository.entity.Leg;
+import com.tools20022.repository.entity.SecuritiesOrder;
 import com.tools20022.repository.entity.Security;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -111,11 +114,11 @@ public class InstrumentLeg1 {
 	 */
 	public static final MMMessageAttribute mmLegIOIQuantity = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmOrderedQuantity;
+			businessElementTrace_lazy = () -> SecuritiesOrder.mmOrderedQuantity;
 			componentContext_lazy = () -> InstrumentLeg1.mmObject();
 			isDerived = false;
 			xmlTag = "LegIOIQty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LegIOIQuantity";
 			definition = "Required for multileg IOIs and for each leg.";
 			maxOccurs = 1;
@@ -158,11 +161,11 @@ public class InstrumentLeg1 {
 	 */
 	public static final MMMessageAssociationEnd mmInstrumentLegDetails = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmIdentification;
+			businessElementTrace_lazy = () -> Security.mmIdentification;
 			componentContext_lazy = () -> InstrumentLeg1.mmObject();
 			isDerived = false;
 			xmlTag = "InstrmLegDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstrumentLegDetails";
 			definition = "Provides details about the financial instrument of a particular leg.";
 			maxOccurs = 1;
@@ -211,7 +214,7 @@ public class InstrumentLeg1 {
 			componentContext_lazy = () -> InstrumentLeg1.mmObject();
 			isDerived = false;
 			xmlTag = "LegStiptns";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LegStipulations";
 			definition = "Provides details about the financial instrument stipulations of a particular leg.";
 			maxOccurs = 1;
@@ -257,11 +260,11 @@ public class InstrumentLeg1 {
 	 */
 	public static final MMMessageAssociationEnd mmLegFinancialInstrumentAttributes = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Leg.mmRelatedAsset;
+			businessElementTrace_lazy = () -> Leg.mmRelatedAsset;
 			componentContext_lazy = () -> InstrumentLeg1.mmObject();
 			isDerived = false;
 			xmlTag = "LegFinInstrmAttrbts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LegFinancialInstrumentAttributes";
 			definition = "Provides details about the financial instrument attributes of a particular leg.";
 			minOccurs = 0;
@@ -273,11 +276,10 @@ public class InstrumentLeg1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InstrumentLeg1.mmLegIOIQuantity, com.tools20022.repository.msg.InstrumentLeg1.mmInstrumentLegDetails,
-						com.tools20022.repository.msg.InstrumentLeg1.mmLegStipulations, com.tools20022.repository.msg.InstrumentLeg1.mmLegFinancialInstrumentAttributes);
+				messageElement_lazy = () -> Arrays.asList(InstrumentLeg1.mmLegIOIQuantity, InstrumentLeg1.mmInstrumentLegDetails, InstrumentLeg1.mmLegStipulations, InstrumentLeg1.mmLegFinancialInstrumentAttributes);
 				trace_lazy = () -> Leg.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "InstrumentLeg1";
 				definition = "Additionnal details related to the leg.";
 				nextVersions_lazy = () -> Arrays.asList(InstrumentLeg6.mmObject());

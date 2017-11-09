@@ -20,9 +20,11 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.PINFormat3Code;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.Authentication;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -119,11 +121,11 @@ public class OnLinePIN3 {
 			componentContext_lazy = () -> OnLinePIN3.mmObject();
 			isDerived = false;
 			xmlTag = "NcrptdPINBlck";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EncryptedPINBlock";
 			definition = "Encrypted PIN (Personal Identification Number).";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OnLinePIN4.mmEncryptedPINBlock);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.OnLinePIN2.mmEncryptedPINBlock;
+			nextVersions_lazy = () -> Arrays.asList(OnLinePIN4.mmEncryptedPINBlock);
+			previousVersion_lazy = () -> OnLinePIN2.mmEncryptedPINBlock;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -178,15 +180,15 @@ public class OnLinePIN3 {
 	 */
 	public static final MMMessageAttribute mmPINFormat = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Authentication.mmPINFormat;
+			businessElementTrace_lazy = () -> Authentication.mmPINFormat;
 			componentContext_lazy = () -> OnLinePIN3.mmObject();
 			isDerived = false;
 			xmlTag = "PINFrmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PINFormat";
 			definition = "PIN (Personal Identification Number) format before encryption.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OnLinePIN4.mmPINFormat);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.OnLinePIN2.mmPINFormat;
+			nextVersions_lazy = () -> Arrays.asList(OnLinePIN4.mmPINFormat);
+			previousVersion_lazy = () -> OnLinePIN2.mmPINFormat;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PINFormat3Code.mmObject();
@@ -240,11 +242,11 @@ public class OnLinePIN3 {
 			componentContext_lazy = () -> OnLinePIN3.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlInpt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInput";
 			definition = "Additional information required to verify the PIN (Personal Identification Number.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OnLinePIN4.mmAdditionalInput);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.OnLinePIN2.mmAdditionalInput;
+			nextVersions_lazy = () -> Arrays.asList(OnLinePIN4.mmAdditionalInput);
+			previousVersion_lazy = () -> OnLinePIN2.mmAdditionalInput;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -254,10 +256,10 @@ public class OnLinePIN3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OnLinePIN3.mmEncryptedPINBlock, com.tools20022.repository.msg.OnLinePIN3.mmPINFormat, com.tools20022.repository.msg.OnLinePIN3.mmAdditionalInput);
+				messageElement_lazy = () -> Arrays.asList(OnLinePIN3.mmEncryptedPINBlock, OnLinePIN3.mmPINFormat, OnLinePIN3.mmAdditionalInput);
 				trace_lazy = () -> Authentication.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OnLinePIN3";
 				definition = "Encrypted personal identification number (PIN) and related information.";
 				nextVersions_lazy = () -> Arrays.asList(OnLinePIN4.mmObject());

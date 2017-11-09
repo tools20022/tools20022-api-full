@@ -20,10 +20,15 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.BeneficiaryCertificationCompletion1Code;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.Max350Text;
+import com.tools20022.repository.entity.InvestmentAccountService;
+import com.tools20022.repository.entity.PartyIdentificationInformation;
 import com.tools20022.repository.entity.Person;
+import com.tools20022.repository.entity.PersonName;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -112,11 +117,11 @@ public class IndividualPerson15 {
 	 */
 	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PersonName.mmBirthName;
+			businessElementTrace_lazy = () -> PersonName.mmBirthName;
 			componentContext_lazy = () -> IndividualPerson15.mmObject();
 			isDerived = false;
 			xmlTag = "Nm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Name";
 			definition = "Name by which a party is known and which is usually used to identify that party.";
 			maxOccurs = 1;
@@ -159,11 +164,11 @@ public class IndividualPerson15 {
 	 */
 	public static final MMMessageAttribute mmBirthDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Person.mmBirthDate;
+			businessElementTrace_lazy = () -> Person.mmBirthDate;
 			componentContext_lazy = () -> IndividualPerson15.mmObject();
 			isDerived = false;
 			xmlTag = "BirthDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BirthDate";
 			definition = "Date on which a person is born.";
 			maxOccurs = 1;
@@ -210,11 +215,11 @@ public class IndividualPerson15 {
 	 */
 	public static final MMMessageAttribute mmCountryAndResidentialStatus = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Person.mmResidentialStatus;
+			businessElementTrace_lazy = () -> Person.mmResidentialStatus;
 			componentContext_lazy = () -> IndividualPerson15.mmObject();
 			isDerived = false;
 			xmlTag = "CtryAndResdtlSts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CountryAndResidentialStatus";
 			definition = "Country and residential status of an individual, for example, non-permanent resident.";
 			maxOccurs = 1;
@@ -260,11 +265,11 @@ public class IndividualPerson15 {
 	 */
 	public static final MMMessageAssociationEnd mmOtherIdentification = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.mmOtherIdentification;
+			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmOtherIdentification;
 			componentContext_lazy = () -> IndividualPerson15.mmObject();
 			isDerived = false;
 			xmlTag = "OthrId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherIdentification";
 			definition = "Information related to an identification, eg, party identification or account identification.";
 			maxOccurs = 1;
@@ -312,11 +317,11 @@ public class IndividualPerson15 {
 	 */
 	public static final MMMessageAttribute mmBeneficiaryCertificationCompletion = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentAccountService.mmBeneficiaryCertificationCompletion;
+			businessElementTrace_lazy = () -> InvestmentAccountService.mmBeneficiaryCertificationCompletion;
 			componentContext_lazy = () -> IndividualPerson15.mmObject();
 			isDerived = false;
 			xmlTag = "BnfcryCertfctnCmpltn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BeneficiaryCertificationCompletion";
 			definition = "Beneficial owner or its designated agent certifies that it complies with any holding or investment restrictions or requirements of the fund.";
 			maxOccurs = 1;
@@ -328,12 +333,11 @@ public class IndividualPerson15 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IndividualPerson15.mmName, com.tools20022.repository.msg.IndividualPerson15.mmBirthDate,
-						com.tools20022.repository.msg.IndividualPerson15.mmCountryAndResidentialStatus, com.tools20022.repository.msg.IndividualPerson15.mmOtherIdentification,
-						com.tools20022.repository.msg.IndividualPerson15.mmBeneficiaryCertificationCompletion);
+				messageElement_lazy = () -> Arrays.asList(IndividualPerson15.mmName, IndividualPerson15.mmBirthDate, IndividualPerson15.mmCountryAndResidentialStatus, IndividualPerson15.mmOtherIdentification,
+						IndividualPerson15.mmBeneficiaryCertificationCompletion);
 				trace_lazy = () -> Person.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "IndividualPerson15";
 				definition = "Human entity, as distinguished from a corporate entity (which is sometimes referred to as an 'artificial person').";
 			}

@@ -19,6 +19,8 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -91,7 +93,7 @@ public class ParticipantProfile1 {
 			componentContext_lazy = () -> ParticipantProfile1.mmObject();
 			isDerived = false;
 			xmlTag = "PtcptInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ParticipantInformation";
 			definition = "Participant information from participant profile.";
 			maxOccurs = 1;
@@ -132,7 +134,7 @@ public class ParticipantProfile1 {
 			componentContext_lazy = () -> ParticipantProfile1.mmObject();
 			isDerived = false;
 			xmlTag = "PtcptAcctInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ParticipantAccountInformation";
 			definition = "Account information from participant.";
 			minOccurs = 0;
@@ -144,9 +146,9 @@ public class ParticipantProfile1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ParticipantProfile1.mmParticipantInformation, com.tools20022.repository.msg.ParticipantProfile1.mmParticipantAccountInformation);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(ParticipantProfile1.mmParticipantInformation, ParticipantProfile1.mmParticipantAccountInformation);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ParticipantProfile1";
 				definition = "Information from participant profile.";
 			}

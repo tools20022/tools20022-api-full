@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,12 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.Form1Code Form1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>{@linkplain com.tools20022.repository.codeset.FormCode#mmRequired
@@ -36,12 +44,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.FormCode#mmSignatureRequired
  * FormCode.mmSignatureRequired}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.Form1Code Form1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -91,7 +93,7 @@ public class FormCode {
 	 */
 	public static final MMCode mmRequired = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Required";
 			definition = "A phsyical form is required through the main fund order desk.";
 			owner_lazy = () -> FormCode.mmObject();
@@ -121,7 +123,7 @@ public class FormCode {
 	 */
 	public static final MMCode mmNotRequired = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotRequired";
 			definition = "A phsyical form is not required through the main fund order desk.";
 			owner_lazy = () -> FormCode.mmObject();
@@ -153,7 +155,7 @@ public class FormCode {
 	 */
 	public static final MMCode mmSignatureRequired = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SignatureRequired";
 			definition = "A phsyical form with the investor's written signature is required through the main fund order desk.";
 			owner_lazy = () -> FormCode.mmObject();
@@ -164,12 +166,12 @@ public class FormCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("REQU");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FormCode";
 				definition = "Specifies whether a physical form is required.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.FormCode.mmRequired, com.tools20022.repository.codeset.FormCode.mmNotRequired, com.tools20022.repository.codeset.FormCode.mmSignatureRequired);
+				code_lazy = () -> Arrays.asList(FormCode.mmRequired, FormCode.mmNotRequired, FormCode.mmSignatureRequired);
 				derivation_lazy = () -> Arrays.asList(Form1Code.mmObject());
 			}
 		});

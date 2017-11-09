@@ -20,10 +20,13 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.BICIdentifier;
 import com.tools20022.repository.datatype.MICIdentifier;
+import com.tools20022.repository.entity.OrganisationIdentification;
 import com.tools20022.repository.entity.PartyIdentificationInformation;
 import com.tools20022.repository.entity.PostalAddress;
+import com.tools20022.repository.GeneratedRepository;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -123,11 +126,11 @@ public class PartyIdentification6Choice {
 	 */
 	public static final MMMessageAttribute mmBIC = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.mmBICFI;
+			businessElementTrace_lazy = () -> OrganisationIdentification.mmBICFI;
 			componentContext_lazy = () -> PartyIdentification6Choice.mmObject();
 			isDerived = false;
 			xmlTag = "BIC";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BIC";
 			definition = "Code allocated to a financial institution by the ISO 9362 Registration Authority as described in ISO 9362 \"Banking - Banking telecommunication messages - Business identifier code (BIC)\".";
 			maxOccurs = 1;
@@ -175,11 +178,11 @@ public class PartyIdentification6Choice {
 	 */
 	public static final MMMessageAttribute mmMIC = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.mmMIC;
+			businessElementTrace_lazy = () -> OrganisationIdentification.mmMIC;
 			componentContext_lazy = () -> PartyIdentification6Choice.mmObject();
 			isDerived = false;
 			xmlTag = "MIC";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MIC";
 			definition = "Market Identifier Code. Identification of a financial market, as stipulated in the norm ISO 10383 \"Codes for exchanges and market identifications\".";
 			maxOccurs = 1;
@@ -226,11 +229,11 @@ public class PartyIdentification6Choice {
 	 */
 	public static final MMMessageAttribute mmProprietaryIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.mmOtherIdentification;
+			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmOtherIdentification;
 			componentContext_lazy = () -> PartyIdentification6Choice.mmObject();
 			isDerived = false;
 			xmlTag = "PrtryId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProprietaryIdentification";
 			definition = "Unique and unambiguous identifier, as assigned to a financial institution using a proprietary identification scheme.";
 			maxOccurs = 1;
@@ -278,7 +281,7 @@ public class PartyIdentification6Choice {
 			componentContext_lazy = () -> PartyIdentification6Choice.mmObject();
 			isDerived = false;
 			xmlTag = "NmAndAdr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NameAndAddress";
 			definition = "Identification of a party with its name and address in free text.";
 			maxOccurs = 1;
@@ -324,7 +327,7 @@ public class PartyIdentification6Choice {
 			componentContext_lazy = () -> PartyIdentification6Choice.mmObject();
 			isDerived = false;
 			xmlTag = "PstlAdr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PostalAddress";
 			definition = "Postal address of a party.";
 			maxOccurs = 1;
@@ -337,12 +340,11 @@ public class PartyIdentification6Choice {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyIdentification6Choice.mmBIC, com.tools20022.repository.msg.PartyIdentification6Choice.mmMIC,
-						com.tools20022.repository.msg.PartyIdentification6Choice.mmProprietaryIdentification, com.tools20022.repository.msg.PartyIdentification6Choice.mmNameAndAddress,
-						com.tools20022.repository.msg.PartyIdentification6Choice.mmPostalAddress);
+				messageElement_lazy = () -> Arrays.asList(PartyIdentification6Choice.mmBIC, PartyIdentification6Choice.mmMIC, PartyIdentification6Choice.mmProprietaryIdentification, PartyIdentification6Choice.mmNameAndAddress,
+						PartyIdentification6Choice.mmPostalAddress);
 				trace_lazy = () -> PartyIdentificationInformation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
 						return DateFormat.getDateInstance(java.text.DateFormat.LONG).parse("September 9, 2016");

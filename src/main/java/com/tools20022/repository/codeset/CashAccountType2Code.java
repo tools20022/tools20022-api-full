@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CashAccountTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -109,7 +111,7 @@ public class CashAccountType2Code extends CashAccountTypeCode {
 	 */
 	public static final MMCode mmCashPayment = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashPayment";
 			owner_lazy = () -> CashAccountType2Code.mmObject();
 		}
@@ -132,7 +134,7 @@ public class CashAccountType2Code extends CashAccountTypeCode {
 	 */
 	public static final MMCode mmCharges = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Charges";
 			owner_lazy = () -> CashAccountType2Code.mmObject();
 		}
@@ -155,7 +157,7 @@ public class CashAccountType2Code extends CashAccountTypeCode {
 	 */
 	public static final MMCode mmCommission = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Commission";
 			owner_lazy = () -> CashAccountType2Code.mmObject();
 		}
@@ -178,7 +180,7 @@ public class CashAccountType2Code extends CashAccountTypeCode {
 	 */
 	public static final MMCode mmTax = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Tax";
 			owner_lazy = () -> CashAccountType2Code.mmObject();
 		}
@@ -201,7 +203,7 @@ public class CashAccountType2Code extends CashAccountTypeCode {
 	 */
 	public static final MMCode mmCashIncome = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashIncome";
 			owner_lazy = () -> CashAccountType2Code.mmObject();
 		}
@@ -224,7 +226,7 @@ public class CashAccountType2Code extends CashAccountTypeCode {
 	 */
 	public static final MMCode mmCashTrading = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashTrading";
 			owner_lazy = () -> CashAccountType2Code.mmObject();
 		}
@@ -247,7 +249,7 @@ public class CashAccountType2Code extends CashAccountTypeCode {
 	 */
 	public static final MMCode mmSettlement = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Settlement";
 			owner_lazy = () -> CashAccountType2Code.mmObject();
 		}
@@ -270,7 +272,7 @@ public class CashAccountType2Code extends CashAccountTypeCode {
 	 */
 	public static final MMCode mmCurrent = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Current";
 			owner_lazy = () -> CashAccountType2Code.mmObject();
 		}
@@ -293,7 +295,7 @@ public class CashAccountType2Code extends CashAccountTypeCode {
 	 */
 	public static final MMCode mmSavings = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Savings";
 			owner_lazy = () -> CashAccountType2Code.mmObject();
 		}
@@ -316,7 +318,7 @@ public class CashAccountType2Code extends CashAccountTypeCode {
 	 */
 	public static final MMCode mmOverNightDeposit = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OverNightDeposit";
 			owner_lazy = () -> CashAccountType2Code.mmObject();
 		}
@@ -339,7 +341,7 @@ public class CashAccountType2Code extends CashAccountTypeCode {
 	 */
 	public static final MMCode mmMarginalLending = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarginalLending";
 			owner_lazy = () -> CashAccountType2Code.mmObject();
 		}
@@ -348,15 +350,13 @@ public class CashAccountType2Code extends CashAccountTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CASH");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CashAccountType2Code";
 				definition = "Specifies the nature, or use, of the cash account.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CashAccountType2Code.mmCashPayment, com.tools20022.repository.codeset.CashAccountType2Code.mmCharges,
-						com.tools20022.repository.codeset.CashAccountType2Code.mmCommission, com.tools20022.repository.codeset.CashAccountType2Code.mmTax, com.tools20022.repository.codeset.CashAccountType2Code.mmCashIncome,
-						com.tools20022.repository.codeset.CashAccountType2Code.mmCashTrading, com.tools20022.repository.codeset.CashAccountType2Code.mmSettlement, com.tools20022.repository.codeset.CashAccountType2Code.mmCurrent,
-						com.tools20022.repository.codeset.CashAccountType2Code.mmSavings, com.tools20022.repository.codeset.CashAccountType2Code.mmOverNightDeposit, com.tools20022.repository.codeset.CashAccountType2Code.mmMarginalLending);
+				code_lazy = () -> Arrays.asList(CashAccountType2Code.mmCashPayment, CashAccountType2Code.mmCharges, CashAccountType2Code.mmCommission, CashAccountType2Code.mmTax, CashAccountType2Code.mmCashIncome,
+						CashAccountType2Code.mmCashTrading, CashAccountType2Code.mmSettlement, CashAccountType2Code.mmCurrent, CashAccountType2Code.mmSavings, CashAccountType2Code.mmOverNightDeposit, CashAccountType2Code.mmMarginalLending);
 				trace_lazy = () -> CashAccountTypeCode.mmObject();
 			}
 		});

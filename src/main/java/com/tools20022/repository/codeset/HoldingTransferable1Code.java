@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.HoldingTransferableCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -89,7 +91,7 @@ public class HoldingTransferable1Code extends HoldingTransferableCode {
 	 */
 	public static final MMCode mmTransferAllowed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransferAllowed";
 			owner_lazy = () -> HoldingTransferable1Code.mmObject();
 		}
@@ -112,7 +114,7 @@ public class HoldingTransferable1Code extends HoldingTransferableCode {
 	 */
 	public static final MMCode mmTransferNotAllowed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransferNotAllowed";
 			owner_lazy = () -> HoldingTransferable1Code.mmObject();
 		}
@@ -135,7 +137,7 @@ public class HoldingTransferable1Code extends HoldingTransferableCode {
 	 */
 	public static final MMCode mmReferToFundOrderDesk = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReferToFundOrderDesk";
 			owner_lazy = () -> HoldingTransferable1Code.mmObject();
 		}
@@ -144,13 +146,12 @@ public class HoldingTransferable1Code extends HoldingTransferableCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("TRAL");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "HoldingTransferable1Code";
 				definition = "Indicate whether or not registered investors are able to transfer some or all of their holdings to third parties.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.HoldingTransferable1Code.mmTransferAllowed, com.tools20022.repository.codeset.HoldingTransferable1Code.mmTransferNotAllowed,
-						com.tools20022.repository.codeset.HoldingTransferable1Code.mmReferToFundOrderDesk);
+				code_lazy = () -> Arrays.asList(HoldingTransferable1Code.mmTransferAllowed, HoldingTransferable1Code.mmTransferNotAllowed, HoldingTransferable1Code.mmReferToFundOrderDesk);
 				trace_lazy = () -> HoldingTransferableCode.mmObject();
 			}
 		});

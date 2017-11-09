@@ -19,8 +19,10 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
 import com.tools20022.repository.entity.MarginAmountRequirement;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -106,11 +108,11 @@ public class MarginRequirement1 {
 	 */
 	public static final MMMessageAttribute mmDeliverMarginAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.MarginAmountRequirement.mmDeliverMarginAmount;
+			businessElementTrace_lazy = () -> MarginAmountRequirement.mmDeliverMarginAmount;
 			componentContext_lazy = () -> MarginRequirement1.mmObject();
 			isDerived = false;
 			xmlTag = "DlvrMrgnAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeliverMarginAmount";
 			definition = "Amount of new margin that will be delivered to one party by the other party after rounding, threshold and minimum transfer amount are taken into account.";
 			maxOccurs = 1;
@@ -158,11 +160,11 @@ public class MarginRequirement1 {
 	 */
 	public static final MMMessageAttribute mmReturnMarginAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.MarginAmountRequirement.mmReturnMarginAmount;
+			businessElementTrace_lazy = () -> MarginAmountRequirement.mmReturnMarginAmount;
 			componentContext_lazy = () -> MarginRequirement1.mmObject();
 			isDerived = false;
 			xmlTag = "RtrMrgnAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReturnMarginAmount";
 			definition = "Amount of new margin that will be recalled to one party from the other party after rounding, threshold and minimum transfer amount are taken into account.";
 			maxOccurs = 1;
@@ -174,10 +176,10 @@ public class MarginRequirement1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MarginRequirement1.mmDeliverMarginAmount, com.tools20022.repository.msg.MarginRequirement1.mmReturnMarginAmount);
+				messageElement_lazy = () -> Arrays.asList(MarginRequirement1.mmDeliverMarginAmount, MarginRequirement1.mmReturnMarginAmount);
 				trace_lazy = () -> MarginAmountRequirement.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MarginRequirement1";
 				definition = "Amount of expected margin required by any of the parties of the margin calculation.";
 			}

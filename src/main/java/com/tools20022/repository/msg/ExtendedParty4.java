@@ -20,8 +20,10 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Extended350Code;
 import com.tools20022.repository.entity.InvestmentAccountPartyRole;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -120,10 +122,10 @@ public class ExtendedParty4 {
 			componentContext_lazy = () -> ExtendedParty4.mmObject();
 			isDerived = false;
 			xmlTag = "XtndedPtyRole";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExtendedPartyRole";
 			definition = "Other type of party's role.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ExtendedParty5.mmExtendedPartyRole);
+			nextVersions_lazy = () -> Arrays.asList(ExtendedParty5.mmExtendedPartyRole);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Extended350Code.mmObject();
@@ -175,10 +177,10 @@ public class ExtendedParty4 {
 			componentContext_lazy = () -> ExtendedParty4.mmObject();
 			isDerived = false;
 			xmlTag = "OthrPtyDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherPartyDetails";
 			definition = "Detailed ownership information about a party.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ExtendedParty5.mmOtherPartyDetails);
+			nextVersions_lazy = () -> Arrays.asList(ExtendedParty5.mmOtherPartyDetails);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -189,10 +191,10 @@ public class ExtendedParty4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ExtendedParty4.mmExtendedPartyRole, com.tools20022.repository.msg.ExtendedParty4.mmOtherPartyDetails);
+				messageElement_lazy = () -> Arrays.asList(ExtendedParty4.mmExtendedPartyRole, ExtendedParty4.mmOtherPartyDetails);
 				trace_lazy = () -> InvestmentAccountPartyRole.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ExtendedParty4";
 				definition = "Other type of party.";
 				nextVersions_lazy = () -> Arrays.asList(ExtendedParty5.mmObject());

@@ -19,8 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max70Text;
+import com.tools20022.repository.entity.CommercialTrade;
 import com.tools20022.repository.entity.LineItem;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -97,11 +100,11 @@ public class LineItemAndPOIdentification1 {
 	 */
 	public static final MMMessageAttribute mmLineItemIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.LineItem.mmIdentification;
+			businessElementTrace_lazy = () -> LineItem.mmIdentification;
 			componentContext_lazy = () -> LineItemAndPOIdentification1.mmObject();
 			isDerived = false;
 			xmlTag = "LineItmId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LineItemIdentification";
 			definition = "Identification assigned to a line item.";
 			minOccurs = 1;
@@ -145,11 +148,11 @@ public class LineItemAndPOIdentification1 {
 	 */
 	public static final MMMessageAttribute mmPurchaseOrderReference = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CommercialTrade.mmPurchaseOrder;
+			businessElementTrace_lazy = () -> CommercialTrade.mmPurchaseOrder;
 			componentContext_lazy = () -> LineItemAndPOIdentification1.mmObject();
 			isDerived = false;
 			xmlTag = "PurchsOrdrRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PurchaseOrderReference";
 			definition = "Reference to the purchase order containing the line item.";
 			maxOccurs = 1;
@@ -161,10 +164,10 @@ public class LineItemAndPOIdentification1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LineItemAndPOIdentification1.mmLineItemIdentification, com.tools20022.repository.msg.LineItemAndPOIdentification1.mmPurchaseOrderReference);
+				messageElement_lazy = () -> Arrays.asList(LineItemAndPOIdentification1.mmLineItemIdentification, LineItemAndPOIdentification1.mmPurchaseOrderReference);
 				trace_lazy = () -> LineItem.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "LineItemAndPOIdentification1";
 				definition = "Identifies the line item number and the purchase order.";
 			}

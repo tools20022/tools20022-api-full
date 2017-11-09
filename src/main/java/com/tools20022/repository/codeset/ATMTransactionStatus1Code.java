@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ATMTransactionStatusCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -80,7 +82,7 @@ public class ATMTransactionStatus1Code extends ATMTransactionStatusCode {
 	 */
 	public static final MMCode mmDoubt = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Doubt";
 			owner_lazy = () -> ATMTransactionStatus1Code.mmObject();
 		}
@@ -103,7 +105,7 @@ public class ATMTransactionStatus1Code extends ATMTransactionStatusCode {
 	 */
 	public static final MMCode mmFailure = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Failure";
 			owner_lazy = () -> ATMTransactionStatus1Code.mmObject();
 		}
@@ -126,7 +128,7 @@ public class ATMTransactionStatus1Code extends ATMTransactionStatusCode {
 	 */
 	public static final MMCode mmSuccess = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Success";
 			owner_lazy = () -> ATMTransactionStatus1Code.mmObject();
 		}
@@ -135,12 +137,11 @@ public class ATMTransactionStatus1Code extends ATMTransactionStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ATMTransactionStatus1Code";
 				definition = "Outcome of the financial ATM transaction for the customer.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ATMTransactionStatus1Code.mmDoubt, com.tools20022.repository.codeset.ATMTransactionStatus1Code.mmFailure,
-						com.tools20022.repository.codeset.ATMTransactionStatus1Code.mmSuccess);
+				code_lazy = () -> Arrays.asList(ATMTransactionStatus1Code.mmDoubt, ATMTransactionStatus1Code.mmFailure, ATMTransactionStatus1Code.mmSuccess);
 				trace_lazy = () -> ATMTransactionStatusCode.mmObject();
 			}
 		});

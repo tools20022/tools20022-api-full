@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.EntryStatusCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -84,7 +86,7 @@ public class EntryStatus2Code extends EntryStatusCode {
 	 */
 	public static final MMCode mmBooked = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Booked";
 			owner_lazy = () -> EntryStatus2Code.mmObject();
 		}
@@ -107,7 +109,7 @@ public class EntryStatus2Code extends EntryStatusCode {
 	 */
 	public static final MMCode mmPending = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Pending";
 			owner_lazy = () -> EntryStatus2Code.mmObject();
 		}
@@ -130,7 +132,7 @@ public class EntryStatus2Code extends EntryStatusCode {
 	 */
 	public static final MMCode mmInformation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Information";
 			owner_lazy = () -> EntryStatus2Code.mmObject();
 		}
@@ -139,12 +141,12 @@ public class EntryStatus2Code extends EntryStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("BOOK");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "EntryStatus2Code";
 				definition = "Specifies the status of an entry.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.EntryStatus2Code.mmBooked, com.tools20022.repository.codeset.EntryStatus2Code.mmPending, com.tools20022.repository.codeset.EntryStatus2Code.mmInformation);
+				code_lazy = () -> Arrays.asList(EntryStatus2Code.mmBooked, EntryStatus2Code.mmPending, EntryStatus2Code.mmInformation);
 				trace_lazy = () -> EntryStatusCode.mmObject();
 			}
 		});

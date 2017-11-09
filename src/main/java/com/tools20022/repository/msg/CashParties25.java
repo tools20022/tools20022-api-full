@@ -19,7 +19,14 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotificationV05;
+import com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotificationV06;
+import com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdviceV05;
+import com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdviceV06;
+import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.entity.PaymentPartyRole;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -126,14 +133,14 @@ public class CashParties25 {
 	 */
 	public static final MMMessageAssociationEnd mmDebtor = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> CashParties25.mmObject();
 			isDerived = false;
 			xmlTag = "Dbtr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Debtor";
 			definition = "Party that owes an amount of money to the (ultimate) creditor.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CashParties9.mmDebtor;
+			previousVersion_lazy = () -> CashParties9.mmDebtor;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -180,14 +187,14 @@ public class CashParties25 {
 	 */
 	public static final MMMessageAssociationEnd mmDebtorAgent = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> CashParties25.mmObject();
 			isDerived = false;
 			xmlTag = "DbtrAgt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DebtorAgent";
 			definition = "Financial institution servicing an account for the debtor.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CashParties9.mmDebtorAgent;
+			previousVersion_lazy = () -> CashParties9.mmDebtorAgent;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -233,14 +240,14 @@ public class CashParties25 {
 	 */
 	public static final MMMessageAssociationEnd mmCreditor = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> CashParties25.mmObject();
 			isDerived = false;
 			xmlTag = "Cdtr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Creditor";
 			definition = "Party to which an amount of money is due.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CashParties9.mmCreditor;
+			previousVersion_lazy = () -> CashParties9.mmCreditor;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -287,14 +294,14 @@ public class CashParties25 {
 	 */
 	public static final MMMessageAssociationEnd mmCreditorAgent = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> CashParties25.mmObject();
 			isDerived = false;
 			xmlTag = "CdtrAgt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditorAgent";
 			definition = "Financial institution servicing an account for the creditor.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CashParties9.mmCreditorAgent;
+			previousVersion_lazy = () -> CashParties9.mmCreditorAgent;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -305,14 +312,12 @@ public class CashParties25 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashParties25.mmDebtor, com.tools20022.repository.msg.CashParties25.mmDebtorAgent, com.tools20022.repository.msg.CashParties25.mmCreditor,
-						com.tools20022.repository.msg.CashParties25.mmCreditorAgent);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdviceV05.mmCashParties,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotificationV05.mmCashParties, com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotificationV06.mmCashParties,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdviceV06.mmCashParties);
+				messageElement_lazy = () -> Arrays.asList(CashParties25.mmDebtor, CashParties25.mmDebtorAgent, CashParties25.mmCreditor, CashParties25.mmCreditorAgent);
+				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesSettlementTransactionReversalAdviceV05.mmCashParties, SecuritiesSettlementTransactionAllegementNotificationV05.mmCashParties,
+						SecuritiesSettlementTransactionAllegementNotificationV06.mmCashParties, SecuritiesSettlementTransactionReversalAdviceV06.mmCashParties);
 				trace_lazy = () -> PaymentPartyRole.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CashParties25";
 				definition = "Payment processes required to transfer cash from the debtor to the creditor.";
 				previousVersion_lazy = () -> CashParties9.mmObject();

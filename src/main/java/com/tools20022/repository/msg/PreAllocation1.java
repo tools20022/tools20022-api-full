@@ -20,11 +20,13 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.FinancialInstrumentQuantityChoice;
 import com.tools20022.repository.codeset.CurrencyCode;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.Allocation;
 import com.tools20022.repository.entity.GenericIdentification;
+import com.tools20022.repository.GeneratedRepository;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -117,7 +119,7 @@ public class PreAllocation1 {
 			componentContext_lazy = () -> PreAllocation1.mmObject();
 			isDerived = false;
 			xmlTag = "AllcnId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AllocationIdentification";
 			definition = "Used to assign an identifier to the block of preallocations.";
 			maxOccurs = 1;
@@ -163,7 +165,7 @@ public class PreAllocation1 {
 			componentContext_lazy = () -> PreAllocation1.mmObject();
 			isDerived = false;
 			xmlTag = "IndvAllcnId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IndividualAllocationIdentification";
 			definition = "A unique identification for each allocation instance.";
 			maxOccurs = 1;
@@ -209,11 +211,11 @@ public class PreAllocation1 {
 	 */
 	public static final MMMessageAttribute mmAllocatedQuantity = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Allocation.mmAllocatedQuantity;
+			businessElementTrace_lazy = () -> Allocation.mmAllocatedQuantity;
 			componentContext_lazy = () -> PreAllocation1.mmObject();
 			isDerived = false;
 			xmlTag = "AllctdQty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AllocatedQuantity";
 			definition = "Quantity of a specific security allocated from a block trade, based upon the distribution of the trade to different accounts.";
 			maxOccurs = 1;
@@ -256,11 +258,11 @@ public class PreAllocation1 {
 	 */
 	public static final MMMessageAttribute mmAllocatedSettlementCurrency = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Allocation.mmSettlementCurrency;
+			businessElementTrace_lazy = () -> Allocation.mmSettlementCurrency;
 			componentContext_lazy = () -> PreAllocation1.mmObject();
 			isDerived = false;
 			xmlTag = "AllctdSttlmCcy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AllocatedSettlementCurrency";
 			definition = "Currency to be used for settlement of the settlement amount.";
 			maxOccurs = 1;
@@ -301,11 +303,11 @@ public class PreAllocation1 {
 	 */
 	public static final MMMessageAssociationEnd mmAllocationAccountDetails = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Allocation.mmAllocationAccount;
+			businessElementTrace_lazy = () -> Allocation.mmAllocationAccount;
 			componentContext_lazy = () -> PreAllocation1.mmObject();
 			isDerived = false;
 			xmlTag = "AllcnAcctDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AllocationAccountDetails";
 			definition = "Account to or from which an allocation must be made.";
 			maxOccurs = 1;
@@ -318,11 +320,11 @@ public class PreAllocation1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PreAllocation1.mmAllocationIdentification, com.tools20022.repository.msg.PreAllocation1.mmIndividualAllocationIdentification,
-						com.tools20022.repository.msg.PreAllocation1.mmAllocatedQuantity, com.tools20022.repository.msg.PreAllocation1.mmAllocatedSettlementCurrency, com.tools20022.repository.msg.PreAllocation1.mmAllocationAccountDetails);
+				messageElement_lazy = () -> Arrays.asList(PreAllocation1.mmAllocationIdentification, PreAllocation1.mmIndividualAllocationIdentification, PreAllocation1.mmAllocatedQuantity, PreAllocation1.mmAllocatedSettlementCurrency,
+						PreAllocation1.mmAllocationAccountDetails);
 				trace_lazy = () -> Allocation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
 						return DateFormat.getDateInstance(java.text.DateFormat.LONG).parse("September 9, 2016");

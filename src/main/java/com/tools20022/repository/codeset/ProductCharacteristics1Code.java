@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ProductCharacteristicsCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -119,7 +121,7 @@ public class ProductCharacteristics1Code extends ProductCharacteristicsCode {
 	 */
 	public static final MMCode mmBuyersItemSpecification = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BuyersItemSpecification";
 			owner_lazy = () -> ProductCharacteristics1Code.mmObject();
 		}
@@ -142,7 +144,7 @@ public class ProductCharacteristics1Code extends ProductCharacteristicsCode {
 	 */
 	public static final MMCode mmChassisNumber = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChassisNumber";
 			owner_lazy = () -> ProductCharacteristics1Code.mmObject();
 		}
@@ -165,7 +167,7 @@ public class ProductCharacteristics1Code extends ProductCharacteristicsCode {
 	 */
 	public static final MMCode mmColour = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Colour";
 			owner_lazy = () -> ProductCharacteristics1Code.mmObject();
 		}
@@ -188,7 +190,7 @@ public class ProductCharacteristics1Code extends ProductCharacteristicsCode {
 	 */
 	public static final MMCode mmEngineDisplacement = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EngineDisplacement";
 			owner_lazy = () -> ProductCharacteristics1Code.mmObject();
 		}
@@ -211,7 +213,7 @@ public class ProductCharacteristics1Code extends ProductCharacteristicsCode {
 	 */
 	public static final MMCode mmEngineNumber = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EngineNumber";
 			owner_lazy = () -> ProductCharacteristics1Code.mmObject();
 		}
@@ -234,7 +236,7 @@ public class ProductCharacteristics1Code extends ProductCharacteristicsCode {
 	 */
 	public static final MMCode mmOption = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Option";
 			owner_lazy = () -> ProductCharacteristics1Code.mmObject();
 		}
@@ -257,7 +259,7 @@ public class ProductCharacteristics1Code extends ProductCharacteristicsCode {
 	 */
 	public static final MMCode mmOriginCriterion = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginCriterion";
 			owner_lazy = () -> ProductCharacteristics1Code.mmObject();
 		}
@@ -280,7 +282,7 @@ public class ProductCharacteristics1Code extends ProductCharacteristicsCode {
 	 */
 	public static final MMCode mmPercentageByVolume = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PercentageByVolume";
 			owner_lazy = () -> ProductCharacteristics1Code.mmObject();
 		}
@@ -303,7 +305,7 @@ public class ProductCharacteristics1Code extends ProductCharacteristicsCode {
 	 */
 	public static final MMCode mmSellersItemSpecification = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SellersItemSpecification";
 			owner_lazy = () -> ProductCharacteristics1Code.mmObject();
 		}
@@ -326,7 +328,7 @@ public class ProductCharacteristics1Code extends ProductCharacteristicsCode {
 	 */
 	public static final MMCode mmSize = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Size";
 			owner_lazy = () -> ProductCharacteristics1Code.mmObject();
 		}
@@ -349,7 +351,7 @@ public class ProductCharacteristics1Code extends ProductCharacteristicsCode {
 	 */
 	public static final MMCode mmSizeRange = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SizeRange";
 			owner_lazy = () -> ProductCharacteristics1Code.mmObject();
 		}
@@ -372,7 +374,7 @@ public class ProductCharacteristics1Code extends ProductCharacteristicsCode {
 	 */
 	public static final MMCode mmSpecialRemarks = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SpecialRemarks";
 			owner_lazy = () -> ProductCharacteristics1Code.mmObject();
 		}
@@ -395,7 +397,7 @@ public class ProductCharacteristics1Code extends ProductCharacteristicsCode {
 	 */
 	public static final MMCode mmStorageCode = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StorageCode";
 			owner_lazy = () -> ProductCharacteristics1Code.mmObject();
 		}
@@ -418,7 +420,7 @@ public class ProductCharacteristics1Code extends ProductCharacteristicsCode {
 	 */
 	public static final MMCode mmVehicleIdentificationNumber = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VehicleIdentificationNumber";
 			owner_lazy = () -> ProductCharacteristics1Code.mmObject();
 		}
@@ -427,18 +429,15 @@ public class ProductCharacteristics1Code extends ProductCharacteristicsCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("BISP");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ProductCharacteristics1Code";
 				definition = "Specifies the charateristics of a product.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ProductCharacteristics1Code.mmBuyersItemSpecification, com.tools20022.repository.codeset.ProductCharacteristics1Code.mmChassisNumber,
-						com.tools20022.repository.codeset.ProductCharacteristics1Code.mmColour, com.tools20022.repository.codeset.ProductCharacteristics1Code.mmEngineDisplacement,
-						com.tools20022.repository.codeset.ProductCharacteristics1Code.mmEngineNumber, com.tools20022.repository.codeset.ProductCharacteristics1Code.mmOption,
-						com.tools20022.repository.codeset.ProductCharacteristics1Code.mmOriginCriterion, com.tools20022.repository.codeset.ProductCharacteristics1Code.mmPercentageByVolume,
-						com.tools20022.repository.codeset.ProductCharacteristics1Code.mmSellersItemSpecification, com.tools20022.repository.codeset.ProductCharacteristics1Code.mmSize,
-						com.tools20022.repository.codeset.ProductCharacteristics1Code.mmSizeRange, com.tools20022.repository.codeset.ProductCharacteristics1Code.mmSpecialRemarks,
-						com.tools20022.repository.codeset.ProductCharacteristics1Code.mmStorageCode, com.tools20022.repository.codeset.ProductCharacteristics1Code.mmVehicleIdentificationNumber);
+				code_lazy = () -> Arrays.asList(ProductCharacteristics1Code.mmBuyersItemSpecification, ProductCharacteristics1Code.mmChassisNumber, ProductCharacteristics1Code.mmColour, ProductCharacteristics1Code.mmEngineDisplacement,
+						ProductCharacteristics1Code.mmEngineNumber, ProductCharacteristics1Code.mmOption, ProductCharacteristics1Code.mmOriginCriterion, ProductCharacteristics1Code.mmPercentageByVolume,
+						ProductCharacteristics1Code.mmSellersItemSpecification, ProductCharacteristics1Code.mmSize, ProductCharacteristics1Code.mmSizeRange, ProductCharacteristics1Code.mmSpecialRemarks,
+						ProductCharacteristics1Code.mmStorageCode, ProductCharacteristics1Code.mmVehicleIdentificationNumber);
 				trace_lazy = () -> ProductCharacteristicsCode.mmObject();
 			}
 		});

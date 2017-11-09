@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.EUCapitalGainCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -91,7 +93,7 @@ public class EUCapitalGain2Code extends EUCapitalGainCode {
 	 */
 	public static final MMCode mmCapitalGainInScope = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CapitalGainInScope";
 			owner_lazy = () -> EUCapitalGain2Code.mmObject();
 		}
@@ -114,7 +116,7 @@ public class EUCapitalGain2Code extends EUCapitalGainCode {
 	 */
 	public static final MMCode mmCapitalGainOutScope = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CapitalGainOutScope";
 			owner_lazy = () -> EUCapitalGain2Code.mmObject();
 		}
@@ -137,7 +139,7 @@ public class EUCapitalGain2Code extends EUCapitalGainCode {
 	 */
 	public static final MMCode mmCapitalGainUnknown = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CapitalGainUnknown";
 			owner_lazy = () -> EUCapitalGain2Code.mmObject();
 		}
@@ -146,13 +148,12 @@ public class EUCapitalGain2Code extends EUCapitalGainCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("EUSI");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "EUCapitalGain2Code";
 				definition = "Specifies whether capital gain is in the scope of the European directive on taxation of savings income in the form of interest payments (Council Directive 2003/48/EC 3 June) for an income realised upon sale, a refund or redemption of shares and units etc.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.EUCapitalGain2Code.mmCapitalGainInScope, com.tools20022.repository.codeset.EUCapitalGain2Code.mmCapitalGainOutScope,
-						com.tools20022.repository.codeset.EUCapitalGain2Code.mmCapitalGainUnknown);
+				code_lazy = () -> Arrays.asList(EUCapitalGain2Code.mmCapitalGainInScope, EUCapitalGain2Code.mmCapitalGainOutScope, EUCapitalGain2Code.mmCapitalGainUnknown);
 				trace_lazy = () -> EUCapitalGainCode.mmObject();
 			}
 		});

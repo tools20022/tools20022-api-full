@@ -20,13 +20,17 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.ChargeType3Choice;
 import com.tools20022.repository.codeset.ChargeBearerType1Code;
 import com.tools20022.repository.codeset.CreditDebitCode;
 import com.tools20022.repository.datatype.ActiveOrHistoricCurrencyAndAmount;
 import com.tools20022.repository.datatype.ChargeIncludedIndicator;
 import com.tools20022.repository.datatype.PercentageRate;
+import com.tools20022.repository.entity.Adjustment;
 import com.tools20022.repository.entity.Charges;
+import com.tools20022.repository.entity.Organisation;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -120,11 +124,11 @@ public class ChargesRecord2 {
 	 */
 	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Adjustment.mmAmount;
+			businessElementTrace_lazy = () -> Adjustment.mmAmount;
 			componentContext_lazy = () -> ChargesRecord2.mmObject();
 			isDerived = false;
 			xmlTag = "Amt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Transaction charges to be paid by the charge bearer.";
 			maxOccurs = 1;
@@ -170,11 +174,11 @@ public class ChargesRecord2 {
 	 */
 	public static final MMMessageAttribute mmCreditDebitIndicator = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Charges.mmCreditDebitIndicator;
+			businessElementTrace_lazy = () -> Charges.mmCreditDebitIndicator;
 			componentContext_lazy = () -> ChargesRecord2.mmObject();
 			isDerived = false;
 			xmlTag = "CdtDbtInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditDebitIndicator";
 			definition = "Indicates whether the charges amount is a credit or a debit amount. \nUsage: A zero amount is considered to be a credit.";
 			maxOccurs = 1;
@@ -223,7 +227,7 @@ public class ChargesRecord2 {
 			componentContext_lazy = () -> ChargesRecord2.mmObject();
 			isDerived = false;
 			xmlTag = "ChrgInclInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChargeIncludedIndicator";
 			definition = "Indicates whether the charge should be included in the amount or is added as pre-advice.";
 			maxOccurs = 1;
@@ -264,11 +268,11 @@ public class ChargesRecord2 {
 	 */
 	public static final MMMessageAssociationEnd mmType = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Charges.mmChargeType;
+			businessElementTrace_lazy = () -> Charges.mmChargeType;
 			componentContext_lazy = () -> ChargesRecord2.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Specifies the type of charge.";
 			maxOccurs = 1;
@@ -312,11 +316,11 @@ public class ChargesRecord2 {
 	 */
 	public static final MMMessageAttribute mmRate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Adjustment.mmChargeRate;
+			businessElementTrace_lazy = () -> Adjustment.mmChargeRate;
 			componentContext_lazy = () -> ChargesRecord2.mmObject();
 			isDerived = false;
 			xmlTag = "Rate";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rate";
 			definition = "Rate used to calculate the amount of the charge or fee.";
 			maxOccurs = 1;
@@ -362,11 +366,11 @@ public class ChargesRecord2 {
 	 */
 	public static final MMMessageAttribute mmBearer = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Charges.mmBearerType;
+			businessElementTrace_lazy = () -> Charges.mmBearerType;
 			componentContext_lazy = () -> ChargesRecord2.mmObject();
 			isDerived = false;
 			xmlTag = "Br";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Bearer";
 			definition = "Specifies which party/parties will bear the charges associated with the processing of the payment transaction.";
 			maxOccurs = 1;
@@ -411,11 +415,11 @@ public class ChargesRecord2 {
 	 */
 	public static final MMMessageAssociationEnd mmAgent = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Organisation.mmOrganisationIdentification;
+			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> ChargesRecord2.mmObject();
 			isDerived = false;
 			xmlTag = "Agt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Agent";
 			definition = "Agent that takes the transaction charges or to which the transaction charges are due.";
 			maxOccurs = 1;
@@ -457,11 +461,11 @@ public class ChargesRecord2 {
 	 */
 	public static final MMMessageAssociationEnd mmTax = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Adjustment.mmTax;
+			businessElementTrace_lazy = () -> Adjustment.mmTax;
 			componentContext_lazy = () -> ChargesRecord2.mmObject();
 			isDerived = false;
 			xmlTag = "Tax";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Tax";
 			definition = "Provides details on the tax applied to charges.";
 			maxOccurs = 1;
@@ -474,12 +478,11 @@ public class ChargesRecord2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ChargesRecord2.mmAmount, com.tools20022.repository.msg.ChargesRecord2.mmCreditDebitIndicator,
-						com.tools20022.repository.msg.ChargesRecord2.mmChargeIncludedIndicator, com.tools20022.repository.msg.ChargesRecord2.mmType, com.tools20022.repository.msg.ChargesRecord2.mmRate,
-						com.tools20022.repository.msg.ChargesRecord2.mmBearer, com.tools20022.repository.msg.ChargesRecord2.mmAgent, com.tools20022.repository.msg.ChargesRecord2.mmTax);
+				messageElement_lazy = () -> Arrays.asList(ChargesRecord2.mmAmount, ChargesRecord2.mmCreditDebitIndicator, ChargesRecord2.mmChargeIncludedIndicator, ChargesRecord2.mmType, ChargesRecord2.mmRate, ChargesRecord2.mmBearer,
+						ChargesRecord2.mmAgent, ChargesRecord2.mmTax);
 				trace_lazy = () -> Charges.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ChargesRecord2";
 				definition = "Provides further individual record details on the charges related to the payment transaction.";
 				previousVersion_lazy = () -> ChargesRecord1.mmObject();

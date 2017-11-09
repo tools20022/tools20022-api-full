@@ -20,8 +20,10 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ActiveOrHistoricCurrencyAndAmount;
 import com.tools20022.repository.entity.Payment;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.EquivalentAmount2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -119,14 +121,14 @@ public class AmountType4Choice {
 	 */
 	public static final MMMessageAttribute mmInstructedAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.mmInstructedAmount;
+			businessElementTrace_lazy = () -> Payment.mmInstructedAmount;
 			componentContext_lazy = () -> AmountType4Choice.mmObject();
 			isDerived = false;
 			xmlTag = "InstdAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructedAmount";
 			definition = "Amount of money to be moved between the debtor and creditor, before deduction of charges, expressed in the currency as ordered by the initiating party.\r\n\r\nUsage: This amount has to be transported unchanged through the transaction chain.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.AmountType3Choice.mmInstructedAmount;
+			previousVersion_lazy = () -> AmountType3Choice.mmInstructedAmount;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
@@ -175,14 +177,14 @@ public class AmountType4Choice {
 	 */
 	public static final MMMessageAssociationEnd mmEquivalentAmount = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.mmEquivalentAmount;
+			businessElementTrace_lazy = () -> Payment.mmEquivalentAmount;
 			componentContext_lazy = () -> AmountType4Choice.mmObject();
 			isDerived = false;
 			xmlTag = "EqvtAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EquivalentAmount";
 			definition = "Amount of money to be moved between the debtor and creditor, expressed in the currency of the debtor's account, and the currency in which the amount is to be moved.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.AmountType3Choice.mmEquivalentAmount;
+			previousVersion_lazy = () -> AmountType3Choice.mmEquivalentAmount;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -193,10 +195,10 @@ public class AmountType4Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AmountType4Choice.mmInstructedAmount, com.tools20022.repository.choice.AmountType4Choice.mmEquivalentAmount);
+				messageElement_lazy = () -> Arrays.asList(AmountType4Choice.mmInstructedAmount, AmountType4Choice.mmEquivalentAmount);
 				trace_lazy = () -> Payment.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AmountType4Choice";
 				definition = "Specifies the amount of money to be moved between the debtor and creditor, before deduction of charges, expressed in the currency as ordered by the initiating party.";
 				previousVersion_lazy = () -> AmountType3Choice.mmObject();

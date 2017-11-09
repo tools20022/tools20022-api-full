@@ -19,7 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.seev.MeetingNotificationV04;
+import com.tools20022.repository.area.seev.MeetingNotificationV05;
 import com.tools20022.repository.datatype.Max350Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -105,7 +109,7 @@ public class CorporateEventNarrative2 {
 			componentContext_lazy = () -> CorporateEventNarrative2.mmObject();
 			isDerived = false;
 			xmlTag = "Dsclmr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Disclaimer";
 			definition = "Issuer’s disclaimer notice relative to the meeting announcement information provided. It may be ignored for automated processing.";
 			minOccurs = 0;
@@ -116,10 +120,10 @@ public class CorporateEventNarrative2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateEventNarrative2.mmDisclaimer);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.MeetingNotificationV04.mmAdditionalInformation, com.tools20022.repository.area.seev.MeetingNotificationV05.mmAdditionalInformation);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(CorporateEventNarrative2.mmDisclaimer);
+				messageBuildingBlock_lazy = () -> Arrays.asList(MeetingNotificationV04.mmAdditionalInformation, MeetingNotificationV05.mmAdditionalInformation);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateEventNarrative2";
 				definition = "Provides additional narrative information about the corporate event.";
 			}

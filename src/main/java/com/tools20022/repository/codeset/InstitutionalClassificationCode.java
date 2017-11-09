@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -90,7 +92,7 @@ public class InstitutionalClassificationCode {
 	 */
 	public static final MMCode mmSurvivingCompany = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SurvivingCompany";
 			definition = "In the case of a merger, the Issuer or the Counterparty is the surviving company.";
 			owner_lazy = () -> InstitutionalClassificationCode.mmObject();
@@ -123,7 +125,7 @@ public class InstitutionalClassificationCode {
 	 */
 	public static final MMCode mmDiscontinuedCompany = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DiscontinuedCompany";
 			definition = "In the case of a merger, the Issuer or the Counterparty is the discontinued company.";
 			owner_lazy = () -> InstitutionalClassificationCode.mmObject();
@@ -155,7 +157,7 @@ public class InstitutionalClassificationCode {
 	 */
 	public static final MMCode mmSubsidiary = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Subsidiary";
 			definition = "In the case of a merger, the Issuer or the Counterparty is a subsidiary.";
 			owner_lazy = () -> InstitutionalClassificationCode.mmObject();
@@ -188,7 +190,7 @@ public class InstitutionalClassificationCode {
 	 */
 	public static final MMCode mmUnknown = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unknown";
 			definition = "In the case of a merger, the classification of the Issuer or the Counterparty is unknown.";
 			owner_lazy = () -> InstitutionalClassificationCode.mmObject();
@@ -221,7 +223,7 @@ public class InstitutionalClassificationCode {
 	 */
 	public static final MMCode mmParent = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Parent";
 			definition = "In the case of a merger, the Issuer or the Counterparty is a parent company.";
 			owner_lazy = () -> InstitutionalClassificationCode.mmObject();
@@ -232,13 +234,12 @@ public class InstitutionalClassificationCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InstitutionalClassificationCode";
 				definition = "TSE/JASDEC extension codes for mergers";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.InstitutionalClassificationCode.mmSurvivingCompany, com.tools20022.repository.codeset.InstitutionalClassificationCode.mmDiscontinuedCompany,
-						com.tools20022.repository.codeset.InstitutionalClassificationCode.mmSubsidiary, com.tools20022.repository.codeset.InstitutionalClassificationCode.mmUnknown,
-						com.tools20022.repository.codeset.InstitutionalClassificationCode.mmParent);
+				code_lazy = () -> Arrays.asList(InstitutionalClassificationCode.mmSurvivingCompany, InstitutionalClassificationCode.mmDiscontinuedCompany, InstitutionalClassificationCode.mmSubsidiary,
+						InstitutionalClassificationCode.mmUnknown, InstitutionalClassificationCode.mmParent);
 			}
 		});
 		return mmObject_lazy.get();

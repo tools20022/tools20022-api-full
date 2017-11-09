@@ -19,9 +19,12 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.Document;
+import com.tools20022.repository.entity.GenericIdentification;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -122,15 +125,15 @@ public class DocumentIdentification28 {
 	 */
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmIdentification;
+			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> DocumentIdentification28.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Identifies the document.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DocumentIdentification29.mmIdentification);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.DocumentIdentification22.mmIdentification;
+			nextVersions_lazy = () -> Arrays.asList(DocumentIdentification29.mmIdentification);
+			previousVersion_lazy = () -> DocumentIdentification22.mmIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -184,15 +187,15 @@ public class DocumentIdentification28 {
 	 */
 	public static final MMMessageAttribute mmDateOfIssue = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Document.mmIssueDate;
+			businessElementTrace_lazy = () -> Document.mmIssueDate;
 			componentContext_lazy = () -> DocumentIdentification28.mmObject();
 			isDerived = false;
 			xmlTag = "DtOfIsse";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DateOfIssue";
 			definition = "Date of issuance of the document.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DocumentIdentification29.mmDateOfIssue);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.DocumentIdentification22.mmDateOfIssue;
+			nextVersions_lazy = () -> Arrays.asList(DocumentIdentification29.mmDateOfIssue);
+			previousVersion_lazy = () -> DocumentIdentification22.mmDateOfIssue;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
@@ -202,10 +205,10 @@ public class DocumentIdentification28 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DocumentIdentification28.mmIdentification, com.tools20022.repository.msg.DocumentIdentification28.mmDateOfIssue);
+				messageElement_lazy = () -> Arrays.asList(DocumentIdentification28.mmIdentification, DocumentIdentification28.mmDateOfIssue);
 				trace_lazy = () -> Document.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DocumentIdentification28";
 				definition = "Identifies a document by a unique identification and a date of issue.";
 				nextVersions_lazy = () -> Arrays.asList(DocumentIdentification29.mmObject());

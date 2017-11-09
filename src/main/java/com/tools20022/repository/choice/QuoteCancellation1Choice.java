@@ -19,9 +19,11 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.Debt;
 import com.tools20022.repository.entity.Leg;
 import com.tools20022.repository.entity.Security;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.FinancialInstrumentAttributes1;
 import com.tools20022.repository.msg.FinancialInstrumentStipulations;
 import com.tools20022.repository.msg.InstrumentLeg2;
@@ -124,7 +126,7 @@ public class QuoteCancellation1Choice {
 			componentContext_lazy = () -> QuoteCancellation1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "FinInstrmDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentDetails";
 			definition = "Provides details related to the financial instrument whose quotes are to be cancelled.";
 			minOccurs = 0;
@@ -173,7 +175,7 @@ public class QuoteCancellation1Choice {
 			componentContext_lazy = () -> QuoteCancellation1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "FinInstrmAttrbts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentAttributes";
 			definition = "Provides details about the financial instrument attributes whose quotes are to be cancelled.";
 			minOccurs = 0;
@@ -222,7 +224,7 @@ public class QuoteCancellation1Choice {
 			componentContext_lazy = () -> QuoteCancellation1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Stiptns";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Stipulations";
 			definition = "Provides details about the financial instrument stipulations whose quotes are to be cancelled.";
 			minOccurs = 0;
@@ -271,7 +273,7 @@ public class QuoteCancellation1Choice {
 			componentContext_lazy = () -> QuoteCancellation1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "UndrlygFinInstrmDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnderlyingFinancialInstrumentDetails";
 			definition = "Provides details related to the underlying financial instrument whose quotes are to be cancelled.";
 			minOccurs = 0;
@@ -320,7 +322,7 @@ public class QuoteCancellation1Choice {
 			componentContext_lazy = () -> QuoteCancellation1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "UndrlygFinInstrmAttrbts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnderlyingFinancialInstrumentAttributes";
 			definition = "Provides details about the underlying financial instrument attributes whose quotes are to be cancelled.";
 			minOccurs = 0;
@@ -369,7 +371,7 @@ public class QuoteCancellation1Choice {
 			componentContext_lazy = () -> QuoteCancellation1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "UndrlygStiptns";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnderlyingStipulations";
 			definition = "Provides details about the underlying financial instrument stipulations whose quotes are to be cancelled.";
 			minOccurs = 0;
@@ -417,7 +419,7 @@ public class QuoteCancellation1Choice {
 			componentContext_lazy = () -> QuoteCancellation1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "InstrmLegGrpDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstrumentLegGroupDetails";
 			definition = "Provides details about each intrument leg whose quotes are to be canceled.";
 			minOccurs = 0;
@@ -429,12 +431,11 @@ public class QuoteCancellation1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.QuoteCancellation1Choice.mmFinancialInstrumentDetails, com.tools20022.repository.choice.QuoteCancellation1Choice.mmFinancialInstrumentAttributes,
-						com.tools20022.repository.choice.QuoteCancellation1Choice.mmStipulations, com.tools20022.repository.choice.QuoteCancellation1Choice.mmUnderlyingFinancialInstrumentDetails,
-						com.tools20022.repository.choice.QuoteCancellation1Choice.mmUnderlyingFinancialInstrumentAttributes, com.tools20022.repository.choice.QuoteCancellation1Choice.mmUnderlyingStipulations,
-						com.tools20022.repository.choice.QuoteCancellation1Choice.mmInstrumentLegGroupDetails);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(QuoteCancellation1Choice.mmFinancialInstrumentDetails, QuoteCancellation1Choice.mmFinancialInstrumentAttributes, QuoteCancellation1Choice.mmStipulations,
+						QuoteCancellation1Choice.mmUnderlyingFinancialInstrumentDetails, QuoteCancellation1Choice.mmUnderlyingFinancialInstrumentAttributes, QuoteCancellation1Choice.mmUnderlyingStipulations,
+						QuoteCancellation1Choice.mmInstrumentLegGroupDetails);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "QuoteCancellation1Choice";
 				definition = "Choice between the type of quote to be cancelled. Not required when cancelling all quotes.";
 			}

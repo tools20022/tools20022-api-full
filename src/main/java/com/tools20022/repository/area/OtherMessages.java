@@ -18,7 +18,9 @@
 package com.tools20022.repository.area;
 
 import com.tools20022.metamodel.MMBusinessArea;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.other.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -70,8 +72,8 @@ public class OtherMessages {
 	final static public MMBusinessArea mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessArea() {
 			{
-				businessProcessCatalogue_lazy = () -> com.tools20022.repository.GeneratedRepository.mmcatalogue;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				businessProcessCatalogue_lazy = () -> GeneratedRepository.mmcatalogue;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "OtherMessages";
 				messageDefinition_lazy = () -> Arrays.asList(ForeignExchangeTradeBulkStatusNotificationV02.mmObject(), ForeignExchangeTradeInstructionAmendmentV02.mmObject(), ForeignExchangeTradeInstructionCancellationV02.mmObject(),
 						ForeignExchangeTradeInstructionV02.mmObject(), ForeignExchangeTradeStatusAndDetailsNotificationV02.mmObject(), ForeignExchangeTradeStatusNotificationV04.mmObject());

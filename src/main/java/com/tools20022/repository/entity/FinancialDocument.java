@@ -18,8 +18,11 @@
 package com.tools20022.repository.entity;
 
 import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.Document;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.FinancialItem1;
+import com.tools20022.repository.msg.InvoiceRequestInformation1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -32,14 +35,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
- * subType} =
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Cheque Cheque}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Invoice Invoice}</li>
- * <li>{@linkplain com.tools20022.repository.entity.UndertakingDocument
- * UndertakingDocument}</li>
- * <li>{@linkplain com.tools20022.repository.entity.CreditNote CreditNote}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.FinancialItem1 FinancialItem1}</li>
  * </ul>
  * </li>
  * <li>
@@ -53,11 +53,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
  * superType} = {@linkplain com.tools20022.repository.entity.Document Document}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
+ * subType} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.FinancialItem1 FinancialItem1}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Cheque Cheque}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Invoice Invoice}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.UndertakingDocument
+ * UndertakingDocument}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.CreditNote CreditNote}</li>
  * </ul>
  * </li>
  * <li>
@@ -83,11 +86,11 @@ public class FinancialDocument extends Document {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FinancialDocument";
 				definition = "Type of document used in relation with financial transactions.";
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvoiceRequestInformation1.mmReferredDocument);
+				derivationElement_lazy = () -> Arrays.asList(InvoiceRequestInformation1.mmReferredDocument);
 				subType_lazy = () -> Arrays.asList(Cheque.mmObject(), Invoice.mmObject(), UndertakingDocument.mmObject(), CreditNote.mmObject());
 				superType_lazy = () -> Document.mmObject();
 				derivationComponent_lazy = () -> Arrays.asList(FinancialItem1.mmObject());

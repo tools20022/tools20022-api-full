@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.DepositaryReceiptProcessingStatusCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -83,7 +85,7 @@ public class DepositaryReceiptProcessingStatus1Code extends DepositaryReceiptPro
 	 */
 	public static final MMCode mmNoRecordFound = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoRecordFound";
 			owner_lazy = () -> DepositaryReceiptProcessingStatus1Code.mmObject();
 		}
@@ -106,7 +108,7 @@ public class DepositaryReceiptProcessingStatus1Code extends DepositaryReceiptPro
 	 */
 	public static final MMCode mmPending = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Pending";
 			owner_lazy = () -> DepositaryReceiptProcessingStatus1Code.mmObject();
 		}
@@ -115,12 +117,12 @@ public class DepositaryReceiptProcessingStatus1Code extends DepositaryReceiptPro
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("NORE");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DepositaryReceiptProcessingStatus1Code";
 				definition = "Specifies the status of a depositary receipt processing.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DepositaryReceiptProcessingStatus1Code.mmNoRecordFound, com.tools20022.repository.codeset.DepositaryReceiptProcessingStatus1Code.mmPending);
+				code_lazy = () -> Arrays.asList(DepositaryReceiptProcessingStatus1Code.mmNoRecordFound, DepositaryReceiptProcessingStatus1Code.mmPending);
 				trace_lazy = () -> DepositaryReceiptProcessingStatusCode.mmObject();
 			}
 		});

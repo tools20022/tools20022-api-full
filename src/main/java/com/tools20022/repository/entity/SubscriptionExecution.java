@@ -19,8 +19,11 @@ package com.tools20022.repository.entity;
 
 import com.tools20022.metamodel.MMBusinessAttribute;
 import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.choice.SubscriptionOrRedemptionOrSwitchOrderExecutionDataChoice;
 import com.tools20022.repository.datatype.CurrencyAndAmount;
 import com.tools20022.repository.entity.InvestmentFundOrderExecution;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -35,32 +38,51 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
  * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.SubscriptionInformation
+ * SubscriptionInformation}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SubscriptionInformation1
+ * SubscriptionInformation1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SubscriptionExecution3
+ * SubscriptionExecution3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SubscriptionBulkExecution2
+ * SubscriptionBulkExecution2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SubscriptionExecution5
+ * SubscriptionExecution5}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SubscriptionBulkExecution3
+ * SubscriptionBulkExecution3}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SubscriptionExecution#mmEquityComponent
- * SubscriptionExecution.mmEquityComponent}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SubscriptionExecution#mmCashComponent
- * SubscriptionExecution.mmCashComponent}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SubscriptionExecution#mmInvestedNetAmount
- * SubscriptionExecution.mmInvestedNetAmount}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SubscriptionExecution#mmRefund
- * SubscriptionExecution.mmRefund}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SubscriptionExecution#mmSubscriptionInterest
- * SubscriptionExecution.mmSubscriptionInterest}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
- * subType} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SwitchExecutionSubscriptionLeg
- * SwitchExecutionSubscriptionLeg}</li>
+ * {@linkplain com.tools20022.repository.msg.SubscriptionBulkOrderConfirmation1
+ * SubscriptionBulkOrderConfirmation1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SubscriptionExecution4
+ * SubscriptionExecution4}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SubscriptionMultipleExecution2
+ * SubscriptionMultipleExecution2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SubscriptionExecution6
+ * SubscriptionExecution6}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SubscriptionMultipleExecution3
+ * SubscriptionMultipleExecution3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SubscriptionOrderConfirmation1
+ * SubscriptionOrderConfirmation1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SubscriptionExecution7
+ * SubscriptionExecution7}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SubscriptionExecution8
+ * SubscriptionExecution8}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SubscriptionExecution9
+ * SubscriptionExecution9}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SubscriptionMultipleExecution4
+ * SubscriptionMultipleExecution4}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SubscriptionBulkExecution4
+ * SubscriptionBulkExecution4}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SubscriptionMultipleExecution5
+ * SubscriptionMultipleExecution5}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SubscriptionExecution13
+ * SubscriptionExecution13}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SubscriptionExecution12
+ * SubscriptionExecution12}</li>
  * </ul>
  * </li>
  * <li>
@@ -116,51 +138,32 @@ import java.util.concurrent.atomic.AtomicReference;
  * superType} =
  * {@linkplain com.tools20022.repository.entity.InvestmentFundOrderExecution
  * InvestmentFundOrderExecution}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
+ * subType} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.SubscriptionInformation
- * SubscriptionInformation}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SubscriptionInformation1
- * SubscriptionInformation1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SubscriptionExecution3
- * SubscriptionExecution3}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SubscriptionBulkExecution2
- * SubscriptionBulkExecution2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SubscriptionExecution5
- * SubscriptionExecution5}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SubscriptionBulkExecution3
- * SubscriptionBulkExecution3}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SubscriptionBulkOrderConfirmation1
- * SubscriptionBulkOrderConfirmation1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SubscriptionExecution4
- * SubscriptionExecution4}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SubscriptionMultipleExecution2
- * SubscriptionMultipleExecution2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SubscriptionExecution6
- * SubscriptionExecution6}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SubscriptionMultipleExecution3
- * SubscriptionMultipleExecution3}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SubscriptionOrderConfirmation1
- * SubscriptionOrderConfirmation1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SubscriptionExecution7
- * SubscriptionExecution7}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SubscriptionExecution8
- * SubscriptionExecution8}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SubscriptionExecution9
- * SubscriptionExecution9}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SubscriptionMultipleExecution4
- * SubscriptionMultipleExecution4}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SubscriptionBulkExecution4
- * SubscriptionBulkExecution4}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SubscriptionMultipleExecution5
- * SubscriptionMultipleExecution5}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SubscriptionExecution13
- * SubscriptionExecution13}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SubscriptionExecution12
- * SubscriptionExecution12}</li>
+ * {@linkplain com.tools20022.repository.entity.SwitchExecutionSubscriptionLeg
+ * SwitchExecutionSubscriptionLeg}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SubscriptionExecution#mmEquityComponent
+ * SubscriptionExecution.mmEquityComponent}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SubscriptionExecution#mmCashComponent
+ * SubscriptionExecution.mmCashComponent}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SubscriptionExecution#mmInvestedNetAmount
+ * SubscriptionExecution.mmInvestedNetAmount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SubscriptionExecution#mmRefund
+ * SubscriptionExecution.mmRefund}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SubscriptionExecution#mmSubscriptionInterest
+ * SubscriptionExecution.mmSubscriptionInterest}</li>
  * </ul>
  * </li>
  * <li>
@@ -221,10 +224,10 @@ public class SubscriptionExecution extends InvestmentFundOrderExecution {
 	 */
 	public static final MMBusinessAttribute mmEquityComponent = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SubscriptionInformation.mmEquityComponent, com.tools20022.repository.msg.SubscriptionInformation1.mmEquityComponent);
+			derivation_lazy = () -> Arrays.asList(SubscriptionInformation.mmEquityComponent, SubscriptionInformation1.mmEquityComponent);
 			elementContext_lazy = () -> SubscriptionExecution.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "EquityComponent";
 			definition = "Amount subscribed into equity (not including dividends).";
 			maxOccurs = 1;
@@ -272,10 +275,10 @@ public class SubscriptionExecution extends InvestmentFundOrderExecution {
 	 */
 	public static final MMBusinessAttribute mmCashComponent = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SubscriptionInformation.mmCashComponent, com.tools20022.repository.msg.SubscriptionInformation1.mmCashComponent);
+			derivation_lazy = () -> Arrays.asList(SubscriptionInformation.mmCashComponent, SubscriptionInformation1.mmCashComponent);
 			elementContext_lazy = () -> SubscriptionExecution.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CashComponent";
 			definition = "Amount subscribed into cash.";
 			maxOccurs = 1;
@@ -350,13 +353,11 @@ public class SubscriptionExecution extends InvestmentFundOrderExecution {
 	 */
 	public static final MMBusinessAttribute mmInvestedNetAmount = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SubscriptionExecution3.mmNetAmount, com.tools20022.repository.msg.SubscriptionExecution5.mmNetAmount,
-					com.tools20022.repository.msg.SubscriptionExecution4.mmNetAmount, com.tools20022.repository.msg.SubscriptionExecution6.mmNetAmount, com.tools20022.repository.msg.SwitchSubscriptionLegExecution2.mmNetAmount,
-					com.tools20022.repository.msg.SwitchSubscriptionLegExecution3.mmNetAmount, com.tools20022.repository.msg.SubscriptionExecution9.mmNetAmount, com.tools20022.repository.msg.SubscriptionExecution13.mmNetAmount,
-					com.tools20022.repository.msg.SubscriptionExecution12.mmNetAmount, com.tools20022.repository.msg.SwitchSubscriptionLegExecution4.mmNetAmount);
+			derivation_lazy = () -> Arrays.asList(SubscriptionExecution3.mmNetAmount, SubscriptionExecution5.mmNetAmount, SubscriptionExecution4.mmNetAmount, SubscriptionExecution6.mmNetAmount, SwitchSubscriptionLegExecution2.mmNetAmount,
+					SwitchSubscriptionLegExecution3.mmNetAmount, SubscriptionExecution9.mmNetAmount, SubscriptionExecution13.mmNetAmount, SubscriptionExecution12.mmNetAmount, SwitchSubscriptionLegExecution4.mmNetAmount);
 			elementContext_lazy = () -> SubscriptionExecution.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InvestedNetAmount";
 			definition = "Net amount of money invested in a specific financial instrument by an investor, expressed in the currency requested by the investor.";
 			maxOccurs = 1;
@@ -420,12 +421,11 @@ public class SubscriptionExecution extends InvestmentFundOrderExecution {
 	 */
 	public static final MMBusinessAttribute mmRefund = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SubscriptionExecution3.mmRefund, com.tools20022.repository.msg.SubscriptionExecution5.mmRefund, com.tools20022.repository.msg.SubscriptionExecution4.mmRefund,
-					com.tools20022.repository.msg.SubscriptionExecution6.mmRefund, com.tools20022.repository.msg.SubscriptionExecution7.mmRefund, com.tools20022.repository.msg.SubscriptionExecution13.mmRefund,
-					com.tools20022.repository.msg.SubscriptionExecution12.mmRefund);
+			derivation_lazy = () -> Arrays.asList(SubscriptionExecution3.mmRefund, SubscriptionExecution5.mmRefund, SubscriptionExecution4.mmRefund, SubscriptionExecution6.mmRefund, SubscriptionExecution7.mmRefund,
+					SubscriptionExecution13.mmRefund, SubscriptionExecution12.mmRefund);
 			elementContext_lazy = () -> SubscriptionExecution.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Refund";
 			definition = "Return of cash that has been overpaid for a subscription.";
 			maxOccurs = 1;
@@ -491,13 +491,11 @@ public class SubscriptionExecution extends InvestmentFundOrderExecution {
 	 */
 	public static final MMBusinessAttribute mmSubscriptionInterest = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SubscriptionExecution3.mmSubscriptionInterest, com.tools20022.repository.msg.SubscriptionExecution5.mmSubscriptionInterest,
-					com.tools20022.repository.msg.SubscriptionExecution4.mmSubscriptionInterest, com.tools20022.repository.msg.SubscriptionExecution6.mmSubscriptionInterest,
-					com.tools20022.repository.msg.SubscriptionExecution7.mmSubscriptionInterest, com.tools20022.repository.msg.SubscriptionExecution13.mmSubscriptionInterest,
-					com.tools20022.repository.msg.SubscriptionExecution12.mmSubscriptionInterest);
+			derivation_lazy = () -> Arrays.asList(SubscriptionExecution3.mmSubscriptionInterest, SubscriptionExecution5.mmSubscriptionInterest, SubscriptionExecution4.mmSubscriptionInterest, SubscriptionExecution6.mmSubscriptionInterest,
+					SubscriptionExecution7.mmSubscriptionInterest, SubscriptionExecution13.mmSubscriptionInterest, SubscriptionExecution12.mmSubscriptionInterest);
 			elementContext_lazy = () -> SubscriptionExecution.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SubscriptionInterest";
 			definition = "Interest received when a subscription amount is paid in advance and then invested by the fund.";
 			maxOccurs = 1;
@@ -509,22 +507,19 @@ public class SubscriptionExecution extends InvestmentFundOrderExecution {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SubscriptionExecution";
 				definition = "Execution of a subscription order.";
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ISAYearsOfIssue1.mmCurrentYearSubscriptionDetails, com.tools20022.repository.msg.ISAYearsOfIssue4.mmCurrentYearSubscriptionDetails,
-						com.tools20022.repository.msg.ISAYearsOfIssue3.mmCurrentYearSubscriptionDetails, com.tools20022.repository.msg.ISAYearsOfIssue5.mmCurrentYearSubscriptionDetails,
-						com.tools20022.repository.msg.SubscriptionBulkExecution2.mmIndividualExecutionDetails, com.tools20022.repository.msg.SubscriptionBulkExecution3.mmIndividualExecutionDetails,
-						com.tools20022.repository.msg.SubscriptionBulkOrderConfirmation1.mmBulkExecutionDetails, com.tools20022.repository.msg.SubscriptionMultipleExecution2.mmIndividualExecutionDetails,
-						com.tools20022.repository.msg.SubscriptionMultipleExecution3.mmIndividualExecutionDetails, com.tools20022.repository.msg.SubscriptionOrderConfirmation1.mmMultipleExecutionDetails,
-						com.tools20022.repository.choice.SubscriptionOrRedemptionOrSwitchOrderExecutionDataChoice.mmSubscriptionDetails, com.tools20022.repository.msg.SubscriptionMultipleExecution4.mmIndividualExecutionDetails,
-						com.tools20022.repository.msg.SubscriptionBulkExecution4.mmIndividualExecutionDetails, com.tools20022.repository.msg.SubscriptionMultipleExecution5.mmIndividualExecutionDetails);
+				derivationElement_lazy = () -> Arrays.asList(ISAYearsOfIssue1.mmCurrentYearSubscriptionDetails, ISAYearsOfIssue4.mmCurrentYearSubscriptionDetails, ISAYearsOfIssue3.mmCurrentYearSubscriptionDetails,
+						ISAYearsOfIssue5.mmCurrentYearSubscriptionDetails, SubscriptionBulkExecution2.mmIndividualExecutionDetails, SubscriptionBulkExecution3.mmIndividualExecutionDetails,
+						SubscriptionBulkOrderConfirmation1.mmBulkExecutionDetails, SubscriptionMultipleExecution2.mmIndividualExecutionDetails, SubscriptionMultipleExecution3.mmIndividualExecutionDetails,
+						SubscriptionOrderConfirmation1.mmMultipleExecutionDetails, SubscriptionOrRedemptionOrSwitchOrderExecutionDataChoice.mmSubscriptionDetails, SubscriptionMultipleExecution4.mmIndividualExecutionDetails,
+						SubscriptionBulkExecution4.mmIndividualExecutionDetails, SubscriptionMultipleExecution5.mmIndividualExecutionDetails);
 				subType_lazy = () -> Arrays.asList(SwitchExecutionSubscriptionLeg.mmObject());
 				superType_lazy = () -> InvestmentFundOrderExecution.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SubscriptionExecution.mmEquityComponent, com.tools20022.repository.entity.SubscriptionExecution.mmCashComponent,
-						com.tools20022.repository.entity.SubscriptionExecution.mmInvestedNetAmount, com.tools20022.repository.entity.SubscriptionExecution.mmRefund,
-						com.tools20022.repository.entity.SubscriptionExecution.mmSubscriptionInterest);
+				element_lazy = () -> Arrays.asList(SubscriptionExecution.mmEquityComponent, SubscriptionExecution.mmCashComponent, SubscriptionExecution.mmInvestedNetAmount, SubscriptionExecution.mmRefund,
+						SubscriptionExecution.mmSubscriptionInterest);
 				derivationComponent_lazy = () -> Arrays.asList(SubscriptionInformation.mmObject(), SubscriptionInformation1.mmObject(), SubscriptionExecution3.mmObject(), SubscriptionBulkExecution2.mmObject(),
 						SubscriptionExecution5.mmObject(), SubscriptionBulkExecution3.mmObject(), SubscriptionBulkOrderConfirmation1.mmObject(), SubscriptionExecution4.mmObject(), SubscriptionMultipleExecution2.mmObject(),
 						SubscriptionExecution6.mmObject(), SubscriptionMultipleExecution3.mmObject(), SubscriptionOrderConfirmation1.mmObject(), SubscriptionExecution7.mmObject(), SubscriptionExecution8.mmObject(),

@@ -20,6 +20,7 @@ package com.tools20022.repository.area.tsmt;
 import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.TradeServicesManagementArchive;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.ISOArchive;
@@ -44,6 +45,9 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code tsmt.018.001.03}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.TradeServicesManagementArchive
@@ -104,9 +108,6 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code tsmt.018.001.03}</li>
- * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -163,10 +164,10 @@ public class FullPushThroughReportV03 {
 	public static final MMMessageBuildingBlock mmReportIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "RptId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportIdentification";
 			definition = "Identifies the report. ";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.FullPushThroughReportV04.mmReportIdentification);
+			nextVersions_lazy = () -> Arrays.asList(FullPushThroughReportV04.mmReportIdentification);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
@@ -211,10 +212,10 @@ public class FullPushThroughReportV03 {
 	public static final MMMessageBuildingBlock mmTransactionIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "TxId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionIdentification";
 			definition = "Unique identification assigned by the matching application to the transaction.\nThis identification is to be used in any communication between the parties.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.FullPushThroughReportV04.mmTransactionIdentification);
+			nextVersions_lazy = () -> Arrays.asList(FullPushThroughReportV04.mmTransactionIdentification);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> SimpleIdentificationInformation.mmObject();
@@ -258,10 +259,10 @@ public class FullPushThroughReportV03 {
 	public static final MMMessageBuildingBlock mmEstablishedBaselineIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "EstblishdBaselnId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EstablishedBaselineIdentification";
 			definition = "Unique identification assigned by the matching application to the baseline when it is established.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.FullPushThroughReportV04.mmEstablishedBaselineIdentification);
+			nextVersions_lazy = () -> Arrays.asList(FullPushThroughReportV04.mmEstablishedBaselineIdentification);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DocumentIdentification3.mmObject();
@@ -303,10 +304,10 @@ public class FullPushThroughReportV03 {
 	public static final MMMessageBuildingBlock mmTransactionStatus = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "TxSts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionStatus";
 			definition = "Identifies the status of the transaction by means of a code.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.FullPushThroughReportV04.mmTransactionStatus);
+			nextVersions_lazy = () -> Arrays.asList(FullPushThroughReportV04.mmTransactionStatus);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> TransactionStatus4.mmObject();
@@ -350,10 +351,10 @@ public class FullPushThroughReportV03 {
 	public static final MMMessageBuildingBlock mmUserTransactionReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "UsrTxRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UserTransactionReference";
 			definition = "Reference to the transaction for the financial institution which submitted the baseline.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.FullPushThroughReportV04.mmUserTransactionReference);
+			nextVersions_lazy = () -> Arrays.asList(FullPushThroughReportV04.mmUserTransactionReference);
 			maxOccurs = 2;
 			minOccurs = 0;
 			complexType_lazy = () -> DocumentIdentification5.mmObject();
@@ -393,10 +394,10 @@ public class FullPushThroughReportV03 {
 	public static final MMMessageBuildingBlock mmReportPurpose = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "RptPurp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportPurpose";
 			definition = "Specifies the type of report.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.FullPushThroughReportV04.mmReportPurpose);
+			nextVersions_lazy = () -> Arrays.asList(FullPushThroughReportV04.mmReportPurpose);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> ReportType1.mmObject();
@@ -437,10 +438,10 @@ public class FullPushThroughReportV03 {
 	public static final MMMessageBuildingBlock mmPushedThroughBaseline = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "PushdThrghBaseln";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PushedThroughBaseline";
 			definition = "Specifies the commercial details of the underlying transaction.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.FullPushThroughReportV04.mmPushedThroughBaseline);
+			nextVersions_lazy = () -> Arrays.asList(FullPushThroughReportV04.mmPushedThroughBaseline);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> Baseline3.mmObject();
@@ -482,10 +483,10 @@ public class FullPushThroughReportV03 {
 	public static final MMMessageBuildingBlock mmBuyerContactPerson = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "BuyrCtctPrsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BuyerContactPerson";
 			definition = "Person to be contacted in the organisation of the buyer. ";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.FullPushThroughReportV04.mmBuyerContactPerson);
+			nextVersions_lazy = () -> Arrays.asList(FullPushThroughReportV04.mmBuyerContactPerson);
 			minOccurs = 0;
 			complexType_lazy = () -> ContactIdentification1.mmObject();
 		}
@@ -526,10 +527,10 @@ public class FullPushThroughReportV03 {
 	public static final MMMessageBuildingBlock mmSellerContactPerson = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SellrCtctPrsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SellerContactPerson";
 			definition = "Person to be contacted in the organisation of the seller. ";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.FullPushThroughReportV04.mmSellerContactPerson);
+			nextVersions_lazy = () -> Arrays.asList(FullPushThroughReportV04.mmSellerContactPerson);
 			minOccurs = 0;
 			complexType_lazy = () -> ContactIdentification1.mmObject();
 		}
@@ -569,10 +570,10 @@ public class FullPushThroughReportV03 {
 	public static final MMMessageBuildingBlock mmBuyerBankContactPerson = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "BuyrBkCtctPrsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BuyerBankContactPerson";
 			definition = "Person to be contacted in the buyer's bank. ";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.FullPushThroughReportV04.mmBuyerBankContactPerson);
+			nextVersions_lazy = () -> Arrays.asList(FullPushThroughReportV04.mmBuyerBankContactPerson);
 			minOccurs = 0;
 			complexType_lazy = () -> ContactIdentification1.mmObject();
 		}
@@ -612,10 +613,10 @@ public class FullPushThroughReportV03 {
 	public static final MMMessageBuildingBlock mmSellerBankContactPerson = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SellrBkCtctPrsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SellerBankContactPerson";
 			definition = "Person to be contacted in the seller's bank. ";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.FullPushThroughReportV04.mmSellerBankContactPerson);
+			nextVersions_lazy = () -> Arrays.asList(FullPushThroughReportV04.mmSellerBankContactPerson);
 			minOccurs = 0;
 			complexType_lazy = () -> ContactIdentification1.mmObject();
 		}
@@ -657,10 +658,10 @@ public class FullPushThroughReportV03 {
 	public static final MMMessageBuildingBlock mmOtherBankContactPerson = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "OthrBkCtctPrsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherBankContactPerson";
 			definition = "Person to be contacted in another bank than the seller or buyer's bank.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.FullPushThroughReportV04.mmOtherBankContactPerson);
+			nextVersions_lazy = () -> Arrays.asList(FullPushThroughReportV04.mmOtherBankContactPerson);
 			minOccurs = 0;
 			complexType_lazy = () -> ContactIdentification3.mmObject();
 		}
@@ -700,10 +701,10 @@ public class FullPushThroughReportV03 {
 	public static final MMMessageBuildingBlock mmRequestForAction = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "ReqForActn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestForAction";
 			definition = "Information on the next processing step required.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.FullPushThroughReportV04.mmRequestForAction);
+			nextVersions_lazy = () -> Arrays.asList(FullPushThroughReportV04.mmRequestForAction);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> PendingActivity2.mmObject();
@@ -713,7 +714,7 @@ public class FullPushThroughReportV03 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FullPushThroughReportV03";
 				definition = "Scope\r\nThe FullPushThroughReport message is sent by the matching application to a party involved in a transaction.\r\nThis message is used to pass on information that the matching application has received from the submitter. The forwarded information can originate from an InitialBaselineSubmission or BaselineReSubmission or BaselineAmendmentRequest message.\r\nUsage\r\nThe FullPushThroughReport message can be sent by the matching application to a party to convey\r\n- the details of an InitialBaselineSubmission message that it has obtained,or\r\n- the details of a BaselineResubmission message that it has obtained,or\r\n- the details of a BaselineAmendmentRequest message that it has obtained.";
 				nextVersions_lazy = () -> Arrays.asList(FullPushThroughReportV04.mmObject());
@@ -721,13 +722,10 @@ public class FullPushThroughReportV03 {
 				rootElement = "Document";
 				xmlTag = "FullPushThrghRpt";
 				businessArea_lazy = () -> TradeServicesManagementArchive.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.FullPushThroughReportV03.mmReportIdentification, com.tools20022.repository.area.tsmt.FullPushThroughReportV03.mmTransactionIdentification,
-						com.tools20022.repository.area.tsmt.FullPushThroughReportV03.mmEstablishedBaselineIdentification, com.tools20022.repository.area.tsmt.FullPushThroughReportV03.mmTransactionStatus,
-						com.tools20022.repository.area.tsmt.FullPushThroughReportV03.mmUserTransactionReference, com.tools20022.repository.area.tsmt.FullPushThroughReportV03.mmReportPurpose,
-						com.tools20022.repository.area.tsmt.FullPushThroughReportV03.mmPushedThroughBaseline, com.tools20022.repository.area.tsmt.FullPushThroughReportV03.mmBuyerContactPerson,
-						com.tools20022.repository.area.tsmt.FullPushThroughReportV03.mmSellerContactPerson, com.tools20022.repository.area.tsmt.FullPushThroughReportV03.mmBuyerBankContactPerson,
-						com.tools20022.repository.area.tsmt.FullPushThroughReportV03.mmSellerBankContactPerson, com.tools20022.repository.area.tsmt.FullPushThroughReportV03.mmOtherBankContactPerson,
-						com.tools20022.repository.area.tsmt.FullPushThroughReportV03.mmRequestForAction);
+				messageBuildingBlock_lazy = () -> Arrays.asList(FullPushThroughReportV03.mmReportIdentification, FullPushThroughReportV03.mmTransactionIdentification, FullPushThroughReportV03.mmEstablishedBaselineIdentification,
+						FullPushThroughReportV03.mmTransactionStatus, FullPushThroughReportV03.mmUserTransactionReference, FullPushThroughReportV03.mmReportPurpose, FullPushThroughReportV03.mmPushedThroughBaseline,
+						FullPushThroughReportV03.mmBuyerContactPerson, FullPushThroughReportV03.mmSellerContactPerson, FullPushThroughReportV03.mmBuyerBankContactPerson, FullPushThroughReportV03.mmSellerBankContactPerson,
+						FullPushThroughReportV03.mmOtherBankContactPerson, FullPushThroughReportV03.mmRequestForAction);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "tsmt";

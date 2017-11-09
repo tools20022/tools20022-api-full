@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.BalanceStatus1Code
+ * BalanceStatus1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -44,13 +53,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.BalanceStatusCode#mmSettledRegistered
  * BalanceStatusCode.mmSettledRegistered}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.BalanceStatus1Code
- * BalanceStatus1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -100,7 +102,7 @@ public class BalanceStatusCode {
 	 */
 	public static final MMCode mmPending = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Pending";
 			definition = "Balance corresponding to the pending transactions.";
 			owner_lazy = () -> BalanceStatusCode.mmObject();
@@ -133,7 +135,7 @@ public class BalanceStatusCode {
 	 */
 	public static final MMCode mmSettled = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Settled";
 			definition = "Final status of a transaction when the associated transfer of cash has been successfully processed.";
 			owner_lazy = () -> BalanceStatusCode.mmObject();
@@ -166,7 +168,7 @@ public class BalanceStatusCode {
 	 */
 	public static final MMCode mmSuspended = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Suspended";
 			definition = "Balance corresponding to transactions that have been executed, but not yet settled.";
 			owner_lazy = () -> BalanceStatusCode.mmObject();
@@ -199,7 +201,7 @@ public class BalanceStatusCode {
 	 */
 	public static final MMCode mmSettledUnregistered = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SettledUnregistered";
 			definition = "Balance corresponding to transactions that have been executed and settled, but not yet fully registered on the books of the registrar.";
 			owner_lazy = () -> BalanceStatusCode.mmObject();
@@ -232,7 +234,7 @@ public class BalanceStatusCode {
 	 */
 	public static final MMCode mmSettledRegistered = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SettledRegistered";
 			definition = "Balance corresponding to transactions that have been executed, settled and fully registered.";
 			owner_lazy = () -> BalanceStatusCode.mmObject();
@@ -243,13 +245,12 @@ public class BalanceStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("PDNG");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "BalanceStatusCode";
 				definition = "Specifies the balance of transactions with a certain status.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.BalanceStatusCode.mmPending, com.tools20022.repository.codeset.BalanceStatusCode.mmSettled, com.tools20022.repository.codeset.BalanceStatusCode.mmSuspended,
-						com.tools20022.repository.codeset.BalanceStatusCode.mmSettledUnregistered, com.tools20022.repository.codeset.BalanceStatusCode.mmSettledRegistered);
+				code_lazy = () -> Arrays.asList(BalanceStatusCode.mmPending, BalanceStatusCode.mmSettled, BalanceStatusCode.mmSuspended, BalanceStatusCode.mmSettledUnregistered, BalanceStatusCode.mmSettledRegistered);
 				derivation_lazy = () -> Arrays.asList(BalanceStatus1Code.mmObject());
 			}
 		});

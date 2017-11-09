@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.PaymentReceiptCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -80,7 +82,7 @@ public class PaymentReceipt1Code extends PaymentReceiptCode {
 	 */
 	public static final MMCode mmPayment = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Payment";
 			owner_lazy = () -> PaymentReceipt1Code.mmObject();
 		}
@@ -103,7 +105,7 @@ public class PaymentReceipt1Code extends PaymentReceiptCode {
 	 */
 	public static final MMCode mmReceipt = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Receipt";
 			owner_lazy = () -> PaymentReceipt1Code.mmObject();
 		}
@@ -126,7 +128,7 @@ public class PaymentReceipt1Code extends PaymentReceiptCode {
 	 */
 	public static final MMCode mmNone = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "None";
 			owner_lazy = () -> PaymentReceipt1Code.mmObject();
 		}
@@ -135,11 +137,11 @@ public class PaymentReceipt1Code extends PaymentReceiptCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PaymentReceipt1Code";
 				definition = "Specifies if an operation is a payment, or a receipt or none.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PaymentReceipt1Code.mmPayment, com.tools20022.repository.codeset.PaymentReceipt1Code.mmReceipt, com.tools20022.repository.codeset.PaymentReceipt1Code.mmNone);
+				code_lazy = () -> Arrays.asList(PaymentReceipt1Code.mmPayment, PaymentReceipt1Code.mmReceipt, PaymentReceipt1Code.mmNone);
 				trace_lazy = () -> PaymentReceiptCode.mmObject();
 			}
 		});

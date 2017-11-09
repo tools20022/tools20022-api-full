@@ -17,9 +17,12 @@
 
 package com.tools20022.repository.entity;
 
+import com.tools20022.metamodel.MMAggregation;
 import com.tools20022.metamodel.MMBusinessAssociationEnd;
 import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.TradePartyRole;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -34,25 +37,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CommercialTradePartyRole#mmCommercialTrade
- * CommercialTradePartyRole.mmCommercialTrade}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
- * subType} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.ShipFrom ShipFrom}</li>
- * <li>{@linkplain com.tools20022.repository.entity.ShipTo ShipTo}</li>
- * <li>{@linkplain com.tools20022.repository.entity.ObligorBank ObligorBank}</li>
- * <li>{@linkplain com.tools20022.repository.entity.RecipientBank RecipientBank}
- * </li>
- * <li>{@linkplain com.tools20022.repository.entity.BillTo BillTo}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
  * associationDomain} =
@@ -64,6 +48,25 @@ import java.util.List;
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
  * superType} = {@linkplain com.tools20022.repository.entity.TradePartyRole
  * TradePartyRole}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
+ * subType} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.ShipFrom ShipFrom}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.ShipTo ShipTo}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.ObligorBank ObligorBank}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.RecipientBank RecipientBank}
+ * </li>
+ * <li>{@linkplain com.tools20022.repository.entity.BillTo BillTo}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CommercialTradePartyRole#mmCommercialTrade
+ * CommercialTradePartyRole.mmCommercialTrade}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -120,12 +123,12 @@ public class CommercialTradePartyRole extends TradePartyRole {
 		{
 			elementContext_lazy = () -> CommercialTradePartyRole.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CommercialTrade";
 			definition = "Identifies the trade for which a party plays a role.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.CommercialTrade.mmPartyRole;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.CommercialTrade.mmObject();
 		}
 	};
@@ -133,14 +136,14 @@ public class CommercialTradePartyRole extends TradePartyRole {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CommercialTradePartyRole";
 				definition = "Role played by a party in the context of a trade.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CommercialTrade.mmPartyRole);
 				subType_lazy = () -> Arrays.asList(ShipFrom.mmObject(), ShipTo.mmObject(), ObligorBank.mmObject(), RecipientBank.mmObject(), BillTo.mmObject());
 				superType_lazy = () -> TradePartyRole.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CommercialTradePartyRole.mmCommercialTrade);
+				element_lazy = () -> Arrays.asList(CommercialTradePartyRole.mmCommercialTrade);
 			}
 		});
 		return mmObject_lazy.get();

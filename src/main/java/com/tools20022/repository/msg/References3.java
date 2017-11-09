@@ -20,9 +20,12 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.acmt.*;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.Max70Text;
 import com.tools20022.repository.entity.SecuritiesTradeIdentification;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -134,7 +137,7 @@ public class References3 {
 			componentContext_lazy = () -> References3.mmObject();
 			isDerived = false;
 			xmlTag = "MsgId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageIdentification";
 			definition = "Identifies a message by a unique identifier and the date and time when the message was created by the sender.";
 			maxOccurs = 1;
@@ -175,7 +178,7 @@ public class References3 {
 			componentContext_lazy = () -> References3.mmObject();
 			isDerived = false;
 			xmlTag = "ReqToBeCmpltdId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestToBeCompletedIdentification";
 			definition = "Identification of the request message that has to be completed.";
 			maxOccurs = 1;
@@ -221,7 +224,7 @@ public class References3 {
 			componentContext_lazy = () -> References3.mmObject();
 			isDerived = false;
 			xmlTag = "PrcId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProcessIdentification";
 			definition = "Identifies a process by a unique identifier and the date and time when the first message belonging to the process was created by the sender. The process identification remains the same in all messages belonging to the same process, from the initial request message to the final account report closing the process.";
 			maxOccurs = 1;
@@ -262,7 +265,7 @@ public class References3 {
 			componentContext_lazy = () -> References3.mmObject();
 			isDerived = false;
 			xmlTag = "ReqRsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestReason";
 			definition = "Reason of the request.";
 			minOccurs = 1;
@@ -302,7 +305,7 @@ public class References3 {
 			componentContext_lazy = () -> References3.mmObject();
 			isDerived = false;
 			xmlTag = "AttchdDocNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AttachedDocumentName";
 			definition = "File name of a document logically related to the request.";
 			minOccurs = 0;
@@ -313,15 +316,13 @@ public class References3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.References3.mmMessageIdentification, com.tools20022.repository.msg.References3.mmRequestToBeCompletedIdentification,
-						com.tools20022.repository.msg.References3.mmProcessIdentification, com.tools20022.repository.msg.References3.mmRequestReason, com.tools20022.repository.msg.References3.mmAttachedDocumentName);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountAdditionalInformationRequestV01.mmReferences,
-						com.tools20022.repository.area.acmt.AccountAdditionalInformationRequestV02.mmReferences, com.tools20022.repository.area.acmt.AccountClosingAdditionalInformationRequestV01.mmReferences,
-						com.tools20022.repository.area.acmt.AccountClosingAdditionalInformationRequestV02.mmReferences, com.tools20022.repository.area.acmt.AccountOpeningAdditionalInformationRequestV01.mmReferences,
-						com.tools20022.repository.area.acmt.AccountOpeningAdditionalInformationRequestV02.mmReferences);
+				messageElement_lazy = () -> Arrays.asList(References3.mmMessageIdentification, References3.mmRequestToBeCompletedIdentification, References3.mmProcessIdentification, References3.mmRequestReason,
+						References3.mmAttachedDocumentName);
+				messageBuildingBlock_lazy = () -> Arrays.asList(AccountAdditionalInformationRequestV01.mmReferences, AccountAdditionalInformationRequestV02.mmReferences, AccountClosingAdditionalInformationRequestV01.mmReferences,
+						AccountClosingAdditionalInformationRequestV02.mmReferences, AccountOpeningAdditionalInformationRequestV01.mmReferences, AccountOpeningAdditionalInformationRequestV02.mmReferences);
 				trace_lazy = () -> SecuritiesTradeIdentification.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "References3";
 				definition = "Set of elements for the identification of the message and related references.";
 			}

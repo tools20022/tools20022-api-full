@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.OptionPartyCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -81,7 +83,7 @@ public class OptionParty1Code extends OptionPartyCode {
 	 */
 	public static final MMCode mmSeller = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Seller";
 			owner_lazy = () -> OptionParty1Code.mmObject();
 		}
@@ -104,7 +106,7 @@ public class OptionParty1Code extends OptionPartyCode {
 	 */
 	public static final MMCode mmBuyer = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Buyer";
 			owner_lazy = () -> OptionParty1Code.mmObject();
 		}
@@ -113,12 +115,12 @@ public class OptionParty1Code extends OptionPartyCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("SLLR");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OptionParty1Code";
 				definition = "Specifies if a trade party is a buyer or a seller.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OptionParty1Code.mmSeller, com.tools20022.repository.codeset.OptionParty1Code.mmBuyer);
+				code_lazy = () -> Arrays.asList(OptionParty1Code.mmSeller, OptionParty1Code.mmBuyer);
 				trace_lazy = () -> OptionPartyCode.mmObject();
 			}
 		});

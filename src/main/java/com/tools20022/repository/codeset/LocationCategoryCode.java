@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -28,6 +30,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.LocationCategory1Code
+ * LocationCategory1Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.LocationCategory2Code
+ * LocationCategory2Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.LocationCategory3Code
+ * LocationCategory3Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -66,17 +79,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.LocationCategoryCode#mmVendingMachine
  * LocationCategoryCode.mmVendingMachine}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.LocationCategory1Code
- * LocationCategory1Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.LocationCategory2Code
- * LocationCategory2Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.LocationCategory3Code
- * LocationCategory3Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -128,7 +130,7 @@ public class LocationCategoryCode {
 	 */
 	public static final MMCode mmFixed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Fixed";
 			definition = "Fixed location, for example in a shop.";
 			owner_lazy = () -> LocationCategoryCode.mmObject();
@@ -158,7 +160,7 @@ public class LocationCategoryCode {
 	 */
 	public static final MMCode mmAboard = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Aboard";
 			definition = "Aboard a bus, train, ship, airplane, taxi, etc.";
 			owner_lazy = () -> LocationCategoryCode.mmObject();
@@ -188,7 +190,7 @@ public class LocationCategoryCode {
 	 */
 	public static final MMCode mmNomadic = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Nomadic";
 			definition = "Nomadic location.";
 			owner_lazy = () -> LocationCategoryCode.mmObject();
@@ -218,7 +220,7 @@ public class LocationCategoryCode {
 	 */
 	public static final MMCode mmMailOrderTelephoneOrder = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MailOrderTelephoneOrder";
 			definition = "Mail order or telephone order.";
 			owner_lazy = () -> LocationCategoryCode.mmObject();
@@ -248,7 +250,7 @@ public class LocationCategoryCode {
 	 */
 	public static final MMCode mmHome = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Home";
 			definition = "Customer home.";
 			owner_lazy = () -> LocationCategoryCode.mmObject();
@@ -278,7 +280,7 @@ public class LocationCategoryCode {
 	 */
 	public static final MMCode mmIndoor = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Indoor";
 			definition = "Indoor terminal.";
 			owner_lazy = () -> LocationCategoryCode.mmObject();
@@ -308,7 +310,7 @@ public class LocationCategoryCode {
 	 */
 	public static final MMCode mmInsidePump = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InsidePump";
 			definition = "Terminal incorporated in the pump dispensing petrol.";
 			owner_lazy = () -> LocationCategoryCode.mmObject();
@@ -338,7 +340,7 @@ public class LocationCategoryCode {
 	 */
 	public static final MMCode mmMultiplePump = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MultiplePump";
 			definition = "Outdoor terminal serving several petrol pumps.";
 			owner_lazy = () -> LocationCategoryCode.mmObject();
@@ -368,7 +370,7 @@ public class LocationCategoryCode {
 	 */
 	public static final MMCode mmMultiplePOITerminal = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MultiplePOITerminal";
 			definition = "Multiple terminals linked to a unique sale terminal.";
 			owner_lazy = () -> LocationCategoryCode.mmObject();
@@ -398,7 +400,7 @@ public class LocationCategoryCode {
 	 */
 	public static final MMCode mmMultipleSaleTerminal = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MultipleSaleTerminal";
 			definition = "Terminal serving multiple sale terminals.";
 			owner_lazy = () -> LocationCategoryCode.mmObject();
@@ -428,7 +430,7 @@ public class LocationCategoryCode {
 	 */
 	public static final MMCode mmSingleSaleTerminal = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SingleSaleTerminal";
 			definition = "Terminal linked to a unique sale terminal.";
 			owner_lazy = () -> LocationCategoryCode.mmObject();
@@ -458,7 +460,7 @@ public class LocationCategoryCode {
 	 */
 	public static final MMCode mmVendingMachine = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VendingMachine";
 			definition = "Terminal integrated in a vending machine.";
 			owner_lazy = () -> LocationCategoryCode.mmObject();
@@ -469,16 +471,14 @@ public class LocationCategoryCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("FIXD");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "LocationCategoryCode";
 				definition = "Location category code of the place where the merchant actually performed the transaction.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.LocationCategoryCode.mmFixed, com.tools20022.repository.codeset.LocationCategoryCode.mmAboard,
-						com.tools20022.repository.codeset.LocationCategoryCode.mmNomadic, com.tools20022.repository.codeset.LocationCategoryCode.mmMailOrderTelephoneOrder, com.tools20022.repository.codeset.LocationCategoryCode.mmHome,
-						com.tools20022.repository.codeset.LocationCategoryCode.mmIndoor, com.tools20022.repository.codeset.LocationCategoryCode.mmInsidePump, com.tools20022.repository.codeset.LocationCategoryCode.mmMultiplePump,
-						com.tools20022.repository.codeset.LocationCategoryCode.mmMultiplePOITerminal, com.tools20022.repository.codeset.LocationCategoryCode.mmMultipleSaleTerminal,
-						com.tools20022.repository.codeset.LocationCategoryCode.mmSingleSaleTerminal, com.tools20022.repository.codeset.LocationCategoryCode.mmVendingMachine);
+				code_lazy = () -> Arrays.asList(LocationCategoryCode.mmFixed, LocationCategoryCode.mmAboard, LocationCategoryCode.mmNomadic, LocationCategoryCode.mmMailOrderTelephoneOrder, LocationCategoryCode.mmHome,
+						LocationCategoryCode.mmIndoor, LocationCategoryCode.mmInsidePump, LocationCategoryCode.mmMultiplePump, LocationCategoryCode.mmMultiplePOITerminal, LocationCategoryCode.mmMultipleSaleTerminal,
+						LocationCategoryCode.mmSingleSaleTerminal, LocationCategoryCode.mmVendingMachine);
 				derivation_lazy = () -> Arrays.asList(LocationCategory1Code.mmObject(), LocationCategory2Code.mmObject(), LocationCategory3Code.mmObject());
 			}
 		});

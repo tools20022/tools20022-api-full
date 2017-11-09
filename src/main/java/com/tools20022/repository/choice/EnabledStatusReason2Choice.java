@@ -20,7 +20,9 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.EnabledStatusReason1Code;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification36;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -121,11 +123,10 @@ public class EnabledStatusReason2Choice {
 			componentContext_lazy = () -> EnabledStatusReason2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Cd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Reason for the enabled account status expressed as a code.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.DisabledStatusReason2Choice.mmCode, com.tools20022.repository.choice.ProformaStatusReason2Choice.mmCode,
-					com.tools20022.repository.choice.AccountStatusUpdateInstructionReason2Choice.mmCode);
+			nextVersions_lazy = () -> Arrays.asList(DisabledStatusReason2Choice.mmCode, ProformaStatusReason2Choice.mmCode, AccountStatusUpdateInstructionReason2Choice.mmCode);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> EnabledStatusReason1Code.mmObject();
@@ -179,11 +180,10 @@ public class EnabledStatusReason2Choice {
 			componentContext_lazy = () -> EnabledStatusReason2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Reason for the enabled account status expressed as a proprietary code.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.DisabledStatusReason2Choice.mmProprietary, com.tools20022.repository.choice.ProformaStatusReason2Choice.mmProprietary,
-					com.tools20022.repository.choice.AccountStatusUpdateInstructionReason2Choice.mmProprietary);
+			nextVersions_lazy = () -> Arrays.asList(DisabledStatusReason2Choice.mmProprietary, ProformaStatusReason2Choice.mmProprietary, AccountStatusUpdateInstructionReason2Choice.mmProprietary);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -194,9 +194,9 @@ public class EnabledStatusReason2Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.EnabledStatusReason2Choice.mmCode, com.tools20022.repository.choice.EnabledStatusReason2Choice.mmProprietary);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(EnabledStatusReason2Choice.mmCode, EnabledStatusReason2Choice.mmProprietary);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "EnabledStatusReason2Choice";
 				definition = "Choice of formats for an enabled reason code.";
 				nextVersions_lazy = () -> Arrays.asList(DisabledStatusReason2Choice.mmObject(), ProformaStatusReason2Choice.mmObject(), AccountStatusUpdateInstructionReason2Choice.mmObject());

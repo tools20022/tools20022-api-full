@@ -19,8 +19,10 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ContentType1Code;
 import com.tools20022.repository.datatype.Max10000Binary;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -107,10 +109,10 @@ public class EncapsulatedContent1 {
 			componentContext_lazy = () -> EncapsulatedContent1.mmObject();
 			isDerived = false;
 			xmlTag = "CnttTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ContentType";
 			definition = "Type of data which have been authenticated.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.EncapsulatedContent2.mmContentType);
+			nextVersions_lazy = () -> Arrays.asList(EncapsulatedContent2.mmContentType);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ContentType1Code.mmObject();
@@ -158,10 +160,10 @@ public class EncapsulatedContent1 {
 			componentContext_lazy = () -> EncapsulatedContent1.mmObject();
 			isDerived = false;
 			xmlTag = "Cntt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Content";
 			definition = "Actual data to authenticate.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.EncapsulatedContent2.mmContent);
+			nextVersions_lazy = () -> Arrays.asList(EncapsulatedContent2.mmContent);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max10000Binary.mmObject();
@@ -171,9 +173,9 @@ public class EncapsulatedContent1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.EncapsulatedContent1.mmContentType, com.tools20022.repository.msg.EncapsulatedContent1.mmContent);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(EncapsulatedContent1.mmContentType, EncapsulatedContent1.mmContent);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "EncapsulatedContent1";
 				definition = "Data to authenticate.";
 				nextVersions_lazy = () -> Arrays.asList(EncapsulatedContent2.mmObject());

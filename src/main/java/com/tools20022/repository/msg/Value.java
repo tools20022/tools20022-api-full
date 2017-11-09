@@ -19,8 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ActiveOrHistoricCurrencyAndAmount;
 import com.tools20022.repository.entity.CashEntry;
+import com.tools20022.repository.entity.CurrencyExchange;
+import com.tools20022.repository.GeneratedRepository;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -103,11 +106,11 @@ public class Value {
 	 */
 	public static final MMMessageAttribute mmBaseCurrencyItem = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashEntry.mmAmount;
+			businessElementTrace_lazy = () -> CashEntry.mmAmount;
 			componentContext_lazy = () -> Value.mmObject();
 			isDerived = false;
 			xmlTag = "BaseCcyItm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BaseCurrencyItem";
 			definition = "Specifies the amount in the base currency of the receiver.";
 			maxOccurs = 1;
@@ -150,11 +153,11 @@ public class Value {
 	 */
 	public static final MMMessageAttribute mmAlternateCurrencyItem = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmResultingAmount;
+			businessElementTrace_lazy = () -> CurrencyExchange.mmResultingAmount;
 			componentContext_lazy = () -> Value.mmObject();
 			isDerived = false;
 			xmlTag = "AltrnCcyItm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AlternateCurrencyItem";
 			definition = "Specifies the amount in another currency.";
 			minOccurs = 1;
@@ -165,10 +168,10 @@ public class Value {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Value.mmBaseCurrencyItem, com.tools20022.repository.msg.Value.mmAlternateCurrencyItem);
+				messageElement_lazy = () -> Arrays.asList(Value.mmBaseCurrencyItem, Value.mmAlternateCurrencyItem);
 				trace_lazy = () -> CashEntry.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
 						return DateFormat.getDateInstance(java.text.DateFormat.LONG).parse("September 9, 2016");

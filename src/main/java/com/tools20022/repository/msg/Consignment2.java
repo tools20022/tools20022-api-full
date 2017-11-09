@@ -19,9 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.Consignee;
 import com.tools20022.repository.entity.Consignor;
 import com.tools20022.repository.entity.Transport;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -118,10 +120,10 @@ public class Consignment2 {
 			componentContext_lazy = () -> Consignment2.mmObject();
 			isDerived = false;
 			xmlTag = "Consgnr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Consignor";
 			definition = "Party consigning goods as stipulated in the transport contract by the party ordering transport.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Consignment4.mmConsignor);
+			nextVersions_lazy = () -> Arrays.asList(Consignment4.mmConsignor);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -171,10 +173,10 @@ public class Consignment2 {
 			componentContext_lazy = () -> Consignment2.mmObject();
 			isDerived = false;
 			xmlTag = "Consgn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Consignee";
 			definition = "Party to which goods are consigned.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Consignment4.mmConsignee);
+			nextVersions_lazy = () -> Arrays.asList(Consignment4.mmConsignee);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -228,10 +230,10 @@ public class Consignment2 {
 			componentContext_lazy = () -> Consignment2.mmObject();
 			isDerived = false;
 			xmlTag = "TrnsprtMeans";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransportMeans";
 			definition = "Particular aircraft, vehicle, vessel or other device used for the transport of a consignment.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Consignment4.mmTransportMeans);
+			nextVersions_lazy = () -> Arrays.asList(Consignment4.mmTransportMeans);
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.TransportMeans3.mmObject();
@@ -241,10 +243,10 @@ public class Consignment2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Consignment2.mmConsignor, com.tools20022.repository.msg.Consignment2.mmConsignee, com.tools20022.repository.msg.Consignment2.mmTransportMeans);
+				messageElement_lazy = () -> Arrays.asList(Consignment2.mmConsignor, Consignment2.mmConsignee, Consignment2.mmTransportMeans);
 				trace_lazy = () -> Transport.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Consignment2";
 				definition = "Specifies the arrangement of the transport of goods and services and the parties involved in this process.";
 				nextVersions_lazy = () -> Arrays.asList(Consignment4.mmObject());

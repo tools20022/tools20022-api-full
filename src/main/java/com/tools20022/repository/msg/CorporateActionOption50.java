@@ -20,11 +20,11 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.*;
 import com.tools20022.repository.datatype.RestrictedFINXMax35Text;
-import com.tools20022.repository.entity.CashAccount;
-import com.tools20022.repository.entity.CorporateActionOption;
-import com.tools20022.repository.entity.SafekeepingPlace;
+import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -128,11 +128,11 @@ public class CorporateActionOption50 {
 	 */
 	public static final MMMessageAssociationEnd mmOptionNumber = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionOption.mmOptionNumber;
+			businessElementTrace_lazy = () -> CorporateActionOption.mmOptionNumber;
 			componentContext_lazy = () -> CorporateActionOption50.mmObject();
 			isDerived = false;
 			xmlTag = "OptnNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionNumber";
 			definition = "Number identifying the available corporate action options.";
 			maxOccurs = 1;
@@ -177,11 +177,11 @@ public class CorporateActionOption50 {
 	 */
 	public static final MMMessageAssociationEnd mmOptionType = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionOption.mmOptionType;
+			businessElementTrace_lazy = () -> CorporateActionOption.mmOptionType;
 			componentContext_lazy = () -> CorporateActionOption50.mmObject();
 			isDerived = false;
 			xmlTag = "OptnTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionType";
 			definition = "Specifies the corporate action options available to the account owner.";
 			maxOccurs = 1;
@@ -225,11 +225,11 @@ public class CorporateActionOption50 {
 	 */
 	public static final MMMessageAssociationEnd mmAccountOwner = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> CorporateActionOption50.mmObject();
 			isDerived = false;
 			xmlTag = "AcctOwnr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountOwner";
 			definition = "Party that owns the account.";
 			maxOccurs = 1;
@@ -274,11 +274,11 @@ public class CorporateActionOption50 {
 	 */
 	public static final MMMessageAttribute mmSafekeepingAccount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionServicing.mmSecuritiesAccount;
+			businessElementTrace_lazy = () -> CorporateActionServicing.mmSecuritiesAccount;
 			componentContext_lazy = () -> CorporateActionOption50.mmObject();
 			isDerived = false;
 			xmlTag = "SfkpgAcct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingAccount";
 			definition = "Account where financial instruments are maintained.";
 			maxOccurs = 1;
@@ -324,7 +324,7 @@ public class CorporateActionOption50 {
 			componentContext_lazy = () -> CorporateActionOption50.mmObject();
 			isDerived = false;
 			xmlTag = "CshAcct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashAccount";
 			definition = "Account on which a securities entry is made.";
 			maxOccurs = 1;
@@ -373,7 +373,7 @@ public class CorporateActionOption50 {
 			componentContext_lazy = () -> CorporateActionOption50.mmObject();
 			isDerived = false;
 			xmlTag = "SfkpgPlc";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlace";
 			definition = "Location where the financial instruments are/will be safekept.";
 			maxOccurs = 1;
@@ -417,11 +417,11 @@ public class CorporateActionOption50 {
 	 */
 	public static final MMMessageAssociationEnd mmFinancialInstrumentIdentification = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmIdentification;
+			businessElementTrace_lazy = () -> Security.mmIdentification;
 			componentContext_lazy = () -> CorporateActionOption50.mmObject();
 			isDerived = false;
 			xmlTag = "FinInstrmId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentIdentification";
 			definition = "Identifies the financial instrument.";
 			maxOccurs = 1;
@@ -467,11 +467,11 @@ public class CorporateActionOption50 {
 	 */
 	public static final MMMessageAssociationEnd mmTotalEligibleBalance = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEntitlement.mmEligibleBalance;
+			businessElementTrace_lazy = () -> CorporateActionEntitlement.mmEligibleBalance;
 			componentContext_lazy = () -> CorporateActionOption50.mmObject();
 			isDerived = false;
 			xmlTag = "TtlElgblBal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalEligibleBalance";
 			definition = "Total balance of securities eligible for this corporate action event. The entitlement calculation is based on this balance.";
 			maxOccurs = 1;
@@ -514,11 +514,11 @@ public class CorporateActionOption50 {
 	 */
 	public static final MMMessageAssociationEnd mmInstructedBalance = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEntitlement.mmInstructedBalance;
+			businessElementTrace_lazy = () -> CorporateActionEntitlement.mmInstructedBalance;
 			componentContext_lazy = () -> CorporateActionOption50.mmObject();
 			isDerived = false;
 			xmlTag = "InstdBal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructedBalance";
 			definition = "Balance of instructed position.";
 			maxOccurs = 1;
@@ -561,11 +561,11 @@ public class CorporateActionOption50 {
 	 */
 	public static final MMMessageAssociationEnd mmUninstructedBalance = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEntitlement.mmUninstructedBalance;
+			businessElementTrace_lazy = () -> CorporateActionEntitlement.mmUninstructedBalance;
 			componentContext_lazy = () -> CorporateActionOption50.mmObject();
 			isDerived = false;
 			xmlTag = "UinstdBal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UninstructedBalance";
 			definition = "Balance of uninstructed position.";
 			maxOccurs = 1;
@@ -610,7 +610,7 @@ public class CorporateActionOption50 {
 			componentContext_lazy = () -> CorporateActionOption50.mmObject();
 			isDerived = false;
 			xmlTag = "StsQtyOrQtyToRcv";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusQuantityOrQuantityToReceive";
 			definition = "Specifies whether the quantity of financial instrument is a status quantity or a quantity to receive.";
 			maxOccurs = 1;
@@ -623,14 +623,12 @@ public class CorporateActionOption50 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionOption50.mmOptionNumber, com.tools20022.repository.msg.CorporateActionOption50.mmOptionType,
-						com.tools20022.repository.msg.CorporateActionOption50.mmAccountOwner, com.tools20022.repository.msg.CorporateActionOption50.mmSafekeepingAccount, com.tools20022.repository.msg.CorporateActionOption50.mmCashAccount,
-						com.tools20022.repository.msg.CorporateActionOption50.mmSafekeepingPlace, com.tools20022.repository.msg.CorporateActionOption50.mmFinancialInstrumentIdentification,
-						com.tools20022.repository.msg.CorporateActionOption50.mmTotalEligibleBalance, com.tools20022.repository.msg.CorporateActionOption50.mmInstructedBalance,
-						com.tools20022.repository.msg.CorporateActionOption50.mmUninstructedBalance, com.tools20022.repository.msg.CorporateActionOption50.mmStatusQuantityOrQuantityToReceive);
+				messageElement_lazy = () -> Arrays.asList(CorporateActionOption50.mmOptionNumber, CorporateActionOption50.mmOptionType, CorporateActionOption50.mmAccountOwner, CorporateActionOption50.mmSafekeepingAccount,
+						CorporateActionOption50.mmCashAccount, CorporateActionOption50.mmSafekeepingPlace, CorporateActionOption50.mmFinancialInstrumentIdentification, CorporateActionOption50.mmTotalEligibleBalance,
+						CorporateActionOption50.mmInstructedBalance, CorporateActionOption50.mmUninstructedBalance, CorporateActionOption50.mmStatusQuantityOrQuantityToReceive);
 				trace_lazy = () -> CorporateActionOption.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionOption50";
 				definition = "Provides information about the corporate action option.";
 			}

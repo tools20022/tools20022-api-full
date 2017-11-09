@@ -19,7 +19,9 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.RequestedIndicator;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -108,7 +110,7 @@ public class BusinessDayReturnCriteria2 {
 			componentContext_lazy = () -> BusinessDayReturnCriteria2.mmObject();
 			isDerived = false;
 			xmlTag = "SysDtInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SystemDateIndicator";
 			definition = "Indicates whether the system date is requested.";
 			maxOccurs = 1;
@@ -150,7 +152,7 @@ public class BusinessDayReturnCriteria2 {
 			componentContext_lazy = () -> BusinessDayReturnCriteria2.mmObject();
 			isDerived = false;
 			xmlTag = "SysStsInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SystemStatusIndicator";
 			definition = "Indicates whether the system status is requested.";
 			maxOccurs = 1;
@@ -192,7 +194,7 @@ public class BusinessDayReturnCriteria2 {
 			componentContext_lazy = () -> BusinessDayReturnCriteria2.mmObject();
 			isDerived = false;
 			xmlTag = "SysCcyInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SystemCurrencyIndicator";
 			definition = "Indicates whether the system currency is requested.";
 			maxOccurs = 1;
@@ -234,7 +236,7 @@ public class BusinessDayReturnCriteria2 {
 			componentContext_lazy = () -> BusinessDayReturnCriteria2.mmObject();
 			isDerived = false;
 			xmlTag = "ClsrPrdInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClosurePeriodIndicator";
 			definition = "Indicates whether the closure information is requested.";
 			maxOccurs = 1;
@@ -276,7 +278,7 @@ public class BusinessDayReturnCriteria2 {
 			componentContext_lazy = () -> BusinessDayReturnCriteria2.mmObject();
 			isDerived = false;
 			xmlTag = "EvtInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventIndicator";
 			definition = "Indicates whether the events are requested.";
 			maxOccurs = 1;
@@ -318,7 +320,7 @@ public class BusinessDayReturnCriteria2 {
 			componentContext_lazy = () -> BusinessDayReturnCriteria2.mmObject();
 			isDerived = false;
 			xmlTag = "SsnPrdInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SessionPeriodIndicator";
 			definition = "Indicates whether the session period is requested.";
 			maxOccurs = 1;
@@ -360,7 +362,7 @@ public class BusinessDayReturnCriteria2 {
 			componentContext_lazy = () -> BusinessDayReturnCriteria2.mmObject();
 			isDerived = false;
 			xmlTag = "EvtTpInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventTypeIndicator";
 			definition = "Indicates whether the system event type is requested.";
 			maxOccurs = 1;
@@ -372,12 +374,10 @@ public class BusinessDayReturnCriteria2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BusinessDayReturnCriteria2.mmSystemDateIndicator, com.tools20022.repository.msg.BusinessDayReturnCriteria2.mmSystemStatusIndicator,
-						com.tools20022.repository.msg.BusinessDayReturnCriteria2.mmSystemCurrencyIndicator, com.tools20022.repository.msg.BusinessDayReturnCriteria2.mmClosurePeriodIndicator,
-						com.tools20022.repository.msg.BusinessDayReturnCriteria2.mmEventIndicator, com.tools20022.repository.msg.BusinessDayReturnCriteria2.mmSessionPeriodIndicator,
-						com.tools20022.repository.msg.BusinessDayReturnCriteria2.mmEventTypeIndicator);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(BusinessDayReturnCriteria2.mmSystemDateIndicator, BusinessDayReturnCriteria2.mmSystemStatusIndicator, BusinessDayReturnCriteria2.mmSystemCurrencyIndicator,
+						BusinessDayReturnCriteria2.mmClosurePeriodIndicator, BusinessDayReturnCriteria2.mmEventIndicator, BusinessDayReturnCriteria2.mmSessionPeriodIndicator, BusinessDayReturnCriteria2.mmEventTypeIndicator);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "BusinessDayReturnCriteria2";
 				definition = "Defines the criteria used to report on business day information.";
 			}

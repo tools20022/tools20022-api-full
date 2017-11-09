@@ -19,9 +19,11 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.TransactionType2Code;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.InvestmentFundTransaction;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -100,11 +102,11 @@ public class TransactionType1CodeChoice {
 	 */
 	public static final MMMessageAttribute mmStructured = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundTransaction.mmType;
+			businessElementTrace_lazy = () -> InvestmentFundTransaction.mmType;
 			componentContext_lazy = () -> TransactionType1CodeChoice.mmObject();
 			isDerived = false;
 			xmlTag = "Strd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Structured";
 			definition = "Transaction type in a structured format.";
 			maxOccurs = 1;
@@ -147,11 +149,11 @@ public class TransactionType1CodeChoice {
 	 */
 	public static final MMMessageAttribute mmUnstructured = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundTransaction.mmType;
+			businessElementTrace_lazy = () -> InvestmentFundTransaction.mmType;
 			componentContext_lazy = () -> TransactionType1CodeChoice.mmObject();
 			isDerived = false;
 			xmlTag = "Ustrd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unstructured";
 			definition = "Transaction type in free text form.";
 			maxOccurs = 1;
@@ -163,10 +165,10 @@ public class TransactionType1CodeChoice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.TransactionType1CodeChoice.mmStructured, com.tools20022.repository.choice.TransactionType1CodeChoice.mmUnstructured);
+				messageElement_lazy = () -> Arrays.asList(TransactionType1CodeChoice.mmStructured, TransactionType1CodeChoice.mmUnstructured);
 				trace_lazy = () -> InvestmentFundTransaction.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TransactionType1CodeChoice";
 				definition = "Choice of formats for the transaction type.";
 			}

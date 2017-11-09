@@ -20,10 +20,10 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
-import com.tools20022.repository.entity.Agreement;
-import com.tools20022.repository.entity.BuyerRole;
-import com.tools20022.repository.entity.Document;
-import com.tools20022.repository.entity.SellerRole;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.tsin.FinancialInvoiceV01;
+import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -139,10 +139,10 @@ public class TradeAgreement6 {
 			componentContext_lazy = () -> TradeAgreement6.mmObject();
 			isDerived = false;
 			xmlTag = "Buyr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Buyer";
 			definition = "Party that is specified as the buyer for this trade agreement.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TradeAgreement13.mmBuyer);
+			nextVersions_lazy = () -> Arrays.asList(TradeAgreement13.mmBuyer);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -194,10 +194,10 @@ public class TradeAgreement6 {
 			componentContext_lazy = () -> TradeAgreement6.mmObject();
 			isDerived = false;
 			xmlTag = "Sellr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Seller";
 			definition = "Party that is specified as the seller for this trade agreement.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TradeAgreement13.mmSeller);
+			nextVersions_lazy = () -> Arrays.asList(TradeAgreement13.mmSeller);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -248,14 +248,14 @@ public class TradeAgreement6 {
 	 */
 	public static final MMMessageAttribute mmQuotationDocumentIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmIdentification;
+			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> TradeAgreement6.mmObject();
 			isDerived = false;
 			xmlTag = "QtnDocId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuotationDocumentIdentification";
 			definition = "Quotation document referenced from this trade agreement.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TradeAgreement13.mmQuotationDocumentIdentification);
+			nextVersions_lazy = () -> Arrays.asList(TradeAgreement13.mmQuotationDocumentIdentification);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.DocumentIdentification22.mmObject();
@@ -305,14 +305,14 @@ public class TradeAgreement6 {
 	 */
 	public static final MMMessageAttribute mmContractDocumentIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmIdentification;
+			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> TradeAgreement6.mmObject();
 			isDerived = false;
 			xmlTag = "CtrctDocId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ContractDocumentIdentification";
 			definition = "Contract document referenced from this trade agreement.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TradeAgreement13.mmContractDocumentIdentification);
+			nextVersions_lazy = () -> Arrays.asList(TradeAgreement13.mmContractDocumentIdentification);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.DocumentIdentification22.mmObject();
@@ -363,14 +363,14 @@ public class TradeAgreement6 {
 	 */
 	public static final MMMessageAttribute mmBuyerOrderIdentificationDocument = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmIdentification;
+			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> TradeAgreement6.mmObject();
 			isDerived = false;
 			xmlTag = "BuyrOrdrIdDoc";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BuyerOrderIdentificationDocument";
 			definition = "Buyer order document referenced from this trade agreement.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TradeAgreement13.mmBuyerOrderIdentificationDocument);
+			nextVersions_lazy = () -> Arrays.asList(TradeAgreement13.mmBuyerOrderIdentificationDocument);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.DocumentIdentification22.mmObject();
@@ -423,10 +423,10 @@ public class TradeAgreement6 {
 			componentContext_lazy = () -> TradeAgreement6.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlRefDoc";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalReferenceDocument";
 			definition = "Additional document referenced from this trade agreement.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TradeAgreement13.mmAdditionalReferenceDocument);
+			nextVersions_lazy = () -> Arrays.asList(TradeAgreement13.mmAdditionalReferenceDocument);
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.DocumentGeneralInformation2.mmObject();
@@ -474,14 +474,14 @@ public class TradeAgreement6 {
 	 */
 	public static final MMMessageAssociationEnd mmIncoterms = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Transport.mmIncoterms;
+			businessElementTrace_lazy = () -> Transport.mmIncoterms;
 			componentContext_lazy = () -> TradeAgreement6.mmObject();
 			isDerived = false;
 			xmlTag = "Incotrms";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Incoterms";
 			definition = "Specifies the applicable Incoterm and associated location.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TradeAgreement13.mmIncoterms);
+			nextVersions_lazy = () -> Arrays.asList(TradeAgreement13.mmIncoterms);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -492,14 +492,12 @@ public class TradeAgreement6 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TradeAgreement6.mmBuyer, com.tools20022.repository.msg.TradeAgreement6.mmSeller,
-						com.tools20022.repository.msg.TradeAgreement6.mmQuotationDocumentIdentification, com.tools20022.repository.msg.TradeAgreement6.mmContractDocumentIdentification,
-						com.tools20022.repository.msg.TradeAgreement6.mmBuyerOrderIdentificationDocument, com.tools20022.repository.msg.TradeAgreement6.mmAdditionalReferenceDocument,
-						com.tools20022.repository.msg.TradeAgreement6.mmIncoterms);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsin.FinancialInvoiceV01.mmTradeAgreement);
+				messageElement_lazy = () -> Arrays.asList(TradeAgreement6.mmBuyer, TradeAgreement6.mmSeller, TradeAgreement6.mmQuotationDocumentIdentification, TradeAgreement6.mmContractDocumentIdentification,
+						TradeAgreement6.mmBuyerOrderIdentificationDocument, TradeAgreement6.mmAdditionalReferenceDocument, TradeAgreement6.mmIncoterms);
+				messageBuildingBlock_lazy = () -> Arrays.asList(FinancialInvoiceV01.mmTradeAgreement);
 				trace_lazy = () -> Agreement.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TradeAgreement6";
 				definition = "Contractual details related to the agreement between parties.";
 				nextVersions_lazy = () -> Arrays.asList(TradeAgreement13.mmObject());

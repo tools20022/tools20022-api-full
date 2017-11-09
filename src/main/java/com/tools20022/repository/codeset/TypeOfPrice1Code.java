@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.TypeOfPriceCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -112,7 +114,7 @@ public class TypeOfPrice1Code extends TypeOfPriceCode {
 	 */
 	public static final MMCode mmAverage = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Average";
 			owner_lazy = () -> TypeOfPrice1Code.mmObject();
 		}
@@ -135,7 +137,7 @@ public class TypeOfPrice1Code extends TypeOfPriceCode {
 	 */
 	public static final MMCode mmAverageOverride = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AverageOverride";
 			owner_lazy = () -> TypeOfPrice1Code.mmObject();
 		}
@@ -158,7 +160,7 @@ public class TypeOfPrice1Code extends TypeOfPriceCode {
 	 */
 	public static final MMCode mmCombined = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Combined";
 			owner_lazy = () -> TypeOfPrice1Code.mmObject();
 		}
@@ -181,7 +183,7 @@ public class TypeOfPrice1Code extends TypeOfPriceCode {
 	 */
 	public static final MMCode mmGrossOfAll = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GrossOfAll";
 			owner_lazy = () -> TypeOfPrice1Code.mmObject();
 		}
@@ -204,7 +206,7 @@ public class TypeOfPrice1Code extends TypeOfPriceCode {
 	 */
 	public static final MMCode mmLimit = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Limit";
 			owner_lazy = () -> TypeOfPrice1Code.mmObject();
 		}
@@ -227,7 +229,7 @@ public class TypeOfPrice1Code extends TypeOfPriceCode {
 	 */
 	public static final MMCode mmNet = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Net";
 			owner_lazy = () -> TypeOfPrice1Code.mmObject();
 		}
@@ -250,7 +252,7 @@ public class TypeOfPrice1Code extends TypeOfPriceCode {
 	 */
 	public static final MMCode mmNetDisclosed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetDisclosed";
 			owner_lazy = () -> TypeOfPrice1Code.mmObject();
 		}
@@ -273,7 +275,7 @@ public class TypeOfPrice1Code extends TypeOfPriceCode {
 	 */
 	public static final MMCode mmNetOfAll = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetOfAll";
 			owner_lazy = () -> TypeOfPrice1Code.mmObject();
 		}
@@ -296,7 +298,7 @@ public class TypeOfPrice1Code extends TypeOfPriceCode {
 	 */
 	public static final MMCode mmNetUndisclosed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetUndisclosed";
 			owner_lazy = () -> TypeOfPrice1Code.mmObject();
 		}
@@ -319,7 +321,7 @@ public class TypeOfPrice1Code extends TypeOfPriceCode {
 	 */
 	public static final MMCode mmNotionalGross = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotionalGross";
 			owner_lazy = () -> TypeOfPrice1Code.mmObject();
 		}
@@ -342,7 +344,7 @@ public class TypeOfPrice1Code extends TypeOfPriceCode {
 	 */
 	public static final MMCode mmParValue = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ParValue";
 			owner_lazy = () -> TypeOfPrice1Code.mmObject();
 		}
@@ -365,7 +367,7 @@ public class TypeOfPrice1Code extends TypeOfPriceCode {
 	 */
 	public static final MMCode mmRoundedAverage = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RoundedAverage";
 			owner_lazy = () -> TypeOfPrice1Code.mmObject();
 		}
@@ -388,7 +390,7 @@ public class TypeOfPrice1Code extends TypeOfPriceCode {
 	 */
 	public static final MMCode mmStop = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Stop";
 			owner_lazy = () -> TypeOfPrice1Code.mmObject();
 		}
@@ -397,16 +399,14 @@ public class TypeOfPrice1Code extends TypeOfPriceCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("AVER");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TypeOfPrice1Code";
 				definition = "Specifies the type of price and information about the price.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TypeOfPrice1Code.mmAverage, com.tools20022.repository.codeset.TypeOfPrice1Code.mmAverageOverride,
-						com.tools20022.repository.codeset.TypeOfPrice1Code.mmCombined, com.tools20022.repository.codeset.TypeOfPrice1Code.mmGrossOfAll, com.tools20022.repository.codeset.TypeOfPrice1Code.mmLimit,
-						com.tools20022.repository.codeset.TypeOfPrice1Code.mmNet, com.tools20022.repository.codeset.TypeOfPrice1Code.mmNetDisclosed, com.tools20022.repository.codeset.TypeOfPrice1Code.mmNetOfAll,
-						com.tools20022.repository.codeset.TypeOfPrice1Code.mmNetUndisclosed, com.tools20022.repository.codeset.TypeOfPrice1Code.mmNotionalGross, com.tools20022.repository.codeset.TypeOfPrice1Code.mmParValue,
-						com.tools20022.repository.codeset.TypeOfPrice1Code.mmRoundedAverage, com.tools20022.repository.codeset.TypeOfPrice1Code.mmStop);
+				code_lazy = () -> Arrays.asList(TypeOfPrice1Code.mmAverage, TypeOfPrice1Code.mmAverageOverride, TypeOfPrice1Code.mmCombined, TypeOfPrice1Code.mmGrossOfAll, TypeOfPrice1Code.mmLimit, TypeOfPrice1Code.mmNet,
+						TypeOfPrice1Code.mmNetDisclosed, TypeOfPrice1Code.mmNetOfAll, TypeOfPrice1Code.mmNetUndisclosed, TypeOfPrice1Code.mmNotionalGross, TypeOfPrice1Code.mmParValue, TypeOfPrice1Code.mmRoundedAverage,
+						TypeOfPrice1Code.mmStop);
 				trace_lazy = () -> TypeOfPriceCode.mmObject();
 			}
 		});

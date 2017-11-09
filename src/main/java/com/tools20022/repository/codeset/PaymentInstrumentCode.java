@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -28,6 +30,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.PaymentInstrument1Code
+ * PaymentInstrument1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -60,13 +69,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.PaymentInstrumentCode#mmCancellationRequest
  * PaymentInstrumentCode.mmCancellationRequest}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.PaymentInstrument1Code
- * PaymentInstrument1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -121,7 +123,7 @@ public class PaymentInstrumentCode {
 	 */
 	public static final MMCode mmBankDebitTransfer = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BankDebitTransfer";
 			definition = "Direct debit instruction in which the debtor and the creditor are financial institutions.";
 			owner_lazy = () -> PaymentInstrumentCode.mmObject();
@@ -154,7 +156,7 @@ public class PaymentInstrumentCode {
 	 */
 	public static final MMCode mmBankCreditTransfer = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BankCreditTransfer";
 			definition = "Funds transfer in which the debtor and the creditor are financial institutions.";
 			owner_lazy = () -> PaymentInstrumentCode.mmObject();
@@ -187,7 +189,7 @@ public class PaymentInstrumentCode {
 	 */
 	public static final MMCode mmCustomerDebitTransfer = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CustomerDebitTransfer";
 			definition = "Direct debit instruction in which the debtor or the creditor or both are non-financial institutions.";
 			owner_lazy = () -> PaymentInstrumentCode.mmObject();
@@ -220,7 +222,7 @@ public class PaymentInstrumentCode {
 	 */
 	public static final MMCode mmCustomerCreditTransfer = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CustomerCreditTransfer";
 			definition = "Funds transfer in which the debtor or the creditor or both are non-financial institutions.";
 			owner_lazy = () -> PaymentInstrumentCode.mmObject();
@@ -254,7 +256,7 @@ public class PaymentInstrumentCode {
 	 */
 	public static final MMCode mmCheque = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Cheque";
 			definition = "Payment instrument is a cheque. (A written order on which instructions are given to an account holder (a financial institution) to pay a stated sum to a named recipient (the payee)).";
 			owner_lazy = () -> PaymentInstrumentCode.mmObject();
@@ -286,7 +288,7 @@ public class PaymentInstrumentCode {
 	 */
 	public static final MMCode mmBookTransfer = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BookTransfer";
 			definition = "Transfer that is a movement of cash on the books of the account servicer.";
 			owner_lazy = () -> PaymentInstrumentCode.mmObject();
@@ -319,7 +321,7 @@ public class PaymentInstrumentCode {
 	 */
 	public static final MMCode mmDebitCardPayment = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DebitCardPayment";
 			definition = "Payment instrument is a debit card. (The payment originated using a debit card scheme.)";
 			owner_lazy = () -> PaymentInstrumentCode.mmObject();
@@ -352,7 +354,7 @@ public class PaymentInstrumentCode {
 	 */
 	public static final MMCode mmCreditCardPayment = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CreditCardPayment";
 			definition = "Payment instrument is a credit card. (The payment originated using a credit card scheme.)";
 			owner_lazy = () -> PaymentInstrumentCode.mmObject();
@@ -382,7 +384,7 @@ public class PaymentInstrumentCode {
 	 */
 	public static final MMCode mmReturn = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Return";
 			definition = "Entry related to a returned or unpaid item.";
 			owner_lazy = () -> PaymentInstrumentCode.mmObject();
@@ -415,7 +417,7 @@ public class PaymentInstrumentCode {
 	 */
 	public static final MMCode mmCancellationRequest = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CancellationRequest";
 			definition = "Reverse entry that is the result of the cancellation of a previously booked entry.";
 			owner_lazy = () -> PaymentInstrumentCode.mmObject();
@@ -426,16 +428,14 @@ public class PaymentInstrumentCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("BDT");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PaymentInstrumentCode";
 				definition = "Specifies the payment instrument used or the underlying financial transaction that resulted in a payment transaction.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PaymentInstrumentCode.mmBankDebitTransfer, com.tools20022.repository.codeset.PaymentInstrumentCode.mmBankCreditTransfer,
-						com.tools20022.repository.codeset.PaymentInstrumentCode.mmCustomerDebitTransfer, com.tools20022.repository.codeset.PaymentInstrumentCode.mmCustomerCreditTransfer,
-						com.tools20022.repository.codeset.PaymentInstrumentCode.mmCheque, com.tools20022.repository.codeset.PaymentInstrumentCode.mmBookTransfer, com.tools20022.repository.codeset.PaymentInstrumentCode.mmDebitCardPayment,
-						com.tools20022.repository.codeset.PaymentInstrumentCode.mmCreditCardPayment, com.tools20022.repository.codeset.PaymentInstrumentCode.mmReturn,
-						com.tools20022.repository.codeset.PaymentInstrumentCode.mmCancellationRequest);
+				code_lazy = () -> Arrays.asList(PaymentInstrumentCode.mmBankDebitTransfer, PaymentInstrumentCode.mmBankCreditTransfer, PaymentInstrumentCode.mmCustomerDebitTransfer, PaymentInstrumentCode.mmCustomerCreditTransfer,
+						PaymentInstrumentCode.mmCheque, PaymentInstrumentCode.mmBookTransfer, PaymentInstrumentCode.mmDebitCardPayment, PaymentInstrumentCode.mmCreditCardPayment, PaymentInstrumentCode.mmReturn,
+						PaymentInstrumentCode.mmCancellationRequest);
 				derivation_lazy = () -> Arrays.asList(PaymentInstrument1Code.mmObject());
 			}
 		});

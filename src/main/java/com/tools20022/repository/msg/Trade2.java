@@ -20,13 +20,15 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.SecurityIdentification22Choice;
 import com.tools20022.repository.codeset.*;
 import com.tools20022.repository.datatype.AnyBICIdentifier;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.Max70Text;
-import com.tools20022.repository.entity.TreasuryTrade;
+import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -133,7 +135,7 @@ public class Trade2 {
 			componentContext_lazy = () -> Trade2.mmObject();
 			isDerived = false;
 			xmlTag = "TradId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeIdentification";
 			definition = "Unique reference identification assigned to the trade by the instructing party. This reference will be used throughout the trade life cycle to identify the particular trade.";
 			maxOccurs = 1;
@@ -175,11 +177,11 @@ public class Trade2 {
 	 */
 	public static final MMMessageAttribute mmTradeDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Trade.mmTradeDateTime;
+			businessElementTrace_lazy = () -> Trade.mmTradeDateTime;
 			componentContext_lazy = () -> Trade2.mmObject();
 			isDerived = false;
 			xmlTag = "TradDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeDate";
 			definition = "Specifies the date on which the trade was executed.";
 			maxOccurs = 1;
@@ -220,7 +222,7 @@ public class Trade2 {
 			componentContext_lazy = () -> Trade2.mmObject();
 			isDerived = false;
 			xmlTag = "FXTradPdct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForeignExchangeTradeProduct";
 			definition = "Specifies the underlying product type.";
 			maxOccurs = 1;
@@ -262,11 +264,11 @@ public class Trade2 {
 	 */
 	public static final MMMessageAttribute mmTradingCurrency = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradingMarket.mmTradingCurrency;
+			businessElementTrace_lazy = () -> TradingMarket.mmTradingCurrency;
 			componentContext_lazy = () -> Trade2.mmObject();
 			isDerived = false;
 			xmlTag = "TradgCcy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradingCurrency";
 			definition = "Specifies the ISO code of the trade currency.";
 			maxOccurs = 1;
@@ -307,7 +309,7 @@ public class Trade2 {
 			componentContext_lazy = () -> Trade2.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmCcy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementCurrency";
 			definition = "Settlement currency of the trade, agreed by both sides of the trade.";
 			maxOccurs = 1;
@@ -348,7 +350,7 @@ public class Trade2 {
 			componentContext_lazy = () -> Trade2.mmObject();
 			isDerived = false;
 			xmlTag = "TradgMtd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradingMethod";
 			definition = "Identifies the type of trading method.";
 			maxOccurs = 1;
@@ -389,7 +391,7 @@ public class Trade2 {
 			componentContext_lazy = () -> Trade2.mmObject();
 			isDerived = false;
 			xmlTag = "TradgMd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradingMode";
 			definition = "Identifies the type of the trade mode.";
 			maxOccurs = 1;
@@ -431,7 +433,7 @@ public class Trade2 {
 			componentContext_lazy = () -> Trade2.mmObject();
 			isDerived = false;
 			xmlTag = "ClrMtd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClearingMethod";
 			definition = "Clearing method of the trade, agreed by both sides of the trade.";
 			maxOccurs = 1;
@@ -471,7 +473,7 @@ public class Trade2 {
 			componentContext_lazy = () -> Trade2.mmObject();
 			isDerived = false;
 			xmlTag = "Symb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Symbol";
 			definition = "Symbol of the trade.";
 			maxOccurs = 1;
@@ -515,11 +517,11 @@ public class Trade2 {
 	 */
 	public static final MMMessageAttribute mmPlaceOfConfirmation = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Market.mmGeographicalEnvironment;
+			businessElementTrace_lazy = () -> Market.mmGeographicalEnvironment;
 			componentContext_lazy = () -> Trade2.mmObject();
 			isDerived = false;
 			xmlTag = "PlcOfConf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceOfConfirmation";
 			definition = "Infrastructure where the trade confirmation will take place.";
 			maxOccurs = 1;
@@ -560,7 +562,7 @@ public class Trade2 {
 			componentContext_lazy = () -> Trade2.mmObject();
 			isDerived = false;
 			xmlTag = "FXDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForeignExchangeDetails";
 			definition = "Provides details of the foreign exchange trade including Spot Forward and NDF.";
 			maxOccurs = 1;
@@ -603,7 +605,7 @@ public class Trade2 {
 			componentContext_lazy = () -> Trade2.mmObject();
 			isDerived = false;
 			xmlTag = "SwpLeg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SwapLeg";
 			definition = "Provides details about each leg of the multileg instrument (foreign exchange swap).";
 			minOccurs = 0;
@@ -648,11 +650,11 @@ public class Trade2 {
 	 */
 	public static final MMMessageAssociationEnd mmProductIdentification = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradeIdentification.mmIdentification;
+			businessElementTrace_lazy = () -> TradeIdentification.mmIdentification;
 			componentContext_lazy = () -> Trade2.mmObject();
 			isDerived = false;
 			xmlTag = "PdctId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProductIdentification";
 			definition = "Identification of the treasury trade product, as assigned under a formal or proprietary identification scheme.";
 			maxOccurs = 1;
@@ -693,7 +695,7 @@ public class Trade2 {
 			componentContext_lazy = () -> Trade2.mmObject();
 			isDerived = false;
 			xmlTag = "AssoctdTradRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AssociatedTradeReference";
 			definition = "Some associated trade reference needs to be specified.";
 			minOccurs = 0;
@@ -704,14 +706,11 @@ public class Trade2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Trade2.mmTradeIdentification, com.tools20022.repository.msg.Trade2.mmTradeDate, com.tools20022.repository.msg.Trade2.mmForeignExchangeTradeProduct,
-						com.tools20022.repository.msg.Trade2.mmTradingCurrency, com.tools20022.repository.msg.Trade2.mmSettlementCurrency, com.tools20022.repository.msg.Trade2.mmTradingMethod,
-						com.tools20022.repository.msg.Trade2.mmTradingMode, com.tools20022.repository.msg.Trade2.mmClearingMethod, com.tools20022.repository.msg.Trade2.mmSymbol, com.tools20022.repository.msg.Trade2.mmPlaceOfConfirmation,
-						com.tools20022.repository.msg.Trade2.mmForeignExchangeDetails, com.tools20022.repository.msg.Trade2.mmSwapLeg, com.tools20022.repository.msg.Trade2.mmProductIdentification,
-						com.tools20022.repository.msg.Trade2.mmAssociatedTradeReference);
+				messageElement_lazy = () -> Arrays.asList(Trade2.mmTradeIdentification, Trade2.mmTradeDate, Trade2.mmForeignExchangeTradeProduct, Trade2.mmTradingCurrency, Trade2.mmSettlementCurrency, Trade2.mmTradingMethod,
+						Trade2.mmTradingMode, Trade2.mmClearingMethod, Trade2.mmSymbol, Trade2.mmPlaceOfConfirmation, Trade2.mmForeignExchangeDetails, Trade2.mmSwapLeg, Trade2.mmProductIdentification, Trade2.mmAssociatedTradeReference);
 				trace_lazy = () -> TreasuryTrade.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Trade2";
 				definition = "Details of the foreign exchange trade including spot\\forward\\NDF\\swap that is confirmed .";
 			}

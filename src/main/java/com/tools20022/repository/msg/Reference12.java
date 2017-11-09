@@ -19,7 +19,9 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -102,7 +104,7 @@ public class Reference12 {
 			componentContext_lazy = () -> Reference12.mmObject();
 			isDerived = false;
 			xmlTag = "BidId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BidIdentification";
 			definition = "Unique identifier for bid response as assigned by sell-side (broker, exchange, electronic communication network).";
 			maxOccurs = 1;
@@ -143,7 +145,7 @@ public class Reference12 {
 			componentContext_lazy = () -> Reference12.mmObject();
 			isDerived = false;
 			xmlTag = "ClntBidId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClientBidIdentification";
 			definition = "Unique identifier for a bid request as assigned by institution.";
 			maxOccurs = 1;
@@ -186,7 +188,7 @@ public class Reference12 {
 			componentContext_lazy = () -> Reference12.mmObject();
 			isDerived = false;
 			xmlTag = "IOIId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IOIIdentification";
 			definition = "Unique identifier of the indication of interest message. Required for previously indicated orders.";
 			maxOccurs = 1;
@@ -227,7 +229,7 @@ public class Reference12 {
 			componentContext_lazy = () -> Reference12.mmObject();
 			isDerived = false;
 			xmlTag = "QtId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuoteIdentification";
 			definition = "Unique identifier for quote. Required for previously quoted orders.";
 			maxOccurs = 1;
@@ -267,7 +269,7 @@ public class Reference12 {
 			componentContext_lazy = () -> Reference12.mmObject();
 			isDerived = false;
 			xmlTag = "RefOrdrId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReferenceOrderIdentification";
 			definition = "Unique identifier of  the order being hit or taken.";
 			maxOccurs = 1;
@@ -279,10 +281,10 @@ public class Reference12 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Reference12.mmBidIdentification, com.tools20022.repository.msg.Reference12.mmClientBidIdentification,
-						com.tools20022.repository.msg.Reference12.mmIOIIdentification, com.tools20022.repository.msg.Reference12.mmQuoteIdentification, com.tools20022.repository.msg.Reference12.mmReferenceOrderIdentification);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(Reference12.mmBidIdentification, Reference12.mmClientBidIdentification, Reference12.mmIOIIdentification, Reference12.mmQuoteIdentification,
+						Reference12.mmReferenceOrderIdentification);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Reference12";
 				definition = "Additional references linked to the list order.";
 			}

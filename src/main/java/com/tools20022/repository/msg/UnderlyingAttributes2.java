@@ -20,12 +20,14 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.SettlementType2Choice;
 import com.tools20022.repository.choice.UnitOrFaceAmountChoice;
 import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.PercentageRate;
-import com.tools20022.repository.entity.Asset;
+import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -141,11 +143,11 @@ public class UnderlyingAttributes2 {
 	 */
 	public static final MMMessageAttribute mmAllocationPercentage = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Allocation.mmPercentage;
+			businessElementTrace_lazy = () -> Allocation.mmPercentage;
 			componentContext_lazy = () -> UnderlyingAttributes2.mmObject();
 			isDerived = false;
 			xmlTag = "AllcnPctg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AllocationPercentage";
 			definition = "Percent of the strike price that this underlying represents.";
 			maxOccurs = 1;
@@ -188,11 +190,11 @@ public class UnderlyingAttributes2 {
 	 */
 	public static final MMMessageAssociationEnd mmQuantity = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmSecuritiesQuantity;
+			businessElementTrace_lazy = () -> Security.mmSecuritiesQuantity;
 			componentContext_lazy = () -> UnderlyingAttributes2.mmObject();
 			isDerived = false;
 			xmlTag = "Qty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Quantity";
 			definition = "Unit amount of the underlying security.";
 			maxOccurs = 1;
@@ -241,11 +243,11 @@ public class UnderlyingAttributes2 {
 	 */
 	public static final MMMessageAttribute mmSettlementType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Option.mmSettlementType;
+			businessElementTrace_lazy = () -> Option.mmSettlementType;
 			componentContext_lazy = () -> UnderlyingAttributes2.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementType";
 			definition = "Indicates order settlement period for the underlying instrument. Represents the number of days until settlement; for example, 2 means T+1 settlement, 4 means T+3 settlement, 5 means T+4 settlement.";
 			maxOccurs = 1;
@@ -293,11 +295,11 @@ public class UnderlyingAttributes2 {
 	 */
 	public static final MMMessageAttribute mmCashAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Derivative.mmNotionalCurrencyAndAmount;
+			businessElementTrace_lazy = () -> Derivative.mmNotionalCurrencyAndAmount;
 			componentContext_lazy = () -> UnderlyingAttributes2.mmObject();
 			isDerived = false;
 			xmlTag = "CshAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashAmount";
 			definition = "Cash amount associated with the underlying component. Necessary for derivatives that deliver into more than one underlying instrument and one of the underlying's is a fixed cash value.";
 			maxOccurs = 1;
@@ -342,7 +344,7 @@ public class UnderlyingAttributes2 {
 			componentContext_lazy = () -> UnderlyingAttributes2.mmObject();
 			isDerived = false;
 			xmlTag = "CshTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashType";
 			definition = "Represents how the cash will be calculated. Indicates that the cash is either fixed or a difference value (difference between strike and current underlying price).";
 			maxOccurs = 1;
@@ -387,11 +389,11 @@ public class UnderlyingAttributes2 {
 	 */
 	public static final MMMessageAttribute mmPrice = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmPricing;
+			businessElementTrace_lazy = () -> Security.mmPricing;
 			componentContext_lazy = () -> UnderlyingAttributes2.mmObject();
 			isDerived = false;
 			xmlTag = "Pric";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Price";
 			definition = "In a financing deal, clean price (percent-of-par or per unit) of the underlying security or basket.";
 			maxOccurs = 1;
@@ -436,11 +438,11 @@ public class UnderlyingAttributes2 {
 	 */
 	public static final MMMessageAttribute mmDirtyPrice = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Debt.mmDirtyPrice;
+			businessElementTrace_lazy = () -> Debt.mmDirtyPrice;
 			componentContext_lazy = () -> UnderlyingAttributes2.mmObject();
 			isDerived = false;
 			xmlTag = "DrtyPric";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DirtyPrice";
 			definition = "In a financing deal, price (percent-of-par or per unit) of the underlying security or basket. \"Dirty\" means it includes accrued interest.";
 			maxOccurs = 1;
@@ -485,11 +487,11 @@ public class UnderlyingAttributes2 {
 	 */
 	public static final MMMessageAttribute mmEndPrice = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmPricing;
+			businessElementTrace_lazy = () -> Security.mmPricing;
 			componentContext_lazy = () -> UnderlyingAttributes2.mmObject();
 			isDerived = false;
 			xmlTag = "EndPric";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EndPrice";
 			definition = "In a financing deal, price (percent-of-par or per unit) of the underlying security or basket at the end of the agreement.";
 			maxOccurs = 1;
@@ -536,11 +538,11 @@ public class UnderlyingAttributes2 {
 	 */
 	public static final MMMessageAttribute mmStartValue = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Collateral.mmValuation;
+			businessElementTrace_lazy = () -> Collateral.mmValuation;
 			componentContext_lazy = () -> UnderlyingAttributes2.mmObject();
 			isDerived = false;
 			xmlTag = "StartVal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StartValue";
 			definition = "Currency value attributed to this collateral at the start of the agreement.";
 			maxOccurs = 1;
@@ -584,11 +586,11 @@ public class UnderlyingAttributes2 {
 	 */
 	public static final MMMessageAttribute mmCurrentValue = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Collateral.mmValuation;
+			businessElementTrace_lazy = () -> Collateral.mmValuation;
 			componentContext_lazy = () -> UnderlyingAttributes2.mmObject();
 			isDerived = false;
 			xmlTag = "CurVal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrentValue";
 			definition = "Currency value currently attributed to this collateral.";
 			maxOccurs = 1;
@@ -634,11 +636,11 @@ public class UnderlyingAttributes2 {
 	 */
 	public static final MMMessageAttribute mmEndValue = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Collateral.mmValuation;
+			businessElementTrace_lazy = () -> Collateral.mmValuation;
 			componentContext_lazy = () -> UnderlyingAttributes2.mmObject();
 			isDerived = false;
 			xmlTag = "EndVal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EndValue";
 			definition = "Currency value attributed to this collateral at the end of the agreement.";
 			maxOccurs = 1;
@@ -684,11 +686,11 @@ public class UnderlyingAttributes2 {
 	 */
 	public static final MMMessageAssociationEnd mmAdjustedQuantity = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmSecuritiesQuantity;
+			businessElementTrace_lazy = () -> Security.mmSecuritiesQuantity;
 			componentContext_lazy = () -> UnderlyingAttributes2.mmObject();
 			isDerived = false;
 			xmlTag = "AdjstdQty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdjustedQuantity";
 			definition = "Unit amount of the underlying security (shares) adjusted for pending corporate action not yet allocated.";
 			maxOccurs = 1;
@@ -733,11 +735,11 @@ public class UnderlyingAttributes2 {
 	 */
 	public static final MMMessageAttribute mmExchangeRate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmExchangeRate;
+			businessElementTrace_lazy = () -> AssetHolding.mmExchangeRate;
 			componentContext_lazy = () -> UnderlyingAttributes2.mmObject();
 			isDerived = false;
 			xmlTag = "XchgRate";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExchangeRate";
 			definition = "Foreign exchange rate used to compute the current value.";
 			maxOccurs = 1;
@@ -782,11 +784,11 @@ public class UnderlyingAttributes2 {
 	 */
 	public static final MMMessageAttribute mmCapValue = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmCapValue;
+			businessElementTrace_lazy = () -> AssetHolding.mmCapValue;
 			componentContext_lazy = () -> UnderlyingAttributes2.mmObject();
 			isDerived = false;
 			xmlTag = "CapVal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CapValue";
 			definition = "Maximum notional value for a financial instrument that is capped.";
 			maxOccurs = 1;
@@ -798,14 +800,12 @@ public class UnderlyingAttributes2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UnderlyingAttributes2.mmAllocationPercentage, com.tools20022.repository.msg.UnderlyingAttributes2.mmQuantity,
-						com.tools20022.repository.msg.UnderlyingAttributes2.mmSettlementType, com.tools20022.repository.msg.UnderlyingAttributes2.mmCashAmount, com.tools20022.repository.msg.UnderlyingAttributes2.mmCashType,
-						com.tools20022.repository.msg.UnderlyingAttributes2.mmPrice, com.tools20022.repository.msg.UnderlyingAttributes2.mmDirtyPrice, com.tools20022.repository.msg.UnderlyingAttributes2.mmEndPrice,
-						com.tools20022.repository.msg.UnderlyingAttributes2.mmStartValue, com.tools20022.repository.msg.UnderlyingAttributes2.mmCurrentValue, com.tools20022.repository.msg.UnderlyingAttributes2.mmEndValue,
-						com.tools20022.repository.msg.UnderlyingAttributes2.mmAdjustedQuantity, com.tools20022.repository.msg.UnderlyingAttributes2.mmExchangeRate, com.tools20022.repository.msg.UnderlyingAttributes2.mmCapValue);
+				messageElement_lazy = () -> Arrays.asList(UnderlyingAttributes2.mmAllocationPercentage, UnderlyingAttributes2.mmQuantity, UnderlyingAttributes2.mmSettlementType, UnderlyingAttributes2.mmCashAmount,
+						UnderlyingAttributes2.mmCashType, UnderlyingAttributes2.mmPrice, UnderlyingAttributes2.mmDirtyPrice, UnderlyingAttributes2.mmEndPrice, UnderlyingAttributes2.mmStartValue, UnderlyingAttributes2.mmCurrentValue,
+						UnderlyingAttributes2.mmEndValue, UnderlyingAttributes2.mmAdjustedQuantity, UnderlyingAttributes2.mmExchangeRate, UnderlyingAttributes2.mmCapValue);
 				trace_lazy = () -> Asset.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "UnderlyingAttributes2";
 				definition = "Provides additional details on the underlying. In securities financing deals, it is used to identify and provide information on the collateral.";
 			}

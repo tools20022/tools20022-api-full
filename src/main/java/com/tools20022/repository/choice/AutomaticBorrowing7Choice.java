@@ -19,8 +19,10 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.AutoBorrowing2Code;
 import com.tools20022.repository.entity.SecuritiesSettlement;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification30;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -109,14 +111,14 @@ public class AutomaticBorrowing7Choice {
 	 */
 	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmAutomaticBorrowing;
+			businessElementTrace_lazy = () -> SecuritiesSettlement.mmAutomaticBorrowing;
 			componentContext_lazy = () -> AutomaticBorrowing7Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Cd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Condition for automatic borrowing expressed as an ISO 20022 code.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.AutomaticBorrowing2Choice.mmCode;
+			previousVersion_lazy = () -> AutomaticBorrowing2Choice.mmCode;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AutoBorrowing2Code.mmObject();
@@ -164,14 +166,14 @@ public class AutomaticBorrowing7Choice {
 	 */
 	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmAutomaticBorrowing;
+			businessElementTrace_lazy = () -> SecuritiesSettlement.mmAutomaticBorrowing;
 			componentContext_lazy = () -> AutomaticBorrowing7Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Condition for automatic borrowing expressed as a proprietary code.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.AutomaticBorrowing2Choice.mmProprietary;
+			previousVersion_lazy = () -> AutomaticBorrowing2Choice.mmProprietary;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification30.mmObject();
@@ -181,10 +183,10 @@ public class AutomaticBorrowing7Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AutomaticBorrowing7Choice.mmCode, com.tools20022.repository.choice.AutomaticBorrowing7Choice.mmProprietary);
+				messageElement_lazy = () -> Arrays.asList(AutomaticBorrowing7Choice.mmCode, AutomaticBorrowing7Choice.mmProprietary);
 				trace_lazy = () -> SecuritiesSettlement.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AutomaticBorrowing7Choice";
 				definition = "Choice of format for the automatic borrowing information.";
 				previousVersion_lazy = () -> AutomaticBorrowing2Choice.mmObject();

@@ -20,12 +20,15 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.DocumentFormat1Choice;
 import com.tools20022.repository.choice.UndertakingDocumentType1Choice;
 import com.tools20022.repository.datatype.Max2MBBinary;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.ElectronicSignature;
+import com.tools20022.repository.entity.GenericIdentification;
 import com.tools20022.repository.entity.UndertakingDocument;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -106,11 +109,11 @@ public class Document9 {
 	 */
 	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.UndertakingDocument.mmDocumentType;
+			businessElementTrace_lazy = () -> UndertakingDocument.mmDocumentType;
 			componentContext_lazy = () -> Document9.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Type of document or template.";
 			maxOccurs = 1;
@@ -152,11 +155,11 @@ public class Document9 {
 	 */
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmIdentification;
+			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> Document9.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Identification of the document or template.";
 			maxOccurs = 1;
@@ -200,11 +203,11 @@ public class Document9 {
 	 */
 	public static final MMMessageAttribute mmFormat = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.UndertakingDocument.mmFormat;
+			businessElementTrace_lazy = () -> UndertakingDocument.mmFormat;
 			componentContext_lazy = () -> Document9.mmObject();
 			isDerived = false;
 			xmlTag = "Frmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Format";
 			definition = "Format of the document  or template, such as PDF, XML, XSLT.";
 			maxOccurs = 1;
@@ -254,7 +257,7 @@ public class Document9 {
 			componentContext_lazy = () -> Document9.mmObject();
 			isDerived = false;
 			xmlTag = "Nclsr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Enclosure";
 			definition = "Binary file representing the enclosed document or template, such as a PDF file, image file, XML file, MT message.";
 			maxOccurs = 1;
@@ -299,7 +302,7 @@ public class Document9 {
 			componentContext_lazy = () -> Document9.mmObject();
 			isDerived = false;
 			xmlTag = "DgtlSgntr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DigitalSignature";
 			definition = "Digital signature of the enclosed binary file.";
 			maxOccurs = 1;
@@ -312,11 +315,10 @@ public class Document9 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Document9.mmType, com.tools20022.repository.msg.Document9.mmIdentification, com.tools20022.repository.msg.Document9.mmFormat,
-						com.tools20022.repository.msg.Document9.mmEnclosure, com.tools20022.repository.msg.Document9.mmDigitalSignature);
+				messageElement_lazy = () -> Arrays.asList(Document9.mmType, Document9.mmIdentification, Document9.mmFormat, Document9.mmEnclosure, Document9.mmDigitalSignature);
 				trace_lazy = () -> UndertakingDocument.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Document9";
 				definition = "Information about a document.";
 			}

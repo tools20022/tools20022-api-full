@@ -20,6 +20,8 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.camt.BankToCustomerStatementV05;
 import com.tools20022.repository.choice.ReportingSource1Choice;
 import com.tools20022.repository.codeset.CopyDuplicate1Code;
 import com.tools20022.repository.datatype.ISODateTime;
@@ -28,6 +30,8 @@ import com.tools20022.repository.datatype.Max500Text;
 import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.entity.CashAccount;
 import com.tools20022.repository.entity.CashBalance;
+import com.tools20022.repository.entity.Interest;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -173,11 +177,11 @@ public class AccountStatement5 {
 			componentContext_lazy = () -> AccountStatement5.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Unique identification, as assigned by the account servicer, to unambiguously identify the account statement.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountStatement6.mmIdentification);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AccountStatement4.mmIdentification;
+			nextVersions_lazy = () -> Arrays.asList(AccountStatement6.mmIdentification);
+			previousVersion_lazy = () -> AccountStatement4.mmIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -234,11 +238,11 @@ public class AccountStatement5 {
 			componentContext_lazy = () -> AccountStatement5.mmObject();
 			isDerived = false;
 			xmlTag = "StmtPgntn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatementPagination";
 			definition = "Provides details on the page number of the statement.\r\n\r\nUsage: The pagination of the statement is only allowed when agreed between the parties.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountStatement6.mmStatementPagination);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AccountStatement4.mmStatementPagination;
+			nextVersions_lazy = () -> Arrays.asList(AccountStatement6.mmStatementPagination);
+			previousVersion_lazy = () -> AccountStatement4.mmStatementPagination;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.Pagination.mmObject();
@@ -294,11 +298,11 @@ public class AccountStatement5 {
 			componentContext_lazy = () -> AccountStatement5.mmObject();
 			isDerived = false;
 			xmlTag = "ElctrncSeqNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ElectronicSequenceNumber";
 			definition = "Sequential number of the statement, as assigned by the account servicer.\nUsage: The sequential number is increased incrementally for each statement sent electronically.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountStatement6.mmElectronicSequenceNumber);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AccountStatement4.mmElectronicSequenceNumber;
+			nextVersions_lazy = () -> Arrays.asList(AccountStatement6.mmElectronicSequenceNumber);
+			previousVersion_lazy = () -> AccountStatement4.mmElectronicSequenceNumber;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
@@ -360,11 +364,11 @@ public class AccountStatement5 {
 			componentContext_lazy = () -> AccountStatement5.mmObject();
 			isDerived = false;
 			xmlTag = "LglSeqNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LegalSequenceNumber";
 			definition = "Legal sequential number of the statement, as assigned by the account servicer. It is increased incrementally for each statement sent.\n\nUsage: Where a paper statement is a legal requirement, it may have a number different from the electronic sequential number. Paper statements could for instance only be sent if movement on the account has taken place, whereas electronic statements could be sent at the end of each reporting period, regardless of whether movements have taken place or not.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountStatement6.mmLegalSequenceNumber);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AccountStatement4.mmLegalSequenceNumber;
+			nextVersions_lazy = () -> Arrays.asList(AccountStatement6.mmLegalSequenceNumber);
+			previousVersion_lazy = () -> AccountStatement4.mmLegalSequenceNumber;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
@@ -416,11 +420,11 @@ public class AccountStatement5 {
 			componentContext_lazy = () -> AccountStatement5.mmObject();
 			isDerived = false;
 			xmlTag = "CreDtTm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreationDateTime";
 			definition = "Date and time at which the message was created.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountStatement6.mmCreationDateTime);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AccountStatement4.mmCreationDateTime;
+			nextVersions_lazy = () -> Arrays.asList(AccountStatement6.mmCreationDateTime);
+			previousVersion_lazy = () -> AccountStatement4.mmCreationDateTime;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
@@ -474,11 +478,11 @@ public class AccountStatement5 {
 			componentContext_lazy = () -> AccountStatement5.mmObject();
 			isDerived = false;
 			xmlTag = "FrToDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FromToDate";
 			definition = "Range of time between a start date and an end date for which the account statement is issued.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountStatement6.mmFromToDate);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AccountStatement4.mmFromToDate;
+			nextVersions_lazy = () -> Arrays.asList(AccountStatement6.mmFromToDate);
+			previousVersion_lazy = () -> AccountStatement4.mmFromToDate;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -535,11 +539,11 @@ public class AccountStatement5 {
 			componentContext_lazy = () -> AccountStatement5.mmObject();
 			isDerived = false;
 			xmlTag = "CpyDplctInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CopyDuplicateIndicator";
 			definition = "Indicates whether the document is a copy, a duplicate, or a duplicate of a copy.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountStatement6.mmCopyDuplicateIndicator);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AccountStatement4.mmCopyDuplicateIndicator;
+			nextVersions_lazy = () -> Arrays.asList(AccountStatement6.mmCopyDuplicateIndicator);
+			previousVersion_lazy = () -> AccountStatement4.mmCopyDuplicateIndicator;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CopyDuplicate1Code.mmObject();
@@ -592,11 +596,11 @@ public class AccountStatement5 {
 			componentContext_lazy = () -> AccountStatement5.mmObject();
 			isDerived = false;
 			xmlTag = "RptgSrc";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportingSource";
 			definition = "Specifies the application used to generate the reporting.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountStatement6.mmReportingSource);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AccountStatement4.mmReportingSource;
+			nextVersions_lazy = () -> Arrays.asList(AccountStatement6.mmReportingSource);
+			previousVersion_lazy = () -> AccountStatement4.mmReportingSource;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -653,15 +657,15 @@ public class AccountStatement5 {
 	 */
 	public static final MMMessageAssociationEnd mmAccount = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashBalance.mmCashAccount;
+			businessElementTrace_lazy = () -> CashBalance.mmCashAccount;
 			componentContext_lazy = () -> AccountStatement5.mmObject();
 			isDerived = false;
 			xmlTag = "Acct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Account";
 			definition = "Unambiguous identification of the account to which credit and debit entries are made.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountStatement6.mmAccount);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AccountStatement4.mmAccount;
+			nextVersions_lazy = () -> Arrays.asList(AccountStatement6.mmAccount);
+			previousVersion_lazy = () -> AccountStatement4.mmAccount;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -721,11 +725,11 @@ public class AccountStatement5 {
 			componentContext_lazy = () -> AccountStatement5.mmObject();
 			isDerived = false;
 			xmlTag = "RltdAcct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedAccount";
 			definition = "Identifies the parent account of the account for which the statement has been issued.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountStatement6.mmRelatedAccount);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AccountStatement4.mmRelatedAccount;
+			nextVersions_lazy = () -> Arrays.asList(AccountStatement6.mmRelatedAccount);
+			previousVersion_lazy = () -> AccountStatement4.mmRelatedAccount;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -782,15 +786,15 @@ public class AccountStatement5 {
 	 */
 	public static final MMMessageAssociationEnd mmInterest = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Interest.mmInterestCalculation;
+			businessElementTrace_lazy = () -> Interest.mmInterestCalculation;
 			componentContext_lazy = () -> AccountStatement5.mmObject();
 			isDerived = false;
 			xmlTag = "Intrst";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Interest";
 			definition = "Provides general interest information that applies to the account at a particular moment in time.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountStatement6.mmInterest);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AccountStatement4.mmInterest;
+			nextVersions_lazy = () -> Arrays.asList(AccountStatement6.mmInterest);
+			previousVersion_lazy = () -> AccountStatement4.mmInterest;
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.AccountInterest3.mmObject();
@@ -850,11 +854,11 @@ public class AccountStatement5 {
 			componentContext_lazy = () -> AccountStatement5.mmObject();
 			isDerived = false;
 			xmlTag = "Bal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Balance";
 			definition = "Set of elements used to define the balance as a numerical representation of the net increases and decreases in an account at a specific point in time.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountStatement6.mmBalance);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AccountStatement4.mmBalance;
+			nextVersions_lazy = () -> Arrays.asList(AccountStatement6.mmBalance);
+			previousVersion_lazy = () -> AccountStatement4.mmBalance;
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.CashBalance3.mmObject();
@@ -905,11 +909,11 @@ public class AccountStatement5 {
 			componentContext_lazy = () -> AccountStatement5.mmObject();
 			isDerived = false;
 			xmlTag = "TxsSummry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionsSummary";
 			definition = "Provides summary information on entries.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountStatement6.mmTransactionsSummary);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AccountStatement4.mmTransactionsSummary;
+			nextVersions_lazy = () -> Arrays.asList(AccountStatement6.mmTransactionsSummary);
+			previousVersion_lazy = () -> AccountStatement4.mmTransactionsSummary;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -976,15 +980,15 @@ public class AccountStatement5 {
 	 */
 	public static final MMMessageAssociationEnd mmEntry = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashBalance.mmCashBalanceEntry;
+			businessElementTrace_lazy = () -> CashBalance.mmCashBalanceEntry;
 			componentContext_lazy = () -> AccountStatement5.mmObject();
 			isDerived = false;
 			xmlTag = "Ntry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Entry";
 			definition = "Specify an entry in the statement.\r\nUsage: At least one reference must be provided to identify the entry and its underlying transaction(s).\r\n\r\n\r\nUsage Rule:  In case of a Payments R-transaction the creditor / debtor referenced of the original payment initiation messages is also used for reporting of the R-transaction. The original debtor/creditor in the reporting of R-Transactions is not inverted. \r\nFollowing elements all defined in the TransactionDetails in RelatedParties or RelatedAgents are impacted by this usage rule:\r\nCreditor, UltimateCreditor, CreditorAccount, CreditorAgent, Debtor, UltimateDebtor, DebtorAccount and DebtorAgent.\r\n";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountStatement6.mmEntry);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AccountStatement4.mmEntry;
+			nextVersions_lazy = () -> Arrays.asList(AccountStatement6.mmEntry);
+			previousVersion_lazy = () -> AccountStatement4.mmEntry;
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.ReportEntry7.mmObject();
@@ -1036,11 +1040,11 @@ public class AccountStatement5 {
 			componentContext_lazy = () -> AccountStatement5.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlStmtInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalStatementInformation";
 			definition = "Further details of the account statement.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountStatement6.mmAdditionalStatementInformation);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AccountStatement4.mmAdditionalStatementInformation;
+			nextVersions_lazy = () -> Arrays.asList(AccountStatement6.mmAdditionalStatementInformation);
+			previousVersion_lazy = () -> AccountStatement4.mmAdditionalStatementInformation;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max500Text.mmObject();
@@ -1050,16 +1054,13 @@ public class AccountStatement5 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountStatement5.mmIdentification, com.tools20022.repository.msg.AccountStatement5.mmStatementPagination,
-						com.tools20022.repository.msg.AccountStatement5.mmElectronicSequenceNumber, com.tools20022.repository.msg.AccountStatement5.mmLegalSequenceNumber, com.tools20022.repository.msg.AccountStatement5.mmCreationDateTime,
-						com.tools20022.repository.msg.AccountStatement5.mmFromToDate, com.tools20022.repository.msg.AccountStatement5.mmCopyDuplicateIndicator, com.tools20022.repository.msg.AccountStatement5.mmReportingSource,
-						com.tools20022.repository.msg.AccountStatement5.mmAccount, com.tools20022.repository.msg.AccountStatement5.mmRelatedAccount, com.tools20022.repository.msg.AccountStatement5.mmInterest,
-						com.tools20022.repository.msg.AccountStatement5.mmBalance, com.tools20022.repository.msg.AccountStatement5.mmTransactionsSummary, com.tools20022.repository.msg.AccountStatement5.mmEntry,
-						com.tools20022.repository.msg.AccountStatement5.mmAdditionalStatementInformation);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.BankToCustomerStatementV05.mmStatement);
+				messageElement_lazy = () -> Arrays.asList(AccountStatement5.mmIdentification, AccountStatement5.mmStatementPagination, AccountStatement5.mmElectronicSequenceNumber, AccountStatement5.mmLegalSequenceNumber,
+						AccountStatement5.mmCreationDateTime, AccountStatement5.mmFromToDate, AccountStatement5.mmCopyDuplicateIndicator, AccountStatement5.mmReportingSource, AccountStatement5.mmAccount, AccountStatement5.mmRelatedAccount,
+						AccountStatement5.mmInterest, AccountStatement5.mmBalance, AccountStatement5.mmTransactionsSummary, AccountStatement5.mmEntry, AccountStatement5.mmAdditionalStatementInformation);
+				messageBuildingBlock_lazy = () -> Arrays.asList(BankToCustomerStatementV05.mmStatement);
 				trace_lazy = () -> CashBalance.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AccountStatement5";
 				definition = "Provides further details of the account statement.";
 				nextVersions_lazy = () -> Arrays.asList(AccountStatement6.mmObject());

@@ -17,11 +17,10 @@
 
 package com.tools20022.repository.entity;
 
-import com.tools20022.metamodel.MMBusinessAssociationEnd;
-import com.tools20022.metamodel.MMBusinessAttribute;
-import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.*;
 import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.datatype.PercentageRate;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -36,6 +35,16 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.Portfolio#mmBenchmark
+ * Portfolio.mmBenchmark}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Index#mmPortfolioBenchmark
+ * Index.mmPortfolioBenchmark}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -59,16 +68,6 @@ import java.util.List;
  * <li>
  * {@linkplain com.tools20022.repository.entity.PortfolioBenchmark#mmDescription
  * PortfolioBenchmark.mmDescription}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Portfolio#mmBenchmark
- * Portfolio.mmBenchmark}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Index#mmPortfolioBenchmark
- * Index.mmPortfolioBenchmark}</li>
  * </ul>
  * </li>
  * <li>
@@ -128,12 +127,12 @@ public class PortfolioBenchmark {
 		{
 			elementContext_lazy = () -> PortfolioBenchmark.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Index";
 			definition = "Specifies the index which may be used for decomposition.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.Index.mmPortfolioBenchmark;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Index.mmObject();
 		}
 	};
@@ -175,13 +174,13 @@ public class PortfolioBenchmark {
 		{
 			elementContext_lazy = () -> PortfolioBenchmark.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Portfolio";
 			definition = "Portfolio to which the benchmark applies.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.Portfolio.mmBenchmark;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Portfolio.mmObject();
 		}
 	};
@@ -216,7 +215,7 @@ public class PortfolioBenchmark {
 		{
 			elementContext_lazy = () -> PortfolioBenchmark.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BenchmarkWeight";
 			definition = "Instrument weighting in the benchmark for the portfolio.";
 			maxOccurs = 1;
@@ -255,7 +254,7 @@ public class PortfolioBenchmark {
 		{
 			elementContext_lazy = () -> PortfolioBenchmark.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MaximumDeviation";
 			definition = "Maximum allowable deviation from the benchmark.";
 			maxOccurs = 1;
@@ -294,7 +293,7 @@ public class PortfolioBenchmark {
 		{
 			elementContext_lazy = () -> PortfolioBenchmark.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MinimumDeviation";
 			definition = "Minimum allowable deviation from the benchmark.";
 			maxOccurs = 1;
@@ -336,7 +335,7 @@ public class PortfolioBenchmark {
 		{
 			elementContext_lazy = () -> PortfolioBenchmark.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "EffectivePeriod";
 			definition = "Period during which the instrument is used as a benchmark for the portfolio.";
 			maxOccurs = 1;
@@ -377,7 +376,7 @@ public class PortfolioBenchmark {
 		{
 			elementContext_lazy = () -> PortfolioBenchmark.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Description";
 			definition = "Free text description of the benchmark used to determine the performance of a portfolio.";
 			maxOccurs = 1;
@@ -389,14 +388,13 @@ public class PortfolioBenchmark {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PortfolioBenchmark";
 				definition = "Security or other price against which the performance of the portfolio is evaluated.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Portfolio.mmBenchmark, com.tools20022.repository.entity.Index.mmPortfolioBenchmark);
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.PortfolioBenchmark.mmIndex, com.tools20022.repository.entity.PortfolioBenchmark.mmPortfolio,
-						com.tools20022.repository.entity.PortfolioBenchmark.mmBenchmarkWeight, com.tools20022.repository.entity.PortfolioBenchmark.mmMaximumDeviation, com.tools20022.repository.entity.PortfolioBenchmark.mmMinimumDeviation,
-						com.tools20022.repository.entity.PortfolioBenchmark.mmEffectivePeriod, com.tools20022.repository.entity.PortfolioBenchmark.mmDescription);
+				element_lazy = () -> Arrays.asList(PortfolioBenchmark.mmIndex, PortfolioBenchmark.mmPortfolio, PortfolioBenchmark.mmBenchmarkWeight, PortfolioBenchmark.mmMaximumDeviation, PortfolioBenchmark.mmMinimumDeviation,
+						PortfolioBenchmark.mmEffectivePeriod, PortfolioBenchmark.mmDescription);
 			}
 		});
 		return mmObject_lazy.get();

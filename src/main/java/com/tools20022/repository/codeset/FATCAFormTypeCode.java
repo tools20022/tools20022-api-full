@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.FATCAFormType1Code
+ * FATCAFormType1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -50,13 +59,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.FATCAFormTypeCode#mmCertificateForeignPersonsClaim
  * FATCAFormTypeCode.mmCertificateForeignPersonsClaim}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.FATCAFormType1Code
- * FATCAFormType1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -104,7 +106,7 @@ public class FATCAFormTypeCode {
 	 */
 	public static final MMCode mmCertificateForeignStatusBeneficialOwner = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CertificateForeignStatusBeneficialOwner";
 			definition = "Certificate of foreign status of beneficial owner (also known as IRS form W-8BEN).";
 			owner_lazy = () -> FATCAFormTypeCode.mmObject();
@@ -134,7 +136,7 @@ public class FATCAFormTypeCode {
 	 */
 	public static final MMCode mmCertificateLossNationality = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CertificateLossNationality";
 			definition = "Certificate of loss of nationality.";
 			owner_lazy = () -> FATCAFormTypeCode.mmObject();
@@ -164,7 +166,7 @@ public class FATCAFormTypeCode {
 	 */
 	public static final MMCode mmSelfCertification = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SelfCertification";
 			definition = "Self certification.";
 			owner_lazy = () -> FATCAFormTypeCode.mmObject();
@@ -196,7 +198,7 @@ public class FATCAFormTypeCode {
 	 */
 	public static final MMCode mmSelfCertificationLossNationality = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SelfCertificationLossNationality";
 			definition = "Self certificate of loss of nationality (also known as IRS form I-407).";
 			owner_lazy = () -> FATCAFormTypeCode.mmObject();
@@ -227,7 +229,7 @@ public class FATCAFormTypeCode {
 	 */
 	public static final MMCode mmCertificateForeignIntermediary = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CertificateForeignIntermediary";
 			definition = "Certificate of foreign intermediary (also known as IRS form W-8IMY).";
 			owner_lazy = () -> FATCAFormTypeCode.mmObject();
@@ -260,7 +262,7 @@ public class FATCAFormTypeCode {
 	 */
 	public static final MMCode mmTaxpayerIdentificationNumberRequest = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxpayerIdentificationNumberRequest";
 			definition = "Form is a request for taxpayer identification number and certification (also known as IRS form W9).";
 			owner_lazy = () -> FATCAFormTypeCode.mmObject();
@@ -294,7 +296,7 @@ public class FATCAFormTypeCode {
 	 */
 	public static final MMCode mmCertificateForeignPersonsClaim = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CertificateForeignPersonsClaim";
 			definition = "Certificate of foreign person's claim that income is effectively connected with the conduct of a trade or business in the United States (also known as IRS form W-8BEN-E).";
 			owner_lazy = () -> FATCAFormTypeCode.mmObject();
@@ -305,14 +307,12 @@ public class FATCAFormTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FATCAFormTypeCode";
 				definition = "Specifies the type of Foreign Account Tax Compliance Act (FATCA) form.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.FATCAFormTypeCode.mmCertificateForeignStatusBeneficialOwner, com.tools20022.repository.codeset.FATCAFormTypeCode.mmCertificateLossNationality,
-						com.tools20022.repository.codeset.FATCAFormTypeCode.mmSelfCertification, com.tools20022.repository.codeset.FATCAFormTypeCode.mmSelfCertificationLossNationality,
-						com.tools20022.repository.codeset.FATCAFormTypeCode.mmCertificateForeignIntermediary, com.tools20022.repository.codeset.FATCAFormTypeCode.mmTaxpayerIdentificationNumberRequest,
-						com.tools20022.repository.codeset.FATCAFormTypeCode.mmCertificateForeignPersonsClaim);
+				code_lazy = () -> Arrays.asList(FATCAFormTypeCode.mmCertificateForeignStatusBeneficialOwner, FATCAFormTypeCode.mmCertificateLossNationality, FATCAFormTypeCode.mmSelfCertification,
+						FATCAFormTypeCode.mmSelfCertificationLossNationality, FATCAFormTypeCode.mmCertificateForeignIntermediary, FATCAFormTypeCode.mmTaxpayerIdentificationNumberRequest, FATCAFormTypeCode.mmCertificateForeignPersonsClaim);
 				derivation_lazy = () -> Arrays.asList(FATCAFormType1Code.mmObject());
 			}
 		});

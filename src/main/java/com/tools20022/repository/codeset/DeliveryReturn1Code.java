@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.DeliveryReturnCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -98,7 +100,7 @@ public class DeliveryReturn1Code extends DeliveryReturnCode {
 	 */
 	public static final MMCode mmUnrecognisedDelivery = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnrecognisedDelivery";
 			owner_lazy = () -> DeliveryReturn1Code.mmObject();
 		}
@@ -121,7 +123,7 @@ public class DeliveryReturn1Code extends DeliveryReturnCode {
 	 */
 	public static final MMCode mmWrongQuantity = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WrongQuantity";
 			owner_lazy = () -> DeliveryReturn1Code.mmObject();
 		}
@@ -144,7 +146,7 @@ public class DeliveryReturn1Code extends DeliveryReturnCode {
 	 */
 	public static final MMCode mmWrongSettlementAmount = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WrongSettlementAmount";
 			owner_lazy = () -> DeliveryReturn1Code.mmObject();
 		}
@@ -167,7 +169,7 @@ public class DeliveryReturn1Code extends DeliveryReturnCode {
 	 */
 	public static final MMCode mmPartialDelivery = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartialDelivery";
 			owner_lazy = () -> DeliveryReturn1Code.mmObject();
 		}
@@ -190,7 +192,7 @@ public class DeliveryReturn1Code extends DeliveryReturnCode {
 	 */
 	public static final MMCode mmAccountMissing = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountMissing";
 			owner_lazy = () -> DeliveryReturn1Code.mmObject();
 		}
@@ -213,7 +215,7 @@ public class DeliveryReturn1Code extends DeliveryReturnCode {
 	 */
 	public static final MMCode mmDueBiillMissing = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DueBiillMissing";
 			owner_lazy = () -> DeliveryReturn1Code.mmObject();
 		}
@@ -236,7 +238,7 @@ public class DeliveryReturn1Code extends DeliveryReturnCode {
 	 */
 	public static final MMCode mmPartialReturn = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartialReturn";
 			owner_lazy = () -> DeliveryReturn1Code.mmObject();
 		}
@@ -245,14 +247,13 @@ public class DeliveryReturn1Code extends DeliveryReturnCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("UNRE");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DeliveryReturn1Code";
 				definition = "Specifies the type of delivery return.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DeliveryReturn1Code.mmUnrecognisedDelivery, com.tools20022.repository.codeset.DeliveryReturn1Code.mmWrongQuantity,
-						com.tools20022.repository.codeset.DeliveryReturn1Code.mmWrongSettlementAmount, com.tools20022.repository.codeset.DeliveryReturn1Code.mmPartialDelivery,
-						com.tools20022.repository.codeset.DeliveryReturn1Code.mmAccountMissing, com.tools20022.repository.codeset.DeliveryReturn1Code.mmDueBiillMissing, com.tools20022.repository.codeset.DeliveryReturn1Code.mmPartialReturn);
+				code_lazy = () -> Arrays.asList(DeliveryReturn1Code.mmUnrecognisedDelivery, DeliveryReturn1Code.mmWrongQuantity, DeliveryReturn1Code.mmWrongSettlementAmount, DeliveryReturn1Code.mmPartialDelivery,
+						DeliveryReturn1Code.mmAccountMissing, DeliveryReturn1Code.mmDueBiillMissing, DeliveryReturn1Code.mmPartialReturn);
 				trace_lazy = () -> DeliveryReturnCode.mmObject();
 			}
 		});

@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -29,6 +31,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.InsuranceClauses1Code
+ * InsuranceClauses1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -64,13 +73,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.InsuranceClausesCode#mmInstituteRadioactiveContaminationExclusionClause
  * InsuranceClausesCode.mmInstituteRadioactiveContaminationExclusionClause}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.InsuranceClauses1Code
- * InsuranceClauses1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -126,7 +128,7 @@ public class InsuranceClausesCode {
 	 */
 	public static final MMCode mmInstituteCargoClauseA = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstituteCargoClauseA";
 			definition = "Institute Cargo Clause A (standard policy wordings issued by the Institute of London Underwriters or the American Institute of Marine Underwriters)";
 			owner_lazy = () -> InsuranceClausesCode.mmObject();
@@ -160,7 +162,7 @@ public class InsuranceClausesCode {
 	 */
 	public static final MMCode mmInstituteCargoClauseB = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstituteCargoClauseB";
 			definition = "Institute Cargo Clause B (standard policy wordings issued by the Institute of London Underwriters or the American Institute of Marine Underwriters)";
 			owner_lazy = () -> InsuranceClausesCode.mmObject();
@@ -194,7 +196,7 @@ public class InsuranceClausesCode {
 	 */
 	public static final MMCode mmInstituteCargoClauseC = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstituteCargoClauseC";
 			definition = "Institute Cargo Clause C (standard policy wordings issued by the Institute of London Underwriters or the American Institute of Marine Underwriters)";
 			owner_lazy = () -> InsuranceClausesCode.mmObject();
@@ -228,7 +230,7 @@ public class InsuranceClausesCode {
 	 */
 	public static final MMCode mmInstituteCargoClauseAir = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstituteCargoClauseAir";
 			definition = "Institute Cargo Clause for Air (standard policy wordings issued by the Institute of London Underwriters or the American Institute of Marine Underwriters)";
 			owner_lazy = () -> InsuranceClausesCode.mmObject();
@@ -262,7 +264,7 @@ public class InsuranceClausesCode {
 	 */
 	public static final MMCode mmInstituteWarClauseCargo = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstituteWarClauseCargo";
 			definition = "Institute War Clause for Cargo (standard policy wordings issued by the Institute of London Underwriters or the American Institute of Marine Underwriters)";
 			owner_lazy = () -> InsuranceClausesCode.mmObject();
@@ -296,7 +298,7 @@ public class InsuranceClausesCode {
 	 */
 	public static final MMCode mmInstituteStrikesClauseCargo = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstituteStrikesClauseCargo";
 			definition = "Institute Strikes Clause for Cargo (standard policy wordings issued by the Institute of London Underwriters or the American Institute of Marine Underwriters)";
 			owner_lazy = () -> InsuranceClausesCode.mmObject();
@@ -330,7 +332,7 @@ public class InsuranceClausesCode {
 	 */
 	public static final MMCode mmInstituteReplacementClause = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstituteReplacementClause";
 			definition = "Institute Replacement Clause (standard policy wordings issued by the Institute of London Underwriters or the American Institute of Marine Underwriters)";
 			owner_lazy = () -> InsuranceClausesCode.mmObject();
@@ -364,7 +366,7 @@ public class InsuranceClausesCode {
 	 */
 	public static final MMCode mmInstituteClassificationClause = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstituteClassificationClause";
 			definition = "Institute Classification Clause (standard policy wordings issued by the Institute of London Underwriters or the American Institute of Marine Underwriters)";
 			owner_lazy = () -> InsuranceClausesCode.mmObject();
@@ -397,7 +399,7 @@ public class InsuranceClausesCode {
 	 */
 	public static final MMCode mmISMCodeEndorsement = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ISMCodeEndorsement";
 			definition = "ISM Code Endorsement (standard policy wordings issued by the Institute of London Underwriters or the American Institute of Marine Underwriters)";
 			owner_lazy = () -> InsuranceClausesCode.mmObject();
@@ -431,7 +433,7 @@ public class InsuranceClausesCode {
 	 */
 	public static final MMCode mmComputerMilleniumClauseCargo = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ComputerMilleniumClauseCargo";
 			definition = "Computer Millenium Clause Cargo (standard policy wordings issued by the Institute of London Underwriters or the American Institute of Marine Underwriters)";
 			owner_lazy = () -> InsuranceClausesCode.mmObject();
@@ -465,7 +467,7 @@ public class InsuranceClausesCode {
 	 */
 	public static final MMCode mmInstituteRadioactiveContaminationExclusionClause = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstituteRadioactiveContaminationExclusionClause";
 			definition = "Institute Radioactive Contamination Exclusion Clause (standard policy wordings issued by the Institute of London Underwriters or the American Institute of Marine Underwriters)";
 			owner_lazy = () -> InsuranceClausesCode.mmObject();
@@ -476,17 +478,14 @@ public class InsuranceClausesCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ICCA");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InsuranceClausesCode";
 				definition = "List of standards insurance clauses. (standard policy wordings issued by the Institute of London Underwriters or the American Institute of Marine Underwriters)";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.InsuranceClausesCode.mmInstituteCargoClauseA, com.tools20022.repository.codeset.InsuranceClausesCode.mmInstituteCargoClauseB,
-						com.tools20022.repository.codeset.InsuranceClausesCode.mmInstituteCargoClauseC, com.tools20022.repository.codeset.InsuranceClausesCode.mmInstituteCargoClauseAir,
-						com.tools20022.repository.codeset.InsuranceClausesCode.mmInstituteWarClauseCargo, com.tools20022.repository.codeset.InsuranceClausesCode.mmInstituteStrikesClauseCargo,
-						com.tools20022.repository.codeset.InsuranceClausesCode.mmInstituteReplacementClause, com.tools20022.repository.codeset.InsuranceClausesCode.mmInstituteClassificationClause,
-						com.tools20022.repository.codeset.InsuranceClausesCode.mmISMCodeEndorsement, com.tools20022.repository.codeset.InsuranceClausesCode.mmComputerMilleniumClauseCargo,
-						com.tools20022.repository.codeset.InsuranceClausesCode.mmInstituteRadioactiveContaminationExclusionClause);
+				code_lazy = () -> Arrays.asList(InsuranceClausesCode.mmInstituteCargoClauseA, InsuranceClausesCode.mmInstituteCargoClauseB, InsuranceClausesCode.mmInstituteCargoClauseC, InsuranceClausesCode.mmInstituteCargoClauseAir,
+						InsuranceClausesCode.mmInstituteWarClauseCargo, InsuranceClausesCode.mmInstituteStrikesClauseCargo, InsuranceClausesCode.mmInstituteReplacementClause, InsuranceClausesCode.mmInstituteClassificationClause,
+						InsuranceClausesCode.mmISMCodeEndorsement, InsuranceClausesCode.mmComputerMilleniumClauseCargo, InsuranceClausesCode.mmInstituteRadioactiveContaminationExclusionClause);
 				derivation_lazy = () -> Arrays.asList(InsuranceClauses1Code.mmObject());
 			}
 		});

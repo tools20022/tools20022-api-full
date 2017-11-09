@@ -17,9 +17,12 @@
 
 package com.tools20022.repository.entity;
 
+import com.tools20022.metamodel.MMAggregation;
 import com.tools20022.metamodel.MMBusinessAssociationEnd;
 import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.Mandate;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.OperationMandate1;
 import com.tools20022.repository.msg.OperationMandate2;
 import com.tools20022.repository.msg.OperationMandate3;
@@ -37,15 +40,16 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
  * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CashAccountMandate#mmServices
- * CashAccountMandate.mmServices}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CashAccountMandate#mmCashAccountContract
- * CashAccountMandate.mmCashAccountContract}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.OperationMandate1
+ * OperationMandate1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.OperationMandate2
+ * OperationMandate2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.OperationMandate3
+ * OperationMandate3}</li>
  * </ul>
  * </li>
  * <li>
@@ -62,16 +66,15 @@ import java.util.List;
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
  * superType} = {@linkplain com.tools20022.repository.entity.Mandate Mandate}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.OperationMandate1
- * OperationMandate1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.OperationMandate2
- * OperationMandate2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.OperationMandate3
- * OperationMandate3}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CashAccountMandate#mmServices
+ * CashAccountMandate.mmServices}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CashAccountMandate#mmCashAccountContract
+ * CashAccountMandate.mmCashAccountContract}</li>
  * </ul>
  * </li>
  * <li>
@@ -133,12 +136,12 @@ public class CashAccountMandate extends Mandate {
 		{
 			elementContext_lazy = () -> CashAccountMandate.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Services";
 			definition = "Services that the holder of an account mandate can exercise.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.CashAccountService.mmCashAccountMandate;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.CashAccountService.mmObject();
 		}
 	};
@@ -180,12 +183,12 @@ public class CashAccountMandate extends Mandate {
 		{
 			elementContext_lazy = () -> CashAccountMandate.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CashAccountContract";
 			definition = "Contract to which a mandate applies.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.CashAccountContract.mmCashAccountMandate;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.CashAccountContract.mmObject();
 		}
 	};
@@ -193,13 +196,13 @@ public class CashAccountMandate extends Mandate {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CashAccountMandate";
 				definition = "Authorisation given to a mandate holder to perform some operation on an account.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CashAccountContract.mmCashAccountMandate, com.tools20022.repository.entity.CashAccountService.mmCashAccountMandate);
 				superType_lazy = () -> Mandate.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CashAccountMandate.mmServices, com.tools20022.repository.entity.CashAccountMandate.mmCashAccountContract);
+				element_lazy = () -> Arrays.asList(CashAccountMandate.mmServices, CashAccountMandate.mmCashAccountContract);
 				derivationComponent_lazy = () -> Arrays.asList(OperationMandate1.mmObject(), OperationMandate2.mmObject(), OperationMandate3.mmObject());
 			}
 		});

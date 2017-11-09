@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.FATCAFormTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -93,7 +95,7 @@ public class FATCAFormType1Code extends FATCAFormTypeCode {
 	 */
 	public static final MMCode mmCertificateForeignIntermediary = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CertificateForeignIntermediary";
 			owner_lazy = () -> FATCAFormType1Code.mmObject();
 		}
@@ -116,7 +118,7 @@ public class FATCAFormType1Code extends FATCAFormTypeCode {
 	 */
 	public static final MMCode mmCertificateForeignPersonsClaim = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CertificateForeignPersonsClaim";
 			owner_lazy = () -> FATCAFormType1Code.mmObject();
 		}
@@ -139,7 +141,7 @@ public class FATCAFormType1Code extends FATCAFormTypeCode {
 	 */
 	public static final MMCode mmCertificateForeignStatusBeneficialOwner = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CertificateForeignStatusBeneficialOwner";
 			owner_lazy = () -> FATCAFormType1Code.mmObject();
 		}
@@ -162,7 +164,7 @@ public class FATCAFormType1Code extends FATCAFormTypeCode {
 	 */
 	public static final MMCode mmCertificateLossNationality = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CertificateLossNationality";
 			owner_lazy = () -> FATCAFormType1Code.mmObject();
 		}
@@ -185,7 +187,7 @@ public class FATCAFormType1Code extends FATCAFormTypeCode {
 	 */
 	public static final MMCode mmSelfCertification = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SelfCertification";
 			owner_lazy = () -> FATCAFormType1Code.mmObject();
 		}
@@ -208,7 +210,7 @@ public class FATCAFormType1Code extends FATCAFormTypeCode {
 	 */
 	public static final MMCode mmSelfCertificationLossNationality = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SelfCertificationLossNationality";
 			owner_lazy = () -> FATCAFormType1Code.mmObject();
 		}
@@ -231,7 +233,7 @@ public class FATCAFormType1Code extends FATCAFormTypeCode {
 	 */
 	public static final MMCode mmTaxpayerIdentificationNumberRequest = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxpayerIdentificationNumberRequest";
 			owner_lazy = () -> FATCAFormType1Code.mmObject();
 		}
@@ -240,14 +242,12 @@ public class FATCAFormType1Code extends FATCAFormTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FATCAFormType1Code";
 				definition = "Specifies the type of Foreign Account Tax Compliance Act (FATCA) form.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.FATCAFormType1Code.mmCertificateForeignIntermediary, com.tools20022.repository.codeset.FATCAFormType1Code.mmCertificateForeignPersonsClaim,
-						com.tools20022.repository.codeset.FATCAFormType1Code.mmCertificateForeignStatusBeneficialOwner, com.tools20022.repository.codeset.FATCAFormType1Code.mmCertificateLossNationality,
-						com.tools20022.repository.codeset.FATCAFormType1Code.mmSelfCertification, com.tools20022.repository.codeset.FATCAFormType1Code.mmSelfCertificationLossNationality,
-						com.tools20022.repository.codeset.FATCAFormType1Code.mmTaxpayerIdentificationNumberRequest);
+				code_lazy = () -> Arrays.asList(FATCAFormType1Code.mmCertificateForeignIntermediary, FATCAFormType1Code.mmCertificateForeignPersonsClaim, FATCAFormType1Code.mmCertificateForeignStatusBeneficialOwner,
+						FATCAFormType1Code.mmCertificateLossNationality, FATCAFormType1Code.mmSelfCertification, FATCAFormType1Code.mmSelfCertificationLossNationality, FATCAFormType1Code.mmTaxpayerIdentificationNumberRequest);
 				trace_lazy = () -> FATCAFormTypeCode.mmObject();
 			}
 		});

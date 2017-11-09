@@ -17,10 +17,7 @@
 
 package com.tools20022.repository.area.seev;
 
-import com.tools20022.metamodel.MMMessageBuildingBlock;
-import com.tools20022.metamodel.MMMessageDefinition;
-import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
-import com.tools20022.metamodel.MMXor;
+import com.tools20022.metamodel.*;
 import com.tools20022.repository.area.SecuritiesEventsLatestVersion;
 import com.tools20022.repository.choice.CorporateActionMovementStatus1Choice;
 import com.tools20022.repository.msg.CorporateActionInformation1;
@@ -61,6 +58,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code seev.022.001.01}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.SecuritiesEventsLatestVersion
@@ -120,9 +120,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * AgentCAMovementStatusAdviceV01.mmMovementCancellationStatusDetails}</li>
  * </ul>
  * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code seev.022.001.01}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -187,14 +184,12 @@ public class AgentCAMovementStatusAdviceV01 {
 	 */
 	public static final MMXor mmStatusIdentificationRule = new MMXor() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusIdentificationRule";
 			definition = "Either AgentCAElectionStatusAdviceIdentification or AgentCAGlobalDistributionStatusAdviceIdentification or AgentCAMovementInstructionIdentification or AgentCAMovementCancellationRequestIdentification must be present.";
 			messageDefinition_lazy = () -> AgentCAMovementStatusAdviceV01.mmObject();
-			impactedMessageBuildingBlocks_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.AgentCAMovementStatusAdviceV01.mmAgentCAElectionStatusAdviceIdentification,
-					com.tools20022.repository.area.seev.AgentCAMovementStatusAdviceV01.mmAgentCAGlobalDistributionStatusAdviceIdentification,
-					com.tools20022.repository.area.seev.AgentCAMovementStatusAdviceV01.mmAgentCAMovementInstructionIdentification,
-					com.tools20022.repository.area.seev.AgentCAMovementStatusAdviceV01.mmAgentCAMovementCancellationRequestIdentification);
+			impactedMessageBuildingBlocks_lazy = () -> Arrays.asList(AgentCAMovementStatusAdviceV01.mmAgentCAElectionStatusAdviceIdentification, AgentCAMovementStatusAdviceV01.mmAgentCAGlobalDistributionStatusAdviceIdentification,
+					AgentCAMovementStatusAdviceV01.mmAgentCAMovementInstructionIdentification, AgentCAMovementStatusAdviceV01.mmAgentCAMovementCancellationRequestIdentification);
 		}
 	};
 	/**
@@ -234,12 +229,11 @@ public class AgentCAMovementStatusAdviceV01 {
 	 */
 	public static final MMXor mmMovementStatusDetailsOrMovementCancellationStatusDetailsRule = new MMXor() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MovementStatusDetailsOrMovementCancellationStatusDetailsRule";
 			definition = "Either MovementStatusDetails or MovementCancellationStatusDetails must be present but not both.";
 			messageDefinition_lazy = () -> AgentCAMovementStatusAdviceV01.mmObject();
-			impactedMessageBuildingBlocks_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.AgentCAMovementStatusAdviceV01.mmMovementStatusDetails,
-					com.tools20022.repository.area.seev.AgentCAMovementStatusAdviceV01.mmMovementCancellationStatusDetails);
+			impactedMessageBuildingBlocks_lazy = () -> Arrays.asList(AgentCAMovementStatusAdviceV01.mmMovementStatusDetails, AgentCAMovementStatusAdviceV01.mmMovementCancellationStatusDetails);
 		}
 	};
 	protected DocumentIdentification8 identification;
@@ -272,7 +266,7 @@ public class AgentCAMovementStatusAdviceV01 {
 	public static final MMMessageBuildingBlock mmIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Identification assigned by the Sender to unambiguously identify the status advice.";
 			maxOccurs = 1;
@@ -308,7 +302,7 @@ public class AgentCAMovementStatusAdviceV01 {
 	public static final MMMessageBuildingBlock mmAgentCAElectionStatusAdviceIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "AgtCAElctnStsAdvcId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AgentCAElectionStatusAdviceIdentification";
 			definition = "Identification of the Agent Corporate Action Election Status Advice.";
 			maxOccurs = 1;
@@ -346,7 +340,7 @@ public class AgentCAMovementStatusAdviceV01 {
 	public static final MMMessageBuildingBlock mmAgentCAGlobalDistributionStatusAdviceIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "AgtCAGblDstrbtnStsAdvcId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AgentCAGlobalDistributionStatusAdviceIdentification";
 			definition = "Identification of the Agent Corporate Action Global Distribution Status Advice.";
 			maxOccurs = 1;
@@ -384,7 +378,7 @@ public class AgentCAMovementStatusAdviceV01 {
 	public static final MMMessageBuildingBlock mmAgentCAMovementInstructionIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "AgtCAMvmntInstrId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AgentCAMovementInstructionIdentification";
 			definition = "Identification of the linked Agent CA Movement Instruction for which a status is given.";
 			maxOccurs = 1;
@@ -422,7 +416,7 @@ public class AgentCAMovementStatusAdviceV01 {
 	public static final MMMessageBuildingBlock mmAgentCAMovementCancellationRequestIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "AgtCAMvmntCxlReqId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AgentCAMovementCancellationRequestIdentification";
 			definition = "Identification of the linked Agent CA Movement Cancellation Request for which a status is given.";
 			maxOccurs = 1;
@@ -457,7 +451,7 @@ public class AgentCAMovementStatusAdviceV01 {
 	public static final MMMessageBuildingBlock mmCorporateActionGeneralInformation = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CorpActnGnlInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorporateActionGeneralInformation";
 			definition = "General information about the corporate action event.";
 			maxOccurs = 1;
@@ -492,7 +486,7 @@ public class AgentCAMovementStatusAdviceV01 {
 	public static final MMMessageBuildingBlock mmMovementStatusDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "MvmntStsDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MovementStatusDetails";
 			definition = "Status of the movement instruction.";
 			maxOccurs = 1;
@@ -527,7 +521,7 @@ public class AgentCAMovementStatusAdviceV01 {
 	public static final MMMessageBuildingBlock mmMovementCancellationStatusDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "MvmntCxlStsDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MovementCancellationStatusDetails";
 			definition = "Status of the movement cancellation request.";
 			maxOccurs = 1;
@@ -539,22 +533,18 @@ public class AgentCAMovementStatusAdviceV01 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AgentCAMovementStatusAdviceV01";
 				definition = "Scope\r\nThis message is sent by a CSD to an issuer (or its agent) to report the status, or a change in status, of\r\n- a global distribution status advice released by an issuer (or its agent);\r\n- a movement instruction released by an issuer (or its agent);\r\n- a movement cancellation request sent by the issuer (or its agent); and\r\n- the non-settlement of the movements at the CSD.\r\nUsage\r\nThis message is used to report the status of:\r\n- the movements resulting from a movement instruction message, in which case, the Agent Corporate Action Movement Instruction Identification must be present;\r\n- the movements resulting from a global distribution status advice message (with the status, authorised), in which case, the Agent Corporate Action Global Distribution Status Advice Identification must be present;\r\n- the movement cancellation request, in which case, the Agent Corporate Action Movement Cancellation Request Identification must be present; and\r\n- the movements resulting from an election status advice (if the status of the election advice is rejected or if the status of the election cancellation request or amendment request is accepted) in case there is a settlement problem. The Election Status Advice Identification must be present.\r\nIn the case of a failed settlement, the message contains details of the movement, such as account details, securities or cash information and the reason of the failure.\r\nThis message should not be used to provide the confirmation of the settlement; the Agent Corporate Action Movement Confirmation message should be used instead.";
 				messageSet_lazy = () -> Arrays.asList(IssuersAgentsCommunicationISOLatestversion.mmObject());
-				xors_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.AgentCAMovementStatusAdviceV01.mmStatusIdentificationRule,
-						com.tools20022.repository.area.seev.AgentCAMovementStatusAdviceV01.mmMovementStatusDetailsOrMovementCancellationStatusDetailsRule);
+				xors_lazy = () -> Arrays.asList(AgentCAMovementStatusAdviceV01.mmStatusIdentificationRule, AgentCAMovementStatusAdviceV01.mmMovementStatusDetailsOrMovementCancellationStatusDetailsRule);
 				rootElement = "Document";
 				xmlTag = "AgtCAMvmntStsAdvc";
 				businessArea_lazy = () -> SecuritiesEventsLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.AgentCAMovementStatusAdviceV01.mmIdentification,
-						com.tools20022.repository.area.seev.AgentCAMovementStatusAdviceV01.mmAgentCAElectionStatusAdviceIdentification,
-						com.tools20022.repository.area.seev.AgentCAMovementStatusAdviceV01.mmAgentCAGlobalDistributionStatusAdviceIdentification,
-						com.tools20022.repository.area.seev.AgentCAMovementStatusAdviceV01.mmAgentCAMovementInstructionIdentification,
-						com.tools20022.repository.area.seev.AgentCAMovementStatusAdviceV01.mmAgentCAMovementCancellationRequestIdentification,
-						com.tools20022.repository.area.seev.AgentCAMovementStatusAdviceV01.mmCorporateActionGeneralInformation, com.tools20022.repository.area.seev.AgentCAMovementStatusAdviceV01.mmMovementStatusDetails,
-						com.tools20022.repository.area.seev.AgentCAMovementStatusAdviceV01.mmMovementCancellationStatusDetails);
+				messageBuildingBlock_lazy = () -> Arrays.asList(AgentCAMovementStatusAdviceV01.mmIdentification, AgentCAMovementStatusAdviceV01.mmAgentCAElectionStatusAdviceIdentification,
+						AgentCAMovementStatusAdviceV01.mmAgentCAGlobalDistributionStatusAdviceIdentification, AgentCAMovementStatusAdviceV01.mmAgentCAMovementInstructionIdentification,
+						AgentCAMovementStatusAdviceV01.mmAgentCAMovementCancellationRequestIdentification, AgentCAMovementStatusAdviceV01.mmCorporateActionGeneralInformation, AgentCAMovementStatusAdviceV01.mmMovementStatusDetails,
+						AgentCAMovementStatusAdviceV01.mmMovementCancellationStatusDetails);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "seev";

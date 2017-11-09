@@ -19,9 +19,14 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.FinancialInstrumentQuantity21Choice;
 import com.tools20022.repository.choice.FinancialInstrumentQuantity22Choice;
+import com.tools20022.repository.entity.BiddingConditions;
 import com.tools20022.repository.entity.CorporateActionOption;
+import com.tools20022.repository.entity.SecuritiesConversion;
+import com.tools20022.repository.entity.SecuritiesProceedsDefinition;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -114,11 +119,11 @@ public class SecuritiesOption56 {
 	 */
 	public static final MMMessageAssociationEnd mmMaximumQuantityToInstruct = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesConversion.mmMaximumExercisableQuantity;
+			businessElementTrace_lazy = () -> SecuritiesConversion.mmMaximumExercisableQuantity;
 			componentContext_lazy = () -> SecuritiesOption56.mmObject();
 			isDerived = false;
 			xmlTag = "MaxQtyToInst";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaximumQuantityToInstruct";
 			definition = "Maximum quantity of financial instrument that may be instructed.";
 			maxOccurs = 1;
@@ -163,11 +168,11 @@ public class SecuritiesOption56 {
 	 */
 	public static final MMMessageAssociationEnd mmMinimumQuantityToInstruct = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesConversion.mmMinimumExercisableQuantity;
+			businessElementTrace_lazy = () -> SecuritiesConversion.mmMinimumExercisableQuantity;
 			componentContext_lazy = () -> SecuritiesOption56.mmObject();
 			isDerived = false;
 			xmlTag = "MinQtyToInst";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MinimumQuantityToInstruct";
 			definition = "Minimum quantity of financial instrument that may be instructed.";
 			maxOccurs = 1;
@@ -213,11 +218,11 @@ public class SecuritiesOption56 {
 	 */
 	public static final MMMessageAssociationEnd mmMinimumMultipleQuantityToInstruct = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesConversion.mmMinimumExercisableMultipleQuantity;
+			businessElementTrace_lazy = () -> SecuritiesConversion.mmMinimumExercisableMultipleQuantity;
 			componentContext_lazy = () -> SecuritiesOption56.mmObject();
 			isDerived = false;
 			xmlTag = "MinMltplQtyToInst";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MinimumMultipleQuantityToInstruct";
 			definition = "Minimum multiple quantity of financial  instrument that may be instructed.";
 			maxOccurs = 1;
@@ -261,11 +266,11 @@ public class SecuritiesOption56 {
 	 */
 	public static final MMMessageAssociationEnd mmNewBoardLotQuantity = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesProceedsDefinition.mmBoardLotSecuritiesQuantity;
+			businessElementTrace_lazy = () -> SecuritiesProceedsDefinition.mmBoardLotSecuritiesQuantity;
 			componentContext_lazy = () -> SecuritiesOption56.mmObject();
 			isDerived = false;
 			xmlTag = "NewBrdLotQty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewBoardLotQuantity";
 			definition = "Quantity of equity that makes up the new board lot.";
 			maxOccurs = 1;
@@ -312,11 +317,11 @@ public class SecuritiesOption56 {
 	 */
 	public static final MMMessageAssociationEnd mmNewDenominationQuantity = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesProceedsDefinition.mmNewDenominationSecuritiesQuantity;
+			businessElementTrace_lazy = () -> SecuritiesProceedsDefinition.mmNewDenominationSecuritiesQuantity;
 			componentContext_lazy = () -> SecuritiesOption56.mmObject();
 			isDerived = false;
 			xmlTag = "NewDnmtnQty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewDenominationQuantity";
 			definition = "New denomination of the equity following, for example, an increase or decrease in nominal value.";
 			maxOccurs = 1;
@@ -364,11 +369,11 @@ public class SecuritiesOption56 {
 	 */
 	public static final MMMessageAssociationEnd mmFrontEndOddLotQuantity = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BiddingConditions.mmFrontEndOddLotQuantity;
+			businessElementTrace_lazy = () -> BiddingConditions.mmFrontEndOddLotQuantity;
 			componentContext_lazy = () -> SecuritiesOption56.mmObject();
 			isDerived = false;
 			xmlTag = "FrntEndOddLotQty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FrontEndOddLotQuantity";
 			definition = "Specifies that if an order is prorated holders of odd lots who tender their full position will not have tendered position prorated but rather accepted in full.";
 			maxOccurs = 1;
@@ -415,11 +420,11 @@ public class SecuritiesOption56 {
 	 */
 	public static final MMMessageAssociationEnd mmBackEndOddLotQuantity = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BiddingConditions.mmBackEndOddLotQuantity;
+			businessElementTrace_lazy = () -> BiddingConditions.mmBackEndOddLotQuantity;
 			componentContext_lazy = () -> SecuritiesOption56.mmObject();
 			isDerived = false;
 			xmlTag = "BckEndOddLotQty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BackEndOddLotQuantity";
 			definition = "Represents the presence of a back end odd lot provision and the quantity of equity required after proration to be eligible for this privilege.";
 			maxOccurs = 1;
@@ -432,13 +437,11 @@ public class SecuritiesOption56 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesOption56.mmMaximumQuantityToInstruct, com.tools20022.repository.msg.SecuritiesOption56.mmMinimumQuantityToInstruct,
-						com.tools20022.repository.msg.SecuritiesOption56.mmMinimumMultipleQuantityToInstruct, com.tools20022.repository.msg.SecuritiesOption56.mmNewBoardLotQuantity,
-						com.tools20022.repository.msg.SecuritiesOption56.mmNewDenominationQuantity, com.tools20022.repository.msg.SecuritiesOption56.mmFrontEndOddLotQuantity,
-						com.tools20022.repository.msg.SecuritiesOption56.mmBackEndOddLotQuantity);
+				messageElement_lazy = () -> Arrays.asList(SecuritiesOption56.mmMaximumQuantityToInstruct, SecuritiesOption56.mmMinimumQuantityToInstruct, SecuritiesOption56.mmMinimumMultipleQuantityToInstruct,
+						SecuritiesOption56.mmNewBoardLotQuantity, SecuritiesOption56.mmNewDenominationQuantity, SecuritiesOption56.mmFrontEndOddLotQuantity, SecuritiesOption56.mmBackEndOddLotQuantity);
 				trace_lazy = () -> CorporateActionOption.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesOption56";
 				definition = "Specifies the security option of a corporate event.";
 			}

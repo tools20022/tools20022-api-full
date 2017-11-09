@@ -20,8 +20,10 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.SystemStatus2Code;
 import com.tools20022.repository.entity.SystemStatus;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification1;
 import com.tools20022.repository.msg.SystemStatus1Choice;
 import java.util.Arrays;
@@ -111,14 +113,14 @@ public class SystemStatus2Choice {
 	 */
 	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SystemStatus.mmStatus;
+			businessElementTrace_lazy = () -> SystemStatus.mmStatus;
 			componentContext_lazy = () -> SystemStatus2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Cd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Status of the system, in a coded form.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SystemStatus1Choice.mmCode;
+			previousVersion_lazy = () -> SystemStatus1Choice.mmCode;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> SystemStatus2Code.mmObject();
@@ -163,14 +165,14 @@ public class SystemStatus2Choice {
 	 */
 	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SystemStatus.mmStatus;
+			businessElementTrace_lazy = () -> SystemStatus.mmStatus;
 			componentContext_lazy = () -> SystemStatus2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Status of the system, in a proprietary form.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SystemStatus1Choice.mmProprietary;
+			previousVersion_lazy = () -> SystemStatus1Choice.mmProprietary;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -181,10 +183,10 @@ public class SystemStatus2Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SystemStatus2Choice.mmCode, com.tools20022.repository.choice.SystemStatus2Choice.mmProprietary);
+				messageElement_lazy = () -> Arrays.asList(SystemStatus2Choice.mmCode, SystemStatus2Choice.mmProprietary);
 				trace_lazy = () -> SystemStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SystemStatus2Choice";
 				definition = "Status of a system and the period of time during which the status is valid.";
 				previousVersion_lazy = () -> SystemStatus1Choice.mmObject();

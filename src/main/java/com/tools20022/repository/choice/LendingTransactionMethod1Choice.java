@@ -19,8 +19,10 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.LendingTransactionMethod1Code;
 import com.tools20022.repository.entity.SecuritiesLending;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification38;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -99,11 +101,11 @@ public class LendingTransactionMethod1Choice {
 	 */
 	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesLending.mmLendingTransactionMethod;
+			businessElementTrace_lazy = () -> SecuritiesLending.mmLendingTransactionMethod;
 			componentContext_lazy = () -> LendingTransactionMethod1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Cd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Lending transaction method expressed as a ISO20022 code.";
 			maxOccurs = 1;
@@ -148,11 +150,11 @@ public class LendingTransactionMethod1Choice {
 	 */
 	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesLending.mmLendingTransactionMethod;
+			businessElementTrace_lazy = () -> SecuritiesLending.mmLendingTransactionMethod;
 			componentContext_lazy = () -> LendingTransactionMethod1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Lending transaction method expressed as a proprietary code.";
 			maxOccurs = 1;
@@ -164,10 +166,10 @@ public class LendingTransactionMethod1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.LendingTransactionMethod1Choice.mmCode, com.tools20022.repository.choice.LendingTransactionMethod1Choice.mmProprietary);
+				messageElement_lazy = () -> Arrays.asList(LendingTransactionMethod1Choice.mmCode, LendingTransactionMethod1Choice.mmProprietary);
 				trace_lazy = () -> SecuritiesLending.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "LendingTransactionMethod1Choice";
 				definition = "Choice of format method applied to a lending transaction.";
 			}

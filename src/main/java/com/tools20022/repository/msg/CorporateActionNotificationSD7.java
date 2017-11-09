@@ -19,11 +19,13 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CorporateActionMandatoryVoluntary1Code;
 import com.tools20022.repository.codeset.DTCCSubEventType2Code;
 import com.tools20022.repository.codeset.EventGroup1Code;
 import com.tools20022.repository.codeset.ExtendedEventType1Code;
 import com.tools20022.repository.datatype.Max350Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -118,7 +120,7 @@ public class CorporateActionNotificationSD7 {
 			componentContext_lazy = () -> CorporateActionNotificationSD7.mmObject();
 			isDerived = false;
 			xmlTag = "PlcAndNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "xPath to the element that is being extended.";
 			maxOccurs = 1;
@@ -160,7 +162,7 @@ public class CorporateActionNotificationSD7 {
 			componentContext_lazy = () -> CorporateActionNotificationSD7.mmObject();
 			isDerived = false;
 			xmlTag = "EvtGrp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventGroup";
 			definition = "DTC processing domain/ category for event types.";
 			maxOccurs = 1;
@@ -208,7 +210,7 @@ public class CorporateActionNotificationSD7 {
 			componentContext_lazy = () -> CorporateActionNotificationSD7.mmObject();
 			isDerived = false;
 			xmlTag = "EvtTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventType";
 			definition = "DTCC  (The Depository Trust and Clearing Corporation) native corporate action event type name. Used in place for the events that cannot be classified by ISO code and mapped to OTHR or when two  or more distinct events (in DTCC model)  use same ISO code and there are no additional data elements that distinguish those two or more events.";
 			maxOccurs = 1;
@@ -253,7 +255,7 @@ public class CorporateActionNotificationSD7 {
 			componentContext_lazy = () -> CorporateActionNotificationSD7.mmObject();
 			isDerived = false;
 			xmlTag = "SubEvtTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubEventType";
 			definition = "DTCC  (The Depository Trust and Clearing Corporation) native corporate action sub event type name further defines the event type.";
 			maxOccurs = 1;
@@ -305,7 +307,7 @@ public class CorporateActionNotificationSD7 {
 			componentContext_lazy = () -> CorporateActionNotificationSD7.mmObject();
 			isDerived = false;
 			xmlTag = "DTCMndtryVlntryEvtTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCMandatoryVoluntaryEventType";
 			definition = "Specifies the nature of the event with regard to how it is being supported by DTC (The Depository Trust Corporation)  the custodian: whether the event is mandatory, voluntary, or mandatory with options and eligible for DTC processing. This classification is necessary for the event types that have additional DTC only options. For an example: a MAND event, where the issuer declared only one option may be eligible for special DTC options (services like Dividend Reinvestment, Foreign Currency Payment, etc)  in this case it will be announced as MAND by the issuer and CHOS by DTC. ";
 			maxOccurs = 1;
@@ -348,7 +350,7 @@ public class CorporateActionNotificationSD7 {
 			componentContext_lazy = () -> CorporateActionNotificationSD7.mmObject();
 			isDerived = false;
 			xmlTag = "DclrdMndtryVlntryEvtTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeclaredMandatoryVoluntaryEventType";
 			definition = "Specifies the nature of the event as announced by the agent or issuer.";
 			maxOccurs = 1;
@@ -360,11 +362,10 @@ public class CorporateActionNotificationSD7 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionNotificationSD7.mmPlaceAndName, com.tools20022.repository.msg.CorporateActionNotificationSD7.mmEventGroup,
-						com.tools20022.repository.msg.CorporateActionNotificationSD7.mmEventType, com.tools20022.repository.msg.CorporateActionNotificationSD7.mmSubEventType,
-						com.tools20022.repository.msg.CorporateActionNotificationSD7.mmDTCMandatoryVoluntaryEventType, com.tools20022.repository.msg.CorporateActionNotificationSD7.mmDeclaredMandatoryVoluntaryEventType);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(CorporateActionNotificationSD7.mmPlaceAndName, CorporateActionNotificationSD7.mmEventGroup, CorporateActionNotificationSD7.mmEventType,
+						CorporateActionNotificationSD7.mmSubEventType, CorporateActionNotificationSD7.mmDTCMandatoryVoluntaryEventType, CorporateActionNotificationSD7.mmDeclaredMandatoryVoluntaryEventType);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CorporateActionNotificationSD7";
 				definition = "Provides additional information regarding corporate action general information details.";
 				nextVersions_lazy = () -> Arrays.asList(CorporateActionGeneralInformationSD11.mmObject());

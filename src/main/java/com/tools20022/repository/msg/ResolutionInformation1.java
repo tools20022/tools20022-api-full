@@ -19,10 +19,14 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.camt.*;
 import com.tools20022.repository.codeset.ClearingChannel2Code;
 import com.tools20022.repository.datatype.ActiveOrHistoricCurrencyAndAmount;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.entity.CashSettlement;
+import com.tools20022.repository.entity.PaymentProcessing;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -131,11 +135,11 @@ public class ResolutionInformation1 {
 	 */
 	public static final MMMessageAttribute mmInterbankSettlementAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashSettlement.mmInterbankSettlementAmount;
+			businessElementTrace_lazy = () -> CashSettlement.mmInterbankSettlementAmount;
 			componentContext_lazy = () -> ResolutionInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "IntrBkSttlmAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterbankSettlementAmount";
 			definition = "Amount of money moved between the instructing agent and the instructed agent.";
 			maxOccurs = 1;
@@ -182,11 +186,11 @@ public class ResolutionInformation1 {
 	 */
 	public static final MMMessageAttribute mmInterbankSettlementDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashSettlement.mmInterbankSettlementDate;
+			businessElementTrace_lazy = () -> CashSettlement.mmInterbankSettlementDate;
 			componentContext_lazy = () -> ResolutionInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "IntrBkSttlmDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterbankSettlementDate";
 			definition = "Date on which the amount of money ceases to be available to the agent that owes it and when the amount of money becomes available to the agent to which it is due.";
 			maxOccurs = 1;
@@ -233,11 +237,11 @@ public class ResolutionInformation1 {
 	 */
 	public static final MMMessageAttribute mmClearingChannel = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentProcessing.mmClearingChannel;
+			businessElementTrace_lazy = () -> PaymentProcessing.mmClearingChannel;
 			componentContext_lazy = () -> ResolutionInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "ClrChanl";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClearingChannel";
 			definition = "Specifies the clearing channel to be used to process the payment instruction.";
 			maxOccurs = 1;
@@ -249,14 +253,12 @@ public class ResolutionInformation1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ResolutionInformation1.mmInterbankSettlementAmount, com.tools20022.repository.msg.ResolutionInformation1.mmInterbankSettlementDate,
-						com.tools20022.repository.msg.ResolutionInformation1.mmClearingChannel);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.ResolutionOfInvestigationV03.mmResolutionRelatedInformation,
-						com.tools20022.repository.area.camt.ResolutionOfInvestigationV04.mmResolutionRelatedInformation, com.tools20022.repository.area.camt.ResolutionOfInvestigationV05.mmResolutionRelatedInformation,
-						com.tools20022.repository.area.camt.ResolutionOfInvestigationV06.mmResolutionRelatedInformation, com.tools20022.repository.area.camt.ResolutionOfInvestigationV07.mmResolutionRelatedInformation);
+				messageElement_lazy = () -> Arrays.asList(ResolutionInformation1.mmInterbankSettlementAmount, ResolutionInformation1.mmInterbankSettlementDate, ResolutionInformation1.mmClearingChannel);
+				messageBuildingBlock_lazy = () -> Arrays.asList(ResolutionOfInvestigationV03.mmResolutionRelatedInformation, ResolutionOfInvestigationV04.mmResolutionRelatedInformation,
+						ResolutionOfInvestigationV05.mmResolutionRelatedInformation, ResolutionOfInvestigationV06.mmResolutionRelatedInformation, ResolutionOfInvestigationV07.mmResolutionRelatedInformation);
 				trace_lazy = () -> CashSettlement.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ResolutionInformation1";
 				definition = "Set of elements used to provide information on the return or reversal expected by the party that initiated the initial payment instruction after a cancellation or modification request.";
 			}

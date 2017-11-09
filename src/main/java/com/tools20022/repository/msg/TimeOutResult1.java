@@ -19,6 +19,8 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -90,7 +92,7 @@ public class TimeOutResult1 {
 			componentContext_lazy = () -> TimeOutResult1.mmObject();
 			isDerived = false;
 			xmlTag = "TxFutrSts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionFutureStatus";
 			definition = "Specifies the status of the transaction if no action is taken by the user.";
 			maxOccurs = 1;
@@ -130,7 +132,7 @@ public class TimeOutResult1 {
 			componentContext_lazy = () -> TimeOutResult1.mmObject();
 			isDerived = false;
 			xmlTag = "TmOutEvt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TimeOutEvent";
 			definition = "Describes the time-out reason.";
 			maxOccurs = 1;
@@ -143,9 +145,9 @@ public class TimeOutResult1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TimeOutResult1.mmTransactionFutureStatus, com.tools20022.repository.msg.TimeOutResult1.mmTimeOutEvent);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(TimeOutResult1.mmTransactionFutureStatus, TimeOutResult1.mmTimeOutEvent);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "TimeOutResult1";
 				definition = "Describes the time-out consequences.";
 			}

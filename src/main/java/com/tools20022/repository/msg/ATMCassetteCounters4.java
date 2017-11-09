@@ -19,8 +19,10 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ATMCounterType1Code;
 import com.tools20022.repository.datatype.Number;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -113,7 +115,7 @@ public class ATMCassetteCounters4 {
 			componentContext_lazy = () -> ATMCassetteCounters4.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Type of counters.";
 			maxOccurs = 1;
@@ -154,7 +156,7 @@ public class ATMCassetteCounters4 {
 			componentContext_lazy = () -> ATMCassetteCounters4.mmObject();
 			isDerived = false;
 			xmlTag = "AddedNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AddedNumber";
 			definition = "Number of added media during servicing operations.";
 			maxOccurs = 1;
@@ -195,7 +197,7 @@ public class ATMCassetteCounters4 {
 			componentContext_lazy = () -> ATMCassetteCounters4.mmObject();
 			isDerived = false;
 			xmlTag = "RmvdNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RemovedNumber";
 			definition = "Number of removed media during servicing operations.";
 			maxOccurs = 1;
@@ -236,7 +238,7 @@ public class ATMCassetteCounters4 {
 			componentContext_lazy = () -> ATMCassetteCounters4.mmObject();
 			isDerived = false;
 			xmlTag = "DspnsdNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DispensedNumber";
 			definition = "Total number of media out of the cassette.";
 			maxOccurs = 1;
@@ -277,7 +279,7 @@ public class ATMCassetteCounters4 {
 			componentContext_lazy = () -> ATMCassetteCounters4.mmObject();
 			isDerived = false;
 			xmlTag = "DpstdNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DepositedNumber";
 			definition = "Total number of media deposited in the cassette.";
 			maxOccurs = 1;
@@ -318,7 +320,7 @@ public class ATMCassetteCounters4 {
 			componentContext_lazy = () -> ATMCassetteCounters4.mmObject();
 			isDerived = false;
 			xmlTag = "RcycldNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RecycledNumber";
 			definition = "Total number of recycled media from the cassette.";
 			maxOccurs = 1;
@@ -360,7 +362,7 @@ public class ATMCassetteCounters4 {
 			componentContext_lazy = () -> ATMCassetteCounters4.mmObject();
 			isDerived = false;
 			xmlTag = "RtrctdNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RetractedNumber";
 			definition = "Total number of retracted media originating from the cassette.";
 			maxOccurs = 1;
@@ -402,7 +404,7 @@ public class ATMCassetteCounters4 {
 			componentContext_lazy = () -> ATMCassetteCounters4.mmObject();
 			isDerived = false;
 			xmlTag = "RjctdNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RejectedNumber";
 			definition = "Total number of media from this cassette which are on the reject bin.";
 			maxOccurs = 1;
@@ -443,7 +445,7 @@ public class ATMCassetteCounters4 {
 			componentContext_lazy = () -> ATMCassetteCounters4.mmObject();
 			isDerived = false;
 			xmlTag = "PresntdNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PresentedNumber";
 			definition = "Total number of media presented to the customer.";
 			maxOccurs = 1;
@@ -455,12 +457,10 @@ public class ATMCassetteCounters4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMCassetteCounters4.mmType, com.tools20022.repository.msg.ATMCassetteCounters4.mmAddedNumber,
-						com.tools20022.repository.msg.ATMCassetteCounters4.mmRemovedNumber, com.tools20022.repository.msg.ATMCassetteCounters4.mmDispensedNumber, com.tools20022.repository.msg.ATMCassetteCounters4.mmDepositedNumber,
-						com.tools20022.repository.msg.ATMCassetteCounters4.mmRecycledNumber, com.tools20022.repository.msg.ATMCassetteCounters4.mmRetractedNumber, com.tools20022.repository.msg.ATMCassetteCounters4.mmRejectedNumber,
-						com.tools20022.repository.msg.ATMCassetteCounters4.mmPresentedNumber);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(ATMCassetteCounters4.mmType, ATMCassetteCounters4.mmAddedNumber, ATMCassetteCounters4.mmRemovedNumber, ATMCassetteCounters4.mmDispensedNumber,
+						ATMCassetteCounters4.mmDepositedNumber, ATMCassetteCounters4.mmRecycledNumber, ATMCassetteCounters4.mmRetractedNumber, ATMCassetteCounters4.mmRejectedNumber, ATMCassetteCounters4.mmPresentedNumber);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ATMCassetteCounters4";
 				definition = "Counters of media inside an ATM cassette.";
 			}

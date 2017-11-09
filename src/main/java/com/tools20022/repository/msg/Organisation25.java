@@ -20,10 +20,14 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.LocationCategory1Code;
 import com.tools20022.repository.datatype.Max140Text;
 import com.tools20022.repository.datatype.Max70Text;
 import com.tools20022.repository.entity.Organisation;
+import com.tools20022.repository.entity.PartyIdentificationInformation;
+import com.tools20022.repository.entity.PartyName;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -120,14 +124,14 @@ public class Organisation25 {
 	 */
 	public static final MMMessageAssociationEnd mmIdentification = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.mmOtherIdentification;
+			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmOtherIdentification;
 			componentContext_lazy = () -> Organisation25.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Identification of the merchant.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Organisation8.mmIdentification;
+			previousVersion_lazy = () -> Organisation8.mmIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -181,15 +185,15 @@ public class Organisation25 {
 	 */
 	public static final MMMessageAttribute mmCommonName = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyName.mmName;
+			businessElementTrace_lazy = () -> PartyName.mmName;
 			componentContext_lazy = () -> Organisation25.mmObject();
 			isDerived = false;
 			xmlTag = "CmonNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommonName";
 			definition = "Name of the merchant as appearing on the receipt.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Organisation26.mmCommonName);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Organisation8.mmCommonName;
+			nextVersions_lazy = () -> Arrays.asList(Organisation26.mmCommonName);
+			previousVersion_lazy = () -> Organisation8.mmCommonName;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max70Text.mmObject();
@@ -236,10 +240,10 @@ public class Organisation25 {
 			componentContext_lazy = () -> Organisation25.mmObject();
 			isDerived = false;
 			xmlTag = "LctnCtgy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LocationCategory";
 			definition = "Location category of the place where the merchant actually performed the transaction.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Organisation8.mmLocationCategory;
+			previousVersion_lazy = () -> Organisation8.mmLocationCategory;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> LocationCategory1Code.mmObject();
@@ -279,7 +283,7 @@ public class Organisation25 {
 			componentContext_lazy = () -> Organisation25.mmObject();
 			isDerived = false;
 			xmlTag = "LctnAndCtct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LocationAndContact";
 			definition = "Location and contact information of the merchant performing the transaction.";
 			maxOccurs = 1;
@@ -325,10 +329,10 @@ public class Organisation25 {
 			componentContext_lazy = () -> Organisation25.mmObject();
 			isDerived = false;
 			xmlTag = "SchmeData";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SchemeData";
 			definition = "Additional merchant data required by a card scheme.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Organisation8.mmSchemeData;
+			previousVersion_lazy = () -> Organisation8.mmSchemeData;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
@@ -338,11 +342,10 @@ public class Organisation25 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Organisation25.mmIdentification, com.tools20022.repository.msg.Organisation25.mmCommonName,
-						com.tools20022.repository.msg.Organisation25.mmLocationCategory, com.tools20022.repository.msg.Organisation25.mmLocationAndContact, com.tools20022.repository.msg.Organisation25.mmSchemeData);
+				messageElement_lazy = () -> Arrays.asList(Organisation25.mmIdentification, Organisation25.mmCommonName, Organisation25.mmLocationCategory, Organisation25.mmLocationAndContact, Organisation25.mmSchemeData);
 				trace_lazy = () -> Organisation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Organisation25";
 				definition = "Merchant performing the transaction.";
 				nextVersions_lazy = () -> Arrays.asList(Organisation26.mmObject());

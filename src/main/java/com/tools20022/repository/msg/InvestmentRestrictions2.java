@@ -19,10 +19,12 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.HoldingTransferable1Code;
 import com.tools20022.repository.datatype.*;
 import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -132,11 +134,11 @@ public class InvestmentRestrictions2 {
 	 */
 	public static final MMMessageAttribute mmMinimumInitialSubscriptionAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics.mmMinimumInitialSubscriptionAmount;
+			businessElementTrace_lazy = () -> InvestmentFundClassProcessingCharacteristics.mmMinimumInitialSubscriptionAmount;
 			componentContext_lazy = () -> InvestmentRestrictions2.mmObject();
 			isDerived = false;
 			xmlTag = "MinInitlSbcptAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MinimumInitialSubscriptionAmount";
 			definition = "Minimum initial quantity of securities, expressed as an amount that must be purchased at subscription.";
 			maxOccurs = 1;
@@ -181,11 +183,11 @@ public class InvestmentRestrictions2 {
 	 */
 	public static final MMMessageAttribute mmMinimumInitialSubscriptionUnits = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics.mmMinimumInitialSubscriptionUnits;
+			businessElementTrace_lazy = () -> InvestmentFundClassProcessingCharacteristics.mmMinimumInitialSubscriptionUnits;
 			componentContext_lazy = () -> InvestmentRestrictions2.mmObject();
 			isDerived = false;
 			xmlTag = "MinInitlSbcptUnits";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MinimumInitialSubscriptionUnits";
 			definition = "Minimum initial number of units/shares that must be purchased.";
 			maxOccurs = 1;
@@ -233,11 +235,11 @@ public class InvestmentRestrictions2 {
 	 */
 	public static final MMMessageAttribute mmMinimumSubsequentSubscriptionAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics.mmMinimumSubscriptionAmount;
+			businessElementTrace_lazy = () -> InvestmentFundClassProcessingCharacteristics.mmMinimumSubscriptionAmount;
 			componentContext_lazy = () -> InvestmentRestrictions2.mmObject();
 			isDerived = false;
 			xmlTag = "MinSbsqntSbcptAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MinimumSubsequentSubscriptionAmount";
 			definition = "Minimum quantity of securities, expressed as an amount that must be purchased.";
 			maxOccurs = 1;
@@ -283,11 +285,11 @@ public class InvestmentRestrictions2 {
 	 */
 	public static final MMMessageAttribute mmMinimumSubsequentSubscriptionUnits = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics.mmMinimumSubscriptionUnits;
+			businessElementTrace_lazy = () -> InvestmentFundClassProcessingCharacteristics.mmMinimumSubscriptionUnits;
 			componentContext_lazy = () -> InvestmentRestrictions2.mmObject();
 			isDerived = false;
 			xmlTag = "MinSbsqntSbcptUnits";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MinimumSubsequentSubscriptionUnits";
 			definition = "Minimum quantity of securities, expressed as number of units/shares that must be purchased.";
 			maxOccurs = 1;
@@ -333,11 +335,11 @@ public class InvestmentRestrictions2 {
 	 */
 	public static final MMMessageAttribute mmMaximumRedemptionAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics.mmMaximumRedemptionAmount;
+			businessElementTrace_lazy = () -> InvestmentFundClassProcessingCharacteristics.mmMaximumRedemptionAmount;
 			componentContext_lazy = () -> InvestmentRestrictions2.mmObject();
 			isDerived = false;
 			xmlTag = "MaxRedAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaximumRedemptionAmount";
 			definition = "Maximum quantity of securities, expressed as an amount that can be sold.";
 			maxOccurs = 1;
@@ -383,11 +385,11 @@ public class InvestmentRestrictions2 {
 	 */
 	public static final MMMessageAttribute mmMaximumRedemptionUnits = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics.mmMaximumRedemptionUnits;
+			businessElementTrace_lazy = () -> InvestmentFundClassProcessingCharacteristics.mmMaximumRedemptionUnits;
 			componentContext_lazy = () -> InvestmentRestrictions2.mmObject();
 			isDerived = false;
 			xmlTag = "MaxRedUnits";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaximumRedemptionUnits";
 			definition = "Maximum number of shares/units that may be redeemed on a single dealing day.";
 			maxOccurs = 1;
@@ -431,7 +433,7 @@ public class InvestmentRestrictions2 {
 			componentContext_lazy = () -> InvestmentRestrictions2.mmObject();
 			isDerived = false;
 			xmlTag = "OthrRedRstrctns";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherRedemptionRestrictions";
 			definition = "Specifies any other restrictions that may limit an investor's ability to redeem.";
 			maxOccurs = 1;
@@ -478,11 +480,11 @@ public class InvestmentRestrictions2 {
 	 */
 	public static final MMMessageAttribute mmMinimumHoldingAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics.mmMinimumHoldingAmount;
+			businessElementTrace_lazy = () -> InvestmentFundClassProcessingCharacteristics.mmMinimumHoldingAmount;
 			componentContext_lazy = () -> InvestmentRestrictions2.mmObject();
 			isDerived = false;
 			xmlTag = "MinHldgAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MinimumHoldingAmount";
 			definition = "Minimum value of units that must be maintained to avoid automatic redemption.";
 			maxOccurs = 1;
@@ -529,11 +531,11 @@ public class InvestmentRestrictions2 {
 	 */
 	public static final MMMessageAttribute mmMinimumHoldingUnits = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics.mmMinimumHoldingUnits;
+			businessElementTrace_lazy = () -> InvestmentFundClassProcessingCharacteristics.mmMinimumHoldingUnits;
 			componentContext_lazy = () -> InvestmentRestrictions2.mmObject();
 			isDerived = false;
 			xmlTag = "MinHldgUnits";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MinimumHoldingUnits";
 			definition = "Minimum number of units that must be maintained to avoid automatic redemption.";
 			maxOccurs = 1;
@@ -580,11 +582,11 @@ public class InvestmentRestrictions2 {
 	 */
 	public static final MMMessageAttribute mmMinimumHoldingPeriod = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics.mmMinimumHoldingPeriod;
+			businessElementTrace_lazy = () -> InvestmentFundClassProcessingCharacteristics.mmMinimumHoldingPeriod;
 			componentContext_lazy = () -> InvestmentRestrictions2.mmObject();
 			isDerived = false;
 			xmlTag = "MinHldgPrd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MinimumHoldingPeriod";
 			definition = "Description of a period, that may be a number of days, weeks or descriptive period during which the units/shares must be held following their issue before redemption will be permitted.";
 			maxOccurs = 1;
@@ -631,11 +633,11 @@ public class InvestmentRestrictions2 {
 	 */
 	public static final MMMessageAttribute mmHoldingTransferable = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics.mmHoldingTransferable;
+			businessElementTrace_lazy = () -> InvestmentFundClassProcessingCharacteristics.mmHoldingTransferable;
 			componentContext_lazy = () -> InvestmentRestrictions2.mmObject();
 			isDerived = false;
 			xmlTag = "HldgTrfbl";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HoldingTransferable";
 			definition = "Indicates whether registered investors are able to transfer some or all of their holdings to third parties.";
 			maxOccurs = 1;
@@ -647,15 +649,13 @@ public class InvestmentRestrictions2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentRestrictions2.mmMinimumInitialSubscriptionAmount, com.tools20022.repository.msg.InvestmentRestrictions2.mmMinimumInitialSubscriptionUnits,
-						com.tools20022.repository.msg.InvestmentRestrictions2.mmMinimumSubsequentSubscriptionAmount, com.tools20022.repository.msg.InvestmentRestrictions2.mmMinimumSubsequentSubscriptionUnits,
-						com.tools20022.repository.msg.InvestmentRestrictions2.mmMaximumRedemptionAmount, com.tools20022.repository.msg.InvestmentRestrictions2.mmMaximumRedemptionUnits,
-						com.tools20022.repository.msg.InvestmentRestrictions2.mmOtherRedemptionRestrictions, com.tools20022.repository.msg.InvestmentRestrictions2.mmMinimumHoldingAmount,
-						com.tools20022.repository.msg.InvestmentRestrictions2.mmMinimumHoldingUnits, com.tools20022.repository.msg.InvestmentRestrictions2.mmMinimumHoldingPeriod,
-						com.tools20022.repository.msg.InvestmentRestrictions2.mmHoldingTransferable);
+				messageElement_lazy = () -> Arrays.asList(InvestmentRestrictions2.mmMinimumInitialSubscriptionAmount, InvestmentRestrictions2.mmMinimumInitialSubscriptionUnits, InvestmentRestrictions2.mmMinimumSubsequentSubscriptionAmount,
+						InvestmentRestrictions2.mmMinimumSubsequentSubscriptionUnits, InvestmentRestrictions2.mmMaximumRedemptionAmount, InvestmentRestrictions2.mmMaximumRedemptionUnits,
+						InvestmentRestrictions2.mmOtherRedemptionRestrictions, InvestmentRestrictions2.mmMinimumHoldingAmount, InvestmentRestrictions2.mmMinimumHoldingUnits, InvestmentRestrictions2.mmMinimumHoldingPeriod,
+						InvestmentRestrictions2.mmHoldingTransferable);
 				trace_lazy = () -> InvestmentFundClassProcessingCharacteristics.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InvestmentRestrictions2";
 				definition = "Investment restrictions linked to the instrument.";
 			}

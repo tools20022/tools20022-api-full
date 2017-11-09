@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.PrePaymentSpeedCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -104,7 +106,7 @@ public class PrePaymentSpeed1Code extends PrePaymentSpeedCode {
 	 */
 	public static final MMCode mmSingleMonthlyMortality = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SingleMonthlyMortality";
 			owner_lazy = () -> PrePaymentSpeed1Code.mmObject();
 		}
@@ -127,7 +129,7 @@ public class PrePaymentSpeed1Code extends PrePaymentSpeedCode {
 	 */
 	public static final MMCode mmConstantPrePaymentRate = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConstantPrePaymentRate";
 			owner_lazy = () -> PrePaymentSpeed1Code.mmObject();
 		}
@@ -150,7 +152,7 @@ public class PrePaymentSpeed1Code extends PrePaymentSpeedCode {
 	 */
 	public static final MMCode mmAbsolutePrePaymentSpeed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AbsolutePrePaymentSpeed";
 			owner_lazy = () -> PrePaymentSpeed1Code.mmObject();
 		}
@@ -173,7 +175,7 @@ public class PrePaymentSpeed1Code extends PrePaymentSpeedCode {
 	 */
 	public static final MMCode mmMonthlyPrePaymentRate = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MonthlyPrePaymentRate";
 			owner_lazy = () -> PrePaymentSpeed1Code.mmObject();
 		}
@@ -196,7 +198,7 @@ public class PrePaymentSpeed1Code extends PrePaymentSpeedCode {
 	 */
 	public static final MMCode mmHomeEquityPrePaymentCurve = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HomeEquityPrePaymentCurve";
 			owner_lazy = () -> PrePaymentSpeed1Code.mmObject();
 		}
@@ -219,7 +221,7 @@ public class PrePaymentSpeed1Code extends PrePaymentSpeedCode {
 	 */
 	public static final MMCode mmBMAPrePaymentCurve = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BMAPrePaymentCurve";
 			owner_lazy = () -> PrePaymentSpeed1Code.mmObject();
 		}
@@ -242,7 +244,7 @@ public class PrePaymentSpeed1Code extends PrePaymentSpeedCode {
 	 */
 	public static final MMCode mmProspectusPrePaymentCurve = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProspectusPrePaymentCurve";
 			owner_lazy = () -> PrePaymentSpeed1Code.mmObject();
 		}
@@ -265,7 +267,7 @@ public class PrePaymentSpeed1Code extends PrePaymentSpeedCode {
 	 */
 	public static final MMCode mmManufacturedHousingPrePaymentCurve = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ManufacturedHousingPrePaymentCurve";
 			owner_lazy = () -> PrePaymentSpeed1Code.mmObject();
 		}
@@ -274,15 +276,13 @@ public class PrePaymentSpeed1Code extends PrePaymentSpeedCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("SIMM");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PrePaymentSpeed1Code";
 				definition = "Speed of unscheduled partial of complete payment of the principal amount outstanding on a debt obligation before its due date.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PrePaymentSpeed1Code.mmSingleMonthlyMortality, com.tools20022.repository.codeset.PrePaymentSpeed1Code.mmConstantPrePaymentRate,
-						com.tools20022.repository.codeset.PrePaymentSpeed1Code.mmAbsolutePrePaymentSpeed, com.tools20022.repository.codeset.PrePaymentSpeed1Code.mmMonthlyPrePaymentRate,
-						com.tools20022.repository.codeset.PrePaymentSpeed1Code.mmHomeEquityPrePaymentCurve, com.tools20022.repository.codeset.PrePaymentSpeed1Code.mmBMAPrePaymentCurve,
-						com.tools20022.repository.codeset.PrePaymentSpeed1Code.mmProspectusPrePaymentCurve, com.tools20022.repository.codeset.PrePaymentSpeed1Code.mmManufacturedHousingPrePaymentCurve);
+				code_lazy = () -> Arrays.asList(PrePaymentSpeed1Code.mmSingleMonthlyMortality, PrePaymentSpeed1Code.mmConstantPrePaymentRate, PrePaymentSpeed1Code.mmAbsolutePrePaymentSpeed, PrePaymentSpeed1Code.mmMonthlyPrePaymentRate,
+						PrePaymentSpeed1Code.mmHomeEquityPrePaymentCurve, PrePaymentSpeed1Code.mmBMAPrePaymentCurve, PrePaymentSpeed1Code.mmProspectusPrePaymentCurve, PrePaymentSpeed1Code.mmManufacturedHousingPrePaymentCurve);
 				trace_lazy = () -> PrePaymentSpeedCode.mmObject();
 			}
 		});

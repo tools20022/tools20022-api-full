@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.MeetingTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -83,7 +85,7 @@ public class MeetingType3Code extends MeetingTypeCode {
 	 */
 	public static final MMCode mmExtraordinary = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Extraordinary";
 			owner_lazy = () -> MeetingType3Code.mmObject();
 		}
@@ -106,7 +108,7 @@ public class MeetingType3Code extends MeetingTypeCode {
 	 */
 	public static final MMCode mmGeneral = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "General";
 			owner_lazy = () -> MeetingType3Code.mmObject();
 		}
@@ -129,7 +131,7 @@ public class MeetingType3Code extends MeetingTypeCode {
 	 */
 	public static final MMCode mmMixed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Mixed";
 			owner_lazy = () -> MeetingType3Code.mmObject();
 		}
@@ -152,7 +154,7 @@ public class MeetingType3Code extends MeetingTypeCode {
 	 */
 	public static final MMCode mmSpecial = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Special";
 			owner_lazy = () -> MeetingType3Code.mmObject();
 		}
@@ -175,7 +177,7 @@ public class MeetingType3Code extends MeetingTypeCode {
 	 */
 	public static final MMCode mmBondHolderMeeting = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BondHolderMeeting";
 			owner_lazy = () -> MeetingType3Code.mmObject();
 		}
@@ -184,12 +186,11 @@ public class MeetingType3Code extends MeetingTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MeetingType3Code";
 				definition = "Specifies the type of security holders meeting.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MeetingType3Code.mmExtraordinary, com.tools20022.repository.codeset.MeetingType3Code.mmGeneral, com.tools20022.repository.codeset.MeetingType3Code.mmMixed,
-						com.tools20022.repository.codeset.MeetingType3Code.mmSpecial, com.tools20022.repository.codeset.MeetingType3Code.mmBondHolderMeeting);
+				code_lazy = () -> Arrays.asList(MeetingType3Code.mmExtraordinary, MeetingType3Code.mmGeneral, MeetingType3Code.mmMixed, MeetingType3Code.mmSpecial, MeetingType3Code.mmBondHolderMeeting);
 				trace_lazy = () -> MeetingTypeCode.mmObject();
 			}
 		});

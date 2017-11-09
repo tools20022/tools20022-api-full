@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.PreAllocationMethodCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -83,7 +85,7 @@ public class PreAllocationMethod1Code extends PreAllocationMethodCode {
 	 */
 	public static final MMCode mmProrata = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Prorata";
 			owner_lazy = () -> PreAllocationMethod1Code.mmObject();
 		}
@@ -106,7 +108,7 @@ public class PreAllocationMethod1Code extends PreAllocationMethodCode {
 	 */
 	public static final MMCode mmSpeakFirst = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SpeakFirst";
 			owner_lazy = () -> PreAllocationMethod1Code.mmObject();
 		}
@@ -115,12 +117,12 @@ public class PreAllocationMethod1Code extends PreAllocationMethodCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("PROR");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PreAllocationMethod1Code";
 				definition = "Indicates the method of preallocation.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PreAllocationMethod1Code.mmProrata, com.tools20022.repository.codeset.PreAllocationMethod1Code.mmSpeakFirst);
+				code_lazy = () -> Arrays.asList(PreAllocationMethod1Code.mmProrata, PreAllocationMethod1Code.mmSpeakFirst);
 				trace_lazy = () -> PreAllocationMethodCode.mmObject();
 			}
 		});

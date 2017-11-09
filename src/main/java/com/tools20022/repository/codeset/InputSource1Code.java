@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.InputSourceCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -79,7 +81,7 @@ public class InputSource1Code extends InputSourceCode {
 	 */
 	public static final MMCode mmEncoded = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Encoded";
 			owner_lazy = () -> InputSource1Code.mmObject();
 		}
@@ -102,7 +104,7 @@ public class InputSource1Code extends InputSourceCode {
 	 */
 	public static final MMCode mmUploadedManually = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UploadedManually";
 			owner_lazy = () -> InputSource1Code.mmObject();
 		}
@@ -125,7 +127,7 @@ public class InputSource1Code extends InputSourceCode {
 	 */
 	public static final MMCode mmUploadedViaCIS = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UploadedViaCIS";
 			owner_lazy = () -> InputSource1Code.mmObject();
 		}
@@ -134,12 +136,11 @@ public class InputSource1Code extends InputSourceCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InputSource1Code";
 				definition = "Specifies the input source for the generation of the file.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.InputSource1Code.mmEncoded, com.tools20022.repository.codeset.InputSource1Code.mmUploadedManually,
-						com.tools20022.repository.codeset.InputSource1Code.mmUploadedViaCIS);
+				code_lazy = () -> Arrays.asList(InputSource1Code.mmEncoded, InputSource1Code.mmUploadedManually, InputSource1Code.mmUploadedViaCIS);
 				trace_lazy = () -> InputSourceCode.mmObject();
 			}
 		});

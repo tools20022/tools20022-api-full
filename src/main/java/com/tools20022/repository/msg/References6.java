@@ -20,9 +20,13 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.acmt.AccountRequestRejectionV01;
+import com.tools20022.repository.area.acmt.AccountRequestRejectionV02;
 import com.tools20022.repository.codeset.UseCases1Code;
 import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.datatype.Max70Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -120,7 +124,7 @@ public class References6 {
 			componentContext_lazy = () -> References6.mmObject();
 			isDerived = false;
 			xmlTag = "RjctdReqTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RejectedRequestType";
 			definition = "Identify the type of rejected request.";
 			maxOccurs = 1;
@@ -160,7 +164,7 @@ public class References6 {
 			componentContext_lazy = () -> References6.mmObject();
 			isDerived = false;
 			xmlTag = "RjctnRsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RejectionReason";
 			definition = "Reason of the message rejection.";
 			minOccurs = 1;
@@ -198,7 +202,7 @@ public class References6 {
 			componentContext_lazy = () -> References6.mmObject();
 			isDerived = false;
 			xmlTag = "RjctdReqId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RejectedRequestIdentification";
 			definition = "Identification of the rejected request message.";
 			maxOccurs = 1;
@@ -241,7 +245,7 @@ public class References6 {
 			componentContext_lazy = () -> References6.mmObject();
 			isDerived = false;
 			xmlTag = "MsgId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageIdentification";
 			definition = "Identifies a message by a unique identifier and the date and time when the message was created by the sender.";
 			maxOccurs = 1;
@@ -287,7 +291,7 @@ public class References6 {
 			componentContext_lazy = () -> References6.mmObject();
 			isDerived = false;
 			xmlTag = "PrcId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProcessIdentification";
 			definition = "Identifies a process by a unique identifier and the date and time when the first message belonging to the process was created by the sender. The process identification remains the same in all messages belonging to the same process, from the initial request message to the final account report closing the process.";
 			maxOccurs = 1;
@@ -329,7 +333,7 @@ public class References6 {
 			componentContext_lazy = () -> References6.mmObject();
 			isDerived = false;
 			xmlTag = "AttchdDocNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AttachedDocumentName";
 			definition = "File name of a document logically related to the request.";
 			minOccurs = 0;
@@ -340,12 +344,11 @@ public class References6 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.References6.mmRejectedRequestType, com.tools20022.repository.msg.References6.mmRejectionReason,
-						com.tools20022.repository.msg.References6.mmRejectedRequestIdentification, com.tools20022.repository.msg.References6.mmMessageIdentification, com.tools20022.repository.msg.References6.mmProcessIdentification,
-						com.tools20022.repository.msg.References6.mmAttachedDocumentName);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountRequestRejectionV01.mmReferences, com.tools20022.repository.area.acmt.AccountRequestRejectionV02.mmReferences);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(References6.mmRejectedRequestType, References6.mmRejectionReason, References6.mmRejectedRequestIdentification, References6.mmMessageIdentification,
+						References6.mmProcessIdentification, References6.mmAttachedDocumentName);
+				messageBuildingBlock_lazy = () -> Arrays.asList(AccountRequestRejectionV01.mmReferences, AccountRequestRejectionV02.mmReferences);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "References6";
 				definition = "Set of elements for the identification of the message and related references.";
 			}

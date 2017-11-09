@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.SupportDocumentTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -80,7 +82,7 @@ public class SupportDocumentType1Code extends SupportDocumentTypeCode {
 	 */
 	public static final MMCode mmLetterFromBank = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LetterFromBank";
 			owner_lazy = () -> SupportDocumentType1Code.mmObject();
 		}
@@ -103,7 +105,7 @@ public class SupportDocumentType1Code extends SupportDocumentTypeCode {
 	 */
 	public static final MMCode mmLetterToBank = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LetterToBank";
 			owner_lazy = () -> SupportDocumentType1Code.mmObject();
 		}
@@ -126,7 +128,7 @@ public class SupportDocumentType1Code extends SupportDocumentTypeCode {
 	 */
 	public static final MMCode mmSupportingDocument = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupportingDocument";
 			owner_lazy = () -> SupportDocumentType1Code.mmObject();
 		}
@@ -135,12 +137,11 @@ public class SupportDocumentType1Code extends SupportDocumentTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SupportDocumentType1Code";
 				definition = "Specifies a type of supporting document.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SupportDocumentType1Code.mmLetterFromBank, com.tools20022.repository.codeset.SupportDocumentType1Code.mmLetterToBank,
-						com.tools20022.repository.codeset.SupportDocumentType1Code.mmSupportingDocument);
+				code_lazy = () -> Arrays.asList(SupportDocumentType1Code.mmLetterFromBank, SupportDocumentType1Code.mmLetterToBank, SupportDocumentType1Code.mmSupportingDocument);
 				trace_lazy = () -> SupportDocumentTypeCode.mmObject();
 			}
 		});

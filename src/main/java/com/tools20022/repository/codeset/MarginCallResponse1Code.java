@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.MarginCallResponseCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -86,7 +88,7 @@ public class MarginCallResponse1Code extends MarginCallResponseCode {
 	 */
 	public static final MMCode mmNonValuationDay = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonValuationDay";
 			owner_lazy = () -> MarginCallResponse1Code.mmObject();
 		}
@@ -109,7 +111,7 @@ public class MarginCallResponse1Code extends MarginCallResponseCode {
 	 */
 	public static final MMCode mmReceivedAfterNotificationTime = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceivedAfterNotificationTime";
 			owner_lazy = () -> MarginCallResponse1Code.mmObject();
 		}
@@ -118,12 +120,12 @@ public class MarginCallResponse1Code extends MarginCallResponseCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("NVDA");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MarginCallResponse1Code";
 				definition = "Specifies whether the margin call request was sent on a non valuation day or was received after notification time.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MarginCallResponse1Code.mmNonValuationDay, com.tools20022.repository.codeset.MarginCallResponse1Code.mmReceivedAfterNotificationTime);
+				code_lazy = () -> Arrays.asList(MarginCallResponse1Code.mmNonValuationDay, MarginCallResponse1Code.mmReceivedAfterNotificationTime);
 				trace_lazy = () -> MarginCallResponseCode.mmObject();
 			}
 		});

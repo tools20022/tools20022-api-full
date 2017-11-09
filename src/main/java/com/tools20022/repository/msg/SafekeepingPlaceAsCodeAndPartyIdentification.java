@@ -19,9 +19,12 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.SafekeepingPlace1Code;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.entity.SafekeepingPlace;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -101,7 +104,7 @@ public class SafekeepingPlaceAsCodeAndPartyIdentification {
 			componentContext_lazy = () -> SafekeepingPlaceAsCodeAndPartyIdentification.mmObject();
 			isDerived = false;
 			xmlTag = "PlcSfkpg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceSafekeeping";
 			definition = "Place of safekeeping as a code.";
 			maxOccurs = 1;
@@ -142,7 +145,7 @@ public class SafekeepingPlaceAsCodeAndPartyIdentification {
 			componentContext_lazy = () -> SafekeepingPlaceAsCodeAndPartyIdentification.mmObject();
 			isDerived = false;
 			xmlTag = "Nrrtv";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Narrative";
 			definition = "Additional information about the place of safekeeping.";
 			maxOccurs = 1;
@@ -186,11 +189,11 @@ public class SafekeepingPlaceAsCodeAndPartyIdentification {
 	 */
 	public static final MMMessageAttribute mmParty = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> SafekeepingPlaceAsCodeAndPartyIdentification.mmObject();
 			isDerived = false;
 			xmlTag = "Pty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Party";
 			definition = "Place of safekeeping.";
 			maxOccurs = 1;
@@ -202,11 +205,10 @@ public class SafekeepingPlaceAsCodeAndPartyIdentification {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SafekeepingPlaceAsCodeAndPartyIdentification.mmPlaceSafekeeping,
-						com.tools20022.repository.msg.SafekeepingPlaceAsCodeAndPartyIdentification.mmNarrative, com.tools20022.repository.msg.SafekeepingPlaceAsCodeAndPartyIdentification.mmParty);
+				messageElement_lazy = () -> Arrays.asList(SafekeepingPlaceAsCodeAndPartyIdentification.mmPlaceSafekeeping, SafekeepingPlaceAsCodeAndPartyIdentification.mmNarrative, SafekeepingPlaceAsCodeAndPartyIdentification.mmParty);
 				trace_lazy = () -> SafekeepingPlace.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SafekeepingPlaceAsCodeAndPartyIdentification";
 				definition = "Identification of the place of safekeeping expressed as a code and a BIC.";
 			}

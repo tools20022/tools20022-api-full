@@ -20,9 +20,11 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.PartyIdentification71Choice;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -107,7 +109,7 @@ public class ResendSearchCriteria1 {
 			componentContext_lazy = () -> ResendSearchCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "BizDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BusinessDate";
 			definition = "Date of the business day of the requested messages the resend function is used for.";
 			maxOccurs = 1;
@@ -152,7 +154,7 @@ public class ResendSearchCriteria1 {
 			componentContext_lazy = () -> ResendSearchCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "SeqNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SequenceNumber";
 			definition = "Independent counter for message sequence, which is available once per party technical address.\nSpecifies the identification sequence number for a specific couple sender/receiver.";
 			maxOccurs = 1;
@@ -196,7 +198,7 @@ public class ResendSearchCriteria1 {
 			componentContext_lazy = () -> ResendSearchCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlMsgNmId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalMessageNameIdentification";
 			definition = "Unambiguously identifies the original bsiness message, which was delivered by the business sender.";
 			maxOccurs = 1;
@@ -240,7 +242,7 @@ public class ResendSearchCriteria1 {
 			componentContext_lazy = () -> ResendSearchCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "FileRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FileReference";
 			definition = "String of characters that uniquely identifies the file, which was delivered by the sender.";
 			maxOccurs = 1;
@@ -284,7 +286,7 @@ public class ResendSearchCriteria1 {
 			componentContext_lazy = () -> ResendSearchCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "Rcpt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Recipient";
 			definition = "Unique identification to unambiguously identify the recipient of the report message.";
 			maxOccurs = 1;
@@ -297,11 +299,10 @@ public class ResendSearchCriteria1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ResendSearchCriteria1.mmBusinessDate, com.tools20022.repository.msg.ResendSearchCriteria1.mmSequenceNumber,
-						com.tools20022.repository.msg.ResendSearchCriteria1.mmOriginalMessageNameIdentification, com.tools20022.repository.msg.ResendSearchCriteria1.mmFileReference,
-						com.tools20022.repository.msg.ResendSearchCriteria1.mmRecipient);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(ResendSearchCriteria1.mmBusinessDate, ResendSearchCriteria1.mmSequenceNumber, ResendSearchCriteria1.mmOriginalMessageNameIdentification, ResendSearchCriteria1.mmFileReference,
+						ResendSearchCriteria1.mmRecipient);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ResendSearchCriteria1";
 				definition = "Defines the criteria to extract the message(s) which should be resent.";
 			}

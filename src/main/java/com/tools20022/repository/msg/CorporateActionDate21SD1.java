@@ -20,8 +20,10 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.DateFormat22Choice;
 import com.tools20022.repository.datatype.Max350Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -131,7 +133,7 @@ public class CorporateActionDate21SD1 {
 			componentContext_lazy = () -> CorporateActionDate21SD1.mmObject();
 			isDerived = false;
 			xmlTag = "PlcAndNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "Unambiguous reference to the location where the supplementary data must be inserted in the message instance. \r\n\r\nIn the case of XML, this is expressed by a valid XPath.";
 			maxOccurs = 1;
@@ -176,7 +178,7 @@ public class CorporateActionDate21SD1 {
 			componentContext_lazy = () -> CorporateActionDate21SD1.mmObject();
 			isDerived = false;
 			xmlTag = "WebSvcNtfctnDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WebServiceNotificationDate";
 			definition = "Date and time of notification via web service as reference information.\r\n通知日時  Notification date and time.";
 			maxOccurs = 1;
@@ -222,7 +224,7 @@ public class CorporateActionDate21SD1 {
 			componentContext_lazy = () -> CorporateActionDate21SD1.mmObject();
 			isDerived = false;
 			xmlTag = "PrvsWebSvcNtfctnDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousWebServiceNotificationDate";
 			definition = "Date and time of previous notification via web service as a reference information (in case of replacement). \r\n訂正（削除）前通知日時";
 			maxOccurs = 1;
@@ -268,7 +270,7 @@ public class CorporateActionDate21SD1 {
 			componentContext_lazy = () -> CorporateActionDate21SD1.mmObject();
 			isDerived = false;
 			xmlTag = "ActlRcrdDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ActualRecordDate";
 			definition = "Actual record date - the previous business day of the record date if the record date falls to Saturday, Sunday or national holiday.\r\n権利確定日";
 			maxOccurs = 1;
@@ -311,7 +313,7 @@ public class CorporateActionDate21SD1 {
 			componentContext_lazy = () -> CorporateActionDate21SD1.mmObject();
 			isDerived = false;
 			xmlTag = "BrdMtgDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BoardMeetingDate";
 			definition = "Date of the board meeting.\r\n取締役会決議日";
 			maxOccurs = 1;
@@ -355,7 +357,7 @@ public class CorporateActionDate21SD1 {
 			componentContext_lazy = () -> CorporateActionDate21SD1.mmObject();
 			isDerived = false;
 			xmlTag = "CorpRegnDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorporateRegistrationDate";
 			definition = "Date on which the new company will be registered.\r\n新設会社登記日";
 			maxOccurs = 1;
@@ -400,7 +402,7 @@ public class CorporateActionDate21SD1 {
 			componentContext_lazy = () -> CorporateActionDate21SD1.mmObject();
 			isDerived = false;
 			xmlTag = "EarlstPlandDtOfIssePric";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EarliestPlannedDateOfIssuePrice";
 			definition = "Earliest planned date on which the issue price will be set.\r\n発行価格決定予定日（最短）";
 			maxOccurs = 1;
@@ -445,7 +447,7 @@ public class CorporateActionDate21SD1 {
 			componentContext_lazy = () -> CorporateActionDate21SD1.mmObject();
 			isDerived = false;
 			xmlTag = "LatstPlandDtOfIssePric";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LatestPlannedDateOfIssuePrice";
 			definition = "Latest planned date on which the issue price will be set.\r\n発行価格決定予定日（最長）";
 			maxOccurs = 1;
@@ -488,7 +490,7 @@ public class CorporateActionDate21SD1 {
 			componentContext_lazy = () -> CorporateActionDate21SD1.mmObject();
 			isDerived = false;
 			xmlTag = "DtOfIssePric";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DateOfIssuePrice";
 			definition = "Date on which the issue price will be set.\r\n発行価格決定日";
 			maxOccurs = 1;
@@ -534,7 +536,7 @@ public class CorporateActionDate21SD1 {
 			componentContext_lazy = () -> CorporateActionDate21SD1.mmObject();
 			isDerived = false;
 			xmlTag = "EarlstPlandSbcptCostPmtDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EarliestPlannedSubscriptionCostPaymentDate";
 			definition = "Earliest planned date on which the cash payment (for the subscription cost) will be made.\r\n払込期日予定日（最短）";
 			maxOccurs = 1;
@@ -580,7 +582,7 @@ public class CorporateActionDate21SD1 {
 			componentContext_lazy = () -> CorporateActionDate21SD1.mmObject();
 			isDerived = false;
 			xmlTag = "LatstPlandSbcptCostPmtDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LatestPlannedSubscriptionCostPaymentDate";
 			definition = "Latest planned date on which the cash payment (for the subscription cost) will be made.\r\n払込期日予定日（最長）";
 			maxOccurs = 1;
@@ -624,7 +626,7 @@ public class CorporateActionDate21SD1 {
 			componentContext_lazy = () -> CorporateActionDate21SD1.mmObject();
 			isDerived = false;
 			xmlTag = "SbsqntListgDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubsequentListingDate";
 			definition = "Listing date of the new shares announced by Stock Exchange.\r\n変更上場日";
 			maxOccurs = 1;
@@ -665,7 +667,7 @@ public class CorporateActionDate21SD1 {
 			componentContext_lazy = () -> CorporateActionDate21SD1.mmObject();
 			isDerived = false;
 			xmlTag = "NewShrUnitQtyFctvDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewShareUnitQuantityEffectiveDate";
 			definition = "Date at which the new share unit quantity becomes effective.";
 			maxOccurs = 1;
@@ -678,15 +680,12 @@ public class CorporateActionDate21SD1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionDate21SD1.mmPlaceAndName, com.tools20022.repository.msg.CorporateActionDate21SD1.mmWebServiceNotificationDate,
-						com.tools20022.repository.msg.CorporateActionDate21SD1.mmPreviousWebServiceNotificationDate, com.tools20022.repository.msg.CorporateActionDate21SD1.mmActualRecordDate,
-						com.tools20022.repository.msg.CorporateActionDate21SD1.mmBoardMeetingDate, com.tools20022.repository.msg.CorporateActionDate21SD1.mmCorporateRegistrationDate,
-						com.tools20022.repository.msg.CorporateActionDate21SD1.mmEarliestPlannedDateOfIssuePrice, com.tools20022.repository.msg.CorporateActionDate21SD1.mmLatestPlannedDateOfIssuePrice,
-						com.tools20022.repository.msg.CorporateActionDate21SD1.mmDateOfIssuePrice, com.tools20022.repository.msg.CorporateActionDate21SD1.mmEarliestPlannedSubscriptionCostPaymentDate,
-						com.tools20022.repository.msg.CorporateActionDate21SD1.mmLatestPlannedSubscriptionCostPaymentDate, com.tools20022.repository.msg.CorporateActionDate21SD1.mmSubsequentListingDate,
-						com.tools20022.repository.msg.CorporateActionDate21SD1.mmNewShareUnitQuantityEffectiveDate);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(CorporateActionDate21SD1.mmPlaceAndName, CorporateActionDate21SD1.mmWebServiceNotificationDate, CorporateActionDate21SD1.mmPreviousWebServiceNotificationDate,
+						CorporateActionDate21SD1.mmActualRecordDate, CorporateActionDate21SD1.mmBoardMeetingDate, CorporateActionDate21SD1.mmCorporateRegistrationDate, CorporateActionDate21SD1.mmEarliestPlannedDateOfIssuePrice,
+						CorporateActionDate21SD1.mmLatestPlannedDateOfIssuePrice, CorporateActionDate21SD1.mmDateOfIssuePrice, CorporateActionDate21SD1.mmEarliestPlannedSubscriptionCostPaymentDate,
+						CorporateActionDate21SD1.mmLatestPlannedSubscriptionCostPaymentDate, CorporateActionDate21SD1.mmSubsequentListingDate, CorporateActionDate21SD1.mmNewShareUnitQuantityEffectiveDate);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionDate21SD1";
 				definition = "Extension to cater for specific corporate action dates.";
 			}

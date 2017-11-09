@@ -19,9 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ExternalDateFrequency1Code;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.Number;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -93,7 +95,7 @@ public class DateInformation1 {
 			componentContext_lazy = () -> DateInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "StartDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StartDate";
 			definition = "Date on which a recurrent date will commence.";
 			maxOccurs = 1;
@@ -135,7 +137,7 @@ public class DateInformation1 {
 			componentContext_lazy = () -> DateInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "Frqcy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Frequency";
 			definition = "Specifies the regularity of the trigger date.";
 			maxOccurs = 1;
@@ -176,7 +178,7 @@ public class DateInformation1 {
 			componentContext_lazy = () -> DateInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "Nb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Number";
 			definition = "Maximum number of trigger date occurrence cycles.";
 			maxOccurs = 1;
@@ -188,9 +190,9 @@ public class DateInformation1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DateInformation1.mmStartDate, com.tools20022.repository.msg.DateInformation1.mmFrequency, com.tools20022.repository.msg.DateInformation1.mmNumber);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(DateInformation1.mmStartDate, DateInformation1.mmFrequency, DateInformation1.mmNumber);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DateInformation1";
 				definition = "Date parameters.";
 			}

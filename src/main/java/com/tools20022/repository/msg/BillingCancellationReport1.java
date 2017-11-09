@@ -20,10 +20,14 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.CancellationReason16Choice;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.entity.Document;
+import com.tools20022.repository.entity.GenericIdentification;
 import com.tools20022.repository.entity.Invoice;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -113,7 +117,7 @@ public class BillingCancellationReport1 {
 			componentContext_lazy = () -> BillingCancellationReport1.mmObject();
 			isDerived = false;
 			xmlTag = "RgltryData";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RegulatoryData";
 			definition = "Information about legal and regulatory data exchanged between invoicing and paying party.";
 			maxOccurs = 1;
@@ -157,11 +161,11 @@ public class BillingCancellationReport1 {
 	 */
 	public static final MMMessageAttribute mmInvoiceDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Document.mmIssueDate;
+			businessElementTrace_lazy = () -> Document.mmIssueDate;
 			componentContext_lazy = () -> BillingCancellationReport1.mmObject();
 			isDerived = false;
 			xmlTag = "InvcDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvoiceDate";
 			definition = "Date at which the billing report was created.";
 			maxOccurs = 1;
@@ -204,11 +208,11 @@ public class BillingCancellationReport1 {
 	 */
 	public static final MMMessageAttribute mmBillingIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmIdentification;
+			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> BillingCancellationReport1.mmObject();
 			isDerived = false;
 			xmlTag = "BllgId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BillingIdentification";
 			definition = "Identification of the billing report.";
 			maxOccurs = 1;
@@ -252,11 +256,11 @@ public class BillingCancellationReport1 {
 	 */
 	public static final MMMessageAttribute mmBillingPeriod = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Invoice.mmPeriodCovered;
+			businessElementTrace_lazy = () -> Invoice.mmPeriodCovered;
 			componentContext_lazy = () -> BillingCancellationReport1.mmObject();
 			isDerived = false;
 			xmlTag = "BllgPrd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BillingPeriod";
 			definition = "Date period which for which the report data is valid.";
 			maxOccurs = 1;
@@ -297,7 +301,7 @@ public class BillingCancellationReport1 {
 			componentContext_lazy = () -> BillingCancellationReport1.mmObject();
 			isDerived = false;
 			xmlTag = "CxlRsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationReason";
 			definition = "Reason why requested billing information is cancelled.";
 			maxOccurs = 1;
@@ -310,12 +314,11 @@ public class BillingCancellationReport1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BillingCancellationReport1.mmRegulatoryData, com.tools20022.repository.msg.BillingCancellationReport1.mmInvoiceDate,
-						com.tools20022.repository.msg.BillingCancellationReport1.mmBillingIdentification, com.tools20022.repository.msg.BillingCancellationReport1.mmBillingPeriod,
-						com.tools20022.repository.msg.BillingCancellationReport1.mmCancellationReason);
+				messageElement_lazy = () -> Arrays.asList(BillingCancellationReport1.mmRegulatoryData, BillingCancellationReport1.mmInvoiceDate, BillingCancellationReport1.mmBillingIdentification,
+						BillingCancellationReport1.mmBillingPeriod, BillingCancellationReport1.mmCancellationReason);
 				trace_lazy = () -> Invoice.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "BillingCancellationReport1";
 				definition = "Report on cancelled billing data.";
 			}

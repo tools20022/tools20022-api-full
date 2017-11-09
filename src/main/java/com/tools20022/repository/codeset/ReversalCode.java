@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.AmountDirectionCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -83,7 +85,7 @@ public class ReversalCode extends AmountDirectionCode {
 	 */
 	public static final MMCode mmReversalCredit = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReversalCredit";
 			owner_lazy = () -> ReversalCode.mmObject();
 		}
@@ -105,7 +107,7 @@ public class ReversalCode extends AmountDirectionCode {
 	 */
 	public static final MMCode mmReversalDebit = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReversalDebit";
 			owner_lazy = () -> ReversalCode.mmObject();
 		}
@@ -114,12 +116,12 @@ public class ReversalCode extends AmountDirectionCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("RVCD");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ReversalCode";
 				definition = "Specifies if an operation is the result of a reversal operation.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ReversalCode.mmReversalCredit, com.tools20022.repository.codeset.ReversalCode.mmReversalDebit);
+				code_lazy = () -> Arrays.asList(ReversalCode.mmReversalCredit, ReversalCode.mmReversalDebit);
 				trace_lazy = () -> AmountDirectionCode.mmObject();
 			}
 		});

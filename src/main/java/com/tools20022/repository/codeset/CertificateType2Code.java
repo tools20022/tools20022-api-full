@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CertificateTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -107,7 +109,7 @@ public class CertificateType2Code extends CertificateTypeCode {
 	 */
 	public static final MMCode mmAntiMoneyLaundering = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AntiMoneyLaundering";
 			owner_lazy = () -> CertificateType2Code.mmObject();
 		}
@@ -130,7 +132,7 @@ public class CertificateType2Code extends CertificateTypeCode {
 	 */
 	public static final MMCode mmDrivingLicense = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DrivingLicense";
 			owner_lazy = () -> CertificateType2Code.mmObject();
 		}
@@ -153,7 +155,7 @@ public class CertificateType2Code extends CertificateTypeCode {
 	 */
 	public static final MMCode mmDueFormationAndOrganisation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DueFormationAndOrganisation";
 			owner_lazy = () -> CertificateType2Code.mmObject();
 		}
@@ -176,7 +178,7 @@ public class CertificateType2Code extends CertificateTypeCode {
 	 */
 	public static final MMCode mmGoodStanding = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GoodStanding";
 			owner_lazy = () -> CertificateType2Code.mmObject();
 		}
@@ -199,7 +201,7 @@ public class CertificateType2Code extends CertificateTypeCode {
 	 */
 	public static final MMCode mmIdentityCard = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IdentityCard";
 			owner_lazy = () -> CertificateType2Code.mmObject();
 		}
@@ -222,7 +224,7 @@ public class CertificateType2Code extends CertificateTypeCode {
 	 */
 	public static final MMCode mmIncumbency = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Incumbency";
 			owner_lazy = () -> CertificateType2Code.mmObject();
 		}
@@ -245,7 +247,7 @@ public class CertificateType2Code extends CertificateTypeCode {
 	 */
 	public static final MMCode mmLetterOfReference = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LetterOfReference";
 			owner_lazy = () -> CertificateType2Code.mmObject();
 		}
@@ -268,7 +270,7 @@ public class CertificateType2Code extends CertificateTypeCode {
 	 */
 	public static final MMCode mmPassport = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Passport";
 			owner_lazy = () -> CertificateType2Code.mmObject();
 		}
@@ -291,7 +293,7 @@ public class CertificateType2Code extends CertificateTypeCode {
 	 */
 	public static final MMCode mmProofOfAddress = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProofOfAddress";
 			owner_lazy = () -> CertificateType2Code.mmObject();
 		}
@@ -314,7 +316,7 @@ public class CertificateType2Code extends CertificateTypeCode {
 	 */
 	public static final MMCode mmPublicKeyInfrastructureCertificate = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PublicKeyInfrastructureCertificate";
 			owner_lazy = () -> CertificateType2Code.mmObject();
 		}
@@ -323,16 +325,14 @@ public class CertificateType2Code extends CertificateTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("AMLC");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CertificateType2Code";
 				definition = "Specifies the type of certificate.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CertificateType2Code.mmAntiMoneyLaundering, com.tools20022.repository.codeset.CertificateType2Code.mmDrivingLicense,
-						com.tools20022.repository.codeset.CertificateType2Code.mmDueFormationAndOrganisation, com.tools20022.repository.codeset.CertificateType2Code.mmGoodStanding,
-						com.tools20022.repository.codeset.CertificateType2Code.mmIdentityCard, com.tools20022.repository.codeset.CertificateType2Code.mmIncumbency, com.tools20022.repository.codeset.CertificateType2Code.mmLetterOfReference,
-						com.tools20022.repository.codeset.CertificateType2Code.mmPassport, com.tools20022.repository.codeset.CertificateType2Code.mmProofOfAddress,
-						com.tools20022.repository.codeset.CertificateType2Code.mmPublicKeyInfrastructureCertificate);
+				code_lazy = () -> Arrays.asList(CertificateType2Code.mmAntiMoneyLaundering, CertificateType2Code.mmDrivingLicense, CertificateType2Code.mmDueFormationAndOrganisation, CertificateType2Code.mmGoodStanding,
+						CertificateType2Code.mmIdentityCard, CertificateType2Code.mmIncumbency, CertificateType2Code.mmLetterOfReference, CertificateType2Code.mmPassport, CertificateType2Code.mmProofOfAddress,
+						CertificateType2Code.mmPublicKeyInfrastructureCertificate);
 				trace_lazy = () -> CertificateTypeCode.mmObject();
 			}
 		});

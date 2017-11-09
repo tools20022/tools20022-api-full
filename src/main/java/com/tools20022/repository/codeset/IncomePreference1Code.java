@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.IncomePreferenceCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -83,7 +85,7 @@ public class IncomePreference1Code extends IncomePreferenceCode {
 	 */
 	public static final MMCode mmCash = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cash";
 			owner_lazy = () -> IncomePreference1Code.mmObject();
 		}
@@ -106,7 +108,7 @@ public class IncomePreference1Code extends IncomePreferenceCode {
 	 */
 	public static final MMCode mmDividendReinvestment = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DividendReinvestment";
 			owner_lazy = () -> IncomePreference1Code.mmObject();
 		}
@@ -115,12 +117,12 @@ public class IncomePreference1Code extends IncomePreferenceCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CASH");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "IncomePreference1Code";
 				definition = "Specifies the options for distribution of dividend income.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.IncomePreference1Code.mmCash, com.tools20022.repository.codeset.IncomePreference1Code.mmDividendReinvestment);
+				code_lazy = () -> Arrays.asList(IncomePreference1Code.mmCash, IncomePreference1Code.mmDividendReinvestment);
 				trace_lazy = () -> IncomePreferenceCode.mmObject();
 			}
 		});

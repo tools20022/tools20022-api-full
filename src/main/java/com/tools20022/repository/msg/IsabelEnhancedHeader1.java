@@ -20,6 +20,7 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.IsabelInputSource1Choice;
 import com.tools20022.repository.choice.IsabelSenderTrigger1Choice;
 import com.tools20022.repository.codeset.DebitType1Code;
@@ -28,6 +29,7 @@ import com.tools20022.repository.codeset.Validation2Code;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.datatype.TrueFalseIndicator;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -132,7 +134,7 @@ public class IsabelEnhancedHeader1 {
 			componentContext_lazy = () -> IsabelEnhancedHeader1.mmObject();
 			isDerived = false;
 			xmlTag = "DbtTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DebitType";
 			definition = "Type of debit to be applied to the payment, as provided by the end-user.";
 			maxOccurs = 1;
@@ -177,7 +179,7 @@ public class IsabelEnhancedHeader1 {
 			componentContext_lazy = () -> IsabelEnhancedHeader1.mmObject();
 			isDerived = false;
 			xmlTag = "BkDbtTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BankDebitType";
 			definition = "Type of debit to be applied to the payment, as provided by the bank.\r\nThis may supersede the debit type provided by the end-user.";
 			maxOccurs = 1;
@@ -219,7 +221,7 @@ public class IsabelEnhancedHeader1 {
 			componentContext_lazy = () -> IsabelEnhancedHeader1.mmObject();
 			isDerived = false;
 			xmlTag = "AcctBasedCtrct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountBasedContract";
 			definition = "Contract is defined on a specific account.";
 			maxOccurs = 1;
@@ -264,7 +266,7 @@ public class IsabelEnhancedHeader1 {
 			componentContext_lazy = () -> IsabelEnhancedHeader1.mmObject();
 			isDerived = false;
 			xmlTag = "VldtnRslts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValidationResults";
 			definition = "Results of all validations performed during the processing of a file provided in the payload.";
 			maxOccurs = 1;
@@ -308,7 +310,7 @@ public class IsabelEnhancedHeader1 {
 			componentContext_lazy = () -> IsabelEnhancedHeader1.mmObject();
 			isDerived = false;
 			xmlTag = "PwrToSgnVldtnRslts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PowerToSignValidationResults";
 			definition = "Results of the signature validation provided by the 'PowerToSign' user.";
 			maxOccurs = 1;
@@ -350,7 +352,7 @@ public class IsabelEnhancedHeader1 {
 			componentContext_lazy = () -> IsabelEnhancedHeader1.mmObject();
 			isDerived = false;
 			xmlTag = "PwrToSgnVldtnTmStmp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PowerToSignValidationTimeStamp";
 			definition = "Validation of the time stamp provided by the 'PowerToSign' user.";
 			maxOccurs = 1;
@@ -391,7 +393,7 @@ public class IsabelEnhancedHeader1 {
 			componentContext_lazy = () -> IsabelEnhancedHeader1.mmObject();
 			isDerived = false;
 			xmlTag = "SndrTrggr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SenderTrigger";
 			definition = "Trigger used by the sender to transfer the file.";
 			maxOccurs = 1;
@@ -433,7 +435,7 @@ public class IsabelEnhancedHeader1 {
 			componentContext_lazy = () -> IsabelEnhancedHeader1.mmObject();
 			isDerived = false;
 			xmlTag = "SndTmStmp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SendTimeStamp";
 			definition = "Time stamp on when the file is sent.";
 			maxOccurs = 1;
@@ -478,7 +480,7 @@ public class IsabelEnhancedHeader1 {
 			componentContext_lazy = () -> IsabelEnhancedHeader1.mmObject();
 			isDerived = false;
 			xmlTag = "XtraCondsAccptd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExtraConditionsAccepted";
 			definition = "Indicates whether extra conditions are applicable and accepted for this file.";
 			maxOccurs = 1;
@@ -519,7 +521,7 @@ public class IsabelEnhancedHeader1 {
 			componentContext_lazy = () -> IsabelEnhancedHeader1.mmObject();
 			isDerived = false;
 			xmlTag = "Src";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Source";
 			definition = "Input source for the generation of the file.";
 			maxOccurs = 1;
@@ -562,7 +564,7 @@ public class IsabelEnhancedHeader1 {
 			componentContext_lazy = () -> IsabelEnhancedHeader1.mmObject();
 			isDerived = false;
 			xmlTag = "NbOfReqrdSgntrs";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NumberOfRequiredSignatures";
 			definition = "Number of signatures required to validate the payments file.";
 			maxOccurs = 1;
@@ -603,7 +605,7 @@ public class IsabelEnhancedHeader1 {
 			componentContext_lazy = () -> IsabelEnhancedHeader1.mmObject();
 			isDerived = false;
 			xmlTag = "Xtnded";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Extended";
 			definition = "Extended parameters for an Isabel payment initiation file.";
 			maxOccurs = 1;
@@ -616,14 +618,11 @@ public class IsabelEnhancedHeader1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IsabelEnhancedHeader1.mmDebitType, com.tools20022.repository.msg.IsabelEnhancedHeader1.mmBankDebitType,
-						com.tools20022.repository.msg.IsabelEnhancedHeader1.mmAccountBasedContract, com.tools20022.repository.msg.IsabelEnhancedHeader1.mmValidationResults,
-						com.tools20022.repository.msg.IsabelEnhancedHeader1.mmPowerToSignValidationResults, com.tools20022.repository.msg.IsabelEnhancedHeader1.mmPowerToSignValidationTimeStamp,
-						com.tools20022.repository.msg.IsabelEnhancedHeader1.mmSenderTrigger, com.tools20022.repository.msg.IsabelEnhancedHeader1.mmSendTimeStamp,
-						com.tools20022.repository.msg.IsabelEnhancedHeader1.mmExtraConditionsAccepted, com.tools20022.repository.msg.IsabelEnhancedHeader1.mmSource,
-						com.tools20022.repository.msg.IsabelEnhancedHeader1.mmNumberOfRequiredSignatures, com.tools20022.repository.msg.IsabelEnhancedHeader1.mmExtended);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(IsabelEnhancedHeader1.mmDebitType, IsabelEnhancedHeader1.mmBankDebitType, IsabelEnhancedHeader1.mmAccountBasedContract, IsabelEnhancedHeader1.mmValidationResults,
+						IsabelEnhancedHeader1.mmPowerToSignValidationResults, IsabelEnhancedHeader1.mmPowerToSignValidationTimeStamp, IsabelEnhancedHeader1.mmSenderTrigger, IsabelEnhancedHeader1.mmSendTimeStamp,
+						IsabelEnhancedHeader1.mmExtraConditionsAccepted, IsabelEnhancedHeader1.mmSource, IsabelEnhancedHeader1.mmNumberOfRequiredSignatures, IsabelEnhancedHeader1.mmExtended);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "IsabelEnhancedHeader1";
 				definition = "Specifies the enhanced parameters for an Isabel payment file.";
 			}

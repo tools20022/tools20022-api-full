@@ -20,8 +20,11 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.NoReasonCode;
 import com.tools20022.repository.entity.SecuritiesOrderStatus;
+import com.tools20022.repository.entity.StatusReason;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.InRepairStatus2;
 import com.tools20022.repository.msg.InRepairStatusReason4;
 import java.util.Arrays;
@@ -110,14 +113,14 @@ public class InRepairStatusReason4Choice {
 	 */
 	public static final MMMessageAttribute mmNoSpecifiedReason = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmNoSpecifiedReason;
+			businessElementTrace_lazy = () -> StatusReason.mmNoSpecifiedReason;
 			componentContext_lazy = () -> InRepairStatusReason4Choice.mmObject();
 			isDerived = false;
 			xmlTag = "NoSpcfdRsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoSpecifiedReason";
 			definition = "No reason available or to report for the in repair status.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.ConditionallyAcceptedStatus3Choice.mmNoSpecifiedReason;
+			previousVersion_lazy = () -> ConditionallyAcceptedStatus3Choice.mmNoSpecifiedReason;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> NoReasonCode.mmObject();
@@ -162,14 +165,14 @@ public class InRepairStatusReason4Choice {
 	 */
 	public static final MMMessageAssociationEnd mmReasonDetails = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrderStatus.mmConditionallyAcceptedStatus;
+			businessElementTrace_lazy = () -> SecuritiesOrderStatus.mmConditionallyAcceptedStatus;
 			componentContext_lazy = () -> InRepairStatusReason4Choice.mmObject();
 			isDerived = false;
 			xmlTag = "RsnDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReasonDetails";
 			definition = "Reason for the in repair status, expressed as a code.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.ConditionallyAcceptedStatus3Choice.mmReasonDetails;
+			previousVersion_lazy = () -> ConditionallyAcceptedStatus3Choice.mmReasonDetails;
 			maxOccurs = 5;
 			minOccurs = 1;
 			isComposite = true;
@@ -180,10 +183,10 @@ public class InRepairStatusReason4Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.InRepairStatusReason4Choice.mmNoSpecifiedReason, com.tools20022.repository.choice.InRepairStatusReason4Choice.mmReasonDetails);
+				messageElement_lazy = () -> Arrays.asList(InRepairStatusReason4Choice.mmNoSpecifiedReason, InRepairStatusReason4Choice.mmReasonDetails);
 				trace_lazy = () -> SecuritiesOrderStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InRepairStatusReason4Choice";
 				definition = "Choice of formats for the reason for an in repair status.";
 				previousVersion_lazy = () -> InRepairStatus2.mmObject();

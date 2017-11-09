@@ -20,10 +20,13 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.IndicativeOrMarketPrice2Choice;
 import com.tools20022.repository.choice.PriceFormat5Choice;
 import com.tools20022.repository.choice.PriceFormat9Choice;
 import com.tools20022.repository.entity.CorporateActionPrice;
+import com.tools20022.repository.entity.Issuance;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -114,7 +117,7 @@ public class CorporateActionPrice8 {
 			componentContext_lazy = () -> CorporateActionPrice8.mmObject();
 			isDerived = false;
 			xmlTag = "IndctvOrMktPric";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IndicativeOrMarketPrice";
 			definition = "Indicates whether the price is an indicative price or a market price.";
 			maxOccurs = 1;
@@ -165,11 +168,11 @@ public class CorporateActionPrice8 {
 	 */
 	public static final MMMessageAttribute mmExercisePrice = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionPrice.mmCorporateActionExercisePrice;
+			businessElementTrace_lazy = () -> CorporateActionPrice.mmCorporateActionExercisePrice;
 			componentContext_lazy = () -> CorporateActionPrice8.mmObject();
 			isDerived = false;
 			xmlTag = "ExrcPric";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExercisePrice";
 			definition = "1. Price at which security will be purchased/sold if warrant is exercised, either as an actual amount or a percentage.\n2. Price at which a bond is converted to underlying security either as an actual amount or a percentage.\n3. Strike price of an option, represented either as an actual amount, a percentage or a number of points above an index.";
 			maxOccurs = 1;
@@ -213,11 +216,11 @@ public class CorporateActionPrice8 {
 	 */
 	public static final MMMessageAttribute mmIssuePrice = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Issuance.mmIssuePrice;
+			businessElementTrace_lazy = () -> Issuance.mmIssuePrice;
 			componentContext_lazy = () -> CorporateActionPrice8.mmObject();
 			isDerived = false;
 			xmlTag = "IssePric";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssuePrice";
 			definition = "Initial issue price of a financial instrument.";
 			maxOccurs = 1;
@@ -264,11 +267,11 @@ public class CorporateActionPrice8 {
 	 */
 	public static final MMMessageAttribute mmGenericCashPriceReceivedPerProduct = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionPrice.mmGenericCashPriceReceivedPerProduct;
+			businessElementTrace_lazy = () -> CorporateActionPrice.mmGenericCashPriceReceivedPerProduct;
 			componentContext_lazy = () -> CorporateActionPrice8.mmObject();
 			isDerived = false;
 			xmlTag = "GncCshPricRcvdPerPdct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GenericCashPriceReceivedPerProduct";
 			definition = "Generic cash price received per product by the underlying security holder either as a percentage or an amount, for example, redemption price.";
 			maxOccurs = 1;
@@ -315,11 +318,11 @@ public class CorporateActionPrice8 {
 	 */
 	public static final MMMessageAttribute mmGenericCashPricePaidPerProduct = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionPrice.mmGenericCashPricePaidPerProduct;
+			businessElementTrace_lazy = () -> CorporateActionPrice.mmGenericCashPricePaidPerProduct;
 			componentContext_lazy = () -> CorporateActionPrice8.mmObject();
 			isDerived = false;
 			xmlTag = "GncCshPricPdPerPdct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GenericCashPricePaidPerProduct";
 			definition = "Generic cash price paid per product by the underlying security holder either as a percentage or an amount, for example, reinvestment price.";
 			maxOccurs = 1;
@@ -331,12 +334,11 @@ public class CorporateActionPrice8 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionPrice8.mmIndicativeOrMarketPrice, com.tools20022.repository.msg.CorporateActionPrice8.mmExercisePrice,
-						com.tools20022.repository.msg.CorporateActionPrice8.mmIssuePrice, com.tools20022.repository.msg.CorporateActionPrice8.mmGenericCashPriceReceivedPerProduct,
-						com.tools20022.repository.msg.CorporateActionPrice8.mmGenericCashPricePaidPerProduct);
+				messageElement_lazy = () -> Arrays.asList(CorporateActionPrice8.mmIndicativeOrMarketPrice, CorporateActionPrice8.mmExercisePrice, CorporateActionPrice8.mmIssuePrice,
+						CorporateActionPrice8.mmGenericCashPriceReceivedPerProduct, CorporateActionPrice8.mmGenericCashPricePaidPerProduct);
 				trace_lazy = () -> CorporateActionPrice.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionPrice8";
 				definition = "Specifies prices related to a corporate action option.";
 			}

@@ -19,8 +19,11 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CancelledStatusReason9Code;
 import com.tools20022.repository.entity.SecuritiesTradeStatusReason;
+import com.tools20022.repository.entity.StatusReason;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification20;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -120,14 +123,14 @@ public class CancellationReason5Choice {
 	 */
 	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmCancellationReason;
+			businessElementTrace_lazy = () -> StatusReason.mmCancellationReason;
 			componentContext_lazy = () -> CancellationReason5Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Cd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Specifies the reason why the related instruction is cancelled, or the related cancellation request is executed.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CancellationReason23Choice.mmCode);
+			nextVersions_lazy = () -> Arrays.asList(CancellationReason23Choice.mmCode);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CancelledStatusReason9Code.mmObject();
@@ -180,14 +183,14 @@ public class CancellationReason5Choice {
 	 */
 	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmCancellationReason;
+			businessElementTrace_lazy = () -> StatusReason.mmCancellationReason;
 			componentContext_lazy = () -> CancellationReason5Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Specifies the reason why the related instruction is cancelled, or the related cancellation request is executed.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CancellationReason23Choice.mmProprietary);
+			nextVersions_lazy = () -> Arrays.asList(CancellationReason23Choice.mmProprietary);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification20.mmObject();
@@ -197,10 +200,10 @@ public class CancellationReason5Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CancellationReason5Choice.mmCode, com.tools20022.repository.choice.CancellationReason5Choice.mmProprietary);
+				messageElement_lazy = () -> Arrays.asList(CancellationReason5Choice.mmCode, CancellationReason5Choice.mmProprietary);
 				trace_lazy = () -> SecuritiesTradeStatusReason.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CancellationReason5Choice";
 				definition = "Choice of format for the cancellation reason.";
 				nextVersions_lazy = () -> Arrays.asList(CancellationReason12Choice.mmObject(), CancellationReason23Choice.mmObject());

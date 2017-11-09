@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CaseStatusCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -93,7 +95,7 @@ public class CaseStatus2Code extends CaseStatusCode {
 	 */
 	public static final MMCode mmClosed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Closed";
 			owner_lazy = () -> CaseStatus2Code.mmObject();
 		}
@@ -116,7 +118,7 @@ public class CaseStatus2Code extends CaseStatusCode {
 	 */
 	public static final MMCode mmAssigned = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Assigned";
 			owner_lazy = () -> CaseStatus2Code.mmObject();
 		}
@@ -139,7 +141,7 @@ public class CaseStatus2Code extends CaseStatusCode {
 	 */
 	public static final MMCode mmUnderInvestigation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnderInvestigation";
 			owner_lazy = () -> CaseStatus2Code.mmObject();
 		}
@@ -162,7 +164,7 @@ public class CaseStatus2Code extends CaseStatusCode {
 	 */
 	public static final MMCode mmUnknown = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unknown";
 			owner_lazy = () -> CaseStatus2Code.mmObject();
 		}
@@ -185,7 +187,7 @@ public class CaseStatus2Code extends CaseStatusCode {
 	 */
 	public static final MMCode mmOverdue = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Overdue";
 			owner_lazy = () -> CaseStatus2Code.mmObject();
 		}
@@ -194,13 +196,12 @@ public class CaseStatus2Code extends CaseStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CLSD");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CaseStatus2Code";
 				definition = "Specifies the status of an investigation case.\n\nNote: \nThe cases that have been rejected (not accepted) are unknown to the Party reporting the status of cases. They will be reported with the CaseStatusCode = Unknown.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CaseStatus2Code.mmClosed, com.tools20022.repository.codeset.CaseStatus2Code.mmAssigned,
-						com.tools20022.repository.codeset.CaseStatus2Code.mmUnderInvestigation, com.tools20022.repository.codeset.CaseStatus2Code.mmUnknown, com.tools20022.repository.codeset.CaseStatus2Code.mmOverdue);
+				code_lazy = () -> Arrays.asList(CaseStatus2Code.mmClosed, CaseStatus2Code.mmAssigned, CaseStatus2Code.mmUnderInvestigation, CaseStatus2Code.mmUnknown, CaseStatus2Code.mmOverdue);
 				trace_lazy = () -> CaseStatusCode.mmObject();
 			}
 		});

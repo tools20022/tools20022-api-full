@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -28,6 +30,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.SideIndicator1Code
+ * SideIndicator1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -35,13 +44,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * SideIndicatorCode.mmClientLeg}</li>
  * <li>{@linkplain com.tools20022.repository.codeset.SideIndicatorCode#mmCCPLeg
  * SideIndicatorCode.mmCCPLeg}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.SideIndicator1Code
- * SideIndicator1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -93,7 +95,7 @@ public class SideIndicatorCode {
 	 */
 	public static final MMCode mmClientLeg = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClientLeg";
 			definition = "Clearing broker identification is for the client leg.";
 			owner_lazy = () -> SideIndicatorCode.mmObject();
@@ -125,7 +127,7 @@ public class SideIndicatorCode {
 	 */
 	public static final MMCode mmCCPLeg = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CCPLeg";
 			definition = "Clearing broker identification is for the Central Counterparty (CCP) leg.";
 			owner_lazy = () -> SideIndicatorCode.mmObject();
@@ -136,12 +138,12 @@ public class SideIndicatorCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CLNT");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SideIndicatorCode";
 				definition = "To indicate either the reference for the Central Counterparty (CCP) leg or the reference for the client leg of the transaction.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SideIndicatorCode.mmClientLeg, com.tools20022.repository.codeset.SideIndicatorCode.mmCCPLeg);
+				code_lazy = () -> Arrays.asList(SideIndicatorCode.mmClientLeg, SideIndicatorCode.mmCCPLeg);
 				derivation_lazy = () -> Arrays.asList(SideIndicator1Code.mmObject());
 			}
 		});

@@ -19,8 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.camt.NotificationOfCaseAssignment;
 import com.tools20022.repository.codeset.CaseForwardingNotification1Code;
 import com.tools20022.repository.entity.Reassignment;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -104,11 +107,11 @@ public class CaseForwardingNotification {
 	 */
 	public static final MMMessageAttribute mmJustification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Reassignment.mmJustification;
+			businessElementTrace_lazy = () -> Reassignment.mmJustification;
 			componentContext_lazy = () -> CaseForwardingNotification.mmObject();
 			isDerived = false;
 			xmlTag = "Justfn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Justification";
 			definition = "Justification for the forward action.";
 			maxOccurs = 1;
@@ -120,11 +123,11 @@ public class CaseForwardingNotification {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CaseForwardingNotification.mmJustification);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.NotificationOfCaseAssignment.mmNotification);
+				messageElement_lazy = () -> Arrays.asList(CaseForwardingNotification.mmJustification);
+				messageBuildingBlock_lazy = () -> Arrays.asList(NotificationOfCaseAssignment.mmNotification);
 				trace_lazy = () -> Reassignment.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CaseForwardingNotification";
 				definition = "Status of a case resulting from a case assignment.";
 			}

@@ -17,7 +17,10 @@
 
 package com.tools20022.repository.datatype;
 
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.metamodel.MMSchemaType;
+import com.tools20022.metamodel.MMSchemaTypeKind;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.concurrent.atomic.AtomicReference;
 
 /**
@@ -49,11 +52,11 @@ public class anySimpleType {
 	final static public MMSchemaType mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMSchemaType() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "anySimpleType";
 				definition = "W3C XML Schema Built-in datatype \"anySimpleType\".";
-				kind = com.tools20022.metamodel.MMSchemaTypeKind.anySimpleType;
+				kind = MMSchemaTypeKind.anySimpleType;
 			}
 		});
 		return mmObject_lazy.get();

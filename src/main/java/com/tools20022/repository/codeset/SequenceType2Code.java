@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.SequenceTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -85,7 +87,7 @@ public class SequenceType2Code extends SequenceTypeCode {
 	 */
 	public static final MMCode mmRecurring = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Recurring";
 			owner_lazy = () -> SequenceType2Code.mmObject();
 		}
@@ -108,7 +110,7 @@ public class SequenceType2Code extends SequenceTypeCode {
 	 */
 	public static final MMCode mmOneOff = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OneOff";
 			owner_lazy = () -> SequenceType2Code.mmObject();
 		}
@@ -117,12 +119,12 @@ public class SequenceType2Code extends SequenceTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("RCUR");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SequenceType2Code";
 				definition = "Specifies whether a once off transaction is covered or whether recurring transactions are covered.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SequenceType2Code.mmRecurring, com.tools20022.repository.codeset.SequenceType2Code.mmOneOff);
+				code_lazy = () -> Arrays.asList(SequenceType2Code.mmRecurring, SequenceType2Code.mmOneOff);
 				trace_lazy = () -> SequenceTypeCode.mmObject();
 			}
 		});

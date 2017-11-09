@@ -19,8 +19,10 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
 import com.tools20022.repository.datatype.Unlimited9Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -93,7 +95,7 @@ public class FixedAmountOrUnlimited1Choice {
 			componentContext_lazy = () -> FixedAmountOrUnlimited1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Amt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Fixed amount.";
 			maxOccurs = 1;
@@ -135,7 +137,7 @@ public class FixedAmountOrUnlimited1Choice {
 			componentContext_lazy = () -> FixedAmountOrUnlimited1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "NotLtd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotLimited";
 			definition = "Unlimited amount.";
 			maxOccurs = 1;
@@ -147,9 +149,9 @@ public class FixedAmountOrUnlimited1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.FixedAmountOrUnlimited1Choice.mmAmount, com.tools20022.repository.choice.FixedAmountOrUnlimited1Choice.mmNotLimited);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(FixedAmountOrUnlimited1Choice.mmAmount, FixedAmountOrUnlimited1Choice.mmNotLimited);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FixedAmountOrUnlimited1Choice";
 				definition = "Choice between a fixed amount and an unlimited amount.";
 			}

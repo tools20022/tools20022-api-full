@@ -19,11 +19,13 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.AccountIdentification1Choice;
 import com.tools20022.repository.codeset.CashAccountType2Code;
 import com.tools20022.repository.datatype.BICIdentifier;
 import com.tools20022.repository.datatype.Max35Text;
-import com.tools20022.repository.entity.CashStandingOrder;
+import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -109,11 +111,11 @@ public class StandingOrderIdentification1 {
 	 */
 	public static final MMMessageAttribute mmStandingOrderReference = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StandingOrder.mmIdentification;
+			businessElementTrace_lazy = () -> StandingOrder.mmIdentification;
 			componentContext_lazy = () -> StandingOrderIdentification1.mmObject();
 			isDerived = false;
 			xmlTag = "StgOrdrRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StandingOrderReference";
 			definition = "Unique and unambiguous identification for a standing order, as assigned by the account servicer or the account owner.";
 			maxOccurs = 1;
@@ -160,11 +162,11 @@ public class StandingOrderIdentification1 {
 	 */
 	public static final MMMessageAttribute mmAccountIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.mmIdentification;
+			businessElementTrace_lazy = () -> Account.mmIdentification;
 			componentContext_lazy = () -> StandingOrderIdentification1.mmObject();
 			isDerived = false;
 			xmlTag = "AcctId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountIdentification";
 			definition = "Unique and unambiguous identification for the account between the account owner and the account servicer.";
 			maxOccurs = 1;
@@ -208,11 +210,11 @@ public class StandingOrderIdentification1 {
 	 */
 	public static final MMMessageAttribute mmAccountType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashAccount.mmCashAccountType;
+			businessElementTrace_lazy = () -> CashAccount.mmCashAccountType;
 			componentContext_lazy = () -> StandingOrderIdentification1.mmObject();
 			isDerived = false;
 			xmlTag = "AcctTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountType";
 			definition = "Specifies the nature, or use, of the cash account.";
 			maxOccurs = 1;
@@ -256,11 +258,11 @@ public class StandingOrderIdentification1 {
 	 */
 	public static final MMMessageAttribute mmAccountOwner = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.mmBICFI;
+			businessElementTrace_lazy = () -> OrganisationIdentification.mmBICFI;
 			componentContext_lazy = () -> StandingOrderIdentification1.mmObject();
 			isDerived = false;
 			xmlTag = "AcctOwnr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountOwner";
 			definition = "Party that legally owns the account.";
 			maxOccurs = 1;
@@ -272,11 +274,11 @@ public class StandingOrderIdentification1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StandingOrderIdentification1.mmStandingOrderReference, com.tools20022.repository.msg.StandingOrderIdentification1.mmAccountIdentification,
-						com.tools20022.repository.msg.StandingOrderIdentification1.mmAccountType, com.tools20022.repository.msg.StandingOrderIdentification1.mmAccountOwner);
+				messageElement_lazy = () -> Arrays.asList(StandingOrderIdentification1.mmStandingOrderReference, StandingOrderIdentification1.mmAccountIdentification, StandingOrderIdentification1.mmAccountType,
+						StandingOrderIdentification1.mmAccountOwner);
 				trace_lazy = () -> CashStandingOrder.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "StandingOrderIdentification1";
 				definition = "Owner of the account.";
 			}

@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.CurrencyConversionResponse1Code
+ * CurrencyConversionResponse1Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.CurrencyConversionResponse2Code
+ * CurrencyConversionResponse2Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.CurrencyConversionResponse3Code
+ * CurrencyConversionResponse3Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -62,20 +78,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.CurrencyConversionResponseCode#mmCatalogue
  * CurrencyConversionResponseCode.mmCatalogue}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.CurrencyConversionResponse1Code
- * CurrencyConversionResponse1Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.CurrencyConversionResponse2Code
- * CurrencyConversionResponse2Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.CurrencyConversionResponse3Code
- * CurrencyConversionResponse3Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -119,7 +121,7 @@ public class CurrencyConversionResponseCode {
 	 */
 	public static final MMCode mmInvalidMerchant = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvalidMerchant";
 			definition = "The card acceptor has not been recognised.";
 			owner_lazy = () -> CurrencyConversionResponseCode.mmObject();
@@ -149,7 +151,7 @@ public class CurrencyConversionResponseCode {
 	 */
 	public static final MMCode mmInvalidCard = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvalidCard";
 			definition = "The card is not valid for dynamic currency conversion.";
 			owner_lazy = () -> CurrencyConversionResponseCode.mmObject();
@@ -182,7 +184,7 @@ public class CurrencyConversionResponseCode {
 	 */
 	public static final MMCode mmInvalidProduct = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvalidProduct";
 			definition = "Dynamic currency conversion service cannot be offered for this card product.";
 			owner_lazy = () -> CurrencyConversionResponseCode.mmObject();
@@ -212,7 +214,7 @@ public class CurrencyConversionResponseCode {
 	 */
 	public static final MMCode mmNoRate = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoRate";
 			definition = "Exchange rates are not available.";
 			owner_lazy = () -> CurrencyConversionResponseCode.mmObject();
@@ -243,7 +245,7 @@ public class CurrencyConversionResponseCode {
 	 */
 	public static final MMCode mmAllowed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Allowed";
 			definition = "Dynamic currency conversion may be offered to the cardholder.";
 			owner_lazy = () -> CurrencyConversionResponseCode.mmObject();
@@ -273,7 +275,7 @@ public class CurrencyConversionResponseCode {
 	 */
 	public static final MMCode mmAssumed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Assumed";
 			definition = "Transaction authorised with dynamic currency conversion.";
 			owner_lazy = () -> CurrencyConversionResponseCode.mmObject();
@@ -304,7 +306,7 @@ public class CurrencyConversionResponseCode {
 	 */
 	public static final MMCode mmNotAvailable = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotAvailable";
 			definition = "Dynamic currency conversion is not available for other reason.";
 			owner_lazy = () -> CurrencyConversionResponseCode.mmObject();
@@ -334,7 +336,7 @@ public class CurrencyConversionResponseCode {
 	 */
 	public static final MMCode mmInvalidATM = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvalidATM";
 			definition = "The ATM is not valid for dynamic currency conversion.";
 			owner_lazy = () -> CurrencyConversionResponseCode.mmObject();
@@ -365,7 +367,7 @@ public class CurrencyConversionResponseCode {
 	 */
 	public static final MMCode mmInvalidATMManager = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvalidATMManager";
 			definition = "The ATM manager is not valid for dynamic currency conversion.";
 			owner_lazy = () -> CurrencyConversionResponseCode.mmObject();
@@ -396,7 +398,7 @@ public class CurrencyConversionResponseCode {
 	 */
 	public static final MMCode mmRestriction = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Restriction";
 			definition = "Conversion accepted for the requested amount exclusively.";
 			owner_lazy = () -> CurrencyConversionResponseCode.mmObject();
@@ -426,7 +428,7 @@ public class CurrencyConversionResponseCode {
 	 */
 	public static final MMCode mmCatalogue = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Catalogue";
 			definition = "Conversion accepted for a range of amounts.";
 			owner_lazy = () -> CurrencyConversionResponseCode.mmObject();
@@ -437,16 +439,13 @@ public class CurrencyConversionResponseCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CurrencyConversionResponseCode";
 				definition = "Result of a currency conversion request.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CurrencyConversionResponseCode.mmInvalidMerchant, com.tools20022.repository.codeset.CurrencyConversionResponseCode.mmInvalidCard,
-						com.tools20022.repository.codeset.CurrencyConversionResponseCode.mmInvalidProduct, com.tools20022.repository.codeset.CurrencyConversionResponseCode.mmNoRate,
-						com.tools20022.repository.codeset.CurrencyConversionResponseCode.mmAllowed, com.tools20022.repository.codeset.CurrencyConversionResponseCode.mmAssumed,
-						com.tools20022.repository.codeset.CurrencyConversionResponseCode.mmNotAvailable, com.tools20022.repository.codeset.CurrencyConversionResponseCode.mmInvalidATM,
-						com.tools20022.repository.codeset.CurrencyConversionResponseCode.mmInvalidATMManager, com.tools20022.repository.codeset.CurrencyConversionResponseCode.mmRestriction,
-						com.tools20022.repository.codeset.CurrencyConversionResponseCode.mmCatalogue);
+				code_lazy = () -> Arrays.asList(CurrencyConversionResponseCode.mmInvalidMerchant, CurrencyConversionResponseCode.mmInvalidCard, CurrencyConversionResponseCode.mmInvalidProduct, CurrencyConversionResponseCode.mmNoRate,
+						CurrencyConversionResponseCode.mmAllowed, CurrencyConversionResponseCode.mmAssumed, CurrencyConversionResponseCode.mmNotAvailable, CurrencyConversionResponseCode.mmInvalidATM,
+						CurrencyConversionResponseCode.mmInvalidATMManager, CurrencyConversionResponseCode.mmRestriction, CurrencyConversionResponseCode.mmCatalogue);
 				derivation_lazy = () -> Arrays.asList(CurrencyConversionResponse1Code.mmObject(), CurrencyConversionResponse2Code.mmObject(), CurrencyConversionResponse3Code.mmObject());
 			}
 		});

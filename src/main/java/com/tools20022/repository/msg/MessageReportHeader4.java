@@ -20,7 +20,10 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.auth.FinancialInstrumentReportingStatusAdviceV01;
 import com.tools20022.repository.datatype.Max140Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -120,7 +123,7 @@ public class MessageReportHeader4 {
 			componentContext_lazy = () -> MessageReportHeader4.mmObject();
 			isDerived = false;
 			xmlTag = "MsgRptIdr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageReportIdentifier";
 			definition = "Provide detail on previously received message reports that are being reported as part of this status advice.\r\n\r\nUsage:\r\nWhen required, this field will be populated with the BAH Business Message Identifier field.  Where only a single message report header is used, this field is not used and relies solely on the BAH Business Message Identifier field.";
 			maxOccurs = 1;
@@ -161,7 +164,7 @@ public class MessageReportHeader4 {
 			componentContext_lazy = () -> MessageReportHeader4.mmObject();
 			isDerived = false;
 			xmlTag = "MsgSts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageStatus";
 			definition = "Details the status of the whole message that has been received.";
 			maxOccurs = 1;
@@ -203,7 +206,7 @@ public class MessageReportHeader4 {
 			componentContext_lazy = () -> MessageReportHeader4.mmObject();
 			isDerived = false;
 			xmlTag = "RcrdSts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RecordStatus";
 			definition = "Provides per record status on the report that has been received.";
 			minOccurs = 0;
@@ -246,7 +249,7 @@ public class MessageReportHeader4 {
 			componentContext_lazy = () -> MessageReportHeader4.mmObject();
 			isDerived = false;
 			xmlTag = "SplmtryData";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryData";
 			definition = "Additional information that can not be captured in the structured fields and/or any other specific block.";
 			minOccurs = 0;
@@ -258,11 +261,10 @@ public class MessageReportHeader4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MessageReportHeader4.mmMessageReportIdentifier, com.tools20022.repository.msg.MessageReportHeader4.mmMessageStatus,
-						com.tools20022.repository.msg.MessageReportHeader4.mmRecordStatus, com.tools20022.repository.msg.MessageReportHeader4.mmSupplementaryData);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.auth.FinancialInstrumentReportingStatusAdviceV01.mmStatusAdvice);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(MessageReportHeader4.mmMessageReportIdentifier, MessageReportHeader4.mmMessageStatus, MessageReportHeader4.mmRecordStatus, MessageReportHeader4.mmSupplementaryData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(FinancialInstrumentReportingStatusAdviceV01.mmStatusAdvice);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MessageReportHeader4";
 				definition = "Provides details of many status advice reports where many received reports are reported at once.";
 			}

@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CollateralSubstitutionSequenceCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -84,7 +86,7 @@ public class CollateralSubstitutionSequence1Code extends CollateralSubstitutionS
 	 */
 	public static final MMCode mmInitial = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Initial";
 			owner_lazy = () -> CollateralSubstitutionSequence1Code.mmObject();
 		}
@@ -107,7 +109,7 @@ public class CollateralSubstitutionSequence1Code extends CollateralSubstitutionS
 	 */
 	public static final MMCode mmUpdated = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Updated";
 			owner_lazy = () -> CollateralSubstitutionSequence1Code.mmObject();
 		}
@@ -116,12 +118,12 @@ public class CollateralSubstitutionSequence1Code extends CollateralSubstitutionS
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("INIT");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CollateralSubstitutionSequence1Code";
 				definition = "Indicates whether the collateral substitution request is new or updated.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CollateralSubstitutionSequence1Code.mmInitial, com.tools20022.repository.codeset.CollateralSubstitutionSequence1Code.mmUpdated);
+				code_lazy = () -> Arrays.asList(CollateralSubstitutionSequence1Code.mmInitial, CollateralSubstitutionSequence1Code.mmUpdated);
 				trace_lazy = () -> CollateralSubstitutionSequenceCode.mmObject();
 			}
 		});

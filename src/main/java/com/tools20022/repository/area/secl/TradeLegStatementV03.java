@@ -20,6 +20,7 @@ package com.tools20022.repository.area.secl;
 import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.SecuritiesClearingLatestVersion;
 import com.tools20022.repository.choice.PartyIdentification35Choice;
 import com.tools20022.repository.msg.*;
@@ -44,6 +45,9 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code secl.003.001.03}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.SecuritiesClearingLatestVersion
@@ -84,9 +88,6 @@ import java.util.List;
  * TradeLegStatementV03.mmSupplementaryData}</li>
  * </ul>
  * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code secl.003.001.03}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -131,7 +132,7 @@ public class TradeLegStatementV03 {
 	public static final MMMessageBuildingBlock mmStatementParameters = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "StmtParams";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatementParameters";
 			definition = "Provides various statement parameters such as the statement identification, the statement date and time or the statement frequency.";
 			maxOccurs = 1;
@@ -169,7 +170,7 @@ public class TradeLegStatementV03 {
 	public static final MMMessageBuildingBlock mmPagination = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Pgntn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Pagination";
 			definition = "Page number of the message (within a statement) and continuation indicator to indicate that the statement is to continue or that the message is the last page of the statement.";
 			maxOccurs = 1;
@@ -207,7 +208,7 @@ public class TradeLegStatementV03 {
 	public static final MMMessageBuildingBlock mmClearingMember = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "ClrMmb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClearingMember";
 			definition = "Provides the identification of the account owner, that is the clearing member (individual clearing member or general clearing member).";
 			maxOccurs = 1;
@@ -246,7 +247,7 @@ public class TradeLegStatementV03 {
 	public static final MMMessageBuildingBlock mmClearingAccount = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "ClrAcct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClearingAccount";
 			definition = "Identifies the clearing member account at the Central counterparty through which the trade must be cleared (sometimes called position account).";
 			maxOccurs = 1;
@@ -281,7 +282,7 @@ public class TradeLegStatementV03 {
 	public static final MMMessageBuildingBlock mmStatementDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "StmtDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatementDetails";
 			definition = "Provides the statement details.";
 			minOccurs = 1;
@@ -318,7 +319,7 @@ public class TradeLegStatementV03 {
 	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SplmtryData";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryData";
 			definition = "Additional information that can not be captured in the structured fields and/or any other specific block. ";
 			minOccurs = 0;
@@ -329,16 +330,15 @@ public class TradeLegStatementV03 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TradeLegStatementV03";
 				definition = "Scope\r\nThe TradeLegStatement message is sent by the central counterparty (CCP) to a clearing member to report all trades that have been executed by the trading platform.\r\n\r\nThe message definition is intended for use with the ISO20022 Business Application Header.\r\n\r\nUsage\r\nThe TradeLegStatement message may be either sent:\r\n- during the day (to report trades execution by batch) or\r\n- as an end of day report.";
 				messageSet_lazy = () -> Arrays.asList(CentralCounterPartyCCPSecuritiesClearingISOLatestversion.mmObject());
 				rootElement = "Document";
 				xmlTag = "TradLegStmt";
 				businessArea_lazy = () -> SecuritiesClearingLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.secl.TradeLegStatementV03.mmStatementParameters, com.tools20022.repository.area.secl.TradeLegStatementV03.mmPagination,
-						com.tools20022.repository.area.secl.TradeLegStatementV03.mmClearingMember, com.tools20022.repository.area.secl.TradeLegStatementV03.mmClearingAccount,
-						com.tools20022.repository.area.secl.TradeLegStatementV03.mmStatementDetails, com.tools20022.repository.area.secl.TradeLegStatementV03.mmSupplementaryData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(TradeLegStatementV03.mmStatementParameters, TradeLegStatementV03.mmPagination, TradeLegStatementV03.mmClearingMember, TradeLegStatementV03.mmClearingAccount,
+						TradeLegStatementV03.mmStatementDetails, TradeLegStatementV03.mmSupplementaryData);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "secl";

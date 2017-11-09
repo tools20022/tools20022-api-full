@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.BatchTransactionType1Code
+ * BatchTransactionType1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -41,13 +50,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.BatchTransactionTypeCode#mmDeclined
  * BatchTransactionTypeCode.mmDeclined}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.BatchTransactionType1Code
- * BatchTransactionType1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -97,7 +99,7 @@ public class BatchTransactionTypeCode {
 	 */
 	public static final MMCode mmDebitCredit = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DebitCredit";
 			definition = "Debit and credit transactions.";
 			owner_lazy = () -> BatchTransactionTypeCode.mmObject();
@@ -127,7 +129,7 @@ public class BatchTransactionTypeCode {
 	 */
 	public static final MMCode mmCancellation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Cancellation";
 			definition = "Cancellation of a previous transaction.";
 			owner_lazy = () -> BatchTransactionTypeCode.mmObject();
@@ -157,7 +159,7 @@ public class BatchTransactionTypeCode {
 	 */
 	public static final MMCode mmFailed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Failed";
 			definition = "Failed transactions.";
 			owner_lazy = () -> BatchTransactionTypeCode.mmObject();
@@ -187,7 +189,7 @@ public class BatchTransactionTypeCode {
 	 */
 	public static final MMCode mmDeclined = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Declined";
 			definition = "Declined transactions.";
 			owner_lazy = () -> BatchTransactionTypeCode.mmObject();
@@ -198,13 +200,12 @@ public class BatchTransactionTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("DTCT");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "BatchTransactionTypeCode";
 				definition = "Type of transactions to include in a batch transfer.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.BatchTransactionTypeCode.mmDebitCredit, com.tools20022.repository.codeset.BatchTransactionTypeCode.mmCancellation,
-						com.tools20022.repository.codeset.BatchTransactionTypeCode.mmFailed, com.tools20022.repository.codeset.BatchTransactionTypeCode.mmDeclined);
+				code_lazy = () -> Arrays.asList(BatchTransactionTypeCode.mmDebitCredit, BatchTransactionTypeCode.mmCancellation, BatchTransactionTypeCode.mmFailed, BatchTransactionTypeCode.mmDeclined);
 				derivation_lazy = () -> Arrays.asList(BatchTransactionType1Code.mmObject());
 			}
 		});

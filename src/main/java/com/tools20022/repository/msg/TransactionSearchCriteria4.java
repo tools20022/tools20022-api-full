@@ -19,6 +19,8 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -115,10 +117,10 @@ public class TransactionSearchCriteria4 {
 			componentContext_lazy = () -> TransactionSearchCriteria4.mmObject();
 			isDerived = false;
 			xmlTag = "PmtTo";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentTo";
 			definition = "Defines the criteria which are used to search for the destination of the payment.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionSearchCriteria5.mmPaymentTo);
+			nextVersions_lazy = () -> Arrays.asList(TransactionSearchCriteria5.mmPaymentTo);
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.SystemSearch3.mmObject();
@@ -167,10 +169,10 @@ public class TransactionSearchCriteria4 {
 			componentContext_lazy = () -> TransactionSearchCriteria4.mmObject();
 			isDerived = false;
 			xmlTag = "PmtFr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentFrom";
 			definition = "Defines the criteria which are used to search for the origin of the payment.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionSearchCriteria5.mmPaymentFrom);
+			nextVersions_lazy = () -> Arrays.asList(TransactionSearchCriteria5.mmPaymentFrom);
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.SystemSearch3.mmObject();
@@ -217,10 +219,10 @@ public class TransactionSearchCriteria4 {
 			componentContext_lazy = () -> TransactionSearchCriteria4.mmObject();
 			isDerived = false;
 			xmlTag = "PmtSch";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentSearch";
 			definition = "Defines the criteria which are used to search for a payment.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionSearchCriteria5.mmPaymentSearch);
+			nextVersions_lazy = () -> Arrays.asList(TransactionSearchCriteria5.mmPaymentSearch);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -269,10 +271,10 @@ public class TransactionSearchCriteria4 {
 			componentContext_lazy = () -> TransactionSearchCriteria4.mmObject();
 			isDerived = false;
 			xmlTag = "AcctNtrySch";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountEntrySearch";
 			definition = "Defines the criteria which are used to search for a cash entry.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionSearchCriteria5.mmAccountEntrySearch);
+			nextVersions_lazy = () -> Arrays.asList(TransactionSearchCriteria5.mmAccountEntrySearch);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -283,10 +285,9 @@ public class TransactionSearchCriteria4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionSearchCriteria4.mmPaymentTo, com.tools20022.repository.msg.TransactionSearchCriteria4.mmPaymentFrom,
-						com.tools20022.repository.msg.TransactionSearchCriteria4.mmPaymentSearch, com.tools20022.repository.msg.TransactionSearchCriteria4.mmAccountEntrySearch);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(TransactionSearchCriteria4.mmPaymentTo, TransactionSearchCriteria4.mmPaymentFrom, TransactionSearchCriteria4.mmPaymentSearch, TransactionSearchCriteria4.mmAccountEntrySearch);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "TransactionSearchCriteria4";
 				definition = "Defines the criteria which are used to search for a payment transaction.";
 				nextVersions_lazy = () -> Arrays.asList(TransactionSearchCriteria5.mmObject());

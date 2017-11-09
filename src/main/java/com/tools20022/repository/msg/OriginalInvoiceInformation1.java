@@ -19,10 +19,15 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.entity.Document;
+import com.tools20022.repository.entity.GenericIdentification;
 import com.tools20022.repository.entity.Invoice;
+import com.tools20022.repository.entity.PaymentObligation;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -105,11 +110,11 @@ public class OriginalInvoiceInformation1 {
 	 */
 	public static final MMMessageAttribute mmDocumentNumber = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmIdentification;
+			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> OriginalInvoiceInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "DocNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DocumentNumber";
 			definition = "Unique identifier of the document.";
 			maxOccurs = 1;
@@ -157,11 +162,11 @@ public class OriginalInvoiceInformation1 {
 	 */
 	public static final MMMessageAttribute mmTotalInvoiceAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Invoice.mmTotalInvoiceAmount;
+			businessElementTrace_lazy = () -> Invoice.mmTotalInvoiceAmount;
 			componentContext_lazy = () -> OriginalInvoiceInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "TtlInvcAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalInvoiceAmount";
 			definition = "Total amount of the invoice, being the sum of total invoice lines amounts, total invoice additional amounts (allowances and charges) and total tax amounts.";
 			maxOccurs = 1;
@@ -204,11 +209,11 @@ public class OriginalInvoiceInformation1 {
 	 */
 	public static final MMMessageAttribute mmIssueDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Document.mmIssueDate;
+			businessElementTrace_lazy = () -> Document.mmIssueDate;
 			componentContext_lazy = () -> OriginalInvoiceInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "IsseDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssueDate";
 			definition = "Issue date of the document.";
 			maxOccurs = 1;
@@ -251,11 +256,11 @@ public class OriginalInvoiceInformation1 {
 	 */
 	public static final MMMessageAttribute mmPaymentDueDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentObligation.mmPaymentDueDate;
+			businessElementTrace_lazy = () -> PaymentObligation.mmPaymentDueDate;
 			componentContext_lazy = () -> OriginalInvoiceInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "PmtDueDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentDueDate";
 			definition = "Due date for the payment of the invoice.";
 			maxOccurs = 1;
@@ -267,11 +272,11 @@ public class OriginalInvoiceInformation1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OriginalInvoiceInformation1.mmDocumentNumber, com.tools20022.repository.msg.OriginalInvoiceInformation1.mmTotalInvoiceAmount,
-						com.tools20022.repository.msg.OriginalInvoiceInformation1.mmIssueDate, com.tools20022.repository.msg.OriginalInvoiceInformation1.mmPaymentDueDate);
+				messageElement_lazy = () -> Arrays
+						.asList(OriginalInvoiceInformation1.mmDocumentNumber, OriginalInvoiceInformation1.mmTotalInvoiceAmount, OriginalInvoiceInformation1.mmIssueDate, OriginalInvoiceInformation1.mmPaymentDueDate);
 				trace_lazy = () -> Invoice.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OriginalInvoiceInformation1";
 				definition = "General information about the invoice contained in the original request.";
 			}

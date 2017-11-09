@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.OwnershipLegalRestrictionsCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -88,7 +90,7 @@ public class OwnershipLegalRestrictions1Code extends OwnershipLegalRestrictionsC
 	 */
 	public static final MMCode mmUSLegal144A = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "USLegal144A";
 			owner_lazy = () -> OwnershipLegalRestrictions1Code.mmObject();
 		}
@@ -111,7 +113,7 @@ public class OwnershipLegalRestrictions1Code extends OwnershipLegalRestrictionsC
 	 */
 	public static final MMCode mmNoRestrictions = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoRestrictions";
 			owner_lazy = () -> OwnershipLegalRestrictions1Code.mmObject();
 		}
@@ -134,7 +136,7 @@ public class OwnershipLegalRestrictions1Code extends OwnershipLegalRestrictionsC
 	 */
 	public static final MMCode mmRestrictions = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Restrictions";
 			owner_lazy = () -> OwnershipLegalRestrictions1Code.mmObject();
 		}
@@ -143,13 +145,12 @@ public class OwnershipLegalRestrictions1Code extends OwnershipLegalRestrictionsC
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("A144");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OwnershipLegalRestrictions1Code";
 				definition = "Specifies the regulatory restrictions applicable to a financial instrument.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OwnershipLegalRestrictions1Code.mmUSLegal144A, com.tools20022.repository.codeset.OwnershipLegalRestrictions1Code.mmNoRestrictions,
-						com.tools20022.repository.codeset.OwnershipLegalRestrictions1Code.mmRestrictions);
+				code_lazy = () -> Arrays.asList(OwnershipLegalRestrictions1Code.mmUSLegal144A, OwnershipLegalRestrictions1Code.mmNoRestrictions, OwnershipLegalRestrictions1Code.mmRestrictions);
 				trace_lazy = () -> OwnershipLegalRestrictionsCode.mmObject();
 			}
 		});

@@ -20,9 +20,14 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ExternalDocumentType1Code;
 import com.tools20022.repository.datatype.*;
 import com.tools20022.repository.entity.Document;
+import com.tools20022.repository.entity.ElectronicAddress;
+import com.tools20022.repository.entity.GenericIdentification;
+import com.tools20022.repository.entity.Party;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -140,7 +145,7 @@ public class QualifiedDocumentInformation1 {
 			componentContext_lazy = () -> QualifiedDocumentInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Local identification to be used in IDREFs in this message.";
 			maxOccurs = 1;
@@ -183,11 +188,11 @@ public class QualifiedDocumentInformation1 {
 	 */
 	public static final MMMessageAssociationEnd mmIssuer = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> QualifiedDocumentInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "Issr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Issuer";
 			definition = "Party issuing the reference.";
 			maxOccurs = 1;
@@ -233,11 +238,11 @@ public class QualifiedDocumentInformation1 {
 	 */
 	public static final MMMessageAttribute mmItemListIdentifier = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmIdentification;
+			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> QualifiedDocumentInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "ItmListIdr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ItemListIdentifier";
 			definition = "Unambiguous identifier relative to the issuing party of a list of items.";
 			maxOccurs = 1;
@@ -283,11 +288,11 @@ public class QualifiedDocumentInformation1 {
 	 */
 	public static final MMMessageAttribute mmItemIdentifier = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmIdentification;
+			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> QualifiedDocumentInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "ItmIdr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ItemIdentifier";
 			definition = "Unambiguous identifier relative to the issuing party of an item (independent of any list).";
 			maxOccurs = 1;
@@ -333,11 +338,11 @@ public class QualifiedDocumentInformation1 {
 	 */
 	public static final MMMessageAttribute mmDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Document.mmIssueDate;
+			businessElementTrace_lazy = () -> Document.mmIssueDate;
 			componentContext_lazy = () -> QualifiedDocumentInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "Dt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Date";
 			definition = "Date of document or element. This may be used as a control value to indicate a specific version.";
 			maxOccurs = 1;
@@ -381,7 +386,7 @@ public class QualifiedDocumentInformation1 {
 			componentContext_lazy = () -> QualifiedDocumentInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "Vrsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Version";
 			definition = "Identification of the version of the document or element. This may be used as a control value to indicate a specific version.";
 			maxOccurs = 1;
@@ -426,7 +431,7 @@ public class QualifiedDocumentInformation1 {
 			componentContext_lazy = () -> QualifiedDocumentInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "ElctrncOrgnl";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ElectronicOriginal";
 			definition = "If true, document is in its original form, otherwise it is a scanned version.";
 			maxOccurs = 1;
@@ -466,7 +471,7 @@ public class QualifiedDocumentInformation1 {
 			componentContext_lazy = () -> QualifiedDocumentInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "Dgst";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Digest";
 			definition = "Cryptographic hash of the document.";
 			maxOccurs = 2;
@@ -512,11 +517,11 @@ public class QualifiedDocumentInformation1 {
 	 */
 	public static final MMMessageAttribute mmDocumentType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Document.mmType;
+			businessElementTrace_lazy = () -> Document.mmType;
 			componentContext_lazy = () -> QualifiedDocumentInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "DocTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DocumentType";
 			definition = "Specifies the type of the document, for example commercial invoice.";
 			maxOccurs = 1;
@@ -560,11 +565,11 @@ public class QualifiedDocumentInformation1 {
 	 */
 	public static final MMMessageAttribute mmURL = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ElectronicAddress.mmURLAddress;
+			businessElementTrace_lazy = () -> ElectronicAddress.mmURLAddress;
 			componentContext_lazy = () -> QualifiedDocumentInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "URL";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "URL";
 			definition = "URL (Uniform Resource Locator) where the document can be found.";
 			maxOccurs = 1;
@@ -607,7 +612,7 @@ public class QualifiedDocumentInformation1 {
 			componentContext_lazy = () -> QualifiedDocumentInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "AttchdFile";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AttachedFile";
 			definition = "Attached file for this document. The file must be in a self-describing format.";
 			minOccurs = 0;
@@ -619,15 +624,12 @@ public class QualifiedDocumentInformation1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.QualifiedDocumentInformation1.mmIdentification, com.tools20022.repository.msg.QualifiedDocumentInformation1.mmIssuer,
-						com.tools20022.repository.msg.QualifiedDocumentInformation1.mmItemListIdentifier, com.tools20022.repository.msg.QualifiedDocumentInformation1.mmItemIdentifier,
-						com.tools20022.repository.msg.QualifiedDocumentInformation1.mmDate, com.tools20022.repository.msg.QualifiedDocumentInformation1.mmVersion,
-						com.tools20022.repository.msg.QualifiedDocumentInformation1.mmElectronicOriginal, com.tools20022.repository.msg.QualifiedDocumentInformation1.mmDigest,
-						com.tools20022.repository.msg.QualifiedDocumentInformation1.mmDocumentType, com.tools20022.repository.msg.QualifiedDocumentInformation1.mmURL,
-						com.tools20022.repository.msg.QualifiedDocumentInformation1.mmAttachedFile);
+				messageElement_lazy = () -> Arrays.asList(QualifiedDocumentInformation1.mmIdentification, QualifiedDocumentInformation1.mmIssuer, QualifiedDocumentInformation1.mmItemListIdentifier,
+						QualifiedDocumentInformation1.mmItemIdentifier, QualifiedDocumentInformation1.mmDate, QualifiedDocumentInformation1.mmVersion, QualifiedDocumentInformation1.mmElectronicOriginal,
+						QualifiedDocumentInformation1.mmDigest, QualifiedDocumentInformation1.mmDocumentType, QualifiedDocumentInformation1.mmURL, QualifiedDocumentInformation1.mmAttachedFile);
 				trace_lazy = () -> Document.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "QualifiedDocumentInformation1";
 				definition = "Specifies an identification of a document assigned by and relative to the issuing party (of the identification).\r\nOptionally, the component can contain a copy of the identified document and a URI/URL (Universal Resource Information/Location) facilitating retrieval of the document.\r\nThe component may also contain a cryptographic hash of the referenced document.\r\nFinancial items are identified by three parts:\r\n(1) the creator of the document,\r\n(2) an identification of a dossier, and\r\n(3) an identification of a financial item.\r\nThe two latter identifiers are independent permitting to identify the same item in several lists.\r\nThe element identification is of schema type ID, it can be referenced by IDREF typed elements (composite=false).";
 			}

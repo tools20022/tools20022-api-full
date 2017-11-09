@@ -20,10 +20,12 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.TerminalManagementActionResult1Code;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Max70Text;
 import com.tools20022.repository.entity.TerminalManagementAction;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -124,10 +126,10 @@ public class TMSEvent2 {
 			componentContext_lazy = () -> TMSEvent2.mmObject();
 			isDerived = false;
 			xmlTag = "TmStmp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TimeStamp";
 			definition = "Date time of the terminal management action performed by the point of interaction.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TMSEvent3.mmTimeStamp);
+			nextVersions_lazy = () -> Arrays.asList(TMSEvent3.mmTimeStamp);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
@@ -176,14 +178,14 @@ public class TMSEvent2 {
 	 */
 	public static final MMMessageAttribute mmResult = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TerminalManagementAction.mmActionResult;
+			businessElementTrace_lazy = () -> TerminalManagementAction.mmActionResult;
 			componentContext_lazy = () -> TMSEvent2.mmObject();
 			isDerived = false;
 			xmlTag = "Rslt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Result";
 			definition = "Final result of the processed terminal management action.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TMSEvent3.mmResult);
+			nextVersions_lazy = () -> Arrays.asList(TMSEvent3.mmResult);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TerminalManagementActionResult1Code.mmObject();
@@ -232,10 +234,10 @@ public class TMSEvent2 {
 			componentContext_lazy = () -> TMSEvent2.mmObject();
 			isDerived = false;
 			xmlTag = "ActnId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ActionIdentification";
 			definition = "Identification of the terminal management action performed by the point of interaction.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TMSEvent3.mmActionIdentification);
+			nextVersions_lazy = () -> Arrays.asList(TMSEvent3.mmActionIdentification);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -282,10 +284,10 @@ public class TMSEvent2 {
 			componentContext_lazy = () -> TMSEvent2.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlErrInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalErrorInformation";
 			definition = "Additional information related to a failure.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TMSEvent3.mmAdditionalErrorInformation);
+			nextVersions_lazy = () -> Arrays.asList(TMSEvent3.mmAdditionalErrorInformation);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max70Text.mmObject();
@@ -295,11 +297,10 @@ public class TMSEvent2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TMSEvent2.mmTimeStamp, com.tools20022.repository.msg.TMSEvent2.mmResult, com.tools20022.repository.msg.TMSEvent2.mmActionIdentification,
-						com.tools20022.repository.msg.TMSEvent2.mmAdditionalErrorInformation);
+				messageElement_lazy = () -> Arrays.asList(TMSEvent2.mmTimeStamp, TMSEvent2.mmResult, TMSEvent2.mmActionIdentification, TMSEvent2.mmAdditionalErrorInformation);
 				trace_lazy = () -> TerminalManagementAction.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TMSEvent2";
 				definition = "Result of an individual terminal management action performed by the point of interaction.";
 				nextVersions_lazy = () -> Arrays.asList(TMSEvent3.mmObject());

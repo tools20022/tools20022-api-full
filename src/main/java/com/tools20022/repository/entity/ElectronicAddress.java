@@ -17,12 +17,13 @@
 
 package com.tools20022.repository.entity;
 
-import com.tools20022.metamodel.MMBusinessAssociationEnd;
-import com.tools20022.metamodel.MMBusinessAttribute;
-import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.*;
+import com.tools20022.repository.choice.TechnicalIdentification1Choice;
 import com.tools20022.repository.datatype.Max256Text;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.ContactPoint;
+import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -35,29 +36,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ElectronicAddress#mmEmailAddress
- * ElectronicAddress.mmEmailAddress}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ElectronicAddress#mmURLAddress
- * ElectronicAddress.mmURLAddress}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ElectronicAddress#mmTelexAddress
- * ElectronicAddress.mmTelexAddress}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ElectronicAddress#mmRelatedPresentation
- * ElectronicAddress.mmRelatedPresentation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ElectronicAddress#mmTeletextAddress
- * ElectronicAddress.mmTeletextAddress}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ElectronicAddress#mmISDNAddress
- * ElectronicAddress.mmISDNAddress}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
  * associationDomain} =
@@ -242,6 +220,29 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
  * superType} = {@linkplain com.tools20022.repository.entity.ContactPoint
  * ContactPoint}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ElectronicAddress#mmEmailAddress
+ * ElectronicAddress.mmEmailAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ElectronicAddress#mmURLAddress
+ * ElectronicAddress.mmURLAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ElectronicAddress#mmTelexAddress
+ * ElectronicAddress.mmTelexAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ElectronicAddress#mmRelatedPresentation
+ * ElectronicAddress.mmRelatedPresentation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ElectronicAddress#mmTeletextAddress
+ * ElectronicAddress.mmTeletextAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ElectronicAddress#mmISDNAddress
+ * ElectronicAddress.mmISDNAddress}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -346,16 +347,13 @@ public class ElectronicAddress extends ContactPoint {
 	 */
 	public static final MMBusinessAttribute mmEmailAddress = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ContactDetails1.mmEmailAddress, com.tools20022.repository.msg.OrderDeskContactDetails.mmEmailAddress,
-					com.tools20022.repository.msg.ContactAttributes1.mmEmailAddress, com.tools20022.repository.msg.CommunicationAddress3.mmEmail, com.tools20022.repository.msg.ContactDetails2.mmEmailAddress,
-					com.tools20022.repository.msg.ContactIdentification2.mmEmailAddress, com.tools20022.repository.msg.ContactIdentification1.mmEmailAddress, com.tools20022.repository.msg.Contacts3.mmEmailAddress,
-					com.tools20022.repository.msg.ContactInformation1.mmEmailAddress, com.tools20022.repository.msg.CommunicationAddress4.mmEmailAddress, com.tools20022.repository.msg.ContactIdentification4.mmEmailAddress,
-					com.tools20022.repository.msg.ContactIdentification3.mmEmailAddress, com.tools20022.repository.msg.CommunicationAddressDetails.mmEmailAddress, com.tools20022.repository.msg.ContactDetails3.mmEmailAddress,
-					com.tools20022.repository.msg.PersonIdentification7.mmEmailAddress, com.tools20022.repository.msg.CommunicationAddress5.mmEmail, com.tools20022.repository.msg.CommunicationAddress6.mmEmail,
-					com.tools20022.repository.msg.PersonIdentification11.mmEmailAddress);
+			derivation_lazy = () -> Arrays.asList(ContactDetails1.mmEmailAddress, OrderDeskContactDetails.mmEmailAddress, ContactAttributes1.mmEmailAddress, CommunicationAddress3.mmEmail, ContactDetails2.mmEmailAddress,
+					ContactIdentification2.mmEmailAddress, ContactIdentification1.mmEmailAddress, Contacts3.mmEmailAddress, ContactInformation1.mmEmailAddress, CommunicationAddress4.mmEmailAddress, ContactIdentification4.mmEmailAddress,
+					ContactIdentification3.mmEmailAddress, CommunicationAddressDetails.mmEmailAddress, ContactDetails3.mmEmailAddress, PersonIdentification7.mmEmailAddress, CommunicationAddress5.mmEmail, CommunicationAddress6.mmEmail,
+					PersonIdentification11.mmEmailAddress);
 			elementContext_lazy = () -> ElectronicAddress.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "EmailAddress";
 			definition = "Address for electronic mail (e-mail).";
 			maxOccurs = 1;
@@ -465,18 +463,14 @@ public class ElectronicAddress extends ContactPoint {
 	 */
 	public static final MMBusinessAttribute mmURLAddress = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ContactDetails1.mmURLAddress, com.tools20022.repository.msg.ContactAttributes1.mmURLAddress, com.tools20022.repository.msg.CommunicationAddress3.mmURLAddress,
-					com.tools20022.repository.msg.CorporateActionNarrative3.mmURLAddress, com.tools20022.repository.msg.CorporateActionNarrative18.mmURLAddress,
-					com.tools20022.repository.msg.MeetingNotice1.mmAdditionalDocumentationURLAddress, com.tools20022.repository.msg.CommunicationAddress4.mmURLAddress,
-					com.tools20022.repository.msg.MeetingNotice2.mmAdditionalDocumentationURLAddress, com.tools20022.repository.msg.AdditionalRights1.mmAdditionalRightInformationURLAddress,
-					com.tools20022.repository.msg.MeetingNotice3.mmAdditionalDocumentationURLAddress, com.tools20022.repository.msg.IssuerInformation1.mmURLAddress, com.tools20022.repository.msg.CorporateActionNarrative1.mmURLAddress,
-					com.tools20022.repository.msg.AgreementClauses1.mmDocumentURL, com.tools20022.repository.msg.DocumentGeneralInformation1.mmURL, com.tools20022.repository.msg.DocumentGeneralInformation2.mmURL,
-					com.tools20022.repository.msg.IssuerInformation2.mmURLAddress, com.tools20022.repository.msg.MeetingNotice4.mmAdditionalDocumentationURLAddress,
-					com.tools20022.repository.msg.AdditionalRights2.mmAdditionalRightInformationURLAddress, com.tools20022.repository.msg.QualifiedDocumentInformation1.mmURL,
-					com.tools20022.repository.msg.CommunicationAddress5.mmURLAddress, com.tools20022.repository.msg.DocumentGeneralInformation3.mmURL, com.tools20022.repository.msg.CommunicationAddress6.mmURLAddress);
+			derivation_lazy = () -> Arrays.asList(ContactDetails1.mmURLAddress, ContactAttributes1.mmURLAddress, CommunicationAddress3.mmURLAddress, CorporateActionNarrative3.mmURLAddress, CorporateActionNarrative18.mmURLAddress,
+					MeetingNotice1.mmAdditionalDocumentationURLAddress, CommunicationAddress4.mmURLAddress, MeetingNotice2.mmAdditionalDocumentationURLAddress, AdditionalRights1.mmAdditionalRightInformationURLAddress,
+					MeetingNotice3.mmAdditionalDocumentationURLAddress, IssuerInformation1.mmURLAddress, CorporateActionNarrative1.mmURLAddress, AgreementClauses1.mmDocumentURL, DocumentGeneralInformation1.mmURL,
+					DocumentGeneralInformation2.mmURL, IssuerInformation2.mmURLAddress, MeetingNotice4.mmAdditionalDocumentationURLAddress, AdditionalRights2.mmAdditionalRightInformationURLAddress, QualifiedDocumentInformation1.mmURL,
+					CommunicationAddress5.mmURLAddress, DocumentGeneralInformation3.mmURL, CommunicationAddress6.mmURLAddress);
 			elementContext_lazy = () -> ElectronicAddress.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "URLAddress";
 			definition = "Address for the Universal Resource Locator (URL), eg, used over the www (HTTP) service.";
 			maxOccurs = 1;
@@ -523,10 +517,10 @@ public class ElectronicAddress extends ContactPoint {
 	 */
 	public static final MMBusinessAttribute mmTelexAddress = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CommunicationAddress3.mmTelexAddress, com.tools20022.repository.msg.CommunicationAddress6.mmTelexAddress);
+			derivation_lazy = () -> Arrays.asList(CommunicationAddress3.mmTelexAddress, CommunicationAddress6.mmTelexAddress);
 			elementContext_lazy = () -> ElectronicAddress.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TelexAddress";
 			definition = "Address for a telex machine.";
 			maxOccurs = 1;
@@ -575,13 +569,13 @@ public class ElectronicAddress extends ContactPoint {
 		{
 			elementContext_lazy = () -> ElectronicAddress.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedPresentation";
 			definition = "Presentation process for which an electronic presentation address is specified.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.Presentation.mmElectronicPresentationAddress;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Presentation.mmObject();
 		}
 	};
@@ -615,7 +609,7 @@ public class ElectronicAddress extends ContactPoint {
 		{
 			elementContext_lazy = () -> ElectronicAddress.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TeletextAddress";
 			definition = "Address for a teletext.";
 			maxOccurs = 1;
@@ -653,7 +647,7 @@ public class ElectronicAddress extends ContactPoint {
 		{
 			elementContext_lazy = () -> ElectronicAddress.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ISDNAddress";
 			definition = "Address for an Integrated Services Digital Network.";
 			maxOccurs = 1;
@@ -665,43 +659,31 @@ public class ElectronicAddress extends ContactPoint {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ElectronicAddress";
 				definition = "Address which is accessed by electronic means.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Presentation.mmElectronicPresentationAddress);
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IndividualPerson5.mmPrimaryCommunicationAddress, com.tools20022.repository.msg.IndividualPerson5.mmSecondaryCommunicationAddress,
-						com.tools20022.repository.msg.IndividualPerson10.mmPrimaryCommunicationAddress, com.tools20022.repository.msg.IndividualPerson10.mmSecondaryCommunicationAddress,
-						com.tools20022.repository.msg.Intermediary5.mmPrimaryCommunicationAddress, com.tools20022.repository.msg.Intermediary5.mmSecondaryCommunicationAddress,
-						com.tools20022.repository.msg.Intermediary12.mmPrimaryCommunicationAddress, com.tools20022.repository.msg.Intermediary12.mmSecondaryCommunicationAddress,
-						com.tools20022.repository.msg.Organisation13.mmPrimaryCommunicationAddress, com.tools20022.repository.msg.Organisation13.mmSecondaryCommunicationAddress,
-						com.tools20022.repository.msg.IndividualPerson20.mmPrimaryCommunicationAddress, com.tools20022.repository.msg.IndividualPerson20.mmSecondaryCommunicationAddress,
-						com.tools20022.repository.msg.IndividualPerson6.mmPrimaryCommunicationAddress, com.tools20022.repository.msg.IndividualPerson6.mmSecondaryCommunicationAddress,
-						com.tools20022.repository.msg.Intermediary6.mmPrimaryCommunicationAddress, com.tools20022.repository.msg.Intermediary6.mmSecondaryCommunicationAddress,
-						com.tools20022.repository.msg.IndividualPerson11.mmPrimaryCommunicationAddress, com.tools20022.repository.msg.IndividualPerson11.mmSecondaryCommunicationAddress,
-						com.tools20022.repository.msg.Intermediary13.mmPrimaryCommunicationAddress, com.tools20022.repository.msg.Intermediary13.mmSecondaryCommunicationAddress,
-						com.tools20022.repository.msg.StatementFrequencyAndForm1.mmDeliveryAddress, com.tools20022.repository.msg.VoteMethods.mmElectronicVote, com.tools20022.repository.msg.VoteParameters.mmVotingBallotElectronicAddress,
-						com.tools20022.repository.msg.VoteParameters1.mmVotingBallotElectronicAddress, com.tools20022.repository.msg.VoteParameters2.mmVotingBallotElectronicAddress,
-						com.tools20022.repository.msg.VoteMethods2.mmElectronicVote, com.tools20022.repository.msg.VoteParameters3.mmVotingBallotElectronicAddress,
-						com.tools20022.repository.choice.TechnicalIdentification1Choice.mmTechnicalAddress, com.tools20022.repository.msg.Intermediary24.mmPrimaryCommunicationAddress,
-						com.tools20022.repository.msg.Intermediary24.mmSecondaryCommunicationAddress, com.tools20022.repository.msg.IndividualPerson21.mmPrimaryCommunicationAddress,
-						com.tools20022.repository.msg.IndividualPerson21.mmSecondaryCommunicationAddress, com.tools20022.repository.msg.IndividualPerson22.mmPrimaryCommunicationAddress,
-						com.tools20022.repository.msg.IndividualPerson22.mmSecondaryCommunicationAddress, com.tools20022.repository.msg.Organisation15.mmPrimaryCommunicationAddress,
-						com.tools20022.repository.msg.Organisation15.mmSecondaryCommunicationAddress, com.tools20022.repository.msg.RemittanceLocationDetails1.mmElectronicAddress,
-						com.tools20022.repository.msg.Organisation16.mmPrimaryCommunicationAddress, com.tools20022.repository.msg.Organisation16.mmSecondaryCommunicationAddress,
-						com.tools20022.repository.msg.Organisation17.mmPrimaryCommunicationAddress, com.tools20022.repository.msg.Organisation17.mmSecondaryCommunicationAddress,
-						com.tools20022.repository.msg.IndividualPerson23.mmPrimaryCommunicationAddress, com.tools20022.repository.msg.IndividualPerson23.mmSecondaryCommunicationAddress,
-						com.tools20022.repository.msg.IndividualPerson24.mmPrimaryCommunicationAddress, com.tools20022.repository.msg.IndividualPerson24.mmSecondaryCommunicationAddress,
-						com.tools20022.repository.msg.VoteParameters4.mmVotingBallotElectronicAddress, com.tools20022.repository.msg.Intermediary36.mmPrimaryCommunicationAddress,
-						com.tools20022.repository.msg.Intermediary36.mmSecondaryCommunicationAddress, com.tools20022.repository.msg.InvestmentAccountOwnershipInformation12.mmPrimaryCommunicationAddress,
-						com.tools20022.repository.msg.InvestmentAccountOwnershipInformation12.mmSecondaryCommunicationAddress, com.tools20022.repository.msg.InvestmentAccountOwnershipInformation13.mmPrimaryCommunicationAddress,
-						com.tools20022.repository.msg.InvestmentAccountOwnershipInformation13.mmSecondaryCommunicationAddress, com.tools20022.repository.msg.InvestmentAccountOwnershipInformation15.mmPrimaryCommunicationAddress,
-						com.tools20022.repository.msg.InvestmentAccountOwnershipInformation15.mmSecondaryCommunicationAddress, com.tools20022.repository.msg.InvestmentAccountOwnershipInformation14.mmPrimaryCommunicationAddress,
-						com.tools20022.repository.msg.InvestmentAccountOwnershipInformation14.mmSecondaryCommunicationAddress);
+				derivationElement_lazy = () -> Arrays
+						.asList(IndividualPerson5.mmPrimaryCommunicationAddress, IndividualPerson5.mmSecondaryCommunicationAddress, IndividualPerson10.mmPrimaryCommunicationAddress, IndividualPerson10.mmSecondaryCommunicationAddress,
+								Intermediary5.mmPrimaryCommunicationAddress, Intermediary5.mmSecondaryCommunicationAddress, Intermediary12.mmPrimaryCommunicationAddress, Intermediary12.mmSecondaryCommunicationAddress,
+								Organisation13.mmPrimaryCommunicationAddress, Organisation13.mmSecondaryCommunicationAddress, IndividualPerson20.mmPrimaryCommunicationAddress, IndividualPerson20.mmSecondaryCommunicationAddress,
+								IndividualPerson6.mmPrimaryCommunicationAddress, IndividualPerson6.mmSecondaryCommunicationAddress, Intermediary6.mmPrimaryCommunicationAddress, Intermediary6.mmSecondaryCommunicationAddress,
+								IndividualPerson11.mmPrimaryCommunicationAddress, IndividualPerson11.mmSecondaryCommunicationAddress, Intermediary13.mmPrimaryCommunicationAddress, Intermediary13.mmSecondaryCommunicationAddress,
+								StatementFrequencyAndForm1.mmDeliveryAddress, VoteMethods.mmElectronicVote, VoteParameters.mmVotingBallotElectronicAddress, VoteParameters1.mmVotingBallotElectronicAddress,
+								VoteParameters2.mmVotingBallotElectronicAddress, VoteMethods2.mmElectronicVote, VoteParameters3.mmVotingBallotElectronicAddress, TechnicalIdentification1Choice.mmTechnicalAddress,
+								Intermediary24.mmPrimaryCommunicationAddress, Intermediary24.mmSecondaryCommunicationAddress, IndividualPerson21.mmPrimaryCommunicationAddress, IndividualPerson21.mmSecondaryCommunicationAddress,
+								IndividualPerson22.mmPrimaryCommunicationAddress, IndividualPerson22.mmSecondaryCommunicationAddress, Organisation15.mmPrimaryCommunicationAddress, Organisation15.mmSecondaryCommunicationAddress,
+								RemittanceLocationDetails1.mmElectronicAddress, Organisation16.mmPrimaryCommunicationAddress, Organisation16.mmSecondaryCommunicationAddress, Organisation17.mmPrimaryCommunicationAddress,
+								Organisation17.mmSecondaryCommunicationAddress, IndividualPerson23.mmPrimaryCommunicationAddress, IndividualPerson23.mmSecondaryCommunicationAddress, IndividualPerson24.mmPrimaryCommunicationAddress,
+								IndividualPerson24.mmSecondaryCommunicationAddress, VoteParameters4.mmVotingBallotElectronicAddress, Intermediary36.mmPrimaryCommunicationAddress, Intermediary36.mmSecondaryCommunicationAddress,
+								InvestmentAccountOwnershipInformation12.mmPrimaryCommunicationAddress, InvestmentAccountOwnershipInformation12.mmSecondaryCommunicationAddress,
+								InvestmentAccountOwnershipInformation13.mmPrimaryCommunicationAddress, InvestmentAccountOwnershipInformation13.mmSecondaryCommunicationAddress,
+								InvestmentAccountOwnershipInformation15.mmPrimaryCommunicationAddress, InvestmentAccountOwnershipInformation15.mmSecondaryCommunicationAddress,
+								InvestmentAccountOwnershipInformation14.mmPrimaryCommunicationAddress, InvestmentAccountOwnershipInformation14.mmSecondaryCommunicationAddress);
 				superType_lazy = () -> ContactPoint.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.ElectronicAddress.mmEmailAddress, com.tools20022.repository.entity.ElectronicAddress.mmURLAddress,
-						com.tools20022.repository.entity.ElectronicAddress.mmTelexAddress, com.tools20022.repository.entity.ElectronicAddress.mmRelatedPresentation, com.tools20022.repository.entity.ElectronicAddress.mmTeletextAddress,
-						com.tools20022.repository.entity.ElectronicAddress.mmISDNAddress);
+				element_lazy = () -> Arrays.asList(ElectronicAddress.mmEmailAddress, ElectronicAddress.mmURLAddress, ElectronicAddress.mmTelexAddress, ElectronicAddress.mmRelatedPresentation, ElectronicAddress.mmTeletextAddress,
+						ElectronicAddress.mmISDNAddress);
 			}
 		});
 		return mmObject_lazy.get();

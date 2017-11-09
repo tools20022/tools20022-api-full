@@ -20,11 +20,14 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.fxtr.ForeignExchangeTradeBulkStatusNotificationV04;
 import com.tools20022.repository.datatype.Exact4AlphaNumericText;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Max35Text;
-import com.tools20022.repository.entity.TreasuryTradeSettlementStatus;
+import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -143,10 +146,10 @@ public class TradeData11 {
 			componentContext_lazy = () -> TradeData11.mmObject();
 			isDerived = false;
 			xmlTag = "OrgtrRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginatorReference";
 			definition = "Represents the original reference of the instruction for which the status is given, as assigned by the participant that submitted the foreign exchange trade.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TradeData8.mmOriginatorReference;
+			previousVersion_lazy = () -> TradeData8.mmOriginatorReference;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -194,14 +197,14 @@ public class TradeData11 {
 	 */
 	public static final MMMessageAttribute mmMatchingSystemUniqueReference = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradeIdentification.mmMatchingReference;
+			businessElementTrace_lazy = () -> TradeIdentification.mmMatchingReference;
 			componentContext_lazy = () -> TradeData11.mmObject();
 			isDerived = false;
 			xmlTag = "MtchgSysUnqRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MatchingSystemUniqueReference";
 			definition = "Reference to the unique system identification assigned to the trade  by the central matching system.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TradeData8.mmMatchingSystemUniqueReference;
+			previousVersion_lazy = () -> TradeData8.mmMatchingSystemUniqueReference;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -250,14 +253,14 @@ public class TradeData11 {
 	 */
 	public static final MMMessageAttribute mmMatchingSystemMatchingReference = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradeIdentification.mmMatchingReference;
+			businessElementTrace_lazy = () -> TradeIdentification.mmMatchingReference;
 			componentContext_lazy = () -> TradeData11.mmObject();
 			isDerived = false;
 			xmlTag = "MtchgSysMtchgRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MatchingSystemMatchingReference";
 			definition = "Reference to the unique matching identification assigned to the trade and to the matching trade from the counterparty by the central matching system.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TradeData8.mmMatchingSystemMatchingReference;
+			previousVersion_lazy = () -> TradeData8.mmMatchingSystemMatchingReference;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -306,14 +309,14 @@ public class TradeData11 {
 	 */
 	public static final MMMessageAttribute mmMatchingSystemMatchedSideReference = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradeIdentification.mmMatchingReference;
+			businessElementTrace_lazy = () -> TradeIdentification.mmMatchingReference;
 			componentContext_lazy = () -> TradeData11.mmObject();
 			isDerived = false;
 			xmlTag = "MtchgSysMtchdSdRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MatchingSystemMatchedSideReference";
 			definition = "Unique reference from the central settlement system that allows the removal of alleged trades once the matched status notification for the matching side has been received.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TradeData8.mmMatchingSystemMatchedSideReference;
+			previousVersion_lazy = () -> TradeData8.mmMatchingSystemMatchedSideReference;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -358,14 +361,14 @@ public class TradeData11 {
 	 */
 	public static final MMMessageAttribute mmCurrentSettlementDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Trade.mmValueDate;
+			businessElementTrace_lazy = () -> Trade.mmValueDate;
 			componentContext_lazy = () -> TradeData11.mmObject();
 			isDerived = false;
 			xmlTag = "CurSttlmDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrentSettlementDate";
 			definition = "The current settlement date of the notification.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TradeData8.mmCurrentSettlementDate;
+			previousVersion_lazy = () -> TradeData8.mmCurrentSettlementDate;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
@@ -410,14 +413,14 @@ public class TradeData11 {
 	 */
 	public static final MMMessageAttribute mmNewSettlementDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Trade.mmValueDate;
+			businessElementTrace_lazy = () -> Trade.mmValueDate;
 			componentContext_lazy = () -> TradeData11.mmObject();
 			isDerived = false;
 			xmlTag = "NewSttlmDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewSettlementDate";
 			definition = "Settlement date has been amended.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TradeData8.mmNewSettlementDate;
+			previousVersion_lazy = () -> TradeData8.mmNewSettlementDate;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
@@ -465,14 +468,14 @@ public class TradeData11 {
 	 */
 	public static final MMMessageAttribute mmCurrentStatusDateTime = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.mmStatusDateTime;
+			businessElementTrace_lazy = () -> Status.mmStatusDateTime;
 			componentContext_lazy = () -> TradeData11.mmObject();
 			isDerived = false;
 			xmlTag = "CurStsDtTm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrentStatusDateTime";
 			definition = "Specifies the date and time at which the current status was assigned to the individual trade.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TradeData8.mmCurrentStatusDateTime;
+			previousVersion_lazy = () -> TradeData8.mmCurrentStatusDateTime;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
@@ -517,14 +520,14 @@ public class TradeData11 {
 	 */
 	public static final MMMessageAttribute mmProductType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ForeignExchangeTrade.mmTypeOfProduct;
+			businessElementTrace_lazy = () -> ForeignExchangeTrade.mmTypeOfProduct;
 			componentContext_lazy = () -> TradeData11.mmObject();
 			isDerived = false;
 			xmlTag = "PdctTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProductType";
 			definition = "Product type of the individual trade.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TradeData8.mmProductType;
+			previousVersion_lazy = () -> TradeData8.mmProductType;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -571,10 +574,10 @@ public class TradeData11 {
 			componentContext_lazy = () -> TradeData11.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmSsnIdr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementSessionIdentifier";
 			definition = "To indicate the requested CLS settlement session that the related trade is part of.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TradeData8.mmSettlementSessionIdentifier;
+			previousVersion_lazy = () -> TradeData8.mmSettlementSessionIdentifier;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Exact4AlphaNumericText.mmObject();
@@ -622,14 +625,14 @@ public class TradeData11 {
 	 */
 	public static final MMMessageAssociationEnd mmRegulatoryReporting = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.FinancialTransaction.mmRegulatoryReport;
+			businessElementTrace_lazy = () -> FinancialTransaction.mmRegulatoryReport;
 			componentContext_lazy = () -> TradeData11.mmObject();
 			isDerived = false;
 			xmlTag = "RgltryRptg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RegulatoryReporting";
 			definition = "Information that is to be provided to trade repositories in the context of the regulatory standards around over-the-counter (OTC) derivatives, central counterparties and trade repositories.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TradeData8.mmRegulatoryReporting;
+			previousVersion_lazy = () -> TradeData8.mmRegulatoryReporting;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -640,14 +643,12 @@ public class TradeData11 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TradeData11.mmOriginatorReference, com.tools20022.repository.msg.TradeData11.mmMatchingSystemUniqueReference,
-						com.tools20022.repository.msg.TradeData11.mmMatchingSystemMatchingReference, com.tools20022.repository.msg.TradeData11.mmMatchingSystemMatchedSideReference,
-						com.tools20022.repository.msg.TradeData11.mmCurrentSettlementDate, com.tools20022.repository.msg.TradeData11.mmNewSettlementDate, com.tools20022.repository.msg.TradeData11.mmCurrentStatusDateTime,
-						com.tools20022.repository.msg.TradeData11.mmProductType, com.tools20022.repository.msg.TradeData11.mmSettlementSessionIdentifier, com.tools20022.repository.msg.TradeData11.mmRegulatoryReporting);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.fxtr.ForeignExchangeTradeBulkStatusNotificationV04.mmTradeData);
+				messageElement_lazy = () -> Arrays.asList(TradeData11.mmOriginatorReference, TradeData11.mmMatchingSystemUniqueReference, TradeData11.mmMatchingSystemMatchingReference, TradeData11.mmMatchingSystemMatchedSideReference,
+						TradeData11.mmCurrentSettlementDate, TradeData11.mmNewSettlementDate, TradeData11.mmCurrentStatusDateTime, TradeData11.mmProductType, TradeData11.mmSettlementSessionIdentifier, TradeData11.mmRegulatoryReporting);
+				messageBuildingBlock_lazy = () -> Arrays.asList(ForeignExchangeTradeBulkStatusNotificationV04.mmTradeData);
 				trace_lazy = () -> TreasuryTradeSettlementStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TradeData11";
 				definition = "Provides information and details on the status of a trade.";
 				previousVersion_lazy = () -> TradeData8.mmObject();

@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.OptionFeaturesCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -129,10 +131,10 @@ public class OptionFeatures8Code extends OptionFeaturesCode {
 	 */
 	public static final MMCode mmAccountServicerOption = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountServicerOption";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OptionFeatures10Code.mmAccountServicerOption);
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.OptionFeatures5Code.mmAccountServicerOption;
+			nextVersions_lazy = () -> Arrays.asList(OptionFeatures10Code.mmAccountServicerOption);
+			previousVersion_lazy = () -> OptionFeatures5Code.mmAccountServicerOption;
 			owner_lazy = () -> OptionFeatures8Code.mmObject();
 		}
 	};
@@ -167,10 +169,10 @@ public class OptionFeatures8Code extends OptionFeaturesCode {
 	 */
 	public static final MMCode mmBeneficiaryOwnerInstruction = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BeneficiaryOwnerInstruction";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OptionFeatures10Code.mmBeneficiaryOwnerInstruction);
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.OptionFeatures5Code.mmBeneficiaryOwnerInstruction;
+			nextVersions_lazy = () -> Arrays.asList(OptionFeatures10Code.mmBeneficiaryOwnerInstruction);
+			previousVersion_lazy = () -> OptionFeatures5Code.mmBeneficiaryOwnerInstruction;
 			owner_lazy = () -> OptionFeatures8Code.mmObject();
 		}
 	};
@@ -205,10 +207,10 @@ public class OptionFeatures8Code extends OptionFeaturesCode {
 	 */
 	public static final MMCode mmConditional = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Conditional";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OptionFeatures10Code.mmConditional);
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.OptionFeatures5Code.mmConditional;
+			nextVersions_lazy = () -> Arrays.asList(OptionFeatures10Code.mmConditional);
+			previousVersion_lazy = () -> OptionFeatures5Code.mmConditional;
 			owner_lazy = () -> OptionFeatures8Code.mmObject();
 		}
 	};
@@ -243,10 +245,10 @@ public class OptionFeatures8Code extends OptionFeaturesCode {
 	 */
 	public static final MMCode mmMaximumCash = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaximumCash";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OptionFeatures10Code.mmMaximumCash);
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.OptionFeatures5Code.mmMaximumCash;
+			nextVersions_lazy = () -> Arrays.asList(OptionFeatures10Code.mmMaximumCash);
+			previousVersion_lazy = () -> OptionFeatures5Code.mmMaximumCash;
 			owner_lazy = () -> OptionFeatures8Code.mmObject();
 		}
 	};
@@ -281,10 +283,10 @@ public class OptionFeatures8Code extends OptionFeaturesCode {
 	 */
 	public static final MMCode mmMaximumSecurities = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaximumSecurities";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OptionFeatures10Code.mmMaximumSecurities);
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.OptionFeatures5Code.mmMaximumSecurities;
+			nextVersions_lazy = () -> Arrays.asList(OptionFeatures10Code.mmMaximumSecurities);
+			previousVersion_lazy = () -> OptionFeatures5Code.mmMaximumSecurities;
 			owner_lazy = () -> OptionFeatures8Code.mmObject();
 		}
 	};
@@ -319,10 +321,10 @@ public class OptionFeatures8Code extends OptionFeaturesCode {
 	 */
 	public static final MMCode mmNoServiceOffered = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoServiceOffered";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OptionFeatures10Code.mmNoServiceOffered);
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.OptionFeatures5Code.mmNoServiceOffered;
+			nextVersions_lazy = () -> Arrays.asList(OptionFeatures10Code.mmNoServiceOffered);
+			previousVersion_lazy = () -> OptionFeatures5Code.mmNoServiceOffered;
 			owner_lazy = () -> OptionFeatures8Code.mmObject();
 		}
 	};
@@ -357,10 +359,10 @@ public class OptionFeatures8Code extends OptionFeaturesCode {
 	 */
 	public static final MMCode mmOddLotPreference = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OddLotPreference";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OptionFeatures10Code.mmOddLotPreference);
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.OptionFeatures5Code.mmOddLotPreference;
+			nextVersions_lazy = () -> Arrays.asList(OptionFeatures10Code.mmOddLotPreference);
+			previousVersion_lazy = () -> OptionFeatures5Code.mmOddLotPreference;
 			owner_lazy = () -> OptionFeatures8Code.mmObject();
 		}
 	};
@@ -395,10 +397,10 @@ public class OptionFeatures8Code extends OptionFeaturesCode {
 	 */
 	public static final MMCode mmOptionApplicability = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionApplicability";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OptionFeatures10Code.mmOptionApplicability);
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.OptionFeatures5Code.mmOptionApplicability;
+			nextVersions_lazy = () -> Arrays.asList(OptionFeatures10Code.mmOptionApplicability);
+			previousVersion_lazy = () -> OptionFeatures5Code.mmOptionApplicability;
 			owner_lazy = () -> OptionFeatures8Code.mmObject();
 		}
 	};
@@ -433,10 +435,10 @@ public class OptionFeatures8Code extends OptionFeaturesCode {
 	 */
 	public static final MMCode mmPreviousInstructionInvalidity = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousInstructionInvalidity";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OptionFeatures10Code.mmPreviousInstructionInvalidity);
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.OptionFeatures5Code.mmPreviousInstructionInvalidity;
+			nextVersions_lazy = () -> Arrays.asList(OptionFeatures10Code.mmPreviousInstructionInvalidity);
+			previousVersion_lazy = () -> OptionFeatures5Code.mmPreviousInstructionInvalidity;
 			owner_lazy = () -> OptionFeatures8Code.mmObject();
 		}
 	};
@@ -471,10 +473,10 @@ public class OptionFeatures8Code extends OptionFeaturesCode {
 	 */
 	public static final MMCode mmProration = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proration";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OptionFeatures10Code.mmProration);
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.OptionFeatures5Code.mmProration;
+			nextVersions_lazy = () -> Arrays.asList(OptionFeatures10Code.mmProration);
+			previousVersion_lazy = () -> OptionFeatures5Code.mmProration;
 			owner_lazy = () -> OptionFeatures8Code.mmObject();
 		}
 	};
@@ -509,10 +511,10 @@ public class OptionFeatures8Code extends OptionFeaturesCode {
 	 */
 	public static final MMCode mmReducedWithholdingTax = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReducedWithholdingTax";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OptionFeatures10Code.mmReducedWithholdingTax);
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.OptionFeatures5Code.mmReducedWithholdingTax;
+			nextVersions_lazy = () -> Arrays.asList(OptionFeatures10Code.mmReducedWithholdingTax);
+			previousVersion_lazy = () -> OptionFeatures5Code.mmReducedWithholdingTax;
 			owner_lazy = () -> OptionFeatures8Code.mmObject();
 		}
 	};
@@ -520,17 +522,15 @@ public class OptionFeatures8Code extends OptionFeaturesCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OptionFeatures8Code";
 				definition = "Specifies the features that may apply to a corporate action option.";
 				nextVersions_lazy = () -> Arrays.asList(OptionFeatures10Code.mmObject());
 				previousVersion_lazy = () -> OptionFeatures5Code.mmObject();
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OptionFeatures8Code.mmAccountServicerOption, com.tools20022.repository.codeset.OptionFeatures8Code.mmBeneficiaryOwnerInstruction,
-						com.tools20022.repository.codeset.OptionFeatures8Code.mmConditional, com.tools20022.repository.codeset.OptionFeatures8Code.mmMaximumCash, com.tools20022.repository.codeset.OptionFeatures8Code.mmMaximumSecurities,
-						com.tools20022.repository.codeset.OptionFeatures8Code.mmNoServiceOffered, com.tools20022.repository.codeset.OptionFeatures8Code.mmOddLotPreference,
-						com.tools20022.repository.codeset.OptionFeatures8Code.mmOptionApplicability, com.tools20022.repository.codeset.OptionFeatures8Code.mmPreviousInstructionInvalidity,
-						com.tools20022.repository.codeset.OptionFeatures8Code.mmProration, com.tools20022.repository.codeset.OptionFeatures8Code.mmReducedWithholdingTax);
+				code_lazy = () -> Arrays.asList(OptionFeatures8Code.mmAccountServicerOption, OptionFeatures8Code.mmBeneficiaryOwnerInstruction, OptionFeatures8Code.mmConditional, OptionFeatures8Code.mmMaximumCash,
+						OptionFeatures8Code.mmMaximumSecurities, OptionFeatures8Code.mmNoServiceOffered, OptionFeatures8Code.mmOddLotPreference, OptionFeatures8Code.mmOptionApplicability,
+						OptionFeatures8Code.mmPreviousInstructionInvalidity, OptionFeatures8Code.mmProration, OptionFeatures8Code.mmReducedWithholdingTax);
 				trace_lazy = () -> OptionFeaturesCode.mmObject();
 			}
 		});

@@ -19,7 +19,9 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.DateType6Code;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -91,7 +93,7 @@ public class DateFormat12Choice {
 			componentContext_lazy = () -> DateFormat12Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Dt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Date";
 			definition = "Date expressed as an ISO Date.";
 			maxOccurs = 1;
@@ -133,7 +135,7 @@ public class DateFormat12Choice {
 			componentContext_lazy = () -> DateFormat12Choice.mmObject();
 			isDerived = false;
 			xmlTag = "NotSpcfdDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotSpecifiedDate";
 			definition = "Date not specified, for example, the date is unknown.";
 			maxOccurs = 1;
@@ -145,9 +147,9 @@ public class DateFormat12Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.DateFormat12Choice.mmDate, com.tools20022.repository.choice.DateFormat12Choice.mmNotSpecifiedDate);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(DateFormat12Choice.mmDate, DateFormat12Choice.mmNotSpecifiedDate);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DateFormat12Choice";
 				definition = "Specifies the value of a date.";
 			}

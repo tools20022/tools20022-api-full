@@ -19,6 +19,8 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -110,7 +112,7 @@ public class SystemPartyModification1Choice {
 			componentContext_lazy = () -> SystemPartyModification1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "SysPty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SystemParty";
 			definition = "Specifies the party reference data, as assigned by the system.";
 			maxOccurs = 1;
@@ -155,7 +157,7 @@ public class SystemPartyModification1Choice {
 			componentContext_lazy = () -> SystemPartyModification1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "PtyId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartyIdentification";
 			definition = "Unique identification to unambiguously identify the party within the system.";
 			maxOccurs = 1;
@@ -199,7 +201,7 @@ public class SystemPartyModification1Choice {
 			componentContext_lazy = () -> SystemPartyModification1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "PtyNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartyName";
 			definition = "Specifies the name by which a party is known and which is usually used to identify that party.";
 			maxOccurs = 1;
@@ -244,7 +246,7 @@ public class SystemPartyModification1Choice {
 			componentContext_lazy = () -> SystemPartyModification1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "TechAdr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TechnicalAddress";
 			definition = "Unique technical address to unambiguously identify a party for receiving messages from the executing system.";
 			maxOccurs = 1;
@@ -288,7 +290,7 @@ public class SystemPartyModification1Choice {
 			componentContext_lazy = () -> SystemPartyModification1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "PtyAdr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartyAddress";
 			definition = "Information that locates and identifies a specific address, as defined by postal services.";
 			maxOccurs = 1;
@@ -334,7 +336,7 @@ public class SystemPartyModification1Choice {
 			componentContext_lazy = () -> SystemPartyModification1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "SysRstrctn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SystemRestriction";
 			definition = "Defines the specific processing characteristics for a party to ensure configurability of specific requirements, as prescribed by national legal and regulatory requirements and practices.";
 			maxOccurs = 1;
@@ -379,7 +381,7 @@ public class SystemPartyModification1Choice {
 			componentContext_lazy = () -> SystemPartyModification1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "MktSpcfcAttr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketSpecificAttribute";
 			definition = "Additional attributes defined by a central security depositary for a party.";
 			maxOccurs = 1;
@@ -391,12 +393,10 @@ public class SystemPartyModification1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SystemPartyModification1Choice.mmSystemParty, com.tools20022.repository.choice.SystemPartyModification1Choice.mmPartyIdentification,
-						com.tools20022.repository.choice.SystemPartyModification1Choice.mmPartyName, com.tools20022.repository.choice.SystemPartyModification1Choice.mmTechnicalAddress,
-						com.tools20022.repository.choice.SystemPartyModification1Choice.mmPartyAddress, com.tools20022.repository.choice.SystemPartyModification1Choice.mmSystemRestriction,
-						com.tools20022.repository.choice.SystemPartyModification1Choice.mmMarketSpecificAttribute);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(SystemPartyModification1Choice.mmSystemParty, SystemPartyModification1Choice.mmPartyIdentification, SystemPartyModification1Choice.mmPartyName,
+						SystemPartyModification1Choice.mmTechnicalAddress, SystemPartyModification1Choice.mmPartyAddress, SystemPartyModification1Choice.mmSystemRestriction, SystemPartyModification1Choice.mmMarketSpecificAttribute);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SystemPartyModification1Choice";
 				definition = "Identifies which information are involved by a modification request for party reference data.";
 			}

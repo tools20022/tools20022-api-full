@@ -19,10 +19,14 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.caam.*;
+import com.tools20022.repository.area.catp.*;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.Max3NumericText;
 import com.tools20022.repository.datatype.Max6Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -163,7 +167,7 @@ public class Header31 {
 			componentContext_lazy = () -> Header31.mmObject();
 			isDerived = false;
 			xmlTag = "MsgFctn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageFunction";
 			definition = "Identifies the type of process related to the message.";
 			maxOccurs = 1;
@@ -203,7 +207,7 @@ public class Header31 {
 			componentContext_lazy = () -> Header31.mmObject();
 			isDerived = false;
 			xmlTag = "PrtcolVrsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProtocolVersion";
 			definition = "Version of the ATM protocol specifications.";
 			maxOccurs = 1;
@@ -244,7 +248,7 @@ public class Header31 {
 			componentContext_lazy = () -> Header31.mmObject();
 			isDerived = false;
 			xmlTag = "XchgId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExchangeIdentification";
 			definition = "Unique identification of an exchange occurrence.";
 			maxOccurs = 1;
@@ -284,7 +288,7 @@ public class Header31 {
 			componentContext_lazy = () -> Header31.mmObject();
 			isDerived = false;
 			xmlTag = "CreDtTm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreationDateTime";
 			definition = "Date and time at which the message was created.";
 			maxOccurs = 1;
@@ -325,7 +329,7 @@ public class Header31 {
 			componentContext_lazy = () -> Header31.mmObject();
 			isDerived = false;
 			xmlTag = "InitgPty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InitiatingParty";
 			definition = "Unique identification of the partner that has initiated the exchange.";
 			maxOccurs = 1;
@@ -368,7 +372,7 @@ public class Header31 {
 			componentContext_lazy = () -> Header31.mmObject();
 			isDerived = false;
 			xmlTag = "RcptPty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RecipientParty";
 			definition = "Unique identification of the partner that is the recipient of the message exchange.";
 			maxOccurs = 1;
@@ -409,7 +413,7 @@ public class Header31 {
 			componentContext_lazy = () -> Header31.mmObject();
 			isDerived = false;
 			xmlTag = "PrcStat";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProcessState";
 			definition = "State of the sender of the message inside the process flow.";
 			maxOccurs = 1;
@@ -452,7 +456,7 @@ public class Header31 {
 			componentContext_lazy = () -> Header31.mmObject();
 			isDerived = false;
 			xmlTag = "Tracblt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Traceability";
 			definition = "Identification of partners involved in exchange from the merchant to the issuer, with the relative timestamp of their exchanges.";
 			minOccurs = 0;
@@ -463,17 +467,13 @@ public class Header31 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Header31.mmMessageFunction, com.tools20022.repository.msg.Header31.mmProtocolVersion, com.tools20022.repository.msg.Header31.mmExchangeIdentification,
-						com.tools20022.repository.msg.Header31.mmCreationDateTime, com.tools20022.repository.msg.Header31.mmInitiatingParty, com.tools20022.repository.msg.Header31.mmRecipientParty,
-						com.tools20022.repository.msg.Header31.mmProcessState, com.tools20022.repository.msg.Header31.mmTraceability);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.catp.ATMWithdrawalRequestV02.mmHeader, com.tools20022.repository.area.caam.ATMDeviceControlV02.mmHeader,
-						com.tools20022.repository.area.catp.ATMDepositResponseV01.mmHeader, com.tools20022.repository.area.catp.ATMDepositRequestV01.mmHeader, com.tools20022.repository.area.catp.ATMInquiryResponseV02.mmHeader,
-						com.tools20022.repository.area.caam.ATMDeviceReportV02.mmHeader, com.tools20022.repository.area.catp.ATMPINManagementRequestV02.mmHeader, com.tools20022.repository.area.catp.ATMTransferRequestV01.mmHeader,
-						com.tools20022.repository.area.caam.ATMDiagnosticResponseV02.mmHeader, com.tools20022.repository.area.caam.ATMDiagnosticRequestV02.mmHeader, com.tools20022.repository.area.caam.ATMKeyDownloadRequestV02.mmHeader,
-						com.tools20022.repository.area.catp.ATMWithdrawalResponseV02.mmHeader, com.tools20022.repository.area.catp.ATMPINManagementResponseV02.mmHeader, com.tools20022.repository.area.catp.ATMInquiryRequestV02.mmHeader,
-						com.tools20022.repository.area.catp.ATMTransferResponseV01.mmHeader, com.tools20022.repository.area.caam.ATMKeyDownloadResponseV02.mmHeader);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(Header31.mmMessageFunction, Header31.mmProtocolVersion, Header31.mmExchangeIdentification, Header31.mmCreationDateTime, Header31.mmInitiatingParty, Header31.mmRecipientParty,
+						Header31.mmProcessState, Header31.mmTraceability);
+				messageBuildingBlock_lazy = () -> Arrays.asList(ATMWithdrawalRequestV02.mmHeader, ATMDeviceControlV02.mmHeader, ATMDepositResponseV01.mmHeader, ATMDepositRequestV01.mmHeader, ATMInquiryResponseV02.mmHeader,
+						ATMDeviceReportV02.mmHeader, ATMPINManagementRequestV02.mmHeader, ATMTransferRequestV01.mmHeader, ATMDiagnosticResponseV02.mmHeader, ATMDiagnosticRequestV02.mmHeader, ATMKeyDownloadRequestV02.mmHeader,
+						ATMWithdrawalResponseV02.mmHeader, ATMPINManagementResponseV02.mmHeader, ATMInquiryRequestV02.mmHeader, ATMTransferResponseV01.mmHeader, ATMKeyDownloadResponseV02.mmHeader);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Header31";
 				definition = "Information related to the protocol management on a segment of the path from the ATM to the acquirer.";
 			}

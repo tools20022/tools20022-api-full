@@ -20,13 +20,14 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.FinancialInstrumentQuantity1Choice;
 import com.tools20022.repository.choice.SecuritiesTransactionType17Choice;
 import com.tools20022.repository.codeset.CountryCode;
 import com.tools20022.repository.datatype.*;
 import com.tools20022.repository.datatype.Number;
-import com.tools20022.repository.entity.Issuance;
-import com.tools20022.repository.entity.Organisation;
+import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -125,11 +126,11 @@ public class Issuance1 {
 	 */
 	public static final MMMessageAttribute mmIssuePlace = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.mmMIC;
+			businessElementTrace_lazy = () -> OrganisationIdentification.mmMIC;
 			componentContext_lazy = () -> Issuance1.mmObject();
 			isDerived = false;
 			xmlTag = "IssePlc";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssuePlace";
 			definition = "Indicates where the financial instrument was issued.";
 			maxOccurs = 1;
@@ -172,11 +173,11 @@ public class Issuance1 {
 	 */
 	public static final MMMessageAttribute mmCountryOfIssue = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Country.mmCode;
+			businessElementTrace_lazy = () -> Country.mmCode;
 			componentContext_lazy = () -> Issuance1.mmObject();
 			isDerived = false;
 			xmlTag = "CtryOfIsse";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CountryOfIssue";
 			definition = "Country where a security is issued by the issuer or its agent.";
 			maxOccurs = 1;
@@ -218,11 +219,11 @@ public class Issuance1 {
 	 */
 	public static final MMMessageAttribute mmIssueDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Issuance.mmIssueDate;
+			businessElementTrace_lazy = () -> Issuance.mmIssueDate;
 			componentContext_lazy = () -> Issuance1.mmObject();
 			isDerived = false;
 			xmlTag = "IsseDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssueDate";
 			definition = "Date/time at which the security was made available.";
 			maxOccurs = 1;
@@ -267,11 +268,11 @@ public class Issuance1 {
 	 */
 	public static final MMMessageAttribute mmAnnouncementDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmAnnouncementDate;
+			businessElementTrace_lazy = () -> CorporateActionEvent.mmAnnouncementDate;
 			componentContext_lazy = () -> Issuance1.mmObject();
 			isDerived = false;
 			xmlTag = "AnncmntDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AnnouncementDate";
 			definition = "Date/time, as announced by the issuer, at which the securities will be issued.";
 			maxOccurs = 1;
@@ -317,11 +318,11 @@ public class Issuance1 {
 	 */
 	public static final MMMessageAttribute mmISINValidFrom = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmFromDateTime;
+			businessElementTrace_lazy = () -> DateTimePeriod.mmFromDateTime;
 			componentContext_lazy = () -> Issuance1.mmObject();
 			isDerived = false;
 			xmlTag = "ISINVldFr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ISINValidFrom";
 			definition = "Defines the date from which the instrument code is valid. This date can be before the actual issue date of an instrument for 'when-issued' securities, but may not be a date in the future for a new security.";
 			maxOccurs = 1;
@@ -365,7 +366,7 @@ public class Issuance1 {
 			componentContext_lazy = () -> Issuance1.mmObject();
 			isDerived = false;
 			xmlTag = "IssrOrg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssuerOrganisation";
 			definition = "Legal entity that has the right to issue securities.";
 			maxOccurs = 1;
@@ -409,11 +410,11 @@ public class Issuance1 {
 	 */
 	public static final MMMessageAttribute mmIssueNominalAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Issuance.mmIssueNominalAmount;
+			businessElementTrace_lazy = () -> Issuance.mmIssueNominalAmount;
 			componentContext_lazy = () -> Issuance1.mmObject();
 			isDerived = false;
 			xmlTag = "IsseNmnlAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssueNominalAmount";
 			definition = "Total original amount or quantity published.";
 			maxOccurs = 1;
@@ -459,11 +460,11 @@ public class Issuance1 {
 	 */
 	public static final MMMessageAttribute mmFullIssuedAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Issuance.mmIssueNominalAmount;
+			businessElementTrace_lazy = () -> Issuance.mmIssueNominalAmount;
 			componentContext_lazy = () -> Issuance1.mmObject();
 			isDerived = false;
 			xmlTag = "FullIssdAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FullIssuedAmount";
 			definition = "Figure used as a control to verify whether the information provided is correct.  It represents the issue size multiplied by the issue price.";
 			maxOccurs = 1;
@@ -509,11 +510,11 @@ public class Issuance1 {
 	 */
 	public static final MMMessageAttribute mmIssueSize = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Issuance.mmIssueSize;
+			businessElementTrace_lazy = () -> Issuance.mmIssueSize;
 			componentContext_lazy = () -> Issuance1.mmObject();
 			isDerived = false;
 			xmlTag = "IsseSz";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssueSize";
 			definition = "Represents the total amount/quantity of the proceeds from the sale of all securities in the initial offering. This amount/quantity is known after the new issue is priced.";
 			maxOccurs = 1;
@@ -555,11 +556,11 @@ public class Issuance1 {
 	 */
 	public static final MMMessageAttribute mmIssuePrice = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Issuance.mmIssuePrice;
+			businessElementTrace_lazy = () -> Issuance.mmIssuePrice;
 			componentContext_lazy = () -> Issuance1.mmObject();
 			isDerived = false;
 			xmlTag = "IssePric";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssuePrice";
 			definition = "Initial issue price of the asset.";
 			maxOccurs = 1;
@@ -605,7 +606,7 @@ public class Issuance1 {
 			componentContext_lazy = () -> Issuance1.mmObject();
 			isDerived = false;
 			xmlTag = "IssncDstrbtn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssuanceDistribution";
 			definition = "Way in which the issue will be marketed to the primary market, via individual dealers (so called non syndicated distribution) or via a syndicate of managers, underwriters and selling group members (so called syndicated distribution).";
 			maxOccurs = 1;
@@ -645,7 +646,7 @@ public class Issuance1 {
 			componentContext_lazy = () -> Issuance1.mmObject();
 			isDerived = false;
 			xmlTag = "GovngLaw";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GoverningLaw";
 			definition = "Jurisdiction (country, county, state, province, city) of the issue.";
 			minOccurs = 0;
@@ -657,13 +658,11 @@ public class Issuance1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Issuance1.mmIssuePlace, com.tools20022.repository.msg.Issuance1.mmCountryOfIssue, com.tools20022.repository.msg.Issuance1.mmIssueDate,
-						com.tools20022.repository.msg.Issuance1.mmAnnouncementDate, com.tools20022.repository.msg.Issuance1.mmISINValidFrom, com.tools20022.repository.msg.Issuance1.mmIssuerOrganisation,
-						com.tools20022.repository.msg.Issuance1.mmIssueNominalAmount, com.tools20022.repository.msg.Issuance1.mmFullIssuedAmount, com.tools20022.repository.msg.Issuance1.mmIssueSize,
-						com.tools20022.repository.msg.Issuance1.mmIssuePrice, com.tools20022.repository.msg.Issuance1.mmIssuanceDistribution, com.tools20022.repository.msg.Issuance1.mmGoverningLaw);
+				messageElement_lazy = () -> Arrays.asList(Issuance1.mmIssuePlace, Issuance1.mmCountryOfIssue, Issuance1.mmIssueDate, Issuance1.mmAnnouncementDate, Issuance1.mmISINValidFrom, Issuance1.mmIssuerOrganisation,
+						Issuance1.mmIssueNominalAmount, Issuance1.mmFullIssuedAmount, Issuance1.mmIssueSize, Issuance1.mmIssuePrice, Issuance1.mmIssuanceDistribution, Issuance1.mmGoverningLaw);
 				trace_lazy = () -> Issuance.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Issuance1";
 				definition = "Preparation/bringing to market of a security (also known as primary market or Initial Public Offering (IPO) issuance).";
 			}

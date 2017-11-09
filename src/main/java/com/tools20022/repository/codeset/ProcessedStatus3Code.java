@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CorporateActionProcessedStatusCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -87,7 +89,7 @@ public class ProcessedStatus3Code extends CorporateActionProcessedStatusCode {
 	 */
 	public static final MMCode mmReceived = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Received";
 			owner_lazy = () -> ProcessedStatus3Code.mmObject();
 		}
@@ -110,7 +112,7 @@ public class ProcessedStatus3Code extends CorporateActionProcessedStatusCode {
 	 */
 	public static final MMCode mmPending = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Pending";
 			owner_lazy = () -> ProcessedStatus3Code.mmObject();
 		}
@@ -133,7 +135,7 @@ public class ProcessedStatus3Code extends CorporateActionProcessedStatusCode {
 	 */
 	public static final MMCode mmAccepted = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Accepted";
 			owner_lazy = () -> ProcessedStatus3Code.mmObject();
 		}
@@ -142,13 +144,12 @@ public class ProcessedStatus3Code extends CorporateActionProcessedStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("RECE");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ProcessedStatus3Code";
 				definition = "Specifies the processing status of an advice, a request or a movement.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ProcessedStatus3Code.mmReceived, com.tools20022.repository.codeset.ProcessedStatus3Code.mmPending,
-						com.tools20022.repository.codeset.ProcessedStatus3Code.mmAccepted);
+				code_lazy = () -> Arrays.asList(ProcessedStatus3Code.mmReceived, ProcessedStatus3Code.mmPending, ProcessedStatus3Code.mmAccepted);
 				trace_lazy = () -> CorporateActionProcessedStatusCode.mmObject();
 			}
 		});

@@ -19,9 +19,12 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.ProcessedStatus3FormatChoice;
 import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.entity.CorporateActionStatus;
+import com.tools20022.repository.entity.Status;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -103,7 +106,7 @@ public class CorporateActionMovementProcessingStatus1 {
 			componentContext_lazy = () -> CorporateActionMovementProcessingStatus1.mmObject();
 			isDerived = false;
 			xmlTag = "Sts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Status";
 			definition = "The processing status.";
 			maxOccurs = 1;
@@ -146,11 +149,11 @@ public class CorporateActionMovementProcessingStatus1 {
 	 */
 	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.mmStatusDescription;
+			businessElementTrace_lazy = () -> Status.mmStatusDescription;
 			componentContext_lazy = () -> CorporateActionMovementProcessingStatus1.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInformation";
 			definition = "Additional information about the status.";
 			maxOccurs = 1;
@@ -162,10 +165,10 @@ public class CorporateActionMovementProcessingStatus1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionMovementProcessingStatus1.mmStatus, com.tools20022.repository.msg.CorporateActionMovementProcessingStatus1.mmAdditionalInformation);
+				messageElement_lazy = () -> Arrays.asList(CorporateActionMovementProcessingStatus1.mmStatus, CorporateActionMovementProcessingStatus1.mmAdditionalInformation);
 				trace_lazy = () -> CorporateActionStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionMovementProcessingStatus1";
 				definition = "Provide processing status information of a movement.";
 			}

@@ -19,7 +19,11 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV01;
+import com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV02;
 import com.tools20022.repository.entity.SecuritiesTradeStatus;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.ProprietaryReason1;
 import com.tools20022.repository.msg.ProprietaryStatusAndReason1;
 import java.util.Arrays;
@@ -116,11 +120,11 @@ public class CancellationProcessingStatus6Choice {
 	 */
 	public static final MMMessageAssociationEnd mmCancellationPending = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeStatus.mmReason;
+			businessElementTrace_lazy = () -> SecuritiesTradeStatus.mmReason;
 			componentContext_lazy = () -> CancellationProcessingStatus6Choice.mmObject();
 			isDerived = false;
 			xmlTag = "CxlPdg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationPending";
 			definition = "Trade is in cancelation pending.";
 			maxOccurs = 1;
@@ -163,11 +167,11 @@ public class CancellationProcessingStatus6Choice {
 	 */
 	public static final MMMessageAssociationEnd mmCancellationRequested = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeStatus.mmCancellationStatus;
+			businessElementTrace_lazy = () -> SecuritiesTradeStatus.mmCancellationStatus;
 			componentContext_lazy = () -> CancellationProcessingStatus6Choice.mmObject();
 			isDerived = false;
 			xmlTag = "CxlReqd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationRequested";
 			definition = "Cancelation request for the trade..";
 			maxOccurs = 1;
@@ -210,11 +214,11 @@ public class CancellationProcessingStatus6Choice {
 	 */
 	public static final MMMessageAssociationEnd mmCancellationCompleted = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeStatus.mmCancellationStatus;
+			businessElementTrace_lazy = () -> SecuritiesTradeStatus.mmCancellationStatus;
 			componentContext_lazy = () -> CancellationProcessingStatus6Choice.mmObject();
 			isDerived = false;
 			xmlTag = "CxlCmpltd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationCompleted";
 			definition = "Cancellation is completed.";
 			maxOccurs = 1;
@@ -265,7 +269,7 @@ public class CancellationProcessingStatus6Choice {
 			componentContext_lazy = () -> CancellationProcessingStatus6Choice.mmObject();
 			isDerived = false;
 			xmlTag = "PrtrySts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProprietaryStatus";
 			definition = "Provides a proprietary status and a proprietary reason of the processing status of the trade.";
 			maxOccurs = 1;
@@ -278,14 +282,12 @@ public class CancellationProcessingStatus6Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CancellationProcessingStatus6Choice.mmCancellationPending,
-						com.tools20022.repository.choice.CancellationProcessingStatus6Choice.mmCancellationRequested, com.tools20022.repository.choice.CancellationProcessingStatus6Choice.mmCancellationCompleted,
-						com.tools20022.repository.choice.CancellationProcessingStatus6Choice.mmProprietaryStatus);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV01.mmCancellationProcessingStatus,
-						com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV02.mmCancellationProcessingStatus);
+				messageElement_lazy = () -> Arrays.asList(CancellationProcessingStatus6Choice.mmCancellationPending, CancellationProcessingStatus6Choice.mmCancellationRequested, CancellationProcessingStatus6Choice.mmCancellationCompleted,
+						CancellationProcessingStatus6Choice.mmProprietaryStatus);
+				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesTradeConfirmationStatusAdviceV01.mmCancellationProcessingStatus, SecuritiesTradeConfirmationStatusAdviceV02.mmCancellationProcessingStatus);
 				trace_lazy = () -> SecuritiesTradeStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CancellationProcessingStatus6Choice";
 				definition = "Choice of status for the cancellation processing.";
 			}

@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.InvestorRestrictionType1Code
+ * InvestorRestrictionType1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -38,14 +48,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.InvestorRestrictionTypeCode#mmIndividual
  * InvestorRestrictionTypeCode.mmIndividual}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.InvestorRestrictionType1Code
- * InvestorRestrictionType1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -95,7 +97,7 @@ public class InvestorRestrictionTypeCode {
 	 */
 	public static final MMCode mmLegalResident = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "LegalResident";
 			definition = "Restriction applies to a legal resident.";
 			owner_lazy = () -> InvestorRestrictionTypeCode.mmObject();
@@ -125,7 +127,7 @@ public class InvestorRestrictionTypeCode {
 	 */
 	public static final MMCode mmCitizen = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Citizen";
 			definition = "Restriction applies to a citizen.";
 			owner_lazy = () -> InvestorRestrictionTypeCode.mmObject();
@@ -155,7 +157,7 @@ public class InvestorRestrictionTypeCode {
 	 */
 	public static final MMCode mmIndividual = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Individual";
 			definition = "Restriction applies to an individual.";
 			owner_lazy = () -> InvestorRestrictionTypeCode.mmObject();
@@ -166,13 +168,12 @@ public class InvestorRestrictionTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("LERE");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InvestorRestrictionTypeCode";
 				definition = "Specifies to whom or what the restriction applies.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.InvestorRestrictionTypeCode.mmLegalResident, com.tools20022.repository.codeset.InvestorRestrictionTypeCode.mmCitizen,
-						com.tools20022.repository.codeset.InvestorRestrictionTypeCode.mmIndividual);
+				code_lazy = () -> Arrays.asList(InvestorRestrictionTypeCode.mmLegalResident, InvestorRestrictionTypeCode.mmCitizen, InvestorRestrictionTypeCode.mmIndividual);
 				derivation_lazy = () -> Arrays.asList(InvestorRestrictionType1Code.mmObject());
 			}
 		});

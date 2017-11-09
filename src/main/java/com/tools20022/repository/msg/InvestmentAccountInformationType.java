@@ -19,7 +19,9 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.YesNoIndicator;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -105,7 +107,7 @@ public class InvestmentAccountInformationType {
 			componentContext_lazy = () -> InvestmentAccountInformationType.mmObject();
 			isDerived = false;
 			xmlTag = "InvstmtAcct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestmentAccount";
 			definition = "Indicates if the core investment account information must be selected.";
 			maxOccurs = 1;
@@ -148,7 +150,7 @@ public class InvestmentAccountInformationType {
 			componentContext_lazy = () -> InvestmentAccountInformationType.mmObject();
 			isDerived = false;
 			xmlTag = "AcctPties";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountParties";
 			definition = "Indicates if the information about account parties must be selected.";
 			maxOccurs = 1;
@@ -192,7 +194,7 @@ public class InvestmentAccountInformationType {
 			componentContext_lazy = () -> InvestmentAccountInformationType.mmObject();
 			isDerived = false;
 			xmlTag = "Intrmies";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Intermediaries";
 			definition = "Indicates if the information about the intermediaries must be selected.";
 			maxOccurs = 1;
@@ -237,7 +239,7 @@ public class InvestmentAccountInformationType {
 			componentContext_lazy = () -> InvestmentAccountInformationType.mmObject();
 			isDerived = false;
 			xmlTag = "InvstmtPlan";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestmentPlan";
 			definition = "Indicates if the information about the investment plan(s) must be selected.";
 			maxOccurs = 1;
@@ -280,7 +282,7 @@ public class InvestmentAccountInformationType {
 			componentContext_lazy = () -> InvestmentAccountInformationType.mmObject();
 			isDerived = false;
 			xmlTag = "CshSttlm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashSettlement";
 			definition = "Indicates if the cash settlement information must be selected.";
 			maxOccurs = 1;
@@ -292,11 +294,10 @@ public class InvestmentAccountInformationType {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentAccountInformationType.mmInvestmentAccount, com.tools20022.repository.msg.InvestmentAccountInformationType.mmAccountParties,
-						com.tools20022.repository.msg.InvestmentAccountInformationType.mmIntermediaries, com.tools20022.repository.msg.InvestmentAccountInformationType.mmInvestmentPlan,
-						com.tools20022.repository.msg.InvestmentAccountInformationType.mmCashSettlement);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(InvestmentAccountInformationType.mmInvestmentAccount, InvestmentAccountInformationType.mmAccountParties, InvestmentAccountInformationType.mmIntermediaries,
+						InvestmentAccountInformationType.mmInvestmentPlan, InvestmentAccountInformationType.mmCashSettlement);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "InvestmentAccountInformationType";
 				definition = "Select the type(s) of information to be retrieved about a registered investment account.";
 			}

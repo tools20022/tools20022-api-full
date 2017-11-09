@@ -20,6 +20,7 @@ package com.tools20022.repository.area.acmt;
 import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.AccountManagementPreviousVersion;
 import com.tools20022.repository.choice.AccountSelection1Choice;
 import com.tools20022.repository.msg.*;
@@ -56,6 +57,9 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code acmt.003.001.06}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.AccountManagementPreviousVersion
@@ -127,9 +131,6 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code acmt.003.001.06}</li>
- * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -199,11 +200,11 @@ public class AccountModificationInstructionV06 {
 	public static final MMMessageBuildingBlock mmMessageIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "MsgId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageIdentification";
 			definition = "Reference that uniquely identifies the message from a business application standpoint.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountModificationInstructionV07.mmMessageIdentification);
-			previousVersion_lazy = () -> com.tools20022.repository.area.acmt.AccountModificationInstructionV05.mmMessageIdentification;
+			nextVersions_lazy = () -> Arrays.asList(AccountModificationInstructionV07.mmMessageIdentification);
+			previousVersion_lazy = () -> AccountModificationInstructionV05.mmMessageIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
@@ -249,11 +250,11 @@ public class AccountModificationInstructionV06 {
 	public static final MMMessageBuildingBlock mmPreviousReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "PrvsRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousReference";
 			definition = "Reference to a linked message that was previously sent.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountModificationInstructionV07.mmPreviousReference);
-			previousVersion_lazy = () -> com.tools20022.repository.area.acmt.AccountModificationInstructionV05.mmPreviousReference;
+			nextVersions_lazy = () -> Arrays.asList(AccountModificationInstructionV07.mmPreviousReference);
+			previousVersion_lazy = () -> AccountModificationInstructionV05.mmPreviousReference;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference6.mmObject();
@@ -299,11 +300,11 @@ public class AccountModificationInstructionV06 {
 	public static final MMMessageBuildingBlock mmInstructionDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "InstrDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructionDetails";
 			definition = "Information about the modification instruction. ";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountModificationInstructionV07.mmInstructionDetails);
-			previousVersion_lazy = () -> com.tools20022.repository.area.acmt.AccountModificationInstructionV05.mmInstructionDetails;
+			nextVersions_lazy = () -> Arrays.asList(AccountModificationInstructionV07.mmInstructionDetails);
+			previousVersion_lazy = () -> AccountModificationInstructionV05.mmInstructionDetails;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> InvestmentAccountModification2.mmObject();
@@ -350,11 +351,11 @@ public class AccountModificationInstructionV06 {
 	public static final MMMessageBuildingBlock mmInvestmentAccountSelection = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "InvstmtAcctSelctn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestmentAccountSelection";
 			definition = "Identifies the account for which the information is modified.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountModificationInstructionV07.mmInvestmentAccountSelection);
-			previousVersion_lazy = () -> com.tools20022.repository.area.acmt.AccountModificationInstructionV05.mmInvestmentAccountSelection;
+			nextVersions_lazy = () -> Arrays.asList(AccountModificationInstructionV07.mmInvestmentAccountSelection);
+			previousVersion_lazy = () -> AccountModificationInstructionV05.mmInvestmentAccountSelection;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> AccountSelection1Choice.mmObject();
@@ -403,11 +404,11 @@ public class AccountModificationInstructionV06 {
 	public static final MMMessageBuildingBlock mmModifiedInvestmentAccount = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "ModfdInvstmtAcct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ModifiedInvestmentAccount";
 			definition = "Information related to general characteristics of the account to be inserted, updated or deleted.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountModificationInstructionV07.mmModifiedInvestmentAccount);
-			previousVersion_lazy = () -> com.tools20022.repository.area.acmt.AccountModificationInstructionV05.mmModifiedInvestmentAccount;
+			nextVersions_lazy = () -> Arrays.asList(AccountModificationInstructionV07.mmModifiedInvestmentAccount);
+			previousVersion_lazy = () -> AccountModificationInstructionV05.mmModifiedInvestmentAccount;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> InvestmentAccount51.mmObject();
@@ -456,11 +457,11 @@ public class AccountModificationInstructionV06 {
 	public static final MMMessageBuildingBlock mmModifiedAccountParties = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "ModfdAcctPties";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ModifiedAccountParties";
 			definition = "Information related to an account  party to be inserted, updated or deleted.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountModificationInstructionV07.mmModifiedAccountParties);
-			previousVersion_lazy = () -> com.tools20022.repository.area.acmt.AccountModificationInstructionV05.mmModifiedAccountParties;
+			nextVersions_lazy = () -> Arrays.asList(AccountModificationInstructionV07.mmModifiedAccountParties);
+			previousVersion_lazy = () -> AccountModificationInstructionV05.mmModifiedAccountParties;
 			maxOccurs = 10;
 			minOccurs = 0;
 			complexType_lazy = () -> AccountParties14.mmObject();
@@ -508,11 +509,11 @@ public class AccountModificationInstructionV06 {
 	public static final MMMessageBuildingBlock mmModifiedIntermediaries = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "ModfdIntrmies";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ModifiedIntermediaries";
 			definition = "Information related to intermediaries to be inserted, updated or deleted.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountModificationInstructionV07.mmModifiedIntermediaries);
-			previousVersion_lazy = () -> com.tools20022.repository.area.acmt.AccountModificationInstructionV05.mmModifiedIntermediaries;
+			nextVersions_lazy = () -> Arrays.asList(AccountModificationInstructionV07.mmModifiedIntermediaries);
+			previousVersion_lazy = () -> AccountModificationInstructionV05.mmModifiedIntermediaries;
 			maxOccurs = 10;
 			minOccurs = 0;
 			complexType_lazy = () -> ModificationScope26.mmObject();
@@ -561,11 +562,11 @@ public class AccountModificationInstructionV06 {
 	public static final MMMessageBuildingBlock mmModifiedPlacement = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "ModfdPlcmnt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ModifiedPlacement";
 			definition = "Information related to referral information to be inserted, updated or deleted";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountModificationInstructionV07.mmModifiedPlacement);
-			previousVersion_lazy = () -> com.tools20022.repository.area.acmt.AccountModificationInstructionV05.mmModifiedPlacement;
+			nextVersions_lazy = () -> Arrays.asList(AccountModificationInstructionV07.mmModifiedPlacement);
+			previousVersion_lazy = () -> AccountModificationInstructionV05.mmModifiedPlacement;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> ModificationScope33.mmObject();
@@ -614,11 +615,11 @@ public class AccountModificationInstructionV06 {
 	public static final MMMessageBuildingBlock mmModifiedIssueAllocation = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "ModfdIsseAllcn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ModifiedIssueAllocation";
 			definition = "Eligibility conditions related to allocation of new issues to be inserted, updated or deleted.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountModificationInstructionV07.mmModifiedIssueAllocation);
-			previousVersion_lazy = () -> com.tools20022.repository.area.acmt.AccountModificationInstructionV05.mmModifiedIssueAllocation;
+			nextVersions_lazy = () -> Arrays.asList(AccountModificationInstructionV07.mmModifiedIssueAllocation);
+			previousVersion_lazy = () -> AccountModificationInstructionV05.mmModifiedIssueAllocation;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> ModificationScope21.mmObject();
@@ -667,11 +668,11 @@ public class AccountModificationInstructionV06 {
 	public static final MMMessageBuildingBlock mmModifiedSavingsInvestmentPlan = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "ModfdSvgsInvstmtPlan";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ModifiedSavingsInvestmentPlan";
 			definition = "Information related to a savings plan to be either inserted, updated or deleted.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountModificationInstructionV07.mmModifiedSavingsInvestmentPlan);
-			previousVersion_lazy = () -> com.tools20022.repository.area.acmt.AccountModificationInstructionV05.mmModifiedSavingsInvestmentPlan;
+			nextVersions_lazy = () -> Arrays.asList(AccountModificationInstructionV07.mmModifiedSavingsInvestmentPlan);
+			previousVersion_lazy = () -> AccountModificationInstructionV05.mmModifiedSavingsInvestmentPlan;
 			maxOccurs = 50;
 			minOccurs = 0;
 			complexType_lazy = () -> ModificationScope28.mmObject();
@@ -720,11 +721,11 @@ public class AccountModificationInstructionV06 {
 	public static final MMMessageBuildingBlock mmModifiedWithdrawalInvestmentPlan = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "ModfdWdrwlInvstmtPlan";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ModifiedWithdrawalInvestmentPlan";
 			definition = "Information related to a withdrawal plan to be either inserted, updated or deleted.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountModificationInstructionV07.mmModifiedWithdrawalInvestmentPlan);
-			previousVersion_lazy = () -> com.tools20022.repository.area.acmt.AccountModificationInstructionV05.mmModifiedWithdrawalInvestmentPlan;
+			nextVersions_lazy = () -> Arrays.asList(AccountModificationInstructionV07.mmModifiedWithdrawalInvestmentPlan);
+			previousVersion_lazy = () -> AccountModificationInstructionV05.mmModifiedWithdrawalInvestmentPlan;
 			maxOccurs = 10;
 			minOccurs = 0;
 			complexType_lazy = () -> ModificationScope28.mmObject();
@@ -770,11 +771,11 @@ public class AccountModificationInstructionV06 {
 	public static final MMMessageBuildingBlock mmModifiedCashSettlement = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "ModfdCshSttlm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ModifiedCashSettlement";
 			definition = "Cash settlement standing instruction to be either inserted or deleted.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountModificationInstructionV07.mmModifiedCashSettlement);
-			previousVersion_lazy = () -> com.tools20022.repository.area.acmt.AccountModificationInstructionV05.mmModifiedCashSettlement;
+			nextVersions_lazy = () -> Arrays.asList(AccountModificationInstructionV07.mmModifiedCashSettlement);
+			previousVersion_lazy = () -> AccountModificationInstructionV05.mmModifiedCashSettlement;
 			maxOccurs = 8;
 			minOccurs = 0;
 			complexType_lazy = () -> CashSettlement2.mmObject();
@@ -821,11 +822,11 @@ public class AccountModificationInstructionV06 {
 	public static final MMMessageBuildingBlock mmModifiedServiceLevelAgreement = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "ModfdSvcLvlAgrmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ModifiedServiceLevelAgreement";
 			definition = "Information related to documents to be added, deleted or updated.\n";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountModificationInstructionV07.mmModifiedServiceLevelAgreement);
-			previousVersion_lazy = () -> com.tools20022.repository.area.acmt.AccountModificationInstructionV05.mmModifiedServiceLevelAgreement;
+			nextVersions_lazy = () -> Arrays.asList(AccountModificationInstructionV07.mmModifiedServiceLevelAgreement);
+			previousVersion_lazy = () -> AccountModificationInstructionV05.mmModifiedServiceLevelAgreement;
 			maxOccurs = 30;
 			minOccurs = 0;
 			complexType_lazy = () -> ModificationScope31.mmObject();
@@ -869,10 +870,10 @@ public class AccountModificationInstructionV06 {
 	public static final MMMessageBuildingBlock mmModifiedAdditionalInformation = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "ModfdAddtlInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ModifiedAdditionalInformation";
 			definition = "Additional information concerning limitations and restrictions on the account to be inserted, updated or deleted.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountModificationInstructionV07.mmModifiedAdditionalInformation);
+			nextVersions_lazy = () -> Arrays.asList(AccountModificationInstructionV07.mmModifiedAdditionalInformation);
 			minOccurs = 0;
 			complexType_lazy = () -> ModificationScope30.mmObject();
 		}
@@ -918,11 +919,11 @@ public class AccountModificationInstructionV06 {
 	public static final MMMessageBuildingBlock mmMarketPracticeVersion = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "MktPrctcVrsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketPracticeVersion";
 			definition = "Identifies the market practice to which the message conforms.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountModificationInstructionV07.mmMarketPracticeVersion);
-			previousVersion_lazy = () -> com.tools20022.repository.area.acmt.AccountModificationInstructionV05.mmMarketPracticeVersion;
+			nextVersions_lazy = () -> Arrays.asList(AccountModificationInstructionV07.mmMarketPracticeVersion);
+			previousVersion_lazy = () -> AccountModificationInstructionV05.mmMarketPracticeVersion;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> MarketPracticeVersion1.mmObject();
@@ -970,11 +971,11 @@ public class AccountModificationInstructionV06 {
 	public static final MMMessageBuildingBlock mmExtension = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Xtnsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Extension";
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountModificationInstructionV07.mmExtension);
-			previousVersion_lazy = () -> com.tools20022.repository.area.acmt.AccountModificationInstructionV05.mmExtension;
+			nextVersions_lazy = () -> Arrays.asList(AccountModificationInstructionV07.mmExtension);
+			previousVersion_lazy = () -> AccountModificationInstructionV05.mmExtension;
 			minOccurs = 0;
 			complexType_lazy = () -> Extension1.mmObject();
 		}
@@ -983,7 +984,7 @@ public class AccountModificationInstructionV06 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AccountModificationInstructionV06";
 				definition = "Scope\r\nAn account owner, for example, an investor or its designated agent, sends the AccountModificationInstruction message to the account servicer, for example, a registrar, transfer agent, custodian bank or securities depository to modify, that is, create, update or delete specific details of an existing account.\r\nUsage\r\nThe AccountModificationInstruction message is used to modify the details of an existing account.\r\nThe AccountModificationInstruction message has three specific uses:\r\n- to maintain/update any of the existing account details, for example, to update the address of the beneficiary or modify the preference to income from distribution to capitalisation, or,\r\n- to add/create specific details to the existing account when these details were not yet recorded at the time of account creation, for example, to add a second address or to establish new cash settlement standing instructions, or,\r\n- to delete specific account details, for example, delete cash standing instructions.\r\nThis message cannot be used to delete an entire account, as institution specific and regulatory rules pertaining to account deletion are diverse.\r\nThe usage of this message may be subject to service level agreement (SLA) between the counterparties.\r\nExecution of the AccountModificationInstruction is confirmed via an AccountDetailsConfirmation message.";
 				nextVersions_lazy = () -> Arrays.asList(AccountModificationInstructionV07.mmObject());
@@ -992,15 +993,12 @@ public class AccountModificationInstructionV06 {
 				rootElement = "Document";
 				xmlTag = "AcctModInstr";
 				businessArea_lazy = () -> AccountManagementPreviousVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountModificationInstructionV06.mmMessageIdentification,
-						com.tools20022.repository.area.acmt.AccountModificationInstructionV06.mmPreviousReference, com.tools20022.repository.area.acmt.AccountModificationInstructionV06.mmInstructionDetails,
-						com.tools20022.repository.area.acmt.AccountModificationInstructionV06.mmInvestmentAccountSelection, com.tools20022.repository.area.acmt.AccountModificationInstructionV06.mmModifiedInvestmentAccount,
-						com.tools20022.repository.area.acmt.AccountModificationInstructionV06.mmModifiedAccountParties, com.tools20022.repository.area.acmt.AccountModificationInstructionV06.mmModifiedIntermediaries,
-						com.tools20022.repository.area.acmt.AccountModificationInstructionV06.mmModifiedPlacement, com.tools20022.repository.area.acmt.AccountModificationInstructionV06.mmModifiedIssueAllocation,
-						com.tools20022.repository.area.acmt.AccountModificationInstructionV06.mmModifiedSavingsInvestmentPlan, com.tools20022.repository.area.acmt.AccountModificationInstructionV06.mmModifiedWithdrawalInvestmentPlan,
-						com.tools20022.repository.area.acmt.AccountModificationInstructionV06.mmModifiedCashSettlement, com.tools20022.repository.area.acmt.AccountModificationInstructionV06.mmModifiedServiceLevelAgreement,
-						com.tools20022.repository.area.acmt.AccountModificationInstructionV06.mmModifiedAdditionalInformation, com.tools20022.repository.area.acmt.AccountModificationInstructionV06.mmMarketPracticeVersion,
-						com.tools20022.repository.area.acmt.AccountModificationInstructionV06.mmExtension);
+				messageBuildingBlock_lazy = () -> Arrays.asList(AccountModificationInstructionV06.mmMessageIdentification, AccountModificationInstructionV06.mmPreviousReference, AccountModificationInstructionV06.mmInstructionDetails,
+						AccountModificationInstructionV06.mmInvestmentAccountSelection, AccountModificationInstructionV06.mmModifiedInvestmentAccount, AccountModificationInstructionV06.mmModifiedAccountParties,
+						AccountModificationInstructionV06.mmModifiedIntermediaries, AccountModificationInstructionV06.mmModifiedPlacement, AccountModificationInstructionV06.mmModifiedIssueAllocation,
+						AccountModificationInstructionV06.mmModifiedSavingsInvestmentPlan, AccountModificationInstructionV06.mmModifiedWithdrawalInvestmentPlan, AccountModificationInstructionV06.mmModifiedCashSettlement,
+						AccountModificationInstructionV06.mmModifiedServiceLevelAgreement, AccountModificationInstructionV06.mmModifiedAdditionalInformation, AccountModificationInstructionV06.mmMarketPracticeVersion,
+						AccountModificationInstructionV06.mmExtension);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "acmt";

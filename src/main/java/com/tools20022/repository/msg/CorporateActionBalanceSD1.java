@@ -20,7 +20,9 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max350Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -121,10 +123,10 @@ public class CorporateActionBalanceSD1 {
 			componentContext_lazy = () -> CorporateActionBalanceSD1.mmObject();
 			isDerived = false;
 			xmlTag = "PlcAndNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "xPath to the element that is being extended.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionBalanceSD3.mmPlaceAndName);
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionBalanceSD3.mmPlaceAndName);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
@@ -176,10 +178,10 @@ public class CorporateActionBalanceSD1 {
 			componentContext_lazy = () -> CorporateActionBalanceSD1.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlBal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalBalance";
 			definition = "Position held in a security as of the day prior to publication date. This position is subject to a redemption lottery call when this is the first lottery. This balance will not be adjusted for the supplemental or concurrent lotteries and will remain constant to report the original position.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionBalanceSD3.mmOriginalBalance);
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionBalanceSD3.mmOriginalBalance);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -228,10 +230,10 @@ public class CorporateActionBalanceSD1 {
 			componentContext_lazy = () -> CorporateActionBalanceSD1.mmObject();
 			isDerived = false;
 			xmlTag = "AdjstdBal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdjustedBalance";
 			definition = "Adjusted position held in  a security that is subject to redemption call.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionBalanceSD3.mmAdjustedBalance);
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionBalanceSD3.mmAdjustedBalance);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -282,10 +284,10 @@ public class CorporateActionBalanceSD1 {
 			componentContext_lazy = () -> CorporateActionBalanceSD1.mmObject();
 			isDerived = false;
 			xmlTag = "UpldgdBal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnpledgedBalance";
 			definition = "Portion of the Original Balance position held in DTC General Free account as of day prior to Publication Date. Position held in this account is subject to redemption lottery call.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionBalanceSD3.mmUnpledgedBalance);
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionBalanceSD3.mmUnpledgedBalance);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -337,10 +339,10 @@ public class CorporateActionBalanceSD1 {
 			componentContext_lazy = () -> CorporateActionBalanceSD1.mmObject();
 			isDerived = false;
 			xmlTag = "InvstmtUpldgdBal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestmentUnpledgedBalance";
 			definition = "Portion of the Original Balance position held in DTC Segregated account as of day prior to Publication Date. Position held in this account is subject to redemption lottery call and must be released to allow allocation.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionBalanceSD3.mmInvestmentUnpledgedBalance);
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionBalanceSD3.mmInvestmentUnpledgedBalance);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -392,10 +394,10 @@ public class CorporateActionBalanceSD1 {
 			componentContext_lazy = () -> CorporateActionBalanceSD1.mmObject();
 			isDerived = false;
 			xmlTag = "InvstmtPldgdBal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestmentPledgedBalance";
 			definition = "Portion of the Original Balance position held in DTC Investment account as of day prior to Publication Date. Position held in this account is subject to redemption lottery call and must be released to allow allocation.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionBalanceSD3.mmInvestmentPledgedBalance);
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionBalanceSD3.mmInvestmentPledgedBalance);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -406,11 +408,10 @@ public class CorporateActionBalanceSD1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionBalanceSD1.mmPlaceAndName, com.tools20022.repository.msg.CorporateActionBalanceSD1.mmOriginalBalance,
-						com.tools20022.repository.msg.CorporateActionBalanceSD1.mmAdjustedBalance, com.tools20022.repository.msg.CorporateActionBalanceSD1.mmUnpledgedBalance,
-						com.tools20022.repository.msg.CorporateActionBalanceSD1.mmInvestmentUnpledgedBalance, com.tools20022.repository.msg.CorporateActionBalanceSD1.mmInvestmentPledgedBalance);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(CorporateActionBalanceSD1.mmPlaceAndName, CorporateActionBalanceSD1.mmOriginalBalance, CorporateActionBalanceSD1.mmAdjustedBalance, CorporateActionBalanceSD1.mmUnpledgedBalance,
+						CorporateActionBalanceSD1.mmInvestmentUnpledgedBalance, CorporateActionBalanceSD1.mmInvestmentPledgedBalance);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionBalanceSD1";
 				definition = "Provides additional information regarding corporate action balance details.";
 				nextVersions_lazy = () -> Arrays.asList(CorporateActionBalanceSD3.mmObject());

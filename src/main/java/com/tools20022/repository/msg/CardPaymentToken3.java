@@ -20,8 +20,10 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.Number;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -116,10 +118,10 @@ public class CardPaymentToken3 {
 			componentContext_lazy = () -> CardPaymentToken3.mmObject();
 			isDerived = false;
 			xmlTag = "TknChrtc";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TokenCharacteristic";
 			definition = "Additional payment token information.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardPaymentToken4.mmTokenCharacteristic);
+			nextVersions_lazy = () -> Arrays.asList(CardPaymentToken4.mmTokenCharacteristic);
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
@@ -165,10 +167,10 @@ public class CardPaymentToken3 {
 			componentContext_lazy = () -> CardPaymentToken3.mmObject();
 			isDerived = false;
 			xmlTag = "TknRqstr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TokenRequestor";
 			definition = "Identifier of a token provider requestor.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardPaymentToken4.mmTokenRequestor);
+			nextVersions_lazy = () -> Arrays.asList(CardPaymentToken4.mmTokenRequestor);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -224,11 +226,11 @@ public class CardPaymentToken3 {
 			componentContext_lazy = () -> CardPaymentToken3.mmObject();
 			isDerived = false;
 			xmlTag = "TknAssrncLvl";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TokenAssuranceLevel";
 			definition = "Level of confidence resulting of the identification and authentication of the cardholder performed and the entity that performed it.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardPaymentToken4.mmTokenAssuranceLevel);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CardPaymentToken2.mmTokenAssuranceLevel;
+			nextVersions_lazy = () -> Arrays.asList(CardPaymentToken4.mmTokenAssuranceLevel);
+			previousVersion_lazy = () -> CardPaymentToken2.mmTokenAssuranceLevel;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
@@ -238,10 +240,9 @@ public class CardPaymentToken3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardPaymentToken3.mmTokenCharacteristic, com.tools20022.repository.msg.CardPaymentToken3.mmTokenRequestor,
-						com.tools20022.repository.msg.CardPaymentToken3.mmTokenAssuranceLevel);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(CardPaymentToken3.mmTokenCharacteristic, CardPaymentToken3.mmTokenRequestor, CardPaymentToken3.mmTokenAssuranceLevel);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CardPaymentToken3";
 				definition = "Payment token information.";
 				nextVersions_lazy = () -> Arrays.asList(CardPaymentToken4.mmObject());

@@ -19,8 +19,10 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
 import com.tools20022.repository.datatype.Max210Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -93,7 +95,7 @@ public class Result1 {
 			componentContext_lazy = () -> Result1.mmObject();
 			isDerived = false;
 			xmlTag = "DueToPtyA";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DueToPartyA";
 			definition = "Amount payable by party B to party A.";
 			maxOccurs = 1;
@@ -134,7 +136,7 @@ public class Result1 {
 			componentContext_lazy = () -> Result1.mmObject();
 			isDerived = false;
 			xmlTag = "DueToPtyB";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DueToPartyB";
 			definition = "Amount payable by party A to party B.";
 			maxOccurs = 1;
@@ -177,7 +179,7 @@ public class Result1 {
 			componentContext_lazy = () -> Result1.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInformation";
 			definition = "Provides additional information related to the collateral that may be requested.";
 			maxOccurs = 1;
@@ -189,9 +191,9 @@ public class Result1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Result1.mmDueToPartyA, com.tools20022.repository.msg.Result1.mmDueToPartyB, com.tools20022.repository.msg.Result1.mmAdditionalInformation);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(Result1.mmDueToPartyA, Result1.mmDueToPartyB, Result1.mmAdditionalInformation);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Result1";
 				definition = "Summation of the call amounts either due to A or due to B.";
 			}

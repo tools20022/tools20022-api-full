@@ -19,11 +19,14 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Exact4AlphaNumericText;
 import com.tools20022.repository.datatype.Max4AlphaNumericText;
 import com.tools20022.repository.datatype.RestrictedFINDecimalNumber;
 import com.tools20022.repository.entity.GenericIdentification;
 import com.tools20022.repository.entity.IdentificationIssuerRole;
+import com.tools20022.repository.entity.Scheme;
+import com.tools20022.repository.GeneratedRepository;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -114,11 +117,11 @@ public class GenericIdentification28 {
 	 */
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmIdentification;
+			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> GenericIdentification28.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Proprietary information, often a code, issued by the data source scheme issuer.";
 			maxOccurs = 1;
@@ -166,7 +169,7 @@ public class GenericIdentification28 {
 			componentContext_lazy = () -> GenericIdentification28.mmObject();
 			isDerived = false;
 			xmlTag = "Issr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Issuer";
 			definition = "Entity that assigns the identification.";
 			maxOccurs = 1;
@@ -210,11 +213,11 @@ public class GenericIdentification28 {
 	 */
 	public static final MMMessageAttribute mmSchemeName = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Scheme.mmNameShort;
+			businessElementTrace_lazy = () -> Scheme.mmNameShort;
 			componentContext_lazy = () -> GenericIdentification28.mmObject();
 			isDerived = false;
 			xmlTag = "SchmeNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SchemeName";
 			definition = "Short textual description of the scheme.";
 			maxOccurs = 1;
@@ -256,7 +259,7 @@ public class GenericIdentification28 {
 			componentContext_lazy = () -> GenericIdentification28.mmObject();
 			isDerived = false;
 			xmlTag = "Bal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Balance";
 			definition = "Value of the balance.";
 			maxOccurs = 1;
@@ -268,11 +271,10 @@ public class GenericIdentification28 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GenericIdentification28.mmIdentification, com.tools20022.repository.msg.GenericIdentification28.mmIssuer,
-						com.tools20022.repository.msg.GenericIdentification28.mmSchemeName, com.tools20022.repository.msg.GenericIdentification28.mmBalance);
+				messageElement_lazy = () -> Arrays.asList(GenericIdentification28.mmIdentification, GenericIdentification28.mmIssuer, GenericIdentification28.mmSchemeName, GenericIdentification28.mmBalance);
 				trace_lazy = () -> GenericIdentification.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
 						return DateFormat.getDateInstance(java.text.DateFormat.LONG).parse("May 5, 2016");

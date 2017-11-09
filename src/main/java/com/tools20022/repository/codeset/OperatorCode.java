@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -28,6 +30,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.Operator1Code
+ * Operator1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>{@linkplain com.tools20022.repository.codeset.OperatorCode#mmSmallerThan
@@ -42,13 +51,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * OperatorCode.mmGreaterOrEqualTo}</li>
  * <li>{@linkplain com.tools20022.repository.codeset.OperatorCode#mmEqualTo
  * OperatorCode.mmEqualTo}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.Operator1Code
- * Operator1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -99,7 +101,7 @@ public class OperatorCode {
 	 */
 	public static final MMCode mmSmallerThan = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SmallerThan";
 			definition = "Smaller than.";
 			owner_lazy = () -> OperatorCode.mmObject();
@@ -128,7 +130,7 @@ public class OperatorCode {
 	 */
 	public static final MMCode mmSmallerOrEqualTo = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SmallerOrEqualTo";
 			definition = "Smaller or equal to.";
 			owner_lazy = () -> OperatorCode.mmObject();
@@ -157,7 +159,7 @@ public class OperatorCode {
 	 */
 	public static final MMCode mmGreaterThan = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GreaterThan";
 			definition = "Greater than.";
 			owner_lazy = () -> OperatorCode.mmObject();
@@ -186,7 +188,7 @@ public class OperatorCode {
 	 */
 	public static final MMCode mmGreaterOrEqualTo = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GreaterOrEqualTo";
 			definition = "Greater or equal to.";
 			owner_lazy = () -> OperatorCode.mmObject();
@@ -215,7 +217,7 @@ public class OperatorCode {
 	 */
 	public static final MMCode mmEqualTo = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EqualTo";
 			definition = "Equal to.";
 			owner_lazy = () -> OperatorCode.mmObject();
@@ -226,13 +228,12 @@ public class OperatorCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("SMAL");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OperatorCode";
 				definition = "Code containing the operator used to indicate the relationship between a variable and a fixed value.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OperatorCode.mmSmallerThan, com.tools20022.repository.codeset.OperatorCode.mmSmallerOrEqualTo, com.tools20022.repository.codeset.OperatorCode.mmGreaterThan,
-						com.tools20022.repository.codeset.OperatorCode.mmGreaterOrEqualTo, com.tools20022.repository.codeset.OperatorCode.mmEqualTo);
+				code_lazy = () -> Arrays.asList(OperatorCode.mmSmallerThan, OperatorCode.mmSmallerOrEqualTo, OperatorCode.mmGreaterThan, OperatorCode.mmGreaterOrEqualTo, OperatorCode.mmEqualTo);
 				derivation_lazy = () -> Arrays.asList(Operator1Code.mmObject());
 			}
 		});

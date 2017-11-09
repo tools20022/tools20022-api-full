@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.AccountOpeningTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -86,7 +88,7 @@ public class AccountOpeningType1Code extends AccountOpeningTypeCode {
 	 */
 	public static final MMCode mmNewAccountOpening = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewAccountOpening";
 			owner_lazy = () -> AccountOpeningType1Code.mmObject();
 		}
@@ -109,7 +111,7 @@ public class AccountOpeningType1Code extends AccountOpeningTypeCode {
 	 */
 	public static final MMCode mmSupplementaryAccountOpening = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryAccountOpening";
 			owner_lazy = () -> AccountOpeningType1Code.mmObject();
 		}
@@ -118,12 +120,12 @@ public class AccountOpeningType1Code extends AccountOpeningTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("NEWA");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AccountOpeningType1Code";
 				definition = "Specifies the type of account to which an account opening request is related, eg, a new account.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AccountOpeningType1Code.mmNewAccountOpening, com.tools20022.repository.codeset.AccountOpeningType1Code.mmSupplementaryAccountOpening);
+				code_lazy = () -> Arrays.asList(AccountOpeningType1Code.mmNewAccountOpening, AccountOpeningType1Code.mmSupplementaryAccountOpening);
 				trace_lazy = () -> AccountOpeningTypeCode.mmObject();
 			}
 		});

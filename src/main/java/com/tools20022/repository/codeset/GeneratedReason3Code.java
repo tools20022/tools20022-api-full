@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.GeneratedReasonCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -92,7 +94,7 @@ public class GeneratedReason3Code extends GeneratedReasonCode {
 	 */
 	public static final MMCode mmCollateralManagement = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralManagement";
 			owner_lazy = () -> GeneratedReason3Code.mmObject();
 		}
@@ -115,7 +117,7 @@ public class GeneratedReason3Code extends GeneratedReasonCode {
 	 */
 	public static final MMCode mmMarketClaim = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketClaim";
 			owner_lazy = () -> GeneratedReason3Code.mmObject();
 		}
@@ -138,7 +140,7 @@ public class GeneratedReason3Code extends GeneratedReasonCode {
 	 */
 	public static final MMCode mmOther = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
 			owner_lazy = () -> GeneratedReason3Code.mmObject();
 		}
@@ -161,7 +163,7 @@ public class GeneratedReason3Code extends GeneratedReasonCode {
 	 */
 	public static final MMCode mmReturnRefusedDumps = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReturnRefusedDumps";
 			owner_lazy = () -> GeneratedReason3Code.mmObject();
 		}
@@ -184,7 +186,7 @@ public class GeneratedReason3Code extends GeneratedReasonCode {
 	 */
 	public static final MMCode mmSplitShaping = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SplitShaping";
 			owner_lazy = () -> GeneratedReason3Code.mmObject();
 		}
@@ -207,7 +209,7 @@ public class GeneratedReason3Code extends GeneratedReasonCode {
 	 */
 	public static final MMCode mmThirdParty = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ThirdParty";
 			owner_lazy = () -> GeneratedReason3Code.mmObject();
 		}
@@ -230,7 +232,7 @@ public class GeneratedReason3Code extends GeneratedReasonCode {
 	 */
 	public static final MMCode mmTransformation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Transformation";
 			owner_lazy = () -> GeneratedReason3Code.mmObject();
 		}
@@ -239,13 +241,12 @@ public class GeneratedReason3Code extends GeneratedReasonCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "GeneratedReason3Code";
 				definition = "Specifies the reason why the transaction was generated.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.GeneratedReason3Code.mmCollateralManagement, com.tools20022.repository.codeset.GeneratedReason3Code.mmMarketClaim,
-						com.tools20022.repository.codeset.GeneratedReason3Code.mmOther, com.tools20022.repository.codeset.GeneratedReason3Code.mmReturnRefusedDumps, com.tools20022.repository.codeset.GeneratedReason3Code.mmSplitShaping,
-						com.tools20022.repository.codeset.GeneratedReason3Code.mmThirdParty, com.tools20022.repository.codeset.GeneratedReason3Code.mmTransformation);
+				code_lazy = () -> Arrays.asList(GeneratedReason3Code.mmCollateralManagement, GeneratedReason3Code.mmMarketClaim, GeneratedReason3Code.mmOther, GeneratedReason3Code.mmReturnRefusedDumps, GeneratedReason3Code.mmSplitShaping,
+						GeneratedReason3Code.mmThirdParty, GeneratedReason3Code.mmTransformation);
 				trace_lazy = () -> GeneratedReasonCode.mmObject();
 			}
 		});

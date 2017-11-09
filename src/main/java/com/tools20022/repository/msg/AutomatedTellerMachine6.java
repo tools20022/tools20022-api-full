@@ -20,8 +20,10 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.TransactionEnvironment2Code;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -130,11 +132,11 @@ public class AutomatedTellerMachine6 {
 			componentContext_lazy = () -> AutomatedTellerMachine6.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "ATM terminal device identification for the acquirer and the issuer.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AutomatedTellerMachine7.mmIdentification);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AutomatedTellerMachine1.mmIdentification;
+			nextVersions_lazy = () -> Arrays.asList(AutomatedTellerMachine7.mmIdentification);
+			previousVersion_lazy = () -> AutomatedTellerMachine1.mmIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -186,11 +188,11 @@ public class AutomatedTellerMachine6 {
 			componentContext_lazy = () -> AutomatedTellerMachine6.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalIdentification";
 			definition = "ATM terminal device identification for the ATM manager.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AutomatedTellerMachine7.mmAdditionalIdentification);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AutomatedTellerMachine1.mmAdditionalIdentification;
+			nextVersions_lazy = () -> Arrays.asList(AutomatedTellerMachine7.mmAdditionalIdentification);
+			previousVersion_lazy = () -> AutomatedTellerMachine1.mmAdditionalIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -242,11 +244,11 @@ public class AutomatedTellerMachine6 {
 			componentContext_lazy = () -> AutomatedTellerMachine6.mmObject();
 			isDerived = false;
 			xmlTag = "SeqNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SequenceNumber";
 			definition = "ATM terminal device identification for the branch.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AutomatedTellerMachine7.mmSequenceNumber);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AutomatedTellerMachine1.mmSequenceNumber;
+			nextVersions_lazy = () -> Arrays.asList(AutomatedTellerMachine7.mmSequenceNumber);
+			previousVersion_lazy = () -> AutomatedTellerMachine1.mmSequenceNumber;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -289,10 +291,10 @@ public class AutomatedTellerMachine6 {
 			componentContext_lazy = () -> AutomatedTellerMachine6.mmObject();
 			isDerived = false;
 			xmlTag = "Lctn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Location";
 			definition = "Location of the ATM.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AutomatedTellerMachine1.mmLocation;
+			previousVersion_lazy = () -> AutomatedTellerMachine1.mmLocation;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -338,10 +340,10 @@ public class AutomatedTellerMachine6 {
 			componentContext_lazy = () -> AutomatedTellerMachine6.mmObject();
 			isDerived = false;
 			xmlTag = "LctnCtgy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LocationCategory";
 			definition = "Indicates the environment of the transaction.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AutomatedTellerMachine1.mmLocationCategory;
+			previousVersion_lazy = () -> AutomatedTellerMachine1.mmLocationCategory;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> TransactionEnvironment2Code.mmObject();
@@ -384,10 +386,10 @@ public class AutomatedTellerMachine6 {
 			componentContext_lazy = () -> AutomatedTellerMachine6.mmObject();
 			isDerived = false;
 			xmlTag = "Eqpmnt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Equipment";
 			definition = "ATM terminal equipment.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AutomatedTellerMachine1.mmEquipment;
+			previousVersion_lazy = () -> AutomatedTellerMachine1.mmEquipment;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -398,11 +400,10 @@ public class AutomatedTellerMachine6 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AutomatedTellerMachine6.mmIdentification, com.tools20022.repository.msg.AutomatedTellerMachine6.mmAdditionalIdentification,
-						com.tools20022.repository.msg.AutomatedTellerMachine6.mmSequenceNumber, com.tools20022.repository.msg.AutomatedTellerMachine6.mmLocation, com.tools20022.repository.msg.AutomatedTellerMachine6.mmLocationCategory,
-						com.tools20022.repository.msg.AutomatedTellerMachine6.mmEquipment);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(AutomatedTellerMachine6.mmIdentification, AutomatedTellerMachine6.mmAdditionalIdentification, AutomatedTellerMachine6.mmSequenceNumber, AutomatedTellerMachine6.mmLocation,
+						AutomatedTellerMachine6.mmLocationCategory, AutomatedTellerMachine6.mmEquipment);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AutomatedTellerMachine6";
 				definition = "ATM information.";
 				nextVersions_lazy = () -> Arrays.asList(AutomatedTellerMachine7.mmObject());

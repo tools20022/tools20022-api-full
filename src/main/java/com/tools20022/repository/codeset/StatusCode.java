@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.Status1Code Status1Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Status3Code Status3Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Status2Code Status2Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Status4Code Status4Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Status5Code Status5Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Status6Code Status6Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Status7Code Status7Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -61,18 +75,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.StatusCode#mmCancelledBySubcustodian
  * StatusCode.mmCancelledBySubcustodian}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.Status1Code Status1Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.Status3Code Status3Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.Status2Code Status2Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.Status4Code Status4Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.Status5Code Status5Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.Status6Code Status6Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.Status7Code Status7Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -121,7 +123,7 @@ public class StatusCode {
 	 */
 	public static final MMCode mmPendingProcessing = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingProcessing";
 			definition = "Processing of the instruction is pending.";
 			owner_lazy = () -> StatusCode.mmObject();
@@ -153,7 +155,7 @@ public class StatusCode {
 	 */
 	public static final MMCode mmAcknowledgedAccepted = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcknowledgedAccepted";
 			definition = "Instruction has been acknowledged and accepted and is validated for further processing.";
 			owner_lazy = () -> StatusCode.mmObject();
@@ -182,7 +184,7 @@ public class StatusCode {
 	 */
 	public static final MMCode mmRejected = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Rejected";
 			definition = "Instruction has been rejected.";
 			owner_lazy = () -> StatusCode.mmObject();
@@ -212,7 +214,7 @@ public class StatusCode {
 	 */
 	public static final MMCode mmAccepted = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Accepted";
 			definition = "Instruction has been accepted and is validated for further processing";
 			owner_lazy = () -> StatusCode.mmObject();
@@ -241,7 +243,7 @@ public class StatusCode {
 	 */
 	public static final MMCode mmCompleted = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Completed";
 			definition = "Processing has been completed.";
 			owner_lazy = () -> StatusCode.mmObject();
@@ -271,7 +273,7 @@ public class StatusCode {
 	 */
 	public static final MMCode mmNotReceived = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NotReceived";
 			definition = "No instruction has been received (to be used in a reminder).";
 			owner_lazy = () -> StatusCode.mmObject();
@@ -300,7 +302,7 @@ public class StatusCode {
 	 */
 	public static final MMCode mmCancelled = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Cancelled";
 			definition = "Instruction has been cancelled.";
 			owner_lazy = () -> StatusCode.mmObject();
@@ -329,7 +331,7 @@ public class StatusCode {
 	 */
 	public static final MMCode mmBeingCancelled = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BeingCancelled";
 			definition = "Cancel request is being processed.";
 			owner_lazy = () -> StatusCode.mmObject();
@@ -358,7 +360,7 @@ public class StatusCode {
 	 */
 	public static final MMCode mmReceivedByIssuerOrRegistrar = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ReceivedByIssuerOrRegistrar";
 			definition = "Instruction has been received by Issuer.";
 			owner_lazy = () -> StatusCode.mmObject();
@@ -387,7 +389,7 @@ public class StatusCode {
 	 */
 	public static final MMCode mmPending = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Pending";
 			definition = "Instruction is pending.";
 			owner_lazy = () -> StatusCode.mmObject();
@@ -416,7 +418,7 @@ public class StatusCode {
 	 */
 	public static final MMCode mmStandingInstruction = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "StandingInstruction";
 			definition = "Standing instruction is applied.";
 			owner_lazy = () -> StatusCode.mmObject();
@@ -445,7 +447,7 @@ public class StatusCode {
 	 */
 	public static final MMCode mmQueued = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Queued";
 			definition = "Instruction is queued.";
 			owner_lazy = () -> StatusCode.mmObject();
@@ -477,7 +479,7 @@ public class StatusCode {
 	 */
 	public static final MMCode mmCancelledBySubcustodian = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancelledBySubcustodian";
 			definition = "Instruction has been cancelled by the agent, for example, due to an event deadline extension.";
 			owner_lazy = () -> StatusCode.mmObject();
@@ -488,16 +490,13 @@ public class StatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("PPRC");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "StatusCode";
 				definition = "Specifies the status of an instruction.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.StatusCode.mmPendingProcessing, com.tools20022.repository.codeset.StatusCode.mmAcknowledgedAccepted, com.tools20022.repository.codeset.StatusCode.mmRejected,
-						com.tools20022.repository.codeset.StatusCode.mmAccepted, com.tools20022.repository.codeset.StatusCode.mmCompleted, com.tools20022.repository.codeset.StatusCode.mmNotReceived,
-						com.tools20022.repository.codeset.StatusCode.mmCancelled, com.tools20022.repository.codeset.StatusCode.mmBeingCancelled, com.tools20022.repository.codeset.StatusCode.mmReceivedByIssuerOrRegistrar,
-						com.tools20022.repository.codeset.StatusCode.mmPending, com.tools20022.repository.codeset.StatusCode.mmStandingInstruction, com.tools20022.repository.codeset.StatusCode.mmQueued,
-						com.tools20022.repository.codeset.StatusCode.mmCancelledBySubcustodian);
+				code_lazy = () -> Arrays.asList(StatusCode.mmPendingProcessing, StatusCode.mmAcknowledgedAccepted, StatusCode.mmRejected, StatusCode.mmAccepted, StatusCode.mmCompleted, StatusCode.mmNotReceived, StatusCode.mmCancelled,
+						StatusCode.mmBeingCancelled, StatusCode.mmReceivedByIssuerOrRegistrar, StatusCode.mmPending, StatusCode.mmStandingInstruction, StatusCode.mmQueued, StatusCode.mmCancelledBySubcustodian);
 				derivation_lazy = () -> Arrays.asList(Status1Code.mmObject(), Status3Code.mmObject(), Status2Code.mmObject(), Status4Code.mmObject(), Status5Code.mmObject(), Status6Code.mmObject(), Status7Code.mmObject());
 			}
 		});

@@ -20,6 +20,7 @@ package com.tools20022.repository.area.seev;
 import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.SecuritiesEventsLatestVersion;
 import com.tools20022.repository.msg.Instruction3;
 import com.tools20022.repository.msg.MeetingReference7;
@@ -51,6 +52,9 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code seev.004.001.05}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.SecuritiesEventsLatestVersion
@@ -84,9 +88,6 @@ import java.util.List;
  * MeetingInstructionV05.mmSupplementaryData}</li>
  * </ul>
  * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code seev.004.001.05}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -138,10 +139,10 @@ public class MeetingInstructionV05 {
 	public static final MMMessageBuildingBlock mmMeetingReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "MtgRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MeetingReference";
 			definition = "Series of elements which allow to identify a meeting.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.seev.MeetingInstructionV04.mmMeetingReference;
+			previousVersion_lazy = () -> MeetingInstructionV04.mmMeetingReference;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> MeetingReference7.mmObject();
@@ -180,10 +181,10 @@ public class MeetingInstructionV05 {
 	public static final MMMessageBuildingBlock mmFinancialInstrumentIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "FinInstrmId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentIdentification";
 			definition = "Identifies the security for which the meeting is organised.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.seev.MeetingInstructionV04.mmSecurityIdentification;
+			previousVersion_lazy = () -> MeetingInstructionV04.mmSecurityIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> SecurityIdentification14.mmObject();
@@ -223,10 +224,10 @@ public class MeetingInstructionV05 {
 	public static final MMMessageBuildingBlock mmInstruction = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Instr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Instruction";
 			definition = "Identifies the position of the instructing party and the action that they want to take.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.seev.MeetingInstructionV04.mmInstruction;
+			previousVersion_lazy = () -> MeetingInstructionV04.mmInstruction;
 			minOccurs = 1;
 			complexType_lazy = () -> Instruction3.mmObject();
 		}
@@ -261,7 +262,7 @@ public class MeetingInstructionV05 {
 	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SplmtryData";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryData";
 			definition = "Additional information that can not be captured in the structured fields and/or any other specific block.";
 			minOccurs = 0;
@@ -272,7 +273,7 @@ public class MeetingInstructionV05 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MeetingInstructionV05";
 				definition = "Scope\r\nA party holding the right to vote sends the MeetingInstruction message to an intermediary, the issuer or its agent to request the receiving party to act upon one or several instructions.\r\nUsage\r\nThe MeetingInstruction message is used to register for a shareholders meeting, request blocking or registration of securities. It is used to assign a proxy, to specify the names of meeting attendees and to relay vote instructions per resolution electronically.\r\nThe MeetingInstruction message may only be sent for one security, though several safekeeping places may be specified.\r\nOnce the message is sent, it cannot be modified. It must be cancelled by a MeetingInstructionCancellationRequest. Only after receipt of a confirmed cancelled status via the MeetingInstructionStatus message, a new MeetingInstruction message can be sent.\r\nThis message definition is intended for use with the Business Application Header (head.001.001.01).";
 				previousVersion_lazy = () -> MeetingInstructionV04.mmObject();
@@ -280,8 +281,8 @@ public class MeetingInstructionV05 {
 				rootElement = "Document";
 				xmlTag = "MtgInstr";
 				businessArea_lazy = () -> SecuritiesEventsLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.MeetingInstructionV05.mmMeetingReference, com.tools20022.repository.area.seev.MeetingInstructionV05.mmFinancialInstrumentIdentification,
-						com.tools20022.repository.area.seev.MeetingInstructionV05.mmInstruction, com.tools20022.repository.area.seev.MeetingInstructionV05.mmSupplementaryData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(MeetingInstructionV05.mmMeetingReference, MeetingInstructionV05.mmFinancialInstrumentIdentification, MeetingInstructionV05.mmInstruction,
+						MeetingInstructionV05.mmSupplementaryData);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "seev";

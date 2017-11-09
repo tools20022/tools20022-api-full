@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -28,6 +30,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.InvestigationStatus1Code
+ * InvestigationStatus1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -39,13 +48,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.InvestigationStatusCode#mmNotApplicable
  * InvestigationStatusCode.mmNotApplicable}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.InvestigationStatus1Code
- * InvestigationStatus1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -100,7 +102,7 @@ public class InvestigationStatusCode {
 	 */
 	public static final MMCode mmDataFound = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DataFound";
 			definition = "Search for requested data is complete, the data has been found and will be sent using a separate message flow.";
 			owner_lazy = () -> InvestigationStatusCode.mmObject();
@@ -130,7 +132,7 @@ public class InvestigationStatusCode {
 	 */
 	public static final MMCode mmDataNotFound = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DataNotFound";
 			definition = "Search for requested data is complete, data not found.";
 			owner_lazy = () -> InvestigationStatusCode.mmObject();
@@ -160,7 +162,7 @@ public class InvestigationStatusCode {
 	 */
 	public static final MMCode mmNotApplicable = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotApplicable";
 			definition = "Search for requested data not complete yet.";
 			owner_lazy = () -> InvestigationStatusCode.mmObject();
@@ -171,13 +173,12 @@ public class InvestigationStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("FOUN");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InvestigationStatusCode";
 				definition = "Provides the status of the investigation response related to a previously sent request.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.InvestigationStatusCode.mmDataFound, com.tools20022.repository.codeset.InvestigationStatusCode.mmDataNotFound,
-						com.tools20022.repository.codeset.InvestigationStatusCode.mmNotApplicable);
+				code_lazy = () -> Arrays.asList(InvestigationStatusCode.mmDataFound, InvestigationStatusCode.mmDataNotFound, InvestigationStatusCode.mmNotApplicable);
 				derivation_lazy = () -> Arrays.asList(InvestigationStatus1Code.mmObject());
 			}
 		});

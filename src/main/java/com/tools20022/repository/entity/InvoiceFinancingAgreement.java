@@ -17,12 +17,11 @@
 
 package com.tools20022.repository.entity;
 
-import com.tools20022.metamodel.MMBusinessAssociationEnd;
-import com.tools20022.metamodel.MMBusinessAttribute;
-import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.*;
 import com.tools20022.repository.choice.FinancingRateOrAmountChoice;
 import com.tools20022.repository.datatype.*;
 import com.tools20022.repository.entity.Agreement;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -41,45 +40,24 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
  * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InvoiceFinancingAgreement#mmAuthorisation
- * InvoiceFinancingAgreement.mmAuthorisation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InvoiceFinancingAgreement#mmFinancingMethod
- * InvoiceFinancingAgreement.mmFinancingMethod}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InvoiceFinancingAgreement#mmRequestedAmount
- * InvoiceFinancingAgreement.mmRequestedAmount}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InvoiceFinancingAgreement#mmRequestedPercentage
- * InvoiceFinancingAgreement.mmRequestedPercentage}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InvoiceFinancingAgreement#mmAppliedPercentage
- * InvoiceFinancingAgreement.mmAppliedPercentage}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InvoiceFinancingAgreement#mmFinancedAmount
- * InvoiceFinancingAgreement.mmFinancedAmount}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InvoiceFinancingAgreement#mmIdentification
- * InvoiceFinancingAgreement.mmIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InvoiceFinancingAgreement#mmInvoiceFinancingPartyRole
- * InvoiceFinancingAgreement.mmInvoiceFinancingPartyRole}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InvoiceFinancingAgreement#mmInvoiceFinancingStatus
- * InvoiceFinancingAgreement.mmInvoiceFinancingStatus}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InvoiceFinancingAgreement#mmInvoice
- * InvoiceFinancingAgreement.mmInvoice}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InvoiceFinancingAgreement#mmResultingCashEntry
- * InvoiceFinancingAgreement.mmResultingCashEntry}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InvoiceFinancingAgreement#mmAssignment
- * InvoiceFinancingAgreement.mmAssignment}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.RequestGroupInformation1
+ * RequestGroupInformation1}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.FinancingRateOrAmountChoice
+ * FinancingRateOrAmountChoice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.InvoiceRequestInformation1
+ * InvoiceRequestInformation1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.OriginalRequestInformation1
+ * OriginalRequestInformation1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.FinancingAllowedSummary1
+ * FinancingAllowedSummary1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.FinancingInformationAndStatus1
+ * FinancingInformationAndStatus1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.FinancingAgreementItem1
+ * FinancingAgreementItem1}</li>
  * </ul>
  * </li>
  * <li>
@@ -123,24 +101,45 @@ import java.util.List;
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
  * superType} = {@linkplain com.tools20022.repository.entity.Agreement
  * Agreement}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.RequestGroupInformation1
- * RequestGroupInformation1}</li>
- * <li>{@linkplain com.tools20022.repository.choice.FinancingRateOrAmountChoice
- * FinancingRateOrAmountChoice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.InvoiceRequestInformation1
- * InvoiceRequestInformation1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.OriginalRequestInformation1
- * OriginalRequestInformation1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.FinancingAllowedSummary1
- * FinancingAllowedSummary1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.FinancingInformationAndStatus1
- * FinancingInformationAndStatus1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.FinancingAgreementItem1
- * FinancingAgreementItem1}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InvoiceFinancingAgreement#mmAuthorisation
+ * InvoiceFinancingAgreement.mmAuthorisation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InvoiceFinancingAgreement#mmFinancingMethod
+ * InvoiceFinancingAgreement.mmFinancingMethod}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InvoiceFinancingAgreement#mmRequestedAmount
+ * InvoiceFinancingAgreement.mmRequestedAmount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InvoiceFinancingAgreement#mmRequestedPercentage
+ * InvoiceFinancingAgreement.mmRequestedPercentage}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InvoiceFinancingAgreement#mmAppliedPercentage
+ * InvoiceFinancingAgreement.mmAppliedPercentage}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InvoiceFinancingAgreement#mmFinancedAmount
+ * InvoiceFinancingAgreement.mmFinancedAmount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InvoiceFinancingAgreement#mmIdentification
+ * InvoiceFinancingAgreement.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InvoiceFinancingAgreement#mmInvoiceFinancingPartyRole
+ * InvoiceFinancingAgreement.mmInvoiceFinancingPartyRole}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InvoiceFinancingAgreement#mmInvoiceFinancingStatus
+ * InvoiceFinancingAgreement.mmInvoiceFinancingStatus}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InvoiceFinancingAgreement#mmInvoice
+ * InvoiceFinancingAgreement.mmInvoice}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InvoiceFinancingAgreement#mmResultingCashEntry
+ * InvoiceFinancingAgreement.mmResultingCashEntry}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InvoiceFinancingAgreement#mmAssignment
+ * InvoiceFinancingAgreement.mmAssignment}</li>
  * </ul>
  * </li>
  * <li>
@@ -206,10 +205,10 @@ public class InvoiceFinancingAgreement extends Agreement {
 	 */
 	public static final MMBusinessAttribute mmAuthorisation = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RequestGroupInformation1.mmAuthorisation);
+			derivation_lazy = () -> Arrays.asList(RequestGroupInformation1.mmAuthorisation);
 			elementContext_lazy = () -> InvoiceFinancingAgreement.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Authorisation";
 			definition = "User identification or any user key that allows to check if the financing requestor is allowed to ask for invoice financing.\r\nUsage: the content is not of a technical nature, but reflects the organisational structure at the requesting side. The authorisation element can typically be used in case the financing requestor acts on behalf of one or more suppliers.";
 			maxOccurs = 1;
@@ -256,10 +255,10 @@ public class InvoiceFinancingAgreement extends Agreement {
 	 */
 	public static final MMBusinessAttribute mmFinancingMethod = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RequestGroupInformation1.mmFinancingAgreement);
+			derivation_lazy = () -> Arrays.asList(RequestGroupInformation1.mmFinancingAgreement);
 			elementContext_lazy = () -> InvoiceFinancingAgreement.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "FinancingMethod";
 			definition = "Specifies the financing method related to invoice financing (eg collection mandate).";
 			maxOccurs = 1;
@@ -316,11 +315,10 @@ public class InvoiceFinancingAgreement extends Agreement {
 	 */
 	public static final MMBusinessAttribute mmRequestedAmount = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.FinancingRateOrAmountChoice.mmAmount, com.tools20022.repository.msg.InvoiceRequestInformation1.mmRequestedAmount,
-					com.tools20022.repository.msg.FinancingResult1.mmFinancedAmount, com.tools20022.repository.msg.FinancingItemList1.mmTotalRequestAmount);
+			derivation_lazy = () -> Arrays.asList(FinancingRateOrAmountChoice.mmAmount, InvoiceRequestInformation1.mmRequestedAmount, FinancingResult1.mmFinancedAmount, FinancingItemList1.mmTotalRequestAmount);
 			elementContext_lazy = () -> InvoiceFinancingAgreement.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RequestedAmount";
 			definition = "Amount requested by the requestor party, related to a single invoice to be financed.";
 			maxOccurs = 1;
@@ -368,10 +366,10 @@ public class InvoiceFinancingAgreement extends Agreement {
 	 */
 	public static final MMBusinessAttribute mmRequestedPercentage = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.FinancingRateOrAmountChoice.mmRate);
+			derivation_lazy = () -> Arrays.asList(FinancingRateOrAmountChoice.mmRate);
 			elementContext_lazy = () -> InvoiceFinancingAgreement.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RequestedPercentage";
 			definition = "Percentage of the amount requested by the requestor party, related to a single invoice, to be financed.";
 			maxOccurs = 1;
@@ -417,10 +415,10 @@ public class InvoiceFinancingAgreement extends Agreement {
 	 */
 	public static final MMBusinessAttribute mmAppliedPercentage = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancingAllowedSummary1.mmAppliedPercentage);
+			derivation_lazy = () -> Arrays.asList(FinancingAllowedSummary1.mmAppliedPercentage);
 			elementContext_lazy = () -> InvoiceFinancingAgreement.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AppliedPercentage";
 			definition = "The percentage rate applied to calculate the amount financed.";
 			maxOccurs = 1;
@@ -468,10 +466,10 @@ public class InvoiceFinancingAgreement extends Agreement {
 	 */
 	public static final MMBusinessAttribute mmFinancedAmount = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancingAllowedSummary1.mmTotalFinancedAmount);
+			derivation_lazy = () -> Arrays.asList(FinancingAllowedSummary1.mmTotalFinancedAmount);
 			elementContext_lazy = () -> InvoiceFinancingAgreement.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "FinancedAmount";
 			definition = "Specifies the amount financed which is derived from the applied percentage and the invoice amount..";
 			maxOccurs = 1;
@@ -524,11 +522,10 @@ public class InvoiceFinancingAgreement extends Agreement {
 	 */
 	public static final MMBusinessAttribute mmIdentification = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TradeSettlement1.mmIssuerFactoringAgreementIdentification, com.tools20022.repository.msg.FinancingAgreementList1.mmIdentifier,
-					com.tools20022.repository.msg.FinancingItemList1.mmIdentifier, com.tools20022.repository.msg.FinancialItemParameters1.mmIdentifier);
+			derivation_lazy = () -> Arrays.asList(TradeSettlement1.mmIssuerFactoringAgreementIdentification, FinancingAgreementList1.mmIdentifier, FinancingItemList1.mmIdentifier, FinancialItemParameters1.mmIdentifier);
 			elementContext_lazy = () -> InvoiceFinancingAgreement.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Identification";
 			definition = "Identifies unambiguously the financing transaction.";
 			maxOccurs = 1;
@@ -576,12 +573,12 @@ public class InvoiceFinancingAgreement extends Agreement {
 		{
 			elementContext_lazy = () -> InvoiceFinancingAgreement.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InvoiceFinancingPartyRole";
 			definition = "Role played by a party in the context of financing an invoice.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.InvoiceFinancingPartyRole.mmInvoiceFinancingTransaction;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.InvoiceFinancingPartyRole.mmObject();
 		}
 	};
@@ -666,21 +663,19 @@ public class InvoiceFinancingAgreement extends Agreement {
 	 */
 	public static final MMBusinessAssociationEnd mmInvoiceFinancingStatus = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OriginalRequestInformation1.mmValidationStatusInformation, com.tools20022.repository.msg.OriginalRequestInformation1.mmCancellationStatusInformation,
-					com.tools20022.repository.msg.InstalmentFinancingInformation1.mmInstalmentFinancingResult, com.tools20022.repository.msg.InvoiceFinancingDetails1.mmInvoiceFinancingResult,
-					com.tools20022.repository.msg.BusinessLetter1.mmValidationStatusInformation, com.tools20022.repository.msg.FinancingAgreementList1.mmValidationStatusInformation,
-					com.tools20022.repository.msg.FinancingItemList1.mmValidationStatusInformation, com.tools20022.repository.msg.FinancingItemList1.mmFinancingStatus,
-					com.tools20022.repository.msg.ReconciliationList1.mmValidationStatusInformation, com.tools20022.repository.msg.FinancingAgreementItem1.mmValidationStatusInformation,
-					com.tools20022.repository.msg.FinancingAgreementItem1.mmGuaranteeStatus, com.tools20022.repository.msg.FinancialItem1.mmValidationStatusInformation);
+			derivation_lazy = () -> Arrays.asList(OriginalRequestInformation1.mmValidationStatusInformation, OriginalRequestInformation1.mmCancellationStatusInformation, InstalmentFinancingInformation1.mmInstalmentFinancingResult,
+					InvoiceFinancingDetails1.mmInvoiceFinancingResult, BusinessLetter1.mmValidationStatusInformation, FinancingAgreementList1.mmValidationStatusInformation, FinancingItemList1.mmValidationStatusInformation,
+					FinancingItemList1.mmFinancingStatus, ReconciliationList1.mmValidationStatusInformation, FinancingAgreementItem1.mmValidationStatusInformation, FinancingAgreementItem1.mmGuaranteeStatus,
+					FinancialItem1.mmValidationStatusInformation);
 			elementContext_lazy = () -> InvoiceFinancingAgreement.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InvoiceFinancingStatus";
 			definition = "Status of the invoice financing transaction and of the different requests linked to it.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.InvoiceFinancingStatus.mmInvoiceFinancingTransaction;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.InvoiceFinancingStatus.mmObject();
 		}
 	};
@@ -730,15 +725,15 @@ public class InvoiceFinancingAgreement extends Agreement {
 	 */
 	public static final MMBusinessAssociationEnd mmInvoice = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvoiceRequestInformation1.mmInvoiceTotalsInformation, com.tools20022.repository.msg.FinancingAgreementItem1.mmItemContext);
+			derivation_lazy = () -> Arrays.asList(InvoiceRequestInformation1.mmInvoiceTotalsInformation, FinancingAgreementItem1.mmItemContext);
 			elementContext_lazy = () -> InvoiceFinancingAgreement.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Invoice";
 			definition = "Invoice to which is referred financing request.";
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.Invoice.mmInvoiceFinancingTransaction;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Invoice.mmObject();
 		}
 	};
@@ -783,13 +778,13 @@ public class InvoiceFinancingAgreement extends Agreement {
 		{
 			elementContext_lazy = () -> InvoiceFinancingAgreement.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ResultingCashEntry";
 			definition = "Information related to the crediting of the amount financed, such as dates, amount, charges...";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.CashEntry.mmRelatedInvoiceFinancingTransaction;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.CashEntry.mmObject();
 		}
 	};
@@ -832,12 +827,12 @@ public class InvoiceFinancingAgreement extends Agreement {
 		{
 			elementContext_lazy = () -> InvoiceFinancingAgreement.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Assignment";
 			definition = "Assignments resulting from an invoice financing agreement.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.Assignment.mmFinancingAgreement;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Assignment.mmObject();
 		}
 	};
@@ -845,22 +840,19 @@ public class InvoiceFinancingAgreement extends Agreement {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InvoiceFinancingAgreement";
 				definition = "Set of characteristics that unambiguously identify an invoice financing agreement. An invoice financing agreement between a factor and its client allows to transfer a payment obligation that exists between the client and a third party from the client to the factor.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CashEntry.mmRelatedInvoiceFinancingTransaction, com.tools20022.repository.entity.Invoice.mmInvoiceFinancingTransaction,
 						com.tools20022.repository.entity.InvoiceFinancingPartyRole.mmInvoiceFinancingTransaction, com.tools20022.repository.entity.InvoiceFinancingStatus.mmInvoiceFinancingTransaction,
 						com.tools20022.repository.entity.Assignment.mmFinancingAgreement);
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancingInformationAndStatus1.mmFinancingAllowedSummary, com.tools20022.repository.msg.FinancingInformationAndStatus1.mmInvoiceFinancingDetails,
-						com.tools20022.repository.msg.FinancingAgreementList1.mmItem, com.tools20022.repository.msg.FinancingItemList1.mmFinancialItem);
+				derivationElement_lazy = () -> Arrays.asList(FinancingInformationAndStatus1.mmFinancingAllowedSummary, FinancingInformationAndStatus1.mmInvoiceFinancingDetails, FinancingAgreementList1.mmItem,
+						FinancingItemList1.mmFinancialItem);
 				superType_lazy = () -> Agreement.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.InvoiceFinancingAgreement.mmAuthorisation, com.tools20022.repository.entity.InvoiceFinancingAgreement.mmFinancingMethod,
-						com.tools20022.repository.entity.InvoiceFinancingAgreement.mmRequestedAmount, com.tools20022.repository.entity.InvoiceFinancingAgreement.mmRequestedPercentage,
-						com.tools20022.repository.entity.InvoiceFinancingAgreement.mmAppliedPercentage, com.tools20022.repository.entity.InvoiceFinancingAgreement.mmFinancedAmount,
-						com.tools20022.repository.entity.InvoiceFinancingAgreement.mmIdentification, com.tools20022.repository.entity.InvoiceFinancingAgreement.mmInvoiceFinancingPartyRole,
-						com.tools20022.repository.entity.InvoiceFinancingAgreement.mmInvoiceFinancingStatus, com.tools20022.repository.entity.InvoiceFinancingAgreement.mmInvoice,
-						com.tools20022.repository.entity.InvoiceFinancingAgreement.mmResultingCashEntry, com.tools20022.repository.entity.InvoiceFinancingAgreement.mmAssignment);
+				element_lazy = () -> Arrays.asList(InvoiceFinancingAgreement.mmAuthorisation, InvoiceFinancingAgreement.mmFinancingMethod, InvoiceFinancingAgreement.mmRequestedAmount, InvoiceFinancingAgreement.mmRequestedPercentage,
+						InvoiceFinancingAgreement.mmAppliedPercentage, InvoiceFinancingAgreement.mmFinancedAmount, InvoiceFinancingAgreement.mmIdentification, InvoiceFinancingAgreement.mmInvoiceFinancingPartyRole,
+						InvoiceFinancingAgreement.mmInvoiceFinancingStatus, InvoiceFinancingAgreement.mmInvoice, InvoiceFinancingAgreement.mmResultingCashEntry, InvoiceFinancingAgreement.mmAssignment);
 				derivationComponent_lazy = () -> Arrays.asList(RequestGroupInformation1.mmObject(), FinancingRateOrAmountChoice.mmObject(), InvoiceRequestInformation1.mmObject(), OriginalRequestInformation1.mmObject(),
 						FinancingAllowedSummary1.mmObject(), FinancingInformationAndStatus1.mmObject(), FinancingAgreementItem1.mmObject());
 			}

@@ -19,9 +19,12 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max70Text;
 import com.tools20022.repository.datatype.SNA2008SectorIdentifier;
 import com.tools20022.repository.entity.Organisation;
+import com.tools20022.repository.entity.Sector;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.SectorAndLocation1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -108,11 +111,11 @@ public class NameOrSector1Choice {
 	 */
 	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Sector.mmIdentification;
+			businessElementTrace_lazy = () -> Sector.mmIdentification;
 			componentContext_lazy = () -> NameOrSector1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Nm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Name";
 			definition = "Internal name of the counterparty of the reporting agent used by the reporting agent.";
 			maxOccurs = 1;
@@ -164,14 +167,14 @@ public class NameOrSector1Choice {
 	 */
 	public static final MMMessageAttribute mmSector = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Sector.mmIdentification;
+			businessElementTrace_lazy = () -> Sector.mmIdentification;
 			componentContext_lazy = () -> NameOrSector1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Sctr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Sector";
 			definition = "Represents the counterparty institutional section (such as non-financial corporation, central bank, ...).";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SectorAndLocation1.mmSector;
+			previousVersion_lazy = () -> SectorAndLocation1.mmSector;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> SNA2008SectorIdentifier.mmObject();
@@ -181,10 +184,10 @@ public class NameOrSector1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.NameOrSector1Choice.mmName, com.tools20022.repository.choice.NameOrSector1Choice.mmSector);
+				messageElement_lazy = () -> Arrays.asList(NameOrSector1Choice.mmName, NameOrSector1Choice.mmSector);
 				trace_lazy = () -> Organisation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "NameOrSector1Choice";
 				definition = "Provides the identification of the reported party through the name or the sector.";
 				previousVersion_lazy = () -> SectorAndLocation1.mmObject();

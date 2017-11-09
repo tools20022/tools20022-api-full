@@ -20,6 +20,7 @@ package com.tools20022.repository.area.seev;
 import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.SecuritiesEventsLatestVersion;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.IssuersAgentsCommunicationISOLatestversion;
@@ -43,6 +44,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code seev.013.001.01}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.SecuritiesEventsLatestVersion
@@ -86,9 +90,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * AgentCAElectionAmendmentRequestV01.mmContactDetails}</li>
  * </ul>
  * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code seev.013.001.01}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -134,7 +135,7 @@ public class AgentCAElectionAmendmentRequestV01 {
 	public static final MMMessageBuildingBlock mmIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Identification assigned by the Sender to unambiguously identify the request.";
 			maxOccurs = 1;
@@ -172,7 +173,7 @@ public class AgentCAElectionAmendmentRequestV01 {
 	public static final MMMessageBuildingBlock mmAgentCAElectionAdviceIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "AgtCAElctnAdvcId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AgentCAElectionAdviceIdentification";
 			definition = "Identification of the linked Agent CA Election Advice for which an amendment is requested.";
 			maxOccurs = 1;
@@ -207,7 +208,7 @@ public class AgentCAElectionAmendmentRequestV01 {
 	public static final MMMessageBuildingBlock mmCorporateActionGeneralInformation = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CorpActnGnlInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorporateActionGeneralInformation";
 			definition = "General information about the corporate action event.";
 			maxOccurs = 1;
@@ -242,7 +243,7 @@ public class AgentCAElectionAmendmentRequestV01 {
 	public static final MMMessageBuildingBlock mmAccountDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "AcctDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountDetails";
 			definition = "Provides information about the account.";
 			maxOccurs = 1;
@@ -278,7 +279,7 @@ public class AgentCAElectionAmendmentRequestV01 {
 	public static final MMMessageBuildingBlock mmOriginalElectionDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "OrgnlElctnDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalElectionDetails";
 			definition = "Provides information about the original election to be amended.";
 			maxOccurs = 1;
@@ -314,7 +315,7 @@ public class AgentCAElectionAmendmentRequestV01 {
 	public static final MMMessageBuildingBlock mmAmendedElectionDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "AmddElctnDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmendedElectionDetails";
 			definition = "Provides information about the amendments to the election.";
 			maxOccurs = 1;
@@ -349,7 +350,7 @@ public class AgentCAElectionAmendmentRequestV01 {
 	public static final MMMessageBuildingBlock mmContactDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CtctDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ContactDetails";
 			definition = "Contact responsible for the transaction identified in the message.";
 			maxOccurs = 1;
@@ -361,18 +362,16 @@ public class AgentCAElectionAmendmentRequestV01 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AgentCAElectionAmendmentRequestV01";
 				definition = "Scope\r\nThis message is sent by a CSD to the issuer (or its agent) to request the authorisation of an amendment of a previously sent Agent Corporate Action Election Advice message.\r\nUsage\r\nThis message is used to request the amendment of a previously sent Agent Corporate Action Election Advice message.\r\nOnce the amendment request has been accepted by the issuer (or its agent), the CSD will process any resource movement and send an Agent Corporate Action Election Advice message with the function, option change, to confirm that the amendment has been booked at the CSD.\r\nThis message is used when the terms and conditions of the corporate action event allow amendments.";
 				messageSet_lazy = () -> Arrays.asList(IssuersAgentsCommunicationISOLatestversion.mmObject());
 				rootElement = "Document";
 				xmlTag = "AgtCAElctnAmdmntReq";
 				businessArea_lazy = () -> SecuritiesEventsLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.AgentCAElectionAmendmentRequestV01.mmIdentification,
-						com.tools20022.repository.area.seev.AgentCAElectionAmendmentRequestV01.mmAgentCAElectionAdviceIdentification,
-						com.tools20022.repository.area.seev.AgentCAElectionAmendmentRequestV01.mmCorporateActionGeneralInformation, com.tools20022.repository.area.seev.AgentCAElectionAmendmentRequestV01.mmAccountDetails,
-						com.tools20022.repository.area.seev.AgentCAElectionAmendmentRequestV01.mmOriginalElectionDetails, com.tools20022.repository.area.seev.AgentCAElectionAmendmentRequestV01.mmAmendedElectionDetails,
-						com.tools20022.repository.area.seev.AgentCAElectionAmendmentRequestV01.mmContactDetails);
+				messageBuildingBlock_lazy = () -> Arrays.asList(AgentCAElectionAmendmentRequestV01.mmIdentification, AgentCAElectionAmendmentRequestV01.mmAgentCAElectionAdviceIdentification,
+						AgentCAElectionAmendmentRequestV01.mmCorporateActionGeneralInformation, AgentCAElectionAmendmentRequestV01.mmAccountDetails, AgentCAElectionAmendmentRequestV01.mmOriginalElectionDetails,
+						AgentCAElectionAmendmentRequestV01.mmAmendedElectionDetails, AgentCAElectionAmendmentRequestV01.mmContactDetails);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "seev";

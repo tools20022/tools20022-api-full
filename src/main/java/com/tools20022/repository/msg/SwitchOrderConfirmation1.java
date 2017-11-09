@@ -20,8 +20,11 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.setr.SwitchOrderConfirmationCancellationInstructionV01;
 import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.SwitchExecution;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -114,7 +117,7 @@ public class SwitchOrderConfirmation1 {
 			componentContext_lazy = () -> SwitchOrderConfirmation1.mmObject();
 			isDerived = false;
 			xmlTag = "AmdmntInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmendmentIndicator";
 			definition = "Indicates whether a confirmation amendment message will follow the confirmation cancellation instruction or not.";
 			maxOccurs = 1;
@@ -160,7 +163,7 @@ public class SwitchOrderConfirmation1 {
 			componentContext_lazy = () -> SwitchOrderConfirmation1.mmObject();
 			isDerived = false;
 			xmlTag = "SwtchExctnDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SwitchExecutionDetails";
 			definition = "Information related to a switch execution.";
 			minOccurs = 1;
@@ -202,7 +205,7 @@ public class SwitchOrderConfirmation1 {
 			componentContext_lazy = () -> SwitchOrderConfirmation1.mmObject();
 			isDerived = false;
 			xmlTag = "Xtnsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Extension";
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
 			minOccurs = 0;
@@ -214,12 +217,11 @@ public class SwitchOrderConfirmation1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SwitchOrderConfirmation1.mmAmendmentIndicator, com.tools20022.repository.msg.SwitchOrderConfirmation1.mmSwitchExecutionDetails,
-						com.tools20022.repository.msg.SwitchOrderConfirmation1.mmExtension);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.SwitchOrderConfirmationCancellationInstructionV01.mmCancellationByOrderConfirmationDetails);
+				messageElement_lazy = () -> Arrays.asList(SwitchOrderConfirmation1.mmAmendmentIndicator, SwitchOrderConfirmation1.mmSwitchExecutionDetails, SwitchOrderConfirmation1.mmExtension);
+				messageBuildingBlock_lazy = () -> Arrays.asList(SwitchOrderConfirmationCancellationInstructionV01.mmCancellationByOrderConfirmationDetails);
 				trace_lazy = () -> SwitchExecution.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SwitchOrderConfirmation1";
 				definition = "Switch order confirmation details.";
 			}

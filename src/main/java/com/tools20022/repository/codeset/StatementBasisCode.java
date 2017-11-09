@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.StatementBasis1Code
+ * StatementBasis1Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.StatementBasis2Code
+ * StatementBasis2Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -38,15 +49,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.StatementBasisCode#mmTraded
  * StatementBasisCode.mmTraded}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.StatementBasis1Code
- * StatementBasis1Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.StatementBasis2Code
- * StatementBasis2Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -100,7 +102,7 @@ public class StatementBasisCode {
 	 */
 	public static final MMCode mmContractual = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Contractual";
 			definition = "The statement is based on contractual settlement date irrespective of settled data positions.";
 			owner_lazy = () -> StatementBasisCode.mmObject();
@@ -133,7 +135,7 @@ public class StatementBasisCode {
 	 */
 	public static final MMCode mmSettled = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Settled";
 			definition = "The statement is based on settled date positions to the knowledge of the sender at the time of the statement preparation.";
 			owner_lazy = () -> StatementBasisCode.mmObject();
@@ -163,7 +165,7 @@ public class StatementBasisCode {
 	 */
 	public static final MMCode mmTraded = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Traded";
 			definition = "The statement is based on trade date positions.";
 			owner_lazy = () -> StatementBasisCode.mmObject();
@@ -174,13 +176,12 @@ public class StatementBasisCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CONT");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "StatementBasisCode";
 				definition = "Specifies the type of balances on which the statement is prepared.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.StatementBasisCode.mmContractual, com.tools20022.repository.codeset.StatementBasisCode.mmSettled,
-						com.tools20022.repository.codeset.StatementBasisCode.mmTraded);
+				code_lazy = () -> Arrays.asList(StatementBasisCode.mmContractual, StatementBasisCode.mmSettled, StatementBasisCode.mmTraded);
 				derivation_lazy = () -> Arrays.asList(StatementBasis1Code.mmObject(), StatementBasis2Code.mmObject());
 			}
 		});

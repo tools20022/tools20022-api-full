@@ -19,8 +19,13 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.sese.*;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.entity.Entry;
 import com.tools20022.repository.entity.SecuritiesTradeIdentification;
+import com.tools20022.repository.entity.TradeIdentification;
+import com.tools20022.repository.GeneratedRepository;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -144,14 +149,14 @@ public class TransactionIdentifications1 {
 	 */
 	public static final MMMessageAttribute mmAccountOwnerTransactionIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Entry.mmAccountOwnerTransactionIdentification;
+			businessElementTrace_lazy = () -> Entry.mmAccountOwnerTransactionIdentification;
 			componentContext_lazy = () -> TransactionIdentifications1.mmObject();
 			isDerived = false;
 			xmlTag = "AcctOwnrTxId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountOwnerTransactionIdentification";
 			definition = "Unambiguous identification of the transaction as known by the account owner (or the instructing party managing the account).";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionIdentifications32.mmAccountOwnerTransactionIdentification);
+			nextVersions_lazy = () -> Arrays.asList(TransactionIdentifications32.mmAccountOwnerTransactionIdentification);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -203,14 +208,14 @@ public class TransactionIdentifications1 {
 	 */
 	public static final MMMessageAttribute mmAccountServicerTransactionIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Entry.mmAccountServicerTransactionIdentification;
+			businessElementTrace_lazy = () -> Entry.mmAccountServicerTransactionIdentification;
 			componentContext_lazy = () -> TransactionIdentifications1.mmObject();
 			isDerived = false;
 			xmlTag = "AcctSvcrTxId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountServicerTransactionIdentification";
 			definition = "Unambiguous identification of the transaction as known by the account servicer.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionIdentifications32.mmAccountServicerTransactionIdentification);
+			nextVersions_lazy = () -> Arrays.asList(TransactionIdentifications32.mmAccountServicerTransactionIdentification);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -262,14 +267,14 @@ public class TransactionIdentifications1 {
 	 */
 	public static final MMMessageAttribute mmCommonIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradeIdentification.mmCommonIdentification;
+			businessElementTrace_lazy = () -> TradeIdentification.mmCommonIdentification;
 			componentContext_lazy = () -> TransactionIdentifications1.mmObject();
 			isDerived = false;
 			xmlTag = "CmonId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommonIdentification";
 			definition = "Unique reference agreed upon by the two trade counterparties to identify the trade.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionIdentifications32.mmCommonIdentification);
+			nextVersions_lazy = () -> Arrays.asList(TransactionIdentifications32.mmCommonIdentification);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -279,14 +284,13 @@ public class TransactionIdentifications1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionIdentifications1.mmAccountOwnerTransactionIdentification,
-						com.tools20022.repository.msg.TransactionIdentifications1.mmAccountServicerTransactionIdentification, com.tools20022.repository.msg.TransactionIdentifications1.mmCommonIdentification);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesFinancingStatusAdviceV01.mmTransactionIdentification,
-						com.tools20022.repository.area.sese.SecuritiesFinancingStatusAdviceV02.mmTransactionIdentification, com.tools20022.repository.area.sese.SecuritiesFinancingStatusAdviceV03.mmTransactionIdentification,
-						com.tools20022.repository.area.sese.SecuritiesFinancingStatusAdviceV04.mmTransactionIdentification, com.tools20022.repository.area.sese.SecuritiesFinancingStatusAdviceV05.mmTransactionIdentification);
+				messageElement_lazy = () -> Arrays.asList(TransactionIdentifications1.mmAccountOwnerTransactionIdentification, TransactionIdentifications1.mmAccountServicerTransactionIdentification,
+						TransactionIdentifications1.mmCommonIdentification);
+				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesFinancingStatusAdviceV01.mmTransactionIdentification, SecuritiesFinancingStatusAdviceV02.mmTransactionIdentification,
+						SecuritiesFinancingStatusAdviceV03.mmTransactionIdentification, SecuritiesFinancingStatusAdviceV04.mmTransactionIdentification, SecuritiesFinancingStatusAdviceV05.mmTransactionIdentification);
 				trace_lazy = () -> SecuritiesTradeIdentification.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
 						return DateFormat.getDateInstance(java.text.DateFormat.LONG).parse("May 5, 2016");

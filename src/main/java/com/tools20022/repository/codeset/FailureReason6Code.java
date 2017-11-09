@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.FailureReasonCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -83,7 +85,7 @@ public class FailureReason6Code extends FailureReasonCode {
 	 */
 	public static final MMCode mmCompromised = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Compromised";
 			owner_lazy = () -> FailureReason6Code.mmObject();
 		}
@@ -106,7 +108,7 @@ public class FailureReason6Code extends FailureReasonCode {
 	 */
 	public static final MMCode mmExpired = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Expired";
 			owner_lazy = () -> FailureReason6Code.mmObject();
 		}
@@ -129,7 +131,7 @@ public class FailureReason6Code extends FailureReasonCode {
 	 */
 	public static final MMCode mmInvalidKCV = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvalidKCV";
 			owner_lazy = () -> FailureReason6Code.mmObject();
 		}
@@ -152,7 +154,7 @@ public class FailureReason6Code extends FailureReasonCode {
 	 */
 	public static final MMCode mmKeyLoadError = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "KeyLoadError";
 			owner_lazy = () -> FailureReason6Code.mmObject();
 		}
@@ -161,12 +163,11 @@ public class FailureReason6Code extends FailureReasonCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FailureReason6Code";
 				definition = "Reason for which the key has been stopped.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.FailureReason6Code.mmCompromised, com.tools20022.repository.codeset.FailureReason6Code.mmExpired,
-						com.tools20022.repository.codeset.FailureReason6Code.mmInvalidKCV, com.tools20022.repository.codeset.FailureReason6Code.mmKeyLoadError);
+				code_lazy = () -> Arrays.asList(FailureReason6Code.mmCompromised, FailureReason6Code.mmExpired, FailureReason6Code.mmInvalidKCV, FailureReason6Code.mmKeyLoadError);
 				trace_lazy = () -> FailureReasonCode.mmObject();
 			}
 		});

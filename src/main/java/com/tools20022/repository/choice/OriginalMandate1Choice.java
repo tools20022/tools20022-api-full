@@ -20,9 +20,11 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.DirectDebitMandate;
 import com.tools20022.repository.entity.Mandate;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.MandateInformation1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -102,11 +104,11 @@ public class OriginalMandate1Choice {
 	 */
 	public static final MMMessageAttribute mmOriginalMandateIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Mandate.mmMandateIdentification;
+			businessElementTrace_lazy = () -> Mandate.mmMandateIdentification;
 			componentContext_lazy = () -> OriginalMandate1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlMndtId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalMandateIdentification";
 			definition = "Unique identification, as assigned by the creditor, to unambiguously identify the original mandate.";
 			maxOccurs = 1;
@@ -153,7 +155,7 @@ public class OriginalMandate1Choice {
 			componentContext_lazy = () -> OriginalMandate1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlMndt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalMandate";
 			definition = "Set of elements used to provide the original mandate data.";
 			maxOccurs = 1;
@@ -166,10 +168,10 @@ public class OriginalMandate1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.OriginalMandate1Choice.mmOriginalMandateIdentification, com.tools20022.repository.choice.OriginalMandate1Choice.mmOriginalMandate);
+				messageElement_lazy = () -> Arrays.asList(OriginalMandate1Choice.mmOriginalMandateIdentification, OriginalMandate1Choice.mmOriginalMandate);
 				trace_lazy = () -> Mandate.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OriginalMandate1Choice";
 				definition = "Specifies the mandate that is being accepted.";
 			}

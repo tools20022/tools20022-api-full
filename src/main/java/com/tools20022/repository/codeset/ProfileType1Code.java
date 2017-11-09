@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ProfileTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -82,7 +84,7 @@ public class ProfileType1Code extends ProfileTypeCode {
 	 */
 	public static final MMCode mmHedge = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Hedge";
 			owner_lazy = () -> ProfileType1Code.mmObject();
 		}
@@ -105,7 +107,7 @@ public class ProfileType1Code extends ProfileTypeCode {
 	 */
 	public static final MMCode mmHighFrequencyTrader = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HighFrequencyTrader";
 			owner_lazy = () -> ProfileType1Code.mmObject();
 		}
@@ -128,7 +130,7 @@ public class ProfileType1Code extends ProfileTypeCode {
 	 */
 	public static final MMCode mmMarketMaker = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketMaker";
 			owner_lazy = () -> ProfileType1Code.mmObject();
 		}
@@ -151,7 +153,7 @@ public class ProfileType1Code extends ProfileTypeCode {
 	 */
 	public static final MMCode mmTreasury = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Treasury";
 			owner_lazy = () -> ProfileType1Code.mmObject();
 		}
@@ -160,12 +162,11 @@ public class ProfileType1Code extends ProfileTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ProfileType1Code";
 				definition = "Specifies the type of profile.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ProfileType1Code.mmHedge, com.tools20022.repository.codeset.ProfileType1Code.mmHighFrequencyTrader,
-						com.tools20022.repository.codeset.ProfileType1Code.mmMarketMaker, com.tools20022.repository.codeset.ProfileType1Code.mmTreasury);
+				code_lazy = () -> Arrays.asList(ProfileType1Code.mmHedge, ProfileType1Code.mmHighFrequencyTrader, ProfileType1Code.mmMarketMaker, ProfileType1Code.mmTreasury);
 				trace_lazy = () -> ProfileTypeCode.mmObject();
 			}
 		});

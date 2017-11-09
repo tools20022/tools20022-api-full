@@ -20,7 +20,12 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.CardPayment;
+import com.tools20022.repository.entity.CardPaymentAcquiring;
+import com.tools20022.repository.entity.CashBalance;
+import com.tools20022.repository.entity.Payment;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -130,15 +135,15 @@ public class CardPaymentTransaction24 {
 	 */
 	public static final MMMessageAssociationEnd mmAuthorisationResult = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.mmValidation;
+			businessElementTrace_lazy = () -> CardPaymentAcquiring.mmValidation;
 			componentContext_lazy = () -> CardPaymentTransaction24.mmObject();
 			isDerived = false;
 			xmlTag = "AuthstnRslt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AuthorisationResult";
 			definition = "Outcome of the authorisation, and actions to perform.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardPaymentTransaction39.mmAuthorisationResult);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CardPaymentTransaction18.mmAuthorisationResult;
+			nextVersions_lazy = () -> Arrays.asList(CardPaymentTransaction39.mmAuthorisationResult);
+			previousVersion_lazy = () -> CardPaymentTransaction18.mmAuthorisationResult;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -194,11 +199,11 @@ public class CardPaymentTransaction24 {
 			componentContext_lazy = () -> CardPaymentTransaction24.mmObject();
 			isDerived = false;
 			xmlTag = "TxVrfctnRslt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionVerificationResult";
 			definition = "Result of the verifications performed by the issuer to deliver or decline the authorisation.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardPaymentTransaction39.mmTransactionVerificationResult);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CardPaymentTransaction18.mmTransactionVerificationResult;
+			nextVersions_lazy = () -> Arrays.asList(CardPaymentTransaction39.mmTransactionVerificationResult);
+			previousVersion_lazy = () -> CardPaymentTransaction18.mmTransactionVerificationResult;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -254,15 +259,15 @@ public class CardPaymentTransaction24 {
 	 */
 	public static final MMMessageAttribute mmBalance = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashBalance.mmAmount;
+			businessElementTrace_lazy = () -> CashBalance.mmAmount;
 			componentContext_lazy = () -> CardPaymentTransaction24.mmObject();
 			isDerived = false;
 			xmlTag = "Bal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Balance";
 			definition = "Balance of the account, related to the payment.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardPaymentTransaction39.mmBalance);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CardPaymentTransaction18.mmBalance;
+			nextVersions_lazy = () -> Arrays.asList(CardPaymentTransaction39.mmBalance);
+			previousVersion_lazy = () -> CardPaymentTransaction18.mmBalance;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.AmountAndDirection41.mmObject();
@@ -314,11 +319,11 @@ public class CardPaymentTransaction24 {
 			componentContext_lazy = () -> CardPaymentTransaction24.mmObject();
 			isDerived = false;
 			xmlTag = "Actn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Action";
 			definition = "Set of actions to be performed by the POI (Point Of Interaction) system.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardPaymentTransaction39.mmAction);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CardPaymentTransaction18.mmAction;
+			nextVersions_lazy = () -> Arrays.asList(CardPaymentTransaction39.mmAction);
+			previousVersion_lazy = () -> CardPaymentTransaction18.mmAction;
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.Action3.mmObject();
@@ -370,14 +375,14 @@ public class CardPaymentTransaction24 {
 	 */
 	public static final MMMessageAssociationEnd mmCurrencyConversion = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.mmCurrencyExchange;
+			businessElementTrace_lazy = () -> Payment.mmCurrencyExchange;
 			componentContext_lazy = () -> CardPaymentTransaction24.mmObject();
 			isDerived = false;
 			xmlTag = "CcyConvs";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrencyConversion";
 			definition = "Conversion between the currency of a card acceptor and the currency of a card issuer, provided by a dedicated service provider. The currency conversion has to be accepted by the cardholder.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardPaymentTransaction39.mmCurrencyConversion);
+			nextVersions_lazy = () -> Arrays.asList(CardPaymentTransaction39.mmCurrencyConversion);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -388,11 +393,11 @@ public class CardPaymentTransaction24 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardPaymentTransaction24.mmAuthorisationResult, com.tools20022.repository.msg.CardPaymentTransaction24.mmTransactionVerificationResult,
-						com.tools20022.repository.msg.CardPaymentTransaction24.mmBalance, com.tools20022.repository.msg.CardPaymentTransaction24.mmAction, com.tools20022.repository.msg.CardPaymentTransaction24.mmCurrencyConversion);
+				messageElement_lazy = () -> Arrays.asList(CardPaymentTransaction24.mmAuthorisationResult, CardPaymentTransaction24.mmTransactionVerificationResult, CardPaymentTransaction24.mmBalance, CardPaymentTransaction24.mmAction,
+						CardPaymentTransaction24.mmCurrencyConversion);
 				trace_lazy = () -> CardPayment.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CardPaymentTransaction24";
 				definition = "Authorisation response from the acquirer.";
 				nextVersions_lazy = () -> Arrays.asList(CardPaymentTransaction39.mmObject());

@@ -19,8 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.tsmt.*;
 import com.tools20022.repository.codeset.BaselineStatus2Code;
 import com.tools20022.repository.entity.BaselineStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -116,11 +119,11 @@ public class TransactionStatus3 {
 	 */
 	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BaselineStatus.mmStatus;
+			businessElementTrace_lazy = () -> BaselineStatus.mmStatus;
 			componentContext_lazy = () -> TransactionStatus3.mmObject();
 			isDerived = false;
 			xmlTag = "Sts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Status";
 			definition = "Identifies the status of the transaction by means of a code.";
 			maxOccurs = 1;
@@ -132,13 +135,12 @@ public class TransactionStatus3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionStatus3.mmStatus);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.StatusChangeRequestV02.mmRequestedStatus, com.tools20022.repository.area.tsmt.StatusChangeRequestAcceptanceV02.mmAcceptedStatus,
-						com.tools20022.repository.area.tsmt.StatusChangeRequestNotificationV03.mmProposedStatusChange, com.tools20022.repository.area.tsmt.StatusChangeRequestRejectionV02.mmRejectedStatusChange,
-						com.tools20022.repository.area.tsmt.StatusChangeRequestRejectionNotificationV03.mmRejectedStatusChange);
+				messageElement_lazy = () -> Arrays.asList(TransactionStatus3.mmStatus);
+				messageBuildingBlock_lazy = () -> Arrays.asList(StatusChangeRequestV02.mmRequestedStatus, StatusChangeRequestAcceptanceV02.mmAcceptedStatus, StatusChangeRequestNotificationV03.mmProposedStatusChange,
+						StatusChangeRequestRejectionV02.mmRejectedStatusChange, StatusChangeRequestRejectionNotificationV03.mmRejectedStatusChange);
 				trace_lazy = () -> BaselineStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TransactionStatus3";
 				definition = "Identifies the status of the transaction by means of a code.";
 			}

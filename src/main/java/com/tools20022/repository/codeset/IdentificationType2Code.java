@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.IdentificationTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -83,7 +85,7 @@ public class IdentificationType2Code extends IdentificationTypeCode {
 	 */
 	public static final MMCode mmCDC = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CDC";
 			owner_lazy = () -> IdentificationType2Code.mmObject();
 		}
@@ -106,7 +108,7 @@ public class IdentificationType2Code extends IdentificationTypeCode {
 	 */
 	public static final MMCode mmCFETS = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CFETS";
 			owner_lazy = () -> IdentificationType2Code.mmObject();
 		}
@@ -129,7 +131,7 @@ public class IdentificationType2Code extends IdentificationTypeCode {
 	 */
 	public static final MMCode mmRICCode = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RICCode";
 			owner_lazy = () -> IdentificationType2Code.mmObject();
 		}
@@ -152,7 +154,7 @@ public class IdentificationType2Code extends IdentificationTypeCode {
 	 */
 	public static final MMCode mmUserDefined = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UserDefined";
 			owner_lazy = () -> IdentificationType2Code.mmObject();
 		}
@@ -161,12 +163,11 @@ public class IdentificationType2Code extends IdentificationTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "IdentificationType2Code";
 				definition = "Indicates the source of the leg identification.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.IdentificationType2Code.mmCDC, com.tools20022.repository.codeset.IdentificationType2Code.mmCFETS,
-						com.tools20022.repository.codeset.IdentificationType2Code.mmRICCode, com.tools20022.repository.codeset.IdentificationType2Code.mmUserDefined);
+				code_lazy = () -> Arrays.asList(IdentificationType2Code.mmCDC, IdentificationType2Code.mmCFETS, IdentificationType2Code.mmRICCode, IdentificationType2Code.mmUserDefined);
 				trace_lazy = () -> IdentificationTypeCode.mmObject();
 			}
 		});

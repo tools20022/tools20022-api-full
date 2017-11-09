@@ -19,10 +19,13 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.DateAndDateTimeChoice;
 import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.entity.DateTimePeriod;
 import com.tools20022.repository.entity.LocalName;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -101,11 +104,11 @@ public class FinancialInstrumentName1 {
 	 */
 	public static final MMMessageAttribute mmISOShortName = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.LocalName.mmShortName;
+			businessElementTrace_lazy = () -> LocalName.mmShortName;
 			componentContext_lazy = () -> FinancialInstrumentName1.mmObject();
 			isDerived = false;
 			xmlTag = "ISOShrtNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ISOShortName";
 			definition = "Short name of the security expressed as ISO 18773/18774.";
 			maxOccurs = 1;
@@ -148,11 +151,11 @@ public class FinancialInstrumentName1 {
 	 */
 	public static final MMMessageAttribute mmISOLongName = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.LocalName.mmFullName;
+			businessElementTrace_lazy = () -> LocalName.mmFullName;
 			componentContext_lazy = () -> FinancialInstrumentName1.mmObject();
 			isDerived = false;
 			xmlTag = "ISOLngNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ISOLongName";
 			definition = "Name of the security.";
 			maxOccurs = 1;
@@ -197,11 +200,11 @@ public class FinancialInstrumentName1 {
 	 */
 	public static final MMMessageAttribute mmValidFrom = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmFromDateTime;
+			businessElementTrace_lazy = () -> DateTimePeriod.mmFromDateTime;
 			componentContext_lazy = () -> FinancialInstrumentName1.mmObject();
 			isDerived = false;
 			xmlTag = "VldFr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValidFrom";
 			definition = "Defines the date since when the name of the security is valid.";
 			maxOccurs = 1;
@@ -213,11 +216,10 @@ public class FinancialInstrumentName1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrumentName1.mmISOShortName, com.tools20022.repository.msg.FinancialInstrumentName1.mmISOLongName,
-						com.tools20022.repository.msg.FinancialInstrumentName1.mmValidFrom);
+				messageElement_lazy = () -> Arrays.asList(FinancialInstrumentName1.mmISOShortName, FinancialInstrumentName1.mmISOLongName, FinancialInstrumentName1.mmValidFrom);
 				trace_lazy = () -> LocalName.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "FinancialInstrumentName1";
 				definition = "Name of the security.";
 			}

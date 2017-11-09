@@ -20,9 +20,11 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.RateValueType7Code;
 import com.tools20022.repository.datatype.ActiveCurrencyAnd13DecimalAmount;
 import com.tools20022.repository.datatype.PercentageRate;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.RateTypeAndPercentageRate1;
 import java.text.DateFormat;
 import java.util.Arrays;
@@ -124,10 +126,10 @@ public class RateAndAmountFormat20Choice {
 			componentContext_lazy = () -> RateAndAmountFormat20Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Rate";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rate";
 			definition = "Value expressed as a rate.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.RateAndAmountFormat41Choice.mmRate);
+			nextVersions_lazy = () -> Arrays.asList(RateAndAmountFormat41Choice.mmRate);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
@@ -175,10 +177,10 @@ public class RateAndAmountFormat20Choice {
 			componentContext_lazy = () -> RateAndAmountFormat20Choice.mmObject();
 			isDerived = false;
 			xmlTag = "NotSpcfdRate";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotSpecifiedRate";
 			definition = "Value of the rate not specified.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.RateAndAmountFormat41Choice.mmNotSpecifiedRate);
+			nextVersions_lazy = () -> Arrays.asList(RateAndAmountFormat41Choice.mmNotSpecifiedRate);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RateValueType7Code.mmObject();
@@ -226,10 +228,10 @@ public class RateAndAmountFormat20Choice {
 			componentContext_lazy = () -> RateAndAmountFormat20Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Amt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Value is expressed as a currency and amount.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.RateAndAmountFormat41Choice.mmAmount);
+			nextVersions_lazy = () -> Arrays.asList(RateAndAmountFormat41Choice.mmAmount);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAnd13DecimalAmount.mmObject();
@@ -276,10 +278,10 @@ public class RateAndAmountFormat20Choice {
 			componentContext_lazy = () -> RateAndAmountFormat20Choice.mmObject();
 			isDerived = false;
 			xmlTag = "RateTpAndRate";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RateTypeAndRate";
 			definition = "Value is expressed as a rate type and a percentage rate.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.RateAndAmountFormat41Choice.mmRateTypeAndRate);
+			nextVersions_lazy = () -> Arrays.asList(RateAndAmountFormat41Choice.mmRateTypeAndRate);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -290,10 +292,9 @@ public class RateAndAmountFormat20Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.RateAndAmountFormat20Choice.mmRate, com.tools20022.repository.choice.RateAndAmountFormat20Choice.mmNotSpecifiedRate,
-						com.tools20022.repository.choice.RateAndAmountFormat20Choice.mmAmount, com.tools20022.repository.choice.RateAndAmountFormat20Choice.mmRateTypeAndRate);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+				messageElement_lazy = () -> Arrays.asList(RateAndAmountFormat20Choice.mmRate, RateAndAmountFormat20Choice.mmNotSpecifiedRate, RateAndAmountFormat20Choice.mmAmount, RateAndAmountFormat20Choice.mmRateTypeAndRate);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
 						return DateFormat.getDateInstance(java.text.DateFormat.LONG).parse("May 5, 2016");

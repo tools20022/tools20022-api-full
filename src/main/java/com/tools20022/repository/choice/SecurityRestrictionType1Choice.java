@@ -19,7 +19,9 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.RestrictionType1Code;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification40;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -96,7 +98,7 @@ public class SecurityRestrictionType1Choice {
 			componentContext_lazy = () -> SecurityRestrictionType1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "PrtryRstrctn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProprietaryRestriction";
 			definition = "Type of the restriction, for example, selling restriction, buying restriction, placing restriction.";
 			maxOccurs = 1;
@@ -141,7 +143,7 @@ public class SecurityRestrictionType1Choice {
 			componentContext_lazy = () -> SecurityRestrictionType1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "RstrctnTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RestrictionType";
 			definition = "Type of the restriction, for example, selling restriction, buying restriction, placing restriction.";
 			maxOccurs = 1;
@@ -153,9 +155,9 @@ public class SecurityRestrictionType1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SecurityRestrictionType1Choice.mmProprietaryRestriction, com.tools20022.repository.choice.SecurityRestrictionType1Choice.mmRestrictionType);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(SecurityRestrictionType1Choice.mmProprietaryRestriction, SecurityRestrictionType1Choice.mmRestrictionType);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SecurityRestrictionType1Choice";
 				definition = "Choice between the type of restriction.";
 			}

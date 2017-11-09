@@ -20,9 +20,10 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.*;
-import com.tools20022.repository.entity.ContactPoint;
-import com.tools20022.repository.entity.PostalAddress;
+import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -116,11 +117,11 @@ public class ContactAttributes1 {
 	 */
 	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyName.mmName;
+			businessElementTrace_lazy = () -> PartyName.mmName;
 			componentContext_lazy = () -> ContactAttributes1.mmObject();
 			isDerived = false;
 			xmlTag = "Nm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Name";
 			definition = "Name by which a party is known and which is usually used to identify that party.";
 			maxOccurs = 1;
@@ -169,7 +170,7 @@ public class ContactAttributes1 {
 			componentContext_lazy = () -> ContactAttributes1.mmObject();
 			isDerived = false;
 			xmlTag = "PstlAdr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PostalAddress";
 			definition = "Information that locates and identifies a specific address, as defined by postal services.";
 			maxOccurs = 1;
@@ -216,11 +217,11 @@ public class ContactAttributes1 {
 	 */
 	public static final MMMessageAttribute mmPhoneNumber = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PhoneAddress.mmPhoneNumber;
+			businessElementTrace_lazy = () -> PhoneAddress.mmPhoneNumber;
 			componentContext_lazy = () -> ContactAttributes1.mmObject();
 			isDerived = false;
 			xmlTag = "PhneNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PhoneNumber";
 			definition = "Collection of information that identifies a phone number, as defined by telecom services.";
 			maxOccurs = 1;
@@ -266,11 +267,11 @@ public class ContactAttributes1 {
 	 */
 	public static final MMMessageAttribute mmFaxNumber = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PhoneAddress.mmFaxNumber;
+			businessElementTrace_lazy = () -> PhoneAddress.mmFaxNumber;
 			componentContext_lazy = () -> ContactAttributes1.mmObject();
 			isDerived = false;
 			xmlTag = "FaxNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FaxNumber";
 			definition = "Collection of information that identifies a FAX number, as defined by telecom services.";
 			maxOccurs = 1;
@@ -313,11 +314,11 @@ public class ContactAttributes1 {
 	 */
 	public static final MMMessageAttribute mmEmailAddress = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ElectronicAddress.mmEmailAddress;
+			businessElementTrace_lazy = () -> ElectronicAddress.mmEmailAddress;
 			componentContext_lazy = () -> ContactAttributes1.mmObject();
 			isDerived = false;
 			xmlTag = "EmailAdr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EmailAddress";
 			definition = "Address for electronic mail (e-mail).";
 			maxOccurs = 1;
@@ -363,11 +364,11 @@ public class ContactAttributes1 {
 	 */
 	public static final MMMessageAttribute mmURLAddress = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ElectronicAddress.mmURLAddress;
+			businessElementTrace_lazy = () -> ElectronicAddress.mmURLAddress;
 			componentContext_lazy = () -> ContactAttributes1.mmObject();
 			isDerived = false;
 			xmlTag = "URLAdr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "URLAddress";
 			definition = "Address for the Universal Resource Locator (URL), eg, used over the www (HTTP) service.";
 			maxOccurs = 1;
@@ -415,11 +416,11 @@ public class ContactAttributes1 {
 	 */
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ContactPoint.mmBICAddress;
+			businessElementTrace_lazy = () -> ContactPoint.mmBICAddress;
 			componentContext_lazy = () -> ContactAttributes1.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Unique and unambiguous identification of a financial institution, as assigned under a globally recognised or proprietary identification scheme.";
 			maxOccurs = 1;
@@ -431,12 +432,11 @@ public class ContactAttributes1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ContactAttributes1.mmName, com.tools20022.repository.msg.ContactAttributes1.mmPostalAddress,
-						com.tools20022.repository.msg.ContactAttributes1.mmPhoneNumber, com.tools20022.repository.msg.ContactAttributes1.mmFaxNumber, com.tools20022.repository.msg.ContactAttributes1.mmEmailAddress,
-						com.tools20022.repository.msg.ContactAttributes1.mmURLAddress, com.tools20022.repository.msg.ContactAttributes1.mmIdentification);
+				messageElement_lazy = () -> Arrays.asList(ContactAttributes1.mmName, ContactAttributes1.mmPostalAddress, ContactAttributes1.mmPhoneNumber, ContactAttributes1.mmFaxNumber, ContactAttributes1.mmEmailAddress,
+						ContactAttributes1.mmURLAddress, ContactAttributes1.mmIdentification);
 				trace_lazy = () -> ContactPoint.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ContactAttributes1";
 				definition = "Communication device number or electronic address used for communication.";
 			}

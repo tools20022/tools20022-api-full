@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.BalanceTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -92,7 +94,7 @@ public class SecuritiesBalanceType9Code extends BalanceTypeCode {
 	 */
 	public static final MMCode mmAvailable = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Available";
 			owner_lazy = () -> SecuritiesBalanceType9Code.mmObject();
 		}
@@ -115,7 +117,7 @@ public class SecuritiesBalanceType9Code extends BalanceTypeCode {
 	 */
 	public static final MMCode mmElected = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Elected";
 			owner_lazy = () -> SecuritiesBalanceType9Code.mmObject();
 		}
@@ -138,7 +140,7 @@ public class SecuritiesBalanceType9Code extends BalanceTypeCode {
 	 */
 	public static final MMCode mmUnelected = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unelected";
 			owner_lazy = () -> SecuritiesBalanceType9Code.mmObject();
 		}
@@ -161,7 +163,7 @@ public class SecuritiesBalanceType9Code extends BalanceTypeCode {
 	 */
 	public static final MMCode mmReservedForDistribution = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReservedForDistribution";
 			owner_lazy = () -> SecuritiesBalanceType9Code.mmObject();
 		}
@@ -184,7 +186,7 @@ public class SecuritiesBalanceType9Code extends BalanceTypeCode {
 	 */
 	public static final MMCode mmReservedForRemoval = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReservedForRemoval";
 			owner_lazy = () -> SecuritiesBalanceType9Code.mmObject();
 		}
@@ -193,14 +195,13 @@ public class SecuritiesBalanceType9Code extends BalanceTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("AVLB");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesBalanceType9Code";
 				definition = "Specifies the type of securities balance.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SecuritiesBalanceType9Code.mmAvailable, com.tools20022.repository.codeset.SecuritiesBalanceType9Code.mmElected,
-						com.tools20022.repository.codeset.SecuritiesBalanceType9Code.mmUnelected, com.tools20022.repository.codeset.SecuritiesBalanceType9Code.mmReservedForDistribution,
-						com.tools20022.repository.codeset.SecuritiesBalanceType9Code.mmReservedForRemoval);
+				code_lazy = () -> Arrays.asList(SecuritiesBalanceType9Code.mmAvailable, SecuritiesBalanceType9Code.mmElected, SecuritiesBalanceType9Code.mmUnelected, SecuritiesBalanceType9Code.mmReservedForDistribution,
+						SecuritiesBalanceType9Code.mmReservedForRemoval);
 				trace_lazy = () -> BalanceTypeCode.mmObject();
 			}
 		});

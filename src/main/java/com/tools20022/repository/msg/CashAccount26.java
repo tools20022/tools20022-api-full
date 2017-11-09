@@ -20,9 +20,11 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.InvestmentAccountType1Choice;
 import com.tools20022.repository.choice.PartyIdentification2Choice;
-import com.tools20022.repository.entity.CashAccount;
+import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -134,14 +136,14 @@ public class CashAccount26 {
 	 */
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.mmIdentification;
+			businessElementTrace_lazy = () -> Account.mmIdentification;
 			componentContext_lazy = () -> CashAccount26.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Unique and unambiguous identification for the account between the account owner and the account servicer.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashAccount32.mmIdentification, com.tools20022.repository.msg.CashAccount33.mmIdentification);
+			nextVersions_lazy = () -> Arrays.asList(CashAccount32.mmIdentification, CashAccount33.mmIdentification);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> com.tools20022.repository.msg.AccountIdentificationAndName3.mmObject();
@@ -192,14 +194,14 @@ public class CashAccount26 {
 	 */
 	public static final MMMessageAssociationEnd mmAccountOwner = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> CashAccount26.mmObject();
 			isDerived = false;
 			xmlTag = "AcctOwnr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountOwner";
 			definition = "Party that legally owns the account.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashAccount32.mmAccountOwner, com.tools20022.repository.msg.CashAccount33.mmAccountOwner);
+			nextVersions_lazy = () -> Arrays.asList(CashAccount32.mmAccountOwner, CashAccount33.mmAccountOwner);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -256,14 +258,14 @@ public class CashAccount26 {
 	 */
 	public static final MMMessageAssociationEnd mmAccountServicer = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> CashAccount26.mmObject();
 			isDerived = false;
 			xmlTag = "AcctSvcr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountServicer";
 			definition = "Party that manages the account on behalf of the account owner, that is manages the registration and booking of entries on the account, calculates balances on the account and provides information about the account.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashAccount32.mmAccountServicer, com.tools20022.repository.msg.CashAccount33.mmAccountServicer);
+			nextVersions_lazy = () -> Arrays.asList(CashAccount32.mmAccountServicer, CashAccount33.mmAccountServicer);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -321,14 +323,14 @@ public class CashAccount26 {
 	 */
 	public static final MMMessageAttribute mmAccountServicerBranch = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Organisation.mmBranch;
+			businessElementTrace_lazy = () -> Organisation.mmBranch;
 			componentContext_lazy = () -> CashAccount26.mmObject();
 			isDerived = false;
 			xmlTag = "AcctSvcrBrnch";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountServicerBranch";
 			definition = "Information identifying a specific branch of a financial institution.\n\nUsage : this component should be used in case the identification information in the financial institution component does not provide identification up to branch level.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashAccount32.mmAccountServicerBranch, com.tools20022.repository.msg.CashAccount33.mmAccountServicerBranch);
+			nextVersions_lazy = () -> Arrays.asList(CashAccount32.mmAccountServicerBranch, CashAccount33.mmAccountServicerBranch);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.BranchData.mmObject();
@@ -380,14 +382,14 @@ public class CashAccount26 {
 	 */
 	public static final MMMessageAttribute mmInvestmentAccountType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashAccount.mmRelatedInvestmentAccount;
+			businessElementTrace_lazy = () -> CashAccount.mmRelatedInvestmentAccount;
 			componentContext_lazy = () -> CashAccount26.mmObject();
 			isDerived = false;
 			xmlTag = "InvstmtAcctTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestmentAccountType";
 			definition = "Purpose of the account/source fund type. This is typically linked to an investment product, eg, wrapper, ISA.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashAccount33.mmInvestmentAccountType);
+			nextVersions_lazy = () -> Arrays.asList(CashAccount33.mmInvestmentAccountType);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> InvestmentAccountType1Choice.mmObject();
@@ -439,14 +441,14 @@ public class CashAccount26 {
 	 */
 	public static final MMMessageAttribute mmAccountOwnerOtherIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.mmOtherIdentification;
+			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmOtherIdentification;
 			componentContext_lazy = () -> CashAccount26.mmObject();
 			isDerived = false;
 			xmlTag = "AcctOwnrOthrId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountOwnerOtherIdentification";
 			definition = "Other identification such as national registration identification number, passport number.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashAccount33.mmAccountOwnerOtherIdentification);
+			nextVersions_lazy = () -> Arrays.asList(CashAccount33.mmAccountOwnerOtherIdentification);
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.GenericIdentification46.mmObject();
 		}
@@ -455,12 +457,11 @@ public class CashAccount26 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashAccount26.mmIdentification, com.tools20022.repository.msg.CashAccount26.mmAccountOwner,
-						com.tools20022.repository.msg.CashAccount26.mmAccountServicer, com.tools20022.repository.msg.CashAccount26.mmAccountServicerBranch, com.tools20022.repository.msg.CashAccount26.mmInvestmentAccountType,
-						com.tools20022.repository.msg.CashAccount26.mmAccountOwnerOtherIdentification);
+				messageElement_lazy = () -> Arrays.asList(CashAccount26.mmIdentification, CashAccount26.mmAccountOwner, CashAccount26.mmAccountServicer, CashAccount26.mmAccountServicerBranch, CashAccount26.mmInvestmentAccountType,
+						CashAccount26.mmAccountOwnerOtherIdentification);
 				trace_lazy = () -> CashAccount.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CashAccount26";
 				definition = "Account to or from which a cash entry is made.";
 				nextVersions_lazy = () -> Arrays.asList(CashAccount32.mmObject(), CashAccount33.mmObject());

@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,12 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.Holding1Code Holding1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -37,12 +45,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * HoldingCode.mmNonPartialHolding}</li>
  * <li>{@linkplain com.tools20022.repository.codeset.HoldingCode#mmCertificate
  * HoldingCode.mmCertificate}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.Holding1Code Holding1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -91,7 +93,7 @@ public class HoldingCode {
 	 */
 	public static final MMCode mmPartialHolding = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartialHolding";
 			definition = "Partial holding.";
 			owner_lazy = () -> HoldingCode.mmObject();
@@ -120,7 +122,7 @@ public class HoldingCode {
 	 */
 	public static final MMCode mmNonPartialHolding = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonPartialHolding";
 			definition = "Non partial holding.";
 			owner_lazy = () -> HoldingCode.mmObject();
@@ -149,7 +151,7 @@ public class HoldingCode {
 	 */
 	public static final MMCode mmCertificate = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Certificate";
 			definition = "Certificate.";
 			owner_lazy = () -> HoldingCode.mmObject();
@@ -160,12 +162,12 @@ public class HoldingCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("PRTH");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "HoldingCode";
 				definition = "Specifies how the holding is blocked.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.HoldingCode.mmPartialHolding, com.tools20022.repository.codeset.HoldingCode.mmNonPartialHolding, com.tools20022.repository.codeset.HoldingCode.mmCertificate);
+				code_lazy = () -> Arrays.asList(HoldingCode.mmPartialHolding, HoldingCode.mmNonPartialHolding, HoldingCode.mmCertificate);
 				derivation_lazy = () -> Arrays.asList(Holding1Code.mmObject());
 			}
 		});

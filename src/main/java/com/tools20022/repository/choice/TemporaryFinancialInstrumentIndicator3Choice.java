@@ -20,8 +20,10 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.Security;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification30;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -114,14 +116,14 @@ public class TemporaryFinancialInstrumentIndicator3Choice {
 	 */
 	public static final MMMessageAttribute mmTemporaryIndicator = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmTemporaryFinancialInstrumentIndicator;
+			businessElementTrace_lazy = () -> Security.mmTemporaryFinancialInstrumentIndicator;
 			componentContext_lazy = () -> TemporaryFinancialInstrumentIndicator3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "TempInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TemporaryIndicator";
 			definition = "Temporary financial instrument identification used for processing reasons.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.TemporaryFinancialInstrumentIndicator1Choice.mmTemporaryIndicator;
+			previousVersion_lazy = () -> TemporaryFinancialInstrumentIndicator1Choice.mmTemporaryIndicator;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
@@ -169,14 +171,14 @@ public class TemporaryFinancialInstrumentIndicator3Choice {
 	 */
 	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmTemporaryFinancialInstrumentIndicator;
+			businessElementTrace_lazy = () -> Security.mmTemporaryFinancialInstrumentIndicator;
 			componentContext_lazy = () -> TemporaryFinancialInstrumentIndicator3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Proprietary code to specify whether the security is a temporary security.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.TemporaryFinancialInstrumentIndicator1Choice.mmProprietary;
+			previousVersion_lazy = () -> TemporaryFinancialInstrumentIndicator1Choice.mmProprietary;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -187,11 +189,10 @@ public class TemporaryFinancialInstrumentIndicator3Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.TemporaryFinancialInstrumentIndicator3Choice.mmTemporaryIndicator,
-						com.tools20022.repository.choice.TemporaryFinancialInstrumentIndicator3Choice.mmProprietary);
+				messageElement_lazy = () -> Arrays.asList(TemporaryFinancialInstrumentIndicator3Choice.mmTemporaryIndicator, TemporaryFinancialInstrumentIndicator3Choice.mmProprietary);
 				trace_lazy = () -> Security.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TemporaryFinancialInstrumentIndicator3Choice";
 				definition = "Choice between an indicator or a proprietary code to specify whether the security is a temporary security.";
 				previousVersion_lazy = () -> TemporaryFinancialInstrumentIndicator1Choice.mmObject();

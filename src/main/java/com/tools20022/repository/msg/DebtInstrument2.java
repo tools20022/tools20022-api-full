@@ -20,11 +20,16 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.InterestRate6Choice;
 import com.tools20022.repository.codeset.DebtInstrumentSeniorityType1Code;
 import com.tools20022.repository.datatype.ActiveOrHistoricCurrencyAndAmount;
 import com.tools20022.repository.datatype.ISODate;
+import com.tools20022.repository.entity.Asset;
+import com.tools20022.repository.entity.AssetHolding;
 import com.tools20022.repository.entity.Debt;
+import com.tools20022.repository.entity.Interest;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -113,7 +118,7 @@ public class DebtInstrument2 {
 			componentContext_lazy = () -> DebtInstrument2.mmObject();
 			isDerived = false;
 			xmlTag = "TtlIssdNmnlAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalIssuedNominalAmount";
 			definition = "Total issued nominal amount in monetary value.";
 			maxOccurs = 1;
@@ -164,14 +169,14 @@ public class DebtInstrument2 {
 	 */
 	public static final MMMessageAttribute mmMaturityDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Asset.mmMaturityDate;
+			businessElementTrace_lazy = () -> Asset.mmMaturityDate;
 			componentContext_lazy = () -> DebtInstrument2.mmObject();
 			isDerived = false;
 			xmlTag = "MtrtyDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaturityDate";
 			definition = "Maturity date of the financial instrument.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DebtInstrument4.mmMaturityDate);
+			nextVersions_lazy = () -> Arrays.asList(DebtInstrument4.mmMaturityDate);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
@@ -216,11 +221,11 @@ public class DebtInstrument2 {
 	 */
 	public static final MMMessageAttribute mmNominalValuePerUnit = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmHoldingValue;
+			businessElementTrace_lazy = () -> AssetHolding.mmHoldingValue;
 			componentContext_lazy = () -> DebtInstrument2.mmObject();
 			isDerived = false;
 			xmlTag = "NmnlValPerUnit";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NominalValuePerUnit";
 			definition = "Nominal value of each instrument. If not available, the minimum traded value should be populated.";
 			maxOccurs = 1;
@@ -262,11 +267,11 @@ public class DebtInstrument2 {
 	 */
 	public static final MMMessageAssociationEnd mmInterestRate = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Interest.mmRate;
+			businessElementTrace_lazy = () -> Interest.mmRate;
 			componentContext_lazy = () -> DebtInstrument2.mmObject();
 			isDerived = false;
 			xmlTag = "IntrstRate";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterestRate";
 			definition = "Interest rate of the debt instrument.";
 			maxOccurs = 1;
@@ -309,7 +314,7 @@ public class DebtInstrument2 {
 			componentContext_lazy = () -> DebtInstrument2.mmObject();
 			isDerived = false;
 			xmlTag = "DebtSnrty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DebtSeniority";
 			definition = "Seniority for a specific debt instrument.";
 			maxOccurs = 1;
@@ -321,11 +326,10 @@ public class DebtInstrument2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DebtInstrument2.mmTotalIssuedNominalAmount, com.tools20022.repository.msg.DebtInstrument2.mmMaturityDate,
-						com.tools20022.repository.msg.DebtInstrument2.mmNominalValuePerUnit, com.tools20022.repository.msg.DebtInstrument2.mmInterestRate, com.tools20022.repository.msg.DebtInstrument2.mmDebtSeniority);
+				messageElement_lazy = () -> Arrays.asList(DebtInstrument2.mmTotalIssuedNominalAmount, DebtInstrument2.mmMaturityDate, DebtInstrument2.mmNominalValuePerUnit, DebtInstrument2.mmInterestRate, DebtInstrument2.mmDebtSeniority);
 				trace_lazy = () -> Debt.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DebtInstrument2";
 				definition = "Specifies the debit instrument.";
 				nextVersions_lazy = () -> Arrays.asList(DebtInstrument4.mmObject());

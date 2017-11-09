@@ -19,7 +19,9 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max350Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -88,7 +90,7 @@ public class Replacement2 {
 			componentContext_lazy = () -> Replacement2.mmObject();
 			isDerived = false;
 			xmlTag = "CurVal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrentValue";
 			definition = "Content of the current element.";
 			maxOccurs = 1;
@@ -128,7 +130,7 @@ public class Replacement2 {
 			componentContext_lazy = () -> Replacement2.mmObject();
 			isDerived = false;
 			xmlTag = "PropsdVal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProposedValue";
 			definition = "Content of the new element.";
 			maxOccurs = 1;
@@ -140,9 +142,9 @@ public class Replacement2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Replacement2.mmCurrentValue, com.tools20022.repository.msg.Replacement2.mmProposedValue);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(Replacement2.mmCurrentValue, Replacement2.mmProposedValue);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Replacement2";
 				definition = "Replacement of an existing content by a different one.";
 			}

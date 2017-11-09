@@ -19,8 +19,10 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.FundOrderType7Code;
 import com.tools20022.repository.entity.InvestmentFundOrder;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification47;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -122,15 +124,15 @@ public class OrderType2Choice {
 	 */
 	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrder.mmOrderType;
+			businessElementTrace_lazy = () -> InvestmentFundOrder.mmOrderType;
 			componentContext_lazy = () -> OrderType2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Order type expressed as a code.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.TransactionType5Choice.mmCode);
-			previousVersion_lazy = () -> com.tools20022.repository.choice.FundOrderType1Choice.mmType;
+			nextVersions_lazy = () -> Arrays.asList(TransactionType5Choice.mmCode);
+			previousVersion_lazy = () -> FundOrderType1Choice.mmType;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> FundOrderType7Code.mmObject();
@@ -185,15 +187,15 @@ public class OrderType2Choice {
 	 */
 	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrder.mmOrderType;
+			businessElementTrace_lazy = () -> InvestmentFundOrder.mmOrderType;
 			componentContext_lazy = () -> OrderType2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Order type expressed as a proprietary code.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.TransactionType5Choice.mmProprietary);
-			previousVersion_lazy = () -> com.tools20022.repository.choice.FundOrderType1Choice.mmProprietary;
+			nextVersions_lazy = () -> Arrays.asList(TransactionType5Choice.mmProprietary);
+			previousVersion_lazy = () -> FundOrderType1Choice.mmProprietary;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification47.mmObject();
@@ -203,10 +205,10 @@ public class OrderType2Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.OrderType2Choice.mmType, com.tools20022.repository.choice.OrderType2Choice.mmProprietary);
+				messageElement_lazy = () -> Arrays.asList(OrderType2Choice.mmType, OrderType2Choice.mmProprietary);
 				trace_lazy = () -> InvestmentFundOrder.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OrderType2Choice";
 				definition = "Choice of formats for the specification of the  order type.";
 				nextVersions_lazy = () -> Arrays.asList(TransactionType5Choice.mmObject());

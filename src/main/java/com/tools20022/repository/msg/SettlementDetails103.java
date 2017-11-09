@@ -19,8 +19,13 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.*;
 import com.tools20022.repository.entity.SecuritiesSettlement;
+import com.tools20022.repository.entity.SecuritiesSettlementPartyRole;
+import com.tools20022.repository.entity.SecuritiesTax;
+import com.tools20022.repository.entity.Security;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -114,11 +119,11 @@ public class SettlementDetails103 {
 	 */
 	public static final MMMessageAttribute mmSettlementTransactionCondition = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmSettlementTransactionCondition;
+			businessElementTrace_lazy = () -> SecuritiesSettlement.mmSettlementTransactionCondition;
 			componentContext_lazy = () -> SettlementDetails103.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmTxCond";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementTransactionCondition";
 			definition = "Conditions under which the order/trade is to be settled.";
 			minOccurs = 0;
@@ -162,11 +167,11 @@ public class SettlementDetails103 {
 	 */
 	public static final MMMessageAttribute mmRegistration = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmRegistration;
+			businessElementTrace_lazy = () -> Security.mmRegistration;
 			componentContext_lazy = () -> SettlementDetails103.mmObject();
 			isDerived = false;
 			xmlTag = "Regn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Registration";
 			definition = "Specifies whether registration should occur upon receipt.";
 			maxOccurs = 1;
@@ -210,11 +215,11 @@ public class SettlementDetails103 {
 	 */
 	public static final MMMessageAttribute mmLegalRestrictions = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmRestriction;
+			businessElementTrace_lazy = () -> Security.mmRestriction;
 			componentContext_lazy = () -> SettlementDetails103.mmObject();
 			isDerived = false;
 			xmlTag = "LglRstrctns";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LegalRestrictions";
 			definition = "Regulatory restrictions applicable to a security.";
 			maxOccurs = 1;
@@ -261,11 +266,11 @@ public class SettlementDetails103 {
 	 */
 	public static final MMMessageAttribute mmSecuritiesRTGS = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmSecuritiesRealTimeGrossSettlement;
+			businessElementTrace_lazy = () -> SecuritiesSettlement.mmSecuritiesRealTimeGrossSettlement;
 			componentContext_lazy = () -> SettlementDetails103.mmObject();
 			isDerived = false;
 			xmlTag = "SctiesRTGS";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesRTGS";
 			definition = "Specifies whether the settlement transaction is to be settled through an RTGS or a non RTGS system.";
 			maxOccurs = 1;
@@ -312,11 +317,11 @@ public class SettlementDetails103 {
 	 */
 	public static final MMMessageAttribute mmSettlementSystemMethod = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmSettlementSystemMethod;
+			businessElementTrace_lazy = () -> SecuritiesSettlement.mmSettlementSystemMethod;
 			componentContext_lazy = () -> SettlementDetails103.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmSysMtd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementSystemMethod";
 			definition = "Specifies whether the settlement instruction is to be settled through the default or the alternate settlement system.";
 			maxOccurs = 1;
@@ -360,11 +365,11 @@ public class SettlementDetails103 {
 	 */
 	public static final MMMessageAttribute mmTaxCapacity = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlementPartyRole.mmTaxCapacity;
+			businessElementTrace_lazy = () -> SecuritiesSettlementPartyRole.mmTaxCapacity;
 			componentContext_lazy = () -> SettlementDetails103.mmObject();
 			isDerived = false;
 			xmlTag = "TaxCpcty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxCapacity";
 			definition = "Tax role capacity of the instructing party.";
 			maxOccurs = 1;
@@ -411,11 +416,11 @@ public class SettlementDetails103 {
 	 */
 	public static final MMMessageAttribute mmStampDutyTaxBasis = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTax.mmStampDutyTaxBasis;
+			businessElementTrace_lazy = () -> SecuritiesTax.mmStampDutyTaxBasis;
 			componentContext_lazy = () -> SettlementDetails103.mmObject();
 			isDerived = false;
 			xmlTag = "StmpDtyTaxBsis";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StampDutyTaxBasis";
 			definition = "Specifies the stamp duty type or exemption reason applicable to the settlement transaction.";
 			maxOccurs = 1;
@@ -427,12 +432,11 @@ public class SettlementDetails103 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SettlementDetails103.mmSettlementTransactionCondition, com.tools20022.repository.msg.SettlementDetails103.mmRegistration,
-						com.tools20022.repository.msg.SettlementDetails103.mmLegalRestrictions, com.tools20022.repository.msg.SettlementDetails103.mmSecuritiesRTGS,
-						com.tools20022.repository.msg.SettlementDetails103.mmSettlementSystemMethod, com.tools20022.repository.msg.SettlementDetails103.mmTaxCapacity, com.tools20022.repository.msg.SettlementDetails103.mmStampDutyTaxBasis);
+				messageElement_lazy = () -> Arrays.asList(SettlementDetails103.mmSettlementTransactionCondition, SettlementDetails103.mmRegistration, SettlementDetails103.mmLegalRestrictions, SettlementDetails103.mmSecuritiesRTGS,
+						SettlementDetails103.mmSettlementSystemMethod, SettlementDetails103.mmTaxCapacity, SettlementDetails103.mmStampDutyTaxBasis);
 				trace_lazy = () -> SecuritiesSettlement.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SettlementDetails103";
 				definition = "Details of settlement of a transaction.";
 			}

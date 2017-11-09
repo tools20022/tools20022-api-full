@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.QuoteResponseType1Code
+ * QuoteResponseType1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -47,13 +56,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.QuoteResponseTypeCode#mmPass
  * QuoteResponseTypeCode.mmPass}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.QuoteResponseType1Code
- * QuoteResponseType1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -104,7 +106,7 @@ public class QuoteResponseTypeCode {
 	 */
 	public static final MMCode mmHitLift = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HitLift";
 			definition = "Acceptance by a party of the conditions of a quote.";
 			owner_lazy = () -> QuoteResponseTypeCode.mmObject();
@@ -137,7 +139,7 @@ public class QuoteResponseTypeCode {
 	 */
 	public static final MMCode mmCounterQuote = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CounterQuote";
 			definition = "Rejection of the conditions of a quote and proposition of new quote details.";
 			owner_lazy = () -> QuoteResponseTypeCode.mmObject();
@@ -168,7 +170,7 @@ public class QuoteResponseTypeCode {
 	 */
 	public static final MMCode mmExpired = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Expired";
 			definition = "Rejection of the conditions of a quote due to its expiry.";
 			owner_lazy = () -> QuoteResponseTypeCode.mmObject();
@@ -200,7 +202,7 @@ public class QuoteResponseTypeCode {
 	 */
 	public static final MMCode mmCover = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cover";
 			definition = "Purchase of a contract to offset a previously established short position.";
 			owner_lazy = () -> QuoteResponseTypeCode.mmObject();
@@ -230,7 +232,7 @@ public class QuoteResponseTypeCode {
 	 */
 	public static final MMCode mmDoneAway = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DoneAway";
 			definition = "Trade completed with a third party, counter-party.";
 			owner_lazy = () -> QuoteResponseTypeCode.mmObject();
@@ -263,7 +265,7 @@ public class QuoteResponseTypeCode {
 	 */
 	public static final MMCode mmPass = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Pass";
 			definition = "Rejection of the conditions of a quote because the offer is being declined";
 			owner_lazy = () -> QuoteResponseTypeCode.mmObject();
@@ -274,14 +276,13 @@ public class QuoteResponseTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("HILI");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "QuoteResponseTypeCode";
 				definition = "Qualifies the nature of response to a previoulsy addressed quote.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.QuoteResponseTypeCode.mmHitLift, com.tools20022.repository.codeset.QuoteResponseTypeCode.mmCounterQuote,
-						com.tools20022.repository.codeset.QuoteResponseTypeCode.mmExpired, com.tools20022.repository.codeset.QuoteResponseTypeCode.mmCover, com.tools20022.repository.codeset.QuoteResponseTypeCode.mmDoneAway,
-						com.tools20022.repository.codeset.QuoteResponseTypeCode.mmPass);
+				code_lazy = () -> Arrays.asList(QuoteResponseTypeCode.mmHitLift, QuoteResponseTypeCode.mmCounterQuote, QuoteResponseTypeCode.mmExpired, QuoteResponseTypeCode.mmCover, QuoteResponseTypeCode.mmDoneAway,
+						QuoteResponseTypeCode.mmPass);
 				derivation_lazy = () -> Arrays.asList(QuoteResponseType1Code.mmObject());
 			}
 		});

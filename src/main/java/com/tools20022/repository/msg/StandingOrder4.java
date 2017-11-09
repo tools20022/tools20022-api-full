@@ -20,8 +20,11 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.StandingOrderOrError4Choice;
 import com.tools20022.repository.entity.CashStandingOrder;
+import com.tools20022.repository.entity.StandingOrder;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -109,14 +112,14 @@ public class StandingOrder4 {
 	 */
 	public static final MMMessageAttribute mmStandingOrderIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StandingOrder.mmIdentification;
+			businessElementTrace_lazy = () -> StandingOrder.mmIdentification;
 			componentContext_lazy = () -> StandingOrder4.mmObject();
 			isDerived = false;
 			xmlTag = "StgOrdrId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StandingOrderIdentification";
 			definition = "Unique and unambiguous identification for the account between the account owner and the account servicer.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.StandingOrder3.mmStandingOrderIdentification;
+			previousVersion_lazy = () -> StandingOrder3.mmStandingOrderIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> com.tools20022.repository.msg.StandingOrderIdentification2.mmObject();
@@ -162,10 +165,10 @@ public class StandingOrder4 {
 			componentContext_lazy = () -> StandingOrder4.mmObject();
 			isDerived = false;
 			xmlTag = "StgOrdrOrErr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StandingOrderOrError";
 			definition = "Requested information on the standing order or business error when information has not been found.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.StandingOrder3.mmStandingOrderOrError;
+			previousVersion_lazy = () -> StandingOrder3.mmStandingOrderOrError;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -176,10 +179,10 @@ public class StandingOrder4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StandingOrder4.mmStandingOrderIdentification, com.tools20022.repository.msg.StandingOrder4.mmStandingOrderOrError);
+				messageElement_lazy = () -> Arrays.asList(StandingOrder4.mmStandingOrderIdentification, StandingOrder4.mmStandingOrderOrError);
 				trace_lazy = () -> CashStandingOrder.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "StandingOrder4";
 				definition = "Defines the detailed attributes of a standing order.";
 				previousVersion_lazy = () -> StandingOrder3.mmObject();

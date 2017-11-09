@@ -17,12 +17,12 @@
 
 package com.tools20022.repository.entity;
 
-import com.tools20022.metamodel.MMBusinessAssociationEnd;
-import com.tools20022.metamodel.MMBusinessAttribute;
-import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.*;
+import com.tools20022.repository.choice.*;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.IndividualPayment;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -38,21 +38,91 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
  * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.DirectDebitMandate2
+ * DirectDebitMandate2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.DirectDebitMandate3
+ * DirectDebitMandate3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.DirectDebitMandate4
+ * DirectDebitMandate4}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.DirectDebitTransaction1
+ * DirectDebitTransaction1}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.DirectDebit#mmRegistrationIdentification
- * DirectDebit.mmRegistrationIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation1
+ * DirectDebitTransactionInformation1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.DirectDebitTransaction6
+ * DirectDebitTransaction6}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.DirectDebit#mmDirectDebitMandate
- * DirectDebit.mmDirectDebitMandate}</li>
+ * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation9
+ * DirectDebitTransactionInformation9}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.DirectDebitTransaction7
+ * DirectDebitTransaction7}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.DirectDebit#mmPreNotificationIdentification
- * DirectDebit.mmPreNotificationIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation11
+ * DirectDebitTransactionInformation11}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.DirectDebit#mmPreNotificationDate
- * DirectDebit.mmPreNotificationDate}</li>
+ * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation13
+ * DirectDebitTransactionInformation13}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation2
+ * DirectDebitTransactionInformation2}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation10
+ * DirectDebitTransactionInformation10}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation12
+ * DirectDebitTransactionInformation12}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation14
+ * DirectDebitTransactionInformation14}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation15
+ * DirectDebitTransactionInformation15}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.DirectDebitTransaction4
+ * DirectDebitTransaction4}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation5
+ * DirectDebitTransactionInformation5}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation7
+ * DirectDebitTransactionInformation7}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.DirectDebitTransaction5
+ * DirectDebitTransaction5}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation6
+ * DirectDebitTransactionInformation6}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation8
+ * DirectDebitTransactionInformation8}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation17
+ * DirectDebitTransactionInformation17}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.DirectDebitTransaction8
+ * DirectDebitTransaction8}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation18
+ * DirectDebitTransactionInformation18}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation20
+ * DirectDebitTransactionInformation20}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation19
+ * DirectDebitTransactionInformation19}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.DirectDebitMandate5
+ * DirectDebitMandate5}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.DirectDebitMandate6
+ * DirectDebitMandate6}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation21
+ * DirectDebitTransactionInformation21}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation22
+ * DirectDebitTransactionInformation22}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.DirectDebitTransaction9
+ * DirectDebitTransaction9}</li>
  * </ul>
  * </li>
  * <li>
@@ -181,91 +251,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
  * superType} = {@linkplain com.tools20022.repository.entity.IndividualPayment
  * IndividualPayment}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.DirectDebitMandate2
- * DirectDebitMandate2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.DirectDebitMandate3
- * DirectDebitMandate3}</li>
- * <li>{@linkplain com.tools20022.repository.msg.DirectDebitMandate4
- * DirectDebitMandate4}</li>
- * <li>{@linkplain com.tools20022.repository.msg.DirectDebitTransaction1
- * DirectDebitTransaction1}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation1
- * DirectDebitTransactionInformation1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.DirectDebitTransaction6
- * DirectDebitTransaction6}</li>
+ * {@linkplain com.tools20022.repository.entity.DirectDebit#mmRegistrationIdentification
+ * DirectDebit.mmRegistrationIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation9
- * DirectDebitTransactionInformation9}</li>
- * <li>{@linkplain com.tools20022.repository.msg.DirectDebitTransaction7
- * DirectDebitTransaction7}</li>
+ * {@linkplain com.tools20022.repository.entity.DirectDebit#mmDirectDebitMandate
+ * DirectDebit.mmDirectDebitMandate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation11
- * DirectDebitTransactionInformation11}</li>
+ * {@linkplain com.tools20022.repository.entity.DirectDebit#mmPreNotificationIdentification
+ * DirectDebit.mmPreNotificationIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation13
- * DirectDebitTransactionInformation13}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation2
- * DirectDebitTransactionInformation2}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation10
- * DirectDebitTransactionInformation10}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation12
- * DirectDebitTransactionInformation12}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation14
- * DirectDebitTransactionInformation14}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation15
- * DirectDebitTransactionInformation15}</li>
- * <li>{@linkplain com.tools20022.repository.msg.DirectDebitTransaction4
- * DirectDebitTransaction4}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation5
- * DirectDebitTransactionInformation5}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation7
- * DirectDebitTransactionInformation7}</li>
- * <li>{@linkplain com.tools20022.repository.msg.DirectDebitTransaction5
- * DirectDebitTransaction5}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation6
- * DirectDebitTransactionInformation6}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation8
- * DirectDebitTransactionInformation8}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation17
- * DirectDebitTransactionInformation17}</li>
- * <li>{@linkplain com.tools20022.repository.msg.DirectDebitTransaction8
- * DirectDebitTransaction8}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation18
- * DirectDebitTransactionInformation18}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation20
- * DirectDebitTransactionInformation20}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation19
- * DirectDebitTransactionInformation19}</li>
- * <li>{@linkplain com.tools20022.repository.msg.DirectDebitMandate5
- * DirectDebitMandate5}</li>
- * <li>{@linkplain com.tools20022.repository.msg.DirectDebitMandate6
- * DirectDebitMandate6}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation21
- * DirectDebitTransactionInformation21}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation22
- * DirectDebitTransactionInformation22}</li>
- * <li>{@linkplain com.tools20022.repository.msg.DirectDebitTransaction9
- * DirectDebitTransaction9}</li>
+ * {@linkplain com.tools20022.repository.entity.DirectDebit#mmPreNotificationDate
+ * DirectDebit.mmPreNotificationDate}</li>
  * </ul>
  * </li>
  * <li>
@@ -339,12 +339,11 @@ public class DirectDebit extends IndividualPayment {
 	 */
 	public static final MMBusinessAttribute mmRegistrationIdentification = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DirectDebitMandate2.mmRegistrationIdentification, com.tools20022.repository.msg.DirectDebitMandate3.mmRegistrationIdentification,
-					com.tools20022.repository.msg.DirectDebitMandate4.mmRegistrationIdentification, com.tools20022.repository.msg.DirectDebitMandate5.mmRegistrationIdentification,
-					com.tools20022.repository.msg.DirectDebitMandate6.mmRegistrationIdentification);
+			derivation_lazy = () -> Arrays.asList(DirectDebitMandate2.mmRegistrationIdentification, DirectDebitMandate3.mmRegistrationIdentification, DirectDebitMandate4.mmRegistrationIdentification,
+					DirectDebitMandate5.mmRegistrationIdentification, DirectDebitMandate6.mmRegistrationIdentification);
 			elementContext_lazy = () -> DirectDebit.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RegistrationIdentification";
 			definition = "Reference assigned to a creditor by its financial institution, or relevant authority, authorising the creditor to take part in a direct debit scheme.";
 			maxOccurs = 1;
@@ -419,19 +418,18 @@ public class DirectDebit extends IndividualPayment {
 	 */
 	public static final MMBusinessAssociationEnd mmDirectDebitMandate = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DirectDebitTransaction1.mmMandateRelatedInformation, com.tools20022.repository.msg.DirectDebitTransaction6.mmMandateRelatedInformation,
-					com.tools20022.repository.msg.DirectDebitTransaction7.mmMandateRelatedInformation, com.tools20022.repository.msg.DirectDebitTransaction4.mmMandateRelatedInformation,
-					com.tools20022.repository.msg.DirectDebitTransaction5.mmMandateRelatedInformation, com.tools20022.repository.msg.DirectDebitTransaction8.mmMandateRelatedInformation,
-					com.tools20022.repository.msg.PaymentTerms6.mmDirectDebitMandateIdentification, com.tools20022.repository.msg.DirectDebitTransaction9.mmMandateRelatedInformation);
+			derivation_lazy = () -> Arrays.asList(DirectDebitTransaction1.mmMandateRelatedInformation, DirectDebitTransaction6.mmMandateRelatedInformation, DirectDebitTransaction7.mmMandateRelatedInformation,
+					DirectDebitTransaction4.mmMandateRelatedInformation, DirectDebitTransaction5.mmMandateRelatedInformation, DirectDebitTransaction8.mmMandateRelatedInformation, PaymentTerms6.mmDirectDebitMandateIdentification,
+					DirectDebitTransaction9.mmMandateRelatedInformation);
 			elementContext_lazy = () -> DirectDebit.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DirectDebitMandate";
 			definition = "Set of elements providing information specific to the direct debit mandate.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.DirectDebitMandate.mmRelatedDirectDebit;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.DirectDebitMandate.mmObject();
 		}
 	};
@@ -490,12 +488,11 @@ public class DirectDebit extends IndividualPayment {
 	 */
 	public static final MMBusinessAttribute mmPreNotificationIdentification = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DirectDebitTransaction1.mmPreNotificationIdentification, com.tools20022.repository.msg.DirectDebitTransaction6.mmPreNotificationIdentification,
-					com.tools20022.repository.msg.DirectDebitTransaction7.mmPreNotificationIdentification, com.tools20022.repository.msg.DirectDebitTransaction5.mmPreNotificationIdentification,
-					com.tools20022.repository.msg.DirectDebitTransaction8.mmPreNotificationIdentification, com.tools20022.repository.msg.DirectDebitTransaction9.mmPreNotificationIdentification);
+			derivation_lazy = () -> Arrays.asList(DirectDebitTransaction1.mmPreNotificationIdentification, DirectDebitTransaction6.mmPreNotificationIdentification, DirectDebitTransaction7.mmPreNotificationIdentification,
+					DirectDebitTransaction5.mmPreNotificationIdentification, DirectDebitTransaction8.mmPreNotificationIdentification, DirectDebitTransaction9.mmPreNotificationIdentification);
 			elementContext_lazy = () -> DirectDebit.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PreNotificationIdentification";
 			definition = "Unique and unambiguous identification of the pre-notification which is sent separately from the direct debit instruction.\nUsage: the direct debit pre-notification is used to reconcile separately sent collection information with the direct debit transaction information.";
 			maxOccurs = 1;
@@ -557,12 +554,11 @@ public class DirectDebit extends IndividualPayment {
 	 */
 	public static final MMBusinessAttribute mmPreNotificationDate = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DirectDebitTransaction1.mmPreNotificationDate, com.tools20022.repository.msg.DirectDebitTransaction6.mmPreNotificationDate,
-					com.tools20022.repository.msg.DirectDebitTransaction7.mmPreNotificationDate, com.tools20022.repository.msg.DirectDebitTransaction5.mmPreNotificationDate,
-					com.tools20022.repository.msg.DirectDebitTransaction8.mmPreNotificationDate, com.tools20022.repository.msg.DirectDebitTransaction9.mmPreNotificationDate);
+			derivation_lazy = () -> Arrays.asList(DirectDebitTransaction1.mmPreNotificationDate, DirectDebitTransaction6.mmPreNotificationDate, DirectDebitTransaction7.mmPreNotificationDate, DirectDebitTransaction5.mmPreNotificationDate,
+					DirectDebitTransaction8.mmPreNotificationDate, DirectDebitTransaction9.mmPreNotificationDate);
 			elementContext_lazy = () -> DirectDebit.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PreNotificationDate";
 			definition = "Date on which the creditor notifies the debtor about the amount and date on which the direct debit instruction will be presented to the debtor's agent.";
 			maxOccurs = 1;
@@ -574,32 +570,25 @@ public class DirectDebit extends IndividualPayment {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DirectDebit";
 				definition = "Payment, initiated by the creditor, to debit a debtor's account in favour of the creditor. A direct debit can be pre-authorised or not. In most countries, authorisation is in the form of a mandate between the debtor and creditor.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.DirectDebitMandate.mmRelatedDirectDebit);
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentInstrument7.mmDirectDebit, com.tools20022.repository.msg.PaymentInstrument8.mmDirectDebitDetails,
-						com.tools20022.repository.choice.PaymentInstrument17Choice.mmDirectDebitDetails, com.tools20022.repository.msg.DirectDebitTransactionInformation1.mmDirectDebitTransaction,
-						com.tools20022.repository.msg.PaymentInstructionInformation2.mmDirectDebitTransactionInformation, com.tools20022.repository.msg.DirectDebitTransactionInformation9.mmDirectDebitTransaction,
-						com.tools20022.repository.msg.PaymentInstructionInformation4.mmDirectDebitTransactionInformation, com.tools20022.repository.msg.DirectDebitTransactionInformation11.mmDirectDebitTransaction,
-						com.tools20022.repository.msg.PaymentInstruction7.mmDirectDebitTransactionInformation, com.tools20022.repository.msg.DirectDebitTransactionInformation13.mmDirectDebitTransaction,
-						com.tools20022.repository.msg.PaymentInstruction10.mmDirectDebitTransactionInformation, com.tools20022.repository.msg.DirectDebitTransactionInformation2.mmDirectDebitTransaction,
-						com.tools20022.repository.msg.DirectDebitTransactionInformation10.mmDirectDebitTransaction, com.tools20022.repository.msg.DirectDebitTransactionInformation12.mmDirectDebitTransaction,
-						com.tools20022.repository.msg.DirectDebitTransactionInformation14.mmDirectDebitTransaction, com.tools20022.repository.choice.PaymentInstrument9Choice.mmDirectDebitDetails,
-						com.tools20022.repository.choice.PaymentInstrument10Choice.mmDirectDebitDetails, com.tools20022.repository.choice.PaymentInstrument6Choice.mmDirectDebitDetails,
-						com.tools20022.repository.choice.PaymentInstrument8Choice.mmDirectDebitDetails, com.tools20022.repository.choice.PaymentInstrument12Choice.mmDirectDebitDetails,
-						com.tools20022.repository.msg.CreditTransferTransaction9.mmDirectDebitTransactionInformation, com.tools20022.repository.msg.DirectDebitTransactionInformation5.mmDirectDebitTransaction,
-						com.tools20022.repository.msg.DirectDebitTransactionInformation7.mmDirectDebitTransaction, com.tools20022.repository.msg.DirectDebitTransactionInformation6.mmDirectDebitTransaction,
-						com.tools20022.repository.msg.DirectDebitTransactionInformation8.mmDirectDebitTransaction, com.tools20022.repository.msg.DirectDebitTransactionInformation17.mmDirectDebitTransaction,
-						com.tools20022.repository.msg.PaymentInstruction15.mmDirectDebitTransactionInformation, com.tools20022.repository.msg.DirectDebitTransactionInformation18.mmDirectDebitTransaction,
-						com.tools20022.repository.msg.PaymentInstruction18.mmDirectDebitTransactionInformation, com.tools20022.repository.msg.DirectDebitTransactionInformation20.mmDirectDebitTransaction,
-						com.tools20022.repository.msg.DirectDebitTransactionInformation19.mmDirectDebitTransaction, com.tools20022.repository.choice.PaymentInstrument18Choice.mmDirectDebitDetails,
-						com.tools20022.repository.choice.PaymentInstrument20Choice.mmDirectDebitDetails, com.tools20022.repository.msg.PaymentInstruction21.mmDirectDebitTransactionInformation,
-						com.tools20022.repository.msg.DirectDebitTransactionInformation21.mmDirectDebitTransaction, com.tools20022.repository.msg.DirectDebitTransactionInformation22.mmDirectDebitTransaction);
+				derivationElement_lazy = () -> Arrays.asList(PaymentInstrument7.mmDirectDebit, PaymentInstrument8.mmDirectDebitDetails, PaymentInstrument17Choice.mmDirectDebitDetails,
+						DirectDebitTransactionInformation1.mmDirectDebitTransaction, PaymentInstructionInformation2.mmDirectDebitTransactionInformation, DirectDebitTransactionInformation9.mmDirectDebitTransaction,
+						PaymentInstructionInformation4.mmDirectDebitTransactionInformation, DirectDebitTransactionInformation11.mmDirectDebitTransaction, PaymentInstruction7.mmDirectDebitTransactionInformation,
+						DirectDebitTransactionInformation13.mmDirectDebitTransaction, PaymentInstruction10.mmDirectDebitTransactionInformation, DirectDebitTransactionInformation2.mmDirectDebitTransaction,
+						DirectDebitTransactionInformation10.mmDirectDebitTransaction, DirectDebitTransactionInformation12.mmDirectDebitTransaction, DirectDebitTransactionInformation14.mmDirectDebitTransaction,
+						PaymentInstrument9Choice.mmDirectDebitDetails, PaymentInstrument10Choice.mmDirectDebitDetails, PaymentInstrument6Choice.mmDirectDebitDetails, PaymentInstrument8Choice.mmDirectDebitDetails,
+						PaymentInstrument12Choice.mmDirectDebitDetails, CreditTransferTransaction9.mmDirectDebitTransactionInformation, DirectDebitTransactionInformation5.mmDirectDebitTransaction,
+						DirectDebitTransactionInformation7.mmDirectDebitTransaction, DirectDebitTransactionInformation6.mmDirectDebitTransaction, DirectDebitTransactionInformation8.mmDirectDebitTransaction,
+						DirectDebitTransactionInformation17.mmDirectDebitTransaction, PaymentInstruction15.mmDirectDebitTransactionInformation, DirectDebitTransactionInformation18.mmDirectDebitTransaction,
+						PaymentInstruction18.mmDirectDebitTransactionInformation, DirectDebitTransactionInformation20.mmDirectDebitTransaction, DirectDebitTransactionInformation19.mmDirectDebitTransaction,
+						PaymentInstrument18Choice.mmDirectDebitDetails, PaymentInstrument20Choice.mmDirectDebitDetails, PaymentInstruction21.mmDirectDebitTransactionInformation, DirectDebitTransactionInformation21.mmDirectDebitTransaction,
+						DirectDebitTransactionInformation22.mmDirectDebitTransaction);
 				superType_lazy = () -> IndividualPayment.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.DirectDebit.mmRegistrationIdentification, com.tools20022.repository.entity.DirectDebit.mmDirectDebitMandate,
-						com.tools20022.repository.entity.DirectDebit.mmPreNotificationIdentification, com.tools20022.repository.entity.DirectDebit.mmPreNotificationDate);
+				element_lazy = () -> Arrays.asList(DirectDebit.mmRegistrationIdentification, DirectDebit.mmDirectDebitMandate, DirectDebit.mmPreNotificationIdentification, DirectDebit.mmPreNotificationDate);
 				derivationComponent_lazy = () -> Arrays.asList(DirectDebitMandate2.mmObject(), DirectDebitMandate3.mmObject(), DirectDebitMandate4.mmObject(), DirectDebitTransaction1.mmObject(),
 						DirectDebitTransactionInformation1.mmObject(), DirectDebitTransaction6.mmObject(), DirectDebitTransactionInformation9.mmObject(), DirectDebitTransaction7.mmObject(), DirectDebitTransactionInformation11.mmObject(),
 						DirectDebitTransactionInformation13.mmObject(), DirectDebitTransactionInformation2.mmObject(), DirectDebitTransactionInformation10.mmObject(), DirectDebitTransactionInformation12.mmObject(),

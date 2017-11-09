@@ -20,7 +20,9 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.AccountStatus4Code;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.AccountStatus2;
 import com.tools20022.repository.msg.GenericIdentification47;
 import java.util.Arrays;
@@ -100,7 +102,7 @@ public class AccountStatus1Choice {
 			componentContext_lazy = () -> AccountStatus1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Cd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Status of the account expressed as a code.";
 			maxOccurs = 1;
@@ -141,7 +143,7 @@ public class AccountStatus1Choice {
 			componentContext_lazy = () -> AccountStatus1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Status of the account expressed as a proprietary code.";
 			maxOccurs = 1;
@@ -154,9 +156,9 @@ public class AccountStatus1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AccountStatus1Choice.mmCode, com.tools20022.repository.choice.AccountStatus1Choice.mmProprietary);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(AccountStatus1Choice.mmCode, AccountStatus1Choice.mmProprietary);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AccountStatus1Choice";
 				definition = "Choice of formats for the status of an account.";
 				nextVersions_lazy = () -> Arrays.asList(AccountStatus2.mmObject());

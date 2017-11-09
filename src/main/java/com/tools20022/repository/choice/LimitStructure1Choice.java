@@ -19,7 +19,9 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.RiskManagementLimit;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.LimitIdentification1;
 import com.tools20022.repository.msg.LimitIdentification2;
 import java.util.Arrays;
@@ -104,7 +106,7 @@ public class LimitStructure1Choice {
 			componentContext_lazy = () -> LimitStructure1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "CurLmtId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrentLimitIdentification";
 			definition = "Identification of the current limit.";
 			maxOccurs = 1;
@@ -151,7 +153,7 @@ public class LimitStructure1Choice {
 			componentContext_lazy = () -> LimitStructure1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "AllCurLmts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AllCurrentLimits";
 			definition = "Identification of the current limit.";
 			maxOccurs = 1;
@@ -164,10 +166,10 @@ public class LimitStructure1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.LimitStructure1Choice.mmCurrentLimitIdentification, com.tools20022.repository.choice.LimitStructure1Choice.mmAllCurrentLimits);
+				messageElement_lazy = () -> Arrays.asList(LimitStructure1Choice.mmCurrentLimitIdentification, LimitStructure1Choice.mmAllCurrentLimits);
 				trace_lazy = () -> RiskManagementLimit.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "LimitStructure1Choice";
 				definition = "Limit details of one or more limits set by the member and managed by the transaction administrator.";
 			}

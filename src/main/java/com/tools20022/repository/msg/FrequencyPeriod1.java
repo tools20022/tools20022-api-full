@@ -19,8 +19,10 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.Frequency6Code;
 import com.tools20022.repository.datatype.DecimalNumber;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -97,7 +99,7 @@ public class FrequencyPeriod1 {
 			componentContext_lazy = () -> FrequencyPeriod1.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Period for which the number of instructions are to be created and processed.";
 			maxOccurs = 1;
@@ -142,7 +144,7 @@ public class FrequencyPeriod1 {
 			componentContext_lazy = () -> FrequencyPeriod1.mmObject();
 			isDerived = false;
 			xmlTag = "CntPerPrd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CountPerPeriod";
 			definition = "Number of instructions to be created and processed during the specified period";
 			maxOccurs = 1;
@@ -154,9 +156,9 @@ public class FrequencyPeriod1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FrequencyPeriod1.mmType, com.tools20022.repository.msg.FrequencyPeriod1.mmCountPerPeriod);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(FrequencyPeriod1.mmType, FrequencyPeriod1.mmCountPerPeriod);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FrequencyPeriod1";
 				definition = "Defines a frequency in terms on counts per period for a specific period type.";
 			}

@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CommissionTypeV2Code;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -98,7 +100,7 @@ public class CommissionType8Code extends CommissionTypeV2Code {
 	 */
 	public static final MMCode mmStepOut = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StepOut";
 			owner_lazy = () -> CommissionType8Code.mmObject();
 		}
@@ -121,7 +123,7 @@ public class CommissionType8Code extends CommissionTypeV2Code {
 	 */
 	public static final MMCode mmRegular = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Regular";
 			owner_lazy = () -> CommissionType8Code.mmObject();
 		}
@@ -144,7 +146,7 @@ public class CommissionType8Code extends CommissionTypeV2Code {
 	 */
 	public static final MMCode mmStepIn = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StepIn";
 			owner_lazy = () -> CommissionType8Code.mmObject();
 		}
@@ -167,7 +169,7 @@ public class CommissionType8Code extends CommissionTypeV2Code {
 	 */
 	public static final MMCode mmSoftDollar = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SoftDollar";
 			owner_lazy = () -> CommissionType8Code.mmObject();
 		}
@@ -190,7 +192,7 @@ public class CommissionType8Code extends CommissionTypeV2Code {
 	 */
 	public static final MMCode mmSoftDollarStepIn = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SoftDollarStepIn";
 			owner_lazy = () -> CommissionType8Code.mmObject();
 		}
@@ -213,7 +215,7 @@ public class CommissionType8Code extends CommissionTypeV2Code {
 	 */
 	public static final MMCode mmSoftDollarStepOut = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SoftDollarStepOut";
 			owner_lazy = () -> CommissionType8Code.mmObject();
 		}
@@ -236,7 +238,7 @@ public class CommissionType8Code extends CommissionTypeV2Code {
 	 */
 	public static final MMCode mmPlanSponsor = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlanSponsor";
 			owner_lazy = () -> CommissionType8Code.mmObject();
 		}
@@ -245,14 +247,13 @@ public class CommissionType8Code extends CommissionTypeV2Code {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("STEP");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CommissionType8Code";
 				definition = "Used to identify soft trades at order entry.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CommissionType8Code.mmStepOut, com.tools20022.repository.codeset.CommissionType8Code.mmRegular,
-						com.tools20022.repository.codeset.CommissionType8Code.mmStepIn, com.tools20022.repository.codeset.CommissionType8Code.mmSoftDollar, com.tools20022.repository.codeset.CommissionType8Code.mmSoftDollarStepIn,
-						com.tools20022.repository.codeset.CommissionType8Code.mmSoftDollarStepOut, com.tools20022.repository.codeset.CommissionType8Code.mmPlanSponsor);
+				code_lazy = () -> Arrays.asList(CommissionType8Code.mmStepOut, CommissionType8Code.mmRegular, CommissionType8Code.mmStepIn, CommissionType8Code.mmSoftDollar, CommissionType8Code.mmSoftDollarStepIn,
+						CommissionType8Code.mmSoftDollarStepOut, CommissionType8Code.mmPlanSponsor);
 				trace_lazy = () -> CommissionTypeV2Code.mmObject();
 			}
 		});

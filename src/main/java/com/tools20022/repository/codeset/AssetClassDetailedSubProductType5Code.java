@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.AssetClassDetailedSubProductTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -87,7 +89,7 @@ public class AssetClassDetailedSubProductType5Code extends AssetClassDetailedSub
 	 */
 	public static final MMCode mmBaseLoad = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BaseLoad";
 			owner_lazy = () -> AssetClassDetailedSubProductType5Code.mmObject();
 		}
@@ -110,7 +112,7 @@ public class AssetClassDetailedSubProductType5Code extends AssetClassDetailedSub
 	 */
 	public static final MMCode mmFinancialTransmissionRights = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialTransmissionRights";
 			owner_lazy = () -> AssetClassDetailedSubProductType5Code.mmObject();
 		}
@@ -133,7 +135,7 @@ public class AssetClassDetailedSubProductType5Code extends AssetClassDetailedSub
 	 */
 	public static final MMCode mmPeakLoad = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PeakLoad";
 			owner_lazy = () -> AssetClassDetailedSubProductType5Code.mmObject();
 		}
@@ -156,7 +158,7 @@ public class AssetClassDetailedSubProductType5Code extends AssetClassDetailedSub
 	 */
 	public static final MMCode mmOffPeak = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OffPeak";
 			owner_lazy = () -> AssetClassDetailedSubProductType5Code.mmObject();
 		}
@@ -179,7 +181,7 @@ public class AssetClassDetailedSubProductType5Code extends AssetClassDetailedSub
 	 */
 	public static final MMCode mmOther = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
 			owner_lazy = () -> AssetClassDetailedSubProductType5Code.mmObject();
 		}
@@ -188,13 +190,12 @@ public class AssetClassDetailedSubProductType5Code extends AssetClassDetailedSub
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AssetClassDetailedSubProductType5Code";
 				definition = "Further sub product code list for commodity derivative Electricity.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AssetClassDetailedSubProductType5Code.mmBaseLoad, com.tools20022.repository.codeset.AssetClassDetailedSubProductType5Code.mmFinancialTransmissionRights,
-						com.tools20022.repository.codeset.AssetClassDetailedSubProductType5Code.mmPeakLoad, com.tools20022.repository.codeset.AssetClassDetailedSubProductType5Code.mmOffPeak,
-						com.tools20022.repository.codeset.AssetClassDetailedSubProductType5Code.mmOther);
+				code_lazy = () -> Arrays.asList(AssetClassDetailedSubProductType5Code.mmBaseLoad, AssetClassDetailedSubProductType5Code.mmFinancialTransmissionRights, AssetClassDetailedSubProductType5Code.mmPeakLoad,
+						AssetClassDetailedSubProductType5Code.mmOffPeak, AssetClassDetailedSubProductType5Code.mmOther);
 				trace_lazy = () -> AssetClassDetailedSubProductTypeCode.mmObject();
 			}
 		});

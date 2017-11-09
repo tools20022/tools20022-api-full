@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.LateReportCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -81,7 +83,7 @@ public class LateReport1Code extends LateReportCode {
 	 */
 	public static final MMCode mmLate = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Late";
 			owner_lazy = () -> LateReport1Code.mmObject();
 		}
@@ -104,7 +106,7 @@ public class LateReport1Code extends LateReportCode {
 	 */
 	public static final MMCode mmLateBecausePartial = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LateBecausePartial";
 			owner_lazy = () -> LateReport1Code.mmObject();
 		}
@@ -113,12 +115,12 @@ public class LateReport1Code extends LateReportCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("LAT1");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "LateReport1Code";
 				definition = "Specifies whether a transaction report is late.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.LateReport1Code.mmLate, com.tools20022.repository.codeset.LateReport1Code.mmLateBecausePartial);
+				code_lazy = () -> Arrays.asList(LateReport1Code.mmLate, LateReport1Code.mmLateBecausePartial);
 				trace_lazy = () -> LateReportCode.mmObject();
 			}
 		});

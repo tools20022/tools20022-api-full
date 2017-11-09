@@ -19,7 +19,12 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.semt.CustodyStatementOfHoldingsCancellationV02;
+import com.tools20022.repository.entity.Account;
 import com.tools20022.repository.entity.SecuritiesBalance;
+import com.tools20022.repository.entity.SecuritiesEntry;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -117,7 +122,7 @@ public class CustodyStatementOfHoldings2 {
 			componentContext_lazy = () -> CustodyStatementOfHoldings2.mmObject();
 			isDerived = false;
 			xmlTag = "StmtGnlDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatementGeneralDetails";
 			definition = "General information related to the custody statement of holdings that is being cancelled.";
 			maxOccurs = 1;
@@ -163,11 +168,11 @@ public class CustodyStatementOfHoldings2 {
 	 */
 	public static final MMMessageAssociationEnd mmAccountDetails = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesEntry.mmSecuritiesAccount;
+			businessElementTrace_lazy = () -> SecuritiesEntry.mmSecuritiesAccount;
 			componentContext_lazy = () -> CustodyStatementOfHoldings2.mmObject();
 			isDerived = false;
 			xmlTag = "AcctDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountDetails";
 			definition = "Safekeeping or investment account of the statement that is being cancelled.";
 			maxOccurs = 1;
@@ -218,7 +223,7 @@ public class CustodyStatementOfHoldings2 {
 			componentContext_lazy = () -> CustodyStatementOfHoldings2.mmObject();
 			isDerived = false;
 			xmlTag = "BalForAcct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BalanceForAccount";
 			definition = "Net position of a segregated holding, in a single security, within the overall position held in a securities account.";
 			minOccurs = 0;
@@ -261,11 +266,11 @@ public class CustodyStatementOfHoldings2 {
 	 */
 	public static final MMMessageAssociationEnd mmSubAccountDetails = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.mmIdentification;
+			businessElementTrace_lazy = () -> Account.mmIdentification;
 			componentContext_lazy = () -> CustodyStatementOfHoldings2.mmObject();
 			isDerived = false;
 			xmlTag = "SubAcctDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubAccountDetails";
 			definition = "Sub-account of the safekeeping or investment account.";
 			minOccurs = 0;
@@ -306,7 +311,7 @@ public class CustodyStatementOfHoldings2 {
 			componentContext_lazy = () -> CustodyStatementOfHoldings2.mmObject();
 			isDerived = false;
 			xmlTag = "TtlVals";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalValues";
 			definition = "Value of total holdings reported.";
 			maxOccurs = 1;
@@ -349,7 +354,7 @@ public class CustodyStatementOfHoldings2 {
 			componentContext_lazy = () -> CustodyStatementOfHoldings2.mmObject();
 			isDerived = false;
 			xmlTag = "Xtnsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Extension";
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
 			minOccurs = 0;
@@ -361,13 +366,12 @@ public class CustodyStatementOfHoldings2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CustodyStatementOfHoldings2.mmStatementGeneralDetails, com.tools20022.repository.msg.CustodyStatementOfHoldings2.mmAccountDetails,
-						com.tools20022.repository.msg.CustodyStatementOfHoldings2.mmBalanceForAccount, com.tools20022.repository.msg.CustodyStatementOfHoldings2.mmSubAccountDetails,
-						com.tools20022.repository.msg.CustodyStatementOfHoldings2.mmTotalValues, com.tools20022.repository.msg.CustodyStatementOfHoldings2.mmExtension);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.CustodyStatementOfHoldingsCancellationV02.mmStatementToBeCancelled);
+				messageElement_lazy = () -> Arrays.asList(CustodyStatementOfHoldings2.mmStatementGeneralDetails, CustodyStatementOfHoldings2.mmAccountDetails, CustodyStatementOfHoldings2.mmBalanceForAccount,
+						CustodyStatementOfHoldings2.mmSubAccountDetails, CustodyStatementOfHoldings2.mmTotalValues, CustodyStatementOfHoldings2.mmExtension);
+				messageBuildingBlock_lazy = () -> Arrays.asList(CustodyStatementOfHoldingsCancellationV02.mmStatementToBeCancelled);
 				trace_lazy = () -> SecuritiesBalance.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CustodyStatementOfHoldings2";
 				definition = "Information about a custody statement of holdings.";
 			}

@@ -17,9 +17,7 @@
 
 package com.tools20022.repository.entity;
 
-import com.tools20022.metamodel.MMBusinessAssociationEnd;
-import com.tools20022.metamodel.MMBusinessAttribute;
-import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.*;
 import com.tools20022.repository.choice.*;
 import com.tools20022.repository.codeset.PartialSettlementCode;
 import com.tools20022.repository.codeset.TransferReasonCode;
@@ -28,6 +26,7 @@ import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.ObligationFulfilment;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -44,63 +43,101 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
  * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.TransferOut3 TransferOut3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Transfer4 Transfer4}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransferIn1 TransferIn1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Transfer7 Transfer7}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransferIn4 TransferIn4}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Transfer17 Transfer17}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransferIn6 TransferIn6}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Transfer2 Transfer2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransferOut1 TransferOut1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Transfer10 Transfer10}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransferOut6 TransferOut6}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Transfer14 Transfer14}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransferOut8 TransferOut8}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Transfer24 Transfer24}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransferOut10 TransferOut10}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.Reversal1Choice
+ * Reversal1Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Transfer25 Transfer25}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransferIn8 TransferIn8}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.Reversal2Choice
+ * Reversal2Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Transfer3 Transfer3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransferIn2 TransferIn2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Transfer6 Transfer6}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransferIn3 TransferIn3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Transfer16 Transfer16}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransferIn5 TransferIn5}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Transfer1 Transfer1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransferOut2 TransferOut2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Transfer9 Transfer9}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransferOut5 TransferOut5}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Transfer12 Transfer12}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransferOut7 TransferOut7}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Transfer20 Transfer20}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransferOut9 TransferOut9}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Transfer22 Transfer22}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransferIn7 TransferIn7}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.TransferReason1
+ * TransferReason1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Transfer18 Transfer18}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Transfer26 Transfer26}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Transfer5 Transfer5}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Transfer15 Transfer15}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Transfer21 Transfer21}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Transfer13 Transfer13}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Transfer23 Transfer23}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Transfer8 Transfer8}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Transfer11 Transfer11}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Transfer19 Transfer19}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesTransfer#mmIdentification
- * SecuritiesTransfer.mmIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionSecuritiesMovement2
+ * CorporateActionSecuritiesMovement2}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesTransfer#mmTransferredQuantity
- * SecuritiesTransfer.mmTransferredQuantity}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesTransfer#mmAccount
- * SecuritiesTransfer.mmAccount}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesTransfer#mmTransferType
- * SecuritiesTransfer.mmTransferType}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesTransfer#mmRelatedSettlement
- * SecuritiesTransfer.mmRelatedSettlement}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesTransfer#mmOwnAccountTransferIndicator
- * SecuritiesTransfer.mmOwnAccountTransferIndicator}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesTransfer#mmPhysicalDelivery
- * SecuritiesTransfer.mmPhysicalDelivery}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesTransfer#mmLateDeliveryDate
- * SecuritiesTransfer.mmLateDeliveryDate}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesTransfer#mmTransferTax
- * SecuritiesTransfer.mmTransferTax}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesTransfer#mmTransferReason
- * SecuritiesTransfer.mmTransferReason}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesTransfer#mmPartialSettlementType
- * SecuritiesTransfer.mmPartialSettlementType}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesTransfer#mmSecuritiesDeliveryObligation
- * SecuritiesTransfer.mmSecuritiesDeliveryObligation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesTransfer#mmBookEntry
- * SecuritiesTransfer.mmBookEntry}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesTransfer#mmTransactionIdentification
- * SecuritiesTransfer.mmTransactionIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesTransfer#mmSecurity
- * SecuritiesTransfer.mmSecurity}</li>
- * <li>{@linkplain com.tools20022.repository.entity.SecuritiesTransfer#mmStatus
- * SecuritiesTransfer.mmStatus}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
- * subType} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.IntraPositionTransfer
- * IntraPositionTransfer}</li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionSecuritiesMovement1
+ * CorporateActionSecuritiesMovement1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransferOut4 TransferOut4}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Transfer27 Transfer27}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.Reversal3Choice
+ * Reversal3Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Transfer28 Transfer28}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.Reversal4Choice
+ * Reversal4Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Transfer29 Transfer29}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransferIn10 TransferIn10}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransferIn9 TransferIn9}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransferOut11 TransferOut11}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransferOut12 TransferOut12}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransferOut13 TransferOut13}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransferIn11 TransferIn11}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.Reversal6Choice
+ * Reversal6Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.Reversal5Choice
+ * Reversal5Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransferIn13 TransferIn13}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransferOut14 TransferOut14}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransferIn12 TransferIn12}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransferOut15 TransferOut15}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Transfer31 Transfer31}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Transfer30 Transfer30}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Transfer32 Transfer32}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.Reversal7Choice
+ * Reversal7Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.Reversal8Choice
+ * Reversal8Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Transfer33 Transfer33}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransferOut17 TransferOut17}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransferIn14 TransferIn14}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransferIn15 TransferIn15}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransferOut16 TransferOut16}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransferIn16 TransferIn16}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransferOut18 TransferOut18}</li>
  * </ul>
  * </li>
  * <li>
@@ -221,101 +258,63 @@ import java.util.List;
  * superType} =
  * {@linkplain com.tools20022.repository.entity.ObligationFulfilment
  * ObligationFulfilment}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
+ * subType} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.TransferOut3 TransferOut3}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Transfer4 Transfer4}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TransferIn1 TransferIn1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Transfer7 Transfer7}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TransferIn4 TransferIn4}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Transfer17 Transfer17}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TransferIn6 TransferIn6}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Transfer2 Transfer2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TransferOut1 TransferOut1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Transfer10 Transfer10}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TransferOut6 TransferOut6}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Transfer14 Transfer14}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TransferOut8 TransferOut8}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Transfer24 Transfer24}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TransferOut10 TransferOut10}</li>
- * <li>{@linkplain com.tools20022.repository.choice.Reversal1Choice
- * Reversal1Choice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Transfer25 Transfer25}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TransferIn8 TransferIn8}</li>
- * <li>{@linkplain com.tools20022.repository.choice.Reversal2Choice
- * Reversal2Choice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Transfer3 Transfer3}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TransferIn2 TransferIn2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Transfer6 Transfer6}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TransferIn3 TransferIn3}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Transfer16 Transfer16}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TransferIn5 TransferIn5}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Transfer1 Transfer1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TransferOut2 TransferOut2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Transfer9 Transfer9}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TransferOut5 TransferOut5}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Transfer12 Transfer12}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TransferOut7 TransferOut7}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Transfer20 Transfer20}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TransferOut9 TransferOut9}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Transfer22 Transfer22}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TransferIn7 TransferIn7}</li>
- * <li>{@linkplain com.tools20022.repository.choice.TransferReason1
- * TransferReason1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Transfer18 Transfer18}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Transfer26 Transfer26}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Transfer5 Transfer5}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Transfer15 Transfer15}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Transfer21 Transfer21}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Transfer13 Transfer13}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Transfer23 Transfer23}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Transfer8 Transfer8}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Transfer11 Transfer11}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Transfer19 Transfer19}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.IntraPositionTransfer
+ * IntraPositionTransfer}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionSecuritiesMovement2
- * CorporateActionSecuritiesMovement2}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesTransfer#mmIdentification
+ * SecuritiesTransfer.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionSecuritiesMovement1
- * CorporateActionSecuritiesMovement1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TransferOut4 TransferOut4}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Transfer27 Transfer27}</li>
- * <li>{@linkplain com.tools20022.repository.choice.Reversal3Choice
- * Reversal3Choice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Transfer28 Transfer28}</li>
- * <li>{@linkplain com.tools20022.repository.choice.Reversal4Choice
- * Reversal4Choice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Transfer29 Transfer29}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TransferIn10 TransferIn10}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TransferIn9 TransferIn9}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TransferOut11 TransferOut11}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TransferOut12 TransferOut12}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TransferOut13 TransferOut13}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TransferIn11 TransferIn11}</li>
- * <li>{@linkplain com.tools20022.repository.choice.Reversal6Choice
- * Reversal6Choice}</li>
- * <li>{@linkplain com.tools20022.repository.choice.Reversal5Choice
- * Reversal5Choice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TransferIn13 TransferIn13}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TransferOut14 TransferOut14}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TransferIn12 TransferIn12}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TransferOut15 TransferOut15}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Transfer31 Transfer31}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Transfer30 Transfer30}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Transfer32 Transfer32}</li>
- * <li>{@linkplain com.tools20022.repository.choice.Reversal7Choice
- * Reversal7Choice}</li>
- * <li>{@linkplain com.tools20022.repository.choice.Reversal8Choice
- * Reversal8Choice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Transfer33 Transfer33}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TransferOut17 TransferOut17}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TransferIn14 TransferIn14}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TransferIn15 TransferIn15}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TransferOut16 TransferOut16}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TransferIn16 TransferIn16}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TransferOut18 TransferOut18}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesTransfer#mmTransferredQuantity
+ * SecuritiesTransfer.mmTransferredQuantity}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesTransfer#mmAccount
+ * SecuritiesTransfer.mmAccount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesTransfer#mmTransferType
+ * SecuritiesTransfer.mmTransferType}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesTransfer#mmRelatedSettlement
+ * SecuritiesTransfer.mmRelatedSettlement}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesTransfer#mmOwnAccountTransferIndicator
+ * SecuritiesTransfer.mmOwnAccountTransferIndicator}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesTransfer#mmPhysicalDelivery
+ * SecuritiesTransfer.mmPhysicalDelivery}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesTransfer#mmLateDeliveryDate
+ * SecuritiesTransfer.mmLateDeliveryDate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesTransfer#mmTransferTax
+ * SecuritiesTransfer.mmTransferTax}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesTransfer#mmTransferReason
+ * SecuritiesTransfer.mmTransferReason}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesTransfer#mmPartialSettlementType
+ * SecuritiesTransfer.mmPartialSettlementType}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesTransfer#mmSecuritiesDeliveryObligation
+ * SecuritiesTransfer.mmSecuritiesDeliveryObligation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesTransfer#mmBookEntry
+ * SecuritiesTransfer.mmBookEntry}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesTransfer#mmTransactionIdentification
+ * SecuritiesTransfer.mmTransactionIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesTransfer#mmSecurity
+ * SecuritiesTransfer.mmSecurity}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.SecuritiesTransfer#mmStatus
+ * SecuritiesTransfer.mmStatus}</li>
  * </ul>
  * </li>
  * <li>
@@ -500,25 +499,17 @@ public class SecuritiesTransfer extends ObligationFulfilment {
 	 */
 	public static final MMBusinessAttribute mmIdentification = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Transfer4.mmTransferReference, com.tools20022.repository.msg.TransferReference2.mmTransferReference,
-					com.tools20022.repository.msg.Transfer7.mmTransferReference, com.tools20022.repository.msg.Transfer2.mmTransferReference, com.tools20022.repository.msg.Transfer10.mmTransferReference,
-					com.tools20022.repository.msg.Transfer3.mmTransferReference, com.tools20022.repository.msg.TransferReference1.mmTransferReference, com.tools20022.repository.msg.Transfer6.mmTransferReference,
-					com.tools20022.repository.msg.Transfer1.mmTransferReference, com.tools20022.repository.msg.Transfer9.mmTransferReference, com.tools20022.repository.msg.Transfer18.mmTransferReference,
-					com.tools20022.repository.msg.Transfer26.mmTransferReference, com.tools20022.repository.msg.Transfer5.mmTransferReference, com.tools20022.repository.msg.Transfer15.mmTransferReference,
-					com.tools20022.repository.msg.Transfer21.mmTransferReference, com.tools20022.repository.msg.Transfer13.mmTransferReference, com.tools20022.repository.msg.Transfer23.mmTransferReference,
-					com.tools20022.repository.msg.Transfer8.mmTransferReference, com.tools20022.repository.msg.Transfer11.mmTransferReference, com.tools20022.repository.msg.Transfer19.mmTransferReference,
-					com.tools20022.repository.msg.MessageAndBusinessReference1.mmTransferReference, com.tools20022.repository.msg.MessageAndBusinessReference6.mmTransferReference,
-					com.tools20022.repository.msg.CancellationStatusAndReason2.mmTransferReference, com.tools20022.repository.msg.TransferStatusAndReason.mmTransferReference,
-					com.tools20022.repository.msg.TransferStatusAndReason2.mmTransferReference, com.tools20022.repository.msg.Transfer27.mmTransferReference, com.tools20022.repository.msg.Transfer28.mmTransferReference,
-					com.tools20022.repository.msg.Transfer29.mmTransferReference, com.tools20022.repository.msg.MessageAndBusinessReference7.mmTransferReference, com.tools20022.repository.msg.TransferStatusAndReason3.mmTransferReference,
-					com.tools20022.repository.msg.TransferReference5.mmTransferReference, com.tools20022.repository.msg.TransferReference6.mmTransferReference, com.tools20022.repository.msg.TransferReference8.mmTransferReference,
-					com.tools20022.repository.msg.Transfer31.mmTransferReference, com.tools20022.repository.msg.Transfer30.mmTransferReference, com.tools20022.repository.msg.Transfer32.mmTransferReference,
-					com.tools20022.repository.msg.CancellationStatusAndReason3.mmTransferReference, com.tools20022.repository.msg.MessageAndBusinessReference8.mmTransferReference,
-					com.tools20022.repository.msg.Transfer33.mmTransferReference, com.tools20022.repository.msg.TransferStatusAndReason4.mmTransferReference, com.tools20022.repository.msg.TransferReference9.mmTransferReference,
-					com.tools20022.repository.msg.TransferReference10.mmTransferReference);
+			derivation_lazy = () -> Arrays.asList(Transfer4.mmTransferReference, TransferReference2.mmTransferReference, Transfer7.mmTransferReference, Transfer2.mmTransferReference, Transfer10.mmTransferReference,
+					Transfer3.mmTransferReference, TransferReference1.mmTransferReference, Transfer6.mmTransferReference, Transfer1.mmTransferReference, Transfer9.mmTransferReference, Transfer18.mmTransferReference,
+					Transfer26.mmTransferReference, Transfer5.mmTransferReference, Transfer15.mmTransferReference, Transfer21.mmTransferReference, Transfer13.mmTransferReference, Transfer23.mmTransferReference,
+					Transfer8.mmTransferReference, Transfer11.mmTransferReference, Transfer19.mmTransferReference, MessageAndBusinessReference1.mmTransferReference, MessageAndBusinessReference6.mmTransferReference,
+					CancellationStatusAndReason2.mmTransferReference, TransferStatusAndReason.mmTransferReference, TransferStatusAndReason2.mmTransferReference, Transfer27.mmTransferReference, Transfer28.mmTransferReference,
+					Transfer29.mmTransferReference, MessageAndBusinessReference7.mmTransferReference, TransferStatusAndReason3.mmTransferReference, TransferReference5.mmTransferReference, TransferReference6.mmTransferReference,
+					TransferReference8.mmTransferReference, Transfer31.mmTransferReference, Transfer30.mmTransferReference, Transfer32.mmTransferReference, CancellationStatusAndReason3.mmTransferReference,
+					MessageAndBusinessReference8.mmTransferReference, Transfer33.mmTransferReference, TransferStatusAndReason4.mmTransferReference, TransferReference9.mmTransferReference, TransferReference10.mmTransferReference);
 			elementContext_lazy = () -> SecuritiesTransfer.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Identification";
 			definition = "Unique and unambiguous identification of a transfer, as assigned by the instructing party.";
 			maxOccurs = 1;
@@ -998,78 +989,46 @@ public class SecuritiesTransfer extends ObligationFulfilment {
 	 */
 	public static final MMBusinessAssociationEnd mmTransferredQuantity = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransferOut3.mmProductTransfer, com.tools20022.repository.msg.Unit2.mmTotalNumber, com.tools20022.repository.msg.PEPISATransfer2.mmAssets,
-					com.tools20022.repository.msg.Transfer4.mmTotalUnitsNumber, com.tools20022.repository.msg.Transfer4.mmUnitsDetails, com.tools20022.repository.msg.Transfer7.mmTotalUnitsNumber,
-					com.tools20022.repository.msg.Transfer7.mmUnitsDetails, com.tools20022.repository.msg.Transfer17.mmTotalUnitsNumber, com.tools20022.repository.msg.Transfer17.mmUnitsDetails,
-					com.tools20022.repository.msg.Transfer2.mmTotalUnitsNumber, com.tools20022.repository.msg.Transfer2.mmUnitsDetails, com.tools20022.repository.msg.Transfer10.mmTotalUnitsNumber,
-					com.tools20022.repository.msg.Transfer10.mmUnitsDetails, com.tools20022.repository.msg.Transfer14.mmTotalUnitsNumber, com.tools20022.repository.msg.Transfer14.mmUnitsDetails,
-					com.tools20022.repository.msg.Transfer24.mmTotalUnitsNumber, com.tools20022.repository.msg.Transfer24.mmUnitsDetails, com.tools20022.repository.msg.Transfer25.mmTotalUnitsNumber,
-					com.tools20022.repository.msg.Transfer25.mmUnitsDetails, com.tools20022.repository.msg.Transfer3.mmTotalUnitsNumber, com.tools20022.repository.msg.Transfer6.mmTotalUnitsNumber,
-					com.tools20022.repository.msg.Transfer16.mmTotalUnitsNumber, com.tools20022.repository.msg.Transfer1.mmTotalUnitsNumber, com.tools20022.repository.msg.Transfer1.mmUnitsDetails,
-					com.tools20022.repository.msg.Transfer9.mmTotalUnitsNumber, com.tools20022.repository.msg.Transfer9.mmUnitsDetails, com.tools20022.repository.choice.Quantity13Choice.mmTotalUnitsNumber,
-					com.tools20022.repository.msg.Transfer12.mmQuantity, com.tools20022.repository.msg.Transfer12.mmUnitsDetails, com.tools20022.repository.msg.Transfer20.mmQuantity, com.tools20022.repository.msg.Transfer20.mmUnitsDetails,
-					com.tools20022.repository.msg.Transfer22.mmTotalUnitsNumber, com.tools20022.repository.msg.Transfer18.mmTotalUnitsNumber, com.tools20022.repository.msg.Transfer18.mmUnitsDetails,
-					com.tools20022.repository.msg.Transfer26.mmTotalUnitsNumber, com.tools20022.repository.msg.Transfer26.mmUnitsDetails, com.tools20022.repository.msg.Transfer5.mmTotalUnitsNumber,
-					com.tools20022.repository.msg.Transfer15.mmTotalUnitsNumber, com.tools20022.repository.msg.Transfer21.mmTotalUnitsNumber, com.tools20022.repository.msg.Transfer13.mmTotalUnitsNumber,
-					com.tools20022.repository.msg.Transfer13.mmUnitsDetails, com.tools20022.repository.msg.Transfer23.mmTotalUnitsNumber, com.tools20022.repository.msg.Transfer23.mmUnitsDetails,
-					com.tools20022.repository.msg.Transfer8.mmTotalUnitsNumber, com.tools20022.repository.msg.Transfer8.mmUnitsDetails, com.tools20022.repository.msg.Transfer11.mmQuantity,
-					com.tools20022.repository.msg.Transfer11.mmUnitsDetails, com.tools20022.repository.msg.Transfer19.mmQuantity, com.tools20022.repository.msg.Transfer19.mmUnitsDetails,
-					com.tools20022.repository.msg.IntraPositionDetails2.mmSettledQuantity, com.tools20022.repository.msg.IntraPositionDetails2.mmPreviouslySettledQuantity,
-					com.tools20022.repository.msg.IntraPositionDetails8.mmSettledQuantity, com.tools20022.repository.msg.IntraPositionDetails8.mmPreviouslySettledQuantity,
-					com.tools20022.repository.msg.IntraPositionDetails12.mmSettledQuantity, com.tools20022.repository.msg.IntraPositionDetails12.mmPreviouslySettledQuantity,
-					com.tools20022.repository.msg.IntraPositionDetails13.mmSettledQuantity, com.tools20022.repository.msg.IntraPositionDetails13.mmPreviouslySettledQuantity,
-					com.tools20022.repository.msg.IntraPositionDetails22.mmSettledQuantity, com.tools20022.repository.msg.IntraPositionDetails22.mmPreviouslySettledQuantity,
-					com.tools20022.repository.msg.IntraPositionDetails26.mmSettledQuantity, com.tools20022.repository.msg.IntraPositionDetails26.mmPreviouslySettledQuantity,
-					com.tools20022.repository.msg.IntraPositionDetails27.mmSettledQuantity, com.tools20022.repository.msg.IntraPositionDetails27.mmPreviouslySettledQuantity,
-					com.tools20022.repository.msg.IntraPositionDetails29.mmSettledQuantity, com.tools20022.repository.msg.IntraPositionDetails29.mmPreviouslySettledQuantity,
-					com.tools20022.repository.msg.IntraPositionMovementDetails1.mmSettledQuantity, com.tools20022.repository.msg.IntraPositionMovementDetails1.mmPreviouslySettledQuantity,
-					com.tools20022.repository.msg.IntraPositionMovementDetails2.mmSettledQuantity, com.tools20022.repository.msg.IntraPositionMovementDetails2.mmPreviouslySettledQuantity,
-					com.tools20022.repository.msg.IntraPositionMovementDetails5.mmSettledQuantity, com.tools20022.repository.msg.IntraPositionMovementDetails5.mmPreviouslySettledQuantity,
-					com.tools20022.repository.msg.IntraPositionMovementDetails6.mmSettledQuantity, com.tools20022.repository.msg.IntraPositionMovementDetails6.mmPreviouslySettledQuantity,
-					com.tools20022.repository.msg.IntraPositionMovementDetails7.mmSettledQuantity, com.tools20022.repository.msg.IntraPositionMovementDetails7.mmPreviouslySettledQuantity,
-					com.tools20022.repository.msg.IntraPositionMovementDetails8.mmSettledQuantity, com.tools20022.repository.msg.IntraPositionMovementDetails8.mmPreviouslySettledQuantity,
-					com.tools20022.repository.msg.IntraPositionMovementDetails9.mmSettledQuantity, com.tools20022.repository.msg.IntraPositionMovementDetails9.mmPreviouslySettledQuantity,
-					com.tools20022.repository.msg.IntraPositionMovementDetails10.mmSettledQuantity, com.tools20022.repository.msg.IntraPositionMovementDetails10.mmPreviouslySettledQuantity,
-					com.tools20022.repository.msg.SecurityMovement1.mmSecuritiesQuantity, com.tools20022.repository.msg.FailedMovement1.mmSecuritiesQuantity, com.tools20022.repository.msg.IntraPositionDetails1.mmSettlementQuantity,
-					com.tools20022.repository.msg.IntraPositionDetails11.mmSettlementQuantity, com.tools20022.repository.msg.IntraPositionDetails4.mmSettledQuantity, com.tools20022.repository.msg.IntraPositionDetails9.mmSettledQuantity,
-					com.tools20022.repository.msg.SecuritiesTradeDetails7.mmQuantityDetails, com.tools20022.repository.msg.SecuritiesTradeDetails19.mmQuantityDetails,
-					com.tools20022.repository.msg.IntraPositionDetails7.mmSettlementQuantity, com.tools20022.repository.msg.IntraPositionDetails16.mmSettlementQuantity,
-					com.tools20022.repository.msg.IntraPositionDetails21.mmSettlementQuantity, com.tools20022.repository.msg.IntraPositionDetails25.mmSettlementQuantity,
-					com.tools20022.repository.msg.IntraPositionDetails5.mmSettledQuantity, com.tools20022.repository.msg.IntraPositionDetails15.mmSettledQuantity, com.tools20022.repository.msg.IntraPositionDetails19.mmSettlementQuantity,
-					com.tools20022.repository.msg.IntraPositionDetails23.mmSettlementQuantity, com.tools20022.repository.msg.SecuritiesTradeDetails14.mmQuantityDetails,
-					com.tools20022.repository.msg.SecuritiesTradeDetails20.mmQuantityDetails, com.tools20022.repository.msg.SecuritiesTradeDetails24.mmQuantityDetails,
-					com.tools20022.repository.msg.SecuritiesTradeDetails30.mmQuantityDetails, com.tools20022.repository.msg.BuyIn3.mmCoveredQuantity, com.tools20022.repository.msg.SettlementObligation1.mmQuantity,
-					com.tools20022.repository.msg.SettlementObligation6.mmQuantity, com.tools20022.repository.msg.SettlementObligation3.mmQuantity, com.tools20022.repository.msg.SettlementObligation2.mmQuantity,
-					com.tools20022.repository.msg.SettlementObligation5.mmQuantity, com.tools20022.repository.msg.SettlementObligation4.mmQuantity, com.tools20022.repository.msg.IntraPositionMovementDetails3.mmSettledQuantity,
-					com.tools20022.repository.msg.IntraPositionMovementDetails3.mmPreviouslySettledQuantity, com.tools20022.repository.msg.IntraPositionMovementDetails4.mmSettledQuantity,
-					com.tools20022.repository.msg.IntraPositionMovementDetails4.mmPreviouslySettledQuantity, com.tools20022.repository.msg.TransferOut4.mmProductTransfer,
-					com.tools20022.repository.msg.IntraPositionQueryCriteria1.mmSettlementQuantity, com.tools20022.repository.msg.IntraPositionQueryCriteria1.mmSettledQuantity,
-					com.tools20022.repository.msg.IntraPosition4.mmSettlementQuantity, com.tools20022.repository.msg.Transfer27.mmQuantity, com.tools20022.repository.msg.Transfer27.mmUnitsDetails,
-					com.tools20022.repository.msg.Transfer28.mmTotalUnitsNumber, com.tools20022.repository.msg.Transfer28.mmUnitsDetails, com.tools20022.repository.msg.Transfer29.mmTotalUnitsNumber,
-					com.tools20022.repository.msg.Transfer29.mmUnitsDetails, com.tools20022.repository.msg.SettlementObligation7.mmQuantity, com.tools20022.repository.msg.SettlementObligation8.mmQuantity,
-					com.tools20022.repository.msg.IntraPositionDetails31.mmSettlementQuantity, com.tools20022.repository.msg.SecuritiesTradeDetails48.mmQuantityDetails,
-					com.tools20022.repository.msg.IntraPositionDetails33.mmSettlementQuantity, com.tools20022.repository.msg.IntraPositionDetails34.mmSettledQuantity,
-					com.tools20022.repository.msg.IntraPositionDetails34.mmPreviouslySettledQuantity, com.tools20022.repository.msg.IntraPositionMovementDetails11.mmSettledQuantity,
-					com.tools20022.repository.msg.IntraPositionMovementDetails11.mmPreviouslySettledQuantity, com.tools20022.repository.msg.Transfer31.mmTotalUnitsNumber, com.tools20022.repository.msg.Transfer31.mmUnitsDetails,
-					com.tools20022.repository.msg.Transfer30.mmQuantity, com.tools20022.repository.msg.Transfer30.mmUnitsDetails, com.tools20022.repository.msg.Transfer32.mmTotalUnitsNumber,
-					com.tools20022.repository.msg.Transfer33.mmTotalUnitsNumber, com.tools20022.repository.msg.Transfer33.mmUnitsDetails, com.tools20022.repository.msg.SecuritiesTradeDetails57.mmQuantityDetails,
-					com.tools20022.repository.msg.IntraPositionDetails35.mmSettledQuantity, com.tools20022.repository.msg.IntraPositionDetails35.mmPreviouslySettledQuantity,
-					com.tools20022.repository.msg.IntraPositionDetails36.mmSettlementQuantity, com.tools20022.repository.msg.IntraPositionDetails38.mmSettlementQuantity,
-					com.tools20022.repository.msg.IntraPositionMovementDetails12.mmSettledQuantity, com.tools20022.repository.msg.IntraPositionMovementDetails12.mmPreviouslySettledQuantity,
-					com.tools20022.repository.msg.IntraPositionDetails41.mmSettledQuantity, com.tools20022.repository.msg.IntraPositionDetails41.mmPreviouslySettledQuantity,
-					com.tools20022.repository.msg.IntraPositionDetails39.mmSettlementQuantity, com.tools20022.repository.msg.IntraPositionMovementDetails13.mmSettledQuantity,
-					com.tools20022.repository.msg.IntraPositionMovementDetails13.mmPreviouslySettledQuantity, com.tools20022.repository.msg.IntraPositionDetails43.mmSettledQuantity,
-					com.tools20022.repository.msg.IntraPositionDetails43.mmPreviouslySettledQuantity, com.tools20022.repository.msg.IntraPositionDetails42.mmSettlementQuantity,
-					com.tools20022.repository.msg.IntraPositionMovementDetails14.mmSettledQuantity, com.tools20022.repository.msg.IntraPositionMovementDetails14.mmPreviouslySettledQuantity);
+			derivation_lazy = () -> Arrays.asList(TransferOut3.mmProductTransfer, Unit2.mmTotalNumber, PEPISATransfer2.mmAssets, Transfer4.mmTotalUnitsNumber, Transfer4.mmUnitsDetails, Transfer7.mmTotalUnitsNumber,
+					Transfer7.mmUnitsDetails, Transfer17.mmTotalUnitsNumber, Transfer17.mmUnitsDetails, Transfer2.mmTotalUnitsNumber, Transfer2.mmUnitsDetails, Transfer10.mmTotalUnitsNumber, Transfer10.mmUnitsDetails,
+					Transfer14.mmTotalUnitsNumber, Transfer14.mmUnitsDetails, Transfer24.mmTotalUnitsNumber, Transfer24.mmUnitsDetails, Transfer25.mmTotalUnitsNumber, Transfer25.mmUnitsDetails, Transfer3.mmTotalUnitsNumber,
+					Transfer6.mmTotalUnitsNumber, Transfer16.mmTotalUnitsNumber, Transfer1.mmTotalUnitsNumber, Transfer1.mmUnitsDetails, Transfer9.mmTotalUnitsNumber, Transfer9.mmUnitsDetails, Quantity13Choice.mmTotalUnitsNumber,
+					Transfer12.mmQuantity, Transfer12.mmUnitsDetails, Transfer20.mmQuantity, Transfer20.mmUnitsDetails, Transfer22.mmTotalUnitsNumber, Transfer18.mmTotalUnitsNumber, Transfer18.mmUnitsDetails, Transfer26.mmTotalUnitsNumber,
+					Transfer26.mmUnitsDetails, Transfer5.mmTotalUnitsNumber, Transfer15.mmTotalUnitsNumber, Transfer21.mmTotalUnitsNumber, Transfer13.mmTotalUnitsNumber, Transfer13.mmUnitsDetails, Transfer23.mmTotalUnitsNumber,
+					Transfer23.mmUnitsDetails, Transfer8.mmTotalUnitsNumber, Transfer8.mmUnitsDetails, Transfer11.mmQuantity, Transfer11.mmUnitsDetails, Transfer19.mmQuantity, Transfer19.mmUnitsDetails,
+					IntraPositionDetails2.mmSettledQuantity, IntraPositionDetails2.mmPreviouslySettledQuantity, IntraPositionDetails8.mmSettledQuantity, IntraPositionDetails8.mmPreviouslySettledQuantity,
+					IntraPositionDetails12.mmSettledQuantity, IntraPositionDetails12.mmPreviouslySettledQuantity, IntraPositionDetails13.mmSettledQuantity, IntraPositionDetails13.mmPreviouslySettledQuantity,
+					IntraPositionDetails22.mmSettledQuantity, IntraPositionDetails22.mmPreviouslySettledQuantity, IntraPositionDetails26.mmSettledQuantity, IntraPositionDetails26.mmPreviouslySettledQuantity,
+					IntraPositionDetails27.mmSettledQuantity, IntraPositionDetails27.mmPreviouslySettledQuantity, IntraPositionDetails29.mmSettledQuantity, IntraPositionDetails29.mmPreviouslySettledQuantity,
+					IntraPositionMovementDetails1.mmSettledQuantity, IntraPositionMovementDetails1.mmPreviouslySettledQuantity, IntraPositionMovementDetails2.mmSettledQuantity, IntraPositionMovementDetails2.mmPreviouslySettledQuantity,
+					IntraPositionMovementDetails5.mmSettledQuantity, IntraPositionMovementDetails5.mmPreviouslySettledQuantity, IntraPositionMovementDetails6.mmSettledQuantity, IntraPositionMovementDetails6.mmPreviouslySettledQuantity,
+					IntraPositionMovementDetails7.mmSettledQuantity, IntraPositionMovementDetails7.mmPreviouslySettledQuantity, IntraPositionMovementDetails8.mmSettledQuantity, IntraPositionMovementDetails8.mmPreviouslySettledQuantity,
+					IntraPositionMovementDetails9.mmSettledQuantity, IntraPositionMovementDetails9.mmPreviouslySettledQuantity, IntraPositionMovementDetails10.mmSettledQuantity, IntraPositionMovementDetails10.mmPreviouslySettledQuantity,
+					SecurityMovement1.mmSecuritiesQuantity, FailedMovement1.mmSecuritiesQuantity, IntraPositionDetails1.mmSettlementQuantity, IntraPositionDetails11.mmSettlementQuantity, IntraPositionDetails4.mmSettledQuantity,
+					IntraPositionDetails9.mmSettledQuantity, SecuritiesTradeDetails7.mmQuantityDetails, SecuritiesTradeDetails19.mmQuantityDetails, IntraPositionDetails7.mmSettlementQuantity, IntraPositionDetails16.mmSettlementQuantity,
+					IntraPositionDetails21.mmSettlementQuantity, IntraPositionDetails25.mmSettlementQuantity, IntraPositionDetails5.mmSettledQuantity, IntraPositionDetails15.mmSettledQuantity, IntraPositionDetails19.mmSettlementQuantity,
+					IntraPositionDetails23.mmSettlementQuantity, SecuritiesTradeDetails14.mmQuantityDetails, SecuritiesTradeDetails20.mmQuantityDetails, SecuritiesTradeDetails24.mmQuantityDetails,
+					SecuritiesTradeDetails30.mmQuantityDetails, BuyIn3.mmCoveredQuantity, SettlementObligation1.mmQuantity, SettlementObligation6.mmQuantity, SettlementObligation3.mmQuantity, SettlementObligation2.mmQuantity,
+					SettlementObligation5.mmQuantity, SettlementObligation4.mmQuantity, IntraPositionMovementDetails3.mmSettledQuantity, IntraPositionMovementDetails3.mmPreviouslySettledQuantity,
+					IntraPositionMovementDetails4.mmSettledQuantity, IntraPositionMovementDetails4.mmPreviouslySettledQuantity, TransferOut4.mmProductTransfer, IntraPositionQueryCriteria1.mmSettlementQuantity,
+					IntraPositionQueryCriteria1.mmSettledQuantity, IntraPosition4.mmSettlementQuantity, Transfer27.mmQuantity, Transfer27.mmUnitsDetails, Transfer28.mmTotalUnitsNumber, Transfer28.mmUnitsDetails,
+					Transfer29.mmTotalUnitsNumber, Transfer29.mmUnitsDetails, SettlementObligation7.mmQuantity, SettlementObligation8.mmQuantity, IntraPositionDetails31.mmSettlementQuantity, SecuritiesTradeDetails48.mmQuantityDetails,
+					IntraPositionDetails33.mmSettlementQuantity, IntraPositionDetails34.mmSettledQuantity, IntraPositionDetails34.mmPreviouslySettledQuantity, IntraPositionMovementDetails11.mmSettledQuantity,
+					IntraPositionMovementDetails11.mmPreviouslySettledQuantity, Transfer31.mmTotalUnitsNumber, Transfer31.mmUnitsDetails, Transfer30.mmQuantity, Transfer30.mmUnitsDetails, Transfer32.mmTotalUnitsNumber,
+					Transfer33.mmTotalUnitsNumber, Transfer33.mmUnitsDetails, SecuritiesTradeDetails57.mmQuantityDetails, IntraPositionDetails35.mmSettledQuantity, IntraPositionDetails35.mmPreviouslySettledQuantity,
+					IntraPositionDetails36.mmSettlementQuantity, IntraPositionDetails38.mmSettlementQuantity, IntraPositionMovementDetails12.mmSettledQuantity, IntraPositionMovementDetails12.mmPreviouslySettledQuantity,
+					IntraPositionDetails41.mmSettledQuantity, IntraPositionDetails41.mmPreviouslySettledQuantity, IntraPositionDetails39.mmSettlementQuantity, IntraPositionMovementDetails13.mmSettledQuantity,
+					IntraPositionMovementDetails13.mmPreviouslySettledQuantity, IntraPositionDetails43.mmSettledQuantity, IntraPositionDetails43.mmPreviouslySettledQuantity, IntraPositionDetails42.mmSettlementQuantity,
+					IntraPositionMovementDetails14.mmSettledQuantity, IntraPositionMovementDetails14.mmPreviouslySettledQuantity);
 			elementContext_lazy = () -> SecuritiesTransfer.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TransferredQuantity";
 			definition = "Total quantity of securities settled.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmSecuritiesTransfer;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmObject();
 		}
 	};
@@ -1172,23 +1131,19 @@ public class SecuritiesTransfer extends ObligationFulfilment {
 	 */
 	public static final MMBusinessAssociationEnd mmAccount = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransferOut3.mmClientAccount, com.tools20022.repository.msg.CorporateActionSecuritiesMovement2.mmAccountDetails,
-					com.tools20022.repository.msg.CorporateActionSecuritiesMovement1.mmAccountDetails, com.tools20022.repository.msg.IntraPositionDetails4.mmSafekeepingAccount,
-					com.tools20022.repository.msg.IntraPositionDetails9.mmSafekeepingAccount, com.tools20022.repository.msg.IntraPositionDetails5.mmSafekeepingAccount,
-					com.tools20022.repository.msg.IntraPositionDetails15.mmSafekeepingAccount, com.tools20022.repository.msg.IntraPositionDetails19.mmSafekeepingAccount,
-					com.tools20022.repository.msg.IntraPositionDetails23.mmSafekeepingAccount, com.tools20022.repository.msg.TransferOut4.mmClientAccount, com.tools20022.repository.msg.IntraPositionMovements1.mmSafekeepingAccount,
-					com.tools20022.repository.msg.IntraPositionQueryCriteria1.mmSafekeepingAccount, com.tools20022.repository.msg.IntraPositionModification2.mmSafekeepingAccount,
-					com.tools20022.repository.msg.IntraPositionModification1.mmSafekeepingAccount, com.tools20022.repository.msg.IntraPositionCancellation1.mmSafekeepingAccount,
-					com.tools20022.repository.msg.IntraPositionDetails31.mmSafekeepingAccount, com.tools20022.repository.msg.IntraPositionDetails38.mmSafekeepingAccount,
-					com.tools20022.repository.msg.IntraPositionDetails39.mmSafekeepingAccount, com.tools20022.repository.msg.IntraPositionDetails42.mmSafekeepingAccount);
+			derivation_lazy = () -> Arrays.asList(TransferOut3.mmClientAccount, CorporateActionSecuritiesMovement2.mmAccountDetails, CorporateActionSecuritiesMovement1.mmAccountDetails, IntraPositionDetails4.mmSafekeepingAccount,
+					IntraPositionDetails9.mmSafekeepingAccount, IntraPositionDetails5.mmSafekeepingAccount, IntraPositionDetails15.mmSafekeepingAccount, IntraPositionDetails19.mmSafekeepingAccount,
+					IntraPositionDetails23.mmSafekeepingAccount, TransferOut4.mmClientAccount, IntraPositionMovements1.mmSafekeepingAccount, IntraPositionQueryCriteria1.mmSafekeepingAccount, IntraPositionModification2.mmSafekeepingAccount,
+					IntraPositionModification1.mmSafekeepingAccount, IntraPositionCancellation1.mmSafekeepingAccount, IntraPositionDetails31.mmSafekeepingAccount, IntraPositionDetails38.mmSafekeepingAccount,
+					IntraPositionDetails39.mmSafekeepingAccount, IntraPositionDetails42.mmSafekeepingAccount);
 			elementContext_lazy = () -> SecuritiesTransfer.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Account";
 			definition = "Specifies the account from/to which the securities are transferred.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesAccount.mmRelatedTransfer;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SecuritiesAccount.mmObject();
 		}
 	};
@@ -1268,14 +1223,12 @@ public class SecuritiesTransfer extends ObligationFulfilment {
 	 */
 	public static final MMBusinessAttribute mmTransferType = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrument11.mmTransferType, com.tools20022.repository.msg.FinancialInstrument25.mmTransferType,
-					com.tools20022.repository.msg.FinancialInstrument32.mmTransferType, com.tools20022.repository.msg.FinancialInstrument24.mmTransferType, com.tools20022.repository.msg.FinancialInstrument33.mmTransferType,
-					com.tools20022.repository.msg.FinancialInstrument23.mmTransferType, com.tools20022.repository.msg.FinancialInstrument31.mmTransferType, com.tools20022.repository.msg.FinancialInstrument35.mmTransferType,
-					com.tools20022.repository.msg.FinancialInstrument34.mmTransferType, com.tools20022.repository.msg.FinancialInstrument40.mmTransferType, com.tools20022.repository.msg.FinancialInstrument39.mmTransferType,
-					com.tools20022.repository.msg.FinancialInstrument48.mmTransferType, com.tools20022.repository.msg.FinancialInstrument46.mmTransferType);
+			derivation_lazy = () -> Arrays.asList(FinancialInstrument11.mmTransferType, FinancialInstrument25.mmTransferType, FinancialInstrument32.mmTransferType, FinancialInstrument24.mmTransferType, FinancialInstrument33.mmTransferType,
+					FinancialInstrument23.mmTransferType, FinancialInstrument31.mmTransferType, FinancialInstrument35.mmTransferType, FinancialInstrument34.mmTransferType, FinancialInstrument40.mmTransferType,
+					FinancialInstrument39.mmTransferType, FinancialInstrument48.mmTransferType, FinancialInstrument46.mmTransferType);
 			elementContext_lazy = () -> SecuritiesTransfer.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TransferType";
 			definition = "Specifies whether the financial instrument is transferred as an asset or as cash.";
 			maxOccurs = 1;
@@ -1464,32 +1417,25 @@ public class SecuritiesTransfer extends ObligationFulfilment {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedSettlement = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransferIn1.mmSettlementDetails, com.tools20022.repository.msg.TransferIn4.mmSettlementDetails, com.tools20022.repository.msg.TransferIn6.mmSettlementDetails,
-					com.tools20022.repository.msg.TransferOut1.mmSettlementDetails, com.tools20022.repository.msg.TransferOut6.mmSettlementDetails, com.tools20022.repository.msg.TransferOut8.mmSettlementDetails,
-					com.tools20022.repository.msg.TransferOut10.mmSettlementDetails, com.tools20022.repository.choice.Reversal1Choice.mmTransferOutConfirmationDetails, com.tools20022.repository.msg.TransferIn8.mmSettlementDetails,
-					com.tools20022.repository.choice.Reversal2Choice.mmTransferInConfirmationDetails, com.tools20022.repository.msg.TransferIn2.mmSettlementDetails, com.tools20022.repository.msg.TransferIn3.mmSettlementDetails,
-					com.tools20022.repository.msg.TransferIn5.mmSettlementDetails, com.tools20022.repository.msg.TransferOut2.mmSettlementDetails, com.tools20022.repository.msg.TransferOut5.mmSettlementDetails,
-					com.tools20022.repository.msg.TransferOut7.mmSettlementDetails, com.tools20022.repository.msg.TransferOut9.mmSettlementDetails, com.tools20022.repository.msg.TransferIn7.mmSettlementDetails,
-					com.tools20022.repository.msg.SwitchRedemptionLegOrder2.mmSettlementAndCustodyDetails, com.tools20022.repository.msg.SwitchSubscriptionLegOrder2.mmSettlementAndCustodyDetails,
-					com.tools20022.repository.msg.SwitchRedemptionLegOrder3.mmSettlementAndCustodyDetails, com.tools20022.repository.msg.SwitchSubscriptionLegOrder3.mmSettlementAndCustodyDetails,
-					com.tools20022.repository.msg.SwitchSubscriptionLegExecution2.mmSettlementAndCustodyDetails, com.tools20022.repository.msg.SwitchSubscriptionLegExecution3.mmSettlementAndCustodyDetails,
-					com.tools20022.repository.msg.IntraPositionModification2.mmRequestDetails, com.tools20022.repository.choice.Reversal3Choice.mmTransferOutConfirmationDetails,
-					com.tools20022.repository.choice.Reversal4Choice.mmTransferInConfirmationDetails, com.tools20022.repository.msg.TransferIn10.mmSettlementDetails, com.tools20022.repository.msg.TransferIn9.mmSettlementDetails,
-					com.tools20022.repository.msg.TransferOut11.mmSettlementDetails, com.tools20022.repository.msg.TransferOut12.mmSettlementDetails, com.tools20022.repository.choice.Reversal6Choice.mmTransferInConfirmationDetails,
-					com.tools20022.repository.choice.Reversal5Choice.mmTransferOutConfirmationDetails, com.tools20022.repository.msg.TransferIn13.mmSettlementDetails, com.tools20022.repository.msg.TransferOut14.mmSettlementDetails,
-					com.tools20022.repository.msg.TransferIn12.mmSettlementDetails, com.tools20022.repository.msg.TransferOut15.mmSettlementDetails, com.tools20022.repository.choice.Reversal7Choice.mmTransferInConfirmationDetails,
-					com.tools20022.repository.choice.Reversal8Choice.mmTransferOutConfirmationDetails, com.tools20022.repository.msg.TransferOut17.mmSettlementDetails, com.tools20022.repository.msg.TransferIn14.mmSettlementDetails,
-					com.tools20022.repository.msg.TransferIn15.mmSettlementDetails, com.tools20022.repository.msg.TransferOut16.mmSettlementDetails, com.tools20022.repository.msg.SwitchSubscriptionLegOrder6.mmSettlementAndCustodyDetails,
-					com.tools20022.repository.msg.SwitchRedemptionLegOrder6.mmSettlementAndCustodyDetails, com.tools20022.repository.msg.SwitchSubscriptionLegExecution4.mmSettlementAndCustodyDetails);
+			derivation_lazy = () -> Arrays.asList(TransferIn1.mmSettlementDetails, TransferIn4.mmSettlementDetails, TransferIn6.mmSettlementDetails, TransferOut1.mmSettlementDetails, TransferOut6.mmSettlementDetails,
+					TransferOut8.mmSettlementDetails, TransferOut10.mmSettlementDetails, Reversal1Choice.mmTransferOutConfirmationDetails, TransferIn8.mmSettlementDetails, Reversal2Choice.mmTransferInConfirmationDetails,
+					TransferIn2.mmSettlementDetails, TransferIn3.mmSettlementDetails, TransferIn5.mmSettlementDetails, TransferOut2.mmSettlementDetails, TransferOut5.mmSettlementDetails, TransferOut7.mmSettlementDetails,
+					TransferOut9.mmSettlementDetails, TransferIn7.mmSettlementDetails, SwitchRedemptionLegOrder2.mmSettlementAndCustodyDetails, SwitchSubscriptionLegOrder2.mmSettlementAndCustodyDetails,
+					SwitchRedemptionLegOrder3.mmSettlementAndCustodyDetails, SwitchSubscriptionLegOrder3.mmSettlementAndCustodyDetails, SwitchSubscriptionLegExecution2.mmSettlementAndCustodyDetails,
+					SwitchSubscriptionLegExecution3.mmSettlementAndCustodyDetails, IntraPositionModification2.mmRequestDetails, Reversal3Choice.mmTransferOutConfirmationDetails, Reversal4Choice.mmTransferInConfirmationDetails,
+					TransferIn10.mmSettlementDetails, TransferIn9.mmSettlementDetails, TransferOut11.mmSettlementDetails, TransferOut12.mmSettlementDetails, Reversal6Choice.mmTransferInConfirmationDetails,
+					Reversal5Choice.mmTransferOutConfirmationDetails, TransferIn13.mmSettlementDetails, TransferOut14.mmSettlementDetails, TransferIn12.mmSettlementDetails, TransferOut15.mmSettlementDetails,
+					Reversal7Choice.mmTransferInConfirmationDetails, Reversal8Choice.mmTransferOutConfirmationDetails, TransferOut17.mmSettlementDetails, TransferIn14.mmSettlementDetails, TransferIn15.mmSettlementDetails,
+					TransferOut16.mmSettlementDetails, SwitchSubscriptionLegOrder6.mmSettlementAndCustodyDetails, SwitchRedemptionLegOrder6.mmSettlementAndCustodyDetails, SwitchSubscriptionLegExecution4.mmSettlementAndCustodyDetails);
 			elementContext_lazy = () -> SecuritiesTransfer.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedSettlement";
 			definition = "Settlement process which is the source of the transfer operation.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmTransferOperation;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmObject();
 		}
 	};
@@ -1628,21 +1574,16 @@ public class SecuritiesTransfer extends ObligationFulfilment {
 	 */
 	public static final MMBusinessAttribute mmOwnAccountTransferIndicator = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Transfer4.mmOwnAccountTransferIndicator, com.tools20022.repository.msg.Transfer7.mmOwnAccountTransferIndicator,
-					com.tools20022.repository.msg.Transfer17.mmOwnAccountTransferIndicator, com.tools20022.repository.msg.Transfer2.mmOwnAccountTransferIndicator, com.tools20022.repository.msg.Transfer10.mmOwnAccountTransferIndicator,
-					com.tools20022.repository.msg.Transfer14.mmOwnAccountTransferIndicator, com.tools20022.repository.msg.Transfer24.mmOwnAccountTransferIndicator, com.tools20022.repository.msg.Transfer25.mmOwnAccountTransferIndicator,
-					com.tools20022.repository.msg.Transfer3.mmOwnAccountTransferIndicator, com.tools20022.repository.msg.Transfer6.mmOwnAccountTransferIndicator, com.tools20022.repository.msg.Transfer16.mmOwnAccountTransferIndicator,
-					com.tools20022.repository.msg.Transfer1.mmOwnAccountTransferIndicator, com.tools20022.repository.msg.Transfer9.mmOwnAccountTransferIndicator, com.tools20022.repository.msg.Transfer12.mmOwnAccountTransferIndicator,
-					com.tools20022.repository.msg.Transfer20.mmOwnAccountTransferIndicator, com.tools20022.repository.msg.Transfer22.mmOwnAccountTransferIndicator, com.tools20022.repository.msg.Transfer18.mmOwnAccountTransferIndicator,
-					com.tools20022.repository.msg.Transfer26.mmOwnAccountTransferIndicator, com.tools20022.repository.msg.Transfer5.mmOwnAccountTransferIndicator, com.tools20022.repository.msg.Transfer15.mmOwnAccountTransferIndicator,
-					com.tools20022.repository.msg.Transfer21.mmOwnAccountTransferIndicator, com.tools20022.repository.msg.Transfer13.mmOwnAccountTransferIndicator, com.tools20022.repository.msg.Transfer23.mmOwnAccountTransferIndicator,
-					com.tools20022.repository.msg.Transfer8.mmOwnAccountTransferIndicator, com.tools20022.repository.msg.Transfer11.mmOwnAccountTransferIndicator, com.tools20022.repository.msg.Transfer19.mmOwnAccountTransferIndicator,
-					com.tools20022.repository.msg.Transfer27.mmOwnAccountTransferIndicator, com.tools20022.repository.msg.Transfer28.mmOwnAccountTransferIndicator, com.tools20022.repository.msg.Transfer29.mmOwnAccountTransferIndicator,
-					com.tools20022.repository.msg.Transfer31.mmOwnAccountTransferIndicator, com.tools20022.repository.msg.Transfer30.mmOwnAccountTransferIndicator, com.tools20022.repository.msg.Transfer32.mmOwnAccountTransferIndicator,
-					com.tools20022.repository.msg.Transfer33.mmOwnAccountTransferIndicator);
+			derivation_lazy = () -> Arrays.asList(Transfer4.mmOwnAccountTransferIndicator, Transfer7.mmOwnAccountTransferIndicator, Transfer17.mmOwnAccountTransferIndicator, Transfer2.mmOwnAccountTransferIndicator,
+					Transfer10.mmOwnAccountTransferIndicator, Transfer14.mmOwnAccountTransferIndicator, Transfer24.mmOwnAccountTransferIndicator, Transfer25.mmOwnAccountTransferIndicator, Transfer3.mmOwnAccountTransferIndicator,
+					Transfer6.mmOwnAccountTransferIndicator, Transfer16.mmOwnAccountTransferIndicator, Transfer1.mmOwnAccountTransferIndicator, Transfer9.mmOwnAccountTransferIndicator, Transfer12.mmOwnAccountTransferIndicator,
+					Transfer20.mmOwnAccountTransferIndicator, Transfer22.mmOwnAccountTransferIndicator, Transfer18.mmOwnAccountTransferIndicator, Transfer26.mmOwnAccountTransferIndicator, Transfer5.mmOwnAccountTransferIndicator,
+					Transfer15.mmOwnAccountTransferIndicator, Transfer21.mmOwnAccountTransferIndicator, Transfer13.mmOwnAccountTransferIndicator, Transfer23.mmOwnAccountTransferIndicator, Transfer8.mmOwnAccountTransferIndicator,
+					Transfer11.mmOwnAccountTransferIndicator, Transfer19.mmOwnAccountTransferIndicator, Transfer27.mmOwnAccountTransferIndicator, Transfer28.mmOwnAccountTransferIndicator, Transfer29.mmOwnAccountTransferIndicator,
+					Transfer31.mmOwnAccountTransferIndicator, Transfer30.mmOwnAccountTransferIndicator, Transfer32.mmOwnAccountTransferIndicator, Transfer33.mmOwnAccountTransferIndicator);
 			elementContext_lazy = () -> SecuritiesTransfer.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "OwnAccountTransferIndicator";
 			definition = "Indicates whether the transfer results in a change of beneficial owner.";
 			maxOccurs = 1;
@@ -1905,51 +1846,34 @@ public class SecuritiesTransfer extends ObligationFulfilment {
 	 */
 	public static final MMBusinessAssociationEnd mmPhysicalDelivery = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DeliverInformation2.mmPhysicalTransferIndicator, com.tools20022.repository.msg.DeliverInformation2.mmPhysicalTransferDetails,
-					com.tools20022.repository.msg.DeliverInformation4.mmPhysicalTransferIndicator, com.tools20022.repository.msg.DeliverInformation4.mmPhysicalTransferDetails,
-					com.tools20022.repository.msg.DeliverInformation7.mmPhysicalTransferDetails, com.tools20022.repository.msg.ReceiveInformation2.mmPhysicalTransferIndicator,
-					com.tools20022.repository.msg.ReceiveInformation2.mmPhysicalTransferDetails, com.tools20022.repository.msg.ReceiveInformation4.mmPhysicalTransferIndicator,
-					com.tools20022.repository.msg.ReceiveInformation4.mmPhysicalTransferDetails, com.tools20022.repository.msg.ReceiveInformation8.mmPhysicalTransferDetails,
-					com.tools20022.repository.msg.ReceiveInformation6.mmPhysicalTransferDetails, com.tools20022.repository.msg.ReceiveInformation11.mmPhysicalTransferDetails,
-					com.tools20022.repository.msg.DeliverInformation11.mmPhysicalTransferDetails, com.tools20022.repository.msg.DeliverInformation1.mmPhysicalTransferIndicator,
-					com.tools20022.repository.msg.DeliverInformation1.mmPhysicalTransferDetails, com.tools20022.repository.msg.DeliverInformation3.mmPhysicalTransferIndicator,
-					com.tools20022.repository.msg.DeliverInformation3.mmPhysicalTransferDetails, com.tools20022.repository.msg.DeliverInformation8.mmPhysicalTransferDetails,
-					com.tools20022.repository.msg.ReceiveInformation1.mmPhysicalTransferIndicator, com.tools20022.repository.msg.ReceiveInformation1.mmPhysicalTransferDetails,
-					com.tools20022.repository.msg.ReceiveInformation3.mmPhysicalTransferIndicator, com.tools20022.repository.msg.ReceiveInformation3.mmPhysicalTransferDetails,
-					com.tools20022.repository.msg.ReceiveInformation7.mmPhysicalTransferDetails, com.tools20022.repository.msg.ReceiveInformation5.mmPhysicalTransferDetails,
-					com.tools20022.repository.msg.ReceiveInformation9.mmPhysicalTransferDetails, com.tools20022.repository.msg.DeliverInformation5.mmPhysicalTransferDetails,
-					com.tools20022.repository.msg.DeliverInformation9.mmPhysicalTransferDetails, com.tools20022.repository.msg.DeliverInformation6.mmPhysicalTransferDetails,
-					com.tools20022.repository.msg.RedemptionOrder3.mmPhysicalDeliveryDetails, com.tools20022.repository.msg.RedemptionOrder5.mmPhysicalDeliveryDetails,
-					com.tools20022.repository.msg.RedemptionExecution3.mmPhysicalDeliveryDetails, com.tools20022.repository.msg.RedemptionExecution5.mmPhysicalDeliveryDetails,
-					com.tools20022.repository.msg.RedemptionOrder7.mmPhysicalDeliveryDetails, com.tools20022.repository.msg.RedemptionOrder4.mmPhysicalDeliveryDetails,
-					com.tools20022.repository.msg.RedemptionOrder6.mmPhysicalDeliveryDetails, com.tools20022.repository.msg.RedemptionExecution4.mmPhysicalDeliveryDetails,
-					com.tools20022.repository.msg.RedemptionExecution6.mmPhysicalDeliveryDetails, com.tools20022.repository.msg.RedemptionOrder8.mmPhysicalDeliveryDetails,
-					com.tools20022.repository.msg.SubscriptionExecution3.mmPhysicalDeliveryDetails, com.tools20022.repository.msg.SubscriptionExecution5.mmPhysicalDeliveryDetails,
-					com.tools20022.repository.msg.SubscriptionExecution4.mmPhysicalDeliveryDetails, com.tools20022.repository.msg.SubscriptionExecution6.mmPhysicalDeliveryDetails,
-					com.tools20022.repository.msg.SwitchRedemptionLegOrder2.mmPhysicalDeliveryDetails, com.tools20022.repository.msg.SwitchRedemptionLegOrder3.mmPhysicalDeliveryDetails,
-					com.tools20022.repository.msg.SwitchRedemptionLegExecution2.mmPhysicalDeliveryDetails, com.tools20022.repository.msg.SwitchSubscriptionLegExecution2.mmPhysicalDeliveryDetails,
-					com.tools20022.repository.msg.SwitchRedemptionLegExecution3.mmPhysicalDeliveryDetails, com.tools20022.repository.msg.SwitchSubscriptionLegExecution3.mmPhysicalDeliveryDetails,
-					com.tools20022.repository.msg.ReceiveInformation13.mmPhysicalTransferDetails, com.tools20022.repository.msg.ReceiveInformation12.mmPhysicalTransferDetails,
-					com.tools20022.repository.msg.DeliverInformation12.mmPhysicalTransferDetails, com.tools20022.repository.msg.DeliverInformation13.mmPhysicalTransferDetails,
-					com.tools20022.repository.msg.DeliverInformation15.mmPhysicalTransferDetails, com.tools20022.repository.msg.DeliverInformation14.mmPhysicalTransferDetails,
-					com.tools20022.repository.msg.ReceiveInformation15.mmPhysicalTransferDetails, com.tools20022.repository.msg.ReceiveInformation14.mmPhysicalTransferDetails,
-					com.tools20022.repository.msg.ReceiveInformation17.mmPhysicalTransferDetails, com.tools20022.repository.msg.ReceiveInformation16.mmPhysicalTransferDetails,
-					com.tools20022.repository.msg.DeliverInformation16.mmPhysicalTransferDetails, com.tools20022.repository.msg.DeliverInformation17.mmPhysicalTransferDetails,
-					com.tools20022.repository.msg.RedemptionOrder14.mmPhysicalDeliveryDetails, com.tools20022.repository.msg.SubscriptionExecution13.mmPhysicalDeliveryDetails,
-					com.tools20022.repository.msg.SubscriptionExecution12.mmPhysicalDeliveryDetails, com.tools20022.repository.msg.SwitchRedemptionLegOrder6.mmPhysicalDeliveryDetails,
-					com.tools20022.repository.msg.RedemptionOrder15.mmPhysicalDeliveryDetails, com.tools20022.repository.msg.RedemptionExecution16.mmPhysicalDeliveryDetails,
-					com.tools20022.repository.msg.SwitchSubscriptionLegExecution4.mmPhysicalDeliveryDetails, com.tools20022.repository.msg.RedemptionExecution15.mmPhysicalDeliveryDetails,
-					com.tools20022.repository.msg.SwitchRedemptionLegExecution4.mmPhysicalDeliveryDetails, com.tools20022.repository.msg.DerivativeInstrument5.mmDeliveryType,
-					com.tools20022.repository.msg.DerivativeInstrument6.mmDeliveryType);
+			derivation_lazy = () -> Arrays.asList(DeliverInformation2.mmPhysicalTransferIndicator, DeliverInformation2.mmPhysicalTransferDetails, DeliverInformation4.mmPhysicalTransferIndicator,
+					DeliverInformation4.mmPhysicalTransferDetails, DeliverInformation7.mmPhysicalTransferDetails, ReceiveInformation2.mmPhysicalTransferIndicator, ReceiveInformation2.mmPhysicalTransferDetails,
+					ReceiveInformation4.mmPhysicalTransferIndicator, ReceiveInformation4.mmPhysicalTransferDetails, ReceiveInformation8.mmPhysicalTransferDetails, ReceiveInformation6.mmPhysicalTransferDetails,
+					ReceiveInformation11.mmPhysicalTransferDetails, DeliverInformation11.mmPhysicalTransferDetails, DeliverInformation1.mmPhysicalTransferIndicator, DeliverInformation1.mmPhysicalTransferDetails,
+					DeliverInformation3.mmPhysicalTransferIndicator, DeliverInformation3.mmPhysicalTransferDetails, DeliverInformation8.mmPhysicalTransferDetails, ReceiveInformation1.mmPhysicalTransferIndicator,
+					ReceiveInformation1.mmPhysicalTransferDetails, ReceiveInformation3.mmPhysicalTransferIndicator, ReceiveInformation3.mmPhysicalTransferDetails, ReceiveInformation7.mmPhysicalTransferDetails,
+					ReceiveInformation5.mmPhysicalTransferDetails, ReceiveInformation9.mmPhysicalTransferDetails, DeliverInformation5.mmPhysicalTransferDetails, DeliverInformation9.mmPhysicalTransferDetails,
+					DeliverInformation6.mmPhysicalTransferDetails, RedemptionOrder3.mmPhysicalDeliveryDetails, RedemptionOrder5.mmPhysicalDeliveryDetails, RedemptionExecution3.mmPhysicalDeliveryDetails,
+					RedemptionExecution5.mmPhysicalDeliveryDetails, RedemptionOrder7.mmPhysicalDeliveryDetails, RedemptionOrder4.mmPhysicalDeliveryDetails, RedemptionOrder6.mmPhysicalDeliveryDetails,
+					RedemptionExecution4.mmPhysicalDeliveryDetails, RedemptionExecution6.mmPhysicalDeliveryDetails, RedemptionOrder8.mmPhysicalDeliveryDetails, SubscriptionExecution3.mmPhysicalDeliveryDetails,
+					SubscriptionExecution5.mmPhysicalDeliveryDetails, SubscriptionExecution4.mmPhysicalDeliveryDetails, SubscriptionExecution6.mmPhysicalDeliveryDetails, SwitchRedemptionLegOrder2.mmPhysicalDeliveryDetails,
+					SwitchRedemptionLegOrder3.mmPhysicalDeliveryDetails, SwitchRedemptionLegExecution2.mmPhysicalDeliveryDetails, SwitchSubscriptionLegExecution2.mmPhysicalDeliveryDetails,
+					SwitchRedemptionLegExecution3.mmPhysicalDeliveryDetails, SwitchSubscriptionLegExecution3.mmPhysicalDeliveryDetails, ReceiveInformation13.mmPhysicalTransferDetails, ReceiveInformation12.mmPhysicalTransferDetails,
+					DeliverInformation12.mmPhysicalTransferDetails, DeliverInformation13.mmPhysicalTransferDetails, DeliverInformation15.mmPhysicalTransferDetails, DeliverInformation14.mmPhysicalTransferDetails,
+					ReceiveInformation15.mmPhysicalTransferDetails, ReceiveInformation14.mmPhysicalTransferDetails, ReceiveInformation17.mmPhysicalTransferDetails, ReceiveInformation16.mmPhysicalTransferDetails,
+					DeliverInformation16.mmPhysicalTransferDetails, DeliverInformation17.mmPhysicalTransferDetails, RedemptionOrder14.mmPhysicalDeliveryDetails, SubscriptionExecution13.mmPhysicalDeliveryDetails,
+					SubscriptionExecution12.mmPhysicalDeliveryDetails, SwitchRedemptionLegOrder6.mmPhysicalDeliveryDetails, RedemptionOrder15.mmPhysicalDeliveryDetails, RedemptionExecution16.mmPhysicalDeliveryDetails,
+					SwitchSubscriptionLegExecution4.mmPhysicalDeliveryDetails, RedemptionExecution15.mmPhysicalDeliveryDetails, SwitchRedemptionLegExecution4.mmPhysicalDeliveryDetails, DerivativeInstrument5.mmDeliveryType,
+					DerivativeInstrument6.mmDeliveryType);
 			elementContext_lazy = () -> SecuritiesTransfer.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PhysicalDelivery";
 			definition = "Information related to physical delivery of the securities.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.PhysicalDelivery.mmRelatedTransfer;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.PhysicalDelivery.mmObject();
 		}
 	};
@@ -2211,42 +2135,27 @@ public class SecuritiesTransfer extends ObligationFulfilment {
 	 */
 	public static final MMBusinessAttribute mmLateDeliveryDate = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesTradeDetails25.mmLateDeliveryDate, com.tools20022.repository.msg.SecuritiesTradeDetails26.mmLateDeliveryDate,
-					com.tools20022.repository.msg.SecuritiesTradeDetails27.mmLateDeliveryDate, com.tools20022.repository.msg.SecuritiesTradeDetails28.mmLateDeliveryDate,
-					com.tools20022.repository.msg.SecuritiesTradeDetails1.mmLateDeliveryDate, com.tools20022.repository.msg.SecuritiesTradeDetails15.mmLateDeliveryDate, com.tools20022.repository.msg.TransactionDetails5.mmLateDeliveryDate,
-					com.tools20022.repository.msg.TransactionDetails9.mmLateDeliveryDate, com.tools20022.repository.msg.TransactionDetails22.mmLateDeliveryDate, com.tools20022.repository.msg.TransactionDetails23.mmLateDeliveryDate,
-					com.tools20022.repository.msg.TransactionDetails36.mmLateDeliveryDate, com.tools20022.repository.msg.TransactionDetails47.mmLateDeliveryDate, com.tools20022.repository.msg.TransactionDetails53.mmLateDeliveryDate,
-					com.tools20022.repository.msg.TransactionDetails58.mmLateDeliveryDate, com.tools20022.repository.msg.TransactionDetails7.mmLateDeliveryDate, com.tools20022.repository.msg.TransactionDetails8.mmLateDeliveryDate,
-					com.tools20022.repository.msg.TransactionDetails16.mmLateDeliveryDate, com.tools20022.repository.msg.TransactionDetails17.mmLateDeliveryDate, com.tools20022.repository.msg.TransactionDetails26.mmLateDeliveryDate,
-					com.tools20022.repository.msg.TransactionDetails25.mmLateDeliveryDate, com.tools20022.repository.msg.TransactionDetails27.mmLateDeliveryDate, com.tools20022.repository.msg.TransactionDetails33.mmLateDeliveryDate,
-					com.tools20022.repository.msg.TransactionDetails39.mmLateDeliveryDate, com.tools20022.repository.msg.TransactionDetails50.mmLateDeliveryDate, com.tools20022.repository.msg.TransactionDetails56.mmLateDeliveryDate,
-					com.tools20022.repository.msg.TransactionDetails59.mmLateDeliveryDate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails2.mmLateDeliveryDate,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails8.mmLateDeliveryDate, com.tools20022.repository.msg.SecuritiesTradeDetails8.mmLateDeliveryDate,
-					com.tools20022.repository.msg.SecuritiesTradeDetails4.mmLateDeliveryDate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails6.mmLateDeliveryDate,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails10.mmLateDeliveryDate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails17.mmLateDeliveryDate,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails18.mmLateDeliveryDate, com.tools20022.repository.msg.SecuritiesTradeDetails9.mmLateDeliveryDate,
-					com.tools20022.repository.msg.SecuritiesTradeDetails10.mmLateDeliveryDate, com.tools20022.repository.msg.TransactionDetails61.mmLateDeliveryDate,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails21.mmLateDeliveryDate, com.tools20022.repository.msg.TransactionDetails62.mmLateDeliveryDate,
-					com.tools20022.repository.msg.SecuritiesTradeDetails33.mmLateDeliveryDate, com.tools20022.repository.msg.SecuritiesTradeDetails34.mmLateDeliveryDate,
-					com.tools20022.repository.msg.SecuritiesTradeDetails32.mmLateDeliveryDate, com.tools20022.repository.msg.SecuritiesTradeDetails44.mmLateDeliveryDate,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails22.mmLateDeliveryDate, com.tools20022.repository.msg.TransactionDetails66.mmLateDeliveryDate,
-					com.tools20022.repository.msg.TransactionDetails67.mmLateDeliveryDate, com.tools20022.repository.msg.SecuritiesTradeDetails46.mmLateDeliveryDate,
-					com.tools20022.repository.msg.SecuritiesTradeDetails47.mmLateDeliveryDate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails24.mmLateDeliveryDate,
-					com.tools20022.repository.msg.TransactionDetails70.mmLateDeliveryDate, com.tools20022.repository.msg.TransactionDetails69.mmLateDeliveryDate, com.tools20022.repository.msg.TransactionDetails71.mmLateDeliveryDate,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails25.mmLateDeliveryDate, com.tools20022.repository.msg.TransactionDetails72.mmLateDeliveryDate,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails26.mmLateDeliveryDate, com.tools20022.repository.msg.TransactionDetails79.mmLateDeliveryDate,
-					com.tools20022.repository.msg.TransactionDetails75.mmLateDeliveryDate, com.tools20022.repository.msg.SecuritiesTradeDetails51.mmLateDeliveryDate,
-					com.tools20022.repository.msg.SecuritiesTradeDetails52.mmLateDeliveryDate, com.tools20022.repository.msg.SecuritiesTradeDetails50.mmLateDeliveryDate,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails33.mmLateDeliveryDate, com.tools20022.repository.msg.SecuritiesTradeDetails63.mmLateDeliveryDate,
-					com.tools20022.repository.msg.TransactionDetails87.mmLateDeliveryDate, com.tools20022.repository.msg.TransactionDetails90.mmLateDeliveryDate, com.tools20022.repository.msg.SecuritiesTradeDetails65.mmLateDeliveryDate,
-					com.tools20022.repository.msg.SecuritiesTradeDetails66.mmLateDeliveryDate, com.tools20022.repository.msg.SecuritiesTradeDetails67.mmLateDeliveryDate,
-					com.tools20022.repository.msg.TransactionDetails97.mmLateDeliveryDate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails35.mmLateDeliveryDate,
-					com.tools20022.repository.msg.TransactionDetails96.mmLateDeliveryDate, com.tools20022.repository.msg.SecuritiesTradeDetails70.mmLateDeliveryDate,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails36.mmLateDeliveryDate, com.tools20022.repository.msg.TransactionDetails100.mmLateDeliveryDate,
-					com.tools20022.repository.msg.TransactionDetails99.mmLateDeliveryDate);
+			derivation_lazy = () -> Arrays.asList(SecuritiesTradeDetails25.mmLateDeliveryDate, SecuritiesTradeDetails26.mmLateDeliveryDate, SecuritiesTradeDetails27.mmLateDeliveryDate, SecuritiesTradeDetails28.mmLateDeliveryDate,
+					SecuritiesTradeDetails1.mmLateDeliveryDate, SecuritiesTradeDetails15.mmLateDeliveryDate, TransactionDetails5.mmLateDeliveryDate, TransactionDetails9.mmLateDeliveryDate, TransactionDetails22.mmLateDeliveryDate,
+					TransactionDetails23.mmLateDeliveryDate, TransactionDetails36.mmLateDeliveryDate, TransactionDetails47.mmLateDeliveryDate, TransactionDetails53.mmLateDeliveryDate, TransactionDetails58.mmLateDeliveryDate,
+					TransactionDetails7.mmLateDeliveryDate, TransactionDetails8.mmLateDeliveryDate, TransactionDetails16.mmLateDeliveryDate, TransactionDetails17.mmLateDeliveryDate, TransactionDetails26.mmLateDeliveryDate,
+					TransactionDetails25.mmLateDeliveryDate, TransactionDetails27.mmLateDeliveryDate, TransactionDetails33.mmLateDeliveryDate, TransactionDetails39.mmLateDeliveryDate, TransactionDetails50.mmLateDeliveryDate,
+					TransactionDetails56.mmLateDeliveryDate, TransactionDetails59.mmLateDeliveryDate, SecuritiesFinancingTransactionDetails2.mmLateDeliveryDate, SecuritiesFinancingTransactionDetails8.mmLateDeliveryDate,
+					SecuritiesTradeDetails8.mmLateDeliveryDate, SecuritiesTradeDetails4.mmLateDeliveryDate, SecuritiesFinancingTransactionDetails6.mmLateDeliveryDate, SecuritiesFinancingTransactionDetails10.mmLateDeliveryDate,
+					SecuritiesFinancingTransactionDetails17.mmLateDeliveryDate, SecuritiesFinancingTransactionDetails18.mmLateDeliveryDate, SecuritiesTradeDetails9.mmLateDeliveryDate, SecuritiesTradeDetails10.mmLateDeliveryDate,
+					TransactionDetails61.mmLateDeliveryDate, SecuritiesFinancingTransactionDetails21.mmLateDeliveryDate, TransactionDetails62.mmLateDeliveryDate, SecuritiesTradeDetails33.mmLateDeliveryDate,
+					SecuritiesTradeDetails34.mmLateDeliveryDate, SecuritiesTradeDetails32.mmLateDeliveryDate, SecuritiesTradeDetails44.mmLateDeliveryDate, SecuritiesFinancingTransactionDetails22.mmLateDeliveryDate,
+					TransactionDetails66.mmLateDeliveryDate, TransactionDetails67.mmLateDeliveryDate, SecuritiesTradeDetails46.mmLateDeliveryDate, SecuritiesTradeDetails47.mmLateDeliveryDate,
+					SecuritiesFinancingTransactionDetails24.mmLateDeliveryDate, TransactionDetails70.mmLateDeliveryDate, TransactionDetails69.mmLateDeliveryDate, TransactionDetails71.mmLateDeliveryDate,
+					SecuritiesFinancingTransactionDetails25.mmLateDeliveryDate, TransactionDetails72.mmLateDeliveryDate, SecuritiesFinancingTransactionDetails26.mmLateDeliveryDate, TransactionDetails79.mmLateDeliveryDate,
+					TransactionDetails75.mmLateDeliveryDate, SecuritiesTradeDetails51.mmLateDeliveryDate, SecuritiesTradeDetails52.mmLateDeliveryDate, SecuritiesTradeDetails50.mmLateDeliveryDate,
+					SecuritiesFinancingTransactionDetails33.mmLateDeliveryDate, SecuritiesTradeDetails63.mmLateDeliveryDate, TransactionDetails87.mmLateDeliveryDate, TransactionDetails90.mmLateDeliveryDate,
+					SecuritiesTradeDetails65.mmLateDeliveryDate, SecuritiesTradeDetails66.mmLateDeliveryDate, SecuritiesTradeDetails67.mmLateDeliveryDate, TransactionDetails97.mmLateDeliveryDate,
+					SecuritiesFinancingTransactionDetails35.mmLateDeliveryDate, TransactionDetails96.mmLateDeliveryDate, SecuritiesTradeDetails70.mmLateDeliveryDate, SecuritiesFinancingTransactionDetails36.mmLateDeliveryDate,
+					TransactionDetails100.mmLateDeliveryDate, TransactionDetails99.mmLateDeliveryDate);
 			elementContext_lazy = () -> SecuritiesTransfer.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "LateDeliveryDate";
 			definition = "Date and time after the settlement date specified in the trade, used for pool trades resulting from the original To Be Assigned (TBA) securities.";
 			maxOccurs = 1;
@@ -2381,25 +2290,20 @@ public class SecuritiesTransfer extends ObligationFulfilment {
 	 */
 	public static final MMBusinessAssociationEnd mmTransferTax = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OtherAmounts12.mmTransferTax, com.tools20022.repository.msg.OtherAmounts14.mmTransferTax, com.tools20022.repository.msg.OtherAmounts20.mmTransferTax,
-					com.tools20022.repository.msg.OtherAmounts4.mmTransferTax, com.tools20022.repository.msg.OtherAmounts5.mmTransferTax, com.tools20022.repository.msg.OtherAmounts17.mmTransferTax,
-					com.tools20022.repository.msg.OtherAmounts23.mmTransferTax, com.tools20022.repository.msg.OtherAmounts3.mmTransferTax, com.tools20022.repository.msg.OtherAmounts7.mmTransferTax,
-					com.tools20022.repository.msg.OtherAmounts9.mmTransferTax, com.tools20022.repository.msg.OtherAmounts10.mmTransferTax, com.tools20022.repository.msg.OtherAmounts18.mmTransferTax,
-					com.tools20022.repository.msg.OtherAmounts24.mmTransferTax, com.tools20022.repository.msg.OtherAmounts13.mmTransferTax, com.tools20022.repository.msg.OtherAmounts1.mmTransferTax,
-					com.tools20022.repository.msg.OtherAmounts16.mmTransferTax, com.tools20022.repository.msg.ProceedsMovement1.mmTaxDetails, com.tools20022.repository.msg.OtherAmounts2.mmTransferTax,
-					com.tools20022.repository.msg.OtherAmounts6.mmTransferTax, com.tools20022.repository.msg.OtherAmounts15.mmTransferTax, com.tools20022.repository.msg.OtherAmounts22.mmTransferTax,
-					com.tools20022.repository.msg.OtherAmounts28.mmTransferTax, com.tools20022.repository.msg.OtherAmounts30.mmTransferTax, com.tools20022.repository.msg.OtherAmounts31.mmTransferTax,
-					com.tools20022.repository.msg.OtherAmounts29.mmTransferTax, com.tools20022.repository.msg.OtherAmounts35.mmTransferTax, com.tools20022.repository.msg.OtherAmounts34.mmTransferTax,
-					com.tools20022.repository.msg.OtherAmounts38.mmTransferTax, com.tools20022.repository.msg.OtherAmounts33.mmTransferTax);
+			derivation_lazy = () -> Arrays.asList(OtherAmounts12.mmTransferTax, OtherAmounts14.mmTransferTax, OtherAmounts20.mmTransferTax, OtherAmounts4.mmTransferTax, OtherAmounts5.mmTransferTax, OtherAmounts17.mmTransferTax,
+					OtherAmounts23.mmTransferTax, OtherAmounts3.mmTransferTax, OtherAmounts7.mmTransferTax, OtherAmounts9.mmTransferTax, OtherAmounts10.mmTransferTax, OtherAmounts18.mmTransferTax, OtherAmounts24.mmTransferTax,
+					OtherAmounts13.mmTransferTax, OtherAmounts1.mmTransferTax, OtherAmounts16.mmTransferTax, ProceedsMovement1.mmTaxDetails, OtherAmounts2.mmTransferTax, OtherAmounts6.mmTransferTax, OtherAmounts15.mmTransferTax,
+					OtherAmounts22.mmTransferTax, OtherAmounts28.mmTransferTax, OtherAmounts30.mmTransferTax, OtherAmounts31.mmTransferTax, OtherAmounts29.mmTransferTax, OtherAmounts35.mmTransferTax, OtherAmounts34.mmTransferTax,
+					OtherAmounts38.mmTransferTax, OtherAmounts33.mmTransferTax);
 			elementContext_lazy = () -> SecuritiesTransfer.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TransferTax";
 			definition = "Tax related to the transfer of a financial instrument.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.Tax.mmSecuritiesTransfer;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Tax.mmObject();
 		}
 	};
@@ -2487,15 +2391,12 @@ public class SecuritiesTransfer extends ObligationFulfilment {
 	 */
 	public static final MMBusinessAttribute mmTransferReason = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.TransferReason1.mmCode, com.tools20022.repository.choice.TransferReason1.mmProprietary, com.tools20022.repository.msg.Transfer18.mmTransferReason,
-					com.tools20022.repository.msg.Transfer26.mmTransferReason, com.tools20022.repository.msg.Transfer15.mmTransferReason, com.tools20022.repository.msg.Transfer21.mmTransferReason,
-					com.tools20022.repository.msg.Transfer13.mmTransferReason, com.tools20022.repository.msg.Transfer23.mmTransferReason, com.tools20022.repository.msg.Transfer11.mmTransferReason,
-					com.tools20022.repository.msg.Transfer19.mmTransferReason, com.tools20022.repository.msg.Transfer27.mmTransferReason, com.tools20022.repository.msg.Transfer28.mmTransferReason,
-					com.tools20022.repository.msg.Transfer29.mmTransferReason, com.tools20022.repository.msg.Transfer31.mmTransferReason, com.tools20022.repository.msg.Transfer30.mmTransferReason,
-					com.tools20022.repository.msg.Transfer32.mmTransferReason, com.tools20022.repository.msg.Transfer33.mmTransferReason);
+			derivation_lazy = () -> Arrays.asList(TransferReason1.mmCode, TransferReason1.mmProprietary, Transfer18.mmTransferReason, Transfer26.mmTransferReason, Transfer15.mmTransferReason, Transfer21.mmTransferReason,
+					Transfer13.mmTransferReason, Transfer23.mmTransferReason, Transfer11.mmTransferReason, Transfer19.mmTransferReason, Transfer27.mmTransferReason, Transfer28.mmTransferReason, Transfer29.mmTransferReason,
+					Transfer31.mmTransferReason, Transfer30.mmTransferReason, Transfer32.mmTransferReason, Transfer33.mmTransferReason);
 			elementContext_lazy = () -> SecuritiesTransfer.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TransferReason";
 			definition = "Identifies the transfer reason.";
 			maxOccurs = 1;
@@ -2630,23 +2531,16 @@ public class SecuritiesTransfer extends ObligationFulfilment {
 	 */
 	public static final MMBusinessAttribute mmPartialSettlementType = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AdditionalParameters3.mmPartialSettlement, com.tools20022.repository.msg.AdditionalParameters7.mmPartialSettlement,
-					com.tools20022.repository.msg.AdditionalParameters8.mmPartialSettlement, com.tools20022.repository.msg.AdditionalParameters9.mmPartialSettlement, com.tools20022.repository.msg.AdditionalParameters10.mmPartialSettlement,
-					com.tools20022.repository.msg.AdditionalParameters11.mmPartialSettlement, com.tools20022.repository.msg.AdditionalParameters2.mmPartialSettlement, com.tools20022.repository.msg.AdditionalParameters6.mmPartialSettlement,
-					com.tools20022.repository.msg.AdditionalParameters12.mmPartialSettlement, com.tools20022.repository.msg.AdditionalParameters13.mmPartialSettlement,
-					com.tools20022.repository.msg.AdditionalParameters18.mmPartialSettlement, com.tools20022.repository.msg.AdditionalParameters19.mmPartialSettlement,
-					com.tools20022.repository.msg.AdditionalParameters17.mmPartialSettlement, com.tools20022.repository.msg.AdditionalParameters20.mmPartialSettlement,
-					com.tools20022.repository.msg.AdditionalParameters4.mmPartialSettlement, com.tools20022.repository.msg.AdditionalParameters5.mmPartialSettlement, com.tools20022.repository.msg.AdditionalParameters14.mmPartialSettlement,
-					com.tools20022.repository.msg.AdditionalParameters15.mmPartialSettlement, com.tools20022.repository.msg.AdditionalParameters16.mmPartialSettlement,
-					com.tools20022.repository.msg.AdditionalParameters23.mmPartialSettlement, com.tools20022.repository.msg.AdditionalParameters24.mmPartialSettlement,
-					com.tools20022.repository.msg.AdditionalParameters22.mmPartialSettlement, com.tools20022.repository.msg.AdditionalParameters21.mmPartialSettlement,
-					com.tools20022.repository.msg.AdditionalParameters26.mmPartialSettlement, com.tools20022.repository.msg.AdditionalParameters25.mmPartialSettlement,
-					com.tools20022.repository.msg.AdditionalParameters28.mmPartialSettlement, com.tools20022.repository.msg.AdditionalParameters27.mmPartialSettlement,
-					com.tools20022.repository.msg.AdditionalParameters29.mmPartialSettlement, com.tools20022.repository.msg.AdditionalParameters30.mmPartialSettlement,
-					com.tools20022.repository.msg.AdditionalParameters31.mmPartialSettlement, com.tools20022.repository.msg.AdditionalParameters32.mmPartialSettlement);
+			derivation_lazy = () -> Arrays.asList(AdditionalParameters3.mmPartialSettlement, AdditionalParameters7.mmPartialSettlement, AdditionalParameters8.mmPartialSettlement, AdditionalParameters9.mmPartialSettlement,
+					AdditionalParameters10.mmPartialSettlement, AdditionalParameters11.mmPartialSettlement, AdditionalParameters2.mmPartialSettlement, AdditionalParameters6.mmPartialSettlement, AdditionalParameters12.mmPartialSettlement,
+					AdditionalParameters13.mmPartialSettlement, AdditionalParameters18.mmPartialSettlement, AdditionalParameters19.mmPartialSettlement, AdditionalParameters17.mmPartialSettlement, AdditionalParameters20.mmPartialSettlement,
+					AdditionalParameters4.mmPartialSettlement, AdditionalParameters5.mmPartialSettlement, AdditionalParameters14.mmPartialSettlement, AdditionalParameters15.mmPartialSettlement, AdditionalParameters16.mmPartialSettlement,
+					AdditionalParameters23.mmPartialSettlement, AdditionalParameters24.mmPartialSettlement, AdditionalParameters22.mmPartialSettlement, AdditionalParameters21.mmPartialSettlement, AdditionalParameters26.mmPartialSettlement,
+					AdditionalParameters25.mmPartialSettlement, AdditionalParameters28.mmPartialSettlement, AdditionalParameters27.mmPartialSettlement, AdditionalParameters29.mmPartialSettlement, AdditionalParameters30.mmPartialSettlement,
+					AdditionalParameters31.mmPartialSettlement, AdditionalParameters32.mmPartialSettlement);
 			elementContext_lazy = () -> SecuritiesTransfer.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PartialSettlementType";
 			definition = "Information about partial settlement.";
 			maxOccurs = 1;
@@ -2694,12 +2588,12 @@ public class SecuritiesTransfer extends ObligationFulfilment {
 		{
 			elementContext_lazy = () -> SecuritiesTransfer.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SecuritiesDeliveryObligation";
 			definition = "Obligation for one party to deliver securities to another party.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesDeliveryObligation.mmSecuritiesTransfer;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SecuritiesDeliveryObligation.mmObject();
 		}
 	};
@@ -2743,12 +2637,12 @@ public class SecuritiesTransfer extends ObligationFulfilment {
 		{
 			elementContext_lazy = () -> SecuritiesTransfer.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BookEntry";
 			definition = "Record in a securities account resulting from the transfer of a security.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesEntry.mmTriggeringSecuritiesTransfer;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SecuritiesEntry.mmObject();
 		}
 	};
@@ -2782,7 +2676,7 @@ public class SecuritiesTransfer extends ObligationFulfilment {
 		{
 			elementContext_lazy = () -> SecuritiesTransfer.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TransactionIdentification";
 			definition = "Unambiguous identification of a securities transfer.";
 			maxOccurs = 1;
@@ -2827,12 +2721,12 @@ public class SecuritiesTransfer extends ObligationFulfilment {
 		{
 			elementContext_lazy = () -> SecuritiesTransfer.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Security";
 			definition = "Security which is transferred.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.Security.mmSecuritiesTransfer;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 		}
 	};
@@ -2884,16 +2778,16 @@ public class SecuritiesTransfer extends ObligationFulfilment {
 	 */
 	public static final MMBusinessAssociationEnd mmStatus = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IntraPositionQueryCriteria1.mmStatus, com.tools20022.repository.msg.IntraPositionCancellation1.mmProcessingStatus);
+			derivation_lazy = () -> Arrays.asList(IntraPositionQueryCriteria1.mmStatus, IntraPositionCancellation1.mmProcessingStatus);
 			elementContext_lazy = () -> SecuritiesTransfer.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Status";
 			definition = "Status of a securities transfer.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeStatus.mmRelatedSecuritiesTransfer;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeStatus.mmObject();
 		}
 	};
@@ -2901,34 +2795,26 @@ public class SecuritiesTransfer extends ObligationFulfilment {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesTransfer";
 				definition = "Completion of a securities settlement instruction, wherein securities are delivered/debited from a securities account and received/credited to the designated securities account.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Security.mmSecuritiesTransfer, com.tools20022.repository.entity.SecuritiesAccount.mmRelatedTransfer,
 						com.tools20022.repository.entity.Tax.mmSecuritiesTransfer, com.tools20022.repository.entity.SecuritiesQuantity.mmSecuritiesTransfer, com.tools20022.repository.entity.SecuritiesSettlement.mmTransferOperation,
 						com.tools20022.repository.entity.SecuritiesEntry.mmTriggeringSecuritiesTransfer, com.tools20022.repository.entity.PhysicalDelivery.mmRelatedTransfer,
 						com.tools20022.repository.entity.SecuritiesTradeStatus.mmRelatedSecuritiesTransfer, com.tools20022.repository.entity.SecuritiesDeliveryObligation.mmSecuritiesTransfer);
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransferIn1.mmTransferDetails, com.tools20022.repository.msg.TransferIn4.mmTransferDetails,
-						com.tools20022.repository.msg.TransferIn6.mmTransferDetails, com.tools20022.repository.msg.TransferOut1.mmTransferDetails, com.tools20022.repository.msg.TransferOut6.mmTransferDetails,
-						com.tools20022.repository.msg.TransferOut8.mmTransferDetails, com.tools20022.repository.msg.TransferOut10.mmTransferDetails, com.tools20022.repository.msg.TransferIn8.mmTransferDetails,
-						com.tools20022.repository.msg.TransferIn2.mmTransferDetails, com.tools20022.repository.msg.TransferIn3.mmTransferDetails, com.tools20022.repository.msg.TransferIn5.mmTransferDetails,
-						com.tools20022.repository.msg.TransferOut2.mmTransferDetails, com.tools20022.repository.msg.TransferOut5.mmTransferDetails, com.tools20022.repository.msg.TransferOut7.mmTransferDetails,
-						com.tools20022.repository.msg.TransferOut9.mmTransferDetails, com.tools20022.repository.msg.TransferIn7.mmTransferDetails, com.tools20022.repository.msg.TransferIn10.mmTransferAndReferences,
-						com.tools20022.repository.msg.TransferIn9.mmTransferDetails, com.tools20022.repository.msg.TransferOut11.mmTransferAndReferences, com.tools20022.repository.msg.TransferOut12.mmTransferDetails,
-						com.tools20022.repository.msg.TransferOut13.mmTransferDetails, com.tools20022.repository.msg.TransferIn11.mmTransferDetails, com.tools20022.repository.msg.TransferIn13.mmTransferAndReferences,
-						com.tools20022.repository.msg.TransferOut14.mmTransferDetails, com.tools20022.repository.msg.TransferIn12.mmTransferDetails, com.tools20022.repository.msg.TransferOut15.mmTransferAndReferences,
-						com.tools20022.repository.msg.TransferOut17.mmTransferAndReferences, com.tools20022.repository.msg.TransferIn14.mmTransferDetails, com.tools20022.repository.msg.TransferIn15.mmTransferAndReferences,
-						com.tools20022.repository.msg.TransferOut16.mmTransferDetails, com.tools20022.repository.msg.TransferIn16.mmTransferDetails, com.tools20022.repository.msg.TransferOut18.mmTransferDetails);
+				derivationElement_lazy = () -> Arrays.asList(TransferIn1.mmTransferDetails, TransferIn4.mmTransferDetails, TransferIn6.mmTransferDetails, TransferOut1.mmTransferDetails, TransferOut6.mmTransferDetails,
+						TransferOut8.mmTransferDetails, TransferOut10.mmTransferDetails, TransferIn8.mmTransferDetails, TransferIn2.mmTransferDetails, TransferIn3.mmTransferDetails, TransferIn5.mmTransferDetails,
+						TransferOut2.mmTransferDetails, TransferOut5.mmTransferDetails, TransferOut7.mmTransferDetails, TransferOut9.mmTransferDetails, TransferIn7.mmTransferDetails, TransferIn10.mmTransferAndReferences,
+						TransferIn9.mmTransferDetails, TransferOut11.mmTransferAndReferences, TransferOut12.mmTransferDetails, TransferOut13.mmTransferDetails, TransferIn11.mmTransferDetails, TransferIn13.mmTransferAndReferences,
+						TransferOut14.mmTransferDetails, TransferIn12.mmTransferDetails, TransferOut15.mmTransferAndReferences, TransferOut17.mmTransferAndReferences, TransferIn14.mmTransferDetails, TransferIn15.mmTransferAndReferences,
+						TransferOut16.mmTransferDetails, TransferIn16.mmTransferDetails, TransferOut18.mmTransferDetails);
 				subType_lazy = () -> Arrays.asList(IntraPositionTransfer.mmObject());
 				superType_lazy = () -> ObligationFulfilment.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesTransfer.mmIdentification, com.tools20022.repository.entity.SecuritiesTransfer.mmTransferredQuantity,
-						com.tools20022.repository.entity.SecuritiesTransfer.mmAccount, com.tools20022.repository.entity.SecuritiesTransfer.mmTransferType, com.tools20022.repository.entity.SecuritiesTransfer.mmRelatedSettlement,
-						com.tools20022.repository.entity.SecuritiesTransfer.mmOwnAccountTransferIndicator, com.tools20022.repository.entity.SecuritiesTransfer.mmPhysicalDelivery,
-						com.tools20022.repository.entity.SecuritiesTransfer.mmLateDeliveryDate, com.tools20022.repository.entity.SecuritiesTransfer.mmTransferTax, com.tools20022.repository.entity.SecuritiesTransfer.mmTransferReason,
-						com.tools20022.repository.entity.SecuritiesTransfer.mmPartialSettlementType, com.tools20022.repository.entity.SecuritiesTransfer.mmSecuritiesDeliveryObligation,
-						com.tools20022.repository.entity.SecuritiesTransfer.mmBookEntry, com.tools20022.repository.entity.SecuritiesTransfer.mmTransactionIdentification, com.tools20022.repository.entity.SecuritiesTransfer.mmSecurity,
-						com.tools20022.repository.entity.SecuritiesTransfer.mmStatus);
+				element_lazy = () -> Arrays.asList(SecuritiesTransfer.mmIdentification, SecuritiesTransfer.mmTransferredQuantity, SecuritiesTransfer.mmAccount, SecuritiesTransfer.mmTransferType, SecuritiesTransfer.mmRelatedSettlement,
+						SecuritiesTransfer.mmOwnAccountTransferIndicator, SecuritiesTransfer.mmPhysicalDelivery, SecuritiesTransfer.mmLateDeliveryDate, SecuritiesTransfer.mmTransferTax, SecuritiesTransfer.mmTransferReason,
+						SecuritiesTransfer.mmPartialSettlementType, SecuritiesTransfer.mmSecuritiesDeliveryObligation, SecuritiesTransfer.mmBookEntry, SecuritiesTransfer.mmTransactionIdentification, SecuritiesTransfer.mmSecurity,
+						SecuritiesTransfer.mmStatus);
 				derivationComponent_lazy = () -> Arrays.asList(TransferOut3.mmObject(), Transfer4.mmObject(), TransferIn1.mmObject(), Transfer7.mmObject(), TransferIn4.mmObject(), Transfer17.mmObject(), TransferIn6.mmObject(),
 						Transfer2.mmObject(), TransferOut1.mmObject(), Transfer10.mmObject(), TransferOut6.mmObject(), Transfer14.mmObject(), TransferOut8.mmObject(), Transfer24.mmObject(), TransferOut10.mmObject(),
 						Reversal1Choice.mmObject(), Transfer25.mmObject(), TransferIn8.mmObject(), Reversal2Choice.mmObject(), Transfer3.mmObject(), TransferIn2.mmObject(), Transfer6.mmObject(), TransferIn3.mmObject(),

@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -28,6 +30,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.CompensationMethod1Code
+ * CompensationMethod1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -42,13 +51,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.CompensationMethodCode#mmDelayedDebit
  * CompensationMethodCode.mmDelayedDebit}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.CompensationMethod1Code
- * CompensationMethod1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -100,7 +102,7 @@ public class CompensationMethodCode {
 	 */
 	public static final MMCode mmNo = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "No";
 			definition = "Account does not pay and charges or taxes due.";
 			owner_lazy = () -> CompensationMethodCode.mmObject();
@@ -130,7 +132,7 @@ public class CompensationMethodCode {
 	 */
 	public static final MMCode mmDebited = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Debited";
 			definition = "Account is debited for  any charges or taxes due.";
 			owner_lazy = () -> CompensationMethodCode.mmObject();
@@ -161,7 +163,7 @@ public class CompensationMethodCode {
 	 */
 	public static final MMCode mmInvoiced = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Invoiced";
 			definition = "Account or summary account is invoiced for any charges or taxes due.";
 			owner_lazy = () -> CompensationMethodCode.mmObject();
@@ -191,7 +193,7 @@ public class CompensationMethodCode {
 	 */
 	public static final MMCode mmDelayedDebit = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DelayedDebit";
 			definition = "Account is automatically debited on a future date.";
 			owner_lazy = () -> CompensationMethodCode.mmObject();
@@ -202,13 +204,12 @@ public class CompensationMethodCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("NOCP");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CompensationMethodCode";
 				definition = "Defines if and how charges and taxes due are paid to the financial institution.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CompensationMethodCode.mmNo, com.tools20022.repository.codeset.CompensationMethodCode.mmDebited,
-						com.tools20022.repository.codeset.CompensationMethodCode.mmInvoiced, com.tools20022.repository.codeset.CompensationMethodCode.mmDelayedDebit);
+				code_lazy = () -> Arrays.asList(CompensationMethodCode.mmNo, CompensationMethodCode.mmDebited, CompensationMethodCode.mmInvoiced, CompensationMethodCode.mmDelayedDebit);
 				derivation_lazy = () -> Arrays.asList(CompensationMethod1Code.mmObject());
 			}
 		});

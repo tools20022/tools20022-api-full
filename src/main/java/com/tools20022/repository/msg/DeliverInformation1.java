@@ -20,8 +20,12 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.sese.TransferInInstruction;
 import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.SecuritiesSettlement;
+import com.tools20022.repository.entity.SecuritiesTransfer;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -111,11 +115,11 @@ public class DeliverInformation1 {
 	 */
 	public static final MMMessageAssociationEnd mmSettlementPartiesDetails = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmPartyRole;
+			businessElementTrace_lazy = () -> SecuritiesSettlement.mmPartyRole;
 			componentContext_lazy = () -> DeliverInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmPtiesDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementPartiesDetails";
 			definition = "Chain of parties involved in the settlement of a transaction.";
 			maxOccurs = 1;
@@ -162,11 +166,11 @@ public class DeliverInformation1 {
 	 */
 	public static final MMMessageAttribute mmPhysicalTransferIndicator = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTransfer.mmPhysicalDelivery;
+			businessElementTrace_lazy = () -> SecuritiesTransfer.mmPhysicalDelivery;
 			componentContext_lazy = () -> DeliverInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "PhysTrfInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PhysicalTransferIndicator";
 			definition = "Indicates whether the financial instrument is to be physically delivered.";
 			maxOccurs = 1;
@@ -208,11 +212,11 @@ public class DeliverInformation1 {
 	 */
 	public static final MMMessageAssociationEnd mmPhysicalTransferDetails = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTransfer.mmPhysicalDelivery;
+			businessElementTrace_lazy = () -> SecuritiesTransfer.mmPhysicalDelivery;
 			componentContext_lazy = () -> DeliverInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "PhysTrfDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PhysicalTransferDetails";
 			definition = "Parameters of a physical delivery.";
 			maxOccurs = 1;
@@ -225,12 +229,11 @@ public class DeliverInformation1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DeliverInformation1.mmSettlementPartiesDetails, com.tools20022.repository.msg.DeliverInformation1.mmPhysicalTransferIndicator,
-						com.tools20022.repository.msg.DeliverInformation1.mmPhysicalTransferDetails);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.TransferInInstruction.mmSettlementDetails);
+				messageElement_lazy = () -> Arrays.asList(DeliverInformation1.mmSettlementPartiesDetails, DeliverInformation1.mmPhysicalTransferIndicator, DeliverInformation1.mmPhysicalTransferDetails);
+				messageBuildingBlock_lazy = () -> Arrays.asList(TransferInInstruction.mmSettlementDetails);
 				trace_lazy = () -> SecuritiesSettlement.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DeliverInformation1";
 				definition = "Parameters applied to the settlement of a security transfer.";
 			}

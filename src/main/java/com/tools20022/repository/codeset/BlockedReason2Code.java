@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.BlockedReasonCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -98,7 +100,7 @@ public class BlockedReason2Code extends BlockedReasonCode {
 	 */
 	public static final MMCode mmBankruptcy = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Bankruptcy";
 			owner_lazy = () -> BlockedReason2Code.mmObject();
 		}
@@ -121,7 +123,7 @@ public class BlockedReason2Code extends BlockedReasonCode {
 	 */
 	public static final MMCode mmCommitment = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Commitment";
 			owner_lazy = () -> BlockedReason2Code.mmObject();
 		}
@@ -144,7 +146,7 @@ public class BlockedReason2Code extends BlockedReasonCode {
 	 */
 	public static final MMCode mmConfiscation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Confiscation";
 			owner_lazy = () -> BlockedReason2Code.mmObject();
 		}
@@ -167,7 +169,7 @@ public class BlockedReason2Code extends BlockedReasonCode {
 	 */
 	public static final MMCode mmMortisCausa = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MortisCausa";
 			owner_lazy = () -> BlockedReason2Code.mmObject();
 		}
@@ -190,7 +192,7 @@ public class BlockedReason2Code extends BlockedReasonCode {
 	 */
 	public static final MMCode mmPendingComplianceVerification = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingComplianceVerification";
 			owner_lazy = () -> BlockedReason2Code.mmObject();
 		}
@@ -213,7 +215,7 @@ public class BlockedReason2Code extends BlockedReasonCode {
 	 */
 	public static final MMCode mmPledged = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Pledged";
 			owner_lazy = () -> BlockedReason2Code.mmObject();
 		}
@@ -236,7 +238,7 @@ public class BlockedReason2Code extends BlockedReasonCode {
 	 */
 	public static final MMCode mmReregistration = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reregistration";
 			owner_lazy = () -> BlockedReason2Code.mmObject();
 		}
@@ -259,7 +261,7 @@ public class BlockedReason2Code extends BlockedReasonCode {
 	 */
 	public static final MMCode mmSanctions = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Sanctions";
 			owner_lazy = () -> BlockedReason2Code.mmObject();
 		}
@@ -282,7 +284,7 @@ public class BlockedReason2Code extends BlockedReasonCode {
 	 */
 	public static final MMCode mmTransfer = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Transfer";
 			owner_lazy = () -> BlockedReason2Code.mmObject();
 		}
@@ -291,14 +293,12 @@ public class BlockedReason2Code extends BlockedReasonCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "BlockedReason2Code";
 				definition = "Specifies the reason an account is blocked.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.BlockedReason2Code.mmBankruptcy, com.tools20022.repository.codeset.BlockedReason2Code.mmCommitment,
-						com.tools20022.repository.codeset.BlockedReason2Code.mmConfiscation, com.tools20022.repository.codeset.BlockedReason2Code.mmMortisCausa,
-						com.tools20022.repository.codeset.BlockedReason2Code.mmPendingComplianceVerification, com.tools20022.repository.codeset.BlockedReason2Code.mmPledged,
-						com.tools20022.repository.codeset.BlockedReason2Code.mmReregistration, com.tools20022.repository.codeset.BlockedReason2Code.mmSanctions, com.tools20022.repository.codeset.BlockedReason2Code.mmTransfer);
+				code_lazy = () -> Arrays.asList(BlockedReason2Code.mmBankruptcy, BlockedReason2Code.mmCommitment, BlockedReason2Code.mmConfiscation, BlockedReason2Code.mmMortisCausa, BlockedReason2Code.mmPendingComplianceVerification,
+						BlockedReason2Code.mmPledged, BlockedReason2Code.mmReregistration, BlockedReason2Code.mmSanctions, BlockedReason2Code.mmTransfer);
 				trace_lazy = () -> BlockedReasonCode.mmObject();
 			}
 		});

@@ -19,7 +19,9 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ProcessingPosition5Code;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification47;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -98,10 +100,10 @@ public class ProcessingPosition23Choice {
 			componentContext_lazy = () -> ProcessingPosition23Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Cd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Processing position expressed as an ISO 20022 code.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.ProcessingPosition9Choice.mmCode;
+			previousVersion_lazy = () -> ProcessingPosition9Choice.mmCode;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ProcessingPosition5Code.mmObject();
@@ -146,10 +148,10 @@ public class ProcessingPosition23Choice {
 			componentContext_lazy = () -> ProcessingPosition23Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Processing position expressed as a proprietary code.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.ProcessingPosition9Choice.mmProprietary;
+			previousVersion_lazy = () -> ProcessingPosition9Choice.mmProprietary;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification47.mmObject();
@@ -159,9 +161,9 @@ public class ProcessingPosition23Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ProcessingPosition23Choice.mmCode, com.tools20022.repository.choice.ProcessingPosition23Choice.mmProprietary);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(ProcessingPosition23Choice.mmCode, ProcessingPosition23Choice.mmProprietary);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ProcessingPosition23Choice";
 				definition = "Choice of format for the processing position.";
 			}

@@ -20,10 +20,16 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.sese.SecuritiesFinancingModificationInstruction002V05;
+import com.tools20022.repository.area.sese.SecuritiesFinancingModificationInstruction002V06;
 import com.tools20022.repository.choice.DateAndDateTimeChoice;
 import com.tools20022.repository.datatype.Max3Number;
 import com.tools20022.repository.datatype.RestrictedFINXMax350Text;
+import com.tools20022.repository.entity.DateTimePeriod;
 import com.tools20022.repository.entity.SecuritiesFinancing;
+import com.tools20022.repository.entity.Trade;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -118,11 +124,11 @@ public class SecuritiesTradeDetails12 {
 	 */
 	public static final MMMessageAssociationEnd mmTradeDate = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Trade.mmTradeDateTime;
+			businessElementTrace_lazy = () -> Trade.mmTradeDateTime;
 			componentContext_lazy = () -> SecuritiesTradeDetails12.mmObject();
 			isDerived = false;
 			xmlTag = "TradDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeDate";
 			definition = "Specifies the date/time on which the trade was executed.";
 			maxOccurs = 1;
@@ -167,11 +173,11 @@ public class SecuritiesTradeDetails12 {
 	 */
 	public static final MMMessageAssociationEnd mmOpeningSettlementDate = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancing.mmOpeningSettlementDate;
+			businessElementTrace_lazy = () -> SecuritiesFinancing.mmOpeningSettlementDate;
 			componentContext_lazy = () -> SecuritiesTradeDetails12.mmObject();
 			isDerived = false;
 			xmlTag = "OpngSttlmDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OpeningSettlementDate";
 			definition = "Date and time at which the securities are to be delivered or received.";
 			maxOccurs = 1;
@@ -217,11 +223,11 @@ public class SecuritiesTradeDetails12 {
 	 */
 	public static final MMMessageAttribute mmNumberOfDaysAccrued = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmNumberOfDays;
+			businessElementTrace_lazy = () -> DateTimePeriod.mmNumberOfDays;
 			componentContext_lazy = () -> SecuritiesTradeDetails12.mmObject();
 			isDerived = false;
 			xmlTag = "NbOfDaysAcrd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NumberOfDaysAccrued";
 			definition = "Number of days on which the interest rate accrues (daily accrual note).";
 			maxOccurs = 1;
@@ -266,7 +272,7 @@ public class SecuritiesTradeDetails12 {
 			componentContext_lazy = () -> SecuritiesTradeDetails12.mmObject();
 			isDerived = false;
 			xmlTag = "InstrPrcgAddtlDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructionProcessingAdditionalDetails";
 			definition = "Provides additional settlement processing information which can not be included within the structured fields of the message.";
 			maxOccurs = 1;
@@ -278,13 +284,12 @@ public class SecuritiesTradeDetails12 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesTradeDetails12.mmTradeDate, com.tools20022.repository.msg.SecuritiesTradeDetails12.mmOpeningSettlementDate,
-						com.tools20022.repository.msg.SecuritiesTradeDetails12.mmNumberOfDaysAccrued, com.tools20022.repository.msg.SecuritiesTradeDetails12.mmInstructionProcessingAdditionalDetails);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesFinancingModificationInstruction002V05.mmTradeDetails,
-						com.tools20022.repository.area.sese.SecuritiesFinancingModificationInstruction002V06.mmTradeDetails);
+				messageElement_lazy = () -> Arrays.asList(SecuritiesTradeDetails12.mmTradeDate, SecuritiesTradeDetails12.mmOpeningSettlementDate, SecuritiesTradeDetails12.mmNumberOfDaysAccrued,
+						SecuritiesTradeDetails12.mmInstructionProcessingAdditionalDetails);
+				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesFinancingModificationInstruction002V05.mmTradeDetails, SecuritiesFinancingModificationInstruction002V06.mmTradeDetails);
 				trace_lazy = () -> SecuritiesFinancing.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesTradeDetails12";
 				definition = "Details of the securities trade.";
 			}

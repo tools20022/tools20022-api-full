@@ -20,8 +20,11 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.NoReasonCode;
 import com.tools20022.repository.entity.SecuritiesTradeStatusReason;
+import com.tools20022.repository.entity.StatusReason;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.RejectionOrRepairReason13;
 import com.tools20022.repository.msg.ReportItemStatus1;
 import java.util.Arrays;
@@ -126,14 +129,14 @@ public class RejectionOrRepairStatus14Choice {
 	 */
 	public static final MMMessageAttribute mmNoSpecifiedReason = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmNoSpecifiedReason;
+			businessElementTrace_lazy = () -> StatusReason.mmNoSpecifiedReason;
 			componentContext_lazy = () -> RejectionOrRepairStatus14Choice.mmObject();
 			isDerived = false;
 			xmlTag = "NoSpcfdRsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoSpecifiedReason";
 			definition = "Indicates that there is no reason available or to report.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.RejectionOrRepairStatus31Choice.mmNoSpecifiedReason);
+			nextVersions_lazy = () -> Arrays.asList(RejectionOrRepairStatus31Choice.mmNoSpecifiedReason);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> NoReasonCode.mmObject();
@@ -186,10 +189,10 @@ public class RejectionOrRepairStatus14Choice {
 			componentContext_lazy = () -> RejectionOrRepairStatus14Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Rsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reason";
 			definition = "Specifies the reason for the status.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.RejectionOrRepairStatus31Choice.mmReason);
+			nextVersions_lazy = () -> Arrays.asList(RejectionOrRepairStatus31Choice.mmReason);
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> RejectionOrRepairReason13.mmObject();
@@ -199,10 +202,10 @@ public class RejectionOrRepairStatus14Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.RejectionOrRepairStatus14Choice.mmNoSpecifiedReason, com.tools20022.repository.choice.RejectionOrRepairStatus14Choice.mmReason);
+				messageElement_lazy = () -> Arrays.asList(RejectionOrRepairStatus14Choice.mmNoSpecifiedReason, RejectionOrRepairStatus14Choice.mmReason);
 				trace_lazy = () -> SecuritiesTradeStatusReason.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RejectionOrRepairStatus14Choice";
 				definition = "Specifies whether the status is provided with a reason or not.";
 				nextVersions_lazy = () -> Arrays.asList(ReportItemStatus1.mmObject(), RejectionOrRepairStatus31Choice.mmObject());

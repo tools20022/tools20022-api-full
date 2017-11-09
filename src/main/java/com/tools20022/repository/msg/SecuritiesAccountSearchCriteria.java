@@ -20,12 +20,14 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.DateSearchChoice;
 import com.tools20022.repository.codeset.SystemPartyType1Code;
 import com.tools20022.repository.codeset.SystemSecuritiesAccountType1Code;
 import com.tools20022.repository.datatype.BICFIIdentifier;
 import com.tools20022.repository.datatype.Exact4AlphaNumericText;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -122,7 +124,7 @@ public class SecuritiesAccountSearchCriteria {
 			componentContext_lazy = () -> SecuritiesAccountSearchCriteria.mmObject();
 			isDerived = false;
 			xmlTag = "AcctId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountIdentification";
 			definition = "Unique and unambiguous identification for the account between the account owner and the account servicer.";
 			maxOccurs = 1;
@@ -164,7 +166,7 @@ public class SecuritiesAccountSearchCriteria {
 			componentContext_lazy = () -> SecuritiesAccountSearchCriteria.mmObject();
 			isDerived = false;
 			xmlTag = "AcctSvcr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountServicer";
 			definition = "Party that services the account.";
 			maxOccurs = 1;
@@ -205,7 +207,7 @@ public class SecuritiesAccountSearchCriteria {
 			componentContext_lazy = () -> SecuritiesAccountSearchCriteria.mmObject();
 			isDerived = false;
 			xmlTag = "AcctOwnr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountOwner";
 			definition = "Party that legally owns the account.";
 			maxOccurs = 1;
@@ -251,7 +253,7 @@ public class SecuritiesAccountSearchCriteria {
 			componentContext_lazy = () -> SecuritiesAccountSearchCriteria.mmObject();
 			isDerived = false;
 			xmlTag = "PtyTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartyType";
 			definition = "Specifies the type of the party for which securities account data have been queried.";
 			maxOccurs = 1;
@@ -293,7 +295,7 @@ public class SecuritiesAccountSearchCriteria {
 			componentContext_lazy = () -> SecuritiesAccountSearchCriteria.mmObject();
 			isDerived = false;
 			xmlTag = "OpngDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OpeningDate";
 			definition = "Legal opening date for the securities account.";
 			maxOccurs = 1;
@@ -335,7 +337,7 @@ public class SecuritiesAccountSearchCriteria {
 			componentContext_lazy = () -> SecuritiesAccountSearchCriteria.mmObject();
 			isDerived = false;
 			xmlTag = "ClsgDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClosingDate";
 			definition = "Legal closing date for the securities account.";
 			maxOccurs = 1;
@@ -377,7 +379,7 @@ public class SecuritiesAccountSearchCriteria {
 			componentContext_lazy = () -> SecuritiesAccountSearchCriteria.mmObject();
 			isDerived = false;
 			xmlTag = "AcctTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountType";
 			definition = "Specifies the type of securities account.";
 			maxOccurs = 1;
@@ -422,7 +424,7 @@ public class SecuritiesAccountSearchCriteria {
 			componentContext_lazy = () -> SecuritiesAccountSearchCriteria.mmObject();
 			isDerived = false;
 			xmlTag = "EndInvstrFlg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EndInvestorFlag";
 			definition = "Specifies information to identify securities accounts where allocation instructions are posted.";
 			maxOccurs = 1;
@@ -465,7 +467,7 @@ public class SecuritiesAccountSearchCriteria {
 			componentContext_lazy = () -> SecuritiesAccountSearchCriteria.mmObject();
 			isDerived = false;
 			xmlTag = "PricgSchme";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PricingScheme";
 			definition = "Defines how the price is applied to the securities account.";
 			maxOccurs = 1;
@@ -477,13 +479,11 @@ public class SecuritiesAccountSearchCriteria {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesAccountSearchCriteria.mmAccountIdentification, com.tools20022.repository.msg.SecuritiesAccountSearchCriteria.mmAccountServicer,
-						com.tools20022.repository.msg.SecuritiesAccountSearchCriteria.mmAccountOwner, com.tools20022.repository.msg.SecuritiesAccountSearchCriteria.mmPartyType,
-						com.tools20022.repository.msg.SecuritiesAccountSearchCriteria.mmOpeningDate, com.tools20022.repository.msg.SecuritiesAccountSearchCriteria.mmClosingDate,
-						com.tools20022.repository.msg.SecuritiesAccountSearchCriteria.mmAccountType, com.tools20022.repository.msg.SecuritiesAccountSearchCriteria.mmEndInvestorFlag,
-						com.tools20022.repository.msg.SecuritiesAccountSearchCriteria.mmPricingScheme);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(SecuritiesAccountSearchCriteria.mmAccountIdentification, SecuritiesAccountSearchCriteria.mmAccountServicer, SecuritiesAccountSearchCriteria.mmAccountOwner,
+						SecuritiesAccountSearchCriteria.mmPartyType, SecuritiesAccountSearchCriteria.mmOpeningDate, SecuritiesAccountSearchCriteria.mmClosingDate, SecuritiesAccountSearchCriteria.mmAccountType,
+						SecuritiesAccountSearchCriteria.mmEndInvestorFlag, SecuritiesAccountSearchCriteria.mmPricingScheme);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SecuritiesAccountSearchCriteria";
 				definition = "Set of search criteria for querying securties account reference data.";
 			}

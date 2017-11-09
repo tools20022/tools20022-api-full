@@ -20,8 +20,11 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.NoReasonCode;
 import com.tools20022.repository.entity.CorporateActionStatusReason;
+import com.tools20022.repository.entity.StatusReason;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.CancelledStatusReason14;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -104,11 +107,11 @@ public class CancelledStatus15Choice {
 	 */
 	public static final MMMessageAttribute mmNoSpecifiedReason = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmNoSpecifiedReason;
+			businessElementTrace_lazy = () -> StatusReason.mmNoSpecifiedReason;
 			componentContext_lazy = () -> CancelledStatus15Choice.mmObject();
 			isDerived = false;
 			xmlTag = "NoSpcfdRsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoSpecifiedReason";
 			definition = "Reason not specified.";
 			maxOccurs = 1;
@@ -151,11 +154,11 @@ public class CancelledStatus15Choice {
 	 */
 	public static final MMMessageAssociationEnd mmReason = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmCancellationReason;
+			businessElementTrace_lazy = () -> StatusReason.mmCancellationReason;
 			componentContext_lazy = () -> CancelledStatus15Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Rsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reason";
 			definition = "Reason for the cancelled status.";
 			minOccurs = 1;
@@ -167,10 +170,10 @@ public class CancelledStatus15Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CancelledStatus15Choice.mmNoSpecifiedReason, com.tools20022.repository.choice.CancelledStatus15Choice.mmReason);
+				messageElement_lazy = () -> Arrays.asList(CancelledStatus15Choice.mmNoSpecifiedReason, CancelledStatus15Choice.mmReason);
 				trace_lazy = () -> CorporateActionStatusReason.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CancelledStatus15Choice";
 				definition = "Choice between a reason or no reason for the corporate action instruction or instruction cancellation cancelled/cancellation completed status.";
 			}

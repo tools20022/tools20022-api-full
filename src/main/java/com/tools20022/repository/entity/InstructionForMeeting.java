@@ -17,12 +17,11 @@
 
 package com.tools20022.repository.entity;
 
-import com.tools20022.metamodel.MMBusinessAssociationEnd;
-import com.tools20022.metamodel.MMBusinessAttribute;
-import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.*;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.YesNoIndicator;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -39,39 +38,21 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
  * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InstructionForMeeting#mmVoteInstruction
- * InstructionForMeeting.mmVoteInstruction}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InstructionForMeeting#mmRequestedExecutionDate
- * InstructionForMeeting.mmRequestedExecutionDate}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InstructionForMeeting#mmRelatedServicing
- * InstructionForMeeting.mmRelatedServicing}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InstructionForMeeting#mmMeetingAttendance
- * InstructionForMeeting.mmMeetingAttendance}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InstructionForMeeting#mmProxyAppointment
- * InstructionForMeeting.mmProxyAppointment}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InstructionForMeeting#mmMeetingIdentification
- * InstructionForMeeting.mmMeetingIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InstructionForMeeting#mmSecuritiesRegistration
- * InstructionForMeeting.mmSecuritiesRegistration}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InstructionForMeeting#mmBlockingSecurities
- * InstructionForMeeting.mmBlockingSecurities}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InstructionForMeeting#mmParticipationRegistration
- * InstructionForMeeting.mmParticipationRegistration}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InstructionForMeeting#mmSafekeepingAccount
- * InstructionForMeeting.mmSafekeepingAccount}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.RequestInformation
+ * RequestInformation}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SecurityPosition2
+ * SecurityPosition2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SecurityPosition1
+ * SecurityPosition1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SpecificInstructionRequest1
+ * SpecificInstructionRequest1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Instruction1 Instruction1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Instruction2 Instruction2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Instruction3 Instruction3}</li>
  * </ul>
  * </li>
  * <li>
@@ -110,21 +91,39 @@ import java.util.List;
  * Instruction3.mmSpecificInstructionRequest}</li>
  * </ul>
  * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.RequestInformation
- * RequestInformation}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SecurityPosition2
- * SecurityPosition2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SecurityPosition1
- * SecurityPosition1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SpecificInstructionRequest1
- * SpecificInstructionRequest1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Instruction1 Instruction1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Instruction2 Instruction2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Instruction3 Instruction3}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InstructionForMeeting#mmVoteInstruction
+ * InstructionForMeeting.mmVoteInstruction}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InstructionForMeeting#mmRequestedExecutionDate
+ * InstructionForMeeting.mmRequestedExecutionDate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InstructionForMeeting#mmRelatedServicing
+ * InstructionForMeeting.mmRelatedServicing}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InstructionForMeeting#mmMeetingAttendance
+ * InstructionForMeeting.mmMeetingAttendance}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InstructionForMeeting#mmProxyAppointment
+ * InstructionForMeeting.mmProxyAppointment}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InstructionForMeeting#mmMeetingIdentification
+ * InstructionForMeeting.mmMeetingIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InstructionForMeeting#mmSecuritiesRegistration
+ * InstructionForMeeting.mmSecuritiesRegistration}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InstructionForMeeting#mmBlockingSecurities
+ * InstructionForMeeting.mmBlockingSecurities}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InstructionForMeeting#mmParticipationRegistration
+ * InstructionForMeeting.mmParticipationRegistration}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InstructionForMeeting#mmSafekeepingAccount
+ * InstructionForMeeting.mmSafekeepingAccount}</li>
  * </ul>
  * </li>
  * <li>
@@ -207,17 +206,16 @@ public class InstructionForMeeting {
 	 */
 	public static final MMBusinessAssociationEnd mmVoteInstruction = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecurityPosition2.mmVoteDetails, com.tools20022.repository.msg.SecurityPosition1.mmVoteDetails, com.tools20022.repository.msg.Instruction1.mmVoteDetails,
-					com.tools20022.repository.msg.Instruction2.mmVoteDetails, com.tools20022.repository.msg.SecurityPosition4.mmVoteInstruction, com.tools20022.repository.msg.SecurityPosition3.mmVoteInstruction,
-					com.tools20022.repository.msg.Instruction3.mmVoteDetails);
+			derivation_lazy = () -> Arrays.asList(SecurityPosition2.mmVoteDetails, SecurityPosition1.mmVoteDetails, Instruction1.mmVoteDetails, Instruction2.mmVoteDetails, SecurityPosition4.mmVoteInstruction,
+					SecurityPosition3.mmVoteInstruction, Instruction3.mmVoteDetails);
 			elementContext_lazy = () -> InstructionForMeeting.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "VoteInstruction";
 			definition = "Request to cast detailed voting instructions.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.VoteInstructionRequest.mmMeetingInstruction;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.VoteInstructionRequest.mmObject();
 		}
 	};
@@ -272,12 +270,11 @@ public class InstructionForMeeting {
 	 */
 	public static final MMBusinessAttribute mmRequestedExecutionDate = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.VotingPartyAndInstruction.mmRequestedExecutionDate, com.tools20022.repository.msg.VoteInstruction.mmRequestedExecutionDate,
-					com.tools20022.repository.msg.RequestInformation.mmRequestedExecutionDate, com.tools20022.repository.msg.Instruction1.mmRequestedExecutionDate, com.tools20022.repository.msg.Instruction2.mmRequestedExecutionDate,
-					com.tools20022.repository.msg.Instruction3.mmRequestedExecutionDate);
+			derivation_lazy = () -> Arrays.asList(VotingPartyAndInstruction.mmRequestedExecutionDate, VoteInstruction.mmRequestedExecutionDate, RequestInformation.mmRequestedExecutionDate, Instruction1.mmRequestedExecutionDate,
+					Instruction2.mmRequestedExecutionDate, Instruction3.mmRequestedExecutionDate);
 			elementContext_lazy = () -> InstructionForMeeting.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RequestedExecutionDate";
 			definition = "Date at which the instruction must be executed.";
 			maxOccurs = 1;
@@ -326,13 +323,13 @@ public class InstructionForMeeting {
 		{
 			elementContext_lazy = () -> InstructionForMeeting.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedServicing";
 			definition = "Meeting servicing process which comprises the management of meeting instructions.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.MeetingServicing.mmMeetingInstruction;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.MeetingServicing.mmObject();
 		}
 	};
@@ -377,12 +374,12 @@ public class InstructionForMeeting {
 		{
 			elementContext_lazy = () -> InstructionForMeeting.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MeetingAttendance";
 			definition = "Instruction containing the information on the participation of the security holder or of its assigned representative.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.MeetingAttendance.mmRelatedMeeting;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.MeetingAttendance.mmObject();
 		}
 	};
@@ -434,15 +431,15 @@ public class InstructionForMeeting {
 	 */
 	public static final MMBusinessAssociationEnd mmProxyAppointment = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Instruction1.mmProxy, com.tools20022.repository.msg.Instruction2.mmProxy, com.tools20022.repository.msg.Instruction3.mmProxy);
+			derivation_lazy = () -> Arrays.asList(Instruction1.mmProxy, Instruction2.mmProxy, Instruction3.mmProxy);
 			elementContext_lazy = () -> InstructionForMeeting.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ProxyAppointment";
 			definition = "Request to assign a proxy for participation to the meeting.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.ProxyAppointment.mmRelatedMeetingInstruction;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.ProxyAppointment.mmObject();
 		}
 	};
@@ -479,7 +476,7 @@ public class InstructionForMeeting {
 		{
 			elementContext_lazy = () -> InstructionForMeeting.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MeetingIdentification";
 			definition = "Identification assigned to a general meeting by the party which has notified the meeting.";
 			maxOccurs = 1;
@@ -530,11 +527,10 @@ public class InstructionForMeeting {
 	 */
 	public static final MMBusinessAttribute mmSecuritiesRegistration = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecurityPosition2.mmSecuritiesRegistrationRequest, com.tools20022.repository.msg.SecurityPosition1.mmSecuritiesRegistrationRequest,
-					com.tools20022.repository.msg.SpecificInstructionRequest1.mmSecuritiesRegistration);
+			derivation_lazy = () -> Arrays.asList(SecurityPosition2.mmSecuritiesRegistrationRequest, SecurityPosition1.mmSecuritiesRegistrationRequest, SpecificInstructionRequest1.mmSecuritiesRegistration);
 			elementContext_lazy = () -> InstructionForMeeting.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SecuritiesRegistration";
 			definition = "Request to register the securities for the meeting.";
 			maxOccurs = 1;
@@ -585,11 +581,10 @@ public class InstructionForMeeting {
 	 */
 	public static final MMBusinessAttribute mmBlockingSecurities = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecurityPosition2.mmBlockingRequest, com.tools20022.repository.msg.SecurityPosition1.mmBlockingRequest,
-					com.tools20022.repository.msg.SpecificInstructionRequest1.mmBlockingSecurities);
+			derivation_lazy = () -> Arrays.asList(SecurityPosition2.mmBlockingRequest, SecurityPosition1.mmBlockingRequest, SpecificInstructionRequest1.mmBlockingSecurities);
 			elementContext_lazy = () -> InstructionForMeeting.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BlockingSecurities";
 			definition = "Request to block the securities";
 			maxOccurs = 1;
@@ -640,11 +635,10 @@ public class InstructionForMeeting {
 	 */
 	public static final MMBusinessAttribute mmParticipationRegistration = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecurityPosition2.mmParticipationRegistrationRequest, com.tools20022.repository.msg.SecurityPosition1.mmParticipationRegistrationRequest,
-					com.tools20022.repository.msg.SpecificInstructionRequest1.mmParticipationRegistration);
+			derivation_lazy = () -> Arrays.asList(SecurityPosition2.mmParticipationRegistrationRequest, SecurityPosition1.mmParticipationRegistrationRequest, SpecificInstructionRequest1.mmParticipationRegistration);
 			elementContext_lazy = () -> InstructionForMeeting.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ParticipationRegistration";
 			definition = "Request to register for participation to the meeting.";
 			maxOccurs = 1;
@@ -691,13 +685,13 @@ public class InstructionForMeeting {
 		{
 			elementContext_lazy = () -> InstructionForMeeting.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SafekeepingAccount";
 			definition = "Account and balance for which the instruction is specified.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesAccount.mmRelatedMeetingInstruction;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SecuritiesAccount.mmObject();
 		}
 	};
@@ -705,20 +699,17 @@ public class InstructionForMeeting {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InstructionForMeeting";
 				definition = "Identifies the position of the instructing party and the actions that it wants to take in relation with the meeting.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesAccount.mmRelatedMeetingInstruction, com.tools20022.repository.entity.ProxyAppointment.mmRelatedMeetingInstruction,
 						com.tools20022.repository.entity.VoteInstructionRequest.mmMeetingInstruction, com.tools20022.repository.entity.MeetingAttendance.mmRelatedMeeting,
 						com.tools20022.repository.entity.MeetingServicing.mmMeetingInstruction);
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Instruction1.mmSpecificInstructionRequest, com.tools20022.repository.msg.Instruction2.mmSpecificInstructionRequest,
-						com.tools20022.repository.msg.Instruction3.mmSpecificInstructionRequest);
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.InstructionForMeeting.mmVoteInstruction, com.tools20022.repository.entity.InstructionForMeeting.mmRequestedExecutionDate,
-						com.tools20022.repository.entity.InstructionForMeeting.mmRelatedServicing, com.tools20022.repository.entity.InstructionForMeeting.mmMeetingAttendance,
-						com.tools20022.repository.entity.InstructionForMeeting.mmProxyAppointment, com.tools20022.repository.entity.InstructionForMeeting.mmMeetingIdentification,
-						com.tools20022.repository.entity.InstructionForMeeting.mmSecuritiesRegistration, com.tools20022.repository.entity.InstructionForMeeting.mmBlockingSecurities,
-						com.tools20022.repository.entity.InstructionForMeeting.mmParticipationRegistration, com.tools20022.repository.entity.InstructionForMeeting.mmSafekeepingAccount);
+				derivationElement_lazy = () -> Arrays.asList(Instruction1.mmSpecificInstructionRequest, Instruction2.mmSpecificInstructionRequest, Instruction3.mmSpecificInstructionRequest);
+				element_lazy = () -> Arrays.asList(InstructionForMeeting.mmVoteInstruction, InstructionForMeeting.mmRequestedExecutionDate, InstructionForMeeting.mmRelatedServicing, InstructionForMeeting.mmMeetingAttendance,
+						InstructionForMeeting.mmProxyAppointment, InstructionForMeeting.mmMeetingIdentification, InstructionForMeeting.mmSecuritiesRegistration, InstructionForMeeting.mmBlockingSecurities,
+						InstructionForMeeting.mmParticipationRegistration, InstructionForMeeting.mmSafekeepingAccount);
 				derivationComponent_lazy = () -> Arrays.asList(RequestInformation.mmObject(), SecurityPosition2.mmObject(), SecurityPosition1.mmObject(), SpecificInstructionRequest1.mmObject(), Instruction1.mmObject(),
 						Instruction2.mmObject(), Instruction3.mmObject());
 			}

@@ -20,9 +20,14 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.AccountIdentification4Choice;
 import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
+import com.tools20022.repository.entity.Account;
+import com.tools20022.repository.entity.DefaultFund;
 import com.tools20022.repository.entity.DefaultFundContribution;
+import com.tools20022.repository.entity.Party;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -110,11 +115,11 @@ public class Contribution1 {
 	 */
 	public static final MMMessageAttribute mmAccount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.mmIdentification;
+			businessElementTrace_lazy = () -> Account.mmIdentification;
 			componentContext_lazy = () -> Contribution1.mmObject();
 			isDerived = false;
 			xmlTag = "Acct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Account";
 			definition = "Segregation done by the central counterparty based on trading venues/products or other attributes.";
 			maxOccurs = 1;
@@ -160,11 +165,11 @@ public class Contribution1 {
 	 */
 	public static final MMMessageAttribute mmRequiredAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.DefaultFund.mmTotalAmount;
+			businessElementTrace_lazy = () -> DefaultFund.mmTotalAmount;
 			componentContext_lazy = () -> Contribution1.mmObject();
 			isDerived = false;
 			xmlTag = "ReqrdAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequiredAmount";
 			definition = "Total contribution required by the clearing member to participate to the default fund.";
 			maxOccurs = 1;
@@ -211,11 +216,11 @@ public class Contribution1 {
 	 */
 	public static final MMMessageAttribute mmIncreaseCoverageAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.DefaultFundContribution.mmExcessOrDeficitAmount;
+			businessElementTrace_lazy = () -> DefaultFundContribution.mmExcessOrDeficitAmount;
 			componentContext_lazy = () -> Contribution1.mmObject();
 			isDerived = false;
 			xmlTag = "IncrCvrgAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncreaseCoverageAmount";
 			definition = "Additional amount that the clearing member will have to provide to cover a risk increase. This results from a risk management decision depending on central counterparty specific criteria.";
 			maxOccurs = 1;
@@ -257,11 +262,11 @@ public class Contribution1 {
 	 */
 	public static final MMMessageAssociationEnd mmNonClearingMember = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> Contribution1.mmObject();
 			isDerived = false;
 			xmlTag = "NonClrMmb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonClearingMember";
 			definition = "Provides the identification for the non-clearing member.";
 			maxOccurs = 1;
@@ -274,11 +279,10 @@ public class Contribution1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Contribution1.mmAccount, com.tools20022.repository.msg.Contribution1.mmRequiredAmount,
-						com.tools20022.repository.msg.Contribution1.mmIncreaseCoverageAmount, com.tools20022.repository.msg.Contribution1.mmNonClearingMember);
+				messageElement_lazy = () -> Arrays.asList(Contribution1.mmAccount, Contribution1.mmRequiredAmount, Contribution1.mmIncreaseCoverageAmount, Contribution1.mmNonClearingMember);
 				trace_lazy = () -> DefaultFundContribution.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Contribution1";
 				definition = "Provides additional information such as the contribution account identification or the requirement amount.";
 			}

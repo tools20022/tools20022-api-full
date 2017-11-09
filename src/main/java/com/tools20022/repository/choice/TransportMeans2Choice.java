@@ -19,7 +19,9 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.Transport;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.MultimodalTransport2;
 import com.tools20022.repository.msg.SingleTransport2;
 import java.util.Arrays;
@@ -101,7 +103,7 @@ public class TransportMeans2Choice {
 			componentContext_lazy = () -> TransportMeans2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "IndvTrnsprt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IndividualTransport";
 			definition = "Moving of goods or people from one place to another by vehicle.";
 			maxOccurs = 1;
@@ -150,7 +152,7 @@ public class TransportMeans2Choice {
 			componentContext_lazy = () -> TransportMeans2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "MltmdlTrnsprt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MultimodalTransport";
 			definition = "Specifies the different movements and places and their role in a multimodal conveyance of goods.";
 			maxOccurs = 1;
@@ -163,10 +165,10 @@ public class TransportMeans2Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.TransportMeans2Choice.mmIndividualTransport, com.tools20022.repository.choice.TransportMeans2Choice.mmMultimodalTransport);
+				messageElement_lazy = () -> Arrays.asList(TransportMeans2Choice.mmIndividualTransport, TransportMeans2Choice.mmMultimodalTransport);
 				trace_lazy = () -> Transport.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "TransportMeans2Choice";
 				definition = "Describes the multimodal or the individual transport of goods.";
 			}

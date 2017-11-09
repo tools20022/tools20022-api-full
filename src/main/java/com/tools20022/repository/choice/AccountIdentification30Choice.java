@@ -19,8 +19,10 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.*;
 import com.tools20022.repository.entity.AccountIdentification;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -125,7 +127,7 @@ public class AccountIdentification30Choice {
 			componentContext_lazy = () -> AccountIdentification30Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Card";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Card";
 			definition = "PAN of the card identifying the account.";
 			maxOccurs = 1;
@@ -175,7 +177,7 @@ public class AccountIdentification30Choice {
 			componentContext_lazy = () -> AccountIdentification30Choice.mmObject();
 			isDerived = false;
 			xmlTag = "MSISDN";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MSISDN";
 			definition = "Mobile Subscriber Integrated Service Digital Network (i.e. mobile phone number of the SIM card).";
 			maxOccurs = 1;
@@ -222,7 +224,7 @@ public class AccountIdentification30Choice {
 			componentContext_lazy = () -> AccountIdentification30Choice.mmObject();
 			isDerived = false;
 			xmlTag = "EMail";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EMail";
 			definition = "E-mail identifying the account.";
 			maxOccurs = 1;
@@ -278,14 +280,14 @@ public class AccountIdentification30Choice {
 	 */
 	public static final MMMessageAttribute mmIBAN = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AccountIdentification.mmIBAN;
+			businessElementTrace_lazy = () -> AccountIdentification.mmIBAN;
 			componentContext_lazy = () -> AccountIdentification30Choice.mmObject();
 			isDerived = false;
 			xmlTag = "IBAN";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IBAN";
 			definition = "International Bank Account Number (IBAN) - identifier used internationally by financial institutions to uniquely identify the account of a customer. Further specifications of the format and content of the IBAN can be found in the standard ISO 13616 \"Banking and related financial services - International Bank Account Number (IBAN)\" version 1997-10-01, or later revisions.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.AccountIdentification1Choice.mmIBAN;
+			previousVersion_lazy = () -> AccountIdentification1Choice.mmIBAN;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> IBANIdentifier.mmObject();
@@ -337,14 +339,14 @@ public class AccountIdentification30Choice {
 	 */
 	public static final MMMessageAttribute mmBBAN = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AccountIdentification.mmBBAN;
+			businessElementTrace_lazy = () -> AccountIdentification.mmBBAN;
 			componentContext_lazy = () -> AccountIdentification30Choice.mmObject();
 			isDerived = false;
 			xmlTag = "BBAN";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BBAN";
 			definition = "Basic Bank Account Number (BBAN) - identifier used nationally by financial institutions, that is, in individual countries, generally as part of a National Account Numbering Scheme(s), to uniquely identify the account of a customer.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.AccountIdentification1Choice.mmBBAN;
+			previousVersion_lazy = () -> AccountIdentification1Choice.mmBBAN;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> BBANIdentifier.mmObject();
@@ -396,14 +398,14 @@ public class AccountIdentification30Choice {
 	 */
 	public static final MMMessageAttribute mmUPIC = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AccountIdentification.mmUPIC;
+			businessElementTrace_lazy = () -> AccountIdentification.mmUPIC;
 			componentContext_lazy = () -> AccountIdentification30Choice.mmObject();
 			isDerived = false;
 			xmlTag = "UPIC";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UPIC";
 			definition = "Universal Payment Identification Code (UPIC) - identifier used by the New York Clearing House to mask confidential data, such as bank accounts and bank routing numbers. UPIC numbers remain with business customers, regardless of banking relationship changes.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.AccountIdentification1Choice.mmUPIC;
+			previousVersion_lazy = () -> AccountIdentification1Choice.mmUPIC;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> UPICIdentifier.mmObject();
@@ -452,7 +454,7 @@ public class AccountIdentification30Choice {
 			componentContext_lazy = () -> AccountIdentification30Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Dmst";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Domestic";
 			definition = "Account number used by financial institutions in individual countries to identify an account of a customer, but not necessarily the bank and branch of the financial institution in which the account is held.";
 			maxOccurs = 1;
@@ -495,11 +497,11 @@ public class AccountIdentification30Choice {
 	 */
 	public static final MMMessageAttribute mmOther = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AccountIdentification.mmProprietaryIdentification;
+			businessElementTrace_lazy = () -> AccountIdentification.mmProprietaryIdentification;
 			componentContext_lazy = () -> AccountIdentification30Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Othr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
 			definition = "Other identifier.";
 			maxOccurs = 1;
@@ -511,13 +513,11 @@ public class AccountIdentification30Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AccountIdentification30Choice.mmCard, com.tools20022.repository.choice.AccountIdentification30Choice.mmMSISDN,
-						com.tools20022.repository.choice.AccountIdentification30Choice.mmEMail, com.tools20022.repository.choice.AccountIdentification30Choice.mmIBAN, com.tools20022.repository.choice.AccountIdentification30Choice.mmBBAN,
-						com.tools20022.repository.choice.AccountIdentification30Choice.mmUPIC, com.tools20022.repository.choice.AccountIdentification30Choice.mmDomestic,
-						com.tools20022.repository.choice.AccountIdentification30Choice.mmOther);
+				messageElement_lazy = () -> Arrays.asList(AccountIdentification30Choice.mmCard, AccountIdentification30Choice.mmMSISDN, AccountIdentification30Choice.mmEMail, AccountIdentification30Choice.mmIBAN,
+						AccountIdentification30Choice.mmBBAN, AccountIdentification30Choice.mmUPIC, AccountIdentification30Choice.mmDomestic, AccountIdentification30Choice.mmOther);
 				trace_lazy = () -> AccountIdentification.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AccountIdentification30Choice";
 				definition = "Identifier of an account, as assigned by the account servicer.";
 				previousVersion_lazy = () -> AccountIdentification1Choice.mmObject();

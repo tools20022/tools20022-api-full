@@ -19,10 +19,12 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
 import com.tools20022.repository.datatype.Max2000Text;
 import com.tools20022.repository.datatype.PercentageRate;
 import com.tools20022.repository.entity.UndertakingAmount;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -103,11 +105,11 @@ public class UndertakingAmount1 {
 	 */
 	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.UndertakingAmount.mmAmount;
+			businessElementTrace_lazy = () -> UndertakingAmount.mmAmount;
 			componentContext_lazy = () -> UndertakingAmount1.mmObject();
 			isDerived = false;
 			xmlTag = "Amt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Amount and currency of the undertaking.";
 			maxOccurs = 1;
@@ -154,11 +156,11 @@ public class UndertakingAmount1 {
 	 */
 	public static final MMMessageAttribute mmPlusTolerance = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.UndertakingAmount.mmTolerance;
+			businessElementTrace_lazy = () -> UndertakingAmount.mmTolerance;
 			componentContext_lazy = () -> UndertakingAmount1.mmObject();
 			isDerived = false;
 			xmlTag = "PlusTlrnce";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlusTolerance";
 			definition = "Percentage by which the amount claimed under the undertaking may be more than the undertaking amount.";
 			maxOccurs = 1;
@@ -200,7 +202,7 @@ public class UndertakingAmount1 {
 			componentContext_lazy = () -> UndertakingAmount1.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInformation";
 			definition = "Additional information concerning the undertaking amount. ";
 			maxOccurs = 5;
@@ -212,11 +214,10 @@ public class UndertakingAmount1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UndertakingAmount1.mmAmount, com.tools20022.repository.msg.UndertakingAmount1.mmPlusTolerance,
-						com.tools20022.repository.msg.UndertakingAmount1.mmAdditionalInformation);
+				messageElement_lazy = () -> Arrays.asList(UndertakingAmount1.mmAmount, UndertakingAmount1.mmPlusTolerance, UndertakingAmount1.mmAdditionalInformation);
 				trace_lazy = () -> UndertakingAmount.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "UndertakingAmount1";
 				definition = "Information about an amount.";
 			}

@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.Operation1Code
+ * Operation1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>{@linkplain com.tools20022.repository.codeset.OperationCode#mmTill
@@ -35,13 +44,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * OperationCode.mmOr}</li>
  * <li>{@linkplain com.tools20022.repository.codeset.OperationCode#mmAnd
  * OperationCode.mmAnd}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.Operation1Code
- * Operation1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -91,7 +93,7 @@ public class OperationCode {
 	 */
 	public static final MMCode mmTill = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Till";
 			definition = "Indicates a range delimited by two variables.";
 			owner_lazy = () -> OperationCode.mmObject();
@@ -122,7 +124,7 @@ public class OperationCode {
 	 */
 	public static final MMCode mmOr = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Or";
 			definition = "Indicates either of two variables is valid, but not both.";
 			owner_lazy = () -> OperationCode.mmObject();
@@ -155,7 +157,7 @@ public class OperationCode {
 	 */
 	public static final MMCode mmAnd = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "And";
 			definition = "Indicates that only when both variables are given, the operation is valid.";
 			owner_lazy = () -> OperationCode.mmObject();
@@ -166,12 +168,12 @@ public class OperationCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("TILL");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OperationCode";
 				definition = "Indicates the relationship between two variables.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OperationCode.mmTill, com.tools20022.repository.codeset.OperationCode.mmOr, com.tools20022.repository.codeset.OperationCode.mmAnd);
+				code_lazy = () -> Arrays.asList(OperationCode.mmTill, OperationCode.mmOr, OperationCode.mmAnd);
 				derivation_lazy = () -> Arrays.asList(Operation1Code.mmObject());
 			}
 		});

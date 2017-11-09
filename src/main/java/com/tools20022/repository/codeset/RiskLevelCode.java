@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.RiskLevel1Code
+ * RiskLevel1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>{@linkplain com.tools20022.repository.codeset.RiskLevelCode#mmHigh
@@ -35,13 +44,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * RiskLevelCode.mmMedium}</li>
  * <li>{@linkplain com.tools20022.repository.codeset.RiskLevelCode#mmLow
  * RiskLevelCode.mmLow}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.RiskLevel1Code
- * RiskLevel1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -91,7 +93,7 @@ public class RiskLevelCode {
 	 */
 	public static final MMCode mmHigh = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "High";
 			definition = "High.";
 			owner_lazy = () -> RiskLevelCode.mmObject();
@@ -121,7 +123,7 @@ public class RiskLevelCode {
 	 */
 	public static final MMCode mmMedium = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Medium";
 			definition = "Medium.\t";
 			owner_lazy = () -> RiskLevelCode.mmObject();
@@ -151,7 +153,7 @@ public class RiskLevelCode {
 	 */
 	public static final MMCode mmLow = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Low";
 			definition = "Low.";
 			owner_lazy = () -> RiskLevelCode.mmObject();
@@ -162,12 +164,12 @@ public class RiskLevelCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("HIGH");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RiskLevelCode";
 				definition = "Specifies the risk level.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RiskLevelCode.mmHigh, com.tools20022.repository.codeset.RiskLevelCode.mmMedium, com.tools20022.repository.codeset.RiskLevelCode.mmLow);
+				code_lazy = () -> Arrays.asList(RiskLevelCode.mmHigh, RiskLevelCode.mmMedium, RiskLevelCode.mmLow);
 				derivation_lazy = () -> Arrays.asList(RiskLevel1Code.mmObject());
 			}
 		});

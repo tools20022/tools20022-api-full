@@ -19,7 +19,10 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.CorporateActionEvent;
+import com.tools20022.repository.entity.Party;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -104,11 +107,11 @@ public class CorporateActionNarrative25 {
 	 */
 	public static final MMMessageAssociationEnd mmOfferor = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> CorporateActionNarrative25.mmObject();
 			isDerived = false;
 			xmlTag = "Offerr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Offeror";
 			definition = "Provides the entity making the offer and is different from the issuing company.";
 			minOccurs = 0;
@@ -150,7 +153,7 @@ public class CorporateActionNarrative25 {
 			componentContext_lazy = () -> CorporateActionNarrative25.mmObject();
 			isDerived = false;
 			xmlTag = "NewCpnyNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewCompanyName";
 			definition = "Provides the new name of a company following a name change.";
 			maxOccurs = 1;
@@ -197,11 +200,11 @@ public class CorporateActionNarrative25 {
 	 */
 	public static final MMMessageAssociationEnd mmURLAddress = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmDocumentationLocation;
+			businessElementTrace_lazy = () -> CorporateActionEvent.mmDocumentationLocation;
 			componentContext_lazy = () -> CorporateActionNarrative25.mmObject();
 			isDerived = false;
 			xmlTag = "URLAdr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "URLAddress";
 			definition = "Provides the web address published for the event, that is, the address for the Universal Resource Locator (URL), for example, used over the www (HTTP) service.";
 			maxOccurs = 1;
@@ -214,11 +217,10 @@ public class CorporateActionNarrative25 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionNarrative25.mmOfferor, com.tools20022.repository.msg.CorporateActionNarrative25.mmNewCompanyName,
-						com.tools20022.repository.msg.CorporateActionNarrative25.mmURLAddress);
+				messageElement_lazy = () -> Arrays.asList(CorporateActionNarrative25.mmOfferor, CorporateActionNarrative25.mmNewCompanyName, CorporateActionNarrative25.mmURLAddress);
 				trace_lazy = () -> CorporateActionEvent.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionNarrative25";
 				definition = "Provides additional information such as the taxation conditions.";
 			}

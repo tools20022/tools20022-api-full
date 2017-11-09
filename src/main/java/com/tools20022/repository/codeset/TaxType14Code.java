@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.TaxTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -96,7 +98,7 @@ public class TaxType14Code extends TaxTypeCode {
 	 */
 	public static final MMCode mmNationalTax = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NationalTax";
 			owner_lazy = () -> TaxType14Code.mmObject();
 		}
@@ -119,7 +121,7 @@ public class TaxType14Code extends TaxTypeCode {
 	 */
 	public static final MMCode mmWithholdingTax = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WithholdingTax";
 			owner_lazy = () -> TaxType14Code.mmObject();
 		}
@@ -142,7 +144,7 @@ public class TaxType14Code extends TaxTypeCode {
 	 */
 	public static final MMCode mmStampDuty = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StampDuty";
 			owner_lazy = () -> TaxType14Code.mmObject();
 		}
@@ -165,7 +167,7 @@ public class TaxType14Code extends TaxTypeCode {
 	 */
 	public static final MMCode mmConsumptionTax = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConsumptionTax";
 			owner_lazy = () -> TaxType14Code.mmObject();
 		}
@@ -188,7 +190,7 @@ public class TaxType14Code extends TaxTypeCode {
 	 */
 	public static final MMCode mmEUTaxRetention = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EUTaxRetention";
 			owner_lazy = () -> TaxType14Code.mmObject();
 		}
@@ -211,7 +213,7 @@ public class TaxType14Code extends TaxTypeCode {
 	 */
 	public static final MMCode mmAktiengewinn2 = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Aktiengewinn2";
 			owner_lazy = () -> TaxType14Code.mmObject();
 		}
@@ -234,7 +236,7 @@ public class TaxType14Code extends TaxTypeCode {
 	 */
 	public static final MMCode mmZwischengewinn = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Zwischengewinn";
 			owner_lazy = () -> TaxType14Code.mmObject();
 		}
@@ -243,14 +245,13 @@ public class TaxType14Code extends TaxTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("NATI");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TaxType14Code";
 				definition = "Specifies the type of tax.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TaxType14Code.mmNationalTax, com.tools20022.repository.codeset.TaxType14Code.mmWithholdingTax, com.tools20022.repository.codeset.TaxType14Code.mmStampDuty,
-						com.tools20022.repository.codeset.TaxType14Code.mmConsumptionTax, com.tools20022.repository.codeset.TaxType14Code.mmEUTaxRetention, com.tools20022.repository.codeset.TaxType14Code.mmAktiengewinn2,
-						com.tools20022.repository.codeset.TaxType14Code.mmZwischengewinn);
+				code_lazy = () -> Arrays.asList(TaxType14Code.mmNationalTax, TaxType14Code.mmWithholdingTax, TaxType14Code.mmStampDuty, TaxType14Code.mmConsumptionTax, TaxType14Code.mmEUTaxRetention, TaxType14Code.mmAktiengewinn2,
+						TaxType14Code.mmZwischengewinn);
 				trace_lazy = () -> TaxTypeCode.mmObject();
 			}
 		});

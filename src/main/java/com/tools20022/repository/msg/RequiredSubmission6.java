@@ -20,10 +20,12 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Exact4AlphaNumericText;
 import com.tools20022.repository.datatype.Max140Text;
 import com.tools20022.repository.entity.FinancialInstitution;
 import com.tools20022.repository.entity.TradeCertificate;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -121,10 +123,10 @@ public class RequiredSubmission6 {
 			componentContext_lazy = () -> RequiredSubmission6.mmObject();
 			isDerived = false;
 			xmlTag = "Submitr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Submitter";
 			definition = "Specifies with party(ies) is authorised to submit the data set as part of the transaction.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.RequiredSubmission5.mmSubmitter;
+			previousVersion_lazy = () -> RequiredSubmission5.mmSubmitter;
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.BICIdentification1.mmObject();
@@ -174,14 +176,14 @@ public class RequiredSubmission6 {
 	 */
 	public static final MMMessageAttribute mmCertificateType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradeCertificate.mmCertificateType;
+			businessElementTrace_lazy = () -> TradeCertificate.mmCertificateType;
 			componentContext_lazy = () -> RequiredSubmission6.mmObject();
 			isDerived = false;
 			xmlTag = "CertTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CertificateType";
 			definition = "Specifies the type of the certificate, in 4 letters, for example BENE for beneficiary certificate, SHIP for shipping line certifcate.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.RequiredSubmission5.mmCertificateType;
+			previousVersion_lazy = () -> RequiredSubmission5.mmCertificateType;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Exact4AlphaNumericText.mmObject();
@@ -220,7 +222,7 @@ public class RequiredSubmission6 {
 			componentContext_lazy = () -> RequiredSubmission6.mmObject();
 			isDerived = false;
 			xmlTag = "CertTpDesc";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CertificateTypeDescription";
 			definition = "Description of the certificate type required.";
 			maxOccurs = 1;
@@ -232,11 +234,10 @@ public class RequiredSubmission6 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RequiredSubmission6.mmSubmitter, com.tools20022.repository.msg.RequiredSubmission6.mmCertificateType,
-						com.tools20022.repository.msg.RequiredSubmission6.mmCertificateTypeDescription);
+				messageElement_lazy = () -> Arrays.asList(RequiredSubmission6.mmSubmitter, RequiredSubmission6.mmCertificateType, RequiredSubmission6.mmCertificateTypeDescription);
 				trace_lazy = () -> TradeCertificate.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RequiredSubmission6";
 				definition = "Specifies the details relative to the submission of the certificate data set.";
 				previousVersion_lazy = () -> RequiredSubmission5.mmObject();

@@ -19,11 +19,16 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.sese.SecuritiesSettlementTransactionInstructionV07;
 import com.tools20022.repository.codeset.DeliveryReceiptType2Code;
 import com.tools20022.repository.codeset.ReceiveDelivery1Code;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.YesNoIndicator;
+import com.tools20022.repository.entity.CorporateActionEventRegistration;
 import com.tools20022.repository.entity.SecuritiesSettlement;
+import com.tools20022.repository.entity.TradeIdentification;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -149,14 +154,14 @@ public class SettlementTypeAndAdditionalParameters19 {
 	 */
 	public static final MMMessageAttribute mmSecuritiesMovementType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmSecuritiesMovementType;
+			businessElementTrace_lazy = () -> SecuritiesSettlement.mmSecuritiesMovementType;
 			componentContext_lazy = () -> SettlementTypeAndAdditionalParameters19.mmObject();
 			isDerived = false;
 			xmlTag = "SctiesMvmntTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesMovementType";
 			definition = "Specifies if the movement on a securities account results from a deliver or a receive instruction.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SettlementTypeAndAdditionalParameters11.mmSecuritiesMovementType;
+			previousVersion_lazy = () -> SettlementTypeAndAdditionalParameters11.mmSecuritiesMovementType;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ReceiveDelivery1Code.mmObject();
@@ -206,14 +211,14 @@ public class SettlementTypeAndAdditionalParameters19 {
 	 */
 	public static final MMMessageAttribute mmPayment = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmSettlementType;
+			businessElementTrace_lazy = () -> SecuritiesSettlement.mmSettlementType;
 			componentContext_lazy = () -> SettlementTypeAndAdditionalParameters19.mmObject();
 			isDerived = false;
 			xmlTag = "Pmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Payment";
 			definition = "Specifies how the transaction is to be settled, for example, against payment.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SettlementTypeAndAdditionalParameters11.mmPayment;
+			previousVersion_lazy = () -> SettlementTypeAndAdditionalParameters11.mmPayment;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DeliveryReceiptType2Code.mmObject();
@@ -262,14 +267,14 @@ public class SettlementTypeAndAdditionalParameters19 {
 	 */
 	public static final MMMessageAttribute mmCommonIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradeIdentification.mmCommonIdentification;
+			businessElementTrace_lazy = () -> TradeIdentification.mmCommonIdentification;
 			componentContext_lazy = () -> SettlementTypeAndAdditionalParameters19.mmObject();
 			isDerived = false;
 			xmlTag = "CmonId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommonIdentification";
 			definition = "Unique reference agreed upon by the two trade counterparties to identify the trade.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SettlementTypeAndAdditionalParameters11.mmCommonIdentification;
+			previousVersion_lazy = () -> SettlementTypeAndAdditionalParameters11.mmCommonIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -319,14 +324,14 @@ public class SettlementTypeAndAdditionalParameters19 {
 	 */
 	public static final MMMessageAttribute mmCorporateActionEventIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEventRegistration.mmCorporateActionEventIdentification;
+			businessElementTrace_lazy = () -> CorporateActionEventRegistration.mmCorporateActionEventIdentification;
 			componentContext_lazy = () -> SettlementTypeAndAdditionalParameters19.mmObject();
 			isDerived = false;
 			xmlTag = "CorpActnEvtId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorporateActionEventIdentification";
 			definition = "Identification assigned by the account servicer to unambiguously identify a corporate action event.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SettlementTypeAndAdditionalParameters11.mmCorporateActionEventIdentification;
+			previousVersion_lazy = () -> SettlementTypeAndAdditionalParameters11.mmCorporateActionEventIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -375,10 +380,10 @@ public class SettlementTypeAndAdditionalParameters19 {
 			componentContext_lazy = () -> SettlementTypeAndAdditionalParameters19.mmObject();
 			isDerived = false;
 			xmlTag = "RcncltnInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReconciliationIndicator";
 			definition = "Indicates whether the settlement transaction was already sent on the market and that it is only sent by an account owner to an account servicer for reconciliation purposes.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SettlementTypeAndAdditionalParameters11.mmReconciliationIndicator;
+			previousVersion_lazy = () -> SettlementTypeAndAdditionalParameters11.mmReconciliationIndicator;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
@@ -424,10 +429,10 @@ public class SettlementTypeAndAdditionalParameters19 {
 			componentContext_lazy = () -> SettlementTypeAndAdditionalParameters19.mmObject();
 			isDerived = false;
 			xmlTag = "ClntCollInstrId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClientCollateralInstructionIdentification";
 			definition = "Unique identification assigned to the instruction by the client.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SettlementTypeAndAdditionalParameters11.mmClientCollateralInstructionIdentification;
+			previousVersion_lazy = () -> SettlementTypeAndAdditionalParameters11.mmClientCollateralInstructionIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -475,10 +480,10 @@ public class SettlementTypeAndAdditionalParameters19 {
 			componentContext_lazy = () -> SettlementTypeAndAdditionalParameters19.mmObject();
 			isDerived = false;
 			xmlTag = "ClntCollTxId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClientCollateralTransactionIdentification";
 			definition = "Unique identification identifying the triparty collateral management transaction from the client's point of view.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SettlementTypeAndAdditionalParameters11.mmClientCollateralTransactionIdentification;
+			previousVersion_lazy = () -> SettlementTypeAndAdditionalParameters11.mmClientCollateralTransactionIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -527,10 +532,10 @@ public class SettlementTypeAndAdditionalParameters19 {
 			componentContext_lazy = () -> SettlementTypeAndAdditionalParameters19.mmObject();
 			isDerived = false;
 			xmlTag = "TrptyAgtSvcPrvdrCollTxId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TripartyAgentServiceProviderCollateralTransactionIdentification";
 			definition = "Unique identification identifying the triparty collateral management transaction from the triparty-agent's/service-provider's point of view.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SettlementTypeAndAdditionalParameters11.mmTripartyAgentCollateralTransactionIdentification;
+			previousVersion_lazy = () -> SettlementTypeAndAdditionalParameters11.mmTripartyAgentCollateralTransactionIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -579,10 +584,10 @@ public class SettlementTypeAndAdditionalParameters19 {
 			componentContext_lazy = () -> SettlementTypeAndAdditionalParameters19.mmObject();
 			isDerived = false;
 			xmlTag = "TrptyAgtSvcPrvdrCollInstrId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TripartyAgentServiceProviderCollateralInstructionIdentification";
 			definition = "Unique identification assigned to the instruction by the triparty-agent/service-provider.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SettlementTypeAndAdditionalParameters11.mmTripartyCollateralInstructionIdentification;
+			previousVersion_lazy = () -> SettlementTypeAndAdditionalParameters11.mmTripartyCollateralInstructionIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -592,16 +597,14 @@ public class SettlementTypeAndAdditionalParameters19 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SettlementTypeAndAdditionalParameters19.mmSecuritiesMovementType, com.tools20022.repository.msg.SettlementTypeAndAdditionalParameters19.mmPayment,
-						com.tools20022.repository.msg.SettlementTypeAndAdditionalParameters19.mmCommonIdentification, com.tools20022.repository.msg.SettlementTypeAndAdditionalParameters19.mmCorporateActionEventIdentification,
-						com.tools20022.repository.msg.SettlementTypeAndAdditionalParameters19.mmReconciliationIndicator, com.tools20022.repository.msg.SettlementTypeAndAdditionalParameters19.mmClientCollateralInstructionIdentification,
-						com.tools20022.repository.msg.SettlementTypeAndAdditionalParameters19.mmClientCollateralTransactionIdentification,
-						com.tools20022.repository.msg.SettlementTypeAndAdditionalParameters19.mmTripartyAgentServiceProviderCollateralTransactionIdentification,
-						com.tools20022.repository.msg.SettlementTypeAndAdditionalParameters19.mmTripartyAgentServiceProviderCollateralInstructionIdentification);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesSettlementTransactionInstructionV07.mmSettlementTypeAndAdditionalParameters);
+				messageElement_lazy = () -> Arrays.asList(SettlementTypeAndAdditionalParameters19.mmSecuritiesMovementType, SettlementTypeAndAdditionalParameters19.mmPayment, SettlementTypeAndAdditionalParameters19.mmCommonIdentification,
+						SettlementTypeAndAdditionalParameters19.mmCorporateActionEventIdentification, SettlementTypeAndAdditionalParameters19.mmReconciliationIndicator,
+						SettlementTypeAndAdditionalParameters19.mmClientCollateralInstructionIdentification, SettlementTypeAndAdditionalParameters19.mmClientCollateralTransactionIdentification,
+						SettlementTypeAndAdditionalParameters19.mmTripartyAgentServiceProviderCollateralTransactionIdentification, SettlementTypeAndAdditionalParameters19.mmTripartyAgentServiceProviderCollateralInstructionIdentification);
+				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesSettlementTransactionInstructionV07.mmSettlementTypeAndAdditionalParameters);
 				trace_lazy = () -> SecuritiesSettlement.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SettlementTypeAndAdditionalParameters19";
 				definition = "Provides transaction type and identification information.";
 				previousVersion_lazy = () -> SettlementTypeAndAdditionalParameters11.mmObject();

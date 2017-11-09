@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -28,6 +30,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementTransactionType7Code
+ * SettlementTransactionType7Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionType15Code
+ * SecuritiesTransactionType15Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -221,17 +234,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * SecuritiesTransactionTypeV3Code.mmOfferingIssuingTrade}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementTransactionType7Code
- * SettlementTransactionType7Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionType15Code
- * SecuritiesTransactionType15Code}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -281,7 +283,7 @@ public class SecuritiesTransactionTypeV3Code {
 	 */
 	public static final MMCode mmBuySellBack = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BuySellBack";
 			definition = "Relates to a buy sell back transaction.";
 			owner_lazy = () -> SecuritiesTransactionTypeV3Code.mmObject();
@@ -314,7 +316,7 @@ public class SecuritiesTransactionTypeV3Code {
 	 */
 	public static final MMCode mmBuyIn = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BuyIn";
 			definition = "Transaction relates to a buy-in by the market following a delivery transaction failure.";
 			owner_lazy = () -> SecuritiesTransactionTypeV3Code.mmObject();
@@ -347,7 +349,7 @@ public class SecuritiesTransactionTypeV3Code {
 	 */
 	public static final MMCode mmCentralBankCollateralOperation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CentralBankCollateralOperation";
 			definition = "Relates to a collateral delivery/receipt to a national central bank for central bank credit operations.";
 			owner_lazy = () -> SecuritiesTransactionTypeV3Code.mmObject();
@@ -380,7 +382,7 @@ public class SecuritiesTransactionTypeV3Code {
 	 */
 	public static final MMCode mmCollateralIn = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CollateralIn";
 			definition = "Relates to a collateral transaction, from the point of view of the collateral taker or its agent.";
 			owner_lazy = () -> SecuritiesTransactionTypeV3Code.mmObject();
@@ -413,7 +415,7 @@ public class SecuritiesTransactionTypeV3Code {
 	 */
 	public static final MMCode mmCollateralOut = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CollateralOut";
 			definition = "Relates to a collateral transaction, from the point of view of the collateral giver or its agent.";
 			owner_lazy = () -> SecuritiesTransactionTypeV3Code.mmObject();
@@ -443,7 +445,7 @@ public class SecuritiesTransactionTypeV3Code {
 	 */
 	public static final MMCode mmDepositoryReceiptConversion = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DepositoryReceiptConversion";
 			definition = "Relates to a depository receipt conversion.";
 			owner_lazy = () -> SecuritiesTransactionTypeV3Code.mmObject();
@@ -473,7 +475,7 @@ public class SecuritiesTransactionTypeV3Code {
 	 */
 	public static final MMCode mmFactorUpdate = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "FactorUpdate";
 			definition = "Relates to a factor update.";
 			owner_lazy = () -> SecuritiesTransactionTypeV3Code.mmObject();
@@ -504,7 +506,7 @@ public class SecuritiesTransactionTypeV3Code {
 	 */
 	public static final MMCode mmMoveOfStock = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MoveOfStock";
 			definition = "Relates to a movement of shares into or out of a pooled account.";
 			owner_lazy = () -> SecuritiesTransactionTypeV3Code.mmObject();
@@ -537,7 +539,7 @@ public class SecuritiesTransactionTypeV3Code {
 	 */
 	public static final MMCode mmIssuance = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Issuance";
 			definition = "Relates to the issuance of a security such as an equity or a depositary receipt.";
 			owner_lazy = () -> SecuritiesTransactionTypeV3Code.mmObject();
@@ -571,7 +573,7 @@ public class SecuritiesTransactionTypeV3Code {
 	 */
 	public static final MMCode mmMarkDown = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MarkDown";
 			definition = "Relates to the decrease of positions held by an International Central Securities Depository (ICSD) at the common depository due to custody operations (repurchase, pre-release, proceed of corp. event realigned).";
 			owner_lazy = () -> SecuritiesTransactionTypeV3Code.mmObject();
@@ -606,7 +608,7 @@ public class SecuritiesTransactionTypeV3Code {
 	 */
 	public static final MMCode mmMarkUp = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MarkUp";
 			definition = "Relates to the increase of positions held by an International Central Securities Depository (ICSD) at the common depository due to custody operations (repurchase, pre-release, proceed of corporate event realigned).";
 			owner_lazy = () -> SecuritiesTransactionTypeV3Code.mmObject();
@@ -636,7 +638,7 @@ public class SecuritiesTransactionTypeV3Code {
 	 */
 	public static final MMCode mmNetting = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Netting";
 			definition = "Relates to the netting of settlement instructions.";
 			owner_lazy = () -> SecuritiesTransactionTypeV3Code.mmObject();
@@ -669,7 +671,7 @@ public class SecuritiesTransactionTypeV3Code {
 	 */
 	public static final MMCode mmNonSyndicated = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NonSyndicated";
 			definition = "Relates to the issue of medium and short term paper (CP, CD, MTN, notes ...) under a program and without syndication arrangement.";
 			owner_lazy = () -> SecuritiesTransactionTypeV3Code.mmObject();
@@ -702,7 +704,7 @@ public class SecuritiesTransactionTypeV3Code {
 	 */
 	public static final MMCode mmExternalAccountTransfer = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ExternalAccountTransfer";
 			definition = "Relates to an account transfer involving more than one instructing party (messages sender) and/or account servicer (messages receiver).";
 			owner_lazy = () -> SecuritiesTransactionTypeV3Code.mmObject();
@@ -735,7 +737,7 @@ public class SecuritiesTransactionTypeV3Code {
 	 */
 	public static final MMCode mmInternalAccountTransfer = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InternalAccountTransfer";
 			definition = "Relates to an account transfer involving one instructing party (messages sender) at one account servicer (messages receiver).";
 			owner_lazy = () -> SecuritiesTransactionTypeV3Code.mmObject();
@@ -768,7 +770,7 @@ public class SecuritiesTransactionTypeV3Code {
 	 */
 	public static final MMCode mmPairOff = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PairOff";
 			definition = "Relates to a pair-off: the transaction is paired off and netted against one or more previous transactions.";
 			owner_lazy = () -> SecuritiesTransactionTypeV3Code.mmObject();
@@ -799,7 +801,7 @@ public class SecuritiesTransactionTypeV3Code {
 	 */
 	public static final MMCode mmPlacement = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Placement";
 			definition = "Relates to the placement/new issue of a financial instrument.";
 			owner_lazy = () -> SecuritiesTransactionTypeV3Code.mmObject();
@@ -834,7 +836,7 @@ public class SecuritiesTransactionTypeV3Code {
 	 */
 	public static final MMCode mmPortfolioMove = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PortfolioMove";
 			definition = "Relates to a portfolio move from one investment manager to another and/or from an account servicer to another. It is generally charged differently than another account transfer, hence the need to identify this type of transfer as such.";
 			owner_lazy = () -> SecuritiesTransactionTypeV3Code.mmObject();
@@ -864,7 +866,7 @@ public class SecuritiesTransactionTypeV3Code {
 	 */
 	public static final MMCode mmRealignment = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Realignment";
 			definition = "Relates to a realignment of positions.";
 			owner_lazy = () -> SecuritiesTransactionTypeV3Code.mmObject();
@@ -897,7 +899,7 @@ public class SecuritiesTransactionTypeV3Code {
 	 */
 	public static final MMCode mmWithdrawal = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Withdrawal";
 			definition = "Relates to the withdrawal of specified amounts from specified subaccounts.";
 			owner_lazy = () -> SecuritiesTransactionTypeV3Code.mmObject();
@@ -927,7 +929,7 @@ public class SecuritiesTransactionTypeV3Code {
 	 */
 	public static final MMCode mmRedemption = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Redemption";
 			definition = "Relates to a redemption of funds (funds industry only).";
 			owner_lazy = () -> SecuritiesTransactionTypeV3Code.mmObject();
@@ -959,7 +961,7 @@ public class SecuritiesTransactionTypeV3Code {
 	 */
 	public static final MMCode mmDepositoryReceiptReleaseCancellation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DepositoryReceiptReleaseCancellation";
 			definition = "Relates to a release (into/from local) of depository receipt operation.";
 			owner_lazy = () -> SecuritiesTransactionTypeV3Code.mmObject();
@@ -989,7 +991,7 @@ public class SecuritiesTransactionTypeV3Code {
 	 */
 	public static final MMCode mmRepo = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Repo";
 			definition = "Relates to a repurchase agreement transaction.";
 			owner_lazy = () -> SecuritiesTransactionTypeV3Code.mmObject();
@@ -1022,7 +1024,7 @@ public class SecuritiesTransactionTypeV3Code {
 	 */
 	public static final MMCode mmReturnDeliveryWithoutMatching = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ReturnDeliveryWithoutMatching";
 			definition = "Relates to the return of financial instruments resulting from a rejected delivery without matching operation.";
 			owner_lazy = () -> SecuritiesTransactionTypeV3Code.mmObject();
@@ -1053,7 +1055,7 @@ public class SecuritiesTransactionTypeV3Code {
 	 */
 	public static final MMCode mmReporting = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Reporting";
 			definition = "Relates to a transaction that is for reporting purposes only.";
 			owner_lazy = () -> SecuritiesTransactionTypeV3Code.mmObject();
@@ -1083,7 +1085,7 @@ public class SecuritiesTransactionTypeV3Code {
 	 */
 	public static final MMCode mmReverseRepurchaseAgreement = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ReverseRepurchaseAgreement";
 			definition = "Relates to a reverse repurchase agreement transaction.";
 			owner_lazy = () -> SecuritiesTransactionTypeV3Code.mmObject();
@@ -1113,7 +1115,7 @@ public class SecuritiesTransactionTypeV3Code {
 	 */
 	public static final MMCode mmSellBuyBack = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SellBuyBack";
 			definition = "Relates to a sell buy back transaction.";
 			owner_lazy = () -> SecuritiesTransactionTypeV3Code.mmObject();
@@ -1146,7 +1148,7 @@ public class SecuritiesTransactionTypeV3Code {
 	 */
 	public static final MMCode mmBorrowingReallocation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BorrowingReallocation";
 			definition = "Internal reallocation of a borrowed holding from one safekeeping account to another.";
 			owner_lazy = () -> SecuritiesTransactionTypeV3Code.mmObject();
@@ -1176,7 +1178,7 @@ public class SecuritiesTransactionTypeV3Code {
 	 */
 	public static final MMCode mmSecuritiesBorrowing = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SecuritiesBorrowing";
 			definition = "Relates to a securities borrowing operation.";
 			owner_lazy = () -> SecuritiesTransactionTypeV3Code.mmObject();
@@ -1206,7 +1208,7 @@ public class SecuritiesTransactionTypeV3Code {
 	 */
 	public static final MMCode mmSecuritiesLending = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SecuritiesLending";
 			definition = "Relates to a securities lending operation.";
 			owner_lazy = () -> SecuritiesTransactionTypeV3Code.mmObject();
@@ -1239,7 +1241,7 @@ public class SecuritiesTransactionTypeV3Code {
 	 */
 	public static final MMCode mmLendingReallocation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "LendingReallocation";
 			definition = "Internal reallocation of a holding on loan from one safekeeping account to another.";
 			owner_lazy = () -> SecuritiesTransactionTypeV3Code.mmObject();
@@ -1270,7 +1272,7 @@ public class SecuritiesTransactionTypeV3Code {
 	 */
 	public static final MMCode mmSubscription = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Subscription";
 			definition = "Relates to a subscription to funds (funds industry only).";
 			owner_lazy = () -> SecuritiesTransactionTypeV3Code.mmObject();
@@ -1303,7 +1305,7 @@ public class SecuritiesTransactionTypeV3Code {
 	 */
 	public static final MMCode mmSyndicateUnderwriters = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SyndicateUnderwriters";
 			definition = "Relates to the issue of financial instruments through a syndicate of underwriters and a lead manager.";
 			owner_lazy = () -> SecuritiesTransactionTypeV3Code.mmObject();
@@ -1333,7 +1335,7 @@ public class SecuritiesTransactionTypeV3Code {
 	 */
 	public static final MMCode mmTBAClosing = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TBAClosing";
 			definition = "Relates to a To Be Announced (TBA) closing trade.";
 			owner_lazy = () -> SecuritiesTransactionTypeV3Code.mmObject();
@@ -1363,7 +1365,7 @@ public class SecuritiesTransactionTypeV3Code {
 	 */
 	public static final MMCode mmTrade = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Trade";
 			definition = "Relates to the settlement of a trade.";
 			owner_lazy = () -> SecuritiesTransactionTypeV3Code.mmObject();
@@ -1393,7 +1395,7 @@ public class SecuritiesTransactionTypeV3Code {
 	 */
 	public static final MMCode mmTripartyRepo = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TripartyRepo";
 			definition = "Relates to a triparty repurchase agreement.";
 			owner_lazy = () -> SecuritiesTransactionTypeV3Code.mmObject();
@@ -1423,7 +1425,7 @@ public class SecuritiesTransactionTypeV3Code {
 	 */
 	public static final MMCode mmTripartyReverseRepo = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TripartyReverseRepo";
 			definition = "Relates to a triparty reverse repurchase agreement.";
 			owner_lazy = () -> SecuritiesTransactionTypeV3Code.mmObject();
@@ -1456,7 +1458,7 @@ public class SecuritiesTransactionTypeV3Code {
 	 */
 	public static final MMCode mmTurnaround = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Turnaround";
 			definition = "Relates to a turnaround: the same security is bought and sold to settle the same day, to or from different brokers.";
 			owner_lazy = () -> SecuritiesTransactionTypeV3Code.mmObject();
@@ -1487,7 +1489,7 @@ public class SecuritiesTransactionTypeV3Code {
 	 */
 	public static final MMCode mmPreAdvice = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PreAdvice";
 			definition = "Transaction is a pre-advice, that is, for matching purposes only.";
 			owner_lazy = () -> SecuritiesTransactionTypeV3Code.mmObject();
@@ -1517,7 +1519,7 @@ public class SecuritiesTransactionTypeV3Code {
 	 */
 	public static final MMCode mmAutoCollateralisation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AutoCollateralisation";
 			definition = "Relates to an auto-collateralisation movement.";
 			owner_lazy = () -> SecuritiesTransactionTypeV3Code.mmObject();
@@ -1547,7 +1549,7 @@ public class SecuritiesTransactionTypeV3Code {
 	 */
 	public static final MMCode mmMarketClaim = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MarketClaim";
 			definition = "Relates to a market claim.";
 			owner_lazy = () -> SecuritiesTransactionTypeV3Code.mmObject();
@@ -1577,7 +1579,7 @@ public class SecuritiesTransactionTypeV3Code {
 	 */
 	public static final MMCode mmCorporateAction = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CorporateAction";
 			definition = "Relates to a corporate action.";
 			owner_lazy = () -> SecuritiesTransactionTypeV3Code.mmObject();
@@ -1607,7 +1609,7 @@ public class SecuritiesTransactionTypeV3Code {
 	 */
 	public static final MMCode mmBuy = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Buy";
 			definition = "Transaction is a purchase of financial instrument.";
 			owner_lazy = () -> SecuritiesTransactionTypeV3Code.mmObject();
@@ -1637,7 +1639,7 @@ public class SecuritiesTransactionTypeV3Code {
 	 */
 	public static final MMCode mmSell = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Sell";
 			definition = "Transaction is a sale of financial instrument.";
 			owner_lazy = () -> SecuritiesTransactionTypeV3Code.mmObject();
@@ -1667,7 +1669,7 @@ public class SecuritiesTransactionTypeV3Code {
 	 */
 	public static final MMCode mmInitialPublicOffer = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InitialPublicOffer";
 			definition = "Transaction is an Initial Public Offer (IPO) order.";
 			owner_lazy = () -> SecuritiesTransactionTypeV3Code.mmObject();
@@ -1697,7 +1699,7 @@ public class SecuritiesTransactionTypeV3Code {
 	 */
 	public static final MMCode mmReinvestmentOfDividend = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReinvestmentOfDividend";
 			definition = "Transaction is a reinvestment of dividends.";
 			owner_lazy = () -> SecuritiesTransactionTypeV3Code.mmObject();
@@ -1727,7 +1729,7 @@ public class SecuritiesTransactionTypeV3Code {
 	 */
 	public static final MMCode mmCrossFrom = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CrossFrom";
 			definition = "Indicates that the type of transaction is a cross from.";
 			owner_lazy = () -> SecuritiesTransactionTypeV3Code.mmObject();
@@ -1757,7 +1759,7 @@ public class SecuritiesTransactionTypeV3Code {
 	 */
 	public static final MMCode mmCrossTo = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CrossTo";
 			definition = "Indicates that the type of transaction is a cross to.";
 			owner_lazy = () -> SecuritiesTransactionTypeV3Code.mmObject();
@@ -1790,7 +1792,7 @@ public class SecuritiesTransactionTypeV3Code {
 	 */
 	public static final MMCode mmSwitchFrom = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SwitchFrom";
 			definition = "Transaction is a change of an investment from one sub-fund to another sub-fund.";
 			owner_lazy = () -> SecuritiesTransactionTypeV3Code.mmObject();
@@ -1823,7 +1825,7 @@ public class SecuritiesTransactionTypeV3Code {
 	 */
 	public static final MMCode mmSwitchTo = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SwitchTo";
 			definition = "Transaction is a change of an investment from one sub-fund to another sub-fund.";
 			owner_lazy = () -> SecuritiesTransactionTypeV3Code.mmObject();
@@ -1856,7 +1858,7 @@ public class SecuritiesTransactionTypeV3Code {
 	 */
 	public static final MMCode mmBasket = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Basket";
 			definition = "A basket trade, i.e. a unit of 15 or more financial instruments used in program trading.";
 			owner_lazy = () -> SecuritiesTransactionTypeV3Code.mmObject();
@@ -1886,7 +1888,7 @@ public class SecuritiesTransactionTypeV3Code {
 	 */
 	public static final MMCode mmGuaranteedClose = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "GuaranteedClose";
 			definition = "Trade which is guaranteed to be finalized";
 			owner_lazy = () -> SecuritiesTransactionTypeV3Code.mmObject();
@@ -1920,7 +1922,7 @@ public class SecuritiesTransactionTypeV3Code {
 	 */
 	public static final MMCode mmProgram = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Program";
 			definition = "A program trade, i.e. a computer-driven trade of buying and selling of baskets of 15 or more financial instruments by index arbitrage specialists or institutional traders.";
 			owner_lazy = () -> SecuritiesTransactionTypeV3Code.mmObject();
@@ -1950,7 +1952,7 @@ public class SecuritiesTransactionTypeV3Code {
 	 */
 	public static final MMCode mmEmployeeTradeReporting = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EmployeeTradeReporting";
 			definition = "Transaction relates to employee trade reporting.";
 			owner_lazy = () -> SecuritiesTransactionTypeV3Code.mmObject();
@@ -1981,7 +1983,7 @@ public class SecuritiesTransactionTypeV3Code {
 	 */
 	public static final MMCode mmAgency = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Agency";
 			definition = "Trade in which an agent intermediates between a buyer and a seller.";
 			owner_lazy = () -> SecuritiesTransactionTypeV3Code.mmObject();
@@ -2011,7 +2013,7 @@ public class SecuritiesTransactionTypeV3Code {
 	 */
 	public static final MMCode mmBrokerToBroker = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BrokerToBroker";
 			definition = "A trade from a broker to another broker.";
 			owner_lazy = () -> SecuritiesTransactionTypeV3Code.mmObject();
@@ -2041,7 +2043,7 @@ public class SecuritiesTransactionTypeV3Code {
 	 */
 	public static final MMCode mmPreAllocation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PreAllocation";
 			definition = "A pre-allocated trade.";
 			owner_lazy = () -> SecuritiesTransactionTypeV3Code.mmObject();
@@ -2072,7 +2074,7 @@ public class SecuritiesTransactionTypeV3Code {
 	 */
 	public static final MMCode mmFundToFund = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "FundToFund";
 			definition = "A trade from an investment fund to another investment fund.";
 			owner_lazy = () -> SecuritiesTransactionTypeV3Code.mmObject();
@@ -2102,7 +2104,7 @@ public class SecuritiesTransactionTypeV3Code {
 	 */
 	public static final MMCode mmList = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "List";
 			definition = "Transaction is an List order.";
 			owner_lazy = () -> SecuritiesTransactionTypeV3Code.mmObject();
@@ -2132,7 +2134,7 @@ public class SecuritiesTransactionTypeV3Code {
 	 */
 	public static final MMCode mmIndex = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Index";
 			definition = "Transaction is an Index order.";
 			owner_lazy = () -> SecuritiesTransactionTypeV3Code.mmObject();
@@ -2165,7 +2167,7 @@ public class SecuritiesTransactionTypeV3Code {
 	 */
 	public static final MMCode mmVWAPGuarantee = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "VWAPGuarantee";
 			definition = "Trade whose price is guaranteed as the weighted average of the trade prices on a specific day.";
 			owner_lazy = () -> SecuritiesTransactionTypeV3Code.mmObject();
@@ -2195,7 +2197,7 @@ public class SecuritiesTransactionTypeV3Code {
 	 */
 	public static final MMCode mmRiskTrade = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RiskTrade";
 			definition = "Trade involving risk";
 			owner_lazy = () -> SecuritiesTransactionTypeV3Code.mmObject();
@@ -2225,7 +2227,7 @@ public class SecuritiesTransactionTypeV3Code {
 	 */
 	public static final MMCode mmOfferingIssuingTrade = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OfferingIssuingTrade";
 			definition = "Offering issue trade.";
 			owner_lazy = () -> SecuritiesTransactionTypeV3Code.mmObject();
@@ -2236,43 +2238,28 @@ public class SecuritiesTransactionTypeV3Code {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("BSBK");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesTransactionTypeV3Code";
 				definition = "Specifies underlying information regarding the type of settlement transaction.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SecuritiesTransactionTypeV3Code.mmBuySellBack, com.tools20022.repository.codeset.SecuritiesTransactionTypeV3Code.mmBuyIn,
-						com.tools20022.repository.codeset.SecuritiesTransactionTypeV3Code.mmCentralBankCollateralOperation, com.tools20022.repository.codeset.SecuritiesTransactionTypeV3Code.mmCollateralIn,
-						com.tools20022.repository.codeset.SecuritiesTransactionTypeV3Code.mmCollateralOut, com.tools20022.repository.codeset.SecuritiesTransactionTypeV3Code.mmDepositoryReceiptConversion,
-						com.tools20022.repository.codeset.SecuritiesTransactionTypeV3Code.mmFactorUpdate, com.tools20022.repository.codeset.SecuritiesTransactionTypeV3Code.mmMoveOfStock,
-						com.tools20022.repository.codeset.SecuritiesTransactionTypeV3Code.mmIssuance, com.tools20022.repository.codeset.SecuritiesTransactionTypeV3Code.mmMarkDown,
-						com.tools20022.repository.codeset.SecuritiesTransactionTypeV3Code.mmMarkUp, com.tools20022.repository.codeset.SecuritiesTransactionTypeV3Code.mmNetting,
-						com.tools20022.repository.codeset.SecuritiesTransactionTypeV3Code.mmNonSyndicated, com.tools20022.repository.codeset.SecuritiesTransactionTypeV3Code.mmExternalAccountTransfer,
-						com.tools20022.repository.codeset.SecuritiesTransactionTypeV3Code.mmInternalAccountTransfer, com.tools20022.repository.codeset.SecuritiesTransactionTypeV3Code.mmPairOff,
-						com.tools20022.repository.codeset.SecuritiesTransactionTypeV3Code.mmPlacement, com.tools20022.repository.codeset.SecuritiesTransactionTypeV3Code.mmPortfolioMove,
-						com.tools20022.repository.codeset.SecuritiesTransactionTypeV3Code.mmRealignment, com.tools20022.repository.codeset.SecuritiesTransactionTypeV3Code.mmWithdrawal,
-						com.tools20022.repository.codeset.SecuritiesTransactionTypeV3Code.mmRedemption, com.tools20022.repository.codeset.SecuritiesTransactionTypeV3Code.mmDepositoryReceiptReleaseCancellation,
-						com.tools20022.repository.codeset.SecuritiesTransactionTypeV3Code.mmRepo, com.tools20022.repository.codeset.SecuritiesTransactionTypeV3Code.mmReturnDeliveryWithoutMatching,
-						com.tools20022.repository.codeset.SecuritiesTransactionTypeV3Code.mmReporting, com.tools20022.repository.codeset.SecuritiesTransactionTypeV3Code.mmReverseRepurchaseAgreement,
-						com.tools20022.repository.codeset.SecuritiesTransactionTypeV3Code.mmSellBuyBack, com.tools20022.repository.codeset.SecuritiesTransactionTypeV3Code.mmBorrowingReallocation,
-						com.tools20022.repository.codeset.SecuritiesTransactionTypeV3Code.mmSecuritiesBorrowing, com.tools20022.repository.codeset.SecuritiesTransactionTypeV3Code.mmSecuritiesLending,
-						com.tools20022.repository.codeset.SecuritiesTransactionTypeV3Code.mmLendingReallocation, com.tools20022.repository.codeset.SecuritiesTransactionTypeV3Code.mmSubscription,
-						com.tools20022.repository.codeset.SecuritiesTransactionTypeV3Code.mmSyndicateUnderwriters, com.tools20022.repository.codeset.SecuritiesTransactionTypeV3Code.mmTBAClosing,
-						com.tools20022.repository.codeset.SecuritiesTransactionTypeV3Code.mmTrade, com.tools20022.repository.codeset.SecuritiesTransactionTypeV3Code.mmTripartyRepo,
-						com.tools20022.repository.codeset.SecuritiesTransactionTypeV3Code.mmTripartyReverseRepo, com.tools20022.repository.codeset.SecuritiesTransactionTypeV3Code.mmTurnaround,
-						com.tools20022.repository.codeset.SecuritiesTransactionTypeV3Code.mmPreAdvice, com.tools20022.repository.codeset.SecuritiesTransactionTypeV3Code.mmAutoCollateralisation,
-						com.tools20022.repository.codeset.SecuritiesTransactionTypeV3Code.mmMarketClaim, com.tools20022.repository.codeset.SecuritiesTransactionTypeV3Code.mmCorporateAction,
-						com.tools20022.repository.codeset.SecuritiesTransactionTypeV3Code.mmBuy, com.tools20022.repository.codeset.SecuritiesTransactionTypeV3Code.mmSell,
-						com.tools20022.repository.codeset.SecuritiesTransactionTypeV3Code.mmInitialPublicOffer, com.tools20022.repository.codeset.SecuritiesTransactionTypeV3Code.mmReinvestmentOfDividend,
-						com.tools20022.repository.codeset.SecuritiesTransactionTypeV3Code.mmCrossFrom, com.tools20022.repository.codeset.SecuritiesTransactionTypeV3Code.mmCrossTo,
-						com.tools20022.repository.codeset.SecuritiesTransactionTypeV3Code.mmSwitchFrom, com.tools20022.repository.codeset.SecuritiesTransactionTypeV3Code.mmSwitchTo,
-						com.tools20022.repository.codeset.SecuritiesTransactionTypeV3Code.mmBasket, com.tools20022.repository.codeset.SecuritiesTransactionTypeV3Code.mmGuaranteedClose,
-						com.tools20022.repository.codeset.SecuritiesTransactionTypeV3Code.mmProgram, com.tools20022.repository.codeset.SecuritiesTransactionTypeV3Code.mmEmployeeTradeReporting,
-						com.tools20022.repository.codeset.SecuritiesTransactionTypeV3Code.mmAgency, com.tools20022.repository.codeset.SecuritiesTransactionTypeV3Code.mmBrokerToBroker,
-						com.tools20022.repository.codeset.SecuritiesTransactionTypeV3Code.mmPreAllocation, com.tools20022.repository.codeset.SecuritiesTransactionTypeV3Code.mmFundToFund,
-						com.tools20022.repository.codeset.SecuritiesTransactionTypeV3Code.mmList, com.tools20022.repository.codeset.SecuritiesTransactionTypeV3Code.mmIndex,
-						com.tools20022.repository.codeset.SecuritiesTransactionTypeV3Code.mmVWAPGuarantee, com.tools20022.repository.codeset.SecuritiesTransactionTypeV3Code.mmRiskTrade,
-						com.tools20022.repository.codeset.SecuritiesTransactionTypeV3Code.mmOfferingIssuingTrade);
+				code_lazy = () -> Arrays.asList(SecuritiesTransactionTypeV3Code.mmBuySellBack, SecuritiesTransactionTypeV3Code.mmBuyIn, SecuritiesTransactionTypeV3Code.mmCentralBankCollateralOperation,
+						SecuritiesTransactionTypeV3Code.mmCollateralIn, SecuritiesTransactionTypeV3Code.mmCollateralOut, SecuritiesTransactionTypeV3Code.mmDepositoryReceiptConversion, SecuritiesTransactionTypeV3Code.mmFactorUpdate,
+						SecuritiesTransactionTypeV3Code.mmMoveOfStock, SecuritiesTransactionTypeV3Code.mmIssuance, SecuritiesTransactionTypeV3Code.mmMarkDown, SecuritiesTransactionTypeV3Code.mmMarkUp,
+						SecuritiesTransactionTypeV3Code.mmNetting, SecuritiesTransactionTypeV3Code.mmNonSyndicated, SecuritiesTransactionTypeV3Code.mmExternalAccountTransfer, SecuritiesTransactionTypeV3Code.mmInternalAccountTransfer,
+						SecuritiesTransactionTypeV3Code.mmPairOff, SecuritiesTransactionTypeV3Code.mmPlacement, SecuritiesTransactionTypeV3Code.mmPortfolioMove, SecuritiesTransactionTypeV3Code.mmRealignment,
+						SecuritiesTransactionTypeV3Code.mmWithdrawal, SecuritiesTransactionTypeV3Code.mmRedemption, SecuritiesTransactionTypeV3Code.mmDepositoryReceiptReleaseCancellation, SecuritiesTransactionTypeV3Code.mmRepo,
+						SecuritiesTransactionTypeV3Code.mmReturnDeliveryWithoutMatching, SecuritiesTransactionTypeV3Code.mmReporting, SecuritiesTransactionTypeV3Code.mmReverseRepurchaseAgreement,
+						SecuritiesTransactionTypeV3Code.mmSellBuyBack, SecuritiesTransactionTypeV3Code.mmBorrowingReallocation, SecuritiesTransactionTypeV3Code.mmSecuritiesBorrowing, SecuritiesTransactionTypeV3Code.mmSecuritiesLending,
+						SecuritiesTransactionTypeV3Code.mmLendingReallocation, SecuritiesTransactionTypeV3Code.mmSubscription, SecuritiesTransactionTypeV3Code.mmSyndicateUnderwriters, SecuritiesTransactionTypeV3Code.mmTBAClosing,
+						SecuritiesTransactionTypeV3Code.mmTrade, SecuritiesTransactionTypeV3Code.mmTripartyRepo, SecuritiesTransactionTypeV3Code.mmTripartyReverseRepo, SecuritiesTransactionTypeV3Code.mmTurnaround,
+						SecuritiesTransactionTypeV3Code.mmPreAdvice, SecuritiesTransactionTypeV3Code.mmAutoCollateralisation, SecuritiesTransactionTypeV3Code.mmMarketClaim, SecuritiesTransactionTypeV3Code.mmCorporateAction,
+						SecuritiesTransactionTypeV3Code.mmBuy, SecuritiesTransactionTypeV3Code.mmSell, SecuritiesTransactionTypeV3Code.mmInitialPublicOffer, SecuritiesTransactionTypeV3Code.mmReinvestmentOfDividend,
+						SecuritiesTransactionTypeV3Code.mmCrossFrom, SecuritiesTransactionTypeV3Code.mmCrossTo, SecuritiesTransactionTypeV3Code.mmSwitchFrom, SecuritiesTransactionTypeV3Code.mmSwitchTo,
+						SecuritiesTransactionTypeV3Code.mmBasket, SecuritiesTransactionTypeV3Code.mmGuaranteedClose, SecuritiesTransactionTypeV3Code.mmProgram, SecuritiesTransactionTypeV3Code.mmEmployeeTradeReporting,
+						SecuritiesTransactionTypeV3Code.mmAgency, SecuritiesTransactionTypeV3Code.mmBrokerToBroker, SecuritiesTransactionTypeV3Code.mmPreAllocation, SecuritiesTransactionTypeV3Code.mmFundToFund,
+						SecuritiesTransactionTypeV3Code.mmList, SecuritiesTransactionTypeV3Code.mmIndex, SecuritiesTransactionTypeV3Code.mmVWAPGuarantee, SecuritiesTransactionTypeV3Code.mmRiskTrade,
+						SecuritiesTransactionTypeV3Code.mmOfferingIssuingTrade);
 				derivation_lazy = () -> Arrays.asList(SettlementTransactionType7Code.mmObject(), SecuritiesTransactionType15Code.mmObject());
 			}
 		});

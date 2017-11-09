@@ -19,7 +19,10 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.auth.FinancialInstrumentReportingNonWorkingDayReportV01;
 import com.tools20022.repository.choice.TradingVenueIdentification1Choice;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -104,7 +107,7 @@ public class SecuritiesNonTradingDayReport1 {
 			componentContext_lazy = () -> SecuritiesNonTradingDayReport1.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Identification of the specific venue this relates to - operating MIC, segment MIC, NCA\r\n";
 			maxOccurs = 1;
@@ -149,7 +152,7 @@ public class SecuritiesNonTradingDayReport1 {
 			componentContext_lazy = () -> SecuritiesNonTradingDayReport1.mmObject();
 			isDerived = false;
 			xmlTag = "NonWorkgDay";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonWorkingDay";
 			definition = "Provides the non working days of the identified venue. Details on why it is a non working day are also captured.";
 			minOccurs = 1;
@@ -161,10 +164,10 @@ public class SecuritiesNonTradingDayReport1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesNonTradingDayReport1.mmIdentification, com.tools20022.repository.msg.SecuritiesNonTradingDayReport1.mmNonWorkingDay);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.auth.FinancialInstrumentReportingNonWorkingDayReportV01.mmNonWorkingDay);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(SecuritiesNonTradingDayReport1.mmIdentification, SecuritiesNonTradingDayReport1.mmNonWorkingDay);
+				messageBuildingBlock_lazy = () -> Arrays.asList(FinancialInstrumentReportingNonWorkingDayReportV01.mmNonWorkingDay);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesNonTradingDayReport1";
 				definition = "Details the non-working days of an entity.";
 			}

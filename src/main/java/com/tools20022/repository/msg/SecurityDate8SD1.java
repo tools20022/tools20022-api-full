@@ -20,8 +20,10 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.DateFormat22Choice;
 import com.tools20022.repository.datatype.Max350Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -104,7 +106,7 @@ public class SecurityDate8SD1 {
 			componentContext_lazy = () -> SecurityDate8SD1.mmObject();
 			isDerived = false;
 			xmlTag = "PlcAndNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "Unambiguous reference to the location where the supplementary data must be inserted in the message instance. \r\n\r\nIn the case of XML, this is expressed by a valid XPath.";
 			maxOccurs = 1;
@@ -149,7 +151,7 @@ public class SecurityDate8SD1 {
 			componentContext_lazy = () -> SecurityDate8SD1.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmDtOfNewScty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementDateOfNewSecurity";
 			definition = "Settlement date for the transaction where the new security is issued. \r\n発行日決済日程情報/決済日";
 			maxOccurs = 1;
@@ -192,7 +194,7 @@ public class SecurityDate8SD1 {
 			componentContext_lazy = () -> SecurityDate8SD1.mmObject();
 			isDerived = false;
 			xmlTag = "TradgSspdDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradingSuspendedDate";
 			definition = "Date/time at which trading of a security is suspended as the result of an event.\r\n";
 			maxOccurs = 1;
@@ -205,10 +207,9 @@ public class SecurityDate8SD1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecurityDate8SD1.mmPlaceAndName, com.tools20022.repository.msg.SecurityDate8SD1.mmSettlementDateOfNewSecurity,
-						com.tools20022.repository.msg.SecurityDate8SD1.mmTradingSuspendedDate);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(SecurityDate8SD1.mmPlaceAndName, SecurityDate8SD1.mmSettlementDateOfNewSecurity, SecurityDate8SD1.mmTradingSuspendedDate);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecurityDate8SD1";
 				definition = "Extension to provide information about the dates related to securities movement.";
 			}

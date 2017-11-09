@@ -18,7 +18,9 @@
 package com.tools20022.repository.datatype;
 
 import com.tools20022.metamodel.MMAmount;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.EuroCurrencyCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -64,9 +66,9 @@ public class EuroMax15Amount {
 	final static public MMAmount mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMAmount() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("0.99");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "EuroMax15Amount";
 				definition = "Number of monetary units specified in a currency, where the unit of currency is the EUR and compliant with ISO 4217.  The decimal separator is a dot, of maximum 15 digits before the dot and 2 after.\nNote: A zero amount is not allowed";
 				currencyIdentifierSet_lazy = () -> EuroCurrencyCode.mmObject();

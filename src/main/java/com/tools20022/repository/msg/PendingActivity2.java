@@ -19,8 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.tsmt.*;
 import com.tools20022.repository.codeset.Action2Code;
 import com.tools20022.repository.datatype.Max140Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -192,7 +195,7 @@ public class PendingActivity2 {
 			componentContext_lazy = () -> PendingActivity2.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Code which specifies the next course of action that the receiver of the message must take.";
 			maxOccurs = 1;
@@ -236,7 +239,7 @@ public class PendingActivity2 {
 			componentContext_lazy = () -> PendingActivity2.mmObject();
 			isDerived = false;
 			xmlTag = "Desc";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Description";
 			definition = "Further information on the course of action that the receiver of the message must take.";
 			maxOccurs = 1;
@@ -248,24 +251,17 @@ public class PendingActivity2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PendingActivity2.mmType, com.tools20022.repository.msg.PendingActivity2.mmDescription);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.AcknowledgementV03.mmRequestForAction, com.tools20022.repository.area.tsmt.AmendmentAcceptanceNotificationV03.mmRequestForAction,
-						com.tools20022.repository.area.tsmt.AmendmentRejectionNotificationV03.mmRequestForAction, com.tools20022.repository.area.tsmt.BaselineMatchReportV03.mmRequestForAction,
-						com.tools20022.repository.area.tsmt.BaselineReportV03.mmRequestForAction, com.tools20022.repository.area.tsmt.DataSetMatchReportV03.mmRequestForAction,
-						com.tools20022.repository.area.tsmt.DeltaReportV03.mmRequestForAction, com.tools20022.repository.area.tsmt.ErrorReportV03.mmRequestForAction,
-						com.tools20022.repository.area.tsmt.ForwardDataSetSubmissionReportV03.mmRequestForAction, com.tools20022.repository.area.tsmt.FullPushThroughReportV03.mmRequestForAction,
-						com.tools20022.repository.area.tsmt.MisMatchAcceptanceNotificationV03.mmRequestForAction, com.tools20022.repository.area.tsmt.MisMatchRejectionNotificationV03.mmRequestForAction,
-						com.tools20022.repository.area.tsmt.ActionReminderV03.mmPendingRequestForAction, com.tools20022.repository.area.tsmt.StatusChangeNotificationV03.mmRequestForAction,
-						com.tools20022.repository.area.tsmt.StatusChangeRequestNotificationV03.mmRequestForAction, com.tools20022.repository.area.tsmt.StatusChangeRequestRejectionNotificationV03.mmRequestForAction,
-						com.tools20022.repository.area.tsmt.StatusExtensionNotificationV03.mmRequestForAction, com.tools20022.repository.area.tsmt.StatusExtensionRejectionNotificationV03.mmRequestForAction,
-						com.tools20022.repository.area.tsmt.StatusExtensionRequestNotificationV03.mmRequestForAction, com.tools20022.repository.area.tsmt.TimeOutNotificationV03.mmRequestForAction,
-						com.tools20022.repository.area.tsmt.ForwardIntentToPayNotificationV01.mmRequestForAction, com.tools20022.repository.area.tsmt.SpecialNotificationV01.mmRequestForAction,
-						com.tools20022.repository.area.tsmt.RoleAndBaselineAcceptanceNotificationV01.mmRequestForAction, com.tools20022.repository.area.tsmt.RoleAndBaselineRejectionNotificationV01.mmRequestForAction,
-						com.tools20022.repository.area.tsmt.FullPushThroughReportV04.mmRequestForAction, com.tools20022.repository.area.tsmt.ForwardDataSetSubmissionReportV04.mmRequestForAction,
-						com.tools20022.repository.area.tsmt.ForwardIntentToPayNotificationV02.mmRequestForAction, com.tools20022.repository.area.tsmt.BaselineReportV04.mmRequestForAction,
-						com.tools20022.repository.area.tsmt.FullPushThroughReportV05.mmRequestForAction, com.tools20022.repository.area.tsmt.ForwardDataSetSubmissionReportV05.mmRequestForAction);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(PendingActivity2.mmType, PendingActivity2.mmDescription);
+				messageBuildingBlock_lazy = () -> Arrays.asList(AcknowledgementV03.mmRequestForAction, AmendmentAcceptanceNotificationV03.mmRequestForAction, AmendmentRejectionNotificationV03.mmRequestForAction,
+						BaselineMatchReportV03.mmRequestForAction, BaselineReportV03.mmRequestForAction, DataSetMatchReportV03.mmRequestForAction, DeltaReportV03.mmRequestForAction, ErrorReportV03.mmRequestForAction,
+						ForwardDataSetSubmissionReportV03.mmRequestForAction, FullPushThroughReportV03.mmRequestForAction, MisMatchAcceptanceNotificationV03.mmRequestForAction, MisMatchRejectionNotificationV03.mmRequestForAction,
+						ActionReminderV03.mmPendingRequestForAction, StatusChangeNotificationV03.mmRequestForAction, StatusChangeRequestNotificationV03.mmRequestForAction, StatusChangeRequestRejectionNotificationV03.mmRequestForAction,
+						StatusExtensionNotificationV03.mmRequestForAction, StatusExtensionRejectionNotificationV03.mmRequestForAction, StatusExtensionRequestNotificationV03.mmRequestForAction, TimeOutNotificationV03.mmRequestForAction,
+						ForwardIntentToPayNotificationV01.mmRequestForAction, SpecialNotificationV01.mmRequestForAction, RoleAndBaselineAcceptanceNotificationV01.mmRequestForAction,
+						RoleAndBaselineRejectionNotificationV01.mmRequestForAction, FullPushThroughReportV04.mmRequestForAction, ForwardDataSetSubmissionReportV04.mmRequestForAction, ForwardIntentToPayNotificationV02.mmRequestForAction,
+						BaselineReportV04.mmRequestForAction, FullPushThroughReportV05.mmRequestForAction, ForwardDataSetSubmissionReportV05.mmRequestForAction);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PendingActivity2";
 				definition = "Specifies the event that require an action from one of the parties to the trade transaction.";
 			}

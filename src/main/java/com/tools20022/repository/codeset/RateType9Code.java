@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.RateTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -85,7 +87,7 @@ public class RateType9Code extends RateTypeCode {
 	 */
 	public static final MMCode mmAnyAndAll = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AnyAndAll";
 			owner_lazy = () -> RateType9Code.mmObject();
 		}
@@ -94,13 +96,13 @@ public class RateType9Code extends RateTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ANYA");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RateType9Code";
 				definition = "Specifies the type of rate.";
 				nextVersions_lazy = () -> Arrays.asList(RateType10Code.mmObject());
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RateType9Code.mmAnyAndAll);
+				code_lazy = () -> Arrays.asList(RateType9Code.mmAnyAndAll);
 				trace_lazy = () -> RateTypeCode.mmObject();
 			}
 		});

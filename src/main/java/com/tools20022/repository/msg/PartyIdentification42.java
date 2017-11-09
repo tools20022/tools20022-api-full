@@ -20,11 +20,12 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.Party10Choice;
 import com.tools20022.repository.codeset.CountryCode;
 import com.tools20022.repository.datatype.Max140Text;
-import com.tools20022.repository.entity.PartyIdentificationInformation;
-import com.tools20022.repository.entity.PostalAddress;
+import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -114,11 +115,11 @@ public class PartyIdentification42 {
 	 */
 	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyName.mmName;
+			businessElementTrace_lazy = () -> PartyName.mmName;
 			componentContext_lazy = () -> PartyIdentification42.mmObject();
 			isDerived = false;
 			xmlTag = "Nm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Name";
 			definition = "Name by which a party is known and which is usually used to identify that party.";
 			maxOccurs = 1;
@@ -167,7 +168,7 @@ public class PartyIdentification42 {
 			componentContext_lazy = () -> PartyIdentification42.mmObject();
 			isDerived = false;
 			xmlTag = "PstlAdr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PostalAddress";
 			definition = "Information that locates and identifies a specific address, as defined by postal services.";
 			maxOccurs = 1;
@@ -214,7 +215,7 @@ public class PartyIdentification42 {
 			componentContext_lazy = () -> PartyIdentification42.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Unique and unambiguous identification of a party.";
 			maxOccurs = 1;
@@ -262,11 +263,11 @@ public class PartyIdentification42 {
 	 */
 	public static final MMMessageAttribute mmCountryOfResidence = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Country.mmCode;
+			businessElementTrace_lazy = () -> Country.mmCode;
 			componentContext_lazy = () -> PartyIdentification42.mmObject();
 			isDerived = false;
 			xmlTag = "CtryOfRes";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CountryOfResidence";
 			definition = "Country in which a person resides (the place of a person's home). In the case of a company, it is the country from which the affairs of that company are directed.";
 			maxOccurs = 1;
@@ -309,11 +310,11 @@ public class PartyIdentification42 {
 	 */
 	public static final MMMessageAssociationEnd mmContactDetails = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmContactPoint;
+			businessElementTrace_lazy = () -> Party.mmContactPoint;
 			componentContext_lazy = () -> PartyIdentification42.mmObject();
 			isDerived = false;
 			xmlTag = "CtctDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ContactDetails";
 			definition = "Set of elements used to indicate how to contact the party.";
 			maxOccurs = 1;
@@ -326,11 +327,11 @@ public class PartyIdentification42 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyIdentification42.mmName, com.tools20022.repository.msg.PartyIdentification42.mmPostalAddress,
-						com.tools20022.repository.msg.PartyIdentification42.mmIdentification, com.tools20022.repository.msg.PartyIdentification42.mmCountryOfResidence, com.tools20022.repository.msg.PartyIdentification42.mmContactDetails);
+				messageElement_lazy = () -> Arrays.asList(PartyIdentification42.mmName, PartyIdentification42.mmPostalAddress, PartyIdentification42.mmIdentification, PartyIdentification42.mmCountryOfResidence,
+						PartyIdentification42.mmContactDetails);
 				trace_lazy = () -> PartyIdentificationInformation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PartyIdentification42";
 				definition = "Set of elements used to identify a person or an organisation.";
 			}

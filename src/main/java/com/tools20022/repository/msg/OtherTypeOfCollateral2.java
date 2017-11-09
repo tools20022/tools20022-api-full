@@ -20,9 +20,12 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.FinancialInstrumentQuantity1Choice;
 import com.tools20022.repository.datatype.Max140Text;
 import com.tools20022.repository.entity.Asset;
+import com.tools20022.repository.entity.Security;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -108,10 +111,10 @@ public class OtherTypeOfCollateral2 {
 			componentContext_lazy = () -> OtherTypeOfCollateral2.mmObject();
 			isDerived = false;
 			xmlTag = "Desc";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Description";
 			definition = "Provides details about the collateral.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.OtherTypeOfCollateral1.mmDescription;
+			previousVersion_lazy = () -> OtherTypeOfCollateral1.mmDescription;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max140Text.mmObject();
@@ -152,11 +155,11 @@ public class OtherTypeOfCollateral2 {
 	 */
 	public static final MMMessageAssociationEnd mmQuantity = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmSecuritiesQuantity;
+			businessElementTrace_lazy = () -> Security.mmSecuritiesQuantity;
 			componentContext_lazy = () -> OtherTypeOfCollateral2.mmObject();
 			isDerived = false;
 			xmlTag = "Qty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Quantity";
 			definition = "Quantity of other collateral.";
 			maxOccurs = 1;
@@ -169,10 +172,10 @@ public class OtherTypeOfCollateral2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OtherTypeOfCollateral2.mmDescription, com.tools20022.repository.msg.OtherTypeOfCollateral2.mmQuantity);
+				messageElement_lazy = () -> Arrays.asList(OtherTypeOfCollateral2.mmDescription, OtherTypeOfCollateral2.mmQuantity);
 				trace_lazy = () -> Asset.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OtherTypeOfCollateral2";
 				definition = "Allows to specify other collateral type by providing a description and the quantity.";
 				previousVersion_lazy = () -> OtherTypeOfCollateral1.mmObject();

@@ -20,6 +20,7 @@ package com.tools20022.repository.area.seev;
 import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.SecuritiesEventsArchive;
 import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.msg.*;
@@ -53,6 +54,9 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code seev.033.001.05}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.SecuritiesEventsArchive
@@ -107,9 +111,6 @@ import java.util.List;
  * CorporateActionInstructionV05.mmSupplementaryData}</li>
  * </ul>
  * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code seev.033.001.05}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -183,11 +184,11 @@ public class CorporateActionInstructionV05 {
 	public static final MMMessageBuildingBlock mmChangeInstructionIndicator = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "ChngInstrInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChangeInstructionIndicator";
 			definition = "When used in a corporate action instruction, indicates that the current instruction is replacing a previous one that was cancelled earlier. When used in a corporate action instruction cancellation request, indicates that cancelled instruction will be replaced by a new corporate action instruction to be sent later.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.CorporateActionInstructionV06.mmChangeInstructionIndicator);
-			previousVersion_lazy = () -> com.tools20022.repository.area.seev.CorporateActionInstructionV04.mmChangeInstructionIndicator;
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionInstructionV06.mmChangeInstructionIndicator);
+			previousVersion_lazy = () -> CorporateActionInstructionV04.mmChangeInstructionIndicator;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
@@ -234,11 +235,11 @@ public class CorporateActionInstructionV05 {
 	public static final MMMessageBuildingBlock mmCancelledInstructionIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CancInstrId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancelledInstructionIdentification";
 			definition = "Identification of a previously sent cancelled instruction document.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.CorporateActionInstructionV06.mmCancelledInstructionIdentification);
-			previousVersion_lazy = () -> com.tools20022.repository.area.seev.CorporateActionInstructionV04.mmCancelledInstructionIdentification;
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionInstructionV06.mmCancelledInstructionIdentification);
+			previousVersion_lazy = () -> CorporateActionInstructionV04.mmCancelledInstructionIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DocumentIdentification15.mmObject();
@@ -289,11 +290,11 @@ public class CorporateActionInstructionV05 {
 	public static final MMMessageBuildingBlock mmInstructionCancellationRequestIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "InstrCxlReqId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructionCancellationRequestIdentification";
 			definition = "Identification of a previously sent instruction cancellation request document.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.CorporateActionInstructionV06.mmInstructionCancellationRequestIdentification);
-			previousVersion_lazy = () -> com.tools20022.repository.area.seev.CorporateActionInstructionV04.mmInstructionCancellationRequestIdentification;
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionInstructionV06.mmInstructionCancellationRequestIdentification);
+			previousVersion_lazy = () -> CorporateActionInstructionV04.mmInstructionCancellationRequestIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DocumentIdentification15.mmObject();
@@ -340,11 +341,11 @@ public class CorporateActionInstructionV05 {
 	public static final MMMessageBuildingBlock mmOtherDocumentIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "OthrDocId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherDocumentIdentification";
 			definition = "Identification of other documents as well as the document number.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.CorporateActionInstructionV06.mmOtherDocumentIdentification);
-			previousVersion_lazy = () -> com.tools20022.repository.area.seev.CorporateActionInstructionV04.mmOtherDocumentIdentification;
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionInstructionV06.mmOtherDocumentIdentification);
+			previousVersion_lazy = () -> CorporateActionInstructionV04.mmOtherDocumentIdentification;
 			minOccurs = 0;
 			complexType_lazy = () -> DocumentIdentification13.mmObject();
 		}
@@ -392,11 +393,11 @@ public class CorporateActionInstructionV05 {
 	public static final MMMessageBuildingBlock mmEventsLinkage = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "EvtsLkg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventsLinkage";
 			definition = "Identification of an other corporate action event that needs to be closely linked to the processing of the event notified in this document.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.CorporateActionInstructionV06.mmEventsLinkage);
-			previousVersion_lazy = () -> com.tools20022.repository.area.seev.CorporateActionInstructionV04.mmEventsLinkage;
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionInstructionV06.mmEventsLinkage);
+			previousVersion_lazy = () -> CorporateActionInstructionV04.mmEventsLinkage;
 			minOccurs = 0;
 			complexType_lazy = () -> CorporateActionEventReference1.mmObject();
 		}
@@ -441,11 +442,11 @@ public class CorporateActionInstructionV05 {
 	public static final MMMessageBuildingBlock mmCorporateActionGeneralInformation = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CorpActnGnlInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorporateActionGeneralInformation";
 			definition = "General information about the corporate action event.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.CorporateActionInstructionV06.mmCorporateActionGeneralInformation);
-			previousVersion_lazy = () -> com.tools20022.repository.area.seev.CorporateActionInstructionV04.mmCorporateActionGeneralInformation;
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionInstructionV06.mmCorporateActionGeneralInformation);
+			previousVersion_lazy = () -> CorporateActionInstructionV04.mmCorporateActionGeneralInformation;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> CorporateActionGeneralInformation71.mmObject();
@@ -494,11 +495,11 @@ public class CorporateActionInstructionV05 {
 	public static final MMMessageBuildingBlock mmAccountDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "AcctDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountDetails";
 			definition = "General information about the safekeeping account, owner and account balance.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.CorporateActionInstructionV06.mmAccountDetails);
-			previousVersion_lazy = () -> com.tools20022.repository.area.seev.CorporateActionInstructionV04.mmAccountDetails;
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionInstructionV06.mmAccountDetails);
+			previousVersion_lazy = () -> CorporateActionInstructionV04.mmAccountDetails;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> AccountAndBalance17.mmObject();
@@ -545,11 +546,11 @@ public class CorporateActionInstructionV05 {
 	public static final MMMessageBuildingBlock mmBeneficialOwnerDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "BnfclOwnrDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BeneficialOwnerDetails";
 			definition = "Provides information about the beneficial owner of the securities.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.CorporateActionInstructionV06.mmBeneficialOwnerDetails);
-			previousVersion_lazy = () -> com.tools20022.repository.area.seev.CorporateActionInstructionV04.mmBeneficialOwnerDetails;
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionInstructionV06.mmBeneficialOwnerDetails);
+			previousVersion_lazy = () -> CorporateActionInstructionV04.mmBeneficialOwnerDetails;
 			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification56.mmObject();
 		}
@@ -594,11 +595,11 @@ public class CorporateActionInstructionV05 {
 	public static final MMMessageBuildingBlock mmCorporateActionInstruction = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CorpActnInstr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorporateActionInstruction";
 			definition = "Information about the corporate action instruction.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.CorporateActionInstructionV06.mmCorporateActionInstruction);
-			previousVersion_lazy = () -> com.tools20022.repository.area.seev.CorporateActionInstructionV04.mmCorporateActionInstruction;
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionInstructionV06.mmCorporateActionInstruction);
+			previousVersion_lazy = () -> CorporateActionInstructionV04.mmCorporateActionInstruction;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> CorporateActionOption103.mmObject();
@@ -644,11 +645,11 @@ public class CorporateActionInstructionV05 {
 	public static final MMMessageBuildingBlock mmAdditionalInformation = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "AddtlInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInformation";
 			definition = "Provides additional information.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.CorporateActionInstructionV06.mmAdditionalInformation);
-			previousVersion_lazy = () -> com.tools20022.repository.area.seev.CorporateActionInstructionV04.mmAdditionalInformation;
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionInstructionV06.mmAdditionalInformation);
+			previousVersion_lazy = () -> CorporateActionInstructionV04.mmAdditionalInformation;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> CorporateActionNarrative21.mmObject();
@@ -697,11 +698,11 @@ public class CorporateActionInstructionV05 {
 	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SplmtryData";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryData";
 			definition = "Additional information that can not be captured in the structured fields and/or any other specific block.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.CorporateActionInstructionV06.mmSupplementaryData);
-			previousVersion_lazy = () -> com.tools20022.repository.area.seev.CorporateActionInstructionV04.mmSupplementaryData;
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionInstructionV06.mmSupplementaryData);
+			previousVersion_lazy = () -> CorporateActionInstructionV04.mmSupplementaryData;
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
@@ -710,7 +711,7 @@ public class CorporateActionInstructionV05 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionInstructionV05";
 				definition = "Scope\nAn account owner sends the CorporateActionInstruction message to an account servicer to instruct election on a corporate action event.\r\nThis message is used to provide the custodian with instructions on how the account owner wishes to proceed with a corporate action event. Instructions include investment decisions regarding the exercise of rights issues, the election of stock or cash when the option is available, and decisions on the conversion or tendering of securities.\nUsage\nThe message may also be used to:\n- re-send a message previously sent (the sub-function of the message is Duplicate),\n- provide a third party with a copy of a message for information (the sub-function of the message is Copy),\n- re-send to a third party a copy of a message for information (the sub-function of the message is Copy Duplicate),\nusing the relevant elements in the business application header (BAH).\nISO 15022 - 20022 COEXISTENCE\r\nThis ISO 20022 message is reversed engineered from ISO 15022. Both standards will coexist for a certain number of years. Until this coexistence period ends, the usage of certain data types is restricted to ensure interoperability between ISO 15022 and 20022 users. Compliance to these rules is mandatory in a coexistence environment.  The coexistence restrictions are described in a Textual Rule linked to the Message Items they concern. These coexistence textual rules are clearly identified as follows:  “CoexistenceXxxxRule”.";
 				nextVersions_lazy = () -> Arrays.asList(CorporateActionInstructionV06.mmObject());
@@ -719,13 +720,10 @@ public class CorporateActionInstructionV05 {
 				rootElement = "Document";
 				xmlTag = "CorpActnInstr";
 				businessArea_lazy = () -> SecuritiesEventsArchive.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.CorporateActionInstructionV05.mmChangeInstructionIndicator,
-						com.tools20022.repository.area.seev.CorporateActionInstructionV05.mmCancelledInstructionIdentification,
-						com.tools20022.repository.area.seev.CorporateActionInstructionV05.mmInstructionCancellationRequestIdentification, com.tools20022.repository.area.seev.CorporateActionInstructionV05.mmOtherDocumentIdentification,
-						com.tools20022.repository.area.seev.CorporateActionInstructionV05.mmEventsLinkage, com.tools20022.repository.area.seev.CorporateActionInstructionV05.mmCorporateActionGeneralInformation,
-						com.tools20022.repository.area.seev.CorporateActionInstructionV05.mmAccountDetails, com.tools20022.repository.area.seev.CorporateActionInstructionV05.mmBeneficialOwnerDetails,
-						com.tools20022.repository.area.seev.CorporateActionInstructionV05.mmCorporateActionInstruction, com.tools20022.repository.area.seev.CorporateActionInstructionV05.mmAdditionalInformation,
-						com.tools20022.repository.area.seev.CorporateActionInstructionV05.mmSupplementaryData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(CorporateActionInstructionV05.mmChangeInstructionIndicator, CorporateActionInstructionV05.mmCancelledInstructionIdentification,
+						CorporateActionInstructionV05.mmInstructionCancellationRequestIdentification, CorporateActionInstructionV05.mmOtherDocumentIdentification, CorporateActionInstructionV05.mmEventsLinkage,
+						CorporateActionInstructionV05.mmCorporateActionGeneralInformation, CorporateActionInstructionV05.mmAccountDetails, CorporateActionInstructionV05.mmBeneficialOwnerDetails,
+						CorporateActionInstructionV05.mmCorporateActionInstruction, CorporateActionInstructionV05.mmAdditionalInformation, CorporateActionInstructionV05.mmSupplementaryData);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "seev";

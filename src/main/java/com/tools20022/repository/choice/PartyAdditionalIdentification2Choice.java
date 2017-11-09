@@ -20,8 +20,10 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.entity.Person;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.OrganisationIdentification5;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -98,11 +100,11 @@ public class PartyAdditionalIdentification2Choice {
 	 */
 	public static final MMMessageAttribute mmBirthDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Person.mmBirthDate;
+			businessElementTrace_lazy = () -> Person.mmBirthDate;
 			componentContext_lazy = () -> PartyAdditionalIdentification2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "BirthDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BirthDate";
 			definition = "Date of birth of an individual person.";
 			maxOccurs = 1;
@@ -144,7 +146,7 @@ public class PartyAdditionalIdentification2Choice {
 			componentContext_lazy = () -> PartyAdditionalIdentification2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "RegnId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RegistrationIdentification";
 			definition = "Official identification of an organisation in a specific register.";
 			maxOccurs = 1;
@@ -157,11 +159,10 @@ public class PartyAdditionalIdentification2Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays
-						.asList(com.tools20022.repository.choice.PartyAdditionalIdentification2Choice.mmBirthDate, com.tools20022.repository.choice.PartyAdditionalIdentification2Choice.mmRegistrationIdentification);
+				messageElement_lazy = () -> Arrays.asList(PartyAdditionalIdentification2Choice.mmBirthDate, PartyAdditionalIdentification2Choice.mmRegistrationIdentification);
 				trace_lazy = () -> Person.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PartyAdditionalIdentification2Choice";
 				definition = "Ancillary identification information about the party.";
 			}

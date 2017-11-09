@@ -20,6 +20,7 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.AccountIdentification31Choice;
 import com.tools20022.repository.choice.PartyIdentification72Choice;
 import com.tools20022.repository.codeset.AccountChoiceMethod1Code;
@@ -28,9 +29,8 @@ import com.tools20022.repository.codeset.CardAccountType3Code;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.Max70Text;
 import com.tools20022.repository.datatype.TrueFalseIndicator;
-import com.tools20022.repository.entity.AccountOwnerRole;
-import com.tools20022.repository.entity.AccountServicerRole;
-import com.tools20022.repository.entity.CashAccount;
+import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -128,7 +128,7 @@ public class CardAccount8 {
 			componentContext_lazy = () -> CardAccount8.mmObject();
 			isDerived = false;
 			xmlTag = "SelctnMtd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SelectionMethod";
 			definition = "Method used by the cardholder and the terminal for the choice of the account.";
 			maxOccurs = 1;
@@ -171,11 +171,11 @@ public class CardAccount8 {
 	 */
 	public static final MMMessageAttribute mmSelectedAccountType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.mmType;
+			businessElementTrace_lazy = () -> Account.mmType;
 			componentContext_lazy = () -> CardAccount8.mmObject();
 			isDerived = false;
 			xmlTag = "SelctdAcctTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SelectedAccountType";
 			definition = "Type of cardholder account used for the transaction.";
 			maxOccurs = 1;
@@ -225,11 +225,11 @@ public class CardAccount8 {
 	 */
 	public static final MMMessageAttribute mmAccountName = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AccountIdentification.mmName;
+			businessElementTrace_lazy = () -> AccountIdentification.mmName;
 			componentContext_lazy = () -> CardAccount8.mmObject();
 			isDerived = false;
 			xmlTag = "AcctNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountName";
 			definition = "Name of the account, as assigned by the account servicing institution, in agreement with the account owner in order to provide an additional means of identification of the account.\r\nUsage: The account name is different from the account owner name. The account name is used in certain user communities to provide a means of identifying the account, in addition to the account owner's identity and the account number.";
 			maxOccurs = 1;
@@ -274,7 +274,7 @@ public class CardAccount8 {
 			componentContext_lazy = () -> CardAccount8.mmObject();
 			isDerived = false;
 			xmlTag = "AcctOwnr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountOwner";
 			definition = "Party that legally owns the account.";
 			maxOccurs = 1;
@@ -319,11 +319,11 @@ public class CardAccount8 {
 	 */
 	public static final MMMessageAttribute mmCurrency = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.mmBaseCurrency;
+			businessElementTrace_lazy = () -> Account.mmBaseCurrency;
 			componentContext_lazy = () -> CardAccount8.mmObject();
 			isDerived = false;
 			xmlTag = "Ccy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Currency";
 			definition = "Identification of the currency in which the account is held.";
 			maxOccurs = 1;
@@ -366,11 +366,11 @@ public class CardAccount8 {
 	 */
 	public static final MMMessageAssociationEnd mmAccountIdentifier = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.mmIdentification;
+			businessElementTrace_lazy = () -> Account.mmIdentification;
 			componentContext_lazy = () -> CardAccount8.mmObject();
 			isDerived = false;
 			xmlTag = "AcctIdr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountIdentifier";
 			definition = "Unique identifier of the account, as assigned by the account servicer.";
 			maxOccurs = 1;
@@ -411,7 +411,7 @@ public class CardAccount8 {
 			componentContext_lazy = () -> CardAccount8.mmObject();
 			isDerived = false;
 			xmlTag = "CdtRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditReference";
 			definition = "Internal account reference in case of credit account.";
 			maxOccurs = 1;
@@ -462,7 +462,7 @@ public class CardAccount8 {
 			componentContext_lazy = () -> CardAccount8.mmObject();
 			isDerived = false;
 			xmlTag = "Svcr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Servicer";
 			definition = "Party that manages the account on behalf of the account owner, that is manages the registration and booking of entries on the account, calculates balances on the account and provides information about the account.";
 			maxOccurs = 1;
@@ -504,11 +504,11 @@ public class CardAccount8 {
 	 */
 	public static final MMMessageAssociationEnd mmBalance = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.mmBalance;
+			businessElementTrace_lazy = () -> Account.mmBalance;
 			componentContext_lazy = () -> CardAccount8.mmObject();
 			isDerived = false;
 			xmlTag = "Bal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Balance";
 			definition = "Balance of the account.";
 			maxOccurs = 1;
@@ -551,7 +551,7 @@ public class CardAccount8 {
 			componentContext_lazy = () -> CardAccount8.mmObject();
 			isDerived = false;
 			xmlTag = "BalDispFlg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BalanceDisplayFlag";
 			definition = "Indicates if the balance must be displayed to the customer on the ATM.";
 			maxOccurs = 1;
@@ -592,7 +592,7 @@ public class CardAccount8 {
 			componentContext_lazy = () -> CardAccount8.mmObject();
 			isDerived = false;
 			xmlTag = "DfltAcctInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DefaultAccountIndicator";
 			definition = "Indicates if this is the default account.";
 			maxOccurs = 1;
@@ -604,13 +604,11 @@ public class CardAccount8 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardAccount8.mmSelectionMethod, com.tools20022.repository.msg.CardAccount8.mmSelectedAccountType,
-						com.tools20022.repository.msg.CardAccount8.mmAccountName, com.tools20022.repository.msg.CardAccount8.mmAccountOwner, com.tools20022.repository.msg.CardAccount8.mmCurrency,
-						com.tools20022.repository.msg.CardAccount8.mmAccountIdentifier, com.tools20022.repository.msg.CardAccount8.mmCreditReference, com.tools20022.repository.msg.CardAccount8.mmServicer,
-						com.tools20022.repository.msg.CardAccount8.mmBalance, com.tools20022.repository.msg.CardAccount8.mmBalanceDisplayFlag, com.tools20022.repository.msg.CardAccount8.mmDefaultAccountIndicator);
+				messageElement_lazy = () -> Arrays.asList(CardAccount8.mmSelectionMethod, CardAccount8.mmSelectedAccountType, CardAccount8.mmAccountName, CardAccount8.mmAccountOwner, CardAccount8.mmCurrency,
+						CardAccount8.mmAccountIdentifier, CardAccount8.mmCreditReference, CardAccount8.mmServicer, CardAccount8.mmBalance, CardAccount8.mmBalanceDisplayFlag, CardAccount8.mmDefaultAccountIndicator);
 				trace_lazy = () -> CashAccount.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CardAccount8";
 				definition = "Customer account information.";
 			}

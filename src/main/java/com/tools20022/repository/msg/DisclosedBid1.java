@@ -20,10 +20,15 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.Side1Code;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.TrueFalseIndicator;
 import com.tools20022.repository.entity.DisclosedListTrading;
+import com.tools20022.repository.entity.ListTrading;
+import com.tools20022.repository.entity.SecuritiesOrder;
+import com.tools20022.repository.entity.SecuritiesTradeExecution;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -117,11 +122,11 @@ public class DisclosedBid1 {
 	 */
 	public static final MMMessageAttribute mmSide = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmSide;
+			businessElementTrace_lazy = () -> SecuritiesOrder.mmSide;
 			componentContext_lazy = () -> DisclosedBid1.mmObject();
 			isDerived = false;
 			xmlTag = "Sd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Side";
 			definition = "When used in request for a \"Disclosed\" bid indicates that bid is required on assumption that SideValue1 is Buy or Sell. SideValue2 can be derived by inference.";
 			maxOccurs = 1;
@@ -167,11 +172,11 @@ public class DisclosedBid1 {
 	 */
 	public static final MMMessageAttribute mmGrossIndicator = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ListTrading.mmGrossAmountIndicator;
+			businessElementTrace_lazy = () -> ListTrading.mmGrossAmountIndicator;
 			componentContext_lazy = () -> DisclosedBid1.mmObject();
 			isDerived = false;
 			xmlTag = "GrssInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GrossIndicator";
 			definition = "Indicates whether an amount is a gross amount (including all charges, commissions and tax), or a net amount.";
 			maxOccurs = 1;
@@ -216,11 +221,11 @@ public class DisclosedBid1 {
 	 */
 	public static final MMMessageAttribute mmListIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ListTrading.mmListIdentification;
+			businessElementTrace_lazy = () -> ListTrading.mmListIdentification;
 			componentContext_lazy = () -> DisclosedBid1.mmObject();
 			isDerived = false;
 			xmlTag = "ListId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ListIdentification";
 			definition = "Name or number assigned by an entity to enable recognition of that entity, eg, account identifier.";
 			maxOccurs = 1;
@@ -261,11 +266,11 @@ public class DisclosedBid1 {
 	 */
 	public static final MMMessageAssociationEnd mmTradingSession = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ListTrading.mmListTradingSession;
+			businessElementTrace_lazy = () -> ListTrading.mmListTradingSession;
 			componentContext_lazy = () -> DisclosedBid1.mmObject();
 			isDerived = false;
 			xmlTag = "TradgSsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradingSession";
 			definition = "Established constraints under which a market operates";
 			maxOccurs = 1;
@@ -307,11 +312,11 @@ public class DisclosedBid1 {
 	 */
 	public static final MMMessageAssociationEnd mmBiddingAccount = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmOrderingAccount;
+			businessElementTrace_lazy = () -> SecuritiesOrder.mmOrderingAccount;
 			componentContext_lazy = () -> DisclosedBid1.mmObject();
 			isDerived = false;
 			xmlTag = "BiddgAcct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BiddingAccount";
 			definition = "Account to or from which a securities entry is made.";
 			maxOccurs = 1;
@@ -354,11 +359,11 @@ public class DisclosedBid1 {
 	 */
 	public static final MMMessageAssociationEnd mmSettlementDetails = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeExecution.mmSecuritiesSettlement;
+			businessElementTrace_lazy = () -> SecuritiesTradeExecution.mmSecuritiesSettlement;
 			componentContext_lazy = () -> DisclosedBid1.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementDetails";
 			definition = "Parameters applied to the settlement of a security transfer.";
 			maxOccurs = 1;
@@ -371,11 +376,11 @@ public class DisclosedBid1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DisclosedBid1.mmSide, com.tools20022.repository.msg.DisclosedBid1.mmGrossIndicator, com.tools20022.repository.msg.DisclosedBid1.mmListIdentification,
-						com.tools20022.repository.msg.DisclosedBid1.mmTradingSession, com.tools20022.repository.msg.DisclosedBid1.mmBiddingAccount, com.tools20022.repository.msg.DisclosedBid1.mmSettlementDetails);
+				messageElement_lazy = () -> Arrays.asList(DisclosedBid1.mmSide, DisclosedBid1.mmGrossIndicator, DisclosedBid1.mmListIdentification, DisclosedBid1.mmTradingSession, DisclosedBid1.mmBiddingAccount,
+						DisclosedBid1.mmSettlementDetails);
 				trace_lazy = () -> DisclosedListTrading.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "DisclosedBid1";
 				definition = "List trading by which the buy-side details the exact stocks and sizes to be traded and the sell-side offers the buy-side a two-way price, to buy or to sell the indicated stocks. All sell-side firms see all of the stocks and quantities in the portfolio during the bidding phase regardless of whether or not they win the business.";
 			}

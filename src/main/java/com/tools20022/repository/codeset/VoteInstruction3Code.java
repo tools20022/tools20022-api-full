@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.VoteInstructionCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -103,7 +105,7 @@ public class VoteInstruction3Code extends VoteInstructionCode {
 	 */
 	public static final MMCode mmAbstain = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Abstain";
 			owner_lazy = () -> VoteInstruction3Code.mmObject();
 		}
@@ -126,7 +128,7 @@ public class VoteInstruction3Code extends VoteInstructionCode {
 	 */
 	public static final MMCode mmAgainst = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Against";
 			owner_lazy = () -> VoteInstruction3Code.mmObject();
 		}
@@ -149,7 +151,7 @@ public class VoteInstruction3Code extends VoteInstructionCode {
 	 */
 	public static final MMCode mmAgainstManagement = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AgainstManagement";
 			owner_lazy = () -> VoteInstruction3Code.mmObject();
 		}
@@ -172,7 +174,7 @@ public class VoteInstruction3Code extends VoteInstructionCode {
 	 */
 	public static final MMCode mmDiscretionary = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Discretionary";
 			owner_lazy = () -> VoteInstruction3Code.mmObject();
 		}
@@ -195,7 +197,7 @@ public class VoteInstruction3Code extends VoteInstructionCode {
 	 */
 	public static final MMCode mmFor = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "For";
 			owner_lazy = () -> VoteInstruction3Code.mmObject();
 		}
@@ -218,7 +220,7 @@ public class VoteInstruction3Code extends VoteInstructionCode {
 	 */
 	public static final MMCode mmNoAction = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoAction";
 			owner_lazy = () -> VoteInstruction3Code.mmObject();
 		}
@@ -241,7 +243,7 @@ public class VoteInstruction3Code extends VoteInstructionCode {
 	 */
 	public static final MMCode mmWithhold = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Withhold";
 			owner_lazy = () -> VoteInstruction3Code.mmObject();
 		}
@@ -264,7 +266,7 @@ public class VoteInstruction3Code extends VoteInstructionCode {
 	 */
 	public static final MMCode mmWithManagement = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WithManagement";
 			owner_lazy = () -> VoteInstruction3Code.mmObject();
 		}
@@ -287,7 +289,7 @@ public class VoteInstruction3Code extends VoteInstructionCode {
 	 */
 	public static final MMCode mmOneYear = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OneYear";
 			owner_lazy = () -> VoteInstruction3Code.mmObject();
 		}
@@ -310,7 +312,7 @@ public class VoteInstruction3Code extends VoteInstructionCode {
 	 */
 	public static final MMCode mmThreeYears = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ThreeYears";
 			owner_lazy = () -> VoteInstruction3Code.mmObject();
 		}
@@ -333,7 +335,7 @@ public class VoteInstruction3Code extends VoteInstructionCode {
 	 */
 	public static final MMCode mmTwoYears = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TwoYears";
 			owner_lazy = () -> VoteInstruction3Code.mmObject();
 		}
@@ -342,14 +344,12 @@ public class VoteInstruction3Code extends VoteInstructionCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "VoteInstruction3Code";
 				definition = "Specifies the possible types of voting instructions.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.VoteInstruction3Code.mmAbstain, com.tools20022.repository.codeset.VoteInstruction3Code.mmAgainst,
-						com.tools20022.repository.codeset.VoteInstruction3Code.mmAgainstManagement, com.tools20022.repository.codeset.VoteInstruction3Code.mmDiscretionary, com.tools20022.repository.codeset.VoteInstruction3Code.mmFor,
-						com.tools20022.repository.codeset.VoteInstruction3Code.mmNoAction, com.tools20022.repository.codeset.VoteInstruction3Code.mmWithhold, com.tools20022.repository.codeset.VoteInstruction3Code.mmWithManagement,
-						com.tools20022.repository.codeset.VoteInstruction3Code.mmOneYear, com.tools20022.repository.codeset.VoteInstruction3Code.mmThreeYears, com.tools20022.repository.codeset.VoteInstruction3Code.mmTwoYears);
+				code_lazy = () -> Arrays.asList(VoteInstruction3Code.mmAbstain, VoteInstruction3Code.mmAgainst, VoteInstruction3Code.mmAgainstManagement, VoteInstruction3Code.mmDiscretionary, VoteInstruction3Code.mmFor,
+						VoteInstruction3Code.mmNoAction, VoteInstruction3Code.mmWithhold, VoteInstruction3Code.mmWithManagement, VoteInstruction3Code.mmOneYear, VoteInstruction3Code.mmThreeYears, VoteInstruction3Code.mmTwoYears);
 				trace_lazy = () -> VoteInstructionCode.mmObject();
 			}
 		});

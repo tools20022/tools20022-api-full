@@ -20,11 +20,15 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.Party28Choice;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.InitiatingPartyRole;
 import com.tools20022.repository.entity.Payment;
+import com.tools20022.repository.entity.PaymentExecution;
+import com.tools20022.repository.entity.PaymentIdentification;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -135,10 +139,10 @@ public class OriginalMessage2 {
 			componentContext_lazy = () -> OriginalMessage2.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlSndr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalSender";
 			definition = "Original message sender used to identify the message. ";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OriginalMessage3.mmOriginalSender);
+			nextVersions_lazy = () -> Arrays.asList(OriginalMessage3.mmOriginalSender);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -196,15 +200,15 @@ public class OriginalMessage2 {
 	 */
 	public static final MMMessageAttribute mmOriginalMessageIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentIdentification.mmExecutionIdentification;
+			businessElementTrace_lazy = () -> PaymentIdentification.mmExecutionIdentification;
 			componentContext_lazy = () -> OriginalMessage2.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlMsgId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalMessageIdentification";
 			definition = "Point to point reference assigned by the original instructing party to unambiguously identify the original group of individual transactions.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OriginalMessage3.mmOriginalMessageIdentification);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.OriginalGroupInformation3.mmOriginalMessageIdentification;
+			nextVersions_lazy = () -> Arrays.asList(OriginalMessage3.mmOriginalMessageIdentification);
+			previousVersion_lazy = () -> OriginalGroupInformation3.mmOriginalMessageIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -259,11 +263,11 @@ public class OriginalMessage2 {
 			componentContext_lazy = () -> OriginalMessage2.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlMsgNmId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalMessageNameIdentification";
 			definition = "Specifies the original message name identifier to which the message refers, such as pacs.003.001.01 or MT103.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OriginalMessage3.mmOriginalMessageNameIdentification);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.OriginalGroupInformation3.mmOriginalMessageNameIdentification;
+			nextVersions_lazy = () -> Arrays.asList(OriginalMessage3.mmOriginalMessageNameIdentification);
+			previousVersion_lazy = () -> OriginalGroupInformation3.mmOriginalMessageNameIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -317,15 +321,15 @@ public class OriginalMessage2 {
 	 */
 	public static final MMMessageAttribute mmOriginalCreationDateTime = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentExecution.mmCreationDate;
+			businessElementTrace_lazy = () -> PaymentExecution.mmCreationDate;
 			componentContext_lazy = () -> OriginalMessage2.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlCreDtTm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalCreationDateTime";
 			definition = "Original date and time at which the message was created.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OriginalMessage3.mmOriginalCreationDateTime);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.OriginalGroupInformation3.mmOriginalCreationDateTime;
+			nextVersions_lazy = () -> Arrays.asList(OriginalMessage3.mmOriginalCreationDateTime);
+			previousVersion_lazy = () -> OriginalGroupInformation3.mmOriginalCreationDateTime;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
@@ -367,7 +371,7 @@ public class OriginalMessage2 {
 			componentContext_lazy = () -> OriginalMessage2.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlPackgId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalPackageIdentification";
 			definition = "Specifies the identification of original package of instructions, entries or records.";
 			maxOccurs = 1;
@@ -411,7 +415,7 @@ public class OriginalMessage2 {
 			componentContext_lazy = () -> OriginalMessage2.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlRcrdId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalRecordIdentification";
 			definition = "Specifies the identification of original entry, instruction or record within the package. ";
 			maxOccurs = 1;
@@ -423,12 +427,11 @@ public class OriginalMessage2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OriginalMessage2.mmOriginalSender, com.tools20022.repository.msg.OriginalMessage2.mmOriginalMessageIdentification,
-						com.tools20022.repository.msg.OriginalMessage2.mmOriginalMessageNameIdentification, com.tools20022.repository.msg.OriginalMessage2.mmOriginalCreationDateTime,
-						com.tools20022.repository.msg.OriginalMessage2.mmOriginalPackageIdentification, com.tools20022.repository.msg.OriginalMessage2.mmOriginalRecordIdentification);
+				messageElement_lazy = () -> Arrays.asList(OriginalMessage2.mmOriginalSender, OriginalMessage2.mmOriginalMessageIdentification, OriginalMessage2.mmOriginalMessageNameIdentification,
+						OriginalMessage2.mmOriginalCreationDateTime, OriginalMessage2.mmOriginalPackageIdentification, OriginalMessage2.mmOriginalRecordIdentification);
 				trace_lazy = () -> Payment.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OriginalMessage2";
 				definition = "Unique and unambiguous identification of the original message references.";
 				nextVersions_lazy = () -> Arrays.asList(OriginalMessage3.mmObject());

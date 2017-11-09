@@ -20,6 +20,7 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.TimeFrame4Choice;
 import com.tools20022.repository.codeset.ActiveCurrencyCode;
 import com.tools20022.repository.codeset.EventFrequency5Code;
@@ -29,6 +30,7 @@ import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics;
 import com.tools20022.repository.entity.Location;
 import com.tools20022.repository.entity.TimeFrame;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -138,11 +140,11 @@ public class ProcessingCharacteristics3 {
 	 */
 	public static final MMMessageAttribute mmDealingCurrencyAccepted = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics.mmDealingCurrency;
+			businessElementTrace_lazy = () -> InvestmentFundClassProcessingCharacteristics.mmDealingCurrency;
 			componentContext_lazy = () -> ProcessingCharacteristics3.mmObject();
 			isDerived = false;
 			xmlTag = "DealgCcyAccptd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DealingCurrencyAccepted";
 			definition = "Currency in which a subscription or redemption is accepted.";
 			minOccurs = 1;
@@ -183,11 +185,11 @@ public class ProcessingCharacteristics3 {
 	 */
 	public static final MMMessageAssociationEnd mmRedemptionAuthorisation = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics.mmMinimumInitialSubscriptionAmount;
+			businessElementTrace_lazy = () -> InvestmentFundClassProcessingCharacteristics.mmMinimumInitialSubscriptionAmount;
 			componentContext_lazy = () -> ProcessingCharacteristics3.mmObject();
 			isDerived = false;
 			xmlTag = "RedAuthstn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RedemptionAuthorisation";
 			definition = "Authorization to claim redemption proceeds.";
 			maxOccurs = 1;
@@ -235,11 +237,11 @@ public class ProcessingCharacteristics3 {
 	 */
 	public static final MMMessageAttribute mmAmountIndicator = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics.mmAmountIndicator;
+			businessElementTrace_lazy = () -> InvestmentFundClassProcessingCharacteristics.mmAmountIndicator;
 			componentContext_lazy = () -> ProcessingCharacteristics3.mmObject();
 			isDerived = false;
 			xmlTag = "AmtInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmountIndicator";
 			definition = "Indicates whether a subscription or  a redemption can be instructed by amount.";
 			maxOccurs = 1;
@@ -286,11 +288,11 @@ public class ProcessingCharacteristics3 {
 	 */
 	public static final MMMessageAttribute mmUnitsIndicator = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics.mmUnitsIndicator;
+			businessElementTrace_lazy = () -> InvestmentFundClassProcessingCharacteristics.mmUnitsIndicator;
 			componentContext_lazy = () -> ProcessingCharacteristics3.mmObject();
 			isDerived = false;
 			xmlTag = "UnitsInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnitsIndicator";
 			definition = "Indicates whether subscriptions or redemptions may be placed as a number of units.";
 			maxOccurs = 1;
@@ -336,7 +338,7 @@ public class ProcessingCharacteristics3 {
 			componentContext_lazy = () -> ProcessingCharacteristics3.mmObject();
 			isDerived = false;
 			xmlTag = "MainFndOrdrDskLctn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MainFundOrderDeskLocation";
 			definition = "Specifies the location of the main fund order desk.";
 			maxOccurs = 1;
@@ -381,11 +383,11 @@ public class ProcessingCharacteristics3 {
 	 */
 	public static final MMMessageAttribute mmDealingCutOffTime = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics.mmOrderCutOffDateTime;
+			businessElementTrace_lazy = () -> InvestmentFundClassProcessingCharacteristics.mmOrderCutOffDateTime;
 			componentContext_lazy = () -> ProcessingCharacteristics3.mmObject();
 			isDerived = false;
 			xmlTag = "DealgCutOffTm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DealingCutOffTime";
 			definition = "Last date/time at which an order to subscribe or redeem can be given.";
 			maxOccurs = 1;
@@ -434,7 +436,7 @@ public class ProcessingCharacteristics3 {
 			componentContext_lazy = () -> ProcessingCharacteristics3.mmObject();
 			isDerived = false;
 			xmlTag = "DealgCutOffTmFrame";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DealingCutOffTimeFrame";
 			definition = "TimeFrame or period concept that allows definition of a period as number of days before or after a defined activity.";
 			maxOccurs = 1;
@@ -478,11 +480,11 @@ public class ProcessingCharacteristics3 {
 	 */
 	public static final MMMessageAttribute mmDealingFrequency = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics.mmDealingFrequency;
+			businessElementTrace_lazy = () -> InvestmentFundClassProcessingCharacteristics.mmDealingFrequency;
 			componentContext_lazy = () -> ProcessingCharacteristics3.mmObject();
 			isDerived = false;
 			xmlTag = "DealgFrqcy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DealingFrequency";
 			definition = "Frequency at which the subscriptions are done.";
 			maxOccurs = 1;
@@ -524,7 +526,7 @@ public class ProcessingCharacteristics3 {
 			componentContext_lazy = () -> ProcessingCharacteristics3.mmObject();
 			isDerived = false;
 			xmlTag = "DealgFrqcyDesc";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DealingFrequencyDescription";
 			definition = "Description of frequency at which the subscription is done.";
 			maxOccurs = 1;
@@ -570,11 +572,11 @@ public class ProcessingCharacteristics3 {
 	 */
 	public static final MMMessageAttribute mmLimitedPeriod = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics.mmLimitedPeriod;
+			businessElementTrace_lazy = () -> InvestmentFundClassProcessingCharacteristics.mmLimitedPeriod;
 			componentContext_lazy = () -> ProcessingCharacteristics3.mmObject();
 			isDerived = false;
 			xmlTag = "LtdPrd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LimitedPeriod";
 			definition = "Specific period, eg, for some guaranteed funds, during which the units/shares may be redeemed.";
 			maxOccurs = 1;
@@ -627,11 +629,11 @@ public class ProcessingCharacteristics3 {
 	 */
 	public static final MMMessageAttribute mmSettlementCycle = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics.mmSettlementCycle;
+			businessElementTrace_lazy = () -> InvestmentFundClassProcessingCharacteristics.mmSettlementCycle;
 			componentContext_lazy = () -> ProcessingCharacteristics3.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmCycl";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementCycle";
 			definition = "Indicate the last business day following the day on which a redemption order is priced (T) by which settlement will be due\r\nfor orders placed with the main Fund Order Desk.&nbsp; Alternatively, if proceeds will be paid following receipt of written\r\nrenunciation, indicate the last business day following receipt of the relevant renunciation documentation by the main Fund\r\nOrder Desk (R) by which the proceeds will be sent.&nbsp; Examples of the above would be T+3, R+4 etc.";
 			maxOccurs = 1;
@@ -643,15 +645,12 @@ public class ProcessingCharacteristics3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ProcessingCharacteristics3.mmDealingCurrencyAccepted, com.tools20022.repository.msg.ProcessingCharacteristics3.mmRedemptionAuthorisation,
-						com.tools20022.repository.msg.ProcessingCharacteristics3.mmAmountIndicator, com.tools20022.repository.msg.ProcessingCharacteristics3.mmUnitsIndicator,
-						com.tools20022.repository.msg.ProcessingCharacteristics3.mmMainFundOrderDeskLocation, com.tools20022.repository.msg.ProcessingCharacteristics3.mmDealingCutOffTime,
-						com.tools20022.repository.msg.ProcessingCharacteristics3.mmDealingCutOffTimeFrame, com.tools20022.repository.msg.ProcessingCharacteristics3.mmDealingFrequency,
-						com.tools20022.repository.msg.ProcessingCharacteristics3.mmDealingFrequencyDescription, com.tools20022.repository.msg.ProcessingCharacteristics3.mmLimitedPeriod,
-						com.tools20022.repository.msg.ProcessingCharacteristics3.mmSettlementCycle);
+				messageElement_lazy = () -> Arrays.asList(ProcessingCharacteristics3.mmDealingCurrencyAccepted, ProcessingCharacteristics3.mmRedemptionAuthorisation, ProcessingCharacteristics3.mmAmountIndicator,
+						ProcessingCharacteristics3.mmUnitsIndicator, ProcessingCharacteristics3.mmMainFundOrderDeskLocation, ProcessingCharacteristics3.mmDealingCutOffTime, ProcessingCharacteristics3.mmDealingCutOffTimeFrame,
+						ProcessingCharacteristics3.mmDealingFrequency, ProcessingCharacteristics3.mmDealingFrequencyDescription, ProcessingCharacteristics3.mmLimitedPeriod, ProcessingCharacteristics3.mmSettlementCycle);
 				trace_lazy = () -> InvestmentFundClassProcessingCharacteristics.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ProcessingCharacteristics3";
 				definition = "Processing characteristics linked to the instrument, ie, not to  the market.";
 			}

@@ -20,10 +20,12 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.DateType1Choice;
 import com.tools20022.repository.codeset.CurrencyCode;
 import com.tools20022.repository.datatype.ISODate;
-import com.tools20022.repository.entity.SecuritiesSettlement;
+import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -113,11 +115,11 @@ public class SecuritiesSettlement1 {
 	 */
 	public static final MMMessageAttribute mmCurrency = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmSettlementCurrency;
+			businessElementTrace_lazy = () -> SecuritiesOrder.mmSettlementCurrency;
 			componentContext_lazy = () -> SecuritiesSettlement1.mmObject();
 			isDerived = false;
 			xmlTag = "Ccy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Currency";
 			definition = "Currency to be used for settlement of the settlement amount.";
 			maxOccurs = 1;
@@ -161,11 +163,11 @@ public class SecuritiesSettlement1 {
 	 */
 	public static final MMMessageAttribute mmDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Obligation.mmRequestedSettlementDate;
+			businessElementTrace_lazy = () -> Obligation.mmRequestedSettlementDate;
 			componentContext_lazy = () -> SecuritiesSettlement1.mmObject();
 			isDerived = false;
 			xmlTag = "Dt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Date";
 			definition = "Date and time at which the securities are to be delivered or received.";
 			maxOccurs = 1;
@@ -210,7 +212,7 @@ public class SecuritiesSettlement1 {
 			componentContext_lazy = () -> SecuritiesSettlement1.mmObject();
 			isDerived = false;
 			xmlTag = "DtCd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DateCode";
 			definition = "Indicates the date of settlement in coded form or using a data source scheme.";
 			maxOccurs = 1;
@@ -252,11 +254,11 @@ public class SecuritiesSettlement1 {
 	 */
 	public static final MMMessageAssociationEnd mmPlaceOfSettlement = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> SecuritiesSettlement1.mmObject();
 			isDerived = false;
 			xmlTag = "PlcOfSttlm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceOfSettlement";
 			definition = "Place where settlement of the securities takes place.";
 			maxOccurs = 1;
@@ -302,11 +304,11 @@ public class SecuritiesSettlement1 {
 	 */
 	public static final MMMessageAssociationEnd mmSafekeepingAccountDetails = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmSecuritiesAccount;
+			businessElementTrace_lazy = () -> Security.mmSecuritiesAccount;
 			componentContext_lazy = () -> SecuritiesSettlement1.mmObject();
 			isDerived = false;
 			xmlTag = "SfkpgAcctDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingAccountDetails";
 			definition = "A business relationship between two entities; one entity is the account owner, the other entity is the account servicer.";
 			maxOccurs = 1;
@@ -319,12 +321,11 @@ public class SecuritiesSettlement1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesSettlement1.mmCurrency, com.tools20022.repository.msg.SecuritiesSettlement1.mmDate,
-						com.tools20022.repository.msg.SecuritiesSettlement1.mmDateCode, com.tools20022.repository.msg.SecuritiesSettlement1.mmPlaceOfSettlement,
-						com.tools20022.repository.msg.SecuritiesSettlement1.mmSafekeepingAccountDetails);
+				messageElement_lazy = () -> Arrays.asList(SecuritiesSettlement1.mmCurrency, SecuritiesSettlement1.mmDate, SecuritiesSettlement1.mmDateCode, SecuritiesSettlement1.mmPlaceOfSettlement,
+						SecuritiesSettlement1.mmSafekeepingAccountDetails);
 				trace_lazy = () -> SecuritiesSettlement.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
 						return DateFormat.getDateInstance(java.text.DateFormat.LONG).parse("September 9, 2016");

@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.InvestmentFundTransactionTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -95,7 +97,7 @@ public class InvestmentFundTransactionInType3Code extends InvestmentFundTransact
 	 */
 	public static final MMCode mmSubscription = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Subscription";
 			owner_lazy = () -> InvestmentFundTransactionInType3Code.mmObject();
 		}
@@ -118,7 +120,7 @@ public class InvestmentFundTransactionInType3Code extends InvestmentFundTransact
 	 */
 	public static final MMCode mmSwitchIn = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SwitchIn";
 			owner_lazy = () -> InvestmentFundTransactionInType3Code.mmObject();
 		}
@@ -141,7 +143,7 @@ public class InvestmentFundTransactionInType3Code extends InvestmentFundTransact
 	 */
 	public static final MMCode mmInSpecie = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InSpecie";
 			owner_lazy = () -> InvestmentFundTransactionInType3Code.mmObject();
 		}
@@ -164,7 +166,7 @@ public class InvestmentFundTransactionInType3Code extends InvestmentFundTransact
 	 */
 	public static final MMCode mmCrossIn = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CrossIn";
 			owner_lazy = () -> InvestmentFundTransactionInType3Code.mmObject();
 		}
@@ -187,7 +189,7 @@ public class InvestmentFundTransactionInType3Code extends InvestmentFundTransact
 	 */
 	public static final MMCode mmOther = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
 			owner_lazy = () -> InvestmentFundTransactionInType3Code.mmObject();
 		}
@@ -196,14 +198,13 @@ public class InvestmentFundTransactionInType3Code extends InvestmentFundTransact
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("SUBS");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InvestmentFundTransactionInType3Code";
 				definition = "Specifies the type of investment fund transaction that results in a cash movement into a fund.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.InvestmentFundTransactionInType3Code.mmSubscription, com.tools20022.repository.codeset.InvestmentFundTransactionInType3Code.mmSwitchIn,
-						com.tools20022.repository.codeset.InvestmentFundTransactionInType3Code.mmInSpecie, com.tools20022.repository.codeset.InvestmentFundTransactionInType3Code.mmCrossIn,
-						com.tools20022.repository.codeset.InvestmentFundTransactionInType3Code.mmOther);
+				code_lazy = () -> Arrays.asList(InvestmentFundTransactionInType3Code.mmSubscription, InvestmentFundTransactionInType3Code.mmSwitchIn, InvestmentFundTransactionInType3Code.mmInSpecie,
+						InvestmentFundTransactionInType3Code.mmCrossIn, InvestmentFundTransactionInType3Code.mmOther);
 				trace_lazy = () -> InvestmentFundTransactionTypeCode.mmObject();
 			}
 		});

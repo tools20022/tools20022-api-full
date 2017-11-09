@@ -19,8 +19,12 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.*;
 import com.tools20022.repository.datatype.Max4AlphaNumericText;
+import com.tools20022.repository.entity.PaymentStatus;
+import com.tools20022.repository.entity.StatusReason;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.ProprietaryStatusJustification;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -127,14 +131,14 @@ public class PaymentStatusReasonCode5Choice {
 	 */
 	public static final MMMessageAttribute mmUnmatched = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentStatus.mmUnmatchedStatusReason;
+			businessElementTrace_lazy = () -> PaymentStatus.mmUnmatchedStatusReason;
 			componentContext_lazy = () -> PaymentStatusReasonCode5Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Umtchd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unmatched";
 			definition = "Reason why the payment status is unmatched.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PaymentStatusReasonCode6Choice.mmUnmatched);
+			nextVersions_lazy = () -> Arrays.asList(PaymentStatusReasonCode6Choice.mmUnmatched);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> UnmatchedStatusReason1Code.mmObject();
@@ -184,14 +188,14 @@ public class PaymentStatusReasonCode5Choice {
 	 */
 	public static final MMMessageAttribute mmCancelled = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmCancellationReason;
+			businessElementTrace_lazy = () -> StatusReason.mmCancellationReason;
 			componentContext_lazy = () -> PaymentStatusReasonCode5Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Canc";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cancelled";
 			definition = "Reason why the payment status is cancelled.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PaymentStatusReasonCode6Choice.mmCancelled);
+			nextVersions_lazy = () -> Arrays.asList(PaymentStatusReasonCode6Choice.mmCancelled);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CancelledStatusReason1Code.mmObject();
@@ -241,14 +245,14 @@ public class PaymentStatusReasonCode5Choice {
 	 */
 	public static final MMMessageAttribute mmSuspended = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentStatus.mmSuspendedStatusReason;
+			businessElementTrace_lazy = () -> PaymentStatus.mmSuspendedStatusReason;
 			componentContext_lazy = () -> PaymentStatusReasonCode5Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Sspd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Suspended";
 			definition = "Reason why the payment status is suspended.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PaymentStatusReasonCode6Choice.mmSuspended);
+			nextVersions_lazy = () -> Arrays.asList(PaymentStatusReasonCode6Choice.mmSuspended);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> SuspendedStatusReason1Code.mmObject();
@@ -299,14 +303,14 @@ public class PaymentStatusReasonCode5Choice {
 	 */
 	public static final MMMessageAttribute mmPendingFailingSettlement = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentStatus.mmPendingFailingSettlement;
+			businessElementTrace_lazy = () -> PaymentStatus.mmPendingFailingSettlement;
 			componentContext_lazy = () -> PaymentStatusReasonCode5Choice.mmObject();
 			isDerived = false;
 			xmlTag = "PdgFlngSttlm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingFailingSettlement";
 			definition = "Reason why the payment status is pending (failing settlement).";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PaymentStatusReasonCode6Choice.mmPendingFailingSettlement);
+			nextVersions_lazy = () -> Arrays.asList(PaymentStatusReasonCode6Choice.mmPendingFailingSettlement);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PendingFailingSettlement1Code.mmObject();
@@ -356,14 +360,14 @@ public class PaymentStatusReasonCode5Choice {
 	 */
 	public static final MMMessageAttribute mmPendingSettlement = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentStatus.mmPendingSettlement;
+			businessElementTrace_lazy = () -> PaymentStatus.mmPendingSettlement;
 			componentContext_lazy = () -> PaymentStatusReasonCode5Choice.mmObject();
 			isDerived = false;
 			xmlTag = "PdgSttlm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingSettlement";
 			definition = "Reason why the payment status is pending (settlement).";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PaymentStatusReasonCode6Choice.mmPendingSettlement);
+			nextVersions_lazy = () -> Arrays.asList(PaymentStatusReasonCode6Choice.mmPendingSettlement);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PendingSettlement2Code.mmObject();
@@ -414,10 +418,10 @@ public class PaymentStatusReasonCode5Choice {
 			componentContext_lazy = () -> PaymentStatusReasonCode5Choice.mmObject();
 			isDerived = false;
 			xmlTag = "PrtryRjctn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProprietaryRejection";
 			definition = "Defines the reason that has been used by the Target2 SSP system to reject the transaction";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PaymentStatusReasonCode6Choice.mmProprietaryRejection);
+			nextVersions_lazy = () -> Arrays.asList(PaymentStatusReasonCode6Choice.mmProprietaryRejection);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> ProprietaryStatusJustification.mmObject();
@@ -465,10 +469,10 @@ public class PaymentStatusReasonCode5Choice {
 			componentContext_lazy = () -> PaymentStatusReasonCode5Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Defines a free text proprietary reason.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PaymentStatusReasonCode6Choice.mmProprietary);
+			nextVersions_lazy = () -> Arrays.asList(PaymentStatusReasonCode6Choice.mmProprietary);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max4AlphaNumericText.mmObject();
@@ -478,12 +482,10 @@ public class PaymentStatusReasonCode5Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PaymentStatusReasonCode5Choice.mmUnmatched, com.tools20022.repository.choice.PaymentStatusReasonCode5Choice.mmCancelled,
-						com.tools20022.repository.choice.PaymentStatusReasonCode5Choice.mmSuspended, com.tools20022.repository.choice.PaymentStatusReasonCode5Choice.mmPendingFailingSettlement,
-						com.tools20022.repository.choice.PaymentStatusReasonCode5Choice.mmPendingSettlement, com.tools20022.repository.choice.PaymentStatusReasonCode5Choice.mmProprietaryRejection,
-						com.tools20022.repository.choice.PaymentStatusReasonCode5Choice.mmProprietary);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(PaymentStatusReasonCode5Choice.mmUnmatched, PaymentStatusReasonCode5Choice.mmCancelled, PaymentStatusReasonCode5Choice.mmSuspended,
+						PaymentStatusReasonCode5Choice.mmPendingFailingSettlement, PaymentStatusReasonCode5Choice.mmPendingSettlement, PaymentStatusReasonCode5Choice.mmProprietaryRejection, PaymentStatusReasonCode5Choice.mmProprietary);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "PaymentStatusReasonCode5Choice";
 				definition = "Reason for the status of the transaction.";
 				nextVersions_lazy = () -> Arrays.asList(PaymentStatusReasonCode6Choice.mmObject());

@@ -19,8 +19,10 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.RateType4Choice;
 import com.tools20022.repository.entity.InterestCalculation;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -92,11 +94,11 @@ public class Rate3 {
 	 */
 	public static final MMMessageAssociationEnd mmType = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InterestCalculation.mmInterest;
+			businessElementTrace_lazy = () -> InterestCalculation.mmInterest;
 			componentContext_lazy = () -> Rate3.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Specifies the type of interest rate.";
 			maxOccurs = 1;
@@ -139,11 +141,11 @@ public class Rate3 {
 	 */
 	public static final MMMessageAssociationEnd mmValidityRange = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InterestCalculation.mmRateValidityRange;
+			businessElementTrace_lazy = () -> InterestCalculation.mmRateValidityRange;
 			componentContext_lazy = () -> Rate3.mmObject();
 			isDerived = false;
 			xmlTag = "VldtyRg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValidityRange";
 			definition = "An amount range where the interest rate is applicable.";
 			maxOccurs = 1;
@@ -156,10 +158,10 @@ public class Rate3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Rate3.mmType, com.tools20022.repository.msg.Rate3.mmValidityRange);
+				messageElement_lazy = () -> Arrays.asList(Rate3.mmType, Rate3.mmValidityRange);
 				trace_lazy = () -> InterestCalculation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Rate3";
 				definition = "Set of elements used to qualify the interest rate.";
 			}

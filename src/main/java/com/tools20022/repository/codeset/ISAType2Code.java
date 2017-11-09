@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ISATypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -83,7 +85,7 @@ public class ISAType2Code extends ISATypeCode {
 	 */
 	public static final MMCode mmMiniEquity = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MiniEquity";
 			owner_lazy = () -> ISAType2Code.mmObject();
 		}
@@ -105,7 +107,7 @@ public class ISAType2Code extends ISATypeCode {
 	 */
 	public static final MMCode mmMaxi = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Maxi";
 			owner_lazy = () -> ISAType2Code.mmObject();
 		}
@@ -127,7 +129,7 @@ public class ISAType2Code extends ISATypeCode {
 	 */
 	public static final MMCode mmMiniCash = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MiniCash";
 			owner_lazy = () -> ISAType2Code.mmObject();
 		}
@@ -149,7 +151,7 @@ public class ISAType2Code extends ISATypeCode {
 	 */
 	public static final MMCode mmAny = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Any";
 			owner_lazy = () -> ISAType2Code.mmObject();
 		}
@@ -158,13 +160,12 @@ public class ISAType2Code extends ISATypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("MINE");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ISAType2Code";
 				definition = "Specifies the type of the current year ISA.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ISAType2Code.mmMiniEquity, com.tools20022.repository.codeset.ISAType2Code.mmMaxi, com.tools20022.repository.codeset.ISAType2Code.mmMiniCash,
-						com.tools20022.repository.codeset.ISAType2Code.mmAny);
+				code_lazy = () -> Arrays.asList(ISAType2Code.mmMiniEquity, ISAType2Code.mmMaxi, ISAType2Code.mmMiniCash, ISAType2Code.mmAny);
 				trace_lazy = () -> ISATypeCode.mmObject();
 			}
 		});

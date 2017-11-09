@@ -19,6 +19,8 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.seev.AgentCAMovementInstructionV01;
 import com.tools20022.repository.choice.CorporateActionOption1FormatChoice;
 import com.tools20022.repository.choice.PartyIdentification2Choice;
 import com.tools20022.repository.choice.UnitOrFaceAmount1Choice;
@@ -28,6 +30,10 @@ import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.CorporateActionDistribution;
+import com.tools20022.repository.entity.CorporateActionOption;
+import com.tools20022.repository.entity.GenericIdentification;
+import com.tools20022.repository.entity.Party;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -133,11 +139,11 @@ public class CorporateActionMovement1 {
 	 */
 	public static final MMMessageAttribute mmOrderType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionDistribution.mmMovementType;
+			businessElementTrace_lazy = () -> CorporateActionDistribution.mmMovementType;
 			componentContext_lazy = () -> CorporateActionMovement1.mmObject();
 			isDerived = false;
 			xmlTag = "OrdrTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrderType";
 			definition = "Type of movement instruction.";
 			maxOccurs = 1;
@@ -184,11 +190,11 @@ public class CorporateActionMovement1 {
 	 */
 	public static final MMMessageAttribute mmHighPriorityIndicator = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionDistribution.mmHighPriorityIndicator;
+			businessElementTrace_lazy = () -> CorporateActionDistribution.mmHighPriorityIndicator;
 			componentContext_lazy = () -> CorporateActionMovement1.mmObject();
 			isDerived = false;
 			xmlTag = "HghPrtyInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HighPriorityIndicator";
 			definition = "Indicates whether the movement is a high priority or not.\nMeaning when true: High priority\nMeaning when false: Standard";
 			maxOccurs = 1;
@@ -233,11 +239,11 @@ public class CorporateActionMovement1 {
 	 */
 	public static final MMMessageAttribute mmOptionNumber = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionOption.mmOptionNumber;
+			businessElementTrace_lazy = () -> CorporateActionOption.mmOptionNumber;
 			componentContext_lazy = () -> CorporateActionMovement1.mmObject();
 			isDerived = false;
 			xmlTag = "OptnNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionNumber";
 			definition = "Number identifying the available corporate action options.";
 			maxOccurs = 1;
@@ -282,11 +288,11 @@ public class CorporateActionMovement1 {
 	 */
 	public static final MMMessageAttribute mmOptionType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionOption.mmOptionType;
+			businessElementTrace_lazy = () -> CorporateActionOption.mmOptionType;
 			componentContext_lazy = () -> CorporateActionMovement1.mmObject();
 			isDerived = false;
 			xmlTag = "OptnTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionType";
 			definition = "Specifies the corporate action options available to the account owner.";
 			maxOccurs = 1;
@@ -330,11 +336,11 @@ public class CorporateActionMovement1 {
 	 */
 	public static final MMMessageAttribute mmRequestedExecutionDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionDistribution.mmRequestedExecutionDate;
+			businessElementTrace_lazy = () -> CorporateActionDistribution.mmRequestedExecutionDate;
 			componentContext_lazy = () -> CorporateActionMovement1.mmObject();
 			isDerived = false;
 			xmlTag = "ReqdExctnDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestedExecutionDate";
 			definition = "Date at which the distribution movement must be executed.";
 			maxOccurs = 1;
@@ -378,11 +384,11 @@ public class CorporateActionMovement1 {
 	 */
 	public static final MMMessageAttribute mmAccountOwnerIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> CorporateActionMovement1.mmObject();
 			isDerived = false;
 			xmlTag = "AcctOwnrId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountOwnerIdentification";
 			definition = "Identification of the party that owns the account.";
 			maxOccurs = 1;
@@ -425,11 +431,11 @@ public class CorporateActionMovement1 {
 	 */
 	public static final MMMessageAttribute mmAccountIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmIdentification;
+			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> CorporateActionMovement1.mmObject();
 			isDerived = false;
 			xmlTag = "AcctId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountIdentification";
 			definition = "Identification of the account.";
 			maxOccurs = 1;
@@ -476,11 +482,11 @@ public class CorporateActionMovement1 {
 	 */
 	public static final MMMessageAttribute mmConfirmedBalanceSecuritiesQuantity = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionDistribution.mmPostingQuantity;
+			businessElementTrace_lazy = () -> CorporateActionDistribution.mmPostingQuantity;
 			componentContext_lazy = () -> CorporateActionMovement1.mmObject();
 			isDerived = false;
 			xmlTag = "ConfdBalSctiesQty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConfirmedBalanceSecuritiesQuantity";
 			definition = "Quantity of securities in the confirmed balance, ie, the balance to which the credit of the outturned resources applies.";
 			maxOccurs = 1;
@@ -492,14 +498,13 @@ public class CorporateActionMovement1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionMovement1.mmOrderType, com.tools20022.repository.msg.CorporateActionMovement1.mmHighPriorityIndicator,
-						com.tools20022.repository.msg.CorporateActionMovement1.mmOptionNumber, com.tools20022.repository.msg.CorporateActionMovement1.mmOptionType,
-						com.tools20022.repository.msg.CorporateActionMovement1.mmRequestedExecutionDate, com.tools20022.repository.msg.CorporateActionMovement1.mmAccountOwnerIdentification,
-						com.tools20022.repository.msg.CorporateActionMovement1.mmAccountIdentification, com.tools20022.repository.msg.CorporateActionMovement1.mmConfirmedBalanceSecuritiesQuantity);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.AgentCAMovementInstructionV01.mmMovementGeneralInformation);
+				messageElement_lazy = () -> Arrays.asList(CorporateActionMovement1.mmOrderType, CorporateActionMovement1.mmHighPriorityIndicator, CorporateActionMovement1.mmOptionNumber, CorporateActionMovement1.mmOptionType,
+						CorporateActionMovement1.mmRequestedExecutionDate, CorporateActionMovement1.mmAccountOwnerIdentification, CorporateActionMovement1.mmAccountIdentification,
+						CorporateActionMovement1.mmConfirmedBalanceSecuritiesQuantity);
+				messageBuildingBlock_lazy = () -> Arrays.asList(AgentCAMovementInstructionV01.mmMovementGeneralInformation);
 				trace_lazy = () -> CorporateActionDistribution.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionMovement1";
 				definition = "Provides information about the movement instruction.";
 			}

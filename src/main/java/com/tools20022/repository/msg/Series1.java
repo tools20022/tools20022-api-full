@@ -20,9 +20,11 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.DateFormat42Choice;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.InvestmentFundClass;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -99,11 +101,11 @@ public class Series1 {
 	 */
 	public static final MMMessageAssociationEnd mmSeriesDate = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmSeriesIssueIdentificationDate;
+			businessElementTrace_lazy = () -> InvestmentFundClass.mmSeriesIssueIdentificationDate;
 			componentContext_lazy = () -> Series1.mmObject();
 			isDerived = false;
 			xmlTag = "SrsDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SeriesDate";
 			definition = "Issue date of the fund series. It is typically applicable to a redemption order, subscription order confirmation or redemption order confirmation, but may be specified in the subscription order, if known.";
 			maxOccurs = 1;
@@ -150,11 +152,11 @@ public class Series1 {
 	 */
 	public static final MMMessageAttribute mmSeriesName = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmSeriesName;
+			businessElementTrace_lazy = () -> InvestmentFundClass.mmSeriesName;
 			componentContext_lazy = () -> Series1.mmObject();
 			isDerived = false;
 			xmlTag = "SrsNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SeriesName";
 			definition = "Name of the fund series. It is typically applicable to a redemption order, subscription order confirmation or redemption order confirmation, but may be specified in the subscription, if known.";
 			maxOccurs = 1;
@@ -166,10 +168,10 @@ public class Series1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Series1.mmSeriesDate, com.tools20022.repository.msg.Series1.mmSeriesName);
+				messageElement_lazy = () -> Arrays.asList(Series1.mmSeriesDate, Series1.mmSeriesName);
 				trace_lazy = () -> InvestmentFundClass.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Series1";
 				definition = "Identification of a series.";
 			}

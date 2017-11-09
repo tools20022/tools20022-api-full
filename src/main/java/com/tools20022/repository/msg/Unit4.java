@@ -19,7 +19,10 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.entity.LotBreakdown;
 import com.tools20022.repository.entity.SecuritiesQuantity;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -102,11 +105,11 @@ public class Unit4 {
 	 */
 	public static final MMMessageAttribute mmTotalUnitsNumber = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.LotBreakdown.mmLotUnit;
+			businessElementTrace_lazy = () -> LotBreakdown.mmLotUnit;
 			componentContext_lazy = () -> Unit4.mmObject();
 			isDerived = false;
 			xmlTag = "TtlUnitsNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalUnitsNumber";
 			definition = "Quantity expressed as a number, for example, a number of shares.";
 			maxOccurs = 1;
@@ -147,11 +150,11 @@ public class Unit4 {
 	 */
 	public static final MMMessageAttribute mmUnitDetails = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmLotBreakdown;
+			businessElementTrace_lazy = () -> SecuritiesQuantity.mmLotBreakdown;
 			componentContext_lazy = () -> Unit4.mmObject();
 			isDerived = false;
 			xmlTag = "UnitDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnitDetails";
 			definition = "Information about the units to be transferred.";
 			maxOccurs = 2;
@@ -163,10 +166,10 @@ public class Unit4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Unit4.mmTotalUnitsNumber, com.tools20022.repository.msg.Unit4.mmUnitDetails);
+				messageElement_lazy = () -> Arrays.asList(Unit4.mmTotalUnitsNumber, Unit4.mmUnitDetails);
 				trace_lazy = () -> SecuritiesQuantity.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Unit4";
 				definition = "Quantity expressed as a number and its details.";
 				nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Unit5.mmObject());

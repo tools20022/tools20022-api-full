@@ -19,11 +19,17 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.camt.CaseStatusReport;
 import com.tools20022.repository.codeset.CaseStatus1Code;
 import com.tools20022.repository.codeset.InvestigationExecutionConfirmation1Code;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Max140Text;
 import com.tools20022.repository.entity.InvestigationCaseStatus;
+import com.tools20022.repository.entity.PaymentInvestigationCaseResolution;
+import com.tools20022.repository.entity.Status;
+import com.tools20022.repository.entity.StatusReason;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -112,11 +118,11 @@ public class CaseStatus {
 	 */
 	public static final MMMessageAttribute mmDateTime = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.mmStatusDateTime;
+			businessElementTrace_lazy = () -> Status.mmStatusDateTime;
 			componentContext_lazy = () -> CaseStatus.mmObject();
 			isDerived = false;
 			xmlTag = "DtTm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DateTime";
 			definition = "Date and time of the status.";
 			maxOccurs = 1;
@@ -159,11 +165,11 @@ public class CaseStatus {
 	 */
 	public static final MMMessageAttribute mmCaseStatus = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestigationCaseStatus.mmCaseStatus;
+			businessElementTrace_lazy = () -> InvestigationCaseStatus.mmCaseStatus;
 			componentContext_lazy = () -> CaseStatus.mmObject();
 			isDerived = false;
 			xmlTag = "CaseSts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CaseStatus";
 			definition = "Status of the case.";
 			maxOccurs = 1;
@@ -206,11 +212,11 @@ public class CaseStatus {
 	 */
 	public static final MMMessageAttribute mmInvestigationStatus = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentInvestigationCaseResolution.mmInvestigationStatus;
+			businessElementTrace_lazy = () -> PaymentInvestigationCaseResolution.mmInvestigationStatus;
 			componentContext_lazy = () -> CaseStatus.mmObject();
 			isDerived = false;
 			xmlTag = "InvstgtnSts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestigationStatus";
 			definition = "Status of the investigation.";
 			maxOccurs = 1;
@@ -252,11 +258,11 @@ public class CaseStatus {
 	 */
 	public static final MMMessageAttribute mmReason = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmReason;
+			businessElementTrace_lazy = () -> StatusReason.mmReason;
 			componentContext_lazy = () -> CaseStatus.mmObject();
 			isDerived = false;
 			xmlTag = "Rsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reason";
 			definition = "Free text justification of the status.";
 			maxOccurs = 1;
@@ -268,12 +274,11 @@ public class CaseStatus {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CaseStatus.mmDateTime, com.tools20022.repository.msg.CaseStatus.mmCaseStatus, com.tools20022.repository.msg.CaseStatus.mmInvestigationStatus,
-						com.tools20022.repository.msg.CaseStatus.mmReason);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.CaseStatusReport.mmStatus);
+				messageElement_lazy = () -> Arrays.asList(CaseStatus.mmDateTime, CaseStatus.mmCaseStatus, CaseStatus.mmInvestigationStatus, CaseStatus.mmReason);
+				messageBuildingBlock_lazy = () -> Arrays.asList(CaseStatusReport.mmStatus);
 				trace_lazy = () -> InvestigationCaseStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CaseStatus";
 				definition = "Defines the status of an investigation case.";
 			}

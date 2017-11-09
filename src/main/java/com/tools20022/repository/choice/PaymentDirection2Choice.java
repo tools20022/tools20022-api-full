@@ -19,8 +19,11 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.PaymentDirectionIndicator;
+import com.tools20022.repository.entity.Debt;
 import com.tools20022.repository.entity.Security;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification20;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -102,11 +105,11 @@ public class PaymentDirection2Choice {
 	 */
 	public static final MMMessageAttribute mmIndicator = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Debt.mmPaymentDirectionIndicator;
+			businessElementTrace_lazy = () -> Debt.mmPaymentDirectionIndicator;
 			componentContext_lazy = () -> PaymentDirection2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Ind";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Indicator";
 			definition = "Indicates the direction of payment for asset or mortgage backed securities, ie, whether the repaid capital is distributed (payment direction is down) or capitalized (payment direction is up).";
 			maxOccurs = 1;
@@ -150,11 +153,11 @@ public class PaymentDirection2Choice {
 	 */
 	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Debt.mmPaymentDirectionIndicator;
+			businessElementTrace_lazy = () -> Debt.mmPaymentDirectionIndicator;
 			componentContext_lazy = () -> PaymentDirection2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Payment direction expressed as a proprietary code.";
 			maxOccurs = 1;
@@ -166,10 +169,10 @@ public class PaymentDirection2Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PaymentDirection2Choice.mmIndicator, com.tools20022.repository.choice.PaymentDirection2Choice.mmProprietary);
+				messageElement_lazy = () -> Arrays.asList(PaymentDirection2Choice.mmIndicator, PaymentDirection2Choice.mmProprietary);
 				trace_lazy = () -> Security.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PaymentDirection2Choice";
 				definition = "Choice of format for the payment direction.";
 			}

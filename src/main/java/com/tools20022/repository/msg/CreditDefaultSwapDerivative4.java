@@ -20,8 +20,11 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ISINOct2015Identifier;
 import com.tools20022.repository.entity.CreditDefaultSwap;
+import com.tools20022.repository.entity.SecuritiesIdentification;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -108,11 +111,11 @@ public class CreditDefaultSwapDerivative4 {
 	 */
 	public static final MMMessageAttribute mmUnderlyingNameIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesIdentification.mmSecurityIdentification;
+			businessElementTrace_lazy = () -> SecuritiesIdentification.mmSecurityIdentification;
 			componentContext_lazy = () -> CreditDefaultSwapDerivative4.mmObject();
 			isDerived = false;
 			xmlTag = "UndrlygNmId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnderlyingNameIdentification";
 			definition = "Derivative on a credit default swap with the ISIN code of the underlying swap.";
 			maxOccurs = 1;
@@ -159,11 +162,11 @@ public class CreditDefaultSwapDerivative4 {
 	 */
 	public static final MMMessageAttribute mmObligationIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesIdentification.mmSecurityIdentification;
+			businessElementTrace_lazy = () -> SecuritiesIdentification.mmSecurityIdentification;
 			componentContext_lazy = () -> CreditDefaultSwapDerivative4.mmObject();
 			isDerived = false;
 			xmlTag = "OblgtnId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ObligationIdentification";
 			definition = "Identification of the reference obligation for a derivative on a credit default swap.";
 			maxOccurs = 1;
@@ -213,7 +216,7 @@ public class CreditDefaultSwapDerivative4 {
 			componentContext_lazy = () -> CreditDefaultSwapDerivative4.mmObject();
 			isDerived = false;
 			xmlTag = "SnglNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SingleName";
 			definition = "Describes the single name specific details the derivative is being made on.";
 			maxOccurs = 1;
@@ -226,11 +229,10 @@ public class CreditDefaultSwapDerivative4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CreditDefaultSwapDerivative4.mmUnderlyingNameIdentification, com.tools20022.repository.msg.CreditDefaultSwapDerivative4.mmObligationIdentification,
-						com.tools20022.repository.msg.CreditDefaultSwapDerivative4.mmSingleName);
+				messageElement_lazy = () -> Arrays.asList(CreditDefaultSwapDerivative4.mmUnderlyingNameIdentification, CreditDefaultSwapDerivative4.mmObligationIdentification, CreditDefaultSwapDerivative4.mmSingleName);
 				trace_lazy = () -> CreditDefaultSwap.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CreditDefaultSwapDerivative4";
 				definition = "Credit default swap derivative specific for reporting derivatives on a single name.";
 			}

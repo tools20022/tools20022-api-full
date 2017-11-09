@@ -17,9 +17,8 @@
 
 package com.tools20022.repository.entity;
 
-import com.tools20022.metamodel.MMBusinessAssociationEnd;
-import com.tools20022.metamodel.MMBusinessAttribute;
-import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.*;
+import com.tools20022.repository.choice.BorrowingReason1Choice;
 import com.tools20022.repository.choice.LendingTransactionMethod1Choice;
 import com.tools20022.repository.choice.Reversible1Choice;
 import com.tools20022.repository.choice.SecuritiesLendingType1Choice;
@@ -29,6 +28,9 @@ import com.tools20022.repository.codeset.ReversibleCode;
 import com.tools20022.repository.codeset.SecuritiesLendingTypeCode;
 import com.tools20022.repository.datatype.*;
 import com.tools20022.repository.entity.SecuritiesFinancing;
+import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.OtherAmounts16;
+import com.tools20022.repository.msg.SecuritiesFinancing10;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -45,6 +47,48 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.LendingTransactionMethod1Choice
+ * LendingTransactionMethod1Choice}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.SecuritiesLendingType1Choice
+ * SecuritiesLendingType1Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.Reversible1Choice
+ * Reversible1Choice}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesDeliveryObligation#mmSecuritiesLending
+ * SecuritiesDeliveryObligation.mmSecuritiesLending}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
+ * derivationElement} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesFinancing10#mmLendingTransactionMethod
+ * SecuritiesFinancing10.mmLendingTransactionMethod}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesFinancing10#mmSecuritiesLendingType
+ * SecuritiesFinancing10.mmSecuritiesLendingType}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesFinancing10#mmReversible
+ * SecuritiesFinancing10.mmReversible}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} =
+ * {@linkplain com.tools20022.repository.entity.SecuritiesFinancing
+ * SecuritiesFinancing}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -87,48 +131,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.entity.SecuritiesLending#mmSecuritiesDeliveryObligation
  * SecuritiesLending.mmSecuritiesDeliveryObligation}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesDeliveryObligation#mmSecuritiesLending
- * SecuritiesDeliveryObligation.mmSecuritiesLending}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
- * derivationElement} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesFinancing10#mmLendingTransactionMethod
- * SecuritiesFinancing10.mmLendingTransactionMethod}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesFinancing10#mmSecuritiesLendingType
- * SecuritiesFinancing10.mmSecuritiesLendingType}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesFinancing10#mmReversible
- * SecuritiesFinancing10.mmReversible}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} =
- * {@linkplain com.tools20022.repository.entity.SecuritiesFinancing
- * SecuritiesFinancing}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.choice.LendingTransactionMethod1Choice
- * LendingTransactionMethod1Choice}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.SecuritiesLendingType1Choice
- * SecuritiesLendingType1Choice}</li>
- * <li>{@linkplain com.tools20022.repository.choice.Reversible1Choice
- * Reversible1Choice}</li>
  * </ul>
  * </li>
  * <li>
@@ -191,10 +193,10 @@ public class SecuritiesLending extends SecuritiesFinancing {
 	 */
 	public static final MMBusinessAttribute mmBorrowingFee = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OtherAmounts16.mmBorrowingFee);
+			derivation_lazy = () -> Arrays.asList(OtherAmounts16.mmBorrowingFee);
 			elementContext_lazy = () -> SecuritiesLending.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BorrowingFee";
 			definition = "Amount to be paid by the borrower to the lender for the securities borrowed calculated based on the bond loan rate.";
 			maxOccurs = 1;
@@ -239,10 +241,10 @@ public class SecuritiesLending extends SecuritiesFinancing {
 	 */
 	public static final MMBusinessAttribute mmCallableTradeIndicator = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesFinancing10.mmCallableTradeIndicator);
+			derivation_lazy = () -> Arrays.asList(SecuritiesFinancing10.mmCallableTradeIndicator);
 			elementContext_lazy = () -> SecuritiesLending.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CallableTradeIndicator";
 			definition = "Indicates whether the trade is callable or not.";
 			maxOccurs = 1;
@@ -290,10 +292,10 @@ public class SecuritiesLending extends SecuritiesFinancing {
 	 */
 	public static final MMBusinessAttribute mmLendingTransactionMethod = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.LendingTransactionMethod1Choice.mmCode, com.tools20022.repository.choice.LendingTransactionMethod1Choice.mmProprietary);
+			derivation_lazy = () -> Arrays.asList(LendingTransactionMethod1Choice.mmCode, LendingTransactionMethod1Choice.mmProprietary);
 			elementContext_lazy = () -> SecuritiesLending.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "LendingTransactionMethod";
 			definition = "Method applied to a lending transaction.";
 			maxOccurs = 1;
@@ -344,10 +346,10 @@ public class SecuritiesLending extends SecuritiesFinancing {
 	 */
 	public static final MMBusinessAttribute mmBorrowingReason = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.BorrowingReason1Choice.mmCode, com.tools20022.repository.choice.BorrowingReason1Choice.mmProprietary);
+			derivation_lazy = () -> Arrays.asList(BorrowingReason1Choice.mmCode, BorrowingReason1Choice.mmProprietary);
 			elementContext_lazy = () -> SecuritiesLending.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BorrowingReason";
 			definition = "Underlying reason for the borrowing, for instance, sale on my behalf or on behalf of a third party.";
 			maxOccurs = 1;
@@ -398,10 +400,10 @@ public class SecuritiesLending extends SecuritiesFinancing {
 	 */
 	public static final MMBusinessAttribute mmReversible = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Reversible1Choice.mmCode, com.tools20022.repository.choice.Reversible1Choice.mmProprietary);
+			derivation_lazy = () -> Arrays.asList(Reversible1Choice.mmCode, Reversible1Choice.mmProprietary);
 			elementContext_lazy = () -> SecuritiesLending.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Reversible";
 			definition = "Indicates the possibility to terminate the securitiesc lending contract either by the borrower or lender before the expiration date.";
 			maxOccurs = 1;
@@ -449,10 +451,10 @@ public class SecuritiesLending extends SecuritiesFinancing {
 	 */
 	public static final MMBusinessAttribute mmSecuritiesLendingType = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SecuritiesLendingType1Choice.mmCode, com.tools20022.repository.choice.SecuritiesLendingType1Choice.mmProprietary);
+			derivation_lazy = () -> Arrays.asList(SecuritiesLendingType1Choice.mmCode, SecuritiesLendingType1Choice.mmProprietary);
 			elementContext_lazy = () -> SecuritiesLending.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SecuritiesLendingType";
 			definition = "Type of securities lending.";
 			maxOccurs = 1;
@@ -499,10 +501,10 @@ public class SecuritiesLending extends SecuritiesFinancing {
 	 */
 	public static final MMBusinessAttribute mmLendingWithCollateral = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesFinancing10.mmLendingWithCollateral);
+			derivation_lazy = () -> Arrays.asList(SecuritiesFinancing10.mmLendingWithCollateral);
 			elementContext_lazy = () -> SecuritiesLending.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "LendingWithCollateral";
 			definition = "Indicates if the contract is with or without an exchange of collateral.";
 			maxOccurs = 1;
@@ -549,10 +551,10 @@ public class SecuritiesLending extends SecuritiesFinancing {
 	 */
 	public static final MMBusinessAttribute mmMinimumDateForCallBack = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesFinancing10.mmMinimumDateForCallBack);
+			derivation_lazy = () -> Arrays.asList(SecuritiesFinancing10.mmMinimumDateForCallBack);
 			elementContext_lazy = () -> SecuritiesLending.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MinimumDateForCallBack";
 			definition = "Minimum date at which the borrower is allowed to give back the securities.";
 			maxOccurs = 1;
@@ -600,10 +602,10 @@ public class SecuritiesLending extends SecuritiesFinancing {
 	 */
 	public static final MMBusinessAttribute mmNumberOfDaysLendingBorrowing = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesFinancing10.mmNumberOfDaysLendingBorrowing);
+			derivation_lazy = () -> Arrays.asList(SecuritiesFinancing10.mmNumberOfDaysLendingBorrowing);
 			elementContext_lazy = () -> SecuritiesLending.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NumberOfDaysLendingBorrowing";
 			definition = "Number of days the securities are lent or borrowed for a contract which has an agreed closing date.";
 			maxOccurs = 1;
@@ -645,7 +647,7 @@ public class SecuritiesLending extends SecuritiesFinancing {
 		{
 			elementContext_lazy = () -> SecuritiesLending.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PeriodicPayment";
 			definition = "Indicates whether the securities lending fees can be paid periodically or at the end of the contract.";
 			maxOccurs = 1;
@@ -690,10 +692,10 @@ public class SecuritiesLending extends SecuritiesFinancing {
 	 */
 	public static final MMBusinessAttribute mmRollover = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesFinancing10.mmRollOver);
+			derivation_lazy = () -> Arrays.asList(SecuritiesFinancing10.mmRollOver);
 			elementContext_lazy = () -> SecuritiesLending.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Rollover";
 			definition = "Indicates that the contract can be rolled over.";
 			maxOccurs = 1;
@@ -733,7 +735,7 @@ public class SecuritiesLending extends SecuritiesFinancing {
 		{
 			elementContext_lazy = () -> SecuritiesLending.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BorrowingRate";
 			definition = "Rate paid by the borrower to the lender for the securities borrowed.";
 			maxOccurs = 1;
@@ -780,13 +782,13 @@ public class SecuritiesLending extends SecuritiesFinancing {
 		{
 			elementContext_lazy = () -> SecuritiesLending.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SecuritiesDeliveryObligation";
 			definition = "Obligation covered by the lending of securities.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesDeliveryObligation.mmSecuritiesLending;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SecuritiesDeliveryObligation.mmObject();
 		}
 	};
@@ -794,20 +796,16 @@ public class SecuritiesLending extends SecuritiesFinancing {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesLending";
 				definition = "Lending of securities by one party to another. The terms of the loan are governed by an agreement that requires the borrower to provide the lender with collateral of value equal to or greater than the loaned securities. As payment for the loan, the parties negotiate a fee, quoted as an annualised percentage of the value of the loaned securities.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesDeliveryObligation.mmSecuritiesLending);
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesFinancing10.mmLendingTransactionMethod, com.tools20022.repository.msg.SecuritiesFinancing10.mmSecuritiesLendingType,
-						com.tools20022.repository.msg.SecuritiesFinancing10.mmReversible);
+				derivationElement_lazy = () -> Arrays.asList(SecuritiesFinancing10.mmLendingTransactionMethod, SecuritiesFinancing10.mmSecuritiesLendingType, SecuritiesFinancing10.mmReversible);
 				superType_lazy = () -> SecuritiesFinancing.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesLending.mmBorrowingFee, com.tools20022.repository.entity.SecuritiesLending.mmCallableTradeIndicator,
-						com.tools20022.repository.entity.SecuritiesLending.mmLendingTransactionMethod, com.tools20022.repository.entity.SecuritiesLending.mmBorrowingReason, com.tools20022.repository.entity.SecuritiesLending.mmReversible,
-						com.tools20022.repository.entity.SecuritiesLending.mmSecuritiesLendingType, com.tools20022.repository.entity.SecuritiesLending.mmLendingWithCollateral,
-						com.tools20022.repository.entity.SecuritiesLending.mmMinimumDateForCallBack, com.tools20022.repository.entity.SecuritiesLending.mmNumberOfDaysLendingBorrowing,
-						com.tools20022.repository.entity.SecuritiesLending.mmPeriodicPayment, com.tools20022.repository.entity.SecuritiesLending.mmRollover, com.tools20022.repository.entity.SecuritiesLending.mmBorrowingRate,
-						com.tools20022.repository.entity.SecuritiesLending.mmSecuritiesDeliveryObligation);
+				element_lazy = () -> Arrays.asList(SecuritiesLending.mmBorrowingFee, SecuritiesLending.mmCallableTradeIndicator, SecuritiesLending.mmLendingTransactionMethod, SecuritiesLending.mmBorrowingReason,
+						SecuritiesLending.mmReversible, SecuritiesLending.mmSecuritiesLendingType, SecuritiesLending.mmLendingWithCollateral, SecuritiesLending.mmMinimumDateForCallBack, SecuritiesLending.mmNumberOfDaysLendingBorrowing,
+						SecuritiesLending.mmPeriodicPayment, SecuritiesLending.mmRollover, SecuritiesLending.mmBorrowingRate, SecuritiesLending.mmSecuritiesDeliveryObligation);
 				derivationComponent_lazy = () -> Arrays.asList(LendingTransactionMethod1Choice.mmObject(), SecuritiesLendingType1Choice.mmObject(), Reversible1Choice.mmObject());
 			}
 		});

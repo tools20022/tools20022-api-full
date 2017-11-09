@@ -20,9 +20,13 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.PaymentMethod1Choice;
 import com.tools20022.repository.datatype.Max210Text;
+import com.tools20022.repository.entity.CashAccountService;
 import com.tools20022.repository.entity.Invoice;
+import com.tools20022.repository.entity.Party;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -108,11 +112,11 @@ public class InvoiceLegalIssue1 {
 	 */
 	public static final MMMessageAssociationEnd mmInvoicer = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> InvoiceLegalIssue1.mmObject();
 			isDerived = false;
 			xmlTag = "Invcr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Invoicer";
 			definition = "Identification of the organisation issuing the invoice, when it is different from the creditor or ultimate creditor.";
 			maxOccurs = 1;
@@ -158,11 +162,11 @@ public class InvoiceLegalIssue1 {
 	 */
 	public static final MMMessageAssociationEnd mmInvoicee = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> InvoiceLegalIssue1.mmObject();
 			isDerived = false;
 			xmlTag = "Invcee";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Invoicee";
 			definition = "Identification of the party to whom an invoice is issued, when it is different from the debtor or ultimate debtor.";
 			maxOccurs = 1;
@@ -212,7 +216,7 @@ public class InvoiceLegalIssue1 {
 			componentContext_lazy = () -> InvoiceLegalIssue1.mmObject();
 			isDerived = false;
 			xmlTag = "InvcLglStmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvoiceLegalStatement";
 			definition = "Additional information, in free text form, to complement the structured remittance information.";
 			maxOccurs = 1;
@@ -258,11 +262,11 @@ public class InvoiceLegalIssue1 {
 	 */
 	public static final MMMessageAssociationEnd mmPaymentMethod = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashAccountService.mmPaymentMethod;
+			businessElementTrace_lazy = () -> CashAccountService.mmPaymentMethod;
 			componentContext_lazy = () -> InvoiceLegalIssue1.mmObject();
 			isDerived = false;
 			xmlTag = "PmtMtd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentMethod";
 			definition = "Method of payment for the remittance of the CSD or NCB to the invoicing party.";
 			maxOccurs = 1;
@@ -275,11 +279,10 @@ public class InvoiceLegalIssue1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvoiceLegalIssue1.mmInvoicer, com.tools20022.repository.msg.InvoiceLegalIssue1.mmInvoicee,
-						com.tools20022.repository.msg.InvoiceLegalIssue1.mmInvoiceLegalStatement, com.tools20022.repository.msg.InvoiceLegalIssue1.mmPaymentMethod);
+				messageElement_lazy = () -> Arrays.asList(InvoiceLegalIssue1.mmInvoicer, InvoiceLegalIssue1.mmInvoicee, InvoiceLegalIssue1.mmInvoiceLegalStatement, InvoiceLegalIssue1.mmPaymentMethod);
 				trace_lazy = () -> Invoice.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "InvoiceLegalIssue1";
 				definition = "Information supplied to enable the matching/reconciliation of an entry with the items that the payment is intended to settle, such as commercial invoices in an accounts' receivable system, in a structured form.";
 			}

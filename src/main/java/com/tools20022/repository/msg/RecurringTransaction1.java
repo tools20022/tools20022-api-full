@@ -19,11 +19,14 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.Frequency4Code;
 import com.tools20022.repository.datatype.ImpliedCurrencyAndAmount;
 import com.tools20022.repository.datatype.Max2NumericText;
 import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.entity.Instalment;
+import com.tools20022.repository.entity.PaymentObligation;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -125,10 +128,10 @@ public class RecurringTransaction1 {
 			componentContext_lazy = () -> RecurringTransaction1.mmObject();
 			isDerived = false;
 			xmlTag = "SeqNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SequenceNumber";
 			definition = "Indicates the recurring/instalment occurrence of the transaction (1 = 1st instalment, 2 = 2nd instalment, etc.).";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RecurringTransaction2.mmSequenceNumber);
+			nextVersions_lazy = () -> Arrays.asList(RecurringTransaction2.mmSequenceNumber);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max2NumericText.mmObject();
@@ -180,14 +183,14 @@ public class RecurringTransaction1 {
 	 */
 	public static final MMMessageAttribute mmPeriodUnit = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Instalment.mmPeriodUnit;
+			businessElementTrace_lazy = () -> Instalment.mmPeriodUnit;
 			componentContext_lazy = () -> RecurringTransaction1.mmObject();
 			isDerived = false;
 			xmlTag = "PrdUnit";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PeriodUnit";
 			definition = "Period unit between consecutive payments (for example day, month, year).";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RecurringTransaction2.mmPeriodUnit);
+			nextVersions_lazy = () -> Arrays.asList(RecurringTransaction2.mmPeriodUnit);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Frequency4Code.mmObject();
@@ -236,14 +239,14 @@ public class RecurringTransaction1 {
 	 */
 	public static final MMMessageAttribute mmInstalmentPeriod = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Instalment.mmNumberOfUnits;
+			businessElementTrace_lazy = () -> Instalment.mmNumberOfUnits;
 			componentContext_lazy = () -> RecurringTransaction1.mmObject();
 			isDerived = false;
 			xmlTag = "InstlmtPrd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstalmentPeriod";
 			definition = "Number of period units between consecutive payments.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RecurringTransaction2.mmInstalmentPeriod);
+			nextVersions_lazy = () -> Arrays.asList(RecurringTransaction2.mmInstalmentPeriod);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
@@ -292,14 +295,14 @@ public class RecurringTransaction1 {
 	 */
 	public static final MMMessageAttribute mmTotalNumberOfPayments = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Instalment.mmTotalNumberOfInstalment;
+			businessElementTrace_lazy = () -> Instalment.mmTotalNumberOfInstalment;
 			componentContext_lazy = () -> RecurringTransaction1.mmObject();
 			isDerived = false;
 			xmlTag = "TtlNbOfPmts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalNumberOfPayments";
 			definition = "Total number of instalment payments.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RecurringTransaction2.mmTotalNumberOfPayments);
+			nextVersions_lazy = () -> Arrays.asList(RecurringTransaction2.mmTotalNumberOfPayments);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
@@ -342,11 +345,11 @@ public class RecurringTransaction1 {
 	 */
 	public static final MMMessageAttribute mmInterestCharges = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentObligation.mmInterest;
+			businessElementTrace_lazy = () -> PaymentObligation.mmInterest;
 			componentContext_lazy = () -> RecurringTransaction1.mmObject();
 			isDerived = false;
 			xmlTag = "IntrstChrgs";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterestCharges";
 			definition = "Interest charged in percentage for the total amount of payments.";
 			maxOccurs = 1;
@@ -358,12 +361,11 @@ public class RecurringTransaction1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RecurringTransaction1.mmSequenceNumber, com.tools20022.repository.msg.RecurringTransaction1.mmPeriodUnit,
-						com.tools20022.repository.msg.RecurringTransaction1.mmInstalmentPeriod, com.tools20022.repository.msg.RecurringTransaction1.mmTotalNumberOfPayments,
-						com.tools20022.repository.msg.RecurringTransaction1.mmInterestCharges);
+				messageElement_lazy = () -> Arrays.asList(RecurringTransaction1.mmSequenceNumber, RecurringTransaction1.mmPeriodUnit, RecurringTransaction1.mmInstalmentPeriod, RecurringTransaction1.mmTotalNumberOfPayments,
+						RecurringTransaction1.mmInterestCharges);
 				trace_lazy = () -> Instalment.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RecurringTransaction1";
 				definition = "Financial loan (instalment) or a recurring transaction.";
 				nextVersions_lazy = () -> Arrays.asList(RecurringTransaction2.mmObject());

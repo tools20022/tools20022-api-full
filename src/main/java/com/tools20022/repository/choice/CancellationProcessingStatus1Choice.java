@@ -19,8 +19,11 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CancellationProcessingStatus1Code;
 import com.tools20022.repository.entity.SecuritiesTradeStatus;
+import com.tools20022.repository.entity.Status;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification20;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -115,14 +118,14 @@ public class CancellationProcessingStatus1Choice {
 	 */
 	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.mmCancellationProcessingStatus;
+			businessElementTrace_lazy = () -> Status.mmCancellationProcessingStatus;
 			componentContext_lazy = () -> CancellationProcessingStatus1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Cd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Provides the status of a cancellation request.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CancellationProcessingStatus7Choice.mmCode);
+			nextVersions_lazy = () -> Arrays.asList(CancellationProcessingStatus7Choice.mmCode);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CancellationProcessingStatus1Code.mmObject();
@@ -172,14 +175,14 @@ public class CancellationProcessingStatus1Choice {
 	 */
 	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.mmCancellationProcessingStatus;
+			businessElementTrace_lazy = () -> Status.mmCancellationProcessingStatus;
 			componentContext_lazy = () -> CancellationProcessingStatus1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Provides the status of a cancellation request.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CancellationProcessingStatus7Choice.mmProprietary);
+			nextVersions_lazy = () -> Arrays.asList(CancellationProcessingStatus7Choice.mmProprietary);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification20.mmObject();
@@ -189,10 +192,10 @@ public class CancellationProcessingStatus1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CancellationProcessingStatus1Choice.mmCode, com.tools20022.repository.choice.CancellationProcessingStatus1Choice.mmProprietary);
+				messageElement_lazy = () -> Arrays.asList(CancellationProcessingStatus1Choice.mmCode, CancellationProcessingStatus1Choice.mmProprietary);
 				trace_lazy = () -> SecuritiesTradeStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CancellationProcessingStatus1Choice";
 				definition = "Choice of cancellation processing status.";
 				nextVersions_lazy = () -> Arrays.asList(CancellationProcessingStatus7Choice.mmObject());

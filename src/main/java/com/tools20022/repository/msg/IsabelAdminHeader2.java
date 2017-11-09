@@ -20,11 +20,13 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.DateAndDateTimeChoice;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Max13AlphaNumericText;
 import com.tools20022.repository.datatype.Max14Text;
 import com.tools20022.repository.datatype.Max6Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -112,7 +114,7 @@ public class IsabelAdminHeader2 {
 			componentContext_lazy = () -> IsabelAdminHeader2.mmObject();
 			isDerived = false;
 			xmlTag = "ActlSndrId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ActualSenderIdentification";
 			definition = "Unique identification of the actual sender of the file.";
 			maxOccurs = 1;
@@ -154,7 +156,7 @@ public class IsabelAdminHeader2 {
 			componentContext_lazy = () -> IsabelAdminHeader2.mmObject();
 			isDerived = false;
 			xmlTag = "PyldCreDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PayloadCreationDate";
 			definition = "Date and time at which the file in the payload was actually created.";
 			maxOccurs = 1;
@@ -198,7 +200,7 @@ public class IsabelAdminHeader2 {
 			componentContext_lazy = () -> IsabelAdminHeader2.mmObject();
 			isDerived = false;
 			xmlTag = "MsgReqTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageRequestType";
 			definition = "Unique identification of the request type of the message in the payload.";
 			maxOccurs = 1;
@@ -242,7 +244,7 @@ public class IsabelAdminHeader2 {
 			componentContext_lazy = () -> IsabelAdminHeader2.mmObject();
 			isDerived = false;
 			xmlTag = "MsgId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageIdentification";
 			definition = "Unique identification as assigned by the bank to identify the administrative instruction.";
 			maxOccurs = 1;
@@ -284,7 +286,7 @@ public class IsabelAdminHeader2 {
 			componentContext_lazy = () -> IsabelAdminHeader2.mmObject();
 			isDerived = false;
 			xmlTag = "DstnMailBxId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DestinationMailBoxIdentification";
 			definition = "Unique identification of the destination mailbox.";
 			maxOccurs = 1;
@@ -328,7 +330,7 @@ public class IsabelAdminHeader2 {
 			componentContext_lazy = () -> IsabelAdminHeader2.mmObject();
 			isDerived = false;
 			xmlTag = "RfrdMsg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReferredMessage";
 			definition = "Unique identification of the message to which the administration instruction refers.";
 			maxOccurs = 1;
@@ -372,7 +374,7 @@ public class IsabelAdminHeader2 {
 			componentContext_lazy = () -> IsabelAdminHeader2.mmObject();
 			isDerived = false;
 			xmlTag = "RfrdSndTmStmp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReferredSendTimeStamp";
 			definition = "Send time stamp of the message to which the administrative instruction refers.";
 			maxOccurs = 1;
@@ -384,12 +386,10 @@ public class IsabelAdminHeader2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IsabelAdminHeader2.mmActualSenderIdentification, com.tools20022.repository.msg.IsabelAdminHeader2.mmPayloadCreationDate,
-						com.tools20022.repository.msg.IsabelAdminHeader2.mmMessageRequestType, com.tools20022.repository.msg.IsabelAdminHeader2.mmMessageIdentification,
-						com.tools20022.repository.msg.IsabelAdminHeader2.mmDestinationMailBoxIdentification, com.tools20022.repository.msg.IsabelAdminHeader2.mmReferredMessage,
-						com.tools20022.repository.msg.IsabelAdminHeader2.mmReferredSendTimeStamp);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(IsabelAdminHeader2.mmActualSenderIdentification, IsabelAdminHeader2.mmPayloadCreationDate, IsabelAdminHeader2.mmMessageRequestType, IsabelAdminHeader2.mmMessageIdentification,
+						IsabelAdminHeader2.mmDestinationMailBoxIdentification, IsabelAdminHeader2.mmReferredMessage, IsabelAdminHeader2.mmReferredSendTimeStamp);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "IsabelAdminHeader2";
 				definition = "Specifies the header information for an administrative file.";
 			}

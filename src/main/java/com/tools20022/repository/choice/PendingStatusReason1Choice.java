@@ -20,7 +20,9 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.NoReasonCode;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.PendingStatusReason14;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -121,11 +123,11 @@ public class PendingStatusReason1Choice {
 			componentContext_lazy = () -> PendingStatusReason1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "NoSpcfdRsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoSpecifiedReason";
 			definition = "There is no reason available or to report for the pending account status.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PendingOpeningStatusReason1Choice.mmNoSpecifiedReason);
-			previousVersion_lazy = () -> com.tools20022.repository.choice.DisabledStatusReason1Choice.mmNoSpecifiedReason;
+			nextVersions_lazy = () -> Arrays.asList(PendingOpeningStatusReason1Choice.mmNoSpecifiedReason);
+			previousVersion_lazy = () -> DisabledStatusReason1Choice.mmNoSpecifiedReason;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> NoReasonCode.mmObject();
@@ -176,11 +178,11 @@ public class PendingStatusReason1Choice {
 			componentContext_lazy = () -> PendingStatusReason1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Rsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reason";
 			definition = "Reason for the pending account status.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PendingOpeningStatusReason1Choice.mmReason);
-			previousVersion_lazy = () -> com.tools20022.repository.choice.DisabledStatusReason1Choice.mmReason;
+			nextVersions_lazy = () -> Arrays.asList(PendingOpeningStatusReason1Choice.mmReason);
+			previousVersion_lazy = () -> DisabledStatusReason1Choice.mmReason;
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> PendingStatusReason14.mmObject();
@@ -190,9 +192,9 @@ public class PendingStatusReason1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PendingStatusReason1Choice.mmNoSpecifiedReason, com.tools20022.repository.choice.PendingStatusReason1Choice.mmReason);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(PendingStatusReason1Choice.mmNoSpecifiedReason, PendingStatusReason1Choice.mmReason);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PendingStatusReason1Choice";
 				definition = "Choice of formats for a pending status reason.";
 				nextVersions_lazy = () -> Arrays.asList(PendingOpeningStatusReason1Choice.mmObject());

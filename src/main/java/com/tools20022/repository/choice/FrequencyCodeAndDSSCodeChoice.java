@@ -19,7 +19,9 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.Frequency1Code;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification7;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -93,7 +95,7 @@ public class FrequencyCodeAndDSSCodeChoice {
 			componentContext_lazy = () -> FrequencyCodeAndDSSCodeChoice.mmObject();
 			isDerived = false;
 			xmlTag = "FrqcyAsCd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FrequencyAsCode";
 			definition = "Frequency expressed as a code.";
 			maxOccurs = 1;
@@ -138,7 +140,7 @@ public class FrequencyCodeAndDSSCodeChoice {
 			componentContext_lazy = () -> FrequencyCodeAndDSSCodeChoice.mmObject();
 			isDerived = false;
 			xmlTag = "FrqcyAsDSS";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FrequencyAsDSS";
 			definition = "Frequency expressed as a data source scheme and a code used within the data source scheme.";
 			maxOccurs = 1;
@@ -150,9 +152,9 @@ public class FrequencyCodeAndDSSCodeChoice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.FrequencyCodeAndDSSCodeChoice.mmFrequencyAsCode, com.tools20022.repository.choice.FrequencyCodeAndDSSCodeChoice.mmFrequencyAsDSS);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(FrequencyCodeAndDSSCodeChoice.mmFrequencyAsCode, FrequencyCodeAndDSSCodeChoice.mmFrequencyAsDSS);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FrequencyCodeAndDSSCodeChoice";
 				definition = "Choice between formats for the frequency.";
 			}

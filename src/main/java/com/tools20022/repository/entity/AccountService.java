@@ -17,9 +17,13 @@
 
 package com.tools20022.repository.entity;
 
+import com.tools20022.metamodel.MMAggregation;
 import com.tools20022.metamodel.MMBusinessAssociationEnd;
 import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.FinancialService;
+import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.BillingServiceParameters2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -34,33 +38,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.AccountService#mmAccountContract
- * AccountService.mmAccountContract}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.AccountService#mmReservation
- * AccountService.mmReservation}</li>
- * <li>{@linkplain com.tools20022.repository.entity.AccountService#mmAccount
- * AccountService.mmAccount}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.AccountService#mmAccountAdministrationCharge
- * AccountService.mmAccountAdministrationCharge}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
- * subType} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.ReportingService
- * ReportingService}</li>
- * <li>{@linkplain com.tools20022.repository.entity.CashAccountService
- * CashAccountService}</li>
- * <li>{@linkplain com.tools20022.repository.entity.InvestmentAccountService
- * InvestmentAccountService}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
  * associationDomain} =
@@ -80,6 +57,33 @@ import java.util.List;
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
  * superType} = {@linkplain com.tools20022.repository.entity.FinancialService
  * FinancialService}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
+ * subType} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.ReportingService
+ * ReportingService}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.CashAccountService
+ * CashAccountService}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.InvestmentAccountService
+ * InvestmentAccountService}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.AccountService#mmAccountContract
+ * AccountService.mmAccountContract}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.AccountService#mmReservation
+ * AccountService.mmReservation}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.AccountService#mmAccount
+ * AccountService.mmAccount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.AccountService#mmAccountAdministrationCharge
+ * AccountService.mmAccountAdministrationCharge}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -139,12 +143,12 @@ public class AccountService extends FinancialService {
 		{
 			elementContext_lazy = () -> AccountService.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountContract";
 			definition = "Account contract which specifies the services linked to an account.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.AccountContract.mmAccountService;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.AccountContract.mmObject();
 		}
 	};
@@ -188,13 +192,13 @@ public class AccountService extends FinancialService {
 		{
 			elementContext_lazy = () -> AccountService.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Reservation";
 			definition = "Reservation information included in the services related to an account.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.Reservation.mmAccountService;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Reservation.mmObject();
 		}
 	};
@@ -235,13 +239,13 @@ public class AccountService extends FinancialService {
 		{
 			elementContext_lazy = () -> AccountService.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Account";
 			definition = "Account for which services are specified.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.Account.mmAccountService;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Account.mmObject();
 		}
 	};
@@ -288,16 +292,16 @@ public class AccountService extends FinancialService {
 	 */
 	public static final MMBusinessAssociationEnd mmAccountAdministrationCharge = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BillingServiceParameters2.mmServiceChargeAmount);
+			derivation_lazy = () -> Arrays.asList(BillingServiceParameters2.mmServiceChargeAmount);
 			elementContext_lazy = () -> AccountService.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AccountAdministrationCharge";
 			definition = "Charge applied for the administration of an account.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.Charges.mmServices;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Charges.mmObject();
 		}
 	};
@@ -305,16 +309,15 @@ public class AccountService extends FinancialService {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AccountService";
 				definition = "Services linked to an account which are available to the account owner or to the holder of a mandate.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Account.mmAccountService, com.tools20022.repository.entity.AccountContract.mmAccountService,
 						com.tools20022.repository.entity.Reservation.mmAccountService, com.tools20022.repository.entity.Charges.mmServices);
 				subType_lazy = () -> Arrays.asList(ReportingService.mmObject(), CashAccountService.mmObject(), InvestmentAccountService.mmObject());
 				superType_lazy = () -> FinancialService.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.AccountService.mmAccountContract, com.tools20022.repository.entity.AccountService.mmReservation, com.tools20022.repository.entity.AccountService.mmAccount,
-						com.tools20022.repository.entity.AccountService.mmAccountAdministrationCharge);
+				element_lazy = () -> Arrays.asList(AccountService.mmAccountContract, AccountService.mmReservation, AccountService.mmAccount, AccountService.mmAccountAdministrationCharge);
 			}
 		});
 		return mmObject_lazy.get();

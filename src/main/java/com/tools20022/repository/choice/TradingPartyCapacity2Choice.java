@@ -19,8 +19,11 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.TradingCapacity6Code;
 import com.tools20022.repository.entity.Party;
+import com.tools20022.repository.entity.TradePartyRole;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification29;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -98,11 +101,11 @@ public class TradingPartyCapacity2Choice {
 	 */
 	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradePartyRole.mmTradingPartyCapacity;
+			businessElementTrace_lazy = () -> TradePartyRole.mmTradingPartyCapacity;
 			componentContext_lazy = () -> TradingPartyCapacity2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Cd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Trading capacity expressed as an ISO 20022 code.";
 			maxOccurs = 1;
@@ -146,11 +149,11 @@ public class TradingPartyCapacity2Choice {
 	 */
 	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradePartyRole.mmTradingPartyCapacity;
+			businessElementTrace_lazy = () -> TradePartyRole.mmTradingPartyCapacity;
 			componentContext_lazy = () -> TradingPartyCapacity2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Trading capacity expressed as a proprietary code.";
 			maxOccurs = 1;
@@ -162,10 +165,10 @@ public class TradingPartyCapacity2Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.TradingPartyCapacity2Choice.mmCode, com.tools20022.repository.choice.TradingPartyCapacity2Choice.mmProprietary);
+				messageElement_lazy = () -> Arrays.asList(TradingPartyCapacity2Choice.mmCode, TradingPartyCapacity2Choice.mmProprietary);
 				trace_lazy = () -> Party.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TradingPartyCapacity2Choice";
 				definition = "Choice of format for the trading capacity.";
 			}

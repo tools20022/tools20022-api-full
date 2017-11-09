@@ -17,14 +17,13 @@
 
 package com.tools20022.repository.msg;
 
-import com.tools20022.metamodel.MMMessageAssociationEnd;
-import com.tools20022.metamodel.MMMessageAttribute;
-import com.tools20022.metamodel.MMMessageComponent;
-import com.tools20022.metamodel.MMXor;
+import com.tools20022.metamodel.*;
+import com.tools20022.repository.area.auth.RegulatoryTransactionReportCancellationStatusV01;
 import com.tools20022.repository.choice.RejectedCancellationStatusReason1Choice;
 import com.tools20022.repository.codeset.Status2Code;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.Status;
+import com.tools20022.repository.GeneratedRepository;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -129,7 +128,7 @@ public class ReportStatusAndReason2 {
 			componentContext_lazy = () -> ReportStatusAndReason2.mmObject();
 			isDerived = false;
 			xmlTag = "RltdRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedReference";
 			definition = "Provides the identification of the RegulatoryTransactionReportCancellationRequest document that was previously sent by the reporting institution.";
 			maxOccurs = 1;
@@ -171,7 +170,7 @@ public class ReportStatusAndReason2 {
 			componentContext_lazy = () -> ReportStatusAndReason2.mmObject();
 			isDerived = false;
 			xmlTag = "Sts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Status";
 			definition = "Indicates the status of a report cancellation request message.";
 			maxOccurs = 1;
@@ -215,11 +214,11 @@ public class ReportStatusAndReason2 {
 	 */
 	public static final MMMessageAssociationEnd mmRejected = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.mmStatusReason;
+			businessElementTrace_lazy = () -> Status.mmStatusReason;
 			componentContext_lazy = () -> ReportStatusAndReason2.mmObject();
 			isDerived = false;
 			xmlTag = "Rjctd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rejected";
 			definition = "Indicates that the cancellation is rejected and provides a reason why.";
 			maxOccurs = 100;
@@ -233,6 +232,10 @@ public class ReportStatusAndReason2 {
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
+	 * messageComponent} =
+	 * {@linkplain com.tools20022.repository.msg.ReportStatusAndReason2
+	 * ReportStatusAndReason2}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getImpactedElements
 	 * impactedElements} =
 	 * <ul>
@@ -244,10 +247,6 @@ public class ReportStatusAndReason2 {
 	 * ReportStatusAndReason2.mmRejected}</li>
 	 * </ul>
 	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
-	 * messageComponent} =
-	 * {@linkplain com.tools20022.repository.msg.ReportStatusAndReason2
-	 * ReportStatusAndReason2}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -261,23 +260,22 @@ public class ReportStatusAndReason2 {
 	 */
 	public static final MMXor mmTypeOfStatusRule = new MMXor() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TypeOfStatusRule";
 			definition = "Either Status or Rejected must be present, but not both.";
 			messageComponent_lazy = () -> ReportStatusAndReason2.mmObject();
-			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReportStatusAndReason2.mmStatus, com.tools20022.repository.msg.ReportStatusAndReason2.mmRejected);
+			impactedElements_lazy = () -> Arrays.asList(ReportStatusAndReason2.mmStatus, ReportStatusAndReason2.mmRejected);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReportStatusAndReason2.mmRelatedReference, com.tools20022.repository.msg.ReportStatusAndReason2.mmStatus,
-						com.tools20022.repository.msg.ReportStatusAndReason2.mmRejected);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.auth.RegulatoryTransactionReportCancellationStatusV01.mmReportCancellationStatus);
+				messageElement_lazy = () -> Arrays.asList(ReportStatusAndReason2.mmRelatedReference, ReportStatusAndReason2.mmStatus, ReportStatusAndReason2.mmRejected);
+				messageBuildingBlock_lazy = () -> Arrays.asList(RegulatoryTransactionReportCancellationStatusV01.mmReportCancellationStatus);
 				trace_lazy = () -> Status.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
 						return DateFormat.getDateInstance(java.text.DateFormat.LONG).parse("September 9, 2016");
@@ -287,7 +285,7 @@ public class ReportStatusAndReason2 {
 				})).get();
 				name = "ReportStatusAndReason2";
 				definition = "Provides the related report identification and its status. If the status is rejected, a reason for this status must be given.";
-				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReportStatusAndReason2.mmTypeOfStatusRule);
+				xors_lazy = () -> Arrays.asList(ReportStatusAndReason2.mmTypeOfStatusRule);
 			}
 		});
 		return mmObject_lazy.get();

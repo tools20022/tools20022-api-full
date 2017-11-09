@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.PersonIdentificationTypeV2Code;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -95,7 +97,7 @@ public class PersonIdentificationType3Code extends PersonIdentificationTypeV2Cod
 	 */
 	public static final MMCode mmAlienRegistrationNumber = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AlienRegistrationNumber";
 			owner_lazy = () -> PersonIdentificationType3Code.mmObject();
 		}
@@ -118,7 +120,7 @@ public class PersonIdentificationType3Code extends PersonIdentificationTypeV2Cod
 	 */
 	public static final MMCode mmPassportNumber = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PassportNumber";
 			owner_lazy = () -> PersonIdentificationType3Code.mmObject();
 		}
@@ -141,7 +143,7 @@ public class PersonIdentificationType3Code extends PersonIdentificationTypeV2Cod
 	 */
 	public static final MMCode mmEmployerIdentificationNumber = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EmployerIdentificationNumber";
 			owner_lazy = () -> PersonIdentificationType3Code.mmObject();
 		}
@@ -164,7 +166,7 @@ public class PersonIdentificationType3Code extends PersonIdentificationTypeV2Cod
 	 */
 	public static final MMCode mmDriversLicenseNumber = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DriversLicenseNumber";
 			owner_lazy = () -> PersonIdentificationType3Code.mmObject();
 		}
@@ -187,7 +189,7 @@ public class PersonIdentificationType3Code extends PersonIdentificationTypeV2Cod
 	 */
 	public static final MMCode mmForeignInvestmentIdentityNumber = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForeignInvestmentIdentityNumber";
 			owner_lazy = () -> PersonIdentificationType3Code.mmObject();
 		}
@@ -210,7 +212,7 @@ public class PersonIdentificationType3Code extends PersonIdentificationTypeV2Cod
 	 */
 	public static final MMCode mmTaxIdentificationNumber = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxIdentificationNumber";
 			owner_lazy = () -> PersonIdentificationType3Code.mmObject();
 		}
@@ -219,14 +221,13 @@ public class PersonIdentificationType3Code extends PersonIdentificationTypeV2Cod
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ARNU");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PersonIdentificationType3Code";
 				definition = "Specifies the type of person's identification.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PersonIdentificationType3Code.mmAlienRegistrationNumber, com.tools20022.repository.codeset.PersonIdentificationType3Code.mmPassportNumber,
-						com.tools20022.repository.codeset.PersonIdentificationType3Code.mmEmployerIdentificationNumber, com.tools20022.repository.codeset.PersonIdentificationType3Code.mmDriversLicenseNumber,
-						com.tools20022.repository.codeset.PersonIdentificationType3Code.mmForeignInvestmentIdentityNumber, com.tools20022.repository.codeset.PersonIdentificationType3Code.mmTaxIdentificationNumber);
+				code_lazy = () -> Arrays.asList(PersonIdentificationType3Code.mmAlienRegistrationNumber, PersonIdentificationType3Code.mmPassportNumber, PersonIdentificationType3Code.mmEmployerIdentificationNumber,
+						PersonIdentificationType3Code.mmDriversLicenseNumber, PersonIdentificationType3Code.mmForeignInvestmentIdentityNumber, PersonIdentificationType3Code.mmTaxIdentificationNumber);
 				trace_lazy = () -> PersonIdentificationTypeV2Code.mmObject();
 			}
 		});

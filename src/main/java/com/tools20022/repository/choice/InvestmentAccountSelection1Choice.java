@@ -20,7 +20,10 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.entity.Account;
 import com.tools20022.repository.entity.InvestmentAccount;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.AccountIdentification1;
 import com.tools20022.repository.msg.InvestmentAccount44;
 import java.util.Arrays;
@@ -100,11 +103,11 @@ public class InvestmentAccountSelection1Choice {
 	 */
 	public static final MMMessageAttribute mmAccountIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.mmIdentification;
+			businessElementTrace_lazy = () -> Account.mmIdentification;
 			componentContext_lazy = () -> InvestmentAccountSelection1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "AcctId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountIdentification";
 			definition = "Unique and unambiguous identification for the account between the account owner and the account servicer.";
 			maxOccurs = 1;
@@ -152,7 +155,7 @@ public class InvestmentAccountSelection1Choice {
 			componentContext_lazy = () -> InvestmentAccountSelection1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "OthrAcctSelctnData";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherAccountSelectionData";
 			definition = "Various investment account information used to select a specific account.";
 			maxOccurs = 1;
@@ -165,10 +168,9 @@ public class InvestmentAccountSelection1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.InvestmentAccountSelection1Choice.mmAccountIdentification,
-						com.tools20022.repository.choice.InvestmentAccountSelection1Choice.mmOtherAccountSelectionData);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(InvestmentAccountSelection1Choice.mmAccountIdentification, InvestmentAccountSelection1Choice.mmOtherAccountSelectionData);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "InvestmentAccountSelection1Choice";
 				definition = "Choice of account or other account-related data.";
 			}

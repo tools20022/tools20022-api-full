@@ -19,8 +19,10 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.metamodel.MMXor;
 import com.tools20022.repository.entity.RiskManagementLimit;
+import com.tools20022.repository.GeneratedRepository;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -114,7 +116,7 @@ public class LimitReport3 {
 			componentContext_lazy = () -> LimitReport3.mmObject();
 			isDerived = false;
 			xmlTag = "LmtId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LimitIdentification";
 			definition = "Identification of the limit on which information is requested.";
 			maxOccurs = 1;
@@ -160,7 +162,7 @@ public class LimitReport3 {
 			componentContext_lazy = () -> LimitReport3.mmObject();
 			isDerived = false;
 			xmlTag = "Lmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Limit";
 			definition = "Requested information on the limit.";
 			maxOccurs = 1;
@@ -200,7 +202,7 @@ public class LimitReport3 {
 			componentContext_lazy = () -> LimitReport3.mmObject();
 			isDerived = false;
 			xmlTag = "BizErr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BusinessError";
 			definition = "Reason the requested business information is not given.";
 			maxOccurs = 1;
@@ -214,6 +216,9 @@ public class LimitReport3 {
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
+	 * messageComponent} =
+	 * {@linkplain com.tools20022.repository.msg.LimitReport3 LimitReport3}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getImpactedElements
 	 * impactedElements} =
 	 * <ul>
@@ -224,9 +229,6 @@ public class LimitReport3 {
 	 * LimitReport3.mmBusinessError}</li>
 	 * </ul>
 	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
-	 * messageComponent} =
-	 * {@linkplain com.tools20022.repository.msg.LimitReport3 LimitReport3}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -241,21 +243,21 @@ public class LimitReport3 {
 	 */
 	public static final MMXor mmLimitOrBusinessErrorRule = new MMXor() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LimitOrBusinessErrorRule";
 			definition = "Either Limit or BusinessError must be present, but not both.";
 			messageComponent_lazy = () -> LimitReport3.mmObject();
-			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LimitReport3.mmLimit, com.tools20022.repository.msg.LimitReport3.mmBusinessError);
+			impactedElements_lazy = () -> Arrays.asList(LimitReport3.mmLimit, LimitReport3.mmBusinessError);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LimitReport3.mmLimitIdentification, com.tools20022.repository.msg.LimitReport3.mmLimit, com.tools20022.repository.msg.LimitReport3.mmBusinessError);
+				messageElement_lazy = () -> Arrays.asList(LimitReport3.mmLimitIdentification, LimitReport3.mmLimit, LimitReport3.mmBusinessError);
 				trace_lazy = () -> RiskManagementLimit.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
 						return DateFormat.getDateInstance(java.text.DateFormat.LONG).parse("September 9, 2016");
@@ -265,7 +267,7 @@ public class LimitReport3 {
 				})).get();
 				name = "LimitReport3";
 				definition = "Reports either on the risk management limit or on a business error.";
-				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LimitReport3.mmLimitOrBusinessErrorRule);
+				xors_lazy = () -> Arrays.asList(LimitReport3.mmLimitOrBusinessErrorRule);
 			}
 		});
 		return mmObject_lazy.get();

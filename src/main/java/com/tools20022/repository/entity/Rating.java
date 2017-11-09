@@ -17,11 +17,10 @@
 
 package com.tools20022.repository.entity;
 
-import com.tools20022.metamodel.MMBusinessAssociationEnd;
-import com.tools20022.metamodel.MMBusinessAttribute;
-import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.*;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.RatingValueIdentifier;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.Rating1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -35,17 +34,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Rating#mmSecurity
- * Rating.mmSecurity}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Rating#mmRatingScheme
- * Rating.mmRatingScheme}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Rating#mmValueDate
- * Rating.mmValueDate}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Rating#mmValue
- * Rating.mmValue}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Rating1 Rating1}</li>
  * </ul>
  * </li>
  * <li>
@@ -58,11 +51,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * Scheme.mmRating}</li>
  * </ul>
  * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Rating1 Rating1}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Rating#mmSecurity
+ * Rating.mmSecurity}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Rating#mmRatingScheme
+ * Rating.mmRatingScheme}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Rating#mmValueDate
+ * Rating.mmValueDate}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Rating#mmValue
+ * Rating.mmValue}</li>
  * </ul>
  * </li>
  * <li>
@@ -119,13 +118,13 @@ public class Rating {
 		{
 			elementContext_lazy = () -> Rating.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Security";
 			definition = "Security for which a rating is provided.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.Security.mmRating;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 		}
 	};
@@ -170,16 +169,16 @@ public class Rating {
 	 */
 	public static final MMBusinessAssociationEnd mmRatingScheme = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Rating1.mmRatingScheme);
+			derivation_lazy = () -> Arrays.asList(Rating1.mmRatingScheme);
 			elementContext_lazy = () -> Rating.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RatingScheme";
 			definition = "Information regarding the entity that assigns the rating.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.Scheme.mmRating;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Scheme.mmObject();
 		}
 	};
@@ -217,10 +216,10 @@ public class Rating {
 	 */
 	public static final MMBusinessAttribute mmValueDate = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Rating1.mmValueDate);
+			derivation_lazy = () -> Arrays.asList(Rating1.mmValueDate);
 			elementContext_lazy = () -> Rating.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ValueDate";
 			definition = "Date/time as from which the rating is valid.";
 			maxOccurs = 1;
@@ -267,10 +266,10 @@ public class Rating {
 	 */
 	public static final MMBusinessAttribute mmValue = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Rating1.mmValueIdentification);
+			derivation_lazy = () -> Arrays.asList(Rating1.mmValueIdentification);
 			elementContext_lazy = () -> Rating.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Value";
 			definition = "Specifies the rating, which has been assigned to a security by a rating agency.";
 			maxOccurs = 1;
@@ -282,13 +281,12 @@ public class Rating {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Rating";
 				definition = "Assessment of securities credit and investment risk.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Security.mmRating, com.tools20022.repository.entity.Scheme.mmRating);
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Rating.mmSecurity, com.tools20022.repository.entity.Rating.mmRatingScheme, com.tools20022.repository.entity.Rating.mmValueDate,
-						com.tools20022.repository.entity.Rating.mmValue);
+				element_lazy = () -> Arrays.asList(Rating.mmSecurity, Rating.mmRatingScheme, Rating.mmValueDate, Rating.mmValue);
 				derivationComponent_lazy = () -> Arrays.asList(Rating1.mmObject());
 			}
 		});

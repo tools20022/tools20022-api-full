@@ -19,10 +19,12 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.TaxTypeFormat1Choice;
 import com.tools20022.repository.datatype.CurrencyAndAmount;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.entity.Tax;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -101,11 +103,11 @@ public class SettlementTax1 {
 	 */
 	public static final MMMessageAttribute mmTypeCode = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.mmType;
+			businessElementTrace_lazy = () -> Tax.mmType;
 			componentContext_lazy = () -> SettlementTax1.mmObject();
 			isDerived = false;
 			xmlTag = "TpCd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TypeCode";
 			definition = "Type of tax applied.";
 			maxOccurs = 1;
@@ -149,11 +151,11 @@ public class SettlementTax1 {
 	 */
 	public static final MMMessageAttribute mmCalculatedAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.mmAmount;
+			businessElementTrace_lazy = () -> Tax.mmAmount;
 			componentContext_lazy = () -> SettlementTax1.mmObject();
 			isDerived = false;
 			xmlTag = "ClctdAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CalculatedAmount";
 			definition = "Monetary value resulting from the calculation of this tax, levy or duty.";
 			minOccurs = 0;
@@ -197,11 +199,11 @@ public class SettlementTax1 {
 	 */
 	public static final MMMessageAttribute mmBasisAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.mmAmount;
+			businessElementTrace_lazy = () -> Tax.mmAmount;
 			componentContext_lazy = () -> SettlementTax1.mmObject();
 			isDerived = false;
 			xmlTag = "BsisAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BasisAmount";
 			definition = "Monetary value used as the basis on which this tax, levy or duty is calculated.";
 			minOccurs = 0;
@@ -243,11 +245,11 @@ public class SettlementTax1 {
 	 */
 	public static final MMMessageAttribute mmTaxPointDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.mmTaxDate;
+			businessElementTrace_lazy = () -> Tax.mmTaxDate;
 			componentContext_lazy = () -> SettlementTax1.mmObject();
 			isDerived = false;
 			xmlTag = "TaxPtDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxPointDate";
 			definition = "Date of the tax point when this tax, levy or duty becomes applicable.";
 			maxOccurs = 1;
@@ -259,11 +261,10 @@ public class SettlementTax1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SettlementTax1.mmTypeCode, com.tools20022.repository.msg.SettlementTax1.mmCalculatedAmount, com.tools20022.repository.msg.SettlementTax1.mmBasisAmount,
-						com.tools20022.repository.msg.SettlementTax1.mmTaxPointDate);
+				messageElement_lazy = () -> Arrays.asList(SettlementTax1.mmTypeCode, SettlementTax1.mmCalculatedAmount, SettlementTax1.mmBasisAmount, SettlementTax1.mmTaxPointDate);
 				trace_lazy = () -> Tax.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SettlementTax1";
 				definition = "Species the tax applicable for this settlement.";
 			}

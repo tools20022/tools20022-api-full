@@ -17,11 +17,11 @@
 
 package com.tools20022.repository.entity;
 
-import com.tools20022.metamodel.MMBusinessAssociationEnd;
-import com.tools20022.metamodel.MMBusinessAttribute;
-import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.*;
 import com.tools20022.repository.datatype.CurrencyAndAmount;
 import com.tools20022.repository.datatype.ISODateTime;
+import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -36,6 +36,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmMarketClaim
+ * CorporateActionEvent.mmMarketClaim}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -48,15 +57,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.entity.MarketClaim#mmRelatedCorporateEvent
  * MarketClaim.mmRelatedCorporateEvent}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmMarketClaim
- * CorporateActionEvent.mmMarketClaim}</li>
  * </ul>
  * </li>
  * <li>
@@ -187,22 +187,16 @@ public class MarketClaim {
 	 */
 	public static final MMBusinessAttribute mmMarketClaimAmount = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionAmounts2.mmMarketClaimAmount, com.tools20022.repository.msg.CorporateActionAmounts5.mmMarketClaimAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts11.mmMarketClaimAmount, com.tools20022.repository.msg.CorporateActionAmounts12.mmMarketClaimAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts17.mmMarketClaimAmount, com.tools20022.repository.msg.CorporateActionAmounts20.mmMarketClaimAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts23.mmMarketClaimAmount, com.tools20022.repository.msg.CorporateActionAmounts24.mmMarketClaimAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts3.mmMarketClaimAmount, com.tools20022.repository.msg.CorporateActionAmounts6.mmMarketClaimAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts9.mmMarketClaimAmount, com.tools20022.repository.msg.CorporateActionAmounts13.mmMarketClaimAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts16.mmMarketClaimAmount, com.tools20022.repository.msg.CorporateActionAmounts19.mmMarketClaimAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts22.mmMarketClaimAmount, com.tools20022.repository.msg.CorporateActionAmounts25.mmMarketClaimAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts1.mmMarketClaimAmount, com.tools20022.repository.msg.CorporateActionAmounts29.mmMarketClaimAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts28.mmMarketClaimAmount, com.tools20022.repository.msg.CorporateActionAmounts33.mmMarketClaimAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts35.mmMarketClaimAmount, com.tools20022.repository.msg.CorporateActionAmounts37.mmMarketClaimAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts38.mmMarketClaimAmount, com.tools20022.repository.msg.CorporateActionAmounts39.mmMarketClaimAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts40.mmMarketClaimAmount);
+			derivation_lazy = () -> Arrays.asList(CorporateActionAmounts2.mmMarketClaimAmount, CorporateActionAmounts5.mmMarketClaimAmount, CorporateActionAmounts11.mmMarketClaimAmount, CorporateActionAmounts12.mmMarketClaimAmount,
+					CorporateActionAmounts17.mmMarketClaimAmount, CorporateActionAmounts20.mmMarketClaimAmount, CorporateActionAmounts23.mmMarketClaimAmount, CorporateActionAmounts24.mmMarketClaimAmount,
+					CorporateActionAmounts3.mmMarketClaimAmount, CorporateActionAmounts6.mmMarketClaimAmount, CorporateActionAmounts9.mmMarketClaimAmount, CorporateActionAmounts13.mmMarketClaimAmount,
+					CorporateActionAmounts16.mmMarketClaimAmount, CorporateActionAmounts19.mmMarketClaimAmount, CorporateActionAmounts22.mmMarketClaimAmount, CorporateActionAmounts25.mmMarketClaimAmount,
+					CorporateActionAmounts1.mmMarketClaimAmount, CorporateActionAmounts29.mmMarketClaimAmount, CorporateActionAmounts28.mmMarketClaimAmount, CorporateActionAmounts33.mmMarketClaimAmount,
+					CorporateActionAmounts35.mmMarketClaimAmount, CorporateActionAmounts37.mmMarketClaimAmount, CorporateActionAmounts38.mmMarketClaimAmount, CorporateActionAmounts39.mmMarketClaimAmount,
+					CorporateActionAmounts40.mmMarketClaimAmount);
 			elementContext_lazy = () -> MarketClaim.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MarketClaimAmount";
 			definition = "Amount of money resulting from a market claim.";
 			maxOccurs = 1;
@@ -275,14 +269,12 @@ public class MarketClaim {
 	 */
 	public static final MMBusinessAttribute mmMarketClaimTrackingEndDate = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionDate1.mmMarketClaimTrackingEndDate, com.tools20022.repository.msg.CorporateActionDate13.mmMarketClaimTrackingEndDate,
-					com.tools20022.repository.msg.CorporateActionDate14.mmMarketClaimTrackingEndDate, com.tools20022.repository.msg.CorporateActionDate21.mmMarketClaimTrackingEndDate,
-					com.tools20022.repository.msg.CorporateActionDate22.mmMarketClaimTrackingEndDate, com.tools20022.repository.msg.CorporateActionDate25.mmMarketClaimTrackingEndDate,
-					com.tools20022.repository.msg.CorporateActionDate27.mmMarketClaimTrackingEndDate, com.tools20022.repository.msg.CorporateActionDate28.mmMarketClaimTrackingEndDate,
-					com.tools20022.repository.msg.CorporateActionDate44.mmMarketClaimTrackingEndDate, com.tools20022.repository.msg.CorporateActionDate58.mmMarketClaimTrackingEndDate);
+			derivation_lazy = () -> Arrays.asList(CorporateActionDate1.mmMarketClaimTrackingEndDate, CorporateActionDate13.mmMarketClaimTrackingEndDate, CorporateActionDate14.mmMarketClaimTrackingEndDate,
+					CorporateActionDate21.mmMarketClaimTrackingEndDate, CorporateActionDate22.mmMarketClaimTrackingEndDate, CorporateActionDate25.mmMarketClaimTrackingEndDate, CorporateActionDate27.mmMarketClaimTrackingEndDate,
+					CorporateActionDate28.mmMarketClaimTrackingEndDate, CorporateActionDate44.mmMarketClaimTrackingEndDate, CorporateActionDate58.mmMarketClaimTrackingEndDate);
 			elementContext_lazy = () -> MarketClaim.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MarketClaimTrackingEndDate";
 			definition = "Date by which the depository stops monitoring activities of the event, for instance, accounting and tracking activities for due bills end.";
 			maxOccurs = 1;
@@ -329,13 +321,13 @@ public class MarketClaim {
 		{
 			elementContext_lazy = () -> MarketClaim.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedCorporateEvent";
 			definition = "Corporate event for which market claim information is provided.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmMarketClaim;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmObject();
 		}
 	};
@@ -343,13 +335,12 @@ public class MarketClaim {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MarketClaim";
 				definition = "Processes that reallocate corporate action proceeds to the entitled party and that compensate financial penalties or indirect costs due to late delivery or payment.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CorporateActionEvent.mmMarketClaim);
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.MarketClaim.mmMarketClaimAmount, com.tools20022.repository.entity.MarketClaim.mmMarketClaimTrackingEndDate,
-						com.tools20022.repository.entity.MarketClaim.mmRelatedCorporateEvent);
+				element_lazy = () -> Arrays.asList(MarketClaim.mmMarketClaimAmount, MarketClaim.mmMarketClaimTrackingEndDate, MarketClaim.mmRelatedCorporateEvent);
 			}
 		});
 		return mmObject_lazy.get();

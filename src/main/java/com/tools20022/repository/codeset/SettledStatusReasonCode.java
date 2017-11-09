@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.SettledStatusReason1Code
+ * SettledStatusReason1Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.SettledStatusReason2Code
+ * SettledStatusReason2Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -44,15 +55,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.SettledStatusReasonCode#mmGatedMultipleNAV
  * SettledStatusReasonCode.mmGatedMultipleNAV}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.SettledStatusReason1Code
- * SettledStatusReason1Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.SettledStatusReason2Code
- * SettledStatusReason2Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -102,7 +104,7 @@ public class SettledStatusReasonCode {
 	 */
 	public static final MMCode mmUnitsPartiallySettled = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnitsPartiallySettled";
 			definition = "Units are partially settled";
 			owner_lazy = () -> SettledStatusReasonCode.mmObject();
@@ -132,7 +134,7 @@ public class SettledStatusReasonCode {
 	 */
 	public static final MMCode mmCashPartiallySettled = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashPartiallySettled";
 			definition = "Cash is partially settled.";
 			owner_lazy = () -> SettledStatusReasonCode.mmObject();
@@ -162,7 +164,7 @@ public class SettledStatusReasonCode {
 	 */
 	public static final MMCode mmUnitsCashPartiallySettled = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnitsCashPartiallySettled";
 			definition = "Units and cash are both partially settled.";
 			owner_lazy = () -> SettledStatusReasonCode.mmObject();
@@ -194,7 +196,7 @@ public class SettledStatusReasonCode {
 	 */
 	public static final MMCode mmGatedOneNAV = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GatedOneNAV";
 			definition = "Redemption has been gated, all settlement will be done at the same price. ";
 			owner_lazy = () -> SettledStatusReasonCode.mmObject();
@@ -227,7 +229,7 @@ public class SettledStatusReasonCode {
 	 */
 	public static final MMCode mmGatedMultipleNAV = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GatedMultipleNAV";
 			definition = "Redemption has been gated. Multiple redemptions and multiple prices will be required.";
 			owner_lazy = () -> SettledStatusReasonCode.mmObject();
@@ -238,14 +240,13 @@ public class SettledStatusReasonCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("UPST");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SettledStatusReasonCode";
 				definition = "Specifies the reason for a partially settled status.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SettledStatusReasonCode.mmUnitsPartiallySettled, com.tools20022.repository.codeset.SettledStatusReasonCode.mmCashPartiallySettled,
-						com.tools20022.repository.codeset.SettledStatusReasonCode.mmUnitsCashPartiallySettled, com.tools20022.repository.codeset.SettledStatusReasonCode.mmGatedOneNAV,
-						com.tools20022.repository.codeset.SettledStatusReasonCode.mmGatedMultipleNAV);
+				code_lazy = () -> Arrays.asList(SettledStatusReasonCode.mmUnitsPartiallySettled, SettledStatusReasonCode.mmCashPartiallySettled, SettledStatusReasonCode.mmUnitsCashPartiallySettled, SettledStatusReasonCode.mmGatedOneNAV,
+						SettledStatusReasonCode.mmGatedMultipleNAV);
 				derivation_lazy = () -> Arrays.asList(SettledStatusReason1Code.mmObject(), SettledStatusReason2Code.mmObject());
 			}
 		});

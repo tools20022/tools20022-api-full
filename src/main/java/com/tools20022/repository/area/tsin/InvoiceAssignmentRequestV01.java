@@ -20,6 +20,7 @@ package com.tools20022.repository.area.tsin;
 import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.TradeServicesInitiationLatestVersion;
 import com.tools20022.repository.datatype.DecimalNumber;
 import com.tools20022.repository.datatype.Max15NumericText;
@@ -47,6 +48,9 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code tsin.006.001.01}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.TradeServicesInitiationLatestVersion
@@ -87,9 +91,6 @@ import java.util.List;
  * InvoiceAssignmentRequestV01.mmAttachedMessage}</li>
  * </ul>
  * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code tsin.006.001.01}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -135,7 +136,7 @@ public class InvoiceAssignmentRequestV01 {
 	public static final MMMessageBuildingBlock mmHeader = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Hdr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Header";
 			definition = "Set of characteristics that unambiguously identify the invoice assigment request, such as group identification, creation date time, number of single invoice financing requests, totals and subtotals.";
 			maxOccurs = 1;
@@ -170,7 +171,7 @@ public class InvoiceAssignmentRequestV01 {
 	public static final MMMessageBuildingBlock mmAssignmentList = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "AssgnmtList";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AssignmentList";
 			definition = "List of assignments of financial items.";
 			minOccurs = 1;
@@ -204,7 +205,7 @@ public class InvoiceAssignmentRequestV01 {
 	public static final MMMessageBuildingBlock mmAssignmentCount = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "AssgnmtCnt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AssignmentCount";
 			definition = "Number of assignments.";
 			maxOccurs = 1;
@@ -239,7 +240,7 @@ public class InvoiceAssignmentRequestV01 {
 	public static final MMMessageBuildingBlock mmItemCount = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "ItmCnt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ItemCount";
 			definition = "Total number of individual items in all assignments.";
 			maxOccurs = 1;
@@ -277,7 +278,7 @@ public class InvoiceAssignmentRequestV01 {
 	public static final MMMessageBuildingBlock mmControlSum = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CtrlSum";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ControlSum";
 			definition = "Total of all individual amounts included in all lists, irrespective of currencies or direction.";
 			maxOccurs = 1;
@@ -312,7 +313,7 @@ public class InvoiceAssignmentRequestV01 {
 	public static final MMMessageBuildingBlock mmAttachedMessage = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "AttchdMsg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AttachedMessage";
 			definition = "Referenced or related business message.";
 			minOccurs = 0;
@@ -323,16 +324,15 @@ public class InvoiceAssignmentRequestV01 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InvoiceAssignmentRequestV01";
 				definition = "The InvoiceAssignmentRequest message is sent from a factoring client to a factoring service provider and, optionally, to an interested party. It indicates the transfer of payment obligations concerning financial documents.\r\nThe message contains a list of financing requests together with data that are necessary to transfer the related rights for example regarding legal references for example jurisdiction, language or country. Furthermore, the message can reference related messages and can include data from other messages.\r\nA factoring client combines a set of financial documents with same characteristics and assigns them to a factoring service. The client can send several assignments in one message and combine them according to different criteria for example for different clients or different currencies.";
 				messageSet_lazy = () -> Arrays.asList(FactoringServicesISOLatestversion.mmObject());
 				rootElement = "Document";
 				xmlTag = "InvcAssgnmtReq";
 				businessArea_lazy = () -> TradeServicesInitiationLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsin.InvoiceAssignmentRequestV01.mmHeader, com.tools20022.repository.area.tsin.InvoiceAssignmentRequestV01.mmAssignmentList,
-						com.tools20022.repository.area.tsin.InvoiceAssignmentRequestV01.mmAssignmentCount, com.tools20022.repository.area.tsin.InvoiceAssignmentRequestV01.mmItemCount,
-						com.tools20022.repository.area.tsin.InvoiceAssignmentRequestV01.mmControlSum, com.tools20022.repository.area.tsin.InvoiceAssignmentRequestV01.mmAttachedMessage);
+				messageBuildingBlock_lazy = () -> Arrays.asList(InvoiceAssignmentRequestV01.mmHeader, InvoiceAssignmentRequestV01.mmAssignmentList, InvoiceAssignmentRequestV01.mmAssignmentCount, InvoiceAssignmentRequestV01.mmItemCount,
+						InvoiceAssignmentRequestV01.mmControlSum, InvoiceAssignmentRequestV01.mmAttachedMessage);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "tsin";

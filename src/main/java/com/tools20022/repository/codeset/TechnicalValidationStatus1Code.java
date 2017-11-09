@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.TechnicalValidationStatusCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -86,7 +88,7 @@ public class TechnicalValidationStatus1Code extends TechnicalValidationStatusCod
 	 */
 	public static final MMCode mmReceptionConfirmation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceptionConfirmation";
 			owner_lazy = () -> TechnicalValidationStatus1Code.mmObject();
 		}
@@ -109,7 +111,7 @@ public class TechnicalValidationStatus1Code extends TechnicalValidationStatusCod
 	 */
 	public static final MMCode mmReceptionError = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceptionError";
 			owner_lazy = () -> TechnicalValidationStatus1Code.mmObject();
 		}
@@ -118,12 +120,12 @@ public class TechnicalValidationStatus1Code extends TechnicalValidationStatusCod
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("RCCF");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TechnicalValidationStatus1Code";
 				definition = "Specifies the result of the technical validation carried out by the receiver (forwarding or first agent).";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TechnicalValidationStatus1Code.mmReceptionConfirmation, com.tools20022.repository.codeset.TechnicalValidationStatus1Code.mmReceptionError);
+				code_lazy = () -> Arrays.asList(TechnicalValidationStatus1Code.mmReceptionConfirmation, TechnicalValidationStatus1Code.mmReceptionError);
 				trace_lazy = () -> TechnicalValidationStatusCode.mmObject();
 			}
 		});

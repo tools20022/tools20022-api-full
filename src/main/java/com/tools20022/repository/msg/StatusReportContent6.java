@@ -20,10 +20,13 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.AttendanceContext1Code;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Max140Text;
+import com.tools20022.repository.entity.CardPaymentAcquiring;
 import com.tools20022.repository.entity.PointOfInteraction;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -127,10 +130,10 @@ public class StatusReportContent6 {
 			componentContext_lazy = () -> StatusReportContent6.mmObject();
 			isDerived = false;
 			xmlTag = "POICpblties";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "POICapabilities";
 			definition = "Capabilities of the POI (Point Of Interaction) performing the status report.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.StatusReportContent5.mmPOICapabilities;
+			previousVersion_lazy = () -> StatusReportContent5.mmPOICapabilities;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -180,14 +183,14 @@ public class StatusReportContent6 {
 	 */
 	public static final MMMessageAssociationEnd mmPOIComponent = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PointOfInteraction.mmComponent;
+			businessElementTrace_lazy = () -> PointOfInteraction.mmComponent;
 			componentContext_lazy = () -> StatusReportContent6.mmObject();
 			isDerived = false;
 			xmlTag = "POICmpnt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "POIComponent";
 			definition = "Data related to a component of the POI (Point Of Interaction) performing the status report.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.StatusReportContent5.mmPOIComponent;
+			previousVersion_lazy = () -> StatusReportContent5.mmPOIComponent;
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.PointOfInteractionComponent7.mmObject();
@@ -237,14 +240,14 @@ public class StatusReportContent6 {
 	 */
 	public static final MMMessageAttribute mmAttendanceContext = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.mmAttendanceContext;
+			businessElementTrace_lazy = () -> CardPaymentAcquiring.mmAttendanceContext;
 			componentContext_lazy = () -> StatusReportContent6.mmObject();
 			isDerived = false;
 			xmlTag = "AttndncCntxt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AttendanceContext";
 			definition = "Human attendance at the POI (Point Of Interaction) location during transactions.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.StatusReportContent5.mmAttendanceContext;
+			previousVersion_lazy = () -> StatusReportContent5.mmAttendanceContext;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> AttendanceContext1Code.mmObject();
@@ -291,10 +294,10 @@ public class StatusReportContent6 {
 			componentContext_lazy = () -> StatusReportContent6.mmObject();
 			isDerived = false;
 			xmlTag = "POIDtTm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "POIDateTime";
 			definition = "System date time of the point of interaction (POI) sending the status report.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.StatusReportContent5.mmPOIDateTime;
+			previousVersion_lazy = () -> StatusReportContent5.mmPOIDateTime;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
@@ -341,10 +344,10 @@ public class StatusReportContent6 {
 			componentContext_lazy = () -> StatusReportContent6.mmObject();
 			isDerived = false;
 			xmlTag = "DataSetReqrd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DataSetRequired";
 			definition = "Request the terminal management system to answer with the identified data set.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.StatusReportContent5.mmDataSetRequired;
+			previousVersion_lazy = () -> StatusReportContent5.mmDataSetRequired;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -390,10 +393,10 @@ public class StatusReportContent6 {
 			componentContext_lazy = () -> StatusReportContent6.mmObject();
 			isDerived = false;
 			xmlTag = "Evt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Event";
 			definition = "Result of an individual terminal management action by the point of interaction.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.StatusReportContent5.mmEvent;
+			previousVersion_lazy = () -> StatusReportContent5.mmEvent;
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.TMSEvent5.mmObject();
@@ -438,10 +441,10 @@ public class StatusReportContent6 {
 			componentContext_lazy = () -> StatusReportContent6.mmObject();
 			isDerived = false;
 			xmlTag = "Errs";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Errors";
 			definition = "Error log of the point of interaction since the last status report.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.StatusReportContent5.mmErrors;
+			previousVersion_lazy = () -> StatusReportContent5.mmErrors;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
 		}
@@ -450,11 +453,10 @@ public class StatusReportContent6 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StatusReportContent6.mmPOICapabilities, com.tools20022.repository.msg.StatusReportContent6.mmPOIComponent,
-						com.tools20022.repository.msg.StatusReportContent6.mmAttendanceContext, com.tools20022.repository.msg.StatusReportContent6.mmPOIDateTime, com.tools20022.repository.msg.StatusReportContent6.mmDataSetRequired,
-						com.tools20022.repository.msg.StatusReportContent6.mmEvent, com.tools20022.repository.msg.StatusReportContent6.mmErrors);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(StatusReportContent6.mmPOICapabilities, StatusReportContent6.mmPOIComponent, StatusReportContent6.mmAttendanceContext, StatusReportContent6.mmPOIDateTime,
+						StatusReportContent6.mmDataSetRequired, StatusReportContent6.mmEvent, StatusReportContent6.mmErrors);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "StatusReportContent6";
 				definition = "Content of the status report.";
 				previousVersion_lazy = () -> StatusReportContent5.mmObject();

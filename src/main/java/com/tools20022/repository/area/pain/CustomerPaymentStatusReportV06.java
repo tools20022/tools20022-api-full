@@ -20,6 +20,7 @@ package com.tools20022.repository.area.pain;
 import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.PaymentsInitiationArchive;
 import com.tools20022.repository.msg.GroupHeader52;
 import com.tools20022.repository.msg.OriginalGroupHeader1;
@@ -54,6 +55,9 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code pain.002.001.06}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.PaymentsInitiationArchive
@@ -86,9 +90,6 @@ import java.util.List;
  * CustomerPaymentStatusReportV06.mmSupplementaryData}</li>
  * </ul>
  * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code pain.002.001.06}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -158,11 +159,11 @@ public class CustomerPaymentStatusReportV06 {
 	public static final MMMessageBuildingBlock mmGroupHeader = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "GrpHdr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GroupHeader";
 			definition = "Set of characteristics shared by all individual transactions included in the status report message.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.pain.CustomerPaymentStatusReportV07.mmGroupHeader);
-			previousVersion_lazy = () -> com.tools20022.repository.area.pain.CustomerPaymentStatusReportV05.mmGroupHeader;
+			nextVersions_lazy = () -> Arrays.asList(CustomerPaymentStatusReportV07.mmGroupHeader);
+			previousVersion_lazy = () -> CustomerPaymentStatusReportV05.mmGroupHeader;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GroupHeader52.mmObject();
@@ -211,11 +212,11 @@ public class CustomerPaymentStatusReportV06 {
 	public static final MMMessageBuildingBlock mmOriginalGroupInformationAndStatus = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "OrgnlGrpInfAndSts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalGroupInformationAndStatus";
 			definition = "Original group information concerning the group of transactions, to which the status report message refers to.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.pain.CustomerPaymentStatusReportV07.mmOriginalGroupInformationAndStatus);
-			previousVersion_lazy = () -> com.tools20022.repository.area.pain.CustomerPaymentStatusReportV05.mmOriginalGroupInformationAndStatus;
+			nextVersions_lazy = () -> Arrays.asList(CustomerPaymentStatusReportV07.mmOriginalGroupInformationAndStatus);
+			previousVersion_lazy = () -> CustomerPaymentStatusReportV05.mmOriginalGroupInformationAndStatus;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> OriginalGroupHeader1.mmObject();
@@ -264,11 +265,11 @@ public class CustomerPaymentStatusReportV06 {
 	public static final MMMessageBuildingBlock mmOriginalPaymentInformationAndStatus = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "OrgnlPmtInfAndSts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalPaymentInformationAndStatus";
 			definition = "Information concerning the original payment information, to which the status report message refers.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.pain.CustomerPaymentStatusReportV07.mmOriginalPaymentInformationAndStatus);
-			previousVersion_lazy = () -> com.tools20022.repository.area.pain.CustomerPaymentStatusReportV05.mmOriginalPaymentInformationAndStatus;
+			nextVersions_lazy = () -> Arrays.asList(CustomerPaymentStatusReportV07.mmOriginalPaymentInformationAndStatus);
+			previousVersion_lazy = () -> CustomerPaymentStatusReportV05.mmOriginalPaymentInformationAndStatus;
 			minOccurs = 0;
 			complexType_lazy = () -> OriginalPaymentInstruction12.mmObject();
 		}
@@ -316,11 +317,11 @@ public class CustomerPaymentStatusReportV06 {
 	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SplmtryData";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryData";
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.pain.CustomerPaymentStatusReportV07.mmSupplementaryData);
-			previousVersion_lazy = () -> com.tools20022.repository.area.pain.CustomerPaymentStatusReportV05.mmSupplementaryData;
+			nextVersions_lazy = () -> Arrays.asList(CustomerPaymentStatusReportV07.mmSupplementaryData);
+			previousVersion_lazy = () -> CustomerPaymentStatusReportV05.mmSupplementaryData;
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
@@ -329,7 +330,7 @@ public class CustomerPaymentStatusReportV06 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CustomerPaymentStatusReportV06";
 				definition = "Scope\r\nThe CustomerPaymentStatusReport message is sent by an instructed agent to the previous party in the payment chain. It is used to inform this party about the positive or negative status of an instruction (either single or file). It is also used to report on a pending instruction.\r\nUsage\r\nThe CustomerPaymentStatusReport message is exchanged between an agent and a non-financial institution customer to provide status information on instructions previously sent. Its usage will always be governed by a bilateral agreement between the agent and the non-financial institution customer.\r\nThe CustomerPaymentStatusReport message can be used to provide information about the status (e.g. rejection, acceptance) of the initiation of a credit transfer, a direct debit, as well as on the initiation of other customer instructions.\r\nThe CustomerPaymentStatusReport message refers to the original instruction(s) by means of references only or by means of references and a set of elements from the original instruction.\r\nThe CustomerPaymentStatusReport message can be used in domestic and cross-border scenarios.";
 				nextVersions_lazy = () -> Arrays.asList(CustomerPaymentStatusReportV07.mmObject());
@@ -338,9 +339,8 @@ public class CustomerPaymentStatusReportV06 {
 				rootElement = "Document";
 				xmlTag = "CstmrPmtStsRpt";
 				businessArea_lazy = () -> PaymentsInitiationArchive.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.pain.CustomerPaymentStatusReportV06.mmGroupHeader,
-						com.tools20022.repository.area.pain.CustomerPaymentStatusReportV06.mmOriginalGroupInformationAndStatus, com.tools20022.repository.area.pain.CustomerPaymentStatusReportV06.mmOriginalPaymentInformationAndStatus,
-						com.tools20022.repository.area.pain.CustomerPaymentStatusReportV06.mmSupplementaryData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(CustomerPaymentStatusReportV06.mmGroupHeader, CustomerPaymentStatusReportV06.mmOriginalGroupInformationAndStatus,
+						CustomerPaymentStatusReportV06.mmOriginalPaymentInformationAndStatus, CustomerPaymentStatusReportV06.mmSupplementaryData);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "pain";

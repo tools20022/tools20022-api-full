@@ -20,9 +20,16 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.pacs.FIToFIPaymentReversalV01;
+import com.tools20022.repository.area.pain.CustomerPaymentReversalV01;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.Payment;
+import com.tools20022.repository.entity.PaymentExecution;
+import com.tools20022.repository.entity.PaymentIdentification;
+import com.tools20022.repository.entity.PaymentStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -123,11 +130,11 @@ public class OriginalGroupInformation5 {
 	 */
 	public static final MMMessageAttribute mmOriginalMessageIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentIdentification.mmExecutionIdentification;
+			businessElementTrace_lazy = () -> PaymentIdentification.mmExecutionIdentification;
 			componentContext_lazy = () -> OriginalGroupInformation5.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlMsgId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalMessageIdentification";
 			definition = "Point to point reference assigned by the original instructing party to unambiguously identify the original group of individual transactions.";
 			maxOccurs = 1;
@@ -171,7 +178,7 @@ public class OriginalGroupInformation5 {
 			componentContext_lazy = () -> OriginalGroupInformation5.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlMsgNmId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalMessageNameIdentification";
 			definition = "Specifies the original message name identifier to which the message refers, eg, pacs.003.001.01 or MT103.";
 			maxOccurs = 1;
@@ -214,11 +221,11 @@ public class OriginalGroupInformation5 {
 	 */
 	public static final MMMessageAttribute mmOriginalCreationDateTime = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentExecution.mmCreationDate;
+			businessElementTrace_lazy = () -> PaymentExecution.mmCreationDate;
 			componentContext_lazy = () -> OriginalGroupInformation5.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlCreDtTm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalCreationDateTime";
 			definition = "Date and time at which the original message was created.";
 			maxOccurs = 1;
@@ -261,11 +268,11 @@ public class OriginalGroupInformation5 {
 	 */
 	public static final MMMessageAssociationEnd mmReversalReasonInformation = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentStatus.mmTransactionRejectionReason;
+			businessElementTrace_lazy = () -> PaymentStatus.mmTransactionRejectionReason;
 			componentContext_lazy = () -> OriginalGroupInformation5.mmObject();
 			isDerived = false;
 			xmlTag = "RvslRsnInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReversalReasonInformation";
 			definition = "Detailed information on the reversal reason.";
 			minOccurs = 0;
@@ -277,13 +284,12 @@ public class OriginalGroupInformation5 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OriginalGroupInformation5.mmOriginalMessageIdentification, com.tools20022.repository.msg.OriginalGroupInformation5.mmOriginalMessageNameIdentification,
-						com.tools20022.repository.msg.OriginalGroupInformation5.mmOriginalCreationDateTime, com.tools20022.repository.msg.OriginalGroupInformation5.mmReversalReasonInformation);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.pain.CustomerPaymentReversalV01.mmOriginalGroupInformation,
-						com.tools20022.repository.area.pacs.FIToFIPaymentReversalV01.mmOriginalGroupInformation);
+				messageElement_lazy = () -> Arrays.asList(OriginalGroupInformation5.mmOriginalMessageIdentification, OriginalGroupInformation5.mmOriginalMessageNameIdentification, OriginalGroupInformation5.mmOriginalCreationDateTime,
+						OriginalGroupInformation5.mmReversalReasonInformation);
+				messageBuildingBlock_lazy = () -> Arrays.asList(CustomerPaymentReversalV01.mmOriginalGroupInformation, FIToFIPaymentReversalV01.mmOriginalGroupInformation);
 				trace_lazy = () -> Payment.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OriginalGroupInformation5";
 				definition = "Unique and unambiguous identifier of the group of transactions as assigned by the original instructing party.";
 			}

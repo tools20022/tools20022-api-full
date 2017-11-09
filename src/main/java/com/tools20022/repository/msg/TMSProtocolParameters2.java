@@ -20,11 +20,13 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.DataSetCategory10Code;
 import com.tools20022.repository.codeset.TerminalManagementAction3Code;
 import com.tools20022.repository.datatype.Max256Text;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.TrueFalseIndicator;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -129,7 +131,7 @@ public class TMSProtocolParameters2 {
 			componentContext_lazy = () -> TMSProtocolParameters2.mmObject();
 			isDerived = false;
 			xmlTag = "ActnTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ActionType";
 			definition = "Type of action for the configuration parameters.";
 			maxOccurs = 1;
@@ -176,10 +178,10 @@ public class TMSProtocolParameters2 {
 			componentContext_lazy = () -> TMSProtocolParameters2.mmObject();
 			isDerived = false;
 			xmlTag = "TermnlMgrId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TerminalManagerIdentification";
 			definition = "Identification of the master terminal manager or the terminal manager.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TMSProtocolParameters1.mmTerminalManagerIdentification;
+			previousVersion_lazy = () -> TMSProtocolParameters1.mmTerminalManagerIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -225,10 +227,10 @@ public class TMSProtocolParameters2 {
 			componentContext_lazy = () -> TMSProtocolParameters2.mmObject();
 			isDerived = false;
 			xmlTag = "MntncSvc";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaintenanceService";
 			definition = "Maintenance services provided by the terminal manager.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TMSProtocolParameters1.mmMaintenanceService;
+			previousVersion_lazy = () -> TMSProtocolParameters1.mmMaintenanceService;
 			minOccurs = 1;
 			simpleType_lazy = () -> DataSetCategory10Code.mmObject();
 		}
@@ -271,10 +273,10 @@ public class TMSProtocolParameters2 {
 			componentContext_lazy = () -> TMSProtocolParameters2.mmObject();
 			isDerived = false;
 			xmlTag = "Vrsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Version";
 			definition = "Version of the TMS protocol parameters.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TMSProtocolParameters1.mmVersion;
+			previousVersion_lazy = () -> TMSProtocolParameters1.mmVersion;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max256Text.mmObject();
@@ -321,10 +323,10 @@ public class TMSProtocolParameters2 {
 			componentContext_lazy = () -> TMSProtocolParameters2.mmObject();
 			isDerived = false;
 			xmlTag = "ApplId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ApplicationIdentification";
 			definition = "Identification of applications which may be managed by the TM, partially or globally.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TMSProtocolParameters1.mmApplicationIdentification;
+			previousVersion_lazy = () -> TMSProtocolParameters1.mmApplicationIdentification;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
@@ -362,7 +364,7 @@ public class TMSProtocolParameters2 {
 			componentContext_lazy = () -> TMSProtocolParameters2.mmObject();
 			isDerived = false;
 			xmlTag = "HstId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HostIdentification";
 			definition = "Identification of the terminal manager host.";
 			maxOccurs = 1;
@@ -408,10 +410,10 @@ public class TMSProtocolParameters2 {
 			componentContext_lazy = () -> TMSProtocolParameters2.mmObject();
 			isDerived = false;
 			xmlTag = "POIId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "POIIdentification";
 			definition = "New identification of the POI for the terminal manager.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TMSProtocolParameters1.mmPOIIdentification;
+			previousVersion_lazy = () -> TMSProtocolParameters1.mmPOIIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -458,10 +460,10 @@ public class TMSProtocolParameters2 {
 			componentContext_lazy = () -> TMSProtocolParameters2.mmObject();
 			isDerived = false;
 			xmlTag = "InitgPtyId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InitiatingPartyIdentification";
 			definition = "New identification of the initiating party to set in TMS messages with this terminal manager.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TMSProtocolParameters1.mmInitiatingPartyIdentification;
+			previousVersion_lazy = () -> TMSProtocolParameters1.mmInitiatingPartyIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -508,10 +510,10 @@ public class TMSProtocolParameters2 {
 			componentContext_lazy = () -> TMSProtocolParameters2.mmObject();
 			isDerived = false;
 			xmlTag = "RcptPtyId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RecipientPartyIdentification";
 			definition = "New identification of the recipient party to set in TMS messages with this terminal manager";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TMSProtocolParameters1.mmRecipientPartyIdentification;
+			previousVersion_lazy = () -> TMSProtocolParameters1.mmRecipientPartyIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -554,7 +556,7 @@ public class TMSProtocolParameters2 {
 			componentContext_lazy = () -> TMSProtocolParameters2.mmObject();
 			isDerived = false;
 			xmlTag = "FileTrf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FileTransfer";
 			definition = "Configuration parameters are exchanged per file transfer protocol rather than per message.";
 			maxOccurs = 1;
@@ -566,13 +568,11 @@ public class TMSProtocolParameters2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TMSProtocolParameters2.mmActionType, com.tools20022.repository.msg.TMSProtocolParameters2.mmTerminalManagerIdentification,
-						com.tools20022.repository.msg.TMSProtocolParameters2.mmMaintenanceService, com.tools20022.repository.msg.TMSProtocolParameters2.mmVersion,
-						com.tools20022.repository.msg.TMSProtocolParameters2.mmApplicationIdentification, com.tools20022.repository.msg.TMSProtocolParameters2.mmHostIdentification,
-						com.tools20022.repository.msg.TMSProtocolParameters2.mmPOIIdentification, com.tools20022.repository.msg.TMSProtocolParameters2.mmInitiatingPartyIdentification,
-						com.tools20022.repository.msg.TMSProtocolParameters2.mmRecipientPartyIdentification, com.tools20022.repository.msg.TMSProtocolParameters2.mmFileTransfer);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(TMSProtocolParameters2.mmActionType, TMSProtocolParameters2.mmTerminalManagerIdentification, TMSProtocolParameters2.mmMaintenanceService, TMSProtocolParameters2.mmVersion,
+						TMSProtocolParameters2.mmApplicationIdentification, TMSProtocolParameters2.mmHostIdentification, TMSProtocolParameters2.mmPOIIdentification, TMSProtocolParameters2.mmInitiatingPartyIdentification,
+						TMSProtocolParameters2.mmRecipientPartyIdentification, TMSProtocolParameters2.mmFileTransfer);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TMSProtocolParameters2";
 				definition = "Configuration parameters of the TMS protocol between a POI and a terminal manager.";
 				previousVersion_lazy = () -> TMSProtocolParameters1.mmObject();

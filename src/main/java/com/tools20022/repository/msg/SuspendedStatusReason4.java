@@ -20,9 +20,11 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.SuspendedStatusReason5Choice;
 import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.entity.StatusReason;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -112,10 +114,10 @@ public class SuspendedStatusReason4 {
 			componentContext_lazy = () -> SuspendedStatusReason4.mmObject();
 			isDerived = false;
 			xmlTag = "Rsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reason";
 			definition = "Reason for the conditionally accepted status expressed as a code.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ConditionallyAcceptedStatusReason3.mmReason;
+			previousVersion_lazy = () -> ConditionallyAcceptedStatusReason3.mmReason;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -160,10 +162,10 @@ public class SuspendedStatusReason4 {
 			componentContext_lazy = () -> SuspendedStatusReason4.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInformation";
 			definition = "Additional information about the suspended reason.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ConditionallyAcceptedStatusReason3.mmAdditionalInformation;
+			previousVersion_lazy = () -> ConditionallyAcceptedStatusReason3.mmAdditionalInformation;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
@@ -173,10 +175,10 @@ public class SuspendedStatusReason4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SuspendedStatusReason4.mmReason, com.tools20022.repository.msg.SuspendedStatusReason4.mmAdditionalInformation);
+				messageElement_lazy = () -> Arrays.asList(SuspendedStatusReason4.mmReason, SuspendedStatusReason4.mmAdditionalInformation);
 				trace_lazy = () -> StatusReason.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SuspendedStatusReason4";
 				definition = "Reason for a suspended status.";
 				previousVersion_lazy = () -> SuspendedStatusReason2.mmObject();

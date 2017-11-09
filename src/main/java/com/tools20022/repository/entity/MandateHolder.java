@@ -18,8 +18,10 @@
 package com.tools20022.repository.entity;
 
 import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.MandatePartyRole;
-import com.tools20022.repository.msg.PartyAndCertificate1;
+import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -32,6 +34,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.PartyAndCertificate1
+ * PartyAndCertificate1}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
  * derivationElement} =
@@ -93,14 +103,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * superType} = {@linkplain com.tools20022.repository.entity.MandatePartyRole
  * MandatePartyRole}</li>
  * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.PartyAndCertificate1
- * PartyAndCertificate1}</li>
- * </ul>
- * </li>
- * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
@@ -124,16 +126,13 @@ public class MandateHolder extends MandatePartyRole {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MandateHolder";
 				definition = "Entity that was given by another entity the authority to act on its behalf.";
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountParties2.mmPowerOfAttorney, com.tools20022.repository.msg.AccountParties5.mmPowerOfAttorney,
-						com.tools20022.repository.msg.AccountParties6.mmPowerOfAttorney, com.tools20022.repository.msg.AccountParties3.mmPowerOfAttorney, com.tools20022.repository.msg.AccountParties4.mmPowerOfAttorney,
-						com.tools20022.repository.msg.AccountParties7.mmPowerOfAttorney, com.tools20022.repository.msg.OperationMandate2.mmMandateHolder, com.tools20022.repository.msg.OperationMandate3.mmMandateHolder,
-						com.tools20022.repository.msg.AccountParties9.mmPowerOfAttorney, com.tools20022.repository.msg.AccountParties8.mmPowerOfAttorney, com.tools20022.repository.msg.AccountParties11.mmPowerOfAttorney,
-						com.tools20022.repository.msg.AccountParties10.mmPowerOfAttorney, com.tools20022.repository.msg.AccountParties12.mmPowerOfAttorney, com.tools20022.repository.msg.AccountParties13.mmPowerOfAttorney,
-						com.tools20022.repository.msg.AccountParties14.mmPowerOfAttorney, com.tools20022.repository.msg.AccountParties15.mmPowerOfAttorney, com.tools20022.repository.msg.AccountParties16.mmPowerOfAttorney);
+				derivationElement_lazy = () -> Arrays.asList(AccountParties2.mmPowerOfAttorney, AccountParties5.mmPowerOfAttorney, AccountParties6.mmPowerOfAttorney, AccountParties3.mmPowerOfAttorney, AccountParties4.mmPowerOfAttorney,
+						AccountParties7.mmPowerOfAttorney, OperationMandate2.mmMandateHolder, OperationMandate3.mmMandateHolder, AccountParties9.mmPowerOfAttorney, AccountParties8.mmPowerOfAttorney, AccountParties11.mmPowerOfAttorney,
+						AccountParties10.mmPowerOfAttorney, AccountParties12.mmPowerOfAttorney, AccountParties13.mmPowerOfAttorney, AccountParties14.mmPowerOfAttorney, AccountParties15.mmPowerOfAttorney, AccountParties16.mmPowerOfAttorney);
 				superType_lazy = () -> MandatePartyRole.mmObject();
 				derivationComponent_lazy = () -> Arrays.asList(PartyAndCertificate1.mmObject());
 			}

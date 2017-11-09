@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.MarketTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -90,7 +92,7 @@ public class MarketType1Code extends MarketTypeCode {
 	 */
 	public static final MMCode mmPrimaryMarket = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PrimaryMarket";
 			owner_lazy = () -> MarketType1Code.mmObject();
 		}
@@ -113,7 +115,7 @@ public class MarketType1Code extends MarketTypeCode {
 	 */
 	public static final MMCode mmSecondaryMarket = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecondaryMarket";
 			owner_lazy = () -> MarketType1Code.mmObject();
 		}
@@ -136,7 +138,7 @@ public class MarketType1Code extends MarketTypeCode {
 	 */
 	public static final MMCode mmThirdMarket = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ThirdMarket";
 			owner_lazy = () -> MarketType1Code.mmObject();
 		}
@@ -159,7 +161,7 @@ public class MarketType1Code extends MarketTypeCode {
 	 */
 	public static final MMCode mmFourthMarket = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FourthMarket";
 			owner_lazy = () -> MarketType1Code.mmObject();
 		}
@@ -168,13 +170,12 @@ public class MarketType1Code extends MarketTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("PRIM");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MarketType1Code";
 				definition = "Specifies the type of market in which transactions take place, eg, primary.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MarketType1Code.mmPrimaryMarket, com.tools20022.repository.codeset.MarketType1Code.mmSecondaryMarket,
-						com.tools20022.repository.codeset.MarketType1Code.mmThirdMarket, com.tools20022.repository.codeset.MarketType1Code.mmFourthMarket);
+				code_lazy = () -> Arrays.asList(MarketType1Code.mmPrimaryMarket, MarketType1Code.mmSecondaryMarket, MarketType1Code.mmThirdMarket, MarketType1Code.mmFourthMarket);
 				trace_lazy = () -> MarketTypeCode.mmObject();
 			}
 		});

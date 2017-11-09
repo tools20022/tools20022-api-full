@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.IndependentAmountConventionTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -88,7 +90,7 @@ public class IndependentAmountConventionType1Code extends IndependentAmountConve
 	 */
 	public static final MMCode mmNettedBeforeThreshold = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NettedBeforeThreshold";
 			owner_lazy = () -> IndependentAmountConventionType1Code.mmObject();
 		}
@@ -111,7 +113,7 @@ public class IndependentAmountConventionType1Code extends IndependentAmountConve
 	 */
 	public static final MMCode mmNettedAfterThreshold = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NettedAfterThreshold";
 			owner_lazy = () -> IndependentAmountConventionType1Code.mmObject();
 		}
@@ -134,7 +136,7 @@ public class IndependentAmountConventionType1Code extends IndependentAmountConve
 	 */
 	public static final MMCode mmSegregated = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Segregated";
 			owner_lazy = () -> IndependentAmountConventionType1Code.mmObject();
 		}
@@ -143,13 +145,12 @@ public class IndependentAmountConventionType1Code extends IndependentAmountConve
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("NBTR");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "IndependentAmountConventionType1Code";
 				definition = "Determines how the independent amount was applied in the margin calculation.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.IndependentAmountConventionType1Code.mmNettedBeforeThreshold, com.tools20022.repository.codeset.IndependentAmountConventionType1Code.mmNettedAfterThreshold,
-						com.tools20022.repository.codeset.IndependentAmountConventionType1Code.mmSegregated);
+				code_lazy = () -> Arrays.asList(IndependentAmountConventionType1Code.mmNettedBeforeThreshold, IndependentAmountConventionType1Code.mmNettedAfterThreshold, IndependentAmountConventionType1Code.mmSegregated);
 				trace_lazy = () -> IndependentAmountConventionTypeCode.mmObject();
 			}
 		});

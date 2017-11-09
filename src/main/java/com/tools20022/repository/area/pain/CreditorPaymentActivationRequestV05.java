@@ -20,6 +20,7 @@ package com.tools20022.repository.area.pain;
 import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.PaymentsInitiationPreviousVersion;
 import com.tools20022.repository.msg.GroupHeader45;
 import com.tools20022.repository.msg.PaymentInstruction19;
@@ -37,6 +38,9 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code pain.013.001.05}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.PaymentsInitiationPreviousVersion
@@ -68,9 +72,6 @@ import java.util.List;
  * CreditorPaymentActivationRequestV05.mmSupplementaryData}</li>
  * </ul>
  * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code pain.013.001.05}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -140,11 +141,11 @@ public class CreditorPaymentActivationRequestV05 {
 	public static final MMMessageBuildingBlock mmGroupHeader = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "GrpHdr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GroupHeader";
 			definition = "Set of characteristics shared by all individual transactions included in the message.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.pain.CreditorPaymentActivationRequestV06.mmGroupHeader);
-			previousVersion_lazy = () -> com.tools20022.repository.area.pain.CreditorPaymentActivationRequestV04.mmGroupHeader;
+			nextVersions_lazy = () -> Arrays.asList(CreditorPaymentActivationRequestV06.mmGroupHeader);
+			previousVersion_lazy = () -> CreditorPaymentActivationRequestV04.mmGroupHeader;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GroupHeader45.mmObject();
@@ -193,11 +194,11 @@ public class CreditorPaymentActivationRequestV05 {
 	public static final MMMessageBuildingBlock mmPaymentInformation = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "PmtInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentInformation";
 			definition = "Set of characteristics that applies to the debit side of the payment transactions included in the creditor payment initiation.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.pain.CreditorPaymentActivationRequestV06.mmPaymentInformation);
-			previousVersion_lazy = () -> com.tools20022.repository.area.pain.CreditorPaymentActivationRequestV04.mmPaymentInformation;
+			nextVersions_lazy = () -> Arrays.asList(CreditorPaymentActivationRequestV06.mmPaymentInformation);
+			previousVersion_lazy = () -> CreditorPaymentActivationRequestV04.mmPaymentInformation;
 			minOccurs = 1;
 			complexType_lazy = () -> PaymentInstruction19.mmObject();
 		}
@@ -245,11 +246,11 @@ public class CreditorPaymentActivationRequestV05 {
 	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SplmtryData";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryData";
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.pain.CreditorPaymentActivationRequestV06.mmSupplementaryData);
-			previousVersion_lazy = () -> com.tools20022.repository.area.pain.CreditorPaymentActivationRequestV04.mmSupplementaryData;
+			nextVersions_lazy = () -> Arrays.asList(CreditorPaymentActivationRequestV06.mmSupplementaryData);
+			previousVersion_lazy = () -> CreditorPaymentActivationRequestV04.mmSupplementaryData;
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
@@ -258,7 +259,7 @@ public class CreditorPaymentActivationRequestV05 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CreditorPaymentActivationRequestV05";
 				definition = "The CreditorPaymentActivationRequest message is sent by the Creditor sending party to the Debtor receiving party, directly or through agents. It is used by a Creditor to request movement of funds from the debtor account to a creditor.";
 				nextVersions_lazy = () -> Arrays.asList(CreditorPaymentActivationRequestV06.mmObject());
@@ -267,8 +268,7 @@ public class CreditorPaymentActivationRequestV05 {
 				rootElement = "Document";
 				xmlTag = "CdtrPmtActvtnReq";
 				businessArea_lazy = () -> PaymentsInitiationPreviousVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.pain.CreditorPaymentActivationRequestV05.mmGroupHeader,
-						com.tools20022.repository.area.pain.CreditorPaymentActivationRequestV05.mmPaymentInformation, com.tools20022.repository.area.pain.CreditorPaymentActivationRequestV05.mmSupplementaryData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(CreditorPaymentActivationRequestV05.mmGroupHeader, CreditorPaymentActivationRequestV05.mmPaymentInformation, CreditorPaymentActivationRequestV05.mmSupplementaryData);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "pain";

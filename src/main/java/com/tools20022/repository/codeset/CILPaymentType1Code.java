@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CILPaymentTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -85,7 +87,7 @@ public class CILPaymentType1Code extends CILPaymentTypeCode {
 	 */
 	public static final MMCode mmFixed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Fixed";
 			owner_lazy = () -> CILPaymentType1Code.mmObject();
 		}
@@ -108,7 +110,7 @@ public class CILPaymentType1Code extends CILPaymentTypeCode {
 	 */
 	public static final MMCode mmHold = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Hold";
 			owner_lazy = () -> CILPaymentType1Code.mmObject();
 		}
@@ -131,7 +133,7 @@ public class CILPaymentType1Code extends CILPaymentTypeCode {
 	 */
 	public static final MMCode mmPayCIL = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PayCIL";
 			owner_lazy = () -> CILPaymentType1Code.mmObject();
 		}
@@ -140,12 +142,12 @@ public class CILPaymentType1Code extends CILPaymentTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("FIXD");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CILPaymentType1Code";
 				definition = "Specifies the cash in lieu payment type.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CILPaymentType1Code.mmFixed, com.tools20022.repository.codeset.CILPaymentType1Code.mmHold, com.tools20022.repository.codeset.CILPaymentType1Code.mmPayCIL);
+				code_lazy = () -> Arrays.asList(CILPaymentType1Code.mmFixed, CILPaymentType1Code.mmHold, CILPaymentType1Code.mmPayCIL);
 				trace_lazy = () -> CILPaymentTypeCode.mmObject();
 			}
 		});

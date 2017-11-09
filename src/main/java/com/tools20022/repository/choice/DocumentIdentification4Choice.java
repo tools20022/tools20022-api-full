@@ -19,8 +19,11 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.RestrictedFINXMax16Text;
 import com.tools20022.repository.entity.Document;
+import com.tools20022.repository.entity.GenericIdentification;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -101,11 +104,11 @@ public class DocumentIdentification4Choice {
 	 */
 	public static final MMMessageAttribute mmAccountServicerDocumentIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmIdentification;
+			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> DocumentIdentification4Choice.mmObject();
 			isDerived = false;
 			xmlTag = "AcctSvcrDocId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountServicerDocumentIdentification";
 			definition = "Identification of the document assigned by the account servicer.";
 			maxOccurs = 1;
@@ -150,11 +153,11 @@ public class DocumentIdentification4Choice {
 	 */
 	public static final MMMessageAttribute mmAccountOwnerDocumentIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmIdentification;
+			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> DocumentIdentification4Choice.mmObject();
 			isDerived = false;
 			xmlTag = "AcctOwnrDocId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountOwnerDocumentIdentification";
 			definition = "Identification of the document assigned by the account owner.";
 			maxOccurs = 1;
@@ -166,11 +169,10 @@ public class DocumentIdentification4Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.DocumentIdentification4Choice.mmAccountServicerDocumentIdentification,
-						com.tools20022.repository.choice.DocumentIdentification4Choice.mmAccountOwnerDocumentIdentification);
+				messageElement_lazy = () -> Arrays.asList(DocumentIdentification4Choice.mmAccountServicerDocumentIdentification, DocumentIdentification4Choice.mmAccountOwnerDocumentIdentification);
 				trace_lazy = () -> Document.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DocumentIdentification4Choice";
 				definition = "Choice between a document identification provided either by the account owner or by the account servicer.";
 			}

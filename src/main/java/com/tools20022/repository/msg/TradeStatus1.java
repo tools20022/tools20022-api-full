@@ -19,10 +19,17 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.metamodel.MMXor;
+import com.tools20022.repository.area.trea.ForeignExchangeOptionNotificationV02;
+import com.tools20022.repository.area.trea.NonDeliverableForwardNotificationV02;
 import com.tools20022.repository.codeset.TradeStatus1Code;
 import com.tools20022.repository.datatype.*;
+import com.tools20022.repository.entity.GenericIdentification;
+import com.tools20022.repository.entity.Status;
+import com.tools20022.repository.entity.TradeIdentification;
 import com.tools20022.repository.entity.TreasuryTradeSettlementStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -134,11 +141,11 @@ public class TradeStatus1 {
 	 */
 	public static final MMMessageAttribute mmAllegedTrade = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TreasuryTradeSettlementStatus.mmAllegedTrade;
+			businessElementTrace_lazy = () -> TreasuryTradeSettlementStatus.mmAllegedTrade;
 			componentContext_lazy = () -> TradeStatus1.mmObject();
 			isDerived = false;
 			xmlTag = "AllgdTrad";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AllegedTrade";
 			definition = "Specifies whether a trade is alleged or not.";
 			maxOccurs = 1;
@@ -183,11 +190,11 @@ public class TradeStatus1 {
 	 */
 	public static final MMMessageAttribute mmMatchingSystemUniqueReference = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradeIdentification.mmMatchingReference;
+			businessElementTrace_lazy = () -> TradeIdentification.mmMatchingReference;
 			componentContext_lazy = () -> TradeStatus1.mmObject();
 			isDerived = false;
 			xmlTag = "MtchgSysUnqRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MatchingSystemUniqueReference";
 			definition = "Reference to the unique identification assigned to a trade by a central matching system.";
 			maxOccurs = 1;
@@ -230,11 +237,11 @@ public class TradeStatus1 {
 	 */
 	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TreasuryTradeSettlementStatus.mmTradeStatus;
+			businessElementTrace_lazy = () -> TreasuryTradeSettlementStatus.mmTradeStatus;
 			componentContext_lazy = () -> TradeStatus1.mmObject();
 			isDerived = false;
 			xmlTag = "Sts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Status";
 			definition = "Specifies the status of a trade";
 			maxOccurs = 1;
@@ -278,11 +285,11 @@ public class TradeStatus1 {
 	 */
 	public static final MMMessageAttribute mmExtendedStatus = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TreasuryTradeSettlementStatus.mmTradeStatus;
+			businessElementTrace_lazy = () -> TreasuryTradeSettlementStatus.mmTradeStatus;
 			componentContext_lazy = () -> TradeStatus1.mmObject();
 			isDerived = false;
 			xmlTag = "XtndedSts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExtendedStatus";
 			definition = "Description of the status of a trade when no coded form is available.";
 			maxOccurs = 1;
@@ -325,11 +332,11 @@ public class TradeStatus1 {
 	 */
 	public static final MMMessageAttribute mmStatusSubType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TreasuryTradeSettlementStatus.mmTradeStatus;
+			businessElementTrace_lazy = () -> TreasuryTradeSettlementStatus.mmTradeStatus;
 			componentContext_lazy = () -> TradeStatus1.mmObject();
 			isDerived = false;
 			xmlTag = "StsSubTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusSubType";
 			definition = "Additional information on the status of a trade in a central system.";
 			maxOccurs = 1;
@@ -371,11 +378,11 @@ public class TradeStatus1 {
 	 */
 	public static final MMMessageAttribute mmStatusTime = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.mmStatusDateTime;
+			businessElementTrace_lazy = () -> Status.mmStatusDateTime;
 			componentContext_lazy = () -> TradeStatus1.mmObject();
 			isDerived = false;
 			xmlTag = "StsTm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusTime";
 			definition = "Specifies the time at which a status was assigned.";
 			maxOccurs = 1;
@@ -418,11 +425,11 @@ public class TradeStatus1 {
 	 */
 	public static final MMMessageAttribute mmStatusOriginator = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmIdentification;
+			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> TradeStatus1.mmObject();
 			isDerived = false;
 			xmlTag = "StsOrgtr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusOriginator";
 			definition = "Identifies the party which assigned a status to a treasury trade.";
 			maxOccurs = 1;
@@ -435,6 +442,9 @@ public class TradeStatus1 {
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
+	 * messageComponent} =
+	 * {@linkplain com.tools20022.repository.msg.TradeStatus1 TradeStatus1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getImpactedElements
 	 * impactedElements} =
 	 * <ul>
@@ -445,9 +455,6 @@ public class TradeStatus1 {
 	 * TradeStatus1.mmExtendedStatus}</li>
 	 * </ul>
 	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
-	 * messageComponent} =
-	 * {@linkplain com.tools20022.repository.msg.TradeStatus1 TradeStatus1}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -458,24 +465,22 @@ public class TradeStatus1 {
 	 */
 	public static final MMXor mmStatusOrExtendedStatusRule = new MMXor() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusOrExtendedStatusRule";
 			messageComponent_lazy = () -> TradeStatus1.mmObject();
-			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TradeStatus1.mmStatus, com.tools20022.repository.msg.TradeStatus1.mmExtendedStatus);
+			impactedElements_lazy = () -> Arrays.asList(TradeStatus1.mmStatus, TradeStatus1.mmExtendedStatus);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TradeStatus1.mmAllegedTrade, com.tools20022.repository.msg.TradeStatus1.mmMatchingSystemUniqueReference,
-						com.tools20022.repository.msg.TradeStatus1.mmStatus, com.tools20022.repository.msg.TradeStatus1.mmExtendedStatus, com.tools20022.repository.msg.TradeStatus1.mmStatusSubType,
-						com.tools20022.repository.msg.TradeStatus1.mmStatusTime, com.tools20022.repository.msg.TradeStatus1.mmStatusOriginator);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.trea.NonDeliverableForwardNotificationV02.mmTradeInformationAndStatus,
-						com.tools20022.repository.area.trea.ForeignExchangeOptionNotificationV02.mmTradeStatus);
+				messageElement_lazy = () -> Arrays.asList(TradeStatus1.mmAllegedTrade, TradeStatus1.mmMatchingSystemUniqueReference, TradeStatus1.mmStatus, TradeStatus1.mmExtendedStatus, TradeStatus1.mmStatusSubType,
+						TradeStatus1.mmStatusTime, TradeStatus1.mmStatusOriginator);
+				messageBuildingBlock_lazy = () -> Arrays.asList(NonDeliverableForwardNotificationV02.mmTradeInformationAndStatus, ForeignExchangeOptionNotificationV02.mmTradeStatus);
 				trace_lazy = () -> TreasuryTradeSettlementStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
 						return DateFormat.getDateInstance(java.text.DateFormat.LONG).parse("September 9, 2016");
@@ -485,7 +490,7 @@ public class TradeStatus1 {
 				})).get();
 				name = "TradeStatus1";
 				definition = "Specifies the status of a trade in a central settlement system.";
-				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TradeStatus1.mmStatusOrExtendedStatusRule);
+				xors_lazy = () -> Arrays.asList(TradeStatus1.mmStatusOrExtendedStatusRule);
 			}
 		});
 		return mmObject_lazy.get();

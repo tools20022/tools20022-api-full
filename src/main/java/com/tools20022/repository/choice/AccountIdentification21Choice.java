@@ -19,8 +19,12 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV04;
+import com.tools20022.repository.area.seev.CorporateActionNotificationV04;
 import com.tools20022.repository.entity.AccountIdentification;
 import com.tools20022.repository.entity.SecuritiesAccount;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.AccountAndBalance21;
 import com.tools20022.repository.msg.AccountIdentification10;
 import java.util.Arrays;
@@ -140,10 +144,10 @@ public class AccountIdentification21Choice {
 			componentContext_lazy = () -> AccountIdentification21Choice.mmObject();
 			isDerived = false;
 			xmlTag = "ForAllAccts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForAllAccounts";
 			definition = "All safekeeping accounts that own underlying financial instrument.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AccountIdentification23Choice.mmForAllAccounts);
+			nextVersions_lazy = () -> Arrays.asList(AccountIdentification23Choice.mmForAllAccounts);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -199,10 +203,10 @@ public class AccountIdentification21Choice {
 			componentContext_lazy = () -> AccountIdentification21Choice.mmObject();
 			isDerived = false;
 			xmlTag = "AcctsListAndBalDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountsListAndBalanceDetails";
 			definition = "Selected safekeeping accounts list (and optionally balance information) to which the corporate action event applies.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AccountIdentification23Choice.mmAccountsListAndBalanceDetails);
+			nextVersions_lazy = () -> Arrays.asList(AccountIdentification23Choice.mmAccountsListAndBalanceDetails);
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> AccountAndBalance21.mmObject();
@@ -212,12 +216,11 @@ public class AccountIdentification21Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AccountIdentification21Choice.mmForAllAccounts, com.tools20022.repository.choice.AccountIdentification21Choice.mmAccountsListAndBalanceDetails);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV04.mmAccountDetails,
-						com.tools20022.repository.area.seev.CorporateActionNotificationV04.mmAccountDetails);
+				messageElement_lazy = () -> Arrays.asList(AccountIdentification21Choice.mmForAllAccounts, AccountIdentification21Choice.mmAccountsListAndBalanceDetails);
+				messageBuildingBlock_lazy = () -> Arrays.asList(CorporateActionMovementPreliminaryAdviceV04.mmAccountDetails, CorporateActionNotificationV04.mmAccountDetails);
 				trace_lazy = () -> AccountIdentification.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AccountIdentification21Choice";
 				definition = "Choice between all accounts (GENR - General in ISO 15022) or one or more selected accounts and balance information.";
 				nextVersions_lazy = () -> Arrays.asList(AccountIdentification23Choice.mmObject());

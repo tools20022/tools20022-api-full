@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.MailTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -78,7 +80,7 @@ public class MailType1Code extends MailTypeCode {
 	 */
 	public static final MMCode mmAirMail = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AirMail";
 			owner_lazy = () -> MailType1Code.mmObject();
 		}
@@ -101,7 +103,7 @@ public class MailType1Code extends MailTypeCode {
 	 */
 	public static final MMCode mmOrdinaryMail = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrdinaryMail";
 			owner_lazy = () -> MailType1Code.mmObject();
 		}
@@ -124,7 +126,7 @@ public class MailType1Code extends MailTypeCode {
 	 */
 	public static final MMCode mmRegisteredMail = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RegisteredMail";
 			owner_lazy = () -> MailType1Code.mmObject();
 		}
@@ -133,11 +135,11 @@ public class MailType1Code extends MailTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MailType1Code";
 				definition = "Specifies the type of mail service.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MailType1Code.mmAirMail, com.tools20022.repository.codeset.MailType1Code.mmOrdinaryMail, com.tools20022.repository.codeset.MailType1Code.mmRegisteredMail);
+				code_lazy = () -> Arrays.asList(MailType1Code.mmAirMail, MailType1Code.mmOrdinaryMail, MailType1Code.mmRegisteredMail);
 				trace_lazy = () -> MailTypeCode.mmObject();
 			}
 		});

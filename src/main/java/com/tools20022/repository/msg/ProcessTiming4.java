@@ -19,8 +19,10 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Max9NumericText;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -100,10 +102,10 @@ public class ProcessTiming4 {
 			componentContext_lazy = () -> ProcessTiming4.mmObject();
 			isDerived = false;
 			xmlTag = "StartTm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StartTime";
 			definition = "Date and time to start the action.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ProcessTiming3.mmStartTime;
+			previousVersion_lazy = () -> ProcessTiming3.mmStartTime;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
@@ -147,10 +149,10 @@ public class ProcessTiming4 {
 			componentContext_lazy = () -> ProcessTiming4.mmObject();
 			isDerived = false;
 			xmlTag = "EndTm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EndTime";
 			definition = "Date and time after which the action cannot be processed.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ProcessTiming3.mmEndTime;
+			previousVersion_lazy = () -> ProcessTiming3.mmEndTime;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
@@ -197,10 +199,10 @@ public class ProcessTiming4 {
 			componentContext_lazy = () -> ProcessTiming4.mmObject();
 			isDerived = false;
 			xmlTag = "Prd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Period";
 			definition = "Period delay between cyclic action activation in months, days, hours and minutes, leading zeros could be omitted.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ProcessTiming3.mmPeriod;
+			previousVersion_lazy = () -> ProcessTiming3.mmPeriod;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max9NumericText.mmObject();
@@ -210,9 +212,9 @@ public class ProcessTiming4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ProcessTiming4.mmStartTime, com.tools20022.repository.msg.ProcessTiming4.mmEndTime, com.tools20022.repository.msg.ProcessTiming4.mmPeriod);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(ProcessTiming4.mmStartTime, ProcessTiming4.mmEndTime, ProcessTiming4.mmPeriod);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ProcessTiming4";
 				definition = "Parameters defining the timing conditions to process an action.";
 				previousVersion_lazy = () -> ProcessTiming3.mmObject();

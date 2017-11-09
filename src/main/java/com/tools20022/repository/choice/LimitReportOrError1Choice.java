@@ -19,6 +19,8 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.ErrorHandling3;
 import com.tools20022.repository.msg.Limits4;
 import java.util.Arrays;
@@ -110,10 +112,10 @@ public class LimitReportOrError1Choice {
 			componentContext_lazy = () -> LimitReportOrError1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "BizRpt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BusinessReport";
 			definition = "Reports on limits.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.LimitReportOrError2Choice.mmBusinessReport);
+			nextVersions_lazy = () -> Arrays.asList(LimitReportOrError2Choice.mmBusinessReport);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -163,10 +165,10 @@ public class LimitReportOrError1Choice {
 			componentContext_lazy = () -> LimitReportOrError1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "OprlErr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OperationalError";
 			definition = "Indicates that an operational error has been issued during the processing of the related request.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.LimitReportOrError2Choice.mmOperationalError);
+			nextVersions_lazy = () -> Arrays.asList(LimitReportOrError2Choice.mmOperationalError);
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ErrorHandling3.mmObject();
@@ -176,9 +178,9 @@ public class LimitReportOrError1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.LimitReportOrError1Choice.mmBusinessReport, com.tools20022.repository.choice.LimitReportOrError1Choice.mmOperationalError);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(LimitReportOrError1Choice.mmBusinessReport, LimitReportOrError1Choice.mmOperationalError);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "LimitReportOrError1Choice";
 				definition = "Choice between details of one or more limits set by the member (or on behalf of the member) and managed by the transaction administrator or an operational error when the requested data cannot be retrieved.";
 				nextVersions_lazy = () -> Arrays.asList(LimitReportOrError2Choice.mmObject());

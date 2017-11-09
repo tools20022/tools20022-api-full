@@ -17,10 +17,11 @@
 
 package com.tools20022.repository.entity;
 
-import com.tools20022.metamodel.MMBusinessAssociationEnd;
-import com.tools20022.metamodel.MMBusinessAttribute;
-import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.*;
 import com.tools20022.repository.datatype.YesNoIndicator;
+import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.PostalAddress21;
+import com.tools20022.repository.msg.PostalAddress3;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -33,6 +34,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PostalAddress#mmMailingInstructions
+ * PostalAddress.mmMailingInstructions}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -45,15 +55,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.entity.MailingInstructions#mmRelatedPostalAddress
  * MailingInstructions.mmRelatedPostalAddress}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.PostalAddress#mmMailingInstructions
- * PostalAddress.mmMailingInstructions}</li>
  * </ul>
  * </li>
  * <li>
@@ -114,10 +115,10 @@ public class MailingInstructions {
 	 */
 	public static final MMBusinessAttribute mmMailingIndicator = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PostalAddress3.mmMailingIndicator, com.tools20022.repository.msg.PostalAddress21.mmMailingIndicator);
+			derivation_lazy = () -> Arrays.asList(PostalAddress3.mmMailingIndicator, PostalAddress21.mmMailingIndicator);
 			elementContext_lazy = () -> MailingInstructions.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MailingIndicator";
 			definition = "Indicates whether mail should be sent to an address.";
 			maxOccurs = 1;
@@ -166,10 +167,10 @@ public class MailingInstructions {
 	 */
 	public static final MMBusinessAttribute mmRegistrationAddressIndicator = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PostalAddress3.mmRegistrationAddressIndicator, com.tools20022.repository.msg.PostalAddress21.mmRegistrationAddressIndicator);
+			derivation_lazy = () -> Arrays.asList(PostalAddress3.mmRegistrationAddressIndicator, PostalAddress21.mmRegistrationAddressIndicator);
 			elementContext_lazy = () -> MailingInstructions.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RegistrationAddressIndicator";
 			definition = "Indicates whether the address is the official address of the party.";
 			maxOccurs = 1;
@@ -216,13 +217,13 @@ public class MailingInstructions {
 		{
 			elementContext_lazy = () -> MailingInstructions.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedPostalAddress";
 			definition = "Postal address for which mailing instructions are specified.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.PostalAddress.mmMailingInstructions;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.PostalAddress.mmObject();
 		}
 	};
@@ -230,13 +231,12 @@ public class MailingInstructions {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MailingInstructions";
 				definition = "Characteristics of an address.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.PostalAddress.mmMailingInstructions);
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.MailingInstructions.mmMailingIndicator, com.tools20022.repository.entity.MailingInstructions.mmRegistrationAddressIndicator,
-						com.tools20022.repository.entity.MailingInstructions.mmRelatedPostalAddress);
+				element_lazy = () -> Arrays.asList(MailingInstructions.mmMailingIndicator, MailingInstructions.mmRegistrationAddressIndicator, MailingInstructions.mmRelatedPostalAddress);
 			}
 		});
 		return mmObject_lazy.get();

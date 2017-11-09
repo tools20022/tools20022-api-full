@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.AssetClassDetailedSubProductTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -111,7 +113,7 @@ public class AssetClassDetailedSubProductType10Code extends AssetClassDetailedSu
 	 */
 	public static final MMCode mmAluminium = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Aluminium";
 			owner_lazy = () -> AssetClassDetailedSubProductType10Code.mmObject();
 		}
@@ -134,7 +136,7 @@ public class AssetClassDetailedSubProductType10Code extends AssetClassDetailedSu
 	 */
 	public static final MMCode mmAluminiumAlloy = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AluminiumAlloy";
 			owner_lazy = () -> AssetClassDetailedSubProductType10Code.mmObject();
 		}
@@ -157,7 +159,7 @@ public class AssetClassDetailedSubProductType10Code extends AssetClassDetailedSu
 	 */
 	public static final MMCode mmCobalt = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cobalt";
 			owner_lazy = () -> AssetClassDetailedSubProductType10Code.mmObject();
 		}
@@ -180,7 +182,7 @@ public class AssetClassDetailedSubProductType10Code extends AssetClassDetailedSu
 	 */
 	public static final MMCode mmCopper = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Copper";
 			owner_lazy = () -> AssetClassDetailedSubProductType10Code.mmObject();
 		}
@@ -203,7 +205,7 @@ public class AssetClassDetailedSubProductType10Code extends AssetClassDetailedSu
 	 */
 	public static final MMCode mmIronOre = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IronOre";
 			owner_lazy = () -> AssetClassDetailedSubProductType10Code.mmObject();
 		}
@@ -226,7 +228,7 @@ public class AssetClassDetailedSubProductType10Code extends AssetClassDetailedSu
 	 */
 	public static final MMCode mmMolybdenum = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Molybdenum";
 			owner_lazy = () -> AssetClassDetailedSubProductType10Code.mmObject();
 		}
@@ -249,7 +251,7 @@ public class AssetClassDetailedSubProductType10Code extends AssetClassDetailedSu
 	 */
 	public static final MMCode mmNASAAC = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NASAAC";
 			owner_lazy = () -> AssetClassDetailedSubProductType10Code.mmObject();
 		}
@@ -272,7 +274,7 @@ public class AssetClassDetailedSubProductType10Code extends AssetClassDetailedSu
 	 */
 	public static final MMCode mmNickel = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Nickel";
 			owner_lazy = () -> AssetClassDetailedSubProductType10Code.mmObject();
 		}
@@ -295,7 +297,7 @@ public class AssetClassDetailedSubProductType10Code extends AssetClassDetailedSu
 	 */
 	public static final MMCode mmSteel = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Steel";
 			owner_lazy = () -> AssetClassDetailedSubProductType10Code.mmObject();
 		}
@@ -318,7 +320,7 @@ public class AssetClassDetailedSubProductType10Code extends AssetClassDetailedSu
 	 */
 	public static final MMCode mmTin = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Tin";
 			owner_lazy = () -> AssetClassDetailedSubProductType10Code.mmObject();
 		}
@@ -341,7 +343,7 @@ public class AssetClassDetailedSubProductType10Code extends AssetClassDetailedSu
 	 */
 	public static final MMCode mmZinc = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Zinc";
 			owner_lazy = () -> AssetClassDetailedSubProductType10Code.mmObject();
 		}
@@ -364,7 +366,7 @@ public class AssetClassDetailedSubProductType10Code extends AssetClassDetailedSu
 	 */
 	public static final MMCode mmOther = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
 			owner_lazy = () -> AssetClassDetailedSubProductType10Code.mmObject();
 		}
@@ -387,7 +389,7 @@ public class AssetClassDetailedSubProductType10Code extends AssetClassDetailedSu
 	 */
 	public static final MMCode mmLead = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Lead";
 			owner_lazy = () -> AssetClassDetailedSubProductType10Code.mmObject();
 		}
@@ -396,17 +398,14 @@ public class AssetClassDetailedSubProductType10Code extends AssetClassDetailedSu
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AssetClassDetailedSubProductType10Code";
 				definition = "Further sub product code list for commodity derivative Non-Precious.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AssetClassDetailedSubProductType10Code.mmAluminium, com.tools20022.repository.codeset.AssetClassDetailedSubProductType10Code.mmAluminiumAlloy,
-						com.tools20022.repository.codeset.AssetClassDetailedSubProductType10Code.mmCobalt, com.tools20022.repository.codeset.AssetClassDetailedSubProductType10Code.mmCopper,
-						com.tools20022.repository.codeset.AssetClassDetailedSubProductType10Code.mmIronOre, com.tools20022.repository.codeset.AssetClassDetailedSubProductType10Code.mmMolybdenum,
-						com.tools20022.repository.codeset.AssetClassDetailedSubProductType10Code.mmNASAAC, com.tools20022.repository.codeset.AssetClassDetailedSubProductType10Code.mmNickel,
-						com.tools20022.repository.codeset.AssetClassDetailedSubProductType10Code.mmSteel, com.tools20022.repository.codeset.AssetClassDetailedSubProductType10Code.mmTin,
-						com.tools20022.repository.codeset.AssetClassDetailedSubProductType10Code.mmZinc, com.tools20022.repository.codeset.AssetClassDetailedSubProductType10Code.mmOther,
-						com.tools20022.repository.codeset.AssetClassDetailedSubProductType10Code.mmLead);
+				code_lazy = () -> Arrays.asList(AssetClassDetailedSubProductType10Code.mmAluminium, AssetClassDetailedSubProductType10Code.mmAluminiumAlloy, AssetClassDetailedSubProductType10Code.mmCobalt,
+						AssetClassDetailedSubProductType10Code.mmCopper, AssetClassDetailedSubProductType10Code.mmIronOre, AssetClassDetailedSubProductType10Code.mmMolybdenum, AssetClassDetailedSubProductType10Code.mmNASAAC,
+						AssetClassDetailedSubProductType10Code.mmNickel, AssetClassDetailedSubProductType10Code.mmSteel, AssetClassDetailedSubProductType10Code.mmTin, AssetClassDetailedSubProductType10Code.mmZinc,
+						AssetClassDetailedSubProductType10Code.mmOther, AssetClassDetailedSubProductType10Code.mmLead);
 				trace_lazy = () -> AssetClassDetailedSubProductTypeCode.mmObject();
 			}
 		});

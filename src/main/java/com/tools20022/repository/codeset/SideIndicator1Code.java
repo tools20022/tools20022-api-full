@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.SideIndicatorCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -86,7 +88,7 @@ public class SideIndicator1Code extends SideIndicatorCode {
 	 */
 	public static final MMCode mmCCPLeg = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CCPLeg";
 			owner_lazy = () -> SideIndicator1Code.mmObject();
 		}
@@ -109,7 +111,7 @@ public class SideIndicator1Code extends SideIndicatorCode {
 	 */
 	public static final MMCode mmClientLeg = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClientLeg";
 			owner_lazy = () -> SideIndicator1Code.mmObject();
 		}
@@ -118,12 +120,12 @@ public class SideIndicator1Code extends SideIndicatorCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CCPL");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SideIndicator1Code";
 				definition = "To indicate either the reference for the Central Counterparty (CCP) leg or the reference for the client leg of the transaction.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SideIndicator1Code.mmCCPLeg, com.tools20022.repository.codeset.SideIndicator1Code.mmClientLeg);
+				code_lazy = () -> Arrays.asList(SideIndicator1Code.mmCCPLeg, SideIndicator1Code.mmClientLeg);
 				trace_lazy = () -> SideIndicatorCode.mmObject();
 			}
 		});

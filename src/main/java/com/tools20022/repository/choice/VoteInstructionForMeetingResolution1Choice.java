@@ -20,8 +20,11 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.VoteInstructionAtMeeting1Code;
+import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.entity.VoteInstructionRequest;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.NameAndAddress9;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -120,14 +123,14 @@ public class VoteInstructionForMeetingResolution1Choice {
 	 */
 	public static final MMMessageAttribute mmVoteIndication = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.VoteInstructionRequest.mmVoteForMeetingResolution;
+			businessElementTrace_lazy = () -> VoteInstructionRequest.mmVoteForMeetingResolution;
 			componentContext_lazy = () -> VoteInstructionForMeetingResolution1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "VoteIndctn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VoteIndication";
 			definition = "Specifies the vote recommendation for resolutions added during the meeting.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.VoteInstructionForMeetingResolution2Choice.mmVoteIndication);
+			nextVersions_lazy = () -> Arrays.asList(VoteInstructionForMeetingResolution2Choice.mmVoteIndication);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> VoteInstructionAtMeeting1Code.mmObject();
@@ -178,14 +181,14 @@ public class VoteInstructionForMeetingResolution1Choice {
 	 */
 	public static final MMMessageAssociationEnd mmShareholder = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> VoteInstructionForMeetingResolution1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Shrhldr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Shareholder";
 			definition = "Specifies the name and address of the shareholder to whom the rights to vote are transferred for resolutions added during the meeting.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.VoteInstructionForMeetingResolution2Choice.mmShareholder);
+			nextVersions_lazy = () -> Arrays.asList(VoteInstructionForMeetingResolution2Choice.mmShareholder);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -196,11 +199,10 @@ public class VoteInstructionForMeetingResolution1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.VoteInstructionForMeetingResolution1Choice.mmVoteIndication,
-						com.tools20022.repository.choice.VoteInstructionForMeetingResolution1Choice.mmShareholder);
+				messageElement_lazy = () -> Arrays.asList(VoteInstructionForMeetingResolution1Choice.mmVoteIndication, VoteInstructionForMeetingResolution1Choice.mmShareholder);
 				trace_lazy = () -> VoteInstructionRequest.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "VoteInstructionForMeetingResolution1Choice";
 				definition = "Vote instruction applying to resolutions added during the meeting.";
 				nextVersions_lazy = () -> Arrays.asList(VoteInstructionForMeetingResolution2Choice.mmObject());

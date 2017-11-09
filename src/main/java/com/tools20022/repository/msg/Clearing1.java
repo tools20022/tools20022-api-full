@@ -20,10 +20,15 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.PartyIdentification35Choice;
 import com.tools20022.repository.codeset.NettingEligible1Code;
 import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.Clearing;
+import com.tools20022.repository.entity.Party;
+import com.tools20022.repository.entity.SecuritiesTradeExecution;
+import com.tools20022.repository.entity.Trade;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -108,11 +113,11 @@ public class Clearing1 {
 	 */
 	public static final MMMessageAttribute mmNonClearingMember = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> Clearing1.mmObject();
 			isDerived = false;
 			xmlTag = "NonClrMmb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonClearingMember";
 			definition = "Provides the identification for the non-clearing member. This is mandatory if the clearing member identification equals a general clearing member.";
 			maxOccurs = 1;
@@ -158,11 +163,11 @@ public class Clearing1 {
 	 */
 	public static final MMMessageAttribute mmSettlementNettingEligibleCode = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Trade.mmSettlementNetting;
+			businessElementTrace_lazy = () -> Trade.mmSettlementNetting;
 			componentContext_lazy = () -> Clearing1.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmNetgElgblCd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementNettingEligibleCode";
 			definition = "Indicates to the clearing member whether the trade is elligible for settlement netting or not.";
 			maxOccurs = 1;
@@ -211,11 +216,11 @@ public class Clearing1 {
 	 */
 	public static final MMMessageAttribute mmClearingSegment = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> Clearing1.mmObject();
 			isDerived = false;
 			xmlTag = "ClrSgmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClearingSegment";
 			definition = "Clearing organisation that will clear the trade.\r\nNote: This field allows clearing member firm to segregate flows coming from clearing counterparty's clearing system. Indeed, clearing member firms receive messages from the same system (same sender) and this field allows them to know if the message is related to equities or derivatives.";
 			maxOccurs = 1;
@@ -261,11 +266,11 @@ public class Clearing1 {
 	 */
 	public static final MMMessageAttribute mmGuaranteedTrade = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Clearing.mmGuaranteedTrade;
+			businessElementTrace_lazy = () -> Clearing.mmGuaranteedTrade;
 			componentContext_lazy = () -> Clearing1.mmObject();
 			isDerived = false;
 			xmlTag = "GrntedTrad";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GuaranteedTrade";
 			definition = "Indicates if the central counterparty has to novate and guarantee the trade or not.";
 			maxOccurs = 1;
@@ -311,11 +316,11 @@ public class Clearing1 {
 	 */
 	public static final MMMessageAssociationEnd mmNonGuaranteedTrade = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeExecution.mmRelatedTrade;
+			businessElementTrace_lazy = () -> SecuritiesTradeExecution.mmRelatedTrade;
 			componentContext_lazy = () -> Clearing1.mmObject();
 			isDerived = false;
 			xmlTag = "NonGrntedTrad";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonGuaranteedTrade";
 			definition = "In case of trades that are not guaranteed by the central counterparty (this is when the central counterparty did novate the trade), provides details such as the trade counterparty member identification or the trade counterparty clearing member identification.";
 			maxOccurs = 1;
@@ -328,11 +333,10 @@ public class Clearing1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Clearing1.mmNonClearingMember, com.tools20022.repository.msg.Clearing1.mmSettlementNettingEligibleCode,
-						com.tools20022.repository.msg.Clearing1.mmClearingSegment, com.tools20022.repository.msg.Clearing1.mmGuaranteedTrade, com.tools20022.repository.msg.Clearing1.mmNonGuaranteedTrade);
+				messageElement_lazy = () -> Arrays.asList(Clearing1.mmNonClearingMember, Clearing1.mmSettlementNettingEligibleCode, Clearing1.mmClearingSegment, Clearing1.mmGuaranteedTrade, Clearing1.mmNonGuaranteedTrade);
 				trace_lazy = () -> Clearing.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Clearing1";
 				definition = "Provides the clearing details.";
 			}

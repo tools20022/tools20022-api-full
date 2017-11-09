@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.AgentRoleCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -81,7 +83,7 @@ public class AgentRole1Code extends AgentRoleCode {
 	 */
 	public static final MMCode mmPrincipalAgent = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PrincipalAgent";
 			owner_lazy = () -> AgentRole1Code.mmObject();
 		}
@@ -104,7 +106,7 @@ public class AgentRole1Code extends AgentRoleCode {
 	 */
 	public static final MMCode mmSubAgent = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubAgent";
 			owner_lazy = () -> AgentRole1Code.mmObject();
 		}
@@ -113,12 +115,12 @@ public class AgentRole1Code extends AgentRoleCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("PRIN");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AgentRole1Code";
 				definition = "Specifies the role of the Issuer agent.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AgentRole1Code.mmPrincipalAgent, com.tools20022.repository.codeset.AgentRole1Code.mmSubAgent);
+				code_lazy = () -> Arrays.asList(AgentRole1Code.mmPrincipalAgent, AgentRole1Code.mmSubAgent);
 				trace_lazy = () -> AgentRoleCode.mmObject();
 			}
 		});

@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ReportingCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -82,7 +84,7 @@ public class Reporting1Code extends ReportingCode {
 	 */
 	public static final MMCode mmStockExchange = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StockExchange";
 			owner_lazy = () -> Reporting1Code.mmObject();
 		}
@@ -105,7 +107,7 @@ public class Reporting1Code extends ReportingCode {
 	 */
 	public static final MMCode mmRegulatoryOrganisation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RegulatoryOrganisation";
 			owner_lazy = () -> Reporting1Code.mmObject();
 		}
@@ -114,12 +116,12 @@ public class Reporting1Code extends ReportingCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("STEX");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Reporting1Code";
 				definition = "Identifies to which institution the reporting must be done.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Reporting1Code.mmStockExchange, com.tools20022.repository.codeset.Reporting1Code.mmRegulatoryOrganisation);
+				code_lazy = () -> Arrays.asList(Reporting1Code.mmStockExchange, Reporting1Code.mmRegulatoryOrganisation);
 				trace_lazy = () -> ReportingCode.mmObject();
 			}
 		});

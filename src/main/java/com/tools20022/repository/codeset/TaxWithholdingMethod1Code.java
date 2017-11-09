@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.TaxWithholdingMethodCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -93,7 +95,7 @@ public class TaxWithholdingMethod1Code extends TaxWithholdingMethodCode {
 	 */
 	public static final MMCode mmWithholdTax = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WithholdTax";
 			owner_lazy = () -> TaxWithholdingMethod1Code.mmObject();
 		}
@@ -116,7 +118,7 @@ public class TaxWithholdingMethod1Code extends TaxWithholdingMethodCode {
 	 */
 	public static final MMCode mmReportTax = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportTax";
 			owner_lazy = () -> TaxWithholdingMethod1Code.mmObject();
 		}
@@ -139,7 +141,7 @@ public class TaxWithholdingMethod1Code extends TaxWithholdingMethodCode {
 	 */
 	public static final MMCode mmTaxCertificate = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxCertificate";
 			owner_lazy = () -> TaxWithholdingMethod1Code.mmObject();
 		}
@@ -162,7 +164,7 @@ public class TaxWithholdingMethod1Code extends TaxWithholdingMethodCode {
 	 */
 	public static final MMCode mmWithholdTaxAndReport = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WithholdTaxAndReport";
 			owner_lazy = () -> TaxWithholdingMethod1Code.mmObject();
 		}
@@ -171,13 +173,12 @@ public class TaxWithholdingMethod1Code extends TaxWithholdingMethodCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("WTHD");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TaxWithholdingMethod1Code";
 				definition = "Specified the method by which the tax on the interests is to be processed i.e. either withheld at source or reported to tax authorities or a tax certificate has been provided by the beneficiary.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TaxWithholdingMethod1Code.mmWithholdTax, com.tools20022.repository.codeset.TaxWithholdingMethod1Code.mmReportTax,
-						com.tools20022.repository.codeset.TaxWithholdingMethod1Code.mmTaxCertificate, com.tools20022.repository.codeset.TaxWithholdingMethod1Code.mmWithholdTaxAndReport);
+				code_lazy = () -> Arrays.asList(TaxWithholdingMethod1Code.mmWithholdTax, TaxWithholdingMethod1Code.mmReportTax, TaxWithholdingMethod1Code.mmTaxCertificate, TaxWithholdingMethod1Code.mmWithholdTaxAndReport);
 				trace_lazy = () -> TaxWithholdingMethodCode.mmObject();
 			}
 		});

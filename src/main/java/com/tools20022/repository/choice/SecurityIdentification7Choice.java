@@ -19,8 +19,10 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ISINIdentifier;
 import com.tools20022.repository.entity.SecuritiesIdentification;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.AlternateSecurityIdentification4;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -109,11 +111,11 @@ public class SecurityIdentification7Choice {
 	 */
 	public static final MMMessageAttribute mmISIN = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesIdentification.mmSecurityIdentification;
+			businessElementTrace_lazy = () -> SecuritiesIdentification.mmSecurityIdentification;
 			componentContext_lazy = () -> SecurityIdentification7Choice.mmObject();
 			isDerived = false;
 			xmlTag = "ISIN";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ISIN";
 			definition = "International Securities Identification Number (ISIN).  A numbering system designed by the United Nation's International Organisation for Standardisation (ISO). The ISIN is composed of a 2-character prefix representing the country of issue, followed by the national security number (if one exists), and a check digit. Each country has a national numbering agency that assigns ISIN numbers for securities in that country.";
 			maxOccurs = 1;
@@ -164,7 +166,7 @@ public class SecurityIdentification7Choice {
 			componentContext_lazy = () -> SecurityIdentification7Choice.mmObject();
 			isDerived = false;
 			xmlTag = "OthrPrtryId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherProprietaryIdentification";
 			definition = "Proprietary identification of a security assigned by an institution or organisation.";
 			maxOccurs = 1;
@@ -176,10 +178,10 @@ public class SecurityIdentification7Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SecurityIdentification7Choice.mmISIN, com.tools20022.repository.choice.SecurityIdentification7Choice.mmOtherProprietaryIdentification);
+				messageElement_lazy = () -> Arrays.asList(SecurityIdentification7Choice.mmISIN, SecurityIdentification7Choice.mmOtherProprietaryIdentification);
 				trace_lazy = () -> SecuritiesIdentification.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecurityIdentification7Choice";
 				definition = "Choice between formats for the identification of a financial instrument.";
 			}

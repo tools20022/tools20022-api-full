@@ -20,12 +20,14 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.DateSearchChoice;
 import com.tools20022.repository.choice.SecurityStatus2Choice;
 import com.tools20022.repository.choice.SystemPartyIdentification1Choice;
 import com.tools20022.repository.codeset.ActiveOrHistoricCurrencyCode;
 import com.tools20022.repository.codeset.CountryCode;
 import com.tools20022.repository.datatype.CFIIdentifier;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -127,7 +129,7 @@ public class SecuritiesSearchCriteria1 {
 			componentContext_lazy = () -> SecuritiesSearchCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "FinInstrmId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentIdentification";
 			definition = "Way(s) of identifying the security.";
 			maxOccurs = 1;
@@ -174,7 +176,7 @@ public class SecuritiesSearchCriteria1 {
 			componentContext_lazy = () -> SecuritiesSearchCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "ClssfctnFinInstrm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClassificationFinancialInstrument";
 			definition = "Classification type of the financial instrument, as per the ISO Classification of Financial Instrument (CFI) codification, for example, common share with voting rights, fully paid, or registered.";
 			maxOccurs = 1;
@@ -216,7 +218,7 @@ public class SecuritiesSearchCriteria1 {
 			componentContext_lazy = () -> SecuritiesSearchCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "MtrtyDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaturityDate";
 			definition = "Planned final repayment date at the time of issuance.";
 			maxOccurs = 1;
@@ -258,7 +260,7 @@ public class SecuritiesSearchCriteria1 {
 			componentContext_lazy = () -> SecuritiesSearchCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "IsseDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssueDate";
 			definition = "Date/time at which the security was made available.";
 			maxOccurs = 1;
@@ -300,7 +302,7 @@ public class SecuritiesSearchCriteria1 {
 			componentContext_lazy = () -> SecuritiesSearchCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "IsseCcy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssueCurrency";
 			definition = "Currency in which a security is issued or redenominated.";
 			maxOccurs = 1;
@@ -344,7 +346,7 @@ public class SecuritiesSearchCriteria1 {
 			componentContext_lazy = () -> SecuritiesSearchCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "CtryOfIsse";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CountryOfIssue";
 			definition = "Primary market or country where a security is issued by the issuer or its agent.";
 			maxOccurs = 1;
@@ -387,7 +389,7 @@ public class SecuritiesSearchCriteria1 {
 			componentContext_lazy = () -> SecuritiesSearchCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "SctySts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityStatus";
 			definition = "Specifies the status of the security within its lifecycle.";
 			maxOccurs = 1;
@@ -428,7 +430,7 @@ public class SecuritiesSearchCriteria1 {
 			componentContext_lazy = () -> SecuritiesSearchCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "MntngCSD";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaintainingCSD";
 			definition = "Entity involved in an activity.";
 			maxOccurs = 1;
@@ -470,7 +472,7 @@ public class SecuritiesSearchCriteria1 {
 			componentContext_lazy = () -> SecuritiesSearchCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "InvstrCSD";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestorCSD";
 			definition = "Entity involved in an activity.";
 			maxOccurs = 1;
@@ -512,7 +514,7 @@ public class SecuritiesSearchCriteria1 {
 			componentContext_lazy = () -> SecuritiesSearchCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "IssrCSD";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssuerCSD";
 			definition = "Entity involved in an activity.";
 			maxOccurs = 1;
@@ -554,7 +556,7 @@ public class SecuritiesSearchCriteria1 {
 			componentContext_lazy = () -> SecuritiesSearchCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "TechIssrCSD";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TechnicalIssuerCSD";
 			definition = "Technical issuer of a security";
 			maxOccurs = 1;
@@ -596,7 +598,7 @@ public class SecuritiesSearchCriteria1 {
 			componentContext_lazy = () -> SecuritiesSearchCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "CSD";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CSD";
 			definition = "CSD of a security";
 			maxOccurs = 1;
@@ -609,14 +611,11 @@ public class SecuritiesSearchCriteria1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesSearchCriteria1.mmFinancialInstrumentIdentification,
-						com.tools20022.repository.msg.SecuritiesSearchCriteria1.mmClassificationFinancialInstrument, com.tools20022.repository.msg.SecuritiesSearchCriteria1.mmMaturityDate,
-						com.tools20022.repository.msg.SecuritiesSearchCriteria1.mmIssueDate, com.tools20022.repository.msg.SecuritiesSearchCriteria1.mmIssueCurrency, com.tools20022.repository.msg.SecuritiesSearchCriteria1.mmCountryOfIssue,
-						com.tools20022.repository.msg.SecuritiesSearchCriteria1.mmSecurityStatus, com.tools20022.repository.msg.SecuritiesSearchCriteria1.mmMaintainingCSD,
-						com.tools20022.repository.msg.SecuritiesSearchCriteria1.mmInvestorCSD, com.tools20022.repository.msg.SecuritiesSearchCriteria1.mmIssuerCSD,
-						com.tools20022.repository.msg.SecuritiesSearchCriteria1.mmTechnicalIssuerCSD, com.tools20022.repository.msg.SecuritiesSearchCriteria1.mmCSD);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(SecuritiesSearchCriteria1.mmFinancialInstrumentIdentification, SecuritiesSearchCriteria1.mmClassificationFinancialInstrument, SecuritiesSearchCriteria1.mmMaturityDate,
+						SecuritiesSearchCriteria1.mmIssueDate, SecuritiesSearchCriteria1.mmIssueCurrency, SecuritiesSearchCriteria1.mmCountryOfIssue, SecuritiesSearchCriteria1.mmSecurityStatus, SecuritiesSearchCriteria1.mmMaintainingCSD,
+						SecuritiesSearchCriteria1.mmInvestorCSD, SecuritiesSearchCriteria1.mmIssuerCSD, SecuritiesSearchCriteria1.mmTechnicalIssuerCSD, SecuritiesSearchCriteria1.mmCSD);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SecuritiesSearchCriteria1";
 				definition = "Criteria for a query about securities reference data.";
 			}

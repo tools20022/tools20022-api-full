@@ -17,13 +17,14 @@
 
 package com.tools20022.repository.entity;
 
-import com.tools20022.metamodel.MMBusinessAssociationEnd;
-import com.tools20022.metamodel.MMBusinessAttribute;
-import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.*;
+import com.tools20022.repository.choice.CertifiedCharacteristics1Choice;
+import com.tools20022.repository.choice.CertifiedCharacteristics2Choice;
 import com.tools20022.repository.datatype.Max70Text;
 import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.Product;
-import com.tools20022.repository.msg.TransportedGoods1;
+import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -38,20 +39,12 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Goods#mmTransport
- * Goods.mmTransport}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Goods#mmAnalysis
- * Goods.mmAnalysis}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Goods#mmHealthCheck
- * Goods.mmHealthCheck}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.Goods#mmPhytosanitaryInspection
- * Goods.mmPhytosanitaryInspection}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Goods#mmPartyRole
- * Goods.mmPartyRole}</li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.TransportedGoods1
+ * TransportedGoods1}</li>
  * </ul>
  * </li>
  * <li>
@@ -85,12 +78,20 @@ import java.util.List;
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
  * superType} = {@linkplain com.tools20022.repository.entity.Product Product}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.TransportedGoods1
- * TransportedGoods1}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Goods#mmTransport
+ * Goods.mmTransport}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Goods#mmAnalysis
+ * Goods.mmAnalysis}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Goods#mmHealthCheck
+ * Goods.mmHealthCheck}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Goods#mmPhytosanitaryInspection
+ * Goods.mmPhytosanitaryInspection}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Goods#mmPartyRole
+ * Goods.mmPartyRole}</li>
  * </ul>
  * </li>
  * <li>
@@ -151,13 +152,13 @@ public class Goods extends Product {
 		{
 			elementContext_lazy = () -> Goods.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Transport";
 			definition = "Specifies the transport information related to the delivery of goods.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.Transport.mmTransportedGoods;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Transport.mmObject();
 		}
 	};
@@ -200,10 +201,10 @@ public class Goods extends Product {
 	 */
 	public static final MMBusinessAttribute mmAnalysis = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CertifiedCharacteristics1Choice.mmAnalysis, com.tools20022.repository.choice.CertifiedCharacteristics2Choice.mmAnalysis);
+			derivation_lazy = () -> Arrays.asList(CertifiedCharacteristics1Choice.mmAnalysis, CertifiedCharacteristics2Choice.mmAnalysis);
 			elementContext_lazy = () -> Goods.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Analysis";
 			definition = "Analysis of the goods, as proven by the trade certificate.";
 			maxOccurs = 1;
@@ -250,10 +251,10 @@ public class Goods extends Product {
 	 */
 	public static final MMBusinessAttribute mmHealthCheck = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CertifiedCharacteristics1Choice.mmHealthIndication, com.tools20022.repository.choice.CertifiedCharacteristics2Choice.mmHealthIndication);
+			derivation_lazy = () -> Arrays.asList(CertifiedCharacteristics1Choice.mmHealthIndication, CertifiedCharacteristics2Choice.mmHealthIndication);
 			elementContext_lazy = () -> Goods.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "HealthCheck";
 			definition = "Indicates if the goods have passed the health check.";
 			maxOccurs = 1;
@@ -301,10 +302,10 @@ public class Goods extends Product {
 	 */
 	public static final MMBusinessAttribute mmPhytosanitaryInspection = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CertifiedCharacteristics1Choice.mmPhytosanitaryIndication, com.tools20022.repository.choice.CertifiedCharacteristics2Choice.mmPhytosanitaryIndication);
+			derivation_lazy = () -> Arrays.asList(CertifiedCharacteristics1Choice.mmPhytosanitaryIndication, CertifiedCharacteristics2Choice.mmPhytosanitaryIndication);
 			elementContext_lazy = () -> Goods.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PhytosanitaryInspection";
 			definition = "Indicates if the goods have passed the phytosanitary inspection.";
 			maxOccurs = 1;
@@ -350,12 +351,12 @@ public class Goods extends Product {
 		{
 			elementContext_lazy = () -> Goods.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PartyRole";
 			definition = "Role played by a party in the context of producing goods.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.GoodsPartyRole.mmItem;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.GoodsPartyRole.mmObject();
 		}
 	};
@@ -363,16 +364,14 @@ public class Goods extends Product {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Goods";
 				definition = "Good is a physical product that can be delivered to a purchaser and that involves the transfer of ownership from seller to customer.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Transport.mmTransportedGoods, com.tools20022.repository.entity.GoodsPartyRole.mmItem);
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CommercialDataSet2.mmGoods, com.tools20022.repository.msg.CommercialDataSet3.mmGoods, com.tools20022.repository.msg.Baseline4.mmGoods,
-						com.tools20022.repository.msg.CommercialDataSet4.mmGoods, com.tools20022.repository.msg.Baseline5.mmGoods, com.tools20022.repository.msg.CommercialDataSet5.mmGoods);
+				derivationElement_lazy = () -> Arrays.asList(CommercialDataSet2.mmGoods, CommercialDataSet3.mmGoods, Baseline4.mmGoods, CommercialDataSet4.mmGoods, Baseline5.mmGoods, CommercialDataSet5.mmGoods);
 				superType_lazy = () -> Product.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Goods.mmTransport, com.tools20022.repository.entity.Goods.mmAnalysis, com.tools20022.repository.entity.Goods.mmHealthCheck,
-						com.tools20022.repository.entity.Goods.mmPhytosanitaryInspection, com.tools20022.repository.entity.Goods.mmPartyRole);
+				element_lazy = () -> Arrays.asList(Goods.mmTransport, Goods.mmAnalysis, Goods.mmHealthCheck, Goods.mmPhytosanitaryInspection, Goods.mmPartyRole);
 				derivationComponent_lazy = () -> Arrays.asList(TransportedGoods1.mmObject());
 			}
 		});

@@ -20,10 +20,14 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.Organisation;
+import com.tools20022.repository.entity.OrganisationName;
+import com.tools20022.repository.entity.PartyName;
 import com.tools20022.repository.entity.PostalAddress;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -114,14 +118,14 @@ public class Organisation23 {
 	 */
 	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyName.mmName;
+			businessElementTrace_lazy = () -> PartyName.mmName;
 			componentContext_lazy = () -> Organisation23.mmObject();
 			isDerived = false;
 			xmlTag = "Nm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Name";
 			definition = "Name by which a party is known and which is usually used to identify that party.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Organisation24.mmName;
+			previousVersion_lazy = () -> Organisation24.mmName;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
@@ -166,14 +170,14 @@ public class Organisation23 {
 	 */
 	public static final MMMessageAttribute mmShortName = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationName.mmShortName;
+			businessElementTrace_lazy = () -> OrganisationName.mmShortName;
 			componentContext_lazy = () -> Organisation23.mmObject();
 			isDerived = false;
 			xmlTag = "ShrtNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ShortName";
 			definition = "Name of the organisation in short form.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Organisation24.mmShortName;
+			previousVersion_lazy = () -> Organisation24.mmShortName;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -224,10 +228,10 @@ public class Organisation23 {
 			componentContext_lazy = () -> Organisation23.mmObject();
 			isDerived = false;
 			xmlTag = "PstlAdr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PostalAddress";
 			definition = "Information that locates and identifies a specific address, as defined by postal services.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Organisation24.mmPostalAddress;
+			previousVersion_lazy = () -> Organisation24.mmPostalAddress;
 			maxOccurs = 5;
 			minOccurs = 1;
 			isComposite = true;
@@ -238,10 +242,10 @@ public class Organisation23 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Organisation23.mmName, com.tools20022.repository.msg.Organisation23.mmShortName, com.tools20022.repository.msg.Organisation23.mmPostalAddress);
+				messageElement_lazy = () -> Arrays.asList(Organisation23.mmName, Organisation23.mmShortName, Organisation23.mmPostalAddress);
 				trace_lazy = () -> Organisation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Organisation23";
 				definition = "Organised structure that is set up for a particular purpose, for example, a business, government body, department, charity, or financial institution.";
 				previousVersion_lazy = () -> Organisation24.mmObject();

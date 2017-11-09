@@ -19,8 +19,10 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Number;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -91,7 +93,7 @@ public class LocalDateTime1 {
 			componentContext_lazy = () -> LocalDateTime1.mmObject();
 			isDerived = false;
 			xmlTag = "FrDtTm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FromDateTime";
 			definition = "Date time of the beginning of the period (inclusive).";
 			maxOccurs = 1;
@@ -131,7 +133,7 @@ public class LocalDateTime1 {
 			componentContext_lazy = () -> LocalDateTime1.mmObject();
 			isDerived = false;
 			xmlTag = "ToDtTm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ToDateTime";
 			definition = "Date time of the end of the period (exclusive).";
 			maxOccurs = 1;
@@ -175,7 +177,7 @@ public class LocalDateTime1 {
 			componentContext_lazy = () -> LocalDateTime1.mmObject();
 			isDerived = false;
 			xmlTag = "UTCOffset";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UTCOffset";
 			definition = "UTC offset in minutes, of the local time during the period. For instance, 120 for Central European Time, -720 for Central Standard Time (North America).";
 			maxOccurs = 1;
@@ -187,9 +189,9 @@ public class LocalDateTime1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LocalDateTime1.mmFromDateTime, com.tools20022.repository.msg.LocalDateTime1.mmToDateTime, com.tools20022.repository.msg.LocalDateTime1.mmUTCOffset);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(LocalDateTime1.mmFromDateTime, LocalDateTime1.mmToDateTime, LocalDateTime1.mmUTCOffset);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "LocalDateTime1";
 				definition = "Local time offset to UTC (Coordinated Universal Time).";
 			}

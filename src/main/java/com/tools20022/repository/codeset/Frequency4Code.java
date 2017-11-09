@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.FrequencyCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -83,7 +85,7 @@ public class Frequency4Code extends FrequencyCode {
 	 */
 	public static final MMCode mmDaily = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Daily";
 			owner_lazy = () -> Frequency4Code.mmObject();
 		}
@@ -106,7 +108,7 @@ public class Frequency4Code extends FrequencyCode {
 	 */
 	public static final MMCode mmMonthly = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Monthly";
 			owner_lazy = () -> Frequency4Code.mmObject();
 		}
@@ -129,7 +131,7 @@ public class Frequency4Code extends FrequencyCode {
 	 */
 	public static final MMCode mmAnnual = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Annual";
 			owner_lazy = () -> Frequency4Code.mmObject();
 		}
@@ -138,12 +140,12 @@ public class Frequency4Code extends FrequencyCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("DAIL");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Frequency4Code";
 				definition = "Period unit between consecutive payments (for example day, month, year).";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Frequency4Code.mmDaily, com.tools20022.repository.codeset.Frequency4Code.mmMonthly, com.tools20022.repository.codeset.Frequency4Code.mmAnnual);
+				code_lazy = () -> Arrays.asList(Frequency4Code.mmDaily, Frequency4Code.mmMonthly, Frequency4Code.mmAnnual);
 				trace_lazy = () -> FrequencyCode.mmObject();
 			}
 		});

@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.LocationCategoryCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -86,7 +88,7 @@ public class LocationCategory2Code extends LocationCategoryCode {
 	 */
 	public static final MMCode mmAboard = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Aboard";
 			owner_lazy = () -> LocationCategory2Code.mmObject();
 		}
@@ -109,7 +111,7 @@ public class LocationCategory2Code extends LocationCategoryCode {
 	 */
 	public static final MMCode mmFixed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Fixed";
 			owner_lazy = () -> LocationCategory2Code.mmObject();
 		}
@@ -132,7 +134,7 @@ public class LocationCategory2Code extends LocationCategoryCode {
 	 */
 	public static final MMCode mmHome = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Home";
 			owner_lazy = () -> LocationCategory2Code.mmObject();
 		}
@@ -155,7 +157,7 @@ public class LocationCategory2Code extends LocationCategoryCode {
 	 */
 	public static final MMCode mmNomadic = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Nomadic";
 			owner_lazy = () -> LocationCategory2Code.mmObject();
 		}
@@ -164,12 +166,11 @@ public class LocationCategory2Code extends LocationCategoryCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "LocationCategory2Code";
 				definition = "Location category of the place where the transaction is actually performed. \r\nIt correspond partially to the ISO 8583:1993, field number 22-4.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.LocationCategory2Code.mmAboard, com.tools20022.repository.codeset.LocationCategory2Code.mmFixed,
-						com.tools20022.repository.codeset.LocationCategory2Code.mmHome, com.tools20022.repository.codeset.LocationCategory2Code.mmNomadic);
+				code_lazy = () -> Arrays.asList(LocationCategory2Code.mmAboard, LocationCategory2Code.mmFixed, LocationCategory2Code.mmHome, LocationCategory2Code.mmNomadic);
 				trace_lazy = () -> LocationCategoryCode.mmObject();
 			}
 		});

@@ -20,12 +20,19 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.seev.AgentCAElectionAdviceV01;
+import com.tools20022.repository.area.seev.AgentCAInformationAdviceV01;
+import com.tools20022.repository.area.seev.AgentCAInformationStatusAdviceV01;
 import com.tools20022.repository.choice.BeneficiaryCertificationType1FormatChoice;
 import com.tools20022.repository.choice.PartyIdentification2Choice;
 import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.BeneficialOwner;
+import com.tools20022.repository.entity.CorporateActionDistribution;
 import com.tools20022.repository.entity.CorporateActionEvent;
+import com.tools20022.repository.entity.Party;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -140,7 +147,7 @@ public class CorporateActionAdditionalInformation1 {
 			componentContext_lazy = () -> CorporateActionAdditionalInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "BnfclOwnrDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BeneficialOwnerDetails";
 			definition = "Provides information about the beneficial owner of the securities.";
 			minOccurs = 0;
@@ -183,11 +190,11 @@ public class CorporateActionAdditionalInformation1 {
 	 */
 	public static final MMMessageAttribute mmRegistrationDetails = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmRegistrationDetails;
+			businessElementTrace_lazy = () -> CorporateActionEvent.mmRegistrationDetails;
 			componentContext_lazy = () -> CorporateActionAdditionalInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "RegnDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RegistrationDetails";
 			definition = "Provides information required for the registration.";
 			maxOccurs = 1;
@@ -234,11 +241,11 @@ public class CorporateActionAdditionalInformation1 {
 	 */
 	public static final MMMessageAttribute mmReceiverIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> CorporateActionAdditionalInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "RcvrId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceiverIdentification";
 			definition = "Identification of the receiver of outturned resources (cash/securities) in case the resources need to be delivered outside the CSD.";
 			maxOccurs = 1;
@@ -285,11 +292,11 @@ public class CorporateActionAdditionalInformation1 {
 	 */
 	public static final MMMessageAttribute mmCertificationIndicator = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BeneficialOwner.mmCertificationIndicator;
+			businessElementTrace_lazy = () -> BeneficialOwner.mmCertificationIndicator;
 			componentContext_lazy = () -> CorporateActionAdditionalInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "CertfctnInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CertificationIndicator";
 			definition = "Whether or not certification is required from the account owner. \nY: certification required \nN: no certification required";
 			maxOccurs = 1;
@@ -333,11 +340,11 @@ public class CorporateActionAdditionalInformation1 {
 	 */
 	public static final MMMessageAttribute mmCertificationType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BeneficialOwner.mmCertificationType;
+			businessElementTrace_lazy = () -> BeneficialOwner.mmCertificationType;
 			componentContext_lazy = () -> CorporateActionAdditionalInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "CertfctnTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CertificationType";
 			definition = "Type of certification which is required.";
 			maxOccurs = 1;
@@ -381,11 +388,11 @@ public class CorporateActionAdditionalInformation1 {
 	 */
 	public static final MMMessageAssociationEnd mmDeliveryDetails = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionDistribution.mmCorporateActionProceedsDeliveryInstruction;
+			businessElementTrace_lazy = () -> CorporateActionDistribution.mmCorporateActionProceedsDeliveryInstruction;
 			componentContext_lazy = () -> CorporateActionAdditionalInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "DlvryDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeliveryDetails";
 			definition = "Provides information about the delivery details of proceeds.";
 			minOccurs = 0;
@@ -429,7 +436,7 @@ public class CorporateActionAdditionalInformation1 {
 			componentContext_lazy = () -> CorporateActionAdditionalInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlInstr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInstruction";
 			definition = "Provides additional details pertaining to the corporate action instruction.";
 			maxOccurs = 1;
@@ -441,15 +448,14 @@ public class CorporateActionAdditionalInformation1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionAdditionalInformation1.mmBeneficialOwnerDetails,
-						com.tools20022.repository.msg.CorporateActionAdditionalInformation1.mmRegistrationDetails, com.tools20022.repository.msg.CorporateActionAdditionalInformation1.mmReceiverIdentification,
-						com.tools20022.repository.msg.CorporateActionAdditionalInformation1.mmCertificationIndicator, com.tools20022.repository.msg.CorporateActionAdditionalInformation1.mmCertificationType,
-						com.tools20022.repository.msg.CorporateActionAdditionalInformation1.mmDeliveryDetails, com.tools20022.repository.msg.CorporateActionAdditionalInformation1.mmAdditionalInstruction);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.AgentCAElectionAdviceV01.mmAdditionalInformation,
-						com.tools20022.repository.area.seev.AgentCAInformationAdviceV01.mmCorporateActionAdditionalInformation, com.tools20022.repository.area.seev.AgentCAInformationStatusAdviceV01.mmCorporateActionAdditionalInformation);
+				messageElement_lazy = () -> Arrays.asList(CorporateActionAdditionalInformation1.mmBeneficialOwnerDetails, CorporateActionAdditionalInformation1.mmRegistrationDetails,
+						CorporateActionAdditionalInformation1.mmReceiverIdentification, CorporateActionAdditionalInformation1.mmCertificationIndicator, CorporateActionAdditionalInformation1.mmCertificationType,
+						CorporateActionAdditionalInformation1.mmDeliveryDetails, CorporateActionAdditionalInformation1.mmAdditionalInstruction);
+				messageBuildingBlock_lazy = () -> Arrays.asList(AgentCAElectionAdviceV01.mmAdditionalInformation, AgentCAInformationAdviceV01.mmCorporateActionAdditionalInformation,
+						AgentCAInformationStatusAdviceV01.mmCorporateActionAdditionalInformation);
 				trace_lazy = () -> CorporateActionEvent.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionAdditionalInformation1";
 				definition = "Provides additional information about the delivery details, beneficial owner details, etc.";
 			}

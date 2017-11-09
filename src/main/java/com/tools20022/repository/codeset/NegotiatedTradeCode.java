@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.NegotiatedTrade1Code
+ * NegotiatedTrade1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -38,13 +47,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.NegotiatedTradeCode#mmUnknown
  * NegotiatedTradeCode.mmUnknown}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.NegotiatedTrade1Code
- * NegotiatedTrade1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -94,7 +96,7 @@ public class NegotiatedTradeCode {
 	 */
 	public static final MMCode mmNegotiated = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Negotiated";
 			definition = "Trade is negotiated.";
 			owner_lazy = () -> NegotiatedTradeCode.mmObject();
@@ -124,7 +126,7 @@ public class NegotiatedTradeCode {
 	 */
 	public static final MMCode mmNotNegotiated = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NotNegotiated";
 			definition = "Trade is not negotiated.";
 			owner_lazy = () -> NegotiatedTradeCode.mmObject();
@@ -154,7 +156,7 @@ public class NegotiatedTradeCode {
 	 */
 	public static final MMCode mmUnknown = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Unknown";
 			definition = "Whether the trade is negotiated or not is unknown.";
 			owner_lazy = () -> NegotiatedTradeCode.mmObject();
@@ -165,13 +167,12 @@ public class NegotiatedTradeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("NEGO");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "NegotiatedTradeCode";
 				definition = "Specifies whether the trade is negotiated.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.NegotiatedTradeCode.mmNegotiated, com.tools20022.repository.codeset.NegotiatedTradeCode.mmNotNegotiated,
-						com.tools20022.repository.codeset.NegotiatedTradeCode.mmUnknown);
+				code_lazy = () -> Arrays.asList(NegotiatedTradeCode.mmNegotiated, NegotiatedTradeCode.mmNotNegotiated, NegotiatedTradeCode.mmUnknown);
 				derivation_lazy = () -> Arrays.asList(NegotiatedTrade1Code.mmObject());
 			}
 		});

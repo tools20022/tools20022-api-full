@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.StatementSourceCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -83,7 +85,7 @@ public class StatementSource1Code extends StatementSourceCode {
 	 */
 	public static final MMCode mmAccounting = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Accounting";
 			owner_lazy = () -> StatementSource1Code.mmObject();
 		}
@@ -106,7 +108,7 @@ public class StatementSource1Code extends StatementSourceCode {
 	 */
 	public static final MMCode mmCustody = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Custody";
 			owner_lazy = () -> StatementSource1Code.mmObject();
 		}
@@ -115,12 +117,12 @@ public class StatementSource1Code extends StatementSourceCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ACCT");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "StatementSource1Code";
 				definition = "Specifies the source of the report.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.StatementSource1Code.mmAccounting, com.tools20022.repository.codeset.StatementSource1Code.mmCustody);
+				code_lazy = () -> Arrays.asList(StatementSource1Code.mmAccounting, StatementSource1Code.mmCustody);
 				trace_lazy = () -> StatementSourceCode.mmObject();
 			}
 		});

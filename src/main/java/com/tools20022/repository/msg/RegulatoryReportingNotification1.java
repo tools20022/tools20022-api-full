@@ -20,8 +20,11 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.auth.PaymentRegulatoryInformationNotificationV01;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.RegisteredContract;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -115,11 +118,11 @@ public class RegulatoryReportingNotification1 {
 	 */
 	public static final MMMessageAttribute mmTransactionNotificationIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.RegisteredContract.mmIdentification;
+			businessElementTrace_lazy = () -> RegisteredContract.mmIdentification;
 			componentContext_lazy = () -> RegulatoryReportingNotification1.mmObject();
 			isDerived = false;
 			xmlTag = "TxNtfctnId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionNotificationIdentification";
 			definition = "Unique and unambiguous identification of the transaction notification.";
 			maxOccurs = 1;
@@ -161,11 +164,11 @@ public class RegulatoryReportingNotification1 {
 	 */
 	public static final MMMessageAssociationEnd mmAccountOwner = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.RegisteredContract.mmReportingParty;
+			businessElementTrace_lazy = () -> RegisteredContract.mmReportingParty;
 			componentContext_lazy = () -> RegulatoryReportingNotification1.mmObject();
 			isDerived = false;
 			xmlTag = "AcctOwnr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountOwner";
 			definition = "Party that legally owns the cash account.";
 			maxOccurs = 1;
@@ -214,11 +217,11 @@ public class RegulatoryReportingNotification1 {
 	 */
 	public static final MMMessageAssociationEnd mmAccountServicer = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.RegisteredContract.mmRegistrationAgent;
+			businessElementTrace_lazy = () -> RegisteredContract.mmRegistrationAgent;
 			componentContext_lazy = () -> RegulatoryReportingNotification1.mmObject();
 			isDerived = false;
 			xmlTag = "AcctSvcr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountServicer";
 			definition = "Party that manages the account on behalf of the account owner, that is manages the registration and booking of entries on the account, calculates balances on the account and provides information about the account.";
 			maxOccurs = 1;
@@ -265,11 +268,11 @@ public class RegulatoryReportingNotification1 {
 	 */
 	public static final MMMessageAssociationEnd mmTransactionCertificate = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.RegisteredContract.mmCertificate;
+			businessElementTrace_lazy = () -> RegisteredContract.mmCertificate;
 			componentContext_lazy = () -> RegulatoryReportingNotification1.mmObject();
 			isDerived = false;
 			xmlTag = "TxCert";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionCertificate";
 			definition = "Certificate against which all currency control transactions are registered.";
 			minOccurs = 1;
@@ -281,13 +284,12 @@ public class RegulatoryReportingNotification1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RegulatoryReportingNotification1.mmTransactionNotificationIdentification,
-						com.tools20022.repository.msg.RegulatoryReportingNotification1.mmAccountOwner, com.tools20022.repository.msg.RegulatoryReportingNotification1.mmAccountServicer,
-						com.tools20022.repository.msg.RegulatoryReportingNotification1.mmTransactionCertificate);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.auth.PaymentRegulatoryInformationNotificationV01.mmTransactionNotification);
+				messageElement_lazy = () -> Arrays.asList(RegulatoryReportingNotification1.mmTransactionNotificationIdentification, RegulatoryReportingNotification1.mmAccountOwner, RegulatoryReportingNotification1.mmAccountServicer,
+						RegulatoryReportingNotification1.mmTransactionCertificate);
+				messageBuildingBlock_lazy = () -> Arrays.asList(PaymentRegulatoryInformationNotificationV01.mmTransactionNotification);
 				trace_lazy = () -> RegisteredContract.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RegulatoryReportingNotification1";
 				definition = "Provides the details on the regulatory notification.";
 			}

@@ -17,14 +17,13 @@
 
 package com.tools20022.repository.msg;
 
-import com.tools20022.metamodel.MMMessageAssociationEnd;
-import com.tools20022.metamodel.MMMessageAttribute;
-import com.tools20022.metamodel.MMMessageComponent;
-import com.tools20022.metamodel.MMXor;
+import com.tools20022.metamodel.*;
 import com.tools20022.repository.choice.PartyIdentification26Choice;
 import com.tools20022.repository.codeset.InvestmentFundRole5Code;
 import com.tools20022.repository.datatype.Extended350Code;
+import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.entity.TradePartyRole;
+import com.tools20022.repository.GeneratedRepository;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -116,11 +115,11 @@ public class Intermediary19 {
 	 */
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> Intermediary19.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Unique and unambiguous identifier of the intermediary.";
 			maxOccurs = 1;
@@ -163,11 +162,11 @@ public class Intermediary19 {
 	 */
 	public static final MMMessageAssociationEnd mmAccount = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradePartyRole.mmAccount;
+			businessElementTrace_lazy = () -> TradePartyRole.mmAccount;
 			componentContext_lazy = () -> Intermediary19.mmObject();
 			isDerived = false;
 			xmlTag = "Acct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Account";
 			definition = "Business relationship between two entities; one entity is the account owner, the other entity is the account servicer.";
 			maxOccurs = 1;
@@ -215,7 +214,7 @@ public class Intermediary19 {
 			componentContext_lazy = () -> Intermediary19.mmObject();
 			isDerived = false;
 			xmlTag = "Role";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Role";
 			definition = "Function performed by the intermediary.";
 			maxOccurs = 1;
@@ -262,7 +261,7 @@ public class Intermediary19 {
 			componentContext_lazy = () -> Intermediary19.mmObject();
 			isDerived = false;
 			xmlTag = "XtndedRole";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExtendedRole";
 			definition = "Function performed by the intermediary.";
 			maxOccurs = 1;
@@ -275,6 +274,9 @@ public class Intermediary19 {
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
+	 * messageComponent} =
+	 * {@linkplain com.tools20022.repository.msg.Intermediary19 Intermediary19}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getImpactedElements
 	 * impactedElements} =
 	 * <ul>
@@ -285,9 +287,6 @@ public class Intermediary19 {
 	 * Intermediary19.mmExtendedRole}</li>
 	 * </ul>
 	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
-	 * messageComponent} =
-	 * {@linkplain com.tools20022.repository.msg.Intermediary19 Intermediary19}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -302,22 +301,21 @@ public class Intermediary19 {
 	 */
 	public static final MMXor mmRoleOrExtendedRoleRule = new MMXor() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RoleOrExtendedRoleRule";
 			definition = "Either Role or ExtendedRole may be present, but not both.";
 			messageComponent_lazy = () -> Intermediary19.mmObject();
-			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Intermediary19.mmRole, com.tools20022.repository.msg.Intermediary19.mmExtendedRole);
+			impactedElements_lazy = () -> Arrays.asList(Intermediary19.mmRole, Intermediary19.mmExtendedRole);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Intermediary19.mmIdentification, com.tools20022.repository.msg.Intermediary19.mmAccount, com.tools20022.repository.msg.Intermediary19.mmRole,
-						com.tools20022.repository.msg.Intermediary19.mmExtendedRole);
+				messageElement_lazy = () -> Arrays.asList(Intermediary19.mmIdentification, Intermediary19.mmAccount, Intermediary19.mmRole, Intermediary19.mmExtendedRole);
 				trace_lazy = () -> TradePartyRole.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
 						return DateFormat.getDateInstance(java.text.DateFormat.LONG).parse("September 9, 2016");
@@ -327,7 +325,7 @@ public class Intermediary19 {
 				})).get();
 				name = "Intermediary19";
 				definition = "Party that provides services to investors relating to financial products.";
-				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Intermediary19.mmRoleOrExtendedRoleRule);
+				xors_lazy = () -> Arrays.asList(Intermediary19.mmRoleOrExtendedRoleRule);
 			}
 		});
 		return mmObject_lazy.get();

@@ -19,7 +19,9 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.Frequency6Code;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.FrequencyPeriod1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -116,11 +118,11 @@ public class Frequency21Choice {
 			componentContext_lazy = () -> Frequency21Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Frequency expressed as an ISO 20022 code.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Frequency36Choice.mmType);
-			previousVersion_lazy = () -> com.tools20022.repository.choice.Frequency11Choice.mmCode;
+			nextVersions_lazy = () -> Arrays.asList(Frequency36Choice.mmType);
+			previousVersion_lazy = () -> Frequency11Choice.mmCode;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Frequency6Code.mmObject();
@@ -173,11 +175,11 @@ public class Frequency21Choice {
 			componentContext_lazy = () -> Frequency21Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Period";
 			definition = "Frequency expressed as a proprietary code.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Frequency36Choice.mmPeriod);
-			previousVersion_lazy = () -> com.tools20022.repository.choice.Frequency11Choice.mmProprietary;
+			nextVersions_lazy = () -> Arrays.asList(Frequency36Choice.mmPeriod);
+			previousVersion_lazy = () -> Frequency11Choice.mmProprietary;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> FrequencyPeriod1.mmObject();
@@ -187,9 +189,9 @@ public class Frequency21Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Frequency21Choice.mmType, com.tools20022.repository.choice.Frequency21Choice.mmPeriod);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(Frequency21Choice.mmType, Frequency21Choice.mmPeriod);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Frequency21Choice";
 				definition = "Choice of format for a frequency, for example, the frequency of payment.";
 				nextVersions_lazy = () -> Arrays.asList(Frequency36Choice.mmObject());

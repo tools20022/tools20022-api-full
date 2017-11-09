@@ -20,9 +20,13 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.AirportName1Choice;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.entity.PartyName;
+import com.tools20022.repository.entity.Transport;
 import com.tools20022.repository.entity.TransportByAir;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -116,14 +120,14 @@ public class TransportByAir2 {
 	 */
 	public static final MMMessageAssociationEnd mmDepartureAirport = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Transport.mmPlaceOfDeparture;
+			businessElementTrace_lazy = () -> Transport.mmPlaceOfDeparture;
 			componentContext_lazy = () -> TransportByAir2.mmObject();
 			isDerived = false;
 			xmlTag = "DprtureAirprt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DepartureAirport";
 			definition = "Place from where the goods must leave.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransportByAir4.mmDepartureAirport);
+			nextVersions_lazy = () -> Arrays.asList(TransportByAir4.mmDepartureAirport);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -172,14 +176,14 @@ public class TransportByAir2 {
 	 */
 	public static final MMMessageAssociationEnd mmDestinationAirport = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Transport.mmPlaceOfDestination;
+			businessElementTrace_lazy = () -> Transport.mmPlaceOfDestination;
 			componentContext_lazy = () -> TransportByAir2.mmObject();
 			isDerived = false;
 			xmlTag = "DstnAirprt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DestinationAirport";
 			definition = "Place where the goods must arrive.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransportByAir4.mmDestinationAirport);
+			nextVersions_lazy = () -> Arrays.asList(TransportByAir4.mmDestinationAirport);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -232,14 +236,14 @@ public class TransportByAir2 {
 	 */
 	public static final MMMessageAttribute mmAirCarrierName = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyName.mmName;
+			businessElementTrace_lazy = () -> PartyName.mmName;
 			componentContext_lazy = () -> TransportByAir2.mmObject();
 			isDerived = false;
 			xmlTag = "AirCrrierNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AirCarrierName";
 			definition = "Identifies the party that is responsible for the conveyance of the goods from one place to another.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransportByAir4.mmAirCarrierName);
+			nextVersions_lazy = () -> Arrays.asList(TransportByAir4.mmAirCarrierName);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -249,11 +253,10 @@ public class TransportByAir2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransportByAir2.mmDepartureAirport, com.tools20022.repository.msg.TransportByAir2.mmDestinationAirport,
-						com.tools20022.repository.msg.TransportByAir2.mmAirCarrierName);
+				messageElement_lazy = () -> Arrays.asList(TransportByAir2.mmDepartureAirport, TransportByAir2.mmDestinationAirport, TransportByAir2.mmAirCarrierName);
 				trace_lazy = () -> TransportByAir.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TransportByAir2";
 				definition = "Information related to the transportation of goods by air.";
 				nextVersions_lazy = () -> Arrays.asList(TransportByAir4.mmObject());

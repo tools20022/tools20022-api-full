@@ -20,12 +20,16 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ExternalDocumentType1Code;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.Max140Text;
 import com.tools20022.repository.datatype.Max256Text;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.Document;
+import com.tools20022.repository.entity.ElectronicAddress;
+import com.tools20022.repository.entity.GenericIdentification;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -134,14 +138,14 @@ public class DocumentGeneralInformation2 {
 	 */
 	public static final MMMessageAttribute mmDocumentType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Document.mmType;
+			businessElementTrace_lazy = () -> Document.mmType;
 			componentContext_lazy = () -> DocumentGeneralInformation2.mmObject();
 			isDerived = false;
 			xmlTag = "DocTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DocumentType";
 			definition = "Specifies the type of the document, for example commercial invoice.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DocumentGeneralInformation3.mmDocumentType);
+			nextVersions_lazy = () -> Arrays.asList(DocumentGeneralInformation3.mmDocumentType);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ExternalDocumentType1Code.mmObject();
@@ -190,14 +194,14 @@ public class DocumentGeneralInformation2 {
 	 */
 	public static final MMMessageAttribute mmDocumentNumber = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmIdentification;
+			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> DocumentGeneralInformation2.mmObject();
 			isDerived = false;
 			xmlTag = "DocNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DocumentNumber";
 			definition = "Unique identifier of the document.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DocumentGeneralInformation3.mmDocumentNumber);
+			nextVersions_lazy = () -> Arrays.asList(DocumentGeneralInformation3.mmDocumentNumber);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -247,10 +251,10 @@ public class DocumentGeneralInformation2 {
 			componentContext_lazy = () -> DocumentGeneralInformation2.mmObject();
 			isDerived = false;
 			xmlTag = "SndrRcvrSeqId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SenderReceiverSequenceIdentification";
 			definition = "Specifies the identification sequence number for a specific couple sender/receiver.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DocumentGeneralInformation3.mmSenderReceiverSequenceIdentification);
+			nextVersions_lazy = () -> Arrays.asList(DocumentGeneralInformation3.mmSenderReceiverSequenceIdentification);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
@@ -299,14 +303,14 @@ public class DocumentGeneralInformation2 {
 	 */
 	public static final MMMessageAttribute mmIssueDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Document.mmIssueDate;
+			businessElementTrace_lazy = () -> Document.mmIssueDate;
 			componentContext_lazy = () -> DocumentGeneralInformation2.mmObject();
 			isDerived = false;
 			xmlTag = "IsseDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssueDate";
 			definition = "Issue date of the document.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DocumentGeneralInformation3.mmIssueDate);
+			nextVersions_lazy = () -> Arrays.asList(DocumentGeneralInformation3.mmIssueDate);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
@@ -356,14 +360,14 @@ public class DocumentGeneralInformation2 {
 	 */
 	public static final MMMessageAttribute mmURL = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ElectronicAddress.mmURLAddress;
+			businessElementTrace_lazy = () -> ElectronicAddress.mmURLAddress;
 			componentContext_lazy = () -> DocumentGeneralInformation2.mmObject();
 			isDerived = false;
 			xmlTag = "URL";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "URL";
 			definition = "URL (Uniform Resource Locator) where the document can be found";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DocumentGeneralInformation3.mmURL);
+			nextVersions_lazy = () -> Arrays.asList(DocumentGeneralInformation3.mmURL);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max256Text.mmObject();
@@ -409,10 +413,10 @@ public class DocumentGeneralInformation2 {
 			componentContext_lazy = () -> DocumentGeneralInformation2.mmObject();
 			isDerived = false;
 			xmlTag = "AttchdBinryFile";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AttachedBinaryFile";
 			definition = "Attached binary file for this document.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DocumentGeneralInformation3.mmAttachedBinaryFile);
+			nextVersions_lazy = () -> Arrays.asList(DocumentGeneralInformation3.mmAttachedBinaryFile);
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.BinaryFile1.mmObject();
@@ -422,12 +426,11 @@ public class DocumentGeneralInformation2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DocumentGeneralInformation2.mmDocumentType, com.tools20022.repository.msg.DocumentGeneralInformation2.mmDocumentNumber,
-						com.tools20022.repository.msg.DocumentGeneralInformation2.mmSenderReceiverSequenceIdentification, com.tools20022.repository.msg.DocumentGeneralInformation2.mmIssueDate,
-						com.tools20022.repository.msg.DocumentGeneralInformation2.mmURL, com.tools20022.repository.msg.DocumentGeneralInformation2.mmAttachedBinaryFile);
+				messageElement_lazy = () -> Arrays.asList(DocumentGeneralInformation2.mmDocumentType, DocumentGeneralInformation2.mmDocumentNumber, DocumentGeneralInformation2.mmSenderReceiverSequenceIdentification,
+						DocumentGeneralInformation2.mmIssueDate, DocumentGeneralInformation2.mmURL, DocumentGeneralInformation2.mmAttachedBinaryFile);
 				trace_lazy = () -> Document.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DocumentGeneralInformation2";
 				definition = "General information that unambiguously identifies a document, such as identification number and issue date time.";
 				nextVersions_lazy = () -> Arrays.asList(DocumentGeneralInformation3.mmObject());

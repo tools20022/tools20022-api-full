@@ -20,10 +20,14 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CurrencyCode;
 import com.tools20022.repository.codeset.SettlementDateCode;
 import com.tools20022.repository.datatype.*;
+import com.tools20022.repository.entity.CurrencyExchange;
 import com.tools20022.repository.entity.ForeignExchangeTrade;
+import com.tools20022.repository.entity.TreasuryTradeSettlementStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -129,7 +133,7 @@ public class Trade3 {
 			componentContext_lazy = () -> Trade3.mmObject();
 			isDerived = false;
 			xmlTag = "ExctnPric";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExecutionPrice";
 			definition = "Price of the execution of the trade.";
 			maxOccurs = 1;
@@ -170,7 +174,7 @@ public class Trade3 {
 			componentContext_lazy = () -> Trade3.mmObject();
 			isDerived = false;
 			xmlTag = "LastQty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LastQuantity";
 			definition = "Amount of trade in trading currency.";
 			maxOccurs = 1;
@@ -212,7 +216,7 @@ public class Trade3 {
 			componentContext_lazy = () -> Trade3.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementType";
 			definition = "Specifies the settlment period of the foreign exchange trade.";
 			maxOccurs = 1;
@@ -254,11 +258,11 @@ public class Trade3 {
 	 */
 	public static final MMMessageAttribute mmSettlementDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TreasuryTradeSettlementStatus.mmSettlementDate;
+			businessElementTrace_lazy = () -> TreasuryTradeSettlementStatus.mmSettlementDate;
 			componentContext_lazy = () -> Trade3.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementDate";
 			definition = "Specifies the date on which the trade will be settled.";
 			maxOccurs = 1;
@@ -299,11 +303,11 @@ public class Trade3 {
 	 */
 	public static final MMMessageAssociationEnd mmValuationRate = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmExchangeRate;
+			businessElementTrace_lazy = () -> CurrencyExchange.mmExchangeRate;
 			componentContext_lazy = () -> Trade3.mmObject();
 			isDerived = false;
 			xmlTag = "ValtnRate";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValuationRate";
 			definition = "Specifies the valuation rate used for the trade.";
 			maxOccurs = 1;
@@ -345,7 +349,7 @@ public class Trade3 {
 			componentContext_lazy = () -> Trade3.mmObject();
 			isDerived = false;
 			xmlTag = "FwdPts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForwardPoints";
 			definition = "Specifies the forward points of the trade if needed.";
 			maxOccurs = 1;
@@ -386,7 +390,7 @@ public class Trade3 {
 			componentContext_lazy = () -> Trade3.mmObject();
 			isDerived = false;
 			xmlTag = "ClctdCtrPtyCcyLastQty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CalculatedCounterpartyCurrencyLastQuantity";
 			definition = "Amount of trade in corresponding currency.";
 			maxOccurs = 1;
@@ -426,7 +430,7 @@ public class Trade3 {
 			componentContext_lazy = () -> Trade3.mmObject();
 			isDerived = false;
 			xmlTag = "ValDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValueDate";
 			definition = "Specifies the value date of spot transaction.";
 			maxOccurs = 1;
@@ -470,7 +474,7 @@ public class Trade3 {
 			componentContext_lazy = () -> Trade3.mmObject();
 			isDerived = false;
 			xmlTag = "RskAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RiskAmount";
 			definition = "Measurement of the amount of the trade values converted in the US dollars.";
 			maxOccurs = 1;
@@ -510,7 +514,7 @@ public class Trade3 {
 			componentContext_lazy = () -> Trade3.mmObject();
 			isDerived = false;
 			xmlTag = "SctyId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityIdentification";
 			definition = "Security identification of the trade.";
 			maxOccurs = 1;
@@ -551,7 +555,7 @@ public class Trade3 {
 			componentContext_lazy = () -> Trade3.mmObject();
 			isDerived = false;
 			xmlTag = "FxgCcy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FixingCurrency";
 			definition = "Specifies the ISO code of the fixing currency.";
 			maxOccurs = 1;
@@ -594,11 +598,11 @@ public class Trade3 {
 	 */
 	public static final MMMessageAttribute mmFixingDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TreasuryTradeSettlementStatus.mmSettlementDate;
+			businessElementTrace_lazy = () -> TreasuryTradeSettlementStatus.mmSettlementDate;
 			componentContext_lazy = () -> Trade3.mmObject();
 			isDerived = false;
 			xmlTag = "FxgDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FixingDate";
 			definition = "Date at which the rate determination is made in the NDF trade.";
 			maxOccurs = 1;
@@ -640,7 +644,7 @@ public class Trade3 {
 			componentContext_lazy = () -> Trade3.mmObject();
 			isDerived = false;
 			xmlTag = "OptnInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionIndicator";
 			definition = "Indicates whether the spot trade is produced by the option.";
 			maxOccurs = 1;
@@ -681,7 +685,7 @@ public class Trade3 {
 			componentContext_lazy = () -> Trade3.mmObject();
 			isDerived = false;
 			xmlTag = "DltaInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeltaIndicator";
 			definition = "Indicate the trade whether it's exchange delta.";
 			maxOccurs = 1;
@@ -721,7 +725,7 @@ public class Trade3 {
 			componentContext_lazy = () -> Trade3.mmObject();
 			isDerived = false;
 			xmlTag = "AssoctdTradRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AssociatedTradeReference";
 			definition = "Some associated trade reference needs to be specified.";
 			minOccurs = 0;
@@ -732,14 +736,12 @@ public class Trade3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Trade3.mmExecutionPrice, com.tools20022.repository.msg.Trade3.mmLastQuantity, com.tools20022.repository.msg.Trade3.mmSettlementType,
-						com.tools20022.repository.msg.Trade3.mmSettlementDate, com.tools20022.repository.msg.Trade3.mmValuationRate, com.tools20022.repository.msg.Trade3.mmForwardPoints,
-						com.tools20022.repository.msg.Trade3.mmCalculatedCounterpartyCurrencyLastQuantity, com.tools20022.repository.msg.Trade3.mmValueDate, com.tools20022.repository.msg.Trade3.mmRiskAmount,
-						com.tools20022.repository.msg.Trade3.mmSecurityIdentification, com.tools20022.repository.msg.Trade3.mmFixingCurrency, com.tools20022.repository.msg.Trade3.mmFixingDate,
-						com.tools20022.repository.msg.Trade3.mmOptionIndicator, com.tools20022.repository.msg.Trade3.mmDeltaIndicator, com.tools20022.repository.msg.Trade3.mmAssociatedTradeReference);
+				messageElement_lazy = () -> Arrays.asList(Trade3.mmExecutionPrice, Trade3.mmLastQuantity, Trade3.mmSettlementType, Trade3.mmSettlementDate, Trade3.mmValuationRate, Trade3.mmForwardPoints,
+						Trade3.mmCalculatedCounterpartyCurrencyLastQuantity, Trade3.mmValueDate, Trade3.mmRiskAmount, Trade3.mmSecurityIdentification, Trade3.mmFixingCurrency, Trade3.mmFixingDate, Trade3.mmOptionIndicator,
+						Trade3.mmDeltaIndicator, Trade3.mmAssociatedTradeReference);
 				trace_lazy = () -> ForeignExchangeTrade.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Trade3";
 				definition = "Details of the foreign exchange trade including Spot\\Forward\\NDF that is captured";
 			}

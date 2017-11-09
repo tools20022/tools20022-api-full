@@ -19,10 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ThresholdType1Code;
 import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
-import com.tools20022.repository.entity.Commission;
-import com.tools20022.repository.entity.MarginCall;
+import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -133,11 +134,11 @@ public class SummaryAmounts1 {
 	 */
 	public static final MMMessageAttribute mmThresholdAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.VariationMarginTerm.mmThresholdAmount;
+			businessElementTrace_lazy = () -> VariationMarginTerm.mmThresholdAmount;
 			componentContext_lazy = () -> SummaryAmounts1.mmObject();
 			isDerived = false;
 			xmlTag = "ThrshldAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ThresholdAmount";
 			definition = "Amount of unsecured exposure a counterparty will accept before issuing a margin call in the base currency.";
 			maxOccurs = 1;
@@ -182,11 +183,11 @@ public class SummaryAmounts1 {
 	 */
 	public static final MMMessageAttribute mmThresholdType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.VariationMarginTerm.mmThresholdType;
+			businessElementTrace_lazy = () -> VariationMarginTerm.mmThresholdType;
 			componentContext_lazy = () -> SummaryAmounts1.mmObject();
 			isDerived = false;
 			xmlTag = "ThrshldTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ThresholdType";
 			definition = "Specifies if the threshold amount is secured or unsecured.";
 			maxOccurs = 1;
@@ -231,11 +232,11 @@ public class SummaryAmounts1 {
 	 */
 	public static final MMMessageAttribute mmPreHaircutCollateralValue = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ExposureCalculation.mmTotalCollateralCurrentValue;
+			businessElementTrace_lazy = () -> ExposureCalculation.mmTotalCollateralCurrentValue;
 			componentContext_lazy = () -> SummaryAmounts1.mmObject();
 			isDerived = false;
 			xmlTag = "PreHrcutCollVal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreHaircutCollateralValue";
 			definition = "Total value of posted collateral (pre-haircut) held by the taker.";
 			maxOccurs = 1;
@@ -279,11 +280,11 @@ public class SummaryAmounts1 {
 	 */
 	public static final MMMessageAttribute mmAdjustedExposure = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ExposureCalculation.mmTotalExposedAmount;
+			businessElementTrace_lazy = () -> ExposureCalculation.mmTotalExposedAmount;
 			componentContext_lazy = () -> SummaryAmounts1.mmObject();
 			isDerived = false;
 			xmlTag = "AdjstdXpsr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdjustedExposure";
 			definition = "Total amount of collateral required (unrounded).";
 			maxOccurs = 1;
@@ -330,7 +331,7 @@ public class SummaryAmounts1 {
 			componentContext_lazy = () -> SummaryAmounts1.mmObject();
 			isDerived = false;
 			xmlTag = "CollReqrd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralRequired";
 			definition = "Total amount of collateral required (rounded).";
 			maxOccurs = 1;
@@ -378,11 +379,11 @@ public class SummaryAmounts1 {
 	 */
 	public static final MMMessageAttribute mmMinimumTransferAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ExposureTerm.mmMinimumTransferAmount;
+			businessElementTrace_lazy = () -> ExposureTerm.mmMinimumTransferAmount;
 			componentContext_lazy = () -> SummaryAmounts1.mmObject();
 			isDerived = false;
 			xmlTag = "MinTrfAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MinimumTransferAmount";
 			definition = "Minimum amount to pay/receive as specified in the agreement in the base currency (to avoid the need to transfer an inconveniently small amount of collateral).";
 			maxOccurs = 1;
@@ -429,11 +430,11 @@ public class SummaryAmounts1 {
 	 */
 	public static final MMMessageAttribute mmRoundingAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ExposureTerm.mmRoundingAmount;
+			businessElementTrace_lazy = () -> ExposureTerm.mmRoundingAmount;
 			componentContext_lazy = () -> SummaryAmounts1.mmObject();
 			isDerived = false;
 			xmlTag = "RndgAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RoundingAmount";
 			definition = "Amount specified to avoid the need to transfer uneven amounts of collateral.";
 			maxOccurs = 1;
@@ -477,11 +478,11 @@ public class SummaryAmounts1 {
 	 */
 	public static final MMMessageAttribute mmPreviousExposureValue = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ExposureCalculation.mmTotalExposedAmount;
+			businessElementTrace_lazy = () -> ExposureCalculation.mmTotalExposedAmount;
 			componentContext_lazy = () -> SummaryAmounts1.mmObject();
 			isDerived = false;
 			xmlTag = "PrvsXpsrVal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousExposureValue";
 			definition = "Exposure value at previous valuation.";
 			maxOccurs = 1;
@@ -525,11 +526,11 @@ public class SummaryAmounts1 {
 	 */
 	public static final MMMessageAttribute mmPreviousCollateralValue = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ExposureCalculation.mmTotalCollateralCurrentValue;
+			businessElementTrace_lazy = () -> ExposureCalculation.mmTotalCollateralCurrentValue;
 			componentContext_lazy = () -> SummaryAmounts1.mmObject();
 			isDerived = false;
 			xmlTag = "PrvsCollVal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousCollateralValue";
 			definition = "Value of collateral at previous valuation.";
 			maxOccurs = 1;
@@ -573,11 +574,11 @@ public class SummaryAmounts1 {
 	 */
 	public static final MMMessageAttribute mmTotalPendingIncomingCollateral = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CollateralBalance.mmInTransit;
+			businessElementTrace_lazy = () -> CollateralBalance.mmInTransit;
 			componentContext_lazy = () -> SummaryAmounts1.mmObject();
 			isDerived = false;
 			xmlTag = "TtlPdgIncmgColl";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalPendingIncomingCollateral";
 			definition = "Value of incoming collateral, to be settled.";
 			maxOccurs = 1;
@@ -621,11 +622,11 @@ public class SummaryAmounts1 {
 	 */
 	public static final MMMessageAttribute mmTotalPendingOutgoingCollateral = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CollateralBalance.mmInTransit;
+			businessElementTrace_lazy = () -> CollateralBalance.mmInTransit;
 			componentContext_lazy = () -> SummaryAmounts1.mmObject();
 			isDerived = false;
 			xmlTag = "TtlPdgOutgngColl";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalPendingOutgoingCollateral";
 			definition = "Value of outgoing collateral, to be settled.";
 			maxOccurs = 1;
@@ -669,11 +670,11 @@ public class SummaryAmounts1 {
 	 */
 	public static final MMMessageAttribute mmTotalAccruedInterestAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Interest.mmAccruedInterestAmount;
+			businessElementTrace_lazy = () -> Interest.mmAccruedInterestAmount;
 			componentContext_lazy = () -> SummaryAmounts1.mmObject();
 			isDerived = false;
 			xmlTag = "TtlAcrdIntrstAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalAccruedInterestAmount";
 			definition = "Sum of accrued interest.";
 			maxOccurs = 1;
@@ -720,7 +721,7 @@ public class SummaryAmounts1 {
 			componentContext_lazy = () -> SummaryAmounts1.mmObject();
 			isDerived = false;
 			xmlTag = "TtlFees";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalFees";
 			definition = "Sum of fees/commissions.";
 			maxOccurs = 1;
@@ -732,13 +733,11 @@ public class SummaryAmounts1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SummaryAmounts1.mmThresholdAmount, com.tools20022.repository.msg.SummaryAmounts1.mmThresholdType,
-						com.tools20022.repository.msg.SummaryAmounts1.mmPreHaircutCollateralValue, com.tools20022.repository.msg.SummaryAmounts1.mmAdjustedExposure, com.tools20022.repository.msg.SummaryAmounts1.mmCollateralRequired,
-						com.tools20022.repository.msg.SummaryAmounts1.mmMinimumTransferAmount, com.tools20022.repository.msg.SummaryAmounts1.mmRoundingAmount, com.tools20022.repository.msg.SummaryAmounts1.mmPreviousExposureValue,
-						com.tools20022.repository.msg.SummaryAmounts1.mmPreviousCollateralValue, com.tools20022.repository.msg.SummaryAmounts1.mmTotalPendingIncomingCollateral,
-						com.tools20022.repository.msg.SummaryAmounts1.mmTotalPendingOutgoingCollateral, com.tools20022.repository.msg.SummaryAmounts1.mmTotalAccruedInterestAmount, com.tools20022.repository.msg.SummaryAmounts1.mmTotalFees);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(SummaryAmounts1.mmThresholdAmount, SummaryAmounts1.mmThresholdType, SummaryAmounts1.mmPreHaircutCollateralValue, SummaryAmounts1.mmAdjustedExposure,
+						SummaryAmounts1.mmCollateralRequired, SummaryAmounts1.mmMinimumTransferAmount, SummaryAmounts1.mmRoundingAmount, SummaryAmounts1.mmPreviousExposureValue, SummaryAmounts1.mmPreviousCollateralValue,
+						SummaryAmounts1.mmTotalPendingIncomingCollateral, SummaryAmounts1.mmTotalPendingOutgoingCollateral, SummaryAmounts1.mmTotalAccruedInterestAmount, SummaryAmounts1.mmTotalFees);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SummaryAmounts1";
 				definition = "Provides amounts taken in to account to calculate the collateral position.";
 			}

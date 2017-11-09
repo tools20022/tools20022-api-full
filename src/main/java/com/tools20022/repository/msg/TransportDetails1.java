@@ -17,13 +17,12 @@
 
 package com.tools20022.repository.msg;
 
-import com.tools20022.metamodel.MMMessageAssociationEnd;
-import com.tools20022.metamodel.MMMessageAttribute;
-import com.tools20022.metamodel.MMMessageComponent;
-import com.tools20022.metamodel.MMXor;
+import com.tools20022.metamodel.*;
 import com.tools20022.repository.choice.TransportMeans2Choice;
 import com.tools20022.repository.datatype.ISODate;
+import com.tools20022.repository.entity.ShipmentDateRange;
 import com.tools20022.repository.entity.Transport;
+import com.tools20022.repository.GeneratedRepository;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -127,7 +126,7 @@ public class TransportDetails1 {
 			componentContext_lazy = () -> TransportDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "TrnsprtDocRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransportDocumentReference";
 			definition = "Reference to the identification of  the underlying transport document.";
 			minOccurs = 1;
@@ -169,11 +168,11 @@ public class TransportDetails1 {
 	 */
 	public static final MMMessageAssociationEnd mmTransportedGoods = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Transport.mmTransportedGoods;
+			businessElementTrace_lazy = () -> Transport.mmTransportedGoods;
 			componentContext_lazy = () -> TransportDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "TrnsprtdGoods";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransportedGoods";
 			definition = "Goods that are transported.";
 			minOccurs = 1;
@@ -219,7 +218,7 @@ public class TransportDetails1 {
 			componentContext_lazy = () -> TransportDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "RtgSummry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RoutingSummary";
 			definition = "Information related to the conveyance of goods.";
 			maxOccurs = 1;
@@ -263,11 +262,11 @@ public class TransportDetails1 {
 	 */
 	public static final MMMessageAttribute mmProposedShipmentDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ShipmentDateRange.mmShipmentDate;
+			businessElementTrace_lazy = () -> ShipmentDateRange.mmShipmentDate;
 			componentContext_lazy = () -> TransportDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "PropsdShipmntDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProposedShipmentDate";
 			definition = "Proposed date on which the goods should be shipped.";
 			maxOccurs = 1;
@@ -310,11 +309,11 @@ public class TransportDetails1 {
 	 */
 	public static final MMMessageAttribute mmActualShipmentDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ShipmentDateRange.mmShipmentDate;
+			businessElementTrace_lazy = () -> ShipmentDateRange.mmShipmentDate;
 			componentContext_lazy = () -> TransportDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "ActlShipmntDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ActualShipmentDate";
 			definition = "Actual date whereby the goods were shipped.";
 			maxOccurs = 1;
@@ -356,11 +355,11 @@ public class TransportDetails1 {
 	 */
 	public static final MMMessageAssociationEnd mmIncoterms = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Transport.mmIncoterms;
+			businessElementTrace_lazy = () -> Transport.mmIncoterms;
 			componentContext_lazy = () -> TransportDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "Incotrms";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Incoterms";
 			definition = "Specifies the applicable Incoterm and associated location.";
 			maxOccurs = 1;
@@ -402,11 +401,11 @@ public class TransportDetails1 {
 	 */
 	public static final MMMessageAssociationEnd mmFreightCharges = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Transport.mmTransportCharges;
+			businessElementTrace_lazy = () -> Transport.mmTransportCharges;
 			componentContext_lazy = () -> TransportDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "FrghtChrgs";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FreightCharges";
 			definition = "Charges related to the conveyance of goods.";
 			maxOccurs = 1;
@@ -422,6 +421,10 @@ public class TransportDetails1 {
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
+	 * messageComponent} =
+	 * {@linkplain com.tools20022.repository.msg.TransportDetails1
+	 * TransportDetails1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getImpactedElements
 	 * impactedElements} =
 	 * <ul>
@@ -433,10 +436,6 @@ public class TransportDetails1 {
 	 * TransportDetails1.mmActualShipmentDate}</li>
 	 * </ul>
 	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
-	 * messageComponent} =
-	 * {@linkplain com.tools20022.repository.msg.TransportDetails1
-	 * TransportDetails1}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -452,23 +451,22 @@ public class TransportDetails1 {
 	 */
 	public static final MMXor mmProposedShipmentOrActualShipmentDateRule = new MMXor() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProposedShipmentOrActualShipmentDateRule";
 			definition = "If ActualShipmentDate is present, then ProposedShipmentDate is not allowed. If ActualShipmentDate is not present, then ProposedShipmentDate is mandatory.";
 			messageComponent_lazy = () -> TransportDetails1.mmObject();
-			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransportDetails1.mmProposedShipmentDate, com.tools20022.repository.msg.TransportDetails1.mmActualShipmentDate);
+			impactedElements_lazy = () -> Arrays.asList(TransportDetails1.mmProposedShipmentDate, TransportDetails1.mmActualShipmentDate);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransportDetails1.mmTransportDocumentReference, com.tools20022.repository.msg.TransportDetails1.mmTransportedGoods,
-						com.tools20022.repository.msg.TransportDetails1.mmRoutingSummary, com.tools20022.repository.msg.TransportDetails1.mmProposedShipmentDate, com.tools20022.repository.msg.TransportDetails1.mmActualShipmentDate,
-						com.tools20022.repository.msg.TransportDetails1.mmIncoterms, com.tools20022.repository.msg.TransportDetails1.mmFreightCharges);
+				messageElement_lazy = () -> Arrays.asList(TransportDetails1.mmTransportDocumentReference, TransportDetails1.mmTransportedGoods, TransportDetails1.mmRoutingSummary, TransportDetails1.mmProposedShipmentDate,
+						TransportDetails1.mmActualShipmentDate, TransportDetails1.mmIncoterms, TransportDetails1.mmFreightCharges);
 				trace_lazy = () -> Transport.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
 						return DateFormat.getDateInstance(java.text.DateFormat.LONG).parse("September 9, 2016");
@@ -478,7 +476,7 @@ public class TransportDetails1 {
 				})).get();
 				name = "TransportDetails1";
 				definition = "Information on the shipment date, the charges, the routing and the goods described in the transport document";
-				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransportDetails1.mmProposedShipmentOrActualShipmentDateRule);
+				xors_lazy = () -> Arrays.asList(TransportDetails1.mmProposedShipmentOrActualShipmentDateRule);
 			}
 		});
 		return mmObject_lazy.get();

@@ -20,8 +20,10 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ProductType1Code;
 import com.tools20022.repository.entity.AssetClassification;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification13;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -103,11 +105,11 @@ public class FinancialInstrumentProductType1Choice {
 	 */
 	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AssetClassification.mmProductType;
+			businessElementTrace_lazy = () -> AssetClassification.mmProductType;
 			componentContext_lazy = () -> FinancialInstrumentProductType1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Cd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Identifies the FI product type using a code.";
 			maxOccurs = 1;
@@ -151,11 +153,11 @@ public class FinancialInstrumentProductType1Choice {
 	 */
 	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AssetClassification.mmProductType;
+			businessElementTrace_lazy = () -> AssetClassification.mmProductType;
 			componentContext_lazy = () -> FinancialInstrumentProductType1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Identifies the FI product type using a data source scheme.";
 			maxOccurs = 1;
@@ -168,10 +170,10 @@ public class FinancialInstrumentProductType1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.FinancialInstrumentProductType1Choice.mmCode, com.tools20022.repository.choice.FinancialInstrumentProductType1Choice.mmProprietary);
+				messageElement_lazy = () -> Arrays.asList(FinancialInstrumentProductType1Choice.mmCode, FinancialInstrumentProductType1Choice.mmProprietary);
 				trace_lazy = () -> AssetClassification.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "FinancialInstrumentProductType1Choice";
 				definition = "Choice between a code and a data source scheme to indicate the type of product the financial instrument is associated with (used for fixed income).";
 			}

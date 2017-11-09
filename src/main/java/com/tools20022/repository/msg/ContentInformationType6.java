@@ -20,7 +20,10 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.caaa.*;
 import com.tools20022.repository.codeset.ContentType1Code;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -156,10 +159,10 @@ public class ContentInformationType6 {
 			componentContext_lazy = () -> ContentInformationType6.mmObject();
 			isDerived = false;
 			xmlTag = "CnttTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ContentType";
 			definition = "Type of data protection.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ContentInformationType8.mmContentType);
+			nextVersions_lazy = () -> Arrays.asList(ContentInformationType8.mmContentType);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ContentType1Code.mmObject();
@@ -205,10 +208,10 @@ public class ContentInformationType6 {
 			componentContext_lazy = () -> ContentInformationType6.mmObject();
 			isDerived = false;
 			xmlTag = "AuthntcdData";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AuthenticatedData";
 			definition = "Data protection by a message authentication code (MAC).";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ContentInformationType8.mmAuthenticatedData);
+			nextVersions_lazy = () -> Arrays.asList(ContentInformationType8.mmAuthenticatedData);
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.AuthenticatedData2.mmObject();
@@ -218,16 +221,13 @@ public class ContentInformationType6 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ContentInformationType6.mmContentType, com.tools20022.repository.msg.ContentInformationType6.mmAuthenticatedData);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.caaa.AcceptorDiagnosticResponseV02.mmSecurityTrailer,
-						com.tools20022.repository.area.caaa.AcceptorCancellationAdviceResponseV02.mmSecurityTrailer, com.tools20022.repository.area.caaa.AcceptorAuthorisationRequestV02.mmSecurityTrailer,
-						com.tools20022.repository.area.caaa.AcceptorCompletionAdviceResponseV02.mmSecurityTrailer, com.tools20022.repository.area.caaa.AcceptorReconciliationRequestV02.mmSecurityTrailer,
-						com.tools20022.repository.area.caaa.AcceptorReconciliationResponseV02.mmSecurityTrailer, com.tools20022.repository.area.caaa.AcceptorCancellationRequestV02.mmSecurityTrailer,
-						com.tools20022.repository.area.caaa.AcceptorCancellationResponseV02.mmSecurityTrailer, com.tools20022.repository.area.caaa.AcceptorDiagnosticRequestV02.mmSecurityTrailer,
-						com.tools20022.repository.area.caaa.AcceptorCompletionAdviceV02.mmSecurityTrailer, com.tools20022.repository.area.caaa.AcceptorCancellationAdviceV02.mmSecurityTrailer,
-						com.tools20022.repository.area.caaa.AcceptorAuthorisationResponseV02.mmSecurityTrailer);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(ContentInformationType6.mmContentType, ContentInformationType6.mmAuthenticatedData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(AcceptorDiagnosticResponseV02.mmSecurityTrailer, AcceptorCancellationAdviceResponseV02.mmSecurityTrailer, AcceptorAuthorisationRequestV02.mmSecurityTrailer,
+						AcceptorCompletionAdviceResponseV02.mmSecurityTrailer, AcceptorReconciliationRequestV02.mmSecurityTrailer, AcceptorReconciliationResponseV02.mmSecurityTrailer, AcceptorCancellationRequestV02.mmSecurityTrailer,
+						AcceptorCancellationResponseV02.mmSecurityTrailer, AcceptorDiagnosticRequestV02.mmSecurityTrailer, AcceptorCompletionAdviceV02.mmSecurityTrailer, AcceptorCancellationAdviceV02.mmSecurityTrailer,
+						AcceptorAuthorisationResponseV02.mmSecurityTrailer);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ContentInformationType6";
 				definition = "General cryptographic message syntax (CMS) containing authenticated data.";
 				nextVersions_lazy = () -> Arrays.asList(ContentInformationType8.mmObject());

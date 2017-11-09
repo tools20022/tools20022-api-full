@@ -20,11 +20,13 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.setr.RedemptionBulkOrderV02;
 import com.tools20022.repository.codeset.CountryCode;
 import com.tools20022.repository.codeset.CurrencyCode;
 import com.tools20022.repository.datatype.ISODateTime;
-import com.tools20022.repository.entity.BulkPayment;
-import com.tools20022.repository.entity.RedemptionOrder;
+import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -139,11 +141,11 @@ public class RedemptionBulkOrder2 {
 	 */
 	public static final MMMessageAttribute mmPlaceOfTrade = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Country.mmCode;
+			businessElementTrace_lazy = () -> Country.mmCode;
 			componentContext_lazy = () -> RedemptionBulkOrder2.mmObject();
 			isDerived = false;
 			xmlTag = "PlcOfTrad";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceOfTrade";
 			definition = "Market in which the advised trade transaction was executed.";
 			maxOccurs = 1;
@@ -187,11 +189,11 @@ public class RedemptionBulkOrder2 {
 	 */
 	public static final MMMessageAttribute mmOrderDateTime = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrder.mmOrderDateTime;
+			businessElementTrace_lazy = () -> InvestmentFundOrder.mmOrderDateTime;
 			componentContext_lazy = () -> RedemptionBulkOrder2.mmObject();
 			isDerived = false;
 			xmlTag = "OrdrDtTm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrderDateTime";
 			definition = "Date and time at which the order was placed by the investor.";
 			maxOccurs = 1;
@@ -234,11 +236,11 @@ public class RedemptionBulkOrder2 {
 	 */
 	public static final MMMessageAttribute mmExpiryDateTime = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrder.mmExpiryDateTime;
+			businessElementTrace_lazy = () -> InvestmentFundOrder.mmExpiryDateTime;
 			componentContext_lazy = () -> RedemptionBulkOrder2.mmObject();
 			isDerived = false;
 			xmlTag = "XpryDtTm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExpiryDateTime";
 			definition = "Date on which the order expires.";
 			maxOccurs = 1;
@@ -285,11 +287,11 @@ public class RedemptionBulkOrder2 {
 	 */
 	public static final MMMessageAttribute mmCancellationRight = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrder.mmCancellationRight;
+			businessElementTrace_lazy = () -> InvestmentFundOrder.mmCancellationRight;
 			componentContext_lazy = () -> RedemptionBulkOrder2.mmObject();
 			isDerived = false;
 			xmlTag = "CxlRght";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationRight";
 			definition = "Cancellation right of an investor with respect to an investment fund order.";
 			maxOccurs = 1;
@@ -331,11 +333,11 @@ public class RedemptionBulkOrder2 {
 	 */
 	public static final MMMessageAssociationEnd mmFinancialInstrumentDetails = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundTransaction.mmInvestmentFundClass;
+			businessElementTrace_lazy = () -> InvestmentFundTransaction.mmInvestmentFundClass;
 			componentContext_lazy = () -> RedemptionBulkOrder2.mmObject();
 			isDerived = false;
 			xmlTag = "FinInstrmDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentDetails";
 			definition = "Investment fund class related to an order.";
 			maxOccurs = 1;
@@ -385,7 +387,7 @@ public class RedemptionBulkOrder2 {
 			componentContext_lazy = () -> RedemptionBulkOrder2.mmObject();
 			isDerived = false;
 			xmlTag = "IndvOrdrDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IndividualOrderDetails";
 			definition = "Instruction from an investor to sell investment fund units back to the fund.";
 			minOccurs = 1;
@@ -428,11 +430,11 @@ public class RedemptionBulkOrder2 {
 	 */
 	public static final MMMessageAttribute mmRequestedSettlementCurrency = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrder.mmRequestedSettlementCurrency;
+			businessElementTrace_lazy = () -> InvestmentFundOrder.mmRequestedSettlementCurrency;
 			componentContext_lazy = () -> RedemptionBulkOrder2.mmObject();
 			isDerived = false;
 			xmlTag = "ReqdSttlmCcy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestedSettlementCurrency";
 			definition = "Currency requested for settlement of cash proceeds.";
 			maxOccurs = 1;
@@ -479,11 +481,11 @@ public class RedemptionBulkOrder2 {
 	 */
 	public static final MMMessageAttribute mmRequestedNAVCurrency = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmRequestedNAVCurrency;
+			businessElementTrace_lazy = () -> InvestmentFundClass.mmRequestedNAVCurrency;
 			componentContext_lazy = () -> RedemptionBulkOrder2.mmObject();
 			isDerived = false;
 			xmlTag = "ReqdNAVCcy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestedNAVCurrency";
 			definition = "Currency to be used for pricing the fund. This currency must be among the set of currencies in which the price may be expressed, as stated in the prospectus.";
 			maxOccurs = 1;
@@ -530,7 +532,7 @@ public class RedemptionBulkOrder2 {
 			componentContext_lazy = () -> RedemptionBulkOrder2.mmObject();
 			isDerived = false;
 			xmlTag = "BlkCshSttlmDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BulkCashSettlementDetails";
 			definition = "Payment transaction resulting from the investment fund order execution.";
 			maxOccurs = 1;
@@ -543,15 +545,13 @@ public class RedemptionBulkOrder2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RedemptionBulkOrder2.mmPlaceOfTrade, com.tools20022.repository.msg.RedemptionBulkOrder2.mmOrderDateTime,
-						com.tools20022.repository.msg.RedemptionBulkOrder2.mmExpiryDateTime, com.tools20022.repository.msg.RedemptionBulkOrder2.mmCancellationRight,
-						com.tools20022.repository.msg.RedemptionBulkOrder2.mmFinancialInstrumentDetails, com.tools20022.repository.msg.RedemptionBulkOrder2.mmIndividualOrderDetails,
-						com.tools20022.repository.msg.RedemptionBulkOrder2.mmRequestedSettlementCurrency, com.tools20022.repository.msg.RedemptionBulkOrder2.mmRequestedNAVCurrency,
-						com.tools20022.repository.msg.RedemptionBulkOrder2.mmBulkCashSettlementDetails);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.RedemptionBulkOrderV02.mmBulkOrderDetails);
+				messageElement_lazy = () -> Arrays.asList(RedemptionBulkOrder2.mmPlaceOfTrade, RedemptionBulkOrder2.mmOrderDateTime, RedemptionBulkOrder2.mmExpiryDateTime, RedemptionBulkOrder2.mmCancellationRight,
+						RedemptionBulkOrder2.mmFinancialInstrumentDetails, RedemptionBulkOrder2.mmIndividualOrderDetails, RedemptionBulkOrder2.mmRequestedSettlementCurrency, RedemptionBulkOrder2.mmRequestedNAVCurrency,
+						RedemptionBulkOrder2.mmBulkCashSettlementDetails);
+				messageBuildingBlock_lazy = () -> Arrays.asList(RedemptionBulkOrderV02.mmBulkOrderDetails);
 				trace_lazy = () -> RedemptionOrder.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
 						return DateFormat.getDateInstance(java.text.DateFormat.LONG).parse("September 9, 2016");

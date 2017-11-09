@@ -20,6 +20,7 @@ package com.tools20022.repository.area.camt;
 import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.CashManagementPreviousVersion;
 import com.tools20022.repository.choice.UnderlyingTransaction2Choice;
 import com.tools20022.repository.msg.Case3;
@@ -87,6 +88,9 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code camt.027.001.04}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.CashManagementPreviousVersion
@@ -125,9 +129,6 @@ import java.util.List;
  * ClaimNonReceiptV04.mmSupplementaryData}</li>
  * </ul>
  * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code camt.027.001.04}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -192,10 +193,10 @@ public class ClaimNonReceiptV04 {
 	public static final MMMessageBuildingBlock mmAssignment = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Assgnmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Assignment";
 			definition = "Identifies the assignment of an investigation case from an assigner to an assignee.\nUsage: The Assigner must be the sender of this confirmation and the Assignee must be the receiver.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.ClaimNonReceiptV05.mmAssignment);
+			nextVersions_lazy = () -> Arrays.asList(ClaimNonReceiptV05.mmAssignment);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> CaseAssignment3.mmObject();
@@ -234,10 +235,10 @@ public class ClaimNonReceiptV04 {
 	public static final MMMessageBuildingBlock mmCase = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Case";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Case";
 			definition = "Identifies the investigation case.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.ClaimNonReceiptV05.mmCase);
+			nextVersions_lazy = () -> Arrays.asList(ClaimNonReceiptV05.mmCase);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> Case3.mmObject();
@@ -284,10 +285,10 @@ public class ClaimNonReceiptV04 {
 	public static final MMMessageBuildingBlock mmUnderlying = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Undrlyg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Underlying";
 			definition = "Identifies the payment instruction for which the Creditor has not received the funds.\nUsage: In case of a missing cover, it must be the identification of the related payment instruction.\nIn case of a claim non receipt initiated by the debtor, it must be the identification of the instruction.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.ClaimNonReceiptV05.mmUnderlying);
+			nextVersions_lazy = () -> Arrays.asList(ClaimNonReceiptV05.mmUnderlying);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> UnderlyingTransaction2Choice.mmObject();
@@ -331,10 +332,10 @@ public class ClaimNonReceiptV04 {
 	public static final MMMessageBuildingBlock mmCoverDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CoverDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoverDetails";
 			definition = "Provides the cover related information of a claim non receipt investigation. The absence of the component means that the message is not a cover related investigation.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.ClaimNonReceiptV05.mmCoverDetails);
+			nextVersions_lazy = () -> Arrays.asList(ClaimNonReceiptV05.mmCoverDetails);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> MissingCover3.mmObject();
@@ -378,10 +379,10 @@ public class ClaimNonReceiptV04 {
 	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SplmtryData";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryData";
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.ClaimNonReceiptV05.mmSupplementaryData);
+			nextVersions_lazy = () -> Arrays.asList(ClaimNonReceiptV05.mmSupplementaryData);
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
@@ -390,7 +391,7 @@ public class ClaimNonReceiptV04 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ClaimNonReceiptV04";
 				definition = "Scope\nThe Claim Non Receipt message is sent by a case creator/case assigner to a case assignee.\nThis message is used to initiate an investigation for missing funds at the creditor (missing credit entry to its account) or at an agent along the processing chain (missing cover for a received payment instruction).\nUsage\nThe claim non receipt case occurs in two situations:\n- The creditor is expecting funds from a particular debtor and cannot find the corresponding credit entry on its account. In this situation, it is understood that the creditor will contact its debtor, and that the debtor will trigger the claim non receipt case on its behalf. A workflow where the creditor directly addresses a Claim Non Receipt message to its account servicing institution is not retained.\n- An agent in the processing chain cannot find a cover payment corresponding to a received payment instruction. In this situation, the agent may directly trigger the investigation by sending a Claim Non Receipt message to the sender of the original payment instruction.\nThe Claim Non Receipt message covers one and only one payment instruction at a time. If several expected payment instructions/cover instructions are found missing, then multiple Claim Non Receipt messages must be sent.\nDepending on the result of the investigation by a case assignee (incorrect routing, errors/omissions when processing the instruction or even the absence of an error) and the stage at which the payment instruction is being process, the claim non receipt case may lead to a:\n- Request To Cancel Payment message, sent to the subsequent agent in the payment processing chain, if the original payment instruction has been incorrectly routed through the chain of agents. (This also implies that a new, corrected, payment instruction is issued).\n- Request To Modify Payment message, sent to the subsequent agent in the payment processing chain, if a truncation or omission has occurred during the processing of the original payment instruction.\nIf the above situations occur, the assignee wanting to request a payment cancellation or payment modification should first send out a Resolution Of Investigation with a confirmation status that indicates that either cancellation (CWFW) modification (MWFW) or unable to apply (UWFW) will follow. (See section on Resolution Of Investigation for more details).\nIn the cover is missing, the case assignee may also simply issue the omitted cover payment or when the initial cover information was incorrect, update the cover (through modification and/or cancellation as required) with the correction information provided in the ClaimNonReceipt message. The case assignee will issue a Resolution Of Investigation message with the CorrectionTransaction element mentioning the references of the cover payment.\nThe Claim Non Receipt message may be forwarded to subsequent case assignees.\nThe ClaimNonReceipt message has the following main characteristics:\n- Case Identification:\nThe case creator assigns a unique case identification. This information will be passed unchanged to subsequent case assignee(s).\n- Underlying Payment:\nThe case creator refers to the underlying payment instruction for the unambiguous identification of the payment instruction. This identification needs to be updated by the subsequent case assigner(s) in order to match the one used with their case assignee(s).\n- MissingCoverIndicator:\nThe MissingCoverIndication element distinguishes between a missing cover situation (when set to YES) or a missing funds situation (when set to NO).\n- CoverCorrection\nThe CoverCorrection element allows the case assigner to provide corrected cover information, when these are incorrect in the underlying payment instruction for which the cover is issued.";
 				nextVersions_lazy = () -> Arrays.asList(ClaimNonReceiptV05.mmObject());
@@ -399,8 +400,7 @@ public class ClaimNonReceiptV04 {
 				rootElement = "Document";
 				xmlTag = "ClmNonRct";
 				businessArea_lazy = () -> CashManagementPreviousVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.ClaimNonReceiptV04.mmAssignment, com.tools20022.repository.area.camt.ClaimNonReceiptV04.mmCase,
-						com.tools20022.repository.area.camt.ClaimNonReceiptV04.mmUnderlying, com.tools20022.repository.area.camt.ClaimNonReceiptV04.mmCoverDetails, com.tools20022.repository.area.camt.ClaimNonReceiptV04.mmSupplementaryData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(ClaimNonReceiptV04.mmAssignment, ClaimNonReceiptV04.mmCase, ClaimNonReceiptV04.mmUnderlying, ClaimNonReceiptV04.mmCoverDetails, ClaimNonReceiptV04.mmSupplementaryData);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "camt";

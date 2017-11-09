@@ -19,9 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max140Text;
 import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -99,7 +101,7 @@ public class ElementIdentification3 {
 			componentContext_lazy = () -> ElementIdentification3.mmObject();
 			isDerived = false;
 			xmlTag = "ElmtPth";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ElementPath";
 			definition = "Specifies from the root of the message the complete path of the element that violated a rule.";
 			maxOccurs = 1;
@@ -140,7 +142,7 @@ public class ElementIdentification3 {
 			componentContext_lazy = () -> ElementIdentification3.mmObject();
 			isDerived = false;
 			xmlTag = "ElmtNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ElementName";
 			definition = "Name of the element.";
 			maxOccurs = 1;
@@ -181,7 +183,7 @@ public class ElementIdentification3 {
 			componentContext_lazy = () -> ElementIdentification3.mmObject();
 			isDerived = false;
 			xmlTag = "ElmtVal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ElementValue";
 			definition = "Contents of the element.";
 			maxOccurs = 1;
@@ -193,10 +195,9 @@ public class ElementIdentification3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ElementIdentification3.mmElementPath, com.tools20022.repository.msg.ElementIdentification3.mmElementName,
-						com.tools20022.repository.msg.ElementIdentification3.mmElementValue);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(ElementIdentification3.mmElementPath, ElementIdentification3.mmElementName, ElementIdentification3.mmElementValue);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ElementIdentification3";
 				definition = "Description of the elements that violated a rule.";
 			}

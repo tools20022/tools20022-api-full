@@ -19,7 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.setr.RedemptionBulkOrderCancellationInstructionV02;
 import com.tools20022.repository.entity.RedemptionOrder;
+import com.tools20022.repository.entity.Trade;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -115,7 +119,7 @@ public class RedemptionBulkOrderInstruction1 {
 			componentContext_lazy = () -> RedemptionBulkOrderInstruction1.mmObject();
 			isDerived = false;
 			xmlTag = "BlkOrdrDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BulkOrderDetails";
 			definition = "Common information related to all the orders.";
 			maxOccurs = 1;
@@ -158,11 +162,11 @@ public class RedemptionBulkOrderInstruction1 {
 	 */
 	public static final MMMessageAssociationEnd mmIntermediaryDetails = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Trade.mmTradePartyRole;
+			businessElementTrace_lazy = () -> Trade.mmTradePartyRole;
 			componentContext_lazy = () -> RedemptionBulkOrderInstruction1.mmObject();
 			isDerived = false;
 			xmlTag = "IntrmyDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IntermediaryDetails";
 			definition = "Information related to an intermediary.";
 			maxOccurs = 10;
@@ -203,7 +207,7 @@ public class RedemptionBulkOrderInstruction1 {
 			componentContext_lazy = () -> RedemptionBulkOrderInstruction1.mmObject();
 			isDerived = false;
 			xmlTag = "CpyDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CopyDetails";
 			definition = "Message is a copy.";
 			maxOccurs = 1;
@@ -246,7 +250,7 @@ public class RedemptionBulkOrderInstruction1 {
 			componentContext_lazy = () -> RedemptionBulkOrderInstruction1.mmObject();
 			isDerived = false;
 			xmlTag = "Xtnsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Extension";
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
 			minOccurs = 0;
@@ -258,12 +262,12 @@ public class RedemptionBulkOrderInstruction1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RedemptionBulkOrderInstruction1.mmBulkOrderDetails, com.tools20022.repository.msg.RedemptionBulkOrderInstruction1.mmIntermediaryDetails,
-						com.tools20022.repository.msg.RedemptionBulkOrderInstruction1.mmCopyDetails, com.tools20022.repository.msg.RedemptionBulkOrderInstruction1.mmExtension);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.RedemptionBulkOrderCancellationInstructionV02.mmOrderToBeCancelled);
+				messageElement_lazy = () -> Arrays.asList(RedemptionBulkOrderInstruction1.mmBulkOrderDetails, RedemptionBulkOrderInstruction1.mmIntermediaryDetails, RedemptionBulkOrderInstruction1.mmCopyDetails,
+						RedemptionBulkOrderInstruction1.mmExtension);
+				messageBuildingBlock_lazy = () -> Arrays.asList(RedemptionBulkOrderCancellationInstructionV02.mmOrderToBeCancelled);
 				trace_lazy = () -> RedemptionOrder.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RedemptionBulkOrderInstruction1";
 				definition = "Information about a redemption bulk order.";
 			}

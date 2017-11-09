@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.RepurchaseTypeV2Code;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -83,7 +85,7 @@ public class RepurchaseType8Code extends RepurchaseTypeV2Code {
 	 */
 	public static final MMCode mmPrincipalExposureAdjustment = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PrincipalExposureAdjustment";
 			owner_lazy = () -> RepurchaseType8Code.mmObject();
 		}
@@ -106,7 +108,7 @@ public class RepurchaseType8Code extends RepurchaseTypeV2Code {
 	 */
 	public static final MMCode mmRepoContractRollover = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RepoContractRollover";
 			owner_lazy = () -> RepurchaseType8Code.mmObject();
 		}
@@ -129,7 +131,7 @@ public class RepurchaseType8Code extends RepurchaseTypeV2Code {
 	 */
 	public static final MMCode mmRepoRate = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RepoRate";
 			owner_lazy = () -> RepurchaseType8Code.mmObject();
 		}
@@ -152,7 +154,7 @@ public class RepurchaseType8Code extends RepurchaseTypeV2Code {
 	 */
 	public static final MMCode mmRepurchaseCall = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RepurchaseCall";
 			owner_lazy = () -> RepurchaseType8Code.mmObject();
 		}
@@ -161,12 +163,11 @@ public class RepurchaseType8Code extends RepurchaseTypeV2Code {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RepurchaseType8Code";
 				definition = "Specifies the type of repurchase transaction.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RepurchaseType8Code.mmPrincipalExposureAdjustment, com.tools20022.repository.codeset.RepurchaseType8Code.mmRepoContractRollover,
-						com.tools20022.repository.codeset.RepurchaseType8Code.mmRepoRate, com.tools20022.repository.codeset.RepurchaseType8Code.mmRepurchaseCall);
+				code_lazy = () -> Arrays.asList(RepurchaseType8Code.mmPrincipalExposureAdjustment, RepurchaseType8Code.mmRepoContractRollover, RepurchaseType8Code.mmRepoRate, RepurchaseType8Code.mmRepurchaseCall);
 				trace_lazy = () -> RepurchaseTypeV2Code.mmObject();
 			}
 		});

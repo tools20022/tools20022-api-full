@@ -19,8 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.semt.*;
 import com.tools20022.repository.choice.DocumentNumber1Choice;
 import com.tools20022.repository.entity.Document;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -125,10 +128,10 @@ public class DocumentNumber1 {
 			componentContext_lazy = () -> DocumentNumber1.mmObject();
 			isDerived = false;
 			xmlTag = "Nb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Number";
 			definition = "Number used to identify a message or document.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DocumentNumber13.mmNumber);
+			nextVersions_lazy = () -> Arrays.asList(DocumentNumber13.mmNumber);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -139,13 +142,12 @@ public class DocumentNumber1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DocumentNumber1.mmNumber);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.SecuritiesStatementQueryV01.mmStatementRequested, com.tools20022.repository.area.semt.SecuritiesStatementQueryV02.mmStatementRequested,
-						com.tools20022.repository.area.semt.SecuritiesStatementQueryV03.mmStatementRequested, com.tools20022.repository.area.semt.SecuritiesStatementQueryV04.mmStatementRequested,
-						com.tools20022.repository.area.semt.SecuritiesStatementQueryV05.mmStatementRequested);
+				messageElement_lazy = () -> Arrays.asList(DocumentNumber1.mmNumber);
+				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesStatementQueryV01.mmStatementRequested, SecuritiesStatementQueryV02.mmStatementRequested, SecuritiesStatementQueryV03.mmStatementRequested,
+						SecuritiesStatementQueryV04.mmStatementRequested, SecuritiesStatementQueryV05.mmStatementRequested);
 				trace_lazy = () -> Document.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DocumentNumber1";
 				definition = "Identification of a document.";
 				nextVersions_lazy = () -> Arrays.asList(DocumentNumber13.mmObject());

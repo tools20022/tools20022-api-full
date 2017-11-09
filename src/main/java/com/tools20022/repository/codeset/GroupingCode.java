@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.Grouping1Code
+ * Grouping1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>{@linkplain com.tools20022.repository.codeset.GroupingCode#mmSingle
@@ -35,13 +44,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * GroupingCode.mmGrouped}</li>
  * <li>{@linkplain com.tools20022.repository.codeset.GroupingCode#mmMixed
  * GroupingCode.mmMixed}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.Grouping1Code
- * Grouping1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -93,7 +95,7 @@ public class GroupingCode {
 	 */
 	public static final MMCode mmSingle = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Single";
 			definition = "Indicates that for each occurrences of the payment information block, exactly one occurrence of the payment transaction block is present.";
 			owner_lazy = () -> GroupingCode.mmObject();
@@ -125,7 +127,7 @@ public class GroupingCode {
 	 */
 	public static final MMCode mmGrouped = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Grouped";
 			definition = "Indicates that there is only one occurrence of the payment information block and several occurrences of the payment transaction block.";
 			owner_lazy = () -> GroupingCode.mmObject();
@@ -158,7 +160,7 @@ public class GroupingCode {
 	 */
 	public static final MMCode mmMixed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Mixed";
 			definition = "Indicates that there are one or several occurrences of the payment information block where each of the occurrences might contain one or several occurrences of the payment transaction block.";
 			owner_lazy = () -> GroupingCode.mmObject();
@@ -169,12 +171,12 @@ public class GroupingCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("SNGL");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "GroupingCode";
 				definition = "Specifies the grouping options of the payment transaction.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.GroupingCode.mmSingle, com.tools20022.repository.codeset.GroupingCode.mmGrouped, com.tools20022.repository.codeset.GroupingCode.mmMixed);
+				code_lazy = () -> Arrays.asList(GroupingCode.mmSingle, GroupingCode.mmGrouped, GroupingCode.mmMixed);
 				derivation_lazy = () -> Arrays.asList(Grouping1Code.mmObject());
 			}
 		});

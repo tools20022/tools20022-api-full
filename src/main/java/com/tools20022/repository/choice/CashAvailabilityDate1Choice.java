@@ -19,9 +19,11 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.Max15PlusSignedNumericText;
 import com.tools20022.repository.entity.CashAvailability;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.CashBalanceAvailabilityDate1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -110,14 +112,14 @@ public class CashAvailabilityDate1Choice {
 	 */
 	public static final MMMessageAttribute mmNumberOfDays = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashAvailability.mmNumberOfDays;
+			businessElementTrace_lazy = () -> CashAvailability.mmNumberOfDays;
 			componentContext_lazy = () -> CashAvailabilityDate1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "NbOfDays";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NumberOfDays";
 			definition = "Indicates the number of float days attached to the balance.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CashBalanceAvailabilityDate1.mmNumberOfDays;
+			previousVersion_lazy = () -> CashBalanceAvailabilityDate1.mmNumberOfDays;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max15PlusSignedNumericText.mmObject();
@@ -163,14 +165,14 @@ public class CashAvailabilityDate1Choice {
 	 */
 	public static final MMMessageAttribute mmActualDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashAvailability.mmDate;
+			businessElementTrace_lazy = () -> CashAvailability.mmDate;
 			componentContext_lazy = () -> CashAvailabilityDate1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "ActlDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ActualDate";
 			definition = "Identifies the actual availability date.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CashBalanceAvailabilityDate1.mmActualDate;
+			previousVersion_lazy = () -> CashBalanceAvailabilityDate1.mmActualDate;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
@@ -180,10 +182,10 @@ public class CashAvailabilityDate1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CashAvailabilityDate1Choice.mmNumberOfDays, com.tools20022.repository.choice.CashAvailabilityDate1Choice.mmActualDate);
+				messageElement_lazy = () -> Arrays.asList(CashAvailabilityDate1Choice.mmNumberOfDays, CashAvailabilityDate1Choice.mmActualDate);
 				trace_lazy = () -> CashAvailability.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CashAvailabilityDate1Choice";
 				definition = "Indicates when the amount of money will become available.";
 				previousVersion_lazy = () -> CashBalanceAvailabilityDate1.mmObject();

@@ -20,11 +20,14 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.LEIIdentifier;
 import com.tools20022.repository.datatype.Max52Text;
 import com.tools20022.repository.entity.ExecutingTrader;
 import com.tools20022.repository.entity.SecuritiesTransaction;
 import com.tools20022.repository.entity.SubmittingPartyRole;
+import com.tools20022.repository.entity.TradeIdentification;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -112,11 +115,11 @@ public class SecuritiesTransactionReport2 {
 	 */
 	public static final MMMessageAttribute mmTransactionIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradeIdentification.mmUniqueTradeIdentifier;
+			businessElementTrace_lazy = () -> TradeIdentification.mmUniqueTradeIdentifier;
 			componentContext_lazy = () -> SecuritiesTransactionReport2.mmObject();
 			isDerived = false;
 			xmlTag = "TxId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionIdentification";
 			definition = "Unique and unambiguous identification of the transaction.";
 			maxOccurs = 1;
@@ -171,7 +174,7 @@ public class SecuritiesTransactionReport2 {
 			componentContext_lazy = () -> SecuritiesTransactionReport2.mmObject();
 			isDerived = false;
 			xmlTag = "ExctgPty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExecutingParty";
 			definition = "Identification of the entity executing the transaction. \r\n\r\nUsage:\r\nFor legal entities, use the legal entity identifier. For non-legal entities, this field shall be populated with an identifier as specified in the local regulation.";
 			maxOccurs = 1;
@@ -221,7 +224,7 @@ public class SecuritiesTransactionReport2 {
 			componentContext_lazy = () -> SecuritiesTransactionReport2.mmObject();
 			isDerived = false;
 			xmlTag = "SubmitgPty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubmittingParty";
 			definition = "Entity submitting the transaction report to the competent authority.\r\n";
 			maxOccurs = 1;
@@ -264,7 +267,7 @@ public class SecuritiesTransactionReport2 {
 			componentContext_lazy = () -> SecuritiesTransactionReport2.mmObject();
 			isDerived = false;
 			xmlTag = "TechAttrbts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TechnicalAttributes";
 			definition = "Data used for exchanges between national competent authorities, not to be used by reporting entities.";
 			maxOccurs = 1;
@@ -308,7 +311,7 @@ public class SecuritiesTransactionReport2 {
 			componentContext_lazy = () -> SecuritiesTransactionReport2.mmObject();
 			isDerived = false;
 			xmlTag = "SplmtryData";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryData";
 			definition = "Additional information that can not be captured in the structured fields and/or any other specific block.";
 			minOccurs = 0;
@@ -320,12 +323,11 @@ public class SecuritiesTransactionReport2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesTransactionReport2.mmTransactionIdentification, com.tools20022.repository.msg.SecuritiesTransactionReport2.mmExecutingParty,
-						com.tools20022.repository.msg.SecuritiesTransactionReport2.mmSubmittingParty, com.tools20022.repository.msg.SecuritiesTransactionReport2.mmTechnicalAttributes,
-						com.tools20022.repository.msg.SecuritiesTransactionReport2.mmSupplementaryData);
+				messageElement_lazy = () -> Arrays.asList(SecuritiesTransactionReport2.mmTransactionIdentification, SecuritiesTransactionReport2.mmExecutingParty, SecuritiesTransactionReport2.mmSubmittingParty,
+						SecuritiesTransactionReport2.mmTechnicalAttributes, SecuritiesTransactionReport2.mmSupplementaryData);
 				trace_lazy = () -> SecuritiesTransaction.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesTransactionReport2";
 				definition = "Details of the securities transaction report.";
 			}

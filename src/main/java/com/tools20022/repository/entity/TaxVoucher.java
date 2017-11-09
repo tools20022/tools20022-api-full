@@ -17,13 +17,10 @@
 
 package com.tools20022.repository.entity;
 
-import com.tools20022.metamodel.MMBusinessAssociationEnd;
-import com.tools20022.metamodel.MMBusinessAttribute;
-import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.*;
 import com.tools20022.repository.datatype.*;
-import com.tools20022.repository.msg.TaxVoucher1;
-import com.tools20022.repository.msg.TaxVoucher2;
-import com.tools20022.repository.msg.TaxVoucher3;
+import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -39,6 +36,35 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.TaxVoucher2 TaxVoucher2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TaxVoucher3 TaxVoucher3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TaxVoucher1 TaxVoucher1}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmTaxVoucher
+ * SecuritiesPricing.mmTaxVoucher}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.SecuritiesTax#mmTaxVoucher
+ * SecuritiesTax.mmTaxVoucher}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmTaxVoucher
+ * SecuritiesQuantity.mmTaxVoucher}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ForeignExchangeTrade#mmCurrencyExchangeForTaxVoucher
+ * ForeignExchangeTrade.mmCurrencyExchangeForTaxVoucher}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionDistribution#mmTaxVoucher
+ * CorporateActionDistribution.mmTaxVoucher}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -87,35 +113,6 @@ import java.util.List;
  * <li>
  * {@linkplain com.tools20022.repository.entity.TaxVoucher#mmForeignExchangeTransaction
  * TaxVoucher.mmForeignExchangeTransaction}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmTaxVoucher
- * SecuritiesPricing.mmTaxVoucher}</li>
- * <li>{@linkplain com.tools20022.repository.entity.SecuritiesTax#mmTaxVoucher
- * SecuritiesTax.mmTaxVoucher}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmTaxVoucher
- * SecuritiesQuantity.mmTaxVoucher}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ForeignExchangeTrade#mmCurrencyExchangeForTaxVoucher
- * ForeignExchangeTrade.mmCurrencyExchangeForTaxVoucher}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionDistribution#mmTaxVoucher
- * CorporateActionDistribution.mmTaxVoucher}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.TaxVoucher2 TaxVoucher2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TaxVoucher3 TaxVoucher3}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TaxVoucher1 TaxVoucher1}</li>
  * </ul>
  * </li>
  * <li>
@@ -192,12 +189,11 @@ public class TaxVoucher {
 	 */
 	public static final MMBusinessAttribute mmRequestedTaxationRate = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionRate8.mmRequestedTaxationRate, com.tools20022.repository.msg.CorporateActionRate9.mmRequestedTaxationRate,
-					com.tools20022.repository.msg.CorporateActionRate47.mmRequestedTaxationRate, com.tools20022.repository.msg.CorporateActionRate59.mmRequestedTaxationRate,
-					com.tools20022.repository.msg.CorporateActionRate71.mmRequestedWithholdingTaxRate, com.tools20022.repository.msg.CorporateActionRate73.mmRequestedWithholdingTaxRate);
+			derivation_lazy = () -> Arrays.asList(CorporateActionRate8.mmRequestedTaxationRate, CorporateActionRate9.mmRequestedTaxationRate, CorporateActionRate47.mmRequestedTaxationRate, CorporateActionRate59.mmRequestedTaxationRate,
+					CorporateActionRate71.mmRequestedWithholdingTaxRate, CorporateActionRate73.mmRequestedWithholdingTaxRate);
 			elementContext_lazy = () -> TaxVoucher.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RequestedTaxationRate";
 			definition = "Requested tax rate in case of breakdown of tax rate, for example, used for adjustment of tax rate. This is the new requested applicable rate.";
 			maxOccurs = 1;
@@ -352,22 +348,16 @@ public class TaxVoucher {
 	 */
 	public static final MMBusinessAttribute mmCreditRate = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionRate4.mmTaxCreditRate, com.tools20022.repository.msg.CorporateActionRate10.mmTaxCreditRate,
-					com.tools20022.repository.msg.RateDetails2.mmTaxCreditRate, com.tools20022.repository.msg.RateDetails4.mmTaxCreditRate, com.tools20022.repository.msg.CorporateActionRate29.mmTaxCreditRate,
-					com.tools20022.repository.msg.RateDetails7.mmTaxCreditRate, com.tools20022.repository.msg.CorporateActionRate34.mmTaxCreditRate, com.tools20022.repository.msg.RateDetails9.mmTaxCreditRate,
-					com.tools20022.repository.msg.RateDetails11.mmTaxCreditRate, com.tools20022.repository.msg.RateDetails12.mmTaxCreditRate, com.tools20022.repository.msg.CorporateActionRate5.mmTaxCreditRate,
-					com.tools20022.repository.msg.CorporateActionRate12.mmTaxCreditRate, com.tools20022.repository.msg.RateDetails3.mmTaxCreditRate, com.tools20022.repository.msg.RateDetails5.mmTaxCreditRate,
-					com.tools20022.repository.msg.CorporateActionRate28.mmTaxCreditRate, com.tools20022.repository.msg.CorporateActionRate33.mmTaxCreditRate, com.tools20022.repository.msg.RateDetails10.mmTaxCreditRate,
-					com.tools20022.repository.msg.RateDetails13.mmTaxCreditRate, com.tools20022.repository.msg.RateDetails15.mmTaxCreditRate, com.tools20022.repository.msg.CorporateActionRate48.mmTaxCreditRate,
-					com.tools20022.repository.msg.CorporateActionRate49.mmTaxCreditRate, com.tools20022.repository.msg.RateDetails14.mmTaxCreditRate, com.tools20022.repository.msg.CorporateActionRate58.mmTaxCreditRate,
-					com.tools20022.repository.msg.RateDetails18.mmTaxCreditRate, com.tools20022.repository.msg.RateDetails21.mmTaxCreditRate, com.tools20022.repository.msg.CorporateActionRate65.mmTaxCreditRate,
-					com.tools20022.repository.msg.RateDetails23.mmTaxCreditRate, com.tools20022.repository.msg.CorporateActionRate69.mmTaxCreditRate, com.tools20022.repository.msg.RateDetails22.mmTaxCreditRate,
-					com.tools20022.repository.msg.CorporateActionRate72.mmTaxCreditRate, com.tools20022.repository.msg.RateDetails24.mmTaxCreditRate, com.tools20022.repository.msg.RateDetails25.mmTaxCreditRate,
-					com.tools20022.repository.msg.CorporateActionRate77.mmTaxCreditRate, com.tools20022.repository.msg.CorporateActionRate75.mmTaxCreditRate, com.tools20022.repository.msg.RateDetails26.mmTaxCreditRate,
-					com.tools20022.repository.msg.RateDetails27.mmTaxCreditRate, com.tools20022.repository.msg.RateDetails28.mmTaxCreditRate, com.tools20022.repository.msg.RateDetails30.mmTaxCreditRate);
+			derivation_lazy = () -> Arrays.asList(CorporateActionRate4.mmTaxCreditRate, CorporateActionRate10.mmTaxCreditRate, RateDetails2.mmTaxCreditRate, RateDetails4.mmTaxCreditRate, CorporateActionRate29.mmTaxCreditRate,
+					RateDetails7.mmTaxCreditRate, CorporateActionRate34.mmTaxCreditRate, RateDetails9.mmTaxCreditRate, RateDetails11.mmTaxCreditRate, RateDetails12.mmTaxCreditRate, CorporateActionRate5.mmTaxCreditRate,
+					CorporateActionRate12.mmTaxCreditRate, RateDetails3.mmTaxCreditRate, RateDetails5.mmTaxCreditRate, CorporateActionRate28.mmTaxCreditRate, CorporateActionRate33.mmTaxCreditRate, RateDetails10.mmTaxCreditRate,
+					RateDetails13.mmTaxCreditRate, RateDetails15.mmTaxCreditRate, CorporateActionRate48.mmTaxCreditRate, CorporateActionRate49.mmTaxCreditRate, RateDetails14.mmTaxCreditRate, CorporateActionRate58.mmTaxCreditRate,
+					RateDetails18.mmTaxCreditRate, RateDetails21.mmTaxCreditRate, CorporateActionRate65.mmTaxCreditRate, RateDetails23.mmTaxCreditRate, CorporateActionRate69.mmTaxCreditRate, RateDetails22.mmTaxCreditRate,
+					CorporateActionRate72.mmTaxCreditRate, RateDetails24.mmTaxCreditRate, RateDetails25.mmTaxCreditRate, CorporateActionRate77.mmTaxCreditRate, CorporateActionRate75.mmTaxCreditRate, RateDetails26.mmTaxCreditRate,
+					RateDetails27.mmTaxCreditRate, RateDetails28.mmTaxCreditRate, RateDetails30.mmTaxCreditRate);
 			elementContext_lazy = () -> TaxVoucher.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CreditRate";
 			definition = "Applicable tax rate on the tax credit amount.";
 			maxOccurs = 1;
@@ -499,27 +489,21 @@ public class TaxVoucher {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedSecurityTax = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionRate4.mmWithholdingOfForeignTax, com.tools20022.repository.msg.CorporateActionRate4.mmWithholdingOfLocalTax,
-					com.tools20022.repository.msg.CorporateActionRate10.mmWithholdingOfForeignTax, com.tools20022.repository.msg.CorporateActionRate10.mmWithholdingOfLocalTax,
-					com.tools20022.repository.msg.CorporateActionRate26.mmWithholdingOfForeignTax, com.tools20022.repository.msg.CorporateActionRate31.mmWithholdingOfForeignTax,
-					com.tools20022.repository.msg.CorporateActionRate38.mmWithholdingOfForeignTax, com.tools20022.repository.msg.CorporateActionRate39.mmWithholdingOfForeignTax,
-					com.tools20022.repository.msg.CorporateActionRate5.mmWithholdingOfForeignTax, com.tools20022.repository.msg.CorporateActionRate5.mmWithholdingOfLocalTax,
-					com.tools20022.repository.msg.CorporateActionRate12.mmWithholdingOfForeignTax, com.tools20022.repository.msg.CorporateActionRate12.mmWithholdingOfLocalTax,
-					com.tools20022.repository.msg.CorporateActionRate25.mmWithholdingOfForeignTax, com.tools20022.repository.msg.CorporateActionRate30.mmWithholdingOfForeignTax,
-					com.tools20022.repository.msg.CorporateActionRate37.mmWithholdingOfForeignTax, com.tools20022.repository.msg.CorporateActionRate40.mmWithholdingOfForeignTax,
-					com.tools20022.repository.msg.CorporateActionRate36.mmWithholdingOfForeignTax, com.tools20022.repository.msg.CorporateActionRate42.mmWithholdingOfForeignTax,
-					com.tools20022.repository.msg.CorporateActionRate2.mmWithholdingOfForeignTax, com.tools20022.repository.msg.CorporateActionRate2.mmWithholdingOfLocalTax, com.tools20022.repository.msg.CorporateActionRate2.mmRelatedTax,
-					com.tools20022.repository.msg.CorporateActionRate46.mmWithholdingOfForeignTax, com.tools20022.repository.msg.CorporateActionRate45.mmWithholdingOfForeignTax,
-					com.tools20022.repository.msg.CorporateActionRate44.mmWithholdingOfForeignTax, com.tools20022.repository.msg.CorporateActionRate60.mmWithholdingOfForeignTax,
-					com.tools20022.repository.msg.CorporateActionRate64.mmWithholdingOfForeignTax, com.tools20022.repository.msg.CorporateActionRate57.mmWithholdingOfForeignTax);
+			derivation_lazy = () -> Arrays.asList(CorporateActionRate4.mmWithholdingOfForeignTax, CorporateActionRate4.mmWithholdingOfLocalTax, CorporateActionRate10.mmWithholdingOfForeignTax, CorporateActionRate10.mmWithholdingOfLocalTax,
+					CorporateActionRate26.mmWithholdingOfForeignTax, CorporateActionRate31.mmWithholdingOfForeignTax, CorporateActionRate38.mmWithholdingOfForeignTax, CorporateActionRate39.mmWithholdingOfForeignTax,
+					CorporateActionRate5.mmWithholdingOfForeignTax, CorporateActionRate5.mmWithholdingOfLocalTax, CorporateActionRate12.mmWithholdingOfForeignTax, CorporateActionRate12.mmWithholdingOfLocalTax,
+					CorporateActionRate25.mmWithholdingOfForeignTax, CorporateActionRate30.mmWithholdingOfForeignTax, CorporateActionRate37.mmWithholdingOfForeignTax, CorporateActionRate40.mmWithholdingOfForeignTax,
+					CorporateActionRate36.mmWithholdingOfForeignTax, CorporateActionRate42.mmWithholdingOfForeignTax, CorporateActionRate2.mmWithholdingOfForeignTax, CorporateActionRate2.mmWithholdingOfLocalTax,
+					CorporateActionRate2.mmRelatedTax, CorporateActionRate46.mmWithholdingOfForeignTax, CorporateActionRate45.mmWithholdingOfForeignTax, CorporateActionRate44.mmWithholdingOfForeignTax,
+					CorporateActionRate60.mmWithholdingOfForeignTax, CorporateActionRate64.mmWithholdingOfForeignTax, CorporateActionRate57.mmWithholdingOfForeignTax);
 			elementContext_lazy = () -> TaxVoucher.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedSecurityTax";
 			definition = "Specifies tax elements on the security which is involved in the corporate event.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesTax.mmTaxVoucher;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SecuritiesTax.mmObject();
 		}
 	};
@@ -668,28 +652,19 @@ public class TaxVoucher {
 	 */
 	public static final MMBusinessAttribute mmSundryOrOtherAmount = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionAmounts2.mmSundryOrOtherAmount, com.tools20022.repository.msg.CorporateActionAmounts5.mmSundryOrOtherAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts11.mmSundryOrOtherAmount, com.tools20022.repository.msg.CorporateActionAmounts12.mmSundryOrOtherAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts17.mmSundryOrOtherAmount, com.tools20022.repository.msg.CorporateActionAmounts20.mmSundryOrOtherAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts23.mmSundryOrOtherAmount, com.tools20022.repository.msg.CorporateActionAmounts24.mmSundryOrOtherAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts3.mmSundryOrOtherAmount, com.tools20022.repository.msg.CorporateActionAmounts6.mmSundryOrOtherAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts9.mmSundryOrOtherAmount, com.tools20022.repository.msg.CorporateActionAmounts13.mmSundryOrOtherAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts16.mmSundryOrOtherAmount, com.tools20022.repository.msg.CorporateActionAmounts19.mmSundryOrOtherAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts22.mmSundryOrOtherAmount, com.tools20022.repository.msg.CorporateActionAmounts25.mmSundryOrOtherAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts4.mmSundryOrOtherAmount, com.tools20022.repository.msg.CorporateActionAmounts7.mmSundryOrOtherAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts10.mmSundryOrOtherAmount, com.tools20022.repository.msg.CorporateActionAmounts14.mmSundryOrOtherAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts15.mmSundryOrOtherAmount, com.tools20022.repository.msg.CorporateActionAmounts18.mmSundryOrOtherAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts21.mmSundryOrOtherAmount, com.tools20022.repository.msg.CorporateActionAmounts26.mmSundryOrOtherAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts1.mmSundryOrOtherAmount, com.tools20022.repository.msg.CorporateActionAmounts29.mmSundryOrOtherAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts27.mmSundryOrOtherAmount, com.tools20022.repository.msg.CorporateActionAmounts28.mmSundryOrOtherAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts33.mmSundryOrOtherAmount, com.tools20022.repository.msg.CorporateActionAmounts32.mmSundryOrOtherAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts35.mmSundryOrOtherAmount, com.tools20022.repository.msg.CorporateActionAmounts37.mmSundryOrOtherAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts36.mmSundryOrOtherAmount, com.tools20022.repository.msg.CorporateActionAmounts38.mmSundryOrOtherAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts39.mmSundryOrOtherAmount, com.tools20022.repository.msg.CorporateActionAmounts41.mmSundryOrOtherAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts40.mmSundryOrOtherAmount);
+			derivation_lazy = () -> Arrays.asList(CorporateActionAmounts2.mmSundryOrOtherAmount, CorporateActionAmounts5.mmSundryOrOtherAmount, CorporateActionAmounts11.mmSundryOrOtherAmount, CorporateActionAmounts12.mmSundryOrOtherAmount,
+					CorporateActionAmounts17.mmSundryOrOtherAmount, CorporateActionAmounts20.mmSundryOrOtherAmount, CorporateActionAmounts23.mmSundryOrOtherAmount, CorporateActionAmounts24.mmSundryOrOtherAmount,
+					CorporateActionAmounts3.mmSundryOrOtherAmount, CorporateActionAmounts6.mmSundryOrOtherAmount, CorporateActionAmounts9.mmSundryOrOtherAmount, CorporateActionAmounts13.mmSundryOrOtherAmount,
+					CorporateActionAmounts16.mmSundryOrOtherAmount, CorporateActionAmounts19.mmSundryOrOtherAmount, CorporateActionAmounts22.mmSundryOrOtherAmount, CorporateActionAmounts25.mmSundryOrOtherAmount,
+					CorporateActionAmounts4.mmSundryOrOtherAmount, CorporateActionAmounts7.mmSundryOrOtherAmount, CorporateActionAmounts10.mmSundryOrOtherAmount, CorporateActionAmounts14.mmSundryOrOtherAmount,
+					CorporateActionAmounts15.mmSundryOrOtherAmount, CorporateActionAmounts18.mmSundryOrOtherAmount, CorporateActionAmounts21.mmSundryOrOtherAmount, CorporateActionAmounts26.mmSundryOrOtherAmount,
+					CorporateActionAmounts1.mmSundryOrOtherAmount, CorporateActionAmounts29.mmSundryOrOtherAmount, CorporateActionAmounts27.mmSundryOrOtherAmount, CorporateActionAmounts28.mmSundryOrOtherAmount,
+					CorporateActionAmounts33.mmSundryOrOtherAmount, CorporateActionAmounts32.mmSundryOrOtherAmount, CorporateActionAmounts35.mmSundryOrOtherAmount, CorporateActionAmounts37.mmSundryOrOtherAmount,
+					CorporateActionAmounts36.mmSundryOrOtherAmount, CorporateActionAmounts38.mmSundryOrOtherAmount, CorporateActionAmounts39.mmSundryOrOtherAmount, CorporateActionAmounts41.mmSundryOrOtherAmount,
+					CorporateActionAmounts40.mmSundryOrOtherAmount);
 			elementContext_lazy = () -> TaxVoucher.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SundryOrOtherAmount";
 			definition = "Amount of money related to taxable income that cannot be categorised.";
 			maxOccurs = 1;
@@ -842,27 +817,17 @@ public class TaxVoucher {
 	 */
 	public static final MMBusinessAttribute mmCreditAmount = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionAmounts2.mmTaxCreditAmount, com.tools20022.repository.msg.CorporateActionAmounts5.mmTaxCreditAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts11.mmTaxCreditAmount, com.tools20022.repository.msg.CorporateActionAmounts12.mmTaxCreditAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts17.mmTaxCreditAmount, com.tools20022.repository.msg.CorporateActionAmounts20.mmTaxCreditAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts23.mmTaxCreditAmount, com.tools20022.repository.msg.CorporateActionAmounts24.mmTaxCreditAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts3.mmTaxCreditAmount, com.tools20022.repository.msg.CorporateActionAmounts6.mmTaxCreditAmount, com.tools20022.repository.msg.CorporateActionAmounts9.mmTaxCreditAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts13.mmTaxCreditAmount, com.tools20022.repository.msg.CorporateActionAmounts16.mmTaxCreditAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts19.mmTaxCreditAmount, com.tools20022.repository.msg.CorporateActionAmounts22.mmTaxCreditAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts25.mmTaxCreditAmount, com.tools20022.repository.msg.CorporateActionAmounts4.mmTaxCreditAmount, com.tools20022.repository.msg.CorporateActionAmounts7.mmTaxCreditAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts10.mmTaxCreditAmount, com.tools20022.repository.msg.CorporateActionAmounts14.mmTaxCreditAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts15.mmTaxCreditAmount, com.tools20022.repository.msg.CorporateActionAmounts18.mmTaxCreditAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts21.mmTaxCreditAmount, com.tools20022.repository.msg.CorporateActionAmounts26.mmTaxCreditAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts1.mmTaxCreditAmount, com.tools20022.repository.msg.CorporateActionAmounts29.mmTaxCreditAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts27.mmTaxCreditAmount, com.tools20022.repository.msg.CorporateActionAmounts28.mmTaxCreditAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts33.mmTaxCreditAmount, com.tools20022.repository.msg.CorporateActionAmounts32.mmTaxCreditAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts35.mmTaxCreditAmount, com.tools20022.repository.msg.CorporateActionAmounts37.mmTaxCreditAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts36.mmTaxCreditAmount, com.tools20022.repository.msg.CorporateActionAmounts38.mmTaxCreditAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts39.mmTaxCreditAmount, com.tools20022.repository.msg.CorporateActionAmounts41.mmTaxCreditAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts40.mmTaxCreditAmount);
+			derivation_lazy = () -> Arrays.asList(CorporateActionAmounts2.mmTaxCreditAmount, CorporateActionAmounts5.mmTaxCreditAmount, CorporateActionAmounts11.mmTaxCreditAmount, CorporateActionAmounts12.mmTaxCreditAmount,
+					CorporateActionAmounts17.mmTaxCreditAmount, CorporateActionAmounts20.mmTaxCreditAmount, CorporateActionAmounts23.mmTaxCreditAmount, CorporateActionAmounts24.mmTaxCreditAmount, CorporateActionAmounts3.mmTaxCreditAmount,
+					CorporateActionAmounts6.mmTaxCreditAmount, CorporateActionAmounts9.mmTaxCreditAmount, CorporateActionAmounts13.mmTaxCreditAmount, CorporateActionAmounts16.mmTaxCreditAmount, CorporateActionAmounts19.mmTaxCreditAmount,
+					CorporateActionAmounts22.mmTaxCreditAmount, CorporateActionAmounts25.mmTaxCreditAmount, CorporateActionAmounts4.mmTaxCreditAmount, CorporateActionAmounts7.mmTaxCreditAmount, CorporateActionAmounts10.mmTaxCreditAmount,
+					CorporateActionAmounts14.mmTaxCreditAmount, CorporateActionAmounts15.mmTaxCreditAmount, CorporateActionAmounts18.mmTaxCreditAmount, CorporateActionAmounts21.mmTaxCreditAmount, CorporateActionAmounts26.mmTaxCreditAmount,
+					CorporateActionAmounts1.mmTaxCreditAmount, CorporateActionAmounts29.mmTaxCreditAmount, CorporateActionAmounts27.mmTaxCreditAmount, CorporateActionAmounts28.mmTaxCreditAmount, CorporateActionAmounts33.mmTaxCreditAmount,
+					CorporateActionAmounts32.mmTaxCreditAmount, CorporateActionAmounts35.mmTaxCreditAmount, CorporateActionAmounts37.mmTaxCreditAmount, CorporateActionAmounts36.mmTaxCreditAmount, CorporateActionAmounts38.mmTaxCreditAmount,
+					CorporateActionAmounts39.mmTaxCreditAmount, CorporateActionAmounts41.mmTaxCreditAmount, CorporateActionAmounts40.mmTaxCreditAmount);
 			elementContext_lazy = () -> TaxVoucher.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CreditAmount";
 			definition = "Amount of money per equity allocated as the result of a tax credit.";
 			maxOccurs = 1;
@@ -943,16 +908,13 @@ public class TaxVoucher {
 	 */
 	public static final MMBusinessAttribute mmCashAmountBroughtForward = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionAmounts2.mmCashAmountBroughtForward, com.tools20022.repository.msg.CorporateActionAmounts5.mmCashAmountBroughtForward,
-					com.tools20022.repository.msg.CorporateActionAmounts11.mmCashAmountBroughtForward, com.tools20022.repository.msg.CorporateActionAmounts12.mmCashAmountBroughtForward,
-					com.tools20022.repository.msg.CorporateActionAmounts17.mmCashAmountBroughtForward, com.tools20022.repository.msg.CorporateActionAmounts20.mmCashAmountBroughtForward,
-					com.tools20022.repository.msg.CorporateActionAmounts23.mmCashAmountBroughtForward, com.tools20022.repository.msg.CorporateActionAmounts24.mmCashAmountBroughtForward,
-					com.tools20022.repository.msg.TaxVoucher1.mmCashAmountBroughtForward, com.tools20022.repository.msg.CorporateActionAmounts29.mmCashAmountBroughtForward,
-					com.tools20022.repository.msg.CorporateActionAmounts35.mmCashAmountBroughtForward, com.tools20022.repository.msg.CorporateActionAmounts37.mmCashAmountBroughtForward,
-					com.tools20022.repository.msg.CorporateActionAmounts39.mmCashAmountBroughtForward);
+			derivation_lazy = () -> Arrays.asList(CorporateActionAmounts2.mmCashAmountBroughtForward, CorporateActionAmounts5.mmCashAmountBroughtForward, CorporateActionAmounts11.mmCashAmountBroughtForward,
+					CorporateActionAmounts12.mmCashAmountBroughtForward, CorporateActionAmounts17.mmCashAmountBroughtForward, CorporateActionAmounts20.mmCashAmountBroughtForward, CorporateActionAmounts23.mmCashAmountBroughtForward,
+					CorporateActionAmounts24.mmCashAmountBroughtForward, TaxVoucher1.mmCashAmountBroughtForward, CorporateActionAmounts29.mmCashAmountBroughtForward, CorporateActionAmounts35.mmCashAmountBroughtForward,
+					CorporateActionAmounts37.mmCashAmountBroughtForward, CorporateActionAmounts39.mmCashAmountBroughtForward);
 			elementContext_lazy = () -> TaxVoucher.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CashAmountBroughtForward";
 			definition = "Cash amount retained from previous dividend or interest payment.";
 			maxOccurs = 1;
@@ -1033,16 +995,13 @@ public class TaxVoucher {
 	 */
 	public static final MMBusinessAttribute mmCashAmountCarriedForward = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionAmounts2.mmCashAmountCarriedForward, com.tools20022.repository.msg.CorporateActionAmounts5.mmCashAmountCarriedForward,
-					com.tools20022.repository.msg.CorporateActionAmounts11.mmCashAmountCarriedForward, com.tools20022.repository.msg.CorporateActionAmounts12.mmCashAmountCarriedForward,
-					com.tools20022.repository.msg.CorporateActionAmounts17.mmCashAmountCarriedForward, com.tools20022.repository.msg.CorporateActionAmounts20.mmCashAmountCarriedForward,
-					com.tools20022.repository.msg.CorporateActionAmounts23.mmCashAmountCarriedForward, com.tools20022.repository.msg.CorporateActionAmounts24.mmCashAmountCarriedForward,
-					com.tools20022.repository.msg.TaxVoucher1.mmCashAmountCarriedForward, com.tools20022.repository.msg.CorporateActionAmounts29.mmCashAmountCarriedForward,
-					com.tools20022.repository.msg.CorporateActionAmounts35.mmCashAmountCarriedForward, com.tools20022.repository.msg.CorporateActionAmounts37.mmCashAmountCarriedForward,
-					com.tools20022.repository.msg.CorporateActionAmounts39.mmCashAmountCarriedForward);
+			derivation_lazy = () -> Arrays.asList(CorporateActionAmounts2.mmCashAmountCarriedForward, CorporateActionAmounts5.mmCashAmountCarriedForward, CorporateActionAmounts11.mmCashAmountCarriedForward,
+					CorporateActionAmounts12.mmCashAmountCarriedForward, CorporateActionAmounts17.mmCashAmountCarriedForward, CorporateActionAmounts20.mmCashAmountCarriedForward, CorporateActionAmounts23.mmCashAmountCarriedForward,
+					CorporateActionAmounts24.mmCashAmountCarriedForward, TaxVoucher1.mmCashAmountCarriedForward, CorporateActionAmounts29.mmCashAmountCarriedForward, CorporateActionAmounts35.mmCashAmountCarriedForward,
+					CorporateActionAmounts37.mmCashAmountCarriedForward, CorporateActionAmounts39.mmCashAmountCarriedForward);
 			elementContext_lazy = () -> TaxVoucher.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CashAmountCarriedForward";
 			definition = "Cash amount carried forward to next dividend or interest payment.";
 			maxOccurs = 1;
@@ -1122,15 +1081,12 @@ public class TaxVoucher {
 	 */
 	public static final MMBusinessAttribute mmNotionalTaxAmount = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionAmounts2.mmNotionalTaxAmount, com.tools20022.repository.msg.CorporateActionAmounts5.mmNotionalTaxAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts11.mmNotionalTaxAmount, com.tools20022.repository.msg.CorporateActionAmounts12.mmNotionalTaxAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts17.mmNotionalTaxAmount, com.tools20022.repository.msg.CorporateActionAmounts20.mmNotionalTaxAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts23.mmNotionalTaxAmount, com.tools20022.repository.msg.CorporateActionAmounts24.mmNotionalTaxAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts29.mmNotionalTaxAmount, com.tools20022.repository.msg.CorporateActionAmounts35.mmNotionalTaxAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts37.mmNotionalTaxAmount, com.tools20022.repository.msg.CorporateActionAmounts39.mmNotionalTaxAmount);
+			derivation_lazy = () -> Arrays.asList(CorporateActionAmounts2.mmNotionalTaxAmount, CorporateActionAmounts5.mmNotionalTaxAmount, CorporateActionAmounts11.mmNotionalTaxAmount, CorporateActionAmounts12.mmNotionalTaxAmount,
+					CorporateActionAmounts17.mmNotionalTaxAmount, CorporateActionAmounts20.mmNotionalTaxAmount, CorporateActionAmounts23.mmNotionalTaxAmount, CorporateActionAmounts24.mmNotionalTaxAmount,
+					CorporateActionAmounts29.mmNotionalTaxAmount, CorporateActionAmounts35.mmNotionalTaxAmount, CorporateActionAmounts37.mmNotionalTaxAmount, CorporateActionAmounts39.mmNotionalTaxAmount);
 			elementContext_lazy = () -> TaxVoucher.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NotionalTaxAmount";
 			definition = "Tax on the amount of cash that would have been paid when new securities are issued in lieu of a cash dividend.";
 			maxOccurs = 1;
@@ -1179,13 +1135,13 @@ public class TaxVoucher {
 		{
 			elementContext_lazy = () -> TaxVoucher.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Distribution";
 			definition = "Corporate action distribution process for which tax voucher information is provided.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.CorporateActionDistribution.mmTaxVoucher;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.CorporateActionDistribution.mmObject();
 		}
 	};
@@ -1228,10 +1184,10 @@ public class TaxVoucher {
 	 */
 	public static final MMBusinessAttribute mmIdentification = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TaxVoucher2.mmIdentification, com.tools20022.repository.msg.TaxVoucher3.mmIdentification);
+			derivation_lazy = () -> Arrays.asList(TaxVoucher2.mmIdentification, TaxVoucher3.mmIdentification);
 			elementContext_lazy = () -> TaxVoucher.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Identification";
 			definition = "Unique and unambiguous identification for the tax voucher.";
 			maxOccurs = 1;
@@ -1277,10 +1233,10 @@ public class TaxVoucher {
 	 */
 	public static final MMBusinessAttribute mmBargainDate = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TaxVoucher2.mmBargainDate, com.tools20022.repository.msg.TaxVoucher3.mmBargainDate, com.tools20022.repository.msg.TaxVoucher1.mmBargainDate);
+			derivation_lazy = () -> Arrays.asList(TaxVoucher2.mmBargainDate, TaxVoucher3.mmBargainDate, TaxVoucher1.mmBargainDate);
 			elementContext_lazy = () -> TaxVoucher.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BargainDate";
 			definition = "Date on which DRIP purchase completed.";
 			maxOccurs = 1;
@@ -1329,11 +1285,10 @@ public class TaxVoucher {
 	 */
 	public static final MMBusinessAttribute mmBargainSettlementDate = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TaxVoucher2.mmBargainSettlementDate, com.tools20022.repository.msg.TaxVoucher3.mmBargainSettlementDate,
-					com.tools20022.repository.msg.TaxVoucher1.mmBargainSettlementDate);
+			derivation_lazy = () -> Arrays.asList(TaxVoucher2.mmBargainSettlementDate, TaxVoucher3.mmBargainSettlementDate, TaxVoucher1.mmBargainSettlementDate);
 			elementContext_lazy = () -> TaxVoucher.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BargainSettlementDate";
 			definition = "Settlement date of the DRIP purchase transaction.";
 			maxOccurs = 1;
@@ -1376,10 +1331,10 @@ public class TaxVoucher {
 	 */
 	public static final MMBusinessAttribute mmTaxVoucherRate = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TaxVoucher1.mmTaxVoucherRate);
+			derivation_lazy = () -> Arrays.asList(TaxVoucher1.mmTaxVoucherRate);
 			elementContext_lazy = () -> TaxVoucher.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TaxVoucherRate";
 			definition = "Distribution rate per share.";
 			maxOccurs = 1;
@@ -1430,16 +1385,16 @@ public class TaxVoucher {
 	 */
 	public static final MMBusinessAssociationEnd mmRecordDateHolding = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TaxVoucher1.mmRecordDateHolding);
+			derivation_lazy = () -> Arrays.asList(TaxVoucher1.mmRecordDateHolding);
 			elementContext_lazy = () -> TaxVoucher.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RecordDateHolding";
 			definition = "Securities holding on record date.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmTaxVoucher;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmObject();
 		}
 	};
@@ -1486,16 +1441,16 @@ public class TaxVoucher {
 	 */
 	public static final MMBusinessAssociationEnd mmScripDividendReinvestmentPricePerShare = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TaxVoucher1.mmScripDividendReinvestmentPricePerShare);
+			derivation_lazy = () -> Arrays.asList(TaxVoucher1.mmScripDividendReinvestmentPricePerShare);
 			elementContext_lazy = () -> TaxVoucher.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ScripDividendReinvestmentPricePerShare";
 			definition = "Cost per share of new shares allotted.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmTaxVoucher;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 		}
 	};
@@ -1535,10 +1490,10 @@ public class TaxVoucher {
 	 */
 	public static final MMBusinessAttribute mmAllotedSharesCost = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TaxVoucher1.mmAllotedSharesCost);
+			derivation_lazy = () -> Arrays.asList(TaxVoucher1.mmAllotedSharesCost);
 			elementContext_lazy = () -> TaxVoucher.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AllotedSharesCost";
 			definition = "Total cash amount required to purchase shares allotted.";
 			maxOccurs = 1;
@@ -1585,12 +1540,12 @@ public class TaxVoucher {
 		{
 			elementContext_lazy = () -> TaxVoucher.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ForeignExchangeTransaction";
 			definition = "Provides information about the foreign exchange transaction.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.ForeignExchangeTrade.mmCurrencyExchangeForTaxVoucher;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.ForeignExchangeTrade.mmObject();
 		}
 	};
@@ -1598,20 +1553,17 @@ public class TaxVoucher {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TaxVoucher";
 				definition = "Statement showing the amount or value of a distribution and either the tax credit to which the recipient is entitled in respect of that distribution; or the amount of tax deducted from the distribution.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesPricing.mmTaxVoucher, com.tools20022.repository.entity.SecuritiesTax.mmTaxVoucher,
 						com.tools20022.repository.entity.SecuritiesQuantity.mmTaxVoucher, com.tools20022.repository.entity.ForeignExchangeTrade.mmCurrencyExchangeForTaxVoucher,
 						com.tools20022.repository.entity.CorporateActionDistribution.mmTaxVoucher);
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.TaxVoucher.mmRequestedTaxationRate, com.tools20022.repository.entity.TaxVoucher.mmCreditRate,
-						com.tools20022.repository.entity.TaxVoucher.mmRelatedSecurityTax, com.tools20022.repository.entity.TaxVoucher.mmSundryOrOtherAmount, com.tools20022.repository.entity.TaxVoucher.mmCreditAmount,
-						com.tools20022.repository.entity.TaxVoucher.mmCashAmountBroughtForward, com.tools20022.repository.entity.TaxVoucher.mmCashAmountCarriedForward, com.tools20022.repository.entity.TaxVoucher.mmNotionalTaxAmount,
-						com.tools20022.repository.entity.TaxVoucher.mmDistribution, com.tools20022.repository.entity.TaxVoucher.mmIdentification, com.tools20022.repository.entity.TaxVoucher.mmBargainDate,
-						com.tools20022.repository.entity.TaxVoucher.mmBargainSettlementDate, com.tools20022.repository.entity.TaxVoucher.mmTaxVoucherRate, com.tools20022.repository.entity.TaxVoucher.mmRecordDateHolding,
-						com.tools20022.repository.entity.TaxVoucher.mmScripDividendReinvestmentPricePerShare, com.tools20022.repository.entity.TaxVoucher.mmAllotedSharesCost,
-						com.tools20022.repository.entity.TaxVoucher.mmForeignExchangeTransaction);
+				element_lazy = () -> Arrays.asList(TaxVoucher.mmRequestedTaxationRate, TaxVoucher.mmCreditRate, TaxVoucher.mmRelatedSecurityTax, TaxVoucher.mmSundryOrOtherAmount, TaxVoucher.mmCreditAmount,
+						TaxVoucher.mmCashAmountBroughtForward, TaxVoucher.mmCashAmountCarriedForward, TaxVoucher.mmNotionalTaxAmount, TaxVoucher.mmDistribution, TaxVoucher.mmIdentification, TaxVoucher.mmBargainDate,
+						TaxVoucher.mmBargainSettlementDate, TaxVoucher.mmTaxVoucherRate, TaxVoucher.mmRecordDateHolding, TaxVoucher.mmScripDividendReinvestmentPricePerShare, TaxVoucher.mmAllotedSharesCost,
+						TaxVoucher.mmForeignExchangeTransaction);
 				derivationComponent_lazy = () -> Arrays.asList(TaxVoucher2.mmObject(), TaxVoucher3.mmObject(), TaxVoucher1.mmObject());
 			}
 		});

@@ -19,9 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.Vote3Choice;
 import com.tools20022.repository.choice.VoteInstructionForMeetingResolution2Choice;
 import com.tools20022.repository.entity.VoteInstructionRequest;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -107,14 +109,14 @@ public class VoteDetails3 {
 	 */
 	public static final MMMessageAssociationEnd mmVoteInstructionForAgendaResolution = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.VoteInstructionRequest.mmVotePerResolution;
+			businessElementTrace_lazy = () -> VoteInstructionRequest.mmVotePerResolution;
 			componentContext_lazy = () -> VoteDetails3.mmObject();
 			isDerived = false;
 			xmlTag = "VoteInstrForAgndRsltn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VoteInstructionForAgendaResolution";
 			definition = "Indicates the vote instruction for the resolutions that are announced via the meeting agenda in advance of the meeting.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.VoteDetails2.mmVoteInstructionForAgendaResolution;
+			previousVersion_lazy = () -> VoteDetails2.mmVoteInstructionForAgendaResolution;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -163,14 +165,14 @@ public class VoteDetails3 {
 	 */
 	public static final MMMessageAssociationEnd mmVoteInstructionForMeetingResolution = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.VoteInstructionRequest.mmVoteForMeetingResolution;
+			businessElementTrace_lazy = () -> VoteInstructionRequest.mmVoteForMeetingResolution;
 			componentContext_lazy = () -> VoteDetails3.mmObject();
 			isDerived = false;
 			xmlTag = "VoteInstrForMtgRsltn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VoteInstructionForMeetingResolution";
 			definition = "Indicates the vote instruction for the resolutions that may arise at the meeting but were not previously provided in the agenda.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.VoteDetails2.mmVoteInstructionForMeetingResolution;
+			previousVersion_lazy = () -> VoteDetails2.mmVoteInstructionForMeetingResolution;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -181,10 +183,10 @@ public class VoteDetails3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.VoteDetails3.mmVoteInstructionForAgendaResolution, com.tools20022.repository.msg.VoteDetails3.mmVoteInstructionForMeetingResolution);
+				messageElement_lazy = () -> Arrays.asList(VoteDetails3.mmVoteInstructionForAgendaResolution, VoteDetails3.mmVoteInstructionForMeetingResolution);
 				trace_lazy = () -> VoteInstructionRequest.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "VoteDetails3";
 				definition = "Specifies detailed voting instructions.";
 				previousVersion_lazy = () -> VoteDetails2.mmObject();

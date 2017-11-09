@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.RejectedStatusReasonCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -86,7 +88,7 @@ public class RejectedCancellationStatusReason1Code extends RejectedStatusReasonC
 	 */
 	public static final MMCode mmInvalidOrUnrecognisedReference = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvalidOrUnrecognisedReference";
 			owner_lazy = () -> RejectedCancellationStatusReason1Code.mmObject();
 		}
@@ -109,7 +111,7 @@ public class RejectedCancellationStatusReason1Code extends RejectedStatusReasonC
 	 */
 	public static final MMCode mmNoCancellationMatch = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoCancellationMatch";
 			owner_lazy = () -> RejectedCancellationStatusReason1Code.mmObject();
 		}
@@ -132,7 +134,7 @@ public class RejectedCancellationStatusReason1Code extends RejectedStatusReasonC
 	 */
 	public static final MMCode mmNotCompliantWithSLA = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotCompliantWithSLA";
 			owner_lazy = () -> RejectedCancellationStatusReason1Code.mmObject();
 		}
@@ -141,13 +143,13 @@ public class RejectedCancellationStatusReason1Code extends RejectedStatusReasonC
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("REFE");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RejectedCancellationStatusReason1Code";
 				definition = "Reason for which a cancellation is rejected.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RejectedCancellationStatusReason1Code.mmInvalidOrUnrecognisedReference,
-						com.tools20022.repository.codeset.RejectedCancellationStatusReason1Code.mmNoCancellationMatch, com.tools20022.repository.codeset.RejectedCancellationStatusReason1Code.mmNotCompliantWithSLA);
+				code_lazy = () -> Arrays.asList(RejectedCancellationStatusReason1Code.mmInvalidOrUnrecognisedReference, RejectedCancellationStatusReason1Code.mmNoCancellationMatch,
+						RejectedCancellationStatusReason1Code.mmNotCompliantWithSLA);
 				trace_lazy = () -> RejectedStatusReasonCode.mmObject();
 			}
 		});

@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ReportPeriodActivityCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -75,7 +77,7 @@ public class ReportPeriodActivity1Code extends ReportPeriodActivityCode {
 	 */
 	public static final MMCode mmNoTransaction = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoTransaction";
 			owner_lazy = () -> ReportPeriodActivity1Code.mmObject();
 		}
@@ -84,11 +86,11 @@ public class ReportPeriodActivity1Code extends ReportPeriodActivityCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ReportPeriodActivity1Code";
 				definition = "Specifies the type of report activity for a specific reporting period.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ReportPeriodActivity1Code.mmNoTransaction);
+				code_lazy = () -> Arrays.asList(ReportPeriodActivity1Code.mmNoTransaction);
 				trace_lazy = () -> ReportPeriodActivityCode.mmObject();
 			}
 		});

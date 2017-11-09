@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.DayBookingInstructionCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -83,7 +85,7 @@ public class DayBookingInstruction1Code extends DayBookingInstructionCode {
 	 */
 	public static final MMCode mmAuto = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Auto";
 			owner_lazy = () -> DayBookingInstruction1Code.mmObject();
 		}
@@ -106,7 +108,7 @@ public class DayBookingInstruction1Code extends DayBookingInstructionCode {
 	 */
 	public static final MMCode mmSpeakFirst = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SpeakFirst";
 			owner_lazy = () -> DayBookingInstruction1Code.mmObject();
 		}
@@ -115,12 +117,12 @@ public class DayBookingInstruction1Code extends DayBookingInstructionCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("AUTO");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DayBookingInstruction1Code";
 				definition = "Describes of the nature of execution booking process.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DayBookingInstruction1Code.mmAuto, com.tools20022.repository.codeset.DayBookingInstruction1Code.mmSpeakFirst);
+				code_lazy = () -> Arrays.asList(DayBookingInstruction1Code.mmAuto, DayBookingInstruction1Code.mmSpeakFirst);
 				trace_lazy = () -> DayBookingInstructionCode.mmObject();
 			}
 		});

@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.InstructionCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -91,7 +93,7 @@ public class Instruction3Code extends InstructionCode {
 	 */
 	public static final MMCode mmPayCreditorByCheque = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PayCreditorByCheque";
 			owner_lazy = () -> Instruction3Code.mmObject();
 		}
@@ -114,7 +116,7 @@ public class Instruction3Code extends InstructionCode {
 	 */
 	public static final MMCode mmHoldCashForCreditor = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HoldCashForCreditor";
 			owner_lazy = () -> Instruction3Code.mmObject();
 		}
@@ -137,7 +139,7 @@ public class Instruction3Code extends InstructionCode {
 	 */
 	public static final MMCode mmPhoneBeneficiary = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PhoneBeneficiary";
 			owner_lazy = () -> Instruction3Code.mmObject();
 		}
@@ -160,7 +162,7 @@ public class Instruction3Code extends InstructionCode {
 	 */
 	public static final MMCode mmTelecom = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Telecom";
 			owner_lazy = () -> Instruction3Code.mmObject();
 		}
@@ -169,13 +171,12 @@ public class Instruction3Code extends InstructionCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CHQB");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Instruction3Code";
 				definition = "Specifies further instructions concerning the processing of a payment instruction, provided by the sending clearing agent to the next agent(s).";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Instruction3Code.mmPayCreditorByCheque, com.tools20022.repository.codeset.Instruction3Code.mmHoldCashForCreditor,
-						com.tools20022.repository.codeset.Instruction3Code.mmPhoneBeneficiary, com.tools20022.repository.codeset.Instruction3Code.mmTelecom);
+				code_lazy = () -> Arrays.asList(Instruction3Code.mmPayCreditorByCheque, Instruction3Code.mmHoldCashForCreditor, Instruction3Code.mmPhoneBeneficiary, Instruction3Code.mmTelecom);
 				trace_lazy = () -> InstructionCode.mmObject();
 			}
 		});

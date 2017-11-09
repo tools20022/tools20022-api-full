@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CorporateActionFrequencyTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -92,7 +94,7 @@ public class CorporateActionFrequencyType2Code extends CorporateActionFrequencyT
 	 */
 	public static final MMCode mmFinal = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Final";
 			owner_lazy = () -> CorporateActionFrequencyType2Code.mmObject();
 		}
@@ -115,7 +117,7 @@ public class CorporateActionFrequencyType2Code extends CorporateActionFrequencyT
 	 */
 	public static final MMCode mmInterim = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Interim";
 			owner_lazy = () -> CorporateActionFrequencyType2Code.mmObject();
 		}
@@ -138,7 +140,7 @@ public class CorporateActionFrequencyType2Code extends CorporateActionFrequencyT
 	 */
 	public static final MMCode mmRegular = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Regular";
 			owner_lazy = () -> CorporateActionFrequencyType2Code.mmObject();
 		}
@@ -161,7 +163,7 @@ public class CorporateActionFrequencyType2Code extends CorporateActionFrequencyT
 	 */
 	public static final MMCode mmSpecial = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Special";
 			owner_lazy = () -> CorporateActionFrequencyType2Code.mmObject();
 		}
@@ -184,7 +186,7 @@ public class CorporateActionFrequencyType2Code extends CorporateActionFrequencyT
 	 */
 	public static final MMCode mmFundCashDistributionReinvestment = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FundCashDistributionReinvestment";
 			owner_lazy = () -> CorporateActionFrequencyType2Code.mmObject();
 		}
@@ -193,14 +195,13 @@ public class CorporateActionFrequencyType2Code extends CorporateActionFrequencyT
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("FINL");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionFrequencyType2Code";
 				definition = "Specifies the frequency of a CA event.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CorporateActionFrequencyType2Code.mmFinal, com.tools20022.repository.codeset.CorporateActionFrequencyType2Code.mmInterim,
-						com.tools20022.repository.codeset.CorporateActionFrequencyType2Code.mmRegular, com.tools20022.repository.codeset.CorporateActionFrequencyType2Code.mmSpecial,
-						com.tools20022.repository.codeset.CorporateActionFrequencyType2Code.mmFundCashDistributionReinvestment);
+				code_lazy = () -> Arrays.asList(CorporateActionFrequencyType2Code.mmFinal, CorporateActionFrequencyType2Code.mmInterim, CorporateActionFrequencyType2Code.mmRegular, CorporateActionFrequencyType2Code.mmSpecial,
+						CorporateActionFrequencyType2Code.mmFundCashDistributionReinvestment);
 				trace_lazy = () -> CorporateActionFrequencyTypeCode.mmObject();
 			}
 		});

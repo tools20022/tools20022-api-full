@@ -20,9 +20,12 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.PercentageRate;
 import com.tools20022.repository.datatype.RestrictedFINActiveCurrencyAnd13DecimalAmount;
 import com.tools20022.repository.entity.SecuritiesTax;
+import com.tools20022.repository.entity.Tax;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.RateTypeAndPercentageRate3;
 import java.text.DateFormat;
 import java.util.Arrays;
@@ -110,11 +113,11 @@ public class RateAndAmountFormat32Choice {
 	 */
 	public static final MMMessageAttribute mmRate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.mmRate;
+			businessElementTrace_lazy = () -> Tax.mmRate;
 			componentContext_lazy = () -> RateAndAmountFormat32Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Rate";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rate";
 			definition = "Value expressed as a rate.";
 			maxOccurs = 1;
@@ -157,11 +160,11 @@ public class RateAndAmountFormat32Choice {
 	 */
 	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.mmAmount;
+			businessElementTrace_lazy = () -> Tax.mmAmount;
 			componentContext_lazy = () -> RateAndAmountFormat32Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Amt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Value is expressed as a currency and amount.";
 			maxOccurs = 1;
@@ -208,7 +211,7 @@ public class RateAndAmountFormat32Choice {
 			componentContext_lazy = () -> RateAndAmountFormat32Choice.mmObject();
 			isDerived = false;
 			xmlTag = "RateTpAndRate";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RateTypeAndRate";
 			definition = "Value is expressed as a rate type and a percentage rate.";
 			maxOccurs = 1;
@@ -221,11 +224,10 @@ public class RateAndAmountFormat32Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.RateAndAmountFormat32Choice.mmRate, com.tools20022.repository.choice.RateAndAmountFormat32Choice.mmAmount,
-						com.tools20022.repository.choice.RateAndAmountFormat32Choice.mmRateTypeAndRate);
+				messageElement_lazy = () -> Arrays.asList(RateAndAmountFormat32Choice.mmRate, RateAndAmountFormat32Choice.mmAmount, RateAndAmountFormat32Choice.mmRateTypeAndRate);
 				trace_lazy = () -> SecuritiesTax.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
 						return DateFormat.getDateInstance(java.text.DateFormat.LONG).parse("May 5, 2016");

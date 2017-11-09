@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,27 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.TypeOfAmount3Code
+ * TypeOfAmount3Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TypeOfAmount1Code
+ * TypeOfAmount1Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TypeOfAmount2Code
+ * TypeOfAmount2Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TypeOfAmount4Code
+ * TypeOfAmount4Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TypeOfAmount7Code
+ * TypeOfAmount7Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TypeOfAmount6Code
+ * TypeOfAmount6Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TypeOfAmount5Code
+ * TypeOfAmount5Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TypeOfAmount8Code
+ * TypeOfAmount8Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -124,27 +147,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * TypeOfAmountCode.mmReserved}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.TypeOfAmount3Code
- * TypeOfAmount3Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TypeOfAmount1Code
- * TypeOfAmount1Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TypeOfAmount2Code
- * TypeOfAmount2Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TypeOfAmount4Code
- * TypeOfAmount4Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TypeOfAmount7Code
- * TypeOfAmount7Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TypeOfAmount6Code
- * TypeOfAmount6Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TypeOfAmount5Code
- * TypeOfAmount5Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TypeOfAmount8Code
- * TypeOfAmount8Code}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -192,7 +194,7 @@ public class TypeOfAmountCode {
 	 */
 	public static final MMCode mmCashback = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Cashback";
 			definition = "Cash-back amount.";
 			owner_lazy = () -> TypeOfAmountCode.mmObject();
@@ -222,7 +224,7 @@ public class TypeOfAmountCode {
 	 */
 	public static final MMCode mmGratuity = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Gratuity";
 			definition = "Gratuity amount.";
 			owner_lazy = () -> TypeOfAmountCode.mmObject();
@@ -252,7 +254,7 @@ public class TypeOfAmountCode {
 	 */
 	public static final MMCode mmFees = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Fees";
 			definition = "Fees.";
 			owner_lazy = () -> TypeOfAmountCode.mmObject();
@@ -285,7 +287,7 @@ public class TypeOfAmountCode {
 	 */
 	public static final MMCode mmRebates = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Rebates";
 			definition = "Global rebate of the transaction. This amount is counted as a negative amount.";
 			owner_lazy = () -> TypeOfAmountCode.mmObject();
@@ -315,7 +317,7 @@ public class TypeOfAmountCode {
 	 */
 	public static final MMCode mmValueAddedTax = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ValueAddedTax";
 			definition = "Value added tax amount.";
 			owner_lazy = () -> TypeOfAmountCode.mmObject();
@@ -345,7 +347,7 @@ public class TypeOfAmountCode {
 	 */
 	public static final MMCode mmActual = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Actual";
 			definition = "Actual amount.";
 			owner_lazy = () -> TypeOfAmountCode.mmObject();
@@ -375,7 +377,7 @@ public class TypeOfAmountCode {
 	 */
 	public static final MMCode mmReplacement = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Replacement";
 			definition = "Replacement amount.";
 			owner_lazy = () -> TypeOfAmountCode.mmObject();
@@ -405,7 +407,7 @@ public class TypeOfAmountCode {
 	 */
 	public static final MMCode mmMaximum = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Maximum";
 			definition = "Maximum amount (the final amount must be less or equal).";
 			owner_lazy = () -> TypeOfAmountCode.mmObject();
@@ -435,7 +437,7 @@ public class TypeOfAmountCode {
 	 */
 	public static final MMCode mmDefault = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Default";
 			definition = "Default amount.";
 			owner_lazy = () -> TypeOfAmountCode.mmObject();
@@ -466,7 +468,7 @@ public class TypeOfAmountCode {
 	 */
 	public static final MMCode mmEstimated = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Estimated";
 			definition = "Estimated amount (the final amount could be above or below).";
 			owner_lazy = () -> TypeOfAmountCode.mmObject();
@@ -497,7 +499,7 @@ public class TypeOfAmountCode {
 	 */
 	public static final MMCode mmOriginal = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Original";
 			definition = "Original amount authorised during the real-time authorisation process.";
 			owner_lazy = () -> TypeOfAmountCode.mmObject();
@@ -527,7 +529,7 @@ public class TypeOfAmountCode {
 	 */
 	public static final MMCode mmSurcharge = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Surcharge";
 			definition = "Extra fee for a purchase or a withdrawal.";
 			owner_lazy = () -> TypeOfAmountCode.mmObject();
@@ -557,7 +559,7 @@ public class TypeOfAmountCode {
 	 */
 	public static final MMCode mmServiceFee = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ServiceFee";
 			definition = "Service fee.";
 			owner_lazy = () -> TypeOfAmountCode.mmObject();
@@ -587,7 +589,7 @@ public class TypeOfAmountCode {
 	 */
 	public static final MMCode mmInterchangeFee = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InterchangeFee";
 			definition = "Interchange fee.";
 			owner_lazy = () -> TypeOfAmountCode.mmObject();
@@ -620,7 +622,7 @@ public class TypeOfAmountCode {
 	 */
 	public static final MMCode mmDiscount = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Discount";
 			definition = "Discount, rebate or voucher, related to loyalty programs. This amount is counted as a negative amount.";
 			owner_lazy = () -> TypeOfAmountCode.mmObject();
@@ -653,7 +655,7 @@ public class TypeOfAmountCode {
 	 */
 	public static final MMCode mmATMCommissionFee = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ATMCommissionFee";
 			definition = "Commission that the issuer will charge to the cardholder, which should be shown and accepted by the cardholder before the money is disbursed.";
 			owner_lazy = () -> TypeOfAmountCode.mmObject();
@@ -683,7 +685,7 @@ public class TypeOfAmountCode {
 	 */
 	public static final MMCode mmAuthorisedAmount = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AuthorisedAmount";
 			definition = "Transaction amount that has been authorised.";
 			owner_lazy = () -> TypeOfAmountCode.mmObject();
@@ -716,7 +718,7 @@ public class TypeOfAmountCode {
 	 */
 	public static final MMCode mmCardRemainingBalance = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CardRemainingBalance";
 			definition = "Remaining allowed amount for this type of transaction with this card, after the transaction, until the end of the card limit period.";
 			owner_lazy = () -> TypeOfAmountCode.mmObject();
@@ -749,7 +751,7 @@ public class TypeOfAmountCode {
 	 */
 	public static final MMCode mmMaximumAllowedAmount = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaximumAllowedAmount";
 			definition = "Maximum amount allowed for the transaction in the transaction amount currency if the transaction amount of the request was declined.";
 			owner_lazy = () -> TypeOfAmountCode.mmObject();
@@ -782,7 +784,7 @@ public class TypeOfAmountCode {
 	 */
 	public static final MMCode mmMinimumAllowedAmount = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MinimumAllowedAmount";
 			definition = "Minimum amount allowed in the TransactionAmount currency if the transaction amount of the request was declined.";
 			owner_lazy = () -> TypeOfAmountCode.mmObject();
@@ -813,7 +815,7 @@ public class TypeOfAmountCode {
 	 */
 	public static final MMCode mmRequestedAmount = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestedAmount";
 			definition = "Transaction amount that has been requested to be authorised.";
 			owner_lazy = () -> TypeOfAmountCode.mmObject();
@@ -843,7 +845,7 @@ public class TypeOfAmountCode {
 	 */
 	public static final MMCode mmIssuerFees = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssuerFees";
 			definition = "Fees amount from the card issuer.";
 			owner_lazy = () -> TypeOfAmountCode.mmObject();
@@ -873,7 +875,7 @@ public class TypeOfAmountCode {
 	 */
 	public static final MMCode mmIssuerCommission = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssuerCommission";
 			definition = "Commission from the card issuer.";
 			owner_lazy = () -> TypeOfAmountCode.mmObject();
@@ -903,7 +905,7 @@ public class TypeOfAmountCode {
 	 */
 	public static final MMCode mmInterchangeFees = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterchangeFees";
 			definition = "Interchange fees.";
 			owner_lazy = () -> TypeOfAmountCode.mmObject();
@@ -933,7 +935,7 @@ public class TypeOfAmountCode {
 	 */
 	public static final MMCode mmProcessingFees = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProcessingFees";
 			definition = "Processing fees.";
 			owner_lazy = () -> TypeOfAmountCode.mmObject();
@@ -963,7 +965,7 @@ public class TypeOfAmountCode {
 	 */
 	public static final MMCode mmCurrencyConversionFees = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrencyConversionFees";
 			definition = "Currency conversion fees.";
 			owner_lazy = () -> TypeOfAmountCode.mmObject();
@@ -993,7 +995,7 @@ public class TypeOfAmountCode {
 	 */
 	public static final MMCode mmInternationalServiceAssessmentFees = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InternationalServiceAssessmentFees";
 			definition = "International  service assessment fees.";
 			owner_lazy = () -> TypeOfAmountCode.mmObject();
@@ -1026,7 +1028,7 @@ public class TypeOfAmountCode {
 	 */
 	public static final MMCode mmCommission = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Commission";
 			definition = "Commission, for example for DCC (Dynamic Currency Conversion) transactions.";
 			owner_lazy = () -> TypeOfAmountCode.mmObject();
@@ -1056,7 +1058,7 @@ public class TypeOfAmountCode {
 	 */
 	public static final MMCode mmDonation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Donation";
 			definition = "Donation amount.";
 			owner_lazy = () -> TypeOfAmountCode.mmObject();
@@ -1086,7 +1088,7 @@ public class TypeOfAmountCode {
 	 */
 	public static final MMCode mmTax = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Tax";
 			definition = "Taxes applicable to the transaction.";
 			owner_lazy = () -> TypeOfAmountCode.mmObject();
@@ -1116,7 +1118,7 @@ public class TypeOfAmountCode {
 	 */
 	public static final MMCode mmIncremental = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Incremental";
 			definition = "Incremental amount for reservation.";
 			owner_lazy = () -> TypeOfAmountCode.mmObject();
@@ -1146,7 +1148,7 @@ public class TypeOfAmountCode {
 	 */
 	public static final MMCode mmDecremental = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Decremental";
 			definition = "Decremental amount for reservation.";
 			owner_lazy = () -> TypeOfAmountCode.mmObject();
@@ -1176,7 +1178,7 @@ public class TypeOfAmountCode {
 	 */
 	public static final MMCode mmReserved = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reserved";
 			definition = "Reserved or updated reserved amount for reservation.";
 			owner_lazy = () -> TypeOfAmountCode.mmObject();
@@ -1187,23 +1189,17 @@ public class TypeOfAmountCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CSHB");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TypeOfAmountCode";
 				definition = "Identification or qualification of the type of amount.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TypeOfAmountCode.mmCashback, com.tools20022.repository.codeset.TypeOfAmountCode.mmGratuity, com.tools20022.repository.codeset.TypeOfAmountCode.mmFees,
-						com.tools20022.repository.codeset.TypeOfAmountCode.mmRebates, com.tools20022.repository.codeset.TypeOfAmountCode.mmValueAddedTax, com.tools20022.repository.codeset.TypeOfAmountCode.mmActual,
-						com.tools20022.repository.codeset.TypeOfAmountCode.mmReplacement, com.tools20022.repository.codeset.TypeOfAmountCode.mmMaximum, com.tools20022.repository.codeset.TypeOfAmountCode.mmDefault,
-						com.tools20022.repository.codeset.TypeOfAmountCode.mmEstimated, com.tools20022.repository.codeset.TypeOfAmountCode.mmOriginal, com.tools20022.repository.codeset.TypeOfAmountCode.mmSurcharge,
-						com.tools20022.repository.codeset.TypeOfAmountCode.mmServiceFee, com.tools20022.repository.codeset.TypeOfAmountCode.mmInterchangeFee, com.tools20022.repository.codeset.TypeOfAmountCode.mmDiscount,
-						com.tools20022.repository.codeset.TypeOfAmountCode.mmATMCommissionFee, com.tools20022.repository.codeset.TypeOfAmountCode.mmAuthorisedAmount,
-						com.tools20022.repository.codeset.TypeOfAmountCode.mmCardRemainingBalance, com.tools20022.repository.codeset.TypeOfAmountCode.mmMaximumAllowedAmount,
-						com.tools20022.repository.codeset.TypeOfAmountCode.mmMinimumAllowedAmount, com.tools20022.repository.codeset.TypeOfAmountCode.mmRequestedAmount, com.tools20022.repository.codeset.TypeOfAmountCode.mmIssuerFees,
-						com.tools20022.repository.codeset.TypeOfAmountCode.mmIssuerCommission, com.tools20022.repository.codeset.TypeOfAmountCode.mmInterchangeFees, com.tools20022.repository.codeset.TypeOfAmountCode.mmProcessingFees,
-						com.tools20022.repository.codeset.TypeOfAmountCode.mmCurrencyConversionFees, com.tools20022.repository.codeset.TypeOfAmountCode.mmInternationalServiceAssessmentFees,
-						com.tools20022.repository.codeset.TypeOfAmountCode.mmCommission, com.tools20022.repository.codeset.TypeOfAmountCode.mmDonation, com.tools20022.repository.codeset.TypeOfAmountCode.mmTax,
-						com.tools20022.repository.codeset.TypeOfAmountCode.mmIncremental, com.tools20022.repository.codeset.TypeOfAmountCode.mmDecremental, com.tools20022.repository.codeset.TypeOfAmountCode.mmReserved);
+				code_lazy = () -> Arrays.asList(TypeOfAmountCode.mmCashback, TypeOfAmountCode.mmGratuity, TypeOfAmountCode.mmFees, TypeOfAmountCode.mmRebates, TypeOfAmountCode.mmValueAddedTax, TypeOfAmountCode.mmActual,
+						TypeOfAmountCode.mmReplacement, TypeOfAmountCode.mmMaximum, TypeOfAmountCode.mmDefault, TypeOfAmountCode.mmEstimated, TypeOfAmountCode.mmOriginal, TypeOfAmountCode.mmSurcharge, TypeOfAmountCode.mmServiceFee,
+						TypeOfAmountCode.mmInterchangeFee, TypeOfAmountCode.mmDiscount, TypeOfAmountCode.mmATMCommissionFee, TypeOfAmountCode.mmAuthorisedAmount, TypeOfAmountCode.mmCardRemainingBalance,
+						TypeOfAmountCode.mmMaximumAllowedAmount, TypeOfAmountCode.mmMinimumAllowedAmount, TypeOfAmountCode.mmRequestedAmount, TypeOfAmountCode.mmIssuerFees, TypeOfAmountCode.mmIssuerCommission,
+						TypeOfAmountCode.mmInterchangeFees, TypeOfAmountCode.mmProcessingFees, TypeOfAmountCode.mmCurrencyConversionFees, TypeOfAmountCode.mmInternationalServiceAssessmentFees, TypeOfAmountCode.mmCommission,
+						TypeOfAmountCode.mmDonation, TypeOfAmountCode.mmTax, TypeOfAmountCode.mmIncremental, TypeOfAmountCode.mmDecremental, TypeOfAmountCode.mmReserved);
 				derivation_lazy = () -> Arrays.asList(TypeOfAmount3Code.mmObject(), TypeOfAmount1Code.mmObject(), TypeOfAmount2Code.mmObject(), TypeOfAmount4Code.mmObject(), TypeOfAmount7Code.mmObject(), TypeOfAmount6Code.mmObject(),
 						TypeOfAmount5Code.mmObject(), TypeOfAmount8Code.mmObject());
 			}

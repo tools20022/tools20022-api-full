@@ -20,9 +20,12 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.DirectDebit;
+import com.tools20022.repository.entity.Party;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -114,11 +117,11 @@ public class DirectDebitTransaction1 {
 	 */
 	public static final MMMessageAssociationEnd mmMandateRelatedInformation = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.DirectDebit.mmDirectDebitMandate;
+			businessElementTrace_lazy = () -> DirectDebit.mmDirectDebitMandate;
 			componentContext_lazy = () -> DirectDebitTransaction1.mmObject();
 			isDerived = false;
 			xmlTag = "MndtRltdInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MandateRelatedInformation";
 			definition = "Set of elements used to provide further details related to a direct debit mandate signed between the creditor and the debtor.\n\nUsage: Mandate related information is to be used only when the direct debit relates to a mandate signed between the debtor and the creditor.";
 			maxOccurs = 1;
@@ -161,11 +164,11 @@ public class DirectDebitTransaction1 {
 	 */
 	public static final MMMessageAssociationEnd mmCreditorSchemeIdentification = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> DirectDebitTransaction1.mmObject();
 			isDerived = false;
 			xmlTag = "CdtrSchmeId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditorSchemeIdentification";
 			definition = "Credit party that signs the direct debit mandate.";
 			maxOccurs = 1;
@@ -216,11 +219,11 @@ public class DirectDebitTransaction1 {
 	 */
 	public static final MMMessageAttribute mmPreNotificationIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.DirectDebit.mmPreNotificationIdentification;
+			businessElementTrace_lazy = () -> DirectDebit.mmPreNotificationIdentification;
 			componentContext_lazy = () -> DirectDebitTransaction1.mmObject();
 			isDerived = false;
 			xmlTag = "PreNtfctnId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreNotificationIdentification";
 			definition = "Unique and unambiguous identification of the pre-notification which is sent separately from the direct debit instruction.\n\nUsage: The direct debit pre-notification is used to reconcile separately sent collection information with the direct debit transaction information.";
 			maxOccurs = 1;
@@ -267,11 +270,11 @@ public class DirectDebitTransaction1 {
 	 */
 	public static final MMMessageAttribute mmPreNotificationDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.DirectDebit.mmPreNotificationDate;
+			businessElementTrace_lazy = () -> DirectDebit.mmPreNotificationDate;
 			componentContext_lazy = () -> DirectDebitTransaction1.mmObject();
 			isDerived = false;
 			xmlTag = "PreNtfctnDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreNotificationDate";
 			definition = "Date on which the creditor notifies the debtor about the amount and date on which the direct debit instruction will be presented to the debtor's agent.";
 			maxOccurs = 1;
@@ -283,11 +286,11 @@ public class DirectDebitTransaction1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DirectDebitTransaction1.mmMandateRelatedInformation, com.tools20022.repository.msg.DirectDebitTransaction1.mmCreditorSchemeIdentification,
-						com.tools20022.repository.msg.DirectDebitTransaction1.mmPreNotificationIdentification, com.tools20022.repository.msg.DirectDebitTransaction1.mmPreNotificationDate);
+				messageElement_lazy = () -> Arrays.asList(DirectDebitTransaction1.mmMandateRelatedInformation, DirectDebitTransaction1.mmCreditorSchemeIdentification, DirectDebitTransaction1.mmPreNotificationIdentification,
+						DirectDebitTransaction1.mmPreNotificationDate);
 				trace_lazy = () -> DirectDebit.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DirectDebitTransaction1";
 				definition = "Set of elements providing specific information on the direct debit transaction and the related mandate.";
 			}

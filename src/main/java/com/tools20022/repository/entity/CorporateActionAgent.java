@@ -19,10 +19,13 @@ package com.tools20022.repository.entity;
 
 import com.tools20022.metamodel.MMBusinessAttribute;
 import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.AgentRole1FormatChoice;
 import com.tools20022.repository.codeset.AgentRoleCode;
 import com.tools20022.repository.entity.CorporateActionPartyRole;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.CorporateActionAgent1;
+import com.tools20022.repository.msg.CorporateActionOption1;
 import com.tools20022.repository.msg.IssuerAgent1;
 import com.tools20022.repository.msg.IssuerAgent2;
 import java.util.Arrays;
@@ -39,12 +42,16 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionAgent#mmAgentRole
- * CorporateActionAgent.mmAgentRole}</li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.IssuerAgent1 IssuerAgent1}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.AgentRole1FormatChoice
+ * AgentRole1FormatChoice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionAgent1
+ * CorporateActionAgent1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.IssuerAgent2 IssuerAgent2}</li>
  * </ul>
  * </li>
  * <li>
@@ -60,16 +67,12 @@ import java.util.concurrent.atomic.AtomicReference;
  * superType} =
  * {@linkplain com.tools20022.repository.entity.CorporateActionPartyRole
  * CorporateActionPartyRole}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.IssuerAgent1 IssuerAgent1}</li>
- * <li>{@linkplain com.tools20022.repository.choice.AgentRole1FormatChoice
- * AgentRole1FormatChoice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CorporateActionAgent1
- * CorporateActionAgent1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.IssuerAgent2 IssuerAgent2}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionAgent#mmAgentRole
+ * CorporateActionAgent.mmAgentRole}</li>
  * </ul>
  * </li>
  * <li>
@@ -141,11 +144,10 @@ public class CorporateActionAgent extends CorporateActionPartyRole {
 	 */
 	public static final MMBusinessAttribute mmAgentRole = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IssuerAgent1.mmRole, com.tools20022.repository.choice.AgentRole1FormatChoice.mmCode, com.tools20022.repository.choice.AgentRole1FormatChoice.mmProprietary,
-					com.tools20022.repository.msg.CorporateActionAgent1.mmAgentRole, com.tools20022.repository.msg.IssuerAgent2.mmRole);
+			derivation_lazy = () -> Arrays.asList(IssuerAgent1.mmRole, AgentRole1FormatChoice.mmCode, AgentRole1FormatChoice.mmProprietary, CorporateActionAgent1.mmAgentRole, IssuerAgent2.mmRole);
 			elementContext_lazy = () -> CorporateActionAgent.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AgentRole";
 			definition = "Specifies the agent role played by a party in a corporate action process.";
 			maxOccurs = 1;
@@ -157,13 +159,13 @@ public class CorporateActionAgent extends CorporateActionPartyRole {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionAgent";
 				definition = "A firm authorised to act as an intermediary between issuer and shareholders. It takes care of the needs of the shareholders such as reporting, inquiries and regulatory compliance.";
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionOption1.mmCorporateActionOtherAgentDetails);
+				derivationElement_lazy = () -> Arrays.asList(CorporateActionOption1.mmCorporateActionOtherAgentDetails);
 				superType_lazy = () -> CorporateActionPartyRole.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CorporateActionAgent.mmAgentRole);
+				element_lazy = () -> Arrays.asList(CorporateActionAgent.mmAgentRole);
 				derivationComponent_lazy = () -> Arrays.asList(IssuerAgent1.mmObject(), AgentRole1FormatChoice.mmObject(), CorporateActionAgent1.mmObject(), IssuerAgent2.mmObject());
 			}
 		});

@@ -20,11 +20,15 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.FinancialInstrumentQuantityChoice;
 import com.tools20022.repository.codeset.Side1Code;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.YesNoIndicator;
+import com.tools20022.repository.entity.SecuritiesOrder;
+import com.tools20022.repository.entity.SecuritiesOrderParameters;
 import com.tools20022.repository.entity.SecuritiesOrderStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -127,11 +131,11 @@ public class OrderStatus3 {
 	 */
 	public static final MMMessageAttribute mmClientOrderIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmClientOrderIdentification;
+			businessElementTrace_lazy = () -> SecuritiesOrder.mmClientOrderIdentification;
 			componentContext_lazy = () -> OrderStatus3.mmObject();
 			isDerived = false;
 			xmlTag = "ClntOrdrId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClientOrderIdentification";
 			definition = "Unique identifier for the order as assigned by the buy-side. Uniqueness must be guaranteed within a single trading day. Firms, particularly those that electronically submit multi-day orders, trade globally or throughout market close periods, should ensure uniqueness across days, for example by embedding a date within the ClientOrderIdentification element.";
 			maxOccurs = 1;
@@ -176,11 +180,11 @@ public class OrderStatus3 {
 	 */
 	public static final MMMessageAttribute mmSecondaryClientOrderIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmClientOrderIdentification;
+			businessElementTrace_lazy = () -> SecuritiesOrder.mmClientOrderIdentification;
 			componentContext_lazy = () -> OrderStatus3.mmObject();
 			isDerived = false;
 			xmlTag = "ScndryClntOrdrId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecondaryClientOrderIdentification";
 			definition = "Name or number assigned by an entity to enable recognition of that entity, eg, account identifier.";
 			maxOccurs = 1;
@@ -222,11 +226,11 @@ public class OrderStatus3 {
 	 */
 	public static final MMMessageAttribute mmSide = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmSide;
+			businessElementTrace_lazy = () -> SecuritiesOrder.mmSide;
 			componentContext_lazy = () -> OrderStatus3.mmObject();
 			isDerived = false;
 			xmlTag = "Sd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Side";
 			definition = "Coded list to specify the side of the order.";
 			maxOccurs = 1;
@@ -274,11 +278,11 @@ public class OrderStatus3 {
 	 */
 	public static final MMMessageAttribute mmWorkingIndicator = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrderParameters.mmWorkingIndicator;
+			businessElementTrace_lazy = () -> SecuritiesOrderParameters.mmWorkingIndicator;
 			componentContext_lazy = () -> OrderStatus3.mmObject();
 			isDerived = false;
 			xmlTag = "WorkgInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WorkingIndicator";
 			definition = "Indicates if the order is currently being worked. For open outcry markets this indicates that the order is being worked in the crowd.  For electronic markets it indicates that the order has transitioned from a contingent order to a market order.";
 			maxOccurs = 1;
@@ -321,11 +325,11 @@ public class OrderStatus3 {
 	 */
 	public static final MMMessageAttribute mmRemainingQuantity = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrderStatus.mmRemainingQuantity;
+			businessElementTrace_lazy = () -> SecuritiesOrderStatus.mmRemainingQuantity;
 			componentContext_lazy = () -> OrderStatus3.mmObject();
 			isDerived = false;
 			xmlTag = "RmngQty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RemainingQuantity";
 			definition = "Quantity opened for further execution.";
 			maxOccurs = 1;
@@ -368,11 +372,11 @@ public class OrderStatus3 {
 	 */
 	public static final MMMessageAttribute mmCumulativeQuantity = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrderStatus.mmCumulativeQuantity;
+			businessElementTrace_lazy = () -> SecuritiesOrderStatus.mmCumulativeQuantity;
 			componentContext_lazy = () -> OrderStatus3.mmObject();
 			isDerived = false;
 			xmlTag = "CmltvQty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CumulativeQuantity";
 			definition = "Quantity of financial instrument to be ordered.";
 			maxOccurs = 1;
@@ -413,7 +417,7 @@ public class OrderStatus3 {
 			componentContext_lazy = () -> OrderStatus3.mmObject();
 			isDerived = false;
 			xmlTag = "CancQty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancelledQuantity";
 			definition = "Total quantity cancelled for this order.";
 			maxOccurs = 1;
@@ -454,11 +458,11 @@ public class OrderStatus3 {
 	 */
 	public static final MMMessageAttribute mmAveragePrice = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmOrderPrice;
+			businessElementTrace_lazy = () -> SecuritiesOrder.mmOrderPrice;
 			componentContext_lazy = () -> OrderStatus3.mmObject();
 			isDerived = false;
 			xmlTag = "AvrgPric";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AveragePrice";
 			definition = "Calculated average price of all fills on this order.";
 			maxOccurs = 1;
@@ -503,7 +507,7 @@ public class OrderStatus3 {
 			componentContext_lazy = () -> OrderStatus3.mmObject();
 			isDerived = false;
 			xmlTag = "SnglOrdrStsDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SingleOrderStatusDetails";
 			definition = "Status of the order.";
 			maxOccurs = 1;
@@ -516,13 +520,11 @@ public class OrderStatus3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OrderStatus3.mmClientOrderIdentification, com.tools20022.repository.msg.OrderStatus3.mmSecondaryClientOrderIdentification,
-						com.tools20022.repository.msg.OrderStatus3.mmSide, com.tools20022.repository.msg.OrderStatus3.mmWorkingIndicator, com.tools20022.repository.msg.OrderStatus3.mmRemainingQuantity,
-						com.tools20022.repository.msg.OrderStatus3.mmCumulativeQuantity, com.tools20022.repository.msg.OrderStatus3.mmCancelledQuantity, com.tools20022.repository.msg.OrderStatus3.mmAveragePrice,
-						com.tools20022.repository.msg.OrderStatus3.mmSingleOrderStatusDetails);
+				messageElement_lazy = () -> Arrays.asList(OrderStatus3.mmClientOrderIdentification, OrderStatus3.mmSecondaryClientOrderIdentification, OrderStatus3.mmSide, OrderStatus3.mmWorkingIndicator, OrderStatus3.mmRemainingQuantity,
+						OrderStatus3.mmCumulativeQuantity, OrderStatus3.mmCancelledQuantity, OrderStatus3.mmAveragePrice, OrderStatus3.mmSingleOrderStatusDetails);
 				trace_lazy = () -> SecuritiesOrderStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "OrderStatus3";
 				definition = "Provides details related to each single order being part of the list order.";
 			}

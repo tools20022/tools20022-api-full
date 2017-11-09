@@ -20,9 +20,12 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.acmt.IdentificationVerificationReportV02;
 import com.tools20022.repository.choice.VerificationReason1Choice;
 import com.tools20022.repository.datatype.IdentificationVerificationIndicator;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -118,7 +121,7 @@ public class VerificationReport2 {
 			componentContext_lazy = () -> VerificationReport2.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalIdentification";
 			definition = "Unique identification, as assigned by a sending party, to unambiguously identify the party and account identification information group within the original message.";
 			maxOccurs = 1;
@@ -163,7 +166,7 @@ public class VerificationReport2 {
 			componentContext_lazy = () -> VerificationReport2.mmObject();
 			isDerived = false;
 			xmlTag = "Vrfctn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Verification";
 			definition = "Identifies whether the party and/or account information received is correct.";
 			maxOccurs = 1;
@@ -207,7 +210,7 @@ public class VerificationReport2 {
 			componentContext_lazy = () -> VerificationReport2.mmObject();
 			isDerived = false;
 			xmlTag = "Rsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reason";
 			definition = "Specifies the reason why the verified identification information is incorrect.";
 			maxOccurs = 1;
@@ -252,7 +255,7 @@ public class VerificationReport2 {
 			componentContext_lazy = () -> VerificationReport2.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlPtyAndAcctId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalPartyAndAccountIdentification";
 			definition = "Provides party and/or account identification information as given in the original message.";
 			maxOccurs = 1;
@@ -295,7 +298,7 @@ public class VerificationReport2 {
 			componentContext_lazy = () -> VerificationReport2.mmObject();
 			isDerived = false;
 			xmlTag = "UpdtdPtyAndAcctId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UpdatedPartyAndAccountIdentification";
 			definition = "Provides party and/or account identification information.";
 			maxOccurs = 1;
@@ -308,12 +311,11 @@ public class VerificationReport2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.VerificationReport2.mmOriginalIdentification, com.tools20022.repository.msg.VerificationReport2.mmVerification,
-						com.tools20022.repository.msg.VerificationReport2.mmReason, com.tools20022.repository.msg.VerificationReport2.mmOriginalPartyAndAccountIdentification,
-						com.tools20022.repository.msg.VerificationReport2.mmUpdatedPartyAndAccountIdentification);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.IdentificationVerificationReportV02.mmReport);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(VerificationReport2.mmOriginalIdentification, VerificationReport2.mmVerification, VerificationReport2.mmReason, VerificationReport2.mmOriginalPartyAndAccountIdentification,
+						VerificationReport2.mmUpdatedPartyAndAccountIdentification);
+				messageBuildingBlock_lazy = () -> Arrays.asList(IdentificationVerificationReportV02.mmReport);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "VerificationReport2";
 				definition = "Provides the details of the verification of identification data for which verification was requested.";
 			}

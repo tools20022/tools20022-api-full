@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CashAccountTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -86,7 +88,7 @@ public class CashAccountType1Code extends CashAccountTypeCode {
 	 */
 	public static final MMCode mmSettlement = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Settlement";
 			owner_lazy = () -> CashAccountType1Code.mmObject();
 		}
@@ -109,7 +111,7 @@ public class CashAccountType1Code extends CashAccountTypeCode {
 	 */
 	public static final MMCode mmCurrent = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Current";
 			owner_lazy = () -> CashAccountType1Code.mmObject();
 		}
@@ -132,7 +134,7 @@ public class CashAccountType1Code extends CashAccountTypeCode {
 	 */
 	public static final MMCode mmSavings = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Savings";
 			owner_lazy = () -> CashAccountType1Code.mmObject();
 		}
@@ -141,13 +143,12 @@ public class CashAccountType1Code extends CashAccountTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("SACC");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CashAccountType1Code";
 				definition = "Specifies the nature, or use, of the cash account.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CashAccountType1Code.mmSettlement, com.tools20022.repository.codeset.CashAccountType1Code.mmCurrent,
-						com.tools20022.repository.codeset.CashAccountType1Code.mmSavings);
+				code_lazy = () -> Arrays.asList(CashAccountType1Code.mmSettlement, CashAccountType1Code.mmCurrent, CashAccountType1Code.mmSavings);
 				trace_lazy = () -> CashAccountTypeCode.mmObject();
 			}
 		});

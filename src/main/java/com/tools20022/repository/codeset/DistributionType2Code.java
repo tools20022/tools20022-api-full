@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.DistributionTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -93,7 +95,7 @@ public class DistributionType2Code extends DistributionTypeCode {
 	 */
 	public static final MMCode mmRollingBasis = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RollingBasis";
 			owner_lazy = () -> DistributionType2Code.mmObject();
 		}
@@ -116,7 +118,7 @@ public class DistributionType2Code extends DistributionTypeCode {
 	 */
 	public static final MMCode mmInterim = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Interim";
 			owner_lazy = () -> DistributionType2Code.mmObject();
 		}
@@ -139,7 +141,7 @@ public class DistributionType2Code extends DistributionTypeCode {
 	 */
 	public static final MMCode mmFinal = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Final";
 			owner_lazy = () -> DistributionType2Code.mmObject();
 		}
@@ -148,14 +150,13 @@ public class DistributionType2Code extends DistributionTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ROLL");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DistributionType2Code";
 				definition = "Specifies whether the proceeds of the event will be distributed on a rolling basis rather than on a specific date.";
 				previousVersion_lazy = () -> DistributionType1Code.mmObject();
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DistributionType2Code.mmRollingBasis, com.tools20022.repository.codeset.DistributionType2Code.mmInterim,
-						com.tools20022.repository.codeset.DistributionType2Code.mmFinal);
+				code_lazy = () -> Arrays.asList(DistributionType2Code.mmRollingBasis, DistributionType2Code.mmInterim, DistributionType2Code.mmFinal);
 				trace_lazy = () -> DistributionTypeCode.mmObject();
 			}
 		});

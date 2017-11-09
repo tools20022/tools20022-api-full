@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ResponseCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -86,7 +88,7 @@ public class Response1Code extends ResponseCode {
 	 */
 	public static final MMCode mmDeclined = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Declined";
 			owner_lazy = () -> Response1Code.mmObject();
 		}
@@ -109,7 +111,7 @@ public class Response1Code extends ResponseCode {
 	 */
 	public static final MMCode mmApproved = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Approved";
 			owner_lazy = () -> Response1Code.mmObject();
 		}
@@ -132,7 +134,7 @@ public class Response1Code extends ResponseCode {
 	 */
 	public static final MMCode mmPartialApproved = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartialApproved";
 			owner_lazy = () -> Response1Code.mmObject();
 		}
@@ -155,7 +157,7 @@ public class Response1Code extends ResponseCode {
 	 */
 	public static final MMCode mmTechnicalError = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TechnicalError";
 			owner_lazy = () -> Response1Code.mmObject();
 		}
@@ -164,13 +166,12 @@ public class Response1Code extends ResponseCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("DECL");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Response1Code";
 				definition = "Response code of a transaction.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Response1Code.mmDeclined, com.tools20022.repository.codeset.Response1Code.mmApproved, com.tools20022.repository.codeset.Response1Code.mmPartialApproved,
-						com.tools20022.repository.codeset.Response1Code.mmTechnicalError);
+				code_lazy = () -> Arrays.asList(Response1Code.mmDeclined, Response1Code.mmApproved, Response1Code.mmPartialApproved, Response1Code.mmTechnicalError);
 				trace_lazy = () -> ResponseCode.mmObject();
 			}
 		});

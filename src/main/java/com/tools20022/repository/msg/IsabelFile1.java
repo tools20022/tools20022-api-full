@@ -19,10 +19,12 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max14AlphaNumericText;
 import com.tools20022.repository.datatype.Max16Text;
 import com.tools20022.repository.datatype.Max4NumericText;
 import com.tools20022.repository.datatype.Number;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -100,7 +102,7 @@ public class IsabelFile1 {
 			componentContext_lazy = () -> IsabelFile1.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Unique identification of the file.\t";
 			maxOccurs = 1;
@@ -141,7 +143,7 @@ public class IsabelFile1 {
 			componentContext_lazy = () -> IsabelFile1.mmObject();
 			isDerived = false;
 			xmlTag = "Orgtr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Originator";
 			definition = "Unique identification of the originator of the file.";
 			maxOccurs = 1;
@@ -181,7 +183,7 @@ public class IsabelFile1 {
 			componentContext_lazy = () -> IsabelFile1.mmObject();
 			isDerived = false;
 			xmlTag = "Sz";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Size";
 			definition = "Size of the file.";
 			maxOccurs = 1;
@@ -221,7 +223,7 @@ public class IsabelFile1 {
 			componentContext_lazy = () -> IsabelFile1.mmObject();
 			isDerived = false;
 			xmlTag = "Frmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Format";
 			definition = "Format of the file.";
 			maxOccurs = 1;
@@ -261,7 +263,7 @@ public class IsabelFile1 {
 			componentContext_lazy = () -> IsabelFile1.mmObject();
 			isDerived = false;
 			xmlTag = "FrmtVrsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FormatVersion";
 			definition = "Version of the format of the file.";
 			maxOccurs = 1;
@@ -302,7 +304,7 @@ public class IsabelFile1 {
 			componentContext_lazy = () -> IsabelFile1.mmObject();
 			isDerived = false;
 			xmlTag = "RcrdLngth";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RecordLength";
 			definition = "Length of the individual records in the file.";
 			maxOccurs = 1;
@@ -314,10 +316,9 @@ public class IsabelFile1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IsabelFile1.mmIdentification, com.tools20022.repository.msg.IsabelFile1.mmOriginator, com.tools20022.repository.msg.IsabelFile1.mmSize,
-						com.tools20022.repository.msg.IsabelFile1.mmFormat, com.tools20022.repository.msg.IsabelFile1.mmFormatVersion, com.tools20022.repository.msg.IsabelFile1.mmRecordLength);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(IsabelFile1.mmIdentification, IsabelFile1.mmOriginator, IsabelFile1.mmSize, IsabelFile1.mmFormat, IsabelFile1.mmFormatVersion, IsabelFile1.mmRecordLength);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "IsabelFile1";
 				definition = "Specifies the parameters for an Isabel payment file.";
 			}

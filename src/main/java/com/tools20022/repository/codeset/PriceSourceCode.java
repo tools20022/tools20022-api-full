@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.PriceSource1Code
+ * PriceSource1Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PriceSource2Code
+ * PriceSource2Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>{@linkplain com.tools20022.repository.codeset.PriceSourceCode#mmFund
@@ -39,15 +50,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.PriceSourceCode#mmStockExchange
  * PriceSourceCode.mmStockExchange}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.PriceSource1Code
- * PriceSource1Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PriceSource2Code
- * PriceSource2Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -98,7 +100,7 @@ public class PriceSourceCode {
 	 */
 	public static final MMCode mmFund = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Fund";
 			definition = "Source of price quotation is a fund, eg, transfer agent, fund itself.";
 			owner_lazy = () -> PriceSourceCode.mmObject();
@@ -131,7 +133,7 @@ public class PriceSourceCode {
 	 */
 	public static final MMCode mmTheoretical = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Theoretical";
 			definition = "Source of price quotation is a theoretical value based on the market yield.";
 			owner_lazy = () -> PriceSourceCode.mmObject();
@@ -161,7 +163,7 @@ public class PriceSourceCode {
 	 */
 	public static final MMCode mmVendor = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Vendor";
 			definition = "Source of price quotation is an external vendor.";
 			owner_lazy = () -> PriceSourceCode.mmObject();
@@ -191,7 +193,7 @@ public class PriceSourceCode {
 	 */
 	public static final MMCode mmStockExchange = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StockExchange";
 			definition = "Source of price quotation is a stock exchange.";
 			owner_lazy = () -> PriceSourceCode.mmObject();
@@ -202,13 +204,12 @@ public class PriceSourceCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("FUND");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PriceSourceCode";
 				definition = "Specifies the source of a price quotation.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PriceSourceCode.mmFund, com.tools20022.repository.codeset.PriceSourceCode.mmTheoretical, com.tools20022.repository.codeset.PriceSourceCode.mmVendor,
-						com.tools20022.repository.codeset.PriceSourceCode.mmStockExchange);
+				code_lazy = () -> Arrays.asList(PriceSourceCode.mmFund, PriceSourceCode.mmTheoretical, PriceSourceCode.mmVendor, PriceSourceCode.mmStockExchange);
 				derivation_lazy = () -> Arrays.asList(PriceSource1Code.mmObject(), PriceSource2Code.mmObject());
 			}
 		});

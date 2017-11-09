@@ -18,8 +18,10 @@
 package com.tools20022.repository.msgset;
 
 import com.tools20022.metamodel.MMMessageSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.caam.*;
 import com.tools20022.repository.area.catp.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -112,8 +114,8 @@ public class ATMInterfaceforTransactionProcessingandATMManagementISOPreviousvers
 	final static public MMMessageSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageSet() {
 			{
-				businessProcessCatalogue_lazy = () -> com.tools20022.repository.GeneratedRepository.mmcatalogue;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				businessProcessCatalogue_lazy = () -> GeneratedRepository.mmcatalogue;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ATM Interface for Transaction Processing and ATM Management - ISO - Previous version";
 				definition = "Messages that support any card related Automated Teller Machine (ATM) transactions, card related terminal management services and services between an ATM equipment and an ATM acquirer. These services include cash withdrawals, kiosk functions and card account management transactions.";
 				messageDefinition_lazy = () -> Arrays.asList(ATMReconciliationAdviceV01.mmObject(), ATMReconciliationAcknowledgementV01.mmObject(), HostToATMAcknowledgementV01.mmObject(), ATMDiagnosticResponseV01.mmObject(),

@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.SecuritiesBalanceTypeV2Code;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -168,7 +170,7 @@ public class SecuritiesBalanceType5Code extends SecuritiesBalanceTypeV2Code {
 	 */
 	public static final MMCode mmBlocked = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Blocked";
 			owner_lazy = () -> SecuritiesBalanceType5Code.mmObject();
 		}
@@ -191,7 +193,7 @@ public class SecuritiesBalanceType5Code extends SecuritiesBalanceTypeV2Code {
 	 */
 	public static final MMCode mmAvailableWithNoAdditionalStatus = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AvailableWithNoAdditionalStatus";
 			owner_lazy = () -> SecuritiesBalanceType5Code.mmObject();
 		}
@@ -214,7 +216,7 @@ public class SecuritiesBalanceType5Code extends SecuritiesBalanceTypeV2Code {
 	 */
 	public static final MMCode mmBlockedCorporateAction = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BlockedCorporateAction";
 			owner_lazy = () -> SecuritiesBalanceType5Code.mmObject();
 		}
@@ -237,7 +239,7 @@ public class SecuritiesBalanceType5Code extends SecuritiesBalanceTypeV2Code {
 	 */
 	public static final MMCode mmBlockedTrading = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BlockedTrading";
 			owner_lazy = () -> SecuritiesBalanceType5Code.mmObject();
 		}
@@ -260,7 +262,7 @@ public class SecuritiesBalanceType5Code extends SecuritiesBalanceTypeV2Code {
 	 */
 	public static final MMCode mmBlockedAuthenticity = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BlockedAuthenticity";
 			owner_lazy = () -> SecuritiesBalanceType5Code.mmObject();
 		}
@@ -283,7 +285,7 @@ public class SecuritiesBalanceType5Code extends SecuritiesBalanceTypeV2Code {
 	 */
 	public static final MMCode mmBorrowed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Borrowed";
 			owner_lazy = () -> SecuritiesBalanceType5Code.mmObject();
 		}
@@ -306,7 +308,7 @@ public class SecuritiesBalanceType5Code extends SecuritiesBalanceTypeV2Code {
 	 */
 	public static final MMCode mmPendingBorrowedDelivery = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingBorrowedDelivery";
 			owner_lazy = () -> SecuritiesBalanceType5Code.mmObject();
 		}
@@ -329,7 +331,7 @@ public class SecuritiesBalanceType5Code extends SecuritiesBalanceTypeV2Code {
 	 */
 	public static final MMCode mmPendingBorrowedReceipt = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingBorrowedReceipt";
 			owner_lazy = () -> SecuritiesBalanceType5Code.mmObject();
 		}
@@ -352,7 +354,7 @@ public class SecuritiesBalanceType5Code extends SecuritiesBalanceTypeV2Code {
 	 */
 	public static final MMCode mmCollateralIn = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralIn";
 			owner_lazy = () -> SecuritiesBalanceType5Code.mmObject();
 		}
@@ -375,7 +377,7 @@ public class SecuritiesBalanceType5Code extends SecuritiesBalanceTypeV2Code {
 	 */
 	public static final MMCode mmCollateralOut = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralOut";
 			owner_lazy = () -> SecuritiesBalanceType5Code.mmObject();
 		}
@@ -398,7 +400,7 @@ public class SecuritiesBalanceType5Code extends SecuritiesBalanceTypeV2Code {
 	 */
 	public static final MMCode mmOnLoan = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OnLoan";
 			owner_lazy = () -> SecuritiesBalanceType5Code.mmObject();
 		}
@@ -421,7 +423,7 @@ public class SecuritiesBalanceType5Code extends SecuritiesBalanceTypeV2Code {
 	 */
 	public static final MMCode mmPendingOnLoanDelivery = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingOnLoanDelivery";
 			owner_lazy = () -> SecuritiesBalanceType5Code.mmObject();
 		}
@@ -444,7 +446,7 @@ public class SecuritiesBalanceType5Code extends SecuritiesBalanceTypeV2Code {
 	 */
 	public static final MMCode mmPendingOnLoanReceipt = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingOnLoanReceipt";
 			owner_lazy = () -> SecuritiesBalanceType5Code.mmObject();
 		}
@@ -467,7 +469,7 @@ public class SecuritiesBalanceType5Code extends SecuritiesBalanceTypeV2Code {
 	 */
 	public static final MMCode mmDerivativesMargin = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DerivativesMargin";
 			owner_lazy = () -> SecuritiesBalanceType5Code.mmObject();
 		}
@@ -490,7 +492,7 @@ public class SecuritiesBalanceType5Code extends SecuritiesBalanceTypeV2Code {
 	 */
 	public static final MMCode mmPendingDeliveryMatchedBalance = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingDeliveryMatchedBalance";
 			owner_lazy = () -> SecuritiesBalanceType5Code.mmObject();
 		}
@@ -513,7 +515,7 @@ public class SecuritiesBalanceType5Code extends SecuritiesBalanceTypeV2Code {
 	 */
 	public static final MMCode mmPendingDeliveryUnmatchedBalance = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingDeliveryUnmatchedBalance";
 			owner_lazy = () -> SecuritiesBalanceType5Code.mmObject();
 		}
@@ -536,7 +538,7 @@ public class SecuritiesBalanceType5Code extends SecuritiesBalanceTypeV2Code {
 	 */
 	public static final MMCode mmPendingReceiptMatchedBalance = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingReceiptMatchedBalance";
 			owner_lazy = () -> SecuritiesBalanceType5Code.mmObject();
 		}
@@ -559,7 +561,7 @@ public class SecuritiesBalanceType5Code extends SecuritiesBalanceTypeV2Code {
 	 */
 	public static final MMCode mmPendingReceiptUnmatchedBalance = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingReceiptUnmatchedBalance";
 			owner_lazy = () -> SecuritiesBalanceType5Code.mmObject();
 		}
@@ -582,7 +584,7 @@ public class SecuritiesBalanceType5Code extends SecuritiesBalanceTypeV2Code {
 	 */
 	public static final MMCode mmPendingCorporateActionReceipt = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingCorporateActionReceipt";
 			owner_lazy = () -> SecuritiesBalanceType5Code.mmObject();
 		}
@@ -605,7 +607,7 @@ public class SecuritiesBalanceType5Code extends SecuritiesBalanceTypeV2Code {
 	 */
 	public static final MMCode mmPendingCorporateActionDelivery = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingCorporateActionDelivery";
 			owner_lazy = () -> SecuritiesBalanceType5Code.mmObject();
 		}
@@ -628,7 +630,7 @@ public class SecuritiesBalanceType5Code extends SecuritiesBalanceTypeV2Code {
 	 */
 	public static final MMCode mmPendingDelivery = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingDelivery";
 			owner_lazy = () -> SecuritiesBalanceType5Code.mmObject();
 		}
@@ -651,7 +653,7 @@ public class SecuritiesBalanceType5Code extends SecuritiesBalanceTypeV2Code {
 	 */
 	public static final MMCode mmPendingReceipt = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingReceipt";
 			owner_lazy = () -> SecuritiesBalanceType5Code.mmObject();
 		}
@@ -674,7 +676,7 @@ public class SecuritiesBalanceType5Code extends SecuritiesBalanceTypeV2Code {
 	 */
 	public static final MMCode mmPledged = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Pledged";
 			owner_lazy = () -> SecuritiesBalanceType5Code.mmObject();
 		}
@@ -697,7 +699,7 @@ public class SecuritiesBalanceType5Code extends SecuritiesBalanceTypeV2Code {
 	 */
 	public static final MMCode mmOutForRegistration = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OutForRegistration";
 			owner_lazy = () -> SecuritiesBalanceType5Code.mmObject();
 		}
@@ -720,7 +722,7 @@ public class SecuritiesBalanceType5Code extends SecuritiesBalanceTypeV2Code {
 	 */
 	public static final MMCode mmRestricted = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Restricted";
 			owner_lazy = () -> SecuritiesBalanceType5Code.mmObject();
 		}
@@ -743,7 +745,7 @@ public class SecuritiesBalanceType5Code extends SecuritiesBalanceTypeV2Code {
 	 */
 	public static final MMCode mmUnclassified = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unclassified";
 			owner_lazy = () -> SecuritiesBalanceType5Code.mmObject();
 		}
@@ -766,7 +768,7 @@ public class SecuritiesBalanceType5Code extends SecuritiesBalanceTypeV2Code {
 	 */
 	public static final MMCode mmInTransshipment = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InTransshipment";
 			owner_lazy = () -> SecuritiesBalanceType5Code.mmObject();
 		}
@@ -789,7 +791,7 @@ public class SecuritiesBalanceType5Code extends SecuritiesBalanceTypeV2Code {
 	 */
 	public static final MMCode mmDrawn = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Drawn";
 			owner_lazy = () -> SecuritiesBalanceType5Code.mmObject();
 		}
@@ -812,7 +814,7 @@ public class SecuritiesBalanceType5Code extends SecuritiesBalanceTypeV2Code {
 	 */
 	public static final MMCode mmWaitingDocumentation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WaitingDocumentation";
 			owner_lazy = () -> SecuritiesBalanceType5Code.mmObject();
 		}
@@ -835,7 +837,7 @@ public class SecuritiesBalanceType5Code extends SecuritiesBalanceTypeV2Code {
 	 */
 	public static final MMCode mmBeingTransferred = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BeingTransferred";
 			owner_lazy = () -> SecuritiesBalanceType5Code.mmObject();
 		}
@@ -844,26 +846,19 @@ public class SecuritiesBalanceType5Code extends SecuritiesBalanceTypeV2Code {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("BLOK");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesBalanceType5Code";
 				definition = "Specifies the nature of the securities or investment fund balance.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SecuritiesBalanceType5Code.mmBlocked, com.tools20022.repository.codeset.SecuritiesBalanceType5Code.mmAvailableWithNoAdditionalStatus,
-						com.tools20022.repository.codeset.SecuritiesBalanceType5Code.mmBlockedCorporateAction, com.tools20022.repository.codeset.SecuritiesBalanceType5Code.mmBlockedTrading,
-						com.tools20022.repository.codeset.SecuritiesBalanceType5Code.mmBlockedAuthenticity, com.tools20022.repository.codeset.SecuritiesBalanceType5Code.mmBorrowed,
-						com.tools20022.repository.codeset.SecuritiesBalanceType5Code.mmPendingBorrowedDelivery, com.tools20022.repository.codeset.SecuritiesBalanceType5Code.mmPendingBorrowedReceipt,
-						com.tools20022.repository.codeset.SecuritiesBalanceType5Code.mmCollateralIn, com.tools20022.repository.codeset.SecuritiesBalanceType5Code.mmCollateralOut,
-						com.tools20022.repository.codeset.SecuritiesBalanceType5Code.mmOnLoan, com.tools20022.repository.codeset.SecuritiesBalanceType5Code.mmPendingOnLoanDelivery,
-						com.tools20022.repository.codeset.SecuritiesBalanceType5Code.mmPendingOnLoanReceipt, com.tools20022.repository.codeset.SecuritiesBalanceType5Code.mmDerivativesMargin,
-						com.tools20022.repository.codeset.SecuritiesBalanceType5Code.mmPendingDeliveryMatchedBalance, com.tools20022.repository.codeset.SecuritiesBalanceType5Code.mmPendingDeliveryUnmatchedBalance,
-						com.tools20022.repository.codeset.SecuritiesBalanceType5Code.mmPendingReceiptMatchedBalance, com.tools20022.repository.codeset.SecuritiesBalanceType5Code.mmPendingReceiptUnmatchedBalance,
-						com.tools20022.repository.codeset.SecuritiesBalanceType5Code.mmPendingCorporateActionReceipt, com.tools20022.repository.codeset.SecuritiesBalanceType5Code.mmPendingCorporateActionDelivery,
-						com.tools20022.repository.codeset.SecuritiesBalanceType5Code.mmPendingDelivery, com.tools20022.repository.codeset.SecuritiesBalanceType5Code.mmPendingReceipt,
-						com.tools20022.repository.codeset.SecuritiesBalanceType5Code.mmPledged, com.tools20022.repository.codeset.SecuritiesBalanceType5Code.mmOutForRegistration,
-						com.tools20022.repository.codeset.SecuritiesBalanceType5Code.mmRestricted, com.tools20022.repository.codeset.SecuritiesBalanceType5Code.mmUnclassified,
-						com.tools20022.repository.codeset.SecuritiesBalanceType5Code.mmInTransshipment, com.tools20022.repository.codeset.SecuritiesBalanceType5Code.mmDrawn,
-						com.tools20022.repository.codeset.SecuritiesBalanceType5Code.mmWaitingDocumentation, com.tools20022.repository.codeset.SecuritiesBalanceType5Code.mmBeingTransferred);
+				code_lazy = () -> Arrays.asList(SecuritiesBalanceType5Code.mmBlocked, SecuritiesBalanceType5Code.mmAvailableWithNoAdditionalStatus, SecuritiesBalanceType5Code.mmBlockedCorporateAction,
+						SecuritiesBalanceType5Code.mmBlockedTrading, SecuritiesBalanceType5Code.mmBlockedAuthenticity, SecuritiesBalanceType5Code.mmBorrowed, SecuritiesBalanceType5Code.mmPendingBorrowedDelivery,
+						SecuritiesBalanceType5Code.mmPendingBorrowedReceipt, SecuritiesBalanceType5Code.mmCollateralIn, SecuritiesBalanceType5Code.mmCollateralOut, SecuritiesBalanceType5Code.mmOnLoan,
+						SecuritiesBalanceType5Code.mmPendingOnLoanDelivery, SecuritiesBalanceType5Code.mmPendingOnLoanReceipt, SecuritiesBalanceType5Code.mmDerivativesMargin, SecuritiesBalanceType5Code.mmPendingDeliveryMatchedBalance,
+						SecuritiesBalanceType5Code.mmPendingDeliveryUnmatchedBalance, SecuritiesBalanceType5Code.mmPendingReceiptMatchedBalance, SecuritiesBalanceType5Code.mmPendingReceiptUnmatchedBalance,
+						SecuritiesBalanceType5Code.mmPendingCorporateActionReceipt, SecuritiesBalanceType5Code.mmPendingCorporateActionDelivery, SecuritiesBalanceType5Code.mmPendingDelivery, SecuritiesBalanceType5Code.mmPendingReceipt,
+						SecuritiesBalanceType5Code.mmPledged, SecuritiesBalanceType5Code.mmOutForRegistration, SecuritiesBalanceType5Code.mmRestricted, SecuritiesBalanceType5Code.mmUnclassified,
+						SecuritiesBalanceType5Code.mmInTransshipment, SecuritiesBalanceType5Code.mmDrawn, SecuritiesBalanceType5Code.mmWaitingDocumentation, SecuritiesBalanceType5Code.mmBeingTransferred);
 				trace_lazy = () -> SecuritiesBalanceTypeV2Code.mmObject();
 			}
 		});

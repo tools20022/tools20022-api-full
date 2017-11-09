@@ -19,12 +19,14 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.PriceFormatSD1Choice;
 import com.tools20022.repository.codeset.DTCEntitlementCalculationMethod1Code;
 import com.tools20022.repository.datatype.Exact32AlphaNumericText;
 import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.datatype.Max3Text;
 import com.tools20022.repository.datatype.YesNoIndicator;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -150,11 +152,11 @@ public class CashOptionSD6 {
 			componentContext_lazy = () -> CashOptionSD6.mmObject();
 			isDerived = false;
 			xmlTag = "PlcAndNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "xPath to the element that is being extended.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashOptionSD8.mmPlaceAndName);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CashOptionSD1.mmPlaceAndName;
+			nextVersions_lazy = () -> Arrays.asList(CashOptionSD8.mmPlaceAndName);
+			previousVersion_lazy = () -> CashOptionSD1.mmPlaceAndName;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
@@ -209,11 +211,11 @@ public class CashOptionSD6 {
 			componentContext_lazy = () -> CashOptionSD6.mmObject();
 			isDerived = false;
 			xmlTag = "DTCPayMtd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCPayMethod";
 			definition = "Indicates the type of payment. Used in stock dividends processing at DTC (The Depository Trust Corporation). Valid values list will be maintained separately from the schema. ";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashOptionSD8.mmDTCPayMethod);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CashOptionSD1.mmDTCPayMethod;
+			nextVersions_lazy = () -> Arrays.asList(CashOptionSD8.mmDTCPayMethod);
+			previousVersion_lazy = () -> CashOptionSD1.mmDTCPayMethod;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max3Text.mmObject();
@@ -268,11 +270,11 @@ public class CashOptionSD6 {
 			componentContext_lazy = () -> CashOptionSD6.mmObject();
 			isDerived = false;
 			xmlTag = "DTCPayOrdr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCPayOrder";
 			definition = "Indicates the payment order. Used in stock dividends processing at DTC (The Depository Trust Corporation). Valid values list will be maintained separately from the schema.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashOptionSD8.mmDTCPayOrder);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CashOptionSD1.mmDTCPayOrder;
+			nextVersions_lazy = () -> Arrays.asList(CashOptionSD8.mmDTCPayOrder);
+			previousVersion_lazy = () -> CashOptionSD1.mmDTCPayOrder;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max3Text.mmObject();
@@ -325,11 +327,11 @@ public class CashOptionSD6 {
 			componentContext_lazy = () -> CashOptionSD6.mmObject();
 			isDerived = false;
 			xmlTag = "EntitlmntClctnMtd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EntitlementCalculationMethod";
 			definition = "Indicates how the entitlements were calculated optional dividends.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashOptionSD8.mmEntitlementCalculationMethod);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CashOptionSD1.mmEntitlementCalculationMethod;
+			nextVersions_lazy = () -> Arrays.asList(CashOptionSD8.mmEntitlementCalculationMethod);
+			previousVersion_lazy = () -> CashOptionSD1.mmEntitlementCalculationMethod;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> DTCEntitlementCalculationMethod1Code.mmObject();
@@ -381,11 +383,11 @@ public class CashOptionSD6 {
 			componentContext_lazy = () -> CashOptionSD6.mmObject();
 			isDerived = false;
 			xmlTag = "EstmtdRateFlg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EstimatedRateFlag";
 			definition = "Denotes whether the rate is approximate.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashOptionSD8.mmEstimatedRateFlag);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CashOptionSD1.mmEstimatedRateFlag;
+			nextVersions_lazy = () -> Arrays.asList(CashOptionSD8.mmEstimatedRateFlag);
+			previousVersion_lazy = () -> CashOptionSD1.mmEstimatedRateFlag;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
@@ -440,11 +442,11 @@ public class CashOptionSD6 {
 			componentContext_lazy = () -> CashOptionSD6.mmObject();
 			isDerived = false;
 			xmlTag = "NRATaxRptblFlg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NRATaxReportableFlag";
 			definition = "Identifies the income events which are subject to withholding tax if paid to a non-U.S. resident alien (NRA).";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashOptionSD8.mmNRATaxReportableFlag);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CashOptionSD1.mmNRATaxReportableFlag;
+			nextVersions_lazy = () -> Arrays.asList(CashOptionSD8.mmNRATaxReportableFlag);
+			previousVersion_lazy = () -> CashOptionSD1.mmNRATaxReportableFlag;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
@@ -503,11 +505,11 @@ public class CashOptionSD6 {
 			componentContext_lazy = () -> CashOptionSD6.mmObject();
 			isDerived = false;
 			xmlTag = "PrtctChrgFlg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProtectChargeFlag";
 			definition = "Indicates whether a charge is levied on the protect instructions at the time when the protect is submitted or at the time of the cover. Applies to warrants or rights exercise scenario where the holder must put up money with rights or warrants execution. When this flag is set to yes - charges are due at the time of the protect, when it is set to \"no\" changes are due when protect is covered.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashOptionSD8.mmProtectChargeFlag);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CashOptionSD1.mmProtectChargeFlag;
+			nextVersions_lazy = () -> Arrays.asList(CashOptionSD8.mmProtectChargeFlag);
+			previousVersion_lazy = () -> CashOptionSD1.mmProtectChargeFlag;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
@@ -562,11 +564,11 @@ public class CashOptionSD6 {
 			componentContext_lazy = () -> CashOptionSD6.mmObject();
 			isDerived = false;
 			xmlTag = "DclrdCshRate";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeclaredCashRate";
 			definition = "Cash rate associated to the payout as declared  on the market by the issuer or offeror.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashOptionSD8.mmDeclaredCashRate);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CashOptionSD1.mmDeclaredCashRate;
+			nextVersions_lazy = () -> Arrays.asList(CashOptionSD8.mmDeclaredCashRate);
+			previousVersion_lazy = () -> CashOptionSD1.mmDeclaredCashRate;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> PriceFormatSD1Choice.mmObject();
@@ -621,11 +623,11 @@ public class CashOptionSD6 {
 			componentContext_lazy = () -> CashOptionSD6.mmObject();
 			isDerived = false;
 			xmlTag = "DclrdGrssRate";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeclaredGrossRate";
 			definition = "Gross cash rate associated to the payout as declared on the market by the issuer or offeror.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashOptionSD8.mmDeclaredGrossRate);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CashOptionSD1.mmDeclaredGrossRate;
+			nextVersions_lazy = () -> Arrays.asList(CashOptionSD8.mmDeclaredGrossRate);
+			previousVersion_lazy = () -> CashOptionSD1.mmDeclaredGrossRate;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> PriceFormatSD1Choice.mmObject();
@@ -680,11 +682,11 @@ public class CashOptionSD6 {
 			componentContext_lazy = () -> CashOptionSD6.mmObject();
 			isDerived = false;
 			xmlTag = "DclrdNetRate";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeclaredNetRate";
 			definition = "Net cash rate associated to the payout as declared on the market by the issuer or offeror.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashOptionSD8.mmDeclaredNetRate);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CashOptionSD1.mmDeclaredNetRate;
+			nextVersions_lazy = () -> Arrays.asList(CashOptionSD8.mmDeclaredNetRate);
+			previousVersion_lazy = () -> CashOptionSD1.mmDeclaredNetRate;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> PriceFormatSD1Choice.mmObject();
@@ -737,11 +739,11 @@ public class CashOptionSD6 {
 			componentContext_lazy = () -> CashOptionSD6.mmObject();
 			isDerived = false;
 			xmlTag = "DclrdFeeRate";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeclaredFeeRate";
 			definition = "Rate at which the fee will be charged to a DTC participant.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashOptionSD8.mmDeclaredFeeRate);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CashOptionSD1.mmDeclaredFeeRate;
+			nextVersions_lazy = () -> Arrays.asList(CashOptionSD8.mmDeclaredFeeRate);
+			previousVersion_lazy = () -> CashOptionSD1.mmDeclaredFeeRate;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> PriceFormatSD1Choice.mmObject();
@@ -795,11 +797,11 @@ public class CashOptionSD6 {
 			componentContext_lazy = () -> CashOptionSD6.mmObject();
 			isDerived = false;
 			xmlTag = "DTCUSTaxInstrPrd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCUSTaxInstructionPeriod";
 			definition = "Indicates the period during which the instructions for DTC (The Depository Trust Corporation) US Tax service will be accepted.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashOptionSD8.mmDTCUSTaxInstructionPeriod);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CashOptionSD1.mmDTCUSTaxInstructionPeriod;
+			nextVersions_lazy = () -> Arrays.asList(CashOptionSD8.mmDTCUSTaxInstructionPeriod);
+			previousVersion_lazy = () -> CashOptionSD1.mmDTCUSTaxInstructionPeriod;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.Period3.mmObject();
@@ -855,10 +857,10 @@ public class CashOptionSD6 {
 			componentContext_lazy = () -> CashOptionSD6.mmObject();
 			isDerived = false;
 			xmlTag = "RDPRefNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RDPReferenceNumber";
 			definition = "Unique DTCC legacy reference used for matching and reconciling legacy records. The number algorhithm is as follows: Department ID (1:1), Activity Type (2:3), Cusip Country Code (5:2), Cusip (7:9), Record Date (15:8), Payable Date (22:8), Sequence Number (29:3), RDP Issue Type (31:1). \r\nUSAGE RULE: this sequence can be populated /extended to event details, option details or a movement, depending on sequence number coordinality to an event.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashOptionSD8.mmRDPReferenceNumber);
+			nextVersions_lazy = () -> Arrays.asList(CashOptionSD8.mmRDPReferenceNumber);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Exact32AlphaNumericText.mmObject();
@@ -868,13 +870,11 @@ public class CashOptionSD6 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashOptionSD6.mmPlaceAndName, com.tools20022.repository.msg.CashOptionSD6.mmDTCPayMethod, com.tools20022.repository.msg.CashOptionSD6.mmDTCPayOrder,
-						com.tools20022.repository.msg.CashOptionSD6.mmEntitlementCalculationMethod, com.tools20022.repository.msg.CashOptionSD6.mmEstimatedRateFlag, com.tools20022.repository.msg.CashOptionSD6.mmNRATaxReportableFlag,
-						com.tools20022.repository.msg.CashOptionSD6.mmProtectChargeFlag, com.tools20022.repository.msg.CashOptionSD6.mmDeclaredCashRate, com.tools20022.repository.msg.CashOptionSD6.mmDeclaredGrossRate,
-						com.tools20022.repository.msg.CashOptionSD6.mmDeclaredNetRate, com.tools20022.repository.msg.CashOptionSD6.mmDeclaredFeeRate, com.tools20022.repository.msg.CashOptionSD6.mmDTCUSTaxInstructionPeriod,
-						com.tools20022.repository.msg.CashOptionSD6.mmRDPReferenceNumber);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(CashOptionSD6.mmPlaceAndName, CashOptionSD6.mmDTCPayMethod, CashOptionSD6.mmDTCPayOrder, CashOptionSD6.mmEntitlementCalculationMethod, CashOptionSD6.mmEstimatedRateFlag,
+						CashOptionSD6.mmNRATaxReportableFlag, CashOptionSD6.mmProtectChargeFlag, CashOptionSD6.mmDeclaredCashRate, CashOptionSD6.mmDeclaredGrossRate, CashOptionSD6.mmDeclaredNetRate, CashOptionSD6.mmDeclaredFeeRate,
+						CashOptionSD6.mmDTCUSTaxInstructionPeriod, CashOptionSD6.mmRDPReferenceNumber);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CashOptionSD6";
 				definition = "Provides additional information regarding corporate action option cash movement details.";
 				nextVersions_lazy = () -> Arrays.asList(CashOptionSD8.mmObject());

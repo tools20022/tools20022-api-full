@@ -17,11 +17,10 @@
 
 package com.tools20022.repository.entity;
 
-import com.tools20022.metamodel.MMBusinessAssociationEnd;
-import com.tools20022.metamodel.MMBusinessAttribute;
-import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.*;
 import com.tools20022.repository.codeset.ExternalBankTransactionDomainCode;
 import com.tools20022.repository.codeset.ExternalBankTransactionFamilyCode;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -36,27 +35,22 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.BankTransaction#mmDomain
- * BankTransaction.mmDomain}</li>
- * <li>{@linkplain com.tools20022.repository.entity.BankTransaction#mmFamily
- * BankTransaction.mmFamily}</li>
- * <li>{@linkplain com.tools20022.repository.entity.BankTransaction#mmSubFamily
- * BankTransaction.mmSubFamily}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.BankTransaction#mmProprietaryIdentification
- * BankTransaction.mmProprietaryIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.BankTransaction#mmBankOperation
- * BankTransaction.mmBankOperation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.BankTransaction#mmRelatedEntry
- * BankTransaction.mmRelatedEntry}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.BankTransaction#mmRelatedPayment
- * BankTransaction.mmRelatedPayment}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.BankTransactionCodeStructure3
+ * BankTransactionCodeStructure3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.BankTransactionCodeStructure2
+ * BankTransactionCodeStructure2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.BankTransactionCodeStructure1
+ * BankTransactionCodeStructure1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.BankTransactionCodeStructure6
+ * BankTransactionCodeStructure6}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.BankTransactionCodeStructure5
+ * BankTransactionCodeStructure5}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.BankTransactionCodeStructure4
+ * BankTransactionCodeStructure4}</li>
  * </ul>
  * </li>
  * <li>
@@ -100,22 +94,27 @@ import java.util.List;
  * TotalsPerBankTransactionCode4.mmBankTransactionCode}</li>
  * </ul>
  * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.BankTransactionCodeStructure3
- * BankTransactionCodeStructure3}</li>
- * <li>{@linkplain com.tools20022.repository.msg.BankTransactionCodeStructure2
- * BankTransactionCodeStructure2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.BankTransactionCodeStructure1
- * BankTransactionCodeStructure1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.BankTransactionCodeStructure6
- * BankTransactionCodeStructure6}</li>
- * <li>{@linkplain com.tools20022.repository.msg.BankTransactionCodeStructure5
- * BankTransactionCodeStructure5}</li>
- * <li>{@linkplain com.tools20022.repository.msg.BankTransactionCodeStructure4
- * BankTransactionCodeStructure4}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.BankTransaction#mmDomain
+ * BankTransaction.mmDomain}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.BankTransaction#mmFamily
+ * BankTransaction.mmFamily}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.BankTransaction#mmSubFamily
+ * BankTransaction.mmSubFamily}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.BankTransaction#mmProprietaryIdentification
+ * BankTransaction.mmProprietaryIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.BankTransaction#mmBankOperation
+ * BankTransaction.mmBankOperation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.BankTransaction#mmRelatedEntry
+ * BankTransaction.mmRelatedEntry}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.BankTransaction#mmRelatedPayment
+ * BankTransaction.mmRelatedPayment}</li>
  * </ul>
  * </li>
  * <li>
@@ -177,10 +176,10 @@ public class BankTransaction {
 	 */
 	public static final MMBusinessAttribute mmDomain = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BankTransactionCodeStructure2.mmCode, com.tools20022.repository.msg.BankTransactionCodeStructure5.mmCode);
+			derivation_lazy = () -> Arrays.asList(BankTransactionCodeStructure2.mmCode, BankTransactionCodeStructure5.mmCode);
 			elementContext_lazy = () -> BankTransaction.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Domain";
 			definition = "Specifies the business area of the underlying transaction.";
 			maxOccurs = 1;
@@ -234,11 +233,10 @@ public class BankTransaction {
 	 */
 	public static final MMBusinessAttribute mmFamily = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BankTransactionCodeStructure3.mmCode, com.tools20022.repository.msg.BankTransactionCodeStructure2.mmFamily,
-					com.tools20022.repository.msg.BankTransactionCodeStructure6.mmCode, com.tools20022.repository.msg.BankTransactionCodeStructure5.mmFamily);
+			derivation_lazy = () -> Arrays.asList(BankTransactionCodeStructure3.mmCode, BankTransactionCodeStructure2.mmFamily, BankTransactionCodeStructure6.mmCode, BankTransactionCodeStructure5.mmFamily);
 			elementContext_lazy = () -> BankTransaction.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Family";
 			definition = "Specifies the family within a domain.";
 			maxOccurs = 1;
@@ -287,10 +285,10 @@ public class BankTransaction {
 	 */
 	public static final MMBusinessAttribute mmSubFamily = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BankTransactionCodeStructure3.mmSubFamilyCode, com.tools20022.repository.msg.BankTransactionCodeStructure6.mmSubFamilyCode);
+			derivation_lazy = () -> Arrays.asList(BankTransactionCodeStructure3.mmSubFamilyCode, BankTransactionCodeStructure6.mmSubFamilyCode);
 			elementContext_lazy = () -> BankTransaction.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SubFamily";
 			definition = "Specifies the sub-product family within a specific family.";
 			maxOccurs = 1;
@@ -347,15 +345,15 @@ public class BankTransaction {
 	 */
 	public static final MMBusinessAssociationEnd mmProprietaryIdentification = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BankTransactionCodeStructure1.mmProprietary, com.tools20022.repository.msg.BankTransactionCodeStructure4.mmProprietary);
+			derivation_lazy = () -> Arrays.asList(BankTransactionCodeStructure1.mmProprietary, BankTransactionCodeStructure4.mmProprietary);
 			elementContext_lazy = () -> BankTransaction.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ProprietaryIdentification";
 			definition = "Bank transaction code in a proprietary form, as defined by the issuer.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmIdentificationForBankTransaction;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmObject();
 		}
 	};
@@ -397,13 +395,13 @@ public class BankTransaction {
 		{
 			elementContext_lazy = () -> BankTransaction.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BankOperation";
 			definition = "Bank operation for which a type is detailed.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.BankOperation.mmOperationType;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.BankOperation.mmObject();
 		}
 	};
@@ -444,13 +442,13 @@ public class BankTransaction {
 		{
 			elementContext_lazy = () -> BankTransaction.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedEntry";
 			definition = "Entry for which a bank transaction code is provided.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.Entry.mmBankTransactionCode;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Entry.mmObject();
 		}
 	};
@@ -493,13 +491,13 @@ public class BankTransaction {
 		{
 			elementContext_lazy = () -> BankTransaction.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedPayment";
 			definition = "Payment for which bank transaction information is specified.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.PaymentProcessing.mmBankTransaction;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.PaymentProcessing.mmObject();
 		}
 	};
@@ -507,18 +505,16 @@ public class BankTransaction {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "BankTransaction";
 				definition = "Code of the underlying bank transaction.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.GenericIdentification.mmIdentificationForBankTransaction, com.tools20022.repository.entity.Entry.mmBankTransactionCode,
 						com.tools20022.repository.entity.PaymentProcessing.mmBankTransaction, com.tools20022.repository.entity.BankOperation.mmOperationType);
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BankTransactionCodeStructure1.mmDomain, com.tools20022.repository.msg.BankTransactionCodeStructure4.mmDomain,
-						com.tools20022.repository.msg.TotalsPerBankTransactionCode2.mmBankTransactionCode, com.tools20022.repository.msg.PaymentReturnReason2.mmOriginalBankTransactionCode,
-						com.tools20022.repository.msg.TotalsPerBankTransactionCode3.mmBankTransactionCode, com.tools20022.repository.msg.TotalsPerBankTransactionCode4.mmBankTransactionCode);
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.BankTransaction.mmDomain, com.tools20022.repository.entity.BankTransaction.mmFamily, com.tools20022.repository.entity.BankTransaction.mmSubFamily,
-						com.tools20022.repository.entity.BankTransaction.mmProprietaryIdentification, com.tools20022.repository.entity.BankTransaction.mmBankOperation, com.tools20022.repository.entity.BankTransaction.mmRelatedEntry,
-						com.tools20022.repository.entity.BankTransaction.mmRelatedPayment);
+				derivationElement_lazy = () -> Arrays.asList(BankTransactionCodeStructure1.mmDomain, BankTransactionCodeStructure4.mmDomain, TotalsPerBankTransactionCode2.mmBankTransactionCode,
+						PaymentReturnReason2.mmOriginalBankTransactionCode, TotalsPerBankTransactionCode3.mmBankTransactionCode, TotalsPerBankTransactionCode4.mmBankTransactionCode);
+				element_lazy = () -> Arrays.asList(BankTransaction.mmDomain, BankTransaction.mmFamily, BankTransaction.mmSubFamily, BankTransaction.mmProprietaryIdentification, BankTransaction.mmBankOperation,
+						BankTransaction.mmRelatedEntry, BankTransaction.mmRelatedPayment);
 				derivationComponent_lazy = () -> Arrays.asList(BankTransactionCodeStructure3.mmObject(), BankTransactionCodeStructure2.mmObject(), BankTransactionCodeStructure1.mmObject(), BankTransactionCodeStructure6.mmObject(),
 						BankTransactionCodeStructure5.mmObject(), BankTransactionCodeStructure4.mmObject());
 			}

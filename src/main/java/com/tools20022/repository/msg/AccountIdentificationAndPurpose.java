@@ -19,8 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.SecuritiesAccountPurposeType1Code;
 import com.tools20022.repository.entity.AccountIdentification;
+import com.tools20022.repository.entity.SecuritiesAccount;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -106,7 +109,7 @@ public class AccountIdentificationAndPurpose {
 			componentContext_lazy = () -> AccountIdentificationAndPurpose.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Unique and unambiguous identification for the account between the account owner and the account servicer.";
 			maxOccurs = 1;
@@ -150,11 +153,11 @@ public class AccountIdentificationAndPurpose {
 	 */
 	public static final MMMessageAttribute mmPurpose = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesAccount.mmSecuritiesAccountType;
+			businessElementTrace_lazy = () -> SecuritiesAccount.mmSecuritiesAccountType;
 			componentContext_lazy = () -> AccountIdentificationAndPurpose.mmObject();
 			isDerived = false;
 			xmlTag = "Purp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Purpose";
 			definition = "Specifies the purpose of the account.";
 			maxOccurs = 1;
@@ -166,10 +169,10 @@ public class AccountIdentificationAndPurpose {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountIdentificationAndPurpose.mmIdentification, com.tools20022.repository.msg.AccountIdentificationAndPurpose.mmPurpose);
+				messageElement_lazy = () -> Arrays.asList(AccountIdentificationAndPurpose.mmIdentification, AccountIdentificationAndPurpose.mmPurpose);
 				trace_lazy = () -> AccountIdentification.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AccountIdentificationAndPurpose";
 				definition = "Identification of the account expressed with an account number and a code.";
 			}

@@ -19,9 +19,12 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.sese.*;
 import com.tools20022.repository.codeset.SettlementDate1Code;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.ISODateTime;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -115,7 +118,7 @@ public class DateFormat1Choice {
 			componentContext_lazy = () -> DateFormat1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Dt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Date";
 			definition = "Date expressed as a calendar date.";
 			maxOccurs = 1;
@@ -157,7 +160,7 @@ public class DateFormat1Choice {
 			componentContext_lazy = () -> DateFormat1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Cd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Date expressed as a code.";
 			maxOccurs = 1;
@@ -198,7 +201,7 @@ public class DateFormat1Choice {
 			componentContext_lazy = () -> DateFormat1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "DtTm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DateTime";
 			definition = "Date expressed as a calendar date and time.";
 			maxOccurs = 1;
@@ -210,12 +213,11 @@ public class DateFormat1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.DateFormat1Choice.mmDate, com.tools20022.repository.choice.DateFormat1Choice.mmCode, com.tools20022.repository.choice.DateFormat1Choice.mmDateTime);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.TransferOutInstructionV03.mmRequestedTransferDate, com.tools20022.repository.area.sese.TransferOutInstructionV04.mmRequestedTransferDate,
-						com.tools20022.repository.area.sese.TransferOutInstructionV05.mmRequestedTransferDate, com.tools20022.repository.area.sese.TransferOutInstructionV06.mmRequestedTransferDate,
-						com.tools20022.repository.area.sese.TransferOutInstructionV07.mmRequestedTransferDate);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(DateFormat1Choice.mmDate, DateFormat1Choice.mmCode, DateFormat1Choice.mmDateTime);
+				messageBuildingBlock_lazy = () -> Arrays.asList(TransferOutInstructionV03.mmRequestedTransferDate, TransferOutInstructionV04.mmRequestedTransferDate, TransferOutInstructionV05.mmRequestedTransferDate,
+						TransferOutInstructionV06.mmRequestedTransferDate, TransferOutInstructionV07.mmRequestedTransferDate);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DateFormat1Choice";
 				definition = "Choice between the formats to express a date.";
 			}

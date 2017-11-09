@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.TransactionChannelCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -107,9 +109,9 @@ public class TransactionChannel1Code extends TransactionChannelCode {
 	 */
 	public static final MMCode mmMailOrder = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MailOrder";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TransactionChannel3Code.mmMailOrder);
+			nextVersions_lazy = () -> Arrays.asList(TransactionChannel3Code.mmMailOrder);
 			owner_lazy = () -> TransactionChannel1Code.mmObject();
 		}
 	};
@@ -139,9 +141,9 @@ public class TransactionChannel1Code extends TransactionChannelCode {
 	 */
 	public static final MMCode mmTelephoneOrder = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TelephoneOrder";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TransactionChannel3Code.mmTelephoneOrder);
+			nextVersions_lazy = () -> Arrays.asList(TransactionChannel3Code.mmTelephoneOrder);
 			owner_lazy = () -> TransactionChannel1Code.mmObject();
 		}
 	};
@@ -171,9 +173,9 @@ public class TransactionChannel1Code extends TransactionChannelCode {
 	 */
 	public static final MMCode mmElectronicCommerce = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ElectronicCommerce";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TransactionChannel3Code.mmElectronicCommerce);
+			nextVersions_lazy = () -> Arrays.asList(TransactionChannel3Code.mmElectronicCommerce);
 			owner_lazy = () -> TransactionChannel1Code.mmObject();
 		}
 	};
@@ -203,9 +205,9 @@ public class TransactionChannel1Code extends TransactionChannelCode {
 	 */
 	public static final MMCode mmTelevisionPayment = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TelevisionPayment";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TransactionChannel3Code.mmTelevisionPayment);
+			nextVersions_lazy = () -> Arrays.asList(TransactionChannel3Code.mmTelevisionPayment);
 			owner_lazy = () -> TransactionChannel1Code.mmObject();
 		}
 	};
@@ -213,14 +215,13 @@ public class TransactionChannel1Code extends TransactionChannelCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("MAIL");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TransactionChannel1Code";
 				definition = "Identifies the type of the communication channels used by the cardholder to the acceptor system.";
 				nextVersions_lazy = () -> Arrays.asList(TransactionChannel3Code.mmObject());
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TransactionChannel1Code.mmMailOrder, com.tools20022.repository.codeset.TransactionChannel1Code.mmTelephoneOrder,
-						com.tools20022.repository.codeset.TransactionChannel1Code.mmElectronicCommerce, com.tools20022.repository.codeset.TransactionChannel1Code.mmTelevisionPayment);
+				code_lazy = () -> Arrays.asList(TransactionChannel1Code.mmMailOrder, TransactionChannel1Code.mmTelephoneOrder, TransactionChannel1Code.mmElectronicCommerce, TransactionChannel1Code.mmTelevisionPayment);
 				trace_lazy = () -> TransactionChannelCode.mmObject();
 			}
 		});

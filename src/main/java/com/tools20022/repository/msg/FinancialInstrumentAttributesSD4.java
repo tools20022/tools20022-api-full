@@ -19,7 +19,9 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max140Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -104,7 +106,7 @@ public class FinancialInstrumentAttributesSD4 {
 			componentContext_lazy = () -> FinancialInstrumentAttributesSD4.mmObject();
 			isDerived = false;
 			xmlTag = "CSDDsbrsdSctyId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CSDDisbursedSecurityIdentification";
 			definition = "Security identification that a CSD (for example in the US -  DTC, The Depository Trust Corporation) will distribute as part of the entitlement. This can be the DTC contra CUSIP in cases where the payout security is a contra CUSIP.";
 			maxOccurs = 1;
@@ -146,7 +148,7 @@ public class FinancialInstrumentAttributesSD4 {
 			componentContext_lazy = () -> FinancialInstrumentAttributesSD4.mmObject();
 			isDerived = false;
 			xmlTag = "CSDDsbrsdSctyDesc";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CSDDisbursedSecurityDescription";
 			definition = "DTC (The Depository Trust Corporation) disbursed security description.";
 			maxOccurs = 1;
@@ -193,7 +195,7 @@ public class FinancialInstrumentAttributesSD4 {
 			componentContext_lazy = () -> FinancialInstrumentAttributesSD4.mmObject();
 			isDerived = false;
 			xmlTag = "CSDDsbrsdFrctnlSctyId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CSDDisbursedFractionalSecurityIdentification";
 			definition = "Security identification of the security that will be distributed in fractions by the CSD (for example in the US -  DTC, The Depository Trust Corporation) DTC (The Depository Trust Corporation) as a result of a corporate action.";
 			maxOccurs = 1;
@@ -205,10 +207,10 @@ public class FinancialInstrumentAttributesSD4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrumentAttributesSD4.mmCSDDisbursedSecurityIdentification,
-						com.tools20022.repository.msg.FinancialInstrumentAttributesSD4.mmCSDDisbursedSecurityDescription, com.tools20022.repository.msg.FinancialInstrumentAttributesSD4.mmCSDDisbursedFractionalSecurityIdentification);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(FinancialInstrumentAttributesSD4.mmCSDDisbursedSecurityIdentification, FinancialInstrumentAttributesSD4.mmCSDDisbursedSecurityDescription,
+						FinancialInstrumentAttributesSD4.mmCSDDisbursedFractionalSecurityIdentification);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FinancialInstrumentAttributesSD4";
 				definition = "Provides additional information regarding security that will being distributed as part of entitlement.";
 			}

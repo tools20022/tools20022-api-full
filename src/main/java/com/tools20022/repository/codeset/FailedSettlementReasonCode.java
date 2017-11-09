@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.FailedSettlementReason1Code
+ * FailedSettlementReason1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -50,14 +60,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.FailedSettlementReasonCode#mmInsufficientCash
  * FailedSettlementReasonCode.mmInsufficientCash}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.FailedSettlementReason1Code
- * FailedSettlementReason1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -107,7 +109,7 @@ public class FailedSettlementReasonCode {
 	 */
 	public static final MMCode mmCreditAccountNotEligible = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CreditAccountNotEligible";
 			definition = "Credit account is not eligible.";
 			owner_lazy = () -> FailedSettlementReasonCode.mmObject();
@@ -137,7 +139,7 @@ public class FailedSettlementReasonCode {
 	 */
 	public static final MMCode mmCreditAccountDisabled = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CreditAccountDisabled";
 			definition = "Credit account is disabled.";
 			owner_lazy = () -> FailedSettlementReasonCode.mmObject();
@@ -167,7 +169,7 @@ public class FailedSettlementReasonCode {
 	 */
 	public static final MMCode mmDebitAccountNotEligible = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DebitAccountNotEligible";
 			definition = "Debit account is not eligible.";
 			owner_lazy = () -> FailedSettlementReasonCode.mmObject();
@@ -197,7 +199,7 @@ public class FailedSettlementReasonCode {
 	 */
 	public static final MMCode mmDebitAccountDisabled = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DebitAccountDisabled";
 			definition = "Debit account is disabled.";
 			owner_lazy = () -> FailedSettlementReasonCode.mmObject();
@@ -227,7 +229,7 @@ public class FailedSettlementReasonCode {
 	 */
 	public static final MMCode mmInsufficientSecurities = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InsufficientSecurities";
 			definition = "Insufficient securities on the account to settle.";
 			owner_lazy = () -> FailedSettlementReasonCode.mmObject();
@@ -257,7 +259,7 @@ public class FailedSettlementReasonCode {
 	 */
 	public static final MMCode mmIncompleteDistribution = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "IncompleteDistribution";
 			definition = "The distribution is incomplete.";
 			owner_lazy = () -> FailedSettlementReasonCode.mmObject();
@@ -287,7 +289,7 @@ public class FailedSettlementReasonCode {
 	 */
 	public static final MMCode mmInsufficientCash = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InsufficientCash";
 			definition = "Insufficient cash on the account to settle.";
 			owner_lazy = () -> FailedSettlementReasonCode.mmObject();
@@ -298,15 +300,13 @@ public class FailedSettlementReasonCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CANE");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FailedSettlementReasonCode";
 				definition = "Specifies the reason of a settlement failure.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.FailedSettlementReasonCode.mmCreditAccountNotEligible, com.tools20022.repository.codeset.FailedSettlementReasonCode.mmCreditAccountDisabled,
-						com.tools20022.repository.codeset.FailedSettlementReasonCode.mmDebitAccountNotEligible, com.tools20022.repository.codeset.FailedSettlementReasonCode.mmDebitAccountDisabled,
-						com.tools20022.repository.codeset.FailedSettlementReasonCode.mmInsufficientSecurities, com.tools20022.repository.codeset.FailedSettlementReasonCode.mmIncompleteDistribution,
-						com.tools20022.repository.codeset.FailedSettlementReasonCode.mmInsufficientCash);
+				code_lazy = () -> Arrays.asList(FailedSettlementReasonCode.mmCreditAccountNotEligible, FailedSettlementReasonCode.mmCreditAccountDisabled, FailedSettlementReasonCode.mmDebitAccountNotEligible,
+						FailedSettlementReasonCode.mmDebitAccountDisabled, FailedSettlementReasonCode.mmInsufficientSecurities, FailedSettlementReasonCode.mmIncompleteDistribution, FailedSettlementReasonCode.mmInsufficientCash);
 				derivation_lazy = () -> Arrays.asList(FailedSettlementReason1Code.mmObject());
 			}
 		});

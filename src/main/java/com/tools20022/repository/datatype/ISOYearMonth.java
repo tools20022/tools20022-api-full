@@ -17,7 +17,9 @@
 
 package com.tools20022.repository.datatype;
 
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.metamodel.MMYearMonth;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -55,9 +57,9 @@ public class ISOYearMonth {
 	final static public MMYearMonth mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMYearMonth() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("2002-01");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ISOYearMonth";
 				definition = "Month within a particular calendar year represented by YYYY-MM (ISO 8601).";
 			}

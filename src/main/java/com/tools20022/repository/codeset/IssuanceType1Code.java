@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.IssuanceTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -92,7 +94,7 @@ public class IssuanceType1Code extends IssuanceTypeCode {
 	 */
 	public static final MMCode mmCounterUndertakingRequestForLocalUndertaking = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CounterUndertakingRequestForLocalUndertaking";
 			owner_lazy = () -> IssuanceType1Code.mmObject();
 		}
@@ -115,7 +117,7 @@ public class IssuanceType1Code extends IssuanceTypeCode {
 	 */
 	public static final MMCode mmCounterUndertakingRequestForCounterUndertaking = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CounterUndertakingRequestForCounterUndertaking";
 			owner_lazy = () -> IssuanceType1Code.mmObject();
 		}
@@ -138,7 +140,7 @@ public class IssuanceType1Code extends IssuanceTypeCode {
 	 */
 	public static final MMCode mmUndertakingIssuedDirect = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UndertakingIssuedDirect";
 			owner_lazy = () -> IssuanceType1Code.mmObject();
 		}
@@ -161,7 +163,7 @@ public class IssuanceType1Code extends IssuanceTypeCode {
 	 */
 	public static final MMCode mmUndertakingIssuedViaConfirmingParty = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UndertakingIssuedViaConfirmingParty";
 			owner_lazy = () -> IssuanceType1Code.mmObject();
 		}
@@ -184,7 +186,7 @@ public class IssuanceType1Code extends IssuanceTypeCode {
 	 */
 	public static final MMCode mmUndertakingViaAdvisingParty = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UndertakingViaAdvisingParty";
 			owner_lazy = () -> IssuanceType1Code.mmObject();
 		}
@@ -193,14 +195,13 @@ public class IssuanceType1Code extends IssuanceTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CRQL");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "IssuanceType1Code";
 				definition = "Specifies undertaking issuance type.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.IssuanceType1Code.mmCounterUndertakingRequestForLocalUndertaking,
-						com.tools20022.repository.codeset.IssuanceType1Code.mmCounterUndertakingRequestForCounterUndertaking, com.tools20022.repository.codeset.IssuanceType1Code.mmUndertakingIssuedDirect,
-						com.tools20022.repository.codeset.IssuanceType1Code.mmUndertakingIssuedViaConfirmingParty, com.tools20022.repository.codeset.IssuanceType1Code.mmUndertakingViaAdvisingParty);
+				code_lazy = () -> Arrays.asList(IssuanceType1Code.mmCounterUndertakingRequestForLocalUndertaking, IssuanceType1Code.mmCounterUndertakingRequestForCounterUndertaking, IssuanceType1Code.mmUndertakingIssuedDirect,
+						IssuanceType1Code.mmUndertakingIssuedViaConfirmingParty, IssuanceType1Code.mmUndertakingViaAdvisingParty);
 				trace_lazy = () -> IssuanceTypeCode.mmObject();
 			}
 		});

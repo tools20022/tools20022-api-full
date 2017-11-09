@@ -19,9 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.DTCCSubEventType2Code;
 import com.tools20022.repository.codeset.ExtendedEventType1Code;
 import com.tools20022.repository.datatype.Max350Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -115,10 +117,10 @@ public class CorporateActionGeneralInformationSD4 {
 			componentContext_lazy = () -> CorporateActionGeneralInformationSD4.mmObject();
 			isDerived = false;
 			xmlTag = "PlcAndNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "xPath to the element that is being extended.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionGeneralInformationSD15.mmPlaceAndName);
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionGeneralInformationSD15.mmPlaceAndName);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
@@ -174,10 +176,10 @@ public class CorporateActionGeneralInformationSD4 {
 			componentContext_lazy = () -> CorporateActionGeneralInformationSD4.mmObject();
 			isDerived = false;
 			xmlTag = "EvtTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventType";
 			definition = "DTCC  (The Depository Trust and Clearing Corporation) native corporate action event type name. Used in place for the events that cannot be classified by ISO Code and are marked as OTHR. Can be used in combination with DTCC sub event type (when provided) to identify the event. For an example: a distribution based on recapitalisation event will be presented as event type: OTHR in standard message. DTCC native event type would be Distribution (DIST) and DTCC sub event type would be Recapitalisation. ";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionGeneralInformationSD15.mmEventType);
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionGeneralInformationSD15.mmEventType);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ExtendedEventType1Code.mmObject();
@@ -231,10 +233,10 @@ public class CorporateActionGeneralInformationSD4 {
 			componentContext_lazy = () -> CorporateActionGeneralInformationSD4.mmObject();
 			isDerived = false;
 			xmlTag = "SubEvtTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubEventType";
 			definition = "DTCC (The Depository Trust and Clearing Corporation) corporate action sub event type name further defines the event type. For an example: a cash dividend event eligible for dividend reinvestment at DTC election will be noted as event type: Cash Dividend (DVCA) and DTCC sub event type: DRIP( DTC only).";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionGeneralInformationSD15.mmSubEventType);
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionGeneralInformationSD15.mmSubEventType);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> DTCCSubEventType2Code.mmObject();
@@ -244,10 +246,9 @@ public class CorporateActionGeneralInformationSD4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionGeneralInformationSD4.mmPlaceAndName, com.tools20022.repository.msg.CorporateActionGeneralInformationSD4.mmEventType,
-						com.tools20022.repository.msg.CorporateActionGeneralInformationSD4.mmSubEventType);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(CorporateActionGeneralInformationSD4.mmPlaceAndName, CorporateActionGeneralInformationSD4.mmEventType, CorporateActionGeneralInformationSD4.mmSubEventType);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CorporateActionGeneralInformationSD4";
 				definition = "Provides additional information regarding corporate action general information details.";
 				nextVersions_lazy = () -> Arrays.asList(CorporateActionGeneralInformationSD15.mmObject());

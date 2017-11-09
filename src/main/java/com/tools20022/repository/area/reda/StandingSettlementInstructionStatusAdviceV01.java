@@ -20,6 +20,7 @@ package com.tools20022.repository.area.reda;
 import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.ReferenceDataLatestVersion;
 import com.tools20022.repository.choice.MarketIdentificationOrCashPurpose1Choice;
 import com.tools20022.repository.choice.PartyOrCurrency1Choice;
@@ -53,6 +54,9 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code reda.058.001.01}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.ReferenceDataLatestVersion
@@ -97,9 +101,6 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code reda.058.001.01}</li>
- * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -140,7 +141,7 @@ public class StandingSettlementInstructionStatusAdviceV01 {
 	public static final MMMessageBuildingBlock mmEffectiveDateDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "FctvDtDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EffectiveDateDetails";
 			definition = "Date on which the SSI is effective.";
 			maxOccurs = 1;
@@ -180,7 +181,7 @@ public class StandingSettlementInstructionStatusAdviceV01 {
 	public static final MMMessageBuildingBlock mmAccountIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "AcctId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountIdentification";
 			definition = "Unique and unambiguous master identification known to the sender (or its authorised agent) and receiver (or its authorised agent), below which the SSI will be lodged. This may be an account number or reference to a fund.\r\nIf no account or reference is available then “NONREF” must be specified.";
 			minOccurs = 1;
@@ -215,7 +216,7 @@ public class StandingSettlementInstructionStatusAdviceV01 {
 	public static final MMMessageBuildingBlock mmMarketIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "MktId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketIdentification";
 			definition = "Identifies the market for the standing settlement instruction. ";
 			maxOccurs = 1;
@@ -253,7 +254,7 @@ public class StandingSettlementInstructionStatusAdviceV01 {
 	public static final MMMessageBuildingBlock mmSettlementDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SttlmDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementDetails";
 			definition = "Settlement information that helps to identify the standing settlement  instruction, cancellation or deletion for which the status is sent.";
 			maxOccurs = 1;
@@ -288,7 +289,7 @@ public class StandingSettlementInstructionStatusAdviceV01 {
 	public static final MMMessageBuildingBlock mmRelatedMessageReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "RltdMsgRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedMessageReference";
 			definition = "Reference to a linked message that was previously received.";
 			maxOccurs = 1;
@@ -325,7 +326,7 @@ public class StandingSettlementInstructionStatusAdviceV01 {
 	public static final MMMessageBuildingBlock mmProcessingStatus = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "PrcgSts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProcessingStatus";
 			definition = "Status of the standing settlement instruction, deletion or cancellation.";
 			maxOccurs = 1;
@@ -363,7 +364,7 @@ public class StandingSettlementInstructionStatusAdviceV01 {
 	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SplmtryData";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryData";
 			definition = "Additional information that can not be captured in the structured fields and/or any other specific block.";
 			minOccurs = 0;
@@ -374,17 +375,16 @@ public class StandingSettlementInstructionStatusAdviceV01 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "StandingSettlementInstructionStatusAdviceV01";
 				definition = "Scope\r\nThe receiver of a StandingSettlementInstruction message sends the StandingSettlementInstructionStatusAdvice message to the instructing party (sender of the StandingSettlementInstruction message) to provide the status of a previously received StandingSettlementInstruction, StandingSettlementInstructionCancellation or StandingSettlementInstructionDeletion message.\r\n\r\nUsage\r\nThe StandingSettlementInstructionStatusAdvice message is used to report one of the following statuses:\r\n-\ta received status, or, \r\n-\tan accepted status, or,\r\n-\ta rejected status, or,\r\n-\ta pending processing status, or,\r\n-\ta proprietary status.";
 				messageSet_lazy = () -> Arrays.asList(SSIforSecuritiesPaymentsandForeignExchange.mmObject());
 				rootElement = "Document";
 				xmlTag = "StgSttlmInstrStsAdvc";
 				businessArea_lazy = () -> ReferenceDataLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.reda.StandingSettlementInstructionStatusAdviceV01.mmEffectiveDateDetails,
-						com.tools20022.repository.area.reda.StandingSettlementInstructionStatusAdviceV01.mmAccountIdentification, com.tools20022.repository.area.reda.StandingSettlementInstructionStatusAdviceV01.mmMarketIdentification,
-						com.tools20022.repository.area.reda.StandingSettlementInstructionStatusAdviceV01.mmSettlementDetails, com.tools20022.repository.area.reda.StandingSettlementInstructionStatusAdviceV01.mmRelatedMessageReference,
-						com.tools20022.repository.area.reda.StandingSettlementInstructionStatusAdviceV01.mmProcessingStatus, com.tools20022.repository.area.reda.StandingSettlementInstructionStatusAdviceV01.mmSupplementaryData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(StandingSettlementInstructionStatusAdviceV01.mmEffectiveDateDetails, StandingSettlementInstructionStatusAdviceV01.mmAccountIdentification,
+						StandingSettlementInstructionStatusAdviceV01.mmMarketIdentification, StandingSettlementInstructionStatusAdviceV01.mmSettlementDetails, StandingSettlementInstructionStatusAdviceV01.mmRelatedMessageReference,
+						StandingSettlementInstructionStatusAdviceV01.mmProcessingStatus, StandingSettlementInstructionStatusAdviceV01.mmSupplementaryData);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "reda";

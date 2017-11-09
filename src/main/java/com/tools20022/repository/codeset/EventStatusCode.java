@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -105,7 +107,7 @@ public class EventStatusCode {
 	 */
 	public static final MMCode mmNotConfirmed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+			registrationStatus = MMRegistrationStatus.OBSOLETE;
 			name = "NotConfirmed";
 			definition = "Event information not confirmed by the issuer or other official source";
 			owner_lazy = () -> EventStatusCode.mmObject();
@@ -136,7 +138,7 @@ public class EventStatusCode {
 	 */
 	public static final MMCode mmConfirmed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+			registrationStatus = MMRegistrationStatus.OBSOLETE;
 			name = "Confirmed";
 			definition = "Event information confirmed by issuer or other official source";
 			owner_lazy = () -> EventStatusCode.mmObject();
@@ -166,7 +168,7 @@ public class EventStatusCode {
 	 */
 	public static final MMCode mmDelayed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+			registrationStatus = MMRegistrationStatus.OBSOLETE;
 			name = "Delayed";
 			definition = "Corporate event has been delayed.";
 			owner_lazy = () -> EventStatusCode.mmObject();
@@ -196,7 +198,7 @@ public class EventStatusCode {
 	 */
 	public static final MMCode mmCancelled = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+			registrationStatus = MMRegistrationStatus.OBSOLETE;
 			name = "Cancelled";
 			definition = "Corporate event has been cancelled.";
 			owner_lazy = () -> EventStatusCode.mmObject();
@@ -226,7 +228,7 @@ public class EventStatusCode {
 	 */
 	public static final MMCode mmCompleted = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+			registrationStatus = MMRegistrationStatus.OBSOLETE;
 			name = "Completed";
 			definition = "Processing for the corporate event has been completed.";
 			owner_lazy = () -> EventStatusCode.mmObject();
@@ -256,7 +258,7 @@ public class EventStatusCode {
 	 */
 	public static final MMCode mmApprovedByBoard = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+			registrationStatus = MMRegistrationStatus.OBSOLETE;
 			name = "ApprovedByBoard";
 			definition = "Event is approved by board.";
 			owner_lazy = () -> EventStatusCode.mmObject();
@@ -287,7 +289,7 @@ public class EventStatusCode {
 	 */
 	public static final MMCode mmApprovedByRegulator = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+			registrationStatus = MMRegistrationStatus.OBSOLETE;
 			name = "ApprovedByRegulator";
 			definition = "Event is approved by regulators, for example, anti trust.";
 			owner_lazy = () -> EventStatusCode.mmObject();
@@ -317,7 +319,7 @@ public class EventStatusCode {
 	 */
 	public static final MMCode mmApprovedByBeneficialOwner = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+			registrationStatus = MMRegistrationStatus.OBSOLETE;
 			name = "ApprovedByBeneficialOwner";
 			definition = "Event is approved by beneficial owner or agent.";
 			owner_lazy = () -> EventStatusCode.mmObject();
@@ -351,7 +353,7 @@ public class EventStatusCode {
 	 */
 	public static final MMCode mmInDefault = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+			registrationStatus = MMRegistrationStatus.OBSOLETE;
 			name = "InDefault";
 			definition = "The company has not met a mandatory obligation in the terms of a security, for example, interest payment of bonds or a redemption/mandatory call.";
 			owner_lazy = () -> EventStatusCode.mmObject();
@@ -362,14 +364,13 @@ public class EventStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("NCON");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				name = "EventStatusCode";
 				definition = "Provides information about the current stage in the lifecycle of an event.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.EventStatusCode.mmNotConfirmed, com.tools20022.repository.codeset.EventStatusCode.mmConfirmed, com.tools20022.repository.codeset.EventStatusCode.mmDelayed,
-						com.tools20022.repository.codeset.EventStatusCode.mmCancelled, com.tools20022.repository.codeset.EventStatusCode.mmCompleted, com.tools20022.repository.codeset.EventStatusCode.mmApprovedByBoard,
-						com.tools20022.repository.codeset.EventStatusCode.mmApprovedByRegulator, com.tools20022.repository.codeset.EventStatusCode.mmApprovedByBeneficialOwner, com.tools20022.repository.codeset.EventStatusCode.mmInDefault);
+				code_lazy = () -> Arrays.asList(EventStatusCode.mmNotConfirmed, EventStatusCode.mmConfirmed, EventStatusCode.mmDelayed, EventStatusCode.mmCancelled, EventStatusCode.mmCompleted, EventStatusCode.mmApprovedByBoard,
+						EventStatusCode.mmApprovedByRegulator, EventStatusCode.mmApprovedByBeneficialOwner, EventStatusCode.mmInDefault);
 			}
 		});
 		return mmObject_lazy.get();

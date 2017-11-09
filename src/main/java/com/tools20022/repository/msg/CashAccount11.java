@@ -19,9 +19,14 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.sese.*;
 import com.tools20022.repository.choice.CashAccountIdentification1Choice;
 import com.tools20022.repository.choice.FinancialInstitutionIdentification3Choice;
+import com.tools20022.repository.entity.Account;
 import com.tools20022.repository.entity.CashAccount;
+import com.tools20022.repository.entity.Organisation;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -138,14 +143,14 @@ public class CashAccount11 {
 	 */
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.mmIdentification;
+			businessElementTrace_lazy = () -> Account.mmIdentification;
 			componentContext_lazy = () -> CashAccount11.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Unique and unambiguous identification of the account between the account owner and the account servicer.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashAccount29.mmIdentification);
+			nextVersions_lazy = () -> Arrays.asList(CashAccount29.mmIdentification);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> CashAccountIdentification1Choice.mmObject();
@@ -199,14 +204,14 @@ public class CashAccount11 {
 	 */
 	public static final MMMessageAttribute mmAccountServicer = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Organisation.mmOrganisationIdentification;
+			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> CashAccount11.mmObject();
 			isDerived = false;
 			xmlTag = "AcctSvcr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountServicer";
 			definition = "Party that manages the account on behalf of the account owner, that is manages the registration and booking of entries on the account, calculates balances on the account and provides information about the account.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashAccount29.mmAccountServicer);
+			nextVersions_lazy = () -> Arrays.asList(CashAccount29.mmAccountServicer);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> FinancialInstitutionIdentification3Choice.mmObject();
@@ -216,14 +221,12 @@ public class CashAccount11 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashAccount11.mmIdentification, com.tools20022.repository.msg.CashAccount11.mmAccountServicer);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.PEPOrISAOrPortfolioTransferConfirmationV02.mmCashAccount,
-						com.tools20022.repository.area.sese.PortfolioTransferConfirmationV03.mmCashAccount, com.tools20022.repository.area.sese.PortfolioTransferConfirmationV04.mmCashAccount,
-						com.tools20022.repository.area.sese.PEPOrISAOrPortfolioTransferInstructionV02.mmCashAccount, com.tools20022.repository.area.sese.PortfolioTransferInstructionV03.mmCashAccount,
-						com.tools20022.repository.area.sese.PortfolioTransferInstructionV04.mmCashAccount);
+				messageElement_lazy = () -> Arrays.asList(CashAccount11.mmIdentification, CashAccount11.mmAccountServicer);
+				messageBuildingBlock_lazy = () -> Arrays.asList(PEPOrISAOrPortfolioTransferConfirmationV02.mmCashAccount, PortfolioTransferConfirmationV03.mmCashAccount, PortfolioTransferConfirmationV04.mmCashAccount,
+						PEPOrISAOrPortfolioTransferInstructionV02.mmCashAccount, PortfolioTransferInstructionV03.mmCashAccount, PortfolioTransferInstructionV04.mmCashAccount);
 				trace_lazy = () -> CashAccount.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CashAccount11";
 				definition = "Information used for identifying an account.";
 				nextVersions_lazy = () -> Arrays.asList(CashAccount29.mmObject());

@@ -20,6 +20,7 @@ package com.tools20022.repository.area.seev;
 import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.SecuritiesEventsLatestVersion;
 import com.tools20022.repository.choice.CorporateActionInformationStatus1Choice;
 import com.tools20022.repository.msg.CorporateActionAdditionalInformation1;
@@ -41,6 +42,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code seev.024.001.01}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.SecuritiesEventsLatestVersion
@@ -75,9 +79,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * AgentCAInformationStatusAdviceV01.mmInformationStatusDetails}</li>
  * </ul>
  * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code seev.024.001.01}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -123,7 +124,7 @@ public class AgentCAInformationStatusAdviceV01 {
 	public static final MMMessageBuildingBlock mmIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Identification assigned by the Sender to unambiguously identify the status advice.";
 			maxOccurs = 1;
@@ -161,7 +162,7 @@ public class AgentCAInformationStatusAdviceV01 {
 	public static final MMMessageBuildingBlock mmAgentCAInformationAdviceIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "AgtCAInfAdvcId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AgentCAInformationAdviceIdentification";
 			definition = "Identification of the linked Agent CA Information Advice for which a status is given.";
 			maxOccurs = 1;
@@ -199,7 +200,7 @@ public class AgentCAInformationStatusAdviceV01 {
 	public static final MMMessageBuildingBlock mmCorporateActionAdditionalInformation = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CorpActnAddtlInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorporateActionAdditionalInformation";
 			definition = "Additional information about the corporate action such as the delivery details.";
 			maxOccurs = 1;
@@ -234,7 +235,7 @@ public class AgentCAInformationStatusAdviceV01 {
 	public static final MMMessageBuildingBlock mmInformationStatusDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "InfStsDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InformationStatusDetails";
 			definition = "Status of the information advice sent by the CSD.";
 			maxOccurs = 1;
@@ -246,16 +247,15 @@ public class AgentCAInformationStatusAdviceV01 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AgentCAInformationStatusAdviceV01";
 				definition = "Scope\r\nThis message is sent by an issuer (or its agent) to a CSD to report the status, or change in status, of an information advice.\r\nUsage\r\nThis message must be used in response to an Agent Corporate Action Information Advice in the case of a rejection. However, it may also be used to report other statuses.\r\nThe information advice identification must be present to link this message to the information advice for which the status is provided.";
 				messageSet_lazy = () -> Arrays.asList(IssuersAgentsCommunicationISOLatestversion.mmObject());
 				rootElement = "Document";
 				xmlTag = "AgtCAInfStsAdvc";
 				businessArea_lazy = () -> SecuritiesEventsLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.AgentCAInformationStatusAdviceV01.mmIdentification,
-						com.tools20022.repository.area.seev.AgentCAInformationStatusAdviceV01.mmAgentCAInformationAdviceIdentification,
-						com.tools20022.repository.area.seev.AgentCAInformationStatusAdviceV01.mmCorporateActionAdditionalInformation, com.tools20022.repository.area.seev.AgentCAInformationStatusAdviceV01.mmInformationStatusDetails);
+				messageBuildingBlock_lazy = () -> Arrays.asList(AgentCAInformationStatusAdviceV01.mmIdentification, AgentCAInformationStatusAdviceV01.mmAgentCAInformationAdviceIdentification,
+						AgentCAInformationStatusAdviceV01.mmCorporateActionAdditionalInformation, AgentCAInformationStatusAdviceV01.mmInformationStatusDetails);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "seev";

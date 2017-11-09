@@ -19,8 +19,10 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.BusinessProcessType1Code;
 import com.tools20022.repository.entity.SecuritiesOrder;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification38;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -102,11 +104,11 @@ public class BusinessProcessType1Choice {
 	 */
 	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmBusinessProcessType;
+			businessElementTrace_lazy = () -> SecuritiesOrder.mmBusinessProcessType;
 			componentContext_lazy = () -> BusinessProcessType1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Cd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Business process type is identified using a code.";
 			maxOccurs = 1;
@@ -151,11 +153,11 @@ public class BusinessProcessType1Choice {
 	 */
 	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmBusinessProcessType;
+			businessElementTrace_lazy = () -> SecuritiesOrder.mmBusinessProcessType;
 			componentContext_lazy = () -> BusinessProcessType1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Type of business process expressed as a proprietary code.";
 			maxOccurs = 1;
@@ -167,10 +169,10 @@ public class BusinessProcessType1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.BusinessProcessType1Choice.mmCode, com.tools20022.repository.choice.BusinessProcessType1Choice.mmProprietary);
+				messageElement_lazy = () -> Arrays.asList(BusinessProcessType1Choice.mmCode, BusinessProcessType1Choice.mmProprietary);
 				trace_lazy = () -> SecuritiesOrder.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "BusinessProcessType1Choice";
 				definition = "Choice between a code or a data source scheme to determine the business process type.";
 			}

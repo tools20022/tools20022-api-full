@@ -20,12 +20,15 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.seev.CorporateActionNotification002V07;
 import com.tools20022.repository.choice.BalanceFormat7Choice;
 import com.tools20022.repository.choice.DateFormat41Choice;
 import com.tools20022.repository.choice.FractionDispositionType32Choice;
 import com.tools20022.repository.choice.RenounceableEntitlementStatusTypeFormat4Choice;
 import com.tools20022.repository.datatype.RestrictedFINDecimalNumber;
-import com.tools20022.repository.entity.Asset;
+import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -137,11 +140,11 @@ public class FinancialInstrumentAttributes73 {
 	 */
 	public static final MMMessageAssociationEnd mmSecurityIdentification = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmIdentification;
+			businessElementTrace_lazy = () -> Security.mmIdentification;
 			componentContext_lazy = () -> FinancialInstrumentAttributes73.mmObject();
 			isDerived = false;
 			xmlTag = "SctyId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityIdentification";
 			definition = "Identifies the financial instrument.";
 			maxOccurs = 1;
@@ -189,11 +192,11 @@ public class FinancialInstrumentAttributes73 {
 	 */
 	public static final MMMessageAttribute mmQuantity = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmSecuritiesQuantity;
+			businessElementTrace_lazy = () -> Security.mmSecuritiesQuantity;
 			componentContext_lazy = () -> FinancialInstrumentAttributes73.mmObject();
 			isDerived = false;
 			xmlTag = "Qty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Quantity";
 			definition = "Quantity of entitled intermediate securities based on the balance of underlying securities.";
 			maxOccurs = 1;
@@ -238,11 +241,11 @@ public class FinancialInstrumentAttributes73 {
 	 */
 	public static final MMMessageAssociationEnd mmRenounceableEntitlementStatusType = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionSecuritiesEntitlement.mmRenounceableEntitlementStatusType;
+			businessElementTrace_lazy = () -> CorporateActionSecuritiesEntitlement.mmRenounceableEntitlementStatusType;
 			componentContext_lazy = () -> FinancialInstrumentAttributes73.mmObject();
 			isDerived = false;
 			xmlTag = "RnncblEntitlmntStsTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RenounceableEntitlementStatusType";
 			definition = "Specifies whether terms of the event allow resale of the rights.";
 			maxOccurs = 1;
@@ -290,11 +293,11 @@ public class FinancialInstrumentAttributes73 {
 	 */
 	public static final MMMessageAssociationEnd mmFractionDisposition = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionOption.mmFractionDisposition;
+			businessElementTrace_lazy = () -> CorporateActionOption.mmFractionDisposition;
 			componentContext_lazy = () -> FinancialInstrumentAttributes73.mmObject();
 			isDerived = false;
 			xmlTag = "FrctnDspstn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FractionDisposition";
 			definition = "Specifies how fractions resulting from derived securities will be processed or how prorated decisions will be rounding, if provided with a pro ration rate.";
 			maxOccurs = 1;
@@ -341,11 +344,11 @@ public class FinancialInstrumentAttributes73 {
 	 */
 	public static final MMMessageAssociationEnd mmIntermediateSecuritiesToUnderlyingRatio = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesProceedsDefinition.mmIntermediateSecuritiesToUnderlyingRatio;
+			businessElementTrace_lazy = () -> SecuritiesProceedsDefinition.mmIntermediateSecuritiesToUnderlyingRatio;
 			componentContext_lazy = () -> FinancialInstrumentAttributes73.mmObject();
 			isDerived = false;
 			xmlTag = "IntrmdtSctiesToUndrlygRatio";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IntermediateSecuritiesToUnderlyingRatio";
 			definition = "Quantity of intermediate securities awarded for a given quantity of underlying security.";
 			maxOccurs = 1;
@@ -389,11 +392,11 @@ public class FinancialInstrumentAttributes73 {
 	 */
 	public static final MMMessageAssociationEnd mmMarketPrice = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmMarketValue;
+			businessElementTrace_lazy = () -> AssetHolding.mmMarketValue;
 			componentContext_lazy = () -> FinancialInstrumentAttributes73.mmObject();
 			isDerived = false;
 			xmlTag = "MktPric";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketPrice";
 			definition = "Last reported/known price of a financial instrument in a market.";
 			maxOccurs = 1;
@@ -439,11 +442,11 @@ public class FinancialInstrumentAttributes73 {
 	 */
 	public static final MMMessageAssociationEnd mmExpiryDate = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Asset.mmExpiryDate;
+			businessElementTrace_lazy = () -> Asset.mmExpiryDate;
 			componentContext_lazy = () -> FinancialInstrumentAttributes73.mmObject();
 			isDerived = false;
 			xmlTag = "XpryDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExpiryDate";
 			definition = "Date on which an order expires or at which a privilege or offer terminates.";
 			maxOccurs = 1;
@@ -486,11 +489,11 @@ public class FinancialInstrumentAttributes73 {
 	 */
 	public static final MMMessageAssociationEnd mmPostingDate = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionDistribution.mmPostingDateTime;
+			businessElementTrace_lazy = () -> CorporateActionDistribution.mmPostingDateTime;
 			componentContext_lazy = () -> FinancialInstrumentAttributes73.mmObject();
 			isDerived = false;
 			xmlTag = "PstngDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PostingDate";
 			definition = "Date of the posting (credit or debit) to the account.";
 			maxOccurs = 1;
@@ -535,11 +538,11 @@ public class FinancialInstrumentAttributes73 {
 	 */
 	public static final MMMessageAssociationEnd mmTradingPeriod = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmTradingPeriod;
+			businessElementTrace_lazy = () -> CorporateActionEvent.mmTradingPeriod;
 			componentContext_lazy = () -> FinancialInstrumentAttributes73.mmObject();
 			isDerived = false;
 			xmlTag = "TradgPrd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradingPeriod";
 			definition = "Period during which intermediate or outturn securities are tradable in a secondary market.";
 			maxOccurs = 1;
@@ -583,11 +586,11 @@ public class FinancialInstrumentAttributes73 {
 	 */
 	public static final MMMessageAssociationEnd mmUninstructedBalance = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEntitlement.mmUninstructedBalance;
+			businessElementTrace_lazy = () -> CorporateActionEntitlement.mmUninstructedBalance;
 			componentContext_lazy = () -> FinancialInstrumentAttributes73.mmObject();
 			isDerived = false;
 			xmlTag = "UinstdBal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UninstructedBalance";
 			definition = "Balance of uninstructed position.";
 			maxOccurs = 1;
@@ -631,11 +634,11 @@ public class FinancialInstrumentAttributes73 {
 	 */
 	public static final MMMessageAssociationEnd mmInstructedBalance = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEntitlement.mmInstructedBalance;
+			businessElementTrace_lazy = () -> CorporateActionEntitlement.mmInstructedBalance;
 			componentContext_lazy = () -> FinancialInstrumentAttributes73.mmObject();
 			isDerived = false;
 			xmlTag = "InstdBal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructedBalance";
 			definition = "Balance of instructed position.";
 			maxOccurs = 1;
@@ -648,16 +651,14 @@ public class FinancialInstrumentAttributes73 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrumentAttributes73.mmSecurityIdentification, com.tools20022.repository.msg.FinancialInstrumentAttributes73.mmQuantity,
-						com.tools20022.repository.msg.FinancialInstrumentAttributes73.mmRenounceableEntitlementStatusType, com.tools20022.repository.msg.FinancialInstrumentAttributes73.mmFractionDisposition,
-						com.tools20022.repository.msg.FinancialInstrumentAttributes73.mmIntermediateSecuritiesToUnderlyingRatio, com.tools20022.repository.msg.FinancialInstrumentAttributes73.mmMarketPrice,
-						com.tools20022.repository.msg.FinancialInstrumentAttributes73.mmExpiryDate, com.tools20022.repository.msg.FinancialInstrumentAttributes73.mmPostingDate,
-						com.tools20022.repository.msg.FinancialInstrumentAttributes73.mmTradingPeriod, com.tools20022.repository.msg.FinancialInstrumentAttributes73.mmUninstructedBalance,
-						com.tools20022.repository.msg.FinancialInstrumentAttributes73.mmInstructedBalance);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.CorporateActionNotification002V07.mmIntermediateSecurity);
+				messageElement_lazy = () -> Arrays.asList(FinancialInstrumentAttributes73.mmSecurityIdentification, FinancialInstrumentAttributes73.mmQuantity, FinancialInstrumentAttributes73.mmRenounceableEntitlementStatusType,
+						FinancialInstrumentAttributes73.mmFractionDisposition, FinancialInstrumentAttributes73.mmIntermediateSecuritiesToUnderlyingRatio, FinancialInstrumentAttributes73.mmMarketPrice,
+						FinancialInstrumentAttributes73.mmExpiryDate, FinancialInstrumentAttributes73.mmPostingDate, FinancialInstrumentAttributes73.mmTradingPeriod, FinancialInstrumentAttributes73.mmUninstructedBalance,
+						FinancialInstrumentAttributes73.mmInstructedBalance);
+				messageBuildingBlock_lazy = () -> Arrays.asList(CorporateActionNotification002V07.mmIntermediateSecurity);
 				trace_lazy = () -> Asset.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FinancialInstrumentAttributes73";
 				definition = "Description of the financial instrument.";
 			}

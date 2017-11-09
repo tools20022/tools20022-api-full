@@ -20,8 +20,10 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.ErrorHandling1Choice;
 import com.tools20022.repository.datatype.Max140Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -105,10 +107,10 @@ public class ErrorHandling3 {
 			componentContext_lazy = () -> ErrorHandling3.mmObject();
 			isDerived = false;
 			xmlTag = "Err";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Error";
 			definition = "Specification of the error, in coded or proprietary form.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ErrorHandling4.mmError);
+			nextVersions_lazy = () -> Arrays.asList(ErrorHandling4.mmError);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -155,10 +157,10 @@ public class ErrorHandling3 {
 			componentContext_lazy = () -> ErrorHandling3.mmObject();
 			isDerived = false;
 			xmlTag = "Desc";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Description";
 			definition = "Specification of the error, in free format.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ErrorHandling4.mmDescription);
+			nextVersions_lazy = () -> Arrays.asList(ErrorHandling4.mmDescription);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
@@ -168,9 +170,9 @@ public class ErrorHandling3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ErrorHandling3.mmError, com.tools20022.repository.msg.ErrorHandling3.mmDescription);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(ErrorHandling3.mmError, ErrorHandling3.mmDescription);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ErrorHandling3";
 				definition = "Specifies the error resulting from the processing of a request.";
 				nextVersions_lazy = () -> Arrays.asList(ErrorHandling4.mmObject());

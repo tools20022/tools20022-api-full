@@ -20,7 +20,9 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.MarginCall;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -98,11 +100,11 @@ public class Margin3 {
 	 */
 	public static final MMMessageAssociationEnd mmInitialMargin = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.MarginCall.mmInitialMargin;
+			businessElementTrace_lazy = () -> MarginCall.mmInitialMargin;
 			componentContext_lazy = () -> Margin3.mmObject();
 			isDerived = false;
 			xmlTag = "InitlMrgn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InitialMargin";
 			definition = "Margin required for absorbing future market price fluctuations (market risks) occurring between the default of a member and close-out of unsettled securities positions by the central counterparty.";
 			maxOccurs = 1;
@@ -145,11 +147,11 @@ public class Margin3 {
 	 */
 	public static final MMMessageAssociationEnd mmVariationMargin = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.MarginCall.mmVariationMargin;
+			businessElementTrace_lazy = () -> MarginCall.mmVariationMargin;
 			componentContext_lazy = () -> Margin3.mmObject();
 			isDerived = false;
 			xmlTag = "VartnMrgn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VariationMargin";
 			definition = "Provides details on the calculation of the variation margin.";
 			minOccurs = 0;
@@ -194,7 +196,7 @@ public class Margin3 {
 			componentContext_lazy = () -> Margin3.mmObject();
 			isDerived = false;
 			xmlTag = "OthrMrgn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherMargin";
 			definition = "Provides details on the margin type and amount.";
 			minOccurs = 0;
@@ -205,10 +207,10 @@ public class Margin3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Margin3.mmInitialMargin, com.tools20022.repository.msg.Margin3.mmVariationMargin, com.tools20022.repository.msg.Margin3.mmOtherMargin);
+				messageElement_lazy = () -> Arrays.asList(Margin3.mmInitialMargin, Margin3.mmVariationMargin, Margin3.mmOtherMargin);
 				trace_lazy = () -> MarginCall.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Margin3";
 				definition = "Provides details on the calculation of the margin.";
 			}

@@ -20,8 +20,10 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.SystemEventType2Choice;
 import com.tools20022.repository.datatype.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -114,7 +116,7 @@ public class ScheduleChangeEntry1 {
 			componentContext_lazy = () -> ScheduleChangeEntry1.mmObject();
 			isDerived = false;
 			xmlTag = "SchdlEvtTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ScheduleEventType";
 			definition = "Type of the scheduled event.";
 			maxOccurs = 1;
@@ -157,7 +159,7 @@ public class ScheduleChangeEntry1 {
 			componentContext_lazy = () -> ScheduleChangeEntry1.mmObject();
 			isDerived = false;
 			xmlTag = "SchdlEvtId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ScheduleEventIdentification";
 			definition = "Identificaiton of the scheduled event";
 			maxOccurs = 1;
@@ -198,7 +200,7 @@ public class ScheduleChangeEntry1 {
 			componentContext_lazy = () -> ScheduleChangeEntry1.mmObject();
 			isDerived = false;
 			xmlTag = "EvtFrqcy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventFrequency";
 			definition = "New frequency of the scheduled event.";
 			maxOccurs = 1;
@@ -239,7 +241,7 @@ public class ScheduleChangeEntry1 {
 			componentContext_lazy = () -> ScheduleChangeEntry1.mmObject();
 			isDerived = false;
 			xmlTag = "EvtPrvsFrqcy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventPreviousFrequency";
 			definition = "Frequency of the scheduled event before change.";
 			maxOccurs = 1;
@@ -280,7 +282,7 @@ public class ScheduleChangeEntry1 {
 			componentContext_lazy = () -> ScheduleChangeEntry1.mmObject();
 			isDerived = false;
 			xmlTag = "EvtTm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventTime";
 			definition = "New scheduled time of the event.";
 			maxOccurs = 1;
@@ -321,7 +323,7 @@ public class ScheduleChangeEntry1 {
 			componentContext_lazy = () -> ScheduleChangeEntry1.mmObject();
 			isDerived = false;
 			xmlTag = "EvtPrvsTm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventPreviousTime";
 			definition = "Scheduled time of the event before change.";
 			maxOccurs = 1;
@@ -363,7 +365,7 @@ public class ScheduleChangeEntry1 {
 			componentContext_lazy = () -> ScheduleChangeEntry1.mmObject();
 			isDerived = false;
 			xmlTag = "EvtDrtn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventDuration";
 			definition = "Minimum duration of event.";
 			maxOccurs = 1;
@@ -405,7 +407,7 @@ public class ScheduleChangeEntry1 {
 			componentContext_lazy = () -> ScheduleChangeEntry1.mmObject();
 			isDerived = false;
 			xmlTag = "EvtPrvsDrtn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventPreviousDuration";
 			definition = "Set earlier duration of event.";
 			maxOccurs = 1;
@@ -447,7 +449,7 @@ public class ScheduleChangeEntry1 {
 			componentContext_lazy = () -> ScheduleChangeEntry1.mmObject();
 			isDerived = false;
 			xmlTag = "ChngTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChangeType";
 			definition = "Type of schedule modification (i.e. event cancelled, new event).";
 			maxOccurs = 1;
@@ -459,12 +461,10 @@ public class ScheduleChangeEntry1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ScheduleChangeEntry1.mmScheduleEventType, com.tools20022.repository.msg.ScheduleChangeEntry1.mmScheduleEventIdentification,
-						com.tools20022.repository.msg.ScheduleChangeEntry1.mmEventFrequency, com.tools20022.repository.msg.ScheduleChangeEntry1.mmEventPreviousFrequency, com.tools20022.repository.msg.ScheduleChangeEntry1.mmEventTime,
-						com.tools20022.repository.msg.ScheduleChangeEntry1.mmEventPreviousTime, com.tools20022.repository.msg.ScheduleChangeEntry1.mmEventDuration, com.tools20022.repository.msg.ScheduleChangeEntry1.mmEventPreviousDuration,
-						com.tools20022.repository.msg.ScheduleChangeEntry1.mmChangeType);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(ScheduleChangeEntry1.mmScheduleEventType, ScheduleChangeEntry1.mmScheduleEventIdentification, ScheduleChangeEntry1.mmEventFrequency, ScheduleChangeEntry1.mmEventPreviousFrequency,
+						ScheduleChangeEntry1.mmEventTime, ScheduleChangeEntry1.mmEventPreviousTime, ScheduleChangeEntry1.mmEventDuration, ScheduleChangeEntry1.mmEventPreviousDuration, ScheduleChangeEntry1.mmChangeType);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ScheduleChangeEntry1";
 				definition = "Details about the schedule change.";
 			}

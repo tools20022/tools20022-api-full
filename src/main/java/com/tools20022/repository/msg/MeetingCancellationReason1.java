@@ -19,11 +19,15 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.metamodel.MMXor;
+import com.tools20022.repository.area.seev.MeetingCancellationV02;
 import com.tools20022.repository.codeset.MeetingCancellationReason2Code;
 import com.tools20022.repository.datatype.Extended350Code;
 import com.tools20022.repository.datatype.Max140Text;
 import com.tools20022.repository.entity.MeetingStatusReason;
+import com.tools20022.repository.entity.StatusReason;
+import com.tools20022.repository.GeneratedRepository;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -125,11 +129,11 @@ public class MeetingCancellationReason1 {
 	 */
 	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.MeetingStatusReason.mmMeetingCancellationReason;
+			businessElementTrace_lazy = () -> MeetingStatusReason.mmMeetingCancellationReason;
 			componentContext_lazy = () -> MeetingCancellationReason1.mmObject();
 			isDerived = false;
 			xmlTag = "Cd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Specifies the reason for cancelling a meeting in coded form.";
 			maxOccurs = 1;
@@ -174,11 +178,11 @@ public class MeetingCancellationReason1 {
 	 */
 	public static final MMMessageAttribute mmExtendedCode = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.MeetingStatusReason.mmMeetingCancellationReason;
+			businessElementTrace_lazy = () -> MeetingStatusReason.mmMeetingCancellationReason;
 			componentContext_lazy = () -> MeetingCancellationReason1.mmObject();
 			isDerived = false;
 			xmlTag = "XtndedCd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExtendedCode";
 			definition = "Specifies the reason for cancelling a meeting in free text form.";
 			maxOccurs = 1;
@@ -224,11 +228,11 @@ public class MeetingCancellationReason1 {
 	 */
 	public static final MMMessageAttribute mmCancellationReason = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmReason;
+			businessElementTrace_lazy = () -> StatusReason.mmReason;
 			componentContext_lazy = () -> MeetingCancellationReason1.mmObject();
 			isDerived = false;
 			xmlTag = "CxlRsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationReason";
 			definition = "Provides more information on the reason for cancelling a meeting in free format form.";
 			maxOccurs = 1;
@@ -241,6 +245,10 @@ public class MeetingCancellationReason1 {
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
+	 * messageComponent} =
+	 * {@linkplain com.tools20022.repository.msg.MeetingCancellationReason1
+	 * MeetingCancellationReason1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getImpactedElements
 	 * impactedElements} =
 	 * <ul>
@@ -252,10 +260,6 @@ public class MeetingCancellationReason1 {
 	 * MeetingCancellationReason1.mmExtendedCode}</li>
 	 * </ul>
 	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
-	 * messageComponent} =
-	 * {@linkplain com.tools20022.repository.msg.MeetingCancellationReason1
-	 * MeetingCancellationReason1}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -270,23 +274,22 @@ public class MeetingCancellationReason1 {
 	 */
 	public static final MMXor mmCodeOrExtendedCodeRule = new MMXor() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CodeOrExtendedCodeRule";
 			definition = "Either Code or ExtendedCode must be present, but not both.";
 			messageComponent_lazy = () -> MeetingCancellationReason1.mmObject();
-			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MeetingCancellationReason1.mmCode, com.tools20022.repository.msg.MeetingCancellationReason1.mmExtendedCode);
+			impactedElements_lazy = () -> Arrays.asList(MeetingCancellationReason1.mmCode, MeetingCancellationReason1.mmExtendedCode);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MeetingCancellationReason1.mmCode, com.tools20022.repository.msg.MeetingCancellationReason1.mmExtendedCode,
-						com.tools20022.repository.msg.MeetingCancellationReason1.mmCancellationReason);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.MeetingCancellationV02.mmReason);
+				messageElement_lazy = () -> Arrays.asList(MeetingCancellationReason1.mmCode, MeetingCancellationReason1.mmExtendedCode, MeetingCancellationReason1.mmCancellationReason);
+				messageBuildingBlock_lazy = () -> Arrays.asList(MeetingCancellationV02.mmReason);
 				trace_lazy = () -> MeetingStatusReason.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
 						return DateFormat.getDateInstance(java.text.DateFormat.LONG).parse("September 9, 2016");
@@ -296,7 +299,7 @@ public class MeetingCancellationReason1 {
 				})).get();
 				name = "MeetingCancellationReason1";
 				definition = "Specifies the reason for cancelling a meeting.";
-				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MeetingCancellationReason1.mmCodeOrExtendedCodeRule);
+				xors_lazy = () -> Arrays.asList(MeetingCancellationReason1.mmCodeOrExtendedCodeRule);
 			}
 		});
 		return mmObject_lazy.get();

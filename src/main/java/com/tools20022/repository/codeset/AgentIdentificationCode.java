@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -105,7 +107,7 @@ public class AgentIdentificationCode {
 	 */
 	public static final MMCode mmInstructedAgent = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+			registrationStatus = MMRegistrationStatus.OBSOLETE;
 			name = "InstructedAgent";
 			definition = "Instruction(s) intended for the instructed agent.";
 			owner_lazy = () -> AgentIdentificationCode.mmObject();
@@ -136,7 +138,7 @@ public class AgentIdentificationCode {
 	 */
 	public static final MMCode mmIntermediaryAgent1 = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+			registrationStatus = MMRegistrationStatus.OBSOLETE;
 			name = "IntermediaryAgent1";
 			definition = "Instruction(s) intended for the first intermediary agent.";
 			owner_lazy = () -> AgentIdentificationCode.mmObject();
@@ -167,7 +169,7 @@ public class AgentIdentificationCode {
 	 */
 	public static final MMCode mmIntermediaryAgent2 = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+			registrationStatus = MMRegistrationStatus.OBSOLETE;
 			name = "IntermediaryAgent2";
 			definition = "Instruction(s) intended for the second intermediary agent.";
 			owner_lazy = () -> AgentIdentificationCode.mmObject();
@@ -198,7 +200,7 @@ public class AgentIdentificationCode {
 	 */
 	public static final MMCode mmIntermediaryAgent3 = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+			registrationStatus = MMRegistrationStatus.OBSOLETE;
 			name = "IntermediaryAgent3";
 			definition = "Instruction(s) intended for the third intermediary agent.";
 			owner_lazy = () -> AgentIdentificationCode.mmObject();
@@ -228,7 +230,7 @@ public class AgentIdentificationCode {
 	 */
 	public static final MMCode mmInstructingAgent = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+			registrationStatus = MMRegistrationStatus.OBSOLETE;
 			name = "InstructingAgent";
 			definition = "Instruction(s) intended for the instructing agent.";
 			owner_lazy = () -> AgentIdentificationCode.mmObject();
@@ -259,7 +261,7 @@ public class AgentIdentificationCode {
 	 */
 	public static final MMCode mmInstructingReimbursementAgent = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+			registrationStatus = MMRegistrationStatus.OBSOLETE;
 			name = "InstructingReimbursementAgent";
 			definition = "Instruction(s) intended for the instructing reimbursement agent.";
 			owner_lazy = () -> AgentIdentificationCode.mmObject();
@@ -290,7 +292,7 @@ public class AgentIdentificationCode {
 	 */
 	public static final MMCode mmInstructedReimbursementAgent = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+			registrationStatus = MMRegistrationStatus.OBSOLETE;
 			name = "InstructedReimbursementAgent";
 			definition = "Instruction(s) intended for the instructed reimbursement agent.";
 			owner_lazy = () -> AgentIdentificationCode.mmObject();
@@ -321,7 +323,7 @@ public class AgentIdentificationCode {
 	 */
 	public static final MMCode mmThirdReimbursementAgent = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+			registrationStatus = MMRegistrationStatus.OBSOLETE;
 			name = "ThirdReimbursementAgent";
 			definition = "Instruction(s) intended for the third reimbursement agent.";
 			owner_lazy = () -> AgentIdentificationCode.mmObject();
@@ -351,7 +353,7 @@ public class AgentIdentificationCode {
 	 */
 	public static final MMCode mmPreviousInstructingAgent = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+			registrationStatus = MMRegistrationStatus.OBSOLETE;
 			name = "PreviousInstructingAgent";
 			definition = "Instruction(s) intended for the previous agent.";
 			owner_lazy = () -> AgentIdentificationCode.mmObject();
@@ -362,16 +364,14 @@ public class AgentIdentificationCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("INDA");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				name = "AgentIdentificationCode";
 				definition = "Identifies the agent which will have to process the instructions.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AgentIdentificationCode.mmInstructedAgent, com.tools20022.repository.codeset.AgentIdentificationCode.mmIntermediaryAgent1,
-						com.tools20022.repository.codeset.AgentIdentificationCode.mmIntermediaryAgent2, com.tools20022.repository.codeset.AgentIdentificationCode.mmIntermediaryAgent3,
-						com.tools20022.repository.codeset.AgentIdentificationCode.mmInstructingAgent, com.tools20022.repository.codeset.AgentIdentificationCode.mmInstructingReimbursementAgent,
-						com.tools20022.repository.codeset.AgentIdentificationCode.mmInstructedReimbursementAgent, com.tools20022.repository.codeset.AgentIdentificationCode.mmThirdReimbursementAgent,
-						com.tools20022.repository.codeset.AgentIdentificationCode.mmPreviousInstructingAgent);
+				code_lazy = () -> Arrays.asList(AgentIdentificationCode.mmInstructedAgent, AgentIdentificationCode.mmIntermediaryAgent1, AgentIdentificationCode.mmIntermediaryAgent2, AgentIdentificationCode.mmIntermediaryAgent3,
+						AgentIdentificationCode.mmInstructingAgent, AgentIdentificationCode.mmInstructingReimbursementAgent, AgentIdentificationCode.mmInstructedReimbursementAgent, AgentIdentificationCode.mmThirdReimbursementAgent,
+						AgentIdentificationCode.mmPreviousInstructingAgent);
 			}
 		});
 		return mmObject_lazy.get();

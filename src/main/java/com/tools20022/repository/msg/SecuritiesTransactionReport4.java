@@ -20,6 +20,7 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.ExecutingParty1Choice;
 import com.tools20022.repository.choice.FinancialInstrumentAttributes3Choice;
 import com.tools20022.repository.choice.InvestmentParty1Choice;
@@ -27,6 +28,7 @@ import com.tools20022.repository.datatype.LEIIdentifier;
 import com.tools20022.repository.datatype.Max52Text;
 import com.tools20022.repository.datatype.TrueFalseIndicator;
 import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -141,11 +143,11 @@ public class SecuritiesTransactionReport4 {
 	 */
 	public static final MMMessageAttribute mmTransactionIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradeIdentification.mmIdentification;
+			businessElementTrace_lazy = () -> TradeIdentification.mmIdentification;
 			componentContext_lazy = () -> SecuritiesTransactionReport4.mmObject();
 			isDerived = false;
 			xmlTag = "TxId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionIdentification";
 			definition = "Unique and unambiguous identification of the transaction.";
 			maxOccurs = 1;
@@ -193,7 +195,7 @@ public class SecuritiesTransactionReport4 {
 			componentContext_lazy = () -> SecuritiesTransactionReport4.mmObject();
 			isDerived = false;
 			xmlTag = "ExctgPty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExecutingParty";
 			definition = "Identification of the entity executing the transaction. ";
 			maxOccurs = 1;
@@ -238,7 +240,7 @@ public class SecuritiesTransactionReport4 {
 			componentContext_lazy = () -> SecuritiesTransactionReport4.mmObject();
 			isDerived = false;
 			xmlTag = "InvstmtPtyInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestmentPartyIndicator";
 			definition = "Indicates whether the reporting party is defined as an investment firm under the local regulation or not.";
 			maxOccurs = 1;
@@ -287,7 +289,7 @@ public class SecuritiesTransactionReport4 {
 			componentContext_lazy = () -> SecuritiesTransactionReport4.mmObject();
 			isDerived = false;
 			xmlTag = "SubmitgPty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubmittingParty";
 			definition = "Entity submitting the transaction report to the competent authority.";
 			maxOccurs = 1;
@@ -334,7 +336,7 @@ public class SecuritiesTransactionReport4 {
 			componentContext_lazy = () -> SecuritiesTransactionReport4.mmObject();
 			isDerived = false;
 			xmlTag = "Buyr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Buyer";
 			definition = "Identifies the acquirer of the legal title to the financial instrument.";
 			maxOccurs = 1;
@@ -381,7 +383,7 @@ public class SecuritiesTransactionReport4 {
 			componentContext_lazy = () -> SecuritiesTransactionReport4.mmObject();
 			isDerived = false;
 			xmlTag = "Sellr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Seller";
 			definition = "Identifies the seller of the legal title to the financial instrument.";
 			maxOccurs = 1;
@@ -431,11 +433,11 @@ public class SecuritiesTransactionReport4 {
 	 */
 	public static final MMMessageAssociationEnd mmOrderTransmission = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTrade.mmRelatedOrder;
+			businessElementTrace_lazy = () -> SecuritiesTrade.mmRelatedOrder;
 			componentContext_lazy = () -> SecuritiesTransactionReport4.mmObject();
 			isDerived = false;
 			xmlTag = "OrdrTrnsmssn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrderTransmission";
 			definition = "Indication as to whether the transaction results from an order  transmitted by the reporting of a client to a third party.\r\n\r\nUsage: Only applicable when the conditions for transmission are not satisfied.";
 			maxOccurs = 1;
@@ -482,7 +484,7 @@ public class SecuritiesTransactionReport4 {
 			componentContext_lazy = () -> SecuritiesTransactionReport4.mmObject();
 			isDerived = false;
 			xmlTag = "Tx";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Transaction";
 			definition = "Provides the details of the reported transaction.";
 			maxOccurs = 1;
@@ -529,11 +531,11 @@ public class SecuritiesTransactionReport4 {
 	 */
 	public static final MMMessageAssociationEnd mmFinancialInstrument = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmIdentification;
+			businessElementTrace_lazy = () -> Security.mmIdentification;
 			componentContext_lazy = () -> SecuritiesTransactionReport4.mmObject();
 			isDerived = false;
 			xmlTag = "FinInstrm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrument";
 			definition = "Financial instrument representing a sum of rights of the investor vis-a-vis the issuer.";
 			maxOccurs = 1;
@@ -583,7 +585,7 @@ public class SecuritiesTransactionReport4 {
 			componentContext_lazy = () -> SecuritiesTransactionReport4.mmObject();
 			isDerived = false;
 			xmlTag = "InvstmtDcsnPrsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestmentDecisionPerson";
 			definition = "Identifies the person or algorithm which is responsible within the reporting party for the investment decision. ";
 			maxOccurs = 1;
@@ -631,7 +633,7 @@ public class SecuritiesTransactionReport4 {
 			componentContext_lazy = () -> SecuritiesTransactionReport4.mmObject();
 			isDerived = false;
 			xmlTag = "ExctgPrsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExecutingPerson";
 			definition = "Person or algorithm responsible for the execution of the transaction.";
 			maxOccurs = 1;
@@ -674,7 +676,7 @@ public class SecuritiesTransactionReport4 {
 			componentContext_lazy = () -> SecuritiesTransactionReport4.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlAttrbts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalAttributes";
 			definition = "Provides additional indicators on the reported transaction.";
 			maxOccurs = 1;
@@ -718,7 +720,7 @@ public class SecuritiesTransactionReport4 {
 			componentContext_lazy = () -> SecuritiesTransactionReport4.mmObject();
 			isDerived = false;
 			xmlTag = "TechAttrbts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TechnicalAttributes";
 			definition = "Data used for exchanges between national competent authorities, not to be used by reporting entities.";
 			maxOccurs = 1;
@@ -762,7 +764,7 @@ public class SecuritiesTransactionReport4 {
 			componentContext_lazy = () -> SecuritiesTransactionReport4.mmObject();
 			isDerived = false;
 			xmlTag = "SplmtryData";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryData";
 			definition = "Additional information that can not be captured in the structured fields and/or any other specific block.";
 			minOccurs = 0;
@@ -774,16 +776,13 @@ public class SecuritiesTransactionReport4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesTransactionReport4.mmTransactionIdentification, com.tools20022.repository.msg.SecuritiesTransactionReport4.mmExecutingParty,
-						com.tools20022.repository.msg.SecuritiesTransactionReport4.mmInvestmentPartyIndicator, com.tools20022.repository.msg.SecuritiesTransactionReport4.mmSubmittingParty,
-						com.tools20022.repository.msg.SecuritiesTransactionReport4.mmBuyer, com.tools20022.repository.msg.SecuritiesTransactionReport4.mmSeller,
-						com.tools20022.repository.msg.SecuritiesTransactionReport4.mmOrderTransmission, com.tools20022.repository.msg.SecuritiesTransactionReport4.mmTransaction,
-						com.tools20022.repository.msg.SecuritiesTransactionReport4.mmFinancialInstrument, com.tools20022.repository.msg.SecuritiesTransactionReport4.mmInvestmentDecisionPerson,
-						com.tools20022.repository.msg.SecuritiesTransactionReport4.mmExecutingPerson, com.tools20022.repository.msg.SecuritiesTransactionReport4.mmAdditionalAttributes,
-						com.tools20022.repository.msg.SecuritiesTransactionReport4.mmTechnicalAttributes, com.tools20022.repository.msg.SecuritiesTransactionReport4.mmSupplementaryData);
+				messageElement_lazy = () -> Arrays.asList(SecuritiesTransactionReport4.mmTransactionIdentification, SecuritiesTransactionReport4.mmExecutingParty, SecuritiesTransactionReport4.mmInvestmentPartyIndicator,
+						SecuritiesTransactionReport4.mmSubmittingParty, SecuritiesTransactionReport4.mmBuyer, SecuritiesTransactionReport4.mmSeller, SecuritiesTransactionReport4.mmOrderTransmission,
+						SecuritiesTransactionReport4.mmTransaction, SecuritiesTransactionReport4.mmFinancialInstrument, SecuritiesTransactionReport4.mmInvestmentDecisionPerson, SecuritiesTransactionReport4.mmExecutingPerson,
+						SecuritiesTransactionReport4.mmAdditionalAttributes, SecuritiesTransactionReport4.mmTechnicalAttributes, SecuritiesTransactionReport4.mmSupplementaryData);
 				trace_lazy = () -> SecuritiesTransaction.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesTransactionReport4";
 				definition = "Details of the securities transaction report.";
 			}

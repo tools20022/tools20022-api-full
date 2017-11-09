@@ -20,12 +20,13 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.DateAndDateTimeChoice;
 import com.tools20022.repository.choice.FinancialInstrumentQuantity1Choice;
 import com.tools20022.repository.choice.SafekeepingPlaceFormat7Choice;
 import com.tools20022.repository.datatype.*;
-import com.tools20022.repository.entity.SafekeepingPlace;
-import com.tools20022.repository.entity.Security;
+import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -158,11 +159,11 @@ public class SecuritiesCollateral4 {
 			componentContext_lazy = () -> SecuritiesCollateral4.mmObject();
 			isDerived = false;
 			xmlTag = "CollId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralIdentification";
 			definition = "Provides the identification of the proposed collateral.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesCollateral7.mmCollateralIdentification);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SecuritiesCollateral3.mmCollateralIdentification;
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesCollateral7.mmCollateralIdentification);
+			previousVersion_lazy = () -> SecuritiesCollateral3.mmCollateralIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -212,10 +213,10 @@ public class SecuritiesCollateral4 {
 			componentContext_lazy = () -> SecuritiesCollateral4.mmObject();
 			isDerived = false;
 			xmlTag = "AsstNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AssetNumber";
 			definition = "Identifies the register number of the collateral deposit assigned by the central counterparty.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesCollateral7.mmAssetNumber);
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesCollateral7.mmAssetNumber);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -270,15 +271,15 @@ public class SecuritiesCollateral4 {
 	 */
 	public static final MMMessageAttribute mmSecurityIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmIdentification;
+			businessElementTrace_lazy = () -> Security.mmIdentification;
 			componentContext_lazy = () -> SecuritiesCollateral4.mmObject();
 			isDerived = false;
 			xmlTag = "SctyId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityIdentification";
 			definition = "Identification of a security.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesCollateral7.mmSecurityIdentification);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SecuritiesCollateral3.mmSecurityIdentification;
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesCollateral7.mmSecurityIdentification);
+			previousVersion_lazy = () -> SecuritiesCollateral3.mmSecurityIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> com.tools20022.repository.msg.SecurityIdentification14.mmObject();
@@ -333,15 +334,15 @@ public class SecuritiesCollateral4 {
 	 */
 	public static final MMMessageAttribute mmMaturityDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Asset.mmMaturityDate;
+			businessElementTrace_lazy = () -> Asset.mmMaturityDate;
 			componentContext_lazy = () -> SecuritiesCollateral4.mmObject();
 			isDerived = false;
 			xmlTag = "MtrtyDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaturityDate";
 			definition = "Planned final repayment date at the time of issuance.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesCollateral7.mmMaturityDate);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SecuritiesCollateral3.mmMaturityDate;
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesCollateral7.mmMaturityDate);
+			previousVersion_lazy = () -> SecuritiesCollateral3.mmMaturityDate;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
@@ -397,11 +398,11 @@ public class SecuritiesCollateral4 {
 			componentContext_lazy = () -> SecuritiesCollateral4.mmObject();
 			isDerived = false;
 			xmlTag = "LtdCvrgInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LimitedCoverageIndicator";
 			definition = "Indicates that the collateral posted in the clearing house covers the margin until a specific timeframe.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesCollateral7.mmLimitedCoverageIndicator);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SecuritiesCollateral3.mmLimitedCoverageIndicator;
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesCollateral7.mmLimitedCoverageIndicator);
+			previousVersion_lazy = () -> SecuritiesCollateral3.mmLimitedCoverageIndicator;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
@@ -455,15 +456,15 @@ public class SecuritiesCollateral4 {
 	 */
 	public static final MMMessageAssociationEnd mmQuantity = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmSecuritiesQuantity;
+			businessElementTrace_lazy = () -> Security.mmSecuritiesQuantity;
 			componentContext_lazy = () -> SecuritiesCollateral4.mmObject();
 			isDerived = false;
 			xmlTag = "Qty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Quantity";
 			definition = "Quantity of securities collateral.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesCollateral7.mmQuantity);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SecuritiesCollateral3.mmQuantity;
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesCollateral7.mmQuantity);
+			previousVersion_lazy = () -> SecuritiesCollateral3.mmQuantity;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -516,15 +517,15 @@ public class SecuritiesCollateral4 {
 	 */
 	public static final MMMessageAssociationEnd mmPrice = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmPricing;
+			businessElementTrace_lazy = () -> Security.mmPricing;
 			componentContext_lazy = () -> SecuritiesCollateral4.mmObject();
 			isDerived = false;
 			xmlTag = "Pric";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Price";
 			definition = "Indicates the price of the security.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesCollateral7.mmPrice);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SecuritiesCollateral3.mmPrice;
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesCollateral7.mmPrice);
+			previousVersion_lazy = () -> SecuritiesCollateral3.mmPrice;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -580,15 +581,15 @@ public class SecuritiesCollateral4 {
 	 */
 	public static final MMMessageAttribute mmMarketValue = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmMarketValue;
+			businessElementTrace_lazy = () -> AssetHolding.mmMarketValue;
 			componentContext_lazy = () -> SecuritiesCollateral4.mmObject();
 			isDerived = false;
 			xmlTag = "MktVal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketValue";
 			definition = "Value of the collateral based on current market prices.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesCollateral7.mmMarketValue);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SecuritiesCollateral3.mmMarketValue;
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesCollateral7.mmMarketValue);
+			previousVersion_lazy = () -> SecuritiesCollateral3.mmMarketValue;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
@@ -644,15 +645,15 @@ public class SecuritiesCollateral4 {
 	 */
 	public static final MMMessageAttribute mmHaircut = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.HaircutValuation.mmHaircut;
+			businessElementTrace_lazy = () -> HaircutValuation.mmHaircut;
 			componentContext_lazy = () -> SecuritiesCollateral4.mmObject();
 			isDerived = false;
 			xmlTag = "Hrcut";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Haircut";
 			definition = "Haircut or valuation factor on the security expressed as a percentage.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesCollateral7.mmHaircut);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SecuritiesCollateral3.mmHaircut;
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesCollateral7.mmHaircut);
+			previousVersion_lazy = () -> SecuritiesCollateral3.mmHaircut;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
@@ -708,15 +709,15 @@ public class SecuritiesCollateral4 {
 	 */
 	public static final MMMessageAttribute mmCollateralValue = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmRiskAdjustedValue;
+			businessElementTrace_lazy = () -> AssetHolding.mmRiskAdjustedValue;
 			componentContext_lazy = () -> SecuritiesCollateral4.mmObject();
 			isDerived = false;
 			xmlTag = "CollVal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralValue";
 			definition = "Value of the collateral after taking into account the haircut.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesCollateral7.mmCollateralValue);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SecuritiesCollateral3.mmCollateralValue;
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesCollateral7.mmCollateralValue);
+			previousVersion_lazy = () -> SecuritiesCollateral3.mmCollateralValue;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
@@ -770,15 +771,15 @@ public class SecuritiesCollateral4 {
 	 */
 	public static final MMMessageAttribute mmValueDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CollateralValuation.mmCollateralValuationDate;
+			businessElementTrace_lazy = () -> CollateralValuation.mmCollateralValuationDate;
 			componentContext_lazy = () -> SecuritiesCollateral4.mmObject();
 			isDerived = false;
 			xmlTag = "ValDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValueDate";
 			definition = "Valuation date of the securities taken as collateral.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesCollateral7.mmValueDate);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SecuritiesCollateral3.mmValueDate;
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesCollateral7.mmValueDate);
+			previousVersion_lazy = () -> SecuritiesCollateral3.mmValueDate;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
@@ -831,15 +832,15 @@ public class SecuritiesCollateral4 {
 	 */
 	public static final MMMessageAssociationEnd mmSafekeepingAccount = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmSecuritiesAccount;
+			businessElementTrace_lazy = () -> Security.mmSecuritiesAccount;
 			componentContext_lazy = () -> SecuritiesCollateral4.mmObject();
 			isDerived = false;
 			xmlTag = "SfkpgAcct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingAccount";
 			definition = "Account to or from which a securities entry is made.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesCollateral7.mmSafekeepingAccount);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SecuritiesCollateral3.mmSafekeepingAccount;
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesCollateral7.mmSafekeepingAccount);
+			previousVersion_lazy = () -> SecuritiesCollateral3.mmSafekeepingAccount;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -903,11 +904,11 @@ public class SecuritiesCollateral4 {
 			componentContext_lazy = () -> SecuritiesCollateral4.mmObject();
 			isDerived = false;
 			xmlTag = "SfkpgPlc";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlace";
 			definition = "Place where the securities are safe-kept, physically or notionally.  This place can be, for example, a local custodian, a Central Securities Depository (CSD) or an International Central Securities Depository (ICSD).";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesCollateral7.mmSafekeepingPlace);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SecuritiesCollateral3.mmSafekeepingPlace;
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesCollateral7.mmSafekeepingPlace);
+			previousVersion_lazy = () -> SecuritiesCollateral3.mmSafekeepingPlace;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -966,15 +967,15 @@ public class SecuritiesCollateral4 {
 	 */
 	public static final MMMessageAssociationEnd mmSettlementParameters = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmSecuritiesSettlement;
+			businessElementTrace_lazy = () -> Security.mmSecuritiesSettlement;
 			componentContext_lazy = () -> SecuritiesCollateral4.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmParams";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementParameters";
 			definition = "Parameters which explicitly state the conditions that must be fulfilled before a particular transaction of a financial instrument can be settled.  These parameters are defined by the instructing party in compliance with settlement rules in the market the transaction will settle in.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesCollateral7.mmSettlementParameters);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SecuritiesCollateral3.mmSettlementParameters;
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesCollateral7.mmSettlementParameters);
+			previousVersion_lazy = () -> SecuritiesCollateral3.mmSettlementParameters;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -985,15 +986,12 @@ public class SecuritiesCollateral4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesCollateral4.mmCollateralIdentification, com.tools20022.repository.msg.SecuritiesCollateral4.mmAssetNumber,
-						com.tools20022.repository.msg.SecuritiesCollateral4.mmSecurityIdentification, com.tools20022.repository.msg.SecuritiesCollateral4.mmMaturityDate,
-						com.tools20022.repository.msg.SecuritiesCollateral4.mmLimitedCoverageIndicator, com.tools20022.repository.msg.SecuritiesCollateral4.mmQuantity, com.tools20022.repository.msg.SecuritiesCollateral4.mmPrice,
-						com.tools20022.repository.msg.SecuritiesCollateral4.mmMarketValue, com.tools20022.repository.msg.SecuritiesCollateral4.mmHaircut, com.tools20022.repository.msg.SecuritiesCollateral4.mmCollateralValue,
-						com.tools20022.repository.msg.SecuritiesCollateral4.mmValueDate, com.tools20022.repository.msg.SecuritiesCollateral4.mmSafekeepingAccount, com.tools20022.repository.msg.SecuritiesCollateral4.mmSafekeepingPlace,
-						com.tools20022.repository.msg.SecuritiesCollateral4.mmSettlementParameters);
+				messageElement_lazy = () -> Arrays.asList(SecuritiesCollateral4.mmCollateralIdentification, SecuritiesCollateral4.mmAssetNumber, SecuritiesCollateral4.mmSecurityIdentification, SecuritiesCollateral4.mmMaturityDate,
+						SecuritiesCollateral4.mmLimitedCoverageIndicator, SecuritiesCollateral4.mmQuantity, SecuritiesCollateral4.mmPrice, SecuritiesCollateral4.mmMarketValue, SecuritiesCollateral4.mmHaircut,
+						SecuritiesCollateral4.mmCollateralValue, SecuritiesCollateral4.mmValueDate, SecuritiesCollateral4.mmSafekeepingAccount, SecuritiesCollateral4.mmSafekeepingPlace, SecuritiesCollateral4.mmSettlementParameters);
 				trace_lazy = () -> Security.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesCollateral4";
 				definition = "Provides details about the securities posted as collateral.";
 				nextVersions_lazy = () -> Arrays.asList(SecuritiesCollateral7.mmObject());

@@ -20,6 +20,7 @@ package com.tools20022.repository.area.setr;
 import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.SecuritiesTradePreviousVersion;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.InvestmentFundsISOPreviousversion;
@@ -50,6 +51,9 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code setr.009.001.03}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.SecuritiesTradePreviousVersion
@@ -96,9 +100,6 @@ import java.util.List;
  * SubscriptionBulkOrderConfirmationV03.mmExtension}</li>
  * </ul>
  * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code setr.009.001.03}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -164,10 +165,10 @@ public class SubscriptionBulkOrderConfirmationV03 {
 	public static final MMMessageBuildingBlock mmMessageIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "MsgId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageIdentification";
 			definition = "Reference that uniquely identifies a message from a business application standpoint. ";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationV04.mmMessageIdentification);
+			nextVersions_lazy = () -> Arrays.asList(SubscriptionBulkOrderConfirmationV04.mmMessageIdentification);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
@@ -208,10 +209,10 @@ public class SubscriptionBulkOrderConfirmationV03 {
 	public static final MMMessageBuildingBlock mmPoolReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "PoolRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PoolReference";
 			definition = "Collective reference identifying a set of messages.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationV04.mmPoolReference);
+			nextVersions_lazy = () -> Arrays.asList(SubscriptionBulkOrderConfirmationV04.mmPoolReference);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference3.mmObject();
@@ -252,10 +253,10 @@ public class SubscriptionBulkOrderConfirmationV03 {
 	public static final MMMessageBuildingBlock mmPreviousReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "PrvsRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousReference";
 			definition = "Reference to a linked message that was previously sent.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationV04.mmPreviousReference);
+			nextVersions_lazy = () -> Arrays.asList(SubscriptionBulkOrderConfirmationV04.mmPreviousReference);
 			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference3.mmObject();
 		}
@@ -296,10 +297,10 @@ public class SubscriptionBulkOrderConfirmationV03 {
 	public static final MMMessageBuildingBlock mmRelatedReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "RltdRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedReference";
 			definition = "Reference to a linked message that was previously received.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationV04.mmRelatedReference);
+			nextVersions_lazy = () -> Arrays.asList(SubscriptionBulkOrderConfirmationV04.mmRelatedReference);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference3.mmObject();
@@ -341,10 +342,10 @@ public class SubscriptionBulkOrderConfirmationV03 {
 	public static final MMMessageBuildingBlock mmBulkExecutionDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "BlkExctnDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BulkExecutionDetails";
 			definition = "General information related to the execution of investment orders.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationV04.mmBulkExecutionDetails);
+			nextVersions_lazy = () -> Arrays.asList(SubscriptionBulkOrderConfirmationV04.mmBulkExecutionDetails);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> SubscriptionBulkExecution3.mmObject();
@@ -376,7 +377,7 @@ public class SubscriptionBulkOrderConfirmationV03 {
 	public static final MMMessageBuildingBlock mmRelatedPartyDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "RltdPtyDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedPartyDetails";
 			definition = "Information about parties related to the transaction.";
 			maxOccurs = 10;
@@ -420,10 +421,10 @@ public class SubscriptionBulkOrderConfirmationV03 {
 	public static final MMMessageBuildingBlock mmCopyDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CpyDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CopyDetails";
 			definition = "Information provided when the message is a copy of a previous message.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationV04.mmCopyDetails);
+			nextVersions_lazy = () -> Arrays.asList(SubscriptionBulkOrderConfirmationV04.mmCopyDetails);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> CopyInformation2.mmObject();
@@ -466,10 +467,10 @@ public class SubscriptionBulkOrderConfirmationV03 {
 	public static final MMMessageBuildingBlock mmExtension = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Xtnsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Extension";
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationV04.mmExtension);
+			nextVersions_lazy = () -> Arrays.asList(SubscriptionBulkOrderConfirmationV04.mmExtension);
 			minOccurs = 0;
 			complexType_lazy = () -> Extension1.mmObject();
 		}
@@ -478,7 +479,7 @@ public class SubscriptionBulkOrderConfirmationV03 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SubscriptionBulkOrderConfirmationV03";
 				definition = "Scope\r\nAn executing party, for example, a transfer agent sends the SubscriptionBulkOrderConfirmation message to the instructing party, for example, an investment manager or its authorised representative to confirm the details of the execution of a SubscriptionBulkOrder instruction.\r\nUsage\r\nThe SubscriptionBulkOrderConfirmation message is used to confirm the execution of all individual orders.\r\nThere is usually one bulk confirmation message for one bulk order message.\r\nEach individual order confirmation specified is identified in DealReference. The reference of the original individual order is specified in OrderReference. The message identification of the SubscriptionBulkOrder message in which the individual order was conveyed may also be quoted in RelatedReference.\r\nA SubscriptionBulkOrder must in all cases be responded to by a SubscriptionBulkOrderConfirmation and in no circumstances by a SubscriptionOrderConfirmation.\r\nIf the executing party needs to confirm a SubscriptionOrder instruction, then the SubscriptionOrderConfirmation must be used.";
 				nextVersions_lazy = () -> Arrays.asList(SubscriptionBulkOrderConfirmationV04.mmObject());
@@ -487,11 +488,9 @@ public class SubscriptionBulkOrderConfirmationV03 {
 				rootElement = "Document";
 				xmlTag = "SbcptBlkOrdrConfV03";
 				businessArea_lazy = () -> SecuritiesTradePreviousVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationV03.mmMessageIdentification,
-						com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationV03.mmPoolReference, com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationV03.mmPreviousReference,
-						com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationV03.mmRelatedReference, com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationV03.mmBulkExecutionDetails,
-						com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationV03.mmRelatedPartyDetails, com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationV03.mmCopyDetails,
-						com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationV03.mmExtension);
+				messageBuildingBlock_lazy = () -> Arrays.asList(SubscriptionBulkOrderConfirmationV03.mmMessageIdentification, SubscriptionBulkOrderConfirmationV03.mmPoolReference, SubscriptionBulkOrderConfirmationV03.mmPreviousReference,
+						SubscriptionBulkOrderConfirmationV03.mmRelatedReference, SubscriptionBulkOrderConfirmationV03.mmBulkExecutionDetails, SubscriptionBulkOrderConfirmationV03.mmRelatedPartyDetails,
+						SubscriptionBulkOrderConfirmationV03.mmCopyDetails, SubscriptionBulkOrderConfirmationV03.mmExtension);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "setr";

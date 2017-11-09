@@ -20,9 +20,14 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.colr.MarginCallRequestV03;
+import com.tools20022.repository.area.colr.MarginCallRequestV04;
 import com.tools20022.repository.choice.MarginCallResult2Choice;
 import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
+import com.tools20022.repository.entity.DefaultFundContribution;
 import com.tools20022.repository.entity.MarginCall;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -117,11 +122,11 @@ public class MarginCallResult3 {
 	 */
 	public static final MMMessageAttribute mmDefaultFundAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.DefaultFundContribution.mmExcessOrDeficitAmount;
+			businessElementTrace_lazy = () -> DefaultFundContribution.mmExcessOrDeficitAmount;
 			componentContext_lazy = () -> MarginCallResult3.mmObject();
 			isDerived = false;
 			xmlTag = "DfltFndAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DefaultFundAmount";
 			definition = "Specifies the total amount required by the clearing member to participate to the default fund.";
 			maxOccurs = 1;
@@ -171,7 +176,7 @@ public class MarginCallResult3 {
 			componentContext_lazy = () -> MarginCallResult3.mmObject();
 			isDerived = false;
 			xmlTag = "MrgnCallRslt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarginCallResult";
 			definition = "Provides the summation of the call amounts for the variation margin and the segregated independent amount or the segregated independent amount only or the total margin call amount only.";
 			maxOccurs = 1;
@@ -184,11 +189,11 @@ public class MarginCallResult3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MarginCallResult3.mmDefaultFundAmount, com.tools20022.repository.msg.MarginCallResult3.mmMarginCallResult);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.colr.MarginCallRequestV03.mmMarginCallResult, com.tools20022.repository.area.colr.MarginCallRequestV04.mmMarginCallResult);
+				messageElement_lazy = () -> Arrays.asList(MarginCallResult3.mmDefaultFundAmount, MarginCallResult3.mmMarginCallResult);
+				messageBuildingBlock_lazy = () -> Arrays.asList(MarginCallRequestV03.mmMarginCallResult, MarginCallRequestV04.mmMarginCallResult);
 				trace_lazy = () -> MarginCall.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MarginCallResult3";
 				definition = "Provides the summation of the call amounts per margin type and optionaly the default fund amount (only for CCP).";
 			}

@@ -20,8 +20,10 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.AssetHolding;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.FinancialInstrumentAggregateBalance2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -99,7 +101,7 @@ public class FinancialInstrumentAggregateBalance1Choice {
 			componentContext_lazy = () -> FinancialInstrumentAggregateBalance1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "HldgsInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HoldingsIndicator";
 			definition = "Indicates whether holdings are present.";
 			maxOccurs = 1;
@@ -140,7 +142,7 @@ public class FinancialInstrumentAggregateBalance1Choice {
 			componentContext_lazy = () -> FinancialInstrumentAggregateBalance1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "HldgBal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HoldingBalance";
 			definition = "Balance of holdings.";
 			maxOccurs = 1;
@@ -153,11 +155,10 @@ public class FinancialInstrumentAggregateBalance1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.FinancialInstrumentAggregateBalance1Choice.mmHoldingsIndicator,
-						com.tools20022.repository.choice.FinancialInstrumentAggregateBalance1Choice.mmHoldingBalance);
+				messageElement_lazy = () -> Arrays.asList(FinancialInstrumentAggregateBalance1Choice.mmHoldingsIndicator, FinancialInstrumentAggregateBalance1Choice.mmHoldingBalance);
 				trace_lazy = () -> AssetHolding.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FinancialInstrumentAggregateBalance1Choice";
 				definition = "Choice of holding indicator and aggregated position of holdings.";
 			}

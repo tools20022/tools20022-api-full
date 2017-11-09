@@ -20,8 +20,11 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ActiveCurrencyAnd13DecimalAmount;
+import com.tools20022.repository.entity.Adjustment;
 import com.tools20022.repository.entity.Commission;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -99,11 +102,11 @@ public class TotalCommissions3 {
 	 */
 	public static final MMMessageAttribute mmTotalAmountOfCommissions = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Adjustment.mmAmount;
+			businessElementTrace_lazy = () -> Adjustment.mmAmount;
 			componentContext_lazy = () -> TotalCommissions3.mmObject();
 			isDerived = false;
 			xmlTag = "TtlAmtOfComssns";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalAmountOfCommissions";
 			definition = "Total value of the commissions for a specific order.";
 			maxOccurs = 1;
@@ -148,7 +151,7 @@ public class TotalCommissions3 {
 			componentContext_lazy = () -> TotalCommissions3.mmObject();
 			isDerived = false;
 			xmlTag = "ComssnDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommissionDetails";
 			definition = "Information related to a specific commission.";
 			minOccurs = 1;
@@ -160,10 +163,10 @@ public class TotalCommissions3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TotalCommissions3.mmTotalAmountOfCommissions, com.tools20022.repository.msg.TotalCommissions3.mmCommissionDetails);
+				messageElement_lazy = () -> Arrays.asList(TotalCommissions3.mmTotalAmountOfCommissions, TotalCommissions3.mmCommissionDetails);
 				trace_lazy = () -> Commission.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TotalCommissions3";
 				definition = "Total amount of commissions related to a specific order.";
 			}

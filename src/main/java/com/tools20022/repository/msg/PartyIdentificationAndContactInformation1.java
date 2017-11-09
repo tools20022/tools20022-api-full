@@ -19,7 +19,10 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.PartyIdentificationInformation;
+import com.tools20022.repository.entity.Person;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -100,7 +103,7 @@ public class PartyIdentificationAndContactInformation1 {
 			componentContext_lazy = () -> PartyIdentificationAndContactInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "PtyId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartyIdentification";
 			definition = "Identification of the party.";
 			maxOccurs = 1;
@@ -146,11 +149,11 @@ public class PartyIdentificationAndContactInformation1 {
 	 */
 	public static final MMMessageAssociationEnd mmContactInformation = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Person.mmContactPersonRole;
+			businessElementTrace_lazy = () -> Person.mmContactPersonRole;
 			componentContext_lazy = () -> PartyIdentificationAndContactInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "CtctInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ContactInformation";
 			definition = "Information needed to contact a physical person related to the party, such as name, phone number, email address.";
 			maxOccurs = 1;
@@ -163,11 +166,10 @@ public class PartyIdentificationAndContactInformation1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyIdentificationAndContactInformation1.mmPartyIdentification,
-						com.tools20022.repository.msg.PartyIdentificationAndContactInformation1.mmContactInformation);
+				messageElement_lazy = () -> Arrays.asList(PartyIdentificationAndContactInformation1.mmPartyIdentification, PartyIdentificationAndContactInformation1.mmContactInformation);
 				trace_lazy = () -> PartyIdentificationInformation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PartyIdentificationAndContactInformation1";
 				definition = "Identification of a person, or a non-financial institution.";
 			}

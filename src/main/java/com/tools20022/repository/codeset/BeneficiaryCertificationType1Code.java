@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.BeneficiaryCertificationTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -95,7 +97,7 @@ public class BeneficiaryCertificationType1Code extends BeneficiaryCertificationT
 	 */
 	public static final MMCode mmAccreditedInvestor = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccreditedInvestor";
 			owner_lazy = () -> BeneficiaryCertificationType1Code.mmObject();
 		}
@@ -118,7 +120,7 @@ public class BeneficiaryCertificationType1Code extends BeneficiaryCertificationT
 	 */
 	public static final MMCode mmDomicileCountry = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DomicileCountry";
 			owner_lazy = () -> BeneficiaryCertificationType1Code.mmObject();
 		}
@@ -141,7 +143,7 @@ public class BeneficiaryCertificationType1Code extends BeneficiaryCertificationT
 	 */
 	public static final MMCode mmFullBeneficialOwnerBreakdown = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FullBeneficialOwnerBreakdown";
 			owner_lazy = () -> BeneficiaryCertificationType1Code.mmObject();
 		}
@@ -164,7 +166,7 @@ public class BeneficiaryCertificationType1Code extends BeneficiaryCertificationT
 	 */
 	public static final MMCode mmQIBCertification = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QIBCertification";
 			owner_lazy = () -> BeneficiaryCertificationType1Code.mmObject();
 		}
@@ -187,7 +189,7 @@ public class BeneficiaryCertificationType1Code extends BeneficiaryCertificationT
 	 */
 	public static final MMCode mmTaxRateBreakdown = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxRateBreakdown";
 			owner_lazy = () -> BeneficiaryCertificationType1Code.mmObject();
 		}
@@ -210,7 +212,7 @@ public class BeneficiaryCertificationType1Code extends BeneficiaryCertificationT
 	 */
 	public static final MMCode mmNonCompany = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonCompany";
 			owner_lazy = () -> BeneficiaryCertificationType1Code.mmObject();
 		}
@@ -219,14 +221,13 @@ public class BeneficiaryCertificationType1Code extends BeneficiaryCertificationT
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ACCI");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "BeneficiaryCertificationType1Code";
 				definition = "Specifies the type of beneficiary's certification.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.BeneficiaryCertificationType1Code.mmAccreditedInvestor, com.tools20022.repository.codeset.BeneficiaryCertificationType1Code.mmDomicileCountry,
-						com.tools20022.repository.codeset.BeneficiaryCertificationType1Code.mmFullBeneficialOwnerBreakdown, com.tools20022.repository.codeset.BeneficiaryCertificationType1Code.mmQIBCertification,
-						com.tools20022.repository.codeset.BeneficiaryCertificationType1Code.mmTaxRateBreakdown, com.tools20022.repository.codeset.BeneficiaryCertificationType1Code.mmNonCompany);
+				code_lazy = () -> Arrays.asList(BeneficiaryCertificationType1Code.mmAccreditedInvestor, BeneficiaryCertificationType1Code.mmDomicileCountry, BeneficiaryCertificationType1Code.mmFullBeneficialOwnerBreakdown,
+						BeneficiaryCertificationType1Code.mmQIBCertification, BeneficiaryCertificationType1Code.mmTaxRateBreakdown, BeneficiaryCertificationType1Code.mmNonCompany);
 				trace_lazy = () -> BeneficiaryCertificationTypeCode.mmObject();
 			}
 		});

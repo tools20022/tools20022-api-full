@@ -19,7 +19,9 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -92,7 +94,7 @@ public class Reference8 {
 			componentContext_lazy = () -> Reference8.mmObject();
 			isDerived = false;
 			xmlTag = "QtId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuoteIdentification";
 			definition = "Unique identifier for quote.";
 			maxOccurs = 1;
@@ -132,7 +134,7 @@ public class Reference8 {
 			componentContext_lazy = () -> Reference8.mmObject();
 			isDerived = false;
 			xmlTag = "IOIId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IOIIdentification";
 			definition = "Unique identifier of indication of interest message.";
 			maxOccurs = 1;
@@ -175,7 +177,7 @@ public class Reference8 {
 			componentContext_lazy = () -> Reference8.mmObject();
 			isDerived = false;
 			xmlTag = "RefOrdrId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReferenceOrderIdentification";
 			definition = "Refers to the identification reference to the order being hit or taken. (Required for counter-order selection / Hit / Take Orders).";
 			maxOccurs = 1;
@@ -187,10 +189,9 @@ public class Reference8 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Reference8.mmQuoteIdentification, com.tools20022.repository.msg.Reference8.mmIOIIdentification,
-						com.tools20022.repository.msg.Reference8.mmReferenceOrderIdentification);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(Reference8.mmQuoteIdentification, Reference8.mmIOIIdentification, Reference8.mmReferenceOrderIdentification);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Reference8";
 				definition = "Additional references linked to the order.";
 			}

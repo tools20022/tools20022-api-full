@@ -20,8 +20,10 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.TransactionCriteriaDefinition3Choice;
 import com.tools20022.repository.codeset.QueryType2Code;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -97,7 +99,7 @@ public class TransactionQueryDefinition4 {
 			componentContext_lazy = () -> TransactionQueryDefinition4.mmObject();
 			isDerived = false;
 			xmlTag = "QryTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QueryType";
 			definition = "Specifies the type of matching items to be returned in the response to the query.";
 			maxOccurs = 1;
@@ -138,7 +140,7 @@ public class TransactionQueryDefinition4 {
 			componentContext_lazy = () -> TransactionQueryDefinition4.mmObject();
 			isDerived = false;
 			xmlTag = "TxCrit";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionCriteria";
 			definition = "Defines the transaction query criteria.";
 			maxOccurs = 1;
@@ -151,9 +153,9 @@ public class TransactionQueryDefinition4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionQueryDefinition4.mmQueryType, com.tools20022.repository.msg.TransactionQueryDefinition4.mmTransactionCriteria);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(TransactionQueryDefinition4.mmQueryType, TransactionQueryDefinition4.mmTransactionCriteria);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "TransactionQueryDefinition4";
 				definition = "Defines the query criteria.";
 			}

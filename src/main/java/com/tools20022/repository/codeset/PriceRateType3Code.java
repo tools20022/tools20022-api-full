@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.PriceValueTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -88,7 +90,7 @@ public class PriceRateType3Code extends PriceValueTypeCode {
 	 */
 	public static final MMCode mmDiscount = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Discount";
 			owner_lazy = () -> PriceRateType3Code.mmObject();
 		}
@@ -111,7 +113,7 @@ public class PriceRateType3Code extends PriceValueTypeCode {
 	 */
 	public static final MMCode mmPremium = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Premium";
 			owner_lazy = () -> PriceRateType3Code.mmObject();
 		}
@@ -134,7 +136,7 @@ public class PriceRateType3Code extends PriceValueTypeCode {
 	 */
 	public static final MMCode mmPercentage = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Percentage";
 			owner_lazy = () -> PriceRateType3Code.mmObject();
 		}
@@ -157,7 +159,7 @@ public class PriceRateType3Code extends PriceValueTypeCode {
 	 */
 	public static final MMCode mmYield = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Yield";
 			owner_lazy = () -> PriceRateType3Code.mmObject();
 		}
@@ -166,13 +168,12 @@ public class PriceRateType3Code extends PriceValueTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("DISC");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PriceRateType3Code";
 				definition = "Specifies the type of price rate.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PriceRateType3Code.mmDiscount, com.tools20022.repository.codeset.PriceRateType3Code.mmPremium,
-						com.tools20022.repository.codeset.PriceRateType3Code.mmPercentage, com.tools20022.repository.codeset.PriceRateType3Code.mmYield);
+				code_lazy = () -> Arrays.asList(PriceRateType3Code.mmDiscount, PriceRateType3Code.mmPremium, PriceRateType3Code.mmPercentage, PriceRateType3Code.mmYield);
 				trace_lazy = () -> PriceValueTypeCode.mmObject();
 			}
 		});

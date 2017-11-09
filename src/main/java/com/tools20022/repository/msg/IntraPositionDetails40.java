@@ -19,10 +19,13 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.SafekeepingPlaceFormat10Choice;
 import com.tools20022.repository.choice.SecuritiesBalanceType6Choice;
 import com.tools20022.repository.entity.IntraPositionTransfer;
 import com.tools20022.repository.entity.SafekeepingPlace;
+import com.tools20022.repository.entity.SecuritiesBalance;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -121,10 +124,10 @@ public class IntraPositionDetails40 {
 			componentContext_lazy = () -> IntraPositionDetails40.mmObject();
 			isDerived = false;
 			xmlTag = "SfkpgPlc";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlace";
 			definition = "Place where the securities are safe-kept, physically or notionally.  This place can be, for example, a local custodian, a Central Securities Depository (CSD) or an International Central Securities Depository (ICSD).";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.IntraPositionDetails32.mmSafekeepingPlace;
+			previousVersion_lazy = () -> IntraPositionDetails32.mmSafekeepingPlace;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -171,14 +174,14 @@ public class IntraPositionDetails40 {
 	 */
 	public static final MMMessageAssociationEnd mmBalanceFrom = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesBalance.mmSecuritiesBalanceType;
+			businessElementTrace_lazy = () -> SecuritiesBalance.mmSecuritiesBalanceType;
 			componentContext_lazy = () -> IntraPositionDetails40.mmObject();
 			isDerived = false;
 			xmlTag = "BalFr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BalanceFrom";
 			definition = "Balance from which the securities were moved.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.IntraPositionDetails32.mmBalanceFrom;
+			previousVersion_lazy = () -> IntraPositionDetails32.mmBalanceFrom;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -229,10 +232,10 @@ public class IntraPositionDetails40 {
 			componentContext_lazy = () -> IntraPositionDetails40.mmObject();
 			isDerived = false;
 			xmlTag = "IntraPosMvmnt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IntraPositionMovement";
 			definition = "Intra-position movement(s) having been performed.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.IntraPositionDetails32.mmIntraPositionMovement;
+			previousVersion_lazy = () -> IntraPositionDetails32.mmIntraPositionMovement;
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.IntraPositionMovementDetails13.mmObject();
@@ -242,11 +245,10 @@ public class IntraPositionDetails40 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IntraPositionDetails40.mmSafekeepingPlace, com.tools20022.repository.msg.IntraPositionDetails40.mmBalanceFrom,
-						com.tools20022.repository.msg.IntraPositionDetails40.mmIntraPositionMovement);
+				messageElement_lazy = () -> Arrays.asList(IntraPositionDetails40.mmSafekeepingPlace, IntraPositionDetails40.mmBalanceFrom, IntraPositionDetails40.mmIntraPositionMovement);
 				trace_lazy = () -> IntraPositionTransfer.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "IntraPositionDetails40";
 				definition = "Details of the intra-position movement.";
 				previousVersion_lazy = () -> IntraPositionDetails32.mmObject();

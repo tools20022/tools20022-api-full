@@ -20,8 +20,10 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CorporateActionEventType16Code;
 import com.tools20022.repository.entity.CorporateActionEvent;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification30;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -125,15 +127,15 @@ public class CorporateActionEventType31Choice {
 	 */
 	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmType;
+			businessElementTrace_lazy = () -> CorporateActionEvent.mmType;
 			componentContext_lazy = () -> CorporateActionEventType31Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Cd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Event types expressed as a code.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CorporateActionEventType53Choice.mmCode);
-			previousVersion_lazy = () -> com.tools20022.repository.choice.CorporateActionEventType12Choice.mmCode;
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionEventType53Choice.mmCode);
+			previousVersion_lazy = () -> CorporateActionEventType12Choice.mmCode;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CorporateActionEventType16Code.mmObject();
@@ -187,15 +189,15 @@ public class CorporateActionEventType31Choice {
 	 */
 	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmType;
+			businessElementTrace_lazy = () -> CorporateActionEvent.mmType;
 			componentContext_lazy = () -> CorporateActionEventType31Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Event types expressed as a proprietary code.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CorporateActionEventType53Choice.mmProprietary);
-			previousVersion_lazy = () -> com.tools20022.repository.choice.CorporateActionEventType12Choice.mmProprietary;
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionEventType53Choice.mmProprietary);
+			previousVersion_lazy = () -> CorporateActionEventType12Choice.mmProprietary;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -206,10 +208,10 @@ public class CorporateActionEventType31Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CorporateActionEventType31Choice.mmCode, com.tools20022.repository.choice.CorporateActionEventType31Choice.mmProprietary);
+				messageElement_lazy = () -> Arrays.asList(CorporateActionEventType31Choice.mmCode, CorporateActionEventType31Choice.mmProprietary);
 				trace_lazy = () -> CorporateActionEvent.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionEventType31Choice";
 				definition = "Choice between formats to express the corporate event type.";
 				nextVersions_lazy = () -> Arrays.asList(CorporateActionEventType53Choice.mmObject());

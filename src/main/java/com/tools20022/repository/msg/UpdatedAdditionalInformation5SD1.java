@@ -19,10 +19,12 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.RateAndAmountFormat2Choice;
 import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.datatype.PercentageRate;
 import com.tools20022.repository.entity.Dividend;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -129,10 +131,10 @@ public class UpdatedAdditionalInformation5SD1 {
 			componentContext_lazy = () -> UpdatedAdditionalInformation5SD1.mmObject();
 			isDerived = false;
 			xmlTag = "PlcAndNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "Unambiguous reference to the location where the supplementary data must be inserted in the message instance. \r\n\r\nIn the case of XML, this is expressed by a valid XPath.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UpdatedAdditionalInformation5SD3.mmPlaceAndName);
+			nextVersions_lazy = () -> Arrays.asList(UpdatedAdditionalInformation5SD3.mmPlaceAndName);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
@@ -181,10 +183,10 @@ public class UpdatedAdditionalInformation5SD1 {
 			componentContext_lazy = () -> UpdatedAdditionalInformation5SD1.mmObject();
 			isDerived = false;
 			xmlTag = "DstrbtnAmtPerShr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DistributionAmountPerShare";
 			definition = "Total distribution fund rate per share.\r\n一株あたりの交付金先等の額";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UpdatedAdditionalInformation5SD3.mmDistributionAmountPerShare);
+			nextVersions_lazy = () -> Arrays.asList(UpdatedAdditionalInformation5SD3.mmDistributionAmountPerShare);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> RateAndAmountFormat2Choice.mmObject();
@@ -235,10 +237,10 @@ public class UpdatedAdditionalInformation5SD1 {
 			componentContext_lazy = () -> UpdatedAdditionalInformation5SD1.mmObject();
 			isDerived = false;
 			xmlTag = "NetAsstDcrRatio";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetAssetDecreaseRatio";
 			definition = "Rate information of how much net asset decrease happens as a result of the fund distribution.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UpdatedAdditionalInformation5SD3.mmNetAssetDecreaseRatio);
+			nextVersions_lazy = () -> Arrays.asList(UpdatedAdditionalInformation5SD3.mmNetAssetDecreaseRatio);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
@@ -288,10 +290,10 @@ public class UpdatedAdditionalInformation5SD1 {
 			componentContext_lazy = () -> UpdatedAdditionalInformation5SD1.mmObject();
 			isDerived = false;
 			xmlTag = "AcmltdPrftPerShr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccumulatedProfitPerShare";
 			definition = "Distribution amount of accumulated profit per share.\r\n一株あたり利益剰余金の額";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UpdatedAdditionalInformation5SD3.mmAccumulatedProfitPerShare);
+			nextVersions_lazy = () -> Arrays.asList(UpdatedAdditionalInformation5SD3.mmAccumulatedProfitPerShare);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> RateAndAmountFormat2Choice.mmObject();
@@ -340,10 +342,10 @@ public class UpdatedAdditionalInformation5SD1 {
 			componentContext_lazy = () -> UpdatedAdditionalInformation5SD1.mmObject();
 			isDerived = false;
 			xmlTag = "DmdDvddPerShr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeemedDividendPerShare";
 			definition = "Taxable distribution amount of dividend.\r\n一株あたりみなし配当の額";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UpdatedAdditionalInformation5SD3.mmDeemedDividendPerShare);
+			nextVersions_lazy = () -> Arrays.asList(UpdatedAdditionalInformation5SD3.mmDeemedDividendPerShare);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> RateAndAmountFormat2Choice.mmObject();
@@ -393,10 +395,10 @@ public class UpdatedAdditionalInformation5SD1 {
 			componentContext_lazy = () -> UpdatedAdditionalInformation5SD1.mmObject();
 			isDerived = false;
 			xmlTag = "RsdlDstrbtnAmtPerShr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ResidualDistributionAmountPerShare";
 			definition = "Tax exempted distribution amount of dividend.  \r\n一株あたりみなし譲渡収入の額";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UpdatedAdditionalInformation5SD3.mmResidualDistributionAmountPerShare);
+			nextVersions_lazy = () -> Arrays.asList(UpdatedAdditionalInformation5SD3.mmResidualDistributionAmountPerShare);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> RateAndAmountFormat2Choice.mmObject();
@@ -406,12 +408,11 @@ public class UpdatedAdditionalInformation5SD1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UpdatedAdditionalInformation5SD1.mmPlaceAndName, com.tools20022.repository.msg.UpdatedAdditionalInformation5SD1.mmDistributionAmountPerShare,
-						com.tools20022.repository.msg.UpdatedAdditionalInformation5SD1.mmNetAssetDecreaseRatio, com.tools20022.repository.msg.UpdatedAdditionalInformation5SD1.mmAccumulatedProfitPerShare,
-						com.tools20022.repository.msg.UpdatedAdditionalInformation5SD1.mmDeemedDividendPerShare, com.tools20022.repository.msg.UpdatedAdditionalInformation5SD1.mmResidualDistributionAmountPerShare);
+				messageElement_lazy = () -> Arrays.asList(UpdatedAdditionalInformation5SD1.mmPlaceAndName, UpdatedAdditionalInformation5SD1.mmDistributionAmountPerShare, UpdatedAdditionalInformation5SD1.mmNetAssetDecreaseRatio,
+						UpdatedAdditionalInformation5SD1.mmAccumulatedProfitPerShare, UpdatedAdditionalInformation5SD1.mmDeemedDividendPerShare, UpdatedAdditionalInformation5SD1.mmResidualDistributionAmountPerShare);
 				trace_lazy = () -> Dividend.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "UpdatedAdditionalInformation5SD1";
 				definition = "Extension for updated additional information";
 				nextVersions_lazy = () -> Arrays.asList(UpdatedAdditionalInformation5SD3.mmObject());

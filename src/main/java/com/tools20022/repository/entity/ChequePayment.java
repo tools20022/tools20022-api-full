@@ -17,9 +17,17 @@
 
 package com.tools20022.repository.entity;
 
+import com.tools20022.metamodel.MMAggregation;
 import com.tools20022.metamodel.MMBusinessAssociationEnd;
 import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.choice.PaymentInstrument17Choice;
+import com.tools20022.repository.choice.PaymentInstrument18Choice;
+import com.tools20022.repository.choice.PaymentInstrument6Choice;
 import com.tools20022.repository.entity.IndividualPayment;
+import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.PaymentInstrument7;
+import com.tools20022.repository.msg.PaymentInstrument8;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -33,13 +41,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.ChequePayment#mmCheque
- * ChequePayment.mmCheque}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
  * associationDomain} =
@@ -76,6 +77,13 @@ import java.util.List;
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
  * superType} = {@linkplain com.tools20022.repository.entity.IndividualPayment
  * IndividualPayment}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.ChequePayment#mmCheque
+ * ChequePayment.mmCheque}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -140,15 +148,15 @@ public class ChequePayment extends IndividualPayment {
 	 */
 	public static final MMBusinessAssociationEnd mmCheque = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PaymentInstrument6Choice.mmChequeDetails);
+			derivation_lazy = () -> Arrays.asList(PaymentInstrument6Choice.mmChequeDetails);
 			elementContext_lazy = () -> ChequePayment.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Cheque";
 			definition = "Specifies the characteristics of the cheque which was drawn to settle a debt.";
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.Cheque.mmRelatedPayment;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Cheque.mmObject();
 		}
 	};
@@ -156,16 +164,15 @@ public class ChequePayment extends IndividualPayment {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ChequePayment";
 				definition = "Payment made by drawing a cheque in order to settle a debt.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Cheque.mmRelatedPayment);
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentInstrument7.mmCheque, com.tools20022.repository.msg.PaymentInstrument8.mmCheque,
-						com.tools20022.repository.msg.PaymentInstrument8.mmBankersDraft, com.tools20022.repository.choice.PaymentInstrument17Choice.mmCheque, com.tools20022.repository.choice.PaymentInstrument17Choice.mmBankersDraft,
-						com.tools20022.repository.choice.PaymentInstrument18Choice.mmCheque, com.tools20022.repository.choice.PaymentInstrument18Choice.mmBankersDraft);
+				derivationElement_lazy = () -> Arrays.asList(PaymentInstrument7.mmCheque, PaymentInstrument8.mmCheque, PaymentInstrument8.mmBankersDraft, PaymentInstrument17Choice.mmCheque, PaymentInstrument17Choice.mmBankersDraft,
+						PaymentInstrument18Choice.mmCheque, PaymentInstrument18Choice.mmBankersDraft);
 				superType_lazy = () -> IndividualPayment.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.ChequePayment.mmCheque);
+				element_lazy = () -> Arrays.asList(ChequePayment.mmCheque);
 			}
 		});
 		return mmObject_lazy.get();

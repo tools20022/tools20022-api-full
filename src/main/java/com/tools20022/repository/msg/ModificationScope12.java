@@ -20,7 +20,9 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.DataModification2Code;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -104,7 +106,7 @@ public class ModificationScope12 {
 			componentContext_lazy = () -> ModificationScope12.mmObject();
 			isDerived = false;
 			xmlTag = "ModScpIndctn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ModificationScopeIndication";
 			definition = "Specifies the type of modification to be applied on a set of information.";
 			maxOccurs = 1;
@@ -144,7 +146,7 @@ public class ModificationScope12 {
 			componentContext_lazy = () -> ModificationScope12.mmObject();
 			isDerived = false;
 			xmlTag = "FndDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FundDetails";
 			definition = "Information related to the account to be modified.";
 			maxOccurs = 1;
@@ -157,9 +159,9 @@ public class ModificationScope12 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ModificationScope12.mmModificationScopeIndication, com.tools20022.repository.msg.ModificationScope12.mmFundDetails);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(ModificationScope12.mmModificationScopeIndication, ModificationScope12.mmFundDetails);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ModificationScope12";
 				definition = "Scope of the modification to be applied on an identified set of information.";
 				nextVersions_lazy = () -> Arrays.asList(ModificationScope13.mmObject());

@@ -19,9 +19,11 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.AmountAndQuantity;
 import com.tools20022.repository.entity.AmountRatio;
 import com.tools20022.repository.entity.QuantityRatio;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.AmountAndQuantityRatio1;
 import com.tools20022.repository.msg.AmountToAmountRatio1;
 import com.tools20022.repository.msg.QuantityToQuantityRatio1;
@@ -113,7 +115,7 @@ public class RatioFormat2Choice {
 			componentContext_lazy = () -> RatioFormat2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "QtyToQty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuantityToQuantity";
 			definition = "The ratio is expressed as a quantity per another quantity.";
 			maxOccurs = 1;
@@ -160,7 +162,7 @@ public class RatioFormat2Choice {
 			componentContext_lazy = () -> RatioFormat2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "AmtToAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmountToAmount";
 			definition = "The ratio is expressed as an amount per another amount.";
 			maxOccurs = 1;
@@ -208,7 +210,7 @@ public class RatioFormat2Choice {
 			componentContext_lazy = () -> RatioFormat2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "AmtToQty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmountToQuantity";
 			definition = "The ratio is expressed as an amount per quantity.";
 			maxOccurs = 1;
@@ -256,7 +258,7 @@ public class RatioFormat2Choice {
 			componentContext_lazy = () -> RatioFormat2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "QtyToAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuantityToAmount";
 			definition = "Ratio is expressed as a quantity per an amount.";
 			maxOccurs = 1;
@@ -298,7 +300,7 @@ public class RatioFormat2Choice {
 			componentContext_lazy = () -> RatioFormat2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "NotSpcfdRate";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotSpecifiedRate";
 			definition = "The value of the ratio is not specified.";
 			maxOccurs = 1;
@@ -310,10 +312,10 @@ public class RatioFormat2Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.RatioFormat2Choice.mmQuantityToQuantity, com.tools20022.repository.choice.RatioFormat2Choice.mmAmountToAmount,
-						com.tools20022.repository.choice.RatioFormat2Choice.mmAmountToQuantity, com.tools20022.repository.choice.RatioFormat2Choice.mmQuantityToAmount, com.tools20022.repository.choice.RatioFormat2Choice.mmNotSpecifiedRate);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(RatioFormat2Choice.mmQuantityToQuantity, RatioFormat2Choice.mmAmountToAmount, RatioFormat2Choice.mmAmountToQuantity, RatioFormat2Choice.mmQuantityToAmount,
+						RatioFormat2Choice.mmNotSpecifiedRate);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RatioFormat2Choice";
 				definition = "Choice of format to expressed a ratio.";
 			}

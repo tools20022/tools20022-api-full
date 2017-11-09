@@ -20,8 +20,10 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.AccountCriteriaDefinition4Choice;
 import com.tools20022.repository.codeset.QueryType2Code;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -97,7 +99,7 @@ public class AccountQueryDefinition4 {
 			componentContext_lazy = () -> AccountQueryDefinition4.mmObject();
 			isDerived = false;
 			xmlTag = "QryTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QueryType";
 			definition = "Specifies the type of matching items to be returned in the response to the query.";
 			maxOccurs = 1;
@@ -138,7 +140,7 @@ public class AccountQueryDefinition4 {
 			componentContext_lazy = () -> AccountQueryDefinition4.mmObject();
 			isDerived = false;
 			xmlTag = "AcctCrit";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountCriteria";
 			definition = "Definition of the account query criteria.";
 			maxOccurs = 1;
@@ -151,9 +153,9 @@ public class AccountQueryDefinition4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountQueryDefinition4.mmQueryType, com.tools20022.repository.msg.AccountQueryDefinition4.mmAccountCriteria);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(AccountQueryDefinition4.mmQueryType, AccountQueryDefinition4.mmAccountCriteria);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "AccountQueryDefinition4";
 				definition = "Specification of the query criteria.";
 			}

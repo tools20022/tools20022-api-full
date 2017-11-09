@@ -19,9 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max128Text;
 import com.tools20022.repository.datatype.Max4Text;
 import com.tools20022.repository.entity.ContactPoint;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -97,7 +99,7 @@ public class OtherContact1 {
 			componentContext_lazy = () -> OtherContact1.mmObject();
 			isDerived = false;
 			xmlTag = "ChanlTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChannelType";
 			definition = "Method used to contact the financial institution’s contact for the specific tax region.";
 			maxOccurs = 1;
@@ -140,11 +142,11 @@ public class OtherContact1 {
 	 */
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ContactPoint.mmIdentification;
+			businessElementTrace_lazy = () -> ContactPoint.mmIdentification;
 			componentContext_lazy = () -> OtherContact1.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Communication value such as phone number or email address.";
 			maxOccurs = 1;
@@ -156,10 +158,10 @@ public class OtherContact1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OtherContact1.mmChannelType, com.tools20022.repository.msg.OtherContact1.mmIdentification);
+				messageElement_lazy = () -> Arrays.asList(OtherContact1.mmChannelType, OtherContact1.mmIdentification);
 				trace_lazy = () -> ContactPoint.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OtherContact1";
 				definition = "Communication device number or electronic address used for communication.";
 			}

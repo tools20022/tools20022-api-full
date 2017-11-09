@@ -17,18 +17,15 @@
 
 package com.tools20022.repository.entity;
 
-import com.tools20022.metamodel.MMBusinessAssociationEnd;
-import com.tools20022.metamodel.MMBusinessAttribute;
-import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.*;
 import com.tools20022.repository.choice.*;
 import com.tools20022.repository.codeset.BalanceTypeCode;
 import com.tools20022.repository.codeset.DebitCreditCode;
 import com.tools20022.repository.codeset.OpeningClosingCode;
 import com.tools20022.repository.codeset.ProcessingTypeCode;
 import com.tools20022.repository.datatype.ISODateTime;
-import com.tools20022.repository.msg.BalanceDetails5;
-import com.tools20022.repository.msg.BalanceDetails6;
-import com.tools20022.repository.msg.CashSubBalanceTypeAndQuantityBreakdown1;
+import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -43,42 +40,31 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Balance#mmType
- * Balance.mmType}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Balance#mmValueDate
- * Balance.mmValueDate}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.BalanceType9Choice
+ * BalanceType9Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.BalanceType1Choice
+ * BalanceType1Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.BalanceType6Choice
+ * BalanceType6Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.BalanceType7Choice
+ * BalanceType7Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.BalanceDetails6
+ * BalanceDetails6}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.BalanceDetails5
+ * BalanceDetails5}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.PortfolioBalance1
+ * PortfolioBalance1}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.CashBalanceType1Choice
+ * CashBalanceType1Choice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.Balance#mmCreditDebitIndicator
- * Balance.mmCreditDebitIndicator}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Balance#mmAssetHolding
- * Balance.mmAssetHolding}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Balance#mmCalculationDate
- * Balance.mmCalculationDate}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Balance#mmAdjustment
- * Balance.mmAdjustment}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Balance#mmAccount
- * Balance.mmAccount}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Balance#mmInterest
- * Balance.mmInterest}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Balance#mmBalanceEntry
- * Balance.mmBalanceEntry}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Balance#mmProcessingRestriction
- * Balance.mmProcessingRestriction}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Balance#mmOpeningClosingCode
- * Balance.mmOpeningClosingCode}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
- * subType} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.CashBalance CashBalance}</li>
- * <li>{@linkplain com.tools20022.repository.entity.SecuritiesBalance
- * SecuritiesBalance}</li>
+ * {@linkplain com.tools20022.repository.msg.CashSubBalanceTypeAndQuantityBreakdown1
+ * CashSubBalanceTypeAndQuantityBreakdown1}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.ContractBalanceType1Choice
+ * ContractBalanceType1Choice}</li>
  * </ul>
  * </li>
  * <li>
@@ -113,31 +99,42 @@ import java.util.List;
  * PortfolioBalance1.mmDetailedBalance}</li>
  * </ul>
  * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
+ * subType} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.choice.BalanceType9Choice
- * BalanceType9Choice}</li>
- * <li>{@linkplain com.tools20022.repository.choice.BalanceType1Choice
- * BalanceType1Choice}</li>
- * <li>{@linkplain com.tools20022.repository.choice.BalanceType6Choice
- * BalanceType6Choice}</li>
- * <li>{@linkplain com.tools20022.repository.choice.BalanceType7Choice
- * BalanceType7Choice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.BalanceDetails6
- * BalanceDetails6}</li>
- * <li>{@linkplain com.tools20022.repository.msg.BalanceDetails5
- * BalanceDetails5}</li>
- * <li>{@linkplain com.tools20022.repository.choice.PortfolioBalance1
- * PortfolioBalance1}</li>
- * <li>{@linkplain com.tools20022.repository.choice.CashBalanceType1Choice
- * CashBalanceType1Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.CashBalance CashBalance}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.SecuritiesBalance
+ * SecuritiesBalance}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.Balance#mmType
+ * Balance.mmType}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Balance#mmValueDate
+ * Balance.mmValueDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CashSubBalanceTypeAndQuantityBreakdown1
- * CashSubBalanceTypeAndQuantityBreakdown1}</li>
- * <li>{@linkplain com.tools20022.repository.choice.ContractBalanceType1Choice
- * ContractBalanceType1Choice}</li>
+ * {@linkplain com.tools20022.repository.entity.Balance#mmCreditDebitIndicator
+ * Balance.mmCreditDebitIndicator}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Balance#mmAssetHolding
+ * Balance.mmAssetHolding}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Balance#mmCalculationDate
+ * Balance.mmCalculationDate}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Balance#mmAdjustment
+ * Balance.mmAdjustment}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Balance#mmAccount
+ * Balance.mmAccount}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Balance#mmInterest
+ * Balance.mmInterest}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Balance#mmBalanceEntry
+ * Balance.mmBalanceEntry}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Balance#mmProcessingRestriction
+ * Balance.mmProcessingRestriction}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Balance#mmOpeningClosingCode
+ * Balance.mmOpeningClosingCode}</li>
  * </ul>
  * </li>
  * <li>
@@ -587,67 +584,38 @@ public class Balance {
 	 */
 	public static final MMBusinessAttribute mmType = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BalanceDetails2.mmBalanceType, com.tools20022.repository.msg.BalanceDetails3.mmBalanceType, com.tools20022.repository.choice.BalanceType3Choice.mmCode,
-					com.tools20022.repository.choice.BalanceType3Choice.mmProprietary, com.tools20022.repository.msg.BalanceDetails4.mmBalanceType, com.tools20022.repository.choice.BalanceType8Choice.mmCode,
-					com.tools20022.repository.choice.BalanceType8Choice.mmProprietary, com.tools20022.repository.msg.CashBalance4.mmType, com.tools20022.repository.msg.CashBalanceDetails2.mmType,
-					com.tools20022.repository.msg.CashBalanceDetails3.mmType, com.tools20022.repository.msg.CashBalanceDetails4.mmType, com.tools20022.repository.msg.CashBalanceDetails5.mmType,
-					com.tools20022.repository.msg.CashBalanceDetails6.mmType, com.tools20022.repository.choice.BalanceType4Choice.mmCode, com.tools20022.repository.choice.BalanceType4Choice.mmProprietary,
-					com.tools20022.repository.msg.CashBalanceDetails7.mmType, com.tools20022.repository.msg.CashBalance5.mmType, com.tools20022.repository.choice.BalanceType9Choice.mmCode,
-					com.tools20022.repository.choice.BalanceType9Choice.mmProprietary, com.tools20022.repository.msg.CashBalance6.mmType, com.tools20022.repository.msg.SettlementDetails50.mmSecuritiesSubBalanceType,
-					com.tools20022.repository.msg.SettlementDetails50.mmCashSubBalanceType, com.tools20022.repository.msg.SettlementDetails51.mmSecuritiesSubBalanceType,
-					com.tools20022.repository.msg.SettlementDetails51.mmCashSubBalanceType, com.tools20022.repository.msg.QuantityBreakdown9.mmSecuritiesSubBalanceType,
-					com.tools20022.repository.msg.QuantityBreakdown12.mmSecuritiesSubBalanceType, com.tools20022.repository.msg.QuantityBreakdown17.mmSecuritiesSubBalanceType,
-					com.tools20022.repository.msg.SettlementDetails24.mmSecuritiesSubBalanceType, com.tools20022.repository.msg.SettlementDetails24.mmCashSubBalanceType,
-					com.tools20022.repository.msg.QuantityBreakdown10.mmSecuritiesSubBalanceType, com.tools20022.repository.msg.SettlementDetails33.mmSecuritiesSubBalanceType,
-					com.tools20022.repository.msg.SettlementDetails33.mmCashSubBalanceType, com.tools20022.repository.msg.QuantityBreakdown16.mmSecuritiesSubBalanceType,
-					com.tools20022.repository.msg.SettlementDetails45.mmSecuritiesSubBalanceType, com.tools20022.repository.msg.SettlementDetails45.mmCashSubBalanceType,
-					com.tools20022.repository.msg.QuantityBreakdown21.mmSecuritiesSubBalanceType, com.tools20022.repository.msg.SettlementDetails54.mmSecuritiesSubBalanceType,
-					com.tools20022.repository.msg.SettlementDetails54.mmCashSubBalanceType, com.tools20022.repository.msg.SettlementDetails22.mmSecuritiesSubBalanceType,
-					com.tools20022.repository.msg.SettlementDetails22.mmCashSubBalanceType, com.tools20022.repository.msg.SettlementDetails35.mmSecuritiesSubBalanceType,
-					com.tools20022.repository.msg.SettlementDetails35.mmCashSubBalanceType, com.tools20022.repository.msg.SettlementDetails42.mmSecuritiesSubBalanceType,
-					com.tools20022.repository.msg.SettlementDetails42.mmCashSubBalanceType, com.tools20022.repository.msg.SettlementDetails52.mmSecuritiesSubBalanceType,
-					com.tools20022.repository.msg.SettlementDetails52.mmCashSubBalanceType, com.tools20022.repository.choice.BalanceType1Choice.mmCode, com.tools20022.repository.choice.BalanceType1Choice.mmProprietary,
-					com.tools20022.repository.msg.CashBalance1.mmType, com.tools20022.repository.choice.BalanceType5Choice.mmCode, com.tools20022.repository.choice.BalanceType5Choice.mmProprietary,
-					com.tools20022.repository.choice.BalanceSubType1Choice.mmCode, com.tools20022.repository.choice.BalanceSubType1Choice.mmProprietary, com.tools20022.repository.msg.BalanceType12.mmCodeOrProprietary,
-					com.tools20022.repository.msg.BalanceType12.mmSubType, com.tools20022.repository.msg.CashBalance3.mmType, com.tools20022.repository.choice.BalanceType2Choice.mmCode,
-					com.tools20022.repository.choice.BalanceType2Choice.mmProprietary, com.tools20022.repository.msg.CashBalance2.mmType, com.tools20022.repository.msg.ReportData1.mmType, com.tools20022.repository.msg.ReportData5.mmType,
-					com.tools20022.repository.msg.ReportData2.mmType, com.tools20022.repository.msg.ReportData3.mmType, com.tools20022.repository.msg.ReportData4.mmType, com.tools20022.repository.choice.CashBalanceType1FormatType.mmCode,
-					com.tools20022.repository.choice.CashBalanceType1FormatType.mmProprietary, com.tools20022.repository.msg.CashAccount18.mmBalanceType, com.tools20022.repository.msg.SettlementDetails26.mmSecuritiesSubBalanceType,
-					com.tools20022.repository.msg.SettlementDetails26.mmCashSubBalanceType, com.tools20022.repository.msg.ReportingRequest1.mmRequestedBalanceType, com.tools20022.repository.msg.ReportingRequest2.mmRequestedBalanceType,
-					com.tools20022.repository.msg.ReportingRequest3.mmRequestedBalanceType, com.tools20022.repository.msg.SettlementDetails36.mmSecuritiesSubBalanceType,
-					com.tools20022.repository.msg.SettlementDetails36.mmCashSubBalanceType, com.tools20022.repository.choice.BalanceType6Choice.mmCode, com.tools20022.repository.choice.BalanceType6Choice.mmProprietary,
-					com.tools20022.repository.choice.BalanceType7Choice.mmCode, com.tools20022.repository.choice.BalanceType7Choice.mmProprietary, com.tools20022.repository.msg.BalanceDetails6.mmType,
-					com.tools20022.repository.msg.BalanceDetails5.mmType, com.tools20022.repository.choice.BillingBalanceType1Choice.mmCode, com.tools20022.repository.choice.BillingBalanceType1Choice.mmProprietary,
-					com.tools20022.repository.msg.BillingBalance1.mmType, com.tools20022.repository.choice.CashBalanceType1Choice.mmCode, com.tools20022.repository.choice.CashBalanceType1Choice.mmProprietary,
-					com.tools20022.repository.msg.QuantityBreakdown22.mmCashSubBalanceType, com.tools20022.repository.msg.CashSubBalanceTypeAndQuantityBreakdown1.mmType,
-					com.tools20022.repository.msg.SettlementDetails67.mmSecuritiesSubBalanceType, com.tools20022.repository.msg.SettlementDetails67.mmCashSubBalanceType,
-					com.tools20022.repository.msg.SettlementDetails70.mmSecuritiesSubBalanceType, com.tools20022.repository.msg.SettlementDetails70.mmCashSubBalanceType,
-					com.tools20022.repository.msg.SettlementDetails68.mmSecuritiesSubBalanceType, com.tools20022.repository.msg.SettlementDetails68.mmCashSubBalanceType,
-					com.tools20022.repository.msg.SettlementDetails81.mmSecuritiesSubBalanceType, com.tools20022.repository.msg.SettlementDetails81.mmCashSubBalanceType,
-					com.tools20022.repository.msg.SettlementDetails80.mmSecuritiesSubBalanceType, com.tools20022.repository.msg.SettlementDetails80.mmCashSubBalanceType,
-					com.tools20022.repository.msg.SettlementDetails83.mmSecuritiesSubBalanceType, com.tools20022.repository.msg.SettlementDetails83.mmCashSubBalanceType, com.tools20022.repository.choice.ContractBalanceType1Choice.mmCode,
-					com.tools20022.repository.choice.ContractBalanceType1Choice.mmProprietary, com.tools20022.repository.msg.ContractBalance1.mmType, com.tools20022.repository.msg.SettlementDetails93.mmSecuritiesSubBalanceType,
-					com.tools20022.repository.msg.SettlementDetails93.mmCashSubBalanceType, com.tools20022.repository.msg.SettlementDetails90.mmSecuritiesSubBalanceType,
-					com.tools20022.repository.msg.SettlementDetails90.mmCashSubBalanceType, com.tools20022.repository.msg.QuantityBreakdown29.mmSecuritiesSubBalanceType,
-					com.tools20022.repository.msg.SettlementDetails94.mmSecuritiesSubBalanceType, com.tools20022.repository.msg.SettlementDetails94.mmCashSubBalanceType,
-					com.tools20022.repository.msg.QuantityBreakdown32.mmSecuritiesSubBalanceType, com.tools20022.repository.msg.CashBalance7.mmType, com.tools20022.repository.msg.SettlementDetails101.mmSecuritiesSubBalanceType,
-					com.tools20022.repository.msg.SettlementDetails101.mmCashSubBalanceType, com.tools20022.repository.msg.SettlementDetails111.mmSecuritiesSubBalanceType,
-					com.tools20022.repository.msg.SettlementDetails111.mmCashSubBalanceType, com.tools20022.repository.msg.SettlementDetails112.mmSecuritiesSubBalanceType,
-					com.tools20022.repository.msg.SettlementDetails112.mmCashSubBalanceType, com.tools20022.repository.msg.SettlementDetails110.mmSecuritiesSubBalanceType,
-					com.tools20022.repository.msg.SettlementDetails110.mmCashSubBalanceType, com.tools20022.repository.msg.QuantityBreakdown44.mmSecuritiesSubBalanceType,
-					com.tools20022.repository.msg.SettlementDetails113.mmSecuritiesSubBalanceType, com.tools20022.repository.msg.SettlementDetails113.mmCashSubBalanceType,
-					com.tools20022.repository.msg.QuantityBreakdown34.mmSecuritiesSubBalanceType, com.tools20022.repository.msg.SettlementDetails128.mmSecuritiesSubBalanceType,
-					com.tools20022.repository.msg.SettlementDetails128.mmCashSubBalanceType, com.tools20022.repository.msg.SettlementDetails120.mmSecuritiesSubBalanceType,
-					com.tools20022.repository.msg.SettlementDetails120.mmCashSubBalanceType, com.tools20022.repository.msg.SettlementDetails119.mmSecuritiesSubBalanceType,
-					com.tools20022.repository.msg.SettlementDetails119.mmCashSubBalanceType, com.tools20022.repository.msg.SettlementDetails122.mmSecuritiesSubBalanceType,
-					com.tools20022.repository.msg.SettlementDetails122.mmCashSubBalanceType, com.tools20022.repository.msg.SettlementDetails134.mmSecuritiesSubBalanceType,
-					com.tools20022.repository.msg.SettlementDetails134.mmCashSubBalanceType, com.tools20022.repository.msg.SettlementDetails137.mmSecuritiesSubBalanceType,
-					com.tools20022.repository.msg.SettlementDetails137.mmCashSubBalanceType, com.tools20022.repository.msg.SettlementDetails132.mmSecuritiesSubBalanceType,
-					com.tools20022.repository.msg.SettlementDetails132.mmCashSubBalanceType, com.tools20022.repository.msg.SettlementDetails138.mmSecuritiesSubBalanceType,
-					com.tools20022.repository.msg.SettlementDetails138.mmCashSubBalanceType);
+			derivation_lazy = () -> Arrays.asList(BalanceDetails2.mmBalanceType, BalanceDetails3.mmBalanceType, BalanceType3Choice.mmCode, BalanceType3Choice.mmProprietary, BalanceDetails4.mmBalanceType, BalanceType8Choice.mmCode,
+					BalanceType8Choice.mmProprietary, CashBalance4.mmType, CashBalanceDetails2.mmType, CashBalanceDetails3.mmType, CashBalanceDetails4.mmType, CashBalanceDetails5.mmType, CashBalanceDetails6.mmType,
+					BalanceType4Choice.mmCode, BalanceType4Choice.mmProprietary, CashBalanceDetails7.mmType, CashBalance5.mmType, BalanceType9Choice.mmCode, BalanceType9Choice.mmProprietary, CashBalance6.mmType,
+					SettlementDetails50.mmSecuritiesSubBalanceType, SettlementDetails50.mmCashSubBalanceType, SettlementDetails51.mmSecuritiesSubBalanceType, SettlementDetails51.mmCashSubBalanceType,
+					QuantityBreakdown9.mmSecuritiesSubBalanceType, QuantityBreakdown12.mmSecuritiesSubBalanceType, QuantityBreakdown17.mmSecuritiesSubBalanceType, SettlementDetails24.mmSecuritiesSubBalanceType,
+					SettlementDetails24.mmCashSubBalanceType, QuantityBreakdown10.mmSecuritiesSubBalanceType, SettlementDetails33.mmSecuritiesSubBalanceType, SettlementDetails33.mmCashSubBalanceType,
+					QuantityBreakdown16.mmSecuritiesSubBalanceType, SettlementDetails45.mmSecuritiesSubBalanceType, SettlementDetails45.mmCashSubBalanceType, QuantityBreakdown21.mmSecuritiesSubBalanceType,
+					SettlementDetails54.mmSecuritiesSubBalanceType, SettlementDetails54.mmCashSubBalanceType, SettlementDetails22.mmSecuritiesSubBalanceType, SettlementDetails22.mmCashSubBalanceType,
+					SettlementDetails35.mmSecuritiesSubBalanceType, SettlementDetails35.mmCashSubBalanceType, SettlementDetails42.mmSecuritiesSubBalanceType, SettlementDetails42.mmCashSubBalanceType,
+					SettlementDetails52.mmSecuritiesSubBalanceType, SettlementDetails52.mmCashSubBalanceType, BalanceType1Choice.mmCode, BalanceType1Choice.mmProprietary, CashBalance1.mmType, BalanceType5Choice.mmCode,
+					BalanceType5Choice.mmProprietary, BalanceSubType1Choice.mmCode, BalanceSubType1Choice.mmProprietary, BalanceType12.mmCodeOrProprietary, BalanceType12.mmSubType, CashBalance3.mmType, BalanceType2Choice.mmCode,
+					BalanceType2Choice.mmProprietary, CashBalance2.mmType, ReportData1.mmType, ReportData5.mmType, ReportData2.mmType, ReportData3.mmType, ReportData4.mmType, CashBalanceType1FormatType.mmCode,
+					CashBalanceType1FormatType.mmProprietary, CashAccount18.mmBalanceType, SettlementDetails26.mmSecuritiesSubBalanceType, SettlementDetails26.mmCashSubBalanceType, ReportingRequest1.mmRequestedBalanceType,
+					ReportingRequest2.mmRequestedBalanceType, ReportingRequest3.mmRequestedBalanceType, SettlementDetails36.mmSecuritiesSubBalanceType, SettlementDetails36.mmCashSubBalanceType, BalanceType6Choice.mmCode,
+					BalanceType6Choice.mmProprietary, BalanceType7Choice.mmCode, BalanceType7Choice.mmProprietary, BalanceDetails6.mmType, BalanceDetails5.mmType, BillingBalanceType1Choice.mmCode, BillingBalanceType1Choice.mmProprietary,
+					BillingBalance1.mmType, CashBalanceType1Choice.mmCode, CashBalanceType1Choice.mmProprietary, QuantityBreakdown22.mmCashSubBalanceType, CashSubBalanceTypeAndQuantityBreakdown1.mmType,
+					SettlementDetails67.mmSecuritiesSubBalanceType, SettlementDetails67.mmCashSubBalanceType, SettlementDetails70.mmSecuritiesSubBalanceType, SettlementDetails70.mmCashSubBalanceType,
+					SettlementDetails68.mmSecuritiesSubBalanceType, SettlementDetails68.mmCashSubBalanceType, SettlementDetails81.mmSecuritiesSubBalanceType, SettlementDetails81.mmCashSubBalanceType,
+					SettlementDetails80.mmSecuritiesSubBalanceType, SettlementDetails80.mmCashSubBalanceType, SettlementDetails83.mmSecuritiesSubBalanceType, SettlementDetails83.mmCashSubBalanceType, ContractBalanceType1Choice.mmCode,
+					ContractBalanceType1Choice.mmProprietary, ContractBalance1.mmType, SettlementDetails93.mmSecuritiesSubBalanceType, SettlementDetails93.mmCashSubBalanceType, SettlementDetails90.mmSecuritiesSubBalanceType,
+					SettlementDetails90.mmCashSubBalanceType, QuantityBreakdown29.mmSecuritiesSubBalanceType, SettlementDetails94.mmSecuritiesSubBalanceType, SettlementDetails94.mmCashSubBalanceType,
+					QuantityBreakdown32.mmSecuritiesSubBalanceType, CashBalance7.mmType, SettlementDetails101.mmSecuritiesSubBalanceType, SettlementDetails101.mmCashSubBalanceType, SettlementDetails111.mmSecuritiesSubBalanceType,
+					SettlementDetails111.mmCashSubBalanceType, SettlementDetails112.mmSecuritiesSubBalanceType, SettlementDetails112.mmCashSubBalanceType, SettlementDetails110.mmSecuritiesSubBalanceType,
+					SettlementDetails110.mmCashSubBalanceType, QuantityBreakdown44.mmSecuritiesSubBalanceType, SettlementDetails113.mmSecuritiesSubBalanceType, SettlementDetails113.mmCashSubBalanceType,
+					QuantityBreakdown34.mmSecuritiesSubBalanceType, SettlementDetails128.mmSecuritiesSubBalanceType, SettlementDetails128.mmCashSubBalanceType, SettlementDetails120.mmSecuritiesSubBalanceType,
+					SettlementDetails120.mmCashSubBalanceType, SettlementDetails119.mmSecuritiesSubBalanceType, SettlementDetails119.mmCashSubBalanceType, SettlementDetails122.mmSecuritiesSubBalanceType,
+					SettlementDetails122.mmCashSubBalanceType, SettlementDetails134.mmSecuritiesSubBalanceType, SettlementDetails134.mmCashSubBalanceType, SettlementDetails137.mmSecuritiesSubBalanceType,
+					SettlementDetails137.mmCashSubBalanceType, SettlementDetails132.mmSecuritiesSubBalanceType, SettlementDetails132.mmCashSubBalanceType, SettlementDetails138.mmSecuritiesSubBalanceType,
+					SettlementDetails138.mmCashSubBalanceType);
 			elementContext_lazy = () -> Balance.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Type";
 			definition = "Specifies the nature of a balance.";
 			maxOccurs = 1;
@@ -742,16 +710,13 @@ public class Balance {
 	 */
 	public static final MMBusinessAttribute mmValueDate = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BalanceDetails2.mmBalanceValueDate, com.tools20022.repository.msg.BalanceDetails3.mmBalanceValueDate,
-					com.tools20022.repository.msg.BalanceDetails4.mmBalanceValueDate, com.tools20022.repository.msg.CashBalance4.mmValueDate, com.tools20022.repository.msg.CashBalanceDetails2.mmValueDate,
-					com.tools20022.repository.msg.CashBalanceDetails3.mmValueDate, com.tools20022.repository.msg.CashBalanceDetails4.mmValueDate, com.tools20022.repository.msg.CashBalanceDetails5.mmValueDate,
-					com.tools20022.repository.msg.CashBalanceDetails6.mmValueDate, com.tools20022.repository.msg.CashBalanceDetails7.mmValueDate, com.tools20022.repository.msg.CashBalance5.mmValueDate,
-					com.tools20022.repository.msg.CashBalance6.mmValueDate, com.tools20022.repository.msg.CashBalance1.mmDate, com.tools20022.repository.msg.CashBalance3.mmDate, com.tools20022.repository.msg.CashBalance2.mmDate,
-					com.tools20022.repository.msg.ReportData1.mmValueDate, com.tools20022.repository.msg.ReportData5.mmValueDate, com.tools20022.repository.msg.ReportData2.mmValueDate, com.tools20022.repository.msg.ReportData3.mmValueDate,
-					com.tools20022.repository.msg.ReportData4.mmValueDate, com.tools20022.repository.msg.FinancialInstrumentAggregateBalance1.mmItemDate, com.tools20022.repository.msg.CashBalance7.mmDate);
+			derivation_lazy = () -> Arrays.asList(BalanceDetails2.mmBalanceValueDate, BalanceDetails3.mmBalanceValueDate, BalanceDetails4.mmBalanceValueDate, CashBalance4.mmValueDate, CashBalanceDetails2.mmValueDate,
+					CashBalanceDetails3.mmValueDate, CashBalanceDetails4.mmValueDate, CashBalanceDetails5.mmValueDate, CashBalanceDetails6.mmValueDate, CashBalanceDetails7.mmValueDate, CashBalance5.mmValueDate, CashBalance6.mmValueDate,
+					CashBalance1.mmDate, CashBalance3.mmDate, CashBalance2.mmDate, ReportData1.mmValueDate, ReportData5.mmValueDate, ReportData2.mmValueDate, ReportData3.mmValueDate, ReportData4.mmValueDate,
+					FinancialInstrumentAggregateBalance1.mmItemDate, CashBalance7.mmDate);
 			elementContext_lazy = () -> Balance.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ValueDate";
 			definition = "Date and time at which the balance is or will be available.";
 			maxOccurs = 1;
@@ -861,17 +826,14 @@ public class Balance {
 	 */
 	public static final MMBusinessAttribute mmCreditDebitIndicator = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashBalanceDetails2.mmCreditDebitIndicator, com.tools20022.repository.msg.CashBalanceDetails3.mmCreditDebitIndicator,
-					com.tools20022.repository.msg.CashBalanceDetails4.mmCreditDebitIndicator, com.tools20022.repository.msg.CashBalanceDetails5.mmCreditDebitIndicator,
-					com.tools20022.repository.msg.CashBalanceDetails6.mmCreditDebitIndicator, com.tools20022.repository.msg.CashBalanceDetails7.mmCreditDebitIndicator, com.tools20022.repository.msg.CashBalance5.mmCreditDebitIndicator,
-					com.tools20022.repository.msg.CashBalance6.mmCreditDebitIndicator, com.tools20022.repository.msg.CashBalanceAvailability1.mmCreditDebitIndicator, com.tools20022.repository.msg.CashBalance1.mmCreditDebitIndicator,
-					com.tools20022.repository.msg.CashBalanceAvailability2.mmCreditDebitIndicator, com.tools20022.repository.msg.CashBalance3.mmCreditDebitIndicator, com.tools20022.repository.msg.CashBalance2.mmCreditDebitIndicator,
-					com.tools20022.repository.msg.CashAccount19.mmCreditDebitIndicator, com.tools20022.repository.msg.SecuritiesAccount9.mmCreditDebitIndicator, com.tools20022.repository.msg.SecuritiesAccount12.mmCreditDebitIndicator,
-					com.tools20022.repository.msg.CashAccount18.mmCreditDebitIndicator, com.tools20022.repository.msg.SecuritiesAccount8.mmCreditDebitIndicator, com.tools20022.repository.msg.SecuritiesAccount10.mmCreditDebitIndicator,
-					com.tools20022.repository.msg.ContractBalance1.mmCreditDebitIndicator, com.tools20022.repository.msg.CashBalance7.mmCreditDebitIndicator, com.tools20022.repository.msg.CashAvailability1.mmCreditDebitIndicator);
+			derivation_lazy = () -> Arrays.asList(CashBalanceDetails2.mmCreditDebitIndicator, CashBalanceDetails3.mmCreditDebitIndicator, CashBalanceDetails4.mmCreditDebitIndicator, CashBalanceDetails5.mmCreditDebitIndicator,
+					CashBalanceDetails6.mmCreditDebitIndicator, CashBalanceDetails7.mmCreditDebitIndicator, CashBalance5.mmCreditDebitIndicator, CashBalance6.mmCreditDebitIndicator, CashBalanceAvailability1.mmCreditDebitIndicator,
+					CashBalance1.mmCreditDebitIndicator, CashBalanceAvailability2.mmCreditDebitIndicator, CashBalance3.mmCreditDebitIndicator, CashBalance2.mmCreditDebitIndicator, CashAccount19.mmCreditDebitIndicator,
+					SecuritiesAccount9.mmCreditDebitIndicator, SecuritiesAccount12.mmCreditDebitIndicator, CashAccount18.mmCreditDebitIndicator, SecuritiesAccount8.mmCreditDebitIndicator, SecuritiesAccount10.mmCreditDebitIndicator,
+					ContractBalance1.mmCreditDebitIndicator, CashBalance7.mmCreditDebitIndicator, CashAvailability1.mmCreditDebitIndicator);
 			elementContext_lazy = () -> Balance.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CreditDebitIndicator";
 			definition = "Indicates whether the balance is a credit or a debit balance. A zero balance is considered to be a credit balance";
 			maxOccurs = 1;
@@ -1335,82 +1297,59 @@ public class Balance {
 	 */
 	public static final MMBusinessAssociationEnd mmAssetHolding = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace7.mmAccountBaseCurrencyAmounts,
-					com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace7.mmInstrumentCurrencyAmounts, com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace7.mmAlternateReportingCurrencyAmounts,
-					com.tools20022.repository.msg.AggregateBalanceInformation8.mmAccountBaseCurrencyAmounts, com.tools20022.repository.msg.AggregateBalanceInformation8.mmInstrumentCurrencyAmounts,
-					com.tools20022.repository.msg.AggregateBalanceInformation8.mmAlternateReportingCurrencyAmounts, com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace10.mmAccountBaseCurrencyAmounts,
-					com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace10.mmInstrumentCurrencyAmounts, com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace10.mmAlternateReportingCurrencyAmounts,
-					com.tools20022.repository.msg.AggregateBalanceInformation11.mmAccountBaseCurrencyAmounts, com.tools20022.repository.msg.AggregateBalanceInformation11.mmInstrumentCurrencyAmounts,
-					com.tools20022.repository.msg.AggregateBalanceInformation11.mmAlternateReportingCurrencyAmounts, com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace12.mmAccountBaseCurrencyAmounts,
-					com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace12.mmInstrumentCurrencyAmounts, com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace12.mmAlternateReportingCurrencyAmounts,
-					com.tools20022.repository.msg.AggregateBalanceInformation13.mmAccountBaseCurrencyAmounts, com.tools20022.repository.msg.AggregateBalanceInformation13.mmInstrumentCurrencyAmounts,
-					com.tools20022.repository.msg.AggregateBalanceInformation13.mmAlternateReportingCurrencyAmounts, com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace14.mmAccountBaseCurrencyAmounts,
-					com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace14.mmInstrumentCurrencyAmounts, com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace14.mmAlternateReportingCurrencyAmounts,
-					com.tools20022.repository.msg.AggregateBalanceInformation15.mmAccountBaseCurrencyAmounts, com.tools20022.repository.msg.AggregateBalanceInformation15.mmInstrumentCurrencyAmounts,
-					com.tools20022.repository.msg.AggregateBalanceInformation15.mmAlternateReportingCurrencyAmounts, com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace16.mmAccountBaseCurrencyAmounts,
-					com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace16.mmInstrumentCurrencyAmounts, com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace16.mmAlternateReportingCurrencyAmounts,
-					com.tools20022.repository.msg.AggregateBalanceInformation17.mmAccountBaseCurrencyAmounts, com.tools20022.repository.msg.AggregateBalanceInformation17.mmInstrumentCurrencyAmounts,
-					com.tools20022.repository.msg.AggregateBalanceInformation17.mmAlternateReportingCurrencyAmounts, com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace18.mmAccountBaseCurrencyAmounts,
-					com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace18.mmInstrumentCurrencyAmounts, com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace18.mmAlternateReportingCurrencyAmounts,
-					com.tools20022.repository.msg.AggregateBalanceInformation19.mmAccountBaseCurrencyAmounts, com.tools20022.repository.msg.AggregateBalanceInformation19.mmInstrumentCurrencyAmounts,
-					com.tools20022.repository.msg.AggregateBalanceInformation19.mmAlternateReportingCurrencyAmounts, com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace21.mmAccountBaseCurrencyAmounts,
-					com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace21.mmInstrumentCurrencyAmounts, com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace21.mmAlternateReportingCurrencyAmounts,
-					com.tools20022.repository.msg.AggregateBalanceInformation22.mmAccountBaseCurrencyAmounts, com.tools20022.repository.msg.AggregateBalanceInformation22.mmInstrumentCurrencyAmounts,
-					com.tools20022.repository.msg.AggregateBalanceInformation22.mmAlternateReportingCurrencyAmounts, com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace22.mmAccountBaseCurrencyAmounts,
-					com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace22.mmInstrumentCurrencyAmounts, com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace22.mmAlternateReportingCurrencyAmounts,
-					com.tools20022.repository.msg.AggregateBalanceInformation23.mmAccountBaseCurrencyAmounts, com.tools20022.repository.msg.AggregateBalanceInformation23.mmInstrumentCurrencyAmounts,
-					com.tools20022.repository.msg.AggregateBalanceInformation23.mmAlternateReportingCurrencyAmounts, com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace8.mmAccountBaseCurrencyAmounts,
-					com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace8.mmInstrumentCurrencyAmounts, com.tools20022.repository.msg.AggregateBalanceInformation9.mmAccountBaseCurrencyAmounts,
-					com.tools20022.repository.msg.AggregateBalanceInformation9.mmInstrumentCurrencyAmounts, com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace9.mmAccountBaseCurrencyAmounts,
-					com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace9.mmInstrumentCurrencyAmounts, com.tools20022.repository.msg.AggregateBalanceInformation10.mmAccountBaseCurrencyAmounts,
-					com.tools20022.repository.msg.AggregateBalanceInformation10.mmInstrumentCurrencyAmounts, com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace11.mmAccountBaseCurrencyAmounts,
-					com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace11.mmInstrumentCurrencyAmounts, com.tools20022.repository.msg.AggregateBalanceInformation12.mmAccountBaseCurrencyAmounts,
-					com.tools20022.repository.msg.AggregateBalanceInformation12.mmInstrumentCurrencyAmounts, com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace13.mmAccountBaseCurrencyAmounts,
-					com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace13.mmInstrumentCurrencyAmounts, com.tools20022.repository.msg.AggregateBalanceInformation14.mmAccountBaseCurrencyAmounts,
-					com.tools20022.repository.msg.AggregateBalanceInformation14.mmInstrumentCurrencyAmounts, com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace15.mmAccountBaseCurrencyAmounts,
-					com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace15.mmInstrumentCurrencyAmounts, com.tools20022.repository.msg.AggregateBalanceInformation16.mmAccountBaseCurrencyAmounts,
-					com.tools20022.repository.msg.AggregateBalanceInformation16.mmInstrumentCurrencyAmounts, com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace17.mmAccountBaseCurrencyAmounts,
-					com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace17.mmInstrumentCurrencyAmounts, com.tools20022.repository.msg.AggregateBalanceInformation18.mmAccountBaseCurrencyAmounts,
-					com.tools20022.repository.msg.AggregateBalanceInformation18.mmInstrumentCurrencyAmounts, com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace20.mmAccountBaseCurrencyAmounts,
-					com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace20.mmInstrumentCurrencyAmounts, com.tools20022.repository.msg.AggregateBalanceInformation21.mmAccountBaseCurrencyAmounts,
-					com.tools20022.repository.msg.AggregateBalanceInformation21.mmInstrumentCurrencyAmounts, com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace23.mmAccountBaseCurrencyAmounts,
-					com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace23.mmInstrumentCurrencyAmounts, com.tools20022.repository.msg.AggregateBalanceInformation24.mmAccountBaseCurrencyAmounts,
-					com.tools20022.repository.msg.AggregateBalanceInformation24.mmInstrumentCurrencyAmounts, com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace19.mmAccountBaseCurrencyAmounts,
-					com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace19.mmInstrumentCurrencyAmounts, com.tools20022.repository.msg.AggregateBalanceInformation20.mmAccountBaseCurrencyAmounts,
-					com.tools20022.repository.msg.AggregateBalanceInformation20.mmInstrumentCurrencyAmounts, com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace6.mmAccountBaseCurrencyAmounts,
-					com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace6.mmInstrumentCurrencyAmounts, com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace6.mmAlternateReportingCurrencyAmounts,
-					com.tools20022.repository.msg.AggregateBalanceInformation6.mmAccountBaseCurrencyAmounts, com.tools20022.repository.msg.AggregateBalanceInformation6.mmInstrumentCurrencyAmounts,
-					com.tools20022.repository.msg.AggregateBalanceInformation6.mmAlternateReportingCurrencyAmounts, com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace5.mmAccountBaseCurrencyAmounts,
-					com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace5.mmInstrumentCurrencyAmounts, com.tools20022.repository.msg.AggregateBalanceInformation7.mmAccountBaseCurrencyAmounts,
-					com.tools20022.repository.msg.AggregateBalanceInformation7.mmInstrumentCurrencyAmounts, com.tools20022.repository.msg.AggregateBalanceInformation26.mmAccountBaseCurrencyAmounts,
-					com.tools20022.repository.msg.AggregateBalanceInformation26.mmInstrumentCurrencyAmounts, com.tools20022.repository.msg.AggregateBalanceInformation26.mmAlternateReportingCurrencyAmounts,
-					com.tools20022.repository.msg.AggregateBalanceInformation25.mmAccountBaseCurrencyAmounts, com.tools20022.repository.msg.AggregateBalanceInformation25.mmInstrumentCurrencyAmounts,
-					com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace24.mmAccountBaseCurrencyAmounts, com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace24.mmInstrumentCurrencyAmounts,
-					com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace25.mmAccountBaseCurrencyAmounts, com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace25.mmInstrumentCurrencyAmounts,
-					com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace25.mmAlternateReportingCurrencyAmounts, com.tools20022.repository.msg.AggregateBalanceInformation28.mmAccountBaseCurrencyAmounts,
-					com.tools20022.repository.msg.AggregateBalanceInformation28.mmInstrumentCurrencyAmounts, com.tools20022.repository.msg.AggregateBalanceInformation27.mmAccountBaseCurrencyAmounts,
-					com.tools20022.repository.msg.AggregateBalanceInformation27.mmInstrumentCurrencyAmounts, com.tools20022.repository.msg.AggregateBalanceInformation27.mmAlternateReportingCurrencyAmounts,
-					com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace26.mmAccountBaseCurrencyAmounts, com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace26.mmInstrumentCurrencyAmounts,
-					com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace26.mmAlternateReportingCurrencyAmounts, com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace27.mmAccountBaseCurrencyAmounts,
-					com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace27.mmInstrumentCurrencyAmounts, com.tools20022.repository.msg.AggregateBalanceInformation30.mmAccountBaseCurrencyAmounts,
-					com.tools20022.repository.msg.AggregateBalanceInformation30.mmInstrumentCurrencyAmounts, com.tools20022.repository.msg.AggregateBalanceInformation31.mmAccountBaseCurrencyAmounts,
-					com.tools20022.repository.msg.AggregateBalanceInformation31.mmInstrumentCurrencyAmounts, com.tools20022.repository.msg.AggregateBalanceInformation31.mmAlternateReportingCurrencyAmounts,
-					com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace28.mmAccountBaseCurrencyAmounts, com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace28.mmInstrumentCurrencyAmounts,
-					com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace29.mmAccountBaseCurrencyAmounts, com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace29.mmInstrumentCurrencyAmounts,
-					com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace29.mmAlternateReportingCurrencyAmounts, com.tools20022.repository.msg.AggregateBalanceInformation32.mmAccountBaseCurrencyAmounts,
-					com.tools20022.repository.msg.AggregateBalanceInformation32.mmInstrumentCurrencyAmounts, com.tools20022.repository.msg.AggregateBalanceInformation32.mmAlternateReportingCurrencyAmounts,
-					com.tools20022.repository.msg.AggregateBalanceInformation33.mmAccountBaseCurrencyAmounts, com.tools20022.repository.msg.AggregateBalanceInformation33.mmInstrumentCurrencyAmounts,
-					com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace31.mmAccountBaseCurrencyAmounts, com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace31.mmInstrumentCurrencyAmounts,
-					com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace30.mmAccountBaseCurrencyAmounts, com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace30.mmInstrumentCurrencyAmounts,
-					com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace30.mmAlternateReportingCurrencyAmounts);
+			derivation_lazy = () -> Arrays.asList(AggregateBalancePerSafekeepingPlace7.mmAccountBaseCurrencyAmounts, AggregateBalancePerSafekeepingPlace7.mmInstrumentCurrencyAmounts,
+					AggregateBalancePerSafekeepingPlace7.mmAlternateReportingCurrencyAmounts, AggregateBalanceInformation8.mmAccountBaseCurrencyAmounts, AggregateBalanceInformation8.mmInstrumentCurrencyAmounts,
+					AggregateBalanceInformation8.mmAlternateReportingCurrencyAmounts, AggregateBalancePerSafekeepingPlace10.mmAccountBaseCurrencyAmounts, AggregateBalancePerSafekeepingPlace10.mmInstrumentCurrencyAmounts,
+					AggregateBalancePerSafekeepingPlace10.mmAlternateReportingCurrencyAmounts, AggregateBalanceInformation11.mmAccountBaseCurrencyAmounts, AggregateBalanceInformation11.mmInstrumentCurrencyAmounts,
+					AggregateBalanceInformation11.mmAlternateReportingCurrencyAmounts, AggregateBalancePerSafekeepingPlace12.mmAccountBaseCurrencyAmounts, AggregateBalancePerSafekeepingPlace12.mmInstrumentCurrencyAmounts,
+					AggregateBalancePerSafekeepingPlace12.mmAlternateReportingCurrencyAmounts, AggregateBalanceInformation13.mmAccountBaseCurrencyAmounts, AggregateBalanceInformation13.mmInstrumentCurrencyAmounts,
+					AggregateBalanceInformation13.mmAlternateReportingCurrencyAmounts, AggregateBalancePerSafekeepingPlace14.mmAccountBaseCurrencyAmounts, AggregateBalancePerSafekeepingPlace14.mmInstrumentCurrencyAmounts,
+					AggregateBalancePerSafekeepingPlace14.mmAlternateReportingCurrencyAmounts, AggregateBalanceInformation15.mmAccountBaseCurrencyAmounts, AggregateBalanceInformation15.mmInstrumentCurrencyAmounts,
+					AggregateBalanceInformation15.mmAlternateReportingCurrencyAmounts, AggregateBalancePerSafekeepingPlace16.mmAccountBaseCurrencyAmounts, AggregateBalancePerSafekeepingPlace16.mmInstrumentCurrencyAmounts,
+					AggregateBalancePerSafekeepingPlace16.mmAlternateReportingCurrencyAmounts, AggregateBalanceInformation17.mmAccountBaseCurrencyAmounts, AggregateBalanceInformation17.mmInstrumentCurrencyAmounts,
+					AggregateBalanceInformation17.mmAlternateReportingCurrencyAmounts, AggregateBalancePerSafekeepingPlace18.mmAccountBaseCurrencyAmounts, AggregateBalancePerSafekeepingPlace18.mmInstrumentCurrencyAmounts,
+					AggregateBalancePerSafekeepingPlace18.mmAlternateReportingCurrencyAmounts, AggregateBalanceInformation19.mmAccountBaseCurrencyAmounts, AggregateBalanceInformation19.mmInstrumentCurrencyAmounts,
+					AggregateBalanceInformation19.mmAlternateReportingCurrencyAmounts, AggregateBalancePerSafekeepingPlace21.mmAccountBaseCurrencyAmounts, AggregateBalancePerSafekeepingPlace21.mmInstrumentCurrencyAmounts,
+					AggregateBalancePerSafekeepingPlace21.mmAlternateReportingCurrencyAmounts, AggregateBalanceInformation22.mmAccountBaseCurrencyAmounts, AggregateBalanceInformation22.mmInstrumentCurrencyAmounts,
+					AggregateBalanceInformation22.mmAlternateReportingCurrencyAmounts, AggregateBalancePerSafekeepingPlace22.mmAccountBaseCurrencyAmounts, AggregateBalancePerSafekeepingPlace22.mmInstrumentCurrencyAmounts,
+					AggregateBalancePerSafekeepingPlace22.mmAlternateReportingCurrencyAmounts, AggregateBalanceInformation23.mmAccountBaseCurrencyAmounts, AggregateBalanceInformation23.mmInstrumentCurrencyAmounts,
+					AggregateBalanceInformation23.mmAlternateReportingCurrencyAmounts, AggregateBalancePerSafekeepingPlace8.mmAccountBaseCurrencyAmounts, AggregateBalancePerSafekeepingPlace8.mmInstrumentCurrencyAmounts,
+					AggregateBalanceInformation9.mmAccountBaseCurrencyAmounts, AggregateBalanceInformation9.mmInstrumentCurrencyAmounts, AggregateBalancePerSafekeepingPlace9.mmAccountBaseCurrencyAmounts,
+					AggregateBalancePerSafekeepingPlace9.mmInstrumentCurrencyAmounts, AggregateBalanceInformation10.mmAccountBaseCurrencyAmounts, AggregateBalanceInformation10.mmInstrumentCurrencyAmounts,
+					AggregateBalancePerSafekeepingPlace11.mmAccountBaseCurrencyAmounts, AggregateBalancePerSafekeepingPlace11.mmInstrumentCurrencyAmounts, AggregateBalanceInformation12.mmAccountBaseCurrencyAmounts,
+					AggregateBalanceInformation12.mmInstrumentCurrencyAmounts, AggregateBalancePerSafekeepingPlace13.mmAccountBaseCurrencyAmounts, AggregateBalancePerSafekeepingPlace13.mmInstrumentCurrencyAmounts,
+					AggregateBalanceInformation14.mmAccountBaseCurrencyAmounts, AggregateBalanceInformation14.mmInstrumentCurrencyAmounts, AggregateBalancePerSafekeepingPlace15.mmAccountBaseCurrencyAmounts,
+					AggregateBalancePerSafekeepingPlace15.mmInstrumentCurrencyAmounts, AggregateBalanceInformation16.mmAccountBaseCurrencyAmounts, AggregateBalanceInformation16.mmInstrumentCurrencyAmounts,
+					AggregateBalancePerSafekeepingPlace17.mmAccountBaseCurrencyAmounts, AggregateBalancePerSafekeepingPlace17.mmInstrumentCurrencyAmounts, AggregateBalanceInformation18.mmAccountBaseCurrencyAmounts,
+					AggregateBalanceInformation18.mmInstrumentCurrencyAmounts, AggregateBalancePerSafekeepingPlace20.mmAccountBaseCurrencyAmounts, AggregateBalancePerSafekeepingPlace20.mmInstrumentCurrencyAmounts,
+					AggregateBalanceInformation21.mmAccountBaseCurrencyAmounts, AggregateBalanceInformation21.mmInstrumentCurrencyAmounts, AggregateBalancePerSafekeepingPlace23.mmAccountBaseCurrencyAmounts,
+					AggregateBalancePerSafekeepingPlace23.mmInstrumentCurrencyAmounts, AggregateBalanceInformation24.mmAccountBaseCurrencyAmounts, AggregateBalanceInformation24.mmInstrumentCurrencyAmounts,
+					AggregateBalancePerSafekeepingPlace19.mmAccountBaseCurrencyAmounts, AggregateBalancePerSafekeepingPlace19.mmInstrumentCurrencyAmounts, AggregateBalanceInformation20.mmAccountBaseCurrencyAmounts,
+					AggregateBalanceInformation20.mmInstrumentCurrencyAmounts, AggregateBalancePerSafekeepingPlace6.mmAccountBaseCurrencyAmounts, AggregateBalancePerSafekeepingPlace6.mmInstrumentCurrencyAmounts,
+					AggregateBalancePerSafekeepingPlace6.mmAlternateReportingCurrencyAmounts, AggregateBalanceInformation6.mmAccountBaseCurrencyAmounts, AggregateBalanceInformation6.mmInstrumentCurrencyAmounts,
+					AggregateBalanceInformation6.mmAlternateReportingCurrencyAmounts, AggregateBalancePerSafekeepingPlace5.mmAccountBaseCurrencyAmounts, AggregateBalancePerSafekeepingPlace5.mmInstrumentCurrencyAmounts,
+					AggregateBalanceInformation7.mmAccountBaseCurrencyAmounts, AggregateBalanceInformation7.mmInstrumentCurrencyAmounts, AggregateBalanceInformation26.mmAccountBaseCurrencyAmounts,
+					AggregateBalanceInformation26.mmInstrumentCurrencyAmounts, AggregateBalanceInformation26.mmAlternateReportingCurrencyAmounts, AggregateBalanceInformation25.mmAccountBaseCurrencyAmounts,
+					AggregateBalanceInformation25.mmInstrumentCurrencyAmounts, AggregateBalancePerSafekeepingPlace24.mmAccountBaseCurrencyAmounts, AggregateBalancePerSafekeepingPlace24.mmInstrumentCurrencyAmounts,
+					AggregateBalancePerSafekeepingPlace25.mmAccountBaseCurrencyAmounts, AggregateBalancePerSafekeepingPlace25.mmInstrumentCurrencyAmounts, AggregateBalancePerSafekeepingPlace25.mmAlternateReportingCurrencyAmounts,
+					AggregateBalanceInformation28.mmAccountBaseCurrencyAmounts, AggregateBalanceInformation28.mmInstrumentCurrencyAmounts, AggregateBalanceInformation27.mmAccountBaseCurrencyAmounts,
+					AggregateBalanceInformation27.mmInstrumentCurrencyAmounts, AggregateBalanceInformation27.mmAlternateReportingCurrencyAmounts, AggregateBalancePerSafekeepingPlace26.mmAccountBaseCurrencyAmounts,
+					AggregateBalancePerSafekeepingPlace26.mmInstrumentCurrencyAmounts, AggregateBalancePerSafekeepingPlace26.mmAlternateReportingCurrencyAmounts, AggregateBalancePerSafekeepingPlace27.mmAccountBaseCurrencyAmounts,
+					AggregateBalancePerSafekeepingPlace27.mmInstrumentCurrencyAmounts, AggregateBalanceInformation30.mmAccountBaseCurrencyAmounts, AggregateBalanceInformation30.mmInstrumentCurrencyAmounts,
+					AggregateBalanceInformation31.mmAccountBaseCurrencyAmounts, AggregateBalanceInformation31.mmInstrumentCurrencyAmounts, AggregateBalanceInformation31.mmAlternateReportingCurrencyAmounts,
+					AggregateBalancePerSafekeepingPlace28.mmAccountBaseCurrencyAmounts, AggregateBalancePerSafekeepingPlace28.mmInstrumentCurrencyAmounts, AggregateBalancePerSafekeepingPlace29.mmAccountBaseCurrencyAmounts,
+					AggregateBalancePerSafekeepingPlace29.mmInstrumentCurrencyAmounts, AggregateBalancePerSafekeepingPlace29.mmAlternateReportingCurrencyAmounts, AggregateBalanceInformation32.mmAccountBaseCurrencyAmounts,
+					AggregateBalanceInformation32.mmInstrumentCurrencyAmounts, AggregateBalanceInformation32.mmAlternateReportingCurrencyAmounts, AggregateBalanceInformation33.mmAccountBaseCurrencyAmounts,
+					AggregateBalanceInformation33.mmInstrumentCurrencyAmounts, AggregateBalancePerSafekeepingPlace31.mmAccountBaseCurrencyAmounts, AggregateBalancePerSafekeepingPlace31.mmInstrumentCurrencyAmounts,
+					AggregateBalancePerSafekeepingPlace30.mmAccountBaseCurrencyAmounts, AggregateBalancePerSafekeepingPlace30.mmInstrumentCurrencyAmounts, AggregateBalancePerSafekeepingPlace30.mmAlternateReportingCurrencyAmounts);
 			elementContext_lazy = () -> Balance.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AssetHolding";
 			definition = "Specifies in terms of value and quantity the assets held in a balance.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmBalance;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmObject();
 		}
 	};
@@ -1467,12 +1406,11 @@ public class Balance {
 	 */
 	public static final MMBusinessAttribute mmCalculationDate = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReportData1.mmDateAndTimeStamp, com.tools20022.repository.msg.ReportData5.mmDateAndTimeStamp, com.tools20022.repository.msg.ReportData2.mmDateAndTimeStamp,
-					com.tools20022.repository.msg.ReportData3.mmDateAndTimeStamp, com.tools20022.repository.msg.ReportData4.mmDateAndTimeStamp, com.tools20022.repository.msg.AggregateBalanceInformation20.mmBalanceDate,
-					com.tools20022.repository.msg.CardAccount2.mmBalanceDate);
+			derivation_lazy = () -> Arrays.asList(ReportData1.mmDateAndTimeStamp, ReportData5.mmDateAndTimeStamp, ReportData2.mmDateAndTimeStamp, ReportData3.mmDateAndTimeStamp, ReportData4.mmDateAndTimeStamp,
+					AggregateBalanceInformation20.mmBalanceDate, CardAccount2.mmBalanceDate);
 			elementContext_lazy = () -> Balance.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CalculationDate";
 			definition = "Specifies the date and time at which the balance is calculated.";
 			maxOccurs = 1;
@@ -1523,15 +1461,15 @@ public class Balance {
 	 */
 	public static final MMBusinessAssociationEnd mmAdjustment = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BalanceAdjustment1.mmEarningsAdjustmentAmount);
+			derivation_lazy = () -> Arrays.asList(BalanceAdjustment1.mmEarningsAdjustmentAmount);
 			elementContext_lazy = () -> Balance.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Adjustment";
 			definition = "Specifies the balance adjustments.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.Adjustment.mmAdjustedBalance;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Adjustment.mmObject();
 		}
 	};
@@ -1572,13 +1510,13 @@ public class Balance {
 		{
 			elementContext_lazy = () -> Balance.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Account";
 			definition = "Account or sub-account for which a balance is calculated.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.Account.mmBalance;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Account.mmObject();
 		}
 	};
@@ -1621,12 +1559,12 @@ public class Balance {
 		{
 			elementContext_lazy = () -> Balance.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Interest";
 			definition = "Set of elements used to provide interest information that applies to the balance.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.Interest.mmAccountBalance;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Interest.mmObject();
 		}
 	};
@@ -1665,12 +1603,12 @@ public class Balance {
 		{
 			elementContext_lazy = () -> Balance.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BalanceEntry";
 			definition = "Credit or debit postings used to calculate a balance.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.Entry.mmBalance;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Entry.mmObject();
 		}
 	};
@@ -1707,7 +1645,7 @@ public class Balance {
 		{
 			elementContext_lazy = () -> Balance.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ProcessingRestriction";
 			definition = "Specifies the type of balance processing restrictions that must be applied.";
 			maxOccurs = 1;
@@ -1773,12 +1711,11 @@ public class Balance {
 	 */
 	public static final MMBusinessAttribute mmOpeningClosingCode = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.OpeningClosing1Choice.mmCode, com.tools20022.repository.choice.OpeningClosing1Choice.mmProprietary,
-					com.tools20022.repository.choice.OpeningClosing2Choice.mmCode, com.tools20022.repository.choice.OpeningClosing2Choice.mmProprietary, com.tools20022.repository.choice.OpeningClosing3Choice.mmCode,
-					com.tools20022.repository.choice.OpeningClosing3Choice.mmProprietary, com.tools20022.repository.choice.OpeningClosing4Choice.mmCode, com.tools20022.repository.choice.OpeningClosing4Choice.mmProprietary);
+			derivation_lazy = () -> Arrays.asList(OpeningClosing1Choice.mmCode, OpeningClosing1Choice.mmProprietary, OpeningClosing2Choice.mmCode, OpeningClosing2Choice.mmProprietary, OpeningClosing3Choice.mmCode,
+					OpeningClosing3Choice.mmProprietary, OpeningClosing4Choice.mmCode, OpeningClosing4Choice.mmProprietary);
 			elementContext_lazy = () -> Balance.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "OpeningClosingCode";
 			definition = "Specifies whether the balance is an opening or a closing one.";
 			maxOccurs = 1;
@@ -1790,19 +1727,16 @@ public class Balance {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Balance";
 				definition = "Numerical representation of the net increases and decreases in an account at a specific point in time.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Account.mmBalance, com.tools20022.repository.entity.Adjustment.mmAdjustedBalance, com.tools20022.repository.entity.Entry.mmBalance,
 						com.tools20022.repository.entity.AssetHolding.mmBalance, com.tools20022.repository.entity.Interest.mmAccountBalance);
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BalanceDetails5.mmDetailedBalance, com.tools20022.repository.choice.PortfolioBalance1.mmSummaryBalance,
-						com.tools20022.repository.choice.PortfolioBalance1.mmDetailedBalance);
+				derivationElement_lazy = () -> Arrays.asList(BalanceDetails5.mmDetailedBalance, PortfolioBalance1.mmSummaryBalance, PortfolioBalance1.mmDetailedBalance);
 				subType_lazy = () -> Arrays.asList(CashBalance.mmObject(), SecuritiesBalance.mmObject());
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Balance.mmType, com.tools20022.repository.entity.Balance.mmValueDate, com.tools20022.repository.entity.Balance.mmCreditDebitIndicator,
-						com.tools20022.repository.entity.Balance.mmAssetHolding, com.tools20022.repository.entity.Balance.mmCalculationDate, com.tools20022.repository.entity.Balance.mmAdjustment,
-						com.tools20022.repository.entity.Balance.mmAccount, com.tools20022.repository.entity.Balance.mmInterest, com.tools20022.repository.entity.Balance.mmBalanceEntry,
-						com.tools20022.repository.entity.Balance.mmProcessingRestriction, com.tools20022.repository.entity.Balance.mmOpeningClosingCode);
+				element_lazy = () -> Arrays.asList(Balance.mmType, Balance.mmValueDate, Balance.mmCreditDebitIndicator, Balance.mmAssetHolding, Balance.mmCalculationDate, Balance.mmAdjustment, Balance.mmAccount, Balance.mmInterest,
+						Balance.mmBalanceEntry, Balance.mmProcessingRestriction, Balance.mmOpeningClosingCode);
 				derivationComponent_lazy = () -> Arrays.asList(BalanceType9Choice.mmObject(), BalanceType1Choice.mmObject(), BalanceType6Choice.mmObject(), BalanceType7Choice.mmObject(), BalanceDetails6.mmObject(),
 						BalanceDetails5.mmObject(), PortfolioBalance1.mmObject(), CashBalanceType1Choice.mmObject(), CashSubBalanceTypeAndQuantityBreakdown1.mmObject(), ContractBalanceType1Choice.mmObject());
 			}

@@ -19,9 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.metamodel.MMXor;
 import com.tools20022.repository.choice.FundParameters1Choice;
 import com.tools20022.repository.choice.FundParameters2Choice;
+import com.tools20022.repository.GeneratedRepository;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -122,7 +124,7 @@ public class RequestParameters {
 			componentContext_lazy = () -> RequestParameters.mmObject();
 			isDerived = false;
 			xmlTag = "PrvsRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousReference";
 			definition = "Reference to a linked message that was previously sent.";
 			maxOccurs = 1;
@@ -164,7 +166,7 @@ public class RequestParameters {
 			componentContext_lazy = () -> RequestParameters.mmObject();
 			isDerived = false;
 			xmlTag = "RltdRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedReference";
 			definition = "Reference to a linked message that was previously received.";
 			maxOccurs = 1;
@@ -207,7 +209,7 @@ public class RequestParameters {
 			componentContext_lazy = () -> RequestParameters.mmObject();
 			isDerived = false;
 			xmlTag = "FndCshFcstRpt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FundCashForecastReport";
 			definition = "Parameters for which the fund cash forecast report is requested.";
 			maxOccurs = 1;
@@ -250,7 +252,7 @@ public class RequestParameters {
 			componentContext_lazy = () -> RequestParameters.mmObject();
 			isDerived = false;
 			xmlTag = "FndPrcgPsptRpt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FundProcessingPassportReport";
 			definition = "Parameters for which the fund processing passport report is requested.";
 			minOccurs = 1;
@@ -291,7 +293,7 @@ public class RequestParameters {
 			componentContext_lazy = () -> RequestParameters.mmObject();
 			isDerived = false;
 			xmlTag = "PricRpt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PriceReport";
 			definition = "Parameters for which the price report is requested.";
 			maxOccurs = 1;
@@ -333,7 +335,7 @@ public class RequestParameters {
 			componentContext_lazy = () -> RequestParameters.mmObject();
 			isDerived = false;
 			xmlTag = "StmtByAcct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatementByAccount";
 			definition = "Account and statement parameters for which the statement is requested.";
 			maxOccurs = 1;
@@ -378,7 +380,7 @@ public class RequestParameters {
 			componentContext_lazy = () -> RequestParameters.mmObject();
 			isDerived = false;
 			xmlTag = "StmtByAcctAndFinInstrm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatementByAccountAndFinancialInstrument";
 			definition = "Account, financial instrument and statement parameters for which the statement is requested.";
 			maxOccurs = 1;
@@ -421,7 +423,7 @@ public class RequestParameters {
 			componentContext_lazy = () -> RequestParameters.mmObject();
 			isDerived = false;
 			xmlTag = "UsrDfndRpt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UserDefinedReport";
 			definition = "Parameters for which the user defined report is requested.";
 			maxOccurs = 1;
@@ -437,6 +439,10 @@ public class RequestParameters {
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
+	 * messageComponent} =
+	 * {@linkplain com.tools20022.repository.msg.RequestParameters
+	 * RequestParameters}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getImpactedElements
 	 * impactedElements} =
 	 * <ul>
@@ -460,10 +466,6 @@ public class RequestParameters {
 	 * RequestParameters.mmUserDefinedReport}</li>
 	 * </ul>
 	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
-	 * messageComponent} =
-	 * {@linkplain com.tools20022.repository.msg.RequestParameters
-	 * RequestParameters}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -479,25 +481,22 @@ public class RequestParameters {
 	 */
 	public static final MMXor mmReportTypeRequested = new MMXor() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportTypeRequested";
 			definition = "One element in the list (FundCashForecastReport, FundProcessingPassport, PriceReport,\nStatementByAccount, StatementByAccountAndFinancial Instrument, UserDefinedReport) must be present.";
 			messageComponent_lazy = () -> RequestParameters.mmObject();
-			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RequestParameters.mmFundCashForecastReport, com.tools20022.repository.msg.RequestParameters.mmFundProcessingPassportReport,
-					com.tools20022.repository.msg.RequestParameters.mmPriceReport, com.tools20022.repository.msg.RequestParameters.mmStatementByAccount,
-					com.tools20022.repository.msg.RequestParameters.mmStatementByAccountAndFinancialInstrument, com.tools20022.repository.msg.RequestParameters.mmUserDefinedReport);
+			impactedElements_lazy = () -> Arrays.asList(RequestParameters.mmFundCashForecastReport, RequestParameters.mmFundProcessingPassportReport, RequestParameters.mmPriceReport, RequestParameters.mmStatementByAccount,
+					RequestParameters.mmStatementByAccountAndFinancialInstrument, RequestParameters.mmUserDefinedReport);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RequestParameters.mmPreviousReference, com.tools20022.repository.msg.RequestParameters.mmRelatedReference,
-						com.tools20022.repository.msg.RequestParameters.mmFundCashForecastReport, com.tools20022.repository.msg.RequestParameters.mmFundProcessingPassportReport,
-						com.tools20022.repository.msg.RequestParameters.mmPriceReport, com.tools20022.repository.msg.RequestParameters.mmStatementByAccount,
-						com.tools20022.repository.msg.RequestParameters.mmStatementByAccountAndFinancialInstrument, com.tools20022.repository.msg.RequestParameters.mmUserDefinedReport);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+				messageElement_lazy = () -> Arrays.asList(RequestParameters.mmPreviousReference, RequestParameters.mmRelatedReference, RequestParameters.mmFundCashForecastReport, RequestParameters.mmFundProcessingPassportReport,
+						RequestParameters.mmPriceReport, RequestParameters.mmStatementByAccount, RequestParameters.mmStatementByAccountAndFinancialInstrument, RequestParameters.mmUserDefinedReport);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
 						return DateFormat.getDateInstance(java.text.DateFormat.LONG).parse("September 9, 2016");
@@ -507,7 +506,7 @@ public class RequestParameters {
 				})).get();
 				name = "RequestParameters";
 				definition = "Specification of the request for report.";
-				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RequestParameters.mmReportTypeRequested);
+				xors_lazy = () -> Arrays.asList(RequestParameters.mmReportTypeRequested);
 			}
 		});
 		return mmObject_lazy.get();

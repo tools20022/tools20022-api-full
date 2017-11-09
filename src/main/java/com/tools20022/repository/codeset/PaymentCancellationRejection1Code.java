@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.PaymentCancellationRejectionCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -86,7 +88,7 @@ public class PaymentCancellationRejection1Code extends PaymentCancellationReject
 	 */
 	public static final MMCode mmLegalDecision = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LegalDecision";
 			owner_lazy = () -> PaymentCancellationRejection1Code.mmObject();
 		}
@@ -109,7 +111,7 @@ public class PaymentCancellationRejection1Code extends PaymentCancellationReject
 	 */
 	public static final MMCode mmAgentDecision = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AgentDecision";
 			owner_lazy = () -> PaymentCancellationRejection1Code.mmObject();
 		}
@@ -132,7 +134,7 @@ public class PaymentCancellationRejection1Code extends PaymentCancellationReject
 	 */
 	public static final MMCode mmCustomerDecision = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CustomerDecision";
 			owner_lazy = () -> PaymentCancellationRejection1Code.mmObject();
 		}
@@ -141,13 +143,12 @@ public class PaymentCancellationRejection1Code extends PaymentCancellationReject
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("LEGL");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PaymentCancellationRejection1Code";
 				definition = "Returned when a request for cancellation cannot be executed.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PaymentCancellationRejection1Code.mmLegalDecision, com.tools20022.repository.codeset.PaymentCancellationRejection1Code.mmAgentDecision,
-						com.tools20022.repository.codeset.PaymentCancellationRejection1Code.mmCustomerDecision);
+				code_lazy = () -> Arrays.asList(PaymentCancellationRejection1Code.mmLegalDecision, PaymentCancellationRejection1Code.mmAgentDecision, PaymentCancellationRejection1Code.mmCustomerDecision);
 				trace_lazy = () -> PaymentCancellationRejectionCode.mmObject();
 			}
 		});

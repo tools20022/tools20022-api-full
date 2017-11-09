@@ -19,6 +19,7 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.metamodel.MMXor;
 import com.tools20022.repository.choice.CashAccountIdentification1Choice;
 import com.tools20022.repository.codeset.AccountStatus1Code;
@@ -26,7 +27,10 @@ import com.tools20022.repository.codeset.ActiveCurrencyCode;
 import com.tools20022.repository.codeset.CashAccountType1Code;
 import com.tools20022.repository.datatype.Extended350Code;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.entity.Account;
+import com.tools20022.repository.entity.AccountIdentification;
 import com.tools20022.repository.entity.CashAccount;
+import com.tools20022.repository.GeneratedRepository;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -123,11 +127,11 @@ public class CashAccount12 {
 	 */
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.mmIdentification;
+			businessElementTrace_lazy = () -> Account.mmIdentification;
 			componentContext_lazy = () -> CashAccount12.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Unique and unambiguous identification for the account between the account owner and the account servicer.";
 			maxOccurs = 1;
@@ -173,11 +177,11 @@ public class CashAccount12 {
 	 */
 	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AccountIdentification.mmName;
+			businessElementTrace_lazy = () -> AccountIdentification.mmName;
 			componentContext_lazy = () -> CashAccount12.mmObject();
 			isDerived = false;
 			xmlTag = "Nm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Name";
 			definition = "Name of the account. It provides an additional means of identification, and is designated by the account servicer in agreement with the account owner.";
 			maxOccurs = 1;
@@ -220,11 +224,11 @@ public class CashAccount12 {
 	 */
 	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashAccount.mmCashAccountType;
+			businessElementTrace_lazy = () -> CashAccount.mmCashAccountType;
 			componentContext_lazy = () -> CashAccount12.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Specifies the nature, or use, of the cash account.";
 			maxOccurs = 1;
@@ -267,11 +271,11 @@ public class CashAccount12 {
 	 */
 	public static final MMMessageAttribute mmExtendedType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashAccount.mmCashAccountType;
+			businessElementTrace_lazy = () -> CashAccount.mmCashAccountType;
 			componentContext_lazy = () -> CashAccount12.mmObject();
 			isDerived = false;
 			xmlTag = "XtndedTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExtendedType";
 			definition = "Specifies the nature, or use, of the cash account.";
 			maxOccurs = 1;
@@ -314,11 +318,11 @@ public class CashAccount12 {
 	 */
 	public static final MMMessageAttribute mmCurrency = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.mmBaseCurrency;
+			businessElementTrace_lazy = () -> Account.mmBaseCurrency;
 			componentContext_lazy = () -> CashAccount12.mmObject();
 			isDerived = false;
 			xmlTag = "Ccy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Currency";
 			definition = "Medium of exchange of value.";
 			maxOccurs = 1;
@@ -362,11 +366,11 @@ public class CashAccount12 {
 	 */
 	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.mmStatus;
+			businessElementTrace_lazy = () -> Account.mmStatus;
 			componentContext_lazy = () -> CashAccount12.mmObject();
 			isDerived = false;
 			xmlTag = "Sts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Status";
 			definition = "Specifies the current state of an account, eg, enabled or deleted.";
 			maxOccurs = 1;
@@ -379,6 +383,9 @@ public class CashAccount12 {
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
+	 * messageComponent} =
+	 * {@linkplain com.tools20022.repository.msg.CashAccount12 CashAccount12}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getImpactedElements
 	 * impactedElements} =
 	 * <ul>
@@ -389,9 +396,6 @@ public class CashAccount12 {
 	 * CashAccount12.mmExtendedType}</li>
 	 * </ul>
 	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
-	 * messageComponent} =
-	 * {@linkplain com.tools20022.repository.msg.CashAccount12 CashAccount12}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -406,22 +410,21 @@ public class CashAccount12 {
 	 */
 	public static final MMXor mmTypeOrExtendedType = new MMXor() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TypeOrExtendedType";
 			definition = "Either Type or ExtendedType may be present, but not both.";
 			messageComponent_lazy = () -> CashAccount12.mmObject();
-			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashAccount12.mmType, com.tools20022.repository.msg.CashAccount12.mmExtendedType);
+			impactedElements_lazy = () -> Arrays.asList(CashAccount12.mmType, CashAccount12.mmExtendedType);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashAccount12.mmIdentification, com.tools20022.repository.msg.CashAccount12.mmName, com.tools20022.repository.msg.CashAccount12.mmType,
-						com.tools20022.repository.msg.CashAccount12.mmExtendedType, com.tools20022.repository.msg.CashAccount12.mmCurrency, com.tools20022.repository.msg.CashAccount12.mmStatus);
+				messageElement_lazy = () -> Arrays.asList(CashAccount12.mmIdentification, CashAccount12.mmName, CashAccount12.mmType, CashAccount12.mmExtendedType, CashAccount12.mmCurrency, CashAccount12.mmStatus);
 				trace_lazy = () -> CashAccount.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
 						return DateFormat.getDateInstance(java.text.DateFormat.LONG).parse("September 9, 2016");
@@ -431,7 +434,7 @@ public class CashAccount12 {
 				})).get();
 				name = "CashAccount12";
 				definition = "Account to or from which a cash entry is made.";
-				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashAccount12.mmTypeOrExtendedType);
+				xors_lazy = () -> Arrays.asList(CashAccount12.mmTypeOrExtendedType);
 			}
 		});
 		return mmObject_lazy.get();

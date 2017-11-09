@@ -19,8 +19,10 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ActiveOrHistoricCurrencyCode;
 import com.tools20022.repository.codeset.CountryCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -100,7 +102,7 @@ public class ReportParameter2Choice {
 			componentContext_lazy = () -> ReportParameter2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Pty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Party";
 			definition = "Party for which the estimated cash flow is being reported.";
 			maxOccurs = 1;
@@ -142,7 +144,7 @@ public class ReportParameter2Choice {
 			componentContext_lazy = () -> ReportParameter2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Ctry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Country";
 			definition = "Country for which the estimated cash flow is being reported.";
 			maxOccurs = 1;
@@ -185,7 +187,7 @@ public class ReportParameter2Choice {
 			componentContext_lazy = () -> ReportParameter2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Ccy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Currency";
 			definition = "Currency for which the estimated cash flow is being reported.";
 			maxOccurs = 1;
@@ -228,7 +230,7 @@ public class ReportParameter2Choice {
 			componentContext_lazy = () -> ReportParameter2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "UsrDfnd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UserDefined";
 			definition = "Parameter for which the estimated cash flow is being reported.";
 			maxOccurs = 1;
@@ -240,10 +242,9 @@ public class ReportParameter2Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ReportParameter2Choice.mmParty, com.tools20022.repository.choice.ReportParameter2Choice.mmCountry,
-						com.tools20022.repository.choice.ReportParameter2Choice.mmCurrency, com.tools20022.repository.choice.ReportParameter2Choice.mmUserDefined);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(ReportParameter2Choice.mmParty, ReportParameter2Choice.mmCountry, ReportParameter2Choice.mmCurrency, ReportParameter2Choice.mmUserDefined);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ReportParameter2Choice";
 				definition = "Choice between types of reporting parameter.";
 			}

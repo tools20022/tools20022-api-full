@@ -19,9 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ExternalPaymentTransactionStatus1Code;
 import com.tools20022.repository.datatype.DecimalNumber;
 import com.tools20022.repository.datatype.Max15NumericText;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -112,10 +114,10 @@ public class NumberOfTransactionsPerStatus5 {
 			componentContext_lazy = () -> NumberOfTransactionsPerStatus5.mmObject();
 			isDerived = false;
 			xmlTag = "DtldNbOfTxs";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DetailedNumberOfTransactions";
 			definition = "Number of individual transactions contained in the message, detailed per status.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.NumberOfTransactionsPerStatus3.mmDetailedNumberOfTransactions;
+			previousVersion_lazy = () -> NumberOfTransactionsPerStatus3.mmDetailedNumberOfTransactions;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max15NumericText.mmObject();
@@ -161,10 +163,10 @@ public class NumberOfTransactionsPerStatus5 {
 			componentContext_lazy = () -> NumberOfTransactionsPerStatus5.mmObject();
 			isDerived = false;
 			xmlTag = "DtldSts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DetailedStatus";
 			definition = "Common transaction status for all individual transactions reported.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.NumberOfTransactionsPerStatus3.mmDetailedStatus;
+			previousVersion_lazy = () -> NumberOfTransactionsPerStatus3.mmDetailedStatus;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ExternalPaymentTransactionStatus1Code.mmObject();
@@ -212,10 +214,10 @@ public class NumberOfTransactionsPerStatus5 {
 			componentContext_lazy = () -> NumberOfTransactionsPerStatus5.mmObject();
 			isDerived = false;
 			xmlTag = "DtldCtrlSum";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DetailedControlSum";
 			definition = "Total of all individual amounts included in the message, irrespective of currencies, detailed per status.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.NumberOfTransactionsPerStatus3.mmDetailedControlSum;
+			previousVersion_lazy = () -> NumberOfTransactionsPerStatus3.mmDetailedControlSum;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
@@ -225,10 +227,9 @@ public class NumberOfTransactionsPerStatus5 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.NumberOfTransactionsPerStatus5.mmDetailedNumberOfTransactions, com.tools20022.repository.msg.NumberOfTransactionsPerStatus5.mmDetailedStatus,
-						com.tools20022.repository.msg.NumberOfTransactionsPerStatus5.mmDetailedControlSum);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(NumberOfTransactionsPerStatus5.mmDetailedNumberOfTransactions, NumberOfTransactionsPerStatus5.mmDetailedStatus, NumberOfTransactionsPerStatus5.mmDetailedControlSum);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "NumberOfTransactionsPerStatus5";
 				definition = "Set of elements used to provide detailed information on the number of transactions that are reported with a specific transaction status.";
 				previousVersion_lazy = () -> NumberOfTransactionsPerStatus3.mmObject();

@@ -19,8 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.FinancialInstrumentQuantity1Choice;
+import com.tools20022.repository.entity.Balance;
 import com.tools20022.repository.entity.LotBreakdown;
+import com.tools20022.repository.GeneratedRepository;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -128,14 +131,14 @@ public class QuantityBreakdown12 {
 	 */
 	public static final MMMessageAssociationEnd mmLotNumber = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.LotBreakdown.mmLotNumber;
+			businessElementTrace_lazy = () -> LotBreakdown.mmLotNumber;
 			componentContext_lazy = () -> QuantityBreakdown12.mmObject();
 			isDerived = false;
 			xmlTag = "LotNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LotNumber";
 			definition = "Identification, for tax purposes, of a lot of identical securities that are bought at a certain date and at a certain price.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.QuantityBreakdown32.mmLotNumber);
+			nextVersions_lazy = () -> Arrays.asList(QuantityBreakdown32.mmLotNumber);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -186,14 +189,14 @@ public class QuantityBreakdown12 {
 	 */
 	public static final MMMessageAssociationEnd mmLotQuantity = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.LotBreakdown.mmSecuritiesQuantity;
+			businessElementTrace_lazy = () -> LotBreakdown.mmSecuritiesQuantity;
 			componentContext_lazy = () -> QuantityBreakdown12.mmObject();
 			isDerived = false;
 			xmlTag = "LotQty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LotQuantity";
 			definition = "Quantity of financial instruments that is part of the lot described.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.QuantityBreakdown32.mmLotQuantity);
+			nextVersions_lazy = () -> Arrays.asList(QuantityBreakdown32.mmLotQuantity);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -246,14 +249,14 @@ public class QuantityBreakdown12 {
 	 */
 	public static final MMMessageAssociationEnd mmSecuritiesSubBalanceType = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Balance.mmType;
+			businessElementTrace_lazy = () -> Balance.mmType;
 			componentContext_lazy = () -> QuantityBreakdown12.mmObject();
 			isDerived = false;
 			xmlTag = "SctiesSubBalTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesSubBalanceType";
 			definition = "Specifies the securities sub balance type indicator (example restriction type for a market infrastructure).";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.QuantityBreakdown32.mmSecuritiesSubBalanceType);
+			nextVersions_lazy = () -> Arrays.asList(QuantityBreakdown32.mmSecuritiesSubBalanceType);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -264,11 +267,10 @@ public class QuantityBreakdown12 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.QuantityBreakdown12.mmLotNumber, com.tools20022.repository.msg.QuantityBreakdown12.mmLotQuantity,
-						com.tools20022.repository.msg.QuantityBreakdown12.mmSecuritiesSubBalanceType);
+				messageElement_lazy = () -> Arrays.asList(QuantityBreakdown12.mmLotNumber, QuantityBreakdown12.mmLotQuantity, QuantityBreakdown12.mmSecuritiesSubBalanceType);
 				trace_lazy = () -> LotBreakdown.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
 						return DateFormat.getDateInstance(java.text.DateFormat.LONG).parse("May 5, 2016");

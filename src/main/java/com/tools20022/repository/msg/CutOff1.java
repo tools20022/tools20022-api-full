@@ -19,12 +19,15 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ActiveCurrencyCode;
 import com.tools20022.repository.datatype.DateOffsetText;
 import com.tools20022.repository.datatype.ISOTime;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.entity.Account;
 import com.tools20022.repository.entity.SystemAvailability;
 import com.tools20022.repository.entity.SystemEventInformation;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -108,7 +111,7 @@ public class CutOff1 {
 			componentContext_lazy = () -> CutOff1.mmObject();
 			isDerived = false;
 			xmlTag = "CutOffUpdId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CutOffUpdateIdentification";
 			definition = "Identification for the updated netting cut off.";
 			maxOccurs = 1;
@@ -151,11 +154,11 @@ public class CutOff1 {
 	 */
 	public static final MMMessageAttribute mmCurrency = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.mmBaseCurrency;
+			businessElementTrace_lazy = () -> Account.mmBaseCurrency;
 			componentContext_lazy = () -> CutOff1.mmObject();
 			isDerived = false;
 			xmlTag = "Ccy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Currency";
 			definition = "Currency linked to the netting cut off.";
 			maxOccurs = 1;
@@ -197,11 +200,11 @@ public class CutOff1 {
 	 */
 	public static final MMMessageAttribute mmCutOffTime = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SystemEventInformation.mmTime;
+			businessElementTrace_lazy = () -> SystemEventInformation.mmTime;
 			componentContext_lazy = () -> CutOff1.mmObject();
 			isDerived = false;
 			xmlTag = "CutOffTm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CutOffTime";
 			definition = "Cut off time value for the netting cut off.";
 			maxOccurs = 1;
@@ -245,7 +248,7 @@ public class CutOff1 {
 			componentContext_lazy = () -> CutOff1.mmObject();
 			isDerived = false;
 			xmlTag = "ValDtOffset";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValueDateOffset";
 			definition = "Specifies the offset in business days from the value date from which the netting cut off is to be applied.";
 			maxOccurs = 1;
@@ -257,11 +260,10 @@ public class CutOff1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CutOff1.mmCutOffUpdateIdentification, com.tools20022.repository.msg.CutOff1.mmCurrency, com.tools20022.repository.msg.CutOff1.mmCutOffTime,
-						com.tools20022.repository.msg.CutOff1.mmValueDateOffset);
+				messageElement_lazy = () -> Arrays.asList(CutOff1.mmCutOffUpdateIdentification, CutOff1.mmCurrency, CutOff1.mmCutOffTime, CutOff1.mmValueDateOffset);
 				trace_lazy = () -> SystemAvailability.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CutOff1";
 				definition = "Information that describes a netting cut off held at a central system.";
 			}

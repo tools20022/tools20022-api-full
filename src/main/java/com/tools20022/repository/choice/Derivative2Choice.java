@@ -20,10 +20,12 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.EmissionAllowanceProductType1Code;
 import com.tools20022.repository.entity.CreditDefaultSwap;
 import com.tools20022.repository.entity.Derivative;
 import com.tools20022.repository.entity.Future;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -112,11 +114,11 @@ public class Derivative2Choice {
 	 */
 	public static final MMMessageAssociationEnd mmCommodity = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Derivative.mmUnderlyingAsset;
+			businessElementTrace_lazy = () -> Derivative.mmUnderlyingAsset;
 			componentContext_lazy = () -> Derivative2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Cmmdty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Commodity";
 			definition = "Details specific for commodity derivatives.";
 			maxOccurs = 1;
@@ -160,11 +162,11 @@ public class Derivative2Choice {
 	 */
 	public static final MMMessageAssociationEnd mmInterestRate = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Derivative.mmUnderlyingAsset;
+			businessElementTrace_lazy = () -> Derivative.mmUnderlyingAsset;
 			componentContext_lazy = () -> Derivative2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "IntrstRate";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterestRate";
 			definition = "Details specific for Interest rate.";
 			maxOccurs = 1;
@@ -208,11 +210,11 @@ public class Derivative2Choice {
 	 */
 	public static final MMMessageAssociationEnd mmForeignExchange = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Derivative.mmUnderlyingAsset;
+			businessElementTrace_lazy = () -> Derivative.mmUnderlyingAsset;
 			componentContext_lazy = () -> Derivative2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "FX";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForeignExchange";
 			definition = "Details specific for Foreign exchange.";
 			maxOccurs = 1;
@@ -255,11 +257,11 @@ public class Derivative2Choice {
 	 */
 	public static final MMMessageAssociationEnd mmEquity = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Derivative.mmUnderlyingAsset;
+			businessElementTrace_lazy = () -> Derivative.mmUnderlyingAsset;
 			componentContext_lazy = () -> Derivative2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Eqty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Equity";
 			definition = "Details specific for Equity derivatives.";
 			maxOccurs = 1;
@@ -305,7 +307,7 @@ public class Derivative2Choice {
 			componentContext_lazy = () -> Derivative2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "CtrctForDiff";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ContractForDifference";
 			definition = "Details specific for Contract for difference (CFDs).";
 			maxOccurs = 1;
@@ -353,7 +355,7 @@ public class Derivative2Choice {
 			componentContext_lazy = () -> Derivative2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Cdt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Credit";
 			definition = "Details specific for a credit derivative.";
 			maxOccurs = 1;
@@ -401,7 +403,7 @@ public class Derivative2Choice {
 			componentContext_lazy = () -> Derivative2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "EmssnAllwnc";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EmissionAllowance";
 			definition = "Details specific for emission allowance derivatives";
 			maxOccurs = 1;
@@ -413,12 +415,11 @@ public class Derivative2Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Derivative2Choice.mmCommodity, com.tools20022.repository.choice.Derivative2Choice.mmInterestRate,
-						com.tools20022.repository.choice.Derivative2Choice.mmForeignExchange, com.tools20022.repository.choice.Derivative2Choice.mmEquity, com.tools20022.repository.choice.Derivative2Choice.mmContractForDifference,
-						com.tools20022.repository.choice.Derivative2Choice.mmCredit, com.tools20022.repository.choice.Derivative2Choice.mmEmissionAllowance);
+				messageElement_lazy = () -> Arrays.asList(Derivative2Choice.mmCommodity, Derivative2Choice.mmInterestRate, Derivative2Choice.mmForeignExchange, Derivative2Choice.mmEquity, Derivative2Choice.mmContractForDifference,
+						Derivative2Choice.mmCredit, Derivative2Choice.mmEmissionAllowance);
 				trace_lazy = () -> Derivative.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Derivative2Choice";
 				definition = "Choice element to define a derivative instrument.";
 			}

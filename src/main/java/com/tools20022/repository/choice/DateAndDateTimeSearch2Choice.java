@@ -19,7 +19,9 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.DateTimePeriod;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -95,7 +97,7 @@ public class DateAndDateTimeSearch2Choice {
 			componentContext_lazy = () -> DateAndDateTimeSearch2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Dt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Date";
 			definition = "Specified date.";
 			maxOccurs = 1;
@@ -137,7 +139,7 @@ public class DateAndDateTimeSearch2Choice {
 			componentContext_lazy = () -> DateAndDateTimeSearch2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "DtTm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DateTime";
 			definition = "Specified date and time.";
 			maxOccurs = 1;
@@ -149,10 +151,10 @@ public class DateAndDateTimeSearch2Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.DateAndDateTimeSearch2Choice.mmDate, com.tools20022.repository.choice.DateAndDateTimeSearch2Choice.mmDateTime);
+				messageElement_lazy = () -> Arrays.asList(DateAndDateTimeSearch2Choice.mmDate, DateAndDateTimeSearch2Choice.mmDateTime);
 				trace_lazy = () -> DateTimePeriod.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "DateAndDateTimeSearch2Choice";
 				definition = "Choice between a date or a date and time format.";
 			}

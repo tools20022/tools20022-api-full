@@ -20,10 +20,12 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.*;
 import com.tools20022.repository.codeset.*;
 import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.SecuritiesSettlement;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -181,7 +183,7 @@ public class SettlementInstructionQueryCriteria1 {
 			componentContext_lazy = () -> SettlementInstructionQueryCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "Refs";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "References";
 			definition = "Collective reference identifying a set of messages.";
 			minOccurs = 0;
@@ -222,7 +224,7 @@ public class SettlementInstructionQueryCriteria1 {
 			componentContext_lazy = () -> SettlementInstructionQueryCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "Sts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Status";
 			definition = "Provides the status of settlement of a transaction.";
 			minOccurs = 0;
@@ -266,7 +268,7 @@ public class SettlementInstructionQueryCriteria1 {
 			componentContext_lazy = () -> SettlementInstructionQueryCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "SctiesMvmntTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesMovementType";
 			definition = "Specifies if the movement on a securities account results from a deliver or a receive instruction.";
 			minOccurs = 0;
@@ -310,7 +312,7 @@ public class SettlementInstructionQueryCriteria1 {
 			componentContext_lazy = () -> SettlementInstructionQueryCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "Pmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Payment";
 			definition = "Specifies how the transaction is to be settled, for example, against payment.";
 			minOccurs = 0;
@@ -350,7 +352,7 @@ public class SettlementInstructionQueryCriteria1 {
 			componentContext_lazy = () -> SettlementInstructionQueryCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "SctiesTxTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesTransactionType";
 			definition = "Identifies the type of securities transaction.";
 			minOccurs = 0;
@@ -394,7 +396,7 @@ public class SettlementInstructionQueryCriteria1 {
 			componentContext_lazy = () -> SettlementInstructionQueryCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "FinInstrmId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentIdentification";
 			definition = "Financial instruments representing a sum of rights of the investor vis-a-vis the issuer.";
 			minOccurs = 0;
@@ -438,7 +440,7 @@ public class SettlementInstructionQueryCriteria1 {
 			componentContext_lazy = () -> SettlementInstructionQueryCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "Prty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Priority";
 			definition = "Specifies whether the transaction is to be executed with a high priority.";
 			minOccurs = 0;
@@ -479,7 +481,7 @@ public class SettlementInstructionQueryCriteria1 {
 			componentContext_lazy = () -> SettlementInstructionQueryCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "SfkpgAcct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingAccount";
 			definition = "Account where financial instruments are maintained.";
 			minOccurs = 0;
@@ -520,7 +522,7 @@ public class SettlementInstructionQueryCriteria1 {
 			componentContext_lazy = () -> SettlementInstructionQueryCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "CshAcct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashAccount";
 			definition = "Account in which cash is maintained.";
 			minOccurs = 0;
@@ -561,7 +563,7 @@ public class SettlementInstructionQueryCriteria1 {
 			componentContext_lazy = () -> SettlementInstructionQueryCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "TradDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeDate";
 			definition = "Specifies the date/time on which the trade was executed.";
 			maxOccurs = 1;
@@ -603,7 +605,7 @@ public class SettlementInstructionQueryCriteria1 {
 			componentContext_lazy = () -> SettlementInstructionQueryCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmQty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementQuantity";
 			definition = "Total quantity of securities to be settled.";
 			maxOccurs = 1;
@@ -645,7 +647,7 @@ public class SettlementInstructionQueryCriteria1 {
 			componentContext_lazy = () -> SettlementInstructionQueryCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "SttldQty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettledQuantity";
 			definition = "Total quantity of securities settled.";
 			maxOccurs = 1;
@@ -689,7 +691,7 @@ public class SettlementInstructionQueryCriteria1 {
 			componentContext_lazy = () -> SettlementInstructionQueryCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementAmount";
 			definition = "Total amount of money to be paid or received in exchange for the securities.";
 			maxOccurs = 1;
@@ -732,7 +734,7 @@ public class SettlementInstructionQueryCriteria1 {
 			componentContext_lazy = () -> SettlementInstructionQueryCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "SttldAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettledAmount";
 			definition = "Total amount of money paid or received in exchange for the securities.";
 			maxOccurs = 1;
@@ -778,7 +780,7 @@ public class SettlementInstructionQueryCriteria1 {
 			componentContext_lazy = () -> SettlementInstructionQueryCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "IntnddSttlmDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IntendedSettlementDate";
 			definition = "Date on which a transaction is expected to settle. That is, the intended day on which transfer of cash or assets is completed.";
 			maxOccurs = 1;
@@ -823,7 +825,7 @@ public class SettlementInstructionQueryCriteria1 {
 			componentContext_lazy = () -> SettlementInstructionQueryCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "FctvSttlmDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EffectiveSettlementDate";
 			definition = "Date and time at which a transaction is completed and cleared, that is a payment is effected and securities are delivered.";
 			maxOccurs = 1;
@@ -865,7 +867,7 @@ public class SettlementInstructionQueryCriteria1 {
 			componentContext_lazy = () -> SettlementInstructionQueryCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmCcy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementCurrency";
 			definition = "Currency in which the instructed amount is expressed.";
 			minOccurs = 0;
@@ -904,7 +906,7 @@ public class SettlementInstructionQueryCriteria1 {
 			componentContext_lazy = () -> SettlementInstructionQueryCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "SfkpgAcctOwnr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingAccountOwner";
 			definition = "Party that owns the account.";
 			minOccurs = 0;
@@ -946,7 +948,7 @@ public class SettlementInstructionQueryCriteria1 {
 			componentContext_lazy = () -> SettlementInstructionQueryCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "MsgOrgtr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageOriginator";
 			definition = "Party that originated the message, if other than the sender.";
 			minOccurs = 0;
@@ -986,7 +988,7 @@ public class SettlementInstructionQueryCriteria1 {
 			componentContext_lazy = () -> SettlementInstructionQueryCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "CntrptSttlmPties";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CounterpartSettlementParties";
 			definition = "Identifies the chain of counterparty settlement parties.";
 			minOccurs = 0;
@@ -1026,7 +1028,7 @@ public class SettlementInstructionQueryCriteria1 {
 			componentContext_lazy = () -> SettlementInstructionQueryCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "DlvrgSttlmPties";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeliveringSettlementParties";
 			definition = "Identifies the chain of delivering settlement parties.";
 			minOccurs = 0;
@@ -1066,7 +1068,7 @@ public class SettlementInstructionQueryCriteria1 {
 			componentContext_lazy = () -> SettlementInstructionQueryCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "RcvgSttlmPties";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceivingSettlementParties";
 			definition = "Identifies the chain of receiving settlement parties.";
 			minOccurs = 0;
@@ -1111,7 +1113,7 @@ public class SettlementInstructionQueryCriteria1 {
 			componentContext_lazy = () -> SettlementInstructionQueryCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "TradTxCond";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeTransactionCondition";
 			definition = "Provides the conditions under which the order/trade is to be/was executed.";
 			minOccurs = 0;
@@ -1154,7 +1156,7 @@ public class SettlementInstructionQueryCriteria1 {
 			componentContext_lazy = () -> SettlementInstructionQueryCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "SctiesTxCond";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesTransactionCondition";
 			definition = "Indicates the conditions under which the order/trade is to be/was executed.";
 			minOccurs = 0;
@@ -1198,11 +1200,11 @@ public class SettlementInstructionQueryCriteria1 {
 	 */
 	public static final MMMessageAttribute mmPartialSettlementIndicator = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmSettlementTransactionCondition;
+			businessElementTrace_lazy = () -> SecuritiesSettlement.mmSettlementTransactionCondition;
 			componentContext_lazy = () -> SettlementInstructionQueryCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "PrtlSttlmInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartialSettlementIndicator";
 			definition = "Specifies whether partial settlement is allowed.";
 			maxOccurs = 1;
@@ -1247,7 +1249,7 @@ public class SettlementInstructionQueryCriteria1 {
 			componentContext_lazy = () -> SettlementInstructionQueryCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "CondlSctiesDlvry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConditionalSecuritiesDelivery";
 			definition = "Specifies whether the transaction is under Conditional Securities Delivery (CoSD).";
 			maxOccurs = 1;
@@ -1291,7 +1293,7 @@ public class SettlementInstructionQueryCriteria1 {
 			componentContext_lazy = () -> SettlementInstructionQueryCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "CtryOfIsse";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CountryOfIssue";
 			definition = "Primary market or country where a security is issued by the issuer or its agent.";
 			minOccurs = 0;
@@ -1336,7 +1338,7 @@ public class SettlementInstructionQueryCriteria1 {
 			componentContext_lazy = () -> SettlementInstructionQueryCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "IssrCSD";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssuerCSD";
 			definition = "Central securities depository (CSD) in which financial instruments are issued (or immobilised). The issuer CSD opens accounts allowing investors (in a direct holding system) and/or intermediaries (including investor CSDs) to hold these financial instruments.";
 			minOccurs = 0;
@@ -1379,7 +1381,7 @@ public class SettlementInstructionQueryCriteria1 {
 			componentContext_lazy = () -> SettlementInstructionQueryCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "HldInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HoldIndicator";
 			definition = "Specifies whether the transaction is on hold, blocked or frozen.";
 			minOccurs = 0;
@@ -1390,24 +1392,19 @@ public class SettlementInstructionQueryCriteria1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SettlementInstructionQueryCriteria1.mmReferences, com.tools20022.repository.msg.SettlementInstructionQueryCriteria1.mmStatus,
-						com.tools20022.repository.msg.SettlementInstructionQueryCriteria1.mmSecuritiesMovementType, com.tools20022.repository.msg.SettlementInstructionQueryCriteria1.mmPayment,
-						com.tools20022.repository.msg.SettlementInstructionQueryCriteria1.mmSecuritiesTransactionType, com.tools20022.repository.msg.SettlementInstructionQueryCriteria1.mmFinancialInstrumentIdentification,
-						com.tools20022.repository.msg.SettlementInstructionQueryCriteria1.mmPriority, com.tools20022.repository.msg.SettlementInstructionQueryCriteria1.mmSafekeepingAccount,
-						com.tools20022.repository.msg.SettlementInstructionQueryCriteria1.mmCashAccount, com.tools20022.repository.msg.SettlementInstructionQueryCriteria1.mmTradeDate,
-						com.tools20022.repository.msg.SettlementInstructionQueryCriteria1.mmSettlementQuantity, com.tools20022.repository.msg.SettlementInstructionQueryCriteria1.mmSettledQuantity,
-						com.tools20022.repository.msg.SettlementInstructionQueryCriteria1.mmSettlementAmount, com.tools20022.repository.msg.SettlementInstructionQueryCriteria1.mmSettledAmount,
-						com.tools20022.repository.msg.SettlementInstructionQueryCriteria1.mmIntendedSettlementDate, com.tools20022.repository.msg.SettlementInstructionQueryCriteria1.mmEffectiveSettlementDate,
-						com.tools20022.repository.msg.SettlementInstructionQueryCriteria1.mmSettlementCurrency, com.tools20022.repository.msg.SettlementInstructionQueryCriteria1.mmSafekeepingAccountOwner,
-						com.tools20022.repository.msg.SettlementInstructionQueryCriteria1.mmMessageOriginator, com.tools20022.repository.msg.SettlementInstructionQueryCriteria1.mmCounterpartSettlementParties,
-						com.tools20022.repository.msg.SettlementInstructionQueryCriteria1.mmDeliveringSettlementParties, com.tools20022.repository.msg.SettlementInstructionQueryCriteria1.mmReceivingSettlementParties,
-						com.tools20022.repository.msg.SettlementInstructionQueryCriteria1.mmTradeTransactionCondition, com.tools20022.repository.msg.SettlementInstructionQueryCriteria1.mmSecuritiesTransactionCondition,
-						com.tools20022.repository.msg.SettlementInstructionQueryCriteria1.mmPartialSettlementIndicator, com.tools20022.repository.msg.SettlementInstructionQueryCriteria1.mmConditionalSecuritiesDelivery,
-						com.tools20022.repository.msg.SettlementInstructionQueryCriteria1.mmCountryOfIssue, com.tools20022.repository.msg.SettlementInstructionQueryCriteria1.mmIssuerCSD,
-						com.tools20022.repository.msg.SettlementInstructionQueryCriteria1.mmHoldIndicator);
+				messageElement_lazy = () -> Arrays.asList(SettlementInstructionQueryCriteria1.mmReferences, SettlementInstructionQueryCriteria1.mmStatus, SettlementInstructionQueryCriteria1.mmSecuritiesMovementType,
+						SettlementInstructionQueryCriteria1.mmPayment, SettlementInstructionQueryCriteria1.mmSecuritiesTransactionType, SettlementInstructionQueryCriteria1.mmFinancialInstrumentIdentification,
+						SettlementInstructionQueryCriteria1.mmPriority, SettlementInstructionQueryCriteria1.mmSafekeepingAccount, SettlementInstructionQueryCriteria1.mmCashAccount, SettlementInstructionQueryCriteria1.mmTradeDate,
+						SettlementInstructionQueryCriteria1.mmSettlementQuantity, SettlementInstructionQueryCriteria1.mmSettledQuantity, SettlementInstructionQueryCriteria1.mmSettlementAmount,
+						SettlementInstructionQueryCriteria1.mmSettledAmount, SettlementInstructionQueryCriteria1.mmIntendedSettlementDate, SettlementInstructionQueryCriteria1.mmEffectiveSettlementDate,
+						SettlementInstructionQueryCriteria1.mmSettlementCurrency, SettlementInstructionQueryCriteria1.mmSafekeepingAccountOwner, SettlementInstructionQueryCriteria1.mmMessageOriginator,
+						SettlementInstructionQueryCriteria1.mmCounterpartSettlementParties, SettlementInstructionQueryCriteria1.mmDeliveringSettlementParties, SettlementInstructionQueryCriteria1.mmReceivingSettlementParties,
+						SettlementInstructionQueryCriteria1.mmTradeTransactionCondition, SettlementInstructionQueryCriteria1.mmSecuritiesTransactionCondition, SettlementInstructionQueryCriteria1.mmPartialSettlementIndicator,
+						SettlementInstructionQueryCriteria1.mmConditionalSecuritiesDelivery, SettlementInstructionQueryCriteria1.mmCountryOfIssue, SettlementInstructionQueryCriteria1.mmIssuerCSD,
+						SettlementInstructionQueryCriteria1.mmHoldIndicator);
 				trace_lazy = () -> SecuritiesSettlement.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SettlementInstructionQueryCriteria1";
 				definition = "Defines the criteria based on which information is included.";
 			}

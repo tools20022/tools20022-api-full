@@ -19,6 +19,8 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -90,7 +92,7 @@ public class IssuerOrInvestor1choice {
 			componentContext_lazy = () -> IssuerOrInvestor1choice.mmObject();
 			isDerived = false;
 			xmlTag = "IssrCSD";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssuerCSD";
 			definition = "CSD Issuer of a security.";
 			maxOccurs = 1;
@@ -132,7 +134,7 @@ public class IssuerOrInvestor1choice {
 			componentContext_lazy = () -> IssuerOrInvestor1choice.mmObject();
 			isDerived = false;
 			xmlTag = "InvstrCSD";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestorCSD";
 			definition = "CSD Investor of a security.";
 			maxOccurs = 1;
@@ -145,9 +147,9 @@ public class IssuerOrInvestor1choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.IssuerOrInvestor1choice.mmIssuerCSD, com.tools20022.repository.choice.IssuerOrInvestor1choice.mmInvestorCSD);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(IssuerOrInvestor1choice.mmIssuerCSD, IssuerOrInvestor1choice.mmInvestorCSD);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "IssuerOrInvestor1choice";
 				definition = "Defines how the CSD is linked to the security.";
 			}

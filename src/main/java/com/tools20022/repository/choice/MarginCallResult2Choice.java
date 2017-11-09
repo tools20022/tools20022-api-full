@@ -19,7 +19,9 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.MarginCall;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.MarginCallResult2;
 import com.tools20022.repository.msg.Result1;
 import java.util.Arrays;
@@ -109,7 +111,7 @@ public class MarginCallResult2Choice {
 			componentContext_lazy = () -> MarginCallResult2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "MrgnCallRsltDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarginCallResultDetails";
 			definition = "Provides the summation of the call amounts for the variation margin and optionaly the segregated independent amount.";
 			maxOccurs = 1;
@@ -151,11 +153,11 @@ public class MarginCallResult2Choice {
 	 */
 	public static final MMMessageAssociationEnd mmMarginCallAmount = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.MarginCall.mmVariationMargin;
+			businessElementTrace_lazy = () -> MarginCall.mmVariationMargin;
 			componentContext_lazy = () -> MarginCallResult2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "MrgnCallAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarginCallAmount";
 			definition = "Provides the summation of the call amounts.";
 			maxOccurs = 1;
@@ -200,11 +202,11 @@ public class MarginCallResult2Choice {
 	 */
 	public static final MMMessageAssociationEnd mmSegregatedIndependentAmount = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.MarginCall.mmSegregatedIndependentAmount;
+			businessElementTrace_lazy = () -> MarginCall.mmSegregatedIndependentAmount;
 			componentContext_lazy = () -> MarginCallResult2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "SgrtdIndpdntAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SegregatedIndependentAmount";
 			definition = "Provides the summation of the call amounts for the segregated independent amount only.";
 			maxOccurs = 1;
@@ -217,11 +219,10 @@ public class MarginCallResult2Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.MarginCallResult2Choice.mmMarginCallResultDetails, com.tools20022.repository.choice.MarginCallResult2Choice.mmMarginCallAmount,
-						com.tools20022.repository.choice.MarginCallResult2Choice.mmSegregatedIndependentAmount);
+				messageElement_lazy = () -> Arrays.asList(MarginCallResult2Choice.mmMarginCallResultDetails, MarginCallResult2Choice.mmMarginCallAmount, MarginCallResult2Choice.mmSegregatedIndependentAmount);
 				trace_lazy = () -> MarginCall.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MarginCallResult2Choice";
 				definition = "Choice to provide the summation of the call amounts for the variation margin and the segregated independent amount, or the segregated independent amount only.";
 			}

@@ -20,10 +20,12 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.DocumentNumber1Choice;
 import com.tools20022.repository.choice.ProcessingPosition2Choice;
 import com.tools20022.repository.choice.References6Choice;
 import com.tools20022.repository.entity.SecuritiesTradeIdentification;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -101,7 +103,7 @@ public class Linkages3 {
 			componentContext_lazy = () -> Linkages3.mmObject();
 			isDerived = false;
 			xmlTag = "PrcgPos";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProcessingPosition";
 			definition = "When the transaction is to be executed relative to a linked transaction.";
 			maxOccurs = 1;
@@ -144,7 +146,7 @@ public class Linkages3 {
 			componentContext_lazy = () -> Linkages3.mmObject();
 			isDerived = false;
 			xmlTag = "MsgNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageNumber";
 			definition = "Message type number/message identifier of the message referenced in the linkage sequence.";
 			maxOccurs = 1;
@@ -190,7 +192,7 @@ public class Linkages3 {
 			componentContext_lazy = () -> Linkages3.mmObject();
 			isDerived = false;
 			xmlTag = "Ref";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reference";
 			definition = "Reference to the linked transaction.";
 			maxOccurs = 1;
@@ -203,10 +205,10 @@ public class Linkages3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Linkages3.mmProcessingPosition, com.tools20022.repository.msg.Linkages3.mmMessageNumber, com.tools20022.repository.msg.Linkages3.mmReference);
+				messageElement_lazy = () -> Arrays.asList(Linkages3.mmProcessingPosition, Linkages3.mmMessageNumber, Linkages3.mmReference);
 				trace_lazy = () -> SecuritiesTradeIdentification.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Linkages3";
 				definition = "Information related to a linked transaction.";
 			}

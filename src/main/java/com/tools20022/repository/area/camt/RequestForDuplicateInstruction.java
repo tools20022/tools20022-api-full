@@ -20,6 +20,7 @@ package com.tools20022.repository.area.camt;
 import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.CashManagementArchive;
 import com.tools20022.repository.msg.Case;
 import com.tools20022.repository.msg.CaseAssignment;
@@ -42,6 +43,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code camt.033.001.01}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.CashManagementArchive
@@ -70,9 +74,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * RequestForDuplicateInstruction.mmCase}</li>
  * </ul>
  * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code camt.033.001.01}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -111,7 +112,7 @@ public class RequestForDuplicateInstruction {
 	public static final MMMessageBuildingBlock mmAssignment = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Assgnmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Assignment";
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -140,7 +141,7 @@ public class RequestForDuplicateInstruction {
 	public static final MMMessageBuildingBlock mmCase = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Case";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Case";
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -151,7 +152,7 @@ public class RequestForDuplicateInstruction {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RequestForDuplicateInstruction";
 				definition = "Scope\nThe Request For Duplicate message is sent by the case assignee to the case creator or case assigner.\nThis message is used to request a copy of the original payment instruction considered in the case.\nUsage\nThe Request For Duplicate message:\n- must be answered with a Duplicate message\n- must be used when a case assignee requests a copy of the original payment instruction. This occurs, for example, when the case assignee cannot trace the payment instruction based on the elements mentioned in the case assignment message\n- covers one and only one instruction at a time. If several payment instruction copies are needed by the case assignee, then multiple Request For Duplicate messages must be sent\n- must be used exclusively between the case assignee and its case creator/case assigner";
 				messageSet_lazy = () -> Arrays.asList(ISOArchive.mmObject());
@@ -159,7 +160,7 @@ public class RequestForDuplicateInstruction {
 				xmlTag = "camt.033.001.01";
 				businessArea_lazy = () -> CashManagementArchive.mmObject();
 				xmlName = "camt.033.001.01";
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.RequestForDuplicateInstruction.mmAssignment, com.tools20022.repository.area.camt.RequestForDuplicateInstruction.mmCase);
+				messageBuildingBlock_lazy = () -> Arrays.asList(RequestForDuplicateInstruction.mmAssignment, RequestForDuplicateInstruction.mmCase);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "camt";

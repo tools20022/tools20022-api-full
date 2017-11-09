@@ -19,11 +19,13 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Max2000Text;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.Demand;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -103,7 +105,7 @@ public class Demand2 {
 			componentContext_lazy = () -> Demand2.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Unique and unambiguous identifier assigned by the presenting party to the demand.";
 			maxOccurs = 1;
@@ -145,11 +147,11 @@ public class Demand2 {
 	 */
 	public static final MMMessageAttribute mmSubmissionDateTime = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Demand.mmSubmissionDateTime;
+			businessElementTrace_lazy = () -> Demand.mmSubmissionDateTime;
 			componentContext_lazy = () -> Demand2.mmObject();
 			isDerived = false;
 			xmlTag = "SubmissnDtTm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubmissionDateTime";
 			definition = "Date and time the demand is submitted.";
 			maxOccurs = 1;
@@ -192,11 +194,11 @@ public class Demand2 {
 	 */
 	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Demand.mmDemandAmount;
+			businessElementTrace_lazy = () -> Demand.mmDemandAmount;
 			componentContext_lazy = () -> Demand2.mmObject();
 			isDerived = false;
 			xmlTag = "Amt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Amount and currency of the demand.";
 			maxOccurs = 1;
@@ -236,7 +238,7 @@ public class Demand2 {
 			componentContext_lazy = () -> Demand2.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInformation";
 			definition = "Additional information related to the demand.";
 			maxOccurs = 5;
@@ -248,11 +250,10 @@ public class Demand2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Demand2.mmIdentification, com.tools20022.repository.msg.Demand2.mmSubmissionDateTime, com.tools20022.repository.msg.Demand2.mmAmount,
-						com.tools20022.repository.msg.Demand2.mmAdditionalInformation);
+				messageElement_lazy = () -> Arrays.asList(Demand2.mmIdentification, Demand2.mmSubmissionDateTime, Demand2.mmAmount, Demand2.mmAdditionalInformation);
 				trace_lazy = () -> Demand.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Demand2";
 				definition = "Information about the demand.";
 			}

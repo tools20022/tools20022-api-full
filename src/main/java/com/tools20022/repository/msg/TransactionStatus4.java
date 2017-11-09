@@ -19,8 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.tsmt.*;
 import com.tools20022.repository.codeset.BaselineStatus3Code;
 import com.tools20022.repository.entity.BaselineStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -182,11 +185,11 @@ public class TransactionStatus4 {
 	 */
 	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BaselineStatus.mmStatus;
+			businessElementTrace_lazy = () -> BaselineStatus.mmStatus;
 			componentContext_lazy = () -> TransactionStatus4.mmObject();
 			isDerived = false;
 			xmlTag = "Sts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Status";
 			definition = "Identifies the status of the transaction by means of a code.";
 			maxOccurs = 1;
@@ -198,24 +201,18 @@ public class TransactionStatus4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionStatus4.mmStatus);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.AcknowledgementV03.mmTransactionStatus, com.tools20022.repository.area.tsmt.AmendmentAcceptanceNotificationV03.mmTransactionStatus,
-						com.tools20022.repository.area.tsmt.AmendmentRejectionNotificationV03.mmTransactionStatus, com.tools20022.repository.area.tsmt.BaselineMatchReportV03.mmTransactionStatus,
-						com.tools20022.repository.area.tsmt.BaselineReportV03.mmTransactionStatus, com.tools20022.repository.area.tsmt.DataSetMatchReportV03.mmTransactionStatus,
-						com.tools20022.repository.area.tsmt.DeltaReportV03.mmTransactionStatus, com.tools20022.repository.area.tsmt.ErrorReportV03.mmTransactionStatus,
-						com.tools20022.repository.area.tsmt.FullPushThroughReportV03.mmTransactionStatus, com.tools20022.repository.area.tsmt.MisMatchAcceptanceNotificationV03.mmTransactionStatus,
-						com.tools20022.repository.area.tsmt.MisMatchRejectionNotificationV03.mmTransactionStatus, com.tools20022.repository.area.tsmt.ActionReminderV03.mmTransactionStatus,
-						com.tools20022.repository.area.tsmt.StatusChangeNotificationV03.mmTransactionStatus, com.tools20022.repository.area.tsmt.StatusChangeRequestNotificationV03.mmTransactionStatus,
-						com.tools20022.repository.area.tsmt.StatusChangeRequestRejectionNotificationV03.mmTransactionStatus, com.tools20022.repository.area.tsmt.StatusExtensionRequestAcceptanceV03.mmExtendedStatus,
-						com.tools20022.repository.area.tsmt.StatusExtensionRequestRejectionV03.mmStatusNotToBeExtended, com.tools20022.repository.area.tsmt.StatusExtensionRejectionNotificationV03.mmNonExtendedStatus,
-						com.tools20022.repository.area.tsmt.TimeOutNotificationV03.mmTransactionStatus, com.tools20022.repository.area.tsmt.ForwardIntentToPayNotificationV01.mmTransactionStatus,
-						com.tools20022.repository.area.tsmt.SpecialNotificationV01.mmTransactionStatus, com.tools20022.repository.area.tsmt.RoleAndBaselineAcceptanceNotificationV01.mmTransactionStatus,
-						com.tools20022.repository.area.tsmt.RoleAndBaselineRejectionNotificationV01.mmTransactionStatus, com.tools20022.repository.area.tsmt.FullPushThroughReportV04.mmTransactionStatus,
-						com.tools20022.repository.area.tsmt.ForwardIntentToPayNotificationV02.mmTransactionStatus, com.tools20022.repository.area.tsmt.BaselineReportV04.mmTransactionStatus,
-						com.tools20022.repository.area.tsmt.FullPushThroughReportV05.mmTransactionStatus);
+				messageElement_lazy = () -> Arrays.asList(TransactionStatus4.mmStatus);
+				messageBuildingBlock_lazy = () -> Arrays.asList(AcknowledgementV03.mmTransactionStatus, AmendmentAcceptanceNotificationV03.mmTransactionStatus, AmendmentRejectionNotificationV03.mmTransactionStatus,
+						BaselineMatchReportV03.mmTransactionStatus, BaselineReportV03.mmTransactionStatus, DataSetMatchReportV03.mmTransactionStatus, DeltaReportV03.mmTransactionStatus, ErrorReportV03.mmTransactionStatus,
+						FullPushThroughReportV03.mmTransactionStatus, MisMatchAcceptanceNotificationV03.mmTransactionStatus, MisMatchRejectionNotificationV03.mmTransactionStatus, ActionReminderV03.mmTransactionStatus,
+						StatusChangeNotificationV03.mmTransactionStatus, StatusChangeRequestNotificationV03.mmTransactionStatus, StatusChangeRequestRejectionNotificationV03.mmTransactionStatus,
+						StatusExtensionRequestAcceptanceV03.mmExtendedStatus, StatusExtensionRequestRejectionV03.mmStatusNotToBeExtended, StatusExtensionRejectionNotificationV03.mmNonExtendedStatus,
+						TimeOutNotificationV03.mmTransactionStatus, ForwardIntentToPayNotificationV01.mmTransactionStatus, SpecialNotificationV01.mmTransactionStatus, RoleAndBaselineAcceptanceNotificationV01.mmTransactionStatus,
+						RoleAndBaselineRejectionNotificationV01.mmTransactionStatus, FullPushThroughReportV04.mmTransactionStatus, ForwardIntentToPayNotificationV02.mmTransactionStatus, BaselineReportV04.mmTransactionStatus,
+						FullPushThroughReportV05.mmTransactionStatus);
 				trace_lazy = () -> BaselineStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TransactionStatus4";
 				definition = "Identifies the status of the transaction by means of a code.";
 			}

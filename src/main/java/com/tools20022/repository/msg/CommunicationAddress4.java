@@ -19,8 +19,15 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.seev.MeetingResultDisseminationV02;
+import com.tools20022.repository.area.seev.MeetingResultDisseminationV03;
+import com.tools20022.repository.area.seev.MeetingResultDisseminationV04;
+import com.tools20022.repository.area.seev.MeetingResultDisseminationV05;
 import com.tools20022.repository.datatype.Max256Text;
 import com.tools20022.repository.entity.ContactPoint;
+import com.tools20022.repository.entity.ElectronicAddress;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -116,11 +123,11 @@ public class CommunicationAddress4 {
 	 */
 	public static final MMMessageAttribute mmEmailAddress = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ElectronicAddress.mmEmailAddress;
+			businessElementTrace_lazy = () -> ElectronicAddress.mmEmailAddress;
 			componentContext_lazy = () -> CommunicationAddress4.mmObject();
 			isDerived = false;
 			xmlTag = "EmailAdr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EmailAddress";
 			definition = "Address for electronic mail (e-mail).";
 			maxOccurs = 1;
@@ -166,11 +173,11 @@ public class CommunicationAddress4 {
 	 */
 	public static final MMMessageAttribute mmURLAddress = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ElectronicAddress.mmURLAddress;
+			businessElementTrace_lazy = () -> ElectronicAddress.mmURLAddress;
 			componentContext_lazy = () -> CommunicationAddress4.mmObject();
 			isDerived = false;
 			xmlTag = "URLAdr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "URLAddress";
 			definition = "Address for the Universal Resource Locator (URL), eg, used over the www (HTTP) service.";
 			maxOccurs = 1;
@@ -182,13 +189,12 @@ public class CommunicationAddress4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CommunicationAddress4.mmEmailAddress, com.tools20022.repository.msg.CommunicationAddress4.mmURLAddress);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.MeetingResultDisseminationV02.mmAdditionalInformation,
-						com.tools20022.repository.area.seev.MeetingResultDisseminationV03.mmAdditionalInformation, com.tools20022.repository.area.seev.MeetingResultDisseminationV04.mmAdditionalInformation,
-						com.tools20022.repository.area.seev.MeetingResultDisseminationV05.mmAdditionalInformation);
+				messageElement_lazy = () -> Arrays.asList(CommunicationAddress4.mmEmailAddress, CommunicationAddress4.mmURLAddress);
+				messageBuildingBlock_lazy = () -> Arrays.asList(MeetingResultDisseminationV02.mmAdditionalInformation, MeetingResultDisseminationV03.mmAdditionalInformation, MeetingResultDisseminationV04.mmAdditionalInformation,
+						MeetingResultDisseminationV05.mmAdditionalInformation);
 				trace_lazy = () -> ContactPoint.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CommunicationAddress4";
 				definition = "Communication device number or electronic address used for communication.";
 			}

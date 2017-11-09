@@ -20,7 +20,11 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.seev.*;
 import com.tools20022.repository.entity.SecuritiesBalance;
+import com.tools20022.repository.entity.Security;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -144,14 +148,14 @@ public class SecurityPosition6 {
 	 */
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmIdentification;
+			businessElementTrace_lazy = () -> Security.mmIdentification;
 			componentContext_lazy = () -> SecurityPosition6.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Identification of a security, as assigned under a formal or proprietary identification scheme.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecurityPosition8.mmFinancialInstrumentIdentification);
+			nextVersions_lazy = () -> Arrays.asList(SecurityPosition8.mmFinancialInstrumentIdentification);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> com.tools20022.repository.msg.SecurityIdentification11.mmObject();
@@ -203,10 +207,10 @@ public class SecurityPosition6 {
 			componentContext_lazy = () -> SecurityPosition6.mmObject();
 			isDerived = false;
 			xmlTag = "Pos";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Position";
 			definition = "Amount of securities that are eligible for the vote.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecurityPosition8.mmPosition);
+			nextVersions_lazy = () -> Arrays.asList(SecurityPosition8.mmPosition);
 			maxOccurs = 1000;
 			minOccurs = 0;
 			isComposite = true;
@@ -217,14 +221,12 @@ public class SecurityPosition6 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecurityPosition6.mmIdentification, com.tools20022.repository.msg.SecurityPosition6.mmPosition);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.MeetingNotificationV03.mmSecurity, com.tools20022.repository.area.seev.MeetingNotificationV04.mmSecurity,
-						com.tools20022.repository.area.seev.MeetingCancellationV03.mmSecurity, com.tools20022.repository.area.seev.MeetingCancellationV04.mmSecurity,
-						com.tools20022.repository.area.seev.MeetingEntitlementNotificationV03.mmSecurity, com.tools20022.repository.area.seev.MeetingResultDisseminationV03.mmSecurity,
-						com.tools20022.repository.area.seev.MeetingResultDisseminationV04.mmSecurity);
+				messageElement_lazy = () -> Arrays.asList(SecurityPosition6.mmIdentification, SecurityPosition6.mmPosition);
+				messageBuildingBlock_lazy = () -> Arrays.asList(MeetingNotificationV03.mmSecurity, MeetingNotificationV04.mmSecurity, MeetingCancellationV03.mmSecurity, MeetingCancellationV04.mmSecurity,
+						MeetingEntitlementNotificationV03.mmSecurity, MeetingResultDisseminationV03.mmSecurity, MeetingResultDisseminationV04.mmSecurity);
 				trace_lazy = () -> SecuritiesBalance.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecurityPosition6";
 				definition = "Identifies the securities for which the meeting is organised.";
 				nextVersions_lazy = () -> Arrays.asList(SecurityPosition8.mmObject());

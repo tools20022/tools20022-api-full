@@ -20,6 +20,7 @@ package com.tools20022.repository.area.secl;
 import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.SecuritiesClearingLatestVersion;
 import com.tools20022.repository.choice.PartyIdentification35Choice;
 import com.tools20022.repository.msg.*;
@@ -45,6 +46,9 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code secl.001.001.03}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.SecuritiesClearingLatestVersion
@@ -92,9 +96,6 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code secl.001.001.03}</li>
- * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -139,7 +140,7 @@ public class TradeLegNotificationV03 {
 	public static final MMMessageBuildingBlock mmClearingMember = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "ClrMmb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClearingMember";
 			definition = "Provides the identification of the clearing member (individual clearing member or general clearing member).";
 			maxOccurs = 1;
@@ -177,7 +178,7 @@ public class TradeLegNotificationV03 {
 	public static final MMMessageBuildingBlock mmClearingAccount = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "ClrAcct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClearingAccount";
 			definition = "Identifies the clearing member account at the CCP through which the trade must be cleared (sometimes called position account).";
 			maxOccurs = 1;
@@ -217,7 +218,7 @@ public class TradeLegNotificationV03 {
 	public static final MMMessageBuildingBlock mmDeliveryAccount = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "DlvryAcct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeliveryAccount";
 			definition = "An account opened by the central counterparty in the name of the clearing member or its settlement agent within the account structure, for settlement purposes (gives information about the clearing member/its settlement agent account at the central securities depository).";
 			maxOccurs = 1;
@@ -255,7 +256,7 @@ public class TradeLegNotificationV03 {
 	public static final MMMessageBuildingBlock mmNonClearingMember = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "NonClrMmb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonClearingMember";
 			definition = "Provides details about the non clearing member identification and account.";
 			maxOccurs = 1;
@@ -292,7 +293,7 @@ public class TradeLegNotificationV03 {
 	public static final MMMessageBuildingBlock mmClearingDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "ClrDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClearingDetails";
 			definition = "Provides clearing details such as the settlement netting (or not) eligibility code or the clearing segment.";
 			maxOccurs = 1;
@@ -329,7 +330,7 @@ public class TradeLegNotificationV03 {
 	public static final MMMessageBuildingBlock mmTradeLegDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "TradLegDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeLegDetails";
 			definition = "Provides details about the trade leg such as the trade date, the settlement date or the trading currency.";
 			maxOccurs = 1;
@@ -366,7 +367,7 @@ public class TradeLegNotificationV03 {
 	public static final MMMessageBuildingBlock mmSettlementDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SttlmDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementDetails";
 			definition = "Provides details about the settlement details of the trade leg such the settlement amount or the place of settlement.";
 			maxOccurs = 1;
@@ -404,7 +405,7 @@ public class TradeLegNotificationV03 {
 	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SplmtryData";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryData";
 			definition = "Additional information that can not be captured in the structured fields and/or any other specific block. ";
 			minOccurs = 0;
@@ -415,17 +416,15 @@ public class TradeLegNotificationV03 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TradeLegNotificationV03";
 				definition = "Scope\r\nThe TradeLegNotification message is sent by the central counterparty (CCP) to a clearing member to report the trade that has been executed by the trading platform.\r\n\r\nThe message definition is intended for use with the ISO20022 Business Application Header.\r\n\r\nUsage\r\nThe CCP reports both sides of the trade from the clearing member perspective. The CCP sends a message to the global clearing member of the seller and a message to the global clearing member of the buyer. Note: An individual clearing member only clear its own trades.";
 				messageSet_lazy = () -> Arrays.asList(CentralCounterPartyCCPSecuritiesClearingISOLatestversion.mmObject());
 				rootElement = "Document";
 				xmlTag = "TradLegNtfctn";
 				businessArea_lazy = () -> SecuritiesClearingLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.secl.TradeLegNotificationV03.mmClearingMember, com.tools20022.repository.area.secl.TradeLegNotificationV03.mmClearingAccount,
-						com.tools20022.repository.area.secl.TradeLegNotificationV03.mmDeliveryAccount, com.tools20022.repository.area.secl.TradeLegNotificationV03.mmNonClearingMember,
-						com.tools20022.repository.area.secl.TradeLegNotificationV03.mmClearingDetails, com.tools20022.repository.area.secl.TradeLegNotificationV03.mmTradeLegDetails,
-						com.tools20022.repository.area.secl.TradeLegNotificationV03.mmSettlementDetails, com.tools20022.repository.area.secl.TradeLegNotificationV03.mmSupplementaryData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(TradeLegNotificationV03.mmClearingMember, TradeLegNotificationV03.mmClearingAccount, TradeLegNotificationV03.mmDeliveryAccount, TradeLegNotificationV03.mmNonClearingMember,
+						TradeLegNotificationV03.mmClearingDetails, TradeLegNotificationV03.mmTradeLegDetails, TradeLegNotificationV03.mmSettlementDetails, TradeLegNotificationV03.mmSupplementaryData);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "secl";

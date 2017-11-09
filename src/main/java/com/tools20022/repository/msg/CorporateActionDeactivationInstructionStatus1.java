@@ -17,13 +17,13 @@
 
 package com.tools20022.repository.msg;
 
-import com.tools20022.metamodel.MMMessageAssociationEnd;
-import com.tools20022.metamodel.MMMessageAttribute;
-import com.tools20022.metamodel.MMMessageComponent;
-import com.tools20022.metamodel.MMXor;
+import com.tools20022.metamodel.*;
+import com.tools20022.repository.area.seev.AgentCADeactivationStatusAdviceV01;
 import com.tools20022.repository.choice.CorporateActionOption1FormatChoice;
 import com.tools20022.repository.datatype.Exact3NumericText;
+import com.tools20022.repository.entity.CorporateActionOption;
 import com.tools20022.repository.entity.CorporateActionStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -129,11 +129,11 @@ public class CorporateActionDeactivationInstructionStatus1 {
 	 */
 	public static final MMMessageAttribute mmOptionType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionOption.mmOptionType;
+			businessElementTrace_lazy = () -> CorporateActionOption.mmOptionType;
 			componentContext_lazy = () -> CorporateActionDeactivationInstructionStatus1.mmObject();
 			isDerived = false;
 			xmlTag = "OptnTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionType";
 			definition = "Specifies the corporate action options available to the account owner.";
 			maxOccurs = 1;
@@ -178,11 +178,11 @@ public class CorporateActionDeactivationInstructionStatus1 {
 	 */
 	public static final MMMessageAttribute mmOptionNumber = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionOption.mmOptionNumber;
+			businessElementTrace_lazy = () -> CorporateActionOption.mmOptionNumber;
 			componentContext_lazy = () -> CorporateActionDeactivationInstructionStatus1.mmObject();
 			isDerived = false;
 			xmlTag = "OptnNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionNumber";
 			definition = "Number identifying the available corporate action options.";
 			maxOccurs = 1;
@@ -230,7 +230,7 @@ public class CorporateActionDeactivationInstructionStatus1 {
 			componentContext_lazy = () -> CorporateActionDeactivationInstructionStatus1.mmObject();
 			isDerived = false;
 			xmlTag = "PrcdSts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProcessedStatus";
 			definition = "Provides information about the processing status of the instruction.";
 			maxOccurs = 1;
@@ -278,7 +278,7 @@ public class CorporateActionDeactivationInstructionStatus1 {
 			componentContext_lazy = () -> CorporateActionDeactivationInstructionStatus1.mmObject();
 			isDerived = false;
 			xmlTag = "RjctdSts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RejectedStatus";
 			definition = "Provides information about the rejection status.";
 			maxOccurs = 1;
@@ -292,6 +292,10 @@ public class CorporateActionDeactivationInstructionStatus1 {
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
+	 * messageComponent} =
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDeactivationInstructionStatus1
+	 * CorporateActionDeactivationInstructionStatus1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getImpactedElements
 	 * impactedElements} =
 	 * <ul>
@@ -303,10 +307,6 @@ public class CorporateActionDeactivationInstructionStatus1 {
 	 * CorporateActionDeactivationInstructionStatus1.mmRejectedStatus}</li>
 	 * </ul>
 	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
-	 * messageComponent} =
-	 * {@linkplain com.tools20022.repository.msg.CorporateActionDeactivationInstructionStatus1
-	 * CorporateActionDeactivationInstructionStatus1}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -321,24 +321,23 @@ public class CorporateActionDeactivationInstructionStatus1 {
 	 */
 	public static final MMXor mmProcessedStatusOrRejectedStatusRule = new MMXor() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProcessedStatusOrRejectedStatusRule";
 			definition = "Either ProcessedStatus or RejectedStatus must be present.";
 			messageComponent_lazy = () -> CorporateActionDeactivationInstructionStatus1.mmObject();
-			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionDeactivationInstructionStatus1.mmProcessedStatus,
-					com.tools20022.repository.msg.CorporateActionDeactivationInstructionStatus1.mmRejectedStatus);
+			impactedElements_lazy = () -> Arrays.asList(CorporateActionDeactivationInstructionStatus1.mmProcessedStatus, CorporateActionDeactivationInstructionStatus1.mmRejectedStatus);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionDeactivationInstructionStatus1.mmOptionType, com.tools20022.repository.msg.CorporateActionDeactivationInstructionStatus1.mmOptionNumber,
-						com.tools20022.repository.msg.CorporateActionDeactivationInstructionStatus1.mmProcessedStatus, com.tools20022.repository.msg.CorporateActionDeactivationInstructionStatus1.mmRejectedStatus);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.AgentCADeactivationStatusAdviceV01.mmDeactivationInstructionStatus);
+				messageElement_lazy = () -> Arrays.asList(CorporateActionDeactivationInstructionStatus1.mmOptionType, CorporateActionDeactivationInstructionStatus1.mmOptionNumber,
+						CorporateActionDeactivationInstructionStatus1.mmProcessedStatus, CorporateActionDeactivationInstructionStatus1.mmRejectedStatus);
+				messageBuildingBlock_lazy = () -> Arrays.asList(AgentCADeactivationStatusAdviceV01.mmDeactivationInstructionStatus);
 				trace_lazy = () -> CorporateActionStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
 						return DateFormat.getDateInstance(java.text.DateFormat.LONG).parse("September 9, 2016");
@@ -348,7 +347,7 @@ public class CorporateActionDeactivationInstructionStatus1 {
 				})).get();
 				name = "CorporateActionDeactivationInstructionStatus1";
 				definition = "Provides status of the deactivation instruction.";
-				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionDeactivationInstructionStatus1.mmProcessedStatusOrRejectedStatusRule);
+				xors_lazy = () -> Arrays.asList(CorporateActionDeactivationInstructionStatus1.mmProcessedStatusOrRejectedStatusRule);
 			}
 		});
 		return mmObject_lazy.get();

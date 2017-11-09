@@ -19,9 +19,13 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.BenchmarkCurveName2Code;
 import com.tools20022.repository.datatype.ISINOct2015Identifier;
 import com.tools20022.repository.datatype.Max25Text;
+import com.tools20022.repository.entity.Curve;
+import com.tools20022.repository.entity.SecuritiesIdentification;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -123,14 +127,14 @@ public class BenchmarkCurveName4Choice {
 	 */
 	public static final MMMessageAttribute mmISIN = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesIdentification.mmSecurityIdentification;
+			businessElementTrace_lazy = () -> SecuritiesIdentification.mmSecurityIdentification;
 			componentContext_lazy = () -> BenchmarkCurveName4Choice.mmObject();
 			isDerived = false;
 			xmlTag = "ISIN";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ISIN";
 			definition = "International Securities Identification Number (ISIN), when it exists for the reference rate.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.BenchmarkCurveName6Choice.mmISIN);
+			nextVersions_lazy = () -> Arrays.asList(BenchmarkCurveName6Choice.mmISIN);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISINOct2015Identifier.mmObject();
@@ -190,15 +194,15 @@ public class BenchmarkCurveName4Choice {
 	 */
 	public static final MMMessageAttribute mmIndex = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Curve.mmName;
+			businessElementTrace_lazy = () -> Curve.mmName;
 			componentContext_lazy = () -> BenchmarkCurveName4Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Indx";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Index";
 			definition = "Identifier of the index/benchmark of a floating rate bond, when an identifier exists.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.BenchmarkCurveName5Choice.mmIndex, com.tools20022.repository.choice.BenchmarkCurveName6Choice.mmIndex);
-			previousVersion_lazy = () -> com.tools20022.repository.choice.BenchmarkCurveName2Choice.mmCode;
+			nextVersions_lazy = () -> Arrays.asList(BenchmarkCurveName5Choice.mmIndex, BenchmarkCurveName6Choice.mmIndex);
+			previousVersion_lazy = () -> BenchmarkCurveName2Choice.mmCode;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> BenchmarkCurveName2Code.mmObject();
@@ -257,15 +261,15 @@ public class BenchmarkCurveName4Choice {
 	 */
 	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Curve.mmName;
+			businessElementTrace_lazy = () -> Curve.mmName;
 			componentContext_lazy = () -> BenchmarkCurveName4Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Nm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Name";
 			definition = "Where no identifier exists, standardized name of the index, including its term (such as ‘EURIBOR6M’, ‘LIBOR3M’).";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.BenchmarkCurveName5Choice.mmName, com.tools20022.repository.choice.BenchmarkCurveName6Choice.mmName);
-			previousVersion_lazy = () -> com.tools20022.repository.choice.BenchmarkCurveName2Choice.mmProprietary;
+			nextVersions_lazy = () -> Arrays.asList(BenchmarkCurveName5Choice.mmName, BenchmarkCurveName6Choice.mmName);
+			previousVersion_lazy = () -> BenchmarkCurveName2Choice.mmProprietary;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max25Text.mmObject();
@@ -275,10 +279,9 @@ public class BenchmarkCurveName4Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.BenchmarkCurveName4Choice.mmISIN, com.tools20022.repository.choice.BenchmarkCurveName4Choice.mmIndex,
-						com.tools20022.repository.choice.BenchmarkCurveName4Choice.mmName);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(BenchmarkCurveName4Choice.mmISIN, BenchmarkCurveName4Choice.mmIndex, BenchmarkCurveName4Choice.mmName);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "BenchmarkCurveName4Choice";
 				definition = "Choice of format for benchmark curve name.";
 				nextVersions_lazy = () -> Arrays.asList(BenchmarkCurveName5Choice.mmObject(), BenchmarkCurveName6Choice.mmObject());

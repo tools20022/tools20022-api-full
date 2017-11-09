@@ -20,8 +20,10 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.DecimalNumber;
 import com.tools20022.repository.datatype.Number;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -101,7 +103,7 @@ public class TransactionsBin2 {
 			componentContext_lazy = () -> TransactionsBin2.mmObject();
 			isDerived = false;
 			xmlTag = "NbOfTxs";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NumberOfTransactions";
 			definition = "Total number of transactions executed for that bin. Transactions that have been cancelled should be excluded from the reported figure.";
 			maxOccurs = 1;
@@ -150,7 +152,7 @@ public class TransactionsBin2 {
 			componentContext_lazy = () -> TransactionsBin2.mmObject();
 			isDerived = false;
 			xmlTag = "TtlNtnlAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalNotionalAmount";
 			definition = "Total notional amount traded represented by all transactions executed on the reporting day which size lies in the bin's range, expressed in the currency as specified in the local regulation (except for emission allowances and emission allowance derivatives : tons of carbon dioxide). Transactions that have been cancelled should be excluded from the reported figure.\r\n";
 			maxOccurs = 1;
@@ -193,7 +195,7 @@ public class TransactionsBin2 {
 			componentContext_lazy = () -> TransactionsBin2.mmObject();
 			isDerived = false;
 			xmlTag = "Rg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Range";
 			definition = "Specific range the quantitative data relates to.  Only allowed ranges must be used.";
 			maxOccurs = 1;
@@ -206,10 +208,9 @@ public class TransactionsBin2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionsBin2.mmNumberOfTransactions, com.tools20022.repository.msg.TransactionsBin2.mmTotalNotionalAmount,
-						com.tools20022.repository.msg.TransactionsBin2.mmRange);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(TransactionsBin2.mmNumberOfTransactions, TransactionsBin2.mmTotalNotionalAmount, TransactionsBin2.mmRange);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TransactionsBin2";
 				definition = "Specifies aggregated details on transactions within a defined numeric range bin.";
 			}

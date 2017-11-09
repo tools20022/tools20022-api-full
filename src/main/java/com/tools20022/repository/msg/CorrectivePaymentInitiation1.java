@@ -20,10 +20,12 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ActiveOrHistoricCurrencyAndAmount;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.Max35Text;
-import com.tools20022.repository.entity.PaymentInitiation;
+import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -134,10 +136,10 @@ public class CorrectivePaymentInitiation1 {
 			componentContext_lazy = () -> CorrectivePaymentInitiation1.mmObject();
 			isDerived = false;
 			xmlTag = "GrpHdr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GroupHeader";
 			definition = "Set of elements used to provide corrective information for the group header of the message under investigation.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorrectivePaymentInitiation2.mmGroupHeader);
+			nextVersions_lazy = () -> Arrays.asList(CorrectivePaymentInitiation2.mmGroupHeader);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -190,14 +192,14 @@ public class CorrectivePaymentInitiation1 {
 	 */
 	public static final MMMessageAttribute mmPaymentInformationIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradeIdentification.mmIdentification;
+			businessElementTrace_lazy = () -> TradeIdentification.mmIdentification;
 			componentContext_lazy = () -> CorrectivePaymentInitiation1.mmObject();
 			isDerived = false;
 			xmlTag = "PmtInfId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentInformationIdentification";
 			definition = "Unique identification, as assigned by a sending party, to unambiguously identify the payment information group within the message.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorrectivePaymentInitiation2.mmPaymentInformationIdentification);
+			nextVersions_lazy = () -> Arrays.asList(CorrectivePaymentInitiation2.mmPaymentInformationIdentification);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -254,14 +256,14 @@ public class CorrectivePaymentInitiation1 {
 	 */
 	public static final MMMessageAttribute mmInstructionIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentIdentification.mmInstructionIdentification;
+			businessElementTrace_lazy = () -> PaymentIdentification.mmInstructionIdentification;
 			componentContext_lazy = () -> CorrectivePaymentInitiation1.mmObject();
 			isDerived = false;
 			xmlTag = "InstrId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructionIdentification";
 			definition = "Unique identification, as assigned by an instructing party for an instructed party, to unambiguously identify the instruction.\n\nUsage: The instruction identification is a point to point reference that can be used between the instructing party and the instructed party to refer to the individual instruction. It can be included in several messages related to the instruction.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorrectivePaymentInitiation2.mmInstructionIdentification);
+			nextVersions_lazy = () -> Arrays.asList(CorrectivePaymentInitiation2.mmInstructionIdentification);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -322,14 +324,14 @@ public class CorrectivePaymentInitiation1 {
 	 */
 	public static final MMMessageAttribute mmEndToEndIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentIdentification.mmEndToEndIdentification;
+			businessElementTrace_lazy = () -> PaymentIdentification.mmEndToEndIdentification;
 			componentContext_lazy = () -> CorrectivePaymentInitiation1.mmObject();
 			isDerived = false;
 			xmlTag = "EndToEndId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EndToEndIdentification";
 			definition = "Unique identification, as assigned by the initiating party, to unambiguously identify the transaction. This identification is passed on, unchanged, throughout the entire end-to-end chain.\n\nUsage: The end-to-end identification can be used for reconciliation or to link tasks relating to the transaction. It can be included in several messages related to the transaction.\n\nUsage: In case there are technical limitations to pass on multiple references, the end-to-end identification must be passed on throughout the entire end-to-end chain.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorrectivePaymentInitiation2.mmEndToEndIdentification);
+			nextVersions_lazy = () -> Arrays.asList(CorrectivePaymentInitiation2.mmEndToEndIdentification);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -383,14 +385,14 @@ public class CorrectivePaymentInitiation1 {
 	 */
 	public static final MMMessageAttribute mmInstructedAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.mmInstructedAmount;
+			businessElementTrace_lazy = () -> Payment.mmInstructedAmount;
 			componentContext_lazy = () -> CorrectivePaymentInitiation1.mmObject();
 			isDerived = false;
 			xmlTag = "InstdAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructedAmount";
 			definition = "Amount of money to be moved between the debtor and creditor, before deduction of charges, expressed in the currency as ordered by the initiating party.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorrectivePaymentInitiation2.mmInstructedAmount);
+			nextVersions_lazy = () -> Arrays.asList(CorrectivePaymentInitiation2.mmInstructedAmount);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
@@ -444,14 +446,14 @@ public class CorrectivePaymentInitiation1 {
 	 */
 	public static final MMMessageAttribute mmRequestedExecutionDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentExecution.mmRequestedExecutionDate;
+			businessElementTrace_lazy = () -> PaymentExecution.mmRequestedExecutionDate;
 			componentContext_lazy = () -> CorrectivePaymentInitiation1.mmObject();
 			isDerived = false;
 			xmlTag = "ReqdExctnDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestedExecutionDate";
 			definition = "Date at which the initiating party requests the clearing agent to process the payment. \nUsage: This is the date on which the debtor's account is to be debited. If payment by cheque, the date when the cheque must be generated by the bank.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorrectivePaymentInitiation2.mmRequestedExecutionDate);
+			nextVersions_lazy = () -> Arrays.asList(CorrectivePaymentInitiation2.mmRequestedExecutionDate);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
@@ -503,14 +505,14 @@ public class CorrectivePaymentInitiation1 {
 	 */
 	public static final MMMessageAttribute mmRequestedCollectionDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Obligation.mmRequestedSettlementDate;
+			businessElementTrace_lazy = () -> Obligation.mmRequestedSettlementDate;
 			componentContext_lazy = () -> CorrectivePaymentInitiation1.mmObject();
 			isDerived = false;
 			xmlTag = "ReqdColltnDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestedCollectionDate";
 			definition = "Date at which the creditor requests the amount of money to be collected from the debtor.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorrectivePaymentInitiation2.mmRequestedCollectionDate);
+			nextVersions_lazy = () -> Arrays.asList(CorrectivePaymentInitiation2.mmRequestedCollectionDate);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
@@ -520,13 +522,11 @@ public class CorrectivePaymentInitiation1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorrectivePaymentInitiation1.mmGroupHeader, com.tools20022.repository.msg.CorrectivePaymentInitiation1.mmPaymentInformationIdentification,
-						com.tools20022.repository.msg.CorrectivePaymentInitiation1.mmInstructionIdentification, com.tools20022.repository.msg.CorrectivePaymentInitiation1.mmEndToEndIdentification,
-						com.tools20022.repository.msg.CorrectivePaymentInitiation1.mmInstructedAmount, com.tools20022.repository.msg.CorrectivePaymentInitiation1.mmRequestedExecutionDate,
-						com.tools20022.repository.msg.CorrectivePaymentInitiation1.mmRequestedCollectionDate);
+				messageElement_lazy = () -> Arrays.asList(CorrectivePaymentInitiation1.mmGroupHeader, CorrectivePaymentInitiation1.mmPaymentInformationIdentification, CorrectivePaymentInitiation1.mmInstructionIdentification,
+						CorrectivePaymentInitiation1.mmEndToEndIdentification, CorrectivePaymentInitiation1.mmInstructedAmount, CorrectivePaymentInitiation1.mmRequestedExecutionDate, CorrectivePaymentInitiation1.mmRequestedCollectionDate);
 				trace_lazy = () -> PaymentInitiation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorrectivePaymentInitiation1";
 				definition = "Set of elements used to provide information on the corrective payment initiation transaction, to which the resolution message refers.";
 				nextVersions_lazy = () -> Arrays.asList(CorrectivePaymentInitiation2.mmObject());

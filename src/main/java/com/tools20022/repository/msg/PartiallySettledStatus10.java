@@ -20,9 +20,12 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.PartiallySettled21Choice;
 import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.entity.SecuritiesOrderStatus;
+import com.tools20022.repository.entity.StatusReason;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -108,14 +111,14 @@ public class PartiallySettledStatus10 {
 	 */
 	public static final MMMessageAssociationEnd mmReason = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrderStatus.mmPartiallySettledStatusReason;
+			businessElementTrace_lazy = () -> SecuritiesOrderStatus.mmPartiallySettledStatusReason;
 			componentContext_lazy = () -> PartiallySettledStatus10.mmObject();
 			isDerived = false;
 			xmlTag = "Rsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reason";
 			definition = "Reason for the partially settled status.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.RejectedStatus9.mmReason;
+			previousVersion_lazy = () -> RejectedStatus9.mmReason;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -163,14 +166,14 @@ public class PartiallySettledStatus10 {
 	 */
 	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmReason;
+			businessElementTrace_lazy = () -> StatusReason.mmReason;
 			componentContext_lazy = () -> PartiallySettledStatus10.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInformation";
 			definition = "Additional information about the partially settled reason.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.RejectedStatus9.mmAdditionalInformation;
+			previousVersion_lazy = () -> RejectedStatus9.mmAdditionalInformation;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
@@ -180,10 +183,10 @@ public class PartiallySettledStatus10 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartiallySettledStatus10.mmReason, com.tools20022.repository.msg.PartiallySettledStatus10.mmAdditionalInformation);
+				messageElement_lazy = () -> Arrays.asList(PartiallySettledStatus10.mmReason, PartiallySettledStatus10.mmAdditionalInformation);
 				trace_lazy = () -> SecuritiesOrderStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PartiallySettledStatus10";
 				definition = "Reason for a partially settled status.";
 				previousVersion_lazy = () -> PartiallySettledStatus1.mmObject();

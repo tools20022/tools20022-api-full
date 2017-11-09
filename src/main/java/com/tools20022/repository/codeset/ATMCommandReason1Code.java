@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ATMCommandReasonCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -86,7 +88,7 @@ public class ATMCommandReason1Code extends ATMCommandReasonCode {
 	 */
 	public static final MMCode mmDiagnostic = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Diagnostic";
 			owner_lazy = () -> ATMCommandReason1Code.mmObject();
 		}
@@ -109,7 +111,7 @@ public class ATMCommandReason1Code extends ATMCommandReasonCode {
 	 */
 	public static final MMCode mmMonitoring = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Monitoring";
 			owner_lazy = () -> ATMCommandReason1Code.mmObject();
 		}
@@ -132,7 +134,7 @@ public class ATMCommandReason1Code extends ATMCommandReasonCode {
 	 */
 	public static final MMCode mmSecurityError = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityError";
 			owner_lazy = () -> ATMCommandReason1Code.mmObject();
 		}
@@ -155,7 +157,7 @@ public class ATMCommandReason1Code extends ATMCommandReasonCode {
 	 */
 	public static final MMCode mmSynchronisation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Synchronisation";
 			owner_lazy = () -> ATMCommandReason1Code.mmObject();
 		}
@@ -178,7 +180,7 @@ public class ATMCommandReason1Code extends ATMCommandReasonCode {
 	 */
 	public static final MMCode mmUpdate = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Update";
 			owner_lazy = () -> ATMCommandReason1Code.mmObject();
 		}
@@ -187,12 +189,11 @@ public class ATMCommandReason1Code extends ATMCommandReasonCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ATMCommandReason1Code";
 				definition = "Reason for sending the command.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ATMCommandReason1Code.mmDiagnostic, com.tools20022.repository.codeset.ATMCommandReason1Code.mmMonitoring,
-						com.tools20022.repository.codeset.ATMCommandReason1Code.mmSecurityError, com.tools20022.repository.codeset.ATMCommandReason1Code.mmSynchronisation, com.tools20022.repository.codeset.ATMCommandReason1Code.mmUpdate);
+				code_lazy = () -> Arrays.asList(ATMCommandReason1Code.mmDiagnostic, ATMCommandReason1Code.mmMonitoring, ATMCommandReason1Code.mmSecurityError, ATMCommandReason1Code.mmSynchronisation, ATMCommandReason1Code.mmUpdate);
 				trace_lazy = () -> ATMCommandReasonCode.mmObject();
 			}
 		});

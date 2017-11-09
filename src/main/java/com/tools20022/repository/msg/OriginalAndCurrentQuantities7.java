@@ -19,9 +19,12 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ShortLong1Code;
 import com.tools20022.repository.datatype.RestrictedFINImpliedCurrencyAndAmount;
+import com.tools20022.repository.entity.AssetHolding;
 import com.tools20022.repository.entity.SecuritiesQuantity;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -100,7 +103,7 @@ public class OriginalAndCurrentQuantities7 {
 			componentContext_lazy = () -> OriginalAndCurrentQuantities7.mmObject();
 			isDerived = false;
 			xmlTag = "ShrtLngPos";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ShortLongPosition";
 			definition = "Sign of the quantity of security.";
 			maxOccurs = 1;
@@ -147,11 +150,11 @@ public class OriginalAndCurrentQuantities7 {
 	 */
 	public static final MMMessageAttribute mmFaceAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmFaceAmount;
+			businessElementTrace_lazy = () -> AssetHolding.mmFaceAmount;
 			componentContext_lazy = () -> OriginalAndCurrentQuantities7.mmObject();
 			isDerived = false;
 			xmlTag = "FaceAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FaceAmount";
 			definition = "Quantity expressed as an amount representing the face amount, that is, the principal, of a debt instrument.";
 			maxOccurs = 1;
@@ -199,11 +202,11 @@ public class OriginalAndCurrentQuantities7 {
 	 */
 	public static final MMMessageAttribute mmAmortisedValue = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmAmortisedFaceValue;
+			businessElementTrace_lazy = () -> AssetHolding.mmAmortisedFaceValue;
 			componentContext_lazy = () -> OriginalAndCurrentQuantities7.mmObject();
 			isDerived = false;
 			xmlTag = "AmtsdVal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmortisedValue";
 			definition = "Quantity expressed as an amount representing the current amortised face amount of a bond, for example, a periodic reduction/increase of a bond's principal amount.";
 			maxOccurs = 1;
@@ -215,11 +218,10 @@ public class OriginalAndCurrentQuantities7 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OriginalAndCurrentQuantities7.mmShortLongPosition, com.tools20022.repository.msg.OriginalAndCurrentQuantities7.mmFaceAmount,
-						com.tools20022.repository.msg.OriginalAndCurrentQuantities7.mmAmortisedValue);
+				messageElement_lazy = () -> Arrays.asList(OriginalAndCurrentQuantities7.mmShortLongPosition, OriginalAndCurrentQuantities7.mmFaceAmount, OriginalAndCurrentQuantities7.mmAmortisedValue);
 				trace_lazy = () -> SecuritiesQuantity.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OriginalAndCurrentQuantities7";
 				definition = "Signed face amount and amortised value.";
 			}

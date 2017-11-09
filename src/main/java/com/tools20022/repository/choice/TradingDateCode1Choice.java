@@ -19,8 +19,10 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.TradingDate1Code;
 import com.tools20022.repository.entity.Trade;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification38;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -101,7 +103,7 @@ public class TradingDateCode1Choice {
 			componentContext_lazy = () -> TradingDateCode1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Cd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Trading date expressed as a ISO20022 code.";
 			maxOccurs = 1;
@@ -145,11 +147,11 @@ public class TradingDateCode1Choice {
 	 */
 	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Trade.mmValueDate;
+			businessElementTrace_lazy = () -> Trade.mmValueDate;
 			componentContext_lazy = () -> TradingDateCode1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Trading date expressed as a proprietary code.";
 			maxOccurs = 1;
@@ -161,10 +163,10 @@ public class TradingDateCode1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.TradingDateCode1Choice.mmCode, com.tools20022.repository.choice.TradingDateCode1Choice.mmProprietary);
+				messageElement_lazy = () -> Arrays.asList(TradingDateCode1Choice.mmCode, TradingDateCode1Choice.mmProprietary);
 				trace_lazy = () -> Trade.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TradingDateCode1Choice";
 				definition = "Choice of format for the trading date code.";
 			}

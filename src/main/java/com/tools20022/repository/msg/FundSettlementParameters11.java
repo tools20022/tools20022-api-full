@@ -20,12 +20,17 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.SafekeepingPlaceFormat8Choice;
 import com.tools20022.repository.choice.SettlementTransactionCondition30Choice;
 import com.tools20022.repository.choice.TradeTransactionCondition8Choice;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.entity.GenericIdentification;
+import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.entity.SecuritiesSettlement;
+import com.tools20022.repository.entity.SecuritiesTrade;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -131,14 +136,14 @@ public class FundSettlementParameters11 {
 	 */
 	public static final MMMessageAttribute mmSettlementDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> FundSettlementParameters11.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementDate";
 			definition = "Date and time at which the securities are to be delivered or received.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.FundSettlementParameters4.mmSettlementDate;
+			previousVersion_lazy = () -> FundSettlementParameters4.mmSettlementDate;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
@@ -190,14 +195,14 @@ public class FundSettlementParameters11 {
 	 */
 	public static final MMMessageAttribute mmSettlementPlace = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> FundSettlementParameters11.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmPlc";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementPlace";
 			definition = "Place where the settlement of the transaction will take place. In the context of investment funds, the place of settlement is the transfer agent, a Central Securities Depository (CSD) or an International Central Securities Depository (ICSD).";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.FundSettlementParameters4.mmSettlementPlace;
+			previousVersion_lazy = () -> FundSettlementParameters4.mmSettlementPlace;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> com.tools20022.repository.msg.PartyIdentification113.mmObject();
@@ -248,14 +253,14 @@ public class FundSettlementParameters11 {
 	 */
 	public static final MMMessageAttribute mmSafekeepingPlace = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> FundSettlementParameters11.mmObject();
 			isDerived = false;
 			xmlTag = "SfkpgPlc";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlace";
 			definition = "Place where the securities are safe-kept, physically or notionally. This place can be, for example, a local custodian, a Central Securities Depository or an International Central Securities Depository.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.FundSettlementParameters4.mmSafekeepingPlace;
+			previousVersion_lazy = () -> FundSettlementParameters4.mmSafekeepingPlace;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> SafekeepingPlaceFormat8Choice.mmObject();
@@ -304,14 +309,14 @@ public class FundSettlementParameters11 {
 	 */
 	public static final MMMessageAttribute mmSecuritiesSettlementSystemIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmIdentification;
+			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> FundSettlementParameters11.mmObject();
 			isDerived = false;
 			xmlTag = "SctiesSttlmSysId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesSettlementSystemIdentification";
 			definition = "Identification of a specific system or set of rules and/or processes to be applied at the settlement place.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.FundSettlementParameters4.mmSecuritiesSettlementSystemIdentification;
+			previousVersion_lazy = () -> FundSettlementParameters4.mmSecuritiesSettlementSystemIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -356,11 +361,11 @@ public class FundSettlementParameters11 {
 	 */
 	public static final MMMessageAttribute mmTradeTransactionCondition = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTrade.mmTradeTransactionCondition;
+			businessElementTrace_lazy = () -> SecuritiesTrade.mmTradeTransactionCondition;
 			componentContext_lazy = () -> FundSettlementParameters11.mmObject();
 			isDerived = false;
 			xmlTag = "TradTxCond";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeTransactionCondition";
 			definition = "Condition under which the order/trade is to be/was executed. This may be required for settlement through T2S.";
 			minOccurs = 0;
@@ -405,11 +410,11 @@ public class FundSettlementParameters11 {
 	 */
 	public static final MMMessageAssociationEnd mmSettlementTransactionCondition = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmSettlementTransactionCondition;
+			businessElementTrace_lazy = () -> SecuritiesSettlement.mmSettlementTransactionCondition;
 			componentContext_lazy = () -> FundSettlementParameters11.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmTxCond";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementTransactionCondition";
 			definition = "Condition under which the order/trade is to be settled. This may be required for settlement through T2S.";
 			minOccurs = 0;
@@ -460,14 +465,14 @@ public class FundSettlementParameters11 {
 	 */
 	public static final MMMessageAssociationEnd mmReceivingSideDetails = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmPartyRole;
+			businessElementTrace_lazy = () -> SecuritiesSettlement.mmPartyRole;
 			componentContext_lazy = () -> FundSettlementParameters11.mmObject();
 			isDerived = false;
 			xmlTag = "RcvgSdDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceivingSideDetails";
 			definition = "Chain of parties involved in the settlement of a transaction resulting in the movement of a security from one account to another.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.FundSettlementParameters4.mmReceivingSideDetails;
+			previousVersion_lazy = () -> FundSettlementParameters4.mmReceivingSideDetails;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -517,14 +522,14 @@ public class FundSettlementParameters11 {
 	 */
 	public static final MMMessageAssociationEnd mmDeliveringSideDetails = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmPartyRole;
+			businessElementTrace_lazy = () -> SecuritiesSettlement.mmPartyRole;
 			componentContext_lazy = () -> FundSettlementParameters11.mmObject();
 			isDerived = false;
 			xmlTag = "DlvrgSdDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeliveringSideDetails";
 			definition = "Chain of parties involved in the settlement of a transaction resulting in the movement of a security from one account to another.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.FundSettlementParameters4.mmDeliveringSideDetails;
+			previousVersion_lazy = () -> FundSettlementParameters4.mmDeliveringSideDetails;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -535,13 +540,12 @@ public class FundSettlementParameters11 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FundSettlementParameters11.mmSettlementDate, com.tools20022.repository.msg.FundSettlementParameters11.mmSettlementPlace,
-						com.tools20022.repository.msg.FundSettlementParameters11.mmSafekeepingPlace, com.tools20022.repository.msg.FundSettlementParameters11.mmSecuritiesSettlementSystemIdentification,
-						com.tools20022.repository.msg.FundSettlementParameters11.mmTradeTransactionCondition, com.tools20022.repository.msg.FundSettlementParameters11.mmSettlementTransactionCondition,
-						com.tools20022.repository.msg.FundSettlementParameters11.mmReceivingSideDetails, com.tools20022.repository.msg.FundSettlementParameters11.mmDeliveringSideDetails);
+				messageElement_lazy = () -> Arrays.asList(FundSettlementParameters11.mmSettlementDate, FundSettlementParameters11.mmSettlementPlace, FundSettlementParameters11.mmSafekeepingPlace,
+						FundSettlementParameters11.mmSecuritiesSettlementSystemIdentification, FundSettlementParameters11.mmTradeTransactionCondition, FundSettlementParameters11.mmSettlementTransactionCondition,
+						FundSettlementParameters11.mmReceivingSideDetails, FundSettlementParameters11.mmDeliveringSideDetails);
 				trace_lazy = () -> SecuritiesSettlement.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FundSettlementParameters11";
 				definition = "Parameters applied to the settlement of a security.";
 				previousVersion_lazy = () -> FundSettlementParameters4.mmObject();

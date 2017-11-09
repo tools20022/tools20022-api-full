@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.SettlementUnitType1Code
+ * SettlementUnitType1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -35,13 +44,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.SettlementUnitTypeCode#mmUnit
  * SettlementUnitTypeCode.mmUnit}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.SettlementUnitType1Code
- * SettlementUnitType1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -94,7 +96,7 @@ public class SettlementUnitTypeCode {
 	 */
 	public static final MMCode mmFaceAmount = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FaceAmount";
 			definition = "Represent the face amount, for example the principal of a debt instrument.";
 			owner_lazy = () -> SettlementUnitTypeCode.mmObject();
@@ -125,7 +127,7 @@ public class SettlementUnitTypeCode {
 	 */
 	public static final MMCode mmUnit = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unit";
 			definition = "Represent the unit as a number, for example a number of shares.";
 			owner_lazy = () -> SettlementUnitTypeCode.mmObject();
@@ -136,12 +138,12 @@ public class SettlementUnitTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("FAMT");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SettlementUnitTypeCode";
 				definition = "Type of settlement foreseen for the security.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SettlementUnitTypeCode.mmFaceAmount, com.tools20022.repository.codeset.SettlementUnitTypeCode.mmUnit);
+				code_lazy = () -> Arrays.asList(SettlementUnitTypeCode.mmFaceAmount, SettlementUnitTypeCode.mmUnit);
 				derivation_lazy = () -> Arrays.asList(SettlementUnitType1Code.mmObject());
 			}
 		});

@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ShareRankingCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -84,7 +86,7 @@ public class ShareRanking1Code extends ShareRankingCode {
 	 */
 	public static final MMCode mmDividend = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Dividend";
 			owner_lazy = () -> ShareRanking1Code.mmObject();
 		}
@@ -107,7 +109,7 @@ public class ShareRanking1Code extends ShareRankingCode {
 	 */
 	public static final MMCode mmPariPassu = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PariPassu";
 			owner_lazy = () -> ShareRanking1Code.mmObject();
 		}
@@ -116,12 +118,12 @@ public class ShareRanking1Code extends ShareRankingCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("DIVI");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ShareRanking1Code";
 				definition = "Specifies whether the shares are ranking for dividend or pari passu.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ShareRanking1Code.mmDividend, com.tools20022.repository.codeset.ShareRanking1Code.mmPariPassu);
+				code_lazy = () -> Arrays.asList(ShareRanking1Code.mmDividend, ShareRanking1Code.mmPariPassu);
 				trace_lazy = () -> ShareRankingCode.mmObject();
 			}
 		});

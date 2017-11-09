@@ -19,6 +19,8 @@ package com.tools20022.repository.entity;
 
 import com.tools20022.metamodel.MMBusinessAttribute;
 import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -85,7 +87,7 @@ public class CapitalValue {
 		{
 			elementContext_lazy = () -> CapitalValue.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Capital";
 			definition = "Capital for which a value is provided.";
 			maxOccurs = 1;
@@ -97,11 +99,11 @@ public class CapitalValue {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CapitalValue";
 				definition = "Value of the capital.";
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CapitalValue.mmCapital);
+				element_lazy = () -> Arrays.asList(CapitalValue.mmCapital);
 			}
 		});
 		return mmObject_lazy.get();

@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.DateModeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -77,7 +79,7 @@ public class DateMode1Code extends DateModeCode {
 	 */
 	public static final MMCode mmBODY = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BODY";
 			owner_lazy = () -> DateMode1Code.mmObject();
 		}
@@ -100,7 +102,7 @@ public class DateMode1Code extends DateModeCode {
 	 */
 	public static final MMCode mmEODY = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EODY";
 			owner_lazy = () -> DateMode1Code.mmObject();
 		}
@@ -109,11 +111,11 @@ public class DateMode1Code extends DateModeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DateMode1Code";
 				definition = "Specifies, for a date, when the event or operation is to take place, for example at the beginning or end of the day.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DateMode1Code.mmBODY, com.tools20022.repository.codeset.DateMode1Code.mmEODY);
+				code_lazy = () -> Arrays.asList(DateMode1Code.mmBODY, DateMode1Code.mmEODY);
 				trace_lazy = () -> DateModeCode.mmObject();
 			}
 		});

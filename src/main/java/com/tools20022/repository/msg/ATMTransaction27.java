@@ -20,10 +20,12 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.FailureReason8Code;
 import com.tools20022.repository.datatype.CurrencyAndAmount;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.Max70Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -111,10 +113,10 @@ public class ATMTransaction27 {
 			componentContext_lazy = () -> ATMTransaction27.mmObject();
 			isDerived = false;
 			xmlTag = "TxId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionIdentification";
 			definition = "Identification of the transaction.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMTransaction25.mmTransactionIdentification;
+			previousVersion_lazy = () -> ATMTransaction25.mmTransactionIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -159,10 +161,10 @@ public class ATMTransaction27 {
 			componentContext_lazy = () -> ATMTransaction27.mmObject();
 			isDerived = false;
 			xmlTag = "RcncltnId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReconciliationIdentification";
 			definition = "Identification of the reconciliation period.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMTransaction25.mmReconciliationIdentification;
+			previousVersion_lazy = () -> ATMTransaction25.mmReconciliationIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -202,7 +204,7 @@ public class ATMTransaction27 {
 			componentContext_lazy = () -> ATMTransaction27.mmObject();
 			isDerived = false;
 			xmlTag = "Xcptn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Exception";
 			definition = "Exception occurring outside the service.";
 			minOccurs = 1;
@@ -242,7 +244,7 @@ public class ATMTransaction27 {
 			componentContext_lazy = () -> ATMTransaction27.mmObject();
 			isDerived = false;
 			xmlTag = "XcptnDtl";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExceptionDetail";
 			definition = "Explanation of the exception.";
 			minOccurs = 0;
@@ -283,7 +285,7 @@ public class ATMTransaction27 {
 			componentContext_lazy = () -> ATMTransaction27.mmObject();
 			isDerived = false;
 			xmlTag = "ElctrncPrsBal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ElectronicPurseBalance";
 			definition = "Balance of the captured card or epurse if available.";
 			maxOccurs = 1;
@@ -295,10 +297,10 @@ public class ATMTransaction27 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMTransaction27.mmTransactionIdentification, com.tools20022.repository.msg.ATMTransaction27.mmReconciliationIdentification,
-						com.tools20022.repository.msg.ATMTransaction27.mmException, com.tools20022.repository.msg.ATMTransaction27.mmExceptionDetail, com.tools20022.repository.msg.ATMTransaction27.mmElectronicPurseBalance);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(ATMTransaction27.mmTransactionIdentification, ATMTransaction27.mmReconciliationIdentification, ATMTransaction27.mmException, ATMTransaction27.mmExceptionDetail,
+						ATMTransaction27.mmElectronicPurseBalance);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ATMTransaction27";
 				definition = "Transaction for which the exception is sent.";
 				previousVersion_lazy = () -> ATMTransaction25.mmObject();

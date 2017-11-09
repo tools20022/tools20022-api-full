@@ -20,10 +20,13 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
 import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.entity.CashAccount;
 import com.tools20022.repository.entity.CashProceedsDefinition;
+import com.tools20022.repository.entity.Payment;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -102,11 +105,11 @@ public class CashProceeds1 {
 	 */
 	public static final MMMessageAttribute mmPostingAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.mmAmount;
+			businessElementTrace_lazy = () -> Payment.mmAmount;
 			componentContext_lazy = () -> CashProceeds1.mmObject();
 			isDerived = false;
 			xmlTag = "PstngAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PostingAmount";
 			definition = "Cash amount which is posted.";
 			maxOccurs = 1;
@@ -146,7 +149,7 @@ public class CashProceeds1 {
 			componentContext_lazy = () -> CashProceeds1.mmObject();
 			isDerived = false;
 			xmlTag = "RcncltnDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReconciliationDetails";
 			definition = "Reconciliation information.";
 			maxOccurs = 1;
@@ -191,7 +194,7 @@ public class CashProceeds1 {
 			componentContext_lazy = () -> CashProceeds1.mmObject();
 			isDerived = false;
 			xmlTag = "AcctDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountDetails";
 			definition = "Provides information about the debited securities account.";
 			maxOccurs = 2;
@@ -204,11 +207,10 @@ public class CashProceeds1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashProceeds1.mmPostingAmount, com.tools20022.repository.msg.CashProceeds1.mmReconciliationDetails,
-						com.tools20022.repository.msg.CashProceeds1.mmAccountDetails);
+				messageElement_lazy = () -> Arrays.asList(CashProceeds1.mmPostingAmount, CashProceeds1.mmReconciliationDetails, CashProceeds1.mmAccountDetails);
 				trace_lazy = () -> CashProceedsDefinition.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CashProceeds1";
 				definition = "Provides information about the cash proceeds.";
 			}

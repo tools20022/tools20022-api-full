@@ -19,11 +19,14 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.colr.CollateralAndExposureReportV03;
 import com.tools20022.repository.choice.DateAndDateTimeChoice;
 import com.tools20022.repository.codeset.ActiveCurrencyCode;
 import com.tools20022.repository.codeset.EventFrequency6Code;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -121,10 +124,10 @@ public class ReportParameters5 {
 			componentContext_lazy = () -> ReportParameters5.mmObject();
 			isDerived = false;
 			xmlTag = "RptId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportIdentification";
 			definition = "Unique identification of the report.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ReportParameters2.mmReportIdentification;
+			previousVersion_lazy = () -> ReportParameters2.mmReportIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -169,10 +172,10 @@ public class ReportParameters5 {
 			componentContext_lazy = () -> ReportParameters5.mmObject();
 			isDerived = false;
 			xmlTag = "RptDtAndTm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportDateAndTime";
 			definition = "Date (and time) at which the report was created.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ReportParameters2.mmReportDateAndTime;
+			previousVersion_lazy = () -> ReportParameters2.mmReportDateAndTime;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
@@ -217,10 +220,10 @@ public class ReportParameters5 {
 			componentContext_lazy = () -> ReportParameters5.mmObject();
 			isDerived = false;
 			xmlTag = "Frqcy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Frequency";
 			definition = "Frequency of the report.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ReportParameters2.mmFrequency;
+			previousVersion_lazy = () -> ReportParameters2.mmFrequency;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> EventFrequency6Code.mmObject();
@@ -266,10 +269,10 @@ public class ReportParameters5 {
 			componentContext_lazy = () -> ReportParameters5.mmObject();
 			isDerived = false;
 			xmlTag = "RptCcy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportCurrency";
 			definition = "Indicates the currency used for the calculation of the guarantee fund.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ReportParameters2.mmReportCurrency;
+			previousVersion_lazy = () -> ReportParameters2.mmReportCurrency;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyCode.mmObject();
@@ -314,10 +317,10 @@ public class ReportParameters5 {
 			componentContext_lazy = () -> ReportParameters5.mmObject();
 			isDerived = false;
 			xmlTag = "ClctnDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CalculationDate";
 			definition = "Indicates the date of calculation of the deficit (if any).";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ReportParameters2.mmCalculationDate;
+			previousVersion_lazy = () -> ReportParameters2.mmCalculationDate;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
@@ -327,11 +330,11 @@ public class ReportParameters5 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReportParameters5.mmReportIdentification, com.tools20022.repository.msg.ReportParameters5.mmReportDateAndTime,
-						com.tools20022.repository.msg.ReportParameters5.mmFrequency, com.tools20022.repository.msg.ReportParameters5.mmReportCurrency, com.tools20022.repository.msg.ReportParameters5.mmCalculationDate);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.colr.CollateralAndExposureReportV03.mmReportParameters);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(ReportParameters5.mmReportIdentification, ReportParameters5.mmReportDateAndTime, ReportParameters5.mmFrequency, ReportParameters5.mmReportCurrency,
+						ReportParameters5.mmCalculationDate);
+				messageBuildingBlock_lazy = () -> Arrays.asList(CollateralAndExposureReportV03.mmReportParameters);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ReportParameters5";
 				definition = "Provides the parameters of the report.";
 				previousVersion_lazy = () -> ReportParameters2.mmObject();

@@ -18,7 +18,10 @@
 package com.tools20022.repository.entity;
 
 import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.PaymentObligationPartyRole;
+import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -81,13 +84,12 @@ public class UltimateDebtorRole extends PaymentObligationPartyRole {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "UltimateDebtorRole";
 				definition = "Ultimate party that owes an amount of money to the (ultimate) creditor.";
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RequestedModification2.mmUltimateDebtor, com.tools20022.repository.msg.RequestedModification3.mmUltimateDebtor,
-						com.tools20022.repository.msg.Garnishment1.mmGarnishee, com.tools20022.repository.msg.RequestedModification4.mmUltimateDebtor, com.tools20022.repository.msg.RequestedModification5.mmUltimateDebtor,
-						com.tools20022.repository.msg.RequestedModification6.mmUltimateDebtor);
+				derivationElement_lazy = () -> Arrays.asList(RequestedModification2.mmUltimateDebtor, RequestedModification3.mmUltimateDebtor, Garnishment1.mmGarnishee, RequestedModification4.mmUltimateDebtor,
+						RequestedModification5.mmUltimateDebtor, RequestedModification6.mmUltimateDebtor);
 				superType_lazy = () -> PaymentObligationPartyRole.mmObject();
 			}
 		});

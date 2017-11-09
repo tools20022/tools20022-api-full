@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.EventType1Code
+ * EventType1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>{@linkplain com.tools20022.repository.codeset.EventTypeCode#mmPut
@@ -43,13 +52,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.EventTypeCode#mmSinkingFundCall
  * EventTypeCode.mmSinkingFundCall}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.EventType1Code
- * EventType1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -103,7 +105,7 @@ public class EventTypeCode {
 	 */
 	public static final MMCode mmPut = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Put";
 			definition = "In fixed income this is the put provision on the bond allowing the investor the right to \"redeem the bond at a specified price prior to maturity\".";
 			owner_lazy = () -> EventTypeCode.mmObject();
@@ -137,7 +139,7 @@ public class EventTypeCode {
 	 */
 	public static final MMCode mmCall = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Call";
 			definition = "In fixed income this is the call provision on the bond allowing the bond issuer \"the right to redeem [the bond] prior to its maturity date, under certain conditions.\"";
 			owner_lazy = () -> EventTypeCode.mmObject();
@@ -170,7 +172,7 @@ public class EventTypeCode {
 	 */
 	public static final MMCode mmTender = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Tender";
 			definition = "Synonymous with Put but is the preferred term for certain asset classes in some markets.";
 			owner_lazy = () -> EventTypeCode.mmObject();
@@ -201,7 +203,7 @@ public class EventTypeCode {
 	 */
 	public static final MMCode mmActivation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Activation";
 			definition = "Date when the security is activated for trading and clearing.";
 			owner_lazy = () -> EventTypeCode.mmObject();
@@ -233,7 +235,7 @@ public class EventTypeCode {
 	 */
 	public static final MMCode mmInactivation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Inactivation";
 			definition = "Date when the security is no longer available for trading and clearing.";
 			owner_lazy = () -> EventTypeCode.mmObject();
@@ -270,7 +272,7 @@ public class EventTypeCode {
 	 */
 	public static final MMCode mmSinkingFundCall = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SinkingFundCall";
 			definition = "A provision allowing a bond issuer the opportunity to buy outstanding bonds from bondholders for a set rate, using money (a sinking fund) from the issuer's earnings saved specifically for security buybacks. Because it adds doubt for investors over whether the bond will continue to pay until its maturity date, a sinking fund call is seen as an additional risk for investors.";
 			owner_lazy = () -> EventTypeCode.mmObject();
@@ -281,13 +283,12 @@ public class EventTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("PUT1");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "EventTypeCode";
 				definition = "Identifies the type of event.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.EventTypeCode.mmPut, com.tools20022.repository.codeset.EventTypeCode.mmCall, com.tools20022.repository.codeset.EventTypeCode.mmTender,
-						com.tools20022.repository.codeset.EventTypeCode.mmActivation, com.tools20022.repository.codeset.EventTypeCode.mmInactivation, com.tools20022.repository.codeset.EventTypeCode.mmSinkingFundCall);
+				code_lazy = () -> Arrays.asList(EventTypeCode.mmPut, EventTypeCode.mmCall, EventTypeCode.mmTender, EventTypeCode.mmActivation, EventTypeCode.mmInactivation, EventTypeCode.mmSinkingFundCall);
 				derivation_lazy = () -> Arrays.asList(EventType1Code.mmObject());
 			}
 		});

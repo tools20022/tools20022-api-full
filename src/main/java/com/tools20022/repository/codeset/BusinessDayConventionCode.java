@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.BusinessDayConvention1Code
+ * BusinessDayConvention1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -41,13 +50,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.BusinessDayConventionCode#mmNearest
  * BusinessDayConventionCode.mmNearest}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.BusinessDayConvention1Code
- * BusinessDayConvention1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -99,7 +101,7 @@ public class BusinessDayConventionCode {
 	 */
 	public static final MMCode mmFollowing = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Following";
 			definition = "The date will be the first following day that is a business day.";
 			owner_lazy = () -> BusinessDayConventionCode.mmObject();
@@ -133,7 +135,7 @@ public class BusinessDayConventionCode {
 	 */
 	public static final MMCode mmModifiedFollowing = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ModifiedFollowing";
 			definition = "The date will be the first following day that is a business day unless that day falls in the next calendar month, in which case that date will be the first preceding day that is a business day.";
 			owner_lazy = () -> BusinessDayConventionCode.mmObject();
@@ -164,7 +166,7 @@ public class BusinessDayConventionCode {
 	 */
 	public static final MMCode mmPreceding = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Preceding";
 			definition = "The date will be the first preceding day that is a business day.";
 			owner_lazy = () -> BusinessDayConventionCode.mmObject();
@@ -199,7 +201,7 @@ public class BusinessDayConventionCode {
 	 */
 	public static final MMCode mmNearest = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Nearest";
 			definition = "The date will be the first preceding day that is a business day unless that day falls on a day other than a sunday or a monday, and will be the first following day that is a business day, if the relevant date otherwise falls on a sunday or a monday.";
 			owner_lazy = () -> BusinessDayConventionCode.mmObject();
@@ -210,13 +212,12 @@ public class BusinessDayConventionCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("FWNG");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "BusinessDayConventionCode";
 				definition = "Indicates how a date is adjusted when it falls on a non-business day.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.BusinessDayConventionCode.mmFollowing, com.tools20022.repository.codeset.BusinessDayConventionCode.mmModifiedFollowing,
-						com.tools20022.repository.codeset.BusinessDayConventionCode.mmPreceding, com.tools20022.repository.codeset.BusinessDayConventionCode.mmNearest);
+				code_lazy = () -> Arrays.asList(BusinessDayConventionCode.mmFollowing, BusinessDayConventionCode.mmModifiedFollowing, BusinessDayConventionCode.mmPreceding, BusinessDayConventionCode.mmNearest);
 				derivation_lazy = () -> Arrays.asList(BusinessDayConvention1Code.mmObject());
 			}
 		});

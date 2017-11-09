@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -28,6 +30,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.MatchingStatus1Code
+ * MatchingStatus1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -42,13 +51,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.MatchingStatusCode#mmMisMatched
  * MatchingStatusCode.mmMisMatched}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.MatchingStatus1Code
- * MatchingStatus1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -100,7 +102,7 @@ public class MatchingStatusCode {
 	 */
 	public static final MMCode mmMatched = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Matched";
 			definition = "Instruction has been matched.";
 			owner_lazy = () -> MatchingStatusCode.mmObject();
@@ -130,7 +132,7 @@ public class MatchingStatusCode {
 	 */
 	public static final MMCode mmUnmatched = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unmatched";
 			definition = "Instruction has not been matched.";
 			owner_lazy = () -> MatchingStatusCode.mmObject();
@@ -160,7 +162,7 @@ public class MatchingStatusCode {
 	 */
 	public static final MMCode mmMatchingAlleged = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MatchingAlleged";
 			definition = "Instruction has been alleged matched.";
 			owner_lazy = () -> MatchingStatusCode.mmObject();
@@ -190,7 +192,7 @@ public class MatchingStatusCode {
 	 */
 	public static final MMCode mmMisMatched = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MisMatched";
 			definition = "Instruction has been mis-matched.";
 			owner_lazy = () -> MatchingStatusCode.mmObject();
@@ -201,13 +203,12 @@ public class MatchingStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("MACH");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MatchingStatusCode";
 				definition = "Provides the matching status of the instruction at the time the settlement instruction was sent.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MatchingStatusCode.mmMatched, com.tools20022.repository.codeset.MatchingStatusCode.mmUnmatched,
-						com.tools20022.repository.codeset.MatchingStatusCode.mmMatchingAlleged, com.tools20022.repository.codeset.MatchingStatusCode.mmMisMatched);
+				code_lazy = () -> Arrays.asList(MatchingStatusCode.mmMatched, MatchingStatusCode.mmUnmatched, MatchingStatusCode.mmMatchingAlleged, MatchingStatusCode.mmMisMatched);
 				derivation_lazy = () -> Arrays.asList(MatchingStatus1Code.mmObject());
 			}
 		});

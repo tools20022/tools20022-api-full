@@ -20,10 +20,12 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.RateType13Code;
 import com.tools20022.repository.datatype.ActiveCurrencyAnd13DecimalAmount;
 import com.tools20022.repository.datatype.PercentageRate;
 import com.tools20022.repository.entity.Interest;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.RateTypeAndAmountAndStatus3;
 import java.text.DateFormat;
 import java.util.Arrays;
@@ -127,14 +129,14 @@ public class InterestRateUsedForPaymentFormat5Choice {
 	 */
 	public static final MMMessageAttribute mmRate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Interest.mmRate;
+			businessElementTrace_lazy = () -> Interest.mmRate;
 			componentContext_lazy = () -> InterestRateUsedForPaymentFormat5Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Rate";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rate";
 			definition = "Value is expressed as a rate.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.InterestRateUsedForPaymentFormat8Choice.mmRate);
+			nextVersions_lazy = () -> Arrays.asList(InterestRateUsedForPaymentFormat8Choice.mmRate);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
@@ -184,14 +186,14 @@ public class InterestRateUsedForPaymentFormat5Choice {
 	 */
 	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Interest.mmAmount;
+			businessElementTrace_lazy = () -> Interest.mmAmount;
 			componentContext_lazy = () -> InterestRateUsedForPaymentFormat5Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Amt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Number of monetary units specified in a currency.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.InterestRateUsedForPaymentFormat8Choice.mmAmount);
+			nextVersions_lazy = () -> Arrays.asList(InterestRateUsedForPaymentFormat8Choice.mmAmount);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAnd13DecimalAmount.mmObject();
@@ -245,10 +247,10 @@ public class InterestRateUsedForPaymentFormat5Choice {
 			componentContext_lazy = () -> InterestRateUsedForPaymentFormat5Choice.mmObject();
 			isDerived = false;
 			xmlTag = "RateTpAndAmtAndRateSts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RateTypeAndAmountAndRateStatus";
 			definition = "Specifies different formats for interest rate used for payment.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.InterestRateUsedForPaymentFormat8Choice.mmRateTypeAndAmountAndRateStatus);
+			nextVersions_lazy = () -> Arrays.asList(InterestRateUsedForPaymentFormat8Choice.mmRateTypeAndAmountAndRateStatus);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -297,10 +299,10 @@ public class InterestRateUsedForPaymentFormat5Choice {
 			componentContext_lazy = () -> InterestRateUsedForPaymentFormat5Choice.mmObject();
 			isDerived = false;
 			xmlTag = "NotSpcfdRate";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotSpecifiedRate";
 			definition = "Value of the rate not specified.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.InterestRateUsedForPaymentFormat8Choice.mmNotSpecifiedRate);
+			nextVersions_lazy = () -> Arrays.asList(InterestRateUsedForPaymentFormat8Choice.mmNotSpecifiedRate);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RateType13Code.mmObject();
@@ -310,11 +312,11 @@ public class InterestRateUsedForPaymentFormat5Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.InterestRateUsedForPaymentFormat5Choice.mmRate, com.tools20022.repository.choice.InterestRateUsedForPaymentFormat5Choice.mmAmount,
-						com.tools20022.repository.choice.InterestRateUsedForPaymentFormat5Choice.mmRateTypeAndAmountAndRateStatus, com.tools20022.repository.choice.InterestRateUsedForPaymentFormat5Choice.mmNotSpecifiedRate);
+				messageElement_lazy = () -> Arrays.asList(InterestRateUsedForPaymentFormat5Choice.mmRate, InterestRateUsedForPaymentFormat5Choice.mmAmount, InterestRateUsedForPaymentFormat5Choice.mmRateTypeAndAmountAndRateStatus,
+						InterestRateUsedForPaymentFormat5Choice.mmNotSpecifiedRate);
 				trace_lazy = () -> Interest.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
 						return DateFormat.getDateInstance(java.text.DateFormat.LONG).parse("May 5, 2016");

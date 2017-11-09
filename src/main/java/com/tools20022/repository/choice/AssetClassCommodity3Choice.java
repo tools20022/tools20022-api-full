@@ -19,7 +19,9 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.Commodity;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.AssetClassCommodityInflation1;
 import com.tools20022.repository.msg.AssetClassCommodityMultiCommodityExotic1;
 import com.tools20022.repository.msg.AssetClassCommodityOfficialEconomicStatistics1;
@@ -136,11 +138,11 @@ public class AssetClassCommodity3Choice {
 	 */
 	public static final MMMessageAssociationEnd mmAgricultural = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Commodity.mmBaseProduct;
+			businessElementTrace_lazy = () -> Commodity.mmBaseProduct;
 			componentContext_lazy = () -> AssetClassCommodity3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Agrcltrl";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Agricultural";
 			definition = "Agricultural commodities.";
 			maxOccurs = 1;
@@ -184,11 +186,11 @@ public class AssetClassCommodity3Choice {
 	 */
 	public static final MMMessageAssociationEnd mmEnergy = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Commodity.mmBaseProduct;
+			businessElementTrace_lazy = () -> Commodity.mmBaseProduct;
 			componentContext_lazy = () -> AssetClassCommodity3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Nrgy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Energy";
 			definition = "Energy commodities.";
 			maxOccurs = 1;
@@ -232,11 +234,11 @@ public class AssetClassCommodity3Choice {
 	 */
 	public static final MMMessageAssociationEnd mmEnvironmental = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Commodity.mmBaseProduct;
+			businessElementTrace_lazy = () -> Commodity.mmBaseProduct;
 			componentContext_lazy = () -> AssetClassCommodity3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Envttl";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Environmental";
 			definition = "Environmental commodities.";
 			maxOccurs = 1;
@@ -280,11 +282,11 @@ public class AssetClassCommodity3Choice {
 	 */
 	public static final MMMessageAssociationEnd mmFertilizer = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Commodity.mmBaseProduct;
+			businessElementTrace_lazy = () -> Commodity.mmBaseProduct;
 			componentContext_lazy = () -> AssetClassCommodity3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Frtlzr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Fertilizer";
 			definition = "Fertilizer commodities.";
 			maxOccurs = 1;
@@ -328,11 +330,11 @@ public class AssetClassCommodity3Choice {
 	 */
 	public static final MMMessageAssociationEnd mmFreight = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Commodity.mmBaseProduct;
+			businessElementTrace_lazy = () -> Commodity.mmBaseProduct;
 			componentContext_lazy = () -> AssetClassCommodity3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Frght";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Freight";
 			definition = "Freight commodities.";
 			maxOccurs = 1;
@@ -376,11 +378,11 @@ public class AssetClassCommodity3Choice {
 	 */
 	public static final MMMessageAssociationEnd mmIndustrialProduct = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Commodity.mmBaseProduct;
+			businessElementTrace_lazy = () -> Commodity.mmBaseProduct;
 			componentContext_lazy = () -> AssetClassCommodity3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "IndstrlPdct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IndustrialProduct";
 			definition = "Industrial Product commodities.";
 			maxOccurs = 1;
@@ -424,11 +426,11 @@ public class AssetClassCommodity3Choice {
 	 */
 	public static final MMMessageAssociationEnd mmMetal = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Commodity.mmBaseProduct;
+			businessElementTrace_lazy = () -> Commodity.mmBaseProduct;
 			componentContext_lazy = () -> AssetClassCommodity3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Metl";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Metal";
 			definition = "Metal commodities.";
 			maxOccurs = 1;
@@ -472,11 +474,11 @@ public class AssetClassCommodity3Choice {
 	 */
 	public static final MMMessageAssociationEnd mmOtherC10 = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Commodity.mmBaseProduct;
+			businessElementTrace_lazy = () -> Commodity.mmBaseProduct;
 			componentContext_lazy = () -> AssetClassCommodity3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "OthrC10";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherC10";
 			definition = "Other C10 commodities.";
 			maxOccurs = 1;
@@ -520,11 +522,11 @@ public class AssetClassCommodity3Choice {
 	 */
 	public static final MMMessageAssociationEnd mmPaper = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Commodity.mmBaseProduct;
+			businessElementTrace_lazy = () -> Commodity.mmBaseProduct;
 			componentContext_lazy = () -> AssetClassCommodity3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Ppr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Paper";
 			definition = "Paper commodities.";
 			maxOccurs = 1;
@@ -568,11 +570,11 @@ public class AssetClassCommodity3Choice {
 	 */
 	public static final MMMessageAssociationEnd mmPolypropylene = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Commodity.mmBaseProduct;
+			businessElementTrace_lazy = () -> Commodity.mmBaseProduct;
 			componentContext_lazy = () -> AssetClassCommodity3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Plprpln";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Polypropylene";
 			definition = "Polypropylene commodities.";
 			maxOccurs = 1;
@@ -616,11 +618,11 @@ public class AssetClassCommodity3Choice {
 	 */
 	public static final MMMessageAssociationEnd mmInflation = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Commodity.mmBaseProduct;
+			businessElementTrace_lazy = () -> Commodity.mmBaseProduct;
 			componentContext_lazy = () -> AssetClassCommodity3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Infltn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Inflation";
 			definition = "Inflation commodities.";
 			maxOccurs = 1;
@@ -664,11 +666,11 @@ public class AssetClassCommodity3Choice {
 	 */
 	public static final MMMessageAssociationEnd mmMultiCommodityExotic = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Commodity.mmBaseProduct;
+			businessElementTrace_lazy = () -> Commodity.mmBaseProduct;
 			componentContext_lazy = () -> AssetClassCommodity3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "MultiCmmdtyExtc";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MultiCommodityExotic";
 			definition = "Multi Commodity Exotic";
 			maxOccurs = 1;
@@ -712,11 +714,11 @@ public class AssetClassCommodity3Choice {
 	 */
 	public static final MMMessageAssociationEnd mmOfficialEconomicStatistics = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Commodity.mmBaseProduct;
+			businessElementTrace_lazy = () -> Commodity.mmBaseProduct;
 			componentContext_lazy = () -> AssetClassCommodity3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "OffclEcnmcSttstcs";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OfficialEconomicStatistics";
 			definition = "Official Economic Statistics commodities.";
 			maxOccurs = 1;
@@ -760,11 +762,11 @@ public class AssetClassCommodity3Choice {
 	 */
 	public static final MMMessageAssociationEnd mmOther = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Commodity.mmBaseProduct;
+			businessElementTrace_lazy = () -> Commodity.mmBaseProduct;
 			componentContext_lazy = () -> AssetClassCommodity3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Othr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
 			definition = "Other commodities.";
 			maxOccurs = 1;
@@ -777,16 +779,13 @@ public class AssetClassCommodity3Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AssetClassCommodity3Choice.mmAgricultural, com.tools20022.repository.choice.AssetClassCommodity3Choice.mmEnergy,
-						com.tools20022.repository.choice.AssetClassCommodity3Choice.mmEnvironmental, com.tools20022.repository.choice.AssetClassCommodity3Choice.mmFertilizer,
-						com.tools20022.repository.choice.AssetClassCommodity3Choice.mmFreight, com.tools20022.repository.choice.AssetClassCommodity3Choice.mmIndustrialProduct,
-						com.tools20022.repository.choice.AssetClassCommodity3Choice.mmMetal, com.tools20022.repository.choice.AssetClassCommodity3Choice.mmOtherC10, com.tools20022.repository.choice.AssetClassCommodity3Choice.mmPaper,
-						com.tools20022.repository.choice.AssetClassCommodity3Choice.mmPolypropylene, com.tools20022.repository.choice.AssetClassCommodity3Choice.mmInflation,
-						com.tools20022.repository.choice.AssetClassCommodity3Choice.mmMultiCommodityExotic, com.tools20022.repository.choice.AssetClassCommodity3Choice.mmOfficialEconomicStatistics,
-						com.tools20022.repository.choice.AssetClassCommodity3Choice.mmOther);
+				messageElement_lazy = () -> Arrays.asList(AssetClassCommodity3Choice.mmAgricultural, AssetClassCommodity3Choice.mmEnergy, AssetClassCommodity3Choice.mmEnvironmental, AssetClassCommodity3Choice.mmFertilizer,
+						AssetClassCommodity3Choice.mmFreight, AssetClassCommodity3Choice.mmIndustrialProduct, AssetClassCommodity3Choice.mmMetal, AssetClassCommodity3Choice.mmOtherC10, AssetClassCommodity3Choice.mmPaper,
+						AssetClassCommodity3Choice.mmPolypropylene, AssetClassCommodity3Choice.mmInflation, AssetClassCommodity3Choice.mmMultiCommodityExotic, AssetClassCommodity3Choice.mmOfficialEconomicStatistics,
+						AssetClassCommodity3Choice.mmOther);
 				trace_lazy = () -> Commodity.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AssetClassCommodity3Choice";
 				definition = "Choice to define commodity specific attributes of a derivative.";
 			}

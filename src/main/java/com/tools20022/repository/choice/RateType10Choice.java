@@ -20,8 +20,10 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.RateType3Code;
 import com.tools20022.repository.entity.Tax;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification20;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -113,14 +115,14 @@ public class RateType10Choice {
 	 */
 	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.mmTaxRateType;
+			businessElementTrace_lazy = () -> Tax.mmTaxRateType;
 			componentContext_lazy = () -> RateType10Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Cd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Standard code to specify the type of tax rate.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.RateType37Choice.mmCode);
+			nextVersions_lazy = () -> Arrays.asList(RateType37Choice.mmCode);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RateType3Code.mmObject();
@@ -169,14 +171,14 @@ public class RateType10Choice {
 	 */
 	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.mmTaxRateType;
+			businessElementTrace_lazy = () -> Tax.mmTaxRateType;
 			componentContext_lazy = () -> RateType10Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Proprietary identification of the type of tax rate.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.RateType37Choice.mmProprietary);
+			nextVersions_lazy = () -> Arrays.asList(RateType37Choice.mmProprietary);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -187,10 +189,10 @@ public class RateType10Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.RateType10Choice.mmCode, com.tools20022.repository.choice.RateType10Choice.mmProprietary);
+				messageElement_lazy = () -> Arrays.asList(RateType10Choice.mmCode, RateType10Choice.mmProprietary);
 				trace_lazy = () -> Tax.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RateType10Choice";
 				definition = "Choice between a standard code or proprietary code to specify a rate type.";
 				nextVersions_lazy = () -> Arrays.asList(RateType37Choice.mmObject());

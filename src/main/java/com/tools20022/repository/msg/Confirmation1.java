@@ -20,12 +20,14 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ConfirmationRequest1Code;
 import com.tools20022.repository.codeset.TradeConfirmationStatus1Code;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Max35NumericText;
 import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.datatype.YesNoIndicator;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -132,7 +134,7 @@ public class Confirmation1 {
 			componentContext_lazy = () -> Confirmation1.mmObject();
 			isDerived = false;
 			xmlTag = "ConfSts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConfirmationStatus";
 			definition = "Identifies the status of the confirmation.";
 			maxOccurs = 1;
@@ -172,7 +174,7 @@ public class Confirmation1 {
 			componentContext_lazy = () -> Confirmation1.mmObject();
 			isDerived = false;
 			xmlTag = "ConfTm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConfirmationTime";
 			definition = "Time that both of parties confirm the trade.";
 			maxOccurs = 1;
@@ -212,7 +214,7 @@ public class Confirmation1 {
 			componentContext_lazy = () -> Confirmation1.mmObject();
 			isDerived = false;
 			xmlTag = "TradPtyConfTm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradePartyConfirmationTime";
 			definition = "Time that the trade party confirms the trade.";
 			maxOccurs = 1;
@@ -252,7 +254,7 @@ public class Confirmation1 {
 			componentContext_lazy = () -> Confirmation1.mmObject();
 			isDerived = false;
 			xmlTag = "InitgPtyConfTm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InitiatingPartyConfirmationTime";
 			definition = "Time that the initiating party confirms the trade.";
 			maxOccurs = 1;
@@ -293,7 +295,7 @@ public class Confirmation1 {
 			componentContext_lazy = () -> Confirmation1.mmObject();
 			isDerived = false;
 			xmlTag = "ConfTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConfirmationType";
 			definition = "Identifies the type of confirmation message being sent.";
 			maxOccurs = 1;
@@ -332,7 +334,7 @@ public class Confirmation1 {
 			componentContext_lazy = () -> Confirmation1.mmObject();
 			isDerived = false;
 			xmlTag = "ReqId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestIdentification";
 			definition = "Identifies the confirm request messge.";
 			maxOccurs = 1;
@@ -374,7 +376,7 @@ public class Confirmation1 {
 			componentContext_lazy = () -> Confirmation1.mmObject();
 			isDerived = false;
 			xmlTag = "QryStartNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QueryStartNumber";
 			definition = "Start number in request result.";
 			maxOccurs = 1;
@@ -415,7 +417,7 @@ public class Confirmation1 {
 			componentContext_lazy = () -> Confirmation1.mmObject();
 			isDerived = false;
 			xmlTag = "TtlNbOfRpts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalNumberOfReports";
 			definition = "Total number of reports returned in response to a request.";
 			maxOccurs = 1;
@@ -459,7 +461,7 @@ public class Confirmation1 {
 			componentContext_lazy = () -> Confirmation1.mmObject();
 			isDerived = false;
 			xmlTag = "PgNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PageNumber";
 			definition = "Query results will be grouped with fixed number. The field indicates that the total number of groups. ";
 			maxOccurs = 1;
@@ -500,7 +502,7 @@ public class Confirmation1 {
 			componentContext_lazy = () -> Confirmation1.mmObject();
 			isDerived = false;
 			xmlTag = "QryPgNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QueryPageNumber";
 			definition = "Page number in request result.";
 			maxOccurs = 1;
@@ -540,7 +542,7 @@ public class Confirmation1 {
 			componentContext_lazy = () -> Confirmation1.mmObject();
 			isDerived = false;
 			xmlTag = "MsgNbOfCurPg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageNumberOfCurrentPage";
 			definition = "Number of messages in current page.";
 			maxOccurs = 1;
@@ -580,7 +582,7 @@ public class Confirmation1 {
 			componentContext_lazy = () -> Confirmation1.mmObject();
 			isDerived = false;
 			xmlTag = "ListOrdrNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ListOrderNumber";
 			definition = "Number of reports at current page.";
 			maxOccurs = 1;
@@ -624,7 +626,7 @@ public class Confirmation1 {
 			componentContext_lazy = () -> Confirmation1.mmObject();
 			isDerived = false;
 			xmlTag = "LastPgInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LastPageIndicator";
 			definition = "Indicate whether the current message is the last one of the current page or not.";
 			maxOccurs = 1;
@@ -668,7 +670,7 @@ public class Confirmation1 {
 			componentContext_lazy = () -> Confirmation1.mmObject();
 			isDerived = false;
 			xmlTag = "LastRptReqd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LastReportRequested";
 			definition = "Indicates whether this message is that last report message in response to a request.";
 			maxOccurs = 1;
@@ -680,14 +682,11 @@ public class Confirmation1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Confirmation1.mmConfirmationStatus, com.tools20022.repository.msg.Confirmation1.mmConfirmationTime,
-						com.tools20022.repository.msg.Confirmation1.mmTradePartyConfirmationTime, com.tools20022.repository.msg.Confirmation1.mmInitiatingPartyConfirmationTime,
-						com.tools20022.repository.msg.Confirmation1.mmConfirmationType, com.tools20022.repository.msg.Confirmation1.mmRequestIdentification, com.tools20022.repository.msg.Confirmation1.mmQueryStartNumber,
-						com.tools20022.repository.msg.Confirmation1.mmTotalNumberOfReports, com.tools20022.repository.msg.Confirmation1.mmPageNumber, com.tools20022.repository.msg.Confirmation1.mmQueryPageNumber,
-						com.tools20022.repository.msg.Confirmation1.mmMessageNumberOfCurrentPage, com.tools20022.repository.msg.Confirmation1.mmListOrderNumber, com.tools20022.repository.msg.Confirmation1.mmLastPageIndicator,
-						com.tools20022.repository.msg.Confirmation1.mmLastReportRequested);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(Confirmation1.mmConfirmationStatus, Confirmation1.mmConfirmationTime, Confirmation1.mmTradePartyConfirmationTime, Confirmation1.mmInitiatingPartyConfirmationTime,
+						Confirmation1.mmConfirmationType, Confirmation1.mmRequestIdentification, Confirmation1.mmQueryStartNumber, Confirmation1.mmTotalNumberOfReports, Confirmation1.mmPageNumber, Confirmation1.mmQueryPageNumber,
+						Confirmation1.mmMessageNumberOfCurrentPage, Confirmation1.mmListOrderNumber, Confirmation1.mmLastPageIndicator, Confirmation1.mmLastReportRequested);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Confirmation1";
 				definition = "Details of confirmation in the CMU.";
 			}

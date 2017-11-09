@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ConfirmationTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -86,7 +88,7 @@ public class ConfirmationType1Code extends ConfirmationTypeCode {
 	 */
 	public static final MMCode mmActual = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Actual";
 			owner_lazy = () -> ConfirmationType1Code.mmObject();
 		}
@@ -109,7 +111,7 @@ public class ConfirmationType1Code extends ConfirmationTypeCode {
 	 */
 	public static final MMCode mmIntent = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Intent";
 			owner_lazy = () -> ConfirmationType1Code.mmObject();
 		}
@@ -118,12 +120,12 @@ public class ConfirmationType1Code extends ConfirmationTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ACTL");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ConfirmationType1Code";
 				definition = "Specifies whether a message is an intention to execute a transfer instruction or an actual confirmation of the execution of the transfer.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ConfirmationType1Code.mmActual, com.tools20022.repository.codeset.ConfirmationType1Code.mmIntent);
+				code_lazy = () -> Arrays.asList(ConfirmationType1Code.mmActual, ConfirmationType1Code.mmIntent);
 				trace_lazy = () -> ConfirmationTypeCode.mmObject();
 			}
 		});

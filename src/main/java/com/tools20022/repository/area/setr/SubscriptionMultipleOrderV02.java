@@ -20,6 +20,7 @@ package com.tools20022.repository.area.setr;
 import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.SecuritiesTradeArchive;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.ISOArchive;
@@ -47,6 +48,9 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code setr.010.001.02}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.SecuritiesTradeArchive
@@ -90,9 +94,6 @@ import java.util.List;
  * SubscriptionMultipleOrderV02.mmExtension}</li>
  * </ul>
  * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code setr.010.001.02}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -145,7 +146,7 @@ public class SubscriptionMultipleOrderV02 {
 	public static final MMMessageBuildingBlock mmMasterReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "MstrRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MasterReference";
 			definition = "Reference assigned to a set of orders or trades in order to link them together.";
 			maxOccurs = 1;
@@ -180,7 +181,7 @@ public class SubscriptionMultipleOrderV02 {
 	public static final MMMessageBuildingBlock mmPoolReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "PoolRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PoolReference";
 			definition = "Collective reference identifying a set of messages.";
 			maxOccurs = 1;
@@ -215,7 +216,7 @@ public class SubscriptionMultipleOrderV02 {
 	public static final MMMessageBuildingBlock mmPreviousReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "PrvsRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousReference";
 			definition = "Reference to a linked message that was previously sent.";
 			minOccurs = 0;
@@ -249,7 +250,7 @@ public class SubscriptionMultipleOrderV02 {
 	public static final MMMessageBuildingBlock mmMultipleOrderDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "MltplOrdrDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MultipleOrderDetails";
 			definition = "General information related to the order.";
 			maxOccurs = 1;
@@ -283,7 +284,7 @@ public class SubscriptionMultipleOrderV02 {
 	public static final MMMessageBuildingBlock mmIntermediaryDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "IntrmyDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IntermediaryDetails";
 			definition = "Information related to the intermediary.";
 			maxOccurs = 10;
@@ -319,7 +320,7 @@ public class SubscriptionMultipleOrderV02 {
 	public static final MMMessageBuildingBlock mmCopyDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CpyDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CopyDetails";
 			definition = "Information provided when the message is a copy of a previous message.";
 			maxOccurs = 1;
@@ -356,7 +357,7 @@ public class SubscriptionMultipleOrderV02 {
 	public static final MMMessageBuildingBlock mmExtension = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Xtnsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Extension";
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
 			minOccurs = 0;
@@ -367,7 +368,7 @@ public class SubscriptionMultipleOrderV02 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SubscriptionMultipleOrderV02";
 				definition = "Scope\r\nThe SubscriptionMultipleOrder message is sent by an instructing party, eg, an investment manager or its authorised representative, to an executing party, eg, a transfer agent. There may be one or more intermediary parties between the instructing party and the executing party. The intermediary party is, for example, an intermediary or a concentrator.\r\nThis message is used to instruct the executing party to subscribe to one or more financial instruments, for the same account.\r\nUsage\r\nThe SubscriptionMultipleOrder message is used for multiple orders. It may also be used for single orders, ie, a message containing one order for one financial instrument and related to one investment account. For a single subscription order, the SubscriptionMultipleOrder message, not the SubscriptionBulkOrder message, must be used.\r\nIf there are subscription orders for the same financial instrument but for different accounts, then the SubscriptionBulkOrder message must be used.";
 				nextVersions_lazy = () -> Arrays.asList(SubscriptionOrderV03.mmObject());
@@ -376,10 +377,8 @@ public class SubscriptionMultipleOrderV02 {
 				xmlTag = "setr.010.001.02";
 				businessArea_lazy = () -> SecuritiesTradeArchive.mmObject();
 				xmlName = "setr.010.001.02";
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.SubscriptionMultipleOrderV02.mmMasterReference, com.tools20022.repository.area.setr.SubscriptionMultipleOrderV02.mmPoolReference,
-						com.tools20022.repository.area.setr.SubscriptionMultipleOrderV02.mmPreviousReference, com.tools20022.repository.area.setr.SubscriptionMultipleOrderV02.mmMultipleOrderDetails,
-						com.tools20022.repository.area.setr.SubscriptionMultipleOrderV02.mmIntermediaryDetails, com.tools20022.repository.area.setr.SubscriptionMultipleOrderV02.mmCopyDetails,
-						com.tools20022.repository.area.setr.SubscriptionMultipleOrderV02.mmExtension);
+				messageBuildingBlock_lazy = () -> Arrays.asList(SubscriptionMultipleOrderV02.mmMasterReference, SubscriptionMultipleOrderV02.mmPoolReference, SubscriptionMultipleOrderV02.mmPreviousReference,
+						SubscriptionMultipleOrderV02.mmMultipleOrderDetails, SubscriptionMultipleOrderV02.mmIntermediaryDetails, SubscriptionMultipleOrderV02.mmCopyDetails, SubscriptionMultipleOrderV02.mmExtension);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "setr";

@@ -20,10 +20,12 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.CommodityDerivate2Choice;
 import com.tools20022.repository.codeset.ActiveOrHistoricCurrencyCode;
 import com.tools20022.repository.entity.Commodity;
 import com.tools20022.repository.entity.Derivative;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -104,7 +106,7 @@ public class CommodityDerivate4 {
 			componentContext_lazy = () -> CommodityDerivate4.mmObject();
 			isDerived = false;
 			xmlTag = "ClssSpcfc";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClassSpecific";
 			definition = "Provides specific information related to commodity derivatives.";
 			maxOccurs = 1;
@@ -149,11 +151,11 @@ public class CommodityDerivate4 {
 	 */
 	public static final MMMessageAttribute mmNotionalCurrency = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Derivative.mmNotionalCurrency;
+			businessElementTrace_lazy = () -> Derivative.mmNotionalCurrency;
 			componentContext_lazy = () -> CommodityDerivate4.mmObject();
 			isDerived = false;
 			xmlTag = "NtnlCcy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotionalCurrency";
 			definition = "Currency in which the notional is denominated.";
 			maxOccurs = 1;
@@ -165,10 +167,10 @@ public class CommodityDerivate4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CommodityDerivate4.mmClassSpecific, com.tools20022.repository.msg.CommodityDerivate4.mmNotionalCurrency);
+				messageElement_lazy = () -> Arrays.asList(CommodityDerivate4.mmClassSpecific, CommodityDerivate4.mmNotionalCurrency);
 				trace_lazy = () -> Derivative.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CommodityDerivate4";
 				definition = "Transparency calculation specific details for an commodity derivatives.";
 			}

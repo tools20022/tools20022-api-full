@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.AssetPriceTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -92,7 +94,7 @@ public class AssetPriceType1Code extends AssetPriceTypeCode {
 	 */
 	public static final MMCode mmArgusMcCloskey = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ArgusMcCloskey";
 			owner_lazy = () -> AssetPriceType1Code.mmObject();
 		}
@@ -115,7 +117,7 @@ public class AssetPriceType1Code extends AssetPriceTypeCode {
 	 */
 	public static final MMCode mmBaltic = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Baltic";
 			owner_lazy = () -> AssetPriceType1Code.mmObject();
 		}
@@ -138,7 +140,7 @@ public class AssetPriceType1Code extends AssetPriceTypeCode {
 	 */
 	public static final MMCode mmExchange = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Exchange";
 			owner_lazy = () -> AssetPriceType1Code.mmObject();
 		}
@@ -161,7 +163,7 @@ public class AssetPriceType1Code extends AssetPriceTypeCode {
 	 */
 	public static final MMCode mmGlobalCoal = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GlobalCoal";
 			owner_lazy = () -> AssetPriceType1Code.mmObject();
 		}
@@ -184,7 +186,7 @@ public class AssetPriceType1Code extends AssetPriceTypeCode {
 	 */
 	public static final MMCode mmIHSMcCloskey = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IHSMcCloskey";
 			owner_lazy = () -> AssetPriceType1Code.mmObject();
 		}
@@ -207,7 +209,7 @@ public class AssetPriceType1Code extends AssetPriceTypeCode {
 	 */
 	public static final MMCode mmOther = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
 			owner_lazy = () -> AssetPriceType1Code.mmObject();
 		}
@@ -230,7 +232,7 @@ public class AssetPriceType1Code extends AssetPriceTypeCode {
 	 */
 	public static final MMCode mmPlatts = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Platts";
 			owner_lazy = () -> AssetPriceType1Code.mmObject();
 		}
@@ -239,13 +241,12 @@ public class AssetPriceType1Code extends AssetPriceTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AssetPriceType1Code";
 				definition = "Specifies the type of price for an asset.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AssetPriceType1Code.mmArgusMcCloskey, com.tools20022.repository.codeset.AssetPriceType1Code.mmBaltic,
-						com.tools20022.repository.codeset.AssetPriceType1Code.mmExchange, com.tools20022.repository.codeset.AssetPriceType1Code.mmGlobalCoal, com.tools20022.repository.codeset.AssetPriceType1Code.mmIHSMcCloskey,
-						com.tools20022.repository.codeset.AssetPriceType1Code.mmOther, com.tools20022.repository.codeset.AssetPriceType1Code.mmPlatts);
+				code_lazy = () -> Arrays.asList(AssetPriceType1Code.mmArgusMcCloskey, AssetPriceType1Code.mmBaltic, AssetPriceType1Code.mmExchange, AssetPriceType1Code.mmGlobalCoal, AssetPriceType1Code.mmIHSMcCloskey,
+						AssetPriceType1Code.mmOther, AssetPriceType1Code.mmPlatts);
 				trace_lazy = () -> AssetPriceTypeCode.mmObject();
 			}
 		});

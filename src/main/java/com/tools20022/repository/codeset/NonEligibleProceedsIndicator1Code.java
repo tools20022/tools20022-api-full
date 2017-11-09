@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.NonEligibleProceedsIndicatorCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -88,7 +90,7 @@ public class NonEligibleProceedsIndicator1Code extends NonEligibleProceedsIndica
 	 */
 	public static final MMCode mmNonEligibleCurrency = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonEligibleCurrency";
 			owner_lazy = () -> NonEligibleProceedsIndicator1Code.mmObject();
 		}
@@ -111,7 +113,7 @@ public class NonEligibleProceedsIndicator1Code extends NonEligibleProceedsIndica
 	 */
 	public static final MMCode mmAccountLimitation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountLimitation";
 			owner_lazy = () -> NonEligibleProceedsIndicator1Code.mmObject();
 		}
@@ -134,7 +136,7 @@ public class NonEligibleProceedsIndicator1Code extends NonEligibleProceedsIndica
 	 */
 	public static final MMCode mmOtherNonEligibility = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherNonEligibility";
 			owner_lazy = () -> NonEligibleProceedsIndicator1Code.mmObject();
 		}
@@ -143,13 +145,12 @@ public class NonEligibleProceedsIndicator1Code extends NonEligibleProceedsIndica
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("NELC");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "NonEligibleProceedsIndicator1Code";
 				definition = "Specifies information regarding the non eligibility of the outturn resources.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.NonEligibleProceedsIndicator1Code.mmNonEligibleCurrency, com.tools20022.repository.codeset.NonEligibleProceedsIndicator1Code.mmAccountLimitation,
-						com.tools20022.repository.codeset.NonEligibleProceedsIndicator1Code.mmOtherNonEligibility);
+				code_lazy = () -> Arrays.asList(NonEligibleProceedsIndicator1Code.mmNonEligibleCurrency, NonEligibleProceedsIndicator1Code.mmAccountLimitation, NonEligibleProceedsIndicator1Code.mmOtherNonEligibility);
 				trace_lazy = () -> NonEligibleProceedsIndicatorCode.mmObject();
 			}
 		});

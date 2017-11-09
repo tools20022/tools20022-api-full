@@ -20,9 +20,14 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CreditDebitCode;
 import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
+import com.tools20022.repository.entity.CurrencyExchange;
+import com.tools20022.repository.entity.ForeignExchangeTrade;
+import com.tools20022.repository.entity.PaymentExecution;
 import com.tools20022.repository.entity.SecuritiesSettlement;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -105,11 +110,11 @@ public class AmountAndDirection1 {
 	 */
 	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmSettlementAmount;
+			businessElementTrace_lazy = () -> SecuritiesSettlement.mmSettlementAmount;
 			componentContext_lazy = () -> AmountAndDirection1.mmObject();
 			isDerived = false;
 			xmlTag = "Amt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Amount of money that is debited or credited.";
 			maxOccurs = 1;
@@ -154,11 +159,11 @@ public class AmountAndDirection1 {
 	 */
 	public static final MMMessageAttribute mmOriginalCurrencyAndOrderedAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmOriginalAmount;
+			businessElementTrace_lazy = () -> CurrencyExchange.mmOriginalAmount;
 			componentContext_lazy = () -> AmountAndDirection1.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlCcyAndOrdrdAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalCurrencyAndOrderedAmount";
 			definition = "Amount of money debited and credited in the original currency.";
 			maxOccurs = 1;
@@ -202,11 +207,11 @@ public class AmountAndDirection1 {
 	 */
 	public static final MMMessageAttribute mmCreditDebit = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentExecution.mmCreditDebitIndicator;
+			businessElementTrace_lazy = () -> PaymentExecution.mmCreditDebitIndicator;
 			componentContext_lazy = () -> AmountAndDirection1.mmObject();
 			isDerived = false;
 			xmlTag = "CdtDbt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditDebit";
 			definition = "Indicates if the amount is a debited or a credited.";
 			maxOccurs = 1;
@@ -249,11 +254,11 @@ public class AmountAndDirection1 {
 	 */
 	public static final MMMessageAssociationEnd mmExchange = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ForeignExchangeTrade.mmAgreedRate;
+			businessElementTrace_lazy = () -> ForeignExchangeTrade.mmAgreedRate;
 			componentContext_lazy = () -> AmountAndDirection1.mmObject();
 			isDerived = false;
 			xmlTag = "Xchg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Exchange";
 			definition = "Information needed to process a currency exchange or conversion.";
 			maxOccurs = 1;
@@ -266,11 +271,10 @@ public class AmountAndDirection1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AmountAndDirection1.mmAmount, com.tools20022.repository.msg.AmountAndDirection1.mmOriginalCurrencyAndOrderedAmount,
-						com.tools20022.repository.msg.AmountAndDirection1.mmCreditDebit, com.tools20022.repository.msg.AmountAndDirection1.mmExchange);
+				messageElement_lazy = () -> Arrays.asList(AmountAndDirection1.mmAmount, AmountAndDirection1.mmOriginalCurrencyAndOrderedAmount, AmountAndDirection1.mmCreditDebit, AmountAndDirection1.mmExchange);
 				trace_lazy = () -> SecuritiesSettlement.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "AmountAndDirection1";
 				definition = "Amount of money debited or credited on the books of an account servicer.";
 			}

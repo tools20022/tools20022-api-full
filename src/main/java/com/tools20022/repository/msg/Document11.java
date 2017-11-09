@@ -20,9 +20,12 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.PresentationDocumentFormat1Choice;
 import com.tools20022.repository.datatype.Max20000Text;
+import com.tools20022.repository.entity.Document;
 import com.tools20022.repository.entity.UndertakingDocument;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -100,11 +103,11 @@ public class Document11 {
 	 */
 	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.UndertakingDocument.mmFormat;
+			businessElementTrace_lazy = () -> UndertakingDocument.mmFormat;
 			componentContext_lazy = () -> Document11.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Type of document.";
 			maxOccurs = 1;
@@ -145,7 +148,7 @@ public class Document11 {
 			componentContext_lazy = () -> Document11.mmObject();
 			isDerived = false;
 			xmlTag = "Wrdg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Wording";
 			definition = "Wording for document.";
 			maxOccurs = 1;
@@ -186,11 +189,11 @@ public class Document11 {
 	 */
 	public static final MMMessageAssociationEnd mmElectronicDetails = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Document.mmPresentation;
+			businessElementTrace_lazy = () -> Document.mmPresentation;
 			componentContext_lazy = () -> Document11.mmObject();
 			isDerived = false;
 			xmlTag = "ElctrncDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ElectronicDetails";
 			definition = "Details related to an electronic presentation.";
 			minOccurs = 0;
@@ -202,10 +205,10 @@ public class Document11 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Document11.mmType, com.tools20022.repository.msg.Document11.mmWording, com.tools20022.repository.msg.Document11.mmElectronicDetails);
+				messageElement_lazy = () -> Arrays.asList(Document11.mmType, Document11.mmWording, Document11.mmElectronicDetails);
 				trace_lazy = () -> UndertakingDocument.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Document11";
 				definition = "Information about a document.";
 			}

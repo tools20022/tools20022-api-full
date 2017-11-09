@@ -20,8 +20,11 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ActiveCurrencyAnd13DecimalAmount;
 import com.tools20022.repository.entity.InvestmentFundTax;
+import com.tools20022.repository.entity.Tax;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -97,11 +100,11 @@ public class TotalTaxes2 {
 	 */
 	public static final MMMessageAttribute mmTotalAmountOfTaxes = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.mmAmount;
+			businessElementTrace_lazy = () -> Tax.mmAmount;
 			componentContext_lazy = () -> TotalTaxes2.mmObject();
 			isDerived = false;
 			xmlTag = "TtlAmtOfTaxs";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalAmountOfTaxes";
 			definition = "Total value of the taxes for a specific order.";
 			maxOccurs = 1;
@@ -145,7 +148,7 @@ public class TotalTaxes2 {
 			componentContext_lazy = () -> TotalTaxes2.mmObject();
 			isDerived = false;
 			xmlTag = "TaxDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxDetails";
 			definition = "Information related to a specific tax.";
 			minOccurs = 1;
@@ -157,10 +160,10 @@ public class TotalTaxes2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TotalTaxes2.mmTotalAmountOfTaxes, com.tools20022.repository.msg.TotalTaxes2.mmTaxDetails);
+				messageElement_lazy = () -> Arrays.asList(TotalTaxes2.mmTotalAmountOfTaxes, TotalTaxes2.mmTaxDetails);
 				trace_lazy = () -> InvestmentFundTax.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TotalTaxes2";
 				definition = "Information regarding the total amount of taxes.";
 			}

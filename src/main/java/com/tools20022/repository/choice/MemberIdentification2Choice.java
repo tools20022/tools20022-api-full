@@ -20,8 +20,12 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.BICFIIdentifier;
+import com.tools20022.repository.entity.OrganisationIdentification;
+import com.tools20022.repository.entity.PartyIdentificationInformation;
 import com.tools20022.repository.entity.SystemMemberRole;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.ClearingSystemMemberIdentification2;
 import com.tools20022.repository.msg.GenericFinancialIdentification1;
 import java.util.Arrays;
@@ -109,11 +113,11 @@ public class MemberIdentification2Choice {
 	 */
 	public static final MMMessageAttribute mmBICFI = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.mmBICFI;
+			businessElementTrace_lazy = () -> OrganisationIdentification.mmBICFI;
 			componentContext_lazy = () -> MemberIdentification2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "BICFI";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BICFI";
 			definition = "Code allocated to a financial institution by the ISO 9362 Registration Authority as described in ISO 9362 \"Banking - Banking telecommunication messages - Business identifier code (BIC)\".";
 			maxOccurs = 1;
@@ -157,11 +161,11 @@ public class MemberIdentification2Choice {
 	 */
 	public static final MMMessageAssociationEnd mmClearingSystemMemberIdentification = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.mmClearingSystemMemberIdentificationType;
+			businessElementTrace_lazy = () -> OrganisationIdentification.mmClearingSystemMemberIdentificationType;
 			componentContext_lazy = () -> MemberIdentification2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "ClrSysMmbId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClearingSystemMemberIdentification";
 			definition = "Information used to identify a member within a clearing system.";
 			maxOccurs = 1;
@@ -208,11 +212,11 @@ public class MemberIdentification2Choice {
 	 */
 	public static final MMMessageAssociationEnd mmOther = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.mmOtherIdentification;
+			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmOtherIdentification;
 			componentContext_lazy = () -> MemberIdentification2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Othr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
 			definition = "Unique identification of an agent, as assigned by an institution, using an identification scheme.";
 			maxOccurs = 1;
@@ -225,11 +229,10 @@ public class MemberIdentification2Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.MemberIdentification2Choice.mmBICFI, com.tools20022.repository.choice.MemberIdentification2Choice.mmClearingSystemMemberIdentification,
-						com.tools20022.repository.choice.MemberIdentification2Choice.mmOther);
+				messageElement_lazy = () -> Arrays.asList(MemberIdentification2Choice.mmBICFI, MemberIdentification2Choice.mmClearingSystemMemberIdentification, MemberIdentification2Choice.mmOther);
 				trace_lazy = () -> SystemMemberRole.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MemberIdentification2Choice";
 				definition = "Set of elements used to identify a financial institution.";
 			}

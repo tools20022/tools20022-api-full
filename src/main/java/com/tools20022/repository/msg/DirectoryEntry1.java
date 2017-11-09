@@ -20,8 +20,10 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.Number;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -100,7 +102,7 @@ public class DirectoryEntry1 {
 			componentContext_lazy = () -> DirectoryEntry1.mmObject();
 			isDerived = false;
 			xmlTag = "AcctOwnr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountOwner";
 			definition = "Owner of the account identification.";
 			maxOccurs = 1;
@@ -142,7 +144,7 @@ public class DirectoryEntry1 {
 			componentContext_lazy = () -> DirectoryEntry1.mmObject();
 			isDerived = false;
 			xmlTag = "ChngTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChangeType";
 			definition = "Type of the change.";
 			maxOccurs = 1;
@@ -183,7 +185,7 @@ public class DirectoryEntry1 {
 			componentContext_lazy = () -> DirectoryEntry1.mmObject();
 			isDerived = false;
 			xmlTag = "ChngId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChangeIdentification";
 			definition = "Identification number of the entry change.";
 			maxOccurs = 1;
@@ -223,7 +225,7 @@ public class DirectoryEntry1 {
 			componentContext_lazy = () -> DirectoryEntry1.mmObject();
 			isDerived = false;
 			xmlTag = "DrctryCmonDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DirectoryCommonDetails";
 			definition = "Information details from National BIC directory.";
 			maxOccurs = 1;
@@ -264,7 +266,7 @@ public class DirectoryEntry1 {
 			componentContext_lazy = () -> DirectoryEntry1.mmObject();
 			isDerived = false;
 			xmlTag = "PtcptPrfl";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ParticipantProfile";
 			definition = "Participant information from National BIC Directory.";
 			maxOccurs = 1;
@@ -277,10 +279,9 @@ public class DirectoryEntry1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DirectoryEntry1.mmAccountOwner, com.tools20022.repository.msg.DirectoryEntry1.mmChangeType,
-						com.tools20022.repository.msg.DirectoryEntry1.mmChangeIdentification, com.tools20022.repository.msg.DirectoryEntry1.mmDirectoryCommonDetails, com.tools20022.repository.msg.DirectoryEntry1.mmParticipantProfile);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(DirectoryEntry1.mmAccountOwner, DirectoryEntry1.mmChangeType, DirectoryEntry1.mmChangeIdentification, DirectoryEntry1.mmDirectoryCommonDetails, DirectoryEntry1.mmParticipantProfile);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "DirectoryEntry1";
 				definition = "Record details from National BIC directory.";
 			}

@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.IncomePreferenceCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -77,7 +79,7 @@ public class IncomePreference2Code extends IncomePreferenceCode {
 	 */
 	public static final MMCode mmCash = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cash";
 			owner_lazy = () -> IncomePreference2Code.mmObject();
 		}
@@ -100,7 +102,7 @@ public class IncomePreference2Code extends IncomePreferenceCode {
 	 */
 	public static final MMCode mmSecurities = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Securities";
 			owner_lazy = () -> IncomePreference2Code.mmObject();
 		}
@@ -109,11 +111,11 @@ public class IncomePreference2Code extends IncomePreferenceCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "IncomePreference2Code";
 				definition = "Specifies the options for distribution of dividend income.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.IncomePreference2Code.mmCash, com.tools20022.repository.codeset.IncomePreference2Code.mmSecurities);
+				code_lazy = () -> Arrays.asList(IncomePreference2Code.mmCash, IncomePreference2Code.mmSecurities);
 				trace_lazy = () -> IncomePreferenceCode.mmObject();
 			}
 		});

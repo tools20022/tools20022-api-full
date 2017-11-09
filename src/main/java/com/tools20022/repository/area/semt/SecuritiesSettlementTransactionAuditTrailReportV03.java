@@ -20,6 +20,7 @@ package com.tools20022.repository.area.semt;
 import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.SecuritiesManagementLatestVersion;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.SettlementAndReconciliationISOLatestversion;
@@ -47,6 +48,9 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code semt.022.001.03}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.SecuritiesManagementLatestVersion
@@ -91,9 +95,6 @@ import java.util.List;
  * SecuritiesSettlementTransactionAuditTrailReportV03.mmStatusTrail}</li>
  * </ul>
  * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code semt.022.001.03}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -148,10 +149,10 @@ public class SecuritiesSettlementTransactionAuditTrailReportV03 {
 	public static final MMMessageBuildingBlock mmPagination = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Pgntn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Pagination";
 			definition = "Page number of the message (within a statement) and continuation indicator to indicate that the statement is to continue or that the message is the last page of the statement.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAuditTrailReportV02.mmPagination;
+			previousVersion_lazy = () -> SecuritiesSettlementTransactionAuditTrailReportV02.mmPagination;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> Pagination.mmObject();
@@ -192,10 +193,10 @@ public class SecuritiesSettlementTransactionAuditTrailReportV03 {
 	public static final MMMessageBuildingBlock mmQueryReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "QryRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QueryReference";
 			definition = "Identification of the SecuritiesStatusQuery message sent to request this report.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAuditTrailReportV02.mmQueryReference;
+			previousVersion_lazy = () -> SecuritiesSettlementTransactionAuditTrailReportV02.mmQueryReference;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> Identification14.mmObject();
@@ -235,10 +236,10 @@ public class SecuritiesSettlementTransactionAuditTrailReportV03 {
 	public static final MMMessageBuildingBlock mmTransactionIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "TxId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionIdentification";
 			definition = "Provides unambiguous transaction identification information.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAuditTrailReportV02.mmTransactionIdentification;
+			previousVersion_lazy = () -> SecuritiesSettlementTransactionAuditTrailReportV02.mmTransactionIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> TransactionIdentifications29.mmObject();
@@ -276,10 +277,10 @@ public class SecuritiesSettlementTransactionAuditTrailReportV03 {
 	public static final MMMessageBuildingBlock mmSafekeepingAccount = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SfkpgAcct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingAccount";
 			definition = "Account to or from which a securities entry is made.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAuditTrailReportV02.mmSafekeepingAccount;
+			previousVersion_lazy = () -> SecuritiesSettlementTransactionAuditTrailReportV02.mmSafekeepingAccount;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> SecuritiesAccount24.mmObject();
@@ -317,10 +318,10 @@ public class SecuritiesSettlementTransactionAuditTrailReportV03 {
 	public static final MMMessageBuildingBlock mmAccountOwner = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "AcctOwnr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountOwner";
 			definition = "Party that legally owns the account.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAuditTrailReportV02.mmAccountOwner;
+			previousVersion_lazy = () -> SecuritiesSettlementTransactionAuditTrailReportV02.mmAccountOwner;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification98.mmObject();
@@ -360,10 +361,10 @@ public class SecuritiesSettlementTransactionAuditTrailReportV03 {
 	public static final MMMessageBuildingBlock mmStatusTrail = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "StsTrl";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusTrail";
 			definition = " Provides the history of status and reasons for a pending, posted or cancelled transaction.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAuditTrailReportV02.mmStatusTrail;
+			previousVersion_lazy = () -> SecuritiesSettlementTransactionAuditTrailReportV02.mmStatusTrail;
 			minOccurs = 0;
 			complexType_lazy = () -> StatusTrail6.mmObject();
 		}
@@ -372,7 +373,7 @@ public class SecuritiesSettlementTransactionAuditTrailReportV03 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesSettlementTransactionAuditTrailReportV03";
 				definition = "Scope\r\nThis message is sent by the Market Infrastructure to the CSD to advise of the history of all the statuses, modifications, replacement and cancellation of a specific transaction during its whole life cycle when the instructing party is a direct participant to the Settlement Infrastructure.\r\n\r\nUsage\r\nThe message may also be used to: \r\n- re-send a message sent by the market infrastructure to the direct participant,\r\n- provide a third party with a copy of a message being sent by the market infrastructure for information,\r\n- re-send to a third party a copy of a message being sent by the market infrastructure for information\r\nusing the relevant elements in the Business Application Header.";
 				previousVersion_lazy = () -> SecuritiesSettlementTransactionAuditTrailReportV02.mmObject();
@@ -380,11 +381,9 @@ public class SecuritiesSettlementTransactionAuditTrailReportV03 {
 				rootElement = "Document";
 				xmlTag = "SctiesSttlmTxAudtTrlRpt";
 				businessArea_lazy = () -> SecuritiesManagementLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAuditTrailReportV03.mmPagination,
-						com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAuditTrailReportV03.mmQueryReference,
-						com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAuditTrailReportV03.mmTransactionIdentification,
-						com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAuditTrailReportV03.mmSafekeepingAccount, com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAuditTrailReportV03.mmAccountOwner,
-						com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAuditTrailReportV03.mmStatusTrail);
+				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesSettlementTransactionAuditTrailReportV03.mmPagination, SecuritiesSettlementTransactionAuditTrailReportV03.mmQueryReference,
+						SecuritiesSettlementTransactionAuditTrailReportV03.mmTransactionIdentification, SecuritiesSettlementTransactionAuditTrailReportV03.mmSafekeepingAccount,
+						SecuritiesSettlementTransactionAuditTrailReportV03.mmAccountOwner, SecuritiesSettlementTransactionAuditTrailReportV03.mmStatusTrail);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "semt";

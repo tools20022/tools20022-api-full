@@ -19,10 +19,12 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.SecurityIdentification3Choice;
 import com.tools20022.repository.codeset.TransferType1Code;
 import com.tools20022.repository.datatype.Max350Text;
-import com.tools20022.repository.entity.InvestmentFundClass;
+import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -121,11 +123,11 @@ public class FinancialInstrument32 {
 	 */
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmIdentification;
+			businessElementTrace_lazy = () -> Security.mmIdentification;
 			componentContext_lazy = () -> FinancialInstrument32.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Unique and unambiguous identifier of a security, assigned under a formal or proprietary identification scheme.";
 			maxOccurs = 1;
@@ -168,11 +170,11 @@ public class FinancialInstrument32 {
 	 */
 	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.LocalName.mmFullName;
+			businessElementTrace_lazy = () -> LocalName.mmFullName;
 			componentContext_lazy = () -> FinancialInstrument32.mmObject();
 			isDerived = false;
 			xmlTag = "Nm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Name";
 			definition = "Name of the financial instrument in free format text.";
 			maxOccurs = 1;
@@ -219,11 +221,11 @@ public class FinancialInstrument32 {
 	 */
 	public static final MMMessageAttribute mmTransferType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTransfer.mmTransferType;
+			businessElementTrace_lazy = () -> SecuritiesTransfer.mmTransferType;
 			componentContext_lazy = () -> FinancialInstrument32.mmObject();
 			isDerived = false;
 			xmlTag = "TrfTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransferType";
 			definition = "Specifies whether the financial instrument is transferred as an asset or as cash.";
 			maxOccurs = 1;
@@ -269,11 +271,11 @@ public class FinancialInstrument32 {
 	 */
 	public static final MMMessageAttribute mmTransfereeAccount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmInvestmentAccount;
+			businessElementTrace_lazy = () -> InvestmentFundClass.mmInvestmentAccount;
 			componentContext_lazy = () -> FinancialInstrument32.mmObject();
 			isDerived = false;
 			xmlTag = "TrfeeAcct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransfereeAccount";
 			definition = "Account held in the name of a party that is not the name of the beneficial owner of the shares.";
 			maxOccurs = 1;
@@ -320,11 +322,11 @@ public class FinancialInstrument32 {
 	 */
 	public static final MMMessageAttribute mmReceivingAgentDetails = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> FinancialInstrument32.mmObject();
 			isDerived = false;
 			xmlTag = "RcvgAgtDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceivingAgentDetails";
 			definition = "Party that receives securities from the delivering agent via the place of settlement, for example, securities central depository.";
 			maxOccurs = 1;
@@ -371,11 +373,11 @@ public class FinancialInstrument32 {
 	 */
 	public static final MMMessageAttribute mmDeliveringAgentDetails = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> FinancialInstrument32.mmObject();
 			isDerived = false;
 			xmlTag = "DlvrgAgtDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeliveringAgentDetails";
 			definition = "Party that delivers securities to the receiving agent at the place of settlement, for example, a central securities depository.";
 			maxOccurs = 1;
@@ -387,12 +389,11 @@ public class FinancialInstrument32 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrument32.mmIdentification, com.tools20022.repository.msg.FinancialInstrument32.mmName,
-						com.tools20022.repository.msg.FinancialInstrument32.mmTransferType, com.tools20022.repository.msg.FinancialInstrument32.mmTransfereeAccount,
-						com.tools20022.repository.msg.FinancialInstrument32.mmReceivingAgentDetails, com.tools20022.repository.msg.FinancialInstrument32.mmDeliveringAgentDetails);
+				messageElement_lazy = () -> Arrays.asList(FinancialInstrument32.mmIdentification, FinancialInstrument32.mmName, FinancialInstrument32.mmTransferType, FinancialInstrument32.mmTransfereeAccount,
+						FinancialInstrument32.mmReceivingAgentDetails, FinancialInstrument32.mmDeliveringAgentDetails);
 				trace_lazy = () -> InvestmentFundClass.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FinancialInstrument32";
 				definition = "Security that is a sub-set of an investment fund, and is governed by the same investment fund policy, eg, dividend option or valuation currency.";
 				previousVersion_lazy = () -> FinancialInstrument27.mmObject();

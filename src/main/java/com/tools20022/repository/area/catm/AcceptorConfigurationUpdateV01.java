@@ -20,6 +20,7 @@ package com.tools20022.repository.area.catm;
 import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.TerminalManagementArchive;
 import com.tools20022.repository.msg.AcceptorConfiguration1;
 import com.tools20022.repository.msg.ContentInformationType1;
@@ -48,6 +49,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code catm.003.001.01}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.TerminalManagementArchive
@@ -77,9 +81,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * AcceptorConfigurationUpdateV01.mmSecurityTrailer}</li>
  * </ul>
  * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code catm.003.001.01}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -132,7 +133,7 @@ public class AcceptorConfigurationUpdateV01 {
 	public static final MMMessageBuildingBlock mmHeader = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Hdr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Header";
 			definition = "Set of characteristics related to the transfer of the acceptor parameters.";
 			maxOccurs = 1;
@@ -170,7 +171,7 @@ public class AcceptorConfigurationUpdateV01 {
 	public static final MMMessageBuildingBlock mmAcceptorConfiguration = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "AccptrCfgtn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcceptorConfiguration";
 			definition = "Acceptor configuration to be downloaded from the terminal management system.";
 			maxOccurs = 1;
@@ -206,7 +207,7 @@ public class AcceptorConfigurationUpdateV01 {
 	public static final MMMessageBuildingBlock mmSecurityTrailer = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SctyTrlr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityTrailer";
 			definition = "Trailer of the message containing a MAC or a digital signature.";
 			maxOccurs = 1;
@@ -218,7 +219,7 @@ public class AcceptorConfigurationUpdateV01 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AcceptorConfigurationUpdateV01";
 				definition = "Scope\r\nThe AcceptorConfigurationUpdate message is sent by the master terminal manager or delegated terminal manager to the acceptor system for the update of acquirer parameters, merchant parameters, vendor parameters or cryptographic keys of the acquirer.\r\nUsage\r\nThe AcceptorConfigurationUpdate message may embed the information required by the acceptor system for the configuration of:\r\n- the application parameters necessary for software applications processed by the POI system,\r\n- the acquirer protocol parameters for the message content and message exchange behaviour of the acquirer protocol supported by the POI system,\r\n- the host communication parameters to define the addresses of the connected acquirer hosts, and\r\n- the merchant parameters needed for the retailer protocol settings of the POI system.";
 				nextVersions_lazy = () -> Arrays.asList(AcceptorConfigurationUpdateV02.mmObject());
@@ -226,8 +227,7 @@ public class AcceptorConfigurationUpdateV01 {
 				rootElement = "Document";
 				xmlTag = "AccptrCfgtnUpd";
 				businessArea_lazy = () -> TerminalManagementArchive.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.catm.AcceptorConfigurationUpdateV01.mmHeader, com.tools20022.repository.area.catm.AcceptorConfigurationUpdateV01.mmAcceptorConfiguration,
-						com.tools20022.repository.area.catm.AcceptorConfigurationUpdateV01.mmSecurityTrailer);
+				messageBuildingBlock_lazy = () -> Arrays.asList(AcceptorConfigurationUpdateV01.mmHeader, AcceptorConfigurationUpdateV01.mmAcceptorConfiguration, AcceptorConfigurationUpdateV01.mmSecurityTrailer);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "catm";

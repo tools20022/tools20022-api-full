@@ -19,8 +19,14 @@ package com.tools20022.repository.entity;
 
 import com.tools20022.metamodel.MMBusinessAttribute;
 import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.EligibilityCode;
 import com.tools20022.repository.entity.InformationPartyRole;
+import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.Quote1;
+import com.tools20022.repository.msg.Quote2;
+import com.tools20022.repository.msg.Quote3;
+import com.tools20022.repository.msg.Quote4;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -33,6 +39,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} =
+ * {@linkplain com.tools20022.repository.entity.InformationPartyRole
+ * InformationPartyRole}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -41,10 +51,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * QuoteRequestor.mmRequestorEligibility}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} =
- * {@linkplain com.tools20022.repository.entity.InformationPartyRole
- * InformationPartyRole}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -110,11 +116,10 @@ public class QuoteRequestor extends InformationPartyRole {
 	 */
 	public static final MMBusinessAttribute mmRequestorEligibility = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Quote3.mmRequestorEligibility, com.tools20022.repository.msg.Quote1.mmRequestorEligibility, com.tools20022.repository.msg.Quote2.mmRequestorEligibility,
-					com.tools20022.repository.msg.Quote4.mmRequestorEligibility);
+			derivation_lazy = () -> Arrays.asList(Quote3.mmRequestorEligibility, Quote1.mmRequestorEligibility, Quote2.mmRequestorEligibility, Quote4.mmRequestorEligibility);
 			elementContext_lazy = () -> QuoteRequestor.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RequestorEligibility";
 			definition = "Identifies if the requestor of the quote is an elligible counterparty.";
 			maxOccurs = 1;
@@ -126,12 +131,12 @@ public class QuoteRequestor extends InformationPartyRole {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "QuoteRequestor";
 				definition = "Requestor of the quote";
 				superType_lazy = () -> InformationPartyRole.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.QuoteRequestor.mmRequestorEligibility);
+				element_lazy = () -> Arrays.asList(QuoteRequestor.mmRequestorEligibility);
 			}
 		});
 		return mmObject_lazy.get();

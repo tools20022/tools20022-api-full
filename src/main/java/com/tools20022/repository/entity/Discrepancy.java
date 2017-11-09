@@ -17,11 +17,10 @@
 
 package com.tools20022.repository.entity;
 
-import com.tools20022.metamodel.MMBusinessAssociationEnd;
-import com.tools20022.metamodel.MMBusinessAttribute;
-import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.*;
 import com.tools20022.repository.codeset.ExternalDiscrepancyCode;
 import com.tools20022.repository.datatype.Max2000Text;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.Discrepancy1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -35,16 +34,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.Discrepancy#mmUndertakingStatusReason
- * Discrepancy.mmUndertakingStatusReason}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Discrepancy#mmType
- * Discrepancy.mmType}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Discrepancy#mmDescription
- * Discrepancy.mmDescription}</li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.Discrepancy1 Discrepancy1}</li>
  * </ul>
  * </li>
  * <li>
@@ -56,11 +50,16 @@ import java.util.concurrent.atomic.AtomicReference;
  * UndertakingStatusReason.mmDiscrepancy}</li>
  * </ul>
  * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Discrepancy1 Discrepancy1}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Discrepancy#mmUndertakingStatusReason
+ * Discrepancy.mmUndertakingStatusReason}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Discrepancy#mmType
+ * Discrepancy.mmType}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Discrepancy#mmDescription
+ * Discrepancy.mmDescription}</li>
  * </ul>
  * </li>
  * <li>
@@ -121,13 +120,13 @@ public class Discrepancy {
 		{
 			elementContext_lazy = () -> Discrepancy.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "UndertakingStatusReason";
 			definition = "Undertaking status reason for which discrepancy information is provided.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.UndertakingStatusReason.mmDiscrepancy;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.UndertakingStatusReason.mmObject();
 		}
 	};
@@ -161,7 +160,7 @@ public class Discrepancy {
 		{
 			elementContext_lazy = () -> Discrepancy.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Type of discrepancy.";
 			maxOccurs = 1;
@@ -198,7 +197,7 @@ public class Discrepancy {
 		{
 			elementContext_lazy = () -> Discrepancy.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Description";
 			definition = "Description of the discrepancy.";
 			maxOccurs = 1;
@@ -210,12 +209,12 @@ public class Discrepancy {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Discrepancy";
 				definition = "Identification of a discrepancy.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.UndertakingStatusReason.mmDiscrepancy);
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Discrepancy.mmUndertakingStatusReason, com.tools20022.repository.entity.Discrepancy.mmType, com.tools20022.repository.entity.Discrepancy.mmDescription);
+				element_lazy = () -> Arrays.asList(Discrepancy.mmUndertakingStatusReason, Discrepancy.mmType, Discrepancy.mmDescription);
 				derivationComponent_lazy = () -> Arrays.asList(Discrepancy1.mmObject());
 			}
 		});

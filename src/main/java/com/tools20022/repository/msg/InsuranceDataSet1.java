@@ -20,11 +20,14 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.tsmt.*;
 import com.tools20022.repository.choice.PartyIdentification29Choice;
 import com.tools20022.repository.codeset.CurrencyCode;
 import com.tools20022.repository.codeset.InsuranceClauses1Code;
 import com.tools20022.repository.datatype.*;
-import com.tools20022.repository.entity.InsuranceCertificate;
+import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -163,7 +166,7 @@ public class InsuranceDataSet1 {
 			componentContext_lazy = () -> InsuranceDataSet1.mmObject();
 			isDerived = false;
 			xmlTag = "DataSetId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DataSetIdentification";
 			definition = "Identifies the insurancedata set";
 			maxOccurs = 1;
@@ -208,11 +211,11 @@ public class InsuranceDataSet1 {
 	 */
 	public static final MMMessageAssociationEnd mmIssuer = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> InsuranceDataSet1.mmObject();
 			isDerived = false;
 			xmlTag = "Issr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Issuer";
 			definition = "Issuer of the certificate, typically the insurance company or its agent.";
 			maxOccurs = 1;
@@ -256,11 +259,11 @@ public class InsuranceDataSet1 {
 	 */
 	public static final MMMessageAttribute mmIssueDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Document.mmIssueDate;
+			businessElementTrace_lazy = () -> Document.mmIssueDate;
 			componentContext_lazy = () -> InsuranceDataSet1.mmObject();
 			isDerived = false;
 			xmlTag = "IsseDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssueDate";
 			definition = "Issue date of the document.";
 			maxOccurs = 1;
@@ -304,11 +307,11 @@ public class InsuranceDataSet1 {
 	 */
 	public static final MMMessageAttribute mmEffectiveDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InsuranceCertificate.mmEffectiveDate;
+			businessElementTrace_lazy = () -> InsuranceCertificate.mmEffectiveDate;
 			componentContext_lazy = () -> InsuranceDataSet1.mmObject();
 			isDerived = false;
 			xmlTag = "FctvDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EffectiveDate";
 			definition = "Date upon which cover under an insurance policy becomes effective.";
 			maxOccurs = 1;
@@ -351,11 +354,11 @@ public class InsuranceDataSet1 {
 	 */
 	public static final MMMessageAttribute mmPlaceOfIssue = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Location.mmAddress;
+			businessElementTrace_lazy = () -> Location.mmAddress;
 			componentContext_lazy = () -> InsuranceDataSet1.mmObject();
 			isDerived = false;
 			xmlTag = "PlcOfIsse";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceOfIssue";
 			definition = "Place where the insurance certificate was issued.";
 			maxOccurs = 1;
@@ -398,11 +401,11 @@ public class InsuranceDataSet1 {
 	 */
 	public static final MMMessageAttribute mmInsuranceDocumentIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmIdentification;
+			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> InsuranceDataSet1.mmObject();
 			isDerived = false;
 			xmlTag = "InsrncDocId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InsuranceDocumentIdentification";
 			definition = "Unique identifier of the document.";
 			maxOccurs = 1;
@@ -447,11 +450,11 @@ public class InsuranceDataSet1 {
 	 */
 	public static final MMMessageAssociationEnd mmTransport = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Document.mmTransport;
+			businessElementTrace_lazy = () -> Document.mmTransport;
 			componentContext_lazy = () -> InsuranceDataSet1.mmObject();
 			isDerived = false;
 			xmlTag = "Trnsprt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Transport";
 			definition = "Transport information relative to the goods that are insured under the insurance policy.";
 			maxOccurs = 1;
@@ -497,11 +500,11 @@ public class InsuranceDataSet1 {
 	 */
 	public static final MMMessageAttribute mmInsuredAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InsuranceCertificate.mmInsuredAmount;
+			businessElementTrace_lazy = () -> InsuranceCertificate.mmInsuredAmount;
 			componentContext_lazy = () -> InsuranceDataSet1.mmObject();
 			isDerived = false;
 			xmlTag = "InsrdAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InsuredAmount";
 			definition = "Value of the goods as insured under the insurance policy.";
 			maxOccurs = 1;
@@ -545,11 +548,11 @@ public class InsuranceDataSet1 {
 	 */
 	public static final MMMessageAttribute mmInsuredGoodsDescription = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Product.mmDescription;
+			businessElementTrace_lazy = () -> Product.mmDescription;
 			componentContext_lazy = () -> InsuranceDataSet1.mmObject();
 			isDerived = false;
 			xmlTag = "InsrdGoodsDesc";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InsuredGoodsDescription";
 			definition = "Information about the goods and/or services of a trade transaction.";
 			maxOccurs = 1;
@@ -595,11 +598,11 @@ public class InsuranceDataSet1 {
 	 */
 	public static final MMMessageAttribute mmInsuranceConditions = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InsuranceCertificate.mmInsuranceConditions;
+			businessElementTrace_lazy = () -> InsuranceCertificate.mmInsuranceConditions;
 			componentContext_lazy = () -> InsuranceDataSet1.mmObject();
 			isDerived = false;
 			xmlTag = "InsrncConds";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InsuranceConditions";
 			definition = "Description of the conditions and exclusion clauses under which insurance is granted.";
 			minOccurs = 0;
@@ -645,11 +648,11 @@ public class InsuranceDataSet1 {
 	 */
 	public static final MMMessageAttribute mmInsuranceClauses = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InsuranceCertificate.mmInsuranceClauses;
+			businessElementTrace_lazy = () -> InsuranceCertificate.mmInsuranceClauses;
 			componentContext_lazy = () -> InsuranceDataSet1.mmObject();
 			isDerived = false;
 			xmlTag = "InsrncClauses";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InsuranceClauses";
 			definition = "Standard insurance clauses defined by the Institute of London Underwriters (or the American Institute of marine Underwriters).";
 			minOccurs = 0;
@@ -691,11 +694,11 @@ public class InsuranceDataSet1 {
 	 */
 	public static final MMMessageAssociationEnd mmAssured = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> InsuranceDataSet1.mmObject();
 			isDerived = false;
 			xmlTag = "Assrd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Assured";
 			definition = "Party that is covered under the assurance policy.";
 			maxOccurs = 1;
@@ -740,11 +743,11 @@ public class InsuranceDataSet1 {
 	 */
 	public static final MMMessageAttribute mmClaimsPayableAt = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InsuranceCertificate.mmClaimsPayableAt;
+			businessElementTrace_lazy = () -> InsuranceCertificate.mmClaimsPayableAt;
 			componentContext_lazy = () -> InsuranceDataSet1.mmObject();
 			isDerived = false;
 			xmlTag = "ClmsPyblAt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClaimsPayableAt";
 			definition = "Place where claims under the insurance policy will be paid.";
 			maxOccurs = 1;
@@ -787,11 +790,11 @@ public class InsuranceDataSet1 {
 	 */
 	public static final MMMessageAttribute mmClaimsPayableIn = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InsuranceCertificate.mmClaimsPayableIn;
+			businessElementTrace_lazy = () -> InsuranceCertificate.mmClaimsPayableIn;
 			componentContext_lazy = () -> InsuranceDataSet1.mmObject();
 			isDerived = false;
 			xmlTag = "ClmsPyblIn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClaimsPayableIn";
 			definition = "Currency in which claims, if valid, will be paid.";
 			maxOccurs = 1;
@@ -803,17 +806,14 @@ public class InsuranceDataSet1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InsuranceDataSet1.mmDataSetIdentification, com.tools20022.repository.msg.InsuranceDataSet1.mmIssuer,
-						com.tools20022.repository.msg.InsuranceDataSet1.mmIssueDate, com.tools20022.repository.msg.InsuranceDataSet1.mmEffectiveDate, com.tools20022.repository.msg.InsuranceDataSet1.mmPlaceOfIssue,
-						com.tools20022.repository.msg.InsuranceDataSet1.mmInsuranceDocumentIdentification, com.tools20022.repository.msg.InsuranceDataSet1.mmTransport, com.tools20022.repository.msg.InsuranceDataSet1.mmInsuredAmount,
-						com.tools20022.repository.msg.InsuranceDataSet1.mmInsuredGoodsDescription, com.tools20022.repository.msg.InsuranceDataSet1.mmInsuranceConditions, com.tools20022.repository.msg.InsuranceDataSet1.mmInsuranceClauses,
-						com.tools20022.repository.msg.InsuranceDataSet1.mmAssured, com.tools20022.repository.msg.InsuranceDataSet1.mmClaimsPayableAt, com.tools20022.repository.msg.InsuranceDataSet1.mmClaimsPayableIn);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.DataSetSubmissionV03.mmInsuranceDataSet, com.tools20022.repository.area.tsmt.ForwardDataSetSubmissionReportV03.mmInsuranceDataSet,
-						com.tools20022.repository.area.tsmt.DataSetSubmissionV04.mmInsuranceDataSet, com.tools20022.repository.area.tsmt.ForwardDataSetSubmissionReportV04.mmInsuranceDataSet,
-						com.tools20022.repository.area.tsmt.ForwardDataSetSubmissionReportV05.mmInsuranceDataSet, com.tools20022.repository.area.tsmt.DataSetSubmissionV05.mmInsuranceDataSet);
+				messageElement_lazy = () -> Arrays.asList(InsuranceDataSet1.mmDataSetIdentification, InsuranceDataSet1.mmIssuer, InsuranceDataSet1.mmIssueDate, InsuranceDataSet1.mmEffectiveDate, InsuranceDataSet1.mmPlaceOfIssue,
+						InsuranceDataSet1.mmInsuranceDocumentIdentification, InsuranceDataSet1.mmTransport, InsuranceDataSet1.mmInsuredAmount, InsuranceDataSet1.mmInsuredGoodsDescription, InsuranceDataSet1.mmInsuranceConditions,
+						InsuranceDataSet1.mmInsuranceClauses, InsuranceDataSet1.mmAssured, InsuranceDataSet1.mmClaimsPayableAt, InsuranceDataSet1.mmClaimsPayableIn);
+				messageBuildingBlock_lazy = () -> Arrays.asList(DataSetSubmissionV03.mmInsuranceDataSet, ForwardDataSetSubmissionReportV03.mmInsuranceDataSet, DataSetSubmissionV04.mmInsuranceDataSet,
+						ForwardDataSetSubmissionReportV04.mmInsuranceDataSet, ForwardDataSetSubmissionReportV05.mmInsuranceDataSet, DataSetSubmissionV05.mmInsuranceDataSet);
 				trace_lazy = () -> InsuranceCertificate.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
 						return DateFormat.getDateInstance(java.text.DateFormat.LONG).parse("September 9, 2016");

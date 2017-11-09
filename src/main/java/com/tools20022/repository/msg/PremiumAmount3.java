@@ -20,13 +20,16 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.PremiumQuote1Choice;
 import com.tools20022.repository.codeset.ActiveOrHistoricCurrencyCode;
 import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.Number;
+import com.tools20022.repository.entity.Payment;
 import com.tools20022.repository.entity.PremiumCalculation;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -123,10 +126,10 @@ public class PremiumAmount3 {
 			componentContext_lazy = () -> PremiumAmount3.mmObject();
 			isDerived = false;
 			xmlTag = "PrmQt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PremiumQuote";
 			definition = "Specifies the calculation method of the premium amount.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PremiumAmount2.mmPremiumQuote;
+			previousVersion_lazy = () -> PremiumAmount2.mmPremiumQuote;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -170,11 +173,11 @@ public class PremiumAmount3 {
 	 */
 	public static final MMMessageAttribute mmPremiumCurrency = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.mmCurrencyOfTransfer;
+			businessElementTrace_lazy = () -> Payment.mmCurrencyOfTransfer;
 			componentContext_lazy = () -> PremiumAmount3.mmObject();
 			isDerived = false;
 			xmlTag = "PrmCcy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PremiumCurrency";
 			definition = "Identification of the premium currency in which the option is held. \r\n";
 			maxOccurs = 1;
@@ -224,10 +227,10 @@ public class PremiumAmount3 {
 			componentContext_lazy = () -> PremiumAmount3.mmObject();
 			isDerived = false;
 			xmlTag = "Amt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Result of the calculation of the premium amount on the basis of the premium quote and one of the amounts of the underlying foreign exchange trade.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PremiumAmount2.mmAmount;
+			previousVersion_lazy = () -> PremiumAmount2.mmAmount;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
@@ -267,7 +270,7 @@ public class PremiumAmount3 {
 			componentContext_lazy = () -> PremiumAmount3.mmObject();
 			isDerived = false;
 			xmlTag = "DcmlPlcs";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DecimalPlaces";
 			definition = "Number of decimal places to which quantities of units/shares are rounded.";
 			maxOccurs = 1;
@@ -307,7 +310,7 @@ public class PremiumAmount3 {
 			componentContext_lazy = () -> PremiumAmount3.mmObject();
 			isDerived = false;
 			xmlTag = "PrmSttlmDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PremiumSettlementDate";
 			definition = "Date on which the premium must be settled.";
 			maxOccurs = 1;
@@ -347,7 +350,7 @@ public class PremiumAmount3 {
 			componentContext_lazy = () -> PremiumAmount3.mmObject();
 			isDerived = false;
 			xmlTag = "PyerPtyRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PayerPartyReference";
 			definition = "Premium fee payer related information";
 			maxOccurs = 1;
@@ -387,7 +390,7 @@ public class PremiumAmount3 {
 			componentContext_lazy = () -> PremiumAmount3.mmObject();
 			isDerived = false;
 			xmlTag = "RcvrPtyRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceiverPartyReference";
 			definition = "Premium fee receiver related information";
 			maxOccurs = 1;
@@ -399,12 +402,11 @@ public class PremiumAmount3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PremiumAmount3.mmPremiumQuote, com.tools20022.repository.msg.PremiumAmount3.mmPremiumCurrency, com.tools20022.repository.msg.PremiumAmount3.mmAmount,
-						com.tools20022.repository.msg.PremiumAmount3.mmDecimalPlaces, com.tools20022.repository.msg.PremiumAmount3.mmPremiumSettlementDate, com.tools20022.repository.msg.PremiumAmount3.mmPayerPartyReference,
-						com.tools20022.repository.msg.PremiumAmount3.mmReceiverPartyReference);
+				messageElement_lazy = () -> Arrays.asList(PremiumAmount3.mmPremiumQuote, PremiumAmount3.mmPremiumCurrency, PremiumAmount3.mmAmount, PremiumAmount3.mmDecimalPlaces, PremiumAmount3.mmPremiumSettlementDate,
+						PremiumAmount3.mmPayerPartyReference, PremiumAmount3.mmReceiverPartyReference);
 				trace_lazy = () -> PremiumCalculation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PremiumAmount3";
 				definition = "Commercial agreement in which the buyer agrees to pay the seller an amount of cash. Some aspects of the payment may be defined in the agreement, for example, the method of the payment";
 				previousVersion_lazy = () -> PremiumAmount2.mmObject();

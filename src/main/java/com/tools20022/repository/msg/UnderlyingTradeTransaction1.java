@@ -19,9 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.UnderlyingTradeTransactionType1Choice;
 import com.tools20022.repository.datatype.*;
 import com.tools20022.repository.entity.UnderlyingTransaction;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -116,11 +118,11 @@ public class UnderlyingTradeTransaction1 {
 	 */
 	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.UnderlyingTransaction.mmType;
+			businessElementTrace_lazy = () -> UnderlyingTransaction.mmType;
 			componentContext_lazy = () -> UnderlyingTradeTransaction1.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Type of underlying transaction such as a tender, order, contract.";
 			maxOccurs = 1;
@@ -163,11 +165,11 @@ public class UnderlyingTradeTransaction1 {
 	 */
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.UnderlyingTransaction.mmIdentification;
+			businessElementTrace_lazy = () -> UnderlyingTransaction.mmIdentification;
 			componentContext_lazy = () -> UnderlyingTradeTransaction1.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Identification of the underlying transaction.";
 			maxOccurs = 1;
@@ -210,11 +212,11 @@ public class UnderlyingTradeTransaction1 {
 	 */
 	public static final MMMessageAttribute mmTransactionDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.UnderlyingTransaction.mmIssueDate;
+			businessElementTrace_lazy = () -> UnderlyingTransaction.mmIssueDate;
 			componentContext_lazy = () -> UnderlyingTradeTransaction1.mmObject();
 			isDerived = false;
 			xmlTag = "TxDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionDate";
 			definition = "Date the underlying transaction was issued or awarded.";
 			maxOccurs = 1;
@@ -257,11 +259,11 @@ public class UnderlyingTradeTransaction1 {
 	 */
 	public static final MMMessageAttribute mmTenderClosingDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.UnderlyingTransaction.mmTenderClosingDate;
+			businessElementTrace_lazy = () -> UnderlyingTransaction.mmTenderClosingDate;
 			componentContext_lazy = () -> UnderlyingTradeTransaction1.mmObject();
 			isDerived = false;
 			xmlTag = "TndrClsgDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TenderClosingDate";
 			definition = "Date the tender closes.";
 			maxOccurs = 1;
@@ -305,11 +307,11 @@ public class UnderlyingTradeTransaction1 {
 	 */
 	public static final MMMessageAttribute mmTransactionAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.UnderlyingTransaction.mmTotalAmount;
+			businessElementTrace_lazy = () -> UnderlyingTransaction.mmTotalAmount;
 			componentContext_lazy = () -> UnderlyingTradeTransaction1.mmObject();
 			isDerived = false;
 			xmlTag = "TxAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionAmount";
 			definition = "Amount of the underlying transaction.";
 			maxOccurs = 1;
@@ -354,11 +356,11 @@ public class UnderlyingTradeTransaction1 {
 	 */
 	public static final MMMessageAttribute mmContractAmountPercentage = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.UnderlyingTransaction.mmContractAmountPercentage;
+			businessElementTrace_lazy = () -> UnderlyingTransaction.mmContractAmountPercentage;
 			componentContext_lazy = () -> UnderlyingTradeTransaction1.mmObject();
 			isDerived = false;
 			xmlTag = "CtrctAmtPctg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ContractAmountPercentage";
 			definition = "Percentage of the underlying contract covered by the undertaking.";
 			maxOccurs = 1;
@@ -400,7 +402,7 @@ public class UnderlyingTradeTransaction1 {
 			componentContext_lazy = () -> UnderlyingTradeTransaction1.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInformation";
 			definition = "Additional information related to the underlying transaction.";
 			maxOccurs = 5;
@@ -412,13 +414,11 @@ public class UnderlyingTradeTransaction1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UnderlyingTradeTransaction1.mmType, com.tools20022.repository.msg.UnderlyingTradeTransaction1.mmIdentification,
-						com.tools20022.repository.msg.UnderlyingTradeTransaction1.mmTransactionDate, com.tools20022.repository.msg.UnderlyingTradeTransaction1.mmTenderClosingDate,
-						com.tools20022.repository.msg.UnderlyingTradeTransaction1.mmTransactionAmount, com.tools20022.repository.msg.UnderlyingTradeTransaction1.mmContractAmountPercentage,
-						com.tools20022.repository.msg.UnderlyingTradeTransaction1.mmAdditionalInformation);
+				messageElement_lazy = () -> Arrays.asList(UnderlyingTradeTransaction1.mmType, UnderlyingTradeTransaction1.mmIdentification, UnderlyingTradeTransaction1.mmTransactionDate, UnderlyingTradeTransaction1.mmTenderClosingDate,
+						UnderlyingTradeTransaction1.mmTransactionAmount, UnderlyingTradeTransaction1.mmContractAmountPercentage, UnderlyingTradeTransaction1.mmAdditionalInformation);
 				trace_lazy = () -> UnderlyingTransaction.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "UnderlyingTradeTransaction1";
 				definition = "Information about a transaction.";
 			}

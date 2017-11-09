@@ -19,8 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.admi.ProcessingRequestV01;
 import com.tools20022.repository.choice.PartyIdentification73Choice;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -113,10 +116,10 @@ public class RequestDetails19 {
 			componentContext_lazy = () -> RequestDetails19.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Type of data being requested, for example, a sub-member BIC.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.RequestDetails3.mmType;
+			previousVersion_lazy = () -> RequestDetails3.mmType;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -161,10 +164,10 @@ public class RequestDetails19 {
 			componentContext_lazy = () -> RequestDetails19.mmObject();
 			isDerived = false;
 			xmlTag = "RqstrId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestorIdentification";
 			definition = "Identificates the requestor.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.RequestDetails3.mmKey;
+			previousVersion_lazy = () -> RequestDetails3.mmKey;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification73Choice.mmObject();
@@ -204,7 +207,7 @@ public class RequestDetails19 {
 			componentContext_lazy = () -> RequestDetails19.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlReqInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalRequestInformation";
 			definition = "Additional information to support the processing request.";
 			minOccurs = 0;
@@ -215,11 +218,10 @@ public class RequestDetails19 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RequestDetails19.mmType, com.tools20022.repository.msg.RequestDetails19.mmRequestorIdentification,
-						com.tools20022.repository.msg.RequestDetails19.mmAdditionalRequestInformation);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.admi.ProcessingRequestV01.mmRequest);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(RequestDetails19.mmType, RequestDetails19.mmRequestorIdentification, RequestDetails19.mmAdditionalRequestInformation);
+				messageBuildingBlock_lazy = () -> Arrays.asList(ProcessingRequestV01.mmRequest);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RequestDetails19";
 				definition = "Details of the processing request.";
 				previousVersion_lazy = () -> RequestDetails3.mmObject();

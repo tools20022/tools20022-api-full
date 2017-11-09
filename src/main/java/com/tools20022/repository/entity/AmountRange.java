@@ -17,13 +17,12 @@
 
 package com.tools20022.repository.entity;
 
-import com.tools20022.metamodel.MMBusinessAssociationEnd;
-import com.tools20022.metamodel.MMBusinessAttribute;
-import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.*;
 import com.tools20022.repository.choice.*;
 import com.tools20022.repository.codeset.CurrencyCode;
 import com.tools20022.repository.codeset.DebitCreditCode;
 import com.tools20022.repository.datatype.CurrencyAndAmount;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -37,26 +36,35 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.AmountRange#mmFromAmount
- * AmountRange.mmFromAmount}</li>
- * <li>{@linkplain com.tools20022.repository.entity.AmountRange#mmToAmount
- * AmountRange.mmToAmount}</li>
- * <li>{@linkplain com.tools20022.repository.entity.AmountRange#mmEqualAmount
- * AmountRange.mmEqualAmount}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.FromToAmountRange
+ * FromToAmountRange}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.AmountRange#mmNotEqualAmount
- * AmountRange.mmNotEqualAmount}</li>
+ * {@linkplain com.tools20022.repository.choice.ImpliedCurrencyAmountRangeChoice
+ * ImpliedCurrencyAmountRangeChoice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ImpliedCurrencyAndAmountRange
+ * ImpliedCurrencyAndAmountRange}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CurrencyAndAmountRange
+ * CurrencyAndAmountRange}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CurrencyAndAmountRange2
+ * CurrencyAndAmountRange2}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.AmountRange2Choice
+ * AmountRange2Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.AmountRangeChoice
+ * AmountRangeChoice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ActiveCurrencyAndAmountRange1
+ * ActiveCurrencyAndAmountRange1}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.ActiveAmountRange1Choice
+ * ActiveAmountRange1Choice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.AmountRange#mmCreditDebitIndicator
- * AmountRange.mmCreditDebitIndicator}</li>
- * <li>{@linkplain com.tools20022.repository.entity.AmountRange#mmCurrency
- * AmountRange.mmCurrency}</li>
+ * {@linkplain com.tools20022.repository.msg.ActiveOrHistoricCurrencyAndAmountRange1
+ * ActiveOrHistoricCurrencyAndAmountRange1}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.AmountRange#mmRelatedInterest
- * AmountRange.mmRelatedInterest}</li>
+ * {@linkplain com.tools20022.repository.choice.ActiveOrHistoricAmountRange1Choice
+ * ActiveOrHistoricAmountRange1Choice}</li>
  * </ul>
  * </li>
  * <li>
@@ -122,35 +130,26 @@ import java.util.concurrent.atomic.AtomicReference;
  * ActiveOrHistoricAmountRange1Choice.mmCurrencyAndAmountRange}</li>
  * </ul>
  * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.FromToAmountRange
- * FromToAmountRange}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.AmountRange#mmFromAmount
+ * AmountRange.mmFromAmount}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.AmountRange#mmToAmount
+ * AmountRange.mmToAmount}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.AmountRange#mmEqualAmount
+ * AmountRange.mmEqualAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.ImpliedCurrencyAmountRangeChoice
- * ImpliedCurrencyAmountRangeChoice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ImpliedCurrencyAndAmountRange
- * ImpliedCurrencyAndAmountRange}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CurrencyAndAmountRange
- * CurrencyAndAmountRange}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CurrencyAndAmountRange2
- * CurrencyAndAmountRange2}</li>
- * <li>{@linkplain com.tools20022.repository.choice.AmountRange2Choice
- * AmountRange2Choice}</li>
- * <li>{@linkplain com.tools20022.repository.choice.AmountRangeChoice
- * AmountRangeChoice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ActiveCurrencyAndAmountRange1
- * ActiveCurrencyAndAmountRange1}</li>
- * <li>{@linkplain com.tools20022.repository.choice.ActiveAmountRange1Choice
- * ActiveAmountRange1Choice}</li>
+ * {@linkplain com.tools20022.repository.entity.AmountRange#mmNotEqualAmount
+ * AmountRange.mmNotEqualAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ActiveOrHistoricCurrencyAndAmountRange1
- * ActiveOrHistoricCurrencyAndAmountRange1}</li>
+ * {@linkplain com.tools20022.repository.entity.AmountRange#mmCreditDebitIndicator
+ * AmountRange.mmCreditDebitIndicator}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.AmountRange#mmCurrency
+ * AmountRange.mmCurrency}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.ActiveOrHistoricAmountRange1Choice
- * ActiveOrHistoricAmountRange1Choice}</li>
+ * {@linkplain com.tools20022.repository.entity.AmountRange#mmRelatedInterest
+ * AmountRange.mmRelatedInterest}</li>
  * </ul>
  * </li>
  * <li>
@@ -217,16 +216,16 @@ public class AmountRange {
 	 */
 	public static final MMBusinessAssociationEnd mmFromAmount = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FromToAmountRange.mmFromAmount, com.tools20022.repository.choice.ImpliedCurrencyAmountRangeChoice.mmFromAmount);
+			derivation_lazy = () -> Arrays.asList(FromToAmountRange.mmFromAmount, ImpliedCurrencyAmountRangeChoice.mmFromAmount);
 			elementContext_lazy = () -> AmountRange.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "FromAmount";
 			definition = "Lower boundary of a range of amount values.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.AmountRangeBoundary.mmFromAmountRange;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.AmountRangeBoundary.mmObject();
 		}
 	};
@@ -276,16 +275,16 @@ public class AmountRange {
 	 */
 	public static final MMBusinessAssociationEnd mmToAmount = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FromToAmountRange.mmToAmount, com.tools20022.repository.choice.ImpliedCurrencyAmountRangeChoice.mmToAmount);
+			derivation_lazy = () -> Arrays.asList(FromToAmountRange.mmToAmount, ImpliedCurrencyAmountRangeChoice.mmToAmount);
 			elementContext_lazy = () -> AmountRange.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ToAmount";
 			definition = "Upper boundary of a range of amount values.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.AmountRangeBoundary.mmToAmountRange;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.AmountRangeBoundary.mmObject();
 		}
 	};
@@ -325,10 +324,10 @@ public class AmountRange {
 	 */
 	public static final MMBusinessAttribute mmEqualAmount = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ImpliedCurrencyAmountRangeChoice.mmEqualAmount);
+			derivation_lazy = () -> Arrays.asList(ImpliedCurrencyAmountRangeChoice.mmEqualAmount);
 			elementContext_lazy = () -> AmountRange.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "EqualAmount";
 			definition = "Exact value an amount must match to be considered valid.";
 			maxOccurs = 1;
@@ -373,10 +372,10 @@ public class AmountRange {
 	 */
 	public static final MMBusinessAttribute mmNotEqualAmount = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ImpliedCurrencyAmountRangeChoice.mmNotEqualAmount);
+			derivation_lazy = () -> Arrays.asList(ImpliedCurrencyAmountRangeChoice.mmNotEqualAmount);
 			elementContext_lazy = () -> AmountRange.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NotEqualAmount";
 			definition = "Value that an amount must not match to be considered valid.";
 			maxOccurs = 1;
@@ -436,12 +435,11 @@ public class AmountRange {
 	 */
 	public static final MMBusinessAttribute mmCreditDebitIndicator = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ImpliedCurrencyAndAmountRange.mmCreditDebitIndicator, com.tools20022.repository.msg.CurrencyAndAmountRange.mmCreditDebitIndicator,
-					com.tools20022.repository.msg.CurrencyAndAmountRange2.mmCreditDebitIndicator, com.tools20022.repository.msg.ActiveCurrencyAndAmountRange1.mmCreditDebitIndicator,
-					com.tools20022.repository.msg.ActiveOrHistoricCurrencyAndAmountRange1.mmCreditDebitIndicator, com.tools20022.repository.msg.InterestRecord1.mmCreditDebitIndicator);
+			derivation_lazy = () -> Arrays.asList(ImpliedCurrencyAndAmountRange.mmCreditDebitIndicator, CurrencyAndAmountRange.mmCreditDebitIndicator, CurrencyAndAmountRange2.mmCreditDebitIndicator,
+					ActiveCurrencyAndAmountRange1.mmCreditDebitIndicator, ActiveOrHistoricCurrencyAndAmountRange1.mmCreditDebitIndicator, InterestRecord1.mmCreditDebitIndicator);
 			elementContext_lazy = () -> AmountRange.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CreditDebitIndicator";
 			definition = "Indicates whether the amount is a credited or debited amount.";
 			maxOccurs = 1;
@@ -493,11 +491,10 @@ public class AmountRange {
 	 */
 	public static final MMBusinessAttribute mmCurrency = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CurrencyAndAmountRange.mmCurrency, com.tools20022.repository.msg.CurrencyAndAmountRange2.mmCurrency,
-					com.tools20022.repository.msg.ActiveCurrencyAndAmountRange1.mmCurrency, com.tools20022.repository.msg.ActiveOrHistoricCurrencyAndAmountRange1.mmCurrency);
+			derivation_lazy = () -> Arrays.asList(CurrencyAndAmountRange.mmCurrency, CurrencyAndAmountRange2.mmCurrency, ActiveCurrencyAndAmountRange1.mmCurrency, ActiveOrHistoricCurrencyAndAmountRange1.mmCurrency);
 			elementContext_lazy = () -> AmountRange.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Currency";
 			definition = "Medium of exchange of value, used to qualify an amount.";
 			maxOccurs = 1;
@@ -542,13 +539,13 @@ public class AmountRange {
 		{
 			elementContext_lazy = () -> AmountRange.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedInterest";
 			definition = "Interest which applies on a specific amount range.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.InterestCalculation.mmRateValidityRange;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.InterestCalculation.mmObject();
 		}
 	};
@@ -556,22 +553,18 @@ public class AmountRange {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AmountRange";
 				definition = "Range of amount values.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.AmountRangeBoundary.mmFromAmountRange, com.tools20022.repository.entity.AmountRangeBoundary.mmToAmountRange,
 						com.tools20022.repository.entity.InterestCalculation.mmRateValidityRange);
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ImpliedCurrencyAmountRangeChoice.mmFromToAmount, com.tools20022.repository.msg.ImpliedCurrencyAndAmountRange.mmAmount,
-						com.tools20022.repository.msg.CurrencyAndAmountRange.mmAmount, com.tools20022.repository.msg.CurrencyAndAmountRange2.mmAmount, com.tools20022.repository.choice.AmountRange2Choice.mmImpliedCurrencyAndAmountRange,
-						com.tools20022.repository.choice.AmountRange2Choice.mmCurrencyAndAmountRange, com.tools20022.repository.choice.AmountRangeChoice.mmImpliedCurrencyAndAmountRange,
-						com.tools20022.repository.choice.AmountRangeChoice.mmCurrencyAndAmountRange, com.tools20022.repository.msg.ActiveCurrencyAndAmountRange1.mmAmount,
-						com.tools20022.repository.choice.ActiveAmountRange1Choice.mmImpliedCurrencyAndAmountRange, com.tools20022.repository.choice.ActiveAmountRange1Choice.mmCurrencyAndAmountRange,
-						com.tools20022.repository.msg.ActiveOrHistoricCurrencyAndAmountRange1.mmAmount, com.tools20022.repository.choice.ActiveOrHistoricAmountRange1Choice.mmImpliedCurrencyAndAmountRange,
-						com.tools20022.repository.choice.ActiveOrHistoricAmountRange1Choice.mmCurrencyAndAmountRange);
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.AmountRange.mmFromAmount, com.tools20022.repository.entity.AmountRange.mmToAmount, com.tools20022.repository.entity.AmountRange.mmEqualAmount,
-						com.tools20022.repository.entity.AmountRange.mmNotEqualAmount, com.tools20022.repository.entity.AmountRange.mmCreditDebitIndicator, com.tools20022.repository.entity.AmountRange.mmCurrency,
-						com.tools20022.repository.entity.AmountRange.mmRelatedInterest);
+				derivationElement_lazy = () -> Arrays.asList(ImpliedCurrencyAmountRangeChoice.mmFromToAmount, ImpliedCurrencyAndAmountRange.mmAmount, CurrencyAndAmountRange.mmAmount, CurrencyAndAmountRange2.mmAmount,
+						AmountRange2Choice.mmImpliedCurrencyAndAmountRange, AmountRange2Choice.mmCurrencyAndAmountRange, AmountRangeChoice.mmImpliedCurrencyAndAmountRange, AmountRangeChoice.mmCurrencyAndAmountRange,
+						ActiveCurrencyAndAmountRange1.mmAmount, ActiveAmountRange1Choice.mmImpliedCurrencyAndAmountRange, ActiveAmountRange1Choice.mmCurrencyAndAmountRange, ActiveOrHistoricCurrencyAndAmountRange1.mmAmount,
+						ActiveOrHistoricAmountRange1Choice.mmImpliedCurrencyAndAmountRange, ActiveOrHistoricAmountRange1Choice.mmCurrencyAndAmountRange);
+				element_lazy = () -> Arrays.asList(AmountRange.mmFromAmount, AmountRange.mmToAmount, AmountRange.mmEqualAmount, AmountRange.mmNotEqualAmount, AmountRange.mmCreditDebitIndicator, AmountRange.mmCurrency,
+						AmountRange.mmRelatedInterest);
 				derivationComponent_lazy = () -> Arrays.asList(FromToAmountRange.mmObject(), ImpliedCurrencyAmountRangeChoice.mmObject(), ImpliedCurrencyAndAmountRange.mmObject(), CurrencyAndAmountRange.mmObject(),
 						CurrencyAndAmountRange2.mmObject(), AmountRange2Choice.mmObject(), AmountRangeChoice.mmObject(), ActiveCurrencyAndAmountRange1.mmObject(), ActiveAmountRange1Choice.mmObject(),
 						ActiveOrHistoricCurrencyAndAmountRange1.mmObject(), ActiveOrHistoricAmountRange1Choice.mmObject());

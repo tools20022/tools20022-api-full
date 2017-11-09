@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.PriceSourceCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -99,9 +101,9 @@ public class PriceSource1Code extends PriceSourceCode {
 	 */
 	public static final MMCode mmFund = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Fund";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PriceSource2Code.mmFund);
+			nextVersions_lazy = () -> Arrays.asList(PriceSource2Code.mmFund);
 			owner_lazy = () -> PriceSource1Code.mmObject();
 		}
 	};
@@ -131,9 +133,9 @@ public class PriceSource1Code extends PriceSourceCode {
 	 */
 	public static final MMCode mmTheoretical = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Theoretical";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PriceSource2Code.mmTheoretical);
+			nextVersions_lazy = () -> Arrays.asList(PriceSource2Code.mmTheoretical);
 			owner_lazy = () -> PriceSource1Code.mmObject();
 		}
 	};
@@ -163,9 +165,9 @@ public class PriceSource1Code extends PriceSourceCode {
 	 */
 	public static final MMCode mmVendor = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Vendor";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PriceSource2Code.mmVendor);
+			nextVersions_lazy = () -> Arrays.asList(PriceSource2Code.mmVendor);
 			owner_lazy = () -> PriceSource1Code.mmObject();
 		}
 	};
@@ -173,13 +175,13 @@ public class PriceSource1Code extends PriceSourceCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("FUND");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PriceSource1Code";
 				definition = "Indicates the source of a price quotation.";
 				nextVersions_lazy = () -> Arrays.asList(PriceSource2Code.mmObject());
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PriceSource1Code.mmFund, com.tools20022.repository.codeset.PriceSource1Code.mmTheoretical, com.tools20022.repository.codeset.PriceSource1Code.mmVendor);
+				code_lazy = () -> Arrays.asList(PriceSource1Code.mmFund, PriceSource1Code.mmTheoretical, PriceSource1Code.mmVendor);
 				trace_lazy = () -> PriceSourceCode.mmObject();
 			}
 		});

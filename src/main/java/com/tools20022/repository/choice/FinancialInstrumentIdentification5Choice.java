@@ -19,7 +19,9 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.SecuritiesIdentification;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.FinancialInstrument53;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -101,11 +103,11 @@ public class FinancialInstrumentIdentification5Choice {
 	 */
 	public static final MMMessageAssociationEnd mmSingle = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesIdentification.mmIdentifiedSecurity;
+			businessElementTrace_lazy = () -> SecuritiesIdentification.mmIdentifiedSecurity;
 			componentContext_lazy = () -> FinancialInstrumentIdentification5Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Sngl";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Single";
 			definition = "Instrument consists of single instrument.";
 			maxOccurs = 1;
@@ -148,11 +150,11 @@ public class FinancialInstrumentIdentification5Choice {
 	 */
 	public static final MMMessageAssociationEnd mmBasket = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesIdentification.mmIdentifiedSecurity;
+			businessElementTrace_lazy = () -> SecuritiesIdentification.mmIdentifiedSecurity;
 			componentContext_lazy = () -> FinancialInstrumentIdentification5Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Bskt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Basket";
 			definition = "Instrument consists of multiple instruments.";
 			maxOccurs = 1;
@@ -165,10 +167,10 @@ public class FinancialInstrumentIdentification5Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.FinancialInstrumentIdentification5Choice.mmSingle, com.tools20022.repository.choice.FinancialInstrumentIdentification5Choice.mmBasket);
+				messageElement_lazy = () -> Arrays.asList(FinancialInstrumentIdentification5Choice.mmSingle, FinancialInstrumentIdentification5Choice.mmBasket);
 				trace_lazy = () -> SecuritiesIdentification.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FinancialInstrumentIdentification5Choice";
 				definition = "Choice for identifying the underlying instruments that a derivative can consist of.";
 			}

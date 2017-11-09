@@ -19,7 +19,10 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.entity.InvoiceFinancingPartyRole;
 import com.tools20022.repository.entity.PartyIdentificationInformation;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -106,7 +109,7 @@ public class PartyIdentificationAndAccount6 {
 			componentContext_lazy = () -> PartyIdentificationAndAccount6.mmObject();
 			isDerived = false;
 			xmlTag = "PtyId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartyIdentification";
 			definition = "Unique identification, as assigned by an organisation, to unambiguously identify a party.";
 			maxOccurs = 1;
@@ -153,11 +156,11 @@ public class PartyIdentificationAndAccount6 {
 	 */
 	public static final MMMessageAssociationEnd mmCreditAccount = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvoiceFinancingPartyRole.mmCashAccount;
+			businessElementTrace_lazy = () -> InvoiceFinancingPartyRole.mmCashAccount;
 			componentContext_lazy = () -> PartyIdentificationAndAccount6.mmObject();
 			isDerived = false;
 			xmlTag = "CdtAcct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditAccount";
 			definition = "Unambiguous identification of an account held by Financing Requestor to First Agent. This account is requested to be used for crediting the amount financed, as a result of the financing process.";
 			maxOccurs = 1;
@@ -204,11 +207,11 @@ public class PartyIdentificationAndAccount6 {
 	 */
 	public static final MMMessageAssociationEnd mmFinancingAccount = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvoiceFinancingPartyRole.mmCashAccount;
+			businessElementTrace_lazy = () -> InvoiceFinancingPartyRole.mmCashAccount;
 			componentContext_lazy = () -> PartyIdentificationAndAccount6.mmObject();
 			isDerived = false;
 			xmlTag = "FincgAcct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancingAccount";
 			definition = "Unambiguous identification of an internal bank account used by First Agent to manage the line of credit granted to Financing Requestor. This account is requested to be used for managing the financing process.";
 			maxOccurs = 1;
@@ -221,11 +224,10 @@ public class PartyIdentificationAndAccount6 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyIdentificationAndAccount6.mmPartyIdentification, com.tools20022.repository.msg.PartyIdentificationAndAccount6.mmCreditAccount,
-						com.tools20022.repository.msg.PartyIdentificationAndAccount6.mmFinancingAccount);
+				messageElement_lazy = () -> Arrays.asList(PartyIdentificationAndAccount6.mmPartyIdentification, PartyIdentificationAndAccount6.mmCreditAccount, PartyIdentificationAndAccount6.mmFinancingAccount);
 				trace_lazy = () -> PartyIdentificationInformation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PartyIdentificationAndAccount6";
 				definition = "Entity involved in an activity.";
 			}

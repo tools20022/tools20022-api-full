@@ -20,10 +20,13 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.ContractBalanceType1Choice;
 import com.tools20022.repository.codeset.CreditDebit3Code;
 import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
+import com.tools20022.repository.entity.Balance;
 import com.tools20022.repository.entity.CashBalance;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -109,14 +112,14 @@ public class ContractBalance1 {
 	 */
 	public static final MMMessageAssociationEnd mmType = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Balance.mmType;
+			businessElementTrace_lazy = () -> Balance.mmType;
 			componentContext_lazy = () -> ContractBalance1.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Specifies the type of the contract balance.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CashBalance6.mmType;
+			previousVersion_lazy = () -> CashBalance6.mmType;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -164,14 +167,14 @@ public class ContractBalance1 {
 	 */
 	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashBalance.mmAmount;
+			businessElementTrace_lazy = () -> CashBalance.mmAmount;
 			componentContext_lazy = () -> ContractBalance1.mmObject();
 			isDerived = false;
 			xmlTag = "Amt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Currency and amount of money of the contract balance.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CashBalance6.mmAmount;
+			previousVersion_lazy = () -> CashBalance6.mmAmount;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
@@ -221,14 +224,14 @@ public class ContractBalance1 {
 	 */
 	public static final MMMessageAttribute mmCreditDebitIndicator = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Balance.mmCreditDebitIndicator;
+			businessElementTrace_lazy = () -> Balance.mmCreditDebitIndicator;
 			componentContext_lazy = () -> ContractBalance1.mmObject();
 			isDerived = false;
 			xmlTag = "CdtDbtInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditDebitIndicator";
 			definition = "Indicates whether the balance is a credit or a debit balance. A zero balance is considered to be a credit balance";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CashBalance6.mmCreditDebitIndicator;
+			previousVersion_lazy = () -> CashBalance6.mmCreditDebitIndicator;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CreditDebit3Code.mmObject();
@@ -238,11 +241,10 @@ public class ContractBalance1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays
-						.asList(com.tools20022.repository.msg.ContractBalance1.mmType, com.tools20022.repository.msg.ContractBalance1.mmAmount, com.tools20022.repository.msg.ContractBalance1.mmCreditDebitIndicator);
+				messageElement_lazy = () -> Arrays.asList(ContractBalance1.mmType, ContractBalance1.mmAmount, ContractBalance1.mmCreditDebitIndicator);
 				trace_lazy = () -> CashBalance.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ContractBalance1";
 				definition = "Balance details of a registered contract.";
 				previousVersion_lazy = () -> CashBalance6.mmObject();

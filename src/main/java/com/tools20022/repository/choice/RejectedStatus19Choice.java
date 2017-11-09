@@ -20,8 +20,11 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.NoReasonCode;
 import com.tools20022.repository.entity.CorporateActionStatusReason;
+import com.tools20022.repository.entity.StatusReason;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.RejectedStatusReason17;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -128,15 +131,15 @@ public class RejectedStatus19Choice {
 	 */
 	public static final MMMessageAttribute mmNoSpecifiedReason = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmNoSpecifiedReason;
+			businessElementTrace_lazy = () -> StatusReason.mmNoSpecifiedReason;
 			componentContext_lazy = () -> RejectedStatus19Choice.mmObject();
 			isDerived = false;
 			xmlTag = "NoSpcfdRsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoSpecifiedReason";
 			definition = "Reason not specified.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.RejectedStatus23Choice.mmNoSpecifiedReason);
-			previousVersion_lazy = () -> com.tools20022.repository.choice.RejectedStatus13Choice.mmNoSpecifiedReason;
+			nextVersions_lazy = () -> Arrays.asList(RejectedStatus23Choice.mmNoSpecifiedReason);
+			previousVersion_lazy = () -> RejectedStatus13Choice.mmNoSpecifiedReason;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> NoReasonCode.mmObject();
@@ -189,15 +192,15 @@ public class RejectedStatus19Choice {
 	 */
 	public static final MMMessageAssociationEnd mmReason = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmRejectedStatusReason;
+			businessElementTrace_lazy = () -> StatusReason.mmRejectedStatusReason;
 			componentContext_lazy = () -> RejectedStatus19Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Rsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reason";
 			definition = "Reason for the rejected status.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.RejectedStatus23Choice.mmReason);
-			previousVersion_lazy = () -> com.tools20022.repository.choice.RejectedStatus13Choice.mmReason;
+			nextVersions_lazy = () -> Arrays.asList(RejectedStatus23Choice.mmReason);
+			previousVersion_lazy = () -> RejectedStatus13Choice.mmReason;
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> RejectedStatusReason17.mmObject();
@@ -207,10 +210,10 @@ public class RejectedStatus19Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.RejectedStatus19Choice.mmNoSpecifiedReason, com.tools20022.repository.choice.RejectedStatus19Choice.mmReason);
+				messageElement_lazy = () -> Arrays.asList(RejectedStatus19Choice.mmNoSpecifiedReason, RejectedStatus19Choice.mmReason);
 				trace_lazy = () -> CorporateActionStatusReason.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RejectedStatus19Choice";
 				definition = "Choice between a reason or no reason for the corporate action instruction processing rejected status.";
 				nextVersions_lazy = () -> Arrays.asList(RejectedStatus23Choice.mmObject());

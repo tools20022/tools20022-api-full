@@ -19,7 +19,9 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.Party;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.PartyIdentificationAndAccount35;
 import java.text.DateFormat;
 import java.util.Arrays;
@@ -115,14 +117,14 @@ public class Counterparty3Choice {
 	 */
 	public static final MMMessageAssociationEnd mmSeller = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> Counterparty3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Sellr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Seller";
 			definition = "Party that sells goods or services, or a financial instrument.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Counterparty9Choice.mmSeller);
+			nextVersions_lazy = () -> Arrays.asList(Counterparty9Choice.mmSeller);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -173,14 +175,14 @@ public class Counterparty3Choice {
 	 */
 	public static final MMMessageAssociationEnd mmBuyer = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> Counterparty3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Buyr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Buyer";
 			definition = "Party that buys goods or services, or a financial instrument.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Counterparty9Choice.mmBuyer);
+			nextVersions_lazy = () -> Arrays.asList(Counterparty9Choice.mmBuyer);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -191,10 +193,10 @@ public class Counterparty3Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Counterparty3Choice.mmSeller, com.tools20022.repository.choice.Counterparty3Choice.mmBuyer);
+				messageElement_lazy = () -> Arrays.asList(Counterparty3Choice.mmSeller, Counterparty3Choice.mmBuyer);
 				trace_lazy = () -> Party.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
 						return DateFormat.getDateInstance(java.text.DateFormat.LONG).parse("September 9, 2016");

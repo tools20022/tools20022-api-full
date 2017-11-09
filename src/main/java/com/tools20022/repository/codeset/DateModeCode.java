@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -28,19 +30,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.DateMode1Code
+ * DateMode1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>{@linkplain com.tools20022.repository.codeset.DateModeCode#mmBODY
  * DateModeCode.mmBODY}</li>
  * <li>{@linkplain com.tools20022.repository.codeset.DateModeCode#mmEODY
  * DateModeCode.mmEODY}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.DateMode1Code
- * DateMode1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -85,7 +87,7 @@ public class DateModeCode {
 	 */
 	public static final MMCode mmBODY = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BODY";
 			definition = "Beginning of day.";
 			owner_lazy = () -> DateModeCode.mmObject();
@@ -114,7 +116,7 @@ public class DateModeCode {
 	 */
 	public static final MMCode mmEODY = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EODY";
 			definition = "End of day.";
 			owner_lazy = () -> DateModeCode.mmObject();
@@ -125,11 +127,11 @@ public class DateModeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DateModeCode";
 				definition = "Specifies, for a date, when the event or operation is to take place, for example at the beginning or end of the day.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DateModeCode.mmBODY, com.tools20022.repository.codeset.DateModeCode.mmEODY);
+				code_lazy = () -> Arrays.asList(DateModeCode.mmBODY, DateModeCode.mmEODY);
 				derivation_lazy = () -> Arrays.asList(DateMode1Code.mmObject());
 			}
 		});

@@ -20,6 +20,7 @@ package com.tools20022.repository.area.caaa;
 import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.AcceptortoAcquirerCardTransactionPreviousVersion;
 import com.tools20022.repository.msg.AcceptorReconciliationResponse2;
 import com.tools20022.repository.msg.ContentInformationType8;
@@ -40,6 +41,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code caaa.010.001.03}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.AcceptortoAcquirerCardTransactionPreviousVersion
@@ -72,9 +76,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * AcceptorReconciliationResponseV03.mmSecurityTrailer}</li>
  * </ul>
  * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code caaa.010.001.03}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -141,11 +142,11 @@ public class AcceptorReconciliationResponseV03 {
 	public static final MMMessageBuildingBlock mmHeader = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Hdr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Header";
 			definition = "Reconciliation response message management information.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.caaa.AcceptorReconciliationResponseV04.mmHeader);
-			previousVersion_lazy = () -> com.tools20022.repository.area.caaa.AcceptorReconciliationResponseV02.mmHeader;
+			nextVersions_lazy = () -> Arrays.asList(AcceptorReconciliationResponseV04.mmHeader);
+			previousVersion_lazy = () -> AcceptorReconciliationResponseV02.mmHeader;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> Header7.mmObject();
@@ -191,11 +192,11 @@ public class AcceptorReconciliationResponseV03 {
 	public static final MMMessageBuildingBlock mmReconciliationResponse = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "RcncltnRspn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReconciliationResponse";
 			definition = "Information related to thereconciliation response.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.caaa.AcceptorReconciliationResponseV04.mmReconciliationResponse);
-			previousVersion_lazy = () -> com.tools20022.repository.area.caaa.AcceptorReconciliationResponseV02.mmReconciliationResponse;
+			nextVersions_lazy = () -> Arrays.asList(AcceptorReconciliationResponseV04.mmReconciliationResponse);
+			previousVersion_lazy = () -> AcceptorReconciliationResponseV02.mmReconciliationResponse;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> AcceptorReconciliationResponse2.mmObject();
@@ -241,11 +242,11 @@ public class AcceptorReconciliationResponseV03 {
 	public static final MMMessageBuildingBlock mmSecurityTrailer = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SctyTrlr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityTrailer";
 			definition = "Trailer of the message containing a MAC.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.caaa.AcceptorReconciliationResponseV04.mmSecurityTrailer);
-			previousVersion_lazy = () -> com.tools20022.repository.area.caaa.AcceptorReconciliationResponseV02.mmSecurityTrailer;
+			nextVersions_lazy = () -> Arrays.asList(AcceptorReconciliationResponseV04.mmSecurityTrailer);
+			previousVersion_lazy = () -> AcceptorReconciliationResponseV02.mmSecurityTrailer;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> ContentInformationType8.mmObject();
@@ -255,7 +256,7 @@ public class AcceptorReconciliationResponseV03 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AcceptorReconciliationResponseV03";
 				definition = "The AcceptorReconciliationResponse message is sent by the acquirer (or its agent) to an acceptor (or its agent), to ensure that the debits and credits performed by the acceptor matches the computed balances of the acquirer for the debits and credits performed during the same reconciliation period.\r\nIf the acceptor or the acquirer notices a difference in totals, the discrepancy will be resolved by other means, outside the scope of the protocol.";
 				nextVersions_lazy = () -> Arrays.asList(AcceptorReconciliationResponseV04.mmObject());
@@ -264,8 +265,7 @@ public class AcceptorReconciliationResponseV03 {
 				rootElement = "Document";
 				xmlTag = "AccptrRcncltnRspn";
 				businessArea_lazy = () -> AcceptortoAcquirerCardTransactionPreviousVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.caaa.AcceptorReconciliationResponseV03.mmHeader, com.tools20022.repository.area.caaa.AcceptorReconciliationResponseV03.mmReconciliationResponse,
-						com.tools20022.repository.area.caaa.AcceptorReconciliationResponseV03.mmSecurityTrailer);
+				messageBuildingBlock_lazy = () -> Arrays.asList(AcceptorReconciliationResponseV03.mmHeader, AcceptorReconciliationResponseV03.mmReconciliationResponse, AcceptorReconciliationResponseV03.mmSecurityTrailer);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "caaa";

@@ -20,9 +20,11 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.PercentageRate;
 import com.tools20022.repository.entity.Interest;
 import com.tools20022.repository.entity.VariableInterest;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.FloatingInterestRate8;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -99,11 +101,11 @@ public class InterestRate8Choice {
 	 */
 	public static final MMMessageAttribute mmFixed = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Interest.mmRate;
+			businessElementTrace_lazy = () -> Interest.mmRate;
 			componentContext_lazy = () -> InterestRate8Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Fxd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Fixed";
 			definition = "Interest Rate is fixed.";
 			maxOccurs = 1;
@@ -150,7 +152,7 @@ public class InterestRate8Choice {
 			componentContext_lazy = () -> InterestRate8Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Fltg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Floating";
 			definition = "Interest rate is a variable / floating rate, based on an index.";
 			maxOccurs = 1;
@@ -163,10 +165,10 @@ public class InterestRate8Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.InterestRate8Choice.mmFixed, com.tools20022.repository.choice.InterestRate8Choice.mmFloating);
+				messageElement_lazy = () -> Arrays.asList(InterestRate8Choice.mmFixed, InterestRate8Choice.mmFloating);
 				trace_lazy = () -> Interest.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InterestRate8Choice";
 				definition = "Choice between a fixed rate and a variable rate.";
 			}

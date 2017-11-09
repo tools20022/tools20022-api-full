@@ -20,8 +20,10 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.OptionFeatures4Code;
 import com.tools20022.repository.entity.CorporateActionOption;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification20;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -132,14 +134,14 @@ public class OptionFeaturesFormat9Choice {
 	 */
 	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionOption.mmOptionFeatures;
+			businessElementTrace_lazy = () -> CorporateActionOption.mmOptionFeatures;
 			componentContext_lazy = () -> OptionFeaturesFormat9Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Cd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Standard code to specify the features that may apply to a corporate action option.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.OptionFeaturesFormat12Choice.mmCode, com.tools20022.repository.choice.OptionFeaturesFormat17Choice.mmCode);
+			nextVersions_lazy = () -> Arrays.asList(OptionFeaturesFormat12Choice.mmCode, OptionFeaturesFormat17Choice.mmCode);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> OptionFeatures4Code.mmObject();
@@ -194,14 +196,14 @@ public class OptionFeaturesFormat9Choice {
 	 */
 	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionOption.mmOptionFeatures;
+			businessElementTrace_lazy = () -> CorporateActionOption.mmOptionFeatures;
 			componentContext_lazy = () -> OptionFeaturesFormat9Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Proprietary identification of the features that may apply to a corporate action option.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.OptionFeaturesFormat12Choice.mmProprietary, com.tools20022.repository.choice.OptionFeaturesFormat17Choice.mmProprietary);
+			nextVersions_lazy = () -> Arrays.asList(OptionFeaturesFormat12Choice.mmProprietary, OptionFeaturesFormat17Choice.mmProprietary);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -212,10 +214,10 @@ public class OptionFeaturesFormat9Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.OptionFeaturesFormat9Choice.mmCode, com.tools20022.repository.choice.OptionFeaturesFormat9Choice.mmProprietary);
+				messageElement_lazy = () -> Arrays.asList(OptionFeaturesFormat9Choice.mmCode, OptionFeaturesFormat9Choice.mmProprietary);
 				trace_lazy = () -> CorporateActionOption.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OptionFeaturesFormat9Choice";
 				definition = "Choice between a standard code or a proprietary code to specify the features that may apply to a corporate action option.";
 				nextVersions_lazy = () -> Arrays.asList(OptionFeaturesFormat12Choice.mmObject(), OptionFeaturesFormat17Choice.mmObject());

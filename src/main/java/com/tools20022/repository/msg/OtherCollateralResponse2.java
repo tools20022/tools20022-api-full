@@ -19,10 +19,13 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.RejectionReasonV021Code;
 import com.tools20022.repository.codeset.Status4Code;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.CollateralStatus;
+import com.tools20022.repository.entity.StatusReason;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -121,14 +124,14 @@ public class OtherCollateralResponse2 {
 	 */
 	public static final MMMessageAttribute mmResponseType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CollateralStatus.mmResponseStatus;
+			businessElementTrace_lazy = () -> CollateralStatus.mmResponseStatus;
 			componentContext_lazy = () -> OtherCollateralResponse2.mmObject();
 			isDerived = false;
 			xmlTag = "RspnTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ResponseType";
 			definition = "Specifies the status of the collateral proposal.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.OtherCollateralResponse1.mmResponseType;
+			previousVersion_lazy = () -> OtherCollateralResponse1.mmResponseType;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Status4Code.mmObject();
@@ -172,10 +175,10 @@ public class OtherCollateralResponse2 {
 			componentContext_lazy = () -> OtherCollateralResponse2.mmObject();
 			isDerived = false;
 			xmlTag = "CollId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralIdentification";
 			definition = "Provides the identification of the proposed collateral.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.OtherCollateralResponse1.mmCollateralIdentification;
+			previousVersion_lazy = () -> OtherCollateralResponse1.mmCollateralIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -222,10 +225,10 @@ public class OtherCollateralResponse2 {
 			componentContext_lazy = () -> OtherCollateralResponse2.mmObject();
 			isDerived = false;
 			xmlTag = "AsstNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AssetNumber";
 			definition = "Identifies the register number of the collateral deposit assigned by the central counterparty.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.OtherCollateralResponse1.mmAssetNumber;
+			previousVersion_lazy = () -> OtherCollateralResponse1.mmAssetNumber;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -275,14 +278,14 @@ public class OtherCollateralResponse2 {
 	 */
 	public static final MMMessageAttribute mmRejectionReason = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmRejectionReason;
+			businessElementTrace_lazy = () -> StatusReason.mmRejectionReason;
 			componentContext_lazy = () -> OtherCollateralResponse2.mmObject();
 			isDerived = false;
 			xmlTag = "RjctnRsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RejectionReason";
 			definition = "Specifies the reason why the instruction/cancellation request has a rejected status.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.OtherCollateralResponse1.mmRejectionReason;
+			previousVersion_lazy = () -> OtherCollateralResponse1.mmRejectionReason;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RejectionReasonV021Code.mmObject();
@@ -329,10 +332,10 @@ public class OtherCollateralResponse2 {
 			componentContext_lazy = () -> OtherCollateralResponse2.mmObject();
 			isDerived = false;
 			xmlTag = "RjctnInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RejectionInformation";
 			definition = "Additional information regarding why the collateral proposal has a rejected status.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.OtherCollateralResponse1.mmRejectionInformation;
+			previousVersion_lazy = () -> OtherCollateralResponse1.mmRejectionInformation;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -342,12 +345,11 @@ public class OtherCollateralResponse2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OtherCollateralResponse2.mmResponseType, com.tools20022.repository.msg.OtherCollateralResponse2.mmCollateralIdentification,
-						com.tools20022.repository.msg.OtherCollateralResponse2.mmAssetNumber, com.tools20022.repository.msg.OtherCollateralResponse2.mmRejectionReason,
-						com.tools20022.repository.msg.OtherCollateralResponse2.mmRejectionInformation);
+				messageElement_lazy = () -> Arrays.asList(OtherCollateralResponse2.mmResponseType, OtherCollateralResponse2.mmCollateralIdentification, OtherCollateralResponse2.mmAssetNumber, OtherCollateralResponse2.mmRejectionReason,
+						OtherCollateralResponse2.mmRejectionInformation);
 				trace_lazy = () -> CollateralStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OtherCollateralResponse2";
 				definition = "Provides more details on the response such as the response type, the collateral identification, and optionally further details in case of rejection.";
 				previousVersion_lazy = () -> OtherCollateralResponse1.mmObject();

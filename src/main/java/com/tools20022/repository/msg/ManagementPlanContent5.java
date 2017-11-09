@@ -20,9 +20,11 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max10KBinary;
 import com.tools20022.repository.datatype.Max140Binary;
 import com.tools20022.repository.entity.TerminalManagementAction;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -128,11 +130,11 @@ public class ManagementPlanContent5 {
 			componentContext_lazy = () -> ManagementPlanContent5.mmObject();
 			isDerived = false;
 			xmlTag = "TMChllng";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TMChallenge";
 			definition = "Terminal manager challenge for cryptographic key injection.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ManagementPlanContent6.mmTMChallenge);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ManagementPlanContent4.mmTMChallenge;
+			nextVersions_lazy = () -> Arrays.asList(ManagementPlanContent6.mmTMChallenge);
+			previousVersion_lazy = () -> ManagementPlanContent4.mmTMChallenge;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max140Binary.mmObject();
@@ -188,11 +190,11 @@ public class ManagementPlanContent5 {
 			componentContext_lazy = () -> ManagementPlanContent5.mmObject();
 			isDerived = false;
 			xmlTag = "KeyNcphrmntCert";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "KeyEnciphermentCertificate";
 			definition = "Certificate chain of an asymmetric encryption keys for the encryption of temporary transport key of the key to inject.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ManagementPlanContent6.mmKeyEnciphermentCertificate);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ManagementPlanContent4.mmKeyEnciphermentCertificate;
+			nextVersions_lazy = () -> Arrays.asList(ManagementPlanContent6.mmKeyEnciphermentCertificate);
+			previousVersion_lazy = () -> ManagementPlanContent4.mmKeyEnciphermentCertificate;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max10KBinary.mmObject();
 		}
@@ -244,11 +246,11 @@ public class ManagementPlanContent5 {
 			componentContext_lazy = () -> ManagementPlanContent5.mmObject();
 			isDerived = false;
 			xmlTag = "Actn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Action";
 			definition = "Terminal management action to be performed by the point of interaction (POI).";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ManagementPlanContent6.mmAction);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ManagementPlanContent4.mmAction;
+			nextVersions_lazy = () -> Arrays.asList(ManagementPlanContent6.mmAction);
+			previousVersion_lazy = () -> ManagementPlanContent4.mmAction;
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.TMSAction5.mmObject();
@@ -258,11 +260,10 @@ public class ManagementPlanContent5 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ManagementPlanContent5.mmTMChallenge, com.tools20022.repository.msg.ManagementPlanContent5.mmKeyEnciphermentCertificate,
-						com.tools20022.repository.msg.ManagementPlanContent5.mmAction);
+				messageElement_lazy = () -> Arrays.asList(ManagementPlanContent5.mmTMChallenge, ManagementPlanContent5.mmKeyEnciphermentCertificate, ManagementPlanContent5.mmAction);
 				trace_lazy = () -> TerminalManagementAction.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ManagementPlanContent5";
 				definition = "Content of the management plan.";
 				nextVersions_lazy = () -> Arrays.asList(ManagementPlanContent6.mmObject());

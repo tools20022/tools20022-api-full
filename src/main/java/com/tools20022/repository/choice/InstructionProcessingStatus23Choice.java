@@ -19,8 +19,11 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.InstructionProcessingStatus1Code;
 import com.tools20022.repository.entity.SecuritiesTradeStatus;
+import com.tools20022.repository.entity.Status;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification30;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -108,14 +111,14 @@ public class InstructionProcessingStatus23Choice {
 	 */
 	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.mmTransactionProcessingStatus;
+			businessElementTrace_lazy = () -> Status.mmTransactionProcessingStatus;
 			componentContext_lazy = () -> InstructionProcessingStatus23Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Cd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Provides the status of an instruction.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.InstructionProcessingStatus2Choice.mmCode;
+			previousVersion_lazy = () -> InstructionProcessingStatus2Choice.mmCode;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> InstructionProcessingStatus1Code.mmObject();
@@ -162,14 +165,14 @@ public class InstructionProcessingStatus23Choice {
 	 */
 	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.mmTransactionProcessingStatus;
+			businessElementTrace_lazy = () -> Status.mmTransactionProcessingStatus;
 			componentContext_lazy = () -> InstructionProcessingStatus23Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Provides the status of an instruction.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.InstructionProcessingStatus2Choice.mmProprietary;
+			previousVersion_lazy = () -> InstructionProcessingStatus2Choice.mmProprietary;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification30.mmObject();
@@ -179,10 +182,10 @@ public class InstructionProcessingStatus23Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.InstructionProcessingStatus23Choice.mmCode, com.tools20022.repository.choice.InstructionProcessingStatus23Choice.mmProprietary);
+				messageElement_lazy = () -> Arrays.asList(InstructionProcessingStatus23Choice.mmCode, InstructionProcessingStatus23Choice.mmProprietary);
 				trace_lazy = () -> SecuritiesTradeStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InstructionProcessingStatus23Choice";
 				definition = "Choice of format for the instruction processing status.";
 				previousVersion_lazy = () -> InstructionProcessingStatus2Choice.mmObject();

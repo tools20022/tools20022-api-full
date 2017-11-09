@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.AdditionalBusinessProcessCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -93,7 +95,7 @@ public class AdditionalBusinessProcess3Code extends AdditionalBusinessProcessCod
 	 */
 	public static final MMCode mmClaimOrCompensation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClaimOrCompensation";
 			owner_lazy = () -> AdditionalBusinessProcess3Code.mmObject();
 		}
@@ -116,7 +118,7 @@ public class AdditionalBusinessProcess3Code extends AdditionalBusinessProcessCod
 	 */
 	public static final MMCode mmTaxRefund = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxRefund";
 			owner_lazy = () -> AdditionalBusinessProcess3Code.mmObject();
 		}
@@ -125,13 +127,13 @@ public class AdditionalBusinessProcess3Code extends AdditionalBusinessProcessCod
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CLAI");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AdditionalBusinessProcess3Code";
 				definition = "Specifies the additional business process linked to a corporate action event.";
 				nextVersions_lazy = () -> Arrays.asList(AdditionalBusinessProcess4Code.mmObject());
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AdditionalBusinessProcess3Code.mmClaimOrCompensation, com.tools20022.repository.codeset.AdditionalBusinessProcess3Code.mmTaxRefund);
+				code_lazy = () -> Arrays.asList(AdditionalBusinessProcess3Code.mmClaimOrCompensation, AdditionalBusinessProcess3Code.mmTaxRefund);
 				trace_lazy = () -> AdditionalBusinessProcessCode.mmObject();
 			}
 		});

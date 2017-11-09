@@ -18,8 +18,10 @@
 package com.tools20022.repository.msgset;
 
 import com.tools20022.metamodel.MMMessageSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.pain.CreditorPaymentActivationRequestStatusReportV05;
 import com.tools20022.repository.area.pain.CreditorPaymentActivationRequestV05;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -64,8 +66,8 @@ public class CreditorPaymentActivationRequestISOPreviousversion {
 	final static public MMMessageSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageSet() {
 			{
-				businessProcessCatalogue_lazy = () -> com.tools20022.repository.GeneratedRepository.mmcatalogue;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				businessProcessCatalogue_lazy = () -> GeneratedRepository.mmcatalogue;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Creditor Payment Activation Request - ISO - Previous version";
 				definition = "Set of messages that allows a creditor to request the initiation of a credit transfer by a debtor either directly or through agents. \r\n";
 				messageDefinition_lazy = () -> Arrays.asList(CreditorPaymentActivationRequestV05.mmObject(), CreditorPaymentActivationRequestStatusReportV05.mmObject());

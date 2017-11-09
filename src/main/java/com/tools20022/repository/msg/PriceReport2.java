@@ -19,7 +19,10 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.reda.PriceReportCancellationV03;
 import com.tools20022.repository.entity.NetAssetValueCalculation;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -111,7 +114,7 @@ public class PriceReport2 {
 			componentContext_lazy = () -> PriceReport2.mmObject();
 			isDerived = false;
 			xmlTag = "PricValtnDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PriceValuationDetails";
 			definition = "Information related to the price valuation of a financial instrument.";
 			minOccurs = 1;
@@ -152,7 +155,7 @@ public class PriceReport2 {
 			componentContext_lazy = () -> PriceReport2.mmObject();
 			isDerived = false;
 			xmlTag = "Xtnsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Extension";
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
 			minOccurs = 0;
@@ -164,10 +167,10 @@ public class PriceReport2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PriceReport2.mmPriceValuationDetails, com.tools20022.repository.msg.PriceReport2.mmExtension);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.reda.PriceReportCancellationV03.mmPriceReportToBeCancelled);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(PriceReport2.mmPriceValuationDetails, PriceReport2.mmExtension);
+				messageBuildingBlock_lazy = () -> Arrays.asList(PriceReportCancellationV03.mmPriceReportToBeCancelled);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PriceReport2";
 				definition = "Information about a price report.";
 				nextVersions_lazy = () -> Arrays.asList(PriceReport3.mmObject());

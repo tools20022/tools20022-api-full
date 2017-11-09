@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.RequestStatus1Code
+ * RequestStatus1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -38,13 +47,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.RequestStatusCode#mmNotFinanced
  * RequestStatusCode.mmNotFinanced}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.RequestStatus1Code
- * RequestStatus1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -95,7 +97,7 @@ public class RequestStatusCode {
 	 */
 	public static final MMCode mmFinanced = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Financed";
 			definition = "Single Invoice/Instalment financing request has been financed.";
 			owner_lazy = () -> RequestStatusCode.mmObject();
@@ -128,7 +130,7 @@ public class RequestStatusCode {
 	 */
 	public static final MMCode mmPending = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Pending";
 			definition = "Single Invoice/Instalment financing request is in a pending status and more checks are ongoing.";
 			owner_lazy = () -> RequestStatusCode.mmObject();
@@ -159,7 +161,7 @@ public class RequestStatusCode {
 	 */
 	public static final MMCode mmNotFinanced = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotFinanced";
 			definition = "Single Invoice/Instalment financing request has not been financed.";
 			owner_lazy = () -> RequestStatusCode.mmObject();
@@ -170,13 +172,12 @@ public class RequestStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("FNCD");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RequestStatusCode";
 				definition = "Specifies the coded status of invoice financing request.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RequestStatusCode.mmFinanced, com.tools20022.repository.codeset.RequestStatusCode.mmPending,
-						com.tools20022.repository.codeset.RequestStatusCode.mmNotFinanced);
+				code_lazy = () -> Arrays.asList(RequestStatusCode.mmFinanced, RequestStatusCode.mmPending, RequestStatusCode.mmNotFinanced);
 				derivation_lazy = () -> Arrays.asList(RequestStatus1Code.mmObject());
 			}
 		});

@@ -19,8 +19,12 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ReplacementProcessingStatus1Code;
+import com.tools20022.repository.entity.CorporateActionStatus;
+import com.tools20022.repository.entity.SecuritiesTradeStatus;
 import com.tools20022.repository.entity.Status;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification47;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -99,11 +103,11 @@ public class ReplacementProcessingStatus9Choice {
 	 */
 	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeStatus.mmReplacementProcessingStatus;
+			businessElementTrace_lazy = () -> SecuritiesTradeStatus.mmReplacementProcessingStatus;
 			componentContext_lazy = () -> ReplacementProcessingStatus9Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Cd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Provides the processing status of the replacement request.";
 			maxOccurs = 1;
@@ -148,11 +152,11 @@ public class ReplacementProcessingStatus9Choice {
 	 */
 	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionStatus.mmAgentStandingInstructionStatus;
+			businessElementTrace_lazy = () -> CorporateActionStatus.mmAgentStandingInstructionStatus;
 			componentContext_lazy = () -> ReplacementProcessingStatus9Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Provides the processing status of the replacement request.";
 			maxOccurs = 1;
@@ -164,10 +168,10 @@ public class ReplacementProcessingStatus9Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ReplacementProcessingStatus9Choice.mmCode, com.tools20022.repository.choice.ReplacementProcessingStatus9Choice.mmProprietary);
+				messageElement_lazy = () -> Arrays.asList(ReplacementProcessingStatus9Choice.mmCode, ReplacementProcessingStatus9Choice.mmProprietary);
 				trace_lazy = () -> Status.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ReplacementProcessingStatus9Choice";
 				definition = "Choice of format for the replacement processing status";
 			}

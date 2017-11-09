@@ -18,10 +18,12 @@
 package com.tools20022.repository.msgset;
 
 import com.tools20022.metamodel.MMMessageSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.pain.MandateAcceptanceReportV04;
 import com.tools20022.repository.area.pain.MandateAmendmentRequestV04;
 import com.tools20022.repository.area.pain.MandateCancellationRequestV04;
 import com.tools20022.repository.area.pain.MandateInitiationRequestV04;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -73,8 +75,8 @@ public class PaymentsMandatesISOPreviousversion {
 	final static public MMMessageSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageSet() {
 			{
-				businessProcessCatalogue_lazy = () -> com.tools20022.repository.GeneratedRepository.mmcatalogue;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				businessProcessCatalogue_lazy = () -> GeneratedRepository.mmcatalogue;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Payments Mandates - ISO - Previous version";
 				definition = "Set of messages to support the direct debit instructions and electronic mandate related information and to cater for the initiation, amendment and cancellation of the mandate in the customer-to-bank and interbank space. \r\n";
 				messageDefinition_lazy = () -> Arrays.asList(MandateAmendmentRequestV04.mmObject(), MandateCancellationRequestV04.mmObject(), MandateAcceptanceReportV04.mmObject(), MandateInitiationRequestV04.mmObject());

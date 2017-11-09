@@ -20,8 +20,12 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.semt.*;
 import com.tools20022.repository.datatype.AnyBICIdentifier;
+import com.tools20022.repository.entity.OrganisationIdentification;
 import com.tools20022.repository.entity.PartyIdentificationInformation;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification36;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -143,14 +147,14 @@ public class PartyIdentification92Choice {
 	 */
 	public static final MMMessageAttribute mmAnyBIC = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.mmAnyBIC;
+			businessElementTrace_lazy = () -> OrganisationIdentification.mmAnyBIC;
 			componentContext_lazy = () -> PartyIdentification92Choice.mmObject();
 			isDerived = false;
 			xmlTag = "AnyBIC";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AnyBIC";
 			definition = "Code allocated to a financial or non-financial institution by the ISO 9362 Registration Authority, as described in ISO 9362 \"Banking - Banking telecommunication messages - Business identifier code (BIC)\".";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PartyIdentification114Choice.mmAnyBIC);
+			nextVersions_lazy = () -> Arrays.asList(PartyIdentification114Choice.mmAnyBIC);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AnyBICIdentifier.mmObject();
@@ -202,14 +206,14 @@ public class PartyIdentification92Choice {
 	 */
 	public static final MMMessageAssociationEnd mmProprietaryIdentification = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.mmOtherIdentification;
+			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmOtherIdentification;
 			componentContext_lazy = () -> PartyIdentification92Choice.mmObject();
 			isDerived = false;
 			xmlTag = "PrtryId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProprietaryIdentification";
 			definition = "Unique and unambiguous identifier, as assigned to a financial institution using a proprietary identification scheme.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PartyIdentification114Choice.mmProprietaryIdentification);
+			nextVersions_lazy = () -> Arrays.asList(PartyIdentification114Choice.mmProprietaryIdentification);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -220,13 +224,12 @@ public class PartyIdentification92Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PartyIdentification92Choice.mmAnyBIC, com.tools20022.repository.choice.PartyIdentification92Choice.mmProprietaryIdentification);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.IntraPositionMovementInstructionV04.mmAccountOwner,
-						com.tools20022.repository.area.semt.IntraPositionMovementPostingReportV05.mmAccountOwner, com.tools20022.repository.area.semt.IntraPositionMovementConfirmationV05.mmAccountOwner,
-						com.tools20022.repository.area.semt.IntraPositionMovementPostingReportV06.mmAccountOwner, com.tools20022.repository.area.semt.IntraPositionMovementConfirmationV06.mmAccountOwner);
+				messageElement_lazy = () -> Arrays.asList(PartyIdentification92Choice.mmAnyBIC, PartyIdentification92Choice.mmProprietaryIdentification);
+				messageBuildingBlock_lazy = () -> Arrays.asList(IntraPositionMovementInstructionV04.mmAccountOwner, IntraPositionMovementPostingReportV05.mmAccountOwner, IntraPositionMovementConfirmationV05.mmAccountOwner,
+						IntraPositionMovementPostingReportV06.mmAccountOwner, IntraPositionMovementConfirmationV06.mmAccountOwner);
 				trace_lazy = () -> PartyIdentificationInformation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PartyIdentification92Choice";
 				definition = "Choice of identification of a party.";
 				nextVersions_lazy = () -> Arrays.asList(PartyIdentification114Choice.mmObject());

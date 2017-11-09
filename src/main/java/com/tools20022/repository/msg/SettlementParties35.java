@@ -19,7 +19,9 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.PartyIdentification99Choice;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -99,7 +101,7 @@ public class SettlementParties35 {
 			componentContext_lazy = () -> SettlementParties35.mmObject();
 			isDerived = false;
 			xmlTag = "StgSttlmPties";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StandingSettlementParties";
 			definition = "Parties through which settlement is to take place.";
 			maxOccurs = 1;
@@ -147,7 +149,7 @@ public class SettlementParties35 {
 			componentContext_lazy = () -> SettlementParties35.mmObject();
 			isDerived = false;
 			xmlTag = "LclMktId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LocalMarketIdentification";
 			definition = "Identifier needed for settlement purposes. This identifier could be, for example, an identifier that identifies an institution or agent at a CDS or ICSD (Depository Trust Clearing Corporation (DTC) Institution ID or DTC Agent ID). It could also be a local tax identification number or an ‘investor identification’, as mandated by local market practice.";
 			minOccurs = 0;
@@ -194,7 +196,7 @@ public class SettlementParties35 {
 			componentContext_lazy = () -> SettlementParties35.mmObject();
 			isDerived = false;
 			xmlTag = "RegnDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RegistrationDetails";
 			definition = "Registration information required for settlement. For some markets, for example, Spain (Iberclear) registration details are mandatory and should be part of the SSI. In some cases, the name of the institution is different than what's provided in the BIC Directory. If this is the case, the name should be provided.";
 			maxOccurs = 1;
@@ -207,10 +209,9 @@ public class SettlementParties35 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SettlementParties35.mmStandingSettlementParties, com.tools20022.repository.msg.SettlementParties35.mmLocalMarketIdentification,
-						com.tools20022.repository.msg.SettlementParties35.mmRegistrationDetails);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(SettlementParties35.mmStandingSettlementParties, SettlementParties35.mmLocalMarketIdentification, SettlementParties35.mmRegistrationDetails);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SettlementParties35";
 				definition = "Chain of parties involved in the settlement of a transaction, including receipts and deliveries, book transfers, treasury deals, or other activities, resulting in the movement of a security or amount of money from one account to another.";
 			}

@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.GovernanceIdentificationCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -91,7 +93,7 @@ public class GovernanceIdentification1Code extends GovernanceIdentificationCode 
 	 */
 	public static final MMCode mmInternationalStandbyPractices = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InternationalStandbyPractices";
 			owner_lazy = () -> GovernanceIdentification1Code.mmObject();
 		}
@@ -114,7 +116,7 @@ public class GovernanceIdentification1Code extends GovernanceIdentificationCode 
 	 */
 	public static final MMCode mmNone = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "None";
 			owner_lazy = () -> GovernanceIdentification1Code.mmObject();
 		}
@@ -137,7 +139,7 @@ public class GovernanceIdentification1Code extends GovernanceIdentificationCode 
 	 */
 	public static final MMCode mmUniformCustomsAndPractice = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UniformCustomsAndPractice";
 			owner_lazy = () -> GovernanceIdentification1Code.mmObject();
 		}
@@ -160,7 +162,7 @@ public class GovernanceIdentification1Code extends GovernanceIdentificationCode 
 	 */
 	public static final MMCode mmUniformRulesForDemandGuarantees = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UniformRulesForDemandGuarantees";
 			owner_lazy = () -> GovernanceIdentification1Code.mmObject();
 		}
@@ -169,13 +171,13 @@ public class GovernanceIdentification1Code extends GovernanceIdentificationCode 
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ISPR");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "GovernanceIdentification1Code";
 				definition = "Specifies the identification of the rules and laws governing the undertaking.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.GovernanceIdentification1Code.mmInternationalStandbyPractices, com.tools20022.repository.codeset.GovernanceIdentification1Code.mmNone,
-						com.tools20022.repository.codeset.GovernanceIdentification1Code.mmUniformCustomsAndPractice, com.tools20022.repository.codeset.GovernanceIdentification1Code.mmUniformRulesForDemandGuarantees);
+				code_lazy = () -> Arrays.asList(GovernanceIdentification1Code.mmInternationalStandbyPractices, GovernanceIdentification1Code.mmNone, GovernanceIdentification1Code.mmUniformCustomsAndPractice,
+						GovernanceIdentification1Code.mmUniformRulesForDemandGuarantees);
 				trace_lazy = () -> GovernanceIdentificationCode.mmObject();
 			}
 		});

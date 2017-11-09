@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.OfferorTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -85,7 +87,7 @@ public class OfferorType1Code extends OfferorTypeCode {
 	 */
 	public static final MMCode mmSelf = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Self";
 			owner_lazy = () -> OfferorType1Code.mmObject();
 		}
@@ -108,7 +110,7 @@ public class OfferorType1Code extends OfferorTypeCode {
 	 */
 	public static final MMCode mmThirdParty = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ThirdParty";
 			owner_lazy = () -> OfferorType1Code.mmObject();
 		}
@@ -117,12 +119,12 @@ public class OfferorType1Code extends OfferorTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("SELF");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OfferorType1Code";
 				definition = "Specifies whether the offeror for the event is the issuing company or a third party.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OfferorType1Code.mmSelf, com.tools20022.repository.codeset.OfferorType1Code.mmThirdParty);
+				code_lazy = () -> Arrays.asList(OfferorType1Code.mmSelf, OfferorType1Code.mmThirdParty);
 				trace_lazy = () -> OfferorTypeCode.mmObject();
 			}
 		});

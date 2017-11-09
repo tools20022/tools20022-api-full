@@ -20,10 +20,11 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.CashAccountIdentification6Choice;
 import com.tools20022.repository.datatype.RestrictedFINXMax210Text;
-import com.tools20022.repository.entity.SafekeepingPlace;
-import com.tools20022.repository.entity.SecuritiesSettlement;
+import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -130,14 +131,14 @@ public class QuantityAndAccount54 {
 	 */
 	public static final MMMessageAttribute mmDenominationChoice = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmDenominationChoice;
+			businessElementTrace_lazy = () -> SecuritiesSettlement.mmDenominationChoice;
 			componentContext_lazy = () -> QuantityAndAccount54.mmObject();
 			isDerived = false;
 			xmlTag = "DnmtnChc";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DenominationChoice";
 			definition = "Denomination of the security to be received or delivered.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.QuantityAndAccount59.mmDenominationChoice);
+			nextVersions_lazy = () -> Arrays.asList(QuantityAndAccount59.mmDenominationChoice);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINXMax210Text.mmObject();
@@ -185,14 +186,14 @@ public class QuantityAndAccount54 {
 	 */
 	public static final MMMessageAssociationEnd mmAccountOwner = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> QuantityAndAccount54.mmObject();
 			isDerived = false;
 			xmlTag = "AcctOwnr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountOwner";
 			definition = "Party that legally owns the account.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.QuantityAndAccount59.mmAccountOwner);
+			nextVersions_lazy = () -> Arrays.asList(QuantityAndAccount59.mmAccountOwner);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -242,14 +243,14 @@ public class QuantityAndAccount54 {
 	 */
 	public static final MMMessageAssociationEnd mmCashAccount = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.mmIdentification;
+			businessElementTrace_lazy = () -> Account.mmIdentification;
 			componentContext_lazy = () -> QuantityAndAccount54.mmObject();
 			isDerived = false;
 			xmlTag = "CshAcct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashAccount";
 			definition = "Account to or from which a cash entry is made.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.QuantityAndAccount59.mmCashAccount);
+			nextVersions_lazy = () -> Arrays.asList(QuantityAndAccount59.mmCashAccount);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -307,10 +308,10 @@ public class QuantityAndAccount54 {
 			componentContext_lazy = () -> QuantityAndAccount54.mmObject();
 			isDerived = false;
 			xmlTag = "SfkpgPlc";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlace";
 			definition = "Place where the securities are safe-kept, physically or notionally.  This place can be, for example, a local custodian, a Central Securities Depository (CSD) or an International Central Securities Depository (ICSD).";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.QuantityAndAccount59.mmSafekeepingPlace);
+			nextVersions_lazy = () -> Arrays.asList(QuantityAndAccount59.mmSafekeepingPlace);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -362,14 +363,14 @@ public class QuantityAndAccount54 {
 	 */
 	public static final MMMessageAssociationEnd mmQuantityBreakdown = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmLotBreakdown;
+			businessElementTrace_lazy = () -> SecuritiesQuantity.mmLotBreakdown;
 			componentContext_lazy = () -> QuantityAndAccount54.mmObject();
 			isDerived = false;
 			xmlTag = "QtyBrkdwn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuantityBreakdown";
 			definition = "Breakdown of a quantity into lots such as tax lots, instrument series, etc.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.QuantityAndAccount59.mmQuantityBreakdown);
+			nextVersions_lazy = () -> Arrays.asList(QuantityAndAccount59.mmQuantityBreakdown);
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.QuantityBreakdown38.mmObject();
@@ -379,11 +380,11 @@ public class QuantityAndAccount54 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.QuantityAndAccount54.mmDenominationChoice, com.tools20022.repository.msg.QuantityAndAccount54.mmAccountOwner,
-						com.tools20022.repository.msg.QuantityAndAccount54.mmCashAccount, com.tools20022.repository.msg.QuantityAndAccount54.mmSafekeepingPlace, com.tools20022.repository.msg.QuantityAndAccount54.mmQuantityBreakdown);
+				messageElement_lazy = () -> Arrays.asList(QuantityAndAccount54.mmDenominationChoice, QuantityAndAccount54.mmAccountOwner, QuantityAndAccount54.mmCashAccount, QuantityAndAccount54.mmSafekeepingPlace,
+						QuantityAndAccount54.mmQuantityBreakdown);
 				trace_lazy = () -> SecuritiesSettlement.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "QuantityAndAccount54";
 				definition = "Details on the quantity, account and other related information involved in a transaction.";
 				nextVersions_lazy = () -> Arrays.asList(QuantityAndAccount59.mmObject());

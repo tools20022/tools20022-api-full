@@ -20,8 +20,10 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ProxyType2Code;
 import com.tools20022.repository.entity.ProxyAppointment;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -113,14 +115,14 @@ public class Proxy3 {
 	 */
 	public static final MMMessageAttribute mmProxyType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ProxyAppointment.mmProxyType;
+			businessElementTrace_lazy = () -> ProxyAppointment.mmProxyType;
 			componentContext_lazy = () -> Proxy3.mmObject();
 			isDerived = false;
 			xmlTag = "PrxyTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProxyType";
 			definition = "Specifies the type of proxy.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Proxy5.mmProxyType);
+			nextVersions_lazy = () -> Arrays.asList(Proxy5.mmProxyType);
 			maxOccurs = 2;
 			minOccurs = 1;
 			simpleType_lazy = () -> ProxyType2Code.mmObject();
@@ -167,10 +169,10 @@ public class Proxy3 {
 			componentContext_lazy = () -> Proxy3.mmObject();
 			isDerived = false;
 			xmlTag = "PrssgndPrxy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreassignedProxy";
 			definition = "Identifies an authorized proxy which has been assigned by the issuer of the meeting.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Proxy5.mmPreassignedProxy);
+			nextVersions_lazy = () -> Arrays.asList(Proxy5.mmPreassignedProxy);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -181,10 +183,10 @@ public class Proxy3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Proxy3.mmProxyType, com.tools20022.repository.msg.Proxy3.mmPreassignedProxy);
+				messageElement_lazy = () -> Arrays.asList(Proxy3.mmProxyType, Proxy3.mmPreassignedProxy);
 				trace_lazy = () -> ProxyAppointment.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Proxy3";
 				definition = "Specifies the elements that identify a proxy appointed to represent a party authorised to vote at a shareholders meeting.";
 				nextVersions_lazy = () -> Arrays.asList(Proxy5.mmObject());

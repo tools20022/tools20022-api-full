@@ -20,11 +20,14 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.InterestType1Choice;
 import com.tools20022.repository.codeset.CreditDebitCode;
 import com.tools20022.repository.datatype.CurrencyAndAmount;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.entity.Interest;
 import com.tools20022.repository.entity.InterestCalculation;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -115,11 +118,11 @@ public class TransactionInterest1 {
 	 */
 	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Interest.mmAmount;
+			businessElementTrace_lazy = () -> Interest.mmAmount;
 			componentContext_lazy = () -> TransactionInterest1.mmObject();
 			isDerived = false;
 			xmlTag = "Amt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Identifies the amount of interest included in the entry amount.";
 			maxOccurs = 1;
@@ -166,11 +169,11 @@ public class TransactionInterest1 {
 	 */
 	public static final MMMessageAttribute mmCreditDebitIndicator = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Interest.mmCreditDebitIndicator;
+			businessElementTrace_lazy = () -> Interest.mmCreditDebitIndicator;
 			componentContext_lazy = () -> TransactionInterest1.mmObject();
 			isDerived = false;
 			xmlTag = "CdtDbtInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditDebitIndicator";
 			definition = "Identifies whether the interest amount included in the entry amount is positive (CRDT) or negative (DBIT).";
 			maxOccurs = 1;
@@ -212,11 +215,11 @@ public class TransactionInterest1 {
 	 */
 	public static final MMMessageAssociationEnd mmType = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InterestCalculation.mmInterestType;
+			businessElementTrace_lazy = () -> InterestCalculation.mmInterestType;
 			componentContext_lazy = () -> TransactionInterest1.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Specifies the type of interest.";
 			maxOccurs = 1;
@@ -262,7 +265,7 @@ public class TransactionInterest1 {
 			componentContext_lazy = () -> TransactionInterest1.mmObject();
 			isDerived = false;
 			xmlTag = "Rate";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rate";
 			definition = "Set of elements qualifying the interest rate.";
 			minOccurs = 0;
@@ -304,11 +307,11 @@ public class TransactionInterest1 {
 	 */
 	public static final MMMessageAssociationEnd mmFromToDate = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InterestCalculation.mmInterestPeriod;
+			businessElementTrace_lazy = () -> InterestCalculation.mmInterestPeriod;
 			componentContext_lazy = () -> TransactionInterest1.mmObject();
 			isDerived = false;
 			xmlTag = "FrToDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FromToDate";
 			definition = "Range of time between a start date and an end date.";
 			maxOccurs = 1;
@@ -353,7 +356,7 @@ public class TransactionInterest1 {
 			componentContext_lazy = () -> TransactionInterest1.mmObject();
 			isDerived = false;
 			xmlTag = "Rsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reason";
 			definition = "Underlying reason for the interest, eg, yearly credit interest on a savings account.";
 			maxOccurs = 1;
@@ -365,12 +368,11 @@ public class TransactionInterest1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionInterest1.mmAmount, com.tools20022.repository.msg.TransactionInterest1.mmCreditDebitIndicator,
-						com.tools20022.repository.msg.TransactionInterest1.mmType, com.tools20022.repository.msg.TransactionInterest1.mmRate, com.tools20022.repository.msg.TransactionInterest1.mmFromToDate,
-						com.tools20022.repository.msg.TransactionInterest1.mmReason);
+				messageElement_lazy = () -> Arrays.asList(TransactionInterest1.mmAmount, TransactionInterest1.mmCreditDebitIndicator, TransactionInterest1.mmType, TransactionInterest1.mmRate, TransactionInterest1.mmFromToDate,
+						TransactionInterest1.mmReason);
 				trace_lazy = () -> InterestCalculation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TransactionInterest1";
 				definition = "Provides transaction specific interest information that applies to the underlying transaction.";
 			}

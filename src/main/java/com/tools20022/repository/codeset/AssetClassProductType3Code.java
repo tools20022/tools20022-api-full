@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.AssetClassProductTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -75,7 +77,7 @@ public class AssetClassProductType3Code extends AssetClassProductTypeCode {
 	 */
 	public static final MMCode mmEnvironmental = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Environmental";
 			owner_lazy = () -> AssetClassProductType3Code.mmObject();
 		}
@@ -84,11 +86,11 @@ public class AssetClassProductType3Code extends AssetClassProductTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AssetClassProductType3Code";
 				definition = "Commodity derivative base product code list for Environmental.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AssetClassProductType3Code.mmEnvironmental);
+				code_lazy = () -> Arrays.asList(AssetClassProductType3Code.mmEnvironmental);
 				trace_lazy = () -> AssetClassProductTypeCode.mmObject();
 			}
 		});

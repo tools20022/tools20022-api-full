@@ -19,10 +19,14 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CountryCode;
 import com.tools20022.repository.codeset.CountrySubDivisionCode;
 import com.tools20022.repository.datatype.LEIIdentifier;
 import com.tools20022.repository.entity.Organisation;
+import com.tools20022.repository.entity.PartyIdentificationInformation;
+import com.tools20022.repository.entity.PostalAddress;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -105,11 +109,11 @@ public class DerivativePartyIdentification1Choice {
 	 */
 	public static final MMMessageAttribute mmCountry = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PostalAddress.mmCountry;
+			businessElementTrace_lazy = () -> PostalAddress.mmCountry;
 			componentContext_lazy = () -> DerivativePartyIdentification1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Ctry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Country";
 			definition = "Country of the reference entity.";
 			maxOccurs = 1;
@@ -154,11 +158,11 @@ public class DerivativePartyIdentification1Choice {
 	 */
 	public static final MMMessageAttribute mmCountrySubDivision = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PostalAddress.mmState;
+			businessElementTrace_lazy = () -> PostalAddress.mmState;
 			componentContext_lazy = () -> DerivativePartyIdentification1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "CtrySubDvsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CountrySubDivision";
 			definition = "Country and country sub-division of the reference entity.";
 			maxOccurs = 1;
@@ -203,11 +207,11 @@ public class DerivativePartyIdentification1Choice {
 	 */
 	public static final MMMessageAttribute mmLEI = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.mmLEI;
+			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmLEI;
 			componentContext_lazy = () -> DerivativePartyIdentification1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "LEI";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LEI";
 			definition = "Identification of the reference party through Legal entity identifier.";
 			maxOccurs = 1;
@@ -219,11 +223,10 @@ public class DerivativePartyIdentification1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.DerivativePartyIdentification1Choice.mmCountry, com.tools20022.repository.choice.DerivativePartyIdentification1Choice.mmCountrySubDivision,
-						com.tools20022.repository.choice.DerivativePartyIdentification1Choice.mmLEI);
+				messageElement_lazy = () -> Arrays.asList(DerivativePartyIdentification1Choice.mmCountry, DerivativePartyIdentification1Choice.mmCountrySubDivision, DerivativePartyIdentification1Choice.mmLEI);
 				trace_lazy = () -> Organisation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DerivativePartyIdentification1Choice";
 				definition = "Reference entity of a single name credit default swap (CDS) or a derivative on single name credit default swap (CDS).";
 			}

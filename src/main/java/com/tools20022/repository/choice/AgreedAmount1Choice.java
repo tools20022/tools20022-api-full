@@ -19,7 +19,11 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.colr.MarginCallResponseV03;
+import com.tools20022.repository.area.colr.MarginCallResponseV04;
 import com.tools20022.repository.entity.MarginCall;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.AgreedAmount1;
 import com.tools20022.repository.msg.Amount1;
 import java.util.Arrays;
@@ -120,11 +124,11 @@ public class AgreedAmount1Choice {
 	 */
 	public static final MMMessageAssociationEnd mmAgreedAmountDetails = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.MarginCall.mmAgreedAmount;
+			businessElementTrace_lazy = () -> MarginCall.mmAgreedAmount;
 			componentContext_lazy = () -> AgreedAmount1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "AgrdAmtDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AgreedAmountDetails";
 			definition = "Provides details about the agreed amount for the variation margin and optionaly the segregated independent amount.";
 			maxOccurs = 1;
@@ -169,11 +173,11 @@ public class AgreedAmount1Choice {
 	 */
 	public static final MMMessageAssociationEnd mmSegregatedIndependentAmount = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.MarginCall.mmSegregatedIndependentAmount;
+			businessElementTrace_lazy = () -> MarginCall.mmSegregatedIndependentAmount;
 			componentContext_lazy = () -> AgreedAmount1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "SgrtdIndpdntAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SegregatedIndependentAmount";
 			definition = "Provides details about the agreed amount for the segregated independent amount.";
 			maxOccurs = 1;
@@ -186,12 +190,11 @@ public class AgreedAmount1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AgreedAmount1Choice.mmAgreedAmountDetails, com.tools20022.repository.choice.AgreedAmount1Choice.mmSegregatedIndependentAmount);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.colr.MarginCallResponseV03.mmAgreedAmountDueToA, com.tools20022.repository.area.colr.MarginCallResponseV03.mmAgreedAmountDueToB,
-						com.tools20022.repository.area.colr.MarginCallResponseV04.mmAgreedAmountDueToA, com.tools20022.repository.area.colr.MarginCallResponseV04.mmAgreedAmountDueToB);
+				messageElement_lazy = () -> Arrays.asList(AgreedAmount1Choice.mmAgreedAmountDetails, AgreedAmount1Choice.mmSegregatedIndependentAmount);
+				messageBuildingBlock_lazy = () -> Arrays.asList(MarginCallResponseV03.mmAgreedAmountDueToA, MarginCallResponseV03.mmAgreedAmountDueToB, MarginCallResponseV04.mmAgreedAmountDueToA, MarginCallResponseV04.mmAgreedAmountDueToB);
 				trace_lazy = () -> MarginCall.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AgreedAmount1Choice";
 				definition = "Provides details about the agreed amount for the variation margin and the segregated independent amount, or the segregated independent amount only.";
 			}

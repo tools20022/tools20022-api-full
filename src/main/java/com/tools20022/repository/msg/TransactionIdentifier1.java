@@ -19,9 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.CardPaymentAcquiring;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -108,11 +110,11 @@ public class TransactionIdentifier1 {
 	 */
 	public static final MMMessageAttribute mmTransactionDateTime = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.mmTransactionDateTime;
+			businessElementTrace_lazy = () -> CardPaymentAcquiring.mmTransactionDateTime;
 			componentContext_lazy = () -> TransactionIdentifier1.mmObject();
 			isDerived = false;
 			xmlTag = "TxDtTm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionDateTime";
 			definition = "Local date and time of the transaction assigned by the POI (Point Of Interaction).";
 			maxOccurs = 1;
@@ -158,11 +160,11 @@ public class TransactionIdentifier1 {
 	 */
 	public static final MMMessageAttribute mmTransactionReference = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.mmTransactionIdentification;
+			businessElementTrace_lazy = () -> CardPaymentAcquiring.mmTransactionIdentification;
 			componentContext_lazy = () -> TransactionIdentifier1.mmObject();
 			isDerived = false;
 			xmlTag = "TxRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionReference";
 			definition = "Identification of the transaction that has to be unique for a time period.";
 			maxOccurs = 1;
@@ -174,10 +176,10 @@ public class TransactionIdentifier1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionIdentifier1.mmTransactionDateTime, com.tools20022.repository.msg.TransactionIdentifier1.mmTransactionReference);
+				messageElement_lazy = () -> Arrays.asList(TransactionIdentifier1.mmTransactionDateTime, TransactionIdentifier1.mmTransactionReference);
 				trace_lazy = () -> CardPaymentAcquiring.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TransactionIdentifier1";
 				definition = "Identification of the transaction in an unambiguous way.";
 				nextVersions_lazy = () -> Arrays.asList(TransactionIdentifier2.mmObject());

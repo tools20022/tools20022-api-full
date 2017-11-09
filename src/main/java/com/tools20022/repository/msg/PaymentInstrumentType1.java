@@ -19,9 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max500Text;
 import com.tools20022.repository.datatype.Min8Max28NumericText;
 import com.tools20022.repository.entity.Payment;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -103,7 +105,7 @@ public class PaymentInstrumentType1 {
 			componentContext_lazy = () -> PaymentInstrumentType1.mmObject();
 			isDerived = false;
 			xmlTag = "CardNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CardNumber";
 			definition = "Provides the card number.";
 			maxOccurs = 1;
@@ -145,7 +147,7 @@ public class PaymentInstrumentType1 {
 			componentContext_lazy = () -> PaymentInstrumentType1.mmObject();
 			isDerived = false;
 			xmlTag = "AuthrtyReqTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AuthorityRequestType";
 			definition = "Identifies the authority request type as a code.";
 			minOccurs = 1;
@@ -188,7 +190,7 @@ public class PaymentInstrumentType1 {
 			componentContext_lazy = () -> PaymentInstrumentType1.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInformation";
 			definition = "Additional information, in free text form, to complement the requested information.";
 			maxOccurs = 1;
@@ -200,11 +202,10 @@ public class PaymentInstrumentType1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentInstrumentType1.mmCardNumber, com.tools20022.repository.msg.PaymentInstrumentType1.mmAuthorityRequestType,
-						com.tools20022.repository.msg.PaymentInstrumentType1.mmAdditionalInformation);
+				messageElement_lazy = () -> Arrays.asList(PaymentInstrumentType1.mmCardNumber, PaymentInstrumentType1.mmAuthorityRequestType, PaymentInstrumentType1.mmAdditionalInformation);
 				trace_lazy = () -> Payment.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PaymentInstrumentType1";
 				definition = "Identifies a payment instrument type as the search criteria for the financial institution to do the investigation.";
 			}

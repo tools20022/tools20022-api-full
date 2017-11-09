@@ -20,8 +20,12 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max10KBinary;
+import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.entity.SecurityCertificateHolderRole;
+import com.tools20022.repository.entity.SecurityCertificatePartyRole;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -108,11 +112,11 @@ public class PartyAndCertificate2 {
 	 */
 	public static final MMMessageAssociationEnd mmParty = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> PartyAndCertificate2.mmObject();
 			isDerived = false;
 			xmlTag = "Pty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Party";
 			definition = "Entity involved in an activity.";
 			maxOccurs = 1;
@@ -157,11 +161,11 @@ public class PartyAndCertificate2 {
 	 */
 	public static final MMMessageAttribute mmCertificate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecurityCertificatePartyRole.mmSecurityCertificate;
+			businessElementTrace_lazy = () -> SecurityCertificatePartyRole.mmSecurityCertificate;
 			componentContext_lazy = () -> PartyAndCertificate2.mmObject();
 			isDerived = false;
 			xmlTag = "Cert";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Certificate";
 			definition = "Security certificate used to sign electronically.";
 			maxOccurs = 1;
@@ -173,10 +177,10 @@ public class PartyAndCertificate2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyAndCertificate2.mmParty, com.tools20022.repository.msg.PartyAndCertificate2.mmCertificate);
+				messageElement_lazy = () -> Arrays.asList(PartyAndCertificate2.mmParty, PartyAndCertificate2.mmCertificate);
 				trace_lazy = () -> SecurityCertificateHolderRole.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PartyAndCertificate2";
 				definition = "Party and related security certificate.";
 				nextVersions_lazy = () -> Arrays.asList(PartyAndCertificate3.mmObject());

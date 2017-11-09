@@ -17,11 +17,14 @@
 
 package com.tools20022.repository.entity;
 
+import com.tools20022.metamodel.MMAggregation;
 import com.tools20022.metamodel.MMBusinessAssociationEnd;
 import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.CSDOrNCB1Choice;
 import com.tools20022.repository.choice.SystemPartyIdentification1Choice;
 import com.tools20022.repository.entity.Role;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -36,55 +39,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SystemPartyRole#mmRelatedSystem
- * SystemPartyRole.mmRelatedSystem}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
- * subType} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.SystemMemberRole
- * SystemMemberRole}</li>
- * <li>{@linkplain com.tools20022.repository.entity.TransactionAdministrator
- * TransactionAdministrator}</li>
- * <li>{@linkplain com.tools20022.repository.entity.SubmittingPartyRole
- * SubmittingPartyRole}</li>
- * <li>{@linkplain com.tools20022.repository.entity.ThirdPartyRole
- * ThirdPartyRole}</li>
- * <li>{@linkplain com.tools20022.repository.entity.TerminalManagerRole
- * TerminalManagerRole}</li>
- * <li>{@linkplain com.tools20022.repository.entity.SystemAdministratorRole
- * SystemAdministratorRole}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SystemReferenceDataResponsible
- * SystemReferenceDataResponsible}</li>
- * <li>{@linkplain com.tools20022.repository.entity.ClearingMemberRole
- * ClearingMemberRole}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.System#mmPartyRole
- * System.mmPartyRole}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
- * derivationElement} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.choice.SystemPartyIdentification1Choice#mmCombinedIdentification
- * SystemPartyIdentification1Choice.mmCombinedIdentification}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.Role Role}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -110,6 +64,55 @@ import java.util.List;
  * SystemPartyIdentification4}</li>
  * <li>{@linkplain com.tools20022.repository.msg.NonGuaranteedTrade3
  * NonGuaranteedTrade3}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.System#mmPartyRole
+ * System.mmPartyRole}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
+ * derivationElement} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.SystemPartyIdentification1Choice#mmCombinedIdentification
+ * SystemPartyIdentification1Choice.mmCombinedIdentification}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.Role Role}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
+ * subType} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.SystemMemberRole
+ * SystemMemberRole}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.TransactionAdministrator
+ * TransactionAdministrator}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.SubmittingPartyRole
+ * SubmittingPartyRole}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.ThirdPartyRole
+ * ThirdPartyRole}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.TerminalManagerRole
+ * TerminalManagerRole}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.SystemAdministratorRole
+ * SystemAdministratorRole}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SystemReferenceDataResponsible
+ * SystemReferenceDataResponsible}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.ClearingMemberRole
+ * ClearingMemberRole}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SystemPartyRole#mmRelatedSystem
+ * SystemPartyRole.mmRelatedSystem}</li>
  * </ul>
  * </li>
  * <li>
@@ -167,12 +170,12 @@ public class SystemPartyRole extends Role {
 		{
 			elementContext_lazy = () -> SystemPartyRole.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedSystem";
 			definition = "Specifies the system for which a party plays a role";
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.System.mmPartyRole;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.System.mmObject();
 		}
 	};
@@ -180,16 +183,16 @@ public class SystemPartyRole extends Role {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SystemPartyRole";
 				definition = "Role played by a party in a system.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.System.mmPartyRole);
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SystemPartyIdentification1Choice.mmCombinedIdentification);
+				derivationElement_lazy = () -> Arrays.asList(SystemPartyIdentification1Choice.mmCombinedIdentification);
 				subType_lazy = () -> Arrays.asList(SystemMemberRole.mmObject(), TransactionAdministrator.mmObject(), SubmittingPartyRole.mmObject(), ThirdPartyRole.mmObject(), TerminalManagerRole.mmObject(),
 						SystemAdministratorRole.mmObject(), SystemReferenceDataResponsible.mmObject(), ClearingMemberRole.mmObject());
 				superType_lazy = () -> Role.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SystemPartyRole.mmRelatedSystem);
+				element_lazy = () -> Arrays.asList(SystemPartyRole.mmRelatedSystem);
 				derivationComponent_lazy = () -> Arrays.asList(NonGuaranteedTrade1.mmObject(), NonGuaranteedTrade2.mmObject(), SystemPartyIdentification3.mmObject(), SystemPartyIdentification5.mmObject(),
 						SystemPartyIdentification1Choice.mmObject(), SystemPartyIdentification1.mmObject(), CSDOrNCB1Choice.mmObject(), SystemPartyIdentification2.mmObject(), SystemPartyIdentification4.mmObject(),
 						NonGuaranteedTrade3.mmObject());

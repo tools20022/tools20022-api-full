@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.AssetClassDetailedSubProductTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -83,7 +85,7 @@ public class AssetFXSubProductType1Code extends AssetClassDetailedSubProductType
 	 */
 	public static final MMCode mmForeignExchangeCrossRate = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForeignExchangeCrossRate";
 			owner_lazy = () -> AssetFXSubProductType1Code.mmObject();
 		}
@@ -106,7 +108,7 @@ public class AssetFXSubProductType1Code extends AssetClassDetailedSubProductType
 	 */
 	public static final MMCode mmForeignExchangeEmergingMarket = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForeignExchangeEmergingMarket";
 			owner_lazy = () -> AssetFXSubProductType1Code.mmObject();
 		}
@@ -129,7 +131,7 @@ public class AssetFXSubProductType1Code extends AssetClassDetailedSubProductType
 	 */
 	public static final MMCode mmForeignExchangeMajor = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForeignExchangeMajor";
 			owner_lazy = () -> AssetFXSubProductType1Code.mmObject();
 		}
@@ -138,12 +140,11 @@ public class AssetFXSubProductType1Code extends AssetClassDetailedSubProductType
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AssetFXSubProductType1Code";
 				definition = "Specifies the allowed foreign exchange types for foreign exchange derivatives.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AssetFXSubProductType1Code.mmForeignExchangeCrossRate, com.tools20022.repository.codeset.AssetFXSubProductType1Code.mmForeignExchangeEmergingMarket,
-						com.tools20022.repository.codeset.AssetFXSubProductType1Code.mmForeignExchangeMajor);
+				code_lazy = () -> Arrays.asList(AssetFXSubProductType1Code.mmForeignExchangeCrossRate, AssetFXSubProductType1Code.mmForeignExchangeEmergingMarket, AssetFXSubProductType1Code.mmForeignExchangeMajor);
 				trace_lazy = () -> AssetClassDetailedSubProductTypeCode.mmObject();
 			}
 		});

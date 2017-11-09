@@ -20,6 +20,7 @@ package com.tools20022.repository.area.reda;
 import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.ReferenceDataLatestVersion;
 import com.tools20022.repository.choice.MarketIdentificationOrCashPurpose1Choice;
 import com.tools20022.repository.choice.SecuritiesOrCash1Choice;
@@ -58,6 +59,9 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code reda.056.001.01}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.ReferenceDataLatestVersion
@@ -102,9 +106,6 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code reda.056.001.01}</li>
- * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -145,7 +146,7 @@ public class StandingSettlementInstructionV01 {
 	public static final MMMessageBuildingBlock mmMessageReferenceIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "MsgRefId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageReferenceIdentification";
 			definition = "Reference of this message.";
 			maxOccurs = 1;
@@ -179,7 +180,7 @@ public class StandingSettlementInstructionV01 {
 	public static final MMMessageBuildingBlock mmEffectiveDateDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "FctvDtDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EffectiveDateDetails";
 			definition = "Date on which the SSI is effective.";
 			maxOccurs = 1;
@@ -219,7 +220,7 @@ public class StandingSettlementInstructionV01 {
 	public static final MMMessageBuildingBlock mmAccountIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "AcctId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountIdentification";
 			definition = "Unique and unambiguous master identification known to the sender (or its authorised agent) and receiver (or its authorised agent), below which the SSI will be lodged. This may be an account number or reference to a fund.\r\nIf no account or reference is available then “NONREF” must be specified.";
 			minOccurs = 1;
@@ -254,7 +255,7 @@ public class StandingSettlementInstructionV01 {
 	public static final MMMessageBuildingBlock mmMarketIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "MktId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketIdentification";
 			definition = "Identifies the market for the standing settlement instruction. ";
 			maxOccurs = 1;
@@ -289,7 +290,7 @@ public class StandingSettlementInstructionV01 {
 	public static final MMMessageBuildingBlock mmSettlementCurrency = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SttlmCcy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementCurrency";
 			definition = "Currency for which the SSI is specified.";
 			maxOccurs = 1;
@@ -324,7 +325,7 @@ public class StandingSettlementInstructionV01 {
 	public static final MMMessageBuildingBlock mmSettlementDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SttlmDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementDetails";
 			definition = "Settlement chain parties, accounts and other details. ";
 			maxOccurs = 1;
@@ -362,7 +363,7 @@ public class StandingSettlementInstructionV01 {
 	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SplmtryData";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryData";
 			definition = "Additional information that can not be captured in the structured fields and/or any other specific block.";
 			minOccurs = 0;
@@ -373,17 +374,16 @@ public class StandingSettlementInstructionV01 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "StandingSettlementInstructionV01";
 				definition = "Scope\r\nAn instructing party sends the StandingSettlementInstruction (SSI) message to the receiver to create or update a standing cash or securities settlement instruction. The message can also be used to notify a counterparty of an SSI.\r\n\r\nUsage\r\nThe instructing party (initiator) is:\r\n•\tAn account servicer, for example, a global custodian or prime broker\r\n•\tA counterparty in a transaction, for example:\r\n-\tan investment manager (executing broker),\r\n-\ta global custodian (executing broker, prime broker)\r\n•\tA vendor’s application communicating on behalf of an account servicer or counterparty\r\nThe receiver is:\r\n•\tAn account owner, for example, an investment manager, hedge fund administrator or a party to which SSI operations have been outsourced\r\n•\tA counterparty, for example:\r\n-\tan investment manager (executing broker)\r\n-\ta global custodian (executing broker, prime broker)\r\n•\tA vendor’s application communicating on behalf of the account owner or counterparty";
 				messageSet_lazy = () -> Arrays.asList(SSIforSecuritiesPaymentsandForeignExchange.mmObject());
 				rootElement = "Document";
 				xmlTag = "StgSttlmInstr";
 				businessArea_lazy = () -> ReferenceDataLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.reda.StandingSettlementInstructionV01.mmMessageReferenceIdentification,
-						com.tools20022.repository.area.reda.StandingSettlementInstructionV01.mmEffectiveDateDetails, com.tools20022.repository.area.reda.StandingSettlementInstructionV01.mmAccountIdentification,
-						com.tools20022.repository.area.reda.StandingSettlementInstructionV01.mmMarketIdentification, com.tools20022.repository.area.reda.StandingSettlementInstructionV01.mmSettlementCurrency,
-						com.tools20022.repository.area.reda.StandingSettlementInstructionV01.mmSettlementDetails, com.tools20022.repository.area.reda.StandingSettlementInstructionV01.mmSupplementaryData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(StandingSettlementInstructionV01.mmMessageReferenceIdentification, StandingSettlementInstructionV01.mmEffectiveDateDetails,
+						StandingSettlementInstructionV01.mmAccountIdentification, StandingSettlementInstructionV01.mmMarketIdentification, StandingSettlementInstructionV01.mmSettlementCurrency,
+						StandingSettlementInstructionV01.mmSettlementDetails, StandingSettlementInstructionV01.mmSupplementaryData);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "reda";

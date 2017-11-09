@@ -20,11 +20,20 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.tsmt.DataSetSubmissionV03;
+import com.tools20022.repository.area.tsmt.DataSetSubmissionV04;
+import com.tools20022.repository.area.tsmt.ForwardDataSetSubmissionReportV03;
+import com.tools20022.repository.area.tsmt.ForwardDataSetSubmissionReportV04;
 import com.tools20022.repository.codeset.TradeCertificateType2Code;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.entity.Document;
+import com.tools20022.repository.entity.GenericIdentification;
+import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.entity.TradeCertificate;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -148,10 +157,10 @@ public class OtherCertificateDataSet1 {
 			componentContext_lazy = () -> OtherCertificateDataSet1.mmObject();
 			isDerived = false;
 			xmlTag = "DataSetId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DataSetIdentification";
 			definition = "Identifies the certificate data set.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OtherCertificateDataSet2.mmDataSetIdentification);
+			nextVersions_lazy = () -> Arrays.asList(OtherCertificateDataSet2.mmDataSetIdentification);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -201,14 +210,14 @@ public class OtherCertificateDataSet1 {
 	 */
 	public static final MMMessageAttribute mmCertificateIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmIdentification;
+			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> OtherCertificateDataSet1.mmObject();
 			isDerived = false;
 			xmlTag = "CertId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CertificateIdentification";
 			definition = "Unique identifier of the document.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OtherCertificateDataSet2.mmCertificateIdentification);
+			nextVersions_lazy = () -> Arrays.asList(OtherCertificateDataSet2.mmCertificateIdentification);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -258,14 +267,14 @@ public class OtherCertificateDataSet1 {
 	 */
 	public static final MMMessageAttribute mmCertificateType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradeCertificate.mmCertificateType;
+			businessElementTrace_lazy = () -> TradeCertificate.mmCertificateType;
 			componentContext_lazy = () -> OtherCertificateDataSet1.mmObject();
 			isDerived = false;
 			xmlTag = "CertTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CertificateType";
 			definition = "Specifies the type of the certificate.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OtherCertificateDataSet2.mmCertificateType);
+			nextVersions_lazy = () -> Arrays.asList(OtherCertificateDataSet2.mmCertificateType);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TradeCertificateType2Code.mmObject();
@@ -314,14 +323,14 @@ public class OtherCertificateDataSet1 {
 	 */
 	public static final MMMessageAttribute mmIssueDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Document.mmIssueDate;
+			businessElementTrace_lazy = () -> Document.mmIssueDate;
 			componentContext_lazy = () -> OtherCertificateDataSet1.mmObject();
 			isDerived = false;
 			xmlTag = "IsseDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssueDate";
 			definition = "Issue date of the document.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OtherCertificateDataSet2.mmIssueDate);
+			nextVersions_lazy = () -> Arrays.asList(OtherCertificateDataSet2.mmIssueDate);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
@@ -371,14 +380,14 @@ public class OtherCertificateDataSet1 {
 	 */
 	public static final MMMessageAssociationEnd mmIssuer = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> OtherCertificateDataSet1.mmObject();
 			isDerived = false;
 			xmlTag = "Issr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Issuer";
 			definition = "Issuer of the certificate, typically the inspection company or its agent.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OtherCertificateDataSet2.mmIssuer);
+			nextVersions_lazy = () -> Arrays.asList(OtherCertificateDataSet2.mmIssuer);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -429,10 +438,10 @@ public class OtherCertificateDataSet1 {
 			componentContext_lazy = () -> OtherCertificateDataSet1.mmObject();
 			isDerived = false;
 			xmlTag = "CertInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CertificateInformation";
 			definition = "Additional and important information that could not be captured by structured fields.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OtherCertificateDataSet2.mmCertificateInformation);
+			nextVersions_lazy = () -> Arrays.asList(OtherCertificateDataSet2.mmCertificateInformation);
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
@@ -441,15 +450,13 @@ public class OtherCertificateDataSet1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OtherCertificateDataSet1.mmDataSetIdentification, com.tools20022.repository.msg.OtherCertificateDataSet1.mmCertificateIdentification,
-						com.tools20022.repository.msg.OtherCertificateDataSet1.mmCertificateType, com.tools20022.repository.msg.OtherCertificateDataSet1.mmIssueDate, com.tools20022.repository.msg.OtherCertificateDataSet1.mmIssuer,
-						com.tools20022.repository.msg.OtherCertificateDataSet1.mmCertificateInformation);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.DataSetSubmissionV03.mmOtherCertificateDataSet,
-						com.tools20022.repository.area.tsmt.ForwardDataSetSubmissionReportV03.mmOtherCertificateDataSet, com.tools20022.repository.area.tsmt.DataSetSubmissionV04.mmOtherCertificateDataSet,
-						com.tools20022.repository.area.tsmt.ForwardDataSetSubmissionReportV04.mmOtherCertificateDataSet);
+				messageElement_lazy = () -> Arrays.asList(OtherCertificateDataSet1.mmDataSetIdentification, OtherCertificateDataSet1.mmCertificateIdentification, OtherCertificateDataSet1.mmCertificateType,
+						OtherCertificateDataSet1.mmIssueDate, OtherCertificateDataSet1.mmIssuer, OtherCertificateDataSet1.mmCertificateInformation);
+				messageBuildingBlock_lazy = () -> Arrays.asList(DataSetSubmissionV03.mmOtherCertificateDataSet, ForwardDataSetSubmissionReportV03.mmOtherCertificateDataSet, DataSetSubmissionV04.mmOtherCertificateDataSet,
+						ForwardDataSetSubmissionReportV04.mmOtherCertificateDataSet);
 				trace_lazy = () -> TradeCertificate.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OtherCertificateDataSet1";
 				definition = "Formal document used to record a fact and used as proof of the fact, in the context of a commercial trade transaction.";
 				nextVersions_lazy = () -> Arrays.asList(OtherCertificateDataSet2.mmObject());

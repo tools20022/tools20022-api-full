@@ -19,8 +19,11 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CommissionType6Code;
 import com.tools20022.repository.entity.Commission;
+import com.tools20022.repository.entity.SecuritiesSettlement;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification47;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -96,7 +99,7 @@ public class CommissionType5Choice {
 			componentContext_lazy = () -> CommissionType5Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Cd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Commission type expressed as a code.";
 			maxOccurs = 1;
@@ -140,11 +143,11 @@ public class CommissionType5Choice {
 	 */
 	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmAutomaticBorrowing;
+			businessElementTrace_lazy = () -> SecuritiesSettlement.mmAutomaticBorrowing;
 			componentContext_lazy = () -> CommissionType5Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Commission type expressed as a proprietary code.";
 			maxOccurs = 1;
@@ -156,10 +159,10 @@ public class CommissionType5Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CommissionType5Choice.mmCode, com.tools20022.repository.choice.CommissionType5Choice.mmProprietary);
+				messageElement_lazy = () -> Arrays.asList(CommissionType5Choice.mmCode, CommissionType5Choice.mmProprietary);
 				trace_lazy = () -> Commission.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CommissionType5Choice";
 				definition = "Choice of formats for the commission type.";
 			}

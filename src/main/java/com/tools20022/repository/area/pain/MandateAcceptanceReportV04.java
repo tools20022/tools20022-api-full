@@ -20,6 +20,7 @@ package com.tools20022.repository.area.pain;
 import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.PaymentsInitiationPreviousVersion;
 import com.tools20022.repository.msg.GroupHeader47;
 import com.tools20022.repository.msg.MandateAcceptance4;
@@ -50,6 +51,9 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code pain.012.001.04}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.PaymentsInitiationPreviousVersion
@@ -81,9 +85,6 @@ import java.util.List;
  * MandateAcceptanceReportV04.mmSupplementaryData}</li>
  * </ul>
  * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code pain.012.001.04}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -153,11 +154,11 @@ public class MandateAcceptanceReportV04 {
 	public static final MMMessageBuildingBlock mmGroupHeader = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "GrpHdr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GroupHeader";
 			definition = "Set of characteristics to identify the message and parties playing a role in the mandate acceptance, but which are not part of the mandate.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.pain.MandateAcceptanceReportV05.mmGroupHeader);
-			previousVersion_lazy = () -> com.tools20022.repository.area.pain.MandateAcceptanceReportV03.mmGroupHeader;
+			nextVersions_lazy = () -> Arrays.asList(MandateAcceptanceReportV05.mmGroupHeader);
+			previousVersion_lazy = () -> MandateAcceptanceReportV03.mmGroupHeader;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GroupHeader47.mmObject();
@@ -206,11 +207,11 @@ public class MandateAcceptanceReportV04 {
 	public static final MMMessageBuildingBlock mmUnderlyingAcceptanceDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "UndrlygAccptncDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnderlyingAcceptanceDetails";
 			definition = "Set of elements used to provide information on the acception or rejection of the mandate request.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.pain.MandateAcceptanceReportV05.mmUnderlyingAcceptanceDetails);
-			previousVersion_lazy = () -> com.tools20022.repository.area.pain.MandateAcceptanceReportV03.mmUnderlyingAcceptanceDetails;
+			nextVersions_lazy = () -> Arrays.asList(MandateAcceptanceReportV05.mmUnderlyingAcceptanceDetails);
+			previousVersion_lazy = () -> MandateAcceptanceReportV03.mmUnderlyingAcceptanceDetails;
 			minOccurs = 1;
 			complexType_lazy = () -> MandateAcceptance4.mmObject();
 		}
@@ -258,11 +259,11 @@ public class MandateAcceptanceReportV04 {
 	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SplmtryData";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryData";
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.pain.MandateAcceptanceReportV05.mmSupplementaryData);
-			previousVersion_lazy = () -> com.tools20022.repository.area.pain.MandateAcceptanceReportV03.mmSupplementaryData;
+			nextVersions_lazy = () -> Arrays.asList(MandateAcceptanceReportV05.mmSupplementaryData);
+			previousVersion_lazy = () -> MandateAcceptanceReportV03.mmSupplementaryData;
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
@@ -271,7 +272,7 @@ public class MandateAcceptanceReportV04 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MandateAcceptanceReportV04";
 				definition = "Scope\r\nThe MandateAcceptanceReport message is sent from the agent of the receiver (debtor or creditor) of the MandateRequest message (initiation, amendment or cancellation) to the agent of the initiator of the MandateRequest message (debtor or creditor).\r\nA MandateAcceptanceReport message is used to confirm the acceptance or rejection of a MandateRequest message. Where acceptance is part of the full process flow, a MandateRequest message only becomes valid after a confirmation of acceptance is received through a MandateAcceptanceReport message from the agent of the receiver.\r\nUsage\r\nThe MandateAcceptanceReport message can contain one or more confirmation(s) of acceptance or rejection of a specific Mandate Request.\r\nThe messages can be exchanged between debtor agent and creditor agent and between debtor agent and debtor and creditor agent and creditor.\r\nThe MandateAcceptanceReport message can be used in domestic and cross-border scenarios.";
 				nextVersions_lazy = () -> Arrays.asList(MandateAcceptanceReportV05.mmObject());
@@ -280,8 +281,7 @@ public class MandateAcceptanceReportV04 {
 				rootElement = "Document";
 				xmlTag = "MndtAccptncRpt";
 				businessArea_lazy = () -> PaymentsInitiationPreviousVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.pain.MandateAcceptanceReportV04.mmGroupHeader, com.tools20022.repository.area.pain.MandateAcceptanceReportV04.mmUnderlyingAcceptanceDetails,
-						com.tools20022.repository.area.pain.MandateAcceptanceReportV04.mmSupplementaryData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(MandateAcceptanceReportV04.mmGroupHeader, MandateAcceptanceReportV04.mmUnderlyingAcceptanceDetails, MandateAcceptanceReportV04.mmSupplementaryData);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "pain";

@@ -19,6 +19,8 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -100,10 +102,10 @@ public class Transactions6 {
 			componentContext_lazy = () -> Transactions6.mmObject();
 			isDerived = false;
 			xmlTag = "PmtCmonInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentCommonInformation";
 			definition = "Common detailed payment instruction information.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Transactions5.mmPaymentCommonInformation;
+			previousVersion_lazy = () -> Transactions5.mmPaymentCommonInformation;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -147,10 +149,10 @@ public class Transactions6 {
 			componentContext_lazy = () -> Transactions6.mmObject();
 			isDerived = false;
 			xmlTag = "TxsSummry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionsSummary";
 			definition = "Indicates the total number and sum of the transactions.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Transactions5.mmTransactionsSummary;
+			previousVersion_lazy = () -> Transactions5.mmTransactionsSummary;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -194,10 +196,10 @@ public class Transactions6 {
 			componentContext_lazy = () -> Transactions6.mmObject();
 			isDerived = false;
 			xmlTag = "TxRpt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionReport";
 			definition = "Reports either on the transaction information or on a business error.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Transactions5.mmTransactionReport;
+			previousVersion_lazy = () -> Transactions5.mmTransactionReport;
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.TransactionReport2.mmObject();
@@ -207,10 +209,9 @@ public class Transactions6 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Transactions6.mmPaymentCommonInformation, com.tools20022.repository.msg.Transactions6.mmTransactionsSummary,
-						com.tools20022.repository.msg.Transactions6.mmTransactionReport);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(Transactions6.mmPaymentCommonInformation, Transactions6.mmTransactionsSummary, Transactions6.mmTransactionReport);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Transactions6";
 				definition = "Reports on transactions.";
 				previousVersion_lazy = () -> Transactions5.mmObject();

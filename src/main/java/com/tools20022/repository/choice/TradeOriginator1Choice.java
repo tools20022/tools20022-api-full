@@ -19,8 +19,10 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.OriginatorRole2Code;
 import com.tools20022.repository.entity.TradeOriginatorRole;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification20;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -114,14 +116,14 @@ public class TradeOriginator1Choice {
 	 */
 	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradeOriginatorRole.mmOriginatorRole;
+			businessElementTrace_lazy = () -> TradeOriginatorRole.mmOriginatorRole;
 			componentContext_lazy = () -> TradeOriginator1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Cd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Trading party capacity expressed as an ISO 20022 code.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.TradeOriginator3Choice.mmCode);
+			nextVersions_lazy = () -> Arrays.asList(TradeOriginator3Choice.mmCode);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> OriginatorRole2Code.mmObject();
@@ -171,14 +173,14 @@ public class TradeOriginator1Choice {
 	 */
 	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradeOriginatorRole.mmOriginatorRole;
+			businessElementTrace_lazy = () -> TradeOriginatorRole.mmOriginatorRole;
 			componentContext_lazy = () -> TradeOriginator1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Trading party capacity expressed as a proprietary code.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.TradeOriginator3Choice.mmProprietary);
+			nextVersions_lazy = () -> Arrays.asList(TradeOriginator3Choice.mmProprietary);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification20.mmObject();
@@ -188,10 +190,10 @@ public class TradeOriginator1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.TradeOriginator1Choice.mmCode, com.tools20022.repository.choice.TradeOriginator1Choice.mmProprietary);
+				messageElement_lazy = () -> Arrays.asList(TradeOriginator1Choice.mmCode, TradeOriginator1Choice.mmProprietary);
 				trace_lazy = () -> TradeOriginatorRole.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TradeOriginator1Choice";
 				definition = "Choice of format for the trading capacity of the party.";
 				nextVersions_lazy = () -> Arrays.asList(TradeOriginator3Choice.mmObject());

@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.StandingInstructionTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -86,7 +88,7 @@ public class StandingInstructionType1Code extends StandingInstructionTypeCode {
 	 */
 	public static final MMCode mmCashDistribution = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashDistribution";
 			owner_lazy = () -> StandingInstructionType1Code.mmObject();
 		}
@@ -109,7 +111,7 @@ public class StandingInstructionType1Code extends StandingInstructionTypeCode {
 	 */
 	public static final MMCode mmGrossNet = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GrossNet";
 			owner_lazy = () -> StandingInstructionType1Code.mmObject();
 		}
@@ -132,7 +134,7 @@ public class StandingInstructionType1Code extends StandingInstructionTypeCode {
 	 */
 	public static final MMCode mmSecuritiesDistribution = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesDistribution";
 			owner_lazy = () -> StandingInstructionType1Code.mmObject();
 		}
@@ -141,13 +143,12 @@ public class StandingInstructionType1Code extends StandingInstructionTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CASH");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "StandingInstructionType1Code";
 				definition = "Specifies the type of standing instruction.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.StandingInstructionType1Code.mmCashDistribution, com.tools20022.repository.codeset.StandingInstructionType1Code.mmGrossNet,
-						com.tools20022.repository.codeset.StandingInstructionType1Code.mmSecuritiesDistribution);
+				code_lazy = () -> Arrays.asList(StandingInstructionType1Code.mmCashDistribution, StandingInstructionType1Code.mmGrossNet, StandingInstructionType1Code.mmSecuritiesDistribution);
 				trace_lazy = () -> StandingInstructionTypeCode.mmObject();
 			}
 		});

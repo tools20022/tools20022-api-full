@@ -19,7 +19,10 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.entity.InvestmentFundTransaction;
 import com.tools20022.repository.entity.SwitchOrder;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -99,11 +102,11 @@ public class SwitchOrder5 {
 	 */
 	public static final MMMessageAssociationEnd mmInvestmentAccountDetails = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundTransaction.mmInvestmentAccount;
+			businessElementTrace_lazy = () -> InvestmentFundTransaction.mmInvestmentAccount;
 			componentContext_lazy = () -> SwitchOrder5.mmObject();
 			isDerived = false;
 			xmlTag = "InvstmtAcctDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestmentAccountDetails";
 			definition = "Account information of the order instruction for which the cancellation is requested.";
 			maxOccurs = 1;
@@ -149,11 +152,11 @@ public class SwitchOrder5 {
 	 */
 	public static final MMMessageAssociationEnd mmRedemptionLeg = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SwitchOrder.mmRedemptionLeg;
+			businessElementTrace_lazy = () -> SwitchOrder.mmRedemptionLeg;
 			componentContext_lazy = () -> SwitchOrder5.mmObject();
 			isDerived = false;
 			xmlTag = "RedLeg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RedemptionLeg";
 			definition = "Redemption leg information of the order instruction which the cancellation is requested.";
 			minOccurs = 1;
@@ -198,11 +201,11 @@ public class SwitchOrder5 {
 	 */
 	public static final MMMessageAssociationEnd mmSubscriptionLeg = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SwitchOrder.mmSubscriptionLeg;
+			businessElementTrace_lazy = () -> SwitchOrder.mmSubscriptionLeg;
 			componentContext_lazy = () -> SwitchOrder5.mmObject();
 			isDerived = false;
 			xmlTag = "SbcptLeg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubscriptionLeg";
 			definition = "Subscription leg information of the order instruction which the cancellation is requested.";
 			minOccurs = 1;
@@ -214,11 +217,10 @@ public class SwitchOrder5 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SwitchOrder5.mmInvestmentAccountDetails, com.tools20022.repository.msg.SwitchOrder5.mmRedemptionLeg,
-						com.tools20022.repository.msg.SwitchOrder5.mmSubscriptionLeg);
+				messageElement_lazy = () -> Arrays.asList(SwitchOrder5.mmInvestmentAccountDetails, SwitchOrder5.mmRedemptionLeg, SwitchOrder5.mmSubscriptionLeg);
 				trace_lazy = () -> SwitchOrder.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SwitchOrder5";
 				definition = "Extract of trade data for a switch order.";
 			}

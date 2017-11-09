@@ -19,9 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.RestrictedFINActiveOrHistoricCurrencyAndAmount;
 import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.Derivative;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -104,11 +106,11 @@ public class DerivativeBasicAttributes2 {
 	 */
 	public static final MMMessageAttribute mmNotionalCurrencyAndAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Derivative.mmNotionalCurrencyAndAmount;
+			businessElementTrace_lazy = () -> Derivative.mmNotionalCurrencyAndAmount;
 			componentContext_lazy = () -> DerivativeBasicAttributes2.mmObject();
 			isDerived = false;
 			xmlTag = "NtnlCcyAndAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotionalCurrencyAndAmount";
 			definition = "Amount underlying a financial derivatives contract necessary for calculating payments or receipts.";
 			maxOccurs = 1;
@@ -153,7 +155,7 @@ public class DerivativeBasicAttributes2 {
 			componentContext_lazy = () -> DerivativeBasicAttributes2.mmObject();
 			isDerived = false;
 			xmlTag = "IntrstInclInPric";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterestIncludedInPrice";
 			definition = "Indicates whether the given derivative price includes a prorated accrued interest component.";
 			maxOccurs = 1;
@@ -165,10 +167,10 @@ public class DerivativeBasicAttributes2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DerivativeBasicAttributes2.mmNotionalCurrencyAndAmount, com.tools20022.repository.msg.DerivativeBasicAttributes2.mmInterestIncludedInPrice);
+				messageElement_lazy = () -> Arrays.asList(DerivativeBasicAttributes2.mmNotionalCurrencyAndAmount, DerivativeBasicAttributes2.mmInterestIncludedInPrice);
 				trace_lazy = () -> Derivative.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DerivativeBasicAttributes2";
 				definition = "Details of the derivative contract not included in the general financial instrument attributes component.";
 			}

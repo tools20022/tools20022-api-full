@@ -19,8 +19,10 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.Commodity;
 import com.tools20022.repository.entity.Derivative;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.CommodityDerivate5;
 import com.tools20022.repository.msg.CommodityDerivate6;
 import java.util.Arrays;
@@ -101,7 +103,7 @@ public class CommodityDerivate2Choice {
 			componentContext_lazy = () -> CommodityDerivate2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Frght";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Freight";
 			definition = "Details specific to freight derivatives.";
 			maxOccurs = 1;
@@ -147,7 +149,7 @@ public class CommodityDerivate2Choice {
 			componentContext_lazy = () -> CommodityDerivate2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Nrgy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Energy";
 			definition = "Details specific to energy derivatives.";
 			maxOccurs = 1;
@@ -160,10 +162,10 @@ public class CommodityDerivate2Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CommodityDerivate2Choice.mmFreight, com.tools20022.repository.choice.CommodityDerivate2Choice.mmEnergy);
+				messageElement_lazy = () -> Arrays.asList(CommodityDerivate2Choice.mmFreight, CommodityDerivate2Choice.mmEnergy);
 				trace_lazy = () -> Derivative.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CommodityDerivate2Choice";
 				definition = "Choice for transparency calculation specific details on commodities.";
 			}

@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.DebtInstrumentSeniorityTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -83,7 +85,7 @@ public class DebtInstrumentSeniorityType1Code extends DebtInstrumentSeniorityTyp
 	 */
 	public static final MMCode mmSubordinatedDebt = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubordinatedDebt";
 			owner_lazy = () -> DebtInstrumentSeniorityType1Code.mmObject();
 		}
@@ -106,7 +108,7 @@ public class DebtInstrumentSeniorityType1Code extends DebtInstrumentSeniorityTyp
 	 */
 	public static final MMCode mmSeniorDebt = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SeniorDebt";
 			owner_lazy = () -> DebtInstrumentSeniorityType1Code.mmObject();
 		}
@@ -129,7 +131,7 @@ public class DebtInstrumentSeniorityType1Code extends DebtInstrumentSeniorityTyp
 	 */
 	public static final MMCode mmMezzanineDebt = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MezzanineDebt";
 			owner_lazy = () -> DebtInstrumentSeniorityType1Code.mmObject();
 		}
@@ -152,7 +154,7 @@ public class DebtInstrumentSeniorityType1Code extends DebtInstrumentSeniorityTyp
 	 */
 	public static final MMCode mmJuniorDebt = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "JuniorDebt";
 			owner_lazy = () -> DebtInstrumentSeniorityType1Code.mmObject();
 		}
@@ -161,12 +163,12 @@ public class DebtInstrumentSeniorityType1Code extends DebtInstrumentSeniorityTyp
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DebtInstrumentSeniorityType1Code";
 				definition = "Specifies the seniority type of a specific debt instrument.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DebtInstrumentSeniorityType1Code.mmSubordinatedDebt, com.tools20022.repository.codeset.DebtInstrumentSeniorityType1Code.mmSeniorDebt,
-						com.tools20022.repository.codeset.DebtInstrumentSeniorityType1Code.mmMezzanineDebt, com.tools20022.repository.codeset.DebtInstrumentSeniorityType1Code.mmJuniorDebt);
+				code_lazy = () -> Arrays.asList(DebtInstrumentSeniorityType1Code.mmSubordinatedDebt, DebtInstrumentSeniorityType1Code.mmSeniorDebt, DebtInstrumentSeniorityType1Code.mmMezzanineDebt,
+						DebtInstrumentSeniorityType1Code.mmJuniorDebt);
 				trace_lazy = () -> DebtInstrumentSeniorityTypeCode.mmObject();
 			}
 		});

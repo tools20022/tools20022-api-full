@@ -20,8 +20,10 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.Max70Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -101,7 +103,7 @@ public class ATMCustomerProfile5 {
 			componentContext_lazy = () -> ATMCustomerProfile5.mmObject();
 			isDerived = false;
 			xmlTag = "PrflRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProfileReference";
 			definition = "Reference of the customer profile.";
 			maxOccurs = 1;
@@ -142,7 +144,7 @@ public class ATMCustomerProfile5 {
 			componentContext_lazy = () -> ATMCustomerProfile5.mmObject();
 			isDerived = false;
 			xmlTag = "CstmrId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CustomerIdentification";
 			definition = "Identification of the customer for the bank.";
 			maxOccurs = 1;
@@ -183,7 +185,7 @@ public class ATMCustomerProfile5 {
 			componentContext_lazy = () -> ATMCustomerProfile5.mmObject();
 			isDerived = false;
 			xmlTag = "PrflDesc";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProfileDescription";
 			definition = "Description of the customer's profile in plaintext.";
 			maxOccurs = 1;
@@ -223,7 +225,7 @@ public class ATMCustomerProfile5 {
 			componentContext_lazy = () -> ATMCustomerProfile5.mmObject();
 			isDerived = false;
 			xmlTag = "AllwdSvcs";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AllowedServices";
 			definition = "Services allowed for the customer's profile.";
 			minOccurs = 0;
@@ -235,10 +237,9 @@ public class ATMCustomerProfile5 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMCustomerProfile5.mmProfileReference, com.tools20022.repository.msg.ATMCustomerProfile5.mmCustomerIdentification,
-						com.tools20022.repository.msg.ATMCustomerProfile5.mmProfileDescription, com.tools20022.repository.msg.ATMCustomerProfile5.mmAllowedServices);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(ATMCustomerProfile5.mmProfileReference, ATMCustomerProfile5.mmCustomerIdentification, ATMCustomerProfile5.mmProfileDescription, ATMCustomerProfile5.mmAllowedServices);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ATMCustomerProfile5";
 				definition = "Profile of the customer with the allowed services and restrictions.";
 			}

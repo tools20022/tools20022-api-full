@@ -19,6 +19,9 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.catp.ATMPINManagementRequestV01;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -102,7 +105,7 @@ public class ATMPINManagementRequest1 {
 			componentContext_lazy = () -> ATMPINManagementRequest1.mmObject();
 			isDerived = false;
 			xmlTag = "Envt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Environment";
 			definition = "Environment in which the transaction is performed.";
 			maxOccurs = 1;
@@ -143,7 +146,7 @@ public class ATMPINManagementRequest1 {
 			componentContext_lazy = () -> ATMPINManagementRequest1.mmObject();
 			isDerived = false;
 			xmlTag = "Cntxt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Context";
 			definition = "Context in which the transaction is performed.";
 			maxOccurs = 1;
@@ -184,7 +187,7 @@ public class ATMPINManagementRequest1 {
 			componentContext_lazy = () -> ATMPINManagementRequest1.mmObject();
 			isDerived = false;
 			xmlTag = "Tx";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Transaction";
 			definition = "Transaction for which the service is requested.";
 			maxOccurs = 1;
@@ -197,11 +200,10 @@ public class ATMPINManagementRequest1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMPINManagementRequest1.mmEnvironment, com.tools20022.repository.msg.ATMPINManagementRequest1.mmContext,
-						com.tools20022.repository.msg.ATMPINManagementRequest1.mmTransaction);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.catp.ATMPINManagementRequestV01.mmATMPINManagementRequest);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(ATMPINManagementRequest1.mmEnvironment, ATMPINManagementRequest1.mmContext, ATMPINManagementRequest1.mmTransaction);
+				messageBuildingBlock_lazy = () -> Arrays.asList(ATMPINManagementRequestV01.mmATMPINManagementRequest);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ATMPINManagementRequest1";
 				definition = "Information related to the request of a PIN management from an ATM.";
 			}

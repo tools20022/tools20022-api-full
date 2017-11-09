@@ -19,8 +19,10 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.Reporting1Code;
 import com.tools20022.repository.entity.SecuritiesTradeExecution;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification30;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -109,14 +111,14 @@ public class Reporting7Choice {
 	 */
 	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeExecution.mmReportingType;
+			businessElementTrace_lazy = () -> SecuritiesTradeExecution.mmReportingType;
 			componentContext_lazy = () -> Reporting7Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Cd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Third party reporting information expressed as an ISO 20022 code.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.Reporting1Choice.mmCode;
+			previousVersion_lazy = () -> Reporting1Choice.mmCode;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Reporting1Code.mmObject();
@@ -164,14 +166,14 @@ public class Reporting7Choice {
 	 */
 	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeExecution.mmReportingType;
+			businessElementTrace_lazy = () -> SecuritiesTradeExecution.mmReportingType;
 			componentContext_lazy = () -> Reporting7Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Third party reporting information expressed as a proprietary code.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.Reporting1Choice.mmProprietary;
+			previousVersion_lazy = () -> Reporting1Choice.mmProprietary;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification30.mmObject();
@@ -181,10 +183,10 @@ public class Reporting7Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Reporting7Choice.mmCode, com.tools20022.repository.choice.Reporting7Choice.mmProprietary);
+				messageElement_lazy = () -> Arrays.asList(Reporting7Choice.mmCode, Reporting7Choice.mmProprietary);
 				trace_lazy = () -> SecuritiesTradeExecution.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Reporting7Choice";
 				definition = "Choice of format for the reporting type.";
 				previousVersion_lazy = () -> Reporting1Choice.mmObject();

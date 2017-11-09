@@ -19,7 +19,10 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.camt.CustomerPaymentCancellationRequestV04;
 import com.tools20022.repository.entity.PaymentInstruction;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -139,11 +142,11 @@ public class UnderlyingTransaction11 {
 			componentContext_lazy = () -> UnderlyingTransaction11.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlGrpInfAndCxl";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalGroupInformationAndCancellation";
 			definition = "Provides information on the original message, to which the cancellation refers.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UnderlyingTransaction12.mmOriginalGroupInformationAndCancellation);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.UnderlyingTransaction7.mmOriginalGroupInformationAndCancellation;
+			nextVersions_lazy = () -> Arrays.asList(UnderlyingTransaction12.mmOriginalGroupInformationAndCancellation);
+			previousVersion_lazy = () -> UnderlyingTransaction7.mmOriginalGroupInformationAndCancellation;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -205,11 +208,11 @@ public class UnderlyingTransaction11 {
 			componentContext_lazy = () -> UnderlyingTransaction11.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlPmtInfAndCxl";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalPaymentInformationAndCancellation";
 			definition = "Provides information on the original (group of) transactions, to which the cancellation request refers.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UnderlyingTransaction12.mmOriginalPaymentInformationAndCancellation);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.UnderlyingTransaction7.mmOriginalPaymentInformationAndCancellation;
+			nextVersions_lazy = () -> Arrays.asList(UnderlyingTransaction12.mmOriginalPaymentInformationAndCancellation);
+			previousVersion_lazy = () -> UnderlyingTransaction7.mmOriginalPaymentInformationAndCancellation;
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.OriginalPaymentInstruction13.mmObject();
@@ -219,12 +222,11 @@ public class UnderlyingTransaction11 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UnderlyingTransaction11.mmOriginalGroupInformationAndCancellation,
-						com.tools20022.repository.msg.UnderlyingTransaction11.mmOriginalPaymentInformationAndCancellation);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.CustomerPaymentCancellationRequestV04.mmUnderlying);
+				messageElement_lazy = () -> Arrays.asList(UnderlyingTransaction11.mmOriginalGroupInformationAndCancellation, UnderlyingTransaction11.mmOriginalPaymentInformationAndCancellation);
+				messageBuildingBlock_lazy = () -> Arrays.asList(CustomerPaymentCancellationRequestV04.mmUnderlying);
 				trace_lazy = () -> PaymentInstruction.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "UnderlyingTransaction11";
 				definition = "Identifies the underlying (group of) transaction(s) to which the investigation applies.";
 				nextVersions_lazy = () -> Arrays.asList(UnderlyingTransaction12.mmObject());

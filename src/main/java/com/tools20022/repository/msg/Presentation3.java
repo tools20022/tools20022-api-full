@@ -19,10 +19,13 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.Channel1Choice;
 import com.tools20022.repository.choice.DocumentFormat1Choice;
 import com.tools20022.repository.datatype.Max256Text;
 import com.tools20022.repository.entity.Presentation;
+import com.tools20022.repository.entity.UndertakingDocument;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -100,11 +103,11 @@ public class Presentation3 {
 	 */
 	public static final MMMessageAttribute mmFormat = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.UndertakingDocument.mmFormat;
+			businessElementTrace_lazy = () -> UndertakingDocument.mmFormat;
 			componentContext_lazy = () -> Presentation3.mmObject();
 			isDerived = false;
 			xmlTag = "Frmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Format";
 			definition = "Format for presentation documents that are submitted electronically.";
 			maxOccurs = 1;
@@ -150,11 +153,11 @@ public class Presentation3 {
 	 */
 	public static final MMMessageAttribute mmChannel = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Presentation.mmCommunicationMethod;
+			businessElementTrace_lazy = () -> Presentation.mmCommunicationMethod;
 			componentContext_lazy = () -> Presentation3.mmObject();
 			isDerived = false;
 			xmlTag = "Chanl";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Channel";
 			definition = "Channel through which presentation documents are submitted electronically, such as SWIFT,  Web upload, or secure email.  ";
 			maxOccurs = 1;
@@ -199,11 +202,11 @@ public class Presentation3 {
 	 */
 	public static final MMMessageAttribute mmAddress = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Presentation.mmElectronicPresentationAddress;
+			businessElementTrace_lazy = () -> Presentation.mmElectronicPresentationAddress;
 			componentContext_lazy = () -> Presentation3.mmObject();
 			isDerived = false;
 			xmlTag = "Adr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Address";
 			definition = "Uniform Resource Identifier (URI), such as a web or an email address, specifying where the presentation can be addressed.";
 			maxOccurs = 1;
@@ -215,10 +218,10 @@ public class Presentation3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Presentation3.mmFormat, com.tools20022.repository.msg.Presentation3.mmChannel, com.tools20022.repository.msg.Presentation3.mmAddress);
+				messageElement_lazy = () -> Arrays.asList(Presentation3.mmFormat, Presentation3.mmChannel, Presentation3.mmAddress);
 				trace_lazy = () -> Presentation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Presentation3";
 				definition = "Electronic presentation information.";
 			}

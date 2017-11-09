@@ -19,7 +19,11 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.CorporateActionStatus;
+import com.tools20022.repository.entity.CorporateActionStatusReason;
+import com.tools20022.repository.entity.StatusReason;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.NoSpecifiedReason1;
 import com.tools20022.repository.msg.ProprietaryStatusAndReason7;
 import java.util.Arrays;
@@ -111,11 +115,11 @@ public class InstructionCancellationRequestStatus10Choice {
 	 */
 	public static final MMMessageAssociationEnd mmCancellationCompleted = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmCancellationReason;
+			businessElementTrace_lazy = () -> StatusReason.mmCancellationReason;
 			componentContext_lazy = () -> InstructionCancellationRequestStatus10Choice.mmObject();
 			isDerived = false;
 			xmlTag = "CxlCmpltd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationCompleted";
 			definition = "Provides status information related to a instruction cancellation request completed.";
 			maxOccurs = 1;
@@ -161,11 +165,11 @@ public class InstructionCancellationRequestStatus10Choice {
 	 */
 	public static final MMMessageAssociationEnd mmAccepted = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionStatusReason.mmAcceptedReason;
+			businessElementTrace_lazy = () -> CorporateActionStatusReason.mmAcceptedReason;
 			componentContext_lazy = () -> InstructionCancellationRequestStatus10Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Accptd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Accepted";
 			definition = "Provides status information related to a cancellation request accepted for further processing.";
 			maxOccurs = 1;
@@ -212,11 +216,11 @@ public class InstructionCancellationRequestStatus10Choice {
 	 */
 	public static final MMMessageAssociationEnd mmRejected = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmRejectionReason;
+			businessElementTrace_lazy = () -> StatusReason.mmRejectionReason;
 			componentContext_lazy = () -> InstructionCancellationRequestStatus10Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Rjctd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rejected";
 			definition = "Provides status information related to a cancellation request rejected for further processing due to system (data) reasons.";
 			maxOccurs = 1;
@@ -261,11 +265,11 @@ public class InstructionCancellationRequestStatus10Choice {
 	 */
 	public static final MMMessageAssociationEnd mmPendingCancellation = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmPendingReason;
+			businessElementTrace_lazy = () -> StatusReason.mmPendingReason;
 			componentContext_lazy = () -> InstructionCancellationRequestStatus10Choice.mmObject();
 			isDerived = false;
 			xmlTag = "PdgCxl";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingCancellation";
 			definition = "Provides status information related to a pending cancellation request.";
 			maxOccurs = 1;
@@ -314,7 +318,7 @@ public class InstructionCancellationRequestStatus10Choice {
 			componentContext_lazy = () -> InstructionCancellationRequestStatus10Choice.mmObject();
 			isDerived = false;
 			xmlTag = "PrtrySts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProprietaryStatus";
 			definition = "Proprietary status related to an instruction cancellation request.";
 			maxOccurs = 1;
@@ -327,12 +331,11 @@ public class InstructionCancellationRequestStatus10Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.InstructionCancellationRequestStatus10Choice.mmCancellationCompleted,
-						com.tools20022.repository.choice.InstructionCancellationRequestStatus10Choice.mmAccepted, com.tools20022.repository.choice.InstructionCancellationRequestStatus10Choice.mmRejected,
-						com.tools20022.repository.choice.InstructionCancellationRequestStatus10Choice.mmPendingCancellation, com.tools20022.repository.choice.InstructionCancellationRequestStatus10Choice.mmProprietaryStatus);
+				messageElement_lazy = () -> Arrays.asList(InstructionCancellationRequestStatus10Choice.mmCancellationCompleted, InstructionCancellationRequestStatus10Choice.mmAccepted,
+						InstructionCancellationRequestStatus10Choice.mmRejected, InstructionCancellationRequestStatus10Choice.mmPendingCancellation, InstructionCancellationRequestStatus10Choice.mmProprietaryStatus);
 				trace_lazy = () -> CorporateActionStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InstructionCancellationRequestStatus10Choice";
 				definition = "Choice between different instruction cancellation request statuses.";
 			}

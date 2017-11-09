@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.AssignmentMethodCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -83,7 +85,7 @@ public class AssignmentMethod1Code extends AssignmentMethodCode {
 	 */
 	public static final MMCode mmRandom = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Random";
 			owner_lazy = () -> AssignmentMethod1Code.mmObject();
 		}
@@ -106,7 +108,7 @@ public class AssignmentMethod1Code extends AssignmentMethodCode {
 	 */
 	public static final MMCode mmProrata = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Prorata";
 			owner_lazy = () -> AssignmentMethod1Code.mmObject();
 		}
@@ -115,12 +117,12 @@ public class AssignmentMethod1Code extends AssignmentMethodCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("RAND");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AssignmentMethod1Code";
 				definition = "Method under which assignment was conducted.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AssignmentMethod1Code.mmRandom, com.tools20022.repository.codeset.AssignmentMethod1Code.mmProrata);
+				code_lazy = () -> Arrays.asList(AssignmentMethod1Code.mmRandom, AssignmentMethod1Code.mmProrata);
 				trace_lazy = () -> AssignmentMethodCode.mmObject();
 			}
 		});

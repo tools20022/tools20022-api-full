@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ProcessingTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -106,7 +108,7 @@ public class ProcessingType1Code extends ProcessingTypeCode {
 	 */
 	public static final MMCode mmRejection = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rejection";
 			owner_lazy = () -> ProcessingType1Code.mmObject();
 		}
@@ -129,7 +131,7 @@ public class ProcessingType1Code extends ProcessingTypeCode {
 	 */
 	public static final MMCode mmCSDValidationHold = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CSDValidationHold";
 			owner_lazy = () -> ProcessingType1Code.mmObject();
 		}
@@ -152,7 +154,7 @@ public class ProcessingType1Code extends ProcessingTypeCode {
 	 */
 	public static final MMCode mmReservation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reservation";
 			owner_lazy = () -> ProcessingType1Code.mmObject();
 		}
@@ -175,7 +177,7 @@ public class ProcessingType1Code extends ProcessingTypeCode {
 	 */
 	public static final MMCode mmBlocking = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Blocking";
 			owner_lazy = () -> ProcessingType1Code.mmObject();
 		}
@@ -198,7 +200,7 @@ public class ProcessingType1Code extends ProcessingTypeCode {
 	 */
 	public static final MMCode mmEarmarking = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Earmarking";
 			owner_lazy = () -> ProcessingType1Code.mmObject();
 		}
@@ -221,7 +223,7 @@ public class ProcessingType1Code extends ProcessingTypeCode {
 	 */
 	public static final MMCode mmEarmarkingForAutoCollateralisation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EarmarkingForAutoCollateralisation";
 			owner_lazy = () -> ProcessingType1Code.mmObject();
 		}
@@ -244,7 +246,7 @@ public class ProcessingType1Code extends ProcessingTypeCode {
 	 */
 	public static final MMCode mmDeliverable = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Deliverable";
 			owner_lazy = () -> ProcessingType1Code.mmObject();
 		}
@@ -267,7 +269,7 @@ public class ProcessingType1Code extends ProcessingTypeCode {
 	 */
 	public static final MMCode mmCollateralised = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Collateralised";
 			owner_lazy = () -> ProcessingType1Code.mmObject();
 		}
@@ -290,7 +292,7 @@ public class ProcessingType1Code extends ProcessingTypeCode {
 	 */
 	public static final MMCode mmCoSDBlocking = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoSDBlocking";
 			owner_lazy = () -> ProcessingType1Code.mmObject();
 		}
@@ -299,15 +301,13 @@ public class ProcessingType1Code extends ProcessingTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("RJCT");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ProcessingType1Code";
 				definition = "Specifies the type of processing restrictions the central system must apply.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ProcessingType1Code.mmRejection, com.tools20022.repository.codeset.ProcessingType1Code.mmCSDValidationHold,
-						com.tools20022.repository.codeset.ProcessingType1Code.mmReservation, com.tools20022.repository.codeset.ProcessingType1Code.mmBlocking, com.tools20022.repository.codeset.ProcessingType1Code.mmEarmarking,
-						com.tools20022.repository.codeset.ProcessingType1Code.mmEarmarkingForAutoCollateralisation, com.tools20022.repository.codeset.ProcessingType1Code.mmDeliverable,
-						com.tools20022.repository.codeset.ProcessingType1Code.mmCollateralised, com.tools20022.repository.codeset.ProcessingType1Code.mmCoSDBlocking);
+				code_lazy = () -> Arrays.asList(ProcessingType1Code.mmRejection, ProcessingType1Code.mmCSDValidationHold, ProcessingType1Code.mmReservation, ProcessingType1Code.mmBlocking, ProcessingType1Code.mmEarmarking,
+						ProcessingType1Code.mmEarmarkingForAutoCollateralisation, ProcessingType1Code.mmDeliverable, ProcessingType1Code.mmCollateralised, ProcessingType1Code.mmCoSDBlocking);
 				trace_lazy = () -> ProcessingTypeCode.mmObject();
 			}
 		});

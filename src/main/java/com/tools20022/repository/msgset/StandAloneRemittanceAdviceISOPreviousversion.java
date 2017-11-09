@@ -18,8 +18,10 @@
 package com.tools20022.repository.msgset;
 
 import com.tools20022.metamodel.MMMessageSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.remt.RemittanceAdviceV02;
 import com.tools20022.repository.area.remt.RemittanceLocationAdviceV01;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -65,8 +67,8 @@ public class StandAloneRemittanceAdviceISOPreviousversion {
 	final static public MMMessageSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageSet() {
 			{
-				businessProcessCatalogue_lazy = () -> com.tools20022.repository.GeneratedRepository.mmcatalogue;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				businessProcessCatalogue_lazy = () -> GeneratedRepository.mmcatalogue;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Stand-Alone Remittance Advice - ISO - Previous version";
 				definition = "The Stand-Alone remittance messages can be used to send remittance advice information to a financial institution, to customers directly or passed through another financial institution via a clearing system format supporting these messages.";
 				messageDefinition_lazy = () -> Arrays.asList(RemittanceLocationAdviceV01.mmObject(), RemittanceAdviceV02.mmObject());

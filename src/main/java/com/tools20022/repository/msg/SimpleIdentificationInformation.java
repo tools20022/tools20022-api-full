@@ -19,8 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.tsmt.*;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.GenericIdentification;
+import com.tools20022.repository.GeneratedRepository;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -346,11 +349,11 @@ public class SimpleIdentificationInformation {
 	 */
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmIdentification;
+			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> SimpleIdentificationInformation.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Name or number assigned by an entity to enable recognition of that entity, eg, account identifier.";
 			maxOccurs = 1;
@@ -362,48 +365,34 @@ public class SimpleIdentificationInformation {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SimpleIdentificationInformation.mmIdentification);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.AcknowledgementV03.mmTransactionIdentification, com.tools20022.repository.area.tsmt.AmendmentAcceptanceV02.mmTransactionIdentification,
-						com.tools20022.repository.area.tsmt.AmendmentAcceptanceV02.mmSubmitterTransactionReference, com.tools20022.repository.area.tsmt.AmendmentAcceptanceNotificationV03.mmTransactionIdentification,
-						com.tools20022.repository.area.tsmt.AmendmentRejectionV02.mmTransactionIdentification, com.tools20022.repository.area.tsmt.AmendmentRejectionV02.mmSubmitterTransactionReference,
-						com.tools20022.repository.area.tsmt.AmendmentRejectionNotificationV03.mmTransactionIdentification, com.tools20022.repository.area.tsmt.BaselineAmendmentRequestV03.mmTransactionIdentification,
-						com.tools20022.repository.area.tsmt.BaselineAmendmentRequestV03.mmSubmitterTransactionReference, com.tools20022.repository.area.tsmt.BaselineMatchReportV03.mmTransactionIdentification,
-						com.tools20022.repository.area.tsmt.BaselineReportV03.mmTransactionIdentification, com.tools20022.repository.area.tsmt.BaselineReSubmissionV03.mmTransactionIdentification,
-						com.tools20022.repository.area.tsmt.BaselineReSubmissionV03.mmSubmitterTransactionReference, com.tools20022.repository.area.tsmt.DataSetMatchReportV03.mmTransactionIdentification,
-						com.tools20022.repository.area.tsmt.DataSetSubmissionV03.mmCommonSubmissionReference, com.tools20022.repository.area.tsmt.DeltaReportV03.mmTransactionIdentification,
-						com.tools20022.repository.area.tsmt.ErrorReportV03.mmTransactionIdentification, com.tools20022.repository.area.tsmt.ForwardDataSetSubmissionReportV03.mmCommonSubmissionReference,
-						com.tools20022.repository.area.tsmt.FullPushThroughReportV03.mmTransactionIdentification, com.tools20022.repository.area.tsmt.InitialBaselineSubmissionV03.mmSubmitterTransactionReference,
-						com.tools20022.repository.area.tsmt.MisMatchAcceptanceV02.mmTransactionIdentification, com.tools20022.repository.area.tsmt.MisMatchAcceptanceV02.mmSubmitterTransactionReference,
-						com.tools20022.repository.area.tsmt.MisMatchAcceptanceNotificationV03.mmTransactionIdentification, com.tools20022.repository.area.tsmt.MisMatchRejectionV02.mmTransactionIdentification,
-						com.tools20022.repository.area.tsmt.MisMatchRejectionV02.mmSubmitterTransactionReference, com.tools20022.repository.area.tsmt.MisMatchRejectionNotificationV03.mmTransactionIdentification,
-						com.tools20022.repository.area.tsmt.ActionReminderV03.mmTransactionIdentification, com.tools20022.repository.area.tsmt.StatusChangeNotificationV03.mmTransactionIdentification,
-						com.tools20022.repository.area.tsmt.StatusChangeRequestV02.mmTransactionIdentification, com.tools20022.repository.area.tsmt.StatusChangeRequestV02.mmSubmitterTransactionReference,
-						com.tools20022.repository.area.tsmt.StatusChangeRequestAcceptanceV02.mmTransactionIdentification, com.tools20022.repository.area.tsmt.StatusChangeRequestAcceptanceV02.mmSubmitterTransactionReference,
-						com.tools20022.repository.area.tsmt.StatusChangeRequestNotificationV03.mmTransactionIdentification, com.tools20022.repository.area.tsmt.StatusChangeRequestRejectionV02.mmTransactionIdentification,
-						com.tools20022.repository.area.tsmt.StatusChangeRequestRejectionV02.mmSubmitterTransactionReference, com.tools20022.repository.area.tsmt.StatusChangeRequestRejectionNotificationV03.mmTransactionIdentification,
-						com.tools20022.repository.area.tsmt.StatusExtensionRequestAcceptanceV03.mmTransactionIdentification, com.tools20022.repository.area.tsmt.StatusExtensionRequestAcceptanceV03.mmSubmitterTransactionReference,
-						com.tools20022.repository.area.tsmt.StatusExtensionNotificationV03.mmTransactionIdentification, com.tools20022.repository.area.tsmt.StatusExtensionRequestRejectionV03.mmTransactionIdentification,
-						com.tools20022.repository.area.tsmt.StatusExtensionRequestRejectionV03.mmSubmitterTransactionReference, com.tools20022.repository.area.tsmt.StatusExtensionRejectionNotificationV03.mmTransactionIdentification,
-						com.tools20022.repository.area.tsmt.StatusExtensionRequestV03.mmTransactionIdentification, com.tools20022.repository.area.tsmt.StatusExtensionRequestV03.mmSubmitterTransactionReference,
-						com.tools20022.repository.area.tsmt.StatusExtensionRequestNotificationV03.mmTransactionIdentification, com.tools20022.repository.area.tsmt.TimeOutNotificationV03.mmTransactionIdentification,
-						com.tools20022.repository.area.tsmt.IntentToPayNotificationV01.mmTransactionIdentification, com.tools20022.repository.area.tsmt.IntentToPayNotificationV01.mmSubmitterTransactionReference,
-						com.tools20022.repository.area.tsmt.ForwardIntentToPayNotificationV01.mmTransactionIdentification, com.tools20022.repository.area.tsmt.SpecialRequestV01.mmTransactionIdentification,
-						com.tools20022.repository.area.tsmt.SpecialRequestV01.mmSubmitterTransactionReference, com.tools20022.repository.area.tsmt.SpecialNotificationV01.mmTransactionIdentification,
-						com.tools20022.repository.area.tsmt.RoleAndBaselineAcceptanceV01.mmTransactionIdentification, com.tools20022.repository.area.tsmt.RoleAndBaselineRejectionV01.mmTransactionIdentification,
-						com.tools20022.repository.area.tsmt.RoleAndBaselineAcceptanceNotificationV01.mmTransactionIdentification, com.tools20022.repository.area.tsmt.RoleAndBaselineRejectionNotificationV01.mmTransactionIdentification,
-						com.tools20022.repository.area.tsmt.BaselineReSubmissionV04.mmTransactionIdentification, com.tools20022.repository.area.tsmt.BaselineReSubmissionV04.mmSubmitterTransactionReference,
-						com.tools20022.repository.area.tsmt.DataSetSubmissionV04.mmCommonSubmissionReference, com.tools20022.repository.area.tsmt.FullPushThroughReportV04.mmTransactionIdentification,
-						com.tools20022.repository.area.tsmt.BaselineAmendmentRequestV04.mmTransactionIdentification, com.tools20022.repository.area.tsmt.BaselineAmendmentRequestV04.mmSubmitterTransactionReference,
-						com.tools20022.repository.area.tsmt.ForwardDataSetSubmissionReportV04.mmCommonSubmissionReference, com.tools20022.repository.area.tsmt.InitialBaselineSubmissionV04.mmSubmitterTransactionReference,
-						com.tools20022.repository.area.tsmt.IntentToPayNotificationV02.mmTransactionIdentification, com.tools20022.repository.area.tsmt.IntentToPayNotificationV02.mmSubmitterTransactionReference,
-						com.tools20022.repository.area.tsmt.ForwardIntentToPayNotificationV02.mmTransactionIdentification, com.tools20022.repository.area.tsmt.BaselineReportV04.mmTransactionIdentification,
-						com.tools20022.repository.area.tsmt.InitialBaselineSubmissionV05.mmSubmitterTransactionReference, com.tools20022.repository.area.tsmt.BaselineAmendmentRequestV05.mmTransactionIdentification,
-						com.tools20022.repository.area.tsmt.BaselineAmendmentRequestV05.mmSubmitterTransactionReference, com.tools20022.repository.area.tsmt.FullPushThroughReportV05.mmTransactionIdentification,
-						com.tools20022.repository.area.tsmt.ForwardDataSetSubmissionReportV05.mmCommonSubmissionReference, com.tools20022.repository.area.tsmt.DataSetSubmissionV05.mmCommonSubmissionReference,
-						com.tools20022.repository.area.tsmt.BaselineReSubmissionV05.mmTransactionIdentification, com.tools20022.repository.area.tsmt.BaselineReSubmissionV05.mmSubmitterTransactionReference);
+				messageElement_lazy = () -> Arrays.asList(SimpleIdentificationInformation.mmIdentification);
+				messageBuildingBlock_lazy = () -> Arrays.asList(AcknowledgementV03.mmTransactionIdentification, AmendmentAcceptanceV02.mmTransactionIdentification, AmendmentAcceptanceV02.mmSubmitterTransactionReference,
+						AmendmentAcceptanceNotificationV03.mmTransactionIdentification, AmendmentRejectionV02.mmTransactionIdentification, AmendmentRejectionV02.mmSubmitterTransactionReference,
+						AmendmentRejectionNotificationV03.mmTransactionIdentification, BaselineAmendmentRequestV03.mmTransactionIdentification, BaselineAmendmentRequestV03.mmSubmitterTransactionReference,
+						BaselineMatchReportV03.mmTransactionIdentification, BaselineReportV03.mmTransactionIdentification, BaselineReSubmissionV03.mmTransactionIdentification, BaselineReSubmissionV03.mmSubmitterTransactionReference,
+						DataSetMatchReportV03.mmTransactionIdentification, DataSetSubmissionV03.mmCommonSubmissionReference, DeltaReportV03.mmTransactionIdentification, ErrorReportV03.mmTransactionIdentification,
+						ForwardDataSetSubmissionReportV03.mmCommonSubmissionReference, FullPushThroughReportV03.mmTransactionIdentification, InitialBaselineSubmissionV03.mmSubmitterTransactionReference,
+						MisMatchAcceptanceV02.mmTransactionIdentification, MisMatchAcceptanceV02.mmSubmitterTransactionReference, MisMatchAcceptanceNotificationV03.mmTransactionIdentification,
+						MisMatchRejectionV02.mmTransactionIdentification, MisMatchRejectionV02.mmSubmitterTransactionReference, MisMatchRejectionNotificationV03.mmTransactionIdentification, ActionReminderV03.mmTransactionIdentification,
+						StatusChangeNotificationV03.mmTransactionIdentification, StatusChangeRequestV02.mmTransactionIdentification, StatusChangeRequestV02.mmSubmitterTransactionReference,
+						StatusChangeRequestAcceptanceV02.mmTransactionIdentification, StatusChangeRequestAcceptanceV02.mmSubmitterTransactionReference, StatusChangeRequestNotificationV03.mmTransactionIdentification,
+						StatusChangeRequestRejectionV02.mmTransactionIdentification, StatusChangeRequestRejectionV02.mmSubmitterTransactionReference, StatusChangeRequestRejectionNotificationV03.mmTransactionIdentification,
+						StatusExtensionRequestAcceptanceV03.mmTransactionIdentification, StatusExtensionRequestAcceptanceV03.mmSubmitterTransactionReference, StatusExtensionNotificationV03.mmTransactionIdentification,
+						StatusExtensionRequestRejectionV03.mmTransactionIdentification, StatusExtensionRequestRejectionV03.mmSubmitterTransactionReference, StatusExtensionRejectionNotificationV03.mmTransactionIdentification,
+						StatusExtensionRequestV03.mmTransactionIdentification, StatusExtensionRequestV03.mmSubmitterTransactionReference, StatusExtensionRequestNotificationV03.mmTransactionIdentification,
+						TimeOutNotificationV03.mmTransactionIdentification, IntentToPayNotificationV01.mmTransactionIdentification, IntentToPayNotificationV01.mmSubmitterTransactionReference,
+						ForwardIntentToPayNotificationV01.mmTransactionIdentification, SpecialRequestV01.mmTransactionIdentification, SpecialRequestV01.mmSubmitterTransactionReference, SpecialNotificationV01.mmTransactionIdentification,
+						RoleAndBaselineAcceptanceV01.mmTransactionIdentification, RoleAndBaselineRejectionV01.mmTransactionIdentification, RoleAndBaselineAcceptanceNotificationV01.mmTransactionIdentification,
+						RoleAndBaselineRejectionNotificationV01.mmTransactionIdentification, BaselineReSubmissionV04.mmTransactionIdentification, BaselineReSubmissionV04.mmSubmitterTransactionReference,
+						DataSetSubmissionV04.mmCommonSubmissionReference, FullPushThroughReportV04.mmTransactionIdentification, BaselineAmendmentRequestV04.mmTransactionIdentification,
+						BaselineAmendmentRequestV04.mmSubmitterTransactionReference, ForwardDataSetSubmissionReportV04.mmCommonSubmissionReference, InitialBaselineSubmissionV04.mmSubmitterTransactionReference,
+						IntentToPayNotificationV02.mmTransactionIdentification, IntentToPayNotificationV02.mmSubmitterTransactionReference, ForwardIntentToPayNotificationV02.mmTransactionIdentification,
+						BaselineReportV04.mmTransactionIdentification, InitialBaselineSubmissionV05.mmSubmitterTransactionReference, BaselineAmendmentRequestV05.mmTransactionIdentification,
+						BaselineAmendmentRequestV05.mmSubmitterTransactionReference, FullPushThroughReportV05.mmTransactionIdentification, ForwardDataSetSubmissionReportV05.mmCommonSubmissionReference,
+						DataSetSubmissionV05.mmCommonSubmissionReference, BaselineReSubmissionV05.mmTransactionIdentification, BaselineReSubmissionV05.mmSubmitterTransactionReference);
 				trace_lazy = () -> GenericIdentification.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
 						return DateFormat.getDateInstance(java.text.DateFormat.LONG).parse("September 9, 2016");

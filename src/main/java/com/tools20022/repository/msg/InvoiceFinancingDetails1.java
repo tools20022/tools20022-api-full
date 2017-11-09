@@ -19,8 +19,12 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.Instalment;
 import com.tools20022.repository.entity.Invoice;
+import com.tools20022.repository.entity.InvoiceFinancingAgreement;
+import com.tools20022.repository.entity.Party;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -109,11 +113,11 @@ public class InvoiceFinancingDetails1 {
 	 */
 	public static final MMMessageAssociationEnd mmOriginalInvoiceInformation = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Invoice.mmOriginalInvoice;
+			businessElementTrace_lazy = () -> Invoice.mmOriginalInvoice;
 			componentContext_lazy = () -> InvoiceFinancingDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlInvcInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalInvoiceInformation";
 			definition = "General information that unambiguously identifies the invoice contained in the original request.";
 			maxOccurs = 1;
@@ -159,11 +163,11 @@ public class InvoiceFinancingDetails1 {
 	 */
 	public static final MMMessageAssociationEnd mmSupplier = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> InvoiceFinancingDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "Spplr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Supplier";
 			definition = "Person or organization that represents the creditor for the invoice to be financed.";
 			maxOccurs = 1;
@@ -206,11 +210,11 @@ public class InvoiceFinancingDetails1 {
 	 */
 	public static final MMMessageAssociationEnd mmInvoiceFinancingResult = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvoiceFinancingAgreement.mmInvoiceFinancingStatus;
+			businessElementTrace_lazy = () -> InvoiceFinancingAgreement.mmInvoiceFinancingStatus;
 			componentContext_lazy = () -> InvoiceFinancingDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "InvcFincgRslt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvoiceFinancingResult";
 			definition = "Information about result of invoice financing request.";
 			maxOccurs = 1;
@@ -260,7 +264,7 @@ public class InvoiceFinancingDetails1 {
 			componentContext_lazy = () -> InvoiceFinancingDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "InstlmtFincgInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstalmentFinancingInformation";
 			definition = "Includes details about a single instalment within an invoice, such as identification and amount.";
 			minOccurs = 0;
@@ -272,11 +276,11 @@ public class InvoiceFinancingDetails1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvoiceFinancingDetails1.mmOriginalInvoiceInformation, com.tools20022.repository.msg.InvoiceFinancingDetails1.mmSupplier,
-						com.tools20022.repository.msg.InvoiceFinancingDetails1.mmInvoiceFinancingResult, com.tools20022.repository.msg.InvoiceFinancingDetails1.mmInstalmentFinancingInformation);
+				messageElement_lazy = () -> Arrays.asList(InvoiceFinancingDetails1.mmOriginalInvoiceInformation, InvoiceFinancingDetails1.mmSupplier, InvoiceFinancingDetails1.mmInvoiceFinancingResult,
+						InvoiceFinancingDetails1.mmInstalmentFinancingInformation);
 				trace_lazy = () -> Invoice.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InvoiceFinancingDetails1";
 				definition = "Detailed information about single invoice/instalment financing result, such as result of request (financed or not financed), amount, percentage applied.";
 			}

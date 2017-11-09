@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -82,7 +84,7 @@ public class TargetCompanyAgreementCode {
 	 */
 	public static final MMCode mmNo = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "No";
 			definition = "No agreement of the target company.";
 			owner_lazy = () -> TargetCompanyAgreementCode.mmObject();
@@ -112,7 +114,7 @@ public class TargetCompanyAgreementCode {
 	 */
 	public static final MMCode mmYes = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Yes";
 			definition = "Agreement of the target company.";
 			owner_lazy = () -> TargetCompanyAgreementCode.mmObject();
@@ -142,7 +144,7 @@ public class TargetCompanyAgreementCode {
 	 */
 	public static final MMCode mmNotDecided = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotDecided";
 			definition = "Agreement of the target company is not decided.";
 			owner_lazy = () -> TargetCompanyAgreementCode.mmObject();
@@ -153,12 +155,11 @@ public class TargetCompanyAgreementCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TargetCompanyAgreementCode";
 				definition = "TSE/JASDEC extension codes for the agreement of the target company.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TargetCompanyAgreementCode.mmNo, com.tools20022.repository.codeset.TargetCompanyAgreementCode.mmYes,
-						com.tools20022.repository.codeset.TargetCompanyAgreementCode.mmNotDecided);
+				code_lazy = () -> Arrays.asList(TargetCompanyAgreementCode.mmNo, TargetCompanyAgreementCode.mmYes, TargetCompanyAgreementCode.mmNotDecided);
 			}
 		});
 		return mmObject_lazy.get();

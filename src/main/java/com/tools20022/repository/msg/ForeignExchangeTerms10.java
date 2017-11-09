@@ -19,11 +19,14 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ActiveOrHistoricCurrencyCode;
 import com.tools20022.repository.datatype.BaseOneRate;
 import com.tools20022.repository.datatype.RestrictedFINActiveCurrencyAnd13DecimalAmount;
 import com.tools20022.repository.datatype.RestrictedFINActiveCurrencyAndAmount;
 import com.tools20022.repository.entity.CurrencyExchange;
+import com.tools20022.repository.entity.ForeignExchangeTrade;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -111,11 +114,11 @@ public class ForeignExchangeTerms10 {
 	 */
 	public static final MMMessageAttribute mmToAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ForeignExchangeTrade.mmBuyAmount;
+			businessElementTrace_lazy = () -> ForeignExchangeTrade.mmBuyAmount;
 			componentContext_lazy = () -> ForeignExchangeTerms10.mmObject();
 			isDerived = false;
 			xmlTag = "ToAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ToAmount";
 			definition = "Cash amount resulting from a foreign exchange trade.";
 			maxOccurs = 1;
@@ -159,11 +162,11 @@ public class ForeignExchangeTerms10 {
 	 */
 	public static final MMMessageAttribute mmFromAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ForeignExchangeTrade.mmSellAmount;
+			businessElementTrace_lazy = () -> ForeignExchangeTrade.mmSellAmount;
 			componentContext_lazy = () -> ForeignExchangeTerms10.mmObject();
 			isDerived = false;
 			xmlTag = "FrAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FromAmount";
 			definition = "Cash amount for which a foreign exchange is required.";
 			maxOccurs = 1;
@@ -210,11 +213,11 @@ public class ForeignExchangeTerms10 {
 	 */
 	public static final MMMessageAttribute mmUnitCurrency = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmUnitCurrency;
+			businessElementTrace_lazy = () -> CurrencyExchange.mmUnitCurrency;
 			componentContext_lazy = () -> ForeignExchangeTerms10.mmObject();
 			isDerived = false;
 			xmlTag = "UnitCcy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnitCurrency";
 			definition = "Currency in which the rate of exchange is expressed in a currency exchange. In the example 1GBP = xxxCUR, the unit currency is GBP.";
 			maxOccurs = 1;
@@ -261,11 +264,11 @@ public class ForeignExchangeTerms10 {
 	 */
 	public static final MMMessageAttribute mmQuotedCurrency = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmQuotedCurrency;
+			businessElementTrace_lazy = () -> CurrencyExchange.mmQuotedCurrency;
 			componentContext_lazy = () -> ForeignExchangeTerms10.mmObject();
 			isDerived = false;
 			xmlTag = "QtdCcy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuotedCurrency";
 			definition = "Currency into which the base currency is converted, in a currency exchange.";
 			maxOccurs = 1;
@@ -312,11 +315,11 @@ public class ForeignExchangeTerms10 {
 	 */
 	public static final MMMessageAttribute mmExchangeRate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmExchangeRate;
+			businessElementTrace_lazy = () -> CurrencyExchange.mmExchangeRate;
 			componentContext_lazy = () -> ForeignExchangeTerms10.mmObject();
 			isDerived = false;
 			xmlTag = "XchgRate";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExchangeRate";
 			definition = "The value of one currency expressed in relation to another currency. ExchangeRate expresses the ratio between UnitCurrency and QuotedCurrency (ExchangeRate = UnitCurrency/QuotedCurrency).";
 			maxOccurs = 1;
@@ -328,11 +331,11 @@ public class ForeignExchangeTerms10 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ForeignExchangeTerms10.mmToAmount, com.tools20022.repository.msg.ForeignExchangeTerms10.mmFromAmount,
-						com.tools20022.repository.msg.ForeignExchangeTerms10.mmUnitCurrency, com.tools20022.repository.msg.ForeignExchangeTerms10.mmQuotedCurrency, com.tools20022.repository.msg.ForeignExchangeTerms10.mmExchangeRate);
+				messageElement_lazy = () -> Arrays.asList(ForeignExchangeTerms10.mmToAmount, ForeignExchangeTerms10.mmFromAmount, ForeignExchangeTerms10.mmUnitCurrency, ForeignExchangeTerms10.mmQuotedCurrency,
+						ForeignExchangeTerms10.mmExchangeRate);
 				trace_lazy = () -> CurrencyExchange.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ForeignExchangeTerms10";
 				definition = "Information needed to process a currency exchange or conversion.";
 			}

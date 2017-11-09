@@ -20,9 +20,13 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.entity.Quote;
 import com.tools20022.repository.entity.SecuritiesQuoteVariable;
+import com.tools20022.repository.entity.Security;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -112,7 +116,7 @@ public class QuoteSet1 {
 			componentContext_lazy = () -> QuoteSet1.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Identification of a set of quotes.";
 			maxOccurs = 1;
@@ -154,11 +158,11 @@ public class QuoteSet1 {
 	 */
 	public static final MMMessageAttribute mmValidUntilDateTime = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Quote.mmValidUntilDateTime;
+			businessElementTrace_lazy = () -> Quote.mmValidUntilDateTime;
 			componentContext_lazy = () -> QuoteSet1.mmObject();
 			isDerived = false;
 			xmlTag = "VldUntilDtTm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValidUntilDateTime";
 			definition = "Expresses the validity of a set of quotes.";
 			maxOccurs = 1;
@@ -203,7 +207,7 @@ public class QuoteSet1 {
 			componentContext_lazy = () -> QuoteSet1.mmObject();
 			isDerived = false;
 			xmlTag = "QtNtryDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuoteEntryDetails";
 			definition = "Details of the quote.";
 			minOccurs = 1;
@@ -246,11 +250,11 @@ public class QuoteSet1 {
 	 */
 	public static final MMMessageAssociationEnd mmUnderlyingFinancialInstrument = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmIdentification;
+			businessElementTrace_lazy = () -> Security.mmIdentification;
 			componentContext_lazy = () -> QuoteSet1.mmObject();
 			isDerived = false;
 			xmlTag = "UndrlygFinInstrm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnderlyingFinancialInstrument";
 			definition = "Provides details about the underlying financial instrument.";
 			maxOccurs = 1;
@@ -294,11 +298,11 @@ public class QuoteSet1 {
 	 */
 	public static final MMMessageAssociationEnd mmUnderlyingFinancialInstrumentAttributes = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Quote.mmQuotedSecurity;
+			businessElementTrace_lazy = () -> Quote.mmQuotedSecurity;
 			componentContext_lazy = () -> QuoteSet1.mmObject();
 			isDerived = false;
 			xmlTag = "UndrlygFinInstrmAttrbts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnderlyingFinancialInstrumentAttributes";
 			definition = "Provides details about the underlying financial instrument attributes.";
 			maxOccurs = 1;
@@ -343,11 +347,11 @@ public class QuoteSet1 {
 	 */
 	public static final MMMessageAssociationEnd mmUnderlyingStipulations = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Quote.mmQuotedSecurity;
+			businessElementTrace_lazy = () -> Quote.mmQuotedSecurity;
 			componentContext_lazy = () -> QuoteSet1.mmObject();
 			isDerived = false;
 			xmlTag = "UndrlygStiptns";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnderlyingStipulations";
 			definition = "Provides details about the underlying financial instrument stipulations.";
 			maxOccurs = 1;
@@ -390,7 +394,7 @@ public class QuoteSet1 {
 			componentContext_lazy = () -> QuoteSet1.mmObject();
 			isDerived = false;
 			xmlTag = "QteeAcct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuoteeAccount";
 			definition = "Account from/to which an entry is to be/ has been made as a result of a securities transfer.";
 			maxOccurs = 1;
@@ -403,12 +407,11 @@ public class QuoteSet1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.QuoteSet1.mmIdentification, com.tools20022.repository.msg.QuoteSet1.mmValidUntilDateTime, com.tools20022.repository.msg.QuoteSet1.mmQuoteEntryDetails,
-						com.tools20022.repository.msg.QuoteSet1.mmUnderlyingFinancialInstrument, com.tools20022.repository.msg.QuoteSet1.mmUnderlyingFinancialInstrumentAttributes,
-						com.tools20022.repository.msg.QuoteSet1.mmUnderlyingStipulations, com.tools20022.repository.msg.QuoteSet1.mmQuoteeAccount);
+				messageElement_lazy = () -> Arrays.asList(QuoteSet1.mmIdentification, QuoteSet1.mmValidUntilDateTime, QuoteSet1.mmQuoteEntryDetails, QuoteSet1.mmUnderlyingFinancialInstrument,
+						QuoteSet1.mmUnderlyingFinancialInstrumentAttributes, QuoteSet1.mmUnderlyingStipulations, QuoteSet1.mmQuoteeAccount);
 				trace_lazy = () -> SecuritiesQuoteVariable.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "QuoteSet1";
 				definition = "Identifies a group of related quotes. This can, for example be used to represent an option class.";
 			}

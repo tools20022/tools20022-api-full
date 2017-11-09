@@ -19,9 +19,13 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
 import com.tools20022.repository.datatype.ISODate;
+import com.tools20022.repository.entity.DateTimePeriod;
+import com.tools20022.repository.entity.InvestmentFundOrder;
 import com.tools20022.repository.entity.SubscriptionExecution;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -104,11 +108,11 @@ public class SubscriptionInformation1 {
 	 */
 	public static final MMMessageAttribute mmDateOfFirstSubscription = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmFromDateTime;
+			businessElementTrace_lazy = () -> DateTimePeriod.mmFromDateTime;
 			componentContext_lazy = () -> SubscriptionInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "DtOfFrstSbcpt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DateOfFirstSubscription";
 			definition = "Date the investment plan starts.";
 			maxOccurs = 1;
@@ -155,11 +159,11 @@ public class SubscriptionInformation1 {
 	 */
 	public static final MMMessageAttribute mmEquityComponent = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SubscriptionExecution.mmEquityComponent;
+			businessElementTrace_lazy = () -> SubscriptionExecution.mmEquityComponent;
 			componentContext_lazy = () -> SubscriptionInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "EqtyCmpnt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EquityComponent";
 			definition = "Amount subscribed in the current tax year into equity (not including dividends).";
 			maxOccurs = 1;
@@ -203,11 +207,11 @@ public class SubscriptionInformation1 {
 	 */
 	public static final MMMessageAttribute mmCashComponent = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SubscriptionExecution.mmCashComponent;
+			businessElementTrace_lazy = () -> SubscriptionExecution.mmCashComponent;
 			componentContext_lazy = () -> SubscriptionInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "CshCmpnt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashComponent";
 			definition = "Amount subscribed in the current tax year into cash.";
 			maxOccurs = 1;
@@ -251,11 +255,11 @@ public class SubscriptionInformation1 {
 	 */
 	public static final MMMessageAttribute mmTotalAmountYearToDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrder.mmTotalAmount;
+			businessElementTrace_lazy = () -> InvestmentFundOrder.mmTotalAmount;
 			componentContext_lazy = () -> SubscriptionInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "TtlAmtYrToDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalAmountYearToDate";
 			definition = "Total amount subscribed in the current tax year.";
 			maxOccurs = 1;
@@ -267,11 +271,11 @@ public class SubscriptionInformation1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SubscriptionInformation1.mmDateOfFirstSubscription, com.tools20022.repository.msg.SubscriptionInformation1.mmEquityComponent,
-						com.tools20022.repository.msg.SubscriptionInformation1.mmCashComponent, com.tools20022.repository.msg.SubscriptionInformation1.mmTotalAmountYearToDate);
+				messageElement_lazy = () -> Arrays.asList(SubscriptionInformation1.mmDateOfFirstSubscription, SubscriptionInformation1.mmEquityComponent, SubscriptionInformation1.mmCashComponent,
+						SubscriptionInformation1.mmTotalAmountYearToDate);
 				trace_lazy = () -> SubscriptionExecution.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SubscriptionInformation1";
 				definition = "Execution of a subscription order.";
 			}

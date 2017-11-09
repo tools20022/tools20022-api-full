@@ -20,11 +20,15 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.GroupCancellationStatus1Code;
 import com.tools20022.repository.datatype.DecimalNumber;
 import com.tools20022.repository.datatype.Max15NumericText;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.Payment;
+import com.tools20022.repository.entity.PaymentStatus;
+import com.tools20022.repository.entity.TradeIdentification;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -134,11 +138,11 @@ public class OriginalPaymentInformation3 {
 	 */
 	public static final MMMessageAttribute mmOriginalPaymentInformationCancellationIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradeIdentification.mmIdentification;
+			businessElementTrace_lazy = () -> TradeIdentification.mmIdentification;
 			componentContext_lazy = () -> OriginalPaymentInformation3.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlPmtInfCxlId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalPaymentInformationCancellationIdentification";
 			definition = "Unique identification, as assigned by the original assigner, to unambiguously identify the original payment information cancellation request.";
 			maxOccurs = 1;
@@ -179,11 +183,11 @@ public class OriginalPaymentInformation3 {
 	 */
 	public static final MMMessageAssociationEnd mmResolvedCase = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.mmRelatedInvestigationCase;
+			businessElementTrace_lazy = () -> Payment.mmRelatedInvestigationCase;
 			componentContext_lazy = () -> OriginalPaymentInformation3.mmObject();
 			isDerived = false;
 			xmlTag = "RslvdCase";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ResolvedCase";
 			definition = "Identifies the resolved case.";
 			maxOccurs = 1;
@@ -230,11 +234,11 @@ public class OriginalPaymentInformation3 {
 	 */
 	public static final MMMessageAttribute mmOriginalPaymentInformationIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradeIdentification.mmIdentification;
+			businessElementTrace_lazy = () -> TradeIdentification.mmIdentification;
 			componentContext_lazy = () -> OriginalPaymentInformation3.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlPmtInfId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalPaymentInformationIdentification";
 			definition = "Unique identification, as assigned by the original sending party, to unambiguously identify the original payment information group.";
 			maxOccurs = 1;
@@ -281,7 +285,7 @@ public class OriginalPaymentInformation3 {
 			componentContext_lazy = () -> OriginalPaymentInformation3.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlGrpInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalGroupInformation";
 			definition = "Set of elements used to provide information on the original messsage.";
 			maxOccurs = 1;
@@ -327,7 +331,7 @@ public class OriginalPaymentInformation3 {
 			componentContext_lazy = () -> OriginalPaymentInformation3.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlNbOfTxs";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalNumberOfTransactions";
 			definition = "Number of individual transactions contained in the original payment information group.";
 			maxOccurs = 1;
@@ -372,7 +376,7 @@ public class OriginalPaymentInformation3 {
 			componentContext_lazy = () -> OriginalPaymentInformation3.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlCtrlSum";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalControlSum";
 			definition = "Total of all individual amounts included in the original payment information group, irrespective of currencies.";
 			maxOccurs = 1;
@@ -419,11 +423,11 @@ public class OriginalPaymentInformation3 {
 	 */
 	public static final MMMessageAttribute mmPaymentInformationCancellationStatus = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentStatus.mmStatus;
+			businessElementTrace_lazy = () -> PaymentStatus.mmStatus;
 			componentContext_lazy = () -> OriginalPaymentInformation3.mmObject();
 			isDerived = false;
 			xmlTag = "PmtInfCxlSts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentInformationCancellationStatus";
 			definition = "Specifies the status of a cancellation request, related to a payment information group.";
 			maxOccurs = 1;
@@ -469,11 +473,11 @@ public class OriginalPaymentInformation3 {
 	 */
 	public static final MMMessageAssociationEnd mmCancellationStatusReasonInformation = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.mmPaymentStatus;
+			businessElementTrace_lazy = () -> Payment.mmPaymentStatus;
 			componentContext_lazy = () -> OriginalPaymentInformation3.mmObject();
 			isDerived = false;
 			xmlTag = "CxlStsRsnInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationStatusReasonInformation";
 			definition = "Set of elements used to provide detailed information on the cancellation status reason.";
 			minOccurs = 0;
@@ -517,7 +521,7 @@ public class OriginalPaymentInformation3 {
 			componentContext_lazy = () -> OriginalPaymentInformation3.mmObject();
 			isDerived = false;
 			xmlTag = "NbOfTxsPerCxlSts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NumberOfTransactionsPerCancellationStatus";
 			definition = "Detailed information on the number of transactions for each identical cancellation status.";
 			minOccurs = 0;
@@ -566,7 +570,7 @@ public class OriginalPaymentInformation3 {
 			componentContext_lazy = () -> OriginalPaymentInformation3.mmObject();
 			isDerived = false;
 			xmlTag = "TxInfAndSts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionInformationAndStatus";
 			definition = "Set of elements used to provide information on the original transactions to which the cancellation request message refers.";
 			minOccurs = 0;
@@ -578,15 +582,13 @@ public class OriginalPaymentInformation3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OriginalPaymentInformation3.mmOriginalPaymentInformationCancellationIdentification,
-						com.tools20022.repository.msg.OriginalPaymentInformation3.mmResolvedCase, com.tools20022.repository.msg.OriginalPaymentInformation3.mmOriginalPaymentInformationIdentification,
-						com.tools20022.repository.msg.OriginalPaymentInformation3.mmOriginalGroupInformation, com.tools20022.repository.msg.OriginalPaymentInformation3.mmOriginalNumberOfTransactions,
-						com.tools20022.repository.msg.OriginalPaymentInformation3.mmOriginalControlSum, com.tools20022.repository.msg.OriginalPaymentInformation3.mmPaymentInformationCancellationStatus,
-						com.tools20022.repository.msg.OriginalPaymentInformation3.mmCancellationStatusReasonInformation, com.tools20022.repository.msg.OriginalPaymentInformation3.mmNumberOfTransactionsPerCancellationStatus,
-						com.tools20022.repository.msg.OriginalPaymentInformation3.mmTransactionInformationAndStatus);
+				messageElement_lazy = () -> Arrays.asList(OriginalPaymentInformation3.mmOriginalPaymentInformationCancellationIdentification, OriginalPaymentInformation3.mmResolvedCase,
+						OriginalPaymentInformation3.mmOriginalPaymentInformationIdentification, OriginalPaymentInformation3.mmOriginalGroupInformation, OriginalPaymentInformation3.mmOriginalNumberOfTransactions,
+						OriginalPaymentInformation3.mmOriginalControlSum, OriginalPaymentInformation3.mmPaymentInformationCancellationStatus, OriginalPaymentInformation3.mmCancellationStatusReasonInformation,
+						OriginalPaymentInformation3.mmNumberOfTransactionsPerCancellationStatus, OriginalPaymentInformation3.mmTransactionInformationAndStatus);
 				trace_lazy = () -> Payment.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OriginalPaymentInformation3";
 				definition = "Set of elements used to provide reference and status information on the original transactions, included in the original instruction, to which the cancellation request message applies.";
 			}

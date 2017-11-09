@@ -20,8 +20,10 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max210Text;
 import com.tools20022.repository.datatype.Max256Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -97,7 +99,7 @@ public class EnglishNameLocalNameAndAddress1 {
 			componentContext_lazy = () -> EnglishNameLocalNameAndAddress1.mmObject();
 			isDerived = false;
 			xmlTag = "EnNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EnglishName";
 			definition = "Name.";
 			maxOccurs = 1;
@@ -137,7 +139,7 @@ public class EnglishNameLocalNameAndAddress1 {
 			componentContext_lazy = () -> EnglishNameLocalNameAndAddress1.mmObject();
 			isDerived = false;
 			xmlTag = "NmAndAdr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NameAndAddress";
 			definition = "Name and address details of a participant.";
 			maxOccurs = 1;
@@ -182,7 +184,7 @@ public class EnglishNameLocalNameAndAddress1 {
 			componentContext_lazy = () -> EnglishNameLocalNameAndAddress1.mmObject();
 			isDerived = false;
 			xmlTag = "LngAdrLine";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LongAddressLine";
 			definition = "Information that locates and identifies a specific address in long text format.";
 			maxOccurs = 2;
@@ -194,10 +196,9 @@ public class EnglishNameLocalNameAndAddress1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.EnglishNameLocalNameAndAddress1.mmEnglishName, com.tools20022.repository.msg.EnglishNameLocalNameAndAddress1.mmNameAndAddress,
-						com.tools20022.repository.msg.EnglishNameLocalNameAndAddress1.mmLongAddressLine);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(EnglishNameLocalNameAndAddress1.mmEnglishName, EnglishNameLocalNameAndAddress1.mmNameAndAddress, EnglishNameLocalNameAndAddress1.mmLongAddressLine);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "EnglishNameLocalNameAndAddress1";
 				definition = "Name and address details.";
 			}

@@ -20,7 +20,10 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.auth.InvoiceTaxReportStatusAdviceV01;
 import com.tools20022.repository.codeset.TaxReportingStatus1Code;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -118,7 +121,7 @@ public class InvoiceTaxStatusReportHeader1 {
 			componentContext_lazy = () -> InvoiceTaxStatusReportHeader1.mmObject();
 			isDerived = false;
 			xmlTag = "TaxAuthrty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxAuthority";
 			definition = "Party to which the TaxReport is delivered. This message block contains party details for a specific tax authority.";
 			maxOccurs = 1;
@@ -159,7 +162,7 @@ public class InvoiceTaxStatusReportHeader1 {
 			componentContext_lazy = () -> InvoiceTaxStatusReportHeader1.mmObject();
 			isDerived = false;
 			xmlTag = "MsgId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageIdentification";
 			definition = "Identifies the InvoiceTaxReportStatusAdvice message.";
 			maxOccurs = 1;
@@ -201,7 +204,7 @@ public class InvoiceTaxStatusReportHeader1 {
 			componentContext_lazy = () -> InvoiceTaxStatusReportHeader1.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlMsgId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalMessageIdentification";
 			definition = "Reference to the identification of the InvoiceTaxReport message.";
 			maxOccurs = 1;
@@ -249,10 +252,10 @@ public class InvoiceTaxStatusReportHeader1 {
 			componentContext_lazy = () -> InvoiceTaxStatusReportHeader1.mmObject();
 			isDerived = false;
 			xmlTag = "RptSts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportStatus";
 			definition = "Provides the status for the full report.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.MoneyMarketStatusReportHeader1.mmReportStatus;
+			previousVersion_lazy = () -> MoneyMarketStatusReportHeader1.mmReportStatus;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TaxReportingStatus1Code.mmObject();
@@ -297,10 +300,10 @@ public class InvoiceTaxStatusReportHeader1 {
 			componentContext_lazy = () -> InvoiceTaxStatusReportHeader1.mmObject();
 			isDerived = false;
 			xmlTag = "VldtnRule";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValidationRule";
 			definition = "Provides the details of the rule which could not be validated.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.MoneyMarketStatusReportHeader1.mmValidationRule;
+			previousVersion_lazy = () -> MoneyMarketStatusReportHeader1.mmValidationRule;
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.GenericValidationRuleIdentification1.mmObject();
@@ -310,12 +313,11 @@ public class InvoiceTaxStatusReportHeader1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvoiceTaxStatusReportHeader1.mmTaxAuthority, com.tools20022.repository.msg.InvoiceTaxStatusReportHeader1.mmMessageIdentification,
-						com.tools20022.repository.msg.InvoiceTaxStatusReportHeader1.mmOriginalMessageIdentification, com.tools20022.repository.msg.InvoiceTaxStatusReportHeader1.mmReportStatus,
-						com.tools20022.repository.msg.InvoiceTaxStatusReportHeader1.mmValidationRule);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.auth.InvoiceTaxReportStatusAdviceV01.mmStatusReportHeader);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(InvoiceTaxStatusReportHeader1.mmTaxAuthority, InvoiceTaxStatusReportHeader1.mmMessageIdentification, InvoiceTaxStatusReportHeader1.mmOriginalMessageIdentification,
+						InvoiceTaxStatusReportHeader1.mmReportStatus, InvoiceTaxStatusReportHeader1.mmValidationRule);
+				messageBuildingBlock_lazy = () -> Arrays.asList(InvoiceTaxReportStatusAdviceV01.mmStatusReportHeader);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InvoiceTaxStatusReportHeader1";
 				definition = "Provides the Invoice tax status report header details.";
 				previousVersion_lazy = () -> MoneyMarketStatusReportHeader1.mmObject();

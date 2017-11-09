@@ -19,9 +19,12 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.acmt.IdentificationModificationAdviceV01;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.Payment;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -117,7 +120,7 @@ public class OriginalTransactionReference14 {
 			componentContext_lazy = () -> OriginalTransactionReference14.mmObject();
 			isDerived = false;
 			xmlTag = "MsgId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageIdentification";
 			definition = "Point to point reference, as assigned by the original instructing party, to unambiguously identify the original message.";
 			maxOccurs = 1;
@@ -161,7 +164,7 @@ public class OriginalTransactionReference14 {
 			componentContext_lazy = () -> OriginalTransactionReference14.mmObject();
 			isDerived = false;
 			xmlTag = "MsgNmId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageNameIdentification";
 			definition = "Specifies the original message name identifier to which the message refers.";
 			maxOccurs = 1;
@@ -202,7 +205,7 @@ public class OriginalTransactionReference14 {
 			componentContext_lazy = () -> OriginalTransactionReference14.mmObject();
 			isDerived = false;
 			xmlTag = "CreDtTm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreationDateTime";
 			definition = "Date and time at which the original message was created.";
 			maxOccurs = 1;
@@ -250,7 +253,7 @@ public class OriginalTransactionReference14 {
 			componentContext_lazy = () -> OriginalTransactionReference14.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlTx";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalTransaction";
 			definition = "Provides reference information to the original transaction.";
 			minOccurs = 0;
@@ -261,12 +264,12 @@ public class OriginalTransactionReference14 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OriginalTransactionReference14.mmMessageIdentification, com.tools20022.repository.msg.OriginalTransactionReference14.mmMessageNameIdentification,
-						com.tools20022.repository.msg.OriginalTransactionReference14.mmCreationDateTime, com.tools20022.repository.msg.OriginalTransactionReference14.mmOriginalTransaction);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.IdentificationModificationAdviceV01.mmOriginalTransactionReference);
+				messageElement_lazy = () -> Arrays.asList(OriginalTransactionReference14.mmMessageIdentification, OriginalTransactionReference14.mmMessageNameIdentification, OriginalTransactionReference14.mmCreationDateTime,
+						OriginalTransactionReference14.mmOriginalTransaction);
+				messageBuildingBlock_lazy = () -> Arrays.asList(IdentificationModificationAdviceV01.mmOriginalTransactionReference);
 				trace_lazy = () -> Payment.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OriginalTransactionReference14";
 				definition = "Set of elements used to provide reference information to the original message.";
 			}

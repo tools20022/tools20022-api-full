@@ -19,11 +19,14 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.Max1025Text;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.entity.Obligation;
 import com.tools20022.repository.entity.PaymentTerms;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -109,7 +112,7 @@ public class InterestPaymentDateRange2 {
 			componentContext_lazy = () -> InterestPaymentDateRange2.mmObject();
 			isDerived = false;
 			xmlTag = "IntrstSchdlId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterestScheduleIdentification";
 			definition = "Unique and unambiguous identification of the interest payment schedule.";
 			maxOccurs = 1;
@@ -153,11 +156,11 @@ public class InterestPaymentDateRange2 {
 	 */
 	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentTerms.mmAmount;
+			businessElementTrace_lazy = () -> PaymentTerms.mmAmount;
 			componentContext_lazy = () -> InterestPaymentDateRange2.mmObject();
 			isDerived = false;
 			xmlTag = "Amt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Interest amount that must be paid at due date.";
 			maxOccurs = 1;
@@ -200,11 +203,11 @@ public class InterestPaymentDateRange2 {
 	 */
 	public static final MMMessageAttribute mmDueDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Obligation.mmRequestedSettlementDate;
+			businessElementTrace_lazy = () -> Obligation.mmRequestedSettlementDate;
 			componentContext_lazy = () -> InterestPaymentDateRange2.mmObject();
 			isDerived = false;
 			xmlTag = "DueDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DueDate";
 			definition = "Latest date whereby the interest must be paid.";
 			maxOccurs = 1;
@@ -245,7 +248,7 @@ public class InterestPaymentDateRange2 {
 			componentContext_lazy = () -> InterestPaymentDateRange2.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInformation";
 			definition = "Further details on the interest payments.";
 			maxOccurs = 1;
@@ -257,11 +260,11 @@ public class InterestPaymentDateRange2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InterestPaymentDateRange2.mmInterestScheduleIdentification, com.tools20022.repository.msg.InterestPaymentDateRange2.mmAmount,
-						com.tools20022.repository.msg.InterestPaymentDateRange2.mmDueDate, com.tools20022.repository.msg.InterestPaymentDateRange2.mmAdditionalInformation);
+				messageElement_lazy = () -> Arrays.asList(InterestPaymentDateRange2.mmInterestScheduleIdentification, InterestPaymentDateRange2.mmAmount, InterestPaymentDateRange2.mmDueDate,
+						InterestPaymentDateRange2.mmAdditionalInformation);
 				trace_lazy = () -> PaymentTerms.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InterestPaymentDateRange2";
 				definition = "Specifies an interest payment schedule, that is an amount that must be paid no sooner than the expected payment date and no later than the due date.";
 			}

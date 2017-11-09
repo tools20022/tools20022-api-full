@@ -19,10 +19,15 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.TerminationReason1Choice;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.Max2000Text;
+import com.tools20022.repository.entity.Status;
+import com.tools20022.repository.entity.Undertaking;
 import com.tools20022.repository.entity.UndertakingStatus;
+import com.tools20022.repository.entity.UndertakingStatusReason;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -104,11 +109,11 @@ public class UndertakingTermination3 {
 	 */
 	public static final MMMessageAttribute mmEffectiveDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Undertaking.mmTerminationDate;
+			businessElementTrace_lazy = () -> Undertaking.mmTerminationDate;
 			componentContext_lazy = () -> UndertakingTermination3.mmObject();
 			isDerived = false;
 			xmlTag = "FctvDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EffectiveDate";
 			definition = "Date on which the termination is effective.";
 			maxOccurs = 1;
@@ -152,11 +157,11 @@ public class UndertakingTermination3 {
 	 */
 	public static final MMMessageAttribute mmReason = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.UndertakingStatusReason.mmTerminationReason;
+			businessElementTrace_lazy = () -> UndertakingStatusReason.mmTerminationReason;
 			componentContext_lazy = () -> UndertakingTermination3.mmObject();
 			isDerived = false;
 			xmlTag = "Rsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reason";
 			definition = "Reason for the termination.";
 			maxOccurs = 1;
@@ -199,11 +204,11 @@ public class UndertakingTermination3 {
 	 */
 	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.mmStatusDescription;
+			businessElementTrace_lazy = () -> Status.mmStatusDescription;
 			componentContext_lazy = () -> UndertakingTermination3.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInformation";
 			definition = "Additional information related to the termination.";
 			maxOccurs = 5;
@@ -215,11 +220,10 @@ public class UndertakingTermination3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UndertakingTermination3.mmEffectiveDate, com.tools20022.repository.msg.UndertakingTermination3.mmReason,
-						com.tools20022.repository.msg.UndertakingTermination3.mmAdditionalInformation);
+				messageElement_lazy = () -> Arrays.asList(UndertakingTermination3.mmEffectiveDate, UndertakingTermination3.mmReason, UndertakingTermination3.mmAdditionalInformation);
 				trace_lazy = () -> UndertakingStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "UndertakingTermination3";
 				definition = "Information about the notification of the termination of an undertaking.";
 			}

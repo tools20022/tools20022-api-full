@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.PendingOpeningStatusReason1Code
+ * PendingOpeningStatusReason1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -50,14 +60,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.PendingOpeningStatusReasonCode#mmRestrictions
  * PendingOpeningStatusReasonCode.mmRestrictions}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingOpeningStatusReason1Code
- * PendingOpeningStatusReason1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -101,7 +103,7 @@ public class PendingOpeningStatusReasonCode {
 	 */
 	public static final MMCode mmKnowYourCustomerDocumentMissing = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "KnowYourCustomerDocumentMissing";
 			definition = "Know Your Customer (KYC) document is missing.";
 			owner_lazy = () -> PendingOpeningStatusReasonCode.mmObject();
@@ -131,7 +133,7 @@ public class PendingOpeningStatusReasonCode {
 	 */
 	public static final MMCode mmFATCAReportingDateMissing = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FATCAReportingDateMissing";
 			definition = "FATCA reporting date is missing.";
 			owner_lazy = () -> PendingOpeningStatusReasonCode.mmObject();
@@ -161,7 +163,7 @@ public class PendingOpeningStatusReasonCode {
 	 */
 	public static final MMCode mmRightsHolderMissing = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RightsHolderMissing";
 			definition = "Rights holder information is missing.";
 			owner_lazy = () -> PendingOpeningStatusReasonCode.mmObject();
@@ -191,7 +193,7 @@ public class PendingOpeningStatusReasonCode {
 	 */
 	public static final MMCode mmAuthorisation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Authorisation";
 			definition = "Authorisation is required.";
 			owner_lazy = () -> PendingOpeningStatusReasonCode.mmObject();
@@ -222,7 +224,7 @@ public class PendingOpeningStatusReasonCode {
 	 */
 	public static final MMCode mmAuthorisedButPending = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AuthorisedButPending";
 			definition = "Authorisation is provided but account opening is still pending.";
 			owner_lazy = () -> PendingOpeningStatusReasonCode.mmObject();
@@ -252,7 +254,7 @@ public class PendingOpeningStatusReasonCode {
 	 */
 	public static final MMCode mmNotOpened = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotOpened";
 			definition = "Account is not yet open, even for partial use.";
 			owner_lazy = () -> PendingOpeningStatusReasonCode.mmObject();
@@ -282,7 +284,7 @@ public class PendingOpeningStatusReasonCode {
 	 */
 	public static final MMCode mmRestrictions = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Restrictions";
 			definition = "Account will be opened when restrictions are addressed.";
 			owner_lazy = () -> PendingOpeningStatusReasonCode.mmObject();
@@ -293,14 +295,12 @@ public class PendingOpeningStatusReasonCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PendingOpeningStatusReasonCode";
 				definition = "Specifies the reason for a pending account opening status.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PendingOpeningStatusReasonCode.mmKnowYourCustomerDocumentMissing,
-						com.tools20022.repository.codeset.PendingOpeningStatusReasonCode.mmFATCAReportingDateMissing, com.tools20022.repository.codeset.PendingOpeningStatusReasonCode.mmRightsHolderMissing,
-						com.tools20022.repository.codeset.PendingOpeningStatusReasonCode.mmAuthorisation, com.tools20022.repository.codeset.PendingOpeningStatusReasonCode.mmAuthorisedButPending,
-						com.tools20022.repository.codeset.PendingOpeningStatusReasonCode.mmNotOpened, com.tools20022.repository.codeset.PendingOpeningStatusReasonCode.mmRestrictions);
+				code_lazy = () -> Arrays.asList(PendingOpeningStatusReasonCode.mmKnowYourCustomerDocumentMissing, PendingOpeningStatusReasonCode.mmFATCAReportingDateMissing, PendingOpeningStatusReasonCode.mmRightsHolderMissing,
+						PendingOpeningStatusReasonCode.mmAuthorisation, PendingOpeningStatusReasonCode.mmAuthorisedButPending, PendingOpeningStatusReasonCode.mmNotOpened, PendingOpeningStatusReasonCode.mmRestrictions);
 				derivation_lazy = () -> Arrays.asList(PendingOpeningStatusReason1Code.mmObject());
 			}
 		});

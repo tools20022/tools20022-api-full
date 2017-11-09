@@ -19,6 +19,7 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.AssetClass1Code;
 import com.tools20022.repository.codeset.CountryCode;
 import com.tools20022.repository.codeset.DTCAssetType1Code;
@@ -26,6 +27,7 @@ import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.Max70Text;
 import com.tools20022.repository.datatype.YesNoIndicator;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -125,7 +127,7 @@ public class UnderlyingSecurityExtension2 {
 			componentContext_lazy = () -> UnderlyingSecurityExtension2.mmObject();
 			isDerived = false;
 			xmlTag = "PlcAndNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "xPath to the element that is being extended.";
 			maxOccurs = 1;
@@ -166,7 +168,7 @@ public class UnderlyingSecurityExtension2 {
 			componentContext_lazy = () -> UnderlyingSecurityExtension2.mmObject();
 			isDerived = false;
 			xmlTag = "CtryOfListg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CountryOfListing";
 			definition = "Country in which the security was issued.";
 			maxOccurs = 1;
@@ -207,7 +209,7 @@ public class UnderlyingSecurityExtension2 {
 			componentContext_lazy = () -> UnderlyingSecurityExtension2.mmObject();
 			isDerived = false;
 			xmlTag = "CtryOfIncorprtn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CountryOfIncorporation";
 			definition = "Country of incorporation of the issuer.";
 			maxOccurs = 1;
@@ -248,7 +250,7 @@ public class UnderlyingSecurityExtension2 {
 			componentContext_lazy = () -> UnderlyingSecurityExtension2.mmObject();
 			isDerived = false;
 			xmlTag = "IncmSrcCtry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncomeSourceCountry";
 			definition = "Country of source income for the security.";
 			maxOccurs = 1;
@@ -289,7 +291,7 @@ public class UnderlyingSecurityExtension2 {
 			componentContext_lazy = () -> UnderlyingSecurityExtension2.mmObject();
 			isDerived = false;
 			xmlTag = "IssrDesc";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssuerDescription";
 			definition = "Name of the issuer.";
 			maxOccurs = 1;
@@ -334,7 +336,7 @@ public class UnderlyingSecurityExtension2 {
 			componentContext_lazy = () -> UnderlyingSecurityExtension2.mmObject();
 			isDerived = false;
 			xmlTag = "DTCAsstClss";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCAssetClass";
 			definition = "Classification of instruments in to asset classes at DTC (The Depository Trust Corporation).";
 			maxOccurs = 1;
@@ -379,7 +381,7 @@ public class UnderlyingSecurityExtension2 {
 			componentContext_lazy = () -> UnderlyingSecurityExtension2.mmObject();
 			isDerived = false;
 			xmlTag = "DTCAsstTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCAssetType";
 			definition = "Further classification of instruments into (issue) asset types at DTC (The Depository Trust Corporation).";
 			maxOccurs = 1;
@@ -424,7 +426,7 @@ public class UnderlyingSecurityExtension2 {
 			componentContext_lazy = () -> UnderlyingSecurityExtension2.mmObject();
 			isDerived = false;
 			xmlTag = "PmryXchgFlg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PrimaryExchangeFlag";
 			definition = "Indicate if the stock exchange associated to place of listing code is primary or secondary.";
 			maxOccurs = 1;
@@ -467,7 +469,7 @@ public class UnderlyingSecurityExtension2 {
 			componentContext_lazy = () -> UnderlyingSecurityExtension2.mmObject();
 			isDerived = false;
 			xmlTag = "SctyElgbltyInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityEligibilityIndicator";
 			definition = "Indicates whether the security is eligible for holding at DTC.";
 			maxOccurs = 1;
@@ -512,7 +514,7 @@ public class UnderlyingSecurityExtension2 {
 			componentContext_lazy = () -> UnderlyingSecurityExtension2.mmObject();
 			isDerived = false;
 			xmlTag = "SECRegdFlg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SECRegisteredFlag";
 			definition = "Indicates whether the event has been registered with US Securities Exchange Commission (SEC).";
 			maxOccurs = 1;
@@ -554,7 +556,7 @@ public class UnderlyingSecurityExtension2 {
 			componentContext_lazy = () -> UnderlyingSecurityExtension2.mmObject();
 			isDerived = false;
 			xmlTag = "TckrSymb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TickerSymbol";
 			definition = "Ticket symbol for the event security (underlying security). ";
 			maxOccurs = 1;
@@ -566,14 +568,11 @@ public class UnderlyingSecurityExtension2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UnderlyingSecurityExtension2.mmPlaceAndName, com.tools20022.repository.msg.UnderlyingSecurityExtension2.mmCountryOfListing,
-						com.tools20022.repository.msg.UnderlyingSecurityExtension2.mmCountryOfIncorporation, com.tools20022.repository.msg.UnderlyingSecurityExtension2.mmIncomeSourceCountry,
-						com.tools20022.repository.msg.UnderlyingSecurityExtension2.mmIssuerDescription, com.tools20022.repository.msg.UnderlyingSecurityExtension2.mmDTCAssetClass,
-						com.tools20022.repository.msg.UnderlyingSecurityExtension2.mmDTCAssetType, com.tools20022.repository.msg.UnderlyingSecurityExtension2.mmPrimaryExchangeFlag,
-						com.tools20022.repository.msg.UnderlyingSecurityExtension2.mmSecurityEligibilityIndicator, com.tools20022.repository.msg.UnderlyingSecurityExtension2.mmSECRegisteredFlag,
-						com.tools20022.repository.msg.UnderlyingSecurityExtension2.mmTickerSymbol);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(UnderlyingSecurityExtension2.mmPlaceAndName, UnderlyingSecurityExtension2.mmCountryOfListing, UnderlyingSecurityExtension2.mmCountryOfIncorporation,
+						UnderlyingSecurityExtension2.mmIncomeSourceCountry, UnderlyingSecurityExtension2.mmIssuerDescription, UnderlyingSecurityExtension2.mmDTCAssetClass, UnderlyingSecurityExtension2.mmDTCAssetType,
+						UnderlyingSecurityExtension2.mmPrimaryExchangeFlag, UnderlyingSecurityExtension2.mmSecurityEligibilityIndicator, UnderlyingSecurityExtension2.mmSECRegisteredFlag, UnderlyingSecurityExtension2.mmTickerSymbol);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "UnderlyingSecurityExtension2";
 				definition = "Provides additional information regarding underlying security details.";
 			}

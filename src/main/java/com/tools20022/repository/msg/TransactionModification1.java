@@ -19,8 +19,10 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.PaymentIdentification3Choice;
 import com.tools20022.repository.entity.PaymentInstruction;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -104,7 +106,7 @@ public class TransactionModification1 {
 			componentContext_lazy = () -> TransactionModification1.mmObject();
 			isDerived = false;
 			xmlTag = "InstrRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructionReference";
 			definition = "Reference to the instruction related to the payment for which a modification is requested.";
 			maxOccurs = 1;
@@ -151,7 +153,7 @@ public class TransactionModification1 {
 			componentContext_lazy = () -> TransactionModification1.mmObject();
 			isDerived = false;
 			xmlTag = "NewPmtValSet";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewPaymentValueSet";
 			definition = "New payment values.";
 			maxOccurs = 1;
@@ -164,10 +166,10 @@ public class TransactionModification1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionModification1.mmInstructionReference, com.tools20022.repository.msg.TransactionModification1.mmNewPaymentValueSet);
+				messageElement_lazy = () -> Arrays.asList(TransactionModification1.mmInstructionReference, TransactionModification1.mmNewPaymentValueSet);
 				trace_lazy = () -> PaymentInstruction.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "TransactionModification1";
 				definition = "Contains the requested modifications.";
 			}

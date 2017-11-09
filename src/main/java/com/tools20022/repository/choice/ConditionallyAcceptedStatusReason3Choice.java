@@ -20,7 +20,9 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ConditionallyAcceptedStatusReason2Code;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.ConditionallyAcceptedStatusReason2;
 import com.tools20022.repository.msg.GenericIdentification1;
 import java.util.Arrays;
@@ -110,10 +112,10 @@ public class ConditionallyAcceptedStatusReason3Choice {
 			componentContext_lazy = () -> ConditionallyAcceptedStatusReason3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Cd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Conditionally accepted reason expressed as a code.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.InRepairStatusReason5Choice.mmCode, com.tools20022.repository.choice.SuspendedStatusReason5Choice.mmCode);
+			nextVersions_lazy = () -> Arrays.asList(InRepairStatusReason5Choice.mmCode, SuspendedStatusReason5Choice.mmCode);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ConditionallyAcceptedStatusReason2Code.mmObject();
@@ -163,10 +165,10 @@ public class ConditionallyAcceptedStatusReason3Choice {
 			componentContext_lazy = () -> ConditionallyAcceptedStatusReason3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Conditionally accepted reason expressed as a proprietary code.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.InRepairStatusReason5Choice.mmProprietary, com.tools20022.repository.choice.SuspendedStatusReason5Choice.mmProprietary);
+			nextVersions_lazy = () -> Arrays.asList(InRepairStatusReason5Choice.mmProprietary, SuspendedStatusReason5Choice.mmProprietary);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -177,9 +179,9 @@ public class ConditionallyAcceptedStatusReason3Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ConditionallyAcceptedStatusReason3Choice.mmCode, com.tools20022.repository.choice.ConditionallyAcceptedStatusReason3Choice.mmProprietary);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(ConditionallyAcceptedStatusReason3Choice.mmCode, ConditionallyAcceptedStatusReason3Choice.mmProprietary);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ConditionallyAcceptedStatusReason3Choice";
 				definition = "Choice of formats for a conditionally accepted status.";
 				previousVersion_lazy = () -> ConditionallyAcceptedStatusReason2.mmObject();

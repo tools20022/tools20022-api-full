@@ -19,12 +19,14 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CorporateActionTransactionCategory1Code;
 import com.tools20022.repository.codeset.DTCCSubEventType1Code;
 import com.tools20022.repository.codeset.ExtendedEventType1Code;
 import com.tools20022.repository.datatype.Exact5NumericText;
 import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.datatype.Max4AlphaNumericText;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -111,7 +113,7 @@ public class CorporateActionGeneralInformationExtension3 {
 			componentContext_lazy = () -> CorporateActionGeneralInformationExtension3.mmObject();
 			isDerived = false;
 			xmlTag = "PlcAndNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "xPath to the element that is being extended.";
 			maxOccurs = 1;
@@ -161,7 +163,7 @@ public class CorporateActionGeneralInformationExtension3 {
 			componentContext_lazy = () -> CorporateActionGeneralInformationExtension3.mmObject();
 			isDerived = false;
 			xmlTag = "EvtTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventType";
 			definition = "DTCC  (The Depository Trust and Clearing Corporation) native corporate action event type name. Used in place for the events that cannot be classified by ISO Code and are marked as OTHR. Can be used in combination with DTCC sub event type (when provided) to identify the event. For an example: a distribution based on recapitalisation event will be presented as event type: OTHR in standard message. DTCC native event type would be Distribution (DIST) and DTCC sub event type would be Recapitalisation. ";
 			maxOccurs = 1;
@@ -209,7 +211,7 @@ public class CorporateActionGeneralInformationExtension3 {
 			componentContext_lazy = () -> CorporateActionGeneralInformationExtension3.mmObject();
 			isDerived = false;
 			xmlTag = "SubEvtTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubEventType";
 			definition = "DTCC  (The Depository Trust and Clearing Corporation) native corporate action sub event type name further defines the event type. For an example: a cash dividend event with currency election will be noted as event type: Cash Dividend (DVCA) and DTCC sub event type: Currency Election(CURR).";
 			maxOccurs = 1;
@@ -254,7 +256,7 @@ public class CorporateActionGeneralInformationExtension3 {
 			componentContext_lazy = () -> CorporateActionGeneralInformationExtension3.mmObject();
 			isDerived = false;
 			xmlTag = "TxCtgy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionCategory";
 			definition = "Transaction category to which the corporate action event type belongs to for reporting purposes.";
 			maxOccurs = 1;
@@ -296,7 +298,7 @@ public class CorporateActionGeneralInformationExtension3 {
 			componentContext_lazy = () -> CorporateActionGeneralInformationExtension3.mmObject();
 			isDerived = false;
 			xmlTag = "RsnCd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReasonCode";
 			definition = "Reason for the adjustment.";
 			maxOccurs = 1;
@@ -341,7 +343,7 @@ public class CorporateActionGeneralInformationExtension3 {
 			componentContext_lazy = () -> CorporateActionGeneralInformationExtension3.mmObject();
 			isDerived = false;
 			xmlTag = "DTCRsnCd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCReasonCode";
 			definition = "Reason for the adjustment from ATP system at DTC (The Depository Trust Corporation). ";
 			maxOccurs = 1;
@@ -353,11 +355,10 @@ public class CorporateActionGeneralInformationExtension3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionGeneralInformationExtension3.mmPlaceAndName, com.tools20022.repository.msg.CorporateActionGeneralInformationExtension3.mmEventType,
-						com.tools20022.repository.msg.CorporateActionGeneralInformationExtension3.mmSubEventType, com.tools20022.repository.msg.CorporateActionGeneralInformationExtension3.mmTransactionCategory,
-						com.tools20022.repository.msg.CorporateActionGeneralInformationExtension3.mmReasonCode, com.tools20022.repository.msg.CorporateActionGeneralInformationExtension3.mmDTCReasonCode);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(CorporateActionGeneralInformationExtension3.mmPlaceAndName, CorporateActionGeneralInformationExtension3.mmEventType, CorporateActionGeneralInformationExtension3.mmSubEventType,
+						CorporateActionGeneralInformationExtension3.mmTransactionCategory, CorporateActionGeneralInformationExtension3.mmReasonCode, CorporateActionGeneralInformationExtension3.mmDTCReasonCode);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CorporateActionGeneralInformationExtension3";
 				definition = "Provides additional information regarding corporate action general information details.";
 			}

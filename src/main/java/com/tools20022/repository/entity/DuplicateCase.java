@@ -17,9 +17,12 @@
 
 package com.tools20022.repository.entity;
 
+import com.tools20022.metamodel.MMAggregation;
 import com.tools20022.metamodel.MMBusinessAssociationEnd;
 import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.InvestigationResolution;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -34,17 +37,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.DuplicateCase#mmDuplicatedCase
- * DuplicateCase.mmDuplicatedCase}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.DuplicateCase#mmRelatedCaseResolution
- * DuplicateCase.mmRelatedCaseResolution}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
  * associationDomain} =
@@ -61,6 +53,17 @@ import java.util.List;
  * superType} =
  * {@linkplain com.tools20022.repository.entity.InvestigationResolution
  * InvestigationResolution}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.DuplicateCase#mmDuplicatedCase
+ * DuplicateCase.mmDuplicatedCase}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.DuplicateCase#mmRelatedCaseResolution
+ * DuplicateCase.mmRelatedCaseResolution}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -119,12 +122,12 @@ public class DuplicateCase extends InvestigationResolution {
 		{
 			elementContext_lazy = () -> DuplicateCase.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DuplicatedCase";
 			definition = "Identifies the original case.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.InvestigationCase.mmDuplicateCaseResolution;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.InvestigationCase.mmObject();
 		}
 	};
@@ -167,13 +170,13 @@ public class DuplicateCase extends InvestigationResolution {
 		{
 			elementContext_lazy = () -> DuplicateCase.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedCaseResolution";
 			definition = "Investigation case information which is duplicate.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.PaymentInvestigationCaseResolution.mmDuplicateCase;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.PaymentInvestigationCaseResolution.mmObject();
 		}
 	};
@@ -181,13 +184,13 @@ public class DuplicateCase extends InvestigationResolution {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DuplicateCase";
 				definition = "Outcome that results in closing a case as duplicate because the same issue has been reported by another party.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.InvestigationCase.mmDuplicateCaseResolution, com.tools20022.repository.entity.PaymentInvestigationCaseResolution.mmDuplicateCase);
 				superType_lazy = () -> InvestigationResolution.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.DuplicateCase.mmDuplicatedCase, com.tools20022.repository.entity.DuplicateCase.mmRelatedCaseResolution);
+				element_lazy = () -> Arrays.asList(DuplicateCase.mmDuplicatedCase, DuplicateCase.mmRelatedCaseResolution);
 			}
 		});
 		return mmObject_lazy.get();

@@ -20,7 +20,9 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ISODateTime;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.DateTimePeriodDetails;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -103,7 +105,7 @@ public class DateTimeSearch1Choice {
 			componentContext_lazy = () -> DateTimeSearch1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "FrDtTm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FromDateTime";
 			definition = "Start date of the range.";
 			maxOccurs = 1;
@@ -144,7 +146,7 @@ public class DateTimeSearch1Choice {
 			componentContext_lazy = () -> DateTimeSearch1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "ToDtTm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ToDateTime";
 			definition = "End date of the range.";
 			maxOccurs = 1;
@@ -185,7 +187,7 @@ public class DateTimeSearch1Choice {
 			componentContext_lazy = () -> DateTimeSearch1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "FrToDtTm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FromToDateTime";
 			definition = "Particular time span specified between a start date and an end date.";
 			maxOccurs = 1;
@@ -227,7 +229,7 @@ public class DateTimeSearch1Choice {
 			componentContext_lazy = () -> DateTimeSearch1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "EQDtTm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EqualDateTime";
 			definition = "Specified date to match.";
 			maxOccurs = 1;
@@ -268,7 +270,7 @@ public class DateTimeSearch1Choice {
 			componentContext_lazy = () -> DateTimeSearch1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "NEQDtTm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotEqualDateTime";
 			definition = "Specified date to be excluded from the search.";
 			maxOccurs = 1;
@@ -280,11 +282,10 @@ public class DateTimeSearch1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.DateTimeSearch1Choice.mmFromDateTime, com.tools20022.repository.choice.DateTimeSearch1Choice.mmToDateTime,
-						com.tools20022.repository.choice.DateTimeSearch1Choice.mmFromToDateTime, com.tools20022.repository.choice.DateTimeSearch1Choice.mmEqualDateTime,
-						com.tools20022.repository.choice.DateTimeSearch1Choice.mmNotEqualDateTime);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(DateTimeSearch1Choice.mmFromDateTime, DateTimeSearch1Choice.mmToDateTime, DateTimeSearch1Choice.mmFromToDateTime, DateTimeSearch1Choice.mmEqualDateTime,
+						DateTimeSearch1Choice.mmNotEqualDateTime);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "DateTimeSearch1Choice";
 				definition = "Choice between search criteria based on dates and date ranges.";
 			}

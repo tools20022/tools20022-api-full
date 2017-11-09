@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -92,7 +94,7 @@ public class ForeignExchangeTradeTypeCode {
 	 */
 	public static final MMCode mmTrade = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+			registrationStatus = MMRegistrationStatus.OBSOLETE;
 			name = "Trade";
 			definition = "Indicates that the trade is a spot or forward agreement.";
 			owner_lazy = () -> ForeignExchangeTradeTypeCode.mmObject();
@@ -122,7 +124,7 @@ public class ForeignExchangeTradeTypeCode {
 	 */
 	public static final MMCode mmSwap = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+			registrationStatus = MMRegistrationStatus.OBSOLETE;
 			name = "Swap";
 			definition = "Trade is part of a swap agreement";
 			owner_lazy = () -> ForeignExchangeTradeTypeCode.mmObject();
@@ -155,7 +157,7 @@ public class ForeignExchangeTradeTypeCode {
 	 */
 	public static final MMCode mmOpening = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+			registrationStatus = MMRegistrationStatus.OBSOLETE;
 			name = "Opening";
 			definition = "Trade is eligible to be closed by one or more 'reverse' trades, ie, in the opposite direction.";
 			owner_lazy = () -> ForeignExchangeTradeTypeCode.mmObject();
@@ -188,7 +190,7 @@ public class ForeignExchangeTradeTypeCode {
 	 */
 	public static final MMCode mmPartialClosing = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+			registrationStatus = MMRegistrationStatus.OBSOLETE;
 			name = "PartialClosing";
 			definition = "Trade is a partial closing of another trade, for the same pair of currencies, and for the same value date.";
 			owner_lazy = () -> ForeignExchangeTradeTypeCode.mmObject();
@@ -223,7 +225,7 @@ public class ForeignExchangeTradeTypeCode {
 	 */
 	public static final MMCode mmFinalClosing = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+			registrationStatus = MMRegistrationStatus.OBSOLETE;
 			name = "FinalClosing";
 			definition = "Trade is the final closing of another trade, ie, in the opposite direction, for the same pair of currencies and for the same value date. This trade agreement contains the net settlement amount that has to be paid by one of the parties as a result of netting of several agreements.";
 			owner_lazy = () -> ForeignExchangeTradeTypeCode.mmObject();
@@ -234,14 +236,13 @@ public class ForeignExchangeTradeTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CONF");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				name = "ForeignExchangeTradeTypeCode";
 				definition = "Specifies the type of foreign exchange trade.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ForeignExchangeTradeTypeCode.mmTrade, com.tools20022.repository.codeset.ForeignExchangeTradeTypeCode.mmSwap,
-						com.tools20022.repository.codeset.ForeignExchangeTradeTypeCode.mmOpening, com.tools20022.repository.codeset.ForeignExchangeTradeTypeCode.mmPartialClosing,
-						com.tools20022.repository.codeset.ForeignExchangeTradeTypeCode.mmFinalClosing);
+				code_lazy = () -> Arrays.asList(ForeignExchangeTradeTypeCode.mmTrade, ForeignExchangeTradeTypeCode.mmSwap, ForeignExchangeTradeTypeCode.mmOpening, ForeignExchangeTradeTypeCode.mmPartialClosing,
+						ForeignExchangeTradeTypeCode.mmFinalClosing);
 			}
 		});
 		return mmObject_lazy.get();

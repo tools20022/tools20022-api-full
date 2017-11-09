@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.TradingMethodTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -98,7 +100,7 @@ public class TradingMethodType1Code extends TradingMethodTypeCode {
 	 */
 	public static final MMCode mmBilateralTrade = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BilateralTrade";
 			owner_lazy = () -> TradingMethodType1Code.mmObject();
 		}
@@ -121,7 +123,7 @@ public class TradingMethodType1Code extends TradingMethodTypeCode {
 	 */
 	public static final MMCode mmCentralizedPriceBidding = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CentralizedPriceBidding";
 			owner_lazy = () -> TradingMethodType1Code.mmObject();
 		}
@@ -144,7 +146,7 @@ public class TradingMethodType1Code extends TradingMethodTypeCode {
 	 */
 	public static final MMCode mmContinuousMatching = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ContinuousMatching";
 			owner_lazy = () -> TradingMethodType1Code.mmObject();
 		}
@@ -167,7 +169,7 @@ public class TradingMethodType1Code extends TradingMethodTypeCode {
 	 */
 	public static final MMCode mmLimitOrder = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LimitOrder";
 			owner_lazy = () -> TradingMethodType1Code.mmObject();
 		}
@@ -190,7 +192,7 @@ public class TradingMethodType1Code extends TradingMethodTypeCode {
 	 */
 	public static final MMCode mmNegotiationTrade = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NegotiationTrade";
 			owner_lazy = () -> TradingMethodType1Code.mmObject();
 		}
@@ -213,7 +215,7 @@ public class TradingMethodType1Code extends TradingMethodTypeCode {
 	 */
 	public static final MMCode mmOneClickTrade = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OneClickTrade";
 			owner_lazy = () -> TradingMethodType1Code.mmObject();
 		}
@@ -236,7 +238,7 @@ public class TradingMethodType1Code extends TradingMethodTypeCode {
 	 */
 	public static final MMCode mmQuotationAuction = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuotationAuction";
 			owner_lazy = () -> TradingMethodType1Code.mmObject();
 		}
@@ -259,7 +261,7 @@ public class TradingMethodType1Code extends TradingMethodTypeCode {
 	 */
 	public static final MMCode mmTenderingAuction = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TenderingAuction";
 			owner_lazy = () -> TradingMethodType1Code.mmObject();
 		}
@@ -282,7 +284,7 @@ public class TradingMethodType1Code extends TradingMethodTypeCode {
 	 */
 	public static final MMCode mmAnonymousClick = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AnonymousClick";
 			owner_lazy = () -> TradingMethodType1Code.mmObject();
 		}
@@ -291,15 +293,12 @@ public class TradingMethodType1Code extends TradingMethodTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TradingMethodType1Code";
 				definition = "Identifies the type of trading method.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TradingMethodType1Code.mmBilateralTrade, com.tools20022.repository.codeset.TradingMethodType1Code.mmCentralizedPriceBidding,
-						com.tools20022.repository.codeset.TradingMethodType1Code.mmContinuousMatching, com.tools20022.repository.codeset.TradingMethodType1Code.mmLimitOrder,
-						com.tools20022.repository.codeset.TradingMethodType1Code.mmNegotiationTrade, com.tools20022.repository.codeset.TradingMethodType1Code.mmOneClickTrade,
-						com.tools20022.repository.codeset.TradingMethodType1Code.mmQuotationAuction, com.tools20022.repository.codeset.TradingMethodType1Code.mmTenderingAuction,
-						com.tools20022.repository.codeset.TradingMethodType1Code.mmAnonymousClick);
+				code_lazy = () -> Arrays.asList(TradingMethodType1Code.mmBilateralTrade, TradingMethodType1Code.mmCentralizedPriceBidding, TradingMethodType1Code.mmContinuousMatching, TradingMethodType1Code.mmLimitOrder,
+						TradingMethodType1Code.mmNegotiationTrade, TradingMethodType1Code.mmOneClickTrade, TradingMethodType1Code.mmQuotationAuction, TradingMethodType1Code.mmTenderingAuction, TradingMethodType1Code.mmAnonymousClick);
 				trace_lazy = () -> TradingMethodTypeCode.mmObject();
 			}
 		});

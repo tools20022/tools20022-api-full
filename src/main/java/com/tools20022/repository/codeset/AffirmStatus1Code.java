@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.AffirmStatusCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -101,7 +103,7 @@ public class AffirmStatus1Code extends AffirmStatusCode {
 	 */
 	public static final MMCode mmAckToConfirmCompleteNotification = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AckToConfirmCompleteNotification";
 			owner_lazy = () -> AffirmStatus1Code.mmObject();
 		}
@@ -124,7 +126,7 @@ public class AffirmStatus1Code extends AffirmStatusCode {
 	 */
 	public static final MMCode mmAckToSettlementStateChanged = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AckToSettlementStateChanged";
 			owner_lazy = () -> AffirmStatus1Code.mmObject();
 		}
@@ -147,7 +149,7 @@ public class AffirmStatus1Code extends AffirmStatusCode {
 	 */
 	public static final MMCode mmCompared = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Compared";
 			owner_lazy = () -> AffirmStatus1Code.mmObject();
 		}
@@ -170,7 +172,7 @@ public class AffirmStatus1Code extends AffirmStatusCode {
 	 */
 	public static final MMCode mmMisMatched = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MisMatched";
 			owner_lazy = () -> AffirmStatus1Code.mmObject();
 		}
@@ -193,7 +195,7 @@ public class AffirmStatus1Code extends AffirmStatusCode {
 	 */
 	public static final MMCode mmModeError = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ModeError";
 			owner_lazy = () -> AffirmStatus1Code.mmObject();
 		}
@@ -216,7 +218,7 @@ public class AffirmStatus1Code extends AffirmStatusCode {
 	 */
 	public static final MMCode mmNoTradingPrivilege = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoTradingPrivilege";
 			owner_lazy = () -> AffirmStatus1Code.mmObject();
 		}
@@ -239,7 +241,7 @@ public class AffirmStatus1Code extends AffirmStatusCode {
 	 */
 	public static final MMCode mmOutOfRange = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OutOfRange";
 			owner_lazy = () -> AffirmStatus1Code.mmObject();
 		}
@@ -262,7 +264,7 @@ public class AffirmStatus1Code extends AffirmStatusCode {
 	 */
 	public static final MMCode mmOutOfService = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OutOfService";
 			owner_lazy = () -> AffirmStatus1Code.mmObject();
 		}
@@ -285,7 +287,7 @@ public class AffirmStatus1Code extends AffirmStatusCode {
 	 */
 	public static final MMCode mmReceived = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Received";
 			owner_lazy = () -> AffirmStatus1Code.mmObject();
 		}
@@ -308,7 +310,7 @@ public class AffirmStatus1Code extends AffirmStatusCode {
 	 */
 	public static final MMCode mmUnreceived = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unreceived";
 			owner_lazy = () -> AffirmStatus1Code.mmObject();
 		}
@@ -317,14 +319,12 @@ public class AffirmStatus1Code extends AffirmStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AffirmStatus1Code";
 				definition = "Identifies the status of the confirmation acknowledgement.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AffirmStatus1Code.mmAckToConfirmCompleteNotification, com.tools20022.repository.codeset.AffirmStatus1Code.mmAckToSettlementStateChanged,
-						com.tools20022.repository.codeset.AffirmStatus1Code.mmCompared, com.tools20022.repository.codeset.AffirmStatus1Code.mmMisMatched, com.tools20022.repository.codeset.AffirmStatus1Code.mmModeError,
-						com.tools20022.repository.codeset.AffirmStatus1Code.mmNoTradingPrivilege, com.tools20022.repository.codeset.AffirmStatus1Code.mmOutOfRange, com.tools20022.repository.codeset.AffirmStatus1Code.mmOutOfService,
-						com.tools20022.repository.codeset.AffirmStatus1Code.mmReceived, com.tools20022.repository.codeset.AffirmStatus1Code.mmUnreceived);
+				code_lazy = () -> Arrays.asList(AffirmStatus1Code.mmAckToConfirmCompleteNotification, AffirmStatus1Code.mmAckToSettlementStateChanged, AffirmStatus1Code.mmCompared, AffirmStatus1Code.mmMisMatched,
+						AffirmStatus1Code.mmModeError, AffirmStatus1Code.mmNoTradingPrivilege, AffirmStatus1Code.mmOutOfRange, AffirmStatus1Code.mmOutOfService, AffirmStatus1Code.mmReceived, AffirmStatus1Code.mmUnreceived);
 				trace_lazy = () -> AffirmStatusCode.mmObject();
 			}
 		});

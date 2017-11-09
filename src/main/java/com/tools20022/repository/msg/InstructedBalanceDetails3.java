@@ -20,8 +20,12 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.BalanceFormat1Choice;
+import com.tools20022.repository.entity.ChoiceCorporateAction;
+import com.tools20022.repository.entity.CorporateActionEntitlement;
 import com.tools20022.repository.entity.CorporateActionEvent;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -119,14 +123,14 @@ public class InstructedBalanceDetails3 {
 	 */
 	public static final MMMessageAttribute mmTotalInstructedBalance = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEntitlement.mmInstructedBalance;
+			businessElementTrace_lazy = () -> CorporateActionEntitlement.mmInstructedBalance;
 			componentContext_lazy = () -> InstructedBalanceDetails3.mmObject();
 			isDerived = false;
 			xmlTag = "TtlInstdBal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalInstructedBalance";
 			definition = "Provides information about the total instructed balance.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InstructedBalanceDetails5.mmTotalInstructedBalance);
+			nextVersions_lazy = () -> Arrays.asList(InstructedBalanceDetails5.mmTotalInstructedBalance);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> BalanceFormat1Choice.mmObject();
@@ -176,14 +180,14 @@ public class InstructedBalanceDetails3 {
 	 */
 	public static final MMMessageAssociationEnd mmOptionDetails = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ChoiceCorporateAction.mmCorporateActionOptionDefinition;
+			businessElementTrace_lazy = () -> ChoiceCorporateAction.mmCorporateActionOptionDefinition;
 			componentContext_lazy = () -> InstructedBalanceDetails3.mmObject();
 			isDerived = false;
 			xmlTag = "OptnDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionDetails";
 			definition = "Provide instructed balance breakdown information per option.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InstructedBalanceDetails5.mmOptionDetails);
+			nextVersions_lazy = () -> Arrays.asList(InstructedBalanceDetails5.mmOptionDetails);
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.InstructedCorporateActionOption4.mmObject();
@@ -193,10 +197,10 @@ public class InstructedBalanceDetails3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InstructedBalanceDetails3.mmTotalInstructedBalance, com.tools20022.repository.msg.InstructedBalanceDetails3.mmOptionDetails);
+				messageElement_lazy = () -> Arrays.asList(InstructedBalanceDetails3.mmTotalInstructedBalance, InstructedBalanceDetails3.mmOptionDetails);
 				trace_lazy = () -> CorporateActionEvent.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InstructedBalanceDetails3";
 				definition = "Provides information about total instructed balance.";
 				nextVersions_lazy = () -> Arrays.asList(InstructedBalanceDetails5.mmObject());

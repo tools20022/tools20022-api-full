@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.BaselineStatusCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -87,7 +89,7 @@ public class BaselineStatus2Code extends BaselineStatusCode {
 	 */
 	public static final MMCode mmComplete = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Complete";
 			owner_lazy = () -> BaselineStatus2Code.mmObject();
 		}
@@ -110,7 +112,7 @@ public class BaselineStatus2Code extends BaselineStatusCode {
 	 */
 	public static final MMCode mmClosed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Closed";
 			owner_lazy = () -> BaselineStatus2Code.mmObject();
 		}
@@ -133,7 +135,7 @@ public class BaselineStatus2Code extends BaselineStatusCode {
 	 */
 	public static final MMCode mmActive = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Active";
 			owner_lazy = () -> BaselineStatus2Code.mmObject();
 		}
@@ -142,13 +144,12 @@ public class BaselineStatus2Code extends BaselineStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("COMP");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "BaselineStatus2Code";
 				definition = "Specifies the status requested to be assigned to the baseline.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.BaselineStatus2Code.mmComplete, com.tools20022.repository.codeset.BaselineStatus2Code.mmClosed,
-						com.tools20022.repository.codeset.BaselineStatus2Code.mmActive);
+				code_lazy = () -> Arrays.asList(BaselineStatus2Code.mmComplete, BaselineStatus2Code.mmClosed, BaselineStatus2Code.mmActive);
 				trace_lazy = () -> BaselineStatusCode.mmObject();
 			}
 		});

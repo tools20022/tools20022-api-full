@@ -20,11 +20,13 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.AuthenticationEntity1Code;
 import com.tools20022.repository.codeset.AuthenticationMethod2Code;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.Max40Text;
 import com.tools20022.repository.entity.Authentication;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -135,15 +137,15 @@ public class CardholderAuthentication5 {
 	 */
 	public static final MMMessageAttribute mmAuthenticationMethod = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Authentication.mmAuthenticationMethod;
+			businessElementTrace_lazy = () -> Authentication.mmAuthenticationMethod;
 			componentContext_lazy = () -> CardholderAuthentication5.mmObject();
 			isDerived = false;
 			xmlTag = "AuthntcnMtd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AuthenticationMethod";
 			definition = "Method used to authenticate a cardholder.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardholderAuthentication6.mmAuthenticationMethod);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CardholderAuthentication3.mmAuthenticationMethod;
+			nextVersions_lazy = () -> Arrays.asList(CardholderAuthentication6.mmAuthenticationMethod);
+			previousVersion_lazy = () -> CardholderAuthentication3.mmAuthenticationMethod;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AuthenticationMethod2Code.mmObject();
@@ -191,14 +193,14 @@ public class CardholderAuthentication5 {
 	 */
 	public static final MMMessageAttribute mmAuthenticationEntity = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Authentication.mmAuthenticationEntity;
+			businessElementTrace_lazy = () -> Authentication.mmAuthenticationEntity;
 			componentContext_lazy = () -> CardholderAuthentication5.mmObject();
 			isDerived = false;
 			xmlTag = "AuthntcnNtty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AuthenticationEntity";
 			definition = "Entity or object in charge of verifying the cardholder authenticity.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CardholderAuthentication3.mmAuthenticationEntity;
+			previousVersion_lazy = () -> CardholderAuthentication3.mmAuthenticationEntity;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> AuthenticationEntity1Code.mmObject();
@@ -252,15 +254,15 @@ public class CardholderAuthentication5 {
 	 */
 	public static final MMMessageAttribute mmAuthenticationValue = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Authentication.mmAuthenticationValue;
+			businessElementTrace_lazy = () -> Authentication.mmAuthenticationValue;
 			componentContext_lazy = () -> CardholderAuthentication5.mmObject();
 			isDerived = false;
 			xmlTag = "AuthntcnVal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AuthenticationValue";
 			definition = "Value used to authenticate the cardholder.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardholderAuthentication6.mmAuthenticationValue);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CardholderAuthentication3.mmAuthenticationValue;
+			nextVersions_lazy = () -> Arrays.asList(CardholderAuthentication6.mmAuthenticationValue);
+			previousVersion_lazy = () -> CardholderAuthentication3.mmAuthenticationValue;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max40Text.mmObject();
@@ -318,11 +320,11 @@ public class CardholderAuthentication5 {
 			componentContext_lazy = () -> CardholderAuthentication5.mmObject();
 			isDerived = false;
 			xmlTag = "CrdhldrOnLinePIN";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CardholderOnLinePIN";
 			definition = "Encrypted personal identification number (PIN) and related information.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardholderAuthentication6.mmCardholderOnLinePIN);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CardholderAuthentication3.mmCardholderOnLinePIN;
+			nextVersions_lazy = () -> Arrays.asList(CardholderAuthentication6.mmCardholderOnLinePIN);
+			previousVersion_lazy = () -> CardholderAuthentication3.mmCardholderOnLinePIN;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -370,10 +372,10 @@ public class CardholderAuthentication5 {
 			componentContext_lazy = () -> CardholderAuthentication5.mmObject();
 			isDerived = false;
 			xmlTag = "AuthntcnColltnInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AuthenticationCollectionIndicator";
 			definition = "Identifies in electronic commerce transactions whether customer authentication is supported and data is available.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CardholderAuthentication3.mmAuthenticationCollectionIndicator;
+			previousVersion_lazy = () -> CardholderAuthentication3.mmAuthenticationCollectionIndicator;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -383,12 +385,11 @@ public class CardholderAuthentication5 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardholderAuthentication5.mmAuthenticationMethod, com.tools20022.repository.msg.CardholderAuthentication5.mmAuthenticationEntity,
-						com.tools20022.repository.msg.CardholderAuthentication5.mmAuthenticationValue, com.tools20022.repository.msg.CardholderAuthentication5.mmCardholderOnLinePIN,
-						com.tools20022.repository.msg.CardholderAuthentication5.mmAuthenticationCollectionIndicator);
+				messageElement_lazy = () -> Arrays.asList(CardholderAuthentication5.mmAuthenticationMethod, CardholderAuthentication5.mmAuthenticationEntity, CardholderAuthentication5.mmAuthenticationValue,
+						CardholderAuthentication5.mmCardholderOnLinePIN, CardholderAuthentication5.mmAuthenticationCollectionIndicator);
 				trace_lazy = () -> Authentication.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CardholderAuthentication5";
 				definition = "Data related to the authentication of the cardholder.";
 				nextVersions_lazy = () -> Arrays.asList(CardholderAuthentication6.mmObject());

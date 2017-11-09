@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -28,6 +30,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.Reversible1Code
+ * Reversible1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -37,13 +46,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * ReversibleCode.mmFixed}</li>
  * <li>{@linkplain com.tools20022.repository.codeset.ReversibleCode#mmCallBack
  * ReversibleCode.mmCallBack}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.Reversible1Code
- * Reversible1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -98,7 +100,7 @@ public class ReversibleCode {
 	 */
 	public static final MMCode mmReversible = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reversible";
 			definition = "Securities lending contract can be ended by the borrower before the expiration date.";
 			owner_lazy = () -> ReversibleCode.mmObject();
@@ -131,7 +133,7 @@ public class ReversibleCode {
 	 */
 	public static final MMCode mmFixed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Fixed";
 			definition = "Securities lending contract can not be ended by the borrower before the expiration date.";
 			owner_lazy = () -> ReversibleCode.mmObject();
@@ -164,7 +166,7 @@ public class ReversibleCode {
 	 */
 	public static final MMCode mmCallBack = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CallBack";
 			definition = "Securities lending contract can be ended by the lender before the expiration date.";
 			owner_lazy = () -> ReversibleCode.mmObject();
@@ -175,12 +177,12 @@ public class ReversibleCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("REVL");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ReversibleCode";
 				definition = "Indicates the possibility to terminate the securities lending contract either by the borrower or lender before the expiration date.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ReversibleCode.mmReversible, com.tools20022.repository.codeset.ReversibleCode.mmFixed, com.tools20022.repository.codeset.ReversibleCode.mmCallBack);
+				code_lazy = () -> Arrays.asList(ReversibleCode.mmReversible, ReversibleCode.mmFixed, ReversibleCode.mmCallBack);
 				derivation_lazy = () -> Arrays.asList(Reversible1Code.mmObject());
 			}
 		});

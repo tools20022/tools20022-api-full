@@ -20,9 +20,11 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.CurrencyAndAmount;
 import com.tools20022.repository.datatype.YesNoIndicator;
-import com.tools20022.repository.entity.CommercialTrade;
+import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -130,14 +132,14 @@ public class LineItem15 {
 	 */
 	public static final MMMessageAssociationEnd mmPurchaseOrderReference = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PurchaseOrder.mmIdentification;
+			businessElementTrace_lazy = () -> PurchaseOrder.mmIdentification;
 			componentContext_lazy = () -> LineItem15.mmObject();
 			isDerived = false;
 			xmlTag = "PurchsOrdrRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PurchaseOrderReference";
 			definition = "Reference to the purchase order of the underlying transaction.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.LineItem12.mmPurchaseOrderReference;
+			previousVersion_lazy = () -> LineItem12.mmPurchaseOrderReference;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -185,10 +187,10 @@ public class LineItem15 {
 			componentContext_lazy = () -> LineItem15.mmObject();
 			isDerived = false;
 			xmlTag = "FnlSubmissn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinalSubmission";
 			definition = "Specifies whether this current invoice is the last submission against the purchase order referenced.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.LineItem12.mmFinalSubmission;
+			previousVersion_lazy = () -> LineItem12.mmFinalSubmission;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
@@ -232,14 +234,14 @@ public class LineItem15 {
 	 */
 	public static final MMMessageAssociationEnd mmCommercialLineItems = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Invoice.mmLineItem;
+			businessElementTrace_lazy = () -> Invoice.mmLineItem;
 			componentContext_lazy = () -> LineItem15.mmObject();
 			isDerived = false;
 			xmlTag = "ComrclLineItms";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommercialLineItems";
 			definition = "Goods which are the subject of the invoice.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.LineItem12.mmCommercialLineItems;
+			previousVersion_lazy = () -> LineItem12.mmCommercialLineItems;
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.LineItemDetails14.mmObject();
@@ -287,14 +289,14 @@ public class LineItem15 {
 	 */
 	public static final MMMessageAttribute mmLineItemsTotalAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Invoice.mmTotalInvoiceAmount;
+			businessElementTrace_lazy = () -> Invoice.mmTotalInvoiceAmount;
 			componentContext_lazy = () -> LineItem15.mmObject();
 			isDerived = false;
 			xmlTag = "LineItmsTtlAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LineItemsTotalAmount";
 			definition = "Specifies the total amount of all line items (incl. their adjustments).";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.LineItem12.mmLineItemsTotalAmount;
+			previousVersion_lazy = () -> LineItem12.mmLineItemsTotalAmount;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
@@ -338,14 +340,14 @@ public class LineItem15 {
 	 */
 	public static final MMMessageAssociationEnd mmAdjustment = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Price.mmPriceAdjustment;
+			businessElementTrace_lazy = () -> Price.mmPriceAdjustment;
 			componentContext_lazy = () -> LineItem15.mmObject();
 			isDerived = false;
 			xmlTag = "Adjstmnt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Adjustment";
 			definition = "Variance on price for the goods.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.LineItem12.mmAdjustment;
+			previousVersion_lazy = () -> LineItem12.mmAdjustment;
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.Adjustment6.mmObject();
@@ -388,14 +390,14 @@ public class LineItem15 {
 	 */
 	public static final MMMessageAssociationEnd mmFreightCharges = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Transport.mmTransportCharges;
+			businessElementTrace_lazy = () -> Transport.mmTransportCharges;
 			componentContext_lazy = () -> LineItem15.mmObject();
 			isDerived = false;
 			xmlTag = "FrghtChrgs";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FreightCharges";
 			definition = "Charges related to the conveyance of goods.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.LineItem12.mmFreightCharges;
+			previousVersion_lazy = () -> LineItem12.mmFreightCharges;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -443,14 +445,14 @@ public class LineItem15 {
 	 */
 	public static final MMMessageAssociationEnd mmTax = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Product.mmTax;
+			businessElementTrace_lazy = () -> Product.mmTax;
 			componentContext_lazy = () -> LineItem15.mmObject();
 			isDerived = false;
 			xmlTag = "Tax";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Tax";
 			definition = "Amount of money due to the government or tax authority, according to various pre-defined parameters linked to the value of the goods in a trade transaction.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.LineItem12.mmTax;
+			previousVersion_lazy = () -> LineItem12.mmTax;
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.Tax22.mmObject();
@@ -499,14 +501,14 @@ public class LineItem15 {
 	 */
 	public static final MMMessageAttribute mmTotalNetAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Invoice.mmTotalInvoiceAmount;
+			businessElementTrace_lazy = () -> Invoice.mmTotalInvoiceAmount;
 			componentContext_lazy = () -> LineItem15.mmObject();
 			isDerived = false;
 			xmlTag = "TtlNetAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalNetAmount";
 			definition = "Total net amount of a trade transaction. Total amount resulting from the gross amount plus freight charges, tax and plus/minus Adjustments.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.LineItem12.mmTotalNetAmount;
+			previousVersion_lazy = () -> LineItem12.mmTotalNetAmount;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
@@ -553,10 +555,10 @@ public class LineItem15 {
 			componentContext_lazy = () -> LineItem15.mmObject();
 			isDerived = false;
 			xmlTag = "BuyrDfndInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BuyerDefinedInformation";
 			definition = "Information important for the users of the message/service, which cannot be captured in any other message component/element. For example: Warehouse number.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.LineItem12.mmBuyerDefinedInformation;
+			previousVersion_lazy = () -> LineItem12.mmBuyerDefinedInformation;
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.UserDefinedInformation1.mmObject();
@@ -603,10 +605,10 @@ public class LineItem15 {
 			componentContext_lazy = () -> LineItem15.mmObject();
 			isDerived = false;
 			xmlTag = "SellrDfndInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SellerDefinedInformation";
 			definition = "Information important for the users of the message/service, which cannot be captured in any other message component/element. For example: Warehouse number.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.LineItem12.mmSellerDefinedInformation;
+			previousVersion_lazy = () -> LineItem12.mmSellerDefinedInformation;
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.UserDefinedInformation1.mmObject();
@@ -650,14 +652,14 @@ public class LineItem15 {
 	 */
 	public static final MMMessageAssociationEnd mmIncoterms = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Transport.mmIncoterms;
+			businessElementTrace_lazy = () -> Transport.mmIncoterms;
 			componentContext_lazy = () -> LineItem15.mmObject();
 			isDerived = false;
 			xmlTag = "Incotrms";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Incoterms";
 			definition = "Specifies the applicable Incoterm and associated location.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.LineItem12.mmIncoterms;
+			previousVersion_lazy = () -> LineItem12.mmIncoterms;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -668,13 +670,11 @@ public class LineItem15 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LineItem15.mmPurchaseOrderReference, com.tools20022.repository.msg.LineItem15.mmFinalSubmission,
-						com.tools20022.repository.msg.LineItem15.mmCommercialLineItems, com.tools20022.repository.msg.LineItem15.mmLineItemsTotalAmount, com.tools20022.repository.msg.LineItem15.mmAdjustment,
-						com.tools20022.repository.msg.LineItem15.mmFreightCharges, com.tools20022.repository.msg.LineItem15.mmTax, com.tools20022.repository.msg.LineItem15.mmTotalNetAmount,
-						com.tools20022.repository.msg.LineItem15.mmBuyerDefinedInformation, com.tools20022.repository.msg.LineItem15.mmSellerDefinedInformation, com.tools20022.repository.msg.LineItem15.mmIncoterms);
+				messageElement_lazy = () -> Arrays.asList(LineItem15.mmPurchaseOrderReference, LineItem15.mmFinalSubmission, LineItem15.mmCommercialLineItems, LineItem15.mmLineItemsTotalAmount, LineItem15.mmAdjustment,
+						LineItem15.mmFreightCharges, LineItem15.mmTax, LineItem15.mmTotalNetAmount, LineItem15.mmBuyerDefinedInformation, LineItem15.mmSellerDefinedInformation, LineItem15.mmIncoterms);
 				trace_lazy = () -> CommercialTrade.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "LineItem15";
 				definition = "Commercial details of a trade transaction between a buyer and a seller.";
 				previousVersion_lazy = () -> LineItem12.mmObject();

@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.AffirmationStatus1Code
+ * AffirmationStatus1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -35,13 +44,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.AffirmationStatusCode#mmUnaffirmed
  * AffirmationStatusCode.mmUnaffirmed}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.AffirmationStatus1Code
- * AffirmationStatus1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -91,7 +93,7 @@ public class AffirmationStatusCode {
 	 */
 	public static final MMCode mmAffirmed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Affirmed";
 			definition = "Status of the transaction is affirmed.";
 			owner_lazy = () -> AffirmationStatusCode.mmObject();
@@ -121,7 +123,7 @@ public class AffirmationStatusCode {
 	 */
 	public static final MMCode mmUnaffirmed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unaffirmed";
 			definition = "Status of the transaction is unaffirmed.";
 			owner_lazy = () -> AffirmationStatusCode.mmObject();
@@ -132,12 +134,12 @@ public class AffirmationStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("AFFI");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AffirmationStatusCode";
 				definition = "Specifies the affirmation status of a trade.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AffirmationStatusCode.mmAffirmed, com.tools20022.repository.codeset.AffirmationStatusCode.mmUnaffirmed);
+				code_lazy = () -> Arrays.asList(AffirmationStatusCode.mmAffirmed, AffirmationStatusCode.mmUnaffirmed);
 				derivation_lazy = () -> Arrays.asList(AffirmationStatus1Code.mmObject());
 			}
 		});

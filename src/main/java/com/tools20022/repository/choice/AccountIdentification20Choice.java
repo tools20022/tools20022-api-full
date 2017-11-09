@@ -19,8 +19,10 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.AccountIdentification;
 import com.tools20022.repository.entity.SecuritiesAccount;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.SecuritiesAccount13;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -109,7 +111,7 @@ public class AccountIdentification20Choice {
 			componentContext_lazy = () -> AccountIdentification20Choice.mmObject();
 			isDerived = false;
 			xmlTag = "SctiesAcctId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesAccountIdentification";
 			definition = "Unique identification of the securities account as assigned by the account servicer.";
 			maxOccurs = 1;
@@ -160,7 +162,7 @@ public class AccountIdentification20Choice {
 			componentContext_lazy = () -> AccountIdentification20Choice.mmObject();
 			isDerived = false;
 			xmlTag = "CshAcctId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashAccountIdentification";
 			definition = "Unique identification of the cash account, as assigned by the account servicer.";
 			maxOccurs = 1;
@@ -172,11 +174,10 @@ public class AccountIdentification20Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AccountIdentification20Choice.mmSecuritiesAccountIdentification,
-						com.tools20022.repository.choice.AccountIdentification20Choice.mmCashAccountIdentification);
+				messageElement_lazy = () -> Arrays.asList(AccountIdentification20Choice.mmSecuritiesAccountIdentification, AccountIdentification20Choice.mmCashAccountIdentification);
 				trace_lazy = () -> AccountIdentification.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "AccountIdentification20Choice";
 				definition = "Unique identification of the securities account or the cash account owned by the customer.";
 			}

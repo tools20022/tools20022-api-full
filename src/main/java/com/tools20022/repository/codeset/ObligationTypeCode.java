@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.ObligationType1Code
+ * ObligationType1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>{@linkplain com.tools20022.repository.codeset.ObligationTypeCode#mmFails
@@ -36,13 +45,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.ObligationTypeCode#mmCorporateEvent
  * ObligationTypeCode.mmCorporateEvent}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.ObligationType1Code
- * ObligationType1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -93,7 +95,7 @@ public class ObligationTypeCode {
 	 */
 	public static final MMCode mmFails = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Fails";
 			definition = "Specifies that the obligation is related to a failed trade.";
 			owner_lazy = () -> ObligationTypeCode.mmObject();
@@ -123,7 +125,7 @@ public class ObligationTypeCode {
 	 */
 	public static final MMCode mmNew = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "New";
 			definition = "Specifies that the obligation is related to new a trade.";
 			owner_lazy = () -> ObligationTypeCode.mmObject();
@@ -154,7 +156,7 @@ public class ObligationTypeCode {
 	 */
 	public static final MMCode mmCorporateEvent = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorporateEvent";
 			definition = "Specifies that the obligation is related to a corporate event.";
 			owner_lazy = () -> ObligationTypeCode.mmObject();
@@ -165,13 +167,12 @@ public class ObligationTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("FAIL");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ObligationTypeCode";
 				definition = "Specifies the type of the obligation.";
-				code_lazy = () -> Arrays
-						.asList(com.tools20022.repository.codeset.ObligationTypeCode.mmFails, com.tools20022.repository.codeset.ObligationTypeCode.mmNew, com.tools20022.repository.codeset.ObligationTypeCode.mmCorporateEvent);
+				code_lazy = () -> Arrays.asList(ObligationTypeCode.mmFails, ObligationTypeCode.mmNew, ObligationTypeCode.mmCorporateEvent);
 				derivation_lazy = () -> Arrays.asList(ObligationType1Code.mmObject());
 			}
 		});

@@ -19,7 +19,10 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ActiveOrHistoricCurrencyAndAmount;
+import com.tools20022.repository.entity.SwitchOrder;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -97,11 +100,11 @@ public class AdditionalAmount1Choice {
 	 */
 	public static final MMMessageAttribute mmAdditionalCashIn = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SwitchOrder.mmAdditionalCashIn;
+			businessElementTrace_lazy = () -> SwitchOrder.mmAdditionalCashIn;
 			componentContext_lazy = () -> AdditionalAmount1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlCshIn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalCashIn";
 			definition = "Additional amount of money paid by the investor in addition to the switch redemption amount.";
 			maxOccurs = 1;
@@ -148,11 +151,11 @@ public class AdditionalAmount1Choice {
 	 */
 	public static final MMMessageAttribute mmResultingCashOut = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SwitchOrder.mmResultingCashOut;
+			businessElementTrace_lazy = () -> SwitchOrder.mmResultingCashOut;
 			componentContext_lazy = () -> AdditionalAmount1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "RsltgCshOut";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ResultingCashOut";
 			definition = "Amount of money that results from a switch-out, that is not reinvested in another investment fund, and is repaid to the investor.";
 			maxOccurs = 1;
@@ -164,9 +167,9 @@ public class AdditionalAmount1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AdditionalAmount1Choice.mmAdditionalCashIn, com.tools20022.repository.choice.AdditionalAmount1Choice.mmResultingCashOut);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(AdditionalAmount1Choice.mmAdditionalCashIn, AdditionalAmount1Choice.mmResultingCashOut);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AdditionalAmount1Choice";
 				definition = "Choice between additional cash in or resulting cash out.";
 			}

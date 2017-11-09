@@ -18,7 +18,9 @@
 package com.tools20022.repository.msgset;
 
 import com.tools20022.metamodel.MMMessageSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.caaa.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -107,8 +109,8 @@ public class CardPaymentsExchangesAcceptortoAcquirerISOPreviousversion {
 	final static public MMMessageSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageSet() {
 			{
-				businessProcessCatalogue_lazy = () -> com.tools20022.repository.GeneratedRepository.mmcatalogue;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				businessProcessCatalogue_lazy = () -> GeneratedRepository.mmcatalogue;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Card Payments Exchanges - Acceptor to Acquirer  - ISO - Previous version";
 				definition = "Set of messages that support transactions and services that are related to card payments  between a card acceptor and a card transaction acquirer. It includes the authorisation, cancellation and capture of card transactions.";
 				messageDefinition_lazy = () -> Arrays.asList(AcceptorCompletionAdviceV04.mmObject(), AcceptorDiagnosticResponseV04.mmObject(), AcceptorReconciliationResponseV04.mmObject(), AcceptorCurrencyConversionRequestV02.mmObject(),

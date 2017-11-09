@@ -17,10 +17,10 @@
 
 package com.tools20022.repository.entity;
 
-import com.tools20022.metamodel.MMBusinessAssociationEnd;
-import com.tools20022.metamodel.MMBusinessAttribute;
-import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.*;
 import com.tools20022.repository.datatype.Max350Text;
+import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -34,6 +34,14 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.InvestmentFund#mmFamily
+ * InvestmentFund.mmFamily}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -43,14 +51,6 @@ import java.util.List;
  * <li>
  * {@linkplain com.tools20022.repository.entity.InvestmentFundFamily#mmInvestmentFund
  * InvestmentFundFamily.mmInvestmentFund}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.InvestmentFund#mmFamily
- * InvestmentFund.mmFamily}</li>
  * </ul>
  * </li>
  * <li>
@@ -180,18 +180,14 @@ public class InvestmentFundFamily {
 	 */
 	public static final MMBusinessAttribute mmFundFamilyName = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentAccount17.mmFundFamilyName, com.tools20022.repository.msg.InvestmentAccount27.mmFundFamilyName,
-					com.tools20022.repository.msg.InvestmentAccount35.mmFundFamilyName, com.tools20022.repository.msg.InvestmentAccount19.mmFundFamilyName, com.tools20022.repository.msg.InvestmentAccount18.mmFundFamilyName,
-					com.tools20022.repository.msg.InvestmentAccount29.mmFundFamilyName, com.tools20022.repository.msg.InvestmentAccount28.mmFundFamilyName, com.tools20022.repository.msg.InvestmentAccount36.mmFundFamilyName,
-					com.tools20022.repository.msg.InvestmentAccount16.mmFundFamilyName, com.tools20022.repository.msg.InvestmentAccount26.mmFundFamilyName, com.tools20022.repository.msg.InvestmentAccount34.mmFundFamilyName,
-					com.tools20022.repository.msg.InvestmentAccount38.mmFundFamilyName, com.tools20022.repository.msg.InvestmentAccount37.mmFundFamilyName, com.tools20022.repository.msg.InvestmentAccount39.mmFundFamilyName,
-					com.tools20022.repository.msg.InvestmentAccount44.mmFundFamilyName, com.tools20022.repository.msg.InvestmentAccount46.mmFundFamilyName, com.tools20022.repository.msg.InvestmentAccount47.mmFundFamilyName,
-					com.tools20022.repository.msg.InvestmentAccount49.mmFundFamilyName, com.tools20022.repository.msg.InvestmentAccount51.mmFundFamilyName, com.tools20022.repository.msg.InvestmentAccount50.mmFundFamilyName,
-					com.tools20022.repository.msg.InvestmentAccount52.mmFundFamilyName, com.tools20022.repository.msg.InvestmentAccount61.mmFundFamilyName, com.tools20022.repository.msg.InvestmentAccount63.mmFundFamilyName,
-					com.tools20022.repository.msg.InvestmentAccount62.mmFundFamilyName, com.tools20022.repository.msg.InvestmentAccount64.mmFundFamilyName);
+			derivation_lazy = () -> Arrays.asList(InvestmentAccount17.mmFundFamilyName, InvestmentAccount27.mmFundFamilyName, InvestmentAccount35.mmFundFamilyName, InvestmentAccount19.mmFundFamilyName, InvestmentAccount18.mmFundFamilyName,
+					InvestmentAccount29.mmFundFamilyName, InvestmentAccount28.mmFundFamilyName, InvestmentAccount36.mmFundFamilyName, InvestmentAccount16.mmFundFamilyName, InvestmentAccount26.mmFundFamilyName,
+					InvestmentAccount34.mmFundFamilyName, InvestmentAccount38.mmFundFamilyName, InvestmentAccount37.mmFundFamilyName, InvestmentAccount39.mmFundFamilyName, InvestmentAccount44.mmFundFamilyName,
+					InvestmentAccount46.mmFundFamilyName, InvestmentAccount47.mmFundFamilyName, InvestmentAccount49.mmFundFamilyName, InvestmentAccount51.mmFundFamilyName, InvestmentAccount50.mmFundFamilyName,
+					InvestmentAccount52.mmFundFamilyName, InvestmentAccount61.mmFundFamilyName, InvestmentAccount63.mmFundFamilyName, InvestmentAccount62.mmFundFamilyName, InvestmentAccount64.mmFundFamilyName);
 			elementContext_lazy = () -> InvestmentFundFamily.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "FundFamilyName";
 			definition = "Name of the investment fund family.";
 			maxOccurs = 1;
@@ -241,12 +237,12 @@ public class InvestmentFundFamily {
 		{
 			elementContext_lazy = () -> InvestmentFundFamily.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InvestmentFund";
 			definition = "Pool of financial instruments managed by a professional asset manager and belonging to one or several investment fund families that are part of the same investment fund network.";
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.InvestmentFund.mmFamily;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.InvestmentFund.mmObject();
 		}
 	};
@@ -254,12 +250,12 @@ public class InvestmentFundFamily {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InvestmentFundFamily";
 				definition = "Group of investment funds under the same fund management company.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.InvestmentFund.mmFamily);
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.InvestmentFundFamily.mmFundFamilyName, com.tools20022.repository.entity.InvestmentFundFamily.mmInvestmentFund);
+				element_lazy = () -> Arrays.asList(InvestmentFundFamily.mmFundFamilyName, InvestmentFundFamily.mmInvestmentFund);
 			}
 		});
 		return mmObject_lazy.get();

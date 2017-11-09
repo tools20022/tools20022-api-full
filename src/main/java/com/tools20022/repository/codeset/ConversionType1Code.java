@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ConversionTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -83,7 +85,7 @@ public class ConversionType1Code extends ConversionTypeCode {
 	 */
 	public static final MMCode mmFinal = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Final";
 			owner_lazy = () -> ConversionType1Code.mmObject();
 		}
@@ -106,7 +108,7 @@ public class ConversionType1Code extends ConversionTypeCode {
 	 */
 	public static final MMCode mmInterim = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Interim";
 			owner_lazy = () -> ConversionType1Code.mmObject();
 		}
@@ -115,12 +117,12 @@ public class ConversionType1Code extends ConversionTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("FINL");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ConversionType1Code";
 				definition = "Specifies the type of conversion.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ConversionType1Code.mmFinal, com.tools20022.repository.codeset.ConversionType1Code.mmInterim);
+				code_lazy = () -> Arrays.asList(ConversionType1Code.mmFinal, ConversionType1Code.mmInterim);
 				trace_lazy = () -> ConversionTypeCode.mmObject();
 			}
 		});

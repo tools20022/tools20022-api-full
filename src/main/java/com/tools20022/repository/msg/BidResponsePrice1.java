@@ -20,11 +20,13 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CountryCode;
 import com.tools20022.repository.codeset.Side1Code;
 import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
 import com.tools20022.repository.datatype.TrueFalseIndicator;
-import com.tools20022.repository.entity.Quote;
+import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -112,11 +114,11 @@ public class BidResponsePrice1 {
 	 */
 	public static final MMMessageAttribute mmPrice = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Quote.mmPrice;
+			businessElementTrace_lazy = () -> Quote.mmPrice;
 			componentContext_lazy = () -> BidResponsePrice1.mmObject();
 			isDerived = false;
 			xmlTag = "Pric";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Price";
 			definition = "Price of the instrument, applicable to the bid.";
 			maxOccurs = 1;
@@ -160,11 +162,11 @@ public class BidResponsePrice1 {
 	 */
 	public static final MMMessageAttribute mmCommission = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesQuoteVariable.mmCommission;
+			businessElementTrace_lazy = () -> SecuritiesQuoteVariable.mmCommission;
 			componentContext_lazy = () -> BidResponsePrice1.mmObject();
 			isDerived = false;
 			xmlTag = "Comssn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Commission";
 			definition = "Amount of money due to a party as compensation for a service.";
 			maxOccurs = 1;
@@ -208,11 +210,11 @@ public class BidResponsePrice1 {
 	 */
 	public static final MMMessageAttribute mmGrossIndicator = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ListTrading.mmGrossAmountIndicator;
+			businessElementTrace_lazy = () -> ListTrading.mmGrossAmountIndicator;
 			componentContext_lazy = () -> BidResponsePrice1.mmObject();
 			isDerived = false;
 			xmlTag = "GrssInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GrossIndicator";
 			definition = "Indicates whether the bid response price is gross.";
 			maxOccurs = 1;
@@ -258,11 +260,11 @@ public class BidResponsePrice1 {
 	 */
 	public static final MMMessageAttribute mmSide = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmSide;
+			businessElementTrace_lazy = () -> SecuritiesOrder.mmSide;
 			componentContext_lazy = () -> BidResponsePrice1.mmObject();
 			isDerived = false;
 			xmlTag = "Sd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Side";
 			definition = "Indicates that bid is required on assumption that SideValue1 is Buy or Sell. SideValue2 can be derived by inference.";
 			maxOccurs = 1;
@@ -310,11 +312,11 @@ public class BidResponsePrice1 {
 	 */
 	public static final MMMessageAttribute mmFairValue = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ExchangeForPhysicalTrade.mmFairValue;
+			businessElementTrace_lazy = () -> ExchangeForPhysicalTrade.mmFairValue;
 			componentContext_lazy = () -> BidResponsePrice1.mmObject();
 			isDerived = false;
 			xmlTag = "FairVal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FairValue";
 			definition = "Difference between the value of a future and the value of the underlying equities after allowing for the discounted cash flows associated with the underlying stocks.";
 			maxOccurs = 1;
@@ -357,11 +359,11 @@ public class BidResponsePrice1 {
 	 */
 	public static final MMMessageAttribute mmCountry = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Country.mmCode;
+			businessElementTrace_lazy = () -> Country.mmCode;
 			componentContext_lazy = () -> BidResponsePrice1.mmObject();
 			isDerived = false;
 			xmlTag = "Ctry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Country";
 			definition = "Country to which the residential status is applicable.";
 			maxOccurs = 1;
@@ -403,11 +405,11 @@ public class BidResponsePrice1 {
 	 */
 	public static final MMMessageAssociationEnd mmTradingSession = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesQuoteVariable.mmQuoteTradingSession;
+			businessElementTrace_lazy = () -> SecuritiesQuoteVariable.mmQuoteTradingSession;
 			componentContext_lazy = () -> BidResponsePrice1.mmObject();
 			isDerived = false;
 			xmlTag = "TradgSsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradingSession";
 			definition = "Established constraints under which a market operates";
 			maxOccurs = 1;
@@ -451,11 +453,11 @@ public class BidResponsePrice1 {
 	 */
 	public static final MMMessageAssociationEnd mmSettlementDetails = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeExecution.mmSecuritiesSettlement;
+			businessElementTrace_lazy = () -> SecuritiesTradeExecution.mmSecuritiesSettlement;
 			componentContext_lazy = () -> BidResponsePrice1.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementDetails";
 			definition = "Parameters applied to the settlement of a security transfer.";
 			maxOccurs = 1;
@@ -468,12 +470,11 @@ public class BidResponsePrice1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BidResponsePrice1.mmPrice, com.tools20022.repository.msg.BidResponsePrice1.mmCommission,
-						com.tools20022.repository.msg.BidResponsePrice1.mmGrossIndicator, com.tools20022.repository.msg.BidResponsePrice1.mmSide, com.tools20022.repository.msg.BidResponsePrice1.mmFairValue,
-						com.tools20022.repository.msg.BidResponsePrice1.mmCountry, com.tools20022.repository.msg.BidResponsePrice1.mmTradingSession, com.tools20022.repository.msg.BidResponsePrice1.mmSettlementDetails);
+				messageElement_lazy = () -> Arrays.asList(BidResponsePrice1.mmPrice, BidResponsePrice1.mmCommission, BidResponsePrice1.mmGrossIndicator, BidResponsePrice1.mmSide, BidResponsePrice1.mmFairValue, BidResponsePrice1.mmCountry,
+						BidResponsePrice1.mmTradingSession, BidResponsePrice1.mmSettlementDetails);
 				trace_lazy = () -> Quote.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "BidResponsePrice1";
 				definition = "Indicates the price of the bid response.";
 			}

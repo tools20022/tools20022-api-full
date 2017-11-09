@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.NotificationTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -84,7 +86,7 @@ public class NotificationType1Code extends NotificationTypeCode {
 	 */
 	public static final MMCode mmMustWithdrawFromTransaction = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MustWithdrawFromTransaction";
 			owner_lazy = () -> NotificationType1Code.mmObject();
 		}
@@ -107,7 +109,7 @@ public class NotificationType1Code extends NotificationTypeCode {
 	 */
 	public static final MMCode mmCannotSubmitDataSet = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CannotSubmitDataSet";
 			owner_lazy = () -> NotificationType1Code.mmObject();
 		}
@@ -116,12 +118,12 @@ public class NotificationType1Code extends NotificationTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("MWFT");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "NotificationType1Code";
 				definition = "Specifies which type of action a user must take or is prevented to take.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.NotificationType1Code.mmMustWithdrawFromTransaction, com.tools20022.repository.codeset.NotificationType1Code.mmCannotSubmitDataSet);
+				code_lazy = () -> Arrays.asList(NotificationType1Code.mmMustWithdrawFromTransaction, NotificationType1Code.mmCannotSubmitDataSet);
 				trace_lazy = () -> NotificationTypeCode.mmObject();
 			}
 		});

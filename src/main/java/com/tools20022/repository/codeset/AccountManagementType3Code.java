@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.AccountManagementTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -83,7 +85,7 @@ public class AccountManagementType3Code extends AccountManagementTypeCode {
 	 */
 	public static final MMCode mmAccountModification = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountModification";
 			owner_lazy = () -> AccountManagementType3Code.mmObject();
 		}
@@ -106,7 +108,7 @@ public class AccountManagementType3Code extends AccountManagementTypeCode {
 	 */
 	public static final MMCode mmAccountOpening = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountOpening";
 			owner_lazy = () -> AccountManagementType3Code.mmObject();
 		}
@@ -129,7 +131,7 @@ public class AccountManagementType3Code extends AccountManagementTypeCode {
 	 */
 	public static final MMCode mmGetAccountDetails = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GetAccountDetails";
 			owner_lazy = () -> AccountManagementType3Code.mmObject();
 		}
@@ -152,7 +154,7 @@ public class AccountManagementType3Code extends AccountManagementTypeCode {
 	 */
 	public static final MMCode mmAccountStatus = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountStatus";
 			owner_lazy = () -> AccountManagementType3Code.mmObject();
 		}
@@ -161,12 +163,11 @@ public class AccountManagementType3Code extends AccountManagementTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AccountManagementType3Code";
 				definition = "Specifies the instruction for which an status is required.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AccountManagementType3Code.mmAccountModification, com.tools20022.repository.codeset.AccountManagementType3Code.mmAccountOpening,
-						com.tools20022.repository.codeset.AccountManagementType3Code.mmGetAccountDetails, com.tools20022.repository.codeset.AccountManagementType3Code.mmAccountStatus);
+				code_lazy = () -> Arrays.asList(AccountManagementType3Code.mmAccountModification, AccountManagementType3Code.mmAccountOpening, AccountManagementType3Code.mmGetAccountDetails, AccountManagementType3Code.mmAccountStatus);
 				trace_lazy = () -> AccountManagementTypeCode.mmObject();
 			}
 		});

@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.SecuritiesQuantityTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -77,7 +79,7 @@ public class SecuritiesQuantity2Code extends SecuritiesQuantityTypeCode {
 	 */
 	public static final MMCode mmUnknown = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unknown";
 			owner_lazy = () -> SecuritiesQuantity2Code.mmObject();
 			codeName = "UKWN";
@@ -87,11 +89,11 @@ public class SecuritiesQuantity2Code extends SecuritiesQuantityTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesQuantity2Code";
 				definition = "TSE/JASDEC codes for unknown number of shares to be purchased.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SecuritiesQuantity2Code.mmUnknown);
+				code_lazy = () -> Arrays.asList(SecuritiesQuantity2Code.mmUnknown);
 				trace_lazy = () -> SecuritiesQuantityTypeCode.mmObject();
 			}
 		});

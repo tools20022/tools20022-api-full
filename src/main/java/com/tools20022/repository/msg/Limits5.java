@@ -19,7 +19,9 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.RiskManagementLimit;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -106,10 +108,10 @@ public class Limits5 {
 			componentContext_lazy = () -> Limits5.mmObject();
 			isDerived = false;
 			xmlTag = "CurLmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrentLimit";
 			definition = "Report is given for a current risk management type limit.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Limits4.mmCurrentLimit;
+			previousVersion_lazy = () -> Limits4.mmCurrentLimit;
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.LimitReport5.mmObject();
@@ -158,10 +160,10 @@ public class Limits5 {
 			componentContext_lazy = () -> Limits5.mmObject();
 			isDerived = false;
 			xmlTag = "DfltLmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DefaultLimit";
 			definition = "Report is given for a default risk management type limit.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Limits4.mmDefaultLimit;
+			previousVersion_lazy = () -> Limits4.mmDefaultLimit;
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.LimitReport5.mmObject();
@@ -171,10 +173,10 @@ public class Limits5 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Limits5.mmCurrentLimit, com.tools20022.repository.msg.Limits5.mmDefaultLimit);
+				messageElement_lazy = () -> Arrays.asList(Limits5.mmCurrentLimit, Limits5.mmDefaultLimit);
 				trace_lazy = () -> RiskManagementLimit.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Limits5";
 				definition = "Reports on limits.";
 				previousVersion_lazy = () -> Limits4.mmObject();

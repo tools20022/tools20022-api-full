@@ -19,7 +19,9 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.Price;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.SecuritiesTransactionPrice1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -100,11 +102,11 @@ public class SecuritiesTransactionPrice4Choice {
 	 */
 	public static final MMMessageAssociationEnd mmPrice = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Price.mmSecuritiesPricing;
+			businessElementTrace_lazy = () -> Price.mmSecuritiesPricing;
 			componentContext_lazy = () -> SecuritiesTransactionPrice4Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Pric";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Price";
 			definition = "Predetermined price at which the holder will have to buy or sell the underlying instrument.";
 			maxOccurs = 1;
@@ -146,7 +148,7 @@ public class SecuritiesTransactionPrice4Choice {
 			componentContext_lazy = () -> SecuritiesTransactionPrice4Choice.mmObject();
 			isDerived = false;
 			xmlTag = "NoPric";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoPrice";
 			definition = "Captures where no price is yet known.";
 			maxOccurs = 1;
@@ -159,10 +161,10 @@ public class SecuritiesTransactionPrice4Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SecuritiesTransactionPrice4Choice.mmPrice, com.tools20022.repository.choice.SecuritiesTransactionPrice4Choice.mmNoPrice);
+				messageElement_lazy = () -> Arrays.asList(SecuritiesTransactionPrice4Choice.mmPrice, SecuritiesTransactionPrice4Choice.mmNoPrice);
 				trace_lazy = () -> Price.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesTransactionPrice4Choice";
 				definition = "Choice element capturing strike price related descriptive information.";
 			}

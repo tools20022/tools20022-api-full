@@ -19,9 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.IndicativeOrMarketPrice3Choice;
 import com.tools20022.repository.choice.PriceFormat15Choice;
 import com.tools20022.repository.entity.CorporateActionPrice;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -103,7 +105,7 @@ public class CorporateActionPrice13 {
 			componentContext_lazy = () -> CorporateActionPrice13.mmObject();
 			isDerived = false;
 			xmlTag = "IndctvOrMktPric";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IndicativeOrMarketPrice";
 			definition = "Indicates whether the price is an indicative price or a market price.";
 			maxOccurs = 1;
@@ -149,11 +151,11 @@ public class CorporateActionPrice13 {
 	 */
 	public static final MMMessageAssociationEnd mmCashInLieuOfSharePrice = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionPrice.mmCashInLieuOfSharePrice;
+			businessElementTrace_lazy = () -> CorporateActionPrice.mmCashInLieuOfSharePrice;
 			componentContext_lazy = () -> CorporateActionPrice13.mmObject();
 			isDerived = false;
 			xmlTag = "CshInLieuOfShrPric";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashInLieuOfSharePrice";
 			definition = "Cash disbursement in lieu of equities; usually in lieu of fractional quantity.";
 			maxOccurs = 1;
@@ -166,10 +168,10 @@ public class CorporateActionPrice13 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionPrice13.mmIndicativeOrMarketPrice, com.tools20022.repository.msg.CorporateActionPrice13.mmCashInLieuOfSharePrice);
+				messageElement_lazy = () -> Arrays.asList(CorporateActionPrice13.mmIndicativeOrMarketPrice, CorporateActionPrice13.mmCashInLieuOfSharePrice);
 				trace_lazy = () -> CorporateActionPrice.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionPrice13";
 				definition = "Specifies prices related to a corporate action option.";
 			}

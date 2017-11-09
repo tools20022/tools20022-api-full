@@ -20,8 +20,10 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.NoReasonCode;
 import com.tools20022.repository.datatype.Max50Text;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.PersonIdentification12;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -105,10 +107,10 @@ public class ExecutingParty1Choice {
 			componentContext_lazy = () -> ExecutingParty1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Person";
 			definition = "Identification of a person.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.InvestmentParty1Choice.mmPerson;
+			previousVersion_lazy = () -> InvestmentParty1Choice.mmPerson;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -153,10 +155,10 @@ public class ExecutingParty1Choice {
 			componentContext_lazy = () -> ExecutingParty1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Algo";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Algorithm";
 			definition = "Identification of an algorithm.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.InvestmentParty1Choice.mmAlgorithm;
+			previousVersion_lazy = () -> InvestmentParty1Choice.mmAlgorithm;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max50Text.mmObject();
@@ -196,7 +198,7 @@ public class ExecutingParty1Choice {
 			componentContext_lazy = () -> ExecutingParty1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Clnt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Client";
 			definition = "Indication that the transaction was executed directly by the client.";
 			maxOccurs = 1;
@@ -208,10 +210,9 @@ public class ExecutingParty1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ExecutingParty1Choice.mmPerson, com.tools20022.repository.choice.ExecutingParty1Choice.mmAlgorithm,
-						com.tools20022.repository.choice.ExecutingParty1Choice.mmClient);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(ExecutingParty1Choice.mmPerson, ExecutingParty1Choice.mmAlgorithm, ExecutingParty1Choice.mmClient);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ExecutingParty1Choice";
 				definition = "Identification of the executing party.";
 				previousVersion_lazy = () -> InvestmentParty1Choice.mmObject();

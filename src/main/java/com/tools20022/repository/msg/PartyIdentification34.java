@@ -20,13 +20,17 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.BeneficiaryCertificationType4Choice;
 import com.tools20022.repository.choice.FinancialInstrumentQuantity15Choice;
 import com.tools20022.repository.choice.PartyIdentification16Choice;
 import com.tools20022.repository.codeset.CountryCode;
 import com.tools20022.repository.datatype.RestrictedFINXMax350Text;
 import com.tools20022.repository.entity.BeneficialOwner;
+import com.tools20022.repository.entity.Country;
 import com.tools20022.repository.entity.PartyIdentificationInformation;
+import com.tools20022.repository.entity.Security;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -128,7 +132,7 @@ public class PartyIdentification34 {
 			componentContext_lazy = () -> PartyIdentification34.mmObject();
 			isDerived = false;
 			xmlTag = "OwnrId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OwnerIdentification";
 			definition = "Party that is the beneficial owner of the specified quantity of securities.";
 			maxOccurs = 1;
@@ -176,7 +180,7 @@ public class PartyIdentification34 {
 			componentContext_lazy = () -> PartyIdentification34.mmObject();
 			isDerived = false;
 			xmlTag = "AltrnId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AlternateIdentification";
 			definition = "Alternate identification for a party.";
 			minOccurs = 0;
@@ -222,11 +226,11 @@ public class PartyIdentification34 {
 	 */
 	public static final MMMessageAttribute mmDomicileCountry = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Country.mmCode;
+			businessElementTrace_lazy = () -> Country.mmCode;
 			componentContext_lazy = () -> PartyIdentification34.mmObject();
 			isDerived = false;
 			xmlTag = "DmclCtry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DomicileCountry";
 			definition = "Country in which a person is permanently domiciled (the place of a persons permanent home).";
 			maxOccurs = 1;
@@ -272,11 +276,11 @@ public class PartyIdentification34 {
 	 */
 	public static final MMMessageAttribute mmNonDomicileCountry = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Country.mmCode;
+			businessElementTrace_lazy = () -> Country.mmCode;
 			componentContext_lazy = () -> PartyIdentification34.mmObject();
 			isDerived = false;
 			xmlTag = "NonDmclCtry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonDomicileCountry";
 			definition = "Holder of the security certifies, in line with the terms of the corporate action, that it is not domiciled in the country indicated.";
 			minOccurs = 0;
@@ -319,11 +323,11 @@ public class PartyIdentification34 {
 	 */
 	public static final MMMessageAssociationEnd mmOwnedSecuritiesQuantity = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmSecuritiesQuantity;
+			businessElementTrace_lazy = () -> Security.mmSecuritiesQuantity;
 			componentContext_lazy = () -> PartyIdentification34.mmObject();
 			isDerived = false;
 			xmlTag = "OwndSctiesQty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OwnedSecuritiesQuantity";
 			definition = "Quantity of securities belonging to the beneficial owner specified.";
 			maxOccurs = 1;
@@ -367,11 +371,11 @@ public class PartyIdentification34 {
 	 */
 	public static final MMMessageAssociationEnd mmCertificationType = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BeneficialOwner.mmCertificationType;
+			businessElementTrace_lazy = () -> BeneficialOwner.mmCertificationType;
 			componentContext_lazy = () -> PartyIdentification34.mmObject();
 			isDerived = false;
 			xmlTag = "CertfctnTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CertificationType";
 			definition = "Type of certification which is required.";
 			minOccurs = 0;
@@ -418,11 +422,11 @@ public class PartyIdentification34 {
 	 */
 	public static final MMMessageAttribute mmDeclarationDetails = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.mmDeclaration;
+			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmDeclaration;
 			componentContext_lazy = () -> PartyIdentification34.mmObject();
 			isDerived = false;
 			xmlTag = "DclrtnDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeclarationDetails";
 			definition = "Provides details relative to the beneficial owner not included within structured fields of this message.";
 			maxOccurs = 1;
@@ -434,13 +438,11 @@ public class PartyIdentification34 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyIdentification34.mmOwnerIdentification, com.tools20022.repository.msg.PartyIdentification34.mmAlternateIdentification,
-						com.tools20022.repository.msg.PartyIdentification34.mmDomicileCountry, com.tools20022.repository.msg.PartyIdentification34.mmNonDomicileCountry,
-						com.tools20022.repository.msg.PartyIdentification34.mmOwnedSecuritiesQuantity, com.tools20022.repository.msg.PartyIdentification34.mmCertificationType,
-						com.tools20022.repository.msg.PartyIdentification34.mmDeclarationDetails);
+				messageElement_lazy = () -> Arrays.asList(PartyIdentification34.mmOwnerIdentification, PartyIdentification34.mmAlternateIdentification, PartyIdentification34.mmDomicileCountry, PartyIdentification34.mmNonDomicileCountry,
+						PartyIdentification34.mmOwnedSecuritiesQuantity, PartyIdentification34.mmCertificationType, PartyIdentification34.mmDeclarationDetails);
 				trace_lazy = () -> PartyIdentificationInformation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PartyIdentification34";
 				definition = "Provides information about the beneficial owner of the securities.";
 			}

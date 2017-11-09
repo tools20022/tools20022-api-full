@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -174,7 +176,7 @@ public class YieldTypeCode {
 	 */
 	public static final MMCode mmAfterTax = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AfterTax";
 			definition = "The yield on the bond net of any tax consequences from holding the bond. The discount on municipal securities can be subject to both capital gains taxes and ordinary income taxes. Calculated from dollar price.";
 			owner_lazy = () -> YieldTypeCode.mmObject();
@@ -207,7 +209,7 @@ public class YieldTypeCode {
 	 */
 	public static final MMCode mmAnnual = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Annual";
 			definition = "The annual interest or dividend income an investment earns, expressed as a percentage of the investment's total value.";
 			owner_lazy = () -> YieldTypeCode.mmObject();
@@ -237,7 +239,7 @@ public class YieldTypeCode {
 	 */
 	public static final MMCode mmAtIssue = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AtIssue";
 			definition = "The yield of the bond offered on the issue date.";
 			owner_lazy = () -> YieldTypeCode.mmObject();
@@ -271,7 +273,7 @@ public class YieldTypeCode {
 	 */
 	public static final MMCode mmToAverageLife = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ToAverageLife";
 			definition = "The yield assuming that all sinks (mandatory and voluntary) are taken at par. This results in a faster paydown of debt; the yield is then calculated to the average life date.";
 			owner_lazy = () -> YieldTypeCode.mmObject();
@@ -304,7 +306,7 @@ public class YieldTypeCode {
 	 */
 	public static final MMCode mmToAverageMaturity = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ToAverageMaturity";
 			definition = "The yield achieved by substituting a bond's average maturity for the issue's final maturity date.";
 			owner_lazy = () -> YieldTypeCode.mmObject();
@@ -338,7 +340,7 @@ public class YieldTypeCode {
 	 */
 	public static final MMCode mmBook = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Book";
 			definition = "The yield of a security calculated by using its book value instead of the current market price.  This term is typically used in the US domestic market.";
 			owner_lazy = () -> YieldTypeCode.mmObject();
@@ -368,7 +370,7 @@ public class YieldTypeCode {
 	 */
 	public static final MMCode mmToNextCall = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ToNextCall";
 			definition = "The yield of a bond to the next possible call date.";
 			owner_lazy = () -> YieldTypeCode.mmObject();
@@ -399,7 +401,7 @@ public class YieldTypeCode {
 	 */
 	public static final MMCode mmChangeSinceClose = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChangeSinceClose";
 			definition = "The change in the yield since the previous day's closing yield.";
 			owner_lazy = () -> YieldTypeCode.mmObject();
@@ -429,7 +431,7 @@ public class YieldTypeCode {
 	 */
 	public static final MMCode mmClosing = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Closing";
 			definition = "The yield of a bond based on the closing price.";
 			owner_lazy = () -> YieldTypeCode.mmObject();
@@ -463,7 +465,7 @@ public class YieldTypeCode {
 	 */
 	public static final MMCode mmCompound = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Compound";
 			definition = "The yield of certain Japanese bonds based on its price. Certain Japanese bonds have irregular first or last coupons, and the yield is calculated compound for these irregular periods.";
 			owner_lazy = () -> YieldTypeCode.mmObject();
@@ -496,7 +498,7 @@ public class YieldTypeCode {
 	 */
 	public static final MMCode mmCurrent = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Current";
 			definition = "Annual interest on a bond divided by the market value. The actual income rate of return as opposed to the coupon rate expressed as a percentage.";
 			owner_lazy = () -> YieldTypeCode.mmObject();
@@ -529,7 +531,7 @@ public class YieldTypeCode {
 	 */
 	public static final MMCode mmTrueGross = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TrueGross";
 			definition = "Yield calculated using the price including accrued interest, where coupon dates are moved from holidays and weekends to the next trading day.";
 			owner_lazy = () -> YieldTypeCode.mmObject();
@@ -562,7 +564,7 @@ public class YieldTypeCode {
 	 */
 	public static final MMCode mmGovernmentEquivalent = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GovernmentEquivalent";
 			definition = "Ask yield based on semi-annual coupons compounding in all periods and actual/actual calendar.";
 			owner_lazy = () -> YieldTypeCode.mmObject();
@@ -596,7 +598,7 @@ public class YieldTypeCode {
 	 */
 	public static final MMCode mmInflationAssumption = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InflationAssumption";
 			definition = "Based on price, the return an investor would require on a normal bond that would make the real return equal to that of the inflation-indexed bond, assuming a constant inflation rate.";
 			owner_lazy = () -> YieldTypeCode.mmObject();
@@ -629,7 +631,7 @@ public class YieldTypeCode {
 	 */
 	public static final MMCode mmInverseFloater = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InverseFloater";
 			definition = "Inverse Floater Bond Yield - Inverse floater semi-annual bond equivalent rate.";
 			owner_lazy = () -> YieldTypeCode.mmObject();
@@ -662,7 +664,7 @@ public class YieldTypeCode {
 	 */
 	public static final MMCode mmLastClose = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LastClose";
 			definition = "Most Recent Closing Yield - The last available yield stored in history, computed using price.";
 			owner_lazy = () -> YieldTypeCode.mmObject();
@@ -695,7 +697,7 @@ public class YieldTypeCode {
 	 */
 	public static final MMCode mmLastMonth = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LastMonth";
 			definition = "Closing Yield Most Recent Month - The yield of a bond based on the closing price as of the most recent month's end.";
 			owner_lazy = () -> YieldTypeCode.mmObject();
@@ -728,7 +730,7 @@ public class YieldTypeCode {
 	 */
 	public static final MMCode mmLastQuarter = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LastQuarter";
 			definition = "Closing Yield Most Recent Quarter - The yield of a bond based on the closing price as of the most recent quarter's end.";
 			owner_lazy = () -> YieldTypeCode.mmObject();
@@ -761,7 +763,7 @@ public class YieldTypeCode {
 	 */
 	public static final MMCode mmLastYear = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LastYear";
 			definition = "Closing Yield Most Recent Year - The yield of a bond based on the closing price as of the most recent year's end.";
 			owner_lazy = () -> YieldTypeCode.mmObject();
@@ -795,7 +797,7 @@ public class YieldTypeCode {
 	 */
 	public static final MMCode mmLongestAverageLife = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LongestAverageLife";
 			definition = "The yield assuming only mandatory sinks are taken.  This results in a lower paydown of debt; the yield is then calculated to the final payment date.";
 			owner_lazy = () -> YieldTypeCode.mmObject();
@@ -829,7 +831,7 @@ public class YieldTypeCode {
 	 */
 	public static final MMCode mmLongestAverage = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LongestAverage";
 			definition = "Yield to Longest Average (Sinking Fund Bonds) - The yield assuming only mandatory sinks are taken.  This results in a slower paydown of debt; the yield is then calculated to the final payment date.";
 			owner_lazy = () -> YieldTypeCode.mmObject();
@@ -862,7 +864,7 @@ public class YieldTypeCode {
 	 */
 	public static final MMCode mmMarkToMarket = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarkToMarket";
 			definition = "An adjustment in the valuation of a securities portfolio to reflect the current market values of the respective securities in the portfolio.";
 			owner_lazy = () -> YieldTypeCode.mmObject();
@@ -892,7 +894,7 @@ public class YieldTypeCode {
 	 */
 	public static final MMCode mmMaturity = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Maturity";
 			definition = "The yield of a bond to its maturity date.";
 			owner_lazy = () -> YieldTypeCode.mmObject();
@@ -925,7 +927,7 @@ public class YieldTypeCode {
 	 */
 	public static final MMCode mmToNextRefund = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ToNextRefund";
 			definition = "Yield To Next Refund (Sinking Fund Bonds) - Yield assuming all bonds are redeemed at the next refund date at the redemption price.";
 			owner_lazy = () -> YieldTypeCode.mmObject();
@@ -956,7 +958,7 @@ public class YieldTypeCode {
 	 */
 	public static final MMCode mmOpenAverage = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OpenAverage";
 			definition = "The average yield of the respective securities in the portfolio.";
 			owner_lazy = () -> YieldTypeCode.mmObject();
@@ -989,7 +991,7 @@ public class YieldTypeCode {
 	 */
 	public static final MMCode mmToNextPut = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ToNextPut";
 			definition = "The yield to the date at which the bond holder can next put the bond to the issuer.";
 			owner_lazy = () -> YieldTypeCode.mmObject();
@@ -1020,7 +1022,7 @@ public class YieldTypeCode {
 	 */
 	public static final MMCode mmPreviousClose = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousClose";
 			definition = "The yield of a bond based on the closing price 1 day ago.";
 			owner_lazy = () -> YieldTypeCode.mmObject();
@@ -1053,7 +1055,7 @@ public class YieldTypeCode {
 	 */
 	public static final MMCode mmProceeds = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proceeds";
 			definition = "The CD equivalent yield when the remaining time to maturity is less than two years.";
 			owner_lazy = () -> YieldTypeCode.mmObject();
@@ -1085,7 +1087,7 @@ public class YieldTypeCode {
 	 */
 	public static final MMCode mmSemiAnnual = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SemiAnnual";
 			definition = "The yield of a bond whose coupon payments are reinvested semi-annually.";
 			owner_lazy = () -> YieldTypeCode.mmObject();
@@ -1119,7 +1121,7 @@ public class YieldTypeCode {
 	 */
 	public static final MMCode mmShortestAverageLife = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ShortestAverageLife";
 			definition = "The yield assuming that all sinks (mandatory and voluntary) are taken at par. This results in a faster paydown of debt; the yield is then calculated to the shortest average life date.";
 			owner_lazy = () -> YieldTypeCode.mmObject();
@@ -1153,7 +1155,7 @@ public class YieldTypeCode {
 	 */
 	public static final MMCode mmShortestAverage = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ShortestAverage";
 			definition = "Yield to Shortest Average (Sinking Fund Bonds) - The yield assuming that all sinks (mandatory and voluntary) are taken.  This results in a faster paydown of debt; the yield is then calculated to the final payment date.";
 			owner_lazy = () -> YieldTypeCode.mmObject();
@@ -1186,7 +1188,7 @@ public class YieldTypeCode {
 	 */
 	public static final MMCode mmSimple = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Simple";
 			definition = "The yield of a bond assuming no reinvestment of coupon payments. (Act/360 day count).";
 			owner_lazy = () -> YieldTypeCode.mmObject();
@@ -1219,7 +1221,7 @@ public class YieldTypeCode {
 	 */
 	public static final MMCode mmTaxEquivalent = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxEquivalent";
 			definition = "The after tax yield grossed up by the maximum federal tax rate of 39.6%.  For comparison to taxable yields.";
 			owner_lazy = () -> YieldTypeCode.mmObject();
@@ -1250,7 +1252,7 @@ public class YieldTypeCode {
 	 */
 	public static final MMCode mmToTenderDate = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ToTenderDate";
 			definition = "The yield on a Municipal bond to its mandatory tender date.";
 			owner_lazy = () -> YieldTypeCode.mmObject();
@@ -1283,7 +1285,7 @@ public class YieldTypeCode {
 	 */
 	public static final MMCode mmTrue = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "True";
 			definition = "The yield calculated with coupon dates moved from a weekend or holiday to the next valid settlement date.";
 			owner_lazy = () -> YieldTypeCode.mmObject();
@@ -1316,7 +1318,7 @@ public class YieldTypeCode {
 	 */
 	public static final MMCode mmProportion = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proportion";
 			definition = "Yield Value Of 1/32 - The amount that the yield will change for a 1/32nd change in price.";
 			owner_lazy = () -> YieldTypeCode.mmObject();
@@ -1347,7 +1349,7 @@ public class YieldTypeCode {
 	 */
 	public static final MMCode mmToWorstConvention = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ToWorstConvention";
 			definition = "The lowest yield to all possible redemption date scenarios.";
 			owner_lazy = () -> YieldTypeCode.mmObject();
@@ -1358,24 +1360,17 @@ public class YieldTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("AFTX");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "YieldTypeCode";
 				definition = "Yield computation method.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.YieldTypeCode.mmAfterTax, com.tools20022.repository.codeset.YieldTypeCode.mmAnnual, com.tools20022.repository.codeset.YieldTypeCode.mmAtIssue,
-						com.tools20022.repository.codeset.YieldTypeCode.mmToAverageLife, com.tools20022.repository.codeset.YieldTypeCode.mmToAverageMaturity, com.tools20022.repository.codeset.YieldTypeCode.mmBook,
-						com.tools20022.repository.codeset.YieldTypeCode.mmToNextCall, com.tools20022.repository.codeset.YieldTypeCode.mmChangeSinceClose, com.tools20022.repository.codeset.YieldTypeCode.mmClosing,
-						com.tools20022.repository.codeset.YieldTypeCode.mmCompound, com.tools20022.repository.codeset.YieldTypeCode.mmCurrent, com.tools20022.repository.codeset.YieldTypeCode.mmTrueGross,
-						com.tools20022.repository.codeset.YieldTypeCode.mmGovernmentEquivalent, com.tools20022.repository.codeset.YieldTypeCode.mmInflationAssumption, com.tools20022.repository.codeset.YieldTypeCode.mmInverseFloater,
-						com.tools20022.repository.codeset.YieldTypeCode.mmLastClose, com.tools20022.repository.codeset.YieldTypeCode.mmLastMonth, com.tools20022.repository.codeset.YieldTypeCode.mmLastQuarter,
-						com.tools20022.repository.codeset.YieldTypeCode.mmLastYear, com.tools20022.repository.codeset.YieldTypeCode.mmLongestAverageLife, com.tools20022.repository.codeset.YieldTypeCode.mmLongestAverage,
-						com.tools20022.repository.codeset.YieldTypeCode.mmMarkToMarket, com.tools20022.repository.codeset.YieldTypeCode.mmMaturity, com.tools20022.repository.codeset.YieldTypeCode.mmToNextRefund,
-						com.tools20022.repository.codeset.YieldTypeCode.mmOpenAverage, com.tools20022.repository.codeset.YieldTypeCode.mmToNextPut, com.tools20022.repository.codeset.YieldTypeCode.mmPreviousClose,
-						com.tools20022.repository.codeset.YieldTypeCode.mmProceeds, com.tools20022.repository.codeset.YieldTypeCode.mmSemiAnnual, com.tools20022.repository.codeset.YieldTypeCode.mmShortestAverageLife,
-						com.tools20022.repository.codeset.YieldTypeCode.mmShortestAverage, com.tools20022.repository.codeset.YieldTypeCode.mmSimple, com.tools20022.repository.codeset.YieldTypeCode.mmTaxEquivalent,
-						com.tools20022.repository.codeset.YieldTypeCode.mmToTenderDate, com.tools20022.repository.codeset.YieldTypeCode.mmTrue, com.tools20022.repository.codeset.YieldTypeCode.mmProportion,
-						com.tools20022.repository.codeset.YieldTypeCode.mmToWorstConvention);
+				code_lazy = () -> Arrays.asList(YieldTypeCode.mmAfterTax, YieldTypeCode.mmAnnual, YieldTypeCode.mmAtIssue, YieldTypeCode.mmToAverageLife, YieldTypeCode.mmToAverageMaturity, YieldTypeCode.mmBook, YieldTypeCode.mmToNextCall,
+						YieldTypeCode.mmChangeSinceClose, YieldTypeCode.mmClosing, YieldTypeCode.mmCompound, YieldTypeCode.mmCurrent, YieldTypeCode.mmTrueGross, YieldTypeCode.mmGovernmentEquivalent, YieldTypeCode.mmInflationAssumption,
+						YieldTypeCode.mmInverseFloater, YieldTypeCode.mmLastClose, YieldTypeCode.mmLastMonth, YieldTypeCode.mmLastQuarter, YieldTypeCode.mmLastYear, YieldTypeCode.mmLongestAverageLife, YieldTypeCode.mmLongestAverage,
+						YieldTypeCode.mmMarkToMarket, YieldTypeCode.mmMaturity, YieldTypeCode.mmToNextRefund, YieldTypeCode.mmOpenAverage, YieldTypeCode.mmToNextPut, YieldTypeCode.mmPreviousClose, YieldTypeCode.mmProceeds,
+						YieldTypeCode.mmSemiAnnual, YieldTypeCode.mmShortestAverageLife, YieldTypeCode.mmShortestAverage, YieldTypeCode.mmSimple, YieldTypeCode.mmTaxEquivalent, YieldTypeCode.mmToTenderDate, YieldTypeCode.mmTrue,
+						YieldTypeCode.mmProportion, YieldTypeCode.mmToWorstConvention);
 			}
 		});
 		return mmObject_lazy.get();

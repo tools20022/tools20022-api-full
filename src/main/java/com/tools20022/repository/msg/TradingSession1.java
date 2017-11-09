@@ -19,8 +19,10 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max128Text;
 import com.tools20022.repository.entity.TradingSession;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -100,11 +102,11 @@ public class TradingSession1 {
 	 */
 	public static final MMMessageAttribute mmTradingSessionIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradingSession.mmTradingSessionName;
+			businessElementTrace_lazy = () -> TradingSession.mmTradingSessionName;
 			componentContext_lazy = () -> TradingSession1.mmObject();
 			isDerived = false;
 			xmlTag = "TradgSsnId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradingSessionIdentification";
 			definition = "Identification of a specific execution time bracket code through its trading session name or description.";
 			maxOccurs = 1;
@@ -150,11 +152,11 @@ public class TradingSession1 {
 	 */
 	public static final MMMessageAttribute mmTradingSessionSubIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradingSession.mmTradingSessionName;
+			businessElementTrace_lazy = () -> TradingSession.mmTradingSessionName;
 			componentContext_lazy = () -> TradingSession1.mmObject();
 			isDerived = false;
 			xmlTag = "TradgSsnSubId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradingSessionSubIdentification";
 			definition = "Optional market assigned sub identifier for a trading session. Usage is determined by market or counterparties.";
 			maxOccurs = 1;
@@ -166,10 +168,10 @@ public class TradingSession1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TradingSession1.mmTradingSessionIdentification, com.tools20022.repository.msg.TradingSession1.mmTradingSessionSubIdentification);
+				messageElement_lazy = () -> Arrays.asList(TradingSession1.mmTradingSessionIdentification, TradingSession1.mmTradingSessionSubIdentification);
 				trace_lazy = () -> TradingSession.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "TradingSession1";
 				definition = "The details of a specific trading session.";
 			}

@@ -20,12 +20,15 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.camt.FundDetailedConfirmedCashForecastReportV04;
 import com.tools20022.repository.codeset.ActiveOrHistoricCurrencyCode;
 import com.tools20022.repository.datatype.ActiveOrHistoricCurrencyAndAmount;
 import com.tools20022.repository.datatype.LEIIdentifier;
 import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.datatype.PercentageRate;
-import com.tools20022.repository.entity.FundsCashFlow;
+import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -129,14 +132,14 @@ public class Fund4 {
 	 */
 	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.LocalName.mmFullName;
+			businessElementTrace_lazy = () -> LocalName.mmFullName;
 			componentContext_lazy = () -> Fund4.mmObject();
 			isDerived = false;
 			xmlTag = "Nm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Name";
 			definition = "Name of the fund/sub fund.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Fund2.mmName;
+			previousVersion_lazy = () -> Fund2.mmName;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
@@ -186,14 +189,14 @@ public class Fund4 {
 	 */
 	public static final MMMessageAttribute mmLegalEntityIdentifier = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.mmLEI;
+			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmLEI;
 			componentContext_lazy = () -> Fund4.mmObject();
 			isDerived = false;
 			xmlTag = "LglNttyIdr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LegalEntityIdentifier";
 			definition = "Identification of the fund/sub fund with a Legal Entity Identifier. This is a code allocated to a party as described in ISO 17442 \"Financial Services - Legal Entity Identifier (LEI)\".";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Fund2.mmLegalEntityIdentifier;
+			previousVersion_lazy = () -> Fund2.mmLegalEntityIdentifier;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> LEIIdentifier.mmObject();
@@ -240,14 +243,14 @@ public class Fund4 {
 	 */
 	public static final MMMessageAssociationEnd mmIdentification = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmIdentification;
+			businessElementTrace_lazy = () -> Security.mmIdentification;
 			componentContext_lazy = () -> Fund4.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Unique and unambiguous identifier for the fund/sub fund, assigned under a formal or proprietary identification scheme.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Fund2.mmIdentification;
+			previousVersion_lazy = () -> Fund2.mmIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -294,14 +297,14 @@ public class Fund4 {
 	 */
 	public static final MMMessageAttribute mmCurrency = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmTradingCurrency;
+			businessElementTrace_lazy = () -> InvestmentFundClass.mmTradingCurrency;
 			componentContext_lazy = () -> Fund4.mmObject();
 			isDerived = false;
 			xmlTag = "Ccy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Currency";
 			definition = "Currency of the fund/sub fund.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Fund2.mmCurrency;
+			previousVersion_lazy = () -> Fund2.mmCurrency;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyCode.mmObject();
@@ -350,14 +353,14 @@ public class Fund4 {
 	 */
 	public static final MMMessageAttribute mmTotalNAV = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.NetAssetValueCalculation.mmNetAssetValue;
+			businessElementTrace_lazy = () -> NetAssetValueCalculation.mmNetAssetValue;
 			componentContext_lazy = () -> Fund4.mmObject();
 			isDerived = false;
 			xmlTag = "TtlNAV";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalNAV";
 			definition = "Total value of all the holdings, less the fund's liabilities, of the fund/sub fund.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Fund2.mmTotalNAV;
+			previousVersion_lazy = () -> Fund2.mmTotalNAV;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
@@ -406,14 +409,14 @@ public class Fund4 {
 	 */
 	public static final MMMessageAttribute mmPreviousTotalNAV = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.NetAssetValueCalculation.mmNetAssetValue;
+			businessElementTrace_lazy = () -> NetAssetValueCalculation.mmNetAssetValue;
 			componentContext_lazy = () -> Fund4.mmObject();
 			isDerived = false;
 			xmlTag = "PrvsTtlNAV";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousTotalNAV";
 			definition = "Previous total value of all the holdings, less the fund's liabilities, of the fund/sub fund.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Fund2.mmPreviousTotalNAV;
+			previousVersion_lazy = () -> Fund2.mmPreviousTotalNAV;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
@@ -459,14 +462,14 @@ public class Fund4 {
 	 */
 	public static final MMMessageAttribute mmTotalUnitsNumber = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrderExecution.mmUnitsNumber;
+			businessElementTrace_lazy = () -> InvestmentFundOrderExecution.mmUnitsNumber;
 			componentContext_lazy = () -> Fund4.mmObject();
 			isDerived = false;
 			xmlTag = "TtlUnitsNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalUnitsNumber";
 			definition = "Total number of units of the fund/sub fund.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Fund2.mmTotalUnitsNumber;
+			previousVersion_lazy = () -> Fund2.mmTotalUnitsNumber;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentQuantity1.mmObject();
@@ -512,14 +515,14 @@ public class Fund4 {
 	 */
 	public static final MMMessageAttribute mmPreviousTotalUnitsNumber = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrderExecution.mmUnitsNumber;
+			businessElementTrace_lazy = () -> InvestmentFundOrderExecution.mmUnitsNumber;
 			componentContext_lazy = () -> Fund4.mmObject();
 			isDerived = false;
 			xmlTag = "PrvsTtlUnitsNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousTotalUnitsNumber";
 			definition = "Previous total number of units of the fund/sub fund.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Fund2.mmPreviousTotalUnitsNumber;
+			previousVersion_lazy = () -> Fund2.mmPreviousTotalUnitsNumber;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentQuantity1.mmObject();
@@ -566,10 +569,10 @@ public class Fund4 {
 			componentContext_lazy = () -> Fund4.mmObject();
 			isDerived = false;
 			xmlTag = "PctgOfFndTtlNAV";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PercentageOfFundTotalNAV";
 			definition = "Consolidated net cash flow expressed as a percentage of the total NAV for the fund/sub fund.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Fund2.mmPercentageOfFundTotalNAV;
+			previousVersion_lazy = () -> Fund2.mmPercentageOfFundTotalNAV;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
@@ -579,13 +582,12 @@ public class Fund4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Fund4.mmName, com.tools20022.repository.msg.Fund4.mmLegalEntityIdentifier, com.tools20022.repository.msg.Fund4.mmIdentification,
-						com.tools20022.repository.msg.Fund4.mmCurrency, com.tools20022.repository.msg.Fund4.mmTotalNAV, com.tools20022.repository.msg.Fund4.mmPreviousTotalNAV, com.tools20022.repository.msg.Fund4.mmTotalUnitsNumber,
-						com.tools20022.repository.msg.Fund4.mmPreviousTotalUnitsNumber, com.tools20022.repository.msg.Fund4.mmPercentageOfFundTotalNAV);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.FundDetailedConfirmedCashForecastReportV04.mmFundOrSubFundDetails);
+				messageElement_lazy = () -> Arrays.asList(Fund4.mmName, Fund4.mmLegalEntityIdentifier, Fund4.mmIdentification, Fund4.mmCurrency, Fund4.mmTotalNAV, Fund4.mmPreviousTotalNAV, Fund4.mmTotalUnitsNumber,
+						Fund4.mmPreviousTotalUnitsNumber, Fund4.mmPercentageOfFundTotalNAV);
+				messageBuildingBlock_lazy = () -> Arrays.asList(FundDetailedConfirmedCashForecastReportV04.mmFundOrSubFundDetails);
 				trace_lazy = () -> FundsCashFlow.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Fund4";
 				definition = "Information about an investment fund.";
 				previousVersion_lazy = () -> Fund2.mmObject();

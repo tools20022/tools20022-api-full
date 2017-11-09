@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.TaxRecordPeriod1Code
+ * TaxRecordPeriod1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -85,13 +94,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * TaxRecordPeriodCode.mmSecondHalf}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.TaxRecordPeriod1Code
- * TaxRecordPeriod1Code}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -139,7 +141,7 @@ public class TaxRecordPeriodCode {
 	 */
 	public static final MMCode mmFirstMonth = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "FirstMonth";
 			definition = "Tax is related to the second month of the period.";
 			owner_lazy = () -> TaxRecordPeriodCode.mmObject();
@@ -169,7 +171,7 @@ public class TaxRecordPeriodCode {
 	 */
 	public static final MMCode mmSecondMonth = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SecondMonth";
 			definition = "Tax is related to the first month of the period.";
 			owner_lazy = () -> TaxRecordPeriodCode.mmObject();
@@ -199,7 +201,7 @@ public class TaxRecordPeriodCode {
 	 */
 	public static final MMCode mmThirdMonth = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ThirdMonth";
 			definition = "Tax is related to the third month of the period.";
 			owner_lazy = () -> TaxRecordPeriodCode.mmObject();
@@ -229,7 +231,7 @@ public class TaxRecordPeriodCode {
 	 */
 	public static final MMCode mmFourthMonth = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "FourthMonth";
 			definition = "Tax is related to the fourth month of the period.";
 			owner_lazy = () -> TaxRecordPeriodCode.mmObject();
@@ -259,7 +261,7 @@ public class TaxRecordPeriodCode {
 	 */
 	public static final MMCode mmFifthMonth = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "FifthMonth";
 			definition = "Tax is related to the fifth month of the period.";
 			owner_lazy = () -> TaxRecordPeriodCode.mmObject();
@@ -289,7 +291,7 @@ public class TaxRecordPeriodCode {
 	 */
 	public static final MMCode mmSixthMonth = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SixthMonth";
 			definition = "Tax is related to the sixth month of the period.";
 			owner_lazy = () -> TaxRecordPeriodCode.mmObject();
@@ -319,7 +321,7 @@ public class TaxRecordPeriodCode {
 	 */
 	public static final MMCode mmSeventhMonth = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SeventhMonth";
 			definition = "Tax is related to the seventh month of the period.";
 			owner_lazy = () -> TaxRecordPeriodCode.mmObject();
@@ -349,7 +351,7 @@ public class TaxRecordPeriodCode {
 	 */
 	public static final MMCode mmEighthMonth = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "EighthMonth";
 			definition = "Tax is related to the eighth month of the period.";
 			owner_lazy = () -> TaxRecordPeriodCode.mmObject();
@@ -379,7 +381,7 @@ public class TaxRecordPeriodCode {
 	 */
 	public static final MMCode mmNinthMonth = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NinthMonth";
 			definition = "Tax is related to the ninth month of the period.";
 			owner_lazy = () -> TaxRecordPeriodCode.mmObject();
@@ -409,7 +411,7 @@ public class TaxRecordPeriodCode {
 	 */
 	public static final MMCode mmTenthMonth = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TenthMonth";
 			definition = "Tax is related to the tenth month of the period.";
 			owner_lazy = () -> TaxRecordPeriodCode.mmObject();
@@ -439,7 +441,7 @@ public class TaxRecordPeriodCode {
 	 */
 	public static final MMCode mmEleventhMonth = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "EleventhMonth";
 			definition = "Tax is related to the eleventh month of the period.";
 			owner_lazy = () -> TaxRecordPeriodCode.mmObject();
@@ -469,7 +471,7 @@ public class TaxRecordPeriodCode {
 	 */
 	public static final MMCode mmTwelfthMonth = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TwelfthMonth";
 			definition = "Tax is related to the twelfth month of the period.";
 			owner_lazy = () -> TaxRecordPeriodCode.mmObject();
@@ -499,7 +501,7 @@ public class TaxRecordPeriodCode {
 	 */
 	public static final MMCode mmFirstQuarter = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "FirstQuarter";
 			definition = "Tax is related to the first quarter of the period.";
 			owner_lazy = () -> TaxRecordPeriodCode.mmObject();
@@ -529,7 +531,7 @@ public class TaxRecordPeriodCode {
 	 */
 	public static final MMCode mmSecondQuarter = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SecondQuarter";
 			definition = "Tax is related to the second quarter of the period.";
 			owner_lazy = () -> TaxRecordPeriodCode.mmObject();
@@ -559,7 +561,7 @@ public class TaxRecordPeriodCode {
 	 */
 	public static final MMCode mmThirdQuarter = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ThirdQuarter";
 			definition = "Tax is related to the third quarter of the period.";
 			owner_lazy = () -> TaxRecordPeriodCode.mmObject();
@@ -589,7 +591,7 @@ public class TaxRecordPeriodCode {
 	 */
 	public static final MMCode mmFourthQuarter = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "FourthQuarter";
 			definition = "Tax is related to the forth quarter of the period.";
 			owner_lazy = () -> TaxRecordPeriodCode.mmObject();
@@ -619,7 +621,7 @@ public class TaxRecordPeriodCode {
 	 */
 	public static final MMCode mmFirstHalf = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "FirstHalf";
 			definition = "Tax is related to the first half of the period.";
 			owner_lazy = () -> TaxRecordPeriodCode.mmObject();
@@ -649,7 +651,7 @@ public class TaxRecordPeriodCode {
 	 */
 	public static final MMCode mmSecondHalf = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SecondHalf";
 			definition = "Tax is related to the second half of the period.";
 			owner_lazy = () -> TaxRecordPeriodCode.mmObject();
@@ -660,18 +662,15 @@ public class TaxRecordPeriodCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("MM01");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TaxRecordPeriodCode";
 				definition = "Specifies the period related to the tax payment.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TaxRecordPeriodCode.mmFirstMonth, com.tools20022.repository.codeset.TaxRecordPeriodCode.mmSecondMonth,
-						com.tools20022.repository.codeset.TaxRecordPeriodCode.mmThirdMonth, com.tools20022.repository.codeset.TaxRecordPeriodCode.mmFourthMonth, com.tools20022.repository.codeset.TaxRecordPeriodCode.mmFifthMonth,
-						com.tools20022.repository.codeset.TaxRecordPeriodCode.mmSixthMonth, com.tools20022.repository.codeset.TaxRecordPeriodCode.mmSeventhMonth, com.tools20022.repository.codeset.TaxRecordPeriodCode.mmEighthMonth,
-						com.tools20022.repository.codeset.TaxRecordPeriodCode.mmNinthMonth, com.tools20022.repository.codeset.TaxRecordPeriodCode.mmTenthMonth, com.tools20022.repository.codeset.TaxRecordPeriodCode.mmEleventhMonth,
-						com.tools20022.repository.codeset.TaxRecordPeriodCode.mmTwelfthMonth, com.tools20022.repository.codeset.TaxRecordPeriodCode.mmFirstQuarter, com.tools20022.repository.codeset.TaxRecordPeriodCode.mmSecondQuarter,
-						com.tools20022.repository.codeset.TaxRecordPeriodCode.mmThirdQuarter, com.tools20022.repository.codeset.TaxRecordPeriodCode.mmFourthQuarter, com.tools20022.repository.codeset.TaxRecordPeriodCode.mmFirstHalf,
-						com.tools20022.repository.codeset.TaxRecordPeriodCode.mmSecondHalf);
+				code_lazy = () -> Arrays.asList(TaxRecordPeriodCode.mmFirstMonth, TaxRecordPeriodCode.mmSecondMonth, TaxRecordPeriodCode.mmThirdMonth, TaxRecordPeriodCode.mmFourthMonth, TaxRecordPeriodCode.mmFifthMonth,
+						TaxRecordPeriodCode.mmSixthMonth, TaxRecordPeriodCode.mmSeventhMonth, TaxRecordPeriodCode.mmEighthMonth, TaxRecordPeriodCode.mmNinthMonth, TaxRecordPeriodCode.mmTenthMonth, TaxRecordPeriodCode.mmEleventhMonth,
+						TaxRecordPeriodCode.mmTwelfthMonth, TaxRecordPeriodCode.mmFirstQuarter, TaxRecordPeriodCode.mmSecondQuarter, TaxRecordPeriodCode.mmThirdQuarter, TaxRecordPeriodCode.mmFourthQuarter, TaxRecordPeriodCode.mmFirstHalf,
+						TaxRecordPeriodCode.mmSecondHalf);
 				derivation_lazy = () -> Arrays.asList(TaxRecordPeriod1Code.mmObject());
 			}
 		});

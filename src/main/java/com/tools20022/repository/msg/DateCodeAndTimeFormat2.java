@@ -20,8 +20,10 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.DateCode8Choice;
 import com.tools20022.repository.datatype.ISOTime;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -91,7 +93,7 @@ public class DateCodeAndTimeFormat2 {
 			componentContext_lazy = () -> DateCodeAndTimeFormat2.mmObject();
 			isDerived = false;
 			xmlTag = "DtCd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DateCode";
 			definition = "Specifies the type of date.";
 			maxOccurs = 1;
@@ -133,7 +135,7 @@ public class DateCodeAndTimeFormat2 {
 			componentContext_lazy = () -> DateCodeAndTimeFormat2.mmObject();
 			isDerived = false;
 			xmlTag = "Tm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Time";
 			definition = "Specifies the time.";
 			maxOccurs = 1;
@@ -145,9 +147,9 @@ public class DateCodeAndTimeFormat2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DateCodeAndTimeFormat2.mmDateCode, com.tools20022.repository.msg.DateCodeAndTimeFormat2.mmTime);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(DateCodeAndTimeFormat2.mmDateCode, DateCodeAndTimeFormat2.mmTime);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DateCodeAndTimeFormat2";
 				definition = "Specifies  a date code and a time.";
 			}

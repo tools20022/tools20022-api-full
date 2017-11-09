@@ -20,9 +20,11 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.DateFormat22Choice;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.Max350Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -123,10 +125,10 @@ public class CorporateActionGeneralInformationSD3 {
 			componentContext_lazy = () -> CorporateActionGeneralInformationSD3.mmObject();
 			isDerived = false;
 			xmlTag = "PlcAndNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "xPath to the element that is being extended.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionGeneralInformationSD16.mmPlaceAndName);
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionGeneralInformationSD16.mmPlaceAndName);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
@@ -174,10 +176,10 @@ public class CorporateActionGeneralInformationSD3 {
 			componentContext_lazy = () -> CorporateActionGeneralInformationSD3.mmObject();
 			isDerived = false;
 			xmlTag = "SctyId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityIdentification";
 			definition = "Identifies the financial instrument.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionGeneralInformationSD16.mmSecurityIdentification);
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionGeneralInformationSD16.mmSecurityIdentification);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> com.tools20022.repository.msg.SecurityIdentification15.mmObject();
@@ -221,7 +223,7 @@ public class CorporateActionGeneralInformationSD3 {
 			componentContext_lazy = () -> CorporateActionGeneralInformationSD3.mmObject();
 			isDerived = false;
 			xmlTag = "RcrdDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RecordDate";
 			definition = "Date at which positions are stuck at the end of the day to note which parties will receive the relevant amount of entitlement, due to be distributed on payment date. DTC  (The Depository Trust Corporation) and its Participants may use this as a reference ";
 			maxOccurs = 1;
@@ -266,7 +268,7 @@ public class CorporateActionGeneralInformationSD3 {
 			componentContext_lazy = () -> CorporateActionGeneralInformationSD3.mmObject();
 			isDerived = false;
 			xmlTag = "PmtDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentDate";
 			definition = "Date/time at which the movement was due to take place (cash and/or securities).";
 			maxOccurs = 1;
@@ -315,10 +317,10 @@ public class CorporateActionGeneralInformationSD3 {
 			componentContext_lazy = () -> CorporateActionGeneralInformationSD3.mmObject();
 			isDerived = false;
 			xmlTag = "UallctdDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnallocatedDetails";
 			definition = "Additional information about the corporate action event.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionGeneralInformationSD16.mmUnallocatedDetails);
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionGeneralInformationSD16.mmUnallocatedDetails);
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.CorporateActionUnallocatedDetailsSD1.mmObject();
@@ -328,11 +330,10 @@ public class CorporateActionGeneralInformationSD3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionGeneralInformationSD3.mmPlaceAndName, com.tools20022.repository.msg.CorporateActionGeneralInformationSD3.mmSecurityIdentification,
-						com.tools20022.repository.msg.CorporateActionGeneralInformationSD3.mmRecordDate, com.tools20022.repository.msg.CorporateActionGeneralInformationSD3.mmPaymentDate,
-						com.tools20022.repository.msg.CorporateActionGeneralInformationSD3.mmUnallocatedDetails);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(CorporateActionGeneralInformationSD3.mmPlaceAndName, CorporateActionGeneralInformationSD3.mmSecurityIdentification, CorporateActionGeneralInformationSD3.mmRecordDate,
+						CorporateActionGeneralInformationSD3.mmPaymentDate, CorporateActionGeneralInformationSD3.mmUnallocatedDetails);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CorporateActionGeneralInformationSD3";
 				definition = "Provides additional information regarding corporate action general information.";
 				nextVersions_lazy = () -> Arrays.asList(CorporateActionGeneralInformationSD16.mmObject());

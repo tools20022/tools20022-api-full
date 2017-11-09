@@ -19,11 +19,14 @@ package com.tools20022.repository.entity;
 
 import com.tools20022.metamodel.MMBusinessAttribute;
 import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ServiceTaxDesignationCode;
 import com.tools20022.repository.datatype.CurrencyAndAmount;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.PercentageRate;
 import com.tools20022.repository.entity.Product;
+import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -36,6 +39,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.Product Product}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
+ * subType} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.FinancialService
+ * FinancialService}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -49,15 +61,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * Service.mmRate}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
- * subType} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.FinancialService
- * FinancialService}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.Product Product}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -145,15 +148,12 @@ public class Service extends Product {
 	 */
 	public static final MMBusinessAttribute mmAmount = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BillingCompensation1.mmValue, com.tools20022.repository.msg.BillingServicesAmount1.mmHostAmount,
-					com.tools20022.repository.msg.BillingServicesAmount2.mmHostAmount, com.tools20022.repository.msg.BillingServicesAmount2.mmSettlementAmount, com.tools20022.repository.msg.BillingService1.mmOriginalChargeSettlementAmount,
-					com.tools20022.repository.msg.BillingServicesAmount3.mmSourceAmount, com.tools20022.repository.msg.BillingServicesAmount3.mmHostAmount,
-					com.tools20022.repository.msg.TaxCalculation1.mmTotalTaxableServiceChargeHostAmount, com.tools20022.repository.msg.BillingServiceAdjustment1.mmAmount,
-					com.tools20022.repository.msg.BillingServiceAdjustment1.mmOriginalChargeAmount, com.tools20022.repository.msg.BillingServiceAdjustment1.mmNewChargeAmount,
-					com.tools20022.repository.msg.BillingService2.mmOriginalChargeSettlementAmount);
+			derivation_lazy = () -> Arrays.asList(BillingCompensation1.mmValue, BillingServicesAmount1.mmHostAmount, BillingServicesAmount2.mmHostAmount, BillingServicesAmount2.mmSettlementAmount,
+					BillingService1.mmOriginalChargeSettlementAmount, BillingServicesAmount3.mmSourceAmount, BillingServicesAmount3.mmHostAmount, TaxCalculation1.mmTotalTaxableServiceChargeHostAmount, BillingServiceAdjustment1.mmAmount,
+					BillingServiceAdjustment1.mmOriginalChargeAmount, BillingServiceAdjustment1.mmNewChargeAmount, BillingService2.mmOriginalChargeSettlementAmount);
 			elementContext_lazy = () -> Service.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Amount";
 			definition = "Amount charged for the service.";
 			maxOccurs = 1;
@@ -196,10 +196,10 @@ public class Service extends Product {
 	 */
 	public static final MMBusinessAttribute mmType = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BillingServiceAdjustment1.mmType);
+			derivation_lazy = () -> Arrays.asList(BillingServiceAdjustment1.mmType);
 			elementContext_lazy = () -> Service.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Type";
 			definition = "Type used to classify and organise different services.";
 			maxOccurs = 1;
@@ -237,7 +237,7 @@ public class Service extends Product {
 		{
 			elementContext_lazy = () -> Service.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TaxDesignation";
 			definition = "Identifies the taxable status of the service.";
 			maxOccurs = 1;
@@ -276,7 +276,7 @@ public class Service extends Product {
 		{
 			elementContext_lazy = () -> Service.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Rate";
 			definition = "Rate applied on a basis amount to calculate the service charge.";
 			maxOccurs = 1;
@@ -288,14 +288,13 @@ public class Service extends Product {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Service";
 				definition = "Service is the intangible equivalent of a good.";
 				subType_lazy = () -> Arrays.asList(FinancialService.mmObject());
 				superType_lazy = () -> Product.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Service.mmAmount, com.tools20022.repository.entity.Service.mmType, com.tools20022.repository.entity.Service.mmTaxDesignation,
-						com.tools20022.repository.entity.Service.mmRate);
+				element_lazy = () -> Arrays.asList(Service.mmAmount, Service.mmType, Service.mmTaxDesignation, Service.mmRate);
 			}
 		});
 		return mmObject_lazy.get();

@@ -20,12 +20,14 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.*;
 import com.tools20022.repository.datatype.Exact3NumericText;
 import com.tools20022.repository.datatype.RestrictedFINXMax140Text;
 import com.tools20022.repository.datatype.RestrictedFINXMax16Text;
 import com.tools20022.repository.datatype.YesNoIndicator;
-import com.tools20022.repository.entity.SecuritiesFinancing;
+import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -191,7 +193,7 @@ public class SecuritiesFinancingTransactionDetails14 {
 			componentContext_lazy = () -> SecuritiesFinancingTransactionDetails14.mmObject();
 			isDerived = false;
 			xmlTag = "SctiesFincgTradId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesFinancingTradeIdentification";
 			definition = "Unambiguous identification of the underlying securities financing trade as assigned by the instructing party. The identification is common to all collateral pieces (one or many).";
 			maxOccurs = 1;
@@ -236,7 +238,7 @@ public class SecuritiesFinancingTransactionDetails14 {
 			componentContext_lazy = () -> SecuritiesFinancingTransactionDetails14.mmObject();
 			isDerived = false;
 			xmlTag = "ClsgLegId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClosingLegIdentification";
 			definition = "Unambiguous identification of the second leg of the transaction as known by the account owner (or the instructing party acting on its behalf).";
 			maxOccurs = 1;
@@ -280,11 +282,11 @@ public class SecuritiesFinancingTransactionDetails14 {
 	 */
 	public static final MMMessageAssociationEnd mmTerminationDate = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancing.mmTerminationDateTime;
+			businessElementTrace_lazy = () -> SecuritiesFinancing.mmTerminationDateTime;
 			componentContext_lazy = () -> SecuritiesFinancingTransactionDetails14.mmObject();
 			isDerived = false;
 			xmlTag = "TermntnDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TerminationDate";
 			definition = "Closing date/time or maturity date/time of the transaction.";
 			maxOccurs = 1;
@@ -329,11 +331,11 @@ public class SecuritiesFinancingTransactionDetails14 {
 	 */
 	public static final MMMessageAttribute mmRateChangeDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancing.mmRateChangeDateTime;
+			businessElementTrace_lazy = () -> SecuritiesFinancing.mmRateChangeDateTime;
 			componentContext_lazy = () -> SecuritiesFinancingTransactionDetails14.mmObject();
 			isDerived = false;
 			xmlTag = "RateChngDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RateChangeDate";
 			definition = "Date/Time at which rate change has taken place.";
 			maxOccurs = 1;
@@ -378,11 +380,11 @@ public class SecuritiesFinancingTransactionDetails14 {
 	 */
 	public static final MMMessageAttribute mmEarliestCallBackDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancing.mmEarliestCallBackDate;
+			businessElementTrace_lazy = () -> SecuritiesFinancing.mmEarliestCallBackDate;
 			componentContext_lazy = () -> SecuritiesFinancingTransactionDetails14.mmObject();
 			isDerived = false;
 			xmlTag = "EarlstCallBckDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EarliestCallBackDate";
 			definition = "Earliest date/time at which the call back can take place.";
 			maxOccurs = 1;
@@ -426,11 +428,11 @@ public class SecuritiesFinancingTransactionDetails14 {
 	 */
 	public static final MMMessageAttribute mmCommissionCalculationDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Commission.mmCalculationDate;
+			businessElementTrace_lazy = () -> Commission.mmCalculationDate;
 			componentContext_lazy = () -> SecuritiesFinancingTransactionDetails14.mmObject();
 			isDerived = false;
 			xmlTag = "ComssnClctnDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommissionCalculationDate";
 			definition = "Date/time at which the commission is calculated.";
 			maxOccurs = 1;
@@ -474,11 +476,11 @@ public class SecuritiesFinancingTransactionDetails14 {
 	 */
 	public static final MMMessageAttribute mmRateType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InterestCalculation.mmRateType;
+			businessElementTrace_lazy = () -> InterestCalculation.mmRateType;
 			componentContext_lazy = () -> SecuritiesFinancingTransactionDetails14.mmObject();
 			isDerived = false;
 			xmlTag = "RateTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RateType";
 			definition = "Specifies whether the rate is fixed or variable.";
 			maxOccurs = 1;
@@ -525,11 +527,11 @@ public class SecuritiesFinancingTransactionDetails14 {
 	 */
 	public static final MMMessageAttribute mmRevaluation = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancing.mmRevaluationIndicator;
+			businessElementTrace_lazy = () -> SecuritiesFinancing.mmRevaluationIndicator;
 			componentContext_lazy = () -> SecuritiesFinancingTransactionDetails14.mmObject();
 			isDerived = false;
 			xmlTag = "Rvaltn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Revaluation";
 			definition = "Specifies whether the collateral position should be subject to automatic revaluation by the account servicer.";
 			maxOccurs = 1;
@@ -573,11 +575,11 @@ public class SecuritiesFinancingTransactionDetails14 {
 	 */
 	public static final MMMessageAttribute mmLegalFramework = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTrade.mmLegalFramework;
+			businessElementTrace_lazy = () -> SecuritiesTrade.mmLegalFramework;
 			componentContext_lazy = () -> SecuritiesFinancingTransactionDetails14.mmObject();
 			isDerived = false;
 			xmlTag = "LglFrmwk";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LegalFramework";
 			definition = "Legal framework of the transaction.";
 			maxOccurs = 1;
@@ -624,11 +626,11 @@ public class SecuritiesFinancingTransactionDetails14 {
 	 */
 	public static final MMMessageAttribute mmInterestComputationMethod = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InterestCalculation.mmDayCountBasis;
+			businessElementTrace_lazy = () -> InterestCalculation.mmDayCountBasis;
 			componentContext_lazy = () -> SecuritiesFinancingTransactionDetails14.mmObject();
 			isDerived = false;
 			xmlTag = "IntrstCmptnMtd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterestComputationMethod";
 			definition = "Identifies the computation method of accrued interest of the related financial instrument.";
 			maxOccurs = 1;
@@ -675,11 +677,11 @@ public class SecuritiesFinancingTransactionDetails14 {
 	 */
 	public static final MMMessageAttribute mmMaturityDateModification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancing.mmMaturityDateModification;
+			businessElementTrace_lazy = () -> SecuritiesFinancing.mmMaturityDateModification;
 			componentContext_lazy = () -> SecuritiesFinancingTransactionDetails14.mmObject();
 			isDerived = false;
 			xmlTag = "MtrtyDtMod";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaturityDateModification";
 			definition = "Specifies whether the maturity date of the securities financing transaction may be modified.";
 			maxOccurs = 1;
@@ -726,11 +728,11 @@ public class SecuritiesFinancingTransactionDetails14 {
 	 */
 	public static final MMMessageAttribute mmInterestPayment = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancing.mmInterestPayment;
+			businessElementTrace_lazy = () -> SecuritiesFinancing.mmInterestPayment;
 			componentContext_lazy = () -> SecuritiesFinancingTransactionDetails14.mmObject();
 			isDerived = false;
 			xmlTag = "IntrstPmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterestPayment";
 			definition = "Specifies whether the interest is to be paid to the collateral taker. If set to no, the interest is paid to the collateral giver.";
 			maxOccurs = 1;
@@ -776,11 +778,11 @@ public class SecuritiesFinancingTransactionDetails14 {
 	 */
 	public static final MMMessageAttribute mmVariableRateSupport = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancing.mmVariableRateSupport;
+			businessElementTrace_lazy = () -> SecuritiesFinancing.mmVariableRateSupport;
 			componentContext_lazy = () -> SecuritiesFinancingTransactionDetails14.mmObject();
 			isDerived = false;
 			xmlTag = "VarblRateSpprt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VariableRateSupport";
 			definition = "Index or support rate used together with the spread to calculate the\nrepurchase rate.";
 			maxOccurs = 1;
@@ -822,11 +824,11 @@ public class SecuritiesFinancingTransactionDetails14 {
 	 */
 	public static final MMMessageAttribute mmRepurchaseRate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancing.mmRepurchaseRate;
+			businessElementTrace_lazy = () -> SecuritiesFinancing.mmRepurchaseRate;
 			componentContext_lazy = () -> SecuritiesFinancingTransactionDetails14.mmObject();
 			isDerived = false;
 			xmlTag = "RpRate";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RepurchaseRate";
 			definition = "Rate to be used to recalculate the repurchase amount.";
 			maxOccurs = 1;
@@ -871,11 +873,11 @@ public class SecuritiesFinancingTransactionDetails14 {
 	 */
 	public static final MMMessageAttribute mmStockLoanMargin = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancing.mmStockLoanMargin;
+			businessElementTrace_lazy = () -> SecuritiesFinancing.mmStockLoanMargin;
 			componentContext_lazy = () -> SecuritiesFinancingTransactionDetails14.mmObject();
 			isDerived = false;
 			xmlTag = "StockLnMrgn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StockLoanMargin";
 			definition = "Percentage mark-up on a loan consideration used to reflect the lender's risk.";
 			maxOccurs = 1;
@@ -918,11 +920,11 @@ public class SecuritiesFinancingTransactionDetails14 {
 	 */
 	public static final MMMessageAttribute mmSecuritiesHaircut = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmHaircut;
+			businessElementTrace_lazy = () -> AssetHolding.mmHaircut;
 			componentContext_lazy = () -> SecuritiesFinancingTransactionDetails14.mmObject();
 			isDerived = false;
 			xmlTag = "SctiesHrcut";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesHaircut";
 			definition = "Haircut or valuation factor on the security expressed as a percentage.";
 			maxOccurs = 1;
@@ -966,11 +968,11 @@ public class SecuritiesFinancingTransactionDetails14 {
 	 */
 	public static final MMMessageAttribute mmChargesRate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Interest.mmInterestCalculation;
+			businessElementTrace_lazy = () -> Interest.mmInterestCalculation;
 			componentContext_lazy = () -> SecuritiesFinancingTransactionDetails14.mmObject();
 			isDerived = false;
 			xmlTag = "ChrgsRate";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChargesRate";
 			definition = "Interest rate paid in the context of a securities financing transaction.";
 			maxOccurs = 1;
@@ -1017,11 +1019,11 @@ public class SecuritiesFinancingTransactionDetails14 {
 	 */
 	public static final MMMessageAttribute mmPricingRate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancing.mmInterest;
+			businessElementTrace_lazy = () -> SecuritiesFinancing.mmInterest;
 			componentContext_lazy = () -> SecuritiesFinancingTransactionDetails14.mmObject();
 			isDerived = false;
 			xmlTag = "PricgRate";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PricingRate";
 			definition = "Interest rate to be paid on the transaction amount, as agreed between the counterparties.";
 			maxOccurs = 1;
@@ -1066,11 +1068,11 @@ public class SecuritiesFinancingTransactionDetails14 {
 	 */
 	public static final MMMessageAttribute mmSpread = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancing.mmRepurchaseSpread;
+			businessElementTrace_lazy = () -> SecuritiesFinancing.mmRepurchaseSpread;
 			componentContext_lazy = () -> SecuritiesFinancingTransactionDetails14.mmObject();
 			isDerived = false;
 			xmlTag = "Sprd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Spread";
 			definition = "Repurchase spread expressed as a rate; margin over or under an index that determines the repurchase rate.";
 			maxOccurs = 1;
@@ -1117,11 +1119,11 @@ public class SecuritiesFinancingTransactionDetails14 {
 	 */
 	public static final MMMessageAttribute mmTransactionCallDelay = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancing.mmTransactionCallDelay;
+			businessElementTrace_lazy = () -> SecuritiesFinancing.mmTransactionCallDelay;
 			componentContext_lazy = () -> SecuritiesFinancingTransactionDetails14.mmObject();
 			isDerived = false;
 			xmlTag = "TxCallDely";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionCallDelay";
 			definition = "Minimum number of days' notice a counterparty needs for terminating the transaction.";
 			maxOccurs = 1;
@@ -1166,11 +1168,11 @@ public class SecuritiesFinancingTransactionDetails14 {
 	 */
 	public static final MMMessageAttribute mmTotalNumberOfCollateralInstructions = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancing.mmTotalNumberOfCollateralInstructions;
+			businessElementTrace_lazy = () -> SecuritiesFinancing.mmTotalNumberOfCollateralInstructions;
 			componentContext_lazy = () -> SecuritiesFinancingTransactionDetails14.mmObject();
 			isDerived = false;
 			xmlTag = "TtlNbOfCollInstrs";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalNumberOfCollateralInstructions";
 			definition = "Total number of collateral instructions involved in the transaction.";
 			maxOccurs = 1;
@@ -1214,11 +1216,11 @@ public class SecuritiesFinancingTransactionDetails14 {
 	 */
 	public static final MMMessageAttribute mmDealAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancing.mmDealAmount;
+			businessElementTrace_lazy = () -> SecuritiesFinancing.mmDealAmount;
 			componentContext_lazy = () -> SecuritiesFinancingTransactionDetails14.mmObject();
 			isDerived = false;
 			xmlTag = "DealAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DealAmount";
 			definition = "Principal amount of a trade (for second leg).";
 			maxOccurs = 1;
@@ -1263,11 +1265,11 @@ public class SecuritiesFinancingTransactionDetails14 {
 	 */
 	public static final MMMessageAttribute mmAccruedInterestAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Interest.mmAccruedInterestAmount;
+			businessElementTrace_lazy = () -> Interest.mmAccruedInterestAmount;
 			componentContext_lazy = () -> SecuritiesFinancingTransactionDetails14.mmObject();
 			isDerived = false;
 			xmlTag = "AcrdIntrstAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccruedInterestAmount";
 			definition = "Interest amount that has accrued in between coupon payment periods.";
 			maxOccurs = 1;
@@ -1314,11 +1316,11 @@ public class SecuritiesFinancingTransactionDetails14 {
 	 */
 	public static final MMMessageAttribute mmForfeitAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancing.mmForfeitRepurchaseAmount;
+			businessElementTrace_lazy = () -> SecuritiesFinancing.mmForfeitRepurchaseAmount;
 			componentContext_lazy = () -> SecuritiesFinancingTransactionDetails14.mmObject();
 			isDerived = false;
 			xmlTag = "FrftAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForfeitAmount";
 			definition = "Fixed amount of money that has to be paid (instead of interest) in the case of a recall or at the closing date.";
 			maxOccurs = 1;
@@ -1365,11 +1367,11 @@ public class SecuritiesFinancingTransactionDetails14 {
 	 */
 	public static final MMMessageAttribute mmPremiumAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancing.mmPremiumAmount;
+			businessElementTrace_lazy = () -> SecuritiesFinancing.mmPremiumAmount;
 			componentContext_lazy = () -> SecuritiesFinancingTransactionDetails14.mmObject();
 			isDerived = false;
 			xmlTag = "PrmAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PremiumAmount";
 			definition = "Difference between the amount of money of the first leg and the amount of the second leg of the transaction.";
 			maxOccurs = 1;
@@ -1416,11 +1418,11 @@ public class SecuritiesFinancingTransactionDetails14 {
 	 */
 	public static final MMMessageAttribute mmTerminationAmountPerPieceOfCollateral = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancing.mmTerminationAmountPerPieceOfCollateral;
+			businessElementTrace_lazy = () -> SecuritiesFinancing.mmTerminationAmountPerPieceOfCollateral;
 			componentContext_lazy = () -> SecuritiesFinancingTransactionDetails14.mmObject();
 			isDerived = false;
 			xmlTag = "TermntnAmtPerPcOfColl";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TerminationAmountPerPieceOfCollateral";
 			definition = "Amount of money to be settled per piece of collateral to terminate the transaction.";
 			maxOccurs = 1;
@@ -1465,11 +1467,11 @@ public class SecuritiesFinancingTransactionDetails14 {
 	 */
 	public static final MMMessageAttribute mmTerminationTransactionAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancing.mmTerminationTransactionAmount;
+			businessElementTrace_lazy = () -> SecuritiesFinancing.mmTerminationTransactionAmount;
 			componentContext_lazy = () -> SecuritiesFinancingTransactionDetails14.mmObject();
 			isDerived = false;
 			xmlTag = "TermntnTxAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TerminationTransactionAmount";
 			definition = "Total amount of money to be settled to terminate the transaction.";
 			maxOccurs = 1;
@@ -1513,7 +1515,7 @@ public class SecuritiesFinancingTransactionDetails14 {
 			componentContext_lazy = () -> SecuritiesFinancingTransactionDetails14.mmObject();
 			isDerived = false;
 			xmlTag = "ScndLegNrrtv";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecondLegNarrative";
 			definition = "Provides additional information about the second leg in narrative form.";
 			maxOccurs = 1;
@@ -1525,24 +1527,19 @@ public class SecuritiesFinancingTransactionDetails14 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails14.mmSecuritiesFinancingTradeIdentification,
-						com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails14.mmClosingLegIdentification, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails14.mmTerminationDate,
-						com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails14.mmRateChangeDate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails14.mmEarliestCallBackDate,
-						com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails14.mmCommissionCalculationDate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails14.mmRateType,
-						com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails14.mmRevaluation, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails14.mmLegalFramework,
-						com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails14.mmInterestComputationMethod, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails14.mmMaturityDateModification,
-						com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails14.mmInterestPayment, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails14.mmVariableRateSupport,
-						com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails14.mmRepurchaseRate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails14.mmStockLoanMargin,
-						com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails14.mmSecuritiesHaircut, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails14.mmChargesRate,
-						com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails14.mmPricingRate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails14.mmSpread,
-						com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails14.mmTransactionCallDelay, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails14.mmTotalNumberOfCollateralInstructions,
-						com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails14.mmDealAmount, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails14.mmAccruedInterestAmount,
-						com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails14.mmForfeitAmount, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails14.mmPremiumAmount,
-						com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails14.mmTerminationAmountPerPieceOfCollateral, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails14.mmTerminationTransactionAmount,
-						com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails14.mmSecondLegNarrative);
+				messageElement_lazy = () -> Arrays.asList(SecuritiesFinancingTransactionDetails14.mmSecuritiesFinancingTradeIdentification, SecuritiesFinancingTransactionDetails14.mmClosingLegIdentification,
+						SecuritiesFinancingTransactionDetails14.mmTerminationDate, SecuritiesFinancingTransactionDetails14.mmRateChangeDate, SecuritiesFinancingTransactionDetails14.mmEarliestCallBackDate,
+						SecuritiesFinancingTransactionDetails14.mmCommissionCalculationDate, SecuritiesFinancingTransactionDetails14.mmRateType, SecuritiesFinancingTransactionDetails14.mmRevaluation,
+						SecuritiesFinancingTransactionDetails14.mmLegalFramework, SecuritiesFinancingTransactionDetails14.mmInterestComputationMethod, SecuritiesFinancingTransactionDetails14.mmMaturityDateModification,
+						SecuritiesFinancingTransactionDetails14.mmInterestPayment, SecuritiesFinancingTransactionDetails14.mmVariableRateSupport, SecuritiesFinancingTransactionDetails14.mmRepurchaseRate,
+						SecuritiesFinancingTransactionDetails14.mmStockLoanMargin, SecuritiesFinancingTransactionDetails14.mmSecuritiesHaircut, SecuritiesFinancingTransactionDetails14.mmChargesRate,
+						SecuritiesFinancingTransactionDetails14.mmPricingRate, SecuritiesFinancingTransactionDetails14.mmSpread, SecuritiesFinancingTransactionDetails14.mmTransactionCallDelay,
+						SecuritiesFinancingTransactionDetails14.mmTotalNumberOfCollateralInstructions, SecuritiesFinancingTransactionDetails14.mmDealAmount, SecuritiesFinancingTransactionDetails14.mmAccruedInterestAmount,
+						SecuritiesFinancingTransactionDetails14.mmForfeitAmount, SecuritiesFinancingTransactionDetails14.mmPremiumAmount, SecuritiesFinancingTransactionDetails14.mmTerminationAmountPerPieceOfCollateral,
+						SecuritiesFinancingTransactionDetails14.mmTerminationTransactionAmount, SecuritiesFinancingTransactionDetails14.mmSecondLegNarrative);
 				trace_lazy = () -> SecuritiesFinancing.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
 						return DateFormat.getDateInstance(java.text.DateFormat.LONG).parse("May 5, 2016");

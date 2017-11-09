@@ -18,7 +18,12 @@
 package com.tools20022.repository.entity;
 
 import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.UndertakingPartyRole;
+import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.Undertaking1;
+import com.tools20022.repository.msg.Undertaking3;
+import com.tools20022.repository.msg.Undertaking4;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -72,11 +77,11 @@ public class UndertakingApplicant extends UndertakingPartyRole {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "UndertakingApplicant";
 				definition = "Party named in an undertaking as the party on whose behalf the undertaking is issued.";
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Undertaking1.mmApplicant, com.tools20022.repository.msg.Undertaking4.mmApplicant, com.tools20022.repository.msg.Undertaking3.mmApplicant);
+				derivationElement_lazy = () -> Arrays.asList(Undertaking1.mmApplicant, Undertaking4.mmApplicant, Undertaking3.mmApplicant);
 				superType_lazy = () -> UndertakingPartyRole.mmObject();
 			}
 		});

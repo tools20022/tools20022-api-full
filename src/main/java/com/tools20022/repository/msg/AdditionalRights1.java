@@ -19,11 +19,16 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.AdditionalRightCode1Choice;
 import com.tools20022.repository.choice.AdditionalRightThreshold1Choice;
 import com.tools20022.repository.choice.DateFormat2Choice;
 import com.tools20022.repository.datatype.Max256Text;
 import com.tools20022.repository.entity.AdditionalRight;
+import com.tools20022.repository.entity.Deadline;
+import com.tools20022.repository.entity.ElectronicAddress;
+import com.tools20022.repository.entity.Meeting;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -133,14 +138,14 @@ public class AdditionalRights1 {
 	 */
 	public static final MMMessageAttribute mmAdditionalRight = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AdditionalRight.mmType;
+			businessElementTrace_lazy = () -> AdditionalRight.mmType;
 			componentContext_lazy = () -> AdditionalRights1.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlRght";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalRight";
 			definition = "Specific rights granted to the shareholders that can be exercised at shareholders meetings (for example, the right to ask questions, the right to add items to the agenda or table draft resolutions).";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AdditionalRights2.mmAdditionalRight);
+			nextVersions_lazy = () -> Arrays.asList(AdditionalRights2.mmAdditionalRight);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> AdditionalRightCode1Choice.mmObject();
@@ -192,14 +197,14 @@ public class AdditionalRights1 {
 	 */
 	public static final MMMessageAttribute mmAdditionalRightInformationURLAddress = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ElectronicAddress.mmURLAddress;
+			businessElementTrace_lazy = () -> ElectronicAddress.mmURLAddress;
 			componentContext_lazy = () -> AdditionalRights1.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlRghtInfURLAdr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalRightInformationURLAddress";
 			definition = "Address to use over the www (HTTP) service where addtional information on specific rights granted to the shareholders can be found.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AdditionalRights2.mmAdditionalRightInformationURLAddress);
+			nextVersions_lazy = () -> Arrays.asList(AdditionalRights2.mmAdditionalRightInformationURLAddress);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max256Text.mmObject();
@@ -253,14 +258,14 @@ public class AdditionalRights1 {
 	 */
 	public static final MMMessageAttribute mmAdditionalRightDeadline = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Meeting.mmDeadline;
+			businessElementTrace_lazy = () -> Meeting.mmDeadline;
 			componentContext_lazy = () -> AdditionalRights1.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlRghtDdln";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalRightDeadline";
 			definition = "Additional right granted to determine the date and time by which security holders can propose amendments or new resolutions. This deadline is set by an intermediary.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AdditionalRights2.mmAdditionalRightDeadline);
+			nextVersions_lazy = () -> Arrays.asList(AdditionalRights2.mmAdditionalRightDeadline);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateFormat2Choice.mmObject();
@@ -314,14 +319,14 @@ public class AdditionalRights1 {
 	 */
 	public static final MMMessageAttribute mmAdditionalRightMarketDeadline = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Deadline.mmMarketDeadline;
+			businessElementTrace_lazy = () -> Deadline.mmMarketDeadline;
 			componentContext_lazy = () -> AdditionalRights1.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlRghtMktDdln";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalRightMarketDeadline";
 			definition = "Additional right granted to determine the date and time by which security holders can propose amendments or new resolutions. This deadline is set by the issuer.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AdditionalRights2.mmAdditionalRightMarketDeadline);
+			nextVersions_lazy = () -> Arrays.asList(AdditionalRights2.mmAdditionalRightMarketDeadline);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateFormat2Choice.mmObject();
@@ -374,14 +379,14 @@ public class AdditionalRights1 {
 	 */
 	public static final MMMessageAttribute mmAdditionalRightThreshold = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AdditionalRight.mmAdditionalRightThreshold;
+			businessElementTrace_lazy = () -> AdditionalRight.mmAdditionalRightThreshold;
 			componentContext_lazy = () -> AdditionalRights1.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlRghtThrshld";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalRightThreshold";
 			definition = "Additional right granted to specify the minimum stake in share capital or cash value or number of security holders required to table resolutions.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AdditionalRights2.mmAdditionalRightThreshold);
+			nextVersions_lazy = () -> Arrays.asList(AdditionalRights2.mmAdditionalRightThreshold);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> AdditionalRightThreshold1Choice.mmObject();
@@ -391,12 +396,11 @@ public class AdditionalRights1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AdditionalRights1.mmAdditionalRight, com.tools20022.repository.msg.AdditionalRights1.mmAdditionalRightInformationURLAddress,
-						com.tools20022.repository.msg.AdditionalRights1.mmAdditionalRightDeadline, com.tools20022.repository.msg.AdditionalRights1.mmAdditionalRightMarketDeadline,
-						com.tools20022.repository.msg.AdditionalRights1.mmAdditionalRightThreshold);
+				messageElement_lazy = () -> Arrays.asList(AdditionalRights1.mmAdditionalRight, AdditionalRights1.mmAdditionalRightInformationURLAddress, AdditionalRights1.mmAdditionalRightDeadline,
+						AdditionalRights1.mmAdditionalRightMarketDeadline, AdditionalRights1.mmAdditionalRightThreshold);
 				trace_lazy = () -> AdditionalRight.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AdditionalRights1";
 				definition = "Information about the general meeting, specifying the participation requirements and the voting procedures. Alternatively, it may indicate where such information may be obtained.";
 				nextVersions_lazy = () -> Arrays.asList(AdditionalRights2.mmObject());

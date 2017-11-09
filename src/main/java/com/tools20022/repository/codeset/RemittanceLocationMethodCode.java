@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.RemittanceLocationMethod1Code
+ * RemittanceLocationMethod1Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.RemittanceLocationMethod2Code
+ * RemittanceLocationMethod2Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -47,17 +60,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.RemittanceLocationMethodCode#mmSMS
  * RemittanceLocationMethodCode.mmSMS}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.RemittanceLocationMethod1Code
- * RemittanceLocationMethod1Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.RemittanceLocationMethod2Code
- * RemittanceLocationMethod2Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -108,7 +110,7 @@ public class RemittanceLocationMethodCode {
 	 */
 	public static final MMCode mmFax = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Fax";
 			definition = "Remittance advice information must be faxed.";
 			owner_lazy = () -> RemittanceLocationMethodCode.mmObject();
@@ -141,7 +143,7 @@ public class RemittanceLocationMethodCode {
 	 */
 	public static final MMCode mmElectronicDataInterchange = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ElectronicDataInterchange";
 			definition = "Remittance advice information must be sent through Electronic Data Interchange (EDI).";
 			owner_lazy = () -> RemittanceLocationMethodCode.mmObject();
@@ -177,7 +179,7 @@ public class RemittanceLocationMethodCode {
 	 */
 	public static final MMCode mmUniformResourceIdentifier = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "UniformResourceIdentifier";
 			definition = "Remittance advice  information needs to be sent to a Uniform Resource Identifier (URI). URI  is a compact string of characters that uniquely identify an abstract or physical resource.  URI's are the super-set of identifiers, such as URLs, email addresses, ftp sites, etc, and as such, provide the syntax for all of the identification schemes.";
 			owner_lazy = () -> RemittanceLocationMethodCode.mmObject();
@@ -208,7 +210,7 @@ public class RemittanceLocationMethodCode {
 	 */
 	public static final MMCode mmEMail = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "EMail";
 			definition = "Remittance advice  information must be sent through e-mail.";
 			owner_lazy = () -> RemittanceLocationMethodCode.mmObject();
@@ -239,7 +241,7 @@ public class RemittanceLocationMethodCode {
 	 */
 	public static final MMCode mmPost = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Post";
 			definition = "Remittance advice information must be sent through postal services.";
 			owner_lazy = () -> RemittanceLocationMethodCode.mmObject();
@@ -272,7 +274,7 @@ public class RemittanceLocationMethodCode {
 	 */
 	public static final MMCode mmSMS = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SMS";
 			definition = "Remittance advice  information must be sent through by phone as a short message service (SMS).";
 			owner_lazy = () -> RemittanceLocationMethodCode.mmObject();
@@ -283,14 +285,13 @@ public class RemittanceLocationMethodCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("FAXI");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RemittanceLocationMethodCode";
 				definition = "Specifies the method used to deliver the remittance advice information.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RemittanceLocationMethodCode.mmFax, com.tools20022.repository.codeset.RemittanceLocationMethodCode.mmElectronicDataInterchange,
-						com.tools20022.repository.codeset.RemittanceLocationMethodCode.mmUniformResourceIdentifier, com.tools20022.repository.codeset.RemittanceLocationMethodCode.mmEMail,
-						com.tools20022.repository.codeset.RemittanceLocationMethodCode.mmPost, com.tools20022.repository.codeset.RemittanceLocationMethodCode.mmSMS);
+				code_lazy = () -> Arrays.asList(RemittanceLocationMethodCode.mmFax, RemittanceLocationMethodCode.mmElectronicDataInterchange, RemittanceLocationMethodCode.mmUniformResourceIdentifier, RemittanceLocationMethodCode.mmEMail,
+						RemittanceLocationMethodCode.mmPost, RemittanceLocationMethodCode.mmSMS);
 				derivation_lazy = () -> Arrays.asList(RemittanceLocationMethod1Code.mmObject(), RemittanceLocationMethod2Code.mmObject());
 			}
 		});

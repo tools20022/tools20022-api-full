@@ -19,7 +19,9 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.DecimalNumber;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -97,7 +99,7 @@ public class CorporateActionRateSD2 {
 			componentContext_lazy = () -> CorporateActionRateSD2.mmObject();
 			isDerived = false;
 			xmlTag = "RctBaseQty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceiptBaseQuantity";
 			definition = "Receipts quantity (base) of the American or Global Depository Receipt(s) per ordinary share(s) ratio.";
 			maxOccurs = 1;
@@ -142,7 +144,7 @@ public class CorporateActionRateSD2 {
 			componentContext_lazy = () -> CorporateActionRateSD2.mmObject();
 			isDerived = false;
 			xmlTag = "OrdnryShr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrdinaryShare";
 			definition = " Ordinary shares quantity of the American or Global Depository Receipt(s) per ordinary share(s)  ratio.";
 			maxOccurs = 1;
@@ -154,9 +156,9 @@ public class CorporateActionRateSD2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionRateSD2.mmReceiptBaseQuantity, com.tools20022.repository.msg.CorporateActionRateSD2.mmOrdinaryShare);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(CorporateActionRateSD2.mmReceiptBaseQuantity, CorporateActionRateSD2.mmOrdinaryShare);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionRateSD2";
 				definition = "Ratio of the American or Global Depository Receipt(s) per ordinary share(s).";
 			}

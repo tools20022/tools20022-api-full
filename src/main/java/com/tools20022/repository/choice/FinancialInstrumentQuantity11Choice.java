@@ -19,9 +19,12 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ActiveOrHistoricCurrencyAndAmount;
 import com.tools20022.repository.datatype.PercentageRate;
 import com.tools20022.repository.entity.InvestmentFundOrder;
+import com.tools20022.repository.entity.SecuritiesOrder;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.FinancialInstrumentQuantity1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -107,11 +110,11 @@ public class FinancialInstrumentQuantity11Choice {
 	 */
 	public static final MMMessageAttribute mmUnitsNumber = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrder.mmUnitsNumber;
+			businessElementTrace_lazy = () -> InvestmentFundOrder.mmUnitsNumber;
 			componentContext_lazy = () -> FinancialInstrumentQuantity11Choice.mmObject();
 			isDerived = false;
 			xmlTag = "UnitsNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnitsNumber";
 			definition = "Quantity of investment fund units subscribed or redeemed.";
 			maxOccurs = 1;
@@ -156,11 +159,11 @@ public class FinancialInstrumentQuantity11Choice {
 	 */
 	public static final MMMessageAttribute mmOrderedAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmOrderedAmount;
+			businessElementTrace_lazy = () -> SecuritiesOrder.mmOrderedAmount;
 			componentContext_lazy = () -> FinancialInstrumentQuantity11Choice.mmObject();
 			isDerived = false;
 			xmlTag = "OrdrdAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrderedAmount";
 			definition = "Amount of money instructed for the subscription or redemption.";
 			maxOccurs = 1;
@@ -204,11 +207,11 @@ public class FinancialInstrumentQuantity11Choice {
 	 */
 	public static final MMMessageAttribute mmHoldingsRate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrder.mmHoldingsRate;
+			businessElementTrace_lazy = () -> InvestmentFundOrder.mmHoldingsRate;
 			componentContext_lazy = () -> FinancialInstrumentQuantity11Choice.mmObject();
 			isDerived = false;
 			xmlTag = "HldgsRate";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HoldingsRate";
 			definition = "Percentage of the holding redeemed.";
 			maxOccurs = 1;
@@ -220,11 +223,10 @@ public class FinancialInstrumentQuantity11Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.FinancialInstrumentQuantity11Choice.mmUnitsNumber, com.tools20022.repository.choice.FinancialInstrumentQuantity11Choice.mmOrderedAmount,
-						com.tools20022.repository.choice.FinancialInstrumentQuantity11Choice.mmHoldingsRate);
+				messageElement_lazy = () -> Arrays.asList(FinancialInstrumentQuantity11Choice.mmUnitsNumber, FinancialInstrumentQuantity11Choice.mmOrderedAmount, FinancialInstrumentQuantity11Choice.mmHoldingsRate);
 				trace_lazy = () -> InvestmentFundOrder.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "FinancialInstrumentQuantity11Choice";
 				definition = "Choice between ways to express the quantity of the financial instrument to be subscribed to or redeemed.";
 			}

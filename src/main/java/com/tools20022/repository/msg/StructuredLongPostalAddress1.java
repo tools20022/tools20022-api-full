@@ -19,10 +19,13 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CountryCode;
 import com.tools20022.repository.datatype.Max16Text;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.entity.Country;
 import com.tools20022.repository.entity.PostalAddress;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -132,11 +135,11 @@ public class StructuredLongPostalAddress1 {
 	 */
 	public static final MMMessageAttribute mmBuildingName = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PostalAddress.mmBuildingName;
+			businessElementTrace_lazy = () -> PostalAddress.mmBuildingName;
 			componentContext_lazy = () -> StructuredLongPostalAddress1.mmObject();
 			isDerived = false;
 			xmlTag = "BldgNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BuildingName";
 			definition = "Name of the building or house.";
 			maxOccurs = 1;
@@ -179,11 +182,11 @@ public class StructuredLongPostalAddress1 {
 	 */
 	public static final MMMessageAttribute mmStreetName = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PostalAddress.mmStreetName;
+			businessElementTrace_lazy = () -> PostalAddress.mmStreetName;
 			componentContext_lazy = () -> StructuredLongPostalAddress1.mmObject();
 			isDerived = false;
 			xmlTag = "StrtNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StreetName";
 			definition = "Name of a street or thoroughfare.";
 			maxOccurs = 1;
@@ -227,11 +230,11 @@ public class StructuredLongPostalAddress1 {
 	 */
 	public static final MMMessageAttribute mmStreetBuildingIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PostalAddress.mmStreetBuildingIdentification;
+			businessElementTrace_lazy = () -> PostalAddress.mmStreetBuildingIdentification;
 			componentContext_lazy = () -> StructuredLongPostalAddress1.mmObject();
 			isDerived = false;
 			xmlTag = "StrtBldgId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StreetBuildingIdentification";
 			definition = "Number that identifies the position of a building on a street.";
 			maxOccurs = 1;
@@ -274,11 +277,11 @@ public class StructuredLongPostalAddress1 {
 	 */
 	public static final MMMessageAttribute mmFloor = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PostalAddress.mmFloor;
+			businessElementTrace_lazy = () -> PostalAddress.mmFloor;
 			componentContext_lazy = () -> StructuredLongPostalAddress1.mmObject();
 			isDerived = false;
 			xmlTag = "Flr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Floor";
 			definition = "Floor or storey within a building.";
 			maxOccurs = 1;
@@ -323,11 +326,11 @@ public class StructuredLongPostalAddress1 {
 	 */
 	public static final MMMessageAttribute mmTownName = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PostalAddress.mmTownName;
+			businessElementTrace_lazy = () -> PostalAddress.mmTownName;
 			componentContext_lazy = () -> StructuredLongPostalAddress1.mmObject();
 			isDerived = false;
 			xmlTag = "TwnNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TownName";
 			definition = "Name of a built-up area, with defined boundaries, and a local government.";
 			maxOccurs = 1;
@@ -370,11 +373,11 @@ public class StructuredLongPostalAddress1 {
 	 */
 	public static final MMMessageAttribute mmDistrictName = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PostalAddress.mmDistrictName;
+			businessElementTrace_lazy = () -> PostalAddress.mmDistrictName;
 			componentContext_lazy = () -> StructuredLongPostalAddress1.mmObject();
 			isDerived = false;
 			xmlTag = "DstrctNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DistrictName";
 			definition = "Name of a district, ie, a part of a town or region.";
 			maxOccurs = 1;
@@ -420,11 +423,11 @@ public class StructuredLongPostalAddress1 {
 	 */
 	public static final MMMessageAttribute mmRegionIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PostalAddress.mmRegionIdentification;
+			businessElementTrace_lazy = () -> PostalAddress.mmRegionIdentification;
 			componentContext_lazy = () -> StructuredLongPostalAddress1.mmObject();
 			isDerived = false;
 			xmlTag = "RgnId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RegionIdentification";
 			definition = "Identification of an administrative division of a country, state, or territory.";
 			maxOccurs = 1;
@@ -468,11 +471,11 @@ public class StructuredLongPostalAddress1 {
 	 */
 	public static final MMMessageAttribute mmState = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PostalAddress.mmState;
+			businessElementTrace_lazy = () -> PostalAddress.mmState;
 			componentContext_lazy = () -> StructuredLongPostalAddress1.mmObject();
 			isDerived = false;
 			xmlTag = "Stat";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "State";
 			definition = "Organised political community or area forming a part of a federation.";
 			maxOccurs = 1;
@@ -515,11 +518,11 @@ public class StructuredLongPostalAddress1 {
 	 */
 	public static final MMMessageAttribute mmCountyIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PostalAddress.mmCountyIdentification;
+			businessElementTrace_lazy = () -> PostalAddress.mmCountyIdentification;
 			componentContext_lazy = () -> StructuredLongPostalAddress1.mmObject();
 			isDerived = false;
 			xmlTag = "CtyId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CountyIdentification";
 			definition = "Identifier of a county.";
 			maxOccurs = 1;
@@ -562,11 +565,11 @@ public class StructuredLongPostalAddress1 {
 	 */
 	public static final MMMessageAttribute mmCountry = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Country.mmCode;
+			businessElementTrace_lazy = () -> Country.mmCode;
 			componentContext_lazy = () -> StructuredLongPostalAddress1.mmObject();
 			isDerived = false;
 			xmlTag = "Ctry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Country";
 			definition = "Nation with its own government.";
 			maxOccurs = 1;
@@ -612,11 +615,11 @@ public class StructuredLongPostalAddress1 {
 	 */
 	public static final MMMessageAttribute mmPostCodeIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PostalAddress.mmPostCodeIdentification;
+			businessElementTrace_lazy = () -> PostalAddress.mmPostCodeIdentification;
 			componentContext_lazy = () -> StructuredLongPostalAddress1.mmObject();
 			isDerived = false;
 			xmlTag = "PstCdId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PostCodeIdentification";
 			definition = "Identifier consisting of a group of letters and/or numbers that is added to a postal address to assist the sorting of mail.";
 			maxOccurs = 1;
@@ -662,11 +665,11 @@ public class StructuredLongPostalAddress1 {
 	 */
 	public static final MMMessageAttribute mmPostOfficeBox = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PostalAddress.mmPostOfficeBox;
+			businessElementTrace_lazy = () -> PostalAddress.mmPostOfficeBox;
 			componentContext_lazy = () -> StructuredLongPostalAddress1.mmObject();
 			isDerived = false;
 			xmlTag = "POB";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PostOfficeBox";
 			definition = "Numbered box in a post office, assigned to a person or organisation, where letters are kept until called for.";
 			maxOccurs = 1;
@@ -678,15 +681,12 @@ public class StructuredLongPostalAddress1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StructuredLongPostalAddress1.mmBuildingName, com.tools20022.repository.msg.StructuredLongPostalAddress1.mmStreetName,
-						com.tools20022.repository.msg.StructuredLongPostalAddress1.mmStreetBuildingIdentification, com.tools20022.repository.msg.StructuredLongPostalAddress1.mmFloor,
-						com.tools20022.repository.msg.StructuredLongPostalAddress1.mmTownName, com.tools20022.repository.msg.StructuredLongPostalAddress1.mmDistrictName,
-						com.tools20022.repository.msg.StructuredLongPostalAddress1.mmRegionIdentification, com.tools20022.repository.msg.StructuredLongPostalAddress1.mmState,
-						com.tools20022.repository.msg.StructuredLongPostalAddress1.mmCountyIdentification, com.tools20022.repository.msg.StructuredLongPostalAddress1.mmCountry,
-						com.tools20022.repository.msg.StructuredLongPostalAddress1.mmPostCodeIdentification, com.tools20022.repository.msg.StructuredLongPostalAddress1.mmPostOfficeBox);
+				messageElement_lazy = () -> Arrays.asList(StructuredLongPostalAddress1.mmBuildingName, StructuredLongPostalAddress1.mmStreetName, StructuredLongPostalAddress1.mmStreetBuildingIdentification,
+						StructuredLongPostalAddress1.mmFloor, StructuredLongPostalAddress1.mmTownName, StructuredLongPostalAddress1.mmDistrictName, StructuredLongPostalAddress1.mmRegionIdentification, StructuredLongPostalAddress1.mmState,
+						StructuredLongPostalAddress1.mmCountyIdentification, StructuredLongPostalAddress1.mmCountry, StructuredLongPostalAddress1.mmPostCodeIdentification, StructuredLongPostalAddress1.mmPostOfficeBox);
 				trace_lazy = () -> PostalAddress.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "StructuredLongPostalAddress1";
 				definition = "Address of a party expressed in a formal structure, usually according to the country's postal services specifications.";
 			}

@@ -20,10 +20,14 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.acmt.AccountDetailsConfirmationV07;
+import com.tools20022.repository.area.acmt.AccountOpeningInstructionV07;
 import com.tools20022.repository.choice.PartyIdentification70Choice;
 import com.tools20022.repository.choice.RestrictionStatus1Choice;
 import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -134,10 +138,10 @@ public class AdditiononalInformation12 {
 			componentContext_lazy = () -> AdditiononalInformation12.mmObject();
 			isDerived = false;
 			xmlTag = "Lmttn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Limitation";
 			definition = "Restrictions and/or limitations on the account or party.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AccountRestrictions1.mmLimitation;
+			previousVersion_lazy = () -> AccountRestrictions1.mmLimitation;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
@@ -184,10 +188,10 @@ public class AdditiononalInformation12 {
 			componentContext_lazy = () -> AdditiononalInformation12.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInformation";
 			definition = "Additional information such as remarks or notes that must be conveyed about the account management activity or party.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AccountRestrictions1.mmAdditionalInformation;
+			previousVersion_lazy = () -> AccountRestrictions1.mmAdditionalInformation;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
@@ -234,10 +238,10 @@ public class AdditiononalInformation12 {
 			componentContext_lazy = () -> AdditiononalInformation12.mmObject();
 			isDerived = false;
 			xmlTag = "AcctVldtn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountValidation";
 			definition = "Information or instructions for the by-passing of validations in the account registration process.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AccountRestrictions1.mmAccountValidation;
+			previousVersion_lazy = () -> AccountRestrictions1.mmAccountValidation;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
@@ -282,10 +286,10 @@ public class AdditiononalInformation12 {
 			componentContext_lazy = () -> AdditiononalInformation12.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Type or identification of the remark, note, limitation or restriction";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AccountRestrictions1.mmType;
+			previousVersion_lazy = () -> AccountRestrictions1.mmType;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -332,10 +336,10 @@ public class AdditiononalInformation12 {
 			componentContext_lazy = () -> AdditiononalInformation12.mmObject();
 			isDerived = false;
 			xmlTag = "Rgltr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Regulator";
 			definition = "Regulator that may have to be informed about the remark, note, limitation or restriction.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AccountRestrictions1.mmRegulator;
+			previousVersion_lazy = () -> AccountRestrictions1.mmRegulator;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -380,10 +384,10 @@ public class AdditiononalInformation12 {
 			componentContext_lazy = () -> AdditiononalInformation12.mmObject();
 			isDerived = false;
 			xmlTag = "Sts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Status";
 			definition = "Status of the remark , note, limitation or restriction.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AccountRestrictions1.mmStatus;
+			previousVersion_lazy = () -> AccountRestrictions1.mmStatus;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -427,10 +431,10 @@ public class AdditiononalInformation12 {
 			componentContext_lazy = () -> AdditiononalInformation12.mmObject();
 			isDerived = false;
 			xmlTag = "Prd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Period";
 			definition = "Period of the restriction.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AccountRestrictions1.mmPeriod;
+			previousVersion_lazy = () -> AccountRestrictions1.mmPeriod;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -441,13 +445,11 @@ public class AdditiononalInformation12 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AdditiononalInformation12.mmLimitation, com.tools20022.repository.msg.AdditiononalInformation12.mmAdditionalInformation,
-						com.tools20022.repository.msg.AdditiononalInformation12.mmAccountValidation, com.tools20022.repository.msg.AdditiononalInformation12.mmType, com.tools20022.repository.msg.AdditiononalInformation12.mmRegulator,
-						com.tools20022.repository.msg.AdditiononalInformation12.mmStatus, com.tools20022.repository.msg.AdditiononalInformation12.mmPeriod);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountDetailsConfirmationV07.mmAdditionalInformation,
-						com.tools20022.repository.area.acmt.AccountOpeningInstructionV07.mmAdditionalInformation);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(AdditiononalInformation12.mmLimitation, AdditiononalInformation12.mmAdditionalInformation, AdditiononalInformation12.mmAccountValidation, AdditiononalInformation12.mmType,
+						AdditiononalInformation12.mmRegulator, AdditiononalInformation12.mmStatus, AdditiononalInformation12.mmPeriod);
+				messageBuildingBlock_lazy = () -> Arrays.asList(AccountDetailsConfirmationV07.mmAdditionalInformation, AccountOpeningInstructionV07.mmAdditionalInformation);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AdditiononalInformation12";
 				definition = "Restrictions, remarks or notes that may be applied to an account or investment plan.";
 				previousVersion_lazy = () -> AccountRestrictions1.mmObject();

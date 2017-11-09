@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CollateralPoolCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -77,7 +79,7 @@ public class CollateralPool1Code extends CollateralPoolCode {
 	 */
 	public static final MMCode mmNoPool = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoPool";
 			owner_lazy = () -> CollateralPool1Code.mmObject();
 		}
@@ -100,7 +102,7 @@ public class CollateralPool1Code extends CollateralPoolCode {
 	 */
 	public static final MMCode mmPool = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Pool";
 			owner_lazy = () -> CollateralPool1Code.mmObject();
 		}
@@ -109,11 +111,11 @@ public class CollateralPool1Code extends CollateralPoolCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CollateralPool1Code";
 				definition = "Specifies whether the collateral is a pool collateral or not.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CollateralPool1Code.mmNoPool, com.tools20022.repository.codeset.CollateralPool1Code.mmPool);
+				code_lazy = () -> Arrays.asList(CollateralPool1Code.mmNoPool, CollateralPool1Code.mmPool);
 				trace_lazy = () -> CollateralPoolCode.mmObject();
 			}
 		});

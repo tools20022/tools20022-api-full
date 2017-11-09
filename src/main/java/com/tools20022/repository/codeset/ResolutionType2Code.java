@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ResolutionTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -77,7 +79,7 @@ public class ResolutionType2Code extends ResolutionTypeCode {
 	 */
 	public static final MMCode mmExtraordinary = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Extraordinary";
 			owner_lazy = () -> ResolutionType2Code.mmObject();
 		}
@@ -100,7 +102,7 @@ public class ResolutionType2Code extends ResolutionTypeCode {
 	 */
 	public static final MMCode mmSpecial = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Special";
 			owner_lazy = () -> ResolutionType2Code.mmObject();
 		}
@@ -109,11 +111,11 @@ public class ResolutionType2Code extends ResolutionTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ResolutionType2Code";
 				definition = "Specifies the type of resolution.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ResolutionType2Code.mmExtraordinary, com.tools20022.repository.codeset.ResolutionType2Code.mmSpecial);
+				code_lazy = () -> Arrays.asList(ResolutionType2Code.mmExtraordinary, ResolutionType2Code.mmSpecial);
 				trace_lazy = () -> ResolutionTypeCode.mmObject();
 			}
 		});

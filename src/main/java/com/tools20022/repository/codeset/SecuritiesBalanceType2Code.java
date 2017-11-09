@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.SecuritiesBalanceTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -96,7 +98,7 @@ public class SecuritiesBalanceType2Code extends SecuritiesBalanceTypeCode {
 	 */
 	public static final MMCode mmTaxExempt = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxExempt";
 			owner_lazy = () -> SecuritiesBalanceType2Code.mmObject();
 		}
@@ -119,7 +121,7 @@ public class SecuritiesBalanceType2Code extends SecuritiesBalanceTypeCode {
 	 */
 	public static final MMCode mmNonTaxExempt = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonTaxExempt";
 			owner_lazy = () -> SecuritiesBalanceType2Code.mmObject();
 		}
@@ -142,7 +144,7 @@ public class SecuritiesBalanceType2Code extends SecuritiesBalanceTypeCode {
 	 */
 	public static final MMCode mmRegistered = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Registered";
 			owner_lazy = () -> SecuritiesBalanceType2Code.mmObject();
 		}
@@ -165,7 +167,7 @@ public class SecuritiesBalanceType2Code extends SecuritiesBalanceTypeCode {
 	 */
 	public static final MMCode mmUnclassified = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unclassified";
 			owner_lazy = () -> SecuritiesBalanceType2Code.mmObject();
 		}
@@ -188,7 +190,7 @@ public class SecuritiesBalanceType2Code extends SecuritiesBalanceTypeCode {
 	 */
 	public static final MMCode mmStreetPosition = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StreetPosition";
 			owner_lazy = () -> SecuritiesBalanceType2Code.mmObject();
 		}
@@ -211,7 +213,7 @@ public class SecuritiesBalanceType2Code extends SecuritiesBalanceTypeCode {
 	 */
 	public static final MMCode mmUnregistered = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unregistered";
 			owner_lazy = () -> SecuritiesBalanceType2Code.mmObject();
 		}
@@ -220,14 +222,13 @@ public class SecuritiesBalanceType2Code extends SecuritiesBalanceTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CLEN");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesBalanceType2Code";
 				definition = "Specifies the nature of the securities or investment fund balance.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SecuritiesBalanceType2Code.mmTaxExempt, com.tools20022.repository.codeset.SecuritiesBalanceType2Code.mmNonTaxExempt,
-						com.tools20022.repository.codeset.SecuritiesBalanceType2Code.mmRegistered, com.tools20022.repository.codeset.SecuritiesBalanceType2Code.mmUnclassified,
-						com.tools20022.repository.codeset.SecuritiesBalanceType2Code.mmStreetPosition, com.tools20022.repository.codeset.SecuritiesBalanceType2Code.mmUnregistered);
+				code_lazy = () -> Arrays.asList(SecuritiesBalanceType2Code.mmTaxExempt, SecuritiesBalanceType2Code.mmNonTaxExempt, SecuritiesBalanceType2Code.mmRegistered, SecuritiesBalanceType2Code.mmUnclassified,
+						SecuritiesBalanceType2Code.mmStreetPosition, SecuritiesBalanceType2Code.mmUnregistered);
 				trace_lazy = () -> SecuritiesBalanceTypeCode.mmObject();
 			}
 		});

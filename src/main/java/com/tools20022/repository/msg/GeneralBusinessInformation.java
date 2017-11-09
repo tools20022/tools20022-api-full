@@ -19,9 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.SystemBusinessInformation;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -106,11 +108,11 @@ public class GeneralBusinessInformation {
 	 */
 	public static final MMMessageAttribute mmQualifier = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SystemBusinessInformation.mmQualifier;
+			businessElementTrace_lazy = () -> SystemBusinessInformation.mmQualifier;
 			componentContext_lazy = () -> GeneralBusinessInformation.mmObject();
 			isDerived = false;
 			xmlTag = "Qlfr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Qualifier";
 			definition = "Further information about the criticality or importance of a general business information system.";
 			maxOccurs = 1;
@@ -156,11 +158,11 @@ public class GeneralBusinessInformation {
 	 */
 	public static final MMMessageAttribute mmSubject = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SystemBusinessInformation.mmSubject;
+			businessElementTrace_lazy = () -> SystemBusinessInformation.mmSubject;
 			componentContext_lazy = () -> GeneralBusinessInformation.mmObject();
 			isDerived = false;
 			xmlTag = "Sbjt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Subject";
 			definition = "Subject line of an item of general business information, summarizing the topic and intended destination of the information.";
 			maxOccurs = 1;
@@ -203,11 +205,11 @@ public class GeneralBusinessInformation {
 	 */
 	public static final MMMessageAttribute mmSubjectDetails = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SystemBusinessInformation.mmSubjectDetails;
+			businessElementTrace_lazy = () -> SystemBusinessInformation.mmSubjectDetails;
 			componentContext_lazy = () -> GeneralBusinessInformation.mmObject();
 			isDerived = false;
 			xmlTag = "SbjtDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubjectDetails";
 			definition = "General business information, in unstructured form.";
 			maxOccurs = 1;
@@ -219,11 +221,10 @@ public class GeneralBusinessInformation {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GeneralBusinessInformation.mmQualifier, com.tools20022.repository.msg.GeneralBusinessInformation.mmSubject,
-						com.tools20022.repository.msg.GeneralBusinessInformation.mmSubjectDetails);
+				messageElement_lazy = () -> Arrays.asList(GeneralBusinessInformation.mmQualifier, GeneralBusinessInformation.mmSubject, GeneralBusinessInformation.mmSubjectDetails);
 				trace_lazy = () -> SystemBusinessInformation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "GeneralBusinessInformation";
 				definition = "Details about business information related to a system.";
 			}

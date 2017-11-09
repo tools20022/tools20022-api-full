@@ -19,11 +19,14 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.GenderCode;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.Person;
+import com.tools20022.repository.entity.PersonName;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -131,15 +134,15 @@ public class IndividualPerson30 {
 	 */
 	public static final MMMessageAttribute mmGivenName = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PersonName.mmGivenName;
+			businessElementTrace_lazy = () -> PersonName.mmGivenName;
 			componentContext_lazy = () -> IndividualPerson30.mmObject();
 			isDerived = false;
 			xmlTag = "GvnNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GivenName";
 			definition = "First name of the person.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IndividualPerson35.mmGivenName);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.IndividualPerson4.mmGivenName;
+			nextVersions_lazy = () -> Arrays.asList(IndividualPerson35.mmGivenName);
+			previousVersion_lazy = () -> IndividualPerson4.mmGivenName;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -193,15 +196,15 @@ public class IndividualPerson30 {
 	 */
 	public static final MMMessageAttribute mmMiddleName = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PersonName.mmMiddleName;
+			businessElementTrace_lazy = () -> PersonName.mmMiddleName;
 			componentContext_lazy = () -> IndividualPerson30.mmObject();
 			isDerived = false;
 			xmlTag = "MddlNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MiddleName";
 			definition = "Second name of the person.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IndividualPerson35.mmMiddleName);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.IndividualPerson4.mmMiddleName;
+			nextVersions_lazy = () -> Arrays.asList(IndividualPerson35.mmMiddleName);
+			previousVersion_lazy = () -> IndividualPerson4.mmMiddleName;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -257,15 +260,15 @@ public class IndividualPerson30 {
 	 */
 	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PersonName.mmBirthName;
+			businessElementTrace_lazy = () -> PersonName.mmBirthName;
 			componentContext_lazy = () -> IndividualPerson30.mmObject();
 			isDerived = false;
 			xmlTag = "Nm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Name";
 			definition = "Name by which the party is known and which is usually used to identify that party.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IndividualPerson35.mmName);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.IndividualPerson4.mmName;
+			nextVersions_lazy = () -> Arrays.asList(IndividualPerson35.mmName);
+			previousVersion_lazy = () -> IndividualPerson4.mmName;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
@@ -319,15 +322,15 @@ public class IndividualPerson30 {
 	 */
 	public static final MMMessageAttribute mmGender = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Person.mmGender;
+			businessElementTrace_lazy = () -> Person.mmGender;
 			componentContext_lazy = () -> IndividualPerson30.mmObject();
 			isDerived = false;
 			xmlTag = "Gndr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Gender";
 			definition = "Gender of the person.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IndividualPerson35.mmGender);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.IndividualPerson4.mmGender;
+			nextVersions_lazy = () -> Arrays.asList(IndividualPerson35.mmGender);
+			previousVersion_lazy = () -> IndividualPerson4.mmGender;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> GenderCode.mmObject();
@@ -381,15 +384,15 @@ public class IndividualPerson30 {
 	 */
 	public static final MMMessageAttribute mmBirthDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Person.mmBirthDate;
+			businessElementTrace_lazy = () -> Person.mmBirthDate;
 			componentContext_lazy = () -> IndividualPerson30.mmObject();
 			isDerived = false;
 			xmlTag = "BirthDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BirthDate";
 			definition = "Date on which the person is born.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IndividualPerson35.mmBirthDate);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.IndividualPerson4.mmBirthDate;
+			nextVersions_lazy = () -> Arrays.asList(IndividualPerson35.mmBirthDate);
+			previousVersion_lazy = () -> IndividualPerson4.mmBirthDate;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
@@ -399,11 +402,10 @@ public class IndividualPerson30 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IndividualPerson30.mmGivenName, com.tools20022.repository.msg.IndividualPerson30.mmMiddleName, com.tools20022.repository.msg.IndividualPerson30.mmName,
-						com.tools20022.repository.msg.IndividualPerson30.mmGender, com.tools20022.repository.msg.IndividualPerson30.mmBirthDate);
+				messageElement_lazy = () -> Arrays.asList(IndividualPerson30.mmGivenName, IndividualPerson30.mmMiddleName, IndividualPerson30.mmName, IndividualPerson30.mmGender, IndividualPerson30.mmBirthDate);
 				trace_lazy = () -> Person.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "IndividualPerson30";
 				definition = "Human entity, as distinguished from a corporate entity (which is sometimes referred to as an 'artificial person').";
 				nextVersions_lazy = () -> Arrays.asList(IndividualPerson35.mmObject());

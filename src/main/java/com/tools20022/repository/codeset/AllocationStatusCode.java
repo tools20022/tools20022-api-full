@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.AllocationStatus1Code
+ * AllocationStatus1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -35,13 +44,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.AllocationStatusCode#mmPartiallyAllocated
  * AllocationStatusCode.mmPartiallyAllocated}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.AllocationStatus1Code
- * AllocationStatus1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -93,7 +95,7 @@ public class AllocationStatusCode {
 	 */
 	public static final MMCode mmFullyAllocated = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FullyAllocated";
 			definition = "Instruction has been fully covered by collateral.";
 			owner_lazy = () -> AllocationStatusCode.mmObject();
@@ -123,7 +125,7 @@ public class AllocationStatusCode {
 	 */
 	public static final MMCode mmPartiallyAllocated = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartiallyAllocated";
 			definition = "Instruction has been partially covered by collateral.";
 			owner_lazy = () -> AllocationStatusCode.mmObject();
@@ -134,12 +136,12 @@ public class AllocationStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("AOLF");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AllocationStatusCode";
 				definition = "Specifies the  status of allocation of collateral to cover the instruction.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AllocationStatusCode.mmFullyAllocated, com.tools20022.repository.codeset.AllocationStatusCode.mmPartiallyAllocated);
+				code_lazy = () -> Arrays.asList(AllocationStatusCode.mmFullyAllocated, AllocationStatusCode.mmPartiallyAllocated);
 				derivation_lazy = () -> Arrays.asList(AllocationStatus1Code.mmObject());
 			}
 		});

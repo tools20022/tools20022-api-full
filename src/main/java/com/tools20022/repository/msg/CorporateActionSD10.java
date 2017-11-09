@@ -19,9 +19,12 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.datatype.Max3NumericText;
+import com.tools20022.repository.entity.Lottery;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -112,10 +115,10 @@ public class CorporateActionSD10 {
 			componentContext_lazy = () -> CorporateActionSD10.mmObject();
 			isDerived = false;
 			xmlTag = "PlcAndNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "xPath to the element that is being extended.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionSD16.mmPlaceAndName);
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionSD16.mmPlaceAndName);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
@@ -166,10 +169,10 @@ public class CorporateActionSD10 {
 			componentContext_lazy = () -> CorporateActionSD10.mmObject();
 			isDerived = false;
 			xmlTag = "LtrySeqNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LotterySequenceNumber";
 			definition = "DTC generated number to distinguish between the series of lotteries run against a particular redemption.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionSD16.mmLotterySequenceNumber);
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionSD16.mmLotterySequenceNumber);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max3NumericText.mmObject();
@@ -221,14 +224,14 @@ public class CorporateActionSD10 {
 	 */
 	public static final MMMessageAttribute mmLotteryDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Lottery.mmLotteryDate;
+			businessElementTrace_lazy = () -> Lottery.mmLotteryDate;
 			componentContext_lazy = () -> CorporateActionSD10.mmObject();
 			isDerived = false;
 			xmlTag = "LtryDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LotteryDate";
 			definition = "Date/time on which the lottery is run and applied to the holder's positions. This is also applicable to partial calls.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionSD16.mmLotteryDate);
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionSD16.mmLotteryDate);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
@@ -238,10 +241,9 @@ public class CorporateActionSD10 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionSD10.mmPlaceAndName, com.tools20022.repository.msg.CorporateActionSD10.mmLotterySequenceNumber,
-						com.tools20022.repository.msg.CorporateActionSD10.mmLotteryDate);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(CorporateActionSD10.mmPlaceAndName, CorporateActionSD10.mmLotterySequenceNumber, CorporateActionSD10.mmLotteryDate);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionSD10";
 				definition = "Provides additional information regarding corporate action details.";
 				nextVersions_lazy = () -> Arrays.asList(CorporateActionSD16.mmObject());

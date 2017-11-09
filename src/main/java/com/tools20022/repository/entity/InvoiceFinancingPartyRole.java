@@ -17,9 +17,16 @@
 
 package com.tools20022.repository.entity;
 
+import com.tools20022.metamodel.MMAggregation;
 import com.tools20022.metamodel.MMBusinessAssociationEnd;
 import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.InvoicePartyRole;
+import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.FinancingAllowedSummary1;
+import com.tools20022.repository.msg.FinancingNotificationParties1;
+import com.tools20022.repository.msg.PartyAndAccountIdentificationAndContactInformation1;
+import com.tools20022.repository.msg.PartyIdentificationAndAccount6;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -34,28 +41,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InvoiceFinancingPartyRole#mmCashAccount
- * InvoiceFinancingPartyRole.mmCashAccount}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InvoiceFinancingPartyRole#mmInvoiceFinancingTransaction
- * InvoiceFinancingPartyRole.mmInvoiceFinancingTransaction}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
- * subType} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.IntermediateAgentRole
- * IntermediateAgentRole}</li>
- * <li>{@linkplain com.tools20022.repository.entity.FirstAgentRole
- * FirstAgentRole}</li>
- * <li>{@linkplain com.tools20022.repository.entity.FinancingRequestorRole
- * FinancingRequestorRole}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
  * associationDomain} =
@@ -86,6 +71,28 @@ import java.util.List;
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
  * superType} = {@linkplain com.tools20022.repository.entity.InvoicePartyRole
  * InvoicePartyRole}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
+ * subType} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.IntermediateAgentRole
+ * IntermediateAgentRole}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.FirstAgentRole
+ * FirstAgentRole}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.FinancingRequestorRole
+ * FinancingRequestorRole}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InvoiceFinancingPartyRole#mmCashAccount
+ * InvoiceFinancingPartyRole.mmCashAccount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InvoiceFinancingPartyRole#mmInvoiceFinancingTransaction
+ * InvoiceFinancingPartyRole.mmInvoiceFinancingTransaction}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -162,17 +169,16 @@ public class InvoiceFinancingPartyRole extends InvoicePartyRole {
 	 */
 	public static final MMBusinessAssociationEnd mmCashAccount = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyIdentificationAndAccount6.mmCreditAccount, com.tools20022.repository.msg.PartyIdentificationAndAccount6.mmFinancingAccount,
-					com.tools20022.repository.msg.PartyAndAccountIdentificationAndContactInformation1.mmAccountIdentification, com.tools20022.repository.msg.FinancingAllowedSummary1.mmCreditAccount,
-					com.tools20022.repository.msg.FinancingAllowedSummary1.mmFinancingAccount);
+			derivation_lazy = () -> Arrays.asList(PartyIdentificationAndAccount6.mmCreditAccount, PartyIdentificationAndAccount6.mmFinancingAccount, PartyAndAccountIdentificationAndContactInformation1.mmAccountIdentification,
+					FinancingAllowedSummary1.mmCreditAccount, FinancingAllowedSummary1.mmFinancingAccount);
 			elementContext_lazy = () -> InvoiceFinancingPartyRole.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CashAccount";
 			definition = "Account used in the financing process.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.CashAccount.mmRelatedInvoiceFinancingPartyRole;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.CashAccount.mmObject();
 		}
 	};
@@ -218,12 +224,12 @@ public class InvoiceFinancingPartyRole extends InvoicePartyRole {
 		{
 			elementContext_lazy = () -> InvoiceFinancingPartyRole.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InvoiceFinancingTransaction";
 			definition = "Identifies the invoice financing transaction for which a party plays a role.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.InvoiceFinancingAgreement.mmInvoiceFinancingPartyRole;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.InvoiceFinancingAgreement.mmObject();
 		}
 	};
@@ -231,16 +237,15 @@ public class InvoiceFinancingPartyRole extends InvoicePartyRole {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InvoiceFinancingPartyRole";
 				definition = "Role played by a party in the context of financing an invoice.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CashAccount.mmRelatedInvoiceFinancingPartyRole, com.tools20022.repository.entity.InvoiceFinancingAgreement.mmInvoiceFinancingPartyRole);
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancingNotificationParties1.mmNotifyingParty, com.tools20022.repository.msg.FinancingNotificationParties1.mmNotificationReceiver,
-						com.tools20022.repository.msg.FinancingNotificationParties1.mmAcknowledgementReceiver);
+				derivationElement_lazy = () -> Arrays.asList(FinancingNotificationParties1.mmNotifyingParty, FinancingNotificationParties1.mmNotificationReceiver, FinancingNotificationParties1.mmAcknowledgementReceiver);
 				subType_lazy = () -> Arrays.asList(IntermediateAgentRole.mmObject(), FirstAgentRole.mmObject(), FinancingRequestorRole.mmObject());
 				superType_lazy = () -> InvoicePartyRole.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.InvoiceFinancingPartyRole.mmCashAccount, com.tools20022.repository.entity.InvoiceFinancingPartyRole.mmInvoiceFinancingTransaction);
+				element_lazy = () -> Arrays.asList(InvoiceFinancingPartyRole.mmCashAccount, InvoiceFinancingPartyRole.mmInvoiceFinancingTransaction);
 			}
 		});
 		return mmObject_lazy.get();

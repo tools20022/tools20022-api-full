@@ -20,11 +20,13 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.pacs.FIToFIPaymentReversalV05;
 import com.tools20022.repository.codeset.ChargeBearerType1Code;
 import com.tools20022.repository.codeset.Priority3Code;
 import com.tools20022.repository.datatype.*;
-import com.tools20022.repository.entity.Charges;
-import com.tools20022.repository.entity.Payment;
+import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -196,11 +198,11 @@ public class PaymentTransaction51 {
 			componentContext_lazy = () -> PaymentTransaction51.mmObject();
 			isDerived = false;
 			xmlTag = "RvslId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReversalIdentification";
 			definition = "Unique identification, as assigned by an instructing party for an instructed party, to unambiguously identify the reversed transaction.\nUsage: The instructing party is the party sending the reversal message and not the party that sent the original instruction that is being reversed.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentTransaction60.mmReversalIdentification);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PaymentTransaction45.mmReversalIdentification;
+			nextVersions_lazy = () -> Arrays.asList(PaymentTransaction60.mmReversalIdentification);
+			previousVersion_lazy = () -> PaymentTransaction45.mmReversalIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -249,14 +251,14 @@ public class PaymentTransaction51 {
 	 */
 	public static final MMMessageAssociationEnd mmOriginalGroupInformation = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.mmPaymentExecution;
+			businessElementTrace_lazy = () -> Payment.mmPaymentExecution;
 			componentContext_lazy = () -> PaymentTransaction51.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlGrpInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalGroupInformation";
 			definition = "Provides information on the original message.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentTransaction60.mmOriginalGroupInformation);
+			nextVersions_lazy = () -> Arrays.asList(PaymentTransaction60.mmOriginalGroupInformation);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -315,15 +317,15 @@ public class PaymentTransaction51 {
 	 */
 	public static final MMMessageAttribute mmOriginalInstructionIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentIdentification.mmInstructionIdentification;
+			businessElementTrace_lazy = () -> PaymentIdentification.mmInstructionIdentification;
 			componentContext_lazy = () -> PaymentTransaction51.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlInstrId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalInstructionIdentification";
 			definition = "Unique identification, as assigned by the original instructing party for the original instructed party, to unambiguously identify the original instruction.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentTransaction60.mmOriginalInstructionIdentification);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PaymentTransaction45.mmOriginalInstructionIdentification;
+			nextVersions_lazy = () -> Arrays.asList(PaymentTransaction60.mmOriginalInstructionIdentification);
+			previousVersion_lazy = () -> PaymentTransaction45.mmOriginalInstructionIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -380,15 +382,15 @@ public class PaymentTransaction51 {
 	 */
 	public static final MMMessageAttribute mmOriginalEndToEndIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentIdentification.mmEndToEndIdentification;
+			businessElementTrace_lazy = () -> PaymentIdentification.mmEndToEndIdentification;
 			componentContext_lazy = () -> PaymentTransaction51.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlEndToEndId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalEndToEndIdentification";
 			definition = "Unique identification, as assigned by the original initiating party, to unambiguously identify the original transaction.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentTransaction60.mmOriginalEndToEndIdentification);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PaymentTransaction45.mmOriginalEndToEndIdentification;
+			nextVersions_lazy = () -> Arrays.asList(PaymentTransaction60.mmOriginalEndToEndIdentification);
+			previousVersion_lazy = () -> PaymentTransaction45.mmOriginalEndToEndIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -445,15 +447,15 @@ public class PaymentTransaction51 {
 	 */
 	public static final MMMessageAttribute mmOriginalTransactionIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentIdentification.mmTransactionIdentification;
+			businessElementTrace_lazy = () -> PaymentIdentification.mmTransactionIdentification;
 			componentContext_lazy = () -> PaymentTransaction51.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlTxId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalTransactionIdentification";
 			definition = "Unique identification, as assigned by the original first instructing agent, to unambiguously identify the transaction.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentTransaction60.mmOriginalTransactionIdentification);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PaymentTransaction45.mmOriginalTransactionIdentification;
+			nextVersions_lazy = () -> Arrays.asList(PaymentTransaction60.mmOriginalTransactionIdentification);
+			previousVersion_lazy = () -> PaymentTransaction45.mmOriginalTransactionIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -510,15 +512,15 @@ public class PaymentTransaction51 {
 	 */
 	public static final MMMessageAttribute mmOriginalClearingSystemReference = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentIdentification.mmClearingSystemReference;
+			businessElementTrace_lazy = () -> PaymentIdentification.mmClearingSystemReference;
 			componentContext_lazy = () -> PaymentTransaction51.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlClrSysRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalClearingSystemReference";
 			definition = "Unique reference, as assigned by the original clearing system, to unambiguously identify the original instruction.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentTransaction60.mmOriginalClearingSystemReference);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PaymentTransaction45.mmOriginalClearingSystemReference;
+			nextVersions_lazy = () -> Arrays.asList(PaymentTransaction60.mmOriginalClearingSystemReference);
+			previousVersion_lazy = () -> PaymentTransaction45.mmOriginalClearingSystemReference;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -576,15 +578,15 @@ public class PaymentTransaction51 {
 	 */
 	public static final MMMessageAttribute mmOriginalInterbankSettlementAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashSettlement.mmInterbankSettlementAmount;
+			businessElementTrace_lazy = () -> CashSettlement.mmInterbankSettlementAmount;
 			componentContext_lazy = () -> PaymentTransaction51.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlIntrBkSttlmAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalInterbankSettlementAmount";
 			definition = "Amount of money, as provided in the original transaction, to be moved between the instructing agent and the instructed agent.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentTransaction60.mmOriginalInterbankSettlementAmount);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PaymentTransaction45.mmOriginalInterbankSettlementAmount;
+			nextVersions_lazy = () -> Arrays.asList(PaymentTransaction60.mmOriginalInterbankSettlementAmount);
+			previousVersion_lazy = () -> PaymentTransaction45.mmOriginalInterbankSettlementAmount;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
@@ -642,15 +644,15 @@ public class PaymentTransaction51 {
 	 */
 	public static final MMMessageAttribute mmReversedInterbankSettlementAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashSettlement.mmInterbankSettlementAmount;
+			businessElementTrace_lazy = () -> CashSettlement.mmInterbankSettlementAmount;
 			componentContext_lazy = () -> PaymentTransaction51.mmObject();
 			isDerived = false;
 			xmlTag = "RvsdIntrBkSttlmAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReversedInterbankSettlementAmount";
 			definition = "Amount of money moved between the instructing agent and the instructed agent in the reversed transaction.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentTransaction60.mmReversedInterbankSettlementAmount);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PaymentTransaction45.mmReversedInterbankSettlementAmount;
+			nextVersions_lazy = () -> Arrays.asList(PaymentTransaction60.mmReversedInterbankSettlementAmount);
+			previousVersion_lazy = () -> PaymentTransaction45.mmReversedInterbankSettlementAmount;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
@@ -711,15 +713,15 @@ public class PaymentTransaction51 {
 	 */
 	public static final MMMessageAttribute mmInterbankSettlementDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashSettlement.mmInterbankSettlementDate;
+			businessElementTrace_lazy = () -> CashSettlement.mmInterbankSettlementDate;
 			componentContext_lazy = () -> PaymentTransaction51.mmObject();
 			isDerived = false;
 			xmlTag = "IntrBkSttlmDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterbankSettlementDate";
 			definition = "Date on which the amount of money ceases to be available to the agent that owes it and when the amount of money becomes available to the agent to which it is due.\n\nUsage: The InterbankSettlementDate is the interbank settlement date of the reversal message, and not of the original instruction.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentTransaction60.mmInterbankSettlementDate);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PaymentTransaction45.mmInterbankSettlementDate;
+			nextVersions_lazy = () -> Arrays.asList(PaymentTransaction60.mmInterbankSettlementDate);
+			previousVersion_lazy = () -> PaymentTransaction45.mmInterbankSettlementDate;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
@@ -777,14 +779,14 @@ public class PaymentTransaction51 {
 	 */
 	public static final MMMessageAttribute mmSettlementPriority = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentProcessing.mmPriority;
+			businessElementTrace_lazy = () -> PaymentProcessing.mmPriority;
 			componentContext_lazy = () -> PaymentTransaction51.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmPrty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementPriority";
 			definition = "Indicator of the urgency or order of importance that the instructing party would like the instructed party to apply to the processing of the settlement instruction.\r\n\r\n\r\nUsage: the SettlementPriority is the settlement priority of the reversal message, and not of the original instruction.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentTransaction60.mmSettlementPriority);
+			nextVersions_lazy = () -> Arrays.asList(PaymentTransaction60.mmSettlementPriority);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Priority3Code.mmObject();
@@ -844,15 +846,15 @@ public class PaymentTransaction51 {
 	 */
 	public static final MMMessageAttribute mmReversedInstructedAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.mmInstructedAmount;
+			businessElementTrace_lazy = () -> Payment.mmInstructedAmount;
 			componentContext_lazy = () -> PaymentTransaction51.mmObject();
 			isDerived = false;
 			xmlTag = "RvsdInstdAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReversedInstructedAmount";
 			definition = "Amount of money to be moved between the debtor and the creditor, before deduction of charges, in the reversed transaction.\r\nUsage: This amount has to be transported unchanged through the transaction chain.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentTransaction60.mmReversedInstructedAmount);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PaymentTransaction45.mmReversedInstructedAmount;
+			nextVersions_lazy = () -> Arrays.asList(PaymentTransaction60.mmReversedInstructedAmount);
+			previousVersion_lazy = () -> PaymentTransaction45.mmReversedInstructedAmount;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
@@ -910,15 +912,15 @@ public class PaymentTransaction51 {
 	 */
 	public static final MMMessageAttribute mmExchangeRate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmExchangeRate;
+			businessElementTrace_lazy = () -> CurrencyExchange.mmExchangeRate;
 			componentContext_lazy = () -> PaymentTransaction51.mmObject();
 			isDerived = false;
 			xmlTag = "XchgRate";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExchangeRate";
 			definition = "Factor used to convert an amount from one currency into another. This reflects the price at which one currency was bought with another currency.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentTransaction60.mmExchangeRate);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PaymentTransaction45.mmExchangeRate;
+			nextVersions_lazy = () -> Arrays.asList(PaymentTransaction60.mmExchangeRate);
+			previousVersion_lazy = () -> PaymentTransaction45.mmExchangeRate;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> BaseOneRate.mmObject();
@@ -976,15 +978,15 @@ public class PaymentTransaction51 {
 	 */
 	public static final MMMessageAttribute mmCompensationAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Adjustment.mmAmount;
+			businessElementTrace_lazy = () -> Adjustment.mmAmount;
 			componentContext_lazy = () -> PaymentTransaction51.mmObject();
 			isDerived = false;
 			xmlTag = "CompstnAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CompensationAmount";
 			definition = "Amount of money asked or paid as compensation for the processing of the instruction.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentTransaction60.mmCompensationAmount);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PaymentTransaction45.mmCompensationAmount;
+			nextVersions_lazy = () -> Arrays.asList(PaymentTransaction60.mmCompensationAmount);
+			previousVersion_lazy = () -> PaymentTransaction45.mmCompensationAmount;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
@@ -1045,15 +1047,15 @@ public class PaymentTransaction51 {
 	 */
 	public static final MMMessageAttribute mmChargeBearer = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Charges.mmBearerType;
+			businessElementTrace_lazy = () -> Charges.mmBearerType;
 			componentContext_lazy = () -> PaymentTransaction51.mmObject();
 			isDerived = false;
 			xmlTag = "ChrgBr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChargeBearer";
 			definition = "Specifies if the creditor and/or debtor will bear the charges associated with the processing of the payment transaction.\n\nUsage: The ChargeBearer applies to the reversal message, not to the original instruction.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentTransaction60.mmChargeBearer);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PaymentTransaction45.mmChargeBearer;
+			nextVersions_lazy = () -> Arrays.asList(PaymentTransaction60.mmChargeBearer);
+			previousVersion_lazy = () -> PaymentTransaction45.mmChargeBearer;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ChargeBearerType1Code.mmObject();
@@ -1111,11 +1113,11 @@ public class PaymentTransaction51 {
 			componentContext_lazy = () -> PaymentTransaction51.mmObject();
 			isDerived = false;
 			xmlTag = "ChrgsInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChargesInformation";
 			definition = "Provides information on the charges to be paid by the charge bearer(s) related to the processing of the reversal transaction.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentTransaction60.mmChargesInformation);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PaymentTransaction45.mmChargesInformation;
+			nextVersions_lazy = () -> Arrays.asList(PaymentTransaction60.mmChargesInformation);
+			previousVersion_lazy = () -> PaymentTransaction45.mmChargesInformation;
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.Charges2.mmObject();
@@ -1176,15 +1178,15 @@ public class PaymentTransaction51 {
 	 */
 	public static final MMMessageAssociationEnd mmInstructingAgent = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Organisation.mmOrganisationIdentification;
+			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> PaymentTransaction51.mmObject();
 			isDerived = false;
 			xmlTag = "InstgAgt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructingAgent";
 			definition = "Agent that instructs the next party in the chain to carry out the (set of) instruction(s).\n\nUsage: The instructing agent is the party sending the reversal message and not the party that sent the original instruction that is being reversed.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentTransaction60.mmInstructingAgent);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PaymentTransaction45.mmInstructingAgent;
+			nextVersions_lazy = () -> Arrays.asList(PaymentTransaction60.mmInstructingAgent);
+			previousVersion_lazy = () -> PaymentTransaction45.mmInstructingAgent;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -1246,15 +1248,15 @@ public class PaymentTransaction51 {
 	 */
 	public static final MMMessageAssociationEnd mmInstructedAgent = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Organisation.mmOrganisationIdentification;
+			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> PaymentTransaction51.mmObject();
 			isDerived = false;
 			xmlTag = "InstdAgt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructedAgent";
 			definition = "Agent that is instructed by the previous party in the chain to carry out the (set of) instruction(s).\n\nUsage: The instructed agent is the party receiving the reversal message and not the party that received the original instruction that is being reversed.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentTransaction60.mmInstructedAgent);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PaymentTransaction45.mmInstructedAgent;
+			nextVersions_lazy = () -> Arrays.asList(PaymentTransaction60.mmInstructedAgent);
+			previousVersion_lazy = () -> PaymentTransaction45.mmInstructedAgent;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -1308,15 +1310,15 @@ public class PaymentTransaction51 {
 	 */
 	public static final MMMessageAssociationEnd mmReversalReasonInformation = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.mmStatusReason;
+			businessElementTrace_lazy = () -> Status.mmStatusReason;
 			componentContext_lazy = () -> PaymentTransaction51.mmObject();
 			isDerived = false;
 			xmlTag = "RvslRsnInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReversalReasonInformation";
 			definition = "Provides detailed information on the reversal reason.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentTransaction60.mmReversalReasonInformation);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PaymentTransaction45.mmReversalReasonInformation;
+			nextVersions_lazy = () -> Arrays.asList(PaymentTransaction60.mmReversalReasonInformation);
+			previousVersion_lazy = () -> PaymentTransaction45.mmReversalReasonInformation;
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.PaymentReversalReason7.mmObject();
@@ -1376,11 +1378,11 @@ public class PaymentTransaction51 {
 			componentContext_lazy = () -> PaymentTransaction51.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlTxRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalTransactionReference";
 			definition = "Key elements used to identify the original transaction that is being referred to.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentTransaction60.mmOriginalTransactionReference);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PaymentTransaction45.mmOriginalTransactionReference;
+			nextVersions_lazy = () -> Arrays.asList(PaymentTransaction60.mmOriginalTransactionReference);
+			previousVersion_lazy = () -> PaymentTransaction45.mmOriginalTransactionReference;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -1437,11 +1439,11 @@ public class PaymentTransaction51 {
 			componentContext_lazy = () -> PaymentTransaction51.mmObject();
 			isDerived = false;
 			xmlTag = "SplmtryData";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryData";
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentTransaction60.mmSupplementaryData);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PaymentTransaction45.mmSupplementaryData;
+			nextVersions_lazy = () -> Arrays.asList(PaymentTransaction60.mmSupplementaryData);
+			previousVersion_lazy = () -> PaymentTransaction45.mmSupplementaryData;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.SupplementaryData1.mmObject();
 		}
@@ -1450,20 +1452,16 @@ public class PaymentTransaction51 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentTransaction51.mmReversalIdentification, com.tools20022.repository.msg.PaymentTransaction51.mmOriginalGroupInformation,
-						com.tools20022.repository.msg.PaymentTransaction51.mmOriginalInstructionIdentification, com.tools20022.repository.msg.PaymentTransaction51.mmOriginalEndToEndIdentification,
-						com.tools20022.repository.msg.PaymentTransaction51.mmOriginalTransactionIdentification, com.tools20022.repository.msg.PaymentTransaction51.mmOriginalClearingSystemReference,
-						com.tools20022.repository.msg.PaymentTransaction51.mmOriginalInterbankSettlementAmount, com.tools20022.repository.msg.PaymentTransaction51.mmReversedInterbankSettlementAmount,
-						com.tools20022.repository.msg.PaymentTransaction51.mmInterbankSettlementDate, com.tools20022.repository.msg.PaymentTransaction51.mmSettlementPriority,
-						com.tools20022.repository.msg.PaymentTransaction51.mmReversedInstructedAmount, com.tools20022.repository.msg.PaymentTransaction51.mmExchangeRate,
-						com.tools20022.repository.msg.PaymentTransaction51.mmCompensationAmount, com.tools20022.repository.msg.PaymentTransaction51.mmChargeBearer, com.tools20022.repository.msg.PaymentTransaction51.mmChargesInformation,
-						com.tools20022.repository.msg.PaymentTransaction51.mmInstructingAgent, com.tools20022.repository.msg.PaymentTransaction51.mmInstructedAgent,
-						com.tools20022.repository.msg.PaymentTransaction51.mmReversalReasonInformation, com.tools20022.repository.msg.PaymentTransaction51.mmOriginalTransactionReference,
-						com.tools20022.repository.msg.PaymentTransaction51.mmSupplementaryData);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.pacs.FIToFIPaymentReversalV05.mmTransactionInformation);
+				messageElement_lazy = () -> Arrays.asList(PaymentTransaction51.mmReversalIdentification, PaymentTransaction51.mmOriginalGroupInformation, PaymentTransaction51.mmOriginalInstructionIdentification,
+						PaymentTransaction51.mmOriginalEndToEndIdentification, PaymentTransaction51.mmOriginalTransactionIdentification, PaymentTransaction51.mmOriginalClearingSystemReference,
+						PaymentTransaction51.mmOriginalInterbankSettlementAmount, PaymentTransaction51.mmReversedInterbankSettlementAmount, PaymentTransaction51.mmInterbankSettlementDate, PaymentTransaction51.mmSettlementPriority,
+						PaymentTransaction51.mmReversedInstructedAmount, PaymentTransaction51.mmExchangeRate, PaymentTransaction51.mmCompensationAmount, PaymentTransaction51.mmChargeBearer, PaymentTransaction51.mmChargesInformation,
+						PaymentTransaction51.mmInstructingAgent, PaymentTransaction51.mmInstructedAgent, PaymentTransaction51.mmReversalReasonInformation, PaymentTransaction51.mmOriginalTransactionReference,
+						PaymentTransaction51.mmSupplementaryData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(FIToFIPaymentReversalV05.mmTransactionInformation);
 				trace_lazy = () -> Payment.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PaymentTransaction51";
 				definition = "Provides further details on the reference and status on the original transactions, included in the original instruction, to which the reversal message applies.";
 				nextVersions_lazy = () -> Arrays.asList(PaymentTransaction60.mmObject());

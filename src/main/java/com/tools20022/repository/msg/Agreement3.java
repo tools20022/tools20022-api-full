@@ -19,13 +19,17 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ClosingType1Code;
 import com.tools20022.repository.codeset.CurrencyCode;
 import com.tools20022.repository.codeset.DeliveryType2Code;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.datatype.PercentageRate;
+import com.tools20022.repository.entity.Agreement;
+import com.tools20022.repository.entity.DateTimePeriod;
 import com.tools20022.repository.entity.SecuritiesFinancingAgreement;
+import com.tools20022.repository.GeneratedRepository;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -118,11 +122,11 @@ public class Agreement3 {
 	 */
 	public static final MMMessageAttribute mmDescription = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Agreement.mmDescription;
+			businessElementTrace_lazy = () -> Agreement.mmDescription;
 			componentContext_lazy = () -> Agreement3.mmObject();
 			isDerived = false;
 			xmlTag = "Desc";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Description";
 			definition = "Full name of the base standard agreement, annexes and amendments in place between the principals and applicable to this deal.";
 			maxOccurs = 1;
@@ -164,11 +168,11 @@ public class Agreement3 {
 	 */
 	public static final MMMessageAttribute mmDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Agreement.mmDateSigned;
+			businessElementTrace_lazy = () -> Agreement.mmDateSigned;
 			componentContext_lazy = () -> Agreement3.mmObject();
 			isDerived = false;
 			xmlTag = "Dt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Date";
 			definition = "Numeric representation of the day of the month and year.";
 			maxOccurs = 1;
@@ -214,11 +218,11 @@ public class Agreement3 {
 	 */
 	public static final MMMessageAttribute mmCurrency = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancingAgreement.mmCurrency;
+			businessElementTrace_lazy = () -> SecuritiesFinancingAgreement.mmCurrency;
 			componentContext_lazy = () -> Agreement3.mmObject();
 			isDerived = false;
 			xmlTag = "Ccy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Currency";
 			definition = "Contractual currency forming the basis of a financing agreement and associated transactions. Usually, but not always, the same as the trade currency.";
 			maxOccurs = 1;
@@ -261,11 +265,11 @@ public class Agreement3 {
 	 */
 	public static final MMMessageAttribute mmClosingType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancingAgreement.mmTerminationType;
+			businessElementTrace_lazy = () -> SecuritiesFinancingAgreement.mmTerminationType;
 			componentContext_lazy = () -> Agreement3.mmObject();
 			isDerived = false;
 			xmlTag = "ClsgTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClosingType";
 			definition = "Type of financing closing.";
 			maxOccurs = 1;
@@ -310,11 +314,11 @@ public class Agreement3 {
 	 */
 	public static final MMMessageAttribute mmStartDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmFromDateTime;
+			businessElementTrace_lazy = () -> DateTimePeriod.mmFromDateTime;
 			componentContext_lazy = () -> Agreement3.mmObject();
 			isDerived = false;
 			xmlTag = "StartDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StartDate";
 			definition = "Start date of a financing deal that is the date the buyer pays the seller cash and takes control of the collateral.";
 			maxOccurs = 1;
@@ -357,11 +361,11 @@ public class Agreement3 {
 	 */
 	public static final MMMessageAttribute mmDeliveryType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancingAgreement.mmDeliveryType;
+			businessElementTrace_lazy = () -> SecuritiesFinancingAgreement.mmDeliveryType;
 			componentContext_lazy = () -> Agreement3.mmObject();
 			isDerived = false;
 			xmlTag = "DlvryTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeliveryType";
 			definition = "Identifies type of settlement.";
 			maxOccurs = 1;
@@ -409,11 +413,11 @@ public class Agreement3 {
 	 */
 	public static final MMMessageAttribute mmMarginRatio = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancingAgreement.mmMarginRatio;
+			businessElementTrace_lazy = () -> SecuritiesFinancingAgreement.mmMarginRatio;
 			componentContext_lazy = () -> Agreement3.mmObject();
 			isDerived = false;
 			xmlTag = "MrgnRatio";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarginRatio";
 			definition = "Fraction of the cash consideration that must be collateralized, expressed as a percent. A margin ratio of 02% indicates that the value of the collateral (after deducting for \"haircut\") must exceed the cash consideration by 2%.";
 			maxOccurs = 1;
@@ -425,12 +429,10 @@ public class Agreement3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Agreement3.mmDescription, com.tools20022.repository.msg.Agreement3.mmDate, com.tools20022.repository.msg.Agreement3.mmCurrency,
-						com.tools20022.repository.msg.Agreement3.mmClosingType, com.tools20022.repository.msg.Agreement3.mmStartDate, com.tools20022.repository.msg.Agreement3.mmDeliveryType,
-						com.tools20022.repository.msg.Agreement3.mmMarginRatio);
+				messageElement_lazy = () -> Arrays.asList(Agreement3.mmDescription, Agreement3.mmDate, Agreement3.mmCurrency, Agreement3.mmClosingType, Agreement3.mmStartDate, Agreement3.mmDeliveryType, Agreement3.mmMarginRatio);
 				trace_lazy = () -> SecuritiesFinancingAgreement.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
 						return DateFormat.getDateInstance(java.text.DateFormat.LONG).parse("September 9, 2016");

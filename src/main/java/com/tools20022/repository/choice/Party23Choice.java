@@ -19,9 +19,11 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.Organisation;
 import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.entity.Person;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.IndividualPerson23;
 import com.tools20022.repository.msg.Organisation16;
 import java.util.Arrays;
@@ -133,11 +135,11 @@ public class Party23Choice {
 			componentContext_lazy = () -> Party23Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Org";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Organisation";
 			definition = "Organised structure that is set up for a particular purpose, for example, a business, government body, department, charity, or financial institution.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Party24Choice.mmOrganisation, com.tools20022.repository.choice.Party31Choice.mmOrganisation);
-			previousVersion_lazy = () -> com.tools20022.repository.choice.Party16Choice.mmOrganisation;
+			nextVersions_lazy = () -> Arrays.asList(Party24Choice.mmOrganisation, Party31Choice.mmOrganisation);
+			previousVersion_lazy = () -> Party16Choice.mmOrganisation;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -200,11 +202,11 @@ public class Party23Choice {
 			componentContext_lazy = () -> Party23Choice.mmObject();
 			isDerived = false;
 			xmlTag = "IndvPrsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IndividualPerson";
 			definition = "Human entity, as distinguished from a corporate entity (which is sometimes referred to as an 'artificial person').";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Party24Choice.mmIndividualPerson, com.tools20022.repository.choice.Party31Choice.mmIndividualPerson);
-			previousVersion_lazy = () -> com.tools20022.repository.choice.Party16Choice.mmIndividualPerson;
+			nextVersions_lazy = () -> Arrays.asList(Party24Choice.mmIndividualPerson, Party31Choice.mmIndividualPerson);
+			previousVersion_lazy = () -> Party16Choice.mmIndividualPerson;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -215,10 +217,10 @@ public class Party23Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Party23Choice.mmOrganisation, com.tools20022.repository.choice.Party23Choice.mmIndividualPerson);
+				messageElement_lazy = () -> Arrays.asList(Party23Choice.mmOrganisation, Party23Choice.mmIndividualPerson);
 				trace_lazy = () -> Party.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Party23Choice";
 				definition = "Choice of formats for the specification of the party.";
 				nextVersions_lazy = () -> Arrays.asList(Party24Choice.mmObject(), Party31Choice.mmObject());

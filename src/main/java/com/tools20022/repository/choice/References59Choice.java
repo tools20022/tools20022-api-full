@@ -20,8 +20,12 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.RestrictedFINXMax16Text;
+import com.tools20022.repository.entity.SecuritiesTradeExecution;
 import com.tools20022.repository.entity.SecuritiesTradeIdentification;
+import com.tools20022.repository.entity.TradeIdentification;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericDocumentIdentification5;
 import com.tools20022.repository.msg.SettlementTypeAndIdentification22;
 import java.util.Arrays;
@@ -110,11 +114,11 @@ public class References59Choice {
 	 */
 	public static final MMMessageAssociationEnd mmOtherTransactionIdentification = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradeIdentification.mmIdentification;
+			businessElementTrace_lazy = () -> TradeIdentification.mmIdentification;
 			componentContext_lazy = () -> References59Choice.mmObject();
 			isDerived = false;
 			xmlTag = "OthrTxId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherTransactionIdentification";
 			definition = "Reference to a transaction that cannot be identified using a standard reference element present in the message.";
 			maxOccurs = 1;
@@ -162,11 +166,11 @@ public class References59Choice {
 	 */
 	public static final MMMessageAssociationEnd mmSecuritiesFinancingTransactionIdentification = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeExecution.mmSecuritiesSettlement;
+			businessElementTrace_lazy = () -> SecuritiesTradeExecution.mmSecuritiesSettlement;
 			componentContext_lazy = () -> References59Choice.mmObject();
 			isDerived = false;
 			xmlTag = "SctiesFincgTxId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesFinancingTransactionIdentification";
 			definition = "Unambiguous identification of the underlying securities financing transaction (not the underlying securities financing trade) as assigned by the instructing party.";
 			maxOccurs = 1;
@@ -211,11 +215,11 @@ public class References59Choice {
 	 */
 	public static final MMMessageAssociationEnd mmSecuritiesSettlementTransactionIdentification = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeExecution.mmSecuritiesSettlement;
+			businessElementTrace_lazy = () -> SecuritiesTradeExecution.mmSecuritiesSettlement;
 			componentContext_lazy = () -> References59Choice.mmObject();
 			isDerived = false;
 			xmlTag = "SctiesSttlmTxId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesSettlementTransactionIdentification";
 			definition = "Unambiguous identification of the securities settlement transaction.";
 			maxOccurs = 1;
@@ -262,7 +266,7 @@ public class References59Choice {
 			componentContext_lazy = () -> References59Choice.mmObject();
 			isDerived = false;
 			xmlTag = "IntraPosMvmntId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IntraPositionMovementIdentification";
 			definition = "Reference to the intra-position movement transaction requested to be cancelled as known by the account owner (or instructing party acting on its behalf).";
 			maxOccurs = 1;
@@ -274,12 +278,11 @@ public class References59Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.References59Choice.mmOtherTransactionIdentification,
-						com.tools20022.repository.choice.References59Choice.mmSecuritiesFinancingTransactionIdentification, com.tools20022.repository.choice.References59Choice.mmSecuritiesSettlementTransactionIdentification,
-						com.tools20022.repository.choice.References59Choice.mmIntraPositionMovementIdentification);
+				messageElement_lazy = () -> Arrays.asList(References59Choice.mmOtherTransactionIdentification, References59Choice.mmSecuritiesFinancingTransactionIdentification,
+						References59Choice.mmSecuritiesSettlementTransactionIdentification, References59Choice.mmIntraPositionMovementIdentification);
 				trace_lazy = () -> SecuritiesTradeIdentification.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "References59Choice";
 				definition = "Choice of reference.";
 			}

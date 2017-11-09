@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.AssetClassSubProductTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -74,7 +76,7 @@ public class AssetClassSubProductType2Code extends AssetClassSubProductTypeCode 
 	 */
 	public static final MMCode mmSofts = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Softs";
 			owner_lazy = () -> AssetClassSubProductType2Code.mmObject();
 		}
@@ -83,11 +85,11 @@ public class AssetClassSubProductType2Code extends AssetClassSubProductTypeCode 
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AssetClassSubProductType2Code";
 				definition = "Defines the sub-product of type Softs.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AssetClassSubProductType2Code.mmSofts);
+				code_lazy = () -> Arrays.asList(AssetClassSubProductType2Code.mmSofts);
 				trace_lazy = () -> AssetClassSubProductTypeCode.mmObject();
 			}
 		});

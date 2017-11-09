@@ -19,8 +19,11 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.ISOYearMonth;
+import com.tools20022.repository.entity.InvestmentFundClass;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -95,11 +98,11 @@ public class DateFormat42Choice {
 	 */
 	public static final MMMessageAttribute mmYearMonth = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmSeriesIssueIdentificationDate;
+			businessElementTrace_lazy = () -> InvestmentFundClass.mmSeriesIssueIdentificationDate;
 			componentContext_lazy = () -> DateFormat42Choice.mmObject();
 			isDerived = false;
 			xmlTag = "YrMnth";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "YearMonth";
 			definition = "Year and month.";
 			maxOccurs = 1;
@@ -142,11 +145,11 @@ public class DateFormat42Choice {
 	 */
 	public static final MMMessageAttribute mmYearMonthDay = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmSeriesIssueIdentificationDate;
+			businessElementTrace_lazy = () -> InvestmentFundClass.mmSeriesIssueIdentificationDate;
 			componentContext_lazy = () -> DateFormat42Choice.mmObject();
 			isDerived = false;
 			xmlTag = "YrMnthDay";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "YearMonthDay";
 			definition = "Year, month and day.";
 			maxOccurs = 1;
@@ -158,9 +161,9 @@ public class DateFormat42Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.DateFormat42Choice.mmYearMonth, com.tools20022.repository.choice.DateFormat42Choice.mmYearMonthDay);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(DateFormat42Choice.mmYearMonth, DateFormat42Choice.mmYearMonthDay);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DateFormat42Choice";
 				definition = "Choice of formats for a date.";
 			}

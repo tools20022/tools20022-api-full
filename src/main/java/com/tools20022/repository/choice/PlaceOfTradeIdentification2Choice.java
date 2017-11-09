@@ -20,8 +20,12 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.MICIdentifier;
+import com.tools20022.repository.entity.OrganisationIdentification;
+import com.tools20022.repository.entity.SecuritiesTrade;
 import com.tools20022.repository.entity.TradingMarket;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -102,11 +106,11 @@ public class PlaceOfTradeIdentification2Choice {
 	 */
 	public static final MMMessageAttribute mmMarketIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.mmMIC;
+			businessElementTrace_lazy = () -> OrganisationIdentification.mmMIC;
 			componentContext_lazy = () -> PlaceOfTradeIdentification2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "MktId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketIdentification";
 			definition = "Exchange or Multilateral Trading Facility (MTF) on which the transaction is executed.";
 			maxOccurs = 1;
@@ -148,11 +152,11 @@ public class PlaceOfTradeIdentification2Choice {
 	 */
 	public static final MMMessageAssociationEnd mmOffMarket = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTrade.mmTradingExecution;
+			businessElementTrace_lazy = () -> SecuritiesTrade.mmTradingExecution;
 			componentContext_lazy = () -> PlaceOfTradeIdentification2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "OffMkt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OffMarket";
 			definition = "Indicates that the trade was executed off -exchange.";
 			maxOccurs = 1;
@@ -165,10 +169,10 @@ public class PlaceOfTradeIdentification2Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PlaceOfTradeIdentification2Choice.mmMarketIdentification, com.tools20022.repository.choice.PlaceOfTradeIdentification2Choice.mmOffMarket);
+				messageElement_lazy = () -> Arrays.asList(PlaceOfTradeIdentification2Choice.mmMarketIdentification, PlaceOfTradeIdentification2Choice.mmOffMarket);
 				trace_lazy = () -> TradingMarket.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PlaceOfTradeIdentification2Choice";
 				definition = "Indicates whether the trade was executed on or off-market.";
 			}

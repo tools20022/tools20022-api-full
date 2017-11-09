@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.AttributeTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -92,7 +94,7 @@ public class AttributeType1Code extends AttributeTypeCode {
 	 */
 	public static final MMCode mmCommonName = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommonName";
 			owner_lazy = () -> AttributeType1Code.mmObject();
 		}
@@ -115,7 +117,7 @@ public class AttributeType1Code extends AttributeTypeCode {
 	 */
 	public static final MMCode mmLocality = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Locality";
 			owner_lazy = () -> AttributeType1Code.mmObject();
 		}
@@ -138,7 +140,7 @@ public class AttributeType1Code extends AttributeTypeCode {
 	 */
 	public static final MMCode mmOrganisationName = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrganisationName";
 			owner_lazy = () -> AttributeType1Code.mmObject();
 		}
@@ -161,7 +163,7 @@ public class AttributeType1Code extends AttributeTypeCode {
 	 */
 	public static final MMCode mmOrganisationUnitName = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrganisationUnitName";
 			owner_lazy = () -> AttributeType1Code.mmObject();
 		}
@@ -184,7 +186,7 @@ public class AttributeType1Code extends AttributeTypeCode {
 	 */
 	public static final MMCode mmCountryName = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CountryName";
 			owner_lazy = () -> AttributeType1Code.mmObject();
 		}
@@ -193,14 +195,12 @@ public class AttributeType1Code extends AttributeTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CNAT");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AttributeType1Code";
 				definition = "Type of attribute of a distinguished name (DN).";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AttributeType1Code.mmCommonName, com.tools20022.repository.codeset.AttributeType1Code.mmLocality,
-						com.tools20022.repository.codeset.AttributeType1Code.mmOrganisationName, com.tools20022.repository.codeset.AttributeType1Code.mmOrganisationUnitName,
-						com.tools20022.repository.codeset.AttributeType1Code.mmCountryName);
+				code_lazy = () -> Arrays.asList(AttributeType1Code.mmCommonName, AttributeType1Code.mmLocality, AttributeType1Code.mmOrganisationName, AttributeType1Code.mmOrganisationUnitName, AttributeType1Code.mmCountryName);
 				trace_lazy = () -> AttributeTypeCode.mmObject();
 			}
 		});

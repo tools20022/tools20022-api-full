@@ -20,9 +20,12 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.colr.CollateralProposalV04;
 import com.tools20022.repository.choice.CollateralProposal4Choice;
 import com.tools20022.repository.codeset.ProposalType1Code;
 import com.tools20022.repository.entity.CollateralProposal;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -134,15 +137,15 @@ public class Proposal4 {
 	 */
 	public static final MMMessageAttribute mmCollateralProposalType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CollateralProposal.mmType;
+			businessElementTrace_lazy = () -> CollateralProposal.mmType;
 			componentContext_lazy = () -> Proposal4.mmObject();
 			isDerived = false;
 			xmlTag = "CollPrpslTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralProposalType";
 			definition = "Indicates whether this is an initial or counter proposal.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Proposal5.mmCollateralProposalType);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Proposal3.mmCollateralProposalType;
+			nextVersions_lazy = () -> Arrays.asList(Proposal5.mmCollateralProposalType);
+			previousVersion_lazy = () -> Proposal3.mmCollateralProposalType;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ProposalType1Code.mmObject();
@@ -202,11 +205,11 @@ public class Proposal4 {
 			componentContext_lazy = () -> Proposal4.mmObject();
 			isDerived = false;
 			xmlTag = "CollPrpsl";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralProposal";
 			definition = "Provides details about the proposal for the variation margin and the segregated independent amount, or the segregated independent amount only.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Proposal5.mmCollateralProposal);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Proposal3.mmCollateralProposal;
+			nextVersions_lazy = () -> Arrays.asList(Proposal5.mmCollateralProposal);
+			previousVersion_lazy = () -> Proposal3.mmCollateralProposal;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -217,11 +220,11 @@ public class Proposal4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Proposal4.mmCollateralProposalType, com.tools20022.repository.msg.Proposal4.mmCollateralProposal);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.colr.CollateralProposalV04.mmTypeAndDetails);
+				messageElement_lazy = () -> Arrays.asList(Proposal4.mmCollateralProposalType, Proposal4.mmCollateralProposal);
+				messageBuildingBlock_lazy = () -> Arrays.asList(CollateralProposalV04.mmTypeAndDetails);
 				trace_lazy = () -> CollateralProposal.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Proposal4";
 				definition = "Indicates the type of proposal and if the proposal is  for the variation margin and the segregated independent amount, or the segregated independent amount only.";
 				nextVersions_lazy = () -> Arrays.asList(Proposal5.mmObject());

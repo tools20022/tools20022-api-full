@@ -20,8 +20,11 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.DateAndDateTimeChoice;
 import com.tools20022.repository.entity.InvestmentFund;
+import com.tools20022.repository.entity.NetAssetValueCalculation;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -100,11 +103,11 @@ public class FundParameters3 {
 	 */
 	public static final MMMessageAssociationEnd mmFinancialInstrumentDetails = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFund.mmInvestmentFundClass;
+			businessElementTrace_lazy = () -> InvestmentFund.mmInvestmentFundClass;
 			componentContext_lazy = () -> FundParameters3.mmObject();
 			isDerived = false;
 			xmlTag = "FinInstrmDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentDetails";
 			definition = "Financial instrument for which the fund processing passport report report is requested.";
 			maxOccurs = 1;
@@ -151,11 +154,11 @@ public class FundParameters3 {
 	 */
 	public static final MMMessageAttribute mmValuationDateTime = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.NetAssetValueCalculation.mmValuationDateTime;
+			businessElementTrace_lazy = () -> NetAssetValueCalculation.mmValuationDateTime;
 			componentContext_lazy = () -> FundParameters3.mmObject();
 			isDerived = false;
 			xmlTag = "ValtnDtTm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValuationDateTime";
 			definition = "Date and time of the price valuation for the investment fund/fund class.";
 			maxOccurs = 1;
@@ -167,10 +170,10 @@ public class FundParameters3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FundParameters3.mmFinancialInstrumentDetails, com.tools20022.repository.msg.FundParameters3.mmValuationDateTime);
+				messageElement_lazy = () -> Arrays.asList(FundParameters3.mmFinancialInstrumentDetails, FundParameters3.mmValuationDateTime);
 				trace_lazy = () -> InvestmentFund.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "FundParameters3";
 				definition = "Fund parameters.";
 			}

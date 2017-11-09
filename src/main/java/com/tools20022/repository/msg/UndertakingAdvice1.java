@@ -20,7 +20,10 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.tsrv.UndertakingIssuanceAdviceV01;
 import com.tools20022.repository.entity.Undertaking;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -119,7 +122,7 @@ public class UndertakingAdvice1 {
 			componentContext_lazy = () -> UndertakingAdvice1.mmObject();
 			isDerived = false;
 			xmlTag = "UdrtkgIssncMsg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UndertakingIssuanceMessage";
 			definition = "Contents of the related UndertakingIssuance message.";
 			maxOccurs = 1;
@@ -163,7 +166,7 @@ public class UndertakingAdvice1 {
 			componentContext_lazy = () -> UndertakingAdvice1.mmObject();
 			isDerived = false;
 			xmlTag = "FrstAdvsgPtyAddtlInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FirstAdvisingPartyAdditionalInformation";
 			definition = "Additional information related to the first advising party.";
 			maxOccurs = 1;
@@ -206,7 +209,7 @@ public class UndertakingAdvice1 {
 			componentContext_lazy = () -> UndertakingAdvice1.mmObject();
 			isDerived = false;
 			xmlTag = "ScndAdvsgPtyAddtlInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecondAdvisingPartyAdditionalInformation";
 			definition = "Additional information related to the second advising party.";
 			maxOccurs = 1;
@@ -247,7 +250,7 @@ public class UndertakingAdvice1 {
 			componentContext_lazy = () -> UndertakingAdvice1.mmObject();
 			isDerived = false;
 			xmlTag = "ConfDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConfirmationDetails";
 			definition = "Details related to the confirmation of the undertaking.";
 			maxOccurs = 1;
@@ -293,11 +296,11 @@ public class UndertakingAdvice1 {
 	 */
 	public static final MMMessageAssociationEnd mmDigitalSignature = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Undertaking.mmElectronicSignature;
+			businessElementTrace_lazy = () -> Undertaking.mmElectronicSignature;
 			componentContext_lazy = () -> UndertakingAdvice1.mmObject();
 			isDerived = false;
 			xmlTag = "DgtlSgntr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DigitalSignature";
 			definition = "Digital signature of the party providing additional undertaking advice details.";
 			maxOccurs = 3;
@@ -310,13 +313,12 @@ public class UndertakingAdvice1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UndertakingAdvice1.mmUndertakingIssuanceMessage, com.tools20022.repository.msg.UndertakingAdvice1.mmFirstAdvisingPartyAdditionalInformation,
-						com.tools20022.repository.msg.UndertakingAdvice1.mmSecondAdvisingPartyAdditionalInformation, com.tools20022.repository.msg.UndertakingAdvice1.mmConfirmationDetails,
-						com.tools20022.repository.msg.UndertakingAdvice1.mmDigitalSignature);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsrv.UndertakingIssuanceAdviceV01.mmUndertakingIssuanceAdviceDetails);
+				messageElement_lazy = () -> Arrays.asList(UndertakingAdvice1.mmUndertakingIssuanceMessage, UndertakingAdvice1.mmFirstAdvisingPartyAdditionalInformation, UndertakingAdvice1.mmSecondAdvisingPartyAdditionalInformation,
+						UndertakingAdvice1.mmConfirmationDetails, UndertakingAdvice1.mmDigitalSignature);
+				messageBuildingBlock_lazy = () -> Arrays.asList(UndertakingIssuanceAdviceV01.mmUndertakingIssuanceAdviceDetails);
 				trace_lazy = () -> Undertaking.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "UndertakingAdvice1";
 				definition = "Details of the advice for the issuance of an undertaking.";
 			}

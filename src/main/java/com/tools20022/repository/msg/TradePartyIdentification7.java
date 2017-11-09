@@ -20,9 +20,12 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.OptionParty1Code;
 import com.tools20022.repository.codeset.OptionParty3Code;
 import com.tools20022.repository.entity.TradePartyRole;
+import com.tools20022.repository.entity.TreasuryTradingParty;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -108,11 +111,11 @@ public class TradePartyIdentification7 {
 	 */
 	public static final MMMessageAssociationEnd mmFundInformation = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TreasuryTradingParty.mmInvestmentFund;
+			businessElementTrace_lazy = () -> TreasuryTradingParty.mmInvestmentFund;
 			componentContext_lazy = () -> TradePartyIdentification7.mmObject();
 			isDerived = false;
 			xmlTag = "FndInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FundInformation";
 			definition = "Identifies the fund which is one of the parties in a treasury trade.";
 			maxOccurs = 1;
@@ -157,11 +160,11 @@ public class TradePartyIdentification7 {
 	 */
 	public static final MMMessageAttribute mmBuyerOrSellerIndicator = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradePartyRole.mmBuyerOrSeller;
+			businessElementTrace_lazy = () -> TradePartyRole.mmBuyerOrSeller;
 			componentContext_lazy = () -> TradePartyIdentification7.mmObject();
 			isDerived = false;
 			xmlTag = "BuyrOrSellrInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BuyerOrSellerIndicator";
 			definition = "Specifies the party which is the buyer or the seller.";
 			maxOccurs = 1;
@@ -203,7 +206,7 @@ public class TradePartyIdentification7 {
 			componentContext_lazy = () -> TradePartyIdentification7.mmObject();
 			isDerived = false;
 			xmlTag = "InitrInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InitiatorIndicator";
 			definition = "Specifies if a trade party is a taker or a maker.";
 			maxOccurs = 1;
@@ -243,7 +246,7 @@ public class TradePartyIdentification7 {
 			componentContext_lazy = () -> TradePartyIdentification7.mmObject();
 			isDerived = false;
 			xmlTag = "TradPtyId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradePartyIdentification";
 			definition = "Identification of the party.";
 			maxOccurs = 1;
@@ -288,7 +291,7 @@ public class TradePartyIdentification7 {
 			componentContext_lazy = () -> TradePartyIdentification7.mmObject();
 			isDerived = false;
 			xmlTag = "SubmitgPty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubmittingParty";
 			definition = "Specifies the party which submits a treasury trade to a matching system or to a settlement system or to a counterparty.";
 			maxOccurs = 1;
@@ -301,12 +304,11 @@ public class TradePartyIdentification7 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TradePartyIdentification7.mmFundInformation, com.tools20022.repository.msg.TradePartyIdentification7.mmBuyerOrSellerIndicator,
-						com.tools20022.repository.msg.TradePartyIdentification7.mmInitiatorIndicator, com.tools20022.repository.msg.TradePartyIdentification7.mmTradePartyIdentification,
-						com.tools20022.repository.msg.TradePartyIdentification7.mmSubmittingParty);
+				messageElement_lazy = () -> Arrays.asList(TradePartyIdentification7.mmFundInformation, TradePartyIdentification7.mmBuyerOrSellerIndicator, TradePartyIdentification7.mmInitiatorIndicator,
+						TradePartyIdentification7.mmTradePartyIdentification, TradePartyIdentification7.mmSubmittingParty);
 				trace_lazy = () -> TradePartyRole.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TradePartyIdentification7";
 				definition = "Entity involved in an activity.";
 			}

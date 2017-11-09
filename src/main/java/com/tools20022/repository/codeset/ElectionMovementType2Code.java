@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ElectionMovementTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -85,7 +87,7 @@ public class ElectionMovementType2Code extends ElectionMovementTypeCode {
 	 */
 	public static final MMCode mmDirect = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Direct";
 			owner_lazy = () -> ElectionMovementType2Code.mmObject();
 		}
@@ -108,7 +110,7 @@ public class ElectionMovementType2Code extends ElectionMovementTypeCode {
 	 */
 	public static final MMCode mmSequestered = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Sequestered";
 			owner_lazy = () -> ElectionMovementType2Code.mmObject();
 		}
@@ -117,12 +119,12 @@ public class ElectionMovementType2Code extends ElectionMovementTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("DRCT");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ElectionMovementType2Code";
 				definition = "Specifies the effect on the holdings of electing a Corporate Action option.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ElectionMovementType2Code.mmDirect, com.tools20022.repository.codeset.ElectionMovementType2Code.mmSequestered);
+				code_lazy = () -> Arrays.asList(ElectionMovementType2Code.mmDirect, ElectionMovementType2Code.mmSequestered);
 				trace_lazy = () -> ElectionMovementTypeCode.mmObject();
 			}
 		});

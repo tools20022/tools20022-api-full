@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.AdditionalRightCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -90,7 +92,7 @@ public class AdditionalRight1Code extends AdditionalRightCode {
 	 */
 	public static final MMCode mmWrittenQuestionProposal = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WrittenQuestionProposal";
 			owner_lazy = () -> AdditionalRight1Code.mmObject();
 		}
@@ -113,7 +115,7 @@ public class AdditionalRight1Code extends AdditionalRightCode {
 	 */
 	public static final MMCode mmResolutionProposal = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ResolutionProposal";
 			owner_lazy = () -> AdditionalRight1Code.mmObject();
 		}
@@ -136,7 +138,7 @@ public class AdditionalRight1Code extends AdditionalRightCode {
 	 */
 	public static final MMCode mmAgendaItemProposal = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AgendaItemProposal";
 			owner_lazy = () -> AdditionalRight1Code.mmObject();
 		}
@@ -145,13 +147,12 @@ public class AdditionalRight1Code extends AdditionalRightCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("WQPS");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AdditionalRight1Code";
 				definition = "Define specific rights that the shareholder has (for example, the right to ask questions, the right to add items to the agenda or table draft resolutions).";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AdditionalRight1Code.mmWrittenQuestionProposal, com.tools20022.repository.codeset.AdditionalRight1Code.mmResolutionProposal,
-						com.tools20022.repository.codeset.AdditionalRight1Code.mmAgendaItemProposal);
+				code_lazy = () -> Arrays.asList(AdditionalRight1Code.mmWrittenQuestionProposal, AdditionalRight1Code.mmResolutionProposal, AdditionalRight1Code.mmAgendaItemProposal);
 				trace_lazy = () -> AdditionalRightCode.mmObject();
 			}
 		});

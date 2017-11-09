@@ -19,9 +19,13 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.DateAndDateTimeChoice;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.entity.InvestmentFundOrderExecution;
+import com.tools20022.repository.entity.Obligation;
+import com.tools20022.repository.entity.Trade;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -119,14 +123,14 @@ public class ExpectedExecutionDetails2 {
 	 */
 	public static final MMMessageAttribute mmExpectedTradeDateTime = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Trade.mmTradeDateTime;
+			businessElementTrace_lazy = () -> Trade.mmTradeDateTime;
 			componentContext_lazy = () -> ExpectedExecutionDetails2.mmObject();
 			isDerived = false;
 			xmlTag = "XpctdTradDtTm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExpectedTradeDateTime";
 			definition = "Expected date or expected date and time at which a price will be applied according to the terms of the prospectus.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ExpectedExecutionDetails4.mmExpectedTradeDateTime);
+			nextVersions_lazy = () -> Arrays.asList(ExpectedExecutionDetails4.mmExpectedTradeDateTime);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
@@ -178,14 +182,14 @@ public class ExpectedExecutionDetails2 {
 	 */
 	public static final MMMessageAttribute mmExpectedCashSettlementDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Obligation.mmRequestedSettlementDate;
+			businessElementTrace_lazy = () -> Obligation.mmRequestedSettlementDate;
 			componentContext_lazy = () -> ExpectedExecutionDetails2.mmObject();
 			isDerived = false;
 			xmlTag = "XpctdCshSttlmDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExpectedCashSettlementDate";
 			definition = "Expected date at which the financial instruments will be exchanged against cash.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ExpectedExecutionDetails4.mmExpectedCashSettlementDate);
+			nextVersions_lazy = () -> Arrays.asList(ExpectedExecutionDetails4.mmExpectedCashSettlementDate);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
@@ -195,10 +199,10 @@ public class ExpectedExecutionDetails2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ExpectedExecutionDetails2.mmExpectedTradeDateTime, com.tools20022.repository.msg.ExpectedExecutionDetails2.mmExpectedCashSettlementDate);
+				messageElement_lazy = () -> Arrays.asList(ExpectedExecutionDetails2.mmExpectedTradeDateTime, ExpectedExecutionDetails2.mmExpectedCashSettlementDate);
 				trace_lazy = () -> InvestmentFundOrderExecution.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ExpectedExecutionDetails2";
 				definition = "Expected trade date and expected settlement date of the order execution.";
 				nextVersions_lazy = () -> Arrays.asList(ExpectedExecutionDetails4.mmObject());

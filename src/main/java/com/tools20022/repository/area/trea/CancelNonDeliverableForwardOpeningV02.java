@@ -20,6 +20,7 @@ package com.tools20022.repository.area.trea;
 import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.TreasuryArchive;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.ForexNotificationsISOArchive;
@@ -37,6 +38,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code trea.003.001.02}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} = {@linkplain com.tools20022.repository.area.TreasuryArchive
  * TreasuryArchive}</li>
@@ -76,9 +80,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * CancelNonDeliverableForwardOpeningV02.mmValuationConditions}</li>
  * </ul>
  * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code trea.003.001.02}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -123,7 +124,7 @@ public class CancelNonDeliverableForwardOpeningV02 {
 	public static final MMMessageBuildingBlock mmTradeInformation = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "TradInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeInformation";
 			definition = "Provides references and date of the non deliverable trade which is cancelled.";
 			maxOccurs = 1;
@@ -161,7 +162,7 @@ public class CancelNonDeliverableForwardOpeningV02 {
 	public static final MMMessageBuildingBlock mmTradingSideIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "TradgSdId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradingSideIdentification";
 			definition = "Specifies the trading side of the non deliverable trade which is cancelled.";
 			maxOccurs = 1;
@@ -199,7 +200,7 @@ public class CancelNonDeliverableForwardOpeningV02 {
 	public static final MMMessageBuildingBlock mmCounterpartySideIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CtrPtySdId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CounterpartySideIdentification";
 			definition = "Specifies the counterparty of the non deliverable trade which is cancelled.";
 			maxOccurs = 1;
@@ -235,7 +236,7 @@ public class CancelNonDeliverableForwardOpeningV02 {
 	public static final MMMessageBuildingBlock mmTradeAmounts = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "TradAmts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeAmounts";
 			definition = "Specifies the amounts of the non deliverable trade which is cancelled.";
 			maxOccurs = 1;
@@ -270,7 +271,7 @@ public class CancelNonDeliverableForwardOpeningV02 {
 	public static final MMMessageBuildingBlock mmAgreedRate = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "AgrdRate";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AgreedRate";
 			definition = "Specifies the rate of the non deliverable trade which is cancelled.";
 			maxOccurs = 1;
@@ -308,7 +309,7 @@ public class CancelNonDeliverableForwardOpeningV02 {
 	public static final MMMessageBuildingBlock mmValuationConditions = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "ValtnConds";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValuationConditions";
 			definition = "Specifies the valuation conditions of the non deliverable trade which is cancelled.";
 			maxOccurs = 1;
@@ -320,17 +321,16 @@ public class CancelNonDeliverableForwardOpeningV02 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CancelNonDeliverableForwardOpeningV02";
 				definition = "Scope\r\nThe CancelNonDeliverableForwardOpening message is sent by a participant to a central system or to a counterparty to notify the cancellation of the opening of a non deliverable trade previously confirmed by the sender.\r\nUsage\r\nThe message will contain a Related Reference to link it to the previously sent notification. It may contain a reason for cancellation.";
 				messageSet_lazy = () -> Arrays.asList(ForexNotificationsISOArchive.mmObject());
 				rootElement = "Document";
 				xmlTag = "CclNDFOpngV02";
 				businessArea_lazy = () -> TreasuryArchive.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.trea.CancelNonDeliverableForwardOpeningV02.mmTradeInformation,
-						com.tools20022.repository.area.trea.CancelNonDeliverableForwardOpeningV02.mmTradingSideIdentification, com.tools20022.repository.area.trea.CancelNonDeliverableForwardOpeningV02.mmCounterpartySideIdentification,
-						com.tools20022.repository.area.trea.CancelNonDeliverableForwardOpeningV02.mmTradeAmounts, com.tools20022.repository.area.trea.CancelNonDeliverableForwardOpeningV02.mmAgreedRate,
-						com.tools20022.repository.area.trea.CancelNonDeliverableForwardOpeningV02.mmValuationConditions);
+				messageBuildingBlock_lazy = () -> Arrays.asList(CancelNonDeliverableForwardOpeningV02.mmTradeInformation, CancelNonDeliverableForwardOpeningV02.mmTradingSideIdentification,
+						CancelNonDeliverableForwardOpeningV02.mmCounterpartySideIdentification, CancelNonDeliverableForwardOpeningV02.mmTradeAmounts, CancelNonDeliverableForwardOpeningV02.mmAgreedRate,
+						CancelNonDeliverableForwardOpeningV02.mmValuationConditions);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "trea";

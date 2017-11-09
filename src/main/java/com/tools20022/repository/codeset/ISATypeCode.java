@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.ISAType1Code ISAType1Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ISAType2Code ISAType2Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>{@linkplain com.tools20022.repository.codeset.ISATypeCode#mmMiniEquity
@@ -37,13 +46,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * ISATypeCode.mmMiniCash}</li>
  * <li>{@linkplain com.tools20022.repository.codeset.ISATypeCode#mmAny
  * ISATypeCode.mmAny}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.ISAType1Code ISAType1Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ISAType2Code ISAType2Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -93,7 +95,7 @@ public class ISATypeCode {
 	 */
 	public static final MMCode mmMiniEquity = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MiniEquity";
 			definition = "Type of ISA that offers a stocks and shares component only (no cash).";
 			owner_lazy = () -> ISATypeCode.mmObject();
@@ -125,7 +127,7 @@ public class ISATypeCode {
 	 */
 	public static final MMCode mmMaxi = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Maxi";
 			definition = "Type of ISA that must offer a stocks and shares component and, optionally, a cash component.";
 			owner_lazy = () -> ISATypeCode.mmObject();
@@ -155,7 +157,7 @@ public class ISATypeCode {
 	 */
 	public static final MMCode mmMiniCash = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MiniCash";
 			definition = "Type of ISA that offers a cash component only (no stock).";
 			owner_lazy = () -> ISATypeCode.mmObject();
@@ -184,7 +186,7 @@ public class ISATypeCode {
 	 */
 	public static final MMCode mmAny = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Any";
 			definition = "Any ISA.";
 			owner_lazy = () -> ISATypeCode.mmObject();
@@ -195,13 +197,12 @@ public class ISATypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("MINE");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ISATypeCode";
 				definition = "Specifies the type of the current year ISA.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ISATypeCode.mmMiniEquity, com.tools20022.repository.codeset.ISATypeCode.mmMaxi, com.tools20022.repository.codeset.ISATypeCode.mmMiniCash,
-						com.tools20022.repository.codeset.ISATypeCode.mmAny);
+				code_lazy = () -> Arrays.asList(ISATypeCode.mmMiniEquity, ISATypeCode.mmMaxi, ISATypeCode.mmMiniCash, ISATypeCode.mmAny);
 				derivation_lazy = () -> Arrays.asList(ISAType1Code.mmObject(), ISAType2Code.mmObject());
 			}
 		});

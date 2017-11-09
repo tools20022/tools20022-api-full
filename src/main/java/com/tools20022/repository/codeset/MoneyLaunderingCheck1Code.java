@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.MoneyLaunderingCheckCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -96,7 +98,7 @@ public class MoneyLaunderingCheck1Code extends MoneyLaunderingCheckCode {
 	 */
 	public static final MMCode mmPassed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Passed";
 			owner_lazy = () -> MoneyLaunderingCheck1Code.mmObject();
 		}
@@ -119,7 +121,7 @@ public class MoneyLaunderingCheck1Code extends MoneyLaunderingCheckCode {
 	 */
 	public static final MMCode mmNotChecked = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotChecked";
 			owner_lazy = () -> MoneyLaunderingCheck1Code.mmObject();
 		}
@@ -142,7 +144,7 @@ public class MoneyLaunderingCheck1Code extends MoneyLaunderingCheckCode {
 	 */
 	public static final MMCode mmExemptBelowLimit = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExemptBelowLimit";
 			owner_lazy = () -> MoneyLaunderingCheck1Code.mmObject();
 		}
@@ -165,7 +167,7 @@ public class MoneyLaunderingCheck1Code extends MoneyLaunderingCheckCode {
 	 */
 	public static final MMCode mmClientMoneyTypeExempt = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClientMoneyTypeExempt";
 			owner_lazy = () -> MoneyLaunderingCheck1Code.mmObject();
 		}
@@ -188,7 +190,7 @@ public class MoneyLaunderingCheck1Code extends MoneyLaunderingCheckCode {
 	 */
 	public static final MMCode mmAuthorisedCredit = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AuthorisedCredit";
 			owner_lazy = () -> MoneyLaunderingCheck1Code.mmObject();
 		}
@@ -211,7 +213,7 @@ public class MoneyLaunderingCheck1Code extends MoneyLaunderingCheckCode {
 	 */
 	public static final MMCode mmPostalOrElectronicPaymentExempt = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PostalOrElectronicPaymentExempt";
 			owner_lazy = () -> MoneyLaunderingCheck1Code.mmObject();
 		}
@@ -220,14 +222,13 @@ public class MoneyLaunderingCheck1Code extends MoneyLaunderingCheckCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("PASS");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MoneyLaunderingCheck1Code";
 				definition = "Specifies the status of money laundering identification procedures.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MoneyLaunderingCheck1Code.mmPassed, com.tools20022.repository.codeset.MoneyLaunderingCheck1Code.mmNotChecked,
-						com.tools20022.repository.codeset.MoneyLaunderingCheck1Code.mmExemptBelowLimit, com.tools20022.repository.codeset.MoneyLaunderingCheck1Code.mmClientMoneyTypeExempt,
-						com.tools20022.repository.codeset.MoneyLaunderingCheck1Code.mmAuthorisedCredit, com.tools20022.repository.codeset.MoneyLaunderingCheck1Code.mmPostalOrElectronicPaymentExempt);
+				code_lazy = () -> Arrays.asList(MoneyLaunderingCheck1Code.mmPassed, MoneyLaunderingCheck1Code.mmNotChecked, MoneyLaunderingCheck1Code.mmExemptBelowLimit, MoneyLaunderingCheck1Code.mmClientMoneyTypeExempt,
+						MoneyLaunderingCheck1Code.mmAuthorisedCredit, MoneyLaunderingCheck1Code.mmPostalOrElectronicPaymentExempt);
 				trace_lazy = () -> MoneyLaunderingCheckCode.mmObject();
 			}
 		});

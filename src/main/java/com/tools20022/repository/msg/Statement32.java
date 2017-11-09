@@ -19,10 +19,14 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.colr.InterestPaymentStatementV03;
+import com.tools20022.repository.area.colr.InterestPaymentStatementV04;
 import com.tools20022.repository.choice.DateAndDateTimeChoice;
 import com.tools20022.repository.codeset.Frequency1Code;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.YesNoIndicator;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -110,7 +114,7 @@ public class Statement32 {
 			componentContext_lazy = () -> Statement32.mmObject();
 			isDerived = false;
 			xmlTag = "StmtId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatementIdentification";
 			definition = "Reference common to all pages of a statement.";
 			maxOccurs = 1;
@@ -154,7 +158,7 @@ public class Statement32 {
 			componentContext_lazy = () -> Statement32.mmObject();
 			isDerived = false;
 			xmlTag = "ActvtyInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ActivityIndicator";
 			definition = "Indicates whether there is activity or information update reported in the statement.";
 			maxOccurs = 1;
@@ -195,7 +199,7 @@ public class Statement32 {
 			componentContext_lazy = () -> Statement32.mmObject();
 			isDerived = false;
 			xmlTag = "Frqcy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Frequency";
 			definition = "Frequency of the statement.";
 			maxOccurs = 1;
@@ -236,7 +240,7 @@ public class Statement32 {
 			componentContext_lazy = () -> Statement32.mmObject();
 			isDerived = false;
 			xmlTag = "StmtDtTm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatementDateTime";
 			definition = "Date and time of the statement.";
 			maxOccurs = 1;
@@ -248,11 +252,10 @@ public class Statement32 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Statement32.mmStatementIdentification, com.tools20022.repository.msg.Statement32.mmActivityIndicator,
-						com.tools20022.repository.msg.Statement32.mmFrequency, com.tools20022.repository.msg.Statement32.mmStatementDateTime);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.colr.InterestPaymentStatementV03.mmStatementParameters, com.tools20022.repository.area.colr.InterestPaymentStatementV04.mmStatementParameters);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(Statement32.mmStatementIdentification, Statement32.mmActivityIndicator, Statement32.mmFrequency, Statement32.mmStatementDateTime);
+				messageBuildingBlock_lazy = () -> Arrays.asList(InterestPaymentStatementV03.mmStatementParameters, InterestPaymentStatementV04.mmStatementParameters);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Statement32";
 				definition = "Characteristics of the statement.";
 			}

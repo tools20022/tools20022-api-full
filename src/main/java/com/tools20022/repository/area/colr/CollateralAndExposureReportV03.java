@@ -20,6 +20,7 @@ package com.tools20022.repository.area.colr;
 import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.CollateralManagementLatestVersion;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.CollateralManagementISOLatestversion;
@@ -47,6 +48,9 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code colr.016.001.03}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.CollateralManagementLatestVersion
@@ -90,9 +94,6 @@ import java.util.List;
  * CollateralAndExposureReportV03.mmSupplementaryData}</li>
  * </ul>
  * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code colr.016.001.03}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -147,10 +148,10 @@ public class CollateralAndExposureReportV03 {
 	public static final MMMessageBuildingBlock mmReportParameters = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "RptParams";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportParameters";
 			definition = "Provides information about the report such as the report identification, the report date and time or the report frequency.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.colr.CollateralAndExposureReportV02.mmReportParameters;
+			previousVersion_lazy = () -> CollateralAndExposureReportV02.mmReportParameters;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> ReportParameters5.mmObject();
@@ -190,10 +191,10 @@ public class CollateralAndExposureReportV03 {
 	public static final MMMessageBuildingBlock mmPagination = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Pgntn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Pagination";
 			definition = "Specifies the page number and an indicator of whether it is the only or last page, or if there are additional pages. \r\n";
-			previousVersion_lazy = () -> com.tools20022.repository.area.colr.CollateralAndExposureReportV02.mmPagination;
+			previousVersion_lazy = () -> CollateralAndExposureReportV02.mmPagination;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> Pagination.mmObject();
@@ -234,10 +235,10 @@ public class CollateralAndExposureReportV03 {
 	public static final MMMessageBuildingBlock mmObligation = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Oblgtn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Obligation";
 			definition = "Provides information like the identification of the party or parties associated with the collateral agreement, the exposure type and the valuation date.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.colr.CollateralAndExposureReportV02.mmObligation;
+			previousVersion_lazy = () -> CollateralAndExposureReportV02.mmObligation;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> Obligation4.mmObject();
@@ -274,10 +275,10 @@ public class CollateralAndExposureReportV03 {
 	public static final MMMessageBuildingBlock mmAgreement = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Agrmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Agreement";
 			definition = "Agreement details for the over the counter market.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.colr.CollateralAndExposureReportV02.mmAgreement;
+			previousVersion_lazy = () -> CollateralAndExposureReportV02.mmAgreement;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> Agreement4.mmObject();
@@ -314,10 +315,10 @@ public class CollateralAndExposureReportV03 {
 	public static final MMMessageBuildingBlock mmCollateralReport = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CollRpt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralReport";
 			definition = "Provides details on the collateral report.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.colr.CollateralAndExposureReportV02.mmCollateralReport;
+			previousVersion_lazy = () -> CollateralAndExposureReportV02.mmCollateralReport;
 			minOccurs = 1;
 			complexType_lazy = () -> Collateral13.mmObject();
 		}
@@ -357,10 +358,10 @@ public class CollateralAndExposureReportV03 {
 	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SplmtryData";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryData";
 			definition = "Additional information that can not be captured in the structured fields and/or any other specific block. ";
-			previousVersion_lazy = () -> com.tools20022.repository.area.colr.CollateralAndExposureReportV02.mmSupplementaryData;
+			previousVersion_lazy = () -> CollateralAndExposureReportV02.mmSupplementaryData;
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
@@ -369,7 +370,7 @@ public class CollateralAndExposureReportV03 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CollateralAndExposureReportV03";
 				definition = "Scope\r\nThe CollateralAndExposureReport message is sent:\r\n- either by the collateral giver, or its collateral manager, to the collateral taker, or its collateral manager, or\r\n- or by the collateral taker, or its collateral manager to the collateral giver, or its collateral manager\r\n\r\nThe message definition is intended for use with the ISO20022 Business Application Header.\r\n\r\nUsage\r\nThe CollateralAndExposureReport is used to provide the details of the valuation of the collateral, that is, the valuation of securities collateral, cash collateral or other type of collateral, posted at a specific calculation date.";
 				previousVersion_lazy = () -> CollateralAndExposureReportV02.mmObject();
@@ -377,9 +378,8 @@ public class CollateralAndExposureReportV03 {
 				rootElement = "Document";
 				xmlTag = "CollAndXpsrRpt";
 				businessArea_lazy = () -> CollateralManagementLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.colr.CollateralAndExposureReportV03.mmReportParameters, com.tools20022.repository.area.colr.CollateralAndExposureReportV03.mmPagination,
-						com.tools20022.repository.area.colr.CollateralAndExposureReportV03.mmObligation, com.tools20022.repository.area.colr.CollateralAndExposureReportV03.mmAgreement,
-						com.tools20022.repository.area.colr.CollateralAndExposureReportV03.mmCollateralReport, com.tools20022.repository.area.colr.CollateralAndExposureReportV03.mmSupplementaryData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(CollateralAndExposureReportV03.mmReportParameters, CollateralAndExposureReportV03.mmPagination, CollateralAndExposureReportV03.mmObligation,
+						CollateralAndExposureReportV03.mmAgreement, CollateralAndExposureReportV03.mmCollateralReport, CollateralAndExposureReportV03.mmSupplementaryData);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "colr";

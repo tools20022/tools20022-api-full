@@ -19,10 +19,12 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Max256Text;
 import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -103,7 +105,7 @@ public class AuditTrail1 {
 			componentContext_lazy = () -> AuditTrail1.mmObject();
 			isDerived = false;
 			xmlTag = "FldNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FieldName";
 			definition = "Name of the field whose value has been changed.";
 			maxOccurs = 1;
@@ -143,7 +145,7 @@ public class AuditTrail1 {
 			componentContext_lazy = () -> AuditTrail1.mmObject();
 			isDerived = false;
 			xmlTag = "OdFldVal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OldFieldValue";
 			definition = "Value of the field before the change.";
 			maxOccurs = 1;
@@ -183,7 +185,7 @@ public class AuditTrail1 {
 			componentContext_lazy = () -> AuditTrail1.mmObject();
 			isDerived = false;
 			xmlTag = "NewFldVal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewFieldValue";
 			definition = "Value of the field after the change.";
 			maxOccurs = 1;
@@ -223,7 +225,7 @@ public class AuditTrail1 {
 			componentContext_lazy = () -> AuditTrail1.mmObject();
 			isDerived = false;
 			xmlTag = "OprTmStmp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OperationTimeStamp";
 			definition = "Timestamp of the change.";
 			maxOccurs = 1;
@@ -263,7 +265,7 @@ public class AuditTrail1 {
 			componentContext_lazy = () -> AuditTrail1.mmObject();
 			isDerived = false;
 			xmlTag = "InstgUsr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructingUser";
 			definition = "User who instructed the change.";
 			maxOccurs = 1;
@@ -304,7 +306,7 @@ public class AuditTrail1 {
 			componentContext_lazy = () -> AuditTrail1.mmObject();
 			isDerived = false;
 			xmlTag = "ApprvgUsr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ApprovingUser";
 			definition = "User who approved the change instructed by the instructing user.";
 			maxOccurs = 1;
@@ -316,10 +318,9 @@ public class AuditTrail1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AuditTrail1.mmFieldName, com.tools20022.repository.msg.AuditTrail1.mmOldFieldValue, com.tools20022.repository.msg.AuditTrail1.mmNewFieldValue,
-						com.tools20022.repository.msg.AuditTrail1.mmOperationTimeStamp, com.tools20022.repository.msg.AuditTrail1.mmInstructingUser, com.tools20022.repository.msg.AuditTrail1.mmApprovingUser);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(AuditTrail1.mmFieldName, AuditTrail1.mmOldFieldValue, AuditTrail1.mmNewFieldValue, AuditTrail1.mmOperationTimeStamp, AuditTrail1.mmInstructingUser, AuditTrail1.mmApprovingUser);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "AuditTrail1";
 				definition = "Describes information needed to identify a change for a static data, the time when it was performed and the user requesting the change and approving it.";
 			}

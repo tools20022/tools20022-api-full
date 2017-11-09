@@ -19,7 +19,9 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max140Binary;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -122,11 +124,11 @@ public class TerminalManagementDataSet8 {
 			componentContext_lazy = () -> TerminalManagementDataSet8.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Identification of the required data set.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TerminalManagementDataSet12.mmIdentification);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TerminalManagementDataSet7.mmIdentification;
+			nextVersions_lazy = () -> Arrays.asList(TerminalManagementDataSet12.mmIdentification);
+			previousVersion_lazy = () -> TerminalManagementDataSet7.mmIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> com.tools20022.repository.msg.DataSetIdentification3.mmObject();
@@ -180,11 +182,11 @@ public class TerminalManagementDataSet8 {
 			componentContext_lazy = () -> TerminalManagementDataSet8.mmObject();
 			isDerived = false;
 			xmlTag = "POIChllng";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "POIChallenge";
 			definition = "Point of interaction challenge for cryptographic key injection.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TerminalManagementDataSet12.mmPOIChallenge);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TerminalManagementDataSet7.mmPOIChallenge;
+			nextVersions_lazy = () -> Arrays.asList(TerminalManagementDataSet12.mmPOIChallenge);
+			previousVersion_lazy = () -> TerminalManagementDataSet7.mmPOIChallenge;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max140Binary.mmObject();
@@ -238,11 +240,11 @@ public class TerminalManagementDataSet8 {
 			componentContext_lazy = () -> TerminalManagementDataSet8.mmObject();
 			isDerived = false;
 			xmlTag = "TMChllng";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TMChallenge";
 			definition = "Terminal manager challenge for cryptographic key injection.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TerminalManagementDataSet12.mmTMChallenge);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TerminalManagementDataSet7.mmTMChallenge;
+			nextVersions_lazy = () -> Arrays.asList(TerminalManagementDataSet12.mmTMChallenge);
+			previousVersion_lazy = () -> TerminalManagementDataSet7.mmTMChallenge;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max140Binary.mmObject();
@@ -290,10 +292,10 @@ public class TerminalManagementDataSet8 {
 			componentContext_lazy = () -> TerminalManagementDataSet8.mmObject();
 			isDerived = false;
 			xmlTag = "NcrptdKey";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EncryptedKey";
 			definition = "Transport key encrypted by the TM (Terminal manager) key encryption RSA key.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TerminalManagementDataSet7.mmEncryptedKey;
+			previousVersion_lazy = () -> TerminalManagementDataSet7.mmEncryptedKey;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.ContentInformationType7.mmObject();
@@ -303,10 +305,9 @@ public class TerminalManagementDataSet8 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TerminalManagementDataSet8.mmIdentification, com.tools20022.repository.msg.TerminalManagementDataSet8.mmPOIChallenge,
-						com.tools20022.repository.msg.TerminalManagementDataSet8.mmTMChallenge, com.tools20022.repository.msg.TerminalManagementDataSet8.mmEncryptedKey);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(TerminalManagementDataSet8.mmIdentification, TerminalManagementDataSet8.mmPOIChallenge, TerminalManagementDataSet8.mmTMChallenge, TerminalManagementDataSet8.mmEncryptedKey);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TerminalManagementDataSet8";
 				definition = "Identification of requested data set.";
 				nextVersions_lazy = () -> Arrays.asList(TerminalManagementDataSet12.mmObject());

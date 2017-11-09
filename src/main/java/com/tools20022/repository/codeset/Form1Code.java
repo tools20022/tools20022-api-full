@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.FormCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -82,7 +84,7 @@ public class Form1Code extends FormCode {
 	 */
 	public static final MMCode mmRequired = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Required";
 			owner_lazy = () -> Form1Code.mmObject();
 		}
@@ -104,7 +106,7 @@ public class Form1Code extends FormCode {
 	 */
 	public static final MMCode mmNotRequired = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotRequired";
 			owner_lazy = () -> Form1Code.mmObject();
 		}
@@ -126,7 +128,7 @@ public class Form1Code extends FormCode {
 	 */
 	public static final MMCode mmSignatureRequired = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SignatureRequired";
 			owner_lazy = () -> Form1Code.mmObject();
 		}
@@ -135,12 +137,12 @@ public class Form1Code extends FormCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("REQU");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Form1Code";
 				definition = "Specifies whether a physical form is required.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Form1Code.mmRequired, com.tools20022.repository.codeset.Form1Code.mmNotRequired, com.tools20022.repository.codeset.Form1Code.mmSignatureRequired);
+				code_lazy = () -> Arrays.asList(Form1Code.mmRequired, Form1Code.mmNotRequired, Form1Code.mmSignatureRequired);
 				trace_lazy = () -> FormCode.mmObject();
 			}
 		});

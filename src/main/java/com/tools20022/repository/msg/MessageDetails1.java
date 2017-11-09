@@ -20,8 +20,10 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.Max9NumericText;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -106,7 +108,7 @@ public class MessageDetails1 {
 			componentContext_lazy = () -> MessageDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "RptId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportIdentification";
 			definition = "Unique identification assigned by the CBR payment system to unambiguously identify the report.";
 			maxOccurs = 1;
@@ -149,7 +151,7 @@ public class MessageDetails1 {
 			componentContext_lazy = () -> MessageDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "RptPgntn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportPagination";
 			definition = "Page number of the message and  continuation indicator to indicate that the multi-parts notification is to continue or that the message is the last page of the multi-parts notification.";
 			maxOccurs = 1;
@@ -192,7 +194,7 @@ public class MessageDetails1 {
 			componentContext_lazy = () -> MessageDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "TtlNbOfNtries";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalNumberOfEntries";
 			definition = "Number of entries in the pool.";
 			maxOccurs = 1;
@@ -234,7 +236,7 @@ public class MessageDetails1 {
 			componentContext_lazy = () -> MessageDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "SntNtry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SentEntry";
 			definition = "Set of elements used to provide details of the report of sent messages.";
 			minOccurs = 0;
@@ -277,7 +279,7 @@ public class MessageDetails1 {
 			componentContext_lazy = () -> MessageDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "RcvdNtry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceivedEntry";
 			definition = "Set of elements used to provide details of the report of received messages.";
 			minOccurs = 0;
@@ -289,10 +291,9 @@ public class MessageDetails1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MessageDetails1.mmReportIdentification, com.tools20022.repository.msg.MessageDetails1.mmReportPagination,
-						com.tools20022.repository.msg.MessageDetails1.mmTotalNumberOfEntries, com.tools20022.repository.msg.MessageDetails1.mmSentEntry, com.tools20022.repository.msg.MessageDetails1.mmReceivedEntry);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(MessageDetails1.mmReportIdentification, MessageDetails1.mmReportPagination, MessageDetails1.mmTotalNumberOfEntries, MessageDetails1.mmSentEntry, MessageDetails1.mmReceivedEntry);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "MessageDetails1";
 				definition = "Summary details about CBRF electronic informational message in the report.";
 			}

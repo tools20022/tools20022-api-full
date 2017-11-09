@@ -19,8 +19,10 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ErrorHandling1Code;
 import com.tools20022.repository.datatype.Max4AlphaNumericText;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -108,10 +110,10 @@ public class ErrorHandling1Choice {
 			componentContext_lazy = () -> ErrorHandling1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Cd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Specification of the error, in coded form.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ErrorHandling2Choice.mmCode);
+			nextVersions_lazy = () -> Arrays.asList(ErrorHandling2Choice.mmCode);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ErrorHandling1Code.mmObject();
@@ -159,10 +161,10 @@ public class ErrorHandling1Choice {
 			componentContext_lazy = () -> ErrorHandling1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Specification of the error, in free format.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ErrorHandling2Choice.mmProprietary);
+			nextVersions_lazy = () -> Arrays.asList(ErrorHandling2Choice.mmProprietary);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max4AlphaNumericText.mmObject();
@@ -172,9 +174,9 @@ public class ErrorHandling1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ErrorHandling1Choice.mmCode, com.tools20022.repository.choice.ErrorHandling1Choice.mmProprietary);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(ErrorHandling1Choice.mmCode, ErrorHandling1Choice.mmProprietary);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ErrorHandling1Choice";
 				definition = "Specifies the choice between the listed and the proprietary error codes.";
 				nextVersions_lazy = () -> Arrays.asList(ErrorHandling2Choice.mmObject());

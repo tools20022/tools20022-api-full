@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.HoldingsPlanTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -86,7 +88,7 @@ public class HoldingsPlanType1Code extends HoldingsPlanTypeCode {
 	 */
 	public static final MMCode mmInvestmentPlan = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestmentPlan";
 			owner_lazy = () -> HoldingsPlanType1Code.mmObject();
 		}
@@ -109,7 +111,7 @@ public class HoldingsPlanType1Code extends HoldingsPlanTypeCode {
 	 */
 	public static final MMCode mmSwitchPlan = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SwitchPlan";
 			owner_lazy = () -> HoldingsPlanType1Code.mmObject();
 		}
@@ -132,7 +134,7 @@ public class HoldingsPlanType1Code extends HoldingsPlanTypeCode {
 	 */
 	public static final MMCode mmWithdrawalPlan = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WithdrawalPlan";
 			owner_lazy = () -> HoldingsPlanType1Code.mmObject();
 		}
@@ -141,13 +143,12 @@ public class HoldingsPlanType1Code extends HoldingsPlanTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("INVP");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "HoldingsPlanType1Code";
 				definition = "Specifies the holdings plan of the assets to transfer.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.HoldingsPlanType1Code.mmInvestmentPlan, com.tools20022.repository.codeset.HoldingsPlanType1Code.mmSwitchPlan,
-						com.tools20022.repository.codeset.HoldingsPlanType1Code.mmWithdrawalPlan);
+				code_lazy = () -> Arrays.asList(HoldingsPlanType1Code.mmInvestmentPlan, HoldingsPlanType1Code.mmSwitchPlan, HoldingsPlanType1Code.mmWithdrawalPlan);
 				trace_lazy = () -> HoldingsPlanTypeCode.mmObject();
 			}
 		});

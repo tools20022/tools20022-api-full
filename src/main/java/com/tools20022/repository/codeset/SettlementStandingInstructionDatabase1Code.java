@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.SettlementStandingInstructionDatabaseCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -89,7 +91,7 @@ public class SettlementStandingInstructionDatabase1Code extends SettlementStandi
 	 */
 	public static final MMCode mmInternalDatabase = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InternalDatabase";
 			owner_lazy = () -> SettlementStandingInstructionDatabase1Code.mmObject();
 		}
@@ -112,7 +114,7 @@ public class SettlementStandingInstructionDatabase1Code extends SettlementStandi
 	 */
 	public static final MMCode mmBrokerDatabase = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BrokerDatabase";
 			owner_lazy = () -> SettlementStandingInstructionDatabase1Code.mmObject();
 		}
@@ -135,7 +137,7 @@ public class SettlementStandingInstructionDatabase1Code extends SettlementStandi
 	 */
 	public static final MMCode mmVendorDatabase = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VendorDatabase";
 			owner_lazy = () -> SettlementStandingInstructionDatabase1Code.mmObject();
 		}
@@ -144,13 +146,12 @@ public class SettlementStandingInstructionDatabase1Code extends SettlementStandi
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("INTE");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SettlementStandingInstructionDatabase1Code";
 				definition = "Indicates what settlement standing instruction database is to be used to derive the settlement parties involved in the transaction.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SettlementStandingInstructionDatabase1Code.mmInternalDatabase, com.tools20022.repository.codeset.SettlementStandingInstructionDatabase1Code.mmBrokerDatabase,
-						com.tools20022.repository.codeset.SettlementStandingInstructionDatabase1Code.mmVendorDatabase);
+				code_lazy = () -> Arrays.asList(SettlementStandingInstructionDatabase1Code.mmInternalDatabase, SettlementStandingInstructionDatabase1Code.mmBrokerDatabase, SettlementStandingInstructionDatabase1Code.mmVendorDatabase);
 				trace_lazy = () -> SettlementStandingInstructionDatabaseCode.mmObject();
 			}
 		});

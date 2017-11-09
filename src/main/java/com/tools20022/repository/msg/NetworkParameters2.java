@@ -19,10 +19,12 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ISOTime;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.entity.NetworkAccess;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -104,11 +106,11 @@ public class NetworkParameters2 {
 	 */
 	public static final MMMessageAttribute mmAddress = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.NetworkAccess.mmNetworkAddress;
+			businessElementTrace_lazy = () -> NetworkAccess.mmNetworkAddress;
 			componentContext_lazy = () -> NetworkParameters2.mmObject();
 			isDerived = false;
 			xmlTag = "Adr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Address";
 			definition = "IP address or hostname.";
 			maxOccurs = 1;
@@ -150,7 +152,7 @@ public class NetworkParameters2 {
 			componentContext_lazy = () -> NetworkParameters2.mmObject();
 			isDerived = false;
 			xmlTag = "PortNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PortNumber";
 			definition = "Port number of the server, if the default port number is not used.";
 			maxOccurs = 1;
@@ -191,7 +193,7 @@ public class NetworkParameters2 {
 			componentContext_lazy = () -> NetworkParameters2.mmObject();
 			isDerived = false;
 			xmlTag = "Dely";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Delay";
 			definition = "Delay between two contacts of the server..";
 			maxOccurs = 1;
@@ -203,10 +205,10 @@ public class NetworkParameters2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.NetworkParameters2.mmAddress, com.tools20022.repository.msg.NetworkParameters2.mmPortNumber, com.tools20022.repository.msg.NetworkParameters2.mmDelay);
+				messageElement_lazy = () -> Arrays.asList(NetworkParameters2.mmAddress, NetworkParameters2.mmPortNumber, NetworkParameters2.mmDelay);
 				trace_lazy = () -> NetworkAccess.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "NetworkParameters2";
 				definition = "Configuration parameters to communicate with a host.";
 				previousVersion_lazy = () -> NetworkParameters1.mmObject();

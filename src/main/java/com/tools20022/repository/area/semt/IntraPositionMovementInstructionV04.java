@@ -20,6 +20,7 @@ package com.tools20022.repository.area.semt;
 import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.SecuritiesManagementLatestVersion;
 import com.tools20022.repository.choice.NumberCount1Choice;
 import com.tools20022.repository.choice.PartyIdentification92Choice;
@@ -57,6 +58,9 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code semt.013.001.04}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.SecuritiesManagementLatestVersion
@@ -116,9 +120,6 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code semt.013.001.04}</li>
- * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -171,10 +172,10 @@ public class IntraPositionMovementInstructionV04 {
 	public static final MMMessageBuildingBlock mmTransactionIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "TxId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionIdentification";
 			definition = "Unambiguous identification of the transaction as know by the instructing party.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.semt.IntraPositionMovementInstructionV03.mmTransactionIdentification;
+			previousVersion_lazy = () -> IntraPositionMovementInstructionV03.mmTransactionIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -216,10 +217,10 @@ public class IntraPositionMovementInstructionV04 {
 	public static final MMMessageBuildingBlock mmCorporateActionEventIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CorpActnEvtId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorporateActionEventIdentification";
 			definition = "Identification assigned by the account servicer to unambiguously identify a corporate action event.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.semt.IntraPositionMovementInstructionV03.mmCorporateActionEventIdentification;
+			previousVersion_lazy = () -> IntraPositionMovementInstructionV03.mmCorporateActionEventIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> Identification14.mmObject();
@@ -257,10 +258,10 @@ public class IntraPositionMovementInstructionV04 {
 	public static final MMMessageBuildingBlock mmNumberCounts = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "NbCounts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NumberCounts";
 			definition = "Count of the number of transactions linked.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.semt.IntraPositionMovementInstructionV03.mmNumberCounts;
+			previousVersion_lazy = () -> IntraPositionMovementInstructionV03.mmNumberCounts;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> NumberCount1Choice.mmObject();
@@ -300,10 +301,10 @@ public class IntraPositionMovementInstructionV04 {
 	public static final MMMessageBuildingBlock mmLinkages = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Lnkgs";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Linkages";
 			definition = "Link to another transaction that must be processed after, before or at the same time.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.semt.IntraPositionMovementInstructionV03.mmLinkages;
+			previousVersion_lazy = () -> IntraPositionMovementInstructionV03.mmLinkages;
 			minOccurs = 0;
 			complexType_lazy = () -> Linkages36.mmObject();
 		}
@@ -340,10 +341,10 @@ public class IntraPositionMovementInstructionV04 {
 	public static final MMMessageBuildingBlock mmAccountOwner = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "AcctOwnr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountOwner";
 			definition = "Party that legally owns the account.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.semt.IntraPositionMovementInstructionV03.mmAccountOwner;
+			previousVersion_lazy = () -> IntraPositionMovementInstructionV03.mmAccountOwner;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification92Choice.mmObject();
@@ -381,10 +382,10 @@ public class IntraPositionMovementInstructionV04 {
 	public static final MMMessageBuildingBlock mmSafekeepingAccount = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SfkpgAcct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingAccount";
 			definition = "Account to or from which a securities entry is made.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.semt.IntraPositionMovementInstructionV03.mmSafekeepingAccount;
+			previousVersion_lazy = () -> IntraPositionMovementInstructionV03.mmSafekeepingAccount;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> SecuritiesAccount24.mmObject();
@@ -427,10 +428,10 @@ public class IntraPositionMovementInstructionV04 {
 	public static final MMMessageBuildingBlock mmSafekeepingPlace = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SfkpgPlc";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlace";
 			definition = "Place where the securities are safe-kept, physically or notionally.  This place can be, for example, a local custodian, a Central Securities Depository (CSD) or an International Central Securities Depository (ICSD).";
-			previousVersion_lazy = () -> com.tools20022.repository.area.semt.IntraPositionMovementInstructionV03.mmSafekeepingPlace;
+			previousVersion_lazy = () -> IntraPositionMovementInstructionV03.mmSafekeepingPlace;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> SafekeepingPlaceFormat10Choice.mmObject();
@@ -471,10 +472,10 @@ public class IntraPositionMovementInstructionV04 {
 	public static final MMMessageBuildingBlock mmFinancialInstrumentIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "FinInstrmId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentIdentification";
 			definition = "Financial instrument representing a sum of rights of the investor vis-a-vis the issuer.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.semt.IntraPositionMovementInstructionV03.mmFinancialInstrumentIdentification;
+			previousVersion_lazy = () -> IntraPositionMovementInstructionV03.mmFinancialInstrumentIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> SecurityIdentification19.mmObject();
@@ -512,10 +513,10 @@ public class IntraPositionMovementInstructionV04 {
 	public static final MMMessageBuildingBlock mmFinancialInstrumentAttributes = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "FinInstrmAttrbts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentAttributes";
 			definition = "Elements characterising a financial instrument.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.semt.IntraPositionMovementInstructionV03.mmFinancialInstrumentAttributes;
+			previousVersion_lazy = () -> IntraPositionMovementInstructionV03.mmFinancialInstrumentAttributes;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> FinancialInstrumentAttributes63.mmObject();
@@ -553,10 +554,10 @@ public class IntraPositionMovementInstructionV04 {
 	public static final MMMessageBuildingBlock mmIntraPositionDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "IntraPosDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IntraPositionDetails";
 			definition = "Intra-position movement transaction details.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.semt.IntraPositionMovementInstructionV03.mmIntraPositionDetails;
+			previousVersion_lazy = () -> IntraPositionMovementInstructionV03.mmIntraPositionDetails;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> IntraPositionDetails33.mmObject();
@@ -597,10 +598,10 @@ public class IntraPositionMovementInstructionV04 {
 	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SplmtryData";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryData";
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.semt.IntraPositionMovementInstructionV03.mmSupplementaryData;
+			previousVersion_lazy = () -> IntraPositionMovementInstructionV03.mmSupplementaryData;
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
@@ -609,7 +610,7 @@ public class IntraPositionMovementInstructionV04 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "IntraPositionMovementInstructionV04";
 				definition = "Scope\r\nAn account owner sends a IntraPositionMovementInstruction to an account servicer to instruct the movement of securities within its holding from one sub-balance to another, for example, blocking of securities.\r\nThe account owner/servicer relationship may be:\r\n- a global custodian which has an account with its local agent (sub-custodian), or\r\n- an investment management institution which manage a fund account opened at a custodian, or\r\n- a broker which has an account with a custodian, or\r\n- a central securities depository participant which has an account with a central securities depository, or\r\n- a central securities depository which has an account with a custodian, another central securities depository or another settlement market infrastructure.\r\nUsage\r\nThe message may also be used to:\r\n- re-send a message previously sent,\r\n- provide a third party with a copy of a message for information,\r\n- re-send to a third party a copy of a message for information.\r\nusing the relevant elements in the Business Application Header.";
 				previousVersion_lazy = () -> IntraPositionMovementInstructionV03.mmObject();
@@ -617,12 +618,10 @@ public class IntraPositionMovementInstructionV04 {
 				rootElement = "Document";
 				xmlTag = "IntraPosMvmntInstr";
 				businessArea_lazy = () -> SecuritiesManagementLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.IntraPositionMovementInstructionV04.mmTransactionIdentification,
-						com.tools20022.repository.area.semt.IntraPositionMovementInstructionV04.mmCorporateActionEventIdentification, com.tools20022.repository.area.semt.IntraPositionMovementInstructionV04.mmNumberCounts,
-						com.tools20022.repository.area.semt.IntraPositionMovementInstructionV04.mmLinkages, com.tools20022.repository.area.semt.IntraPositionMovementInstructionV04.mmAccountOwner,
-						com.tools20022.repository.area.semt.IntraPositionMovementInstructionV04.mmSafekeepingAccount, com.tools20022.repository.area.semt.IntraPositionMovementInstructionV04.mmSafekeepingPlace,
-						com.tools20022.repository.area.semt.IntraPositionMovementInstructionV04.mmFinancialInstrumentIdentification, com.tools20022.repository.area.semt.IntraPositionMovementInstructionV04.mmFinancialInstrumentAttributes,
-						com.tools20022.repository.area.semt.IntraPositionMovementInstructionV04.mmIntraPositionDetails, com.tools20022.repository.area.semt.IntraPositionMovementInstructionV04.mmSupplementaryData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(IntraPositionMovementInstructionV04.mmTransactionIdentification, IntraPositionMovementInstructionV04.mmCorporateActionEventIdentification,
+						IntraPositionMovementInstructionV04.mmNumberCounts, IntraPositionMovementInstructionV04.mmLinkages, IntraPositionMovementInstructionV04.mmAccountOwner, IntraPositionMovementInstructionV04.mmSafekeepingAccount,
+						IntraPositionMovementInstructionV04.mmSafekeepingPlace, IntraPositionMovementInstructionV04.mmFinancialInstrumentIdentification, IntraPositionMovementInstructionV04.mmFinancialInstrumentAttributes,
+						IntraPositionMovementInstructionV04.mmIntraPositionDetails, IntraPositionMovementInstructionV04.mmSupplementaryData);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "semt";

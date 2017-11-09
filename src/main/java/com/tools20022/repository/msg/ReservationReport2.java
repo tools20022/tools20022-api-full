@@ -19,8 +19,10 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.metamodel.MMXor;
 import com.tools20022.repository.entity.Reservation;
+import com.tools20022.repository.GeneratedRepository;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -115,7 +117,7 @@ public class ReservationReport2 {
 			componentContext_lazy = () -> ReservationReport2.mmObject();
 			isDerived = false;
 			xmlTag = "RsvatnId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReservationIdentification";
 			definition = "Identification of the reservation on which information is requested.";
 			maxOccurs = 1;
@@ -161,7 +163,7 @@ public class ReservationReport2 {
 			componentContext_lazy = () -> ReservationReport2.mmObject();
 			isDerived = false;
 			xmlTag = "Rsvatn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reservation";
 			definition = "Requested information on the limit.";
 			maxOccurs = 1;
@@ -202,7 +204,7 @@ public class ReservationReport2 {
 			componentContext_lazy = () -> ReservationReport2.mmObject();
 			isDerived = false;
 			xmlTag = "BizErr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BusinessError";
 			definition = "Reason the requested business information is not given.";
 			maxOccurs = 1;
@@ -216,6 +218,10 @@ public class ReservationReport2 {
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
+	 * messageComponent} =
+	 * {@linkplain com.tools20022.repository.msg.ReservationReport2
+	 * ReservationReport2}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getImpactedElements
 	 * impactedElements} =
 	 * <ul>
@@ -227,10 +233,6 @@ public class ReservationReport2 {
 	 * ReservationReport2.mmBusinessError}</li>
 	 * </ul>
 	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
-	 * messageComponent} =
-	 * {@linkplain com.tools20022.repository.msg.ReservationReport2
-	 * ReservationReport2}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -245,22 +247,21 @@ public class ReservationReport2 {
 	 */
 	public static final MMXor mmReservationOrBusinessErrorRule = new MMXor() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReservationOrBusinessErrorRule";
 			definition = "Either Rervation or BusinessError must be present, but not both.";
 			messageComponent_lazy = () -> ReservationReport2.mmObject();
-			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReservationReport2.mmReservation, com.tools20022.repository.msg.ReservationReport2.mmBusinessError);
+			impactedElements_lazy = () -> Arrays.asList(ReservationReport2.mmReservation, ReservationReport2.mmBusinessError);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReservationReport2.mmReservationIdentification, com.tools20022.repository.msg.ReservationReport2.mmReservation,
-						com.tools20022.repository.msg.ReservationReport2.mmBusinessError);
+				messageElement_lazy = () -> Arrays.asList(ReservationReport2.mmReservationIdentification, ReservationReport2.mmReservation, ReservationReport2.mmBusinessError);
 				trace_lazy = () -> Reservation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
 						return DateFormat.getDateInstance(java.text.DateFormat.LONG).parse("September 9, 2016");
@@ -270,7 +271,7 @@ public class ReservationReport2 {
 				})).get();
 				name = "ReservationReport2";
 				definition = "Reports either on the reservation or on a business error.";
-				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReservationReport2.mmReservationOrBusinessErrorRule);
+				xors_lazy = () -> Arrays.asList(ReservationReport2.mmReservationOrBusinessErrorRule);
 			}
 		});
 		return mmObject_lazy.get();

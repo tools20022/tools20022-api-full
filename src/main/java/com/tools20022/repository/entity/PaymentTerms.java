@@ -17,13 +17,12 @@
 
 package com.tools20022.repository.entity;
 
-import com.tools20022.metamodel.MMBusinessAssociationEnd;
-import com.tools20022.metamodel.MMBusinessAttribute;
-import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.*;
 import com.tools20022.repository.choice.PaymentCodeOrOther2Choice;
 import com.tools20022.repository.codeset.PaymentTimeCode;
 import com.tools20022.repository.datatype.CurrencyAndAmount;
 import com.tools20022.repository.datatype.PercentageRate;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -37,26 +36,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.PaymentTerms#mmAmount
- * PaymentTerms.mmAmount}</li>
- * <li>{@linkplain com.tools20022.repository.entity.PaymentTerms#mmPercentage
- * PaymentTerms.mmPercentage}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.PaymentTerms#mmPaymentPeriod
- * PaymentTerms.mmPaymentPeriod}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.PaymentTerms#mmRelatedPaymentObligation
- * PaymentTerms.mmRelatedPaymentObligation}</li>
- * <li>{@linkplain com.tools20022.repository.entity.PaymentTerms#mmPaymentTime
- * PaymentTerms.mmPaymentTime}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.PaymentTerms#mmRelatedPaymentScheduleType
- * PaymentTerms.mmRelatedPaymentScheduleType}</li>
- * <li>{@linkplain com.tools20022.repository.entity.PaymentTerms#mmRelatedLoan
- * PaymentTerms.mmRelatedLoan}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PaymentPeriod1 PaymentPeriod1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PaymentPeriod2 PaymentPeriod2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PaymentPeriod4 PaymentPeriod4}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PaymentPeriod3 PaymentPeriod3}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.PaymentCodeOrOther2Choice
+ * PaymentCodeOrOther2Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.InterestPaymentDateRange2
+ * InterestPaymentDateRange2}</li>
  * </ul>
  * </li>
  * <li>
@@ -86,18 +77,26 @@ import java.util.concurrent.atomic.AtomicReference;
  * PaymentCodeOrOther2Choice.mmPaymentCode}</li>
  * </ul>
  * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.PaymentPeriod1 PaymentPeriod1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PaymentPeriod2 PaymentPeriod2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PaymentPeriod4 PaymentPeriod4}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PaymentPeriod3 PaymentPeriod3}</li>
- * <li>{@linkplain com.tools20022.repository.choice.PaymentCodeOrOther2Choice
- * PaymentCodeOrOther2Choice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.InterestPaymentDateRange2
- * InterestPaymentDateRange2}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.PaymentTerms#mmAmount
+ * PaymentTerms.mmAmount}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.PaymentTerms#mmPercentage
+ * PaymentTerms.mmPercentage}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PaymentTerms#mmPaymentPeriod
+ * PaymentTerms.mmPaymentPeriod}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PaymentTerms#mmRelatedPaymentObligation
+ * PaymentTerms.mmRelatedPaymentObligation}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.PaymentTerms#mmPaymentTime
+ * PaymentTerms.mmPaymentTime}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PaymentTerms#mmRelatedPaymentScheduleType
+ * PaymentTerms.mmRelatedPaymentScheduleType}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.PaymentTerms#mmRelatedLoan
+ * PaymentTerms.mmRelatedLoan}</li>
  * </ul>
  * </li>
  * <li>
@@ -161,11 +160,10 @@ public class PaymentTerms {
 	 */
 	public static final MMBusinessAttribute mmAmount = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentTerms1.mmAmount, com.tools20022.repository.msg.PaymentTerms2.mmAmount, com.tools20022.repository.msg.LoanContractTranche1.mmAmount,
-					com.tools20022.repository.msg.InterestPaymentDateRange2.mmAmount);
+			derivation_lazy = () -> Arrays.asList(PaymentTerms1.mmAmount, PaymentTerms2.mmAmount, LoanContractTranche1.mmAmount, InterestPaymentDateRange2.mmAmount);
 			elementContext_lazy = () -> PaymentTerms.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Amount";
 			definition = "Specifies that the payment terms apply to an amount.";
 			maxOccurs = 1;
@@ -219,11 +217,10 @@ public class PaymentTerms {
 	 */
 	public static final MMBusinessAttribute mmPercentage = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentTerms3.mmPartialPaymentPercent, com.tools20022.repository.msg.PaymentTerms1.mmPercentage, com.tools20022.repository.msg.PaymentTerms2.mmPercentage,
-					com.tools20022.repository.msg.LoanContract1.mmInterestRate);
+			derivation_lazy = () -> Arrays.asList(PaymentTerms3.mmPartialPaymentPercent, PaymentTerms1.mmPercentage, PaymentTerms2.mmPercentage, LoanContract1.mmInterestRate);
 			elementContext_lazy = () -> PaymentTerms.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Percentage";
 			definition = "Specifies that the payment conditions apply to a percentage of the amount due.";
 			maxOccurs = 1;
@@ -274,16 +271,16 @@ public class PaymentTerms {
 	 */
 	public static final MMBusinessAssociationEnd mmPaymentPeriod = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentTerms3.mmPaymentPeriod);
+			derivation_lazy = () -> Arrays.asList(PaymentTerms3.mmPaymentPeriod);
 			elementContext_lazy = () -> PaymentTerms.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PaymentPeriod";
 			definition = "Period to which the payment terms apply.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmRelatedPaymentTerms;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmObject();
 		}
 	};
@@ -325,13 +322,13 @@ public class PaymentTerms {
 		{
 			elementContext_lazy = () -> PaymentTerms.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedPaymentObligation";
 			definition = "Payment obligation for which payment terms are specified.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.PaymentObligation.mmPaymentTerms;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.PaymentObligation.mmObject();
 		}
 	};
@@ -379,11 +376,10 @@ public class PaymentTerms {
 	 */
 	public static final MMBusinessAttribute mmPaymentTime = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentPeriod1.mmCode, com.tools20022.repository.msg.PaymentPeriod2.mmCode, com.tools20022.repository.msg.PaymentPeriod4.mmCode,
-					com.tools20022.repository.msg.PaymentPeriod3.mmCode);
+			derivation_lazy = () -> Arrays.asList(PaymentPeriod1.mmCode, PaymentPeriod2.mmCode, PaymentPeriod4.mmCode, PaymentPeriod3.mmCode);
 			elementContext_lazy = () -> PaymentTerms.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PaymentTime";
 			definition = "Specifies the time of the payment relative to an event such as product delivery or receipt of invoice. ";
 			maxOccurs = 1;
@@ -429,13 +425,13 @@ public class PaymentTerms {
 		{
 			elementContext_lazy = () -> PaymentTerms.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedPaymentScheduleType";
 			definition = "Related type of the payment schedule provided in the contract.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.RegisteredContract.mmPaymentScheduleType;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.RegisteredContract.mmObject();
 		}
 	};
@@ -476,13 +472,13 @@ public class PaymentTerms {
 		{
 			elementContext_lazy = () -> PaymentTerms.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedLoan";
 			definition = "Schedule for the payment of the interests due on the related loan.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.Loan.mmInterestPaymentsSchedule;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Loan.mmObject();
 		}
 	};
@@ -490,16 +486,15 @@ public class PaymentTerms {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PaymentTerms";
 				definition = "Specifies the payment terms of the obligation.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.DateTimePeriod.mmRelatedPaymentTerms, com.tools20022.repository.entity.PaymentObligation.mmPaymentTerms,
 						com.tools20022.repository.entity.RegisteredContract.mmPaymentScheduleType, com.tools20022.repository.entity.Loan.mmInterestPaymentsSchedule);
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PaymentCodeOrOther2Choice.mmPaymentCode);
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.PaymentTerms.mmAmount, com.tools20022.repository.entity.PaymentTerms.mmPercentage, com.tools20022.repository.entity.PaymentTerms.mmPaymentPeriod,
-						com.tools20022.repository.entity.PaymentTerms.mmRelatedPaymentObligation, com.tools20022.repository.entity.PaymentTerms.mmPaymentTime, com.tools20022.repository.entity.PaymentTerms.mmRelatedPaymentScheduleType,
-						com.tools20022.repository.entity.PaymentTerms.mmRelatedLoan);
+				derivationElement_lazy = () -> Arrays.asList(PaymentCodeOrOther2Choice.mmPaymentCode);
+				element_lazy = () -> Arrays.asList(PaymentTerms.mmAmount, PaymentTerms.mmPercentage, PaymentTerms.mmPaymentPeriod, PaymentTerms.mmRelatedPaymentObligation, PaymentTerms.mmPaymentTime,
+						PaymentTerms.mmRelatedPaymentScheduleType, PaymentTerms.mmRelatedLoan);
 				derivationComponent_lazy = () -> Arrays.asList(PaymentPeriod1.mmObject(), PaymentPeriod2.mmObject(), PaymentPeriod4.mmObject(), PaymentPeriod3.mmObject(), PaymentCodeOrOther2Choice.mmObject(),
 						InterestPaymentDateRange2.mmObject());
 			}

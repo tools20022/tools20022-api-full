@@ -19,11 +19,14 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.PartyType6Code;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.Min2Max3AlphaText;
 import com.tools20022.repository.entity.GenericIdentification;
 import com.tools20022.repository.entity.IdentificationIssuerRole;
+import com.tools20022.repository.entity.OrganisationName;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -130,15 +133,15 @@ public class GenericIdentification72 {
 	 */
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmIdentification;
+			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> GenericIdentification72.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Identification of the entity.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GenericIdentification93.mmIdentification);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.GenericIdentification71.mmIdentification;
+			nextVersions_lazy = () -> Arrays.asList(GenericIdentification93.mmIdentification);
+			previousVersion_lazy = () -> GenericIdentification71.mmIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -200,11 +203,11 @@ public class GenericIdentification72 {
 			componentContext_lazy = () -> GenericIdentification72.mmObject();
 			isDerived = false;
 			xmlTag = "Issr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Issuer";
 			definition = "Entity assigning the identification  (for example merchant, acceptor, acquirer, or tax authority).";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GenericIdentification93.mmIssuer);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.GenericIdentification71.mmIssuer;
+			nextVersions_lazy = () -> Arrays.asList(GenericIdentification93.mmIssuer);
+			previousVersion_lazy = () -> GenericIdentification71.mmIssuer;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PartyType6Code.mmObject();
@@ -257,11 +260,11 @@ public class GenericIdentification72 {
 			componentContext_lazy = () -> GenericIdentification72.mmObject();
 			isDerived = false;
 			xmlTag = "Ctry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Country";
 			definition = "Country of the entity (ISO 3166-1 alpha-2 or alpha-3).";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GenericIdentification93.mmCountry);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.GenericIdentification71.mmCountry;
+			nextVersions_lazy = () -> Arrays.asList(GenericIdentification93.mmCountry);
+			previousVersion_lazy = () -> GenericIdentification71.mmCountry;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Min2Max3AlphaText.mmObject();
@@ -315,15 +318,15 @@ public class GenericIdentification72 {
 	 */
 	public static final MMMessageAttribute mmShortName = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationName.mmShortName;
+			businessElementTrace_lazy = () -> OrganisationName.mmShortName;
 			componentContext_lazy = () -> GenericIdentification72.mmObject();
 			isDerived = false;
 			xmlTag = "ShrtNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ShortName";
 			definition = "Name of the entity.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GenericIdentification93.mmShortName);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.GenericIdentification71.mmShortName;
+			nextVersions_lazy = () -> Arrays.asList(GenericIdentification93.mmShortName);
+			previousVersion_lazy = () -> GenericIdentification71.mmShortName;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -333,11 +336,10 @@ public class GenericIdentification72 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GenericIdentification72.mmIdentification, com.tools20022.repository.msg.GenericIdentification72.mmIssuer,
-						com.tools20022.repository.msg.GenericIdentification72.mmCountry, com.tools20022.repository.msg.GenericIdentification72.mmShortName);
+				messageElement_lazy = () -> Arrays.asList(GenericIdentification72.mmIdentification, GenericIdentification72.mmIssuer, GenericIdentification72.mmCountry, GenericIdentification72.mmShortName);
 				trace_lazy = () -> GenericIdentification.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "GenericIdentification72";
 				definition = "Identification of an entity.";
 				nextVersions_lazy = () -> Arrays.asList(GenericIdentification93.mmObject());

@@ -19,11 +19,13 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.SecurityIdentification3Choice;
 import com.tools20022.repository.codeset.AccountStatus1Code;
 import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.datatype.Max35Text;
-import com.tools20022.repository.entity.SecuritiesAccount;
+import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -114,11 +116,11 @@ public class SecuritiesAccount4 {
 	 */
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.mmIdentification;
+			businessElementTrace_lazy = () -> Account.mmIdentification;
 			componentContext_lazy = () -> SecuritiesAccount4.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Unique and unambiguous identification for the account between the account owner and the account servicer.";
 			maxOccurs = 1;
@@ -165,11 +167,11 @@ public class SecuritiesAccount4 {
 	 */
 	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AccountIdentification.mmName;
+			businessElementTrace_lazy = () -> AccountIdentification.mmName;
 			componentContext_lazy = () -> SecuritiesAccount4.mmObject();
 			isDerived = false;
 			xmlTag = "Nm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Name";
 			definition = "Name of the account. It provides an additional means of identification, and is designated by the account servicer in agreement with the account owner.";
 			maxOccurs = 1;
@@ -213,7 +215,7 @@ public class SecuritiesAccount4 {
 			componentContext_lazy = () -> SecuritiesAccount4.mmObject();
 			isDerived = false;
 			xmlTag = "FinInstrmSplmtryId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentSupplementaryIdentification";
 			definition = "Additional information about a financial instrument to help identify the instrument.";
 			maxOccurs = 1;
@@ -260,11 +262,11 @@ public class SecuritiesAccount4 {
 	 */
 	public static final MMMessageAttribute mmFinancialInstrumentIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmIdentification;
+			businessElementTrace_lazy = () -> Security.mmIdentification;
 			componentContext_lazy = () -> SecuritiesAccount4.mmObject();
 			isDerived = false;
 			xmlTag = "FinInstrmId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentIdentification";
 			definition = "Identification of a security, as assigned under a formal or proprietary identification scheme.";
 			maxOccurs = 1;
@@ -307,11 +309,11 @@ public class SecuritiesAccount4 {
 	 */
 	public static final MMMessageAttribute mmFinancialInstrumentName = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesIdentification.mmName;
+			businessElementTrace_lazy = () -> SecuritiesIdentification.mmName;
 			componentContext_lazy = () -> SecuritiesAccount4.mmObject();
 			isDerived = false;
 			xmlTag = "FinInstrmNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentName";
 			definition = "Name of the financial instrument in free format text.";
 			maxOccurs = 1;
@@ -356,11 +358,11 @@ public class SecuritiesAccount4 {
 	 */
 	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AccountStatus.mmStatus;
+			businessElementTrace_lazy = () -> AccountStatus.mmStatus;
 			componentContext_lazy = () -> SecuritiesAccount4.mmObject();
 			isDerived = false;
 			xmlTag = "Sts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Status";
 			definition = "Specifies the current state of an account, eg, enabled or deleted.";
 			maxOccurs = 1;
@@ -372,12 +374,11 @@ public class SecuritiesAccount4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesAccount4.mmIdentification, com.tools20022.repository.msg.SecuritiesAccount4.mmName,
-						com.tools20022.repository.msg.SecuritiesAccount4.mmFinancialInstrumentSupplementaryIdentification, com.tools20022.repository.msg.SecuritiesAccount4.mmFinancialInstrumentIdentification,
-						com.tools20022.repository.msg.SecuritiesAccount4.mmFinancialInstrumentName, com.tools20022.repository.msg.SecuritiesAccount4.mmStatus);
+				messageElement_lazy = () -> Arrays.asList(SecuritiesAccount4.mmIdentification, SecuritiesAccount4.mmName, SecuritiesAccount4.mmFinancialInstrumentSupplementaryIdentification,
+						SecuritiesAccount4.mmFinancialInstrumentIdentification, SecuritiesAccount4.mmFinancialInstrumentName, SecuritiesAccount4.mmStatus);
 				trace_lazy = () -> SecuritiesAccount.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesAccount4";
 				definition = "Account to or from which a securities entry is made.";
 			}

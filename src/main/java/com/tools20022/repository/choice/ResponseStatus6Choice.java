@@ -19,7 +19,11 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.sese.SecuritiesSettlementTransactionCounterpartyResponseV02;
 import com.tools20022.repository.entity.Status;
+import com.tools20022.repository.entity.StatusReason;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -116,14 +120,14 @@ public class ResponseStatus6Choice {
 	 */
 	public static final MMMessageAssociationEnd mmConsented = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmReason;
+			businessElementTrace_lazy = () -> StatusReason.mmReason;
 			componentContext_lazy = () -> ResponseStatus6Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Cnsntd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Consented";
 			definition = "Reason provided for the status.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.ResponseStatus3Choice.mmConsented;
+			previousVersion_lazy = () -> ResponseStatus3Choice.mmConsented;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -173,10 +177,10 @@ public class ResponseStatus6Choice {
 			componentContext_lazy = () -> ResponseStatus6Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Rjctd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rejected";
 			definition = "Rejected status of an instruction, advice or request.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.ResponseStatus3Choice.mmRejected;
+			previousVersion_lazy = () -> ResponseStatus3Choice.mmRejected;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -226,10 +230,10 @@ public class ResponseStatus6Choice {
 			componentContext_lazy = () -> ResponseStatus6Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Pdg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Pending";
 			definition = "Pending status of an instruction, advice or request.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.ResponseStatus3Choice.mmPending;
+			previousVersion_lazy = () -> ResponseStatus3Choice.mmPending;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -240,12 +244,11 @@ public class ResponseStatus6Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ResponseStatus6Choice.mmConsented, com.tools20022.repository.choice.ResponseStatus6Choice.mmRejected,
-						com.tools20022.repository.choice.ResponseStatus6Choice.mmPending);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesSettlementTransactionCounterpartyResponseV02.mmResponseStatus);
+				messageElement_lazy = () -> Arrays.asList(ResponseStatus6Choice.mmConsented, ResponseStatus6Choice.mmRejected, ResponseStatus6Choice.mmPending);
+				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesSettlementTransactionCounterpartyResponseV02.mmResponseStatus);
 				trace_lazy = () -> Status.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ResponseStatus6Choice";
 				definition = "Choice of response status.";
 				previousVersion_lazy = () -> ResponseStatus3Choice.mmObject();

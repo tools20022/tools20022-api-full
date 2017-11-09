@@ -20,12 +20,14 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.AccountIdentification1Choice;
 import com.tools20022.repository.choice.MemberIdentificationChoice;
 import com.tools20022.repository.choice.SystemIdentificationChoice;
 import com.tools20022.repository.codeset.LimitType2Code;
 import com.tools20022.repository.datatype.BICIdentifier;
-import com.tools20022.repository.entity.Limit;
+import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -115,11 +117,11 @@ public class LimitSearchCriteria2 {
 	 */
 	public static final MMMessageAttribute mmSystemIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TransactionAdministrator.mmCashClearingSystem;
+			businessElementTrace_lazy = () -> TransactionAdministrator.mmCashClearingSystem;
 			componentContext_lazy = () -> LimitSearchCriteria2.mmObject();
 			isDerived = false;
 			xmlTag = "SysId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SystemIdentification";
 			definition = "Identification of a particular cash clearing system.";
 			maxOccurs = 1;
@@ -166,11 +168,11 @@ public class LimitSearchCriteria2 {
 	 */
 	public static final MMMessageAttribute mmBilateralLimitCounterpartyIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.RiskManagementLimit.mmCounterparty;
+			businessElementTrace_lazy = () -> RiskManagementLimit.mmCounterparty;
 			componentContext_lazy = () -> LimitSearchCriteria2.mmObject();
 			isDerived = false;
 			xmlTag = "BilLmtCtrPtyId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BilateralLimitCounterpartyIdentification";
 			definition = "Unique and unambiguous identification of a member within a system, assigned using the member identification scheme of the system.";
 			minOccurs = 0;
@@ -215,11 +217,11 @@ public class LimitSearchCriteria2 {
 	 */
 	public static final MMMessageAttribute mmDefaultLimitType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Limit.mmType;
+			businessElementTrace_lazy = () -> Limit.mmType;
 			componentContext_lazy = () -> LimitSearchCriteria2.mmObject();
 			isDerived = false;
 			xmlTag = "DfltLmtTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DefaultLimitType";
 			definition = "Type of limit as set by default in the system. The default limit is applicable by the system unless otherwise instructed.";
 			minOccurs = 0;
@@ -261,11 +263,11 @@ public class LimitSearchCriteria2 {
 	 */
 	public static final MMMessageAttribute mmCurrentLimitType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Limit.mmType;
+			businessElementTrace_lazy = () -> Limit.mmType;
 			componentContext_lazy = () -> LimitSearchCriteria2.mmObject();
 			isDerived = false;
 			xmlTag = "CurLmtTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrentLimitType";
 			definition = "Type of limit applied by the system at the present time.";
 			minOccurs = 0;
@@ -308,11 +310,11 @@ public class LimitSearchCriteria2 {
 	 */
 	public static final MMMessageAttribute mmAccountOwner = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.mmBICFI;
+			businessElementTrace_lazy = () -> OrganisationIdentification.mmBICFI;
 			componentContext_lazy = () -> LimitSearchCriteria2.mmObject();
 			isDerived = false;
 			xmlTag = "AcctOwnr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountOwner";
 			definition = "Owner of the account which is being queried.";
 			maxOccurs = 1;
@@ -358,11 +360,11 @@ public class LimitSearchCriteria2 {
 	 */
 	public static final MMMessageAssociationEnd mmAccountIdentification = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.mmIdentification;
+			businessElementTrace_lazy = () -> Account.mmIdentification;
 			componentContext_lazy = () -> LimitSearchCriteria2.mmObject();
 			isDerived = false;
 			xmlTag = "AcctId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountIdentification";
 			definition = "Unique and unambiguous identification for the account between the account owner and the account servicer.";
 			maxOccurs = 1;
@@ -375,12 +377,11 @@ public class LimitSearchCriteria2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LimitSearchCriteria2.mmSystemIdentification, com.tools20022.repository.msg.LimitSearchCriteria2.mmBilateralLimitCounterpartyIdentification,
-						com.tools20022.repository.msg.LimitSearchCriteria2.mmDefaultLimitType, com.tools20022.repository.msg.LimitSearchCriteria2.mmCurrentLimitType, com.tools20022.repository.msg.LimitSearchCriteria2.mmAccountOwner,
-						com.tools20022.repository.msg.LimitSearchCriteria2.mmAccountIdentification);
+				messageElement_lazy = () -> Arrays.asList(LimitSearchCriteria2.mmSystemIdentification, LimitSearchCriteria2.mmBilateralLimitCounterpartyIdentification, LimitSearchCriteria2.mmDefaultLimitType,
+						LimitSearchCriteria2.mmCurrentLimitType, LimitSearchCriteria2.mmAccountOwner, LimitSearchCriteria2.mmAccountIdentification);
 				trace_lazy = () -> Limit.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "LimitSearchCriteria2";
 				definition = "Defines the criteria used to search for a limit.";
 			}

@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.RejectionReasonCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -86,7 +88,7 @@ public class RejectionReason18Code extends RejectionReasonCode {
 	 */
 	public static final MMCode mmFailedValidation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FailedValidation";
 			owner_lazy = () -> RejectionReason18Code.mmObject();
 		}
@@ -109,7 +111,7 @@ public class RejectionReason18Code extends RejectionReasonCode {
 	 */
 	public static final MMCode mmInsufficientBalance = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InsufficientBalance";
 			owner_lazy = () -> RejectionReason18Code.mmObject();
 		}
@@ -132,7 +134,7 @@ public class RejectionReason18Code extends RejectionReasonCode {
 	 */
 	public static final MMCode mmLate = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Late";
 			owner_lazy = () -> RejectionReason18Code.mmObject();
 		}
@@ -141,13 +143,12 @@ public class RejectionReason18Code extends RejectionReasonCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("FAIL");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RejectionReason18Code";
 				definition = "Specifies the reason of a rejection of an election advice.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RejectionReason18Code.mmFailedValidation, com.tools20022.repository.codeset.RejectionReason18Code.mmInsufficientBalance,
-						com.tools20022.repository.codeset.RejectionReason18Code.mmLate);
+				code_lazy = () -> Arrays.asList(RejectionReason18Code.mmFailedValidation, RejectionReason18Code.mmInsufficientBalance, RejectionReason18Code.mmLate);
 				trace_lazy = () -> RejectionReasonCode.mmObject();
 			}
 		});

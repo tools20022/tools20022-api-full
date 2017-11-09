@@ -17,10 +17,9 @@
 
 package com.tools20022.repository.entity;
 
-import com.tools20022.metamodel.MMBusinessAssociationEnd;
-import com.tools20022.metamodel.MMBusinessAttribute;
-import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.*;
 import com.tools20022.repository.datatype.CurrencyAndAmount;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.Authorisation1;
 import com.tools20022.repository.msg.Authorisation2;
 import com.tools20022.repository.msg.MaximumAmountByPeriod1;
@@ -36,6 +35,25 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.MaximumAmountByPeriod1
+ * MaximumAmountByPeriod1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Authorisation1 Authorisation1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Authorisation2 Authorisation2}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.BankOperation#mmOperationThreshold
+ * BankOperation.mmOperationThreshold}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -48,25 +66,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.entity.OperationThreshold#mmMaximumAmount
  * OperationThreshold.mmMaximumAmount}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.BankOperation#mmOperationThreshold
- * BankOperation.mmOperationThreshold}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.MaximumAmountByPeriod1
- * MaximumAmountByPeriod1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Authorisation1 Authorisation1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Authorisation2 Authorisation2}</li>
  * </ul>
  * </li>
  * <li>
@@ -125,13 +124,13 @@ public class OperationThreshold {
 		{
 			elementContext_lazy = () -> OperationThreshold.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BankOperation";
 			definition = "Bank operation for which a threshold is specified.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.BankOperation.mmOperationThreshold;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.BankOperation.mmObject();
 		}
 	};
@@ -172,10 +171,10 @@ public class OperationThreshold {
 	 */
 	public static final MMBusinessAttribute mmMininumAmountPerTransaction = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Authorisation1.mmMinimumAmountPerTransaction);
+			derivation_lazy = () -> Arrays.asList(Authorisation1.mmMinimumAmountPerTransaction);
 			elementContext_lazy = () -> OperationThreshold.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MininumAmountPerTransaction";
 			definition = "Lower limit for the operation.";
 			maxOccurs = 1;
@@ -238,12 +237,11 @@ public class OperationThreshold {
 	 */
 	public static final MMBusinessAttribute mmMaximumAmount = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MaximumAmountByPeriod1.mmMaximumAmount, com.tools20022.repository.msg.Authorisation1.mmMaximumAmountPerTransaction,
-					com.tools20022.repository.msg.Authorisation1.mmMaximumAmountByPeriod, com.tools20022.repository.msg.Authorisation2.mmMaximumAmountByTransaction, com.tools20022.repository.msg.Authorisation2.mmMaximumAmountByPeriod,
-					com.tools20022.repository.msg.Authorisation2.mmMaximumAmountByBulkSubmission);
+			derivation_lazy = () -> Arrays.asList(MaximumAmountByPeriod1.mmMaximumAmount, Authorisation1.mmMaximumAmountPerTransaction, Authorisation1.mmMaximumAmountByPeriod, Authorisation2.mmMaximumAmountByTransaction,
+					Authorisation2.mmMaximumAmountByPeriod, Authorisation2.mmMaximumAmountByBulkSubmission);
 			elementContext_lazy = () -> OperationThreshold.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MaximumAmount";
 			definition = "Maximum amount allowed over a specific period of time and/or amount which is the upper limit for an operation.";
 			maxOccurs = 1;
@@ -255,13 +253,12 @@ public class OperationThreshold {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OperationThreshold";
 				definition = "Threshold related to a bank account operation.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.BankOperation.mmOperationThreshold);
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.OperationThreshold.mmBankOperation, com.tools20022.repository.entity.OperationThreshold.mmMininumAmountPerTransaction,
-						com.tools20022.repository.entity.OperationThreshold.mmMaximumAmount);
+				element_lazy = () -> Arrays.asList(OperationThreshold.mmBankOperation, OperationThreshold.mmMininumAmountPerTransaction, OperationThreshold.mmMaximumAmount);
 				derivationComponent_lazy = () -> Arrays.asList(MaximumAmountByPeriod1.mmObject(), Authorisation1.mmObject(), Authorisation2.mmObject());
 			}
 		});

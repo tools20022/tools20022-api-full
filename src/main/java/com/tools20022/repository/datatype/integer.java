@@ -17,7 +17,10 @@
 
 package com.tools20022.repository.datatype;
 
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.metamodel.MMSchemaType;
+import com.tools20022.metamodel.MMSchemaTypeKind;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.concurrent.atomic.AtomicReference;
 
 /**
@@ -49,11 +52,11 @@ public class integer {
 	final static public MMSchemaType mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMSchemaType() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "integer";
 				definition = "W3C XML Schema Built-in datatype \"integer\".";
-				kind = com.tools20022.metamodel.MMSchemaTypeKind.integer;
+				kind = MMSchemaTypeKind.integer;
 			}
 		});
 		return mmObject_lazy.get();

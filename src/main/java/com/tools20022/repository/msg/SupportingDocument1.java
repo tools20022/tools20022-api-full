@@ -20,9 +20,13 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.auth.CurrencyControlSupportingDocumentDeliveryV01;
 import com.tools20022.repository.choice.ContractRegistrationReference1Choice;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.entity.Agreement;
 import com.tools20022.repository.entity.RegisteredContract;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -129,7 +133,7 @@ public class SupportingDocument1 {
 			componentContext_lazy = () -> SupportingDocument1.mmObject();
 			isDerived = false;
 			xmlTag = "SpprtgDocId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupportingDocumentIdentification";
 			definition = "Unique and unambiguous identification of the supporting document.";
 			maxOccurs = 1;
@@ -170,7 +174,7 @@ public class SupportingDocument1 {
 			componentContext_lazy = () -> SupportingDocument1.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlReqId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalRequestIdentification";
 			definition = "Unique identification of the original query message.";
 			maxOccurs = 1;
@@ -216,11 +220,11 @@ public class SupportingDocument1 {
 	 */
 	public static final MMMessageAssociationEnd mmCertificate = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.RegisteredContract.mmCertificate;
+			businessElementTrace_lazy = () -> RegisteredContract.mmCertificate;
 			componentContext_lazy = () -> SupportingDocument1.mmObject();
 			isDerived = false;
 			xmlTag = "Cert";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Certificate";
 			definition = "Unique identification of the certificate for which the supporting document is provided.";
 			maxOccurs = 1;
@@ -263,11 +267,11 @@ public class SupportingDocument1 {
 	 */
 	public static final MMMessageAssociationEnd mmAccountOwner = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.RegisteredContract.mmReportingParty;
+			businessElementTrace_lazy = () -> RegisteredContract.mmReportingParty;
 			componentContext_lazy = () -> SupportingDocument1.mmObject();
 			isDerived = false;
 			xmlTag = "AcctOwnr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountOwner";
 			definition = "Party that legally owns the cash account.";
 			maxOccurs = 1;
@@ -316,11 +320,11 @@ public class SupportingDocument1 {
 	 */
 	public static final MMMessageAssociationEnd mmAccountServicer = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.RegisteredContract.mmRegistrationAgent;
+			businessElementTrace_lazy = () -> RegisteredContract.mmRegistrationAgent;
 			componentContext_lazy = () -> SupportingDocument1.mmObject();
 			isDerived = false;
 			xmlTag = "AcctSvcr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountServicer";
 			definition = "Party that manages the account on behalf of the account owner, that is manages the registration and booking of entries on the account, calculates balances on the account and provides information about the account.";
 			maxOccurs = 1;
@@ -367,7 +371,7 @@ public class SupportingDocument1 {
 			componentContext_lazy = () -> SupportingDocument1.mmObject();
 			isDerived = false;
 			xmlTag = "Amdmnt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amendment";
 			definition = "Amendment indicator details.";
 			maxOccurs = 1;
@@ -414,11 +418,11 @@ public class SupportingDocument1 {
 	 */
 	public static final MMMessageAssociationEnd mmContractReference = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.RegisteredContract.mmIdentification;
+			businessElementTrace_lazy = () -> RegisteredContract.mmIdentification;
 			componentContext_lazy = () -> SupportingDocument1.mmObject();
 			isDerived = false;
 			xmlTag = "CtrctRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ContractReference";
 			definition = "Reference of the registered contract or the underlying contract for the supporting documents.";
 			maxOccurs = 1;
@@ -462,11 +466,11 @@ public class SupportingDocument1 {
 	 */
 	public static final MMMessageAssociationEnd mmEntry = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Agreement.mmDocument;
+			businessElementTrace_lazy = () -> Agreement.mmDocument;
 			componentContext_lazy = () -> SupportingDocument1.mmObject();
 			isDerived = false;
 			xmlTag = "Ntry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Entry";
 			definition = "Individual entry of the supporting document.";
 			minOccurs = 1;
@@ -509,7 +513,7 @@ public class SupportingDocument1 {
 			componentContext_lazy = () -> SupportingDocument1.mmObject();
 			isDerived = false;
 			xmlTag = "SplmtryData";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryData";
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
 			minOccurs = 0;
@@ -521,14 +525,12 @@ public class SupportingDocument1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SupportingDocument1.mmSupportingDocumentIdentification, com.tools20022.repository.msg.SupportingDocument1.mmOriginalRequestIdentification,
-						com.tools20022.repository.msg.SupportingDocument1.mmCertificate, com.tools20022.repository.msg.SupportingDocument1.mmAccountOwner, com.tools20022.repository.msg.SupportingDocument1.mmAccountServicer,
-						com.tools20022.repository.msg.SupportingDocument1.mmAmendment, com.tools20022.repository.msg.SupportingDocument1.mmContractReference, com.tools20022.repository.msg.SupportingDocument1.mmEntry,
-						com.tools20022.repository.msg.SupportingDocument1.mmSupplementaryData);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.auth.CurrencyControlSupportingDocumentDeliveryV01.mmSupportingDocument);
+				messageElement_lazy = () -> Arrays.asList(SupportingDocument1.mmSupportingDocumentIdentification, SupportingDocument1.mmOriginalRequestIdentification, SupportingDocument1.mmCertificate, SupportingDocument1.mmAccountOwner,
+						SupportingDocument1.mmAccountServicer, SupportingDocument1.mmAmendment, SupportingDocument1.mmContractReference, SupportingDocument1.mmEntry, SupportingDocument1.mmSupplementaryData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(CurrencyControlSupportingDocumentDeliveryV01.mmSupportingDocument);
 				trace_lazy = () -> RegisteredContract.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SupportingDocument1";
 				definition = "Currency control document supporting the contract registration.";
 			}

@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.OptionStyleCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -83,7 +85,7 @@ public class OptionStyle2Code extends OptionStyleCode {
 	 */
 	public static final MMCode mmAmerican = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "American";
 			owner_lazy = () -> OptionStyle2Code.mmObject();
 		}
@@ -106,7 +108,7 @@ public class OptionStyle2Code extends OptionStyleCode {
 	 */
 	public static final MMCode mmEuropean = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "European";
 			owner_lazy = () -> OptionStyle2Code.mmObject();
 		}
@@ -115,12 +117,12 @@ public class OptionStyle2Code extends OptionStyleCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("AMER");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OptionStyle2Code";
 				definition = "Defines how an option can be exercised";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OptionStyle2Code.mmAmerican, com.tools20022.repository.codeset.OptionStyle2Code.mmEuropean);
+				code_lazy = () -> Arrays.asList(OptionStyle2Code.mmAmerican, OptionStyle2Code.mmEuropean);
 				trace_lazy = () -> OptionStyleCode.mmObject();
 			}
 		});

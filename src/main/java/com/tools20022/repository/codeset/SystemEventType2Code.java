@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.SystemEventTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -143,7 +145,7 @@ public class SystemEventType2Code extends SystemEventTypeCode {
 	 */
 	public static final MMCode mmLVPCutOff = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LVPCutOff";
 			owner_lazy = () -> SystemEventType2Code.mmObject();
 		}
@@ -166,7 +168,7 @@ public class SystemEventType2Code extends SystemEventTypeCode {
 	 */
 	public static final MMCode mmLVPCancellationCutOff = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LVPCancellationCutOff";
 			owner_lazy = () -> SystemEventType2Code.mmObject();
 		}
@@ -189,7 +191,7 @@ public class SystemEventType2Code extends SystemEventTypeCode {
 	 */
 	public static final MMCode mmLVPCutOffReportTime = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LVPCutOffReportTime";
 			owner_lazy = () -> SystemEventType2Code.mmObject();
 		}
@@ -212,7 +214,7 @@ public class SystemEventType2Code extends SystemEventTypeCode {
 	 */
 	public static final MMCode mmEuro1StartUp = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Euro1StartUp";
 			owner_lazy = () -> SystemEventType2Code.mmObject();
 		}
@@ -235,7 +237,7 @@ public class SystemEventType2Code extends SystemEventTypeCode {
 	 */
 	public static final MMCode mmStep1StartUp = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Step1StartUp";
 			owner_lazy = () -> SystemEventType2Code.mmObject();
 		}
@@ -258,7 +260,7 @@ public class SystemEventType2Code extends SystemEventTypeCode {
 	 */
 	public static final MMCode mmLimitWarningStartUp = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LimitWarningStartUp";
 			owner_lazy = () -> SystemEventType2Code.mmObject();
 		}
@@ -281,7 +283,7 @@ public class SystemEventType2Code extends SystemEventTypeCode {
 	 */
 	public static final MMCode mmEuro1CutOff = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Euro1CutOff";
 			owner_lazy = () -> SystemEventType2Code.mmObject();
 		}
@@ -304,7 +306,7 @@ public class SystemEventType2Code extends SystemEventTypeCode {
 	 */
 	public static final MMCode mmFinalReporting = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinalReporting";
 			owner_lazy = () -> SystemEventType2Code.mmObject();
 		}
@@ -327,7 +329,7 @@ public class SystemEventType2Code extends SystemEventTypeCode {
 	 */
 	public static final MMCode mmStartOfDay = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StartOfDay";
 			owner_lazy = () -> SystemEventType2Code.mmObject();
 		}
@@ -350,7 +352,7 @@ public class SystemEventType2Code extends SystemEventTypeCode {
 	 */
 	public static final MMCode mmLTNCutOff = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LTNCutOff";
 			owner_lazy = () -> SystemEventType2Code.mmObject();
 		}
@@ -373,7 +375,7 @@ public class SystemEventType2Code extends SystemEventTypeCode {
 	 */
 	public static final MMCode mmCashReservationCutOff = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashReservationCutOff";
 			owner_lazy = () -> SystemEventType2Code.mmObject();
 		}
@@ -396,7 +398,7 @@ public class SystemEventType2Code extends SystemEventTypeCode {
 	 */
 	public static final MMCode mmRecCutOff = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RecCutOff";
 			owner_lazy = () -> SystemEventType2Code.mmObject();
 		}
@@ -419,7 +421,7 @@ public class SystemEventType2Code extends SystemEventTypeCode {
 	 */
 	public static final MMCode mmLTGCutOff = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LTGCutOff";
 			owner_lazy = () -> SystemEventType2Code.mmObject();
 		}
@@ -442,7 +444,7 @@ public class SystemEventType2Code extends SystemEventTypeCode {
 	 */
 	public static final MMCode mmLTDCutOff = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LTDCutOff";
 			owner_lazy = () -> SystemEventType2Code.mmObject();
 		}
@@ -465,7 +467,7 @@ public class SystemEventType2Code extends SystemEventTypeCode {
 	 */
 	public static final MMCode mmCustomerCutOff = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CustomerCutOff";
 			owner_lazy = () -> SystemEventType2Code.mmObject();
 		}
@@ -488,7 +490,7 @@ public class SystemEventType2Code extends SystemEventTypeCode {
 	 */
 	public static final MMCode mmInterbankCutOff = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterbankCutOff";
 			owner_lazy = () -> SystemEventType2Code.mmObject();
 		}
@@ -511,7 +513,7 @@ public class SystemEventType2Code extends SystemEventTypeCode {
 	 */
 	public static final MMCode mmSystemCutOff = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SystemCutOff";
 			owner_lazy = () -> SystemEventType2Code.mmObject();
 		}
@@ -534,7 +536,7 @@ public class SystemEventType2Code extends SystemEventTypeCode {
 	 */
 	public static final MMCode mmNetSSSReservationCutOff = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetSSSReservationCutOff";
 			owner_lazy = () -> SystemEventType2Code.mmObject();
 		}
@@ -557,7 +559,7 @@ public class SystemEventType2Code extends SystemEventTypeCode {
 	 */
 	public static final MMCode mmResumeOperation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ResumeOperation";
 			owner_lazy = () -> SystemEventType2Code.mmObject();
 		}
@@ -580,7 +582,7 @@ public class SystemEventType2Code extends SystemEventTypeCode {
 	 */
 	public static final MMCode mmProcessingCutOffTime = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProcessingCutOffTime";
 			owner_lazy = () -> SystemEventType2Code.mmObject();
 		}
@@ -603,7 +605,7 @@ public class SystemEventType2Code extends SystemEventTypeCode {
 	 */
 	public static final MMCode mmNewPaymentCutOffTime = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewPaymentCutOffTime";
 			owner_lazy = () -> SystemEventType2Code.mmObject();
 		}
@@ -626,7 +628,7 @@ public class SystemEventType2Code extends SystemEventTypeCode {
 	 */
 	public static final MMCode mmEndOfStandingFacilities = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EndOfStandingFacilities";
 			owner_lazy = () -> SystemEventType2Code.mmObject();
 		}
@@ -635,21 +637,16 @@ public class SystemEventType2Code extends SystemEventTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("LVCO");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SystemEventType2Code";
 				definition = "Specifies a type of event related to a system's operation.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SystemEventType2Code.mmLVPCutOff, com.tools20022.repository.codeset.SystemEventType2Code.mmLVPCancellationCutOff,
-						com.tools20022.repository.codeset.SystemEventType2Code.mmLVPCutOffReportTime, com.tools20022.repository.codeset.SystemEventType2Code.mmEuro1StartUp,
-						com.tools20022.repository.codeset.SystemEventType2Code.mmStep1StartUp, com.tools20022.repository.codeset.SystemEventType2Code.mmLimitWarningStartUp,
-						com.tools20022.repository.codeset.SystemEventType2Code.mmEuro1CutOff, com.tools20022.repository.codeset.SystemEventType2Code.mmFinalReporting, com.tools20022.repository.codeset.SystemEventType2Code.mmStartOfDay,
-						com.tools20022.repository.codeset.SystemEventType2Code.mmLTNCutOff, com.tools20022.repository.codeset.SystemEventType2Code.mmCashReservationCutOff, com.tools20022.repository.codeset.SystemEventType2Code.mmRecCutOff,
-						com.tools20022.repository.codeset.SystemEventType2Code.mmLTGCutOff, com.tools20022.repository.codeset.SystemEventType2Code.mmLTDCutOff, com.tools20022.repository.codeset.SystemEventType2Code.mmCustomerCutOff,
-						com.tools20022.repository.codeset.SystemEventType2Code.mmInterbankCutOff, com.tools20022.repository.codeset.SystemEventType2Code.mmSystemCutOff,
-						com.tools20022.repository.codeset.SystemEventType2Code.mmNetSSSReservationCutOff, com.tools20022.repository.codeset.SystemEventType2Code.mmResumeOperation,
-						com.tools20022.repository.codeset.SystemEventType2Code.mmProcessingCutOffTime, com.tools20022.repository.codeset.SystemEventType2Code.mmNewPaymentCutOffTime,
-						com.tools20022.repository.codeset.SystemEventType2Code.mmEndOfStandingFacilities);
+				code_lazy = () -> Arrays.asList(SystemEventType2Code.mmLVPCutOff, SystemEventType2Code.mmLVPCancellationCutOff, SystemEventType2Code.mmLVPCutOffReportTime, SystemEventType2Code.mmEuro1StartUp,
+						SystemEventType2Code.mmStep1StartUp, SystemEventType2Code.mmLimitWarningStartUp, SystemEventType2Code.mmEuro1CutOff, SystemEventType2Code.mmFinalReporting, SystemEventType2Code.mmStartOfDay,
+						SystemEventType2Code.mmLTNCutOff, SystemEventType2Code.mmCashReservationCutOff, SystemEventType2Code.mmRecCutOff, SystemEventType2Code.mmLTGCutOff, SystemEventType2Code.mmLTDCutOff,
+						SystemEventType2Code.mmCustomerCutOff, SystemEventType2Code.mmInterbankCutOff, SystemEventType2Code.mmSystemCutOff, SystemEventType2Code.mmNetSSSReservationCutOff, SystemEventType2Code.mmResumeOperation,
+						SystemEventType2Code.mmProcessingCutOffTime, SystemEventType2Code.mmNewPaymentCutOffTime, SystemEventType2Code.mmEndOfStandingFacilities);
 				trace_lazy = () -> SystemEventTypeCode.mmObject();
 			}
 		});

@@ -19,9 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Exact3NumericText;
 import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.datatype.Max3Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -102,7 +104,7 @@ public class CorporateActionOptionSecuritiesMovementDetailsExtension2 {
 			componentContext_lazy = () -> CorporateActionOptionSecuritiesMovementDetailsExtension2.mmObject();
 			isDerived = false;
 			xmlTag = "PlcAndNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "xPath to the element that is being extended.";
 			maxOccurs = 1;
@@ -144,7 +146,7 @@ public class CorporateActionOptionSecuritiesMovementDetailsExtension2 {
 			componentContext_lazy = () -> CorporateActionOptionSecuritiesMovementDetailsExtension2.mmObject();
 			isDerived = false;
 			xmlTag = "PyoutNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PayoutNumber";
 			definition = "Unique number associated with a payout within an option.";
 			maxOccurs = 1;
@@ -188,7 +190,7 @@ public class CorporateActionOptionSecuritiesMovementDetailsExtension2 {
 			componentContext_lazy = () -> CorporateActionOptionSecuritiesMovementDetailsExtension2.mmObject();
 			isDerived = false;
 			xmlTag = "DTCPayMtd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCPayMethod";
 			definition = "Indicates the type of payment. Used in Stock Dividends processing at DTC (The Depository Trust Corporation). Values list is provided separately. ";
 			maxOccurs = 1;
@@ -232,7 +234,7 @@ public class CorporateActionOptionSecuritiesMovementDetailsExtension2 {
 			componentContext_lazy = () -> CorporateActionOptionSecuritiesMovementDetailsExtension2.mmObject();
 			isDerived = false;
 			xmlTag = "DTCPayOrdr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCPayOrder";
 			definition = "Indicates the payment order. Used in Stock Dividends processing at DTC (The Depository Trust Corporation). Values list is provided separately. ";
 			maxOccurs = 1;
@@ -244,11 +246,10 @@ public class CorporateActionOptionSecuritiesMovementDetailsExtension2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionOptionSecuritiesMovementDetailsExtension2.mmPlaceAndName,
-						com.tools20022.repository.msg.CorporateActionOptionSecuritiesMovementDetailsExtension2.mmPayoutNumber, com.tools20022.repository.msg.CorporateActionOptionSecuritiesMovementDetailsExtension2.mmDTCPayMethod,
-						com.tools20022.repository.msg.CorporateActionOptionSecuritiesMovementDetailsExtension2.mmDTCPayOrder);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(CorporateActionOptionSecuritiesMovementDetailsExtension2.mmPlaceAndName, CorporateActionOptionSecuritiesMovementDetailsExtension2.mmPayoutNumber,
+						CorporateActionOptionSecuritiesMovementDetailsExtension2.mmDTCPayMethod, CorporateActionOptionSecuritiesMovementDetailsExtension2.mmDTCPayOrder);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CorporateActionOptionSecuritiesMovementDetailsExtension2";
 				definition = "Provides additional information regarding corporate action option securities movement details.";
 			}

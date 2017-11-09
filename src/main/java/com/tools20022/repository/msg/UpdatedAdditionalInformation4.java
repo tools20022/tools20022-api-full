@@ -19,9 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.RestrictedFINXMax140Text;
 import com.tools20022.repository.datatype.RestrictedFINZMax8000Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -103,7 +105,7 @@ public class UpdatedAdditionalInformation4 {
 			componentContext_lazy = () -> UpdatedAdditionalInformation4.mmObject();
 			isDerived = false;
 			xmlTag = "UpdDesc";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UpdateDescription";
 			definition = "Specifies the amendments made to the narrative since the last message.";
 			maxOccurs = 1;
@@ -145,7 +147,7 @@ public class UpdatedAdditionalInformation4 {
 			componentContext_lazy = () -> UpdatedAdditionalInformation4.mmObject();
 			isDerived = false;
 			xmlTag = "UpdDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UpdateDate";
 			definition = "Specifies the date at which the narrative has been updated.";
 			maxOccurs = 1;
@@ -187,7 +189,7 @@ public class UpdatedAdditionalInformation4 {
 			componentContext_lazy = () -> UpdatedAdditionalInformation4.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInformation";
 			definition = "Provides additional textual information.";
 			minOccurs = 1;
@@ -198,10 +200,9 @@ public class UpdatedAdditionalInformation4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UpdatedAdditionalInformation4.mmUpdateDescription, com.tools20022.repository.msg.UpdatedAdditionalInformation4.mmUpdateDate,
-						com.tools20022.repository.msg.UpdatedAdditionalInformation4.mmAdditionalInformation);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+				messageElement_lazy = () -> Arrays.asList(UpdatedAdditionalInformation4.mmUpdateDescription, UpdatedAdditionalInformation4.mmUpdateDate, UpdatedAdditionalInformation4.mmAdditionalInformation);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
 						return DateFormat.getDateInstance(java.text.DateFormat.LONG).parse("May 5, 2016");

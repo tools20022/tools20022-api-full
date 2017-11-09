@@ -20,6 +20,7 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.FATCAForm1Choice;
 import com.tools20022.repository.choice.MoneyLaunderingCheck1Choice;
 import com.tools20022.repository.choice.Party23Choice;
@@ -27,8 +28,8 @@ import com.tools20022.repository.codeset.InformationDistribution1Code;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.PercentageRate;
 import com.tools20022.repository.datatype.YesNoIndicator;
-import com.tools20022.repository.entity.InvestmentAccountPartyRole;
-import com.tools20022.repository.entity.Party;
+import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -164,11 +165,11 @@ public class InvestmentAccountOwnershipInformation10 {
 			componentContext_lazy = () -> InvestmentAccountOwnershipInformation10.mmObject();
 			isDerived = false;
 			xmlTag = "Pty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Party";
 			definition = "Information about the organisation or individual person. ";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentAccountOwnershipInformation12.mmParty);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.InvestmentAccountOwnershipInformation9.mmParty;
+			nextVersions_lazy = () -> Arrays.asList(InvestmentAccountOwnershipInformation12.mmParty);
+			previousVersion_lazy = () -> InvestmentAccountOwnershipInformation9.mmParty;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> Party23Choice.mmObject();
@@ -226,15 +227,15 @@ public class InvestmentAccountOwnershipInformation10 {
 	 */
 	public static final MMMessageAttribute mmMoneyLaunderingCheck = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmMoneyLaunderingCheck;
+			businessElementTrace_lazy = () -> Party.mmMoneyLaunderingCheck;
 			componentContext_lazy = () -> InvestmentAccountOwnershipInformation10.mmObject();
 			isDerived = false;
 			xmlTag = "MnyLndrgChck";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MoneyLaunderingCheck";
 			definition = "Status of an identity check to prevent money laundering. This includes the counter-terrorism check.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentAccountOwnershipInformation12.mmMoneyLaunderingCheck);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.InvestmentAccountOwnershipInformation9.mmMoneyLaunderingCheck;
+			nextVersions_lazy = () -> Arrays.asList(InvestmentAccountOwnershipInformation12.mmMoneyLaunderingCheck);
+			previousVersion_lazy = () -> InvestmentAccountOwnershipInformation9.mmMoneyLaunderingCheck;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> MoneyLaunderingCheck1Choice.mmObject();
@@ -288,15 +289,15 @@ public class InvestmentAccountOwnershipInformation10 {
 	 */
 	public static final MMMessageAssociationEnd mmInvestorProfileValidation = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PersonProfile.mmProfileCertification;
+			businessElementTrace_lazy = () -> PersonProfile.mmProfileCertification;
 			componentContext_lazy = () -> InvestmentAccountOwnershipInformation10.mmObject();
 			isDerived = false;
 			xmlTag = "InvstrPrflVldtn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestorProfileValidation";
 			definition = "Information to support Know Your Customer processes.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentAccountOwnershipInformation12.mmInvestorProfileValidation);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.InvestmentAccountOwnershipInformation9.mmInvestorProfileValidation;
+			nextVersions_lazy = () -> Arrays.asList(InvestmentAccountOwnershipInformation12.mmInvestorProfileValidation);
+			previousVersion_lazy = () -> InvestmentAccountOwnershipInformation9.mmInvestorProfileValidation;
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.PartyProfileInformation4.mmObject();
@@ -355,15 +356,15 @@ public class InvestmentAccountOwnershipInformation10 {
 	 */
 	public static final MMMessageAttribute mmOwnershipBeneficiaryRate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentAccountPartyRole.mmOwnershipBeneficiaryRate;
+			businessElementTrace_lazy = () -> InvestmentAccountPartyRole.mmOwnershipBeneficiaryRate;
 			componentContext_lazy = () -> InvestmentAccountOwnershipInformation10.mmObject();
 			isDerived = false;
 			xmlTag = "OwnrshBnfcryRate";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OwnershipBeneficiaryRate";
 			definition = "Percentage of ownership or of beneficial ownership of the shares/units in the account. All subsequent subscriptions and or redemptions will be allocated using the same percentage.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentAccountOwnershipInformation12.mmOwnershipBeneficiaryRate);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.InvestmentAccountOwnershipInformation9.mmOwnershipBeneficiaryRate;
+			nextVersions_lazy = () -> Arrays.asList(InvestmentAccountOwnershipInformation12.mmOwnershipBeneficiaryRate);
+			previousVersion_lazy = () -> InvestmentAccountOwnershipInformation9.mmOwnershipBeneficiaryRate;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
@@ -420,15 +421,15 @@ public class InvestmentAccountOwnershipInformation10 {
 	 */
 	public static final MMMessageAttribute mmClientIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmIdentification;
+			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> InvestmentAccountOwnershipInformation10.mmObject();
 			isDerived = false;
 			xmlTag = "ClntId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClientIdentification";
 			definition = "Unique identification, as assigned by an organisation, to unambiguously identify a party.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentAccountOwnershipInformation12.mmClientIdentification);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.InvestmentAccountOwnershipInformation9.mmClientIdentification;
+			nextVersions_lazy = () -> Arrays.asList(InvestmentAccountOwnershipInformation12.mmClientIdentification);
+			previousVersion_lazy = () -> InvestmentAccountOwnershipInformation9.mmClientIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -487,15 +488,15 @@ public class InvestmentAccountOwnershipInformation10 {
 	 */
 	public static final MMMessageAttribute mmFiscalExemption = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundTax.mmFiscalExemption;
+			businessElementTrace_lazy = () -> InvestmentFundTax.mmFiscalExemption;
 			componentContext_lazy = () -> InvestmentAccountOwnershipInformation10.mmObject();
 			isDerived = false;
 			xmlTag = "FsclXmptn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FiscalExemption";
 			definition = "Indicates whether an owner of an investment account may benefit from a fiscal exemption or amnesty for instance for declaring overseas investments.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentAccountOwnershipInformation12.mmFiscalExemption);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.InvestmentAccountOwnershipInformation9.mmFiscalExemption;
+			nextVersions_lazy = () -> Arrays.asList(InvestmentAccountOwnershipInformation12.mmFiscalExemption);
+			previousVersion_lazy = () -> InvestmentAccountOwnershipInformation9.mmFiscalExemption;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
@@ -553,15 +554,15 @@ public class InvestmentAccountOwnershipInformation10 {
 	 */
 	public static final MMMessageAttribute mmSignatoryRightIndicator = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SignatureCondition.mmSignatoryRightIndicator;
+			businessElementTrace_lazy = () -> SignatureCondition.mmSignatoryRightIndicator;
 			componentContext_lazy = () -> InvestmentAccountOwnershipInformation10.mmObject();
 			isDerived = false;
 			xmlTag = "SgntryRghtInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SignatoryRightIndicator";
 			definition = "Indicates whether the signature of the account owner is required to authorise transactions on the account.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentAccountOwnershipInformation12.mmSignatoryRightIndicator);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.InvestmentAccountOwnershipInformation9.mmSignatoryRightIndicator;
+			nextVersions_lazy = () -> Arrays.asList(InvestmentAccountOwnershipInformation12.mmSignatoryRightIndicator);
+			previousVersion_lazy = () -> InvestmentAccountOwnershipInformation9.mmSignatoryRightIndicator;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
@@ -615,11 +616,11 @@ public class InvestmentAccountOwnershipInformation10 {
 			componentContext_lazy = () -> InvestmentAccountOwnershipInformation10.mmObject();
 			isDerived = false;
 			xmlTag = "MiFIDClssfctn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MiFIDClassification";
 			definition = "Details about the MiFID classification of the account owner.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentAccountOwnershipInformation12.mmMiFIDClassification);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.InvestmentAccountOwnershipInformation9.mmMiFIDClassification;
+			nextVersions_lazy = () -> Arrays.asList(InvestmentAccountOwnershipInformation12.mmMiFIDClassification);
+			previousVersion_lazy = () -> InvestmentAccountOwnershipInformation9.mmMiFIDClassification;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.MiFIDClassification1.mmObject();
@@ -672,11 +673,11 @@ public class InvestmentAccountOwnershipInformation10 {
 			componentContext_lazy = () -> InvestmentAccountOwnershipInformation10.mmObject();
 			isDerived = false;
 			xmlTag = "InfDstrbtn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InformationDistribution";
 			definition = "Specifies how information is sent to the account holder.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentAccountOwnershipInformation12.mmNotification);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.InvestmentAccountOwnershipInformation9.mmInformationDistribution;
+			nextVersions_lazy = () -> Arrays.asList(InvestmentAccountOwnershipInformation12.mmNotification);
+			previousVersion_lazy = () -> InvestmentAccountOwnershipInformation9.mmInformationDistribution;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> InformationDistribution1Code.mmObject();
@@ -727,14 +728,14 @@ public class InvestmentAccountOwnershipInformation10 {
 	 */
 	public static final MMMessageAssociationEnd mmFATCAFormType = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentAccountPartyRole.mmFATCAFormType;
+			businessElementTrace_lazy = () -> InvestmentAccountPartyRole.mmFATCAFormType;
 			componentContext_lazy = () -> InvestmentAccountOwnershipInformation10.mmObject();
 			isDerived = false;
 			xmlTag = "FATCAFormTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FATCAFormType";
 			definition = "Type of Foreign Account Tax Compliance Act (FATCA) form submitted by the investor.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentAccountOwnershipInformation12.mmFATCAFormType);
+			nextVersions_lazy = () -> Arrays.asList(InvestmentAccountOwnershipInformation12.mmFATCAFormType);
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> FATCAForm1Choice.mmObject();
@@ -783,14 +784,14 @@ public class InvestmentAccountOwnershipInformation10 {
 	 */
 	public static final MMMessageAssociationEnd mmFATCAStatus = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentAccountPartyRole.mmFATCAStatus;
+			businessElementTrace_lazy = () -> InvestmentAccountPartyRole.mmFATCAStatus;
 			componentContext_lazy = () -> InvestmentAccountOwnershipInformation10.mmObject();
 			isDerived = false;
 			xmlTag = "FATCASts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FATCAStatus";
 			definition = "Foreign Account Tax Compliance Act (FATCA) status of the investor.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentAccountOwnershipInformation12.mmFATCAStatus);
+			nextVersions_lazy = () -> Arrays.asList(InvestmentAccountOwnershipInformation12.mmFATCAStatus);
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.FATCAStatus1.mmObject();
@@ -800,15 +801,13 @@ public class InvestmentAccountOwnershipInformation10 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentAccountOwnershipInformation10.mmParty, com.tools20022.repository.msg.InvestmentAccountOwnershipInformation10.mmMoneyLaunderingCheck,
-						com.tools20022.repository.msg.InvestmentAccountOwnershipInformation10.mmInvestorProfileValidation, com.tools20022.repository.msg.InvestmentAccountOwnershipInformation10.mmOwnershipBeneficiaryRate,
-						com.tools20022.repository.msg.InvestmentAccountOwnershipInformation10.mmClientIdentification, com.tools20022.repository.msg.InvestmentAccountOwnershipInformation10.mmFiscalExemption,
-						com.tools20022.repository.msg.InvestmentAccountOwnershipInformation10.mmSignatoryRightIndicator, com.tools20022.repository.msg.InvestmentAccountOwnershipInformation10.mmMiFIDClassification,
-						com.tools20022.repository.msg.InvestmentAccountOwnershipInformation10.mmInformationDistribution, com.tools20022.repository.msg.InvestmentAccountOwnershipInformation10.mmFATCAFormType,
-						com.tools20022.repository.msg.InvestmentAccountOwnershipInformation10.mmFATCAStatus);
+				messageElement_lazy = () -> Arrays.asList(InvestmentAccountOwnershipInformation10.mmParty, InvestmentAccountOwnershipInformation10.mmMoneyLaunderingCheck, InvestmentAccountOwnershipInformation10.mmInvestorProfileValidation,
+						InvestmentAccountOwnershipInformation10.mmOwnershipBeneficiaryRate, InvestmentAccountOwnershipInformation10.mmClientIdentification, InvestmentAccountOwnershipInformation10.mmFiscalExemption,
+						InvestmentAccountOwnershipInformation10.mmSignatoryRightIndicator, InvestmentAccountOwnershipInformation10.mmMiFIDClassification, InvestmentAccountOwnershipInformation10.mmInformationDistribution,
+						InvestmentAccountOwnershipInformation10.mmFATCAFormType, InvestmentAccountOwnershipInformation10.mmFATCAStatus);
 				trace_lazy = () -> InvestmentAccountPartyRole.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "InvestmentAccountOwnershipInformation10";
 				definition = "Characteristics of the ownership of an investment account.";
 				nextVersions_lazy = () -> Arrays.asList(InvestmentAccountOwnershipInformation12.mmObject());

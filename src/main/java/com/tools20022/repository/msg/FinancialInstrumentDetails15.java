@@ -19,7 +19,10 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.entity.SecuritiesQuantity;
 import com.tools20022.repository.entity.Security;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -102,11 +105,11 @@ public class FinancialInstrumentDetails15 {
 	 */
 	public static final MMMessageAssociationEnd mmFinancialInstrumentIdentification = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmIdentification;
+			businessElementTrace_lazy = () -> Security.mmIdentification;
 			componentContext_lazy = () -> FinancialInstrumentDetails15.mmObject();
 			isDerived = false;
 			xmlTag = "FinInstrmId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentIdentification";
 			definition = "Financial instruments representing a sum of rights of the investor vis-a-vis the issuer.";
 			maxOccurs = 1;
@@ -153,7 +156,7 @@ public class FinancialInstrumentDetails15 {
 			componentContext_lazy = () -> FinancialInstrumentDetails15.mmObject();
 			isDerived = false;
 			xmlTag = "FinInstrmAttrbts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentAttributes";
 			definition = "Elements characterising a financial instrument.";
 			maxOccurs = 1;
@@ -196,11 +199,11 @@ public class FinancialInstrumentDetails15 {
 	 */
 	public static final MMMessageAssociationEnd mmSubBalance = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmRelatedSubBalance;
+			businessElementTrace_lazy = () -> SecuritiesQuantity.mmRelatedSubBalance;
 			componentContext_lazy = () -> FinancialInstrumentDetails15.mmObject();
 			isDerived = false;
 			xmlTag = "SubBal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubBalance";
 			definition = "Identification of the sub-balance.";
 			minOccurs = 1;
@@ -212,11 +215,10 @@ public class FinancialInstrumentDetails15 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrumentDetails15.mmFinancialInstrumentIdentification,
-						com.tools20022.repository.msg.FinancialInstrumentDetails15.mmFinancialInstrumentAttributes, com.tools20022.repository.msg.FinancialInstrumentDetails15.mmSubBalance);
+				messageElement_lazy = () -> Arrays.asList(FinancialInstrumentDetails15.mmFinancialInstrumentIdentification, FinancialInstrumentDetails15.mmFinancialInstrumentAttributes, FinancialInstrumentDetails15.mmSubBalance);
 				trace_lazy = () -> Security.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "FinancialInstrumentDetails15";
 				definition = "Reporting per financial instrument.";
 			}

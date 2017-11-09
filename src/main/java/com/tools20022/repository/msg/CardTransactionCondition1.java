@@ -19,7 +19,9 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -94,7 +96,7 @@ public class CardTransactionCondition1 {
 			componentContext_lazy = () -> CardTransactionCondition1.mmObject();
 			isDerived = false;
 			xmlTag = "Prgm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Program";
 			definition = "Identification of the specific condition.";
 			maxOccurs = 1;
@@ -135,7 +137,7 @@ public class CardTransactionCondition1 {
 			componentContext_lazy = () -> CardTransactionCondition1.mmObject();
 			isDerived = false;
 			xmlTag = "Val";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Value";
 			definition = "Level of the condition.";
 			maxOccurs = 1;
@@ -147,9 +149,9 @@ public class CardTransactionCondition1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardTransactionCondition1.mmProgram, com.tools20022.repository.msg.CardTransactionCondition1.mmValue);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(CardTransactionCondition1.mmProgram, CardTransactionCondition1.mmValue);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CardTransactionCondition1";
 				definition = "Data used to assign specific condition such as liability shift or preferential interchange fees.";
 			}

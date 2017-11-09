@@ -20,8 +20,12 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationCancellationInstructionV01;
 import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.SubscriptionExecution;
+import com.tools20022.repository.entity.Trade;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -117,7 +121,7 @@ public class SubscriptionBulkOrderConfirmation1 {
 			componentContext_lazy = () -> SubscriptionBulkOrderConfirmation1.mmObject();
 			isDerived = false;
 			xmlTag = "AmdmntInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmendmentIndicator";
 			definition = "Indicates whether a confirmation amendment message will follow the confirmation cancellation instruction or not.";
 			maxOccurs = 1;
@@ -165,7 +169,7 @@ public class SubscriptionBulkOrderConfirmation1 {
 			componentContext_lazy = () -> SubscriptionBulkOrderConfirmation1.mmObject();
 			isDerived = false;
 			xmlTag = "BlkExctnDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BulkExecutionDetails";
 			definition = "General information related to the execution of investment orders.";
 			maxOccurs = 1;
@@ -208,11 +212,11 @@ public class SubscriptionBulkOrderConfirmation1 {
 	 */
 	public static final MMMessageAssociationEnd mmRelatedPartyDetails = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Trade.mmTradePartyRole;
+			businessElementTrace_lazy = () -> Trade.mmTradePartyRole;
 			componentContext_lazy = () -> SubscriptionBulkOrderConfirmation1.mmObject();
 			isDerived = false;
 			xmlTag = "RltdPtyDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedPartyDetails";
 			definition = "Information about parties related to the transaction.";
 			maxOccurs = 10;
@@ -255,7 +259,7 @@ public class SubscriptionBulkOrderConfirmation1 {
 			componentContext_lazy = () -> SubscriptionBulkOrderConfirmation1.mmObject();
 			isDerived = false;
 			xmlTag = "Xtnsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Extension";
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
 			minOccurs = 0;
@@ -267,12 +271,12 @@ public class SubscriptionBulkOrderConfirmation1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SubscriptionBulkOrderConfirmation1.mmAmendmentIndicator, com.tools20022.repository.msg.SubscriptionBulkOrderConfirmation1.mmBulkExecutionDetails,
-						com.tools20022.repository.msg.SubscriptionBulkOrderConfirmation1.mmRelatedPartyDetails, com.tools20022.repository.msg.SubscriptionBulkOrderConfirmation1.mmExtension);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationCancellationInstructionV01.mmCancellationByOrderConfirmationDetails);
+				messageElement_lazy = () -> Arrays.asList(SubscriptionBulkOrderConfirmation1.mmAmendmentIndicator, SubscriptionBulkOrderConfirmation1.mmBulkExecutionDetails, SubscriptionBulkOrderConfirmation1.mmRelatedPartyDetails,
+						SubscriptionBulkOrderConfirmation1.mmExtension);
+				messageBuildingBlock_lazy = () -> Arrays.asList(SubscriptionBulkOrderConfirmationCancellationInstructionV01.mmCancellationByOrderConfirmationDetails);
 				trace_lazy = () -> SubscriptionExecution.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SubscriptionBulkOrderConfirmation1";
 				definition = "Order confirmation details.";
 			}

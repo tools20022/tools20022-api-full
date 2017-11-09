@@ -19,9 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max25Text;
 import com.tools20022.repository.entity.Commodity;
 import com.tools20022.repository.entity.PlaceOfSettlement;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -102,7 +104,7 @@ public class CommodityDerivate6 {
 			componentContext_lazy = () -> CommodityDerivate6.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmLctn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementLocation";
 			definition = "Place where the delivery and the cash settlement of the base product occurs. ";
 			maxOccurs = 1;
@@ -114,10 +116,10 @@ public class CommodityDerivate6 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CommodityDerivate6.mmSettlementLocation);
+				messageElement_lazy = () -> Arrays.asList(CommodityDerivate6.mmSettlementLocation);
 				trace_lazy = () -> Commodity.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CommodityDerivate6";
 				definition = "Transparency calculation specific details for an energy commodity.";
 			}

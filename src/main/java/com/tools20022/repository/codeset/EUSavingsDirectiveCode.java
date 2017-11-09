@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -29,6 +31,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.EUSavingsDirective1Code
+ * EUSavingsDirective1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -43,13 +52,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.EUSavingsDirectiveCode#mmEUSavingsVariable
  * EUSavingsDirectiveCode.mmEUSavingsVariable}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.EUSavingsDirective1Code
- * EUSavingsDirective1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -101,7 +103,7 @@ public class EUSavingsDirectiveCode {
 	 */
 	public static final MMCode mmEUSavingsInScope = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "EUSavingsInScope";
 			definition = "Investment Fund is in the scope of the directive.";
 			owner_lazy = () -> EUSavingsDirectiveCode.mmObject();
@@ -131,7 +133,7 @@ public class EUSavingsDirectiveCode {
 	 */
 	public static final MMCode mmEUSavingsOutScope = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "EUSavingsOutScope";
 			definition = "Investment Fund is out of the scope of the directive.";
 			owner_lazy = () -> EUSavingsDirectiveCode.mmObject();
@@ -163,7 +165,7 @@ public class EUSavingsDirectiveCode {
 	 */
 	public static final MMCode mmEUSavingsUnknown = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "EUSavingsUnknown";
 			definition = "Unknown whether capital gain is in or out of the scope fo the directive.";
 			owner_lazy = () -> EUSavingsDirectiveCode.mmObject();
@@ -194,7 +196,7 @@ public class EUSavingsDirectiveCode {
 	 */
 	public static final MMCode mmEUSavingsVariable = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "EUSavingsVariable";
 			definition = "Investment Fund may vary for inclusion in the scope of the directive.";
 			owner_lazy = () -> EUSavingsDirectiveCode.mmObject();
@@ -205,13 +207,12 @@ public class EUSavingsDirectiveCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("EUSI");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "EUSavingsDirectiveCode";
 				definition = "Indicate whether or not the fund is subject to reporting  under the EU Savings Directive.  Enter \"Variable\" if the status of the fund is likely to change from time to time.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.EUSavingsDirectiveCode.mmEUSavingsInScope, com.tools20022.repository.codeset.EUSavingsDirectiveCode.mmEUSavingsOutScope,
-						com.tools20022.repository.codeset.EUSavingsDirectiveCode.mmEUSavingsUnknown, com.tools20022.repository.codeset.EUSavingsDirectiveCode.mmEUSavingsVariable);
+				code_lazy = () -> Arrays.asList(EUSavingsDirectiveCode.mmEUSavingsInScope, EUSavingsDirectiveCode.mmEUSavingsOutScope, EUSavingsDirectiveCode.mmEUSavingsUnknown, EUSavingsDirectiveCode.mmEUSavingsVariable);
 				derivation_lazy = () -> Arrays.asList(EUSavingsDirective1Code.mmObject());
 			}
 		});

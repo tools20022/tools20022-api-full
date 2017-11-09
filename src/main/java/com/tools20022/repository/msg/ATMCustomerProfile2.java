@@ -19,7 +19,9 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -115,11 +117,11 @@ public class ATMCustomerProfile2 {
 			componentContext_lazy = () -> ATMCustomerProfile2.mmObject();
 			isDerived = false;
 			xmlTag = "PrflRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProfileReference";
 			definition = "Reference of the customer profile.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMCustomerProfile3.mmProfileReference);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMCustomerProfile1.mmProfileReference;
+			nextVersions_lazy = () -> Arrays.asList(ATMCustomerProfile3.mmProfileReference);
+			previousVersion_lazy = () -> ATMCustomerProfile1.mmProfileReference;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -171,11 +173,11 @@ public class ATMCustomerProfile2 {
 			componentContext_lazy = () -> ATMCustomerProfile2.mmObject();
 			isDerived = false;
 			xmlTag = "CstmrId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CustomerIdentification";
 			definition = "Identification of the customer for the bank.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMCustomerProfile3.mmCustomerIdentification);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMCustomerProfile1.mmCustomerIdentification;
+			nextVersions_lazy = () -> Arrays.asList(ATMCustomerProfile3.mmCustomerIdentification);
+			previousVersion_lazy = () -> ATMCustomerProfile1.mmCustomerIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -185,9 +187,9 @@ public class ATMCustomerProfile2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMCustomerProfile2.mmProfileReference, com.tools20022.repository.msg.ATMCustomerProfile2.mmCustomerIdentification);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(ATMCustomerProfile2.mmProfileReference, ATMCustomerProfile2.mmCustomerIdentification);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ATMCustomerProfile2";
 				definition = "Profile of the customer selected by an ATM.";
 				nextVersions_lazy = () -> Arrays.asList(ATMCustomerProfile3.mmObject());

@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -28,6 +30,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.BytePadding1Code
+ * BytePadding1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -45,13 +54,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.BytePaddingCode#mmRandomPadding
  * BytePaddingCode.mmRandomPadding}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.BytePadding1Code
- * BytePadding1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -106,7 +108,7 @@ public class BytePaddingCode {
 	 */
 	public static final MMCode mmLengthPadding = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LengthPadding";
 			definition = "Message to encrypt is completed by a byte value containing the total number of added bytes.";
 			owner_lazy = () -> BytePaddingCode.mmObject();
@@ -139,7 +141,7 @@ public class BytePaddingCode {
 	 */
 	public static final MMCode mmNull80Padding = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Null80Padding";
 			definition = "Message to encrypt is completed by one bit of value 1, followed by null bits until the encryption block length is reached.";
 			owner_lazy = () -> BytePaddingCode.mmObject();
@@ -172,7 +174,7 @@ public class BytePaddingCode {
 	 */
 	public static final MMCode mmNullLengthPadding = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NullLengthPadding";
 			definition = "Message to encrypt is completed by null byte values, the last byte containing the total number of added bytes.";
 			owner_lazy = () -> BytePaddingCode.mmObject();
@@ -202,7 +204,7 @@ public class BytePaddingCode {
 	 */
 	public static final MMCode mmNullPadding = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NullPadding";
 			definition = "Message to encrypt is completed by null bytes.";
 			owner_lazy = () -> BytePaddingCode.mmObject();
@@ -235,7 +237,7 @@ public class BytePaddingCode {
 	 */
 	public static final MMCode mmRandomPadding = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RandomPadding";
 			definition = "Message to encrypt is completed by random value, the last byte containing the total number of added bytes.";
 			owner_lazy = () -> BytePaddingCode.mmObject();
@@ -246,13 +248,12 @@ public class BytePaddingCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("RAND");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "BytePaddingCode";
 				definition = "Byte padding for a cypher block chaining mode encryption, if the padding is not implicit.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.BytePaddingCode.mmLengthPadding, com.tools20022.repository.codeset.BytePaddingCode.mmNull80Padding,
-						com.tools20022.repository.codeset.BytePaddingCode.mmNullLengthPadding, com.tools20022.repository.codeset.BytePaddingCode.mmNullPadding, com.tools20022.repository.codeset.BytePaddingCode.mmRandomPadding);
+				code_lazy = () -> Arrays.asList(BytePaddingCode.mmLengthPadding, BytePaddingCode.mmNull80Padding, BytePaddingCode.mmNullLengthPadding, BytePaddingCode.mmNullPadding, BytePaddingCode.mmRandomPadding);
 				derivation_lazy = () -> Arrays.asList(BytePadding1Code.mmObject());
 			}
 		});

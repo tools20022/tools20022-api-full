@@ -19,9 +19,12 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.sese.TransferOutCancellationRequestV02;
 import com.tools20022.repository.entity.InvestmentAccount;
 import com.tools20022.repository.entity.InvestmentFundClass;
 import com.tools20022.repository.entity.SecuritiesTransfer;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -122,7 +125,7 @@ public class TransferOut5 {
 			componentContext_lazy = () -> TransferOut5.mmObject();
 			isDerived = false;
 			xmlTag = "TrfDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransferDetails";
 			definition = "General information related to the transfer of a financial instrument.";
 			maxOccurs = 1;
@@ -169,7 +172,7 @@ public class TransferOut5 {
 			componentContext_lazy = () -> TransferOut5.mmObject();
 			isDerived = false;
 			xmlTag = "FinInstrmDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentDetails";
 			definition = "Information related to the financial instrument to be withdrawn.";
 			maxOccurs = 1;
@@ -218,7 +221,7 @@ public class TransferOut5 {
 			componentContext_lazy = () -> TransferOut5.mmObject();
 			isDerived = false;
 			xmlTag = "AcctDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountDetails";
 			definition = "Information related to the account from which the financial instrument is to be withdrawn.";
 			maxOccurs = 1;
@@ -261,11 +264,11 @@ public class TransferOut5 {
 	 */
 	public static final MMMessageAssociationEnd mmSettlementDetails = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTransfer.mmRelatedSettlement;
+			businessElementTrace_lazy = () -> SecuritiesTransfer.mmRelatedSettlement;
 			componentContext_lazy = () -> TransferOut5.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementDetails";
 			definition = "Information related to the receiving side of the transfer.";
 			maxOccurs = 1;
@@ -307,7 +310,7 @@ public class TransferOut5 {
 			componentContext_lazy = () -> TransferOut5.mmObject();
 			isDerived = false;
 			xmlTag = "Xtnsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Extension";
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
 			minOccurs = 0;
@@ -319,12 +322,11 @@ public class TransferOut5 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransferOut5.mmTransferDetails, com.tools20022.repository.msg.TransferOut5.mmFinancialInstrumentDetails,
-						com.tools20022.repository.msg.TransferOut5.mmAccountDetails, com.tools20022.repository.msg.TransferOut5.mmSettlementDetails, com.tools20022.repository.msg.TransferOut5.mmExtension);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.TransferOutCancellationRequestV02.mmCancellationByTransferOutDetails);
+				messageElement_lazy = () -> Arrays.asList(TransferOut5.mmTransferDetails, TransferOut5.mmFinancialInstrumentDetails, TransferOut5.mmAccountDetails, TransferOut5.mmSettlementDetails, TransferOut5.mmExtension);
+				messageBuildingBlock_lazy = () -> Arrays.asList(TransferOutCancellationRequestV02.mmCancellationByTransferOutDetails);
 				trace_lazy = () -> SecuritiesTransfer.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TransferOut5";
 				definition = "Information about a transfer out transaction.";
 				nextVersions_lazy = () -> Arrays.asList(TransferOut7.mmObject());

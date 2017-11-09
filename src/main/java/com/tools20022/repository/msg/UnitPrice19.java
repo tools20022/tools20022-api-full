@@ -20,8 +20,10 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.UnitPriceType2Choice;
 import com.tools20022.repository.entity.SecuritiesPricing;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -104,14 +106,14 @@ public class UnitPrice19 {
 	 */
 	public static final MMMessageAssociationEnd mmPriceType = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmPriceType;
+			businessElementTrace_lazy = () -> SecuritiesPricing.mmPriceType;
 			componentContext_lazy = () -> UnitPrice19.mmObject();
 			isDerived = false;
 			xmlTag = "PricTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PriceType";
 			definition = "Type of price.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.UnitPrice16.mmUnitPriceType;
+			previousVersion_lazy = () -> UnitPrice16.mmUnitPriceType;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -157,14 +159,14 @@ public class UnitPrice19 {
 	 */
 	public static final MMMessageAttribute mmValue = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmPrice;
+			businessElementTrace_lazy = () -> SecuritiesPricing.mmPrice;
 			componentContext_lazy = () -> UnitPrice19.mmObject();
 			isDerived = false;
 			xmlTag = "Val";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Value";
 			definition = "Value of the price, that is, as a currency and value.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.UnitPrice16.mmValue;
+			previousVersion_lazy = () -> UnitPrice16.mmValue;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> com.tools20022.repository.msg.PriceValue1.mmObject();
@@ -174,10 +176,10 @@ public class UnitPrice19 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UnitPrice19.mmPriceType, com.tools20022.repository.msg.UnitPrice19.mmValue);
+				messageElement_lazy = () -> Arrays.asList(UnitPrice19.mmPriceType, UnitPrice19.mmValue);
 				trace_lazy = () -> SecuritiesPricing.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "UnitPrice19";
 				definition = "Amount of money for which goods or services are offered, sold, or bought.";
 				previousVersion_lazy = () -> UnitPrice16.mmObject();

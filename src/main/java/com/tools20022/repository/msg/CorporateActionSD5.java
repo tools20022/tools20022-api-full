@@ -19,8 +19,10 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.DecimalNumber;
 import com.tools20022.repository.datatype.Max15NumericText;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -111,10 +113,10 @@ public class CorporateActionSD5 {
 			componentContext_lazy = () -> CorporateActionSD5.mmObject();
 			isDerived = false;
 			xmlTag = "CertNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CertificateNumber";
 			definition = "Unique identification or serial number that is assigned and affixed by an issuer or transfer agent to each securities certificate.  ";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionSD15.mmCertificateNumber);
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionSD15.mmCertificateNumber);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max15NumericText.mmObject();
@@ -166,10 +168,10 @@ public class CorporateActionSD5 {
 			componentContext_lazy = () -> CorporateActionSD5.mmObject();
 			isDerived = false;
 			xmlTag = "CertClldAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CertificateCalledAmount";
 			definition = "Principal amount (for debt issues) or number of shares (for equity issues) that has been called for redemption for a particular certificate number.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionSD15.mmCertificateCalledAmount);
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionSD15.mmCertificateCalledAmount);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
@@ -179,9 +181,9 @@ public class CorporateActionSD5 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionSD5.mmCertificateNumber, com.tools20022.repository.msg.CorporateActionSD5.mmCertificateCalledAmount);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(CorporateActionSD5.mmCertificateNumber, CorporateActionSD5.mmCertificateCalledAmount);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionSD5";
 				definition = "Contains details about called certificates.";
 				nextVersions_lazy = () -> Arrays.asList(CorporateActionSD15.mmObject());

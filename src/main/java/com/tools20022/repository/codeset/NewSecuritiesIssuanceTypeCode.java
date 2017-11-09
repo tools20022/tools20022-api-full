@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -28,6 +30,29 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.NewSecuritiesIssuanceType1Code
+ * NewSecuritiesIssuanceType1Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.NewSecuritiesIssuanceType2Code
+ * NewSecuritiesIssuanceType2Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.NewSecuritiesIssuanceType3Code
+ * NewSecuritiesIssuanceType3Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.NewSecuritiesIssuanceType4Code
+ * NewSecuritiesIssuanceType4Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.NewSecuritiesIssuanceType5Code
+ * NewSecuritiesIssuanceType5Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.NewSecuritiesIssuanceType6Code
+ * NewSecuritiesIssuanceType6Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -51,29 +76,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.NewSecuritiesIssuanceTypeCode#mmNonRefundedSecurityIndicator
  * NewSecuritiesIssuanceTypeCode.mmNonRefundedSecurityIndicator}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.NewSecuritiesIssuanceType1Code
- * NewSecuritiesIssuanceType1Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.NewSecuritiesIssuanceType2Code
- * NewSecuritiesIssuanceType2Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.NewSecuritiesIssuanceType3Code
- * NewSecuritiesIssuanceType3Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.NewSecuritiesIssuanceType4Code
- * NewSecuritiesIssuanceType4Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.NewSecuritiesIssuanceType5Code
- * NewSecuritiesIssuanceType5Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.NewSecuritiesIssuanceType6Code
- * NewSecuritiesIssuanceType6Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -125,7 +127,7 @@ public class NewSecuritiesIssuanceTypeCode {
 	 */
 	public static final MMCode mmExistingIssue = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExistingIssue";
 			definition = "Securities proceeds are not new issues.";
 			owner_lazy = () -> NewSecuritiesIssuanceTypeCode.mmObject();
@@ -155,7 +157,7 @@ public class NewSecuritiesIssuanceTypeCode {
 	 */
 	public static final MMCode mmNewIssue = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewIssue";
 			definition = "Securities proceeds are newly issued.";
 			owner_lazy = () -> NewSecuritiesIssuanceTypeCode.mmObject();
@@ -186,7 +188,7 @@ public class NewSecuritiesIssuanceTypeCode {
 	 */
 	public static final MMCode mmUnknown = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unknown";
 			definition = "Not known whether the securities proceeds are newly issued or not.";
 			owner_lazy = () -> NewSecuritiesIssuanceTypeCode.mmObject();
@@ -221,7 +223,7 @@ public class NewSecuritiesIssuanceTypeCode {
 	 */
 	public static final MMCode mmDefeasedSecurityIndicator = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DefeasedSecurityIndicator";
 			definition = "Funds have been placed in escrow by a trustee or agent to ensure payment on a portion of the outstanding balance of the original security on maturity date.  Applicable only in the frame of a Partial Defeasance PDEF corporate action event. ";
 			owner_lazy = () -> NewSecuritiesIssuanceTypeCode.mmObject();
@@ -255,7 +257,7 @@ public class NewSecuritiesIssuanceTypeCode {
 	 */
 	public static final MMCode mmNonDefeasedSecurityIndicator = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonDefeasedSecurityIndicator";
 			definition = "Funds will not be guaranteed at maturity by the issuer or paying agent for this newly issued non-defeased security.  Applicable only in the frame of a Partial Defeasance PDEF corporate action event. ";
 			owner_lazy = () -> NewSecuritiesIssuanceTypeCode.mmObject();
@@ -289,7 +291,7 @@ public class NewSecuritiesIssuanceTypeCode {
 	 */
 	public static final MMCode mmRefundedSecurityIndicator = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RefundedSecurityIndicator";
 			definition = "New security issued that has been refunded to an earlier maturity date. Applicable only in the frame of a partial defeasance PDEF corporate action event.";
 			owner_lazy = () -> NewSecuritiesIssuanceTypeCode.mmObject();
@@ -323,7 +325,7 @@ public class NewSecuritiesIssuanceTypeCode {
 	 */
 	public static final MMCode mmNonRefundedSecurityIndicator = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonRefundedSecurityIndicator";
 			definition = "New Security issued that has not been refunded and the maturity date of the original underlying security is unchanged. Applicable only in the frame of a Partial Defeasance PDEF corporate action event. ";
 			owner_lazy = () -> NewSecuritiesIssuanceTypeCode.mmObject();
@@ -334,15 +336,13 @@ public class NewSecuritiesIssuanceTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("EXIS");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "NewSecuritiesIssuanceTypeCode";
 				definition = "Specifies the type of securities proceeds; whether they are newly issued or not, defeased or non-defeased.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.NewSecuritiesIssuanceTypeCode.mmExistingIssue, com.tools20022.repository.codeset.NewSecuritiesIssuanceTypeCode.mmNewIssue,
-						com.tools20022.repository.codeset.NewSecuritiesIssuanceTypeCode.mmUnknown, com.tools20022.repository.codeset.NewSecuritiesIssuanceTypeCode.mmDefeasedSecurityIndicator,
-						com.tools20022.repository.codeset.NewSecuritiesIssuanceTypeCode.mmNonDefeasedSecurityIndicator, com.tools20022.repository.codeset.NewSecuritiesIssuanceTypeCode.mmRefundedSecurityIndicator,
-						com.tools20022.repository.codeset.NewSecuritiesIssuanceTypeCode.mmNonRefundedSecurityIndicator);
+				code_lazy = () -> Arrays.asList(NewSecuritiesIssuanceTypeCode.mmExistingIssue, NewSecuritiesIssuanceTypeCode.mmNewIssue, NewSecuritiesIssuanceTypeCode.mmUnknown, NewSecuritiesIssuanceTypeCode.mmDefeasedSecurityIndicator,
+						NewSecuritiesIssuanceTypeCode.mmNonDefeasedSecurityIndicator, NewSecuritiesIssuanceTypeCode.mmRefundedSecurityIndicator, NewSecuritiesIssuanceTypeCode.mmNonRefundedSecurityIndicator);
 				derivation_lazy = () -> Arrays.asList(NewSecuritiesIssuanceType1Code.mmObject(), NewSecuritiesIssuanceType2Code.mmObject(), NewSecuritiesIssuanceType3Code.mmObject(), NewSecuritiesIssuanceType4Code.mmObject(),
 						NewSecuritiesIssuanceType5Code.mmObject(), NewSecuritiesIssuanceType6Code.mmObject());
 			}

@@ -17,17 +17,13 @@
 
 package com.tools20022.repository.entity;
 
-import com.tools20022.metamodel.MMBusinessAssociationEnd;
-import com.tools20022.metamodel.MMBusinessAttribute;
-import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.*;
 import com.tools20022.repository.datatype.CurrencyAndAmount;
 import com.tools20022.repository.datatype.DecimalNumber;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.TreasuryTrade;
-import com.tools20022.repository.msg.AmountsAndValueDate1;
-import com.tools20022.repository.msg.OpeningData1;
-import com.tools20022.repository.msg.OpeningData2;
-import com.tools20022.repository.msg.Trade3;
+import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -42,52 +38,15 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
  * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ForeignExchangeTrade#mmAgreedRate
- * ForeignExchangeTrade.mmAgreedRate}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ForeignExchangeTrade#mmTypeOfProduct
- * ForeignExchangeTrade.mmTypeOfProduct}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ForeignExchangeTrade#mmBuyAmount
- * ForeignExchangeTrade.mmBuyAmount}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ForeignExchangeTrade#mmSellAmount
- * ForeignExchangeTrade.mmSellAmount}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ForeignExchangeTrade#mmResultingSettlement
- * ForeignExchangeTrade.mmResultingSettlement}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ForeignExchangeTrade#mmCurrencyExchangeForSecuritiesSettlement
- * ForeignExchangeTrade.mmCurrencyExchangeForSecuritiesSettlement}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ForeignExchangeTrade#mmOpeningLegRelatedNonDeliverableTrade
- * ForeignExchangeTrade.mmOpeningLegRelatedNonDeliverableTrade}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ForeignExchangeTrade#mmClosingLegRelatedNonDeliverableTrade
- * ForeignExchangeTrade.mmClosingLegRelatedNonDeliverableTrade}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ForeignExchangeTrade#mmRelatedSwap
- * ForeignExchangeTrade.mmRelatedSwap}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ForeignExchangeTrade#mmRelatedOption
- * ForeignExchangeTrade.mmRelatedOption}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ForeignExchangeTrade#mmCurrencyExchangeForTaxVoucher
- * ForeignExchangeTrade.mmCurrencyExchangeForTaxVoucher}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ForeignExchangeTrade#mmExchangeForwardPoint
- * ForeignExchangeTrade.mmExchangeForwardPoint}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
- * subType} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.NonDeliverableTrade
- * NonDeliverableTrade}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AmountsAndValueDate1
+ * AmountsAndValueDate1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.OpeningData1 OpeningData1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.OpeningData2 OpeningData2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Trade3 Trade3}</li>
  * </ul>
  * </li>
  * <li>
@@ -141,15 +100,52 @@ import java.util.List;
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
  * superType} = {@linkplain com.tools20022.repository.entity.TreasuryTrade
  * TreasuryTrade}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
+ * subType} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.AmountsAndValueDate1
- * AmountsAndValueDate1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.OpeningData1 OpeningData1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.OpeningData2 OpeningData2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Trade3 Trade3}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.NonDeliverableTrade
+ * NonDeliverableTrade}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ForeignExchangeTrade#mmAgreedRate
+ * ForeignExchangeTrade.mmAgreedRate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ForeignExchangeTrade#mmTypeOfProduct
+ * ForeignExchangeTrade.mmTypeOfProduct}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ForeignExchangeTrade#mmBuyAmount
+ * ForeignExchangeTrade.mmBuyAmount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ForeignExchangeTrade#mmSellAmount
+ * ForeignExchangeTrade.mmSellAmount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ForeignExchangeTrade#mmResultingSettlement
+ * ForeignExchangeTrade.mmResultingSettlement}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ForeignExchangeTrade#mmCurrencyExchangeForSecuritiesSettlement
+ * ForeignExchangeTrade.mmCurrencyExchangeForSecuritiesSettlement}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ForeignExchangeTrade#mmOpeningLegRelatedNonDeliverableTrade
+ * ForeignExchangeTrade.mmOpeningLegRelatedNonDeliverableTrade}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ForeignExchangeTrade#mmClosingLegRelatedNonDeliverableTrade
+ * ForeignExchangeTrade.mmClosingLegRelatedNonDeliverableTrade}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ForeignExchangeTrade#mmRelatedSwap
+ * ForeignExchangeTrade.mmRelatedSwap}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ForeignExchangeTrade#mmRelatedOption
+ * ForeignExchangeTrade.mmRelatedOption}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ForeignExchangeTrade#mmCurrencyExchangeForTaxVoucher
+ * ForeignExchangeTrade.mmCurrencyExchangeForTaxVoucher}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ForeignExchangeTrade#mmExchangeForwardPoint
+ * ForeignExchangeTrade.mmExchangeForwardPoint}</li>
  * </ul>
  * </li>
  * <li>
@@ -502,61 +498,38 @@ public class ForeignExchangeTrade extends TreasuryTrade {
 	 */
 	public static final MMBusinessAssociationEnd mmAgreedRate = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AmountAndDirection32.mmForeignExchangeDetails, com.tools20022.repository.msg.AmountAndDirection9.mmForeignExchangeDetails,
-					com.tools20022.repository.msg.AmountAndDirection33.mmForeignExchangeDetails, com.tools20022.repository.msg.AmountAndDirection17.mmForeignExchangeDetails,
-					com.tools20022.repository.msg.AmountAndDirection24.mmForeignExchangeDetails, com.tools20022.repository.msg.AmountAndDirection2.mmForeignExchangeDetails,
-					com.tools20022.repository.msg.AmountAndDirection16.mmForeignExchangeDetails, com.tools20022.repository.msg.AmountAndDirection1.mmExchange, com.tools20022.repository.msg.AmountAndDirection29.mmForeignExchangeDetails,
-					com.tools20022.repository.msg.AmountAndDirection28.mmForeignExchangeDetails, com.tools20022.repository.msg.SplitTradeDetails1.mmAgreedRate, com.tools20022.repository.msg.RedemptionOrder3.mmForeignExchangeDetails,
-					com.tools20022.repository.msg.RedemptionOrder5.mmForeignExchangeDetails, com.tools20022.repository.msg.RedemptionExecution3.mmForeignExchangeDetails,
-					com.tools20022.repository.msg.RedemptionExecution5.mmForeignExchangeDetails, com.tools20022.repository.msg.RedemptionOrder7.mmForeignExchangeDetails,
-					com.tools20022.repository.msg.RedemptionOrder4.mmForeignExchangeDetails, com.tools20022.repository.msg.RedemptionOrder6.mmForeignExchangeDetails,
-					com.tools20022.repository.msg.RedemptionExecution4.mmForeignExchangeDetails, com.tools20022.repository.msg.RedemptionExecution6.mmForeignExchangeDetails,
-					com.tools20022.repository.msg.RedemptionOrder8.mmForeignExchangeDetails, com.tools20022.repository.msg.SubscriptionOrder3.mmForeignExchangeDetails,
-					com.tools20022.repository.msg.SubscriptionOrder5.mmForeignExchangeDetails, com.tools20022.repository.msg.SubscriptionExecution3.mmForeignExchangeDetails,
-					com.tools20022.repository.msg.SubscriptionExecution5.mmForeignExchangeDetails, com.tools20022.repository.msg.SubscriptionOrder7.mmForeignExchangeDetails,
-					com.tools20022.repository.msg.SubscriptionOrder4.mmForeignExchangeDetails, com.tools20022.repository.msg.SubscriptionOrder6.mmForeignExchangeDetails,
-					com.tools20022.repository.msg.SubscriptionExecution4.mmForeignExchangeDetails, com.tools20022.repository.msg.SubscriptionExecution6.mmForeignExchangeDetails,
-					com.tools20022.repository.msg.SubscriptionOrder8.mmForeignExchangeDetails, com.tools20022.repository.msg.SwitchOrder2.mmForeignExchangeDetails, com.tools20022.repository.msg.SwitchOrder3.mmForeignExchangeDetails,
-					com.tools20022.repository.msg.SwitchExecution3.mmForeignExchangeDetails, com.tools20022.repository.msg.SwitchExecution4.mmForeignExchangeDetails, com.tools20022.repository.msg.SwitchOrder4.mmForeignExchangeDetails,
-					com.tools20022.repository.msg.AmountAndDirection10.mmForeignExchangeDetails, com.tools20022.repository.msg.AmountAndDirection22.mmForeignExchangeDetails,
-					com.tools20022.repository.msg.AmountAndDirection23.mmForeignExchangeDetails, com.tools20022.repository.msg.OpeningData1.mmAgreedRate, com.tools20022.repository.msg.OpeningData2.mmAgreedRate,
-					com.tools20022.repository.msg.AmountAndDirection11.mmForeignExchangeDetails, com.tools20022.repository.msg.AmountAndDirection25.mmForeignExchangeDetails,
-					com.tools20022.repository.msg.AmountAndDirection26.mmForeignExchangeDetails, com.tools20022.repository.msg.AmountAndDirection27.mmForeignExchangeDetails,
-					com.tools20022.repository.msg.RedemptionExecution10.mmForeignExchangeDetails, com.tools20022.repository.msg.SubscriptionExecution7.mmForeignExchangeDetails,
-					com.tools20022.repository.msg.RedemptionExecution12.mmForeignExchangeDetails, com.tools20022.repository.msg.SubscriptionExecution9.mmForeignExchangeDetails,
-					com.tools20022.repository.msg.ReceiveInformation13.mmForeignExchangeDetails, com.tools20022.repository.msg.ReceiveInformation12.mmForeignExchangeDetails,
-					com.tools20022.repository.msg.DeliverInformation12.mmForeignExchangeDetails, com.tools20022.repository.msg.DeliverInformation13.mmForeignExchangeDetails,
-					com.tools20022.repository.msg.AmountAndDirection36.mmForeignExchangeDetails, com.tools20022.repository.msg.AmountAndDirection37.mmForeignExchangeDetails,
-					com.tools20022.repository.msg.AmountAndDirection38.mmForeignExchangeDetails, com.tools20022.repository.msg.AmountAndDirection40.mmForeignExchangeDetails,
-					com.tools20022.repository.msg.FundCashForecast7.mmForeignExchangeRate, com.tools20022.repository.msg.EstimatedFundCashForecast6.mmForeignExchangeRate,
-					com.tools20022.repository.msg.FundCashForecast6.mmForeignExchangeRate, com.tools20022.repository.msg.EstimatedFundCashForecast5.mmForeignExchangeRate,
-					com.tools20022.repository.msg.DeliverInformation15.mmForeignExchangeDetails, com.tools20022.repository.msg.DeliverInformation14.mmForeignExchangeDetails,
-					com.tools20022.repository.msg.ReceiveInformation15.mmForeignExchangeDetails, com.tools20022.repository.msg.ReceiveInformation14.mmForeignExchangeDetails,
-					com.tools20022.repository.msg.ForeignExchangeSwapTransaction1.mmForeignExchange, com.tools20022.repository.msg.AmountAndDirection46.mmForeignExchangeDetails,
-					com.tools20022.repository.msg.AmountAndDirection49.mmForeignExchangeDetails, com.tools20022.repository.msg.AmountAndDirection48.mmForeignExchangeDetails,
-					com.tools20022.repository.msg.AmountAndDirection44.mmForeignExchangeDetails, com.tools20022.repository.msg.AmountAndDirection45.mmForeignExchangeDetails,
-					com.tools20022.repository.msg.AmountAndDirection47.mmForeignExchangeDetails, com.tools20022.repository.msg.ReceiveInformation17.mmForeignExchangeDetails,
-					com.tools20022.repository.msg.ReceiveInformation16.mmForeignExchangeDetails, com.tools20022.repository.msg.DeliverInformation16.mmForeignExchangeDetails,
-					com.tools20022.repository.msg.DeliverInformation17.mmForeignExchangeDetails, com.tools20022.repository.msg.AmountAndDirection66.mmForeignExchangeDetails,
-					com.tools20022.repository.msg.AmountAndDirection60.mmForeignExchangeDetails, com.tools20022.repository.msg.AmountAndDirection71.mmForeignExchangeDetails,
-					com.tools20022.repository.msg.AmountAndDirection85.mmForeignExchangeDetails, com.tools20022.repository.msg.AmountAndDirection55.mmForeignExchangeDetails,
-					com.tools20022.repository.msg.AmountAndDirection58.mmForeignExchangeDetails, com.tools20022.repository.msg.AmountAndDirection72.mmForeignExchangeDetails,
-					com.tools20022.repository.msg.ForeignExchangeSwapTransaction2.mmForeignExchange, com.tools20022.repository.msg.SwitchExecution7.mmForeignExchangeDetails,
-					com.tools20022.repository.msg.SwitchOrder7.mmForeignExchangeDetails, com.tools20022.repository.msg.RedemptionOrder14.mmForeignExchangeDetails,
-					com.tools20022.repository.msg.SubscriptionExecution13.mmForeignExchangeDetails, com.tools20022.repository.msg.SubscriptionExecution12.mmForeignExchangeDetails,
-					com.tools20022.repository.msg.SubscriptionOrder15.mmForeignExchangeDetails, com.tools20022.repository.msg.RedemptionOrder15.mmForeignExchangeDetails,
-					com.tools20022.repository.msg.RedemptionExecution16.mmForeignExchangeDetails, com.tools20022.repository.msg.SubscriptionOrder14.mmForeignExchangeDetails,
-					com.tools20022.repository.msg.RedemptionExecution15.mmForeignExchangeDetails, com.tools20022.repository.msg.SplitTradeDetails3.mmAgreedRate,
-					com.tools20022.repository.msg.ForeignExchangeSwapTransaction3.mmForeignExchange);
+			derivation_lazy = () -> Arrays.asList(AmountAndDirection32.mmForeignExchangeDetails, AmountAndDirection9.mmForeignExchangeDetails, AmountAndDirection33.mmForeignExchangeDetails, AmountAndDirection17.mmForeignExchangeDetails,
+					AmountAndDirection24.mmForeignExchangeDetails, AmountAndDirection2.mmForeignExchangeDetails, AmountAndDirection16.mmForeignExchangeDetails, AmountAndDirection1.mmExchange, AmountAndDirection29.mmForeignExchangeDetails,
+					AmountAndDirection28.mmForeignExchangeDetails, SplitTradeDetails1.mmAgreedRate, RedemptionOrder3.mmForeignExchangeDetails, RedemptionOrder5.mmForeignExchangeDetails, RedemptionExecution3.mmForeignExchangeDetails,
+					RedemptionExecution5.mmForeignExchangeDetails, RedemptionOrder7.mmForeignExchangeDetails, RedemptionOrder4.mmForeignExchangeDetails, RedemptionOrder6.mmForeignExchangeDetails,
+					RedemptionExecution4.mmForeignExchangeDetails, RedemptionExecution6.mmForeignExchangeDetails, RedemptionOrder8.mmForeignExchangeDetails, SubscriptionOrder3.mmForeignExchangeDetails,
+					SubscriptionOrder5.mmForeignExchangeDetails, SubscriptionExecution3.mmForeignExchangeDetails, SubscriptionExecution5.mmForeignExchangeDetails, SubscriptionOrder7.mmForeignExchangeDetails,
+					SubscriptionOrder4.mmForeignExchangeDetails, SubscriptionOrder6.mmForeignExchangeDetails, SubscriptionExecution4.mmForeignExchangeDetails, SubscriptionExecution6.mmForeignExchangeDetails,
+					SubscriptionOrder8.mmForeignExchangeDetails, SwitchOrder2.mmForeignExchangeDetails, SwitchOrder3.mmForeignExchangeDetails, SwitchExecution3.mmForeignExchangeDetails, SwitchExecution4.mmForeignExchangeDetails,
+					SwitchOrder4.mmForeignExchangeDetails, AmountAndDirection10.mmForeignExchangeDetails, AmountAndDirection22.mmForeignExchangeDetails, AmountAndDirection23.mmForeignExchangeDetails, OpeningData1.mmAgreedRate,
+					OpeningData2.mmAgreedRate, AmountAndDirection11.mmForeignExchangeDetails, AmountAndDirection25.mmForeignExchangeDetails, AmountAndDirection26.mmForeignExchangeDetails, AmountAndDirection27.mmForeignExchangeDetails,
+					RedemptionExecution10.mmForeignExchangeDetails, SubscriptionExecution7.mmForeignExchangeDetails, RedemptionExecution12.mmForeignExchangeDetails, SubscriptionExecution9.mmForeignExchangeDetails,
+					ReceiveInformation13.mmForeignExchangeDetails, ReceiveInformation12.mmForeignExchangeDetails, DeliverInformation12.mmForeignExchangeDetails, DeliverInformation13.mmForeignExchangeDetails,
+					AmountAndDirection36.mmForeignExchangeDetails, AmountAndDirection37.mmForeignExchangeDetails, AmountAndDirection38.mmForeignExchangeDetails, AmountAndDirection40.mmForeignExchangeDetails,
+					FundCashForecast7.mmForeignExchangeRate, EstimatedFundCashForecast6.mmForeignExchangeRate, FundCashForecast6.mmForeignExchangeRate, EstimatedFundCashForecast5.mmForeignExchangeRate,
+					DeliverInformation15.mmForeignExchangeDetails, DeliverInformation14.mmForeignExchangeDetails, ReceiveInformation15.mmForeignExchangeDetails, ReceiveInformation14.mmForeignExchangeDetails,
+					ForeignExchangeSwapTransaction1.mmForeignExchange, AmountAndDirection46.mmForeignExchangeDetails, AmountAndDirection49.mmForeignExchangeDetails, AmountAndDirection48.mmForeignExchangeDetails,
+					AmountAndDirection44.mmForeignExchangeDetails, AmountAndDirection45.mmForeignExchangeDetails, AmountAndDirection47.mmForeignExchangeDetails, ReceiveInformation17.mmForeignExchangeDetails,
+					ReceiveInformation16.mmForeignExchangeDetails, DeliverInformation16.mmForeignExchangeDetails, DeliverInformation17.mmForeignExchangeDetails, AmountAndDirection66.mmForeignExchangeDetails,
+					AmountAndDirection60.mmForeignExchangeDetails, AmountAndDirection71.mmForeignExchangeDetails, AmountAndDirection85.mmForeignExchangeDetails, AmountAndDirection55.mmForeignExchangeDetails,
+					AmountAndDirection58.mmForeignExchangeDetails, AmountAndDirection72.mmForeignExchangeDetails, ForeignExchangeSwapTransaction2.mmForeignExchange, SwitchExecution7.mmForeignExchangeDetails,
+					SwitchOrder7.mmForeignExchangeDetails, RedemptionOrder14.mmForeignExchangeDetails, SubscriptionExecution13.mmForeignExchangeDetails, SubscriptionExecution12.mmForeignExchangeDetails,
+					SubscriptionOrder15.mmForeignExchangeDetails, RedemptionOrder15.mmForeignExchangeDetails, RedemptionExecution16.mmForeignExchangeDetails, SubscriptionOrder14.mmForeignExchangeDetails,
+					RedemptionExecution15.mmForeignExchangeDetails, SplitTradeDetails3.mmAgreedRate, ForeignExchangeSwapTransaction3.mmForeignExchange);
 			elementContext_lazy = () -> ForeignExchangeTrade.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AgreedRate";
 			definition = "Exchange rate between two currencies. The rate is agreed by the trading parties during the negotiation process.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmCurrencyExchangeForForeignExchangeTrade;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmObject();
 		}
 	};
@@ -617,13 +590,11 @@ public class ForeignExchangeTrade extends TreasuryTrade {
 	 */
 	public static final MMBusinessAttribute mmTypeOfProduct = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TradeData10.mmProductType, com.tools20022.repository.msg.TradeData8.mmProductType, com.tools20022.repository.msg.TradeAgreement9.mmProductType,
-					com.tools20022.repository.msg.TradeData7.mmProductType, com.tools20022.repository.msg.TradeAgreement12.mmProductType, com.tools20022.repository.msg.TradeData11.mmProductType,
-					com.tools20022.repository.msg.TradeAgreement15.mmProductType, com.tools20022.repository.msg.TradeData12.mmProductType, com.tools20022.repository.msg.TradeAgreement14.mmProductType,
-					com.tools20022.repository.msg.TradeData15.mmProductType);
+			derivation_lazy = () -> Arrays.asList(TradeData10.mmProductType, TradeData8.mmProductType, TradeAgreement9.mmProductType, TradeData7.mmProductType, TradeAgreement12.mmProductType, TradeData11.mmProductType,
+					TradeAgreement15.mmProductType, TradeData12.mmProductType, TradeAgreement14.mmProductType, TradeData15.mmProductType);
 			elementContext_lazy = () -> ForeignExchangeTrade.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TypeOfProduct";
 			definition = "Specifies the type of trade.";
 			maxOccurs = 1;
@@ -686,12 +657,11 @@ public class ForeignExchangeTrade extends TreasuryTrade {
 	 */
 	public static final MMBusinessAttribute mmBuyAmount = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AmountsAndValueDate1.mmTradingSideBuyAmount, com.tools20022.repository.msg.ForeignExchangeTerms4.mmBuyAmount,
-					com.tools20022.repository.msg.ForeignExchangeTerms7.mmToAmount, com.tools20022.repository.msg.ForeignExchangeTerms10.mmToAmount, com.tools20022.repository.msg.ForeignExchangeTerms26.mmToAmount,
-					com.tools20022.repository.msg.ForeignExchangeTerms33.mmToAmount, com.tools20022.repository.msg.FixingConditions1.mmTradingSideBuyAmount);
+			derivation_lazy = () -> Arrays.asList(AmountsAndValueDate1.mmTradingSideBuyAmount, ForeignExchangeTerms4.mmBuyAmount, ForeignExchangeTerms7.mmToAmount, ForeignExchangeTerms10.mmToAmount, ForeignExchangeTerms26.mmToAmount,
+					ForeignExchangeTerms33.mmToAmount, FixingConditions1.mmTradingSideBuyAmount);
 			elementContext_lazy = () -> ForeignExchangeTrade.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BuyAmount";
 			definition = "Currency and amount bought in a foreign exchange trade.";
 			maxOccurs = 1;
@@ -754,12 +724,11 @@ public class ForeignExchangeTrade extends TreasuryTrade {
 	 */
 	public static final MMBusinessAttribute mmSellAmount = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AmountsAndValueDate1.mmTradingSideSellAmount, com.tools20022.repository.msg.ForeignExchangeTerms4.mmSellAmount,
-					com.tools20022.repository.msg.ForeignExchangeTerms7.mmFromAmount, com.tools20022.repository.msg.ForeignExchangeTerms10.mmFromAmount, com.tools20022.repository.msg.ForeignExchangeTerms26.mmFromAmount,
-					com.tools20022.repository.msg.ForeignExchangeTerms33.mmFromAmount, com.tools20022.repository.msg.FixingConditions1.mmTradingSideSellAmount);
+			derivation_lazy = () -> Arrays.asList(AmountsAndValueDate1.mmTradingSideSellAmount, ForeignExchangeTerms4.mmSellAmount, ForeignExchangeTerms7.mmFromAmount, ForeignExchangeTerms10.mmFromAmount,
+					ForeignExchangeTerms26.mmFromAmount, ForeignExchangeTerms33.mmFromAmount, FixingConditions1.mmTradingSideSellAmount);
 			elementContext_lazy = () -> ForeignExchangeTrade.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SellAmount";
 			definition = "Currency and amount sold in a foreign exchange trade.";
 			maxOccurs = 1;
@@ -810,12 +779,12 @@ public class ForeignExchangeTrade extends TreasuryTrade {
 		{
 			elementContext_lazy = () -> ForeignExchangeTrade.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ResultingSettlement";
 			definition = "Payment of the settlement amount to the account(s) of the final beneficiary. A payment may be settled gross, through split amounts at several agents of the buyer, or netted with several other treasury agreements.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.PaymentObligation.mmExchangeRateInformation;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.PaymentObligation.mmObject();
 		}
 	};
@@ -860,13 +829,13 @@ public class ForeignExchangeTrade extends TreasuryTrade {
 		{
 			elementContext_lazy = () -> ForeignExchangeTrade.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CurrencyExchangeForSecuritiesSettlement";
 			definition = "Securities settlement process for which a currency exchange is provided.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmRelatedForeignExchangeOperation;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmObject();
 		}
 	};
@@ -909,13 +878,13 @@ public class ForeignExchangeTrade extends TreasuryTrade {
 		{
 			elementContext_lazy = () -> ForeignExchangeTrade.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "OpeningLegRelatedNonDeliverableTrade";
 			definition = "Non deliverable trade for which an opening closing leg is specified.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.NonDeliverableTrade.mmOpeningLeg;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.NonDeliverableTrade.mmObject();
 		}
 	};
@@ -958,13 +927,13 @@ public class ForeignExchangeTrade extends TreasuryTrade {
 		{
 			elementContext_lazy = () -> ForeignExchangeTrade.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ClosingLegRelatedNonDeliverableTrade";
 			definition = "Non deliverable trade for which a closing leg is specified.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.NonDeliverableTrade.mmClosingLeg;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.NonDeliverableTrade.mmObject();
 		}
 	};
@@ -1006,13 +975,13 @@ public class ForeignExchangeTrade extends TreasuryTrade {
 		{
 			elementContext_lazy = () -> ForeignExchangeTrade.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedSwap";
 			definition = "FX swap for which the FX trade is one leg.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.ForeignExchangeSwap.mmSwapLeg;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.ForeignExchangeSwap.mmObject();
 		}
 	};
@@ -1054,13 +1023,13 @@ public class ForeignExchangeTrade extends TreasuryTrade {
 		{
 			elementContext_lazy = () -> ForeignExchangeTrade.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedOption";
 			definition = "Option which is executed by one (or more) FX trade.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.CurrencyOption.mmExercisedOption;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.CurrencyOption.mmObject();
 		}
 	};
@@ -1103,13 +1072,13 @@ public class ForeignExchangeTrade extends TreasuryTrade {
 		{
 			elementContext_lazy = () -> ForeignExchangeTrade.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CurrencyExchangeForTaxVoucher";
 			definition = "Tax voucher for which currency exchange information is specified.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.TaxVoucher.mmForeignExchangeTransaction;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.TaxVoucher.mmObject();
 		}
 	};
@@ -1154,10 +1123,10 @@ public class ForeignExchangeTrade extends TreasuryTrade {
 	 */
 	public static final MMBusinessAttribute mmExchangeForwardPoint = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ForeignExchange1.mmExchangeForwardPoint);
+			derivation_lazy = () -> Arrays.asList(ForeignExchange1.mmExchangeForwardPoint);
 			elementContext_lazy = () -> ForeignExchangeTrade.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ExchangeForwardPoint";
 			definition = "Difference between the foreign exchange spot rate and the foreign exchange forward rate expressed in basis points quoted in accordance with the prevailing market conventions for the currency pair. ";
 			maxOccurs = 1;
@@ -1169,24 +1138,20 @@ public class ForeignExchangeTrade extends TreasuryTrade {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ForeignExchangeTrade";
 				definition = "Agreement between two parties in which one party buys a currency and the other party sells a different currency.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.PaymentObligation.mmExchangeRateInformation, com.tools20022.repository.entity.SecuritiesSettlement.mmRelatedForeignExchangeOperation,
 						com.tools20022.repository.entity.CurrencyExchange.mmCurrencyExchangeForForeignExchangeTrade, com.tools20022.repository.entity.TaxVoucher.mmForeignExchangeTransaction,
 						com.tools20022.repository.entity.ForeignExchangeSwap.mmSwapLeg, com.tools20022.repository.entity.NonDeliverableTrade.mmOpeningLeg, com.tools20022.repository.entity.NonDeliverableTrade.mmClosingLeg,
 						com.tools20022.repository.entity.CurrencyOption.mmExercisedOption);
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SplitTradeDetails1.mmTradeAmounts, com.tools20022.repository.msg.OpeningData1.mmTradeAmounts,
-						com.tools20022.repository.msg.OpeningData2.mmTradeAmounts, com.tools20022.repository.msg.Option10.mmOptionAmounts, com.tools20022.repository.msg.SplitTradeDetails3.mmTradeAmounts);
+				derivationElement_lazy = () -> Arrays.asList(SplitTradeDetails1.mmTradeAmounts, OpeningData1.mmTradeAmounts, OpeningData2.mmTradeAmounts, Option10.mmOptionAmounts, SplitTradeDetails3.mmTradeAmounts);
 				subType_lazy = () -> Arrays.asList(com.tools20022.repository.entity.NonDeliverableTrade.mmObject());
 				superType_lazy = () -> TreasuryTrade.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.ForeignExchangeTrade.mmAgreedRate, com.tools20022.repository.entity.ForeignExchangeTrade.mmTypeOfProduct,
-						com.tools20022.repository.entity.ForeignExchangeTrade.mmBuyAmount, com.tools20022.repository.entity.ForeignExchangeTrade.mmSellAmount, com.tools20022.repository.entity.ForeignExchangeTrade.mmResultingSettlement,
-						com.tools20022.repository.entity.ForeignExchangeTrade.mmCurrencyExchangeForSecuritiesSettlement, com.tools20022.repository.entity.ForeignExchangeTrade.mmOpeningLegRelatedNonDeliverableTrade,
-						com.tools20022.repository.entity.ForeignExchangeTrade.mmClosingLegRelatedNonDeliverableTrade, com.tools20022.repository.entity.ForeignExchangeTrade.mmRelatedSwap,
-						com.tools20022.repository.entity.ForeignExchangeTrade.mmRelatedOption, com.tools20022.repository.entity.ForeignExchangeTrade.mmCurrencyExchangeForTaxVoucher,
-						com.tools20022.repository.entity.ForeignExchangeTrade.mmExchangeForwardPoint);
+				element_lazy = () -> Arrays.asList(ForeignExchangeTrade.mmAgreedRate, ForeignExchangeTrade.mmTypeOfProduct, ForeignExchangeTrade.mmBuyAmount, ForeignExchangeTrade.mmSellAmount, ForeignExchangeTrade.mmResultingSettlement,
+						ForeignExchangeTrade.mmCurrencyExchangeForSecuritiesSettlement, ForeignExchangeTrade.mmOpeningLegRelatedNonDeliverableTrade, ForeignExchangeTrade.mmClosingLegRelatedNonDeliverableTrade,
+						ForeignExchangeTrade.mmRelatedSwap, ForeignExchangeTrade.mmRelatedOption, ForeignExchangeTrade.mmCurrencyExchangeForTaxVoucher, ForeignExchangeTrade.mmExchangeForwardPoint);
 				derivationComponent_lazy = () -> Arrays.asList(AmountsAndValueDate1.mmObject(), OpeningData1.mmObject(), OpeningData2.mmObject(), Trade3.mmObject());
 			}
 		});

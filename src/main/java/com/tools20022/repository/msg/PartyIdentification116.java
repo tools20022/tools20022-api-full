@@ -19,7 +19,9 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.SellerRole;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -102,7 +104,7 @@ public class PartyIdentification116 {
 			componentContext_lazy = () -> PartyIdentification116.mmObject();
 			isDerived = false;
 			xmlTag = "PtyId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartyIdentification";
 			definition = "Unique identification, as assigned by an organisation, to unambiguously identify a party.";
 			maxOccurs = 1;
@@ -146,7 +148,7 @@ public class PartyIdentification116 {
 			componentContext_lazy = () -> PartyIdentification116.mmObject();
 			isDerived = false;
 			xmlTag = "LglOrg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LegalOrganisation";
 			definition = "Identifier and name of an organisation that is allocated by an institution.";
 			maxOccurs = 1;
@@ -186,7 +188,7 @@ public class PartyIdentification116 {
 			componentContext_lazy = () -> PartyIdentification116.mmObject();
 			isDerived = false;
 			xmlTag = "TaxPty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxParty";
 			definition = "TaxParty";
 			maxOccurs = 1;
@@ -199,11 +201,10 @@ public class PartyIdentification116 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyIdentification116.mmPartyIdentification, com.tools20022.repository.msg.PartyIdentification116.mmLegalOrganisation,
-						com.tools20022.repository.msg.PartyIdentification116.mmTaxParty);
+				messageElement_lazy = () -> Arrays.asList(PartyIdentification116.mmPartyIdentification, PartyIdentification116.mmLegalOrganisation, PartyIdentification116.mmTaxParty);
 				trace_lazy = () -> SellerRole.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PartyIdentification116";
 				definition = "Unique identification, as assigned by an organisation, to unambiguously identify a party.";
 			}

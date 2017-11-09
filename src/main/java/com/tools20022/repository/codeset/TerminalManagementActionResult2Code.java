@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.TerminalManagementActionResultCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -98,7 +100,7 @@ public class TerminalManagementActionResult2Code extends TerminalManagementActio
 	 */
 	public static final MMCode mmConnectionError = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConnectionError";
 			owner_lazy = () -> TerminalManagementActionResult2Code.mmObject();
 		}
@@ -121,7 +123,7 @@ public class TerminalManagementActionResult2Code extends TerminalManagementActio
 	 */
 	public static final MMCode mmFormatError = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FormatError";
 			owner_lazy = () -> TerminalManagementActionResult2Code.mmObject();
 		}
@@ -144,7 +146,7 @@ public class TerminalManagementActionResult2Code extends TerminalManagementActio
 	 */
 	public static final MMCode mmHardware = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Hardware";
 			owner_lazy = () -> TerminalManagementActionResult2Code.mmObject();
 		}
@@ -167,7 +169,7 @@ public class TerminalManagementActionResult2Code extends TerminalManagementActio
 	 */
 	public static final MMCode mmNotSupported = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotSupported";
 			owner_lazy = () -> TerminalManagementActionResult2Code.mmObject();
 		}
@@ -190,7 +192,7 @@ public class TerminalManagementActionResult2Code extends TerminalManagementActio
 	 */
 	public static final MMCode mmSecurity = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Security";
 			owner_lazy = () -> TerminalManagementActionResult2Code.mmObject();
 		}
@@ -213,7 +215,7 @@ public class TerminalManagementActionResult2Code extends TerminalManagementActio
 	 */
 	public static final MMCode mmSuccess = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Success";
 			owner_lazy = () -> TerminalManagementActionResult2Code.mmObject();
 		}
@@ -236,7 +238,7 @@ public class TerminalManagementActionResult2Code extends TerminalManagementActio
 	 */
 	public static final MMCode mmSyntaxError = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SyntaxError";
 			owner_lazy = () -> TerminalManagementActionResult2Code.mmObject();
 		}
@@ -259,7 +261,7 @@ public class TerminalManagementActionResult2Code extends TerminalManagementActio
 	 */
 	public static final MMCode mmTimeout = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Timeout";
 			owner_lazy = () -> TerminalManagementActionResult2Code.mmObject();
 		}
@@ -282,7 +284,7 @@ public class TerminalManagementActionResult2Code extends TerminalManagementActio
 	 */
 	public static final MMCode mmUnknownKeyReference = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnknownKeyReference";
 			owner_lazy = () -> TerminalManagementActionResult2Code.mmObject();
 		}
@@ -291,15 +293,13 @@ public class TerminalManagementActionResult2Code extends TerminalManagementActio
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TerminalManagementActionResult2Code";
 				definition = "Final result of the processed command at the ATM.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TerminalManagementActionResult2Code.mmConnectionError, com.tools20022.repository.codeset.TerminalManagementActionResult2Code.mmFormatError,
-						com.tools20022.repository.codeset.TerminalManagementActionResult2Code.mmHardware, com.tools20022.repository.codeset.TerminalManagementActionResult2Code.mmNotSupported,
-						com.tools20022.repository.codeset.TerminalManagementActionResult2Code.mmSecurity, com.tools20022.repository.codeset.TerminalManagementActionResult2Code.mmSuccess,
-						com.tools20022.repository.codeset.TerminalManagementActionResult2Code.mmSyntaxError, com.tools20022.repository.codeset.TerminalManagementActionResult2Code.mmTimeout,
-						com.tools20022.repository.codeset.TerminalManagementActionResult2Code.mmUnknownKeyReference);
+				code_lazy = () -> Arrays.asList(TerminalManagementActionResult2Code.mmConnectionError, TerminalManagementActionResult2Code.mmFormatError, TerminalManagementActionResult2Code.mmHardware,
+						TerminalManagementActionResult2Code.mmNotSupported, TerminalManagementActionResult2Code.mmSecurity, TerminalManagementActionResult2Code.mmSuccess, TerminalManagementActionResult2Code.mmSyntaxError,
+						TerminalManagementActionResult2Code.mmTimeout, TerminalManagementActionResult2Code.mmUnknownKeyReference);
 				trace_lazy = () -> TerminalManagementActionResultCode.mmObject();
 			}
 		});

@@ -20,11 +20,16 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.ProcessingStatus32Choice;
 import com.tools20022.repository.choice.SettlementOrIntraPosition1Choice;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.IntraPositionTransfer;
+import com.tools20022.repository.entity.SecuritiesBalance;
+import com.tools20022.repository.entity.SecuritiesTrade;
+import com.tools20022.repository.entity.System;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -116,11 +121,11 @@ public class IntraPositionCancellation2 {
 	 */
 	public static final MMMessageAssociationEnd mmAccountOwner = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.System.mmPartyRole;
+			businessElementTrace_lazy = () -> System.mmPartyRole;
 			componentContext_lazy = () -> IntraPositionCancellation2.mmObject();
 			isDerived = false;
 			xmlTag = "AcctOwnr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountOwner";
 			definition = "Party that owns the account.";
 			maxOccurs = 1;
@@ -165,11 +170,11 @@ public class IntraPositionCancellation2 {
 	 */
 	public static final MMMessageAttribute mmSafekeepingAccount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesBalance.mmSecuritiesAccount;
+			businessElementTrace_lazy = () -> SecuritiesBalance.mmSecuritiesAccount;
 			componentContext_lazy = () -> IntraPositionCancellation2.mmObject();
 			isDerived = false;
 			xmlTag = "SfkpgAcct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingAccount";
 			definition = "Account to or from which a securities entry is made.";
 			maxOccurs = 1;
@@ -210,7 +215,7 @@ public class IntraPositionCancellation2 {
 			componentContext_lazy = () -> IntraPositionCancellation2.mmObject();
 			isDerived = false;
 			xmlTag = "PrcgSts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProcessingStatus";
 			definition = "Status and status reason of the transaction.";
 			maxOccurs = 1;
@@ -252,7 +257,7 @@ public class IntraPositionCancellation2 {
 			componentContext_lazy = () -> IntraPositionCancellation2.mmObject();
 			isDerived = false;
 			xmlTag = "ReqRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestReference";
 			definition = "Unambiguous identification of the cancellation request.";
 			maxOccurs = 1;
@@ -293,7 +298,7 @@ public class IntraPositionCancellation2 {
 			componentContext_lazy = () -> IntraPositionCancellation2.mmObject();
 			isDerived = false;
 			xmlTag = "StsDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusDate";
 			definition = "Date and time at which the status was assigned.";
 			maxOccurs = 1;
@@ -339,11 +344,11 @@ public class IntraPositionCancellation2 {
 	 */
 	public static final MMMessageAttribute mmTransactionIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTrade.mmSecuritiesTradeRelatedIdentifications;
+			businessElementTrace_lazy = () -> SecuritiesTrade.mmSecuritiesTradeRelatedIdentifications;
 			componentContext_lazy = () -> IntraPositionCancellation2.mmObject();
 			isDerived = false;
 			xmlTag = "TxId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionIdentification";
 			definition = "References of the transaction for which the intra-position modification is requested.";
 			maxOccurs = 1;
@@ -384,7 +389,7 @@ public class IntraPositionCancellation2 {
 			componentContext_lazy = () -> IntraPositionCancellation2.mmObject();
 			isDerived = false;
 			xmlTag = "Undrlyg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Underlying";
 			definition = "Identifies additional details of the transaction.";
 			maxOccurs = 1;
@@ -397,13 +402,11 @@ public class IntraPositionCancellation2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IntraPositionCancellation2.mmAccountOwner, com.tools20022.repository.msg.IntraPositionCancellation2.mmSafekeepingAccount,
-						com.tools20022.repository.msg.IntraPositionCancellation2.mmProcessingStatus, com.tools20022.repository.msg.IntraPositionCancellation2.mmRequestReference,
-						com.tools20022.repository.msg.IntraPositionCancellation2.mmStatusDate, com.tools20022.repository.msg.IntraPositionCancellation2.mmTransactionIdentification,
-						com.tools20022.repository.msg.IntraPositionCancellation2.mmUnderlying);
+				messageElement_lazy = () -> Arrays.asList(IntraPositionCancellation2.mmAccountOwner, IntraPositionCancellation2.mmSafekeepingAccount, IntraPositionCancellation2.mmProcessingStatus,
+						IntraPositionCancellation2.mmRequestReference, IntraPositionCancellation2.mmStatusDate, IntraPositionCancellation2.mmTransactionIdentification, IntraPositionCancellation2.mmUnderlying);
 				trace_lazy = () -> IntraPositionTransfer.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "IntraPositionCancellation2";
 				definition = "Identifies the details of the transaction.";
 			}

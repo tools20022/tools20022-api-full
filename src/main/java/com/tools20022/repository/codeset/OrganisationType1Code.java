@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.OrganisationTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -83,7 +85,7 @@ public class OrganisationType1Code extends OrganisationTypeCode {
 	 */
 	public static final MMCode mmInvestmentFund = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestmentFund";
 			owner_lazy = () -> OrganisationType1Code.mmObject();
 		}
@@ -106,7 +108,7 @@ public class OrganisationType1Code extends OrganisationTypeCode {
 	 */
 	public static final MMCode mmPrivateAssociation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PrivateAssociation";
 			owner_lazy = () -> OrganisationType1Code.mmObject();
 		}
@@ -129,7 +131,7 @@ public class OrganisationType1Code extends OrganisationTypeCode {
 	 */
 	public static final MMCode mmPublic = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Public";
 			owner_lazy = () -> OrganisationType1Code.mmObject();
 		}
@@ -152,7 +154,7 @@ public class OrganisationType1Code extends OrganisationTypeCode {
 	 */
 	public static final MMCode mmPublicFund = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PublicFund";
 			owner_lazy = () -> OrganisationType1Code.mmObject();
 		}
@@ -161,12 +163,11 @@ public class OrganisationType1Code extends OrganisationTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OrganisationType1Code";
 				definition = "Specifies a type of organisation.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OrganisationType1Code.mmInvestmentFund, com.tools20022.repository.codeset.OrganisationType1Code.mmPrivateAssociation,
-						com.tools20022.repository.codeset.OrganisationType1Code.mmPublic, com.tools20022.repository.codeset.OrganisationType1Code.mmPublicFund);
+				code_lazy = () -> Arrays.asList(OrganisationType1Code.mmInvestmentFund, OrganisationType1Code.mmPrivateAssociation, OrganisationType1Code.mmPublic, OrganisationType1Code.mmPublicFund);
 				trace_lazy = () -> OrganisationTypeCode.mmObject();
 			}
 		});

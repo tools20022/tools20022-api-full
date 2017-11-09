@@ -19,9 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.BalanceQuantity8Choice;
 import com.tools20022.repository.codeset.ShortLong1Code;
 import com.tools20022.repository.entity.SecuritiesBalance;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -126,15 +128,15 @@ public class Balance8 {
 	 */
 	public static final MMMessageAttribute mmShortLongIndicator = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesBalance.mmShortLong;
+			businessElementTrace_lazy = () -> SecuritiesBalance.mmShortLong;
 			componentContext_lazy = () -> Balance8.mmObject();
 			isDerived = false;
 			xmlTag = "ShrtLngInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ShortLongIndicator";
 			definition = "Indication that the position is short or long.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Balance9.mmShortLongIndicator, com.tools20022.repository.msg.Balance12.mmShortLongIndicator);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Balance6.mmShortLongIndicator;
+			nextVersions_lazy = () -> Arrays.asList(Balance9.mmShortLongIndicator, Balance12.mmShortLongIndicator);
+			previousVersion_lazy = () -> Balance6.mmShortLongIndicator;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ShortLong1Code.mmObject();
@@ -193,11 +195,11 @@ public class Balance8 {
 			componentContext_lazy = () -> Balance8.mmObject();
 			isDerived = false;
 			xmlTag = "Qty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Quantity";
 			definition = "Total quantity of financial instruments of the balance.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Balance9.mmQuantity, com.tools20022.repository.msg.Balance12.mmQuantity);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Balance6.mmQuantity;
+			nextVersions_lazy = () -> Arrays.asList(Balance9.mmQuantity, Balance12.mmQuantity);
+			previousVersion_lazy = () -> Balance6.mmQuantity;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> BalanceQuantity8Choice.mmObject();
@@ -207,10 +209,10 @@ public class Balance8 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Balance8.mmShortLongIndicator, com.tools20022.repository.msg.Balance8.mmQuantity);
+				messageElement_lazy = () -> Arrays.asList(Balance8.mmShortLongIndicator, Balance8.mmQuantity);
 				trace_lazy = () -> SecuritiesBalance.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Balance8";
 				definition = "Net position of a segregated holding, in a single security, within the overall position held in a securities account. A securities balance is calculated from the sum of securities' receipts minus the sum of securities' deliveries.";
 				nextVersions_lazy = () -> Arrays.asList(Balance9.mmObject());

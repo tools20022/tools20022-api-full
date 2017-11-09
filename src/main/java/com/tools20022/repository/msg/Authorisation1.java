@@ -20,8 +20,10 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
 import com.tools20022.repository.entity.OperationThreshold;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -108,11 +110,11 @@ public class Authorisation1 {
 	 */
 	public static final MMMessageAttribute mmMinimumAmountPerTransaction = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OperationThreshold.mmMininumAmountPerTransaction;
+			businessElementTrace_lazy = () -> OperationThreshold.mmMininumAmountPerTransaction;
 			componentContext_lazy = () -> Authorisation1.mmObject();
 			isDerived = false;
 			xmlTag = "MinAmtPerTx";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MinimumAmountPerTransaction";
 			definition = "Minimum amount per transaction allowed by the mandate.";
 			maxOccurs = 1;
@@ -155,11 +157,11 @@ public class Authorisation1 {
 	 */
 	public static final MMMessageAttribute mmMaximumAmountPerTransaction = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OperationThreshold.mmMaximumAmount;
+			businessElementTrace_lazy = () -> OperationThreshold.mmMaximumAmount;
 			componentContext_lazy = () -> Authorisation1.mmObject();
 			isDerived = false;
 			xmlTag = "MaxAmtPerTx";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaximumAmountPerTransaction";
 			definition = "Maximum amount per transaction allowed by the mandate.";
 			maxOccurs = 1;
@@ -200,11 +202,11 @@ public class Authorisation1 {
 	 */
 	public static final MMMessageAssociationEnd mmMaximumAmountByPeriod = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OperationThreshold.mmMaximumAmount;
+			businessElementTrace_lazy = () -> OperationThreshold.mmMaximumAmount;
 			componentContext_lazy = () -> Authorisation1.mmObject();
 			isDerived = false;
 			xmlTag = "MaxAmtByPrd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaximumAmountByPeriod";
 			definition = "Maximum amount allowed over a specific period of time.";
 			minOccurs = 0;
@@ -216,11 +218,10 @@ public class Authorisation1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Authorisation1.mmMinimumAmountPerTransaction, com.tools20022.repository.msg.Authorisation1.mmMaximumAmountPerTransaction,
-						com.tools20022.repository.msg.Authorisation1.mmMaximumAmountByPeriod);
+				messageElement_lazy = () -> Arrays.asList(Authorisation1.mmMinimumAmountPerTransaction, Authorisation1.mmMaximumAmountPerTransaction, Authorisation1.mmMaximumAmountByPeriod);
 				trace_lazy = () -> OperationThreshold.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Authorisation1";
 				definition = "Autorisation of the mandate holder.";
 				nextVersions_lazy = () -> Arrays.asList(Authorisation2.mmObject());

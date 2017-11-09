@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.SupportedPaymentOption1Code
+ * SupportedPaymentOption1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -35,14 +45,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.SupportedPaymentOptionCode#mmPaymentApprovalOnly
  * SupportedPaymentOptionCode.mmPaymentApprovalOnly}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.SupportedPaymentOption1Code
- * SupportedPaymentOption1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -87,7 +89,7 @@ public class SupportedPaymentOptionCode {
 	 */
 	public static final MMCode mmPartialApproval = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartialApproval";
 			definition = "The entity supports a partial approval of the payment transaction.";
 			owner_lazy = () -> SupportedPaymentOptionCode.mmObject();
@@ -120,7 +122,7 @@ public class SupportedPaymentOptionCode {
 	 */
 	public static final MMCode mmPaymentApprovalOnly = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentApprovalOnly";
 			definition = "The entity supports the approval of the payment service along with the decline of additional requested services (as cash-back).";
 			owner_lazy = () -> SupportedPaymentOptionCode.mmObject();
@@ -131,11 +133,11 @@ public class SupportedPaymentOptionCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SupportedPaymentOptionCode";
 				definition = "Specifies the options supported for a payment transaction.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SupportedPaymentOptionCode.mmPartialApproval, com.tools20022.repository.codeset.SupportedPaymentOptionCode.mmPaymentApprovalOnly);
+				code_lazy = () -> Arrays.asList(SupportedPaymentOptionCode.mmPartialApproval, SupportedPaymentOptionCode.mmPaymentApprovalOnly);
 				derivation_lazy = () -> Arrays.asList(SupportedPaymentOption1Code.mmObject());
 			}
 		});

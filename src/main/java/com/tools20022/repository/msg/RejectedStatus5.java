@@ -19,10 +19,13 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.metamodel.MMXor;
 import com.tools20022.repository.codeset.RejectedStatusReason6Code;
 import com.tools20022.repository.datatype.Extended350Code;
 import com.tools20022.repository.entity.AccountStatus;
+import com.tools20022.repository.entity.StatusReason;
+import com.tools20022.repository.GeneratedRepository;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -110,11 +113,11 @@ public class RejectedStatus5 {
 	 */
 	public static final MMMessageAttribute mmReason = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmRejectedStatusReason;
+			businessElementTrace_lazy = () -> StatusReason.mmRejectedStatusReason;
 			componentContext_lazy = () -> RejectedStatus5.mmObject();
 			isDerived = false;
 			xmlTag = "Rsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reason";
 			definition = "Reason for a rejected status.";
 			maxOccurs = 1;
@@ -156,7 +159,7 @@ public class RejectedStatus5 {
 			componentContext_lazy = () -> RejectedStatus5.mmObject();
 			isDerived = false;
 			xmlTag = "XtndedRsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExtendedReason";
 			definition = "Reason for a rejected status.";
 			maxOccurs = 1;
@@ -169,6 +172,10 @@ public class RejectedStatus5 {
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
+	 * messageComponent} =
+	 * {@linkplain com.tools20022.repository.msg.RejectedStatus5
+	 * RejectedStatus5}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getImpactedElements
 	 * impactedElements} =
 	 * <ul>
@@ -179,10 +186,6 @@ public class RejectedStatus5 {
 	 * RejectedStatus5.mmExtendedReason}</li>
 	 * </ul>
 	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
-	 * messageComponent} =
-	 * {@linkplain com.tools20022.repository.msg.RejectedStatus5
-	 * RejectedStatus5}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -197,21 +200,21 @@ public class RejectedStatus5 {
 	 */
 	public static final MMXor mmReasonOrExtendedReasonRule = new MMXor() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReasonOrExtendedReasonRule";
 			definition = "Either Reason or ExtendedReason must be present, but not both.";
 			messageComponent_lazy = () -> RejectedStatus5.mmObject();
-			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RejectedStatus5.mmReason, com.tools20022.repository.msg.RejectedStatus5.mmExtendedReason);
+			impactedElements_lazy = () -> Arrays.asList(RejectedStatus5.mmReason, RejectedStatus5.mmExtendedReason);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RejectedStatus5.mmReason, com.tools20022.repository.msg.RejectedStatus5.mmExtendedReason);
+				messageElement_lazy = () -> Arrays.asList(RejectedStatus5.mmReason, RejectedStatus5.mmExtendedReason);
 				trace_lazy = () -> AccountStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
 						return DateFormat.getDateInstance(java.text.DateFormat.LONG).parse("September 9, 2016");
@@ -221,7 +224,7 @@ public class RejectedStatus5 {
 				})).get();
 				name = "RejectedStatus5";
 				definition = "Status is rejected.";
-				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RejectedStatus5.mmReasonOrExtendedReasonRule);
+				xors_lazy = () -> Arrays.asList(RejectedStatus5.mmReasonOrExtendedReasonRule);
 			}
 		});
 		return mmObject_lazy.get();

@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.TradeTransactionConditionCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -117,7 +119,7 @@ public class TradeTransactionCondition2Code extends TradeTransactionConditionCod
 	 */
 	public static final MMCode mmSpecialCumCoupon = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SpecialCumCoupon";
 			owner_lazy = () -> TradeTransactionCondition2Code.mmObject();
 		}
@@ -140,7 +142,7 @@ public class TradeTransactionCondition2Code extends TradeTransactionConditionCod
 	 */
 	public static final MMCode mmSpecialExCoupon = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SpecialExCoupon";
 			owner_lazy = () -> TradeTransactionCondition2Code.mmObject();
 		}
@@ -163,7 +165,7 @@ public class TradeTransactionCondition2Code extends TradeTransactionConditionCod
 	 */
 	public static final MMCode mmSpecialExBonus = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SpecialExBonus";
 			owner_lazy = () -> TradeTransactionCondition2Code.mmObject();
 		}
@@ -186,7 +188,7 @@ public class TradeTransactionCondition2Code extends TradeTransactionConditionCod
 	 */
 	public static final MMCode mmSpecialCumBonus = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SpecialCumBonus";
 			owner_lazy = () -> TradeTransactionCondition2Code.mmObject();
 		}
@@ -209,7 +211,7 @@ public class TradeTransactionCondition2Code extends TradeTransactionConditionCod
 	 */
 	public static final MMCode mmSpecialCumRights = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SpecialCumRights";
 			owner_lazy = () -> TradeTransactionCondition2Code.mmObject();
 		}
@@ -232,7 +234,7 @@ public class TradeTransactionCondition2Code extends TradeTransactionConditionCod
 	 */
 	public static final MMCode mmSpecialExRights = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SpecialExRights";
 			owner_lazy = () -> TradeTransactionCondition2Code.mmObject();
 		}
@@ -255,7 +257,7 @@ public class TradeTransactionCondition2Code extends TradeTransactionConditionCod
 	 */
 	public static final MMCode mmSpecialCumCapitalRepayments = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SpecialCumCapitalRepayments";
 			owner_lazy = () -> TradeTransactionCondition2Code.mmObject();
 		}
@@ -278,7 +280,7 @@ public class TradeTransactionCondition2Code extends TradeTransactionConditionCod
 	 */
 	public static final MMCode mmSpecialExCapitalRepayments = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SpecialExCapitalRepayments";
 			owner_lazy = () -> TradeTransactionCondition2Code.mmObject();
 		}
@@ -301,7 +303,7 @@ public class TradeTransactionCondition2Code extends TradeTransactionConditionCod
 	 */
 	public static final MMCode mmCashSettlement = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashSettlement";
 			owner_lazy = () -> TradeTransactionCondition2Code.mmObject();
 		}
@@ -324,7 +326,7 @@ public class TradeTransactionCondition2Code extends TradeTransactionConditionCod
 	 */
 	public static final MMCode mmSpecialPrice = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SpecialPrice";
 			owner_lazy = () -> TradeTransactionCondition2Code.mmObject();
 		}
@@ -347,7 +349,7 @@ public class TradeTransactionCondition2Code extends TradeTransactionConditionCod
 	 */
 	public static final MMCode mmSpecialCumDividend = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SpecialCumDividend";
 			owner_lazy = () -> TradeTransactionCondition2Code.mmObject();
 		}
@@ -370,7 +372,7 @@ public class TradeTransactionCondition2Code extends TradeTransactionConditionCod
 	 */
 	public static final MMCode mmSpecialExDividend = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SpecialExDividend";
 			owner_lazy = () -> TradeTransactionCondition2Code.mmObject();
 		}
@@ -393,7 +395,7 @@ public class TradeTransactionCondition2Code extends TradeTransactionConditionCod
 	 */
 	public static final MMCode mmGuaranteedDelivery = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GuaranteedDelivery";
 			owner_lazy = () -> TradeTransactionCondition2Code.mmObject();
 		}
@@ -402,18 +404,15 @@ public class TradeTransactionCondition2Code extends TradeTransactionConditionCod
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("SPCC");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TradeTransactionCondition2Code";
 				definition = "Specifies the conditions under which the order/trade is to be executed.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TradeTransactionCondition2Code.mmSpecialCumCoupon, com.tools20022.repository.codeset.TradeTransactionCondition2Code.mmSpecialExCoupon,
-						com.tools20022.repository.codeset.TradeTransactionCondition2Code.mmSpecialExBonus, com.tools20022.repository.codeset.TradeTransactionCondition2Code.mmSpecialCumBonus,
-						com.tools20022.repository.codeset.TradeTransactionCondition2Code.mmSpecialCumRights, com.tools20022.repository.codeset.TradeTransactionCondition2Code.mmSpecialExRights,
-						com.tools20022.repository.codeset.TradeTransactionCondition2Code.mmSpecialCumCapitalRepayments, com.tools20022.repository.codeset.TradeTransactionCondition2Code.mmSpecialExCapitalRepayments,
-						com.tools20022.repository.codeset.TradeTransactionCondition2Code.mmCashSettlement, com.tools20022.repository.codeset.TradeTransactionCondition2Code.mmSpecialPrice,
-						com.tools20022.repository.codeset.TradeTransactionCondition2Code.mmSpecialCumDividend, com.tools20022.repository.codeset.TradeTransactionCondition2Code.mmSpecialExDividend,
-						com.tools20022.repository.codeset.TradeTransactionCondition2Code.mmGuaranteedDelivery);
+				code_lazy = () -> Arrays.asList(TradeTransactionCondition2Code.mmSpecialCumCoupon, TradeTransactionCondition2Code.mmSpecialExCoupon, TradeTransactionCondition2Code.mmSpecialExBonus,
+						TradeTransactionCondition2Code.mmSpecialCumBonus, TradeTransactionCondition2Code.mmSpecialCumRights, TradeTransactionCondition2Code.mmSpecialExRights, TradeTransactionCondition2Code.mmSpecialCumCapitalRepayments,
+						TradeTransactionCondition2Code.mmSpecialExCapitalRepayments, TradeTransactionCondition2Code.mmCashSettlement, TradeTransactionCondition2Code.mmSpecialPrice, TradeTransactionCondition2Code.mmSpecialCumDividend,
+						TradeTransactionCondition2Code.mmSpecialExDividend, TradeTransactionCondition2Code.mmGuaranteedDelivery);
 				trace_lazy = () -> TradeTransactionConditionCode.mmObject();
 			}
 		});

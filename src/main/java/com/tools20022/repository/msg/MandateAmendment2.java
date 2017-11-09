@@ -19,9 +19,13 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.pain.MandateAmendmentRequestV02;
 import com.tools20022.repository.choice.OriginalMandate2Choice;
 import com.tools20022.repository.entity.DirectDebitMandate;
 import com.tools20022.repository.entity.Mandate;
+import com.tools20022.repository.entity.Status;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -117,7 +121,7 @@ public class MandateAmendment2 {
 			componentContext_lazy = () -> MandateAmendment2.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlMsgInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalMessageInformation";
 			definition = "Provides information on the original message.";
 			maxOccurs = 1;
@@ -161,11 +165,11 @@ public class MandateAmendment2 {
 	 */
 	public static final MMMessageAssociationEnd mmAmendmentReason = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.mmStatusReason;
+			businessElementTrace_lazy = () -> Status.mmStatusReason;
 			componentContext_lazy = () -> MandateAmendment2.mmObject();
 			isDerived = false;
 			xmlTag = "AmdmntRsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmendmentReason";
 			definition = "Provides detailed information on the amendment reason.";
 			maxOccurs = 1;
@@ -211,7 +215,7 @@ public class MandateAmendment2 {
 			componentContext_lazy = () -> MandateAmendment2.mmObject();
 			isDerived = false;
 			xmlTag = "Mndt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Mandate";
 			definition = "Provides the amended mandate data.";
 			maxOccurs = 1;
@@ -258,7 +262,7 @@ public class MandateAmendment2 {
 			componentContext_lazy = () -> MandateAmendment2.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlMndt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalMandate";
 			definition = "Provides the original mandate data.";
 			maxOccurs = 1;
@@ -271,12 +275,11 @@ public class MandateAmendment2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MandateAmendment2.mmOriginalMessageInformation, com.tools20022.repository.msg.MandateAmendment2.mmAmendmentReason,
-						com.tools20022.repository.msg.MandateAmendment2.mmMandate, com.tools20022.repository.msg.MandateAmendment2.mmOriginalMandate);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.pain.MandateAmendmentRequestV02.mmUnderlyingAmendmentDetails);
+				messageElement_lazy = () -> Arrays.asList(MandateAmendment2.mmOriginalMessageInformation, MandateAmendment2.mmAmendmentReason, MandateAmendment2.mmMandate, MandateAmendment2.mmOriginalMandate);
+				messageBuildingBlock_lazy = () -> Arrays.asList(MandateAmendmentRequestV02.mmUnderlyingAmendmentDetails);
 				trace_lazy = () -> Mandate.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MandateAmendment2";
 				definition = "Identifies the mandate to be amended and gives details of the new mandate.";
 				nextVersions_lazy = () -> Arrays.asList(MandateAmendment3.mmObject());

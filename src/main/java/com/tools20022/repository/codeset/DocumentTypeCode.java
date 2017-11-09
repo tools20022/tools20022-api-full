@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,23 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.DocumentType2Code
+ * DocumentType2Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.DocumentType3Code
+ * DocumentType3Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.DocumentType5Code
+ * DocumentType5Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.DocumentType1Code
+ * DocumentType1Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.DocumentType4Code
+ * DocumentType4Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.DocumentType6Code
+ * DocumentType6Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -90,23 +109,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * DocumentTypeCode.mmTradeServicesUtilityTransaction}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.DocumentType2Code
- * DocumentType2Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.DocumentType3Code
- * DocumentType3Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.DocumentType5Code
- * DocumentType5Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.DocumentType1Code
- * DocumentType1Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.DocumentType4Code
- * DocumentType4Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.DocumentType6Code
- * DocumentType6Code}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -157,7 +159,7 @@ public class DocumentTypeCode {
 	 */
 	public static final MMCode mmMeteredServiceInvoice = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MeteredServiceInvoice";
 			definition = "Document is an invoice claiming payment for the supply of metered services, for example gas or electricity supplied to a fixed meter.";
 			owner_lazy = () -> DocumentTypeCode.mmObject();
@@ -190,7 +192,7 @@ public class DocumentTypeCode {
 	 */
 	public static final MMCode mmCreditNoteRelatedToFinancialAdjustment = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CreditNoteRelatedToFinancialAdjustment";
 			definition = "Document is a credit note for the final amount settled for a commercial transaction.";
 			owner_lazy = () -> DocumentTypeCode.mmObject();
@@ -223,7 +225,7 @@ public class DocumentTypeCode {
 	 */
 	public static final MMCode mmDebitNoteRelatedToFinancialAdjustment = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DebitNoteRelatedToFinancialAdjustment";
 			definition = "Document is a debit note for the final amount settled for a commercial transaction.";
 			owner_lazy = () -> DocumentTypeCode.mmObject();
@@ -253,7 +255,7 @@ public class DocumentTypeCode {
 	 */
 	public static final MMCode mmCommercialInvoice = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CommercialInvoice";
 			definition = "Document is an invoice.";
 			owner_lazy = () -> DocumentTypeCode.mmObject();
@@ -283,7 +285,7 @@ public class DocumentTypeCode {
 	 */
 	public static final MMCode mmCreditNote = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CreditNote";
 			definition = "Document is a credit note.";
 			owner_lazy = () -> DocumentTypeCode.mmObject();
@@ -313,7 +315,7 @@ public class DocumentTypeCode {
 	 */
 	public static final MMCode mmDebitNote = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DebitNote";
 			definition = "Document is a debit note.";
 			owner_lazy = () -> DocumentTypeCode.mmObject();
@@ -346,7 +348,7 @@ public class DocumentTypeCode {
 	 */
 	public static final MMCode mmHireInvoice = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "HireInvoice";
 			definition = "Document is an invoice for the hiring of human resources or renting goods or equipment.";
 			owner_lazy = () -> DocumentTypeCode.mmObject();
@@ -376,7 +378,7 @@ public class DocumentTypeCode {
 	 */
 	public static final MMCode mmSelfBilledInvoice = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SelfBilledInvoice";
 			definition = "Document is an invoice issued by the debtor.";
 			owner_lazy = () -> DocumentTypeCode.mmObject();
@@ -409,7 +411,7 @@ public class DocumentTypeCode {
 	 */
 	public static final MMCode mmRemittanceAdviceMessage = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RemittanceAdviceMessage";
 			definition = "Document is a remittance advice sent separately from the current transaction.";
 			owner_lazy = () -> DocumentTypeCode.mmObject();
@@ -442,7 +444,7 @@ public class DocumentTypeCode {
 	 */
 	public static final MMCode mmRelatedPaymentInstruction = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedPaymentInstruction";
 			definition = "Document is a linked payment instruction to which the current payment instruction is related, eg, in a cover scenario.";
 			owner_lazy = () -> DocumentTypeCode.mmObject();
@@ -475,7 +477,7 @@ public class DocumentTypeCode {
 	 */
 	public static final MMCode mmCommercialContract = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CommercialContract";
 			definition = "Document is an agreement between the parties, stipulating the terms and conditions of the delivery of goods or services.";
 			owner_lazy = () -> DocumentTypeCode.mmObject();
@@ -508,7 +510,7 @@ public class DocumentTypeCode {
 	 */
 	public static final MMCode mmForeignExchangeDealReference = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ForeignExchangeDealReference";
 			definition = "Document is a pre-agreed or pre-arranged foreign exchange transaction to which the payment transaction refers.";
 			owner_lazy = () -> DocumentTypeCode.mmObject();
@@ -541,7 +543,7 @@ public class DocumentTypeCode {
 	 */
 	public static final MMCode mmStatementOfAccount = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "StatementOfAccount";
 			definition = "Document is a statement of the transactions posted to the debtor's account at the supplier.";
 			owner_lazy = () -> DocumentTypeCode.mmObject();
@@ -571,7 +573,7 @@ public class DocumentTypeCode {
 	 */
 	public static final MMCode mmDispatchAdvice = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DispatchAdvice";
 			definition = "Document is a dispatch advice.";
 			owner_lazy = () -> DocumentTypeCode.mmObject();
@@ -601,7 +603,7 @@ public class DocumentTypeCode {
 	 */
 	public static final MMCode mmPurchaseOrder = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PurchaseOrder";
 			definition = "Document is a purchase order.";
 			owner_lazy = () -> DocumentTypeCode.mmObject();
@@ -634,7 +636,7 @@ public class DocumentTypeCode {
 	 */
 	public static final MMCode mmStructuredCommunicationReference = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "StructuredCommunicationReference";
 			definition = "Document is a structured communication reference provided by the creditor to identify the referred transaction.";
 			owner_lazy = () -> DocumentTypeCode.mmObject();
@@ -664,7 +666,7 @@ public class DocumentTypeCode {
 	 */
 	public static final MMCode mmBillOfLading = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BillOfLading";
 			definition = "Document is a shipping notice.";
 			owner_lazy = () -> DocumentTypeCode.mmObject();
@@ -694,7 +696,7 @@ public class DocumentTypeCode {
 	 */
 	public static final MMCode mmVoucher = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Voucher";
 			definition = "Document is an electronic payment document.";
 			owner_lazy = () -> DocumentTypeCode.mmObject();
@@ -725,7 +727,7 @@ public class DocumentTypeCode {
 	 */
 	public static final MMCode mmAccountReceivableOpenItem = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AccountReceivableOpenItem";
 			definition = "Document is a payment that applies to a specific source document.";
 			owner_lazy = () -> DocumentTypeCode.mmObject();
@@ -758,7 +760,7 @@ public class DocumentTypeCode {
 	 */
 	public static final MMCode mmTradeServicesUtilityTransaction = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TradeServicesUtilityTransaction";
 			definition = "Document is a transaction identifier as assigned by the Trade Services Utility.";
 			owner_lazy = () -> DocumentTypeCode.mmObject();
@@ -769,20 +771,16 @@ public class DocumentTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("MSIN");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DocumentTypeCode";
 				definition = "Specifies a type of financial or commercial document.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DocumentTypeCode.mmMeteredServiceInvoice, com.tools20022.repository.codeset.DocumentTypeCode.mmCreditNoteRelatedToFinancialAdjustment,
-						com.tools20022.repository.codeset.DocumentTypeCode.mmDebitNoteRelatedToFinancialAdjustment, com.tools20022.repository.codeset.DocumentTypeCode.mmCommercialInvoice,
-						com.tools20022.repository.codeset.DocumentTypeCode.mmCreditNote, com.tools20022.repository.codeset.DocumentTypeCode.mmDebitNote, com.tools20022.repository.codeset.DocumentTypeCode.mmHireInvoice,
-						com.tools20022.repository.codeset.DocumentTypeCode.mmSelfBilledInvoice, com.tools20022.repository.codeset.DocumentTypeCode.mmRemittanceAdviceMessage,
-						com.tools20022.repository.codeset.DocumentTypeCode.mmRelatedPaymentInstruction, com.tools20022.repository.codeset.DocumentTypeCode.mmCommercialContract,
-						com.tools20022.repository.codeset.DocumentTypeCode.mmForeignExchangeDealReference, com.tools20022.repository.codeset.DocumentTypeCode.mmStatementOfAccount,
-						com.tools20022.repository.codeset.DocumentTypeCode.mmDispatchAdvice, com.tools20022.repository.codeset.DocumentTypeCode.mmPurchaseOrder,
-						com.tools20022.repository.codeset.DocumentTypeCode.mmStructuredCommunicationReference, com.tools20022.repository.codeset.DocumentTypeCode.mmBillOfLading, com.tools20022.repository.codeset.DocumentTypeCode.mmVoucher,
-						com.tools20022.repository.codeset.DocumentTypeCode.mmAccountReceivableOpenItem, com.tools20022.repository.codeset.DocumentTypeCode.mmTradeServicesUtilityTransaction);
+				code_lazy = () -> Arrays.asList(DocumentTypeCode.mmMeteredServiceInvoice, DocumentTypeCode.mmCreditNoteRelatedToFinancialAdjustment, DocumentTypeCode.mmDebitNoteRelatedToFinancialAdjustment,
+						DocumentTypeCode.mmCommercialInvoice, DocumentTypeCode.mmCreditNote, DocumentTypeCode.mmDebitNote, DocumentTypeCode.mmHireInvoice, DocumentTypeCode.mmSelfBilledInvoice, DocumentTypeCode.mmRemittanceAdviceMessage,
+						DocumentTypeCode.mmRelatedPaymentInstruction, DocumentTypeCode.mmCommercialContract, DocumentTypeCode.mmForeignExchangeDealReference, DocumentTypeCode.mmStatementOfAccount, DocumentTypeCode.mmDispatchAdvice,
+						DocumentTypeCode.mmPurchaseOrder, DocumentTypeCode.mmStructuredCommunicationReference, DocumentTypeCode.mmBillOfLading, DocumentTypeCode.mmVoucher, DocumentTypeCode.mmAccountReceivableOpenItem,
+						DocumentTypeCode.mmTradeServicesUtilityTransaction);
 				derivation_lazy = () -> Arrays.asList(DocumentType2Code.mmObject(), DocumentType3Code.mmObject(), DocumentType5Code.mmObject(), DocumentType1Code.mmObject(), DocumentType4Code.mmObject(), DocumentType6Code.mmObject());
 			}
 		});

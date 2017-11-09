@@ -19,8 +19,10 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.CollateralValueReportOrError2Choice;
 import com.tools20022.repository.choice.PartyIdentification71Choice;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -102,7 +104,7 @@ public class CollateralValueReport1 {
 			componentContext_lazy = () -> CollateralValueReport1.mmObject();
 			isDerived = false;
 			xmlTag = "Acct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Account";
 			definition = "Unique identification, as assigned by the account servicer, to unambiguously identify the account on which information is requested.";
 			maxOccurs = 1;
@@ -145,7 +147,7 @@ public class CollateralValueReport1 {
 			componentContext_lazy = () -> CollateralValueReport1.mmObject();
 			isDerived = false;
 			xmlTag = "SctiesAcctOwnr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesAccountOwner";
 			definition = "Unique and unambiguous identification of the securities account owner.";
 			maxOccurs = 1;
@@ -189,7 +191,7 @@ public class CollateralValueReport1 {
 			componentContext_lazy = () -> CollateralValueReport1.mmObject();
 			isDerived = false;
 			xmlTag = "SctiesAcctSvcr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesAccountServicer";
 			definition = "Party that manages the securities account on behalf of the account owner.";
 			maxOccurs = 1;
@@ -234,7 +236,7 @@ public class CollateralValueReport1 {
 			componentContext_lazy = () -> CollateralValueReport1.mmObject();
 			isDerived = false;
 			xmlTag = "CollValRpt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralValueReport";
 			definition = "Provides information specific to the report on collateral value positions.";
 			minOccurs = 0;
@@ -246,10 +248,10 @@ public class CollateralValueReport1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CollateralValueReport1.mmAccount, com.tools20022.repository.msg.CollateralValueReport1.mmSecuritiesAccountOwner,
-						com.tools20022.repository.msg.CollateralValueReport1.mmSecuritiesAccountServicer, com.tools20022.repository.msg.CollateralValueReport1.mmCollateralValueReport);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays
+						.asList(CollateralValueReport1.mmAccount, CollateralValueReport1.mmSecuritiesAccountOwner, CollateralValueReport1.mmSecuritiesAccountServicer, CollateralValueReport1.mmCollateralValueReport);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CollateralValueReport1";
 				definition = "Reports either on the collateral value report or on a business error.";
 			}

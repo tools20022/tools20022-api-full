@@ -17,15 +17,14 @@
 
 package com.tools20022.repository.entity;
 
-import com.tools20022.metamodel.MMBusinessAssociationEnd;
-import com.tools20022.metamodel.MMBusinessAttribute;
-import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.*;
+import com.tools20022.repository.choice.FinancialInstrumentProperties1Choice;
 import com.tools20022.repository.choice.WarrantStyle2Choice;
 import com.tools20022.repository.codeset.WarrantStyleCode;
 import com.tools20022.repository.datatype.BaseOneRate;
 import com.tools20022.repository.entity.Security;
-import com.tools20022.repository.msg.Warrant1;
-import com.tools20022.repository.msg.Warrant2;
+import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -39,17 +38,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Warrant#mmSubscriptionPrice
- * Warrant.mmSubscriptionPrice}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Warrant#mmMultiplier
- * Warrant.mmMultiplier}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Warrant#mmStyle
- * Warrant.mmStyle}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Warrant#mmWarrantParity
- * Warrant.mmWarrantParity}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Warrant1 Warrant1}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.WarrantStyle2Choice
+ * WarrantStyle2Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Warrant2 Warrant2}</li>
  * </ul>
  * </li>
  * <li>
@@ -77,14 +73,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
  * superType} = {@linkplain com.tools20022.repository.entity.Security Security}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Warrant1 Warrant1}</li>
- * <li>{@linkplain com.tools20022.repository.choice.WarrantStyle2Choice
- * WarrantStyle2Choice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Warrant2 Warrant2}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Warrant#mmSubscriptionPrice
+ * Warrant.mmSubscriptionPrice}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Warrant#mmMultiplier
+ * Warrant.mmMultiplier}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Warrant#mmStyle
+ * Warrant.mmStyle}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Warrant#mmWarrantParity
+ * Warrant.mmWarrantParity}</li>
  * </ul>
  * </li>
  * <li>
@@ -225,28 +224,22 @@ public class Warrant extends Security {
 	 */
 	public static final MMBusinessAssociationEnd mmSubscriptionPrice = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrumentAttributes8.mmSubscriptionPrice, com.tools20022.repository.msg.FinancialInstrumentAttributes20.mmSubscriptionPrice,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes35.mmSubscriptionPrice, com.tools20022.repository.msg.FinancialInstrumentAttributes41.mmSubscriptionPrice,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes4.mmSubscriptionPrice, com.tools20022.repository.msg.FinancialInstrumentAttributes13.mmSubscriptionPrice,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes21.mmSubscriptionPrice, com.tools20022.repository.msg.FinancialInstrumentAttributes26.mmSubscriptionPrice,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes36.mmSubscriptionPrice, com.tools20022.repository.msg.FinancialInstrumentAttributes42.mmSubscriptionPrice,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes27.mmSubscriptionPrice, com.tools20022.repository.msg.FinancialInstrumentAttributes14.mmSubscriptionPrice,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes30.mmSubscriptionPrice, com.tools20022.repository.msg.FinancialInstrumentAttributes28.mmSubscriptionPrice,
-					com.tools20022.repository.msg.Warrant1.mmSubscriptionPrice, com.tools20022.repository.msg.FinancialInstrumentAttributes31.mmSubscriptionPrice,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes44.mmSubscriptionPrice, com.tools20022.repository.msg.FinancialInstrumentAttributes15.mmSubscriptionPrice,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes29.mmSubscriptionPrice, com.tools20022.repository.msg.Warrant2.mmSubscriptionPrice,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes2.mmSubscriptionPrice, com.tools20022.repository.msg.FinancialInstrumentAttributes63.mmSubscriptionPrice,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes64.mmSubscriptionPrice, com.tools20022.repository.msg.FinancialInstrumentAttributes75.mmSubscriptionPrice,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes78.mmSubscriptionPrice);
+			derivation_lazy = () -> Arrays.asList(FinancialInstrumentAttributes8.mmSubscriptionPrice, FinancialInstrumentAttributes20.mmSubscriptionPrice, FinancialInstrumentAttributes35.mmSubscriptionPrice,
+					FinancialInstrumentAttributes41.mmSubscriptionPrice, FinancialInstrumentAttributes4.mmSubscriptionPrice, FinancialInstrumentAttributes13.mmSubscriptionPrice, FinancialInstrumentAttributes21.mmSubscriptionPrice,
+					FinancialInstrumentAttributes26.mmSubscriptionPrice, FinancialInstrumentAttributes36.mmSubscriptionPrice, FinancialInstrumentAttributes42.mmSubscriptionPrice, FinancialInstrumentAttributes27.mmSubscriptionPrice,
+					FinancialInstrumentAttributes14.mmSubscriptionPrice, FinancialInstrumentAttributes30.mmSubscriptionPrice, FinancialInstrumentAttributes28.mmSubscriptionPrice, Warrant1.mmSubscriptionPrice,
+					FinancialInstrumentAttributes31.mmSubscriptionPrice, FinancialInstrumentAttributes44.mmSubscriptionPrice, FinancialInstrumentAttributes15.mmSubscriptionPrice, FinancialInstrumentAttributes29.mmSubscriptionPrice,
+					Warrant2.mmSubscriptionPrice, FinancialInstrumentAttributes2.mmSubscriptionPrice, FinancialInstrumentAttributes63.mmSubscriptionPrice, FinancialInstrumentAttributes64.mmSubscriptionPrice,
+					FinancialInstrumentAttributes75.mmSubscriptionPrice, FinancialInstrumentAttributes78.mmSubscriptionPrice);
 			elementContext_lazy = () -> Warrant.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SubscriptionPrice";
 			definition = "Pre-determined price at which the holder of a warrant is entitled to buy the underlying instrument.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmRelatedWarrant;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 		}
 	};
@@ -289,10 +282,10 @@ public class Warrant extends Security {
 	 */
 	public static final MMBusinessAttribute mmMultiplier = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Warrant1.mmMultiplier, com.tools20022.repository.msg.Warrant2.mmMultiplier);
+			derivation_lazy = () -> Arrays.asList(Warrant1.mmMultiplier, Warrant2.mmMultiplier);
 			elementContext_lazy = () -> Warrant.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Multiplier";
 			definition = "Specifies the ratio or multiply factor used to convert from contracts to shares.";
 			maxOccurs = 1;
@@ -341,10 +334,10 @@ public class Warrant extends Security {
 	 */
 	public static final MMBusinessAttribute mmStyle = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.WarrantStyle2Choice.mmCode, com.tools20022.repository.choice.WarrantStyle2Choice.mmProprietary, com.tools20022.repository.msg.Warrant2.mmType);
+			derivation_lazy = () -> Arrays.asList(WarrantStyle2Choice.mmCode, WarrantStyle2Choice.mmProprietary, Warrant2.mmType);
 			elementContext_lazy = () -> Warrant.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Style";
 			definition = "Specifies the expiration style of the warrant.";
 			maxOccurs = 1;
@@ -413,18 +406,17 @@ public class Warrant extends Security {
 	 */
 	public static final MMBusinessAssociationEnd mmWarrantParity = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrumentAttributes48.mmWarrantParity, com.tools20022.repository.msg.FinancialInstrumentAttributes55.mmWarrantParity,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes66.mmWarrantParity, com.tools20022.repository.msg.FinancialInstrumentAttributes70.mmWarrantParity,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes79.mmWarrantParity, com.tools20022.repository.msg.FinancialInstrumentAttributes85.mmWarrantParity);
+			derivation_lazy = () -> Arrays.asList(FinancialInstrumentAttributes48.mmWarrantParity, FinancialInstrumentAttributes55.mmWarrantParity, FinancialInstrumentAttributes66.mmWarrantParity,
+					FinancialInstrumentAttributes70.mmWarrantParity, FinancialInstrumentAttributes79.mmWarrantParity, FinancialInstrumentAttributes85.mmWarrantParity);
 			elementContext_lazy = () -> Warrant.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WarrantParity";
 			definition = "Provides the ratio between the quantity of warrants and the quantity of underlying securities. ";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.QuantityRatio.mmwarrant;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.QuantityRatio.mmObject();
 		}
 	};
@@ -432,15 +424,14 @@ public class Warrant extends Security {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Warrant";
 				definition = "Financial instrument that gives the holder the right to purchase shares or bonds at a given price within a specified time.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesPricing.mmRelatedWarrant, com.tools20022.repository.entity.QuantityRatio.mmwarrant);
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.FinancialInstrumentProperties1Choice.mmWarrant, com.tools20022.repository.msg.FinancialInstrument28.mmWarrant);
+				derivationElement_lazy = () -> Arrays.asList(FinancialInstrumentProperties1Choice.mmWarrant, FinancialInstrument28.mmWarrant);
 				superType_lazy = () -> Security.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Warrant.mmSubscriptionPrice, com.tools20022.repository.entity.Warrant.mmMultiplier, com.tools20022.repository.entity.Warrant.mmStyle,
-						com.tools20022.repository.entity.Warrant.mmWarrantParity);
+				element_lazy = () -> Arrays.asList(Warrant.mmSubscriptionPrice, Warrant.mmMultiplier, Warrant.mmStyle, Warrant.mmWarrantParity);
 				derivationComponent_lazy = () -> Arrays.asList(Warrant1.mmObject(), WarrantStyle2Choice.mmObject(), Warrant2.mmObject());
 			}
 		});

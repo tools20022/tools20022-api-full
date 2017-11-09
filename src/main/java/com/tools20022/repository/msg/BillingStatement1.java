@@ -20,11 +20,12 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.BillingStatementStatus1Code;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Max35Text;
-import com.tools20022.repository.entity.CashAccountService;
-import com.tools20022.repository.entity.Invoice;
+import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -144,14 +145,14 @@ public class BillingStatement1 {
 	 */
 	public static final MMMessageAttribute mmStatementIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmIdentification;
+			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> BillingStatement1.mmObject();
 			isDerived = false;
 			xmlTag = "StmtId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatementIdentification";
 			definition = "Identification of the customer billing statement.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BillingStatement2.mmStatementIdentification);
+			nextVersions_lazy = () -> Arrays.asList(BillingStatement2.mmStatementIdentification);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -203,14 +204,14 @@ public class BillingStatement1 {
 	 */
 	public static final MMMessageAttribute mmFromToDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Invoice.mmPeriodCovered;
+			businessElementTrace_lazy = () -> Invoice.mmPeriodCovered;
 			componentContext_lazy = () -> BillingStatement1.mmObject();
 			isDerived = false;
 			xmlTag = "FrToDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FromToDate";
 			definition = "Date range between the start date and the end date for which the statement is issued.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BillingStatement2.mmFromToDate);
+			nextVersions_lazy = () -> Arrays.asList(BillingStatement2.mmFromToDate);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> com.tools20022.repository.msg.DatePeriod1.mmObject();
@@ -259,14 +260,14 @@ public class BillingStatement1 {
 	 */
 	public static final MMMessageAttribute mmCreationDateTime = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Document.mmIssueDate;
+			businessElementTrace_lazy = () -> Document.mmIssueDate;
 			componentContext_lazy = () -> BillingStatement1.mmObject();
 			isDerived = false;
 			xmlTag = "CreDtTm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreationDateTime";
 			definition = "Date the statement message was created.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BillingStatement2.mmCreationDateTime);
+			nextVersions_lazy = () -> Arrays.asList(BillingStatement2.mmCreationDateTime);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
@@ -315,14 +316,14 @@ public class BillingStatement1 {
 	 */
 	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Document.mmStatus;
+			businessElementTrace_lazy = () -> Document.mmStatus;
 			componentContext_lazy = () -> BillingStatement1.mmObject();
 			isDerived = false;
 			xmlTag = "Sts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Status";
 			definition = "Defines the status of the statement.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BillingStatement2.mmStatus);
+			nextVersions_lazy = () -> Arrays.asList(BillingStatement2.mmStatus);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> BillingStatementStatus1Code.mmObject();
@@ -371,14 +372,14 @@ public class BillingStatement1 {
 	 */
 	public static final MMMessageAssociationEnd mmAccountCharacteristics = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashAccountContract.mmCashAccount;
+			businessElementTrace_lazy = () -> CashAccountContract.mmCashAccount;
 			componentContext_lazy = () -> BillingStatement1.mmObject();
 			isDerived = false;
 			xmlTag = "AcctChrtcs";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountCharacteristics";
 			definition = "Specifies the details of the account characteristics.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BillingStatement2.mmAccountCharacteristics);
+			nextVersions_lazy = () -> Arrays.asList(BillingStatement2.mmAccountCharacteristics);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -428,10 +429,10 @@ public class BillingStatement1 {
 			componentContext_lazy = () -> BillingStatement1.mmObject();
 			isDerived = false;
 			xmlTag = "RateData";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RateData";
 			definition = "Identifies the non tax per annum rate and factor values used within the statement along with any time dependent charge basis.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BillingStatement2.mmRateData);
+			nextVersions_lazy = () -> Arrays.asList(BillingStatement2.mmRateData);
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.BillingRate1.mmObject();
@@ -479,14 +480,14 @@ public class BillingStatement1 {
 	 */
 	public static final MMMessageAssociationEnd mmCurrencyExchange = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Invoice.mmCurrencyExchange;
+			businessElementTrace_lazy = () -> Invoice.mmCurrencyExchange;
 			componentContext_lazy = () -> BillingStatement1.mmObject();
 			isDerived = false;
 			xmlTag = "CcyXchg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrencyExchange";
 			definition = "Specifies details related to currency exchange data.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BillingStatement2.mmCurrencyExchange);
+			nextVersions_lazy = () -> Arrays.asList(BillingStatement2.mmCurrencyExchange);
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.CurrencyExchange6.mmObject();
@@ -537,14 +538,14 @@ public class BillingStatement1 {
 	 */
 	public static final MMMessageAssociationEnd mmBalance = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashAccount.mmCashBalance;
+			businessElementTrace_lazy = () -> CashAccount.mmCashBalance;
 			componentContext_lazy = () -> BillingStatement1.mmObject();
 			isDerived = false;
 			xmlTag = "Bal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Balance";
 			definition = "Identifies the average value of balances held within the statement period.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BillingStatement2.mmBalance);
+			nextVersions_lazy = () -> Arrays.asList(BillingStatement2.mmBalance);
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.BillingBalance1.mmObject();
@@ -599,10 +600,10 @@ public class BillingStatement1 {
 			componentContext_lazy = () -> BillingStatement1.mmObject();
 			isDerived = false;
 			xmlTag = "Compstn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Compensation";
 			definition = "Identifies the set of values and totals that are used to provide compensation information, service and tax totals.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BillingStatement2.mmCompensation);
+			nextVersions_lazy = () -> Arrays.asList(BillingStatement2.mmCompensation);
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.BillingCompensation1.mmObject();
@@ -656,10 +657,10 @@ public class BillingStatement1 {
 			componentContext_lazy = () -> BillingStatement1.mmObject();
 			isDerived = false;
 			xmlTag = "Svc";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Service";
 			definition = "Specifies the values used for every line item service in the statement.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BillingStatement2.mmService);
+			nextVersions_lazy = () -> Arrays.asList(BillingStatement2.mmService);
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.BillingService1.mmObject();
@@ -708,14 +709,14 @@ public class BillingStatement1 {
 	 */
 	public static final MMMessageAssociationEnd mmTaxRegion = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.mmAdministrationZone;
+			businessElementTrace_lazy = () -> Tax.mmAdministrationZone;
 			componentContext_lazy = () -> BillingStatement1.mmObject();
 			isDerived = false;
 			xmlTag = "TaxRgn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxRegion";
 			definition = "Tax region(s) that levy a tax on the services within this statement.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BillingStatement2.mmTaxRegion);
+			nextVersions_lazy = () -> Arrays.asList(BillingStatement2.mmTaxRegion);
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.BillingTaxRegion1.mmObject();
@@ -767,14 +768,14 @@ public class BillingStatement1 {
 	 */
 	public static final MMMessageAssociationEnd mmBalanceAdjustment = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashAccount.mmCashBalance;
+			businessElementTrace_lazy = () -> CashAccount.mmCashBalance;
 			componentContext_lazy = () -> BillingStatement1.mmObject();
 			isDerived = false;
 			xmlTag = "BalAdjstmnt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BalanceAdjustment";
 			definition = "One or more sections that identify balance or float adjustments to the account. They can reflect either adjustments to the current statement or adjustments to statements from prior reporting periods.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BillingStatement2.mmBalanceAdjustment);
+			nextVersions_lazy = () -> Arrays.asList(BillingStatement2.mmBalanceAdjustment);
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.BalanceAdjustment1.mmObject();
@@ -831,10 +832,10 @@ public class BillingStatement1 {
 			componentContext_lazy = () -> BillingStatement1.mmObject();
 			isDerived = false;
 			xmlTag = "SvcAdjstmnt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ServiceAdjustment";
 			definition = "One or more sections that identify line item service adjustments to the account. They reflect adjustments to statements from prior reporting periods.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BillingStatement2.mmServiceAdjustment);
+			nextVersions_lazy = () -> Arrays.asList(BillingStatement2.mmServiceAdjustment);
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.BillingServiceAdjustment1.mmObject();
@@ -844,14 +845,12 @@ public class BillingStatement1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BillingStatement1.mmStatementIdentification, com.tools20022.repository.msg.BillingStatement1.mmFromToDate,
-						com.tools20022.repository.msg.BillingStatement1.mmCreationDateTime, com.tools20022.repository.msg.BillingStatement1.mmStatus, com.tools20022.repository.msg.BillingStatement1.mmAccountCharacteristics,
-						com.tools20022.repository.msg.BillingStatement1.mmRateData, com.tools20022.repository.msg.BillingStatement1.mmCurrencyExchange, com.tools20022.repository.msg.BillingStatement1.mmBalance,
-						com.tools20022.repository.msg.BillingStatement1.mmCompensation, com.tools20022.repository.msg.BillingStatement1.mmService, com.tools20022.repository.msg.BillingStatement1.mmTaxRegion,
-						com.tools20022.repository.msg.BillingStatement1.mmBalanceAdjustment, com.tools20022.repository.msg.BillingStatement1.mmServiceAdjustment);
+				messageElement_lazy = () -> Arrays.asList(BillingStatement1.mmStatementIdentification, BillingStatement1.mmFromToDate, BillingStatement1.mmCreationDateTime, BillingStatement1.mmStatus,
+						BillingStatement1.mmAccountCharacteristics, BillingStatement1.mmRateData, BillingStatement1.mmCurrencyExchange, BillingStatement1.mmBalance, BillingStatement1.mmCompensation, BillingStatement1.mmService,
+						BillingStatement1.mmTaxRegion, BillingStatement1.mmBalanceAdjustment, BillingStatement1.mmServiceAdjustment);
 				trace_lazy = () -> Invoice.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "BillingStatement1";
 				definition = "Details of the statement reporting the bank services billing.";
 				nextVersions_lazy = () -> Arrays.asList(BillingStatement2.mmObject());

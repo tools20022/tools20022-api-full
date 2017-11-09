@@ -19,9 +19,13 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ActiveCurrencyCode;
 import com.tools20022.repository.datatype.*;
 import com.tools20022.repository.entity.AccountEntry;
+import com.tools20022.repository.entity.ObligationFulfilment;
+import com.tools20022.repository.entity.Payment;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -116,11 +120,11 @@ public class ATMAccountStatement2 {
 	 */
 	public static final MMMessageAttribute mmTransactionDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ObligationFulfilment.mmDate;
+			businessElementTrace_lazy = () -> ObligationFulfilment.mmDate;
 			componentContext_lazy = () -> ATMAccountStatement2.mmObject();
 			isDerived = false;
 			xmlTag = "TxDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionDate";
 			definition = "Date of the transaction.";
 			maxOccurs = 1;
@@ -163,11 +167,11 @@ public class ATMAccountStatement2 {
 	 */
 	public static final MMMessageAttribute mmValueDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.mmValueDate;
+			businessElementTrace_lazy = () -> Payment.mmValueDate;
 			componentContext_lazy = () -> ATMAccountStatement2.mmObject();
 			isDerived = false;
 			xmlTag = "ValDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValueDate";
 			definition = "Value date of the transaction.";
 			maxOccurs = 1;
@@ -208,7 +212,7 @@ public class ATMAccountStatement2 {
 			componentContext_lazy = () -> ATMAccountStatement2.mmObject();
 			isDerived = false;
 			xmlTag = "ShrtTxt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ShortText";
 			definition = "Short text to display or print for the statement.";
 			maxOccurs = 1;
@@ -250,7 +254,7 @@ public class ATMAccountStatement2 {
 			componentContext_lazy = () -> ATMAccountStatement2.mmObject();
 			isDerived = false;
 			xmlTag = "CdtTx";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditTransaction";
 			definition = "True if credit transaction.";
 			maxOccurs = 1;
@@ -294,11 +298,11 @@ public class ATMAccountStatement2 {
 	 */
 	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.mmAmount;
+			businessElementTrace_lazy = () -> Payment.mmAmount;
 			componentContext_lazy = () -> ATMAccountStatement2.mmObject();
 			isDerived = false;
 			xmlTag = "Amt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Amount of the transaction.";
 			maxOccurs = 1;
@@ -342,11 +346,11 @@ public class ATMAccountStatement2 {
 	 */
 	public static final MMMessageAttribute mmCurrency = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.mmCurrencyExchange;
+			businessElementTrace_lazy = () -> Payment.mmCurrencyExchange;
 			componentContext_lazy = () -> ATMAccountStatement2.mmObject();
 			isDerived = false;
 			xmlTag = "Ccy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Currency";
 			definition = "Currency of the amount.";
 			maxOccurs = 1;
@@ -387,7 +391,7 @@ public class ATMAccountStatement2 {
 			componentContext_lazy = () -> ATMAccountStatement2.mmObject();
 			isDerived = false;
 			xmlTag = "LngTxt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LongText";
 			definition = "Alternative text of the statement to print or display.";
 			maxOccurs = 1;
@@ -399,12 +403,11 @@ public class ATMAccountStatement2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMAccountStatement2.mmTransactionDate, com.tools20022.repository.msg.ATMAccountStatement2.mmValueDate,
-						com.tools20022.repository.msg.ATMAccountStatement2.mmShortText, com.tools20022.repository.msg.ATMAccountStatement2.mmCreditTransaction, com.tools20022.repository.msg.ATMAccountStatement2.mmAmount,
-						com.tools20022.repository.msg.ATMAccountStatement2.mmCurrency, com.tools20022.repository.msg.ATMAccountStatement2.mmLongText);
+				messageElement_lazy = () -> Arrays.asList(ATMAccountStatement2.mmTransactionDate, ATMAccountStatement2.mmValueDate, ATMAccountStatement2.mmShortText, ATMAccountStatement2.mmCreditTransaction, ATMAccountStatement2.mmAmount,
+						ATMAccountStatement2.mmCurrency, ATMAccountStatement2.mmLongText);
 				trace_lazy = () -> AccountEntry.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ATMAccountStatement2";
 				definition = "Statement information of an account.";
 				previousVersion_lazy = () -> ATMAccountStatement1.mmObject();

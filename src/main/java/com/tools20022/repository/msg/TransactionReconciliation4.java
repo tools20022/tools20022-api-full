@@ -20,10 +20,13 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.Max70Text;
 import com.tools20022.repository.datatype.TrueFalseIndicator;
+import com.tools20022.repository.entity.CardPayment;
 import com.tools20022.repository.entity.ReconciliationTransaction;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -123,10 +126,10 @@ public class TransactionReconciliation4 {
 			componentContext_lazy = () -> TransactionReconciliation4.mmObject();
 			isDerived = false;
 			xmlTag = "ClsPrd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClosePeriod";
 			definition = "Indicates if the transaction requires a closure of the reconciliation period.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TransactionReconciliation3.mmClosePeriod;
+			previousVersion_lazy = () -> TransactionReconciliation3.mmClosePeriod;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
@@ -171,14 +174,14 @@ public class TransactionReconciliation4 {
 	 */
 	public static final MMMessageAssociationEnd mmReconciliationTransactionIdentification = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPayment.mmCardPaymentAcquiring;
+			businessElementTrace_lazy = () -> CardPayment.mmCardPaymentAcquiring;
 			componentContext_lazy = () -> TransactionReconciliation4.mmObject();
 			isDerived = false;
 			xmlTag = "RcncltnTxId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReconciliationTransactionIdentification";
 			definition = "Unique identification of a reconciliation transaction.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TransactionReconciliation3.mmReconciliationTransactionIdentification;
+			previousVersion_lazy = () -> TransactionReconciliation3.mmReconciliationTransactionIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -228,14 +231,14 @@ public class TransactionReconciliation4 {
 	 */
 	public static final MMMessageAttribute mmReconciliationIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ReconciliationTransaction.mmReconciliationIdentification;
+			businessElementTrace_lazy = () -> ReconciliationTransaction.mmReconciliationIdentification;
 			componentContext_lazy = () -> TransactionReconciliation4.mmObject();
 			isDerived = false;
 			xmlTag = "RcncltnId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReconciliationIdentification";
 			definition = "Unique identification of the reconciliation period between the acceptor and the acquirer.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TransactionReconciliation3.mmReconciliationIdentification;
+			previousVersion_lazy = () -> TransactionReconciliation3.mmReconciliationIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -281,10 +284,10 @@ public class TransactionReconciliation4 {
 			componentContext_lazy = () -> TransactionReconciliation4.mmObject();
 			isDerived = false;
 			xmlTag = "TxTtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionTotals";
 			definition = "Transaction totals during the reconciliation period for a certain type of transaction.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TransactionReconciliation3.mmTransactionTotals;
+			previousVersion_lazy = () -> TransactionReconciliation3.mmTransactionTotals;
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.TransactionTotals7.mmObject();
@@ -329,10 +332,10 @@ public class TransactionReconciliation4 {
 			componentContext_lazy = () -> TransactionReconciliation4.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlTxData";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalTransactionData";
 			definition = "Additional information related to the reconciliation transaction.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TransactionReconciliation3.mmAdditionalTransactionData;
+			previousVersion_lazy = () -> TransactionReconciliation3.mmAdditionalTransactionData;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max70Text.mmObject();
@@ -342,12 +345,11 @@ public class TransactionReconciliation4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionReconciliation4.mmClosePeriod, com.tools20022.repository.msg.TransactionReconciliation4.mmReconciliationTransactionIdentification,
-						com.tools20022.repository.msg.TransactionReconciliation4.mmReconciliationIdentification, com.tools20022.repository.msg.TransactionReconciliation4.mmTransactionTotals,
-						com.tools20022.repository.msg.TransactionReconciliation4.mmAdditionalTransactionData);
+				messageElement_lazy = () -> Arrays.asList(TransactionReconciliation4.mmClosePeriod, TransactionReconciliation4.mmReconciliationTransactionIdentification, TransactionReconciliation4.mmReconciliationIdentification,
+						TransactionReconciliation4.mmTransactionTotals, TransactionReconciliation4.mmAdditionalTransactionData);
 				trace_lazy = () -> ReconciliationTransaction.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TransactionReconciliation4";
 				definition = "Reconciliation transaction between an acceptor and an acquirer.";
 				previousVersion_lazy = () -> TransactionReconciliation3.mmObject();

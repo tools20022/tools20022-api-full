@@ -20,6 +20,7 @@ package com.tools20022.repository.area.camt;
 import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.CashManagementPreviousVersion;
 import com.tools20022.repository.msg.AccountStatement5;
 import com.tools20022.repository.msg.GroupHeader58;
@@ -54,6 +55,9 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code camt.053.001.05}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.CashManagementPreviousVersion
@@ -86,9 +90,6 @@ import java.util.List;
  * BankToCustomerStatementV05.mmSupplementaryData}</li>
  * </ul>
  * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code camt.053.001.05}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -155,11 +156,11 @@ public class BankToCustomerStatementV05 {
 	public static final MMMessageBuildingBlock mmGroupHeader = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "GrpHdr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GroupHeader";
 			definition = "Common information for the message.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.BankToCustomerStatementV06.mmGroupHeader);
-			previousVersion_lazy = () -> com.tools20022.repository.area.camt.BankToCustomerStatementV04.mmGroupHeader;
+			nextVersions_lazy = () -> Arrays.asList(BankToCustomerStatementV06.mmGroupHeader);
+			previousVersion_lazy = () -> BankToCustomerStatementV04.mmGroupHeader;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GroupHeader58.mmObject();
@@ -206,11 +207,11 @@ public class BankToCustomerStatementV05 {
 	public static final MMMessageBuildingBlock mmStatement = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Stmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Statement";
 			definition = "Reports on booked entries and balances for a cash account.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.BankToCustomerStatementV06.mmStatement);
-			previousVersion_lazy = () -> com.tools20022.repository.area.camt.BankToCustomerStatementV04.mmStatement;
+			nextVersions_lazy = () -> Arrays.asList(BankToCustomerStatementV06.mmStatement);
+			previousVersion_lazy = () -> BankToCustomerStatementV04.mmStatement;
 			minOccurs = 1;
 			complexType_lazy = () -> AccountStatement5.mmObject();
 		}
@@ -258,11 +259,11 @@ public class BankToCustomerStatementV05 {
 	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SplmtryData";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryData";
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.BankToCustomerStatementV06.mmSupplementaryData);
-			previousVersion_lazy = () -> com.tools20022.repository.area.camt.BankToCustomerStatementV04.mmSupplementaryData;
+			nextVersions_lazy = () -> Arrays.asList(BankToCustomerStatementV06.mmSupplementaryData);
+			previousVersion_lazy = () -> BankToCustomerStatementV04.mmSupplementaryData;
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
@@ -271,7 +272,7 @@ public class BankToCustomerStatementV05 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "BankToCustomerStatementV05";
 				definition = "Scope\r\nThe BankToCustomerStatement message is sent by the account servicer to an account owner or to a party authorised by the account owner to receive the message. It is used to inform the account owner, or authorised party, of the entries booked to the account, and to provide the owner with balance information on the account at a given point in time.\r\nUsage\r\nThe BankToCustomerStatement message can contain reports for more than one account. It provides information for cash management and/or reconciliation.\r\nIt contains information on booked entries only.\r\nIt can include underlying details of transactions that have been included in the entry.\r\nThe message is exchanged as defined between the account servicer and the account owner. It provides information on items that have been booked to the account and also balance information. Depending on services and schedule agreed between banks and their customers, statements may be generated and exchanged accordingly, for example for intraday or prior day periods.\r\nIt is possible that the receiver of the message is not the account owner, but a party entitled through arrangement with the account owner to receive the account information (also known as recipient).";
 				nextVersions_lazy = () -> Arrays.asList(BankToCustomerStatementV06.mmObject());
@@ -280,8 +281,7 @@ public class BankToCustomerStatementV05 {
 				rootElement = "Document";
 				xmlTag = "BkToCstmrStmt";
 				businessArea_lazy = () -> CashManagementPreviousVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.BankToCustomerStatementV05.mmGroupHeader, com.tools20022.repository.area.camt.BankToCustomerStatementV05.mmStatement,
-						com.tools20022.repository.area.camt.BankToCustomerStatementV05.mmSupplementaryData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(BankToCustomerStatementV05.mmGroupHeader, BankToCustomerStatementV05.mmStatement, BankToCustomerStatementV05.mmSupplementaryData);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "camt";

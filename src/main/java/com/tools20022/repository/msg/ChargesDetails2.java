@@ -19,11 +19,14 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.metamodel.MMXor;
 import com.tools20022.repository.codeset.ChargeType8Code;
 import com.tools20022.repository.datatype.CurrencyAndAmount;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.entity.Adjustment;
 import com.tools20022.repository.entity.Charges;
+import com.tools20022.repository.GeneratedRepository;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -119,11 +122,11 @@ public class ChargesDetails2 {
 	 */
 	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Charges.mmChargeType;
+			businessElementTrace_lazy = () -> Charges.mmChargeType;
 			componentContext_lazy = () -> ChargesDetails2.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Type of service for which a charge is asked or paid.";
 			maxOccurs = 1;
@@ -166,11 +169,11 @@ public class ChargesDetails2 {
 	 */
 	public static final MMMessageAttribute mmOtherChargesType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Charges.mmChargeType;
+			businessElementTrace_lazy = () -> Charges.mmChargeType;
 			componentContext_lazy = () -> ChargesDetails2.mmObject();
 			isDerived = false;
 			xmlTag = "OthrChrgsTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherChargesType";
 			definition = "Specifies the type of charge by means of a code.";
 			maxOccurs = 1;
@@ -221,14 +224,14 @@ public class ChargesDetails2 {
 	 */
 	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Adjustment.mmAmount;
+			businessElementTrace_lazy = () -> Adjustment.mmAmount;
 			componentContext_lazy = () -> ChargesDetails2.mmObject();
 			isDerived = false;
 			xmlTag = "Amt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Amount of money asked or paid for the charge.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ChargesDetails4.mmAmount);
+			nextVersions_lazy = () -> Arrays.asList(ChargesDetails4.mmAmount);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
@@ -240,6 +243,10 @@ public class ChargesDetails2 {
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
+	 * messageComponent} =
+	 * {@linkplain com.tools20022.repository.msg.ChargesDetails2
+	 * ChargesDetails2}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getImpactedElements
 	 * impactedElements} =
 	 * <ul>
@@ -250,10 +257,6 @@ public class ChargesDetails2 {
 	 * ChargesDetails2.mmOtherChargesType}</li>
 	 * </ul>
 	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
-	 * messageComponent} =
-	 * {@linkplain com.tools20022.repository.msg.ChargesDetails2
-	 * ChargesDetails2}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -269,21 +272,21 @@ public class ChargesDetails2 {
 	 */
 	public static final MMXor mmTypeOrOtherChargesTypeRule = new MMXor() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TypeOrOtherChargesTypeRule";
 			definition = "If Type is present, then OtherChargesType is not allowed. If Type is not present, then OtherChargesType is mandatory.";
 			messageComponent_lazy = () -> ChargesDetails2.mmObject();
-			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ChargesDetails2.mmType, com.tools20022.repository.msg.ChargesDetails2.mmOtherChargesType);
+			impactedElements_lazy = () -> Arrays.asList(ChargesDetails2.mmType, ChargesDetails2.mmOtherChargesType);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ChargesDetails2.mmType, com.tools20022.repository.msg.ChargesDetails2.mmOtherChargesType, com.tools20022.repository.msg.ChargesDetails2.mmAmount);
+				messageElement_lazy = () -> Arrays.asList(ChargesDetails2.mmType, ChargesDetails2.mmOtherChargesType, ChargesDetails2.mmAmount);
 				trace_lazy = () -> Charges.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
 						return DateFormat.getDateInstance(java.text.DateFormat.LONG).parse("September 9, 2016");
@@ -294,7 +297,7 @@ public class ChargesDetails2 {
 				name = "ChargesDetails2";
 				definition = "Amount of money associated with a service.";
 				nextVersions_lazy = () -> Arrays.asList(ChargesDetails4.mmObject());
-				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ChargesDetails2.mmTypeOrOtherChargesTypeRule);
+				xors_lazy = () -> Arrays.asList(ChargesDetails2.mmTypeOrOtherChargesTypeRule);
 			}
 		});
 		return mmObject_lazy.get();

@@ -20,8 +20,10 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.NoCriteria1Code;
 import com.tools20022.repository.entity.InvestmentFund;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.FundParameters2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -96,7 +98,7 @@ public class FundParameters1Choice {
 			componentContext_lazy = () -> FundParameters1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Params";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Parameters";
 			definition = "Report parameters.";
 			maxOccurs = 1;
@@ -143,7 +145,7 @@ public class FundParameters1Choice {
 			componentContext_lazy = () -> FundParameters1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "NoCrit";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoCriteria";
 			definition = "Specifies that there is no criteria for the report. The request is a request for all reports, rather than reports attributed to a specific fund manager, date or financial instrument.";
 			maxOccurs = 1;
@@ -155,10 +157,10 @@ public class FundParameters1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.FundParameters1Choice.mmParameters, com.tools20022.repository.choice.FundParameters1Choice.mmNoCriteria);
+				messageElement_lazy = () -> Arrays.asList(FundParameters1Choice.mmParameters, FundParameters1Choice.mmNoCriteria);
 				trace_lazy = () -> InvestmentFund.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "FundParameters1Choice";
 				definition = "Choice of fund parameters.";
 			}

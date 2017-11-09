@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.MessageTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -89,7 +91,7 @@ public class CashForecastMessage1Code extends MessageTypeCode {
 	 */
 	public static final MMCode mmEstimated = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Estimated";
 			owner_lazy = () -> CashForecastMessage1Code.mmObject();
 		}
@@ -112,7 +114,7 @@ public class CashForecastMessage1Code extends MessageTypeCode {
 	 */
 	public static final MMCode mmEstimatedDetailed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EstimatedDetailed";
 			owner_lazy = () -> CashForecastMessage1Code.mmObject();
 		}
@@ -135,7 +137,7 @@ public class CashForecastMessage1Code extends MessageTypeCode {
 	 */
 	public static final MMCode mmConfirmed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Confirmed";
 			owner_lazy = () -> CashForecastMessage1Code.mmObject();
 		}
@@ -158,7 +160,7 @@ public class CashForecastMessage1Code extends MessageTypeCode {
 	 */
 	public static final MMCode mmCornfirmedDetailed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CornfirmedDetailed";
 			owner_lazy = () -> CashForecastMessage1Code.mmObject();
 		}
@@ -167,13 +169,12 @@ public class CashForecastMessage1Code extends MessageTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CF40");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CashForecastMessage1Code";
 				definition = "Specifies the fund cash forecast message.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CashForecastMessage1Code.mmEstimated, com.tools20022.repository.codeset.CashForecastMessage1Code.mmEstimatedDetailed,
-						com.tools20022.repository.codeset.CashForecastMessage1Code.mmConfirmed, com.tools20022.repository.codeset.CashForecastMessage1Code.mmCornfirmedDetailed);
+				code_lazy = () -> Arrays.asList(CashForecastMessage1Code.mmEstimated, CashForecastMessage1Code.mmEstimatedDetailed, CashForecastMessage1Code.mmConfirmed, CashForecastMessage1Code.mmCornfirmedDetailed);
 				trace_lazy = () -> MessageTypeCode.mmObject();
 			}
 		});

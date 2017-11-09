@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ServiceAdjustmentTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -83,7 +85,7 @@ public class ServiceAdjustmentType1Code extends ServiceAdjustmentTypeCode {
 	 */
 	public static final MMCode mmCompensable = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Compensable";
 			owner_lazy = () -> ServiceAdjustmentType1Code.mmObject();
 		}
@@ -106,7 +108,7 @@ public class ServiceAdjustmentType1Code extends ServiceAdjustmentTypeCode {
 	 */
 	public static final MMCode mmNonCompensable = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonCompensable";
 			owner_lazy = () -> ServiceAdjustmentType1Code.mmObject();
 		}
@@ -115,12 +117,12 @@ public class ServiceAdjustmentType1Code extends ServiceAdjustmentTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("COMP");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ServiceAdjustmentType1Code";
 				definition = "Defines the type of allowed service adjustment.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ServiceAdjustmentType1Code.mmCompensable, com.tools20022.repository.codeset.ServiceAdjustmentType1Code.mmNonCompensable);
+				code_lazy = () -> Arrays.asList(ServiceAdjustmentType1Code.mmCompensable, ServiceAdjustmentType1Code.mmNonCompensable);
 				trace_lazy = () -> ServiceAdjustmentTypeCode.mmObject();
 			}
 		});

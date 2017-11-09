@@ -20,8 +20,12 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ISINOct2015Identifier;
+import com.tools20022.repository.entity.SecuritiesIdentification;
 import com.tools20022.repository.entity.Security;
+import com.tools20022.repository.entity.Spread;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -98,11 +102,11 @@ public class FinancialInstrument58 {
 	 */
 	public static final MMMessageAttribute mmISIN = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesIdentification.mmSecurityIdentification;
+			businessElementTrace_lazy = () -> SecuritiesIdentification.mmSecurityIdentification;
 			componentContext_lazy = () -> FinancialInstrument58.mmObject();
 			isDerived = false;
 			xmlTag = "ISIN";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ISIN";
 			definition = "Identification of the index on which the financial instrument is based.";
 			maxOccurs = 1;
@@ -145,11 +149,11 @@ public class FinancialInstrument58 {
 	 */
 	public static final MMMessageAssociationEnd mmName = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Spread.mmIndex;
+			businessElementTrace_lazy = () -> Spread.mmIndex;
 			componentContext_lazy = () -> FinancialInstrument58.mmObject();
 			isDerived = false;
 			xmlTag = "Nm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Name";
 			definition = "Name of the index on which the financial instrument is based.";
 			maxOccurs = 1;
@@ -162,10 +166,10 @@ public class FinancialInstrument58 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrument58.mmISIN, com.tools20022.repository.msg.FinancialInstrument58.mmName);
+				messageElement_lazy = () -> Arrays.asList(FinancialInstrument58.mmISIN, FinancialInstrument58.mmName);
 				trace_lazy = () -> Security.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FinancialInstrument58";
 				definition = "Specifies underlying instruments or index a derivative has.";
 			}

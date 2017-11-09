@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.RefreshTimeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -82,7 +84,7 @@ public class RefreshTime1Code extends RefreshTimeCode {
 	 */
 	public static final MMCode mmImmediate = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Immediate";
 			owner_lazy = () -> RefreshTime1Code.mmObject();
 		}
@@ -105,7 +107,7 @@ public class RefreshTime1Code extends RefreshTimeCode {
 	 */
 	public static final MMCode mmExhaust = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Exhaust";
 			owner_lazy = () -> RefreshTime1Code.mmObject();
 		}
@@ -114,12 +116,12 @@ public class RefreshTime1Code extends RefreshTimeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("IMME");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RefreshTime1Code";
 				definition = "Defines when to refresh.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RefreshTime1Code.mmImmediate, com.tools20022.repository.codeset.RefreshTime1Code.mmExhaust);
+				code_lazy = () -> Arrays.asList(RefreshTime1Code.mmImmediate, RefreshTime1Code.mmExhaust);
 				trace_lazy = () -> RefreshTimeCode.mmObject();
 			}
 		});

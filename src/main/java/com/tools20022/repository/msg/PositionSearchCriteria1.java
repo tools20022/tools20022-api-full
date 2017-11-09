@@ -20,11 +20,13 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.PartyIdentification71Choice;
 import com.tools20022.repository.choice.SecuritiesAccount1Choice;
 import com.tools20022.repository.choice.SecuritiesBalanceType2Choice;
 import com.tools20022.repository.codeset.CountryCode;
 import com.tools20022.repository.datatype.TrueFalseIndicator;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -112,7 +114,7 @@ public class PositionSearchCriteria1 {
 			componentContext_lazy = () -> PositionSearchCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "AcctOwnr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountOwner";
 			definition = "Party that legally owns the account.";
 			maxOccurs = 1;
@@ -159,7 +161,7 @@ public class PositionSearchCriteria1 {
 			componentContext_lazy = () -> PositionSearchCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "AcctSvcr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountServicer";
 			definition = "Party that manages the account on behalf of the account owner, that is manages the registration and booking of entries on the account, calculates balances on the account and provides information about the account.";
 			maxOccurs = 1;
@@ -200,7 +202,7 @@ public class PositionSearchCriteria1 {
 			componentContext_lazy = () -> PositionSearchCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "SfkpgAcct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingAccount";
 			definition = "Account to or from which a securities entry is made.";
 			maxOccurs = 1;
@@ -245,7 +247,7 @@ public class PositionSearchCriteria1 {
 			componentContext_lazy = () -> PositionSearchCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "FinInstrm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrument";
 			definition = "Financial instrument representing a sum of rights of the investor vis-à-vis the issuer.";
 			maxOccurs = 1;
@@ -287,7 +289,7 @@ public class PositionSearchCriteria1 {
 			componentContext_lazy = () -> PositionSearchCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "CtryOfIsse";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CountryOfIssue";
 			definition = "Country where the security is issued.";
 			maxOccurs = 1;
@@ -330,7 +332,7 @@ public class PositionSearchCriteria1 {
 			componentContext_lazy = () -> PositionSearchCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "SubBalTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubBalanceType";
 			definition = "Defines specific restriction characteristics for a securities position. ";
 			maxOccurs = 1;
@@ -373,7 +375,7 @@ public class PositionSearchCriteria1 {
 			componentContext_lazy = () -> PositionSearchCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "RtrZeroPos";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReturnZeroPosition";
 			definition = "Option to provide output zero position in the results. ";
 			maxOccurs = 1;
@@ -385,12 +387,10 @@ public class PositionSearchCriteria1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PositionSearchCriteria1.mmAccountOwner, com.tools20022.repository.msg.PositionSearchCriteria1.mmAccountServicer,
-						com.tools20022.repository.msg.PositionSearchCriteria1.mmSafekeepingAccount, com.tools20022.repository.msg.PositionSearchCriteria1.mmFinancialInstrument,
-						com.tools20022.repository.msg.PositionSearchCriteria1.mmCountryOfIssue, com.tools20022.repository.msg.PositionSearchCriteria1.mmSubBalanceType,
-						com.tools20022.repository.msg.PositionSearchCriteria1.mmReturnZeroPosition);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(PositionSearchCriteria1.mmAccountOwner, PositionSearchCriteria1.mmAccountServicer, PositionSearchCriteria1.mmSafekeepingAccount, PositionSearchCriteria1.mmFinancialInstrument,
+						PositionSearchCriteria1.mmCountryOfIssue, PositionSearchCriteria1.mmSubBalanceType, PositionSearchCriteria1.mmReturnZeroPosition);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "PositionSearchCriteria1";
 				definition = "Defines the securities account position query criteria.";
 			}

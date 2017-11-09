@@ -19,8 +19,10 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.ProductCharacteristics1Choice;
 import com.tools20022.repository.entity.ProductCharacteristics;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -107,14 +109,14 @@ public class ProductCharacteristics3 {
 	 */
 	public static final MMMessageAttribute mmCharacteristic = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ProductCharacteristics.mmCharacteristics;
+			businessElementTrace_lazy = () -> ProductCharacteristics.mmCharacteristics;
 			componentContext_lazy = () -> ProductCharacteristics3.mmObject();
 			isDerived = false;
 			xmlTag = "Chrtc";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Characteristic";
 			definition = "Characteristics of the product.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ProductCharacteristics2.mmCharacteristic;
+			previousVersion_lazy = () -> ProductCharacteristics2.mmCharacteristic;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> ProductCharacteristics1Choice.mmObject();
@@ -158,10 +160,10 @@ public class ProductCharacteristics3 {
 			componentContext_lazy = () -> ProductCharacteristics3.mmObject();
 			isDerived = false;
 			xmlTag = "ValMeasr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValueMeasure";
 			definition = "Measurement value for this product characteristic.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ProductCharacteristics2.mmValueMeasure;
+			previousVersion_lazy = () -> ProductCharacteristics2.mmValueMeasure;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.Quantity10.mmObject();
@@ -171,10 +173,10 @@ public class ProductCharacteristics3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ProductCharacteristics3.mmCharacteristic, com.tools20022.repository.msg.ProductCharacteristics3.mmValueMeasure);
+				messageElement_lazy = () -> Arrays.asList(ProductCharacteristics3.mmCharacteristic, ProductCharacteristics3.mmValueMeasure);
 				trace_lazy = () -> ProductCharacteristics.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ProductCharacteristics3";
 				definition = "Product characteristic applicable to this trade product.";
 				previousVersion_lazy = () -> ProductCharacteristics2.mmObject();

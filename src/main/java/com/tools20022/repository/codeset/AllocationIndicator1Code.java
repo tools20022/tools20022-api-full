@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.AllocationIndicatorCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -89,7 +91,7 @@ public class AllocationIndicator1Code extends AllocationIndicatorCode {
 	 */
 	public static final MMCode mmPostallocation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Post-allocation";
 			owner_lazy = () -> AllocationIndicator1Code.mmObject();
 		}
@@ -112,7 +114,7 @@ public class AllocationIndicator1Code extends AllocationIndicatorCode {
 	 */
 	public static final MMCode mmPreallocation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Pre-allocation";
 			owner_lazy = () -> AllocationIndicator1Code.mmObject();
 		}
@@ -135,7 +137,7 @@ public class AllocationIndicator1Code extends AllocationIndicatorCode {
 	 */
 	public static final MMCode mmUnallocated = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unallocated";
 			owner_lazy = () -> AllocationIndicator1Code.mmObject();
 		}
@@ -144,13 +146,12 @@ public class AllocationIndicator1Code extends AllocationIndicatorCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("POST");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AllocationIndicator1Code";
 				definition = "Specifies whether the trade is a pre-allocation or a post-allocation trade, or whether the trade is unallocated.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AllocationIndicator1Code.mmPostallocation, com.tools20022.repository.codeset.AllocationIndicator1Code.mmPreallocation,
-						com.tools20022.repository.codeset.AllocationIndicator1Code.mmUnallocated);
+				code_lazy = () -> Arrays.asList(AllocationIndicator1Code.mmPostallocation, AllocationIndicator1Code.mmPreallocation, AllocationIndicator1Code.mmUnallocated);
 				trace_lazy = () -> AllocationIndicatorCode.mmObject();
 			}
 		});

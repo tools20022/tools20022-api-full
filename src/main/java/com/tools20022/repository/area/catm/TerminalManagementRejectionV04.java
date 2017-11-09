@@ -20,6 +20,7 @@ package com.tools20022.repository.area.catm;
 import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.TerminalManagementLatestVersion;
 import com.tools20022.repository.msg.AcceptorRejection3;
 import com.tools20022.repository.msg.Header28;
@@ -36,6 +37,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code catm.004.001.04}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.TerminalManagementLatestVersion
@@ -70,9 +74,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * TerminalManagementRejectionV04.mmReject}</li>
  * </ul>
  * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code catm.004.001.04}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -123,10 +124,10 @@ public class TerminalManagementRejectionV04 {
 	public static final MMMessageBuildingBlock mmHeader = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Hdr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Header";
 			definition = "Rejection message management information.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.catm.TerminalManagementRejectionV03.mmHeader;
+			previousVersion_lazy = () -> TerminalManagementRejectionV03.mmHeader;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> Header28.mmObject();
@@ -164,10 +165,10 @@ public class TerminalManagementRejectionV04 {
 	public static final MMMessageBuildingBlock mmReject = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Rjct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reject";
 			definition = "Information related to the reject.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.catm.TerminalManagementRejectionV03.mmReject;
+			previousVersion_lazy = () -> TerminalManagementRejectionV03.mmReject;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> AcceptorRejection3.mmObject();
@@ -177,7 +178,7 @@ public class TerminalManagementRejectionV04 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TerminalManagementRejectionV04";
 				definition = "The TerminalManagementRejection message is sent by the terminal manager to reject a message request sent by an acceptor, to indicate that the received message could not be processed.";
 				previousVersion_lazy = () -> TerminalManagementRejectionV03.mmObject();
@@ -185,7 +186,7 @@ public class TerminalManagementRejectionV04 {
 				rootElement = "Document";
 				xmlTag = "TermnlMgmtRjctn";
 				businessArea_lazy = () -> TerminalManagementLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.catm.TerminalManagementRejectionV04.mmHeader, com.tools20022.repository.area.catm.TerminalManagementRejectionV04.mmReject);
+				messageBuildingBlock_lazy = () -> Arrays.asList(TerminalManagementRejectionV04.mmHeader, TerminalManagementRejectionV04.mmReject);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "catm";

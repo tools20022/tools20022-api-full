@@ -20,12 +20,12 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CreditDebitCode;
 import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
 import com.tools20022.repository.datatype.Max2000Text;
-import com.tools20022.repository.entity.FinancialDocument;
-import com.tools20022.repository.entity.Instalment;
-import com.tools20022.repository.entity.Invoice;
+import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -134,7 +134,7 @@ public class FinancialItem1 {
 			componentContext_lazy = () -> FinancialItem1.mmObject();
 			isDerived = false;
 			xmlTag = "ItmCntxt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ItemContext";
 			definition = "Parameters identifying the context of the item.";
 			maxOccurs = 1;
@@ -183,7 +183,7 @@ public class FinancialItem1 {
 			componentContext_lazy = () -> FinancialItem1.mmObject();
 			isDerived = false;
 			xmlTag = "FinDocRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialDocumentReference";
 			definition = "Identifier of financial document that is the base document for this item, for example an invoice number.";
 			minOccurs = 0;
@@ -226,11 +226,11 @@ public class FinancialItem1 {
 	 */
 	public static final MMMessageAttribute mmCreditDebitIndicator = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Invoice.mmCreditDebitIndicator;
+			businessElementTrace_lazy = () -> Invoice.mmCreditDebitIndicator;
 			componentContext_lazy = () -> FinancialItem1.mmObject();
 			isDerived = false;
 			xmlTag = "CdtDbtInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditDebitIndicator";
 			definition = "Indicates whether the value is a debit or credit.";
 			maxOccurs = 1;
@@ -272,11 +272,11 @@ public class FinancialItem1 {
 	 */
 	public static final MMMessageAssociationEnd mmTotalAmount = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Invoice.mmTotalInvoiceAmount;
+			businessElementTrace_lazy = () -> Invoice.mmTotalInvoiceAmount;
 			componentContext_lazy = () -> FinancialItem1.mmObject();
 			isDerived = false;
 			xmlTag = "TtlAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalAmount";
 			definition = "Specifies the total amount related to the financial document.";
 			maxOccurs = 1;
@@ -320,11 +320,11 @@ public class FinancialItem1 {
 	 */
 	public static final MMMessageAttribute mmDueAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Adjustment.mmAmount;
+			businessElementTrace_lazy = () -> Adjustment.mmAmount;
 			componentContext_lazy = () -> FinancialItem1.mmObject();
 			isDerived = false;
 			xmlTag = "DueAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DueAmount";
 			definition = "Specifies the remaining monetary amount.";
 			maxOccurs = 1;
@@ -368,7 +368,7 @@ public class FinancialItem1 {
 			componentContext_lazy = () -> FinancialItem1.mmObject();
 			isDerived = false;
 			xmlTag = "InstlmtInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstalmentInformation";
 			definition = "Instalment information for payment.";
 			minOccurs = 0;
@@ -409,7 +409,7 @@ public class FinancialItem1 {
 			componentContext_lazy = () -> FinancialItem1.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInformation";
 			definition = "Additional proprietary textual information concerning the item.";
 			maxOccurs = 1;
@@ -450,7 +450,7 @@ public class FinancialItem1 {
 			componentContext_lazy = () -> FinancialItem1.mmObject();
 			isDerived = false;
 			xmlTag = "AssoctdDoc";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AssociatedDocument";
 			definition = "Associated free form document, for example a delivery confirmation.";
 			minOccurs = 0;
@@ -492,11 +492,11 @@ public class FinancialItem1 {
 	 */
 	public static final MMMessageAssociationEnd mmValidationStatusInformation = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvoiceFinancingAgreement.mmInvoiceFinancingStatus;
+			businessElementTrace_lazy = () -> InvoiceFinancingAgreement.mmInvoiceFinancingStatus;
 			componentContext_lazy = () -> FinancialItem1.mmObject();
 			isDerived = false;
 			xmlTag = "VldtnStsInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValidationStatusInformation";
 			definition = "Validation status of the item.";
 			maxOccurs = 1;
@@ -539,11 +539,11 @@ public class FinancialItem1 {
 	 */
 	public static final MMMessageAssociationEnd mmFinancingStatus = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Invoice.mmInvoiceFinancingTransaction;
+			businessElementTrace_lazy = () -> Invoice.mmInvoiceFinancingTransaction;
 			componentContext_lazy = () -> FinancialItem1.mmObject();
 			isDerived = false;
 			xmlTag = "FincgSts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancingStatus";
 			definition = "Financing status if applicable for the item.";
 			maxOccurs = 1;
@@ -586,7 +586,7 @@ public class FinancialItem1 {
 			componentContext_lazy = () -> FinancialItem1.mmObject();
 			isDerived = false;
 			xmlTag = "PrtryDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProprietaryDetails";
 			definition = "Structured proprietary information concerning details of the financial item.";
 			maxOccurs = 1;
@@ -599,13 +599,12 @@ public class FinancialItem1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialItem1.mmItemContext, com.tools20022.repository.msg.FinancialItem1.mmFinancialDocumentReference,
-						com.tools20022.repository.msg.FinancialItem1.mmCreditDebitIndicator, com.tools20022.repository.msg.FinancialItem1.mmTotalAmount, com.tools20022.repository.msg.FinancialItem1.mmDueAmount,
-						com.tools20022.repository.msg.FinancialItem1.mmInstalmentInformation, com.tools20022.repository.msg.FinancialItem1.mmAdditionalInformation, com.tools20022.repository.msg.FinancialItem1.mmAssociatedDocument,
-						com.tools20022.repository.msg.FinancialItem1.mmValidationStatusInformation, com.tools20022.repository.msg.FinancialItem1.mmFinancingStatus, com.tools20022.repository.msg.FinancialItem1.mmProprietaryDetails);
+				messageElement_lazy = () -> Arrays.asList(FinancialItem1.mmItemContext, FinancialItem1.mmFinancialDocumentReference, FinancialItem1.mmCreditDebitIndicator, FinancialItem1.mmTotalAmount, FinancialItem1.mmDueAmount,
+						FinancialItem1.mmInstalmentInformation, FinancialItem1.mmAdditionalInformation, FinancialItem1.mmAssociatedDocument, FinancialItem1.mmValidationStatusInformation, FinancialItem1.mmFinancingStatus,
+						FinancialItem1.mmProprietaryDetails);
 				trace_lazy = () -> FinancialDocument.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FinancialItem1";
 				definition = "Specifies information about a financing relation between two parties represented by a document, for example invoice, credit.\r\nThe component may include an external document describing details of the underlying trade object using an external schema.";
 			}

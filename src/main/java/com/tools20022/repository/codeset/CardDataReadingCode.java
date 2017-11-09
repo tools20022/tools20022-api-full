@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.CardDataReading1Code
+ * CardDataReading1Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.CardDataReading2Code
+ * CardDataReading2Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.CardDataReading3Code
+ * CardDataReading3Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.CardDataReading4Code
+ * CardDataReading4Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.CardDataReading5Code
+ * CardDataReading5Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>{@linkplain com.tools20022.repository.codeset.CardDataReadingCode#mmTag
@@ -57,21 +74,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.CardDataReadingCode#mmUnknown
  * CardDataReadingCode.mmUnknown}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.CardDataReading1Code
- * CardDataReading1Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.CardDataReading2Code
- * CardDataReading2Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.CardDataReading3Code
- * CardDataReading3Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.CardDataReading4Code
- * CardDataReading4Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.CardDataReading5Code
- * CardDataReading5Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -121,7 +123,7 @@ public class CardDataReadingCode {
 	 */
 	public static final MMCode mmTag = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Tag";
 			definition = "Tag reading capabilities (RFID, etc.).";
 			owner_lazy = () -> CardDataReadingCode.mmObject();
@@ -154,7 +156,7 @@ public class CardDataReadingCode {
 	 */
 	public static final MMCode mmPhysical = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Physical";
 			definition = "Keyboard entry or OCR reading of embossing or printed data, either at time of transaction or after the event.";
 			owner_lazy = () -> CardDataReadingCode.mmObject();
@@ -184,7 +186,7 @@ public class CardDataReadingCode {
 	 */
 	public static final MMCode mmBarCode = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BarCode";
 			definition = "Bar code.";
 			owner_lazy = () -> CardDataReadingCode.mmObject();
@@ -214,7 +216,7 @@ public class CardDataReadingCode {
 	 */
 	public static final MMCode mmMagneticStripe = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MagneticStripe";
 			definition = "Magnetic stripe.";
 			owner_lazy = () -> CardDataReadingCode.mmObject();
@@ -247,7 +249,7 @@ public class CardDataReadingCode {
 	 */
 	public static final MMCode mmICC = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ICC";
 			definition = "ICC  (Integrated Circuit Card) with contact containing software applications conform to ISO 7816.";
 			owner_lazy = () -> CardDataReadingCode.mmObject();
@@ -277,7 +279,7 @@ public class CardDataReadingCode {
 	 */
 	public static final MMCode mmAccountData = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AccountData";
 			definition = "Account data on file.";
 			owner_lazy = () -> CardDataReadingCode.mmObject();
@@ -307,7 +309,7 @@ public class CardDataReadingCode {
 	 */
 	public static final MMCode mmProximityReader = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ProximityReader";
 			definition = "Contactless proximity reader.";
 			owner_lazy = () -> CardDataReadingCode.mmObject();
@@ -340,7 +342,7 @@ public class CardDataReadingCode {
 	 */
 	public static final MMCode mmEMVProximityReader = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "EMVProximityReader";
 			definition = "Contactless proximity reader, with application conform to the standard EMV (standard initiated by Europay, Mastercard and Visa).";
 			owner_lazy = () -> CardDataReadingCode.mmObject();
@@ -370,7 +372,7 @@ public class CardDataReadingCode {
 	 */
 	public static final MMCode mmCardOnFile = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CardOnFile";
 			definition = "Card information are stored on a file.";
 			owner_lazy = () -> CardDataReadingCode.mmObject();
@@ -400,7 +402,7 @@ public class CardDataReadingCode {
 	 */
 	public static final MMCode mmUnknown = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unknown";
 			definition = "Unknown card reading capability.";
 			owner_lazy = () -> CardDataReadingCode.mmObject();
@@ -411,15 +413,13 @@ public class CardDataReadingCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("TAGC");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CardDataReadingCode";
 				definition = "Type of reading of the card data.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CardDataReadingCode.mmTag, com.tools20022.repository.codeset.CardDataReadingCode.mmPhysical, com.tools20022.repository.codeset.CardDataReadingCode.mmBarCode,
-						com.tools20022.repository.codeset.CardDataReadingCode.mmMagneticStripe, com.tools20022.repository.codeset.CardDataReadingCode.mmICC, com.tools20022.repository.codeset.CardDataReadingCode.mmAccountData,
-						com.tools20022.repository.codeset.CardDataReadingCode.mmProximityReader, com.tools20022.repository.codeset.CardDataReadingCode.mmEMVProximityReader,
-						com.tools20022.repository.codeset.CardDataReadingCode.mmCardOnFile, com.tools20022.repository.codeset.CardDataReadingCode.mmUnknown);
+				code_lazy = () -> Arrays.asList(CardDataReadingCode.mmTag, CardDataReadingCode.mmPhysical, CardDataReadingCode.mmBarCode, CardDataReadingCode.mmMagneticStripe, CardDataReadingCode.mmICC, CardDataReadingCode.mmAccountData,
+						CardDataReadingCode.mmProximityReader, CardDataReadingCode.mmEMVProximityReader, CardDataReadingCode.mmCardOnFile, CardDataReadingCode.mmUnknown);
 				derivation_lazy = () -> Arrays.asList(CardDataReading1Code.mmObject(), CardDataReading2Code.mmObject(), CardDataReading3Code.mmObject(), CardDataReading4Code.mmObject(), CardDataReading5Code.mmObject());
 			}
 		});

@@ -20,8 +20,10 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max10000Binary;
 import com.tools20022.repository.entity.AcceptorConfiguration;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -134,10 +136,10 @@ public class AcceptorConfigurationContent2 {
 			componentContext_lazy = () -> AcceptorConfigurationContent2.mmObject();
 			isDerived = false;
 			xmlTag = "AcqrrPrtcolParams";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcquirerProtocolParameters";
 			definition = "Acceptor parameters dedicated to an acquirer protocol.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcceptorConfigurationContent3.mmAcquirerProtocolParameters);
+			nextVersions_lazy = () -> Arrays.asList(AcceptorConfigurationContent3.mmAcquirerProtocolParameters);
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.AcquirerProtocolParameters3.mmObject();
@@ -187,14 +189,14 @@ public class AcceptorConfigurationContent2 {
 	 */
 	public static final MMMessageAttribute mmMerchantParameters = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AcceptorConfiguration.mmRetailerParameters;
+			businessElementTrace_lazy = () -> AcceptorConfiguration.mmRetailerParameters;
 			componentContext_lazy = () -> AcceptorConfigurationContent2.mmObject();
 			isDerived = false;
 			xmlTag = "MrchntParams";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MerchantParameters";
 			definition = "Acceptor parameters dedicated to the merchant.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcceptorConfigurationContent3.mmMerchantParameters);
+			nextVersions_lazy = () -> Arrays.asList(AcceptorConfigurationContent3.mmMerchantParameters);
 			minOccurs = 0;
 			simpleType_lazy = () -> Max10000Binary.mmObject();
 		}
@@ -242,10 +244,10 @@ public class AcceptorConfigurationContent2 {
 			componentContext_lazy = () -> AcceptorConfigurationContent2.mmObject();
 			isDerived = false;
 			xmlTag = "TermnlParams";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TerminalParameters";
 			definition = "Manufacturer configuration parameters of the point of interaction.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcceptorConfigurationContent3.mmTerminalParameters);
+			nextVersions_lazy = () -> Arrays.asList(AcceptorConfigurationContent3.mmTerminalParameters);
 			minOccurs = 0;
 			simpleType_lazy = () -> Max10000Binary.mmObject();
 		}
@@ -295,14 +297,14 @@ public class AcceptorConfigurationContent2 {
 	 */
 	public static final MMMessageAssociationEnd mmApplicationParameters = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AcceptorConfiguration.mmApplicationParameters;
+			businessElementTrace_lazy = () -> AcceptorConfiguration.mmApplicationParameters;
 			componentContext_lazy = () -> AcceptorConfigurationContent2.mmObject();
 			isDerived = false;
 			xmlTag = "ApplParams";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ApplicationParameters";
 			definition = "Acceptor parameters dedicated to a payment application of the point of interaction.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcceptorConfigurationContent3.mmApplicationParameters);
+			nextVersions_lazy = () -> Arrays.asList(AcceptorConfigurationContent3.mmApplicationParameters);
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.ApplicationParameters2.mmObject();
@@ -353,14 +355,14 @@ public class AcceptorConfigurationContent2 {
 	 */
 	public static final MMMessageAssociationEnd mmHostCommunicationParameters = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AcceptorConfiguration.mmTerminalManagementSystem;
+			businessElementTrace_lazy = () -> AcceptorConfiguration.mmTerminalManagementSystem;
 			componentContext_lazy = () -> AcceptorConfigurationContent2.mmObject();
 			isDerived = false;
 			xmlTag = "HstComParams";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HostCommunicationParameters";
 			definition = "Acceptor parameters dedicated to the communication with an acquirer host.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcceptorConfigurationContent3.mmHostCommunicationParameters);
+			nextVersions_lazy = () -> Arrays.asList(AcceptorConfigurationContent3.mmHostCommunicationParameters);
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.HostCommunicationParameter2.mmObject();
@@ -411,10 +413,10 @@ public class AcceptorConfigurationContent2 {
 			componentContext_lazy = () -> AcceptorConfigurationContent2.mmObject();
 			isDerived = false;
 			xmlTag = "SctyParams";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityParameters";
 			definition = "Point of interaction parameters related to the security of software application and application protocol.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcceptorConfigurationContent3.mmSecurityParameters);
+			nextVersions_lazy = () -> Arrays.asList(AcceptorConfigurationContent3.mmSecurityParameters);
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.SecurityParameters1.mmObject();
 		}
@@ -423,12 +425,11 @@ public class AcceptorConfigurationContent2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcceptorConfigurationContent2.mmAcquirerProtocolParameters, com.tools20022.repository.msg.AcceptorConfigurationContent2.mmMerchantParameters,
-						com.tools20022.repository.msg.AcceptorConfigurationContent2.mmTerminalParameters, com.tools20022.repository.msg.AcceptorConfigurationContent2.mmApplicationParameters,
-						com.tools20022.repository.msg.AcceptorConfigurationContent2.mmHostCommunicationParameters, com.tools20022.repository.msg.AcceptorConfigurationContent2.mmSecurityParameters);
+				messageElement_lazy = () -> Arrays.asList(AcceptorConfigurationContent2.mmAcquirerProtocolParameters, AcceptorConfigurationContent2.mmMerchantParameters, AcceptorConfigurationContent2.mmTerminalParameters,
+						AcceptorConfigurationContent2.mmApplicationParameters, AcceptorConfigurationContent2.mmHostCommunicationParameters, AcceptorConfigurationContent2.mmSecurityParameters);
 				trace_lazy = () -> AcceptorConfiguration.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AcceptorConfigurationContent2";
 				definition = "Content of the acceptor configuration.";
 				nextVersions_lazy = () -> Arrays.asList(AcceptorConfigurationContent3.mmObject());

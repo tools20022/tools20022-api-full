@@ -19,9 +19,13 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV01;
+import com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV02;
 import com.tools20022.repository.choice.DocumentNumber4Choice;
 import com.tools20022.repository.choice.IdentificationReference11Choice;
 import com.tools20022.repository.entity.SecuritiesTradeIdentification;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -109,7 +113,7 @@ public class Linkages18 {
 			componentContext_lazy = () -> Linkages18.mmObject();
 			isDerived = false;
 			xmlTag = "MsgNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageNumber";
 			definition = "Message type number/message identifier of the message referenced in the linkage sequence.";
 			maxOccurs = 1;
@@ -156,7 +160,7 @@ public class Linkages18 {
 			componentContext_lazy = () -> Linkages18.mmObject();
 			isDerived = false;
 			xmlTag = "Ref";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reference";
 			definition = "Reference to the linked transaction.";
 			maxOccurs = 1;
@@ -169,12 +173,11 @@ public class Linkages18 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Linkages18.mmMessageNumber, com.tools20022.repository.msg.Linkages18.mmReference);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV01.mmReferences,
-						com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV02.mmReferences);
+				messageElement_lazy = () -> Arrays.asList(Linkages18.mmMessageNumber, Linkages18.mmReference);
+				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesTradeConfirmationStatusAdviceV01.mmReferences, SecuritiesTradeConfirmationStatusAdviceV02.mmReferences);
 				trace_lazy = () -> SecuritiesTradeIdentification.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Linkages18";
 				definition = "Information related to a linked transaction.";
 			}

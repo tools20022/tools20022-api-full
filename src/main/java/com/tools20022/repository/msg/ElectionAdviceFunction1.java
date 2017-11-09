@@ -19,7 +19,10 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.seev.AgentCAElectionAdviceV01;
 import com.tools20022.repository.codeset.ElectionType1Code;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -109,7 +112,7 @@ public class ElectionAdviceFunction1 {
 			componentContext_lazy = () -> ElectionAdviceFunction1.mmObject();
 			isDerived = false;
 			xmlTag = "ElctnTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ElectionType";
 			definition = "Type of election advice.";
 			maxOccurs = 1;
@@ -154,7 +157,7 @@ public class ElectionAdviceFunction1 {
 			componentContext_lazy = () -> ElectionAdviceFunction1.mmObject();
 			isDerived = false;
 			xmlTag = "PrvsAgtCAElctnAdvcId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousAgentCAElectionAdviceIdentification";
 			definition = "Identification of the previous Agent Corporate Action Election Advice that is being amended.";
 			maxOccurs = 1;
@@ -199,7 +202,7 @@ public class ElectionAdviceFunction1 {
 			componentContext_lazy = () -> ElectionAdviceFunction1.mmObject();
 			isDerived = false;
 			xmlTag = "AgtCAElctnStsAdvcId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AgentCAElectionStatusAdviceIdentification";
 			definition = "Identification of the Agent Corporate Action Election Status Advice by which the issuer (agent) accepts the election amendment request.";
 			maxOccurs = 1;
@@ -244,7 +247,7 @@ public class ElectionAdviceFunction1 {
 			componentContext_lazy = () -> ElectionAdviceFunction1.mmObject();
 			isDerived = false;
 			xmlTag = "AgtCAElctnAmdmntReqId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AgentCAElectionAmendmentRequestIdentification";
 			definition = "Identification of the Agent Corporate Action Election Amendment Request by which the CSD request the authorisation to amend an election.";
 			maxOccurs = 1;
@@ -256,11 +259,11 @@ public class ElectionAdviceFunction1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ElectionAdviceFunction1.mmElectionType, com.tools20022.repository.msg.ElectionAdviceFunction1.mmPreviousAgentCAElectionAdviceIdentification,
-						com.tools20022.repository.msg.ElectionAdviceFunction1.mmAgentCAElectionStatusAdviceIdentification, com.tools20022.repository.msg.ElectionAdviceFunction1.mmAgentCAElectionAmendmentRequestIdentification);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.AgentCAElectionAdviceV01.mmElectionAdviceTypeAndLinkage);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(ElectionAdviceFunction1.mmElectionType, ElectionAdviceFunction1.mmPreviousAgentCAElectionAdviceIdentification, ElectionAdviceFunction1.mmAgentCAElectionStatusAdviceIdentification,
+						ElectionAdviceFunction1.mmAgentCAElectionAmendmentRequestIdentification);
+				messageBuildingBlock_lazy = () -> Arrays.asList(AgentCAElectionAdviceV01.mmElectionAdviceTypeAndLinkage);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ElectionAdviceFunction1";
 				definition = "Provides information about the type of election advice and linked messages.";
 			}

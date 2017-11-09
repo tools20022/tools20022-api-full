@@ -19,9 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max1NumericText;
 import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.datatype.Max8Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -99,7 +101,7 @@ public class InstructionProcessingStatus2 {
 			componentContext_lazy = () -> InstructionProcessingStatus2.mmObject();
 			isDerived = false;
 			xmlTag = "PlcAndNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "xPath to the element that is being extended.";
 			maxOccurs = 1;
@@ -142,7 +144,7 @@ public class InstructionProcessingStatus2 {
 			componentContext_lazy = () -> InstructionProcessingStatus2.mmObject();
 			isDerived = false;
 			xmlTag = "RjctCd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RejectCode";
 			definition = "ICM error code of the last error (if more than one) for the transaction.";
 			maxOccurs = 1;
@@ -184,7 +186,7 @@ public class InstructionProcessingStatus2 {
 			componentContext_lazy = () -> InstructionProcessingStatus2.mmObject();
 			isDerived = false;
 			xmlTag = "OutptRjctInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OutputRejectIndicator";
 			definition = "Indicates if the transaction has any errors.";
 			maxOccurs = 1;
@@ -196,10 +198,9 @@ public class InstructionProcessingStatus2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InstructionProcessingStatus2.mmPlaceAndName, com.tools20022.repository.msg.InstructionProcessingStatus2.mmRejectCode,
-						com.tools20022.repository.msg.InstructionProcessingStatus2.mmOutputRejectIndicator);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(InstructionProcessingStatus2.mmPlaceAndName, InstructionProcessingStatus2.mmRejectCode, InstructionProcessingStatus2.mmOutputRejectIndicator);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "InstructionProcessingStatus2";
 				definition = "Provides additional information regarding instruction processing status details.";
 			}

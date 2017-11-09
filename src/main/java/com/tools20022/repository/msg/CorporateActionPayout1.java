@@ -19,8 +19,10 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.*;
 import com.tools20022.repository.datatype.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -151,7 +153,7 @@ public class CorporateActionPayout1 {
 			componentContext_lazy = () -> CorporateActionPayout1.mmObject();
 			isDerived = false;
 			xmlTag = "PyoutNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PayoutNumber";
 			definition = "Unique number associated with a payout within an option.";
 			maxOccurs = 1;
@@ -193,7 +195,7 @@ public class CorporateActionPayout1 {
 			componentContext_lazy = () -> CorporateActionPayout1.mmObject();
 			isDerived = false;
 			xmlTag = "PyoutTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PayoutType";
 			definition = "Describes the type of payout associated with the event.";
 			maxOccurs = 1;
@@ -238,7 +240,7 @@ public class CorporateActionPayout1 {
 			componentContext_lazy = () -> CorporateActionPayout1.mmObject();
 			isDerived = false;
 			xmlTag = "DTCCshRate";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCCashRate";
 			definition = "Rate of the dividend payable in cash at DTC (The Depository Trust Corporation).";
 			maxOccurs = 1;
@@ -280,7 +282,7 @@ public class CorporateActionPayout1 {
 			componentContext_lazy = () -> CorporateActionPayout1.mmObject();
 			isDerived = false;
 			xmlTag = "PrjctdAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProjectedAmount";
 			definition = "Projected cash amount based on the entitlement.";
 			maxOccurs = 1;
@@ -326,7 +328,7 @@ public class CorporateActionPayout1 {
 			componentContext_lazy = () -> CorporateActionPayout1.mmObject();
 			isDerived = false;
 			xmlTag = "DTCDsbrsdScty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCDisbursedSecurity";
 			definition = "Security identification that DTC (The Depository Trust Corporation) will distribute as part of the entitlement. This can be the DTC contra CUSIP in cases where the payout security is a contra CUSIP.";
 			maxOccurs = 1;
@@ -371,7 +373,7 @@ public class CorporateActionPayout1 {
 			componentContext_lazy = () -> CorporateActionPayout1.mmObject();
 			isDerived = false;
 			xmlTag = "DTCDsbrsdSctyDesc";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCDisbursedSecurityDescription";
 			definition = "Description of the security that will be disbursed by DTC (The Depository Trust Corporation) as entitlement for the corporate action event.";
 			maxOccurs = 1;
@@ -413,7 +415,7 @@ public class CorporateActionPayout1 {
 			componentContext_lazy = () -> CorporateActionPayout1.mmObject();
 			isDerived = false;
 			xmlTag = "SubRsnCd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubReasonCode";
 			definition = "Sub-reason for the adjustment.";
 			maxOccurs = 1;
@@ -458,7 +460,7 @@ public class CorporateActionPayout1 {
 			componentContext_lazy = () -> CorporateActionPayout1.mmObject();
 			isDerived = false;
 			xmlTag = "DTCSctyRate";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCSecurityRate";
 			definition = "Rate of the dividend payable in stock rather than in cash at DTC (The Depository Trust Corporation).";
 			maxOccurs = 1;
@@ -503,7 +505,7 @@ public class CorporateActionPayout1 {
 			componentContext_lazy = () -> CorporateActionPayout1.mmObject();
 			isDerived = false;
 			xmlTag = "CshInLieuOfShrPric";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashInLieuOfSharePrice";
 			definition = "Cash disbursement in lieu of equities; usually in lieu of fractional quantity.";
 			maxOccurs = 1;
@@ -544,7 +546,7 @@ public class CorporateActionPayout1 {
 			componentContext_lazy = () -> CorporateActionPayout1.mmObject();
 			isDerived = false;
 			xmlTag = "PngAgt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PayingAgent";
 			definition = "Paying agent for this corporate action event. ";
 			maxOccurs = 1;
@@ -586,7 +588,7 @@ public class CorporateActionPayout1 {
 			componentContext_lazy = () -> CorporateActionPayout1.mmObject();
 			isDerived = false;
 			xmlTag = "SctyId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityIdentification";
 			definition = "Identification of the underlying security.";
 			maxOccurs = 1;
@@ -628,7 +630,7 @@ public class CorporateActionPayout1 {
 			componentContext_lazy = () -> CorporateActionPayout1.mmObject();
 			isDerived = false;
 			xmlTag = "SctyDesc";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityDescription";
 			definition = "Underlying security description.";
 			maxOccurs = 1;
@@ -673,7 +675,7 @@ public class CorporateActionPayout1 {
 			componentContext_lazy = () -> CorporateActionPayout1.mmObject();
 			isDerived = false;
 			xmlTag = "DTCAsstClss";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCAssetClass";
 			definition = "Classification of instruments into asset classes at DTC (The Depository Trust Corporation).";
 			maxOccurs = 1;
@@ -718,7 +720,7 @@ public class CorporateActionPayout1 {
 			componentContext_lazy = () -> CorporateActionPayout1.mmObject();
 			isDerived = false;
 			xmlTag = "DTCAsstTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCAssetType";
 			definition = "Further classification of instruments into (issue) asset types at DTC (The Depository Trust Corporation).";
 			maxOccurs = 1;
@@ -762,7 +764,7 @@ public class CorporateActionPayout1 {
 			componentContext_lazy = () -> CorporateActionPayout1.mmObject();
 			isDerived = false;
 			xmlTag = "DclrdPyblDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeclaredPayableDate";
 			definition = "Date at which the movement has been declared payable by the issuer to take place (cash and/or securities).";
 			maxOccurs = 1;
@@ -812,7 +814,7 @@ public class CorporateActionPayout1 {
 			componentContext_lazy = () -> CorporateActionPayout1.mmObject();
 			isDerived = false;
 			xmlTag = "EvtTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventType";
 			definition = "DTCC  (The Depository Trust and Clearing Corporation) native corporate action event type name. Used in place for the events that cannot be classified by ISO Code and are marked as OTHR. Can be used in combination with DTCC sub event type (when provided) to identify the event. For an example: a distribution based on recapitalisation event will be presented as event type: OTHR in standard message. DTCC native event type would be Distribution (DIST) and DTCC sub event type would be Recapitalisation. ";
 			maxOccurs = 1;
@@ -860,7 +862,7 @@ public class CorporateActionPayout1 {
 			componentContext_lazy = () -> CorporateActionPayout1.mmObject();
 			isDerived = false;
 			xmlTag = "SubEvtTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubEventType";
 			definition = "DTCC  (The Depository Trust and Clearing Corporation) native corporate action sub event type name further defines the event type. For an example: a cash dividend event with currency election will be noted as event type: Cash Dividend (DVCA) and DTCC sub event type: Currency Election(CURR).";
 			maxOccurs = 1;
@@ -903,7 +905,7 @@ public class CorporateActionPayout1 {
 			componentContext_lazy = () -> CorporateActionPayout1.mmObject();
 			isDerived = false;
 			xmlTag = "Pos";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Position";
 			definition = "Total eligible balance for a particular corporate action. ";
 			maxOccurs = 1;
@@ -945,7 +947,7 @@ public class CorporateActionPayout1 {
 			componentContext_lazy = () -> CorporateActionPayout1.mmObject();
 			isDerived = false;
 			xmlTag = "FrctnlPos";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FractionalPosition";
 			definition = "Fractional share quantity.";
 			maxOccurs = 1;
@@ -989,7 +991,7 @@ public class CorporateActionPayout1 {
 			componentContext_lazy = () -> CorporateActionPayout1.mmObject();
 			isDerived = false;
 			xmlTag = "DTCPosCaptrDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCPositionCaptureDate";
 			definition = "Date when DTC positions are captured and entitlements are calculated in the system.";
 			maxOccurs = 1;
@@ -1033,7 +1035,7 @@ public class CorporateActionPayout1 {
 			componentContext_lazy = () -> CorporateActionPayout1.mmObject();
 			isDerived = false;
 			xmlTag = "PtcptCrossRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ParticipantCrossReference";
 			definition = "Transaction identification that participant provides on the reorganisation deposit.";
 			maxOccurs = 1;
@@ -1045,18 +1047,13 @@ public class CorporateActionPayout1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionPayout1.mmPayoutNumber, com.tools20022.repository.msg.CorporateActionPayout1.mmPayoutType,
-						com.tools20022.repository.msg.CorporateActionPayout1.mmDTCCashRate, com.tools20022.repository.msg.CorporateActionPayout1.mmProjectedAmount,
-						com.tools20022.repository.msg.CorporateActionPayout1.mmDTCDisbursedSecurity, com.tools20022.repository.msg.CorporateActionPayout1.mmDTCDisbursedSecurityDescription,
-						com.tools20022.repository.msg.CorporateActionPayout1.mmSubReasonCode, com.tools20022.repository.msg.CorporateActionPayout1.mmDTCSecurityRate,
-						com.tools20022.repository.msg.CorporateActionPayout1.mmCashInLieuOfSharePrice, com.tools20022.repository.msg.CorporateActionPayout1.mmPayingAgent,
-						com.tools20022.repository.msg.CorporateActionPayout1.mmSecurityIdentification, com.tools20022.repository.msg.CorporateActionPayout1.mmSecurityDescription,
-						com.tools20022.repository.msg.CorporateActionPayout1.mmDTCAssetClass, com.tools20022.repository.msg.CorporateActionPayout1.mmDTCAssetType, com.tools20022.repository.msg.CorporateActionPayout1.mmDeclaredPayableDate,
-						com.tools20022.repository.msg.CorporateActionPayout1.mmEventType, com.tools20022.repository.msg.CorporateActionPayout1.mmSubEventType, com.tools20022.repository.msg.CorporateActionPayout1.mmPosition,
-						com.tools20022.repository.msg.CorporateActionPayout1.mmFractionalPosition, com.tools20022.repository.msg.CorporateActionPayout1.mmDTCPositionCaptureDate,
-						com.tools20022.repository.msg.CorporateActionPayout1.mmParticipantCrossReference);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(CorporateActionPayout1.mmPayoutNumber, CorporateActionPayout1.mmPayoutType, CorporateActionPayout1.mmDTCCashRate, CorporateActionPayout1.mmProjectedAmount,
+						CorporateActionPayout1.mmDTCDisbursedSecurity, CorporateActionPayout1.mmDTCDisbursedSecurityDescription, CorporateActionPayout1.mmSubReasonCode, CorporateActionPayout1.mmDTCSecurityRate,
+						CorporateActionPayout1.mmCashInLieuOfSharePrice, CorporateActionPayout1.mmPayingAgent, CorporateActionPayout1.mmSecurityIdentification, CorporateActionPayout1.mmSecurityDescription,
+						CorporateActionPayout1.mmDTCAssetClass, CorporateActionPayout1.mmDTCAssetType, CorporateActionPayout1.mmDeclaredPayableDate, CorporateActionPayout1.mmEventType, CorporateActionPayout1.mmSubEventType,
+						CorporateActionPayout1.mmPosition, CorporateActionPayout1.mmFractionalPosition, CorporateActionPayout1.mmDTCPositionCaptureDate, CorporateActionPayout1.mmParticipantCrossReference);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CorporateActionPayout1";
 				definition = "Provides additional information regarding the securities or cash payout.";
 			}

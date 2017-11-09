@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.TransferInFunctionCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -77,7 +79,7 @@ public class TransferInFunction2Code extends TransferInFunctionCode {
 	 */
 	public static final MMCode mmConfirmation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Confirmation";
 			owner_lazy = () -> TransferInFunction2Code.mmObject();
 		}
@@ -100,7 +102,7 @@ public class TransferInFunction2Code extends TransferInFunctionCode {
 	 */
 	public static final MMCode mmAdvice = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Advice";
 			owner_lazy = () -> TransferInFunction2Code.mmObject();
 		}
@@ -109,11 +111,11 @@ public class TransferInFunction2Code extends TransferInFunctionCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TransferInFunction2Code";
 				definition = "Specifies the function of the transfer in confirmation.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TransferInFunction2Code.mmConfirmation, com.tools20022.repository.codeset.TransferInFunction2Code.mmAdvice);
+				code_lazy = () -> Arrays.asList(TransferInFunction2Code.mmConfirmation, TransferInFunction2Code.mmAdvice);
 				trace_lazy = () -> TransferInFunctionCode.mmObject();
 			}
 		});

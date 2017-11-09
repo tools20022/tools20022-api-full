@@ -18,7 +18,11 @@
 package com.tools20022.repository.entity;
 
 import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.TaxPartyRole;
+import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.TaxInformation3;
+import com.tools20022.repository.msg.TaxInformation4;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -67,11 +71,11 @@ public class DebitSideTaxDebtor extends TaxPartyRole {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DebitSideTaxDebtor";
 				definition = "Party on the debit side of the transaction to which the tax applies.";
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TaxInformation3.mmDebtor, com.tools20022.repository.msg.TaxInformation4.mmDebtor);
+				derivationElement_lazy = () -> Arrays.asList(TaxInformation3.mmDebtor, TaxInformation4.mmDebtor);
 				superType_lazy = () -> TaxPartyRole.mmObject();
 			}
 		});

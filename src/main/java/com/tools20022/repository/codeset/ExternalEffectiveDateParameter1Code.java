@@ -18,7 +18,9 @@
 package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ExternalEffectiveDateParameterCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -62,9 +64,9 @@ public class ExternalEffectiveDateParameter1Code extends ExternalEffectiveDatePa
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("TDAY");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ExternalEffectiveDateParameter1Code";
 				definition = "Specifies how the SSI update effective date is to be applied.\r\nThe list of valid codes is an external code list published separately. External code sets can be downloaded from www.iso20022.org.";
 				trace_lazy = () -> ExternalEffectiveDateParameterCode.mmObject();

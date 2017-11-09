@@ -19,9 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.FinancialInstrumentQuantity15Choice;
 import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.datatype.Max6Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -96,7 +98,7 @@ public class TaxExemptQuantitySD1 {
 			componentContext_lazy = () -> TaxExemptQuantitySD1.mmObject();
 			isDerived = false;
 			xmlTag = "PlcAndNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "xPath to the element that is being extended.";
 			maxOccurs = 1;
@@ -137,7 +139,7 @@ public class TaxExemptQuantitySD1 {
 			componentContext_lazy = () -> TaxExemptQuantitySD1.mmObject();
 			isDerived = false;
 			xmlTag = "CtrlId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ControlIdentification";
 			definition = "Tax control ID.";
 			maxOccurs = 1;
@@ -179,7 +181,7 @@ public class TaxExemptQuantitySD1 {
 			componentContext_lazy = () -> TaxExemptQuantitySD1.mmObject();
 			isDerived = false;
 			xmlTag = "Qty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Quantity";
 			definition = "Elected quantity. ";
 			maxOccurs = 1;
@@ -191,10 +193,9 @@ public class TaxExemptQuantitySD1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TaxExemptQuantitySD1.mmPlaceAndName, com.tools20022.repository.msg.TaxExemptQuantitySD1.mmControlIdentification,
-						com.tools20022.repository.msg.TaxExemptQuantitySD1.mmQuantity);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(TaxExemptQuantitySD1.mmPlaceAndName, TaxExemptQuantitySD1.mmControlIdentification, TaxExemptQuantitySD1.mmQuantity);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "TaxExemptQuantitySD1";
 				definition = "Tax exempt election details.";
 			}

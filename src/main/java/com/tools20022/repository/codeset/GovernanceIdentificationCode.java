@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.GovernanceIdentification1Code
+ * GovernanceIdentification1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -41,14 +51,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.GovernanceIdentificationCode#mmNone
  * GovernanceIdentificationCode.mmNone}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.GovernanceIdentification1Code
- * GovernanceIdentification1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -104,7 +106,7 @@ public class GovernanceIdentificationCode {
 	 */
 	public static final MMCode mmUniformRulesForDemandGuarantees = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UniformRulesForDemandGuarantees";
 			definition = "The version of the ICC Uniform Rules For Demand Guarantees (URDG) as published by the International Chamber of Commerce (ICC) that is in effect on the date of issue of the undertaking.";
 			owner_lazy = () -> GovernanceIdentificationCode.mmObject();
@@ -137,7 +139,7 @@ public class GovernanceIdentificationCode {
 	 */
 	public static final MMCode mmInternationalStandbyPractices = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InternationalStandbyPractices";
 			definition = "The version of the International Standby Practices (ISP) that is in effect on the date of issue of the undertaking.";
 			owner_lazy = () -> GovernanceIdentificationCode.mmObject();
@@ -171,7 +173,7 @@ public class GovernanceIdentificationCode {
 	 */
 	public static final MMCode mmUniformCustomsAndPractice = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UniformCustomsAndPractice";
 			definition = "The version of the Uniform Customs and Practice for Documentary Credits (UCP) as published by the International Chamber of Commerce (ICC) that is in effect on the date of issue of the undertaking.";
 			owner_lazy = () -> GovernanceIdentificationCode.mmObject();
@@ -201,7 +203,7 @@ public class GovernanceIdentificationCode {
 	 */
 	public static final MMCode mmNone = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "None";
 			definition = "No applicable rule set defined.";
 			owner_lazy = () -> GovernanceIdentificationCode.mmObject();
@@ -212,14 +214,13 @@ public class GovernanceIdentificationCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("URDG");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "GovernanceIdentificationCode";
 				definition = "Specifies the identification of the rules and laws governing the undertaking.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.GovernanceIdentificationCode.mmUniformRulesForDemandGuarantees,
-						com.tools20022.repository.codeset.GovernanceIdentificationCode.mmInternationalStandbyPractices, com.tools20022.repository.codeset.GovernanceIdentificationCode.mmUniformCustomsAndPractice,
-						com.tools20022.repository.codeset.GovernanceIdentificationCode.mmNone);
+				code_lazy = () -> Arrays.asList(GovernanceIdentificationCode.mmUniformRulesForDemandGuarantees, GovernanceIdentificationCode.mmInternationalStandbyPractices, GovernanceIdentificationCode.mmUniformCustomsAndPractice,
+						GovernanceIdentificationCode.mmNone);
 				derivation_lazy = () -> Arrays.asList(GovernanceIdentification1Code.mmObject());
 			}
 		});

@@ -20,9 +20,13 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.SettlementParties7Choice;
 import com.tools20022.repository.datatype.ISODateTime;
+import com.tools20022.repository.entity.Collateral;
 import com.tools20022.repository.entity.SecuritiesSettlement;
+import com.tools20022.repository.entity.Trade;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -119,14 +123,14 @@ public class SettlementDetails118 {
 	 */
 	public static final MMMessageAttribute mmTradeDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Trade.mmTradeDateTime;
+			businessElementTrace_lazy = () -> Trade.mmTradeDateTime;
 			componentContext_lazy = () -> SettlementDetails118.mmObject();
 			isDerived = false;
 			xmlTag = "TradDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeDate";
 			definition = "Indicates the date as known by the two parties to be used for matching purposes when settlement of securities occurs.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SettlementDetails102.mmTradeDate;
+			previousVersion_lazy = () -> SettlementDetails102.mmTradeDate;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
@@ -175,14 +179,14 @@ public class SettlementDetails118 {
 	 */
 	public static final MMMessageAssociationEnd mmSettlementParties = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmPartyRole;
+			businessElementTrace_lazy = () -> SecuritiesSettlement.mmPartyRole;
 			componentContext_lazy = () -> SettlementDetails118.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmPties";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementParties";
 			definition = "Provides details on either the delivering or receiving settlement parties.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SettlementDetails102.mmSettlementParties;
+			previousVersion_lazy = () -> SettlementDetails102.mmSettlementParties;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -228,14 +232,14 @@ public class SettlementDetails118 {
 	 */
 	public static final MMMessageAssociationEnd mmCollateralOwnership = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Collateral.mmCollateralOwnership;
+			businessElementTrace_lazy = () -> Collateral.mmCollateralOwnership;
 			componentContext_lazy = () -> SettlementDetails118.mmObject();
 			isDerived = false;
 			xmlTag = "CollOwnrsh";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralOwnership";
 			definition = "Indicates the collateral ownership.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SettlementDetails102.mmCollateralOwnership;
+			previousVersion_lazy = () -> SettlementDetails102.mmCollateralOwnership;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -246,11 +250,10 @@ public class SettlementDetails118 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SettlementDetails118.mmTradeDate, com.tools20022.repository.msg.SettlementDetails118.mmSettlementParties,
-						com.tools20022.repository.msg.SettlementDetails118.mmCollateralOwnership);
+				messageElement_lazy = () -> Arrays.asList(SettlementDetails118.mmTradeDate, SettlementDetails118.mmSettlementParties, SettlementDetails118.mmCollateralOwnership);
 				trace_lazy = () -> SecuritiesSettlement.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SettlementDetails118";
 				definition = "Parameters which explicitly state the conditions that must be fulfilled before a particular  transaction of a financial instrument can be settled.  These parameters are defined by the instructing party in compliance with settlement rules in the market the transaction will settle in.";
 				previousVersion_lazy = () -> SettlementDetails102.mmObject();

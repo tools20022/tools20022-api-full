@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.SystemClosureReasonCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -92,7 +94,7 @@ public class SystemClosureReason1Code extends SystemClosureReasonCode {
 	 */
 	public static final MMCode mmBankingHoliday = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BankingHoliday";
 			owner_lazy = () -> SystemClosureReason1Code.mmObject();
 		}
@@ -115,7 +117,7 @@ public class SystemClosureReason1Code extends SystemClosureReasonCode {
 	 */
 	public static final MMCode mmSystemMaintenance = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SystemMaintenance";
 			owner_lazy = () -> SystemClosureReason1Code.mmObject();
 		}
@@ -138,7 +140,7 @@ public class SystemClosureReason1Code extends SystemClosureReasonCode {
 	 */
 	public static final MMCode mmNoOperation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoOperation";
 			owner_lazy = () -> SystemClosureReason1Code.mmObject();
 		}
@@ -161,7 +163,7 @@ public class SystemClosureReason1Code extends SystemClosureReasonCode {
 	 */
 	public static final MMCode mmRecovery = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Recovery";
 			owner_lazy = () -> SystemClosureReason1Code.mmObject();
 		}
@@ -184,7 +186,7 @@ public class SystemClosureReason1Code extends SystemClosureReasonCode {
 	 */
 	public static final MMCode mmAllowedDowntimeWindow = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AllowedDowntimeWindow";
 			owner_lazy = () -> SystemClosureReason1Code.mmObject();
 		}
@@ -193,14 +195,13 @@ public class SystemClosureReason1Code extends SystemClosureReasonCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("BHOL");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SystemClosureReason1Code";
 				definition = "Specifies the reason for system inactivity.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SystemClosureReason1Code.mmBankingHoliday, com.tools20022.repository.codeset.SystemClosureReason1Code.mmSystemMaintenance,
-						com.tools20022.repository.codeset.SystemClosureReason1Code.mmNoOperation, com.tools20022.repository.codeset.SystemClosureReason1Code.mmRecovery,
-						com.tools20022.repository.codeset.SystemClosureReason1Code.mmAllowedDowntimeWindow);
+				code_lazy = () -> Arrays.asList(SystemClosureReason1Code.mmBankingHoliday, SystemClosureReason1Code.mmSystemMaintenance, SystemClosureReason1Code.mmNoOperation, SystemClosureReason1Code.mmRecovery,
+						SystemClosureReason1Code.mmAllowedDowntimeWindow);
 				trace_lazy = () -> SystemClosureReasonCode.mmObject();
 			}
 		});

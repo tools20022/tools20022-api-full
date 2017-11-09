@@ -19,9 +19,12 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.VoteInstruction2Code;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.entity.Resolution;
 import com.tools20022.repository.entity.VoteInstructionRequest;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -109,14 +112,14 @@ public class Vote3 {
 	 */
 	public static final MMMessageAttribute mmIssuerLabel = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Resolution.mmIssuerLabel;
+			businessElementTrace_lazy = () -> Resolution.mmIssuerLabel;
 			componentContext_lazy = () -> Vote3.mmObject();
 			isDerived = false;
 			xmlTag = "IssrLabl";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssuerLabel";
 			definition = "Numbering of the resolution as specified by the issuer or  its agent.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Vote9.mmIssuerLabel);
+			nextVersions_lazy = () -> Arrays.asList(Vote9.mmIssuerLabel);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -165,14 +168,14 @@ public class Vote3 {
 	 */
 	public static final MMMessageAttribute mmVoteOption = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.VoteInstructionRequest.mmVoteForMeetingResolution;
+			businessElementTrace_lazy = () -> VoteInstructionRequest.mmVoteForMeetingResolution;
 			componentContext_lazy = () -> Vote3.mmObject();
 			isDerived = false;
 			xmlTag = "VoteOptn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VoteOption";
 			definition = "Specifies the different instructions which can be used to vote.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Vote9.mmVoteOption);
+			nextVersions_lazy = () -> Arrays.asList(Vote9.mmVoteOption);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> VoteInstruction2Code.mmObject();
@@ -182,10 +185,10 @@ public class Vote3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Vote3.mmIssuerLabel, com.tools20022.repository.msg.Vote3.mmVoteOption);
+				messageElement_lazy = () -> Arrays.asList(Vote3.mmIssuerLabel, Vote3.mmVoteOption);
 				trace_lazy = () -> VoteInstructionRequest.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Vote3";
 				definition = "Decision of the voting party for one resolution.";
 				nextVersions_lazy = () -> Arrays.asList(Vote9.mmObject());

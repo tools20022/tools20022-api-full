@@ -19,7 +19,10 @@ package com.tools20022.repository.entity;
 
 import com.tools20022.metamodel.MMBusinessAttribute;
 import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.Derivative;
+import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CreditDefaultSwapSingleName2;
 import com.tools20022.repository.msg.SwapLegIdentification2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -33,15 +36,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Swaps#mmSovereignIssuer
- * Swaps.mmSovereignIssuer}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Swaps#mmObligation
- * Swaps.mmObligation}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SwapLegIdentification2
+ * SwapLegIdentification2}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.Derivative
+ * Derivative}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
  * subType} =
  * <ul>
@@ -49,15 +54,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * CreditDefaultSwap}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.Derivative
- * Derivative}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.SwapLegIdentification2
- * SwapLegIdentification2}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Swaps#mmSovereignIssuer
+ * Swaps.mmSovereignIssuer}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Swaps#mmObligation
+ * Swaps.mmObligation}</li>
  * </ul>
  * </li>
  * <li>
@@ -115,10 +118,10 @@ public class Swaps extends Derivative {
 	 */
 	public static final MMBusinessAttribute mmSovereignIssuer = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CreditDefaultSwapSingleName2.mmSovereignIssuer);
+			derivation_lazy = () -> Arrays.asList(CreditDefaultSwapSingleName2.mmSovereignIssuer);
 			elementContext_lazy = () -> Swaps.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SovereignIssuer";
 			definition = "Issuer is a national government within a given country.";
 			maxOccurs = 1;
@@ -155,7 +158,7 @@ public class Swaps extends Derivative {
 		{
 			elementContext_lazy = () -> Swaps.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Obligation";
 			definition = "Specific underlying debt upon which a swap is based.";
 			maxOccurs = 1;
@@ -167,13 +170,13 @@ public class Swaps extends Derivative {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Swaps";
 				definition = "Derivative contract through which two parties exchange financial instruments.";
 				subType_lazy = () -> Arrays.asList(CreditDefaultSwap.mmObject());
 				superType_lazy = () -> com.tools20022.repository.entity.Derivative.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Swaps.mmSovereignIssuer, com.tools20022.repository.entity.Swaps.mmObligation);
+				element_lazy = () -> Arrays.asList(Swaps.mmSovereignIssuer, Swaps.mmObligation);
 				derivationComponent_lazy = () -> Arrays.asList(SwapLegIdentification2.mmObject());
 			}
 		});

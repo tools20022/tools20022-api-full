@@ -19,9 +19,13 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CountryCode;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.ContactPoint;
+import com.tools20022.repository.entity.Country;
+import com.tools20022.repository.entity.PostalAddress;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -98,11 +102,11 @@ public class ResidenceLocation1Choice {
 	 */
 	public static final MMMessageAttribute mmCountry = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Country.mmCode;
+			businessElementTrace_lazy = () -> Country.mmCode;
 			componentContext_lazy = () -> ResidenceLocation1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Ctry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Country";
 			definition = "Specifies the account owner's resident country.";
 			maxOccurs = 1;
@@ -146,11 +150,11 @@ public class ResidenceLocation1Choice {
 	 */
 	public static final MMMessageAttribute mmArea = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PostalAddress.mmRegionIdentification;
+			businessElementTrace_lazy = () -> PostalAddress.mmRegionIdentification;
 			componentContext_lazy = () -> ResidenceLocation1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Area";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Area";
 			definition = "Specifies the account owner's resident geographical region or area.";
 			maxOccurs = 1;
@@ -162,10 +166,10 @@ public class ResidenceLocation1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ResidenceLocation1Choice.mmCountry, com.tools20022.repository.choice.ResidenceLocation1Choice.mmArea);
+				messageElement_lazy = () -> Arrays.asList(ResidenceLocation1Choice.mmCountry, ResidenceLocation1Choice.mmArea);
 				trace_lazy = () -> ContactPoint.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ResidenceLocation1Choice";
 				definition = "Choice of location of a residence of a party.";
 			}

@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.FinancialAdvice1Code
+ * FinancialAdvice1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -38,13 +47,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.FinancialAdviceCode#mmUnknown
  * FinancialAdviceCode.mmUnknown}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.FinancialAdvice1Code
- * FinancialAdvice1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -97,7 +99,7 @@ public class FinancialAdviceCode {
 	 */
 	public static final MMCode mmReceived = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Received";
 			definition = "Advice has been received from an independent financial advisor.";
 			owner_lazy = () -> FinancialAdviceCode.mmObject();
@@ -128,7 +130,7 @@ public class FinancialAdviceCode {
 	 */
 	public static final MMCode mmNotReceived = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NotReceived";
 			definition = "Advice has not been received from an independent financial advisor.";
 			owner_lazy = () -> FinancialAdviceCode.mmObject();
@@ -161,7 +163,7 @@ public class FinancialAdviceCode {
 	 */
 	public static final MMCode mmUnknown = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Unknown";
 			definition = "It is not known whether or not advice has been received from an independent financial advisor.";
 			owner_lazy = () -> FinancialAdviceCode.mmObject();
@@ -172,13 +174,12 @@ public class FinancialAdviceCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("RECE");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FinancialAdviceCode";
 				definition = "Specifies if advice has been received from an independent financial advisor.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.FinancialAdviceCode.mmReceived, com.tools20022.repository.codeset.FinancialAdviceCode.mmNotReceived,
-						com.tools20022.repository.codeset.FinancialAdviceCode.mmUnknown);
+				code_lazy = () -> Arrays.asList(FinancialAdviceCode.mmReceived, FinancialAdviceCode.mmNotReceived, FinancialAdviceCode.mmUnknown);
 				derivation_lazy = () -> Arrays.asList(FinancialAdvice1Code.mmObject());
 			}
 		});

@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.FormOfSecurityCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -83,7 +85,7 @@ public class FormOfSecurity1Code extends FormOfSecurityCode {
 	 */
 	public static final MMCode mmBearer = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Bearer";
 			owner_lazy = () -> FormOfSecurity1Code.mmObject();
 		}
@@ -106,7 +108,7 @@ public class FormOfSecurity1Code extends FormOfSecurityCode {
 	 */
 	public static final MMCode mmRegistered = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Registered";
 			owner_lazy = () -> FormOfSecurity1Code.mmObject();
 		}
@@ -115,12 +117,12 @@ public class FormOfSecurity1Code extends FormOfSecurityCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("BEAR");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FormOfSecurity1Code";
 				definition = "Form of a financial instrument.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.FormOfSecurity1Code.mmBearer, com.tools20022.repository.codeset.FormOfSecurity1Code.mmRegistered);
+				code_lazy = () -> Arrays.asList(FormOfSecurity1Code.mmBearer, FormOfSecurity1Code.mmRegistered);
 				trace_lazy = () -> FormOfSecurityCode.mmObject();
 			}
 		});

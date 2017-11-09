@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -28,6 +30,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.ExtendedEventType2Code
+ * ExtendedEventType2Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ExtendedEventType3Code
+ * ExtendedEventType3Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ExtendedEventType4Code
+ * ExtendedEventType4Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -60,17 +73,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.ExtendedEventTypeV2Code#mmFinalPaydown
  * ExtendedEventTypeV2Code.mmFinalPaydown}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.ExtendedEventType2Code
- * ExtendedEventType2Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ExtendedEventType3Code
- * ExtendedEventType3Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ExtendedEventType4Code
- * ExtendedEventType4Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -126,7 +128,7 @@ public class ExtendedEventTypeV2Code {
 	 */
 	public static final MMCode mmMeeting = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Meeting";
 			definition = "Meeting of a company's share or bond holders to address resolutions put forth by the issuer. Note: this is information only event. Pending deprecation and migration to ISO Proxy Message suite.";
 			owner_lazy = () -> ExtendedEventTypeV2Code.mmObject();
@@ -159,7 +161,7 @@ public class ExtendedEventTypeV2Code {
 	 */
 	public static final MMCode mmRightsPlanAdoption = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RightsPlanAdoption";
 			definition = "General information provided by the issuer that should not result in material changes to the security.";
 			owner_lazy = () -> ExtendedEventTypeV2Code.mmObject();
@@ -195,7 +197,7 @@ public class ExtendedEventTypeV2Code {
 	 */
 	public static final MMCode mmTermination = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Termination";
 			definition = "Security, usually a form of a derivative, for which the agent or issuer has decided to terminate the derivative based on a change to the underlying security(ies) or a change in strategy. Distinguishes from  Mandatory Exchange, Exchange Offer event types mapped to the same ISO event type code.";
 			owner_lazy = () -> ExtendedEventTypeV2Code.mmObject();
@@ -232,7 +234,7 @@ public class ExtendedEventTypeV2Code {
 	 */
 	public static final MMCode mmBonusRightsIssue = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BonusRightsIssue";
 			definition = "Security holders are issued additional securities, free of payment, from the issuer in proportion to their holdings. A bonus issue is typically represented by shares or warrants. Nominal value does not change. The security holder may be offered choice of entitlement. Distinguishes from  Rights Subscription, Sale Of Rights event types mapped to the same ISO event type code.";
 			owner_lazy = () -> ExtendedEventTypeV2Code.mmObject();
@@ -268,7 +270,7 @@ public class ExtendedEventTypeV2Code {
 	 */
 	public static final MMCode mmFullPrerefunding = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FullPrerefunding";
 			definition = "Exercise of a privilege by the issuer to repay, in full, any debt security prior to maturity when the issuer deposits assets in trust. This irrevocably restricts their use to satisfaction of the debt. Distinguishes from  \"partial defeasance\", \"partial prerefunding\" event types mapped to the same ISO event type code.";
 			owner_lazy = () -> ExtendedEventTypeV2Code.mmObject();
@@ -302,7 +304,7 @@ public class ExtendedEventTypeV2Code {
 	 */
 	public static final MMCode mmPartialDefeasance = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartialDefeasance";
 			definition = "Issuer sets aside funds in escrow to guarantee payment for the portion of the security on maturity date. Defeased and Non-defeased cusips are issued respectively for the defeased and non-defeased portions.";
 			owner_lazy = () -> ExtendedEventTypeV2Code.mmObject();
@@ -336,7 +338,7 @@ public class ExtendedEventTypeV2Code {
 	 */
 	public static final MMCode mmPartialPrerefunding = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartialPrerefunding";
 			definition = "Issuer sets aside funds in escrow to guarantee payment for the portion of the security prior to maturity date. Refunded and Non-Refunded cusips are issued respectively for the refunded and non-refunded portions.";
 			owner_lazy = () -> ExtendedEventTypeV2Code.mmObject();
@@ -370,7 +372,7 @@ public class ExtendedEventTypeV2Code {
 	 */
 	public static final MMCode mmPartialMandatoryPut = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartialMandatoryPut";
 			definition = "The mandatory exchange of a portion of bonds where the exchanged securities are usually remarketed. The issuer may offer holders the right to retain instead of exchanging their securities.";
 			owner_lazy = () -> ExtendedEventTypeV2Code.mmObject();
@@ -405,7 +407,7 @@ public class ExtendedEventTypeV2Code {
 	 */
 	public static final MMCode mmCertificateOfDepositEarlyRedemption = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CertificateOfDepositEarlyRedemption";
 			definition = "Feature of a security that allows an issuer to make a payment to the security holder. This event will be used for securities subject to redemptions other than those categorized as full and partial calls (for example early Certificate of Deposit redemptions).";
 			owner_lazy = () -> ExtendedEventTypeV2Code.mmObject();
@@ -438,7 +440,7 @@ public class ExtendedEventTypeV2Code {
 	 */
 	public static final MMCode mmFinalPaydown = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinalPaydown";
 			definition = "Final distribution of principal due on a security, typically Collateralised Mortgage Obligations.";
 			owner_lazy = () -> ExtendedEventTypeV2Code.mmObject();
@@ -449,16 +451,14 @@ public class ExtendedEventTypeV2Code {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("MEET");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ExtendedEventTypeV2Code";
 				definition = "Specifies DTCC (The Depository Trust and Clearing Corporation) defined corporate action event type.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ExtendedEventTypeV2Code.mmMeeting, com.tools20022.repository.codeset.ExtendedEventTypeV2Code.mmRightsPlanAdoption,
-						com.tools20022.repository.codeset.ExtendedEventTypeV2Code.mmTermination, com.tools20022.repository.codeset.ExtendedEventTypeV2Code.mmBonusRightsIssue,
-						com.tools20022.repository.codeset.ExtendedEventTypeV2Code.mmFullPrerefunding, com.tools20022.repository.codeset.ExtendedEventTypeV2Code.mmPartialDefeasance,
-						com.tools20022.repository.codeset.ExtendedEventTypeV2Code.mmPartialPrerefunding, com.tools20022.repository.codeset.ExtendedEventTypeV2Code.mmPartialMandatoryPut,
-						com.tools20022.repository.codeset.ExtendedEventTypeV2Code.mmCertificateOfDepositEarlyRedemption, com.tools20022.repository.codeset.ExtendedEventTypeV2Code.mmFinalPaydown);
+				code_lazy = () -> Arrays.asList(ExtendedEventTypeV2Code.mmMeeting, ExtendedEventTypeV2Code.mmRightsPlanAdoption, ExtendedEventTypeV2Code.mmTermination, ExtendedEventTypeV2Code.mmBonusRightsIssue,
+						ExtendedEventTypeV2Code.mmFullPrerefunding, ExtendedEventTypeV2Code.mmPartialDefeasance, ExtendedEventTypeV2Code.mmPartialPrerefunding, ExtendedEventTypeV2Code.mmPartialMandatoryPut,
+						ExtendedEventTypeV2Code.mmCertificateOfDepositEarlyRedemption, ExtendedEventTypeV2Code.mmFinalPaydown);
 				derivation_lazy = () -> Arrays.asList(ExtendedEventType2Code.mmObject(), ExtendedEventType3Code.mmObject(), ExtendedEventType4Code.mmObject());
 			}
 		});

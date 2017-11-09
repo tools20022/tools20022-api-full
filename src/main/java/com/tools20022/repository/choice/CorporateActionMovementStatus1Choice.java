@@ -19,7 +19,10 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.seev.AgentCAMovementStatusAdviceV01;
 import com.tools20022.repository.entity.CorporateActionStatus;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.CorporateActionMovementFailedStatus1;
 import com.tools20022.repository.msg.CorporateActionMovementProcessingStatus1;
 import com.tools20022.repository.msg.CorporateActionMovementRejectionStatus1;
@@ -116,7 +119,7 @@ public class CorporateActionMovementStatus1Choice {
 			componentContext_lazy = () -> CorporateActionMovementStatus1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "PrcdSts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProcessedStatus";
 			definition = "Provides information about the processing status of the movement.";
 			maxOccurs = 1;
@@ -164,7 +167,7 @@ public class CorporateActionMovementStatus1Choice {
 			componentContext_lazy = () -> CorporateActionMovementStatus1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "FaildSts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FailedStatus";
 			definition = "Provides information about the settlement failure.";
 			maxOccurs = 1;
@@ -212,7 +215,7 @@ public class CorporateActionMovementStatus1Choice {
 			componentContext_lazy = () -> CorporateActionMovementStatus1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "RjctdSts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RejectedStatus";
 			definition = "Provides information about the rejection status.";
 			maxOccurs = 1;
@@ -225,12 +228,11 @@ public class CorporateActionMovementStatus1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CorporateActionMovementStatus1Choice.mmProcessedStatus, com.tools20022.repository.choice.CorporateActionMovementStatus1Choice.mmFailedStatus,
-						com.tools20022.repository.choice.CorporateActionMovementStatus1Choice.mmRejectedStatus);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.AgentCAMovementStatusAdviceV01.mmMovementStatusDetails);
+				messageElement_lazy = () -> Arrays.asList(CorporateActionMovementStatus1Choice.mmProcessedStatus, CorporateActionMovementStatus1Choice.mmFailedStatus, CorporateActionMovementStatus1Choice.mmRejectedStatus);
+				messageBuildingBlock_lazy = () -> Arrays.asList(AgentCAMovementStatusAdviceV01.mmMovementStatusDetails);
 				trace_lazy = () -> CorporateActionStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionMovementStatus1Choice";
 				definition = "Choice between the different statuses of a movement.";
 			}

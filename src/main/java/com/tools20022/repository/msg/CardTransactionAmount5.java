@@ -20,8 +20,11 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.CurrencyAndAmount;
 import com.tools20022.repository.entity.CardPayment;
+import com.tools20022.repository.entity.Payment;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -116,14 +119,14 @@ public class CardTransactionAmount5 {
 	 */
 	public static final MMMessageAttribute mmTotalAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.mmAmount;
+			businessElementTrace_lazy = () -> Payment.mmAmount;
 			componentContext_lazy = () -> CardTransactionAmount5.mmObject();
 			isDerived = false;
 			xmlTag = "TtlAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalAmount";
 			definition = "Total amount of the transaction.\r\nIt corresponds to ISO 8583, field number 4, completed by the field number 49 for the versions 87 and 93.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CardTransactionAmount1.mmTotalAmount;
+			previousVersion_lazy = () -> CardTransactionAmount1.mmTotalAmount;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
@@ -173,14 +176,14 @@ public class CardTransactionAmount5 {
 	 */
 	public static final MMMessageAssociationEnd mmCardholderBillingTransactionAmount = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPayment.mmDetailedAmount;
+			businessElementTrace_lazy = () -> CardPayment.mmDetailedAmount;
 			componentContext_lazy = () -> CardTransactionAmount5.mmObject();
 			isDerived = false;
 			xmlTag = "CrdhldrBllgTxAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CardholderBillingTransactionAmount";
 			definition = "Present when cardholder billing currency differs from transaction currency expressed in TransactionAmount. It may be populated by the scheme or intermediary processor as normally Acceptor does not know cardholder billing currency.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CardTransactionAmount1.mmCardholderBillingTransactionAmount;
+			previousVersion_lazy = () -> CardTransactionAmount1.mmCardholderBillingTransactionAmount;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -226,11 +229,11 @@ public class CardTransactionAmount5 {
 	 */
 	public static final MMMessageAssociationEnd mmReconciliationTransactionAmount = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPayment.mmDetailedAmount;
+			businessElementTrace_lazy = () -> CardPayment.mmDetailedAmount;
 			componentContext_lazy = () -> CardTransactionAmount5.mmObject();
 			isDerived = false;
 			xmlTag = "RcncltnTxAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReconciliationTransactionAmount";
 			definition = "Only present within financial transactions when reconciliation currency differs from transaction currency. It may be populated by acquirers in the request or by the schemes in the responses, depending where the reconciliation point is located.";
 			maxOccurs = 1;
@@ -243,11 +246,10 @@ public class CardTransactionAmount5 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardTransactionAmount5.mmTotalAmount, com.tools20022.repository.msg.CardTransactionAmount5.mmCardholderBillingTransactionAmount,
-						com.tools20022.repository.msg.CardTransactionAmount5.mmReconciliationTransactionAmount);
+				messageElement_lazy = () -> Arrays.asList(CardTransactionAmount5.mmTotalAmount, CardTransactionAmount5.mmCardholderBillingTransactionAmount, CardTransactionAmount5.mmReconciliationTransactionAmount);
 				trace_lazy = () -> CardPayment.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CardTransactionAmount5";
 				definition = "Amounts of the transaction expressed within the terminal currency.";
 				previousVersion_lazy = () -> CardTransactionAmount1.mmObject();

@@ -20,6 +20,7 @@ package com.tools20022.repository.area.sese;
 import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.SecuritiesSettlementLatestVersion;
 import com.tools20022.repository.choice.PartyIdentification70Choice;
 import com.tools20022.repository.msg.*;
@@ -47,6 +48,9 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code sese.013.001.07}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.SecuritiesSettlementLatestVersion
@@ -124,9 +128,6 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code sese.013.001.07}</li>
- * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -177,10 +178,10 @@ public class PortfolioTransferConfirmationV07 {
 	public static final MMMessageBuildingBlock mmMessageReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "MsgRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageReference";
 			definition = "Identifies the message.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.PortfolioTransferConfirmationV06.mmMessageReference;
+			previousVersion_lazy = () -> PortfolioTransferConfirmationV06.mmMessageReference;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
@@ -218,10 +219,10 @@ public class PortfolioTransferConfirmationV07 {
 	public static final MMMessageBuildingBlock mmPoolReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "PoolRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PoolReference";
 			definition = "Collective reference identifying a set of messages.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.PortfolioTransferConfirmationV06.mmPoolReference;
+			previousVersion_lazy = () -> PortfolioTransferConfirmationV06.mmPoolReference;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference6.mmObject();
@@ -259,10 +260,10 @@ public class PortfolioTransferConfirmationV07 {
 	public static final MMMessageBuildingBlock mmPreviousReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "PrvsRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousReference";
 			definition = "Reference to a linked message that was previously sent.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.PortfolioTransferConfirmationV06.mmPreviousReference;
+			previousVersion_lazy = () -> PortfolioTransferConfirmationV06.mmPreviousReference;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference6.mmObject();
@@ -301,10 +302,10 @@ public class PortfolioTransferConfirmationV07 {
 	public static final MMMessageBuildingBlock mmRelatedReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "RltdRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedReference";
 			definition = "Reference to a linked message that was previously received.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.PortfolioTransferConfirmationV06.mmRelatedReference;
+			previousVersion_lazy = () -> PortfolioTransferConfirmationV06.mmRelatedReference;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference6.mmObject();
@@ -345,10 +346,10 @@ public class PortfolioTransferConfirmationV07 {
 	public static final MMMessageBuildingBlock mmPrimaryIndividualInvestor = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "PmryIndvInvstr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PrimaryIndividualInvestor";
 			definition = "Information identifying the primary individual investor, for example, name, address, social security number and date of birth.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.PortfolioTransferConfirmationV06.mmPrimaryIndividualInvestor;
+			previousVersion_lazy = () -> PortfolioTransferConfirmationV06.mmPrimaryIndividualInvestor;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> IndividualPerson8.mmObject();
@@ -389,10 +390,10 @@ public class PortfolioTransferConfirmationV07 {
 	public static final MMMessageBuildingBlock mmSecondaryIndividualInvestor = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "ScndryIndvInvstr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecondaryIndividualInvestor";
 			definition = "Information identifying the secondary individual investor, for example, name, address, social security number and date of birth.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.PortfolioTransferConfirmationV06.mmSecondaryIndividualInvestor;
+			previousVersion_lazy = () -> PortfolioTransferConfirmationV06.mmSecondaryIndividualInvestor;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> IndividualPerson8.mmObject();
@@ -433,10 +434,10 @@ public class PortfolioTransferConfirmationV07 {
 	public static final MMMessageBuildingBlock mmOtherIndividualInvestor = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "OthrIndvInvstr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherIndividualInvestor";
 			definition = "Information identifying the other individual investors, for example, name, address, social security number and date of birth.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.PortfolioTransferConfirmationV06.mmOtherIndividualInvestor;
+			previousVersion_lazy = () -> PortfolioTransferConfirmationV06.mmOtherIndividualInvestor;
 			minOccurs = 0;
 			complexType_lazy = () -> IndividualPerson8.mmObject();
 		}
@@ -475,10 +476,10 @@ public class PortfolioTransferConfirmationV07 {
 	public static final MMMessageBuildingBlock mmPrimaryCorporateInvestor = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "PmryCorpInvstr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PrimaryCorporateInvestor";
 			definition = "Information identifying the primary corporate investor, for example, name and address.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.PortfolioTransferConfirmationV06.mmPrimaryCorporateInvestor;
+			previousVersion_lazy = () -> PortfolioTransferConfirmationV06.mmPrimaryCorporateInvestor;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> Organisation21.mmObject();
@@ -518,10 +519,10 @@ public class PortfolioTransferConfirmationV07 {
 	public static final MMMessageBuildingBlock mmSecondaryCorporateInvestor = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "ScndryCorpInvstr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecondaryCorporateInvestor";
 			definition = "Information identifying the secondary corporate investor, for example, name and address.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.PortfolioTransferConfirmationV06.mmSecondaryCorporateInvestor;
+			previousVersion_lazy = () -> PortfolioTransferConfirmationV06.mmSecondaryCorporateInvestor;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> Organisation21.mmObject();
@@ -561,10 +562,10 @@ public class PortfolioTransferConfirmationV07 {
 	public static final MMMessageBuildingBlock mmOtherCorporateInvestor = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "OthrCorpInvstr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherCorporateInvestor";
 			definition = "Information identifying the other corporate investors, for example, name and address.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.PortfolioTransferConfirmationV06.mmOtherCorporateInvestor;
+			previousVersion_lazy = () -> PortfolioTransferConfirmationV06.mmOtherCorporateInvestor;
 			minOccurs = 0;
 			complexType_lazy = () -> Organisation21.mmObject();
 		}
@@ -603,10 +604,10 @@ public class PortfolioTransferConfirmationV07 {
 	public static final MMMessageBuildingBlock mmTransferorAccount = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "TrfrAcct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransferorAccount";
 			definition = "Identification of an account owned by the investor at the old plan manager (account servicer).";
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.PortfolioTransferConfirmationV06.mmTransferorAccount;
+			previousVersion_lazy = () -> PortfolioTransferConfirmationV06.mmTransferorAccount;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> Account19.mmObject();
@@ -646,10 +647,10 @@ public class PortfolioTransferConfirmationV07 {
 	public static final MMMessageBuildingBlock mmNomineeAccount = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "NmneeAcct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NomineeAccount";
 			definition = "Account held in the name of a party that is not the name of the beneficial owner of the shares.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.PortfolioTransferConfirmationV06.mmNomineeAccount;
+			previousVersion_lazy = () -> PortfolioTransferConfirmationV06.mmNomineeAccount;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> Account19.mmObject();
@@ -690,10 +691,10 @@ public class PortfolioTransferConfirmationV07 {
 	public static final MMMessageBuildingBlock mmTransferee = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Trfee";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Transferee";
 			definition = "Information related to the institution to which the financial instrument is to be transferred.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.PortfolioTransferConfirmationV06.mmTransferee;
+			previousVersion_lazy = () -> PortfolioTransferConfirmationV06.mmTransferee;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> PartyIdentification70Choice.mmObject();
@@ -725,7 +726,7 @@ public class PortfolioTransferConfirmationV07 {
 	public static final MMMessageBuildingBlock mmIntermediaryInformation = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "IntrmyInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IntermediaryInformation";
 			definition = "Identification of a related party or intermediary.";
 			minOccurs = 0;
@@ -766,10 +767,10 @@ public class PortfolioTransferConfirmationV07 {
 	public static final MMMessageBuildingBlock mmCashAccount = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CshAcct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashAccount";
 			definition = "Identification of an account owned by the investor to which a cash entry is made based on the transfer of asset(s).";
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.PortfolioTransferConfirmationV06.mmCashAccount;
+			previousVersion_lazy = () -> PortfolioTransferConfirmationV06.mmCashAccount;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> CashAccount34.mmObject();
@@ -807,10 +808,10 @@ public class PortfolioTransferConfirmationV07 {
 	public static final MMMessageBuildingBlock mmProductTransfer = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "PdctTrf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProductTransfer";
 			definition = "Provides information related to the asset(s) transferred.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.PortfolioTransferConfirmationV06.mmProductTransfer;
+			previousVersion_lazy = () -> PortfolioTransferConfirmationV06.mmProductTransfer;
 			minOccurs = 1;
 			complexType_lazy = () -> ISATransfer26.mmObject();
 		}
@@ -848,10 +849,10 @@ public class PortfolioTransferConfirmationV07 {
 	public static final MMMessageBuildingBlock mmMarketPracticeVersion = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "MktPrctcVrsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketPracticeVersion";
 			definition = "Identifies the market practice to which the message conforms.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.PortfolioTransferConfirmationV06.mmMarketPracticeVersion;
+			previousVersion_lazy = () -> PortfolioTransferConfirmationV06.mmMarketPracticeVersion;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> MarketPracticeVersion1.mmObject();
@@ -891,10 +892,10 @@ public class PortfolioTransferConfirmationV07 {
 	public static final MMMessageBuildingBlock mmExtension = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Xtnsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Extension";
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.PortfolioTransferConfirmationV06.mmExtension;
+			previousVersion_lazy = () -> PortfolioTransferConfirmationV06.mmExtension;
 			minOccurs = 0;
 			complexType_lazy = () -> Extension1.mmObject();
 		}
@@ -903,7 +904,7 @@ public class PortfolioTransferConfirmationV07 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PortfolioTransferConfirmationV07";
 				definition = "Scope\r\nAn executing party, for example, a (old) plan manager (Transferor), sends the PortfolioTransferConfirmation message to the instructing party, for example, a (new) plan manager (Transferee), to confirm the transfer of one or more ISA or portfolio products from the client's account at the old plan manager (Transferor) to the client's account at the new plan manager (Transferee) through a nominee account.\r\nUsage\r\nThe PortfolioTransferConfirmation message is used to confirm the transfer of one or more ISA or portfolio products.\r\nThe reference of each product transfer confirmation is identified in TransferConfirmationIdentification. The reference of the original product transfer is specified in TransferInstructionReference. The message identification of the PortfolioTransferInstruction message in which the product transfers were conveyed may also be quoted in RelatedReference.";
 				previousVersion_lazy = () -> PortfolioTransferConfirmationV06.mmObject();
@@ -911,15 +912,12 @@ public class PortfolioTransferConfirmationV07 {
 				rootElement = "Document";
 				xmlTag = "PrtflTrfConf";
 				businessArea_lazy = () -> SecuritiesSettlementLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.PortfolioTransferConfirmationV07.mmMessageReference, com.tools20022.repository.area.sese.PortfolioTransferConfirmationV07.mmPoolReference,
-						com.tools20022.repository.area.sese.PortfolioTransferConfirmationV07.mmPreviousReference, com.tools20022.repository.area.sese.PortfolioTransferConfirmationV07.mmRelatedReference,
-						com.tools20022.repository.area.sese.PortfolioTransferConfirmationV07.mmPrimaryIndividualInvestor, com.tools20022.repository.area.sese.PortfolioTransferConfirmationV07.mmSecondaryIndividualInvestor,
-						com.tools20022.repository.area.sese.PortfolioTransferConfirmationV07.mmOtherIndividualInvestor, com.tools20022.repository.area.sese.PortfolioTransferConfirmationV07.mmPrimaryCorporateInvestor,
-						com.tools20022.repository.area.sese.PortfolioTransferConfirmationV07.mmSecondaryCorporateInvestor, com.tools20022.repository.area.sese.PortfolioTransferConfirmationV07.mmOtherCorporateInvestor,
-						com.tools20022.repository.area.sese.PortfolioTransferConfirmationV07.mmTransferorAccount, com.tools20022.repository.area.sese.PortfolioTransferConfirmationV07.mmNomineeAccount,
-						com.tools20022.repository.area.sese.PortfolioTransferConfirmationV07.mmTransferee, com.tools20022.repository.area.sese.PortfolioTransferConfirmationV07.mmIntermediaryInformation,
-						com.tools20022.repository.area.sese.PortfolioTransferConfirmationV07.mmCashAccount, com.tools20022.repository.area.sese.PortfolioTransferConfirmationV07.mmProductTransfer,
-						com.tools20022.repository.area.sese.PortfolioTransferConfirmationV07.mmMarketPracticeVersion, com.tools20022.repository.area.sese.PortfolioTransferConfirmationV07.mmExtension);
+				messageBuildingBlock_lazy = () -> Arrays.asList(PortfolioTransferConfirmationV07.mmMessageReference, PortfolioTransferConfirmationV07.mmPoolReference, PortfolioTransferConfirmationV07.mmPreviousReference,
+						PortfolioTransferConfirmationV07.mmRelatedReference, PortfolioTransferConfirmationV07.mmPrimaryIndividualInvestor, PortfolioTransferConfirmationV07.mmSecondaryIndividualInvestor,
+						PortfolioTransferConfirmationV07.mmOtherIndividualInvestor, PortfolioTransferConfirmationV07.mmPrimaryCorporateInvestor, PortfolioTransferConfirmationV07.mmSecondaryCorporateInvestor,
+						PortfolioTransferConfirmationV07.mmOtherCorporateInvestor, PortfolioTransferConfirmationV07.mmTransferorAccount, PortfolioTransferConfirmationV07.mmNomineeAccount, PortfolioTransferConfirmationV07.mmTransferee,
+						PortfolioTransferConfirmationV07.mmIntermediaryInformation, PortfolioTransferConfirmationV07.mmCashAccount, PortfolioTransferConfirmationV07.mmProductTransfer,
+						PortfolioTransferConfirmationV07.mmMarketPracticeVersion, PortfolioTransferConfirmationV07.mmExtension);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "sese";

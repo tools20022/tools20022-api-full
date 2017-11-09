@@ -20,6 +20,9 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.sese.TransferInConfirmationV05;
+import com.tools20022.repository.area.sese.TransferInConfirmationV06;
 import com.tools20022.repository.choice.ChargePaymentMethod1Choice;
 import com.tools20022.repository.choice.DateAndDateTimeChoice;
 import com.tools20022.repository.choice.TransferReason1;
@@ -27,8 +30,8 @@ import com.tools20022.repository.codeset.BusinessFlowType1Code;
 import com.tools20022.repository.codeset.CurrencyCode;
 import com.tools20022.repository.codeset.HoldingsPlanType1Code;
 import com.tools20022.repository.datatype.*;
-import com.tools20022.repository.entity.InvestmentFundClass;
-import com.tools20022.repository.entity.SecuritiesTransfer;
+import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -196,11 +199,11 @@ public class Transfer29 {
 			componentContext_lazy = () -> Transfer29.mmObject();
 			isDerived = false;
 			xmlTag = "TrfConfRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransferConfirmationReference";
 			definition = "Unique and unambiguous identifier for a transfer execution, as assigned by a confirming party.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Transfer33.mmTransferConfirmationReference);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Transfer26.mmTransferConfirmationReference;
+			nextVersions_lazy = () -> Arrays.asList(Transfer33.mmTransferConfirmationReference);
+			previousVersion_lazy = () -> Transfer26.mmTransferConfirmationReference;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -256,15 +259,15 @@ public class Transfer29 {
 	 */
 	public static final MMMessageAttribute mmTransferReference = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTransfer.mmIdentification;
+			businessElementTrace_lazy = () -> SecuritiesTransfer.mmIdentification;
 			componentContext_lazy = () -> Transfer29.mmObject();
 			isDerived = false;
 			xmlTag = "TrfRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransferReference";
 			definition = "Unique and unambiguous identifier for a transfer instruction, as assigned by the instructing party.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Transfer33.mmTransferReference);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Transfer26.mmTransferReference;
+			nextVersions_lazy = () -> Arrays.asList(Transfer33.mmTransferReference);
+			previousVersion_lazy = () -> Transfer26.mmTransferReference;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -321,15 +324,15 @@ public class Transfer29 {
 	 */
 	public static final MMMessageAttribute mmClientReference = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundTransaction.mmClientReference;
+			businessElementTrace_lazy = () -> InvestmentFundTransaction.mmClientReference;
 			componentContext_lazy = () -> Transfer29.mmObject();
 			isDerived = false;
 			xmlTag = "ClntRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClientReference";
 			definition = "Unique and unambiguous investor's identification of a transfer. This reference can typically be used in a hub scenario to give the reference of the transfer as assigned by the underlying client.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Transfer33.mmClientReference);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Transfer26.mmClientReference;
+			nextVersions_lazy = () -> Arrays.asList(Transfer33.mmClientReference);
+			previousVersion_lazy = () -> Transfer26.mmClientReference;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -385,15 +388,15 @@ public class Transfer29 {
 	 */
 	public static final MMMessageAttribute mmCounterpartyReference = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradeIdentification.mmCounterpartyReference;
+			businessElementTrace_lazy = () -> TradeIdentification.mmCounterpartyReference;
 			componentContext_lazy = () -> Transfer29.mmObject();
 			isDerived = false;
 			xmlTag = "CtrPtyRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CounterpartyReference";
 			definition = "Unambiguous identification of the transfer allocated by the counterparty.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Transfer33.mmCounterpartyReference);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Transfer26.mmCounterpartyReference;
+			nextVersions_lazy = () -> Arrays.asList(Transfer33.mmCounterpartyReference);
+			previousVersion_lazy = () -> Transfer26.mmCounterpartyReference;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.AdditionalReference2.mmObject();
@@ -445,10 +448,10 @@ public class Transfer29 {
 			componentContext_lazy = () -> Transfer29.mmObject();
 			isDerived = false;
 			xmlTag = "BizFlowTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BusinessFlowType";
 			definition = "Identifies the business process in which the actors are involved. This is important to trigger the right business process, according to the market business model, which may require matching instructions in a CSD environment (double leg process) or not (single leg process).";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Transfer33.mmBusinessFlowType);
+			nextVersions_lazy = () -> Arrays.asList(Transfer33.mmBusinessFlowType);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> BusinessFlowType1Code.mmObject();
@@ -502,15 +505,15 @@ public class Transfer29 {
 	 */
 	public static final MMMessageAttribute mmEffectiveTransferDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ObligationFulfilment.mmDate;
+			businessElementTrace_lazy = () -> ObligationFulfilment.mmDate;
 			componentContext_lazy = () -> Transfer29.mmObject();
 			isDerived = false;
 			xmlTag = "FctvTrfDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EffectiveTransferDate";
 			definition = "Date and time at which the transfer was executed.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Transfer33.mmEffectiveTransferDate);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Transfer26.mmEffectiveTransferDate;
+			nextVersions_lazy = () -> Arrays.asList(Transfer33.mmEffectiveTransferDate);
+			previousVersion_lazy = () -> Transfer26.mmEffectiveTransferDate;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
@@ -567,15 +570,15 @@ public class Transfer29 {
 	 */
 	public static final MMMessageAttribute mmRequestedSettlementDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Obligation.mmRequestedSettlementDate;
+			businessElementTrace_lazy = () -> Obligation.mmRequestedSettlementDate;
 			componentContext_lazy = () -> Transfer29.mmObject();
 			isDerived = false;
 			xmlTag = "ReqdSttlmDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestedSettlementDate";
 			definition = "Date and time at which the securities are to be exchanged at the International Central Securities Depository (ICSD) or Central Securities Depository (CSD).";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Transfer33.mmRequestedSettlementDate);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Transfer26.mmRequestedSettlementDate;
+			nextVersions_lazy = () -> Arrays.asList(Transfer33.mmRequestedSettlementDate);
+			previousVersion_lazy = () -> Transfer26.mmRequestedSettlementDate;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
@@ -633,15 +636,15 @@ public class Transfer29 {
 	 */
 	public static final MMMessageAttribute mmEffectiveSettlementDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmSettlementDate;
+			businessElementTrace_lazy = () -> SecuritiesSettlement.mmSettlementDate;
 			componentContext_lazy = () -> Transfer29.mmObject();
 			isDerived = false;
 			xmlTag = "FctvSttlmDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EffectiveSettlementDate";
 			definition = "Date and time at which the securities were exchanged at the International Central Securities Depository (ICSD) or Central Securities Depository (CSD).";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Transfer33.mmEffectiveSettlementDate);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Transfer26.mmEffectiveSettlementDate;
+			nextVersions_lazy = () -> Arrays.asList(Transfer33.mmEffectiveSettlementDate);
+			previousVersion_lazy = () -> Transfer26.mmEffectiveSettlementDate;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
@@ -697,15 +700,15 @@ public class Transfer29 {
 	 */
 	public static final MMMessageAttribute mmTradeDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Trade.mmTradeDateTime;
+			businessElementTrace_lazy = () -> Trade.mmTradeDateTime;
 			componentContext_lazy = () -> Transfer29.mmObject();
 			isDerived = false;
 			xmlTag = "TradDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeDate";
 			definition = "Date and time at which a transaction is completed and cleared, ie, securities are delivered.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Transfer33.mmTradeDate);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Transfer26.mmTradeDate;
+			nextVersions_lazy = () -> Arrays.asList(Transfer33.mmTradeDate);
+			previousVersion_lazy = () -> Transfer26.mmTradeDate;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
@@ -759,15 +762,15 @@ public class Transfer29 {
 	 */
 	public static final MMMessageAttribute mmTransferOrderDateForm = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Trade.mmTradeDateTime;
+			businessElementTrace_lazy = () -> Trade.mmTradeDateTime;
 			componentContext_lazy = () -> Transfer29.mmObject();
 			isDerived = false;
 			xmlTag = "TrfOrdrDtForm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransferOrderDateForm";
 			definition = "Identifies in which date the investor signed the transfer order form.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Transfer33.mmTransferOrderDateForm);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Transfer26.mmTransferOrderDateForm;
+			nextVersions_lazy = () -> Arrays.asList(Transfer33.mmTransferOrderDateForm);
+			previousVersion_lazy = () -> Transfer26.mmTransferOrderDateForm;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
@@ -821,15 +824,15 @@ public class Transfer29 {
 	 */
 	public static final MMMessageAttribute mmTransferReason = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTransfer.mmTransferReason;
+			businessElementTrace_lazy = () -> SecuritiesTransfer.mmTransferReason;
 			componentContext_lazy = () -> Transfer29.mmObject();
 			isDerived = false;
 			xmlTag = "TrfRsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransferReason";
 			definition = "Specifies the reason for the assets transfer.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Transfer33.mmTransferReason);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Transfer26.mmTransferReason;
+			nextVersions_lazy = () -> Arrays.asList(Transfer33.mmTransferReason);
+			previousVersion_lazy = () -> Transfer26.mmTransferReason;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> TransferReason1.mmObject();
@@ -886,15 +889,15 @@ public class Transfer29 {
 	 */
 	public static final MMMessageAttribute mmHoldingsPlanType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmHoldingsPlanType;
+			businessElementTrace_lazy = () -> SecuritiesSettlement.mmHoldingsPlanType;
 			componentContext_lazy = () -> Transfer29.mmObject();
 			isDerived = false;
 			xmlTag = "HldgsPlanTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HoldingsPlanType";
 			definition = "Identifies whether or not saving plan or withdrawal or switch plan are included in the holdings.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Transfer33.mmHoldingsPlanType);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Transfer26.mmHoldingsPlanType;
+			nextVersions_lazy = () -> Arrays.asList(Transfer33.mmHoldingsPlanType);
+			previousVersion_lazy = () -> Transfer26.mmHoldingsPlanType;
 			maxOccurs = 3;
 			minOccurs = 0;
 			simpleType_lazy = () -> HoldingsPlanType1Code.mmObject();
@@ -953,11 +956,11 @@ public class Transfer29 {
 			componentContext_lazy = () -> Transfer29.mmObject();
 			isDerived = false;
 			xmlTag = "FinInstrmDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentDetails";
 			definition = "Information related to the financial instrument received.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Transfer33.mmFinancialInstrumentDetails);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Transfer26.mmFinancialInstrumentDetails;
+			nextVersions_lazy = () -> Arrays.asList(Transfer33.mmFinancialInstrumentDetails);
+			previousVersion_lazy = () -> Transfer26.mmFinancialInstrumentDetails;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> com.tools20022.repository.msg.FinancialInstrument13.mmObject();
@@ -1011,15 +1014,15 @@ public class Transfer29 {
 	 */
 	public static final MMMessageAttribute mmTotalUnitsNumber = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTransfer.mmTransferredQuantity;
+			businessElementTrace_lazy = () -> SecuritiesTransfer.mmTransferredQuantity;
 			componentContext_lazy = () -> Transfer29.mmObject();
 			isDerived = false;
 			xmlTag = "TtlUnitsNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalUnitsNumber";
 			definition = "Total quantity of securities settled.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Transfer33.mmTotalUnitsNumber);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Transfer26.mmTotalUnitsNumber;
+			nextVersions_lazy = () -> Arrays.asList(Transfer33.mmTotalUnitsNumber);
+			previousVersion_lazy = () -> Transfer26.mmTotalUnitsNumber;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentQuantity1.mmObject();
@@ -1069,15 +1072,15 @@ public class Transfer29 {
 	 */
 	public static final MMMessageAssociationEnd mmUnitsDetails = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTransfer.mmTransferredQuantity;
+			businessElementTrace_lazy = () -> SecuritiesTransfer.mmTransferredQuantity;
 			componentContext_lazy = () -> Transfer29.mmObject();
 			isDerived = false;
 			xmlTag = "UnitsDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnitsDetails";
 			definition = "Information about the units to be transferred.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Transfer33.mmUnitsDetails);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Transfer26.mmUnitsDetails;
+			nextVersions_lazy = () -> Arrays.asList(Transfer33.mmUnitsDetails);
+			previousVersion_lazy = () -> Transfer26.mmUnitsDetails;
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.Unit3.mmObject();
@@ -1133,15 +1136,15 @@ public class Transfer29 {
 	 */
 	public static final MMMessageAttribute mmAveragePrice = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmBookValue;
+			businessElementTrace_lazy = () -> AssetHolding.mmBookValue;
 			componentContext_lazy = () -> Transfer29.mmObject();
 			isDerived = false;
 			xmlTag = "AvrgPric";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AveragePrice";
 			definition = "Average price of the units in the account before the transfer was executed.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Transfer33.mmAveragePrice);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Transfer26.mmAveragePrice;
+			nextVersions_lazy = () -> Arrays.asList(Transfer33.mmAveragePrice);
+			previousVersion_lazy = () -> Transfer26.mmAveragePrice;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAnd13DecimalAmount.mmObject();
@@ -1193,14 +1196,14 @@ public class Transfer29 {
 	 */
 	public static final MMMessageAttribute mmNewAveragePrice = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmBookValue;
+			businessElementTrace_lazy = () -> AssetHolding.mmBookValue;
 			componentContext_lazy = () -> Transfer29.mmObject();
 			isDerived = false;
 			xmlTag = "NewAvrgPric";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewAveragePrice";
 			definition = "Average price of the units in the account after the transfer was executed.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Transfer33.mmNewAveragePrice);
+			nextVersions_lazy = () -> Arrays.asList(Transfer33.mmNewAveragePrice);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAnd13DecimalAmount.mmObject();
@@ -1254,15 +1257,15 @@ public class Transfer29 {
 	 */
 	public static final MMMessageAttribute mmTransferCurrency = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesDeliveryObligation.mmTransferCurrency;
+			businessElementTrace_lazy = () -> SecuritiesDeliveryObligation.mmTransferCurrency;
 			componentContext_lazy = () -> Transfer29.mmObject();
 			isDerived = false;
 			xmlTag = "TrfCcy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransferCurrency";
 			definition = "Identifies the currency to be used to transfer the holdings.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Transfer33.mmTransferCurrency);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Transfer26.mmTransferCurrency;
+			nextVersions_lazy = () -> Arrays.asList(Transfer33.mmTransferCurrency);
+			previousVersion_lazy = () -> Transfer26.mmTransferCurrency;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CurrencyCode.mmObject();
@@ -1318,15 +1321,15 @@ public class Transfer29 {
 	 */
 	public static final MMMessageAttribute mmOwnAccountTransferIndicator = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTransfer.mmOwnAccountTransferIndicator;
+			businessElementTrace_lazy = () -> SecuritiesTransfer.mmOwnAccountTransferIndicator;
 			componentContext_lazy = () -> Transfer29.mmObject();
 			isDerived = false;
 			xmlTag = "OwnAcctTrfInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OwnAccountTransferIndicator";
 			definition = "Indicates whether the transfer results in a change of beneficial owner.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Transfer33.mmOwnAccountTransferIndicator);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Transfer26.mmOwnAccountTransferIndicator;
+			nextVersions_lazy = () -> Arrays.asList(Transfer33.mmOwnAccountTransferIndicator);
+			previousVersion_lazy = () -> Transfer26.mmOwnAccountTransferIndicator;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
@@ -1382,15 +1385,15 @@ public class Transfer29 {
 	 */
 	public static final MMMessageAttribute mmNonStandardSettlementInformation = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrderExecution.mmNonStandardSettlementInformation;
+			businessElementTrace_lazy = () -> InvestmentFundOrderExecution.mmNonStandardSettlementInformation;
 			componentContext_lazy = () -> Transfer29.mmObject();
 			isDerived = false;
 			xmlTag = "NonStdSttlmInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonStandardSettlementInformation";
 			definition = "Additional specific settlement information for non-regulated traded funds.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Transfer33.mmNonStandardSettlementInformation);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Transfer26.mmNonStandardSettlementInformation;
+			nextVersions_lazy = () -> Arrays.asList(Transfer33.mmNonStandardSettlementInformation);
+			previousVersion_lazy = () -> Transfer26.mmNonStandardSettlementInformation;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
@@ -1447,15 +1450,15 @@ public class Transfer29 {
 	 */
 	public static final MMMessageAttribute mmReceivingAgentDetails = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> Transfer29.mmObject();
 			isDerived = false;
 			xmlTag = "RcvgAgtDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceivingAgentDetails";
 			definition = "Party that receives securities from the delivering agent via the place of settlement, for example, securities central depository.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Transfer33.mmReceivingAgentDetails);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Transfer26.mmReceivingAgentDetails;
+			nextVersions_lazy = () -> Arrays.asList(Transfer33.mmReceivingAgentDetails);
+			previousVersion_lazy = () -> Transfer26.mmReceivingAgentDetails;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount93.mmObject();
@@ -1512,15 +1515,15 @@ public class Transfer29 {
 	 */
 	public static final MMMessageAttribute mmDeliveringAgentDetails = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> Transfer29.mmObject();
 			isDerived = false;
 			xmlTag = "DlvrgAgtDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeliveringAgentDetails";
 			definition = "Party that delivers securities to the receiving agent at the place of settlement, for example, a central securities depository.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Transfer33.mmDeliveringAgentDetails);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Transfer26.mmDeliveringAgentDetails;
+			nextVersions_lazy = () -> Arrays.asList(Transfer33.mmDeliveringAgentDetails);
+			previousVersion_lazy = () -> Transfer26.mmDeliveringAgentDetails;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount93.mmObject();
@@ -1572,14 +1575,14 @@ public class Transfer29 {
 	 */
 	public static final MMMessageAssociationEnd mmTransferExpensesPaymentType = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Charges.mmChargePaymentMethod;
+			businessElementTrace_lazy = () -> Charges.mmChargePaymentMethod;
 			componentContext_lazy = () -> Transfer29.mmObject();
 			isDerived = false;
 			xmlTag = "TrfExpnssPmtTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransferExpensesPaymentType";
 			definition = "Specifies how the payment of charges, taxes and commissions as a result of the transfer is covered, that is, whether by cash or the redemption of units.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Transfer33.mmTransferExpensesPaymentType);
+			nextVersions_lazy = () -> Arrays.asList(Transfer33.mmTransferExpensesPaymentType);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -1590,18 +1593,15 @@ public class Transfer29 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Transfer29.mmTransferConfirmationReference, com.tools20022.repository.msg.Transfer29.mmTransferReference,
-						com.tools20022.repository.msg.Transfer29.mmClientReference, com.tools20022.repository.msg.Transfer29.mmCounterpartyReference, com.tools20022.repository.msg.Transfer29.mmBusinessFlowType,
-						com.tools20022.repository.msg.Transfer29.mmEffectiveTransferDate, com.tools20022.repository.msg.Transfer29.mmRequestedSettlementDate, com.tools20022.repository.msg.Transfer29.mmEffectiveSettlementDate,
-						com.tools20022.repository.msg.Transfer29.mmTradeDate, com.tools20022.repository.msg.Transfer29.mmTransferOrderDateForm, com.tools20022.repository.msg.Transfer29.mmTransferReason,
-						com.tools20022.repository.msg.Transfer29.mmHoldingsPlanType, com.tools20022.repository.msg.Transfer29.mmFinancialInstrumentDetails, com.tools20022.repository.msg.Transfer29.mmTotalUnitsNumber,
-						com.tools20022.repository.msg.Transfer29.mmUnitsDetails, com.tools20022.repository.msg.Transfer29.mmAveragePrice, com.tools20022.repository.msg.Transfer29.mmNewAveragePrice,
-						com.tools20022.repository.msg.Transfer29.mmTransferCurrency, com.tools20022.repository.msg.Transfer29.mmOwnAccountTransferIndicator, com.tools20022.repository.msg.Transfer29.mmNonStandardSettlementInformation,
-						com.tools20022.repository.msg.Transfer29.mmReceivingAgentDetails, com.tools20022.repository.msg.Transfer29.mmDeliveringAgentDetails, com.tools20022.repository.msg.Transfer29.mmTransferExpensesPaymentType);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.TransferInConfirmationV05.mmTransferDetails, com.tools20022.repository.area.sese.TransferInConfirmationV06.mmTransferDetails);
+				messageElement_lazy = () -> Arrays.asList(Transfer29.mmTransferConfirmationReference, Transfer29.mmTransferReference, Transfer29.mmClientReference, Transfer29.mmCounterpartyReference, Transfer29.mmBusinessFlowType,
+						Transfer29.mmEffectiveTransferDate, Transfer29.mmRequestedSettlementDate, Transfer29.mmEffectiveSettlementDate, Transfer29.mmTradeDate, Transfer29.mmTransferOrderDateForm, Transfer29.mmTransferReason,
+						Transfer29.mmHoldingsPlanType, Transfer29.mmFinancialInstrumentDetails, Transfer29.mmTotalUnitsNumber, Transfer29.mmUnitsDetails, Transfer29.mmAveragePrice, Transfer29.mmNewAveragePrice,
+						Transfer29.mmTransferCurrency, Transfer29.mmOwnAccountTransferIndicator, Transfer29.mmNonStandardSettlementInformation, Transfer29.mmReceivingAgentDetails, Transfer29.mmDeliveringAgentDetails,
+						Transfer29.mmTransferExpensesPaymentType);
+				messageBuildingBlock_lazy = () -> Arrays.asList(TransferInConfirmationV05.mmTransferDetails, TransferInConfirmationV06.mmTransferDetails);
 				trace_lazy = () -> SecuritiesTransfer.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
 						return DateFormat.getDateInstance(java.text.DateFormat.LONG).parse("September 9, 2016");

@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.ATMCounterType1Code
+ * ATMCounterType1Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ATMCounterType2Code
+ * ATMCounterType2Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -47,15 +58,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.ATMCounterTypeCode#mmOperation
  * ATMCounterTypeCode.mmOperation}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.ATMCounterType1Code
- * ATMCounterType1Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ATMCounterType2Code
- * ATMCounterType2Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -99,7 +101,7 @@ public class ATMCounterTypeCode {
 	 */
 	public static final MMCode mmCutOff = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CutOff";
 			definition = "Counters since the last cut-off.";
 			owner_lazy = () -> ATMCounterTypeCode.mmObject();
@@ -130,7 +132,7 @@ public class ATMCounterTypeCode {
 	 */
 	public static final MMCode mmOperatorAdjust = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OperatorAdjust";
 			definition = "Counters since the last update by an operator on the ATM.";
 			owner_lazy = () -> ATMCounterTypeCode.mmObject();
@@ -160,7 +162,7 @@ public class ATMCounterTypeCode {
 	 */
 	public static final MMCode mmCountersInquiry = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CountersInquiry";
 			definition = "Counters since the last counters inquiry.";
 			owner_lazy = () -> ATMCounterTypeCode.mmObject();
@@ -190,7 +192,7 @@ public class ATMCounterTypeCode {
 	 */
 	public static final MMCode mmCustomerTransaction = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CustomerTransaction";
 			definition = "Counters for a customer transaction.";
 			owner_lazy = () -> ATMCounterTypeCode.mmObject();
@@ -220,7 +222,7 @@ public class ATMCounterTypeCode {
 	 */
 	public static final MMCode mmBusinessDay = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BusinessDay";
 			definition = "Counters since the beginning of the business day.";
 			owner_lazy = () -> ATMCounterTypeCode.mmObject();
@@ -251,7 +253,7 @@ public class ATMCounterTypeCode {
 	 */
 	public static final MMCode mmOperation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Operation";
 			definition = "Counters for an operation performed by an operator on the ATM.";
 			owner_lazy = () -> ATMCounterTypeCode.mmObject();
@@ -262,13 +264,12 @@ public class ATMCounterTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ATMCounterTypeCode";
 				definition = "Type of ATM cassette counters.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ATMCounterTypeCode.mmCutOff, com.tools20022.repository.codeset.ATMCounterTypeCode.mmOperatorAdjust,
-						com.tools20022.repository.codeset.ATMCounterTypeCode.mmCountersInquiry, com.tools20022.repository.codeset.ATMCounterTypeCode.mmCustomerTransaction, com.tools20022.repository.codeset.ATMCounterTypeCode.mmBusinessDay,
-						com.tools20022.repository.codeset.ATMCounterTypeCode.mmOperation);
+				code_lazy = () -> Arrays.asList(ATMCounterTypeCode.mmCutOff, ATMCounterTypeCode.mmOperatorAdjust, ATMCounterTypeCode.mmCountersInquiry, ATMCounterTypeCode.mmCustomerTransaction, ATMCounterTypeCode.mmBusinessDay,
+						ATMCounterTypeCode.mmOperation);
 				derivation_lazy = () -> Arrays.asList(ATMCounterType1Code.mmObject(), ATMCounterType2Code.mmObject());
 			}
 		});

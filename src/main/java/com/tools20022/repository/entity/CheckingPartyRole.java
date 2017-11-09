@@ -18,7 +18,10 @@
 package com.tools20022.repository.entity;
 
 import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.DocumentPartyRole;
+import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.PartyProfileInformation1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -67,11 +70,11 @@ public class CheckingPartyRole extends DocumentPartyRole {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CheckingPartyRole";
 				definition = "Identification of the person who checked the document and/or the signature.";
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyProfileInformation1.mmCheckingParty);
+				derivationElement_lazy = () -> Arrays.asList(PartyProfileInformation1.mmCheckingParty);
 				superType_lazy = () -> DocumentPartyRole.mmObject();
 			}
 		});

@@ -17,11 +17,10 @@
 
 package com.tools20022.repository.entity;
 
-import com.tools20022.metamodel.MMBusinessAssociationEnd;
-import com.tools20022.metamodel.MMBusinessAttribute;
-import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.*;
 import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.datatype.YesNoIndicator;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.Vote2;
 import com.tools20022.repository.msg.Vote5;
 import java.util.Arrays;
@@ -38,18 +37,12 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.VoteResult#mmVote
- * VoteResult.mmVote}</li>
- * <li>{@linkplain com.tools20022.repository.entity.VoteResult#mmAccepted
- * VoteResult.mmAccepted}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.VoteResult#mmVoteDissemination
- * VoteResult.mmVoteDissemination}</li>
- * <li>{@linkplain com.tools20022.repository.entity.VoteResult#mmTotalVotesCast
- * VoteResult.mmTotalVotesCast}</li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.Vote2 Vote2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Vote5 Vote5}</li>
  * </ul>
  * </li>
  * <li>
@@ -63,12 +56,18 @@ import java.util.List;
  * MeetingResultDissemination.mmVoteResult}</li>
  * </ul>
  * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Vote2 Vote2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Vote5 Vote5}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.VoteResult#mmVote
+ * VoteResult.mmVote}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.VoteResult#mmAccepted
+ * VoteResult.mmAccepted}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.VoteResult#mmVoteDissemination
+ * VoteResult.mmVoteDissemination}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.VoteResult#mmTotalVotesCast
+ * VoteResult.mmTotalVotesCast}</li>
  * </ul>
  * </li>
  * <li>
@@ -126,12 +125,12 @@ public class VoteResult {
 		{
 			elementContext_lazy = () -> VoteResult.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Vote";
 			definition = "Number of votes per type of vote and per resolution.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.Vote.mmResult;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Vote.mmObject();
 		}
 	};
@@ -172,10 +171,10 @@ public class VoteResult {
 	 */
 	public static final MMBusinessAttribute mmAccepted = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Vote2.mmAccepted, com.tools20022.repository.msg.Vote5.mmAccepted);
+			derivation_lazy = () -> Arrays.asList(Vote2.mmAccepted, Vote5.mmAccepted);
 			elementContext_lazy = () -> VoteResult.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Accepted";
 			definition = "Specifies whether a resolution is accepted or not.";
 			maxOccurs = 1;
@@ -222,13 +221,13 @@ public class VoteResult {
 		{
 			elementContext_lazy = () -> VoteResult.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "VoteDissemination";
 			definition = "Disemination process through which the results are propagated.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.MeetingResultDissemination.mmVoteResult;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.MeetingResultDissemination.mmObject();
 		}
 	};
@@ -261,7 +260,7 @@ public class VoteResult {
 		{
 			elementContext_lazy = () -> VoteResult.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TotalVotesCast";
 			definition = "Total number of votes cast per resolution.";
 			maxOccurs = 1;
@@ -273,13 +272,12 @@ public class VoteResult {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "VoteResult";
 				definition = "Specifies whether an agenda item of a general meeting has been accepted or rejected, together with the number of votes.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Vote.mmResult, com.tools20022.repository.entity.MeetingResultDissemination.mmVoteResult);
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.VoteResult.mmVote, com.tools20022.repository.entity.VoteResult.mmAccepted, com.tools20022.repository.entity.VoteResult.mmVoteDissemination,
-						com.tools20022.repository.entity.VoteResult.mmTotalVotesCast);
+				element_lazy = () -> Arrays.asList(VoteResult.mmVote, VoteResult.mmAccepted, VoteResult.mmVoteDissemination, VoteResult.mmTotalVotesCast);
 				derivationComponent_lazy = () -> Arrays.asList(Vote2.mmObject(), Vote5.mmObject());
 			}
 		});

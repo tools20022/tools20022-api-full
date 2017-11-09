@@ -19,11 +19,15 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.BaseOneRate;
 import com.tools20022.repository.datatype.ImpliedCurrencyAndAmount;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Max140Text;
 import com.tools20022.repository.entity.CardPayment;
+import com.tools20022.repository.entity.CurrencyExchange;
+import com.tools20022.repository.entity.Payment;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -117,14 +121,14 @@ public class DetailedAmount8 {
 	 */
 	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.mmAmount;
+			businessElementTrace_lazy = () -> Payment.mmAmount;
 			componentContext_lazy = () -> DetailedAmount8.mmObject();
 			isDerived = false;
 			xmlTag = "Amt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Amount after the currency exchange.\r\nIt corresponds to ISO 8583 field number 6, completed by the field number 51 for the versions 87 and 93.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.DetailedAmount4.mmAmount;
+			previousVersion_lazy = () -> DetailedAmount4.mmAmount;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
@@ -168,11 +172,11 @@ public class DetailedAmount8 {
 	 */
 	public static final MMMessageAttribute mmExchangeRate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmExchangeRate;
+			businessElementTrace_lazy = () -> CurrencyExchange.mmExchangeRate;
 			componentContext_lazy = () -> DetailedAmount8.mmObject();
 			isDerived = false;
 			xmlTag = "XchgRate";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExchangeRate";
 			definition = "Exchange rate to the currency of the amount.\r\nIt corresponds to ISO 8583 field number 10.";
 			maxOccurs = 1;
@@ -216,11 +220,11 @@ public class DetailedAmount8 {
 	 */
 	public static final MMMessageAttribute mmQuotationDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmQuotationDate;
+			businessElementTrace_lazy = () -> CurrencyExchange.mmQuotationDate;
 			componentContext_lazy = () -> DetailedAmount8.mmObject();
 			isDerived = false;
 			xmlTag = "QtnDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuotationDate";
 			definition = "Date and time at which the exchange rate has been quoted.";
 			maxOccurs = 1;
@@ -269,10 +273,10 @@ public class DetailedAmount8 {
 			componentContext_lazy = () -> DetailedAmount8.mmObject();
 			isDerived = false;
 			xmlTag = "Labl";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Label";
 			definition = "Text to display on the cardholder or to print on the cardholder bank statement.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.DetailedAmount4.mmLabel;
+			previousVersion_lazy = () -> DetailedAmount4.mmLabel;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
@@ -282,11 +286,10 @@ public class DetailedAmount8 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DetailedAmount8.mmAmount, com.tools20022.repository.msg.DetailedAmount8.mmExchangeRate, com.tools20022.repository.msg.DetailedAmount8.mmQuotationDate,
-						com.tools20022.repository.msg.DetailedAmount8.mmLabel);
+				messageElement_lazy = () -> Arrays.asList(DetailedAmount8.mmAmount, DetailedAmount8.mmExchangeRate, DetailedAmount8.mmQuotationDate, DetailedAmount8.mmLabel);
 				trace_lazy = () -> CardPayment.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DetailedAmount8";
 				definition = "Detailed amounts associated with the total amount of transaction.";
 				previousVersion_lazy = () -> DetailedAmount4.mmObject();

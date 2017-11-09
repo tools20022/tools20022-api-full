@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ProrationTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -79,7 +81,7 @@ public class ProrationType1Code extends ProrationTypeCode {
 	 */
 	public static final MMCode mmNotDecided = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotDecided";
 			owner_lazy = () -> ProrationType1Code.mmObject();
 			codeName = "PRND";
@@ -105,7 +107,7 @@ public class ProrationType1Code extends ProrationTypeCode {
 	 */
 	public static final MMCode mmNotUsed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotUsed";
 			owner_lazy = () -> ProrationType1Code.mmObject();
 			codeName = "PRNU";
@@ -115,11 +117,11 @@ public class ProrationType1Code extends ProrationTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ProrationType1Code";
 				definition = "Jasdec codes for the specific use of pro ration.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ProrationType1Code.mmNotDecided, com.tools20022.repository.codeset.ProrationType1Code.mmNotUsed);
+				code_lazy = () -> Arrays.asList(ProrationType1Code.mmNotDecided, ProrationType1Code.mmNotUsed);
 				trace_lazy = () -> ProrationTypeCode.mmObject();
 			}
 		});

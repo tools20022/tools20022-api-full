@@ -20,7 +20,9 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.YesNoIndicator;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -110,7 +112,7 @@ public class AccountLiquidityReport1 {
 			componentContext_lazy = () -> AccountLiquidityReport1.mmObject();
 			isDerived = false;
 			xmlTag = "Acct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Account";
 			definition = "Unique and unambiguous identification for the account between the account owner and the account servicer.";
 			maxOccurs = 1;
@@ -153,7 +155,7 @@ public class AccountLiquidityReport1 {
 			componentContext_lazy = () -> AccountLiquidityReport1.mmObject();
 			isDerived = false;
 			xmlTag = "AcctOvrdueInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountOverdueIndicator";
 			definition = "Indicates overdue FTI queue on the account.";
 			maxOccurs = 1;
@@ -193,7 +195,7 @@ public class AccountLiquidityReport1 {
 			componentContext_lazy = () -> AccountLiquidityReport1.mmObject();
 			isDerived = false;
 			xmlTag = "LmtInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LimitInformation";
 			definition = "Information about funds limits set on the account.";
 			minOccurs = 0;
@@ -233,7 +235,7 @@ public class AccountLiquidityReport1 {
 			componentContext_lazy = () -> AccountLiquidityReport1.mmObject();
 			isDerived = false;
 			xmlTag = "LqdtyInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LiquidityInformation";
 			definition = "Information about liquidity of the funds of the account.";
 			maxOccurs = 1;
@@ -275,7 +277,7 @@ public class AccountLiquidityReport1 {
 			componentContext_lazy = () -> AccountLiquidityReport1.mmObject();
 			isDerived = false;
 			xmlTag = "ArrstInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ArrestInformation";
 			definition = "Information about restricted (arrested) funds on the account.";
 			maxOccurs = 1;
@@ -317,7 +319,7 @@ public class AccountLiquidityReport1 {
 			componentContext_lazy = () -> AccountLiquidityReport1.mmObject();
 			isDerived = false;
 			xmlTag = "DbtQdTxs";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DebitQueuedTransactions";
 			definition = "Information about queued debit transactions.";
 			maxOccurs = 5;
@@ -359,7 +361,7 @@ public class AccountLiquidityReport1 {
 			componentContext_lazy = () -> AccountLiquidityReport1.mmObject();
 			isDerived = false;
 			xmlTag = "CdtQdTxs";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditQueuedTransactions";
 			definition = "Information about queued credit transactions";
 			maxOccurs = 2;
@@ -372,12 +374,10 @@ public class AccountLiquidityReport1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountLiquidityReport1.mmAccount, com.tools20022.repository.msg.AccountLiquidityReport1.mmAccountOverdueIndicator,
-						com.tools20022.repository.msg.AccountLiquidityReport1.mmLimitInformation, com.tools20022.repository.msg.AccountLiquidityReport1.mmLiquidityInformation,
-						com.tools20022.repository.msg.AccountLiquidityReport1.mmArrestInformation, com.tools20022.repository.msg.AccountLiquidityReport1.mmDebitQueuedTransactions,
-						com.tools20022.repository.msg.AccountLiquidityReport1.mmCreditQueuedTransactions);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(AccountLiquidityReport1.mmAccount, AccountLiquidityReport1.mmAccountOverdueIndicator, AccountLiquidityReport1.mmLimitInformation, AccountLiquidityReport1.mmLiquidityInformation,
+						AccountLiquidityReport1.mmArrestInformation, AccountLiquidityReport1.mmDebitQueuedTransactions, AccountLiquidityReport1.mmCreditQueuedTransactions);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "AccountLiquidityReport1";
 				definition = "Details about praticipant's liquidity.";
 			}

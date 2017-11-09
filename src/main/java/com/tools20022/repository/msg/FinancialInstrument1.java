@@ -19,7 +19,10 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.entity.AssetHolding;
 import com.tools20022.repository.entity.Security;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -101,11 +104,11 @@ public class FinancialInstrument1 {
 	 */
 	public static final MMMessageAssociationEnd mmIdentification = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmIdentification;
+			businessElementTrace_lazy = () -> Security.mmIdentification;
 			componentContext_lazy = () -> FinancialInstrument1.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Identification of the instrument.";
 			maxOccurs = 1;
@@ -152,7 +155,7 @@ public class FinancialInstrument1 {
 			componentContext_lazy = () -> FinancialInstrument1.mmObject();
 			isDerived = false;
 			xmlTag = "Attrbts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Attributes";
 			definition = "Elements characterising a financial instrument.";
 			maxOccurs = 1;
@@ -196,11 +199,11 @@ public class FinancialInstrument1 {
 	 */
 	public static final MMMessageAssociationEnd mmValuationHaircutDetails = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmHaircut;
+			businessElementTrace_lazy = () -> AssetHolding.mmHaircut;
 			componentContext_lazy = () -> FinancialInstrument1.mmObject();
 			isDerived = false;
 			xmlTag = "ValtnHrcutDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValuationHaircutDetails";
 			definition = "Elements used to calculate the valuation haircut.";
 			maxOccurs = 1;
@@ -213,11 +216,10 @@ public class FinancialInstrument1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrument1.mmIdentification, com.tools20022.repository.msg.FinancialInstrument1.mmAttributes,
-						com.tools20022.repository.msg.FinancialInstrument1.mmValuationHaircutDetails);
+				messageElement_lazy = () -> Arrays.asList(FinancialInstrument1.mmIdentification, FinancialInstrument1.mmAttributes, FinancialInstrument1.mmValuationHaircutDetails);
 				trace_lazy = () -> Security.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "FinancialInstrument1";
 				definition = "Identification and attributes of a financial instrument for a custody process.";
 			}

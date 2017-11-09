@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.MeetingTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -86,7 +88,7 @@ public class MeetingType2Code extends MeetingTypeCode {
 	 */
 	public static final MMCode mmExtraordinary = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Extraordinary";
 			owner_lazy = () -> MeetingType2Code.mmObject();
 		}
@@ -109,7 +111,7 @@ public class MeetingType2Code extends MeetingTypeCode {
 	 */
 	public static final MMCode mmGeneral = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "General";
 			owner_lazy = () -> MeetingType2Code.mmObject();
 		}
@@ -132,7 +134,7 @@ public class MeetingType2Code extends MeetingTypeCode {
 	 */
 	public static final MMCode mmMixed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Mixed";
 			owner_lazy = () -> MeetingType2Code.mmObject();
 		}
@@ -155,7 +157,7 @@ public class MeetingType2Code extends MeetingTypeCode {
 	 */
 	public static final MMCode mmSpecial = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Special";
 			owner_lazy = () -> MeetingType2Code.mmObject();
 		}
@@ -164,13 +166,12 @@ public class MeetingType2Code extends MeetingTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("XMET");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MeetingType2Code";
 				definition = "Specifies the type of security holders meeting.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MeetingType2Code.mmExtraordinary, com.tools20022.repository.codeset.MeetingType2Code.mmGeneral, com.tools20022.repository.codeset.MeetingType2Code.mmMixed,
-						com.tools20022.repository.codeset.MeetingType2Code.mmSpecial);
+				code_lazy = () -> Arrays.asList(MeetingType2Code.mmExtraordinary, MeetingType2Code.mmGeneral, MeetingType2Code.mmMixed, MeetingType2Code.mmSpecial);
 				trace_lazy = () -> MeetingTypeCode.mmObject();
 			}
 		});

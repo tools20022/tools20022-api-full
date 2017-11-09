@@ -19,7 +19,9 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.metamodel.MMXor;
+import com.tools20022.repository.GeneratedRepository;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -121,7 +123,7 @@ public class PaginationBalance1 {
 			componentContext_lazy = () -> PaginationBalance1.mmObject();
 			isDerived = false;
 			xmlTag = "FrstOpngBal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FirstOpeningBalance";
 			definition = "Opening balance of the financial instrument in the statement.";
 			maxOccurs = 1;
@@ -166,7 +168,7 @@ public class PaginationBalance1 {
 			componentContext_lazy = () -> PaginationBalance1.mmObject();
 			isDerived = false;
 			xmlTag = "IntrmyOpngBal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IntermediaryOpeningBalance";
 			definition = "Opening balance of this page only. It must be the interemdiary closing balance of the previous page (part of the same statement).";
 			maxOccurs = 1;
@@ -209,7 +211,7 @@ public class PaginationBalance1 {
 			componentContext_lazy = () -> PaginationBalance1.mmObject();
 			isDerived = false;
 			xmlTag = "FnlClsgBal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinalClosingBalance";
 			definition = "Closing balance of the financial instrument in the statement.";
 			maxOccurs = 1;
@@ -254,7 +256,7 @@ public class PaginationBalance1 {
 			componentContext_lazy = () -> PaginationBalance1.mmObject();
 			isDerived = false;
 			xmlTag = "IntrmyClsgBal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IntermediaryClosingBalance";
 			definition = "Closing Balance of this page only. Must be the interemdiary opening balance of the next page (part of the same statement).";
 			maxOccurs = 1;
@@ -268,6 +270,10 @@ public class PaginationBalance1 {
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
+	 * messageComponent} =
+	 * {@linkplain com.tools20022.repository.msg.PaginationBalance1
+	 * PaginationBalance1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getImpactedElements
 	 * impactedElements} =
 	 * <ul>
@@ -279,10 +285,6 @@ public class PaginationBalance1 {
 	 * PaginationBalance1.mmIntermediaryOpeningBalance}</li>
 	 * </ul>
 	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
-	 * messageComponent} =
-	 * {@linkplain com.tools20022.repository.msg.PaginationBalance1
-	 * PaginationBalance1}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -298,11 +300,11 @@ public class PaginationBalance1 {
 	 */
 	public static final MMXor mmFirstOpeningBalanceOrIntermediaryOpeningBalanceRule = new MMXor() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FirstOpeningBalanceOrIntermediaryOpeningBalanceRule";
 			definition = "Either FirstOpeningBalance or IntermediaryOpeningBalance may be present, but not both.";
 			messageComponent_lazy = () -> PaginationBalance1.mmObject();
-			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaginationBalance1.mmFirstOpeningBalance, com.tools20022.repository.msg.PaginationBalance1.mmIntermediaryOpeningBalance);
+			impactedElements_lazy = () -> Arrays.asList(PaginationBalance1.mmFirstOpeningBalance, PaginationBalance1.mmIntermediaryOpeningBalance);
 		}
 	};
 	/**
@@ -311,6 +313,10 @@ public class PaginationBalance1 {
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
+	 * messageComponent} =
+	 * {@linkplain com.tools20022.repository.msg.PaginationBalance1
+	 * PaginationBalance1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getImpactedElements
 	 * impactedElements} =
 	 * <ul>
@@ -322,10 +328,6 @@ public class PaginationBalance1 {
 	 * PaginationBalance1.mmIntermediaryClosingBalance}</li>
 	 * </ul>
 	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
-	 * messageComponent} =
-	 * {@linkplain com.tools20022.repository.msg.PaginationBalance1
-	 * PaginationBalance1}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -341,21 +343,20 @@ public class PaginationBalance1 {
 	 */
 	public static final MMXor mmFinalClosingBalanceOrIntermediaryClosingBalanceRule = new MMXor() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinalClosingBalanceOrIntermediaryClosingBalanceRule";
 			definition = "Either FinalClosingBalance or IntermediaryClosingBalance may be present, but not both.";
 			messageComponent_lazy = () -> PaginationBalance1.mmObject();
-			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaginationBalance1.mmFinalClosingBalance, com.tools20022.repository.msg.PaginationBalance1.mmIntermediaryClosingBalance);
+			impactedElements_lazy = () -> Arrays.asList(PaginationBalance1.mmFinalClosingBalance, PaginationBalance1.mmIntermediaryClosingBalance);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaginationBalance1.mmFirstOpeningBalance, com.tools20022.repository.msg.PaginationBalance1.mmIntermediaryOpeningBalance,
-						com.tools20022.repository.msg.PaginationBalance1.mmFinalClosingBalance, com.tools20022.repository.msg.PaginationBalance1.mmIntermediaryClosingBalance);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+				messageElement_lazy = () -> Arrays.asList(PaginationBalance1.mmFirstOpeningBalance, PaginationBalance1.mmIntermediaryOpeningBalance, PaginationBalance1.mmFinalClosingBalance, PaginationBalance1.mmIntermediaryClosingBalance);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
 						return DateFormat.getDateInstance(java.text.DateFormat.LONG).parse("September 9, 2016");
@@ -366,8 +367,7 @@ public class PaginationBalance1 {
 				name = "PaginationBalance1";
 				definition = "Balance of a financial instrument for a specific statement page.";
 				nextVersions_lazy = () -> Arrays.asList(PaginationBalance2.mmObject());
-				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaginationBalance1.mmFirstOpeningBalanceOrIntermediaryOpeningBalanceRule,
-						com.tools20022.repository.msg.PaginationBalance1.mmFinalClosingBalanceOrIntermediaryClosingBalanceRule);
+				xors_lazy = () -> Arrays.asList(PaginationBalance1.mmFirstOpeningBalanceOrIntermediaryOpeningBalanceRule, PaginationBalance1.mmFinalClosingBalanceOrIntermediaryClosingBalanceRule);
 			}
 		});
 		return mmObject_lazy.get();

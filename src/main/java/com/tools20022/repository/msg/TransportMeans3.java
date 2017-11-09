@@ -19,9 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.Max4Text;
 import com.tools20022.repository.entity.Transport;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -107,7 +109,7 @@ public class TransportMeans3 {
 			componentContext_lazy = () -> TransportMeans3.mmObject();
 			isDerived = false;
 			xmlTag = "MdCd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ModeCode";
 			definition = "Code specifying the transport mode for the delivery of the consignment, such as by air, sea, rail, road or inland waterway. Reference UN/ECE Recommendation 19 - Code for Modes of Transport (www.unece.org/cefact/recommendations).";
 			maxOccurs = 1;
@@ -153,11 +155,11 @@ public class TransportMeans3 {
 	 */
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Transport.mmIdentification;
+			businessElementTrace_lazy = () -> Transport.mmIdentification;
 			componentContext_lazy = () -> TransportMeans3.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Unique identification of the means of transport, such as the International Maritime Organization number of a vessel.";
 			maxOccurs = 1;
@@ -198,7 +200,7 @@ public class TransportMeans3 {
 			componentContext_lazy = () -> TransportMeans3.mmObject();
 			isDerived = false;
 			xmlTag = "Nm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Name";
 			definition = "Name, expressed as text, of the means of transport.";
 			maxOccurs = 1;
@@ -210,10 +212,10 @@ public class TransportMeans3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransportMeans3.mmModeCode, com.tools20022.repository.msg.TransportMeans3.mmIdentification, com.tools20022.repository.msg.TransportMeans3.mmName);
+				messageElement_lazy = () -> Arrays.asList(TransportMeans3.mmModeCode, TransportMeans3.mmIdentification, TransportMeans3.mmName);
 				trace_lazy = () -> Transport.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TransportMeans3";
 				definition = "Describes the multimodal or the individual transport of goods.";
 			}

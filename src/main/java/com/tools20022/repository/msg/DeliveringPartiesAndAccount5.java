@@ -20,10 +20,13 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.PartyIdentification34Choice;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.entity.SecuritiesSettlementPartyRole;
 import com.tools20022.repository.entity.SecuritiesSettlementSystem;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -112,11 +115,11 @@ public class DeliveringPartiesAndAccount5 {
 	 */
 	public static final MMMessageAssociationEnd mmDeliveringAgent = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> DeliveringPartiesAndAccount5.mmObject();
 			isDerived = false;
 			xmlTag = "DlvrgAgt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeliveringAgent";
 			definition = "Party that delivers securities to the receiving agent at the place of settlement, eg, central securities depository.";
 			maxOccurs = 1;
@@ -160,11 +163,11 @@ public class DeliveringPartiesAndAccount5 {
 	 */
 	public static final MMMessageAssociationEnd mmDepository = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> DeliveringPartiesAndAccount5.mmObject();
 			isDerived = false;
 			xmlTag = "Dpstry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Depository";
 			definition = "Place where settlement of the securities takes place.";
 			maxOccurs = 1;
@@ -212,7 +215,7 @@ public class DeliveringPartiesAndAccount5 {
 			componentContext_lazy = () -> DeliveringPartiesAndAccount5.mmObject();
 			isDerived = false;
 			xmlTag = "SctiesSttlmSys";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesSettlementSystem";
 			definition = "Identifies the securities settlement system to be used.";
 			maxOccurs = 1;
@@ -224,11 +227,10 @@ public class DeliveringPartiesAndAccount5 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DeliveringPartiesAndAccount5.mmDeliveringAgent, com.tools20022.repository.msg.DeliveringPartiesAndAccount5.mmDepository,
-						com.tools20022.repository.msg.DeliveringPartiesAndAccount5.mmSecuritiesSettlementSystem);
+				messageElement_lazy = () -> Arrays.asList(DeliveringPartiesAndAccount5.mmDeliveringAgent, DeliveringPartiesAndAccount5.mmDepository, DeliveringPartiesAndAccount5.mmSecuritiesSettlementSystem);
 				trace_lazy = () -> SecuritiesSettlementPartyRole.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "DeliveringPartiesAndAccount5";
 				definition = "Chain of parties involved in the settlement of a transaction, including receipts and deliveries, book transfers, treasury deals, or other activities, resulting in the movement of a security or amount of money from one account to another.";
 			}

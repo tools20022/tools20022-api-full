@@ -20,8 +20,12 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.semt.SecuritiesMessageCancellationAdviceV04;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.entity.SecuritiesTradeExecution;
 import com.tools20022.repository.entity.SecuritiesTradeIdentification;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.SettlementTypeAndIdentification13;
 import java.text.DateFormat;
 import java.util.Arrays;
@@ -175,14 +179,14 @@ public class References37Choice {
 	 */
 	public static final MMMessageAssociationEnd mmSecuritiesSettlementTransactionConfirmationIdentification = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeExecution.mmSecuritiesSettlement;
+			businessElementTrace_lazy = () -> SecuritiesTradeExecution.mmSecuritiesSettlement;
 			componentContext_lazy = () -> References37Choice.mmObject();
 			isDerived = false;
 			xmlTag = "SctiesSttlmTxConfId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesSettlementTransactionConfirmationIdentification";
 			definition = "Unambiguous identification of the confirmation to be cancelled.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.References43Choice.mmSecuritiesSettlementTransactionConfirmationIdentification);
+			nextVersions_lazy = () -> Arrays.asList(References43Choice.mmSecuritiesSettlementTransactionConfirmationIdentification);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -233,10 +237,10 @@ public class References37Choice {
 			componentContext_lazy = () -> References37Choice.mmObject();
 			isDerived = false;
 			xmlTag = "IntraPosMvmntConfId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IntraPositionMovementConfirmationIdentification";
 			definition = "Unambiguous account servicer identification of the intra-position movement confirmation to be cancelled.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.References43Choice.mmIntraPositionMovementConfirmationIdentification);
+			nextVersions_lazy = () -> Arrays.asList(References43Choice.mmIntraPositionMovementConfirmationIdentification);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -284,10 +288,10 @@ public class References37Choice {
 			componentContext_lazy = () -> References37Choice.mmObject();
 			isDerived = false;
 			xmlTag = "SctiesBalAcctgRptId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesBalanceAccountingReportIdentification";
 			definition = "Unambiguous identification of the report message to be cancelled.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.References43Choice.mmSecuritiesBalanceAccountingReportIdentification);
+			nextVersions_lazy = () -> Arrays.asList(References43Choice.mmSecuritiesBalanceAccountingReportIdentification);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -335,10 +339,10 @@ public class References37Choice {
 			componentContext_lazy = () -> References37Choice.mmObject();
 			isDerived = false;
 			xmlTag = "SctiesBalCtdyRptId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesBalanceCustodyReportIdentification";
 			definition = "Unambiguous identification of the report message to be cancelled.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.References43Choice.mmSecuritiesBalanceCustodyReportIdentification);
+			nextVersions_lazy = () -> Arrays.asList(References43Choice.mmSecuritiesBalanceCustodyReportIdentification);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -388,10 +392,10 @@ public class References37Choice {
 			componentContext_lazy = () -> References37Choice.mmObject();
 			isDerived = false;
 			xmlTag = "IntraPosMvmntPstngRptId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IntraPositionMovementPostingReportIdentification";
 			definition = "Identification of the intra-position movement posting report to be cancelled.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.References43Choice.mmIntraPositionMovementPostingReportIdentification);
+			nextVersions_lazy = () -> Arrays.asList(References43Choice.mmIntraPositionMovementPostingReportIdentification);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -439,10 +443,10 @@ public class References37Choice {
 			componentContext_lazy = () -> References37Choice.mmObject();
 			isDerived = false;
 			xmlTag = "SctiesFincgConfId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesFinancingConfirmationIdentification";
 			definition = "Unambiguous identification of the confirmation to be cancelled.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.References43Choice.mmSecuritiesFinancingConfirmationIdentification);
+			nextVersions_lazy = () -> Arrays.asList(References43Choice.mmSecuritiesFinancingConfirmationIdentification);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -491,10 +495,10 @@ public class References37Choice {
 			componentContext_lazy = () -> References37Choice.mmObject();
 			isDerived = false;
 			xmlTag = "SctiesTxPdgRptId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesTransactionPendingReportIdentification";
 			definition = "Unambiguous identification of the report message to be cancelled.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.References43Choice.mmSecuritiesTransactionPendingReportIdentification);
+			nextVersions_lazy = () -> Arrays.asList(References43Choice.mmSecuritiesTransactionPendingReportIdentification);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -542,10 +546,10 @@ public class References37Choice {
 			componentContext_lazy = () -> References37Choice.mmObject();
 			isDerived = false;
 			xmlTag = "SctiesTxPstngRptId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesTransactionPostingReportIdentification";
 			definition = "Unambiguous identification of the report message to be cancelled.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.References43Choice.mmSecuritiesTransactionPostingReportIdentification);
+			nextVersions_lazy = () -> Arrays.asList(References43Choice.mmSecuritiesTransactionPostingReportIdentification);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -594,10 +598,10 @@ public class References37Choice {
 			componentContext_lazy = () -> References37Choice.mmObject();
 			isDerived = false;
 			xmlTag = "SctiesSttlmTxAllgmtRptId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesSettlementTransactionAllegementReportIdentification";
 			definition = "Unambiguous identification of the report to be cancelled.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.References43Choice.mmSecuritiesSettlementTransactionAllegementReportIdentification);
+			nextVersions_lazy = () -> Arrays.asList(References43Choice.mmSecuritiesSettlementTransactionAllegementReportIdentification);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -653,14 +657,14 @@ public class References37Choice {
 	 */
 	public static final MMMessageAssociationEnd mmSecuritiesSettlementTransactionAllegementNotificationTransactionIdentification = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeExecution.mmSecuritiesSettlement;
+			businessElementTrace_lazy = () -> SecuritiesTradeExecution.mmSecuritiesSettlement;
 			componentContext_lazy = () -> References37Choice.mmObject();
 			isDerived = false;
 			xmlTag = "SctiesSttlmTxAllgmtNtfctnTxId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesSettlementTransactionAllegementNotificationTransactionIdentification";
 			definition = "Unambiguous identification of the allegement notification to be cancelled as know by the account servicer.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.References43Choice.mmSecuritiesSettlementTransactionAllegementNotificationTransactionIdentification);
+			nextVersions_lazy = () -> Arrays.asList(References43Choice.mmSecuritiesSettlementTransactionAllegementNotificationTransactionIdentification);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -708,10 +712,10 @@ public class References37Choice {
 			componentContext_lazy = () -> References37Choice.mmObject();
 			isDerived = false;
 			xmlTag = "PrtflTrfNtfctnId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PortfolioTransferNotificationIdentification";
 			definition = "Identification of the portfolio transfer.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.References43Choice.mmPortfolioTransferNotificationIdentification);
+			nextVersions_lazy = () -> Arrays.asList(References43Choice.mmPortfolioTransferNotificationIdentification);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -764,14 +768,14 @@ public class References37Choice {
 	 */
 	public static final MMMessageAssociationEnd mmSecuritiesSettlementTransactionGenerationNotificationIdentification = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeExecution.mmSecuritiesSettlement;
+			businessElementTrace_lazy = () -> SecuritiesTradeExecution.mmSecuritiesSettlement;
 			componentContext_lazy = () -> References37Choice.mmObject();
 			isDerived = false;
 			xmlTag = "SctiesSttlmTxGnrtnNtfctnId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesSettlementTransactionGenerationNotificationIdentification";
 			definition = "Unambiguous identification of the notification message to be cancelled.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.References43Choice.mmSecuritiesSettlementTransactionGenerationNotificationIdentification);
+			nextVersions_lazy = () -> Arrays.asList(References43Choice.mmSecuritiesSettlementTransactionGenerationNotificationIdentification);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -820,10 +824,10 @@ public class References37Choice {
 			componentContext_lazy = () -> References37Choice.mmObject();
 			isDerived = false;
 			xmlTag = "OthrMsgId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherMessageIdentification";
 			definition = "Unambiguous identification of the message to be cancelled.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.References43Choice.mmOtherMessageIdentification);
+			nextVersions_lazy = () -> Arrays.asList(References43Choice.mmOtherMessageIdentification);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -870,10 +874,10 @@ public class References37Choice {
 			componentContext_lazy = () -> References37Choice.mmObject();
 			isDerived = false;
 			xmlTag = "TtlPrtflValtnRptId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalPortfolioValuationReportIdentification";
 			definition = "Unique identification of the report.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.References43Choice.mmTotalPortfolioValuationReportIdentification);
+			nextVersions_lazy = () -> Arrays.asList(References43Choice.mmTotalPortfolioValuationReportIdentification);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -883,20 +887,16 @@ public class References37Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.References37Choice.mmSecuritiesSettlementTransactionConfirmationIdentification,
-						com.tools20022.repository.choice.References37Choice.mmIntraPositionMovementConfirmationIdentification, com.tools20022.repository.choice.References37Choice.mmSecuritiesBalanceAccountingReportIdentification,
-						com.tools20022.repository.choice.References37Choice.mmSecuritiesBalanceCustodyReportIdentification, com.tools20022.repository.choice.References37Choice.mmIntraPositionMovementPostingReportIdentification,
-						com.tools20022.repository.choice.References37Choice.mmSecuritiesFinancingConfirmationIdentification, com.tools20022.repository.choice.References37Choice.mmSecuritiesTransactionPendingReportIdentification,
-						com.tools20022.repository.choice.References37Choice.mmSecuritiesTransactionPostingReportIdentification,
-						com.tools20022.repository.choice.References37Choice.mmSecuritiesSettlementTransactionAllegementReportIdentification,
-						com.tools20022.repository.choice.References37Choice.mmSecuritiesSettlementTransactionAllegementNotificationTransactionIdentification,
-						com.tools20022.repository.choice.References37Choice.mmPortfolioTransferNotificationIdentification,
-						com.tools20022.repository.choice.References37Choice.mmSecuritiesSettlementTransactionGenerationNotificationIdentification, com.tools20022.repository.choice.References37Choice.mmOtherMessageIdentification,
-						com.tools20022.repository.choice.References37Choice.mmTotalPortfolioValuationReportIdentification);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.SecuritiesMessageCancellationAdviceV04.mmReference);
+				messageElement_lazy = () -> Arrays.asList(References37Choice.mmSecuritiesSettlementTransactionConfirmationIdentification, References37Choice.mmIntraPositionMovementConfirmationIdentification,
+						References37Choice.mmSecuritiesBalanceAccountingReportIdentification, References37Choice.mmSecuritiesBalanceCustodyReportIdentification, References37Choice.mmIntraPositionMovementPostingReportIdentification,
+						References37Choice.mmSecuritiesFinancingConfirmationIdentification, References37Choice.mmSecuritiesTransactionPendingReportIdentification, References37Choice.mmSecuritiesTransactionPostingReportIdentification,
+						References37Choice.mmSecuritiesSettlementTransactionAllegementReportIdentification, References37Choice.mmSecuritiesSettlementTransactionAllegementNotificationTransactionIdentification,
+						References37Choice.mmPortfolioTransferNotificationIdentification, References37Choice.mmSecuritiesSettlementTransactionGenerationNotificationIdentification, References37Choice.mmOtherMessageIdentification,
+						References37Choice.mmTotalPortfolioValuationReportIdentification);
+				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesMessageCancellationAdviceV04.mmReference);
 				trace_lazy = () -> SecuritiesTradeIdentification.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
 						return DateFormat.getDateInstance(java.text.DateFormat.LONG).parse("May 5, 2016");

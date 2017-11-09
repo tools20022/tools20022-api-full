@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ATMServiceTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -114,7 +116,7 @@ public class ATMServiceType7Code extends ATMServiceTypeCode {
 	 */
 	public static final MMCode mmChosenWithdrawal = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChosenWithdrawal";
 			owner_lazy = () -> ATMServiceType7Code.mmObject();
 		}
@@ -137,7 +139,7 @@ public class ATMServiceType7Code extends ATMServiceTypeCode {
 	 */
 	public static final MMCode mmPINChange = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PINChange";
 			owner_lazy = () -> ATMServiceType7Code.mmObject();
 		}
@@ -160,7 +162,7 @@ public class ATMServiceType7Code extends ATMServiceTypeCode {
 	 */
 	public static final MMCode mmPINRecovery = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PINRecovery";
 			owner_lazy = () -> ATMServiceType7Code.mmObject();
 		}
@@ -183,7 +185,7 @@ public class ATMServiceType7Code extends ATMServiceTypeCode {
 	 */
 	public static final MMCode mmPINUnblock = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PINUnblock";
 			owner_lazy = () -> ATMServiceType7Code.mmObject();
 		}
@@ -206,7 +208,7 @@ public class ATMServiceType7Code extends ATMServiceTypeCode {
 	 */
 	public static final MMCode mmPreAuthorisedWithdrawal = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreAuthorisedWithdrawal";
 			owner_lazy = () -> ATMServiceType7Code.mmObject();
 		}
@@ -229,7 +231,7 @@ public class ATMServiceType7Code extends ATMServiceTypeCode {
 	 */
 	public static final MMCode mmProfileWithdrawal = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProfileWithdrawal";
 			owner_lazy = () -> ATMServiceType7Code.mmObject();
 		}
@@ -252,7 +254,7 @@ public class ATMServiceType7Code extends ATMServiceTypeCode {
 	 */
 	public static final MMCode mmStandardWithdrawal = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StandardWithdrawal";
 			owner_lazy = () -> ATMServiceType7Code.mmObject();
 		}
@@ -275,7 +277,7 @@ public class ATMServiceType7Code extends ATMServiceTypeCode {
 	 */
 	public static final MMCode mmSupervisedWithdrawal = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupervisedWithdrawal";
 			owner_lazy = () -> ATMServiceType7Code.mmObject();
 		}
@@ -298,7 +300,7 @@ public class ATMServiceType7Code extends ATMServiceTypeCode {
 	 */
 	public static final MMCode mmCustomerTransfer = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CustomerTransfer";
 			owner_lazy = () -> ATMServiceType7Code.mmObject();
 		}
@@ -321,7 +323,7 @@ public class ATMServiceType7Code extends ATMServiceTypeCode {
 	 */
 	public static final MMCode mmInterCustomerTransfer = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterCustomerTransfer";
 			owner_lazy = () -> ATMServiceType7Code.mmObject();
 		}
@@ -344,7 +346,7 @@ public class ATMServiceType7Code extends ATMServiceTypeCode {
 	 */
 	public static final MMCode mmNonVerifiedDeposit = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonVerifiedDeposit";
 			owner_lazy = () -> ATMServiceType7Code.mmObject();
 		}
@@ -367,7 +369,7 @@ public class ATMServiceType7Code extends ATMServiceTypeCode {
 	 */
 	public static final MMCode mmVerifiedDeposit = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VerifiedDeposit";
 			owner_lazy = () -> ATMServiceType7Code.mmObject();
 		}
@@ -390,7 +392,7 @@ public class ATMServiceType7Code extends ATMServiceTypeCode {
 	 */
 	public static final MMCode mmMakingChange = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MakingChange";
 			owner_lazy = () -> ATMServiceType7Code.mmObject();
 		}
@@ -413,7 +415,7 @@ public class ATMServiceType7Code extends ATMServiceTypeCode {
 	 */
 	public static final MMCode mmPayment = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Payment";
 			owner_lazy = () -> ATMServiceType7Code.mmObject();
 		}
@@ -422,17 +424,13 @@ public class ATMServiceType7Code extends ATMServiceTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ATMServiceType7Code";
 				definition = "Describes the type of ATM transaction selected by the customer.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ATMServiceType7Code.mmChosenWithdrawal, com.tools20022.repository.codeset.ATMServiceType7Code.mmPINChange,
-						com.tools20022.repository.codeset.ATMServiceType7Code.mmPINRecovery, com.tools20022.repository.codeset.ATMServiceType7Code.mmPINUnblock,
-						com.tools20022.repository.codeset.ATMServiceType7Code.mmPreAuthorisedWithdrawal, com.tools20022.repository.codeset.ATMServiceType7Code.mmProfileWithdrawal,
-						com.tools20022.repository.codeset.ATMServiceType7Code.mmStandardWithdrawal, com.tools20022.repository.codeset.ATMServiceType7Code.mmSupervisedWithdrawal,
-						com.tools20022.repository.codeset.ATMServiceType7Code.mmCustomerTransfer, com.tools20022.repository.codeset.ATMServiceType7Code.mmInterCustomerTransfer,
-						com.tools20022.repository.codeset.ATMServiceType7Code.mmNonVerifiedDeposit, com.tools20022.repository.codeset.ATMServiceType7Code.mmVerifiedDeposit,
-						com.tools20022.repository.codeset.ATMServiceType7Code.mmMakingChange, com.tools20022.repository.codeset.ATMServiceType7Code.mmPayment);
+				code_lazy = () -> Arrays.asList(ATMServiceType7Code.mmChosenWithdrawal, ATMServiceType7Code.mmPINChange, ATMServiceType7Code.mmPINRecovery, ATMServiceType7Code.mmPINUnblock, ATMServiceType7Code.mmPreAuthorisedWithdrawal,
+						ATMServiceType7Code.mmProfileWithdrawal, ATMServiceType7Code.mmStandardWithdrawal, ATMServiceType7Code.mmSupervisedWithdrawal, ATMServiceType7Code.mmCustomerTransfer, ATMServiceType7Code.mmInterCustomerTransfer,
+						ATMServiceType7Code.mmNonVerifiedDeposit, ATMServiceType7Code.mmVerifiedDeposit, ATMServiceType7Code.mmMakingChange, ATMServiceType7Code.mmPayment);
 				trace_lazy = () -> ATMServiceTypeCode.mmObject();
 			}
 		});

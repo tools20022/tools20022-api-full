@@ -20,9 +20,11 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.entity.ListTrading;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -115,11 +117,11 @@ public class List3 {
 	 */
 	public static final MMMessageAttribute mmListIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ListTrading.mmListIdentification;
+			businessElementTrace_lazy = () -> ListTrading.mmListIdentification;
 			componentContext_lazy = () -> List3.mmObject();
 			isDerived = false;
 			xmlTag = "ListId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ListIdentification";
 			definition = "Unique identifier for a list, as assigned by the trading party. The identifier must be unique within a single trading day.";
 			maxOccurs = 1;
@@ -160,7 +162,7 @@ public class List3 {
 			componentContext_lazy = () -> List3.mmObject();
 			isDerived = false;
 			xmlTag = "NbOfStrks";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NumberOfStrikes";
 			definition = "Identifies the number of strike price entries in this message.";
 			maxOccurs = 1;
@@ -203,7 +205,7 @@ public class List3 {
 			componentContext_lazy = () -> List3.mmObject();
 			isDerived = false;
 			xmlTag = "TtlNbOfStrks";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalNumberOfStrikes";
 			definition = "Identifies the total number of strike price entries across all messages with the same ListIdentification.";
 			maxOccurs = 1;
@@ -259,7 +261,7 @@ public class List3 {
 			componentContext_lazy = () -> List3.mmObject();
 			isDerived = false;
 			xmlTag = "StrkPricDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StrikePriceDetails";
 			definition = "Provides the details for negotiating and trading a large number of securities contained in or comprising a portfolio. \n\nOne example is index arbitrage, which consists in the purchase or sale of a basket of stocks in conjunction with the sale or purchase of\na derivative product (for example index futures) to profit from price differences between the basket and the derivative product. \n\nOther examples include liquidation of EFP (Exchange for Physical) stock positions, portfolio realignment and portfolio liquidation.";
 			minOccurs = 1;
@@ -271,11 +273,10 @@ public class List3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.List3.mmListIdentification, com.tools20022.repository.msg.List3.mmNumberOfStrikes, com.tools20022.repository.msg.List3.mmTotalNumberOfStrikes,
-						com.tools20022.repository.msg.List3.mmStrikePriceDetails);
+				messageElement_lazy = () -> Arrays.asList(List3.mmListIdentification, List3.mmNumberOfStrikes, List3.mmTotalNumberOfStrikes, List3.mmStrikePriceDetails);
 				trace_lazy = () -> ListTrading.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "List3";
 				definition = "Provides the details for negotiating and trading a large number of securities contained in or comprising a portfolio. \n\nOne example is index arbitrage, which consists in the purchase or sale of a basket of stocks in conjunction with the sale or purchase of\na derivative product (for example index futures) to profit from price differences between the basket and the derivative product. \n\nOther examples include liquidation of EFP (Exchange for Physical) stock positions, portfolio realignment and portfolio liquidation.";
 			}

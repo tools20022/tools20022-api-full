@@ -17,10 +17,7 @@
 
 package com.tools20022.repository.msg;
 
-import com.tools20022.metamodel.MMMessageAssociationEnd;
-import com.tools20022.metamodel.MMMessageAttribute;
-import com.tools20022.metamodel.MMMessageComponent;
-import com.tools20022.metamodel.MMXor;
+import com.tools20022.metamodel.*;
 import com.tools20022.repository.choice.PartyIdentification2Choice;
 import com.tools20022.repository.codeset.CommissionType6Code;
 import com.tools20022.repository.codeset.TaxationBasis4Code;
@@ -28,7 +25,10 @@ import com.tools20022.repository.datatype.ActiveCurrencyAnd13DecimalAmount;
 import com.tools20022.repository.datatype.Extended350Code;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.PercentageRate;
+import com.tools20022.repository.entity.Adjustment;
 import com.tools20022.repository.entity.Commission;
+import com.tools20022.repository.entity.Party;
+import com.tools20022.repository.GeneratedRepository;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -140,11 +140,11 @@ public class Commission10 {
 	 */
 	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Commission.mmCommissionType;
+			businessElementTrace_lazy = () -> Commission.mmCommissionType;
 			componentContext_lazy = () -> Commission10.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Service for which the commission is asked or paid.";
 			maxOccurs = 1;
@@ -187,11 +187,11 @@ public class Commission10 {
 	 */
 	public static final MMMessageAttribute mmExtendedType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Commission.mmCommissionType;
+			businessElementTrace_lazy = () -> Commission.mmCommissionType;
 			componentContext_lazy = () -> Commission10.mmObject();
 			isDerived = false;
 			xmlTag = "XtndedTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExtendedType";
 			definition = "Service for which the commission is asked or paid.";
 			maxOccurs = 1;
@@ -234,11 +234,11 @@ public class Commission10 {
 	 */
 	public static final MMMessageAttribute mmBasis = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Commission.mmBasis;
+			businessElementTrace_lazy = () -> Commission.mmBasis;
 			componentContext_lazy = () -> Commission10.mmObject();
 			isDerived = false;
 			xmlTag = "Bsis";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Basis";
 			definition = "Basis upon which a commission is charged, eg, flat fee.";
 			maxOccurs = 1;
@@ -281,11 +281,11 @@ public class Commission10 {
 	 */
 	public static final MMMessageAttribute mmExtendedBasis = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Commission.mmBasis;
+			businessElementTrace_lazy = () -> Commission.mmBasis;
 			componentContext_lazy = () -> Commission10.mmObject();
 			isDerived = false;
 			xmlTag = "XtndedBsis";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExtendedBasis";
 			definition = "Basis upon which a commission is charged, eg, flat fee.";
 			maxOccurs = 1;
@@ -335,14 +335,14 @@ public class Commission10 {
 	 */
 	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Adjustment.mmAmount;
+			businessElementTrace_lazy = () -> Adjustment.mmAmount;
 			componentContext_lazy = () -> Commission10.mmObject();
 			isDerived = false;
 			xmlTag = "Amt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Commission expressed as an amount of money.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Commission19.mmAmount);
+			nextVersions_lazy = () -> Arrays.asList(Commission19.mmAmount);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAnd13DecimalAmount.mmObject();
@@ -390,14 +390,14 @@ public class Commission10 {
 	 */
 	public static final MMMessageAttribute mmRate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Commission.mmRate;
+			businessElementTrace_lazy = () -> Commission.mmRate;
 			componentContext_lazy = () -> Commission10.mmObject();
 			isDerived = false;
 			xmlTag = "Rate";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rate";
 			definition = "Commission expressed as a percentage.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Commission18.mmRate);
+			nextVersions_lazy = () -> Arrays.asList(Commission18.mmRate);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
@@ -439,11 +439,11 @@ public class Commission10 {
 	 */
 	public static final MMMessageAttribute mmRecipientIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> Commission10.mmObject();
 			isDerived = false;
 			xmlTag = "RcptId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RecipientIdentification";
 			definition = "Party entitled to the amount of money resulting from a commission.";
 			maxOccurs = 1;
@@ -489,11 +489,11 @@ public class Commission10 {
 	 */
 	public static final MMMessageAttribute mmCommercialAgreementReference = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Commission.mmCommercialAgreementReference;
+			businessElementTrace_lazy = () -> Commission.mmCommercialAgreementReference;
 			componentContext_lazy = () -> Commission10.mmObject();
 			isDerived = false;
 			xmlTag = "ComrclAgrmtRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommercialAgreementReference";
 			definition = "Reference to the agreement established between the fund and another party. This element, amongst others, defines the conditions of the commissions.";
 			maxOccurs = 1;
@@ -535,11 +535,11 @@ public class Commission10 {
 	 */
 	public static final MMMessageAssociationEnd mmWaivingDetails = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Commission.mmCommissionWaiving;
+			businessElementTrace_lazy = () -> Commission.mmCommissionWaiving;
 			componentContext_lazy = () -> Commission10.mmObject();
 			isDerived = false;
 			xmlTag = "WvgDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WaivingDetails";
 			definition = "Voluntary non-enforcement of the right to all or part of a commission.";
 			maxOccurs = 1;
@@ -553,6 +553,9 @@ public class Commission10 {
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
+	 * messageComponent} =
+	 * {@linkplain com.tools20022.repository.msg.Commission10 Commission10}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getImpactedElements
 	 * impactedElements} =
 	 * <ul>
@@ -563,9 +566,6 @@ public class Commission10 {
 	 * Commission10.mmExtendedType}</li>
 	 * </ul>
 	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
-	 * messageComponent} =
-	 * {@linkplain com.tools20022.repository.msg.Commission10 Commission10}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -580,11 +580,11 @@ public class Commission10 {
 	 */
 	public static final MMXor mmTypeOrExtendedTypeRule = new MMXor() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TypeOrExtendedTypeRule";
 			definition = "Either Type or ExtendedType may be present, but not both.";
 			messageComponent_lazy = () -> Commission10.mmObject();
-			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Commission10.mmType, com.tools20022.repository.msg.Commission10.mmExtendedType);
+			impactedElements_lazy = () -> Arrays.asList(Commission10.mmType, Commission10.mmExtendedType);
 		}
 	};
 	/**
@@ -592,6 +592,9 @@ public class Commission10 {
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
+	 * messageComponent} =
+	 * {@linkplain com.tools20022.repository.msg.Commission10 Commission10}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getImpactedElements
 	 * impactedElements} =
 	 * <ul>
@@ -602,9 +605,6 @@ public class Commission10 {
 	 * Commission10.mmExtendedBasis}</li>
 	 * </ul>
 	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
-	 * messageComponent} =
-	 * {@linkplain com.tools20022.repository.msg.Commission10 Commission10}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -619,23 +619,22 @@ public class Commission10 {
 	 */
 	public static final MMXor mmBasisOrExtendedBasisRule = new MMXor() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BasisOrExtendedBasisRule";
 			definition = "Either Basis oe ExtendedBasis may be present but not both.";
 			messageComponent_lazy = () -> Commission10.mmObject();
-			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Commission10.mmBasis, com.tools20022.repository.msg.Commission10.mmExtendedBasis);
+			impactedElements_lazy = () -> Arrays.asList(Commission10.mmBasis, Commission10.mmExtendedBasis);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Commission10.mmType, com.tools20022.repository.msg.Commission10.mmExtendedType, com.tools20022.repository.msg.Commission10.mmBasis,
-						com.tools20022.repository.msg.Commission10.mmExtendedBasis, com.tools20022.repository.msg.Commission10.mmAmount, com.tools20022.repository.msg.Commission10.mmRate,
-						com.tools20022.repository.msg.Commission10.mmRecipientIdentification, com.tools20022.repository.msg.Commission10.mmCommercialAgreementReference, com.tools20022.repository.msg.Commission10.mmWaivingDetails);
+				messageElement_lazy = () -> Arrays.asList(Commission10.mmType, Commission10.mmExtendedType, Commission10.mmBasis, Commission10.mmExtendedBasis, Commission10.mmAmount, Commission10.mmRate,
+						Commission10.mmRecipientIdentification, Commission10.mmCommercialAgreementReference, Commission10.mmWaivingDetails);
 				trace_lazy = () -> Commission.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
 						return DateFormat.getDateInstance(java.text.DateFormat.LONG).parse("September 9, 2016");
@@ -646,7 +645,7 @@ public class Commission10 {
 				name = "Commission10";
 				definition = "Amount of money due to a party as compensation for a service.";
 				nextVersions_lazy = () -> Arrays.asList(Commission18.mmObject(), Commission19.mmObject());
-				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Commission10.mmTypeOrExtendedTypeRule, com.tools20022.repository.msg.Commission10.mmBasisOrExtendedBasisRule);
+				xors_lazy = () -> Arrays.asList(Commission10.mmTypeOrExtendedTypeRule, Commission10.mmBasisOrExtendedBasisRule);
 			}
 		});
 		return mmObject_lazy.get();

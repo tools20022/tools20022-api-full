@@ -20,10 +20,12 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.entity.CollateralValuation;
 import com.tools20022.repository.entity.Security;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -105,7 +107,7 @@ public class CollateralValuePosition1 {
 			componentContext_lazy = () -> CollateralValuePosition1.mmObject();
 			isDerived = false;
 			xmlTag = "DataAccsTm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DataAccessTime";
 			definition = "Date and time when the data was last accessed.";
 			maxOccurs = 1;
@@ -149,11 +151,11 @@ public class CollateralValuePosition1 {
 	 */
 	public static final MMMessageAttribute mmTotalCollateralValuation = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CollateralValuation.mmReportedCurrencyAndAmount;
+			businessElementTrace_lazy = () -> CollateralValuation.mmReportedCurrencyAndAmount;
 			componentContext_lazy = () -> CollateralValuePosition1.mmObject();
 			isDerived = false;
 			xmlTag = "TtlCollValtn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalCollateralValuation";
 			definition = "Total value of the collateral valuation.";
 			maxOccurs = 1;
@@ -198,11 +200,11 @@ public class CollateralValuePosition1 {
 	 */
 	public static final MMMessageAssociationEnd mmSecuritiesAccount = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmSecuritiesAccount;
+			businessElementTrace_lazy = () -> Security.mmSecuritiesAccount;
 			componentContext_lazy = () -> CollateralValuePosition1.mmObject();
 			isDerived = false;
 			xmlTag = "SctiesAcct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesAccount";
 			definition = "Unique identification, as assigned by the account servicer, to unambiguously identify the securities account.";
 			maxOccurs = 1;
@@ -253,7 +255,7 @@ public class CollateralValuePosition1 {
 			componentContext_lazy = () -> CollateralValuePosition1.mmObject();
 			isDerived = false;
 			xmlTag = "Scties";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Securities";
 			definition = "Unique identification, as known by the account owner, to unambiguously identify the securities on which the collateral value position is requested.";
 			minOccurs = 0;
@@ -265,11 +267,10 @@ public class CollateralValuePosition1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CollateralValuePosition1.mmDataAccessTime, com.tools20022.repository.msg.CollateralValuePosition1.mmTotalCollateralValuation,
-						com.tools20022.repository.msg.CollateralValuePosition1.mmSecuritiesAccount, com.tools20022.repository.msg.CollateralValuePosition1.mmSecurities);
+				messageElement_lazy = () -> Arrays.asList(CollateralValuePosition1.mmDataAccessTime, CollateralValuePosition1.mmTotalCollateralValuation, CollateralValuePosition1.mmSecuritiesAccount, CollateralValuePosition1.mmSecurities);
 				trace_lazy = () -> CollateralValuation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CollateralValuePosition1";
 				definition = "Details of the collateral value position/balance.";
 			}

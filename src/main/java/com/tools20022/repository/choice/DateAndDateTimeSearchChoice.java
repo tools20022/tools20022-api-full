@@ -19,6 +19,8 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -92,7 +94,7 @@ public class DateAndDateTimeSearchChoice {
 			componentContext_lazy = () -> DateAndDateTimeSearchChoice.mmObject();
 			isDerived = false;
 			xmlTag = "DtTmSch";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DateTimeSearch";
 			definition = "Patterns to search a date time.";
 			maxOccurs = 1;
@@ -134,7 +136,7 @@ public class DateAndDateTimeSearchChoice {
 			componentContext_lazy = () -> DateAndDateTimeSearchChoice.mmObject();
 			isDerived = false;
 			xmlTag = "DtSch";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DateSearch";
 			definition = "Patterns to search a date.";
 			maxOccurs = 1;
@@ -146,9 +148,9 @@ public class DateAndDateTimeSearchChoice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.DateAndDateTimeSearchChoice.mmDateTimeSearch, com.tools20022.repository.choice.DateAndDateTimeSearchChoice.mmDateSearch);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(DateAndDateTimeSearchChoice.mmDateTimeSearch, DateAndDateTimeSearchChoice.mmDateSearch);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DateAndDateTimeSearchChoice";
 				definition = "Choice between a date or a date time pattern as search selection criteria.";
 			}

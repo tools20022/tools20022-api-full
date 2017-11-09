@@ -20,11 +20,15 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.PartyRole5Choice;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.PercentageRate;
+import com.tools20022.repository.entity.Tax;
+import com.tools20022.repository.entity.Trade;
 import com.tools20022.repository.entity.TreasuryTrade;
 import com.tools20022.repository.entity.TreasuryTradingParty;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -101,11 +105,11 @@ public class TreasuryProfile1 {
 	 */
 	public static final MMMessageAttribute mmDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Trade.mmTradeDateTime;
+			businessElementTrace_lazy = () -> Trade.mmTradeDateTime;
 			componentContext_lazy = () -> TreasuryProfile1.mmObject();
 			isDerived = false;
 			xmlTag = "Dt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Date";
 			definition = "Execution date of treasury bond trade.";
 			maxOccurs = 1;
@@ -154,7 +158,7 @@ public class TreasuryProfile1 {
 			componentContext_lazy = () -> TreasuryProfile1.mmObject();
 			isDerived = false;
 			xmlTag = "TradrTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TraderType";
 			definition = "Type of party that performs trading operations, for example, investor or custodian.";
 			maxOccurs = 1;
@@ -198,11 +202,11 @@ public class TreasuryProfile1 {
 	 */
 	public static final MMMessageAttribute mmRate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.mmRate;
+			businessElementTrace_lazy = () -> Tax.mmRate;
 			componentContext_lazy = () -> TreasuryProfile1.mmObject();
 			isDerived = false;
 			xmlTag = "Rate";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rate";
 			definition = "Tax rate.";
 			maxOccurs = 1;
@@ -214,10 +218,10 @@ public class TreasuryProfile1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TreasuryProfile1.mmDate, com.tools20022.repository.msg.TreasuryProfile1.mmTraderType, com.tools20022.repository.msg.TreasuryProfile1.mmRate);
+				messageElement_lazy = () -> Arrays.asList(TreasuryProfile1.mmDate, TreasuryProfile1.mmTraderType, TreasuryProfile1.mmRate);
 				trace_lazy = () -> TreasuryTrade.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TreasuryProfile1";
 				definition = "Treasury trading profile.";
 			}

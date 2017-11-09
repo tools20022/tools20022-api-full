@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CardServiceTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -80,7 +82,7 @@ public class CardServiceType3Code extends CardServiceTypeCode {
 	 */
 	public static final MMCode mmDeliverKey = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeliverKey";
 			owner_lazy = () -> CardServiceType3Code.mmObject();
 		}
@@ -103,7 +105,7 @@ public class CardServiceType3Code extends CardServiceTypeCode {
 	 */
 	public static final MMCode mmKeyChange = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "KeyChange";
 			owner_lazy = () -> CardServiceType3Code.mmObject();
 		}
@@ -126,7 +128,7 @@ public class CardServiceType3Code extends CardServiceTypeCode {
 	 */
 	public static final MMCode mmKeyVerification = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "KeyVerification";
 			owner_lazy = () -> CardServiceType3Code.mmObject();
 		}
@@ -135,12 +137,11 @@ public class CardServiceType3Code extends CardServiceTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CardServiceType3Code";
 				definition = "Type of key exchange.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CardServiceType3Code.mmDeliverKey, com.tools20022.repository.codeset.CardServiceType3Code.mmKeyChange,
-						com.tools20022.repository.codeset.CardServiceType3Code.mmKeyVerification);
+				code_lazy = () -> Arrays.asList(CardServiceType3Code.mmDeliverKey, CardServiceType3Code.mmKeyChange, CardServiceType3Code.mmKeyVerification);
 				trace_lazy = () -> CardServiceTypeCode.mmObject();
 			}
 		});

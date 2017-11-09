@@ -17,14 +17,13 @@
 
 package com.tools20022.repository.msg;
 
-import com.tools20022.metamodel.MMMessageAssociationEnd;
-import com.tools20022.metamodel.MMMessageAttribute;
-import com.tools20022.metamodel.MMMessageComponent;
-import com.tools20022.metamodel.MMXor;
+import com.tools20022.metamodel.*;
 import com.tools20022.repository.codeset.CancelledStatusReason2Code;
 import com.tools20022.repository.codeset.NoReasonCode;
 import com.tools20022.repository.datatype.Extended350Code;
 import com.tools20022.repository.entity.SecuritiesTradeStatusReason;
+import com.tools20022.repository.entity.StatusReason;
+import com.tools20022.repository.GeneratedRepository;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -125,11 +124,11 @@ public class CancelledStatus2 {
 	 */
 	public static final MMMessageAttribute mmReason = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmCancellationReason;
+			businessElementTrace_lazy = () -> StatusReason.mmCancellationReason;
 			componentContext_lazy = () -> CancelledStatus2.mmObject();
 			isDerived = false;
 			xmlTag = "Rsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reason";
 			definition = "Reason for the cancelled status.";
 			maxOccurs = 1;
@@ -171,7 +170,7 @@ public class CancelledStatus2 {
 			componentContext_lazy = () -> CancelledStatus2.mmObject();
 			isDerived = false;
 			xmlTag = "XtndedRsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExtendedReason";
 			definition = "Reason for the cancelled status.";
 			maxOccurs = 1;
@@ -214,11 +213,11 @@ public class CancelledStatus2 {
 	 */
 	public static final MMMessageAssociationEnd mmDataSourceScheme = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmDataSourceScheme;
+			businessElementTrace_lazy = () -> StatusReason.mmDataSourceScheme;
 			componentContext_lazy = () -> CancelledStatus2.mmObject();
 			isDerived = false;
 			xmlTag = "DataSrcSchme";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DataSourceScheme";
 			definition = "Proprietary identification of the reason for the cancelled status.";
 			maxOccurs = 1;
@@ -263,11 +262,11 @@ public class CancelledStatus2 {
 	 */
 	public static final MMMessageAttribute mmNoSpecifiedReason = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmNoSpecifiedReason;
+			businessElementTrace_lazy = () -> StatusReason.mmNoSpecifiedReason;
 			componentContext_lazy = () -> CancelledStatus2.mmObject();
 			isDerived = false;
 			xmlTag = "NoSpcfdRsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoSpecifiedReason";
 			definition = "Indicates that there is no reason available or to report.";
 			maxOccurs = 1;
@@ -281,6 +280,10 @@ public class CancelledStatus2 {
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
+	 * messageComponent} =
+	 * {@linkplain com.tools20022.repository.msg.CancelledStatus2
+	 * CancelledStatus2}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getImpactedElements
 	 * impactedElements} =
 	 * <ul>
@@ -297,10 +300,6 @@ public class CancelledStatus2 {
 	 * CancelledStatus2.mmNoSpecifiedReason}</li>
 	 * </ul>
 	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
-	 * messageComponent} =
-	 * {@linkplain com.tools20022.repository.msg.CancelledStatus2
-	 * CancelledStatus2}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -316,23 +315,21 @@ public class CancelledStatus2 {
 	 */
 	public static final MMXor mmReasonRule = new MMXor() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReasonRule";
 			definition = "One and only one message element in the list (Reason, ExtendedReason, DataSourceScheme, NoSpecifiedReason) must be present.";
 			messageComponent_lazy = () -> CancelledStatus2.mmObject();
-			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CancelledStatus2.mmReason, com.tools20022.repository.msg.CancelledStatus2.mmExtendedReason,
-					com.tools20022.repository.msg.CancelledStatus2.mmDataSourceScheme, com.tools20022.repository.msg.CancelledStatus2.mmNoSpecifiedReason);
+			impactedElements_lazy = () -> Arrays.asList(CancelledStatus2.mmReason, CancelledStatus2.mmExtendedReason, CancelledStatus2.mmDataSourceScheme, CancelledStatus2.mmNoSpecifiedReason);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CancelledStatus2.mmReason, com.tools20022.repository.msg.CancelledStatus2.mmExtendedReason,
-						com.tools20022.repository.msg.CancelledStatus2.mmDataSourceScheme, com.tools20022.repository.msg.CancelledStatus2.mmNoSpecifiedReason);
+				messageElement_lazy = () -> Arrays.asList(CancelledStatus2.mmReason, CancelledStatus2.mmExtendedReason, CancelledStatus2.mmDataSourceScheme, CancelledStatus2.mmNoSpecifiedReason);
 				trace_lazy = () -> SecuritiesTradeStatusReason.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
 						return DateFormat.getDateInstance(java.text.DateFormat.LONG).parse("September 9, 2016");
@@ -343,7 +340,7 @@ public class CancelledStatus2 {
 				name = "CancelledStatus2";
 				definition = "Status is cancelled.";
 				nextVersions_lazy = () -> Arrays.asList(CancelledStatusReason16.mmObject());
-				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CancelledStatus2.mmReasonRule);
+				xors_lazy = () -> Arrays.asList(CancelledStatus2.mmReasonRule);
 			}
 		});
 		return mmObject_lazy.get();

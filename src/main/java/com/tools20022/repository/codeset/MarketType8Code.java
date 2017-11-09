@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.MarketTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -92,7 +94,7 @@ public class MarketType8Code extends MarketTypeCode {
 	 */
 	public static final MMCode mmCounter = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Counter";
 			owner_lazy = () -> MarketType8Code.mmObject();
 		}
@@ -115,7 +117,7 @@ public class MarketType8Code extends MarketTypeCode {
 	 */
 	public static final MMCode mmInterBank = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterBank";
 			owner_lazy = () -> MarketType8Code.mmObject();
 		}
@@ -138,7 +140,7 @@ public class MarketType8Code extends MarketTypeCode {
 	 */
 	public static final MMCode mmOverTheCounter = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OverTheCounter";
 			owner_lazy = () -> MarketType8Code.mmObject();
 		}
@@ -161,7 +163,7 @@ public class MarketType8Code extends MarketTypeCode {
 	 */
 	public static final MMCode mmPrimaryMarket = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PrimaryMarket";
 			owner_lazy = () -> MarketType8Code.mmObject();
 		}
@@ -184,7 +186,7 @@ public class MarketType8Code extends MarketTypeCode {
 	 */
 	public static final MMCode mmSecondaryMarket = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecondaryMarket";
 			owner_lazy = () -> MarketType8Code.mmObject();
 		}
@@ -207,7 +209,7 @@ public class MarketType8Code extends MarketTypeCode {
 	 */
 	public static final MMCode mmStockExchange = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StockExchange";
 			owner_lazy = () -> MarketType8Code.mmObject();
 		}
@@ -230,7 +232,7 @@ public class MarketType8Code extends MarketTypeCode {
 	 */
 	public static final MMCode mmVarious = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Various";
 			owner_lazy = () -> MarketType8Code.mmObject();
 		}
@@ -239,13 +241,12 @@ public class MarketType8Code extends MarketTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MarketType8Code";
 				definition = "Specifies the type of place where a trade was executed, a price was sourced from, an instrument is listed.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MarketType8Code.mmCounter, com.tools20022.repository.codeset.MarketType8Code.mmInterBank, com.tools20022.repository.codeset.MarketType8Code.mmOverTheCounter,
-						com.tools20022.repository.codeset.MarketType8Code.mmPrimaryMarket, com.tools20022.repository.codeset.MarketType8Code.mmSecondaryMarket, com.tools20022.repository.codeset.MarketType8Code.mmStockExchange,
-						com.tools20022.repository.codeset.MarketType8Code.mmVarious);
+				code_lazy = () -> Arrays.asList(MarketType8Code.mmCounter, MarketType8Code.mmInterBank, MarketType8Code.mmOverTheCounter, MarketType8Code.mmPrimaryMarket, MarketType8Code.mmSecondaryMarket, MarketType8Code.mmStockExchange,
+						MarketType8Code.mmVarious);
 				trace_lazy = () -> MarketTypeCode.mmObject();
 			}
 		});

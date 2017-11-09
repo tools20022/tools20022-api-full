@@ -20,11 +20,15 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.ReferredDocumentAmount1Choice;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.Max140Text;
 import com.tools20022.repository.entity.Document;
 import com.tools20022.repository.entity.InvoiceeRole;
+import com.tools20022.repository.entity.Party;
+import com.tools20022.repository.entity.PaymentIdentification;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -126,7 +130,7 @@ public class StructuredRemittanceInformation6 {
 			componentContext_lazy = () -> StructuredRemittanceInformation6.mmObject();
 			isDerived = false;
 			xmlTag = "RfrdDocInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReferredDocumentInformation";
 			definition = "Reference information to allow the identification of the underlying reference documents.";
 			maxOccurs = 1;
@@ -171,11 +175,11 @@ public class StructuredRemittanceInformation6 {
 	 */
 	public static final MMMessageAttribute mmReferredDocumentRelatedDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Document.mmIssueDate;
+			businessElementTrace_lazy = () -> Document.mmIssueDate;
 			componentContext_lazy = () -> StructuredRemittanceInformation6.mmObject();
 			isDerived = false;
 			xmlTag = "RfrdDocRltdDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReferredDocumentRelatedDate";
 			definition = "Date associated with the referred document, eg, date of issue.";
 			maxOccurs = 1;
@@ -223,11 +227,11 @@ public class StructuredRemittanceInformation6 {
 	 */
 	public static final MMMessageAttribute mmReferredDocumentAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Document.mmAmount;
+			businessElementTrace_lazy = () -> Document.mmAmount;
 			componentContext_lazy = () -> StructuredRemittanceInformation6.mmObject();
 			isDerived = false;
 			xmlTag = "RfrdDocAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReferredDocumentAmount";
 			definition = "Amount of money and currency of a document referred to in the remittance section. The amount is typically either the original amount due and payable, or the amount actually remitted for the referred document.";
 			minOccurs = 0;
@@ -272,11 +276,11 @@ public class StructuredRemittanceInformation6 {
 	 */
 	public static final MMMessageAssociationEnd mmCreditorReferenceInformation = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentIdentification.mmCreditorReference;
+			businessElementTrace_lazy = () -> PaymentIdentification.mmCreditorReference;
 			componentContext_lazy = () -> StructuredRemittanceInformation6.mmObject();
 			isDerived = false;
 			xmlTag = "CdtrRefInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditorReferenceInformation";
 			definition = "Reference information provided by the creditor to allow the identification of the underlying documents.";
 			maxOccurs = 1;
@@ -322,11 +326,11 @@ public class StructuredRemittanceInformation6 {
 	 */
 	public static final MMMessageAssociationEnd mmInvoicer = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> StructuredRemittanceInformation6.mmObject();
 			isDerived = false;
 			xmlTag = "Invcr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Invoicer";
 			definition = "Identification of the organization issuing the invoice when different than the creditor or final party.";
 			maxOccurs = 1;
@@ -375,7 +379,7 @@ public class StructuredRemittanceInformation6 {
 			componentContext_lazy = () -> StructuredRemittanceInformation6.mmObject();
 			isDerived = false;
 			xmlTag = "Invcee";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Invoicee";
 			definition = "Identification of the party to whom an invoice is issued, when different than the originator or debtor.";
 			maxOccurs = 1;
@@ -425,7 +429,7 @@ public class StructuredRemittanceInformation6 {
 			componentContext_lazy = () -> StructuredRemittanceInformation6.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlRmtInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalRemittanceInformation";
 			definition = "Additional information, in free text form, to complement the structured remittance information.";
 			maxOccurs = 1;
@@ -437,13 +441,12 @@ public class StructuredRemittanceInformation6 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StructuredRemittanceInformation6.mmReferredDocumentInformation,
-						com.tools20022.repository.msg.StructuredRemittanceInformation6.mmReferredDocumentRelatedDate, com.tools20022.repository.msg.StructuredRemittanceInformation6.mmReferredDocumentAmount,
-						com.tools20022.repository.msg.StructuredRemittanceInformation6.mmCreditorReferenceInformation, com.tools20022.repository.msg.StructuredRemittanceInformation6.mmInvoicer,
-						com.tools20022.repository.msg.StructuredRemittanceInformation6.mmInvoicee, com.tools20022.repository.msg.StructuredRemittanceInformation6.mmAdditionalRemittanceInformation);
+				messageElement_lazy = () -> Arrays.asList(StructuredRemittanceInformation6.mmReferredDocumentInformation, StructuredRemittanceInformation6.mmReferredDocumentRelatedDate,
+						StructuredRemittanceInformation6.mmReferredDocumentAmount, StructuredRemittanceInformation6.mmCreditorReferenceInformation, StructuredRemittanceInformation6.mmInvoicer, StructuredRemittanceInformation6.mmInvoicee,
+						StructuredRemittanceInformation6.mmAdditionalRemittanceInformation);
 				trace_lazy = () -> Document.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "StructuredRemittanceInformation6";
 				definition = "Structured information supplied to enable the matching, i.e.  reconciliation, of a payment with the items that the payment is intended to settle, eg, commercial invoices in an accounts receivable system.";
 			}

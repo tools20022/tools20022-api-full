@@ -19,8 +19,10 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.RequestType1Code;
 import com.tools20022.repository.codeset.RequestType2Code;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -94,7 +96,7 @@ public class RequestType1Choice {
 			componentContext_lazy = () -> RequestType1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "PmtCtrl";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentControl";
 			definition = "Request type is a control command on a set of transactions.";
 			maxOccurs = 1;
@@ -137,7 +139,7 @@ public class RequestType1Choice {
 			componentContext_lazy = () -> RequestType1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Enqry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Enquiry";
 			definition = "Request type is an enquiry on the a position or a transaction.";
 			maxOccurs = 1;
@@ -149,9 +151,9 @@ public class RequestType1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.RequestType1Choice.mmPaymentControl, com.tools20022.repository.choice.RequestType1Choice.mmEnquiry);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(RequestType1Choice.mmPaymentControl, RequestType1Choice.mmEnquiry);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "RequestType1Choice";
 				definition = "Defines the type of action to be performed in the request.";
 			}

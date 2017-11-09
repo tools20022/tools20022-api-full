@@ -19,10 +19,13 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.entity.InstructionForMeeting;
+import com.tools20022.repository.entity.SecuritiesQuantity;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -100,7 +103,7 @@ public class RequestInformation {
 			componentContext_lazy = () -> RequestInformation.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Identifies the request.";
 			maxOccurs = 1;
@@ -143,11 +146,11 @@ public class RequestInformation {
 	 */
 	public static final MMMessageAttribute mmRequestedExecutionDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InstructionForMeeting.mmRequestedExecutionDate;
+			businessElementTrace_lazy = () -> InstructionForMeeting.mmRequestedExecutionDate;
 			componentContext_lazy = () -> RequestInformation.mmObject();
 			isDerived = false;
 			xmlTag = "ReqdExctnDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestedExecutionDate";
 			definition = "Date at which the instruction must b e executed.";
 			maxOccurs = 1;
@@ -190,11 +193,11 @@ public class RequestInformation {
 	 */
 	public static final MMMessageAttribute mmQuantityOfSecurity = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmUnit;
+			businessElementTrace_lazy = () -> SecuritiesQuantity.mmUnit;
 			componentContext_lazy = () -> RequestInformation.mmObject();
 			isDerived = false;
 			xmlTag = "QtyOfScty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuantityOfSecurity";
 			definition = "Quantity expressed as a number, eg, a number of shares.";
 			maxOccurs = 1;
@@ -206,11 +209,10 @@ public class RequestInformation {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RequestInformation.mmIdentification, com.tools20022.repository.msg.RequestInformation.mmRequestedExecutionDate,
-						com.tools20022.repository.msg.RequestInformation.mmQuantityOfSecurity);
+				messageElement_lazy = () -> Arrays.asList(RequestInformation.mmIdentification, RequestInformation.mmRequestedExecutionDate, RequestInformation.mmQuantityOfSecurity);
 				trace_lazy = () -> InstructionForMeeting.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "RequestInformation";
 				definition = "Request to execute instructions.";
 			}

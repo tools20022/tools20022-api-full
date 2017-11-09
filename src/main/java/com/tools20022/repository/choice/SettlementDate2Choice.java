@@ -19,6 +19,8 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -106,10 +108,10 @@ public class SettlementDate2Choice {
 			componentContext_lazy = () -> SettlementDate2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Dt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Date";
 			definition = "Date in ISO format.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SettlementDate10Choice.mmDate);
+			nextVersions_lazy = () -> Arrays.asList(SettlementDate10Choice.mmDate);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> com.tools20022.repository.choice.DateAndDateTimeChoice.mmObject();
@@ -158,10 +160,10 @@ public class SettlementDate2Choice {
 			componentContext_lazy = () -> SettlementDate2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "DtCd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DateCode";
 			definition = "Date and time at which the securities are to be delivered or received.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SettlementDate10Choice.mmDateCode);
+			nextVersions_lazy = () -> Arrays.asList(SettlementDate10Choice.mmDateCode);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> com.tools20022.repository.choice.SettlementDateCode2Choice.mmObject();
@@ -171,9 +173,9 @@ public class SettlementDate2Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SettlementDate2Choice.mmDate, com.tools20022.repository.choice.SettlementDate2Choice.mmDateCode);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(SettlementDate2Choice.mmDate, SettlementDate2Choice.mmDateCode);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SettlementDate2Choice";
 				definition = "Choice of format for the settlement date.";
 				nextVersions_lazy = () -> Arrays.asList(SettlementDate10Choice.mmObject());

@@ -19,8 +19,10 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
 import com.tools20022.repository.entity.CorporateActionCashEntitlement;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -95,11 +97,11 @@ public class CashEntitlement1 {
 	 */
 	public static final MMMessageAttribute mmCashAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionCashEntitlement.mmEntitledCashAmount;
+			businessElementTrace_lazy = () -> CorporateActionCashEntitlement.mmEntitledCashAmount;
 			componentContext_lazy = () -> CashEntitlement1.mmObject();
 			isDerived = false;
 			xmlTag = "CshAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashAmount";
 			definition = "Entitled cash amount.";
 			maxOccurs = 1;
@@ -111,10 +113,10 @@ public class CashEntitlement1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashEntitlement1.mmCashAmount);
+				messageElement_lazy = () -> Arrays.asList(CashEntitlement1.mmCashAmount);
 				trace_lazy = () -> CorporateActionCashEntitlement.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CashEntitlement1";
 				definition = "Provides information about cash entitlements.";
 			}

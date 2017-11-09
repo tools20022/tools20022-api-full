@@ -20,6 +20,7 @@ package com.tools20022.repository.area.secl;
 import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.SecuritiesClearingLatestVersion;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.msg.BuyIn3;
@@ -45,6 +46,9 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code secl.008.001.03}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.SecuritiesClearingLatestVersion
@@ -79,9 +83,6 @@ import java.util.List;
  * BuyInResponseV03.mmSupplementaryData}</li>
  * </ul>
  * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code secl.008.001.03}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -126,7 +127,7 @@ public class BuyInResponseV03 {
 	public static final MMMessageBuildingBlock mmTransactionIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "TxId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionIdentification";
 			definition = "Unambiguous identification of the transaction as known by the instructing party.";
 			maxOccurs = 1;
@@ -162,7 +163,7 @@ public class BuyInResponseV03 {
 	public static final MMMessageBuildingBlock mmBuyInResponseDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "BuyInRspnDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BuyInResponseDetails";
 			definition = "Provides response details such as a request for delay and the number of days associated to that request.";
 			maxOccurs = 1;
@@ -200,7 +201,7 @@ public class BuyInResponseV03 {
 	public static final MMMessageBuildingBlock mmOriginalSettlementObligationDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "OrgnlSttlmOblgtnDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalSettlementObligationDetails";
 			definition = "Provides details about the original settlement obligation that did not settle and for which the buy in process will be launched.";
 			maxOccurs = 1;
@@ -238,7 +239,7 @@ public class BuyInResponseV03 {
 	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SplmtryData";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryData";
 			definition = "Additional information that can not be captured in the structured fields and/or any other specific block. ";
 			minOccurs = 0;
@@ -249,15 +250,15 @@ public class BuyInResponseV03 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "BuyInResponseV03";
 				definition = "Scope\r\nThe BuyInResponse message is sent by the clearing member to the central counterparty as a response to the previous buy-in notification message.\r\n\r\nThe message definition is intended for use with the ISO 20022 Business Application Header.\r\n\r\nUsage\r\nThe BuyInResponse may be sent in response to the BuyInNotification message. However, the use of this message in the buy in process is optional and depends on the rules set by each central counterparty.";
 				messageSet_lazy = () -> Arrays.asList(CentralCounterPartyCCPSecuritiesClearingISOLatestversion.mmObject());
 				rootElement = "Document";
 				xmlTag = "BuyInRspn";
 				businessArea_lazy = () -> SecuritiesClearingLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.secl.BuyInResponseV03.mmTransactionIdentification, com.tools20022.repository.area.secl.BuyInResponseV03.mmBuyInResponseDetails,
-						com.tools20022.repository.area.secl.BuyInResponseV03.mmOriginalSettlementObligationDetails, com.tools20022.repository.area.secl.BuyInResponseV03.mmSupplementaryData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(BuyInResponseV03.mmTransactionIdentification, BuyInResponseV03.mmBuyInResponseDetails, BuyInResponseV03.mmOriginalSettlementObligationDetails,
+						BuyInResponseV03.mmSupplementaryData);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "secl";

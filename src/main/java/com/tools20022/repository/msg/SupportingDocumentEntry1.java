@@ -20,11 +20,16 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
 import com.tools20022.repository.datatype.Exact4AlphaNumericText;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.Max500Text;
 import com.tools20022.repository.entity.Document;
+import com.tools20022.repository.entity.GenericIdentification;
+import com.tools20022.repository.entity.RegisteredContract;
+import com.tools20022.repository.entity.Transport;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -128,11 +133,11 @@ public class SupportingDocumentEntry1 {
 	 */
 	public static final MMMessageAttribute mmEntryIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmIdentification;
+			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> SupportingDocumentEntry1.mmObject();
 			isDerived = false;
 			xmlTag = "NtryId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EntryIdentification";
 			definition = "Unique and unambiguous identification of the supporting document entry.";
 			maxOccurs = 1;
@@ -178,11 +183,11 @@ public class SupportingDocumentEntry1 {
 	 */
 	public static final MMMessageAssociationEnd mmOriginalDocument = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Document.mmDocumentIdentification;
+			businessElementTrace_lazy = () -> Document.mmDocumentIdentification;
 			componentContext_lazy = () -> SupportingDocumentEntry1.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlDoc";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalDocument";
 			definition = "Identification of the original document for which the supporting documents are provided.";
 			maxOccurs = 1;
@@ -230,11 +235,11 @@ public class SupportingDocumentEntry1 {
 	 */
 	public static final MMMessageAttribute mmDocumentType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Document.mmType;
+			businessElementTrace_lazy = () -> Document.mmType;
 			componentContext_lazy = () -> SupportingDocumentEntry1.mmObject();
 			isDerived = false;
 			xmlTag = "DocTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DocumentType";
 			definition = "Document type in a coded form.\r\n\r\nTBC: Data must support \"_\".";
 			maxOccurs = 1;
@@ -278,11 +283,11 @@ public class SupportingDocumentEntry1 {
 	 */
 	public static final MMMessageAttribute mmTotalAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Document.mmAmount;
+			businessElementTrace_lazy = () -> Document.mmAmount;
 			componentContext_lazy = () -> SupportingDocumentEntry1.mmObject();
 			isDerived = false;
 			xmlTag = "TtlAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalAmount";
 			definition = "Total amount of the supporting document entry.";
 			maxOccurs = 1;
@@ -327,11 +332,11 @@ public class SupportingDocumentEntry1 {
 	 */
 	public static final MMMessageAttribute mmTotalAmountAfterShipment = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Document.mmAmount;
+			businessElementTrace_lazy = () -> Document.mmAmount;
 			componentContext_lazy = () -> SupportingDocumentEntry1.mmObject();
 			isDerived = false;
 			xmlTag = "TtlAmtAftrShipmnt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalAmountAfterShipment";
 			definition = "Total amount after shipment of the supporting document entry.";
 			maxOccurs = 1;
@@ -378,11 +383,11 @@ public class SupportingDocumentEntry1 {
 	 */
 	public static final MMMessageAttribute mmTotalAmountInContractCurrency = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Document.mmAmount;
+			businessElementTrace_lazy = () -> Document.mmAmount;
 			componentContext_lazy = () -> SupportingDocumentEntry1.mmObject();
 			isDerived = false;
 			xmlTag = "TtlAmtInCtrctCcy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalAmountInContractCurrency";
 			definition = "Total amount of the supporting document entry in the currency of the contract.";
 			maxOccurs = 1;
@@ -429,11 +434,11 @@ public class SupportingDocumentEntry1 {
 	 */
 	public static final MMMessageAttribute mmTotalAmountAfterShipmentInContractCurrency = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Document.mmAmount;
+			businessElementTrace_lazy = () -> Document.mmAmount;
 			componentContext_lazy = () -> SupportingDocumentEntry1.mmObject();
 			isDerived = false;
 			xmlTag = "TtlAmtAftrShipmntInCtrctCcy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalAmountAfterShipmentInContractCurrency";
 			definition = "Total amount after shipment of the supporting document entry in the currency of the contract.";
 			maxOccurs = 1;
@@ -475,11 +480,11 @@ public class SupportingDocumentEntry1 {
 	 */
 	public static final MMMessageAssociationEnd mmShipmentAttributes = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Transport.mmShipmentDates;
+			businessElementTrace_lazy = () -> Transport.mmShipmentDates;
 			componentContext_lazy = () -> SupportingDocumentEntry1.mmObject();
 			isDerived = false;
 			xmlTag = "ShipmntAttrbts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ShipmentAttributes";
 			definition = "Conditions and attributes related to the shipment.";
 			maxOccurs = 1;
@@ -521,7 +526,7 @@ public class SupportingDocumentEntry1 {
 			componentContext_lazy = () -> SupportingDocumentEntry1.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInformation";
 			definition = "Further details on the supporting document entry.";
 			maxOccurs = 1;
@@ -565,11 +570,11 @@ public class SupportingDocumentEntry1 {
 	 */
 	public static final MMMessageAssociationEnd mmAttachment = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.RegisteredContract.mmAttachment;
+			businessElementTrace_lazy = () -> RegisteredContract.mmAttachment;
 			componentContext_lazy = () -> SupportingDocumentEntry1.mmObject();
 			isDerived = false;
 			xmlTag = "Attchmnt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Attachment";
 			definition = "Documents provided as attachments to the supporting document entry.";
 			minOccurs = 0;
@@ -581,14 +586,12 @@ public class SupportingDocumentEntry1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SupportingDocumentEntry1.mmEntryIdentification, com.tools20022.repository.msg.SupportingDocumentEntry1.mmOriginalDocument,
-						com.tools20022.repository.msg.SupportingDocumentEntry1.mmDocumentType, com.tools20022.repository.msg.SupportingDocumentEntry1.mmTotalAmount,
-						com.tools20022.repository.msg.SupportingDocumentEntry1.mmTotalAmountAfterShipment, com.tools20022.repository.msg.SupportingDocumentEntry1.mmTotalAmountInContractCurrency,
-						com.tools20022.repository.msg.SupportingDocumentEntry1.mmTotalAmountAfterShipmentInContractCurrency, com.tools20022.repository.msg.SupportingDocumentEntry1.mmShipmentAttributes,
-						com.tools20022.repository.msg.SupportingDocumentEntry1.mmAdditionalInformation, com.tools20022.repository.msg.SupportingDocumentEntry1.mmAttachment);
+				messageElement_lazy = () -> Arrays.asList(SupportingDocumentEntry1.mmEntryIdentification, SupportingDocumentEntry1.mmOriginalDocument, SupportingDocumentEntry1.mmDocumentType, SupportingDocumentEntry1.mmTotalAmount,
+						SupportingDocumentEntry1.mmTotalAmountAfterShipment, SupportingDocumentEntry1.mmTotalAmountInContractCurrency, SupportingDocumentEntry1.mmTotalAmountAfterShipmentInContractCurrency,
+						SupportingDocumentEntry1.mmShipmentAttributes, SupportingDocumentEntry1.mmAdditionalInformation, SupportingDocumentEntry1.mmAttachment);
 				trace_lazy = () -> Document.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SupportingDocumentEntry1";
 				definition = "Currency control document entry supporting the contract registration.";
 			}

@@ -19,7 +19,9 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
-import com.tools20022.repository.entity.CorporateActionEvent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -111,11 +113,11 @@ public class CorporateActionPeriod2 {
 	 */
 	public static final MMMessageAttribute mmAssentedLinePeriod = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesProceedsDefinition.mmAssentedLinePeriod;
+			businessElementTrace_lazy = () -> SecuritiesProceedsDefinition.mmAssentedLinePeriod;
 			componentContext_lazy = () -> CorporateActionPeriod2.mmObject();
 			isDerived = false;
 			xmlTag = "AssntdLinePrd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AssentedLinePeriod";
 			definition = "Period during which the assented line is available.";
 			maxOccurs = 1;
@@ -161,11 +163,11 @@ public class CorporateActionPeriod2 {
 	 */
 	public static final MMMessageAttribute mmActionPeriod = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionOption.mmActionPeriod;
+			businessElementTrace_lazy = () -> CorporateActionOption.mmActionPeriod;
 			componentContext_lazy = () -> CorporateActionPeriod2.mmObject();
 			isDerived = false;
 			xmlTag = "ActnPrd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ActionPeriod";
 			definition = "Period during which the specified option, or all options of the event, remains valid, eg, offer period.";
 			maxOccurs = 1;
@@ -211,11 +213,11 @@ public class CorporateActionPeriod2 {
 	 */
 	public static final MMMessageAttribute mmPrivilegeSuspensionPeriod = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SuspensionPeriod.mmPrivilegeSuspensionPeriod;
+			businessElementTrace_lazy = () -> SuspensionPeriod.mmPrivilegeSuspensionPeriod;
 			componentContext_lazy = () -> CorporateActionPeriod2.mmObject();
 			isDerived = false;
 			xmlTag = "PrvlgSspnsnPrd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PrivilegeSuspensionPeriod";
 			definition = "Period during which the privilege is not available, eg, this can happen whenever a meeting takes place or whenever a coupon payment is due.";
 			maxOccurs = 1;
@@ -261,11 +263,11 @@ public class CorporateActionPeriod2 {
 	 */
 	public static final MMMessageAttribute mmParallelTradingPeriod = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesProceedsDefinition.mmParallelTradingPeriod;
+			businessElementTrace_lazy = () -> SecuritiesProceedsDefinition.mmParallelTradingPeriod;
 			componentContext_lazy = () -> CorporateActionPeriod2.mmObject();
 			isDerived = false;
 			xmlTag = "ParllTradgPrd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ParallelTradingPeriod";
 			definition = "Period during which both old and new equity may be traded simultaneously, eg, consolidation of equity or splitting of equity.";
 			maxOccurs = 1;
@@ -311,11 +313,11 @@ public class CorporateActionPeriod2 {
 	 */
 	public static final MMMessageAttribute mmSellThruIssuerPeriod = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesProceedsDefinition.mmSellThruIssuerPeriod;
+			businessElementTrace_lazy = () -> SecuritiesProceedsDefinition.mmSellThruIssuerPeriod;
 			componentContext_lazy = () -> CorporateActionPeriod2.mmObject();
 			isDerived = false;
 			xmlTag = "SellThruIssrPrd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SellThruIssuerPeriod";
 			definition = "Period (last day included) during which an account owner can surrender or sell securities to the issuer and receive the sale proceeds.";
 			maxOccurs = 1;
@@ -361,11 +363,11 @@ public class CorporateActionPeriod2 {
 	 */
 	public static final MMMessageAttribute mmRevocabilityPeriod = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionDeadline.mmRevocabilityPeriod;
+			businessElementTrace_lazy = () -> CorporateActionDeadline.mmRevocabilityPeriod;
 			componentContext_lazy = () -> CorporateActionPeriod2.mmObject();
 			isDerived = false;
 			xmlTag = "RvcbltyPrd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RevocabilityPeriod";
 			definition = "Period during which the shareholder can revoke, change or withdraw its instruction.";
 			maxOccurs = 1;
@@ -411,11 +413,11 @@ public class CorporateActionPeriod2 {
 	 */
 	public static final MMMessageAttribute mmPriceCalculationPeriod = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmPriceCalculationPeriod;
+			businessElementTrace_lazy = () -> SecuritiesPricing.mmPriceCalculationPeriod;
 			componentContext_lazy = () -> CorporateActionPeriod2.mmObject();
 			isDerived = false;
 			xmlTag = "PricClctnPrd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PriceCalculationPeriod";
 			definition = "Period during which the price of a security is determined (for  outturn securities).";
 			maxOccurs = 1;
@@ -427,13 +429,11 @@ public class CorporateActionPeriod2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionPeriod2.mmAssentedLinePeriod, com.tools20022.repository.msg.CorporateActionPeriod2.mmActionPeriod,
-						com.tools20022.repository.msg.CorporateActionPeriod2.mmPrivilegeSuspensionPeriod, com.tools20022.repository.msg.CorporateActionPeriod2.mmParallelTradingPeriod,
-						com.tools20022.repository.msg.CorporateActionPeriod2.mmSellThruIssuerPeriod, com.tools20022.repository.msg.CorporateActionPeriod2.mmRevocabilityPeriod,
-						com.tools20022.repository.msg.CorporateActionPeriod2.mmPriceCalculationPeriod);
+				messageElement_lazy = () -> Arrays.asList(CorporateActionPeriod2.mmAssentedLinePeriod, CorporateActionPeriod2.mmActionPeriod, CorporateActionPeriod2.mmPrivilegeSuspensionPeriod,
+						CorporateActionPeriod2.mmParallelTradingPeriod, CorporateActionPeriod2.mmSellThruIssuerPeriod, CorporateActionPeriod2.mmRevocabilityPeriod, CorporateActionPeriod2.mmPriceCalculationPeriod);
 				trace_lazy = () -> CorporateActionEvent.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionPeriod2";
 				definition = "Specifies periods.";
 			}

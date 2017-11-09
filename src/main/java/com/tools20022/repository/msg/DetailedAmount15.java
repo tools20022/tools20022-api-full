@@ -20,8 +20,10 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ImpliedCurrencyAndAmount;
 import com.tools20022.repository.entity.CardPayment;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -112,7 +114,7 @@ public class DetailedAmount15 {
 			componentContext_lazy = () -> DetailedAmount15.mmObject();
 			isDerived = false;
 			xmlTag = "AmtGoodsAndSvcs";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmountGoodsAndServices";
 			definition = "Amount of purchase goods and services without tax.";
 			maxOccurs = 1;
@@ -164,10 +166,10 @@ public class DetailedAmount15 {
 			componentContext_lazy = () -> DetailedAmount15.mmObject();
 			isDerived = false;
 			xmlTag = "CshBck";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashBack";
 			definition = "Cash-back amount.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.DetailedAmount7.mmCashBack;
+			previousVersion_lazy = () -> DetailedAmount7.mmCashBack;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
@@ -217,10 +219,10 @@ public class DetailedAmount15 {
 			componentContext_lazy = () -> DetailedAmount15.mmObject();
 			isDerived = false;
 			xmlTag = "Grtty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Gratuity";
 			definition = "Gratuity amount.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.DetailedAmount7.mmGratuity;
+			previousVersion_lazy = () -> DetailedAmount7.mmGratuity;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
@@ -268,10 +270,10 @@ public class DetailedAmount15 {
 			componentContext_lazy = () -> DetailedAmount15.mmObject();
 			isDerived = false;
 			xmlTag = "Fees";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Fees";
 			definition = "Fees amount.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.DetailedAmount7.mmFees;
+			previousVersion_lazy = () -> DetailedAmount7.mmFees;
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.DetailedAmount4.mmObject();
@@ -322,10 +324,10 @@ public class DetailedAmount15 {
 			componentContext_lazy = () -> DetailedAmount15.mmObject();
 			isDerived = false;
 			xmlTag = "Rbt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rebate";
 			definition = "Global rebate of the transaction. This amount is counted as a negative amount.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.DetailedAmount7.mmRebate;
+			previousVersion_lazy = () -> DetailedAmount7.mmRebate;
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.DetailedAmount4.mmObject();
@@ -373,10 +375,10 @@ public class DetailedAmount15 {
 			componentContext_lazy = () -> DetailedAmount15.mmObject();
 			isDerived = false;
 			xmlTag = "ValAddedTax";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValueAddedTax";
 			definition = "Value added tax amount.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.DetailedAmount7.mmValueAddedTax;
+			previousVersion_lazy = () -> DetailedAmount7.mmValueAddedTax;
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.DetailedAmount4.mmObject();
@@ -422,10 +424,10 @@ public class DetailedAmount15 {
 			componentContext_lazy = () -> DetailedAmount15.mmObject();
 			isDerived = false;
 			xmlTag = "Srchrg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Surcharge";
 			definition = "Additional charge paid by the cardholder. For example airline credit card surcharge.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.DetailedAmount7.mmSurcharge;
+			previousVersion_lazy = () -> DetailedAmount7.mmSurcharge;
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.DetailedAmount4.mmObject();
@@ -435,12 +437,11 @@ public class DetailedAmount15 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DetailedAmount15.mmAmountGoodsAndServices, com.tools20022.repository.msg.DetailedAmount15.mmCashBack,
-						com.tools20022.repository.msg.DetailedAmount15.mmGratuity, com.tools20022.repository.msg.DetailedAmount15.mmFees, com.tools20022.repository.msg.DetailedAmount15.mmRebate,
-						com.tools20022.repository.msg.DetailedAmount15.mmValueAddedTax, com.tools20022.repository.msg.DetailedAmount15.mmSurcharge);
+				messageElement_lazy = () -> Arrays.asList(DetailedAmount15.mmAmountGoodsAndServices, DetailedAmount15.mmCashBack, DetailedAmount15.mmGratuity, DetailedAmount15.mmFees, DetailedAmount15.mmRebate,
+						DetailedAmount15.mmValueAddedTax, DetailedAmount15.mmSurcharge);
 				trace_lazy = () -> CardPayment.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DetailedAmount15";
 				definition = "Detailed amounts associated with the total amount of transaction.";
 				previousVersion_lazy = () -> DetailedAmount7.mmObject();

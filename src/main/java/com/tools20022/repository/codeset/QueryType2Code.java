@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.QueryTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -88,7 +90,7 @@ public class QueryType2Code extends QueryTypeCode {
 	 */
 	public static final MMCode mmAll = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "All";
 			owner_lazy = () -> QueryType2Code.mmObject();
 		}
@@ -111,7 +113,7 @@ public class QueryType2Code extends QueryTypeCode {
 	 */
 	public static final MMCode mmChanged = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Changed";
 			owner_lazy = () -> QueryType2Code.mmObject();
 		}
@@ -134,7 +136,7 @@ public class QueryType2Code extends QueryTypeCode {
 	 */
 	public static final MMCode mmModified = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Modified";
 			owner_lazy = () -> QueryType2Code.mmObject();
 		}
@@ -157,7 +159,7 @@ public class QueryType2Code extends QueryTypeCode {
 	 */
 	public static final MMCode mmDeleted = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Deleted";
 			owner_lazy = () -> QueryType2Code.mmObject();
 		}
@@ -166,13 +168,12 @@ public class QueryType2Code extends QueryTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ALLL");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "QueryType2Code";
 				definition = "Specifyies the nature of the query, i.e. whether the query requests that all matching items be returned or only new matching items since the last similar query be returned.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.QueryType2Code.mmAll, com.tools20022.repository.codeset.QueryType2Code.mmChanged, com.tools20022.repository.codeset.QueryType2Code.mmModified,
-						com.tools20022.repository.codeset.QueryType2Code.mmDeleted);
+				code_lazy = () -> Arrays.asList(QueryType2Code.mmAll, QueryType2Code.mmChanged, QueryType2Code.mmModified, QueryType2Code.mmDeleted);
 				trace_lazy = () -> QueryTypeCode.mmObject();
 			}
 		});

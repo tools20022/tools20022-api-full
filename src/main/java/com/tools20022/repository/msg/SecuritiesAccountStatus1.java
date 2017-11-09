@@ -20,7 +20,9 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.Status6Code;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -97,7 +99,7 @@ public class SecuritiesAccountStatus1 {
 			componentContext_lazy = () -> SecuritiesAccountStatus1.mmObject();
 			isDerived = false;
 			xmlTag = "RltdSctiesAcct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedSecuritiesAccount";
 			definition = "Unique identification of the securities account referenced by a request";
 			maxOccurs = 1;
@@ -140,7 +142,7 @@ public class SecuritiesAccountStatus1 {
 			componentContext_lazy = () -> SecuritiesAccountStatus1.mmObject();
 			isDerived = false;
 			xmlTag = "Sts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Status";
 			definition = "Status of the securities account maintenance instruction.";
 			maxOccurs = 1;
@@ -182,7 +184,7 @@ public class SecuritiesAccountStatus1 {
 			componentContext_lazy = () -> SecuritiesAccountStatus1.mmObject();
 			isDerived = false;
 			xmlTag = "StsRsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusReason";
 			definition = "Reason for the status of a securities account maintenance instruction.";
 			minOccurs = 0;
@@ -194,10 +196,9 @@ public class SecuritiesAccountStatus1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesAccountStatus1.mmRelatedSecuritiesAccount, com.tools20022.repository.msg.SecuritiesAccountStatus1.mmStatus,
-						com.tools20022.repository.msg.SecuritiesAccountStatus1.mmStatusReason);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(SecuritiesAccountStatus1.mmRelatedSecuritiesAccount, SecuritiesAccountStatus1.mmStatus, SecuritiesAccountStatus1.mmStatusReason);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SecuritiesAccountStatus1";
 				definition = "Status of the securities account processed in the system. ";
 			}

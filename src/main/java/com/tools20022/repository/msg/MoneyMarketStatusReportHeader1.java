@@ -20,8 +20,11 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.auth.MoneyMarketStatisticalReportStatusAdviceV01;
 import com.tools20022.repository.codeset.StatisticalReportingStatus1Code;
 import com.tools20022.repository.datatype.LEIIdentifier;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -118,7 +121,7 @@ public class MoneyMarketStatusReportHeader1 {
 			componentContext_lazy = () -> MoneyMarketStatusReportHeader1.mmObject();
 			isDerived = false;
 			xmlTag = "RptgAgt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportingAgent";
 			definition = "Agent which is subject to reporting requirements.";
 			maxOccurs = 1;
@@ -165,7 +168,7 @@ public class MoneyMarketStatusReportHeader1 {
 			componentContext_lazy = () -> MoneyMarketStatusReportHeader1.mmObject();
 			isDerived = false;
 			xmlTag = "RptgPrd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportingPeriod";
 			definition = "For daily reporting this is the day to which the transaction data in the status message refers (trade date or amendment date if there are corrections).\r\nFor periodic reporting this is the first and the last day to which the transaction data in the status message refers (trade date or amendment date in case of corrections).";
 			maxOccurs = 1;
@@ -216,10 +219,10 @@ public class MoneyMarketStatusReportHeader1 {
 			componentContext_lazy = () -> MoneyMarketStatusReportHeader1.mmObject();
 			isDerived = false;
 			xmlTag = "RptSts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportStatus";
 			definition = "Provides the status for the full report.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvoiceTaxStatusReportHeader1.mmReportStatus);
+			nextVersions_lazy = () -> Arrays.asList(InvoiceTaxStatusReportHeader1.mmReportStatus);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> StatisticalReportingStatus1Code.mmObject();
@@ -267,10 +270,10 @@ public class MoneyMarketStatusReportHeader1 {
 			componentContext_lazy = () -> MoneyMarketStatusReportHeader1.mmObject();
 			isDerived = false;
 			xmlTag = "VldtnRule";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValidationRule";
 			definition = "Provides the details of the rule which could not be validated.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvoiceTaxStatusReportHeader1.mmValidationRule);
+			nextVersions_lazy = () -> Arrays.asList(InvoiceTaxStatusReportHeader1.mmValidationRule);
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.GenericValidationRuleIdentification1.mmObject();
@@ -280,11 +283,11 @@ public class MoneyMarketStatusReportHeader1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MoneyMarketStatusReportHeader1.mmReportingAgent, com.tools20022.repository.msg.MoneyMarketStatusReportHeader1.mmReportingPeriod,
-						com.tools20022.repository.msg.MoneyMarketStatusReportHeader1.mmReportStatus, com.tools20022.repository.msg.MoneyMarketStatusReportHeader1.mmValidationRule);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.auth.MoneyMarketStatisticalReportStatusAdviceV01.mmStatusReportHeader);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(MoneyMarketStatusReportHeader1.mmReportingAgent, MoneyMarketStatusReportHeader1.mmReportingPeriod, MoneyMarketStatusReportHeader1.mmReportStatus,
+						MoneyMarketStatusReportHeader1.mmValidationRule);
+				messageBuildingBlock_lazy = () -> Arrays.asList(MoneyMarketStatisticalReportStatusAdviceV01.mmStatusReportHeader);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MoneyMarketStatusReportHeader1";
 				definition = "Provides the money market statistical status report header details.";
 				nextVersions_lazy = () -> Arrays.asList(InvoiceTaxStatusReportHeader1.mmObject());

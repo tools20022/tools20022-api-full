@@ -17,12 +17,10 @@
 
 package com.tools20022.repository.msg;
 
-import com.tools20022.metamodel.MMMessageAssociationEnd;
-import com.tools20022.metamodel.MMMessageAttribute;
-import com.tools20022.metamodel.MMMessageComponent;
-import com.tools20022.metamodel.MMXor;
+import com.tools20022.metamodel.*;
 import com.tools20022.repository.choice.MemberIdentificationChoice;
 import com.tools20022.repository.entity.SystemMemberRole;
+import com.tools20022.repository.GeneratedRepository;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -119,7 +117,7 @@ public class MemberReport {
 			componentContext_lazy = () -> MemberReport.mmObject();
 			isDerived = false;
 			xmlTag = "MmbId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MemberIdentification";
 			definition = "Unique and unambiguous identification of a member within a system, assigned using the member identification scheme of the system.";
 			maxOccurs = 1;
@@ -158,7 +156,7 @@ public class MemberReport {
 			componentContext_lazy = () -> MemberReport.mmObject();
 			isDerived = false;
 			xmlTag = "BizErr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BusinessError";
 			definition = "Reason the requested business information is not given.";
 			maxOccurs = 1;
@@ -204,7 +202,7 @@ public class MemberReport {
 			componentContext_lazy = () -> MemberReport.mmObject();
 			isDerived = false;
 			xmlTag = "MmbInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MemberInformation";
 			definition = "Requested business information.";
 			maxOccurs = 1;
@@ -218,6 +216,9 @@ public class MemberReport {
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
+	 * messageComponent} =
+	 * {@linkplain com.tools20022.repository.msg.MemberReport MemberReport}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getImpactedElements
 	 * impactedElements} =
 	 * <ul>
@@ -229,9 +230,6 @@ public class MemberReport {
 	 * MemberReport.mmMemberInformation}</li>
 	 * </ul>
 	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
-	 * messageComponent} =
-	 * {@linkplain com.tools20022.repository.msg.MemberReport MemberReport}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -247,22 +245,21 @@ public class MemberReport {
 	 */
 	public static final MMXor mmMemberInformationOrBusinessErrorRule = new MMXor() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MemberInformationOrBusinessErrorRule";
 			definition = "Either MemberInformation or BusinessError must be present, but not both.";
 			messageComponent_lazy = () -> MemberReport.mmObject();
-			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MemberReport.mmBusinessError, com.tools20022.repository.msg.MemberReport.mmMemberInformation);
+			impactedElements_lazy = () -> Arrays.asList(MemberReport.mmBusinessError, MemberReport.mmMemberInformation);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MemberReport.mmMemberIdentification, com.tools20022.repository.msg.MemberReport.mmBusinessError,
-						com.tools20022.repository.msg.MemberReport.mmMemberInformation);
+				messageElement_lazy = () -> Arrays.asList(MemberReport.mmMemberIdentification, MemberReport.mmBusinessError, MemberReport.mmMemberInformation);
 				trace_lazy = () -> SystemMemberRole.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
 						return DateFormat.getDateInstance(java.text.DateFormat.LONG).parse("September 9, 2016");
@@ -272,7 +269,7 @@ public class MemberReport {
 				})).get();
 				name = "MemberReport";
 				definition = "Reports either on a member or a business error.";
-				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MemberReport.mmMemberInformationOrBusinessErrorRule);
+				xors_lazy = () -> Arrays.asList(MemberReport.mmMemberInformationOrBusinessErrorRule);
 			}
 		});
 		return mmObject_lazy.get();

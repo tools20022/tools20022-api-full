@@ -19,9 +19,11 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ExternalClearingSystemMemberCode;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.CashClearingSystemMember;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -111,7 +113,7 @@ public class ClearingSystemMemberIdentification3Choice {
 			componentContext_lazy = () -> ClearingSystemMemberIdentification3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Identification for a clearing system member, identified in the list of clearing system member identifications published externally.";
 			maxOccurs = 1;
@@ -161,7 +163,7 @@ public class ClearingSystemMemberIdentification3Choice {
 			componentContext_lazy = () -> ClearingSystemMemberIdentification3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Identification Code for a clearing system, that has not yet been identified in the list of clearing systems.";
 			maxOccurs = 1;
@@ -173,11 +175,10 @@ public class ClearingSystemMemberIdentification3Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays
-						.asList(com.tools20022.repository.choice.ClearingSystemMemberIdentification3Choice.mmIdentification, com.tools20022.repository.choice.ClearingSystemMemberIdentification3Choice.mmProprietary);
+				messageElement_lazy = () -> Arrays.asList(ClearingSystemMemberIdentification3Choice.mmIdentification, ClearingSystemMemberIdentification3Choice.mmProprietary);
 				trace_lazy = () -> CashClearingSystemMember.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ClearingSystemMemberIdentification3Choice";
 				definition = "Choice of identifiers for a clearing system member, as assigned by the clearing system. In some clearing systems, the accounts of the clearing system members are also assigned an identifier.";
 			}

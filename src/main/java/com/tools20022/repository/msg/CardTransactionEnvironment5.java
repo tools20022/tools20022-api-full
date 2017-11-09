@@ -19,7 +19,9 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.PartyIdentificationInformation;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -126,10 +128,10 @@ public class CardTransactionEnvironment5 {
 			componentContext_lazy = () -> CardTransactionEnvironment5.mmObject();
 			isDerived = false;
 			xmlTag = "SndgInstn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SendingInstitution";
 			definition = "Institution initiator of the reconciliation.\r\nIt corresponds to the ISO 8583 field number 94.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardTransactionEnvironment6.mmSendingInstitution);
+			nextVersions_lazy = () -> Arrays.asList(CardTransactionEnvironment6.mmSendingInstitution);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -186,10 +188,10 @@ public class CardTransactionEnvironment5 {
 			componentContext_lazy = () -> CardTransactionEnvironment5.mmObject();
 			isDerived = false;
 			xmlTag = "RcvgInstn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceivingInstitution";
 			definition = "Institution destination of the reconciliation.\r\nIt corresponds to the ISO 8583 field number 93.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardTransactionEnvironment6.mmReceivingInstitution);
+			nextVersions_lazy = () -> Arrays.asList(CardTransactionEnvironment6.mmReceivingInstitution);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -236,7 +238,7 @@ public class CardTransactionEnvironment5 {
 			componentContext_lazy = () -> CardTransactionEnvironment5.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmInstn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementInstitution";
 			definition = "Institution in charge of the settlement of the transaction.";
 			maxOccurs = 1;
@@ -249,11 +251,10 @@ public class CardTransactionEnvironment5 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardTransactionEnvironment5.mmSendingInstitution, com.tools20022.repository.msg.CardTransactionEnvironment5.mmReceivingInstitution,
-						com.tools20022.repository.msg.CardTransactionEnvironment5.mmSettlementInstitution);
+				messageElement_lazy = () -> Arrays.asList(CardTransactionEnvironment5.mmSendingInstitution, CardTransactionEnvironment5.mmReceivingInstitution, CardTransactionEnvironment5.mmSettlementInstitution);
 				trace_lazy = () -> PartyIdentificationInformation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CardTransactionEnvironment5";
 				definition = "Environment of the transaction.";
 				nextVersions_lazy = () -> Arrays.asList(CardTransactionEnvironment6.mmObject());

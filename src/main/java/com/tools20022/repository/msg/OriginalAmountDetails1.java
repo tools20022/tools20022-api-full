@@ -19,8 +19,10 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ImpliedCurrencyAndAmount;
 import com.tools20022.repository.entity.RateAndAmount;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -105,11 +107,11 @@ public class OriginalAmountDetails1 {
 	 */
 	public static final MMMessageAttribute mmActualAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.RateAndAmount.mmAmount;
+			businessElementTrace_lazy = () -> RateAndAmount.mmAmount;
 			componentContext_lazy = () -> OriginalAmountDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "ActlAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ActualAmount";
 			definition = "Actual amount to be converted";
 			maxOccurs = 1;
@@ -154,11 +156,11 @@ public class OriginalAmountDetails1 {
 	 */
 	public static final MMMessageAttribute mmMinimumAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.RateAndAmount.mmAmount;
+			businessElementTrace_lazy = () -> RateAndAmount.mmAmount;
 			componentContext_lazy = () -> OriginalAmountDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "MinAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MinimumAmount";
 			definition = "Minimum amount for conversion (in case of range of amounts)";
 			maxOccurs = 1;
@@ -203,11 +205,11 @@ public class OriginalAmountDetails1 {
 	 */
 	public static final MMMessageAttribute mmMaximumAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.RateAndAmount.mmAmount;
+			businessElementTrace_lazy = () -> RateAndAmount.mmAmount;
 			componentContext_lazy = () -> OriginalAmountDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "MaxAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaximumAmount";
 			definition = "Maximum amount for conversion (in case of range of amounts)";
 			maxOccurs = 1;
@@ -219,11 +221,10 @@ public class OriginalAmountDetails1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OriginalAmountDetails1.mmActualAmount, com.tools20022.repository.msg.OriginalAmountDetails1.mmMinimumAmount,
-						com.tools20022.repository.msg.OriginalAmountDetails1.mmMaximumAmount);
+				messageElement_lazy = () -> Arrays.asList(OriginalAmountDetails1.mmActualAmount, OriginalAmountDetails1.mmMinimumAmount, OriginalAmountDetails1.mmMaximumAmount);
 				trace_lazy = () -> RateAndAmount.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OriginalAmountDetails1";
 				definition = "The OriginalAmountDetails contains all amount information in the acceptor currency code necessary to manage currency conversion in the cardholder currency code.";
 			}

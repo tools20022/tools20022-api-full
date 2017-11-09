@@ -20,7 +20,12 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.seev.*;
+import com.tools20022.repository.area.semt.*;
+import com.tools20022.repository.area.sese.*;
 import com.tools20022.repository.datatype.Max350Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -230,7 +235,7 @@ public class Extension2 {
 			componentContext_lazy = () -> Extension2.mmObject();
 			isDerived = false;
 			xmlTag = "PlcAndNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "Name qualifying the information provided in the Text field, and place where this information should be inserted.";
 			maxOccurs = 1;
@@ -269,7 +274,7 @@ public class Extension2 {
 			componentContext_lazy = () -> Extension2.mmObject();
 			isDerived = false;
 			xmlTag = "XtnsnEnvlp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExtensionEnvelope";
 			definition = "Technical element wrapping the extension.";
 			maxOccurs = 1;
@@ -282,31 +287,22 @@ public class Extension2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Extension2.mmPlaceAndName, com.tools20022.repository.msg.Extension2.mmExtensionEnvelope);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV01.mmExtension,
-						com.tools20022.repository.area.seev.CorporateActionEventProcessingStatusAdviceV01.mmExtension, com.tools20022.repository.area.seev.CorporateActionInstructionV01.mmExtension,
-						com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestV01.mmExtension, com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestStatusAdviceV01.mmExtension,
-						com.tools20022.repository.area.seev.CorporateActionInstructionStatementReportV01.mmExtension, com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV01.mmExtension,
-						com.tools20022.repository.area.seev.CorporateActionMovementConfirmationV01.mmExtension, com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV01.mmExtension,
-						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV01.mmExtension, com.tools20022.repository.area.seev.CorporateActionMovementReversalAdviceV01.mmExtension,
-						com.tools20022.repository.area.seev.CorporateActionNotificationV01.mmExtension, com.tools20022.repository.area.semt.IntraPositionMovementConfirmationV01.mmExtension,
-						com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV01.mmExtension, com.tools20022.repository.area.sese.SecuritiesFinancingInstructionV01.mmExtension,
-						com.tools20022.repository.area.semt.SecuritiesMessageCancellationAdviceV01.mmExtension, com.tools20022.repository.area.sese.SecuritiesSettlementConditionModificationStatusAdviceV01.mmExtension,
-						com.tools20022.repository.area.sese.SecuritiesSettlementConditionsModificationRequestV01.mmExtension, com.tools20022.repository.area.sese.SecuritiesSettlementTransactionConfirmationV01.mmExtension,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV01.mmExtension, com.tools20022.repository.area.sese.SecuritiesSettlementTransactionInstructionV01.mmExtension,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionStatusAdviceV01.mmExtension, com.tools20022.repository.area.seev.MeetingNotificationV04.mmExtension,
-						com.tools20022.repository.area.seev.MeetingCancellationV04.mmExtension, com.tools20022.repository.area.seev.MeetingEntitlementNotificationV04.mmExtension,
-						com.tools20022.repository.area.seev.MeetingInstructionV04.mmExtension, com.tools20022.repository.area.seev.MeetingInstructionCancellationRequestV04.mmExtension,
-						com.tools20022.repository.area.seev.MeetingInstructionStatusV04.mmExtension, com.tools20022.repository.area.seev.MeetingVoteExecutionConfirmationV04.mmExtension,
-						com.tools20022.repository.area.seev.MeetingResultDisseminationV04.mmExtension, com.tools20022.repository.area.semt.IntraPositionMovementInstructionV01.mmExtension,
-						com.tools20022.repository.area.semt.IntraPositionMovementStatusAdviceV01.mmExtension, com.tools20022.repository.area.sese.SecuritiesFinancingModificationInstructionV01.mmExtension,
-						com.tools20022.repository.area.sese.SecuritiesFinancingStatusAdviceV01.mmExtension, com.tools20022.repository.area.sese.SecuritiesSettlementAllegementRemovalAdviceV01.mmExtension,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotificationV01.mmExtension, com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdviceV01.mmExtension,
-						com.tools20022.repository.area.semt.SecuritiesStatementQueryV01.mmExtension, com.tools20022.repository.area.sese.SecuritiesStatusOrStatementQueryStatusAdviceV01.mmExtension,
-						com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestStatusAdviceV01.mmExtension, com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestV01.mmExtension,
-						com.tools20022.repository.area.sese.SecuritiesTransactionStatusQueryV01.mmExtension, com.tools20022.repository.area.seev.CorporateActionNarrativeV01.mmExtension);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(Extension2.mmPlaceAndName, Extension2.mmExtensionEnvelope);
+				messageBuildingBlock_lazy = () -> Arrays.asList(CorporateActionCancellationAdviceV01.mmExtension, CorporateActionEventProcessingStatusAdviceV01.mmExtension, CorporateActionInstructionV01.mmExtension,
+						CorporateActionInstructionCancellationRequestV01.mmExtension, CorporateActionInstructionCancellationRequestStatusAdviceV01.mmExtension, CorporateActionInstructionStatementReportV01.mmExtension,
+						CorporateActionInstructionStatusAdviceV01.mmExtension, CorporateActionMovementConfirmationV01.mmExtension, CorporateActionMovementPreliminaryAdviceV01.mmExtension,
+						CorporateActionMovementPreliminaryAdviceCancellationAdviceV01.mmExtension, CorporateActionMovementReversalAdviceV01.mmExtension, CorporateActionNotificationV01.mmExtension,
+						IntraPositionMovementConfirmationV01.mmExtension, SecuritiesFinancingConfirmationV01.mmExtension, SecuritiesFinancingInstructionV01.mmExtension, SecuritiesMessageCancellationAdviceV01.mmExtension,
+						SecuritiesSettlementConditionModificationStatusAdviceV01.mmExtension, SecuritiesSettlementConditionsModificationRequestV01.mmExtension, SecuritiesSettlementTransactionConfirmationV01.mmExtension,
+						SecuritiesSettlementTransactionGenerationNotificationV01.mmExtension, SecuritiesSettlementTransactionInstructionV01.mmExtension, SecuritiesSettlementTransactionStatusAdviceV01.mmExtension,
+						MeetingNotificationV04.mmExtension, MeetingCancellationV04.mmExtension, MeetingEntitlementNotificationV04.mmExtension, MeetingInstructionV04.mmExtension, MeetingInstructionCancellationRequestV04.mmExtension,
+						MeetingInstructionStatusV04.mmExtension, MeetingVoteExecutionConfirmationV04.mmExtension, MeetingResultDisseminationV04.mmExtension, IntraPositionMovementInstructionV01.mmExtension,
+						IntraPositionMovementStatusAdviceV01.mmExtension, SecuritiesFinancingModificationInstructionV01.mmExtension, SecuritiesFinancingStatusAdviceV01.mmExtension,
+						SecuritiesSettlementAllegementRemovalAdviceV01.mmExtension, SecuritiesSettlementTransactionAllegementNotificationV01.mmExtension, SecuritiesSettlementTransactionReversalAdviceV01.mmExtension,
+						SecuritiesStatementQueryV01.mmExtension, SecuritiesStatusOrStatementQueryStatusAdviceV01.mmExtension, SecuritiesTransactionCancellationRequestStatusAdviceV01.mmExtension,
+						SecuritiesTransactionCancellationRequestV01.mmExtension, SecuritiesTransactionStatusQueryV01.mmExtension, CorporateActionNarrativeV01.mmExtension);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Extension2";
 				definition = "Additional information that can not be captured in the structured fields and/or any other specific block.";
 			}

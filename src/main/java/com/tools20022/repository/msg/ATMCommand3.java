@@ -20,7 +20,9 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ATMCommand2Code;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -112,11 +114,11 @@ public class ATMCommand3 {
 			componentContext_lazy = () -> ATMCommand3.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Type of command to be performed by the ATM.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMCommand6.mmType);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMCommand2.mmType;
+			nextVersions_lazy = () -> Arrays.asList(ATMCommand6.mmType);
+			previousVersion_lazy = () -> ATMCommand2.mmType;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ATMCommand2Code.mmObject();
@@ -167,11 +169,11 @@ public class ATMCommand3 {
 			componentContext_lazy = () -> ATMCommand3.mmObject();
 			isDerived = false;
 			xmlTag = "CmdId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommandIdentification";
 			definition = "Identification of the entity issuing the command.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMCommand6.mmCommandIdentification);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMCommand2.mmCommandIdentification;
+			nextVersions_lazy = () -> Arrays.asList(ATMCommand6.mmCommandIdentification);
+			previousVersion_lazy = () -> ATMCommand2.mmCommandIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -182,9 +184,9 @@ public class ATMCommand3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMCommand3.mmType, com.tools20022.repository.msg.ATMCommand3.mmCommandIdentification);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(ATMCommand3.mmType, ATMCommand3.mmCommandIdentification);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ATMCommand3";
 				definition = "Maintenance command which has requested the device report.";
 				nextVersions_lazy = () -> Arrays.asList(ATMCommand6.mmObject());

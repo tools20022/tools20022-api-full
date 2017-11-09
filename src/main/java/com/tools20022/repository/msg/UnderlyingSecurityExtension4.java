@@ -19,9 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.AssetClass1Code;
 import com.tools20022.repository.codeset.DTCAssetType1Code;
 import com.tools20022.repository.datatype.Max350Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -101,7 +103,7 @@ public class UnderlyingSecurityExtension4 {
 			componentContext_lazy = () -> UnderlyingSecurityExtension4.mmObject();
 			isDerived = false;
 			xmlTag = "PlcAndNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "xPath to the element that is being extended.";
 			maxOccurs = 1;
@@ -146,7 +148,7 @@ public class UnderlyingSecurityExtension4 {
 			componentContext_lazy = () -> UnderlyingSecurityExtension4.mmObject();
 			isDerived = false;
 			xmlTag = "DTCAsstTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCAssetType";
 			definition = "Further classification of instruments into (issue) asset types at DTC (The Depository Trust Corporation).";
 			maxOccurs = 1;
@@ -191,7 +193,7 @@ public class UnderlyingSecurityExtension4 {
 			componentContext_lazy = () -> UnderlyingSecurityExtension4.mmObject();
 			isDerived = false;
 			xmlTag = "DTCAsstClss";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCAssetClass";
 			definition = "Classification of instruments into asset classes at DTC (The Depository Trust Corporation).";
 			maxOccurs = 1;
@@ -203,10 +205,9 @@ public class UnderlyingSecurityExtension4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UnderlyingSecurityExtension4.mmPlaceAndName, com.tools20022.repository.msg.UnderlyingSecurityExtension4.mmDTCAssetType,
-						com.tools20022.repository.msg.UnderlyingSecurityExtension4.mmDTCAssetClass);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+				messageElement_lazy = () -> Arrays.asList(UnderlyingSecurityExtension4.mmPlaceAndName, UnderlyingSecurityExtension4.mmDTCAssetType, UnderlyingSecurityExtension4.mmDTCAssetClass);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
 						return DateFormat.getDateInstance(java.text.DateFormat.LONG).parse("September 9, 2016");

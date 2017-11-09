@@ -19,8 +19,10 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ActiveCurrencyAnd13DecimalAmount;
 import com.tools20022.repository.entity.AmountRatio;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -96,11 +98,11 @@ public class AmountToAmountRatio2 {
 	 */
 	public static final MMMessageAttribute mmAmount1 = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AmountRatio.mmAmount1;
+			businessElementTrace_lazy = () -> AmountRatio.mmAmount1;
 			componentContext_lazy = () -> AmountToAmountRatio2.mmObject();
 			isDerived = false;
 			xmlTag = "Amt1";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount1";
 			definition = "Numerator of the quotient of amounts.";
 			maxOccurs = 1;
@@ -144,11 +146,11 @@ public class AmountToAmountRatio2 {
 	 */
 	public static final MMMessageAttribute mmAmount2 = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AmountRatio.mmAmount2;
+			businessElementTrace_lazy = () -> AmountRatio.mmAmount2;
 			componentContext_lazy = () -> AmountToAmountRatio2.mmObject();
 			isDerived = false;
 			xmlTag = "Amt2";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount2";
 			definition = "Denominator of the quotient of amounts";
 			maxOccurs = 1;
@@ -160,10 +162,10 @@ public class AmountToAmountRatio2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AmountToAmountRatio2.mmAmount1, com.tools20022.repository.msg.AmountToAmountRatio2.mmAmount2);
+				messageElement_lazy = () -> Arrays.asList(AmountToAmountRatio2.mmAmount1, AmountToAmountRatio2.mmAmount2);
 				trace_lazy = () -> AmountRatio.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AmountToAmountRatio2";
 				definition = "Ratio expressed as a quotient of amounts.";
 			}

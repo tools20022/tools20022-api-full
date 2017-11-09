@@ -19,8 +19,12 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.DateFormat19Choice;
+import com.tools20022.repository.entity.CorporateActionDeadline;
 import com.tools20022.repository.entity.CorporateActionEvent;
+import com.tools20022.repository.entity.Dividend;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -120,14 +124,14 @@ public class CorporateActionDate30 {
 	 */
 	public static final MMMessageAssociationEnd mmRecordDate = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionDeadline.mmRecordDate;
+			businessElementTrace_lazy = () -> CorporateActionDeadline.mmRecordDate;
 			componentContext_lazy = () -> CorporateActionDate30.mmObject();
 			isDerived = false;
 			xmlTag = "RcrdDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RecordDate";
 			definition = "Date/time at which positions are struck at the end of the day to note which parties will receive the relevant amount of entitlement, due to be distributed on payment date.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionDate41.mmRecordDate, com.tools20022.repository.msg.CorporateActionDate49.mmRecordDate);
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionDate41.mmRecordDate, CorporateActionDate49.mmRecordDate);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -182,14 +186,14 @@ public class CorporateActionDate30 {
 	 */
 	public static final MMMessageAssociationEnd mmExDividendDate = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Dividend.mmExDividendDate;
+			businessElementTrace_lazy = () -> Dividend.mmExDividendDate;
 			componentContext_lazy = () -> CorporateActionDate30.mmObject();
 			isDerived = false;
 			xmlTag = "ExDvddDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExDividendDate";
 			definition = "Date/time as from which trading (including exchange and OTC trading) occurs on the underlying security without the benefit.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionDate41.mmExDividendDate, com.tools20022.repository.msg.CorporateActionDate49.mmExDividendDate);
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionDate41.mmExDividendDate, CorporateActionDate49.mmExDividendDate);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -200,10 +204,10 @@ public class CorporateActionDate30 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionDate30.mmRecordDate, com.tools20022.repository.msg.CorporateActionDate30.mmExDividendDate);
+				messageElement_lazy = () -> Arrays.asList(CorporateActionDate30.mmRecordDate, CorporateActionDate30.mmExDividendDate);
 				trace_lazy = () -> CorporateActionEvent.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionDate30";
 				definition = "Specifies corporate action dates.";
 				nextVersions_lazy = () -> Arrays.asList(CorporateActionDate41.mmObject(), CorporateActionDate49.mmObject());

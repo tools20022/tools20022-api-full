@@ -19,9 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.NonTradingDayReason1Code;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -102,7 +104,7 @@ public class SecuritiesNonTradingDay1 {
 			componentContext_lazy = () -> SecuritiesNonTradingDay1.mmObject();
 			isDerived = false;
 			xmlTag = "TechRcrdId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TechnicalRecordIdentification";
 			definition = "Unique identifier of a record in a message used as part of error management and status advice messages.\r\n\r\nUsage:\r\nThis identification will be used in the status advice report sent back.";
 			maxOccurs = 1;
@@ -143,7 +145,7 @@ public class SecuritiesNonTradingDay1 {
 			componentContext_lazy = () -> SecuritiesNonTradingDay1.mmObject();
 			isDerived = false;
 			xmlTag = "Dt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Date";
 			definition = "Non-working date.";
 			maxOccurs = 1;
@@ -185,7 +187,7 @@ public class SecuritiesNonTradingDay1 {
 			componentContext_lazy = () -> SecuritiesNonTradingDay1.mmObject();
 			isDerived = false;
 			xmlTag = "Rsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reason";
 			definition = "Reason code for the non-working day.";
 			maxOccurs = 1;
@@ -197,10 +199,9 @@ public class SecuritiesNonTradingDay1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesNonTradingDay1.mmTechnicalRecordIdentification, com.tools20022.repository.msg.SecuritiesNonTradingDay1.mmDate,
-						com.tools20022.repository.msg.SecuritiesNonTradingDay1.mmReason);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(SecuritiesNonTradingDay1.mmTechnicalRecordIdentification, SecuritiesNonTradingDay1.mmDate, SecuritiesNonTradingDay1.mmReason);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesNonTradingDay1";
 				definition = "Details the date and reason for a non working day.";
 			}

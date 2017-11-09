@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,19 +29,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.DebitType1Code
+ * DebitType1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>{@linkplain com.tools20022.repository.codeset.DebitTypeCode#mmGlobal
  * DebitTypeCode.mmGlobal}</li>
  * <li>{@linkplain com.tools20022.repository.codeset.DebitTypeCode#mmSingle
  * DebitTypeCode.mmSingle}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.DebitType1Code
- * DebitType1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -84,7 +86,7 @@ public class DebitTypeCode {
 	 */
 	public static final MMCode mmGlobal = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Global";
 			definition = "Debit is performed as a global debit for all instructions in the file.";
 			owner_lazy = () -> DebitTypeCode.mmObject();
@@ -117,7 +119,7 @@ public class DebitTypeCode {
 	 */
 	public static final MMCode mmSingle = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Single";
 			definition = "Debit is performed as an individual single debit for each instruction in the file.";
 			owner_lazy = () -> DebitTypeCode.mmObject();
@@ -128,11 +130,11 @@ public class DebitTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DebitTypeCode";
 				definition = "Specifies the type of debit to be applied to the payment.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DebitTypeCode.mmGlobal, com.tools20022.repository.codeset.DebitTypeCode.mmSingle);
+				code_lazy = () -> Arrays.asList(DebitTypeCode.mmGlobal, DebitTypeCode.mmSingle);
 				derivation_lazy = () -> Arrays.asList(DebitType1Code.mmObject());
 			}
 		});

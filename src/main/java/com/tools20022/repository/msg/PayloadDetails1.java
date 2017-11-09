@@ -19,9 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.TrueFalseIndicator;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -100,7 +102,7 @@ public class PayloadDetails1 {
 			componentContext_lazy = () -> PayloadDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "PyldIdr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PayloadIdentifier";
 			definition = "String of characters that uniquely identifies the file, which was delivered by the sender.";
 			maxOccurs = 1;
@@ -141,7 +143,7 @@ public class PayloadDetails1 {
 			componentContext_lazy = () -> PayloadDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "CreDtAndTm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreationDateAndTime";
 			definition = "Date and time when the file was created by the sender.";
 			maxOccurs = 1;
@@ -187,7 +189,7 @@ public class PayloadDetails1 {
 			componentContext_lazy = () -> PayloadDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "PssblDplctFlg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PossibleDuplicateFlag";
 			definition = "Flag indicating if the file exchanged between the two business applications is possibly a duplicate. If this indicator is not present within the message, please note that the default value would be \"False\".";
 			maxOccurs = 1;
@@ -199,10 +201,9 @@ public class PayloadDetails1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PayloadDetails1.mmPayloadIdentifier, com.tools20022.repository.msg.PayloadDetails1.mmCreationDateAndTime,
-						com.tools20022.repository.msg.PayloadDetails1.mmPossibleDuplicateFlag);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(PayloadDetails1.mmPayloadIdentifier, PayloadDetails1.mmCreationDateAndTime, PayloadDetails1.mmPossibleDuplicateFlag);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "PayloadDetails1";
 				definition = "This component identifies the instance of the document exchanged.";
 			}

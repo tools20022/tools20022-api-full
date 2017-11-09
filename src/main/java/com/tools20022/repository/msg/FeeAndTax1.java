@@ -20,8 +20,12 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.entity.CashAccount;
 import com.tools20022.repository.entity.InvestmentFundTax;
+import com.tools20022.repository.entity.InvestmentFundTransaction;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -103,11 +107,11 @@ public class FeeAndTax1 {
 	 */
 	public static final MMMessageAttribute mmCommercialAgreementReference = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashAccount.mmCommission;
+			businessElementTrace_lazy = () -> CashAccount.mmCommission;
 			componentContext_lazy = () -> FeeAndTax1.mmObject();
 			isDerived = false;
 			xmlTag = "ComrclAgrmtRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommercialAgreementReference";
 			definition = "Reference to the agreement established between the fund and another party. This element, amongst others, defines the conditions of the commissions.";
 			maxOccurs = 1;
@@ -152,14 +156,14 @@ public class FeeAndTax1 {
 	 */
 	public static final MMMessageAssociationEnd mmIndividualFee = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundTransaction.mmTransactionCharge;
+			businessElementTrace_lazy = () -> InvestmentFundTransaction.mmTransactionCharge;
 			componentContext_lazy = () -> FeeAndTax1.mmObject();
 			isDerived = false;
 			xmlTag = "IndvFee";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IndividualFee";
 			definition = "Individual fee (charge/commission).";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TotalFeesAndTaxes40.mmIndividualFee;
+			previousVersion_lazy = () -> TotalFeesAndTaxes40.mmIndividualFee;
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.Fee1.mmObject();
@@ -206,10 +210,10 @@ public class FeeAndTax1 {
 			componentContext_lazy = () -> FeeAndTax1.mmObject();
 			isDerived = false;
 			xmlTag = "IndvTax";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IndividualTax";
 			definition = "Individual tax amount.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TotalFeesAndTaxes40.mmIndividualTax;
+			previousVersion_lazy = () -> TotalFeesAndTaxes40.mmIndividualTax;
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.Tax30.mmObject();
@@ -219,11 +223,10 @@ public class FeeAndTax1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FeeAndTax1.mmCommercialAgreementReference, com.tools20022.repository.msg.FeeAndTax1.mmIndividualFee,
-						com.tools20022.repository.msg.FeeAndTax1.mmIndividualTax);
+				messageElement_lazy = () -> Arrays.asList(FeeAndTax1.mmCommercialAgreementReference, FeeAndTax1.mmIndividualFee, FeeAndTax1.mmIndividualTax);
 				trace_lazy = () -> InvestmentFundTax.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FeeAndTax1";
 				definition = "Amount of money associated with a service.";
 			}

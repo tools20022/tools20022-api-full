@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.ReportPeriodActivity1Code
+ * ReportPeriodActivity1Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ReportPeriodActivity3Code
+ * ReportPeriodActivity3Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -38,15 +49,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.ReportPeriodActivityCode#mmCorruptedReport
  * ReportPeriodActivityCode.mmCorruptedReport}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.ReportPeriodActivity1Code
- * ReportPeriodActivity1Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ReportPeriodActivity3Code
- * ReportPeriodActivity3Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -90,7 +92,7 @@ public class ReportPeriodActivityCode {
 	 */
 	public static final MMCode mmNoTransaction = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoTransaction";
 			definition = "No transaction has been identified during the period.";
 			owner_lazy = () -> ReportPeriodActivityCode.mmObject();
@@ -120,7 +122,7 @@ public class ReportPeriodActivityCode {
 	 */
 	public static final MMCode mmNoReportFromAgent = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoReportFromAgent";
 			definition = "No report has been received from reporting agent.";
 			owner_lazy = () -> ReportPeriodActivityCode.mmObject();
@@ -150,7 +152,7 @@ public class ReportPeriodActivityCode {
 	 */
 	public static final MMCode mmCorruptedReport = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorruptedReport";
 			definition = "Report has been received but was corrupted.";
 			owner_lazy = () -> ReportPeriodActivityCode.mmObject();
@@ -161,12 +163,11 @@ public class ReportPeriodActivityCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ReportPeriodActivityCode";
 				definition = "Specifies the type of report activity for a specific period.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ReportPeriodActivityCode.mmNoTransaction, com.tools20022.repository.codeset.ReportPeriodActivityCode.mmNoReportFromAgent,
-						com.tools20022.repository.codeset.ReportPeriodActivityCode.mmCorruptedReport);
+				code_lazy = () -> Arrays.asList(ReportPeriodActivityCode.mmNoTransaction, ReportPeriodActivityCode.mmNoReportFromAgent, ReportPeriodActivityCode.mmCorruptedReport);
 				derivation_lazy = () -> Arrays.asList(ReportPeriodActivity1Code.mmObject(), ReportPeriodActivity3Code.mmObject());
 			}
 		});

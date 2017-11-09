@@ -20,6 +20,7 @@ package com.tools20022.repository.area.tsin;
 import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.TradeServicesInitiationLatestVersion;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.FinancialInvoiceISOArchive;
@@ -56,6 +57,9 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code tsin.004.001.01}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.TradeServicesInitiationLatestVersion
@@ -92,9 +96,6 @@ import java.util.List;
  * FinancialInvoiceV01.mmLineItem}</li>
  * </ul>
  * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code tsin.004.001.01}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -141,7 +142,7 @@ public class FinancialInvoiceV01 {
 	public static final MMMessageBuildingBlock mmInvoiceHeader = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "InvcHdr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvoiceHeader";
 			definition = "Collection of data that is exchanged between two or more parties in written, printed or electronic form. It contains general data relevant to the main body of the invoice such as date of issue, currency code and identification number.";
 			maxOccurs = 1;
@@ -179,7 +180,7 @@ public class FinancialInvoiceV01 {
 	public static final MMMessageBuildingBlock mmTradeAgreement = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "TradAgrmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeAgreement";
 			definition = "Commercial information such as terms of commerce, parties, and documentation, related to the trading agreement under which this invoice is issued.";
 			maxOccurs = 1;
@@ -216,7 +217,7 @@ public class FinancialInvoiceV01 {
 	public static final MMMessageBuildingBlock mmTradeDelivery = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "TradDlvry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeDelivery";
 			definition = "Supply chain shipping arrangements for delivery of invoiced products and/or services.";
 			maxOccurs = 1;
@@ -254,7 +255,7 @@ public class FinancialInvoiceV01 {
 	public static final MMMessageBuildingBlock mmTradeSettlement = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "TradSttlm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeSettlement";
 			definition = "Settlement information that enables the financial reconciliation and payment of this invoice.\r\n";
 			maxOccurs = 1;
@@ -294,7 +295,7 @@ public class FinancialInvoiceV01 {
 	public static final MMMessageBuildingBlock mmLineItem = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "LineItm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LineItem";
 			definition = "Unit of information in this invoice showning the related  provision of products and/or services and monetary summations reported as a discrete line item.\r\n\r\n\r\n";
 			minOccurs = 0;
@@ -305,15 +306,15 @@ public class FinancialInvoiceV01 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FinancialInvoiceV01";
 				definition = "Scope\r\nThe FinancialInvoice message is used to support the provision of financial and related services where there is a requirement to exchange invoice information.\r\nUsage\r\nWhile the prime function of the FinancialInvoice message is as a request from the seller to the buyer for payment, the FinancialInvoice message can also serve to evidence an invoice in support of a financial service such as invoice factoring, letters of credit, and bank payment obligations, to enable Web based services such as electronic bill payment and presentment, and as the basis to transfer invoice information via third parties such as e-invoicing service providers.\r\nA consequence of the receipt of an invoice by the buyer is that it acts as a trigger for the use of related messages that are already defined in ISO 20022, notably where the information contained in the Financial Invoice enables payment for the goods or services received, and/or is provided in support of a request for invoice financing. While certain of these related messages, such as the CreditTransfer and PaymentInitiation messages, are shown in the sequence diagram they are out of scope. They are shown only to illustrate a given scenario and to place the invoice in the context of the financial banking processes that might be conducted between different financial institutions.\r\nThe use of self-billing by the buyer to the seller, where the buyer acts as the invoice issuer or the process of handling an incorrect invoice, is not in scope.";
 				messageSet_lazy = () -> Arrays.asList(FinancialInvoiceISOArchive.mmObject());
 				rootElement = "Document";
 				xmlTag = "FinInvc";
 				businessArea_lazy = () -> TradeServicesInitiationLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsin.FinancialInvoiceV01.mmInvoiceHeader, com.tools20022.repository.area.tsin.FinancialInvoiceV01.mmTradeAgreement,
-						com.tools20022.repository.area.tsin.FinancialInvoiceV01.mmTradeDelivery, com.tools20022.repository.area.tsin.FinancialInvoiceV01.mmTradeSettlement, com.tools20022.repository.area.tsin.FinancialInvoiceV01.mmLineItem);
+				messageBuildingBlock_lazy = () -> Arrays.asList(FinancialInvoiceV01.mmInvoiceHeader, FinancialInvoiceV01.mmTradeAgreement, FinancialInvoiceV01.mmTradeDelivery, FinancialInvoiceV01.mmTradeSettlement,
+						FinancialInvoiceV01.mmLineItem);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "tsin";

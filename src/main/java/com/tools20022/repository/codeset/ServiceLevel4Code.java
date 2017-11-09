@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ServiceLevelCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -81,7 +83,7 @@ public class ServiceLevel4Code extends ServiceLevelCode {
 	 */
 	public static final MMCode mmSingleEuroPaymentsArea = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SingleEuroPaymentsArea";
 			owner_lazy = () -> ServiceLevel4Code.mmObject();
 		}
@@ -90,12 +92,12 @@ public class ServiceLevel4Code extends ServiceLevelCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("SEPA");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ServiceLevel4Code";
 				definition = "Specifies the pre-agreed level of service between the parties.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ServiceLevel4Code.mmSingleEuroPaymentsArea);
+				code_lazy = () -> Arrays.asList(ServiceLevel4Code.mmSingleEuroPaymentsArea);
 				trace_lazy = () -> ServiceLevelCode.mmObject();
 			}
 		});

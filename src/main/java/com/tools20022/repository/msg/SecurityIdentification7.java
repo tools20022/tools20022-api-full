@@ -19,10 +19,12 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.metamodel.MMXor;
 import com.tools20022.repository.datatype.ISINIdentifier;
 import com.tools20022.repository.datatype.Max140Text;
 import com.tools20022.repository.entity.SecuritiesIdentification;
+import com.tools20022.repository.GeneratedRepository;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -125,11 +127,11 @@ public class SecurityIdentification7 {
 	 */
 	public static final MMMessageAttribute mmISIN = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesIdentification.mmSecurityIdentification;
+			businessElementTrace_lazy = () -> SecuritiesIdentification.mmSecurityIdentification;
 			componentContext_lazy = () -> SecurityIdentification7.mmObject();
 			isDerived = false;
 			xmlTag = "ISIN";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ISIN";
 			definition = "International Securities Identification Number (ISIN).  A numbering system designed by the United Nation's International Organisation for Standardisation (ISO). The ISIN is composed of a 2-character prefix representing the country of issue, followed by the national security number (if one exists), and a check digit. Each country has a national numbering agency that assigns ISIN numbers for securities in that country.";
 			maxOccurs = 1;
@@ -180,7 +182,7 @@ public class SecurityIdentification7 {
 			componentContext_lazy = () -> SecurityIdentification7.mmObject();
 			isDerived = false;
 			xmlTag = "OthrId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherIdentification";
 			definition = "Proprietary identification of a security assigned by an institution or organisation.";
 			maxOccurs = 1;
@@ -227,7 +229,7 @@ public class SecurityIdentification7 {
 			componentContext_lazy = () -> SecurityIdentification7.mmObject();
 			isDerived = false;
 			xmlTag = "Desc";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Description";
 			definition = "Textual description of a security instrument.";
 			maxOccurs = 1;
@@ -240,6 +242,10 @@ public class SecurityIdentification7 {
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
+	 * messageComponent} =
+	 * {@linkplain com.tools20022.repository.msg.SecurityIdentification7
+	 * SecurityIdentification7}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getImpactedElements
 	 * impactedElements} =
 	 * <ul>
@@ -251,10 +257,6 @@ public class SecurityIdentification7 {
 	 * SecurityIdentification7.mmOtherIdentification}</li>
 	 * </ul>
 	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
-	 * messageComponent} =
-	 * {@linkplain com.tools20022.repository.msg.SecurityIdentification7
-	 * SecurityIdentification7}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -269,22 +271,21 @@ public class SecurityIdentification7 {
 	 */
 	public static final MMXor mmISINOrOtherIdentificationRule = new MMXor() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ISINOrOtherIdentificationRule";
 			definition = "Either ISIN or OtherIdentification must be present but not both.";
 			messageComponent_lazy = () -> SecurityIdentification7.mmObject();
-			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecurityIdentification7.mmISIN, com.tools20022.repository.msg.SecurityIdentification7.mmOtherIdentification);
+			impactedElements_lazy = () -> Arrays.asList(SecurityIdentification7.mmISIN, SecurityIdentification7.mmOtherIdentification);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecurityIdentification7.mmISIN, com.tools20022.repository.msg.SecurityIdentification7.mmOtherIdentification,
-						com.tools20022.repository.msg.SecurityIdentification7.mmDescription);
+				messageElement_lazy = () -> Arrays.asList(SecurityIdentification7.mmISIN, SecurityIdentification7.mmOtherIdentification, SecurityIdentification7.mmDescription);
 				trace_lazy = () -> SecuritiesIdentification.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
 						return DateFormat.getDateInstance(java.text.DateFormat.LONG).parse("September 9, 2016");
@@ -294,7 +295,7 @@ public class SecurityIdentification7 {
 				})).get();
 				name = "SecurityIdentification7";
 				definition = "Choice between ISIN and an alternative format for the identification of a security. ISIN is the preferred format.";
-				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecurityIdentification7.mmISINOrOtherIdentificationRule);
+				xors_lazy = () -> Arrays.asList(SecurityIdentification7.mmISINOrOtherIdentificationRule);
 			}
 		});
 		return mmObject_lazy.get();

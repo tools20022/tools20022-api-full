@@ -19,12 +19,15 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.secl.NetPositionV03;
 import com.tools20022.repository.choice.DateAndDateTimeChoice;
 import com.tools20022.repository.codeset.EventFrequency6Code;
 import com.tools20022.repository.codeset.StatementUpdateType1Code;
 import com.tools20022.repository.datatype.Exact5NumericText;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.YesNoIndicator;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -118,7 +121,7 @@ public class ReportParameters1 {
 			componentContext_lazy = () -> ReportParameters1.mmObject();
 			isDerived = false;
 			xmlTag = "NetPosId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetPositionIdentification";
 			definition = "After netting, reference that is common to a net transaction to settle and all its underlying trades.";
 			maxOccurs = 1;
@@ -160,7 +163,7 @@ public class ReportParameters1 {
 			componentContext_lazy = () -> ReportParameters1.mmObject();
 			isDerived = false;
 			xmlTag = "RptDtAndTm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportDateAndTime";
 			definition = "Date and time of the net position report.";
 			maxOccurs = 1;
@@ -203,7 +206,7 @@ public class ReportParameters1 {
 			componentContext_lazy = () -> ReportParameters1.mmObject();
 			isDerived = false;
 			xmlTag = "UpdTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UpdateType";
 			definition = "Indicates whether the statement is complete or contains changes only.";
 			maxOccurs = 1;
@@ -245,7 +248,7 @@ public class ReportParameters1 {
 			componentContext_lazy = () -> ReportParameters1.mmObject();
 			isDerived = false;
 			xmlTag = "Frqcy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Frequency";
 			definition = "Frequency of the report.";
 			maxOccurs = 1;
@@ -287,7 +290,7 @@ public class ReportParameters1 {
 			componentContext_lazy = () -> ReportParameters1.mmObject();
 			isDerived = false;
 			xmlTag = "RptNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportNumber";
 			definition = "Sequential number of the report.";
 			maxOccurs = 1;
@@ -332,7 +335,7 @@ public class ReportParameters1 {
 			componentContext_lazy = () -> ReportParameters1.mmObject();
 			isDerived = false;
 			xmlTag = "ActvtyInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ActivityIndicator";
 			definition = "Indicates whether there is activity or information update reported in the statement.";
 			maxOccurs = 1;
@@ -344,12 +347,11 @@ public class ReportParameters1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReportParameters1.mmNetPositionIdentification, com.tools20022.repository.msg.ReportParameters1.mmReportDateAndTime,
-						com.tools20022.repository.msg.ReportParameters1.mmUpdateType, com.tools20022.repository.msg.ReportParameters1.mmFrequency, com.tools20022.repository.msg.ReportParameters1.mmReportNumber,
-						com.tools20022.repository.msg.ReportParameters1.mmActivityIndicator);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.secl.NetPositionV03.mmReportParameters);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(ReportParameters1.mmNetPositionIdentification, ReportParameters1.mmReportDateAndTime, ReportParameters1.mmUpdateType, ReportParameters1.mmFrequency,
+						ReportParameters1.mmReportNumber, ReportParameters1.mmActivityIndicator);
+				messageBuildingBlock_lazy = () -> Arrays.asList(NetPositionV03.mmReportParameters);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ReportParameters1";
 				definition = "Parameters related to the net position.";
 			}

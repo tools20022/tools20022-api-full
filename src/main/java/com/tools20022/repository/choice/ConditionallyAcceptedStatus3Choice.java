@@ -20,8 +20,11 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.NoReasonCode;
 import com.tools20022.repository.entity.SecuritiesOrderStatus;
+import com.tools20022.repository.entity.StatusReason;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.ConditionallyAcceptedStatus2;
 import com.tools20022.repository.msg.ConditionallyAcceptedStatusReason3;
 import java.util.Arrays;
@@ -123,15 +126,15 @@ public class ConditionallyAcceptedStatus3Choice {
 	 */
 	public static final MMMessageAttribute mmNoSpecifiedReason = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmNoSpecifiedReason;
+			businessElementTrace_lazy = () -> StatusReason.mmNoSpecifiedReason;
 			componentContext_lazy = () -> ConditionallyAcceptedStatus3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "NoSpcfdRsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoSpecifiedReason";
 			definition = "No reason available or to report for the conditionally accepted status.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SuspendedStatusReason4Choice.mmNoSpecifiedReason, com.tools20022.repository.choice.InRepairStatusReason4Choice.mmNoSpecifiedReason);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ConditionallyAcceptedStatus2.mmNoSpecifiedReason;
+			nextVersions_lazy = () -> Arrays.asList(SuspendedStatusReason4Choice.mmNoSpecifiedReason, InRepairStatusReason4Choice.mmNoSpecifiedReason);
+			previousVersion_lazy = () -> ConditionallyAcceptedStatus2.mmNoSpecifiedReason;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> NoReasonCode.mmObject();
@@ -189,15 +192,15 @@ public class ConditionallyAcceptedStatus3Choice {
 	 */
 	public static final MMMessageAssociationEnd mmReasonDetails = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrderStatus.mmConditionallyAcceptedStatus;
+			businessElementTrace_lazy = () -> SecuritiesOrderStatus.mmConditionallyAcceptedStatus;
 			componentContext_lazy = () -> ConditionallyAcceptedStatus3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "RsnDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReasonDetails";
 			definition = "Reason for the conditionally accepted status, expressed as a code.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SuspendedStatusReason4Choice.mmReasonDetails, com.tools20022.repository.choice.InRepairStatusReason4Choice.mmReasonDetails);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ConditionallyAcceptedStatus2.mmReasonDetails;
+			nextVersions_lazy = () -> Arrays.asList(SuspendedStatusReason4Choice.mmReasonDetails, InRepairStatusReason4Choice.mmReasonDetails);
+			previousVersion_lazy = () -> ConditionallyAcceptedStatus2.mmReasonDetails;
 			maxOccurs = 5;
 			minOccurs = 1;
 			isComposite = true;
@@ -208,10 +211,10 @@ public class ConditionallyAcceptedStatus3Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ConditionallyAcceptedStatus3Choice.mmNoSpecifiedReason, com.tools20022.repository.choice.ConditionallyAcceptedStatus3Choice.mmReasonDetails);
+				messageElement_lazy = () -> Arrays.asList(ConditionallyAcceptedStatus3Choice.mmNoSpecifiedReason, ConditionallyAcceptedStatus3Choice.mmReasonDetails);
 				trace_lazy = () -> SecuritiesOrderStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ConditionallyAcceptedStatus3Choice";
 				definition = "Reason for a conditionally accepted status.";
 				previousVersion_lazy = () -> ConditionallyAcceptedStatus2.mmObject();

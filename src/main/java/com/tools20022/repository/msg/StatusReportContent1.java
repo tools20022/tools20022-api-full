@@ -20,10 +20,13 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.AttendanceContext1Code;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Max140Text;
+import com.tools20022.repository.entity.CardPaymentAcquiring;
 import com.tools20022.repository.entity.PointOfInteraction;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -122,7 +125,7 @@ public class StatusReportContent1 {
 			componentContext_lazy = () -> StatusReportContent1.mmObject();
 			isDerived = false;
 			xmlTag = "POICpblties";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "POICapabilities";
 			definition = "Capabilities of the POI performing the status report.";
 			maxOccurs = 1;
@@ -167,11 +170,11 @@ public class StatusReportContent1 {
 	 */
 	public static final MMMessageAssociationEnd mmPOIComponent = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PointOfInteraction.mmComponent;
+			businessElementTrace_lazy = () -> PointOfInteraction.mmComponent;
 			componentContext_lazy = () -> StatusReportContent1.mmObject();
 			isDerived = false;
 			xmlTag = "POICmpnt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "POIComponent";
 			definition = "Data related to a component of the POI performing the status report.";
 			minOccurs = 0;
@@ -216,11 +219,11 @@ public class StatusReportContent1 {
 	 */
 	public static final MMMessageAttribute mmAttendanceContext = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.mmAttendanceContext;
+			businessElementTrace_lazy = () -> CardPaymentAcquiring.mmAttendanceContext;
 			componentContext_lazy = () -> StatusReportContent1.mmObject();
 			isDerived = false;
 			xmlTag = "AttndncCntxt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AttendanceContext";
 			definition = "Human attendance at the POI location during transactions.";
 			maxOccurs = 1;
@@ -264,7 +267,7 @@ public class StatusReportContent1 {
 			componentContext_lazy = () -> StatusReportContent1.mmObject();
 			isDerived = false;
 			xmlTag = "POIDtTm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "POIDateTime";
 			definition = "System date time of the point of interaction (POI) sending the status report.";
 			maxOccurs = 1;
@@ -307,7 +310,7 @@ public class StatusReportContent1 {
 			componentContext_lazy = () -> StatusReportContent1.mmObject();
 			isDerived = false;
 			xmlTag = "DataSetReqrd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DataSetRequired";
 			definition = "Request the terminal management system to answer with the identified data set.";
 			maxOccurs = 1;
@@ -350,7 +353,7 @@ public class StatusReportContent1 {
 			componentContext_lazy = () -> StatusReportContent1.mmObject();
 			isDerived = false;
 			xmlTag = "Evt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Event";
 			definition = "Result of an individual terminal management action by the point of interaction.";
 			minOccurs = 0;
@@ -392,7 +395,7 @@ public class StatusReportContent1 {
 			componentContext_lazy = () -> StatusReportContent1.mmObject();
 			isDerived = false;
 			xmlTag = "Errs";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Errors";
 			definition = "Error log of the point of interaction since the last status report.";
 			maxOccurs = 1;
@@ -404,11 +407,10 @@ public class StatusReportContent1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StatusReportContent1.mmPOICapabilities, com.tools20022.repository.msg.StatusReportContent1.mmPOIComponent,
-						com.tools20022.repository.msg.StatusReportContent1.mmAttendanceContext, com.tools20022.repository.msg.StatusReportContent1.mmPOIDateTime, com.tools20022.repository.msg.StatusReportContent1.mmDataSetRequired,
-						com.tools20022.repository.msg.StatusReportContent1.mmEvent, com.tools20022.repository.msg.StatusReportContent1.mmErrors);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(StatusReportContent1.mmPOICapabilities, StatusReportContent1.mmPOIComponent, StatusReportContent1.mmAttendanceContext, StatusReportContent1.mmPOIDateTime,
+						StatusReportContent1.mmDataSetRequired, StatusReportContent1.mmEvent, StatusReportContent1.mmErrors);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "StatusReportContent1";
 				definition = "Content of the status report.";
 				nextVersions_lazy = () -> Arrays.asList(StatusReportContent2.mmObject());

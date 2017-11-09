@@ -20,11 +20,14 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.PartyIdentification71Choice;
 import com.tools20022.repository.codeset.ActiveOrHistoricCurrencyCode;
 import com.tools20022.repository.datatype.BaseOneRate;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.entity.CurrencyExchange;
+import com.tools20022.repository.entity.Party;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -124,14 +127,14 @@ public class ForeignExchangeTerms22 {
 	 */
 	public static final MMMessageAttribute mmUnitCurrency = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmUnitCurrency;
+			businessElementTrace_lazy = () -> CurrencyExchange.mmUnitCurrency;
 			componentContext_lazy = () -> ForeignExchangeTerms22.mmObject();
 			isDerived = false;
 			xmlTag = "UnitCcy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnitCurrency";
 			definition = "Currency in which the rate of exchange is expressed in a currency exchange. In the example 1GBP = xxxCUR, the unit currency is GBP.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ForeignExchangeTerms14.mmUnitCurrency;
+			previousVersion_lazy = () -> ForeignExchangeTerms14.mmUnitCurrency;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyCode.mmObject();
@@ -181,14 +184,14 @@ public class ForeignExchangeTerms22 {
 	 */
 	public static final MMMessageAttribute mmQuotedCurrency = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmQuotedCurrency;
+			businessElementTrace_lazy = () -> CurrencyExchange.mmQuotedCurrency;
 			componentContext_lazy = () -> ForeignExchangeTerms22.mmObject();
 			isDerived = false;
 			xmlTag = "QtdCcy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuotedCurrency";
 			definition = "Currency into which the base currency is converted, in a currency exchange.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ForeignExchangeTerms14.mmQuotedCurrency;
+			previousVersion_lazy = () -> ForeignExchangeTerms14.mmQuotedCurrency;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyCode.mmObject();
@@ -238,14 +241,14 @@ public class ForeignExchangeTerms22 {
 	 */
 	public static final MMMessageAttribute mmExchangeRate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmExchangeRate;
+			businessElementTrace_lazy = () -> CurrencyExchange.mmExchangeRate;
 			componentContext_lazy = () -> ForeignExchangeTerms22.mmObject();
 			isDerived = false;
 			xmlTag = "XchgRate";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExchangeRate";
 			definition = "The value of one currency expressed in relation to another currency. ExchangeRate expresses the ratio between UnitCurrency and QuotedCurrency (ExchangeRate = UnitCurrency/QuotedCurrency).";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ForeignExchangeTerms14.mmExchangeRate;
+			previousVersion_lazy = () -> ForeignExchangeTerms14.mmExchangeRate;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> BaseOneRate.mmObject();
@@ -291,14 +294,14 @@ public class ForeignExchangeTerms22 {
 	 */
 	public static final MMMessageAttribute mmQuotationDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmQuotationDate;
+			businessElementTrace_lazy = () -> CurrencyExchange.mmQuotationDate;
 			componentContext_lazy = () -> ForeignExchangeTerms22.mmObject();
 			isDerived = false;
 			xmlTag = "QtnDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuotationDate";
 			definition = "Date and time at which an exchange rate is quoted.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ForeignExchangeTerms14.mmQuotationDate;
+			previousVersion_lazy = () -> ForeignExchangeTerms14.mmQuotationDate;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
@@ -344,14 +347,14 @@ public class ForeignExchangeTerms22 {
 	 */
 	public static final MMMessageAssociationEnd mmQuotingInstitution = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> ForeignExchangeTerms22.mmObject();
 			isDerived = false;
 			xmlTag = "QtgInstn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuotingInstitution";
 			definition = "Party that proposes a  foreign exchange rate.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ForeignExchangeTerms14.mmQuotingInstitution;
+			previousVersion_lazy = () -> ForeignExchangeTerms14.mmQuotingInstitution;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -362,11 +365,11 @@ public class ForeignExchangeTerms22 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ForeignExchangeTerms22.mmUnitCurrency, com.tools20022.repository.msg.ForeignExchangeTerms22.mmQuotedCurrency,
-						com.tools20022.repository.msg.ForeignExchangeTerms22.mmExchangeRate, com.tools20022.repository.msg.ForeignExchangeTerms22.mmQuotationDate, com.tools20022.repository.msg.ForeignExchangeTerms22.mmQuotingInstitution);
+				messageElement_lazy = () -> Arrays.asList(ForeignExchangeTerms22.mmUnitCurrency, ForeignExchangeTerms22.mmQuotedCurrency, ForeignExchangeTerms22.mmExchangeRate, ForeignExchangeTerms22.mmQuotationDate,
+						ForeignExchangeTerms22.mmQuotingInstitution);
 				trace_lazy = () -> CurrencyExchange.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ForeignExchangeTerms22";
 				definition = "Information needed to process a currency exchange or conversion.";
 				previousVersion_lazy = () -> ForeignExchangeTerms14.mmObject();

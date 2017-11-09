@@ -19,6 +19,9 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.cain.KeyExchangeInitiation;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -99,7 +102,7 @@ public class AcquirerKeyExchangeInitiation1 {
 			componentContext_lazy = () -> AcquirerKeyExchangeInitiation1.mmObject();
 			isDerived = false;
 			xmlTag = "Envt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Environment";
 			definition = "Environment of the transaction.";
 			maxOccurs = 1;
@@ -140,7 +143,7 @@ public class AcquirerKeyExchangeInitiation1 {
 			componentContext_lazy = () -> AcquirerKeyExchangeInitiation1.mmObject();
 			isDerived = false;
 			xmlTag = "Tx";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Transaction";
 			definition = "Key exchange transaction.";
 			maxOccurs = 1;
@@ -153,10 +156,10 @@ public class AcquirerKeyExchangeInitiation1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcquirerKeyExchangeInitiation1.mmEnvironment, com.tools20022.repository.msg.AcquirerKeyExchangeInitiation1.mmTransaction);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.cain.KeyExchangeInitiation.mmKeyExchangeInitiation);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(AcquirerKeyExchangeInitiation1.mmEnvironment, AcquirerKeyExchangeInitiation1.mmTransaction);
+				messageBuildingBlock_lazy = () -> Arrays.asList(KeyExchangeInitiation.mmKeyExchangeInitiation);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AcquirerKeyExchangeInitiation1";
 				definition = "Information related to the key exchange.";
 			}

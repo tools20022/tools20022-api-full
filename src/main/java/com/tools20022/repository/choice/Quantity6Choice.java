@@ -19,7 +19,9 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.SecuritiesQuantity;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.OriginalAndCurrentQuantities1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -103,7 +105,7 @@ public class Quantity6Choice {
 			componentContext_lazy = () -> Quantity6Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Qty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Quantity";
 			definition = "Quantity of financial instrument in units, original face amount or current face amount.";
 			maxOccurs = 1;
@@ -151,7 +153,7 @@ public class Quantity6Choice {
 			componentContext_lazy = () -> Quantity6Choice.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlAndCurFace";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalAndCurrentFace";
 			definition = "Original and current value of an asset-back instrument.";
 			maxOccurs = 1;
@@ -164,10 +166,10 @@ public class Quantity6Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Quantity6Choice.mmQuantity, com.tools20022.repository.choice.Quantity6Choice.mmOriginalAndCurrentFace);
+				messageElement_lazy = () -> Arrays.asList(Quantity6Choice.mmQuantity, Quantity6Choice.mmOriginalAndCurrentFace);
 				trace_lazy = () -> SecuritiesQuantity.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Quantity6Choice";
 				definition = "Choice of format for the quantity.";
 			}

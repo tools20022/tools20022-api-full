@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CashAccountTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -86,7 +88,7 @@ public class CashAccountType5Code extends CashAccountTypeCode {
 	 */
 	public static final MMCode mmLending = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Lending";
 			owner_lazy = () -> CashAccountType5Code.mmObject();
 		}
@@ -109,7 +111,7 @@ public class CashAccountType5Code extends CashAccountTypeCode {
 	 */
 	public static final MMCode mmCollateral = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Collateral";
 			owner_lazy = () -> CashAccountType5Code.mmObject();
 		}
@@ -132,7 +134,7 @@ public class CashAccountType5Code extends CashAccountTypeCode {
 	 */
 	public static final MMCode mmFinancialSettlement = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialSettlement";
 			owner_lazy = () -> CashAccountType5Code.mmObject();
 		}
@@ -155,7 +157,7 @@ public class CashAccountType5Code extends CashAccountTypeCode {
 	 */
 	public static final MMCode mmMarginReturn = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarginReturn";
 			owner_lazy = () -> CashAccountType5Code.mmObject();
 		}
@@ -178,7 +180,7 @@ public class CashAccountType5Code extends CashAccountTypeCode {
 	 */
 	public static final MMCode mmSegregated = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Segregated";
 			owner_lazy = () -> CashAccountType5Code.mmObject();
 		}
@@ -187,13 +189,11 @@ public class CashAccountType5Code extends CashAccountTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CashAccountType5Code";
 				definition = "Specifies the type of cash account.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CashAccountType5Code.mmLending, com.tools20022.repository.codeset.CashAccountType5Code.mmCollateral,
-						com.tools20022.repository.codeset.CashAccountType5Code.mmFinancialSettlement, com.tools20022.repository.codeset.CashAccountType5Code.mmMarginReturn,
-						com.tools20022.repository.codeset.CashAccountType5Code.mmSegregated);
+				code_lazy = () -> Arrays.asList(CashAccountType5Code.mmLending, CashAccountType5Code.mmCollateral, CashAccountType5Code.mmFinancialSettlement, CashAccountType5Code.mmMarginReturn, CashAccountType5Code.mmSegregated);
 				trace_lazy = () -> CashAccountTypeCode.mmObject();
 			}
 		});

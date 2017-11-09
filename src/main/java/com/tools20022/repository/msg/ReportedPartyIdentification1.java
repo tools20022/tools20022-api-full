@@ -20,9 +20,13 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.NameOrSector1Choice;
 import com.tools20022.repository.codeset.CountryCode;
 import com.tools20022.repository.entity.Organisation;
+import com.tools20022.repository.entity.PostalAddress;
+import com.tools20022.repository.entity.Sector;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -115,11 +119,11 @@ public class ReportedPartyIdentification1 {
 	 */
 	public static final MMMessageAssociationEnd mmNameOrSector = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Sector.mmIdentification;
+			businessElementTrace_lazy = () -> Sector.mmIdentification;
 			componentContext_lazy = () -> ReportedPartyIdentification1.mmObject();
 			isDerived = false;
 			xmlTag = "NmOrSctr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NameOrSector";
 			definition = "Name or sector of the counterparty of the reporting agent used by the reporting agent.";
 			maxOccurs = 1;
@@ -177,15 +181,15 @@ public class ReportedPartyIdentification1 {
 	 */
 	public static final MMMessageAttribute mmLocation = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PostalAddress.mmCountry;
+			businessElementTrace_lazy = () -> PostalAddress.mmCountry;
 			componentContext_lazy = () -> ReportedPartyIdentification1.mmObject();
 			isDerived = false;
 			xmlTag = "Lctn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Location";
 			definition = "Location of the country in which the counterparty is incorporated. ";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.NameAndLocation1.mmLocation);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SectorAndLocation1.mmLocation;
+			nextVersions_lazy = () -> Arrays.asList(NameAndLocation1.mmLocation);
+			previousVersion_lazy = () -> SectorAndLocation1.mmLocation;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CountryCode.mmObject();
@@ -195,10 +199,10 @@ public class ReportedPartyIdentification1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReportedPartyIdentification1.mmNameOrSector, com.tools20022.repository.msg.ReportedPartyIdentification1.mmLocation);
+				messageElement_lazy = () -> Arrays.asList(ReportedPartyIdentification1.mmNameOrSector, ReportedPartyIdentification1.mmLocation);
 				trace_lazy = () -> Organisation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ReportedPartyIdentification1";
 				definition = "Provides the identification of the reported party through the location and the name or the sector.";
 				nextVersions_lazy = () -> Arrays.asList(NameAndLocation1.mmObject());

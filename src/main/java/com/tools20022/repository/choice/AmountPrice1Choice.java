@@ -19,8 +19,10 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.CurrencyAndAmount;
 import com.tools20022.repository.entity.AmountAndPrice;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.UnitPrice4;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -98,11 +100,11 @@ public class AmountPrice1Choice {
 	 */
 	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AmountAndPrice.mmAmount;
+			businessElementTrace_lazy = () -> AmountAndPrice.mmAmount;
 			componentContext_lazy = () -> AmountPrice1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Amt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Amount.";
 			maxOccurs = 1;
@@ -145,11 +147,11 @@ public class AmountPrice1Choice {
 	 */
 	public static final MMMessageAttribute mmUnitPrice = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AmountAndPrice.mmPrice;
+			businessElementTrace_lazy = () -> AmountAndPrice.mmPrice;
 			componentContext_lazy = () -> AmountPrice1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "UnitPric";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnitPrice";
 			definition = "Amount expressed as a unit price.";
 			maxOccurs = 1;
@@ -161,10 +163,10 @@ public class AmountPrice1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AmountPrice1Choice.mmAmount, com.tools20022.repository.choice.AmountPrice1Choice.mmUnitPrice);
+				messageElement_lazy = () -> Arrays.asList(AmountPrice1Choice.mmAmount, AmountPrice1Choice.mmUnitPrice);
 				trace_lazy = () -> AmountAndPrice.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AmountPrice1Choice";
 				definition = "Choice between ways to express an amount.";
 			}

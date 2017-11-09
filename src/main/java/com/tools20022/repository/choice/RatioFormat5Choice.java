@@ -20,9 +20,11 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.RateValueType6Code;
 import com.tools20022.repository.entity.AmountRatio;
 import com.tools20022.repository.entity.QuantityRatio;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.AmountToAmountRatio2;
 import com.tools20022.repository.msg.QuantityToQuantityRatio1;
 import java.text.DateFormat;
@@ -109,7 +111,7 @@ public class RatioFormat5Choice {
 			componentContext_lazy = () -> RatioFormat5Choice.mmObject();
 			isDerived = false;
 			xmlTag = "QtyToQty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuantityToQuantity";
 			definition = "Ratio expressed as a quotient of quantities.";
 			maxOccurs = 1;
@@ -152,7 +154,7 @@ public class RatioFormat5Choice {
 			componentContext_lazy = () -> RatioFormat5Choice.mmObject();
 			isDerived = false;
 			xmlTag = "NotSpcfdRate";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotSpecifiedRate";
 			definition = "Value of the ratio not specified.";
 			maxOccurs = 1;
@@ -197,7 +199,7 @@ public class RatioFormat5Choice {
 			componentContext_lazy = () -> RatioFormat5Choice.mmObject();
 			isDerived = false;
 			xmlTag = "AmtToAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmountToAmount";
 			definition = "Ratio expressed as a quotient of amounts.";
 			maxOccurs = 1;
@@ -210,10 +212,9 @@ public class RatioFormat5Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.RatioFormat5Choice.mmQuantityToQuantity, com.tools20022.repository.choice.RatioFormat5Choice.mmNotSpecifiedRate,
-						com.tools20022.repository.choice.RatioFormat5Choice.mmAmountToAmount);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+				messageElement_lazy = () -> Arrays.asList(RatioFormat5Choice.mmQuantityToQuantity, RatioFormat5Choice.mmNotSpecifiedRate, RatioFormat5Choice.mmAmountToAmount);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
 						return DateFormat.getDateInstance(java.text.DateFormat.LONG).parse("May 5, 2016");

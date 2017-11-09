@@ -20,8 +20,10 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ATMStatus2Code;
 import com.tools20022.repository.codeset.FailureReason5Code;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -103,7 +105,7 @@ public class ATMSecurityDevice1 {
 			componentContext_lazy = () -> ATMSecurityDevice1.mmObject();
 			isDerived = false;
 			xmlTag = "DvcPrprty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeviceProperty";
 			definition = "Hardware security module information, so called EPP for Encrypted PIN Pad.";
 			maxOccurs = 1;
@@ -145,7 +147,7 @@ public class ATMSecurityDevice1 {
 			componentContext_lazy = () -> ATMSecurityDevice1.mmObject();
 			isDerived = false;
 			xmlTag = "CurCfgtn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrentConfiguration";
 			definition = "Configuration parameters in use by the security device.";
 			maxOccurs = 1;
@@ -188,7 +190,7 @@ public class ATMSecurityDevice1 {
 			componentContext_lazy = () -> ATMSecurityDevice1.mmObject();
 			isDerived = false;
 			xmlTag = "SpprtdCfgtn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupportedConfiguration";
 			definition = "Configuration parameters supported by the security device.";
 			maxOccurs = 1;
@@ -231,7 +233,7 @@ public class ATMSecurityDevice1 {
 			componentContext_lazy = () -> ATMSecurityDevice1.mmObject();
 			isDerived = false;
 			xmlTag = "CurSts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrentStatus";
 			definition = "Current status of the security device.";
 			maxOccurs = 1;
@@ -273,7 +275,7 @@ public class ATMSecurityDevice1 {
 			componentContext_lazy = () -> ATMSecurityDevice1.mmObject();
 			isDerived = false;
 			xmlTag = "Incdnt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Incident";
 			definition = "Incident occurring on the device.";
 			maxOccurs = 1;
@@ -285,10 +287,10 @@ public class ATMSecurityDevice1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMSecurityDevice1.mmDeviceProperty, com.tools20022.repository.msg.ATMSecurityDevice1.mmCurrentConfiguration,
-						com.tools20022.repository.msg.ATMSecurityDevice1.mmSupportedConfiguration, com.tools20022.repository.msg.ATMSecurityDevice1.mmCurrentStatus, com.tools20022.repository.msg.ATMSecurityDevice1.mmIncident);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(ATMSecurityDevice1.mmDeviceProperty, ATMSecurityDevice1.mmCurrentConfiguration, ATMSecurityDevice1.mmSupportedConfiguration, ATMSecurityDevice1.mmCurrentStatus,
+						ATMSecurityDevice1.mmIncident);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ATMSecurityDevice1";
 				definition = "Hardware security module of the ATM.";
 			}

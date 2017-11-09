@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.OriginatorRole2Code
+ * OriginatorRole2Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.OriginatorRole1Code
+ * OriginatorRole1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -47,15 +58,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.OriginatorRoleCode#mmTransfertAgent
  * OriginatorRoleCode.mmTransfertAgent}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.OriginatorRole2Code
- * OriginatorRole2Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.OriginatorRole1Code
- * OriginatorRole1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -112,7 +114,7 @@ public class OriginatorRoleCode {
 	 */
 	public static final MMCode mmSystematicInternaliser = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SystematicInternaliser";
 			definition = "Firms which, on an organised, frequent and systematic basis deal on their own account by executing client orders outside a regulated market or a Multilateral Trading Facility. SI's will have the obligation to provide, and make public, a definite bid and offer quote for liquid securities. They act as \"mini\"exchanges.";
 			owner_lazy = () -> OriginatorRoleCode.mmObject();
@@ -146,7 +148,7 @@ public class OriginatorRoleCode {
 	 */
 	public static final MMCode mmMultilateralTradingFacility = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MultilateralTradingFacility";
 			definition = "Multilateral system which brings together multiple third-party buying and selling interests in financial instruments in a way that results in a contract.";
 			owner_lazy = () -> OriginatorRoleCode.mmObject();
@@ -179,7 +181,7 @@ public class OriginatorRoleCode {
 	 */
 	public static final MMCode mmRegulatedMarket = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RegulatedMarket";
 			definition = "Market on which financial instruments can be traded according to rules defined by the stock exchange.";
 			owner_lazy = () -> OriginatorRoleCode.mmObject();
@@ -213,7 +215,7 @@ public class OriginatorRoleCode {
 	 */
 	public static final MMCode mmMarketMaker = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MarketMaker";
 			definition = "Dealer or specialist that is trading for their own account in the OTC market. Market makers are expected to maintain an orderly market by being available to buy or sell.";
 			owner_lazy = () -> OriginatorRoleCode.mmObject();
@@ -246,7 +248,7 @@ public class OriginatorRoleCode {
 	 */
 	public static final MMCode mmInvestor = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Investor";
 			definition = "Party, either an individual or organisation, whose assets are being invested.";
 			owner_lazy = () -> OriginatorRoleCode.mmObject();
@@ -286,7 +288,7 @@ public class OriginatorRoleCode {
 	 */
 	public static final MMCode mmTransfertAgent = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TransfertAgent";
 			definition = "Party appointed by the fund management company. It updates records of investor accounts to reflect the daily investor purchases, redemptions, switches, transfers, and re-registrations. It ensures the timely settlement of transactions, and may provide tax information to the investor and/or to its intermediaries. It may calculate, collect, and rebate commissions. It prepares and distributes confirmations reflecting transactions, resulting in unit or cash account movements to the investor or the investor's intermediary. It responds to inquiries concerning account status, and processes the income distribution.";
 			owner_lazy = () -> OriginatorRoleCode.mmObject();
@@ -297,14 +299,13 @@ public class OriginatorRoleCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("SINT");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OriginatorRoleCode";
 				definition = "Specifies in what capacity (role) the originator of a quote is acting.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OriginatorRoleCode.mmSystematicInternaliser, com.tools20022.repository.codeset.OriginatorRoleCode.mmMultilateralTradingFacility,
-						com.tools20022.repository.codeset.OriginatorRoleCode.mmRegulatedMarket, com.tools20022.repository.codeset.OriginatorRoleCode.mmMarketMaker, com.tools20022.repository.codeset.OriginatorRoleCode.mmInvestor,
-						com.tools20022.repository.codeset.OriginatorRoleCode.mmTransfertAgent);
+				code_lazy = () -> Arrays.asList(OriginatorRoleCode.mmSystematicInternaliser, OriginatorRoleCode.mmMultilateralTradingFacility, OriginatorRoleCode.mmRegulatedMarket, OriginatorRoleCode.mmMarketMaker,
+						OriginatorRoleCode.mmInvestor, OriginatorRoleCode.mmTransfertAgent);
 				derivation_lazy = () -> Arrays.asList(OriginatorRole2Code.mmObject(), OriginatorRole1Code.mmObject());
 			}
 		});

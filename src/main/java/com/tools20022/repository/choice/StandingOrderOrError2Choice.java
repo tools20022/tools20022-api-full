@@ -19,6 +19,8 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.ErrorHandling3;
 import com.tools20022.repository.msg.StandingOrder2;
 import java.util.Arrays;
@@ -110,10 +112,10 @@ public class StandingOrderOrError2Choice {
 			componentContext_lazy = () -> StandingOrderOrError2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "StgOrdr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StandingOrder";
 			definition = "Requested information on the account.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.StandingOrderOrError4Choice.mmStandingOrder);
+			nextVersions_lazy = () -> Arrays.asList(StandingOrderOrError4Choice.mmStandingOrder);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -160,10 +162,10 @@ public class StandingOrderOrError2Choice {
 			componentContext_lazy = () -> StandingOrderOrError2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "BizErr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BusinessError";
 			definition = "Reason the requested business information is not given.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.StandingOrderOrError4Choice.mmBusinessError);
+			nextVersions_lazy = () -> Arrays.asList(StandingOrderOrError4Choice.mmBusinessError);
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ErrorHandling3.mmObject();
@@ -173,9 +175,9 @@ public class StandingOrderOrError2Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.StandingOrderOrError2Choice.mmStandingOrder, com.tools20022.repository.choice.StandingOrderOrError2Choice.mmBusinessError);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(StandingOrderOrError2Choice.mmStandingOrder, StandingOrderOrError2Choice.mmBusinessError);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "StandingOrderOrError2Choice";
 				definition = "Choice between the standing order details or a business error when the requested data cannot be retrieved.";
 				nextVersions_lazy = () -> Arrays.asList(StandingOrderOrError4Choice.mmObject());

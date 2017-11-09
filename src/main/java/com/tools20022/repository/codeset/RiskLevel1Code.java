@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.RiskLevelCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -82,7 +84,7 @@ public class RiskLevel1Code extends RiskLevelCode {
 	 */
 	public static final MMCode mmHigh = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "High";
 			owner_lazy = () -> RiskLevel1Code.mmObject();
 		}
@@ -105,7 +107,7 @@ public class RiskLevel1Code extends RiskLevelCode {
 	 */
 	public static final MMCode mmLow = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Low";
 			owner_lazy = () -> RiskLevel1Code.mmObject();
 		}
@@ -128,7 +130,7 @@ public class RiskLevel1Code extends RiskLevelCode {
 	 */
 	public static final MMCode mmMedium = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Medium";
 			owner_lazy = () -> RiskLevel1Code.mmObject();
 		}
@@ -137,12 +139,12 @@ public class RiskLevel1Code extends RiskLevelCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("HIGH");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RiskLevel1Code";
 				definition = "Specifies the risk level.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RiskLevel1Code.mmHigh, com.tools20022.repository.codeset.RiskLevel1Code.mmLow, com.tools20022.repository.codeset.RiskLevel1Code.mmMedium);
+				code_lazy = () -> Arrays.asList(RiskLevel1Code.mmHigh, RiskLevel1Code.mmLow, RiskLevel1Code.mmMedium);
 				trace_lazy = () -> RiskLevelCode.mmObject();
 			}
 		});

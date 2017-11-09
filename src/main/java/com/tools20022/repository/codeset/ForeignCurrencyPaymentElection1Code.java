@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ForeignCurrencyPaymentElectionCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -86,7 +88,7 @@ public class ForeignCurrencyPaymentElection1Code extends ForeignCurrencyPaymentE
 	 */
 	public static final MMCode mmOffered = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Offered";
 			owner_lazy = () -> ForeignCurrencyPaymentElection1Code.mmObject();
 		}
@@ -109,7 +111,7 @@ public class ForeignCurrencyPaymentElection1Code extends ForeignCurrencyPaymentE
 	 */
 	public static final MMCode mmNotOffered = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotOffered";
 			owner_lazy = () -> ForeignCurrencyPaymentElection1Code.mmObject();
 		}
@@ -132,7 +134,7 @@ public class ForeignCurrencyPaymentElection1Code extends ForeignCurrencyPaymentE
 	 */
 	public static final MMCode mmMandatory = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Mandatory";
 			owner_lazy = () -> ForeignCurrencyPaymentElection1Code.mmObject();
 		}
@@ -141,13 +143,12 @@ public class ForeignCurrencyPaymentElection1Code extends ForeignCurrencyPaymentE
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("OFFD");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ForeignCurrencyPaymentElection1Code";
 				definition = "Specifies whether the foreign currency payment is offered.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ForeignCurrencyPaymentElection1Code.mmOffered, com.tools20022.repository.codeset.ForeignCurrencyPaymentElection1Code.mmNotOffered,
-						com.tools20022.repository.codeset.ForeignCurrencyPaymentElection1Code.mmMandatory);
+				code_lazy = () -> Arrays.asList(ForeignCurrencyPaymentElection1Code.mmOffered, ForeignCurrencyPaymentElection1Code.mmNotOffered, ForeignCurrencyPaymentElection1Code.mmMandatory);
 				trace_lazy = () -> ForeignCurrencyPaymentElectionCode.mmObject();
 			}
 		});

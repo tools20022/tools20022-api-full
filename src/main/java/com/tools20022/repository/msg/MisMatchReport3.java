@@ -20,7 +20,11 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.tsmt.BaselineMatchReportV03;
+import com.tools20022.repository.area.tsmt.DataSetMatchReportV03;
 import com.tools20022.repository.datatype.Number;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -111,7 +115,7 @@ public class MisMatchReport3 {
 			componentContext_lazy = () -> MisMatchReport3.mmObject();
 			isDerived = false;
 			xmlTag = "NbOfMisMtchs";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NumberOfMisMatches";
 			definition = "Total number of mismatches between two baselines or between one baseline and one data set.";
 			maxOccurs = 1;
@@ -151,7 +155,7 @@ public class MisMatchReport3 {
 			componentContext_lazy = () -> MisMatchReport3.mmObject();
 			isDerived = false;
 			xmlTag = "MisMtchInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MisMatchInformation";
 			definition = "Details of each mismatch occurrence.";
 			minOccurs = 0;
@@ -163,10 +167,10 @@ public class MisMatchReport3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MisMatchReport3.mmNumberOfMisMatches, com.tools20022.repository.msg.MisMatchReport3.mmMisMatchInformation);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.BaselineMatchReportV03.mmReport, com.tools20022.repository.area.tsmt.DataSetMatchReportV03.mmReport);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(MisMatchReport3.mmNumberOfMisMatches, MisMatchReport3.mmMisMatchInformation);
+				messageBuildingBlock_lazy = () -> Arrays.asList(BaselineMatchReportV03.mmReport, DataSetMatchReportV03.mmReport);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MisMatchReport3";
 				definition = "Description of the mis-matched situation between two baselines or between a baseline and a data set.";
 			}

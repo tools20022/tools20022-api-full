@@ -19,8 +19,11 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.RejectionReason43Code;
 import com.tools20022.repository.entity.CorporateActionStatusReason;
+import com.tools20022.repository.entity.StatusReason;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification20;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -130,15 +133,15 @@ public class RejectedReason9Choice {
 	 */
 	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmRejectionReason;
+			businessElementTrace_lazy = () -> StatusReason.mmRejectionReason;
 			componentContext_lazy = () -> RejectedReason9Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Cd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Standard code to specify the reason why the instruction/cancellation request has a rejected status.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.RejectedReason13Choice.mmCode);
-			previousVersion_lazy = () -> com.tools20022.repository.choice.RejectedReason5Choice.mmCode;
+			nextVersions_lazy = () -> Arrays.asList(RejectedReason13Choice.mmCode);
+			previousVersion_lazy = () -> RejectedReason5Choice.mmCode;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RejectionReason43Code.mmObject();
@@ -196,15 +199,15 @@ public class RejectedReason9Choice {
 	 */
 	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmRejectionReason;
+			businessElementTrace_lazy = () -> StatusReason.mmRejectionReason;
 			componentContext_lazy = () -> RejectedReason9Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Proprietary identification of the reason why the instruction/cancellation request has a rejected status.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.RejectedReason13Choice.mmProprietary);
-			previousVersion_lazy = () -> com.tools20022.repository.choice.RejectedReason5Choice.mmProprietary;
+			nextVersions_lazy = () -> Arrays.asList(RejectedReason13Choice.mmProprietary);
+			previousVersion_lazy = () -> RejectedReason5Choice.mmProprietary;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification20.mmObject();
@@ -214,10 +217,10 @@ public class RejectedReason9Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.RejectedReason9Choice.mmCode, com.tools20022.repository.choice.RejectedReason9Choice.mmProprietary);
+				messageElement_lazy = () -> Arrays.asList(RejectedReason9Choice.mmCode, RejectedReason9Choice.mmProprietary);
 				trace_lazy = () -> CorporateActionStatusReason.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RejectedReason9Choice";
 				definition = "Choice between a standard code or proprietary code to specify the reason why the instruction or cancellation request has a rejected status.";
 				nextVersions_lazy = () -> Arrays.asList(RejectedReason13Choice.mmObject());

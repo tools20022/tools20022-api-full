@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.RejectionReasonCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -91,7 +93,7 @@ public class RejectionReason11Code extends RejectionReasonCode {
 	 */
 	public static final MMCode mmFailedValidation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FailedValidation";
 			owner_lazy = () -> RejectionReason11Code.mmObject();
 		}
@@ -114,7 +116,7 @@ public class RejectionReason11Code extends RejectionReasonCode {
 	 */
 	public static final MMCode mmRejectedSinceAlreadyCancelled = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RejectedSinceAlreadyCancelled";
 			owner_lazy = () -> RejectionReason11Code.mmObject();
 		}
@@ -137,7 +139,7 @@ public class RejectionReason11Code extends RejectionReasonCode {
 	 */
 	public static final MMCode mmRejectedSinceInProgress = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RejectedSinceInProgress";
 			owner_lazy = () -> RejectionReason11Code.mmObject();
 		}
@@ -160,7 +162,7 @@ public class RejectionReason11Code extends RejectionReasonCode {
 	 */
 	public static final MMCode mmInvalidCAIdentification = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvalidCAIdentification";
 			owner_lazy = () -> RejectionReason11Code.mmObject();
 		}
@@ -169,13 +171,13 @@ public class RejectionReason11Code extends RejectionReasonCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("FAIL");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RejectionReason11Code";
 				definition = "Specifies the reason of a rejection of the notification cancellation request.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RejectionReason11Code.mmFailedValidation, com.tools20022.repository.codeset.RejectionReason11Code.mmRejectedSinceAlreadyCancelled,
-						com.tools20022.repository.codeset.RejectionReason11Code.mmRejectedSinceInProgress, com.tools20022.repository.codeset.RejectionReason11Code.mmInvalidCAIdentification);
+				code_lazy = () -> Arrays.asList(RejectionReason11Code.mmFailedValidation, RejectionReason11Code.mmRejectedSinceAlreadyCancelled, RejectionReason11Code.mmRejectedSinceInProgress,
+						RejectionReason11Code.mmInvalidCAIdentification);
 				trace_lazy = () -> RejectionReasonCode.mmObject();
 			}
 		});

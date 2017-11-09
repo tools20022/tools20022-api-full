@@ -20,10 +20,12 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.Document;
 import com.tools20022.repository.entity.FinancialInstitution;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -109,7 +111,7 @@ public class RequiredSubmission1 {
 			componentContext_lazy = () -> RequiredSubmission1.mmObject();
 			isDerived = false;
 			xmlTag = "LatstMtchDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LatestMatchDate";
 			definition = "Specifies the latest date on which a data set must be matched with a baseline.";
 			maxOccurs = 1;
@@ -154,7 +156,7 @@ public class RequiredSubmission1 {
 			componentContext_lazy = () -> RequiredSubmission1.mmObject();
 			isDerived = false;
 			xmlTag = "ReqrdComrclDataSet";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequiredCommercialDataSet";
 			definition = "Specifies whether the commercial documents must be submitted for the current transaction or not.";
 			maxOccurs = 1;
@@ -199,7 +201,7 @@ public class RequiredSubmission1 {
 			componentContext_lazy = () -> RequiredSubmission1.mmObject();
 			isDerived = false;
 			xmlTag = "ReqrdTrnsprtDataSet";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequiredTransportDataSet";
 			definition = "Specifies whether the transport documents must be submitted for the current transaction or not.";
 			maxOccurs = 1;
@@ -245,7 +247,7 @@ public class RequiredSubmission1 {
 			componentContext_lazy = () -> RequiredSubmission1.mmObject();
 			isDerived = false;
 			xmlTag = "Submitr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Submitter";
 			definition = "Specifies the party that must submit the data sets.";
 			maxOccurs = 1;
@@ -258,11 +260,10 @@ public class RequiredSubmission1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RequiredSubmission1.mmLatestMatchDate, com.tools20022.repository.msg.RequiredSubmission1.mmRequiredCommercialDataSet,
-						com.tools20022.repository.msg.RequiredSubmission1.mmRequiredTransportDataSet, com.tools20022.repository.msg.RequiredSubmission1.mmSubmitter);
+				messageElement_lazy = () -> Arrays.asList(RequiredSubmission1.mmLatestMatchDate, RequiredSubmission1.mmRequiredCommercialDataSet, RequiredSubmission1.mmRequiredTransportDataSet, RequiredSubmission1.mmSubmitter);
 				trace_lazy = () -> Document.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "RequiredSubmission1";
 				definition = "Specifies per transaction which document must be submitted and under which conditions.";
 			}

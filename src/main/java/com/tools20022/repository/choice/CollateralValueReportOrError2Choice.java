@@ -19,6 +19,8 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.CollateralValuePosition1;
 import com.tools20022.repository.msg.ErrorHandling3;
 import java.util.Arrays;
@@ -91,7 +93,7 @@ public class CollateralValueReportOrError2Choice {
 			componentContext_lazy = () -> CollateralValueReportOrError2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "BizErr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BusinessError";
 			definition = "Reason the requested business information is not given.";
 			maxOccurs = 1;
@@ -136,7 +138,7 @@ public class CollateralValueReportOrError2Choice {
 			componentContext_lazy = () -> CollateralValueReportOrError2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "CollVal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralValue";
 			definition = "Requested information on the value of the position for collateral purposes.";
 			maxOccurs = 1;
@@ -149,9 +151,9 @@ public class CollateralValueReportOrError2Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CollateralValueReportOrError2Choice.mmBusinessError, com.tools20022.repository.choice.CollateralValueReportOrError2Choice.mmCollateralValue);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(CollateralValueReportOrError2Choice.mmBusinessError, CollateralValueReportOrError2Choice.mmCollateralValue);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CollateralValueReportOrError2Choice";
 				definition = "Business Report on collateral value or on business error.";
 			}

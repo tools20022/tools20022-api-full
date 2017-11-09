@@ -19,10 +19,12 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.CurrencyAndAmount;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.Max3Text;
 import com.tools20022.repository.entity.RegulatoryReport;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -106,11 +108,11 @@ public class StructuredRegulatoryReporting2 {
 	 */
 	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.RegulatoryReport.mmCode;
+			businessElementTrace_lazy = () -> RegulatoryReport.mmCode;
 			componentContext_lazy = () -> StructuredRegulatoryReporting2.mmObject();
 			isDerived = false;
 			xmlTag = "Cd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Specifies the nature, purpose, and reason for the transaction to be reported for regulatory and statutory requirements in a coded form.";
 			maxOccurs = 1;
@@ -156,11 +158,11 @@ public class StructuredRegulatoryReporting2 {
 	 */
 	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.RegulatoryReport.mmAmount;
+			businessElementTrace_lazy = () -> RegulatoryReport.mmAmount;
 			componentContext_lazy = () -> StructuredRegulatoryReporting2.mmObject();
 			isDerived = false;
 			xmlTag = "Amt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Amount of money to be reported for regulatory and statutory requirements.";
 			maxOccurs = 1;
@@ -209,11 +211,11 @@ public class StructuredRegulatoryReporting2 {
 	 */
 	public static final MMMessageAttribute mmInformation = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.RegulatoryReport.mmDescription;
+			businessElementTrace_lazy = () -> RegulatoryReport.mmDescription;
 			componentContext_lazy = () -> StructuredRegulatoryReporting2.mmObject();
 			isDerived = false;
 			xmlTag = "Inf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Information";
 			definition = "Additional details that cater for specific domestic regulatory requirements.\n\nUsage: Information is used to provide details that are not catered for in the Code or/and Amount elements.";
 			maxOccurs = 1;
@@ -225,11 +227,10 @@ public class StructuredRegulatoryReporting2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StructuredRegulatoryReporting2.mmCode, com.tools20022.repository.msg.StructuredRegulatoryReporting2.mmAmount,
-						com.tools20022.repository.msg.StructuredRegulatoryReporting2.mmInformation);
+				messageElement_lazy = () -> Arrays.asList(StructuredRegulatoryReporting2.mmCode, StructuredRegulatoryReporting2.mmAmount, StructuredRegulatoryReporting2.mmInformation);
 				trace_lazy = () -> RegulatoryReport.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "StructuredRegulatoryReporting2";
 				definition = "Information needed due to regulatory and statutory requirements.";
 			}

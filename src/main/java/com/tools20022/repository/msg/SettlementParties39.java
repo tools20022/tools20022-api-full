@@ -19,7 +19,10 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.entity.SecuritiesSettlementPartyRole;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -114,14 +117,14 @@ public class SettlementParties39 {
 	 */
 	public static final MMMessageAssociationEnd mmParty2 = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> SettlementParties39.mmObject();
 			isDerived = false;
 			xmlTag = "Pty2";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Party2";
 			definition = "Party that, in a settlement chain interacts with the party 1.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SettlementParties26.mmParty2;
+			previousVersion_lazy = () -> SettlementParties26.mmParty2;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -169,14 +172,14 @@ public class SettlementParties39 {
 	 */
 	public static final MMMessageAssociationEnd mmParty3 = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> SettlementParties39.mmObject();
 			isDerived = false;
 			xmlTag = "Pty3";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Party3";
 			definition = "Party that, in a settlement chain interacts with the party 2.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SettlementParties26.mmParty3;
+			previousVersion_lazy = () -> SettlementParties26.mmParty3;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -224,14 +227,14 @@ public class SettlementParties39 {
 	 */
 	public static final MMMessageAssociationEnd mmParty4 = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> SettlementParties39.mmObject();
 			isDerived = false;
 			xmlTag = "Pty4";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Party4";
 			definition = "Party that, in a settlement chain interacts with the party 3.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SettlementParties26.mmParty4;
+			previousVersion_lazy = () -> SettlementParties26.mmParty4;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -279,14 +282,14 @@ public class SettlementParties39 {
 	 */
 	public static final MMMessageAssociationEnd mmParty5 = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> SettlementParties39.mmObject();
 			isDerived = false;
 			xmlTag = "Pty5";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Party5";
 			definition = "Party that, in a settlement chain interacts with the party 4.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SettlementParties26.mmParty5;
+			previousVersion_lazy = () -> SettlementParties26.mmParty5;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -297,11 +300,10 @@ public class SettlementParties39 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SettlementParties39.mmParty2, com.tools20022.repository.msg.SettlementParties39.mmParty3, com.tools20022.repository.msg.SettlementParties39.mmParty4,
-						com.tools20022.repository.msg.SettlementParties39.mmParty5);
+				messageElement_lazy = () -> Arrays.asList(SettlementParties39.mmParty2, SettlementParties39.mmParty3, SettlementParties39.mmParty4, SettlementParties39.mmParty5);
 				trace_lazy = () -> SecuritiesSettlementPartyRole.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SettlementParties39";
 				definition = "Chain of parties involved in the settlement of a transaction, including receipts and deliveries, book transfers, treasury deals, or other activities, resulting in the movement of a security or amount of money from one account to another.";
 				previousVersion_lazy = () -> SettlementParties26.mmObject();

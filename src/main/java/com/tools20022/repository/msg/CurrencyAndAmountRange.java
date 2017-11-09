@@ -19,10 +19,12 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.ImpliedCurrencyAmountRangeChoice;
 import com.tools20022.repository.codeset.CreditDebitCode;
 import com.tools20022.repository.codeset.CurrencyCode;
 import com.tools20022.repository.entity.AmountRange;
+import com.tools20022.repository.GeneratedRepository;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -110,7 +112,7 @@ public class CurrencyAndAmountRange {
 			componentContext_lazy = () -> CurrencyAndAmountRange.mmObject();
 			isDerived = false;
 			xmlTag = "Amt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Specified amount or amount range.";
 			maxOccurs = 1;
@@ -155,11 +157,11 @@ public class CurrencyAndAmountRange {
 	 */
 	public static final MMMessageAttribute mmCreditDebitIndicator = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AmountRange.mmCreditDebitIndicator;
+			businessElementTrace_lazy = () -> AmountRange.mmCreditDebitIndicator;
 			componentContext_lazy = () -> CurrencyAndAmountRange.mmObject();
 			isDerived = false;
 			xmlTag = "CdtDbtInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditDebitIndicator";
 			definition = "Indicates whether the amount is a credited or debited amount.";
 			maxOccurs = 1;
@@ -202,11 +204,11 @@ public class CurrencyAndAmountRange {
 	 */
 	public static final MMMessageAttribute mmCurrency = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AmountRange.mmCurrency;
+			businessElementTrace_lazy = () -> AmountRange.mmCurrency;
 			componentContext_lazy = () -> CurrencyAndAmountRange.mmObject();
 			isDerived = false;
 			xmlTag = "Ccy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Currency";
 			definition = "Medium of exchange of value, used to qualify an amount.";
 			maxOccurs = 1;
@@ -218,11 +220,10 @@ public class CurrencyAndAmountRange {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CurrencyAndAmountRange.mmAmount, com.tools20022.repository.msg.CurrencyAndAmountRange.mmCreditDebitIndicator,
-						com.tools20022.repository.msg.CurrencyAndAmountRange.mmCurrency);
+				messageElement_lazy = () -> Arrays.asList(CurrencyAndAmountRange.mmAmount, CurrencyAndAmountRange.mmCreditDebitIndicator, CurrencyAndAmountRange.mmCurrency);
 				trace_lazy = () -> AmountRange.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
 						return DateFormat.getDateInstance(java.text.DateFormat.LONG).parse("September 9, 2016");

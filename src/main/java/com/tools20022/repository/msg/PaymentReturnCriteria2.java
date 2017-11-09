@@ -19,7 +19,9 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.RequestedIndicator;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -159,7 +161,7 @@ public class PaymentReturnCriteria2 {
 			componentContext_lazy = () -> PaymentReturnCriteria2.mmObject();
 			isDerived = false;
 			xmlTag = "TxRefInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionReferenceIndicator";
 			definition = "Indicates whether the transaction reference is requested.";
 			maxOccurs = 1;
@@ -201,7 +203,7 @@ public class PaymentReturnCriteria2 {
 			componentContext_lazy = () -> PaymentReturnCriteria2.mmObject();
 			isDerived = false;
 			xmlTag = "TrfValDtInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransferValueDateIndicator";
 			definition = "Indicates whether the transfer value date is requested.";
 			maxOccurs = 1;
@@ -243,7 +245,7 @@ public class PaymentReturnCriteria2 {
 			componentContext_lazy = () -> PaymentReturnCriteria2.mmObject();
 			isDerived = false;
 			xmlTag = "InstrInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructionIndicator";
 			definition = "Indicates whether the instruction is requested.";
 			maxOccurs = 1;
@@ -285,7 +287,7 @@ public class PaymentReturnCriteria2 {
 			componentContext_lazy = () -> PaymentReturnCriteria2.mmObject();
 			isDerived = false;
 			xmlTag = "InstrStsRtrCrit";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructionStatusReturnCriteria";
 			definition = "Indicates whether the instruction status is requested.";
 			maxOccurs = 1;
@@ -327,7 +329,7 @@ public class PaymentReturnCriteria2 {
 			componentContext_lazy = () -> PaymentReturnCriteria2.mmObject();
 			isDerived = false;
 			xmlTag = "InstdAmtInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructedAmountIndicator";
 			definition = "Indicates whether the instructed amount is requested.";
 			maxOccurs = 1;
@@ -370,7 +372,7 @@ public class PaymentReturnCriteria2 {
 			componentContext_lazy = () -> PaymentReturnCriteria2.mmObject();
 			isDerived = false;
 			xmlTag = "CdtDbtInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditDebitIndicator";
 			definition = "Indicates whether the Payment Instruction Reference is requested.";
 			maxOccurs = 1;
@@ -413,7 +415,7 @@ public class PaymentReturnCriteria2 {
 			componentContext_lazy = () -> PaymentReturnCriteria2.mmObject();
 			isDerived = false;
 			xmlTag = "IntrBkSttlmAmtInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterbankSettlementAmountIndicator";
 			definition = "Indicates whether the interbank settlement amount is requested.";
 			maxOccurs = 1;
@@ -455,7 +457,7 @@ public class PaymentReturnCriteria2 {
 			componentContext_lazy = () -> PaymentReturnCriteria2.mmObject();
 			isDerived = false;
 			xmlTag = "PrtyInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PriorityIndicator";
 			definition = "Indicates whether the payment priority is requested.";
 			maxOccurs = 1;
@@ -498,7 +500,7 @@ public class PaymentReturnCriteria2 {
 			componentContext_lazy = () -> PaymentReturnCriteria2.mmObject();
 			isDerived = false;
 			xmlTag = "PrcgVldtyTmInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProcessingValidityTimeIndicator";
 			definition = "Indicates whether the processing validity time is requested.";
 			maxOccurs = 1;
@@ -540,7 +542,7 @@ public class PaymentReturnCriteria2 {
 			componentContext_lazy = () -> PaymentReturnCriteria2.mmObject();
 			isDerived = false;
 			xmlTag = "PurpInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PurposeIndicator";
 			definition = "Indicates whether the transfer reason is requested.";
 			maxOccurs = 1;
@@ -582,7 +584,7 @@ public class PaymentReturnCriteria2 {
 			componentContext_lazy = () -> PaymentReturnCriteria2.mmObject();
 			isDerived = false;
 			xmlTag = "InstrCpyInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructionCopyIndicator";
 			definition = "Indicates whether the instruction copy is requested.";
 			maxOccurs = 1;
@@ -624,7 +626,7 @@ public class PaymentReturnCriteria2 {
 			componentContext_lazy = () -> PaymentReturnCriteria2.mmObject();
 			isDerived = false;
 			xmlTag = "PmtMsgTpInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentMessageTypeIndicator";
 			definition = "Indicates whether the payment message type is requested.";
 			maxOccurs = 1;
@@ -666,7 +668,7 @@ public class PaymentReturnCriteria2 {
 			componentContext_lazy = () -> PaymentReturnCriteria2.mmObject();
 			isDerived = false;
 			xmlTag = "PmtTpInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentTypeIndicator";
 			definition = "Indicates whether the payment type is requested.";
 			maxOccurs = 1;
@@ -709,7 +711,7 @@ public class PaymentReturnCriteria2 {
 			componentContext_lazy = () -> PaymentReturnCriteria2.mmObject();
 			isDerived = false;
 			xmlTag = "PmtInstrRefInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentInstructionReferenceIndicator";
 			definition = "Indicates whether the Payment Instruction Reference is requested.";
 			maxOccurs = 1;
@@ -751,7 +753,7 @@ public class PaymentReturnCriteria2 {
 			componentContext_lazy = () -> PaymentReturnCriteria2.mmObject();
 			isDerived = false;
 			xmlTag = "IntrBkValDtInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterbankValueDateIndicator";
 			definition = "Indicates whether the Interbank Value Date is requested.";
 			maxOccurs = 1;
@@ -793,7 +795,7 @@ public class PaymentReturnCriteria2 {
 			componentContext_lazy = () -> PaymentReturnCriteria2.mmObject();
 			isDerived = false;
 			xmlTag = "RltdRefInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedReferenceIndicator";
 			definition = "Indicates whether the Related Reference is requested.";
 			maxOccurs = 1;
@@ -835,7 +837,7 @@ public class PaymentReturnCriteria2 {
 			componentContext_lazy = () -> PaymentReturnCriteria2.mmObject();
 			isDerived = false;
 			xmlTag = "PmtMtdInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentMethodIndicator";
 			definition = "Indicates whether the Payment Method is requested.";
 			maxOccurs = 1;
@@ -877,7 +879,7 @@ public class PaymentReturnCriteria2 {
 			componentContext_lazy = () -> PaymentReturnCriteria2.mmObject();
 			isDerived = false;
 			xmlTag = "DbtrInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DebtorIndicator";
 			definition = "Indicates whether the Debtor is requested.";
 			maxOccurs = 1;
@@ -919,7 +921,7 @@ public class PaymentReturnCriteria2 {
 			componentContext_lazy = () -> PaymentReturnCriteria2.mmObject();
 			isDerived = false;
 			xmlTag = "FrstAgtInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FirstAgentIndicator";
 			definition = "Indicates whether the First Agent is requested.";
 			maxOccurs = 1;
@@ -964,7 +966,7 @@ public class PaymentReturnCriteria2 {
 			componentContext_lazy = () -> PaymentReturnCriteria2.mmObject();
 			isDerived = false;
 			xmlTag = "InstgAgtCrspdtInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructingAgentCorrespondentIndicator";
 			definition = "Indicates whether the correspondent of the Instructing Agent is requested.";
 			maxOccurs = 1;
@@ -1008,7 +1010,7 @@ public class PaymentReturnCriteria2 {
 			componentContext_lazy = () -> PaymentReturnCriteria2.mmObject();
 			isDerived = false;
 			xmlTag = "InstdAgtCrspdtInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructedAgentCorrespondentIndicator";
 			definition = "Indicates whether the correspondent of the Instructed Agent is requested.";
 			maxOccurs = 1;
@@ -1050,7 +1052,7 @@ public class PaymentReturnCriteria2 {
 			componentContext_lazy = () -> PaymentReturnCriteria2.mmObject();
 			isDerived = false;
 			xmlTag = "IntrmyInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IntermediaryIndicator";
 			definition = "Indicates whether the Intermediary is requested.";
 			maxOccurs = 1;
@@ -1092,7 +1094,7 @@ public class PaymentReturnCriteria2 {
 			componentContext_lazy = () -> PaymentReturnCriteria2.mmObject();
 			isDerived = false;
 			xmlTag = "FnlAgtInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinalAgentIndicator";
 			definition = "Indicates whether the Final Agent is requested.";
 			maxOccurs = 1;
@@ -1134,7 +1136,7 @@ public class PaymentReturnCriteria2 {
 			componentContext_lazy = () -> PaymentReturnCriteria2.mmObject();
 			isDerived = false;
 			xmlTag = "CdtrInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditorIndicator";
 			definition = "Indicates whether the Creditor is requested.";
 			maxOccurs = 1;
@@ -1146,20 +1148,15 @@ public class PaymentReturnCriteria2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentReturnCriteria2.mmTransactionReferenceIndicator, com.tools20022.repository.msg.PaymentReturnCriteria2.mmTransferValueDateIndicator,
-						com.tools20022.repository.msg.PaymentReturnCriteria2.mmInstructionIndicator, com.tools20022.repository.msg.PaymentReturnCriteria2.mmInstructionStatusReturnCriteria,
-						com.tools20022.repository.msg.PaymentReturnCriteria2.mmInstructedAmountIndicator, com.tools20022.repository.msg.PaymentReturnCriteria2.mmCreditDebitIndicator,
-						com.tools20022.repository.msg.PaymentReturnCriteria2.mmInterbankSettlementAmountIndicator, com.tools20022.repository.msg.PaymentReturnCriteria2.mmPriorityIndicator,
-						com.tools20022.repository.msg.PaymentReturnCriteria2.mmProcessingValidityTimeIndicator, com.tools20022.repository.msg.PaymentReturnCriteria2.mmPurposeIndicator,
-						com.tools20022.repository.msg.PaymentReturnCriteria2.mmInstructionCopyIndicator, com.tools20022.repository.msg.PaymentReturnCriteria2.mmPaymentMessageTypeIndicator,
-						com.tools20022.repository.msg.PaymentReturnCriteria2.mmPaymentTypeIndicator, com.tools20022.repository.msg.PaymentReturnCriteria2.mmPaymentInstructionReferenceIndicator,
-						com.tools20022.repository.msg.PaymentReturnCriteria2.mmInterbankValueDateIndicator, com.tools20022.repository.msg.PaymentReturnCriteria2.mmRelatedReferenceIndicator,
-						com.tools20022.repository.msg.PaymentReturnCriteria2.mmPaymentMethodIndicator, com.tools20022.repository.msg.PaymentReturnCriteria2.mmDebtorIndicator,
-						com.tools20022.repository.msg.PaymentReturnCriteria2.mmFirstAgentIndicator, com.tools20022.repository.msg.PaymentReturnCriteria2.mmInstructingAgentCorrespondentIndicator,
-						com.tools20022.repository.msg.PaymentReturnCriteria2.mmInstructedAgentCorrespondentIndicator, com.tools20022.repository.msg.PaymentReturnCriteria2.mmIntermediaryIndicator,
-						com.tools20022.repository.msg.PaymentReturnCriteria2.mmFinalAgentIndicator, com.tools20022.repository.msg.PaymentReturnCriteria2.mmCreditorIndicator);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(PaymentReturnCriteria2.mmTransactionReferenceIndicator, PaymentReturnCriteria2.mmTransferValueDateIndicator, PaymentReturnCriteria2.mmInstructionIndicator,
+						PaymentReturnCriteria2.mmInstructionStatusReturnCriteria, PaymentReturnCriteria2.mmInstructedAmountIndicator, PaymentReturnCriteria2.mmCreditDebitIndicator,
+						PaymentReturnCriteria2.mmInterbankSettlementAmountIndicator, PaymentReturnCriteria2.mmPriorityIndicator, PaymentReturnCriteria2.mmProcessingValidityTimeIndicator, PaymentReturnCriteria2.mmPurposeIndicator,
+						PaymentReturnCriteria2.mmInstructionCopyIndicator, PaymentReturnCriteria2.mmPaymentMessageTypeIndicator, PaymentReturnCriteria2.mmPaymentTypeIndicator, PaymentReturnCriteria2.mmPaymentInstructionReferenceIndicator,
+						PaymentReturnCriteria2.mmInterbankValueDateIndicator, PaymentReturnCriteria2.mmRelatedReferenceIndicator, PaymentReturnCriteria2.mmPaymentMethodIndicator, PaymentReturnCriteria2.mmDebtorIndicator,
+						PaymentReturnCriteria2.mmFirstAgentIndicator, PaymentReturnCriteria2.mmInstructingAgentCorrespondentIndicator, PaymentReturnCriteria2.mmInstructedAgentCorrespondentIndicator,
+						PaymentReturnCriteria2.mmIntermediaryIndicator, PaymentReturnCriteria2.mmFinalAgentIndicator, PaymentReturnCriteria2.mmCreditorIndicator);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "PaymentReturnCriteria2";
 				definition = "Defines the criteria used to report on the payment.";
 			}

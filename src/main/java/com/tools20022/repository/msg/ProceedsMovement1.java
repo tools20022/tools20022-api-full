@@ -19,6 +19,10 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.seev.AgentCAMovementInstructionV01;
+import com.tools20022.repository.entity.SecuritiesTransfer;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -102,7 +106,7 @@ public class ProceedsMovement1 {
 			componentContext_lazy = () -> ProceedsMovement1.mmObject();
 			isDerived = false;
 			xmlTag = "CshPrcdsMvmntDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashProceedsMovementDetails";
 			definition = "Provides information about the movement of the cash proceeds.";
 			minOccurs = 0;
@@ -143,7 +147,7 @@ public class ProceedsMovement1 {
 			componentContext_lazy = () -> ProceedsMovement1.mmObject();
 			isDerived = false;
 			xmlTag = "SctiesPrcdsMvmntDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesProceedsMovementDetails";
 			definition = "Provides information about the movement of the securities proceeds.";
 			minOccurs = 0;
@@ -185,11 +189,11 @@ public class ProceedsMovement1 {
 	 */
 	public static final MMMessageAssociationEnd mmTaxDetails = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTransfer.mmTransferTax;
+			businessElementTrace_lazy = () -> SecuritiesTransfer.mmTransferTax;
 			componentContext_lazy = () -> ProceedsMovement1.mmObject();
 			isDerived = false;
 			xmlTag = "TaxDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxDetails";
 			definition = "Provides information about the tax voucher.";
 			maxOccurs = 1;
@@ -202,11 +206,10 @@ public class ProceedsMovement1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ProceedsMovement1.mmCashProceedsMovementDetails, com.tools20022.repository.msg.ProceedsMovement1.mmSecuritiesProceedsMovementDetails,
-						com.tools20022.repository.msg.ProceedsMovement1.mmTaxDetails);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.AgentCAMovementInstructionV01.mmProceedsMovementDetails);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(ProceedsMovement1.mmCashProceedsMovementDetails, ProceedsMovement1.mmSecuritiesProceedsMovementDetails, ProceedsMovement1.mmTaxDetails);
+				messageBuildingBlock_lazy = () -> Arrays.asList(AgentCAMovementInstructionV01.mmProceedsMovementDetails);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ProceedsMovement1";
 				definition = "Details of the proceeds movements.";
 			}

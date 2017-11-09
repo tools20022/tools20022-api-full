@@ -19,10 +19,13 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.DateFormat28Choice;
 import com.tools20022.repository.codeset.LotteryType1Code;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.Max350Text;
+import com.tools20022.repository.entity.Lottery;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -104,7 +107,7 @@ public class CorporateActionSD9 {
 			componentContext_lazy = () -> CorporateActionSD9.mmObject();
 			isDerived = false;
 			xmlTag = "PlcAndNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "xPath to the element that is being extended.";
 			maxOccurs = 1;
@@ -150,7 +153,7 @@ public class CorporateActionSD9 {
 			componentContext_lazy = () -> CorporateActionSD9.mmObject();
 			isDerived = false;
 			xmlTag = "RcrdDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RecordDate";
 			definition = "Date at which positions are stuck at the end of the day to note which parties will receive the relevant amount of entitlement, due to be distributed on payment date. DTC  (The Depository Trust Corporation) and its Participants may use this as a reference ";
 			maxOccurs = 1;
@@ -195,7 +198,7 @@ public class CorporateActionSD9 {
 			componentContext_lazy = () -> CorporateActionSD9.mmObject();
 			isDerived = false;
 			xmlTag = "PmtDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentDate";
 			definition = "Date/time at which the movement was due to take place (cash and/or securities).";
 			maxOccurs = 1;
@@ -241,11 +244,11 @@ public class CorporateActionSD9 {
 	 */
 	public static final MMMessageAttribute mmLotteryDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Lottery.mmLotteryDate;
+			businessElementTrace_lazy = () -> Lottery.mmLotteryDate;
 			componentContext_lazy = () -> CorporateActionSD9.mmObject();
 			isDerived = false;
 			xmlTag = "LtryDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LotteryDate";
 			definition = "Date/time on which the lottery is run and applied to the holder's positions. This is also applicable to partial calls.";
 			maxOccurs = 1;
@@ -287,7 +290,7 @@ public class CorporateActionSD9 {
 			componentContext_lazy = () -> CorporateActionSD9.mmObject();
 			isDerived = false;
 			xmlTag = "LtryTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LotteryType";
 			definition = "Specifies the type of lottery announced.";
 			maxOccurs = 1;
@@ -299,10 +302,9 @@ public class CorporateActionSD9 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionSD9.mmPlaceAndName, com.tools20022.repository.msg.CorporateActionSD9.mmRecordDate,
-						com.tools20022.repository.msg.CorporateActionSD9.mmPaymentDate, com.tools20022.repository.msg.CorporateActionSD9.mmLotteryDate, com.tools20022.repository.msg.CorporateActionSD9.mmLotteryType);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(CorporateActionSD9.mmPlaceAndName, CorporateActionSD9.mmRecordDate, CorporateActionSD9.mmPaymentDate, CorporateActionSD9.mmLotteryDate, CorporateActionSD9.mmLotteryType);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionSD9";
 				definition = "Provides additional information regarding corporate action details.";
 			}

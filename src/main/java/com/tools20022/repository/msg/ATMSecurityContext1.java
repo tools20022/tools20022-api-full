@@ -20,9 +20,11 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ATMSecurityScheme1Code;
 import com.tools20022.repository.codeset.ATMSecurityScheme2Code;
 import com.tools20022.repository.datatype.Max140Binary;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -122,10 +124,10 @@ public class ATMSecurityContext1 {
 			componentContext_lazy = () -> ATMSecurityContext1.mmObject();
 			isDerived = false;
 			xmlTag = "CurSctySchme";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrentSecurityScheme";
 			definition = "Key exchange security scheme in activation on the ATM for the host manager.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMSecurityContext2.mmCurrentSecurityScheme);
+			nextVersions_lazy = () -> Arrays.asList(ATMSecurityContext2.mmCurrentSecurityScheme);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ATMSecurityScheme1Code.mmObject();
@@ -168,7 +170,7 @@ public class ATMSecurityContext1 {
 			componentContext_lazy = () -> ATMSecurityContext1.mmObject();
 			isDerived = false;
 			xmlTag = "SctySchmeCpblties";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritySchemeCapabilities";
 			definition = "Key exchange security schemes implemented in the hardware security module of the ATM.";
 			minOccurs = 0;
@@ -207,7 +209,7 @@ public class ATMSecurityContext1 {
 			componentContext_lazy = () -> ATMSecurityContext1.mmObject();
 			isDerived = false;
 			xmlTag = "SctyDvc";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityDevice";
 			definition = "Hardware security module of the ATM.";
 			maxOccurs = 1;
@@ -249,7 +251,7 @@ public class ATMSecurityContext1 {
 			componentContext_lazy = () -> ATMSecurityContext1.mmObject();
 			isDerived = false;
 			xmlTag = "Key";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Key";
 			definition = "Cryptographic keys stored in the hardware security module of the ATM.";
 			minOccurs = 0;
@@ -292,7 +294,7 @@ public class ATMSecurityContext1 {
 			componentContext_lazy = () -> ATMSecurityContext1.mmObject();
 			isDerived = false;
 			xmlTag = "HstChllng";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HostChallenge";
 			definition = "Random value from the host provided during a previous exchange.";
 			maxOccurs = 1;
@@ -304,10 +306,10 @@ public class ATMSecurityContext1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMSecurityContext1.mmCurrentSecurityScheme, com.tools20022.repository.msg.ATMSecurityContext1.mmSecuritySchemeCapabilities,
-						com.tools20022.repository.msg.ATMSecurityContext1.mmSecurityDevice, com.tools20022.repository.msg.ATMSecurityContext1.mmKey, com.tools20022.repository.msg.ATMSecurityContext1.mmHostChallenge);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(ATMSecurityContext1.mmCurrentSecurityScheme, ATMSecurityContext1.mmSecuritySchemeCapabilities, ATMSecurityContext1.mmSecurityDevice, ATMSecurityContext1.mmKey,
+						ATMSecurityContext1.mmHostChallenge);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ATMSecurityContext1";
 				definition = "Information related to security commands.";
 				nextVersions_lazy = () -> Arrays.asList(ATMSecurityContext2.mmObject());

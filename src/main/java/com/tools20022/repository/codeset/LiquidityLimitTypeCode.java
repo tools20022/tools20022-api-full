@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.LiquidityLimitType1Code
+ * LiquidityLimitType1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -41,13 +50,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.LiquidityLimitTypeCode#mmNetSSSReservation
  * LiquidityLimitTypeCode.mmNetSSSReservation}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.LiquidityLimitType1Code
- * LiquidityLimitType1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -104,7 +106,7 @@ public class LiquidityLimitTypeCode {
 	 */
 	public static final MMCode mmGlobal = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Global";
 			definition = "Maximum value set by either the transaction administrator or by a member for the participation of a member in the system. The global limit may be expressed as a credit or debit maximum value and is taken into account by the transaction administrator when processing transaction inside the system. With the help of the global limit, the direct participant may limit the use of liquidity when clearing specific type of payments.";
 			owner_lazy = () -> LiquidityLimitTypeCode.mmObject();
@@ -137,7 +139,7 @@ public class LiquidityLimitTypeCode {
 	 */
 	public static final MMCode mmCashReservation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashReservation";
 			definition = "Amount set aside by a participant to reserve liquidity from its own account, exclusively for executing cash withdrawals.";
 			owner_lazy = () -> LiquidityLimitTypeCode.mmObject();
@@ -171,7 +173,7 @@ public class LiquidityLimitTypeCode {
 	 */
 	public static final MMCode mmCriticalPaymentReservation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CriticalPaymentReservation";
 			definition = "Amount set aside by a participant to reserve liquidity from its own account, exclusively for executing critical payments called urgent payments.";
 			owner_lazy = () -> LiquidityLimitTypeCode.mmObject();
@@ -205,7 +207,7 @@ public class LiquidityLimitTypeCode {
 	 */
 	public static final MMCode mmNetSSSReservation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetSSSReservation";
 			definition = "Amount set aside by a participant to reserve liquidity from its own account, exclusively for the settlement of the multilateral cash balance stemming from the Net Security Settlement System.";
 			owner_lazy = () -> LiquidityLimitTypeCode.mmObject();
@@ -216,13 +218,12 @@ public class LiquidityLimitTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("GLBL");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "LiquidityLimitTypeCode";
 				definition = "Specifies the precise type of liquidity management limit.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.LiquidityLimitTypeCode.mmGlobal, com.tools20022.repository.codeset.LiquidityLimitTypeCode.mmCashReservation,
-						com.tools20022.repository.codeset.LiquidityLimitTypeCode.mmCriticalPaymentReservation, com.tools20022.repository.codeset.LiquidityLimitTypeCode.mmNetSSSReservation);
+				code_lazy = () -> Arrays.asList(LiquidityLimitTypeCode.mmGlobal, LiquidityLimitTypeCode.mmCashReservation, LiquidityLimitTypeCode.mmCriticalPaymentReservation, LiquidityLimitTypeCode.mmNetSSSReservation);
 				derivation_lazy = () -> Arrays.asList(LiquidityLimitType1Code.mmObject());
 			}
 		});

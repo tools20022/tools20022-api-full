@@ -19,9 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.CollateralSubstitution;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -98,7 +100,7 @@ public class CollateralSubstitutionResponse1 {
 			componentContext_lazy = () -> CollateralSubstitutionResponse1.mmObject();
 			isDerived = false;
 			xmlTag = "CollSbstitnReqId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralSubstitutionRequestIdentification";
 			definition = "Reference to the collateral substitution request identification.";
 			maxOccurs = 1;
@@ -142,11 +144,11 @@ public class CollateralSubstitutionResponse1 {
 	 */
 	public static final MMMessageAttribute mmAcceptedAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CollateralSubstitution.mmAcceptedAmount;
+			businessElementTrace_lazy = () -> CollateralSubstitution.mmAcceptedAmount;
 			componentContext_lazy = () -> CollateralSubstitutionResponse1.mmObject();
 			isDerived = false;
 			xmlTag = "AccptdAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcceptedAmount";
 			definition = "Provides the accepted collateral substitution amount.";
 			maxOccurs = 1;
@@ -158,11 +160,10 @@ public class CollateralSubstitutionResponse1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CollateralSubstitutionResponse1.mmCollateralSubstitutionRequestIdentification,
-						com.tools20022.repository.msg.CollateralSubstitutionResponse1.mmAcceptedAmount);
+				messageElement_lazy = () -> Arrays.asList(CollateralSubstitutionResponse1.mmCollateralSubstitutionRequestIdentification, CollateralSubstitutionResponse1.mmAcceptedAmount);
 				trace_lazy = () -> CollateralSubstitution.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CollateralSubstitutionResponse1";
 				definition = "Provides details about the accepted collateral substitution.";
 			}

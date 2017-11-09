@@ -20,6 +20,7 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.CounterpartyIdentification1Choice;
 import com.tools20022.repository.choice.DateAndDateTimeChoice;
 import com.tools20022.repository.codeset.OvernightIndexSwapType1Code;
@@ -27,7 +28,8 @@ import com.tools20022.repository.codeset.TransactionOperationType1Code;
 import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.Max105Text;
-import com.tools20022.repository.entity.ForeignExchangeSwap;
+import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -142,7 +144,7 @@ public class OvernightIndexSwapTransaction1 {
 			componentContext_lazy = () -> OvernightIndexSwapTransaction1.mmObject();
 			isDerived = false;
 			xmlTag = "RptdTxSts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportedTransactionStatus";
 			definition = "Defines the status of the reported transaction, that is details on whether the transaction is a new transaction, an amendment of a previously reported transaction, a cancellation of a previously reported transaction or a correction to a previously reported and rejected transaction.";
 			maxOccurs = 1;
@@ -190,11 +192,11 @@ public class OvernightIndexSwapTransaction1 {
 	 */
 	public static final MMMessageAttribute mmUniqueTransactionIdentifier = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradeIdentification.mmUniqueTradeIdentifier;
+			businessElementTrace_lazy = () -> TradeIdentification.mmUniqueTradeIdentifier;
 			componentContext_lazy = () -> OvernightIndexSwapTransaction1.mmObject();
 			isDerived = false;
 			xmlTag = "UnqTxIdr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UniqueTransactionIdentifier";
 			definition = "Unique transaction identifier will be created at the time a transaction is first executed, shared with all registered entities and counterparties involved in the transaction, and used to track that particular transaction during its lifetime.";
 			maxOccurs = 1;
@@ -240,11 +242,11 @@ public class OvernightIndexSwapTransaction1 {
 	 */
 	public static final MMMessageAttribute mmProprietaryTransactionIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradeIdentification.mmIdentification;
+			businessElementTrace_lazy = () -> TradeIdentification.mmIdentification;
 			componentContext_lazy = () -> OvernightIndexSwapTransaction1.mmObject();
 			isDerived = false;
 			xmlTag = "PrtryTxId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProprietaryTransactionIdentification";
 			definition = "Internal unique transaction identifier used by the reporting agent for each transaction. ";
 			maxOccurs = 1;
@@ -290,11 +292,11 @@ public class OvernightIndexSwapTransaction1 {
 	 */
 	public static final MMMessageAttribute mmCounterpartyProprietaryTransactionIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradeIdentification.mmCounterpartyReference;
+			businessElementTrace_lazy = () -> TradeIdentification.mmCounterpartyReference;
 			componentContext_lazy = () -> OvernightIndexSwapTransaction1.mmObject();
 			isDerived = false;
 			xmlTag = "CtrPtyPrtryTxId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CounterpartyProprietaryTransactionIdentification";
 			definition = "Internal unique proprietary transaction identifier as assigned by the counterparty of the reporting agent for each transaction.";
 			maxOccurs = 1;
@@ -340,11 +342,11 @@ public class OvernightIndexSwapTransaction1 {
 	 */
 	public static final MMMessageAssociationEnd mmCounterpartyIdentification = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CounterpartyRisk.mmParty;
+			businessElementTrace_lazy = () -> CounterpartyRisk.mmParty;
 			componentContext_lazy = () -> OvernightIndexSwapTransaction1.mmObject();
 			isDerived = false;
 			xmlTag = "CtrPtyId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CounterpartyIdentification";
 			definition = "Identification of the counterparty of the reporting agent for the reported transaction. ";
 			maxOccurs = 1;
@@ -399,11 +401,11 @@ public class OvernightIndexSwapTransaction1 {
 	 */
 	public static final MMMessageAssociationEnd mmTradeDate = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Trade.mmTradeDateTime;
+			businessElementTrace_lazy = () -> Trade.mmTradeDateTime;
 			componentContext_lazy = () -> OvernightIndexSwapTransaction1.mmObject();
 			isDerived = false;
 			xmlTag = "TradDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeDate";
 			definition = "Date and time on which the parties entered into the reported transaction.\r\n\r\nUsage: when time is available, it must be reported.\r\n\r\nIt is to be reported with only the date when the time of the transaction is not available. \r\n\r\nThe reported time is the execution time when available or otherwise the time at which the transaction entered the trading system of the reporting agent. ";
 			maxOccurs = 1;
@@ -450,11 +452,11 @@ public class OvernightIndexSwapTransaction1 {
 	 */
 	public static final MMMessageAttribute mmStartDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Trade.mmStartDate;
+			businessElementTrace_lazy = () -> Trade.mmStartDate;
 			componentContext_lazy = () -> OvernightIndexSwapTransaction1.mmObject();
 			isDerived = false;
 			xmlTag = "StartDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StartDate";
 			definition = "Represents the date as of which the overnight rate of the floating leg is computed.";
 			maxOccurs = 1;
@@ -500,11 +502,11 @@ public class OvernightIndexSwapTransaction1 {
 	 */
 	public static final MMMessageAttribute mmMaturityDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Asset.mmMaturityDate;
+			businessElementTrace_lazy = () -> Asset.mmMaturityDate;
 			componentContext_lazy = () -> OvernightIndexSwapTransaction1.mmObject();
 			isDerived = false;
 			xmlTag = "MtrtyDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaturityDate";
 			definition = "Last date of the term over which the compounded overnight rate is calculated.";
 			maxOccurs = 1;
@@ -547,11 +549,11 @@ public class OvernightIndexSwapTransaction1 {
 	 */
 	public static final MMMessageAssociationEnd mmFixedInterestRate = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Interest.mmRate;
+			businessElementTrace_lazy = () -> Interest.mmRate;
 			componentContext_lazy = () -> OvernightIndexSwapTransaction1.mmObject();
 			isDerived = false;
 			xmlTag = "FxdIntrstRate";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FixedInterestRate";
 			definition = "Fixed rate used for the calculation of the overnight index swap pay out.";
 			maxOccurs = 1;
@@ -599,11 +601,11 @@ public class OvernightIndexSwapTransaction1 {
 	 */
 	public static final MMMessageAttribute mmTransactionType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTrade.mmTransactionType;
+			businessElementTrace_lazy = () -> SecuritiesTrade.mmTransactionType;
 			componentContext_lazy = () -> OvernightIndexSwapTransaction1.mmObject();
 			isDerived = false;
 			xmlTag = "TxTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionType";
 			definition = "Defines whether the fixed interest rate is paid or received by the reporting agent.";
 			maxOccurs = 1;
@@ -647,11 +649,11 @@ public class OvernightIndexSwapTransaction1 {
 	 */
 	public static final MMMessageAttribute mmTransactionNominalAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentObligation.mmAmount;
+			businessElementTrace_lazy = () -> PaymentObligation.mmAmount;
 			componentContext_lazy = () -> OvernightIndexSwapTransaction1.mmObject();
 			isDerived = false;
 			xmlTag = "TxNmnlAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionNominalAmount";
 			definition = "Notional amount of the overnight index swap.";
 			maxOccurs = 1;
@@ -694,7 +696,7 @@ public class OvernightIndexSwapTransaction1 {
 			componentContext_lazy = () -> OvernightIndexSwapTransaction1.mmObject();
 			isDerived = false;
 			xmlTag = "SplmtryData";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryData";
 			definition = "Additional information that can not be captured in the structured fields and/or any other specific block.";
 			minOccurs = 0;
@@ -706,15 +708,13 @@ public class OvernightIndexSwapTransaction1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OvernightIndexSwapTransaction1.mmReportedTransactionStatus, com.tools20022.repository.msg.OvernightIndexSwapTransaction1.mmUniqueTransactionIdentifier,
-						com.tools20022.repository.msg.OvernightIndexSwapTransaction1.mmProprietaryTransactionIdentification, com.tools20022.repository.msg.OvernightIndexSwapTransaction1.mmCounterpartyProprietaryTransactionIdentification,
-						com.tools20022.repository.msg.OvernightIndexSwapTransaction1.mmCounterpartyIdentification, com.tools20022.repository.msg.OvernightIndexSwapTransaction1.mmTradeDate,
-						com.tools20022.repository.msg.OvernightIndexSwapTransaction1.mmStartDate, com.tools20022.repository.msg.OvernightIndexSwapTransaction1.mmMaturityDate,
-						com.tools20022.repository.msg.OvernightIndexSwapTransaction1.mmFixedInterestRate, com.tools20022.repository.msg.OvernightIndexSwapTransaction1.mmTransactionType,
-						com.tools20022.repository.msg.OvernightIndexSwapTransaction1.mmTransactionNominalAmount, com.tools20022.repository.msg.OvernightIndexSwapTransaction1.mmSupplementaryData);
+				messageElement_lazy = () -> Arrays.asList(OvernightIndexSwapTransaction1.mmReportedTransactionStatus, OvernightIndexSwapTransaction1.mmUniqueTransactionIdentifier,
+						OvernightIndexSwapTransaction1.mmProprietaryTransactionIdentification, OvernightIndexSwapTransaction1.mmCounterpartyProprietaryTransactionIdentification, OvernightIndexSwapTransaction1.mmCounterpartyIdentification,
+						OvernightIndexSwapTransaction1.mmTradeDate, OvernightIndexSwapTransaction1.mmStartDate, OvernightIndexSwapTransaction1.mmMaturityDate, OvernightIndexSwapTransaction1.mmFixedInterestRate,
+						OvernightIndexSwapTransaction1.mmTransactionType, OvernightIndexSwapTransaction1.mmTransactionNominalAmount, OvernightIndexSwapTransaction1.mmSupplementaryData);
 				trace_lazy = () -> ForeignExchangeSwap.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OvernightIndexSwapTransaction1";
 				definition = "Provides the details of each individual overnight index swap transaction.";
 			}

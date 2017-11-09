@@ -20,9 +20,11 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.ConsolidationType1Choice;
 import com.tools20022.repository.choice.SettlementFrequency1Choice;
 import com.tools20022.repository.datatype.ISODate;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -98,7 +100,7 @@ public class HighFrequencyTradingProfile1 {
 			componentContext_lazy = () -> HighFrequencyTradingProfile1.mmObject();
 			isDerived = false;
 			xmlTag = "Dt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Date";
 			definition = "Date on which the investor starts high frequency trading.";
 			maxOccurs = 1;
@@ -139,7 +141,7 @@ public class HighFrequencyTradingProfile1 {
 			componentContext_lazy = () -> HighFrequencyTradingProfile1.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmFrqcy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementFrequency";
 			definition = "Frequency of settlement.";
 			maxOccurs = 1;
@@ -184,7 +186,7 @@ public class HighFrequencyTradingProfile1 {
 			componentContext_lazy = () -> HighFrequencyTradingProfile1.mmObject();
 			isDerived = false;
 			xmlTag = "CnsldtnTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConsolidationType";
 			definition = "Specifies whether consolidation is done generally or at the level of segregated account.";
 			maxOccurs = 1;
@@ -197,10 +199,9 @@ public class HighFrequencyTradingProfile1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.HighFrequencyTradingProfile1.mmDate, com.tools20022.repository.msg.HighFrequencyTradingProfile1.mmSettlementFrequency,
-						com.tools20022.repository.msg.HighFrequencyTradingProfile1.mmConsolidationType);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(HighFrequencyTradingProfile1.mmDate, HighFrequencyTradingProfile1.mmSettlementFrequency, HighFrequencyTradingProfile1.mmConsolidationType);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "HighFrequencyTradingProfile1";
 				definition = "Information about a high frequency trading profile.";
 			}

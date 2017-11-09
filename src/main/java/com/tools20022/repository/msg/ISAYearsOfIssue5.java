@@ -20,10 +20,12 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.CurrentYearType1Choice;
 import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.PortfolioTransfer;
 import com.tools20022.repository.entity.SubscriptionExecution;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -106,11 +108,11 @@ public class ISAYearsOfIssue5 {
 	 */
 	public static final MMMessageAttribute mmCurrentYear = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PortfolioTransfer.mmCurrentYearISAType;
+			businessElementTrace_lazy = () -> PortfolioTransfer.mmCurrentYearISAType;
 			componentContext_lazy = () -> ISAYearsOfIssue5.mmObject();
 			isDerived = false;
 			xmlTag = "CurYr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrentYear";
 			definition = "ISA that was issued during the current fiscal year.";
 			maxOccurs = 1;
@@ -156,11 +158,11 @@ public class ISAYearsOfIssue5 {
 	 */
 	public static final MMMessageAttribute mmCashComponentIndicator = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PortfolioTransfer.mmCashComponentIndicator;
+			businessElementTrace_lazy = () -> PortfolioTransfer.mmCashComponentIndicator;
 			componentContext_lazy = () -> ISAYearsOfIssue5.mmObject();
 			isDerived = false;
 			xmlTag = "CshCmpntInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashComponentIndicator";
 			definition = "Indicates whether the ISA contains a cash component asset for transfer.";
 			maxOccurs = 1;
@@ -207,7 +209,7 @@ public class ISAYearsOfIssue5 {
 			componentContext_lazy = () -> ISAYearsOfIssue5.mmObject();
 			isDerived = false;
 			xmlTag = "PrvsYrs";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousYears";
 			definition = "Selection of investment plans issued during previous years.";
 			maxOccurs = 1;
@@ -256,7 +258,7 @@ public class ISAYearsOfIssue5 {
 			componentContext_lazy = () -> ISAYearsOfIssue5.mmObject();
 			isDerived = false;
 			xmlTag = "CurYrSbcptDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrentYearSubscriptionDetails";
 			definition = "Specifies the amounts already subscribed for the current year.";
 			maxOccurs = 1;
@@ -269,11 +271,10 @@ public class ISAYearsOfIssue5 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ISAYearsOfIssue5.mmCurrentYear, com.tools20022.repository.msg.ISAYearsOfIssue5.mmCashComponentIndicator,
-						com.tools20022.repository.msg.ISAYearsOfIssue5.mmPreviousYears, com.tools20022.repository.msg.ISAYearsOfIssue5.mmCurrentYearSubscriptionDetails);
+				messageElement_lazy = () -> Arrays.asList(ISAYearsOfIssue5.mmCurrentYear, ISAYearsOfIssue5.mmCashComponentIndicator, ISAYearsOfIssue5.mmPreviousYears, ISAYearsOfIssue5.mmCurrentYearSubscriptionDetails);
 				trace_lazy = () -> PortfolioTransfer.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ISAYearsOfIssue5";
 				definition = "Year in which the ISA plan is issued.";
 			}

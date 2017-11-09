@@ -19,11 +19,14 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.BusinessDayConvention1Code;
 import com.tools20022.repository.codeset.ReferToFundOrderDesk1Code;
 import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.datatype.Number;
+import com.tools20022.repository.entity.RedemptionSchedule;
 import com.tools20022.repository.entity.TimeFrame;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -108,11 +111,11 @@ public class TimeFrame3 {
 	 */
 	public static final MMMessageAttribute mmOtherTimeFrameDescription = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TimeFrame.mmOtherTimeFrameDescription;
+			businessElementTrace_lazy = () -> TimeFrame.mmOtherTimeFrameDescription;
 			componentContext_lazy = () -> TimeFrame3.mmObject();
 			isDerived = false;
 			xmlTag = "OthrTmFrameDesc";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherTimeFrameDescription";
 			definition = "Specifies a description of any other TimeFrame that may be used for the DealingCutOffTimeFrame";
 			maxOccurs = 1;
@@ -159,11 +162,11 @@ public class TimeFrame3 {
 	 */
 	public static final MMMessageAttribute mmTradeMinus = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TimeFrame.mmTradeMinus;
+			businessElementTrace_lazy = () -> TimeFrame.mmTradeMinus;
 			componentContext_lazy = () -> TimeFrame3.mmObject();
 			isDerived = false;
 			xmlTag = "TMns";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeMinus";
 			definition = "An agreed number of days before the Trade date (T) used to define standard timeframes e.g. T-1 Dealing cut off or T-2 prepayment condition\n\nWhere = T is the date that the price is applied to a transaction,";
 			maxOccurs = 1;
@@ -207,11 +210,11 @@ public class TimeFrame3 {
 	 */
 	public static final MMMessageAttribute mmNonWorkingDayAdjustment = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.RedemptionSchedule.mmBusinessDayConvention;
+			businessElementTrace_lazy = () -> RedemptionSchedule.mmBusinessDayConvention;
 			componentContext_lazy = () -> TimeFrame3.mmObject();
 			isDerived = false;
 			xmlTag = "NonWorkgDayAdjstmnt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonWorkingDayAdjustment";
 			definition = "Convention used for adjusting a date when it is not a business day.";
 			maxOccurs = 1;
@@ -252,7 +255,7 @@ public class TimeFrame3 {
 			componentContext_lazy = () -> TimeFrame3.mmObject();
 			isDerived = false;
 			xmlTag = "RefrToOrdrDsk";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReferToOrderDesk";
 			definition = "Refer to Order Desk";
 			maxOccurs = 1;
@@ -264,11 +267,10 @@ public class TimeFrame3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TimeFrame3.mmOtherTimeFrameDescription, com.tools20022.repository.msg.TimeFrame3.mmTradeMinus,
-						com.tools20022.repository.msg.TimeFrame3.mmNonWorkingDayAdjustment, com.tools20022.repository.msg.TimeFrame3.mmReferToOrderDesk);
+				messageElement_lazy = () -> Arrays.asList(TimeFrame3.mmOtherTimeFrameDescription, TimeFrame3.mmTradeMinus, TimeFrame3.mmNonWorkingDayAdjustment, TimeFrame3.mmReferToOrderDesk);
 				trace_lazy = () -> TimeFrame.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TimeFrame3";
 				definition = "TimeFrame elements that define a period as number of days before or after a activity.";
 			}

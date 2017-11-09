@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.SystemEventType2Code
+ * SystemEventType2Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -97,13 +106,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * SystemEventTypeCode.mmEndOfStandingFacilities}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.SystemEventType2Code
- * SystemEventType2Code}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -153,7 +155,7 @@ public class SystemEventTypeCode {
 	 */
 	public static final MMCode mmLVPCutOff = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "LVPCutOff";
 			definition = "Event is the cutoff time for low value payments processed by the system.";
 			owner_lazy = () -> SystemEventTypeCode.mmObject();
@@ -186,7 +188,7 @@ public class SystemEventTypeCode {
 	 */
 	public static final MMCode mmLVPCancellationCutOff = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "LVPCancellationCutOff";
 			definition = "Event is the cutoff time after which low value payments can no longer be cancelled.";
 			owner_lazy = () -> SystemEventTypeCode.mmObject();
@@ -219,7 +221,7 @@ public class SystemEventTypeCode {
 	 */
 	public static final MMCode mmLVPCutOffReportTime = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "LVPCutOffReportTime";
 			definition = "Event is the time at which the members will be provided with the report corresponding to the processing of low value payments.";
 			owner_lazy = () -> SystemEventTypeCode.mmObject();
@@ -249,7 +251,7 @@ public class SystemEventTypeCode {
 	 */
 	public static final MMCode mmEuro1StartUp = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Euro1StartUp";
 			definition = "Event is the opening of the Euro 1 system operation.";
 			owner_lazy = () -> SystemEventTypeCode.mmObject();
@@ -279,7 +281,7 @@ public class SystemEventTypeCode {
 	 */
 	public static final MMCode mmStep1StartUp = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Step1StartUp";
 			definition = "Event is the start of the Step 1 system operation.";
 			owner_lazy = () -> SystemEventTypeCode.mmObject();
@@ -309,7 +311,7 @@ public class SystemEventTypeCode {
 	 */
 	public static final MMCode mmLimitWarningStartUp = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "LimitWarningStartUp";
 			definition = "Event is the start of the limit warning period.";
 			owner_lazy = () -> SystemEventTypeCode.mmObject();
@@ -342,7 +344,7 @@ public class SystemEventTypeCode {
 	 */
 	public static final MMCode mmEuro1CutOff = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Euro1CutOff";
 			definition = "Event is the cutoff time for the Euro1 system, ie, the deadline for processing Euro1 transactions.";
 			owner_lazy = () -> SystemEventTypeCode.mmObject();
@@ -373,7 +375,7 @@ public class SystemEventTypeCode {
 	 */
 	public static final MMCode mmFinalReporting = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "FinalReporting";
 			definition = "Event is the report after all operations have ceased in the system.";
 			owner_lazy = () -> SystemEventTypeCode.mmObject();
@@ -403,7 +405,7 @@ public class SystemEventTypeCode {
 	 */
 	public static final MMCode mmStartOfDay = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "StartOfDay";
 			definition = "Event is the start of the operating day.";
 			owner_lazy = () -> SystemEventTypeCode.mmObject();
@@ -436,7 +438,7 @@ public class SystemEventTypeCode {
 	 */
 	public static final MMCode mmLTNCutOff = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "LTNCutOff";
 			definition = "Event is the cutoff for the settlement of the cash multilateral balances resulting from the overnight cycle of the securities settlement system.";
 			owner_lazy = () -> SystemEventTypeCode.mmObject();
@@ -466,7 +468,7 @@ public class SystemEventTypeCode {
 	 */
 	public static final MMCode mmCashReservationCutOff = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CashReservationCutOff";
 			definition = "Event is the cutoff for the cash reservation window.";
 			owner_lazy = () -> SystemEventTypeCode.mmObject();
@@ -499,7 +501,7 @@ public class SystemEventTypeCode {
 	 */
 	public static final MMCode mmRecCutOff = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RecCutOff";
 			definition = "Event is the cutoff for the settlement of the multilateral balances stemming from the retail clearing system.";
 			owner_lazy = () -> SystemEventTypeCode.mmObject();
@@ -532,7 +534,7 @@ public class SystemEventTypeCode {
 	 */
 	public static final MMCode mmLTGCutOff = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "LTGCutOff";
 			definition = "Event is the cutoff for the daytime cycle of the securities settlement system.";
 			owner_lazy = () -> SystemEventTypeCode.mmObject();
@@ -565,7 +567,7 @@ public class SystemEventTypeCode {
 	 */
 	public static final MMCode mmLTDCutOff = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "LTDCutOff";
 			definition = "Event is the cutoff for the settlement of the cash multilateral balances resulting from the daylight cycle of the securities settlement system.";
 			owner_lazy = () -> SystemEventTypeCode.mmObject();
@@ -595,7 +597,7 @@ public class SystemEventTypeCode {
 	 */
 	public static final MMCode mmCustomerCutOff = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CustomerCutOff";
 			definition = "Event is the cutoff for customer payments.";
 			owner_lazy = () -> SystemEventTypeCode.mmObject();
@@ -625,7 +627,7 @@ public class SystemEventTypeCode {
 	 */
 	public static final MMCode mmInterbankCutOff = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InterbankCutOff";
 			definition = "Event is the cutoff for interbank payments.";
 			owner_lazy = () -> SystemEventTypeCode.mmObject();
@@ -655,7 +657,7 @@ public class SystemEventTypeCode {
 	 */
 	public static final MMCode mmSystemCutOff = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SystemCutOff";
 			definition = "Event is the cutoff for the system.";
 			owner_lazy = () -> SystemEventTypeCode.mmObject();
@@ -688,7 +690,7 @@ public class SystemEventTypeCode {
 	 */
 	public static final MMCode mmNetSSSReservationCutOff = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NetSSSReservationCutOff";
 			definition = "Event is the cutoff for the securities settlement system cash reservation window.";
 			owner_lazy = () -> SystemEventTypeCode.mmObject();
@@ -719,7 +721,7 @@ public class SystemEventTypeCode {
 	 */
 	public static final MMCode mmResumeOperation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ResumeOperation";
 			definition = "Event is the expected resume time for a TARGET component.";
 			owner_lazy = () -> SystemEventTypeCode.mmObject();
@@ -749,7 +751,7 @@ public class SystemEventTypeCode {
 	 */
 	public static final MMCode mmProcessingCutOffTime = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ProcessingCutOffTime";
 			definition = "Event is the cutoff time for the processing of payments.";
 			owner_lazy = () -> SystemEventTypeCode.mmObject();
@@ -780,7 +782,7 @@ public class SystemEventTypeCode {
 	 */
 	public static final MMCode mmNewPaymentCutOffTime = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NewPaymentCutOffTime";
 			definition = "Event is the cutoff time for the receipt of new commercial payments.";
 			owner_lazy = () -> SystemEventTypeCode.mmObject();
@@ -810,7 +812,7 @@ public class SystemEventTypeCode {
 	 */
 	public static final MMCode mmEndOfStandingFacilities = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "EndOfStandingFacilities";
 			definition = "Event is the cut off for the standing facilities.";
 			owner_lazy = () -> SystemEventTypeCode.mmObject();
@@ -821,20 +823,16 @@ public class SystemEventTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("LVCO");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SystemEventTypeCode";
 				definition = "Specifies a type of event related to a system's operation.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SystemEventTypeCode.mmLVPCutOff, com.tools20022.repository.codeset.SystemEventTypeCode.mmLVPCancellationCutOff,
-						com.tools20022.repository.codeset.SystemEventTypeCode.mmLVPCutOffReportTime, com.tools20022.repository.codeset.SystemEventTypeCode.mmEuro1StartUp,
-						com.tools20022.repository.codeset.SystemEventTypeCode.mmStep1StartUp, com.tools20022.repository.codeset.SystemEventTypeCode.mmLimitWarningStartUp, com.tools20022.repository.codeset.SystemEventTypeCode.mmEuro1CutOff,
-						com.tools20022.repository.codeset.SystemEventTypeCode.mmFinalReporting, com.tools20022.repository.codeset.SystemEventTypeCode.mmStartOfDay, com.tools20022.repository.codeset.SystemEventTypeCode.mmLTNCutOff,
-						com.tools20022.repository.codeset.SystemEventTypeCode.mmCashReservationCutOff, com.tools20022.repository.codeset.SystemEventTypeCode.mmRecCutOff, com.tools20022.repository.codeset.SystemEventTypeCode.mmLTGCutOff,
-						com.tools20022.repository.codeset.SystemEventTypeCode.mmLTDCutOff, com.tools20022.repository.codeset.SystemEventTypeCode.mmCustomerCutOff, com.tools20022.repository.codeset.SystemEventTypeCode.mmInterbankCutOff,
-						com.tools20022.repository.codeset.SystemEventTypeCode.mmSystemCutOff, com.tools20022.repository.codeset.SystemEventTypeCode.mmNetSSSReservationCutOff,
-						com.tools20022.repository.codeset.SystemEventTypeCode.mmResumeOperation, com.tools20022.repository.codeset.SystemEventTypeCode.mmProcessingCutOffTime,
-						com.tools20022.repository.codeset.SystemEventTypeCode.mmNewPaymentCutOffTime, com.tools20022.repository.codeset.SystemEventTypeCode.mmEndOfStandingFacilities);
+				code_lazy = () -> Arrays.asList(SystemEventTypeCode.mmLVPCutOff, SystemEventTypeCode.mmLVPCancellationCutOff, SystemEventTypeCode.mmLVPCutOffReportTime, SystemEventTypeCode.mmEuro1StartUp,
+						SystemEventTypeCode.mmStep1StartUp, SystemEventTypeCode.mmLimitWarningStartUp, SystemEventTypeCode.mmEuro1CutOff, SystemEventTypeCode.mmFinalReporting, SystemEventTypeCode.mmStartOfDay,
+						SystemEventTypeCode.mmLTNCutOff, SystemEventTypeCode.mmCashReservationCutOff, SystemEventTypeCode.mmRecCutOff, SystemEventTypeCode.mmLTGCutOff, SystemEventTypeCode.mmLTDCutOff, SystemEventTypeCode.mmCustomerCutOff,
+						SystemEventTypeCode.mmInterbankCutOff, SystemEventTypeCode.mmSystemCutOff, SystemEventTypeCode.mmNetSSSReservationCutOff, SystemEventTypeCode.mmResumeOperation, SystemEventTypeCode.mmProcessingCutOffTime,
+						SystemEventTypeCode.mmNewPaymentCutOffTime, SystemEventTypeCode.mmEndOfStandingFacilities);
 				derivation_lazy = () -> Arrays.asList(SystemEventType2Code.mmObject());
 			}
 		});

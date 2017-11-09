@@ -19,9 +19,12 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ActiveOrHistoricCurrencyAndAmount;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.entity.CurrencyOption;
+import com.tools20022.repository.entity.Option;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -106,11 +109,11 @@ public class AmountsAndValueDate2 {
 	 */
 	public static final MMMessageAttribute mmCallAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CurrencyOption.mmCallAmount;
+			businessElementTrace_lazy = () -> CurrencyOption.mmCallAmount;
 			componentContext_lazy = () -> AmountsAndValueDate2.mmObject();
 			isDerived = false;
 			xmlTag = "CallAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CallAmount";
 			definition = "Call amount and currency of a foreign exchange option trade.";
 			maxOccurs = 1;
@@ -155,11 +158,11 @@ public class AmountsAndValueDate2 {
 	 */
 	public static final MMMessageAttribute mmPutAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CurrencyOption.mmPutAmount;
+			businessElementTrace_lazy = () -> CurrencyOption.mmPutAmount;
 			componentContext_lazy = () -> AmountsAndValueDate2.mmObject();
 			isDerived = false;
 			xmlTag = "PutAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PutAmount";
 			definition = "Put amount and currency of a foreign exchange option trade.";
 			maxOccurs = 1;
@@ -203,11 +206,11 @@ public class AmountsAndValueDate2 {
 	 */
 	public static final MMMessageAttribute mmFinalSettlementDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Option.mmFinalSettlementDate;
+			businessElementTrace_lazy = () -> Option.mmFinalSettlementDate;
 			componentContext_lazy = () -> AmountsAndValueDate2.mmObject();
 			isDerived = false;
 			xmlTag = "FnlSttlmDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinalSettlementDate";
 			definition = "Date on which the trade is settled, ie, the amounts are due.";
 			maxOccurs = 1;
@@ -219,11 +222,10 @@ public class AmountsAndValueDate2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AmountsAndValueDate2.mmCallAmount, com.tools20022.repository.msg.AmountsAndValueDate2.mmPutAmount,
-						com.tools20022.repository.msg.AmountsAndValueDate2.mmFinalSettlementDate);
+				messageElement_lazy = () -> Arrays.asList(AmountsAndValueDate2.mmCallAmount, AmountsAndValueDate2.mmPutAmount, AmountsAndValueDate2.mmFinalSettlementDate);
 				trace_lazy = () -> CurrencyOption.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AmountsAndValueDate2";
 				definition = "Specifies the value date and the amounts traded in a foreign exchange option trade.";
 			}

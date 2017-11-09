@@ -20,8 +20,11 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.auth.FinancialInstrumentReportingInvalidReferenceDataReportV01;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.entity.DateTimePeriod;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.Period2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -116,7 +119,7 @@ public class Period4Choice {
 			componentContext_lazy = () -> Period4Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Dt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Date";
 			definition = "Date period is limited to a single date.";
 			maxOccurs = 1;
@@ -159,11 +162,11 @@ public class Period4Choice {
 	 */
 	public static final MMMessageAttribute mmFromDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmFromDateTime;
+			businessElementTrace_lazy = () -> DateTimePeriod.mmFromDateTime;
 			componentContext_lazy = () -> Period4Choice.mmObject();
 			isDerived = false;
 			xmlTag = "FrDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FromDate";
 			definition = "Date at which the date period range starts.";
 			maxOccurs = 1;
@@ -206,11 +209,11 @@ public class Period4Choice {
 	 */
 	public static final MMMessageAttribute mmToDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmToDateTime;
+			businessElementTrace_lazy = () -> DateTimePeriod.mmToDateTime;
 			componentContext_lazy = () -> Period4Choice.mmObject();
 			isDerived = false;
 			xmlTag = "ToDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ToDate";
 			definition = "Date which the range date period ends.";
 			maxOccurs = 1;
@@ -255,7 +258,7 @@ public class Period4Choice {
 			componentContext_lazy = () -> Period4Choice.mmObject();
 			isDerived = false;
 			xmlTag = "FrDtToDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FromDateToDate";
 			definition = "Time span defined by a start date, and an end date.";
 			maxOccurs = 1;
@@ -268,12 +271,11 @@ public class Period4Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Period4Choice.mmDate, com.tools20022.repository.choice.Period4Choice.mmFromDate, com.tools20022.repository.choice.Period4Choice.mmToDate,
-						com.tools20022.repository.choice.Period4Choice.mmFromDateToDate);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.auth.FinancialInstrumentReportingInvalidReferenceDataReportV01.mmDatePeriod);
+				messageElement_lazy = () -> Arrays.asList(Period4Choice.mmDate, Period4Choice.mmFromDate, Period4Choice.mmToDate, Period4Choice.mmFromDateToDate);
+				messageBuildingBlock_lazy = () -> Arrays.asList(FinancialInstrumentReportingInvalidReferenceDataReportV01.mmDatePeriod);
 				trace_lazy = () -> DateTimePeriod.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Period4Choice";
 				definition = "Choice between date and date-time for the specification of a period.";
 			}

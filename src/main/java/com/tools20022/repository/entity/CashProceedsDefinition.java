@@ -17,15 +17,14 @@
 
 package com.tools20022.repository.entity;
 
-import com.tools20022.metamodel.MMBusinessAssociationEnd;
-import com.tools20022.metamodel.MMBusinessAttribute;
-import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.*;
 import com.tools20022.repository.codeset.CurrencyCode;
 import com.tools20022.repository.codeset.PaymentCode;
 import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
 import com.tools20022.repository.datatype.CurrencyAndAmount;
 import com.tools20022.repository.datatype.PercentageRate;
 import com.tools20022.repository.entity.ProceedsDefinition;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -44,45 +43,62 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
  * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CashProceedsDefinition#mmCashIncentiveRate
- * CashProceedsDefinition.mmCashIncentiveRate}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CashProceedsDefinition#mmContractualPaymentIndicator
- * CashProceedsDefinition.mmContractualPaymentIndicator}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CashProceedsDefinition#mmIncomeType
- * CashProceedsDefinition.mmIncomeType}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CashProceedsDefinition#mmIndemnityAmount
- * CashProceedsDefinition.mmIndemnityAmount}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CashProceedsDefinition#mmCashIncentiveAmount
- * CashProceedsDefinition.mmCashIncentiveAmount}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CashProceedsDefinition#mmPrincipalOrCorpus
- * CashProceedsDefinition.mmPrincipalOrCorpus}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CashProceedsDefinition#mmRedemptionPremiumAmount
- * CashProceedsDefinition.mmRedemptionPremiumAmount}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CashProceedsDefinition#mmIncomePortion
- * CashProceedsDefinition.mmIncomePortion}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CashProceedsDefinition#mmInterest
- * CashProceedsDefinition.mmInterest}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CashProceedsDefinition#mmAmount
- * CashProceedsDefinition.mmAmount}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CashProceedsDefinition#mmDividend
- * CashProceedsDefinition.mmDividend}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CashProceedsDefinition#mmPaymentCurrency
- * CashProceedsDefinition.mmPaymentCurrency}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashOption2 CashOption2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashOption9 CashOption9}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashOption12 CashOption12}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashOption13 CashOption13}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashOption18 CashOption18}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashOption22 CashOption22}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashOption26 CashOption26}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashOption27 CashOption27}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashOption3 CashOption3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashOption6 CashOption6}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashOption11 CashOption11}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashOption14 CashOption14}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashOption16 CashOption16}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashOption20 CashOption20}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashOption25 CashOption25}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashOption28 CashOption28}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashOption5 CashOption5}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashOption7 CashOption7}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashOption19 CashOption19}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashOption23 CashOption23}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashOption4 CashOption4}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashOption8 CashOption8}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashOption10 CashOption10}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashOption15 CashOption15}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashOption17 CashOption17}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashOption21 CashOption21}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashOption24 CashOption24}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashOption29 CashOption29}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashOption1 CashOption1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashProceeds1 CashProceeds1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashOption30 CashOption30}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashOption31 CashOption31}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashOption32 CashOption32}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashOption36 CashOption36}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashOption35 CashOption35}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashOption38 CashOption38}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashOption39 CashOption39}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashOption41 CashOption41}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashOption44 CashOption44}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashOption45 CashOption45}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashOption42 CashOption42}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashOption43 CashOption43}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashOption46 CashOption46}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashOption49 CashOption49}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashOption47 CashOption47}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashOption48 CashOption48}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashOption52 CashOption52}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashOption51 CashOption51}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashOption50 CashOption50}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashOption53 CashOption53}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashOption54 CashOption54}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashOption55 CashOption55}</li>
  * </ul>
  * </li>
  * <li>
@@ -267,62 +283,45 @@ import java.util.List;
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
  * superType} = {@linkplain com.tools20022.repository.entity.ProceedsDefinition
  * ProceedsDefinition}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.CashOption2 CashOption2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashOption9 CashOption9}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashOption12 CashOption12}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashOption13 CashOption13}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashOption18 CashOption18}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashOption22 CashOption22}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashOption26 CashOption26}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashOption27 CashOption27}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashOption3 CashOption3}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashOption6 CashOption6}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashOption11 CashOption11}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashOption14 CashOption14}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashOption16 CashOption16}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashOption20 CashOption20}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashOption25 CashOption25}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashOption28 CashOption28}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashOption5 CashOption5}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashOption7 CashOption7}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashOption19 CashOption19}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashOption23 CashOption23}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashOption4 CashOption4}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashOption8 CashOption8}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashOption10 CashOption10}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashOption15 CashOption15}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashOption17 CashOption17}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashOption21 CashOption21}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashOption24 CashOption24}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashOption29 CashOption29}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashOption1 CashOption1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashProceeds1 CashProceeds1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashOption30 CashOption30}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashOption31 CashOption31}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashOption32 CashOption32}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashOption36 CashOption36}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashOption35 CashOption35}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashOption38 CashOption38}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashOption39 CashOption39}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashOption41 CashOption41}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashOption44 CashOption44}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashOption45 CashOption45}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashOption42 CashOption42}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashOption43 CashOption43}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashOption46 CashOption46}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashOption49 CashOption49}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashOption47 CashOption47}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashOption48 CashOption48}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashOption52 CashOption52}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashOption51 CashOption51}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashOption50 CashOption50}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashOption53 CashOption53}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashOption54 CashOption54}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashOption55 CashOption55}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CashProceedsDefinition#mmCashIncentiveRate
+ * CashProceedsDefinition.mmCashIncentiveRate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CashProceedsDefinition#mmContractualPaymentIndicator
+ * CashProceedsDefinition.mmContractualPaymentIndicator}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CashProceedsDefinition#mmIncomeType
+ * CashProceedsDefinition.mmIncomeType}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CashProceedsDefinition#mmIndemnityAmount
+ * CashProceedsDefinition.mmIndemnityAmount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CashProceedsDefinition#mmCashIncentiveAmount
+ * CashProceedsDefinition.mmCashIncentiveAmount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CashProceedsDefinition#mmPrincipalOrCorpus
+ * CashProceedsDefinition.mmPrincipalOrCorpus}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CashProceedsDefinition#mmRedemptionPremiumAmount
+ * CashProceedsDefinition.mmRedemptionPremiumAmount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CashProceedsDefinition#mmIncomePortion
+ * CashProceedsDefinition.mmIncomePortion}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CashProceedsDefinition#mmInterest
+ * CashProceedsDefinition.mmInterest}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CashProceedsDefinition#mmAmount
+ * CashProceedsDefinition.mmAmount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CashProceedsDefinition#mmDividend
+ * CashProceedsDefinition.mmDividend}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CashProceedsDefinition#mmPaymentCurrency
+ * CashProceedsDefinition.mmPaymentCurrency}</li>
  * </ul>
  * </li>
  * <li>
@@ -460,18 +459,15 @@ public class CashProceedsDefinition extends ProceedsDefinition {
 	 */
 	public static final MMBusinessAttribute mmCashIncentiveRate = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionRate4.mmCashIncentiveRate, com.tools20022.repository.msg.CorporateActionRate10.mmCashIncentiveRate,
-					com.tools20022.repository.msg.RateDetails2.mmCashIncentiveRate, com.tools20022.repository.msg.RateDetails4.mmCashIncentiveRate, com.tools20022.repository.msg.RateDetails7.mmCashIncentiveRate,
-					com.tools20022.repository.msg.RateDetails9.mmCashIncentiveRate, com.tools20022.repository.msg.RateDetails11.mmThirdPartyIncentiveRate, com.tools20022.repository.msg.RateDetails12.mmThirdPartyIncentiveRate,
-					com.tools20022.repository.msg.CorporateActionRate5.mmCashIncentiveRate, com.tools20022.repository.msg.CorporateActionRate12.mmCashIncentiveRate, com.tools20022.repository.msg.RateDetails3.mmCashIncentiveRate,
-					com.tools20022.repository.msg.RateDetails5.mmCashIncentiveRate, com.tools20022.repository.msg.RateDetails10.mmThirdPartyIncentiveRate, com.tools20022.repository.msg.RateDetails13.mmThirdPartyIncentiveRate,
-					com.tools20022.repository.msg.RateDetails15.mmThirdPartyIncentiveRate, com.tools20022.repository.msg.RateDetails14.mmThirdPartyIncentiveRate, com.tools20022.repository.msg.RateDetails18.mmThirdPartyIncentiveRate,
-					com.tools20022.repository.msg.RateDetails21.mmThirdPartyIncentiveRate, com.tools20022.repository.msg.RateDetails23.mmThirdPartyIncentiveRate, com.tools20022.repository.msg.RateDetails22.mmThirdPartyIncentiveRate,
-					com.tools20022.repository.msg.RateDetails24.mmThirdPartyIncentiveRate, com.tools20022.repository.msg.RateDetails25.mmThirdPartyIncentiveRate, com.tools20022.repository.msg.RateDetails26.mmThirdPartyIncentiveRate,
-					com.tools20022.repository.msg.RateDetails27.mmThirdPartyIncentiveRate, com.tools20022.repository.msg.RateDetails28.mmThirdPartyIncentiveRate, com.tools20022.repository.msg.RateDetails30.mmThirdPartyIncentiveRate);
+			derivation_lazy = () -> Arrays.asList(CorporateActionRate4.mmCashIncentiveRate, CorporateActionRate10.mmCashIncentiveRate, RateDetails2.mmCashIncentiveRate, RateDetails4.mmCashIncentiveRate, RateDetails7.mmCashIncentiveRate,
+					RateDetails9.mmCashIncentiveRate, RateDetails11.mmThirdPartyIncentiveRate, RateDetails12.mmThirdPartyIncentiveRate, CorporateActionRate5.mmCashIncentiveRate, CorporateActionRate12.mmCashIncentiveRate,
+					RateDetails3.mmCashIncentiveRate, RateDetails5.mmCashIncentiveRate, RateDetails10.mmThirdPartyIncentiveRate, RateDetails13.mmThirdPartyIncentiveRate, RateDetails15.mmThirdPartyIncentiveRate,
+					RateDetails14.mmThirdPartyIncentiveRate, RateDetails18.mmThirdPartyIncentiveRate, RateDetails21.mmThirdPartyIncentiveRate, RateDetails23.mmThirdPartyIncentiveRate, RateDetails22.mmThirdPartyIncentiveRate,
+					RateDetails24.mmThirdPartyIncentiveRate, RateDetails25.mmThirdPartyIncentiveRate, RateDetails26.mmThirdPartyIncentiveRate, RateDetails27.mmThirdPartyIncentiveRate, RateDetails28.mmThirdPartyIncentiveRate,
+					RateDetails30.mmThirdPartyIncentiveRate);
 			elementContext_lazy = () -> CashProceedsDefinition.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CashIncentiveRate";
 			definition = "Cash premium made available if the securities holder consents or participates to an event, e.g. consent fees.";
 			maxOccurs = 1;
@@ -602,24 +598,16 @@ public class CashProceedsDefinition extends ProceedsDefinition {
 	 */
 	public static final MMBusinessAttribute mmContractualPaymentIndicator = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashOption2.mmContractualPaymentIndicator, com.tools20022.repository.msg.CashOption9.mmContractualPaymentIndicator,
-					com.tools20022.repository.msg.CashOption12.mmContractualPaymentIndicator, com.tools20022.repository.msg.CashOption13.mmContractualPaymentIndicator,
-					com.tools20022.repository.msg.CashOption18.mmContractualPaymentIndicator, com.tools20022.repository.msg.CashOption22.mmContractualPaymentIndicator,
-					com.tools20022.repository.msg.CashOption26.mmContractualPaymentIndicator, com.tools20022.repository.msg.CashOption27.mmContractualPaymentIndicator,
-					com.tools20022.repository.msg.CashOption3.mmContractualPaymentIndicator, com.tools20022.repository.msg.CashOption6.mmContractualPaymentIndicator, com.tools20022.repository.msg.CashOption11.mmContractualPaymentIndicator,
-					com.tools20022.repository.msg.CashOption14.mmContractualPaymentIndicator, com.tools20022.repository.msg.CashOption16.mmContractualPaymentIndicator,
-					com.tools20022.repository.msg.CashOption20.mmContractualPaymentIndicator, com.tools20022.repository.msg.CashOption25.mmContractualPaymentIndicator,
-					com.tools20022.repository.msg.CashOption28.mmContractualPaymentIndicator, com.tools20022.repository.msg.CashOption30.mmContractualPaymentIndicator,
-					com.tools20022.repository.msg.CashOption31.mmContractualPaymentIndicator, com.tools20022.repository.msg.CashOption36.mmContractualPaymentIndicator,
-					com.tools20022.repository.msg.CashOption38.mmContractualPaymentIndicator, com.tools20022.repository.msg.CashOption39.mmContractualPaymentIndicator,
-					com.tools20022.repository.msg.CashOption41.mmContractualPaymentIndicator, com.tools20022.repository.msg.CashOption44.mmContractualPaymentIndicator,
-					com.tools20022.repository.msg.CashOption42.mmContractualPaymentIndicator, com.tools20022.repository.msg.CashOption46.mmContractualPaymentIndicator,
-					com.tools20022.repository.msg.CashOption47.mmContractualPaymentIndicator, com.tools20022.repository.msg.CashOption52.mmContractualPaymentIndicator,
-					com.tools20022.repository.msg.CashOption51.mmContractualPaymentIndicator, com.tools20022.repository.msg.CashOption54.mmContractualPaymentIndicator,
-					com.tools20022.repository.msg.CashOption55.mmContractualPaymentIndicator);
+			derivation_lazy = () -> Arrays.asList(CashOption2.mmContractualPaymentIndicator, CashOption9.mmContractualPaymentIndicator, CashOption12.mmContractualPaymentIndicator, CashOption13.mmContractualPaymentIndicator,
+					CashOption18.mmContractualPaymentIndicator, CashOption22.mmContractualPaymentIndicator, CashOption26.mmContractualPaymentIndicator, CashOption27.mmContractualPaymentIndicator, CashOption3.mmContractualPaymentIndicator,
+					CashOption6.mmContractualPaymentIndicator, CashOption11.mmContractualPaymentIndicator, CashOption14.mmContractualPaymentIndicator, CashOption16.mmContractualPaymentIndicator, CashOption20.mmContractualPaymentIndicator,
+					CashOption25.mmContractualPaymentIndicator, CashOption28.mmContractualPaymentIndicator, CashOption30.mmContractualPaymentIndicator, CashOption31.mmContractualPaymentIndicator, CashOption36.mmContractualPaymentIndicator,
+					CashOption38.mmContractualPaymentIndicator, CashOption39.mmContractualPaymentIndicator, CashOption41.mmContractualPaymentIndicator, CashOption44.mmContractualPaymentIndicator, CashOption42.mmContractualPaymentIndicator,
+					CashOption46.mmContractualPaymentIndicator, CashOption47.mmContractualPaymentIndicator, CashOption52.mmContractualPaymentIndicator, CashOption51.mmContractualPaymentIndicator, CashOption54.mmContractualPaymentIndicator,
+					CashOption55.mmContractualPaymentIndicator);
 			elementContext_lazy = () -> CashProceedsDefinition.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ContractualPaymentIndicator";
 			definition = "Indicates exceptions to contractual payment service.";
 			maxOccurs = 1;
@@ -788,33 +776,23 @@ public class CashProceedsDefinition extends ProceedsDefinition {
 	 */
 	public static final MMBusinessAssociationEnd mmIncomeType = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashOption2.mmIncomeType, com.tools20022.repository.msg.CashOption9.mmIncomeType, com.tools20022.repository.msg.CashOption12.mmIncomeType,
-					com.tools20022.repository.msg.CashOption13.mmIncomeType, com.tools20022.repository.msg.CashOption18.mmIncomeType, com.tools20022.repository.msg.CashOption22.mmIncomeType,
-					com.tools20022.repository.msg.CashOption26.mmIncomeType, com.tools20022.repository.msg.CashOption27.mmIncomeType, com.tools20022.repository.msg.CashOption3.mmIncomeType,
-					com.tools20022.repository.msg.CashOption6.mmIncomeType, com.tools20022.repository.msg.CashOption11.mmIncomeType, com.tools20022.repository.msg.CashOption14.mmIncomeType,
-					com.tools20022.repository.msg.CashOption16.mmIncomeType, com.tools20022.repository.msg.CashOption20.mmIncomeType, com.tools20022.repository.msg.CashOption25.mmIncomeType,
-					com.tools20022.repository.msg.CashOption28.mmIncomeType, com.tools20022.repository.msg.CashOption4.mmIncomeType, com.tools20022.repository.msg.CashOption8.mmIncomeType,
-					com.tools20022.repository.msg.CashOption10.mmIncomeType, com.tools20022.repository.msg.CashOption15.mmIncomeType, com.tools20022.repository.msg.CashOption17.mmIncomeType,
-					com.tools20022.repository.msg.CashOption21.mmIncomeType, com.tools20022.repository.msg.CashOption24.mmIncomeType, com.tools20022.repository.msg.CashOption29.mmIncomeType,
-					com.tools20022.repository.msg.CorporateAction2.mmIncomeType, com.tools20022.repository.msg.CashOption30.mmIncomeType, com.tools20022.repository.msg.CashOption31.mmIncomeType,
-					com.tools20022.repository.msg.CashOption32.mmIncomeType, com.tools20022.repository.msg.CashOption36.mmIncomeType, com.tools20022.repository.msg.CashOption35.mmIncomeType,
-					com.tools20022.repository.msg.CashOption38.mmIncomeType, com.tools20022.repository.msg.CashOption39.mmIncomeType, com.tools20022.repository.msg.CashOption41.mmIncomeType,
-					com.tools20022.repository.msg.CashOption44.mmIncomeType, com.tools20022.repository.msg.SecuritiesOption49.mmIncomeType, com.tools20022.repository.msg.CashOption42.mmIncomeType,
-					com.tools20022.repository.msg.CashOption43.mmIncomeType, com.tools20022.repository.msg.SecuritiesOption50.mmIncomeType, com.tools20022.repository.msg.CashOption46.mmIncomeType,
-					com.tools20022.repository.msg.SecuritiesOption55.mmIncomeType, com.tools20022.repository.msg.CashOption49.mmIncomeType, com.tools20022.repository.msg.CashOption47.mmIncomeType,
-					com.tools20022.repository.msg.SecuritiesOption57.mmIncomeType, com.tools20022.repository.msg.CashOption52.mmIncomeType, com.tools20022.repository.msg.SecuritiesOption60.mmIncomeType,
-					com.tools20022.repository.msg.CashOption51.mmIncomeType, com.tools20022.repository.msg.SecuritiesOption59.mmIncomeType, com.tools20022.repository.msg.CashOption50.mmIncomeType,
-					com.tools20022.repository.msg.CashOption53.mmIncomeType, com.tools20022.repository.msg.SecuritiesOption61.mmIncomeType, com.tools20022.repository.msg.SecuritiesOption63.mmIncomeType,
-					com.tools20022.repository.msg.CashOption54.mmIncomeType, com.tools20022.repository.msg.CashOption55.mmIncomeType);
+			derivation_lazy = () -> Arrays.asList(CashOption2.mmIncomeType, CashOption9.mmIncomeType, CashOption12.mmIncomeType, CashOption13.mmIncomeType, CashOption18.mmIncomeType, CashOption22.mmIncomeType, CashOption26.mmIncomeType,
+					CashOption27.mmIncomeType, CashOption3.mmIncomeType, CashOption6.mmIncomeType, CashOption11.mmIncomeType, CashOption14.mmIncomeType, CashOption16.mmIncomeType, CashOption20.mmIncomeType, CashOption25.mmIncomeType,
+					CashOption28.mmIncomeType, CashOption4.mmIncomeType, CashOption8.mmIncomeType, CashOption10.mmIncomeType, CashOption15.mmIncomeType, CashOption17.mmIncomeType, CashOption21.mmIncomeType, CashOption24.mmIncomeType,
+					CashOption29.mmIncomeType, CorporateAction2.mmIncomeType, CashOption30.mmIncomeType, CashOption31.mmIncomeType, CashOption32.mmIncomeType, CashOption36.mmIncomeType, CashOption35.mmIncomeType, CashOption38.mmIncomeType,
+					CashOption39.mmIncomeType, CashOption41.mmIncomeType, CashOption44.mmIncomeType, SecuritiesOption49.mmIncomeType, CashOption42.mmIncomeType, CashOption43.mmIncomeType, SecuritiesOption50.mmIncomeType,
+					CashOption46.mmIncomeType, SecuritiesOption55.mmIncomeType, CashOption49.mmIncomeType, CashOption47.mmIncomeType, SecuritiesOption57.mmIncomeType, CashOption52.mmIncomeType, SecuritiesOption60.mmIncomeType,
+					CashOption51.mmIncomeType, SecuritiesOption59.mmIncomeType, CashOption50.mmIncomeType, CashOption53.mmIncomeType, SecuritiesOption61.mmIncomeType, SecuritiesOption63.mmIncomeType, CashOption54.mmIncomeType,
+					CashOption55.mmIncomeType);
 			elementContext_lazy = () -> CashProceedsDefinition.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "IncomeType";
 			definition = "Specifies the type of income.\r\nThe lists of income type codes to be used, are available on the SMPG website at www.smpg.info.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmIdentificationForCashProceedsIncome;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmObject();
 		}
 	};
@@ -966,27 +944,17 @@ public class CashProceedsDefinition extends ProceedsDefinition {
 	 */
 	public static final MMBusinessAttribute mmIndemnityAmount = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionAmounts2.mmIndemnityAmount, com.tools20022.repository.msg.CorporateActionAmounts5.mmIndemnityAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts11.mmIndemnityAmount, com.tools20022.repository.msg.CorporateActionAmounts12.mmIndemnityAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts17.mmIndemnityAmount, com.tools20022.repository.msg.CorporateActionAmounts20.mmIndemnityAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts23.mmIndemnityAmount, com.tools20022.repository.msg.CorporateActionAmounts24.mmIndemnityAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts3.mmIndemnityAmount, com.tools20022.repository.msg.CorporateActionAmounts6.mmIndemnityAmount, com.tools20022.repository.msg.CorporateActionAmounts9.mmIndemnityAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts13.mmIndemnityAmount, com.tools20022.repository.msg.CorporateActionAmounts16.mmIndemnityAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts19.mmIndemnityAmount, com.tools20022.repository.msg.CorporateActionAmounts22.mmIndemnityAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts25.mmIndemnityAmount, com.tools20022.repository.msg.CorporateActionAmounts4.mmIndemnityAmount, com.tools20022.repository.msg.CorporateActionAmounts7.mmIndemnityAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts10.mmIndemnityAmount, com.tools20022.repository.msg.CorporateActionAmounts14.mmIndemnityAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts15.mmIndemnityAmount, com.tools20022.repository.msg.CorporateActionAmounts18.mmIndemnityAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts21.mmIndemnityAmount, com.tools20022.repository.msg.CorporateActionAmounts26.mmIndemnityAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts1.mmIndemnityAmount, com.tools20022.repository.msg.CorporateActionAmounts29.mmIndemnityAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts27.mmIndemnityAmount, com.tools20022.repository.msg.CorporateActionAmounts28.mmIndemnityAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts33.mmIndemnityAmount, com.tools20022.repository.msg.CorporateActionAmounts32.mmIndemnityAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts35.mmIndemnityAmount, com.tools20022.repository.msg.CorporateActionAmounts37.mmIndemnityAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts36.mmIndemnityAmount, com.tools20022.repository.msg.CorporateActionAmounts38.mmIndemnityAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts39.mmIndemnityAmount, com.tools20022.repository.msg.CorporateActionAmounts41.mmIndemnityAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts40.mmIndemnityAmount);
+			derivation_lazy = () -> Arrays.asList(CorporateActionAmounts2.mmIndemnityAmount, CorporateActionAmounts5.mmIndemnityAmount, CorporateActionAmounts11.mmIndemnityAmount, CorporateActionAmounts12.mmIndemnityAmount,
+					CorporateActionAmounts17.mmIndemnityAmount, CorporateActionAmounts20.mmIndemnityAmount, CorporateActionAmounts23.mmIndemnityAmount, CorporateActionAmounts24.mmIndemnityAmount, CorporateActionAmounts3.mmIndemnityAmount,
+					CorporateActionAmounts6.mmIndemnityAmount, CorporateActionAmounts9.mmIndemnityAmount, CorporateActionAmounts13.mmIndemnityAmount, CorporateActionAmounts16.mmIndemnityAmount, CorporateActionAmounts19.mmIndemnityAmount,
+					CorporateActionAmounts22.mmIndemnityAmount, CorporateActionAmounts25.mmIndemnityAmount, CorporateActionAmounts4.mmIndemnityAmount, CorporateActionAmounts7.mmIndemnityAmount, CorporateActionAmounts10.mmIndemnityAmount,
+					CorporateActionAmounts14.mmIndemnityAmount, CorporateActionAmounts15.mmIndemnityAmount, CorporateActionAmounts18.mmIndemnityAmount, CorporateActionAmounts21.mmIndemnityAmount, CorporateActionAmounts26.mmIndemnityAmount,
+					CorporateActionAmounts1.mmIndemnityAmount, CorporateActionAmounts29.mmIndemnityAmount, CorporateActionAmounts27.mmIndemnityAmount, CorporateActionAmounts28.mmIndemnityAmount, CorporateActionAmounts33.mmIndemnityAmount,
+					CorporateActionAmounts32.mmIndemnityAmount, CorporateActionAmounts35.mmIndemnityAmount, CorporateActionAmounts37.mmIndemnityAmount, CorporateActionAmounts36.mmIndemnityAmount, CorporateActionAmounts38.mmIndemnityAmount,
+					CorporateActionAmounts39.mmIndemnityAmount, CorporateActionAmounts41.mmIndemnityAmount, CorporateActionAmounts40.mmIndemnityAmount);
 			elementContext_lazy = () -> CashProceedsDefinition.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "IndemnityAmount";
 			definition = "(Unique to France) Amount due to a buyer of securities dealt prior to ex date which may be subject to different rate of taxation.";
 			maxOccurs = 1;
@@ -1091,16 +1059,14 @@ public class CashProceedsDefinition extends ProceedsDefinition {
 	 */
 	public static final MMBusinessAttribute mmCashIncentiveAmount = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionAmounts2.mmCashIncentive, com.tools20022.repository.msg.CorporateActionAmounts5.mmCashIncentive,
-					com.tools20022.repository.msg.CorporateActionAmounts11.mmCashIncentive, com.tools20022.repository.msg.CorporateActionAmounts12.mmCashIncentive, com.tools20022.repository.msg.CorporateActionAmounts17.mmCashIncentive,
-					com.tools20022.repository.msg.CorporateActionAmounts20.mmCashIncentive, com.tools20022.repository.msg.CorporateActionAmounts3.mmCashIncentive, com.tools20022.repository.msg.CorporateActionAmounts6.mmCashIncentive,
-					com.tools20022.repository.msg.CorporateActionAmounts9.mmCashIncentive, com.tools20022.repository.msg.CorporateActionAmounts13.mmCashIncentive, com.tools20022.repository.msg.CorporateActionAmounts16.mmCashIncentive,
-					com.tools20022.repository.msg.CorporateActionAmounts19.mmCashIncentive, com.tools20022.repository.msg.CorporateActionAmounts4.mmCashIncentive, com.tools20022.repository.msg.CorporateActionAmounts7.mmCashIncentive,
-					com.tools20022.repository.msg.CorporateActionAmounts10.mmCashIncentive, com.tools20022.repository.msg.CorporateActionAmounts14.mmCashIncentive, com.tools20022.repository.msg.CorporateActionAmounts15.mmCashIncentive,
-					com.tools20022.repository.msg.CorporateActionAmounts18.mmCashIncentive, com.tools20022.repository.msg.CorporateActionRate2.mmCashIncentive, com.tools20022.repository.msg.CorporateActionAmounts1.mmCashIncentive);
+			derivation_lazy = () -> Arrays.asList(CorporateActionAmounts2.mmCashIncentive, CorporateActionAmounts5.mmCashIncentive, CorporateActionAmounts11.mmCashIncentive, CorporateActionAmounts12.mmCashIncentive,
+					CorporateActionAmounts17.mmCashIncentive, CorporateActionAmounts20.mmCashIncentive, CorporateActionAmounts3.mmCashIncentive, CorporateActionAmounts6.mmCashIncentive, CorporateActionAmounts9.mmCashIncentive,
+					CorporateActionAmounts13.mmCashIncentive, CorporateActionAmounts16.mmCashIncentive, CorporateActionAmounts19.mmCashIncentive, CorporateActionAmounts4.mmCashIncentive, CorporateActionAmounts7.mmCashIncentive,
+					CorporateActionAmounts10.mmCashIncentive, CorporateActionAmounts14.mmCashIncentive, CorporateActionAmounts15.mmCashIncentive, CorporateActionAmounts18.mmCashIncentive, CorporateActionRate2.mmCashIncentive,
+					CorporateActionAmounts1.mmCashIncentive);
 			elementContext_lazy = () -> CashProceedsDefinition.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CashIncentiveAmount";
 			definition = "Rate of the cash premium made available if the securities holder consents or participates to an event, e.g. consent fees.";
 			maxOccurs = 1;
@@ -1220,22 +1186,16 @@ public class CashProceedsDefinition extends ProceedsDefinition {
 	 */
 	public static final MMBusinessAttribute mmPrincipalOrCorpus = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionAmounts2.mmPrincipalOrCorpus, com.tools20022.repository.msg.CorporateActionAmounts5.mmPrincipalOrCorpus,
-					com.tools20022.repository.msg.CorporateActionAmounts11.mmPrincipalOrCorpus, com.tools20022.repository.msg.CorporateActionAmounts12.mmPrincipalOrCorpus,
-					com.tools20022.repository.msg.CorporateActionAmounts17.mmPrincipalOrCorpus, com.tools20022.repository.msg.CorporateActionAmounts20.mmPrincipalOrCorpus,
-					com.tools20022.repository.msg.CorporateActionAmounts23.mmPrincipalOrCorpus, com.tools20022.repository.msg.CorporateActionAmounts24.mmPrincipalOrCorpus,
-					com.tools20022.repository.msg.CorporateActionAmounts4.mmPrincipalOrCorpus, com.tools20022.repository.msg.CorporateActionAmounts7.mmPrincipalOrCorpus,
-					com.tools20022.repository.msg.CorporateActionAmounts10.mmPrincipalOrCorpus, com.tools20022.repository.msg.CorporateActionAmounts14.mmPrincipalOrCorpus,
-					com.tools20022.repository.msg.CorporateActionAmounts15.mmPrincipalOrCorpus, com.tools20022.repository.msg.CorporateActionAmounts18.mmPrincipalOrCorpus,
-					com.tools20022.repository.msg.CorporateActionAmounts21.mmPrincipalOrCorpus, com.tools20022.repository.msg.CorporateActionAmounts26.mmPrincipalOrCorpus,
-					com.tools20022.repository.msg.CorporateActionAmounts1.mmPrincipalOrCorpus, com.tools20022.repository.msg.CorporateActionAmounts29.mmPrincipalOrCorpus,
-					com.tools20022.repository.msg.CorporateActionAmounts27.mmPrincipalOrCorpus, com.tools20022.repository.msg.CorporateActionAmounts32.mmPrincipalOrCorpus,
-					com.tools20022.repository.msg.CorporateActionAmounts35.mmPrincipalOrCorpus, com.tools20022.repository.msg.CorporateActionAmounts37.mmPrincipalOrCorpus,
-					com.tools20022.repository.msg.CorporateActionAmounts36.mmPrincipalOrCorpus, com.tools20022.repository.msg.CorporateActionAmounts39.mmPrincipalOrCorpus,
-					com.tools20022.repository.msg.CorporateActionAmounts41.mmPrincipalOrCorpus);
+			derivation_lazy = () -> Arrays.asList(CorporateActionAmounts2.mmPrincipalOrCorpus, CorporateActionAmounts5.mmPrincipalOrCorpus, CorporateActionAmounts11.mmPrincipalOrCorpus, CorporateActionAmounts12.mmPrincipalOrCorpus,
+					CorporateActionAmounts17.mmPrincipalOrCorpus, CorporateActionAmounts20.mmPrincipalOrCorpus, CorporateActionAmounts23.mmPrincipalOrCorpus, CorporateActionAmounts24.mmPrincipalOrCorpus,
+					CorporateActionAmounts4.mmPrincipalOrCorpus, CorporateActionAmounts7.mmPrincipalOrCorpus, CorporateActionAmounts10.mmPrincipalOrCorpus, CorporateActionAmounts14.mmPrincipalOrCorpus,
+					CorporateActionAmounts15.mmPrincipalOrCorpus, CorporateActionAmounts18.mmPrincipalOrCorpus, CorporateActionAmounts21.mmPrincipalOrCorpus, CorporateActionAmounts26.mmPrincipalOrCorpus,
+					CorporateActionAmounts1.mmPrincipalOrCorpus, CorporateActionAmounts29.mmPrincipalOrCorpus, CorporateActionAmounts27.mmPrincipalOrCorpus, CorporateActionAmounts32.mmPrincipalOrCorpus,
+					CorporateActionAmounts35.mmPrincipalOrCorpus, CorporateActionAmounts37.mmPrincipalOrCorpus, CorporateActionAmounts36.mmPrincipalOrCorpus, CorporateActionAmounts39.mmPrincipalOrCorpus,
+					CorporateActionAmounts41.mmPrincipalOrCorpus);
 			elementContext_lazy = () -> CashProceedsDefinition.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PrincipalOrCorpus";
 			definition = "Amount of money representing a distribution of a bond's principal, eg, repayment of outstanding debt.";
 			maxOccurs = 1;
@@ -1355,22 +1315,16 @@ public class CashProceedsDefinition extends ProceedsDefinition {
 	 */
 	public static final MMBusinessAttribute mmRedemptionPremiumAmount = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionAmounts2.mmRedemptionPremiumAmount, com.tools20022.repository.msg.CorporateActionAmounts5.mmRedemptionPremiumAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts11.mmRedemptionPremiumAmount, com.tools20022.repository.msg.CorporateActionAmounts12.mmRedemptionPremiumAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts17.mmRedemptionPremiumAmount, com.tools20022.repository.msg.CorporateActionAmounts20.mmRedemptionPremiumAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts23.mmRedemptionPremiumAmount, com.tools20022.repository.msg.CorporateActionAmounts24.mmRedemptionPremiumAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts4.mmRedemptionPremiumAmount, com.tools20022.repository.msg.CorporateActionAmounts7.mmRedemptionPremiumAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts10.mmRedemptionPremiumAmount, com.tools20022.repository.msg.CorporateActionAmounts14.mmRedemptionPremiumAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts15.mmRedemptionPremiumAmount, com.tools20022.repository.msg.CorporateActionAmounts18.mmRedemptionPremiumAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts21.mmRedemptionPremiumAmount, com.tools20022.repository.msg.CorporateActionAmounts26.mmRedemptionPremiumAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts1.mmRedemptionPremiumAmount, com.tools20022.repository.msg.CorporateActionAmounts29.mmRedemptionPremiumAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts27.mmRedemptionPremiumAmount, com.tools20022.repository.msg.CorporateActionAmounts32.mmRedemptionPremiumAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts35.mmRedemptionPremiumAmount, com.tools20022.repository.msg.CorporateActionAmounts37.mmRedemptionPremiumAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts36.mmRedemptionPremiumAmount, com.tools20022.repository.msg.CorporateActionAmounts39.mmRedemptionPremiumAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts41.mmRedemptionPremiumAmount);
+			derivation_lazy = () -> Arrays.asList(CorporateActionAmounts2.mmRedemptionPremiumAmount, CorporateActionAmounts5.mmRedemptionPremiumAmount, CorporateActionAmounts11.mmRedemptionPremiumAmount,
+					CorporateActionAmounts12.mmRedemptionPremiumAmount, CorporateActionAmounts17.mmRedemptionPremiumAmount, CorporateActionAmounts20.mmRedemptionPremiumAmount, CorporateActionAmounts23.mmRedemptionPremiumAmount,
+					CorporateActionAmounts24.mmRedemptionPremiumAmount, CorporateActionAmounts4.mmRedemptionPremiumAmount, CorporateActionAmounts7.mmRedemptionPremiumAmount, CorporateActionAmounts10.mmRedemptionPremiumAmount,
+					CorporateActionAmounts14.mmRedemptionPremiumAmount, CorporateActionAmounts15.mmRedemptionPremiumAmount, CorporateActionAmounts18.mmRedemptionPremiumAmount, CorporateActionAmounts21.mmRedemptionPremiumAmount,
+					CorporateActionAmounts26.mmRedemptionPremiumAmount, CorporateActionAmounts1.mmRedemptionPremiumAmount, CorporateActionAmounts29.mmRedemptionPremiumAmount, CorporateActionAmounts27.mmRedemptionPremiumAmount,
+					CorporateActionAmounts32.mmRedemptionPremiumAmount, CorporateActionAmounts35.mmRedemptionPremiumAmount, CorporateActionAmounts37.mmRedemptionPremiumAmount, CorporateActionAmounts36.mmRedemptionPremiumAmount,
+					CorporateActionAmounts39.mmRedemptionPremiumAmount, CorporateActionAmounts41.mmRedemptionPremiumAmount);
 			elementContext_lazy = () -> CashProceedsDefinition.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RedemptionPremiumAmount";
 			definition = "Amount of money (not interest) in addition to the principal at the redemption of a bond.";
 			maxOccurs = 1;
@@ -1523,22 +1477,17 @@ public class CashProceedsDefinition extends ProceedsDefinition {
 	 */
 	public static final MMBusinessAttribute mmIncomePortion = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionAmounts2.mmIncomePortion, com.tools20022.repository.msg.CorporateActionAmounts5.mmIncomePortion,
-					com.tools20022.repository.msg.CorporateActionAmounts11.mmIncomePortion, com.tools20022.repository.msg.CorporateActionAmounts12.mmIncomePortion, com.tools20022.repository.msg.CorporateActionAmounts17.mmIncomePortion,
-					com.tools20022.repository.msg.CorporateActionAmounts20.mmIncomePortion, com.tools20022.repository.msg.CorporateActionAmounts23.mmIncomePortion, com.tools20022.repository.msg.CorporateActionAmounts24.mmIncomePortion,
-					com.tools20022.repository.msg.CorporateActionAmounts3.mmIncomePortion, com.tools20022.repository.msg.CorporateActionAmounts6.mmIncomePortion, com.tools20022.repository.msg.CorporateActionAmounts9.mmIncomePortion,
-					com.tools20022.repository.msg.CorporateActionAmounts13.mmIncomePortion, com.tools20022.repository.msg.CorporateActionAmounts16.mmIncomePortion, com.tools20022.repository.msg.CorporateActionAmounts19.mmIncomePortion,
-					com.tools20022.repository.msg.CorporateActionAmounts22.mmIncomePortion, com.tools20022.repository.msg.CorporateActionAmounts25.mmIncomePortion, com.tools20022.repository.msg.CorporateActionAmounts4.mmIncomePortion,
-					com.tools20022.repository.msg.CorporateActionAmounts7.mmIncomePortion, com.tools20022.repository.msg.CorporateActionAmounts10.mmIncomePortion, com.tools20022.repository.msg.CorporateActionAmounts14.mmIncomePortion,
-					com.tools20022.repository.msg.CorporateActionAmounts15.mmIncomePortion, com.tools20022.repository.msg.CorporateActionAmounts18.mmIncomePortion, com.tools20022.repository.msg.CorporateActionAmounts21.mmIncomePortion,
-					com.tools20022.repository.msg.CorporateActionAmounts26.mmIncomePortion, com.tools20022.repository.msg.CorporateActionAmounts29.mmIncomePortion, com.tools20022.repository.msg.CorporateActionAmounts27.mmIncomePortion,
-					com.tools20022.repository.msg.CorporateActionAmounts28.mmIncomePortion, com.tools20022.repository.msg.CorporateActionAmounts33.mmIncomePortion, com.tools20022.repository.msg.CorporateActionAmounts32.mmIncomePortion,
-					com.tools20022.repository.msg.CorporateActionAmounts35.mmIncomePortion, com.tools20022.repository.msg.CorporateActionAmounts37.mmIncomePortion, com.tools20022.repository.msg.CorporateActionAmounts36.mmIncomePortion,
-					com.tools20022.repository.msg.CorporateActionAmounts38.mmIncomePortion, com.tools20022.repository.msg.CorporateActionAmounts39.mmIncomePortion, com.tools20022.repository.msg.CorporateActionAmounts41.mmIncomePortion,
-					com.tools20022.repository.msg.CorporateActionAmounts40.mmIncomePortion);
+			derivation_lazy = () -> Arrays.asList(CorporateActionAmounts2.mmIncomePortion, CorporateActionAmounts5.mmIncomePortion, CorporateActionAmounts11.mmIncomePortion, CorporateActionAmounts12.mmIncomePortion,
+					CorporateActionAmounts17.mmIncomePortion, CorporateActionAmounts20.mmIncomePortion, CorporateActionAmounts23.mmIncomePortion, CorporateActionAmounts24.mmIncomePortion, CorporateActionAmounts3.mmIncomePortion,
+					CorporateActionAmounts6.mmIncomePortion, CorporateActionAmounts9.mmIncomePortion, CorporateActionAmounts13.mmIncomePortion, CorporateActionAmounts16.mmIncomePortion, CorporateActionAmounts19.mmIncomePortion,
+					CorporateActionAmounts22.mmIncomePortion, CorporateActionAmounts25.mmIncomePortion, CorporateActionAmounts4.mmIncomePortion, CorporateActionAmounts7.mmIncomePortion, CorporateActionAmounts10.mmIncomePortion,
+					CorporateActionAmounts14.mmIncomePortion, CorporateActionAmounts15.mmIncomePortion, CorporateActionAmounts18.mmIncomePortion, CorporateActionAmounts21.mmIncomePortion, CorporateActionAmounts26.mmIncomePortion,
+					CorporateActionAmounts29.mmIncomePortion, CorporateActionAmounts27.mmIncomePortion, CorporateActionAmounts28.mmIncomePortion, CorporateActionAmounts33.mmIncomePortion, CorporateActionAmounts32.mmIncomePortion,
+					CorporateActionAmounts35.mmIncomePortion, CorporateActionAmounts37.mmIncomePortion, CorporateActionAmounts36.mmIncomePortion, CorporateActionAmounts38.mmIncomePortion, CorporateActionAmounts39.mmIncomePortion,
+					CorporateActionAmounts41.mmIncomePortion, CorporateActionAmounts40.mmIncomePortion);
 			elementContext_lazy = () -> CashProceedsDefinition.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "IncomePortion";
 			definition = "Amount relating to the underlying security for which income is distributed.";
 			maxOccurs = 1;
@@ -1625,19 +1574,17 @@ public class CashProceedsDefinition extends ProceedsDefinition {
 	 */
 	public static final MMBusinessAssociationEnd mmInterest = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionRate3.mmInterest, com.tools20022.repository.msg.CorporateActionRate14.mmInterest,
-					com.tools20022.repository.msg.CorporateActionRate16.mmInterest, com.tools20022.repository.msg.CorporateActionRate24.mmInterest, com.tools20022.repository.msg.CorporateActionRate27.mmInterest,
-					com.tools20022.repository.msg.CorporateActionRate32.mmInterest, com.tools20022.repository.msg.CorporateActionRate35.mmInterest, com.tools20022.repository.msg.CorporateActionRate41.mmInterest,
-					com.tools20022.repository.msg.CorporateActionRate1.mmInterest, com.tools20022.repository.msg.CorporateActionRate43.mmInterest, com.tools20022.repository.msg.CorporateActionRate56.mmInterest,
-					com.tools20022.repository.msg.CorporateActionRate66.mmInterest, com.tools20022.repository.msg.CorporateActionRate78.mmInterest);
+			derivation_lazy = () -> Arrays.asList(CorporateActionRate3.mmInterest, CorporateActionRate14.mmInterest, CorporateActionRate16.mmInterest, CorporateActionRate24.mmInterest, CorporateActionRate27.mmInterest,
+					CorporateActionRate32.mmInterest, CorporateActionRate35.mmInterest, CorporateActionRate41.mmInterest, CorporateActionRate1.mmInterest, CorporateActionRate43.mmInterest, CorporateActionRate56.mmInterest,
+					CorporateActionRate66.mmInterest, CorporateActionRate78.mmInterest);
 			elementContext_lazy = () -> CashProceedsDefinition.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Interest";
 			definition = "Interest paid as the proceeds of a CA event.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.Interest.mmRelatedCashProceedsDefinition;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Interest.mmObject();
 		}
 	};
@@ -1672,7 +1619,7 @@ public class CashProceedsDefinition extends ProceedsDefinition {
 		{
 			elementContext_lazy = () -> CashProceedsDefinition.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Amount";
 			definition = "Cash amount which is posted.";
 			maxOccurs = 1;
@@ -1721,12 +1668,12 @@ public class CashProceedsDefinition extends ProceedsDefinition {
 		{
 			elementContext_lazy = () -> CashProceedsDefinition.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Dividend";
 			definition = "Distribution of earnings to shareholders, paid for in cash, stock, scrip issue or, rarely, in kind, eg, company products or property. The dividend amount is decided by the board of directors.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.Dividend.mmCashProceeds;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Dividend.mmObject();
 		}
 	};
@@ -1760,7 +1707,7 @@ public class CashProceedsDefinition extends ProceedsDefinition {
 		{
 			elementContext_lazy = () -> CashProceedsDefinition.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PaymentCurrency";
 			definition = "Currency for the payment of the cash proceeds.";
 			maxOccurs = 1;
@@ -1772,46 +1719,30 @@ public class CashProceedsDefinition extends ProceedsDefinition {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CashProceedsDefinition";
 				definition = "Definition of the cash proceeds for a corporate action in generic terms; that is, before applying it to specific securities holding. An example would be the definition of a dividend payment where all the information will be given in general on a per share basis.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.GenericIdentification.mmIdentificationForCashProceedsIncome, com.tools20022.repository.entity.Dividend.mmCashProceeds,
 						com.tools20022.repository.entity.Interest.mmRelatedCashProceedsDefinition);
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionOption4.mmCashMovementDetails, com.tools20022.repository.msg.CorporateActionOption14.mmCashMovementDetails,
-						com.tools20022.repository.msg.CorporateActionOption23.mmCashMovementDetails, com.tools20022.repository.msg.CorporateActionOption31.mmCashMovementDetails,
-						com.tools20022.repository.msg.CorporateActionOption37.mmCashMovementDetails, com.tools20022.repository.msg.CorporateActionOption46.mmCashMovementDetails,
-						com.tools20022.repository.msg.CorporateActionOption53.mmCashMovementDetails, com.tools20022.repository.msg.CorporateActionOption54.mmCashMovementDetails,
-						com.tools20022.repository.msg.CorporateActionOption10.mmCashMovementDetails, com.tools20022.repository.msg.CorporateActionOption15.mmCashMovementDetails,
-						com.tools20022.repository.msg.CorporateActionOption20.mmCashMovementDetails, com.tools20022.repository.msg.CorporateActionOption32.mmCashMovementDetails,
-						com.tools20022.repository.msg.CorporateActionOption35.mmCashMovementDetails, com.tools20022.repository.msg.CorporateActionOption44.mmCashMovementDetails,
-						com.tools20022.repository.msg.CorporateActionOption52.mmCashMovementDetails, com.tools20022.repository.msg.CorporateActionOption55.mmCashMovementDetails,
-						com.tools20022.repository.msg.CorporateActionOption12.mmCashMovementDetails, com.tools20022.repository.msg.CorporateActionOption16.mmCashMovementDetails,
-						com.tools20022.repository.msg.CorporateActionOption24.mmCashMovementDetails, com.tools20022.repository.msg.CorporateActionOption33.mmCashMovementDetails,
-						com.tools20022.repository.msg.CorporateActionOption39.mmCashMovementDetails, com.tools20022.repository.msg.CorporateActionOption48.mmCashMovementDetails,
-						com.tools20022.repository.msg.CorporateActionOption3.mmCashMovementDetails, com.tools20022.repository.msg.CorporateActionOption17.mmCashMovementDetails,
-						com.tools20022.repository.msg.CorporateActionOption19.mmCashMovementDetails, com.tools20022.repository.msg.CorporateActionOption34.mmCashMovementDetails,
-						com.tools20022.repository.msg.CorporateActionOption36.mmCashMovementDetails, com.tools20022.repository.msg.CorporateActionOption45.mmCashMovementDetails,
-						com.tools20022.repository.msg.CorporateActionOption51.mmCashMovementDetails, com.tools20022.repository.msg.CorporateActionOption56.mmCashMovementDetails,
-						com.tools20022.repository.msg.CorporateActionOption1.mmCashMovementDetails, com.tools20022.repository.msg.CorporateActionOption100.mmCashMovementDetails,
-						com.tools20022.repository.msg.CorporateActionOption101.mmCashMovementDetails, com.tools20022.repository.msg.CorporateActionOption102.mmCashMovementDetails,
-						com.tools20022.repository.msg.CorporateActionOption110.mmCashMovementDetails, com.tools20022.repository.msg.CorporateActionOption108.mmCashMovementDetails,
-						com.tools20022.repository.msg.CorporateActionOption106.mmCashMovementDetails, com.tools20022.repository.msg.CorporateActionOption111.mmCashMovementDetails,
-						com.tools20022.repository.msg.CorporateActionOption113.mmCashMovementDetails, com.tools20022.repository.msg.CorporateActionOption117.mmCashMovementDetails,
-						com.tools20022.repository.msg.CorporateActionOption119.mmCashMovementDetails, com.tools20022.repository.msg.CorporateActionOption115.mmCashMovementDetails,
-						com.tools20022.repository.msg.CorporateActionOption114.mmCashMovementDetails, com.tools20022.repository.msg.CorporateActionOption126.mmCashMovementDetails,
-						com.tools20022.repository.msg.CorporateActionOption124.mmCashMovementDetails, com.tools20022.repository.msg.CorporateActionOption125.mmCashMovementDetails,
-						com.tools20022.repository.msg.CorporateActionOption127.mmCashMovementDetails, com.tools20022.repository.msg.CorporateActionOption132.mmCashMovementDetails,
-						com.tools20022.repository.msg.CorporateActionOption130.mmCashMovementDetails, com.tools20022.repository.msg.CorporateActionOption129.mmCashMovementDetails,
-						com.tools20022.repository.msg.CorporateActionOption136.mmCashMovementDetails, com.tools20022.repository.msg.CorporateActionOption135.mmCashMovementDetails,
-						com.tools20022.repository.msg.CorporateActionOption133.mmCashMovementDetails);
+				derivationElement_lazy = () -> Arrays.asList(CorporateActionOption4.mmCashMovementDetails, CorporateActionOption14.mmCashMovementDetails, CorporateActionOption23.mmCashMovementDetails,
+						CorporateActionOption31.mmCashMovementDetails, CorporateActionOption37.mmCashMovementDetails, CorporateActionOption46.mmCashMovementDetails, CorporateActionOption53.mmCashMovementDetails,
+						CorporateActionOption54.mmCashMovementDetails, CorporateActionOption10.mmCashMovementDetails, CorporateActionOption15.mmCashMovementDetails, CorporateActionOption20.mmCashMovementDetails,
+						CorporateActionOption32.mmCashMovementDetails, CorporateActionOption35.mmCashMovementDetails, CorporateActionOption44.mmCashMovementDetails, CorporateActionOption52.mmCashMovementDetails,
+						CorporateActionOption55.mmCashMovementDetails, CorporateActionOption12.mmCashMovementDetails, CorporateActionOption16.mmCashMovementDetails, CorporateActionOption24.mmCashMovementDetails,
+						CorporateActionOption33.mmCashMovementDetails, CorporateActionOption39.mmCashMovementDetails, CorporateActionOption48.mmCashMovementDetails, CorporateActionOption3.mmCashMovementDetails,
+						CorporateActionOption17.mmCashMovementDetails, CorporateActionOption19.mmCashMovementDetails, CorporateActionOption34.mmCashMovementDetails, CorporateActionOption36.mmCashMovementDetails,
+						CorporateActionOption45.mmCashMovementDetails, CorporateActionOption51.mmCashMovementDetails, CorporateActionOption56.mmCashMovementDetails, CorporateActionOption1.mmCashMovementDetails,
+						CorporateActionOption100.mmCashMovementDetails, CorporateActionOption101.mmCashMovementDetails, CorporateActionOption102.mmCashMovementDetails, CorporateActionOption110.mmCashMovementDetails,
+						CorporateActionOption108.mmCashMovementDetails, CorporateActionOption106.mmCashMovementDetails, CorporateActionOption111.mmCashMovementDetails, CorporateActionOption113.mmCashMovementDetails,
+						CorporateActionOption117.mmCashMovementDetails, CorporateActionOption119.mmCashMovementDetails, CorporateActionOption115.mmCashMovementDetails, CorporateActionOption114.mmCashMovementDetails,
+						CorporateActionOption126.mmCashMovementDetails, CorporateActionOption124.mmCashMovementDetails, CorporateActionOption125.mmCashMovementDetails, CorporateActionOption127.mmCashMovementDetails,
+						CorporateActionOption132.mmCashMovementDetails, CorporateActionOption130.mmCashMovementDetails, CorporateActionOption129.mmCashMovementDetails, CorporateActionOption136.mmCashMovementDetails,
+						CorporateActionOption135.mmCashMovementDetails, CorporateActionOption133.mmCashMovementDetails);
 				superType_lazy = () -> ProceedsDefinition.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CashProceedsDefinition.mmCashIncentiveRate, com.tools20022.repository.entity.CashProceedsDefinition.mmContractualPaymentIndicator,
-						com.tools20022.repository.entity.CashProceedsDefinition.mmIncomeType, com.tools20022.repository.entity.CashProceedsDefinition.mmIndemnityAmount,
-						com.tools20022.repository.entity.CashProceedsDefinition.mmCashIncentiveAmount, com.tools20022.repository.entity.CashProceedsDefinition.mmPrincipalOrCorpus,
-						com.tools20022.repository.entity.CashProceedsDefinition.mmRedemptionPremiumAmount, com.tools20022.repository.entity.CashProceedsDefinition.mmIncomePortion,
-						com.tools20022.repository.entity.CashProceedsDefinition.mmInterest, com.tools20022.repository.entity.CashProceedsDefinition.mmAmount, com.tools20022.repository.entity.CashProceedsDefinition.mmDividend,
-						com.tools20022.repository.entity.CashProceedsDefinition.mmPaymentCurrency);
+				element_lazy = () -> Arrays.asList(CashProceedsDefinition.mmCashIncentiveRate, CashProceedsDefinition.mmContractualPaymentIndicator, CashProceedsDefinition.mmIncomeType, CashProceedsDefinition.mmIndemnityAmount,
+						CashProceedsDefinition.mmCashIncentiveAmount, CashProceedsDefinition.mmPrincipalOrCorpus, CashProceedsDefinition.mmRedemptionPremiumAmount, CashProceedsDefinition.mmIncomePortion, CashProceedsDefinition.mmInterest,
+						CashProceedsDefinition.mmAmount, CashProceedsDefinition.mmDividend, CashProceedsDefinition.mmPaymentCurrency);
 				derivationComponent_lazy = () -> Arrays.asList(CashOption2.mmObject(), CashOption9.mmObject(), CashOption12.mmObject(), CashOption13.mmObject(), CashOption18.mmObject(), CashOption22.mmObject(), CashOption26.mmObject(),
 						CashOption27.mmObject(), CashOption3.mmObject(), CashOption6.mmObject(), CashOption11.mmObject(), CashOption14.mmObject(), CashOption16.mmObject(), CashOption20.mmObject(), CashOption25.mmObject(),
 						CashOption28.mmObject(), CashOption5.mmObject(), CashOption7.mmObject(), CashOption19.mmObject(), CashOption23.mmObject(), CashOption4.mmObject(), CashOption8.mmObject(), CashOption10.mmObject(),

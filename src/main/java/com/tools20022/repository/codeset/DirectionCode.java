@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,19 +29,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.Direction1Code
+ * Direction1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>{@linkplain com.tools20022.repository.codeset.DirectionCode#mmDown
  * DirectionCode.mmDown}</li>
  * <li>{@linkplain com.tools20022.repository.codeset.DirectionCode#mmUp
  * DirectionCode.mmUp}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.Direction1Code
- * Direction1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -89,7 +91,7 @@ public class DirectionCode {
 	 */
 	public static final MMCode mmDown = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Down";
 			definition = "Down.";
 			owner_lazy = () -> DirectionCode.mmObject();
@@ -119,7 +121,7 @@ public class DirectionCode {
 	 */
 	public static final MMCode mmUp = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Up";
 			definition = "Up.";
 			owner_lazy = () -> DirectionCode.mmObject();
@@ -130,12 +132,12 @@ public class DirectionCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("DRDW");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DirectionCode";
 				definition = "Specifies the direction of a payment.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DirectionCode.mmDown, com.tools20022.repository.codeset.DirectionCode.mmUp);
+				code_lazy = () -> Arrays.asList(DirectionCode.mmDown, DirectionCode.mmUp);
 				derivation_lazy = () -> Arrays.asList(Direction1Code.mmObject());
 			}
 		});

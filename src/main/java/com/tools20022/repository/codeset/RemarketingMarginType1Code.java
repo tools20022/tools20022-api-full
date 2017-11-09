@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.RemarketingMarginTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -83,7 +85,7 @@ public class RemarketingMarginType1Code extends RemarketingMarginTypeCode {
 	 */
 	public static final MMCode mmAgreed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Agreed";
 			owner_lazy = () -> RemarketingMarginType1Code.mmObject();
 		}
@@ -106,7 +108,7 @@ public class RemarketingMarginType1Code extends RemarketingMarginTypeCode {
 	 */
 	public static final MMCode mmAlternative = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Alternative";
 			owner_lazy = () -> RemarketingMarginType1Code.mmObject();
 		}
@@ -115,12 +117,12 @@ public class RemarketingMarginType1Code extends RemarketingMarginTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("AGRE");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RemarketingMarginType1Code";
 				definition = "Specifies the type of margin.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RemarketingMarginType1Code.mmAgreed, com.tools20022.repository.codeset.RemarketingMarginType1Code.mmAlternative);
+				code_lazy = () -> Arrays.asList(RemarketingMarginType1Code.mmAgreed, RemarketingMarginType1Code.mmAlternative);
 				trace_lazy = () -> RemarketingMarginTypeCode.mmObject();
 			}
 		});

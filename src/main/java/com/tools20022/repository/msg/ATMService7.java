@@ -20,7 +20,9 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ATMServiceType4Code;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -103,10 +105,10 @@ public class ATMService7 {
 			componentContext_lazy = () -> ATMService7.mmObject();
 			isDerived = false;
 			xmlTag = "SvcTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ServiceType";
 			definition = "Describes the type of inquiry selected by the customer or the ATM.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMService5.mmServiceType;
+			previousVersion_lazy = () -> ATMService5.mmServiceType;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ATMServiceType4Code.mmObject();
@@ -143,7 +145,7 @@ public class ATMService7 {
 			componentContext_lazy = () -> ATMService7.mmObject();
 			isDerived = false;
 			xmlTag = "Lmts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Limits";
 			definition = "Limits of amounts.";
 			minOccurs = 0;
@@ -182,7 +184,7 @@ public class ATMService7 {
 			componentContext_lazy = () -> ATMService7.mmObject();
 			isDerived = false;
 			xmlTag = "PrefrdWdrwl";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreferredWithdrawal";
 			definition = "Preferred withdrawal transaction chosen by the customer.";
 			maxOccurs = 1;
@@ -195,9 +197,9 @@ public class ATMService7 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMService7.mmServiceType, com.tools20022.repository.msg.ATMService7.mmLimits, com.tools20022.repository.msg.ATMService7.mmPreferredWithdrawal);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(ATMService7.mmServiceType, ATMService7.mmLimits, ATMService7.mmPreferredWithdrawal);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ATMService7";
 				definition = "Services allowed for the customer's profile.";
 				previousVersion_lazy = () -> ATMService5.mmObject();

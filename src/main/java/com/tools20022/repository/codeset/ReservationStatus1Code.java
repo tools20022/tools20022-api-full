@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ReservationStatusCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -92,7 +94,7 @@ public class ReservationStatus1Code extends ReservationStatusCode {
 	 */
 	public static final MMCode mmEnabled = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Enabled";
 			owner_lazy = () -> ReservationStatus1Code.mmObject();
 		}
@@ -115,7 +117,7 @@ public class ReservationStatus1Code extends ReservationStatusCode {
 	 */
 	public static final MMCode mmDisabled = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Disabled";
 			owner_lazy = () -> ReservationStatus1Code.mmObject();
 		}
@@ -138,7 +140,7 @@ public class ReservationStatus1Code extends ReservationStatusCode {
 	 */
 	public static final MMCode mmDeleted = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Deleted";
 			owner_lazy = () -> ReservationStatus1Code.mmObject();
 		}
@@ -161,7 +163,7 @@ public class ReservationStatus1Code extends ReservationStatusCode {
 	 */
 	public static final MMCode mmRequested = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Requested";
 			owner_lazy = () -> ReservationStatus1Code.mmObject();
 		}
@@ -184,7 +186,7 @@ public class ReservationStatus1Code extends ReservationStatusCode {
 	 */
 	public static final MMCode mmBlocked = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Blocked";
 			owner_lazy = () -> ReservationStatus1Code.mmObject();
 		}
@@ -193,13 +195,12 @@ public class ReservationStatus1Code extends ReservationStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ENAB");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ReservationStatus1Code";
 				definition = "Specifies the current status of a limit.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ReservationStatus1Code.mmEnabled, com.tools20022.repository.codeset.ReservationStatus1Code.mmDisabled,
-						com.tools20022.repository.codeset.ReservationStatus1Code.mmDeleted, com.tools20022.repository.codeset.ReservationStatus1Code.mmRequested, com.tools20022.repository.codeset.ReservationStatus1Code.mmBlocked);
+				code_lazy = () -> Arrays.asList(ReservationStatus1Code.mmEnabled, ReservationStatus1Code.mmDisabled, ReservationStatus1Code.mmDeleted, ReservationStatus1Code.mmRequested, ReservationStatus1Code.mmBlocked);
 				trace_lazy = () -> ReservationStatusCode.mmObject();
 			}
 		});

@@ -20,6 +20,7 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.DateAndDateTimeChoice;
 import com.tools20022.repository.choice.ProfitAndLoss1Choice;
 import com.tools20022.repository.codeset.ActiveCurrencyCode;
@@ -27,7 +28,8 @@ import com.tools20022.repository.codeset.ActiveOrHistoricCurrencyCode;
 import com.tools20022.repository.codeset.IncomePreference1Code;
 import com.tools20022.repository.codeset.UKTaxGroupUnitCode;
 import com.tools20022.repository.datatype.*;
-import com.tools20022.repository.entity.SwitchExecutionRedemptionLeg;
+import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -188,10 +190,10 @@ public class SwitchRedemptionLegExecution3 {
 			componentContext_lazy = () -> SwitchRedemptionLegExecution3.mmObject();
 			isDerived = false;
 			xmlTag = "LegId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LegIdentification";
 			definition = "Unique technical identifier for an instance of a leg within a switch.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SwitchRedemptionLegExecution4.mmLegIdentification);
+			nextVersions_lazy = () -> Arrays.asList(SwitchRedemptionLegExecution4.mmLegIdentification);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -241,10 +243,10 @@ public class SwitchRedemptionLegExecution3 {
 			componentContext_lazy = () -> SwitchRedemptionLegExecution3.mmObject();
 			isDerived = false;
 			xmlTag = "LegExctnId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LegExecutionIdentification";
 			definition = "Unique identifier for an instance of a leg execution within a switch confirmation.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SwitchRedemptionLegExecution4.mmLegExecutionIdentification);
+			nextVersions_lazy = () -> Arrays.asList(SwitchRedemptionLegExecution4.mmLegExecutionIdentification);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -295,14 +297,14 @@ public class SwitchRedemptionLegExecution3 {
 	 */
 	public static final MMMessageAssociationEnd mmFinancialInstrumentDetails = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrderExecution.mmInvestmentFundTransaction;
+			businessElementTrace_lazy = () -> InvestmentFundOrderExecution.mmInvestmentFundTransaction;
 			componentContext_lazy = () -> SwitchRedemptionLegExecution3.mmObject();
 			isDerived = false;
 			xmlTag = "FinInstrmDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentDetails";
 			definition = "Investment fund class to which an investment fund order execution is related.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SwitchRedemptionLegExecution4.mmFinancialInstrumentDetails);
+			nextVersions_lazy = () -> Arrays.asList(SwitchRedemptionLegExecution4.mmFinancialInstrumentDetails);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -353,14 +355,14 @@ public class SwitchRedemptionLegExecution3 {
 	 */
 	public static final MMMessageAttribute mmUnitsNumber = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrderExecution.mmUnitsNumber;
+			businessElementTrace_lazy = () -> InvestmentFundOrderExecution.mmUnitsNumber;
 			componentContext_lazy = () -> SwitchRedemptionLegExecution3.mmObject();
 			isDerived = false;
 			xmlTag = "UnitsNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnitsNumber";
 			definition = "Number of investment funds units redeemed.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SwitchRedemptionLegExecution4.mmUnitsNumber);
+			nextVersions_lazy = () -> Arrays.asList(SwitchRedemptionLegExecution4.mmUnitsNumber);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentQuantity1.mmObject();
@@ -413,14 +415,14 @@ public class SwitchRedemptionLegExecution3 {
 	 */
 	public static final MMMessageAssociationEnd mmInvestmentAccountDetails = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundTransaction.mmInvestmentAccount;
+			businessElementTrace_lazy = () -> InvestmentFundTransaction.mmInvestmentAccount;
 			componentContext_lazy = () -> SwitchRedemptionLegExecution3.mmObject();
 			isDerived = false;
 			xmlTag = "InvstmtAcctDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestmentAccountDetails";
 			definition = "Account between an investor(s) and a fund manager or a fund. The account can contain holdings in any investment fund or investment fund class managed (or distributed) by the fund manager, within the same fund family.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SwitchRedemptionLegExecution4.mmInvestmentAccountDetails);
+			nextVersions_lazy = () -> Arrays.asList(SwitchRedemptionLegExecution4.mmInvestmentAccountDetails);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -474,14 +476,14 @@ public class SwitchRedemptionLegExecution3 {
 	 */
 	public static final MMMessageAttribute mmHoldingsRedemptionRate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.RedemptionOrder.mmHoldingsRedemptionRate;
+			businessElementTrace_lazy = () -> RedemptionOrder.mmHoldingsRedemptionRate;
 			componentContext_lazy = () -> SwitchRedemptionLegExecution3.mmObject();
 			isDerived = false;
 			xmlTag = "HldgsRedRate";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HoldingsRedemptionRate";
 			definition = "Portion of the investor's holdings, in a specific investment fund/ fund class, that is redeemed.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SwitchRedemptionLegExecution4.mmHoldingsRedemptionRate);
+			nextVersions_lazy = () -> Arrays.asList(SwitchRedemptionLegExecution4.mmHoldingsRedemptionRate);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
@@ -535,14 +537,14 @@ public class SwitchRedemptionLegExecution3 {
 	 */
 	public static final MMMessageAttribute mmNetAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.RedemptionExecution.mmRedeemedNetAmount;
+			businessElementTrace_lazy = () -> RedemptionExecution.mmRedeemedNetAmount;
 			componentContext_lazy = () -> SwitchRedemptionLegExecution3.mmObject();
 			isDerived = false;
 			xmlTag = "NetAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetAmount";
 			definition = "Amount of money paid to the investor as a result of the redemption after deduction of charges, commissions and taxes.\n[(Quantity * Price) - (Charges + Commissions +Taxes)]";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SwitchRedemptionLegExecution4.mmNetAmount);
+			nextVersions_lazy = () -> Arrays.asList(SwitchRedemptionLegExecution4.mmNetAmount);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
@@ -595,14 +597,14 @@ public class SwitchRedemptionLegExecution3 {
 	 */
 	public static final MMMessageAttribute mmGrossAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrder.mmGrossAmount;
+			businessElementTrace_lazy = () -> InvestmentFundOrder.mmGrossAmount;
 			componentContext_lazy = () -> SwitchRedemptionLegExecution3.mmObject();
 			isDerived = false;
 			xmlTag = "GrssAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GrossAmount";
 			definition = "Amount of money resulting from the redemption before deduction of  charges, commissions and taxes.\n[Quantity * Price]";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SwitchRedemptionLegExecution4.mmGrossAmount);
+			nextVersions_lazy = () -> Arrays.asList(SwitchRedemptionLegExecution4.mmGrossAmount);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
@@ -655,14 +657,14 @@ public class SwitchRedemptionLegExecution3 {
 	 */
 	public static final MMMessageAttribute mmTradeDateTime = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Trade.mmTradeDateTime;
+			businessElementTrace_lazy = () -> Trade.mmTradeDateTime;
 			componentContext_lazy = () -> SwitchRedemptionLegExecution3.mmObject();
 			isDerived = false;
 			xmlTag = "TradDtTm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeDateTime";
 			definition = "Date and time at which a price is applied, according to the terms stated in the prospectus.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SwitchRedemptionLegExecution4.mmTradeDateTime);
+			nextVersions_lazy = () -> Arrays.asList(SwitchRedemptionLegExecution4.mmTradeDateTime);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
@@ -710,14 +712,14 @@ public class SwitchRedemptionLegExecution3 {
 	 */
 	public static final MMMessageAssociationEnd mmPriceDetails = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrderExecution.mmExecutedTradePrice;
+			businessElementTrace_lazy = () -> InvestmentFundOrderExecution.mmExecutedTradePrice;
 			componentContext_lazy = () -> SwitchRedemptionLegExecution3.mmObject();
 			isDerived = false;
 			xmlTag = "PricDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PriceDetails";
 			definition = "Price at which the order was executed.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SwitchRedemptionLegExecution4.mmPriceDetails);
+			nextVersions_lazy = () -> Arrays.asList(SwitchRedemptionLegExecution4.mmPriceDetails);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -772,14 +774,14 @@ public class SwitchRedemptionLegExecution3 {
 	 */
 	public static final MMMessageAttribute mmCumDividendIndicator = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmCumDividendIndicator;
+			businessElementTrace_lazy = () -> SecuritiesPricing.mmCumDividendIndicator;
 			componentContext_lazy = () -> SwitchRedemptionLegExecution3.mmObject();
 			isDerived = false;
 			xmlTag = "CumDvddInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CumDividendIndicator";
 			definition = "Indicates whether the dividend is included, ie, cum-dividend, in the executed price. When the dividend is not included, the price will be ex-dividend.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SwitchRedemptionLegExecution4.mmCumDividendIndicator);
+			nextVersions_lazy = () -> Arrays.asList(SwitchRedemptionLegExecution4.mmCumDividendIndicator);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
@@ -832,14 +834,14 @@ public class SwitchRedemptionLegExecution3 {
 	 */
 	public static final MMMessageAttribute mmInterimProfitAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrderExecution.mmInterimProfitAmount;
+			businessElementTrace_lazy = () -> InvestmentFundOrderExecution.mmInterimProfitAmount;
 			componentContext_lazy = () -> SwitchRedemptionLegExecution3.mmObject();
 			isDerived = false;
 			xmlTag = "IntrmPrftAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterimProfitAmount";
 			definition = "Part of the price deemed as accrued income or profit rather than capital. The interim profit amount is used for tax purposes.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SwitchRedemptionLegExecution4.mmInterimProfitAmount);
+			nextVersions_lazy = () -> Arrays.asList(SwitchRedemptionLegExecution4.mmInterimProfitAmount);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> ProfitAndLoss1Choice.mmObject();
@@ -892,14 +894,14 @@ public class SwitchRedemptionLegExecution3 {
 	 */
 	public static final MMMessageAttribute mmIncomePreference = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentAccountService.mmIncomePreference;
+			businessElementTrace_lazy = () -> InvestmentAccountService.mmIncomePreference;
 			componentContext_lazy = () -> SwitchRedemptionLegExecution3.mmObject();
 			isDerived = false;
 			xmlTag = "IncmPref";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncomePreference";
 			definition = "Dividend option chosen by the account owner based on the options offered in the prospectus.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SwitchRedemptionLegExecution4.mmIncomePreference);
+			nextVersions_lazy = () -> Arrays.asList(SwitchRedemptionLegExecution4.mmIncomePreference);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> IncomePreference1Code.mmObject();
@@ -953,14 +955,14 @@ public class SwitchRedemptionLegExecution3 {
 	 */
 	public static final MMMessageAttribute mmGroup1Or2Units = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmGroup1Or2Units;
+			businessElementTrace_lazy = () -> SecuritiesQuantity.mmGroup1Or2Units;
 			componentContext_lazy = () -> SwitchRedemptionLegExecution3.mmObject();
 			isDerived = false;
 			xmlTag = "Grp1Or2Units";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Group1Or2Units";
 			definition = "Tax group to which the purchased investment fund units belong. The investor indicates to the intermediary operating pooled nominees, which type of unit is to be sold.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SwitchRedemptionLegExecution4.mmGroup1Or2Units);
+			nextVersions_lazy = () -> Arrays.asList(SwitchRedemptionLegExecution4.mmGroup1Or2Units);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> UKTaxGroupUnitCode.mmObject();
@@ -1010,14 +1012,14 @@ public class SwitchRedemptionLegExecution3 {
 	 */
 	public static final MMMessageAttribute mmRequestedSettlementCurrency = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrder.mmRequestedSettlementCurrency;
+			businessElementTrace_lazy = () -> InvestmentFundOrder.mmRequestedSettlementCurrency;
 			componentContext_lazy = () -> SwitchRedemptionLegExecution3.mmObject();
 			isDerived = false;
 			xmlTag = "ReqdSttlmCcy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestedSettlementCurrency";
 			definition = "Currency requested for settlement of cash proceeds.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SwitchRedemptionLegExecution4.mmRequestedSettlementCurrency);
+			nextVersions_lazy = () -> Arrays.asList(SwitchRedemptionLegExecution4.mmRequestedSettlementCurrency);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyCode.mmObject();
@@ -1071,14 +1073,14 @@ public class SwitchRedemptionLegExecution3 {
 	 */
 	public static final MMMessageAttribute mmRequestedNAVCurrency = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmRequestedNAVCurrency;
+			businessElementTrace_lazy = () -> InvestmentFundClass.mmRequestedNAVCurrency;
 			componentContext_lazy = () -> SwitchRedemptionLegExecution3.mmObject();
 			isDerived = false;
 			xmlTag = "ReqdNAVCcy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestedNAVCurrency";
 			definition = "Currency to be used for pricing the fund. This currency must be among the set of currencies in which the price may be expressed, as stated in the prospectus.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SwitchRedemptionLegExecution4.mmRequestedNAVCurrency);
+			nextVersions_lazy = () -> Arrays.asList(SwitchRedemptionLegExecution4.mmRequestedNAVCurrency);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyCode.mmObject();
@@ -1118,11 +1120,11 @@ public class SwitchRedemptionLegExecution3 {
 	 */
 	public static final MMMessageAssociationEnd mmChargeGeneralDetails = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundTransaction.mmTransactionCharge;
+			businessElementTrace_lazy = () -> InvestmentFundTransaction.mmTransactionCharge;
 			componentContext_lazy = () -> SwitchRedemptionLegExecution3.mmObject();
 			isDerived = false;
 			xmlTag = "ChrgGnlDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChargeGeneralDetails";
 			definition = "Amount of money associated with a service.";
 			maxOccurs = 1;
@@ -1166,11 +1168,11 @@ public class SwitchRedemptionLegExecution3 {
 	 */
 	public static final MMMessageAssociationEnd mmCommissionGeneralDetails = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Trade.mmTradeCommission;
+			businessElementTrace_lazy = () -> Trade.mmTradeCommission;
 			componentContext_lazy = () -> SwitchRedemptionLegExecution3.mmObject();
 			isDerived = false;
 			xmlTag = "ComssnGnlDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommissionGeneralDetails";
 			definition = "Commission for the execution of an investment fund order.";
 			maxOccurs = 1;
@@ -1213,11 +1215,11 @@ public class SwitchRedemptionLegExecution3 {
 	 */
 	public static final MMMessageAssociationEnd mmTaxGeneralDetails = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundTransaction.mmTransactionTax;
+			businessElementTrace_lazy = () -> InvestmentFundTransaction.mmTransactionTax;
 			componentContext_lazy = () -> SwitchRedemptionLegExecution3.mmObject();
 			isDerived = false;
 			xmlTag = "TaxGnlDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxGeneralDetails";
 			definition = "Tax applicable to execution of an investment fund order.";
 			maxOccurs = 1;
@@ -1270,14 +1272,14 @@ public class SwitchRedemptionLegExecution3 {
 	 */
 	public static final MMMessageAssociationEnd mmSettlementAndCustodyDetails = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeExecution.mmSecuritiesSettlement;
+			businessElementTrace_lazy = () -> SecuritiesTradeExecution.mmSecuritiesSettlement;
 			componentContext_lazy = () -> SwitchRedemptionLegExecution3.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmAndCtdyDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementAndCustodyDetails";
 			definition = "Parameters used to execute the settlement of an investment fund order.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SwitchRedemptionLegExecution4.mmSettlementAndCustodyDetails);
+			nextVersions_lazy = () -> Arrays.asList(SwitchRedemptionLegExecution4.mmSettlementAndCustodyDetails);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -1328,10 +1330,10 @@ public class SwitchRedemptionLegExecution3 {
 			componentContext_lazy = () -> SwitchRedemptionLegExecution3.mmObject();
 			isDerived = false;
 			xmlTag = "PhysDlvryInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PhysicalDeliveryIndicator";
 			definition = "Indicates whether the financial instrument is to be physically delivered.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SwitchRedemptionLegExecution4.mmPhysicalDeliveryIndicator);
+			nextVersions_lazy = () -> Arrays.asList(SwitchRedemptionLegExecution4.mmPhysicalDeliveryIndicator);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
@@ -1380,14 +1382,14 @@ public class SwitchRedemptionLegExecution3 {
 	 */
 	public static final MMMessageAssociationEnd mmPhysicalDeliveryDetails = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTransfer.mmPhysicalDelivery;
+			businessElementTrace_lazy = () -> SecuritiesTransfer.mmPhysicalDelivery;
 			componentContext_lazy = () -> SwitchRedemptionLegExecution3.mmObject();
 			isDerived = false;
 			xmlTag = "PhysDlvryDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PhysicalDeliveryDetails";
 			definition = "Information related to physical delivery of the securities.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SwitchRedemptionLegExecution4.mmPhysicalDeliveryDetails);
+			nextVersions_lazy = () -> Arrays.asList(SwitchRedemptionLegExecution4.mmPhysicalDeliveryDetails);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -1440,14 +1442,14 @@ public class SwitchRedemptionLegExecution3 {
 	 */
 	public static final MMMessageAttribute mmNonStandardSettlementInformation = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrderExecution.mmNonStandardSettlementInformation;
+			businessElementTrace_lazy = () -> InvestmentFundOrderExecution.mmNonStandardSettlementInformation;
 			componentContext_lazy = () -> SwitchRedemptionLegExecution3.mmObject();
 			isDerived = false;
 			xmlTag = "NonStdSttlmInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonStandardSettlementInformation";
 			definition = "Additional specific settlement information for non-regulated traded funds.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SwitchRedemptionLegExecution4.mmNonStandardSettlementInformation);
+			nextVersions_lazy = () -> Arrays.asList(SwitchRedemptionLegExecution4.mmNonStandardSettlementInformation);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
@@ -1498,14 +1500,14 @@ public class SwitchRedemptionLegExecution3 {
 	 */
 	public static final MMMessageAssociationEnd mmEqualisation = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmEqualisation;
+			businessElementTrace_lazy = () -> InvestmentFundClass.mmEqualisation;
 			componentContext_lazy = () -> SwitchRedemptionLegExecution3.mmObject();
 			isDerived = false;
 			xmlTag = "Equlstn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Equalisation";
 			definition = "Part of an investor's subscription amount that is held by the fund in order to pay incentive / performance fees at the end of the fiscal year.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SwitchRedemptionLegExecution4.mmEqualisation);
+			nextVersions_lazy = () -> Arrays.asList(SwitchRedemptionLegExecution4.mmEqualisation);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -1516,21 +1518,16 @@ public class SwitchRedemptionLegExecution3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SwitchRedemptionLegExecution3.mmLegIdentification, com.tools20022.repository.msg.SwitchRedemptionLegExecution3.mmLegExecutionIdentification,
-						com.tools20022.repository.msg.SwitchRedemptionLegExecution3.mmFinancialInstrumentDetails, com.tools20022.repository.msg.SwitchRedemptionLegExecution3.mmUnitsNumber,
-						com.tools20022.repository.msg.SwitchRedemptionLegExecution3.mmInvestmentAccountDetails, com.tools20022.repository.msg.SwitchRedemptionLegExecution3.mmHoldingsRedemptionRate,
-						com.tools20022.repository.msg.SwitchRedemptionLegExecution3.mmNetAmount, com.tools20022.repository.msg.SwitchRedemptionLegExecution3.mmGrossAmount,
-						com.tools20022.repository.msg.SwitchRedemptionLegExecution3.mmTradeDateTime, com.tools20022.repository.msg.SwitchRedemptionLegExecution3.mmPriceDetails,
-						com.tools20022.repository.msg.SwitchRedemptionLegExecution3.mmCumDividendIndicator, com.tools20022.repository.msg.SwitchRedemptionLegExecution3.mmInterimProfitAmount,
-						com.tools20022.repository.msg.SwitchRedemptionLegExecution3.mmIncomePreference, com.tools20022.repository.msg.SwitchRedemptionLegExecution3.mmGroup1Or2Units,
-						com.tools20022.repository.msg.SwitchRedemptionLegExecution3.mmRequestedSettlementCurrency, com.tools20022.repository.msg.SwitchRedemptionLegExecution3.mmRequestedNAVCurrency,
-						com.tools20022.repository.msg.SwitchRedemptionLegExecution3.mmChargeGeneralDetails, com.tools20022.repository.msg.SwitchRedemptionLegExecution3.mmCommissionGeneralDetails,
-						com.tools20022.repository.msg.SwitchRedemptionLegExecution3.mmTaxGeneralDetails, com.tools20022.repository.msg.SwitchRedemptionLegExecution3.mmSettlementAndCustodyDetails,
-						com.tools20022.repository.msg.SwitchRedemptionLegExecution3.mmPhysicalDeliveryIndicator, com.tools20022.repository.msg.SwitchRedemptionLegExecution3.mmPhysicalDeliveryDetails,
-						com.tools20022.repository.msg.SwitchRedemptionLegExecution3.mmNonStandardSettlementInformation, com.tools20022.repository.msg.SwitchRedemptionLegExecution3.mmEqualisation);
+				messageElement_lazy = () -> Arrays.asList(SwitchRedemptionLegExecution3.mmLegIdentification, SwitchRedemptionLegExecution3.mmLegExecutionIdentification, SwitchRedemptionLegExecution3.mmFinancialInstrumentDetails,
+						SwitchRedemptionLegExecution3.mmUnitsNumber, SwitchRedemptionLegExecution3.mmInvestmentAccountDetails, SwitchRedemptionLegExecution3.mmHoldingsRedemptionRate, SwitchRedemptionLegExecution3.mmNetAmount,
+						SwitchRedemptionLegExecution3.mmGrossAmount, SwitchRedemptionLegExecution3.mmTradeDateTime, SwitchRedemptionLegExecution3.mmPriceDetails, SwitchRedemptionLegExecution3.mmCumDividendIndicator,
+						SwitchRedemptionLegExecution3.mmInterimProfitAmount, SwitchRedemptionLegExecution3.mmIncomePreference, SwitchRedemptionLegExecution3.mmGroup1Or2Units, SwitchRedemptionLegExecution3.mmRequestedSettlementCurrency,
+						SwitchRedemptionLegExecution3.mmRequestedNAVCurrency, SwitchRedemptionLegExecution3.mmChargeGeneralDetails, SwitchRedemptionLegExecution3.mmCommissionGeneralDetails,
+						SwitchRedemptionLegExecution3.mmTaxGeneralDetails, SwitchRedemptionLegExecution3.mmSettlementAndCustodyDetails, SwitchRedemptionLegExecution3.mmPhysicalDeliveryIndicator,
+						SwitchRedemptionLegExecution3.mmPhysicalDeliveryDetails, SwitchRedemptionLegExecution3.mmNonStandardSettlementInformation, SwitchRedemptionLegExecution3.mmEqualisation);
 				trace_lazy = () -> SwitchExecutionRedemptionLeg.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SwitchRedemptionLegExecution3";
 				definition = "Execution of the redemption part, in a switch between investment funds or investment fund classes.";
 				nextVersions_lazy = () -> Arrays.asList(SwitchRedemptionLegExecution4.mmObject());

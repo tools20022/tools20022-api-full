@@ -20,7 +20,11 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV01;
+import com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV02;
 import com.tools20022.repository.entity.Status;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.ProprietaryReason1;
 import com.tools20022.repository.msg.ProprietaryStatusAndReason1;
 import java.util.Arrays;
@@ -136,11 +140,11 @@ public class ReplacementProcessingStatus7Choice {
 	 */
 	public static final MMMessageAssociationEnd mmAccepted = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.mmTransactionProcessingStatus;
+			businessElementTrace_lazy = () -> Status.mmTransactionProcessingStatus;
 			componentContext_lazy = () -> ReplacementProcessingStatus7Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Accptd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Accepted";
 			definition = "Replacement of the trade is accepted.";
 			maxOccurs = 1;
@@ -183,11 +187,11 @@ public class ReplacementProcessingStatus7Choice {
 	 */
 	public static final MMMessageAssociationEnd mmCompleted = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.mmTransactionProcessingStatus;
+			businessElementTrace_lazy = () -> Status.mmTransactionProcessingStatus;
 			componentContext_lazy = () -> ReplacementProcessingStatus7Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Cmpltd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Completed";
 			definition = "Replacement of the trade is completed.";
 			maxOccurs = 1;
@@ -230,11 +234,11 @@ public class ReplacementProcessingStatus7Choice {
 	 */
 	public static final MMMessageAssociationEnd mmDenied = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.mmTransactionProcessingStatus;
+			businessElementTrace_lazy = () -> Status.mmTransactionProcessingStatus;
 			componentContext_lazy = () -> ReplacementProcessingStatus7Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Dnd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Denied";
 			definition = "Replacement of the trade is denied.";
 			maxOccurs = 1;
@@ -277,11 +281,11 @@ public class ReplacementProcessingStatus7Choice {
 	 */
 	public static final MMMessageAssociationEnd mmInRepair = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.mmTransactionProcessingStatus;
+			businessElementTrace_lazy = () -> Status.mmTransactionProcessingStatus;
 			componentContext_lazy = () -> ReplacementProcessingStatus7Choice.mmObject();
 			isDerived = false;
 			xmlTag = "InRpr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InRepair";
 			definition = "Replacement of the trade is In repair.";
 			maxOccurs = 1;
@@ -324,11 +328,11 @@ public class ReplacementProcessingStatus7Choice {
 	 */
 	public static final MMMessageAssociationEnd mmPartialReplacementAccepted = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.mmTransactionProcessingStatus;
+			businessElementTrace_lazy = () -> Status.mmTransactionProcessingStatus;
 			componentContext_lazy = () -> ReplacementProcessingStatus7Choice.mmObject();
 			isDerived = false;
 			xmlTag = "PrtlRplcmntAccptd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartialReplacementAccepted";
 			definition = "Replacement of the trade is PartialReplacementAccepted.";
 			maxOccurs = 1;
@@ -371,11 +375,11 @@ public class ReplacementProcessingStatus7Choice {
 	 */
 	public static final MMMessageAssociationEnd mmPending = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.mmTransactionProcessingStatus;
+			businessElementTrace_lazy = () -> Status.mmTransactionProcessingStatus;
 			componentContext_lazy = () -> ReplacementProcessingStatus7Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Pdg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Pending";
 			definition = "Replacement of the trade is pending.";
 			maxOccurs = 1;
@@ -418,11 +422,11 @@ public class ReplacementProcessingStatus7Choice {
 	 */
 	public static final MMMessageAssociationEnd mmReceivedAtIntermediary = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.mmTransactionProcessingStatus;
+			businessElementTrace_lazy = () -> Status.mmTransactionProcessingStatus;
 			componentContext_lazy = () -> ReplacementProcessingStatus7Choice.mmObject();
 			isDerived = false;
 			xmlTag = "RcvdAtIntrmy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceivedAtIntermediary";
 			definition = "Replacement of the trade is ReceivedAtIntermediary.";
 			maxOccurs = 1;
@@ -465,11 +469,11 @@ public class ReplacementProcessingStatus7Choice {
 	 */
 	public static final MMMessageAssociationEnd mmReceivedAtStockExchange = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.mmTransactionProcessingStatus;
+			businessElementTrace_lazy = () -> Status.mmTransactionProcessingStatus;
 			componentContext_lazy = () -> ReplacementProcessingStatus7Choice.mmObject();
 			isDerived = false;
 			xmlTag = "RcvdAtStockXchg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceivedAtStockExchange";
 			definition = "Replacement of the trade is ReceivedAtStockExchange.";
 			maxOccurs = 1;
@@ -512,11 +516,11 @@ public class ReplacementProcessingStatus7Choice {
 	 */
 	public static final MMMessageAssociationEnd mmRejected = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.mmTransactionProcessingStatus;
+			businessElementTrace_lazy = () -> Status.mmTransactionProcessingStatus;
 			componentContext_lazy = () -> ReplacementProcessingStatus7Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Rjctd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rejected";
 			definition = "Replacement of the trade is rejected.";
 			maxOccurs = 1;
@@ -561,11 +565,11 @@ public class ReplacementProcessingStatus7Choice {
 	 */
 	public static final MMMessageAttribute mmModificationRequested = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.mmTransactionProcessingStatus;
+			businessElementTrace_lazy = () -> Status.mmTransactionProcessingStatus;
 			componentContext_lazy = () -> ReplacementProcessingStatus7Choice.mmObject();
 			isDerived = false;
 			xmlTag = "ModReqd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ModificationRequested";
 			definition = "Replacement of the trade is Modification Requested.";
 			maxOccurs = 1;
@@ -611,11 +615,11 @@ public class ReplacementProcessingStatus7Choice {
 	 */
 	public static final MMMessageAssociationEnd mmProprietaryStatus = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.mmTransactionProcessingStatus;
+			businessElementTrace_lazy = () -> Status.mmTransactionProcessingStatus;
 			componentContext_lazy = () -> ReplacementProcessingStatus7Choice.mmObject();
 			isDerived = false;
 			xmlTag = "PrtrySts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProprietaryStatus";
 			definition = "Provides a proprietary status and a proprietary reason of the processing status of the trade.";
 			maxOccurs = 1;
@@ -628,17 +632,14 @@ public class ReplacementProcessingStatus7Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ReplacementProcessingStatus7Choice.mmAccepted, com.tools20022.repository.choice.ReplacementProcessingStatus7Choice.mmCompleted,
-						com.tools20022.repository.choice.ReplacementProcessingStatus7Choice.mmDenied, com.tools20022.repository.choice.ReplacementProcessingStatus7Choice.mmInRepair,
-						com.tools20022.repository.choice.ReplacementProcessingStatus7Choice.mmPartialReplacementAccepted, com.tools20022.repository.choice.ReplacementProcessingStatus7Choice.mmPending,
-						com.tools20022.repository.choice.ReplacementProcessingStatus7Choice.mmReceivedAtIntermediary, com.tools20022.repository.choice.ReplacementProcessingStatus7Choice.mmReceivedAtStockExchange,
-						com.tools20022.repository.choice.ReplacementProcessingStatus7Choice.mmRejected, com.tools20022.repository.choice.ReplacementProcessingStatus7Choice.mmModificationRequested,
-						com.tools20022.repository.choice.ReplacementProcessingStatus7Choice.mmProprietaryStatus);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV01.mmReplacementProcessingStatus,
-						com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV02.mmReplacementProcessingStatus);
+				messageElement_lazy = () -> Arrays.asList(ReplacementProcessingStatus7Choice.mmAccepted, ReplacementProcessingStatus7Choice.mmCompleted, ReplacementProcessingStatus7Choice.mmDenied,
+						ReplacementProcessingStatus7Choice.mmInRepair, ReplacementProcessingStatus7Choice.mmPartialReplacementAccepted, ReplacementProcessingStatus7Choice.mmPending,
+						ReplacementProcessingStatus7Choice.mmReceivedAtIntermediary, ReplacementProcessingStatus7Choice.mmReceivedAtStockExchange, ReplacementProcessingStatus7Choice.mmRejected,
+						ReplacementProcessingStatus7Choice.mmModificationRequested, ReplacementProcessingStatus7Choice.mmProprietaryStatus);
+				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesTradeConfirmationStatusAdviceV01.mmReplacementProcessingStatus, SecuritiesTradeConfirmationStatusAdviceV02.mmReplacementProcessingStatus);
 				trace_lazy = () -> Status.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ReplacementProcessingStatus7Choice";
 				definition = "Choice of status for the replacement processing.";
 			}

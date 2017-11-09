@@ -19,6 +19,7 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.DTCBaseDisbursed1Code;
 import com.tools20022.repository.codeset.DTCEntitlementCalculationMethod1Code;
 import com.tools20022.repository.codeset.ReinvestmentIncomeClassification1Code;
@@ -26,6 +27,7 @@ import com.tools20022.repository.codeset.SecuritiesExitReason1Code;
 import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.datatype.Max3NumericText;
 import com.tools20022.repository.datatype.YesNoIndicator;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -137,7 +139,7 @@ public class SecuritiesOptionSD2 {
 			componentContext_lazy = () -> SecuritiesOptionSD2.mmObject();
 			isDerived = false;
 			xmlTag = "PlcAndNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "xPath to the element that is being extended.";
 			maxOccurs = 1;
@@ -183,7 +185,7 @@ public class SecuritiesOptionSD2 {
 			componentContext_lazy = () -> SecuritiesOptionSD2.mmObject();
 			isDerived = false;
 			xmlTag = "DTCPayMtd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCPayMethod";
 			definition = "Indicates the type of payment. Used in stock dividends processing at DTC(The Depository Trust Corporation). Valid values list will be maintained separately from the schema. ";
 			maxOccurs = 1;
@@ -229,7 +231,7 @@ public class SecuritiesOptionSD2 {
 			componentContext_lazy = () -> SecuritiesOptionSD2.mmObject();
 			isDerived = false;
 			xmlTag = "DTCPayOrdr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCPayOrder";
 			definition = "Indicates the payment order. Used in stock dividends processing at DTC (The Depository Trust Corporation).  Valid values list will be maintained separately from the schema.";
 			maxOccurs = 1;
@@ -272,7 +274,7 @@ public class SecuritiesOptionSD2 {
 			componentContext_lazy = () -> SecuritiesOptionSD2.mmObject();
 			isDerived = false;
 			xmlTag = "RinvstmtIncmClssfctn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReinvestmentIncomeClassification";
 			definition = "Income classification of the cash proceeds for dividend reinvestment .";
 			maxOccurs = 1;
@@ -315,7 +317,7 @@ public class SecuritiesOptionSD2 {
 			componentContext_lazy = () -> SecuritiesOptionSD2.mmObject();
 			isDerived = false;
 			xmlTag = "EntitlmntClctnMtd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EntitlementCalculationMethod";
 			definition = "Indicates how the entitlements were calculated optional dividends.";
 			maxOccurs = 1;
@@ -357,7 +359,7 @@ public class SecuritiesOptionSD2 {
 			componentContext_lazy = () -> SecuritiesOptionSD2.mmObject();
 			isDerived = false;
 			xmlTag = "PricBsis";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PriceBasis";
 			definition = "Price is based on either base or disbursed security. ";
 			maxOccurs = 1;
@@ -402,7 +404,7 @@ public class SecuritiesOptionSD2 {
 			componentContext_lazy = () -> SecuritiesOptionSD2.mmObject();
 			isDerived = false;
 			xmlTag = "DTCExitExpltnInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCExitExplanationIndicator";
 			definition = "Specifies the reason for DTC (The Depository Trust Corporation) to exit the shares. ";
 			maxOccurs = 1;
@@ -449,7 +451,7 @@ public class SecuritiesOptionSD2 {
 			componentContext_lazy = () -> SecuritiesOptionSD2.mmObject();
 			isDerived = false;
 			xmlTag = "ChrgFlg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChargeFlag";
 			definition = "Indicates whether a DTC (The Depository Trust Corporation) participant, using one or more payment bonds in connection with a warrant exercise, will be charged (through settlement on exercise date) the value of the upcoming interest payment on the bond(s).";
 			maxOccurs = 1;
@@ -498,7 +500,7 @@ public class SecuritiesOptionSD2 {
 			componentContext_lazy = () -> SecuritiesOptionSD2.mmObject();
 			isDerived = false;
 			xmlTag = "PrtctChrgFlg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProtectChargeFlag";
 			definition = "Indicates whether a charge is levied on the protect instructions at the time when the protect is submitted or at the time of the cover. Applies to warrants or rights exercise scenario where the holder must put up money with rights or warrants execution. When this flag is set to yes - charges are due at the time of the protect, when it is set to \"no\" changes are due when protect is covered.";
 			maxOccurs = 1;
@@ -541,7 +543,7 @@ public class SecuritiesOptionSD2 {
 			componentContext_lazy = () -> SecuritiesOptionSD2.mmObject();
 			isDerived = false;
 			xmlTag = "EstmtdPricFlg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EstimatedPriceFlag";
 			definition = "Indicates whether the price from the offeror is estimated or final. ";
 			maxOccurs = 1;
@@ -586,7 +588,7 @@ public class SecuritiesOptionSD2 {
 			componentContext_lazy = () -> SecuritiesOptionSD2.mmObject();
 			isDerived = false;
 			xmlTag = "DTCFrctnlShrInstrPrd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCFractionalShareInstructionPeriod";
 			definition = "Time period during which instructions regarding the disposition of fractional entitlements will be accepted at DTC (The Depository Trust Corporation).";
 			maxOccurs = 1;
@@ -630,7 +632,7 @@ public class SecuritiesOptionSD2 {
 			componentContext_lazy = () -> SecuritiesOptionSD2.mmObject();
 			isDerived = false;
 			xmlTag = "DTCUSTaxInstrPrd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCUSTaxInstructionPeriod";
 			definition = "Indicates the period during which the instructions for US Tax service will be accepted at DTC (The Depository Trust Corporation).";
 			maxOccurs = 1;
@@ -642,14 +644,11 @@ public class SecuritiesOptionSD2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesOptionSD2.mmPlaceAndName, com.tools20022.repository.msg.SecuritiesOptionSD2.mmDTCPayMethod,
-						com.tools20022.repository.msg.SecuritiesOptionSD2.mmDTCPayOrder, com.tools20022.repository.msg.SecuritiesOptionSD2.mmReinvestmentIncomeClassification,
-						com.tools20022.repository.msg.SecuritiesOptionSD2.mmEntitlementCalculationMethod, com.tools20022.repository.msg.SecuritiesOptionSD2.mmPriceBasis,
-						com.tools20022.repository.msg.SecuritiesOptionSD2.mmDTCExitExplanationIndicator, com.tools20022.repository.msg.SecuritiesOptionSD2.mmChargeFlag, com.tools20022.repository.msg.SecuritiesOptionSD2.mmProtectChargeFlag,
-						com.tools20022.repository.msg.SecuritiesOptionSD2.mmEstimatedPriceFlag, com.tools20022.repository.msg.SecuritiesOptionSD2.mmDTCFractionalShareInstructionPeriod,
-						com.tools20022.repository.msg.SecuritiesOptionSD2.mmDTCUSTaxInstructionPeriod);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(SecuritiesOptionSD2.mmPlaceAndName, SecuritiesOptionSD2.mmDTCPayMethod, SecuritiesOptionSD2.mmDTCPayOrder, SecuritiesOptionSD2.mmReinvestmentIncomeClassification,
+						SecuritiesOptionSD2.mmEntitlementCalculationMethod, SecuritiesOptionSD2.mmPriceBasis, SecuritiesOptionSD2.mmDTCExitExplanationIndicator, SecuritiesOptionSD2.mmChargeFlag, SecuritiesOptionSD2.mmProtectChargeFlag,
+						SecuritiesOptionSD2.mmEstimatedPriceFlag, SecuritiesOptionSD2.mmDTCFractionalShareInstructionPeriod, SecuritiesOptionSD2.mmDTCUSTaxInstructionPeriod);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SecuritiesOptionSD2";
 				definition = "Provides additional information regarding corporate action option securities movement details.";
 				nextVersions_lazy = () -> Arrays.asList(SecuritiesOptionSD5.mmObject());

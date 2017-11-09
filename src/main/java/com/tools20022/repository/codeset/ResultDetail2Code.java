@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ResultDetailCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -362,9 +364,9 @@ public class ResultDetail2Code extends ResultDetailCode {
 	 */
 	public static final MMCode mmAccountNotFound = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountNotFound";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ResultDetail4Code.mmAccountNotFound);
+			nextVersions_lazy = () -> Arrays.asList(ResultDetail4Code.mmAccountNotFound);
 			owner_lazy = () -> ResultDetail2Code.mmObject();
 		}
 	};
@@ -394,9 +396,9 @@ public class ResultDetail2Code extends ResultDetailCode {
 	 */
 	public static final MMCode mmAcquirerNotSupported = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcquirerNotSupported";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ResultDetail4Code.mmAcquirerNotSupported);
+			nextVersions_lazy = () -> Arrays.asList(ResultDetail4Code.mmAcquirerNotSupported);
 			owner_lazy = () -> ResultDetail2Code.mmObject();
 		}
 	};
@@ -426,9 +428,9 @@ public class ResultDetail2Code extends ResultDetailCode {
 	 */
 	public static final MMCode mmAMLValidation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AMLValidation";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ResultDetail4Code.mmAMLValidation);
+			nextVersions_lazy = () -> Arrays.asList(ResultDetail4Code.mmAMLValidation);
 			owner_lazy = () -> ResultDetail2Code.mmObject();
 		}
 	};
@@ -458,9 +460,9 @@ public class ResultDetail2Code extends ResultDetailCode {
 	 */
 	public static final MMCode mmAmountNotFound = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmountNotFound";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ResultDetail4Code.mmAmountNotFound);
+			nextVersions_lazy = () -> Arrays.asList(ResultDetail4Code.mmAmountNotFound);
 			owner_lazy = () -> ResultDetail2Code.mmObject();
 		}
 	};
@@ -490,9 +492,9 @@ public class ResultDetail2Code extends ResultDetailCode {
 	 */
 	public static final MMCode mmAuthenticationFailed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AuthenticationFailed";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ResultDetail4Code.mmAuthenticationFailed);
+			nextVersions_lazy = () -> Arrays.asList(ResultDetail4Code.mmAuthenticationFailed);
 			owner_lazy = () -> ResultDetail2Code.mmObject();
 		}
 	};
@@ -522,9 +524,9 @@ public class ResultDetail2Code extends ResultDetailCode {
 	 */
 	public static final MMCode mmBankNotFound = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BankNotFound";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ResultDetail4Code.mmBankNotFound);
+			nextVersions_lazy = () -> Arrays.asList(ResultDetail4Code.mmBankNotFound);
 			owner_lazy = () -> ResultDetail2Code.mmObject();
 		}
 	};
@@ -554,9 +556,9 @@ public class ResultDetail2Code extends ResultDetailCode {
 	 */
 	public static final MMCode mmCardError = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CardError";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ResultDetail4Code.mmCardError);
+			nextVersions_lazy = () -> Arrays.asList(ResultDetail4Code.mmCardError);
 			owner_lazy = () -> ResultDetail2Code.mmObject();
 		}
 	};
@@ -586,9 +588,9 @@ public class ResultDetail2Code extends ResultDetailCode {
 	 */
 	public static final MMCode mmCardVerificationFailed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CardVerificationFailed";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ResultDetail4Code.mmCardVerificationFailed);
+			nextVersions_lazy = () -> Arrays.asList(ResultDetail4Code.mmCardVerificationFailed);
 			owner_lazy = () -> ResultDetail2Code.mmObject();
 		}
 	};
@@ -618,9 +620,9 @@ public class ResultDetail2Code extends ResultDetailCode {
 	 */
 	public static final MMCode mmClosedAccount = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClosedAccount";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ResultDetail4Code.mmClosedAccount);
+			nextVersions_lazy = () -> Arrays.asList(ResultDetail4Code.mmClosedAccount);
 			owner_lazy = () -> ResultDetail2Code.mmObject();
 		}
 	};
@@ -650,9 +652,9 @@ public class ResultDetail2Code extends ResultDetailCode {
 	 */
 	public static final MMCode mmCutoverInProcess = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CutoverInProcess";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ResultDetail4Code.mmCutoverInProcess);
+			nextVersions_lazy = () -> Arrays.asList(ResultDetail4Code.mmCutoverInProcess);
 			owner_lazy = () -> ResultDetail2Code.mmObject();
 		}
 	};
@@ -682,9 +684,9 @@ public class ResultDetail2Code extends ResultDetailCode {
 	 */
 	public static final MMCode mmDatabaseError = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DatabaseError";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ResultDetail4Code.mmDatabaseError);
+			nextVersions_lazy = () -> Arrays.asList(ResultDetail4Code.mmDatabaseError);
 			owner_lazy = () -> ResultDetail2Code.mmObject();
 		}
 	};
@@ -714,9 +716,9 @@ public class ResultDetail2Code extends ResultDetailCode {
 	 */
 	public static final MMCode mmDisputedFees = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DisputedFees";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ResultDetail4Code.mmDisputedFees);
+			nextVersions_lazy = () -> Arrays.asList(ResultDetail4Code.mmDisputedFees);
 			owner_lazy = () -> ResultDetail2Code.mmObject();
 		}
 	};
@@ -746,9 +748,9 @@ public class ResultDetail2Code extends ResultDetailCode {
 	 */
 	public static final MMCode mmExceededTransactionLifeCycle = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExceededTransactionLifeCycle";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ResultDetail4Code.mmExceededTransactionLifeCycle);
+			nextVersions_lazy = () -> Arrays.asList(ResultDetail4Code.mmExceededTransactionLifeCycle);
 			owner_lazy = () -> ResultDetail2Code.mmObject();
 		}
 	};
@@ -778,9 +780,9 @@ public class ResultDetail2Code extends ResultDetailCode {
 	 */
 	public static final MMCode mmDepositAmountLimit = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DepositAmountLimit";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ResultDetail4Code.mmDepositAmountLimit);
+			nextVersions_lazy = () -> Arrays.asList(ResultDetail4Code.mmDepositAmountLimit);
 			owner_lazy = () -> ResultDetail2Code.mmObject();
 		}
 	};
@@ -810,9 +812,9 @@ public class ResultDetail2Code extends ResultDetailCode {
 	 */
 	public static final MMCode mmDepositNumberLimit = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DepositNumberLimit";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ResultDetail4Code.mmDepositNumberLimit);
+			nextVersions_lazy = () -> Arrays.asList(ResultDetail4Code.mmDepositNumberLimit);
 			owner_lazy = () -> ResultDetail2Code.mmObject();
 		}
 	};
@@ -842,9 +844,9 @@ public class ResultDetail2Code extends ResultDetailCode {
 	 */
 	public static final MMCode mmExpiredCard = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExpiredCard";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ResultDetail4Code.mmExpiredCard);
+			nextVersions_lazy = () -> Arrays.asList(ResultDetail4Code.mmExpiredCard);
 			owner_lazy = () -> ResultDetail2Code.mmObject();
 		}
 	};
@@ -874,9 +876,9 @@ public class ResultDetail2Code extends ResultDetailCode {
 	 */
 	public static final MMCode mmFallbackDeclined = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FallbackDeclined";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ResultDetail4Code.mmFallbackDeclined);
+			nextVersions_lazy = () -> Arrays.asList(ResultDetail4Code.mmFallbackDeclined);
 			owner_lazy = () -> ResultDetail2Code.mmObject();
 		}
 	};
@@ -906,9 +908,9 @@ public class ResultDetail2Code extends ResultDetailCode {
 	 */
 	public static final MMCode mmFormatError = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FormatError";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ResultDetail4Code.mmFormatError);
+			nextVersions_lazy = () -> Arrays.asList(ResultDetail4Code.mmFormatError);
 			owner_lazy = () -> ResultDetail2Code.mmObject();
 		}
 	};
@@ -938,9 +940,9 @@ public class ResultDetail2Code extends ResultDetailCode {
 	 */
 	public static final MMCode mmInProgress = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InProgress";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ResultDetail4Code.mmInProgress);
+			nextVersions_lazy = () -> Arrays.asList(ResultDetail4Code.mmInProgress);
 			owner_lazy = () -> ResultDetail2Code.mmObject();
 		}
 	};
@@ -970,9 +972,9 @@ public class ResultDetail2Code extends ResultDetailCode {
 	 */
 	public static final MMCode mmInsufficientFunds = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InsufficientFunds";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ResultDetail4Code.mmInsufficientFunds);
+			nextVersions_lazy = () -> Arrays.asList(ResultDetail4Code.mmInsufficientFunds);
 			owner_lazy = () -> ResultDetail2Code.mmObject();
 		}
 	};
@@ -1002,9 +1004,9 @@ public class ResultDetail2Code extends ResultDetailCode {
 	 */
 	public static final MMCode mmInvalidAcceptor = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvalidAcceptor";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ResultDetail4Code.mmInvalidAcceptor);
+			nextVersions_lazy = () -> Arrays.asList(ResultDetail4Code.mmInvalidAcceptor);
 			owner_lazy = () -> ResultDetail2Code.mmObject();
 		}
 	};
@@ -1034,9 +1036,9 @@ public class ResultDetail2Code extends ResultDetailCode {
 	 */
 	public static final MMCode mmInvalidAmount = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvalidAmount";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ResultDetail4Code.mmInvalidAmount);
+			nextVersions_lazy = () -> Arrays.asList(ResultDetail4Code.mmInvalidAmount);
 			owner_lazy = () -> ResultDetail2Code.mmObject();
 		}
 	};
@@ -1066,9 +1068,9 @@ public class ResultDetail2Code extends ResultDetailCode {
 	 */
 	public static final MMCode mmInvalidAddress = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvalidAddress";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ResultDetail4Code.mmInvalidAddress);
+			nextVersions_lazy = () -> Arrays.asList(ResultDetail4Code.mmInvalidAddress);
 			owner_lazy = () -> ResultDetail2Code.mmObject();
 		}
 	};
@@ -1098,9 +1100,9 @@ public class ResultDetail2Code extends ResultDetailCode {
 	 */
 	public static final MMCode mmInvalidBranch = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvalidBranch";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ResultDetail4Code.mmInvalidBranch);
+			nextVersions_lazy = () -> Arrays.asList(ResultDetail4Code.mmInvalidBranch);
 			owner_lazy = () -> ResultDetail2Code.mmObject();
 		}
 	};
@@ -1130,9 +1132,9 @@ public class ResultDetail2Code extends ResultDetailCode {
 	 */
 	public static final MMCode mmInvalidCardholderIdentification = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvalidCardholderIdentification";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ResultDetail4Code.mmInvalidCardholderIdentification);
+			nextVersions_lazy = () -> Arrays.asList(ResultDetail4Code.mmInvalidCardholderIdentification);
 			owner_lazy = () -> ResultDetail2Code.mmObject();
 		}
 	};
@@ -1162,9 +1164,9 @@ public class ResultDetail2Code extends ResultDetailCode {
 	 */
 	public static final MMCode mmInvalidCardNumber = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvalidCardNumber";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ResultDetail4Code.mmInvalidCardNumber);
+			nextVersions_lazy = () -> Arrays.asList(ResultDetail4Code.mmInvalidCardNumber);
 			owner_lazy = () -> ResultDetail2Code.mmObject();
 		}
 	};
@@ -1194,9 +1196,9 @@ public class ResultDetail2Code extends ResultDetailCode {
 	 */
 	public static final MMCode mmInvalidCertificate = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvalidCertificate";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ResultDetail4Code.mmInvalidCertificate);
+			nextVersions_lazy = () -> Arrays.asList(ResultDetail4Code.mmInvalidCertificate);
 			owner_lazy = () -> ResultDetail2Code.mmObject();
 		}
 	};
@@ -1226,9 +1228,9 @@ public class ResultDetail2Code extends ResultDetailCode {
 	 */
 	public static final MMCode mmInvalidOriginalAmount = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvalidOriginalAmount";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ResultDetail4Code.mmInvalidOriginalAmount);
+			nextVersions_lazy = () -> Arrays.asList(ResultDetail4Code.mmInvalidOriginalAmount);
 			owner_lazy = () -> ResultDetail2Code.mmObject();
 		}
 	};
@@ -1258,9 +1260,9 @@ public class ResultDetail2Code extends ResultDetailCode {
 	 */
 	public static final MMCode mmInvalidPIN = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvalidPIN";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ResultDetail4Code.mmInvalidPIN);
+			nextVersions_lazy = () -> Arrays.asList(ResultDetail4Code.mmInvalidPIN);
 			owner_lazy = () -> ResultDetail2Code.mmObject();
 		}
 	};
@@ -1290,9 +1292,9 @@ public class ResultDetail2Code extends ResultDetailCode {
 	 */
 	public static final MMCode mmInvalidToken = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvalidToken";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ResultDetail4Code.mmInvalidToken);
+			nextVersions_lazy = () -> Arrays.asList(ResultDetail4Code.mmInvalidToken);
 			owner_lazy = () -> ResultDetail2Code.mmObject();
 		}
 	};
@@ -1322,9 +1324,9 @@ public class ResultDetail2Code extends ResultDetailCode {
 	 */
 	public static final MMCode mmInvalidSignature = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvalidSignature";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ResultDetail4Code.mmInvalidSignature);
+			nextVersions_lazy = () -> Arrays.asList(ResultDetail4Code.mmInvalidSignature);
 			owner_lazy = () -> ResultDetail2Code.mmObject();
 		}
 	};
@@ -1354,9 +1356,9 @@ public class ResultDetail2Code extends ResultDetailCode {
 	 */
 	public static final MMCode mmInvalidTokenIdentification = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvalidTokenIdentification";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ResultDetail4Code.mmInvalidTokenIdentification);
+			nextVersions_lazy = () -> Arrays.asList(ResultDetail4Code.mmInvalidTokenIdentification);
 			owner_lazy = () -> ResultDetail2Code.mmObject();
 		}
 	};
@@ -1386,9 +1388,9 @@ public class ResultDetail2Code extends ResultDetailCode {
 	 */
 	public static final MMCode mmInvalidTransaction = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvalidTransaction";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ResultDetail4Code.mmInvalidTransaction);
+			nextVersions_lazy = () -> Arrays.asList(ResultDetail4Code.mmInvalidTransaction);
 			owner_lazy = () -> ResultDetail2Code.mmObject();
 		}
 	};
@@ -1418,9 +1420,9 @@ public class ResultDetail2Code extends ResultDetailCode {
 	 */
 	public static final MMCode mmInvalidTransactionDateTime = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvalidTransactionDateTime";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ResultDetail4Code.mmInvalidTransactionDateTime);
+			nextVersions_lazy = () -> Arrays.asList(ResultDetail4Code.mmInvalidTransactionDateTime);
 			owner_lazy = () -> ResultDetail2Code.mmObject();
 		}
 	};
@@ -1450,9 +1452,9 @@ public class ResultDetail2Code extends ResultDetailCode {
 	 */
 	public static final MMCode mmIssuerInoperative = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssuerInoperative";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ResultDetail4Code.mmIssuerInoperative);
+			nextVersions_lazy = () -> Arrays.asList(ResultDetail4Code.mmIssuerInoperative);
 			owner_lazy = () -> ResultDetail2Code.mmObject();
 		}
 	};
@@ -1482,9 +1484,9 @@ public class ResultDetail2Code extends ResultDetailCode {
 	 */
 	public static final MMCode mmIssuerNotFound = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssuerNotFound";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ResultDetail4Code.mmIssuerNotFound);
+			nextVersions_lazy = () -> Arrays.asList(ResultDetail4Code.mmIssuerNotFound);
 			owner_lazy = () -> ResultDetail2Code.mmObject();
 		}
 	};
@@ -1514,9 +1516,9 @@ public class ResultDetail2Code extends ResultDetailCode {
 	 */
 	public static final MMCode mmIssuerSignedOff = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssuerSignedOff";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ResultDetail4Code.mmIssuerSignedOff);
+			nextVersions_lazy = () -> Arrays.asList(ResultDetail4Code.mmIssuerSignedOff);
 			owner_lazy = () -> ResultDetail2Code.mmObject();
 		}
 	};
@@ -1546,9 +1548,9 @@ public class ResultDetail2Code extends ResultDetailCode {
 	 */
 	public static final MMCode mmIssuerTimeOut = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssuerTimeOut";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ResultDetail4Code.mmIssuerTimeOut);
+			nextVersions_lazy = () -> Arrays.asList(ResultDetail4Code.mmIssuerTimeOut);
 			owner_lazy = () -> ResultDetail2Code.mmObject();
 		}
 	};
@@ -1578,9 +1580,9 @@ public class ResultDetail2Code extends ResultDetailCode {
 	 */
 	public static final MMCode mmIssuerUnavailable = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssuerUnavailable";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ResultDetail4Code.mmIssuerUnavailable);
+			nextVersions_lazy = () -> Arrays.asList(ResultDetail4Code.mmIssuerUnavailable);
 			owner_lazy = () -> ResultDetail2Code.mmObject();
 		}
 	};
@@ -1610,9 +1612,9 @@ public class ResultDetail2Code extends ResultDetailCode {
 	 */
 	public static final MMCode mmKeyStorageSaturation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "KeyStorageSaturation";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ResultDetail4Code.mmKeyStorageSaturation);
+			nextVersions_lazy = () -> Arrays.asList(ResultDetail4Code.mmKeyStorageSaturation);
 			owner_lazy = () -> ResultDetail2Code.mmObject();
 		}
 	};
@@ -1642,9 +1644,9 @@ public class ResultDetail2Code extends ResultDetailCode {
 	 */
 	public static final MMCode mmLiabilityAccepted = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LiabilityAccepted";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ResultDetail4Code.mmLiabilityAccepted);
+			nextVersions_lazy = () -> Arrays.asList(ResultDetail4Code.mmLiabilityAccepted);
 			owner_lazy = () -> ResultDetail2Code.mmObject();
 		}
 	};
@@ -1674,9 +1676,9 @@ public class ResultDetail2Code extends ResultDetailCode {
 	 */
 	public static final MMCode mmLostCard = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LostCard";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ResultDetail4Code.mmLostCard);
+			nextVersions_lazy = () -> Arrays.asList(ResultDetail4Code.mmLostCard);
 			owner_lazy = () -> ResultDetail2Code.mmObject();
 		}
 	};
@@ -1706,9 +1708,9 @@ public class ResultDetail2Code extends ResultDetailCode {
 	 */
 	public static final MMCode mmMACError = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MACError";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ResultDetail4Code.mmMACError);
+			nextVersions_lazy = () -> Arrays.asList(ResultDetail4Code.mmMACError);
 			owner_lazy = () -> ResultDetail2Code.mmObject();
 		}
 	};
@@ -1738,9 +1740,9 @@ public class ResultDetail2Code extends ResultDetailCode {
 	 */
 	public static final MMCode mmMACKeyError = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MACKeyError";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ResultDetail4Code.mmMACKeyError);
+			nextVersions_lazy = () -> Arrays.asList(ResultDetail4Code.mmMACKeyError);
 			owner_lazy = () -> ResultDetail2Code.mmObject();
 		}
 	};
@@ -1770,9 +1772,9 @@ public class ResultDetail2Code extends ResultDetailCode {
 	 */
 	public static final MMCode mmMissingICCData = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MissingICCData";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ResultDetail4Code.mmMissingICCData);
+			nextVersions_lazy = () -> Arrays.asList(ResultDetail4Code.mmMissingICCData);
 			owner_lazy = () -> ResultDetail2Code.mmObject();
 		}
 	};
@@ -1802,9 +1804,9 @@ public class ResultDetail2Code extends ResultDetailCode {
 	 */
 	public static final MMCode mmNewPINInvalid = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewPINInvalid";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ResultDetail4Code.mmNewPINInvalid);
+			nextVersions_lazy = () -> Arrays.asList(ResultDetail4Code.mmNewPINInvalid);
 			owner_lazy = () -> ResultDetail2Code.mmObject();
 		}
 	};
@@ -1834,9 +1836,9 @@ public class ResultDetail2Code extends ResultDetailCode {
 	 */
 	public static final MMCode mmNoCardRecord = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoCardRecord";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ResultDetail4Code.mmNoCardRecord);
+			nextVersions_lazy = () -> Arrays.asList(ResultDetail4Code.mmNoCardRecord);
 			owner_lazy = () -> ResultDetail2Code.mmObject();
 		}
 	};
@@ -1866,9 +1868,9 @@ public class ResultDetail2Code extends ResultDetailCode {
 	 */
 	public static final MMCode mmNoLiabilityAccepted = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoLiabilityAccepted";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ResultDetail4Code.mmNoLiabilityAccepted);
+			nextVersions_lazy = () -> Arrays.asList(ResultDetail4Code.mmNoLiabilityAccepted);
 			owner_lazy = () -> ResultDetail2Code.mmObject();
 		}
 	};
@@ -1898,9 +1900,9 @@ public class ResultDetail2Code extends ResultDetailCode {
 	 */
 	public static final MMCode mmNotAbleToValidatePIN = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotAbleToValidatePIN";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ResultDetail4Code.mmNotAbleToValidatePIN);
+			nextVersions_lazy = () -> Arrays.asList(ResultDetail4Code.mmNotAbleToValidatePIN);
 			owner_lazy = () -> ResultDetail2Code.mmObject();
 		}
 	};
@@ -1930,9 +1932,9 @@ public class ResultDetail2Code extends ResultDetailCode {
 	 */
 	public static final MMCode mmNotPermittedToAcceptor = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotPermittedToAcceptor";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ResultDetail4Code.mmNotPermittedToAcceptor);
+			nextVersions_lazy = () -> Arrays.asList(ResultDetail4Code.mmNotPermittedToAcceptor);
 			owner_lazy = () -> ResultDetail2Code.mmObject();
 		}
 	};
@@ -1962,9 +1964,9 @@ public class ResultDetail2Code extends ResultDetailCode {
 	 */
 	public static final MMCode mmOffLineProcess = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OffLineProcess";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ResultDetail4Code.mmOffLineProcess);
+			nextVersions_lazy = () -> Arrays.asList(ResultDetail4Code.mmOffLineProcess);
 			owner_lazy = () -> ResultDetail2Code.mmObject();
 		}
 	};
@@ -1994,9 +1996,9 @@ public class ResultDetail2Code extends ResultDetailCode {
 	 */
 	public static final MMCode mmOffLineProcessAfterReferral = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OffLineProcessAfterReferral";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ResultDetail4Code.mmOffLineProcessAfterReferral);
+			nextVersions_lazy = () -> Arrays.asList(ResultDetail4Code.mmOffLineProcessAfterReferral);
 			owner_lazy = () -> ResultDetail2Code.mmObject();
 		}
 	};
@@ -2026,9 +2028,9 @@ public class ResultDetail2Code extends ResultDetailCode {
 	 */
 	public static final MMCode mmNotPermittedToCardholder = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotPermittedToCardholder";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ResultDetail4Code.mmNotPermittedToCardholder);
+			nextVersions_lazy = () -> Arrays.asList(ResultDetail4Code.mmNotPermittedToCardholder);
 			owner_lazy = () -> ResultDetail2Code.mmObject();
 		}
 	};
@@ -2058,9 +2060,9 @@ public class ResultDetail2Code extends ResultDetailCode {
 	 */
 	public static final MMCode mmOriginalDoesNotMatch = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalDoesNotMatch";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ResultDetail4Code.mmOriginalDoesNotMatch);
+			nextVersions_lazy = () -> Arrays.asList(ResultDetail4Code.mmOriginalDoesNotMatch);
 			owner_lazy = () -> ResultDetail2Code.mmObject();
 		}
 	};
@@ -2090,9 +2092,9 @@ public class ResultDetail2Code extends ResultDetailCode {
 	 */
 	public static final MMCode mmOtherError = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherError";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ResultDetail4Code.mmOtherError);
+			nextVersions_lazy = () -> Arrays.asList(ResultDetail4Code.mmOtherError);
 			owner_lazy = () -> ResultDetail2Code.mmObject();
 		}
 	};
@@ -2122,9 +2124,9 @@ public class ResultDetail2Code extends ResultDetailCode {
 	 */
 	public static final MMCode mmOutOfBalance = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OutOfBalance";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ResultDetail4Code.mmOutOfBalance);
+			nextVersions_lazy = () -> Arrays.asList(ResultDetail4Code.mmOutOfBalance);
 			owner_lazy = () -> ResultDetail2Code.mmObject();
 		}
 	};
@@ -2154,9 +2156,9 @@ public class ResultDetail2Code extends ResultDetailCode {
 	 */
 	public static final MMCode mmOutOfSequence = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OutOfSequence";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ResultDetail4Code.mmOutOfSequence);
+			nextVersions_lazy = () -> Arrays.asList(ResultDetail4Code.mmOutOfSequence);
 			owner_lazy = () -> ResultDetail2Code.mmObject();
 		}
 	};
@@ -2186,9 +2188,9 @@ public class ResultDetail2Code extends ResultDetailCode {
 	 */
 	public static final MMCode mmPINChangeRequired = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PINChangeRequired";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ResultDetail4Code.mmPINChangeRequired);
+			nextVersions_lazy = () -> Arrays.asList(ResultDetail4Code.mmPINChangeRequired);
 			owner_lazy = () -> ResultDetail2Code.mmObject();
 		}
 	};
@@ -2218,9 +2220,9 @@ public class ResultDetail2Code extends ResultDetailCode {
 	 */
 	public static final MMCode mmPINDataRequired = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PINDataRequired";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ResultDetail4Code.mmPINDataRequired);
+			nextVersions_lazy = () -> Arrays.asList(ResultDetail4Code.mmPINDataRequired);
 			owner_lazy = () -> ResultDetail2Code.mmObject();
 		}
 	};
@@ -2250,9 +2252,9 @@ public class ResultDetail2Code extends ResultDetailCode {
 	 */
 	public static final MMCode mmPINSecurityError = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PINSecurityError";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ResultDetail4Code.mmPINSecurityError);
+			nextVersions_lazy = () -> Arrays.asList(ResultDetail4Code.mmPINSecurityError);
 			owner_lazy = () -> ResultDetail2Code.mmObject();
 		}
 	};
@@ -2282,9 +2284,9 @@ public class ResultDetail2Code extends ResultDetailCode {
 	 */
 	public static final MMCode mmPINTriesExceeded = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PINTriesExceeded";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ResultDetail4Code.mmPINTriesExceeded);
+			nextVersions_lazy = () -> Arrays.asList(ResultDetail4Code.mmPINTriesExceeded);
 			owner_lazy = () -> ResultDetail2Code.mmObject();
 		}
 	};
@@ -2314,9 +2316,9 @@ public class ResultDetail2Code extends ResultDetailCode {
 	 */
 	public static final MMCode mmPINEncryptionError = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PINEncryptionError";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ResultDetail4Code.mmPINEncryptionError);
+			nextVersions_lazy = () -> Arrays.asList(ResultDetail4Code.mmPINEncryptionError);
 			owner_lazy = () -> ResultDetail2Code.mmObject();
 		}
 	};
@@ -2346,9 +2348,9 @@ public class ResultDetail2Code extends ResultDetailCode {
 	 */
 	public static final MMCode mmQueueMaximumExceeded = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QueueMaximumExceeded";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ResultDetail4Code.mmQueueMaximumExceeded);
+			nextVersions_lazy = () -> Arrays.asList(ResultDetail4Code.mmQueueMaximumExceeded);
 			owner_lazy = () -> ResultDetail2Code.mmObject();
 		}
 	};
@@ -2378,9 +2380,9 @@ public class ResultDetail2Code extends ResultDetailCode {
 	 */
 	public static final MMCode mmRecurringDataError = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RecurringDataError";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ResultDetail4Code.mmRecurringDataError);
+			nextVersions_lazy = () -> Arrays.asList(ResultDetail4Code.mmRecurringDataError);
 			owner_lazy = () -> ResultDetail2Code.mmObject();
 		}
 	};
@@ -2410,9 +2412,9 @@ public class ResultDetail2Code extends ResultDetailCode {
 	 */
 	public static final MMCode mmRestrictedCard = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RestrictedCard";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ResultDetail4Code.mmRestrictedCard);
+			nextVersions_lazy = () -> Arrays.asList(ResultDetail4Code.mmRestrictedCard);
 			owner_lazy = () -> ResultDetail2Code.mmObject();
 		}
 	};
@@ -2442,9 +2444,9 @@ public class ResultDetail2Code extends ResultDetailCode {
 	 */
 	public static final MMCode mmSecurityViolation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityViolation";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ResultDetail4Code.mmSecurityViolation);
+			nextVersions_lazy = () -> Arrays.asList(ResultDetail4Code.mmSecurityViolation);
 			owner_lazy = () -> ResultDetail2Code.mmObject();
 		}
 	};
@@ -2474,9 +2476,9 @@ public class ResultDetail2Code extends ResultDetailCode {
 	 */
 	public static final MMCode mmServiceNotEnabled = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ServiceNotEnabled";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ResultDetail4Code.mmServiceNotEnabled);
+			nextVersions_lazy = () -> Arrays.asList(ResultDetail4Code.mmServiceNotEnabled);
 			owner_lazy = () -> ResultDetail2Code.mmObject();
 		}
 	};
@@ -2506,9 +2508,9 @@ public class ResultDetail2Code extends ResultDetailCode {
 	 */
 	public static final MMCode mmSoftwareOrHardwareError = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SoftwareOrHardwareError";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ResultDetail4Code.mmSoftwareOrHardwareError);
+			nextVersions_lazy = () -> Arrays.asList(ResultDetail4Code.mmSoftwareOrHardwareError);
 			owner_lazy = () -> ResultDetail2Code.mmObject();
 		}
 	};
@@ -2538,9 +2540,9 @@ public class ResultDetail2Code extends ResultDetailCode {
 	 */
 	public static final MMCode mmSpecialConditions = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SpecialConditions";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ResultDetail4Code.mmSpecialConditions);
+			nextVersions_lazy = () -> Arrays.asList(ResultDetail4Code.mmSpecialConditions);
 			owner_lazy = () -> ResultDetail2Code.mmObject();
 		}
 	};
@@ -2570,9 +2572,9 @@ public class ResultDetail2Code extends ResultDetailCode {
 	 */
 	public static final MMCode mmStolenCard = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StolenCard";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ResultDetail4Code.mmStolenCard);
+			nextVersions_lazy = () -> Arrays.asList(ResultDetail4Code.mmStolenCard);
 			owner_lazy = () -> ResultDetail2Code.mmObject();
 		}
 	};
@@ -2602,9 +2604,9 @@ public class ResultDetail2Code extends ResultDetailCode {
 	 */
 	public static final MMCode mmSurchargeNotPermitted = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SurchargeNotPermitted";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ResultDetail4Code.mmSurchargeNotPermitted);
+			nextVersions_lazy = () -> Arrays.asList(ResultDetail4Code.mmSurchargeNotPermitted);
 			owner_lazy = () -> ResultDetail2Code.mmObject();
 		}
 	};
@@ -2634,9 +2636,9 @@ public class ResultDetail2Code extends ResultDetailCode {
 	 */
 	public static final MMCode mmSuspectedCounterfeitCard = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SuspectedCounterfeitCard";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ResultDetail4Code.mmSuspectedCounterfeitCard);
+			nextVersions_lazy = () -> Arrays.asList(ResultDetail4Code.mmSuspectedCounterfeitCard);
 			owner_lazy = () -> ResultDetail2Code.mmObject();
 		}
 	};
@@ -2666,9 +2668,9 @@ public class ResultDetail2Code extends ResultDetailCode {
 	 */
 	public static final MMCode mmSuspectedFraud = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SuspectedFraud";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ResultDetail4Code.mmSuspectedFraud);
+			nextVersions_lazy = () -> Arrays.asList(ResultDetail4Code.mmSuspectedFraud);
 			owner_lazy = () -> ResultDetail2Code.mmObject();
 		}
 	};
@@ -2698,9 +2700,9 @@ public class ResultDetail2Code extends ResultDetailCode {
 	 */
 	public static final MMCode mmSystemInoperative = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SystemInoperative";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ResultDetail4Code.mmSystemInoperative);
+			nextVersions_lazy = () -> Arrays.asList(ResultDetail4Code.mmSystemInoperative);
 			owner_lazy = () -> ResultDetail2Code.mmObject();
 		}
 	};
@@ -2730,9 +2732,9 @@ public class ResultDetail2Code extends ResultDetailCode {
 	 */
 	public static final MMCode mmSystemMalfunction = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SystemMalfunction";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ResultDetail4Code.mmSystemMalfunction);
+			nextVersions_lazy = () -> Arrays.asList(ResultDetail4Code.mmSystemMalfunction);
 			owner_lazy = () -> ResultDetail2Code.mmObject();
 		}
 	};
@@ -2762,9 +2764,9 @@ public class ResultDetail2Code extends ResultDetailCode {
 	 */
 	public static final MMCode mmTerminalNotConfigured = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TerminalNotConfigured";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ResultDetail4Code.mmTerminalNotConfigured);
+			nextVersions_lazy = () -> Arrays.asList(ResultDetail4Code.mmTerminalNotConfigured);
 			owner_lazy = () -> ResultDetail2Code.mmObject();
 		}
 	};
@@ -2794,9 +2796,9 @@ public class ResultDetail2Code extends ResultDetailCode {
 	 */
 	public static final MMCode mmToAccountError = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ToAccountError";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ResultDetail4Code.mmToAccountError);
+			nextVersions_lazy = () -> Arrays.asList(ResultDetail4Code.mmToAccountError);
 			owner_lazy = () -> ResultDetail2Code.mmObject();
 		}
 	};
@@ -2826,9 +2828,9 @@ public class ResultDetail2Code extends ResultDetailCode {
 	 */
 	public static final MMCode mmTotalsNotAvailable = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalsNotAvailable";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ResultDetail4Code.mmTotalsNotAvailable);
+			nextVersions_lazy = () -> Arrays.asList(ResultDetail4Code.mmTotalsNotAvailable);
 			owner_lazy = () -> ResultDetail2Code.mmObject();
 		}
 	};
@@ -2858,9 +2860,9 @@ public class ResultDetail2Code extends ResultDetailCode {
 	 */
 	public static final MMCode mmTransactionDidNotComplete = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionDidNotComplete";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ResultDetail4Code.mmTransactionDidNotComplete);
+			nextVersions_lazy = () -> Arrays.asList(ResultDetail4Code.mmTransactionDidNotComplete);
 			owner_lazy = () -> ResultDetail2Code.mmObject();
 		}
 	};
@@ -2890,9 +2892,9 @@ public class ResultDetail2Code extends ResultDetailCode {
 	 */
 	public static final MMCode mmTransactionDuplicate = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionDuplicate";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ResultDetail4Code.mmTransactionDuplicate);
+			nextVersions_lazy = () -> Arrays.asList(ResultDetail4Code.mmTransactionDuplicate);
 			owner_lazy = () -> ResultDetail2Code.mmObject();
 		}
 	};
@@ -2922,9 +2924,9 @@ public class ResultDetail2Code extends ResultDetailCode {
 	 */
 	public static final MMCode mmUnableToFindOriginal = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnableToFindOriginal";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ResultDetail4Code.mmUnableToFindOriginal);
+			nextVersions_lazy = () -> Arrays.asList(ResultDetail4Code.mmUnableToFindOriginal);
 			owner_lazy = () -> ResultDetail2Code.mmObject();
 		}
 	};
@@ -2954,9 +2956,9 @@ public class ResultDetail2Code extends ResultDetailCode {
 	 */
 	public static final MMCode mmUnableToGoOnLine = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnableToGoOnLine";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ResultDetail4Code.mmUnableToGoOnLine);
+			nextVersions_lazy = () -> Arrays.asList(ResultDetail4Code.mmUnableToGoOnLine);
 			owner_lazy = () -> ResultDetail2Code.mmObject();
 		}
 	};
@@ -2986,9 +2988,9 @@ public class ResultDetail2Code extends ResultDetailCode {
 	 */
 	public static final MMCode mmUnableToProcessOffLine = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnableToProcessOffLine";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ResultDetail4Code.mmUnableToProcessOffLine);
+			nextVersions_lazy = () -> Arrays.asList(ResultDetail4Code.mmUnableToProcessOffLine);
 			owner_lazy = () -> ResultDetail2Code.mmObject();
 		}
 	};
@@ -3018,9 +3020,9 @@ public class ResultDetail2Code extends ResultDetailCode {
 	 */
 	public static final MMCode mmUnacceptableCurrency = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnacceptableCurrency";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ResultDetail4Code.mmUnacceptableCurrency);
+			nextVersions_lazy = () -> Arrays.asList(ResultDetail4Code.mmUnacceptableCurrency);
 			owner_lazy = () -> ResultDetail2Code.mmObject();
 		}
 	};
@@ -3050,9 +3052,9 @@ public class ResultDetail2Code extends ResultDetailCode {
 	 */
 	public static final MMCode mmUnavailablecommunicationKey = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnavailablecommunicationKey";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ResultDetail4Code.mmUnavailablecommunicationKey);
+			nextVersions_lazy = () -> Arrays.asList(ResultDetail4Code.mmUnavailablecommunicationKey);
 			owner_lazy = () -> ResultDetail2Code.mmObject();
 		}
 	};
@@ -3082,9 +3084,9 @@ public class ResultDetail2Code extends ResultDetailCode {
 	 */
 	public static final MMCode mmUneffectiveCard = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UneffectiveCard";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ResultDetail4Code.mmUneffectiveCard);
+			nextVersions_lazy = () -> Arrays.asList(ResultDetail4Code.mmUneffectiveCard);
 			owner_lazy = () -> ResultDetail2Code.mmObject();
 		}
 	};
@@ -3114,9 +3116,9 @@ public class ResultDetail2Code extends ResultDetailCode {
 	 */
 	public static final MMCode mmUnsupportedService = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnsupportedService";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ResultDetail4Code.mmUnsupportedService);
+			nextVersions_lazy = () -> Arrays.asList(ResultDetail4Code.mmUnsupportedService);
 			owner_lazy = () -> ResultDetail2Code.mmObject();
 		}
 	};
@@ -3146,9 +3148,9 @@ public class ResultDetail2Code extends ResultDetailCode {
 	 */
 	public static final MMCode mmVendorFormatError = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VendorFormatError";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ResultDetail4Code.mmVendorFormatError);
+			nextVersions_lazy = () -> Arrays.asList(ResultDetail4Code.mmVendorFormatError);
 			owner_lazy = () -> ResultDetail2Code.mmObject();
 		}
 	};
@@ -3178,9 +3180,9 @@ public class ResultDetail2Code extends ResultDetailCode {
 	 */
 	public static final MMCode mmVendorNotFound = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VendorNotFound";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ResultDetail4Code.mmVendorNotFound);
+			nextVersions_lazy = () -> Arrays.asList(ResultDetail4Code.mmVendorNotFound);
 			owner_lazy = () -> ResultDetail2Code.mmObject();
 		}
 	};
@@ -3210,9 +3212,9 @@ public class ResultDetail2Code extends ResultDetailCode {
 	 */
 	public static final MMCode mmWithdrawalAmountLimit = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WithdrawalAmountLimit";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ResultDetail4Code.mmWithdrawalAmountLimit);
+			nextVersions_lazy = () -> Arrays.asList(ResultDetail4Code.mmWithdrawalAmountLimit);
 			owner_lazy = () -> ResultDetail2Code.mmObject();
 		}
 	};
@@ -3242,9 +3244,9 @@ public class ResultDetail2Code extends ResultDetailCode {
 	 */
 	public static final MMCode mmWithdrawalNumberLimit = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WithdrawalNumberLimit";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ResultDetail4Code.mmWithdrawalNumberLimit);
+			nextVersions_lazy = () -> Arrays.asList(ResultDetail4Code.mmWithdrawalNumberLimit);
 			owner_lazy = () -> ResultDetail2Code.mmObject();
 		}
 	};
@@ -3274,9 +3276,9 @@ public class ResultDetail2Code extends ResultDetailCode {
 	 */
 	public static final MMCode mmWrongCard = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WrongCard";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ResultDetail4Code.mmWrongCard);
+			nextVersions_lazy = () -> Arrays.asList(ResultDetail4Code.mmWrongCard);
 			owner_lazy = () -> ResultDetail2Code.mmObject();
 		}
 	};
@@ -3284,51 +3286,29 @@ public class ResultDetail2Code extends ResultDetailCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ResultDetail2Code";
 				definition = "Detail of the response to an ATM.";
 				nextVersions_lazy = () -> Arrays.asList(ResultDetail4Code.mmObject());
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ResultDetail2Code.mmAccountNotFound, com.tools20022.repository.codeset.ResultDetail2Code.mmAcquirerNotSupported,
-						com.tools20022.repository.codeset.ResultDetail2Code.mmAMLValidation, com.tools20022.repository.codeset.ResultDetail2Code.mmAmountNotFound, com.tools20022.repository.codeset.ResultDetail2Code.mmAuthenticationFailed,
-						com.tools20022.repository.codeset.ResultDetail2Code.mmBankNotFound, com.tools20022.repository.codeset.ResultDetail2Code.mmCardError, com.tools20022.repository.codeset.ResultDetail2Code.mmCardVerificationFailed,
-						com.tools20022.repository.codeset.ResultDetail2Code.mmClosedAccount, com.tools20022.repository.codeset.ResultDetail2Code.mmCutoverInProcess, com.tools20022.repository.codeset.ResultDetail2Code.mmDatabaseError,
-						com.tools20022.repository.codeset.ResultDetail2Code.mmDisputedFees, com.tools20022.repository.codeset.ResultDetail2Code.mmExceededTransactionLifeCycle,
-						com.tools20022.repository.codeset.ResultDetail2Code.mmDepositAmountLimit, com.tools20022.repository.codeset.ResultDetail2Code.mmDepositNumberLimit, com.tools20022.repository.codeset.ResultDetail2Code.mmExpiredCard,
-						com.tools20022.repository.codeset.ResultDetail2Code.mmFallbackDeclined, com.tools20022.repository.codeset.ResultDetail2Code.mmFormatError, com.tools20022.repository.codeset.ResultDetail2Code.mmInProgress,
-						com.tools20022.repository.codeset.ResultDetail2Code.mmInsufficientFunds, com.tools20022.repository.codeset.ResultDetail2Code.mmInvalidAcceptor, com.tools20022.repository.codeset.ResultDetail2Code.mmInvalidAmount,
-						com.tools20022.repository.codeset.ResultDetail2Code.mmInvalidAddress, com.tools20022.repository.codeset.ResultDetail2Code.mmInvalidBranch,
-						com.tools20022.repository.codeset.ResultDetail2Code.mmInvalidCardholderIdentification, com.tools20022.repository.codeset.ResultDetail2Code.mmInvalidCardNumber,
-						com.tools20022.repository.codeset.ResultDetail2Code.mmInvalidCertificate, com.tools20022.repository.codeset.ResultDetail2Code.mmInvalidOriginalAmount,
-						com.tools20022.repository.codeset.ResultDetail2Code.mmInvalidPIN, com.tools20022.repository.codeset.ResultDetail2Code.mmInvalidToken, com.tools20022.repository.codeset.ResultDetail2Code.mmInvalidSignature,
-						com.tools20022.repository.codeset.ResultDetail2Code.mmInvalidTokenIdentification, com.tools20022.repository.codeset.ResultDetail2Code.mmInvalidTransaction,
-						com.tools20022.repository.codeset.ResultDetail2Code.mmInvalidTransactionDateTime, com.tools20022.repository.codeset.ResultDetail2Code.mmIssuerInoperative,
-						com.tools20022.repository.codeset.ResultDetail2Code.mmIssuerNotFound, com.tools20022.repository.codeset.ResultDetail2Code.mmIssuerSignedOff, com.tools20022.repository.codeset.ResultDetail2Code.mmIssuerTimeOut,
-						com.tools20022.repository.codeset.ResultDetail2Code.mmIssuerUnavailable, com.tools20022.repository.codeset.ResultDetail2Code.mmKeyStorageSaturation,
-						com.tools20022.repository.codeset.ResultDetail2Code.mmLiabilityAccepted, com.tools20022.repository.codeset.ResultDetail2Code.mmLostCard, com.tools20022.repository.codeset.ResultDetail2Code.mmMACError,
-						com.tools20022.repository.codeset.ResultDetail2Code.mmMACKeyError, com.tools20022.repository.codeset.ResultDetail2Code.mmMissingICCData, com.tools20022.repository.codeset.ResultDetail2Code.mmNewPINInvalid,
-						com.tools20022.repository.codeset.ResultDetail2Code.mmNoCardRecord, com.tools20022.repository.codeset.ResultDetail2Code.mmNoLiabilityAccepted,
-						com.tools20022.repository.codeset.ResultDetail2Code.mmNotAbleToValidatePIN, com.tools20022.repository.codeset.ResultDetail2Code.mmNotPermittedToAcceptor,
-						com.tools20022.repository.codeset.ResultDetail2Code.mmOffLineProcess, com.tools20022.repository.codeset.ResultDetail2Code.mmOffLineProcessAfterReferral,
-						com.tools20022.repository.codeset.ResultDetail2Code.mmNotPermittedToCardholder, com.tools20022.repository.codeset.ResultDetail2Code.mmOriginalDoesNotMatch,
-						com.tools20022.repository.codeset.ResultDetail2Code.mmOtherError, com.tools20022.repository.codeset.ResultDetail2Code.mmOutOfBalance, com.tools20022.repository.codeset.ResultDetail2Code.mmOutOfSequence,
-						com.tools20022.repository.codeset.ResultDetail2Code.mmPINChangeRequired, com.tools20022.repository.codeset.ResultDetail2Code.mmPINDataRequired, com.tools20022.repository.codeset.ResultDetail2Code.mmPINSecurityError,
-						com.tools20022.repository.codeset.ResultDetail2Code.mmPINTriesExceeded, com.tools20022.repository.codeset.ResultDetail2Code.mmPINEncryptionError,
-						com.tools20022.repository.codeset.ResultDetail2Code.mmQueueMaximumExceeded, com.tools20022.repository.codeset.ResultDetail2Code.mmRecurringDataError,
-						com.tools20022.repository.codeset.ResultDetail2Code.mmRestrictedCard, com.tools20022.repository.codeset.ResultDetail2Code.mmSecurityViolation, com.tools20022.repository.codeset.ResultDetail2Code.mmServiceNotEnabled,
-						com.tools20022.repository.codeset.ResultDetail2Code.mmSoftwareOrHardwareError, com.tools20022.repository.codeset.ResultDetail2Code.mmSpecialConditions,
-						com.tools20022.repository.codeset.ResultDetail2Code.mmStolenCard, com.tools20022.repository.codeset.ResultDetail2Code.mmSurchargeNotPermitted,
-						com.tools20022.repository.codeset.ResultDetail2Code.mmSuspectedCounterfeitCard, com.tools20022.repository.codeset.ResultDetail2Code.mmSuspectedFraud,
-						com.tools20022.repository.codeset.ResultDetail2Code.mmSystemInoperative, com.tools20022.repository.codeset.ResultDetail2Code.mmSystemMalfunction,
-						com.tools20022.repository.codeset.ResultDetail2Code.mmTerminalNotConfigured, com.tools20022.repository.codeset.ResultDetail2Code.mmToAccountError,
-						com.tools20022.repository.codeset.ResultDetail2Code.mmTotalsNotAvailable, com.tools20022.repository.codeset.ResultDetail2Code.mmTransactionDidNotComplete,
-						com.tools20022.repository.codeset.ResultDetail2Code.mmTransactionDuplicate, com.tools20022.repository.codeset.ResultDetail2Code.mmUnableToFindOriginal,
-						com.tools20022.repository.codeset.ResultDetail2Code.mmUnableToGoOnLine, com.tools20022.repository.codeset.ResultDetail2Code.mmUnableToProcessOffLine,
-						com.tools20022.repository.codeset.ResultDetail2Code.mmUnacceptableCurrency, com.tools20022.repository.codeset.ResultDetail2Code.mmUnavailablecommunicationKey,
-						com.tools20022.repository.codeset.ResultDetail2Code.mmUneffectiveCard, com.tools20022.repository.codeset.ResultDetail2Code.mmUnsupportedService,
-						com.tools20022.repository.codeset.ResultDetail2Code.mmVendorFormatError, com.tools20022.repository.codeset.ResultDetail2Code.mmVendorNotFound,
-						com.tools20022.repository.codeset.ResultDetail2Code.mmWithdrawalAmountLimit, com.tools20022.repository.codeset.ResultDetail2Code.mmWithdrawalNumberLimit,
-						com.tools20022.repository.codeset.ResultDetail2Code.mmWrongCard);
+				code_lazy = () -> Arrays.asList(ResultDetail2Code.mmAccountNotFound, ResultDetail2Code.mmAcquirerNotSupported, ResultDetail2Code.mmAMLValidation, ResultDetail2Code.mmAmountNotFound, ResultDetail2Code.mmAuthenticationFailed,
+						ResultDetail2Code.mmBankNotFound, ResultDetail2Code.mmCardError, ResultDetail2Code.mmCardVerificationFailed, ResultDetail2Code.mmClosedAccount, ResultDetail2Code.mmCutoverInProcess,
+						ResultDetail2Code.mmDatabaseError, ResultDetail2Code.mmDisputedFees, ResultDetail2Code.mmExceededTransactionLifeCycle, ResultDetail2Code.mmDepositAmountLimit, ResultDetail2Code.mmDepositNumberLimit,
+						ResultDetail2Code.mmExpiredCard, ResultDetail2Code.mmFallbackDeclined, ResultDetail2Code.mmFormatError, ResultDetail2Code.mmInProgress, ResultDetail2Code.mmInsufficientFunds, ResultDetail2Code.mmInvalidAcceptor,
+						ResultDetail2Code.mmInvalidAmount, ResultDetail2Code.mmInvalidAddress, ResultDetail2Code.mmInvalidBranch, ResultDetail2Code.mmInvalidCardholderIdentification, ResultDetail2Code.mmInvalidCardNumber,
+						ResultDetail2Code.mmInvalidCertificate, ResultDetail2Code.mmInvalidOriginalAmount, ResultDetail2Code.mmInvalidPIN, ResultDetail2Code.mmInvalidToken, ResultDetail2Code.mmInvalidSignature,
+						ResultDetail2Code.mmInvalidTokenIdentification, ResultDetail2Code.mmInvalidTransaction, ResultDetail2Code.mmInvalidTransactionDateTime, ResultDetail2Code.mmIssuerInoperative, ResultDetail2Code.mmIssuerNotFound,
+						ResultDetail2Code.mmIssuerSignedOff, ResultDetail2Code.mmIssuerTimeOut, ResultDetail2Code.mmIssuerUnavailable, ResultDetail2Code.mmKeyStorageSaturation, ResultDetail2Code.mmLiabilityAccepted,
+						ResultDetail2Code.mmLostCard, ResultDetail2Code.mmMACError, ResultDetail2Code.mmMACKeyError, ResultDetail2Code.mmMissingICCData, ResultDetail2Code.mmNewPINInvalid, ResultDetail2Code.mmNoCardRecord,
+						ResultDetail2Code.mmNoLiabilityAccepted, ResultDetail2Code.mmNotAbleToValidatePIN, ResultDetail2Code.mmNotPermittedToAcceptor, ResultDetail2Code.mmOffLineProcess, ResultDetail2Code.mmOffLineProcessAfterReferral,
+						ResultDetail2Code.mmNotPermittedToCardholder, ResultDetail2Code.mmOriginalDoesNotMatch, ResultDetail2Code.mmOtherError, ResultDetail2Code.mmOutOfBalance, ResultDetail2Code.mmOutOfSequence,
+						ResultDetail2Code.mmPINChangeRequired, ResultDetail2Code.mmPINDataRequired, ResultDetail2Code.mmPINSecurityError, ResultDetail2Code.mmPINTriesExceeded, ResultDetail2Code.mmPINEncryptionError,
+						ResultDetail2Code.mmQueueMaximumExceeded, ResultDetail2Code.mmRecurringDataError, ResultDetail2Code.mmRestrictedCard, ResultDetail2Code.mmSecurityViolation, ResultDetail2Code.mmServiceNotEnabled,
+						ResultDetail2Code.mmSoftwareOrHardwareError, ResultDetail2Code.mmSpecialConditions, ResultDetail2Code.mmStolenCard, ResultDetail2Code.mmSurchargeNotPermitted, ResultDetail2Code.mmSuspectedCounterfeitCard,
+						ResultDetail2Code.mmSuspectedFraud, ResultDetail2Code.mmSystemInoperative, ResultDetail2Code.mmSystemMalfunction, ResultDetail2Code.mmTerminalNotConfigured, ResultDetail2Code.mmToAccountError,
+						ResultDetail2Code.mmTotalsNotAvailable, ResultDetail2Code.mmTransactionDidNotComplete, ResultDetail2Code.mmTransactionDuplicate, ResultDetail2Code.mmUnableToFindOriginal, ResultDetail2Code.mmUnableToGoOnLine,
+						ResultDetail2Code.mmUnableToProcessOffLine, ResultDetail2Code.mmUnacceptableCurrency, ResultDetail2Code.mmUnavailablecommunicationKey, ResultDetail2Code.mmUneffectiveCard, ResultDetail2Code.mmUnsupportedService,
+						ResultDetail2Code.mmVendorFormatError, ResultDetail2Code.mmVendorNotFound, ResultDetail2Code.mmWithdrawalAmountLimit, ResultDetail2Code.mmWithdrawalNumberLimit, ResultDetail2Code.mmWrongCard);
 				trace_lazy = () -> ResultDetailCode.mmObject();
 			}
 		});

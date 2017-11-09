@@ -17,11 +17,11 @@
 
 package com.tools20022.repository.entity;
 
-import com.tools20022.metamodel.MMBusinessAssociationEnd;
-import com.tools20022.metamodel.MMBusinessAttribute;
-import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.*;
+import com.tools20022.repository.choice.*;
 import com.tools20022.repository.datatype.CurrencyAndAmount;
 import com.tools20022.repository.datatype.DecimalNumber;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -36,17 +36,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
  * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.AmountAndQuantity#mmSecuritiesPricing
- * AmountAndQuantity.mmSecuritiesPricing}</li>
- * <li>{@linkplain com.tools20022.repository.entity.AmountAndQuantity#mmAmount
- * AmountAndQuantity.mmAmount}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.AmountAndQuantity#mmQuantity
- * AmountAndQuantity.mmQuantity}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AmountAndQuantityRatio2
+ * AmountAndQuantityRatio2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AmountAndQuantityRatio3
+ * AmountAndQuantityRatio3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AmountAndQuantityRatio1
+ * AmountAndQuantityRatio1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AmountAndQuantityRatio4
+ * AmountAndQuantityRatio4}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AmountAndQuantityRatio5
+ * AmountAndQuantityRatio5}</li>
  * </ul>
  * </li>
  * <li>
@@ -166,20 +169,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * SolicitationFeeRateFormat9Choice.mmAmountToQuantity}</li>
  * </ul>
  * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.AmountAndQuantityRatio2
- * AmountAndQuantityRatio2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AmountAndQuantityRatio3
- * AmountAndQuantityRatio3}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AmountAndQuantityRatio1
- * AmountAndQuantityRatio1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AmountAndQuantityRatio4
- * AmountAndQuantityRatio4}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AmountAndQuantityRatio5
- * AmountAndQuantityRatio5}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.AmountAndQuantity#mmSecuritiesPricing
+ * AmountAndQuantity.mmSecuritiesPricing}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.AmountAndQuantity#mmAmount
+ * AmountAndQuantity.mmAmount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.AmountAndQuantity#mmQuantity
+ * AmountAndQuantity.mmQuantity}</li>
  * </ul>
  * </li>
  * <li>
@@ -240,13 +240,13 @@ public class AmountAndQuantity {
 		{
 			elementContext_lazy = () -> AmountAndQuantity.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SecuritiesPricing";
 			definition = "Pricing which uses the amount and quantity as format.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmAmountPricePerFinancialInstrumentQuantity;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 		}
 	};
@@ -299,11 +299,10 @@ public class AmountAndQuantity {
 	 */
 	public static final MMBusinessAttribute mmAmount = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AmountAndQuantityRatio2.mmAmount, com.tools20022.repository.msg.AmountAndQuantityRatio3.mmAmount,
-					com.tools20022.repository.msg.AmountAndQuantityRatio1.mmAmount, com.tools20022.repository.msg.AmountAndQuantityRatio4.mmAmount, com.tools20022.repository.msg.AmountAndQuantityRatio5.mmAmount);
+			derivation_lazy = () -> Arrays.asList(AmountAndQuantityRatio2.mmAmount, AmountAndQuantityRatio3.mmAmount, AmountAndQuantityRatio1.mmAmount, AmountAndQuantityRatio4.mmAmount, AmountAndQuantityRatio5.mmAmount);
 			elementContext_lazy = () -> AmountAndQuantity.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Amount";
 			definition = "A number of monetary units specified in a currency.";
 			maxOccurs = 1;
@@ -360,11 +359,10 @@ public class AmountAndQuantity {
 	 */
 	public static final MMBusinessAttribute mmQuantity = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AmountAndQuantityRatio2.mmQuantity, com.tools20022.repository.msg.AmountAndQuantityRatio3.mmQuantity,
-					com.tools20022.repository.msg.AmountAndQuantityRatio1.mmQuantity, com.tools20022.repository.msg.AmountAndQuantityRatio4.mmQuantity, com.tools20022.repository.msg.AmountAndQuantityRatio5.mmQuantity);
+			derivation_lazy = () -> Arrays.asList(AmountAndQuantityRatio2.mmQuantity, AmountAndQuantityRatio3.mmQuantity, AmountAndQuantityRatio1.mmQuantity, AmountAndQuantityRatio4.mmQuantity, AmountAndQuantityRatio5.mmQuantity);
 			elementContext_lazy = () -> AmountAndQuantity.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Quantity";
 			definition = "A number of non-monetary units.";
 			maxOccurs = 1;
@@ -376,30 +374,20 @@ public class AmountAndQuantity {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AmountAndQuantity";
 				definition = "Value expressed as an amount or a quantity. For example, the value of a financial instrument.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesPricing.mmAmountPricePerFinancialInstrumentQuantity);
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.RatioFormat4Choice.mmAmountToQuantity, com.tools20022.repository.choice.RatioFormat4Choice.mmQuantityToAmount,
-						com.tools20022.repository.choice.RatioFormat8Choice.mmAmountToQuantity, com.tools20022.repository.choice.RatioFormat8Choice.mmQuantityToAmount,
-						com.tools20022.repository.choice.RatioFormat15Choice.mmQuantityToAmount, com.tools20022.repository.choice.RatioFormat16Choice.mmQuantityToAmount,
-						com.tools20022.repository.choice.SolicitationFeeRateFormat1Choice.mmAmountToQuantity, com.tools20022.repository.choice.RatioFormat6Choice.mmAmountToQuantity,
-						com.tools20022.repository.choice.RatioFormat6Choice.mmQuantityToAmount, com.tools20022.repository.choice.SolicitationFeeRateFormat2Choice.mmAmountToQuantity,
-						com.tools20022.repository.choice.RatioFormat10Choice.mmAmountToQuantity, com.tools20022.repository.choice.RatioFormat10Choice.mmQuantityToAmount,
-						com.tools20022.repository.choice.RatioFormat12Choice.mmAmountToQuantity, com.tools20022.repository.choice.RatioFormat12Choice.mmQuantityToAmount,
-						com.tools20022.repository.choice.SolicitationFeeRateFormat3Choice.mmAmountToQuantity, com.tools20022.repository.choice.RatioFormat14Choice.mmAmountToQuantity,
-						com.tools20022.repository.choice.RatioFormat14Choice.mmQuantityToAmount, com.tools20022.repository.choice.SolicitationFeeRateFormat4Choice.mmAmountToQuantity,
-						com.tools20022.repository.choice.SolicitationFeeRateFormat5Choice.mmAmountToQuantity, com.tools20022.repository.choice.SolicitationFeeRateFormat6Choice.mmAmountToQuantity,
-						com.tools20022.repository.choice.RatioFormat2Choice.mmAmountToQuantity, com.tools20022.repository.choice.RatioFormat2Choice.mmQuantityToAmount,
-						com.tools20022.repository.choice.RatioFormat19Choice.mmAmountToQuantity, com.tools20022.repository.choice.RatioFormat19Choice.mmQuantityToAmount,
-						com.tools20022.repository.choice.SolicitationFeeRateFormat7Choice.mmAmountToQuantity, com.tools20022.repository.choice.RatioFormat18Choice.mmAmountToQuantity,
-						com.tools20022.repository.choice.RatioFormat18Choice.mmQuantityToAmount, com.tools20022.repository.choice.SolicitationFeeRateFormat8Choice.mmAmountToQuantity,
-						com.tools20022.repository.choice.RatioFormat22Choice.mmAmountToQuantity, com.tools20022.repository.choice.RatioFormat22Choice.mmQuantityToAmount,
-						com.tools20022.repository.choice.SolicitationFeeRateFormat10Choice.mmAmountToQuantity, com.tools20022.repository.choice.RatioFormat24Choice.mmAmountToQuantity,
-						com.tools20022.repository.choice.RatioFormat24Choice.mmQuantityToAmount, com.tools20022.repository.choice.SolicitationFeeRateFormat9Choice.mmAmountToQuantity);
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.AmountAndQuantity.mmSecuritiesPricing, com.tools20022.repository.entity.AmountAndQuantity.mmAmount,
-						com.tools20022.repository.entity.AmountAndQuantity.mmQuantity);
+				derivationElement_lazy = () -> Arrays.asList(RatioFormat4Choice.mmAmountToQuantity, RatioFormat4Choice.mmQuantityToAmount, RatioFormat8Choice.mmAmountToQuantity, RatioFormat8Choice.mmQuantityToAmount,
+						RatioFormat15Choice.mmQuantityToAmount, RatioFormat16Choice.mmQuantityToAmount, SolicitationFeeRateFormat1Choice.mmAmountToQuantity, RatioFormat6Choice.mmAmountToQuantity, RatioFormat6Choice.mmQuantityToAmount,
+						SolicitationFeeRateFormat2Choice.mmAmountToQuantity, RatioFormat10Choice.mmAmountToQuantity, RatioFormat10Choice.mmQuantityToAmount, RatioFormat12Choice.mmAmountToQuantity, RatioFormat12Choice.mmQuantityToAmount,
+						SolicitationFeeRateFormat3Choice.mmAmountToQuantity, RatioFormat14Choice.mmAmountToQuantity, RatioFormat14Choice.mmQuantityToAmount, SolicitationFeeRateFormat4Choice.mmAmountToQuantity,
+						SolicitationFeeRateFormat5Choice.mmAmountToQuantity, SolicitationFeeRateFormat6Choice.mmAmountToQuantity, RatioFormat2Choice.mmAmountToQuantity, RatioFormat2Choice.mmQuantityToAmount,
+						RatioFormat19Choice.mmAmountToQuantity, RatioFormat19Choice.mmQuantityToAmount, SolicitationFeeRateFormat7Choice.mmAmountToQuantity, RatioFormat18Choice.mmAmountToQuantity, RatioFormat18Choice.mmQuantityToAmount,
+						SolicitationFeeRateFormat8Choice.mmAmountToQuantity, RatioFormat22Choice.mmAmountToQuantity, RatioFormat22Choice.mmQuantityToAmount, SolicitationFeeRateFormat10Choice.mmAmountToQuantity,
+						RatioFormat24Choice.mmAmountToQuantity, RatioFormat24Choice.mmQuantityToAmount, SolicitationFeeRateFormat9Choice.mmAmountToQuantity);
+				element_lazy = () -> Arrays.asList(AmountAndQuantity.mmSecuritiesPricing, AmountAndQuantity.mmAmount, AmountAndQuantity.mmQuantity);
 				derivationComponent_lazy = () -> Arrays.asList(AmountAndQuantityRatio2.mmObject(), AmountAndQuantityRatio3.mmObject(), AmountAndQuantityRatio1.mmObject(), AmountAndQuantityRatio4.mmObject(),
 						AmountAndQuantityRatio5.mmObject());
 			}

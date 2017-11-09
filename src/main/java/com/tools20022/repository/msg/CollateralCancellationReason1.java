@@ -20,9 +20,14 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.colr.CollateralManagementCancellationRequestV03;
+import com.tools20022.repository.area.colr.CollateralManagementCancellationRequestV04;
 import com.tools20022.repository.choice.CollateralCancellationType1Choice;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.CollateralStatus;
+import com.tools20022.repository.entity.StatusReason;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -112,11 +117,11 @@ public class CollateralCancellationReason1 {
 	 */
 	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmReason;
+			businessElementTrace_lazy = () -> StatusReason.mmReason;
 			componentContext_lazy = () -> CollateralCancellationReason1.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInformation";
 			definition = "Allows to provides additional information on the cancellation reason.";
 			maxOccurs = 1;
@@ -162,11 +167,11 @@ public class CollateralCancellationReason1 {
 	 */
 	public static final MMMessageAssociationEnd mmCancellationReasonCode = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CollateralStatus.mmCollateralManagementCancellationReason;
+			businessElementTrace_lazy = () -> CollateralStatus.mmCollateralManagementCancellationReason;
 			componentContext_lazy = () -> CollateralCancellationReason1.mmObject();
 			isDerived = false;
 			xmlTag = "CxlRsnCd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationReasonCode";
 			definition = "Allows to provide a cancellation reason using a code or proprietary reason.";
 			maxOccurs = 1;
@@ -179,12 +184,11 @@ public class CollateralCancellationReason1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CollateralCancellationReason1.mmAdditionalInformation, com.tools20022.repository.msg.CollateralCancellationReason1.mmCancellationReasonCode);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.colr.CollateralManagementCancellationRequestV03.mmCancellationReason,
-						com.tools20022.repository.area.colr.CollateralManagementCancellationRequestV04.mmCancellationReason);
+				messageElement_lazy = () -> Arrays.asList(CollateralCancellationReason1.mmAdditionalInformation, CollateralCancellationReason1.mmCancellationReasonCode);
+				messageBuildingBlock_lazy = () -> Arrays.asList(CollateralManagementCancellationRequestV03.mmCancellationReason, CollateralManagementCancellationRequestV04.mmCancellationReason);
 				trace_lazy = () -> CollateralStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CollateralCancellationReason1";
 				definition = "Reason for which the collateral message has been cancelled.";
 			}

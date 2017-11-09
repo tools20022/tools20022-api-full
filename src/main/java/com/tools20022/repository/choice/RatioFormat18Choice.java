@@ -20,10 +20,12 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.RateValueType7Code;
 import com.tools20022.repository.entity.AmountAndQuantity;
 import com.tools20022.repository.entity.AmountRatio;
 import com.tools20022.repository.entity.QuantityRatio;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.AmountAndQuantityRatio4;
 import com.tools20022.repository.msg.AmountToAmountRatio2;
 import com.tools20022.repository.msg.QuantityToQuantityRatio1;
@@ -122,10 +124,10 @@ public class RatioFormat18Choice {
 			componentContext_lazy = () -> RatioFormat18Choice.mmObject();
 			isDerived = false;
 			xmlTag = "QtyToQty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuantityToQuantity";
 			definition = "Ratio expressed as a quotient of quantities.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.RatioFormat12Choice.mmQuantityToQuantity;
+			previousVersion_lazy = () -> RatioFormat12Choice.mmQuantityToQuantity;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -171,10 +173,10 @@ public class RatioFormat18Choice {
 			componentContext_lazy = () -> RatioFormat18Choice.mmObject();
 			isDerived = false;
 			xmlTag = "NotSpcfdRate";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotSpecifiedRate";
 			definition = "Value of the ratio not specified.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.RatioFormat12Choice.mmNotSpecifiedRate;
+			previousVersion_lazy = () -> RatioFormat12Choice.mmNotSpecifiedRate;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RateValueType7Code.mmObject();
@@ -222,10 +224,10 @@ public class RatioFormat18Choice {
 			componentContext_lazy = () -> RatioFormat18Choice.mmObject();
 			isDerived = false;
 			xmlTag = "AmtToAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmountToAmount";
 			definition = "Ratio expressed as a quotient of amounts.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.RatioFormat12Choice.mmAmountToAmount;
+			previousVersion_lazy = () -> RatioFormat12Choice.mmAmountToAmount;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -276,10 +278,10 @@ public class RatioFormat18Choice {
 			componentContext_lazy = () -> RatioFormat18Choice.mmObject();
 			isDerived = false;
 			xmlTag = "AmtToQty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmountToQuantity";
 			definition = "Ratio expressed as an amount to quantity ratio.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.RatioFormat12Choice.mmAmountToQuantity;
+			previousVersion_lazy = () -> RatioFormat12Choice.mmAmountToQuantity;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -330,10 +332,10 @@ public class RatioFormat18Choice {
 			componentContext_lazy = () -> RatioFormat18Choice.mmObject();
 			isDerived = false;
 			xmlTag = "QtyToAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuantityToAmount";
 			definition = "Ratio expressed as a quantity to amount ratio.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.RatioFormat12Choice.mmQuantityToAmount;
+			previousVersion_lazy = () -> RatioFormat12Choice.mmQuantityToAmount;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -344,12 +346,10 @@ public class RatioFormat18Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays
-						.asList(com.tools20022.repository.choice.RatioFormat18Choice.mmQuantityToQuantity, com.tools20022.repository.choice.RatioFormat18Choice.mmNotSpecifiedRate,
-								com.tools20022.repository.choice.RatioFormat18Choice.mmAmountToAmount, com.tools20022.repository.choice.RatioFormat18Choice.mmAmountToQuantity,
-								com.tools20022.repository.choice.RatioFormat18Choice.mmQuantityToAmount);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(RatioFormat18Choice.mmQuantityToQuantity, RatioFormat18Choice.mmNotSpecifiedRate, RatioFormat18Choice.mmAmountToAmount, RatioFormat18Choice.mmAmountToQuantity,
+						RatioFormat18Choice.mmQuantityToAmount);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RatioFormat18Choice";
 				definition = "Choice of format to express a ratio.";
 				previousVersion_lazy = () -> RatioFormat12Choice.mmObject();

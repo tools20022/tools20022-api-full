@@ -20,6 +20,7 @@ package com.tools20022.repository.area.tsin;
 import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.TradeServicesInitiationLatestVersion;
 import com.tools20022.repository.datatype.DecimalNumber;
 import com.tools20022.repository.datatype.Max15NumericText;
@@ -43,6 +44,9 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code tsin.012.001.01}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.TradeServicesInitiationLatestVersion
@@ -83,9 +87,6 @@ import java.util.List;
  * PartyRegistrationAndGuaranteeAcknowledgementV01.mmAttachedMessage}</li>
  * </ul>
  * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code tsin.012.001.01}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -130,7 +131,7 @@ public class PartyRegistrationAndGuaranteeAcknowledgementV01 {
 	public static final MMMessageBuildingBlock mmHeader = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Hdr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Header";
 			definition = "Set of characteristics that unambiguously identify the acknowlegement, common parameters, documents and identifications.";
 			maxOccurs = 1;
@@ -165,7 +166,7 @@ public class PartyRegistrationAndGuaranteeAcknowledgementV01 {
 	public static final MMMessageBuildingBlock mmAcknowledgementList = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "AckList";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcknowledgementList";
 			definition = "List of party management acknowledgements.";
 			minOccurs = 1;
@@ -199,7 +200,7 @@ public class PartyRegistrationAndGuaranteeAcknowledgementV01 {
 	public static final MMMessageBuildingBlock mmAcknowledgementCount = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "AckCnt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcknowledgementCount";
 			definition = "Number of acknowledgement lists as control value.";
 			maxOccurs = 1;
@@ -234,7 +235,7 @@ public class PartyRegistrationAndGuaranteeAcknowledgementV01 {
 	public static final MMMessageBuildingBlock mmItemCount = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "ItmCnt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ItemCount";
 			definition = "Total number of individual items in all lists.";
 			maxOccurs = 1;
@@ -272,7 +273,7 @@ public class PartyRegistrationAndGuaranteeAcknowledgementV01 {
 	public static final MMMessageBuildingBlock mmControlSum = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CtrlSum";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ControlSum";
 			definition = "Total of all individual amounts included in all lists, irrespective of currencies or direction.";
 			maxOccurs = 1;
@@ -307,7 +308,7 @@ public class PartyRegistrationAndGuaranteeAcknowledgementV01 {
 	public static final MMMessageBuildingBlock mmAttachedMessage = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "AttchdMsg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AttachedMessage";
 			definition = "Referenced or related business message.";
 			minOccurs = 0;
@@ -318,17 +319,16 @@ public class PartyRegistrationAndGuaranteeAcknowledgementV01 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PartyRegistrationAndGuaranteeAcknowledgementV01";
 				definition = "The message PartyManagementPaymentAcknowledgement is sent from a trade partner to any partner requested through a PartyManagementPaymentAcknowledgemenNotification message to acknowledge the notified factoring service agreement. Depending on legal contexts, the acknowledgement may be required in order for the financial service agreement to become effective.\r\nThe message references related messages and may include referenced data.\r\nThe message can carry digital signatures if required by context.";
 				messageSet_lazy = () -> Arrays.asList(FactoringServicesISOLatestversion.mmObject());
 				rootElement = "Document";
 				xmlTag = "PtyRegnAndGrntAck";
 				businessArea_lazy = () -> TradeServicesInitiationLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsin.PartyRegistrationAndGuaranteeAcknowledgementV01.mmHeader,
-						com.tools20022.repository.area.tsin.PartyRegistrationAndGuaranteeAcknowledgementV01.mmAcknowledgementList, com.tools20022.repository.area.tsin.PartyRegistrationAndGuaranteeAcknowledgementV01.mmAcknowledgementCount,
-						com.tools20022.repository.area.tsin.PartyRegistrationAndGuaranteeAcknowledgementV01.mmItemCount, com.tools20022.repository.area.tsin.PartyRegistrationAndGuaranteeAcknowledgementV01.mmControlSum,
-						com.tools20022.repository.area.tsin.PartyRegistrationAndGuaranteeAcknowledgementV01.mmAttachedMessage);
+				messageBuildingBlock_lazy = () -> Arrays.asList(PartyRegistrationAndGuaranteeAcknowledgementV01.mmHeader, PartyRegistrationAndGuaranteeAcknowledgementV01.mmAcknowledgementList,
+						PartyRegistrationAndGuaranteeAcknowledgementV01.mmAcknowledgementCount, PartyRegistrationAndGuaranteeAcknowledgementV01.mmItemCount, PartyRegistrationAndGuaranteeAcknowledgementV01.mmControlSum,
+						PartyRegistrationAndGuaranteeAcknowledgementV01.mmAttachedMessage);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "tsin";

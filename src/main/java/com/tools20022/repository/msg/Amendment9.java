@@ -19,7 +19,10 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.tsrv.UndertakingAmendmentResponseNotificationV01;
 import com.tools20022.repository.entity.AmendmentOfUndertaking;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -107,7 +110,7 @@ public class Amendment9 {
 			componentContext_lazy = () -> Amendment9.mmObject();
 			isDerived = false;
 			xmlTag = "UdrtkgAmdmntRspnMsg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UndertakingAmendmentResponseMessage";
 			definition = "Contents of the related UndertakingAmendmentResponse message.";
 			maxOccurs = 1;
@@ -120,11 +123,11 @@ public class Amendment9 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Amendment9.mmUndertakingAmendmentResponseMessage);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsrv.UndertakingAmendmentResponseNotificationV01.mmUndertakingAmendmentResponseNotificationDetails);
+				messageElement_lazy = () -> Arrays.asList(Amendment9.mmUndertakingAmendmentResponseMessage);
+				messageBuildingBlock_lazy = () -> Arrays.asList(UndertakingAmendmentResponseNotificationV01.mmUndertakingAmendmentResponseNotificationDetails);
 				trace_lazy = () -> AmendmentOfUndertaking.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Amendment9";
 				definition = "Details of the amendment.";
 			}

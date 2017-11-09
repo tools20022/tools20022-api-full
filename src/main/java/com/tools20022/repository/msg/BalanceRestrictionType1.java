@@ -19,9 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.ProcessingType1Choice;
 import com.tools20022.repository.datatype.Max140Text;
 import com.tools20022.repository.entity.AccountRestriction;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -104,11 +106,11 @@ public class BalanceRestrictionType1 {
 	 */
 	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AccountRestriction.mmRestrictionType;
+			businessElementTrace_lazy = () -> AccountRestriction.mmRestrictionType;
 			componentContext_lazy = () -> BalanceRestrictionType1.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Type of the restriction, for example, selling restriction, buying restriction, placing restriction.";
 			maxOccurs = 1;
@@ -149,7 +151,7 @@ public class BalanceRestrictionType1 {
 			componentContext_lazy = () -> BalanceRestrictionType1.mmObject();
 			isDerived = false;
 			xmlTag = "Desc";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Description";
 			definition = "Description of the restriction.";
 			maxOccurs = 1;
@@ -196,11 +198,11 @@ public class BalanceRestrictionType1 {
 	 */
 	public static final MMMessageAttribute mmProcessingType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AccountRestriction.mmRestrictionType;
+			businessElementTrace_lazy = () -> AccountRestriction.mmRestrictionType;
 			componentContext_lazy = () -> BalanceRestrictionType1.mmObject();
 			isDerived = false;
 			xmlTag = "PrcgTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProcessingType";
 			definition = "Classification of the type of processing restriction that the system should apply for the restriction.";
 			maxOccurs = 1;
@@ -212,11 +214,10 @@ public class BalanceRestrictionType1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BalanceRestrictionType1.mmType, com.tools20022.repository.msg.BalanceRestrictionType1.mmDescription,
-						com.tools20022.repository.msg.BalanceRestrictionType1.mmProcessingType);
+				messageElement_lazy = () -> Arrays.asList(BalanceRestrictionType1.mmType, BalanceRestrictionType1.mmDescription, BalanceRestrictionType1.mmProcessingType);
 				trace_lazy = () -> AccountRestriction.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "BalanceRestrictionType1";
 				definition = "Type providing further information on balance restrictions.";
 			}

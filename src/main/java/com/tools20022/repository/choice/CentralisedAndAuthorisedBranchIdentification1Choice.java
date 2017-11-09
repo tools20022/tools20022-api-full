@@ -19,6 +19,8 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.FinancialInstitutionIdentification9;
 import com.tools20022.repository.msg.FinancialInstitutionIdentificationList1;
 import java.util.Arrays;
@@ -94,7 +96,7 @@ public class CentralisedAndAuthorisedBranchIdentification1Choice {
 			componentContext_lazy = () -> CentralisedAndAuthorisedBranchIdentification1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "AuthrsdBrnchIdr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AuthorisedBranchIdentifier";
 			definition = "Identifier of the authorised branch.";
 			maxOccurs = 1;
@@ -136,7 +138,7 @@ public class CentralisedAndAuthorisedBranchIdentification1Choice {
 			componentContext_lazy = () -> CentralisedAndAuthorisedBranchIdentification1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "CntrldBrnchIdrs";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CentralisedBranchIdentifiers";
 			definition = "Identifier of the centralised branch.";
 			maxOccurs = 1;
@@ -149,10 +151,9 @@ public class CentralisedAndAuthorisedBranchIdentification1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CentralisedAndAuthorisedBranchIdentification1Choice.mmAuthorisedBranchIdentifier,
-						com.tools20022.repository.choice.CentralisedAndAuthorisedBranchIdentification1Choice.mmCentralisedBranchIdentifiers);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(CentralisedAndAuthorisedBranchIdentification1Choice.mmAuthorisedBranchIdentifier, CentralisedAndAuthorisedBranchIdentification1Choice.mmCentralisedBranchIdentifiers);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CentralisedAndAuthorisedBranchIdentification1Choice";
 				definition = "Identifiers for the central and authorised branches.";
 			}

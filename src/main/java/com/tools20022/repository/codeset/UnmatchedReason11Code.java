@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.UnmatchedReasonCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -194,7 +196,7 @@ public class UnmatchedReason11Code extends UnmatchedReasonCode {
 	 */
 	public static final MMCode mmAccountServicerDeadlineMissed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountServicerDeadlineMissed";
 			owner_lazy = () -> UnmatchedReason11Code.mmObject();
 		}
@@ -217,7 +219,7 @@ public class UnmatchedReason11Code extends UnmatchedReasonCode {
 	 */
 	public static final MMCode mmAccruedInterestAmount1 = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccruedInterestAmount1";
 			owner_lazy = () -> UnmatchedReason11Code.mmObject();
 		}
@@ -240,7 +242,7 @@ public class UnmatchedReason11Code extends UnmatchedReasonCode {
 	 */
 	public static final MMCode mmCommonReference = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommonReference";
 			owner_lazy = () -> UnmatchedReason11Code.mmObject();
 		}
@@ -263,7 +265,7 @@ public class UnmatchedReason11Code extends UnmatchedReasonCode {
 	 */
 	public static final MMCode mmCounterpartyCancelled = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CounterpartyCancelled";
 			owner_lazy = () -> UnmatchedReason11Code.mmObject();
 		}
@@ -286,7 +288,7 @@ public class UnmatchedReason11Code extends UnmatchedReasonCode {
 	 */
 	public static final MMCode mmCounterpartyTooLateForMatching = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CounterpartyTooLateForMatching";
 			owner_lazy = () -> UnmatchedReason11Code.mmObject();
 		}
@@ -309,7 +311,7 @@ public class UnmatchedReason11Code extends UnmatchedReasonCode {
 	 */
 	public static final MMCode mmCurrencySettlementAmount = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrencySettlementAmount";
 			owner_lazy = () -> UnmatchedReason11Code.mmObject();
 		}
@@ -332,7 +334,7 @@ public class UnmatchedReason11Code extends UnmatchedReasonCode {
 	 */
 	public static final MMCode mmDealPrice = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DealPrice";
 			owner_lazy = () -> UnmatchedReason11Code.mmObject();
 		}
@@ -355,7 +357,7 @@ public class UnmatchedReason11Code extends UnmatchedReasonCode {
 	 */
 	public static final MMCode mmAutomaticGeneration = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AutomaticGeneration";
 			owner_lazy = () -> UnmatchedReason11Code.mmObject();
 		}
@@ -378,7 +380,7 @@ public class UnmatchedReason11Code extends UnmatchedReasonCode {
 	 */
 	public static final MMCode mmCumEx = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CumEx";
 			owner_lazy = () -> UnmatchedReason11Code.mmObject();
 		}
@@ -401,7 +403,7 @@ public class UnmatchedReason11Code extends UnmatchedReasonCode {
 	 */
 	public static final MMCode mmFinancialInstrument = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrument";
 			owner_lazy = () -> UnmatchedReason11Code.mmObject();
 		}
@@ -424,7 +426,7 @@ public class UnmatchedReason11Code extends UnmatchedReasonCode {
 	 */
 	public static final MMCode mmFinancialInstrumentQuantity = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentQuantity";
 			owner_lazy = () -> UnmatchedReason11Code.mmObject();
 		}
@@ -447,7 +449,7 @@ public class UnmatchedReason11Code extends UnmatchedReasonCode {
 	 */
 	public static final MMCode mmInvestorParty = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestorParty";
 			owner_lazy = () -> UnmatchedReason11Code.mmObject();
 		}
@@ -470,7 +472,7 @@ public class UnmatchedReason11Code extends UnmatchedReasonCode {
 	 */
 	public static final MMCode mmLetterOfGuarantee = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LetterOfGuarantee";
 			owner_lazy = () -> UnmatchedReason11Code.mmObject();
 		}
@@ -493,7 +495,7 @@ public class UnmatchedReason11Code extends UnmatchedReasonCode {
 	 */
 	public static final MMCode mmMarketDeadlineMissed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketDeadlineMissed";
 			owner_lazy = () -> UnmatchedReason11Code.mmObject();
 		}
@@ -516,7 +518,7 @@ public class UnmatchedReason11Code extends UnmatchedReasonCode {
 	 */
 	public static final MMCode mmMissingMarketSide = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MissingMarketSide";
 			owner_lazy = () -> UnmatchedReason11Code.mmObject();
 		}
@@ -539,7 +541,7 @@ public class UnmatchedReason11Code extends UnmatchedReasonCode {
 	 */
 	public static final MMCode mmNoMatch = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoMatch";
 			owner_lazy = () -> UnmatchedReason11Code.mmObject();
 		}
@@ -562,7 +564,7 @@ public class UnmatchedReason11Code extends UnmatchedReasonCode {
 	 */
 	public static final MMCode mmNoMatchingStarted = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoMatchingStarted";
 			owner_lazy = () -> UnmatchedReason11Code.mmObject();
 		}
@@ -585,7 +587,7 @@ public class UnmatchedReason11Code extends UnmatchedReasonCode {
 	 */
 	public static final MMCode mmNotRecognised = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotRecognised";
 			owner_lazy = () -> UnmatchedReason11Code.mmObject();
 		}
@@ -608,7 +610,7 @@ public class UnmatchedReason11Code extends UnmatchedReasonCode {
 	 */
 	public static final MMCode mmOther = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
 			owner_lazy = () -> UnmatchedReason11Code.mmObject();
 		}
@@ -631,7 +633,7 @@ public class UnmatchedReason11Code extends UnmatchedReasonCode {
 	 */
 	public static final MMCode mmPaymentCode = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentCode";
 			owner_lazy = () -> UnmatchedReason11Code.mmObject();
 		}
@@ -654,7 +656,7 @@ public class UnmatchedReason11Code extends UnmatchedReasonCode {
 	 */
 	public static final MMCode mmPhysicalSettlement = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PhysicalSettlement";
 			owner_lazy = () -> UnmatchedReason11Code.mmObject();
 		}
@@ -677,7 +679,7 @@ public class UnmatchedReason11Code extends UnmatchedReasonCode {
 	 */
 	public static final MMCode mmPlaceOfListing = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceOfListing";
 			owner_lazy = () -> UnmatchedReason11Code.mmObject();
 		}
@@ -700,7 +702,7 @@ public class UnmatchedReason11Code extends UnmatchedReasonCode {
 	 */
 	public static final MMCode mmPlaceOfSafekeeping = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceOfSafekeeping";
 			owner_lazy = () -> UnmatchedReason11Code.mmObject();
 		}
@@ -723,7 +725,7 @@ public class UnmatchedReason11Code extends UnmatchedReasonCode {
 	 */
 	public static final MMCode mmPlaceOfTrade = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceOfTrade";
 			owner_lazy = () -> UnmatchedReason11Code.mmObject();
 		}
@@ -746,7 +748,7 @@ public class UnmatchedReason11Code extends UnmatchedReasonCode {
 	 */
 	public static final MMCode mmPossibleDuplicate = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PossibleDuplicate";
 			owner_lazy = () -> UnmatchedReason11Code.mmObject();
 		}
@@ -769,7 +771,7 @@ public class UnmatchedReason11Code extends UnmatchedReasonCode {
 	 */
 	public static final MMCode mmReceivingDeliveringDepository = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceivingDeliveringDepository";
 			owner_lazy = () -> UnmatchedReason11Code.mmObject();
 		}
@@ -792,7 +794,7 @@ public class UnmatchedReason11Code extends UnmatchedReasonCode {
 	 */
 	public static final MMCode mmReceivingDeliveringParty1 = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceivingDeliveringParty1";
 			owner_lazy = () -> UnmatchedReason11Code.mmObject();
 		}
@@ -815,7 +817,7 @@ public class UnmatchedReason11Code extends UnmatchedReasonCode {
 	 */
 	public static final MMCode mmReceivingDeliveringParty2 = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceivingDeliveringParty2";
 			owner_lazy = () -> UnmatchedReason11Code.mmObject();
 		}
@@ -838,7 +840,7 @@ public class UnmatchedReason11Code extends UnmatchedReasonCode {
 	 */
 	public static final MMCode mmReceivingDeliveringParty3 = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceivingDeliveringParty3";
 			owner_lazy = () -> UnmatchedReason11Code.mmObject();
 		}
@@ -861,7 +863,7 @@ public class UnmatchedReason11Code extends UnmatchedReasonCode {
 	 */
 	public static final MMCode mmRegistrationDetails = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RegistrationDetails";
 			owner_lazy = () -> UnmatchedReason11Code.mmObject();
 		}
@@ -884,7 +886,7 @@ public class UnmatchedReason11Code extends UnmatchedReasonCode {
 	 */
 	public static final MMCode mmRTGSSystem = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RTGSSystem";
 			owner_lazy = () -> UnmatchedReason11Code.mmObject();
 		}
@@ -907,7 +909,7 @@ public class UnmatchedReason11Code extends UnmatchedReasonCode {
 	 */
 	public static final MMCode mmSafekeepingAccount = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingAccount";
 			owner_lazy = () -> UnmatchedReason11Code.mmObject();
 		}
@@ -930,7 +932,7 @@ public class UnmatchedReason11Code extends UnmatchedReasonCode {
 	 */
 	public static final MMCode mmSettlementAmount = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementAmount";
 			owner_lazy = () -> UnmatchedReason11Code.mmObject();
 		}
@@ -953,7 +955,7 @@ public class UnmatchedReason11Code extends UnmatchedReasonCode {
 	 */
 	public static final MMCode mmSettlementDate = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementDate";
 			owner_lazy = () -> UnmatchedReason11Code.mmObject();
 		}
@@ -976,7 +978,7 @@ public class UnmatchedReason11Code extends UnmatchedReasonCode {
 	 */
 	public static final MMCode mmSettlementSystemMethod = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementSystemMethod";
 			owner_lazy = () -> UnmatchedReason11Code.mmObject();
 		}
@@ -999,7 +1001,7 @@ public class UnmatchedReason11Code extends UnmatchedReasonCode {
 	 */
 	public static final MMCode mmSettlementTransaction = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementTransaction";
 			owner_lazy = () -> UnmatchedReason11Code.mmObject();
 		}
@@ -1022,7 +1024,7 @@ public class UnmatchedReason11Code extends UnmatchedReasonCode {
 	 */
 	public static final MMCode mmTaxStatus = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxStatus";
 			owner_lazy = () -> UnmatchedReason11Code.mmObject();
 		}
@@ -1045,7 +1047,7 @@ public class UnmatchedReason11Code extends UnmatchedReasonCode {
 	 */
 	public static final MMCode mmTradeDate = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeDate";
 			owner_lazy = () -> UnmatchedReason11Code.mmObject();
 		}
@@ -1068,7 +1070,7 @@ public class UnmatchedReason11Code extends UnmatchedReasonCode {
 	 */
 	public static final MMCode mmTransactionDirection = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionDirection";
 			owner_lazy = () -> UnmatchedReason11Code.mmObject();
 		}
@@ -1091,7 +1093,7 @@ public class UnmatchedReason11Code extends UnmatchedReasonCode {
 	 */
 	public static final MMCode mmUnmatchedMarketSide = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnmatchedMarketSide";
 			owner_lazy = () -> UnmatchedReason11Code.mmObject();
 		}
@@ -1100,29 +1102,19 @@ public class UnmatchedReason11Code extends UnmatchedReasonCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "UnmatchedReason11Code";
 				definition = "Specifies the reason the transaction, transfer or settlement instruction is unmatched.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnmatchedReason11Code.mmAccountServicerDeadlineMissed, com.tools20022.repository.codeset.UnmatchedReason11Code.mmAccruedInterestAmount1,
-						com.tools20022.repository.codeset.UnmatchedReason11Code.mmCommonReference, com.tools20022.repository.codeset.UnmatchedReason11Code.mmCounterpartyCancelled,
-						com.tools20022.repository.codeset.UnmatchedReason11Code.mmCounterpartyTooLateForMatching, com.tools20022.repository.codeset.UnmatchedReason11Code.mmCurrencySettlementAmount,
-						com.tools20022.repository.codeset.UnmatchedReason11Code.mmDealPrice, com.tools20022.repository.codeset.UnmatchedReason11Code.mmAutomaticGeneration, com.tools20022.repository.codeset.UnmatchedReason11Code.mmCumEx,
-						com.tools20022.repository.codeset.UnmatchedReason11Code.mmFinancialInstrument, com.tools20022.repository.codeset.UnmatchedReason11Code.mmFinancialInstrumentQuantity,
-						com.tools20022.repository.codeset.UnmatchedReason11Code.mmInvestorParty, com.tools20022.repository.codeset.UnmatchedReason11Code.mmLetterOfGuarantee,
-						com.tools20022.repository.codeset.UnmatchedReason11Code.mmMarketDeadlineMissed, com.tools20022.repository.codeset.UnmatchedReason11Code.mmMissingMarketSide,
-						com.tools20022.repository.codeset.UnmatchedReason11Code.mmNoMatch, com.tools20022.repository.codeset.UnmatchedReason11Code.mmNoMatchingStarted,
-						com.tools20022.repository.codeset.UnmatchedReason11Code.mmNotRecognised, com.tools20022.repository.codeset.UnmatchedReason11Code.mmOther, com.tools20022.repository.codeset.UnmatchedReason11Code.mmPaymentCode,
-						com.tools20022.repository.codeset.UnmatchedReason11Code.mmPhysicalSettlement, com.tools20022.repository.codeset.UnmatchedReason11Code.mmPlaceOfListing,
-						com.tools20022.repository.codeset.UnmatchedReason11Code.mmPlaceOfSafekeeping, com.tools20022.repository.codeset.UnmatchedReason11Code.mmPlaceOfTrade,
-						com.tools20022.repository.codeset.UnmatchedReason11Code.mmPossibleDuplicate, com.tools20022.repository.codeset.UnmatchedReason11Code.mmReceivingDeliveringDepository,
-						com.tools20022.repository.codeset.UnmatchedReason11Code.mmReceivingDeliveringParty1, com.tools20022.repository.codeset.UnmatchedReason11Code.mmReceivingDeliveringParty2,
-						com.tools20022.repository.codeset.UnmatchedReason11Code.mmReceivingDeliveringParty3, com.tools20022.repository.codeset.UnmatchedReason11Code.mmRegistrationDetails,
-						com.tools20022.repository.codeset.UnmatchedReason11Code.mmRTGSSystem, com.tools20022.repository.codeset.UnmatchedReason11Code.mmSafekeepingAccount,
-						com.tools20022.repository.codeset.UnmatchedReason11Code.mmSettlementAmount, com.tools20022.repository.codeset.UnmatchedReason11Code.mmSettlementDate,
-						com.tools20022.repository.codeset.UnmatchedReason11Code.mmSettlementSystemMethod, com.tools20022.repository.codeset.UnmatchedReason11Code.mmSettlementTransaction,
-						com.tools20022.repository.codeset.UnmatchedReason11Code.mmTaxStatus, com.tools20022.repository.codeset.UnmatchedReason11Code.mmTradeDate,
-						com.tools20022.repository.codeset.UnmatchedReason11Code.mmTransactionDirection, com.tools20022.repository.codeset.UnmatchedReason11Code.mmUnmatchedMarketSide);
+				code_lazy = () -> Arrays.asList(UnmatchedReason11Code.mmAccountServicerDeadlineMissed, UnmatchedReason11Code.mmAccruedInterestAmount1, UnmatchedReason11Code.mmCommonReference, UnmatchedReason11Code.mmCounterpartyCancelled,
+						UnmatchedReason11Code.mmCounterpartyTooLateForMatching, UnmatchedReason11Code.mmCurrencySettlementAmount, UnmatchedReason11Code.mmDealPrice, UnmatchedReason11Code.mmAutomaticGeneration,
+						UnmatchedReason11Code.mmCumEx, UnmatchedReason11Code.mmFinancialInstrument, UnmatchedReason11Code.mmFinancialInstrumentQuantity, UnmatchedReason11Code.mmInvestorParty, UnmatchedReason11Code.mmLetterOfGuarantee,
+						UnmatchedReason11Code.mmMarketDeadlineMissed, UnmatchedReason11Code.mmMissingMarketSide, UnmatchedReason11Code.mmNoMatch, UnmatchedReason11Code.mmNoMatchingStarted, UnmatchedReason11Code.mmNotRecognised,
+						UnmatchedReason11Code.mmOther, UnmatchedReason11Code.mmPaymentCode, UnmatchedReason11Code.mmPhysicalSettlement, UnmatchedReason11Code.mmPlaceOfListing, UnmatchedReason11Code.mmPlaceOfSafekeeping,
+						UnmatchedReason11Code.mmPlaceOfTrade, UnmatchedReason11Code.mmPossibleDuplicate, UnmatchedReason11Code.mmReceivingDeliveringDepository, UnmatchedReason11Code.mmReceivingDeliveringParty1,
+						UnmatchedReason11Code.mmReceivingDeliveringParty2, UnmatchedReason11Code.mmReceivingDeliveringParty3, UnmatchedReason11Code.mmRegistrationDetails, UnmatchedReason11Code.mmRTGSSystem,
+						UnmatchedReason11Code.mmSafekeepingAccount, UnmatchedReason11Code.mmSettlementAmount, UnmatchedReason11Code.mmSettlementDate, UnmatchedReason11Code.mmSettlementSystemMethod,
+						UnmatchedReason11Code.mmSettlementTransaction, UnmatchedReason11Code.mmTaxStatus, UnmatchedReason11Code.mmTradeDate, UnmatchedReason11Code.mmTransactionDirection, UnmatchedReason11Code.mmUnmatchedMarketSide);
 				trace_lazy = () -> UnmatchedReasonCode.mmObject();
 			}
 		});

@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.SideCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -78,7 +80,7 @@ public class Side5Code extends SideCode {
 	 */
 	public static final MMCode mmSellShort = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SellShort";
 			owner_lazy = () -> Side5Code.mmObject();
 		}
@@ -100,7 +102,7 @@ public class Side5Code extends SideCode {
 	 */
 	public static final MMCode mmSell = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Sell";
 			owner_lazy = () -> Side5Code.mmObject();
 		}
@@ -122,7 +124,7 @@ public class Side5Code extends SideCode {
 	 */
 	public static final MMCode mmSellShortExempt = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SellShortExempt";
 			owner_lazy = () -> Side5Code.mmObject();
 		}
@@ -144,7 +146,7 @@ public class Side5Code extends SideCode {
 	 */
 	public static final MMCode mmUndisclosed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Undisclosed";
 			owner_lazy = () -> Side5Code.mmObject();
 		}
@@ -153,12 +155,11 @@ public class Side5Code extends SideCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Side5Code";
 				definition = "Side taken by a party on an order.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Side5Code.mmSellShort, com.tools20022.repository.codeset.Side5Code.mmSell, com.tools20022.repository.codeset.Side5Code.mmSellShortExempt,
-						com.tools20022.repository.codeset.Side5Code.mmUndisclosed);
+				code_lazy = () -> Arrays.asList(Side5Code.mmSellShort, Side5Code.mmSell, Side5Code.mmSellShortExempt, Side5Code.mmUndisclosed);
 				trace_lazy = () -> SideCode.mmObject();
 			}
 		});

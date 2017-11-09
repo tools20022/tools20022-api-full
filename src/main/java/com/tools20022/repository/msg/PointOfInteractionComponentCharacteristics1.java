@@ -19,8 +19,10 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max35Binary;
 import com.tools20022.repository.datatype.Number;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -122,10 +124,10 @@ public class PointOfInteractionComponentCharacteristics1 {
 			componentContext_lazy = () -> PointOfInteractionComponentCharacteristics1.mmObject();
 			isDerived = false;
 			xmlTag = "Mmry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Memory";
 			definition = "Memory characteristics of the component.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PointOfInteractionComponentCharacteristics2.mmMemory);
+			nextVersions_lazy = () -> Arrays.asList(PointOfInteractionComponentCharacteristics2.mmMemory);
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.MemoryCharacteristics1.mmObject();
 		}
@@ -175,10 +177,10 @@ public class PointOfInteractionComponentCharacteristics1 {
 			componentContext_lazy = () -> PointOfInteractionComponentCharacteristics1.mmObject();
 			isDerived = false;
 			xmlTag = "Com";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Communication";
 			definition = "Low level communication of the hardware or software component toward another component or an external entity.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PointOfInteractionComponentCharacteristics2.mmCommunication);
+			nextVersions_lazy = () -> Arrays.asList(PointOfInteractionComponentCharacteristics2.mmCommunication);
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.CommunicationCharacteristics1.mmObject();
 		}
@@ -224,10 +226,10 @@ public class PointOfInteractionComponentCharacteristics1 {
 			componentContext_lazy = () -> PointOfInteractionComponentCharacteristics1.mmObject();
 			isDerived = false;
 			xmlTag = "SctyAccsMdls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityAccessModules";
 			definition = "Number of security access modules (SAM).";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PointOfInteractionComponentCharacteristics2.mmSecurityAccessModules);
+			nextVersions_lazy = () -> Arrays.asList(PointOfInteractionComponentCharacteristics2.mmSecurityAccessModules);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
@@ -274,10 +276,10 @@ public class PointOfInteractionComponentCharacteristics1 {
 			componentContext_lazy = () -> PointOfInteractionComponentCharacteristics1.mmObject();
 			isDerived = false;
 			xmlTag = "SbcbrIdntyMdls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubscriberIdentityModules";
 			definition = "Number of subscriber identity modules (SIM).";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PointOfInteractionComponentCharacteristics2.mmSubscriberIdentityModules);
+			nextVersions_lazy = () -> Arrays.asList(PointOfInteractionComponentCharacteristics2.mmSubscriberIdentityModules);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
@@ -325,10 +327,10 @@ public class PointOfInteractionComponentCharacteristics1 {
 			componentContext_lazy = () -> PointOfInteractionComponentCharacteristics1.mmObject();
 			isDerived = false;
 			xmlTag = "KeyChckVal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "KeyCheckValue";
 			definition = "Value for checking a cryptographic key security parameter.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PointOfInteractionComponentCharacteristics2.mmKeyCheckValue);
+			nextVersions_lazy = () -> Arrays.asList(PointOfInteractionComponentCharacteristics2.mmKeyCheckValue);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Binary.mmObject();
@@ -338,11 +340,10 @@ public class PointOfInteractionComponentCharacteristics1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PointOfInteractionComponentCharacteristics1.mmMemory, com.tools20022.repository.msg.PointOfInteractionComponentCharacteristics1.mmCommunication,
-						com.tools20022.repository.msg.PointOfInteractionComponentCharacteristics1.mmSecurityAccessModules, com.tools20022.repository.msg.PointOfInteractionComponentCharacteristics1.mmSubscriberIdentityModules,
-						com.tools20022.repository.msg.PointOfInteractionComponentCharacteristics1.mmKeyCheckValue);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(PointOfInteractionComponentCharacteristics1.mmMemory, PointOfInteractionComponentCharacteristics1.mmCommunication,
+						PointOfInteractionComponentCharacteristics1.mmSecurityAccessModules, PointOfInteractionComponentCharacteristics1.mmSubscriberIdentityModules, PointOfInteractionComponentCharacteristics1.mmKeyCheckValue);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PointOfInteractionComponentCharacteristics1";
 				definition = "Physical and logical characteristics of a POI component (Point of Interaction).";
 				nextVersions_lazy = () -> Arrays.asList(PointOfInteractionComponentCharacteristics2.mmObject());

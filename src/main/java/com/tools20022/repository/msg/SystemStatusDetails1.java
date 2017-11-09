@@ -19,9 +19,12 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.DateTimePeriodChoice;
 import com.tools20022.repository.codeset.SystemStatus2Code;
+import com.tools20022.repository.entity.Status;
 import com.tools20022.repository.entity.SystemStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -100,11 +103,11 @@ public class SystemStatusDetails1 {
 	 */
 	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SystemStatus.mmStatus;
+			businessElementTrace_lazy = () -> SystemStatus.mmStatus;
 			componentContext_lazy = () -> SystemStatusDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "Sts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Status";
 			definition = "Current status of a system.";
 			maxOccurs = 1;
@@ -149,11 +152,11 @@ public class SystemStatusDetails1 {
 	 */
 	public static final MMMessageAttribute mmValidityTime = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.mmValidityTime;
+			businessElementTrace_lazy = () -> Status.mmValidityTime;
 			componentContext_lazy = () -> SystemStatusDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "VldtyTm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValidityTime";
 			definition = "Period of time during which the status of the system is valid.";
 			maxOccurs = 1;
@@ -165,10 +168,10 @@ public class SystemStatusDetails1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SystemStatusDetails1.mmStatus, com.tools20022.repository.msg.SystemStatusDetails1.mmValidityTime);
+				messageElement_lazy = () -> Arrays.asList(SystemStatusDetails1.mmStatus, SystemStatusDetails1.mmValidityTime);
 				trace_lazy = () -> SystemStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SystemStatusDetails1";
 				definition = "Status of a system and the period of time during which the status is valid.";
 			}

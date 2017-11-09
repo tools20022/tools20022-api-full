@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.TypeOfAmountCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -109,9 +111,9 @@ public class TypeOfAmount8Code extends TypeOfAmountCode {
 	 */
 	public static final MMCode mmActual = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Actual";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.TypeOfAmount1Code.mmActual;
+			previousVersion_lazy = () -> TypeOfAmount1Code.mmActual;
 			owner_lazy = () -> TypeOfAmount8Code.mmObject();
 		}
 	};
@@ -138,9 +140,9 @@ public class TypeOfAmount8Code extends TypeOfAmountCode {
 	 */
 	public static final MMCode mmEstimated = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Estimated";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.TypeOfAmount1Code.mmEstimated;
+			previousVersion_lazy = () -> TypeOfAmount1Code.mmEstimated;
 			owner_lazy = () -> TypeOfAmount8Code.mmObject();
 		}
 	};
@@ -167,9 +169,9 @@ public class TypeOfAmount8Code extends TypeOfAmountCode {
 	 */
 	public static final MMCode mmMaximum = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Maximum";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.TypeOfAmount1Code.mmMaximum;
+			previousVersion_lazy = () -> TypeOfAmount1Code.mmMaximum;
 			owner_lazy = () -> TypeOfAmount8Code.mmObject();
 		}
 	};
@@ -196,9 +198,9 @@ public class TypeOfAmount8Code extends TypeOfAmountCode {
 	 */
 	public static final MMCode mmDefault = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Default";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.TypeOfAmount1Code.mmDefault;
+			previousVersion_lazy = () -> TypeOfAmount1Code.mmDefault;
 			owner_lazy = () -> TypeOfAmount8Code.mmObject();
 		}
 	};
@@ -225,9 +227,9 @@ public class TypeOfAmount8Code extends TypeOfAmountCode {
 	 */
 	public static final MMCode mmReplacement = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Replacement";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.TypeOfAmount1Code.mmReplacement;
+			previousVersion_lazy = () -> TypeOfAmount1Code.mmReplacement;
 			owner_lazy = () -> TypeOfAmount8Code.mmObject();
 		}
 	};
@@ -249,7 +251,7 @@ public class TypeOfAmount8Code extends TypeOfAmountCode {
 	 */
 	public static final MMCode mmIncremental = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Incremental";
 			owner_lazy = () -> TypeOfAmount8Code.mmObject();
 		}
@@ -272,7 +274,7 @@ public class TypeOfAmount8Code extends TypeOfAmountCode {
 	 */
 	public static final MMCode mmDecremental = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Decremental";
 			owner_lazy = () -> TypeOfAmount8Code.mmObject();
 		}
@@ -295,7 +297,7 @@ public class TypeOfAmount8Code extends TypeOfAmountCode {
 	 */
 	public static final MMCode mmReserved = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reserved";
 			owner_lazy = () -> TypeOfAmount8Code.mmObject();
 		}
@@ -304,15 +306,14 @@ public class TypeOfAmount8Code extends TypeOfAmountCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ACTL");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TypeOfAmount8Code";
 				definition = "Qualifies the amount associated with the transaction.";
 				previousVersion_lazy = () -> TypeOfAmount1Code.mmObject();
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TypeOfAmount8Code.mmActual, com.tools20022.repository.codeset.TypeOfAmount8Code.mmEstimated, com.tools20022.repository.codeset.TypeOfAmount8Code.mmMaximum,
-						com.tools20022.repository.codeset.TypeOfAmount8Code.mmDefault, com.tools20022.repository.codeset.TypeOfAmount8Code.mmReplacement, com.tools20022.repository.codeset.TypeOfAmount8Code.mmIncremental,
-						com.tools20022.repository.codeset.TypeOfAmount8Code.mmDecremental, com.tools20022.repository.codeset.TypeOfAmount8Code.mmReserved);
+				code_lazy = () -> Arrays.asList(TypeOfAmount8Code.mmActual, TypeOfAmount8Code.mmEstimated, TypeOfAmount8Code.mmMaximum, TypeOfAmount8Code.mmDefault, TypeOfAmount8Code.mmReplacement, TypeOfAmount8Code.mmIncremental,
+						TypeOfAmount8Code.mmDecremental, TypeOfAmount8Code.mmReserved);
 				trace_lazy = () -> TypeOfAmountCode.mmObject();
 			}
 		});

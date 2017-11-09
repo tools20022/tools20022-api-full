@@ -19,8 +19,15 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.caam.ATMExceptionAcknowledgementV01;
+import com.tools20022.repository.area.caam.ATMExceptionAdviceV01;
+import com.tools20022.repository.area.caam.ATMReconciliationAcknowledgementV02;
+import com.tools20022.repository.area.caam.ATMReconciliationAdviceV02;
+import com.tools20022.repository.area.catp.*;
 import com.tools20022.repository.datatype.*;
 import com.tools20022.repository.datatype.Number;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -146,7 +153,7 @@ public class Header32 {
 			componentContext_lazy = () -> Header32.mmObject();
 			isDerived = false;
 			xmlTag = "MsgFctn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageFunction";
 			definition = "Identifies the type of process related to the message.";
 			maxOccurs = 1;
@@ -186,7 +193,7 @@ public class Header32 {
 			componentContext_lazy = () -> Header32.mmObject();
 			isDerived = false;
 			xmlTag = "PrtcolVrsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProtocolVersion";
 			definition = "Version of the ATM protocol specifications.";
 			maxOccurs = 1;
@@ -227,7 +234,7 @@ public class Header32 {
 			componentContext_lazy = () -> Header32.mmObject();
 			isDerived = false;
 			xmlTag = "XchgId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExchangeIdentification";
 			definition = "Unique identification of an exchange occurrence.";
 			maxOccurs = 1;
@@ -268,7 +275,7 @@ public class Header32 {
 			componentContext_lazy = () -> Header32.mmObject();
 			isDerived = false;
 			xmlTag = "ReTrnsmssnCntr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReTransmissionCounter";
 			definition = " Retransmission counter of this advice, 0 for the first transmission.";
 			maxOccurs = 1;
@@ -308,7 +315,7 @@ public class Header32 {
 			componentContext_lazy = () -> Header32.mmObject();
 			isDerived = false;
 			xmlTag = "CreDtTm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreationDateTime";
 			definition = "Date and time at which the message was created.";
 			maxOccurs = 1;
@@ -349,7 +356,7 @@ public class Header32 {
 			componentContext_lazy = () -> Header32.mmObject();
 			isDerived = false;
 			xmlTag = "InitgPty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InitiatingParty";
 			definition = "Unique identification of the partner that has initiated the exchange.";
 			maxOccurs = 1;
@@ -392,7 +399,7 @@ public class Header32 {
 			componentContext_lazy = () -> Header32.mmObject();
 			isDerived = false;
 			xmlTag = "RcptPty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RecipientParty";
 			definition = "Unique identification of the partner that is the recipient of the message exchange.";
 			maxOccurs = 1;
@@ -433,7 +440,7 @@ public class Header32 {
 			componentContext_lazy = () -> Header32.mmObject();
 			isDerived = false;
 			xmlTag = "PrcStat";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProcessState";
 			definition = "State of the sender of the message inside the process flow.";
 			maxOccurs = 1;
@@ -476,7 +483,7 @@ public class Header32 {
 			componentContext_lazy = () -> Header32.mmObject();
 			isDerived = false;
 			xmlTag = "Tracblt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Traceability";
 			definition = "Identification of partners involved in exchange from the merchant to the issuer, with the relative timestamp of their exchanges.";
 			minOccurs = 0;
@@ -487,16 +494,13 @@ public class Header32 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Header32.mmMessageFunction, com.tools20022.repository.msg.Header32.mmProtocolVersion, com.tools20022.repository.msg.Header32.mmExchangeIdentification,
-						com.tools20022.repository.msg.Header32.mmReTransmissionCounter, com.tools20022.repository.msg.Header32.mmCreationDateTime, com.tools20022.repository.msg.Header32.mmInitiatingParty,
-						com.tools20022.repository.msg.Header32.mmRecipientParty, com.tools20022.repository.msg.Header32.mmProcessState, com.tools20022.repository.msg.Header32.mmTraceability);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.caam.ATMExceptionAcknowledgementV01.mmHeader, com.tools20022.repository.area.caam.ATMExceptionAdviceV01.mmHeader,
-						com.tools20022.repository.area.caam.ATMReconciliationAdviceV02.mmHeader, com.tools20022.repository.area.caam.ATMReconciliationAcknowledgementV02.mmHeader,
-						com.tools20022.repository.area.catp.ATMWithdrawalCompletionAdviceV02.mmHeader, com.tools20022.repository.area.catp.ATMDepositCompletionAcknowledgementV01.mmHeader,
-						com.tools20022.repository.area.catp.ATMWithdrawalCompletionAcknowledgementV02.mmHeader, com.tools20022.repository.area.catp.ATMDepositCompletionAdviceV01.mmHeader,
-						com.tools20022.repository.area.catp.ATMCompletionAcknowledgementV02.mmHeader, com.tools20022.repository.area.catp.ATMCompletionAdviceV02.mmHeader);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(Header32.mmMessageFunction, Header32.mmProtocolVersion, Header32.mmExchangeIdentification, Header32.mmReTransmissionCounter, Header32.mmCreationDateTime, Header32.mmInitiatingParty,
+						Header32.mmRecipientParty, Header32.mmProcessState, Header32.mmTraceability);
+				messageBuildingBlock_lazy = () -> Arrays.asList(ATMExceptionAcknowledgementV01.mmHeader, ATMExceptionAdviceV01.mmHeader, ATMReconciliationAdviceV02.mmHeader, ATMReconciliationAcknowledgementV02.mmHeader,
+						ATMWithdrawalCompletionAdviceV02.mmHeader, ATMDepositCompletionAcknowledgementV01.mmHeader, ATMWithdrawalCompletionAcknowledgementV02.mmHeader, ATMDepositCompletionAdviceV01.mmHeader,
+						ATMCompletionAcknowledgementV02.mmHeader, ATMCompletionAdviceV02.mmHeader);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Header32";
 				definition = "Information related to the protocol management on a segment of the path from the ATM to the acquirer.";
 			}

@@ -20,6 +20,7 @@ package com.tools20022.repository.area.catm;
 import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.TerminalManagementPreviousVersion;
 import com.tools20022.repository.msg.AcceptorConfiguration3;
 import com.tools20022.repository.msg.ContentInformationType9;
@@ -35,6 +36,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code catm.003.001.03}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.TerminalManagementPreviousVersion
@@ -67,9 +71,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * AcceptorConfigurationUpdateV03.mmSecurityTrailer}</li>
  * </ul>
  * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code catm.003.001.03}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -139,11 +140,11 @@ public class AcceptorConfigurationUpdateV03 {
 	public static final MMMessageBuildingBlock mmHeader = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Hdr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Header";
 			definition = "Set of characteristics related to the transfer of the acceptor parameters.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.catm.AcceptorConfigurationUpdateV04.mmHeader);
-			previousVersion_lazy = () -> com.tools20022.repository.area.catm.AcceptorConfigurationUpdateV02.mmHeader;
+			nextVersions_lazy = () -> Arrays.asList(AcceptorConfigurationUpdateV04.mmHeader);
+			previousVersion_lazy = () -> AcceptorConfigurationUpdateV02.mmHeader;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> Header4.mmObject();
@@ -192,11 +193,11 @@ public class AcceptorConfigurationUpdateV03 {
 	public static final MMMessageBuildingBlock mmAcceptorConfiguration = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "AccptrCfgtn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcceptorConfiguration";
 			definition = "Acceptor configuration to be downloaded from the terminal management system.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.catm.AcceptorConfigurationUpdateV04.mmAcceptorConfiguration);
-			previousVersion_lazy = () -> com.tools20022.repository.area.catm.AcceptorConfigurationUpdateV02.mmAcceptorConfiguration;
+			nextVersions_lazy = () -> Arrays.asList(AcceptorConfigurationUpdateV04.mmAcceptorConfiguration);
+			previousVersion_lazy = () -> AcceptorConfigurationUpdateV02.mmAcceptorConfiguration;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> AcceptorConfiguration3.mmObject();
@@ -243,11 +244,11 @@ public class AcceptorConfigurationUpdateV03 {
 	public static final MMMessageBuildingBlock mmSecurityTrailer = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SctyTrlr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityTrailer";
 			definition = "Trailer of the message containing a MAC or a digital signature.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.catm.AcceptorConfigurationUpdateV04.mmSecurityTrailer);
-			previousVersion_lazy = () -> com.tools20022.repository.area.catm.AcceptorConfigurationUpdateV02.mmSecurityTrailer;
+			nextVersions_lazy = () -> Arrays.asList(AcceptorConfigurationUpdateV04.mmSecurityTrailer);
+			previousVersion_lazy = () -> AcceptorConfigurationUpdateV02.mmSecurityTrailer;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> ContentInformationType9.mmObject();
@@ -257,7 +258,7 @@ public class AcceptorConfigurationUpdateV03 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AcceptorConfigurationUpdateV03";
 				definition = "Update of the acceptor configuration to be dowloaded by the terminal management system.";
 				nextVersions_lazy = () -> Arrays.asList(AcceptorConfigurationUpdateV04.mmObject());
@@ -266,8 +267,7 @@ public class AcceptorConfigurationUpdateV03 {
 				rootElement = "Document";
 				xmlTag = "AccptrCfgtnUpd";
 				businessArea_lazy = () -> TerminalManagementPreviousVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.catm.AcceptorConfigurationUpdateV03.mmHeader, com.tools20022.repository.area.catm.AcceptorConfigurationUpdateV03.mmAcceptorConfiguration,
-						com.tools20022.repository.area.catm.AcceptorConfigurationUpdateV03.mmSecurityTrailer);
+				messageBuildingBlock_lazy = () -> Arrays.asList(AcceptorConfigurationUpdateV03.mmHeader, AcceptorConfigurationUpdateV03.mmAcceptorConfiguration, AcceptorConfigurationUpdateV03.mmSecurityTrailer);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "catm";

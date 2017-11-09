@@ -19,10 +19,16 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.seev.*;
+import com.tools20022.repository.area.semt.*;
+import com.tools20022.repository.area.sese.*;
 import com.tools20022.repository.choice.DateAndDateTimeChoice;
 import com.tools20022.repository.codeset.CopyDuplicate1Code;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.Document;
+import com.tools20022.repository.entity.GenericIdentification;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -220,11 +226,11 @@ public class DocumentIdentification11 {
 	 */
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmIdentification;
+			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> DocumentIdentification11.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Unique identifier of the document (message) assigned by the sender of the document.";
 			maxOccurs = 1;
@@ -270,11 +276,11 @@ public class DocumentIdentification11 {
 	 */
 	public static final MMMessageAttribute mmCreationDateTime = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Document.mmIssueDate;
+			businessElementTrace_lazy = () -> Document.mmIssueDate;
 			componentContext_lazy = () -> DocumentIdentification11.mmObject();
 			isDerived = false;
 			xmlTag = "CreDtTm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreationDateTime";
 			definition = "Date and time at which the document (message) was created by the sender.";
 			maxOccurs = 1;
@@ -321,11 +327,11 @@ public class DocumentIdentification11 {
 	 */
 	public static final MMMessageAttribute mmCopyDuplicate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Document.mmCopyDuplicate;
+			businessElementTrace_lazy = () -> Document.mmCopyDuplicate;
 			componentContext_lazy = () -> DocumentIdentification11.mmObject();
 			isDerived = false;
 			xmlTag = "CpyDplct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CopyDuplicate";
 			definition = "Specifies if this document is a copy, a duplicate, or a duplicate of a copy.";
 			maxOccurs = 1;
@@ -337,30 +343,22 @@ public class DocumentIdentification11 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DocumentIdentification11.mmIdentification, com.tools20022.repository.msg.DocumentIdentification11.mmCreationDateTime,
-						com.tools20022.repository.msg.DocumentIdentification11.mmCopyDuplicate);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV01.mmIdentification,
-						com.tools20022.repository.area.seev.CorporateActionEventProcessingStatusAdviceV01.mmIdentification, com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestStatusAdviceV01.mmIdentification,
-						com.tools20022.repository.area.seev.CorporateActionInstructionStatementReportV01.mmIdentification, com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV01.mmIdentification,
-						com.tools20022.repository.area.seev.CorporateActionMovementConfirmationV01.mmIdentification, com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV01.mmIdentification,
-						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV01.mmIdentification, com.tools20022.repository.area.seev.CorporateActionMovementReversalAdviceV01.mmIdentification,
-						com.tools20022.repository.area.seev.CorporateActionNotificationV01.mmIdentification, com.tools20022.repository.area.semt.IntraPositionMovementConfirmationV01.mmIdentification,
-						com.tools20022.repository.area.semt.IntraPositionMovementPostingReportV01.mmIdentification, com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV03.mmIdentification,
-						com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV03.mmIdentification, com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV01.mmIdentification,
-						com.tools20022.repository.area.semt.SecuritiesMessageCancellationAdviceV01.mmIdentification, com.tools20022.repository.area.sese.SecuritiesSettlementConditionModificationStatusAdviceV01.mmIdentification,
-						com.tools20022.repository.area.sese.SecuritiesSettlementConditionsModificationRequestV01.mmIdentification, com.tools20022.repository.area.sese.SecuritiesSettlementTransactionConfirmationV01.mmIdentification,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV01.mmIdentification, com.tools20022.repository.area.sese.SecuritiesSettlementTransactionStatusAdviceV01.mmIdentification,
-						com.tools20022.repository.area.semt.SecuritiesTransactionPendingReportV01.mmIdentification, com.tools20022.repository.area.semt.SecuritiesTransactionPostingReportV01.mmIdentification,
-						com.tools20022.repository.area.semt.IntraPositionMovementStatusAdviceV01.mmIdentification, com.tools20022.repository.area.sese.PortfolioTransferNotificationV01.mmIdentification,
-						com.tools20022.repository.area.sese.SecuritiesFinancingModificationInstructionV01.mmIdentification, com.tools20022.repository.area.sese.SecuritiesFinancingStatusAdviceV01.mmIdentification,
-						com.tools20022.repository.area.sese.SecuritiesSettlementAllegementRemovalAdviceV01.mmIdentification, com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAllegementReportV01.mmIdentification,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdviceV01.mmIdentification, com.tools20022.repository.area.semt.SecuritiesStatementQueryV01.mmIdentification,
-						com.tools20022.repository.area.sese.SecuritiesStatusOrStatementQueryStatusAdviceV01.mmIdentification, com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestStatusAdviceV01.mmIdentification,
-						com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestV01.mmIdentification, com.tools20022.repository.area.sese.SecuritiesTransactionStatusQueryV01.mmIdentification,
-						com.tools20022.repository.area.seev.CorporateActionNarrativeV01.mmIdentification);
+				messageElement_lazy = () -> Arrays.asList(DocumentIdentification11.mmIdentification, DocumentIdentification11.mmCreationDateTime, DocumentIdentification11.mmCopyDuplicate);
+				messageBuildingBlock_lazy = () -> Arrays.asList(CorporateActionCancellationAdviceV01.mmIdentification, CorporateActionEventProcessingStatusAdviceV01.mmIdentification,
+						CorporateActionInstructionCancellationRequestStatusAdviceV01.mmIdentification, CorporateActionInstructionStatementReportV01.mmIdentification, CorporateActionInstructionStatusAdviceV01.mmIdentification,
+						CorporateActionMovementConfirmationV01.mmIdentification, CorporateActionMovementPreliminaryAdviceV01.mmIdentification, CorporateActionMovementPreliminaryAdviceCancellationAdviceV01.mmIdentification,
+						CorporateActionMovementReversalAdviceV01.mmIdentification, CorporateActionNotificationV01.mmIdentification, IntraPositionMovementConfirmationV01.mmIdentification,
+						IntraPositionMovementPostingReportV01.mmIdentification, SecuritiesBalanceAccountingReportV03.mmIdentification, SecuritiesBalanceCustodyReportV03.mmIdentification, SecuritiesFinancingConfirmationV01.mmIdentification,
+						SecuritiesMessageCancellationAdviceV01.mmIdentification, SecuritiesSettlementConditionModificationStatusAdviceV01.mmIdentification, SecuritiesSettlementConditionsModificationRequestV01.mmIdentification,
+						SecuritiesSettlementTransactionConfirmationV01.mmIdentification, SecuritiesSettlementTransactionGenerationNotificationV01.mmIdentification, SecuritiesSettlementTransactionStatusAdviceV01.mmIdentification,
+						SecuritiesTransactionPendingReportV01.mmIdentification, SecuritiesTransactionPostingReportV01.mmIdentification, IntraPositionMovementStatusAdviceV01.mmIdentification,
+						PortfolioTransferNotificationV01.mmIdentification, SecuritiesFinancingModificationInstructionV01.mmIdentification, SecuritiesFinancingStatusAdviceV01.mmIdentification,
+						SecuritiesSettlementAllegementRemovalAdviceV01.mmIdentification, SecuritiesSettlementTransactionAllegementReportV01.mmIdentification, SecuritiesSettlementTransactionReversalAdviceV01.mmIdentification,
+						SecuritiesStatementQueryV01.mmIdentification, SecuritiesStatusOrStatementQueryStatusAdviceV01.mmIdentification, SecuritiesTransactionCancellationRequestStatusAdviceV01.mmIdentification,
+						SecuritiesTransactionCancellationRequestV01.mmIdentification, SecuritiesTransactionStatusQueryV01.mmIdentification, CorporateActionNarrativeV01.mmIdentification);
 				trace_lazy = () -> Document.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DocumentIdentification11";
 				definition = "Identification and creation date of a document.";
 			}

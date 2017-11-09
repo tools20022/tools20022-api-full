@@ -19,7 +19,12 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.CommercialTrade;
+import com.tools20022.repository.entity.CommercialTradeSettlement;
+import com.tools20022.repository.entity.Invoice;
+import com.tools20022.repository.entity.Trade;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -111,10 +116,10 @@ public class CardPaymentInvoice2 {
 			componentContext_lazy = () -> CardPaymentInvoice2.mmObject();
 			isDerived = false;
 			xmlTag = "InvcHdr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvoiceHeader";
 			definition = "General data relevant to the main body of the invoice such as date of issue, currency code and identification number.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CardPaymentInvoice1.mmInvoiceHeader;
+			previousVersion_lazy = () -> CardPaymentInvoice1.mmInvoiceHeader;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -161,14 +166,14 @@ public class CardPaymentInvoice2 {
 	 */
 	public static final MMMessageAssociationEnd mmTradeAgreement = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Trade.mmGoverningDocument;
+			businessElementTrace_lazy = () -> Trade.mmGoverningDocument;
 			componentContext_lazy = () -> CardPaymentInvoice2.mmObject();
 			isDerived = false;
 			xmlTag = "TradAgrmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeAgreement";
 			definition = "Contractual details related to the agreement between parties.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CardPaymentInvoice1.mmTradeAgreement;
+			previousVersion_lazy = () -> CardPaymentInvoice1.mmTradeAgreement;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -217,14 +222,14 @@ public class CardPaymentInvoice2 {
 	 */
 	public static final MMMessageAssociationEnd mmTradeDelivery = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CommercialTradeSettlement.mmProductDelivery;
+			businessElementTrace_lazy = () -> CommercialTradeSettlement.mmProductDelivery;
 			componentContext_lazy = () -> CardPaymentInvoice2.mmObject();
 			isDerived = false;
 			xmlTag = "TradDlvry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeDelivery";
 			definition = "Supply chain shipping arrangements for delivery of invoiced products and/or services.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CardPaymentInvoice1.mmTradeDelivery;
+			previousVersion_lazy = () -> CardPaymentInvoice1.mmTradeDelivery;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -272,14 +277,14 @@ public class CardPaymentInvoice2 {
 	 */
 	public static final MMMessageAssociationEnd mmLineItem = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Invoice.mmLineItem;
+			businessElementTrace_lazy = () -> Invoice.mmLineItem;
 			componentContext_lazy = () -> CardPaymentInvoice2.mmObject();
 			isDerived = false;
 			xmlTag = "LineItm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LineItem";
 			definition = "Unit of information showing the related provision of products and/or services and monetary summations reported as a discrete line items.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CardPaymentInvoice1.mmLineItem;
+			previousVersion_lazy = () -> CardPaymentInvoice1.mmLineItem;
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.LineItem16.mmObject();
@@ -289,11 +294,10 @@ public class CardPaymentInvoice2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardPaymentInvoice2.mmInvoiceHeader, com.tools20022.repository.msg.CardPaymentInvoice2.mmTradeAgreement,
-						com.tools20022.repository.msg.CardPaymentInvoice2.mmTradeDelivery, com.tools20022.repository.msg.CardPaymentInvoice2.mmLineItem);
+				messageElement_lazy = () -> Arrays.asList(CardPaymentInvoice2.mmInvoiceHeader, CardPaymentInvoice2.mmTradeAgreement, CardPaymentInvoice2.mmTradeDelivery, CardPaymentInvoice2.mmLineItem);
 				trace_lazy = () -> CommercialTrade.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CardPaymentInvoice2";
 				definition = "Detailed invoice data.";
 				previousVersion_lazy = () -> CardPaymentInvoice1.mmObject();

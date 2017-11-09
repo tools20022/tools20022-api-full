@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ClosedStatusReasonCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -77,7 +79,7 @@ public class ClosedStatusReason1Code extends ClosedStatusReasonCode {
 	 */
 	public static final MMCode mmAccountServicerInstruction = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountServicerInstruction";
 			owner_lazy = () -> ClosedStatusReason1Code.mmObject();
 		}
@@ -100,7 +102,7 @@ public class ClosedStatusReason1Code extends ClosedStatusReasonCode {
 	 */
 	public static final MMCode mmClientInstruction = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClientInstruction";
 			owner_lazy = () -> ClosedStatusReason1Code.mmObject();
 		}
@@ -109,11 +111,11 @@ public class ClosedStatusReason1Code extends ClosedStatusReasonCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ClosedStatusReason1Code";
 				definition = "Specifies the reason for the closed status.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ClosedStatusReason1Code.mmAccountServicerInstruction, com.tools20022.repository.codeset.ClosedStatusReason1Code.mmClientInstruction);
+				code_lazy = () -> Arrays.asList(ClosedStatusReason1Code.mmAccountServicerInstruction, ClosedStatusReason1Code.mmClientInstruction);
 				trace_lazy = () -> ClosedStatusReasonCode.mmObject();
 			}
 		});

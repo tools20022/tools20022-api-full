@@ -17,13 +17,13 @@
 
 package com.tools20022.repository.entity;
 
-import com.tools20022.metamodel.MMBusinessAssociationEnd;
-import com.tools20022.metamodel.MMBusinessAttribute;
-import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.*;
 import com.tools20022.repository.choice.*;
 import com.tools20022.repository.codeset.*;
 import com.tools20022.repository.datatype.*;
 import com.tools20022.repository.datatype.Number;
+import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -38,6 +38,60 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.choice.ConversionTypeFormat1Choice
+ * ConversionTypeFormat1Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.ConversionTypeFormat2Choice
+ * ConversionTypeFormat2Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.ConversionType1FormatChoice
+ * ConversionType1FormatChoice}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.ConversionTypeFormat3Choice
+ * ConversionTypeFormat3Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.ConversionTypeFormat4Choice
+ * ConversionTypeFormat4Choice}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.Security#mmConversion
+ * Security.mmConversion}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmRelatedSecuritiesConversion
+ * SecuritiesPricing.mmRelatedSecuritiesConversion}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.DateTimePeriod#mmSecuritiesConversion
+ * DateTimePeriod.mmSecuritiesConversion}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmMinimumExercisableQuantitySecuritiesConversion
+ * SecuritiesQuantity.mmMinimumExercisableQuantitySecuritiesConversion}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmMinimumExercisableMultipleQuantitySecuritiesConversion
+ * SecuritiesQuantity.mmMinimumExercisableMultipleQuantitySecuritiesConversion}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmMaximumExercisableQuantitySecuritiesConversion
+ * SecuritiesQuantity.mmMaximumExercisableQuantitySecuritiesConversion}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmRatioDenominatorSecuritiesConversion
+ * SecuritiesQuantity.mmRatioDenominatorSecuritiesConversion}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmRatioNumeratorSecuritiesConversion
+ * SecuritiesQuantity.mmRatioNumeratorSecuritiesConversion}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CurrencyExchange#mmCurrencyExchangeForSecuritiesConversion
+ * CurrencyExchange.mmCurrencyExchangeForSecuritiesConversion}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Option#mmOptionConversionInformation
+ * Option.mmOptionConversionInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.UnderlyingRatio#mmSecuritiesConversion
+ * UnderlyingRatio.mmSecuritiesConversion}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -119,60 +173,6 @@ import java.util.List;
  * <li>
  * {@linkplain com.tools20022.repository.entity.SecuritiesConversion#mmContractSize
  * SecuritiesConversion.mmContractSize}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Security#mmConversion
- * Security.mmConversion}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmRelatedSecuritiesConversion
- * SecuritiesPricing.mmRelatedSecuritiesConversion}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.DateTimePeriod#mmSecuritiesConversion
- * DateTimePeriod.mmSecuritiesConversion}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmMinimumExercisableQuantitySecuritiesConversion
- * SecuritiesQuantity.mmMinimumExercisableQuantitySecuritiesConversion}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmMinimumExercisableMultipleQuantitySecuritiesConversion
- * SecuritiesQuantity.mmMinimumExercisableMultipleQuantitySecuritiesConversion}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmMaximumExercisableQuantitySecuritiesConversion
- * SecuritiesQuantity.mmMaximumExercisableQuantitySecuritiesConversion}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmRatioDenominatorSecuritiesConversion
- * SecuritiesQuantity.mmRatioDenominatorSecuritiesConversion}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmRatioNumeratorSecuritiesConversion
- * SecuritiesQuantity.mmRatioNumeratorSecuritiesConversion}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CurrencyExchange#mmCurrencyExchangeForSecuritiesConversion
- * CurrencyExchange.mmCurrencyExchangeForSecuritiesConversion}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Option#mmOptionConversionInformation
- * Option.mmOptionConversionInformation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.UnderlyingRatio#mmSecuritiesConversion
- * UnderlyingRatio.mmSecuritiesConversion}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.choice.ConversionTypeFormat1Choice
- * ConversionTypeFormat1Choice}</li>
- * <li>{@linkplain com.tools20022.repository.choice.ConversionTypeFormat2Choice
- * ConversionTypeFormat2Choice}</li>
- * <li>{@linkplain com.tools20022.repository.choice.ConversionType1FormatChoice
- * ConversionType1FormatChoice}</li>
- * <li>{@linkplain com.tools20022.repository.choice.ConversionTypeFormat3Choice
- * ConversionTypeFormat3Choice}</li>
- * <li>{@linkplain com.tools20022.repository.choice.ConversionTypeFormat4Choice
- * ConversionTypeFormat4Choice}</li>
  * </ul>
  * </li>
  * <li>
@@ -305,27 +305,21 @@ public class SecuritiesConversion {
 	 */
 	public static final MMBusinessAssociationEnd mmConversionPrice = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrumentAttributes8.mmConversionPrice, com.tools20022.repository.msg.FinancialInstrumentAttributes20.mmConversionPrice,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes35.mmConversionPrice, com.tools20022.repository.msg.FinancialInstrumentAttributes41.mmConversionPrice,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes4.mmConversionPrice, com.tools20022.repository.msg.FinancialInstrumentAttributes13.mmConversionPrice,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes21.mmConversionPrice, com.tools20022.repository.msg.FinancialInstrumentAttributes26.mmConversionPrice,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes36.mmConversionPrice, com.tools20022.repository.msg.FinancialInstrumentAttributes42.mmConversionPrice,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes27.mmConversionPrice, com.tools20022.repository.msg.FinancialInstrumentAttributes14.mmConversionPrice,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes30.mmConversionPrice, com.tools20022.repository.msg.FinancialInstrumentAttributes28.mmConversionPrice,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes31.mmConversionPrice, com.tools20022.repository.msg.FinancialInstrumentAttributes44.mmConversionPrice,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes15.mmConversionPrice, com.tools20022.repository.msg.FinancialInstrumentAttributes29.mmConversionPrice,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes2.mmConversionPrice, com.tools20022.repository.msg.FinancialInstrumentAttributes63.mmConversionPrice,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes64.mmConversionPrice, com.tools20022.repository.msg.FinancialInstrumentAttributes75.mmConversionPrice,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes78.mmConversionPrice);
+			derivation_lazy = () -> Arrays.asList(FinancialInstrumentAttributes8.mmConversionPrice, FinancialInstrumentAttributes20.mmConversionPrice, FinancialInstrumentAttributes35.mmConversionPrice,
+					FinancialInstrumentAttributes41.mmConversionPrice, FinancialInstrumentAttributes4.mmConversionPrice, FinancialInstrumentAttributes13.mmConversionPrice, FinancialInstrumentAttributes21.mmConversionPrice,
+					FinancialInstrumentAttributes26.mmConversionPrice, FinancialInstrumentAttributes36.mmConversionPrice, FinancialInstrumentAttributes42.mmConversionPrice, FinancialInstrumentAttributes27.mmConversionPrice,
+					FinancialInstrumentAttributes14.mmConversionPrice, FinancialInstrumentAttributes30.mmConversionPrice, FinancialInstrumentAttributes28.mmConversionPrice, FinancialInstrumentAttributes31.mmConversionPrice,
+					FinancialInstrumentAttributes44.mmConversionPrice, FinancialInstrumentAttributes15.mmConversionPrice, FinancialInstrumentAttributes29.mmConversionPrice, FinancialInstrumentAttributes2.mmConversionPrice,
+					FinancialInstrumentAttributes63.mmConversionPrice, FinancialInstrumentAttributes64.mmConversionPrice, FinancialInstrumentAttributes75.mmConversionPrice, FinancialInstrumentAttributes78.mmConversionPrice);
 			elementContext_lazy = () -> SecuritiesConversion.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ConversionPrice";
 			definition = "Price of one target security in the conversion.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmRelatedSecuritiesConversion;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 		}
 	};
@@ -492,30 +486,20 @@ public class SecuritiesConversion {
 	 */
 	public static final MMBusinessAttribute mmConversionDate = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrumentAttributes6.mmConversionDate, com.tools20022.repository.msg.FinancialInstrumentAttributes9.mmConversionDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes18.mmConversionDate, com.tools20022.repository.msg.FinancialInstrumentAttributes22.mmConversionDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes32.mmConversionDate, com.tools20022.repository.msg.FinancialInstrumentAttributes38.mmConversionDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes7.mmConversionDate, com.tools20022.repository.msg.FinancialInstrumentAttributes5.mmConversionDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes11.mmConversionDate, com.tools20022.repository.msg.FinancialInstrumentAttributes10.mmConversionDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes19.mmConversionDate, com.tools20022.repository.msg.FinancialInstrumentAttributes16.mmConversionDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes23.mmConversionDate, com.tools20022.repository.msg.FinancialInstrumentAttributes24.mmConversionDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes33.mmConversionDate, com.tools20022.repository.msg.FinancialInstrumentAttributes34.mmConversionDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes39.mmConversionDate, com.tools20022.repository.msg.FinancialInstrumentAttributes40.mmConversionDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes43.mmConversionDate, com.tools20022.repository.msg.FinancialInstrumentAttributes45.mmConversionDate, com.tools20022.repository.msg.Option1.mmConversionDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes31.mmConversionDate, com.tools20022.repository.msg.FinancialInstrumentAttributes44.mmConversionDate, com.tools20022.repository.msg.Option7.mmConversionDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes2.mmConversionDate, com.tools20022.repository.msg.FinancialInstrumentAttributes48.mmConversionDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes50.mmConversionDate, com.tools20022.repository.msg.FinancialInstrumentAttributes49.mmConversionDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes55.mmConversionDate, com.tools20022.repository.msg.FinancialInstrumentAttributes57.mmConversionDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes56.mmConversionDate, com.tools20022.repository.msg.FinancialInstrumentAttributes66.mmConversionDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes65.mmConversionDate, com.tools20022.repository.msg.FinancialInstrumentAttributes67.mmConversionDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes70.mmConversionDate, com.tools20022.repository.msg.FinancialInstrumentAttributes69.mmConversionDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes71.mmConversionDate, com.tools20022.repository.msg.FinancialInstrumentAttributes79.mmConversionDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes81.mmConversionDate, com.tools20022.repository.msg.FinancialInstrumentAttributes80.mmConversionDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes85.mmConversionDate, com.tools20022.repository.msg.FinancialInstrumentAttributes84.mmConversionDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes83.mmConversionDate);
+			derivation_lazy = () -> Arrays.asList(FinancialInstrumentAttributes6.mmConversionDate, FinancialInstrumentAttributes9.mmConversionDate, FinancialInstrumentAttributes18.mmConversionDate,
+					FinancialInstrumentAttributes22.mmConversionDate, FinancialInstrumentAttributes32.mmConversionDate, FinancialInstrumentAttributes38.mmConversionDate, FinancialInstrumentAttributes7.mmConversionDate,
+					FinancialInstrumentAttributes5.mmConversionDate, FinancialInstrumentAttributes11.mmConversionDate, FinancialInstrumentAttributes10.mmConversionDate, FinancialInstrumentAttributes19.mmConversionDate,
+					FinancialInstrumentAttributes16.mmConversionDate, FinancialInstrumentAttributes23.mmConversionDate, FinancialInstrumentAttributes24.mmConversionDate, FinancialInstrumentAttributes33.mmConversionDate,
+					FinancialInstrumentAttributes34.mmConversionDate, FinancialInstrumentAttributes39.mmConversionDate, FinancialInstrumentAttributes40.mmConversionDate, FinancialInstrumentAttributes43.mmConversionDate,
+					FinancialInstrumentAttributes45.mmConversionDate, Option1.mmConversionDate, FinancialInstrumentAttributes31.mmConversionDate, FinancialInstrumentAttributes44.mmConversionDate, Option7.mmConversionDate,
+					FinancialInstrumentAttributes2.mmConversionDate, FinancialInstrumentAttributes48.mmConversionDate, FinancialInstrumentAttributes50.mmConversionDate, FinancialInstrumentAttributes49.mmConversionDate,
+					FinancialInstrumentAttributes55.mmConversionDate, FinancialInstrumentAttributes57.mmConversionDate, FinancialInstrumentAttributes56.mmConversionDate, FinancialInstrumentAttributes66.mmConversionDate,
+					FinancialInstrumentAttributes65.mmConversionDate, FinancialInstrumentAttributes67.mmConversionDate, FinancialInstrumentAttributes70.mmConversionDate, FinancialInstrumentAttributes69.mmConversionDate,
+					FinancialInstrumentAttributes71.mmConversionDate, FinancialInstrumentAttributes79.mmConversionDate, FinancialInstrumentAttributes81.mmConversionDate, FinancialInstrumentAttributes80.mmConversionDate,
+					FinancialInstrumentAttributes85.mmConversionDate, FinancialInstrumentAttributes84.mmConversionDate, FinancialInstrumentAttributes83.mmConversionDate);
 			elementContext_lazy = () -> SecuritiesConversion.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ConversionDate";
 			definition = "Deadline by which a convertible security must be converted according to the terms of the issue.";
 			maxOccurs = 1;
@@ -717,40 +701,31 @@ public class SecuritiesConversion {
 	 */
 	public static final MMBusinessAssociationEnd mmMinimumExercisableQuantity = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrumentAttributes6.mmMinimumExercisableQuantity, com.tools20022.repository.msg.FinancialInstrumentAttributes9.mmMinimumExercisableQuantity,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes18.mmMinimumExercisableQuantity, com.tools20022.repository.msg.FinancialInstrumentAttributes22.mmMinimumExercisableQuantity,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes32.mmMinimumExercisableQuantity, com.tools20022.repository.msg.FinancialInstrumentAttributes38.mmMinimumExercisableQuantity,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes7.mmMinimumExercisableQuantity, com.tools20022.repository.msg.SecuritiesOption1.mmMinimumExercisableQuantity,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes5.mmMinimumExercisableQuantity, com.tools20022.repository.msg.FinancialInstrumentAttributes11.mmMinimumExercisableQuantity,
-					com.tools20022.repository.msg.SecuritiesOption9.mmMinimumExercisableQuantity, com.tools20022.repository.msg.FinancialInstrumentAttributes10.mmMinimumExercisableQuantity,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes19.mmMinimumExercisableQuantity, com.tools20022.repository.msg.SecuritiesOption15.mmMinimumExercisableQuantity,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes16.mmMinimumExercisableQuantity, com.tools20022.repository.msg.FinancialInstrumentAttributes23.mmMinimumExercisableQuantity,
-					com.tools20022.repository.msg.SecuritiesOption16.mmMinimumExercisableQuantity, com.tools20022.repository.msg.FinancialInstrumentAttributes24.mmMinimumExercisableQuantity,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes33.mmMinimumExercisableQuantity, com.tools20022.repository.msg.SecuritiesOption23.mmMinimumExercisableQuantity,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes34.mmMinimumExercisableQuantity, com.tools20022.repository.msg.FinancialInstrumentAttributes39.mmMinimumExercisableQuantity,
-					com.tools20022.repository.msg.SecuritiesOption28.mmMinimumExercisableQuantity, com.tools20022.repository.msg.FinancialInstrumentAttributes40.mmMinimumExercisableQuantity,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes43.mmMinimumExercisableQuantity, com.tools20022.repository.msg.FinancialInstrumentAttributes45.mmMinimumExercisableQuantity,
-					com.tools20022.repository.msg.CorporateActionQuantity1.mmMinimumExercisableQuantity, com.tools20022.repository.msg.CorporateActionQuantity2.mmMinimumExercisableQuantity,
-					com.tools20022.repository.msg.CorporateActionQuantity3.mmMinimumExercisableQuantity, com.tools20022.repository.msg.CorporateActionQuantity4.mmMinimumExercisableQuantity,
-					com.tools20022.repository.msg.CorporateActionQuantity5.mmMinimumExercisableQuantity, com.tools20022.repository.msg.CorporateActionQuantity6.mmMinimumExercisableQuantity,
-					com.tools20022.repository.msg.Option1.mmMinimumExercisableQuantity, com.tools20022.repository.msg.FinancialInstrumentAttributes31.mmMinimumExercisableQuantity,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes44.mmMinimumExercisableQuantity, com.tools20022.repository.msg.CorporateAction2.mmMinimumExercisableSecuritiesQuantity,
-					com.tools20022.repository.msg.SecurityOption1.mmMinimumExercisableSecuritiesQuantity, com.tools20022.repository.msg.FinancialInstrumentAttributes2.mmMinimumExercisableQuantity,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes48.mmMinimumExercisableQuantity, com.tools20022.repository.msg.FinancialInstrumentAttributes50.mmMinimumExercisableQuantity,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes49.mmMinimumExercisableQuantity, com.tools20022.repository.msg.FinancialInstrumentAttributes55.mmMinimumExercisableQuantity,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes57.mmMinimumExercisableQuantity, com.tools20022.repository.msg.FinancialInstrumentAttributes56.mmMinimumExercisableQuantity,
-					com.tools20022.repository.msg.SecuritiesOption51.mmMinimumQuantityToInstruct, com.tools20022.repository.msg.FinancialInstrumentAttributes67.mmMinimumQuantityToInstruct,
-					com.tools20022.repository.msg.SecuritiesOption56.mmMinimumQuantityToInstruct, com.tools20022.repository.msg.FinancialInstrumentAttributes71.mmMinimumQuantityToInstruct,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes80.mmMinimumQuantityToInstruct, com.tools20022.repository.msg.FinancialInstrumentAttributes83.mmMinimumQuantityToInstruct);
+			derivation_lazy = () -> Arrays.asList(FinancialInstrumentAttributes6.mmMinimumExercisableQuantity, FinancialInstrumentAttributes9.mmMinimumExercisableQuantity, FinancialInstrumentAttributes18.mmMinimumExercisableQuantity,
+					FinancialInstrumentAttributes22.mmMinimumExercisableQuantity, FinancialInstrumentAttributes32.mmMinimumExercisableQuantity, FinancialInstrumentAttributes38.mmMinimumExercisableQuantity,
+					FinancialInstrumentAttributes7.mmMinimumExercisableQuantity, SecuritiesOption1.mmMinimumExercisableQuantity, FinancialInstrumentAttributes5.mmMinimumExercisableQuantity,
+					FinancialInstrumentAttributes11.mmMinimumExercisableQuantity, SecuritiesOption9.mmMinimumExercisableQuantity, FinancialInstrumentAttributes10.mmMinimumExercisableQuantity,
+					FinancialInstrumentAttributes19.mmMinimumExercisableQuantity, SecuritiesOption15.mmMinimumExercisableQuantity, FinancialInstrumentAttributes16.mmMinimumExercisableQuantity,
+					FinancialInstrumentAttributes23.mmMinimumExercisableQuantity, SecuritiesOption16.mmMinimumExercisableQuantity, FinancialInstrumentAttributes24.mmMinimumExercisableQuantity,
+					FinancialInstrumentAttributes33.mmMinimumExercisableQuantity, SecuritiesOption23.mmMinimumExercisableQuantity, FinancialInstrumentAttributes34.mmMinimumExercisableQuantity,
+					FinancialInstrumentAttributes39.mmMinimumExercisableQuantity, SecuritiesOption28.mmMinimumExercisableQuantity, FinancialInstrumentAttributes40.mmMinimumExercisableQuantity,
+					FinancialInstrumentAttributes43.mmMinimumExercisableQuantity, FinancialInstrumentAttributes45.mmMinimumExercisableQuantity, CorporateActionQuantity1.mmMinimumExercisableQuantity,
+					CorporateActionQuantity2.mmMinimumExercisableQuantity, CorporateActionQuantity3.mmMinimumExercisableQuantity, CorporateActionQuantity4.mmMinimumExercisableQuantity, CorporateActionQuantity5.mmMinimumExercisableQuantity,
+					CorporateActionQuantity6.mmMinimumExercisableQuantity, Option1.mmMinimumExercisableQuantity, FinancialInstrumentAttributes31.mmMinimumExercisableQuantity, FinancialInstrumentAttributes44.mmMinimumExercisableQuantity,
+					CorporateAction2.mmMinimumExercisableSecuritiesQuantity, SecurityOption1.mmMinimumExercisableSecuritiesQuantity, FinancialInstrumentAttributes2.mmMinimumExercisableQuantity,
+					FinancialInstrumentAttributes48.mmMinimumExercisableQuantity, FinancialInstrumentAttributes50.mmMinimumExercisableQuantity, FinancialInstrumentAttributes49.mmMinimumExercisableQuantity,
+					FinancialInstrumentAttributes55.mmMinimumExercisableQuantity, FinancialInstrumentAttributes57.mmMinimumExercisableQuantity, FinancialInstrumentAttributes56.mmMinimumExercisableQuantity,
+					SecuritiesOption51.mmMinimumQuantityToInstruct, FinancialInstrumentAttributes67.mmMinimumQuantityToInstruct, SecuritiesOption56.mmMinimumQuantityToInstruct, FinancialInstrumentAttributes71.mmMinimumQuantityToInstruct,
+					FinancialInstrumentAttributes80.mmMinimumQuantityToInstruct, FinancialInstrumentAttributes83.mmMinimumQuantityToInstruct);
 			elementContext_lazy = () -> SecuritiesConversion.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MinimumExercisableQuantity";
 			definition = "Minimum quantity of financial instrument or lot of rights/warrants that must be exercised.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmMinimumExercisableQuantitySecuritiesConversion;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmObject();
 		}
 	};
@@ -949,41 +924,32 @@ public class SecuritiesConversion {
 	 */
 	public static final MMBusinessAssociationEnd mmMinimumExercisableMultipleQuantity = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrumentAttributes6.mmMinimumExercisableMultipleQuantity,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes9.mmMinimumExercisableMultipleQuantity, com.tools20022.repository.msg.FinancialInstrumentAttributes18.mmMinimumExercisableMultipleQuantity,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes22.mmMinimumExercisableMultipleQuantity, com.tools20022.repository.msg.FinancialInstrumentAttributes32.mmMinimumExercisableMultipleQuantity,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes38.mmMinimumExercisableMultipleQuantity, com.tools20022.repository.msg.FinancialInstrumentAttributes7.mmMinimumExercisableMultipleQuantity,
-					com.tools20022.repository.msg.SecuritiesOption1.mmMinimumExercisableMultipleQuantity, com.tools20022.repository.msg.FinancialInstrumentAttributes5.mmMinimumExercisableMultipleQuantity,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes11.mmMinimumExercisableMultipleQuantity, com.tools20022.repository.msg.SecuritiesOption9.mmMinimumExercisableMultipleQuantity,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes10.mmMinimumExercisableMultipleQuantity, com.tools20022.repository.msg.FinancialInstrumentAttributes19.mmMinimumExercisableMultipleQuantity,
-					com.tools20022.repository.msg.SecuritiesOption15.mmMinimumExercisableMultipleQuantity, com.tools20022.repository.msg.FinancialInstrumentAttributes16.mmMinimumExercisableMultipleQuantity,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes23.mmMinimumExercisableMultipleQuantity, com.tools20022.repository.msg.SecuritiesOption16.mmMinimumExercisableMultipleQuantity,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes24.mmMinimumExercisableMultipleQuantity, com.tools20022.repository.msg.FinancialInstrumentAttributes33.mmMinimumExercisableMultipleQuantity,
-					com.tools20022.repository.msg.SecuritiesOption23.mmMinimumExercisableMultipleQuantity, com.tools20022.repository.msg.FinancialInstrumentAttributes34.mmMinimumExercisableMultipleQuantity,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes39.mmMinimumExercisableMultipleQuantity, com.tools20022.repository.msg.SecuritiesOption28.mmMinimumExercisableMultipleQuantity,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes40.mmMinimumExercisableMultipleQuantity, com.tools20022.repository.msg.FinancialInstrumentAttributes43.mmMinimumExercisableMultipleQuantity,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes45.mmMinimumExercisableMultipleQuantity, com.tools20022.repository.msg.CorporateActionQuantity1.mmMinimumExercisableMultipleQuantity,
-					com.tools20022.repository.msg.CorporateActionQuantity2.mmMinimumExercisableMultipleQuantity, com.tools20022.repository.msg.CorporateActionQuantity3.mmMinimumExercisableMultipleQuantity,
-					com.tools20022.repository.msg.CorporateActionQuantity4.mmMinimumExercisableMultipleQuantity, com.tools20022.repository.msg.CorporateActionQuantity5.mmMinimumExercisableMultipleQuantity,
-					com.tools20022.repository.msg.CorporateActionQuantity6.mmMinimumExercisableMultipleQuantity, com.tools20022.repository.msg.Option1.mmMinimumExercisableMultipleQuantity,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes31.mmMinimumExercisableMultipleQuantity, com.tools20022.repository.msg.FinancialInstrumentAttributes44.mmMinimumExercisableMultipleQuantity,
-					com.tools20022.repository.msg.CorporateAction2.mmMinimumExercisableMultipleSecuritiesQuantity, com.tools20022.repository.msg.SecurityOption1.mmMinimumExercisableMultipleSecuritiesQuantity,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes2.mmMinimumExercisableMultipleQuantity, com.tools20022.repository.msg.FinancialInstrumentAttributes48.mmMinimumExercisableMultipleQuantity,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes50.mmMinimumExercisableMultipleQuantity, com.tools20022.repository.msg.FinancialInstrumentAttributes49.mmMinimumExercisableMultipleQuantity,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes55.mmMinimumExercisableMultipleQuantity, com.tools20022.repository.msg.FinancialInstrumentAttributes57.mmMinimumExercisableMultipleQuantity,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes56.mmMinimumExercisableMultipleQuantity, com.tools20022.repository.msg.SecuritiesOption51.mmMinimumMultipleQuantityToInstruct,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes67.mmMinimumMultipleQuantityToInstruct, com.tools20022.repository.msg.SecuritiesOption56.mmMinimumMultipleQuantityToInstruct,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes71.mmMinimumMultipleQuantityToInstruct, com.tools20022.repository.msg.FinancialInstrumentAttributes80.mmMinimumMultipleQuantityToInstruct,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes83.mmMinimumMultipleQuantityToInstruct);
+			derivation_lazy = () -> Arrays.asList(FinancialInstrumentAttributes6.mmMinimumExercisableMultipleQuantity, FinancialInstrumentAttributes9.mmMinimumExercisableMultipleQuantity,
+					FinancialInstrumentAttributes18.mmMinimumExercisableMultipleQuantity, FinancialInstrumentAttributes22.mmMinimumExercisableMultipleQuantity, FinancialInstrumentAttributes32.mmMinimumExercisableMultipleQuantity,
+					FinancialInstrumentAttributes38.mmMinimumExercisableMultipleQuantity, FinancialInstrumentAttributes7.mmMinimumExercisableMultipleQuantity, SecuritiesOption1.mmMinimumExercisableMultipleQuantity,
+					FinancialInstrumentAttributes5.mmMinimumExercisableMultipleQuantity, FinancialInstrumentAttributes11.mmMinimumExercisableMultipleQuantity, SecuritiesOption9.mmMinimumExercisableMultipleQuantity,
+					FinancialInstrumentAttributes10.mmMinimumExercisableMultipleQuantity, FinancialInstrumentAttributes19.mmMinimumExercisableMultipleQuantity, SecuritiesOption15.mmMinimumExercisableMultipleQuantity,
+					FinancialInstrumentAttributes16.mmMinimumExercisableMultipleQuantity, FinancialInstrumentAttributes23.mmMinimumExercisableMultipleQuantity, SecuritiesOption16.mmMinimumExercisableMultipleQuantity,
+					FinancialInstrumentAttributes24.mmMinimumExercisableMultipleQuantity, FinancialInstrumentAttributes33.mmMinimumExercisableMultipleQuantity, SecuritiesOption23.mmMinimumExercisableMultipleQuantity,
+					FinancialInstrumentAttributes34.mmMinimumExercisableMultipleQuantity, FinancialInstrumentAttributes39.mmMinimumExercisableMultipleQuantity, SecuritiesOption28.mmMinimumExercisableMultipleQuantity,
+					FinancialInstrumentAttributes40.mmMinimumExercisableMultipleQuantity, FinancialInstrumentAttributes43.mmMinimumExercisableMultipleQuantity, FinancialInstrumentAttributes45.mmMinimumExercisableMultipleQuantity,
+					CorporateActionQuantity1.mmMinimumExercisableMultipleQuantity, CorporateActionQuantity2.mmMinimumExercisableMultipleQuantity, CorporateActionQuantity3.mmMinimumExercisableMultipleQuantity,
+					CorporateActionQuantity4.mmMinimumExercisableMultipleQuantity, CorporateActionQuantity5.mmMinimumExercisableMultipleQuantity, CorporateActionQuantity6.mmMinimumExercisableMultipleQuantity,
+					Option1.mmMinimumExercisableMultipleQuantity, FinancialInstrumentAttributes31.mmMinimumExercisableMultipleQuantity, FinancialInstrumentAttributes44.mmMinimumExercisableMultipleQuantity,
+					CorporateAction2.mmMinimumExercisableMultipleSecuritiesQuantity, SecurityOption1.mmMinimumExercisableMultipleSecuritiesQuantity, FinancialInstrumentAttributes2.mmMinimumExercisableMultipleQuantity,
+					FinancialInstrumentAttributes48.mmMinimumExercisableMultipleQuantity, FinancialInstrumentAttributes50.mmMinimumExercisableMultipleQuantity, FinancialInstrumentAttributes49.mmMinimumExercisableMultipleQuantity,
+					FinancialInstrumentAttributes55.mmMinimumExercisableMultipleQuantity, FinancialInstrumentAttributes57.mmMinimumExercisableMultipleQuantity, FinancialInstrumentAttributes56.mmMinimumExercisableMultipleQuantity,
+					SecuritiesOption51.mmMinimumMultipleQuantityToInstruct, FinancialInstrumentAttributes67.mmMinimumMultipleQuantityToInstruct, SecuritiesOption56.mmMinimumMultipleQuantityToInstruct,
+					FinancialInstrumentAttributes71.mmMinimumMultipleQuantityToInstruct, FinancialInstrumentAttributes80.mmMinimumMultipleQuantityToInstruct, FinancialInstrumentAttributes83.mmMinimumMultipleQuantityToInstruct);
 			elementContext_lazy = () -> SecuritiesConversion.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MinimumExercisableMultipleQuantity";
 			definition = "Minimum multiple quantity of financial instrument or lot of rights/warrants that must be exercised.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmMinimumExercisableMultipleQuantitySecuritiesConversion;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmObject();
 		}
 	};
@@ -1058,20 +1024,18 @@ public class SecuritiesConversion {
 	 */
 	public static final MMBusinessAssociationEnd mmMaximumExercisableQuantity = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesOption1.mmMaximumExercisableQuantity, com.tools20022.repository.msg.SecuritiesOption9.mmMaximumExercisableQuantity,
-					com.tools20022.repository.msg.SecuritiesOption15.mmMaximumExercisableQuantity, com.tools20022.repository.msg.SecuritiesOption16.mmMaximumExercisableQuantity,
-					com.tools20022.repository.msg.SecuritiesOption23.mmMaximumExercisableQuantity, com.tools20022.repository.msg.SecuritiesOption28.mmMaximumExercisableQuantity,
-					com.tools20022.repository.msg.Option7.mmMinimumExercisableQuantity, com.tools20022.repository.msg.SecuritiesOption51.mmMaximumQuantityToInstruct,
-					com.tools20022.repository.msg.SecuritiesOption56.mmMaximumQuantityToInstruct);
+			derivation_lazy = () -> Arrays.asList(SecuritiesOption1.mmMaximumExercisableQuantity, SecuritiesOption9.mmMaximumExercisableQuantity, SecuritiesOption15.mmMaximumExercisableQuantity,
+					SecuritiesOption16.mmMaximumExercisableQuantity, SecuritiesOption23.mmMaximumExercisableQuantity, SecuritiesOption28.mmMaximumExercisableQuantity, Option7.mmMinimumExercisableQuantity,
+					SecuritiesOption51.mmMaximumQuantityToInstruct, SecuritiesOption56.mmMaximumQuantityToInstruct);
 			elementContext_lazy = () -> SecuritiesConversion.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MaximumExercisableQuantity";
 			definition = "Indicates the maximum quantity of financial instrument that may be exercised in the event.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmMaximumExercisableQuantitySecuritiesConversion;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmObject();
 		}
 	};
@@ -1178,17 +1142,14 @@ public class SecuritiesConversion {
 	 */
 	public static final MMBusinessAttribute mmConversionType = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ConversionTypeFormat1Choice.mmCode, com.tools20022.repository.choice.ConversionTypeFormat1Choice.mmProprietary,
-					com.tools20022.repository.msg.CorporateAction3.mmConversionType, com.tools20022.repository.choice.ConversionTypeFormat2Choice.mmCode, com.tools20022.repository.choice.ConversionTypeFormat2Choice.mmProprietary,
-					com.tools20022.repository.msg.CorporateAction4.mmConversionType, com.tools20022.repository.msg.CorporateAction5.mmConversionType, com.tools20022.repository.msg.CorporateAction6.mmConversionType,
-					com.tools20022.repository.msg.CorporateAction7.mmConversionType, com.tools20022.repository.msg.CorporateAction8.mmConversionType, com.tools20022.repository.msg.CorporateAction10.mmConversionType,
-					com.tools20022.repository.msg.CorporateAction11.mmConversionType, com.tools20022.repository.choice.ConversionType1FormatChoice.mmCode, com.tools20022.repository.choice.ConversionType1FormatChoice.mmProprietary,
-					com.tools20022.repository.msg.CorporateAction2.mmConversionType, com.tools20022.repository.msg.CorporateAction12.mmConversionType, com.tools20022.repository.msg.CorporateAction17.mmConversionType,
-					com.tools20022.repository.msg.CorporateAction31.mmConversionType, com.tools20022.repository.choice.ConversionTypeFormat3Choice.mmCode, com.tools20022.repository.choice.ConversionTypeFormat3Choice.mmProprietary,
-					com.tools20022.repository.msg.CorporateAction40.mmConversionType, com.tools20022.repository.choice.ConversionTypeFormat4Choice.mmCode, com.tools20022.repository.choice.ConversionTypeFormat4Choice.mmProprietary);
+			derivation_lazy = () -> Arrays.asList(ConversionTypeFormat1Choice.mmCode, ConversionTypeFormat1Choice.mmProprietary, CorporateAction3.mmConversionType, ConversionTypeFormat2Choice.mmCode,
+					ConversionTypeFormat2Choice.mmProprietary, CorporateAction4.mmConversionType, CorporateAction5.mmConversionType, CorporateAction6.mmConversionType, CorporateAction7.mmConversionType, CorporateAction8.mmConversionType,
+					CorporateAction10.mmConversionType, CorporateAction11.mmConversionType, ConversionType1FormatChoice.mmCode, ConversionType1FormatChoice.mmProprietary, CorporateAction2.mmConversionType,
+					CorporateAction12.mmConversionType, CorporateAction17.mmConversionType, CorporateAction31.mmConversionType, ConversionTypeFormat3Choice.mmCode, ConversionTypeFormat3Choice.mmProprietary,
+					CorporateAction40.mmConversionType, ConversionTypeFormat4Choice.mmCode, ConversionTypeFormat4Choice.mmProprietary);
 			elementContext_lazy = () -> SecuritiesConversion.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ConversionType";
 			definition = "Specifies the conversion type of an instrument.";
 			maxOccurs = 1;
@@ -1249,17 +1210,16 @@ public class SecuritiesConversion {
 	 */
 	public static final MMBusinessAssociationEnd mmConversionPeriod = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Debt1.mmConversionPeriod, com.tools20022.repository.msg.Option1.mmConversionPeriod, com.tools20022.repository.msg.Option7.mmConversionPeriod,
-					com.tools20022.repository.choice.OptionDateOrPeriod1Choice.mmNoticePeriod);
+			derivation_lazy = () -> Arrays.asList(Debt1.mmConversionPeriod, Option1.mmConversionPeriod, Option7.mmConversionPeriod, OptionDateOrPeriod1Choice.mmNoticePeriod);
 			elementContext_lazy = () -> SecuritiesConversion.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ConversionPeriod";
 			definition = "Period during which a convertible security may be converted according to the terms of the issue.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmSecuritiesConversion;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmObject();
 		}
 	};
@@ -1307,16 +1267,16 @@ public class SecuritiesConversion {
 	 */
 	public static final MMBusinessAssociationEnd mmConversionRatioDenominator = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Debt1.mmConversionRatioDenominator);
+			derivation_lazy = () -> Arrays.asList(Debt1.mmConversionRatioDenominator);
 			elementContext_lazy = () -> SecuritiesConversion.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ConversionRatioDenominator";
 			definition = "Number of held securities for the conversion.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmRatioDenominatorSecuritiesConversion;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmObject();
 		}
 	};
@@ -1364,16 +1324,16 @@ public class SecuritiesConversion {
 	 */
 	public static final MMBusinessAssociationEnd mmConversionRatioNumerator = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Debt1.mmConversionRatioNumerator);
+			derivation_lazy = () -> Arrays.asList(Debt1.mmConversionRatioNumerator);
 			elementContext_lazy = () -> SecuritiesConversion.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ConversionRatioNumerator";
 			definition = "Number of target securities for the conversion.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmRatioNumeratorSecuritiesConversion;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmObject();
 		}
 	};
@@ -1421,15 +1381,15 @@ public class SecuritiesConversion {
 	 */
 	public static final MMBusinessAssociationEnd mmRatio = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FutureOrOptionDetails1.mmRatio);
+			derivation_lazy = () -> Arrays.asList(FutureOrOptionDetails1.mmRatio);
 			elementContext_lazy = () -> SecuritiesConversion.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Ratio";
 			definition = "Ratio applied to convert the related security.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.UnderlyingRatio.mmSecuritiesConversion;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.UnderlyingRatio.mmObject();
 		}
 	};
@@ -1474,13 +1434,13 @@ public class SecuritiesConversion {
 		{
 			elementContext_lazy = () -> SecuritiesConversion.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ConversionUnitCurrency";
 			definition = "Currency in which the rate of exchange is expressed in a currency exchange. In the example 1GBP = xxxCUR, the unit currency is GBP.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmCurrencyExchangeForSecuritiesConversion;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmObject();
 		}
 	};
@@ -1522,13 +1482,13 @@ public class SecuritiesConversion {
 		{
 			elementContext_lazy = () -> SecuritiesConversion.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedOption";
 			definition = "Option for which securities conversion information is provided.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.Option.mmOptionConversionInformation;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Option.mmObject();
 		}
 	};
@@ -1564,7 +1524,7 @@ public class SecuritiesConversion {
 		{
 			elementContext_lazy = () -> SecuritiesConversion.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BusinessDayConvention";
 			definition = "Convention used for adjusting a date when it is not a business day.";
 			maxOccurs = 1;
@@ -1603,7 +1563,7 @@ public class SecuritiesConversion {
 		{
 			elementContext_lazy = () -> SecuritiesConversion.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ConversionChoice";
 			definition = "Specifies whether the conversion is mandatory or optional.";
 			maxOccurs = 1;
@@ -1644,7 +1604,7 @@ public class SecuritiesConversion {
 		{
 			elementContext_lazy = () -> SecuritiesConversion.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ConversionFixedExchangeRate";
 			definition = "Currency exchange rate between the bond currency and the underlying equity currency used to calculate the convertion ratio.";
 			maxOccurs = 1;
@@ -1683,7 +1643,7 @@ public class SecuritiesConversion {
 		{
 			elementContext_lazy = () -> SecuritiesConversion.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ConversionMarginAmount";
 			definition = "Amount of cash needed for the conversion.";
 			maxOccurs = 1;
@@ -1725,7 +1685,7 @@ public class SecuritiesConversion {
 		{
 			elementContext_lazy = () -> SecuritiesConversion.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ConversionOption";
 			definition = "Specifies information about the choices offered to the holder of a conversion.";
 			maxOccurs = 1;
@@ -1772,10 +1732,10 @@ public class SecuritiesConversion {
 	 */
 	public static final MMBusinessAttribute mmConversionQuotedCurrency = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LoanContract1.mmSettlementCurrency);
+			derivation_lazy = () -> Arrays.asList(LoanContract1.mmSettlementCurrency);
 			elementContext_lazy = () -> SecuritiesConversion.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ConversionQuotedCurrency";
 			definition = "Currency into which the base currency is converted, in a currency exchange.";
 			maxOccurs = 1;
@@ -1817,7 +1777,7 @@ public class SecuritiesConversion {
 		{
 			elementContext_lazy = () -> SecuritiesConversion.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "FinancialCenter";
 			definition = "Financial place  taken into account to adjust the date and time, as defined within the business day convention.";
 			maxOccurs = 1;
@@ -1858,7 +1818,7 @@ public class SecuritiesConversion {
 		{
 			elementContext_lazy = () -> SecuritiesConversion.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MinimumNoticeDays";
 			definition = "Minimum number of days that must be given by either the issuer or the holder before conversion can take place.";
 			maxOccurs = 1;
@@ -1897,7 +1857,7 @@ public class SecuritiesConversion {
 		{
 			elementContext_lazy = () -> SecuritiesConversion.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NoticePeriodType";
 			definition = "Specifies the type of notice period.";
 			maxOccurs = 1;
@@ -1939,7 +1899,7 @@ public class SecuritiesConversion {
 		{
 			elementContext_lazy = () -> SecuritiesConversion.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ProtectionAgainstDilutionIndicator";
 			definition = "Indicates whether the security is protected against dilution with regards to capital events.";
 			maxOccurs = 1;
@@ -1981,7 +1941,7 @@ public class SecuritiesConversion {
 		{
 			elementContext_lazy = () -> SecuritiesConversion.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ReverseConversionIndicator";
 			definition = "Indicates whether the bond is convertible into an equity and back to the bond.";
 			maxOccurs = 1;
@@ -2029,13 +1989,13 @@ public class SecuritiesConversion {
 		{
 			elementContext_lazy = () -> SecuritiesConversion.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SecurityIdentification";
 			definition = "ISIN identification of the related financial instrument into which this security can be converted.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.Security.mmConversion;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 		}
 	};
@@ -2073,7 +2033,7 @@ public class SecuritiesConversion {
 		{
 			elementContext_lazy = () -> SecuritiesConversion.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PartyType";
 			definition = "Specifies if the issuer or the holder are allowed to convert the security into another one.";
 			maxOccurs = 1;
@@ -2305,40 +2265,25 @@ public class SecuritiesConversion {
 	 */
 	public static final MMBusinessAttribute mmContractSize = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrumentAttributes8.mmContractSize, com.tools20022.repository.msg.FinancialInstrumentAttributes20.mmContractSize,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes35.mmContractSize, com.tools20022.repository.msg.FinancialInstrumentAttributes41.mmContractSize,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes6.mmContractSize, com.tools20022.repository.msg.FinancialInstrumentAttributes9.mmContractSize,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes18.mmContractSize, com.tools20022.repository.msg.FinancialInstrumentAttributes22.mmContractSize,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes32.mmContractSize, com.tools20022.repository.msg.FinancialInstrumentAttributes38.mmContractSize,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes7.mmContractSize, com.tools20022.repository.msg.FinancialInstrumentAttributes5.mmContractSize,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes11.mmContractSize, com.tools20022.repository.msg.FinancialInstrumentAttributes10.mmContractSize,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes19.mmContractSize, com.tools20022.repository.msg.FinancialInstrumentAttributes16.mmContractSize,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes23.mmContractSize, com.tools20022.repository.msg.FinancialInstrumentAttributes24.mmContractSize,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes33.mmContractSize, com.tools20022.repository.msg.FinancialInstrumentAttributes34.mmContractSize,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes39.mmContractSize, com.tools20022.repository.msg.FinancialInstrumentAttributes40.mmContractSize,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes43.mmContractSize, com.tools20022.repository.msg.FinancialInstrumentAttributes45.mmContractSize,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes4.mmContractSize, com.tools20022.repository.msg.FinancialInstrumentAttributes13.mmContractSize,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes21.mmContractSize, com.tools20022.repository.msg.FinancialInstrumentAttributes26.mmContractSize,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes36.mmContractSize, com.tools20022.repository.msg.FinancialInstrumentAttributes42.mmContractSize,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes27.mmContractSize, com.tools20022.repository.msg.FinancialInstrumentAttributes14.mmContractSize,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes30.mmContractSize, com.tools20022.repository.msg.FinancialInstrumentAttributes28.mmContractSize, com.tools20022.repository.msg.Option1.mmContractSize,
-					com.tools20022.repository.msg.Future1.mmContractSize, com.tools20022.repository.msg.FinancialInstrumentAttributes31.mmContractSize, com.tools20022.repository.msg.FinancialInstrumentAttributes44.mmContractSize,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes15.mmContractSize, com.tools20022.repository.msg.FinancialInstrumentAttributes29.mmContractSize, com.tools20022.repository.msg.Future2.mmContractSize,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes2.mmContractSize, com.tools20022.repository.msg.FinancialInstrumentAttributes48.mmContractSize,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes50.mmContractSize, com.tools20022.repository.msg.FinancialInstrumentAttributes49.mmContractSize,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes55.mmContractSize, com.tools20022.repository.msg.FinancialInstrumentAttributes57.mmContractSize,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes56.mmContractSize, com.tools20022.repository.msg.FinancialInstrumentAttributes63.mmContractSize,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes64.mmContractSize, com.tools20022.repository.msg.FinancialInstrumentAttributes66.mmContractSize,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes65.mmContractSize, com.tools20022.repository.msg.FinancialInstrumentAttributes67.mmContractSize,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes70.mmContractSize, com.tools20022.repository.msg.FinancialInstrumentAttributes69.mmContractSize,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes71.mmContractSize, com.tools20022.repository.msg.FinancialInstrumentAttributes75.mmContractSize,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes78.mmContractSize, com.tools20022.repository.msg.FinancialInstrumentAttributes79.mmContractSize,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes81.mmContractSize, com.tools20022.repository.msg.FinancialInstrumentAttributes80.mmContractSize,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes85.mmContractSize, com.tools20022.repository.msg.FinancialInstrumentAttributes84.mmContractSize,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes83.mmContractSize);
+			derivation_lazy = () -> Arrays.asList(FinancialInstrumentAttributes8.mmContractSize, FinancialInstrumentAttributes20.mmContractSize, FinancialInstrumentAttributes35.mmContractSize,
+					FinancialInstrumentAttributes41.mmContractSize, FinancialInstrumentAttributes6.mmContractSize, FinancialInstrumentAttributes9.mmContractSize, FinancialInstrumentAttributes18.mmContractSize,
+					FinancialInstrumentAttributes22.mmContractSize, FinancialInstrumentAttributes32.mmContractSize, FinancialInstrumentAttributes38.mmContractSize, FinancialInstrumentAttributes7.mmContractSize,
+					FinancialInstrumentAttributes5.mmContractSize, FinancialInstrumentAttributes11.mmContractSize, FinancialInstrumentAttributes10.mmContractSize, FinancialInstrumentAttributes19.mmContractSize,
+					FinancialInstrumentAttributes16.mmContractSize, FinancialInstrumentAttributes23.mmContractSize, FinancialInstrumentAttributes24.mmContractSize, FinancialInstrumentAttributes33.mmContractSize,
+					FinancialInstrumentAttributes34.mmContractSize, FinancialInstrumentAttributes39.mmContractSize, FinancialInstrumentAttributes40.mmContractSize, FinancialInstrumentAttributes43.mmContractSize,
+					FinancialInstrumentAttributes45.mmContractSize, FinancialInstrumentAttributes4.mmContractSize, FinancialInstrumentAttributes13.mmContractSize, FinancialInstrumentAttributes21.mmContractSize,
+					FinancialInstrumentAttributes26.mmContractSize, FinancialInstrumentAttributes36.mmContractSize, FinancialInstrumentAttributes42.mmContractSize, FinancialInstrumentAttributes27.mmContractSize,
+					FinancialInstrumentAttributes14.mmContractSize, FinancialInstrumentAttributes30.mmContractSize, FinancialInstrumentAttributes28.mmContractSize, Option1.mmContractSize, Future1.mmContractSize,
+					FinancialInstrumentAttributes31.mmContractSize, FinancialInstrumentAttributes44.mmContractSize, FinancialInstrumentAttributes15.mmContractSize, FinancialInstrumentAttributes29.mmContractSize, Future2.mmContractSize,
+					FinancialInstrumentAttributes2.mmContractSize, FinancialInstrumentAttributes48.mmContractSize, FinancialInstrumentAttributes50.mmContractSize, FinancialInstrumentAttributes49.mmContractSize,
+					FinancialInstrumentAttributes55.mmContractSize, FinancialInstrumentAttributes57.mmContractSize, FinancialInstrumentAttributes56.mmContractSize, FinancialInstrumentAttributes63.mmContractSize,
+					FinancialInstrumentAttributes64.mmContractSize, FinancialInstrumentAttributes66.mmContractSize, FinancialInstrumentAttributes65.mmContractSize, FinancialInstrumentAttributes67.mmContractSize,
+					FinancialInstrumentAttributes70.mmContractSize, FinancialInstrumentAttributes69.mmContractSize, FinancialInstrumentAttributes71.mmContractSize, FinancialInstrumentAttributes75.mmContractSize,
+					FinancialInstrumentAttributes78.mmContractSize, FinancialInstrumentAttributes79.mmContractSize, FinancialInstrumentAttributes81.mmContractSize, FinancialInstrumentAttributes80.mmContractSize,
+					FinancialInstrumentAttributes85.mmContractSize, FinancialInstrumentAttributes84.mmContractSize, FinancialInstrumentAttributes83.mmContractSize);
 			elementContext_lazy = () -> SecuritiesConversion.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ContractSize";
 			definition = "Ratio or multiplying factor used to convert one contract into a quantity.";
 			maxOccurs = 1;
@@ -2350,8 +2295,8 @@ public class SecuritiesConversion {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesConversion";
 				definition = "Conversion exchange of securities, generally convertible bonds or preferred equities, into another form of securities, usually common equities.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Security.mmConversion, com.tools20022.repository.entity.SecuritiesPricing.mmRelatedSecuritiesConversion,
@@ -2360,19 +2305,13 @@ public class SecuritiesConversion {
 						com.tools20022.repository.entity.SecuritiesQuantity.mmRatioDenominatorSecuritiesConversion, com.tools20022.repository.entity.SecuritiesQuantity.mmRatioNumeratorSecuritiesConversion,
 						com.tools20022.repository.entity.CurrencyExchange.mmCurrencyExchangeForSecuritiesConversion, com.tools20022.repository.entity.Option.mmOptionConversionInformation,
 						com.tools20022.repository.entity.UnderlyingRatio.mmSecuritiesConversion);
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesConversion.mmConversionPrice, com.tools20022.repository.entity.SecuritiesConversion.mmConversionDate,
-						com.tools20022.repository.entity.SecuritiesConversion.mmMinimumExercisableQuantity, com.tools20022.repository.entity.SecuritiesConversion.mmMinimumExercisableMultipleQuantity,
-						com.tools20022.repository.entity.SecuritiesConversion.mmMaximumExercisableQuantity, com.tools20022.repository.entity.SecuritiesConversion.mmConversionType,
-						com.tools20022.repository.entity.SecuritiesConversion.mmConversionPeriod, com.tools20022.repository.entity.SecuritiesConversion.mmConversionRatioDenominator,
-						com.tools20022.repository.entity.SecuritiesConversion.mmConversionRatioNumerator, com.tools20022.repository.entity.SecuritiesConversion.mmRatio,
-						com.tools20022.repository.entity.SecuritiesConversion.mmConversionUnitCurrency, com.tools20022.repository.entity.SecuritiesConversion.mmRelatedOption,
-						com.tools20022.repository.entity.SecuritiesConversion.mmBusinessDayConvention, com.tools20022.repository.entity.SecuritiesConversion.mmConversionChoice,
-						com.tools20022.repository.entity.SecuritiesConversion.mmConversionFixedExchangeRate, com.tools20022.repository.entity.SecuritiesConversion.mmConversionMarginAmount,
-						com.tools20022.repository.entity.SecuritiesConversion.mmConversionOption, com.tools20022.repository.entity.SecuritiesConversion.mmConversionQuotedCurrency,
-						com.tools20022.repository.entity.SecuritiesConversion.mmFinancialCenter, com.tools20022.repository.entity.SecuritiesConversion.mmMinimumNoticeDays,
-						com.tools20022.repository.entity.SecuritiesConversion.mmNoticePeriodType, com.tools20022.repository.entity.SecuritiesConversion.mmProtectionAgainstDilutionIndicator,
-						com.tools20022.repository.entity.SecuritiesConversion.mmReverseConversionIndicator, com.tools20022.repository.entity.SecuritiesConversion.mmSecurityIdentification,
-						com.tools20022.repository.entity.SecuritiesConversion.mmPartyType, com.tools20022.repository.entity.SecuritiesConversion.mmContractSize);
+				element_lazy = () -> Arrays.asList(SecuritiesConversion.mmConversionPrice, SecuritiesConversion.mmConversionDate, SecuritiesConversion.mmMinimumExercisableQuantity, SecuritiesConversion.mmMinimumExercisableMultipleQuantity,
+						SecuritiesConversion.mmMaximumExercisableQuantity, SecuritiesConversion.mmConversionType, SecuritiesConversion.mmConversionPeriod, SecuritiesConversion.mmConversionRatioDenominator,
+						SecuritiesConversion.mmConversionRatioNumerator, SecuritiesConversion.mmRatio, SecuritiesConversion.mmConversionUnitCurrency, SecuritiesConversion.mmRelatedOption, SecuritiesConversion.mmBusinessDayConvention,
+						SecuritiesConversion.mmConversionChoice, SecuritiesConversion.mmConversionFixedExchangeRate, SecuritiesConversion.mmConversionMarginAmount, SecuritiesConversion.mmConversionOption,
+						SecuritiesConversion.mmConversionQuotedCurrency, SecuritiesConversion.mmFinancialCenter, SecuritiesConversion.mmMinimumNoticeDays, SecuritiesConversion.mmNoticePeriodType,
+						SecuritiesConversion.mmProtectionAgainstDilutionIndicator, SecuritiesConversion.mmReverseConversionIndicator, SecuritiesConversion.mmSecurityIdentification, SecuritiesConversion.mmPartyType,
+						SecuritiesConversion.mmContractSize);
 				derivationComponent_lazy = () -> Arrays.asList(ConversionTypeFormat1Choice.mmObject(), ConversionTypeFormat2Choice.mmObject(), ConversionType1FormatChoice.mmObject(), ConversionTypeFormat3Choice.mmObject(),
 						ConversionTypeFormat4Choice.mmObject());
 			}

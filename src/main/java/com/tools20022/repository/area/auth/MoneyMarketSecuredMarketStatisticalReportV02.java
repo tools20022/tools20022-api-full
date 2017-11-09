@@ -20,6 +20,7 @@ package com.tools20022.repository.area.auth;
 import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.AuthoritiesLatestVersion;
 import com.tools20022.repository.choice.SecuredMarketReport4Choice;
 import com.tools20022.repository.msg.MoneyMarketReportHeader1;
@@ -36,6 +37,9 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code auth.012.001.02}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.AuthoritiesLatestVersion
@@ -67,9 +71,6 @@ import java.util.List;
  * MoneyMarketSecuredMarketStatisticalReportV02.mmSupplementaryData}</li>
  * </ul>
  * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code auth.012.001.02}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -121,10 +122,10 @@ public class MoneyMarketSecuredMarketStatisticalReportV02 {
 	public static final MMMessageBuildingBlock mmReportHeader = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "RptHdr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportHeader";
 			definition = "Provides the elements specific to the report.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.auth.MoneyMarketSecuredMarketStatisticalReportV01.mmReportHeader;
+			previousVersion_lazy = () -> MoneyMarketSecuredMarketStatisticalReportV01.mmReportHeader;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> MoneyMarketReportHeader1.mmObject();
@@ -165,10 +166,10 @@ public class MoneyMarketSecuredMarketStatisticalReportV02 {
 	public static final MMMessageBuildingBlock mmSecuredMarketReport = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "ScrdMktRpt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuredMarketReport";
 			definition = "Provides the reason why no activity is reported or the required list of transactions for the secured market segment.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.auth.MoneyMarketSecuredMarketStatisticalReportV01.mmSecuredMarketReport;
+			previousVersion_lazy = () -> MoneyMarketSecuredMarketStatisticalReportV01.mmSecuredMarketReport;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> SecuredMarketReport4Choice.mmObject();
@@ -209,10 +210,10 @@ public class MoneyMarketSecuredMarketStatisticalReportV02 {
 	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SplmtryData";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryData";
 			definition = "Additional information that can not be captured in the structured fields and/or any other specific block.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.auth.MoneyMarketSecuredMarketStatisticalReportV01.mmSupplementaryData;
+			previousVersion_lazy = () -> MoneyMarketSecuredMarketStatisticalReportV01.mmSupplementaryData;
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
@@ -221,7 +222,7 @@ public class MoneyMarketSecuredMarketStatisticalReportV02 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MoneyMarketSecuredMarketStatisticalReportV02";
 				definition = "The MoneyMarketSecuredMarketStatisticalReport message is sent by the reporting agents to the relevant competent authority, to report all relevant secured money market transactions. ";
 				previousVersion_lazy = () -> MoneyMarketSecuredMarketStatisticalReportV01.mmObject();
@@ -229,8 +230,8 @@ public class MoneyMarketSecuredMarketStatisticalReportV02 {
 				rootElement = "Document";
 				xmlTag = "MnyMktScrdMktSttstclRpt";
 				businessArea_lazy = () -> AuthoritiesLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.auth.MoneyMarketSecuredMarketStatisticalReportV02.mmReportHeader,
-						com.tools20022.repository.area.auth.MoneyMarketSecuredMarketStatisticalReportV02.mmSecuredMarketReport, com.tools20022.repository.area.auth.MoneyMarketSecuredMarketStatisticalReportV02.mmSupplementaryData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(MoneyMarketSecuredMarketStatisticalReportV02.mmReportHeader, MoneyMarketSecuredMarketStatisticalReportV02.mmSecuredMarketReport,
+						MoneyMarketSecuredMarketStatisticalReportV02.mmSupplementaryData);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "auth";

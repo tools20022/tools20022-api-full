@@ -19,8 +19,10 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.ChequeIssue;
 import com.tools20022.repository.entity.Payment;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.Cheque4;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -107,10 +109,10 @@ public class PaymentInstrument19Choice {
 			componentContext_lazy = () -> PaymentInstrument19Choice.mmObject();
 			isDerived = false;
 			xmlTag = "ChqDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChequeDetails";
 			definition = "Settlement instructions for a payment by cheque.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.PaymentInstrument16Choice.mmChequeDetails;
+			previousVersion_lazy = () -> PaymentInstrument16Choice.mmChequeDetails;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -158,10 +160,10 @@ public class PaymentInstrument19Choice {
 			componentContext_lazy = () -> PaymentInstrument19Choice.mmObject();
 			isDerived = false;
 			xmlTag = "BkrsDrftDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BankersDraftDetails";
 			definition = "Settlement instructions for a payment by draft.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.PaymentInstrument16Choice.mmBankersDraftDetails;
+			previousVersion_lazy = () -> PaymentInstrument16Choice.mmBankersDraftDetails;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -172,10 +174,10 @@ public class PaymentInstrument19Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PaymentInstrument19Choice.mmChequeDetails, com.tools20022.repository.choice.PaymentInstrument19Choice.mmBankersDraftDetails);
+				messageElement_lazy = () -> Arrays.asList(PaymentInstrument19Choice.mmChequeDetails, PaymentInstrument19Choice.mmBankersDraftDetails);
 				trace_lazy = () -> Payment.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PaymentInstrument19Choice";
 				definition = "Choice of payment instruments.";
 				previousVersion_lazy = () -> PaymentInstrument16Choice.mmObject();

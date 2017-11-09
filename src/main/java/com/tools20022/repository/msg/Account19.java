@@ -20,10 +20,17 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.sese.AccountHoldingInformationRequestV04;
+import com.tools20022.repository.area.sese.AccountHoldingInformationV05;
+import com.tools20022.repository.area.sese.PortfolioTransferConfirmationV07;
+import com.tools20022.repository.area.sese.PortfolioTransferInstructionV07;
 import com.tools20022.repository.choice.PartyIdentification70Choice;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.entity.Account;
 import com.tools20022.repository.entity.AccountServicerRole;
 import com.tools20022.repository.entity.InvestmentAccount;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -144,14 +151,14 @@ public class Account19 {
 	 */
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.mmIdentification;
+			businessElementTrace_lazy = () -> Account.mmIdentification;
 			componentContext_lazy = () -> Account19.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Unique and unambiguous identification for the account between the account owner and the account servicer.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Account15.mmIdentification;
+			previousVersion_lazy = () -> Account15.mmIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -202,14 +209,14 @@ public class Account19 {
 	 */
 	public static final MMMessageAttribute mmDesignation = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentAccount.mmDesignation;
+			businessElementTrace_lazy = () -> InvestmentAccount.mmDesignation;
 			componentContext_lazy = () -> Account19.mmObject();
 			isDerived = false;
 			xmlTag = "Dsgnt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Designation";
 			definition = "Supplementary registration information applying to a specific block of units for dealing and reporting purposes. The supplementary registration information may be used when all the units are registered, for example, to a funds supermarket, but holdings for each investor have to reconciled individually.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Account15.mmDesignation;
+			previousVersion_lazy = () -> Account15.mmDesignation;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -259,10 +266,10 @@ public class Account19 {
 			componentContext_lazy = () -> Account19.mmObject();
 			isDerived = false;
 			xmlTag = "Svcr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Servicer";
 			definition = "Institution that maintains the records where the account is held.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Account15.mmServicer;
+			previousVersion_lazy = () -> Account15.mmServicer;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -273,14 +280,13 @@ public class Account19 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Account19.mmIdentification, com.tools20022.repository.msg.Account19.mmDesignation, com.tools20022.repository.msg.Account19.mmServicer);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.PortfolioTransferInstructionV07.mmTransferorAccount, com.tools20022.repository.area.sese.PortfolioTransferInstructionV07.mmNomineeAccount,
-						com.tools20022.repository.area.sese.AccountHoldingInformationV05.mmTransferorAccount, com.tools20022.repository.area.sese.AccountHoldingInformationV05.mmNomineeAccount,
-						com.tools20022.repository.area.sese.PortfolioTransferConfirmationV07.mmTransferorAccount, com.tools20022.repository.area.sese.PortfolioTransferConfirmationV07.mmNomineeAccount,
-						com.tools20022.repository.area.sese.AccountHoldingInformationRequestV04.mmTransferorAccount, com.tools20022.repository.area.sese.AccountHoldingInformationRequestV04.mmNomineeAccount);
+				messageElement_lazy = () -> Arrays.asList(Account19.mmIdentification, Account19.mmDesignation, Account19.mmServicer);
+				messageBuildingBlock_lazy = () -> Arrays.asList(PortfolioTransferInstructionV07.mmTransferorAccount, PortfolioTransferInstructionV07.mmNomineeAccount, AccountHoldingInformationV05.mmTransferorAccount,
+						AccountHoldingInformationV05.mmNomineeAccount, PortfolioTransferConfirmationV07.mmTransferorAccount, PortfolioTransferConfirmationV07.mmNomineeAccount, AccountHoldingInformationRequestV04.mmTransferorAccount,
+						AccountHoldingInformationRequestV04.mmNomineeAccount);
 				trace_lazy = () -> InvestmentAccount.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Account19";
 				definition = "Account between an investor(s) and a fund manager or a fund. The account can contain holdings in any investment fund or investment fund class managed (or distributed) by the fund manager, within the same fund family.";
 				previousVersion_lazy = () -> Account15.mmObject();

@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.BalanceTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -164,7 +166,7 @@ public class BalanceType9Code extends BalanceTypeCode {
 	 */
 	public static final MMCode mmOpeningBooked = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OpeningBooked";
 			owner_lazy = () -> BalanceType9Code.mmObject();
 		}
@@ -187,7 +189,7 @@ public class BalanceType9Code extends BalanceTypeCode {
 	 */
 	public static final MMCode mmInterimBooked = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterimBooked";
 			owner_lazy = () -> BalanceType9Code.mmObject();
 		}
@@ -210,7 +212,7 @@ public class BalanceType9Code extends BalanceTypeCode {
 	 */
 	public static final MMCode mmClosingBooked = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClosingBooked";
 			owner_lazy = () -> BalanceType9Code.mmObject();
 		}
@@ -233,7 +235,7 @@ public class BalanceType9Code extends BalanceTypeCode {
 	 */
 	public static final MMCode mmOpeningAvailable = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OpeningAvailable";
 			owner_lazy = () -> BalanceType9Code.mmObject();
 		}
@@ -256,7 +258,7 @@ public class BalanceType9Code extends BalanceTypeCode {
 	 */
 	public static final MMCode mmInterimAvailable = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterimAvailable";
 			owner_lazy = () -> BalanceType9Code.mmObject();
 		}
@@ -279,7 +281,7 @@ public class BalanceType9Code extends BalanceTypeCode {
 	 */
 	public static final MMCode mmClosingAvailable = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClosingAvailable";
 			owner_lazy = () -> BalanceType9Code.mmObject();
 		}
@@ -302,7 +304,7 @@ public class BalanceType9Code extends BalanceTypeCode {
 	 */
 	public static final MMCode mmForwardAvailable = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForwardAvailable";
 			owner_lazy = () -> BalanceType9Code.mmObject();
 		}
@@ -325,7 +327,7 @@ public class BalanceType9Code extends BalanceTypeCode {
 	 */
 	public static final MMCode mmPreviouslyClosedBooked = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviouslyClosedBooked";
 			owner_lazy = () -> BalanceType9Code.mmObject();
 		}
@@ -348,7 +350,7 @@ public class BalanceType9Code extends BalanceTypeCode {
 	 */
 	public static final MMCode mmInvestmentOpeningAvailable = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestmentOpeningAvailable";
 			owner_lazy = () -> BalanceType9Code.mmObject();
 		}
@@ -371,7 +373,7 @@ public class BalanceType9Code extends BalanceTypeCode {
 	 */
 	public static final MMCode mmInvestmentInterimAvailable = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestmentInterimAvailable";
 			owner_lazy = () -> BalanceType9Code.mmObject();
 		}
@@ -394,7 +396,7 @@ public class BalanceType9Code extends BalanceTypeCode {
 	 */
 	public static final MMCode mmInvestmentClosingAvailable = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestmentClosingAvailable";
 			owner_lazy = () -> BalanceType9Code.mmObject();
 		}
@@ -417,7 +419,7 @@ public class BalanceType9Code extends BalanceTypeCode {
 	 */
 	public static final MMCode mmInvestmentForwardAvailable = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestmentForwardAvailable";
 			owner_lazy = () -> BalanceType9Code.mmObject();
 		}
@@ -440,7 +442,7 @@ public class BalanceType9Code extends BalanceTypeCode {
 	 */
 	public static final MMCode mmInvestmentClosingBooked = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestmentClosingBooked";
 			owner_lazy = () -> BalanceType9Code.mmObject();
 		}
@@ -463,7 +465,7 @@ public class BalanceType9Code extends BalanceTypeCode {
 	 */
 	public static final MMCode mmInvestmentInterimBooked = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestmentInterimBooked";
 			owner_lazy = () -> BalanceType9Code.mmObject();
 		}
@@ -486,7 +488,7 @@ public class BalanceType9Code extends BalanceTypeCode {
 	 */
 	public static final MMCode mmInvestmentOpeningBooked = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestmentOpeningBooked";
 			owner_lazy = () -> BalanceType9Code.mmObject();
 		}
@@ -509,7 +511,7 @@ public class BalanceType9Code extends BalanceTypeCode {
 	 */
 	public static final MMCode mmDisbursementOpeningAvailable = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DisbursementOpeningAvailable";
 			owner_lazy = () -> BalanceType9Code.mmObject();
 		}
@@ -532,7 +534,7 @@ public class BalanceType9Code extends BalanceTypeCode {
 	 */
 	public static final MMCode mmDisbursementInterimAvailable = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DisbursementInterimAvailable";
 			owner_lazy = () -> BalanceType9Code.mmObject();
 		}
@@ -555,7 +557,7 @@ public class BalanceType9Code extends BalanceTypeCode {
 	 */
 	public static final MMCode mmDisbursementClosingAvailable = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DisbursementClosingAvailable";
 			owner_lazy = () -> BalanceType9Code.mmObject();
 		}
@@ -578,7 +580,7 @@ public class BalanceType9Code extends BalanceTypeCode {
 	 */
 	public static final MMCode mmDisbursementForwardAvailable = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DisbursementForwardAvailable";
 			owner_lazy = () -> BalanceType9Code.mmObject();
 		}
@@ -601,7 +603,7 @@ public class BalanceType9Code extends BalanceTypeCode {
 	 */
 	public static final MMCode mmDisbursementClosingBooked = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DisbursementClosingBooked";
 			owner_lazy = () -> BalanceType9Code.mmObject();
 		}
@@ -624,7 +626,7 @@ public class BalanceType9Code extends BalanceTypeCode {
 	 */
 	public static final MMCode mmDisbursementInterimBooked = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DisbursementInterimBooked";
 			owner_lazy = () -> BalanceType9Code.mmObject();
 		}
@@ -647,7 +649,7 @@ public class BalanceType9Code extends BalanceTypeCode {
 	 */
 	public static final MMCode mmDisbursementOpeningBooked = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DisbursementOpeningBooked";
 			owner_lazy = () -> BalanceType9Code.mmObject();
 		}
@@ -670,7 +672,7 @@ public class BalanceType9Code extends BalanceTypeCode {
 	 */
 	public static final MMCode mmCollectionOpeningAvailable = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollectionOpeningAvailable";
 			owner_lazy = () -> BalanceType9Code.mmObject();
 		}
@@ -693,7 +695,7 @@ public class BalanceType9Code extends BalanceTypeCode {
 	 */
 	public static final MMCode mmCollectionInterimAvailable = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollectionInterimAvailable";
 			owner_lazy = () -> BalanceType9Code.mmObject();
 		}
@@ -716,7 +718,7 @@ public class BalanceType9Code extends BalanceTypeCode {
 	 */
 	public static final MMCode mmCollectionClosingAvailable = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollectionClosingAvailable";
 			owner_lazy = () -> BalanceType9Code.mmObject();
 		}
@@ -739,7 +741,7 @@ public class BalanceType9Code extends BalanceTypeCode {
 	 */
 	public static final MMCode mmCollectionForwardAvailable = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollectionForwardAvailable";
 			owner_lazy = () -> BalanceType9Code.mmObject();
 		}
@@ -762,7 +764,7 @@ public class BalanceType9Code extends BalanceTypeCode {
 	 */
 	public static final MMCode mmCollectionClosingBooked = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollectionClosingBooked";
 			owner_lazy = () -> BalanceType9Code.mmObject();
 		}
@@ -785,7 +787,7 @@ public class BalanceType9Code extends BalanceTypeCode {
 	 */
 	public static final MMCode mmCollectionInterimBooked = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollectionInterimBooked";
 			owner_lazy = () -> BalanceType9Code.mmObject();
 		}
@@ -808,7 +810,7 @@ public class BalanceType9Code extends BalanceTypeCode {
 	 */
 	public static final MMCode mmCollectionOpeningBooked = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollectionOpeningBooked";
 			owner_lazy = () -> BalanceType9Code.mmObject();
 		}
@@ -817,25 +819,18 @@ public class BalanceType9Code extends BalanceTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("OPBD");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "BalanceType9Code";
 				definition = "Specifies the nature of the balance, eg, opening balance.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.BalanceType9Code.mmOpeningBooked, com.tools20022.repository.codeset.BalanceType9Code.mmInterimBooked,
-						com.tools20022.repository.codeset.BalanceType9Code.mmClosingBooked, com.tools20022.repository.codeset.BalanceType9Code.mmOpeningAvailable, com.tools20022.repository.codeset.BalanceType9Code.mmInterimAvailable,
-						com.tools20022.repository.codeset.BalanceType9Code.mmClosingAvailable, com.tools20022.repository.codeset.BalanceType9Code.mmForwardAvailable,
-						com.tools20022.repository.codeset.BalanceType9Code.mmPreviouslyClosedBooked, com.tools20022.repository.codeset.BalanceType9Code.mmInvestmentOpeningAvailable,
-						com.tools20022.repository.codeset.BalanceType9Code.mmInvestmentInterimAvailable, com.tools20022.repository.codeset.BalanceType9Code.mmInvestmentClosingAvailable,
-						com.tools20022.repository.codeset.BalanceType9Code.mmInvestmentForwardAvailable, com.tools20022.repository.codeset.BalanceType9Code.mmInvestmentClosingBooked,
-						com.tools20022.repository.codeset.BalanceType9Code.mmInvestmentInterimBooked, com.tools20022.repository.codeset.BalanceType9Code.mmInvestmentOpeningBooked,
-						com.tools20022.repository.codeset.BalanceType9Code.mmDisbursementOpeningAvailable, com.tools20022.repository.codeset.BalanceType9Code.mmDisbursementInterimAvailable,
-						com.tools20022.repository.codeset.BalanceType9Code.mmDisbursementClosingAvailable, com.tools20022.repository.codeset.BalanceType9Code.mmDisbursementForwardAvailable,
-						com.tools20022.repository.codeset.BalanceType9Code.mmDisbursementClosingBooked, com.tools20022.repository.codeset.BalanceType9Code.mmDisbursementInterimBooked,
-						com.tools20022.repository.codeset.BalanceType9Code.mmDisbursementOpeningBooked, com.tools20022.repository.codeset.BalanceType9Code.mmCollectionOpeningAvailable,
-						com.tools20022.repository.codeset.BalanceType9Code.mmCollectionInterimAvailable, com.tools20022.repository.codeset.BalanceType9Code.mmCollectionClosingAvailable,
-						com.tools20022.repository.codeset.BalanceType9Code.mmCollectionForwardAvailable, com.tools20022.repository.codeset.BalanceType9Code.mmCollectionClosingBooked,
-						com.tools20022.repository.codeset.BalanceType9Code.mmCollectionInterimBooked, com.tools20022.repository.codeset.BalanceType9Code.mmCollectionOpeningBooked);
+				code_lazy = () -> Arrays.asList(BalanceType9Code.mmOpeningBooked, BalanceType9Code.mmInterimBooked, BalanceType9Code.mmClosingBooked, BalanceType9Code.mmOpeningAvailable, BalanceType9Code.mmInterimAvailable,
+						BalanceType9Code.mmClosingAvailable, BalanceType9Code.mmForwardAvailable, BalanceType9Code.mmPreviouslyClosedBooked, BalanceType9Code.mmInvestmentOpeningAvailable, BalanceType9Code.mmInvestmentInterimAvailable,
+						BalanceType9Code.mmInvestmentClosingAvailable, BalanceType9Code.mmInvestmentForwardAvailable, BalanceType9Code.mmInvestmentClosingBooked, BalanceType9Code.mmInvestmentInterimBooked,
+						BalanceType9Code.mmInvestmentOpeningBooked, BalanceType9Code.mmDisbursementOpeningAvailable, BalanceType9Code.mmDisbursementInterimAvailable, BalanceType9Code.mmDisbursementClosingAvailable,
+						BalanceType9Code.mmDisbursementForwardAvailable, BalanceType9Code.mmDisbursementClosingBooked, BalanceType9Code.mmDisbursementInterimBooked, BalanceType9Code.mmDisbursementOpeningBooked,
+						BalanceType9Code.mmCollectionOpeningAvailable, BalanceType9Code.mmCollectionInterimAvailable, BalanceType9Code.mmCollectionClosingAvailable, BalanceType9Code.mmCollectionForwardAvailable,
+						BalanceType9Code.mmCollectionClosingBooked, BalanceType9Code.mmCollectionInterimBooked, BalanceType9Code.mmCollectionOpeningBooked);
 				trace_lazy = () -> BalanceTypeCode.mmObject();
 			}
 		});

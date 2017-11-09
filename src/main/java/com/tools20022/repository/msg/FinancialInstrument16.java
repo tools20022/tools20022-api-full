@@ -19,11 +19,13 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.*;
 import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.YesNoIndicator;
-import com.tools20022.repository.entity.InvestmentFundClass;
+import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -149,11 +151,11 @@ public class FinancialInstrument16 {
 	 */
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmIdentification;
+			businessElementTrace_lazy = () -> Security.mmIdentification;
 			componentContext_lazy = () -> FinancialInstrument16.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Identification of a security by an ISIN.";
 			maxOccurs = 1;
@@ -196,11 +198,11 @@ public class FinancialInstrument16 {
 	 */
 	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.LocalName.mmFullName;
+			businessElementTrace_lazy = () -> LocalName.mmFullName;
 			componentContext_lazy = () -> FinancialInstrument16.mmObject();
 			isDerived = false;
 			xmlTag = "Nm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Name";
 			definition = "Name of the financial instrument in free format text.";
 			maxOccurs = 1;
@@ -249,11 +251,11 @@ public class FinancialInstrument16 {
 	 */
 	public static final MMMessageAttribute mmClassType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmClassType;
+			businessElementTrace_lazy = () -> InvestmentFundClass.mmClassType;
 			componentContext_lazy = () -> FinancialInstrument16.mmObject();
 			isDerived = false;
 			xmlTag = "ClssTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClassType";
 			definition = "Features of units offered by a fund. For example, a unit may have a specific load structure, eg, front end or back end, an income policy, eg, pay out or accumulate, or a trailer policy, eg, with or without. Fund classes are typically denoted by a single character, eg, 'Class A', 'Class 2'.";
 			maxOccurs = 1;
@@ -297,11 +299,11 @@ public class FinancialInstrument16 {
 	 */
 	public static final MMMessageAttribute mmUmbrellaName = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.UmbrellaFund.mmName;
+			businessElementTrace_lazy = () -> UmbrellaFund.mmName;
 			componentContext_lazy = () -> FinancialInstrument16.mmObject();
 			isDerived = false;
 			xmlTag = "UmbrllNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UmbrellaName";
 			definition = "Name of the umbrella fund in which financial instrument is contained.";
 			maxOccurs = 1;
@@ -347,11 +349,11 @@ public class FinancialInstrument16 {
 	 */
 	public static final MMMessageAttribute mmCountryOfDomicile = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFund.mmDomicileCountry;
+			businessElementTrace_lazy = () -> InvestmentFund.mmDomicileCountry;
 			componentContext_lazy = () -> FinancialInstrument16.mmObject();
 			isDerived = false;
 			xmlTag = "CtryOfDmcl";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CountryOfDomicile";
 			definition = "Country where the fund has legal domicile as reflected in the ISIN classification.";
 			maxOccurs = 1;
@@ -394,11 +396,11 @@ public class FinancialInstrument16 {
 	 */
 	public static final MMMessageAttribute mmRegisteredDistributionCountry = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmRegisteredDistributionCountry;
+			businessElementTrace_lazy = () -> Security.mmRegisteredDistributionCountry;
 			componentContext_lazy = () -> FinancialInstrument16.mmObject();
 			isDerived = false;
 			xmlTag = "RegdDstrbtnCtry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RegisteredDistributionCountry";
 			definition = "Countries where the fund is registered for distribution.";
 			minOccurs = 1;
@@ -441,11 +443,11 @@ public class FinancialInstrument16 {
 	 */
 	public static final MMMessageAttribute mmDenominationCurrency = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmDenominationCurrency;
+			businessElementTrace_lazy = () -> Security.mmDenominationCurrency;
 			componentContext_lazy = () -> FinancialInstrument16.mmObject();
 			isDerived = false;
 			xmlTag = "DnmtnCcy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DenominationCurrency";
 			definition = "Currency in which a security is issued or redenominated.";
 			maxOccurs = 1;
@@ -492,11 +494,11 @@ public class FinancialInstrument16 {
 	 */
 	public static final MMMessageAttribute mmDistributionPolicy = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmDistributionPolicy;
+			businessElementTrace_lazy = () -> InvestmentFundClass.mmDistributionPolicy;
 			componentContext_lazy = () -> FinancialInstrument16.mmObject();
 			isDerived = false;
 			xmlTag = "DstrbtnPlcy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DistributionPolicy";
 			definition = "Income policy relating to a class type, ie, if income is paid out or retained in the fund.";
 			maxOccurs = 1;
@@ -540,11 +542,11 @@ public class FinancialInstrument16 {
 	 */
 	public static final MMMessageAttribute mmDividendPolicy = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmDividendPolicy;
+			businessElementTrace_lazy = () -> InvestmentFundClass.mmDividendPolicy;
 			componentContext_lazy = () -> FinancialInstrument16.mmObject();
 			isDerived = false;
 			xmlTag = "DvddPlcy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DividendPolicy";
 			definition = "Dividend policy of the fund, eg, cash, units.";
 			maxOccurs = 1;
@@ -588,11 +590,11 @@ public class FinancialInstrument16 {
 	 */
 	public static final MMMessageAttribute mmSecuritiesForm = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmRegistrationForm;
+			businessElementTrace_lazy = () -> Security.mmRegistrationForm;
 			componentContext_lazy = () -> FinancialInstrument16.mmObject();
 			isDerived = false;
 			xmlTag = "SctiesForm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesForm";
 			definition = "Specifies the form, ie, ownership, of the security.";
 			maxOccurs = 1;
@@ -639,11 +641,11 @@ public class FinancialInstrument16 {
 	 */
 	public static final MMMessageAttribute mmDematerialisedIndicator = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmDematerialisedIndicator;
+			businessElementTrace_lazy = () -> Security.mmDematerialisedIndicator;
 			componentContext_lazy = () -> FinancialInstrument16.mmObject();
 			isDerived = false;
 			xmlTag = "DmtrlsdInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DematerialisedIndicator";
 			definition = "Indicates whether a security exists only as an electronic record, ie, there is no physical document representing the security.";
 			maxOccurs = 1;
@@ -688,11 +690,11 @@ public class FinancialInstrument16 {
 	 */
 	public static final MMMessageAttribute mmDividendFrequency = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Dividend.mmDividendFrequency;
+			businessElementTrace_lazy = () -> Dividend.mmDividendFrequency;
 			componentContext_lazy = () -> FinancialInstrument16.mmObject();
 			isDerived = false;
 			xmlTag = "DvddFrqcy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DividendFrequency";
 			definition = "Frequency with which the income is allocated to investors.";
 			maxOccurs = 1;
@@ -739,11 +741,11 @@ public class FinancialInstrument16 {
 	 */
 	public static final MMMessageAttribute mmReinvestmentFrequency = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics.mmReinvestmentFrequency;
+			businessElementTrace_lazy = () -> InvestmentFundClassProcessingCharacteristics.mmReinvestmentFrequency;
 			componentContext_lazy = () -> FinancialInstrument16.mmObject();
 			isDerived = false;
 			xmlTag = "RinvstmtFrqcy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReinvestmentFrequency";
 			definition = "Frequency with which the reinvestment takes place,  This is the same or less than the dividend frequency,";
 			maxOccurs = 1;
@@ -790,11 +792,11 @@ public class FinancialInstrument16 {
 	 */
 	public static final MMMessageAttribute mmEUSavingsDirective = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmEUSavingsDirective;
+			businessElementTrace_lazy = () -> Security.mmEUSavingsDirective;
 			componentContext_lazy = () -> FinancialInstrument16.mmObject();
 			isDerived = false;
 			xmlTag = "EUSvgsDrctv";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EUSavingsDirective";
 			definition = "Indicates whether the investment fund class is subject to the European Union Saving Directive.";
 			maxOccurs = 1;
@@ -839,11 +841,11 @@ public class FinancialInstrument16 {
 	 */
 	public static final MMMessageAttribute mmFrontEndLoadIndicator = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics.mmFrontEndLoadIndicator;
+			businessElementTrace_lazy = () -> InvestmentFundClassProcessingCharacteristics.mmFrontEndLoadIndicator;
 			componentContext_lazy = () -> FinancialInstrument16.mmObject();
 			isDerived = false;
 			xmlTag = "FrntEndLdInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FrontEndLoadIndicator";
 			definition = "Front end charge on subscription orders for this class can be applied.";
 			maxOccurs = 1;
@@ -890,11 +892,11 @@ public class FinancialInstrument16 {
 	 */
 	public static final MMMessageAttribute mmBackEndLoadIndicator = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics.mmBackEndLoadIndicator;
+			businessElementTrace_lazy = () -> InvestmentFundClassProcessingCharacteristics.mmBackEndLoadIndicator;
 			componentContext_lazy = () -> FinancialInstrument16.mmObject();
 			isDerived = false;
 			xmlTag = "BckEndLdInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BackEndLoadIndicator";
 			definition = "Exit charge (eg. CDSC) on redemption orders for this class can be applied.";
 			maxOccurs = 1;
@@ -941,11 +943,11 @@ public class FinancialInstrument16 {
 	 */
 	public static final MMMessageAttribute mmSwitchFeeIndicator = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics.mmSwitchingFeeIndicator;
+			businessElementTrace_lazy = () -> InvestmentFundClassProcessingCharacteristics.mmSwitchingFeeIndicator;
 			componentContext_lazy = () -> FinancialInstrument16.mmObject();
 			isDerived = false;
 			xmlTag = "SwtchFeeInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SwitchFeeIndicator";
 			definition = "If a separate fee for switching between sub-funds of the same umbrella can be applied";
 			maxOccurs = 1;
@@ -957,17 +959,14 @@ public class FinancialInstrument16 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrument16.mmIdentification, com.tools20022.repository.msg.FinancialInstrument16.mmName,
-						com.tools20022.repository.msg.FinancialInstrument16.mmClassType, com.tools20022.repository.msg.FinancialInstrument16.mmUmbrellaName, com.tools20022.repository.msg.FinancialInstrument16.mmCountryOfDomicile,
-						com.tools20022.repository.msg.FinancialInstrument16.mmRegisteredDistributionCountry, com.tools20022.repository.msg.FinancialInstrument16.mmDenominationCurrency,
-						com.tools20022.repository.msg.FinancialInstrument16.mmDistributionPolicy, com.tools20022.repository.msg.FinancialInstrument16.mmDividendPolicy, com.tools20022.repository.msg.FinancialInstrument16.mmSecuritiesForm,
-						com.tools20022.repository.msg.FinancialInstrument16.mmDematerialisedIndicator, com.tools20022.repository.msg.FinancialInstrument16.mmDividendFrequency,
-						com.tools20022.repository.msg.FinancialInstrument16.mmReinvestmentFrequency, com.tools20022.repository.msg.FinancialInstrument16.mmEUSavingsDirective,
-						com.tools20022.repository.msg.FinancialInstrument16.mmFrontEndLoadIndicator, com.tools20022.repository.msg.FinancialInstrument16.mmBackEndLoadIndicator,
-						com.tools20022.repository.msg.FinancialInstrument16.mmSwitchFeeIndicator);
+				messageElement_lazy = () -> Arrays.asList(FinancialInstrument16.mmIdentification, FinancialInstrument16.mmName, FinancialInstrument16.mmClassType, FinancialInstrument16.mmUmbrellaName,
+						FinancialInstrument16.mmCountryOfDomicile, FinancialInstrument16.mmRegisteredDistributionCountry, FinancialInstrument16.mmDenominationCurrency, FinancialInstrument16.mmDistributionPolicy,
+						FinancialInstrument16.mmDividendPolicy, FinancialInstrument16.mmSecuritiesForm, FinancialInstrument16.mmDematerialisedIndicator, FinancialInstrument16.mmDividendFrequency,
+						FinancialInstrument16.mmReinvestmentFrequency, FinancialInstrument16.mmEUSavingsDirective, FinancialInstrument16.mmFrontEndLoadIndicator, FinancialInstrument16.mmBackEndLoadIndicator,
+						FinancialInstrument16.mmSwitchFeeIndicator);
 				trace_lazy = () -> InvestmentFundClass.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "FinancialInstrument16";
 				definition = "Security that is a sub-set of an investment fund, and is governed by the same investment fund policy, eg, dividend option or valuation currency.";
 			}

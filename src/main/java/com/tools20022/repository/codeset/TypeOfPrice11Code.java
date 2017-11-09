@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.TypeOfPriceCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -107,7 +109,7 @@ public class TypeOfPrice11Code extends TypeOfPriceCode {
 	 */
 	public static final MMCode mmBid = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Bid";
 			owner_lazy = () -> TypeOfPrice11Code.mmObject();
 		}
@@ -130,7 +132,7 @@ public class TypeOfPrice11Code extends TypeOfPriceCode {
 	 */
 	public static final MMCode mmOffer = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Offer";
 			owner_lazy = () -> TypeOfPrice11Code.mmObject();
 		}
@@ -153,7 +155,7 @@ public class TypeOfPrice11Code extends TypeOfPriceCode {
 	 */
 	public static final MMCode mmNetAssetValue = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetAssetValue";
 			owner_lazy = () -> TypeOfPrice11Code.mmObject();
 		}
@@ -176,7 +178,7 @@ public class TypeOfPrice11Code extends TypeOfPriceCode {
 	 */
 	public static final MMCode mmCreation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Creation";
 			owner_lazy = () -> TypeOfPrice11Code.mmObject();
 		}
@@ -199,7 +201,7 @@ public class TypeOfPrice11Code extends TypeOfPriceCode {
 	 */
 	public static final MMCode mmCancellation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cancellation";
 			owner_lazy = () -> TypeOfPrice11Code.mmObject();
 		}
@@ -222,7 +224,7 @@ public class TypeOfPrice11Code extends TypeOfPriceCode {
 	 */
 	public static final MMCode mmInterim = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Interim";
 			owner_lazy = () -> TypeOfPrice11Code.mmObject();
 		}
@@ -245,7 +247,7 @@ public class TypeOfPrice11Code extends TypeOfPriceCode {
 	 */
 	public static final MMCode mmSwing = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Swing";
 			owner_lazy = () -> TypeOfPrice11Code.mmObject();
 		}
@@ -268,7 +270,7 @@ public class TypeOfPrice11Code extends TypeOfPriceCode {
 	 */
 	public static final MMCode mmMid = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Mid";
 			owner_lazy = () -> TypeOfPrice11Code.mmObject();
 		}
@@ -291,7 +293,7 @@ public class TypeOfPrice11Code extends TypeOfPriceCode {
 	 */
 	public static final MMCode mmReinvestment = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reinvestment";
 			owner_lazy = () -> TypeOfPrice11Code.mmObject();
 		}
@@ -314,7 +316,7 @@ public class TypeOfPrice11Code extends TypeOfPriceCode {
 	 */
 	public static final MMCode mmSwitch = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Switch";
 			owner_lazy = () -> TypeOfPrice11Code.mmObject();
 		}
@@ -337,7 +339,7 @@ public class TypeOfPrice11Code extends TypeOfPriceCode {
 	 */
 	public static final MMCode mmMarket = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Market";
 			owner_lazy = () -> TypeOfPrice11Code.mmObject();
 		}
@@ -360,7 +362,7 @@ public class TypeOfPrice11Code extends TypeOfPriceCode {
 	 */
 	public static final MMCode mmIndicative = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Indicative";
 			owner_lazy = () -> TypeOfPrice11Code.mmObject();
 		}
@@ -369,15 +371,13 @@ public class TypeOfPrice11Code extends TypeOfPriceCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("BIDE");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TypeOfPrice11Code";
 				definition = "Specifies the type of price and information about the price.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TypeOfPrice11Code.mmBid, com.tools20022.repository.codeset.TypeOfPrice11Code.mmOffer, com.tools20022.repository.codeset.TypeOfPrice11Code.mmNetAssetValue,
-						com.tools20022.repository.codeset.TypeOfPrice11Code.mmCreation, com.tools20022.repository.codeset.TypeOfPrice11Code.mmCancellation, com.tools20022.repository.codeset.TypeOfPrice11Code.mmInterim,
-						com.tools20022.repository.codeset.TypeOfPrice11Code.mmSwing, com.tools20022.repository.codeset.TypeOfPrice11Code.mmMid, com.tools20022.repository.codeset.TypeOfPrice11Code.mmReinvestment,
-						com.tools20022.repository.codeset.TypeOfPrice11Code.mmSwitch, com.tools20022.repository.codeset.TypeOfPrice11Code.mmMarket, com.tools20022.repository.codeset.TypeOfPrice11Code.mmIndicative);
+				code_lazy = () -> Arrays.asList(TypeOfPrice11Code.mmBid, TypeOfPrice11Code.mmOffer, TypeOfPrice11Code.mmNetAssetValue, TypeOfPrice11Code.mmCreation, TypeOfPrice11Code.mmCancellation, TypeOfPrice11Code.mmInterim,
+						TypeOfPrice11Code.mmSwing, TypeOfPrice11Code.mmMid, TypeOfPrice11Code.mmReinvestment, TypeOfPrice11Code.mmSwitch, TypeOfPrice11Code.mmMarket, TypeOfPrice11Code.mmIndicative);
 				trace_lazy = () -> TypeOfPriceCode.mmObject();
 			}
 		});

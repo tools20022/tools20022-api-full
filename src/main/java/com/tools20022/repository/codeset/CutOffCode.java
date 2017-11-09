@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,12 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.CutOff1Code CutOff1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -36,12 +44,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * CutOffCode.mmEarly}</li>
  * <li>{@linkplain com.tools20022.repository.codeset.CutOffCode#mmLate
  * CutOffCode.mmLate}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.CutOff1Code CutOff1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -90,7 +92,7 @@ public class CutOffCode {
 	 */
 	public static final MMCode mmAnticipatedEarlyCutoff = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AnticipatedEarlyCutoff";
 			definition = "Cut-off may change to early.";
 			owner_lazy = () -> CutOffCode.mmObject();
@@ -123,7 +125,7 @@ public class CutOffCode {
 	 */
 	public static final MMCode mmEarly = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Early";
 			definition = "Cutoff occurs before the DTCC (The Depository Trust and Clearing Corporation) standard settlement cutoff. Early cutoff usually 1:30 Eastern Standard Time.";
 			owner_lazy = () -> CutOffCode.mmObject();
@@ -155,7 +157,7 @@ public class CutOffCode {
 	 */
 	public static final MMCode mmLate = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Late";
 			definition = "Cutoff is after settlement at DTCC (The Depository Trust and Clearing Corporation). ";
 			owner_lazy = () -> CutOffCode.mmObject();
@@ -166,12 +168,12 @@ public class CutOffCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("AERL");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CutOffCode";
 				definition = "Specifies the cut-off  type.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CutOffCode.mmAnticipatedEarlyCutoff, com.tools20022.repository.codeset.CutOffCode.mmEarly, com.tools20022.repository.codeset.CutOffCode.mmLate);
+				code_lazy = () -> Arrays.asList(CutOffCode.mmAnticipatedEarlyCutoff, CutOffCode.mmEarly, CutOffCode.mmLate);
 				derivation_lazy = () -> Arrays.asList(CutOff1Code.mmObject());
 			}
 		});

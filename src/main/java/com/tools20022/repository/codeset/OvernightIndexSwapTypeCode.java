@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.OvernightIndexSwapType1Code
+ * OvernightIndexSwapType1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -35,14 +45,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.OvernightIndexSwapTypeCode#mmReceived
  * OvernightIndexSwapTypeCode.mmReceived}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.OvernightIndexSwapType1Code
- * OvernightIndexSwapType1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -86,7 +88,7 @@ public class OvernightIndexSwapTypeCode {
 	 */
 	public static final MMCode mmPaid = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Paid";
 			definition = "Fixed interest rate is paid by the reporting agent.";
 			owner_lazy = () -> OvernightIndexSwapTypeCode.mmObject();
@@ -116,7 +118,7 @@ public class OvernightIndexSwapTypeCode {
 	 */
 	public static final MMCode mmReceived = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Received";
 			definition = "Fixed interest rate is received by the reporting agent.";
 			owner_lazy = () -> OvernightIndexSwapTypeCode.mmObject();
@@ -127,11 +129,11 @@ public class OvernightIndexSwapTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OvernightIndexSwapTypeCode";
 				definition = "Specifies the type of overnight index swap transaction.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OvernightIndexSwapTypeCode.mmPaid, com.tools20022.repository.codeset.OvernightIndexSwapTypeCode.mmReceived);
+				code_lazy = () -> Arrays.asList(OvernightIndexSwapTypeCode.mmPaid, OvernightIndexSwapTypeCode.mmReceived);
 				derivation_lazy = () -> Arrays.asList(OvernightIndexSwapType1Code.mmObject());
 			}
 		});

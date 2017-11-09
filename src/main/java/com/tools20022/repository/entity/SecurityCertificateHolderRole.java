@@ -18,7 +18,9 @@
 package com.tools20022.repository.entity;
 
 import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.SecurityCertificatePartyRole;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.PartyAndCertificate2;
 import com.tools20022.repository.msg.PartyAndCertificate3;
 import java.util.Arrays;
@@ -34,10 +36,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} =
- * {@linkplain com.tools20022.repository.entity.SecurityCertificatePartyRole
- * SecurityCertificatePartyRole}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -48,6 +46,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * PartyAndCertificate3}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} =
+ * {@linkplain com.tools20022.repository.entity.SecurityCertificatePartyRole
+ * SecurityCertificatePartyRole}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -70,8 +72,8 @@ public class SecurityCertificateHolderRole extends SecurityCertificatePartyRole 
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecurityCertificateHolderRole";
 				definition = "Holder of the security certificate.";
 				superType_lazy = () -> SecurityCertificatePartyRole.mmObject();

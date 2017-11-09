@@ -19,9 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ActiveCurrencyAnd13DecimalAmount;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -100,7 +102,7 @@ public class LetterIntent1 {
 			componentContext_lazy = () -> LetterIntent1.mmObject();
 			isDerived = false;
 			xmlTag = "LttrInttRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LetterIntentReference";
 			definition = "Reference of a letter of intent program, in which sales commissions are reduced based on the aggregate of a customer's actual purchase and anticipated purchases, over a specific period of time, and as agreed by the customer. ";
 			maxOccurs = 1;
@@ -141,7 +143,7 @@ public class LetterIntent1 {
 			componentContext_lazy = () -> LetterIntent1.mmObject();
 			isDerived = false;
 			xmlTag = "Amt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Amount stated on the letter of intent.";
 			maxOccurs = 1;
@@ -181,7 +183,7 @@ public class LetterIntent1 {
 			componentContext_lazy = () -> LetterIntent1.mmObject();
 			isDerived = false;
 			xmlTag = "StartDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StartDate";
 			definition = "Start date stated on the letter of intent.";
 			maxOccurs = 1;
@@ -221,7 +223,7 @@ public class LetterIntent1 {
 			componentContext_lazy = () -> LetterIntent1.mmObject();
 			isDerived = false;
 			xmlTag = "EndDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EndDate";
 			definition = "End date stated on the letter of intent.";
 			maxOccurs = 1;
@@ -233,10 +235,9 @@ public class LetterIntent1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LetterIntent1.mmLetterIntentReference, com.tools20022.repository.msg.LetterIntent1.mmAmount, com.tools20022.repository.msg.LetterIntent1.mmStartDate,
-						com.tools20022.repository.msg.LetterIntent1.mmEndDate);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(LetterIntent1.mmLetterIntentReference, LetterIntent1.mmAmount, LetterIntent1.mmStartDate, LetterIntent1.mmEndDate);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "LetterIntent1";
 				definition = "Specifies information about the letter of intent.";
 			}

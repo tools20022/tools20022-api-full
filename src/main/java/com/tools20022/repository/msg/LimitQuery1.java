@@ -20,8 +20,10 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.LimitCriteria3Choice;
 import com.tools20022.repository.codeset.QueryType2Code;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -94,7 +96,7 @@ public class LimitQuery1 {
 			componentContext_lazy = () -> LimitQuery1.mmObject();
 			isDerived = false;
 			xmlTag = "QryTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QueryType";
 			definition = "Specifies the type of matching items to be returned in the response to the query.";
 			maxOccurs = 1;
@@ -134,7 +136,7 @@ public class LimitQuery1 {
 			componentContext_lazy = () -> LimitQuery1.mmObject();
 			isDerived = false;
 			xmlTag = "LmtCrit";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LimitCriteria";
 			definition = "Defines the limit query criteria.";
 			maxOccurs = 1;
@@ -147,9 +149,9 @@ public class LimitQuery1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LimitQuery1.mmQueryType, com.tools20022.repository.msg.LimitQuery1.mmLimitCriteria);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(LimitQuery1.mmQueryType, LimitQuery1.mmLimitCriteria);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "LimitQuery1";
 				definition = "Defines the query criteria.";
 			}

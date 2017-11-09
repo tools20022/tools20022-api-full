@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ChargeTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -106,7 +108,7 @@ public class ChargeType17Code extends ChargeTypeCode {
 	 */
 	public static final MMCode mmPostageCharge = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PostageCharge";
 			owner_lazy = () -> ChargeType17Code.mmObject();
 		}
@@ -129,7 +131,7 @@ public class ChargeType17Code extends ChargeTypeCode {
 	 */
 	public static final MMCode mmRegulatoryFee = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RegulatoryFee";
 			owner_lazy = () -> ChargeType17Code.mmObject();
 		}
@@ -152,7 +154,7 @@ public class ChargeType17Code extends ChargeTypeCode {
 	 */
 	public static final MMCode mmShippingCharge = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ShippingCharge";
 			owner_lazy = () -> ChargeType17Code.mmObject();
 		}
@@ -175,7 +177,7 @@ public class ChargeType17Code extends ChargeTypeCode {
 	 */
 	public static final MMCode mmServiceProvisionFee = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ServiceProvisionFee";
 			owner_lazy = () -> ChargeType17Code.mmObject();
 		}
@@ -198,7 +200,7 @@ public class ChargeType17Code extends ChargeTypeCode {
 	 */
 	public static final MMCode mmOther = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
 			owner_lazy = () -> ChargeType17Code.mmObject();
 		}
@@ -221,7 +223,7 @@ public class ChargeType17Code extends ChargeTypeCode {
 	 */
 	public static final MMCode mmPremium = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Premium";
 			owner_lazy = () -> ChargeType17Code.mmObject();
 		}
@@ -244,7 +246,7 @@ public class ChargeType17Code extends ChargeTypeCode {
 	 */
 	public static final MMCode mmPackaging = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Packaging";
 			owner_lazy = () -> ChargeType17Code.mmObject();
 		}
@@ -267,7 +269,7 @@ public class ChargeType17Code extends ChargeTypeCode {
 	 */
 	public static final MMCode mmPickUp = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PickUp";
 			owner_lazy = () -> ChargeType17Code.mmObject();
 		}
@@ -290,7 +292,7 @@ public class ChargeType17Code extends ChargeTypeCode {
 	 */
 	public static final MMCode mmSecurityCharge = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityCharge";
 			owner_lazy = () -> ChargeType17Code.mmObject();
 		}
@@ -313,7 +315,7 @@ public class ChargeType17Code extends ChargeTypeCode {
 	 */
 	public static final MMCode mmInsurancePremium = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InsurancePremium";
 			owner_lazy = () -> ChargeType17Code.mmObject();
 		}
@@ -336,7 +338,7 @@ public class ChargeType17Code extends ChargeTypeCode {
 	 */
 	public static final MMCode mmMiscellaneousFee = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MiscellaneousFee";
 			owner_lazy = () -> ChargeType17Code.mmObject();
 		}
@@ -345,15 +347,13 @@ public class ChargeType17Code extends ChargeTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("POST");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ChargeType17Code";
 				definition = "Type of service for which a charge is asked or paid.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ChargeType17Code.mmPostageCharge, com.tools20022.repository.codeset.ChargeType17Code.mmRegulatoryFee,
-						com.tools20022.repository.codeset.ChargeType17Code.mmShippingCharge, com.tools20022.repository.codeset.ChargeType17Code.mmServiceProvisionFee, com.tools20022.repository.codeset.ChargeType17Code.mmOther,
-						com.tools20022.repository.codeset.ChargeType17Code.mmPremium, com.tools20022.repository.codeset.ChargeType17Code.mmPackaging, com.tools20022.repository.codeset.ChargeType17Code.mmPickUp,
-						com.tools20022.repository.codeset.ChargeType17Code.mmSecurityCharge, com.tools20022.repository.codeset.ChargeType17Code.mmInsurancePremium, com.tools20022.repository.codeset.ChargeType17Code.mmMiscellaneousFee);
+				code_lazy = () -> Arrays.asList(ChargeType17Code.mmPostageCharge, ChargeType17Code.mmRegulatoryFee, ChargeType17Code.mmShippingCharge, ChargeType17Code.mmServiceProvisionFee, ChargeType17Code.mmOther,
+						ChargeType17Code.mmPremium, ChargeType17Code.mmPackaging, ChargeType17Code.mmPickUp, ChargeType17Code.mmSecurityCharge, ChargeType17Code.mmInsurancePremium, ChargeType17Code.mmMiscellaneousFee);
 				trace_lazy = () -> ChargeTypeCode.mmObject();
 			}
 		});

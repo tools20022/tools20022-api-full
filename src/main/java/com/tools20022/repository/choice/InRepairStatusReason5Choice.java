@@ -20,7 +20,9 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.InRepairStatusReason1Code;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification1;
 import com.tools20022.repository.msg.InRepairStatusReason3;
 import java.util.Arrays;
@@ -104,10 +106,10 @@ public class InRepairStatusReason5Choice {
 			componentContext_lazy = () -> InRepairStatusReason5Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Cd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "In repair reason expressed as a code.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.ConditionallyAcceptedStatusReason3Choice.mmCode;
+			previousVersion_lazy = () -> ConditionallyAcceptedStatusReason3Choice.mmCode;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> InRepairStatusReason1Code.mmObject();
@@ -150,10 +152,10 @@ public class InRepairStatusReason5Choice {
 			componentContext_lazy = () -> InRepairStatusReason5Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "In repair reason expressed as a proprietary code.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.ConditionallyAcceptedStatusReason3Choice.mmProprietary;
+			previousVersion_lazy = () -> ConditionallyAcceptedStatusReason3Choice.mmProprietary;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -164,9 +166,9 @@ public class InRepairStatusReason5Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.InRepairStatusReason5Choice.mmCode, com.tools20022.repository.choice.InRepairStatusReason5Choice.mmProprietary);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(InRepairStatusReason5Choice.mmCode, InRepairStatusReason5Choice.mmProprietary);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InRepairStatusReason5Choice";
 				definition = "Choice of formats for an in repair status.";
 				previousVersion_lazy = () -> InRepairStatusReason3.mmObject();

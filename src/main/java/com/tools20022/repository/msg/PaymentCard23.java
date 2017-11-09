@@ -20,12 +20,15 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CardDataReading1Code;
 import com.tools20022.repository.codeset.CardFallback1Code;
 import com.tools20022.repository.datatype.CurrencyAndAmount;
 import com.tools20022.repository.datatype.Exact3AlphaNumericText;
 import com.tools20022.repository.datatype.Max3Text;
+import com.tools20022.repository.entity.Account;
 import com.tools20022.repository.entity.PaymentCard;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -114,7 +117,7 @@ public class PaymentCard23 {
 			componentContext_lazy = () -> PaymentCard23.mmObject();
 			isDerived = false;
 			xmlTag = "CardDataNtryMd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CardDataEntryMode";
 			definition = "Entry mode that used to obtain the card data.";
 			maxOccurs = 1;
@@ -156,7 +159,7 @@ public class PaymentCard23 {
 			componentContext_lazy = () -> PaymentCard23.mmObject();
 			isDerived = false;
 			xmlTag = "FllbckInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FallbackIndicator";
 			definition = "Indicate the occurrence of a fall-back on the card entry mode.";
 			maxOccurs = 1;
@@ -199,7 +202,7 @@ public class PaymentCard23 {
 			componentContext_lazy = () -> PaymentCard23.mmObject();
 			isDerived = false;
 			xmlTag = "PrtctdCardData";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProtectedCardData";
 			definition = "Replacement of the message element PlainCardData by a digital envelope using a cryptographic key.";
 			maxOccurs = 1;
@@ -240,7 +243,7 @@ public class PaymentCard23 {
 			componentContext_lazy = () -> PaymentCard23.mmObject();
 			isDerived = false;
 			xmlTag = "PlainCardData";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlainCardData";
 			definition = "Sensitive data associated with the card performing the transaction.";
 			maxOccurs = 1;
@@ -283,11 +286,11 @@ public class PaymentCard23 {
 	 */
 	public static final MMMessageAttribute mmCardCountryCode = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentCard.mmCardCountryCode;
+			businessElementTrace_lazy = () -> PaymentCard.mmCardCountryCode;
 			componentContext_lazy = () -> PaymentCard23.mmObject();
 			isDerived = false;
 			xmlTag = "CardCtryCd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CardCountryCode";
 			definition = "Country code assigned to the card by the card issuer.";
 			maxOccurs = 1;
@@ -331,11 +334,11 @@ public class PaymentCard23 {
 	 */
 	public static final MMMessageAttribute mmCardCurrencyCode = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentCard.mmCardCurrencyCode;
+			businessElementTrace_lazy = () -> PaymentCard.mmCardCurrencyCode;
 			componentContext_lazy = () -> PaymentCard23.mmObject();
 			isDerived = false;
 			xmlTag = "CardCcyCd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CardCurrencyCode";
 			definition = "Currency code of the card issuer (ISO 4217 numeric code).";
 			maxOccurs = 1;
@@ -378,11 +381,11 @@ public class PaymentCard23 {
 	 */
 	public static final MMMessageAttribute mmElectronicPurseBalance = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.mmBalance;
+			businessElementTrace_lazy = () -> Account.mmBalance;
 			componentContext_lazy = () -> PaymentCard23.mmObject();
 			isDerived = false;
 			xmlTag = "ElctrncPrsBal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ElectronicPurseBalance";
 			definition = "Balance of the captured card or epurse if available.";
 			maxOccurs = 1;
@@ -394,12 +397,11 @@ public class PaymentCard23 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentCard23.mmCardDataEntryMode, com.tools20022.repository.msg.PaymentCard23.mmFallbackIndicator,
-						com.tools20022.repository.msg.PaymentCard23.mmProtectedCardData, com.tools20022.repository.msg.PaymentCard23.mmPlainCardData, com.tools20022.repository.msg.PaymentCard23.mmCardCountryCode,
-						com.tools20022.repository.msg.PaymentCard23.mmCardCurrencyCode, com.tools20022.repository.msg.PaymentCard23.mmElectronicPurseBalance);
+				messageElement_lazy = () -> Arrays.asList(PaymentCard23.mmCardDataEntryMode, PaymentCard23.mmFallbackIndicator, PaymentCard23.mmProtectedCardData, PaymentCard23.mmPlainCardData, PaymentCard23.mmCardCountryCode,
+						PaymentCard23.mmCardCurrencyCode, PaymentCard23.mmElectronicPurseBalance);
 				trace_lazy = () -> PaymentCard.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PaymentCard23";
 				definition = "Card performing the withdrawal transaction.";
 			}

@@ -19,9 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.ExposureTerm;
 import com.tools20022.repository.entity.IndependentAmountTerm;
 import com.tools20022.repository.entity.VariationMarginTerm;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -105,7 +107,7 @@ public class Margin1 {
 			componentContext_lazy = () -> Margin1.mmObject();
 			isDerived = false;
 			xmlTag = "VartnMrgn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VariationMargin";
 			definition = "Elements used to calculate the collateral margin call for the variation margin.";
 			maxOccurs = 1;
@@ -155,7 +157,7 @@ public class Margin1 {
 			componentContext_lazy = () -> Margin1.mmObject();
 			isDerived = false;
 			xmlTag = "SgrtdIndpdntAmtMrgn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SegregatedIndependentAmountMargin";
 			definition = "Elements used to calculate the collateral margin call for the segregated independent amount.";
 			maxOccurs = 1;
@@ -168,10 +170,10 @@ public class Margin1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Margin1.mmVariationMargin, com.tools20022.repository.msg.Margin1.mmSegregatedIndependentAmountMargin);
+				messageElement_lazy = () -> Arrays.asList(Margin1.mmVariationMargin, Margin1.mmSegregatedIndependentAmountMargin);
 				trace_lazy = () -> ExposureTerm.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Margin1";
 				definition = "Defines the elements used to calculate the collateral margin call for the variation margin and optionally the segregated independent amount.";
 			}

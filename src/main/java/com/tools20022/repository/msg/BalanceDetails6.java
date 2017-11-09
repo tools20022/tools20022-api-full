@@ -19,10 +19,15 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.BalanceType7Choice;
 import com.tools20022.repository.codeset.FinancialAssetTypeCategory1Code;
 import com.tools20022.repository.codeset.Unrealised1Code;
+import com.tools20022.repository.entity.Asset;
+import com.tools20022.repository.entity.AssetHolding;
 import com.tools20022.repository.entity.Balance;
+import com.tools20022.repository.entity.CashBalance;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -101,11 +106,11 @@ public class BalanceDetails6 {
 	 */
 	public static final MMMessageAttribute mmCategory = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Asset.mmFinancialAssetCategory;
+			businessElementTrace_lazy = () -> Asset.mmFinancialAssetCategory;
 			componentContext_lazy = () -> BalanceDetails6.mmObject();
 			isDerived = false;
 			xmlTag = "Ctgy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Category";
 			definition = "Category of the financial asset balance type.";
 			maxOccurs = 1;
@@ -149,11 +154,11 @@ public class BalanceDetails6 {
 	 */
 	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Balance.mmType;
+			businessElementTrace_lazy = () -> Balance.mmType;
 			componentContext_lazy = () -> BalanceDetails6.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Balance type.";
 			maxOccurs = 1;
@@ -197,11 +202,11 @@ public class BalanceDetails6 {
 	 */
 	public static final MMMessageAttribute mmUnrealised = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmUnrealisedType;
+			businessElementTrace_lazy = () -> AssetHolding.mmUnrealisedType;
 			componentContext_lazy = () -> BalanceDetails6.mmObject();
 			isDerived = false;
 			xmlTag = "Urlsd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unrealised";
 			definition = "Unrealised gain or loss.";
 			maxOccurs = 1;
@@ -245,11 +250,11 @@ public class BalanceDetails6 {
 	 */
 	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashBalance.mmAmount;
+			businessElementTrace_lazy = () -> CashBalance.mmAmount;
 			componentContext_lazy = () -> BalanceDetails6.mmObject();
 			isDerived = false;
 			xmlTag = "Amt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Balance amount.";
 			maxOccurs = 1;
@@ -261,11 +266,10 @@ public class BalanceDetails6 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BalanceDetails6.mmCategory, com.tools20022.repository.msg.BalanceDetails6.mmType, com.tools20022.repository.msg.BalanceDetails6.mmUnrealised,
-						com.tools20022.repository.msg.BalanceDetails6.mmAmount);
+				messageElement_lazy = () -> Arrays.asList(BalanceDetails6.mmCategory, BalanceDetails6.mmType, BalanceDetails6.mmUnrealised, BalanceDetails6.mmAmount);
 				trace_lazy = () -> Balance.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "BalanceDetails6";
 				definition = "Balance related details for a portfolio.";
 			}

@@ -19,6 +19,8 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.ErrorHandling3;
 import com.tools20022.repository.msg.SystemSecuritiesAccount3;
 import java.util.Arrays;
@@ -99,7 +101,7 @@ public class SecuritiesAccountOrBusinessError1Choice {
 			componentContext_lazy = () -> SecuritiesAccountOrBusinessError1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "SctiesAcct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesAccount";
 			definition = "Choice between data concerning securities account retrieved or business error.";
 			maxOccurs = 1;
@@ -140,7 +142,7 @@ public class SecuritiesAccountOrBusinessError1Choice {
 			componentContext_lazy = () -> SecuritiesAccountOrBusinessError1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "BizErr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BusinessError";
 			definition = "Business error resulting from a rejection.";
 			minOccurs = 1;
@@ -152,10 +154,9 @@ public class SecuritiesAccountOrBusinessError1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SecuritiesAccountOrBusinessError1Choice.mmSecuritiesAccount,
-						com.tools20022.repository.choice.SecuritiesAccountOrBusinessError1Choice.mmBusinessError);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(SecuritiesAccountOrBusinessError1Choice.mmSecuritiesAccount, SecuritiesAccountOrBusinessError1Choice.mmBusinessError);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SecuritiesAccountOrBusinessError1Choice";
 				definition = "Set of elements used to report between the securities account reference data or a business error.";
 			}

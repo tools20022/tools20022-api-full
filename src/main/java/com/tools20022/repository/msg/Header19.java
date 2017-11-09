@@ -20,10 +20,13 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.cain.AcquirerRejection;
 import com.tools20022.repository.codeset.MessageFunction6Code;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Max3NumericText;
 import com.tools20022.repository.datatype.Max6Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -128,10 +131,10 @@ public class Header19 {
 			componentContext_lazy = () -> Header19.mmObject();
 			isDerived = false;
 			xmlTag = "MsgFctn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageFunction";
 			definition = "Identifies the type of process related to the message.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Header18.mmMessageFunction;
+			previousVersion_lazy = () -> Header18.mmMessageFunction;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> MessageFunction6Code.mmObject();
@@ -178,10 +181,10 @@ public class Header19 {
 			componentContext_lazy = () -> Header19.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlMsgFctn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalMessageFunction";
 			definition = "Identifies the type of process related to the message which has to be reversed.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Header18.mmOriginalMessageFunction;
+			previousVersion_lazy = () -> Header18.mmOriginalMessageFunction;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> MessageFunction6Code.mmObject();
@@ -225,10 +228,10 @@ public class Header19 {
 			componentContext_lazy = () -> Header19.mmObject();
 			isDerived = false;
 			xmlTag = "PrtcolVrsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProtocolVersion";
 			definition = "Version of the acquirer to issuer protocol specifications";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Header18.mmProtocolVersion;
+			previousVersion_lazy = () -> Header18.mmProtocolVersion;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max6Text.mmObject();
@@ -272,10 +275,10 @@ public class Header19 {
 			componentContext_lazy = () -> Header19.mmObject();
 			isDerived = false;
 			xmlTag = "XchgId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExchangeIdentification";
 			definition = "Unique identification of an exchange occurrence.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Header18.mmExchangeIdentification;
+			previousVersion_lazy = () -> Header18.mmExchangeIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max3NumericText.mmObject();
@@ -322,10 +325,10 @@ public class Header19 {
 			componentContext_lazy = () -> Header19.mmObject();
 			isDerived = false;
 			xmlTag = "ReTrnsmssnCntr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReTransmissionCounter";
 			definition = "Number of retransmission of the message. Incremented by 1 for each retransmission.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Header18.mmReTransmissionCounter;
+			previousVersion_lazy = () -> Header18.mmReTransmissionCounter;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max3NumericText.mmObject();
@@ -368,10 +371,10 @@ public class Header19 {
 			componentContext_lazy = () -> Header19.mmObject();
 			isDerived = false;
 			xmlTag = "CreDtTm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreationDateTime";
 			definition = "Date and time at which the message was created.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Header18.mmCreationDateTime;
+			previousVersion_lazy = () -> Header18.mmCreationDateTime;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
@@ -415,10 +418,10 @@ public class Header19 {
 			componentContext_lazy = () -> Header19.mmObject();
 			isDerived = false;
 			xmlTag = "InitgPty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InitiatingParty";
 			definition = "Unique identification of the partner that has initiated the exchange.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Header18.mmInitiatingParty;
+			previousVersion_lazy = () -> Header18.mmInitiatingParty;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -465,10 +468,10 @@ public class Header19 {
 			componentContext_lazy = () -> Header19.mmObject();
 			isDerived = false;
 			xmlTag = "RcptPty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RecipientParty";
 			definition = "Unique identification of the partner that is the recipient of the message exchange.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Header18.mmRecipientParty;
+			previousVersion_lazy = () -> Header18.mmRecipientParty;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -515,10 +518,10 @@ public class Header19 {
 			componentContext_lazy = () -> Header19.mmObject();
 			isDerived = false;
 			xmlTag = "Tracblt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Traceability";
 			definition = "Identification of partners involved in exchange from the merchant to the issuer, with the relative timestamp of their exchanges.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Header18.mmTraceability;
+			previousVersion_lazy = () -> Header18.mmTraceability;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.Traceability3.mmObject();
 		}
@@ -527,12 +530,11 @@ public class Header19 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Header19.mmMessageFunction, com.tools20022.repository.msg.Header19.mmOriginalMessageFunction, com.tools20022.repository.msg.Header19.mmProtocolVersion,
-						com.tools20022.repository.msg.Header19.mmExchangeIdentification, com.tools20022.repository.msg.Header19.mmReTransmissionCounter, com.tools20022.repository.msg.Header19.mmCreationDateTime,
-						com.tools20022.repository.msg.Header19.mmInitiatingParty, com.tools20022.repository.msg.Header19.mmRecipientParty, com.tools20022.repository.msg.Header19.mmTraceability);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.cain.AcquirerRejection.mmHeader);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(Header19.mmMessageFunction, Header19.mmOriginalMessageFunction, Header19.mmProtocolVersion, Header19.mmExchangeIdentification, Header19.mmReTransmissionCounter,
+						Header19.mmCreationDateTime, Header19.mmInitiatingParty, Header19.mmRecipientParty, Header19.mmTraceability);
+				messageBuildingBlock_lazy = () -> Arrays.asList(AcquirerRejection.mmHeader);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Header19";
 				definition = "Set of characteristics related to the protocol.";
 				previousVersion_lazy = () -> Header18.mmObject();

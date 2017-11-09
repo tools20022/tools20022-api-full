@@ -20,9 +20,11 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.*;
 import com.tools20022.repository.datatype.Max350Text;
-import com.tools20022.repository.entity.IntraPositionTransfer;
+import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -156,15 +158,15 @@ public class IntraPositionMovementDetails11 {
 	 */
 	public static final MMMessageAssociationEnd mmIdentification = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTrade.mmSecuritiesTradeRelatedIdentifications;
+			businessElementTrace_lazy = () -> SecuritiesTrade.mmSecuritiesTradeRelatedIdentifications;
 			componentContext_lazy = () -> IntraPositionMovementDetails11.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Identifications (account owner and/or account servicer) of the intra-position movement.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IntraPositionMovementDetails13.mmIdentification);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.IntraPositionMovementDetails9.mmIdentification;
+			nextVersions_lazy = () -> Arrays.asList(IntraPositionMovementDetails13.mmIdentification);
+			previousVersion_lazy = () -> IntraPositionMovementDetails9.mmIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -219,15 +221,15 @@ public class IntraPositionMovementDetails11 {
 	 */
 	public static final MMMessageAssociationEnd mmSettledQuantity = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTransfer.mmTransferredQuantity;
+			businessElementTrace_lazy = () -> SecuritiesTransfer.mmTransferredQuantity;
 			componentContext_lazy = () -> IntraPositionMovementDetails11.mmObject();
 			isDerived = false;
 			xmlTag = "SttldQty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettledQuantity";
 			definition = "Quantity of financial instrument effectively settled.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IntraPositionMovementDetails13.mmSettledQuantity);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.IntraPositionMovementDetails9.mmSettledQuantity;
+			nextVersions_lazy = () -> Arrays.asList(IntraPositionMovementDetails13.mmSettledQuantity);
+			previousVersion_lazy = () -> IntraPositionMovementDetails9.mmSettledQuantity;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -282,15 +284,15 @@ public class IntraPositionMovementDetails11 {
 	 */
 	public static final MMMessageAssociationEnd mmPreviouslySettledQuantity = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTransfer.mmTransferredQuantity;
+			businessElementTrace_lazy = () -> SecuritiesTransfer.mmTransferredQuantity;
 			componentContext_lazy = () -> IntraPositionMovementDetails11.mmObject();
 			isDerived = false;
 			xmlTag = "PrevslySttldQty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviouslySettledQuantity";
 			definition = "Quantity of financial instrument previously settled.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IntraPositionMovementDetails13.mmPreviouslySettledQuantity);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.IntraPositionMovementDetails9.mmPreviouslySettledQuantity;
+			nextVersions_lazy = () -> Arrays.asList(IntraPositionMovementDetails13.mmPreviouslySettledQuantity);
+			previousVersion_lazy = () -> IntraPositionMovementDetails9.mmPreviouslySettledQuantity;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -346,15 +348,15 @@ public class IntraPositionMovementDetails11 {
 	 */
 	public static final MMMessageAssociationEnd mmRemainingToBeSettledQuantity = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmSettlementQuantity;
+			businessElementTrace_lazy = () -> SecuritiesSettlement.mmSettlementQuantity;
 			componentContext_lazy = () -> IntraPositionMovementDetails11.mmObject();
 			isDerived = false;
 			xmlTag = "RmngToBeSttldQty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RemainingToBeSettledQuantity";
 			definition = "Quantity of financial instrument remaining to be settled.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IntraPositionMovementDetails13.mmRemainingToBeSettledQuantity);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.IntraPositionMovementDetails9.mmRemainingToBeSettledQuantity;
+			nextVersions_lazy = () -> Arrays.asList(IntraPositionMovementDetails13.mmRemainingToBeSettledQuantity);
+			previousVersion_lazy = () -> IntraPositionMovementDetails9.mmRemainingToBeSettledQuantity;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -410,11 +412,11 @@ public class IntraPositionMovementDetails11 {
 			componentContext_lazy = () -> IntraPositionMovementDetails11.mmObject();
 			isDerived = false;
 			xmlTag = "SctiesSubBalId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesSubBalanceIdentification";
 			definition = "Number identifying a securities sub-balance type (example restriction identification etc…).";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IntraPositionMovementDetails13.mmSecuritiesSubBalanceIdentification);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.IntraPositionMovementDetails9.mmSecuritiesSubBalanceIdentification;
+			nextVersions_lazy = () -> Arrays.asList(IntraPositionMovementDetails13.mmSecuritiesSubBalanceIdentification);
+			previousVersion_lazy = () -> IntraPositionMovementDetails9.mmSecuritiesSubBalanceIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -469,15 +471,15 @@ public class IntraPositionMovementDetails11 {
 	 */
 	public static final MMMessageAssociationEnd mmBalanceTo = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesBalance.mmSecuritiesBalanceType;
+			businessElementTrace_lazy = () -> SecuritiesBalance.mmSecuritiesBalanceType;
 			componentContext_lazy = () -> IntraPositionMovementDetails11.mmObject();
 			isDerived = false;
 			xmlTag = "BalTo";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BalanceTo";
 			definition = "Balance to which the securities were moved.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IntraPositionMovementDetails13.mmBalanceTo);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.IntraPositionMovementDetails9.mmBalanceTo;
+			nextVersions_lazy = () -> Arrays.asList(IntraPositionMovementDetails13.mmBalanceTo);
+			previousVersion_lazy = () -> IntraPositionMovementDetails9.mmBalanceTo;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -532,15 +534,15 @@ public class IntraPositionMovementDetails11 {
 	 */
 	public static final MMMessageAssociationEnd mmSettlementDate = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Obligation.mmRequestedSettlementDate;
+			businessElementTrace_lazy = () -> Obligation.mmRequestedSettlementDate;
 			componentContext_lazy = () -> IntraPositionMovementDetails11.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementDate";
 			definition = "Date and time at which the securities were moved.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IntraPositionMovementDetails13.mmSettlementDate);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.IntraPositionMovementDetails9.mmSettlementDate;
+			nextVersions_lazy = () -> Arrays.asList(IntraPositionMovementDetails13.mmSettlementDate);
+			previousVersion_lazy = () -> IntraPositionMovementDetails9.mmSettlementDate;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -599,15 +601,15 @@ public class IntraPositionMovementDetails11 {
 	 */
 	public static final MMMessageAssociationEnd mmAvailableDate = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmAvailableDate;
+			businessElementTrace_lazy = () -> Security.mmAvailableDate;
 			componentContext_lazy = () -> IntraPositionMovementDetails11.mmObject();
 			isDerived = false;
 			xmlTag = "AvlblDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AvailableDate";
 			definition = "Date/time securities become available for sale (if securities become unavailable, this specifies the date/time at which they will become available again).";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IntraPositionMovementDetails13.mmAvailableDate);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.IntraPositionMovementDetails9.mmAvailableDate;
+			nextVersions_lazy = () -> Arrays.asList(IntraPositionMovementDetails13.mmAvailableDate);
+			previousVersion_lazy = () -> IntraPositionMovementDetails9.mmAvailableDate;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -662,15 +664,15 @@ public class IntraPositionMovementDetails11 {
 	 */
 	public static final MMMessageAssociationEnd mmCorporateActionEventType = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmType;
+			businessElementTrace_lazy = () -> CorporateActionEvent.mmType;
 			componentContext_lazy = () -> IntraPositionMovementDetails11.mmObject();
 			isDerived = false;
 			xmlTag = "CorpActnEvtTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorporateActionEventType";
 			definition = "Specifies the type of corporate event.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IntraPositionMovementDetails13.mmCorporateActionEventType);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.IntraPositionMovementDetails9.mmCorporateActionEventType;
+			nextVersions_lazy = () -> Arrays.asList(IntraPositionMovementDetails13.mmCorporateActionEventType);
+			previousVersion_lazy = () -> IntraPositionMovementDetails9.mmCorporateActionEventType;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -727,15 +729,15 @@ public class IntraPositionMovementDetails11 {
 	 */
 	public static final MMMessageAssociationEnd mmCollateralMonitorAmount = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.IntraPositionTransfer.mmCollateralAmount;
+			businessElementTrace_lazy = () -> IntraPositionTransfer.mmCollateralAmount;
 			componentContext_lazy = () -> IntraPositionMovementDetails11.mmObject();
 			isDerived = false;
 			xmlTag = "CollMntrAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralMonitorAmount";
 			definition = "Value of the collateral available for the delivery settlement process at the account level.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IntraPositionMovementDetails13.mmCollateralMonitorAmount);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.IntraPositionMovementDetails9.mmCollateralMonitorAmount;
+			nextVersions_lazy = () -> Arrays.asList(IntraPositionMovementDetails13.mmCollateralMonitorAmount);
+			previousVersion_lazy = () -> IntraPositionMovementDetails9.mmCollateralMonitorAmount;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -791,11 +793,11 @@ public class IntraPositionMovementDetails11 {
 			componentContext_lazy = () -> IntraPositionMovementDetails11.mmObject();
 			isDerived = false;
 			xmlTag = "InstrPrcgAddtlDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructionProcessingAdditionalDetails";
 			definition = "Provides additional settlement processing information which can not be included within the structured fields of the message.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IntraPositionMovementDetails13.mmInstructionProcessingAdditionalDetails);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.IntraPositionMovementDetails9.mmInstructionProcessingAdditionalDetails;
+			nextVersions_lazy = () -> Arrays.asList(IntraPositionMovementDetails13.mmInstructionProcessingAdditionalDetails);
+			previousVersion_lazy = () -> IntraPositionMovementDetails9.mmInstructionProcessingAdditionalDetails;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
@@ -849,11 +851,11 @@ public class IntraPositionMovementDetails11 {
 			componentContext_lazy = () -> IntraPositionMovementDetails11.mmObject();
 			isDerived = false;
 			xmlTag = "SplmtryData";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryData";
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IntraPositionMovementDetails13.mmSupplementaryData);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.IntraPositionMovementDetails9.mmSupplementaryData;
+			nextVersions_lazy = () -> Arrays.asList(IntraPositionMovementDetails13.mmSupplementaryData);
+			previousVersion_lazy = () -> IntraPositionMovementDetails9.mmSupplementaryData;
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.SupplementaryData1.mmObject();
@@ -863,15 +865,13 @@ public class IntraPositionMovementDetails11 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IntraPositionMovementDetails11.mmIdentification, com.tools20022.repository.msg.IntraPositionMovementDetails11.mmSettledQuantity,
-						com.tools20022.repository.msg.IntraPositionMovementDetails11.mmPreviouslySettledQuantity, com.tools20022.repository.msg.IntraPositionMovementDetails11.mmRemainingToBeSettledQuantity,
-						com.tools20022.repository.msg.IntraPositionMovementDetails11.mmSecuritiesSubBalanceIdentification, com.tools20022.repository.msg.IntraPositionMovementDetails11.mmBalanceTo,
-						com.tools20022.repository.msg.IntraPositionMovementDetails11.mmSettlementDate, com.tools20022.repository.msg.IntraPositionMovementDetails11.mmAvailableDate,
-						com.tools20022.repository.msg.IntraPositionMovementDetails11.mmCorporateActionEventType, com.tools20022.repository.msg.IntraPositionMovementDetails11.mmCollateralMonitorAmount,
-						com.tools20022.repository.msg.IntraPositionMovementDetails11.mmInstructionProcessingAdditionalDetails, com.tools20022.repository.msg.IntraPositionMovementDetails11.mmSupplementaryData);
+				messageElement_lazy = () -> Arrays.asList(IntraPositionMovementDetails11.mmIdentification, IntraPositionMovementDetails11.mmSettledQuantity, IntraPositionMovementDetails11.mmPreviouslySettledQuantity,
+						IntraPositionMovementDetails11.mmRemainingToBeSettledQuantity, IntraPositionMovementDetails11.mmSecuritiesSubBalanceIdentification, IntraPositionMovementDetails11.mmBalanceTo,
+						IntraPositionMovementDetails11.mmSettlementDate, IntraPositionMovementDetails11.mmAvailableDate, IntraPositionMovementDetails11.mmCorporateActionEventType, IntraPositionMovementDetails11.mmCollateralMonitorAmount,
+						IntraPositionMovementDetails11.mmInstructionProcessingAdditionalDetails, IntraPositionMovementDetails11.mmSupplementaryData);
 				trace_lazy = () -> IntraPositionTransfer.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "IntraPositionMovementDetails11";
 				definition = "Details of the intra-position movement.";
 				nextVersions_lazy = () -> Arrays.asList(IntraPositionMovementDetails13.mmObject());

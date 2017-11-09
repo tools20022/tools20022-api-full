@@ -19,7 +19,11 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.seev.CorporateActionCancellationAdvice002V07;
+import com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdvice002V07;
 import com.tools20022.repository.entity.AccountIdentification;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.AccountIdentification10;
 import com.tools20022.repository.msg.AccountIdentification34;
 import java.util.Arrays;
@@ -120,7 +124,7 @@ public class AccountIdentification34Choice {
 			componentContext_lazy = () -> AccountIdentification34Choice.mmObject();
 			isDerived = false;
 			xmlTag = "ForAllAccts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForAllAccounts";
 			definition = "All safekeeping accounts that own underlying financial instrument.";
 			maxOccurs = 1;
@@ -171,7 +175,7 @@ public class AccountIdentification34Choice {
 			componentContext_lazy = () -> AccountIdentification34Choice.mmObject();
 			isDerived = false;
 			xmlTag = "AcctsList";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountsList";
 			definition = "Selected safekeeping accounts list to which the corporate action event applies.";
 			minOccurs = 1;
@@ -183,12 +187,11 @@ public class AccountIdentification34Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AccountIdentification34Choice.mmForAllAccounts, com.tools20022.repository.choice.AccountIdentification34Choice.mmAccountsList);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.CorporateActionCancellationAdvice002V07.mmAccountsDetails,
-						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdvice002V07.mmAccountDetails);
+				messageElement_lazy = () -> Arrays.asList(AccountIdentification34Choice.mmForAllAccounts, AccountIdentification34Choice.mmAccountsList);
+				messageBuildingBlock_lazy = () -> Arrays.asList(CorporateActionCancellationAdvice002V07.mmAccountsDetails, CorporateActionMovementPreliminaryAdviceCancellationAdvice002V07.mmAccountDetails);
 				trace_lazy = () -> AccountIdentification.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AccountIdentification34Choice";
 				definition = "Choice between all accounts (GENR - General in ISO 15022) or one or more selected accounts.";
 			}

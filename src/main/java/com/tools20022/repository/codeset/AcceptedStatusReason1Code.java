@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.AcceptedStatusReasonCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -77,7 +79,7 @@ public class AcceptedStatusReason1Code extends AcceptedStatusReasonCode {
 	 */
 	public static final MMCode mmPlaceNotAllowed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceNotAllowed";
 			owner_lazy = () -> AcceptedStatusReason1Code.mmObject();
 		}
@@ -100,7 +102,7 @@ public class AcceptedStatusReason1Code extends AcceptedStatusReasonCode {
 	 */
 	public static final MMCode mmSectorNotAllowed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SectorNotAllowed";
 			owner_lazy = () -> AcceptedStatusReason1Code.mmObject();
 		}
@@ -109,11 +111,11 @@ public class AcceptedStatusReason1Code extends AcceptedStatusReasonCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AcceptedStatusReason1Code";
 				definition = "Specifies the reason for an accepted status.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AcceptedStatusReason1Code.mmPlaceNotAllowed, com.tools20022.repository.codeset.AcceptedStatusReason1Code.mmSectorNotAllowed);
+				code_lazy = () -> Arrays.asList(AcceptedStatusReason1Code.mmPlaceNotAllowed, AcceptedStatusReason1Code.mmSectorNotAllowed);
 				trace_lazy = () -> AcceptedStatusReasonCode.mmObject();
 			}
 		});

@@ -19,9 +19,12 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.seev.*;
 import com.tools20022.repository.choice.BalanceFormat1Choice;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.SecuritiesAccount;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -141,10 +144,10 @@ public class AccountAndBalance4 {
 			componentContext_lazy = () -> AccountAndBalance4.mmObject();
 			isDerived = false;
 			xmlTag = "SfkpgAcct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingAccount";
 			definition = "Account where financial instruments are maintained.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountAndBalance36.mmSafekeepingAccount);
+			nextVersions_lazy = () -> Arrays.asList(AccountAndBalance36.mmSafekeepingAccount);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -197,14 +200,14 @@ public class AccountAndBalance4 {
 	 */
 	public static final MMMessageAttribute mmConfirmedBalance = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesAccount.mmSecuritiesBalance;
+			businessElementTrace_lazy = () -> SecuritiesAccount.mmSecuritiesBalance;
 			componentContext_lazy = () -> AccountAndBalance4.mmObject();
 			isDerived = false;
 			xmlTag = "ConfdBal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConfirmedBalance";
 			definition = "Balance to which the payment applies (less or equal to the total eligible balance).";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountAndBalance36.mmConfirmedBalance);
+			nextVersions_lazy = () -> Arrays.asList(AccountAndBalance36.mmConfirmedBalance);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> BalanceFormat1Choice.mmObject();
@@ -214,14 +217,13 @@ public class AccountAndBalance4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountAndBalance4.mmSafekeepingAccount, com.tools20022.repository.msg.AccountAndBalance4.mmConfirmedBalance);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.CorporateActionMovementReversalAdviceV01.mmAccountDetails,
-						com.tools20022.repository.area.seev.CorporateActionMovementReversalAdviceV02.mmAccountDetails, com.tools20022.repository.area.seev.CorporateActionMovementReversalAdviceV03.mmAccountDetails,
-						com.tools20022.repository.area.seev.CorporateActionMovementReversalAdviceV04.mmAccountDetails, com.tools20022.repository.area.seev.CorporateActionMovementReversalAdviceV05.mmAccountDetails,
-						com.tools20022.repository.area.seev.CorporateActionMovementReversalAdviceV06.mmAccountDetails);
+				messageElement_lazy = () -> Arrays.asList(AccountAndBalance4.mmSafekeepingAccount, AccountAndBalance4.mmConfirmedBalance);
+				messageBuildingBlock_lazy = () -> Arrays.asList(CorporateActionMovementReversalAdviceV01.mmAccountDetails, CorporateActionMovementReversalAdviceV02.mmAccountDetails,
+						CorporateActionMovementReversalAdviceV03.mmAccountDetails, CorporateActionMovementReversalAdviceV04.mmAccountDetails, CorporateActionMovementReversalAdviceV05.mmAccountDetails,
+						CorporateActionMovementReversalAdviceV06.mmAccountDetails);
 				trace_lazy = () -> SecuritiesAccount.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AccountAndBalance4";
 				definition = "Provides account and balance information.";
 				nextVersions_lazy = () -> Arrays.asList(AccountAndBalance36.mmObject());

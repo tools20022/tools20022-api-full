@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.LimitTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -85,7 +87,7 @@ public class LimitType4Code extends LimitTypeCode {
 	 */
 	public static final MMCode mmExternalGuarantee = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExternalGuarantee";
 			owner_lazy = () -> LimitType4Code.mmObject();
 		}
@@ -108,7 +110,7 @@ public class LimitType4Code extends LimitTypeCode {
 	 */
 	public static final MMCode mmUnsecuredCredit = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnsecuredCredit";
 			owner_lazy = () -> LimitType4Code.mmObject();
 		}
@@ -131,7 +133,7 @@ public class LimitType4Code extends LimitTypeCode {
 	 */
 	public static final MMCode mmAutoCollateralisation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AutoCollateralisation";
 			owner_lazy = () -> LimitType4Code.mmObject();
 		}
@@ -140,13 +142,12 @@ public class LimitType4Code extends LimitTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("EXGT");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "LimitType4Code";
 				definition = "Specifies the type of risk management limit.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.LimitType4Code.mmExternalGuarantee, com.tools20022.repository.codeset.LimitType4Code.mmUnsecuredCredit,
-						com.tools20022.repository.codeset.LimitType4Code.mmAutoCollateralisation);
+				code_lazy = () -> Arrays.asList(LimitType4Code.mmExternalGuarantee, LimitType4Code.mmUnsecuredCredit, LimitType4Code.mmAutoCollateralisation);
 				trace_lazy = () -> LimitTypeCode.mmObject();
 			}
 		});

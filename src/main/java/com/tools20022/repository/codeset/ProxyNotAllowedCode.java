@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -82,7 +84,7 @@ public class ProxyNotAllowedCode {
 	 */
 	public static final MMCode mmNotAllowed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NotAllowed";
 			definition = "Proxy not allowed.";
 			owner_lazy = () -> ProxyNotAllowedCode.mmObject();
@@ -93,12 +95,12 @@ public class ProxyNotAllowedCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("NPRO");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ProxyNotAllowedCode";
 				definition = "Indicates that the assignment of a proxy is not allowed for the meeting.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ProxyNotAllowedCode.mmNotAllowed);
+				code_lazy = () -> Arrays.asList(ProxyNotAllowedCode.mmNotAllowed);
 			}
 		});
 		return mmObject_lazy.get();

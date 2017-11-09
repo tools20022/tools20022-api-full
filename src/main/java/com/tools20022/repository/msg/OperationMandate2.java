@@ -20,13 +20,16 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.acmt.AccountOpeningAmendmentRequestV02;
+import com.tools20022.repository.area.acmt.AccountOpeningRequestV02;
 import com.tools20022.repository.choice.Channel2Choice;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.Max15PlusSignedNumericText;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.YesNoIndicator;
-import com.tools20022.repository.entity.CashAccountMandate;
-import com.tools20022.repository.entity.MandateHolder;
+import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -141,7 +144,7 @@ public class OperationMandate2 {
 			componentContext_lazy = () -> OperationMandate2.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Unique and unambiguous identification of the mandate.";
 			maxOccurs = 1;
@@ -187,7 +190,7 @@ public class OperationMandate2 {
 			componentContext_lazy = () -> OperationMandate2.mmObject();
 			isDerived = false;
 			xmlTag = "AplblChanl";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ApplicableChannel";
 			definition = "Channel for which the operation mandate is valid. If ApplicableChannel equals Fax, this means that a bank operation instruction sent by fax will be processed according to the mandates exchanged in this message.";
 			minOccurs = 1;
@@ -229,7 +232,7 @@ public class OperationMandate2 {
 			componentContext_lazy = () -> OperationMandate2.mmObject();
 			isDerived = false;
 			xmlTag = "ReqrdSgntrNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequiredSignatureNumber";
 			definition = "Number of required and necessary signatures by the mandate.";
 			maxOccurs = 1;
@@ -276,11 +279,11 @@ public class OperationMandate2 {
 	 */
 	public static final MMMessageAttribute mmSignatureOrderIndicator = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SignatureCondition.mmSignatureOrderIndicator;
+			businessElementTrace_lazy = () -> SignatureCondition.mmSignatureOrderIndicator;
 			componentContext_lazy = () -> OperationMandate2.mmObject();
 			isDerived = false;
 			xmlTag = "SgntrOrdrInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SignatureOrderIndicator";
 			definition = "Indicator whether a certain order of signatures has to be respected or not.";
 			maxOccurs = 1;
@@ -326,7 +329,7 @@ public class OperationMandate2 {
 			componentContext_lazy = () -> OperationMandate2.mmObject();
 			isDerived = false;
 			xmlTag = "MndtHldr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MandateHolder";
 			definition = "Holder of the mandate.";
 			minOccurs = 0;
@@ -369,11 +372,11 @@ public class OperationMandate2 {
 	 */
 	public static final MMMessageAssociationEnd mmBankOperation = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BankOperation.mmOperationType;
+			businessElementTrace_lazy = () -> BankOperation.mmOperationType;
 			componentContext_lazy = () -> OperationMandate2.mmObject();
 			isDerived = false;
 			xmlTag = "BkOpr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BankOperation";
 			definition = "Bank operation allowed by a mandate.";
 			minOccurs = 1;
@@ -416,11 +419,11 @@ public class OperationMandate2 {
 	 */
 	public static final MMMessageAttribute mmStartDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmFromDateTime;
+			businessElementTrace_lazy = () -> DateTimePeriod.mmFromDateTime;
 			componentContext_lazy = () -> OperationMandate2.mmObject();
 			isDerived = false;
 			xmlTag = "StartDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StartDate";
 			definition = "Is the date when the mandate becomes valid.";
 			maxOccurs = 1;
@@ -463,11 +466,11 @@ public class OperationMandate2 {
 	 */
 	public static final MMMessageAttribute mmEndDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmToDateTime;
+			businessElementTrace_lazy = () -> DateTimePeriod.mmToDateTime;
 			componentContext_lazy = () -> OperationMandate2.mmObject();
 			isDerived = false;
 			xmlTag = "EndDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EndDate";
 			definition = "Is the date when the mandate stops to be valid.";
 			maxOccurs = 1;
@@ -479,13 +482,12 @@ public class OperationMandate2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OperationMandate2.mmIdentification, com.tools20022.repository.msg.OperationMandate2.mmApplicableChannel,
-						com.tools20022.repository.msg.OperationMandate2.mmRequiredSignatureNumber, com.tools20022.repository.msg.OperationMandate2.mmSignatureOrderIndicator, com.tools20022.repository.msg.OperationMandate2.mmMandateHolder,
-						com.tools20022.repository.msg.OperationMandate2.mmBankOperation, com.tools20022.repository.msg.OperationMandate2.mmStartDate, com.tools20022.repository.msg.OperationMandate2.mmEndDate);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountOpeningAmendmentRequestV02.mmMandate, com.tools20022.repository.area.acmt.AccountOpeningRequestV02.mmMandate);
+				messageElement_lazy = () -> Arrays.asList(OperationMandate2.mmIdentification, OperationMandate2.mmApplicableChannel, OperationMandate2.mmRequiredSignatureNumber, OperationMandate2.mmSignatureOrderIndicator,
+						OperationMandate2.mmMandateHolder, OperationMandate2.mmBankOperation, OperationMandate2.mmStartDate, OperationMandate2.mmEndDate);
+				messageBuildingBlock_lazy = () -> Arrays.asList(AccountOpeningAmendmentRequestV02.mmMandate, AccountOpeningRequestV02.mmMandate);
 				trace_lazy = () -> CashAccountMandate.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OperationMandate2";
 				definition = "Information specifying the Mandate.";
 				nextVersions_lazy = () -> Arrays.asList(OperationMandate3.mmObject());

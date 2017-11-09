@@ -20,9 +20,11 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.LEIIdentifier;
 import com.tools20022.repository.entity.PartyIdentificationInformation;
 import com.tools20022.repository.entity.PersonIdentification;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.PersonIdentification10;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -111,14 +113,14 @@ public class PersonOrOrganisation2Choice {
 	 */
 	public static final MMMessageAttribute mmLEI = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.mmLEI;
+			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmLEI;
 			componentContext_lazy = () -> PersonOrOrganisation2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "LEI";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LEI";
 			definition = "Legal entity identifier of the party.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.PersonOrOrganisation1Choice.mmLEI;
+			previousVersion_lazy = () -> PersonOrOrganisation1Choice.mmLEI;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> LEIIdentifier.mmObject();
@@ -167,10 +169,10 @@ public class PersonOrOrganisation2Choice {
 			componentContext_lazy = () -> PersonOrOrganisation2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Person";
 			definition = "Identification of a person.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.PersonOrOrganisation1Choice.mmPerson;
+			previousVersion_lazy = () -> PersonOrOrganisation1Choice.mmPerson;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -181,10 +183,10 @@ public class PersonOrOrganisation2Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PersonOrOrganisation2Choice.mmLEI, com.tools20022.repository.choice.PersonOrOrganisation2Choice.mmPerson);
+				messageElement_lazy = () -> Arrays.asList(PersonOrOrganisation2Choice.mmLEI, PersonOrOrganisation2Choice.mmPerson);
 				trace_lazy = () -> PartyIdentificationInformation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PersonOrOrganisation2Choice";
 				definition = "Specifies the identification of a person or an organisation.";
 				previousVersion_lazy = () -> PersonOrOrganisation1Choice.mmObject();

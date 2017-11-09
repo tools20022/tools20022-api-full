@@ -19,7 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsCancellationV03;
+import com.tools20022.repository.entity.Account;
 import com.tools20022.repository.entity.InvestmentAccount;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -125,10 +129,10 @@ public class StatementOfInvestmentFundTransactions3 {
 			componentContext_lazy = () -> StatementOfInvestmentFundTransactions3.mmObject();
 			isDerived = false;
 			xmlTag = "StmtGnlDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatementGeneralDetails";
 			definition = "General information related to the investment fund statement of transactions that is being cancelled.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.StatementOfInvestmentFundTransactions2.mmStatementGeneralDetails;
+			previousVersion_lazy = () -> StatementOfInvestmentFundTransactions2.mmStatementGeneralDetails;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -181,10 +185,10 @@ public class StatementOfInvestmentFundTransactions3 {
 			componentContext_lazy = () -> StatementOfInvestmentFundTransactions3.mmObject();
 			isDerived = false;
 			xmlTag = "InvstmtAcctDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestmentAccountDetails";
 			definition = "Information related to an investment account of the statement that is being cancelled.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.StatementOfInvestmentFundTransactions2.mmInvestmentAccountDetails;
+			previousVersion_lazy = () -> StatementOfInvestmentFundTransactions2.mmInvestmentAccountDetails;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -234,14 +238,14 @@ public class StatementOfInvestmentFundTransactions3 {
 	 */
 	public static final MMMessageAssociationEnd mmTransactionOnAccount = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentAccount.mmInvestmentFundTransaction;
+			businessElementTrace_lazy = () -> InvestmentAccount.mmInvestmentFundTransaction;
 			componentContext_lazy = () -> StatementOfInvestmentFundTransactions3.mmObject();
 			isDerived = false;
 			xmlTag = "TxOnAcct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionOnAccount";
 			definition = "Creation/cancellation of investment units on the books of the fund or its designated agent, as a result of executing an investment fund order.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.StatementOfInvestmentFundTransactions2.mmTransactionOnAccount;
+			previousVersion_lazy = () -> StatementOfInvestmentFundTransactions2.mmTransactionOnAccount;
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.InvestmentFundTransactionsByFund3.mmObject();
@@ -287,14 +291,14 @@ public class StatementOfInvestmentFundTransactions3 {
 	 */
 	public static final MMMessageAssociationEnd mmSubAccountDetails = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.mmIdentification;
+			businessElementTrace_lazy = () -> Account.mmIdentification;
 			componentContext_lazy = () -> StatementOfInvestmentFundTransactions3.mmObject();
 			isDerived = false;
 			xmlTag = "SubAcctDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubAccountDetails";
 			definition = "Sub-account of the safekeeping or investment account.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.StatementOfInvestmentFundTransactions2.mmSubAccountDetails;
+			previousVersion_lazy = () -> StatementOfInvestmentFundTransactions2.mmSubAccountDetails;
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.SubAccountIdentification36.mmObject();
@@ -339,10 +343,10 @@ public class StatementOfInvestmentFundTransactions3 {
 			componentContext_lazy = () -> StatementOfInvestmentFundTransactions3.mmObject();
 			isDerived = false;
 			xmlTag = "Xtnsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Extension";
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.StatementOfInvestmentFundTransactions2.mmExtension;
+			previousVersion_lazy = () -> StatementOfInvestmentFundTransactions2.mmExtension;
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.Extension1.mmObject();
@@ -352,13 +356,12 @@ public class StatementOfInvestmentFundTransactions3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StatementOfInvestmentFundTransactions3.mmStatementGeneralDetails,
-						com.tools20022.repository.msg.StatementOfInvestmentFundTransactions3.mmInvestmentAccountDetails, com.tools20022.repository.msg.StatementOfInvestmentFundTransactions3.mmTransactionOnAccount,
-						com.tools20022.repository.msg.StatementOfInvestmentFundTransactions3.mmSubAccountDetails, com.tools20022.repository.msg.StatementOfInvestmentFundTransactions3.mmExtension);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsCancellationV03.mmStatementToBeCancelled);
+				messageElement_lazy = () -> Arrays.asList(StatementOfInvestmentFundTransactions3.mmStatementGeneralDetails, StatementOfInvestmentFundTransactions3.mmInvestmentAccountDetails,
+						StatementOfInvestmentFundTransactions3.mmTransactionOnAccount, StatementOfInvestmentFundTransactions3.mmSubAccountDetails, StatementOfInvestmentFundTransactions3.mmExtension);
+				messageBuildingBlock_lazy = () -> Arrays.asList(StatementOfInvestmentFundTransactionsCancellationV03.mmStatementToBeCancelled);
 				trace_lazy = () -> InvestmentAccount.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "StatementOfInvestmentFundTransactions3";
 				definition = "Information about a statement of investment fund transactions.";
 				previousVersion_lazy = () -> StatementOfInvestmentFundTransactions2.mmObject();

@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.TradeMarket1Code
+ * TradeMarket1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>{@linkplain com.tools20022.repository.codeset.TradeMarketCode#mmNAFTA
@@ -42,13 +51,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * TradeMarketCode.mmEuroDomestic}</li>
  * <li>{@linkplain com.tools20022.repository.codeset.TradeMarketCode#mmDomestic
  * TradeMarketCode.mmDomestic}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.TradeMarket1Code
- * TradeMarket1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -96,7 +98,7 @@ public class TradeMarketCode {
 	 */
 	public static final MMCode mmNAFTA = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NAFTA";
 			definition = "Transaction is a North American Free Trade Association (NAFTA) transaction, ie, the first and final agent are both located in the NAFTA area.";
 			owner_lazy = () -> TradeMarketCode.mmObject();
@@ -129,7 +131,7 @@ public class TradeMarketCode {
 	 */
 	public static final MMCode mmInternational = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "International";
 			definition = "Transaction has an origin in one country and a destination in another and is made in the currency of either the origin or destination country.";
 			owner_lazy = () -> TradeMarketCode.mmObject();
@@ -162,7 +164,7 @@ public class TradeMarketCode {
 	 */
 	public static final MMCode mmFrenchDomTom = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "FrenchDomTom";
 			definition = "Transaction is between a French Overseas Departments and Territories (Dom/Tom) and some country in the European Union (France included).";
 			owner_lazy = () -> TradeMarketCode.mmObject();
@@ -196,7 +198,7 @@ public class TradeMarketCode {
 	 */
 	public static final MMCode mmEuroDomestic = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "EuroDomestic";
 			definition = "Transaction is a credit transfer in Euro with its country of origin and country of destination within the European Union. Origin and destination countries may be one and the same country.";
 			owner_lazy = () -> TradeMarketCode.mmObject();
@@ -229,7 +231,7 @@ public class TradeMarketCode {
 	 */
 	public static final MMCode mmDomestic = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Domestic";
 			definition = "Transaction has an origin and a destination in the same country and is made in the currency of that country.";
 			owner_lazy = () -> TradeMarketCode.mmObject();
@@ -240,12 +242,11 @@ public class TradeMarketCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TradeMarketCode";
 				definition = "Specifies a code for a trade market.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TradeMarketCode.mmNAFTA, com.tools20022.repository.codeset.TradeMarketCode.mmInternational, com.tools20022.repository.codeset.TradeMarketCode.mmFrenchDomTom,
-						com.tools20022.repository.codeset.TradeMarketCode.mmEuroDomestic, com.tools20022.repository.codeset.TradeMarketCode.mmDomestic);
+				code_lazy = () -> Arrays.asList(TradeMarketCode.mmNAFTA, TradeMarketCode.mmInternational, TradeMarketCode.mmFrenchDomTom, TradeMarketCode.mmEuroDomestic, TradeMarketCode.mmDomestic);
 				derivation_lazy = () -> Arrays.asList(TradeMarket1Code.mmObject());
 			}
 		});

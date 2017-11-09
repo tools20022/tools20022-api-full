@@ -20,6 +20,7 @@ package com.tools20022.repository.area.acmt;
 import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.AccountManagementLatestVersion;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.BankAccountManagementISOLatestversion;
@@ -36,6 +37,9 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code acmt.021.001.02}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.AccountManagementLatestVersion
@@ -88,9 +92,6 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code acmt.021.001.02}</li>
- * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -138,7 +139,7 @@ public class AccountClosingAdditionalInformationRequestV02 {
 	public static final MMMessageBuildingBlock mmReferences = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Refs";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "References";
 			definition = "Set of elements for the identification of the message and related references.";
 			maxOccurs = 1;
@@ -176,7 +177,7 @@ public class AccountClosingAdditionalInformationRequestV02 {
 	public static final MMMessageBuildingBlock mmFrom = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Fr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "From";
 			definition = "Identifies the business sender of the message, if it is not the account owner or account servicing financial institution.";
 			maxOccurs = 1;
@@ -211,7 +212,7 @@ public class AccountClosingAdditionalInformationRequestV02 {
 	public static final MMMessageBuildingBlock mmOrganisationIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "OrgId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrganisationIdentification";
 			definition = "Identifier for an organisation.";
 			maxOccurs = 1;
@@ -249,7 +250,7 @@ public class AccountClosingAdditionalInformationRequestV02 {
 	public static final MMMessageBuildingBlock mmAccountIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "AcctId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountIdentification";
 			definition = "Unique and unambiguous identification of the account between the account owner and the account servicer.";
 			maxOccurs = 1;
@@ -287,7 +288,7 @@ public class AccountClosingAdditionalInformationRequestV02 {
 	public static final MMMessageBuildingBlock mmAccountServicerIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "AcctSvcrId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountServicerIdentification";
 			definition = "Unique and unambiguous identifier of a financial institution, as assigned under an internationally recognised or proprietary identification scheme. \n";
 			maxOccurs = 1;
@@ -331,7 +332,7 @@ public class AccountClosingAdditionalInformationRequestV02 {
 	public static final MMMessageBuildingBlock mmBalanceTransferAccount = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "BalTrfAcct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BalanceTransferAccount";
 			definition = "Identification of the account to which the remaining positive balance of the account to be closed must be transferred or account from which funds can be moved to the account to be closed and which balance is negative. This account must be held in the same financial institution as the account to be closed if the transfer account is used to compensate a negative balance. For a positive balance to be transferred, an account in another financial institution might be used. In that case the account servicer is mandatory.";
 			maxOccurs = 1;
@@ -370,7 +371,7 @@ public class AccountClosingAdditionalInformationRequestV02 {
 	public static final MMMessageBuildingBlock mmTransferAccountServicerIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "TrfAcctSvcrId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransferAccountServicerIdentification";
 			definition = "Unique and unambiguous identifier of a financial institution, as assigned under an internationally recognised or proprietary identification scheme, that is the servicer of the transfer account.";
 			maxOccurs = 1;
@@ -408,7 +409,7 @@ public class AccountClosingAdditionalInformationRequestV02 {
 	public static final MMMessageBuildingBlock mmDigitalSignature = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "DgtlSgntr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DigitalSignature";
 			definition = "Contains the signature with its components, namely signed info, signature value, key info and the object.";
 			minOccurs = 0;
@@ -445,7 +446,7 @@ public class AccountClosingAdditionalInformationRequestV02 {
 	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SplmtryData";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryData";
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
 			minOccurs = 0;
@@ -456,7 +457,7 @@ public class AccountClosingAdditionalInformationRequestV02 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AccountClosingAdditionalInformationRequestV02";
 				definition = "The AccountClosingAdditionalInformationRequest message is sent from a financial institution to an organisation as part of the account closing process. This message is sent in response to a closing request message from the organisation, if the business content is valid, but additional information is required.";
 				previousVersion_lazy = () -> AccountClosingAdditionalInformationRequestV01.mmObject();
@@ -464,13 +465,11 @@ public class AccountClosingAdditionalInformationRequestV02 {
 				rootElement = "Document";
 				xmlTag = "AcctClsgAddtlInfReq";
 				businessArea_lazy = () -> AccountManagementLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountClosingAdditionalInformationRequestV02.mmReferences,
-						com.tools20022.repository.area.acmt.AccountClosingAdditionalInformationRequestV02.mmFrom, com.tools20022.repository.area.acmt.AccountClosingAdditionalInformationRequestV02.mmOrganisationIdentification,
-						com.tools20022.repository.area.acmt.AccountClosingAdditionalInformationRequestV02.mmAccountIdentification,
-						com.tools20022.repository.area.acmt.AccountClosingAdditionalInformationRequestV02.mmAccountServicerIdentification,
-						com.tools20022.repository.area.acmt.AccountClosingAdditionalInformationRequestV02.mmBalanceTransferAccount,
-						com.tools20022.repository.area.acmt.AccountClosingAdditionalInformationRequestV02.mmTransferAccountServicerIdentification,
-						com.tools20022.repository.area.acmt.AccountClosingAdditionalInformationRequestV02.mmDigitalSignature, com.tools20022.repository.area.acmt.AccountClosingAdditionalInformationRequestV02.mmSupplementaryData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(AccountClosingAdditionalInformationRequestV02.mmReferences, AccountClosingAdditionalInformationRequestV02.mmFrom,
+						AccountClosingAdditionalInformationRequestV02.mmOrganisationIdentification, AccountClosingAdditionalInformationRequestV02.mmAccountIdentification,
+						AccountClosingAdditionalInformationRequestV02.mmAccountServicerIdentification, AccountClosingAdditionalInformationRequestV02.mmBalanceTransferAccount,
+						AccountClosingAdditionalInformationRequestV02.mmTransferAccountServicerIdentification, AccountClosingAdditionalInformationRequestV02.mmDigitalSignature,
+						AccountClosingAdditionalInformationRequestV02.mmSupplementaryData);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "acmt";

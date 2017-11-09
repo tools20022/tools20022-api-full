@@ -19,7 +19,9 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -108,7 +110,7 @@ public class Reference1Choice {
 			componentContext_lazy = () -> Reference1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "MrgnCallReqId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarginCallRequestIdentification";
 			definition = "Unique identifier of the margin call request.";
 			maxOccurs = 1;
@@ -149,7 +151,7 @@ public class Reference1Choice {
 			componentContext_lazy = () -> Reference1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "MrgnCallRspnId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarginCallResponseIdentification";
 			definition = "Unique identifier of the margin call response.";
 			maxOccurs = 1;
@@ -190,7 +192,7 @@ public class Reference1Choice {
 			componentContext_lazy = () -> Reference1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "CollPrpslId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralProposalIdentification";
 			definition = "Unique identifier of the collateral proposal.";
 			maxOccurs = 1;
@@ -231,7 +233,7 @@ public class Reference1Choice {
 			componentContext_lazy = () -> Reference1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "CollPrpslRspnId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralProposalResponseIdentification";
 			definition = "Unique identifier of the collateral proposal response.";
 			maxOccurs = 1;
@@ -272,7 +274,7 @@ public class Reference1Choice {
 			componentContext_lazy = () -> Reference1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "DsptNtfctnId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DisputeNotificationIdentification";
 			definition = "Unique identifier of the dispute notification.";
 			maxOccurs = 1;
@@ -314,7 +316,7 @@ public class Reference1Choice {
 			componentContext_lazy = () -> Reference1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "CollSbstitnReqId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralSubstitutionRequestIdentification";
 			definition = "Unique identifier of the collateral substitution request.";
 			maxOccurs = 1;
@@ -326,11 +328,10 @@ public class Reference1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Reference1Choice.mmMarginCallRequestIdentification, com.tools20022.repository.choice.Reference1Choice.mmMarginCallResponseIdentification,
-						com.tools20022.repository.choice.Reference1Choice.mmCollateralProposalIdentification, com.tools20022.repository.choice.Reference1Choice.mmCollateralProposalResponseIdentification,
-						com.tools20022.repository.choice.Reference1Choice.mmDisputeNotificationIdentification, com.tools20022.repository.choice.Reference1Choice.mmCollateralSubstitutionRequestIdentification);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(Reference1Choice.mmMarginCallRequestIdentification, Reference1Choice.mmMarginCallResponseIdentification, Reference1Choice.mmCollateralProposalIdentification,
+						Reference1Choice.mmCollateralProposalResponseIdentification, Reference1Choice.mmDisputeNotificationIdentification, Reference1Choice.mmCollateralSubstitutionRequestIdentification);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Reference1Choice";
 				definition = "Choice between the identification of the MarginCallRequest message, the MarginCallResponse message, the CollateralProposal message, the CollateralProposalResponse message, the CollateralSubstitutionRequest message or the MarginCallDisputeNotification message.";
 			}

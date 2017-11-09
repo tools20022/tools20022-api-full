@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,37 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.MessageFunction3Code
+ * MessageFunction3Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.MessageFunction1Code
+ * MessageFunction1Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.MessageFunction2Code
+ * MessageFunction2Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.MessageFunction4Code
+ * MessageFunction4Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.MessageFunction6Code
+ * MessageFunction6Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.MessageFunction5Code
+ * MessageFunction5Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.MessageFunction7Code
+ * MessageFunction7Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.MessageFunction8Code
+ * MessageFunction8Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.MessageFunction9Code
+ * MessageFunction9Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.MessageFunction10Code
+ * MessageFunction10Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.MessageFunction11Code
+ * MessageFunction11Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.MessageFunction12Code
+ * MessageFunction12Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.MessageFunction13Code
+ * MessageFunction13Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -349,37 +382,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * MessageFunctionCode.mmCurrencyConversionAdviceResponse}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.MessageFunction3Code
- * MessageFunction3Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.MessageFunction1Code
- * MessageFunction1Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.MessageFunction2Code
- * MessageFunction2Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.MessageFunction4Code
- * MessageFunction4Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.MessageFunction6Code
- * MessageFunction6Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.MessageFunction5Code
- * MessageFunction5Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.MessageFunction7Code
- * MessageFunction7Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.MessageFunction8Code
- * MessageFunction8Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.MessageFunction9Code
- * MessageFunction9Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.MessageFunction10Code
- * MessageFunction10Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.MessageFunction11Code
- * MessageFunction11Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.MessageFunction12Code
- * MessageFunction12Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.MessageFunction13Code
- * MessageFunction13Code}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -430,7 +432,7 @@ public class MessageFunctionCode {
 	 */
 	public static final MMCode mmAuthorisationRequest = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AuthorisationRequest";
 			definition = "The initiator requests an authorisation without financial impact to complete the transaction.";
 			owner_lazy = () -> MessageFunctionCode.mmObject();
@@ -460,7 +462,7 @@ public class MessageFunctionCode {
 	 */
 	public static final MMCode mmAuthorisationResponse = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AuthorisationResponse";
 			definition = "Response for authorisation without financial capture.";
 			owner_lazy = () -> MessageFunctionCode.mmObject();
@@ -490,7 +492,7 @@ public class MessageFunctionCode {
 	 */
 	public static final MMCode mmFinancialAuthorisationRequest = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "FinancialAuthorisationRequest";
 			definition = "Request for authorisation with financial capture.";
 			owner_lazy = () -> MessageFunctionCode.mmObject();
@@ -520,7 +522,7 @@ public class MessageFunctionCode {
 	 */
 	public static final MMCode mmFinancialAuthorisationResponse = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "FinancialAuthorisationResponse";
 			definition = "Response for authorisation with financial capture.";
 			owner_lazy = () -> MessageFunctionCode.mmObject();
@@ -550,7 +552,7 @@ public class MessageFunctionCode {
 	 */
 	public static final MMCode mmCompletionAdvice = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CompletionAdvice";
 			definition = "Advice for completion without financial capture.";
 			owner_lazy = () -> MessageFunctionCode.mmObject();
@@ -581,7 +583,7 @@ public class MessageFunctionCode {
 	 */
 	public static final MMCode mmCompletionAdviceResponse = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CompletionAdviceResponse";
 			definition = "Advice response for completion without financial capture.";
 			owner_lazy = () -> MessageFunctionCode.mmObject();
@@ -611,7 +613,7 @@ public class MessageFunctionCode {
 	 */
 	public static final MMCode mmFinancialCompletionAdvice = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "FinancialCompletionAdvice";
 			definition = "Advice for completion with financial capture.";
 			owner_lazy = () -> MessageFunctionCode.mmObject();
@@ -641,7 +643,7 @@ public class MessageFunctionCode {
 	 */
 	public static final MMCode mmFinancialCompletionAdviceResponse = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "FinancialCompletionAdviceResponse";
 			definition = "Advice response for completion with financial capture.";
 			owner_lazy = () -> MessageFunctionCode.mmObject();
@@ -671,7 +673,7 @@ public class MessageFunctionCode {
 	 */
 	public static final MMCode mmReversalAdvice = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ReversalAdvice";
 			definition = "Advice for reversal without financial capture.";
 			owner_lazy = () -> MessageFunctionCode.mmObject();
@@ -701,7 +703,7 @@ public class MessageFunctionCode {
 	 */
 	public static final MMCode mmReversalAdviceResponse = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ReversalAdviceResponse";
 			definition = "Advice response for reversal without financial capture.";
 			owner_lazy = () -> MessageFunctionCode.mmObject();
@@ -731,7 +733,7 @@ public class MessageFunctionCode {
 	 */
 	public static final MMCode mmFinancialReversalAdvice = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "FinancialReversalAdvice";
 			definition = "Advice for reversal with financial capture.";
 			owner_lazy = () -> MessageFunctionCode.mmObject();
@@ -761,7 +763,7 @@ public class MessageFunctionCode {
 	 */
 	public static final MMCode mmFinancialReversalAdviceResponse = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "FinancialReversalAdviceResponse";
 			definition = "Advice response for reversal with financial capture.";
 			owner_lazy = () -> MessageFunctionCode.mmObject();
@@ -791,7 +793,7 @@ public class MessageFunctionCode {
 	 */
 	public static final MMCode mmCancellationRequest = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CancellationRequest";
 			definition = "Request for cancellation.";
 			owner_lazy = () -> MessageFunctionCode.mmObject();
@@ -821,7 +823,7 @@ public class MessageFunctionCode {
 	 */
 	public static final MMCode mmCancellationResponse = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CancellationResponse";
 			definition = "Response for cancellation.";
 			owner_lazy = () -> MessageFunctionCode.mmObject();
@@ -851,7 +853,7 @@ public class MessageFunctionCode {
 	 */
 	public static final MMCode mmCancellationAdvice = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CancellationAdvice";
 			definition = "Advice for cancellation.";
 			owner_lazy = () -> MessageFunctionCode.mmObject();
@@ -881,7 +883,7 @@ public class MessageFunctionCode {
 	 */
 	public static final MMCode mmCancellationAdviceResponse = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CancellationAdviceResponse";
 			definition = "Advice response for cancellation.";
 			owner_lazy = () -> MessageFunctionCode.mmObject();
@@ -911,7 +913,7 @@ public class MessageFunctionCode {
 	 */
 	public static final MMCode mmDiagnosticRequest = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DiagnosticRequest";
 			definition = "Request for diagnostic.";
 			owner_lazy = () -> MessageFunctionCode.mmObject();
@@ -941,7 +943,7 @@ public class MessageFunctionCode {
 	 */
 	public static final MMCode mmDiagnosticResponse = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DiagnosticResponse";
 			definition = "Response for diagnostic.";
 			owner_lazy = () -> MessageFunctionCode.mmObject();
@@ -971,7 +973,7 @@ public class MessageFunctionCode {
 	 */
 	public static final MMCode mmReconciliationRequest = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ReconciliationRequest";
 			definition = "Request for reconciliation.";
 			owner_lazy = () -> MessageFunctionCode.mmObject();
@@ -1001,7 +1003,7 @@ public class MessageFunctionCode {
 	 */
 	public static final MMCode mmReconciliationResponse = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ReconciliationResponse";
 			definition = "Response for reconciliation.";
 			owner_lazy = () -> MessageFunctionCode.mmObject();
@@ -1032,7 +1034,7 @@ public class MessageFunctionCode {
 	 */
 	public static final MMCode mmBatchTransfer = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BatchTransfer";
 			definition = "Transfer the financial data as a collection of transction.";
 			owner_lazy = () -> MessageFunctionCode.mmObject();
@@ -1062,7 +1064,7 @@ public class MessageFunctionCode {
 	 */
 	public static final MMCode mmRejection = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Rejection";
 			definition = "Reject a request or an advice.";
 			owner_lazy = () -> MessageFunctionCode.mmObject();
@@ -1092,7 +1094,7 @@ public class MessageFunctionCode {
 	 */
 	public static final MMCode mmResponse = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Response";
 			definition = "Message function is a response.";
 			owner_lazy = () -> MessageFunctionCode.mmObject();
@@ -1122,7 +1124,7 @@ public class MessageFunctionCode {
 	 */
 	public static final MMCode mmRequest = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Request";
 			definition = "Message function is a request.";
 			owner_lazy = () -> MessageFunctionCode.mmObject();
@@ -1152,7 +1154,7 @@ public class MessageFunctionCode {
 	 */
 	public static final MMCode mmCurrencyConversionRequest = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrencyConversionRequest";
 			definition = "Request for dynamic currency conversion.";
 			owner_lazy = () -> MessageFunctionCode.mmObject();
@@ -1182,7 +1184,7 @@ public class MessageFunctionCode {
 	 */
 	public static final MMCode mmCurrencyConversionResponse = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrencyConversionResponse";
 			definition = "Response from a dynamic currency conversion.";
 			owner_lazy = () -> MessageFunctionCode.mmObject();
@@ -1212,7 +1214,7 @@ public class MessageFunctionCode {
 	 */
 	public static final MMCode mmAcquirerReconciliationAdvice = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcquirerReconciliationAdvice";
 			definition = "Advice of transaction totals from an acquirer.";
 			owner_lazy = () -> MessageFunctionCode.mmObject();
@@ -1245,7 +1247,7 @@ public class MessageFunctionCode {
 	 */
 	public static final MMCode mmAcquirerReconciliationAdviceResponse = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcquirerReconciliationAdviceResponse";
 			definition = "Acknowledgement from an issuer or a processor of an acquirer reconciliation advice.";
 			owner_lazy = () -> MessageFunctionCode.mmObject();
@@ -1275,7 +1277,7 @@ public class MessageFunctionCode {
 	 */
 	public static final MMCode mmAcquirerReconciliationNotification = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcquirerReconciliationNotification";
 			definition = "Notification of transaction totals from an acquirer.";
 			owner_lazy = () -> MessageFunctionCode.mmObject();
@@ -1305,7 +1307,7 @@ public class MessageFunctionCode {
 	 */
 	public static final MMCode mmAcquirerReconciliationRequest = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcquirerReconciliationRequest";
 			definition = "Request of transaction totals exchange from an acquirer.";
 			owner_lazy = () -> MessageFunctionCode.mmObject();
@@ -1338,7 +1340,7 @@ public class MessageFunctionCode {
 	 */
 	public static final MMCode mmAcquirerReconciliationResponse = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcquirerReconciliationResponse";
 			definition = "Response from an issuer or a processor to an acquirer reconciliation request.";
 			owner_lazy = () -> MessageFunctionCode.mmObject();
@@ -1368,7 +1370,7 @@ public class MessageFunctionCode {
 	 */
 	public static final MMCode mmAcquirerReject = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcquirerReject";
 			definition = "Reject of a message by an acquirer.";
 			owner_lazy = () -> MessageFunctionCode.mmObject();
@@ -1398,7 +1400,7 @@ public class MessageFunctionCode {
 	 */
 	public static final MMCode mmAgentReconciliationAdvice = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AgentReconciliationAdvice";
 			definition = "Advice of transaction totals from a processor.";
 			owner_lazy = () -> MessageFunctionCode.mmObject();
@@ -1431,7 +1433,7 @@ public class MessageFunctionCode {
 	 */
 	public static final MMCode mmAgentReconciliationAdviceResponse = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AgentReconciliationAdviceResponse";
 			definition = "Acknowledgement from an issuer or an acquirer of a processor reconciliation advice.";
 			owner_lazy = () -> MessageFunctionCode.mmObject();
@@ -1461,7 +1463,7 @@ public class MessageFunctionCode {
 	 */
 	public static final MMCode mmAgentReconciliationNotification = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AgentReconciliationNotification";
 			definition = "Notification of transaction totals from a processor.";
 			owner_lazy = () -> MessageFunctionCode.mmObject();
@@ -1491,7 +1493,7 @@ public class MessageFunctionCode {
 	 */
 	public static final MMCode mmAgentReconciliationRequest = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AgentReconciliationRequest";
 			definition = "Request of transaction totals exchange from a processor.";
 			owner_lazy = () -> MessageFunctionCode.mmObject();
@@ -1524,7 +1526,7 @@ public class MessageFunctionCode {
 	 */
 	public static final MMCode mmAgentReconciliationResponse = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AgentReconciliationResponse";
 			definition = "Response from an issuer or an acquirer to a processor reconciliation request.";
 			owner_lazy = () -> MessageFunctionCode.mmObject();
@@ -1554,7 +1556,7 @@ public class MessageFunctionCode {
 	 */
 	public static final MMCode mmAgentReject = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AgentReject";
 			definition = "Reject of a message by an agent.";
 			owner_lazy = () -> MessageFunctionCode.mmObject();
@@ -1587,7 +1589,7 @@ public class MessageFunctionCode {
 	 */
 	public static final MMCode mmAuthorisationAdvice = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AuthorisationAdvice";
 			definition = "Initiator of the message advises the recipient about the result of an authorisation already performed.";
 			owner_lazy = () -> MessageFunctionCode.mmObject();
@@ -1617,7 +1619,7 @@ public class MessageFunctionCode {
 	 */
 	public static final MMCode mmAuthorisationAdviceResponse = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AuthorisationAdviceResponse";
 			definition = "Response to an AuthorisationAdvice.";
 			owner_lazy = () -> MessageFunctionCode.mmObject();
@@ -1647,7 +1649,7 @@ public class MessageFunctionCode {
 	 */
 	public static final MMCode mmAuthorisationNotification = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AuthorisationNotification";
 			definition = "Information about an authorisation.";
 			owner_lazy = () -> MessageFunctionCode.mmObject();
@@ -1681,7 +1683,7 @@ public class MessageFunctionCode {
 	 */
 	public static final MMCode mmFinancialAdvice = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialAdvice";
 			definition = "Initiator of the message advises the receptor that an authorisation has been successfully delivered or completed with a final amount, and requests the clearing of the transaction.";
 			owner_lazy = () -> MessageFunctionCode.mmObject();
@@ -1711,7 +1713,7 @@ public class MessageFunctionCode {
 	 */
 	public static final MMCode mmFinancialAdviceResponse = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialAdviceResponse";
 			definition = "Response to a FinancialAdvice.";
 			owner_lazy = () -> MessageFunctionCode.mmObject();
@@ -1741,7 +1743,7 @@ public class MessageFunctionCode {
 	 */
 	public static final MMCode mmFinancialNotification = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialNotification";
 			definition = "Initiator requests the clearing of the transaction. ";
 			owner_lazy = () -> MessageFunctionCode.mmObject();
@@ -1774,7 +1776,7 @@ public class MessageFunctionCode {
 	 */
 	public static final MMCode mmFinancialRequest = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialRequest";
 			definition = "Initiator of the message requests both the authorisation and the clearing of the transaction.";
 			owner_lazy = () -> MessageFunctionCode.mmObject();
@@ -1804,7 +1806,7 @@ public class MessageFunctionCode {
 	 */
 	public static final MMCode mmFinancialResponse = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialResponse";
 			definition = "Response to a FinancialRequest.";
 			owner_lazy = () -> MessageFunctionCode.mmObject();
@@ -1834,7 +1836,7 @@ public class MessageFunctionCode {
 	 */
 	public static final MMCode mmIssuerReconciliationAdvice = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssuerReconciliationAdvice";
 			definition = "Advice of transaction totals from an issuer.";
 			owner_lazy = () -> MessageFunctionCode.mmObject();
@@ -1867,7 +1869,7 @@ public class MessageFunctionCode {
 	 */
 	public static final MMCode mmIssuerReconciliationAdviceResponse = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssuerReconciliationAdviceResponse";
 			definition = "Acknowledgement from an acquirer or a processor of an issuer reconciliation advice.";
 			owner_lazy = () -> MessageFunctionCode.mmObject();
@@ -1897,7 +1899,7 @@ public class MessageFunctionCode {
 	 */
 	public static final MMCode mmIssuerReconciliationNotification = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssuerReconciliationNotification";
 			definition = "Notification of transaction totals from an issuer.";
 			owner_lazy = () -> MessageFunctionCode.mmObject();
@@ -1927,7 +1929,7 @@ public class MessageFunctionCode {
 	 */
 	public static final MMCode mmIssuerReconciliationRequest = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssuerReconciliationRequest";
 			definition = "Request of transaction totals exchange from an issuer.";
 			owner_lazy = () -> MessageFunctionCode.mmObject();
@@ -1960,7 +1962,7 @@ public class MessageFunctionCode {
 	 */
 	public static final MMCode mmIssuerReconciliationResponse = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssuerReconciliationResponse";
 			definition = "Response from an acquirer or a processor to an issuer reconciliation request.";
 			owner_lazy = () -> MessageFunctionCode.mmObject();
@@ -1990,7 +1992,7 @@ public class MessageFunctionCode {
 	 */
 	public static final MMCode mmIssuerReject = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssuerReject";
 			definition = "Reject of a message by an issuer.";
 			owner_lazy = () -> MessageFunctionCode.mmObject();
@@ -2020,7 +2022,7 @@ public class MessageFunctionCode {
 	 */
 	public static final MMCode mmNetworkManagementAdvice = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetworkManagementAdvice";
 			definition = "Advise of a performed network management service.";
 			owner_lazy = () -> MessageFunctionCode.mmObject();
@@ -2050,7 +2052,7 @@ public class MessageFunctionCode {
 	 */
 	public static final MMCode mmNetworkManagementAdviceResponse = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetworkManagementAdviceResponse";
 			definition = "Response to a NetworkManagementAdvice.";
 			owner_lazy = () -> MessageFunctionCode.mmObject();
@@ -2080,7 +2082,7 @@ public class MessageFunctionCode {
 	 */
 	public static final MMCode mmNetworkManagementRequest = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetworkManagementRequest";
 			definition = "Request of a network management service.";
 			owner_lazy = () -> MessageFunctionCode.mmObject();
@@ -2110,7 +2112,7 @@ public class MessageFunctionCode {
 	 */
 	public static final MMCode mmNetworkManagementResponse = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetworkManagementResponse";
 			definition = "Response to a NetworkManagementRequest.";
 			owner_lazy = () -> MessageFunctionCode.mmObject();
@@ -2140,7 +2142,7 @@ public class MessageFunctionCode {
 	 */
 	public static final MMCode mmKeyExchangeAdvice = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "KeyExchangeAdvice";
 			definition = "Advise of a performed key update.";
 			owner_lazy = () -> MessageFunctionCode.mmObject();
@@ -2170,7 +2172,7 @@ public class MessageFunctionCode {
 	 */
 	public static final MMCode mmKeyExchangeAdviceResponse = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "KeyExchangeAdviceResponse";
 			definition = "Response to a KeyExchangeAdvice.";
 			owner_lazy = () -> MessageFunctionCode.mmObject();
@@ -2200,7 +2202,7 @@ public class MessageFunctionCode {
 	 */
 	public static final MMCode mmKeyExchangeRequest = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "KeyExchangeRequest";
 			definition = "Request of a key exchange.";
 			owner_lazy = () -> MessageFunctionCode.mmObject();
@@ -2230,7 +2232,7 @@ public class MessageFunctionCode {
 	 */
 	public static final MMCode mmKeyExchangeResponse = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "KeyExchangeResponse";
 			definition = "Response to a KeyExchangeRequest.";
 			owner_lazy = () -> MessageFunctionCode.mmObject();
@@ -2261,7 +2263,7 @@ public class MessageFunctionCode {
 	 */
 	public static final MMCode mmAcquirerReversalAdvice = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcquirerReversalAdvice";
 			definition = "Reversal advice of an authorisation or a financial message.";
 			owner_lazy = () -> MessageFunctionCode.mmObject();
@@ -2291,7 +2293,7 @@ public class MessageFunctionCode {
 	 */
 	public static final MMCode mmAcquirerReversalAdviceResponse = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcquirerReversalAdviceResponse";
 			definition = "Response to a reversal advice.";
 			owner_lazy = () -> MessageFunctionCode.mmObject();
@@ -2322,7 +2324,7 @@ public class MessageFunctionCode {
 	 */
 	public static final MMCode mmAcquirerReversalNotification = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcquirerReversalNotification";
 			definition = "Reversal notification of an authorisation or a financial message.";
 			owner_lazy = () -> MessageFunctionCode.mmObject();
@@ -2353,7 +2355,7 @@ public class MessageFunctionCode {
 	 */
 	public static final MMCode mmAcquirerReversalRequest = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcquirerReversalRequest";
 			definition = "Reversal request of an authorisation or a financial message.";
 			owner_lazy = () -> MessageFunctionCode.mmObject();
@@ -2383,7 +2385,7 @@ public class MessageFunctionCode {
 	 */
 	public static final MMCode mmAcquirerReversalResponse = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcquirerReversalResponse";
 			definition = "Response to a reversal request.";
 			owner_lazy = () -> MessageFunctionCode.mmObject();
@@ -2414,7 +2416,7 @@ public class MessageFunctionCode {
 	 */
 	public static final MMCode mmATMBalance = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ATMBalance";
 			definition = "Provide the ATM counters resettting those that are applicable.";
 			owner_lazy = () -> MessageFunctionCode.mmObject();
@@ -2444,7 +2446,7 @@ public class MessageFunctionCode {
 	 */
 	public static final MMCode mmATMCompletionAdvice = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ATMCompletionAdvice";
 			definition = "Advice of an ATM transaction completion.";
 			owner_lazy = () -> MessageFunctionCode.mmObject();
@@ -2474,7 +2476,7 @@ public class MessageFunctionCode {
 	 */
 	public static final MMCode mmATMCompletionAcknowledgement = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ATMCompletionAcknowledgement";
 			definition = "Acknowledgement of a completion advice.";
 			owner_lazy = () -> MessageFunctionCode.mmObject();
@@ -2504,7 +2506,7 @@ public class MessageFunctionCode {
 	 */
 	public static final MMCode mmATMControl = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ATMControl";
 			definition = "Global ATM commands.";
 			owner_lazy = () -> MessageFunctionCode.mmObject();
@@ -2534,7 +2536,7 @@ public class MessageFunctionCode {
 	 */
 	public static final MMCode mmATMDeviceControl = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ATMDeviceControl";
 			definition = "Maintenance commands to perform.";
 			owner_lazy = () -> MessageFunctionCode.mmObject();
@@ -2564,7 +2566,7 @@ public class MessageFunctionCode {
 	 */
 	public static final MMCode mmATMDiagnosticRequest = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ATMDiagnosticRequest";
 			definition = "Request for a diagnostic.";
 			owner_lazy = () -> MessageFunctionCode.mmObject();
@@ -2594,7 +2596,7 @@ public class MessageFunctionCode {
 	 */
 	public static final MMCode mmATMDiagnosticResponse = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ATMDiagnosticResponse";
 			definition = "Response to a diagnostic request.";
 			owner_lazy = () -> MessageFunctionCode.mmObject();
@@ -2624,7 +2626,7 @@ public class MessageFunctionCode {
 	 */
 	public static final MMCode mmATMGlobalStatus = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ATMGlobalStatus";
 			definition = "Global status of the ATM.";
 			owner_lazy = () -> MessageFunctionCode.mmObject();
@@ -2654,7 +2656,7 @@ public class MessageFunctionCode {
 	 */
 	public static final MMCode mmATMInquiryRequest = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ATMInquiryRequest";
 			definition = "Request for an inquiry.";
 			owner_lazy = () -> MessageFunctionCode.mmObject();
@@ -2684,7 +2686,7 @@ public class MessageFunctionCode {
 	 */
 	public static final MMCode mmATMInquiryResponse = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ATMInquiryResponse";
 			definition = "Response to an inquiry request.";
 			owner_lazy = () -> MessageFunctionCode.mmObject();
@@ -2714,7 +2716,7 @@ public class MessageFunctionCode {
 	 */
 	public static final MMCode mmATMKeyDownloadRequest = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ATMKeyDownloadRequest";
 			definition = "Request for a key download.";
 			owner_lazy = () -> MessageFunctionCode.mmObject();
@@ -2744,7 +2746,7 @@ public class MessageFunctionCode {
 	 */
 	public static final MMCode mmATMPINManagementResponse = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ATMPINManagementResponse";
 			definition = "Response to a cardholder PIN management request.";
 			owner_lazy = () -> MessageFunctionCode.mmObject();
@@ -2774,7 +2776,7 @@ public class MessageFunctionCode {
 	 */
 	public static final MMCode mmATMPINManagementRequest = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ATMPINManagementRequest";
 			definition = "Request for a cardholder PIN management.";
 			owner_lazy = () -> MessageFunctionCode.mmObject();
@@ -2804,7 +2806,7 @@ public class MessageFunctionCode {
 	 */
 	public static final MMCode mmATMKeyDownloadResponse = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ATMKeyDownloadResponse";
 			definition = "Response to a key download.";
 			owner_lazy = () -> MessageFunctionCode.mmObject();
@@ -2834,7 +2836,7 @@ public class MessageFunctionCode {
 	 */
 	public static final MMCode mmATMRequestReject = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ATMRequestReject";
 			definition = "Rejected request message.";
 			owner_lazy = () -> MessageFunctionCode.mmObject();
@@ -2864,7 +2866,7 @@ public class MessageFunctionCode {
 	 */
 	public static final MMCode mmATMResponseReject = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ATMResponseReject";
 			definition = "Rejected response message.";
 			owner_lazy = () -> MessageFunctionCode.mmObject();
@@ -2894,7 +2896,7 @@ public class MessageFunctionCode {
 	 */
 	public static final MMCode mmATMWithdrawalRequest = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ATMWithdrawalRequest";
 			definition = "Request for a withdrawal transaction.";
 			owner_lazy = () -> MessageFunctionCode.mmObject();
@@ -2924,7 +2926,7 @@ public class MessageFunctionCode {
 	 */
 	public static final MMCode mmATMWithdrawalResponse = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ATMWithdrawalResponse";
 			definition = "Response to a withdrawal transaction request.";
 			owner_lazy = () -> MessageFunctionCode.mmObject();
@@ -2954,7 +2956,7 @@ public class MessageFunctionCode {
 	 */
 	public static final MMCode mmATMWithdrawalAdvice = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ATMWithdrawalAdvice";
 			definition = "Response of a withdrawal transaction.";
 			owner_lazy = () -> MessageFunctionCode.mmObject();
@@ -2984,7 +2986,7 @@ public class MessageFunctionCode {
 	 */
 	public static final MMCode mmATMWithdrawalAknowledgement = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ATMWithdrawalAknowledgement";
 			definition = "Acknowledgement of a withdrawal transaction advice.";
 			owner_lazy = () -> MessageFunctionCode.mmObject();
@@ -3014,7 +3016,7 @@ public class MessageFunctionCode {
 	 */
 	public static final MMCode mmCountersInquiry = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CountersInquiry";
 			definition = "Request the value of the ATM counters.";
 			owner_lazy = () -> MessageFunctionCode.mmObject();
@@ -3045,7 +3047,7 @@ public class MessageFunctionCode {
 	 */
 	public static final MMCode mmHostToATMRequest = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HostToATMRequest";
 			definition = "Request from a host to an ATM to be contacted by this ATM.";
 			owner_lazy = () -> MessageFunctionCode.mmObject();
@@ -3076,7 +3078,7 @@ public class MessageFunctionCode {
 	 */
 	public static final MMCode mmHostToATMAcknowledgement = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HostToATMAcknowledgement";
 			definition = "Acknowledgement of a request from a host to an ATM for contacting.";
 			owner_lazy = () -> MessageFunctionCode.mmObject();
@@ -3106,7 +3108,7 @@ public class MessageFunctionCode {
 	 */
 	public static final MMCode mmATMOperation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ATMOperation";
 			definition = "Logical or physical operation on the ATM.";
 			owner_lazy = () -> MessageFunctionCode.mmObject();
@@ -3136,7 +3138,7 @@ public class MessageFunctionCode {
 	 */
 	public static final MMCode mmSecurityControl = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityControl";
 			definition = "Security Commands.";
 			owner_lazy = () -> MessageFunctionCode.mmObject();
@@ -3166,7 +3168,7 @@ public class MessageFunctionCode {
 	 */
 	public static final MMCode mmSecurityDetails = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityDetails";
 			definition = "Security detailed report.";
 			owner_lazy = () -> MessageFunctionCode.mmObject();
@@ -3199,7 +3201,7 @@ public class MessageFunctionCode {
 	 */
 	public static final MMCode mmSecurityKeyCompletion = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityKeyCompletion";
 			definition = "Result of the key download with the status of the downloaded keys including key check values.";
 			owner_lazy = () -> MessageFunctionCode.mmObject();
@@ -3229,7 +3231,7 @@ public class MessageFunctionCode {
 	 */
 	public static final MMCode mmSecurityKeyStatus = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityKeyStatus";
 			definition = "Status of cryptographic keys.";
 			owner_lazy = () -> MessageFunctionCode.mmObject();
@@ -3260,7 +3262,7 @@ public class MessageFunctionCode {
 	 */
 	public static final MMCode mmAcceptorRequestReject = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcceptorRequestReject";
 			definition = "Reject of a request or an advice message by an acquirer or an agent.";
 			owner_lazy = () -> MessageFunctionCode.mmObject();
@@ -3293,7 +3295,7 @@ public class MessageFunctionCode {
 	 */
 	public static final MMCode mmAcceptorResponseReject = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcceptorResponseReject";
 			definition = "Reject of a response or an advice response message by a card acceptor or an agent.";
 			owner_lazy = () -> MessageFunctionCode.mmObject();
@@ -3323,7 +3325,7 @@ public class MessageFunctionCode {
 	 */
 	public static final MMCode mmATMDepositRequest = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ATMDepositRequest";
 			definition = "Request for a deposit.";
 			owner_lazy = () -> MessageFunctionCode.mmObject();
@@ -3353,7 +3355,7 @@ public class MessageFunctionCode {
 	 */
 	public static final MMCode mmATMDepositResponse = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ATMDepositResponse";
 			definition = "Response to a deposit request.";
 			owner_lazy = () -> MessageFunctionCode.mmObject();
@@ -3383,7 +3385,7 @@ public class MessageFunctionCode {
 	 */
 	public static final MMCode mmATMDepositCompletionAdvice = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ATMDepositCompletionAdvice";
 			definition = "Advice of an ATM deposit transaction completion.";
 			owner_lazy = () -> MessageFunctionCode.mmObject();
@@ -3413,7 +3415,7 @@ public class MessageFunctionCode {
 	 */
 	public static final MMCode mmATMDepositCompletionAcknowledgement = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ATMDepositCompletionAcknowledgement";
 			definition = "Acknowledgement of a deposit completion advice.";
 			owner_lazy = () -> MessageFunctionCode.mmObject();
@@ -3443,7 +3445,7 @@ public class MessageFunctionCode {
 	 */
 	public static final MMCode mmATMExceptionAdvice = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ATMExceptionAdvice";
 			definition = "Advice of an ATM exception.";
 			owner_lazy = () -> MessageFunctionCode.mmObject();
@@ -3473,7 +3475,7 @@ public class MessageFunctionCode {
 	 */
 	public static final MMCode mmATMExceptionAcknowledgement = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ATMExceptionAcknowledgement";
 			definition = "Acknowledgement of an exception advice.";
 			owner_lazy = () -> MessageFunctionCode.mmObject();
@@ -3503,7 +3505,7 @@ public class MessageFunctionCode {
 	 */
 	public static final MMCode mmATMTransferRequest = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ATMTransferRequest";
 			definition = "Request for a fund transfer.";
 			owner_lazy = () -> MessageFunctionCode.mmObject();
@@ -3533,7 +3535,7 @@ public class MessageFunctionCode {
 	 */
 	public static final MMCode mmATMTransferResponse = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ATMTransferResponse";
 			definition = "Response to a fund transfer request.";
 			owner_lazy = () -> MessageFunctionCode.mmObject();
@@ -3566,7 +3568,7 @@ public class MessageFunctionCode {
 	 */
 	public static final MMCode mmCountersReport = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CountersReport";
 			definition = "Provide the value of the ATM counters, no reinitialisation of the counters.";
 			owner_lazy = () -> MessageFunctionCode.mmObject();
@@ -3596,7 +3598,7 @@ public class MessageFunctionCode {
 	 */
 	public static final MMCode mmCurrencyConversionAdvice = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrencyConversionAdvice";
 			definition = "Advice for dynamic currency conversion.";
 			owner_lazy = () -> MessageFunctionCode.mmObject();
@@ -3629,7 +3631,7 @@ public class MessageFunctionCode {
 	 */
 	public static final MMCode mmCurrencyConversionAdviceResponse = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrencyConversionAdviceResponse";
 			definition = "Advice response for the currency conversion from the service provider to the acceptor.";
 			owner_lazy = () -> MessageFunctionCode.mmObject();
@@ -3640,64 +3642,37 @@ public class MessageFunctionCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("AUTQ");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MessageFunctionCode";
 				definition = "Type of process related to a specific message.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MessageFunctionCode.mmAuthorisationRequest, com.tools20022.repository.codeset.MessageFunctionCode.mmAuthorisationResponse,
-						com.tools20022.repository.codeset.MessageFunctionCode.mmFinancialAuthorisationRequest, com.tools20022.repository.codeset.MessageFunctionCode.mmFinancialAuthorisationResponse,
-						com.tools20022.repository.codeset.MessageFunctionCode.mmCompletionAdvice, com.tools20022.repository.codeset.MessageFunctionCode.mmCompletionAdviceResponse,
-						com.tools20022.repository.codeset.MessageFunctionCode.mmFinancialCompletionAdvice, com.tools20022.repository.codeset.MessageFunctionCode.mmFinancialCompletionAdviceResponse,
-						com.tools20022.repository.codeset.MessageFunctionCode.mmReversalAdvice, com.tools20022.repository.codeset.MessageFunctionCode.mmReversalAdviceResponse,
-						com.tools20022.repository.codeset.MessageFunctionCode.mmFinancialReversalAdvice, com.tools20022.repository.codeset.MessageFunctionCode.mmFinancialReversalAdviceResponse,
-						com.tools20022.repository.codeset.MessageFunctionCode.mmCancellationRequest, com.tools20022.repository.codeset.MessageFunctionCode.mmCancellationResponse,
-						com.tools20022.repository.codeset.MessageFunctionCode.mmCancellationAdvice, com.tools20022.repository.codeset.MessageFunctionCode.mmCancellationAdviceResponse,
-						com.tools20022.repository.codeset.MessageFunctionCode.mmDiagnosticRequest, com.tools20022.repository.codeset.MessageFunctionCode.mmDiagnosticResponse,
-						com.tools20022.repository.codeset.MessageFunctionCode.mmReconciliationRequest, com.tools20022.repository.codeset.MessageFunctionCode.mmReconciliationResponse,
-						com.tools20022.repository.codeset.MessageFunctionCode.mmBatchTransfer, com.tools20022.repository.codeset.MessageFunctionCode.mmRejection, com.tools20022.repository.codeset.MessageFunctionCode.mmResponse,
-						com.tools20022.repository.codeset.MessageFunctionCode.mmRequest, com.tools20022.repository.codeset.MessageFunctionCode.mmCurrencyConversionRequest,
-						com.tools20022.repository.codeset.MessageFunctionCode.mmCurrencyConversionResponse, com.tools20022.repository.codeset.MessageFunctionCode.mmAcquirerReconciliationAdvice,
-						com.tools20022.repository.codeset.MessageFunctionCode.mmAcquirerReconciliationAdviceResponse, com.tools20022.repository.codeset.MessageFunctionCode.mmAcquirerReconciliationNotification,
-						com.tools20022.repository.codeset.MessageFunctionCode.mmAcquirerReconciliationRequest, com.tools20022.repository.codeset.MessageFunctionCode.mmAcquirerReconciliationResponse,
-						com.tools20022.repository.codeset.MessageFunctionCode.mmAcquirerReject, com.tools20022.repository.codeset.MessageFunctionCode.mmAgentReconciliationAdvice,
-						com.tools20022.repository.codeset.MessageFunctionCode.mmAgentReconciliationAdviceResponse, com.tools20022.repository.codeset.MessageFunctionCode.mmAgentReconciliationNotification,
-						com.tools20022.repository.codeset.MessageFunctionCode.mmAgentReconciliationRequest, com.tools20022.repository.codeset.MessageFunctionCode.mmAgentReconciliationResponse,
-						com.tools20022.repository.codeset.MessageFunctionCode.mmAgentReject, com.tools20022.repository.codeset.MessageFunctionCode.mmAuthorisationAdvice,
-						com.tools20022.repository.codeset.MessageFunctionCode.mmAuthorisationAdviceResponse, com.tools20022.repository.codeset.MessageFunctionCode.mmAuthorisationNotification,
-						com.tools20022.repository.codeset.MessageFunctionCode.mmFinancialAdvice, com.tools20022.repository.codeset.MessageFunctionCode.mmFinancialAdviceResponse,
-						com.tools20022.repository.codeset.MessageFunctionCode.mmFinancialNotification, com.tools20022.repository.codeset.MessageFunctionCode.mmFinancialRequest,
-						com.tools20022.repository.codeset.MessageFunctionCode.mmFinancialResponse, com.tools20022.repository.codeset.MessageFunctionCode.mmIssuerReconciliationAdvice,
-						com.tools20022.repository.codeset.MessageFunctionCode.mmIssuerReconciliationAdviceResponse, com.tools20022.repository.codeset.MessageFunctionCode.mmIssuerReconciliationNotification,
-						com.tools20022.repository.codeset.MessageFunctionCode.mmIssuerReconciliationRequest, com.tools20022.repository.codeset.MessageFunctionCode.mmIssuerReconciliationResponse,
-						com.tools20022.repository.codeset.MessageFunctionCode.mmIssuerReject, com.tools20022.repository.codeset.MessageFunctionCode.mmNetworkManagementAdvice,
-						com.tools20022.repository.codeset.MessageFunctionCode.mmNetworkManagementAdviceResponse, com.tools20022.repository.codeset.MessageFunctionCode.mmNetworkManagementRequest,
-						com.tools20022.repository.codeset.MessageFunctionCode.mmNetworkManagementResponse, com.tools20022.repository.codeset.MessageFunctionCode.mmKeyExchangeAdvice,
-						com.tools20022.repository.codeset.MessageFunctionCode.mmKeyExchangeAdviceResponse, com.tools20022.repository.codeset.MessageFunctionCode.mmKeyExchangeRequest,
-						com.tools20022.repository.codeset.MessageFunctionCode.mmKeyExchangeResponse, com.tools20022.repository.codeset.MessageFunctionCode.mmAcquirerReversalAdvice,
-						com.tools20022.repository.codeset.MessageFunctionCode.mmAcquirerReversalAdviceResponse, com.tools20022.repository.codeset.MessageFunctionCode.mmAcquirerReversalNotification,
-						com.tools20022.repository.codeset.MessageFunctionCode.mmAcquirerReversalRequest, com.tools20022.repository.codeset.MessageFunctionCode.mmAcquirerReversalResponse,
-						com.tools20022.repository.codeset.MessageFunctionCode.mmATMBalance, com.tools20022.repository.codeset.MessageFunctionCode.mmATMCompletionAdvice,
-						com.tools20022.repository.codeset.MessageFunctionCode.mmATMCompletionAcknowledgement, com.tools20022.repository.codeset.MessageFunctionCode.mmATMControl,
-						com.tools20022.repository.codeset.MessageFunctionCode.mmATMDeviceControl, com.tools20022.repository.codeset.MessageFunctionCode.mmATMDiagnosticRequest,
-						com.tools20022.repository.codeset.MessageFunctionCode.mmATMDiagnosticResponse, com.tools20022.repository.codeset.MessageFunctionCode.mmATMGlobalStatus,
-						com.tools20022.repository.codeset.MessageFunctionCode.mmATMInquiryRequest, com.tools20022.repository.codeset.MessageFunctionCode.mmATMInquiryResponse,
-						com.tools20022.repository.codeset.MessageFunctionCode.mmATMKeyDownloadRequest, com.tools20022.repository.codeset.MessageFunctionCode.mmATMPINManagementResponse,
-						com.tools20022.repository.codeset.MessageFunctionCode.mmATMPINManagementRequest, com.tools20022.repository.codeset.MessageFunctionCode.mmATMKeyDownloadResponse,
-						com.tools20022.repository.codeset.MessageFunctionCode.mmATMRequestReject, com.tools20022.repository.codeset.MessageFunctionCode.mmATMResponseReject,
-						com.tools20022.repository.codeset.MessageFunctionCode.mmATMWithdrawalRequest, com.tools20022.repository.codeset.MessageFunctionCode.mmATMWithdrawalResponse,
-						com.tools20022.repository.codeset.MessageFunctionCode.mmATMWithdrawalAdvice, com.tools20022.repository.codeset.MessageFunctionCode.mmATMWithdrawalAknowledgement,
-						com.tools20022.repository.codeset.MessageFunctionCode.mmCountersInquiry, com.tools20022.repository.codeset.MessageFunctionCode.mmHostToATMRequest,
-						com.tools20022.repository.codeset.MessageFunctionCode.mmHostToATMAcknowledgement, com.tools20022.repository.codeset.MessageFunctionCode.mmATMOperation,
-						com.tools20022.repository.codeset.MessageFunctionCode.mmSecurityControl, com.tools20022.repository.codeset.MessageFunctionCode.mmSecurityDetails,
-						com.tools20022.repository.codeset.MessageFunctionCode.mmSecurityKeyCompletion, com.tools20022.repository.codeset.MessageFunctionCode.mmSecurityKeyStatus,
-						com.tools20022.repository.codeset.MessageFunctionCode.mmAcceptorRequestReject, com.tools20022.repository.codeset.MessageFunctionCode.mmAcceptorResponseReject,
-						com.tools20022.repository.codeset.MessageFunctionCode.mmATMDepositRequest, com.tools20022.repository.codeset.MessageFunctionCode.mmATMDepositResponse,
-						com.tools20022.repository.codeset.MessageFunctionCode.mmATMDepositCompletionAdvice, com.tools20022.repository.codeset.MessageFunctionCode.mmATMDepositCompletionAcknowledgement,
-						com.tools20022.repository.codeset.MessageFunctionCode.mmATMExceptionAdvice, com.tools20022.repository.codeset.MessageFunctionCode.mmATMExceptionAcknowledgement,
-						com.tools20022.repository.codeset.MessageFunctionCode.mmATMTransferRequest, com.tools20022.repository.codeset.MessageFunctionCode.mmATMTransferResponse,
-						com.tools20022.repository.codeset.MessageFunctionCode.mmCountersReport, com.tools20022.repository.codeset.MessageFunctionCode.mmCurrencyConversionAdvice,
-						com.tools20022.repository.codeset.MessageFunctionCode.mmCurrencyConversionAdviceResponse);
+				code_lazy = () -> Arrays.asList(MessageFunctionCode.mmAuthorisationRequest, MessageFunctionCode.mmAuthorisationResponse, MessageFunctionCode.mmFinancialAuthorisationRequest,
+						MessageFunctionCode.mmFinancialAuthorisationResponse, MessageFunctionCode.mmCompletionAdvice, MessageFunctionCode.mmCompletionAdviceResponse, MessageFunctionCode.mmFinancialCompletionAdvice,
+						MessageFunctionCode.mmFinancialCompletionAdviceResponse, MessageFunctionCode.mmReversalAdvice, MessageFunctionCode.mmReversalAdviceResponse, MessageFunctionCode.mmFinancialReversalAdvice,
+						MessageFunctionCode.mmFinancialReversalAdviceResponse, MessageFunctionCode.mmCancellationRequest, MessageFunctionCode.mmCancellationResponse, MessageFunctionCode.mmCancellationAdvice,
+						MessageFunctionCode.mmCancellationAdviceResponse, MessageFunctionCode.mmDiagnosticRequest, MessageFunctionCode.mmDiagnosticResponse, MessageFunctionCode.mmReconciliationRequest,
+						MessageFunctionCode.mmReconciliationResponse, MessageFunctionCode.mmBatchTransfer, MessageFunctionCode.mmRejection, MessageFunctionCode.mmResponse, MessageFunctionCode.mmRequest,
+						MessageFunctionCode.mmCurrencyConversionRequest, MessageFunctionCode.mmCurrencyConversionResponse, MessageFunctionCode.mmAcquirerReconciliationAdvice, MessageFunctionCode.mmAcquirerReconciliationAdviceResponse,
+						MessageFunctionCode.mmAcquirerReconciliationNotification, MessageFunctionCode.mmAcquirerReconciliationRequest, MessageFunctionCode.mmAcquirerReconciliationResponse, MessageFunctionCode.mmAcquirerReject,
+						MessageFunctionCode.mmAgentReconciliationAdvice, MessageFunctionCode.mmAgentReconciliationAdviceResponse, MessageFunctionCode.mmAgentReconciliationNotification, MessageFunctionCode.mmAgentReconciliationRequest,
+						MessageFunctionCode.mmAgentReconciliationResponse, MessageFunctionCode.mmAgentReject, MessageFunctionCode.mmAuthorisationAdvice, MessageFunctionCode.mmAuthorisationAdviceResponse,
+						MessageFunctionCode.mmAuthorisationNotification, MessageFunctionCode.mmFinancialAdvice, MessageFunctionCode.mmFinancialAdviceResponse, MessageFunctionCode.mmFinancialNotification,
+						MessageFunctionCode.mmFinancialRequest, MessageFunctionCode.mmFinancialResponse, MessageFunctionCode.mmIssuerReconciliationAdvice, MessageFunctionCode.mmIssuerReconciliationAdviceResponse,
+						MessageFunctionCode.mmIssuerReconciliationNotification, MessageFunctionCode.mmIssuerReconciliationRequest, MessageFunctionCode.mmIssuerReconciliationResponse, MessageFunctionCode.mmIssuerReject,
+						MessageFunctionCode.mmNetworkManagementAdvice, MessageFunctionCode.mmNetworkManagementAdviceResponse, MessageFunctionCode.mmNetworkManagementRequest, MessageFunctionCode.mmNetworkManagementResponse,
+						MessageFunctionCode.mmKeyExchangeAdvice, MessageFunctionCode.mmKeyExchangeAdviceResponse, MessageFunctionCode.mmKeyExchangeRequest, MessageFunctionCode.mmKeyExchangeResponse,
+						MessageFunctionCode.mmAcquirerReversalAdvice, MessageFunctionCode.mmAcquirerReversalAdviceResponse, MessageFunctionCode.mmAcquirerReversalNotification, MessageFunctionCode.mmAcquirerReversalRequest,
+						MessageFunctionCode.mmAcquirerReversalResponse, MessageFunctionCode.mmATMBalance, MessageFunctionCode.mmATMCompletionAdvice, MessageFunctionCode.mmATMCompletionAcknowledgement, MessageFunctionCode.mmATMControl,
+						MessageFunctionCode.mmATMDeviceControl, MessageFunctionCode.mmATMDiagnosticRequest, MessageFunctionCode.mmATMDiagnosticResponse, MessageFunctionCode.mmATMGlobalStatus, MessageFunctionCode.mmATMInquiryRequest,
+						MessageFunctionCode.mmATMInquiryResponse, MessageFunctionCode.mmATMKeyDownloadRequest, MessageFunctionCode.mmATMPINManagementResponse, MessageFunctionCode.mmATMPINManagementRequest,
+						MessageFunctionCode.mmATMKeyDownloadResponse, MessageFunctionCode.mmATMRequestReject, MessageFunctionCode.mmATMResponseReject, MessageFunctionCode.mmATMWithdrawalRequest, MessageFunctionCode.mmATMWithdrawalResponse,
+						MessageFunctionCode.mmATMWithdrawalAdvice, MessageFunctionCode.mmATMWithdrawalAknowledgement, MessageFunctionCode.mmCountersInquiry, MessageFunctionCode.mmHostToATMRequest,
+						MessageFunctionCode.mmHostToATMAcknowledgement, MessageFunctionCode.mmATMOperation, MessageFunctionCode.mmSecurityControl, MessageFunctionCode.mmSecurityDetails, MessageFunctionCode.mmSecurityKeyCompletion,
+						MessageFunctionCode.mmSecurityKeyStatus, MessageFunctionCode.mmAcceptorRequestReject, MessageFunctionCode.mmAcceptorResponseReject, MessageFunctionCode.mmATMDepositRequest, MessageFunctionCode.mmATMDepositResponse,
+						MessageFunctionCode.mmATMDepositCompletionAdvice, MessageFunctionCode.mmATMDepositCompletionAcknowledgement, MessageFunctionCode.mmATMExceptionAdvice, MessageFunctionCode.mmATMExceptionAcknowledgement,
+						MessageFunctionCode.mmATMTransferRequest, MessageFunctionCode.mmATMTransferResponse, MessageFunctionCode.mmCountersReport, MessageFunctionCode.mmCurrencyConversionAdvice,
+						MessageFunctionCode.mmCurrencyConversionAdviceResponse);
 				derivation_lazy = () -> Arrays.asList(MessageFunction3Code.mmObject(), MessageFunction1Code.mmObject(), MessageFunction2Code.mmObject(), MessageFunction4Code.mmObject(), MessageFunction6Code.mmObject(),
 						MessageFunction5Code.mmObject(), MessageFunction7Code.mmObject(), MessageFunction8Code.mmObject(), MessageFunction9Code.mmObject(), MessageFunction10Code.mmObject(), MessageFunction11Code.mmObject(),
 						MessageFunction12Code.mmObject(), MessageFunction13Code.mmObject());

@@ -20,8 +20,10 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.BusinessDayCriteria2Choice;
 import com.tools20022.repository.codeset.QueryType2Code;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -95,7 +97,7 @@ public class BusinessDayQuery1 {
 			componentContext_lazy = () -> BusinessDayQuery1.mmObject();
 			isDerived = false;
 			xmlTag = "QryTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QueryType";
 			definition = "Specifies the type of matching items to be returned in the response to the query.";
 			maxOccurs = 1;
@@ -136,7 +138,7 @@ public class BusinessDayQuery1 {
 			componentContext_lazy = () -> BusinessDayQuery1.mmObject();
 			isDerived = false;
 			xmlTag = "Crit";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Criteria";
 			definition = "Defines the business day information query criteria.";
 			maxOccurs = 1;
@@ -149,9 +151,9 @@ public class BusinessDayQuery1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BusinessDayQuery1.mmQueryType, com.tools20022.repository.msg.BusinessDayQuery1.mmCriteria);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(BusinessDayQuery1.mmQueryType, BusinessDayQuery1.mmCriteria);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "BusinessDayQuery1";
 				definition = "Defines the query criteria.";
 			}

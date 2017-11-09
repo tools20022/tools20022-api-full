@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.RateStatusCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -82,7 +84,7 @@ public class RateStatus1Code extends RateStatusCode {
 	 */
 	public static final MMCode mmActualRate = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ActualRate";
 			owner_lazy = () -> RateStatus1Code.mmObject();
 		}
@@ -105,7 +107,7 @@ public class RateStatus1Code extends RateStatusCode {
 	 */
 	public static final MMCode mmIndicativeRate = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IndicativeRate";
 			owner_lazy = () -> RateStatus1Code.mmObject();
 		}
@@ -114,12 +116,12 @@ public class RateStatus1Code extends RateStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ACTU");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RateStatus1Code";
 				definition = "Specifies the type of rate.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RateStatus1Code.mmActualRate, com.tools20022.repository.codeset.RateStatus1Code.mmIndicativeRate);
+				code_lazy = () -> Arrays.asList(RateStatus1Code.mmActualRate, RateStatus1Code.mmIndicativeRate);
 				trace_lazy = () -> RateStatusCode.mmObject();
 			}
 		});

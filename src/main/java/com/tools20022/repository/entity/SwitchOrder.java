@@ -17,11 +17,12 @@
 
 package com.tools20022.repository.entity;
 
-import com.tools20022.metamodel.MMBusinessAssociationEnd;
-import com.tools20022.metamodel.MMBusinessAttribute;
-import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.*;
+import com.tools20022.repository.choice.AdditionalAmount1Choice;
+import com.tools20022.repository.choice.SubscriptionOrRedemptionOrSwitchOrderDataChoice;
 import com.tools20022.repository.datatype.CurrencyAndAmount;
 import com.tools20022.repository.entity.InvestmentFundOrder;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -38,26 +39,25 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
  * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SwitchOrder#mmAdditionalCashIn
- * SwitchOrder.mmAdditionalCashIn}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SwitchOrder#mmResultingCashOut
- * SwitchOrder.mmResultingCashOut}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SwitchOrder#mmTotalRedemptionAmount
- * SwitchOrder.mmTotalRedemptionAmount}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SwitchOrder#mmTotalSubscriptionAmount
- * SwitchOrder.mmTotalSubscriptionAmount}</li>
- * <li>{@linkplain com.tools20022.repository.entity.SwitchOrder#mmRedemptionLeg
- * SwitchOrder.mmRedemptionLeg}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SwitchOrder#mmSubscriptionLeg
- * SwitchOrder.mmSubscriptionLeg}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.FundOrderData2 FundOrderData2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SwitchOrderStatusAndReason1
+ * SwitchOrderStatusAndReason1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SwitchOrder2 SwitchOrder2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SwitchOrderInstruction1
+ * SwitchOrderInstruction1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SwitchOrder3 SwitchOrder3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SwitchOrderInstruction2
+ * SwitchOrderInstruction2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SwitchOrder4 SwitchOrder4}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SwitchOrder5 SwitchOrder5}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SwitchOrder7 SwitchOrder7}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SwitchOrderStatusAndReason2
+ * SwitchOrderStatusAndReason2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.FundOrderData6 FundOrderData6}</li>
  * </ul>
  * </li>
  * <li>
@@ -97,25 +97,26 @@ import java.util.List;
  * superType} =
  * {@linkplain com.tools20022.repository.entity.InvestmentFundOrder
  * InvestmentFundOrder}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.FundOrderData2 FundOrderData2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SwitchOrderStatusAndReason1
- * SwitchOrderStatusAndReason1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SwitchOrder2 SwitchOrder2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SwitchOrderInstruction1
- * SwitchOrderInstruction1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SwitchOrder3 SwitchOrder3}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SwitchOrderInstruction2
- * SwitchOrderInstruction2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SwitchOrder4 SwitchOrder4}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SwitchOrder5 SwitchOrder5}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SwitchOrder7 SwitchOrder7}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SwitchOrderStatusAndReason2
- * SwitchOrderStatusAndReason2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.FundOrderData6 FundOrderData6}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SwitchOrder#mmAdditionalCashIn
+ * SwitchOrder.mmAdditionalCashIn}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SwitchOrder#mmResultingCashOut
+ * SwitchOrder.mmResultingCashOut}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SwitchOrder#mmTotalRedemptionAmount
+ * SwitchOrder.mmTotalRedemptionAmount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SwitchOrder#mmTotalSubscriptionAmount
+ * SwitchOrder.mmTotalSubscriptionAmount}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.SwitchOrder#mmRedemptionLeg
+ * SwitchOrder.mmRedemptionLeg}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SwitchOrder#mmSubscriptionLeg
+ * SwitchOrder.mmSubscriptionLeg}</li>
  * </ul>
  * </li>
  * <li>
@@ -204,13 +205,11 @@ public class SwitchOrder extends InvestmentFundOrder {
 	 */
 	public static final MMBusinessAttribute mmAdditionalCashIn = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FundOrderData2.mmAdditionalCashIn, com.tools20022.repository.msg.SwitchOrder2.mmAdditionalCashIn,
-					com.tools20022.repository.msg.SwitchOrder3.mmAdditionalCashIn, com.tools20022.repository.msg.SwitchExecution3.mmAdditionalCashIn, com.tools20022.repository.msg.SwitchExecution4.mmAdditionalCashIn,
-					com.tools20022.repository.msg.SwitchOrder4.mmAdditionalCashIn, com.tools20022.repository.msg.SwitchExecution7.mmAdditionalAmount, com.tools20022.repository.msg.SwitchOrder7.mmAdditionalAmount,
-					com.tools20022.repository.choice.AdditionalAmount1Choice.mmAdditionalCashIn, com.tools20022.repository.msg.FundOrderData6.mmAdditionalAmount);
+			derivation_lazy = () -> Arrays.asList(FundOrderData2.mmAdditionalCashIn, SwitchOrder2.mmAdditionalCashIn, SwitchOrder3.mmAdditionalCashIn, SwitchExecution3.mmAdditionalCashIn, SwitchExecution4.mmAdditionalCashIn,
+					SwitchOrder4.mmAdditionalCashIn, SwitchExecution7.mmAdditionalAmount, SwitchOrder7.mmAdditionalAmount, AdditionalAmount1Choice.mmAdditionalCashIn, FundOrderData6.mmAdditionalAmount);
 			elementContext_lazy = () -> SwitchOrder.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AdditionalCashIn";
 			definition = "Additional amount of money paid by the investor in addition to the switch redemption amount.";
 			maxOccurs = 1;
@@ -275,12 +274,11 @@ public class SwitchOrder extends InvestmentFundOrder {
 	 */
 	public static final MMBusinessAttribute mmResultingCashOut = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FundOrderData2.mmResultingCashOut, com.tools20022.repository.msg.SwitchOrder2.mmResultingCashOut,
-					com.tools20022.repository.msg.SwitchOrder3.mmResultingCashOut, com.tools20022.repository.msg.SwitchExecution3.mmResultingCashOut, com.tools20022.repository.msg.SwitchExecution4.mmResultingCashOut,
-					com.tools20022.repository.msg.SwitchOrder4.mmResultingCashOut, com.tools20022.repository.choice.AdditionalAmount1Choice.mmResultingCashOut);
+			derivation_lazy = () -> Arrays.asList(FundOrderData2.mmResultingCashOut, SwitchOrder2.mmResultingCashOut, SwitchOrder3.mmResultingCashOut, SwitchExecution3.mmResultingCashOut, SwitchExecution4.mmResultingCashOut,
+					SwitchOrder4.mmResultingCashOut, AdditionalAmount1Choice.mmResultingCashOut);
 			elementContext_lazy = () -> SwitchOrder.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ResultingCashOut";
 			definition = "Amount of money that results from a switch-out, that is not reinvested in another investment fund, and is repaid to the investor.";
 			maxOccurs = 1;
@@ -342,12 +340,11 @@ public class SwitchOrder extends InvestmentFundOrder {
 	 */
 	public static final MMBusinessAttribute mmTotalRedemptionAmount = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FundOrderData2.mmTotalRedemptionAmount, com.tools20022.repository.msg.SwitchOrder2.mmTotalRedemptionAmount,
-					com.tools20022.repository.msg.SwitchOrder3.mmTotalRedemptionAmount, com.tools20022.repository.msg.SwitchExecution3.mmTotalRedemptionAmount, com.tools20022.repository.msg.SwitchExecution4.mmTotalRedemptionAmount,
-					com.tools20022.repository.msg.SwitchOrder4.mmTotalRedemptionAmount);
+			derivation_lazy = () -> Arrays.asList(FundOrderData2.mmTotalRedemptionAmount, SwitchOrder2.mmTotalRedemptionAmount, SwitchOrder3.mmTotalRedemptionAmount, SwitchExecution3.mmTotalRedemptionAmount,
+					SwitchExecution4.mmTotalRedemptionAmount, SwitchOrder4.mmTotalRedemptionAmount);
 			elementContext_lazy = () -> SwitchOrder.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TotalRedemptionAmount";
 			definition = "Amount of money used to derive the quantity of investment fund units to be redeemed.";
 			maxOccurs = 1;
@@ -409,12 +406,11 @@ public class SwitchOrder extends InvestmentFundOrder {
 	 */
 	public static final MMBusinessAttribute mmTotalSubscriptionAmount = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FundOrderData2.mmTotalSubscriptionAmount, com.tools20022.repository.msg.SwitchOrder2.mmTotalSubscriptionAmount,
-					com.tools20022.repository.msg.SwitchOrder3.mmTotalSubscriptionAmount, com.tools20022.repository.msg.SwitchExecution3.mmTotalSubscriptionAmount, com.tools20022.repository.msg.SwitchExecution4.mmTotalSubscriptionAmount,
-					com.tools20022.repository.msg.SwitchOrder4.mmTotalSubscriptionAmount);
+			derivation_lazy = () -> Arrays.asList(FundOrderData2.mmTotalSubscriptionAmount, SwitchOrder2.mmTotalSubscriptionAmount, SwitchOrder3.mmTotalSubscriptionAmount, SwitchExecution3.mmTotalSubscriptionAmount,
+					SwitchExecution4.mmTotalSubscriptionAmount, SwitchOrder4.mmTotalSubscriptionAmount);
 			elementContext_lazy = () -> SwitchOrder.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TotalSubscriptionAmount";
 			definition = "Amount of money used to derive the quantity of investment fund units to be subscribed.";
 			maxOccurs = 1;
@@ -478,16 +474,15 @@ public class SwitchOrder extends InvestmentFundOrder {
 	 */
 	public static final MMBusinessAssociationEnd mmRedemptionLeg = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SwitchOrder2.mmRedemptionLegDetails, com.tools20022.repository.msg.SwitchOrder3.mmRedemptionLegDetails,
-					com.tools20022.repository.msg.SwitchOrder4.mmRedemptionLegDetails, com.tools20022.repository.msg.SwitchOrder5.mmRedemptionLeg, com.tools20022.repository.msg.SwitchOrder7.mmRedemptionLegDetails);
+			derivation_lazy = () -> Arrays.asList(SwitchOrder2.mmRedemptionLegDetails, SwitchOrder3.mmRedemptionLegDetails, SwitchOrder4.mmRedemptionLegDetails, SwitchOrder5.mmRedemptionLeg, SwitchOrder7.mmRedemptionLegDetails);
 			elementContext_lazy = () -> SwitchOrder.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RedemptionLeg";
 			definition = "Part of an investment fund switch order that is a redemption.";
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.SwitchRedemptionLeg.mmRedemptionRelatedSwitchOrder;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SwitchRedemptionLeg.mmObject();
 		}
 	};
@@ -548,16 +543,15 @@ public class SwitchOrder extends InvestmentFundOrder {
 	 */
 	public static final MMBusinessAssociationEnd mmSubscriptionLeg = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SwitchOrder2.mmSubscriptionLegDetails, com.tools20022.repository.msg.SwitchOrder3.mmSubscriptionLegDetails,
-					com.tools20022.repository.msg.SwitchOrder4.mmSubscriptionLegDetails, com.tools20022.repository.msg.SwitchOrder5.mmSubscriptionLeg, com.tools20022.repository.msg.SwitchOrder7.mmSubscriptionLegDetails);
+			derivation_lazy = () -> Arrays.asList(SwitchOrder2.mmSubscriptionLegDetails, SwitchOrder3.mmSubscriptionLegDetails, SwitchOrder4.mmSubscriptionLegDetails, SwitchOrder5.mmSubscriptionLeg, SwitchOrder7.mmSubscriptionLegDetails);
 			elementContext_lazy = () -> SwitchOrder.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SubscriptionLeg";
 			definition = "Part of an investment fund switch order that is a subscription.";
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.SwitchSubscriptionLeg.mmSubscriptionRelatedSwitchOrder;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SwitchSubscriptionLeg.mmObject();
 		}
 	};
@@ -565,18 +559,16 @@ public class SwitchOrder extends InvestmentFundOrder {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SwitchOrder";
 				definition = "Transfer from one investment fund/fund class to another investment fund or investment fund class by the investor. A switch is composed of one or several subscription legs, and one or several redemption legs.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SwitchRedemptionLeg.mmRedemptionRelatedSwitchOrder, com.tools20022.repository.entity.SwitchSubscriptionLeg.mmSubscriptionRelatedSwitchOrder);
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SwitchOrderStatusAndReason1.mmOrderData, com.tools20022.repository.msg.SwitchOrderInstruction1.mmSwitchOrderDetails,
-						com.tools20022.repository.msg.SwitchOrderInstruction2.mmSwitchOrderDetails, com.tools20022.repository.choice.SubscriptionOrRedemptionOrSwitchOrderDataChoice.mmSwitchDetails,
-						com.tools20022.repository.msg.SwitchOrderStatusAndReason2.mmOrderData);
+				derivationElement_lazy = () -> Arrays.asList(SwitchOrderStatusAndReason1.mmOrderData, SwitchOrderInstruction1.mmSwitchOrderDetails, SwitchOrderInstruction2.mmSwitchOrderDetails,
+						SubscriptionOrRedemptionOrSwitchOrderDataChoice.mmSwitchDetails, SwitchOrderStatusAndReason2.mmOrderData);
 				superType_lazy = () -> InvestmentFundOrder.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SwitchOrder.mmAdditionalCashIn, com.tools20022.repository.entity.SwitchOrder.mmResultingCashOut,
-						com.tools20022.repository.entity.SwitchOrder.mmTotalRedemptionAmount, com.tools20022.repository.entity.SwitchOrder.mmTotalSubscriptionAmount, com.tools20022.repository.entity.SwitchOrder.mmRedemptionLeg,
-						com.tools20022.repository.entity.SwitchOrder.mmSubscriptionLeg);
+				element_lazy = () -> Arrays.asList(SwitchOrder.mmAdditionalCashIn, SwitchOrder.mmResultingCashOut, SwitchOrder.mmTotalRedemptionAmount, SwitchOrder.mmTotalSubscriptionAmount, SwitchOrder.mmRedemptionLeg,
+						SwitchOrder.mmSubscriptionLeg);
 				derivationComponent_lazy = () -> Arrays.asList(FundOrderData2.mmObject(), SwitchOrderStatusAndReason1.mmObject(), SwitchOrder2.mmObject(), SwitchOrderInstruction1.mmObject(), SwitchOrder3.mmObject(),
 						SwitchOrderInstruction2.mmObject(), SwitchOrder4.mmObject(), SwitchOrder5.mmObject(), SwitchOrder7.mmObject(), SwitchOrderStatusAndReason2.mmObject(), FundOrderData6.mmObject());
 			}

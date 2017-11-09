@@ -17,13 +17,12 @@
 
 package com.tools20022.repository.msg;
 
-import com.tools20022.metamodel.MMMessageAssociationEnd;
-import com.tools20022.metamodel.MMMessageAttribute;
-import com.tools20022.metamodel.MMMessageComponent;
-import com.tools20022.metamodel.MMXor;
+import com.tools20022.metamodel.*;
 import com.tools20022.repository.codeset.CancelledStatusReason1Code;
 import com.tools20022.repository.datatype.Extended350Code;
 import com.tools20022.repository.entity.SecuritiesTradeStatusReason;
+import com.tools20022.repository.entity.StatusReason;
+import com.tools20022.repository.GeneratedRepository;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -117,11 +116,11 @@ public class TransferCancellationCompleteStatusAndReason1 {
 	 */
 	public static final MMMessageAttribute mmReason = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmCancellationReason;
+			businessElementTrace_lazy = () -> StatusReason.mmCancellationReason;
 			componentContext_lazy = () -> TransferCancellationCompleteStatusAndReason1.mmObject();
 			isDerived = false;
 			xmlTag = "Rsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reason";
 			definition = "Reason for the transfer cancellation complete status.";
 			maxOccurs = 1;
@@ -163,7 +162,7 @@ public class TransferCancellationCompleteStatusAndReason1 {
 			componentContext_lazy = () -> TransferCancellationCompleteStatusAndReason1.mmObject();
 			isDerived = false;
 			xmlTag = "XtndedRsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExtendedReason";
 			definition = "Reason for the transfer cancellation complete status.";
 			maxOccurs = 1;
@@ -208,11 +207,11 @@ public class TransferCancellationCompleteStatusAndReason1 {
 	 */
 	public static final MMMessageAssociationEnd mmDataSourceScheme = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmDataSourceScheme;
+			businessElementTrace_lazy = () -> StatusReason.mmDataSourceScheme;
 			componentContext_lazy = () -> TransferCancellationCompleteStatusAndReason1.mmObject();
 			isDerived = false;
 			xmlTag = "DataSrcSchme";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DataSourceScheme";
 			definition = "Proprietary identification of the reason for the transfer cancellation complete status.";
 			maxOccurs = 1;
@@ -227,6 +226,10 @@ public class TransferCancellationCompleteStatusAndReason1 {
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
+	 * messageComponent} =
+	 * {@linkplain com.tools20022.repository.msg.TransferCancellationCompleteStatusAndReason1
+	 * TransferCancellationCompleteStatusAndReason1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getImpactedElements
 	 * impactedElements} =
 	 * <ul>
@@ -241,10 +244,6 @@ public class TransferCancellationCompleteStatusAndReason1 {
 	 * TransferCancellationCompleteStatusAndReason1.mmDataSourceScheme}</li>
 	 * </ul>
 	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
-	 * messageComponent} =
-	 * {@linkplain com.tools20022.repository.msg.TransferCancellationCompleteStatusAndReason1
-	 * TransferCancellationCompleteStatusAndReason1}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -260,23 +259,22 @@ public class TransferCancellationCompleteStatusAndReason1 {
 	 */
 	public static final MMXor mmReasonOrExtendedReasonOrDataSourceSchemeRule = new MMXor() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReasonOrExtendedReasonOrDataSourceSchemeRule";
 			definition = "One and only one message element in the list (Reason, ExtendedReason, DataSourceScheme,) must be present.";
 			messageComponent_lazy = () -> TransferCancellationCompleteStatusAndReason1.mmObject();
-			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransferCancellationCompleteStatusAndReason1.mmReason, com.tools20022.repository.msg.TransferCancellationCompleteStatusAndReason1.mmExtendedReason,
-					com.tools20022.repository.msg.TransferCancellationCompleteStatusAndReason1.mmDataSourceScheme);
+			impactedElements_lazy = () -> Arrays.asList(TransferCancellationCompleteStatusAndReason1.mmReason, TransferCancellationCompleteStatusAndReason1.mmExtendedReason, TransferCancellationCompleteStatusAndReason1.mmDataSourceScheme);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransferCancellationCompleteStatusAndReason1.mmReason, com.tools20022.repository.msg.TransferCancellationCompleteStatusAndReason1.mmExtendedReason,
-						com.tools20022.repository.msg.TransferCancellationCompleteStatusAndReason1.mmDataSourceScheme);
+				messageElement_lazy = () -> Arrays
+						.asList(TransferCancellationCompleteStatusAndReason1.mmReason, TransferCancellationCompleteStatusAndReason1.mmExtendedReason, TransferCancellationCompleteStatusAndReason1.mmDataSourceScheme);
 				trace_lazy = () -> SecuritiesTradeStatusReason.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
 						return DateFormat.getDateInstance(java.text.DateFormat.LONG).parse("September 9, 2016");
@@ -286,7 +284,7 @@ public class TransferCancellationCompleteStatusAndReason1 {
 				})).get();
 				name = "TransferCancellationCompleteStatusAndReason1";
 				definition = "Status of the transfer cancellation is complete.";
-				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransferCancellationCompleteStatusAndReason1.mmReasonOrExtendedReasonOrDataSourceSchemeRule);
+				xors_lazy = () -> Arrays.asList(TransferCancellationCompleteStatusAndReason1.mmReasonOrExtendedReasonOrDataSourceSchemeRule);
 			}
 		});
 		return mmObject_lazy.get();

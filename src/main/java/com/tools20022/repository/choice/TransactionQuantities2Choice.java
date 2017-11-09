@@ -20,7 +20,9 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.SecuritiesQuantity;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.OriginalAndCurrentQuantities1;
 import com.tools20022.repository.msg.ProprietaryQuantity1;
 import java.util.Arrays;
@@ -111,7 +113,7 @@ public class TransactionQuantities2Choice {
 			componentContext_lazy = () -> TransactionQuantities2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Qty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Quantity";
 			definition = "Specifies the quantity (such as securities) in the underlying transaction.";
 			maxOccurs = 1;
@@ -160,7 +162,7 @@ public class TransactionQuantities2Choice {
 			componentContext_lazy = () -> TransactionQuantities2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlAndCurFaceAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalAndCurrentFaceAmount";
 			definition = "Face amount and amortised value of security.";
 			maxOccurs = 1;
@@ -209,7 +211,7 @@ public class TransactionQuantities2Choice {
 			componentContext_lazy = () -> TransactionQuantities2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Proprietary quantities specification defined in the underlying transaction.";
 			maxOccurs = 1;
@@ -222,11 +224,10 @@ public class TransactionQuantities2Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.TransactionQuantities2Choice.mmQuantity, com.tools20022.repository.choice.TransactionQuantities2Choice.mmOriginalAndCurrentFaceAmount,
-						com.tools20022.repository.choice.TransactionQuantities2Choice.mmProprietary);
+				messageElement_lazy = () -> Arrays.asList(TransactionQuantities2Choice.mmQuantity, TransactionQuantities2Choice.mmOriginalAndCurrentFaceAmount, TransactionQuantities2Choice.mmProprietary);
 				trace_lazy = () -> SecuritiesQuantity.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TransactionQuantities2Choice";
 				definition = "Specifies the quantities (such as securities) in the underlying transaction.";
 			}

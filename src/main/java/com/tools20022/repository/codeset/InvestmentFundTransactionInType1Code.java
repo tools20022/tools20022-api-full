@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.InvestmentFundTransactionTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -95,7 +97,7 @@ public class InvestmentFundTransactionInType1Code extends InvestmentFundTransact
 	 */
 	public static final MMCode mmSubscription = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Subscription";
 			owner_lazy = () -> InvestmentFundTransactionInType1Code.mmObject();
 		}
@@ -118,7 +120,7 @@ public class InvestmentFundTransactionInType1Code extends InvestmentFundTransact
 	 */
 	public static final MMCode mmSwitchIn = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SwitchIn";
 			owner_lazy = () -> InvestmentFundTransactionInType1Code.mmObject();
 		}
@@ -141,7 +143,7 @@ public class InvestmentFundTransactionInType1Code extends InvestmentFundTransact
 	 */
 	public static final MMCode mmInSpecie = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InSpecie";
 			owner_lazy = () -> InvestmentFundTransactionInType1Code.mmObject();
 		}
@@ -164,7 +166,7 @@ public class InvestmentFundTransactionInType1Code extends InvestmentFundTransact
 	 */
 	public static final MMCode mmCrossIn = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CrossIn";
 			owner_lazy = () -> InvestmentFundTransactionInType1Code.mmObject();
 		}
@@ -187,7 +189,7 @@ public class InvestmentFundTransactionInType1Code extends InvestmentFundTransact
 	 */
 	public static final MMCode mmReinvestmentOfDividend = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReinvestmentOfDividend";
 			owner_lazy = () -> InvestmentFundTransactionInType1Code.mmObject();
 		}
@@ -196,14 +198,13 @@ public class InvestmentFundTransactionInType1Code extends InvestmentFundTransact
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("SUBS");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InvestmentFundTransactionInType1Code";
 				definition = "Specifies the type of investment fund transaction that results in a cash movement into a fund.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.InvestmentFundTransactionInType1Code.mmSubscription, com.tools20022.repository.codeset.InvestmentFundTransactionInType1Code.mmSwitchIn,
-						com.tools20022.repository.codeset.InvestmentFundTransactionInType1Code.mmInSpecie, com.tools20022.repository.codeset.InvestmentFundTransactionInType1Code.mmCrossIn,
-						com.tools20022.repository.codeset.InvestmentFundTransactionInType1Code.mmReinvestmentOfDividend);
+				code_lazy = () -> Arrays.asList(InvestmentFundTransactionInType1Code.mmSubscription, InvestmentFundTransactionInType1Code.mmSwitchIn, InvestmentFundTransactionInType1Code.mmInSpecie,
+						InvestmentFundTransactionInType1Code.mmCrossIn, InvestmentFundTransactionInType1Code.mmReinvestmentOfDividend);
 				trace_lazy = () -> InvestmentFundTransactionTypeCode.mmObject();
 			}
 		});

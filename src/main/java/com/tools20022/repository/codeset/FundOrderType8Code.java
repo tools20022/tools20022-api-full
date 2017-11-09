@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.FundOrderTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -95,7 +97,7 @@ public class FundOrderType8Code extends FundOrderTypeCode {
 	 */
 	public static final MMCode mmBedAndBreakfast = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BedAndBreakfast";
 			owner_lazy = () -> FundOrderType8Code.mmObject();
 		}
@@ -118,7 +120,7 @@ public class FundOrderType8Code extends FundOrderTypeCode {
 	 */
 	public static final MMCode mmInvestmentPlan = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestmentPlan";
 			owner_lazy = () -> FundOrderType8Code.mmObject();
 		}
@@ -141,7 +143,7 @@ public class FundOrderType8Code extends FundOrderTypeCode {
 	 */
 	public static final MMCode mmPreAdvice = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreAdvice";
 			owner_lazy = () -> FundOrderType8Code.mmObject();
 		}
@@ -164,7 +166,7 @@ public class FundOrderType8Code extends FundOrderTypeCode {
 	 */
 	public static final MMCode mmRegularSavingsPlan = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RegularSavingsPlan";
 			owner_lazy = () -> FundOrderType8Code.mmObject();
 		}
@@ -187,7 +189,7 @@ public class FundOrderType8Code extends FundOrderTypeCode {
 	 */
 	public static final MMCode mmRegularSavingsPlanUpdate = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RegularSavingsPlanUpdate";
 			owner_lazy = () -> FundOrderType8Code.mmObject();
 		}
@@ -210,7 +212,7 @@ public class FundOrderType8Code extends FundOrderTypeCode {
 	 */
 	public static final MMCode mmReinvestmentOfDividend = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReinvestmentOfDividend";
 			owner_lazy = () -> FundOrderType8Code.mmObject();
 		}
@@ -233,7 +235,7 @@ public class FundOrderType8Code extends FundOrderTypeCode {
 	 */
 	public static final MMCode mmStaffOrder = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StaffOrder";
 			owner_lazy = () -> FundOrderType8Code.mmObject();
 		}
@@ -256,7 +258,7 @@ public class FundOrderType8Code extends FundOrderTypeCode {
 	 */
 	public static final MMCode mmWithdrawal = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Withdrawal";
 			owner_lazy = () -> FundOrderType8Code.mmObject();
 		}
@@ -265,14 +267,12 @@ public class FundOrderType8Code extends FundOrderTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FundOrderType8Code";
 				definition = "Specifies the category of the investment fund order.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.FundOrderType8Code.mmBedAndBreakfast, com.tools20022.repository.codeset.FundOrderType8Code.mmInvestmentPlan,
-						com.tools20022.repository.codeset.FundOrderType8Code.mmPreAdvice, com.tools20022.repository.codeset.FundOrderType8Code.mmRegularSavingsPlan,
-						com.tools20022.repository.codeset.FundOrderType8Code.mmRegularSavingsPlanUpdate, com.tools20022.repository.codeset.FundOrderType8Code.mmReinvestmentOfDividend,
-						com.tools20022.repository.codeset.FundOrderType8Code.mmStaffOrder, com.tools20022.repository.codeset.FundOrderType8Code.mmWithdrawal);
+				code_lazy = () -> Arrays.asList(FundOrderType8Code.mmBedAndBreakfast, FundOrderType8Code.mmInvestmentPlan, FundOrderType8Code.mmPreAdvice, FundOrderType8Code.mmRegularSavingsPlan,
+						FundOrderType8Code.mmRegularSavingsPlanUpdate, FundOrderType8Code.mmReinvestmentOfDividend, FundOrderType8Code.mmStaffOrder, FundOrderType8Code.mmWithdrawal);
 				trace_lazy = () -> FundOrderTypeCode.mmObject();
 			}
 		});

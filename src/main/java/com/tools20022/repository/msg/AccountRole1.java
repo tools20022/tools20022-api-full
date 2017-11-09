@@ -20,8 +20,12 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.entity.AccountOwnerRole;
+import com.tools20022.repository.entity.Party;
+import com.tools20022.repository.entity.Role;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -99,11 +103,11 @@ public class AccountRole1 {
 	 */
 	public static final MMMessageAssociationEnd mmParty = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> AccountRole1.mmObject();
 			isDerived = false;
 			xmlTag = "Pty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Party";
 			definition = "Account owner/user identification and contact information.";
 			maxOccurs = 1;
@@ -144,11 +148,11 @@ public class AccountRole1 {
 	 */
 	public static final MMMessageAssociationEnd mmOwnerType = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Role.mmPartyRole;
+			businessElementTrace_lazy = () -> Role.mmPartyRole;
 			componentContext_lazy = () -> AccountRole1.mmObject();
 			isDerived = false;
 			xmlTag = "OwnrTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OwnerType";
 			definition = "Defines account owners/users relation to the account.";
 			maxOccurs = 1;
@@ -189,7 +193,7 @@ public class AccountRole1 {
 			componentContext_lazy = () -> AccountRole1.mmObject();
 			isDerived = false;
 			xmlTag = "StartDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StartDate";
 			definition = "Start date related to the role.";
 			maxOccurs = 1;
@@ -229,7 +233,7 @@ public class AccountRole1 {
 			componentContext_lazy = () -> AccountRole1.mmObject();
 			isDerived = false;
 			xmlTag = "EndDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EndDate";
 			definition = "End date related to the role.";
 			maxOccurs = 1;
@@ -241,11 +245,10 @@ public class AccountRole1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountRole1.mmParty, com.tools20022.repository.msg.AccountRole1.mmOwnerType, com.tools20022.repository.msg.AccountRole1.mmStartDate,
-						com.tools20022.repository.msg.AccountRole1.mmEndDate);
+				messageElement_lazy = () -> Arrays.asList(AccountRole1.mmParty, AccountRole1.mmOwnerType, AccountRole1.mmStartDate, AccountRole1.mmEndDate);
 				trace_lazy = () -> AccountOwnerRole.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AccountRole1";
 				definition = "Specifies the party and owner type.";
 			}

@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -28,6 +30,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.PersonIdentificationType3Code
+ * PersonIdentificationType3Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -69,14 +79,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.PersonIdentificationTypeV2Code#mmCorporateIdentification
  * PersonIdentificationTypeV2Code.mmCorporateIdentification}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.PersonIdentificationType3Code
- * PersonIdentificationType3Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -128,7 +130,7 @@ public class PersonIdentificationTypeV2Code {
 	 */
 	public static final MMCode mmPassportNumber = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PassportNumber";
 			definition = "Number assigned by a passport authority to a passport.";
 			owner_lazy = () -> PersonIdentificationTypeV2Code.mmObject();
@@ -159,7 +161,7 @@ public class PersonIdentificationTypeV2Code {
 	 */
 	public static final MMCode mmCPFAccountNumber = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CPFAccountNumber";
 			definition = "Account issued by the Central Provident Fund Board (Singapore).";
 			owner_lazy = () -> PersonIdentificationTypeV2Code.mmObject();
@@ -189,7 +191,7 @@ public class PersonIdentificationTypeV2Code {
 	 */
 	public static final MMCode mmSRSAccountNumber = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SRSAccountNumber";
 			definition = "Supplementary retirement scheme account number.";
 			owner_lazy = () -> PersonIdentificationTypeV2Code.mmObject();
@@ -222,7 +224,7 @@ public class PersonIdentificationTypeV2Code {
 	 */
 	public static final MMCode mmNationalRegistrationIdentificationNumber = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NationalRegistrationIdentificationNumber";
 			definition = "National registration identification number. In Singapore this is known as the NRIC.";
 			owner_lazy = () -> PersonIdentificationTypeV2Code.mmObject();
@@ -252,7 +254,7 @@ public class PersonIdentificationTypeV2Code {
 	 */
 	public static final MMCode mmOther = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Other";
 			definition = "Another type of identification type.";
 			owner_lazy = () -> PersonIdentificationTypeV2Code.mmObject();
@@ -283,7 +285,7 @@ public class PersonIdentificationTypeV2Code {
 	 */
 	public static final MMCode mmDriversLicenseNumber = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DriversLicenseNumber";
 			definition = "Number assigned by a license authority to a driver's license.";
 			owner_lazy = () -> PersonIdentificationTypeV2Code.mmObject();
@@ -313,7 +315,7 @@ public class PersonIdentificationTypeV2Code {
 	 */
 	public static final MMCode mmSocialSecurityNumber = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SocialSecurityNumber";
 			definition = "Number assigned by a social security agency.";
 			owner_lazy = () -> PersonIdentificationTypeV2Code.mmObject();
@@ -344,7 +346,7 @@ public class PersonIdentificationTypeV2Code {
 	 */
 	public static final MMCode mmAlienRegistrationNumber = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AlienRegistrationNumber";
 			definition = "Number assigned by a government agency to identify foreign nationals.";
 			owner_lazy = () -> PersonIdentificationTypeV2Code.mmObject();
@@ -375,7 +377,7 @@ public class PersonIdentificationTypeV2Code {
 	 */
 	public static final MMCode mmIdentityCardNumber = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "IdentityCardNumber";
 			definition = "Number assigned by a national authority to an identity card.";
 			owner_lazy = () -> PersonIdentificationTypeV2Code.mmObject();
@@ -406,7 +408,7 @@ public class PersonIdentificationTypeV2Code {
 	 */
 	public static final MMCode mmEmployerIdentificationNumber = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "EmployerIdentificationNumber";
 			definition = "Number assigned to an employer by a registration authority.";
 			owner_lazy = () -> PersonIdentificationTypeV2Code.mmObject();
@@ -437,7 +439,7 @@ public class PersonIdentificationTypeV2Code {
 	 */
 	public static final MMCode mmForeignInvestmentIdentityNumber = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ForeignInvestmentIdentityNumber";
 			definition = "Number assigned to a foreign investor (other than the alien number).";
 			owner_lazy = () -> PersonIdentificationTypeV2Code.mmObject();
@@ -467,7 +469,7 @@ public class PersonIdentificationTypeV2Code {
 	 */
 	public static final MMCode mmTaxIdentificationNumber = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TaxIdentificationNumber";
 			definition = "Number assigned by a tax authority to an entity.";
 			owner_lazy = () -> PersonIdentificationTypeV2Code.mmObject();
@@ -497,7 +499,7 @@ public class PersonIdentificationTypeV2Code {
 	 */
 	public static final MMCode mmCorporateIdentification = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CorporateIdentification";
 			definition = "Number assigned to a corporate entity.";
 			owner_lazy = () -> PersonIdentificationTypeV2Code.mmObject();
@@ -508,18 +510,16 @@ public class PersonIdentificationTypeV2Code {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CCPT");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PersonIdentificationTypeV2Code";
 				definition = "Specifies an alternative identification of an individual person, for example, national registration identification number, passport number.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PersonIdentificationTypeV2Code.mmPassportNumber, com.tools20022.repository.codeset.PersonIdentificationTypeV2Code.mmCPFAccountNumber,
-						com.tools20022.repository.codeset.PersonIdentificationTypeV2Code.mmSRSAccountNumber, com.tools20022.repository.codeset.PersonIdentificationTypeV2Code.mmNationalRegistrationIdentificationNumber,
-						com.tools20022.repository.codeset.PersonIdentificationTypeV2Code.mmOther, com.tools20022.repository.codeset.PersonIdentificationTypeV2Code.mmDriversLicenseNumber,
-						com.tools20022.repository.codeset.PersonIdentificationTypeV2Code.mmSocialSecurityNumber, com.tools20022.repository.codeset.PersonIdentificationTypeV2Code.mmAlienRegistrationNumber,
-						com.tools20022.repository.codeset.PersonIdentificationTypeV2Code.mmIdentityCardNumber, com.tools20022.repository.codeset.PersonIdentificationTypeV2Code.mmEmployerIdentificationNumber,
-						com.tools20022.repository.codeset.PersonIdentificationTypeV2Code.mmForeignInvestmentIdentityNumber, com.tools20022.repository.codeset.PersonIdentificationTypeV2Code.mmTaxIdentificationNumber,
-						com.tools20022.repository.codeset.PersonIdentificationTypeV2Code.mmCorporateIdentification);
+				code_lazy = () -> Arrays.asList(PersonIdentificationTypeV2Code.mmPassportNumber, PersonIdentificationTypeV2Code.mmCPFAccountNumber, PersonIdentificationTypeV2Code.mmSRSAccountNumber,
+						PersonIdentificationTypeV2Code.mmNationalRegistrationIdentificationNumber, PersonIdentificationTypeV2Code.mmOther, PersonIdentificationTypeV2Code.mmDriversLicenseNumber,
+						PersonIdentificationTypeV2Code.mmSocialSecurityNumber, PersonIdentificationTypeV2Code.mmAlienRegistrationNumber, PersonIdentificationTypeV2Code.mmIdentityCardNumber,
+						PersonIdentificationTypeV2Code.mmEmployerIdentificationNumber, PersonIdentificationTypeV2Code.mmForeignInvestmentIdentityNumber, PersonIdentificationTypeV2Code.mmTaxIdentificationNumber,
+						PersonIdentificationTypeV2Code.mmCorporateIdentification);
 				derivation_lazy = () -> Arrays.asList(PersonIdentificationType3Code.mmObject());
 			}
 		});

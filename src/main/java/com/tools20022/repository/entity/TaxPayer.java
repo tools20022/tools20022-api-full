@@ -18,7 +18,10 @@
 package com.tools20022.repository.entity;
 
 import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.TaxPartyRole;
+import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -75,12 +78,11 @@ public class TaxPayer extends TaxPartyRole {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TaxPayer";
 				definition = "Party that settles tax amounts. May be different from the tax debtor and tax creditor.";
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TaxParty1.mmTaxType, com.tools20022.repository.msg.TaxParty2.mmTaxType, com.tools20022.repository.msg.TaxParty3.mmTaxType,
-						com.tools20022.repository.msg.TaxReporting1.mmTaxPayer, com.tools20022.repository.msg.TaxReporting2.mmTaxPayer);
+				derivationElement_lazy = () -> Arrays.asList(TaxParty1.mmTaxType, TaxParty2.mmTaxType, TaxParty3.mmTaxType, TaxReporting1.mmTaxPayer, TaxReporting2.mmTaxPayer);
 				superType_lazy = () -> TaxPartyRole.mmObject();
 			}
 		});

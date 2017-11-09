@@ -19,10 +19,13 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CurrencyCode;
 import com.tools20022.repository.codeset.Side1Code;
 import com.tools20022.repository.datatype.PercentageRate;
 import com.tools20022.repository.entity.Leg;
+import com.tools20022.repository.entity.SecuritiesOrder;
+import com.tools20022.repository.GeneratedRepository;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -105,11 +108,11 @@ public class LegDetails1 {
 	 */
 	public static final MMMessageAttribute mmRatioQuantity = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Leg.mmRatioQuantity;
+			businessElementTrace_lazy = () -> Leg.mmRatioQuantity;
 			componentContext_lazy = () -> LegDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "RatioQty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RatioQuantity";
 			definition = "Only for multileg instrument - Ratio of quantity for an individual leg relative to the entire multileg security.";
 			maxOccurs = 1;
@@ -154,11 +157,11 @@ public class LegDetails1 {
 	 */
 	public static final MMMessageAttribute mmSide = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmSide;
+			businessElementTrace_lazy = () -> SecuritiesOrder.mmSide;
 			componentContext_lazy = () -> LegDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "Sd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Side";
 			definition = "Only for multileg instrument- Side of an individual leg (multileg security).";
 			maxOccurs = 1;
@@ -203,11 +206,11 @@ public class LegDetails1 {
 	 */
 	public static final MMMessageAttribute mmCurrency = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Leg.mmCurrency;
+			businessElementTrace_lazy = () -> Leg.mmCurrency;
 			componentContext_lazy = () -> LegDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "Ccy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Currency";
 			definition = "Only for multileg instrument - Currency associated with a particular Leg's quantity .";
 			maxOccurs = 1;
@@ -219,10 +222,10 @@ public class LegDetails1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LegDetails1.mmRatioQuantity, com.tools20022.repository.msg.LegDetails1.mmSide, com.tools20022.repository.msg.LegDetails1.mmCurrency);
+				messageElement_lazy = () -> Arrays.asList(LegDetails1.mmRatioQuantity, LegDetails1.mmSide, LegDetails1.mmCurrency);
 				trace_lazy = () -> Leg.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
 						return DateFormat.getDateInstance(java.text.DateFormat.LONG).parse("September 9, 2016");

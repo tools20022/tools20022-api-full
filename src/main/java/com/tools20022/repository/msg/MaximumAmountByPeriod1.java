@@ -19,9 +19,12 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
 import com.tools20022.repository.datatype.Max3NumericText;
+import com.tools20022.repository.entity.BankOperation;
 import com.tools20022.repository.entity.OperationThreshold;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -99,11 +102,11 @@ public class MaximumAmountByPeriod1 {
 	 */
 	public static final MMMessageAttribute mmMaximumAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OperationThreshold.mmMaximumAmount;
+			businessElementTrace_lazy = () -> OperationThreshold.mmMaximumAmount;
 			componentContext_lazy = () -> MaximumAmountByPeriod1.mmObject();
 			isDerived = false;
 			xmlTag = "MaxAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaximumAmount";
 			definition = "Maximum amount allowed over a specific period of time.";
 			maxOccurs = 1;
@@ -147,11 +150,11 @@ public class MaximumAmountByPeriod1 {
 	 */
 	public static final MMMessageAttribute mmNumberOfDays = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BankOperation.mmApplicablePeriod;
+			businessElementTrace_lazy = () -> BankOperation.mmApplicablePeriod;
 			componentContext_lazy = () -> MaximumAmountByPeriod1.mmObject();
 			isDerived = false;
 			xmlTag = "NbOfDays";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NumberOfDays";
 			definition = "Period specified as a number of days.";
 			maxOccurs = 1;
@@ -163,10 +166,10 @@ public class MaximumAmountByPeriod1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MaximumAmountByPeriod1.mmMaximumAmount, com.tools20022.repository.msg.MaximumAmountByPeriod1.mmNumberOfDays);
+				messageElement_lazy = () -> Arrays.asList(MaximumAmountByPeriod1.mmMaximumAmount, MaximumAmountByPeriod1.mmNumberOfDays);
 				trace_lazy = () -> OperationThreshold.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MaximumAmountByPeriod1";
 				definition = "Maximum amount allowed over a specific period of time.";
 			}

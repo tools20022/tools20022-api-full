@@ -20,6 +20,7 @@ package com.tools20022.repository.area.head;
 import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.BusinessApplicationHeaderLatestVersion;
 import com.tools20022.repository.choice.Party9Choice;
 import com.tools20022.repository.codeset.BusinessMessagePriorityCode;
@@ -62,6 +63,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code head.001.001.01}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.BusinessApplicationHeaderLatestVersion
@@ -113,9 +117,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code head.001.001.01}</li>
- * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -160,7 +161,7 @@ public class BusinessApplicationHeaderV01 {
 	public static final MMMessageBuildingBlock mmCharacterSet = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CharSet";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CharacterSet";
 			definition = "Contains the character set of the text-based elements used in the Business Message.";
 			maxOccurs = 1;
@@ -201,7 +202,7 @@ public class BusinessApplicationHeaderV01 {
 	public static final MMMessageBuildingBlock mmFrom = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Fr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "From";
 			definition = "The sending MessagingEndpoint that has created this Business Message for the receiving MessagingEndpoint that will process this Business Message.\r\n\r\nNote\tthe sending MessagingEndpoint might be different from the sending address potentially contained in the transport header (as defined in the transport layer).";
 			maxOccurs = 1;
@@ -242,7 +243,7 @@ public class BusinessApplicationHeaderV01 {
 	public static final MMMessageBuildingBlock mmTo = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "To";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "To";
 			definition = "The MessagingEndpoint designated by the sending MessagingEndpoint to be the recipient who will ultimately process this Business Message.\r\n\r\nNote the receiving MessagingEndpoint might be different from the receiving address potentially contained in the transport header (as defined in the transport layer).";
 			maxOccurs = 1;
@@ -279,7 +280,7 @@ public class BusinessApplicationHeaderV01 {
 	public static final MMMessageBuildingBlock mmBusinessMessageIdentifier = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "BizMsgIdr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BusinessMessageIdentifier";
 			definition = "Unambiguously identifies the Business Message to the MessagingEndpoint that has created the Business Message.";
 			maxOccurs = 1;
@@ -318,7 +319,7 @@ public class BusinessApplicationHeaderV01 {
 	public static final MMMessageBuildingBlock mmMessageDefinitionIdentifier = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "MsgDefIdr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageDefinitionIdentifier";
 			definition = "Contains the MessageIdentifier that defines the BusinessMessage.\r\nIt must contain a MessageIdentifier published on the ISO 20022 website.\r\n\r\nexample\tcamt.001.001.03";
 			maxOccurs = 1;
@@ -358,7 +359,7 @@ public class BusinessApplicationHeaderV01 {
 	public static final MMMessageBuildingBlock mmBusinessService = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "BizSvc";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BusinessService";
 			definition = "Specifies the business service agreed between the two MessagingEndpoints under which rules this Business Message is exchanged.\r\n To be used when there is a choice of processing services or processing service levels.\r\nExample: E&I";
 			maxOccurs = 1;
@@ -396,7 +397,7 @@ public class BusinessApplicationHeaderV01 {
 	public static final MMMessageBuildingBlock mmCreationDate = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CreDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreationDate";
 			definition = "Date and time when this Business Message (header) was created.\r\nNote    Times must be normalized, using the \"Z\" annotation.";
 			maxOccurs = 1;
@@ -434,7 +435,7 @@ public class BusinessApplicationHeaderV01 {
 	public static final MMMessageBuildingBlock mmCopyDuplicate = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CpyDplct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CopyDuplicate";
 			definition = "Indicates whether the message is a Copy, a Duplicate or a copy of a duplicate of a previously sent ISO 20022 Message.";
 			maxOccurs = 1;
@@ -483,7 +484,7 @@ public class BusinessApplicationHeaderV01 {
 	public static final MMMessageBuildingBlock mmPossibleDuplicate = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "PssblDplct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PossibleDuplicate";
 			definition = "Flag indicating if the Business Message exchanged between the MessagingEndpoints is possibly a duplicate. \r\nIf the receiving MessagingEndpoint  did not receive the original, then this Business Message should be processed as if it were the original. \r\n\r\nIf the receiving MessagingEndpoint did receive the original, then it should perform necessary actions to avoid processing this Business Message again.\r\n\r\nThis will guarantee business idempotent behaviour.\r\n\r\nNOTE: this is named \"PossResend\" in FIX - this is an application level resend not a network level retransmission";
 			maxOccurs = 1;
@@ -521,7 +522,7 @@ public class BusinessApplicationHeaderV01 {
 	public static final MMMessageBuildingBlock mmPriority = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Prty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Priority";
 			definition = "Relative indication of the processing precedence of the message over a (set of) Business Messages with assigned priorities.";
 			maxOccurs = 1;
@@ -559,7 +560,7 @@ public class BusinessApplicationHeaderV01 {
 	public static final MMMessageBuildingBlock mmSignature = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Sgntr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Signature";
 			definition = "Contains the digital signature of the Business Entity authorised to sign this Business Message.";
 			maxOccurs = 1;
@@ -599,7 +600,7 @@ public class BusinessApplicationHeaderV01 {
 	public static final MMMessageBuildingBlock mmRelated = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Rltd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Related";
 			definition = "Specifies the Business Application Header of the Business Message to which this Business Message relates.\r\nCan be used when replying to a query;  can also be used when canceling or amending.";
 			maxOccurs = 1;
@@ -611,18 +612,15 @@ public class BusinessApplicationHeaderV01 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "BusinessApplicationHeaderV01";
 				definition = "The Business Layer deals with Business Messages. The behaviour of the Business Messages is fully described by the Business Transaction and the structure of the Business Messages is fully described by the Message Definitions and related Message Rules, Rules and Market Practices. All of which are registered in the ISO 20022 Repository.\r\nA single new Business Message (with its accompagnying business application header) is created - by the sending MessagingEndpoint - for each business event; that is each interaction in a Business Transaction. A Business Message adheres to the following principles:\r\n\" A Business Message (and its business application header) must not contain information about the Message Transport System or the mechanics or mechanism of message sending, transportation, or receipt. \r\n\" A Business Message must be comprehensible outside of the context of the Transport Message. That is the Business Message must not require knowledge of the Transport Message to be understood.\r\n\" A Business Message may contain headers, footers, and envelopes that are meaningful for the business. When present, they are treated as any other message content, which means that they are considered part of the Message Definition of the Business Message and as such will be part of the ISO 20022 Repository.\r\n\" A Business Message refers to Business Actors by their Name. Each instance of a Business Actor has one Name. The Business Actor must not be referred to in the Transport Layer.\r\nSpecific usage of this BusinessMessageHeader may be defined by the relevant SEG.";
 				rootElement = "Document";
 				xmlTag = "AppHdr";
 				businessArea_lazy = () -> BusinessApplicationHeaderLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.head.BusinessApplicationHeaderV01.mmCharacterSet, com.tools20022.repository.area.head.BusinessApplicationHeaderV01.mmFrom,
-						com.tools20022.repository.area.head.BusinessApplicationHeaderV01.mmTo, com.tools20022.repository.area.head.BusinessApplicationHeaderV01.mmBusinessMessageIdentifier,
-						com.tools20022.repository.area.head.BusinessApplicationHeaderV01.mmMessageDefinitionIdentifier, com.tools20022.repository.area.head.BusinessApplicationHeaderV01.mmBusinessService,
-						com.tools20022.repository.area.head.BusinessApplicationHeaderV01.mmCreationDate, com.tools20022.repository.area.head.BusinessApplicationHeaderV01.mmCopyDuplicate,
-						com.tools20022.repository.area.head.BusinessApplicationHeaderV01.mmPossibleDuplicate, com.tools20022.repository.area.head.BusinessApplicationHeaderV01.mmPriority,
-						com.tools20022.repository.area.head.BusinessApplicationHeaderV01.mmSignature, com.tools20022.repository.area.head.BusinessApplicationHeaderV01.mmRelated);
+				messageBuildingBlock_lazy = () -> Arrays.asList(BusinessApplicationHeaderV01.mmCharacterSet, BusinessApplicationHeaderV01.mmFrom, BusinessApplicationHeaderV01.mmTo, BusinessApplicationHeaderV01.mmBusinessMessageIdentifier,
+						BusinessApplicationHeaderV01.mmMessageDefinitionIdentifier, BusinessApplicationHeaderV01.mmBusinessService, BusinessApplicationHeaderV01.mmCreationDate, BusinessApplicationHeaderV01.mmCopyDuplicate,
+						BusinessApplicationHeaderV01.mmPossibleDuplicate, BusinessApplicationHeaderV01.mmPriority, BusinessApplicationHeaderV01.mmSignature, BusinessApplicationHeaderV01.mmRelated);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "head";

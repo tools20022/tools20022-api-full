@@ -20,9 +20,9 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
-import com.tools20022.repository.entity.BeneficialOwner;
-import com.tools20022.repository.entity.SecuritiesAccount;
-import com.tools20022.repository.entity.SecuritiesBalance;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -128,14 +128,14 @@ public class AccountSubLevel15 {
 	 */
 	public static final MMMessageAssociationEnd mmAccountIdentification = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.mmIdentification;
+			businessElementTrace_lazy = () -> Account.mmIdentification;
 			componentContext_lazy = () -> AccountSubLevel15.mmObject();
 			isDerived = false;
 			xmlTag = "AcctId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountIdentification";
 			definition = "Unique and unambiguous identification for the sub-account between the account owner and the account servicer.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AccountSubLevel5.mmAccountIdentification;
+			previousVersion_lazy = () -> AccountSubLevel5.mmAccountIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -183,14 +183,14 @@ public class AccountSubLevel15 {
 	 */
 	public static final MMMessageAttribute mmAccountOwner = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> AccountSubLevel15.mmObject();
 			isDerived = false;
 			xmlTag = "AcctOwnr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountOwner";
 			definition = "Party that legally owns the sub-account.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AccountSubLevel5.mmAccountOwner;
+			previousVersion_lazy = () -> AccountSubLevel5.mmAccountOwner;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> com.tools20022.repository.msg.PartyIdentification100.mmObject();
@@ -242,14 +242,14 @@ public class AccountSubLevel15 {
 	 */
 	public static final MMMessageAttribute mmAccountServicer = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> AccountSubLevel15.mmObject();
 			isDerived = false;
 			xmlTag = "AcctSvcr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountServicer";
 			definition = "Party that manages the sub-level account on behalf of the account owner, that is manages the registration and booking of entries on the account, calculates balances on the account and provides information about the account.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AccountSubLevel5.mmAccountServicer;
+			previousVersion_lazy = () -> AccountSubLevel5.mmAccountServicer;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> com.tools20022.repository.msg.PartyIdentification100.mmObject();
@@ -302,10 +302,10 @@ public class AccountSubLevel15 {
 			componentContext_lazy = () -> AccountSubLevel15.mmObject();
 			isDerived = false;
 			xmlTag = "BnfclOwnr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BeneficialOwner";
 			definition = "Individual or entity that is ultimately entitled to the benefit of income and rights in a financial instrument, as opposed to a nominal or legal owner.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AccountSubLevel5.mmBeneficialOwner;
+			previousVersion_lazy = () -> AccountSubLevel5.mmBeneficialOwner;
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.BeneficialOwner2.mmObject();
@@ -354,7 +354,7 @@ public class AccountSubLevel15 {
 			componentContext_lazy = () -> AccountSubLevel15.mmObject();
 			isDerived = false;
 			xmlTag = "BalDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BalanceDetails";
 			definition = "Report on the net position of a financial instrument on the sub-account (sub-account level 5),  for a certain date. The agent, for example, a trade intermediary, may also be specified.";
 			minOccurs = 0;
@@ -405,10 +405,10 @@ public class AccountSubLevel15 {
 			componentContext_lazy = () -> AccountSubLevel15.mmObject();
 			isDerived = false;
 			xmlTag = "AcctSubLvl6";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountSubLevel6";
 			definition = "Holdings of level 5.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AccountSubLevel5.mmAccountSubLevel6;
+			previousVersion_lazy = () -> AccountSubLevel5.mmAccountSubLevel6;
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.AccountSubLevel16.mmObject();
@@ -461,10 +461,10 @@ public class AccountSubLevel15 {
 			componentContext_lazy = () -> AccountSubLevel15.mmObject();
 			isDerived = false;
 			xmlTag = "AcctSubLvl6Diff";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountSubLevel6Difference";
 			definition = "Difference in holdings between the safekeeping account and the sub-accounts of level 6.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AccountSubLevel5.mmAccountSubLevel6Difference;
+			previousVersion_lazy = () -> AccountSubLevel5.mmAccountSubLevel6Difference;
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.AggregateHoldingBalance2.mmObject();
@@ -510,10 +510,10 @@ public class AccountSubLevel15 {
 			componentContext_lazy = () -> AccountSubLevel15.mmObject();
 			isDerived = false;
 			xmlTag = "SplmtryData";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryData";
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AccountSubLevel5.mmSupplementaryData;
+			previousVersion_lazy = () -> AccountSubLevel5.mmSupplementaryData;
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.SupplementaryData1.mmObject();
@@ -523,12 +523,11 @@ public class AccountSubLevel15 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountSubLevel15.mmAccountIdentification, com.tools20022.repository.msg.AccountSubLevel15.mmAccountOwner,
-						com.tools20022.repository.msg.AccountSubLevel15.mmAccountServicer, com.tools20022.repository.msg.AccountSubLevel15.mmBeneficialOwner, com.tools20022.repository.msg.AccountSubLevel15.mmBalanceDetails,
-						com.tools20022.repository.msg.AccountSubLevel15.mmAccountSubLevel6, com.tools20022.repository.msg.AccountSubLevel15.mmAccountSubLevel6Difference, com.tools20022.repository.msg.AccountSubLevel15.mmSupplementaryData);
+				messageElement_lazy = () -> Arrays.asList(AccountSubLevel15.mmAccountIdentification, AccountSubLevel15.mmAccountOwner, AccountSubLevel15.mmAccountServicer, AccountSubLevel15.mmBeneficialOwner,
+						AccountSubLevel15.mmBalanceDetails, AccountSubLevel15.mmAccountSubLevel6, AccountSubLevel15.mmAccountSubLevel6Difference, AccountSubLevel15.mmSupplementaryData);
 				trace_lazy = () -> SecuritiesAccount.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AccountSubLevel15";
 				definition = "Account and holding of the next sub-level (Level 5).";
 				previousVersion_lazy = () -> AccountSubLevel5.mmObject();

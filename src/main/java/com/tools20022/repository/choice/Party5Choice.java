@@ -19,9 +19,11 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.OrganisationIdentification;
 import com.tools20022.repository.entity.PartyIdentificationInformation;
 import com.tools20022.repository.entity.PersonIdentification;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.OrganisationIdentification2;
 import com.tools20022.repository.msg.PersonIdentification3;
 import java.util.Arrays;
@@ -108,7 +110,7 @@ public class Party5Choice {
 			componentContext_lazy = () -> Party5Choice.mmObject();
 			isDerived = false;
 			xmlTag = "OrgId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrganisationIdentification";
 			definition = "Unique and unambiguous way of identifying an organisation.";
 			maxOccurs = 1;
@@ -155,7 +157,7 @@ public class Party5Choice {
 			componentContext_lazy = () -> Party5Choice.mmObject();
 			isDerived = false;
 			xmlTag = "PrvtId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PrivateIdentification";
 			definition = "Unique and unambiguous identification of a person, eg, passport.";
 			maxOccurs = 1;
@@ -168,10 +170,10 @@ public class Party5Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Party5Choice.mmOrganisationIdentification, com.tools20022.repository.choice.Party5Choice.mmPrivateIdentification);
+				messageElement_lazy = () -> Arrays.asList(Party5Choice.mmOrganisationIdentification, Party5Choice.mmPrivateIdentification);
 				trace_lazy = () -> PartyIdentificationInformation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Party5Choice";
 				definition = "Choice between the identification of a person and the identification of a non-financial institution.";
 			}

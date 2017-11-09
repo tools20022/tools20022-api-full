@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.PaymentStatusCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -104,7 +106,7 @@ public class TransactionGroupStatus3Code extends PaymentStatusCode {
 	 */
 	public static final MMCode mmAcceptedTechnicalValidation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcceptedTechnicalValidation";
 			owner_lazy = () -> TransactionGroupStatus3Code.mmObject();
 		}
@@ -127,7 +129,7 @@ public class TransactionGroupStatus3Code extends PaymentStatusCode {
 	 */
 	public static final MMCode mmReceived = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Received";
 			owner_lazy = () -> TransactionGroupStatus3Code.mmObject();
 		}
@@ -150,7 +152,7 @@ public class TransactionGroupStatus3Code extends PaymentStatusCode {
 	 */
 	public static final MMCode mmPartiallyAccepted = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartiallyAccepted";
 			owner_lazy = () -> TransactionGroupStatus3Code.mmObject();
 		}
@@ -173,7 +175,7 @@ public class TransactionGroupStatus3Code extends PaymentStatusCode {
 	 */
 	public static final MMCode mmRejected = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rejected";
 			owner_lazy = () -> TransactionGroupStatus3Code.mmObject();
 		}
@@ -196,7 +198,7 @@ public class TransactionGroupStatus3Code extends PaymentStatusCode {
 	 */
 	public static final MMCode mmPending = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Pending";
 			owner_lazy = () -> TransactionGroupStatus3Code.mmObject();
 		}
@@ -219,7 +221,7 @@ public class TransactionGroupStatus3Code extends PaymentStatusCode {
 	 */
 	public static final MMCode mmAcceptedCustomerProfile = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcceptedCustomerProfile";
 			owner_lazy = () -> TransactionGroupStatus3Code.mmObject();
 		}
@@ -242,7 +244,7 @@ public class TransactionGroupStatus3Code extends PaymentStatusCode {
 	 */
 	public static final MMCode mmAcceptedSettlementInProcess = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcceptedSettlementInProcess";
 			owner_lazy = () -> TransactionGroupStatus3Code.mmObject();
 		}
@@ -265,7 +267,7 @@ public class TransactionGroupStatus3Code extends PaymentStatusCode {
 	 */
 	public static final MMCode mmAcceptedSettlementCompleted = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcceptedSettlementCompleted";
 			owner_lazy = () -> TransactionGroupStatus3Code.mmObject();
 		}
@@ -288,7 +290,7 @@ public class TransactionGroupStatus3Code extends PaymentStatusCode {
 	 */
 	public static final MMCode mmAcceptedWithChange = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcceptedWithChange";
 			owner_lazy = () -> TransactionGroupStatus3Code.mmObject();
 		}
@@ -297,16 +299,14 @@ public class TransactionGroupStatus3Code extends PaymentStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ACTC");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TransactionGroupStatus3Code";
 				definition = "Specifies the status of a group of payment instructions.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TransactionGroupStatus3Code.mmAcceptedTechnicalValidation, com.tools20022.repository.codeset.TransactionGroupStatus3Code.mmReceived,
-						com.tools20022.repository.codeset.TransactionGroupStatus3Code.mmPartiallyAccepted, com.tools20022.repository.codeset.TransactionGroupStatus3Code.mmRejected,
-						com.tools20022.repository.codeset.TransactionGroupStatus3Code.mmPending, com.tools20022.repository.codeset.TransactionGroupStatus3Code.mmAcceptedCustomerProfile,
-						com.tools20022.repository.codeset.TransactionGroupStatus3Code.mmAcceptedSettlementInProcess, com.tools20022.repository.codeset.TransactionGroupStatus3Code.mmAcceptedSettlementCompleted,
-						com.tools20022.repository.codeset.TransactionGroupStatus3Code.mmAcceptedWithChange);
+				code_lazy = () -> Arrays.asList(TransactionGroupStatus3Code.mmAcceptedTechnicalValidation, TransactionGroupStatus3Code.mmReceived, TransactionGroupStatus3Code.mmPartiallyAccepted, TransactionGroupStatus3Code.mmRejected,
+						TransactionGroupStatus3Code.mmPending, TransactionGroupStatus3Code.mmAcceptedCustomerProfile, TransactionGroupStatus3Code.mmAcceptedSettlementInProcess, TransactionGroupStatus3Code.mmAcceptedSettlementCompleted,
+						TransactionGroupStatus3Code.mmAcceptedWithChange);
 				trace_lazy = () -> PaymentStatusCode.mmObject();
 			}
 		});

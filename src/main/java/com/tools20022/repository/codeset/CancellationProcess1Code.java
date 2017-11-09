@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CancellationProcessCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -89,7 +91,7 @@ public class CancellationProcess1Code extends CancellationProcessCode {
 	 */
 	public static final MMCode mmAdvice = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Advice";
 			owner_lazy = () -> CancellationProcess1Code.mmObject();
 		}
@@ -112,7 +114,7 @@ public class CancellationProcess1Code extends CancellationProcessCode {
 	 */
 	public static final MMCode mmNotAllowed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotAllowed";
 			owner_lazy = () -> CancellationProcess1Code.mmObject();
 		}
@@ -135,7 +137,7 @@ public class CancellationProcess1Code extends CancellationProcessCode {
 	 */
 	public static final MMCode mmRequest = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Request";
 			owner_lazy = () -> CancellationProcess1Code.mmObject();
 		}
@@ -144,13 +146,12 @@ public class CancellationProcess1Code extends CancellationProcessCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ADVC");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CancellationProcess1Code";
 				definition = "Configuration of the exchanges to perform the cancellation of a payment transaction.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CancellationProcess1Code.mmAdvice, com.tools20022.repository.codeset.CancellationProcess1Code.mmNotAllowed,
-						com.tools20022.repository.codeset.CancellationProcess1Code.mmRequest);
+				code_lazy = () -> Arrays.asList(CancellationProcess1Code.mmAdvice, CancellationProcess1Code.mmNotAllowed, CancellationProcess1Code.mmRequest);
 				trace_lazy = () -> CancellationProcessCode.mmObject();
 			}
 		});

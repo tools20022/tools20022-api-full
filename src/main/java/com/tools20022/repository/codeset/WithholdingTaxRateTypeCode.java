@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.WithholdingTaxRateType1Code
+ * WithholdingTaxRateType1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -38,14 +48,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.WithholdingTaxRateTypeCode#mmBackUpWithholding
  * WithholdingTaxRateTypeCode.mmBackUpWithholding}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.WithholdingTaxRateType1Code
- * WithholdingTaxRateType1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -92,7 +94,7 @@ public class WithholdingTaxRateTypeCode {
 	 */
 	public static final MMCode mmFATCATax = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FATCATax";
 			definition = "Withholding tax related to income subject to FATCA (Foreign Account Tax Compliance Act).";
 			owner_lazy = () -> WithholdingTaxRateTypeCode.mmObject();
@@ -123,7 +125,7 @@ public class WithholdingTaxRateTypeCode {
 	 */
 	public static final MMCode mmNRATax = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NRATax";
 			definition = "Withholding tax related to income subject to NRA (Non Resident Alien).";
 			owner_lazy = () -> WithholdingTaxRateTypeCode.mmObject();
@@ -154,7 +156,7 @@ public class WithholdingTaxRateTypeCode {
 	 */
 	public static final MMCode mmBackUpWithholding = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BackUpWithholding";
 			definition = "Withholding tax related to payments subject to back up withholding.";
 			owner_lazy = () -> WithholdingTaxRateTypeCode.mmObject();
@@ -165,12 +167,11 @@ public class WithholdingTaxRateTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "WithholdingTaxRateTypeCode";
 				definition = "Specifies the type of withholding tax rate.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.WithholdingTaxRateTypeCode.mmFATCATax, com.tools20022.repository.codeset.WithholdingTaxRateTypeCode.mmNRATax,
-						com.tools20022.repository.codeset.WithholdingTaxRateTypeCode.mmBackUpWithholding);
+				code_lazy = () -> Arrays.asList(WithholdingTaxRateTypeCode.mmFATCATax, WithholdingTaxRateTypeCode.mmNRATax, WithholdingTaxRateTypeCode.mmBackUpWithholding);
 				derivation_lazy = () -> Arrays.asList(WithholdingTaxRateType1Code.mmObject());
 			}
 		});

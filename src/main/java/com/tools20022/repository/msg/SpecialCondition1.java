@@ -19,8 +19,10 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
 import com.tools20022.repository.entity.Payment;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -103,11 +105,11 @@ public class SpecialCondition1 {
 	 */
 	public static final MMMessageAttribute mmIncomingAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.mmInstructedAmount;
+			businessElementTrace_lazy = () -> Payment.mmInstructedAmount;
 			componentContext_lazy = () -> SpecialCondition1.mmObject();
 			isDerived = false;
 			xmlTag = "IncmgAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncomingAmount";
 			definition = "Incoming amount on special conditions.";
 			maxOccurs = 1;
@@ -151,11 +153,11 @@ public class SpecialCondition1 {
 	 */
 	public static final MMMessageAttribute mmOutgoingAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.mmInstructedAmount;
+			businessElementTrace_lazy = () -> Payment.mmInstructedAmount;
 			componentContext_lazy = () -> SpecialCondition1.mmObject();
 			isDerived = false;
 			xmlTag = "OutgngAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OutgoingAmount";
 			definition = "Outgoing amount on special conditions.";
 			maxOccurs = 1;
@@ -199,11 +201,11 @@ public class SpecialCondition1 {
 	 */
 	public static final MMMessageAttribute mmIncomingAmountToOtherAccount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.mmInstructedAmount;
+			businessElementTrace_lazy = () -> Payment.mmInstructedAmount;
 			componentContext_lazy = () -> SpecialCondition1.mmObject();
 			isDerived = false;
 			xmlTag = "IncmgAmtToOthrAcct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncomingAmountToOtherAccount";
 			definition = "Incoming amount to other account on special conditions.";
 			maxOccurs = 1;
@@ -248,11 +250,11 @@ public class SpecialCondition1 {
 	 */
 	public static final MMMessageAttribute mmPaymentFromOtherAccount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.mmInstructedAmount;
+			businessElementTrace_lazy = () -> Payment.mmInstructedAmount;
 			componentContext_lazy = () -> SpecialCondition1.mmObject();
 			isDerived = false;
 			xmlTag = "PmtFrOthrAcct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentFromOtherAccount";
 			definition = "Outgoing payment amount from other account on special conditions.";
 			maxOccurs = 1;
@@ -264,11 +266,10 @@ public class SpecialCondition1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SpecialCondition1.mmIncomingAmount, com.tools20022.repository.msg.SpecialCondition1.mmOutgoingAmount,
-						com.tools20022.repository.msg.SpecialCondition1.mmIncomingAmountToOtherAccount, com.tools20022.repository.msg.SpecialCondition1.mmPaymentFromOtherAccount);
+				messageElement_lazy = () -> Arrays.asList(SpecialCondition1.mmIncomingAmount, SpecialCondition1.mmOutgoingAmount, SpecialCondition1.mmIncomingAmountToOtherAccount, SpecialCondition1.mmPaymentFromOtherAccount);
 				trace_lazy = () -> Payment.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SpecialCondition1";
 				definition = "Special conditions for the loan.";
 			}

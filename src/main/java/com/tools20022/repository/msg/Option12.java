@@ -20,9 +20,11 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.OptionDateOrPeriod1Choice;
 import com.tools20022.repository.codeset.OptionType1Code;
 import com.tools20022.repository.entity.Option;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -100,11 +102,11 @@ public class Option12 {
 	 */
 	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Option.mmOptionType;
+			businessElementTrace_lazy = () -> Option.mmOptionType;
 			componentContext_lazy = () -> Option12.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Identifies whether the instrument has a call option or a put option. If the instrument contains both options, i.e. a call and a put, both the call option and the put option have to be reported.";
 			maxOccurs = 1;
@@ -145,7 +147,7 @@ public class Option12 {
 			componentContext_lazy = () -> Option12.mmObject();
 			isDerived = false;
 			xmlTag = "DtOrPrd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DateOrPeriod";
 			definition = "Provides the exercise date or notice period for a call/put option.";
 			maxOccurs = 1;
@@ -158,10 +160,10 @@ public class Option12 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Option12.mmType, com.tools20022.repository.msg.Option12.mmDateOrPeriod);
+				messageElement_lazy = () -> Arrays.asList(Option12.mmType, Option12.mmDateOrPeriod);
 				trace_lazy = () -> Option.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Option12";
 				definition = "Provides the details for a call/put option.";
 			}

@@ -20,8 +20,10 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max140Binary;
 import com.tools20022.repository.datatype.Number;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -112,11 +114,11 @@ public class KEK3 {
 			componentContext_lazy = () -> KEK3.mmObject();
 			isDerived = false;
 			xmlTag = "Vrsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Version";
 			definition = "Version of the cryptographic key.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.KEK4.mmVersion);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.KEK2.mmVersion;
+			nextVersions_lazy = () -> Arrays.asList(KEK4.mmVersion);
+			previousVersion_lazy = () -> KEK2.mmVersion;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
@@ -164,11 +166,11 @@ public class KEK3 {
 			componentContext_lazy = () -> KEK3.mmObject();
 			isDerived = false;
 			xmlTag = "KEKId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "KEKIdentification";
 			definition = "Identification of the key encryption key (KEK).";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.KEK4.mmKEKIdentification);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.KEK2.mmKEKIdentification;
+			nextVersions_lazy = () -> Arrays.asList(KEK4.mmKEKIdentification);
+			previousVersion_lazy = () -> KEK2.mmKEKIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -219,11 +221,11 @@ public class KEK3 {
 			componentContext_lazy = () -> KEK3.mmObject();
 			isDerived = false;
 			xmlTag = "KeyNcrptnAlgo";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "KeyEncryptionAlgorithm";
 			definition = "Algorithm to encrypt the key encryption key (KEK).";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.KEK4.mmKeyEncryptionAlgorithm);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.KEK2.mmKeyEncryptionAlgorithm;
+			nextVersions_lazy = () -> Arrays.asList(KEK4.mmKeyEncryptionAlgorithm);
+			previousVersion_lazy = () -> KEK2.mmKeyEncryptionAlgorithm;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -274,11 +276,11 @@ public class KEK3 {
 			componentContext_lazy = () -> KEK3.mmObject();
 			isDerived = false;
 			xmlTag = "NcrptdKey";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EncryptedKey";
 			definition = "Encrypted key encryption key (KEK).";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.KEK4.mmEncryptedKey);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.KEK2.mmEncryptedKey;
+			nextVersions_lazy = () -> Arrays.asList(KEK4.mmEncryptedKey);
+			previousVersion_lazy = () -> KEK2.mmEncryptedKey;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max140Binary.mmObject();
@@ -288,10 +290,9 @@ public class KEK3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.KEK3.mmVersion, com.tools20022.repository.msg.KEK3.mmKEKIdentification, com.tools20022.repository.msg.KEK3.mmKeyEncryptionAlgorithm,
-						com.tools20022.repository.msg.KEK3.mmEncryptedKey);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(KEK3.mmVersion, KEK3.mmKEKIdentification, KEK3.mmKeyEncryptionAlgorithm, KEK3.mmEncryptedKey);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "KEK3";
 				definition = "Key encryption key (KEK), using previously distributed symmetric key.";
 				nextVersions_lazy = () -> Arrays.asList(KEK4.mmObject());

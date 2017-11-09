@@ -19,9 +19,13 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.pain.MandateAmendmentRequestV01;
 import com.tools20022.repository.choice.OriginalMandate1Choice;
 import com.tools20022.repository.entity.DirectDebitMandate;
 import com.tools20022.repository.entity.Mandate;
+import com.tools20022.repository.entity.Status;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -111,7 +115,7 @@ public class MandateAmendment1 {
 			componentContext_lazy = () -> MandateAmendment1.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlMsgInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalMessageInformation";
 			definition = "Set of elements used to provide information on the original messsage.";
 			maxOccurs = 1;
@@ -158,11 +162,11 @@ public class MandateAmendment1 {
 	 */
 	public static final MMMessageAssociationEnd mmAmendmentReason = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.mmStatusReason;
+			businessElementTrace_lazy = () -> Status.mmStatusReason;
 			componentContext_lazy = () -> MandateAmendment1.mmObject();
 			isDerived = false;
 			xmlTag = "AmdmntRsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmendmentReason";
 			definition = "Set of elements used to provide detailed information on the amendment reason.";
 			maxOccurs = 1;
@@ -210,7 +214,7 @@ public class MandateAmendment1 {
 			componentContext_lazy = () -> MandateAmendment1.mmObject();
 			isDerived = false;
 			xmlTag = "Mndt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Mandate";
 			definition = "Set of elements used to provide the amended mandate data.";
 			maxOccurs = 1;
@@ -258,7 +262,7 @@ public class MandateAmendment1 {
 			componentContext_lazy = () -> MandateAmendment1.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlMndt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalMandate";
 			definition = "Set of elements used to provide the original mandate data.";
 			maxOccurs = 1;
@@ -271,12 +275,11 @@ public class MandateAmendment1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MandateAmendment1.mmOriginalMessageInformation, com.tools20022.repository.msg.MandateAmendment1.mmAmendmentReason,
-						com.tools20022.repository.msg.MandateAmendment1.mmMandate, com.tools20022.repository.msg.MandateAmendment1.mmOriginalMandate);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.pain.MandateAmendmentRequestV01.mmUnderlyingAmendmentDetails);
+				messageElement_lazy = () -> Arrays.asList(MandateAmendment1.mmOriginalMessageInformation, MandateAmendment1.mmAmendmentReason, MandateAmendment1.mmMandate, MandateAmendment1.mmOriginalMandate);
+				messageBuildingBlock_lazy = () -> Arrays.asList(MandateAmendmentRequestV01.mmUnderlyingAmendmentDetails);
 				trace_lazy = () -> Mandate.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MandateAmendment1";
 				definition = "Identifies the mandate to be amended and gives details of the new mandate.";
 			}

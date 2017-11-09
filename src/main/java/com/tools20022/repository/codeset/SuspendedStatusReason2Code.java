@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.SuspendedStatusReasonCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -86,7 +88,7 @@ public class SuspendedStatusReason2Code extends SuspendedStatusReasonCode {
 	 */
 	public static final MMCode mmPriceSuspension = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PriceSuspension";
 			owner_lazy = () -> SuspendedStatusReason2Code.mmObject();
 		}
@@ -109,7 +111,7 @@ public class SuspendedStatusReason2Code extends SuspendedStatusReasonCode {
 	 */
 	public static final MMCode mmOverflow = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Overflow";
 			owner_lazy = () -> SuspendedStatusReason2Code.mmObject();
 		}
@@ -132,7 +134,7 @@ public class SuspendedStatusReason2Code extends SuspendedStatusReasonCode {
 	 */
 	public static final MMCode mmOther = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
 			owner_lazy = () -> SuspendedStatusReason2Code.mmObject();
 		}
@@ -141,13 +143,12 @@ public class SuspendedStatusReason2Code extends SuspendedStatusReasonCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("PRIC");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SuspendedStatusReason2Code";
 				definition = "Specifies the reason for a suspended status.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SuspendedStatusReason2Code.mmPriceSuspension, com.tools20022.repository.codeset.SuspendedStatusReason2Code.mmOverflow,
-						com.tools20022.repository.codeset.SuspendedStatusReason2Code.mmOther);
+				code_lazy = () -> Arrays.asList(SuspendedStatusReason2Code.mmPriceSuspension, SuspendedStatusReason2Code.mmOverflow, SuspendedStatusReason2Code.mmOther);
 				trace_lazy = () -> SuspendedStatusReasonCode.mmObject();
 			}
 		});

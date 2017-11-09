@@ -19,9 +19,15 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.semt.*;
+import com.tools20022.repository.area.sese.SecuritiesTransactionStatusQuery002V04;
 import com.tools20022.repository.datatype.Max70Text;
 import com.tools20022.repository.datatype.RestrictedFINXMax35Text;
+import com.tools20022.repository.entity.AccountIdentification;
+import com.tools20022.repository.entity.GenericIdentification;
 import com.tools20022.repository.entity.SecuritiesAccount;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -154,11 +160,11 @@ public class SecuritiesAccount27 {
 	 */
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmIdentification;
+			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> SecuritiesAccount27.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Unambiguous identification for the account between the account owner and the account servicer.”";
 			maxOccurs = 1;
@@ -202,11 +208,11 @@ public class SecuritiesAccount27 {
 	 */
 	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesAccount.mmSecuritiesAccountType;
+			businessElementTrace_lazy = () -> SecuritiesAccount.mmSecuritiesAccountType;
 			componentContext_lazy = () -> SecuritiesAccount27.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Specifies the type of securities account.";
 			maxOccurs = 1;
@@ -249,11 +255,11 @@ public class SecuritiesAccount27 {
 	 */
 	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AccountIdentification.mmName;
+			businessElementTrace_lazy = () -> AccountIdentification.mmName;
 			componentContext_lazy = () -> SecuritiesAccount27.mmObject();
 			isDerived = false;
 			xmlTag = "Nm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Name";
 			definition = "Description of the account.";
 			maxOccurs = 1;
@@ -265,19 +271,16 @@ public class SecuritiesAccount27 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesAccount27.mmIdentification, com.tools20022.repository.msg.SecuritiesAccount27.mmType,
-						com.tools20022.repository.msg.SecuritiesAccount27.mmName);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAllegementReport002V05.mmSafekeepingAccount,
-						com.tools20022.repository.area.semt.SecuritiesTransactionPostingReport002V06.mmSafekeepingAccount, com.tools20022.repository.area.semt.IntraPositionMovementPostingReport002V05.mmSafekeepingAccount,
-						com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAuditTrailReport002V03.mmSafekeepingAccount, com.tools20022.repository.area.sese.SecuritiesTransactionStatusQuery002V04.mmSafekeepingAccount,
-						com.tools20022.repository.area.semt.SecuritiesMessageCancellationAdvice002V05.mmSafekeepingAccount, com.tools20022.repository.area.semt.SecuritiesTransactionPendingReport002V07.mmSafekeepingAccount,
-						com.tools20022.repository.area.semt.SecuritiesStatementQuery002V06.mmSafekeepingAccount, com.tools20022.repository.area.semt.IntraPositionMovementInstruction002V04.mmSafekeepingAccount,
-						com.tools20022.repository.area.semt.IntraPositionMovementConfirmation002V05.mmSafekeepingAccount, com.tools20022.repository.area.semt.SecuritiesTransactionPendingReport002V08.mmSafekeepingAccount,
-						com.tools20022.repository.area.semt.IntraPositionMovementConfirmation002V06.mmSafekeepingAccount, com.tools20022.repository.area.semt.IntraPositionMovementPostingReport002V06.mmSafekeepingAccount,
-						com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAllegementReport002V06.mmSafekeepingAccount, com.tools20022.repository.area.semt.SecuritiesTransactionPostingReport002V07.mmSafekeepingAccount);
+				messageElement_lazy = () -> Arrays.asList(SecuritiesAccount27.mmIdentification, SecuritiesAccount27.mmType, SecuritiesAccount27.mmName);
+				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesSettlementTransactionAllegementReport002V05.mmSafekeepingAccount, SecuritiesTransactionPostingReport002V06.mmSafekeepingAccount,
+						IntraPositionMovementPostingReport002V05.mmSafekeepingAccount, SecuritiesSettlementTransactionAuditTrailReport002V03.mmSafekeepingAccount, SecuritiesTransactionStatusQuery002V04.mmSafekeepingAccount,
+						SecuritiesMessageCancellationAdvice002V05.mmSafekeepingAccount, SecuritiesTransactionPendingReport002V07.mmSafekeepingAccount, SecuritiesStatementQuery002V06.mmSafekeepingAccount,
+						IntraPositionMovementInstruction002V04.mmSafekeepingAccount, IntraPositionMovementConfirmation002V05.mmSafekeepingAccount, SecuritiesTransactionPendingReport002V08.mmSafekeepingAccount,
+						IntraPositionMovementConfirmation002V06.mmSafekeepingAccount, IntraPositionMovementPostingReport002V06.mmSafekeepingAccount, SecuritiesSettlementTransactionAllegementReport002V06.mmSafekeepingAccount,
+						SecuritiesTransactionPostingReport002V07.mmSafekeepingAccount);
 				trace_lazy = () -> SecuritiesAccount.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesAccount27";
 				definition = "Account to or from which a securities entry is made.";
 			}

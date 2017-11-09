@@ -20,8 +20,10 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.FinancialCapture1Code;
 import com.tools20022.repository.entity.AcceptorConfiguration;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -110,11 +112,11 @@ public class AcquirerProtocolParameters2 {
 	 */
 	public static final MMMessageAttribute mmFinancialCapture = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AcceptorConfiguration.mmFinancialCapture;
+			businessElementTrace_lazy = () -> AcceptorConfiguration.mmFinancialCapture;
 			componentContext_lazy = () -> AcquirerProtocolParameters2.mmObject();
 			isDerived = false;
 			xmlTag = "FinCaptr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialCapture";
 			definition = "Mode for the financial capture of the transaction by the acquirer.";
 			maxOccurs = 1;
@@ -156,11 +158,11 @@ public class AcquirerProtocolParameters2 {
 	 */
 	public static final MMMessageAssociationEnd mmBatchTransfer = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AcceptorConfiguration.mmBatchTransferContent;
+			businessElementTrace_lazy = () -> AcceptorConfiguration.mmBatchTransferContent;
 			componentContext_lazy = () -> AcquirerProtocolParameters2.mmObject();
 			isDerived = false;
 			xmlTag = "BtchTrf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BatchTransfer";
 			definition = "Configuration of the batch transfers.";
 			maxOccurs = 1;
@@ -207,7 +209,7 @@ public class AcquirerProtocolParameters2 {
 			componentContext_lazy = () -> AcquirerProtocolParameters2.mmObject();
 			isDerived = false;
 			xmlTag = "CmpltnXchg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CompletionExchange";
 			definition = "Configuration parameters of completion exchanges.";
 			maxOccurs = 1;
@@ -220,11 +222,10 @@ public class AcquirerProtocolParameters2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcquirerProtocolParameters2.mmFinancialCapture, com.tools20022.repository.msg.AcquirerProtocolParameters2.mmBatchTransfer,
-						com.tools20022.repository.msg.AcquirerProtocolParameters2.mmCompletionExchange);
+				messageElement_lazy = () -> Arrays.asList(AcquirerProtocolParameters2.mmFinancialCapture, AcquirerProtocolParameters2.mmBatchTransfer, AcquirerProtocolParameters2.mmCompletionExchange);
 				trace_lazy = () -> AcceptorConfiguration.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AcquirerProtocolParameters2";
 				definition = "Acceptor parameters dedicated to the acquirer protocol.";
 				nextVersions_lazy = () -> Arrays.asList(AcquirerProtocolParameters4.mmObject());

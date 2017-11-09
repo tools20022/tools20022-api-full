@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.InitialPhysicalFormCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -86,7 +88,7 @@ public class InitialPhysicalForm1Code extends InitialPhysicalFormCode {
 	 */
 	public static final MMCode mmGT = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GT";
 			owner_lazy = () -> InitialPhysicalForm1Code.mmObject();
 		}
@@ -109,7 +111,7 @@ public class InitialPhysicalForm1Code extends InitialPhysicalFormCode {
 	 */
 	public static final MMCode mmGP = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GP";
 			owner_lazy = () -> InitialPhysicalForm1Code.mmObject();
 		}
@@ -132,7 +134,7 @@ public class InitialPhysicalForm1Code extends InitialPhysicalFormCode {
 	 */
 	public static final MMCode mmDefinitive = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Definitive";
 			owner_lazy = () -> InitialPhysicalForm1Code.mmObject();
 		}
@@ -141,13 +143,12 @@ public class InitialPhysicalForm1Code extends InitialPhysicalFormCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("GTGT");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InitialPhysicalForm1Code";
 				definition = "Indicates the physical form of the securities";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.InitialPhysicalForm1Code.mmGT, com.tools20022.repository.codeset.InitialPhysicalForm1Code.mmGP,
-						com.tools20022.repository.codeset.InitialPhysicalForm1Code.mmDefinitive);
+				code_lazy = () -> Arrays.asList(InitialPhysicalForm1Code.mmGT, InitialPhysicalForm1Code.mmGP, InitialPhysicalForm1Code.mmDefinitive);
 				trace_lazy = () -> InitialPhysicalFormCode.mmObject();
 			}
 		});

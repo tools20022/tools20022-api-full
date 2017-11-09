@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.Response1Code
+ * Response1Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Response2Code
+ * Response2Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Response3Code
+ * Response3Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Response4Code
+ * Response4Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>{@linkplain com.tools20022.repository.codeset.ResponseCode#mmDeclined
@@ -47,19 +62,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * ResponseCode.mmNotProcessed}</li>
  * <li>{@linkplain com.tools20022.repository.codeset.ResponseCode#mmProcessed
  * ResponseCode.mmProcessed}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.Response1Code
- * Response1Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.Response2Code
- * Response2Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.Response3Code
- * Response3Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.Response4Code
- * Response4Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -108,7 +110,7 @@ public class ResponseCode {
 	 */
 	public static final MMCode mmDeclined = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Declined";
 			definition = "Service is declined.";
 			owner_lazy = () -> ResponseCode.mmObject();
@@ -137,7 +139,7 @@ public class ResponseCode {
 	 */
 	public static final MMCode mmApproved = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Approved";
 			definition = "Service has been successfuly provided.";
 			owner_lazy = () -> ResponseCode.mmObject();
@@ -166,7 +168,7 @@ public class ResponseCode {
 	 */
 	public static final MMCode mmPartialApproved = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PartialApproved";
 			definition = "Service has been partialy provided.";
 			owner_lazy = () -> ResponseCode.mmObject();
@@ -198,7 +200,7 @@ public class ResponseCode {
 	 */
 	public static final MMCode mmTechnicalError = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TechnicalError";
 			definition = "Service cannot be provided for technical reason (eg timeout contacting the Issuer, security problem).";
 			owner_lazy = () -> ResponseCode.mmObject();
@@ -230,7 +232,7 @@ public class ResponseCode {
 	 */
 	public static final MMCode mmFurtherAction = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FurtherAction";
 			definition = "Further action required to complete the transaction, for instance a referral.";
 			owner_lazy = () -> ResponseCode.mmObject();
@@ -259,7 +261,7 @@ public class ResponseCode {
 	 */
 	public static final MMCode mmNotProcessed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotProcessed";
 			definition = "Advice message could not be processed.";
 			owner_lazy = () -> ResponseCode.mmObject();
@@ -288,7 +290,7 @@ public class ResponseCode {
 	 */
 	public static final MMCode mmProcessed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Processed";
 			definition = "Advice message is processed.";
 			owner_lazy = () -> ResponseCode.mmObject();
@@ -299,14 +301,13 @@ public class ResponseCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("DECL");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ResponseCode";
 				definition = "Response code of a transaction.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ResponseCode.mmDeclined, com.tools20022.repository.codeset.ResponseCode.mmApproved, com.tools20022.repository.codeset.ResponseCode.mmPartialApproved,
-						com.tools20022.repository.codeset.ResponseCode.mmTechnicalError, com.tools20022.repository.codeset.ResponseCode.mmFurtherAction, com.tools20022.repository.codeset.ResponseCode.mmNotProcessed,
-						com.tools20022.repository.codeset.ResponseCode.mmProcessed);
+				code_lazy = () -> Arrays.asList(ResponseCode.mmDeclined, ResponseCode.mmApproved, ResponseCode.mmPartialApproved, ResponseCode.mmTechnicalError, ResponseCode.mmFurtherAction, ResponseCode.mmNotProcessed,
+						ResponseCode.mmProcessed);
 				derivation_lazy = () -> Arrays.asList(Response1Code.mmObject(), Response2Code.mmObject(), Response3Code.mmObject(), Response4Code.mmObject());
 			}
 		});

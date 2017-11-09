@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.OrderQuantityTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -89,7 +91,7 @@ public class OrderQuantityType1Code extends OrderQuantityTypeCode {
 	 */
 	public static final MMCode mmUnit = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unit";
 			owner_lazy = () -> OrderQuantityType1Code.mmObject();
 		}
@@ -112,7 +114,7 @@ public class OrderQuantityType1Code extends OrderQuantityTypeCode {
 	 */
 	public static final MMCode mmAmount = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			owner_lazy = () -> OrderQuantityType1Code.mmObject();
 		}
@@ -135,7 +137,7 @@ public class OrderQuantityType1Code extends OrderQuantityTypeCode {
 	 */
 	public static final MMCode mmOther = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
 			owner_lazy = () -> OrderQuantityType1Code.mmObject();
 		}
@@ -144,13 +146,12 @@ public class OrderQuantityType1Code extends OrderQuantityTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("UNIT");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OrderQuantityType1Code";
 				definition = "Specifies how the order is placed, eg by quantity of units or by amount of money.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OrderQuantityType1Code.mmUnit, com.tools20022.repository.codeset.OrderQuantityType1Code.mmAmount,
-						com.tools20022.repository.codeset.OrderQuantityType1Code.mmOther);
+				code_lazy = () -> Arrays.asList(OrderQuantityType1Code.mmUnit, OrderQuantityType1Code.mmAmount, OrderQuantityType1Code.mmOther);
 				trace_lazy = () -> OrderQuantityTypeCode.mmObject();
 			}
 		});

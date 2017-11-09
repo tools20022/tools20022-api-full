@@ -20,7 +20,9 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.PendingOpeningStatusReason1Code;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification36;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -104,10 +106,10 @@ public class PendingOpeningStatusReason2Choice {
 			componentContext_lazy = () -> PendingOpeningStatusReason2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Cd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Reason for the pending account opening status expressed as a code.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.PendingStatusReason2Choice.mmCode;
+			previousVersion_lazy = () -> PendingStatusReason2Choice.mmCode;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PendingOpeningStatusReason1Code.mmObject();
@@ -154,10 +156,10 @@ public class PendingOpeningStatusReason2Choice {
 			componentContext_lazy = () -> PendingOpeningStatusReason2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Reason for the pending account opening status expressed as a proprietary code.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.PendingStatusReason2Choice.mmProprietary;
+			previousVersion_lazy = () -> PendingStatusReason2Choice.mmProprietary;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -168,9 +170,9 @@ public class PendingOpeningStatusReason2Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PendingOpeningStatusReason2Choice.mmCode, com.tools20022.repository.choice.PendingOpeningStatusReason2Choice.mmProprietary);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(PendingOpeningStatusReason2Choice.mmCode, PendingOpeningStatusReason2Choice.mmProprietary);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PendingOpeningStatusReason2Choice";
 				definition = "Choice of formats for pending account opening reason code.";
 				previousVersion_lazy = () -> PendingStatusReason2Choice.mmObject();

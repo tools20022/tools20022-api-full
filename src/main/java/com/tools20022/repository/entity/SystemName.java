@@ -17,10 +17,10 @@
 
 package com.tools20022.repository.entity;
 
-import com.tools20022.metamodel.MMBusinessAssociationEnd;
-import com.tools20022.metamodel.MMBusinessAttribute;
-import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.*;
 import com.tools20022.repository.datatype.Max70Text;
+import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -33,6 +33,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SystemIdentification#mmSystemName
+ * SystemIdentification.mmSystemName}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -41,15 +50,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.entity.SystemName#mmSystemIdentification
  * SystemName.mmSystemIdentification}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SystemIdentification#mmSystemName
- * SystemIdentification.mmSystemName}</li>
  * </ul>
  * </li>
  * <li>
@@ -123,12 +123,11 @@ public class SystemName {
 	 */
 	public static final MMBusinessAttribute mmName = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PointOfInteraction1.mmSystemName, com.tools20022.repository.msg.PointOfInteraction2.mmSystemName,
-					com.tools20022.repository.msg.PointOfInteraction3.mmSystemName, com.tools20022.repository.msg.PointOfInteraction4.mmSystemName, com.tools20022.repository.msg.PointOfInteraction5.mmSystemName,
-					com.tools20022.repository.msg.PointOfInteraction7.mmSystemName);
+			derivation_lazy = () -> Arrays.asList(PointOfInteraction1.mmSystemName, PointOfInteraction2.mmSystemName, PointOfInteraction3.mmSystemName, PointOfInteraction4.mmSystemName, PointOfInteraction5.mmSystemName,
+					PointOfInteraction7.mmSystemName);
 			elementContext_lazy = () -> SystemName.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Name";
 			definition = "Name of a system for instance the common name assigned by the acquirer to the POI system.";
 			maxOccurs = 1;
@@ -174,13 +173,13 @@ public class SystemName {
 		{
 			elementContext_lazy = () -> SystemName.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SystemIdentification";
 			definition = "System identification which contains a name.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.SystemIdentification.mmSystemName;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SystemIdentification.mmObject();
 		}
 	};
@@ -188,12 +187,12 @@ public class SystemName {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SystemName";
 				definition = "Name of a system.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SystemIdentification.mmSystemName);
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SystemName.mmName, com.tools20022.repository.entity.SystemName.mmSystemIdentification);
+				element_lazy = () -> Arrays.asList(SystemName.mmName, SystemName.mmSystemIdentification);
 			}
 		});
 		return mmObject_lazy.get();

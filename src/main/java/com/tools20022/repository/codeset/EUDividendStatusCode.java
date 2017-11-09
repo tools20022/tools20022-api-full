@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -28,6 +30,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.EUDividendStatus1Code
+ * EUDividendStatus1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -39,13 +48,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.EUDividendStatusCode#mmDividendUnknown
  * EUDividendStatusCode.mmDividendUnknown}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.EUDividendStatus1Code
- * EUDividendStatus1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -97,7 +99,7 @@ public class EUDividendStatusCode {
 	 */
 	public static final MMCode mmDividendInScope = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DividendInScope";
 			definition = "Dividend is in the scope of the directive.";
 			owner_lazy = () -> EUDividendStatusCode.mmObject();
@@ -127,7 +129,7 @@ public class EUDividendStatusCode {
 	 */
 	public static final MMCode mmDividendOutScope = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DividendOutScope";
 			definition = "Dividend is out of the scope of the directive.";
 			owner_lazy = () -> EUDividendStatusCode.mmObject();
@@ -159,7 +161,7 @@ public class EUDividendStatusCode {
 	 */
 	public static final MMCode mmDividendUnknown = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DividendUnknown";
 			definition = "Unknown whether the dividend is in or out of the scope of the directive.";
 			owner_lazy = () -> EUDividendStatusCode.mmObject();
@@ -170,13 +172,12 @@ public class EUDividendStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("DIVI");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "EUDividendStatusCode";
 				definition = "Specifies whether the dividend is in the scope of the European directive on taxation of savings income in the form of interest payments.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.EUDividendStatusCode.mmDividendInScope, com.tools20022.repository.codeset.EUDividendStatusCode.mmDividendOutScope,
-						com.tools20022.repository.codeset.EUDividendStatusCode.mmDividendUnknown);
+				code_lazy = () -> Arrays.asList(EUDividendStatusCode.mmDividendInScope, EUDividendStatusCode.mmDividendOutScope, EUDividendStatusCode.mmDividendUnknown);
 				derivation_lazy = () -> Arrays.asList(EUDividendStatus1Code.mmObject());
 			}
 		});

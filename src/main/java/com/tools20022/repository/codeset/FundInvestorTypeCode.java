@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -80,7 +82,7 @@ public class FundInvestorTypeCode {
 	 */
 	public static final MMCode mmRetail = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+			registrationStatus = MMRegistrationStatus.OBSOLETE;
 			name = "Retail";
 			definition = "Investor is a retail investor.";
 			owner_lazy = () -> FundInvestorTypeCode.mmObject();
@@ -91,12 +93,12 @@ public class FundInvestorTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("RETA");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				name = "FundInvestorTypeCode";
 				definition = "Specifies the type of investor.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.FundInvestorTypeCode.mmRetail);
+				code_lazy = () -> Arrays.asList(FundInvestorTypeCode.mmRetail);
 			}
 		});
 		return mmObject_lazy.get();

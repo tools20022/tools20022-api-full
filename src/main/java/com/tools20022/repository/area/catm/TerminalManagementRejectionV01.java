@@ -20,6 +20,7 @@ package com.tools20022.repository.area.catm;
 import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.TerminalManagementArchive;
 import com.tools20022.repository.msg.AcceptorRejection1;
 import com.tools20022.repository.msg.Header6;
@@ -34,6 +35,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code catm.004.001.01}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.TerminalManagementArchive
@@ -60,9 +64,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * TerminalManagementRejectionV01.mmReject}</li>
  * </ul>
  * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code catm.004.001.01}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -120,10 +121,10 @@ public class TerminalManagementRejectionV01 {
 	public static final MMMessageBuildingBlock mmHeader = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Hdr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Header";
 			definition = "Rejection message management information.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.catm.TerminalManagementRejectionV02.mmHeader);
+			nextVersions_lazy = () -> Arrays.asList(TerminalManagementRejectionV02.mmHeader);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> Header6.mmObject();
@@ -164,10 +165,10 @@ public class TerminalManagementRejectionV01 {
 	public static final MMMessageBuildingBlock mmReject = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Rjct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reject";
 			definition = "Information related to the reject.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.catm.TerminalManagementRejectionV02.mmReject);
+			nextVersions_lazy = () -> Arrays.asList(TerminalManagementRejectionV02.mmReject);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> AcceptorRejection1.mmObject();
@@ -177,7 +178,7 @@ public class TerminalManagementRejectionV01 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TerminalManagementRejectionV01";
 				definition = "The TerminalManagementRejection message is sent by the terminal manager to reject a message request sent by an acceptor, to indicate that the received message could not be processed.";
 				nextVersions_lazy = () -> Arrays.asList(TerminalManagementRejectionV02.mmObject());
@@ -185,7 +186,7 @@ public class TerminalManagementRejectionV01 {
 				rootElement = "Document";
 				xmlTag = "TermnlMgmtRjctn";
 				businessArea_lazy = () -> TerminalManagementArchive.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.catm.TerminalManagementRejectionV01.mmHeader, com.tools20022.repository.area.catm.TerminalManagementRejectionV01.mmReject);
+				messageBuildingBlock_lazy = () -> Arrays.asList(TerminalManagementRejectionV01.mmHeader, TerminalManagementRejectionV01.mmReject);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "catm";

@@ -20,12 +20,14 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ImpliedCurrencyAndAmount;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.PercentageRate;
 import com.tools20022.repository.entity.Commission;
 import com.tools20022.repository.entity.CurrencyExchange;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -162,11 +164,11 @@ public class CurrencyConversion6 {
 			componentContext_lazy = () -> CurrencyConversion6.mmObject();
 			isDerived = false;
 			xmlTag = "CcyConvsId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrencyConversionIdentification";
 			definition = "Identification of the currency conversion operation for the service provider.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CurrencyConversion12.mmCurrencyConversionIdentification);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CurrencyConversion2.mmCurrencyConversionIdentification;
+			nextVersions_lazy = () -> Arrays.asList(CurrencyConversion12.mmCurrencyConversionIdentification);
+			previousVersion_lazy = () -> CurrencyConversion2.mmCurrencyConversionIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -222,15 +224,15 @@ public class CurrencyConversion6 {
 	 */
 	public static final MMMessageAssociationEnd mmTargetCurrency = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmTargetCurrency;
+			businessElementTrace_lazy = () -> CurrencyExchange.mmTargetCurrency;
 			componentContext_lazy = () -> CurrencyConversion6.mmObject();
 			isDerived = false;
 			xmlTag = "TrgtCcy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TargetCurrency";
 			definition = "Currency into which the amount is converted (ISO 4217, 3 alphanumeric characters).";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CurrencyConversion12.mmTargetCurrency);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CurrencyConversion2.mmTargetCurrency;
+			nextVersions_lazy = () -> Arrays.asList(CurrencyConversion12.mmTargetCurrency);
+			previousVersion_lazy = () -> CurrencyConversion2.mmTargetCurrency;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -287,15 +289,15 @@ public class CurrencyConversion6 {
 	 */
 	public static final MMMessageAttribute mmResultingAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmResultingAmount;
+			businessElementTrace_lazy = () -> CurrencyExchange.mmResultingAmount;
 			componentContext_lazy = () -> CurrencyConversion6.mmObject();
 			isDerived = false;
 			xmlTag = "RsltgAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ResultingAmount";
 			definition = "Amount converted in the target currency, including additional charges.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CurrencyConversion12.mmResultingAmount);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CurrencyConversion2.mmResultingAmount;
+			nextVersions_lazy = () -> Arrays.asList(CurrencyConversion12.mmResultingAmount);
+			previousVersion_lazy = () -> CurrencyConversion2.mmResultingAmount;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
@@ -353,15 +355,15 @@ public class CurrencyConversion6 {
 	 */
 	public static final MMMessageAttribute mmExchangeRate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmExchangeRate;
+			businessElementTrace_lazy = () -> CurrencyExchange.mmExchangeRate;
 			componentContext_lazy = () -> CurrencyConversion6.mmObject();
 			isDerived = false;
 			xmlTag = "XchgRate";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExchangeRate";
 			definition = "Exchange rate, expressed as a percentage, applied to convert the original amount into the resulting amount.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CurrencyConversion12.mmExchangeRate);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CurrencyConversion2.mmExchangeRate;
+			nextVersions_lazy = () -> Arrays.asList(CurrencyConversion12.mmExchangeRate);
+			previousVersion_lazy = () -> CurrencyConversion2.mmExchangeRate;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
@@ -419,15 +421,15 @@ public class CurrencyConversion6 {
 	 */
 	public static final MMMessageAttribute mmInvertedExchangeRate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmExchangeRate;
+			businessElementTrace_lazy = () -> CurrencyExchange.mmExchangeRate;
 			componentContext_lazy = () -> CurrencyConversion6.mmObject();
 			isDerived = false;
 			xmlTag = "NvrtdXchgRate";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvertedExchangeRate";
 			definition = "Exchange rate, expressed as a percentage, applied to convert the resulting amount into the original amount.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CurrencyConversion12.mmInvertedExchangeRate);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CurrencyConversion2.mmInvertedExchangeRate;
+			nextVersions_lazy = () -> Arrays.asList(CurrencyConversion12.mmInvertedExchangeRate);
+			previousVersion_lazy = () -> CurrencyConversion2.mmInvertedExchangeRate;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
@@ -482,15 +484,15 @@ public class CurrencyConversion6 {
 	 */
 	public static final MMMessageAttribute mmQuotationDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmQuotationDate;
+			businessElementTrace_lazy = () -> CurrencyExchange.mmQuotationDate;
 			componentContext_lazy = () -> CurrencyConversion6.mmObject();
 			isDerived = false;
 			xmlTag = "QtnDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuotationDate";
 			definition = "Date and time at which the exchange rate has been quoted.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CurrencyConversion12.mmQuotationDate);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CurrencyConversion2.mmQuotationDate;
+			nextVersions_lazy = () -> Arrays.asList(CurrencyConversion12.mmQuotationDate);
+			previousVersion_lazy = () -> CurrencyConversion2.mmQuotationDate;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
@@ -542,11 +544,11 @@ public class CurrencyConversion6 {
 			componentContext_lazy = () -> CurrencyConversion6.mmObject();
 			isDerived = false;
 			xmlTag = "VldUntil";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValidUntil";
 			definition = "Validity limit of the exchange rate.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CurrencyConversion12.mmValidUntil);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CurrencyConversion2.mmValidUntil;
+			nextVersions_lazy = () -> Arrays.asList(CurrencyConversion12.mmValidUntil);
+			previousVersion_lazy = () -> CurrencyConversion2.mmValidUntil;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
@@ -602,15 +604,15 @@ public class CurrencyConversion6 {
 	 */
 	public static final MMMessageAssociationEnd mmSourceCurrency = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmSourceCurrency;
+			businessElementTrace_lazy = () -> CurrencyExchange.mmSourceCurrency;
 			componentContext_lazy = () -> CurrencyConversion6.mmObject();
 			isDerived = false;
 			xmlTag = "SrcCcy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SourceCurrency";
 			definition = "Currency from which the amount is converted (ISO 4217, 3 alphanumeric characters).";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CurrencyConversion12.mmSourceCurrency);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CurrencyConversion2.mmSourceCurrency;
+			nextVersions_lazy = () -> Arrays.asList(CurrencyConversion12.mmSourceCurrency);
+			previousVersion_lazy = () -> CurrencyConversion2.mmSourceCurrency;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -666,15 +668,15 @@ public class CurrencyConversion6 {
 	 */
 	public static final MMMessageAttribute mmOriginalAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmOriginalAmount;
+			businessElementTrace_lazy = () -> CurrencyExchange.mmOriginalAmount;
 			componentContext_lazy = () -> CurrencyConversion6.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalAmount";
 			definition = "Original amount in the source currency.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CurrencyConversion12.mmOriginalAmount);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CurrencyConversion2.mmOriginalAmount;
+			nextVersions_lazy = () -> Arrays.asList(CurrencyConversion12.mmOriginalAmount);
+			previousVersion_lazy = () -> CurrencyConversion2.mmOriginalAmount;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
@@ -732,11 +734,11 @@ public class CurrencyConversion6 {
 			componentContext_lazy = () -> CurrencyConversion6.mmObject();
 			isDerived = false;
 			xmlTag = "ComssnDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommissionDetails";
 			definition = "Commission or additional charges made as part of a currency conversion.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CurrencyConversion12.mmCommissionDetails);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CurrencyConversion2.mmCommissionDetails;
+			nextVersions_lazy = () -> Arrays.asList(CurrencyConversion12.mmCommissionDetails);
+			previousVersion_lazy = () -> CurrencyConversion2.mmCommissionDetails;
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.Commission19.mmObject();
@@ -792,11 +794,11 @@ public class CurrencyConversion6 {
 			componentContext_lazy = () -> CurrencyConversion6.mmObject();
 			isDerived = false;
 			xmlTag = "MrkUpDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarkUpDetails";
 			definition = "Markup made as part of a currency conversion.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CurrencyConversion12.mmMarkUpDetails);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CurrencyConversion2.mmMarkUpDetails;
+			nextVersions_lazy = () -> Arrays.asList(CurrencyConversion12.mmMarkUpDetails);
+			previousVersion_lazy = () -> CurrencyConversion2.mmMarkUpDetails;
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.Commission18.mmObject();
@@ -848,11 +850,11 @@ public class CurrencyConversion6 {
 			componentContext_lazy = () -> CurrencyConversion6.mmObject();
 			isDerived = false;
 			xmlTag = "DclrtnDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeclarationDetails";
 			definition = "Card scheme declaration (disclaimer) to present to the cardholder.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CurrencyConversion12.mmDeclarationDetails);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CurrencyConversion2.mmDeclarationDetails;
+			nextVersions_lazy = () -> Arrays.asList(CurrencyConversion12.mmDeclarationDetails);
+			previousVersion_lazy = () -> CurrencyConversion2.mmDeclarationDetails;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -863,14 +865,12 @@ public class CurrencyConversion6 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CurrencyConversion6.mmCurrencyConversionIdentification, com.tools20022.repository.msg.CurrencyConversion6.mmTargetCurrency,
-						com.tools20022.repository.msg.CurrencyConversion6.mmResultingAmount, com.tools20022.repository.msg.CurrencyConversion6.mmExchangeRate, com.tools20022.repository.msg.CurrencyConversion6.mmInvertedExchangeRate,
-						com.tools20022.repository.msg.CurrencyConversion6.mmQuotationDate, com.tools20022.repository.msg.CurrencyConversion6.mmValidUntil, com.tools20022.repository.msg.CurrencyConversion6.mmSourceCurrency,
-						com.tools20022.repository.msg.CurrencyConversion6.mmOriginalAmount, com.tools20022.repository.msg.CurrencyConversion6.mmCommissionDetails, com.tools20022.repository.msg.CurrencyConversion6.mmMarkUpDetails,
-						com.tools20022.repository.msg.CurrencyConversion6.mmDeclarationDetails);
+				messageElement_lazy = () -> Arrays.asList(CurrencyConversion6.mmCurrencyConversionIdentification, CurrencyConversion6.mmTargetCurrency, CurrencyConversion6.mmResultingAmount, CurrencyConversion6.mmExchangeRate,
+						CurrencyConversion6.mmInvertedExchangeRate, CurrencyConversion6.mmQuotationDate, CurrencyConversion6.mmValidUntil, CurrencyConversion6.mmSourceCurrency, CurrencyConversion6.mmOriginalAmount,
+						CurrencyConversion6.mmCommissionDetails, CurrencyConversion6.mmMarkUpDetails, CurrencyConversion6.mmDeclarationDetails);
 				trace_lazy = () -> CurrencyExchange.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CurrencyConversion6";
 				definition = "Conversion between the currency of a card acceptor and the currency of a card issuer, provided by a dedicated service provider. The currency conversion has to be accepted by the cardholder.";
 				nextVersions_lazy = () -> Arrays.asList(CurrencyConversion12.mmObject());

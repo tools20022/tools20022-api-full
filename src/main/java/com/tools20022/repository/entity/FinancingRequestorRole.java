@@ -18,7 +18,11 @@
 package com.tools20022.repository.entity;
 
 import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.InvoiceFinancingPartyRole;
+import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.InvoiceRequestInformation1;
+import com.tools20022.repository.msg.RequestGroupInformation1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -71,11 +75,11 @@ public class FinancingRequestorRole extends InvoiceFinancingPartyRole {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FinancingRequestorRole";
 				definition = "Credit party that requests the invoice financing, on behalf of creditor.";
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RequestGroupInformation1.mmFinancingRequestor, com.tools20022.repository.msg.InvoiceRequestInformation1.mmSupplier);
+				derivationElement_lazy = () -> Arrays.asList(RequestGroupInformation1.mmFinancingRequestor, InvoiceRequestInformation1.mmSupplier);
 				superType_lazy = () -> InvoiceFinancingPartyRole.mmObject();
 			}
 		});

@@ -19,7 +19,10 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.entity.Collateral;
 import com.tools20022.repository.entity.CollateralProposal;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -118,14 +121,14 @@ public class CollateralResponse1 {
 	 */
 	public static final MMMessageAssociationEnd mmSecuritiesCollateralResponse = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Collateral.mmStatus;
+			businessElementTrace_lazy = () -> Collateral.mmStatus;
 			componentContext_lazy = () -> CollateralResponse1.mmObject();
 			isDerived = false;
 			xmlTag = "SctiesCollRspn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesCollateralResponse";
 			definition = "Provides details on the securities collateral proposal.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CollateralResponse2.mmSecuritiesCollateralResponse);
+			nextVersions_lazy = () -> Arrays.asList(CollateralResponse2.mmSecuritiesCollateralResponse);
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.SecuritiesCollateralResponse1.mmObject();
@@ -174,14 +177,14 @@ public class CollateralResponse1 {
 	 */
 	public static final MMMessageAssociationEnd mmCashCollateralResponse = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Collateral.mmStatus;
+			businessElementTrace_lazy = () -> Collateral.mmStatus;
 			componentContext_lazy = () -> CollateralResponse1.mmObject();
 			isDerived = false;
 			xmlTag = "CshCollRspn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashCollateralResponse";
 			definition = "Provides details on the cash collateral proposal.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CollateralResponse2.mmCashCollateralResponse);
+			nextVersions_lazy = () -> Arrays.asList(CollateralResponse2.mmCashCollateralResponse);
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.CashCollateralResponse1.mmObject();
@@ -230,14 +233,14 @@ public class CollateralResponse1 {
 	 */
 	public static final MMMessageAssociationEnd mmOtherCollateralResponse = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Collateral.mmStatus;
+			businessElementTrace_lazy = () -> Collateral.mmStatus;
 			componentContext_lazy = () -> CollateralResponse1.mmObject();
 			isDerived = false;
 			xmlTag = "OthrCollRspn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherCollateralResponse";
 			definition = "Provides details on other collateral proposal.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CollateralResponse2.mmOtherCollateralResponse);
+			nextVersions_lazy = () -> Arrays.asList(CollateralResponse2.mmOtherCollateralResponse);
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.OtherCollateralResponse1.mmObject();
@@ -247,11 +250,10 @@ public class CollateralResponse1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CollateralResponse1.mmSecuritiesCollateralResponse, com.tools20022.repository.msg.CollateralResponse1.mmCashCollateralResponse,
-						com.tools20022.repository.msg.CollateralResponse1.mmOtherCollateralResponse);
+				messageElement_lazy = () -> Arrays.asList(CollateralResponse1.mmSecuritiesCollateralResponse, CollateralResponse1.mmCashCollateralResponse, CollateralResponse1.mmOtherCollateralResponse);
 				trace_lazy = () -> CollateralProposal.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CollateralResponse1";
 				definition = "Provides additional information on the collateral proposal(s), that is either in cash, securities or other types.";
 				nextVersions_lazy = () -> Arrays.asList(CollateralResponse2.mmObject());

@@ -19,9 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.QuantityOrAmount1Choice;
 import com.tools20022.repository.codeset.OrderQuantityType3Code;
 import com.tools20022.repository.entity.SecuritiesOrder;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -99,11 +101,11 @@ public class OrderQuantity1 {
 	 */
 	public static final MMMessageAttribute mmQuantity = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmOrderedQuantity;
+			businessElementTrace_lazy = () -> SecuritiesOrder.mmOrderedQuantity;
 			componentContext_lazy = () -> OrderQuantity1.mmObject();
 			isDerived = false;
 			xmlTag = "Qty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Quantity";
 			definition = "Quantity of financial instrument to be ordered.";
 			maxOccurs = 1;
@@ -146,11 +148,11 @@ public class OrderQuantity1 {
 	 */
 	public static final MMMessageAttribute mmQuantityType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmQuantityType;
+			businessElementTrace_lazy = () -> SecuritiesOrder.mmQuantityType;
 			componentContext_lazy = () -> OrderQuantity1.mmObject();
 			isDerived = false;
 			xmlTag = "QtyTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuantityType";
 			definition = "Quantity of financial instrument to be ordered.";
 			maxOccurs = 1;
@@ -193,11 +195,11 @@ public class OrderQuantity1 {
 	 */
 	public static final MMMessageAttribute mmPrice = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmOrderPrice;
+			businessElementTrace_lazy = () -> SecuritiesOrder.mmOrderPrice;
 			componentContext_lazy = () -> OrderQuantity1.mmObject();
 			isDerived = false;
 			xmlTag = "Pric";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Price";
 			definition = "Amount of money for which goods or services are offered, sold, or bought.";
 			maxOccurs = 1;
@@ -209,10 +211,10 @@ public class OrderQuantity1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OrderQuantity1.mmQuantity, com.tools20022.repository.msg.OrderQuantity1.mmQuantityType, com.tools20022.repository.msg.OrderQuantity1.mmPrice);
+				messageElement_lazy = () -> Arrays.asList(OrderQuantity1.mmQuantity, OrderQuantity1.mmQuantityType, OrderQuantity1.mmPrice);
 				trace_lazy = () -> SecuritiesOrder.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "OrderQuantity1";
 				definition = "Intention to transfer an ownership of a financial instrument.";
 			}

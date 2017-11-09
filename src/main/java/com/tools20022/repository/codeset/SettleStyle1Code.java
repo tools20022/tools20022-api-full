@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.SettleStyleCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -83,7 +85,7 @@ public class SettleStyle1Code extends SettleStyleCode {
 	 */
 	public static final MMCode mmSettleOnClose = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettleOnClose";
 			owner_lazy = () -> SettleStyle1Code.mmObject();
 		}
@@ -106,7 +108,7 @@ public class SettleStyle1Code extends SettleStyleCode {
 	 */
 	public static final MMCode mmSettleOnOpen = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettleOnOpen";
 			owner_lazy = () -> SettleStyle1Code.mmObject();
 		}
@@ -115,12 +117,12 @@ public class SettleStyle1Code extends SettleStyleCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("SETC");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SettleStyle1Code";
 				definition = "Specifies when the option contract settles.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SettleStyle1Code.mmSettleOnClose, com.tools20022.repository.codeset.SettleStyle1Code.mmSettleOnOpen);
+				code_lazy = () -> Arrays.asList(SettleStyle1Code.mmSettleOnClose, SettleStyle1Code.mmSettleOnOpen);
 				trace_lazy = () -> SettleStyleCode.mmObject();
 			}
 		});

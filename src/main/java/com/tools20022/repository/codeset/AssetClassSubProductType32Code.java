@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.AssetClassSubProductTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -74,7 +76,7 @@ public class AssetClassSubProductType32Code extends AssetClassSubProductTypeCode
 	 */
 	public static final MMCode mmWet = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Wet";
 			owner_lazy = () -> AssetClassSubProductType32Code.mmObject();
 		}
@@ -83,11 +85,11 @@ public class AssetClassSubProductType32Code extends AssetClassSubProductTypeCode
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AssetClassSubProductType32Code";
 				definition = "Defines the sub-product of type Wet Freight.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AssetClassSubProductType32Code.mmWet);
+				code_lazy = () -> Arrays.asList(AssetClassSubProductType32Code.mmWet);
 				trace_lazy = () -> AssetClassSubProductTypeCode.mmObject();
 			}
 		});

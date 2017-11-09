@@ -17,14 +17,13 @@
 
 package com.tools20022.repository.entity;
 
-import com.tools20022.metamodel.MMBusinessAssociationEnd;
-import com.tools20022.metamodel.MMBusinessAttribute;
-import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.*;
 import com.tools20022.repository.codeset.DistributionPolicyCode;
 import com.tools20022.repository.datatype.CurrencyAndAmount;
 import com.tools20022.repository.datatype.Max2000Text;
 import com.tools20022.repository.datatype.PercentageRate;
 import com.tools20022.repository.datatype.YesNoIndicator;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -37,6 +36,32 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.Portfolio#mmStrategy
+ * Portfolio.mmStrategy}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PortfolioStrategyDefinition#mmStrategy
+ * PortfolioStrategyDefinition.mmStrategy}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
+ * subType} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.JurisdictionStrategy
+ * JurisdictionStrategy}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.OrganisationStrategy
+ * OrganisationStrategy}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.SectorStrategy
+ * SectorStrategy}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.CurrencyStrategy
+ * CurrencyStrategy}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.AssetClassStrategy
+ * AssetClassStrategy}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -70,32 +95,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.entity.PortfolioStrategy#mmDefinition
  * PortfolioStrategy.mmDefinition}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
- * subType} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.JurisdictionStrategy
- * JurisdictionStrategy}</li>
- * <li>{@linkplain com.tools20022.repository.entity.OrganisationStrategy
- * OrganisationStrategy}</li>
- * <li>{@linkplain com.tools20022.repository.entity.SectorStrategy
- * SectorStrategy}</li>
- * <li>{@linkplain com.tools20022.repository.entity.CurrencyStrategy
- * CurrencyStrategy}</li>
- * <li>{@linkplain com.tools20022.repository.entity.AssetClassStrategy
- * AssetClassStrategy}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Portfolio#mmStrategy
- * Portfolio.mmStrategy}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.PortfolioStrategyDefinition#mmStrategy
- * PortfolioStrategyDefinition.mmStrategy}</li>
  * </ul>
  * </li>
  * <li>
@@ -154,13 +153,13 @@ public class PortfolioStrategy {
 		{
 			elementContext_lazy = () -> PortfolioStrategy.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Portfolio";
 			definition = "Portfolio for which a strategy is specified.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.Portfolio.mmStrategy;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Portfolio.mmObject();
 		}
 	};
@@ -195,7 +194,7 @@ public class PortfolioStrategy {
 		{
 			elementContext_lazy = () -> PortfolioStrategy.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InclusionIndicator";
 			definition = "Indicates whether the referred strategy is included.";
 			maxOccurs = 1;
@@ -235,7 +234,7 @@ public class PortfolioStrategy {
 		{
 			elementContext_lazy = () -> PortfolioStrategy.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MinimumInvestmentAmount";
 			definition = "Minimum amount that has to be invested in the specified strategy.";
 			maxOccurs = 1;
@@ -275,7 +274,7 @@ public class PortfolioStrategy {
 		{
 			elementContext_lazy = () -> PortfolioStrategy.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MinimumInvestmentRate";
 			definition = "Minimum percentage that has to be invested in the specified strategy.";
 			maxOccurs = 1;
@@ -315,7 +314,7 @@ public class PortfolioStrategy {
 		{
 			elementContext_lazy = () -> PortfolioStrategy.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MaximumInvestmentAmount";
 			definition = "Maximum amount that may be invested in the specified strategy.";
 			maxOccurs = 1;
@@ -355,7 +354,7 @@ public class PortfolioStrategy {
 		{
 			elementContext_lazy = () -> PortfolioStrategy.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MaximumInvestmentRate";
 			definition = "Maximum percentage that may be invested in the specified strategy.";
 			maxOccurs = 1;
@@ -394,7 +393,7 @@ public class PortfolioStrategy {
 		{
 			elementContext_lazy = () -> PortfolioStrategy.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "EffectivePeriod";
 			definition = "Period during which the investment guideline is valid.";
 			maxOccurs = 1;
@@ -436,7 +435,7 @@ public class PortfolioStrategy {
 		{
 			elementContext_lazy = () -> PortfolioStrategy.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DistributionPolicy";
 			definition = "Income policy relating to the fund, ie, if income is paid out or retained in the fund.";
 			maxOccurs = 1;
@@ -477,7 +476,7 @@ public class PortfolioStrategy {
 		{
 			elementContext_lazy = () -> PortfolioStrategy.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Description";
 			definition = "Free text description of the investment guideline, for example, rating requirements.";
 			maxOccurs = 1;
@@ -524,13 +523,13 @@ public class PortfolioStrategy {
 		{
 			elementContext_lazy = () -> PortfolioStrategy.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Definition";
 			definition = "Definition of the portfolio strategy.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.PortfolioStrategyDefinition.mmStrategy;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.PortfolioStrategyDefinition.mmObject();
 		}
 	};
@@ -538,17 +537,15 @@ public class PortfolioStrategy {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PortfolioStrategy";
 				definition = "Rough allocation of the portfolio.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Portfolio.mmStrategy, com.tools20022.repository.entity.PortfolioStrategyDefinition.mmStrategy);
 				subType_lazy = () -> Arrays.asList(JurisdictionStrategy.mmObject(), OrganisationStrategy.mmObject(), SectorStrategy.mmObject(), CurrencyStrategy.mmObject(), AssetClassStrategy.mmObject());
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.PortfolioStrategy.mmPortfolio, com.tools20022.repository.entity.PortfolioStrategy.mmInclusionIndicator,
-						com.tools20022.repository.entity.PortfolioStrategy.mmMinimumInvestmentAmount, com.tools20022.repository.entity.PortfolioStrategy.mmMinimumInvestmentRate,
-						com.tools20022.repository.entity.PortfolioStrategy.mmMaximumInvestmentAmount, com.tools20022.repository.entity.PortfolioStrategy.mmMaximumInvestmentRate,
-						com.tools20022.repository.entity.PortfolioStrategy.mmEffectivePeriod, com.tools20022.repository.entity.PortfolioStrategy.mmDistributionPolicy, com.tools20022.repository.entity.PortfolioStrategy.mmDescription,
-						com.tools20022.repository.entity.PortfolioStrategy.mmDefinition);
+				element_lazy = () -> Arrays.asList(PortfolioStrategy.mmPortfolio, PortfolioStrategy.mmInclusionIndicator, PortfolioStrategy.mmMinimumInvestmentAmount, PortfolioStrategy.mmMinimumInvestmentRate,
+						PortfolioStrategy.mmMaximumInvestmentAmount, PortfolioStrategy.mmMaximumInvestmentRate, PortfolioStrategy.mmEffectivePeriod, PortfolioStrategy.mmDistributionPolicy, PortfolioStrategy.mmDescription,
+						PortfolioStrategy.mmDefinition);
 			}
 		});
 		return mmObject_lazy.get();

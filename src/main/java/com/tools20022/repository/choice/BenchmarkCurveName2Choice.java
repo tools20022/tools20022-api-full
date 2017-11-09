@@ -20,7 +20,10 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.BenchmarkCurveName1Code;
+import com.tools20022.repository.entity.Curve;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification40;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -110,14 +113,14 @@ public class BenchmarkCurveName2Choice {
 	 */
 	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Curve.mmName;
+			businessElementTrace_lazy = () -> Curve.mmName;
 			componentContext_lazy = () -> BenchmarkCurveName2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Cd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Benchmark curve name expressed as an ISO 20022 code.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.BenchmarkCurveName4Choice.mmIndex);
+			nextVersions_lazy = () -> Arrays.asList(BenchmarkCurveName4Choice.mmIndex);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> BenchmarkCurveName1Code.mmObject();
@@ -165,14 +168,14 @@ public class BenchmarkCurveName2Choice {
 	 */
 	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Curve.mmName;
+			businessElementTrace_lazy = () -> Curve.mmName;
 			componentContext_lazy = () -> BenchmarkCurveName2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Benchmark curve name expressed as a proprietary code.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.BenchmarkCurveName4Choice.mmName);
+			nextVersions_lazy = () -> Arrays.asList(BenchmarkCurveName4Choice.mmName);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -183,9 +186,9 @@ public class BenchmarkCurveName2Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.BenchmarkCurveName2Choice.mmCode, com.tools20022.repository.choice.BenchmarkCurveName2Choice.mmProprietary);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(BenchmarkCurveName2Choice.mmCode, BenchmarkCurveName2Choice.mmProprietary);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "BenchmarkCurveName2Choice";
 				definition = "Choice of format for benchmark curve name.";
 				nextVersions_lazy = () -> Arrays.asList(BenchmarkCurveName4Choice.mmObject());

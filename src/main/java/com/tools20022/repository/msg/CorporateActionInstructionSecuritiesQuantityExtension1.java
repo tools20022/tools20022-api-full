@@ -19,8 +19,10 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.FinancialInstrumentQuantity15Choice;
 import com.tools20022.repository.datatype.Max350Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -95,7 +97,7 @@ public class CorporateActionInstructionSecuritiesQuantityExtension1 {
 			componentContext_lazy = () -> CorporateActionInstructionSecuritiesQuantityExtension1.mmObject();
 			isDerived = false;
 			xmlTag = "PlcAndNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "xPath to the element that is being extended.";
 			maxOccurs = 1;
@@ -137,7 +139,7 @@ public class CorporateActionInstructionSecuritiesQuantityExtension1 {
 			componentContext_lazy = () -> CorporateActionInstructionSecuritiesQuantityExtension1.mmObject();
 			isDerived = false;
 			xmlTag = "BdQty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BondQuantity";
 			definition = "Quantity of bonds in exchange of warrants.";
 			maxOccurs = 1;
@@ -149,10 +151,9 @@ public class CorporateActionInstructionSecuritiesQuantityExtension1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionInstructionSecuritiesQuantityExtension1.mmPlaceAndName,
-						com.tools20022.repository.msg.CorporateActionInstructionSecuritiesQuantityExtension1.mmBondQuantity);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(CorporateActionInstructionSecuritiesQuantityExtension1.mmPlaceAndName, CorporateActionInstructionSecuritiesQuantityExtension1.mmBondQuantity);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CorporateActionInstructionSecuritiesQuantityExtension1";
 				definition = "Provides additional information regarding corporate action instruction securities quantity.";
 			}

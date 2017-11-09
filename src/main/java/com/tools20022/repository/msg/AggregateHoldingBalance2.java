@@ -19,7 +19,10 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.SecuritiesBalance;
+import com.tools20022.repository.entity.Security;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -106,11 +109,11 @@ public class AggregateHoldingBalance2 {
 	 */
 	public static final MMMessageAssociationEnd mmFinancialInstrumentIdentification = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmIdentification;
+			businessElementTrace_lazy = () -> Security.mmIdentification;
 			componentContext_lazy = () -> AggregateHoldingBalance2.mmObject();
 			isDerived = false;
 			xmlTag = "FinInstrmId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentIdentification";
 			definition = "Identification of the financial instrument for which the balance information is specified.";
 			maxOccurs = 1;
@@ -159,7 +162,7 @@ public class AggregateHoldingBalance2 {
 			componentContext_lazy = () -> AggregateHoldingBalance2.mmObject();
 			isDerived = false;
 			xmlTag = "BalForFinInstrm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BalanceForFinancialInstrument";
 			definition = "Balance breakdown on the net position of a financial instrument.";
 			minOccurs = 1;
@@ -202,7 +205,7 @@ public class AggregateHoldingBalance2 {
 			componentContext_lazy = () -> AggregateHoldingBalance2.mmObject();
 			isDerived = false;
 			xmlTag = "SplmtryData";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryData";
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
 			minOccurs = 0;
@@ -214,11 +217,10 @@ public class AggregateHoldingBalance2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AggregateHoldingBalance2.mmFinancialInstrumentIdentification, com.tools20022.repository.msg.AggregateHoldingBalance2.mmBalanceForFinancialInstrument,
-						com.tools20022.repository.msg.AggregateHoldingBalance2.mmSupplementaryData);
+				messageElement_lazy = () -> Arrays.asList(AggregateHoldingBalance2.mmFinancialInstrumentIdentification, AggregateHoldingBalance2.mmBalanceForFinancialInstrument, AggregateHoldingBalance2.mmSupplementaryData);
 				trace_lazy = () -> SecuritiesBalance.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AggregateHoldingBalance2";
 				definition = "Overall holding position, in a single financial instrument, held in a securities account at a specified place of safekeeping.";
 			}

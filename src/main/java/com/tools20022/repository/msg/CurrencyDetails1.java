@@ -19,10 +19,12 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CurrencyCode;
 import com.tools20022.repository.datatype.Exact3NumericText;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.Number;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -112,10 +114,10 @@ public class CurrencyDetails1 {
 			componentContext_lazy = () -> CurrencyDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "AlphaCd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AlphaCode";
 			definition = "Alpha currency code (ISO 4217, 3 alphanumeric characters).";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CurrencyDetails2.mmAlphaCode);
+			nextVersions_lazy = () -> Arrays.asList(CurrencyDetails2.mmAlphaCode);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyCode.mmObject();
@@ -163,10 +165,10 @@ public class CurrencyDetails1 {
 			componentContext_lazy = () -> CurrencyDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "NmrcCd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NumericCode";
 			definition = "Numeric currency code (ISO 4217, 3 numeric characters).";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CurrencyDetails2.mmNumericCode);
+			nextVersions_lazy = () -> Arrays.asList(CurrencyDetails2.mmNumericCode);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Exact3NumericText.mmObject();
@@ -213,10 +215,10 @@ public class CurrencyDetails1 {
 			componentContext_lazy = () -> CurrencyDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "Dcml";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Decimal";
 			definition = "Maximal number of digits after the decimal separator for the currency.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CurrencyDetails2.mmDecimal);
+			nextVersions_lazy = () -> Arrays.asList(CurrencyDetails2.mmDecimal);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
@@ -262,10 +264,10 @@ public class CurrencyDetails1 {
 			componentContext_lazy = () -> CurrencyDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "Nm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Name";
 			definition = "Full name of the currency.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CurrencyDetails2.mmName);
+			nextVersions_lazy = () -> Arrays.asList(CurrencyDetails2.mmName);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -275,10 +277,9 @@ public class CurrencyDetails1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CurrencyDetails1.mmAlphaCode, com.tools20022.repository.msg.CurrencyDetails1.mmNumericCode, com.tools20022.repository.msg.CurrencyDetails1.mmDecimal,
-						com.tools20022.repository.msg.CurrencyDetails1.mmName);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(CurrencyDetails1.mmAlphaCode, CurrencyDetails1.mmNumericCode, CurrencyDetails1.mmDecimal, CurrencyDetails1.mmName);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CurrencyDetails1";
 				definition = "Details of a currency.";
 				nextVersions_lazy = () -> Arrays.asList(CurrencyDetails2.mmObject());

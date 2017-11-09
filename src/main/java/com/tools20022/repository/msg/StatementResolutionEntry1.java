@@ -20,10 +20,15 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.camt.ResolutionOfInvestigationV03;
 import com.tools20022.repository.choice.Purpose2Choice;
 import com.tools20022.repository.datatype.ActiveOrHistoricCurrencyAndAmount;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.CashEntry;
+import com.tools20022.repository.entity.Entry;
+import com.tools20022.repository.entity.PaymentObligation;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -123,7 +128,7 @@ public class StatementResolutionEntry1 {
 			componentContext_lazy = () -> StatementResolutionEntry1.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlGrpInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalGroupInformation";
 			definition = "Set of elements used to provide information on the original messsage.";
 			maxOccurs = 1;
@@ -168,7 +173,7 @@ public class StatementResolutionEntry1 {
 			componentContext_lazy = () -> StatementResolutionEntry1.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlStmtId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalStatementIdentification";
 			definition = "Unique identification, as assigned by the account servicer, to unambiguously identify the original statement.";
 			maxOccurs = 1;
@@ -214,11 +219,11 @@ public class StatementResolutionEntry1 {
 	 */
 	public static final MMMessageAttribute mmAccountServicerReference = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Entry.mmAccountServicerTransactionIdentification;
+			businessElementTrace_lazy = () -> Entry.mmAccountServicerTransactionIdentification;
 			componentContext_lazy = () -> StatementResolutionEntry1.mmObject();
 			isDerived = false;
 			xmlTag = "AcctSvcrRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountServicerReference";
 			definition = "Unique reference, as assigned by the account servicing institution, to unambiguously identify the entry.";
 			maxOccurs = 1;
@@ -268,11 +273,11 @@ public class StatementResolutionEntry1 {
 	 */
 	public static final MMMessageAttribute mmCorrectedAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashEntry.mmAmount;
+			businessElementTrace_lazy = () -> CashEntry.mmAmount;
 			componentContext_lazy = () -> StatementResolutionEntry1.mmObject();
 			isDerived = false;
 			xmlTag = "CrrctdAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorrectedAmount";
 			definition = "Corrected debit or credit amount, compared to the original entry where the amount is incorrect.\n\nUsage: This amount may only be present if an incorrect statement entry has been reported.";
 			maxOccurs = 1;
@@ -317,11 +322,11 @@ public class StatementResolutionEntry1 {
 	 */
 	public static final MMMessageAssociationEnd mmCharges = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashEntry.mmCharges;
+			businessElementTrace_lazy = () -> CashEntry.mmCharges;
 			componentContext_lazy = () -> StatementResolutionEntry1.mmObject();
 			isDerived = false;
 			xmlTag = "Chrgs";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Charges";
 			definition = "Provides information on the charges included in the original entry amount.";
 			minOccurs = 0;
@@ -369,11 +374,11 @@ public class StatementResolutionEntry1 {
 	 */
 	public static final MMMessageAssociationEnd mmPurpose = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentObligation.mmPurpose;
+			businessElementTrace_lazy = () -> PaymentObligation.mmPurpose;
 			componentContext_lazy = () -> StatementResolutionEntry1.mmObject();
 			isDerived = false;
 			xmlTag = "Purp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Purpose";
 			definition = "Underlying reason for the payment transaction.\nUsage: Purpose is used by the end-customers, that is initiating party, (ultimate) debtor, (ultimate) creditor to provide information concerning the nature of the payment. Purpose is a content element, which is not used for processing by any of the agents involved in the payment chain.";
 			maxOccurs = 1;
@@ -386,13 +391,12 @@ public class StatementResolutionEntry1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StatementResolutionEntry1.mmOriginalGroupInformation, com.tools20022.repository.msg.StatementResolutionEntry1.mmOriginalStatementIdentification,
-						com.tools20022.repository.msg.StatementResolutionEntry1.mmAccountServicerReference, com.tools20022.repository.msg.StatementResolutionEntry1.mmCorrectedAmount,
-						com.tools20022.repository.msg.StatementResolutionEntry1.mmCharges, com.tools20022.repository.msg.StatementResolutionEntry1.mmPurpose);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.ResolutionOfInvestigationV03.mmStatementDetails);
+				messageElement_lazy = () -> Arrays.asList(StatementResolutionEntry1.mmOriginalGroupInformation, StatementResolutionEntry1.mmOriginalStatementIdentification, StatementResolutionEntry1.mmAccountServicerReference,
+						StatementResolutionEntry1.mmCorrectedAmount, StatementResolutionEntry1.mmCharges, StatementResolutionEntry1.mmPurpose);
+				messageBuildingBlock_lazy = () -> Arrays.asList(ResolutionOfInvestigationV03.mmStatementDetails);
 				trace_lazy = () -> CashEntry.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "StatementResolutionEntry1";
 				definition = "Set of elements used to provide information on the statement entry for the resolution of the investigation.";
 			}

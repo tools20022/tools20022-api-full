@@ -17,15 +17,14 @@
 
 package com.tools20022.repository.entity;
 
-import com.tools20022.metamodel.MMBusinessAssociationEnd;
-import com.tools20022.metamodel.MMBusinessAttribute;
-import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.*;
 import com.tools20022.repository.choice.*;
 import com.tools20022.repository.codeset.QuantityCode;
 import com.tools20022.repository.codeset.UKTaxGroupUnitCode;
 import com.tools20022.repository.datatype.CurrencyAndAmount;
 import com.tools20022.repository.datatype.DecimalNumber;
 import com.tools20022.repository.datatype.PercentageRate;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -40,265 +39,174 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmUnit
- * SecuritiesQuantity.mmUnit}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmSecuritiesTransfer
- * SecuritiesQuantity.mmSecuritiesTransfer}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmSecurityIdentification
- * SecuritiesQuantity.mmSecurityIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmOrder
- * SecuritiesQuantity.mmOrder}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmGroup1Or2Units
- * SecuritiesQuantity.mmGroup1Or2Units}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmRelatedOrderExecution
- * SecuritiesQuantity.mmRelatedOrderExecution}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmSecuritiesSettlement
- * SecuritiesQuantity.mmSecuritiesSettlement}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmMinimumQuantityDebt
- * SecuritiesQuantity.mmMinimumQuantityDebt}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmLotBreakdown
- * SecuritiesQuantity.mmLotBreakdown}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmMinimumExercisableQuantitySecuritiesConversion
- * SecuritiesQuantity.mmMinimumExercisableQuantitySecuritiesConversion}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmMinimumExercisableMultipleQuantitySecuritiesConversion
- * SecuritiesQuantity.mmMinimumExercisableMultipleQuantitySecuritiesConversion}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmAggregateQuantityBalance
- * SecuritiesQuantity.mmAggregateQuantityBalance}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmSecuritiesProceedsDefinition
- * SecuritiesQuantity.mmSecuritiesProceedsDefinition}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmConditionalQuantitySecuritiesProceeds
- * SecuritiesQuantity.mmConditionalQuantitySecuritiesProceeds}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmOverAndAboveQuantitySecuritiesProceeds
- * SecuritiesQuantity.mmOverAndAboveQuantitySecuritiesProceeds}</li>
- * <li>{@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmEntry
- * SecuritiesQuantity.mmEntry}</li>
- * <li>{@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmCode
- * SecuritiesQuantity.mmCode}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmExpectedQuantitySecuritiesProceeds
- * SecuritiesQuantity.mmExpectedQuantitySecuritiesProceeds}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmStatusRelatedSecuritiesProceeds
- * SecuritiesQuantity.mmStatusRelatedSecuritiesProceeds}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmCorporateActionDistribution
- * SecuritiesQuantity.mmCorporateActionDistribution}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmRelatedEventForFractionalQuantity
- * SecuritiesQuantity.mmRelatedEventForFractionalQuantity}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmMaximumExercisableQuantitySecuritiesConversion
- * SecuritiesQuantity.mmMaximumExercisableQuantitySecuritiesConversion}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmBoardLotSecuritiesProceeds
- * SecuritiesQuantity.mmBoardLotSecuritiesProceeds}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmNewDenominationSecuritiesProceeds
- * SecuritiesQuantity.mmNewDenominationSecuritiesProceeds}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmBackEndOddLotBiddingConditions
- * SecuritiesQuantity.mmBackEndOddLotBiddingConditions}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmSecuritiesEntitlement
- * SecuritiesQuantity.mmSecuritiesEntitlement}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmCorporateActionEvent
- * SecuritiesQuantity.mmCorporateActionEvent}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmBiddingConditions
- * SecuritiesQuantity.mmBiddingConditions}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmLottery
- * SecuritiesQuantity.mmLottery}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmRelatedSubBalance
- * SecuritiesQuantity.mmRelatedSubBalance}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmAvailableQuantityBalance
- * SecuritiesQuantity.mmAvailableQuantityBalance}</li>
- * <li>{@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmTrade
- * SecuritiesQuantity.mmTrade}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmRatioDenominatorSecuritiesConversion
- * SecuritiesQuantity.mmRatioDenominatorSecuritiesConversion}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmRatioNumeratorSecuritiesConversion
- * SecuritiesQuantity.mmRatioNumeratorSecuritiesConversion}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmMinimumTradedQuantityMarket
- * SecuritiesQuantity.mmMinimumTradedQuantityMarket}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmMinimumDenominationDebt
- * SecuritiesQuantity.mmMinimumDenominationDebt}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmMinimumIncrementDebt
- * SecuritiesQuantity.mmMinimumIncrementDebt}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmRelatedOrder
- * SecuritiesQuantity.mmRelatedOrder}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmAllocation
- * SecuritiesQuantity.mmAllocation}</li>
- * <li>{@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmAmount
- * SecuritiesQuantity.mmAmount}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmDenominatorRatio
- * SecuritiesQuantity.mmDenominatorRatio}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmNumeratorRatio
- * SecuritiesQuantity.mmNumeratorRatio}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmSecuritiesTradeExecution
- * SecuritiesQuantity.mmSecuritiesTradeExecution}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmRelatedCorporateActionEvent
- * SecuritiesQuantity.mmRelatedCorporateActionEvent}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmCorporateActionElection
- * SecuritiesQuantity.mmCorporateActionElection}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmTaxVoucher
- * SecuritiesQuantity.mmTaxVoucher}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmRelatedBuyIn
- * SecuritiesQuantity.mmRelatedBuyIn}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmPreviousDayOrder
- * SecuritiesQuantity.mmPreviousDayOrder}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmLiquidity
- * SecuritiesQuantity.mmLiquidity}</li>
- * <li>{@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmRate
- * SecuritiesQuantity.mmRate}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmMinimumQuantityOrderParameters
- * SecuritiesQuantity.mmMinimumQuantityOrderParameters}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmMaximumQuantityRelatedQuote
- * SecuritiesQuantity.mmMaximumQuantityRelatedQuote}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmUnavailableQuantityBalance
- * SecuritiesQuantity.mmUnavailableQuantityBalance}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmMatchIncrementOrderParameters
- * SecuritiesQuantity.mmMatchIncrementOrderParameters}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmRelatedIssuance
- * SecuritiesQuantity.mmRelatedIssuance}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmPairoff
- * SecuritiesQuantity.mmPairoff}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmIssuance
- * SecuritiesQuantity.mmIssuance}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmIntermediateToUnderlyingDenominatorDistributionInformation
- * SecuritiesQuantity.
- * mmIntermediateToUnderlyingDenominatorDistributionInformation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmMaximumHoldingDistributionInformation
- * SecuritiesQuantity.mmMaximumHoldingDistributionInformation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmMaximumExercisableQuantityDistributionInformation
- * SecuritiesQuantity.mmMaximumExercisableQuantityDistributionInformation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmMinimumExercisableQuantityDistributionInformation
- * SecuritiesQuantity.mmMinimumExercisableQuantityDistributionInformation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmDistributedToUnderlyingDenominatorDistributionInformation
- * SecuritiesQuantity.
- * mmDistributedToUnderlyingDenominatorDistributionInformation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmIntermediateToUnderlyingNumeratorDistributionInformation
- * SecuritiesQuantity.mmIntermediateToUnderlyingNumeratorDistributionInformation
- * }</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmMinimumHoldingDistributionInformation
- * SecuritiesQuantity.mmMinimumHoldingDistributionInformation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmDistributedToUnderlyingNumeratorDistributionInformation
- * SecuritiesQuantity.mmDistributedToUnderlyingNumeratorDistributionInformation}
- * </li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmMaximumHoldingRelatedSecuritiesDistribution
- * SecuritiesQuantity.mmMaximumHoldingRelatedSecuritiesDistribution}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmIntermediateToUnderlyingNumeratorRelatedSecuritiesDistribution
- * SecuritiesQuantity.
- * mmIntermediateToUnderlyingNumeratorRelatedSecuritiesDistribution}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmIntermediateToUnderlyingDenominatorRelatedSecuritiesDistribution
- * SecuritiesQuantity.
- * mmIntermediateToUnderlyingDenominatorRelatedSecuritiesDistribution}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmDistributedToUnderlyingDenominatorRelatedSecuritiesDistribution
- * SecuritiesQuantity.
- * mmDistributedToUnderlyingDenominatorRelatedSecuritiesDistribution}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmDistributedToUnderlyingNumeratorRelatedSecuritiesDistribution
- * SecuritiesQuantity.
- * mmDistributedToUnderlyingNumeratorRelatedSecuritiesDistribution}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmMinimumHoldingRelatedSecuritiesDistribution
- * SecuritiesQuantity.mmMinimumHoldingRelatedSecuritiesDistribution}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmMaximumTradedQuantityMarket
- * SecuritiesQuantity.mmMaximumTradedQuantityMarket}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmQuantityRelatedQuote
- * SecuritiesQuantity.mmQuantityRelatedQuote}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmMinimumQuantityRelatedQuote
- * SecuritiesQuantity.mmMinimumQuantityRelatedQuote}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmNetAssetValueCalculation
- * SecuritiesQuantity.mmNetAssetValueCalculation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmSidePocket
- * SecuritiesQuantity.mmSidePocket}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmNetting
- * SecuritiesQuantity.mmNetting}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmRelatedOrderStatus
- * SecuritiesQuantity.mmRelatedOrderStatus}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmSecuritiesOrderStatus
- * SecuritiesQuantity.mmSecuritiesOrderStatus}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmRelatedTurnaroundSettlement
- * SecuritiesQuantity.mmRelatedTurnaroundSettlement}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmRelatedCashFlow
- * SecuritiesQuantity.mmRelatedCashFlow}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmPosition
- * SecuritiesQuantity.mmPosition}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmMaximumQuantityBiddingConditions
- * SecuritiesQuantity.mmMaximumQuantityBiddingConditions}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmFrontEndOddLotBiddingConditions
- * SecuritiesQuantity.mmFrontEndOddLotBiddingConditions}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmMinimumQuantityBiddingConditions
- * SecuritiesQuantity.mmMinimumQuantityBiddingConditions}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.Quantity12Choice
+ * Quantity12Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Unit2 Unit2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrumentQuantity1
+ * FinancialInstrumentQuantity1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Unit5 Unit5}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Unit4 Unit4}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.Quantity14Choice
+ * Quantity14Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Unit1 Unit1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Unit3 Unit3}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.FinancialInstrumentQuantity1Choice
+ * FinancialInstrumentQuantity1Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.OriginalAndCurrentQuantities1
+ * OriginalAndCurrentQuantities1}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.Quantity6Choice
+ * Quantity6Choice}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.FinancialInstrumentQuantity15Choice
+ * FinancialInstrumentQuantity15Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.OriginalAndCurrentQuantities4
+ * OriginalAndCurrentQuantities4}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.Quantity10Choice
+ * Quantity10Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.Quantity13Choice
+ * Quantity13Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.OriginalAndCurrentQuantities2
+ * OriginalAndCurrentQuantities2}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.Quantity4Choice
+ * Quantity4Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.Quantity3Choice
+ * Quantity3Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.Quantity2Choice
+ * Quantity2Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.Quantity5Choice
+ * Quantity5Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.OriginalAndCurrentQuantities3
+ * OriginalAndCurrentQuantities3}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.Quantity9Choice
+ * Quantity9Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.Quantity8Choice
+ * Quantity8Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.Quantity7Choice
+ * Quantity7Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.Quantity11Choice
+ * Quantity11Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PendingBalance1
+ * PendingBalance1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PendingBalance2
+ * PendingBalance2}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.FinancialInstrumentQuantity2Choice
+ * FinancialInstrumentQuantity2Choice}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.FinancialInstrumentQuantity14Choice
+ * FinancialInstrumentQuantity14Choice}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.FinancialInstrumentQuantity16Choice
+ * FinancialInstrumentQuantity16Choice}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.FinancialInstrumentQuantity17Choice
+ * FinancialInstrumentQuantity17Choice}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.FinancialInstrumentQuantity19Choice
+ * FinancialInstrumentQuantity19Choice}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.FinancialInstrumentQuantity20Choice
+ * FinancialInstrumentQuantity20Choice}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.FinancialInstrumentQuantity21Choice
+ * FinancialInstrumentQuantity21Choice}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.FinancialInstrumentQuantity22Choice
+ * FinancialInstrumentQuantity22Choice}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.FinancialInstrumentQuantityChoice
+ * FinancialInstrumentQuantityChoice}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.UnitOrFaceAmountChoice
+ * UnitOrFaceAmountChoice}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.QuantityOrAmount1Choice
+ * QuantityOrAmount1Choice}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.FinancialInstrumentQuantity18Choice
+ * FinancialInstrumentQuantity18Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ProprietaryQuantity1
+ * ProprietaryQuantity1}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.TransactionQuantities1Choice
+ * TransactionQuantities1Choice}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.TransactionQuantities2Choice
+ * TransactionQuantities2Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.UnitOrFaceAmount1Choice
+ * UnitOrFaceAmount1Choice}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.UnitOrFaceAmountOrCodeChoice
+ * UnitOrFaceAmountOrCodeChoice}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.UnitOrFaceAmountOrCode1Choice
+ * UnitOrFaceAmountOrCode1Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Quantity5 Quantity5}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Quantity6 Quantity6}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Quantity7 Quantity7}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Quantity8 Quantity8}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SecuritiesCompensation1
+ * SecuritiesCompensation1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SidePocketQuantityAndAmount1
+ * SidePocketQuantityAndAmount1}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.SidePocketUnitsOrAmountOrRate1Choice
+ * SidePocketUnitsOrAmountOrRate1Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrumentQuantity2
+ * FinancialInstrumentQuantity2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrumentQuantity3
+ * FinancialInstrumentQuantity3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrumentQuantity4
+ * FinancialInstrumentQuantity4}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.FinancialInstrumentQuantitySearch1Choice
+ * FinancialInstrumentQuantitySearch1Choice}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrumentQuantitySearch1
+ * FinancialInstrumentQuantitySearch1}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.QuantitySearch1Choice
+ * QuantitySearch1Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.Quantity1Choice
+ * Quantity1Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.Quantity15Choice
+ * Quantity15Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.Quantity16Choice
+ * Quantity16Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.OriginalAndCurrentQuantities5
+ * OriginalAndCurrentQuantities5}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Quantity11 Quantity11}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.Quantity17Choice
+ * Quantity17Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.Quantity18Choice
+ * Quantity18Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.OriginalAndCurrentQuantities6
+ * OriginalAndCurrentQuantities6}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.Quantity20Choice
+ * Quantity20Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PendingBalance3
+ * PendingBalance3}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.Quantity19Choice
+ * Quantity19Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Unit6 Unit6}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PendingBalance4
+ * PendingBalance4}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.Quantity22Choice
+ * Quantity22Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.Quantity23Choice
+ * Quantity23Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.Quantity21Choice
+ * Quantity21Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.OriginalAndCurrentQuantities7
+ * OriginalAndCurrentQuantities7}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Quantity12 Quantity12}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.Quantity40Choice
+ * Quantity40Choice}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.FinancialInstrumentQuantity25Choice
+ * FinancialInstrumentQuantity25Choice}</li>
  * </ul>
  * </li>
  * <li>
@@ -610,174 +518,265 @@ import java.util.List;
  * Quantity40Choice.mmQuantity}</li>
  * </ul>
  * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.choice.Quantity12Choice
- * Quantity12Choice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Unit2 Unit2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrumentQuantity1
- * FinancialInstrumentQuantity1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Unit5 Unit5}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Unit4 Unit4}</li>
- * <li>{@linkplain com.tools20022.repository.choice.Quantity14Choice
- * Quantity14Choice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Unit1 Unit1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Unit3 Unit3}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmUnit
+ * SecuritiesQuantity.mmUnit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.FinancialInstrumentQuantity1Choice
- * FinancialInstrumentQuantity1Choice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.OriginalAndCurrentQuantities1
- * OriginalAndCurrentQuantities1}</li>
- * <li>{@linkplain com.tools20022.repository.choice.Quantity6Choice
- * Quantity6Choice}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmSecuritiesTransfer
+ * SecuritiesQuantity.mmSecuritiesTransfer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.FinancialInstrumentQuantity15Choice
- * FinancialInstrumentQuantity15Choice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.OriginalAndCurrentQuantities4
- * OriginalAndCurrentQuantities4}</li>
- * <li>{@linkplain com.tools20022.repository.choice.Quantity10Choice
- * Quantity10Choice}</li>
- * <li>{@linkplain com.tools20022.repository.choice.Quantity13Choice
- * Quantity13Choice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.OriginalAndCurrentQuantities2
- * OriginalAndCurrentQuantities2}</li>
- * <li>{@linkplain com.tools20022.repository.choice.Quantity4Choice
- * Quantity4Choice}</li>
- * <li>{@linkplain com.tools20022.repository.choice.Quantity3Choice
- * Quantity3Choice}</li>
- * <li>{@linkplain com.tools20022.repository.choice.Quantity2Choice
- * Quantity2Choice}</li>
- * <li>{@linkplain com.tools20022.repository.choice.Quantity5Choice
- * Quantity5Choice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.OriginalAndCurrentQuantities3
- * OriginalAndCurrentQuantities3}</li>
- * <li>{@linkplain com.tools20022.repository.choice.Quantity9Choice
- * Quantity9Choice}</li>
- * <li>{@linkplain com.tools20022.repository.choice.Quantity8Choice
- * Quantity8Choice}</li>
- * <li>{@linkplain com.tools20022.repository.choice.Quantity7Choice
- * Quantity7Choice}</li>
- * <li>{@linkplain com.tools20022.repository.choice.Quantity11Choice
- * Quantity11Choice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PendingBalance1
- * PendingBalance1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PendingBalance2
- * PendingBalance2}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmSecurityIdentification
+ * SecuritiesQuantity.mmSecurityIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmOrder
+ * SecuritiesQuantity.mmOrder}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.FinancialInstrumentQuantity2Choice
- * FinancialInstrumentQuantity2Choice}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmGroup1Or2Units
+ * SecuritiesQuantity.mmGroup1Or2Units}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.FinancialInstrumentQuantity14Choice
- * FinancialInstrumentQuantity14Choice}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmRelatedOrderExecution
+ * SecuritiesQuantity.mmRelatedOrderExecution}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.FinancialInstrumentQuantity16Choice
- * FinancialInstrumentQuantity16Choice}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmSecuritiesSettlement
+ * SecuritiesQuantity.mmSecuritiesSettlement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.FinancialInstrumentQuantity17Choice
- * FinancialInstrumentQuantity17Choice}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmMinimumQuantityDebt
+ * SecuritiesQuantity.mmMinimumQuantityDebt}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.FinancialInstrumentQuantity19Choice
- * FinancialInstrumentQuantity19Choice}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmLotBreakdown
+ * SecuritiesQuantity.mmLotBreakdown}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.FinancialInstrumentQuantity20Choice
- * FinancialInstrumentQuantity20Choice}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmMinimumExercisableQuantitySecuritiesConversion
+ * SecuritiesQuantity.mmMinimumExercisableQuantitySecuritiesConversion}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.FinancialInstrumentQuantity21Choice
- * FinancialInstrumentQuantity21Choice}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmMinimumExercisableMultipleQuantitySecuritiesConversion
+ * SecuritiesQuantity.mmMinimumExercisableMultipleQuantitySecuritiesConversion}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.FinancialInstrumentQuantity22Choice
- * FinancialInstrumentQuantity22Choice}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmAggregateQuantityBalance
+ * SecuritiesQuantity.mmAggregateQuantityBalance}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.FinancialInstrumentQuantityChoice
- * FinancialInstrumentQuantityChoice}</li>
- * <li>{@linkplain com.tools20022.repository.choice.UnitOrFaceAmountChoice
- * UnitOrFaceAmountChoice}</li>
- * <li>{@linkplain com.tools20022.repository.choice.QuantityOrAmount1Choice
- * QuantityOrAmount1Choice}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmSecuritiesProceedsDefinition
+ * SecuritiesQuantity.mmSecuritiesProceedsDefinition}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.FinancialInstrumentQuantity18Choice
- * FinancialInstrumentQuantity18Choice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ProprietaryQuantity1
- * ProprietaryQuantity1}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmConditionalQuantitySecuritiesProceeds
+ * SecuritiesQuantity.mmConditionalQuantitySecuritiesProceeds}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.TransactionQuantities1Choice
- * TransactionQuantities1Choice}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmOverAndAboveQuantitySecuritiesProceeds
+ * SecuritiesQuantity.mmOverAndAboveQuantitySecuritiesProceeds}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmEntry
+ * SecuritiesQuantity.mmEntry}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmCode
+ * SecuritiesQuantity.mmCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.TransactionQuantities2Choice
- * TransactionQuantities2Choice}</li>
- * <li>{@linkplain com.tools20022.repository.choice.UnitOrFaceAmount1Choice
- * UnitOrFaceAmount1Choice}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmExpectedQuantitySecuritiesProceeds
+ * SecuritiesQuantity.mmExpectedQuantitySecuritiesProceeds}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.UnitOrFaceAmountOrCodeChoice
- * UnitOrFaceAmountOrCodeChoice}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmStatusRelatedSecuritiesProceeds
+ * SecuritiesQuantity.mmStatusRelatedSecuritiesProceeds}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.UnitOrFaceAmountOrCode1Choice
- * UnitOrFaceAmountOrCode1Choice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Quantity5 Quantity5}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Quantity6 Quantity6}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Quantity7 Quantity7}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Quantity8 Quantity8}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SecuritiesCompensation1
- * SecuritiesCompensation1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SidePocketQuantityAndAmount1
- * SidePocketQuantityAndAmount1}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmCorporateActionDistribution
+ * SecuritiesQuantity.mmCorporateActionDistribution}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SidePocketUnitsOrAmountOrRate1Choice
- * SidePocketUnitsOrAmountOrRate1Choice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrumentQuantity2
- * FinancialInstrumentQuantity2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrumentQuantity3
- * FinancialInstrumentQuantity3}</li>
- * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrumentQuantity4
- * FinancialInstrumentQuantity4}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmRelatedEventForFractionalQuantity
+ * SecuritiesQuantity.mmRelatedEventForFractionalQuantity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.FinancialInstrumentQuantitySearch1Choice
- * FinancialInstrumentQuantitySearch1Choice}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmMaximumExercisableQuantitySecuritiesConversion
+ * SecuritiesQuantity.mmMaximumExercisableQuantitySecuritiesConversion}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrumentQuantitySearch1
- * FinancialInstrumentQuantitySearch1}</li>
- * <li>{@linkplain com.tools20022.repository.choice.QuantitySearch1Choice
- * QuantitySearch1Choice}</li>
- * <li>{@linkplain com.tools20022.repository.choice.Quantity1Choice
- * Quantity1Choice}</li>
- * <li>{@linkplain com.tools20022.repository.choice.Quantity15Choice
- * Quantity15Choice}</li>
- * <li>{@linkplain com.tools20022.repository.choice.Quantity16Choice
- * Quantity16Choice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.OriginalAndCurrentQuantities5
- * OriginalAndCurrentQuantities5}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Quantity11 Quantity11}</li>
- * <li>{@linkplain com.tools20022.repository.choice.Quantity17Choice
- * Quantity17Choice}</li>
- * <li>{@linkplain com.tools20022.repository.choice.Quantity18Choice
- * Quantity18Choice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.OriginalAndCurrentQuantities6
- * OriginalAndCurrentQuantities6}</li>
- * <li>{@linkplain com.tools20022.repository.choice.Quantity20Choice
- * Quantity20Choice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PendingBalance3
- * PendingBalance3}</li>
- * <li>{@linkplain com.tools20022.repository.choice.Quantity19Choice
- * Quantity19Choice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Unit6 Unit6}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PendingBalance4
- * PendingBalance4}</li>
- * <li>{@linkplain com.tools20022.repository.choice.Quantity22Choice
- * Quantity22Choice}</li>
- * <li>{@linkplain com.tools20022.repository.choice.Quantity23Choice
- * Quantity23Choice}</li>
- * <li>{@linkplain com.tools20022.repository.choice.Quantity21Choice
- * Quantity21Choice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.OriginalAndCurrentQuantities7
- * OriginalAndCurrentQuantities7}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Quantity12 Quantity12}</li>
- * <li>{@linkplain com.tools20022.repository.choice.Quantity40Choice
- * Quantity40Choice}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmBoardLotSecuritiesProceeds
+ * SecuritiesQuantity.mmBoardLotSecuritiesProceeds}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.FinancialInstrumentQuantity25Choice
- * FinancialInstrumentQuantity25Choice}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmNewDenominationSecuritiesProceeds
+ * SecuritiesQuantity.mmNewDenominationSecuritiesProceeds}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmBackEndOddLotBiddingConditions
+ * SecuritiesQuantity.mmBackEndOddLotBiddingConditions}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmSecuritiesEntitlement
+ * SecuritiesQuantity.mmSecuritiesEntitlement}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmCorporateActionEvent
+ * SecuritiesQuantity.mmCorporateActionEvent}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmBiddingConditions
+ * SecuritiesQuantity.mmBiddingConditions}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmLottery
+ * SecuritiesQuantity.mmLottery}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmRelatedSubBalance
+ * SecuritiesQuantity.mmRelatedSubBalance}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmAvailableQuantityBalance
+ * SecuritiesQuantity.mmAvailableQuantityBalance}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmTrade
+ * SecuritiesQuantity.mmTrade}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmRatioDenominatorSecuritiesConversion
+ * SecuritiesQuantity.mmRatioDenominatorSecuritiesConversion}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmRatioNumeratorSecuritiesConversion
+ * SecuritiesQuantity.mmRatioNumeratorSecuritiesConversion}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmMinimumTradedQuantityMarket
+ * SecuritiesQuantity.mmMinimumTradedQuantityMarket}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmMinimumDenominationDebt
+ * SecuritiesQuantity.mmMinimumDenominationDebt}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmMinimumIncrementDebt
+ * SecuritiesQuantity.mmMinimumIncrementDebt}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmRelatedOrder
+ * SecuritiesQuantity.mmRelatedOrder}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmAllocation
+ * SecuritiesQuantity.mmAllocation}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmAmount
+ * SecuritiesQuantity.mmAmount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmDenominatorRatio
+ * SecuritiesQuantity.mmDenominatorRatio}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmNumeratorRatio
+ * SecuritiesQuantity.mmNumeratorRatio}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmSecuritiesTradeExecution
+ * SecuritiesQuantity.mmSecuritiesTradeExecution}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmRelatedCorporateActionEvent
+ * SecuritiesQuantity.mmRelatedCorporateActionEvent}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmCorporateActionElection
+ * SecuritiesQuantity.mmCorporateActionElection}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmTaxVoucher
+ * SecuritiesQuantity.mmTaxVoucher}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmRelatedBuyIn
+ * SecuritiesQuantity.mmRelatedBuyIn}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmPreviousDayOrder
+ * SecuritiesQuantity.mmPreviousDayOrder}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmLiquidity
+ * SecuritiesQuantity.mmLiquidity}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmRate
+ * SecuritiesQuantity.mmRate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmMinimumQuantityOrderParameters
+ * SecuritiesQuantity.mmMinimumQuantityOrderParameters}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmMaximumQuantityRelatedQuote
+ * SecuritiesQuantity.mmMaximumQuantityRelatedQuote}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmUnavailableQuantityBalance
+ * SecuritiesQuantity.mmUnavailableQuantityBalance}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmMatchIncrementOrderParameters
+ * SecuritiesQuantity.mmMatchIncrementOrderParameters}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmRelatedIssuance
+ * SecuritiesQuantity.mmRelatedIssuance}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmPairoff
+ * SecuritiesQuantity.mmPairoff}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmIssuance
+ * SecuritiesQuantity.mmIssuance}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmIntermediateToUnderlyingDenominatorDistributionInformation
+ * SecuritiesQuantity.
+ * mmIntermediateToUnderlyingDenominatorDistributionInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmMaximumHoldingDistributionInformation
+ * SecuritiesQuantity.mmMaximumHoldingDistributionInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmMaximumExercisableQuantityDistributionInformation
+ * SecuritiesQuantity.mmMaximumExercisableQuantityDistributionInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmMinimumExercisableQuantityDistributionInformation
+ * SecuritiesQuantity.mmMinimumExercisableQuantityDistributionInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmDistributedToUnderlyingDenominatorDistributionInformation
+ * SecuritiesQuantity.
+ * mmDistributedToUnderlyingDenominatorDistributionInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmIntermediateToUnderlyingNumeratorDistributionInformation
+ * SecuritiesQuantity.mmIntermediateToUnderlyingNumeratorDistributionInformation
+ * }</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmMinimumHoldingDistributionInformation
+ * SecuritiesQuantity.mmMinimumHoldingDistributionInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmDistributedToUnderlyingNumeratorDistributionInformation
+ * SecuritiesQuantity.mmDistributedToUnderlyingNumeratorDistributionInformation}
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmMaximumHoldingRelatedSecuritiesDistribution
+ * SecuritiesQuantity.mmMaximumHoldingRelatedSecuritiesDistribution}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmIntermediateToUnderlyingNumeratorRelatedSecuritiesDistribution
+ * SecuritiesQuantity.
+ * mmIntermediateToUnderlyingNumeratorRelatedSecuritiesDistribution}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmIntermediateToUnderlyingDenominatorRelatedSecuritiesDistribution
+ * SecuritiesQuantity.
+ * mmIntermediateToUnderlyingDenominatorRelatedSecuritiesDistribution}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmDistributedToUnderlyingDenominatorRelatedSecuritiesDistribution
+ * SecuritiesQuantity.
+ * mmDistributedToUnderlyingDenominatorRelatedSecuritiesDistribution}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmDistributedToUnderlyingNumeratorRelatedSecuritiesDistribution
+ * SecuritiesQuantity.
+ * mmDistributedToUnderlyingNumeratorRelatedSecuritiesDistribution}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmMinimumHoldingRelatedSecuritiesDistribution
+ * SecuritiesQuantity.mmMinimumHoldingRelatedSecuritiesDistribution}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmMaximumTradedQuantityMarket
+ * SecuritiesQuantity.mmMaximumTradedQuantityMarket}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmQuantityRelatedQuote
+ * SecuritiesQuantity.mmQuantityRelatedQuote}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmMinimumQuantityRelatedQuote
+ * SecuritiesQuantity.mmMinimumQuantityRelatedQuote}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmNetAssetValueCalculation
+ * SecuritiesQuantity.mmNetAssetValueCalculation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmSidePocket
+ * SecuritiesQuantity.mmSidePocket}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmNetting
+ * SecuritiesQuantity.mmNetting}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmRelatedOrderStatus
+ * SecuritiesQuantity.mmRelatedOrderStatus}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmSecuritiesOrderStatus
+ * SecuritiesQuantity.mmSecuritiesOrderStatus}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmRelatedTurnaroundSettlement
+ * SecuritiesQuantity.mmRelatedTurnaroundSettlement}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmRelatedCashFlow
+ * SecuritiesQuantity.mmRelatedCashFlow}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmPosition
+ * SecuritiesQuantity.mmPosition}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmMaximumQuantityBiddingConditions
+ * SecuritiesQuantity.mmMaximumQuantityBiddingConditions}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmFrontEndOddLotBiddingConditions
+ * SecuritiesQuantity.mmFrontEndOddLotBiddingConditions}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmMinimumQuantityBiddingConditions
+ * SecuritiesQuantity.mmMinimumQuantityBiddingConditions}</li>
  * </ul>
  * </li>
  * <li>
@@ -1000,31 +999,21 @@ public class SecuritiesQuantity {
 	 */
 	public static final MMBusinessAttribute mmUnit = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BlockedHoldingDetails1.mmPartialHoldingUnits, com.tools20022.repository.choice.Quantity12Choice.mmUnit, com.tools20022.repository.msg.Unit2.mmGroup1Number,
-					com.tools20022.repository.msg.Unit2.mmGroup2Number, com.tools20022.repository.msg.FinancialInstrumentQuantity1.mmUnit, com.tools20022.repository.msg.Unit5.mmUnitsNumber,
-					com.tools20022.repository.choice.Quantity14Choice.mmUnit, com.tools20022.repository.msg.Unit1.mmUnitsNumber, com.tools20022.repository.msg.Unit3.mmUnitsNumber,
-					com.tools20022.repository.choice.FinancialInstrumentQuantity1Choice.mmUnit, com.tools20022.repository.choice.FinancialInstrumentQuantity15Choice.mmUnit,
-					com.tools20022.repository.choice.FinancialInstrumentQuantity2Choice.mmUnit, com.tools20022.repository.choice.FinancialInstrumentQuantity14Choice.mmUnit,
-					com.tools20022.repository.choice.FinancialInstrumentQuantity16Choice.mmUnit, com.tools20022.repository.choice.FinancialInstrumentQuantity17Choice.mmUnit,
-					com.tools20022.repository.choice.FinancialInstrumentQuantity19Choice.mmUnit, com.tools20022.repository.choice.FinancialInstrumentQuantity20Choice.mmUnit,
-					com.tools20022.repository.choice.FinancialInstrumentQuantity21Choice.mmUnit, com.tools20022.repository.choice.FinancialInstrumentQuantity22Choice.mmUnit,
-					com.tools20022.repository.choice.FinancialInstrumentQuantityChoice.mmUnit, com.tools20022.repository.choice.UnitOrFaceAmountChoice.mmUnit, com.tools20022.repository.choice.FinancialInstrumentQuantity18Choice.mmUnit,
-					com.tools20022.repository.msg.CashInForecast2.mmSubTotalUnitsNumber, com.tools20022.repository.msg.CashOutForecast2.mmSubTotalUnitsNumber, com.tools20022.repository.msg.NetCashForecast1.mmNetUnitsNumber,
-					com.tools20022.repository.msg.CashInForecast4.mmSubTotalUnitsNumber, com.tools20022.repository.msg.CashOutForecast4.mmSubTotalUnitsNumber, com.tools20022.repository.msg.NetCashForecast2.mmNetUnitsNumber,
-					com.tools20022.repository.msg.NetCashForecast3.mmNetUnitsNumber, com.tools20022.repository.msg.FundCashInBreakdown1.mmUnitsNumber, com.tools20022.repository.msg.CashInForecast1.mmSubTotalUnitsNumber,
-					com.tools20022.repository.msg.FundCashOutBreakdown1.mmUnitsNumber, com.tools20022.repository.msg.CashOutForecast1.mmSubTotalUnitsNumber, com.tools20022.repository.msg.FundCashInBreakdown2.mmUnitsNumber,
-					com.tools20022.repository.msg.CashInForecast3.mmSubTotalUnitsNumber, com.tools20022.repository.msg.FundCashOutBreakdown2.mmUnitsNumber, com.tools20022.repository.msg.CashOutForecast3.mmSubTotalUnitsNumber,
-					com.tools20022.repository.choice.UnitOrFaceAmount1Choice.mmUnit, com.tools20022.repository.msg.VotingPartyAndInstruction.mmQuantityOfSecurity, com.tools20022.repository.msg.RequestInformation.mmQuantityOfSecurity,
-					com.tools20022.repository.choice.UnitOrFaceAmountOrCodeChoice.mmUnit, com.tools20022.repository.choice.UnitOrFaceAmountOrCode1Choice.mmUnit, com.tools20022.repository.msg.Quantity2.mmValue,
-					com.tools20022.repository.msg.SidePocketQuantityAndAmount1.mmUnitsNumber, com.tools20022.repository.msg.FinancialInstrumentQuantity2.mmUnitsNumber,
-					com.tools20022.repository.msg.FinancialInstrumentQuantity3.mmUnitsNumber, com.tools20022.repository.msg.FinancialInstrumentQuantity4.mmUnit,
-					com.tools20022.repository.choice.FinancialInstrumentQuantitySearch1Choice.mmUnit, com.tools20022.repository.msg.CashOutForecast5.mmSubTotalUnitsNumber, com.tools20022.repository.msg.FundCashOutBreakdown3.mmUnitsNumber,
-					com.tools20022.repository.msg.NetCashForecast4.mmNetUnitsNumber, com.tools20022.repository.msg.CashInForecast5.mmSubTotalUnitsNumber, com.tools20022.repository.msg.FundCashInBreakdown3.mmUnitsNumber,
-					com.tools20022.repository.msg.CashOutForecast6.mmSubTotalUnitsNumber, com.tools20022.repository.msg.CashInForecast6.mmSubTotalUnitsNumber, com.tools20022.repository.msg.NetCashForecast5.mmNetUnitsNumber,
-					com.tools20022.repository.msg.Unit6.mmUnitsNumber, com.tools20022.repository.msg.BlockedHoldingDetails2.mmPartialHoldingUnits, com.tools20022.repository.choice.FinancialInstrumentQuantity25Choice.mmUnit);
+			derivation_lazy = () -> Arrays.asList(BlockedHoldingDetails1.mmPartialHoldingUnits, Quantity12Choice.mmUnit, Unit2.mmGroup1Number, Unit2.mmGroup2Number, FinancialInstrumentQuantity1.mmUnit, Unit5.mmUnitsNumber,
+					Quantity14Choice.mmUnit, Unit1.mmUnitsNumber, Unit3.mmUnitsNumber, FinancialInstrumentQuantity1Choice.mmUnit, FinancialInstrumentQuantity15Choice.mmUnit, FinancialInstrumentQuantity2Choice.mmUnit,
+					FinancialInstrumentQuantity14Choice.mmUnit, FinancialInstrumentQuantity16Choice.mmUnit, FinancialInstrumentQuantity17Choice.mmUnit, FinancialInstrumentQuantity19Choice.mmUnit, FinancialInstrumentQuantity20Choice.mmUnit,
+					FinancialInstrumentQuantity21Choice.mmUnit, FinancialInstrumentQuantity22Choice.mmUnit, FinancialInstrumentQuantityChoice.mmUnit, UnitOrFaceAmountChoice.mmUnit, FinancialInstrumentQuantity18Choice.mmUnit,
+					CashInForecast2.mmSubTotalUnitsNumber, CashOutForecast2.mmSubTotalUnitsNumber, NetCashForecast1.mmNetUnitsNumber, CashInForecast4.mmSubTotalUnitsNumber, CashOutForecast4.mmSubTotalUnitsNumber,
+					NetCashForecast2.mmNetUnitsNumber, NetCashForecast3.mmNetUnitsNumber, FundCashInBreakdown1.mmUnitsNumber, CashInForecast1.mmSubTotalUnitsNumber, FundCashOutBreakdown1.mmUnitsNumber,
+					CashOutForecast1.mmSubTotalUnitsNumber, FundCashInBreakdown2.mmUnitsNumber, CashInForecast3.mmSubTotalUnitsNumber, FundCashOutBreakdown2.mmUnitsNumber, CashOutForecast3.mmSubTotalUnitsNumber,
+					UnitOrFaceAmount1Choice.mmUnit, VotingPartyAndInstruction.mmQuantityOfSecurity, RequestInformation.mmQuantityOfSecurity, UnitOrFaceAmountOrCodeChoice.mmUnit, UnitOrFaceAmountOrCode1Choice.mmUnit, Quantity2.mmValue,
+					SidePocketQuantityAndAmount1.mmUnitsNumber, FinancialInstrumentQuantity2.mmUnitsNumber, FinancialInstrumentQuantity3.mmUnitsNumber, FinancialInstrumentQuantity4.mmUnit, FinancialInstrumentQuantitySearch1Choice.mmUnit,
+					CashOutForecast5.mmSubTotalUnitsNumber, FundCashOutBreakdown3.mmUnitsNumber, NetCashForecast4.mmNetUnitsNumber, CashInForecast5.mmSubTotalUnitsNumber, FundCashInBreakdown3.mmUnitsNumber,
+					CashOutForecast6.mmSubTotalUnitsNumber, CashInForecast6.mmSubTotalUnitsNumber, NetCashForecast5.mmNetUnitsNumber, Unit6.mmUnitsNumber, BlockedHoldingDetails2.mmPartialHoldingUnits,
+					FinancialInstrumentQuantity25Choice.mmUnit);
 			elementContext_lazy = () -> SecuritiesQuantity.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Unit";
 			definition = "Quantity of a security.";
 			maxOccurs = 1;
@@ -1070,13 +1059,13 @@ public class SecuritiesQuantity {
 		{
 			elementContext_lazy = () -> SecuritiesQuantity.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SecuritiesTransfer";
 			definition = "Transfer of a specific quantity of securities.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesTransfer.mmTransferredQuantity;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SecuritiesTransfer.mmObject();
 		}
 	};
@@ -1117,13 +1106,13 @@ public class SecuritiesQuantity {
 		{
 			elementContext_lazy = () -> SecuritiesQuantity.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SecurityIdentification";
 			definition = "Identifies the security.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.Security.mmSecuritiesQuantity;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 		}
 	};
@@ -1165,13 +1154,13 @@ public class SecuritiesQuantity {
 		{
 			elementContext_lazy = () -> SecuritiesQuantity.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Order";
 			definition = "Order for which a number of units is specified.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrder.mmUnitsNumber;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrder.mmObject();
 		}
 	};
@@ -1277,17 +1266,14 @@ public class SecuritiesQuantity {
 	 */
 	public static final MMBusinessAttribute mmGroup1Or2Units = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Unit5.mmGroup1Or2Units, com.tools20022.repository.msg.Unit1.mmGroup1Or2Units, com.tools20022.repository.msg.Unit3.mmGroup1Or2Units,
-					com.tools20022.repository.msg.RedemptionOrder3.mmGroup1Or2Units, com.tools20022.repository.msg.RedemptionOrder5.mmGroup1Or2Units, com.tools20022.repository.msg.RedemptionExecution3.mmGroup1Or2Units,
-					com.tools20022.repository.msg.RedemptionExecution5.mmGroup1Or2Units, com.tools20022.repository.msg.RedemptionOrder7.mmGroup1Or2Units, com.tools20022.repository.msg.RedemptionOrder4.mmGroup1Or2Units,
-					com.tools20022.repository.msg.RedemptionOrder6.mmGroup1Or2Units, com.tools20022.repository.msg.RedemptionExecution4.mmGroup1Or2Units, com.tools20022.repository.msg.RedemptionExecution6.mmGroup1Or2Units,
-					com.tools20022.repository.msg.RedemptionOrder8.mmGroup1Or2Units, com.tools20022.repository.msg.SwitchRedemptionLegOrder2.mmGroup1Or2Units, com.tools20022.repository.msg.SwitchRedemptionLegOrder3.mmGroup1Or2Units,
-					com.tools20022.repository.msg.SwitchRedemptionLegExecution2.mmGroup1Or2Units, com.tools20022.repository.msg.SwitchRedemptionLegExecution3.mmGroup1Or2Units, com.tools20022.repository.msg.Unit6.mmGroup1Or2Units,
-					com.tools20022.repository.msg.RedemptionOrder14.mmGroup1Or2Units, com.tools20022.repository.msg.SwitchRedemptionLegOrder6.mmGroup1Or2Units, com.tools20022.repository.msg.RedemptionOrder15.mmGroup1Or2Units,
-					com.tools20022.repository.msg.RedemptionExecution16.mmGroup1Or2Units, com.tools20022.repository.msg.RedemptionExecution15.mmGroup1Or2Units, com.tools20022.repository.msg.SwitchRedemptionLegExecution4.mmGroup1Or2Units);
+			derivation_lazy = () -> Arrays.asList(Unit5.mmGroup1Or2Units, Unit1.mmGroup1Or2Units, Unit3.mmGroup1Or2Units, RedemptionOrder3.mmGroup1Or2Units, RedemptionOrder5.mmGroup1Or2Units, RedemptionExecution3.mmGroup1Or2Units,
+					RedemptionExecution5.mmGroup1Or2Units, RedemptionOrder7.mmGroup1Or2Units, RedemptionOrder4.mmGroup1Or2Units, RedemptionOrder6.mmGroup1Or2Units, RedemptionExecution4.mmGroup1Or2Units,
+					RedemptionExecution6.mmGroup1Or2Units, RedemptionOrder8.mmGroup1Or2Units, SwitchRedemptionLegOrder2.mmGroup1Or2Units, SwitchRedemptionLegOrder3.mmGroup1Or2Units, SwitchRedemptionLegExecution2.mmGroup1Or2Units,
+					SwitchRedemptionLegExecution3.mmGroup1Or2Units, Unit6.mmGroup1Or2Units, RedemptionOrder14.mmGroup1Or2Units, SwitchRedemptionLegOrder6.mmGroup1Or2Units, RedemptionOrder15.mmGroup1Or2Units,
+					RedemptionExecution16.mmGroup1Or2Units, RedemptionExecution15.mmGroup1Or2Units, SwitchRedemptionLegExecution4.mmGroup1Or2Units);
 			elementContext_lazy = () -> SecuritiesQuantity.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Group1Or2Units";
 			definition = "Tax group to which the purchased units belong.";
 			maxOccurs = 1;
@@ -1335,13 +1321,13 @@ public class SecuritiesQuantity {
 		{
 			elementContext_lazy = () -> SecuritiesQuantity.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedOrderExecution";
 			definition = "Order execution process for which a number of units is specified.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrderExecution.mmUnitsNumber;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrderExecution.mmObject();
 		}
 	};
@@ -1384,13 +1370,13 @@ public class SecuritiesQuantity {
 		{
 			elementContext_lazy = () -> SecuritiesQuantity.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SecuritiesSettlement";
 			definition = "Settlement of a specific amount of securities.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmSettlementQuantity;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmObject();
 		}
 	};
@@ -1431,13 +1417,13 @@ public class SecuritiesQuantity {
 		{
 			elementContext_lazy = () -> SecuritiesQuantity.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MinimumQuantityDebt";
 			definition = "Security for which a minimum quantity is specified.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.Security.mmMinimumQuantity;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 		}
 	};
@@ -1893,75 +1879,47 @@ public class SecuritiesQuantity {
 	 */
 	public static final MMBusinessAssociationEnd mmLotBreakdown = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Unit4.mmUnitDetails, com.tools20022.repository.msg.QuantityAndAccount29.mmQuantityBreakdown,
-					com.tools20022.repository.msg.QuantityAndAccount30.mmQuantityBreakdown, com.tools20022.repository.msg.QuantityAndAccount32.mmQuantityBreakdown, com.tools20022.repository.msg.QuantityAndAccount33.mmQuantityBreakdown,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes4.mmQuantityBreakdown, com.tools20022.repository.msg.FinancialInstrumentAttributes13.mmQuantityBreakdown,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes21.mmQuantityBreakdown, com.tools20022.repository.msg.FinancialInstrumentAttributes26.mmQuantityBreakdown,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes36.mmQuantityBreakdown, com.tools20022.repository.msg.SecuritiesSubBalanceTypeAndQuantityBreakdown1.mmQuantityBreakdown,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes42.mmQuantityBreakdown, com.tools20022.repository.msg.SecuritiesSubBalanceTypeAndQuantityBreakdown2.mmQuantityBreakdown,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes27.mmQuantityBreakdown, com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace7.mmQuantityBreakdown,
-					com.tools20022.repository.msg.AggregateBalanceInformation8.mmQuantityBreakdown, com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace10.mmQuantityBreakdown,
-					com.tools20022.repository.msg.AggregateBalanceInformation11.mmQuantityBreakdown, com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace12.mmQuantityBreakdown,
-					com.tools20022.repository.msg.AggregateBalanceInformation13.mmQuantityBreakdown, com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace14.mmQuantityBreakdown,
-					com.tools20022.repository.msg.AggregateBalanceInformation15.mmQuantityBreakdown, com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace16.mmQuantityBreakdown,
-					com.tools20022.repository.msg.AggregateBalanceInformation17.mmQuantityBreakdown, com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace18.mmQuantityBreakdown,
-					com.tools20022.repository.msg.AggregateBalanceInformation19.mmQuantityBreakdown, com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace21.mmQuantityBreakdown,
-					com.tools20022.repository.msg.AggregateBalanceInformation22.mmQuantityBreakdown, com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace22.mmQuantityBreakdown,
-					com.tools20022.repository.msg.AggregateBalanceInformation23.mmQuantityBreakdown, com.tools20022.repository.msg.AdditionalBalanceInformation5.mmQuantityBreakdown,
-					com.tools20022.repository.msg.SubBalanceInformation5.mmQuantityBreakdown, com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace8.mmQuantityBreakdown,
-					com.tools20022.repository.msg.AggregateBalanceInformation9.mmQuantityBreakdown, com.tools20022.repository.msg.AdditionalBalanceInformation8.mmQuantityBreakdown,
-					com.tools20022.repository.msg.SubBalanceInformation8.mmQuantityBreakdown, com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace9.mmQuantityBreakdown,
-					com.tools20022.repository.msg.AggregateBalanceInformation10.mmQuantityBreakdown, com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace11.mmQuantityBreakdown,
-					com.tools20022.repository.msg.AggregateBalanceInformation12.mmQuantityBreakdown, com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace13.mmQuantityBreakdown,
-					com.tools20022.repository.msg.AggregateBalanceInformation14.mmQuantityBreakdown, com.tools20022.repository.msg.AdditionalBalanceInformation9.mmQuantityBreakdown,
-					com.tools20022.repository.msg.SubBalanceInformation9.mmQuantityBreakdown, com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace15.mmQuantityBreakdown,
-					com.tools20022.repository.msg.AggregateBalanceInformation16.mmQuantityBreakdown, com.tools20022.repository.msg.AdditionalBalanceInformation10.mmQuantityBreakdown,
-					com.tools20022.repository.msg.SubBalanceInformation10.mmQuantityBreakdown, com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace17.mmQuantityBreakdown,
-					com.tools20022.repository.msg.AggregateBalanceInformation18.mmQuantityBreakdown, com.tools20022.repository.msg.AdditionalBalanceInformation11.mmQuantityBreakdown,
-					com.tools20022.repository.msg.SubBalanceInformation11.mmQuantityBreakdown, com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace20.mmQuantityBreakdown,
-					com.tools20022.repository.msg.AggregateBalanceInformation21.mmQuantityBreakdown, com.tools20022.repository.msg.AdditionalBalanceInformation12.mmQuantityBreakdown,
-					com.tools20022.repository.msg.SubBalanceInformation12.mmQuantityBreakdown, com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace23.mmQuantityBreakdown,
-					com.tools20022.repository.msg.AggregateBalanceInformation24.mmQuantityBreakdown, com.tools20022.repository.msg.QuantityAndAccount1.mmQuantityBreakdown,
-					com.tools20022.repository.msg.QuantityAndAccount5.mmQuantityBreakdown, com.tools20022.repository.msg.QuantityAndAccount17.mmQuantityBreakdown, com.tools20022.repository.msg.QuantityAndAccount24.mmQuantityBreakdown,
-					com.tools20022.repository.msg.QuantityAndAccount25.mmQuantityBreakdown, com.tools20022.repository.msg.QuantityAndAccount34.mmQuantityBreakdown, com.tools20022.repository.msg.QuantityAndAccount2.mmQuantityBreakdown,
-					com.tools20022.repository.msg.QuantityAndAccount12.mmQuantityBreakdown, com.tools20022.repository.msg.QuantityAndAccount15.mmQuantityBreakdown, com.tools20022.repository.msg.QuantityAndAccount20.mmQuantityBreakdown,
-					com.tools20022.repository.msg.QuantityAndAccount28.mmQuantityBreakdown, com.tools20022.repository.msg.QuantityAndAccount37.mmQuantityBreakdown, com.tools20022.repository.msg.Order16.mmQuantityBreakdown,
-					com.tools20022.repository.msg.Order14.mmQuantityBreakdown, com.tools20022.repository.msg.QuantityAndAccount3.mmQuantityBreakdown, com.tools20022.repository.msg.QuantityAndAccount13.mmQuantityBreakdown,
-					com.tools20022.repository.msg.QuantityAndAccount8.mmQuantityBreakdown, com.tools20022.repository.msg.QuantityAndAccount14.mmQuantityBreakdown, com.tools20022.repository.msg.QuantityAndAccount4.mmQuantityBreakdown,
-					com.tools20022.repository.msg.QuantityAndAccount22.mmQuantityBreakdown, com.tools20022.repository.msg.QuantityAndAccount27.mmQuantityBreakdown, com.tools20022.repository.msg.QuantityAndAccount36.mmQuantityBreakdown,
-					com.tools20022.repository.msg.QuantityAndAccount9.mmQuantityBreakdown, com.tools20022.repository.msg.QuantityAndAccount23.mmQuantityBreakdown, com.tools20022.repository.msg.QuantityAndAccount26.mmQuantityBreakdown,
-					com.tools20022.repository.msg.QuantityAndAccount35.mmQuantityBreakdown, com.tools20022.repository.msg.RedemptionExecution10.mmLotDetails, com.tools20022.repository.msg.RedemptionOrder9.mmLotDetails,
-					com.tools20022.repository.msg.CashSubBalanceTypeAndQuantityBreakdown1.mmQuantityBreakdown, com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace19.mmQuantityBreakdown,
-					com.tools20022.repository.msg.AggregateBalanceInformation20.mmQuantityBreakdown, com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace6.mmQuantityBreakdown,
-					com.tools20022.repository.msg.AggregateBalanceInformation6.mmQuantityBreakdown, com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace5.mmQuantityBreakdown,
-					com.tools20022.repository.msg.AggregateBalanceInformation7.mmQuantityBreakdown, com.tools20022.repository.msg.Order17.mmQuantityBreakdown, com.tools20022.repository.msg.Order18.mmQuantityBreakdown,
-					com.tools20022.repository.msg.AggregateBalanceInformation26.mmQuantityBreakdown, com.tools20022.repository.msg.AggregateBalanceInformation25.mmQuantityBreakdown,
-					com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace24.mmQuantityBreakdown, com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace25.mmQuantityBreakdown,
-					com.tools20022.repository.msg.AggregateBalanceInformation28.mmQuantityBreakdown, com.tools20022.repository.msg.AggregateBalanceInformation27.mmQuantityBreakdown,
-					com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace26.mmQuantityBreakdown, com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace27.mmQuantityBreakdown,
-					com.tools20022.repository.msg.QuantityAndAccount39.mmQuantityBreakdown, com.tools20022.repository.msg.AggregateBalanceInformation30.mmQuantityBreakdown,
-					com.tools20022.repository.msg.QuantityAndAccount41.mmQuantityBreakdown, com.tools20022.repository.msg.QuantityAndAccount42.mmQuantityBreakdown,
-					com.tools20022.repository.msg.AggregateBalanceInformation31.mmQuantityBreakdown, com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace28.mmQuantityBreakdown,
-					com.tools20022.repository.msg.QuantityAndAccount43.mmQuantityBreakdown, com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace29.mmQuantityBreakdown,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes63.mmQuantityBreakdown, com.tools20022.repository.msg.SubBalanceInformation15.mmQuantityBreakdown,
-					com.tools20022.repository.msg.AdditionalBalanceInformation15.mmQuantityBreakdown, com.tools20022.repository.msg.SecuritiesSubBalanceTypeAndQuantityBreakdown3.mmQuantityBreakdown,
-					com.tools20022.repository.msg.QuantityAndAccount45.mmQuantityBreakdown, com.tools20022.repository.msg.QuantityAndAccount44.mmQuantityBreakdown, com.tools20022.repository.msg.QuantityAndAccount47.mmQuantityBreakdown,
-					com.tools20022.repository.msg.AggregateBalanceInformation32.mmQuantityBreakdown, com.tools20022.repository.msg.AggregateBalanceInformation33.mmQuantityBreakdown,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes75.mmQuantityBreakdown, com.tools20022.repository.msg.QuantityAndAccount51.mmQuantityBreakdown,
-					com.tools20022.repository.msg.QuantityAndAccount49.mmQuantityBreakdown, com.tools20022.repository.msg.SecuritiesSubBalanceTypeAndQuantityBreakdown4.mmQuantityBreakdown,
-					com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace31.mmQuantityBreakdown, com.tools20022.repository.msg.AdditionalBalanceInformation17.mmQuantityBreakdown,
-					com.tools20022.repository.msg.SubBalanceInformation17.mmQuantityBreakdown, com.tools20022.repository.msg.QuantityAndAccount50.mmQuantityBreakdown,
-					com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace30.mmQuantityBreakdown, com.tools20022.repository.msg.QuantityAndAccount55.mmQuantityBreakdown,
-					com.tools20022.repository.msg.QuantityAndAccount54.mmQuantityBreakdown, com.tools20022.repository.msg.QuantityAndAccount57.mmQuantityBreakdown, com.tools20022.repository.msg.QuantityAndAccount58.mmQuantityBreakdown,
-					com.tools20022.repository.msg.QuantityAndAccount56.mmQuantityBreakdown, com.tools20022.repository.msg.QuantityAndAccount59.mmQuantityBreakdown, com.tools20022.repository.msg.QuantityAndAccount60.mmQuantityBreakdown);
+			derivation_lazy = () -> Arrays.asList(Unit4.mmUnitDetails, QuantityAndAccount29.mmQuantityBreakdown, QuantityAndAccount30.mmQuantityBreakdown, QuantityAndAccount32.mmQuantityBreakdown, QuantityAndAccount33.mmQuantityBreakdown,
+					FinancialInstrumentAttributes4.mmQuantityBreakdown, FinancialInstrumentAttributes13.mmQuantityBreakdown, FinancialInstrumentAttributes21.mmQuantityBreakdown, FinancialInstrumentAttributes26.mmQuantityBreakdown,
+					FinancialInstrumentAttributes36.mmQuantityBreakdown, SecuritiesSubBalanceTypeAndQuantityBreakdown1.mmQuantityBreakdown, FinancialInstrumentAttributes42.mmQuantityBreakdown,
+					SecuritiesSubBalanceTypeAndQuantityBreakdown2.mmQuantityBreakdown, FinancialInstrumentAttributes27.mmQuantityBreakdown, AggregateBalancePerSafekeepingPlace7.mmQuantityBreakdown,
+					AggregateBalanceInformation8.mmQuantityBreakdown, AggregateBalancePerSafekeepingPlace10.mmQuantityBreakdown, AggregateBalanceInformation11.mmQuantityBreakdown, AggregateBalancePerSafekeepingPlace12.mmQuantityBreakdown,
+					AggregateBalanceInformation13.mmQuantityBreakdown, AggregateBalancePerSafekeepingPlace14.mmQuantityBreakdown, AggregateBalanceInformation15.mmQuantityBreakdown, AggregateBalancePerSafekeepingPlace16.mmQuantityBreakdown,
+					AggregateBalanceInformation17.mmQuantityBreakdown, AggregateBalancePerSafekeepingPlace18.mmQuantityBreakdown, AggregateBalanceInformation19.mmQuantityBreakdown, AggregateBalancePerSafekeepingPlace21.mmQuantityBreakdown,
+					AggregateBalanceInformation22.mmQuantityBreakdown, AggregateBalancePerSafekeepingPlace22.mmQuantityBreakdown, AggregateBalanceInformation23.mmQuantityBreakdown, AdditionalBalanceInformation5.mmQuantityBreakdown,
+					SubBalanceInformation5.mmQuantityBreakdown, AggregateBalancePerSafekeepingPlace8.mmQuantityBreakdown, AggregateBalanceInformation9.mmQuantityBreakdown, AdditionalBalanceInformation8.mmQuantityBreakdown,
+					SubBalanceInformation8.mmQuantityBreakdown, AggregateBalancePerSafekeepingPlace9.mmQuantityBreakdown, AggregateBalanceInformation10.mmQuantityBreakdown, AggregateBalancePerSafekeepingPlace11.mmQuantityBreakdown,
+					AggregateBalanceInformation12.mmQuantityBreakdown, AggregateBalancePerSafekeepingPlace13.mmQuantityBreakdown, AggregateBalanceInformation14.mmQuantityBreakdown, AdditionalBalanceInformation9.mmQuantityBreakdown,
+					SubBalanceInformation9.mmQuantityBreakdown, AggregateBalancePerSafekeepingPlace15.mmQuantityBreakdown, AggregateBalanceInformation16.mmQuantityBreakdown, AdditionalBalanceInformation10.mmQuantityBreakdown,
+					SubBalanceInformation10.mmQuantityBreakdown, AggregateBalancePerSafekeepingPlace17.mmQuantityBreakdown, AggregateBalanceInformation18.mmQuantityBreakdown, AdditionalBalanceInformation11.mmQuantityBreakdown,
+					SubBalanceInformation11.mmQuantityBreakdown, AggregateBalancePerSafekeepingPlace20.mmQuantityBreakdown, AggregateBalanceInformation21.mmQuantityBreakdown, AdditionalBalanceInformation12.mmQuantityBreakdown,
+					SubBalanceInformation12.mmQuantityBreakdown, AggregateBalancePerSafekeepingPlace23.mmQuantityBreakdown, AggregateBalanceInformation24.mmQuantityBreakdown, QuantityAndAccount1.mmQuantityBreakdown,
+					QuantityAndAccount5.mmQuantityBreakdown, QuantityAndAccount17.mmQuantityBreakdown, QuantityAndAccount24.mmQuantityBreakdown, QuantityAndAccount25.mmQuantityBreakdown, QuantityAndAccount34.mmQuantityBreakdown,
+					QuantityAndAccount2.mmQuantityBreakdown, QuantityAndAccount12.mmQuantityBreakdown, QuantityAndAccount15.mmQuantityBreakdown, QuantityAndAccount20.mmQuantityBreakdown, QuantityAndAccount28.mmQuantityBreakdown,
+					QuantityAndAccount37.mmQuantityBreakdown, Order16.mmQuantityBreakdown, Order14.mmQuantityBreakdown, QuantityAndAccount3.mmQuantityBreakdown, QuantityAndAccount13.mmQuantityBreakdown,
+					QuantityAndAccount8.mmQuantityBreakdown, QuantityAndAccount14.mmQuantityBreakdown, QuantityAndAccount4.mmQuantityBreakdown, QuantityAndAccount22.mmQuantityBreakdown, QuantityAndAccount27.mmQuantityBreakdown,
+					QuantityAndAccount36.mmQuantityBreakdown, QuantityAndAccount9.mmQuantityBreakdown, QuantityAndAccount23.mmQuantityBreakdown, QuantityAndAccount26.mmQuantityBreakdown, QuantityAndAccount35.mmQuantityBreakdown,
+					RedemptionExecution10.mmLotDetails, RedemptionOrder9.mmLotDetails, CashSubBalanceTypeAndQuantityBreakdown1.mmQuantityBreakdown, AggregateBalancePerSafekeepingPlace19.mmQuantityBreakdown,
+					AggregateBalanceInformation20.mmQuantityBreakdown, AggregateBalancePerSafekeepingPlace6.mmQuantityBreakdown, AggregateBalanceInformation6.mmQuantityBreakdown, AggregateBalancePerSafekeepingPlace5.mmQuantityBreakdown,
+					AggregateBalanceInformation7.mmQuantityBreakdown, Order17.mmQuantityBreakdown, Order18.mmQuantityBreakdown, AggregateBalanceInformation26.mmQuantityBreakdown, AggregateBalanceInformation25.mmQuantityBreakdown,
+					AggregateBalancePerSafekeepingPlace24.mmQuantityBreakdown, AggregateBalancePerSafekeepingPlace25.mmQuantityBreakdown, AggregateBalanceInformation28.mmQuantityBreakdown, AggregateBalanceInformation27.mmQuantityBreakdown,
+					AggregateBalancePerSafekeepingPlace26.mmQuantityBreakdown, AggregateBalancePerSafekeepingPlace27.mmQuantityBreakdown, QuantityAndAccount39.mmQuantityBreakdown, AggregateBalanceInformation30.mmQuantityBreakdown,
+					QuantityAndAccount41.mmQuantityBreakdown, QuantityAndAccount42.mmQuantityBreakdown, AggregateBalanceInformation31.mmQuantityBreakdown, AggregateBalancePerSafekeepingPlace28.mmQuantityBreakdown,
+					QuantityAndAccount43.mmQuantityBreakdown, AggregateBalancePerSafekeepingPlace29.mmQuantityBreakdown, FinancialInstrumentAttributes63.mmQuantityBreakdown, SubBalanceInformation15.mmQuantityBreakdown,
+					AdditionalBalanceInformation15.mmQuantityBreakdown, SecuritiesSubBalanceTypeAndQuantityBreakdown3.mmQuantityBreakdown, QuantityAndAccount45.mmQuantityBreakdown, QuantityAndAccount44.mmQuantityBreakdown,
+					QuantityAndAccount47.mmQuantityBreakdown, AggregateBalanceInformation32.mmQuantityBreakdown, AggregateBalanceInformation33.mmQuantityBreakdown, FinancialInstrumentAttributes75.mmQuantityBreakdown,
+					QuantityAndAccount51.mmQuantityBreakdown, QuantityAndAccount49.mmQuantityBreakdown, SecuritiesSubBalanceTypeAndQuantityBreakdown4.mmQuantityBreakdown, AggregateBalancePerSafekeepingPlace31.mmQuantityBreakdown,
+					AdditionalBalanceInformation17.mmQuantityBreakdown, SubBalanceInformation17.mmQuantityBreakdown, QuantityAndAccount50.mmQuantityBreakdown, AggregateBalancePerSafekeepingPlace30.mmQuantityBreakdown,
+					QuantityAndAccount55.mmQuantityBreakdown, QuantityAndAccount54.mmQuantityBreakdown, QuantityAndAccount57.mmQuantityBreakdown, QuantityAndAccount58.mmQuantityBreakdown, QuantityAndAccount56.mmQuantityBreakdown,
+					QuantityAndAccount59.mmQuantityBreakdown, QuantityAndAccount60.mmQuantityBreakdown);
 			elementContext_lazy = () -> SecuritiesQuantity.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "LotBreakdown";
 			definition = "Number of securities purchased or sold in one transaction. In terms of options, a lot represents the number of contracts contained in one derivative security.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.LotBreakdown.mmSecuritiesQuantity;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.LotBreakdown.mmObject();
 		}
 	};
@@ -2007,12 +1965,12 @@ public class SecuritiesQuantity {
 		{
 			elementContext_lazy = () -> SecuritiesQuantity.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MinimumExercisableQuantitySecuritiesConversion";
 			definition = "Securities conversion process for which a minimum exercisable quantity is specified.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesConversion.mmMinimumExercisableQuantity;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SecuritiesConversion.mmObject();
 		}
 	};
@@ -2058,13 +2016,13 @@ public class SecuritiesQuantity {
 		{
 			elementContext_lazy = () -> SecuritiesQuantity.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MinimumExercisableMultipleQuantitySecuritiesConversion";
 			definition = "Securities conversion process for which a minimum exercisable multiple quantity is specified.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesConversion.mmMinimumExercisableMultipleQuantity;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SecuritiesConversion.mmObject();
 		}
 	};
@@ -2230,34 +2188,25 @@ public class SecuritiesQuantity {
 	 */
 	public static final MMBusinessAssociationEnd mmAggregateQuantityBalance = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionEventAndBalance1.mmBalance, com.tools20022.repository.msg.CorporateActionEventAndBalance2.mmBalance,
-					com.tools20022.repository.msg.CorporateActionEventAndBalance3.mmBalance, com.tools20022.repository.msg.CorporateActionEventAndBalance4.mmBalance, com.tools20022.repository.msg.CorporateActionEventAndBalance5.mmBalance,
-					com.tools20022.repository.msg.CorporateActionEventAndBalance6.mmBalance, com.tools20022.repository.msg.CorporateActionEventAndBalance7.mmBalance, com.tools20022.repository.msg.CorporateActionEventAndBalance8.mmBalance,
-					com.tools20022.repository.msg.FinancialInstrumentDetails2.mmOpeningBalance, com.tools20022.repository.msg.FinancialInstrumentDetails2.mmClosingBalance,
-					com.tools20022.repository.msg.FinancialInstrumentDetails3.mmOpeningBalance, com.tools20022.repository.msg.FinancialInstrumentDetails3.mmClosingBalance,
-					com.tools20022.repository.msg.FinancialInstrumentDetails5.mmOpeningBalance, com.tools20022.repository.msg.FinancialInstrumentDetails5.mmClosingBalance,
-					com.tools20022.repository.msg.FinancialInstrumentDetails8.mmOpeningBalance, com.tools20022.repository.msg.FinancialInstrumentDetails8.mmClosingBalance,
-					com.tools20022.repository.msg.FinancialInstrumentDetails9.mmOpeningBalance, com.tools20022.repository.msg.FinancialInstrumentDetails9.mmClosingBalance,
-					com.tools20022.repository.msg.FinancialInstrumentDetails11.mmOpeningBalance, com.tools20022.repository.msg.FinancialInstrumentDetails11.mmClosingBalance,
-					com.tools20022.repository.msg.FinancialInstrumentDetails13.mmOpeningBalance, com.tools20022.repository.msg.FinancialInstrumentDetails13.mmClosingBalance,
-					com.tools20022.repository.msg.FinancialInstrumentDetails16.mmOpeningBalance, com.tools20022.repository.msg.FinancialInstrumentDetails16.mmClosingBalance,
-					com.tools20022.repository.msg.FinancialInstrumentDetails17.mmOpeningBalance, com.tools20022.repository.msg.FinancialInstrumentDetails17.mmClosingBalance,
-					com.tools20022.repository.msg.FinancialInstrumentDetails18.mmOpeningBalance, com.tools20022.repository.msg.FinancialInstrumentDetails18.mmClosingBalance,
-					com.tools20022.repository.msg.FinancialInstrumentDetails20.mmOpeningBalance, com.tools20022.repository.msg.FinancialInstrumentDetails20.mmClosingBalance,
-					com.tools20022.repository.msg.CorporateActionEventAndBalance9.mmBalance, com.tools20022.repository.msg.CorporateActionEventAndBalance10.mmBalance,
-					com.tools20022.repository.msg.FinancialInstrumentDetails23.mmOpeningBalance, com.tools20022.repository.msg.FinancialInstrumentDetails23.mmClosingBalance,
-					com.tools20022.repository.msg.CorporateActionEventAndBalance11.mmBalance, com.tools20022.repository.msg.FinancialInstrumentDetails25.mmOpeningBalance,
-					com.tools20022.repository.msg.FinancialInstrumentDetails25.mmClosingBalance, com.tools20022.repository.msg.FinancialInstrumentDetails27.mmOpeningBalance,
-					com.tools20022.repository.msg.FinancialInstrumentDetails27.mmClosingBalance, com.tools20022.repository.msg.CorporateActionEventAndBalance12.mmBalance);
+			derivation_lazy = () -> Arrays.asList(CorporateActionEventAndBalance1.mmBalance, CorporateActionEventAndBalance2.mmBalance, CorporateActionEventAndBalance3.mmBalance, CorporateActionEventAndBalance4.mmBalance,
+					CorporateActionEventAndBalance5.mmBalance, CorporateActionEventAndBalance6.mmBalance, CorporateActionEventAndBalance7.mmBalance, CorporateActionEventAndBalance8.mmBalance, FinancialInstrumentDetails2.mmOpeningBalance,
+					FinancialInstrumentDetails2.mmClosingBalance, FinancialInstrumentDetails3.mmOpeningBalance, FinancialInstrumentDetails3.mmClosingBalance, FinancialInstrumentDetails5.mmOpeningBalance,
+					FinancialInstrumentDetails5.mmClosingBalance, FinancialInstrumentDetails8.mmOpeningBalance, FinancialInstrumentDetails8.mmClosingBalance, FinancialInstrumentDetails9.mmOpeningBalance,
+					FinancialInstrumentDetails9.mmClosingBalance, FinancialInstrumentDetails11.mmOpeningBalance, FinancialInstrumentDetails11.mmClosingBalance, FinancialInstrumentDetails13.mmOpeningBalance,
+					FinancialInstrumentDetails13.mmClosingBalance, FinancialInstrumentDetails16.mmOpeningBalance, FinancialInstrumentDetails16.mmClosingBalance, FinancialInstrumentDetails17.mmOpeningBalance,
+					FinancialInstrumentDetails17.mmClosingBalance, FinancialInstrumentDetails18.mmOpeningBalance, FinancialInstrumentDetails18.mmClosingBalance, FinancialInstrumentDetails20.mmOpeningBalance,
+					FinancialInstrumentDetails20.mmClosingBalance, CorporateActionEventAndBalance9.mmBalance, CorporateActionEventAndBalance10.mmBalance, FinancialInstrumentDetails23.mmOpeningBalance,
+					FinancialInstrumentDetails23.mmClosingBalance, CorporateActionEventAndBalance11.mmBalance, FinancialInstrumentDetails25.mmOpeningBalance, FinancialInstrumentDetails25.mmClosingBalance,
+					FinancialInstrumentDetails27.mmOpeningBalance, FinancialInstrumentDetails27.mmClosingBalance, CorporateActionEventAndBalance12.mmBalance);
 			elementContext_lazy = () -> SecuritiesQuantity.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AggregateQuantityBalance";
 			definition = "Securities balance which contains the aggregate quantity.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesBalance.mmAggregateQuantity;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SecuritiesBalance.mmObject();
 		}
 	};
@@ -2301,13 +2250,13 @@ public class SecuritiesQuantity {
 		{
 			elementContext_lazy = () -> SecuritiesQuantity.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SecuritiesProceedsDefinition";
 			definition = "Securities proceeds for which an amount of securities is posted.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesProceedsDefinition.mmSecuritiesQuantity;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SecuritiesProceedsDefinition.mmObject();
 		}
 	};
@@ -2351,13 +2300,13 @@ public class SecuritiesQuantity {
 		{
 			elementContext_lazy = () -> SecuritiesQuantity.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConditionalQuantitySecuritiesProceeds";
 			definition = "Securities proceeds for which a conditional quantity has been defined.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesProceedsDefinition.mmConditionalQuantity;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SecuritiesProceedsDefinition.mmObject();
 		}
 	};
@@ -2404,13 +2353,13 @@ public class SecuritiesQuantity {
 		{
 			elementContext_lazy = () -> SecuritiesQuantity.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "OverAndAboveQuantitySecuritiesProceeds";
 			definition = "Securities proceeds for which an over and above normal endured quantity has been provided.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesProceedsDefinition.mmOverAndAboveNormalEnsuredEntitlementQuantity;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SecuritiesProceedsDefinition.mmObject();
 		}
 	};
@@ -2453,13 +2402,13 @@ public class SecuritiesQuantity {
 		{
 			elementContext_lazy = () -> SecuritiesQuantity.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Entry";
 			definition = "Entry in a securities account of a specific quantity of securities.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesEntry.mmFinancialInstrumentQuantity;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SecuritiesEntry.mmObject();
 		}
 	};
@@ -2534,16 +2483,12 @@ public class SecuritiesQuantity {
 	 */
 	public static final MMBusinessAttribute mmCode = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Quantity5Choice.mmCode, com.tools20022.repository.choice.Quantity11Choice.mmCode,
-					com.tools20022.repository.choice.FinancialInstrumentQuantity2Choice.mmCode, com.tools20022.repository.choice.FinancialInstrumentQuantity14Choice.mmCode,
-					com.tools20022.repository.choice.FinancialInstrumentQuantity16Choice.mmCode, com.tools20022.repository.choice.FinancialInstrumentQuantity17Choice.mmCode,
-					com.tools20022.repository.choice.FinancialInstrumentQuantity19Choice.mmCode, com.tools20022.repository.choice.FinancialInstrumentQuantity20Choice.mmCode,
-					com.tools20022.repository.choice.FinancialInstrumentQuantity21Choice.mmCode, com.tools20022.repository.choice.FinancialInstrumentQuantity22Choice.mmCode,
-					com.tools20022.repository.choice.UnitOrFaceAmountOrCodeChoice.mmCode, com.tools20022.repository.choice.UnitOrFaceAmountOrCode1Choice.mmCode, com.tools20022.repository.choice.Quantity20Choice.mmCode,
-					com.tools20022.repository.choice.Quantity40Choice.mmCode);
+			derivation_lazy = () -> Arrays.asList(Quantity5Choice.mmCode, Quantity11Choice.mmCode, FinancialInstrumentQuantity2Choice.mmCode, FinancialInstrumentQuantity14Choice.mmCode, FinancialInstrumentQuantity16Choice.mmCode,
+					FinancialInstrumentQuantity17Choice.mmCode, FinancialInstrumentQuantity19Choice.mmCode, FinancialInstrumentQuantity20Choice.mmCode, FinancialInstrumentQuantity21Choice.mmCode, FinancialInstrumentQuantity22Choice.mmCode,
+					UnitOrFaceAmountOrCodeChoice.mmCode, UnitOrFaceAmountOrCode1Choice.mmCode, Quantity20Choice.mmCode, Quantity40Choice.mmCode);
 			elementContext_lazy = () -> SecuritiesQuantity.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Code";
 			definition = "Quantity expressed as a code.";
 			maxOccurs = 1;
@@ -2593,13 +2538,13 @@ public class SecuritiesQuantity {
 		{
 			elementContext_lazy = () -> SecuritiesQuantity.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ExpectedQuantitySecuritiesProceeds";
 			definition = "Securities proceeds for which a quantity of securities to receive has been specified.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesProceedsDefinition.mmQuantityToReceive;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SecuritiesProceedsDefinition.mmObject();
 		}
 	};
@@ -2643,13 +2588,13 @@ public class SecuritiesQuantity {
 		{
 			elementContext_lazy = () -> SecuritiesQuantity.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "StatusRelatedSecuritiesProceeds";
 			definition = "Securities proceeds related to securities with a specific status.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesProceedsDefinition.mmStatusQuantity;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SecuritiesProceedsDefinition.mmObject();
 		}
 	};
@@ -2695,13 +2640,13 @@ public class SecuritiesQuantity {
 		{
 			elementContext_lazy = () -> SecuritiesQuantity.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CorporateActionDistribution";
 			definition = "Corporate action distribution process for which a quantity of securities has been posted.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.CorporateActionDistribution.mmPostingQuantity;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.CorporateActionDistribution.mmObject();
 		}
 	};
@@ -2747,13 +2692,13 @@ public class SecuritiesQuantity {
 		{
 			elementContext_lazy = () -> SecuritiesQuantity.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedEventForFractionalQuantity";
 			definition = "Event for which the resulting fractional quantity will be paid with cash in lieu. ";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmFractionalQuantity;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmObject();
 		}
 	};
@@ -2799,12 +2744,12 @@ public class SecuritiesQuantity {
 		{
 			elementContext_lazy = () -> SecuritiesQuantity.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MaximumExercisableQuantitySecuritiesConversion";
 			definition = "Securities conversion process for which a maximum exercisable quantity is specified.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesConversion.mmMaximumExercisableQuantity;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SecuritiesConversion.mmObject();
 		}
 	};
@@ -2847,13 +2792,13 @@ public class SecuritiesQuantity {
 		{
 			elementContext_lazy = () -> SecuritiesQuantity.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BoardLotSecuritiesProceeds";
 			definition = "Securities proceeds related to a board lot.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesProceedsDefinition.mmBoardLotSecuritiesQuantity;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SecuritiesProceedsDefinition.mmObject();
 		}
 	};
@@ -2897,13 +2842,13 @@ public class SecuritiesQuantity {
 		{
 			elementContext_lazy = () -> SecuritiesQuantity.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NewDenominationSecuritiesProceeds";
 			definition = "Securities proceeds related to a quantity of redenominated securities.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesProceedsDefinition.mmNewDenominationSecuritiesQuantity;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SecuritiesProceedsDefinition.mmObject();
 		}
 	};
@@ -2946,13 +2891,13 @@ public class SecuritiesQuantity {
 		{
 			elementContext_lazy = () -> SecuritiesQuantity.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BackEndOddLotBiddingConditions";
 			definition = "BiddingConditions for which a back end odd lot is provided.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.BiddingConditions.mmBackEndOddLotQuantity;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.BiddingConditions.mmObject();
 		}
 	};
@@ -2998,13 +2943,13 @@ public class SecuritiesQuantity {
 		{
 			elementContext_lazy = () -> SecuritiesQuantity.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SecuritiesEntitlement";
 			definition = "Specifies the entitlement parameters relative to the securities entitlement.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.CorporateActionSecuritiesEntitlement.mmEntitledSecuritiesQuantity;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.CorporateActionSecuritiesEntitlement.mmObject();
 		}
 	};
@@ -3048,13 +2993,13 @@ public class SecuritiesQuantity {
 		{
 			elementContext_lazy = () -> SecuritiesQuantity.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CorporateActionEvent";
 			definition = "Corporate action for which a quantity of securities is specified.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmSecuritiesQuantity;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmObject();
 		}
 	};
@@ -3097,13 +3042,13 @@ public class SecuritiesQuantity {
 		{
 			elementContext_lazy = () -> SecuritiesQuantity.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BiddingConditions";
 			definition = "Bidding conditions related to the base denomination quantity.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.BiddingConditions.mmBaseDenomination;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.BiddingConditions.mmObject();
 		}
 	};
@@ -3145,13 +3090,13 @@ public class SecuritiesQuantity {
 		{
 			elementContext_lazy = () -> SecuritiesQuantity.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Lottery";
 			definition = "Lottery for which an incremental denomination is specified.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.Lottery.mmIncrementalDenomination;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Lottery.mmObject();
 		}
 	};
@@ -3232,20 +3177,18 @@ public class SecuritiesQuantity {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedSubBalance = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrumentDetails1.mmSubBalance, com.tools20022.repository.msg.FinancialInstrumentDetails4.mmSubBalance,
-					com.tools20022.repository.msg.FinancialInstrumentDetails6.mmSubBalance, com.tools20022.repository.msg.FinancialInstrumentDetails7.mmSubBalance, com.tools20022.repository.msg.FinancialInstrumentDetails10.mmSubBalance,
-					com.tools20022.repository.msg.FinancialInstrumentDetails12.mmSubBalance, com.tools20022.repository.msg.FinancialInstrumentDetails14.mmSubBalance, com.tools20022.repository.msg.FinancialInstrumentDetails15.mmSubBalance,
-					com.tools20022.repository.msg.FinancialInstrumentDetails21.mmSubBalance, com.tools20022.repository.msg.FinancialInstrumentDetails22.mmSubBalance, com.tools20022.repository.msg.FinancialInstrumentDetails24.mmSubBalance,
-					com.tools20022.repository.msg.FinancialInstrumentDetails26.mmSubBalance);
+			derivation_lazy = () -> Arrays.asList(FinancialInstrumentDetails1.mmSubBalance, FinancialInstrumentDetails4.mmSubBalance, FinancialInstrumentDetails6.mmSubBalance, FinancialInstrumentDetails7.mmSubBalance,
+					FinancialInstrumentDetails10.mmSubBalance, FinancialInstrumentDetails12.mmSubBalance, FinancialInstrumentDetails14.mmSubBalance, FinancialInstrumentDetails15.mmSubBalance, FinancialInstrumentDetails21.mmSubBalance,
+					FinancialInstrumentDetails22.mmSubBalance, FinancialInstrumentDetails24.mmSubBalance, FinancialInstrumentDetails26.mmSubBalance);
 			elementContext_lazy = () -> SecuritiesQuantity.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedSubBalance";
 			definition = "Sub balance which contains a quantity of securities.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesBalance.mmSubBalanceQuantity;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SecuritiesBalance.mmObject();
 		}
 	};
@@ -3288,13 +3231,13 @@ public class SecuritiesQuantity {
 		{
 			elementContext_lazy = () -> SecuritiesQuantity.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AvailableQuantityBalance";
 			definition = "Securities balance which contains the securities quantity.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesBalance.mmAvailableQuantity;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SecuritiesBalance.mmObject();
 		}
 	};
@@ -3381,22 +3324,18 @@ public class SecuritiesQuantity {
 	 */
 	public static final MMBusinessAssociationEnd mmTrade = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrumentDetails2.mmTransaction, com.tools20022.repository.msg.FinancialInstrumentDetails3.mmTransaction,
-					com.tools20022.repository.msg.FinancialInstrumentDetails5.mmTransaction, com.tools20022.repository.msg.FinancialInstrumentDetails8.mmTransaction, com.tools20022.repository.msg.FinancialInstrumentDetails9.mmTransaction,
-					com.tools20022.repository.msg.FinancialInstrumentDetails11.mmTransaction, com.tools20022.repository.msg.FinancialInstrumentDetails13.mmTransaction,
-					com.tools20022.repository.msg.FinancialInstrumentDetails16.mmTransaction, com.tools20022.repository.msg.FinancialInstrumentDetails17.mmTransaction,
-					com.tools20022.repository.msg.FinancialInstrumentDetails18.mmTransaction, com.tools20022.repository.msg.FinancialInstrumentDetails20.mmTransaction,
-					com.tools20022.repository.msg.FinancialInstrumentDetails23.mmTransaction, com.tools20022.repository.msg.FinancialInstrumentDetails25.mmTransaction,
-					com.tools20022.repository.msg.FinancialInstrumentDetails27.mmTransaction);
+			derivation_lazy = () -> Arrays.asList(FinancialInstrumentDetails2.mmTransaction, FinancialInstrumentDetails3.mmTransaction, FinancialInstrumentDetails5.mmTransaction, FinancialInstrumentDetails8.mmTransaction,
+					FinancialInstrumentDetails9.mmTransaction, FinancialInstrumentDetails11.mmTransaction, FinancialInstrumentDetails13.mmTransaction, FinancialInstrumentDetails16.mmTransaction, FinancialInstrumentDetails17.mmTransaction,
+					FinancialInstrumentDetails18.mmTransaction, FinancialInstrumentDetails20.mmTransaction, FinancialInstrumentDetails23.mmTransaction, FinancialInstrumentDetails25.mmTransaction, FinancialInstrumentDetails27.mmTransaction);
 			elementContext_lazy = () -> SecuritiesQuantity.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Trade";
 			definition = "Trade for which a quantity is specified.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesTrade.mmTradeQuantity;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SecuritiesTrade.mmObject();
 		}
 	};
@@ -3442,13 +3381,13 @@ public class SecuritiesQuantity {
 		{
 			elementContext_lazy = () -> SecuritiesQuantity.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RatioDenominatorSecuritiesConversion";
 			definition = "Securities conversion process for which a conversion ratio denominator quantity is specified.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesConversion.mmConversionRatioDenominator;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SecuritiesConversion.mmObject();
 		}
 	};
@@ -3494,13 +3433,13 @@ public class SecuritiesQuantity {
 		{
 			elementContext_lazy = () -> SecuritiesQuantity.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RatioNumeratorSecuritiesConversion";
 			definition = "Securities conversion process for which a conversion ratio denominator quantity is specified.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesConversion.mmConversionRatioNumerator;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SecuritiesConversion.mmObject();
 		}
 	};
@@ -3542,13 +3481,13 @@ public class SecuritiesQuantity {
 		{
 			elementContext_lazy = () -> SecuritiesQuantity.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MinimumTradedQuantityMarket";
 			definition = "Market for which a minimum traded quantity is specified.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.TradingMarket.mmMinimumTradedNominalQuantity;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.TradingMarket.mmObject();
 		}
 	};
@@ -3589,13 +3528,13 @@ public class SecuritiesQuantity {
 		{
 			elementContext_lazy = () -> SecuritiesQuantity.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MinimumDenominationDebt";
 			definition = "Debt for which a minimum denomination is specified.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.Debt.mmMinimumDenomination;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 		}
 	};
@@ -3636,13 +3575,13 @@ public class SecuritiesQuantity {
 		{
 			elementContext_lazy = () -> SecuritiesQuantity.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MinimumIncrementDebt";
 			definition = "Debt for which a minimum increment is specified.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.Debt.mmMinimumIncrement;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 		}
 	};
@@ -3684,13 +3623,13 @@ public class SecuritiesQuantity {
 		{
 			elementContext_lazy = () -> SecuritiesQuantity.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedOrder";
 			definition = "Order for which a specific quantity is requested.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmOrderedQuantity;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmObject();
 		}
 	};
@@ -3732,13 +3671,13 @@ public class SecuritiesQuantity {
 		{
 			elementContext_lazy = () -> SecuritiesQuantity.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Allocation";
 			definition = "Allocation process for which a quantity is specified.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.Allocation.mmAllocatedQuantity;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Allocation.mmObject();
 		}
 	};
@@ -3864,19 +3803,14 @@ public class SecuritiesQuantity {
 	 */
 	public static final MMBusinessAttribute mmAmount = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.QuantityOrAmount1Choice.mmAmount, com.tools20022.repository.msg.CashInForecast2.mmSubTotalAmount,
-					com.tools20022.repository.msg.CashOutForecast2.mmSubTotalAmount, com.tools20022.repository.msg.NetCashForecast1.mmNetAmount, com.tools20022.repository.msg.CashInForecast4.mmSubTotalAmount,
-					com.tools20022.repository.msg.CashOutForecast4.mmSubTotalAmount, com.tools20022.repository.msg.NetCashForecast2.mmNetAmount, com.tools20022.repository.msg.NetCashForecast3.mmNetAmount,
-					com.tools20022.repository.msg.FundCashInBreakdown1.mmAmount, com.tools20022.repository.msg.CashInForecast1.mmSubTotalAmount, com.tools20022.repository.msg.FundCashOutBreakdown1.mmAmount,
-					com.tools20022.repository.msg.CashOutForecast1.mmSubTotalAmount, com.tools20022.repository.msg.FundCashInBreakdown2.mmAmount, com.tools20022.repository.msg.CashInForecast3.mmSubTotalAmount,
-					com.tools20022.repository.msg.FundCashOutBreakdown2.mmAmount, com.tools20022.repository.msg.CashOutForecast3.mmSubTotalAmount, com.tools20022.repository.msg.SecuritiesCompensation1.mmSettlementAmount,
-					com.tools20022.repository.msg.UnitsAndCash.mmGrandTotalAmount, com.tools20022.repository.msg.EstimatedFundCashForecast5.mmCurrencyStatus, com.tools20022.repository.msg.CashOutForecast5.mmSubTotalAmount,
-					com.tools20022.repository.msg.FundCashOutBreakdown3.mmAmount, com.tools20022.repository.msg.NetCashForecast4.mmNetAmount, com.tools20022.repository.msg.CashInForecast5.mmSubTotalAmount,
-					com.tools20022.repository.msg.FundCashInBreakdown3.mmAmount, com.tools20022.repository.msg.CashOutForecast6.mmSubTotalAmount, com.tools20022.repository.msg.CashInForecast6.mmSubTotalAmount,
-					com.tools20022.repository.msg.NetCashForecast5.mmNetAmount, com.tools20022.repository.msg.CashInOutForecast7.mmAmount);
+			derivation_lazy = () -> Arrays.asList(QuantityOrAmount1Choice.mmAmount, CashInForecast2.mmSubTotalAmount, CashOutForecast2.mmSubTotalAmount, NetCashForecast1.mmNetAmount, CashInForecast4.mmSubTotalAmount,
+					CashOutForecast4.mmSubTotalAmount, NetCashForecast2.mmNetAmount, NetCashForecast3.mmNetAmount, FundCashInBreakdown1.mmAmount, CashInForecast1.mmSubTotalAmount, FundCashOutBreakdown1.mmAmount,
+					CashOutForecast1.mmSubTotalAmount, FundCashInBreakdown2.mmAmount, CashInForecast3.mmSubTotalAmount, FundCashOutBreakdown2.mmAmount, CashOutForecast3.mmSubTotalAmount, SecuritiesCompensation1.mmSettlementAmount,
+					UnitsAndCash.mmGrandTotalAmount, EstimatedFundCashForecast5.mmCurrencyStatus, CashOutForecast5.mmSubTotalAmount, FundCashOutBreakdown3.mmAmount, NetCashForecast4.mmNetAmount, CashInForecast5.mmSubTotalAmount,
+					FundCashInBreakdown3.mmAmount, CashOutForecast6.mmSubTotalAmount, CashInForecast6.mmSubTotalAmount, NetCashForecast5.mmNetAmount, CashInOutForecast7.mmAmount);
 			elementContext_lazy = () -> SecuritiesQuantity.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Amount";
 			definition = "Quantity expressed as an amount, eg,  in the investment fund business, a quantity of a financial instrument may be expressed as an amount of money.";
 			maxOccurs = 1;
@@ -3922,13 +3856,13 @@ public class SecuritiesQuantity {
 		{
 			elementContext_lazy = () -> SecuritiesQuantity.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DenominatorRatio";
 			definition = "Ratio for which a denominator is specified.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.UnderlyingRatio.mmUnderlyingQuantityDenominator;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.UnderlyingRatio.mmObject();
 		}
 	};
@@ -3970,13 +3904,13 @@ public class SecuritiesQuantity {
 		{
 			elementContext_lazy = () -> SecuritiesQuantity.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NumeratorRatio";
 			definition = "Ratio for which a numerator is specified.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.UnderlyingRatio.mmUnderlyingQuantityNumerator;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.UnderlyingRatio.mmObject();
 		}
 	};
@@ -4019,13 +3953,13 @@ public class SecuritiesQuantity {
 		{
 			elementContext_lazy = () -> SecuritiesQuantity.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SecuritiesTradeExecution";
 			definition = "Trade for which settlement takes place.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeExecution.mmExecutedTradeQuantity;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeExecution.mmObject();
 		}
 	};
@@ -4071,13 +4005,13 @@ public class SecuritiesQuantity {
 		{
 			elementContext_lazy = () -> SecuritiesQuantity.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedCorporateActionEvent";
 			definition = "Corporate action for which the offeror/issuer has specified a quantity of securities to purchase or redeem under the terms of the event.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmSecuritiesQuantitySought;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmObject();
 		}
 	};
@@ -4121,13 +4055,13 @@ public class SecuritiesQuantity {
 		{
 			elementContext_lazy = () -> SecuritiesQuantity.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorporateActionElection";
 			definition = "Election process which selected a quantity of securities.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.CorporateActionElection.mmQuantity;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.CorporateActionElection.mmObject();
 		}
 	};
@@ -4172,13 +4106,13 @@ public class SecuritiesQuantity {
 		{
 			elementContext_lazy = () -> SecuritiesQuantity.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TaxVoucher";
 			definition = "Tax voucher for which the calculation of holdings at record date took place.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.TaxVoucher.mmRecordDateHolding;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.TaxVoucher.mmObject();
 		}
 	};
@@ -4222,13 +4156,13 @@ public class SecuritiesQuantity {
 		{
 			elementContext_lazy = () -> SecuritiesQuantity.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedBuyIn";
 			definition = "Buy-in process for which a compensation amount of securities is specified.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.BuyIn.mmSecuritiesCompensation;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.BuyIn.mmObject();
 		}
 	};
@@ -4271,13 +4205,13 @@ public class SecuritiesQuantity {
 		{
 			elementContext_lazy = () -> SecuritiesQuantity.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PreviousDayOrder";
 			definition = "Securities order which uses information on a day order quantity.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmDayOrderQuantity;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmObject();
 		}
 	};
@@ -4320,12 +4254,12 @@ public class SecuritiesQuantity {
 		{
 			elementContext_lazy = () -> SecuritiesQuantity.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Liquidity";
 			definition = "Liquidity information related to a quantity of a financial instrument.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.Liquidity.mmQuantity;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Liquidity.mmObject();
 		}
 	};
@@ -4376,11 +4310,10 @@ public class SecuritiesQuantity {
 	 */
 	public static final MMBusinessAttribute mmRate = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Quantity13Choice.mmPortfolioTransferOutRate, com.tools20022.repository.msg.Transfer28.mmPortfolioTransferOutRate,
-					com.tools20022.repository.msg.Transfer31.mmPortfolioTransferOutRate);
+			derivation_lazy = () -> Arrays.asList(Quantity13Choice.mmPortfolioTransferOutRate, Transfer28.mmPortfolioTransferOutRate, Transfer31.mmPortfolioTransferOutRate);
 			elementContext_lazy = () -> SecuritiesQuantity.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Rate";
 			definition = "Quantity expressed as a percentage rate, eg,  in the investment fund business, a quantity of a financial instrument may be expressed as percentage of the investor's total holding.";
 			maxOccurs = 1;
@@ -4428,12 +4361,12 @@ public class SecuritiesQuantity {
 		{
 			elementContext_lazy = () -> SecuritiesQuantity.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MinimumQuantityOrderParameters";
 			definition = "Securities order for which a minimum quantity to execute is specified.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesOrderParameters.mmMinimumQuantity;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SecuritiesOrderParameters.mmObject();
 		}
 	};
@@ -4475,13 +4408,13 @@ public class SecuritiesQuantity {
 		{
 			elementContext_lazy = () -> SecuritiesQuantity.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MaximumQuantityRelatedQuote";
 			definition = "Quote process for which a maximum quantity of securities is specified.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.Quote.mmMaximumQuantity;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Quote.mmObject();
 		}
 	};
@@ -4524,13 +4457,13 @@ public class SecuritiesQuantity {
 		{
 			elementContext_lazy = () -> SecuritiesQuantity.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "UnavailableQuantityBalance";
 			definition = "Securities balance which contains the unavailable quantity.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesBalance.mmUnavailableQuantity;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SecuritiesBalance.mmObject();
 		}
 	};
@@ -4576,13 +4509,13 @@ public class SecuritiesQuantity {
 		{
 			elementContext_lazy = () -> SecuritiesQuantity.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MatchIncrementOrderParameters";
 			definition = "Securities order parameters for which a match increment quantity is provided.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesOrderParameters.mmMatchIncrement;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SecuritiesOrderParameters.mmObject();
 		}
 	};
@@ -4626,13 +4559,13 @@ public class SecuritiesQuantity {
 		{
 			elementContext_lazy = () -> SecuritiesQuantity.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedIssuance";
 			definition = "Issuance for which a minimum subscription quantity of securities is specified.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.Issuance.mmMinimum;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Issuance.mmObject();
 		}
 	};
@@ -4674,13 +4607,13 @@ public class SecuritiesQuantity {
 		{
 			elementContext_lazy = () -> SecuritiesQuantity.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Pairoff";
 			definition = "Pair off process for which a quantity has been specified.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.PairOff.mmPairedOffQuantity;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.PairOff.mmObject();
 		}
 	};
@@ -4721,13 +4654,13 @@ public class SecuritiesQuantity {
 		{
 			elementContext_lazy = () -> SecuritiesQuantity.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Issuance";
 			definition = "Issuance for which the nominal amount is specified.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.Issuance.mmIssueNominalAmount;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Issuance.mmObject();
 		}
 	};
@@ -4773,13 +4706,13 @@ public class SecuritiesQuantity {
 		{
 			elementContext_lazy = () -> SecuritiesQuantity.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "IntermediateToUnderlyingDenominatorDistributionInformation";
 			definition = "Cash and securities distribution information for which an intermediate to underlying denominator quantity is specified.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesAndCashDistribution.mmIntermediateToUnderlyingDenominator;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SecuritiesAndCashDistribution.mmObject();
 		}
 	};
@@ -4825,13 +4758,13 @@ public class SecuritiesQuantity {
 		{
 			elementContext_lazy = () -> SecuritiesQuantity.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MaximumHoldingDistributionInformation";
 			definition = "Cash and securities distribution information for which a maximum holding quantity is specified.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesAndCashDistribution.mmMaximumHolding;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SecuritiesAndCashDistribution.mmObject();
 		}
 	};
@@ -4877,13 +4810,13 @@ public class SecuritiesQuantity {
 		{
 			elementContext_lazy = () -> SecuritiesQuantity.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MaximumExercisableQuantityDistributionInformation";
 			definition = "Cash and securities distribution information for which a maximum exercisable quantity is specified.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesAndCashDistribution.mmMaximumExercisableQuantity;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SecuritiesAndCashDistribution.mmObject();
 		}
 	};
@@ -4929,13 +4862,13 @@ public class SecuritiesQuantity {
 		{
 			elementContext_lazy = () -> SecuritiesQuantity.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MinimumExercisableQuantityDistributionInformation";
 			definition = "Cash and securities distribution information for which a minimum exercisable quantity is specified.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesAndCashDistribution.mmMinimumExercisableQuantity;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SecuritiesAndCashDistribution.mmObject();
 		}
 	};
@@ -4981,13 +4914,13 @@ public class SecuritiesQuantity {
 		{
 			elementContext_lazy = () -> SecuritiesQuantity.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DistributedToUnderlyingDenominatorDistributionInformation";
 			definition = "Cash and securities distribution information for which a distributed to underlying denominator quantity is specified.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesAndCashDistribution.mmDistributedToUnderlyingDenominator;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SecuritiesAndCashDistribution.mmObject();
 		}
 	};
@@ -5033,13 +4966,13 @@ public class SecuritiesQuantity {
 		{
 			elementContext_lazy = () -> SecuritiesQuantity.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "IntermediateToUnderlyingNumeratorDistributionInformation";
 			definition = "Cash and securities distribution information for which an intermediate to underlying numerator quantity is specified.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesAndCashDistribution.mmIntermediateToUnderlyingNumerator;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SecuritiesAndCashDistribution.mmObject();
 		}
 	};
@@ -5085,13 +5018,13 @@ public class SecuritiesQuantity {
 		{
 			elementContext_lazy = () -> SecuritiesQuantity.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MinimumHoldingDistributionInformation";
 			definition = "Cash and securities distribution information for which a minimum holding quantity is specified.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesAndCashDistribution.mmMinimumHolding;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SecuritiesAndCashDistribution.mmObject();
 		}
 	};
@@ -5137,13 +5070,13 @@ public class SecuritiesQuantity {
 		{
 			elementContext_lazy = () -> SecuritiesQuantity.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DistributedToUnderlyingNumeratorDistributionInformation";
 			definition = "Cash and securities distribution information for which a distributed to underlying numerator quantity is specified.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesAndCashDistribution.mmDistributedToUnderlyingNumerator;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SecuritiesAndCashDistribution.mmObject();
 		}
 	};
@@ -5188,13 +5121,13 @@ public class SecuritiesQuantity {
 		{
 			elementContext_lazy = () -> SecuritiesQuantity.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MaximumHoldingRelatedSecuritiesDistribution";
 			definition = "Securities distribution for which a maximum holding quantity is provided.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesDistribution.mmMaximumHolding;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SecuritiesDistribution.mmObject();
 		}
 	};
@@ -5240,13 +5173,13 @@ public class SecuritiesQuantity {
 		{
 			elementContext_lazy = () -> SecuritiesQuantity.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "IntermediateToUnderlyingNumeratorRelatedSecuritiesDistribution";
 			definition = "Securities distribution for which an intermediate to underlying numerator quantity is provided.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesDistribution.mmIntermediateToUnderlyingNumerator;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SecuritiesDistribution.mmObject();
 		}
 	};
@@ -5293,13 +5226,13 @@ public class SecuritiesQuantity {
 		{
 			elementContext_lazy = () -> SecuritiesQuantity.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "IntermediateToUnderlyingDenominatorRelatedSecuritiesDistribution";
 			definition = "Securities distribution for which an intermediate to underlying denominator quantity is provided.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesDistribution.mmIntermediateToUnderlyingDenominator;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SecuritiesDistribution.mmObject();
 		}
 	};
@@ -5346,13 +5279,13 @@ public class SecuritiesQuantity {
 		{
 			elementContext_lazy = () -> SecuritiesQuantity.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DistributedToUnderlyingDenominatorRelatedSecuritiesDistribution";
 			definition = "Securities distribution for which a distributed to underlying denominator quantity is provided.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesDistribution.mmDistributedToUnderlyingDenominator;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SecuritiesDistribution.mmObject();
 		}
 	};
@@ -5398,13 +5331,13 @@ public class SecuritiesQuantity {
 		{
 			elementContext_lazy = () -> SecuritiesQuantity.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DistributedToUnderlyingNumeratorRelatedSecuritiesDistribution";
 			definition = "Securities distribution for which a distributed to underlying numerator quantity is provided.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesDistribution.mmDistributedToUnderlyingNumerator;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SecuritiesDistribution.mmObject();
 		}
 	};
@@ -5449,13 +5382,13 @@ public class SecuritiesQuantity {
 		{
 			elementContext_lazy = () -> SecuritiesQuantity.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MinimumHoldingRelatedSecuritiesDistribution";
 			definition = "Securities distribution for which a minimum holding quantity is provided.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesDistribution.mmMinimumHolding;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SecuritiesDistribution.mmObject();
 		}
 	};
@@ -5497,13 +5430,13 @@ public class SecuritiesQuantity {
 		{
 			elementContext_lazy = () -> SecuritiesQuantity.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MaximumTradedQuantityMarket";
 			definition = "Market for which a maximum traded quantity is specified.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.TradingMarket.mmMaximumTradedNominalQuantity;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.TradingMarket.mmObject();
 		}
 	};
@@ -5545,13 +5478,13 @@ public class SecuritiesQuantity {
 		{
 			elementContext_lazy = () -> SecuritiesQuantity.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "QuantityRelatedQuote";
 			definition = "Quote process for which a quantity of securities is specified.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.Quote.mmQuantity;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Quote.mmObject();
 		}
 	};
@@ -5593,13 +5526,13 @@ public class SecuritiesQuantity {
 		{
 			elementContext_lazy = () -> SecuritiesQuantity.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MinimumQuantityRelatedQuote";
 			definition = "Quote process for which a minimum quantity of securities is specified.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.Quote.mmMinimumQuantity;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Quote.mmObject();
 		}
 	};
@@ -5642,13 +5575,13 @@ public class SecuritiesQuantity {
 		{
 			elementContext_lazy = () -> SecuritiesQuantity.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NetAssetValueCalculation";
 			definition = "Net asset value calculation parameters.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.NetAssetValueCalculation.mmSecuritiesQuantity;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.NetAssetValueCalculation.mmObject();
 		}
 	};
@@ -5696,16 +5629,16 @@ public class SecuritiesQuantity {
 	 */
 	public static final MMBusinessAssociationEnd mmSidePocket = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ExpectedExecutionDetails3.mmSidePocketQuantity);
+			derivation_lazy = () -> Arrays.asList(ExpectedExecutionDetails3.mmSidePocketQuantity);
 			elementContext_lazy = () -> SecuritiesQuantity.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SidePocket";
 			definition = "Side pocket for which a quantity is specified.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.SidePocket.mmSidePocketQuantity;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SidePocket.mmObject();
 		}
 	};
@@ -5749,13 +5682,13 @@ public class SecuritiesQuantity {
 		{
 			elementContext_lazy = () -> SecuritiesQuantity.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Netting";
 			definition = "Netting process for which a net quantity of securities has been calculated.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.Netting.mmNetQuantity;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Netting.mmObject();
 		}
 	};
@@ -5799,13 +5732,13 @@ public class SecuritiesQuantity {
 		{
 			elementContext_lazy = () -> SecuritiesQuantity.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedOrderStatus";
 			definition = "Order status for which a remaining quantity is specified.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesOrderStatus.mmRemainingQuantity;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SecuritiesOrderStatus.mmObject();
 		}
 	};
@@ -5849,13 +5782,13 @@ public class SecuritiesQuantity {
 		{
 			elementContext_lazy = () -> SecuritiesQuantity.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesOrderStatus";
 			definition = "Order status for which a cumulative quantity is specified.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesOrderStatus.mmCumulativeQuantity;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SecuritiesOrderStatus.mmObject();
 		}
 	};
@@ -5900,13 +5833,13 @@ public class SecuritiesQuantity {
 		{
 			elementContext_lazy = () -> SecuritiesQuantity.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedTurnaroundSettlement";
 			definition = "Securities settlement process for which a turned quantity is specified.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmTurnedQuantity;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmObject();
 		}
 	};
@@ -5948,13 +5881,13 @@ public class SecuritiesQuantity {
 		{
 			elementContext_lazy = () -> SecuritiesQuantity.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedCashFlow";
 			definition = "Cash flow for which quantities are specified.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.FundsCashFlow.mmCashFlowQuantity;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.FundsCashFlow.mmObject();
 		}
 	};
@@ -5995,13 +5928,13 @@ public class SecuritiesQuantity {
 		{
 			elementContext_lazy = () -> SecuritiesQuantity.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Position";
 			definition = "Position which contains the net quantity.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.Position.mmNetQuantity;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Position.mmObject();
 		}
 	};
@@ -6044,13 +5977,13 @@ public class SecuritiesQuantity {
 		{
 			elementContext_lazy = () -> SecuritiesQuantity.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MaximumQuantityBiddingConditions";
 			definition = "Bidding conditions for which a maximum quantity is specified.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.BiddingConditions.mmMaximumQuantity;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.BiddingConditions.mmObject();
 		}
 	};
@@ -6093,13 +6026,13 @@ public class SecuritiesQuantity {
 		{
 			elementContext_lazy = () -> SecuritiesQuantity.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "FrontEndOddLotBiddingConditions";
 			definition = "Bidding conditions for which a front end odd lot is specified.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.BiddingConditions.mmFrontEndOddLotQuantity;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.BiddingConditions.mmObject();
 		}
 	};
@@ -6142,13 +6075,13 @@ public class SecuritiesQuantity {
 		{
 			elementContext_lazy = () -> SecuritiesQuantity.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MinimumQuantityBiddingConditions";
 			definition = "Bidding conditions for which a minimum quantity is specified.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.BiddingConditions.mmMinimumQuantitySought;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.BiddingConditions.mmObject();
 		}
 	};
@@ -6156,8 +6089,8 @@ public class SecuritiesQuantity {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesQuantity";
 				definition = "Quantity of a security.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Security.mmSecuritiesQuantity, com.tools20022.repository.entity.Security.mmMinimumQuantity,
@@ -6196,57 +6129,35 @@ public class SecuritiesQuantity {
 						com.tools20022.repository.entity.SecuritiesDistribution.mmIntermediateToUnderlyingDenominator, com.tools20022.repository.entity.SecuritiesDistribution.mmDistributedToUnderlyingDenominator,
 						com.tools20022.repository.entity.SecuritiesDistribution.mmDistributedToUnderlyingNumerator, com.tools20022.repository.entity.SecuritiesDistribution.mmMinimumHolding,
 						com.tools20022.repository.entity.Netting.mmNetQuantity, com.tools20022.repository.entity.Position.mmNetQuantity);
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Quantity6Choice.mmQuantity, com.tools20022.repository.choice.Quantity6Choice.mmOriginalAndCurrentFace,
-						com.tools20022.repository.choice.Quantity10Choice.mmQuantity, com.tools20022.repository.choice.Quantity10Choice.mmOriginalAndCurrentFace,
-						com.tools20022.repository.choice.Quantity5Choice.mmOriginalAndCurrentFaceAmount, com.tools20022.repository.choice.Quantity5Choice.mmQuantity,
-						com.tools20022.repository.choice.Quantity11Choice.mmOriginalAndCurrentFaceAmount, com.tools20022.repository.choice.Quantity11Choice.mmQuantity, com.tools20022.repository.choice.QuantityOrAmount1Choice.mmQuantity,
-						com.tools20022.repository.msg.ProprietaryQuantity1.mmQuantity, com.tools20022.repository.choice.TransactionQuantities1Choice.mmQuantity, com.tools20022.repository.choice.TransactionQuantities1Choice.mmProprietary,
-						com.tools20022.repository.choice.TransactionQuantities2Choice.mmQuantity, com.tools20022.repository.choice.TransactionQuantities2Choice.mmOriginalAndCurrentFaceAmount,
-						com.tools20022.repository.choice.TransactionQuantities2Choice.mmProprietary, com.tools20022.repository.msg.SettlementObligation6.mmRemainingQuantityToBeSettled,
-						com.tools20022.repository.choice.Quantity1Choice.mmQuantity, com.tools20022.repository.choice.Quantity1Choice.mmRelativeSize, com.tools20022.repository.msg.FinancialInstrumentAggregateBalance2.mmSettledBalance,
-						com.tools20022.repository.msg.FinancialInstrumentAggregateBalance2.mmTradedBalance, com.tools20022.repository.msg.SettlementObligation7.mmRemainingQuantityToBeSettled,
-						com.tools20022.repository.choice.Quantity20Choice.mmOriginalAndCurrentFaceAmount, com.tools20022.repository.choice.Quantity20Choice.mmQuantity,
-						com.tools20022.repository.choice.Quantity40Choice.mmOriginalAndCurrentFaceAmount, com.tools20022.repository.choice.Quantity40Choice.mmQuantity);
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesQuantity.mmUnit, com.tools20022.repository.entity.SecuritiesQuantity.mmSecuritiesTransfer,
-						com.tools20022.repository.entity.SecuritiesQuantity.mmSecurityIdentification, com.tools20022.repository.entity.SecuritiesQuantity.mmOrder, com.tools20022.repository.entity.SecuritiesQuantity.mmGroup1Or2Units,
-						com.tools20022.repository.entity.SecuritiesQuantity.mmRelatedOrderExecution, com.tools20022.repository.entity.SecuritiesQuantity.mmSecuritiesSettlement,
-						com.tools20022.repository.entity.SecuritiesQuantity.mmMinimumQuantityDebt, com.tools20022.repository.entity.SecuritiesQuantity.mmLotBreakdown,
-						com.tools20022.repository.entity.SecuritiesQuantity.mmMinimumExercisableQuantitySecuritiesConversion, com.tools20022.repository.entity.SecuritiesQuantity.mmMinimumExercisableMultipleQuantitySecuritiesConversion,
-						com.tools20022.repository.entity.SecuritiesQuantity.mmAggregateQuantityBalance, com.tools20022.repository.entity.SecuritiesQuantity.mmSecuritiesProceedsDefinition,
-						com.tools20022.repository.entity.SecuritiesQuantity.mmConditionalQuantitySecuritiesProceeds, com.tools20022.repository.entity.SecuritiesQuantity.mmOverAndAboveQuantitySecuritiesProceeds,
-						com.tools20022.repository.entity.SecuritiesQuantity.mmEntry, com.tools20022.repository.entity.SecuritiesQuantity.mmCode, com.tools20022.repository.entity.SecuritiesQuantity.mmExpectedQuantitySecuritiesProceeds,
-						com.tools20022.repository.entity.SecuritiesQuantity.mmStatusRelatedSecuritiesProceeds, com.tools20022.repository.entity.SecuritiesQuantity.mmCorporateActionDistribution,
-						com.tools20022.repository.entity.SecuritiesQuantity.mmRelatedEventForFractionalQuantity, com.tools20022.repository.entity.SecuritiesQuantity.mmMaximumExercisableQuantitySecuritiesConversion,
-						com.tools20022.repository.entity.SecuritiesQuantity.mmBoardLotSecuritiesProceeds, com.tools20022.repository.entity.SecuritiesQuantity.mmNewDenominationSecuritiesProceeds,
-						com.tools20022.repository.entity.SecuritiesQuantity.mmBackEndOddLotBiddingConditions, com.tools20022.repository.entity.SecuritiesQuantity.mmSecuritiesEntitlement,
-						com.tools20022.repository.entity.SecuritiesQuantity.mmCorporateActionEvent, com.tools20022.repository.entity.SecuritiesQuantity.mmBiddingConditions, com.tools20022.repository.entity.SecuritiesQuantity.mmLottery,
-						com.tools20022.repository.entity.SecuritiesQuantity.mmRelatedSubBalance, com.tools20022.repository.entity.SecuritiesQuantity.mmAvailableQuantityBalance, com.tools20022.repository.entity.SecuritiesQuantity.mmTrade,
-						com.tools20022.repository.entity.SecuritiesQuantity.mmRatioDenominatorSecuritiesConversion, com.tools20022.repository.entity.SecuritiesQuantity.mmRatioNumeratorSecuritiesConversion,
-						com.tools20022.repository.entity.SecuritiesQuantity.mmMinimumTradedQuantityMarket, com.tools20022.repository.entity.SecuritiesQuantity.mmMinimumDenominationDebt,
-						com.tools20022.repository.entity.SecuritiesQuantity.mmMinimumIncrementDebt, com.tools20022.repository.entity.SecuritiesQuantity.mmRelatedOrder, com.tools20022.repository.entity.SecuritiesQuantity.mmAllocation,
-						com.tools20022.repository.entity.SecuritiesQuantity.mmAmount, com.tools20022.repository.entity.SecuritiesQuantity.mmDenominatorRatio, com.tools20022.repository.entity.SecuritiesQuantity.mmNumeratorRatio,
-						com.tools20022.repository.entity.SecuritiesQuantity.mmSecuritiesTradeExecution, com.tools20022.repository.entity.SecuritiesQuantity.mmRelatedCorporateActionEvent,
-						com.tools20022.repository.entity.SecuritiesQuantity.mmCorporateActionElection, com.tools20022.repository.entity.SecuritiesQuantity.mmTaxVoucher, com.tools20022.repository.entity.SecuritiesQuantity.mmRelatedBuyIn,
-						com.tools20022.repository.entity.SecuritiesQuantity.mmPreviousDayOrder, com.tools20022.repository.entity.SecuritiesQuantity.mmLiquidity, com.tools20022.repository.entity.SecuritiesQuantity.mmRate,
-						com.tools20022.repository.entity.SecuritiesQuantity.mmMinimumQuantityOrderParameters, com.tools20022.repository.entity.SecuritiesQuantity.mmMaximumQuantityRelatedQuote,
-						com.tools20022.repository.entity.SecuritiesQuantity.mmUnavailableQuantityBalance, com.tools20022.repository.entity.SecuritiesQuantity.mmMatchIncrementOrderParameters,
-						com.tools20022.repository.entity.SecuritiesQuantity.mmRelatedIssuance, com.tools20022.repository.entity.SecuritiesQuantity.mmPairoff, com.tools20022.repository.entity.SecuritiesQuantity.mmIssuance,
-						com.tools20022.repository.entity.SecuritiesQuantity.mmIntermediateToUnderlyingDenominatorDistributionInformation, com.tools20022.repository.entity.SecuritiesQuantity.mmMaximumHoldingDistributionInformation,
-						com.tools20022.repository.entity.SecuritiesQuantity.mmMaximumExercisableQuantityDistributionInformation, com.tools20022.repository.entity.SecuritiesQuantity.mmMinimumExercisableQuantityDistributionInformation,
-						com.tools20022.repository.entity.SecuritiesQuantity.mmDistributedToUnderlyingDenominatorDistributionInformation,
-						com.tools20022.repository.entity.SecuritiesQuantity.mmIntermediateToUnderlyingNumeratorDistributionInformation, com.tools20022.repository.entity.SecuritiesQuantity.mmMinimumHoldingDistributionInformation,
-						com.tools20022.repository.entity.SecuritiesQuantity.mmDistributedToUnderlyingNumeratorDistributionInformation, com.tools20022.repository.entity.SecuritiesQuantity.mmMaximumHoldingRelatedSecuritiesDistribution,
-						com.tools20022.repository.entity.SecuritiesQuantity.mmIntermediateToUnderlyingNumeratorRelatedSecuritiesDistribution,
-						com.tools20022.repository.entity.SecuritiesQuantity.mmIntermediateToUnderlyingDenominatorRelatedSecuritiesDistribution,
-						com.tools20022.repository.entity.SecuritiesQuantity.mmDistributedToUnderlyingDenominatorRelatedSecuritiesDistribution,
-						com.tools20022.repository.entity.SecuritiesQuantity.mmDistributedToUnderlyingNumeratorRelatedSecuritiesDistribution, com.tools20022.repository.entity.SecuritiesQuantity.mmMinimumHoldingRelatedSecuritiesDistribution,
-						com.tools20022.repository.entity.SecuritiesQuantity.mmMaximumTradedQuantityMarket, com.tools20022.repository.entity.SecuritiesQuantity.mmQuantityRelatedQuote,
-						com.tools20022.repository.entity.SecuritiesQuantity.mmMinimumQuantityRelatedQuote, com.tools20022.repository.entity.SecuritiesQuantity.mmNetAssetValueCalculation,
-						com.tools20022.repository.entity.SecuritiesQuantity.mmSidePocket, com.tools20022.repository.entity.SecuritiesQuantity.mmNetting, com.tools20022.repository.entity.SecuritiesQuantity.mmRelatedOrderStatus,
-						com.tools20022.repository.entity.SecuritiesQuantity.mmSecuritiesOrderStatus, com.tools20022.repository.entity.SecuritiesQuantity.mmRelatedTurnaroundSettlement,
-						com.tools20022.repository.entity.SecuritiesQuantity.mmRelatedCashFlow, com.tools20022.repository.entity.SecuritiesQuantity.mmPosition,
-						com.tools20022.repository.entity.SecuritiesQuantity.mmMaximumQuantityBiddingConditions, com.tools20022.repository.entity.SecuritiesQuantity.mmFrontEndOddLotBiddingConditions,
-						com.tools20022.repository.entity.SecuritiesQuantity.mmMinimumQuantityBiddingConditions);
+				derivationElement_lazy = () -> Arrays.asList(Quantity6Choice.mmQuantity, Quantity6Choice.mmOriginalAndCurrentFace, Quantity10Choice.mmQuantity, Quantity10Choice.mmOriginalAndCurrentFace,
+						Quantity5Choice.mmOriginalAndCurrentFaceAmount, Quantity5Choice.mmQuantity, Quantity11Choice.mmOriginalAndCurrentFaceAmount, Quantity11Choice.mmQuantity, QuantityOrAmount1Choice.mmQuantity,
+						ProprietaryQuantity1.mmQuantity, TransactionQuantities1Choice.mmQuantity, TransactionQuantities1Choice.mmProprietary, TransactionQuantities2Choice.mmQuantity,
+						TransactionQuantities2Choice.mmOriginalAndCurrentFaceAmount, TransactionQuantities2Choice.mmProprietary, SettlementObligation6.mmRemainingQuantityToBeSettled, Quantity1Choice.mmQuantity,
+						Quantity1Choice.mmRelativeSize, FinancialInstrumentAggregateBalance2.mmSettledBalance, FinancialInstrumentAggregateBalance2.mmTradedBalance, SettlementObligation7.mmRemainingQuantityToBeSettled,
+						Quantity20Choice.mmOriginalAndCurrentFaceAmount, Quantity20Choice.mmQuantity, Quantity40Choice.mmOriginalAndCurrentFaceAmount, Quantity40Choice.mmQuantity);
+				element_lazy = () -> Arrays.asList(SecuritiesQuantity.mmUnit, SecuritiesQuantity.mmSecuritiesTransfer, SecuritiesQuantity.mmSecurityIdentification, SecuritiesQuantity.mmOrder, SecuritiesQuantity.mmGroup1Or2Units,
+						SecuritiesQuantity.mmRelatedOrderExecution, SecuritiesQuantity.mmSecuritiesSettlement, SecuritiesQuantity.mmMinimumQuantityDebt, SecuritiesQuantity.mmLotBreakdown,
+						SecuritiesQuantity.mmMinimumExercisableQuantitySecuritiesConversion, SecuritiesQuantity.mmMinimumExercisableMultipleQuantitySecuritiesConversion, SecuritiesQuantity.mmAggregateQuantityBalance,
+						SecuritiesQuantity.mmSecuritiesProceedsDefinition, SecuritiesQuantity.mmConditionalQuantitySecuritiesProceeds, SecuritiesQuantity.mmOverAndAboveQuantitySecuritiesProceeds, SecuritiesQuantity.mmEntry,
+						SecuritiesQuantity.mmCode, SecuritiesQuantity.mmExpectedQuantitySecuritiesProceeds, SecuritiesQuantity.mmStatusRelatedSecuritiesProceeds, SecuritiesQuantity.mmCorporateActionDistribution,
+						SecuritiesQuantity.mmRelatedEventForFractionalQuantity, SecuritiesQuantity.mmMaximumExercisableQuantitySecuritiesConversion, SecuritiesQuantity.mmBoardLotSecuritiesProceeds,
+						SecuritiesQuantity.mmNewDenominationSecuritiesProceeds, SecuritiesQuantity.mmBackEndOddLotBiddingConditions, SecuritiesQuantity.mmSecuritiesEntitlement, SecuritiesQuantity.mmCorporateActionEvent,
+						SecuritiesQuantity.mmBiddingConditions, SecuritiesQuantity.mmLottery, SecuritiesQuantity.mmRelatedSubBalance, SecuritiesQuantity.mmAvailableQuantityBalance, SecuritiesQuantity.mmTrade,
+						SecuritiesQuantity.mmRatioDenominatorSecuritiesConversion, SecuritiesQuantity.mmRatioNumeratorSecuritiesConversion, SecuritiesQuantity.mmMinimumTradedQuantityMarket, SecuritiesQuantity.mmMinimumDenominationDebt,
+						SecuritiesQuantity.mmMinimumIncrementDebt, SecuritiesQuantity.mmRelatedOrder, SecuritiesQuantity.mmAllocation, SecuritiesQuantity.mmAmount, SecuritiesQuantity.mmDenominatorRatio, SecuritiesQuantity.mmNumeratorRatio,
+						SecuritiesQuantity.mmSecuritiesTradeExecution, SecuritiesQuantity.mmRelatedCorporateActionEvent, SecuritiesQuantity.mmCorporateActionElection, SecuritiesQuantity.mmTaxVoucher, SecuritiesQuantity.mmRelatedBuyIn,
+						SecuritiesQuantity.mmPreviousDayOrder, SecuritiesQuantity.mmLiquidity, SecuritiesQuantity.mmRate, SecuritiesQuantity.mmMinimumQuantityOrderParameters, SecuritiesQuantity.mmMaximumQuantityRelatedQuote,
+						SecuritiesQuantity.mmUnavailableQuantityBalance, SecuritiesQuantity.mmMatchIncrementOrderParameters, SecuritiesQuantity.mmRelatedIssuance, SecuritiesQuantity.mmPairoff, SecuritiesQuantity.mmIssuance,
+						SecuritiesQuantity.mmIntermediateToUnderlyingDenominatorDistributionInformation, SecuritiesQuantity.mmMaximumHoldingDistributionInformation, SecuritiesQuantity.mmMaximumExercisableQuantityDistributionInformation,
+						SecuritiesQuantity.mmMinimumExercisableQuantityDistributionInformation, SecuritiesQuantity.mmDistributedToUnderlyingDenominatorDistributionInformation,
+						SecuritiesQuantity.mmIntermediateToUnderlyingNumeratorDistributionInformation, SecuritiesQuantity.mmMinimumHoldingDistributionInformation,
+						SecuritiesQuantity.mmDistributedToUnderlyingNumeratorDistributionInformation, SecuritiesQuantity.mmMaximumHoldingRelatedSecuritiesDistribution,
+						SecuritiesQuantity.mmIntermediateToUnderlyingNumeratorRelatedSecuritiesDistribution, SecuritiesQuantity.mmIntermediateToUnderlyingDenominatorRelatedSecuritiesDistribution,
+						SecuritiesQuantity.mmDistributedToUnderlyingDenominatorRelatedSecuritiesDistribution, SecuritiesQuantity.mmDistributedToUnderlyingNumeratorRelatedSecuritiesDistribution,
+						SecuritiesQuantity.mmMinimumHoldingRelatedSecuritiesDistribution, SecuritiesQuantity.mmMaximumTradedQuantityMarket, SecuritiesQuantity.mmQuantityRelatedQuote, SecuritiesQuantity.mmMinimumQuantityRelatedQuote,
+						SecuritiesQuantity.mmNetAssetValueCalculation, SecuritiesQuantity.mmSidePocket, SecuritiesQuantity.mmNetting, SecuritiesQuantity.mmRelatedOrderStatus, SecuritiesQuantity.mmSecuritiesOrderStatus,
+						SecuritiesQuantity.mmRelatedTurnaroundSettlement, SecuritiesQuantity.mmRelatedCashFlow, SecuritiesQuantity.mmPosition, SecuritiesQuantity.mmMaximumQuantityBiddingConditions,
+						SecuritiesQuantity.mmFrontEndOddLotBiddingConditions, SecuritiesQuantity.mmMinimumQuantityBiddingConditions);
 				derivationComponent_lazy = () -> Arrays.asList(Quantity12Choice.mmObject(), Unit2.mmObject(), FinancialInstrumentQuantity1.mmObject(), Unit5.mmObject(), Unit4.mmObject(), Quantity14Choice.mmObject(), Unit1.mmObject(),
 						Unit3.mmObject(), FinancialInstrumentQuantity1Choice.mmObject(), OriginalAndCurrentQuantities1.mmObject(), Quantity6Choice.mmObject(), FinancialInstrumentQuantity15Choice.mmObject(),
 						OriginalAndCurrentQuantities4.mmObject(), Quantity10Choice.mmObject(), Quantity13Choice.mmObject(), OriginalAndCurrentQuantities2.mmObject(), Quantity4Choice.mmObject(), Quantity3Choice.mmObject(),

@@ -19,9 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.AssetClassProductType8Code;
 import com.tools20022.repository.codeset.AssetClassSubProductType37Code;
 import com.tools20022.repository.entity.Commodity;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -103,11 +105,11 @@ public class PaperCommodityPulp1 {
 	 */
 	public static final MMMessageAttribute mmBaseProduct = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Commodity.mmBaseProduct;
+			businessElementTrace_lazy = () -> Commodity.mmBaseProduct;
 			componentContext_lazy = () -> PaperCommodityPulp1.mmObject();
 			isDerived = false;
 			xmlTag = "BasePdct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BaseProduct";
 			definition = "Base product for the underlying asset class as specified in the classification of commodities derivatives table.";
 			maxOccurs = 1;
@@ -151,11 +153,11 @@ public class PaperCommodityPulp1 {
 	 */
 	public static final MMMessageAttribute mmSubProduct = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Commodity.mmSubProduct;
+			businessElementTrace_lazy = () -> Commodity.mmSubProduct;
 			componentContext_lazy = () -> PaperCommodityPulp1.mmObject();
 			isDerived = false;
 			xmlTag = "SubPdct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubProduct";
 			definition = "Sub-product for the underlying asset class.";
 			maxOccurs = 1;
@@ -167,10 +169,10 @@ public class PaperCommodityPulp1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaperCommodityPulp1.mmBaseProduct, com.tools20022.repository.msg.PaperCommodityPulp1.mmSubProduct);
+				messageElement_lazy = () -> Arrays.asList(PaperCommodityPulp1.mmBaseProduct, PaperCommodityPulp1.mmSubProduct);
 				trace_lazy = () -> Commodity.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PaperCommodityPulp1";
 				definition = "Defines commodity sub-product attributes of a paper derivative of type pulp.";
 			}

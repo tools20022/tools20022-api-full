@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.MaturityRedemptionTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -98,7 +100,7 @@ public class MaturityRedemptionType1Code extends MaturityRedemptionTypeCode {
 	 */
 	public static final MMCode mmFinalRedemption = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinalRedemption";
 			owner_lazy = () -> MaturityRedemptionType1Code.mmObject();
 		}
@@ -121,7 +123,7 @@ public class MaturityRedemptionType1Code extends MaturityRedemptionTypeCode {
 	 */
 	public static final MMCode mmPartialRedemptionWithoutReduction = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartialRedemptionWithoutReduction";
 			owner_lazy = () -> MaturityRedemptionType1Code.mmObject();
 		}
@@ -144,7 +146,7 @@ public class MaturityRedemptionType1Code extends MaturityRedemptionTypeCode {
 	 */
 	public static final MMCode mmPartialRedemptionWithReduction = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartialRedemptionWithReduction";
 			owner_lazy = () -> MaturityRedemptionType1Code.mmObject();
 		}
@@ -167,7 +169,7 @@ public class MaturityRedemptionType1Code extends MaturityRedemptionTypeCode {
 	 */
 	public static final MMCode mmDrawingAtRandom = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DrawingAtRandom";
 			owner_lazy = () -> MaturityRedemptionType1Code.mmObject();
 		}
@@ -190,7 +192,7 @@ public class MaturityRedemptionType1Code extends MaturityRedemptionTypeCode {
 	 */
 	public static final MMCode mmDrawingProRata = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DrawingProRata";
 			owner_lazy = () -> MaturityRedemptionType1Code.mmObject();
 		}
@@ -213,7 +215,7 @@ public class MaturityRedemptionType1Code extends MaturityRedemptionTypeCode {
 	 */
 	public static final MMCode mmCall = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Call";
 			owner_lazy = () -> MaturityRedemptionType1Code.mmObject();
 		}
@@ -236,7 +238,7 @@ public class MaturityRedemptionType1Code extends MaturityRedemptionTypeCode {
 	 */
 	public static final MMCode mmPut = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Put";
 			owner_lazy = () -> MaturityRedemptionType1Code.mmObject();
 		}
@@ -245,15 +247,13 @@ public class MaturityRedemptionType1Code extends MaturityRedemptionTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("FRED");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MaturityRedemptionType1Code";
 				definition = "Indicates the type of redemption at maturity.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MaturityRedemptionType1Code.mmFinalRedemption, com.tools20022.repository.codeset.MaturityRedemptionType1Code.mmPartialRedemptionWithoutReduction,
-						com.tools20022.repository.codeset.MaturityRedemptionType1Code.mmPartialRedemptionWithReduction, com.tools20022.repository.codeset.MaturityRedemptionType1Code.mmDrawingAtRandom,
-						com.tools20022.repository.codeset.MaturityRedemptionType1Code.mmDrawingProRata, com.tools20022.repository.codeset.MaturityRedemptionType1Code.mmCall,
-						com.tools20022.repository.codeset.MaturityRedemptionType1Code.mmPut);
+				code_lazy = () -> Arrays.asList(MaturityRedemptionType1Code.mmFinalRedemption, MaturityRedemptionType1Code.mmPartialRedemptionWithoutReduction, MaturityRedemptionType1Code.mmPartialRedemptionWithReduction,
+						MaturityRedemptionType1Code.mmDrawingAtRandom, MaturityRedemptionType1Code.mmDrawingProRata, MaturityRedemptionType1Code.mmCall, MaturityRedemptionType1Code.mmPut);
 				trace_lazy = () -> MaturityRedemptionTypeCode.mmObject();
 			}
 		});

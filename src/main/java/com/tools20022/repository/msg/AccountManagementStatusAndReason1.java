@@ -17,13 +17,13 @@
 
 package com.tools20022.repository.msg;
 
-import com.tools20022.metamodel.MMMessageAssociationEnd;
-import com.tools20022.metamodel.MMMessageAttribute;
-import com.tools20022.metamodel.MMMessageComponent;
-import com.tools20022.metamodel.MMXor;
+import com.tools20022.metamodel.*;
+import com.tools20022.repository.area.acmt.AccountManagementStatusReportV02;
 import com.tools20022.repository.codeset.AccountManagementStatus1Code;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.AccountStatus;
+import com.tools20022.repository.entity.StatusReason;
+import com.tools20022.repository.GeneratedRepository;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -138,11 +138,11 @@ public class AccountManagementStatusAndReason1 {
 	 */
 	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AccountStatus.mmManagementStatus;
+			businessElementTrace_lazy = () -> AccountStatus.mmManagementStatus;
 			componentContext_lazy = () -> AccountManagementStatusAndReason1.mmObject();
 			isDerived = false;
 			xmlTag = "Sts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Status";
 			definition = "Status of the account opening instruction or account modification instruction.";
 			maxOccurs = 1;
@@ -184,11 +184,11 @@ public class AccountManagementStatusAndReason1 {
 	 */
 	public static final MMMessageAssociationEnd mmRejected = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmRejectedStatusReason;
+			businessElementTrace_lazy = () -> StatusReason.mmRejectedStatusReason;
 			componentContext_lazy = () -> AccountManagementStatusAndReason1.mmObject();
 			isDerived = false;
 			xmlTag = "Rjctd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rejected";
 			definition = "Status of the order is rejected.";
 			maxOccurs = 1;
@@ -233,7 +233,7 @@ public class AccountManagementStatusAndReason1 {
 			componentContext_lazy = () -> AccountManagementStatusAndReason1.mmObject();
 			isDerived = false;
 			xmlTag = "AcctApplId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountApplicationIdentification";
 			definition = "Unique and unambiguous identifier of the account opening or modification instruction at application level.";
 			maxOccurs = 1;
@@ -246,6 +246,10 @@ public class AccountManagementStatusAndReason1 {
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
+	 * messageComponent} =
+	 * {@linkplain com.tools20022.repository.msg.AccountManagementStatusAndReason1
+	 * AccountManagementStatusAndReason1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getImpactedElements
 	 * impactedElements} =
 	 * <ul>
@@ -257,10 +261,6 @@ public class AccountManagementStatusAndReason1 {
 	 * AccountManagementStatusAndReason1.mmRejected}</li>
 	 * </ul>
 	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
-	 * messageComponent} =
-	 * {@linkplain com.tools20022.repository.msg.AccountManagementStatusAndReason1
-	 * AccountManagementStatusAndReason1}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -274,23 +274,22 @@ public class AccountManagementStatusAndReason1 {
 	 */
 	public static final MMXor mmStatusOrRejectedRule = new MMXor() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusOrRejectedRule";
 			definition = "Either Status or Rejected must be present, but not both.";
 			messageComponent_lazy = () -> AccountManagementStatusAndReason1.mmObject();
-			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountManagementStatusAndReason1.mmStatus, com.tools20022.repository.msg.AccountManagementStatusAndReason1.mmRejected);
+			impactedElements_lazy = () -> Arrays.asList(AccountManagementStatusAndReason1.mmStatus, AccountManagementStatusAndReason1.mmRejected);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountManagementStatusAndReason1.mmStatus, com.tools20022.repository.msg.AccountManagementStatusAndReason1.mmRejected,
-						com.tools20022.repository.msg.AccountManagementStatusAndReason1.mmAccountApplicationIdentification);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountManagementStatusReportV02.mmStatusReport);
+				messageElement_lazy = () -> Arrays.asList(AccountManagementStatusAndReason1.mmStatus, AccountManagementStatusAndReason1.mmRejected, AccountManagementStatusAndReason1.mmAccountApplicationIdentification);
+				messageBuildingBlock_lazy = () -> Arrays.asList(AccountManagementStatusReportV02.mmStatusReport);
 				trace_lazy = () -> AccountStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
 						return DateFormat.getDateInstance(java.text.DateFormat.LONG).parse("September 9, 2016");
@@ -301,7 +300,7 @@ public class AccountManagementStatusAndReason1 {
 				name = "AccountManagementStatusAndReason1";
 				definition = "Status report of a account opening instruction or account modification instruction that was previously received.";
 				nextVersions_lazy = () -> Arrays.asList(AccountManagementStatusAndReason2.mmObject());
-				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountManagementStatusAndReason1.mmStatusOrRejectedRule);
+				xors_lazy = () -> Arrays.asList(AccountManagementStatusAndReason1.mmStatusOrRejectedRule);
 			}
 		});
 		return mmObject_lazy.get();

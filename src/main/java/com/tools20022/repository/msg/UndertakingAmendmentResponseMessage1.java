@@ -19,7 +19,10 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.AmendmentOfUndertaking;
+import com.tools20022.repository.entity.Undertaking;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -98,7 +101,7 @@ public class UndertakingAmendmentResponseMessage1 {
 			componentContext_lazy = () -> UndertakingAmendmentResponseMessage1.mmObject();
 			isDerived = false;
 			xmlTag = "UdrtkgAmdmntRspnDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UndertakingAmendmentResponseDetails";
 			definition = "Details of the proposed amendment response.";
 			maxOccurs = 1;
@@ -141,11 +144,11 @@ public class UndertakingAmendmentResponseMessage1 {
 	 */
 	public static final MMMessageAssociationEnd mmDigitalSignature = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Undertaking.mmElectronicSignature;
+			businessElementTrace_lazy = () -> Undertaking.mmElectronicSignature;
 			componentContext_lazy = () -> UndertakingAmendmentResponseMessage1.mmObject();
 			isDerived = false;
 			xmlTag = "DgtlSgntr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DigitalSignature";
 			definition = "Digital signature of the response.";
 			maxOccurs = 1;
@@ -158,11 +161,10 @@ public class UndertakingAmendmentResponseMessage1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UndertakingAmendmentResponseMessage1.mmUndertakingAmendmentResponseDetails,
-						com.tools20022.repository.msg.UndertakingAmendmentResponseMessage1.mmDigitalSignature);
+				messageElement_lazy = () -> Arrays.asList(UndertakingAmendmentResponseMessage1.mmUndertakingAmendmentResponseDetails, UndertakingAmendmentResponseMessage1.mmDigitalSignature);
 				trace_lazy = () -> AmendmentOfUndertaking.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "UndertakingAmendmentResponseMessage1";
 				definition = "Contents of an UndertakingAmendmentResponse message.";
 			}

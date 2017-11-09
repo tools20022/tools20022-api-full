@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ReportSortedTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -86,7 +88,7 @@ public class ReportSortedType1Code extends ReportSortedTypeCode {
 	 */
 	public static final MMCode mmCountry = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Country";
 			owner_lazy = () -> ReportSortedType1Code.mmObject();
 		}
@@ -109,7 +111,7 @@ public class ReportSortedType1Code extends ReportSortedTypeCode {
 	 */
 	public static final MMCode mmParty = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Party";
 			owner_lazy = () -> ReportSortedType1Code.mmObject();
 		}
@@ -132,7 +134,7 @@ public class ReportSortedType1Code extends ReportSortedTypeCode {
 	 */
 	public static final MMCode mmCurrency = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Currency";
 			owner_lazy = () -> ReportSortedType1Code.mmObject();
 		}
@@ -141,13 +143,12 @@ public class ReportSortedType1Code extends ReportSortedTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("COUN");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ReportSortedType1Code";
 				definition = "Specifies the type of criterion used to sort a report.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ReportSortedType1Code.mmCountry, com.tools20022.repository.codeset.ReportSortedType1Code.mmParty,
-						com.tools20022.repository.codeset.ReportSortedType1Code.mmCurrency);
+				code_lazy = () -> Arrays.asList(ReportSortedType1Code.mmCountry, ReportSortedType1Code.mmParty, ReportSortedType1Code.mmCurrency);
 				trace_lazy = () -> ReportSortedTypeCode.mmObject();
 			}
 		});

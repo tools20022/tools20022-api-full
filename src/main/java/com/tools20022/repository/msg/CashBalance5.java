@@ -20,13 +20,18 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.BalanceType8Choice;
 import com.tools20022.repository.choice.DateAndDateTimeChoice;
 import com.tools20022.repository.codeset.BalanceStatus1Code;
 import com.tools20022.repository.codeset.CreditDebitCode;
 import com.tools20022.repository.datatype.ImpliedCurrencyAndAmount;
 import com.tools20022.repository.datatype.Number;
+import com.tools20022.repository.entity.Account;
+import com.tools20022.repository.entity.AccountStatus;
+import com.tools20022.repository.entity.Balance;
 import com.tools20022.repository.entity.CashBalance;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -113,11 +118,11 @@ public class CashBalance5 {
 	 */
 	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashBalance.mmAmount;
+			businessElementTrace_lazy = () -> CashBalance.mmAmount;
 			componentContext_lazy = () -> CashBalance5.mmObject();
 			isDerived = false;
 			xmlTag = "Amt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Currency and amount of money of the cash balance.";
 			maxOccurs = 1;
@@ -163,11 +168,11 @@ public class CashBalance5 {
 	 */
 	public static final MMMessageAttribute mmCreditDebitIndicator = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Balance.mmCreditDebitIndicator;
+			businessElementTrace_lazy = () -> Balance.mmCreditDebitIndicator;
 			componentContext_lazy = () -> CashBalance5.mmObject();
 			isDerived = false;
 			xmlTag = "CdtDbtInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditDebitIndicator";
 			definition = "Indicates whether the balance is a credit or a debit balance. A zero balance is considered to be a credit balance";
 			maxOccurs = 1;
@@ -208,11 +213,11 @@ public class CashBalance5 {
 	 */
 	public static final MMMessageAssociationEnd mmType = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Balance.mmType;
+			businessElementTrace_lazy = () -> Balance.mmType;
 			componentContext_lazy = () -> CashBalance5.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Specifies the nature of a balance.";
 			maxOccurs = 1;
@@ -256,11 +261,11 @@ public class CashBalance5 {
 	 */
 	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AccountStatus.mmBalanceStatus;
+			businessElementTrace_lazy = () -> AccountStatus.mmBalanceStatus;
 			componentContext_lazy = () -> CashBalance5.mmObject();
 			isDerived = false;
 			xmlTag = "Sts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Status";
 			definition = "Current status of a cash balance.";
 			maxOccurs = 1;
@@ -304,11 +309,11 @@ public class CashBalance5 {
 	 */
 	public static final MMMessageAttribute mmValueDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Balance.mmValueDate;
+			businessElementTrace_lazy = () -> Balance.mmValueDate;
 			componentContext_lazy = () -> CashBalance5.mmObject();
 			isDerived = false;
 			xmlTag = "ValDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValueDate";
 			definition = "Date and time at which the balance is or will be available.";
 			maxOccurs = 1;
@@ -351,7 +356,7 @@ public class CashBalance5 {
 			componentContext_lazy = () -> CashBalance5.mmObject();
 			isDerived = false;
 			xmlTag = "NbOfPmts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NumberOfPayments";
 			definition = "Number of payments taken into account for the calculation of the cash balance value.";
 			maxOccurs = 1;
@@ -394,11 +399,11 @@ public class CashBalance5 {
 	 */
 	public static final MMMessageAssociationEnd mmRestrictionType = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.mmAccountRestriction;
+			businessElementTrace_lazy = () -> Account.mmAccountRestriction;
 			componentContext_lazy = () -> CashBalance5.mmObject();
 			isDerived = false;
 			xmlTag = "RstrctnTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RestrictionType";
 			definition = "Type providing further information on balance restrictions.";
 			maxOccurs = 1;
@@ -411,12 +416,11 @@ public class CashBalance5 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashBalance5.mmAmount, com.tools20022.repository.msg.CashBalance5.mmCreditDebitIndicator, com.tools20022.repository.msg.CashBalance5.mmType,
-						com.tools20022.repository.msg.CashBalance5.mmStatus, com.tools20022.repository.msg.CashBalance5.mmValueDate, com.tools20022.repository.msg.CashBalance5.mmNumberOfPayments,
-						com.tools20022.repository.msg.CashBalance5.mmRestrictionType);
+				messageElement_lazy = () -> Arrays.asList(CashBalance5.mmAmount, CashBalance5.mmCreditDebitIndicator, CashBalance5.mmType, CashBalance5.mmStatus, CashBalance5.mmValueDate, CashBalance5.mmNumberOfPayments,
+						CashBalance5.mmRestrictionType);
 				trace_lazy = () -> CashBalance.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CashBalance5";
 				definition = "Balance details for a cash account.";
 			}

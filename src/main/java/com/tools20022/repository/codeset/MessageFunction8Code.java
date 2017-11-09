@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.MessageFunctionCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -90,7 +92,7 @@ public class MessageFunction8Code extends MessageFunctionCode {
 	 */
 	public static final MMCode mmATMBalance = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ATMBalance";
 			owner_lazy = () -> MessageFunction8Code.mmObject();
 		}
@@ -113,7 +115,7 @@ public class MessageFunction8Code extends MessageFunctionCode {
 	 */
 	public static final MMCode mmATMGlobalStatus = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ATMGlobalStatus";
 			owner_lazy = () -> MessageFunction8Code.mmObject();
 		}
@@ -136,7 +138,7 @@ public class MessageFunction8Code extends MessageFunctionCode {
 	 */
 	public static final MMCode mmSecurityDetails = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityDetails";
 			owner_lazy = () -> MessageFunction8Code.mmObject();
 		}
@@ -159,7 +161,7 @@ public class MessageFunction8Code extends MessageFunctionCode {
 	 */
 	public static final MMCode mmCountersInquiry = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CountersInquiry";
 			owner_lazy = () -> MessageFunction8Code.mmObject();
 		}
@@ -182,7 +184,7 @@ public class MessageFunction8Code extends MessageFunctionCode {
 	 */
 	public static final MMCode mmKeyExchangeRequest = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "KeyExchangeRequest";
 			owner_lazy = () -> MessageFunction8Code.mmObject();
 		}
@@ -205,7 +207,7 @@ public class MessageFunction8Code extends MessageFunctionCode {
 	 */
 	public static final MMCode mmSecurityKeyStatus = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityKeyStatus";
 			owner_lazy = () -> MessageFunction8Code.mmObject();
 		}
@@ -214,13 +216,12 @@ public class MessageFunction8Code extends MessageFunctionCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MessageFunction8Code";
 				definition = "Identifies the type of process requested by the host to an ATM.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MessageFunction8Code.mmATMBalance, com.tools20022.repository.codeset.MessageFunction8Code.mmATMGlobalStatus,
-						com.tools20022.repository.codeset.MessageFunction8Code.mmSecurityDetails, com.tools20022.repository.codeset.MessageFunction8Code.mmCountersInquiry,
-						com.tools20022.repository.codeset.MessageFunction8Code.mmKeyExchangeRequest, com.tools20022.repository.codeset.MessageFunction8Code.mmSecurityKeyStatus);
+				code_lazy = () -> Arrays.asList(MessageFunction8Code.mmATMBalance, MessageFunction8Code.mmATMGlobalStatus, MessageFunction8Code.mmSecurityDetails, MessageFunction8Code.mmCountersInquiry,
+						MessageFunction8Code.mmKeyExchangeRequest, MessageFunction8Code.mmSecurityKeyStatus);
 				trace_lazy = () -> MessageFunctionCode.mmObject();
 			}
 		});

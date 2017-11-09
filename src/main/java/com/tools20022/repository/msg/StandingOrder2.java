@@ -20,6 +20,7 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.AccountIdentification4Choice;
 import com.tools20022.repository.choice.Amount2Choice;
 import com.tools20022.repository.choice.ExecutionType1Choice;
@@ -30,7 +31,11 @@ import com.tools20022.repository.codeset.Frequency2Code;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.datatype.TrueFalseIndicator;
+import com.tools20022.repository.entity.Account;
 import com.tools20022.repository.entity.CashStandingOrder;
+import com.tools20022.repository.entity.Organisation;
+import com.tools20022.repository.entity.StandingOrder;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -150,11 +155,11 @@ public class StandingOrder2 {
 	 */
 	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StandingOrder.mmAmount;
+			businessElementTrace_lazy = () -> StandingOrder.mmAmount;
 			componentContext_lazy = () -> StandingOrder2.mmObject();
 			isDerived = false;
 			xmlTag = "Amt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Amount of money and currency to be transferred when a payment instruction is created as a result of a standing order.";
 			maxOccurs = 1;
@@ -198,11 +203,11 @@ public class StandingOrder2 {
 	 */
 	public static final MMMessageAttribute mmCreditDebitIndicator = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashStandingOrder.mmCreditDebitIndicator;
+			businessElementTrace_lazy = () -> CashStandingOrder.mmCreditDebitIndicator;
 			componentContext_lazy = () -> StandingOrder2.mmObject();
 			isDerived = false;
 			xmlTag = "CdtDbtInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditDebitIndicator";
 			definition = "Specifies if the account is debited or credited by the standing order.";
 			maxOccurs = 1;
@@ -252,7 +257,7 @@ public class StandingOrder2 {
 			componentContext_lazy = () -> StandingOrder2.mmObject();
 			isDerived = false;
 			xmlTag = "Ccy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Currency";
 			definition = "Unique and unambiguous identification for a standing order, as assigned by the account servicer or the account owner.";
 			maxOccurs = 1;
@@ -295,11 +300,11 @@ public class StandingOrder2 {
 	 */
 	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StandingOrder.mmType;
+			businessElementTrace_lazy = () -> StandingOrder.mmType;
 			componentContext_lazy = () -> StandingOrder2.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Type of the standing order.";
 			maxOccurs = 1;
@@ -345,11 +350,11 @@ public class StandingOrder2 {
 	 */
 	public static final MMMessageAttribute mmAssociatedPoolAccount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.mmIdentification;
+			businessElementTrace_lazy = () -> Account.mmIdentification;
 			componentContext_lazy = () -> StandingOrder2.mmObject();
 			isDerived = false;
 			xmlTag = "AssoctdPoolAcct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AssociatedPoolAccount";
 			definition = "Liquidity transfer origin or destination account within the pool of accounts under management of the requestor.";
 			maxOccurs = 1;
@@ -394,11 +399,11 @@ public class StandingOrder2 {
 	 */
 	public static final MMMessageAttribute mmReference = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StandingOrder.mmIdentification;
+			businessElementTrace_lazy = () -> StandingOrder.mmIdentification;
 			componentContext_lazy = () -> StandingOrder2.mmObject();
 			isDerived = false;
 			xmlTag = "Ref";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reference";
 			definition = "Unique and unambiguous identification for a standing order, as assigned by the account servicer or the account owner.";
 			maxOccurs = 1;
@@ -445,11 +450,11 @@ public class StandingOrder2 {
 	 */
 	public static final MMMessageAttribute mmFrequency = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StandingOrder.mmFrequency;
+			businessElementTrace_lazy = () -> StandingOrder.mmFrequency;
 			componentContext_lazy = () -> StandingOrder2.mmObject();
 			isDerived = false;
 			xmlTag = "Frqcy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Frequency";
 			definition = "Regularity with which payment instructions are to be created and processed as a result of the standing order, such as daily, weekly, or monthly.";
 			maxOccurs = 1;
@@ -492,11 +497,11 @@ public class StandingOrder2 {
 	 */
 	public static final MMMessageAttribute mmValidityPeriod = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StandingOrder.mmValidityPeriod;
+			businessElementTrace_lazy = () -> StandingOrder.mmValidityPeriod;
 			componentContext_lazy = () -> StandingOrder2.mmObject();
 			isDerived = false;
 			xmlTag = "VldtyPrd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValidityPeriod";
 			definition = "Dates during which the standing order is in effect. ";
 			maxOccurs = 1;
@@ -539,11 +544,11 @@ public class StandingOrder2 {
 	 */
 	public static final MMMessageAssociationEnd mmSystemMember = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Organisation.mmOrganisationIdentification;
+			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> StandingOrder2.mmObject();
 			isDerived = false;
 			xmlTag = "SysMmb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SystemMember";
 			definition = "Specifies if the account is debited or credited by the standing order.";
 			maxOccurs = 1;
@@ -589,11 +594,11 @@ public class StandingOrder2 {
 	 */
 	public static final MMMessageAssociationEnd mmResponsibleParty = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Organisation.mmOrganisationIdentification;
+			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> StandingOrder2.mmObject();
 			isDerived = false;
 			xmlTag = "RspnsblPty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ResponsibleParty";
 			definition = "Unique and unambiguous identification for the account between the account owner and the account servicer.";
 			maxOccurs = 1;
@@ -640,11 +645,11 @@ public class StandingOrder2 {
 	 */
 	public static final MMMessageAttribute mmLinkSetIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StandingOrder.mmLinkSetIdentification;
+			businessElementTrace_lazy = () -> StandingOrder.mmLinkSetIdentification;
 			componentContext_lazy = () -> StandingOrder2.mmObject();
 			isDerived = false;
 			xmlTag = "LkSetId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LinkSetIdentification";
 			definition = "Unique identification to unambiguously identiy the link set in which the standing order is defined. The link set is a collection of standing order defined in a specific sequence.";
 			maxOccurs = 1;
@@ -689,11 +694,11 @@ public class StandingOrder2 {
 	 */
 	public static final MMMessageAttribute mmLinkSetOrderIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StandingOrder.mmIdentification;
+			businessElementTrace_lazy = () -> StandingOrder.mmIdentification;
 			componentContext_lazy = () -> StandingOrder2.mmObject();
 			isDerived = false;
 			xmlTag = "LkSetOrdrId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LinkSetOrderIdentification";
 			definition = "Unique identification to unambiguously identify liquidity transfer standing order within the link set.";
 			maxOccurs = 1;
@@ -739,11 +744,11 @@ public class StandingOrder2 {
 	 */
 	public static final MMMessageAttribute mmLinkSetOrderSequence = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StandingOrder.mmStandingOrderSequence;
+			businessElementTrace_lazy = () -> StandingOrder.mmStandingOrderSequence;
 			componentContext_lazy = () -> StandingOrder2.mmObject();
 			isDerived = false;
 			xmlTag = "LkSetOrdrSeq";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LinkSetOrderSequence";
 			definition = "Specifies the sequence in which the system will execute the liquidity transfers standing order within the link set when additional liquidity is required.";
 			maxOccurs = 1;
@@ -789,11 +794,11 @@ public class StandingOrder2 {
 	 */
 	public static final MMMessageAttribute mmExecutionType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StandingOrder.mmType;
+			businessElementTrace_lazy = () -> StandingOrder.mmType;
 			componentContext_lazy = () -> StandingOrder2.mmObject();
 			isDerived = false;
 			xmlTag = "ExctnTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExecutionType";
 			definition = "Defines whether the standing order is executed through a time-based or an event-based trigger.";
 			maxOccurs = 1;
@@ -838,7 +843,7 @@ public class StandingOrder2 {
 			componentContext_lazy = () -> StandingOrder2.mmObject();
 			isDerived = false;
 			xmlTag = "CdtrAcct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditorAccount";
 			definition = "Cash account credited from a  standing order mechanism.";
 			maxOccurs = 1;
@@ -880,11 +885,11 @@ public class StandingOrder2 {
 	 */
 	public static final MMMessageAssociationEnd mmDebtorAccount = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StandingOrder.mmDebitAccount;
+			businessElementTrace_lazy = () -> StandingOrder.mmDebitAccount;
 			componentContext_lazy = () -> StandingOrder2.mmObject();
 			isDerived = false;
 			xmlTag = "DbtrAcct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DebtorAccount";
 			definition = "Cash account debited from a standing order mechanism.";
 			maxOccurs = 1;
@@ -929,7 +934,7 @@ public class StandingOrder2 {
 			componentContext_lazy = () -> StandingOrder2.mmObject();
 			isDerived = false;
 			xmlTag = "TtlsPerStgOrdr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalsPerStandingOrder";
 			definition = "Overall amount of \"not yet executed\" predefined liquidity transfer orders or \"defined\" by a system participant in its sphere of responsibility within the system.";
 			maxOccurs = 1;
@@ -978,11 +983,11 @@ public class StandingOrder2 {
 	 */
 	public static final MMMessageAttribute mmZeroSweepIndicator = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashStandingOrder.mmZeroSweepIndicator;
+			businessElementTrace_lazy = () -> CashStandingOrder.mmZeroSweepIndicator;
 			componentContext_lazy = () -> StandingOrder2.mmObject();
 			isDerived = false;
 			xmlTag = "ZeroSweepInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ZeroSweepIndicator";
 			definition = "Indicates whether the liquidity transfer standing order is defined as a zero sweeping order. When true, the liquidity transfer standing order will transfer all amount of money out of the account so the resulting balance is  zero.";
 			maxOccurs = 1;
@@ -994,15 +999,12 @@ public class StandingOrder2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StandingOrder2.mmAmount, com.tools20022.repository.msg.StandingOrder2.mmCreditDebitIndicator, com.tools20022.repository.msg.StandingOrder2.mmCurrency,
-						com.tools20022.repository.msg.StandingOrder2.mmType, com.tools20022.repository.msg.StandingOrder2.mmAssociatedPoolAccount, com.tools20022.repository.msg.StandingOrder2.mmReference,
-						com.tools20022.repository.msg.StandingOrder2.mmFrequency, com.tools20022.repository.msg.StandingOrder2.mmValidityPeriod, com.tools20022.repository.msg.StandingOrder2.mmSystemMember,
-						com.tools20022.repository.msg.StandingOrder2.mmResponsibleParty, com.tools20022.repository.msg.StandingOrder2.mmLinkSetIdentification, com.tools20022.repository.msg.StandingOrder2.mmLinkSetOrderIdentification,
-						com.tools20022.repository.msg.StandingOrder2.mmLinkSetOrderSequence, com.tools20022.repository.msg.StandingOrder2.mmExecutionType, com.tools20022.repository.msg.StandingOrder2.mmCreditorAccount,
-						com.tools20022.repository.msg.StandingOrder2.mmDebtorAccount, com.tools20022.repository.msg.StandingOrder2.mmTotalsPerStandingOrder, com.tools20022.repository.msg.StandingOrder2.mmZeroSweepIndicator);
+				messageElement_lazy = () -> Arrays.asList(StandingOrder2.mmAmount, StandingOrder2.mmCreditDebitIndicator, StandingOrder2.mmCurrency, StandingOrder2.mmType, StandingOrder2.mmAssociatedPoolAccount, StandingOrder2.mmReference,
+						StandingOrder2.mmFrequency, StandingOrder2.mmValidityPeriod, StandingOrder2.mmSystemMember, StandingOrder2.mmResponsibleParty, StandingOrder2.mmLinkSetIdentification, StandingOrder2.mmLinkSetOrderIdentification,
+						StandingOrder2.mmLinkSetOrderSequence, StandingOrder2.mmExecutionType, StandingOrder2.mmCreditorAccount, StandingOrder2.mmDebtorAccount, StandingOrder2.mmTotalsPerStandingOrder, StandingOrder2.mmZeroSweepIndicator);
 				trace_lazy = () -> CashStandingOrder.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "StandingOrder2";
 				definition = "Defines the detailed attributes of a standing order.";
 			}

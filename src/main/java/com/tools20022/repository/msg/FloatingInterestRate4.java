@@ -20,10 +20,13 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.BenchmarkCurveName4Choice;
 import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.entity.Index;
+import com.tools20022.repository.entity.Spread;
 import com.tools20022.repository.entity.VariableInterest;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -136,15 +139,15 @@ public class FloatingInterestRate4 {
 	 */
 	public static final MMMessageAttribute mmReferenceRate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Index.mmIdentification;
+			businessElementTrace_lazy = () -> Index.mmIdentification;
 			componentContext_lazy = () -> FloatingInterestRate4.mmObject();
 			isDerived = false;
 			xmlTag = "RefRate";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReferenceRate";
 			definition = "Identifies the reference index for the debt instrument. \r\n\r\nUsage:\r\nWhere an identifier exists, the ISIN must be used; otherwise, names will be necessary (such as EURIBOR6M, LIBOR3M) as other identification.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FloatingInterestRate6.mmReferenceRate);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.VariableInterest1Rate.mmIndex;
+			nextVersions_lazy = () -> Arrays.asList(FloatingInterestRate6.mmReferenceRate);
+			previousVersion_lazy = () -> VariableInterest1Rate.mmIndex;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> BenchmarkCurveName4Choice.mmObject();
@@ -196,10 +199,10 @@ public class FloatingInterestRate4 {
 			componentContext_lazy = () -> FloatingInterestRate4.mmObject();
 			isDerived = false;
 			xmlTag = "Term";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Term";
 			definition = "Term of the index.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FloatingInterestRate6.mmTerm);
+			nextVersions_lazy = () -> Arrays.asList(FloatingInterestRate6.mmTerm);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -257,14 +260,14 @@ public class FloatingInterestRate4 {
 	 */
 	public static final MMMessageAttribute mmBasisPointSpread = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Spread.mmBasisPointSpread;
+			businessElementTrace_lazy = () -> Spread.mmBasisPointSpread;
 			componentContext_lazy = () -> FloatingInterestRate4.mmObject();
 			isDerived = false;
 			xmlTag = "BsisPtSprd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BasisPointSpread";
 			definition = "Provides the number of basis points added to (if positive) or deducted from (if negative) the underlying reference rate to calculate the actual interest rate applicable for a given period at issuance of the floating rate instrument.\r\n\r\nUsed to express differences in interest rates, for example, a difference of 0.10% is equivalent to a change of 10 basis points.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FloatingInterestRate6.mmBasisPointSpread);
+			nextVersions_lazy = () -> Arrays.asList(FloatingInterestRate6.mmBasisPointSpread);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
@@ -274,11 +277,10 @@ public class FloatingInterestRate4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FloatingInterestRate4.mmReferenceRate, com.tools20022.repository.msg.FloatingInterestRate4.mmTerm,
-						com.tools20022.repository.msg.FloatingInterestRate4.mmBasisPointSpread);
+				messageElement_lazy = () -> Arrays.asList(FloatingInterestRate4.mmReferenceRate, FloatingInterestRate4.mmTerm, FloatingInterestRate4.mmBasisPointSpread);
 				trace_lazy = () -> VariableInterest.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FloatingInterestRate4";
 				definition = "Provides the index used to define the rate and optionally the basis point spread.";
 				nextVersions_lazy = () -> Arrays.asList(FloatingInterestRate6.mmObject());

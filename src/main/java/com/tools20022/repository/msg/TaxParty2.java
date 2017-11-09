@@ -20,9 +20,12 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.entity.PartyIdentificationInformation;
 import com.tools20022.repository.entity.TaxPartyRole;
 import com.tools20022.repository.entity.TaxPayer;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -102,11 +105,11 @@ public class TaxParty2 {
 	 */
 	public static final MMMessageAttribute mmTaxIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.mmTaxIdentificationNumber;
+			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmTaxIdentificationNumber;
 			componentContext_lazy = () -> TaxParty2.mmObject();
 			isDerived = false;
 			xmlTag = "TaxId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxIdentification";
 			definition = "Tax identification number of the debtor.";
 			maxOccurs = 1;
@@ -151,11 +154,11 @@ public class TaxParty2 {
 	 */
 	public static final MMMessageAttribute mmRegistrationIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.mmTaxIdentificationNumber;
+			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmTaxIdentificationNumber;
 			componentContext_lazy = () -> TaxParty2.mmObject();
 			isDerived = false;
 			xmlTag = "RegnId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RegistrationIdentification";
 			definition = "Unique identification, as assigned by an organisation, to unambiguously identify a party.";
 			maxOccurs = 1;
@@ -200,7 +203,7 @@ public class TaxParty2 {
 			componentContext_lazy = () -> TaxParty2.mmObject();
 			isDerived = false;
 			xmlTag = "TaxTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxType";
 			definition = "Type of tax payer.";
 			maxOccurs = 1;
@@ -244,7 +247,7 @@ public class TaxParty2 {
 			componentContext_lazy = () -> TaxParty2.mmObject();
 			isDerived = false;
 			xmlTag = "Authstn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Authorisation";
 			definition = "Details of the authorised tax paying party.";
 			maxOccurs = 1;
@@ -257,11 +260,10 @@ public class TaxParty2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TaxParty2.mmTaxIdentification, com.tools20022.repository.msg.TaxParty2.mmRegistrationIdentification, com.tools20022.repository.msg.TaxParty2.mmTaxType,
-						com.tools20022.repository.msg.TaxParty2.mmAuthorisation);
+				messageElement_lazy = () -> Arrays.asList(TaxParty2.mmTaxIdentification, TaxParty2.mmRegistrationIdentification, TaxParty2.mmTaxType, TaxParty2.mmAuthorisation);
 				trace_lazy = () -> TaxPartyRole.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TaxParty2";
 				definition = "Details about the entity involved in the tax paid or to be paid.";
 			}

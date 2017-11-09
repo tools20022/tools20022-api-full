@@ -18,6 +18,7 @@
 package com.tools20022.repository.msgset;
 
 import com.tools20022.metamodel.MMMessageSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.admi.*;
 import com.tools20022.repository.area.camt.NetReportV01;
 import com.tools20022.repository.area.camt.PayInCallV02;
@@ -26,6 +27,7 @@ import com.tools20022.repository.area.camt.PayInScheduleV03;
 import com.tools20022.repository.area.fxtr.*;
 import com.tools20022.repository.area.reda.NettingCutOffReferenceDataReportV01;
 import com.tools20022.repository.area.reda.NettingCutOffReferenceDataUpdateRequestV01;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -115,8 +117,8 @@ public class PostTradeForeignExchangeISOLatestversion {
 	final static public MMMessageSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageSet() {
 			{
-				businessProcessCatalogue_lazy = () -> com.tools20022.repository.GeneratedRepository.mmcatalogue;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				businessProcessCatalogue_lazy = () -> GeneratedRepository.mmcatalogue;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Post-Trade Foreign Exchange - ISO - Latest version";
 				definition = "This message set covers the post-trade processing in the foreign exchange trade domain together with cash management and administration messages to support the associated payments processing and notification of system events";
 				messageDefinition_lazy = () -> Arrays.asList(ForeignExchangeTradeWithdrawalNotificationV03.mmObject(), PayInCallV02.mmObject(), PayInEventAcknowledgementV02.mmObject(), PayInScheduleV03.mmObject(),

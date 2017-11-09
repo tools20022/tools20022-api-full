@@ -19,9 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.CustomerHandlingInstructionChoice;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -116,7 +118,7 @@ public class TradeRegulatoryTimeStampGroup {
 			componentContext_lazy = () -> TradeRegulatoryTimeStampGroup.mmObject();
 			isDerived = false;
 			xmlTag = "TradRgltryTmStmp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeRegulatoryTimeStamp";
 			definition = "Traded / Regulatory timestamp value. Used to store time information required by government regulators or self regulatory organizations (such as an exchange or clearing house).";
 			maxOccurs = 1;
@@ -160,7 +162,7 @@ public class TradeRegulatoryTimeStampGroup {
 			componentContext_lazy = () -> TradeRegulatoryTimeStampGroup.mmObject();
 			isDerived = false;
 			xmlTag = "TradRgltryTmStmpTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeRegulatoryTimeStampType";
 			definition = "Traded / Regulatory timestamp type (eg, ExecutionTime, Time In, Time Out, BrokerReceipt, BrokerExecution, Desk receipt).";
 			maxOccurs = 1;
@@ -201,7 +203,7 @@ public class TradeRegulatoryTimeStampGroup {
 			componentContext_lazy = () -> TradeRegulatoryTimeStampGroup.mmObject();
 			isDerived = false;
 			xmlTag = "TradRgltryTmStmpOrgn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeRegulatoryTimeStampOrigin";
 			definition = "Provides the origin of the timestamp.";
 			maxOccurs = 1;
@@ -247,7 +249,7 @@ public class TradeRegulatoryTimeStampGroup {
 			componentContext_lazy = () -> TradeRegulatoryTimeStampGroup.mmObject();
 			isDerived = false;
 			xmlTag = "DskTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeskType";
 			definition = "Type of trading desk (eg, Agency, Arbitrage, Derivatives, International, Institutional, Preferred Trading,...). Note of applicability: values are required in US futures markets by the Commodity Futures Trading Commission (CFTC) to support computerized trade reconstruction.";
 			maxOccurs = 1;
@@ -288,7 +290,7 @@ public class TradeRegulatoryTimeStampGroup {
 			componentContext_lazy = () -> TradeRegulatoryTimeStampGroup.mmObject();
 			isDerived = false;
 			xmlTag = "DskTpSrc";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeskTypeSource";
 			definition = "Provides the desk type source, valid value is NASD OATS.";
 			maxOccurs = 1;
@@ -335,7 +337,7 @@ public class TradeRegulatoryTimeStampGroup {
 			componentContext_lazy = () -> TradeRegulatoryTimeStampGroup.mmObject();
 			isDerived = false;
 			xmlTag = "DskOrdrHdlgInstrs";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeskOrderHandlingInstructions";
 			definition = "Firms that are taking in orders manually but routing for execution electronically and for reporting to the Order Audit Trail System must capture the client's handling instructions.This is intended for compliance reporting only (OATS Phase III regulatory requirement).";
 			maxOccurs = 1;
@@ -347,11 +349,11 @@ public class TradeRegulatoryTimeStampGroup {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TradeRegulatoryTimeStampGroup.mmTradeRegulatoryTimeStamp, com.tools20022.repository.msg.TradeRegulatoryTimeStampGroup.mmTradeRegulatoryTimeStampType,
-						com.tools20022.repository.msg.TradeRegulatoryTimeStampGroup.mmTradeRegulatoryTimeStampOrigin, com.tools20022.repository.msg.TradeRegulatoryTimeStampGroup.mmDeskType,
-						com.tools20022.repository.msg.TradeRegulatoryTimeStampGroup.mmDeskTypeSource, com.tools20022.repository.msg.TradeRegulatoryTimeStampGroup.mmDeskOrderHandlingInstructions);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+				messageElement_lazy = () -> Arrays
+						.asList(TradeRegulatoryTimeStampGroup.mmTradeRegulatoryTimeStamp, TradeRegulatoryTimeStampGroup.mmTradeRegulatoryTimeStampType, TradeRegulatoryTimeStampGroup.mmTradeRegulatoryTimeStampOrigin,
+								TradeRegulatoryTimeStampGroup.mmDeskType, TradeRegulatoryTimeStampGroup.mmDeskTypeSource, TradeRegulatoryTimeStampGroup.mmDeskOrderHandlingInstructions);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
 						return DateFormat.getDateInstance(java.text.DateFormat.LONG).parse("May 5, 2018");

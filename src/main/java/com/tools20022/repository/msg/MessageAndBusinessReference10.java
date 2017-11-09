@@ -19,8 +19,14 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.setr.RequestForOrderConfirmationStatusReportV02;
+import com.tools20022.repository.area.setr.RequestForOrderStatusReportV04;
 import com.tools20022.repository.choice.References62Choice;
+import com.tools20022.repository.entity.SecuritiesOrder;
 import com.tools20022.repository.entity.SecuritiesTradeIdentification;
+import com.tools20022.repository.entity.TradeIdentification;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -117,11 +123,11 @@ public class MessageAndBusinessReference10 {
 	 */
 	public static final MMMessageAssociationEnd mmReference = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradeIdentification.mmIdentification;
+			businessElementTrace_lazy = () -> TradeIdentification.mmIdentification;
 			componentContext_lazy = () -> MessageAndBusinessReference10.mmObject();
 			isDerived = false;
 			xmlTag = "Ref";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reference";
 			definition = "Reference to a linked message that was previously sent.";
 			maxOccurs = 1;
@@ -170,14 +176,14 @@ public class MessageAndBusinessReference10 {
 	 */
 	public static final MMMessageAssociationEnd mmRelatedReference = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradeIdentification.mmIdentification;
+			businessElementTrace_lazy = () -> TradeIdentification.mmIdentification;
 			componentContext_lazy = () -> MessageAndBusinessReference10.mmObject();
 			isDerived = false;
 			xmlTag = "RltdRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedReference";
 			definition = "Reference to a linked message that was previously received.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.MessageAndBusinessReference4.mmRelatedReference;
+			previousVersion_lazy = () -> MessageAndBusinessReference4.mmRelatedReference;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -226,14 +232,14 @@ public class MessageAndBusinessReference10 {
 	 */
 	public static final MMMessageAssociationEnd mmOrderReference = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmIdentification;
+			businessElementTrace_lazy = () -> SecuritiesOrder.mmIdentification;
 			componentContext_lazy = () -> MessageAndBusinessReference10.mmObject();
 			isDerived = false;
 			xmlTag = "OrdrRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrderReference";
 			definition = "Unique and unambiguous identifiers of one or more individual order instructions or individual order cancellation requests.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.MessageAndBusinessReference4.mmOrderReference;
+			previousVersion_lazy = () -> MessageAndBusinessReference4.mmOrderReference;
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.InvestmentFundOrder8.mmObject();
@@ -243,13 +249,11 @@ public class MessageAndBusinessReference10 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MessageAndBusinessReference10.mmReference, com.tools20022.repository.msg.MessageAndBusinessReference10.mmRelatedReference,
-						com.tools20022.repository.msg.MessageAndBusinessReference10.mmOrderReference);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.RequestForOrderStatusReportV04.mmRequestDetails,
-						com.tools20022.repository.area.setr.RequestForOrderConfirmationStatusReportV02.mmRequestDetails);
+				messageElement_lazy = () -> Arrays.asList(MessageAndBusinessReference10.mmReference, MessageAndBusinessReference10.mmRelatedReference, MessageAndBusinessReference10.mmOrderReference);
+				messageBuildingBlock_lazy = () -> Arrays.asList(RequestForOrderStatusReportV04.mmRequestDetails, RequestForOrderConfirmationStatusReportV02.mmRequestDetails);
 				trace_lazy = () -> SecuritiesTradeIdentification.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MessageAndBusinessReference10";
 				definition = "Information to identify funds order(s).";
 				previousVersion_lazy = () -> MessageAndBusinessReference4.mmObject();

@@ -20,10 +20,14 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.DateFormat1Choice;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.InvestmentAccount;
+import com.tools20022.repository.entity.Obligation;
+import com.tools20022.repository.entity.Order;
 import com.tools20022.repository.entity.SecuritiesTransfer;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -136,15 +140,15 @@ public class TransferOut15 {
 	 */
 	public static final MMMessageAttribute mmRequestedTransferDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Obligation.mmRequestedSettlementDate;
+			businessElementTrace_lazy = () -> Obligation.mmRequestedSettlementDate;
 			componentContext_lazy = () -> TransferOut15.mmObject();
 			isDerived = false;
 			xmlTag = "ReqdTrfDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestedTransferDate";
 			definition = "Requested date at which the instructing party places the transfer instruction.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransferOut17.mmRequestedTransferDate);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TransferOut11.mmRequestedTransferDate;
+			nextVersions_lazy = () -> Arrays.asList(TransferOut17.mmRequestedTransferDate);
+			previousVersion_lazy = () -> TransferOut11.mmRequestedTransferDate;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateFormat1Choice.mmObject();
@@ -201,15 +205,15 @@ public class TransferOut15 {
 	 */
 	public static final MMMessageAttribute mmMasterReference = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Order.mmMasterIdentification;
+			businessElementTrace_lazy = () -> Order.mmMasterIdentification;
 			componentContext_lazy = () -> TransferOut15.mmObject();
 			isDerived = false;
 			xmlTag = "MstrRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MasterReference";
 			definition = "Unique and unambiguous identifier for a group of individual transfers as assigned by the instructing party. This identifier links the individual transfers together.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransferOut17.mmMasterReference);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TransferOut11.mmMasterReference;
+			nextVersions_lazy = () -> Arrays.asList(TransferOut17.mmMasterReference);
+			previousVersion_lazy = () -> TransferOut11.mmMasterReference;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -265,11 +269,11 @@ public class TransferOut15 {
 			componentContext_lazy = () -> TransferOut15.mmObject();
 			isDerived = false;
 			xmlTag = "TrfAndRefs";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransferAndReferences";
 			definition = "Details of the transfer and cancellation.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransferOut17.mmTransferAndReferences);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TransferOut11.mmTransferAndReferences;
+			nextVersions_lazy = () -> Arrays.asList(TransferOut17.mmTransferAndReferences);
+			previousVersion_lazy = () -> TransferOut11.mmTransferAndReferences;
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.TransferOut13.mmObject();
@@ -328,11 +332,11 @@ public class TransferOut15 {
 			componentContext_lazy = () -> TransferOut15.mmObject();
 			isDerived = false;
 			xmlTag = "AcctDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountDetails";
 			definition = "Information related to the account from which the financial instrument is to be withdrawn.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransferOut17.mmAccountDetails);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TransferOut11.mmAccountDetails;
+			nextVersions_lazy = () -> Arrays.asList(TransferOut17.mmAccountDetails);
+			previousVersion_lazy = () -> TransferOut11.mmAccountDetails;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -386,15 +390,15 @@ public class TransferOut15 {
 	 */
 	public static final MMMessageAssociationEnd mmSettlementDetails = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTransfer.mmRelatedSettlement;
+			businessElementTrace_lazy = () -> SecuritiesTransfer.mmRelatedSettlement;
 			componentContext_lazy = () -> TransferOut15.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementDetails";
 			definition = "Information related to the receiving side of the transfer.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransferOut17.mmSettlementDetails);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TransferOut11.mmSettlementDetails;
+			nextVersions_lazy = () -> Arrays.asList(TransferOut17.mmSettlementDetails);
+			previousVersion_lazy = () -> TransferOut11.mmSettlementDetails;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -446,11 +450,11 @@ public class TransferOut15 {
 			componentContext_lazy = () -> TransferOut15.mmObject();
 			isDerived = false;
 			xmlTag = "Xtnsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Extension";
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransferOut17.mmExtension);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TransferOut11.mmExtension;
+			nextVersions_lazy = () -> Arrays.asList(TransferOut17.mmExtension);
+			previousVersion_lazy = () -> TransferOut11.mmExtension;
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.Extension1.mmObject();
@@ -460,12 +464,11 @@ public class TransferOut15 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransferOut15.mmRequestedTransferDate, com.tools20022.repository.msg.TransferOut15.mmMasterReference,
-						com.tools20022.repository.msg.TransferOut15.mmTransferAndReferences, com.tools20022.repository.msg.TransferOut15.mmAccountDetails, com.tools20022.repository.msg.TransferOut15.mmSettlementDetails,
-						com.tools20022.repository.msg.TransferOut15.mmExtension);
+				messageElement_lazy = () -> Arrays.asList(TransferOut15.mmRequestedTransferDate, TransferOut15.mmMasterReference, TransferOut15.mmTransferAndReferences, TransferOut15.mmAccountDetails, TransferOut15.mmSettlementDetails,
+						TransferOut15.mmExtension);
 				trace_lazy = () -> SecuritiesTransfer.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "TransferOut15";
 				definition = "Information about a transfer out transaction.";
 				nextVersions_lazy = () -> Arrays.asList(TransferOut17.mmObject());

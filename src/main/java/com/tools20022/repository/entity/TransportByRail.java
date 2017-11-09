@@ -19,8 +19,10 @@ package com.tools20022.repository.entity;
 
 import com.tools20022.metamodel.MMBusinessAttribute;
 import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.Transport;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -34,12 +36,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.TransportByRail#mmCarriageIdentification
- * TransportByRail.mmCarriageIdentification}</li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.TransportByRail1
+ * TransportByRail1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransportByRail3
+ * TransportByRail3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransportByRail2
+ * TransportByRail2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransportByRail4
+ * TransportByRail4}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransportByRail5
+ * TransportByRail5}</li>
  * </ul>
  * </li>
  * <li>
@@ -75,20 +85,12 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
  * superType} = {@linkplain com.tools20022.repository.entity.Transport
  * Transport}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.TransportByRail1
- * TransportByRail1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TransportByRail3
- * TransportByRail3}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TransportByRail2
- * TransportByRail2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TransportByRail4
- * TransportByRail4}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TransportByRail5
- * TransportByRail5}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.TransportByRail#mmCarriageIdentification
+ * TransportByRail.mmCarriageIdentification}</li>
  * </ul>
  * </li>
  * <li>
@@ -139,7 +141,7 @@ public class TransportByRail extends Transport {
 		{
 			elementContext_lazy = () -> TransportByRail.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CarriageIdentification";
 			definition = "Identifies the carriage.";
 			maxOccurs = 1;
@@ -151,15 +153,14 @@ public class TransportByRail extends Transport {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TransportByRail";
 				definition = "Information related to the transportation of goods by rail.";
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SingleTransport1.mmTransportByRail, com.tools20022.repository.msg.SingleTransport4.mmTransportByRail,
-						com.tools20022.repository.msg.SingleTransport2.mmTransportByRail, com.tools20022.repository.msg.SingleTransport5.mmTransportByRail, com.tools20022.repository.msg.SingleTransport3.mmTransportByRail,
-						com.tools20022.repository.msg.SingleTransport6.mmTransportByRail, com.tools20022.repository.msg.SingleTransport7.mmTransportByRail, com.tools20022.repository.msg.SingleTransport8.mmTransportByRail);
+				derivationElement_lazy = () -> Arrays.asList(SingleTransport1.mmTransportByRail, SingleTransport4.mmTransportByRail, SingleTransport2.mmTransportByRail, SingleTransport5.mmTransportByRail,
+						SingleTransport3.mmTransportByRail, SingleTransport6.mmTransportByRail, SingleTransport7.mmTransportByRail, SingleTransport8.mmTransportByRail);
 				superType_lazy = () -> Transport.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.TransportByRail.mmCarriageIdentification);
+				element_lazy = () -> Arrays.asList(TransportByRail.mmCarriageIdentification);
 				derivationComponent_lazy = () -> Arrays.asList(TransportByRail1.mmObject(), TransportByRail3.mmObject(), TransportByRail2.mmObject(), TransportByRail4.mmObject(), TransportByRail5.mmObject());
 			}
 		});

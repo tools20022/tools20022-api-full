@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -28,6 +30,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.CollateralPurpose1Code
+ * CollateralPurpose1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -36,13 +45,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.CollateralPurposeCode#mmSegregatedIndependentAmount
  * CollateralPurposeCode.mmSegregatedIndependentAmount}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.CollateralPurpose1Code
- * CollateralPurpose1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -94,7 +96,7 @@ public class CollateralPurposeCode {
 	 */
 	public static final MMCode mmVariationMargin = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VariationMargin";
 			definition = "Collateral has been posted against the variation margin.";
 			owner_lazy = () -> CollateralPurposeCode.mmObject();
@@ -125,7 +127,7 @@ public class CollateralPurposeCode {
 	 */
 	public static final MMCode mmSegregatedIndependentAmount = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SegregatedIndependentAmount";
 			definition = "Collateral has been posted against the segregated independent amount.";
 			owner_lazy = () -> CollateralPurposeCode.mmObject();
@@ -136,12 +138,12 @@ public class CollateralPurposeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("VAMA");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CollateralPurposeCode";
 				definition = "Indicates whether the collateral has been posted against the variation margin or the segregated independent amount.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CollateralPurposeCode.mmVariationMargin, com.tools20022.repository.codeset.CollateralPurposeCode.mmSegregatedIndependentAmount);
+				code_lazy = () -> Arrays.asList(CollateralPurposeCode.mmVariationMargin, CollateralPurposeCode.mmSegregatedIndependentAmount);
 				derivation_lazy = () -> Arrays.asList(CollateralPurpose1Code.mmObject());
 			}
 		});

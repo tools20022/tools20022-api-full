@@ -19,6 +19,9 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.cain.NetworkManagementInitiation;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -99,7 +102,7 @@ public class AcquirerNetworkManagementInitiation1 {
 			componentContext_lazy = () -> AcquirerNetworkManagementInitiation1.mmObject();
 			isDerived = false;
 			xmlTag = "Envt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Environment";
 			definition = "Environment of the transaction.";
 			maxOccurs = 1;
@@ -140,7 +143,7 @@ public class AcquirerNetworkManagementInitiation1 {
 			componentContext_lazy = () -> AcquirerNetworkManagementInitiation1.mmObject();
 			isDerived = false;
 			xmlTag = "Tx";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Transaction";
 			definition = "Network management transaction.";
 			maxOccurs = 1;
@@ -153,10 +156,10 @@ public class AcquirerNetworkManagementInitiation1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcquirerNetworkManagementInitiation1.mmEnvironment, com.tools20022.repository.msg.AcquirerNetworkManagementInitiation1.mmTransaction);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.cain.NetworkManagementInitiation.mmNetworkManagementInitiation);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(AcquirerNetworkManagementInitiation1.mmEnvironment, AcquirerNetworkManagementInitiation1.mmTransaction);
+				messageBuildingBlock_lazy = () -> Arrays.asList(NetworkManagementInitiation.mmNetworkManagementInitiation);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AcquirerNetworkManagementInitiation1";
 				definition = "Information related to the network management.";
 			}

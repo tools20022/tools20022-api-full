@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,19 +29,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.ProposalType1Code
+ * ProposalType1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>{@linkplain com.tools20022.repository.codeset.ProposalTypeCode#mmInitial
  * ProposalTypeCode.mmInitial}</li>
  * <li>{@linkplain com.tools20022.repository.codeset.ProposalTypeCode#mmCounter
  * ProposalTypeCode.mmCounter}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.ProposalType1Code
- * ProposalType1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -90,7 +92,7 @@ public class ProposalTypeCode {
 	 */
 	public static final MMCode mmInitial = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Initial";
 			definition = "Specifies this is an initial proposal.";
 			owner_lazy = () -> ProposalTypeCode.mmObject();
@@ -120,7 +122,7 @@ public class ProposalTypeCode {
 	 */
 	public static final MMCode mmCounter = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Counter";
 			definition = "Specifies this is a counter proposal.";
 			owner_lazy = () -> ProposalTypeCode.mmObject();
@@ -131,12 +133,12 @@ public class ProposalTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("INIT");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ProposalTypeCode";
 				definition = "Specifies whether the proposal is an initial or a counter proposal.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ProposalTypeCode.mmInitial, com.tools20022.repository.codeset.ProposalTypeCode.mmCounter);
+				code_lazy = () -> Arrays.asList(ProposalTypeCode.mmInitial, ProposalTypeCode.mmCounter);
 				derivation_lazy = () -> Arrays.asList(ProposalType1Code.mmObject());
 			}
 		});

@@ -19,8 +19,10 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.ClosingBalance3Choice;
 import com.tools20022.repository.choice.OpeningBalance3Choice;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -100,7 +102,7 @@ public class PaginationBalance2 {
 			componentContext_lazy = () -> PaginationBalance2.mmObject();
 			isDerived = false;
 			xmlTag = "OpngBal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OpeningBalance";
 			definition = "Opening balance of the financial instrument in the statement or of the intermediary opening balance of the page of the statement.";
 			maxOccurs = 1;
@@ -145,7 +147,7 @@ public class PaginationBalance2 {
 			componentContext_lazy = () -> PaginationBalance2.mmObject();
 			isDerived = false;
 			xmlTag = "ClsgBal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClosingBalance";
 			definition = "Closing balance of the financial instrument in the statement or of the intermediary closing balance of the page of the statement";
 			maxOccurs = 1;
@@ -158,9 +160,9 @@ public class PaginationBalance2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaginationBalance2.mmOpeningBalance, com.tools20022.repository.msg.PaginationBalance2.mmClosingBalance);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(PaginationBalance2.mmOpeningBalance, PaginationBalance2.mmClosingBalance);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PaginationBalance2";
 				definition = "Balance of a financial instrument for a specific statement page.";
 				previousVersion_lazy = () -> PaginationBalance1.mmObject();

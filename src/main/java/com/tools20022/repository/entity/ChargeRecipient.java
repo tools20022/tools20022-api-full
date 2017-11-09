@@ -18,7 +18,10 @@
 package com.tools20022.repository.entity;
 
 import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.ChargePartyRole;
+import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.Charges5;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -65,11 +68,11 @@ public class ChargeRecipient extends ChargePartyRole {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ChargeRecipient";
 				definition = "Party entitled to the amount of money resulting from a charge.";
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Charges5.mmChargesPayee);
+				derivationElement_lazy = () -> Arrays.asList(Charges5.mmChargesPayee);
 				superType_lazy = () -> ChargePartyRole.mmObject();
 			}
 		});

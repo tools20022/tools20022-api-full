@@ -19,11 +19,13 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.metamodel.MMXor;
 import com.tools20022.repository.codeset.DocumentType2Code;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.Document;
 import com.tools20022.repository.entity.DocumentIssuer;
+import com.tools20022.repository.GeneratedRepository;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -113,11 +115,11 @@ public class ReferredDocumentType1 {
 	 */
 	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Document.mmType;
+			businessElementTrace_lazy = () -> Document.mmType;
 			componentContext_lazy = () -> ReferredDocumentType1.mmObject();
 			isDerived = false;
 			xmlTag = "Cd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Document type in a coded form.";
 			maxOccurs = 1;
@@ -161,11 +163,11 @@ public class ReferredDocumentType1 {
 	 */
 	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Document.mmType;
+			businessElementTrace_lazy = () -> Document.mmType;
 			componentContext_lazy = () -> ReferredDocumentType1.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Proprietary identification of the type of the remittance document.";
 			maxOccurs = 1;
@@ -213,7 +215,7 @@ public class ReferredDocumentType1 {
 			componentContext_lazy = () -> ReferredDocumentType1.mmObject();
 			isDerived = false;
 			xmlTag = "Issr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Issuer";
 			definition = "Identification of the issuer of the reference document type.";
 			maxOccurs = 1;
@@ -227,6 +229,10 @@ public class ReferredDocumentType1 {
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
+	 * messageComponent} =
+	 * {@linkplain com.tools20022.repository.msg.ReferredDocumentType1
+	 * ReferredDocumentType1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getImpactedElements
 	 * impactedElements} =
 	 * <ul>
@@ -238,10 +244,6 @@ public class ReferredDocumentType1 {
 	 * ReferredDocumentType1.mmProprietary}</li>
 	 * </ul>
 	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
-	 * messageComponent} =
-	 * {@linkplain com.tools20022.repository.msg.ReferredDocumentType1
-	 * ReferredDocumentType1}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -257,22 +259,21 @@ public class ReferredDocumentType1 {
 	 */
 	public static final MMXor mmCodeOrProprietaryRule = new MMXor() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CodeOrProprietaryRule";
 			definition = "If Code is present then Proprietary must not be present.\nIf Proprietary is present then Code must not be present.";
 			messageComponent_lazy = () -> ReferredDocumentType1.mmObject();
-			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReferredDocumentType1.mmCode, com.tools20022.repository.msg.ReferredDocumentType1.mmProprietary);
+			impactedElements_lazy = () -> Arrays.asList(ReferredDocumentType1.mmCode, ReferredDocumentType1.mmProprietary);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReferredDocumentType1.mmCode, com.tools20022.repository.msg.ReferredDocumentType1.mmProprietary,
-						com.tools20022.repository.msg.ReferredDocumentType1.mmIssuer);
+				messageElement_lazy = () -> Arrays.asList(ReferredDocumentType1.mmCode, ReferredDocumentType1.mmProprietary, ReferredDocumentType1.mmIssuer);
 				trace_lazy = () -> Document.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
 						return DateFormat.getDateInstance(java.text.DateFormat.LONG).parse("September 9, 2016");
@@ -282,7 +283,7 @@ public class ReferredDocumentType1 {
 				})).get();
 				name = "ReferredDocumentType1";
 				definition = "Specifies the type of the document referred in the remittance information.";
-				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReferredDocumentType1.mmCodeOrProprietaryRule);
+				xors_lazy = () -> Arrays.asList(ReferredDocumentType1.mmCodeOrProprietaryRule);
 			}
 		});
 		return mmObject_lazy.get();

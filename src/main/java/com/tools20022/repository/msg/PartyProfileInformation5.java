@@ -20,6 +20,7 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.CertificationType1Choice;
 import com.tools20022.repository.choice.CustomerConductClassification1Choice;
 import com.tools20022.repository.choice.KYCCheckType1Choice;
@@ -29,7 +30,10 @@ import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.Max140Text;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.YesNoIndicator;
+import com.tools20022.repository.entity.GenericIdentification;
+import com.tools20022.repository.entity.PersonProfile;
 import com.tools20022.repository.entity.PrivateCertificate;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -154,14 +158,14 @@ public class PartyProfileInformation5 {
 	 */
 	public static final MMMessageAttribute mmCertificationIndicator = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PrivateCertificate.mmCertificationIndicator;
+			businessElementTrace_lazy = () -> PrivateCertificate.mmCertificationIndicator;
 			componentContext_lazy = () -> PartyProfileInformation5.mmObject();
 			isDerived = false;
 			xmlTag = "CertfctnInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CertificationIndicator";
 			definition = "Indicates whether the certificate type has been obtained and verified.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PartyProfileInformation4.mmCertificationIndicator;
+			previousVersion_lazy = () -> PartyProfileInformation4.mmCertificationIndicator;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
@@ -207,14 +211,14 @@ public class PartyProfileInformation5 {
 	 */
 	public static final MMMessageAttribute mmValidatingParty = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmIdentification;
+			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> PartyProfileInformation5.mmObject();
 			isDerived = false;
 			xmlTag = "VldtngPty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValidatingParty";
 			definition = "Identification of the person who validated the document.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PartyProfileInformation4.mmValidatingParty;
+			previousVersion_lazy = () -> PartyProfileInformation4.mmValidatingParty;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
@@ -260,14 +264,14 @@ public class PartyProfileInformation5 {
 	 */
 	public static final MMMessageAttribute mmCheckingParty = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmIdentification;
+			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> PartyProfileInformation5.mmObject();
 			isDerived = false;
 			xmlTag = "ChckngPty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CheckingParty";
 			definition = "Identification of the person who checked the document.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PartyProfileInformation4.mmCheckingParty;
+			previousVersion_lazy = () -> PartyProfileInformation4.mmCheckingParty;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
@@ -314,14 +318,14 @@ public class PartyProfileInformation5 {
 	 */
 	public static final MMMessageAttribute mmResponsibleParty = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmIdentification;
+			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> PartyProfileInformation5.mmObject();
 			isDerived = false;
 			xmlTag = "RspnsblPty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ResponsibleParty";
 			definition = "Identification of the person who is responsible for the document.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PartyProfileInformation4.mmResponsibleParty;
+			previousVersion_lazy = () -> PartyProfileInformation4.mmResponsibleParty;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
@@ -372,10 +376,10 @@ public class PartyProfileInformation5 {
 			componentContext_lazy = () -> PartyProfileInformation5.mmObject();
 			isDerived = false;
 			xmlTag = "CertTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CertificateType";
 			definition = "Type of certificate.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PartyProfileInformation4.mmCertificateType;
+			previousVersion_lazy = () -> PartyProfileInformation4.mmCertificateType;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> CertificationType1Choice.mmObject();
@@ -422,14 +426,14 @@ public class PartyProfileInformation5 {
 	 */
 	public static final MMMessageAttribute mmCheckingDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PrivateCertificate.mmCheckingDate;
+			businessElementTrace_lazy = () -> PrivateCertificate.mmCheckingDate;
 			componentContext_lazy = () -> PartyProfileInformation5.mmObject();
 			isDerived = false;
 			xmlTag = "ChckngDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CheckingDate";
 			definition = "Date at which the certification check has been performed.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PartyProfileInformation4.mmCheckingDate;
+			previousVersion_lazy = () -> PartyProfileInformation4.mmCheckingDate;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
@@ -476,14 +480,14 @@ public class PartyProfileInformation5 {
 	 */
 	public static final MMMessageAttribute mmCheckingFrequency = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PrivateCertificate.mmCheckingFrequency;
+			businessElementTrace_lazy = () -> PrivateCertificate.mmCheckingFrequency;
 			componentContext_lazy = () -> PartyProfileInformation5.mmObject();
 			isDerived = false;
 			xmlTag = "ChckngFrqcy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CheckingFrequency";
 			definition = "Specifies how frequently the check is performed.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PartyProfileInformation4.mmCheckingFrequency;
+			previousVersion_lazy = () -> PartyProfileInformation4.mmCheckingFrequency;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> EventFrequency1Code.mmObject();
@@ -532,14 +536,14 @@ public class PartyProfileInformation5 {
 	 */
 	public static final MMMessageAttribute mmNextRevisionDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PrivateCertificate.mmNextRevisionDate;
+			businessElementTrace_lazy = () -> PrivateCertificate.mmNextRevisionDate;
 			componentContext_lazy = () -> PartyProfileInformation5.mmObject();
 			isDerived = false;
 			xmlTag = "NxtRvsnDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NextRevisionDate";
 			definition = "Specifies the date at which the next certification check will be performed.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PartyProfileInformation4.mmNextRevisionDate;
+			previousVersion_lazy = () -> PartyProfileInformation4.mmNextRevisionDate;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
@@ -585,14 +589,14 @@ public class PartyProfileInformation5 {
 	 */
 	public static final MMMessageAttribute mmSalaryRange = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PersonProfile.mmSalaryRange;
+			businessElementTrace_lazy = () -> PersonProfile.mmSalaryRange;
 			componentContext_lazy = () -> PartyProfileInformation5.mmObject();
 			isDerived = false;
 			xmlTag = "SlryRg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SalaryRange";
 			definition = "Limits between which a person's salary is estimated.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PartyProfileInformation4.mmSalaryRange;
+			previousVersion_lazy = () -> PartyProfileInformation4.mmSalaryRange;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -638,14 +642,14 @@ public class PartyProfileInformation5 {
 	 */
 	public static final MMMessageAttribute mmSourceOfWealth = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PersonProfile.mmSourceOfWealth;
+			businessElementTrace_lazy = () -> PersonProfile.mmSourceOfWealth;
 			componentContext_lazy = () -> PartyProfileInformation5.mmObject();
 			isDerived = false;
 			xmlTag = "SrcOfWlth";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SourceOfWealth";
 			definition = "Indicates the main source of revenue.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PartyProfileInformation4.mmSourceOfWealth;
+			previousVersion_lazy = () -> PartyProfileInformation4.mmSourceOfWealth;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
@@ -693,10 +697,10 @@ public class PartyProfileInformation5 {
 			componentContext_lazy = () -> PartyProfileInformation5.mmObject();
 			isDerived = false;
 			xmlTag = "CstmrCndctClssfctn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CustomerConductClassification";
 			definition = "Specifies an assessment of the customer’s behaviour at the time of the account opening application.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PartyProfileInformation4.mmCustomerConductClassification;
+			previousVersion_lazy = () -> PartyProfileInformation4.mmCustomerConductClassification;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> CustomerConductClassification1Choice.mmObject();
@@ -741,10 +745,10 @@ public class PartyProfileInformation5 {
 			componentContext_lazy = () -> PartyProfileInformation5.mmObject();
 			isDerived = false;
 			xmlTag = "RskLvl";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RiskLevel";
 			definition = "Specifies the customer’s money laundering risk.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PartyProfileInformation4.mmRiskLevel;
+			previousVersion_lazy = () -> PartyProfileInformation4.mmRiskLevel;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> RiskLevel2Choice.mmObject();
@@ -793,14 +797,14 @@ public class PartyProfileInformation5 {
 	 */
 	public static final MMMessageAssociationEnd mmKnowYourCustomerCheckType = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PersonProfile.mmKnowYourCustomerCheckType;
+			businessElementTrace_lazy = () -> PersonProfile.mmKnowYourCustomerCheckType;
 			componentContext_lazy = () -> PartyProfileInformation5.mmObject();
 			isDerived = false;
 			xmlTag = "KnowYourCstmrChckTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "KnowYourCustomerCheckType";
 			definition = "Specifies the type of due diligence checks carried out on the investor or account owner. For definitions of ordinary, simple and enhanced know your customer checks, local market regulations should be consulted.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PartyProfileInformation4.mmKnowYourCustomerCheckType;
+			previousVersion_lazy = () -> PartyProfileInformation4.mmKnowYourCustomerCheckType;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -847,10 +851,10 @@ public class PartyProfileInformation5 {
 			componentContext_lazy = () -> PartyProfileInformation5.mmObject();
 			isDerived = false;
 			xmlTag = "KnowYourCstmrDBChck";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "KnowYourCustomerDatabaseCheck";
 			definition = "Specifies whether a customer has been checked in a Know Your Customer (KYC) database.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PartyProfileInformation4.mmKnowYourCustomerDatabaseCheck;
+			previousVersion_lazy = () -> PartyProfileInformation4.mmKnowYourCustomerDatabaseCheck;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -861,16 +865,13 @@ public class PartyProfileInformation5 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyProfileInformation5.mmCertificationIndicator, com.tools20022.repository.msg.PartyProfileInformation5.mmValidatingParty,
-						com.tools20022.repository.msg.PartyProfileInformation5.mmCheckingParty, com.tools20022.repository.msg.PartyProfileInformation5.mmResponsibleParty,
-						com.tools20022.repository.msg.PartyProfileInformation5.mmCertificateType, com.tools20022.repository.msg.PartyProfileInformation5.mmCheckingDate,
-						com.tools20022.repository.msg.PartyProfileInformation5.mmCheckingFrequency, com.tools20022.repository.msg.PartyProfileInformation5.mmNextRevisionDate,
-						com.tools20022.repository.msg.PartyProfileInformation5.mmSalaryRange, com.tools20022.repository.msg.PartyProfileInformation5.mmSourceOfWealth,
-						com.tools20022.repository.msg.PartyProfileInformation5.mmCustomerConductClassification, com.tools20022.repository.msg.PartyProfileInformation5.mmRiskLevel,
-						com.tools20022.repository.msg.PartyProfileInformation5.mmKnowYourCustomerCheckType, com.tools20022.repository.msg.PartyProfileInformation5.mmKnowYourCustomerDatabaseCheck);
+				messageElement_lazy = () -> Arrays.asList(PartyProfileInformation5.mmCertificationIndicator, PartyProfileInformation5.mmValidatingParty, PartyProfileInformation5.mmCheckingParty, PartyProfileInformation5.mmResponsibleParty,
+						PartyProfileInformation5.mmCertificateType, PartyProfileInformation5.mmCheckingDate, PartyProfileInformation5.mmCheckingFrequency, PartyProfileInformation5.mmNextRevisionDate, PartyProfileInformation5.mmSalaryRange,
+						PartyProfileInformation5.mmSourceOfWealth, PartyProfileInformation5.mmCustomerConductClassification, PartyProfileInformation5.mmRiskLevel, PartyProfileInformation5.mmKnowYourCustomerCheckType,
+						PartyProfileInformation5.mmKnowYourCustomerDatabaseCheck);
 				trace_lazy = () -> PrivateCertificate.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PartyProfileInformation5";
 				definition = "Information to support the Know Your Customer (KYC) processes.";
 				previousVersion_lazy = () -> PartyProfileInformation4.mmObject();

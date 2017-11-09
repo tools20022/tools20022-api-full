@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.StandingOrderQueryTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -95,7 +97,7 @@ public class StandingOrderQueryType1Code extends StandingOrderQueryTypeCode {
 	 */
 	public static final MMCode mmStandingOrderList = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StandingOrderList";
 			owner_lazy = () -> StandingOrderQueryType1Code.mmObject();
 		}
@@ -118,7 +120,7 @@ public class StandingOrderQueryType1Code extends StandingOrderQueryTypeCode {
 	 */
 	public static final MMCode mmStandingOrderDetails = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StandingOrderDetails";
 			owner_lazy = () -> StandingOrderQueryType1Code.mmObject();
 		}
@@ -141,7 +143,7 @@ public class StandingOrderQueryType1Code extends StandingOrderQueryTypeCode {
 	 */
 	public static final MMCode mmTotalAmountPerStandingOrder = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalAmountPerStandingOrder";
 			owner_lazy = () -> StandingOrderQueryType1Code.mmObject();
 		}
@@ -164,7 +166,7 @@ public class StandingOrderQueryType1Code extends StandingOrderQueryTypeCode {
 	 */
 	public static final MMCode mmStandingOrderLinkSetList = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StandingOrderLinkSetList";
 			owner_lazy = () -> StandingOrderQueryType1Code.mmObject();
 		}
@@ -187,7 +189,7 @@ public class StandingOrderQueryType1Code extends StandingOrderQueryTypeCode {
 	 */
 	public static final MMCode mmStandingOrderDetailsWithinLinkSet = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StandingOrderDetailsWithinLinkSet";
 			owner_lazy = () -> StandingOrderQueryType1Code.mmObject();
 		}
@@ -196,14 +198,13 @@ public class StandingOrderQueryType1Code extends StandingOrderQueryTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("SLST");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "StandingOrderQueryType1Code";
 				definition = "Defines the query type for standing orders queries, that identifies the predefined key attributes expected in the response to the query.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.StandingOrderQueryType1Code.mmStandingOrderList, com.tools20022.repository.codeset.StandingOrderQueryType1Code.mmStandingOrderDetails,
-						com.tools20022.repository.codeset.StandingOrderQueryType1Code.mmTotalAmountPerStandingOrder, com.tools20022.repository.codeset.StandingOrderQueryType1Code.mmStandingOrderLinkSetList,
-						com.tools20022.repository.codeset.StandingOrderQueryType1Code.mmStandingOrderDetailsWithinLinkSet);
+				code_lazy = () -> Arrays.asList(StandingOrderQueryType1Code.mmStandingOrderList, StandingOrderQueryType1Code.mmStandingOrderDetails, StandingOrderQueryType1Code.mmTotalAmountPerStandingOrder,
+						StandingOrderQueryType1Code.mmStandingOrderLinkSetList, StandingOrderQueryType1Code.mmStandingOrderDetailsWithinLinkSet);
 				trace_lazy = () -> StandingOrderQueryTypeCode.mmObject();
 			}
 		});

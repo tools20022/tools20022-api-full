@@ -19,7 +19,9 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.SecuritiesBalance;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification56;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -107,14 +109,14 @@ public class BalanceQuantity8Choice {
 	 */
 	public static final MMMessageAttribute mmQuantity = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesBalance.mmAggregateQuantity;
+			businessElementTrace_lazy = () -> SecuritiesBalance.mmAggregateQuantity;
 			componentContext_lazy = () -> BalanceQuantity8Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Qty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Quantity";
 			definition = "Total quantity of financial instruments of the balance.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.BalanceQuantity5Choice.mmQuantity;
+			previousVersion_lazy = () -> BalanceQuantity5Choice.mmQuantity;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> com.tools20022.repository.choice.FinancialInstrumentQuantity1Choice.mmObject();
@@ -161,14 +163,14 @@ public class BalanceQuantity8Choice {
 	 */
 	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesBalance.mmAggregateQuantity;
+			businessElementTrace_lazy = () -> SecuritiesBalance.mmAggregateQuantity;
 			componentContext_lazy = () -> BalanceQuantity8Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Total quantity of financial instruments of the balance.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.BalanceQuantity5Choice.mmProprietary;
+			previousVersion_lazy = () -> BalanceQuantity5Choice.mmProprietary;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification56.mmObject();
@@ -178,10 +180,10 @@ public class BalanceQuantity8Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.BalanceQuantity8Choice.mmQuantity, com.tools20022.repository.choice.BalanceQuantity8Choice.mmProprietary);
+				messageElement_lazy = () -> Arrays.asList(BalanceQuantity8Choice.mmQuantity, BalanceQuantity8Choice.mmProprietary);
 				trace_lazy = () -> SecuritiesBalance.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "BalanceQuantity8Choice";
 				definition = "Choice between quantity formats for the balance information.";
 				previousVersion_lazy = () -> BalanceQuantity5Choice.mmObject();

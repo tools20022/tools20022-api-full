@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -28,6 +30,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.ConfirmationType1Code
+ * ConfirmationType1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -36,13 +45,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.ConfirmationTypeCode#mmActual
  * ConfirmationTypeCode.mmActual}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.ConfirmationType1Code
- * ConfirmationType1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -97,7 +99,7 @@ public class ConfirmationTypeCode {
 	 */
 	public static final MMCode mmIntent = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Intent";
 			definition = "Specifies that the confirmation is an intention to execute a transfer instruction for the listed assets.";
 			owner_lazy = () -> ConfirmationTypeCode.mmObject();
@@ -130,7 +132,7 @@ public class ConfirmationTypeCode {
 	 */
 	public static final MMCode mmActual = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Actual";
 			definition = "Specifies that the message is an actual confirmation of the execution of a transfer request.";
 			owner_lazy = () -> ConfirmationTypeCode.mmObject();
@@ -141,12 +143,12 @@ public class ConfirmationTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("INTT");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ConfirmationTypeCode";
 				definition = "Specifies whether a message is an intention to execute a transfer instruction or an actual confirmation of the execution of the transfer.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ConfirmationTypeCode.mmIntent, com.tools20022.repository.codeset.ConfirmationTypeCode.mmActual);
+				code_lazy = () -> Arrays.asList(ConfirmationTypeCode.mmIntent, ConfirmationTypeCode.mmActual);
 				derivation_lazy = () -> Arrays.asList(ConfirmationType1Code.mmObject());
 			}
 		});

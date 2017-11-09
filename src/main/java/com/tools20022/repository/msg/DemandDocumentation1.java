@@ -20,10 +20,12 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max20000Text;
 import com.tools20022.repository.datatype.Max2000Text;
 import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.UndertakingDocument;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -103,7 +105,7 @@ public class DemandDocumentation1 {
 			componentContext_lazy = () -> DemandDocumentation1.mmObject();
 			isDerived = false;
 			xmlTag = "CmpltInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CompleteIndicator";
 			definition = "Indication as to whether the presentation is complete.";
 			maxOccurs = 1;
@@ -144,7 +146,7 @@ public class DemandDocumentation1 {
 			componentContext_lazy = () -> DemandDocumentation1.mmObject();
 			isDerived = false;
 			xmlTag = "CmpltnInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CompletionInformation";
 			definition = "Information related to an incomplete presentation.";
 			maxOccurs = 1;
@@ -189,7 +191,7 @@ public class DemandDocumentation1 {
 			componentContext_lazy = () -> DemandDocumentation1.mmObject();
 			isDerived = false;
 			xmlTag = "NclsdFile";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EnclosedFile";
 			definition = "Document or template enclosed in the demand.";
 			minOccurs = 0;
@@ -231,7 +233,7 @@ public class DemandDocumentation1 {
 			componentContext_lazy = () -> DemandDocumentation1.mmObject();
 			isDerived = false;
 			xmlTag = "DmndNrrtv";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DemandNarrative";
 			definition = "Narrative text constituting the demand.";
 			maxOccurs = 1;
@@ -243,10 +245,9 @@ public class DemandDocumentation1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DemandDocumentation1.mmCompleteIndicator, com.tools20022.repository.msg.DemandDocumentation1.mmCompletionInformation,
-						com.tools20022.repository.msg.DemandDocumentation1.mmEnclosedFile, com.tools20022.repository.msg.DemandDocumentation1.mmDemandNarrative);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(DemandDocumentation1.mmCompleteIndicator, DemandDocumentation1.mmCompletionInformation, DemandDocumentation1.mmEnclosedFile, DemandDocumentation1.mmDemandNarrative);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DemandDocumentation1";
 				definition = "Document presented for examination.";
 			}

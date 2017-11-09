@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -28,6 +30,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementInstructionGeneration1Code
+ * SettlementInstructionGeneration1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -36,14 +46,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.SettlementInstructionGenerationCode#mmNotInstructionGenerationByETCProvider
  * SettlementInstructionGenerationCode.mmNotInstructionGenerationByETCProvider}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementInstructionGeneration1Code
- * SettlementInstructionGeneration1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -98,7 +100,7 @@ public class SettlementInstructionGenerationCode {
 	 */
 	public static final MMCode mmInstructionGenerationByETCProvider = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructionGenerationByETCProvider";
 			definition = "Specifies if the ETC service provider is to generate a settlement instruction.";
 			owner_lazy = () -> SettlementInstructionGenerationCode.mmObject();
@@ -131,7 +133,7 @@ public class SettlementInstructionGenerationCode {
 	 */
 	public static final MMCode mmNotInstructionGenerationByETCProvider = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotInstructionGenerationByETCProvider";
 			definition = "Specifies if the ETC service provider is not to generate a settlement instruction where a previous agreement to do so exists.";
 			owner_lazy = () -> SettlementInstructionGenerationCode.mmObject();
@@ -142,13 +144,12 @@ public class SettlementInstructionGenerationCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("GENS");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SettlementInstructionGenerationCode";
 				definition = "Specifies if the ETC service provider is to generate a settlement instruction or not.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SettlementInstructionGenerationCode.mmInstructionGenerationByETCProvider,
-						com.tools20022.repository.codeset.SettlementInstructionGenerationCode.mmNotInstructionGenerationByETCProvider);
+				code_lazy = () -> Arrays.asList(SettlementInstructionGenerationCode.mmInstructionGenerationByETCProvider, SettlementInstructionGenerationCode.mmNotInstructionGenerationByETCProvider);
 				derivation_lazy = () -> Arrays.asList(SettlementInstructionGeneration1Code.mmObject());
 			}
 		});

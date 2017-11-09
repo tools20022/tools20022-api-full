@@ -20,13 +20,13 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.BICIdentifier;
 import com.tools20022.repository.datatype.Max256Text;
 import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.datatype.PhoneNumber;
-import com.tools20022.repository.entity.CashAccount;
-import com.tools20022.repository.entity.ContactPoint;
-import com.tools20022.repository.entity.PostalAddress;
+import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -140,11 +140,11 @@ public class OrderDeskContactDetails {
 	 */
 	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyName.mmName;
+			businessElementTrace_lazy = () -> PartyName.mmName;
 			componentContext_lazy = () -> OrderDeskContactDetails.mmObject();
 			isDerived = false;
 			xmlTag = "Nm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Name";
 			definition = "Name by which a party is known and which is usually used to identify that party.";
 			maxOccurs = 1;
@@ -193,7 +193,7 @@ public class OrderDeskContactDetails {
 			componentContext_lazy = () -> OrderDeskContactDetails.mmObject();
 			isDerived = false;
 			xmlTag = "PstlAdr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PostalAddress";
 			definition = "Information that locates and identifies a specific address, as defined by postal services.";
 			maxOccurs = 1;
@@ -240,11 +240,11 @@ public class OrderDeskContactDetails {
 	 */
 	public static final MMMessageAttribute mmPhoneNumber = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PhoneAddress.mmPhoneNumber;
+			businessElementTrace_lazy = () -> PhoneAddress.mmPhoneNumber;
 			componentContext_lazy = () -> OrderDeskContactDetails.mmObject();
 			isDerived = false;
 			xmlTag = "PhneNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PhoneNumber";
 			definition = "Collection of information that identifies a phone number, as defined by telecom services.";
 			maxOccurs = 1;
@@ -290,11 +290,11 @@ public class OrderDeskContactDetails {
 	 */
 	public static final MMMessageAttribute mmFaxNumber = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PhoneAddress.mmFaxNumber;
+			businessElementTrace_lazy = () -> PhoneAddress.mmFaxNumber;
 			componentContext_lazy = () -> OrderDeskContactDetails.mmObject();
 			isDerived = false;
 			xmlTag = "FaxNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FaxNumber";
 			definition = "Collection of information that identifies a FAX number, as defined by telecom services.";
 			maxOccurs = 1;
@@ -337,11 +337,11 @@ public class OrderDeskContactDetails {
 	 */
 	public static final MMMessageAttribute mmEmailAddress = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ElectronicAddress.mmEmailAddress;
+			businessElementTrace_lazy = () -> ElectronicAddress.mmEmailAddress;
 			componentContext_lazy = () -> OrderDeskContactDetails.mmObject();
 			isDerived = false;
 			xmlTag = "EmailAdr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EmailAddress";
 			definition = "Address for electronic mail (e-mail).";
 			maxOccurs = 1;
@@ -389,11 +389,11 @@ public class OrderDeskContactDetails {
 	 */
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.mmBICFI;
+			businessElementTrace_lazy = () -> OrganisationIdentification.mmBICFI;
 			componentContext_lazy = () -> OrderDeskContactDetails.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Unique and unambiguous identification of a financial institution, as assigned under a globally recognised or proprietary identification scheme.";
 			maxOccurs = 1;
@@ -435,11 +435,11 @@ public class OrderDeskContactDetails {
 	 */
 	public static final MMMessageAssociationEnd mmApplicationForms = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ContactPoint.mmInvestmentFundClassProcessing;
+			businessElementTrace_lazy = () -> ContactPoint.mmInvestmentFundClassProcessing;
 			componentContext_lazy = () -> OrderDeskContactDetails.mmObject();
 			isDerived = false;
 			xmlTag = "ApplFrms";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ApplicationForms";
 			definition = "Application forms or original signature required by fund order desk.";
 			maxOccurs = 1;
@@ -484,11 +484,11 @@ public class OrderDeskContactDetails {
 	 */
 	public static final MMMessageAssociationEnd mmSignatureRequiredInitialSubscription = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ContactPoint.mmInvestmentFundClassProcessing;
+			businessElementTrace_lazy = () -> ContactPoint.mmInvestmentFundClassProcessing;
 			componentContext_lazy = () -> OrderDeskContactDetails.mmObject();
 			isDerived = false;
 			xmlTag = "SgntrReqrdInitlSbcpt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SignatureRequiredInitialSubscription";
 			definition = "An original signature is required when completing an initial subscription.";
 			maxOccurs = 1;
@@ -533,11 +533,11 @@ public class OrderDeskContactDetails {
 	 */
 	public static final MMMessageAssociationEnd mmSignatureRequiredSubsequentSubscription = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ContactPoint.mmInvestmentFundClassProcessing;
+			businessElementTrace_lazy = () -> ContactPoint.mmInvestmentFundClassProcessing;
 			componentContext_lazy = () -> OrderDeskContactDetails.mmObject();
 			isDerived = false;
 			xmlTag = "SgntrReqrdSbsqntSbcpt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SignatureRequiredSubsequentSubscription";
 			definition = "Indicate if original signature is required when completing an subsequent subscription.";
 			maxOccurs = 1;
@@ -580,11 +580,11 @@ public class OrderDeskContactDetails {
 	 */
 	public static final MMMessageAssociationEnd mmSignatureRequiredRedemption = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ContactPoint.mmInvestmentFundClassProcessing;
+			businessElementTrace_lazy = () -> ContactPoint.mmInvestmentFundClassProcessing;
 			componentContext_lazy = () -> OrderDeskContactDetails.mmObject();
 			isDerived = false;
 			xmlTag = "SgntrReqrdRed";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SignatureRequiredRedemption";
 			definition = "An original signature is required when completing redemption.";
 			maxOccurs = 1;
@@ -631,11 +631,11 @@ public class OrderDeskContactDetails {
 	 */
 	public static final MMMessageAssociationEnd mmSubscriptionProcessingCharacteristics = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ContactPoint.mmInvestmentFundClassProcessing;
+			businessElementTrace_lazy = () -> ContactPoint.mmInvestmentFundClassProcessing;
 			componentContext_lazy = () -> OrderDeskContactDetails.mmObject();
 			isDerived = false;
 			xmlTag = "SbcptPrcgChrtcs";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubscriptionProcessingCharacteristics";
 			definition = "Subscription processing information applicable to the main fund order desk.";
 			maxOccurs = 1;
@@ -681,11 +681,11 @@ public class OrderDeskContactDetails {
 	 */
 	public static final MMMessageAssociationEnd mmRedemptionProcessingCharacteristics = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ContactPoint.mmInvestmentFundClassProcessing;
+			businessElementTrace_lazy = () -> ContactPoint.mmInvestmentFundClassProcessing;
 			componentContext_lazy = () -> OrderDeskContactDetails.mmObject();
 			isDerived = false;
 			xmlTag = "RedPrcgChrtcs";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RedemptionProcessingCharacteristics";
 			definition = "Redemption processing information applicable to the main fund order desk.";
 			maxOccurs = 1;
@@ -732,7 +732,7 @@ public class OrderDeskContactDetails {
 			componentContext_lazy = () -> OrderDeskContactDetails.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementDetails";
 			definition = "Cash settlement information for the main fund order desk.";
 			maxOccurs = 5;
@@ -745,15 +745,13 @@ public class OrderDeskContactDetails {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OrderDeskContactDetails.mmName, com.tools20022.repository.msg.OrderDeskContactDetails.mmPostalAddress,
-						com.tools20022.repository.msg.OrderDeskContactDetails.mmPhoneNumber, com.tools20022.repository.msg.OrderDeskContactDetails.mmFaxNumber, com.tools20022.repository.msg.OrderDeskContactDetails.mmEmailAddress,
-						com.tools20022.repository.msg.OrderDeskContactDetails.mmIdentification, com.tools20022.repository.msg.OrderDeskContactDetails.mmApplicationForms,
-						com.tools20022.repository.msg.OrderDeskContactDetails.mmSignatureRequiredInitialSubscription, com.tools20022.repository.msg.OrderDeskContactDetails.mmSignatureRequiredSubsequentSubscription,
-						com.tools20022.repository.msg.OrderDeskContactDetails.mmSignatureRequiredRedemption, com.tools20022.repository.msg.OrderDeskContactDetails.mmSubscriptionProcessingCharacteristics,
-						com.tools20022.repository.msg.OrderDeskContactDetails.mmRedemptionProcessingCharacteristics, com.tools20022.repository.msg.OrderDeskContactDetails.mmSettlementDetails);
+				messageElement_lazy = () -> Arrays.asList(OrderDeskContactDetails.mmName, OrderDeskContactDetails.mmPostalAddress, OrderDeskContactDetails.mmPhoneNumber, OrderDeskContactDetails.mmFaxNumber,
+						OrderDeskContactDetails.mmEmailAddress, OrderDeskContactDetails.mmIdentification, OrderDeskContactDetails.mmApplicationForms, OrderDeskContactDetails.mmSignatureRequiredInitialSubscription,
+						OrderDeskContactDetails.mmSignatureRequiredSubsequentSubscription, OrderDeskContactDetails.mmSignatureRequiredRedemption, OrderDeskContactDetails.mmSubscriptionProcessingCharacteristics,
+						OrderDeskContactDetails.mmRedemptionProcessingCharacteristics, OrderDeskContactDetails.mmSettlementDetails);
 				trace_lazy = () -> ContactPoint.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "OrderDeskContactDetails";
 				definition = "Communication device number or electronic address used for communication.";
 			}

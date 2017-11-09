@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.RestrictionTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -92,7 +94,7 @@ public class RestrictionType1Code extends RestrictionTypeCode {
 	 */
 	public static final MMCode mmSelling = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Selling";
 			owner_lazy = () -> RestrictionType1Code.mmObject();
 		}
@@ -115,7 +117,7 @@ public class RestrictionType1Code extends RestrictionTypeCode {
 	 */
 	public static final MMCode mmBuying = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Buying";
 			owner_lazy = () -> RestrictionType1Code.mmObject();
 		}
@@ -138,7 +140,7 @@ public class RestrictionType1Code extends RestrictionTypeCode {
 	 */
 	public static final MMCode mmPlacing = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Placing";
 			owner_lazy = () -> RestrictionType1Code.mmObject();
 		}
@@ -161,7 +163,7 @@ public class RestrictionType1Code extends RestrictionTypeCode {
 	 */
 	public static final MMCode mmHolding = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Holding";
 			owner_lazy = () -> RestrictionType1Code.mmObject();
 		}
@@ -184,7 +186,7 @@ public class RestrictionType1Code extends RestrictionTypeCode {
 	 */
 	public static final MMCode mmVoting = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Voting";
 			owner_lazy = () -> RestrictionType1Code.mmObject();
 		}
@@ -193,13 +195,12 @@ public class RestrictionType1Code extends RestrictionTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("SELR");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RestrictionType1Code";
 				definition = "Specifies the type of restriction.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RestrictionType1Code.mmSelling, com.tools20022.repository.codeset.RestrictionType1Code.mmBuying,
-						com.tools20022.repository.codeset.RestrictionType1Code.mmPlacing, com.tools20022.repository.codeset.RestrictionType1Code.mmHolding, com.tools20022.repository.codeset.RestrictionType1Code.mmVoting);
+				code_lazy = () -> Arrays.asList(RestrictionType1Code.mmSelling, RestrictionType1Code.mmBuying, RestrictionType1Code.mmPlacing, RestrictionType1Code.mmHolding, RestrictionType1Code.mmVoting);
 				trace_lazy = () -> RestrictionTypeCode.mmObject();
 			}
 		});

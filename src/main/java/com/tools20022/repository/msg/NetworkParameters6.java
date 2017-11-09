@@ -19,8 +19,10 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.NetworkType2Code;
 import com.tools20022.repository.entity.NetworkAccess;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -98,7 +100,7 @@ public class NetworkParameters6 {
 			componentContext_lazy = () -> NetworkParameters6.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Type of proxy.";
 			maxOccurs = 1;
@@ -147,14 +149,14 @@ public class NetworkParameters6 {
 	 */
 	public static final MMMessageAttribute mmAccess = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.NetworkAccess.mmAccessCode;
+			businessElementTrace_lazy = () -> NetworkAccess.mmAccessCode;
 			componentContext_lazy = () -> NetworkParameters6.mmObject();
 			isDerived = false;
 			xmlTag = "Accs";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Access";
 			definition = "Access information to the proxy.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.NetworkParameters3.mmAccessCode;
+			previousVersion_lazy = () -> NetworkParameters3.mmAccessCode;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> com.tools20022.repository.msg.NetworkParameters5.mmObject();
@@ -164,10 +166,10 @@ public class NetworkParameters6 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.NetworkParameters6.mmType, com.tools20022.repository.msg.NetworkParameters6.mmAccess);
+				messageElement_lazy = () -> Arrays.asList(NetworkParameters6.mmType, NetworkParameters6.mmAccess);
 				trace_lazy = () -> NetworkAccess.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "NetworkParameters6";
 				definition = "Parameters to communicate with a host.";
 				previousVersion_lazy = () -> NetworkParameters3.mmObject();

@@ -17,15 +17,14 @@
 
 package com.tools20022.repository.entity;
 
-import com.tools20022.metamodel.MMBusinessAssociationEnd;
-import com.tools20022.metamodel.MMBusinessAttribute;
-import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.*;
 import com.tools20022.repository.choice.*;
 import com.tools20022.repository.codeset.MarginProductCode;
 import com.tools20022.repository.codeset.MarginTypeCode;
 import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.YesNoIndicator;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -41,66 +40,43 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
  * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.MarginCall#mmMarginCallValuationDate
- * MarginCall.mmMarginCallValuationDate}</li>
- * <li>{@linkplain com.tools20022.repository.entity.MarginCall#mmAgreedAmount
- * MarginCall.mmAgreedAmount}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.MarginCall#mmVariationMargin
- * MarginCall.mmVariationMargin}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.MarginCall#mmSegregatedIndependentAmount
- * MarginCall.mmSegregatedIndependentAmount}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.MarginCall#mmDefaultFundContribution
- * MarginCall.mmDefaultFundContribution}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.MarginCall#mmExpectedVariationMarginType
- * MarginCall.mmExpectedVariationMarginType}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.MarginCall#mmExpectedSegregatedIndependentAmountType
- * MarginCall.mmExpectedSegregatedIndependentAmountType}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.MarginCall#mmTotalMarkToMarket
- * MarginCall.mmTotalMarkToMarket}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.MarginCall#mmMarkToMarketNetted
- * MarginCall.mmMarkToMarketNetted}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.MarginCall#mmMarkToMarketGross
- * MarginCall.mmMarkToMarketGross}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.MarginCall#mmMarkToMarketFails
- * MarginCall.mmMarkToMarketFails}</li>
- * <li>{@linkplain com.tools20022.repository.entity.MarginCall#mmFailsHaircut
- * MarginCall.mmFailsHaircut}</li>
- * <li>{@linkplain com.tools20022.repository.entity.MarginCall#mmInitialMargin
- * MarginCall.mmInitialMargin}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.MarginCall#mmIncreaseCoverage
- * MarginCall.mmIncreaseCoverage}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.MarginCall#mmCollateralisedMarginAccountIndicator
- * MarginCall.mmCollateralisedMarginAccountIndicator}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.MarginCall#mmCollateralMovement
- * MarginCall.mmCollateralMovement}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.MarginCall#mmRelatedManagementProcess
- * MarginCall.mmRelatedManagementProcess}</li>
- * <li>{@linkplain com.tools20022.repository.entity.MarginCall#mmSecurity
- * MarginCall.mmSecurity}</li>
- * <li>{@linkplain com.tools20022.repository.entity.MarginCall#mmMarginProduct
- * MarginCall.mmMarginProduct}</li>
- * <li>{@linkplain com.tools20022.repository.entity.MarginCall#mmMarginType
- * MarginCall.mmMarginType}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.MarginCall#mmTotalMarginAmount
- * MarginCall.mmTotalMarginAmount}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.MarginCall1 MarginCall1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.MarginCallResult2
+ * MarginCallResult2}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.MarginCallResult1Choice
+ * MarginCallResult1Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.MarginCallResult1
+ * MarginCallResult1}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.MarginCallResult2Choice
+ * MarginCallResult2Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.MarginCallResult3
+ * MarginCallResult3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Amount1 Amount1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AgreedAmount1 AgreedAmount1}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.AgreedAmount1Choice
+ * AgreedAmount1Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.MarginProductType1Choice
+ * MarginProductType1Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.VariationMargin2
+ * VariationMargin2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Margin2 Margin2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.MarginReport1 MarginReport1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.MarginCalculation1
+ * MarginCalculation1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.VariationMargin3
+ * VariationMargin3}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.MarginType1Choice
+ * MarginType1Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Margin4 Margin4}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Margin3 Margin3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.MarginCalculation2
+ * MarginCalculation2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.MarginReport2 MarginReport2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.MarginCall2 MarginCall2}</li>
  * </ul>
  * </li>
  * <li>
@@ -171,43 +147,66 @@ import java.util.List;
  * MarginCall2.mmMarginDetailDueToB}</li>
  * </ul>
  * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.MarginCall1 MarginCall1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.MarginCallResult2
- * MarginCallResult2}</li>
- * <li>{@linkplain com.tools20022.repository.choice.MarginCallResult1Choice
- * MarginCallResult1Choice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.MarginCallResult1
- * MarginCallResult1}</li>
- * <li>{@linkplain com.tools20022.repository.choice.MarginCallResult2Choice
- * MarginCallResult2Choice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.MarginCallResult3
- * MarginCallResult3}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Amount1 Amount1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AgreedAmount1 AgreedAmount1}</li>
- * <li>{@linkplain com.tools20022.repository.choice.AgreedAmount1Choice
- * AgreedAmount1Choice}</li>
- * <li>{@linkplain com.tools20022.repository.choice.MarginProductType1Choice
- * MarginProductType1Choice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.VariationMargin2
- * VariationMargin2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Margin2 Margin2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.MarginReport1 MarginReport1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.MarginCalculation1
- * MarginCalculation1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.VariationMargin3
- * VariationMargin3}</li>
- * <li>{@linkplain com.tools20022.repository.choice.MarginType1Choice
- * MarginType1Choice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Margin4 Margin4}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Margin3 Margin3}</li>
- * <li>{@linkplain com.tools20022.repository.msg.MarginCalculation2
- * MarginCalculation2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.MarginReport2 MarginReport2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.MarginCall2 MarginCall2}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.MarginCall#mmMarginCallValuationDate
+ * MarginCall.mmMarginCallValuationDate}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.MarginCall#mmAgreedAmount
+ * MarginCall.mmAgreedAmount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.MarginCall#mmVariationMargin
+ * MarginCall.mmVariationMargin}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.MarginCall#mmSegregatedIndependentAmount
+ * MarginCall.mmSegregatedIndependentAmount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.MarginCall#mmDefaultFundContribution
+ * MarginCall.mmDefaultFundContribution}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.MarginCall#mmExpectedVariationMarginType
+ * MarginCall.mmExpectedVariationMarginType}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.MarginCall#mmExpectedSegregatedIndependentAmountType
+ * MarginCall.mmExpectedSegregatedIndependentAmountType}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.MarginCall#mmTotalMarkToMarket
+ * MarginCall.mmTotalMarkToMarket}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.MarginCall#mmMarkToMarketNetted
+ * MarginCall.mmMarkToMarketNetted}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.MarginCall#mmMarkToMarketGross
+ * MarginCall.mmMarkToMarketGross}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.MarginCall#mmMarkToMarketFails
+ * MarginCall.mmMarkToMarketFails}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.MarginCall#mmFailsHaircut
+ * MarginCall.mmFailsHaircut}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.MarginCall#mmInitialMargin
+ * MarginCall.mmInitialMargin}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.MarginCall#mmIncreaseCoverage
+ * MarginCall.mmIncreaseCoverage}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.MarginCall#mmCollateralisedMarginAccountIndicator
+ * MarginCall.mmCollateralisedMarginAccountIndicator}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.MarginCall#mmCollateralMovement
+ * MarginCall.mmCollateralMovement}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.MarginCall#mmRelatedManagementProcess
+ * MarginCall.mmRelatedManagementProcess}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.MarginCall#mmSecurity
+ * MarginCall.mmSecurity}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.MarginCall#mmMarginProduct
+ * MarginCall.mmMarginProduct}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.MarginCall#mmMarginType
+ * MarginCall.mmMarginType}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.MarginCall#mmTotalMarginAmount
+ * MarginCall.mmTotalMarginAmount}</li>
  * </ul>
  * </li>
  * <li>
@@ -282,11 +281,10 @@ public class MarginCall {
 	 */
 	public static final MMBusinessAttribute mmMarginCallValuationDate = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Obligation1.mmValuationDate, com.tools20022.repository.msg.Obligation2.mmValuationDate, com.tools20022.repository.msg.Summary1.mmValuationDateTime,
-					com.tools20022.repository.msg.Obligation3.mmValuationDate, com.tools20022.repository.msg.Obligation4.mmValuationDate, com.tools20022.repository.msg.Obligation5.mmValuationDate);
+			derivation_lazy = () -> Arrays.asList(Obligation1.mmValuationDate, Obligation2.mmValuationDate, Summary1.mmValuationDateTime, Obligation3.mmValuationDate, Obligation4.mmValuationDate, Obligation5.mmValuationDate);
 			elementContext_lazy = () -> MarginCall.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarginCallValuationDate";
 			definition = "Close of business date that initiating party is valuing the margin call.";
 			maxOccurs = 1;
@@ -347,12 +345,11 @@ public class MarginCall {
 	 */
 	public static final MMBusinessAttribute mmAgreedAmount = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CollateralMovement1.mmAgreedAmount, com.tools20022.repository.msg.CollateralMovement4.mmAgreedAmount, com.tools20022.repository.msg.Amount1.mmAgreedAmount,
-					com.tools20022.repository.choice.AgreedAmount1Choice.mmAgreedAmountDetails, com.tools20022.repository.msg.CollateralMovement5.mmAgreedAmount, com.tools20022.repository.msg.CollateralMovement7.mmAgreedAmount,
-					com.tools20022.repository.msg.CollateralMovement10.mmAgreedAmount);
+			derivation_lazy = () -> Arrays.asList(CollateralMovement1.mmAgreedAmount, CollateralMovement4.mmAgreedAmount, Amount1.mmAgreedAmount, AgreedAmount1Choice.mmAgreedAmountDetails, CollateralMovement5.mmAgreedAmount,
+					CollateralMovement7.mmAgreedAmount, CollateralMovement10.mmAgreedAmount);
 			elementContext_lazy = () -> MarginCall.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AgreedAmount";
 			definition = "Specifies the amount which is undisputed.";
 			maxOccurs = 1;
@@ -412,12 +409,11 @@ public class MarginCall {
 	 */
 	public static final MMBusinessAttribute mmVariationMargin = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DisputeNotification1.mmVariationMarginDispute, com.tools20022.repository.msg.MarginCallResult2.mmVariationMarginResult,
-					com.tools20022.repository.choice.MarginCallResult2Choice.mmMarginCallAmount, com.tools20022.repository.msg.AgreedAmount1.mmVariationMarginAmount, com.tools20022.repository.msg.Margin2.mmVariationMargin,
-					com.tools20022.repository.msg.Margin3.mmVariationMargin);
+			derivation_lazy = () -> Arrays.asList(DisputeNotification1.mmVariationMarginDispute, MarginCallResult2.mmVariationMarginResult, MarginCallResult2Choice.mmMarginCallAmount, AgreedAmount1.mmVariationMarginAmount,
+					Margin2.mmVariationMargin, Margin3.mmVariationMargin);
 			elementContext_lazy = () -> MarginCall.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VariationMargin";
 			definition = "Provides the summation of the call amounts for the variation margin and optionally the segregated independent amount.";
 			maxOccurs = 1;
@@ -482,13 +478,11 @@ public class MarginCall {
 	 */
 	public static final MMBusinessAttribute mmSegregatedIndependentAmount = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DisputeNotification1.mmSegregatedIndependentAmountDispute,
-					com.tools20022.repository.choice.DisputeNotification1Choice.mmSegregatedIndependentAmountDisputeDetails, com.tools20022.repository.msg.MarginCallResult2.mmSegregatedIndependentAmount,
-					com.tools20022.repository.choice.MarginCallResult1Choice.mmSegregatedIndependentAmount, com.tools20022.repository.choice.MarginCallResult2Choice.mmSegregatedIndependentAmount,
-					com.tools20022.repository.msg.AgreedAmount1.mmSegregatedIndependentAmount, com.tools20022.repository.choice.AgreedAmount1Choice.mmSegregatedIndependentAmount);
+			derivation_lazy = () -> Arrays.asList(DisputeNotification1.mmSegregatedIndependentAmountDispute, DisputeNotification1Choice.mmSegregatedIndependentAmountDisputeDetails, MarginCallResult2.mmSegregatedIndependentAmount,
+					MarginCallResult1Choice.mmSegregatedIndependentAmount, MarginCallResult2Choice.mmSegregatedIndependentAmount, AgreedAmount1.mmSegregatedIndependentAmount, AgreedAmount1Choice.mmSegregatedIndependentAmount);
 			elementContext_lazy = () -> MarginCall.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SegregatedIndependentAmount";
 			definition = "Provides the summation of the call amounts for the segregated independent amount only.";
 			maxOccurs = 1;
@@ -537,13 +531,13 @@ public class MarginCall {
 		{
 			elementContext_lazy = () -> MarginCall.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DefaultFundContribution";
 			definition = "Portion of the participation to the default fund that clearing member must provide. It is the sum of the individual contributions.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.DefaultFundContribution.mmRelatedMarginCall;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.DefaultFundContribution.mmObject();
 		}
 	};
@@ -585,13 +579,13 @@ public class MarginCall {
 		{
 			elementContext_lazy = () -> MarginCall.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExpectedVariationMarginType";
 			definition = "Specifies the expected collateral type and direction.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.ExpectedCollateralType.mmVariationMarginRelatedCall;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.ExpectedCollateralType.mmObject();
 		}
 	};
@@ -633,13 +627,13 @@ public class MarginCall {
 		{
 			elementContext_lazy = () -> MarginCall.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExpectedSegregatedIndependentAmountType";
 			definition = "Specifies the expected collateral type and direction.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.ExpectedCollateralType.mmSegregatedIndependentAmountRelatedCall;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.ExpectedCollateralType.mmObject();
 		}
 	};
@@ -685,10 +679,10 @@ public class MarginCall {
 	 */
 	public static final MMBusinessAttribute mmTotalMarkToMarket = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.VariationMargin2.mmTotalMarkToMarket, com.tools20022.repository.msg.VariationMargin3.mmTotalMarkToMarket);
+			derivation_lazy = () -> Arrays.asList(VariationMargin2.mmTotalMarkToMarket, VariationMargin3.mmTotalMarkToMarket);
 			elementContext_lazy = () -> MarginCall.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalMarkToMarket";
 			definition = "Net unrealised profit or loss on the value of the netted, gross and failing positions.";
 			maxOccurs = 1;
@@ -736,10 +730,10 @@ public class MarginCall {
 	 */
 	public static final MMBusinessAttribute mmMarkToMarketNetted = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.VariationMargin2.mmMarkToMarketNetted, com.tools20022.repository.msg.VariationMargin3.mmMarkToMarketNetted);
+			derivation_lazy = () -> Arrays.asList(VariationMargin2.mmMarkToMarketNetted, VariationMargin3.mmMarkToMarketNetted);
 			elementContext_lazy = () -> MarginCall.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarkToMarketNetted";
 			definition = "Unrealised net loss calculated at the participant portfolio level.";
 			maxOccurs = 1;
@@ -786,10 +780,10 @@ public class MarginCall {
 	 */
 	public static final MMBusinessAttribute mmMarkToMarketGross = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.VariationMargin2.mmMarkToMarketGross, com.tools20022.repository.msg.VariationMargin3.mmMarkToMarketGross);
+			derivation_lazy = () -> Arrays.asList(VariationMargin2.mmMarkToMarketGross, VariationMargin3.mmMarkToMarketGross);
 			elementContext_lazy = () -> MarginCall.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarkToMarketGross";
 			definition = "Unrealised net loss calculated in that market/boundary.";
 			maxOccurs = 1;
@@ -837,10 +831,10 @@ public class MarginCall {
 	 */
 	public static final MMBusinessAttribute mmMarkToMarketFails = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.VariationMargin2.mmMarkToMarketFails, com.tools20022.repository.msg.VariationMargin3.mmMarkToMarketFails);
+			derivation_lazy = () -> Arrays.asList(VariationMargin2.mmMarkToMarketFails, VariationMargin3.mmMarkToMarketFails);
 			elementContext_lazy = () -> MarginCall.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarkToMarketFails";
 			definition = "Sum of the unrealised loss without taking profit into consideration.";
 			maxOccurs = 1;
@@ -890,10 +884,10 @@ public class MarginCall {
 	 */
 	public static final MMBusinessAttribute mmFailsHaircut = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.VariationMargin2.mmFailsHaircut, com.tools20022.repository.msg.VariationMargin3.mmFailsHaircut);
+			derivation_lazy = () -> Arrays.asList(VariationMargin2.mmFailsHaircut, VariationMargin3.mmFailsHaircut);
 			elementContext_lazy = () -> MarginCall.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FailsHaircut";
 			definition = "Haircut applied to the absolute value of the participants net positions. Calculation depends on a participants credit rating.";
 			maxOccurs = 1;
@@ -942,10 +936,10 @@ public class MarginCall {
 	 */
 	public static final MMBusinessAttribute mmInitialMargin = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Margin2.mmInitialMargin, com.tools20022.repository.msg.Margin3.mmInitialMargin);
+			derivation_lazy = () -> Arrays.asList(Margin2.mmInitialMargin, Margin3.mmInitialMargin);
 			elementContext_lazy = () -> MarginCall.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InitialMargin";
 			definition = "Margin required for absorbing future market price fluctuations (market risks) occurring between the default of a member and close-out of unsettled securities positions by the CCP.";
 			maxOccurs = 1;
@@ -991,10 +985,10 @@ public class MarginCall {
 	 */
 	public static final MMBusinessAttribute mmIncreaseCoverage = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Margin2.mmIncreaseCoverage);
+			derivation_lazy = () -> Arrays.asList(Margin2.mmIncreaseCoverage);
 			elementContext_lazy = () -> MarginCall.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncreaseCoverage";
 			definition = "Amount added to the requirement amount. Its value is at the discretion of the central clearing counterparty.";
 			maxOccurs = 1;
@@ -1042,10 +1036,10 @@ public class MarginCall {
 	 */
 	public static final MMBusinessAttribute mmCollateralisedMarginAccountIndicator = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MarginReport2.mmCollateralisedMarginAccountIndicator);
+			derivation_lazy = () -> Arrays.asList(MarginReport2.mmCollateralisedMarginAccountIndicator);
 			elementContext_lazy = () -> MarginCall.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralisedMarginAccountIndicator";
 			definition = "Used to indicate whether the reported margin account is collateralised or not. If not collateralised, the account is configured for informational reporting.";
 			maxOccurs = 1;
@@ -1101,15 +1095,15 @@ public class MarginCall {
 	 */
 	public static final MMBusinessAssociationEnd mmCollateralMovement = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Margin2.mmMarginResult, com.tools20022.repository.msg.MarginCalculation1.mmMarginResult, com.tools20022.repository.msg.MarginCalculation2.mmMarginResult);
+			derivation_lazy = () -> Arrays.asList(Margin2.mmMarginResult, MarginCalculation1.mmMarginResult, MarginCalculation2.mmMarginResult);
 			elementContext_lazy = () -> MarginCall.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralMovement";
 			definition = "Movements resulting from the margin call calculation.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.CollateralMovement.mmMarginCall;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.CollateralMovement.mmObject();
 		}
 	};
@@ -1152,13 +1146,13 @@ public class MarginCall {
 		{
 			elementContext_lazy = () -> MarginCall.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedManagementProcess";
 			definition = "Process which groups the activities related to collateral.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.CollateralManagement.mmMarginCall;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.CollateralManagement.mmObject();
 		}
 	};
@@ -1199,12 +1193,12 @@ public class MarginCall {
 		{
 			elementContext_lazy = () -> MarginCall.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Security";
 			definition = "Description of the securities related to the margin call.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.Security.mmRelatedMarginCall;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 		}
 	};
@@ -1250,11 +1244,10 @@ public class MarginCall {
 	 */
 	public static final MMBusinessAttribute mmMarginProduct = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.MarginProductType1Choice.mmCode, com.tools20022.repository.choice.MarginProductType1Choice.mmProprietary,
-					com.tools20022.repository.msg.MarginReport2.mmMarginProduct);
+			derivation_lazy = () -> Arrays.asList(MarginProductType1Choice.mmCode, MarginProductType1Choice.mmProprietary, MarginReport2.mmMarginProduct);
 			elementContext_lazy = () -> MarginCall.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarginProduct";
 			definition = "Specifies the underlying product of the margin.";
 			maxOccurs = 1;
@@ -1306,10 +1299,10 @@ public class MarginCall {
 	 */
 	public static final MMBusinessAttribute mmMarginType = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.MarginType1Choice.mmCode, com.tools20022.repository.choice.MarginType1Choice.mmProprietary, com.tools20022.repository.msg.Margin4.mmType);
+			derivation_lazy = () -> Arrays.asList(MarginType1Choice.mmCode, MarginType1Choice.mmProprietary, Margin4.mmType);
 			elementContext_lazy = () -> MarginCall.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarginType";
 			definition = "Specifies the type of margin, for example, initial margin, variation margin, initial deposit or coupon margin.";
 			maxOccurs = 1;
@@ -1365,11 +1358,10 @@ public class MarginCall {
 	 */
 	public static final MMBusinessAttribute mmTotalMarginAmount = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Margin2.mmTotalMarginAmount, com.tools20022.repository.msg.MarginCalculation1.mmTotalMarginAmount, com.tools20022.repository.msg.Margin4.mmAmount,
-					com.tools20022.repository.msg.MarginCalculation2.mmTotalMarginAmount);
+			derivation_lazy = () -> Arrays.asList(Margin2.mmTotalMarginAmount, MarginCalculation1.mmTotalMarginAmount, Margin4.mmAmount, MarginCalculation2.mmTotalMarginAmount);
 			elementContext_lazy = () -> MarginCall.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalMarginAmount";
 			definition = "Total margin requirement (expressed in the reporting currency) that must be provided. This is the total requirement calculated to cover the initial margin and the variation margin.";
 			maxOccurs = 1;
@@ -1381,27 +1373,20 @@ public class MarginCall {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "MarginCall";
 				definition = "Specifies the calculation and the resulting margin and independent amount needed to cover the risk exposure of one party versus another.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Security.mmRelatedMarginCall, com.tools20022.repository.entity.CollateralMovement.mmMarginCall,
 						com.tools20022.repository.entity.CollateralManagement.mmMarginCall, com.tools20022.repository.entity.DefaultFundContribution.mmRelatedMarginCall,
 						com.tools20022.repository.entity.ExpectedCollateralType.mmVariationMarginRelatedCall, com.tools20022.repository.entity.ExpectedCollateralType.mmSegregatedIndependentAmountRelatedCall);
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.MarginCallResult1Choice.mmMarginCallResultDetails, com.tools20022.repository.msg.MarginCallResult1.mmMarginCallResult,
-						com.tools20022.repository.choice.MarginCallResult2Choice.mmMarginCallResultDetails, com.tools20022.repository.msg.MarginCallResult3.mmMarginCallResult,
-						com.tools20022.repository.msg.SummaryAmounts1.mmCollateralRequired, com.tools20022.repository.msg.MarginReport1.mmMarginProduct, com.tools20022.repository.msg.MarginReport1.mmMarginDetails,
-						com.tools20022.repository.msg.Margin3.mmOtherMargin, com.tools20022.repository.msg.MarginCalculation2.mmMarginTypeAmount, com.tools20022.repository.msg.MarginReport2.mmMarginCalculationSummary,
-						com.tools20022.repository.msg.MarginReport2.mmMarginCalculation, com.tools20022.repository.msg.MarginCall2.mmMarginCallResult, com.tools20022.repository.msg.MarginCall2.mmMarginDetailDueToA,
-						com.tools20022.repository.msg.MarginCall2.mmMarginDetailDueToB);
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.MarginCall.mmMarginCallValuationDate, com.tools20022.repository.entity.MarginCall.mmAgreedAmount,
-						com.tools20022.repository.entity.MarginCall.mmVariationMargin, com.tools20022.repository.entity.MarginCall.mmSegregatedIndependentAmount, com.tools20022.repository.entity.MarginCall.mmDefaultFundContribution,
-						com.tools20022.repository.entity.MarginCall.mmExpectedVariationMarginType, com.tools20022.repository.entity.MarginCall.mmExpectedSegregatedIndependentAmountType,
-						com.tools20022.repository.entity.MarginCall.mmTotalMarkToMarket, com.tools20022.repository.entity.MarginCall.mmMarkToMarketNetted, com.tools20022.repository.entity.MarginCall.mmMarkToMarketGross,
-						com.tools20022.repository.entity.MarginCall.mmMarkToMarketFails, com.tools20022.repository.entity.MarginCall.mmFailsHaircut, com.tools20022.repository.entity.MarginCall.mmInitialMargin,
-						com.tools20022.repository.entity.MarginCall.mmIncreaseCoverage, com.tools20022.repository.entity.MarginCall.mmCollateralisedMarginAccountIndicator, com.tools20022.repository.entity.MarginCall.mmCollateralMovement,
-						com.tools20022.repository.entity.MarginCall.mmRelatedManagementProcess, com.tools20022.repository.entity.MarginCall.mmSecurity, com.tools20022.repository.entity.MarginCall.mmMarginProduct,
-						com.tools20022.repository.entity.MarginCall.mmMarginType, com.tools20022.repository.entity.MarginCall.mmTotalMarginAmount);
+				derivationElement_lazy = () -> Arrays.asList(MarginCallResult1Choice.mmMarginCallResultDetails, MarginCallResult1.mmMarginCallResult, MarginCallResult2Choice.mmMarginCallResultDetails, MarginCallResult3.mmMarginCallResult,
+						SummaryAmounts1.mmCollateralRequired, MarginReport1.mmMarginProduct, MarginReport1.mmMarginDetails, Margin3.mmOtherMargin, MarginCalculation2.mmMarginTypeAmount, MarginReport2.mmMarginCalculationSummary,
+						MarginReport2.mmMarginCalculation, MarginCall2.mmMarginCallResult, MarginCall2.mmMarginDetailDueToA, MarginCall2.mmMarginDetailDueToB);
+				element_lazy = () -> Arrays.asList(MarginCall.mmMarginCallValuationDate, MarginCall.mmAgreedAmount, MarginCall.mmVariationMargin, MarginCall.mmSegregatedIndependentAmount, MarginCall.mmDefaultFundContribution,
+						MarginCall.mmExpectedVariationMarginType, MarginCall.mmExpectedSegregatedIndependentAmountType, MarginCall.mmTotalMarkToMarket, MarginCall.mmMarkToMarketNetted, MarginCall.mmMarkToMarketGross,
+						MarginCall.mmMarkToMarketFails, MarginCall.mmFailsHaircut, MarginCall.mmInitialMargin, MarginCall.mmIncreaseCoverage, MarginCall.mmCollateralisedMarginAccountIndicator, MarginCall.mmCollateralMovement,
+						MarginCall.mmRelatedManagementProcess, MarginCall.mmSecurity, MarginCall.mmMarginProduct, MarginCall.mmMarginType, MarginCall.mmTotalMarginAmount);
 				derivationComponent_lazy = () -> Arrays.asList(MarginCall1.mmObject(), MarginCallResult2.mmObject(), MarginCallResult1Choice.mmObject(), MarginCallResult1.mmObject(), MarginCallResult2Choice.mmObject(),
 						MarginCallResult3.mmObject(), Amount1.mmObject(), AgreedAmount1.mmObject(), AgreedAmount1Choice.mmObject(), MarginProductType1Choice.mmObject(), VariationMargin2.mmObject(), Margin2.mmObject(),
 						MarginReport1.mmObject(), MarginCalculation1.mmObject(), VariationMargin3.mmObject(), MarginType1Choice.mmObject(), Margin4.mmObject(), Margin3.mmObject(), MarginCalculation2.mmObject(), MarginReport2.mmObject(),

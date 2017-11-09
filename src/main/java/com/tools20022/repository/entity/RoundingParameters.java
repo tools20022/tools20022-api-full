@@ -17,12 +17,11 @@
 
 package com.tools20022.repository.entity;
 
-import com.tools20022.metamodel.MMBusinessAssociationEnd;
-import com.tools20022.metamodel.MMBusinessAttribute;
-import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.*;
 import com.tools20022.repository.codeset.RoundingDirectionCode;
 import com.tools20022.repository.datatype.DecimalNumber;
-import com.tools20022.repository.msg.RoundingParameters1;
+import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -35,6 +34,26 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.RoundingParameters1
+ * RoundingParameters1}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InvestmentAccountService#mmRoundingMethod
+ * InvestmentAccountService.mmRoundingMethod}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesPegOrderInstruction#mmRoundDirection
+ * SecuritiesPegOrderInstruction.mmRoundDirection}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -50,26 +69,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.entity.RoundingParameters#mmRelatedPegOrderInstruction
  * RoundingParameters.mmRelatedPegOrderInstruction}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InvestmentAccountService#mmRoundingMethod
- * InvestmentAccountService.mmRoundingMethod}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesPegOrderInstruction#mmRoundDirection
- * SecuritiesPegOrderInstruction.mmRoundDirection}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.RoundingParameters1
- * RoundingParameters1}</li>
  * </ul>
  * </li>
  * <li>
@@ -131,13 +130,13 @@ public class RoundingParameters {
 		{
 			elementContext_lazy = () -> RoundingParameters.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InvestmentAccountService";
 			definition = "Investment account services for which rounding parameters are specified.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.InvestmentAccountService.mmRoundingMethod;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.InvestmentAccountService.mmObject();
 		}
 	};
@@ -182,10 +181,10 @@ public class RoundingParameters {
 	 */
 	public static final MMBusinessAttribute mmRoundingModulus = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RoundingParameters1.mmRoundingModulus);
+			derivation_lazy = () -> Arrays.asList(RoundingParameters1.mmRoundingModulus);
 			elementContext_lazy = () -> RoundingParameters.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RoundingModulus";
 			definition = "Float value specifying the value to which rounding is required, eg, 10 means round to a multiple of 10 units/shares, 0.5 means round to a multiple of 0.5 units/shares.";
 			maxOccurs = 1;
@@ -381,27 +380,18 @@ public class RoundingParameters {
 	 */
 	public static final MMBusinessAttribute mmRoundingDirection = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RoundingParameters1.mmRoundingDirection, com.tools20022.repository.msg.InvestmentPlan4.mmRoundingDirection,
-					com.tools20022.repository.msg.InvestmentPlan6.mmRoundingDirection, com.tools20022.repository.msg.InvestmentPlan5.mmRoundingDirection, com.tools20022.repository.msg.InvestmentPlan7.mmRoundingDirection,
-					com.tools20022.repository.msg.Transfer10.mmRounding, com.tools20022.repository.msg.Transfer14.mmRounding, com.tools20022.repository.msg.Transfer24.mmRounding, com.tools20022.repository.msg.Transfer9.mmRounding,
-					com.tools20022.repository.msg.Transfer12.mmRounding, com.tools20022.repository.msg.Transfer20.mmRounding, com.tools20022.repository.msg.Transfer13.mmRounding, com.tools20022.repository.msg.Transfer23.mmRounding,
-					com.tools20022.repository.msg.Transfer8.mmRounding, com.tools20022.repository.msg.Transfer11.mmRounding, com.tools20022.repository.msg.Transfer19.mmRounding, com.tools20022.repository.msg.RedemptionOrder3.mmRounding,
-					com.tools20022.repository.msg.RedemptionOrder5.mmRounding, com.tools20022.repository.msg.RedemptionExecution3.mmRounding, com.tools20022.repository.msg.RedemptionExecution5.mmRounding,
-					com.tools20022.repository.msg.RedemptionOrder7.mmRounding, com.tools20022.repository.msg.RedemptionOrder4.mmRounding, com.tools20022.repository.msg.RedemptionOrder6.mmRounding,
-					com.tools20022.repository.msg.RedemptionExecution4.mmRounding, com.tools20022.repository.msg.RedemptionExecution6.mmRounding, com.tools20022.repository.msg.RedemptionOrder8.mmRounding,
-					com.tools20022.repository.msg.SubscriptionOrder3.mmRounding, com.tools20022.repository.msg.SubscriptionOrder5.mmRounding, com.tools20022.repository.msg.SubscriptionExecution3.mmRounding,
-					com.tools20022.repository.msg.SubscriptionExecution5.mmRounding, com.tools20022.repository.msg.SubscriptionOrder7.mmRounding, com.tools20022.repository.msg.SubscriptionOrder4.mmRounding,
-					com.tools20022.repository.msg.SubscriptionOrder6.mmRounding, com.tools20022.repository.msg.SubscriptionExecution4.mmRounding, com.tools20022.repository.msg.SubscriptionExecution6.mmRounding,
-					com.tools20022.repository.msg.SubscriptionOrder8.mmRounding, com.tools20022.repository.msg.InvestmentPlan9.mmRoundingDirection, com.tools20022.repository.msg.InvestmentPlan8.mmRoundingDirection,
-					com.tools20022.repository.msg.Transfer27.mmRounding, com.tools20022.repository.msg.Transfer28.mmRounding, com.tools20022.repository.msg.InvestmentPlan10.mmRoundingDirection,
-					com.tools20022.repository.msg.InvestmentPlan11.mmRoundingDirection, com.tools20022.repository.msg.InvestmentPlan12.mmRoundingDirection, com.tools20022.repository.msg.Transfer31.mmRounding,
-					com.tools20022.repository.msg.Transfer30.mmRounding, com.tools20022.repository.msg.InvestmentPlan13.mmRoundingDirection, com.tools20022.repository.msg.InvestmentPlan14.mmRoundingDirection,
-					com.tools20022.repository.msg.RedemptionOrder14.mmRounding, com.tools20022.repository.msg.InvestmentPlan15.mmRoundingDirection, com.tools20022.repository.msg.SubscriptionExecution13.mmRounding,
-					com.tools20022.repository.msg.SubscriptionExecution12.mmRounding, com.tools20022.repository.msg.SubscriptionOrder15.mmRounding, com.tools20022.repository.msg.RedemptionOrder15.mmRounding,
-					com.tools20022.repository.msg.RedemptionExecution16.mmRounding, com.tools20022.repository.msg.SubscriptionOrder14.mmRounding, com.tools20022.repository.msg.RedemptionExecution15.mmRounding);
+			derivation_lazy = () -> Arrays.asList(RoundingParameters1.mmRoundingDirection, InvestmentPlan4.mmRoundingDirection, InvestmentPlan6.mmRoundingDirection, InvestmentPlan5.mmRoundingDirection, InvestmentPlan7.mmRoundingDirection,
+					Transfer10.mmRounding, Transfer14.mmRounding, Transfer24.mmRounding, Transfer9.mmRounding, Transfer12.mmRounding, Transfer20.mmRounding, Transfer13.mmRounding, Transfer23.mmRounding, Transfer8.mmRounding,
+					Transfer11.mmRounding, Transfer19.mmRounding, RedemptionOrder3.mmRounding, RedemptionOrder5.mmRounding, RedemptionExecution3.mmRounding, RedemptionExecution5.mmRounding, RedemptionOrder7.mmRounding,
+					RedemptionOrder4.mmRounding, RedemptionOrder6.mmRounding, RedemptionExecution4.mmRounding, RedemptionExecution6.mmRounding, RedemptionOrder8.mmRounding, SubscriptionOrder3.mmRounding, SubscriptionOrder5.mmRounding,
+					SubscriptionExecution3.mmRounding, SubscriptionExecution5.mmRounding, SubscriptionOrder7.mmRounding, SubscriptionOrder4.mmRounding, SubscriptionOrder6.mmRounding, SubscriptionExecution4.mmRounding,
+					SubscriptionExecution6.mmRounding, SubscriptionOrder8.mmRounding, InvestmentPlan9.mmRoundingDirection, InvestmentPlan8.mmRoundingDirection, Transfer27.mmRounding, Transfer28.mmRounding,
+					InvestmentPlan10.mmRoundingDirection, InvestmentPlan11.mmRoundingDirection, InvestmentPlan12.mmRoundingDirection, Transfer31.mmRounding, Transfer30.mmRounding, InvestmentPlan13.mmRoundingDirection,
+					InvestmentPlan14.mmRoundingDirection, RedemptionOrder14.mmRounding, InvestmentPlan15.mmRoundingDirection, SubscriptionExecution13.mmRounding, SubscriptionExecution12.mmRounding, SubscriptionOrder15.mmRounding,
+					RedemptionOrder15.mmRounding, RedemptionExecution16.mmRounding, SubscriptionOrder14.mmRounding, RedemptionExecution15.mmRounding);
 			elementContext_lazy = () -> RoundingParameters.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RoundingDirection";
 			definition = "Rounding direction applied to fractional numbers, eg, round up.";
 			maxOccurs = 1;
@@ -448,13 +438,13 @@ public class RoundingParameters {
 		{
 			elementContext_lazy = () -> RoundingParameters.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedPegOrderInstruction";
 			definition = "Peg order for which a rounding direction is provided.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesPegOrderInstruction.mmRoundDirection;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SecuritiesPegOrderInstruction.mmObject();
 		}
 	};
@@ -462,13 +452,12 @@ public class RoundingParameters {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RoundingParameters";
 				definition = "Parameters applied to a fractional number.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.InvestmentAccountService.mmRoundingMethod, com.tools20022.repository.entity.SecuritiesPegOrderInstruction.mmRoundDirection);
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.RoundingParameters.mmInvestmentAccountService, com.tools20022.repository.entity.RoundingParameters.mmRoundingModulus,
-						com.tools20022.repository.entity.RoundingParameters.mmRoundingDirection, com.tools20022.repository.entity.RoundingParameters.mmRelatedPegOrderInstruction);
+				element_lazy = () -> Arrays.asList(RoundingParameters.mmInvestmentAccountService, RoundingParameters.mmRoundingModulus, RoundingParameters.mmRoundingDirection, RoundingParameters.mmRelatedPegOrderInstruction);
 				derivationComponent_lazy = () -> Arrays.asList(RoundingParameters1.mmObject());
 			}
 		});

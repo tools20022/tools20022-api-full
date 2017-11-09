@@ -19,9 +19,17 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.auth.RegulatoryTransactionReportCancellationRequestV02;
+import com.tools20022.repository.area.auth.RegulatoryTransactionReportCancellationStatusV01;
+import com.tools20022.repository.area.auth.RegulatoryTransactionReportStatusV01;
+import com.tools20022.repository.area.auth.RegulatoryTransactionReportV02;
+import com.tools20022.repository.area.seev.*;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.Document;
+import com.tools20022.repository.entity.GenericIdentification;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -274,11 +282,11 @@ public class DocumentIdentification8 {
 	 */
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmIdentification;
+			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> DocumentIdentification8.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Unique identification of the document.";
 			maxOccurs = 1;
@@ -321,11 +329,11 @@ public class DocumentIdentification8 {
 	 */
 	public static final MMMessageAttribute mmCreationDateTime = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Document.mmIssueDate;
+			businessElementTrace_lazy = () -> Document.mmIssueDate;
 			componentContext_lazy = () -> DocumentIdentification8.mmObject();
 			isDerived = false;
 			xmlTag = "CreDtTm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreationDateTime";
 			definition = "Date/time of the creation of the document.";
 			maxOccurs = 1;
@@ -337,43 +345,30 @@ public class DocumentIdentification8 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DocumentIdentification8.mmIdentification, com.tools20022.repository.msg.DocumentIdentification8.mmCreationDateTime);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.AgentCANotificationAdviceV01.mmIdentification,
-						com.tools20022.repository.area.seev.AgentCANotificationCancellationRequestV01.mmIdentification, com.tools20022.repository.area.seev.AgentCANotificationStatusAdviceV01.mmIdentification,
-						com.tools20022.repository.area.seev.AgentCANotificationStatusAdviceV01.mmAgentCANotificationAdviceIdentification,
-						com.tools20022.repository.area.seev.AgentCANotificationStatusAdviceV01.mmAgentCANotificationCancellationRequestIdentification, com.tools20022.repository.area.seev.AgentCAElectionAdviceV01.mmIdentification,
-						com.tools20022.repository.area.seev.AgentCAElectionAmendmentRequestV01.mmIdentification, com.tools20022.repository.area.seev.AgentCAElectionAmendmentRequestV01.mmAgentCAElectionAdviceIdentification,
-						com.tools20022.repository.area.seev.AgentCAElectionCancellationRequestV01.mmIdentification, com.tools20022.repository.area.seev.AgentCAElectionCancellationRequestV01.mmAgentCAElectionAdviceIdentification,
-						com.tools20022.repository.area.seev.AgentCAElectionStatusAdviceV01.mmIdentification, com.tools20022.repository.area.seev.AgentCAElectionStatusAdviceV01.mmAgentCAElectionAdviceIdentification,
-						com.tools20022.repository.area.seev.AgentCAElectionStatusAdviceV01.mmAgentCAElectionCancellationRequestIdentification,
-						com.tools20022.repository.area.seev.AgentCAElectionStatusAdviceV01.mmAgentCAElectionAmendmentRequestIdentification, com.tools20022.repository.area.seev.AgentCADistributionBreakdownAdviceV01.mmIdentification,
-						com.tools20022.repository.area.seev.AgentCAGlobalDistributionAuthorisationRequestV01.mmIdentification, com.tools20022.repository.area.seev.AgentCAGlobalDistributionStatusAdviceV01.mmIdentification,
-						com.tools20022.repository.area.seev.AgentCAGlobalDistributionStatusAdviceV01.mmAgentCAGlobalDistributionAuthorisationRequestIdentification,
-						com.tools20022.repository.area.seev.AgentCAMovementInstructionV01.mmIdentification, com.tools20022.repository.area.seev.AgentCAMovementInstructionV01.mmAgentCAElectionAdviceIdentification,
-						com.tools20022.repository.area.seev.AgentCAMovementCancellationRequestV01.mmIdentification, com.tools20022.repository.area.seev.AgentCAMovementCancellationRequestV01.mmAgentCAMovementInstructionIdentification,
-						com.tools20022.repository.area.seev.AgentCAMovementConfirmationV01.mmIdentification, com.tools20022.repository.area.seev.AgentCAMovementConfirmationV01.mmAgentCAMovementInstructionIdentification,
-						com.tools20022.repository.area.seev.AgentCAMovementConfirmationV01.mmAgentCAElectionStatusAdviceIdentification,
-						com.tools20022.repository.area.seev.AgentCAMovementConfirmationV01.mmAgentCAGlobalDistributionStatusAdviceIdentification, com.tools20022.repository.area.seev.AgentCAMovementStatusAdviceV01.mmIdentification,
-						com.tools20022.repository.area.seev.AgentCAMovementStatusAdviceV01.mmAgentCAElectionStatusAdviceIdentification,
-						com.tools20022.repository.area.seev.AgentCAMovementStatusAdviceV01.mmAgentCAGlobalDistributionStatusAdviceIdentification,
-						com.tools20022.repository.area.seev.AgentCAMovementStatusAdviceV01.mmAgentCAMovementInstructionIdentification,
-						com.tools20022.repository.area.seev.AgentCAMovementStatusAdviceV01.mmAgentCAMovementCancellationRequestIdentification, com.tools20022.repository.area.seev.AgentCAInformationAdviceV01.mmIdentification,
-						com.tools20022.repository.area.seev.AgentCAInformationAdviceV01.mmAgentCAElectionAdviceIdentification, com.tools20022.repository.area.seev.AgentCAInformationStatusAdviceV01.mmIdentification,
-						com.tools20022.repository.area.seev.AgentCAInformationStatusAdviceV01.mmAgentCAInformationAdviceIdentification, com.tools20022.repository.area.seev.AgentCAStandingInstructionRequestV01.mmIdentification,
-						com.tools20022.repository.area.seev.AgentCAStandingInstructionCancellationRequestV01.mmIdentification,
-						com.tools20022.repository.area.seev.AgentCAStandingInstructionCancellationRequestV01.mmAgentCAStandingInstructionRequestIdentification,
-						com.tools20022.repository.area.seev.AgentCAStandingInstructionStatusAdviceV01.mmIdentification,
-						com.tools20022.repository.area.seev.AgentCAStandingInstructionStatusAdviceV01.mmAgentCAStandingInstructionRequestIdentification,
-						com.tools20022.repository.area.seev.AgentCAStandingInstructionStatusAdviceV01.mmAgentCAStandingInstructionCancellationRequestIdentification,
-						com.tools20022.repository.area.seev.AgentCADeactivationInstructionV01.mmIdentification, com.tools20022.repository.area.seev.AgentCADeactivationCancellationRequestV01.mmIdentification,
-						com.tools20022.repository.area.seev.AgentCADeactivationCancellationRequestV01.mmAgentCADeactivationInstructionIdentification, com.tools20022.repository.area.seev.AgentCADeactivationStatusAdviceV01.mmIdentification,
-						com.tools20022.repository.area.seev.AgentCADeactivationStatusAdviceV01.mmAgentCADeactivationInstructionIdentification,
-						com.tools20022.repository.area.seev.AgentCADeactivationStatusAdviceV01.mmAgentCADeactivationCancellationRequestIdentification, com.tools20022.repository.area.auth.RegulatoryTransactionReportV02.mmIdentification,
-						com.tools20022.repository.area.auth.RegulatoryTransactionReportCancellationRequestV02.mmIdentification, com.tools20022.repository.area.auth.RegulatoryTransactionReportStatusV01.mmIdentification,
-						com.tools20022.repository.area.auth.RegulatoryTransactionReportCancellationStatusV01.mmIdentification);
+				messageElement_lazy = () -> Arrays.asList(DocumentIdentification8.mmIdentification, DocumentIdentification8.mmCreationDateTime);
+				messageBuildingBlock_lazy = () -> Arrays.asList(AgentCANotificationAdviceV01.mmIdentification, AgentCANotificationCancellationRequestV01.mmIdentification, AgentCANotificationStatusAdviceV01.mmIdentification,
+						AgentCANotificationStatusAdviceV01.mmAgentCANotificationAdviceIdentification, AgentCANotificationStatusAdviceV01.mmAgentCANotificationCancellationRequestIdentification, AgentCAElectionAdviceV01.mmIdentification,
+						AgentCAElectionAmendmentRequestV01.mmIdentification, AgentCAElectionAmendmentRequestV01.mmAgentCAElectionAdviceIdentification, AgentCAElectionCancellationRequestV01.mmIdentification,
+						AgentCAElectionCancellationRequestV01.mmAgentCAElectionAdviceIdentification, AgentCAElectionStatusAdviceV01.mmIdentification, AgentCAElectionStatusAdviceV01.mmAgentCAElectionAdviceIdentification,
+						AgentCAElectionStatusAdviceV01.mmAgentCAElectionCancellationRequestIdentification, AgentCAElectionStatusAdviceV01.mmAgentCAElectionAmendmentRequestIdentification,
+						AgentCADistributionBreakdownAdviceV01.mmIdentification, AgentCAGlobalDistributionAuthorisationRequestV01.mmIdentification, AgentCAGlobalDistributionStatusAdviceV01.mmIdentification,
+						AgentCAGlobalDistributionStatusAdviceV01.mmAgentCAGlobalDistributionAuthorisationRequestIdentification, AgentCAMovementInstructionV01.mmIdentification,
+						AgentCAMovementInstructionV01.mmAgentCAElectionAdviceIdentification, AgentCAMovementCancellationRequestV01.mmIdentification, AgentCAMovementCancellationRequestV01.mmAgentCAMovementInstructionIdentification,
+						AgentCAMovementConfirmationV01.mmIdentification, AgentCAMovementConfirmationV01.mmAgentCAMovementInstructionIdentification, AgentCAMovementConfirmationV01.mmAgentCAElectionStatusAdviceIdentification,
+						AgentCAMovementConfirmationV01.mmAgentCAGlobalDistributionStatusAdviceIdentification, AgentCAMovementStatusAdviceV01.mmIdentification, AgentCAMovementStatusAdviceV01.mmAgentCAElectionStatusAdviceIdentification,
+						AgentCAMovementStatusAdviceV01.mmAgentCAGlobalDistributionStatusAdviceIdentification, AgentCAMovementStatusAdviceV01.mmAgentCAMovementInstructionIdentification,
+						AgentCAMovementStatusAdviceV01.mmAgentCAMovementCancellationRequestIdentification, AgentCAInformationAdviceV01.mmIdentification, AgentCAInformationAdviceV01.mmAgentCAElectionAdviceIdentification,
+						AgentCAInformationStatusAdviceV01.mmIdentification, AgentCAInformationStatusAdviceV01.mmAgentCAInformationAdviceIdentification, AgentCAStandingInstructionRequestV01.mmIdentification,
+						AgentCAStandingInstructionCancellationRequestV01.mmIdentification, AgentCAStandingInstructionCancellationRequestV01.mmAgentCAStandingInstructionRequestIdentification,
+						AgentCAStandingInstructionStatusAdviceV01.mmIdentification, AgentCAStandingInstructionStatusAdviceV01.mmAgentCAStandingInstructionRequestIdentification,
+						AgentCAStandingInstructionStatusAdviceV01.mmAgentCAStandingInstructionCancellationRequestIdentification, AgentCADeactivationInstructionV01.mmIdentification,
+						AgentCADeactivationCancellationRequestV01.mmIdentification, AgentCADeactivationCancellationRequestV01.mmAgentCADeactivationInstructionIdentification, AgentCADeactivationStatusAdviceV01.mmIdentification,
+						AgentCADeactivationStatusAdviceV01.mmAgentCADeactivationInstructionIdentification, AgentCADeactivationStatusAdviceV01.mmAgentCADeactivationCancellationRequestIdentification,
+						RegulatoryTransactionReportV02.mmIdentification, RegulatoryTransactionReportCancellationRequestV02.mmIdentification, RegulatoryTransactionReportStatusV01.mmIdentification,
+						RegulatoryTransactionReportCancellationStatusV01.mmIdentification);
 				trace_lazy = () -> Document.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DocumentIdentification8";
 				definition = "Identifies the document by providing a unique identification and optionally the date/time of the creation of the document.";
 			}

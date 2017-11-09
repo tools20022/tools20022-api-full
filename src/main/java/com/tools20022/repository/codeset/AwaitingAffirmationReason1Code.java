@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.AwaitingAffirmationReasonCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -82,7 +84,7 @@ public class AwaitingAffirmationReason1Code extends AwaitingAffirmationReasonCod
 	 */
 	public static final MMCode mmAwaitingAffirmation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AwaitingAffirmation";
 			owner_lazy = () -> AwaitingAffirmationReason1Code.mmObject();
 		}
@@ -91,12 +93,12 @@ public class AwaitingAffirmationReason1Code extends AwaitingAffirmationReasonCod
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("WAFF");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AwaitingAffirmationReason1Code";
 				definition = "Specifies the reason why the instruction has an awaiting affirmation status.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AwaitingAffirmationReason1Code.mmAwaitingAffirmation);
+				code_lazy = () -> Arrays.asList(AwaitingAffirmationReason1Code.mmAwaitingAffirmation);
 				trace_lazy = () -> AwaitingAffirmationReasonCode.mmObject();
 			}
 		});

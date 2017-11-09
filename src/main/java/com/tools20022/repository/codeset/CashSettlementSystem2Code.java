@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CashSettlementSystemCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -83,7 +85,7 @@ public class CashSettlementSystem2Code extends CashSettlementSystemCode {
 	 */
 	public static final MMCode mmGrossSettlementSystem = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GrossSettlementSystem";
 			owner_lazy = () -> CashSettlementSystem2Code.mmObject();
 		}
@@ -106,7 +108,7 @@ public class CashSettlementSystem2Code extends CashSettlementSystemCode {
 	 */
 	public static final MMCode mmNetSettlementSystem = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetSettlementSystem";
 			owner_lazy = () -> CashSettlementSystem2Code.mmObject();
 		}
@@ -115,12 +117,12 @@ public class CashSettlementSystem2Code extends CashSettlementSystemCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("GROS");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CashSettlementSystem2Code";
 				definition = "Specifies the cash settlement system used.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CashSettlementSystem2Code.mmGrossSettlementSystem, com.tools20022.repository.codeset.CashSettlementSystem2Code.mmNetSettlementSystem);
+				code_lazy = () -> Arrays.asList(CashSettlementSystem2Code.mmGrossSettlementSystem, CashSettlementSystem2Code.mmNetSettlementSystem);
 				trace_lazy = () -> CashSettlementSystemCode.mmObject();
 			}
 		});

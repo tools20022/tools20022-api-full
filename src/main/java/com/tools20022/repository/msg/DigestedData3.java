@@ -20,8 +20,10 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max140Text;
 import com.tools20022.repository.datatype.Number;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -118,11 +120,11 @@ public class DigestedData3 {
 			componentContext_lazy = () -> DigestedData3.mmObject();
 			isDerived = false;
 			xmlTag = "Vrsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Version";
 			definition = "Version of the data structure.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DigestedData4.mmVersion);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.DigestedData2.mmVersion;
+			nextVersions_lazy = () -> Arrays.asList(DigestedData4.mmVersion);
+			previousVersion_lazy = () -> DigestedData2.mmVersion;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
@@ -173,11 +175,11 @@ public class DigestedData3 {
 			componentContext_lazy = () -> DigestedData3.mmObject();
 			isDerived = false;
 			xmlTag = "DgstAlgo";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DigestAlgorithm";
 			definition = "Identification of a digest algorithm.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DigestedData4.mmDigestAlgorithm);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.DigestedData2.mmDigestAlgorithm;
+			nextVersions_lazy = () -> Arrays.asList(DigestedData4.mmDigestAlgorithm);
+			previousVersion_lazy = () -> DigestedData2.mmDigestAlgorithm;
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.AlgorithmIdentification5.mmObject();
@@ -227,11 +229,11 @@ public class DigestedData3 {
 			componentContext_lazy = () -> DigestedData3.mmObject();
 			isDerived = false;
 			xmlTag = "NcpsltdCntt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EncapsulatedContent";
 			definition = "Data on which the digest is computed.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DigestedData4.mmEncapsulatedContent);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.DigestedData2.mmEncapsulatedContent;
+			nextVersions_lazy = () -> Arrays.asList(DigestedData4.mmEncapsulatedContent);
+			previousVersion_lazy = () -> DigestedData2.mmEncapsulatedContent;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -282,11 +284,11 @@ public class DigestedData3 {
 			componentContext_lazy = () -> DigestedData3.mmObject();
 			isDerived = false;
 			xmlTag = "Dgst";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Digest";
 			definition = "Result of data-digesting process.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DigestedData4.mmDigest);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.DigestedData2.mmDigest;
+			nextVersions_lazy = () -> Arrays.asList(DigestedData4.mmDigest);
+			previousVersion_lazy = () -> DigestedData2.mmDigest;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max140Text.mmObject();
@@ -296,10 +298,9 @@ public class DigestedData3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DigestedData3.mmVersion, com.tools20022.repository.msg.DigestedData3.mmDigestAlgorithm,
-						com.tools20022.repository.msg.DigestedData3.mmEncapsulatedContent, com.tools20022.repository.msg.DigestedData3.mmDigest);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(DigestedData3.mmVersion, DigestedData3.mmDigestAlgorithm, DigestedData3.mmEncapsulatedContent, DigestedData3.mmDigest);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DigestedData3";
 				definition = "Digest computed on the identified data.";
 				nextVersions_lazy = () -> Arrays.asList(DigestedData4.mmObject());

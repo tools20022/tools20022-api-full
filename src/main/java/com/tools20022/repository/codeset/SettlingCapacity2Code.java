@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.SettlingCapacityCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -84,7 +86,7 @@ public class SettlingCapacity2Code extends SettlingCapacityCode {
 	 */
 	public static final MMCode mmSettlingAgent = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlingAgent";
 			owner_lazy = () -> SettlingCapacity2Code.mmObject();
 		}
@@ -107,7 +109,7 @@ public class SettlingCapacity2Code extends SettlingCapacityCode {
 	 */
 	public static final MMCode mmSettlingCustodian = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlingCustodian";
 			owner_lazy = () -> SettlingCapacity2Code.mmObject();
 		}
@@ -130,7 +132,7 @@ public class SettlingCapacity2Code extends SettlingCapacityCode {
 	 */
 	public static final MMCode mmSettlingPrincipal = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlingPrincipal";
 			owner_lazy = () -> SettlingCapacity2Code.mmObject();
 		}
@@ -153,7 +155,7 @@ public class SettlingCapacity2Code extends SettlingCapacityCode {
 	 */
 	public static final MMCode mmSettlingRisklessPrincipal = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlingRisklessPrincipal";
 			owner_lazy = () -> SettlingCapacity2Code.mmObject();
 		}
@@ -162,12 +164,11 @@ public class SettlingCapacity2Code extends SettlingCapacityCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SettlingCapacity2Code";
 				definition = "Specifies the role of the party in the settlement of the transaction.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SettlingCapacity2Code.mmSettlingAgent, com.tools20022.repository.codeset.SettlingCapacity2Code.mmSettlingCustodian,
-						com.tools20022.repository.codeset.SettlingCapacity2Code.mmSettlingPrincipal, com.tools20022.repository.codeset.SettlingCapacity2Code.mmSettlingRisklessPrincipal);
+				code_lazy = () -> Arrays.asList(SettlingCapacity2Code.mmSettlingAgent, SettlingCapacity2Code.mmSettlingCustodian, SettlingCapacity2Code.mmSettlingPrincipal, SettlingCapacity2Code.mmSettlingRisklessPrincipal);
 				trace_lazy = () -> SettlingCapacityCode.mmObject();
 			}
 		});

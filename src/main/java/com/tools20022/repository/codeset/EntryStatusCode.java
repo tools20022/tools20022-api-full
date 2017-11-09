@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.EntryStatus2Code
+ * EntryStatus2Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.EntryStatus4Code
+ * EntryStatus4Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.EntryStatus3Code
+ * EntryStatus3Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>{@linkplain com.tools20022.repository.codeset.EntryStatusCode#mmBooked
@@ -38,17 +51,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * EntryStatusCode.mmInformation}</li>
  * <li>{@linkplain com.tools20022.repository.codeset.EntryStatusCode#mmFuture
  * EntryStatusCode.mmFuture}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.EntryStatus2Code
- * EntryStatus2Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.EntryStatus4Code
- * EntryStatus4Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.EntryStatus3Code
- * EntryStatus3Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -107,7 +109,7 @@ public class EntryStatusCode {
 	 */
 	public static final MMCode mmBooked = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Booked";
 			definition = "Booked means that the transfer of money has been completed between account servicer and account owner\n\nUsage :   \nStatus Booked does not necessarily imply finality of money as this depends on other factors such as the payment system used, the completion of the end-to-end transaction and the terms agreed between account servicer and owner.\nStatus Booked is the only status that can be reversed.";
 			owner_lazy = () -> EntryStatusCode.mmObject();
@@ -146,7 +148,7 @@ public class EntryStatusCode {
 	 */
 	public static final MMCode mmPending = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Pending";
 			definition = "Booking on the account owner's account in the account servicer's ledger has not been completed.\n\nUsage : this can be used for expected items, or for items for which some conditions still need to be fulfilled before they can be booked. If booking takes place, the entry will be included with status Booked in subsequent account report or statement. Status Pending cannot be reversed.";
 			owner_lazy = () -> EntryStatusCode.mmObject();
@@ -179,7 +181,7 @@ public class EntryStatusCode {
 	 */
 	public static final MMCode mmInformation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Information";
 			definition = "Entry is only provided for information, and no booking on the account owner's account in the account servicer's ledger has been performed.";
 			owner_lazy = () -> EntryStatusCode.mmObject();
@@ -212,7 +214,7 @@ public class EntryStatusCode {
 	 */
 	public static final MMCode mmFuture = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Future";
 			definition = "Entry is on the books of the account servicer and value will be applied to the account owner at a future date and time.";
 			owner_lazy = () -> EntryStatusCode.mmObject();
@@ -223,13 +225,12 @@ public class EntryStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("BOOK");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "EntryStatusCode";
 				definition = "Specifies the status of an entry.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.EntryStatusCode.mmBooked, com.tools20022.repository.codeset.EntryStatusCode.mmPending, com.tools20022.repository.codeset.EntryStatusCode.mmInformation,
-						com.tools20022.repository.codeset.EntryStatusCode.mmFuture);
+				code_lazy = () -> Arrays.asList(EntryStatusCode.mmBooked, EntryStatusCode.mmPending, EntryStatusCode.mmInformation, EntryStatusCode.mmFuture);
 				derivation_lazy = () -> Arrays.asList(EntryStatus2Code.mmObject(), EntryStatus4Code.mmObject(), EntryStatus3Code.mmObject());
 			}
 		});

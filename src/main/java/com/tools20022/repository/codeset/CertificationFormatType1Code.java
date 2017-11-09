@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CertificationFormatTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -86,7 +88,7 @@ public class CertificationFormatType1Code extends CertificationFormatTypeCode {
 	 */
 	public static final MMCode mmElectronic = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Electronic";
 			owner_lazy = () -> CertificationFormatType1Code.mmObject();
 		}
@@ -109,7 +111,7 @@ public class CertificationFormatType1Code extends CertificationFormatTypeCode {
 	 */
 	public static final MMCode mmPhysical = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Physical";
 			owner_lazy = () -> CertificationFormatType1Code.mmObject();
 		}
@@ -118,12 +120,12 @@ public class CertificationFormatType1Code extends CertificationFormatTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ELEC");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CertificationFormatType1Code";
 				definition = "Specifies the certification format required, that is, physical or electronic format.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CertificationFormatType1Code.mmElectronic, com.tools20022.repository.codeset.CertificationFormatType1Code.mmPhysical);
+				code_lazy = () -> Arrays.asList(CertificationFormatType1Code.mmElectronic, CertificationFormatType1Code.mmPhysical);
 				trace_lazy = () -> CertificationFormatTypeCode.mmObject();
 			}
 		});

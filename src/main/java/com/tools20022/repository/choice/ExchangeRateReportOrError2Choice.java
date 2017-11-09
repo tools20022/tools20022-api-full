@@ -19,6 +19,8 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.CurrencyExchange7;
 import com.tools20022.repository.msg.ErrorHandling3;
 import java.util.Arrays;
@@ -93,7 +95,7 @@ public class ExchangeRateReportOrError2Choice {
 			componentContext_lazy = () -> ExchangeRateReportOrError2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "BizErr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BusinessError";
 			definition = "Reason the requested business information is not given.";
 			minOccurs = 1;
@@ -133,7 +135,7 @@ public class ExchangeRateReportOrError2Choice {
 			componentContext_lazy = () -> ExchangeRateReportOrError2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "CcyXchg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrencyExchange";
 			definition = "Requested business information.";
 			maxOccurs = 1;
@@ -146,9 +148,9 @@ public class ExchangeRateReportOrError2Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ExchangeRateReportOrError2Choice.mmBusinessError, com.tools20022.repository.choice.ExchangeRateReportOrError2Choice.mmCurrencyExchange);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(ExchangeRateReportOrError2Choice.mmBusinessError, ExchangeRateReportOrError2Choice.mmCurrencyExchange);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ExchangeRateReportOrError2Choice";
 				definition = "Reports either on currency exchange information or on a business error.";
 			}

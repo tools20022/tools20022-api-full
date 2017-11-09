@@ -19,8 +19,19 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.fxtr.ForeignExchangeTradeInstructionAmendmentV04;
+import com.tools20022.repository.area.fxtr.ForeignExchangeTradeInstructionCancellationV04;
+import com.tools20022.repository.area.fxtr.ForeignExchangeTradeInstructionV04;
+import com.tools20022.repository.area.fxtr.ForeignExchangeTradeStatusAndDetailsNotificationV04;
+import com.tools20022.repository.area.other.ForeignExchangeTradeInstructionAmendmentV02;
+import com.tools20022.repository.area.other.ForeignExchangeTradeInstructionCancellationV02;
+import com.tools20022.repository.area.other.ForeignExchangeTradeInstructionV02;
+import com.tools20022.repository.area.other.ForeignExchangeTradeStatusAndDetailsNotificationV02;
 import com.tools20022.repository.choice.PartyIdentification73Choice;
+import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.entity.PaymentPartyRole;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -177,11 +188,11 @@ public class SettlementParties29 {
 	 */
 	public static final MMMessageAssociationEnd mmDeliveryAgent = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> SettlementParties29.mmObject();
 			isDerived = false;
 			xmlTag = "DlvryAgt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeliveryAgent";
 			definition = "Financial institution from which cash will be transferred.";
 			maxOccurs = 1;
@@ -228,11 +239,11 @@ public class SettlementParties29 {
 	 */
 	public static final MMMessageAssociationEnd mmIntermediary = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> SettlementParties29.mmObject();
 			isDerived = false;
 			xmlTag = "Intrmy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Intermediary";
 			definition = "Party, within the settlement chain, between the delivery and receiving agents.";
 			maxOccurs = 1;
@@ -277,11 +288,11 @@ public class SettlementParties29 {
 	 */
 	public static final MMMessageAssociationEnd mmReceivingAgent = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> SettlementParties29.mmObject();
 			isDerived = false;
 			xmlTag = "RcvgAgt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceivingAgent";
 			definition = "Financial institution where the payee will receive the funds.";
 			maxOccurs = 1;
@@ -328,11 +339,11 @@ public class SettlementParties29 {
 	 */
 	public static final MMMessageAssociationEnd mmBeneficiaryInstitution = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> SettlementParties29.mmObject();
 			isDerived = false;
 			xmlTag = "BnfcryInstn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BeneficiaryInstitution";
 			definition = "Ultimate institution that will receive the funds when different from the trading or counterparty side.";
 			maxOccurs = 1;
@@ -345,27 +356,18 @@ public class SettlementParties29 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SettlementParties29.mmDeliveryAgent, com.tools20022.repository.msg.SettlementParties29.mmIntermediary,
-						com.tools20022.repository.msg.SettlementParties29.mmReceivingAgent, com.tools20022.repository.msg.SettlementParties29.mmBeneficiaryInstitution);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.other.ForeignExchangeTradeInstructionAmendmentV02.mmTradingSideSettlementInstructions,
-						com.tools20022.repository.area.other.ForeignExchangeTradeInstructionAmendmentV02.mmCounterpartySideSettlementInstructions,
-						com.tools20022.repository.area.other.ForeignExchangeTradeInstructionCancellationV02.mmTradingSideSettlementInstructions,
-						com.tools20022.repository.area.other.ForeignExchangeTradeInstructionCancellationV02.mmCounterpartySideSettlementInstructions,
-						com.tools20022.repository.area.other.ForeignExchangeTradeInstructionV02.mmTradingSideSettlementInstructions,
-						com.tools20022.repository.area.other.ForeignExchangeTradeInstructionV02.mmCounterpartySideSettlementInstructions,
-						com.tools20022.repository.area.other.ForeignExchangeTradeStatusAndDetailsNotificationV02.mmTradingSideSettlementInstructions,
-						com.tools20022.repository.area.other.ForeignExchangeTradeStatusAndDetailsNotificationV02.mmCounterpartySideSettlementInstructions,
-						com.tools20022.repository.area.fxtr.ForeignExchangeTradeInstructionV04.mmTradingSideSettlementInstructions,
-						com.tools20022.repository.area.fxtr.ForeignExchangeTradeInstructionV04.mmCounterpartySideSettlementInstructions,
-						com.tools20022.repository.area.fxtr.ForeignExchangeTradeInstructionCancellationV04.mmTradingSideSettlementInstructions,
-						com.tools20022.repository.area.fxtr.ForeignExchangeTradeInstructionCancellationV04.mmCounterpartySideSettlementInstructions,
-						com.tools20022.repository.area.fxtr.ForeignExchangeTradeInstructionAmendmentV04.mmTradingSideSettlementInstructions,
-						com.tools20022.repository.area.fxtr.ForeignExchangeTradeInstructionAmendmentV04.mmCounterpartySideSettlementInstructions,
-						com.tools20022.repository.area.fxtr.ForeignExchangeTradeStatusAndDetailsNotificationV04.mmTradingSideSettlementInstructions,
-						com.tools20022.repository.area.fxtr.ForeignExchangeTradeStatusAndDetailsNotificationV04.mmCounterpartySideSettlementInstructions);
+				messageElement_lazy = () -> Arrays.asList(SettlementParties29.mmDeliveryAgent, SettlementParties29.mmIntermediary, SettlementParties29.mmReceivingAgent, SettlementParties29.mmBeneficiaryInstitution);
+				messageBuildingBlock_lazy = () -> Arrays.asList(ForeignExchangeTradeInstructionAmendmentV02.mmTradingSideSettlementInstructions, ForeignExchangeTradeInstructionAmendmentV02.mmCounterpartySideSettlementInstructions,
+						ForeignExchangeTradeInstructionCancellationV02.mmTradingSideSettlementInstructions, ForeignExchangeTradeInstructionCancellationV02.mmCounterpartySideSettlementInstructions,
+						ForeignExchangeTradeInstructionV02.mmTradingSideSettlementInstructions, ForeignExchangeTradeInstructionV02.mmCounterpartySideSettlementInstructions,
+						ForeignExchangeTradeStatusAndDetailsNotificationV02.mmTradingSideSettlementInstructions, ForeignExchangeTradeStatusAndDetailsNotificationV02.mmCounterpartySideSettlementInstructions,
+						ForeignExchangeTradeInstructionV04.mmTradingSideSettlementInstructions, ForeignExchangeTradeInstructionV04.mmCounterpartySideSettlementInstructions,
+						ForeignExchangeTradeInstructionCancellationV04.mmTradingSideSettlementInstructions, ForeignExchangeTradeInstructionCancellationV04.mmCounterpartySideSettlementInstructions,
+						ForeignExchangeTradeInstructionAmendmentV04.mmTradingSideSettlementInstructions, ForeignExchangeTradeInstructionAmendmentV04.mmCounterpartySideSettlementInstructions,
+						ForeignExchangeTradeStatusAndDetailsNotificationV04.mmTradingSideSettlementInstructions, ForeignExchangeTradeStatusAndDetailsNotificationV04.mmCounterpartySideSettlementInstructions);
 				trace_lazy = () -> PaymentPartyRole.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SettlementParties29";
 				definition = "Identification of a settlement party by a choice between a BIC or a name and address or a party identification.";
 				previousVersion_lazy = () -> SettlementParties9.mmObject();

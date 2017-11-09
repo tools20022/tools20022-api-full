@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.BillingStatementStatusCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -86,7 +88,7 @@ public class BillingStatementStatus1Code extends BillingStatementStatusCode {
 	 */
 	public static final MMCode mmOriginal = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Original";
 			owner_lazy = () -> BillingStatementStatus1Code.mmObject();
 		}
@@ -109,7 +111,7 @@ public class BillingStatementStatus1Code extends BillingStatementStatusCode {
 	 */
 	public static final MMCode mmReplace = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Replace";
 			owner_lazy = () -> BillingStatementStatus1Code.mmObject();
 		}
@@ -132,7 +134,7 @@ public class BillingStatementStatus1Code extends BillingStatementStatusCode {
 	 */
 	public static final MMCode mmTest = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Test";
 			owner_lazy = () -> BillingStatementStatus1Code.mmObject();
 		}
@@ -141,13 +143,12 @@ public class BillingStatementStatus1Code extends BillingStatementStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ORGN");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "BillingStatementStatus1Code";
 				definition = "Defines the status of the billing statement.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.BillingStatementStatus1Code.mmOriginal, com.tools20022.repository.codeset.BillingStatementStatus1Code.mmReplace,
-						com.tools20022.repository.codeset.BillingStatementStatus1Code.mmTest);
+				code_lazy = () -> Arrays.asList(BillingStatementStatus1Code.mmOriginal, BillingStatementStatus1Code.mmReplace, BillingStatementStatus1Code.mmTest);
 				trace_lazy = () -> BillingStatementStatusCode.mmObject();
 			}
 		});

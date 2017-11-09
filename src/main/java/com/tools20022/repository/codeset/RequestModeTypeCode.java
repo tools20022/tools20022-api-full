@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.RequestModeType1Code
+ * RequestModeType1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -44,13 +53,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.RequestModeTypeCode#mmForecast
  * RequestModeTypeCode.mmForecast}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.RequestModeType1Code
- * RequestModeType1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -95,7 +97,7 @@ public class RequestModeTypeCode {
 	 */
 	public static final MMCode mmOnDemandDayInformation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OnDemandDayInformation";
 			definition = "Day information query type, in on-demand mode.";
 			owner_lazy = () -> RequestModeTypeCode.mmObject();
@@ -125,7 +127,7 @@ public class RequestModeTypeCode {
 	 */
 	public static final MMCode mmOnDemandFutureInformation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OnDemandFutureInformation";
 			definition = "Future information query type, in on-demand mode.";
 			owner_lazy = () -> RequestModeTypeCode.mmObject();
@@ -155,7 +157,7 @@ public class RequestModeTypeCode {
 	 */
 	public static final MMCode mmScheduledDayInformation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ScheduledDayInformation";
 			definition = "Day information query type, in scheduled mode.";
 			owner_lazy = () -> RequestModeTypeCode.mmObject();
@@ -185,7 +187,7 @@ public class RequestModeTypeCode {
 	 */
 	public static final MMCode mmScheduledFutureInformation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ScheduledFutureInformation";
 			definition = "Future information query type, in scheduled mode.";
 			owner_lazy = () -> RequestModeTypeCode.mmObject();
@@ -215,7 +217,7 @@ public class RequestModeTypeCode {
 	 */
 	public static final MMCode mmForecast = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Forecast";
 			definition = "Forecast query type and mode.";
 			owner_lazy = () -> RequestModeTypeCode.mmObject();
@@ -226,13 +228,12 @@ public class RequestModeTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RequestModeTypeCode";
 				definition = "Specifies the combination of mode and type of the query information.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RequestModeTypeCode.mmOnDemandDayInformation, com.tools20022.repository.codeset.RequestModeTypeCode.mmOnDemandFutureInformation,
-						com.tools20022.repository.codeset.RequestModeTypeCode.mmScheduledDayInformation, com.tools20022.repository.codeset.RequestModeTypeCode.mmScheduledFutureInformation,
-						com.tools20022.repository.codeset.RequestModeTypeCode.mmForecast);
+				code_lazy = () -> Arrays.asList(RequestModeTypeCode.mmOnDemandDayInformation, RequestModeTypeCode.mmOnDemandFutureInformation, RequestModeTypeCode.mmScheduledDayInformation, RequestModeTypeCode.mmScheduledFutureInformation,
+						RequestModeTypeCode.mmForecast);
 				derivation_lazy = () -> Arrays.asList(RequestModeType1Code.mmObject());
 			}
 		});

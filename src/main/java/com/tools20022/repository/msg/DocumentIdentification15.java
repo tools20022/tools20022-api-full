@@ -20,9 +20,13 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.seev.*;
 import com.tools20022.repository.choice.ProcessingPosition1Choice;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.Document;
+import com.tools20022.repository.entity.GenericIdentification;
+import com.tools20022.repository.GeneratedRepository;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -345,14 +349,14 @@ public class DocumentIdentification15 {
 	 */
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmIdentification;
+			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> DocumentIdentification15.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Identifies the document.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DocumentIdentification31.mmIdentification);
+			nextVersions_lazy = () -> Arrays.asList(DocumentIdentification31.mmIdentification);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -402,10 +406,10 @@ public class DocumentIdentification15 {
 			componentContext_lazy = () -> DocumentIdentification15.mmObject();
 			isDerived = false;
 			xmlTag = "LkgTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LinkageType";
 			definition = "Specifies when this document is to be processed relative to an other referred document.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DocumentIdentification31.mmLinkageType);
+			nextVersions_lazy = () -> Arrays.asList(DocumentIdentification31.mmLinkageType);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -416,69 +420,40 @@ public class DocumentIdentification15 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DocumentIdentification15.mmIdentification, com.tools20022.repository.msg.DocumentIdentification15.mmLinkageType);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.CorporateActionInstructionV01.mmCancelledInstructionIdentification,
-						com.tools20022.repository.area.seev.CorporateActionInstructionV01.mmInstructionCancellationRequestIdentification,
-						com.tools20022.repository.area.seev.CorporateActionInstructionV02.mmCancelledInstructionIdentification,
-						com.tools20022.repository.area.seev.CorporateActionInstructionV02.mmInstructionCancellationRequestIdentification,
-						com.tools20022.repository.area.seev.CorporateActionInstructionV03.mmCancelledInstructionIdentification,
-						com.tools20022.repository.area.seev.CorporateActionInstructionV03.mmInstructionCancellationRequestIdentification,
-						com.tools20022.repository.area.seev.CorporateActionInstructionV04.mmCancelledInstructionIdentification,
-						com.tools20022.repository.area.seev.CorporateActionInstructionV04.mmInstructionCancellationRequestIdentification,
-						com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestV01.mmInstructionIdentification,
-						com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestV02.mmInstructionIdentification,
-						com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestV03.mmInstructionIdentification,
-						com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestV04.mmInstructionIdentification,
-						com.tools20022.repository.area.seev.CorporateActionMovementConfirmationV01.mmNotificationIdentification,
-						com.tools20022.repository.area.seev.CorporateActionMovementConfirmationV01.mmMovementPreliminaryAdviceIdentification,
-						com.tools20022.repository.area.seev.CorporateActionMovementConfirmationV02.mmNotificationIdentification,
-						com.tools20022.repository.area.seev.CorporateActionMovementConfirmationV02.mmMovementPreliminaryAdviceIdentification,
-						com.tools20022.repository.area.seev.CorporateActionMovementConfirmationV03.mmNotificationIdentification,
-						com.tools20022.repository.area.seev.CorporateActionMovementConfirmationV03.mmMovementPreliminaryAdviceIdentification,
-						com.tools20022.repository.area.seev.CorporateActionMovementConfirmationV04.mmNotificationIdentification,
-						com.tools20022.repository.area.seev.CorporateActionMovementConfirmationV04.mmMovementPreliminaryAdviceIdentification,
-						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV01.mmPreviousMovementPreliminaryAdviceIdentification,
-						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV01.mmNotificationIdentification,
-						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV01.mmMovementConfirmationIdentification,
-						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV02.mmPreviousMovementPreliminaryAdviceIdentification,
-						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV02.mmNotificationIdentification,
-						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV02.mmMovementConfirmationIdentification,
-						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV03.mmPreviousMovementPreliminaryAdviceIdentification,
-						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV03.mmNotificationIdentification,
-						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV03.mmMovementConfirmationIdentification,
-						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV04.mmPreviousMovementPreliminaryAdviceIdentification,
-						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV04.mmNotificationIdentification,
-						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV04.mmMovementConfirmationIdentification,
-						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV01.mmMovementPreliminaryAdviceIdentification,
-						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV02.mmMovementPreliminaryAdviceIdentification,
-						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV03.mmMovementPreliminaryAdviceIdentification,
-						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV04.mmMovementPreliminaryAdviceIdentification,
-						com.tools20022.repository.area.seev.CorporateActionMovementReversalAdviceV01.mmMovementConfirmationIdentification,
-						com.tools20022.repository.area.seev.CorporateActionMovementReversalAdviceV02.mmMovementConfirmationIdentification,
-						com.tools20022.repository.area.seev.CorporateActionMovementReversalAdviceV03.mmMovementConfirmationIdentification,
-						com.tools20022.repository.area.seev.CorporateActionMovementReversalAdviceV04.mmMovementConfirmationIdentification,
-						com.tools20022.repository.area.seev.CorporateActionNotificationV01.mmPreviousNotificationIdentification, com.tools20022.repository.area.seev.CorporateActionNotificationV02.mmPreviousNotificationIdentification,
-						com.tools20022.repository.area.seev.CorporateActionNotificationV03.mmPreviousNotificationIdentification, com.tools20022.repository.area.seev.CorporateActionNotificationV04.mmPreviousNotificationIdentification,
-						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV05.mmMovementPreliminaryAdviceIdentification,
-						com.tools20022.repository.area.seev.CorporateActionMovementConfirmationV05.mmNotificationIdentification,
-						com.tools20022.repository.area.seev.CorporateActionMovementConfirmationV05.mmMovementPreliminaryAdviceIdentification,
-						com.tools20022.repository.area.seev.CorporateActionNotificationV05.mmPreviousNotificationIdentification,
-						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV05.mmPreviousMovementPreliminaryAdviceIdentification,
-						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV05.mmNotificationIdentification,
-						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV05.mmMovementConfirmationIdentification,
-						com.tools20022.repository.area.seev.CorporateActionInstructionV05.mmCancelledInstructionIdentification,
-						com.tools20022.repository.area.seev.CorporateActionInstructionV05.mmInstructionCancellationRequestIdentification,
-						com.tools20022.repository.area.seev.CorporateActionMovementReversalAdviceV05.mmMovementConfirmationIdentification,
-						com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestV05.mmInstructionIdentification,
-						com.tools20022.repository.area.seev.CorporateActionMovementConfirmationV06.mmNotificationIdentification,
-						com.tools20022.repository.area.seev.CorporateActionMovementConfirmationV06.mmMovementPreliminaryAdviceIdentification,
-						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV06.mmPreviousMovementPreliminaryAdviceIdentification,
-						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV06.mmNotificationIdentification,
-						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV06.mmMovementConfirmationIdentification,
-						com.tools20022.repository.area.seev.CorporateActionMovementReversalAdviceV06.mmMovementConfirmationIdentification);
+				messageElement_lazy = () -> Arrays.asList(DocumentIdentification15.mmIdentification, DocumentIdentification15.mmLinkageType);
+				messageBuildingBlock_lazy = () -> Arrays.asList(CorporateActionInstructionV01.mmCancelledInstructionIdentification, CorporateActionInstructionV01.mmInstructionCancellationRequestIdentification,
+						CorporateActionInstructionV02.mmCancelledInstructionIdentification, CorporateActionInstructionV02.mmInstructionCancellationRequestIdentification, CorporateActionInstructionV03.mmCancelledInstructionIdentification,
+						CorporateActionInstructionV03.mmInstructionCancellationRequestIdentification, CorporateActionInstructionV04.mmCancelledInstructionIdentification,
+						CorporateActionInstructionV04.mmInstructionCancellationRequestIdentification, CorporateActionInstructionCancellationRequestV01.mmInstructionIdentification,
+						CorporateActionInstructionCancellationRequestV02.mmInstructionIdentification, CorporateActionInstructionCancellationRequestV03.mmInstructionIdentification,
+						CorporateActionInstructionCancellationRequestV04.mmInstructionIdentification, CorporateActionMovementConfirmationV01.mmNotificationIdentification,
+						CorporateActionMovementConfirmationV01.mmMovementPreliminaryAdviceIdentification, CorporateActionMovementConfirmationV02.mmNotificationIdentification,
+						CorporateActionMovementConfirmationV02.mmMovementPreliminaryAdviceIdentification, CorporateActionMovementConfirmationV03.mmNotificationIdentification,
+						CorporateActionMovementConfirmationV03.mmMovementPreliminaryAdviceIdentification, CorporateActionMovementConfirmationV04.mmNotificationIdentification,
+						CorporateActionMovementConfirmationV04.mmMovementPreliminaryAdviceIdentification, CorporateActionMovementPreliminaryAdviceV01.mmPreviousMovementPreliminaryAdviceIdentification,
+						CorporateActionMovementPreliminaryAdviceV01.mmNotificationIdentification, CorporateActionMovementPreliminaryAdviceV01.mmMovementConfirmationIdentification,
+						CorporateActionMovementPreliminaryAdviceV02.mmPreviousMovementPreliminaryAdviceIdentification, CorporateActionMovementPreliminaryAdviceV02.mmNotificationIdentification,
+						CorporateActionMovementPreliminaryAdviceV02.mmMovementConfirmationIdentification, CorporateActionMovementPreliminaryAdviceV03.mmPreviousMovementPreliminaryAdviceIdentification,
+						CorporateActionMovementPreliminaryAdviceV03.mmNotificationIdentification, CorporateActionMovementPreliminaryAdviceV03.mmMovementConfirmationIdentification,
+						CorporateActionMovementPreliminaryAdviceV04.mmPreviousMovementPreliminaryAdviceIdentification, CorporateActionMovementPreliminaryAdviceV04.mmNotificationIdentification,
+						CorporateActionMovementPreliminaryAdviceV04.mmMovementConfirmationIdentification, CorporateActionMovementPreliminaryAdviceCancellationAdviceV01.mmMovementPreliminaryAdviceIdentification,
+						CorporateActionMovementPreliminaryAdviceCancellationAdviceV02.mmMovementPreliminaryAdviceIdentification, CorporateActionMovementPreliminaryAdviceCancellationAdviceV03.mmMovementPreliminaryAdviceIdentification,
+						CorporateActionMovementPreliminaryAdviceCancellationAdviceV04.mmMovementPreliminaryAdviceIdentification, CorporateActionMovementReversalAdviceV01.mmMovementConfirmationIdentification,
+						CorporateActionMovementReversalAdviceV02.mmMovementConfirmationIdentification, CorporateActionMovementReversalAdviceV03.mmMovementConfirmationIdentification,
+						CorporateActionMovementReversalAdviceV04.mmMovementConfirmationIdentification, CorporateActionNotificationV01.mmPreviousNotificationIdentification,
+						CorporateActionNotificationV02.mmPreviousNotificationIdentification, CorporateActionNotificationV03.mmPreviousNotificationIdentification, CorporateActionNotificationV04.mmPreviousNotificationIdentification,
+						CorporateActionMovementPreliminaryAdviceCancellationAdviceV05.mmMovementPreliminaryAdviceIdentification, CorporateActionMovementConfirmationV05.mmNotificationIdentification,
+						CorporateActionMovementConfirmationV05.mmMovementPreliminaryAdviceIdentification, CorporateActionNotificationV05.mmPreviousNotificationIdentification,
+						CorporateActionMovementPreliminaryAdviceV05.mmPreviousMovementPreliminaryAdviceIdentification, CorporateActionMovementPreliminaryAdviceV05.mmNotificationIdentification,
+						CorporateActionMovementPreliminaryAdviceV05.mmMovementConfirmationIdentification, CorporateActionInstructionV05.mmCancelledInstructionIdentification,
+						CorporateActionInstructionV05.mmInstructionCancellationRequestIdentification, CorporateActionMovementReversalAdviceV05.mmMovementConfirmationIdentification,
+						CorporateActionInstructionCancellationRequestV05.mmInstructionIdentification, CorporateActionMovementConfirmationV06.mmNotificationIdentification,
+						CorporateActionMovementConfirmationV06.mmMovementPreliminaryAdviceIdentification, CorporateActionMovementPreliminaryAdviceV06.mmPreviousMovementPreliminaryAdviceIdentification,
+						CorporateActionMovementPreliminaryAdviceV06.mmNotificationIdentification, CorporateActionMovementPreliminaryAdviceV06.mmMovementConfirmationIdentification,
+						CorporateActionMovementReversalAdviceV06.mmMovementConfirmationIdentification);
 				trace_lazy = () -> Document.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
 						return DateFormat.getDateInstance(java.text.DateFormat.LONG).parse("May 5, 2016");

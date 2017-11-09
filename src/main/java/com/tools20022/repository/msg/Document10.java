@@ -19,11 +19,14 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.Channel1Choice;
 import com.tools20022.repository.choice.DocumentFormat1Choice;
 import com.tools20022.repository.choice.UndertakingDocumentType2Choice;
 import com.tools20022.repository.datatype.YesNoIndicator;
+import com.tools20022.repository.entity.Presentation;
 import com.tools20022.repository.entity.UndertakingDocument;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -105,11 +108,11 @@ public class Document10 {
 	 */
 	public static final MMMessageAttribute mmDocumentType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.UndertakingDocument.mmDocumentType;
+			businessElementTrace_lazy = () -> UndertakingDocument.mmDocumentType;
 			componentContext_lazy = () -> Document10.mmObject();
 			isDerived = false;
 			xmlTag = "DocTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DocumentType";
 			definition = "Type of document.";
 			maxOccurs = 1;
@@ -152,11 +155,11 @@ public class Document10 {
 	 */
 	public static final MMMessageAttribute mmPresentationChannel = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Presentation.mmCommunicationMethod;
+			businessElementTrace_lazy = () -> Presentation.mmCommunicationMethod;
 			componentContext_lazy = () -> Document10.mmObject();
 			isDerived = false;
 			xmlTag = "PresntnChanl";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PresentationChannel";
 			definition = "Channel through which the document should be presented.";
 			maxOccurs = 1;
@@ -199,11 +202,11 @@ public class Document10 {
 	 */
 	public static final MMMessageAttribute mmDocumentFormat = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.UndertakingDocument.mmFormat;
+			businessElementTrace_lazy = () -> UndertakingDocument.mmFormat;
 			componentContext_lazy = () -> Document10.mmObject();
 			isDerived = false;
 			xmlTag = "DocFrmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DocumentFormat";
 			definition = "Format of the document.";
 			maxOccurs = 1;
@@ -248,11 +251,11 @@ public class Document10 {
 	 */
 	public static final MMMessageAttribute mmCopyIndicator = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.UndertakingDocument.mmCopyIndicator;
+			businessElementTrace_lazy = () -> UndertakingDocument.mmCopyIndicator;
 			componentContext_lazy = () -> Document10.mmObject();
 			isDerived = false;
 			xmlTag = "CpyInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CopyIndicator";
 			definition = "Indication whether the document may be a copy of the original document.";
 			maxOccurs = 1;
@@ -293,7 +296,7 @@ public class Document10 {
 			componentContext_lazy = () -> Document10.mmObject();
 			isDerived = false;
 			xmlTag = "SgndInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SignedIndicator";
 			definition = "Indication whether the document must be signed.";
 			maxOccurs = 1;
@@ -305,11 +308,10 @@ public class Document10 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Document10.mmDocumentType, com.tools20022.repository.msg.Document10.mmPresentationChannel, com.tools20022.repository.msg.Document10.mmDocumentFormat,
-						com.tools20022.repository.msg.Document10.mmCopyIndicator, com.tools20022.repository.msg.Document10.mmSignedIndicator);
+				messageElement_lazy = () -> Arrays.asList(Document10.mmDocumentType, Document10.mmPresentationChannel, Document10.mmDocumentFormat, Document10.mmCopyIndicator, Document10.mmSignedIndicator);
 				trace_lazy = () -> UndertakingDocument.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Document10";
 				definition = "Information about a document.";
 			}

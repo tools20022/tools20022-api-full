@@ -20,7 +20,9 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Number;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -109,10 +111,10 @@ public class CertificationRequest2 {
 			componentContext_lazy = () -> CertificationRequest2.mmObject();
 			isDerived = false;
 			xmlTag = "Vrsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Version";
 			definition = "Version of the certificate request information data structure.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CertificationRequest1.mmKeyIdentification;
+			previousVersion_lazy = () -> CertificationRequest1.mmKeyIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
@@ -153,7 +155,7 @@ public class CertificationRequest2 {
 			componentContext_lazy = () -> CertificationRequest2.mmObject();
 			isDerived = false;
 			xmlTag = "SbjtNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubjectName";
 			definition = "Distinguished name of the certificate subject, the entity whose public key is to be certified.";
 			maxOccurs = 1;
@@ -194,7 +196,7 @@ public class CertificationRequest2 {
 			componentContext_lazy = () -> CertificationRequest2.mmObject();
 			isDerived = false;
 			xmlTag = "SbjtPblcKeyInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubjectPublicKeyInformation";
 			definition = "Information about the public key being certified.";
 			maxOccurs = 1;
@@ -239,7 +241,7 @@ public class CertificationRequest2 {
 			componentContext_lazy = () -> CertificationRequest2.mmObject();
 			isDerived = false;
 			xmlTag = "Attr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Attribute";
 			definition = "Attribute of the certificate service to be put in the certificate extensions, or to be used for the request.";
 			minOccurs = 1;
@@ -251,10 +253,9 @@ public class CertificationRequest2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CertificationRequest2.mmVersion, com.tools20022.repository.msg.CertificationRequest2.mmSubjectName,
-						com.tools20022.repository.msg.CertificationRequest2.mmSubjectPublicKeyInformation, com.tools20022.repository.msg.CertificationRequest2.mmAttribute);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(CertificationRequest2.mmVersion, CertificationRequest2.mmSubjectName, CertificationRequest2.mmSubjectPublicKeyInformation, CertificationRequest2.mmAttribute);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CertificationRequest2";
 				definition = "Information of the certificate to create.";
 				previousVersion_lazy = () -> CertificationRequest1.mmObject();

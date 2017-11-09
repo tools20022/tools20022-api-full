@@ -19,10 +19,14 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.seev.AgentCAElectionAmendmentRequestV01;
 import com.tools20022.repository.choice.CorporateActionOption1FormatChoice;
 import com.tools20022.repository.choice.UnitOrFaceAmount1Choice;
 import com.tools20022.repository.datatype.Exact3NumericText;
 import com.tools20022.repository.entity.CorporateActionElection;
+import com.tools20022.repository.entity.CorporateActionOption;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -117,11 +121,11 @@ public class CorporateActionElection1 {
 	 */
 	public static final MMMessageAttribute mmOptionType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionOption.mmOptionType;
+			businessElementTrace_lazy = () -> CorporateActionOption.mmOptionType;
 			componentContext_lazy = () -> CorporateActionElection1.mmObject();
 			isDerived = false;
 			xmlTag = "OptnTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionType";
 			definition = "Specifies the corporate action options available to the account owner.";
 			maxOccurs = 1;
@@ -166,11 +170,11 @@ public class CorporateActionElection1 {
 	 */
 	public static final MMMessageAttribute mmOptionNumber = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionOption.mmOptionNumber;
+			businessElementTrace_lazy = () -> CorporateActionOption.mmOptionNumber;
 			componentContext_lazy = () -> CorporateActionElection1.mmObject();
 			isDerived = false;
 			xmlTag = "OptnNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionNumber";
 			definition = "Number identifying the available corporate action options.";
 			maxOccurs = 1;
@@ -217,11 +221,11 @@ public class CorporateActionElection1 {
 	 */
 	public static final MMMessageAttribute mmOriginalInstructedQuantity = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionElection.mmQuantity;
+			businessElementTrace_lazy = () -> CorporateActionElection.mmQuantity;
 			componentContext_lazy = () -> CorporateActionElection1.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlInstdQty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalInstructedQuantity";
 			definition = "Quantity of the securities that was instructed in the original election advice.";
 			maxOccurs = 1;
@@ -268,11 +272,11 @@ public class CorporateActionElection1 {
 	 */
 	public static final MMMessageAttribute mmRemainingQuantity = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionElection.mmQuantity;
+			businessElementTrace_lazy = () -> CorporateActionElection.mmQuantity;
 			componentContext_lazy = () -> CorporateActionElection1.mmObject();
 			isDerived = false;
 			xmlTag = "RmngQty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RemainingQuantity";
 			definition = "Remaining instructed securities quantity after the amendment of the election.";
 			maxOccurs = 1;
@@ -284,12 +288,11 @@ public class CorporateActionElection1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionElection1.mmOptionType, com.tools20022.repository.msg.CorporateActionElection1.mmOptionNumber,
-						com.tools20022.repository.msg.CorporateActionElection1.mmOriginalInstructedQuantity, com.tools20022.repository.msg.CorporateActionElection1.mmRemainingQuantity);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.AgentCAElectionAmendmentRequestV01.mmOriginalElectionDetails);
+				messageElement_lazy = () -> Arrays.asList(CorporateActionElection1.mmOptionType, CorporateActionElection1.mmOptionNumber, CorporateActionElection1.mmOriginalInstructedQuantity, CorporateActionElection1.mmRemainingQuantity);
+				messageBuildingBlock_lazy = () -> Arrays.asList(AgentCAElectionAmendmentRequestV01.mmOriginalElectionDetails);
 				trace_lazy = () -> CorporateActionElection.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionElection1";
 				definition = "Provides information about an amended election instruction.";
 			}

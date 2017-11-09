@@ -19,9 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.DataSetCategory2Code;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Max256Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -104,7 +106,7 @@ public class DataSetIdentification2 {
 			componentContext_lazy = () -> DataSetIdentification2.mmObject();
 			isDerived = false;
 			xmlTag = "Nm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Name";
 			definition = "Name of the data set.";
 			maxOccurs = 1;
@@ -146,7 +148,7 @@ public class DataSetIdentification2 {
 			componentContext_lazy = () -> DataSetIdentification2.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Category of data set.";
 			maxOccurs = 1;
@@ -187,7 +189,7 @@ public class DataSetIdentification2 {
 			componentContext_lazy = () -> DataSetIdentification2.mmObject();
 			isDerived = false;
 			xmlTag = "Vrsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Version";
 			definition = "Version of the data set.";
 			maxOccurs = 1;
@@ -228,7 +230,7 @@ public class DataSetIdentification2 {
 			componentContext_lazy = () -> DataSetIdentification2.mmObject();
 			isDerived = false;
 			xmlTag = "CreDtTm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreationDateTime";
 			definition = "Date and time of creation of the data set.";
 			maxOccurs = 1;
@@ -240,10 +242,9 @@ public class DataSetIdentification2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DataSetIdentification2.mmName, com.tools20022.repository.msg.DataSetIdentification2.mmType,
-						com.tools20022.repository.msg.DataSetIdentification2.mmVersion, com.tools20022.repository.msg.DataSetIdentification2.mmCreationDateTime);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(DataSetIdentification2.mmName, DataSetIdentification2.mmType, DataSetIdentification2.mmVersion, DataSetIdentification2.mmCreationDateTime);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DataSetIdentification2";
 				definition = "Identification of a data set.";
 				nextVersions_lazy = () -> Arrays.asList(DataSetIdentification3.mmObject());

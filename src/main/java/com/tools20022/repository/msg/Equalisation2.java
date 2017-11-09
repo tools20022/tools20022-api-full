@@ -19,10 +19,13 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CreditDebitCode;
 import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
 import com.tools20022.repository.datatype.PercentageRate;
+import com.tools20022.repository.entity.Entry;
 import com.tools20022.repository.entity.Equalisation;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -104,11 +107,11 @@ public class Equalisation2 {
 	 */
 	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Equalisation.mmAmount;
+			businessElementTrace_lazy = () -> Equalisation.mmAmount;
 			componentContext_lazy = () -> Equalisation2.mmObject();
 			isDerived = false;
 			xmlTag = "Amt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Amount of money resulting from the calculation of the equalisation.";
 			maxOccurs = 1;
@@ -151,11 +154,11 @@ public class Equalisation2 {
 	 */
 	public static final MMMessageAttribute mmRate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Equalisation.mmRate;
+			businessElementTrace_lazy = () -> Equalisation.mmRate;
 			componentContext_lazy = () -> Equalisation2.mmObject();
 			isDerived = false;
 			xmlTag = "Rate";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rate";
 			definition = "Rate used for calculation of the equalisation.";
 			maxOccurs = 1;
@@ -201,11 +204,11 @@ public class Equalisation2 {
 	 */
 	public static final MMMessageAttribute mmCreditDebitIndicator = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Entry.mmCreditDebitIndicator;
+			businessElementTrace_lazy = () -> Entry.mmCreditDebitIndicator;
 			componentContext_lazy = () -> Equalisation2.mmObject();
 			isDerived = false;
 			xmlTag = "CdtDbtInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditDebitIndicator";
 			definition = "Specifies if the amount is a debit (negative) or credit (positive) amount.";
 			maxOccurs = 1;
@@ -217,10 +220,10 @@ public class Equalisation2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Equalisation2.mmAmount, com.tools20022.repository.msg.Equalisation2.mmRate, com.tools20022.repository.msg.Equalisation2.mmCreditDebitIndicator);
+				messageElement_lazy = () -> Arrays.asList(Equalisation2.mmAmount, Equalisation2.mmRate, Equalisation2.mmCreditDebitIndicator);
 				trace_lazy = () -> Equalisation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Equalisation2";
 				definition = "Part of an investor's subscription amount that is held by the fund in order to pay incentive / performances fess at the end of a performance period.";
 			}

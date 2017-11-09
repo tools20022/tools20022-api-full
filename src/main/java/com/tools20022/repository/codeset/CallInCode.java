@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,12 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.CallIn1Code CallIn1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -38,12 +46,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.CallInCode#mmCallForCurrencyClose
  * CallInCode.mmCallForCurrencyClose}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.CallIn1Code CallIn1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -92,7 +94,7 @@ public class CallInCode {
 	 */
 	public static final MMCode mmCallForAccountValue = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CallForAccountValue";
 			definition = "Pay-in call is for account value.";
 			owner_lazy = () -> CallInCode.mmObject();
@@ -121,7 +123,7 @@ public class CallInCode {
 	 */
 	public static final MMCode mmCallForSettlement = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CallForSettlement";
 			definition = "Pay-in call is for settlement.";
 			owner_lazy = () -> CallInCode.mmObject();
@@ -150,7 +152,7 @@ public class CallInCode {
 	 */
 	public static final MMCode mmCallForCurrencyClose = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CallForCurrencyClose";
 			definition = "Pay-in call is for currency close.";
 			owner_lazy = () -> CallInCode.mmObject();
@@ -161,13 +163,12 @@ public class CallInCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CFAV");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CallInCode";
 				definition = "Specifies the type of pay-in call report.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CallInCode.mmCallForAccountValue, com.tools20022.repository.codeset.CallInCode.mmCallForSettlement,
-						com.tools20022.repository.codeset.CallInCode.mmCallForCurrencyClose);
+				code_lazy = () -> Arrays.asList(CallInCode.mmCallForAccountValue, CallInCode.mmCallForSettlement, CallInCode.mmCallForCurrencyClose);
 				derivation_lazy = () -> Arrays.asList(CallIn1Code.mmObject());
 			}
 		});

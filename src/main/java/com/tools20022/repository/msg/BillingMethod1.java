@@ -20,8 +20,10 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.CashAccountService;
 import com.tools20022.repository.entity.Tax;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -100,11 +102,11 @@ public class BillingMethod1 {
 	 */
 	public static final MMMessageAssociationEnd mmServiceChargeHostAmount = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.mmAmount;
+			businessElementTrace_lazy = () -> Tax.mmAmount;
 			componentContext_lazy = () -> BillingMethod1.mmObject();
 			isDerived = false;
 			xmlTag = "SvcChrgHstAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ServiceChargeHostAmount";
 			definition = "Amount of the original charge expressed in the host currency.";
 			maxOccurs = 1;
@@ -155,7 +157,7 @@ public class BillingMethod1 {
 			componentContext_lazy = () -> BillingMethod1.mmObject();
 			isDerived = false;
 			xmlTag = "SvcTax";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ServiceTax";
 			definition = "Provides for the regional taxes on the service. Up to three regional taxes may be defined for the same service.";
 			maxOccurs = 1;
@@ -203,7 +205,7 @@ public class BillingMethod1 {
 			componentContext_lazy = () -> BillingMethod1.mmObject();
 			isDerived = false;
 			xmlTag = "TtlChrg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalCharge";
 			definition = "Specifies the total charge for a service (including taxes).";
 			maxOccurs = 1;
@@ -250,11 +252,11 @@ public class BillingMethod1 {
 	 */
 	public static final MMMessageAttribute mmTaxIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.mmRecord;
+			businessElementTrace_lazy = () -> Tax.mmRecord;
 			componentContext_lazy = () -> BillingMethod1.mmObject();
 			isDerived = false;
 			xmlTag = "TaxId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxIdentification";
 			definition = "Provides for the specific tax identification within the same tax region. \r\n\r\nUsage: This element allows for a maximum of three regional taxes on the same service.";
 			maxOccurs = 3;
@@ -266,11 +268,10 @@ public class BillingMethod1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BillingMethod1.mmServiceChargeHostAmount, com.tools20022.repository.msg.BillingMethod1.mmServiceTax,
-						com.tools20022.repository.msg.BillingMethod1.mmTotalCharge, com.tools20022.repository.msg.BillingMethod1.mmTaxIdentification);
+				messageElement_lazy = () -> Arrays.asList(BillingMethod1.mmServiceChargeHostAmount, BillingMethod1.mmServiceTax, BillingMethod1.mmTotalCharge, BillingMethod1.mmTaxIdentification);
 				trace_lazy = () -> Tax.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "BillingMethod1";
 				definition = "Provides the details for the tax calculation method A.";
 			}

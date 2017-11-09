@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.AlgorithmCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -104,9 +106,9 @@ public class Algorithm3Code extends AlgorithmCode {
 	 */
 	public static final MMCode mmRetailCBCMAC = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RetailCBCMAC";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Algorithm10Code.mmRetailCBCMAC);
+			nextVersions_lazy = () -> Arrays.asList(Algorithm10Code.mmRetailCBCMAC);
 			owner_lazy = () -> Algorithm3Code.mmObject();
 		}
 	};
@@ -136,9 +138,9 @@ public class Algorithm3Code extends AlgorithmCode {
 	 */
 	public static final MMCode mmRetailSHA256MAC = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RetailSHA256MAC";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Algorithm10Code.mmRetailSHA256MAC);
+			nextVersions_lazy = () -> Arrays.asList(Algorithm10Code.mmRetailSHA256MAC);
 			owner_lazy = () -> Algorithm3Code.mmObject();
 		}
 	};
@@ -168,9 +170,9 @@ public class Algorithm3Code extends AlgorithmCode {
 	 */
 	public static final MMCode mmSHA256CMACwithAES128 = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SHA256CMACwithAES128";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Algorithm10Code.mmSHA256CMACwithAES128);
+			nextVersions_lazy = () -> Arrays.asList(Algorithm10Code.mmSHA256CMACwithAES128);
 			owner_lazy = () -> Algorithm3Code.mmObject();
 		}
 	};
@@ -192,7 +194,7 @@ public class Algorithm3Code extends AlgorithmCode {
 	 */
 	public static final MMCode mmSHA256CMACwithDES112 = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SHA256CMACwithDES112";
 			owner_lazy = () -> Algorithm3Code.mmObject();
 		}
@@ -201,14 +203,13 @@ public class Algorithm3Code extends AlgorithmCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("MACC");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Algorithm3Code";
 				definition = "Cryptographic algorithms for the MAC (Message Authentication Code).";
 				nextVersions_lazy = () -> Arrays.asList(Algorithm10Code.mmObject());
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Algorithm3Code.mmRetailCBCMAC, com.tools20022.repository.codeset.Algorithm3Code.mmRetailSHA256MAC,
-						com.tools20022.repository.codeset.Algorithm3Code.mmSHA256CMACwithAES128, com.tools20022.repository.codeset.Algorithm3Code.mmSHA256CMACwithDES112);
+				code_lazy = () -> Arrays.asList(Algorithm3Code.mmRetailCBCMAC, Algorithm3Code.mmRetailSHA256MAC, Algorithm3Code.mmSHA256CMACwithAES128, Algorithm3Code.mmSHA256CMACwithDES112);
 				trace_lazy = () -> AlgorithmCode.mmObject();
 			}
 		});

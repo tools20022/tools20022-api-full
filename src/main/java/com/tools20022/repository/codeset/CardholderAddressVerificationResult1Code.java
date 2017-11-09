@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CardholderAddressVerificationResultCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -116,7 +118,7 @@ public class CardholderAddressVerificationResult1Code extends CardholderAddressV
 	 */
 	public static final MMCode mmAddressMatch = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AddressMatch";
 			owner_lazy = () -> CardholderAddressVerificationResult1Code.mmObject();
 		}
@@ -139,7 +141,7 @@ public class CardholderAddressVerificationResult1Code extends CardholderAddressV
 	 */
 	public static final MMCode mmAddressNotMatch = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AddressNotMatch";
 			owner_lazy = () -> CardholderAddressVerificationResult1Code.mmObject();
 		}
@@ -162,7 +164,7 @@ public class CardholderAddressVerificationResult1Code extends CardholderAddressV
 	 */
 	public static final MMCode mmAddressTechnical = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AddressTechnical";
 			owner_lazy = () -> CardholderAddressVerificationResult1Code.mmObject();
 		}
@@ -185,7 +187,7 @@ public class CardholderAddressVerificationResult1Code extends CardholderAddressV
 	 */
 	public static final MMCode mmAddressNotTechnical = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AddressNotTechnical";
 			owner_lazy = () -> CardholderAddressVerificationResult1Code.mmObject();
 		}
@@ -208,7 +210,7 @@ public class CardholderAddressVerificationResult1Code extends CardholderAddressV
 	 */
 	public static final MMCode mmAddressMissing = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AddressMissing";
 			owner_lazy = () -> CardholderAddressVerificationResult1Code.mmObject();
 		}
@@ -231,7 +233,7 @@ public class CardholderAddressVerificationResult1Code extends CardholderAddressV
 	 */
 	public static final MMCode mmAddressNotUsed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AddressNotUsed";
 			owner_lazy = () -> CardholderAddressVerificationResult1Code.mmObject();
 		}
@@ -254,7 +256,7 @@ public class CardholderAddressVerificationResult1Code extends CardholderAddressV
 	 */
 	public static final MMCode mmPostalMatch = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PostalMatch";
 			owner_lazy = () -> CardholderAddressVerificationResult1Code.mmObject();
 		}
@@ -277,7 +279,7 @@ public class CardholderAddressVerificationResult1Code extends CardholderAddressV
 	 */
 	public static final MMCode mmPostalNotMatch = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PostalNotMatch";
 			owner_lazy = () -> CardholderAddressVerificationResult1Code.mmObject();
 		}
@@ -300,7 +302,7 @@ public class CardholderAddressVerificationResult1Code extends CardholderAddressV
 	 */
 	public static final MMCode mmPostalTechnical = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PostalTechnical";
 			owner_lazy = () -> CardholderAddressVerificationResult1Code.mmObject();
 		}
@@ -323,7 +325,7 @@ public class CardholderAddressVerificationResult1Code extends CardholderAddressV
 	 */
 	public static final MMCode mmPostalNotTechnical = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PostalNotTechnical";
 			owner_lazy = () -> CardholderAddressVerificationResult1Code.mmObject();
 		}
@@ -346,7 +348,7 @@ public class CardholderAddressVerificationResult1Code extends CardholderAddressV
 	 */
 	public static final MMCode mmPostalMissing = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PostalMissing";
 			owner_lazy = () -> CardholderAddressVerificationResult1Code.mmObject();
 		}
@@ -369,7 +371,7 @@ public class CardholderAddressVerificationResult1Code extends CardholderAddressV
 	 */
 	public static final MMCode mmPostalNotUsed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PostalNotUsed";
 			owner_lazy = () -> CardholderAddressVerificationResult1Code.mmObject();
 		}
@@ -378,17 +380,15 @@ public class CardholderAddressVerificationResult1Code extends CardholderAddressV
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("AMCH");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CardholderAddressVerificationResult1Code";
 				definition = "Result of the Cardholder verification address checks on the street number and the Postal Code from the Cardholder's Address.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CardholderAddressVerificationResult1Code.mmAddressMatch, com.tools20022.repository.codeset.CardholderAddressVerificationResult1Code.mmAddressNotMatch,
-						com.tools20022.repository.codeset.CardholderAddressVerificationResult1Code.mmAddressTechnical, com.tools20022.repository.codeset.CardholderAddressVerificationResult1Code.mmAddressNotTechnical,
-						com.tools20022.repository.codeset.CardholderAddressVerificationResult1Code.mmAddressMissing, com.tools20022.repository.codeset.CardholderAddressVerificationResult1Code.mmAddressNotUsed,
-						com.tools20022.repository.codeset.CardholderAddressVerificationResult1Code.mmPostalMatch, com.tools20022.repository.codeset.CardholderAddressVerificationResult1Code.mmPostalNotMatch,
-						com.tools20022.repository.codeset.CardholderAddressVerificationResult1Code.mmPostalTechnical, com.tools20022.repository.codeset.CardholderAddressVerificationResult1Code.mmPostalNotTechnical,
-						com.tools20022.repository.codeset.CardholderAddressVerificationResult1Code.mmPostalMissing, com.tools20022.repository.codeset.CardholderAddressVerificationResult1Code.mmPostalNotUsed);
+				code_lazy = () -> Arrays.asList(CardholderAddressVerificationResult1Code.mmAddressMatch, CardholderAddressVerificationResult1Code.mmAddressNotMatch, CardholderAddressVerificationResult1Code.mmAddressTechnical,
+						CardholderAddressVerificationResult1Code.mmAddressNotTechnical, CardholderAddressVerificationResult1Code.mmAddressMissing, CardholderAddressVerificationResult1Code.mmAddressNotUsed,
+						CardholderAddressVerificationResult1Code.mmPostalMatch, CardholderAddressVerificationResult1Code.mmPostalNotMatch, CardholderAddressVerificationResult1Code.mmPostalTechnical,
+						CardholderAddressVerificationResult1Code.mmPostalNotTechnical, CardholderAddressVerificationResult1Code.mmPostalMissing, CardholderAddressVerificationResult1Code.mmPostalNotUsed);
 				trace_lazy = () -> CardholderAddressVerificationResultCode.mmObject();
 			}
 		});

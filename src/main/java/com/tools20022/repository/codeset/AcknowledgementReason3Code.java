@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.AcknowledgementReasonCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -87,7 +89,7 @@ public class AcknowledgementReason3Code extends AcknowledgementReasonCode {
 	 */
 	public static final MMCode mmAccountServicerDeadlineMissed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountServicerDeadlineMissed";
 			owner_lazy = () -> AcknowledgementReason3Code.mmObject();
 		}
@@ -110,7 +112,7 @@ public class AcknowledgementReason3Code extends AcknowledgementReasonCode {
 	 */
 	public static final MMCode mmMarketPracticeRuleDiscrepency = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketPracticeRuleDiscrepency";
 			owner_lazy = () -> AcknowledgementReason3Code.mmObject();
 		}
@@ -133,7 +135,7 @@ public class AcknowledgementReason3Code extends AcknowledgementReasonCode {
 	 */
 	public static final MMCode mmOther = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
 			owner_lazy = () -> AcknowledgementReason3Code.mmObject();
 		}
@@ -142,13 +144,12 @@ public class AcknowledgementReason3Code extends AcknowledgementReasonCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ADEA");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AcknowledgementReason3Code";
 				definition = "Specifies additional information about the processed instruction.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AcknowledgementReason3Code.mmAccountServicerDeadlineMissed, com.tools20022.repository.codeset.AcknowledgementReason3Code.mmMarketPracticeRuleDiscrepency,
-						com.tools20022.repository.codeset.AcknowledgementReason3Code.mmOther);
+				code_lazy = () -> Arrays.asList(AcknowledgementReason3Code.mmAccountServicerDeadlineMissed, AcknowledgementReason3Code.mmMarketPracticeRuleDiscrepency, AcknowledgementReason3Code.mmOther);
 				trace_lazy = () -> AcknowledgementReasonCode.mmObject();
 			}
 		});

@@ -19,9 +19,13 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
 import com.tools20022.repository.datatype.PercentageRate;
+import com.tools20022.repository.entity.InvestmentFundOrder;
+import com.tools20022.repository.entity.SecuritiesOrder;
 import com.tools20022.repository.entity.SecuritiesQuantity;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -105,11 +109,11 @@ public class SidePocketQuantityAndAmount1 {
 	 */
 	public static final MMMessageAttribute mmUnitsNumber = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmUnit;
+			businessElementTrace_lazy = () -> SecuritiesQuantity.mmUnit;
 			componentContext_lazy = () -> SidePocketQuantityAndAmount1.mmObject();
 			isDerived = false;
 			xmlTag = "UnitsNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnitsNumber";
 			definition = "Total of quantity of units subscribed or redeemed in the lot or side pocket.";
 			maxOccurs = 1;
@@ -154,11 +158,11 @@ public class SidePocketQuantityAndAmount1 {
 	 */
 	public static final MMMessageAttribute mmOrderedAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmOrderedAmount;
+			businessElementTrace_lazy = () -> SecuritiesOrder.mmOrderedAmount;
 			componentContext_lazy = () -> SidePocketQuantityAndAmount1.mmObject();
 			isDerived = false;
 			xmlTag = "OrdrdAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrderedAmount";
 			definition = "Amount of money invested or redeemed into the lot or side pocket.";
 			maxOccurs = 1;
@@ -205,11 +209,11 @@ public class SidePocketQuantityAndAmount1 {
 	 */
 	public static final MMMessageAttribute mmHoldingsRate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrder.mmHoldingsRate;
+			businessElementTrace_lazy = () -> InvestmentFundOrder.mmHoldingsRate;
 			componentContext_lazy = () -> SidePocketQuantityAndAmount1.mmObject();
 			isDerived = false;
 			xmlTag = "HldgsRate";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HoldingsRate";
 			definition = "Percentage of the financial instrument quantity invested or redeemed in the lot or side pocket.";
 			maxOccurs = 1;
@@ -221,11 +225,10 @@ public class SidePocketQuantityAndAmount1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SidePocketQuantityAndAmount1.mmUnitsNumber, com.tools20022.repository.msg.SidePocketQuantityAndAmount1.mmOrderedAmount,
-						com.tools20022.repository.msg.SidePocketQuantityAndAmount1.mmHoldingsRate);
+				messageElement_lazy = () -> Arrays.asList(SidePocketQuantityAndAmount1.mmUnitsNumber, SidePocketQuantityAndAmount1.mmOrderedAmount, SidePocketQuantityAndAmount1.mmHoldingsRate);
 				trace_lazy = () -> SecuritiesQuantity.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SidePocketQuantityAndAmount1";
 				definition = "Quantity of a security.";
 			}

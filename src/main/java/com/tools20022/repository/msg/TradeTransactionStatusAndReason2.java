@@ -17,15 +17,16 @@
 
 package com.tools20022.repository.msg;
 
-import com.tools20022.metamodel.MMMessageAssociationEnd;
-import com.tools20022.metamodel.MMMessageAttribute;
-import com.tools20022.metamodel.MMMessageComponent;
-import com.tools20022.metamodel.MMXor;
+import com.tools20022.metamodel.*;
+import com.tools20022.repository.area.auth.RegulatoryTransactionReportCancellationStatusV01;
 import com.tools20022.repository.choice.RejectedCancellationStatusReason1Choice;
 import com.tools20022.repository.codeset.Status2Code;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.Max70Text;
 import com.tools20022.repository.entity.SecuritiesTradeStatus;
+import com.tools20022.repository.entity.Status;
+import com.tools20022.repository.entity.TradeIdentification;
+import com.tools20022.repository.GeneratedRepository;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -135,7 +136,7 @@ public class TradeTransactionStatusAndReason2 {
 			componentContext_lazy = () -> TradeTransactionStatusAndReason2.mmObject();
 			isDerived = false;
 			xmlTag = "RltdRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedReference";
 			definition = "Provides the identification of the RegulatoryTransactionReportCancellationRequest document that was previously sent by the reporting institution.";
 			maxOccurs = 1;
@@ -181,11 +182,11 @@ public class TradeTransactionStatusAndReason2 {
 	 */
 	public static final MMMessageAttribute mmTradeReference = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradeIdentification.mmIdentification;
+			businessElementTrace_lazy = () -> TradeIdentification.mmIdentification;
 			componentContext_lazy = () -> TradeTransactionStatusAndReason2.mmObject();
 			isDerived = false;
 			xmlTag = "TradRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeReference";
 			definition = "Unique identification assigned to a trade once it is received or matched by an executing system.";
 			maxOccurs = 1;
@@ -229,11 +230,11 @@ public class TradeTransactionStatusAndReason2 {
 	 */
 	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.mmInstructionProcessingStatus;
+			businessElementTrace_lazy = () -> Status.mmInstructionProcessingStatus;
 			componentContext_lazy = () -> TradeTransactionStatusAndReason2.mmObject();
 			isDerived = false;
 			xmlTag = "Sts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Status";
 			definition = "Indicates the status of an instruction, request or report message.";
 			maxOccurs = 1;
@@ -277,11 +278,11 @@ public class TradeTransactionStatusAndReason2 {
 	 */
 	public static final MMMessageAssociationEnd mmRejected = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.mmStatusReason;
+			businessElementTrace_lazy = () -> Status.mmStatusReason;
 			componentContext_lazy = () -> TradeTransactionStatusAndReason2.mmObject();
 			isDerived = false;
 			xmlTag = "Rjctd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rejected";
 			definition = "Indicates that the cancellation is rejected and provides a reason why.";
 			maxOccurs = 100;
@@ -295,6 +296,10 @@ public class TradeTransactionStatusAndReason2 {
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
+	 * messageComponent} =
+	 * {@linkplain com.tools20022.repository.msg.TradeTransactionStatusAndReason2
+	 * TradeTransactionStatusAndReason2}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getImpactedElements
 	 * impactedElements} =
 	 * <ul>
@@ -306,10 +311,6 @@ public class TradeTransactionStatusAndReason2 {
 	 * TradeTransactionStatusAndReason2.mmRejected}</li>
 	 * </ul>
 	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
-	 * messageComponent} =
-	 * {@linkplain com.tools20022.repository.msg.TradeTransactionStatusAndReason2
-	 * TradeTransactionStatusAndReason2}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -323,23 +324,23 @@ public class TradeTransactionStatusAndReason2 {
 	 */
 	public static final MMXor mmTypeOfStatusRule = new MMXor() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TypeOfStatusRule";
 			definition = "Either Status or Rejected must be present, but not both.";
 			messageComponent_lazy = () -> TradeTransactionStatusAndReason2.mmObject();
-			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TradeTransactionStatusAndReason2.mmStatus, com.tools20022.repository.msg.TradeTransactionStatusAndReason2.mmRejected);
+			impactedElements_lazy = () -> Arrays.asList(TradeTransactionStatusAndReason2.mmStatus, TradeTransactionStatusAndReason2.mmRejected);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TradeTransactionStatusAndReason2.mmRelatedReference, com.tools20022.repository.msg.TradeTransactionStatusAndReason2.mmTradeReference,
-						com.tools20022.repository.msg.TradeTransactionStatusAndReason2.mmStatus, com.tools20022.repository.msg.TradeTransactionStatusAndReason2.mmRejected);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.auth.RegulatoryTransactionReportCancellationStatusV01.mmIndividualTransactionCancellationStatus);
+				messageElement_lazy = () -> Arrays.asList(TradeTransactionStatusAndReason2.mmRelatedReference, TradeTransactionStatusAndReason2.mmTradeReference, TradeTransactionStatusAndReason2.mmStatus,
+						TradeTransactionStatusAndReason2.mmRejected);
+				messageBuildingBlock_lazy = () -> Arrays.asList(RegulatoryTransactionReportCancellationStatusV01.mmIndividualTransactionCancellationStatus);
 				trace_lazy = () -> SecuritiesTradeStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
 						return DateFormat.getDateInstance(java.text.DateFormat.LONG).parse("September 9, 2016");
@@ -349,7 +350,7 @@ public class TradeTransactionStatusAndReason2 {
 				})).get();
 				name = "TradeTransactionStatusAndReason2";
 				definition = "Identifies the transaction with a trade reference and provides its status. If the status is rejected, a reason for this status must be given.";
-				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TradeTransactionStatusAndReason2.mmTypeOfStatusRule);
+				xors_lazy = () -> Arrays.asList(TradeTransactionStatusAndReason2.mmTypeOfStatusRule);
 			}
 		});
 		return mmObject_lazy.get();

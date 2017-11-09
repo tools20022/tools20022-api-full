@@ -20,6 +20,7 @@ package com.tools20022.repository.area.supl;
 import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.SupplementaryDataLatestVersion;
 import com.tools20022.repository.msg.TransactionData1;
 import com.tools20022.repository.msgset.SupplementaryDataISOLatestversion;
@@ -31,6 +32,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code supl.017.001.01}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.SupplementaryDataLatestVersion
@@ -56,9 +60,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * PaymentSD1V01.mmCardRemittanceInformation}</li>
  * </ul>
  * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code supl.017.001.01}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -100,7 +101,7 @@ public class PaymentSD1V01 {
 	public static final MMMessageBuildingBlock mmCardRemittanceInformation = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CardRmtInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CardRemittanceInformation";
 			definition = "Structured card remittance information supplied in a payment.";
 			maxOccurs = 1;
@@ -112,14 +113,14 @@ public class PaymentSD1V01 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PaymentSD1V01";
 				definition = "Supplementary data for payment message definitions.";
 				messageSet_lazy = () -> Arrays.asList(SupplementaryDataISOLatestversion.mmObject());
 				rootElement = "Document";
 				xmlTag = "PmtSD1";
 				businessArea_lazy = () -> SupplementaryDataLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.supl.PaymentSD1V01.mmCardRemittanceInformation);
+				messageBuildingBlock_lazy = () -> Arrays.asList(PaymentSD1V01.mmCardRemittanceInformation);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "supl";

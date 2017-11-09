@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.AuthorisationCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -92,7 +94,7 @@ public class Authorisation1Code extends AuthorisationCode {
 	 */
 	public static final MMCode mmPreAuthorisedFile = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreAuthorisedFile";
 			owner_lazy = () -> Authorisation1Code.mmObject();
 		}
@@ -115,7 +117,7 @@ public class Authorisation1Code extends AuthorisationCode {
 	 */
 	public static final MMCode mmFileLevelAuthorisationDetails = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FileLevelAuthorisationDetails";
 			owner_lazy = () -> Authorisation1Code.mmObject();
 		}
@@ -138,7 +140,7 @@ public class Authorisation1Code extends AuthorisationCode {
 	 */
 	public static final MMCode mmFileLevelAuthorisationSummary = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FileLevelAuthorisationSummary";
 			owner_lazy = () -> Authorisation1Code.mmObject();
 		}
@@ -161,7 +163,7 @@ public class Authorisation1Code extends AuthorisationCode {
 	 */
 	public static final MMCode mmInstructionLevelAuthorisation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructionLevelAuthorisation";
 			owner_lazy = () -> Authorisation1Code.mmObject();
 		}
@@ -170,13 +172,13 @@ public class Authorisation1Code extends AuthorisationCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("AUTH");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Authorisation1Code";
 				definition = "Specifies the level of approval depending on a number of factors, including payment type, threshold amount or local country or operations practice.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Authorisation1Code.mmPreAuthorisedFile, com.tools20022.repository.codeset.Authorisation1Code.mmFileLevelAuthorisationDetails,
-						com.tools20022.repository.codeset.Authorisation1Code.mmFileLevelAuthorisationSummary, com.tools20022.repository.codeset.Authorisation1Code.mmInstructionLevelAuthorisation);
+				code_lazy = () -> Arrays.asList(Authorisation1Code.mmPreAuthorisedFile, Authorisation1Code.mmFileLevelAuthorisationDetails, Authorisation1Code.mmFileLevelAuthorisationSummary,
+						Authorisation1Code.mmInstructionLevelAuthorisation);
 				trace_lazy = () -> AuthorisationCode.mmObject();
 			}
 		});

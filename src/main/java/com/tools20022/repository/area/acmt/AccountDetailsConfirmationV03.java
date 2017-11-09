@@ -20,6 +20,7 @@ package com.tools20022.repository.area.acmt;
 import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.AccountManagementArchive;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.ISOArchive;
@@ -48,6 +49,9 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code acmt.002.001.03}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.AccountManagementArchive
@@ -111,9 +115,6 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code acmt.002.001.03}</li>
- * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -175,10 +176,10 @@ public class AccountDetailsConfirmationV03 {
 	public static final MMMessageBuildingBlock mmMessageIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "MsgId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageIdentification";
 			definition = "Identifies the message.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountDetailsConfirmationV04.mmMessageIdentification);
+			nextVersions_lazy = () -> Arrays.asList(AccountDetailsConfirmationV04.mmMessageIdentification);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
@@ -219,10 +220,10 @@ public class AccountDetailsConfirmationV03 {
 	public static final MMMessageBuildingBlock mmOrderReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "OrdrRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrderReference";
 			definition = "Identifies a related order.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountDetailsConfirmationV04.mmOrderReference);
+			nextVersions_lazy = () -> Arrays.asList(AccountDetailsConfirmationV04.mmOrderReference);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> InvestmentFundOrder4.mmObject();
@@ -264,10 +265,10 @@ public class AccountDetailsConfirmationV03 {
 	public static final MMMessageBuildingBlock mmRelatedReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "RltdRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedReference";
 			definition = "Reference to a linked message that was previously received.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountDetailsConfirmationV04.mmRelatedReference);
+			nextVersions_lazy = () -> Arrays.asList(AccountDetailsConfirmationV04.mmRelatedReference);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference3.mmObject();
@@ -311,10 +312,10 @@ public class AccountDetailsConfirmationV03 {
 	public static final MMMessageBuildingBlock mmConfirmationDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "ConfDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConfirmationDetails";
 			definition = "Provide detailed information about the request or instruction which triggered this confirmation. ";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountDetailsConfirmationV04.mmConfirmationDetails);
+			nextVersions_lazy = () -> Arrays.asList(AccountDetailsConfirmationV04.mmConfirmationDetails);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> AccountManagementConfirmation1.mmObject();
@@ -357,10 +358,10 @@ public class AccountDetailsConfirmationV03 {
 	public static final MMMessageBuildingBlock mmInvestmentAccount = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "InvstmtAcct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestmentAccount";
 			definition = "Confirmation of the information related to a selected investment account.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountDetailsConfirmationV04.mmInvestmentAccount);
+			nextVersions_lazy = () -> Arrays.asList(AccountDetailsConfirmationV04.mmInvestmentAccount);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> InvestmentAccount35.mmObject();
@@ -403,10 +404,10 @@ public class AccountDetailsConfirmationV03 {
 	public static final MMMessageBuildingBlock mmAccountParties = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "AcctPties";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountParties";
 			definition = "Confirmation of information related to parties who are related to a selected investment account.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountDetailsConfirmationV04.mmAccountParties);
+			nextVersions_lazy = () -> Arrays.asList(AccountDetailsConfirmationV04.mmAccountParties);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> AccountParties6.mmObject();
@@ -449,10 +450,10 @@ public class AccountDetailsConfirmationV03 {
 	public static final MMMessageBuildingBlock mmIntermediaries = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Intrmies";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Intermediaries";
 			definition = "Confirmation of information related to intermediaries who are related to a selected investment account.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountDetailsConfirmationV04.mmIntermediaries);
+			nextVersions_lazy = () -> Arrays.asList(AccountDetailsConfirmationV04.mmIntermediaries);
 			maxOccurs = 10;
 			minOccurs = 0;
 			complexType_lazy = () -> Intermediary12.mmObject();
@@ -492,10 +493,10 @@ public class AccountDetailsConfirmationV03 {
 	public static final MMMessageBuildingBlock mmPlacement = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Plcmnt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Placement";
 			definition = "Placement agent for the hedge fund industry.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountDetailsConfirmationV04.mmPlacement);
+			nextVersions_lazy = () -> Arrays.asList(AccountDetailsConfirmationV04.mmPlacement);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> ReferredAgent1.mmObject();
@@ -539,10 +540,10 @@ public class AccountDetailsConfirmationV03 {
 	public static final MMMessageBuildingBlock mmNewIssueAllocation = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "NewIsseAllcn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewIssueAllocation";
 			definition = "Eligibility conditions applicable when there is an allocation of new issues for hedge fund account opening.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountDetailsConfirmationV04.mmNewIssueAllocation);
+			nextVersions_lazy = () -> Arrays.asList(AccountDetailsConfirmationV04.mmNewIssueAllocation);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> NewIssueAllocation1.mmObject();
@@ -585,10 +586,10 @@ public class AccountDetailsConfirmationV03 {
 	public static final MMMessageBuildingBlock mmSavingsInvestmentPlan = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SvgsInvstmtPlan";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SavingsInvestmentPlan";
 			definition = "Confirmation of the information related to a savings plan that is related to a selected investment account.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountDetailsConfirmationV04.mmSavingsInvestmentPlan);
+			nextVersions_lazy = () -> Arrays.asList(AccountDetailsConfirmationV04.mmSavingsInvestmentPlan);
 			maxOccurs = 50;
 			minOccurs = 0;
 			complexType_lazy = () -> InvestmentPlan6.mmObject();
@@ -631,10 +632,10 @@ public class AccountDetailsConfirmationV03 {
 	public static final MMMessageBuildingBlock mmWithdrawalInvestmentPlan = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "WdrwlInvstmtPlan";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WithdrawalInvestmentPlan";
 			definition = "Confirmation of the information related to a withdrawal plan that is related to a selected investment account.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountDetailsConfirmationV04.mmWithdrawalInvestmentPlan);
+			nextVersions_lazy = () -> Arrays.asList(AccountDetailsConfirmationV04.mmWithdrawalInvestmentPlan);
 			maxOccurs = 10;
 			minOccurs = 0;
 			complexType_lazy = () -> InvestmentPlan6.mmObject();
@@ -678,10 +679,10 @@ public class AccountDetailsConfirmationV03 {
 	public static final MMMessageBuildingBlock mmCashSettlement = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CshSttlm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashSettlement";
 			definition = "Confirmation of the cash settlement standing instruction associated to the investment fund transaction.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountDetailsConfirmationV04.mmCashSettlement);
+			nextVersions_lazy = () -> Arrays.asList(AccountDetailsConfirmationV04.mmCashSettlement);
 			maxOccurs = 8;
 			minOccurs = 0;
 			complexType_lazy = () -> InvestmentFundCashSettlementInformation5.mmObject();
@@ -722,10 +723,10 @@ public class AccountDetailsConfirmationV03 {
 	public static final MMMessageBuildingBlock mmServiceLevelAgreement = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SvcLvlAgrmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ServiceLevelAgreement";
 			definition = "Identifies documents to be provided for the account opening.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountDetailsConfirmationV04.mmServiceLevelAgreement);
+			nextVersions_lazy = () -> Arrays.asList(AccountDetailsConfirmationV04.mmServiceLevelAgreement);
 			maxOccurs = 30;
 			minOccurs = 0;
 			complexType_lazy = () -> DocumentToSend1.mmObject();
@@ -768,10 +769,10 @@ public class AccountDetailsConfirmationV03 {
 	public static final MMMessageBuildingBlock mmExtension = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Xtnsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Extension";
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountDetailsConfirmationV04.mmExtension);
+			nextVersions_lazy = () -> Arrays.asList(AccountDetailsConfirmationV04.mmExtension);
 			minOccurs = 0;
 			complexType_lazy = () -> Extension1.mmObject();
 		}
@@ -780,7 +781,7 @@ public class AccountDetailsConfirmationV03 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AccountDetailsConfirmationV03";
 				definition = "Scope\r\nAn account servicer, for example, a registrar, transfer agent or custodian bank sends the AccountDetailsConfirmation message to the account owner, for example, an investor to confirm the opening of an investment fund account, execution of an AccountModificationInstruction or to return information requested in a GetAccountDetails message.\r\nUsage\r\nThe AccountDetailsConfirmation message is used to confirm the opening of an account, modification of an account or the provision of information requested in a previously sent GetAccountDetails message. The message contains detailed information relevant to the opened account.\r\nWhen the AccountDetailsConfirmation is used to confirm execution of an AccountModificationInstruction message, it contains the modified subsets of account details that were specified in the AccountModificationInstruction.\r\nWhen the AccountDetailsConfirmation is used to reply to a GetAccountDetails message, it returns the selected subsets of account details that were specified in the GetAccountDetails message.";
 				nextVersions_lazy = () -> Arrays.asList(AccountDetailsConfirmationV04.mmObject());
@@ -789,13 +790,10 @@ public class AccountDetailsConfirmationV03 {
 				rootElement = "Document";
 				xmlTag = "AcctDtlsConf";
 				businessArea_lazy = () -> AccountManagementArchive.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountDetailsConfirmationV03.mmMessageIdentification, com.tools20022.repository.area.acmt.AccountDetailsConfirmationV03.mmOrderReference,
-						com.tools20022.repository.area.acmt.AccountDetailsConfirmationV03.mmRelatedReference, com.tools20022.repository.area.acmt.AccountDetailsConfirmationV03.mmConfirmationDetails,
-						com.tools20022.repository.area.acmt.AccountDetailsConfirmationV03.mmInvestmentAccount, com.tools20022.repository.area.acmt.AccountDetailsConfirmationV03.mmAccountParties,
-						com.tools20022.repository.area.acmt.AccountDetailsConfirmationV03.mmIntermediaries, com.tools20022.repository.area.acmt.AccountDetailsConfirmationV03.mmPlacement,
-						com.tools20022.repository.area.acmt.AccountDetailsConfirmationV03.mmNewIssueAllocation, com.tools20022.repository.area.acmt.AccountDetailsConfirmationV03.mmSavingsInvestmentPlan,
-						com.tools20022.repository.area.acmt.AccountDetailsConfirmationV03.mmWithdrawalInvestmentPlan, com.tools20022.repository.area.acmt.AccountDetailsConfirmationV03.mmCashSettlement,
-						com.tools20022.repository.area.acmt.AccountDetailsConfirmationV03.mmServiceLevelAgreement, com.tools20022.repository.area.acmt.AccountDetailsConfirmationV03.mmExtension);
+				messageBuildingBlock_lazy = () -> Arrays.asList(AccountDetailsConfirmationV03.mmMessageIdentification, AccountDetailsConfirmationV03.mmOrderReference, AccountDetailsConfirmationV03.mmRelatedReference,
+						AccountDetailsConfirmationV03.mmConfirmationDetails, AccountDetailsConfirmationV03.mmInvestmentAccount, AccountDetailsConfirmationV03.mmAccountParties, AccountDetailsConfirmationV03.mmIntermediaries,
+						AccountDetailsConfirmationV03.mmPlacement, AccountDetailsConfirmationV03.mmNewIssueAllocation, AccountDetailsConfirmationV03.mmSavingsInvestmentPlan, AccountDetailsConfirmationV03.mmWithdrawalInvestmentPlan,
+						AccountDetailsConfirmationV03.mmCashSettlement, AccountDetailsConfirmationV03.mmServiceLevelAgreement, AccountDetailsConfirmationV03.mmExtension);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "acmt";

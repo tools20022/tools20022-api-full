@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ATMServiceTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -81,7 +83,7 @@ public class ATMServiceType6Code extends ATMServiceTypeCode {
 	 */
 	public static final MMCode mmMakingChange = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MakingChange";
 			owner_lazy = () -> ATMServiceType6Code.mmObject();
 		}
@@ -104,7 +106,7 @@ public class ATMServiceType6Code extends ATMServiceTypeCode {
 	 */
 	public static final MMCode mmNonVerifiedDeposit = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonVerifiedDeposit";
 			owner_lazy = () -> ATMServiceType6Code.mmObject();
 		}
@@ -127,7 +129,7 @@ public class ATMServiceType6Code extends ATMServiceTypeCode {
 	 */
 	public static final MMCode mmVerifiedDeposit = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VerifiedDeposit";
 			owner_lazy = () -> ATMServiceType6Code.mmObject();
 		}
@@ -136,12 +138,11 @@ public class ATMServiceType6Code extends ATMServiceTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ATMServiceType6Code";
 				definition = "Describes the type of deposit service selected by the customer.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ATMServiceType6Code.mmMakingChange, com.tools20022.repository.codeset.ATMServiceType6Code.mmNonVerifiedDeposit,
-						com.tools20022.repository.codeset.ATMServiceType6Code.mmVerifiedDeposit);
+				code_lazy = () -> Arrays.asList(ATMServiceType6Code.mmMakingChange, ATMServiceType6Code.mmNonVerifiedDeposit, ATMServiceType6Code.mmVerifiedDeposit);
 				trace_lazy = () -> ATMServiceTypeCode.mmObject();
 			}
 		});

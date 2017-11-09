@@ -17,13 +17,12 @@
 
 package com.tools20022.repository.msg;
 
-import com.tools20022.metamodel.MMMessageAssociationEnd;
-import com.tools20022.metamodel.MMMessageAttribute;
-import com.tools20022.metamodel.MMMessageComponent;
-import com.tools20022.metamodel.MMXor;
+import com.tools20022.metamodel.*;
 import com.tools20022.repository.codeset.CurrencyCode;
+import com.tools20022.repository.entity.CashEntry;
 import com.tools20022.repository.entity.ChequeIssue;
 import com.tools20022.repository.entity.Payment;
+import com.tools20022.repository.GeneratedRepository;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -116,11 +115,11 @@ public class PaymentInstrument6 {
 	 */
 	public static final MMMessageAttribute mmSettlementCurrency = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.mmCurrencyOfTransfer;
+			businessElementTrace_lazy = () -> Payment.mmCurrencyOfTransfer;
 			componentContext_lazy = () -> PaymentInstrument6.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmCcy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementCurrency";
 			definition = "Currency associated with the payment instrument.";
 			maxOccurs = 1;
@@ -165,11 +164,11 @@ public class PaymentInstrument6 {
 	 */
 	public static final MMMessageAssociationEnd mmCashAccount = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashEntry.mmCashAccount;
+			businessElementTrace_lazy = () -> CashEntry.mmCashAccount;
 			componentContext_lazy = () -> PaymentInstrument6.mmObject();
 			isDerived = false;
 			xmlTag = "CshAcct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashAccount";
 			definition = "Cash account to credit for the payment of the dividends or of the redeemed investments funds.";
 			maxOccurs = 3;
@@ -214,7 +213,7 @@ public class PaymentInstrument6 {
 			componentContext_lazy = () -> PaymentInstrument6.mmObject();
 			isDerived = false;
 			xmlTag = "Chq";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cheque";
 			definition = "Settlement instructions for a payment by cheque.";
 			maxOccurs = 1;
@@ -229,6 +228,10 @@ public class PaymentInstrument6 {
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
+	 * messageComponent} =
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstrument6
+	 * PaymentInstrument6}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getImpactedElements
 	 * impactedElements} =
 	 * <ul>
@@ -240,10 +243,6 @@ public class PaymentInstrument6 {
 	 * PaymentInstrument6.mmCheque}</li>
 	 * </ul>
 	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
-	 * messageComponent} =
-	 * {@linkplain com.tools20022.repository.msg.PaymentInstrument6
-	 * PaymentInstrument6}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -259,22 +258,21 @@ public class PaymentInstrument6 {
 	 */
 	public static final MMXor mmCashAccountOrCheque = new MMXor() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashAccountOrCheque";
 			definition = "At least one occurrence of either CashAccount or Cheque must be present, but not both.";
 			messageComponent_lazy = () -> PaymentInstrument6.mmObject();
-			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentInstrument6.mmCashAccount, com.tools20022.repository.msg.PaymentInstrument6.mmCheque);
+			impactedElements_lazy = () -> Arrays.asList(PaymentInstrument6.mmCashAccount, PaymentInstrument6.mmCheque);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentInstrument6.mmSettlementCurrency, com.tools20022.repository.msg.PaymentInstrument6.mmCashAccount,
-						com.tools20022.repository.msg.PaymentInstrument6.mmCheque);
+				messageElement_lazy = () -> Arrays.asList(PaymentInstrument6.mmSettlementCurrency, PaymentInstrument6.mmCashAccount, PaymentInstrument6.mmCheque);
 				trace_lazy = () -> Payment.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
 						return DateFormat.getDateInstance(java.text.DateFormat.LONG).parse("September 9, 2016");
@@ -284,7 +282,7 @@ public class PaymentInstrument6 {
 				})).get();
 				name = "PaymentInstrument6";
 				definition = "Instrument that has or represents monetary value and is used to process a payment instruction.";
-				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentInstrument6.mmCashAccountOrCheque);
+				xors_lazy = () -> Arrays.asList(PaymentInstrument6.mmCashAccountOrCheque);
 			}
 		});
 		return mmObject_lazy.get();

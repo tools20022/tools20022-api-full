@@ -19,8 +19,10 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.TaxExemptReason3Code;
 import com.tools20022.repository.entity.Tax;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification47;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -108,14 +110,14 @@ public class TaxExemptionReason2Choice {
 	 */
 	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.mmExemptionReason;
+			businessElementTrace_lazy = () -> Tax.mmExemptionReason;
 			componentContext_lazy = () -> TaxExemptionReason2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Cd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Tax exemption reason expressed as a code.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.TaxExemptionReason1Choice.mmCode;
+			previousVersion_lazy = () -> TaxExemptionReason1Choice.mmCode;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TaxExemptReason3Code.mmObject();
@@ -162,14 +164,14 @@ public class TaxExemptionReason2Choice {
 	 */
 	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.mmExemptionReason;
+			businessElementTrace_lazy = () -> Tax.mmExemptionReason;
 			componentContext_lazy = () -> TaxExemptionReason2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Tax exemption reason expressed as a proprietary code.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.TaxExemptionReason1Choice.mmProprietary;
+			previousVersion_lazy = () -> TaxExemptionReason1Choice.mmProprietary;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification47.mmObject();
@@ -179,10 +181,10 @@ public class TaxExemptionReason2Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.TaxExemptionReason2Choice.mmCode, com.tools20022.repository.choice.TaxExemptionReason2Choice.mmProprietary);
+				messageElement_lazy = () -> Arrays.asList(TaxExemptionReason2Choice.mmCode, TaxExemptionReason2Choice.mmProprietary);
 				trace_lazy = () -> Tax.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TaxExemptionReason2Choice";
 				definition = "Choice of formats for the specification of the tax exemption reason.";
 				previousVersion_lazy = () -> TaxExemptionReason1Choice.mmObject();

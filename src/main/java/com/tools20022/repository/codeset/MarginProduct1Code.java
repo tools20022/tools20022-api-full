@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.MarginProductCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -83,7 +85,7 @@ public class MarginProduct1Code extends MarginProductCode {
 	 */
 	public static final MMCode mmEquities = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Equities";
 			owner_lazy = () -> MarginProduct1Code.mmObject();
 		}
@@ -106,7 +108,7 @@ public class MarginProduct1Code extends MarginProductCode {
 	 */
 	public static final MMCode mmFixedIncome = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FixedIncome";
 			owner_lazy = () -> MarginProduct1Code.mmObject();
 		}
@@ -115,12 +117,12 @@ public class MarginProduct1Code extends MarginProductCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("EQUI");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MarginProduct1Code";
 				definition = "Specifies the underlying product of the margin.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MarginProduct1Code.mmEquities, com.tools20022.repository.codeset.MarginProduct1Code.mmFixedIncome);
+				code_lazy = () -> Arrays.asList(MarginProduct1Code.mmEquities, MarginProduct1Code.mmFixedIncome);
 				trace_lazy = () -> MarginProductCode.mmObject();
 			}
 		});

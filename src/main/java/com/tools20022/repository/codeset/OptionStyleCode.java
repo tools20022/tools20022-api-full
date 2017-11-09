@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.OptionStyle2Code
+ * OptionStyle2Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.OptionStyle1Code
+ * OptionStyle1Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.OptionStyle4Code
+ * OptionStyle4Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.OptionStyle3Code
+ * OptionStyle3Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.OptionStyle7Code
+ * OptionStyle7Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>{@linkplain com.tools20022.repository.codeset.OptionStyleCode#mmAmerican
@@ -41,21 +58,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * OptionStyleCode.mmCanary}</li>
  * <li>{@linkplain com.tools20022.repository.codeset.OptionStyleCode#mmOther
  * OptionStyleCode.mmOther}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.OptionStyle2Code
- * OptionStyle2Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.OptionStyle1Code
- * OptionStyle1Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.OptionStyle4Code
- * OptionStyle4Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.OptionStyle3Code
- * OptionStyle3Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.OptionStyle7Code
- * OptionStyle7Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -105,7 +107,7 @@ public class OptionStyleCode {
 	 */
 	public static final MMCode mmAmerican = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "American";
 			definition = "Option can be exercised before or on expiry date.";
 			owner_lazy = () -> OptionStyleCode.mmObject();
@@ -135,7 +137,7 @@ public class OptionStyleCode {
 	 */
 	public static final MMCode mmEuropean = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "European";
 			definition = "Option that can be exercised on expiry date only.";
 			owner_lazy = () -> OptionStyleCode.mmObject();
@@ -168,7 +170,7 @@ public class OptionStyleCode {
 	 */
 	public static final MMCode mmBermudan = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Bermudan";
 			definition = "Option that can be exercised on multiple discrete dates prior to, or on expiry date.";
 			owner_lazy = () -> OptionStyleCode.mmObject();
@@ -202,7 +204,7 @@ public class OptionStyleCode {
 	 */
 	public static final MMCode mmAsian = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Asian";
 			definition = "Option where the payoff is not determined by the underlying price at maturity but by the average underlying price over some pre-set period of time.";
 			owner_lazy = () -> OptionStyleCode.mmObject();
@@ -236,7 +238,7 @@ public class OptionStyleCode {
 	 */
 	public static final MMCode mmCanary = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Canary";
 			definition = "Option whose exercise style lies somewhere between European options and Bermudan options. The holder can exercise the option at quaterly dates, but not before a set time period (typically one year) has elapsed.";
 			owner_lazy = () -> OptionStyleCode.mmObject();
@@ -266,7 +268,7 @@ public class OptionStyleCode {
 	 */
 	public static final MMCode mmOther = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
 			definition = "Other type of option style.";
 			owner_lazy = () -> OptionStyleCode.mmObject();
@@ -277,13 +279,12 @@ public class OptionStyleCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("AMER");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OptionStyleCode";
 				definition = "Defines how an option can be exercised";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OptionStyleCode.mmAmerican, com.tools20022.repository.codeset.OptionStyleCode.mmEuropean, com.tools20022.repository.codeset.OptionStyleCode.mmBermudan,
-						com.tools20022.repository.codeset.OptionStyleCode.mmAsian, com.tools20022.repository.codeset.OptionStyleCode.mmCanary, com.tools20022.repository.codeset.OptionStyleCode.mmOther);
+				code_lazy = () -> Arrays.asList(OptionStyleCode.mmAmerican, OptionStyleCode.mmEuropean, OptionStyleCode.mmBermudan, OptionStyleCode.mmAsian, OptionStyleCode.mmCanary, OptionStyleCode.mmOther);
 				derivation_lazy = () -> Arrays.asList(OptionStyle2Code.mmObject(), OptionStyle1Code.mmObject(), OptionStyle4Code.mmObject(), OptionStyle3Code.mmObject(), OptionStyle7Code.mmObject());
 			}
 		});

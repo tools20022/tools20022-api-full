@@ -20,10 +20,14 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ActiveCurrencyAnd13DecimalAmount;
 import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
 import com.tools20022.repository.datatype.PercentageRate;
 import com.tools20022.repository.entity.InvestmentFundTax;
+import com.tools20022.repository.entity.SecuritiesTax;
+import com.tools20022.repository.entity.Tax;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -105,11 +109,11 @@ public class TotalTaxes4 {
 	 */
 	public static final MMMessageAttribute mmTotalAmountOfTaxes = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.mmAmount;
+			businessElementTrace_lazy = () -> Tax.mmAmount;
 			componentContext_lazy = () -> TotalTaxes4.mmObject();
 			isDerived = false;
 			xmlTag = "TtlAmtOfTaxs";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalAmountOfTaxes";
 			definition = "Total value of the taxes for a specific order.";
 			maxOccurs = 1;
@@ -156,11 +160,11 @@ public class TotalTaxes4 {
 	 */
 	public static final MMMessageAttribute mmTaxableIncomePerDividend = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTax.mmTaxableIncomePerDividend;
+			businessElementTrace_lazy = () -> SecuritiesTax.mmTaxableIncomePerDividend;
 			componentContext_lazy = () -> TotalTaxes4.mmObject();
 			isDerived = false;
 			xmlTag = "TaxblIncmPerDvdd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxableIncomePerDividend";
 			definition = "Amount included in the dividend that corresponds to gains directly or indirectly derived from interest payment in the scope of the European Directive on taxation of savings income in the form of interest payments.";
 			maxOccurs = 1;
@@ -208,11 +212,11 @@ public class TotalTaxes4 {
 	 */
 	public static final MMMessageAttribute mmPercentageOfDebtClaim = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundTax.mmPercentageOfDebtClaim;
+			businessElementTrace_lazy = () -> InvestmentFundTax.mmPercentageOfDebtClaim;
 			componentContext_lazy = () -> TotalTaxes4.mmObject();
 			isDerived = false;
 			xmlTag = "PctgOfDebtClm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PercentageOfDebtClaim";
 			definition = "Percentage of the underlying assets of the funds that represents a debt and is in the scope of the European directive on taxation of savings income in the form of interest payments (Council Directive 2003/48/EC 3 June).";
 			maxOccurs = 1;
@@ -256,7 +260,7 @@ public class TotalTaxes4 {
 			componentContext_lazy = () -> TotalTaxes4.mmObject();
 			isDerived = false;
 			xmlTag = "TaxDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxDetails";
 			definition = "Information related to a specific tax.";
 			minOccurs = 0;
@@ -268,11 +272,10 @@ public class TotalTaxes4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TotalTaxes4.mmTotalAmountOfTaxes, com.tools20022.repository.msg.TotalTaxes4.mmTaxableIncomePerDividend,
-						com.tools20022.repository.msg.TotalTaxes4.mmPercentageOfDebtClaim, com.tools20022.repository.msg.TotalTaxes4.mmTaxDetails);
+				messageElement_lazy = () -> Arrays.asList(TotalTaxes4.mmTotalAmountOfTaxes, TotalTaxes4.mmTaxableIncomePerDividend, TotalTaxes4.mmPercentageOfDebtClaim, TotalTaxes4.mmTaxDetails);
 				trace_lazy = () -> InvestmentFundTax.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "TotalTaxes4";
 				definition = "Information regarding the total amount of taxes.";
 			}

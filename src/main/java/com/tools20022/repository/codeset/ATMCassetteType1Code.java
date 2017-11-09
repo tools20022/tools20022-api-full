@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ATMCassetteTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -87,7 +89,7 @@ public class ATMCassetteType1Code extends ATMCassetteTypeCode {
 	 */
 	public static final MMCode mmIn = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "In";
 			owner_lazy = () -> ATMCassetteType1Code.mmObject();
 		}
@@ -110,7 +112,7 @@ public class ATMCassetteType1Code extends ATMCassetteTypeCode {
 	 */
 	public static final MMCode mmOut = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Out";
 			owner_lazy = () -> ATMCassetteType1Code.mmObject();
 		}
@@ -133,7 +135,7 @@ public class ATMCassetteType1Code extends ATMCassetteTypeCode {
 	 */
 	public static final MMCode mmRecycling = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Recycling";
 			owner_lazy = () -> ATMCassetteType1Code.mmObject();
 		}
@@ -156,7 +158,7 @@ public class ATMCassetteType1Code extends ATMCassetteTypeCode {
 	 */
 	public static final MMCode mmReject = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reject";
 			owner_lazy = () -> ATMCassetteType1Code.mmObject();
 		}
@@ -179,7 +181,7 @@ public class ATMCassetteType1Code extends ATMCassetteTypeCode {
 	 */
 	public static final MMCode mmReplenishment = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Replenishment";
 			owner_lazy = () -> ATMCassetteType1Code.mmObject();
 		}
@@ -202,7 +204,7 @@ public class ATMCassetteType1Code extends ATMCassetteTypeCode {
 	 */
 	public static final MMCode mmRetract = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Retract";
 			owner_lazy = () -> ATMCassetteType1Code.mmObject();
 		}
@@ -211,12 +213,11 @@ public class ATMCassetteType1Code extends ATMCassetteTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ATMCassetteType1Code";
 				definition = "Type of cassette.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ATMCassetteType1Code.mmIn, com.tools20022.repository.codeset.ATMCassetteType1Code.mmOut, com.tools20022.repository.codeset.ATMCassetteType1Code.mmRecycling,
-						com.tools20022.repository.codeset.ATMCassetteType1Code.mmReject, com.tools20022.repository.codeset.ATMCassetteType1Code.mmReplenishment, com.tools20022.repository.codeset.ATMCassetteType1Code.mmRetract);
+				code_lazy = () -> Arrays.asList(ATMCassetteType1Code.mmIn, ATMCassetteType1Code.mmOut, ATMCassetteType1Code.mmRecycling, ATMCassetteType1Code.mmReject, ATMCassetteType1Code.mmReplenishment, ATMCassetteType1Code.mmRetract);
 				trace_lazy = () -> ATMCassetteTypeCode.mmObject();
 			}
 		});

@@ -20,10 +20,12 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.Max70Text;
 import com.tools20022.repository.datatype.Min2Max3AlphaText;
 import com.tools20022.repository.entity.CardholderRole;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -129,7 +131,7 @@ public class AntiMoneyLaundering1 {
 			componentContext_lazy = () -> AntiMoneyLaundering1.mmObject();
 			isDerived = false;
 			xmlTag = "SndrNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SenderName";
 			definition = "Name of the sender.";
 			maxOccurs = 1;
@@ -169,7 +171,7 @@ public class AntiMoneyLaundering1 {
 			componentContext_lazy = () -> AntiMoneyLaundering1.mmObject();
 			isDerived = false;
 			xmlTag = "SndrAdr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SenderAddress";
 			definition = "Address of the sender.";
 			maxOccurs = 1;
@@ -211,7 +213,7 @@ public class AntiMoneyLaundering1 {
 			componentContext_lazy = () -> AntiMoneyLaundering1.mmObject();
 			isDerived = false;
 			xmlTag = "SndrNtlIdr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SenderNationalIdentifier";
 			definition = "National identifier number of the sender.";
 			maxOccurs = 1;
@@ -254,7 +256,7 @@ public class AntiMoneyLaundering1 {
 			componentContext_lazy = () -> AntiMoneyLaundering1.mmObject();
 			isDerived = false;
 			xmlTag = "NtlIdrCtry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NationalIdentifierCountry";
 			definition = "Country of the national identifier (ISO 3166-1 alpha-2 or alpha-3).";
 			maxOccurs = 1;
@@ -295,7 +297,7 @@ public class AntiMoneyLaundering1 {
 			componentContext_lazy = () -> AntiMoneyLaundering1.mmObject();
 			isDerived = false;
 			xmlTag = "SndrPsptNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SenderPassportNumber";
 			definition = "Passport number of the sender.";
 			maxOccurs = 1;
@@ -338,7 +340,7 @@ public class AntiMoneyLaundering1 {
 			componentContext_lazy = () -> AntiMoneyLaundering1.mmObject();
 			isDerived = false;
 			xmlTag = "PsptIssgCtry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PassportIssuingCountry";
 			definition = "Country issuing the passport (ISO 3166-1 alpha-2 or alpha-3).";
 			maxOccurs = 1;
@@ -379,7 +381,7 @@ public class AntiMoneyLaundering1 {
 			componentContext_lazy = () -> AntiMoneyLaundering1.mmObject();
 			isDerived = false;
 			xmlTag = "SndrTaxIdr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SenderTaxIdentifier";
 			definition = "Tax identifier of the sender.";
 			maxOccurs = 1;
@@ -421,7 +423,7 @@ public class AntiMoneyLaundering1 {
 			componentContext_lazy = () -> AntiMoneyLaundering1.mmObject();
 			isDerived = false;
 			xmlTag = "TaxCtry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxCountry";
 			definition = "Country of the tax (ISO 3166-1 alpha-2 or alpha-3).";
 			maxOccurs = 1;
@@ -462,7 +464,7 @@ public class AntiMoneyLaundering1 {
 			componentContext_lazy = () -> AntiMoneyLaundering1.mmObject();
 			isDerived = false;
 			xmlTag = "SndrCstmrIdr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SenderCustomerIdentifier";
 			definition = "Customer identifier of the sender.";
 			maxOccurs = 1;
@@ -502,7 +504,7 @@ public class AntiMoneyLaundering1 {
 			componentContext_lazy = () -> AntiMoneyLaundering1.mmObject();
 			isDerived = false;
 			xmlTag = "SndrDtAndPlcOfBirth";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SenderDateAndPlaceOfBirth";
 			definition = "Date and place of birth of the sender.";
 			maxOccurs = 1;
@@ -544,7 +546,7 @@ public class AntiMoneyLaundering1 {
 			componentContext_lazy = () -> AntiMoneyLaundering1.mmObject();
 			isDerived = false;
 			xmlTag = "RcvrNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceiverName";
 			definition = "Name of the receiver.";
 			maxOccurs = 1;
@@ -586,7 +588,7 @@ public class AntiMoneyLaundering1 {
 			componentContext_lazy = () -> AntiMoneyLaundering1.mmObject();
 			isDerived = false;
 			xmlTag = "TxRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionReference";
 			definition = "Unique transaction reference number for sender and the receiver.";
 			maxOccurs = 1;
@@ -598,15 +600,12 @@ public class AntiMoneyLaundering1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AntiMoneyLaundering1.mmSenderName, com.tools20022.repository.msg.AntiMoneyLaundering1.mmSenderAddress,
-						com.tools20022.repository.msg.AntiMoneyLaundering1.mmSenderNationalIdentifier, com.tools20022.repository.msg.AntiMoneyLaundering1.mmNationalIdentifierCountry,
-						com.tools20022.repository.msg.AntiMoneyLaundering1.mmSenderPassportNumber, com.tools20022.repository.msg.AntiMoneyLaundering1.mmPassportIssuingCountry,
-						com.tools20022.repository.msg.AntiMoneyLaundering1.mmSenderTaxIdentifier, com.tools20022.repository.msg.AntiMoneyLaundering1.mmTaxCountry,
-						com.tools20022.repository.msg.AntiMoneyLaundering1.mmSenderCustomerIdentifier, com.tools20022.repository.msg.AntiMoneyLaundering1.mmSenderDateAndPlaceOfBirth,
-						com.tools20022.repository.msg.AntiMoneyLaundering1.mmReceiverName, com.tools20022.repository.msg.AntiMoneyLaundering1.mmTransactionReference);
+				messageElement_lazy = () -> Arrays.asList(AntiMoneyLaundering1.mmSenderName, AntiMoneyLaundering1.mmSenderAddress, AntiMoneyLaundering1.mmSenderNationalIdentifier, AntiMoneyLaundering1.mmNationalIdentifierCountry,
+						AntiMoneyLaundering1.mmSenderPassportNumber, AntiMoneyLaundering1.mmPassportIssuingCountry, AntiMoneyLaundering1.mmSenderTaxIdentifier, AntiMoneyLaundering1.mmTaxCountry,
+						AntiMoneyLaundering1.mmSenderCustomerIdentifier, AntiMoneyLaundering1.mmSenderDateAndPlaceOfBirth, AntiMoneyLaundering1.mmReceiverName, AntiMoneyLaundering1.mmTransactionReference);
 				trace_lazy = () -> CardholderRole.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AntiMoneyLaundering1";
 				definition = "Information requested against money laundering for a transfer transaction.";
 			}

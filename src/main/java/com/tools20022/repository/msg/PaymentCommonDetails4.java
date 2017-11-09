@@ -20,10 +20,15 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.DateAndDateTimeChoice;
 import com.tools20022.repository.choice.PaymentOrigin1Choice;
 import com.tools20022.repository.codeset.CreditDebitCode;
+import com.tools20022.repository.entity.Entry;
+import com.tools20022.repository.entity.Payment;
+import com.tools20022.repository.entity.PaymentExecution;
 import com.tools20022.repository.entity.PaymentInstruction;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -113,7 +118,7 @@ public class PaymentCommonDetails4 {
 			componentContext_lazy = () -> PaymentCommonDetails4.mmObject();
 			isDerived = false;
 			xmlTag = "PmtFr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentFrom";
 			definition = "Origin of the payment (be it a member or a system or both).";
 			maxOccurs = 1;
@@ -155,7 +160,7 @@ public class PaymentCommonDetails4 {
 			componentContext_lazy = () -> PaymentCommonDetails4.mmObject();
 			isDerived = false;
 			xmlTag = "PmtTo";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentTo";
 			definition = "Destination of the payment (be it a member or a system or both).";
 			maxOccurs = 1;
@@ -198,11 +203,11 @@ public class PaymentCommonDetails4 {
 	 */
 	public static final MMMessageAssociationEnd mmCommonInstructionStatus = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.mmPaymentStatus;
+			businessElementTrace_lazy = () -> Payment.mmPaymentStatus;
 			componentContext_lazy = () -> PaymentCommonDetails4.mmObject();
 			isDerived = false;
 			xmlTag = "CmonInstrSts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommonInstructionStatus";
 			definition = "Status of a transfer.";
 			maxOccurs = 1;
@@ -250,11 +255,11 @@ public class PaymentCommonDetails4 {
 	 */
 	public static final MMMessageAttribute mmTransferValueDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Entry.mmValueDate;
+			businessElementTrace_lazy = () -> Entry.mmValueDate;
 			componentContext_lazy = () -> PaymentCommonDetails4.mmObject();
 			isDerived = false;
 			xmlTag = "TrfValDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransferValueDate";
 			definition = "Date and time at which the cash is at the disposal of the credit account owner, or ceases to be at the disposal of the debit account owner.";
 			maxOccurs = 1;
@@ -301,11 +306,11 @@ public class PaymentCommonDetails4 {
 	 */
 	public static final MMMessageAttribute mmEntryDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Entry.mmEntryDate;
+			businessElementTrace_lazy = () -> Entry.mmEntryDate;
 			componentContext_lazy = () -> PaymentCommonDetails4.mmObject();
 			isDerived = false;
 			xmlTag = "NtryDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EntryDate";
 			definition = "Date and time at which an entry is posted to an account on the account servicer's books.";
 			maxOccurs = 1;
@@ -350,11 +355,11 @@ public class PaymentCommonDetails4 {
 	 */
 	public static final MMMessageAttribute mmCreditDebitIndicator = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Entry.mmCreditDebitIndicator;
+			businessElementTrace_lazy = () -> Entry.mmCreditDebitIndicator;
 			componentContext_lazy = () -> PaymentCommonDetails4.mmObject();
 			isDerived = false;
 			xmlTag = "CdtDbtInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditDebitIndicator";
 			definition = "Indicates whether the payment instruction is a debit or a credit.";
 			maxOccurs = 1;
@@ -400,11 +405,11 @@ public class PaymentCommonDetails4 {
 	 */
 	public static final MMMessageAssociationEnd mmPaymentMethod = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentExecution.mmPayment;
+			businessElementTrace_lazy = () -> PaymentExecution.mmPayment;
 			componentContext_lazy = () -> PaymentCommonDetails4.mmObject();
 			isDerived = false;
 			xmlTag = "PmtMtd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentMethod";
 			definition = "Indicates the message or event from which an instruction has been initiated.";
 			maxOccurs = 1;
@@ -417,12 +422,11 @@ public class PaymentCommonDetails4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentCommonDetails4.mmPaymentFrom, com.tools20022.repository.msg.PaymentCommonDetails4.mmPaymentTo,
-						com.tools20022.repository.msg.PaymentCommonDetails4.mmCommonInstructionStatus, com.tools20022.repository.msg.PaymentCommonDetails4.mmTransferValueDate,
-						com.tools20022.repository.msg.PaymentCommonDetails4.mmEntryDate, com.tools20022.repository.msg.PaymentCommonDetails4.mmCreditDebitIndicator, com.tools20022.repository.msg.PaymentCommonDetails4.mmPaymentMethod);
+				messageElement_lazy = () -> Arrays.asList(PaymentCommonDetails4.mmPaymentFrom, PaymentCommonDetails4.mmPaymentTo, PaymentCommonDetails4.mmCommonInstructionStatus, PaymentCommonDetails4.mmTransferValueDate,
+						PaymentCommonDetails4.mmEntryDate, PaymentCommonDetails4.mmCreditDebitIndicator, PaymentCommonDetails4.mmPaymentMethod);
 				trace_lazy = () -> PaymentInstruction.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "PaymentCommonDetails4";
 				definition = "Common detailed payment instruction information.";
 			}

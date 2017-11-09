@@ -19,7 +19,9 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -114,7 +116,7 @@ public class Reference15 {
 			componentContext_lazy = () -> Reference15.mmObject();
 			isDerived = false;
 			xmlTag = "OrdrMassStsReqId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrderMassStatusRequestIdentification";
 			definition = "Identification assigned by issuer of Mass Status Request to uniquely identify the request.";
 			maxOccurs = 1;
@@ -157,7 +159,7 @@ public class Reference15 {
 			componentContext_lazy = () -> Reference15.mmObject();
 			isDerived = false;
 			xmlTag = "OrdrStsReqId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrderStatusRequestIdentification";
 			definition = "Identification assigned by issuer of Order Status Request to uniquely identify the request.";
 			maxOccurs = 1;
@@ -197,7 +199,7 @@ public class Reference15 {
 			componentContext_lazy = () -> Reference15.mmObject();
 			isDerived = false;
 			xmlTag = "OrdrId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrderIdentification";
 			definition = "Unique identifier for Order as assigned by sell-side.";
 			maxOccurs = 1;
@@ -243,7 +245,7 @@ public class Reference15 {
 			componentContext_lazy = () -> Reference15.mmObject();
 			isDerived = false;
 			xmlTag = "HstCrossId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HostCrossIdentification";
 			definition = "Host assigned entity identification that can be used to reference all components of a cross; sides + strategy + legs. The HostCrossID will be used to link together components of the Cross Order. For example, each individual Notice of Execution associated with the order will carry HostCrossID in order to tie back to the original cross order.";
 			maxOccurs = 1;
@@ -285,7 +287,7 @@ public class Reference15 {
 			componentContext_lazy = () -> Reference15.mmObject();
 			isDerived = false;
 			xmlTag = "CrossOrdrId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CrossOrderIdentification";
 			definition = "Identifier for a cross order. Must be unique during a given trading day.";
 			maxOccurs = 1;
@@ -330,7 +332,7 @@ public class Reference15 {
 			componentContext_lazy = () -> Reference15.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlCrossOrdrId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalCrossOrderIdentification";
 			definition = "Cross Identification of the previous cross order (not the initial cross order of the day) as assigned by the institution, used to identify the previous cross order in Cross Order Modification Request and Cross Order Cancellation Request.";
 			maxOccurs = 1;
@@ -370,7 +372,7 @@ public class Reference15 {
 			componentContext_lazy = () -> Reference15.mmObject();
 			isDerived = false;
 			xmlTag = "ClntOrdrId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClientOrderIdentification";
 			definition = "Unique identifier for Order as assigned by the buy-side.";
 			maxOccurs = 1;
@@ -411,7 +413,7 @@ public class Reference15 {
 			componentContext_lazy = () -> Reference15.mmObject();
 			isDerived = false;
 			xmlTag = "ScndryOrdrId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecondaryOrderIdentification";
 			definition = "Identifier assigned by the party which accepts the order.";
 			maxOccurs = 1;
@@ -452,7 +454,7 @@ public class Reference15 {
 			componentContext_lazy = () -> Reference15.mmObject();
 			isDerived = false;
 			xmlTag = "ScndryClntOrdrId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecondaryClientOrderIdentification";
 			definition = "Identifier assigned by the party which originates the order.";
 			maxOccurs = 1;
@@ -464,12 +466,11 @@ public class Reference15 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Reference15.mmOrderMassStatusRequestIdentification, com.tools20022.repository.msg.Reference15.mmOrderStatusRequestIdentification,
-						com.tools20022.repository.msg.Reference15.mmOrderIdentification, com.tools20022.repository.msg.Reference15.mmHostCrossIdentification, com.tools20022.repository.msg.Reference15.mmCrossOrderIdentification,
-						com.tools20022.repository.msg.Reference15.mmOriginalCrossOrderIdentification, com.tools20022.repository.msg.Reference15.mmClientOrderIdentification,
-						com.tools20022.repository.msg.Reference15.mmSecondaryOrderIdentification, com.tools20022.repository.msg.Reference15.mmSecondaryClientOrderIdentification);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(Reference15.mmOrderMassStatusRequestIdentification, Reference15.mmOrderStatusRequestIdentification, Reference15.mmOrderIdentification, Reference15.mmHostCrossIdentification,
+						Reference15.mmCrossOrderIdentification, Reference15.mmOriginalCrossOrderIdentification, Reference15.mmClientOrderIdentification, Reference15.mmSecondaryOrderIdentification,
+						Reference15.mmSecondaryClientOrderIdentification);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Reference15";
 				definition = "Additional references linked to the order status.";
 			}

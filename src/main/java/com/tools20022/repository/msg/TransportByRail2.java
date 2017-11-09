@@ -19,8 +19,12 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.entity.PartyName;
+import com.tools20022.repository.entity.Transport;
 import com.tools20022.repository.entity.TransportByRail;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -117,14 +121,14 @@ public class TransportByRail2 {
 	 */
 	public static final MMMessageAttribute mmPlaceOfReceipt = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Transport.mmPlaceOfDeparture;
+			businessElementTrace_lazy = () -> Transport.mmPlaceOfDeparture;
 			componentContext_lazy = () -> TransportByRail2.mmObject();
 			isDerived = false;
 			xmlTag = "PlcOfRct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceOfReceipt";
 			definition = "Identifies the location where the goods are received for transportation.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransportByRail4.mmPlaceOfReceipt);
+			nextVersions_lazy = () -> Arrays.asList(TransportByRail4.mmPlaceOfReceipt);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -173,14 +177,14 @@ public class TransportByRail2 {
 	 */
 	public static final MMMessageAttribute mmPlaceOfDelivery = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Transport.mmPlaceOfDestination;
+			businessElementTrace_lazy = () -> Transport.mmPlaceOfDestination;
 			componentContext_lazy = () -> TransportByRail2.mmObject();
 			isDerived = false;
 			xmlTag = "PlcOfDlvry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceOfDelivery";
 			definition = "Identifies the location of delivery of the goods.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransportByRail4.mmPlaceOfDelivery);
+			nextVersions_lazy = () -> Arrays.asList(TransportByRail4.mmPlaceOfDelivery);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -232,14 +236,14 @@ public class TransportByRail2 {
 	 */
 	public static final MMMessageAttribute mmRailCarrierName = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyName.mmName;
+			businessElementTrace_lazy = () -> PartyName.mmName;
 			componentContext_lazy = () -> TransportByRail2.mmObject();
 			isDerived = false;
 			xmlTag = "RailCrrierNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RailCarrierName";
 			definition = "Identifies the party that is responsible for the conveyance of the goods from one place to another.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransportByRail4.mmRailCarrierName);
+			nextVersions_lazy = () -> Arrays.asList(TransportByRail4.mmRailCarrierName);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -249,11 +253,10 @@ public class TransportByRail2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransportByRail2.mmPlaceOfReceipt, com.tools20022.repository.msg.TransportByRail2.mmPlaceOfDelivery,
-						com.tools20022.repository.msg.TransportByRail2.mmRailCarrierName);
+				messageElement_lazy = () -> Arrays.asList(TransportByRail2.mmPlaceOfReceipt, TransportByRail2.mmPlaceOfDelivery, TransportByRail2.mmRailCarrierName);
 				trace_lazy = () -> TransportByRail.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TransportByRail2";
 				definition = "Information related to the transportation of goods by rail.";
 				nextVersions_lazy = () -> Arrays.asList(TransportByRail4.mmObject());

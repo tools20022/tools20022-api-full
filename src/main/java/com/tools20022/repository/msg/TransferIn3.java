@@ -19,9 +19,12 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.sese.TransferInCancellationRequestV02;
 import com.tools20022.repository.entity.InvestmentAccount;
 import com.tools20022.repository.entity.InvestmentFundClass;
 import com.tools20022.repository.entity.SecuritiesTransfer;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -122,7 +125,7 @@ public class TransferIn3 {
 			componentContext_lazy = () -> TransferIn3.mmObject();
 			isDerived = false;
 			xmlTag = "TrfDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransferDetails";
 			definition = "General information related to the transfer of a financial instrument.";
 			maxOccurs = 1;
@@ -169,7 +172,7 @@ public class TransferIn3 {
 			componentContext_lazy = () -> TransferIn3.mmObject();
 			isDerived = false;
 			xmlTag = "FinInstrmDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentDetails";
 			definition = "Information related to the financial instrument to be received.";
 			maxOccurs = 1;
@@ -218,7 +221,7 @@ public class TransferIn3 {
 			componentContext_lazy = () -> TransferIn3.mmObject();
 			isDerived = false;
 			xmlTag = "AcctDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountDetails";
 			definition = "Information related to the account into which the financial instrument is to be received.";
 			maxOccurs = 1;
@@ -261,11 +264,11 @@ public class TransferIn3 {
 	 */
 	public static final MMMessageAssociationEnd mmSettlementDetails = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTransfer.mmRelatedSettlement;
+			businessElementTrace_lazy = () -> SecuritiesTransfer.mmRelatedSettlement;
 			componentContext_lazy = () -> TransferIn3.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementDetails";
 			definition = "Information related to the delivering side of the transfer.";
 			maxOccurs = 1;
@@ -307,7 +310,7 @@ public class TransferIn3 {
 			componentContext_lazy = () -> TransferIn3.mmObject();
 			isDerived = false;
 			xmlTag = "Xtnsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Extension";
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
 			minOccurs = 0;
@@ -319,12 +322,11 @@ public class TransferIn3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransferIn3.mmTransferDetails, com.tools20022.repository.msg.TransferIn3.mmFinancialInstrumentDetails,
-						com.tools20022.repository.msg.TransferIn3.mmAccountDetails, com.tools20022.repository.msg.TransferIn3.mmSettlementDetails, com.tools20022.repository.msg.TransferIn3.mmExtension);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.TransferInCancellationRequestV02.mmCancellationByTransferInDetails);
+				messageElement_lazy = () -> Arrays.asList(TransferIn3.mmTransferDetails, TransferIn3.mmFinancialInstrumentDetails, TransferIn3.mmAccountDetails, TransferIn3.mmSettlementDetails, TransferIn3.mmExtension);
+				messageBuildingBlock_lazy = () -> Arrays.asList(TransferInCancellationRequestV02.mmCancellationByTransferInDetails);
 				trace_lazy = () -> SecuritiesTransfer.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TransferIn3";
 				definition = "Information about a transfer in transaction.";
 				nextVersions_lazy = () -> Arrays.asList(TransferIn5.mmObject());

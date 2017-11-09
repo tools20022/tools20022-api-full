@@ -19,12 +19,15 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.DiscountOrChargeType1Choice;
 import com.tools20022.repository.datatype.CurrencyAndAmount;
 import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.datatype.PercentageRate;
 import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.Adjustment;
+import com.tools20022.repository.entity.LineItem;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -133,14 +136,14 @@ public class LineItemAllowanceCharge1 {
 	 */
 	public static final MMMessageAttribute mmChargeIndicator = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Adjustment.mmChargeIndicator;
+			businessElementTrace_lazy = () -> Adjustment.mmChargeIndicator;
 			componentContext_lazy = () -> LineItemAllowanceCharge1.mmObject();
 			isDerived = false;
 			xmlTag = "ChrgInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChargeIndicator";
 			definition = "Indication of whether or not this allowance charge is a charge.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LineItemAllowanceCharge2.mmChargeIndicator);
+			nextVersions_lazy = () -> Arrays.asList(LineItemAllowanceCharge2.mmChargeIndicator);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
@@ -190,14 +193,14 @@ public class LineItemAllowanceCharge1 {
 	 */
 	public static final MMMessageAttribute mmActualAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Adjustment.mmAmount;
+			businessElementTrace_lazy = () -> Adjustment.mmAmount;
 			componentContext_lazy = () -> LineItemAllowanceCharge1.mmObject();
 			isDerived = false;
 			xmlTag = "ActlAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ActualAmount";
 			definition = "Actual monetary value of this allowance charge.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LineItemAllowanceCharge2.mmActualAmount);
+			nextVersions_lazy = () -> Arrays.asList(LineItemAllowanceCharge2.mmActualAmount);
 			minOccurs = 0;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
@@ -245,14 +248,14 @@ public class LineItemAllowanceCharge1 {
 	 */
 	public static final MMMessageAttribute mmBasisQuantity = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.LineItem.mmBilledQuantity;
+			businessElementTrace_lazy = () -> LineItem.mmBilledQuantity;
 			componentContext_lazy = () -> LineItemAllowanceCharge1.mmObject();
 			isDerived = false;
 			xmlTag = "BsisQty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BasisQuantity";
 			definition = "Quantity on which this allowance charge is based.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LineItemAllowanceCharge2.mmBasisQuantity);
+			nextVersions_lazy = () -> Arrays.asList(LineItemAllowanceCharge2.mmBasisQuantity);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.Quantity3.mmObject();
@@ -302,14 +305,14 @@ public class LineItemAllowanceCharge1 {
 	 */
 	public static final MMMessageAttribute mmCalculationPercent = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Adjustment.mmChargeRate;
+			businessElementTrace_lazy = () -> Adjustment.mmChargeRate;
 			componentContext_lazy = () -> LineItemAllowanceCharge1.mmObject();
 			isDerived = false;
 			xmlTag = "ClctnPct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CalculationPercent";
 			definition = "Percentage applied to calculate this allowance charge.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LineItemAllowanceCharge2.mmCalculationPercent);
+			nextVersions_lazy = () -> Arrays.asList(LineItemAllowanceCharge2.mmCalculationPercent);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
@@ -357,10 +360,10 @@ public class LineItemAllowanceCharge1 {
 			componentContext_lazy = () -> LineItemAllowanceCharge1.mmObject();
 			isDerived = false;
 			xmlTag = "SeqNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SequenceNumber";
 			definition = "Specifies the order in which the allowance or charge is applied.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LineItemAllowanceCharge2.mmSequenceNumber);
+			nextVersions_lazy = () -> Arrays.asList(LineItemAllowanceCharge2.mmSequenceNumber);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
@@ -410,14 +413,14 @@ public class LineItemAllowanceCharge1 {
 	 */
 	public static final MMMessageAttribute mmReason = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Adjustment.mmReason;
+			businessElementTrace_lazy = () -> Adjustment.mmReason;
 			componentContext_lazy = () -> LineItemAllowanceCharge1.mmObject();
 			isDerived = false;
 			xmlTag = "Rsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reason";
 			definition = "Reason, expressed as text, for this allowance charge.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LineItemAllowanceCharge2.mmReason);
+			nextVersions_lazy = () -> Arrays.asList(LineItemAllowanceCharge2.mmReason);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DiscountOrChargeType1Choice.mmObject();
@@ -427,12 +430,11 @@ public class LineItemAllowanceCharge1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LineItemAllowanceCharge1.mmChargeIndicator, com.tools20022.repository.msg.LineItemAllowanceCharge1.mmActualAmount,
-						com.tools20022.repository.msg.LineItemAllowanceCharge1.mmBasisQuantity, com.tools20022.repository.msg.LineItemAllowanceCharge1.mmCalculationPercent,
-						com.tools20022.repository.msg.LineItemAllowanceCharge1.mmSequenceNumber, com.tools20022.repository.msg.LineItemAllowanceCharge1.mmReason);
+				messageElement_lazy = () -> Arrays.asList(LineItemAllowanceCharge1.mmChargeIndicator, LineItemAllowanceCharge1.mmActualAmount, LineItemAllowanceCharge1.mmBasisQuantity, LineItemAllowanceCharge1.mmCalculationPercent,
+						LineItemAllowanceCharge1.mmSequenceNumber, LineItemAllowanceCharge1.mmReason);
 				trace_lazy = () -> Adjustment.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "LineItemAllowanceCharge1";
 				definition = "Pricing component, such as a service, promotion, allowance or charge, for this line item.";
 				nextVersions_lazy = () -> Arrays.asList(LineItemAllowanceCharge2.mmObject());

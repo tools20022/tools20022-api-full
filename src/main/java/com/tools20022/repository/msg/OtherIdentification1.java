@@ -20,10 +20,14 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.IdentificationSource3Choice;
 import com.tools20022.repository.datatype.Max16Text;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.entity.GenericIdentification;
+import com.tools20022.repository.entity.Scheme;
 import com.tools20022.repository.entity.SecuritiesIdentification;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -118,14 +122,14 @@ public class OtherIdentification1 {
 	 */
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmIdentification;
+			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> OtherIdentification1.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Identification of a security.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OtherIdentification4.mmIdentification);
+			nextVersions_lazy = () -> Arrays.asList(OtherIdentification4.mmIdentification);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -166,11 +170,11 @@ public class OtherIdentification1 {
 	 */
 	public static final MMMessageAttribute mmSuffix = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesIdentification.mmIdentificationSuffix;
+			businessElementTrace_lazy = () -> SecuritiesIdentification.mmIdentificationSuffix;
 			componentContext_lazy = () -> OtherIdentification1.mmObject();
 			isDerived = false;
 			xmlTag = "Sfx";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Suffix";
 			definition = "Identifies the suffix of the security identification.";
 			maxOccurs = 1;
@@ -221,14 +225,14 @@ public class OtherIdentification1 {
 	 */
 	public static final MMMessageAssociationEnd mmType = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Scheme.mmIdentification;
+			businessElementTrace_lazy = () -> Scheme.mmIdentification;
 			componentContext_lazy = () -> OtherIdentification1.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Type of the identification.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OtherIdentification4.mmType);
+			nextVersions_lazy = () -> Arrays.asList(OtherIdentification4.mmType);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -239,11 +243,10 @@ public class OtherIdentification1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OtherIdentification1.mmIdentification, com.tools20022.repository.msg.OtherIdentification1.mmSuffix,
-						com.tools20022.repository.msg.OtherIdentification1.mmType);
+				messageElement_lazy = () -> Arrays.asList(OtherIdentification1.mmIdentification, OtherIdentification1.mmSuffix, OtherIdentification1.mmType);
 				trace_lazy = () -> SecuritiesIdentification.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OtherIdentification1";
 				definition = "Other accepted financial instrument's identification than ISIN.";
 				nextVersions_lazy = () -> Arrays.asList(OtherIdentification4.mmObject());

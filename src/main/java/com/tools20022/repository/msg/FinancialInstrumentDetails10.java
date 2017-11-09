@@ -19,7 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.semt.IntraPositionMovementPostingReportV03;
+import com.tools20022.repository.entity.SecuritiesQuantity;
 import com.tools20022.repository.entity.Security;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -122,11 +126,11 @@ public class FinancialInstrumentDetails10 {
 	 */
 	public static final MMMessageAssociationEnd mmFinancialInstrumentIdentification = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmIdentification;
+			businessElementTrace_lazy = () -> Security.mmIdentification;
 			componentContext_lazy = () -> FinancialInstrumentDetails10.mmObject();
 			isDerived = false;
 			xmlTag = "FinInstrmId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentIdentification";
 			definition = "Financial instruments representing a sum of rights of the investor vis-a-vis the issuer.";
 			maxOccurs = 1;
@@ -173,7 +177,7 @@ public class FinancialInstrumentDetails10 {
 			componentContext_lazy = () -> FinancialInstrumentDetails10.mmObject();
 			isDerived = false;
 			xmlTag = "FinInstrmAttrbts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentAttributes";
 			definition = "Elements characterising a financial instrument.";
 			maxOccurs = 1;
@@ -216,11 +220,11 @@ public class FinancialInstrumentDetails10 {
 	 */
 	public static final MMMessageAssociationEnd mmSubBalance = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmRelatedSubBalance;
+			businessElementTrace_lazy = () -> SecuritiesQuantity.mmRelatedSubBalance;
 			componentContext_lazy = () -> FinancialInstrumentDetails10.mmObject();
 			isDerived = false;
 			xmlTag = "SubBal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubBalance";
 			definition = "Identification of the sub-balance.";
 			minOccurs = 1;
@@ -232,12 +236,11 @@ public class FinancialInstrumentDetails10 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrumentDetails10.mmFinancialInstrumentIdentification,
-						com.tools20022.repository.msg.FinancialInstrumentDetails10.mmFinancialInstrumentAttributes, com.tools20022.repository.msg.FinancialInstrumentDetails10.mmSubBalance);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.IntraPositionMovementPostingReportV03.mmFinancialInstrument);
+				messageElement_lazy = () -> Arrays.asList(FinancialInstrumentDetails10.mmFinancialInstrumentIdentification, FinancialInstrumentDetails10.mmFinancialInstrumentAttributes, FinancialInstrumentDetails10.mmSubBalance);
+				messageBuildingBlock_lazy = () -> Arrays.asList(IntraPositionMovementPostingReportV03.mmFinancialInstrument);
 				trace_lazy = () -> Security.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FinancialInstrumentDetails10";
 				definition = "Reporting per financial instrument.";
 				nextVersions_lazy = () -> Arrays.asList(FinancialInstrumentDetails14.mmObject());

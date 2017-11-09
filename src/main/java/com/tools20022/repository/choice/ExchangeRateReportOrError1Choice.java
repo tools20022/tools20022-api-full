@@ -19,6 +19,8 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.CurrencyExchangeReport3;
 import com.tools20022.repository.msg.ErrorHandling3;
 import java.util.Arrays;
@@ -97,7 +99,7 @@ public class ExchangeRateReportOrError1Choice {
 			componentContext_lazy = () -> ExchangeRateReportOrError1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "CcyXchgRpt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrencyExchangeReport";
 			definition = "Reports on currency exchange information.";
 			minOccurs = 1;
@@ -140,7 +142,7 @@ public class ExchangeRateReportOrError1Choice {
 			componentContext_lazy = () -> ExchangeRateReportOrError1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "OprlErr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OperationalError";
 			definition = "Indicates that an operational error has been issued during the processing of the related request.";
 			minOccurs = 1;
@@ -152,9 +154,9 @@ public class ExchangeRateReportOrError1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ExchangeRateReportOrError1Choice.mmCurrencyExchangeReport, com.tools20022.repository.choice.ExchangeRateReportOrError1Choice.mmOperationalError);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(ExchangeRateReportOrError1Choice.mmCurrencyExchangeReport, ExchangeRateReportOrError1Choice.mmOperationalError);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ExchangeRateReportOrError1Choice";
 				definition = "It is used to provide information on static data maintained by the transaction administrator and related to currency exchange details as maintained for system operations by the transaction administrator.";
 			}

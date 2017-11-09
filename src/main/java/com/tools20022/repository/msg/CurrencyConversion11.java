@@ -20,9 +20,11 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CurrencyConversionResponse3Code;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.CurrencyExchange;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -113,10 +115,10 @@ public class CurrencyConversion11 {
 			componentContext_lazy = () -> CurrencyConversion11.mmObject();
 			isDerived = false;
 			xmlTag = "Rslt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Result";
 			definition = "Result of a requested currency conversion.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CurrencyConversion7.mmResult;
+			previousVersion_lazy = () -> CurrencyConversion7.mmResult;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyConversionResponse3Code.mmObject();
@@ -161,10 +163,10 @@ public class CurrencyConversion11 {
 			componentContext_lazy = () -> CurrencyConversion11.mmObject();
 			isDerived = false;
 			xmlTag = "RsltRsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ResultReason";
 			definition = "Plain text explaining the result of the  currency conversion request.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CurrencyConversion7.mmResultReason;
+			previousVersion_lazy = () -> CurrencyConversion7.mmResultReason;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -207,10 +209,10 @@ public class CurrencyConversion11 {
 			componentContext_lazy = () -> CurrencyConversion11.mmObject();
 			isDerived = false;
 			xmlTag = "ConvsDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConversionDetails";
 			definition = "Information about the conversion of currency.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CurrencyConversion7.mmConversionDetails;
+			previousVersion_lazy = () -> CurrencyConversion7.mmConversionDetails;
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.CurrencyConversion12.mmObject();
@@ -220,11 +222,10 @@ public class CurrencyConversion11 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CurrencyConversion11.mmResult, com.tools20022.repository.msg.CurrencyConversion11.mmResultReason,
-						com.tools20022.repository.msg.CurrencyConversion11.mmConversionDetails);
+				messageElement_lazy = () -> Arrays.asList(CurrencyConversion11.mmResult, CurrencyConversion11.mmResultReason, CurrencyConversion11.mmConversionDetails);
 				trace_lazy = () -> CurrencyExchange.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CurrencyConversion11";
 				definition = "Conversion between the currency of a card acceptor and the currency of a card issuer, provided by a dedicated service provider.";
 				previousVersion_lazy = () -> CurrencyConversion7.mmObject();

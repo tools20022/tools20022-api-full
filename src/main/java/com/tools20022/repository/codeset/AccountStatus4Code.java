@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.AccountStatusCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -83,7 +85,7 @@ public class AccountStatus4Code extends AccountStatusCode {
 	 */
 	public static final MMCode mmEnabled = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Enabled";
 			owner_lazy = () -> AccountStatus4Code.mmObject();
 		}
@@ -106,7 +108,7 @@ public class AccountStatus4Code extends AccountStatusCode {
 	 */
 	public static final MMCode mmDisabled = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Disabled";
 			owner_lazy = () -> AccountStatus4Code.mmObject();
 		}
@@ -129,7 +131,7 @@ public class AccountStatus4Code extends AccountStatusCode {
 	 */
 	public static final MMCode mmPending = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Pending";
 			owner_lazy = () -> AccountStatus4Code.mmObject();
 		}
@@ -152,7 +154,7 @@ public class AccountStatus4Code extends AccountStatusCode {
 	 */
 	public static final MMCode mmProForma = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProForma";
 			owner_lazy = () -> AccountStatus4Code.mmObject();
 		}
@@ -161,12 +163,11 @@ public class AccountStatus4Code extends AccountStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AccountStatus4Code";
 				definition = "Specifies the status of an account.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AccountStatus4Code.mmEnabled, com.tools20022.repository.codeset.AccountStatus4Code.mmDisabled,
-						com.tools20022.repository.codeset.AccountStatus4Code.mmPending, com.tools20022.repository.codeset.AccountStatus4Code.mmProForma);
+				code_lazy = () -> Arrays.asList(AccountStatus4Code.mmEnabled, AccountStatus4Code.mmDisabled, AccountStatus4Code.mmPending, AccountStatus4Code.mmProForma);
 				trace_lazy = () -> AccountStatusCode.mmObject();
 			}
 		});

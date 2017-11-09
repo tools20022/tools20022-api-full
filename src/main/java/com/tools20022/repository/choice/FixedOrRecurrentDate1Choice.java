@@ -20,7 +20,9 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ISODate;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.DateInformation1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -93,7 +95,7 @@ public class FixedOrRecurrentDate1Choice {
 			componentContext_lazy = () -> FixedOrRecurrentDate1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "FxdDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FixedDate";
 			definition = "Date on which the variation is triggered.";
 			maxOccurs = 1;
@@ -135,7 +137,7 @@ public class FixedOrRecurrentDate1Choice {
 			componentContext_lazy = () -> FixedOrRecurrentDate1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "RcrntDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RecurrentDate";
 			definition = "Details related to recurrent dates on which the variation is triggered.";
 			maxOccurs = 1;
@@ -148,9 +150,9 @@ public class FixedOrRecurrentDate1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.FixedOrRecurrentDate1Choice.mmFixedDate, com.tools20022.repository.choice.FixedOrRecurrentDate1Choice.mmRecurrentDate);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(FixedOrRecurrentDate1Choice.mmFixedDate, FixedOrRecurrentDate1Choice.mmRecurrentDate);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FixedOrRecurrentDate1Choice";
 				definition = "Choice between a fixed date and a recurring date.";
 			}

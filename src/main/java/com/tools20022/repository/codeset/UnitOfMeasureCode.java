@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.UnitOfMeasure1Code
+ * UnitOfMeasure1Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.UnitOfMeasure6Code
+ * UnitOfMeasure6Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -231,15 +242,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * UnitOfMeasureCode.mmLot}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.UnitOfMeasure1Code
- * UnitOfMeasure1Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.UnitOfMeasure6Code
- * UnitOfMeasure6Code}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -287,7 +289,7 @@ public class UnitOfMeasureCode {
 	 */
 	public static final MMCode mmKilogram = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Kilogram";
 			definition = "Basic unit of mass in the SI system, 1000 grams.";
 			owner_lazy = () -> UnitOfMeasureCode.mmObject();
@@ -320,7 +322,7 @@ public class UnitOfMeasureCode {
 	 */
 	public static final MMCode mmPiece = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Piece";
 			definition = "Standard length of cloth, wallpaper, as an item for sale or amount of a substance.";
 			owner_lazy = () -> UnitOfMeasureCode.mmObject();
@@ -353,7 +355,7 @@ public class UnitOfMeasureCode {
 	 */
 	public static final MMCode mmTon = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Ton";
 			definition = "Measure of weight, in Britain 2240lb (long ton)and in the US 2000lb (short ton).";
 			owner_lazy = () -> UnitOfMeasureCode.mmObject();
@@ -384,7 +386,7 @@ public class UnitOfMeasureCode {
 	 */
 	public static final MMCode mmMetre = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Metre";
 			definition = "Unit of length in the metric system, equal to 39.37 inches.";
 			owner_lazy = () -> UnitOfMeasureCode.mmObject();
@@ -414,7 +416,7 @@ public class UnitOfMeasureCode {
 	 */
 	public static final MMCode mmInch = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Inch";
 			definition = "Measure of length equal to 2.54 cm.";
 			owner_lazy = () -> UnitOfMeasureCode.mmObject();
@@ -444,7 +446,7 @@ public class UnitOfMeasureCode {
 	 */
 	public static final MMCode mmYard = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Yard";
 			definition = "Unit of length equal to 3 feet or 0.9144 metre.";
 			owner_lazy = () -> UnitOfMeasureCode.mmObject();
@@ -474,7 +476,7 @@ public class UnitOfMeasureCode {
 	 */
 	public static final MMCode mmGBGallon = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "GBGallon";
 			definition = "Unit of volume that is equal to 8 pints.";
 			owner_lazy = () -> UnitOfMeasureCode.mmObject();
@@ -504,7 +506,7 @@ public class UnitOfMeasureCode {
 	 */
 	public static final MMCode mmGram = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Gram";
 			definition = "Unit of measure that is equal to a 1,000th of a kilo.";
 			owner_lazy = () -> UnitOfMeasureCode.mmObject();
@@ -534,7 +536,7 @@ public class UnitOfMeasureCode {
 	 */
 	public static final MMCode mmCentimetre = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Centimetre";
 			definition = "One 100th part of a metre.";
 			owner_lazy = () -> UnitOfMeasureCode.mmObject();
@@ -564,7 +566,7 @@ public class UnitOfMeasureCode {
 	 */
 	public static final MMCode mmSquareMetre = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SquareMetre";
 			definition = "Measure of a surface, one metre by one metre.";
 			owner_lazy = () -> UnitOfMeasureCode.mmObject();
@@ -594,7 +596,7 @@ public class UnitOfMeasureCode {
 	 */
 	public static final MMCode mmFoot = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Foot";
 			definition = "Unit of length equal to 1/3 yard.";
 			owner_lazy = () -> UnitOfMeasureCode.mmObject();
@@ -624,7 +626,7 @@ public class UnitOfMeasureCode {
 	 */
 	public static final MMCode mmMile = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Mile";
 			definition = "Unit of length equal to 1,760 yards";
 			owner_lazy = () -> UnitOfMeasureCode.mmObject();
@@ -654,7 +656,7 @@ public class UnitOfMeasureCode {
 	 */
 	public static final MMCode mmSquareInch = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SquareInch";
 			definition = "Measure of a surface, one inch by one inch.";
 			owner_lazy = () -> UnitOfMeasureCode.mmObject();
@@ -684,7 +686,7 @@ public class UnitOfMeasureCode {
 	 */
 	public static final MMCode mmSquareFoot = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SquareFoot";
 			definition = "Measure of a surface, one foot by one foot.";
 			owner_lazy = () -> UnitOfMeasureCode.mmObject();
@@ -714,7 +716,7 @@ public class UnitOfMeasureCode {
 	 */
 	public static final MMCode mmSquareMile = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SquareMile";
 			definition = "Measure of a surface, one mile by one mile.";
 			owner_lazy = () -> UnitOfMeasureCode.mmObject();
@@ -744,7 +746,7 @@ public class UnitOfMeasureCode {
 	 */
 	public static final MMCode mmGBOunce = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "GBOunce";
 			definition = "Unit of weight equal to a sixteenth of a pound.";
 			owner_lazy = () -> UnitOfMeasureCode.mmObject();
@@ -774,7 +776,7 @@ public class UnitOfMeasureCode {
 	 */
 	public static final MMCode mmUSOunce = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "USOunce";
 			definition = "Unit of weight equal to a sixteenth of a pound.";
 			owner_lazy = () -> UnitOfMeasureCode.mmObject();
@@ -804,7 +806,7 @@ public class UnitOfMeasureCode {
 	 */
 	public static final MMCode mmGBPint = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "GBPint";
 			definition = "Unit of volume that is equal to 568 cubic centimetres.";
 			owner_lazy = () -> UnitOfMeasureCode.mmObject();
@@ -834,7 +836,7 @@ public class UnitOfMeasureCode {
 	 */
 	public static final MMCode mmUSPint = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "USPint";
 			definition = "Unit of volume that is equal to 473 cubic centimetres.";
 			owner_lazy = () -> UnitOfMeasureCode.mmObject();
@@ -864,7 +866,7 @@ public class UnitOfMeasureCode {
 	 */
 	public static final MMCode mmGBQuart = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "GBQuart";
 			definition = "Unit of volume that is equal to 2 pints.";
 			owner_lazy = () -> UnitOfMeasureCode.mmObject();
@@ -894,7 +896,7 @@ public class UnitOfMeasureCode {
 	 */
 	public static final MMCode mmUSQuart = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "USQuart";
 			definition = "Unit of volume that is equal to 2 pints.";
 			owner_lazy = () -> UnitOfMeasureCode.mmObject();
@@ -924,7 +926,7 @@ public class UnitOfMeasureCode {
 	 */
 	public static final MMCode mmUSGallon = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "USGallon";
 			definition = "Unit of volume that is equal to 8 pints.";
 			owner_lazy = () -> UnitOfMeasureCode.mmObject();
@@ -954,7 +956,7 @@ public class UnitOfMeasureCode {
 	 */
 	public static final MMCode mmMillimetre = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Millimetre";
 			definition = "Unit of measure that is a thousandth of one metre.";
 			owner_lazy = () -> UnitOfMeasureCode.mmObject();
@@ -984,7 +986,7 @@ public class UnitOfMeasureCode {
 	 */
 	public static final MMCode mmKilometre = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Kilometre";
 			definition = "Unit of measure that is equal to 1,000 meters.";
 			owner_lazy = () -> UnitOfMeasureCode.mmObject();
@@ -1014,7 +1016,7 @@ public class UnitOfMeasureCode {
 	 */
 	public static final MMCode mmSquareYard = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SquareYard";
 			definition = "Measure of a surface, one yard by one yard.";
 			owner_lazy = () -> UnitOfMeasureCode.mmObject();
@@ -1044,7 +1046,7 @@ public class UnitOfMeasureCode {
 	 */
 	public static final MMCode mmAcre = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Acre";
 			definition = "Unit of measure equal to 4,840 square yards.";
 			owner_lazy = () -> UnitOfMeasureCode.mmObject();
@@ -1074,7 +1076,7 @@ public class UnitOfMeasureCode {
 	 */
 	public static final MMCode mmAre = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Are";
 			definition = "Unit of measure equal to a 100 square meters.";
 			owner_lazy = () -> UnitOfMeasureCode.mmObject();
@@ -1104,7 +1106,7 @@ public class UnitOfMeasureCode {
 	 */
 	public static final MMCode mmSquareMillimetre = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SquareMillimetre";
 			definition = "Measure of a surface, one millimetre by one millimetre.";
 			owner_lazy = () -> UnitOfMeasureCode.mmObject();
@@ -1134,7 +1136,7 @@ public class UnitOfMeasureCode {
 	 */
 	public static final MMCode mmSquareCentimetre = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SquareCentimetre";
 			definition = "Measure of a surface, one centimetre by one centimetre.";
 			owner_lazy = () -> UnitOfMeasureCode.mmObject();
@@ -1164,7 +1166,7 @@ public class UnitOfMeasureCode {
 	 */
 	public static final MMCode mmHectare = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Hectare";
 			definition = "Unit of measure that is equal to 10,000 square meters.";
 			owner_lazy = () -> UnitOfMeasureCode.mmObject();
@@ -1194,7 +1196,7 @@ public class UnitOfMeasureCode {
 	 */
 	public static final MMCode mmSquareKilometre = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SquareKilometre";
 			definition = "Measure of a surface, one kilometre by one kilometre.";
 			owner_lazy = () -> UnitOfMeasureCode.mmObject();
@@ -1225,7 +1227,7 @@ public class UnitOfMeasureCode {
 	 */
 	public static final MMCode mmMilliLitre = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MilliLitre";
 			definition = "Unit of volume that is equal to one thousandth of a litre.";
 			owner_lazy = () -> UnitOfMeasureCode.mmObject();
@@ -1256,7 +1258,7 @@ public class UnitOfMeasureCode {
 	 */
 	public static final MMCode mmCentilitre = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Centilitre";
 			definition = "Unit of volume that is equal to one hundredth of a litre.";
 			owner_lazy = () -> UnitOfMeasureCode.mmObject();
@@ -1287,7 +1289,7 @@ public class UnitOfMeasureCode {
 	 */
 	public static final MMCode mmLitre = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Litre";
 			definition = "Unit of volume that is equal to a thousand cubic centimetres.";
 			owner_lazy = () -> UnitOfMeasureCode.mmObject();
@@ -1317,7 +1319,7 @@ public class UnitOfMeasureCode {
 	 */
 	public static final MMCode mmPound = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Pound";
 			definition = "Unit of weight equal to 0.454 kilograms.";
 			owner_lazy = () -> UnitOfMeasureCode.mmObject();
@@ -1347,7 +1349,7 @@ public class UnitOfMeasureCode {
 	 */
 	public static final MMCode mmAllowances = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Allowances";
 			definition = "TO BE REVIEWED";
 			owner_lazy = () -> UnitOfMeasureCode.mmObject();
@@ -1377,7 +1379,7 @@ public class UnitOfMeasureCode {
 	 */
 	public static final MMCode mmAmountOfCurrency = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmountOfCurrency";
 			definition = "TO BE REVIEWED";
 			owner_lazy = () -> UnitOfMeasureCode.mmObject();
@@ -1407,7 +1409,7 @@ public class UnitOfMeasureCode {
 	 */
 	public static final MMCode mmBarrels = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Barrels";
 			definition = "TO BE REVIEWED";
 			owner_lazy = () -> UnitOfMeasureCode.mmObject();
@@ -1437,7 +1439,7 @@ public class UnitOfMeasureCode {
 	 */
 	public static final MMCode mmBillionCubicFeet = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BillionCubicFeet";
 			definition = "TO BE REVIEWED";
 			owner_lazy = () -> UnitOfMeasureCode.mmObject();
@@ -1467,7 +1469,7 @@ public class UnitOfMeasureCode {
 	 */
 	public static final MMCode mmBoardFeet = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BoardFeet";
 			definition = "TO BE REVIEWED";
 			owner_lazy = () -> UnitOfMeasureCode.mmObject();
@@ -1497,7 +1499,7 @@ public class UnitOfMeasureCode {
 	 */
 	public static final MMCode mmBushels = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Bushels";
 			definition = "TO BE REVIEWED";
 			owner_lazy = () -> UnitOfMeasureCode.mmObject();
@@ -1527,7 +1529,7 @@ public class UnitOfMeasureCode {
 	 */
 	public static final MMCode mmCertifiedEmissionsReduction = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CertifiedEmissionsReduction";
 			definition = "TO BE REVIEWED";
 			owner_lazy = () -> UnitOfMeasureCode.mmObject();
@@ -1557,7 +1559,7 @@ public class UnitOfMeasureCode {
 	 */
 	public static final MMCode mmClimateReserveTonnes = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClimateReserveTonnes";
 			definition = "TO BE REVIEWED";
 			owner_lazy = () -> UnitOfMeasureCode.mmObject();
@@ -1587,7 +1589,7 @@ public class UnitOfMeasureCode {
 	 */
 	public static final MMCode mmCubicMeters = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CubicMeters";
 			definition = "TO BE REVIEWED";
 			owner_lazy = () -> UnitOfMeasureCode.mmObject();
@@ -1617,7 +1619,7 @@ public class UnitOfMeasureCode {
 	 */
 	public static final MMCode mmDays = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Days";
 			definition = "TO BE REVIEWED";
 			owner_lazy = () -> UnitOfMeasureCode.mmObject();
@@ -1647,7 +1649,7 @@ public class UnitOfMeasureCode {
 	 */
 	public static final MMCode mmDryMetricTons = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DryMetricTons";
 			definition = "TO BE REVIEWED";
 			owner_lazy = () -> UnitOfMeasureCode.mmObject();
@@ -1677,7 +1679,7 @@ public class UnitOfMeasureCode {
 	 */
 	public static final MMCode mmEnvironmentalCredit = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EnvironmentalCredit";
 			definition = "TO BE REVIEWED";
 			owner_lazy = () -> UnitOfMeasureCode.mmObject();
@@ -1707,7 +1709,7 @@ public class UnitOfMeasureCode {
 	 */
 	public static final MMCode mmEnvironmentalOffset = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EnvironmentalOffset";
 			definition = "TO BE REVIEWED";
 			owner_lazy = () -> UnitOfMeasureCode.mmObject();
@@ -1737,7 +1739,7 @@ public class UnitOfMeasureCode {
 	 */
 	public static final MMCode mmHundredweight = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Hundredweight";
 			definition = "TO BE REVIEWED";
 			owner_lazy = () -> UnitOfMeasureCode.mmObject();
@@ -1767,7 +1769,7 @@ public class UnitOfMeasureCode {
 	 */
 	public static final MMCode mmKilowattDayCapacity = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "KilowattDayCapacity";
 			definition = "TO BE REVIEWED";
 			owner_lazy = () -> UnitOfMeasureCode.mmObject();
@@ -1800,7 +1802,7 @@ public class UnitOfMeasureCode {
 	 */
 	public static final MMCode mmKilowattHours = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "KilowattHours";
 			definition = "Unit of measure that is equal to the power consumption of one kilowatt during one hour.";
 			owner_lazy = () -> UnitOfMeasureCode.mmObject();
@@ -1830,7 +1832,7 @@ public class UnitOfMeasureCode {
 	 */
 	public static final MMCode mmKilowattHoursCapacity = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "KilowattHoursCapacity";
 			definition = "TO BE REVIEWED";
 			owner_lazy = () -> UnitOfMeasureCode.mmObject();
@@ -1860,7 +1862,7 @@ public class UnitOfMeasureCode {
 	 */
 	public static final MMCode mmKilowattMinuteCapacity = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "KilowattMinuteCapacity";
 			definition = "TO BE REVIEWED";
 			owner_lazy = () -> UnitOfMeasureCode.mmObject();
@@ -1890,7 +1892,7 @@ public class UnitOfMeasureCode {
 	 */
 	public static final MMCode mmKilowattMonthCapacity = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "KilowattMonthCapacity";
 			definition = "TO BE REVIEWED";
 			owner_lazy = () -> UnitOfMeasureCode.mmObject();
@@ -1920,7 +1922,7 @@ public class UnitOfMeasureCode {
 	 */
 	public static final MMCode mmKilowattYearCapacity = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "KilowattYearCapacity";
 			definition = "TO BE REVIEWED";
 			owner_lazy = () -> UnitOfMeasureCode.mmObject();
@@ -1950,7 +1952,7 @@ public class UnitOfMeasureCode {
 	 */
 	public static final MMCode mmMegawattDayCapacity = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MegawattDayCapacity";
 			definition = "TO BE REVIEWED";
 			owner_lazy = () -> UnitOfMeasureCode.mmObject();
@@ -1980,7 +1982,7 @@ public class UnitOfMeasureCode {
 	 */
 	public static final MMCode mmMegawattHours = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MegawattHours";
 			definition = "TO BE REVIEWED";
 			owner_lazy = () -> UnitOfMeasureCode.mmObject();
@@ -2010,7 +2012,7 @@ public class UnitOfMeasureCode {
 	 */
 	public static final MMCode mmMegawattHoursCapacity = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MegawattHoursCapacity";
 			definition = "TO BE REVIEWED";
 			owner_lazy = () -> UnitOfMeasureCode.mmObject();
@@ -2040,7 +2042,7 @@ public class UnitOfMeasureCode {
 	 */
 	public static final MMCode mmMegawattMinuteCapacity = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MegawattMinuteCapacity";
 			definition = "TO BE REVIEWED";
 			owner_lazy = () -> UnitOfMeasureCode.mmObject();
@@ -2070,7 +2072,7 @@ public class UnitOfMeasureCode {
 	 */
 	public static final MMCode mmMegawattMonthCapacity = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MegawattMonthCapacity";
 			definition = "TO BE REVIEWED";
 			owner_lazy = () -> UnitOfMeasureCode.mmObject();
@@ -2100,7 +2102,7 @@ public class UnitOfMeasureCode {
 	 */
 	public static final MMCode mmMegawattYearCapacity = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MegawattYearCapacity";
 			definition = "TO BE REVIEWED";
 			owner_lazy = () -> UnitOfMeasureCode.mmObject();
@@ -2130,7 +2132,7 @@ public class UnitOfMeasureCode {
 	 */
 	public static final MMCode mmMetricTons = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MetricTons";
 			definition = "TO BE REVIEWED";
 			owner_lazy = () -> UnitOfMeasureCode.mmObject();
@@ -2160,7 +2162,7 @@ public class UnitOfMeasureCode {
 	 */
 	public static final MMCode mmMillionBarrels = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MillionBarrels";
 			definition = "TO BE REVIEWED";
 			owner_lazy = () -> UnitOfMeasureCode.mmObject();
@@ -2190,7 +2192,7 @@ public class UnitOfMeasureCode {
 	 */
 	public static final MMCode mmOneMillionBTU = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OneMillionBTU";
 			definition = "TO BE REVIEWED";
 			owner_lazy = () -> UnitOfMeasureCode.mmObject();
@@ -2220,7 +2222,7 @@ public class UnitOfMeasureCode {
 	 */
 	public static final MMCode mmTroyOunces = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TroyOunces";
 			definition = "TO BE REVIEWED";
 			owner_lazy = () -> UnitOfMeasureCode.mmObject();
@@ -2250,7 +2252,7 @@ public class UnitOfMeasureCode {
 	 */
 	public static final MMCode mmUSHundredweight = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "USHundredweight";
 			definition = "TO BE REVIEWED";
 			owner_lazy = () -> UnitOfMeasureCode.mmObject();
@@ -2280,7 +2282,7 @@ public class UnitOfMeasureCode {
 	 */
 	public static final MMCode mmIndexPoint = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IndexPoint";
 			definition = "TO BE REVIEWED";
 			owner_lazy = () -> UnitOfMeasureCode.mmObject();
@@ -2310,7 +2312,7 @@ public class UnitOfMeasureCode {
 	 */
 	public static final MMCode mmPrincipalWithRelationToDebtInstrument = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PrincipalWithRelationToDebtInstrument";
 			definition = "TO BE REVIEWED";
 			owner_lazy = () -> UnitOfMeasureCode.mmObject();
@@ -2341,7 +2343,7 @@ public class UnitOfMeasureCode {
 	 */
 	public static final MMCode mmDieselGallonEquivalent = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DieselGallonEquivalent";
 			definition = "Amount of fuel alternative equal to one gallon of diesel.";
 			owner_lazy = () -> UnitOfMeasureCode.mmObject();
@@ -2372,7 +2374,7 @@ public class UnitOfMeasureCode {
 	 */
 	public static final MMCode mmGasolineGallonEquivalent = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GasolineGallonEquivalent";
 			definition = "Amount of fuel alternative equal to one gallon of gasoline.";
 			owner_lazy = () -> UnitOfMeasureCode.mmObject();
@@ -2402,7 +2404,7 @@ public class UnitOfMeasureCode {
 	 */
 	public static final MMCode mmTonsOfCarbonDioxide = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TonsOfCarbonDioxide";
 			definition = "Tons of carbon dioxide.";
 			owner_lazy = () -> UnitOfMeasureCode.mmObject();
@@ -2432,7 +2434,7 @@ public class UnitOfMeasureCode {
 	 */
 	public static final MMCode mmLot = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Lot";
 			definition = "Indication of the unit of measurement";
 			owner_lazy = () -> UnitOfMeasureCode.mmObject();
@@ -2443,38 +2445,23 @@ public class UnitOfMeasureCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("KILO");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "UnitOfMeasureCode";
 				definition = "Identifies the unit of measure by means of a code.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnitOfMeasureCode.mmKilogram, com.tools20022.repository.codeset.UnitOfMeasureCode.mmPiece, com.tools20022.repository.codeset.UnitOfMeasureCode.mmTon,
-						com.tools20022.repository.codeset.UnitOfMeasureCode.mmMetre, com.tools20022.repository.codeset.UnitOfMeasureCode.mmInch, com.tools20022.repository.codeset.UnitOfMeasureCode.mmYard,
-						com.tools20022.repository.codeset.UnitOfMeasureCode.mmGBGallon, com.tools20022.repository.codeset.UnitOfMeasureCode.mmGram, com.tools20022.repository.codeset.UnitOfMeasureCode.mmCentimetre,
-						com.tools20022.repository.codeset.UnitOfMeasureCode.mmSquareMetre, com.tools20022.repository.codeset.UnitOfMeasureCode.mmFoot, com.tools20022.repository.codeset.UnitOfMeasureCode.mmMile,
-						com.tools20022.repository.codeset.UnitOfMeasureCode.mmSquareInch, com.tools20022.repository.codeset.UnitOfMeasureCode.mmSquareFoot, com.tools20022.repository.codeset.UnitOfMeasureCode.mmSquareMile,
-						com.tools20022.repository.codeset.UnitOfMeasureCode.mmGBOunce, com.tools20022.repository.codeset.UnitOfMeasureCode.mmUSOunce, com.tools20022.repository.codeset.UnitOfMeasureCode.mmGBPint,
-						com.tools20022.repository.codeset.UnitOfMeasureCode.mmUSPint, com.tools20022.repository.codeset.UnitOfMeasureCode.mmGBQuart, com.tools20022.repository.codeset.UnitOfMeasureCode.mmUSQuart,
-						com.tools20022.repository.codeset.UnitOfMeasureCode.mmUSGallon, com.tools20022.repository.codeset.UnitOfMeasureCode.mmMillimetre, com.tools20022.repository.codeset.UnitOfMeasureCode.mmKilometre,
-						com.tools20022.repository.codeset.UnitOfMeasureCode.mmSquareYard, com.tools20022.repository.codeset.UnitOfMeasureCode.mmAcre, com.tools20022.repository.codeset.UnitOfMeasureCode.mmAre,
-						com.tools20022.repository.codeset.UnitOfMeasureCode.mmSquareMillimetre, com.tools20022.repository.codeset.UnitOfMeasureCode.mmSquareCentimetre, com.tools20022.repository.codeset.UnitOfMeasureCode.mmHectare,
-						com.tools20022.repository.codeset.UnitOfMeasureCode.mmSquareKilometre, com.tools20022.repository.codeset.UnitOfMeasureCode.mmMilliLitre, com.tools20022.repository.codeset.UnitOfMeasureCode.mmCentilitre,
-						com.tools20022.repository.codeset.UnitOfMeasureCode.mmLitre, com.tools20022.repository.codeset.UnitOfMeasureCode.mmPound, com.tools20022.repository.codeset.UnitOfMeasureCode.mmAllowances,
-						com.tools20022.repository.codeset.UnitOfMeasureCode.mmAmountOfCurrency, com.tools20022.repository.codeset.UnitOfMeasureCode.mmBarrels, com.tools20022.repository.codeset.UnitOfMeasureCode.mmBillionCubicFeet,
-						com.tools20022.repository.codeset.UnitOfMeasureCode.mmBoardFeet, com.tools20022.repository.codeset.UnitOfMeasureCode.mmBushels, com.tools20022.repository.codeset.UnitOfMeasureCode.mmCertifiedEmissionsReduction,
-						com.tools20022.repository.codeset.UnitOfMeasureCode.mmClimateReserveTonnes, com.tools20022.repository.codeset.UnitOfMeasureCode.mmCubicMeters, com.tools20022.repository.codeset.UnitOfMeasureCode.mmDays,
-						com.tools20022.repository.codeset.UnitOfMeasureCode.mmDryMetricTons, com.tools20022.repository.codeset.UnitOfMeasureCode.mmEnvironmentalCredit,
-						com.tools20022.repository.codeset.UnitOfMeasureCode.mmEnvironmentalOffset, com.tools20022.repository.codeset.UnitOfMeasureCode.mmHundredweight,
-						com.tools20022.repository.codeset.UnitOfMeasureCode.mmKilowattDayCapacity, com.tools20022.repository.codeset.UnitOfMeasureCode.mmKilowattHours,
-						com.tools20022.repository.codeset.UnitOfMeasureCode.mmKilowattHoursCapacity, com.tools20022.repository.codeset.UnitOfMeasureCode.mmKilowattMinuteCapacity,
-						com.tools20022.repository.codeset.UnitOfMeasureCode.mmKilowattMonthCapacity, com.tools20022.repository.codeset.UnitOfMeasureCode.mmKilowattYearCapacity,
-						com.tools20022.repository.codeset.UnitOfMeasureCode.mmMegawattDayCapacity, com.tools20022.repository.codeset.UnitOfMeasureCode.mmMegawattHours,
-						com.tools20022.repository.codeset.UnitOfMeasureCode.mmMegawattHoursCapacity, com.tools20022.repository.codeset.UnitOfMeasureCode.mmMegawattMinuteCapacity,
-						com.tools20022.repository.codeset.UnitOfMeasureCode.mmMegawattMonthCapacity, com.tools20022.repository.codeset.UnitOfMeasureCode.mmMegawattYearCapacity,
-						com.tools20022.repository.codeset.UnitOfMeasureCode.mmMetricTons, com.tools20022.repository.codeset.UnitOfMeasureCode.mmMillionBarrels, com.tools20022.repository.codeset.UnitOfMeasureCode.mmOneMillionBTU,
-						com.tools20022.repository.codeset.UnitOfMeasureCode.mmTroyOunces, com.tools20022.repository.codeset.UnitOfMeasureCode.mmUSHundredweight, com.tools20022.repository.codeset.UnitOfMeasureCode.mmIndexPoint,
-						com.tools20022.repository.codeset.UnitOfMeasureCode.mmPrincipalWithRelationToDebtInstrument, com.tools20022.repository.codeset.UnitOfMeasureCode.mmDieselGallonEquivalent,
-						com.tools20022.repository.codeset.UnitOfMeasureCode.mmGasolineGallonEquivalent, com.tools20022.repository.codeset.UnitOfMeasureCode.mmTonsOfCarbonDioxide, com.tools20022.repository.codeset.UnitOfMeasureCode.mmLot);
+				code_lazy = () -> Arrays.asList(UnitOfMeasureCode.mmKilogram, UnitOfMeasureCode.mmPiece, UnitOfMeasureCode.mmTon, UnitOfMeasureCode.mmMetre, UnitOfMeasureCode.mmInch, UnitOfMeasureCode.mmYard, UnitOfMeasureCode.mmGBGallon,
+						UnitOfMeasureCode.mmGram, UnitOfMeasureCode.mmCentimetre, UnitOfMeasureCode.mmSquareMetre, UnitOfMeasureCode.mmFoot, UnitOfMeasureCode.mmMile, UnitOfMeasureCode.mmSquareInch, UnitOfMeasureCode.mmSquareFoot,
+						UnitOfMeasureCode.mmSquareMile, UnitOfMeasureCode.mmGBOunce, UnitOfMeasureCode.mmUSOunce, UnitOfMeasureCode.mmGBPint, UnitOfMeasureCode.mmUSPint, UnitOfMeasureCode.mmGBQuart, UnitOfMeasureCode.mmUSQuart,
+						UnitOfMeasureCode.mmUSGallon, UnitOfMeasureCode.mmMillimetre, UnitOfMeasureCode.mmKilometre, UnitOfMeasureCode.mmSquareYard, UnitOfMeasureCode.mmAcre, UnitOfMeasureCode.mmAre, UnitOfMeasureCode.mmSquareMillimetre,
+						UnitOfMeasureCode.mmSquareCentimetre, UnitOfMeasureCode.mmHectare, UnitOfMeasureCode.mmSquareKilometre, UnitOfMeasureCode.mmMilliLitre, UnitOfMeasureCode.mmCentilitre, UnitOfMeasureCode.mmLitre,
+						UnitOfMeasureCode.mmPound, UnitOfMeasureCode.mmAllowances, UnitOfMeasureCode.mmAmountOfCurrency, UnitOfMeasureCode.mmBarrels, UnitOfMeasureCode.mmBillionCubicFeet, UnitOfMeasureCode.mmBoardFeet,
+						UnitOfMeasureCode.mmBushels, UnitOfMeasureCode.mmCertifiedEmissionsReduction, UnitOfMeasureCode.mmClimateReserveTonnes, UnitOfMeasureCode.mmCubicMeters, UnitOfMeasureCode.mmDays, UnitOfMeasureCode.mmDryMetricTons,
+						UnitOfMeasureCode.mmEnvironmentalCredit, UnitOfMeasureCode.mmEnvironmentalOffset, UnitOfMeasureCode.mmHundredweight, UnitOfMeasureCode.mmKilowattDayCapacity, UnitOfMeasureCode.mmKilowattHours,
+						UnitOfMeasureCode.mmKilowattHoursCapacity, UnitOfMeasureCode.mmKilowattMinuteCapacity, UnitOfMeasureCode.mmKilowattMonthCapacity, UnitOfMeasureCode.mmKilowattYearCapacity, UnitOfMeasureCode.mmMegawattDayCapacity,
+						UnitOfMeasureCode.mmMegawattHours, UnitOfMeasureCode.mmMegawattHoursCapacity, UnitOfMeasureCode.mmMegawattMinuteCapacity, UnitOfMeasureCode.mmMegawattMonthCapacity, UnitOfMeasureCode.mmMegawattYearCapacity,
+						UnitOfMeasureCode.mmMetricTons, UnitOfMeasureCode.mmMillionBarrels, UnitOfMeasureCode.mmOneMillionBTU, UnitOfMeasureCode.mmTroyOunces, UnitOfMeasureCode.mmUSHundredweight, UnitOfMeasureCode.mmIndexPoint,
+						UnitOfMeasureCode.mmPrincipalWithRelationToDebtInstrument, UnitOfMeasureCode.mmDieselGallonEquivalent, UnitOfMeasureCode.mmGasolineGallonEquivalent, UnitOfMeasureCode.mmTonsOfCarbonDioxide, UnitOfMeasureCode.mmLot);
 				derivation_lazy = () -> Arrays.asList(UnitOfMeasure1Code.mmObject(), UnitOfMeasure6Code.mmObject());
 			}
 		});

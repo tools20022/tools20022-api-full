@@ -20,10 +20,12 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.SubBalanceQuantity3Choice;
 import com.tools20022.repository.choice.SubBalanceType5Choice;
 import com.tools20022.repository.datatype.Max140Text;
 import com.tools20022.repository.entity.SecuritiesBalance;
+import com.tools20022.repository.GeneratedRepository;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -130,14 +132,14 @@ public class SubBalanceInformation6 {
 	 */
 	public static final MMMessageAttribute mmSubBalanceType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesBalance.mmSecuritiesBalanceType;
+			businessElementTrace_lazy = () -> SecuritiesBalance.mmSecuritiesBalanceType;
 			componentContext_lazy = () -> SubBalanceInformation6.mmObject();
 			isDerived = false;
 			xmlTag = "SubBalTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubBalanceType";
 			definition = "Reason for the sub-balance.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SubBalanceInformation14.mmSubBalanceType);
+			nextVersions_lazy = () -> Arrays.asList(SubBalanceInformation14.mmSubBalanceType);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> SubBalanceType5Choice.mmObject();
@@ -187,14 +189,14 @@ public class SubBalanceInformation6 {
 	 */
 	public static final MMMessageAttribute mmQuantity = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesBalance.mmSubBalanceQuantity;
+			businessElementTrace_lazy = () -> SecuritiesBalance.mmSubBalanceQuantity;
 			componentContext_lazy = () -> SubBalanceInformation6.mmObject();
 			isDerived = false;
 			xmlTag = "Qty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Quantity";
 			definition = "Quantity of securities in the sub-balance.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SubBalanceInformation14.mmQuantity);
+			nextVersions_lazy = () -> Arrays.asList(SubBalanceInformation14.mmQuantity);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> SubBalanceQuantity3Choice.mmObject();
@@ -241,10 +243,10 @@ public class SubBalanceInformation6 {
 			componentContext_lazy = () -> SubBalanceInformation6.mmObject();
 			isDerived = false;
 			xmlTag = "SubBalAddtlDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubBalanceAdditionalDetails";
 			definition = "Provides additional subbalance information.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SubBalanceInformation14.mmSubBalanceAdditionalDetails);
+			nextVersions_lazy = () -> Arrays.asList(SubBalanceInformation14.mmSubBalanceAdditionalDetails);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
@@ -296,14 +298,14 @@ public class SubBalanceInformation6 {
 	 */
 	public static final MMMessageAssociationEnd mmAdditionalBalanceBreakdownDetails = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesBalance.mmSecuritiesSubBalance;
+			businessElementTrace_lazy = () -> SecuritiesBalance.mmSecuritiesSubBalance;
 			componentContext_lazy = () -> SubBalanceInformation6.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlBalBrkdwnDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalBalanceBreakdownDetails";
 			definition = "Provides additional instrument sub-balance information on all or parts of the reported financial instrument (unregistered, tax exempt, etc.).";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SubBalanceInformation14.mmAdditionalBalanceBreakdownDetails);
+			nextVersions_lazy = () -> Arrays.asList(SubBalanceInformation14.mmAdditionalBalanceBreakdownDetails);
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.AdditionalBalanceInformation6.mmObject();
@@ -313,11 +315,11 @@ public class SubBalanceInformation6 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SubBalanceInformation6.mmSubBalanceType, com.tools20022.repository.msg.SubBalanceInformation6.mmQuantity,
-						com.tools20022.repository.msg.SubBalanceInformation6.mmSubBalanceAdditionalDetails, com.tools20022.repository.msg.SubBalanceInformation6.mmAdditionalBalanceBreakdownDetails);
+				messageElement_lazy = () -> Arrays.asList(SubBalanceInformation6.mmSubBalanceType, SubBalanceInformation6.mmQuantity, SubBalanceInformation6.mmSubBalanceAdditionalDetails,
+						SubBalanceInformation6.mmAdditionalBalanceBreakdownDetails);
 				trace_lazy = () -> SecuritiesBalance.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
 						return DateFormat.getDateInstance(java.text.DateFormat.LONG).parse("May 5, 2016");

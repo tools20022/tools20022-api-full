@@ -19,10 +19,14 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CountryCode;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.entity.Country;
 import com.tools20022.repository.entity.Person;
+import com.tools20022.repository.entity.PostalAddress;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -104,11 +108,11 @@ public class DateAndPlaceOfBirth {
 	 */
 	public static final MMMessageAttribute mmBirthDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Person.mmBirthDate;
+			businessElementTrace_lazy = () -> Person.mmBirthDate;
 			componentContext_lazy = () -> DateAndPlaceOfBirth.mmObject();
 			isDerived = false;
 			xmlTag = "BirthDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BirthDate";
 			definition = "Date on which a person is born.";
 			maxOccurs = 1;
@@ -151,11 +155,11 @@ public class DateAndPlaceOfBirth {
 	 */
 	public static final MMMessageAttribute mmProvinceOfBirth = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PostalAddress.mmProvince;
+			businessElementTrace_lazy = () -> PostalAddress.mmProvince;
 			componentContext_lazy = () -> DateAndPlaceOfBirth.mmObject();
 			isDerived = false;
 			xmlTag = "PrvcOfBirth";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProvinceOfBirth";
 			definition = "Province where a person was born.";
 			maxOccurs = 1;
@@ -198,11 +202,11 @@ public class DateAndPlaceOfBirth {
 	 */
 	public static final MMMessageAttribute mmCityOfBirth = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PostalAddress.mmTownName;
+			businessElementTrace_lazy = () -> PostalAddress.mmTownName;
 			componentContext_lazy = () -> DateAndPlaceOfBirth.mmObject();
 			isDerived = false;
 			xmlTag = "CityOfBirth";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CityOfBirth";
 			definition = "City where a person was born.";
 			maxOccurs = 1;
@@ -245,11 +249,11 @@ public class DateAndPlaceOfBirth {
 	 */
 	public static final MMMessageAttribute mmCountryOfBirth = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Country.mmCode;
+			businessElementTrace_lazy = () -> Country.mmCode;
 			componentContext_lazy = () -> DateAndPlaceOfBirth.mmObject();
 			isDerived = false;
 			xmlTag = "CtryOfBirth";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CountryOfBirth";
 			definition = "Country where a person was born.";
 			maxOccurs = 1;
@@ -261,11 +265,10 @@ public class DateAndPlaceOfBirth {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DateAndPlaceOfBirth.mmBirthDate, com.tools20022.repository.msg.DateAndPlaceOfBirth.mmProvinceOfBirth,
-						com.tools20022.repository.msg.DateAndPlaceOfBirth.mmCityOfBirth, com.tools20022.repository.msg.DateAndPlaceOfBirth.mmCountryOfBirth);
+				messageElement_lazy = () -> Arrays.asList(DateAndPlaceOfBirth.mmBirthDate, DateAndPlaceOfBirth.mmProvinceOfBirth, DateAndPlaceOfBirth.mmCityOfBirth, DateAndPlaceOfBirth.mmCountryOfBirth);
 				trace_lazy = () -> Person.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DateAndPlaceOfBirth";
 				definition = "Date and place of birth of a person.";
 			}

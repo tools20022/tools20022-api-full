@@ -19,13 +19,16 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.PartyIdentification1Choice;
 import com.tools20022.repository.choice.TaxExemptionReasonFormatChoice;
 import com.tools20022.repository.choice.TaxTypeFormat2Choice;
 import com.tools20022.repository.codeset.TaxationBasis2Code;
 import com.tools20022.repository.datatype.ActiveOrHistoricCurrencyAnd13DecimalAmount;
 import com.tools20022.repository.datatype.YesNoIndicator;
+import com.tools20022.repository.entity.InvestmentFundTax;
 import com.tools20022.repository.entity.Tax;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -105,11 +108,11 @@ public class Tax3 {
 	 */
 	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.mmType;
+			businessElementTrace_lazy = () -> Tax.mmType;
 			componentContext_lazy = () -> Tax3.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Type of tax applied.";
 			maxOccurs = 1;
@@ -151,11 +154,11 @@ public class Tax3 {
 	 */
 	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.mmAmount;
+			businessElementTrace_lazy = () -> Tax.mmAmount;
 			componentContext_lazy = () -> Tax3.mmObject();
 			isDerived = false;
 			xmlTag = "Amt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Amount of money resulting from the calculation of the tax.";
 			maxOccurs = 1;
@@ -198,11 +201,11 @@ public class Tax3 {
 	 */
 	public static final MMMessageAttribute mmBasis = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.mmBasis;
+			businessElementTrace_lazy = () -> Tax.mmBasis;
 			componentContext_lazy = () -> Tax3.mmObject();
 			isDerived = false;
 			xmlTag = "Bsis";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Basis";
 			definition = "Basis used to determine the capital gain or loss, eg, the purchase price.";
 			maxOccurs = 1;
@@ -245,7 +248,7 @@ public class Tax3 {
 			componentContext_lazy = () -> Tax3.mmObject();
 			isDerived = false;
 			xmlTag = "RcptId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RecipientIdentification";
 			definition = "Party that receives the tax. The recipient of, and the party entitled to, the tax may be two different parties.";
 			maxOccurs = 1;
@@ -287,11 +290,11 @@ public class Tax3 {
 	 */
 	public static final MMMessageAttribute mmExemptionIndicator = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundTax.mmExemptionIndicator;
+			businessElementTrace_lazy = () -> InvestmentFundTax.mmExemptionIndicator;
 			componentContext_lazy = () -> Tax3.mmObject();
 			isDerived = false;
 			xmlTag = "XmptnInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExemptionIndicator";
 			definition = "Indicates whether a tax exemption applies.";
 			maxOccurs = 1;
@@ -333,11 +336,11 @@ public class Tax3 {
 	 */
 	public static final MMMessageAttribute mmExemptionReason = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.mmExemptionReason;
+			businessElementTrace_lazy = () -> Tax.mmExemptionReason;
 			componentContext_lazy = () -> Tax3.mmObject();
 			isDerived = false;
 			xmlTag = "XmptnRsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExemptionReason";
 			definition = "Reason for a tax exemption.";
 			maxOccurs = 1;
@@ -349,11 +352,10 @@ public class Tax3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Tax3.mmType, com.tools20022.repository.msg.Tax3.mmAmount, com.tools20022.repository.msg.Tax3.mmBasis,
-						com.tools20022.repository.msg.Tax3.mmRecipientIdentification, com.tools20022.repository.msg.Tax3.mmExemptionIndicator, com.tools20022.repository.msg.Tax3.mmExemptionReason);
+				messageElement_lazy = () -> Arrays.asList(Tax3.mmType, Tax3.mmAmount, Tax3.mmBasis, Tax3.mmRecipientIdentification, Tax3.mmExemptionIndicator, Tax3.mmExemptionReason);
 				trace_lazy = () -> Tax.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Tax3";
 				definition = "Amount of money due to the government or tax authority, according to various pre-defined parameters such as thresholds or income.";
 			}

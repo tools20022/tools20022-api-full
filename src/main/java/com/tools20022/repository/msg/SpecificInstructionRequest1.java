@@ -19,8 +19,10 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.InstructionForMeeting;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -104,11 +106,11 @@ public class SpecificInstructionRequest1 {
 	 */
 	public static final MMMessageAttribute mmParticipationRegistration = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InstructionForMeeting.mmParticipationRegistration;
+			businessElementTrace_lazy = () -> InstructionForMeeting.mmParticipationRegistration;
 			componentContext_lazy = () -> SpecificInstructionRequest1.mmObject();
 			isDerived = false;
 			xmlTag = "PrtcptnRegn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ParticipationRegistration";
 			definition = "Request to register for participation to the meeting.";
 			maxOccurs = 1;
@@ -152,11 +154,11 @@ public class SpecificInstructionRequest1 {
 	 */
 	public static final MMMessageAttribute mmBlockingSecurities = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InstructionForMeeting.mmBlockingSecurities;
+			businessElementTrace_lazy = () -> InstructionForMeeting.mmBlockingSecurities;
 			componentContext_lazy = () -> SpecificInstructionRequest1.mmObject();
 			isDerived = false;
 			xmlTag = "BlckgScties";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BlockingSecurities";
 			definition = "Request to block the securities";
 			maxOccurs = 1;
@@ -200,11 +202,11 @@ public class SpecificInstructionRequest1 {
 	 */
 	public static final MMMessageAttribute mmSecuritiesRegistration = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InstructionForMeeting.mmSecuritiesRegistration;
+			businessElementTrace_lazy = () -> InstructionForMeeting.mmSecuritiesRegistration;
 			componentContext_lazy = () -> SpecificInstructionRequest1.mmObject();
 			isDerived = false;
 			xmlTag = "SctiesRegn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesRegistration";
 			definition = "Request to register the securities for the meeting.";
 			maxOccurs = 1;
@@ -216,11 +218,10 @@ public class SpecificInstructionRequest1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SpecificInstructionRequest1.mmParticipationRegistration, com.tools20022.repository.msg.SpecificInstructionRequest1.mmBlockingSecurities,
-						com.tools20022.repository.msg.SpecificInstructionRequest1.mmSecuritiesRegistration);
+				messageElement_lazy = () -> Arrays.asList(SpecificInstructionRequest1.mmParticipationRegistration, SpecificInstructionRequest1.mmBlockingSecurities, SpecificInstructionRequest1.mmSecuritiesRegistration);
 				trace_lazy = () -> InstructionForMeeting.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SpecificInstructionRequest1";
 				definition = "Request to execute specific instructions, such as participation registration, securities registration or blocking of securities.";
 			}

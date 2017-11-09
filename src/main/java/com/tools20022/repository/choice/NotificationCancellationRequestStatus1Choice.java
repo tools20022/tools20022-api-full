@@ -19,6 +19,9 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.seev.AgentCANotificationStatusAdviceV01;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.NotificationCancellationProcessingStatus1;
 import com.tools20022.repository.msg.NotificationCancellationRejectionReason1;
 import java.util.Arrays;
@@ -104,7 +107,7 @@ public class NotificationCancellationRequestStatus1Choice {
 			componentContext_lazy = () -> NotificationCancellationRequestStatus1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "PrcdSts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProcessedStatus";
 			definition = "Provides information about the processing status of the cancellation request.";
 			maxOccurs = 1;
@@ -146,7 +149,7 @@ public class NotificationCancellationRequestStatus1Choice {
 			componentContext_lazy = () -> NotificationCancellationRequestStatus1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "RjctdSts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RejectedStatus";
 			definition = "Provides information about the rejection status.";
 			maxOccurs = 1;
@@ -159,11 +162,10 @@ public class NotificationCancellationRequestStatus1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.NotificationCancellationRequestStatus1Choice.mmProcessedStatus,
-						com.tools20022.repository.choice.NotificationCancellationRequestStatus1Choice.mmRejectedStatus);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.AgentCANotificationStatusAdviceV01.mmNotificationCancellationRequestStatus);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(NotificationCancellationRequestStatus1Choice.mmProcessedStatus, NotificationCancellationRequestStatus1Choice.mmRejectedStatus);
+				messageBuildingBlock_lazy = () -> Arrays.asList(AgentCANotificationStatusAdviceV01.mmNotificationCancellationRequestStatus);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "NotificationCancellationRequestStatus1Choice";
 				definition = "Choice between various statuses.";
 			}

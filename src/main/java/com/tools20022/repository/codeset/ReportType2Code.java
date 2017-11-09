@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ReportTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -84,7 +86,7 @@ public class ReportType2Code extends ReportTypeCode {
 	 */
 	public static final MMCode mmPrecalculated = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Precalculated";
 			owner_lazy = () -> ReportType2Code.mmObject();
 		}
@@ -107,7 +109,7 @@ public class ReportType2Code extends ReportTypeCode {
 	 */
 	public static final MMCode mmCurrent = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Current";
 			owner_lazy = () -> ReportType2Code.mmObject();
 		}
@@ -116,12 +118,12 @@ public class ReportType2Code extends ReportTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("PREC");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ReportType2Code";
 				definition = "Specifies whether the baseline report is based on matching or pre-matching data sets.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ReportType2Code.mmPrecalculated, com.tools20022.repository.codeset.ReportType2Code.mmCurrent);
+				code_lazy = () -> Arrays.asList(ReportType2Code.mmPrecalculated, ReportType2Code.mmCurrent);
 				trace_lazy = () -> ReportTypeCode.mmObject();
 			}
 		});

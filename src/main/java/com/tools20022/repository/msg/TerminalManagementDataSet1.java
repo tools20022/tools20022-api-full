@@ -20,8 +20,10 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max9NumericText;
 import com.tools20022.repository.entity.AcceptorConfiguration;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -107,7 +109,7 @@ public class TerminalManagementDataSet1 {
 			componentContext_lazy = () -> TerminalManagementDataSet1.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Identification of the data set containing the status report.";
 			maxOccurs = 1;
@@ -151,7 +153,7 @@ public class TerminalManagementDataSet1 {
 			componentContext_lazy = () -> TerminalManagementDataSet1.mmObject();
 			isDerived = false;
 			xmlTag = "SeqCntr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SequenceCounter";
 			definition = "Counter to identify a single data set within the whole transfer.";
 			maxOccurs = 1;
@@ -191,7 +193,7 @@ public class TerminalManagementDataSet1 {
 			componentContext_lazy = () -> TerminalManagementDataSet1.mmObject();
 			isDerived = false;
 			xmlTag = "Cntt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Content";
 			definition = "Content of the status report.";
 			maxOccurs = 1;
@@ -204,11 +206,10 @@ public class TerminalManagementDataSet1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TerminalManagementDataSet1.mmIdentification, com.tools20022.repository.msg.TerminalManagementDataSet1.mmSequenceCounter,
-						com.tools20022.repository.msg.TerminalManagementDataSet1.mmContent);
+				messageElement_lazy = () -> Arrays.asList(TerminalManagementDataSet1.mmIdentification, TerminalManagementDataSet1.mmSequenceCounter, TerminalManagementDataSet1.mmContent);
 				trace_lazy = () -> AcceptorConfiguration.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TerminalManagementDataSet1";
 				definition = "Data related to the status report of a point of interaction (POI).";
 				nextVersions_lazy = () -> Arrays.asList(TerminalManagementDataSet4.mmObject());

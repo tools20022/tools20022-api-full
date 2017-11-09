@@ -19,8 +19,10 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ActiveOrHistoricCurrencyCode;
 import com.tools20022.repository.entity.Derivative;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -101,11 +103,11 @@ public class DerivativeInterest2 {
 	 */
 	public static final MMMessageAttribute mmOtherNotionalCurrency = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Derivative.mmNotionalCurrency;
+			businessElementTrace_lazy = () -> Derivative.mmNotionalCurrency;
 			componentContext_lazy = () -> DerivativeInterest2.mmObject();
 			isDerived = false;
 			xmlTag = "OthrNtnlCcy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherNotionalCurrency";
 			definition = "Currency in which leg 2 of the contract is denominated, in case of multi-currency or cross-currency swaps.\r\n\r\nCurrency in which leg 2 of the swap is denominated, in case of swaptions where the underlying swap is multi-currency.\r\n\r\n";
 			maxOccurs = 1;
@@ -117,10 +119,10 @@ public class DerivativeInterest2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DerivativeInterest2.mmOtherNotionalCurrency);
+				messageElement_lazy = () -> Arrays.asList(DerivativeInterest2.mmOtherNotionalCurrency);
 				trace_lazy = () -> Derivative.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DerivativeInterest2";
 				definition = "Specifies a multi-leg interest derivative.";
 			}

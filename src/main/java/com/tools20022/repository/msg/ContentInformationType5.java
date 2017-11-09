@@ -20,7 +20,9 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ContentType1Code;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -113,10 +115,10 @@ public class ContentInformationType5 {
 			componentContext_lazy = () -> ContentInformationType5.mmObject();
 			isDerived = false;
 			xmlTag = "CnttTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ContentType";
 			definition = "Type of data protection.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ContentInformationType7.mmContentType);
+			nextVersions_lazy = () -> Arrays.asList(ContentInformationType7.mmContentType);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ContentType1Code.mmObject();
@@ -162,10 +164,10 @@ public class ContentInformationType5 {
 			componentContext_lazy = () -> ContentInformationType5.mmObject();
 			isDerived = false;
 			xmlTag = "EnvlpdData";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EnvelopedData";
 			definition = "Data protection by encryption, with a session key.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ContentInformationType7.mmEnvelopedData);
+			nextVersions_lazy = () -> Arrays.asList(ContentInformationType7.mmEnvelopedData);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -176,9 +178,9 @@ public class ContentInformationType5 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ContentInformationType5.mmContentType, com.tools20022.repository.msg.ContentInformationType5.mmEnvelopedData);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(ContentInformationType5.mmContentType, ContentInformationType5.mmEnvelopedData);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ContentInformationType5";
 				definition = "General cryptographic message syntax (CMS) containing encrypted data.";
 				nextVersions_lazy = () -> Arrays.asList(ContentInformationType7.mmObject());

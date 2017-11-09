@@ -19,9 +19,14 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.PartyIdentification73Choice;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.entity.GenericIdentification;
+import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.entity.ReportingPartyRole;
+import com.tools20022.repository.entity.Trade;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -107,11 +112,11 @@ public class TradingSideTransactionReporting1 {
 	 */
 	public static final MMMessageAttribute mmReportingJurisdiction = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmIdentification;
+			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> TradingSideTransactionReporting1.mmObject();
 			isDerived = false;
 			xmlTag = "RptgJursdctn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportingJurisdiction";
 			definition = "Specifies the supervisory party to which the trade needs to be reported.";
 			maxOccurs = 1;
@@ -158,11 +163,11 @@ public class TradingSideTransactionReporting1 {
 	 */
 	public static final MMMessageAttribute mmReportingParty = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> TradingSideTransactionReporting1.mmObject();
 			isDerived = false;
 			xmlTag = "RptgPty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportingParty";
 			definition = "Identifies the party that is responsible for reporting the trade to the trade repository.";
 			maxOccurs = 1;
@@ -213,11 +218,11 @@ public class TradingSideTransactionReporting1 {
 	 */
 	public static final MMMessageAttribute mmTradingSideUniqueTransactionIdentifier = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Trade.mmTradeRelatedIdentifications;
+			businessElementTrace_lazy = () -> Trade.mmTradeRelatedIdentifications;
 			componentContext_lazy = () -> TradingSideTransactionReporting1.mmObject();
 			isDerived = false;
 			xmlTag = "TradgSdUnqTxIdr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradingSideUniqueTransactionIdentifier";
 			definition = "Specifies the unique transaction identifier (UTI) to be created at the time a transaction is first executed, shared with all registered entities and counterparties involved in the transaction, and used to track that particular transaction over its life. This identifier can also be known as the Unique Swap Identifier (USI). This is the UTI from the Trading Side party.";
 			minOccurs = 0;
@@ -228,11 +233,11 @@ public class TradingSideTransactionReporting1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TradingSideTransactionReporting1.mmReportingJurisdiction, com.tools20022.repository.msg.TradingSideTransactionReporting1.mmReportingParty,
-						com.tools20022.repository.msg.TradingSideTransactionReporting1.mmTradingSideUniqueTransactionIdentifier);
+				messageElement_lazy = () -> Arrays.asList(TradingSideTransactionReporting1.mmReportingJurisdiction, TradingSideTransactionReporting1.mmReportingParty,
+						TradingSideTransactionReporting1.mmTradingSideUniqueTransactionIdentifier);
 				trace_lazy = () -> ReportingPartyRole.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TradingSideTransactionReporting1";
 				definition = "This is regulatory transaction reporting information from the Trading Side party.";
 			}

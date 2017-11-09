@@ -19,8 +19,10 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ReportingRecordStatus1Code;
 import com.tools20022.repository.datatype.Max15NumericText;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -99,7 +101,7 @@ public class NumberOfRecordsPerStatus1 {
 			componentContext_lazy = () -> NumberOfRecordsPerStatus1.mmObject();
 			isDerived = false;
 			xmlTag = "DtldNbOfRcrds";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DetailedNumberOfRecords";
 			definition = "Number of individual records contained in the message, detailed per status.";
 			maxOccurs = 1;
@@ -142,7 +144,7 @@ public class NumberOfRecordsPerStatus1 {
 			componentContext_lazy = () -> NumberOfRecordsPerStatus1.mmObject();
 			isDerived = false;
 			xmlTag = "DtldSts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DetailedStatus";
 			definition = "Common transaction status for all individual records reported.";
 			maxOccurs = 1;
@@ -154,9 +156,9 @@ public class NumberOfRecordsPerStatus1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.NumberOfRecordsPerStatus1.mmDetailedNumberOfRecords, com.tools20022.repository.msg.NumberOfRecordsPerStatus1.mmDetailedStatus);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(NumberOfRecordsPerStatus1.mmDetailedNumberOfRecords, NumberOfRecordsPerStatus1.mmDetailedStatus);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "NumberOfRecordsPerStatus1";
 				definition = "Provides detailed information on the number of transactions that are reported with a specific transaction status.";
 			}

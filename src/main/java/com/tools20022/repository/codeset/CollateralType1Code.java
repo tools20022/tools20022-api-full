@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CollateralTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -88,7 +90,7 @@ public class CollateralType1Code extends CollateralTypeCode {
 	 */
 	public static final MMCode mmCash = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cash";
 			owner_lazy = () -> CollateralType1Code.mmObject();
 		}
@@ -111,7 +113,7 @@ public class CollateralType1Code extends CollateralTypeCode {
 	 */
 	public static final MMCode mmSecurities = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Securities";
 			owner_lazy = () -> CollateralType1Code.mmObject();
 		}
@@ -134,7 +136,7 @@ public class CollateralType1Code extends CollateralTypeCode {
 	 */
 	public static final MMCode mmLetterOfCredit = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LetterOfCredit";
 			owner_lazy = () -> CollateralType1Code.mmObject();
 		}
@@ -157,7 +159,7 @@ public class CollateralType1Code extends CollateralTypeCode {
 	 */
 	public static final MMCode mmOther = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
 			owner_lazy = () -> CollateralType1Code.mmObject();
 		}
@@ -166,13 +168,12 @@ public class CollateralType1Code extends CollateralTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CASH");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CollateralType1Code";
 				definition = "Specifies the type of collateral.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CollateralType1Code.mmCash, com.tools20022.repository.codeset.CollateralType1Code.mmSecurities,
-						com.tools20022.repository.codeset.CollateralType1Code.mmLetterOfCredit, com.tools20022.repository.codeset.CollateralType1Code.mmOther);
+				code_lazy = () -> Arrays.asList(CollateralType1Code.mmCash, CollateralType1Code.mmSecurities, CollateralType1Code.mmLetterOfCredit, CollateralType1Code.mmOther);
 				trace_lazy = () -> CollateralTypeCode.mmObject();
 			}
 		});

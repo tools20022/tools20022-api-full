@@ -20,8 +20,10 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.entity.DateTimePeriod;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.Period2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -99,7 +101,7 @@ public class DateAndPeriod2Choice {
 			componentContext_lazy = () -> DateAndPeriod2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Dt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Date";
 			definition = "Specific date within a period.";
 			maxOccurs = 1;
@@ -144,7 +146,7 @@ public class DateAndPeriod2Choice {
 			componentContext_lazy = () -> DateAndPeriod2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Period";
 			definition = "Time span defined by a start date and an end date.";
 			maxOccurs = 1;
@@ -188,11 +190,11 @@ public class DateAndPeriod2Choice {
 	 */
 	public static final MMMessageAttribute mmFromDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmFromDateTime;
+			businessElementTrace_lazy = () -> DateTimePeriod.mmFromDateTime;
 			componentContext_lazy = () -> DateAndPeriod2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "FrDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FromDate";
 			definition = "Date at which the range starts.";
 			maxOccurs = 1;
@@ -235,11 +237,11 @@ public class DateAndPeriod2Choice {
 	 */
 	public static final MMMessageAttribute mmToDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmToDateTime;
+			businessElementTrace_lazy = () -> DateTimePeriod.mmToDateTime;
 			componentContext_lazy = () -> DateAndPeriod2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "ToDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ToDate";
 			definition = "Date at which the range ends.";
 			maxOccurs = 1;
@@ -251,10 +253,9 @@ public class DateAndPeriod2Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.DateAndPeriod2Choice.mmDate, com.tools20022.repository.choice.DateAndPeriod2Choice.mmPeriod,
-						com.tools20022.repository.choice.DateAndPeriod2Choice.mmFromDate, com.tools20022.repository.choice.DateAndPeriod2Choice.mmToDate);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(DateAndPeriod2Choice.mmDate, DateAndPeriod2Choice.mmPeriod, DateAndPeriod2Choice.mmFromDate, DateAndPeriod2Choice.mmToDate);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "DateAndPeriod2Choice";
 				definition = "Choice between a date and period.";
 			}

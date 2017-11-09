@@ -19,9 +19,11 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ChequeDelivery1Code;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.ChequeIssue;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -103,11 +105,11 @@ public class ChequeDeliveryMethod1Choice {
 	 */
 	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ChequeIssue.mmDeliveryMethod;
+			businessElementTrace_lazy = () -> ChequeIssue.mmDeliveryMethod;
 			componentContext_lazy = () -> ChequeDeliveryMethod1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Cd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Specifies the delivery method of the cheque by the debtor's agent.";
 			maxOccurs = 1;
@@ -153,11 +155,11 @@ public class ChequeDeliveryMethod1Choice {
 	 */
 	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ChequeIssue.mmDeliveryMethod;
+			businessElementTrace_lazy = () -> ChequeIssue.mmDeliveryMethod;
 			componentContext_lazy = () -> ChequeDeliveryMethod1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Specifies a proprietary delivery method of the cheque by the debtor's agent.";
 			maxOccurs = 1;
@@ -169,10 +171,10 @@ public class ChequeDeliveryMethod1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ChequeDeliveryMethod1Choice.mmCode, com.tools20022.repository.choice.ChequeDeliveryMethod1Choice.mmProprietary);
+				messageElement_lazy = () -> Arrays.asList(ChequeDeliveryMethod1Choice.mmCode, ChequeDeliveryMethod1Choice.mmProprietary);
 				trace_lazy = () -> ChequeIssue.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ChequeDeliveryMethod1Choice";
 				definition = "Set of characteristics related to a cheque instruction, such as cheque type or cheque number.";
 			}

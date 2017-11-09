@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.DeliveryPlace1Code
+ * DeliveryPlace1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -41,13 +50,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.DeliveryPlaceCode#mmOtherAddress
  * DeliveryPlaceCode.mmOtherAddress}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.DeliveryPlace1Code
- * DeliveryPlace1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -97,7 +99,7 @@ public class DeliveryPlaceCode {
 	 */
 	public static final MMCode mmEmployer = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Employer";
 			definition = "Card needs to be mailed to employers address.";
 			owner_lazy = () -> DeliveryPlaceCode.mmObject();
@@ -128,7 +130,7 @@ public class DeliveryPlaceCode {
 	 */
 	public static final MMCode mmIndividual = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Individual";
 			definition = "Card needs to be mailed to individual specified in PersonDetail";
 			owner_lazy = () -> DeliveryPlaceCode.mmObject();
@@ -159,7 +161,7 @@ public class DeliveryPlaceCode {
 	 */
 	public static final MMCode mmEntranceOfMeeting = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "EntranceOfMeeting";
 			definition = "Card needs to be available at the entrance of the meeting.";
 			owner_lazy = () -> DeliveryPlaceCode.mmObject();
@@ -189,7 +191,7 @@ public class DeliveryPlaceCode {
 	 */
 	public static final MMCode mmOtherAddress = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "OtherAddress";
 			definition = "Cards needs to be send to other specified address.";
 			owner_lazy = () -> DeliveryPlaceCode.mmObject();
@@ -200,13 +202,12 @@ public class DeliveryPlaceCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("EMPL");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DeliveryPlaceCode";
 				definition = "Specifies the place of delivery.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DeliveryPlaceCode.mmEmployer, com.tools20022.repository.codeset.DeliveryPlaceCode.mmIndividual,
-						com.tools20022.repository.codeset.DeliveryPlaceCode.mmEntranceOfMeeting, com.tools20022.repository.codeset.DeliveryPlaceCode.mmOtherAddress);
+				code_lazy = () -> Arrays.asList(DeliveryPlaceCode.mmEmployer, DeliveryPlaceCode.mmIndividual, DeliveryPlaceCode.mmEntranceOfMeeting, DeliveryPlaceCode.mmOtherAddress);
 				derivation_lazy = () -> Arrays.asList(DeliveryPlace1Code.mmObject());
 			}
 		});

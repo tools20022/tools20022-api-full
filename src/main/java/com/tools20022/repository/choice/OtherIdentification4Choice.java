@@ -19,9 +19,11 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.PersonIdentificationType6Code;
 import com.tools20022.repository.entity.GenericIdentification;
 import com.tools20022.repository.entity.PersonIdentification;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification36;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -114,10 +116,10 @@ public class OtherIdentification4Choice {
 			componentContext_lazy = () -> OtherIdentification4Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Cd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Type of identification expressed as a code.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.OtherIdentification2Choice.mmCode;
+			previousVersion_lazy = () -> OtherIdentification2Choice.mmCode;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PersonIdentificationType6Code.mmObject();
@@ -168,10 +170,10 @@ public class OtherIdentification4Choice {
 			componentContext_lazy = () -> OtherIdentification4Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Type of identification expressed as a proprietary code.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.OtherIdentification2Choice.mmProprietary;
+			previousVersion_lazy = () -> OtherIdentification2Choice.mmProprietary;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification36.mmObject();
@@ -181,10 +183,10 @@ public class OtherIdentification4Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.OtherIdentification4Choice.mmCode, com.tools20022.repository.choice.OtherIdentification4Choice.mmProprietary);
+				messageElement_lazy = () -> Arrays.asList(OtherIdentification4Choice.mmCode, OtherIdentification4Choice.mmProprietary);
 				trace_lazy = () -> GenericIdentification.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OtherIdentification4Choice";
 				definition = "Choice of formats for the specification of other identification.";
 				previousVersion_lazy = () -> OtherIdentification2Choice.mmObject();

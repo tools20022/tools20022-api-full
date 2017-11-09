@@ -17,11 +17,14 @@
 
 package com.tools20022.repository.entity;
 
-import com.tools20022.metamodel.MMBusinessAssociationEnd;
-import com.tools20022.metamodel.MMBusinessAttribute;
-import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.*;
+import com.tools20022.repository.choice.FinancialInstrumentQuantity12Choice;
+import com.tools20022.repository.choice.FinancialInstrumentQuantity29Choice;
+import com.tools20022.repository.choice.FinancialInstrumentQuantity3Choice;
+import com.tools20022.repository.choice.FinancialInstrumentQuantity5Choice;
 import com.tools20022.repository.datatype.PercentageRate;
 import com.tools20022.repository.entity.RedemptionOrder;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.SwitchRedemptionLegOrder2;
 import com.tools20022.repository.msg.SwitchRedemptionLegOrder3;
 import com.tools20022.repository.msg.SwitchRedemptionLegOrder4;
@@ -38,15 +41,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
  * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SwitchRedemptionLeg#mmRedemptionRelatedSwitchOrder
- * SwitchRedemptionLeg.mmRedemptionRelatedSwitchOrder}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SwitchRedemptionLeg#mmPercentageOfTotalSubscriptionAmount
- * SwitchRedemptionLeg.mmPercentageOfTotalSubscriptionAmount}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SwitchRedemptionLegOrder2
+ * SwitchRedemptionLegOrder2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SwitchRedemptionLegOrder3
+ * SwitchRedemptionLegOrder3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SwitchRedemptionLegOrder4
+ * SwitchRedemptionLegOrder4}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SwitchRedemptionLegOrder6
+ * SwitchRedemptionLegOrder6}</li>
  * </ul>
  * </li>
  * <li>
@@ -60,18 +66,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
  * superType} = {@linkplain com.tools20022.repository.entity.RedemptionOrder
  * RedemptionOrder}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.SwitchRedemptionLegOrder2
- * SwitchRedemptionLegOrder2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SwitchRedemptionLegOrder3
- * SwitchRedemptionLegOrder3}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SwitchRedemptionLegOrder4
- * SwitchRedemptionLegOrder4}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SwitchRedemptionLegOrder6
- * SwitchRedemptionLegOrder6}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SwitchRedemptionLeg#mmRedemptionRelatedSwitchOrder
+ * SwitchRedemptionLeg.mmRedemptionRelatedSwitchOrder}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SwitchRedemptionLeg#mmPercentageOfTotalSubscriptionAmount
+ * SwitchRedemptionLeg.mmPercentageOfTotalSubscriptionAmount}</li>
  * </ul>
  * </li>
  * <li>
@@ -130,13 +133,13 @@ public class SwitchRedemptionLeg extends RedemptionOrder {
 		{
 			elementContext_lazy = () -> SwitchRedemptionLeg.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RedemptionRelatedSwitchOrder";
 			definition = "Switch order to which the redemption leg refers.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.SwitchOrder.mmRedemptionLeg;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SwitchOrder.mmObject();
 		}
 	};
@@ -193,12 +196,11 @@ public class SwitchRedemptionLeg extends RedemptionOrder {
 	 */
 	public static final MMBusinessAttribute mmPercentageOfTotalSubscriptionAmount = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.FinancialInstrumentQuantity3Choice.mmPercentageOfTotalSubscriptionAmount,
-					com.tools20022.repository.choice.FinancialInstrumentQuantity5Choice.mmPercentageOfTotalSubscriptionAmount, com.tools20022.repository.choice.FinancialInstrumentQuantity12Choice.mmPercentageOfTotalSubscriptionAmount,
-					com.tools20022.repository.choice.FinancialInstrumentQuantity29Choice.mmPercentageOfTotalSubscriptionAmount);
+			derivation_lazy = () -> Arrays.asList(FinancialInstrumentQuantity3Choice.mmPercentageOfTotalSubscriptionAmount, FinancialInstrumentQuantity5Choice.mmPercentageOfTotalSubscriptionAmount,
+					FinancialInstrumentQuantity12Choice.mmPercentageOfTotalSubscriptionAmount, FinancialInstrumentQuantity29Choice.mmPercentageOfTotalSubscriptionAmount);
 			elementContext_lazy = () -> SwitchRedemptionLeg.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PercentageOfTotalSubscriptionAmount";
 			definition = "Percentage of the total switch amount (buy-driven) to be invested in a particular investment fund or investment fund class.";
 			maxOccurs = 1;
@@ -210,13 +212,13 @@ public class SwitchRedemptionLeg extends RedemptionOrder {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SwitchRedemptionLeg";
 				definition = "Redemption leg, or switch-out, of a switch transaction.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SwitchOrder.mmRedemptionLeg);
 				superType_lazy = () -> RedemptionOrder.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SwitchRedemptionLeg.mmRedemptionRelatedSwitchOrder, com.tools20022.repository.entity.SwitchRedemptionLeg.mmPercentageOfTotalSubscriptionAmount);
+				element_lazy = () -> Arrays.asList(SwitchRedemptionLeg.mmRedemptionRelatedSwitchOrder, SwitchRedemptionLeg.mmPercentageOfTotalSubscriptionAmount);
 				derivationComponent_lazy = () -> Arrays.asList(SwitchRedemptionLegOrder2.mmObject(), SwitchRedemptionLegOrder3.mmObject(), SwitchRedemptionLegOrder4.mmObject(), SwitchRedemptionLegOrder6.mmObject());
 			}
 		});

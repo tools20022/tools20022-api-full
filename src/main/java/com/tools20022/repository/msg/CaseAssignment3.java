@@ -20,10 +20,14 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.camt.*;
 import com.tools20022.repository.choice.Party12Choice;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.InvestigationCase;
+import com.tools20022.repository.entity.Party;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -218,11 +222,11 @@ public class CaseAssignment3 {
 	 */
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestigationCase.mmAssignmentIdentification;
+			businessElementTrace_lazy = () -> InvestigationCase.mmAssignmentIdentification;
 			componentContext_lazy = () -> CaseAssignment3.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Uniquely identifies the case assignment.";
 			maxOccurs = 1;
@@ -267,11 +271,11 @@ public class CaseAssignment3 {
 	 */
 	public static final MMMessageAssociationEnd mmAssigner = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> CaseAssignment3.mmObject();
 			isDerived = false;
 			xmlTag = "Assgnr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Assigner";
 			definition = "Party who assigns the case. \nUsage: This is also the sender of the message.";
 			maxOccurs = 1;
@@ -317,11 +321,11 @@ public class CaseAssignment3 {
 	 */
 	public static final MMMessageAssociationEnd mmAssignee = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> CaseAssignment3.mmObject();
 			isDerived = false;
 			xmlTag = "Assgne";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Assignee";
 			definition = "Party to which the case is assigned.\nUsage: This is also the receiver of the message.";
 			maxOccurs = 1;
@@ -365,11 +369,11 @@ public class CaseAssignment3 {
 	 */
 	public static final MMMessageAttribute mmCreationDateTime = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestigationCase.mmCreationDateTime;
+			businessElementTrace_lazy = () -> InvestigationCase.mmCreationDateTime;
 			componentContext_lazy = () -> CaseAssignment3.mmObject();
 			isDerived = false;
 			xmlTag = "CreDtTm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreationDateTime";
 			definition = "Date and time at which the assignment was created.";
 			maxOccurs = 1;
@@ -381,29 +385,19 @@ public class CaseAssignment3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CaseAssignment3.mmIdentification, com.tools20022.repository.msg.CaseAssignment3.mmAssigner, com.tools20022.repository.msg.CaseAssignment3.mmAssignee,
-						com.tools20022.repository.msg.CaseAssignment3.mmCreationDateTime);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.CustomerPaymentCancellationRequestV02.mmAssignment, com.tools20022.repository.area.camt.CustomerPaymentCancellationRequestV03.mmAssignment,
-						com.tools20022.repository.area.camt.FIToFIPaymentCancellationRequestV02.mmAssignment, com.tools20022.repository.area.camt.FIToFIPaymentCancellationRequestV03.mmAssignment,
-						com.tools20022.repository.area.camt.UnableToApplyV04.mmAssignment, com.tools20022.repository.area.camt.ClaimNonReceiptV04.mmAssignment,
-						com.tools20022.repository.area.camt.AdditionalPaymentInformationV04.mmAssignment, com.tools20022.repository.area.camt.ResolutionOfInvestigationV04.mmAssignment,
-						com.tools20022.repository.area.camt.NotificationOfCaseAssignmentV04.mmAssignment, com.tools20022.repository.area.camt.RejectInvestigationV04.mmAssignment,
-						com.tools20022.repository.area.camt.CancelCaseAssignmentV03.mmAssignment, com.tools20022.repository.area.camt.RequestForDuplicateV04.mmAssignment, com.tools20022.repository.area.camt.DuplicateV04.mmAssignment,
-						com.tools20022.repository.area.camt.ProprietaryFormatInvestigationV03.mmAssignment, com.tools20022.repository.area.camt.DebitAuthorisationResponseV03.mmAssignment,
-						com.tools20022.repository.area.camt.DebitAuthorisationRequestV04.mmAssignment, com.tools20022.repository.area.camt.CaseStatusReportV04.mmNewAssignment,
-						com.tools20022.repository.area.camt.RequestToModifyPaymentV01.mmAssignment, com.tools20022.repository.area.camt.ResolutionOfInvestigationV05.mmAssignment,
-						com.tools20022.repository.area.camt.FIToFIPaymentCancellationRequestV04.mmAssignment, com.tools20022.repository.area.camt.CustomerPaymentCancellationRequestV04.mmAssignment,
-						com.tools20022.repository.area.camt.AdditionalPaymentInformationV05.mmAssignment, com.tools20022.repository.area.camt.RequestToModifyPaymentV02.mmAssignment,
-						com.tools20022.repository.area.camt.AdditionalPaymentInformationV06.mmAssignment, com.tools20022.repository.area.camt.FIToFIPaymentCancellationRequestV05.mmAssignment,
-						com.tools20022.repository.area.camt.RequestToModifyPaymentV03.mmAssignment, com.tools20022.repository.area.camt.ResolutionOfInvestigationV06.mmAssignment,
-						com.tools20022.repository.area.camt.CustomerPaymentCancellationRequestV05.mmAssignment, com.tools20022.repository.area.camt.UnableToApplyV05.mmAssignment,
-						com.tools20022.repository.area.camt.CustomerPaymentCancellationRequestV06.mmAssignment, com.tools20022.repository.area.camt.AdditionalPaymentInformationV07.mmAssignment,
-						com.tools20022.repository.area.camt.ResolutionOfInvestigationV07.mmAssignment, com.tools20022.repository.area.camt.FIToFIPaymentCancellationRequestV06.mmAssignment,
-						com.tools20022.repository.area.camt.DebitAuthorisationRequestV05.mmAssignment, com.tools20022.repository.area.camt.ClaimNonReceiptV05.mmAssignment,
-						com.tools20022.repository.area.camt.RequestToModifyPaymentV04.mmAssignment);
+				messageElement_lazy = () -> Arrays.asList(CaseAssignment3.mmIdentification, CaseAssignment3.mmAssigner, CaseAssignment3.mmAssignee, CaseAssignment3.mmCreationDateTime);
+				messageBuildingBlock_lazy = () -> Arrays.asList(CustomerPaymentCancellationRequestV02.mmAssignment, CustomerPaymentCancellationRequestV03.mmAssignment, FIToFIPaymentCancellationRequestV02.mmAssignment,
+						FIToFIPaymentCancellationRequestV03.mmAssignment, UnableToApplyV04.mmAssignment, ClaimNonReceiptV04.mmAssignment, AdditionalPaymentInformationV04.mmAssignment, ResolutionOfInvestigationV04.mmAssignment,
+						NotificationOfCaseAssignmentV04.mmAssignment, RejectInvestigationV04.mmAssignment, CancelCaseAssignmentV03.mmAssignment, RequestForDuplicateV04.mmAssignment, DuplicateV04.mmAssignment,
+						ProprietaryFormatInvestigationV03.mmAssignment, DebitAuthorisationResponseV03.mmAssignment, DebitAuthorisationRequestV04.mmAssignment, CaseStatusReportV04.mmNewAssignment, RequestToModifyPaymentV01.mmAssignment,
+						ResolutionOfInvestigationV05.mmAssignment, FIToFIPaymentCancellationRequestV04.mmAssignment, CustomerPaymentCancellationRequestV04.mmAssignment, AdditionalPaymentInformationV05.mmAssignment,
+						RequestToModifyPaymentV02.mmAssignment, AdditionalPaymentInformationV06.mmAssignment, FIToFIPaymentCancellationRequestV05.mmAssignment, RequestToModifyPaymentV03.mmAssignment,
+						ResolutionOfInvestigationV06.mmAssignment, CustomerPaymentCancellationRequestV05.mmAssignment, UnableToApplyV05.mmAssignment, CustomerPaymentCancellationRequestV06.mmAssignment,
+						AdditionalPaymentInformationV07.mmAssignment, ResolutionOfInvestigationV07.mmAssignment, FIToFIPaymentCancellationRequestV06.mmAssignment, DebitAuthorisationRequestV05.mmAssignment, ClaimNonReceiptV05.mmAssignment,
+						RequestToModifyPaymentV04.mmAssignment);
 				trace_lazy = () -> InvestigationCase.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CaseAssignment3";
 				definition = "Represents the assignment of a case to a party.";
 			}

@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.HoldingAccountLevel1Code
+ * HoldingAccountLevel1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -59,13 +68,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.HoldingAccountLevelCode#mmLevel9
  * HoldingAccountLevelCode.mmLevel9}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.HoldingAccountLevel1Code
- * HoldingAccountLevel1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -110,7 +112,7 @@ public class HoldingAccountLevelCode {
 	 */
 	public static final MMCode mmSafekeepingAccount = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingAccount";
 			definition = "Holding account is defined as the safekeeping account (Level 0).";
 			owner_lazy = () -> HoldingAccountLevelCode.mmObject();
@@ -140,7 +142,7 @@ public class HoldingAccountLevelCode {
 	 */
 	public static final MMCode mmLevel1 = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Level1";
 			definition = "Holding account is defined as the sub-level 1 account.";
 			owner_lazy = () -> HoldingAccountLevelCode.mmObject();
@@ -170,7 +172,7 @@ public class HoldingAccountLevelCode {
 	 */
 	public static final MMCode mmLevel2 = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Level2";
 			definition = "Holding account is defined as the sub-level 2 account.";
 			owner_lazy = () -> HoldingAccountLevelCode.mmObject();
@@ -200,7 +202,7 @@ public class HoldingAccountLevelCode {
 	 */
 	public static final MMCode mmLevel3 = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Level3";
 			definition = "Holding account is defined as the sub-level 3 account.";
 			owner_lazy = () -> HoldingAccountLevelCode.mmObject();
@@ -230,7 +232,7 @@ public class HoldingAccountLevelCode {
 	 */
 	public static final MMCode mmLevel4 = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Level4";
 			definition = "Holding account is defined as the sub-level 4 account.";
 			owner_lazy = () -> HoldingAccountLevelCode.mmObject();
@@ -260,7 +262,7 @@ public class HoldingAccountLevelCode {
 	 */
 	public static final MMCode mmLevel5 = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Level5";
 			definition = "Holding account is defined as the sub-level 5 account.";
 			owner_lazy = () -> HoldingAccountLevelCode.mmObject();
@@ -290,7 +292,7 @@ public class HoldingAccountLevelCode {
 	 */
 	public static final MMCode mmLevel6 = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Level6";
 			definition = "Holding account is defined as the sub-level 6 account.";
 			owner_lazy = () -> HoldingAccountLevelCode.mmObject();
@@ -320,7 +322,7 @@ public class HoldingAccountLevelCode {
 	 */
 	public static final MMCode mmLevel7 = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Level7";
 			definition = "Holding account is defined as the sub-level 7 account.";
 			owner_lazy = () -> HoldingAccountLevelCode.mmObject();
@@ -350,7 +352,7 @@ public class HoldingAccountLevelCode {
 	 */
 	public static final MMCode mmLevel8 = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Level8";
 			definition = "Holding account is defined as the sub-level 8 account.";
 			owner_lazy = () -> HoldingAccountLevelCode.mmObject();
@@ -380,7 +382,7 @@ public class HoldingAccountLevelCode {
 	 */
 	public static final MMCode mmLevel9 = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Level9";
 			definition = "Holding account is defined as the sub-level 9 account.";
 			owner_lazy = () -> HoldingAccountLevelCode.mmObject();
@@ -391,14 +393,12 @@ public class HoldingAccountLevelCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "HoldingAccountLevelCode";
 				definition = "Specifies the level of the safekeeping holding account.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.HoldingAccountLevelCode.mmSafekeepingAccount, com.tools20022.repository.codeset.HoldingAccountLevelCode.mmLevel1,
-						com.tools20022.repository.codeset.HoldingAccountLevelCode.mmLevel2, com.tools20022.repository.codeset.HoldingAccountLevelCode.mmLevel3, com.tools20022.repository.codeset.HoldingAccountLevelCode.mmLevel4,
-						com.tools20022.repository.codeset.HoldingAccountLevelCode.mmLevel5, com.tools20022.repository.codeset.HoldingAccountLevelCode.mmLevel6, com.tools20022.repository.codeset.HoldingAccountLevelCode.mmLevel7,
-						com.tools20022.repository.codeset.HoldingAccountLevelCode.mmLevel8, com.tools20022.repository.codeset.HoldingAccountLevelCode.mmLevel9);
+				code_lazy = () -> Arrays.asList(HoldingAccountLevelCode.mmSafekeepingAccount, HoldingAccountLevelCode.mmLevel1, HoldingAccountLevelCode.mmLevel2, HoldingAccountLevelCode.mmLevel3, HoldingAccountLevelCode.mmLevel4,
+						HoldingAccountLevelCode.mmLevel5, HoldingAccountLevelCode.mmLevel6, HoldingAccountLevelCode.mmLevel7, HoldingAccountLevelCode.mmLevel8, HoldingAccountLevelCode.mmLevel9);
 				derivation_lazy = () -> Arrays.asList(HoldingAccountLevel1Code.mmObject());
 			}
 		});

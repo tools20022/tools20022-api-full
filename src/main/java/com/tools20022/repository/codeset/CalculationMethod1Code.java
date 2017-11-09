@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CalculationMethodCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -84,7 +86,7 @@ public class CalculationMethod1Code extends CalculationMethodCode {
 	 */
 	public static final MMCode mmSimple = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Simple";
 			owner_lazy = () -> CalculationMethod1Code.mmObject();
 		}
@@ -107,7 +109,7 @@ public class CalculationMethod1Code extends CalculationMethodCode {
 	 */
 	public static final MMCode mmCompounding = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Compounding";
 			owner_lazy = () -> CalculationMethod1Code.mmObject();
 		}
@@ -116,12 +118,12 @@ public class CalculationMethod1Code extends CalculationMethodCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("SIMP");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CalculationMethod1Code";
 				definition = "Indicates if the method for interest calculation is simple or compounding.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CalculationMethod1Code.mmSimple, com.tools20022.repository.codeset.CalculationMethod1Code.mmCompounding);
+				code_lazy = () -> Arrays.asList(CalculationMethod1Code.mmSimple, CalculationMethod1Code.mmCompounding);
 				trace_lazy = () -> CalculationMethodCode.mmObject();
 			}
 		});

@@ -20,6 +20,9 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.colr.InterestPaymentResponseV03;
+import com.tools20022.repository.area.colr.InterestPaymentResponseV04;
 import com.tools20022.repository.choice.CollateralPurpose1Choice;
 import com.tools20022.repository.choice.DateAndDateTimeChoice;
 import com.tools20022.repository.choice.InterestRate1Choice;
@@ -31,7 +34,11 @@ import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
 import com.tools20022.repository.datatype.Max140Text;
 import com.tools20022.repository.datatype.Max210Text;
 import com.tools20022.repository.datatype.YesNoIndicator;
+import com.tools20022.repository.entity.Collateral;
 import com.tools20022.repository.entity.Interest;
+import com.tools20022.repository.entity.InterestCalculation;
+import com.tools20022.repository.entity.Settlement;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -161,11 +168,11 @@ public class InterestAmount2 {
 	 */
 	public static final MMMessageAttribute mmAccruedInterestAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Interest.mmAccruedInterestAmount;
+			businessElementTrace_lazy = () -> Interest.mmAccruedInterestAmount;
 			componentContext_lazy = () -> InterestAmount2.mmObject();
 			isDerived = false;
 			xmlTag = "AcrdIntrstAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccruedInterestAmount";
 			definition = "Amount of money representing an interest payment.";
 			maxOccurs = 1;
@@ -209,11 +216,11 @@ public class InterestAmount2 {
 	 */
 	public static final MMMessageAttribute mmValueDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Interest.mmPaymentDate;
+			businessElementTrace_lazy = () -> Interest.mmPaymentDate;
 			componentContext_lazy = () -> InterestAmount2.mmObject();
 			isDerived = false;
 			xmlTag = "ValDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValueDate";
 			definition = "Agreed date for the interest payment.";
 			maxOccurs = 1;
@@ -260,11 +267,11 @@ public class InterestAmount2 {
 	 */
 	public static final MMMessageAttribute mmInterestMethod = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InterestCalculation.mmInterestMethod;
+			businessElementTrace_lazy = () -> InterestCalculation.mmInterestMethod;
 			componentContext_lazy = () -> InterestAmount2.mmObject();
 			isDerived = false;
 			xmlTag = "IntrstMtd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterestMethod";
 			definition = "Indicates whether the interest will be settled in cash or rolled in the existing collateral balance.";
 			maxOccurs = 1;
@@ -308,11 +315,11 @@ public class InterestAmount2 {
 	 */
 	public static final MMMessageAttribute mmInterestPeriod = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InterestCalculation.mmInterestPeriod;
+			businessElementTrace_lazy = () -> InterestCalculation.mmInterestPeriod;
 			componentContext_lazy = () -> InterestAmount2.mmObject();
 			isDerived = false;
 			xmlTag = "IntrstPrd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterestPeriod";
 			definition = "Period for which the calculation has been performed.";
 			maxOccurs = 1;
@@ -361,11 +368,11 @@ public class InterestAmount2 {
 	 */
 	public static final MMMessageAttribute mmInterestRate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Interest.mmRate;
+			businessElementTrace_lazy = () -> Interest.mmRate;
 			componentContext_lazy = () -> InterestAmount2.mmObject();
 			isDerived = false;
 			xmlTag = "IntrstRate";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterestRate";
 			definition = "Percentage charged for the use of an amount of money, usually expressed at an annual rate. The interest rate is the ratio of the amount of interest paid during a certain period of time compared to the principal amount of the interest bearing financial instrument.";
 			maxOccurs = 1;
@@ -411,11 +418,11 @@ public class InterestAmount2 {
 	 */
 	public static final MMMessageAttribute mmDayCountBasis = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InterestCalculation.mmDayCountBasis;
+			businessElementTrace_lazy = () -> InterestCalculation.mmDayCountBasis;
 			componentContext_lazy = () -> InterestAmount2.mmObject();
 			isDerived = false;
 			xmlTag = "DayCntBsis";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DayCountBasis";
 			definition = "Specifies the computation method of (accrued) interest of the security.";
 			maxOccurs = 1;
@@ -462,11 +469,11 @@ public class InterestAmount2 {
 	 */
 	public static final MMMessageAttribute mmAppliedWithholdingTax = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Interest.mmInterestTax;
+			businessElementTrace_lazy = () -> Interest.mmInterestTax;
 			componentContext_lazy = () -> InterestAmount2.mmObject();
 			isDerived = false;
 			xmlTag = "ApldWhldgTax";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AppliedWithholdingTax";
 			definition = "Amount or percentage of a cash distribution that will be withheld by a tax authority.";
 			maxOccurs = 1;
@@ -510,11 +517,11 @@ public class InterestAmount2 {
 	 */
 	public static final MMMessageAttribute mmCalculationMethod = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InterestCalculation.mmCalculationMethod;
+			businessElementTrace_lazy = () -> InterestCalculation.mmCalculationMethod;
 			componentContext_lazy = () -> InterestAmount2.mmObject();
 			isDerived = false;
 			xmlTag = "ClctnMtd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CalculationMethod";
 			definition = "Specifies whether the interest is simple or compounded.";
 			maxOccurs = 1;
@@ -559,11 +566,11 @@ public class InterestAmount2 {
 	 */
 	public static final MMMessageAttribute mmCalculationFrequency = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InterestCalculation.mmCalculationFrequency;
+			businessElementTrace_lazy = () -> InterestCalculation.mmCalculationFrequency;
 			componentContext_lazy = () -> InterestAmount2.mmObject();
 			isDerived = false;
 			xmlTag = "ClctnFrqcy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CalculationFrequency";
 			definition = "Specifies the periodicity of the calculation of the interest.";
 			maxOccurs = 1;
@@ -611,11 +618,11 @@ public class InterestAmount2 {
 	 */
 	public static final MMMessageAttribute mmCollateralPurpose = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Collateral.mmCollateralPurpose;
+			businessElementTrace_lazy = () -> Collateral.mmCollateralPurpose;
 			componentContext_lazy = () -> InterestAmount2.mmObject();
 			isDerived = false;
 			xmlTag = "CollPurp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralPurpose";
 			definition = "Specifies whether the collateral has been posted against the variation margin, the segregated independent amount or to cover any other risk defined with a proprietary code.";
 			maxOccurs = 1;
@@ -657,11 +664,11 @@ public class InterestAmount2 {
 	 */
 	public static final MMMessageAssociationEnd mmOpeningCollateralBalance = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Collateral.mmCollateralBalance;
+			businessElementTrace_lazy = () -> Collateral.mmCollateralBalance;
 			componentContext_lazy = () -> InterestAmount2.mmObject();
 			isDerived = false;
 			xmlTag = "OpngCollBal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OpeningCollateralBalance";
 			definition = "Provides details about the opening collateral balance.";
 			maxOccurs = 1;
@@ -704,11 +711,11 @@ public class InterestAmount2 {
 	 */
 	public static final MMMessageAssociationEnd mmClosingCollateralBalance = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Collateral.mmCollateralBalance;
+			businessElementTrace_lazy = () -> Collateral.mmCollateralBalance;
 			componentContext_lazy = () -> InterestAmount2.mmObject();
 			isDerived = false;
 			xmlTag = "ClsgCollBal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClosingCollateralBalance";
 			definition = "Provides details about the closing collateral balance.";
 			maxOccurs = 1;
@@ -752,11 +759,11 @@ public class InterestAmount2 {
 	 */
 	public static final MMMessageAttribute mmStandardSettlementInstructions = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Settlement.mmStandingSettlementInstruction;
+			businessElementTrace_lazy = () -> Settlement.mmStandingSettlementInstruction;
 			componentContext_lazy = () -> InterestAmount2.mmObject();
 			isDerived = false;
 			xmlTag = "StdSttlmInstrs";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StandardSettlementInstructions";
 			definition = "Identifies the standard settlement instructions.";
 			maxOccurs = 1;
@@ -797,7 +804,7 @@ public class InterestAmount2 {
 			componentContext_lazy = () -> InterestAmount2.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInformation";
 			definition = "Additionnal information related to interest request.";
 			maxOccurs = 1;
@@ -809,17 +816,14 @@ public class InterestAmount2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InterestAmount2.mmAccruedInterestAmount, com.tools20022.repository.msg.InterestAmount2.mmValueDate,
-						com.tools20022.repository.msg.InterestAmount2.mmInterestMethod, com.tools20022.repository.msg.InterestAmount2.mmInterestPeriod, com.tools20022.repository.msg.InterestAmount2.mmInterestRate,
-						com.tools20022.repository.msg.InterestAmount2.mmDayCountBasis, com.tools20022.repository.msg.InterestAmount2.mmAppliedWithholdingTax, com.tools20022.repository.msg.InterestAmount2.mmCalculationMethod,
-						com.tools20022.repository.msg.InterestAmount2.mmCalculationFrequency, com.tools20022.repository.msg.InterestAmount2.mmCollateralPurpose, com.tools20022.repository.msg.InterestAmount2.mmOpeningCollateralBalance,
-						com.tools20022.repository.msg.InterestAmount2.mmClosingCollateralBalance, com.tools20022.repository.msg.InterestAmount2.mmStandardSettlementInstructions,
-						com.tools20022.repository.msg.InterestAmount2.mmAdditionalInformation);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.colr.InterestPaymentResponseV03.mmInterestDueToA, com.tools20022.repository.area.colr.InterestPaymentResponseV03.mmInterestDueToB,
-						com.tools20022.repository.area.colr.InterestPaymentResponseV04.mmInterestDueToA, com.tools20022.repository.area.colr.InterestPaymentResponseV04.mmInterestDueToB);
+				messageElement_lazy = () -> Arrays.asList(InterestAmount2.mmAccruedInterestAmount, InterestAmount2.mmValueDate, InterestAmount2.mmInterestMethod, InterestAmount2.mmInterestPeriod, InterestAmount2.mmInterestRate,
+						InterestAmount2.mmDayCountBasis, InterestAmount2.mmAppliedWithholdingTax, InterestAmount2.mmCalculationMethod, InterestAmount2.mmCalculationFrequency, InterestAmount2.mmCollateralPurpose,
+						InterestAmount2.mmOpeningCollateralBalance, InterestAmount2.mmClosingCollateralBalance, InterestAmount2.mmStandardSettlementInstructions, InterestAmount2.mmAdditionalInformation);
+				messageBuildingBlock_lazy = () -> Arrays.asList(InterestPaymentResponseV03.mmInterestDueToA, InterestPaymentResponseV03.mmInterestDueToB, InterestPaymentResponseV04.mmInterestDueToA,
+						InterestPaymentResponseV04.mmInterestDueToB);
 				trace_lazy = () -> Interest.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InterestAmount2";
 				definition = "Provides the elements related to the interest amount calculation.";
 			}

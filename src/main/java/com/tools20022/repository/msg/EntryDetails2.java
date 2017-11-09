@@ -19,7 +19,9 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.CashEntry;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -98,7 +100,7 @@ public class EntryDetails2 {
 			componentContext_lazy = () -> EntryDetails2.mmObject();
 			isDerived = false;
 			xmlTag = "Btch";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Batch";
 			definition = "Provides details on batched transactions.";
 			maxOccurs = 1;
@@ -143,7 +145,7 @@ public class EntryDetails2 {
 			componentContext_lazy = () -> EntryDetails2.mmObject();
 			isDerived = false;
 			xmlTag = "TxDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionDetails";
 			definition = "Provides information on the underlying transaction(s).";
 			minOccurs = 0;
@@ -155,10 +157,10 @@ public class EntryDetails2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.EntryDetails2.mmBatch, com.tools20022.repository.msg.EntryDetails2.mmTransactionDetails);
+				messageElement_lazy = () -> Arrays.asList(EntryDetails2.mmBatch, EntryDetails2.mmTransactionDetails);
 				trace_lazy = () -> CashEntry.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "EntryDetails2";
 				definition = "Identifies the underlying transaction(s) and/or batched entries.";
 				nextVersions_lazy = () -> Arrays.asList(EntryDetails3.mmObject());

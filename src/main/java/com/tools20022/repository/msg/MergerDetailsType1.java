@@ -19,9 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.MergerCode;
 import com.tools20022.repository.codeset.MergerTypeCode;
 import com.tools20022.repository.datatype.Number;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -106,7 +108,7 @@ public class MergerDetailsType1 {
 			componentContext_lazy = () -> MergerDetailsType1.mmObject();
 			isDerived = false;
 			xmlTag = "MrgrTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MergerType";
 			definition = "Differentiation of different types of merger.\r\n合併/株式交換/株式移転の区分";
 			maxOccurs = 1;
@@ -152,7 +154,7 @@ public class MergerDetailsType1 {
 			componentContext_lazy = () -> MergerDetailsType1.mmObject();
 			isDerived = false;
 			xmlTag = "CtrPtyDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CounterpartyDetails";
 			definition = "Information about the counterparty in case of [sankaku] gappei: the scenario where a third party is involved as one of the counterparties in the merger but there is no security movement from the third party.";
 			minOccurs = 0;
@@ -196,7 +198,7 @@ public class MergerDetailsType1 {
 			componentContext_lazy = () -> MergerDetailsType1.mmObject();
 			isDerived = false;
 			xmlTag = "SmplfdMrgrClssfctn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SimplifiedMergerClassification";
 			definition = "Classification of the simplified merger regulatory condition of the parent company.\r\n簡易区分";
 			maxOccurs = 1;
@@ -241,7 +243,7 @@ public class MergerDetailsType1 {
 			componentContext_lazy = () -> MergerDetailsType1.mmObject();
 			isDerived = false;
 			xmlTag = "ShrtFormMrgrClssfctn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ShortFormMergerClassification";
 			definition = "Classification of the short form merger regulatory condition of the subsidiary company.\r\n略式区分";
 			maxOccurs = 1;
@@ -284,7 +286,7 @@ public class MergerDetailsType1 {
 			componentContext_lazy = () -> MergerDetailsType1.mmObject();
 			isDerived = false;
 			xmlTag = "ShrUnitQtyOfNewCpny";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ShareUnitQuantityOfNewCompany";
 			definition = "Share unit quantity of the shares of the new company.\r\n新設会社の単元株数";
 			maxOccurs = 1;
@@ -296,11 +298,10 @@ public class MergerDetailsType1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MergerDetailsType1.mmMergerType, com.tools20022.repository.msg.MergerDetailsType1.mmCounterpartyDetails,
-						com.tools20022.repository.msg.MergerDetailsType1.mmSimplifiedMergerClassification, com.tools20022.repository.msg.MergerDetailsType1.mmShortFormMergerClassification,
-						com.tools20022.repository.msg.MergerDetailsType1.mmShareUnitQuantityOfNewCompany);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(MergerDetailsType1.mmMergerType, MergerDetailsType1.mmCounterpartyDetails, MergerDetailsType1.mmSimplifiedMergerClassification, MergerDetailsType1.mmShortFormMergerClassification,
+						MergerDetailsType1.mmShareUnitQuantityOfNewCompany);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MergerDetailsType1";
 				definition = "Provides additional information about mergers.";
 			}

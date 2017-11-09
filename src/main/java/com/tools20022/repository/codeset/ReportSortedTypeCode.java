@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.ReportSortedType1Code
+ * ReportSortedType1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -38,13 +47,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.ReportSortedTypeCode#mmCurrency
  * ReportSortedTypeCode.mmCurrency}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.ReportSortedType1Code
- * ReportSortedType1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -94,7 +96,7 @@ public class ReportSortedTypeCode {
 	 */
 	public static final MMCode mmCountry = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Country";
 			definition = "Type of criterion is a nation.";
 			owner_lazy = () -> ReportSortedTypeCode.mmObject();
@@ -125,7 +127,7 @@ public class ReportSortedTypeCode {
 	 */
 	public static final MMCode mmParty = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Party";
 			definition = "Type of criterion is an entity, eg, a financial institution.";
 			owner_lazy = () -> ReportSortedTypeCode.mmObject();
@@ -155,7 +157,7 @@ public class ReportSortedTypeCode {
 	 */
 	public static final MMCode mmCurrency = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Currency";
 			definition = "Type of criterion is a currency, eg, the euro.";
 			owner_lazy = () -> ReportSortedTypeCode.mmObject();
@@ -166,13 +168,12 @@ public class ReportSortedTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("COUN");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ReportSortedTypeCode";
 				definition = "Type of criterion is a country.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ReportSortedTypeCode.mmCountry, com.tools20022.repository.codeset.ReportSortedTypeCode.mmParty,
-						com.tools20022.repository.codeset.ReportSortedTypeCode.mmCurrency);
+				code_lazy = () -> Arrays.asList(ReportSortedTypeCode.mmCountry, ReportSortedTypeCode.mmParty, ReportSortedTypeCode.mmCurrency);
 				derivation_lazy = () -> Arrays.asList(ReportSortedType1Code.mmObject());
 			}
 		});

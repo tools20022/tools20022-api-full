@@ -20,9 +20,11 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.UnitOfMeasure3Choice;
 import com.tools20022.repository.datatype.DecimalNumber;
 import com.tools20022.repository.entity.ProductQuantity;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -99,11 +101,11 @@ public class Quantity10 {
 	 */
 	public static final MMMessageAssociationEnd mmUnitOfMeasure = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ProductQuantity.mmUnitOfMeasure;
+			businessElementTrace_lazy = () -> ProductQuantity.mmUnitOfMeasure;
 			componentContext_lazy = () -> Quantity10.mmObject();
 			isDerived = false;
 			xmlTag = "UnitOfMeasr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnitOfMeasure";
 			definition = "Specifies a unit of measure with a code or free text.";
 			maxOccurs = 1;
@@ -155,14 +157,14 @@ public class Quantity10 {
 	 */
 	public static final MMMessageAttribute mmValue = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ProductQuantity.mmValue;
+			businessElementTrace_lazy = () -> ProductQuantity.mmValue;
 			componentContext_lazy = () -> Quantity10.mmObject();
 			isDerived = false;
 			xmlTag = "Val";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Value";
 			definition = "Quantity of a product on a line specified by a number. For example, 100 (kgs), 50 (pieces).";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Quantity3.mmValue;
+			previousVersion_lazy = () -> Quantity3.mmValue;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
@@ -172,10 +174,10 @@ public class Quantity10 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Quantity10.mmUnitOfMeasure, com.tools20022.repository.msg.Quantity10.mmValue);
+				messageElement_lazy = () -> Arrays.asList(Quantity10.mmUnitOfMeasure, Quantity10.mmValue);
 				trace_lazy = () -> ProductQuantity.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Quantity10";
 				definition = "Specifies the quantity of a product in a trade transaction.";
 				previousVersion_lazy = () -> Quantity3.mmObject();

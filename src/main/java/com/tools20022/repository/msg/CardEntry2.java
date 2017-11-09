@@ -19,7 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.CardPayment;
+import com.tools20022.repository.entity.CardPaymentAcquiring;
+import com.tools20022.repository.entity.PaymentCard;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -107,14 +111,14 @@ public class CardEntry2 {
 	 */
 	public static final MMMessageAssociationEnd mmCard = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPayment.mmPaymentCard;
+			businessElementTrace_lazy = () -> CardPayment.mmPaymentCard;
 			componentContext_lazy = () -> CardEntry2.mmObject();
 			isDerived = false;
 			xmlTag = "Card";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Card";
 			definition = "Electronic money product that provides the cardholder with a portable and specialised computer device, which typically contains a microprocessor.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CardEntry1.mmCard;
+			previousVersion_lazy = () -> CardEntry1.mmCard;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -162,14 +166,14 @@ public class CardEntry2 {
 	 */
 	public static final MMMessageAssociationEnd mmPOI = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.mmPointOfInteraction;
+			businessElementTrace_lazy = () -> CardPaymentAcquiring.mmPointOfInteraction;
 			componentContext_lazy = () -> CardEntry2.mmObject();
 			isDerived = false;
 			xmlTag = "POI";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "POI";
 			definition = "Physical or logical card payment terminal containing software and hardware components.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CardEntry1.mmPOI;
+			previousVersion_lazy = () -> CardEntry1.mmPOI;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -220,10 +224,10 @@ public class CardEntry2 {
 			componentContext_lazy = () -> CardEntry2.mmObject();
 			isDerived = false;
 			xmlTag = "AggtdNtry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AggregatedEntry";
 			definition = "Card entry details, based on card transaction aggregated data performed by the account servicer.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CardEntry1.mmAggregatedEntry;
+			previousVersion_lazy = () -> CardEntry1.mmAggregatedEntry;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -264,11 +268,11 @@ public class CardEntry2 {
 	 */
 	public static final MMMessageAssociationEnd mmPrePaidAccount = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentCard.mmRelatedAccount;
+			businessElementTrace_lazy = () -> PaymentCard.mmRelatedAccount;
 			componentContext_lazy = () -> CardEntry2.mmObject();
 			isDerived = false;
 			xmlTag = "PrePdAcct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PrePaidAccount";
 			definition = "Prepaid account for the transfer or loading of an amount of money.";
 			maxOccurs = 1;
@@ -281,11 +285,10 @@ public class CardEntry2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardEntry2.mmCard, com.tools20022.repository.msg.CardEntry2.mmPOI, com.tools20022.repository.msg.CardEntry2.mmAggregatedEntry,
-						com.tools20022.repository.msg.CardEntry2.mmPrePaidAccount);
+				messageElement_lazy = () -> Arrays.asList(CardEntry2.mmCard, CardEntry2.mmPOI, CardEntry2.mmAggregatedEntry, CardEntry2.mmPrePaidAccount);
 				trace_lazy = () -> CardPayment.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CardEntry2";
 				definition = "Card transaction entry.";
 				previousVersion_lazy = () -> CardEntry1.mmObject();

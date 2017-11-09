@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.CustodianAction1Code
+ * CustodianAction1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -41,13 +50,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.CustodianActionCode#mmNoAction
  * CustodianActionCode.mmNoAction}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.CustodianAction1Code
- * CustodianAction1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -99,7 +101,7 @@ public class CustodianActionCode {
 	 */
 	public static final MMCode mmResearch = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Research";
 			definition = "Custodian is researching pending issues raised by the validation service.";
 			owner_lazy = () -> CustodianActionCode.mmObject();
@@ -129,7 +131,7 @@ public class CustodianActionCode {
 	 */
 	public static final MMCode mmSendInfo = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SendInfo";
 			definition = "Custodian is expected to send updated information.";
 			owner_lazy = () -> CustodianActionCode.mmObject();
@@ -162,7 +164,7 @@ public class CustodianActionCode {
 	 */
 	public static final MMCode mmDisagrees = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Disagrees";
 			definition = "Custodian disagrees with the validation service and will take no further action.";
 			owner_lazy = () -> CustodianActionCode.mmObject();
@@ -192,7 +194,7 @@ public class CustodianActionCode {
 	 */
 	public static final MMCode mmNoAction = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoAction";
 			definition = "No action required by the custodian.";
 			owner_lazy = () -> CustodianActionCode.mmObject();
@@ -203,13 +205,12 @@ public class CustodianActionCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("RSCH");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CustodianActionCode";
 				definition = "Specifies custodian activity codes.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CustodianActionCode.mmResearch, com.tools20022.repository.codeset.CustodianActionCode.mmSendInfo,
-						com.tools20022.repository.codeset.CustodianActionCode.mmDisagrees, com.tools20022.repository.codeset.CustodianActionCode.mmNoAction);
+				code_lazy = () -> Arrays.asList(CustodianActionCode.mmResearch, CustodianActionCode.mmSendInfo, CustodianActionCode.mmDisagrees, CustodianActionCode.mmNoAction);
 				derivation_lazy = () -> Arrays.asList(CustodianAction1Code.mmObject());
 			}
 		});

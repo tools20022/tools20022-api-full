@@ -19,8 +19,11 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
+import com.tools20022.repository.entity.AmendmentOfUndertaking;
 import com.tools20022.repository.entity.UndertakingAmount;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -98,11 +101,11 @@ public class Amount1Choice {
 	 */
 	public static final MMMessageAttribute mmIncreaseAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AmendmentOfUndertaking.mmChangeOfAmount;
+			businessElementTrace_lazy = () -> AmendmentOfUndertaking.mmChangeOfAmount;
 			componentContext_lazy = () -> Amount1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "IncrAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncreaseAmount";
 			definition = "Amount of increase, and currency.";
 			maxOccurs = 1;
@@ -146,11 +149,11 @@ public class Amount1Choice {
 	 */
 	public static final MMMessageAttribute mmDecreaseAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AmendmentOfUndertaking.mmChangeOfAmount;
+			businessElementTrace_lazy = () -> AmendmentOfUndertaking.mmChangeOfAmount;
 			componentContext_lazy = () -> Amount1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "DcrAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DecreaseAmount";
 			definition = "Amount of decrease, and currency.";
 			maxOccurs = 1;
@@ -162,10 +165,10 @@ public class Amount1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Amount1Choice.mmIncreaseAmount, com.tools20022.repository.choice.Amount1Choice.mmDecreaseAmount);
+				messageElement_lazy = () -> Arrays.asList(Amount1Choice.mmIncreaseAmount, Amount1Choice.mmDecreaseAmount);
 				trace_lazy = () -> UndertakingAmount.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Amount1Choice";
 				definition = "Choice of amounts.";
 			}

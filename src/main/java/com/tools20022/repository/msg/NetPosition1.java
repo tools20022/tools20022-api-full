@@ -20,12 +20,12 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.FinancialInstrumentQuantity1Choice;
 import com.tools20022.repository.choice.PartyIdentification34Choice;
 import com.tools20022.repository.codeset.ReceiveDelivery1Code;
-import com.tools20022.repository.entity.Party;
-import com.tools20022.repository.entity.Position;
-import com.tools20022.repository.entity.SecuritiesTrade;
+import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -129,11 +129,11 @@ public class NetPosition1 {
 	 */
 	public static final MMMessageAssociationEnd mmClearingAccount = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ClearingMemberRole.mmClearingAccount;
+			businessElementTrace_lazy = () -> ClearingMemberRole.mmClearingAccount;
 			componentContext_lazy = () -> NetPosition1.mmObject();
 			isDerived = false;
 			xmlTag = "ClrAcct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClearingAccount";
 			definition = "Identifies the clearing member account at the Central counterparty through which the trade must be cleared (sometimes called position account).";
 			maxOccurs = 1;
@@ -179,11 +179,11 @@ public class NetPosition1 {
 	 */
 	public static final MMMessageAssociationEnd mmDeliveryAccount = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ClearingMemberRole.mmDeliveryAccount;
+			businessElementTrace_lazy = () -> ClearingMemberRole.mmDeliveryAccount;
 			componentContext_lazy = () -> NetPosition1.mmObject();
 			isDerived = false;
 			xmlTag = "DlvryAcct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeliveryAccount";
 			definition = "An account opened by the central counterparty in the name of the clearing member within the account structure, for settlement purposes (gives information about the clearing member account at central counterparty).";
 			maxOccurs = 1;
@@ -226,11 +226,11 @@ public class NetPosition1 {
 	 */
 	public static final MMMessageAssociationEnd mmFinancialInstrumentIdentification = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmIdentification;
+			businessElementTrace_lazy = () -> Security.mmIdentification;
 			componentContext_lazy = () -> NetPosition1.mmObject();
 			isDerived = false;
 			xmlTag = "FinInstrmId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentIdentification";
 			definition = "Provides details about the security identification.";
 			maxOccurs = 1;
@@ -272,11 +272,11 @@ public class NetPosition1 {
 	 */
 	public static final MMMessageAssociationEnd mmInitialPositionAmount = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Position.mmInitialPositionAmount;
+			businessElementTrace_lazy = () -> Position.mmInitialPositionAmount;
 			componentContext_lazy = () -> NetPosition1.mmObject();
 			isDerived = false;
 			xmlTag = "InitlPosAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InitialPositionAmount";
 			definition = "Provides the intra position amount.";
 			maxOccurs = 1;
@@ -318,11 +318,11 @@ public class NetPosition1 {
 	 */
 	public static final MMMessageAssociationEnd mmNetPositionAmount = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Position.mmNetPositionAmount;
+			businessElementTrace_lazy = () -> Position.mmNetPositionAmount;
 			componentContext_lazy = () -> NetPosition1.mmObject();
 			isDerived = false;
 			xmlTag = "NetPosAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetPositionAmount";
 			definition = "Provides the net position amount.";
 			maxOccurs = 1;
@@ -363,11 +363,11 @@ public class NetPosition1 {
 	 */
 	public static final MMMessageAssociationEnd mmAverageDealPrice = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTrade.mmTradePrice;
+			businessElementTrace_lazy = () -> SecuritiesTrade.mmTradePrice;
 			componentContext_lazy = () -> NetPosition1.mmObject();
 			isDerived = false;
 			xmlTag = "AvrgDealPric";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AverageDealPrice";
 			definition = "This is the price of the trade.";
 			maxOccurs = 1;
@@ -410,11 +410,11 @@ public class NetPosition1 {
 	 */
 	public static final MMMessageAssociationEnd mmNetQuantity = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Position.mmNetQuantity;
+			businessElementTrace_lazy = () -> Position.mmNetQuantity;
 			componentContext_lazy = () -> NetPosition1.mmObject();
 			isDerived = false;
 			xmlTag = "NetQty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetQuantity";
 			definition = "Identifies the quantity of the trade leg.";
 			maxOccurs = 1;
@@ -461,11 +461,11 @@ public class NetPosition1 {
 	 */
 	public static final MMMessageAttribute mmSecuritiesMovementType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmSecuritiesMovementType;
+			businessElementTrace_lazy = () -> SecuritiesSettlement.mmSecuritiesMovementType;
 			componentContext_lazy = () -> NetPosition1.mmObject();
 			isDerived = false;
 			xmlTag = "SctiesMvmntTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesMovementType";
 			definition = "Indicates the securities movement direction, that is, whether this is a delivery or return.";
 			maxOccurs = 1;
@@ -510,7 +510,7 @@ public class NetPosition1 {
 			componentContext_lazy = () -> NetPosition1.mmObject();
 			isDerived = false;
 			xmlTag = "Dpstry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Depository";
 			definition = "Place at which a trade settles.";
 			maxOccurs = 1;
@@ -558,7 +558,7 @@ public class NetPosition1 {
 			componentContext_lazy = () -> NetPosition1.mmObject();
 			isDerived = false;
 			xmlTag = "TradLegDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeLegDetails";
 			definition = "Provides the trade leg details such as trade leg identification and trade type.";
 			minOccurs = 0;
@@ -600,11 +600,11 @@ public class NetPosition1 {
 	 */
 	public static final MMMessageAssociationEnd mmNonClearingMember = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> NetPosition1.mmObject();
 			isDerived = false;
 			xmlTag = "NonClrMmb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonClearingMember";
 			definition = "Provides the identification for the non-clearing member.";
 			maxOccurs = 1;
@@ -649,11 +649,11 @@ public class NetPosition1 {
 	 */
 	public static final MMMessageAssociationEnd mmAccruedInterestAmount = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Interest.mmAmount;
+			businessElementTrace_lazy = () -> Interest.mmAmount;
 			componentContext_lazy = () -> NetPosition1.mmObject();
 			isDerived = false;
 			xmlTag = "AcrdIntrstAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccruedInterestAmount";
 			definition = "Interest that has accumulated on a bond since the last interest payment up to, but not including, the settlement date.";
 			maxOccurs = 1;
@@ -666,14 +666,12 @@ public class NetPosition1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.NetPosition1.mmClearingAccount, com.tools20022.repository.msg.NetPosition1.mmDeliveryAccount,
-						com.tools20022.repository.msg.NetPosition1.mmFinancialInstrumentIdentification, com.tools20022.repository.msg.NetPosition1.mmInitialPositionAmount, com.tools20022.repository.msg.NetPosition1.mmNetPositionAmount,
-						com.tools20022.repository.msg.NetPosition1.mmAverageDealPrice, com.tools20022.repository.msg.NetPosition1.mmNetQuantity, com.tools20022.repository.msg.NetPosition1.mmSecuritiesMovementType,
-						com.tools20022.repository.msg.NetPosition1.mmDepository, com.tools20022.repository.msg.NetPosition1.mmTradeLegDetails, com.tools20022.repository.msg.NetPosition1.mmNonClearingMember,
-						com.tools20022.repository.msg.NetPosition1.mmAccruedInterestAmount);
+				messageElement_lazy = () -> Arrays.asList(NetPosition1.mmClearingAccount, NetPosition1.mmDeliveryAccount, NetPosition1.mmFinancialInstrumentIdentification, NetPosition1.mmInitialPositionAmount,
+						NetPosition1.mmNetPositionAmount, NetPosition1.mmAverageDealPrice, NetPosition1.mmNetQuantity, NetPosition1.mmSecuritiesMovementType, NetPosition1.mmDepository, NetPosition1.mmTradeLegDetails,
+						NetPosition1.mmNonClearingMember, NetPosition1.mmAccruedInterestAmount);
 				trace_lazy = () -> Position.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "NetPosition1";
 				definition = "Provides the net positions details.";
 			}

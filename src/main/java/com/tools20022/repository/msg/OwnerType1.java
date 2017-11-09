@@ -20,9 +20,14 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.AccountOwnerType1Code;
 import com.tools20022.repository.codeset.AccountPermissionType1Code;
 import com.tools20022.repository.entity.AccountOwnerRole;
+import com.tools20022.repository.entity.MandatePartyRole;
+import com.tools20022.repository.entity.PartyIdentificationInformation;
+import com.tools20022.repository.entity.Role;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -99,11 +104,11 @@ public class OwnerType1 {
 	 */
 	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Role.mmPlayer;
+			businessElementTrace_lazy = () -> Role.mmPlayer;
 			componentContext_lazy = () -> OwnerType1.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Type of ownership.";
 			maxOccurs = 1;
@@ -146,11 +151,11 @@ public class OwnerType1 {
 	 */
 	public static final MMMessageAttribute mmMandateType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.MandatePartyRole.mmMandate;
+			businessElementTrace_lazy = () -> MandatePartyRole.mmMandate;
 			componentContext_lazy = () -> OwnerType1.mmObject();
 			isDerived = false;
 			xmlTag = "MndtTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MandateType";
 			definition = "Type of mandate.";
 			maxOccurs = 1;
@@ -194,11 +199,11 @@ public class OwnerType1 {
 	 */
 	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.mmOtherIdentification;
+			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmOtherIdentification;
 			componentContext_lazy = () -> OwnerType1.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Additional information about owner type or mandate type in proprietary format.";
 			maxOccurs = 1;
@@ -211,10 +216,10 @@ public class OwnerType1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OwnerType1.mmType, com.tools20022.repository.msg.OwnerType1.mmMandateType, com.tools20022.repository.msg.OwnerType1.mmProprietary);
+				messageElement_lazy = () -> Arrays.asList(OwnerType1.mmType, OwnerType1.mmMandateType, OwnerType1.mmProprietary);
 				trace_lazy = () -> AccountOwnerRole.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OwnerType1";
 				definition = "Specifies the owner type and mandate type.";
 			}

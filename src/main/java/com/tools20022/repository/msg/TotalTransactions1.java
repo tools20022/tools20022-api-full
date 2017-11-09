@@ -19,6 +19,8 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -98,7 +100,7 @@ public class TotalTransactions1 {
 			componentContext_lazy = () -> TotalTransactions1.mmObject();
 			isDerived = false;
 			xmlTag = "TtlNtries";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalEntries";
 			definition = "Indicates the total number and sum of debit and credit entries.";
 			maxOccurs = 1;
@@ -140,7 +142,7 @@ public class TotalTransactions1 {
 			componentContext_lazy = () -> TotalTransactions1.mmObject();
 			isDerived = false;
 			xmlTag = "TtlCdtNtries";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalCreditEntries";
 			definition = "Indicates the total number and sum of credit entries.";
 			maxOccurs = 1;
@@ -182,7 +184,7 @@ public class TotalTransactions1 {
 			componentContext_lazy = () -> TotalTransactions1.mmObject();
 			isDerived = false;
 			xmlTag = "TtlDbtNtries";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalDebitEntries";
 			definition = "Indicates the total number and sum of debit entries.";
 			maxOccurs = 1;
@@ -226,7 +228,7 @@ public class TotalTransactions1 {
 			componentContext_lazy = () -> TotalTransactions1.mmObject();
 			isDerived = false;
 			xmlTag = "TtlNtriesPerBkTxCd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalEntriesPerBankTransactionCode";
 			definition = "Indicates the total number and sum of entries per bank transaction code.";
 			minOccurs = 0;
@@ -238,10 +240,9 @@ public class TotalTransactions1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TotalTransactions1.mmTotalEntries, com.tools20022.repository.msg.TotalTransactions1.mmTotalCreditEntries,
-						com.tools20022.repository.msg.TotalTransactions1.mmTotalDebitEntries, com.tools20022.repository.msg.TotalTransactions1.mmTotalEntriesPerBankTransactionCode);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(TotalTransactions1.mmTotalEntries, TotalTransactions1.mmTotalCreditEntries, TotalTransactions1.mmTotalDebitEntries, TotalTransactions1.mmTotalEntriesPerBankTransactionCode);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TotalTransactions1";
 				definition = "Set of element providing summary information on entries.";
 			}

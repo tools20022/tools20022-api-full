@@ -20,6 +20,7 @@ package com.tools20022.repository.area.seev;
 import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.SecuritiesEventsPreviousVersion;
 import com.tools20022.repository.choice.PartyIdentification9Choice;
 import com.tools20022.repository.msg.*;
@@ -45,6 +46,9 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code seev.002.001.04}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.SecuritiesEventsPreviousVersion
@@ -89,9 +93,6 @@ import java.util.List;
  * MeetingCancellationV04.mmExtension}</li>
  * </ul>
  * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code seev.002.001.04}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -145,7 +146,7 @@ public class MeetingCancellationV04 {
 	public static final MMMessageBuildingBlock mmIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Identifies the cancellation message.";
 			maxOccurs = 1;
@@ -183,7 +184,7 @@ public class MeetingCancellationV04 {
 	public static final MMMessageBuildingBlock mmMessageCancellation = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "MsgCxl";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageCancellation";
 			definition = "Information indicating that the cancellation of a message previously sent is requested (and not the cancellation of the meeting).";
 			maxOccurs = 1;
@@ -226,10 +227,10 @@ public class MeetingCancellationV04 {
 	public static final MMMessageBuildingBlock mmMeetingReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "MtgRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MeetingReference";
 			definition = "Series of elements which allow to identify a meeting.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.MeetingCancellationV05.mmMeetingReference);
+			nextVersions_lazy = () -> Arrays.asList(MeetingCancellationV05.mmMeetingReference);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> MeetingReference5.mmObject();
@@ -262,7 +263,7 @@ public class MeetingCancellationV04 {
 	public static final MMMessageBuildingBlock mmNotifyingParty = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "NtifngPty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotifyingParty";
 			definition = "Party notifying the cancellation of the meeting.";
 			maxOccurs = 1;
@@ -306,10 +307,10 @@ public class MeetingCancellationV04 {
 	public static final MMMessageBuildingBlock mmSecurity = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Scty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Security";
 			definition = "Identifies the security for which the meeting was organised.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.MeetingCancellationV05.mmSecurity);
+			nextVersions_lazy = () -> Arrays.asList(MeetingCancellationV05.mmSecurity);
 			maxOccurs = 200;
 			minOccurs = 0;
 			complexType_lazy = () -> SecurityPosition6.mmObject();
@@ -350,10 +351,10 @@ public class MeetingCancellationV04 {
 	public static final MMMessageBuildingBlock mmReason = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Rsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reason";
 			definition = "Defines the justification for the cancellation.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.MeetingCancellationV05.mmReason);
+			nextVersions_lazy = () -> Arrays.asList(MeetingCancellationV05.mmReason);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> MeetingCancellationReason2.mmObject();
@@ -388,7 +389,7 @@ public class MeetingCancellationV04 {
 	public static final MMMessageBuildingBlock mmExtension = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Xtnsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Extension";
 			definition = "Additional information that can not be captured in the structured fields and/or any other specific block.";
 			minOccurs = 0;
@@ -399,7 +400,7 @@ public class MeetingCancellationV04 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MeetingCancellationV04";
 				definition = "Scope\r\nThe MeetingCancellation message is sent by the party that sent the MeetingNotification message to the original receiver. It is sent to cancel the previous MeetingNotification message or to advise the cancellation of a meeting.\r\nUsage\r\nThe MeetingCancellation message is used in two different situations.\r\nFirst, it is used to cancel a previously sent MeetingNotification message. In this case, the MessageCancellation, the MeetingReference and the Reason building blocks need to be present.\r\nSecond, it is used to advise that the meeting is cancelled. In this case, only the MeetingReference and Reason building blocks need to be present.";
 				nextVersions_lazy = () -> Arrays.asList(MeetingCancellationV05.mmObject());
@@ -408,9 +409,8 @@ public class MeetingCancellationV04 {
 				rootElement = "Document";
 				xmlTag = "MtgCxl";
 				businessArea_lazy = () -> SecuritiesEventsPreviousVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.MeetingCancellationV04.mmIdentification, com.tools20022.repository.area.seev.MeetingCancellationV04.mmMessageCancellation,
-						com.tools20022.repository.area.seev.MeetingCancellationV04.mmMeetingReference, com.tools20022.repository.area.seev.MeetingCancellationV04.mmNotifyingParty,
-						com.tools20022.repository.area.seev.MeetingCancellationV04.mmSecurity, com.tools20022.repository.area.seev.MeetingCancellationV04.mmReason, com.tools20022.repository.area.seev.MeetingCancellationV04.mmExtension);
+				messageBuildingBlock_lazy = () -> Arrays.asList(MeetingCancellationV04.mmIdentification, MeetingCancellationV04.mmMessageCancellation, MeetingCancellationV04.mmMeetingReference, MeetingCancellationV04.mmNotifyingParty,
+						MeetingCancellationV04.mmSecurity, MeetingCancellationV04.mmReason, MeetingCancellationV04.mmExtension);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "seev";

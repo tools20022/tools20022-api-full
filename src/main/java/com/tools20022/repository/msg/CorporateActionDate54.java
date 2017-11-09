@@ -19,8 +19,13 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.DateFormat34Choice;
+import com.tools20022.repository.entity.CorporateActionDeadline;
 import com.tools20022.repository.entity.CorporateActionEvent;
+import com.tools20022.repository.entity.Dividend;
+import com.tools20022.repository.entity.Lottery;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -103,11 +108,11 @@ public class CorporateActionDate54 {
 	 */
 	public static final MMMessageAssociationEnd mmRecordDate = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionDeadline.mmRecordDate;
+			businessElementTrace_lazy = () -> CorporateActionDeadline.mmRecordDate;
 			componentContext_lazy = () -> CorporateActionDate54.mmObject();
 			isDerived = false;
 			xmlTag = "RcrdDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RecordDate";
 			definition = "Date/time at which positions are struck at the end of the day to note which parties will receive the relevant amount of entitlement, due to be distributed on payment date.";
 			maxOccurs = 1;
@@ -153,11 +158,11 @@ public class CorporateActionDate54 {
 	 */
 	public static final MMMessageAssociationEnd mmExDividendDate = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Dividend.mmExDividendDate;
+			businessElementTrace_lazy = () -> Dividend.mmExDividendDate;
 			componentContext_lazy = () -> CorporateActionDate54.mmObject();
 			isDerived = false;
 			xmlTag = "ExDvddDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExDividendDate";
 			definition = "Date/time as from which trading (including exchange and OTC trading) occurs on the underlying security without the benefit.";
 			maxOccurs = 1;
@@ -203,11 +208,11 @@ public class CorporateActionDate54 {
 	 */
 	public static final MMMessageAssociationEnd mmLotteryDate = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Lottery.mmLotteryDate;
+			businessElementTrace_lazy = () -> Lottery.mmLotteryDate;
 			componentContext_lazy = () -> CorporateActionDate54.mmObject();
 			isDerived = false;
 			xmlTag = "LtryDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LotteryDate";
 			definition = "Date/time on which the lottery is run and applied to the holder's positions. This is also applicable to partial calls.";
 			maxOccurs = 1;
@@ -220,11 +225,10 @@ public class CorporateActionDate54 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionDate54.mmRecordDate, com.tools20022.repository.msg.CorporateActionDate54.mmExDividendDate,
-						com.tools20022.repository.msg.CorporateActionDate54.mmLotteryDate);
+				messageElement_lazy = () -> Arrays.asList(CorporateActionDate54.mmRecordDate, CorporateActionDate54.mmExDividendDate, CorporateActionDate54.mmLotteryDate);
 				trace_lazy = () -> CorporateActionEvent.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionDate54";
 				definition = "Specifies corporate action dates.";
 			}

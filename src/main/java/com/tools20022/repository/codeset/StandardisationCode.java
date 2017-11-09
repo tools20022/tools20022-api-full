@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -94,7 +96,7 @@ public class StandardisationCode {
 	 */
 	public static final MMCode mmStandardised = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Standardised";
 			definition = "The underlying instruments, expiration date and contract size of the derivatives are standardised.";
 			owner_lazy = () -> StandardisationCode.mmObject();
@@ -128,7 +130,7 @@ public class StandardisationCode {
 	 */
 	public static final MMCode mmNonStandardised = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NonStandardised";
 			definition = "Custom-made instrument between two parties. Underlying\ninstruments, expiration date and contract size of the derivatives are not standardised.";
 			owner_lazy = () -> StandardisationCode.mmObject();
@@ -161,7 +163,7 @@ public class StandardisationCode {
 	 */
 	public static final MMCode mmFlexible = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Flexible";
 			definition = "Derivatives defined according to exchange specifications, but certain characteristics can be user defined.";
 			owner_lazy = () -> StandardisationCode.mmObject();
@@ -172,13 +174,12 @@ public class StandardisationCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("STAN");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "StandardisationCode";
 				definition = "Specifies whether the terms of the security (underlying instruments, expiration date, contract size) are defined according to the exchange specifications or whether they can be user defined.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.StandardisationCode.mmStandardised, com.tools20022.repository.codeset.StandardisationCode.mmNonStandardised,
-						com.tools20022.repository.codeset.StandardisationCode.mmFlexible);
+				code_lazy = () -> Arrays.asList(StandardisationCode.mmStandardised, StandardisationCode.mmNonStandardised, StandardisationCode.mmFlexible);
 			}
 		});
 		return mmObject_lazy.get();

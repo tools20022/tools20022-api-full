@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.BorrowingReasonCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -86,7 +88,7 @@ public class BorrowingReason1Code extends BorrowingReasonCode {
 	 */
 	public static final MMCode mmSelfConsumption = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SelfConsumption";
 			owner_lazy = () -> BorrowingReason1Code.mmObject();
 		}
@@ -109,7 +111,7 @@ public class BorrowingReason1Code extends BorrowingReasonCode {
 	 */
 	public static final MMCode mmTransferToThirdParty = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransferToThirdParty";
 			owner_lazy = () -> BorrowingReason1Code.mmObject();
 		}
@@ -132,7 +134,7 @@ public class BorrowingReason1Code extends BorrowingReasonCode {
 	 */
 	public static final MMCode mmMarketMakingPurpose = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketMakingPurpose";
 			owner_lazy = () -> BorrowingReason1Code.mmObject();
 		}
@@ -141,13 +143,12 @@ public class BorrowingReason1Code extends BorrowingReasonCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("SFCT");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "BorrowingReason1Code";
 				definition = "Identifies the underlying reason for the borrowing.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.BorrowingReason1Code.mmSelfConsumption, com.tools20022.repository.codeset.BorrowingReason1Code.mmTransferToThirdParty,
-						com.tools20022.repository.codeset.BorrowingReason1Code.mmMarketMakingPurpose);
+				code_lazy = () -> Arrays.asList(BorrowingReason1Code.mmSelfConsumption, BorrowingReason1Code.mmTransferToThirdParty, BorrowingReason1Code.mmMarketMakingPurpose);
 				trace_lazy = () -> BorrowingReasonCode.mmObject();
 			}
 		});

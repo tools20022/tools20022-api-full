@@ -20,9 +20,14 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.tsin.InvoiceFinancingRequestStatusV01;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.InvoiceFinancingAgreement;
+import com.tools20022.repository.entity.Organisation;
+import com.tools20022.repository.entity.Party;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -128,7 +133,7 @@ public class OriginalRequestInformation1 {
 			componentContext_lazy = () -> OriginalRequestInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Unique and unambiguous identifier of the original request message as assigned by the original sending party.";
 			maxOccurs = 1;
@@ -170,7 +175,7 @@ public class OriginalRequestInformation1 {
 			componentContext_lazy = () -> OriginalRequestInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "CreDtTm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreationDateTime";
 			definition = "Date and time at which the original request message was created.";
 			maxOccurs = 1;
@@ -216,11 +221,11 @@ public class OriginalRequestInformation1 {
 	 */
 	public static final MMMessageAssociationEnd mmFinancingRequestor = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> OriginalRequestInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "FincgRqstr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancingRequestor";
 			definition = "Party that requests the invoice financing, on behalf of a creditor, as indicated in the original request message.";
 			maxOccurs = 1;
@@ -268,11 +273,11 @@ public class OriginalRequestInformation1 {
 	 */
 	public static final MMMessageAssociationEnd mmIntermediaryAgent = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Organisation.mmOrganisationIdentification;
+			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> OriginalRequestInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "IntrmyAgt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IntermediaryAgent";
 			definition = "Financial institution that receives the request from the financing requestor and forwards it to the first agent for execution, as indicated in the original request message.";
 			maxOccurs = 1;
@@ -320,11 +325,11 @@ public class OriginalRequestInformation1 {
 	 */
 	public static final MMMessageAssociationEnd mmFirstAgent = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Organisation.mmOrganisationIdentification;
+			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> OriginalRequestInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "FrstAgt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FirstAgent";
 			definition = "Financial institution of financing requestor to which an invoice financing request is addressed, as indicated in the original request message.";
 			maxOccurs = 1;
@@ -369,11 +374,11 @@ public class OriginalRequestInformation1 {
 	 */
 	public static final MMMessageAssociationEnd mmValidationStatusInformation = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvoiceFinancingAgreement.mmInvoiceFinancingStatus;
+			businessElementTrace_lazy = () -> InvoiceFinancingAgreement.mmInvoiceFinancingStatus;
 			componentContext_lazy = () -> OriginalRequestInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "VldtnStsInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValidationStatusInformation";
 			definition = "Information about the validation status of the request message.";
 			maxOccurs = 1;
@@ -417,11 +422,11 @@ public class OriginalRequestInformation1 {
 	 */
 	public static final MMMessageAssociationEnd mmCancellationStatusInformation = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvoiceFinancingAgreement.mmInvoiceFinancingStatus;
+			businessElementTrace_lazy = () -> InvoiceFinancingAgreement.mmInvoiceFinancingStatus;
 			componentContext_lazy = () -> OriginalRequestInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "CxlStsInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationStatusInformation";
 			definition = "Information on the business status of the cancellation.";
 			maxOccurs = 1;
@@ -434,14 +439,12 @@ public class OriginalRequestInformation1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OriginalRequestInformation1.mmIdentification, com.tools20022.repository.msg.OriginalRequestInformation1.mmCreationDateTime,
-						com.tools20022.repository.msg.OriginalRequestInformation1.mmFinancingRequestor, com.tools20022.repository.msg.OriginalRequestInformation1.mmIntermediaryAgent,
-						com.tools20022.repository.msg.OriginalRequestInformation1.mmFirstAgent, com.tools20022.repository.msg.OriginalRequestInformation1.mmValidationStatusInformation,
-						com.tools20022.repository.msg.OriginalRequestInformation1.mmCancellationStatusInformation);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsin.InvoiceFinancingRequestStatusV01.mmOriginalRequestInformationAndStatus);
+				messageElement_lazy = () -> Arrays.asList(OriginalRequestInformation1.mmIdentification, OriginalRequestInformation1.mmCreationDateTime, OriginalRequestInformation1.mmFinancingRequestor,
+						OriginalRequestInformation1.mmIntermediaryAgent, OriginalRequestInformation1.mmFirstAgent, OriginalRequestInformation1.mmValidationStatusInformation, OriginalRequestInformation1.mmCancellationStatusInformation);
+				messageBuildingBlock_lazy = () -> Arrays.asList(InvoiceFinancingRequestStatusV01.mmOriginalRequestInformationAndStatus);
 				trace_lazy = () -> InvoiceFinancingAgreement.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OriginalRequestInformation1";
 				definition = "Set of characteristics that unambiguously identify the original global invoice financing request.";
 			}

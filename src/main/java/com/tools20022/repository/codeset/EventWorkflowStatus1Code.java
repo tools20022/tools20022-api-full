@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.EventWorkflowStatusCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -110,7 +112,7 @@ public class EventWorkflowStatus1Code extends EventWorkflowStatusCode {
 	 */
 	public static final MMCode mmApproved = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Approved";
 			owner_lazy = () -> EventWorkflowStatus1Code.mmObject();
 		}
@@ -133,7 +135,7 @@ public class EventWorkflowStatus1Code extends EventWorkflowStatusCode {
 	 */
 	public static final MMCode mmPendingApproval = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingApproval";
 			owner_lazy = () -> EventWorkflowStatus1Code.mmObject();
 		}
@@ -156,7 +158,7 @@ public class EventWorkflowStatus1Code extends EventWorkflowStatusCode {
 	 */
 	public static final MMCode mmConditionallyApproved = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConditionallyApproved";
 			owner_lazy = () -> EventWorkflowStatus1Code.mmObject();
 		}
@@ -179,7 +181,7 @@ public class EventWorkflowStatus1Code extends EventWorkflowStatusCode {
 	 */
 	public static final MMCode mmPendingConditionalApproval = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingConditionalApproval";
 			owner_lazy = () -> EventWorkflowStatus1Code.mmObject();
 		}
@@ -202,7 +204,7 @@ public class EventWorkflowStatus1Code extends EventWorkflowStatusCode {
 	 */
 	public static final MMCode mmInConflict = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InConflict";
 			owner_lazy = () -> EventWorkflowStatus1Code.mmObject();
 		}
@@ -225,7 +227,7 @@ public class EventWorkflowStatus1Code extends EventWorkflowStatusCode {
 	 */
 	public static final MMCode mmIncomplete = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Incomplete";
 			owner_lazy = () -> EventWorkflowStatus1Code.mmObject();
 		}
@@ -248,7 +250,7 @@ public class EventWorkflowStatus1Code extends EventWorkflowStatusCode {
 	 */
 	public static final MMCode mmPendingDeleted = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingDeleted";
 			owner_lazy = () -> EventWorkflowStatus1Code.mmObject();
 		}
@@ -271,7 +273,7 @@ public class EventWorkflowStatus1Code extends EventWorkflowStatusCode {
 	 */
 	public static final MMCode mmNotSupported = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotSupported";
 			owner_lazy = () -> EventWorkflowStatus1Code.mmObject();
 		}
@@ -294,7 +296,7 @@ public class EventWorkflowStatus1Code extends EventWorkflowStatusCode {
 	 */
 	public static final MMCode mmPendingNotSupported = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingNotSupported";
 			owner_lazy = () -> EventWorkflowStatus1Code.mmObject();
 		}
@@ -317,7 +319,7 @@ public class EventWorkflowStatus1Code extends EventWorkflowStatusCode {
 	 */
 	public static final MMCode mmPendingCancelled = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingCancelled";
 			owner_lazy = () -> EventWorkflowStatus1Code.mmObject();
 		}
@@ -326,16 +328,14 @@ public class EventWorkflowStatus1Code extends EventWorkflowStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("WSAP");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "EventWorkflowStatus1Code";
 				definition = "Specifies the workflow status of the announcement record based on validation procedure.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.EventWorkflowStatus1Code.mmApproved, com.tools20022.repository.codeset.EventWorkflowStatus1Code.mmPendingApproval,
-						com.tools20022.repository.codeset.EventWorkflowStatus1Code.mmConditionallyApproved, com.tools20022.repository.codeset.EventWorkflowStatus1Code.mmPendingConditionalApproval,
-						com.tools20022.repository.codeset.EventWorkflowStatus1Code.mmInConflict, com.tools20022.repository.codeset.EventWorkflowStatus1Code.mmIncomplete,
-						com.tools20022.repository.codeset.EventWorkflowStatus1Code.mmPendingDeleted, com.tools20022.repository.codeset.EventWorkflowStatus1Code.mmNotSupported,
-						com.tools20022.repository.codeset.EventWorkflowStatus1Code.mmPendingNotSupported, com.tools20022.repository.codeset.EventWorkflowStatus1Code.mmPendingCancelled);
+				code_lazy = () -> Arrays.asList(EventWorkflowStatus1Code.mmApproved, EventWorkflowStatus1Code.mmPendingApproval, EventWorkflowStatus1Code.mmConditionallyApproved, EventWorkflowStatus1Code.mmPendingConditionalApproval,
+						EventWorkflowStatus1Code.mmInConflict, EventWorkflowStatus1Code.mmIncomplete, EventWorkflowStatus1Code.mmPendingDeleted, EventWorkflowStatus1Code.mmNotSupported, EventWorkflowStatus1Code.mmPendingNotSupported,
+						EventWorkflowStatus1Code.mmPendingCancelled);
 				trace_lazy = () -> EventWorkflowStatusCode.mmObject();
 			}
 		});

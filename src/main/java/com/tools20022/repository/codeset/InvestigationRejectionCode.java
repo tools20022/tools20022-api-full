@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.InvestigationRejection1Code
+ * InvestigationRejection1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -50,14 +60,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.InvestigationRejectionCode#mmMissingResolutionOfInvestigation
  * InvestigationRejectionCode.mmMissingResolutionOfInvestigation}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.InvestigationRejection1Code
- * InvestigationRejection1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -107,7 +109,7 @@ public class InvestigationRejectionCode {
 	 */
 	public static final MMCode mmUnderlyingPaymentNotFound = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnderlyingPaymentNotFound";
 			definition = "Underlying instruction can not be found.";
 			owner_lazy = () -> InvestigationRejectionCode.mmObject();
@@ -141,7 +143,7 @@ public class InvestigationRejectionCode {
 	 */
 	public static final MMCode mmNotAuthorisedToInvestigate = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotAuthorisedToInvestigate";
 			definition = "Case assignee is not allowed to investigate on this instruction or a party has been by-passed in the payment chain or no bilateral agreement has been established for this type of query.";
 			owner_lazy = () -> InvestigationRejectionCode.mmObject();
@@ -171,7 +173,7 @@ public class InvestigationRejectionCode {
 	 */
 	public static final MMCode mmUnknownCase = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnknownCase";
 			definition = "Case has never been assigned before.";
 			owner_lazy = () -> InvestigationRejectionCode.mmObject();
@@ -204,7 +206,7 @@ public class InvestigationRejectionCode {
 	 */
 	public static final MMCode mmPaymentPreviouslyCancelledOrRejected = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentPreviouslyCancelledOrRejected";
 			definition = "Used when the payment instruction has previously been cancelled or rejected.";
 			owner_lazy = () -> InvestigationRejectionCode.mmObject();
@@ -235,7 +237,7 @@ public class InvestigationRejectionCode {
 	 */
 	public static final MMCode mmWrongMessage = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WrongMessage";
 			definition = "Wrong message has been used in the investigation workflow.";
 			owner_lazy = () -> InvestigationRejectionCode.mmObject();
@@ -268,7 +270,7 @@ public class InvestigationRejectionCode {
 	 */
 	public static final MMCode mmRejectNonCashRelated = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RejectNonCashRelated";
 			definition = "Used to reject a non-cash related query that is not covered in the workflow.";
 			owner_lazy = () -> InvestigationRejectionCode.mmObject();
@@ -299,7 +301,7 @@ public class InvestigationRejectionCode {
 	 */
 	public static final MMCode mmMissingResolutionOfInvestigation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MissingResolutionOfInvestigation";
 			definition = "Resolution of Investigation has not been received on reopened case.";
 			owner_lazy = () -> InvestigationRejectionCode.mmObject();
@@ -310,15 +312,14 @@ public class InvestigationRejectionCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("NFND");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InvestigationRejectionCode";
 				definition = "Specifies the reason for rejecting an investigation case.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.InvestigationRejectionCode.mmUnderlyingPaymentNotFound, com.tools20022.repository.codeset.InvestigationRejectionCode.mmNotAuthorisedToInvestigate,
-						com.tools20022.repository.codeset.InvestigationRejectionCode.mmUnknownCase, com.tools20022.repository.codeset.InvestigationRejectionCode.mmPaymentPreviouslyCancelledOrRejected,
-						com.tools20022.repository.codeset.InvestigationRejectionCode.mmWrongMessage, com.tools20022.repository.codeset.InvestigationRejectionCode.mmRejectNonCashRelated,
-						com.tools20022.repository.codeset.InvestigationRejectionCode.mmMissingResolutionOfInvestigation);
+				code_lazy = () -> Arrays.asList(InvestigationRejectionCode.mmUnderlyingPaymentNotFound, InvestigationRejectionCode.mmNotAuthorisedToInvestigate, InvestigationRejectionCode.mmUnknownCase,
+						InvestigationRejectionCode.mmPaymentPreviouslyCancelledOrRejected, InvestigationRejectionCode.mmWrongMessage, InvestigationRejectionCode.mmRejectNonCashRelated,
+						InvestigationRejectionCode.mmMissingResolutionOfInvestigation);
 				derivation_lazy = () -> Arrays.asList(InvestigationRejection1Code.mmObject());
 			}
 		});

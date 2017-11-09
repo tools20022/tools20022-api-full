@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,19 +29,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.CardType1Code
+ * CardType1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>{@linkplain com.tools20022.repository.codeset.CardTypeCode#mmCreditCard
  * CardTypeCode.mmCreditCard}</li>
  * <li>{@linkplain com.tools20022.repository.codeset.CardTypeCode#mmDebitCard
  * CardTypeCode.mmDebitCard}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.CardType1Code
- * CardType1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -92,7 +94,7 @@ public class CardTypeCode {
 	 */
 	public static final MMCode mmCreditCard = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CreditCard";
 			definition = "Card where the holder has been granted a line of credit. The card enables the holder to make purchases and withdraw cash up to a pre-arranged ceiling.";
 			owner_lazy = () -> CardTypeCode.mmObject();
@@ -125,7 +127,7 @@ public class CardTypeCode {
 	 */
 	public static final MMCode mmDebitCard = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DebitCard";
 			definition = "Card enabling the holder to have its purchases directly charged to its account. The card may also combine other functions, eg, cash card or cheque guaranteed card.";
 			owner_lazy = () -> CardTypeCode.mmObject();
@@ -136,12 +138,12 @@ public class CardTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CRDT");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CardTypeCode";
 				definition = "Specifies the type of payment card.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CardTypeCode.mmCreditCard, com.tools20022.repository.codeset.CardTypeCode.mmDebitCard);
+				code_lazy = () -> Arrays.asList(CardTypeCode.mmCreditCard, CardTypeCode.mmDebitCard);
 				derivation_lazy = () -> Arrays.asList(CardType1Code.mmObject());
 			}
 		});

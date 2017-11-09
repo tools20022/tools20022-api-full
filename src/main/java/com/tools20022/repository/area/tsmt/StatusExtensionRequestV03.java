@@ -20,6 +20,7 @@ package com.tools20022.repository.area.tsmt;
 import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.TradeServicesManagementLatestVersion;
 import com.tools20022.repository.msg.MessageIdentification1;
 import com.tools20022.repository.msg.SimpleIdentificationInformation;
@@ -45,6 +46,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code tsmt.035.001.03}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.TradeServicesManagementLatestVersion
@@ -82,9 +86,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * StatusExtensionRequestV03.mmStatusToBeExtended}</li>
  * </ul>
  * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code tsmt.035.001.03}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -127,7 +128,7 @@ public class StatusExtensionRequestV03 {
 	public static final MMMessageBuildingBlock mmRequestIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "ReqId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestIdentification";
 			definition = "Identifies the request message.";
 			maxOccurs = 1;
@@ -166,7 +167,7 @@ public class StatusExtensionRequestV03 {
 	public static final MMMessageBuildingBlock mmTransactionIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "TxId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionIdentification";
 			definition = "Unique identification assigned by the matching application to the transaction.\nThis identification is to be used in any communication between the parties.\n";
 			maxOccurs = 1;
@@ -202,7 +203,7 @@ public class StatusExtensionRequestV03 {
 	public static final MMMessageBuildingBlock mmSubmitterTransactionReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SubmitrTxRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubmitterTransactionReference";
 			definition = "Reference to the transaction for the requesting financial institution.";
 			maxOccurs = 1;
@@ -238,7 +239,7 @@ public class StatusExtensionRequestV03 {
 	public static final MMMessageBuildingBlock mmStatusToBeExtended = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "StsToBeXtnded";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusToBeExtended";
 			definition = "Identifies the status of the transaction by means of a code. ";
 			maxOccurs = 1;
@@ -250,16 +251,15 @@ public class StatusExtensionRequestV03 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "StatusExtensionRequestV03";
 				definition = "Scope\r\nThe StatusExtensionRequest message is sent by either party involved in a transaction to the matching application.\r\nThis message is used to request the extension of the status of a transaction.\r\nUsage\r\nThe StatusExtensionRequest message can be sent by either party involved in a transaction to the matching application to request the extension of the status of a transaction.\r\nThe matching application will pass on the request by sending a StatusExtensionRequestNotification message to the counterparty which can accept or reject the status extension request by sending a StatusExtensionAcceptance or StatusExtensionRejection message.";
 				messageSet_lazy = () -> Arrays.asList(TradeServicesManagementISOPreviousversion.mmObject(), TradeServicesManagementISOLatestversion.mmObject());
 				rootElement = "Document";
 				xmlTag = "StsXtnsnReq";
 				businessArea_lazy = () -> TradeServicesManagementLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.StatusExtensionRequestV03.mmRequestIdentification,
-						com.tools20022.repository.area.tsmt.StatusExtensionRequestV03.mmTransactionIdentification, com.tools20022.repository.area.tsmt.StatusExtensionRequestV03.mmSubmitterTransactionReference,
-						com.tools20022.repository.area.tsmt.StatusExtensionRequestV03.mmStatusToBeExtended);
+				messageBuildingBlock_lazy = () -> Arrays.asList(StatusExtensionRequestV03.mmRequestIdentification, StatusExtensionRequestV03.mmTransactionIdentification, StatusExtensionRequestV03.mmSubmitterTransactionReference,
+						StatusExtensionRequestV03.mmStatusToBeExtended);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "tsmt";

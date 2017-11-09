@@ -19,7 +19,11 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.semt.IntraPositionMovementStatusAdviceV04;
+import com.tools20022.repository.area.semt.IntraPositionMovementStatusAdviceV05;
 import com.tools20022.repository.entity.SecuritiesTradeStatus;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.ProprietaryStatusAndReason6;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -128,10 +132,10 @@ public class SettlementStatus16Choice {
 			componentContext_lazy = () -> SettlementStatus16Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Pdg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Pending";
 			definition = "Instruction is pending. Settlement at the instructed settlement date is still possible.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.SettlementStatus9Choice.mmPending;
+			previousVersion_lazy = () -> SettlementStatus9Choice.mmPending;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -185,10 +189,10 @@ public class SettlementStatus16Choice {
 			componentContext_lazy = () -> SettlementStatus16Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Flng";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Failing";
 			definition = "Instruction is failing. Settlement at the instructed settlement date is no longer possible.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.SettlementStatus9Choice.mmFailing;
+			previousVersion_lazy = () -> SettlementStatus9Choice.mmFailing;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -239,10 +243,10 @@ public class SettlementStatus16Choice {
 			componentContext_lazy = () -> SettlementStatus16Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Proprietary status.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.SettlementStatus9Choice.mmProprietary;
+			previousVersion_lazy = () -> SettlementStatus9Choice.mmProprietary;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -253,13 +257,11 @@ public class SettlementStatus16Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SettlementStatus16Choice.mmPending, com.tools20022.repository.choice.SettlementStatus16Choice.mmFailing,
-						com.tools20022.repository.choice.SettlementStatus16Choice.mmProprietary);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.IntraPositionMovementStatusAdviceV04.mmSettlementStatus,
-						com.tools20022.repository.area.semt.IntraPositionMovementStatusAdviceV05.mmSettlementStatus);
+				messageElement_lazy = () -> Arrays.asList(SettlementStatus16Choice.mmPending, SettlementStatus16Choice.mmFailing, SettlementStatus16Choice.mmProprietary);
+				messageBuildingBlock_lazy = () -> Arrays.asList(IntraPositionMovementStatusAdviceV04.mmSettlementStatus, IntraPositionMovementStatusAdviceV05.mmSettlementStatus);
 				trace_lazy = () -> SecuritiesTradeStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SettlementStatus16Choice";
 				definition = "Choice of format for the settlement status.";
 				previousVersion_lazy = () -> SettlementStatus9Choice.mmObject();

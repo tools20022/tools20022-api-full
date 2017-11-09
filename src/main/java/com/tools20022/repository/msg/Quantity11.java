@@ -20,10 +20,14 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.FinancialInstrumentQuantity1Choice;
 import com.tools20022.repository.datatype.Max210Text;
 import com.tools20022.repository.entity.LotBreakdown;
+import com.tools20022.repository.entity.SecuritiesCertificate;
 import com.tools20022.repository.entity.SecuritiesQuantity;
+import com.tools20022.repository.entity.SecuritiesSettlement;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -115,14 +119,14 @@ public class Quantity11 {
 	 */
 	public static final MMMessageAssociationEnd mmSettlementQuantity = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmSettlementQuantity;
+			businessElementTrace_lazy = () -> SecuritiesSettlement.mmSettlementQuantity;
 			componentContext_lazy = () -> Quantity11.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmQty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementQuantity";
 			definition = "Total quantity of securities to be settled.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Quantity7.mmSettlementQuantity;
+			previousVersion_lazy = () -> Quantity7.mmSettlementQuantity;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -169,14 +173,14 @@ public class Quantity11 {
 	 */
 	public static final MMMessageAttribute mmDenominationChoice = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmDenominationChoice;
+			businessElementTrace_lazy = () -> SecuritiesSettlement.mmDenominationChoice;
 			componentContext_lazy = () -> Quantity11.mmObject();
 			isDerived = false;
 			xmlTag = "DnmtnChc";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DenominationChoice";
 			definition = "Denomination of the security to be received or delivered.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Quantity7.mmDenominationChoice;
+			previousVersion_lazy = () -> Quantity7.mmDenominationChoice;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max210Text.mmObject();
@@ -223,14 +227,14 @@ public class Quantity11 {
 	 */
 	public static final MMMessageAssociationEnd mmCertificateNumber = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesCertificate.mmNumber;
+			businessElementTrace_lazy = () -> SecuritiesCertificate.mmNumber;
 			componentContext_lazy = () -> Quantity11.mmObject();
 			isDerived = false;
 			xmlTag = "CertNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CertificateNumber";
 			definition = "Unique and unambiguous identifier of a certificate assigned by the issuer.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Quantity7.mmCertificateNumber;
+			previousVersion_lazy = () -> Quantity7.mmCertificateNumber;
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.SecuritiesCertificate4.mmObject();
@@ -280,10 +284,10 @@ public class Quantity11 {
 			componentContext_lazy = () -> Quantity11.mmObject();
 			isDerived = false;
 			xmlTag = "QtyBrkdwn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuantityBreakdown";
 			definition = "Breakdown of a quantity into lots such as tax lots, instrument series, etc.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Quantity7.mmQuantityBreakdown;
+			previousVersion_lazy = () -> Quantity7.mmQuantityBreakdown;
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.QuantityBreakdown30.mmObject();
@@ -293,11 +297,10 @@ public class Quantity11 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Quantity11.mmSettlementQuantity, com.tools20022.repository.msg.Quantity11.mmDenominationChoice,
-						com.tools20022.repository.msg.Quantity11.mmCertificateNumber, com.tools20022.repository.msg.Quantity11.mmQuantityBreakdown);
+				messageElement_lazy = () -> Arrays.asList(Quantity11.mmSettlementQuantity, Quantity11.mmDenominationChoice, Quantity11.mmCertificateNumber, Quantity11.mmQuantityBreakdown);
 				trace_lazy = () -> SecuritiesQuantity.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Quantity11";
 				definition = "Details on the quantity, account and other related information involved in a transaction.";
 				previousVersion_lazy = () -> Quantity7.mmObject();

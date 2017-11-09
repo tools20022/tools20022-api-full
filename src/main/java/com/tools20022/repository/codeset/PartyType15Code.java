@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.PartyTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -78,7 +80,7 @@ public class PartyType15Code extends PartyTypeCode {
 	 */
 	public static final MMCode mmPOIGroup = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "POIGroup";
 			owner_lazy = () -> PartyType15Code.mmObject();
 		}
@@ -101,7 +103,7 @@ public class PartyType15Code extends PartyTypeCode {
 	 */
 	public static final MMCode mmPOISystem = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "POISystem";
 			owner_lazy = () -> PartyType15Code.mmObject();
 		}
@@ -124,7 +126,7 @@ public class PartyType15Code extends PartyTypeCode {
 	 */
 	public static final MMCode mmSinglePOI = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SinglePOI";
 			owner_lazy = () -> PartyType15Code.mmObject();
 		}
@@ -133,11 +135,11 @@ public class PartyType15Code extends PartyTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PartyType15Code";
 				definition = "Party involved by the data set.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PartyType15Code.mmPOIGroup, com.tools20022.repository.codeset.PartyType15Code.mmPOISystem, com.tools20022.repository.codeset.PartyType15Code.mmSinglePOI);
+				code_lazy = () -> Arrays.asList(PartyType15Code.mmPOIGroup, PartyType15Code.mmPOISystem, PartyType15Code.mmSinglePOI);
 				trace_lazy = () -> PartyTypeCode.mmObject();
 			}
 		});

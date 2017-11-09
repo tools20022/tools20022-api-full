@@ -20,10 +20,12 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.RejectedCancellationStatusReason1Code;
 import com.tools20022.repository.datatype.Extended350Code;
 import com.tools20022.repository.entity.GenericIdentification;
 import com.tools20022.repository.entity.StatusReason;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -103,7 +105,7 @@ public class RejectedCancellationStatusReason1Choice {
 			componentContext_lazy = () -> RejectedCancellationStatusReason1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Rsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reason";
 			definition = "Reason for the rejected status.";
 			maxOccurs = 1;
@@ -145,7 +147,7 @@ public class RejectedCancellationStatusReason1Choice {
 			componentContext_lazy = () -> RejectedCancellationStatusReason1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "XtndedRsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExtendedReason";
 			definition = "Reason for the rejected status.";
 			maxOccurs = 1;
@@ -192,7 +194,7 @@ public class RejectedCancellationStatusReason1Choice {
 			componentContext_lazy = () -> RejectedCancellationStatusReason1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "DataSrcSchme";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DataSourceScheme";
 			definition = "Proprietary identification of the reason for the rejected status.";
 			maxOccurs = 1;
@@ -205,11 +207,10 @@ public class RejectedCancellationStatusReason1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.RejectedCancellationStatusReason1Choice.mmReason, com.tools20022.repository.choice.RejectedCancellationStatusReason1Choice.mmExtendedReason,
-						com.tools20022.repository.choice.RejectedCancellationStatusReason1Choice.mmDataSourceScheme);
+				messageElement_lazy = () -> Arrays.asList(RejectedCancellationStatusReason1Choice.mmReason, RejectedCancellationStatusReason1Choice.mmExtendedReason, RejectedCancellationStatusReason1Choice.mmDataSourceScheme);
 				trace_lazy = () -> StatusReason.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RejectedCancellationStatusReason1Choice";
 				definition = "Reason for which a cancellation is rejected.";
 			}

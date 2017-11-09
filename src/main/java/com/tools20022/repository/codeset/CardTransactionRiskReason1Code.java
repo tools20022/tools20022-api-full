@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CardTransactionRiskReasonCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -132,7 +134,7 @@ public class CardTransactionRiskReason1Code extends CardTransactionRiskReasonCod
 	 */
 	public static final MMCode mmApproveDeclinePattern = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ApproveDeclinePattern";
 			owner_lazy = () -> CardTransactionRiskReason1Code.mmObject();
 		}
@@ -155,7 +157,7 @@ public class CardTransactionRiskReason1Code extends CardTransactionRiskReasonCod
 	 */
 	public static final MMCode mmApproveDeclineSequence = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ApproveDeclineSequence";
 			owner_lazy = () -> CardTransactionRiskReason1Code.mmObject();
 		}
@@ -178,7 +180,7 @@ public class CardTransactionRiskReason1Code extends CardTransactionRiskReasonCod
 	 */
 	public static final MMCode mmAuthorizationActivity = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AuthorizationActivity";
 			owner_lazy = () -> CardTransactionRiskReason1Code.mmObject();
 		}
@@ -201,7 +203,7 @@ public class CardTransactionRiskReason1Code extends CardTransactionRiskReasonCod
 	 */
 	public static final MMCode mmCompromisedCard = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CompromisedCard";
 			owner_lazy = () -> CardTransactionRiskReason1Code.mmObject();
 		}
@@ -224,7 +226,7 @@ public class CardTransactionRiskReason1Code extends CardTransactionRiskReasonCod
 	 */
 	public static final MMCode mmEcommerceActivity = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EcommerceActivity";
 			owner_lazy = () -> CardTransactionRiskReason1Code.mmObject();
 		}
@@ -247,7 +249,7 @@ public class CardTransactionRiskReason1Code extends CardTransactionRiskReasonCod
 	 */
 	public static final MMCode mmExpiryDateMismatch = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExpiryDateMismatch";
 			owner_lazy = () -> CardTransactionRiskReason1Code.mmObject();
 		}
@@ -270,7 +272,7 @@ public class CardTransactionRiskReason1Code extends CardTransactionRiskReasonCod
 	 */
 	public static final MMCode mmForeignActivity = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForeignActivity";
 			owner_lazy = () -> CardTransactionRiskReason1Code.mmObject();
 		}
@@ -293,7 +295,7 @@ public class CardTransactionRiskReason1Code extends CardTransactionRiskReasonCod
 	 */
 	public static final MMCode mmGeographicActivity = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GeographicActivity";
 			owner_lazy = () -> CardTransactionRiskReason1Code.mmObject();
 		}
@@ -316,7 +318,7 @@ public class CardTransactionRiskReason1Code extends CardTransactionRiskReasonCod
 	 */
 	public static final MMCode mmHighRiskMCC = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HighRiskMCC";
 			owner_lazy = () -> CardTransactionRiskReason1Code.mmObject();
 		}
@@ -339,7 +341,7 @@ public class CardTransactionRiskReason1Code extends CardTransactionRiskReasonCod
 	 */
 	public static final MMCode mmManualEntryActivity = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ManualEntryActivity";
 			owner_lazy = () -> CardTransactionRiskReason1Code.mmObject();
 		}
@@ -362,7 +364,7 @@ public class CardTransactionRiskReason1Code extends CardTransactionRiskReasonCod
 	 */
 	public static final MMCode mmMerchantCategoryActivity = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MerchantCategoryActivity";
 			owner_lazy = () -> CardTransactionRiskReason1Code.mmObject();
 		}
@@ -385,7 +387,7 @@ public class CardTransactionRiskReason1Code extends CardTransactionRiskReasonCod
 	 */
 	public static final MMCode mmSuspiciousAmount = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SuspiciousAmount";
 			owner_lazy = () -> CardTransactionRiskReason1Code.mmObject();
 		}
@@ -408,7 +410,7 @@ public class CardTransactionRiskReason1Code extends CardTransactionRiskReasonCod
 	 */
 	public static final MMCode mmSuspiciousFraudulentCardholder = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SuspiciousFraudulentCardholder";
 			owner_lazy = () -> CardTransactionRiskReason1Code.mmObject();
 		}
@@ -431,7 +433,7 @@ public class CardTransactionRiskReason1Code extends CardTransactionRiskReasonCod
 	 */
 	public static final MMCode mmSuspiciousFraudulentMerchant = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SuspiciousFraudulentMerchant";
 			owner_lazy = () -> CardTransactionRiskReason1Code.mmObject();
 		}
@@ -454,7 +456,7 @@ public class CardTransactionRiskReason1Code extends CardTransactionRiskReasonCod
 	 */
 	public static final MMCode mmTransactionCumulativeAmount = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionCumulativeAmount";
 			owner_lazy = () -> CardTransactionRiskReason1Code.mmObject();
 		}
@@ -477,7 +479,7 @@ public class CardTransactionRiskReason1Code extends CardTransactionRiskReasonCod
 	 */
 	public static final MMCode mmTransactionNumber = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionNumber";
 			owner_lazy = () -> CardTransactionRiskReason1Code.mmObject();
 		}
@@ -500,7 +502,7 @@ public class CardTransactionRiskReason1Code extends CardTransactionRiskReasonCod
 	 */
 	public static final MMCode mmTransactionTime = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionTime";
 			owner_lazy = () -> CardTransactionRiskReason1Code.mmObject();
 		}
@@ -523,7 +525,7 @@ public class CardTransactionRiskReason1Code extends CardTransactionRiskReasonCod
 	 */
 	public static final MMCode mmTransactionTimeIinterval = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionTimeIinterval";
 			owner_lazy = () -> CardTransactionRiskReason1Code.mmObject();
 		}
@@ -546,7 +548,7 @@ public class CardTransactionRiskReason1Code extends CardTransactionRiskReasonCod
 	 */
 	public static final MMCode mmTransactionType = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionType";
 			owner_lazy = () -> CardTransactionRiskReason1Code.mmObject();
 		}
@@ -569,7 +571,7 @@ public class CardTransactionRiskReason1Code extends CardTransactionRiskReasonCod
 	 */
 	public static final MMCode mmUnattendedActivity = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnattendedActivity";
 			owner_lazy = () -> CardTransactionRiskReason1Code.mmObject();
 		}
@@ -578,20 +580,16 @@ public class CardTransactionRiskReason1Code extends CardTransactionRiskReasonCod
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CardTransactionRiskReason1Code";
 				definition = "Reason to indicate a certain level of risk for the transaction.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CardTransactionRiskReason1Code.mmApproveDeclinePattern, com.tools20022.repository.codeset.CardTransactionRiskReason1Code.mmApproveDeclineSequence,
-						com.tools20022.repository.codeset.CardTransactionRiskReason1Code.mmAuthorizationActivity, com.tools20022.repository.codeset.CardTransactionRiskReason1Code.mmCompromisedCard,
-						com.tools20022.repository.codeset.CardTransactionRiskReason1Code.mmEcommerceActivity, com.tools20022.repository.codeset.CardTransactionRiskReason1Code.mmExpiryDateMismatch,
-						com.tools20022.repository.codeset.CardTransactionRiskReason1Code.mmForeignActivity, com.tools20022.repository.codeset.CardTransactionRiskReason1Code.mmGeographicActivity,
-						com.tools20022.repository.codeset.CardTransactionRiskReason1Code.mmHighRiskMCC, com.tools20022.repository.codeset.CardTransactionRiskReason1Code.mmManualEntryActivity,
-						com.tools20022.repository.codeset.CardTransactionRiskReason1Code.mmMerchantCategoryActivity, com.tools20022.repository.codeset.CardTransactionRiskReason1Code.mmSuspiciousAmount,
-						com.tools20022.repository.codeset.CardTransactionRiskReason1Code.mmSuspiciousFraudulentCardholder, com.tools20022.repository.codeset.CardTransactionRiskReason1Code.mmSuspiciousFraudulentMerchant,
-						com.tools20022.repository.codeset.CardTransactionRiskReason1Code.mmTransactionCumulativeAmount, com.tools20022.repository.codeset.CardTransactionRiskReason1Code.mmTransactionNumber,
-						com.tools20022.repository.codeset.CardTransactionRiskReason1Code.mmTransactionTime, com.tools20022.repository.codeset.CardTransactionRiskReason1Code.mmTransactionTimeIinterval,
-						com.tools20022.repository.codeset.CardTransactionRiskReason1Code.mmTransactionType, com.tools20022.repository.codeset.CardTransactionRiskReason1Code.mmUnattendedActivity);
+				code_lazy = () -> Arrays.asList(CardTransactionRiskReason1Code.mmApproveDeclinePattern, CardTransactionRiskReason1Code.mmApproveDeclineSequence, CardTransactionRiskReason1Code.mmAuthorizationActivity,
+						CardTransactionRiskReason1Code.mmCompromisedCard, CardTransactionRiskReason1Code.mmEcommerceActivity, CardTransactionRiskReason1Code.mmExpiryDateMismatch, CardTransactionRiskReason1Code.mmForeignActivity,
+						CardTransactionRiskReason1Code.mmGeographicActivity, CardTransactionRiskReason1Code.mmHighRiskMCC, CardTransactionRiskReason1Code.mmManualEntryActivity, CardTransactionRiskReason1Code.mmMerchantCategoryActivity,
+						CardTransactionRiskReason1Code.mmSuspiciousAmount, CardTransactionRiskReason1Code.mmSuspiciousFraudulentCardholder, CardTransactionRiskReason1Code.mmSuspiciousFraudulentMerchant,
+						CardTransactionRiskReason1Code.mmTransactionCumulativeAmount, CardTransactionRiskReason1Code.mmTransactionNumber, CardTransactionRiskReason1Code.mmTransactionTime,
+						CardTransactionRiskReason1Code.mmTransactionTimeIinterval, CardTransactionRiskReason1Code.mmTransactionType, CardTransactionRiskReason1Code.mmUnattendedActivity);
 				trace_lazy = () -> CardTransactionRiskReasonCode.mmObject();
 			}
 		});

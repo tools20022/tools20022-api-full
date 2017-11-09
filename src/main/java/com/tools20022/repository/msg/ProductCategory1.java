@@ -19,9 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ProductCategory1Code;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.ProductCategory;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -98,11 +100,11 @@ public class ProductCategory1 {
 	 */
 	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ProductCategory.mmType;
+			businessElementTrace_lazy = () -> ProductCategory.mmType;
 			componentContext_lazy = () -> ProductCategory1.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Specifies the type of product category by means of a code.";
 			maxOccurs = 1;
@@ -145,11 +147,11 @@ public class ProductCategory1 {
 	 */
 	public static final MMMessageAttribute mmCategory = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ProductCategory.mmCategory;
+			businessElementTrace_lazy = () -> ProductCategory.mmCategory;
 			componentContext_lazy = () -> ProductCategory1.mmObject();
 			isDerived = false;
 			xmlTag = "Ctgy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Category";
 			definition = "Specifies the category of a product.";
 			maxOccurs = 1;
@@ -161,10 +163,10 @@ public class ProductCategory1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ProductCategory1.mmType, com.tools20022.repository.msg.ProductCategory1.mmCategory);
+				messageElement_lazy = () -> Arrays.asList(ProductCategory1.mmType, ProductCategory1.mmCategory);
 				trace_lazy = () -> ProductCategory.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ProductCategory1";
 				definition = "Specifies the category of the product.";
 			}

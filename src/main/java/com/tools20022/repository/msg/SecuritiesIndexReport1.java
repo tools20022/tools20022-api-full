@@ -20,10 +20,13 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.auth.FinancialInstrumentReportingReferenceDataIndexReportV01;
 import com.tools20022.repository.choice.FinancialInstrument46Choice;
 import com.tools20022.repository.choice.Period4Choice;
 import com.tools20022.repository.codeset.CountryCode;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -118,7 +121,7 @@ public class SecuritiesIndexReport1 {
 			componentContext_lazy = () -> SecuritiesIndexReport1.mmObject();
 			isDerived = false;
 			xmlTag = "TechRcrdId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TechnicalRecordIdentification";
 			definition = "Unique identifier of a record in a message used as part of error management and feedback messages.\r\n\r\nUsage:\r\nThis identification will be used in the status advice sent back.";
 			maxOccurs = 1;
@@ -162,7 +165,7 @@ public class SecuritiesIndexReport1 {
 			componentContext_lazy = () -> SecuritiesIndexReport1.mmObject();
 			isDerived = false;
 			xmlTag = "RqstngNtty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestingEntity";
 			definition = "Country code of the entity that wishes to express an interest in receiving transaction reports for the requested indexes.";
 			maxOccurs = 1;
@@ -203,7 +206,7 @@ public class SecuritiesIndexReport1 {
 			componentContext_lazy = () -> SecuritiesIndexReport1.mmObject();
 			isDerived = false;
 			xmlTag = "Indx";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Index";
 			definition = "Details the index that is being requested.";
 			maxOccurs = 1;
@@ -247,7 +250,7 @@ public class SecuritiesIndexReport1 {
 			componentContext_lazy = () -> SecuritiesIndexReport1.mmObject();
 			isDerived = false;
 			xmlTag = "VldtyPrd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValidityPeriod";
 			definition = "Date when the national competent authority last expressed its interest in this index.";
 			maxOccurs = 1;
@@ -260,11 +263,10 @@ public class SecuritiesIndexReport1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesIndexReport1.mmTechnicalRecordIdentification, com.tools20022.repository.msg.SecuritiesIndexReport1.mmRequestingEntity,
-						com.tools20022.repository.msg.SecuritiesIndexReport1.mmIndex, com.tools20022.repository.msg.SecuritiesIndexReport1.mmValidityPeriod);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.auth.FinancialInstrumentReportingReferenceDataIndexReportV01.mmIndexData);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(SecuritiesIndexReport1.mmTechnicalRecordIdentification, SecuritiesIndexReport1.mmRequestingEntity, SecuritiesIndexReport1.mmIndex, SecuritiesIndexReport1.mmValidityPeriod);
+				messageBuildingBlock_lazy = () -> Arrays.asList(FinancialInstrumentReportingReferenceDataIndexReportV01.mmIndexData);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesIndexReport1";
 				definition = "Provides details on the securities index request operations for national competent authorities.";
 			}

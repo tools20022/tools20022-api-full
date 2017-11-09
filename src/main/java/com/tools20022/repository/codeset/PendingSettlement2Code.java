@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.PendingSettlementStatusReasonCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -198,7 +200,7 @@ public class PendingSettlement2Code extends PendingSettlementStatusReasonCode {
 	 */
 	public static final MMCode mmAwaitingMoney = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AwaitingMoney";
 			owner_lazy = () -> PendingSettlement2Code.mmObject();
 		}
@@ -221,7 +223,7 @@ public class PendingSettlement2Code extends PendingSettlementStatusReasonCode {
 	 */
 	public static final MMCode mmAwaitingSecurities = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AwaitingSecurities";
 			owner_lazy = () -> PendingSettlement2Code.mmObject();
 		}
@@ -244,7 +246,7 @@ public class PendingSettlement2Code extends PendingSettlementStatusReasonCode {
 	 */
 	public static final MMCode mmInstructionRefusedOrNotRecognised = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructionRefusedOrNotRecognised";
 			owner_lazy = () -> PendingSettlement2Code.mmObject();
 		}
@@ -267,7 +269,7 @@ public class PendingSettlement2Code extends PendingSettlementStatusReasonCode {
 	 */
 	public static final MMCode mmAwaitingSharesFromCounterparty = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AwaitingSharesFromCounterparty";
 			owner_lazy = () -> PendingSettlement2Code.mmObject();
 		}
@@ -290,7 +292,7 @@ public class PendingSettlement2Code extends PendingSettlementStatusReasonCode {
 	 */
 	public static final MMCode mmPhysicalDeliveryDelay = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PhysicalDeliveryDelay";
 			owner_lazy = () -> PendingSettlement2Code.mmObject();
 		}
@@ -313,7 +315,7 @@ public class PendingSettlement2Code extends PendingSettlementStatusReasonCode {
 	 */
 	public static final MMCode mmTradeAmendedInMarket = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeAmendedInMarket";
 			owner_lazy = () -> PendingSettlement2Code.mmObject();
 		}
@@ -336,7 +338,7 @@ public class PendingSettlement2Code extends PendingSettlementStatusReasonCode {
 	 */
 	public static final MMCode mmAwaitingDocumentsOrEndorsementsFromYou = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AwaitingDocumentsOrEndorsementsFromYou";
 			owner_lazy = () -> PendingSettlement2Code.mmObject();
 		}
@@ -359,7 +361,7 @@ public class PendingSettlement2Code extends PendingSettlementStatusReasonCode {
 	 */
 	public static final MMCode mmAwaitingDocumentsOrEndorsementsFromCounterparty = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AwaitingDocumentsOrEndorsementsFromCounterparty";
 			owner_lazy = () -> PendingSettlement2Code.mmObject();
 		}
@@ -382,7 +384,7 @@ public class PendingSettlement2Code extends PendingSettlementStatusReasonCode {
 	 */
 	public static final MMCode mmAccountBlocked = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountBlocked";
 			owner_lazy = () -> PendingSettlement2Code.mmObject();
 		}
@@ -405,7 +407,7 @@ public class PendingSettlement2Code extends PendingSettlementStatusReasonCode {
 	 */
 	public static final MMCode mmEnquirySent = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EnquirySent";
 			owner_lazy = () -> PendingSettlement2Code.mmObject();
 		}
@@ -428,7 +430,7 @@ public class PendingSettlement2Code extends PendingSettlementStatusReasonCode {
 	 */
 	public static final MMCode mmNewIssues = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewIssues";
 			owner_lazy = () -> PendingSettlement2Code.mmObject();
 		}
@@ -451,7 +453,7 @@ public class PendingSettlement2Code extends PendingSettlementStatusReasonCode {
 	 */
 	public static final MMCode mmCounterpartyInsufficientSecurities = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CounterpartyInsufficientSecurities";
 			owner_lazy = () -> PendingSettlement2Code.mmObject();
 		}
@@ -474,7 +476,7 @@ public class PendingSettlement2Code extends PendingSettlementStatusReasonCode {
 	 */
 	public static final MMCode mmMultipleSettlementAmount = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MultipleSettlementAmount";
 			owner_lazy = () -> PendingSettlement2Code.mmObject();
 		}
@@ -497,7 +499,7 @@ public class PendingSettlement2Code extends PendingSettlementStatusReasonCode {
 	 */
 	public static final MMCode mmGlobalFormSecurities = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GlobalFormSecurities";
 			owner_lazy = () -> PendingSettlement2Code.mmObject();
 		}
@@ -520,7 +522,7 @@ public class PendingSettlement2Code extends PendingSettlementStatusReasonCode {
 	 */
 	public static final MMCode mmPreadviceInstructed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreadviceInstructed";
 			owner_lazy = () -> PendingSettlement2Code.mmObject();
 		}
@@ -543,7 +545,7 @@ public class PendingSettlement2Code extends PendingSettlementStatusReasonCode {
 	 */
 	public static final MMCode mmGuaranteedDeliveryIndicatorDifference = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GuaranteedDeliveryIndicatorDifference";
 			owner_lazy = () -> PendingSettlement2Code.mmObject();
 		}
@@ -566,7 +568,7 @@ public class PendingSettlement2Code extends PendingSettlementStatusReasonCode {
 	 */
 	public static final MMCode mmTradeSettlesInPartials = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeSettlesInPartials";
 			owner_lazy = () -> PendingSettlement2Code.mmObject();
 		}
@@ -589,7 +591,7 @@ public class PendingSettlement2Code extends PendingSettlementStatusReasonCode {
 	 */
 	public static final MMCode mmNoMatchingRequired = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoMatchingRequired";
 			owner_lazy = () -> PendingSettlement2Code.mmObject();
 		}
@@ -612,7 +614,7 @@ public class PendingSettlement2Code extends PendingSettlementStatusReasonCode {
 	 */
 	public static final MMCode mmCounterpartyInsufficientMoney = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CounterpartyInsufficientMoney";
 			owner_lazy = () -> PendingSettlement2Code.mmObject();
 		}
@@ -635,7 +637,7 @@ public class PendingSettlement2Code extends PendingSettlementStatusReasonCode {
 	 */
 	public static final MMCode mmCollateralShortage = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralShortage";
 			owner_lazy = () -> PendingSettlement2Code.mmObject();
 		}
@@ -658,7 +660,7 @@ public class PendingSettlement2Code extends PendingSettlementStatusReasonCode {
 	 */
 	public static final MMCode mmSecuritiesPledgedAsCollateral = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesPledgedAsCollateral";
 			owner_lazy = () -> PendingSettlement2Code.mmObject();
 		}
@@ -681,7 +683,7 @@ public class PendingSettlement2Code extends PendingSettlementStatusReasonCode {
 	 */
 	public static final MMCode mmRefusedDepositForIssueOfDepositaryReceipts = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RefusedDepositForIssueOfDepositaryReceipts";
 			owner_lazy = () -> PendingSettlement2Code.mmObject();
 		}
@@ -704,7 +706,7 @@ public class PendingSettlement2Code extends PendingSettlementStatusReasonCode {
 	 */
 	public static final MMCode mmMaximumForeignLimitReached = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaximumForeignLimitReached";
 			owner_lazy = () -> PendingSettlement2Code.mmObject();
 		}
@@ -727,7 +729,7 @@ public class PendingSettlement2Code extends PendingSettlementStatusReasonCode {
 	 */
 	public static final MMCode mmNoForeignExchangeInstruction = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoForeignExchangeInstruction";
 			owner_lazy = () -> PendingSettlement2Code.mmObject();
 		}
@@ -750,7 +752,7 @@ public class PendingSettlement2Code extends PendingSettlementStatusReasonCode {
 	 */
 	public static final MMCode mmIncomeAdjustementRequired = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncomeAdjustementRequired";
 			owner_lazy = () -> PendingSettlement2Code.mmObject();
 		}
@@ -773,7 +775,7 @@ public class PendingSettlement2Code extends PendingSettlementStatusReasonCode {
 	 */
 	public static final MMCode mmPendingLinkedInstruction = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingLinkedInstruction";
 			owner_lazy = () -> PendingSettlement2Code.mmObject();
 		}
@@ -796,7 +798,7 @@ public class PendingSettlement2Code extends PendingSettlementStatusReasonCode {
 	 */
 	public static final MMCode mmAwaitingSettlementDate = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AwaitingSettlementDate";
 			owner_lazy = () -> PendingSettlement2Code.mmObject();
 		}
@@ -819,7 +821,7 @@ public class PendingSettlement2Code extends PendingSettlementStatusReasonCode {
 	 */
 	public static final MMCode mmLackOfSecurities = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LackOfSecurities";
 			owner_lazy = () -> PendingSettlement2Code.mmObject();
 		}
@@ -842,7 +844,7 @@ public class PendingSettlement2Code extends PendingSettlementStatusReasonCode {
 	 */
 	public static final MMCode mmSecuritiesLoanedOut = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesLoanedOut";
 			owner_lazy = () -> PendingSettlement2Code.mmObject();
 		}
@@ -865,7 +867,7 @@ public class PendingSettlement2Code extends PendingSettlementStatusReasonCode {
 	 */
 	public static final MMCode mmInsufficientMoney = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InsufficientMoney";
 			owner_lazy = () -> PendingSettlement2Code.mmObject();
 		}
@@ -888,7 +890,7 @@ public class PendingSettlement2Code extends PendingSettlementStatusReasonCode {
 	 */
 	public static final MMCode mmConfirmationNotReceived = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConfirmationNotReceived";
 			owner_lazy = () -> PendingSettlement2Code.mmObject();
 		}
@@ -911,7 +913,7 @@ public class PendingSettlement2Code extends PendingSettlementStatusReasonCode {
 	 */
 	public static final MMCode mmNotInGoodOrder = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotInGoodOrder";
 			owner_lazy = () -> PendingSettlement2Code.mmObject();
 		}
@@ -934,7 +936,7 @@ public class PendingSettlement2Code extends PendingSettlementStatusReasonCode {
 	 */
 	public static final MMCode mmLackOfStampDutyInformation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LackOfStampDutyInformation";
 			owner_lazy = () -> PendingSettlement2Code.mmObject();
 		}
@@ -957,7 +959,7 @@ public class PendingSettlement2Code extends PendingSettlementStatusReasonCode {
 	 */
 	public static final MMCode mmProcessingBatchDifference = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProcessingBatchDifference";
 			owner_lazy = () -> PendingSettlement2Code.mmObject();
 		}
@@ -980,7 +982,7 @@ public class PendingSettlement2Code extends PendingSettlementStatusReasonCode {
 	 */
 	public static final MMCode mmAwaitingNextSettlementCycle = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AwaitingNextSettlementCycle";
 			owner_lazy = () -> PendingSettlement2Code.mmObject();
 		}
@@ -1003,7 +1005,7 @@ public class PendingSettlement2Code extends PendingSettlementStatusReasonCode {
 	 */
 	public static final MMCode mmSecuritiesBlocked = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesBlocked";
 			owner_lazy = () -> PendingSettlement2Code.mmObject();
 		}
@@ -1026,7 +1028,7 @@ public class PendingSettlement2Code extends PendingSettlementStatusReasonCode {
 	 */
 	public static final MMCode mmCounterpartyInReceivership = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CounterpartyInReceivership";
 			owner_lazy = () -> PendingSettlement2Code.mmObject();
 		}
@@ -1049,7 +1051,7 @@ public class PendingSettlement2Code extends PendingSettlementStatusReasonCode {
 	 */
 	public static final MMCode mmMinimumSettlementAmount = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MinimumSettlementAmount";
 			owner_lazy = () -> PendingSettlement2Code.mmObject();
 		}
@@ -1072,7 +1074,7 @@ public class PendingSettlement2Code extends PendingSettlementStatusReasonCode {
 	 */
 	public static final MMCode mmPendingCAP = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingCAP";
 			owner_lazy = () -> PendingSettlement2Code.mmObject();
 		}
@@ -1081,31 +1083,22 @@ public class PendingSettlement2Code extends PendingSettlementStatusReasonCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("AWMO");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PendingSettlement2Code";
 				definition = "Specifies the reason the transaction/instruction is pending settlement, ie, pending delivery or receipt of the financial instrument. Settlement on the instructed settlement date is still possible.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PendingSettlement2Code.mmAwaitingMoney, com.tools20022.repository.codeset.PendingSettlement2Code.mmAwaitingSecurities,
-						com.tools20022.repository.codeset.PendingSettlement2Code.mmInstructionRefusedOrNotRecognised, com.tools20022.repository.codeset.PendingSettlement2Code.mmAwaitingSharesFromCounterparty,
-						com.tools20022.repository.codeset.PendingSettlement2Code.mmPhysicalDeliveryDelay, com.tools20022.repository.codeset.PendingSettlement2Code.mmTradeAmendedInMarket,
-						com.tools20022.repository.codeset.PendingSettlement2Code.mmAwaitingDocumentsOrEndorsementsFromYou, com.tools20022.repository.codeset.PendingSettlement2Code.mmAwaitingDocumentsOrEndorsementsFromCounterparty,
-						com.tools20022.repository.codeset.PendingSettlement2Code.mmAccountBlocked, com.tools20022.repository.codeset.PendingSettlement2Code.mmEnquirySent,
-						com.tools20022.repository.codeset.PendingSettlement2Code.mmNewIssues, com.tools20022.repository.codeset.PendingSettlement2Code.mmCounterpartyInsufficientSecurities,
-						com.tools20022.repository.codeset.PendingSettlement2Code.mmMultipleSettlementAmount, com.tools20022.repository.codeset.PendingSettlement2Code.mmGlobalFormSecurities,
-						com.tools20022.repository.codeset.PendingSettlement2Code.mmPreadviceInstructed, com.tools20022.repository.codeset.PendingSettlement2Code.mmGuaranteedDeliveryIndicatorDifference,
-						com.tools20022.repository.codeset.PendingSettlement2Code.mmTradeSettlesInPartials, com.tools20022.repository.codeset.PendingSettlement2Code.mmNoMatchingRequired,
-						com.tools20022.repository.codeset.PendingSettlement2Code.mmCounterpartyInsufficientMoney, com.tools20022.repository.codeset.PendingSettlement2Code.mmCollateralShortage,
-						com.tools20022.repository.codeset.PendingSettlement2Code.mmSecuritiesPledgedAsCollateral, com.tools20022.repository.codeset.PendingSettlement2Code.mmRefusedDepositForIssueOfDepositaryReceipts,
-						com.tools20022.repository.codeset.PendingSettlement2Code.mmMaximumForeignLimitReached, com.tools20022.repository.codeset.PendingSettlement2Code.mmNoForeignExchangeInstruction,
-						com.tools20022.repository.codeset.PendingSettlement2Code.mmIncomeAdjustementRequired, com.tools20022.repository.codeset.PendingSettlement2Code.mmPendingLinkedInstruction,
-						com.tools20022.repository.codeset.PendingSettlement2Code.mmAwaitingSettlementDate, com.tools20022.repository.codeset.PendingSettlement2Code.mmLackOfSecurities,
-						com.tools20022.repository.codeset.PendingSettlement2Code.mmSecuritiesLoanedOut, com.tools20022.repository.codeset.PendingSettlement2Code.mmInsufficientMoney,
-						com.tools20022.repository.codeset.PendingSettlement2Code.mmConfirmationNotReceived, com.tools20022.repository.codeset.PendingSettlement2Code.mmNotInGoodOrder,
-						com.tools20022.repository.codeset.PendingSettlement2Code.mmLackOfStampDutyInformation, com.tools20022.repository.codeset.PendingSettlement2Code.mmProcessingBatchDifference,
-						com.tools20022.repository.codeset.PendingSettlement2Code.mmAwaitingNextSettlementCycle, com.tools20022.repository.codeset.PendingSettlement2Code.mmSecuritiesBlocked,
-						com.tools20022.repository.codeset.PendingSettlement2Code.mmCounterpartyInReceivership, com.tools20022.repository.codeset.PendingSettlement2Code.mmMinimumSettlementAmount,
-						com.tools20022.repository.codeset.PendingSettlement2Code.mmPendingCAP);
+				code_lazy = () -> Arrays.asList(PendingSettlement2Code.mmAwaitingMoney, PendingSettlement2Code.mmAwaitingSecurities, PendingSettlement2Code.mmInstructionRefusedOrNotRecognised,
+						PendingSettlement2Code.mmAwaitingSharesFromCounterparty, PendingSettlement2Code.mmPhysicalDeliveryDelay, PendingSettlement2Code.mmTradeAmendedInMarket,
+						PendingSettlement2Code.mmAwaitingDocumentsOrEndorsementsFromYou, PendingSettlement2Code.mmAwaitingDocumentsOrEndorsementsFromCounterparty, PendingSettlement2Code.mmAccountBlocked,
+						PendingSettlement2Code.mmEnquirySent, PendingSettlement2Code.mmNewIssues, PendingSettlement2Code.mmCounterpartyInsufficientSecurities, PendingSettlement2Code.mmMultipleSettlementAmount,
+						PendingSettlement2Code.mmGlobalFormSecurities, PendingSettlement2Code.mmPreadviceInstructed, PendingSettlement2Code.mmGuaranteedDeliveryIndicatorDifference, PendingSettlement2Code.mmTradeSettlesInPartials,
+						PendingSettlement2Code.mmNoMatchingRequired, PendingSettlement2Code.mmCounterpartyInsufficientMoney, PendingSettlement2Code.mmCollateralShortage, PendingSettlement2Code.mmSecuritiesPledgedAsCollateral,
+						PendingSettlement2Code.mmRefusedDepositForIssueOfDepositaryReceipts, PendingSettlement2Code.mmMaximumForeignLimitReached, PendingSettlement2Code.mmNoForeignExchangeInstruction,
+						PendingSettlement2Code.mmIncomeAdjustementRequired, PendingSettlement2Code.mmPendingLinkedInstruction, PendingSettlement2Code.mmAwaitingSettlementDate, PendingSettlement2Code.mmLackOfSecurities,
+						PendingSettlement2Code.mmSecuritiesLoanedOut, PendingSettlement2Code.mmInsufficientMoney, PendingSettlement2Code.mmConfirmationNotReceived, PendingSettlement2Code.mmNotInGoodOrder,
+						PendingSettlement2Code.mmLackOfStampDutyInformation, PendingSettlement2Code.mmProcessingBatchDifference, PendingSettlement2Code.mmAwaitingNextSettlementCycle, PendingSettlement2Code.mmSecuritiesBlocked,
+						PendingSettlement2Code.mmCounterpartyInReceivership, PendingSettlement2Code.mmMinimumSettlementAmount, PendingSettlement2Code.mmPendingCAP);
 				trace_lazy = () -> PendingSettlementStatusReasonCode.mmObject();
 			}
 		});

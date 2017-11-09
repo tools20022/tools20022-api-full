@@ -19,8 +19,12 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.seev.*;
 import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.entity.CorporateActionEvent;
+import com.tools20022.repository.entity.Role;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -177,7 +181,7 @@ public class CorporateActionNarrative10 {
 			componentContext_lazy = () -> CorporateActionNarrative10.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlTxt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalText";
 			definition = "Provides additional information or specifies in more detail the content of a message. This field may only be used when the information to be transmitted, cannot be coded.";
 			minOccurs = 0;
@@ -223,11 +227,11 @@ public class CorporateActionNarrative10 {
 	 */
 	public static final MMMessageAttribute mmPartyContactNarrative = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Role.mmContactPersonRole;
+			businessElementTrace_lazy = () -> Role.mmContactPersonRole;
 			componentContext_lazy = () -> CorporateActionNarrative10.mmObject();
 			isDerived = false;
 			xmlTag = "PtyCtctNrrtv";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartyContactNarrative";
 			definition = "Provides additional information regarding the party, for example, the contact unit or person responsible for the transaction identified in the message.";
 			minOccurs = 0;
@@ -238,27 +242,20 @@ public class CorporateActionNarrative10 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionNarrative10.mmAdditionalText, com.tools20022.repository.msg.CorporateActionNarrative10.mmPartyContactNarrative);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.CorporateActionEventProcessingStatusAdviceV01.mmAdditionalInformation,
-						com.tools20022.repository.area.seev.CorporateActionEventProcessingStatusAdviceV02.mmAdditionalInformation, com.tools20022.repository.area.seev.CorporateActionEventProcessingStatusAdviceV03.mmAdditionalInformation,
-						com.tools20022.repository.area.seev.CorporateActionEventProcessingStatusAdviceV04.mmAdditionalInformation,
-						com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestStatusAdviceV01.mmAdditionalInformation,
-						com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestStatusAdviceV02.mmAdditionalInformation,
-						com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestStatusAdviceV03.mmAdditionalInformation,
-						com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestStatusAdviceV04.mmAdditionalInformation,
-						com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV01.mmAdditionalInformation, com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV02.mmAdditionalInformation,
-						com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV03.mmAdditionalInformation, com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV04.mmAdditionalInformation,
-						com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV05.mmAdditionalInformation,
-						com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestStatusAdviceV05.mmAdditionalInformation,
-						com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV06.mmAdditionalInformation,
-						com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestStatusAdviceV06.mmAdditionalInformation,
-						com.tools20022.repository.area.seev.CorporateActionEventProcessingStatusAdviceV05.mmAdditionalInformation, com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV07.mmAdditionalInformation,
-						com.tools20022.repository.area.seev.CorporateActionEventProcessingStatusAdviceV06.mmAdditionalInformation,
-						com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestStatusAdviceV07.mmAdditionalInformation,
-						com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV08.mmAdditionalInformation);
+				messageElement_lazy = () -> Arrays.asList(CorporateActionNarrative10.mmAdditionalText, CorporateActionNarrative10.mmPartyContactNarrative);
+				messageBuildingBlock_lazy = () -> Arrays.asList(CorporateActionEventProcessingStatusAdviceV01.mmAdditionalInformation, CorporateActionEventProcessingStatusAdviceV02.mmAdditionalInformation,
+						CorporateActionEventProcessingStatusAdviceV03.mmAdditionalInformation, CorporateActionEventProcessingStatusAdviceV04.mmAdditionalInformation,
+						CorporateActionInstructionCancellationRequestStatusAdviceV01.mmAdditionalInformation, CorporateActionInstructionCancellationRequestStatusAdviceV02.mmAdditionalInformation,
+						CorporateActionInstructionCancellationRequestStatusAdviceV03.mmAdditionalInformation, CorporateActionInstructionCancellationRequestStatusAdviceV04.mmAdditionalInformation,
+						CorporateActionInstructionStatusAdviceV01.mmAdditionalInformation, CorporateActionInstructionStatusAdviceV02.mmAdditionalInformation, CorporateActionInstructionStatusAdviceV03.mmAdditionalInformation,
+						CorporateActionInstructionStatusAdviceV04.mmAdditionalInformation, CorporateActionInstructionStatusAdviceV05.mmAdditionalInformation,
+						CorporateActionInstructionCancellationRequestStatusAdviceV05.mmAdditionalInformation, CorporateActionInstructionStatusAdviceV06.mmAdditionalInformation,
+						CorporateActionInstructionCancellationRequestStatusAdviceV06.mmAdditionalInformation, CorporateActionEventProcessingStatusAdviceV05.mmAdditionalInformation,
+						CorporateActionInstructionStatusAdviceV07.mmAdditionalInformation, CorporateActionEventProcessingStatusAdviceV06.mmAdditionalInformation,
+						CorporateActionInstructionCancellationRequestStatusAdviceV07.mmAdditionalInformation, CorporateActionInstructionStatusAdviceV08.mmAdditionalInformation);
 				trace_lazy = () -> CorporateActionEvent.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionNarrative10";
 				definition = "Provides additional information such as the information conditions.";
 			}

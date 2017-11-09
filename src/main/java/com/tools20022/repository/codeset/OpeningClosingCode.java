@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.OpeningClosing1Code
+ * OpeningClosing1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -35,13 +44,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.OpeningClosingCode#mmOpenPosition
  * OpeningClosingCode.mmOpenPosition}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.OpeningClosing1Code
- * OpeningClosing1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -92,7 +94,7 @@ public class OpeningClosingCode {
 	 */
 	public static final MMCode mmClosePosition = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ClosePosition";
 			definition = "Indicates that the trade is to close a position.";
 			owner_lazy = () -> OpeningClosingCode.mmObject();
@@ -122,7 +124,7 @@ public class OpeningClosingCode {
 	 */
 	public static final MMCode mmOpenPosition = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "OpenPosition";
 			definition = "Indicates that the trade is to open a position.";
 			owner_lazy = () -> OpeningClosingCode.mmObject();
@@ -133,12 +135,12 @@ public class OpeningClosingCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CLOP");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OpeningClosingCode";
 				definition = "Specifies additional information relative to the processing of the trade.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OpeningClosingCode.mmClosePosition, com.tools20022.repository.codeset.OpeningClosingCode.mmOpenPosition);
+				code_lazy = () -> Arrays.asList(OpeningClosingCode.mmClosePosition, OpeningClosingCode.mmOpenPosition);
 				derivation_lazy = () -> Arrays.asList(OpeningClosing1Code.mmObject());
 			}
 		});

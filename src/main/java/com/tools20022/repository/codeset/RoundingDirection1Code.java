@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.RoundingDirectionCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -89,7 +91,7 @@ public class RoundingDirection1Code extends RoundingDirectionCode {
 	 */
 	public static final MMCode mmRoundUp = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RoundUp";
 			owner_lazy = () -> RoundingDirection1Code.mmObject();
 		}
@@ -112,7 +114,7 @@ public class RoundingDirection1Code extends RoundingDirectionCode {
 	 */
 	public static final MMCode mmRoundDown = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RoundDown";
 			owner_lazy = () -> RoundingDirection1Code.mmObject();
 		}
@@ -135,7 +137,7 @@ public class RoundingDirection1Code extends RoundingDirectionCode {
 	 */
 	public static final MMCode mmRoundToNearest = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RoundToNearest";
 			owner_lazy = () -> RoundingDirection1Code.mmObject();
 		}
@@ -158,7 +160,7 @@ public class RoundingDirection1Code extends RoundingDirectionCode {
 	 */
 	public static final MMCode mmIssueFraction = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssueFraction";
 			owner_lazy = () -> RoundingDirection1Code.mmObject();
 		}
@@ -167,13 +169,12 @@ public class RoundingDirection1Code extends RoundingDirectionCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("RDUP");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RoundingDirection1Code";
 				definition = "Specifies the rounding direction.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RoundingDirection1Code.mmRoundUp, com.tools20022.repository.codeset.RoundingDirection1Code.mmRoundDown,
-						com.tools20022.repository.codeset.RoundingDirection1Code.mmRoundToNearest, com.tools20022.repository.codeset.RoundingDirection1Code.mmIssueFraction);
+				code_lazy = () -> Arrays.asList(RoundingDirection1Code.mmRoundUp, RoundingDirection1Code.mmRoundDown, RoundingDirection1Code.mmRoundToNearest, RoundingDirection1Code.mmIssueFraction);
 				trace_lazy = () -> RoundingDirectionCode.mmObject();
 			}
 		});

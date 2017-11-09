@@ -20,6 +20,7 @@ package com.tools20022.repository.area.colr;
 import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.CollateralManagementPreviousVersion;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.msg.Agreement4;
@@ -52,6 +53,9 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code colr.007.001.04}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.CollateralManagementPreviousVersion
@@ -89,9 +93,6 @@ import java.util.List;
  * CollateralProposalV04.mmSupplementaryData}</li>
  * </ul>
  * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code colr.007.001.04}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -160,11 +161,11 @@ public class CollateralProposalV04 {
 	public static final MMMessageBuildingBlock mmTransactionIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "TxId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionIdentification";
 			definition = "Unambiguous identification of the transaction as know by the instructing party.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.colr.CollateralProposalV05.mmTransactionIdentification);
-			previousVersion_lazy = () -> com.tools20022.repository.area.colr.CollateralProposalV03.mmTransactionIdentification;
+			nextVersions_lazy = () -> Arrays.asList(CollateralProposalV05.mmTransactionIdentification);
+			previousVersion_lazy = () -> CollateralProposalV03.mmTransactionIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -213,11 +214,11 @@ public class CollateralProposalV04 {
 	public static final MMMessageBuildingBlock mmObligation = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Oblgtn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Obligation";
 			definition = "Provides information like the identification of the party or parties associated with the collateral agreement, the exposure type and the valuation date.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.colr.CollateralProposalV05.mmObligation);
-			previousVersion_lazy = () -> com.tools20022.repository.area.colr.CollateralProposalV03.mmObligation;
+			nextVersions_lazy = () -> Arrays.asList(CollateralProposalV05.mmObligation);
+			previousVersion_lazy = () -> CollateralProposalV03.mmObligation;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> Obligation4.mmObject();
@@ -262,11 +263,11 @@ public class CollateralProposalV04 {
 	public static final MMMessageBuildingBlock mmAgreement = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Agrmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Agreement";
 			definition = "Agreement details for the over the counter market.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.colr.CollateralProposalV05.mmAgreement);
-			previousVersion_lazy = () -> com.tools20022.repository.area.colr.CollateralProposalV03.mmAgreement;
+			nextVersions_lazy = () -> Arrays.asList(CollateralProposalV05.mmAgreement);
+			previousVersion_lazy = () -> CollateralProposalV03.mmAgreement;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> Agreement4.mmObject();
@@ -312,11 +313,11 @@ public class CollateralProposalV04 {
 	public static final MMMessageBuildingBlock mmTypeAndDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "TpAndDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TypeAndDetails";
 			definition = "Indicates whether this is an initial or counter proposal.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.colr.CollateralProposalV05.mmTypeAndDetails);
-			previousVersion_lazy = () -> com.tools20022.repository.area.colr.CollateralProposalV03.mmTypeAndDetails;
+			nextVersions_lazy = () -> Arrays.asList(CollateralProposalV05.mmTypeAndDetails);
+			previousVersion_lazy = () -> CollateralProposalV03.mmTypeAndDetails;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> Proposal4.mmObject();
@@ -365,11 +366,11 @@ public class CollateralProposalV04 {
 	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SplmtryData";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryData";
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.colr.CollateralProposalV05.mmSupplementaryData);
-			previousVersion_lazy = () -> com.tools20022.repository.area.colr.CollateralProposalV03.mmSupplementaryData;
+			nextVersions_lazy = () -> Arrays.asList(CollateralProposalV05.mmSupplementaryData);
+			previousVersion_lazy = () -> CollateralProposalV03.mmSupplementaryData;
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
@@ -378,7 +379,7 @@ public class CollateralProposalV04 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CollateralProposalV04";
 				definition = "Scope\r\nThe CollateralProposal message is sent by the collateral giver or its collateral manager to the collateral taker or its collateral manager, to propose the collateral to be delivered. This message is sent once the Margin Call is agreed or partially agreed and can be used for new collateral at the initiation of an exposure or for additional collateral for variation of an existing exposure. This message is used for both initial collateral proposal and subsequent counter proposals.\r\n\r\nThe message definition is intended for use with the ISO20022 Business Application Header.\r\n\r\nUsage\r\nThis message is sent once the Margin Call is agreed or partially agreed and can be used for new collateral at the initiation of an exposure or for additional collateral for variation of an existing exposure. The collateral proposal can include securities, cash and other types of collateral.";
 				nextVersions_lazy = () -> Arrays.asList(CollateralProposalV05.mmObject());
@@ -387,9 +388,8 @@ public class CollateralProposalV04 {
 				rootElement = "Document";
 				xmlTag = "CollPrpsl";
 				businessArea_lazy = () -> CollateralManagementPreviousVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.colr.CollateralProposalV04.mmTransactionIdentification, com.tools20022.repository.area.colr.CollateralProposalV04.mmObligation,
-						com.tools20022.repository.area.colr.CollateralProposalV04.mmAgreement, com.tools20022.repository.area.colr.CollateralProposalV04.mmTypeAndDetails,
-						com.tools20022.repository.area.colr.CollateralProposalV04.mmSupplementaryData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(CollateralProposalV04.mmTransactionIdentification, CollateralProposalV04.mmObligation, CollateralProposalV04.mmAgreement, CollateralProposalV04.mmTypeAndDetails,
+						CollateralProposalV04.mmSupplementaryData);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "colr";

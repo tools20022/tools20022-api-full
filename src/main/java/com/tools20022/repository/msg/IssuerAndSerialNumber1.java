@@ -20,7 +20,9 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max35Binary;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -91,7 +93,7 @@ public class IssuerAndSerialNumber1 {
 			componentContext_lazy = () -> IssuerAndSerialNumber1.mmObject();
 			isDerived = false;
 			xmlTag = "Issr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Issuer";
 			definition = "Certificate issuer name (see X.509).";
 			maxOccurs = 1;
@@ -133,7 +135,7 @@ public class IssuerAndSerialNumber1 {
 			componentContext_lazy = () -> IssuerAndSerialNumber1.mmObject();
 			isDerived = false;
 			xmlTag = "SrlNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SerialNumber";
 			definition = "Certificate serial number (see X.509).";
 			maxOccurs = 1;
@@ -145,9 +147,9 @@ public class IssuerAndSerialNumber1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IssuerAndSerialNumber1.mmIssuer, com.tools20022.repository.msg.IssuerAndSerialNumber1.mmSerialNumber);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(IssuerAndSerialNumber1.mmIssuer, IssuerAndSerialNumber1.mmSerialNumber);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "IssuerAndSerialNumber1";
 				definition = "Certificate issuer name and serial number  (see X.509).";
 			}

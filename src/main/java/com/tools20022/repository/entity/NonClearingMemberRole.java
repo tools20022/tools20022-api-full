@@ -18,7 +18,10 @@
 package com.tools20022.repository.entity;
 
 import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.ThirdPartyRole;
+import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.Report1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -68,11 +71,11 @@ public class NonClearingMemberRole extends ThirdPartyRole {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "NonClearingMemberRole";
 				definition = "Party that is involved in a trade but which must clear the trade through a member of an exchange's clearing corporation.";
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Report1.mmNonClearingMember);
+				derivationElement_lazy = () -> Arrays.asList(Report1.mmNonClearingMember);
 				superType_lazy = () -> ThirdPartyRole.mmObject();
 			}
 		});

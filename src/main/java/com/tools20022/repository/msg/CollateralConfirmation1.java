@@ -19,10 +19,14 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.colr.CollateralSubstitutionConfirmationV03;
+import com.tools20022.repository.area.colr.CollateralSubstitutionConfirmationV04;
 import com.tools20022.repository.codeset.CollateralSubstitutionConfirmation1Code;
 import com.tools20022.repository.datatype.Max140Text;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.CollateralStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -117,7 +121,7 @@ public class CollateralConfirmation1 {
 			componentContext_lazy = () -> CollateralConfirmation1.mmObject();
 			isDerived = false;
 			xmlTag = "CollSbstitnReqId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralSubstitutionRequestIdentification";
 			definition = "Reference to the collateral substitution request identification.";
 			maxOccurs = 1;
@@ -159,7 +163,7 @@ public class CollateralConfirmation1 {
 			componentContext_lazy = () -> CollateralConfirmation1.mmObject();
 			isDerived = false;
 			xmlTag = "CollSbstitnRspnId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralSubstitutionResponseIdentification";
 			definition = "Reference to the collateral substitution response identification.";
 			maxOccurs = 1;
@@ -206,11 +210,11 @@ public class CollateralConfirmation1 {
 	 */
 	public static final MMMessageAttribute mmConfirmationType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CollateralStatus.mmSubstitutionStatus;
+			businessElementTrace_lazy = () -> CollateralStatus.mmSubstitutionStatus;
 			componentContext_lazy = () -> CollateralConfirmation1.mmObject();
 			isDerived = false;
 			xmlTag = "ConfTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConfirmationType";
 			definition = "Provides details about the status of the collateral substitution, either released or returned.";
 			maxOccurs = 1;
@@ -254,7 +258,7 @@ public class CollateralConfirmation1 {
 			componentContext_lazy = () -> CollateralConfirmation1.mmObject();
 			isDerived = false;
 			xmlTag = "Cmnt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Comment";
 			definition = "Allows to provides additional comments on the collateral substitution status.";
 			maxOccurs = 1;
@@ -266,14 +270,12 @@ public class CollateralConfirmation1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CollateralConfirmation1.mmCollateralSubstitutionRequestIdentification,
-						com.tools20022.repository.msg.CollateralConfirmation1.mmCollateralSubstitutionResponseIdentification, com.tools20022.repository.msg.CollateralConfirmation1.mmConfirmationType,
-						com.tools20022.repository.msg.CollateralConfirmation1.mmComment);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.colr.CollateralSubstitutionConfirmationV03.mmSubstitutionConfirmation,
-						com.tools20022.repository.area.colr.CollateralSubstitutionConfirmationV04.mmSubstitutionConfirmation);
+				messageElement_lazy = () -> Arrays.asList(CollateralConfirmation1.mmCollateralSubstitutionRequestIdentification, CollateralConfirmation1.mmCollateralSubstitutionResponseIdentification,
+						CollateralConfirmation1.mmConfirmationType, CollateralConfirmation1.mmComment);
+				messageBuildingBlock_lazy = () -> Arrays.asList(CollateralSubstitutionConfirmationV03.mmSubstitutionConfirmation, CollateralSubstitutionConfirmationV04.mmSubstitutionConfirmation);
 				trace_lazy = () -> CollateralStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CollateralConfirmation1";
 				definition = "Provides the status details about the collateral substitution.";
 			}

@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentCancellationRejection1Code
+ * PaymentCancellationRejection1Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentCancellationRejection2Code
+ * PaymentCancellationRejection2Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -53,17 +66,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.PaymentCancellationRejectionCode#mmInsufficientFunds
  * PaymentCancellationRejectionCode.mmInsufficientFunds}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentCancellationRejection1Code
- * PaymentCancellationRejection1Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentCancellationRejection2Code
- * PaymentCancellationRejection2Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -116,7 +118,7 @@ public class PaymentCancellationRejectionCode {
 	 */
 	public static final MMCode mmLegalDecision = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LegalDecision";
 			definition = "Reported when the cancellation cannot be accepted because of regulatory rules.";
 			owner_lazy = () -> PaymentCancellationRejectionCode.mmObject();
@@ -149,7 +151,7 @@ public class PaymentCancellationRejectionCode {
 	 */
 	public static final MMCode mmAgentDecision = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AgentDecision";
 			definition = "Reported when the cancellation cannot be accepted because of an agent refuses to cancel.";
 			owner_lazy = () -> PaymentCancellationRejectionCode.mmObject();
@@ -182,7 +184,7 @@ public class PaymentCancellationRejectionCode {
 	 */
 	public static final MMCode mmCustomerDecision = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CustomerDecision";
 			definition = "Reported when the cancellation cannot be accepted because of a customer decision (Creditor).";
 			owner_lazy = () -> PaymentCancellationRejectionCode.mmObject();
@@ -214,7 +216,7 @@ public class PaymentCancellationRejectionCode {
 	 */
 	public static final MMCode mmAlreadyReturned = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AlreadyReturned";
 			definition = "Cancellation not accepted as the transaction has already been returned.";
 			owner_lazy = () -> PaymentCancellationRejectionCode.mmObject();
@@ -245,7 +247,7 @@ public class PaymentCancellationRejectionCode {
 	 */
 	public static final MMCode mmNoAnswerFromCustomer = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoAnswerFromCustomer";
 			definition = "No response from beneficiary (to the cancellation request).";
 			owner_lazy = () -> PaymentCancellationRejectionCode.mmObject();
@@ -276,7 +278,7 @@ public class PaymentCancellationRejectionCode {
 	 */
 	public static final MMCode mmNoOriginalTransactionReceived = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoOriginalTransactionReceived";
 			definition = "Original transaction (subject to cancellation) never received.";
 			owner_lazy = () -> PaymentCancellationRejectionCode.mmObject();
@@ -307,7 +309,7 @@ public class PaymentCancellationRejectionCode {
 	 */
 	public static final MMCode mmClosedAccountNumber = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClosedAccountNumber";
 			definition = "Account number specified has been closed on the receiver’s books.";
 			owner_lazy = () -> PaymentCancellationRejectionCode.mmObject();
@@ -340,7 +342,7 @@ public class PaymentCancellationRejectionCode {
 	 */
 	public static final MMCode mmInsufficientFunds = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InsufficientFunds";
 			definition = "Amount of funds available to cover specified message amount is insufficient.";
 			owner_lazy = () -> PaymentCancellationRejectionCode.mmObject();
@@ -351,15 +353,14 @@ public class PaymentCancellationRejectionCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("LEGL");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PaymentCancellationRejectionCode";
 				definition = "Returned when a request for cancellation cannot be executed.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PaymentCancellationRejectionCode.mmLegalDecision, com.tools20022.repository.codeset.PaymentCancellationRejectionCode.mmAgentDecision,
-						com.tools20022.repository.codeset.PaymentCancellationRejectionCode.mmCustomerDecision, com.tools20022.repository.codeset.PaymentCancellationRejectionCode.mmAlreadyReturned,
-						com.tools20022.repository.codeset.PaymentCancellationRejectionCode.mmNoAnswerFromCustomer, com.tools20022.repository.codeset.PaymentCancellationRejectionCode.mmNoOriginalTransactionReceived,
-						com.tools20022.repository.codeset.PaymentCancellationRejectionCode.mmClosedAccountNumber, com.tools20022.repository.codeset.PaymentCancellationRejectionCode.mmInsufficientFunds);
+				code_lazy = () -> Arrays.asList(PaymentCancellationRejectionCode.mmLegalDecision, PaymentCancellationRejectionCode.mmAgentDecision, PaymentCancellationRejectionCode.mmCustomerDecision,
+						PaymentCancellationRejectionCode.mmAlreadyReturned, PaymentCancellationRejectionCode.mmNoAnswerFromCustomer, PaymentCancellationRejectionCode.mmNoOriginalTransactionReceived,
+						PaymentCancellationRejectionCode.mmClosedAccountNumber, PaymentCancellationRejectionCode.mmInsufficientFunds);
 				derivation_lazy = () -> Arrays.asList(PaymentCancellationRejection1Code.mmObject(), PaymentCancellationRejection2Code.mmObject());
 			}
 		});

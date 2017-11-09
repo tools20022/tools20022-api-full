@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.FailureReasonCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -107,7 +109,7 @@ public class FailureReason1Code extends FailureReasonCode {
 	 */
 	public static final MMCode mmCustomerCancel = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CustomerCancel";
 			owner_lazy = () -> FailureReason1Code.mmObject();
 		}
@@ -130,7 +132,7 @@ public class FailureReason1Code extends FailureReasonCode {
 	 */
 	public static final MMCode mmMalfunction = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Malfunction";
 			owner_lazy = () -> FailureReason1Code.mmObject();
 		}
@@ -153,7 +155,7 @@ public class FailureReason1Code extends FailureReasonCode {
 	 */
 	public static final MMCode mmPartial = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Partial";
 			owner_lazy = () -> FailureReason1Code.mmObject();
 		}
@@ -176,7 +178,7 @@ public class FailureReason1Code extends FailureReasonCode {
 	 */
 	public static final MMCode mmTooLateResponse = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TooLateResponse";
 			owner_lazy = () -> FailureReason1Code.mmObject();
 		}
@@ -199,7 +201,7 @@ public class FailureReason1Code extends FailureReasonCode {
 	 */
 	public static final MMCode mmUnableToComplete = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnableToComplete";
 			owner_lazy = () -> FailureReason1Code.mmObject();
 		}
@@ -222,7 +224,7 @@ public class FailureReason1Code extends FailureReasonCode {
 	 */
 	public static final MMCode mmUnableToSend = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnableToSend";
 			owner_lazy = () -> FailureReason1Code.mmObject();
 		}
@@ -245,7 +247,7 @@ public class FailureReason1Code extends FailureReasonCode {
 	 */
 	public static final MMCode mmTimeOut = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TimeOut";
 			owner_lazy = () -> FailureReason1Code.mmObject();
 		}
@@ -268,7 +270,7 @@ public class FailureReason1Code extends FailureReasonCode {
 	 */
 	public static final MMCode mmCardDeclined = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CardDeclined";
 			owner_lazy = () -> FailureReason1Code.mmObject();
 		}
@@ -291,7 +293,7 @@ public class FailureReason1Code extends FailureReasonCode {
 	 */
 	public static final MMCode mmOnLineDeclined = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OnLineDeclined";
 			owner_lazy = () -> FailureReason1Code.mmObject();
 		}
@@ -314,7 +316,7 @@ public class FailureReason1Code extends FailureReasonCode {
 	 */
 	public static final MMCode mmOfflineDeclined = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OfflineDeclined";
 			owner_lazy = () -> FailureReason1Code.mmObject();
 		}
@@ -323,15 +325,13 @@ public class FailureReason1Code extends FailureReasonCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CUCL");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FailureReason1Code";
 				definition = "List of incidents happening during the transaction.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.FailureReason1Code.mmCustomerCancel, com.tools20022.repository.codeset.FailureReason1Code.mmMalfunction,
-						com.tools20022.repository.codeset.FailureReason1Code.mmPartial, com.tools20022.repository.codeset.FailureReason1Code.mmTooLateResponse, com.tools20022.repository.codeset.FailureReason1Code.mmUnableToComplete,
-						com.tools20022.repository.codeset.FailureReason1Code.mmUnableToSend, com.tools20022.repository.codeset.FailureReason1Code.mmTimeOut, com.tools20022.repository.codeset.FailureReason1Code.mmCardDeclined,
-						com.tools20022.repository.codeset.FailureReason1Code.mmOnLineDeclined, com.tools20022.repository.codeset.FailureReason1Code.mmOfflineDeclined);
+				code_lazy = () -> Arrays.asList(FailureReason1Code.mmCustomerCancel, FailureReason1Code.mmMalfunction, FailureReason1Code.mmPartial, FailureReason1Code.mmTooLateResponse, FailureReason1Code.mmUnableToComplete,
+						FailureReason1Code.mmUnableToSend, FailureReason1Code.mmTimeOut, FailureReason1Code.mmCardDeclined, FailureReason1Code.mmOnLineDeclined, FailureReason1Code.mmOfflineDeclined);
 				trace_lazy = () -> FailureReasonCode.mmObject();
 			}
 		});

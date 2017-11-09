@@ -17,12 +17,11 @@
 
 package com.tools20022.repository.entity;
 
-import com.tools20022.metamodel.MMBusinessAssociationEnd;
-import com.tools20022.metamodel.MMBusinessAttribute;
-import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.*;
 import com.tools20022.repository.choice.*;
 import com.tools20022.repository.codeset.*;
 import com.tools20022.repository.datatype.*;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -39,83 +38,115 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Tax#mmExemptionReason
- * Tax.mmExemptionReason}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Tax#mmCountry Tax.mmCountry}
- * </li>
+ * <li>{@linkplain com.tools20022.repository.choice.TaxExemptionReason1Choice
+ * TaxExemptionReason1Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.TaxTypeFormat2Choice
+ * TaxTypeFormat2Choice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.Tax#mmTaxLiabilityValueCalculation
- * Tax.mmTaxLiabilityValueCalculation}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Tax#mmType Tax.mmType}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Tax#mmAmount Tax.mmAmount}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Tax#mmRate Tax.mmRate}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Tax#mmTaxableParty
- * Tax.mmTaxableParty}</li>
+ * {@linkplain com.tools20022.repository.choice.TaxExemptionReasonFormatChoice
+ * TaxExemptionReasonFormatChoice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Tax3 Tax3}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.RateType10Choice
+ * RateType10Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.RateType11Choice
+ * RateType11Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.RateType12Choice
+ * RateType12Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.RateType14Choice
+ * RateType14Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TaxCharges1 TaxCharges1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TaxType TaxType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TaxDetails TaxDetails}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TaxInformation2
+ * TaxInformation2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TaxCharges2 TaxCharges2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TaxRecordDetails1
+ * TaxRecordDetails1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TaxAmount1 TaxAmount1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TaxInformation3
+ * TaxInformation3}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.TaxAmountType1Choice
+ * TaxAmountType1Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TaxAmountAndType1
+ * TaxAmountAndType1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TaxationBasis1 TaxationBasis1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TaxExemptionReason1
+ * TaxExemptionReason1}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.TaxType3FormatChoice
+ * TaxType3FormatChoice}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.TaxTypeFormat1Choice
+ * TaxTypeFormat1Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SettlementTax1 SettlementTax1}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.Tax#mmTaxRefundValueCalculation
- * Tax.mmTaxRefundValueCalculation}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Tax#mmBasis Tax.mmBasis}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Tax#mmSecuritiesTransfer
- * Tax.mmSecuritiesTransfer}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Tax#mmTaxRateType
- * Tax.mmTaxRateType}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Tax#mmTaxAccount
- * Tax.mmTaxAccount}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Tax#mmTaxationConditions
- * Tax.mmTaxationConditions}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Tax#mmAdjustment
- * Tax.mmAdjustment}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Tax#mmInterest
- * Tax.mmInterest}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Tax#mmIdentification
- * Tax.mmIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.SettlementSubTotalCalculatedTax1
+ * SettlementSubTotalCalculatedTax1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.LineItemTax1 LineItemTax1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Tax13 Tax13}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Tax12 Tax12}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountTax1 AccountTax1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TaxReason1 TaxReason1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.BillingMethod1 BillingMethod1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.BillingMethod2 BillingMethod2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.BillingMethod3 BillingMethod3}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.BillingMethod1Choice
+ * BillingMethod1Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TaxCalculation1
+ * TaxCalculation1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.BillingMethod4 BillingMethod4}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.BillingTaxRegion1
+ * BillingTaxRegion1}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.TaxDetailsType1Choice
+ * TaxDetailsType1Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TaxIdentification1
+ * TaxIdentification1}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.TaxType1Choice
+ * TaxType1Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.ExemptionReason1Choice
+ * ExemptionReason1Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.TaxBasis1Choice
+ * TaxBasis1Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.RateTypeAndPercentageRate1
+ * RateTypeAndPercentageRate1}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.RateType28Choice
+ * RateType28Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TaxInformation4
+ * TaxInformation4}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Tax22 Tax22}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.TaxType2Choice
+ * TaxType2Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Tax23 Tax23}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.RateType30Choice
+ * RateType30Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.RateTypeAndPercentageRate3
+ * RateTypeAndPercentageRate3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TaxIdentification2
+ * TaxIdentification2}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.Tax#mmRelatedPaymentSettlement
- * Tax.mmRelatedPaymentSettlement}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Tax#mmTaxableBaseAmount
- * Tax.mmTaxableBaseAmount}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Tax#mmTaxDate Tax.mmTaxDate}
- * </li>
+ * {@linkplain com.tools20022.repository.choice.TaxIdentificationType1Choice
+ * TaxIdentificationType1Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.RateTypeAndPercentageRate8
+ * RateTypeAndPercentageRate8}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.RateType42Choice
+ * RateType42Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.RateType37Choice
+ * RateType37Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.TaxExemptionReason2Choice
+ * TaxExemptionReason2Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TaxReporting1 TaxReporting1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.RateTypeAndPercentageRate9
+ * RateTypeAndPercentageRate9}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.RateType46Choice
+ * RateType46Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.RateType48Choice
+ * RateType48Choice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.Tax#mmCertificateIdentification
- * Tax.mmCertificateIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Tax#mmAdministrationZone
- * Tax.mmAdministrationZone}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Tax#mmMethod Tax.mmMethod}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Tax#mmRecord Tax.mmRecord}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Tax#mmProduct Tax.mmProduct}
- * </li>
- * <li>{@linkplain com.tools20022.repository.entity.Tax#mmCurrencyExchange
- * Tax.mmCurrencyExchange}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Tax#mmCurrency
- * Tax.mmCurrency}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Tax#mmPartyRole
- * Tax.mmPartyRole}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Tax#mmTaxDeduction
- * Tax.mmTaxDeduction}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Tax#mmRelatedCorporateActionDistribution
- * Tax.mmRelatedCorporateActionDistribution}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Tax#mmCalculationDate
- * Tax.mmCalculationDate}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Tax#mmDividend
- * Tax.mmDividend}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Tax#mmWithholdingTaxType
- * Tax.mmWithholdingTaxType}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Tax#mmCorporateActionEvent
- * Tax.mmCorporateActionEvent}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Tax#mmTaxIdentificationType
- * Tax.mmTaxIdentificationType}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
- * subType} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.SecuritiesTax SecuritiesTax}
- * </li>
+ * {@linkplain com.tools20022.repository.msg.SettlementSubTotalCalculatedTax2
+ * SettlementSubTotalCalculatedTax2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TaxReporting2 TaxReporting2}</li>
  * </ul>
  * </li>
  * <li>
@@ -326,115 +357,83 @@ import java.util.List;
  * CorporateActionRate85.mmAdditionalTax}</li>
  * </ul>
  * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
+ * subType} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.choice.TaxExemptionReason1Choice
- * TaxExemptionReason1Choice}</li>
- * <li>{@linkplain com.tools20022.repository.choice.TaxTypeFormat2Choice
- * TaxTypeFormat2Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.SecuritiesTax SecuritiesTax}
+ * </li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.Tax#mmExemptionReason
+ * Tax.mmExemptionReason}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Tax#mmCountry Tax.mmCountry}
+ * </li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.TaxExemptionReasonFormatChoice
- * TaxExemptionReasonFormatChoice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Tax3 Tax3}</li>
- * <li>{@linkplain com.tools20022.repository.choice.RateType10Choice
- * RateType10Choice}</li>
- * <li>{@linkplain com.tools20022.repository.choice.RateType11Choice
- * RateType11Choice}</li>
- * <li>{@linkplain com.tools20022.repository.choice.RateType12Choice
- * RateType12Choice}</li>
- * <li>{@linkplain com.tools20022.repository.choice.RateType14Choice
- * RateType14Choice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TaxCharges1 TaxCharges1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TaxType TaxType}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TaxDetails TaxDetails}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TaxInformation2
- * TaxInformation2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TaxCharges2 TaxCharges2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TaxRecordDetails1
- * TaxRecordDetails1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TaxAmount1 TaxAmount1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TaxInformation3
- * TaxInformation3}</li>
- * <li>{@linkplain com.tools20022.repository.choice.TaxAmountType1Choice
- * TaxAmountType1Choice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TaxAmountAndType1
- * TaxAmountAndType1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TaxationBasis1 TaxationBasis1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TaxExemptionReason1
- * TaxExemptionReason1}</li>
- * <li>{@linkplain com.tools20022.repository.choice.TaxType3FormatChoice
- * TaxType3FormatChoice}</li>
- * <li>{@linkplain com.tools20022.repository.choice.TaxTypeFormat1Choice
- * TaxTypeFormat1Choice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SettlementTax1 SettlementTax1}</li>
+ * {@linkplain com.tools20022.repository.entity.Tax#mmTaxLiabilityValueCalculation
+ * Tax.mmTaxLiabilityValueCalculation}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Tax#mmType Tax.mmType}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Tax#mmAmount Tax.mmAmount}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Tax#mmRate Tax.mmRate}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Tax#mmTaxableParty
+ * Tax.mmTaxableParty}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SettlementSubTotalCalculatedTax1
- * SettlementSubTotalCalculatedTax1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.LineItemTax1 LineItemTax1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Tax13 Tax13}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Tax12 Tax12}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountTax1 AccountTax1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TaxReason1 TaxReason1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.BillingMethod1 BillingMethod1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.BillingMethod2 BillingMethod2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.BillingMethod3 BillingMethod3}</li>
- * <li>{@linkplain com.tools20022.repository.choice.BillingMethod1Choice
- * BillingMethod1Choice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TaxCalculation1
- * TaxCalculation1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.BillingMethod4 BillingMethod4}</li>
- * <li>{@linkplain com.tools20022.repository.msg.BillingTaxRegion1
- * BillingTaxRegion1}</li>
- * <li>{@linkplain com.tools20022.repository.choice.TaxDetailsType1Choice
- * TaxDetailsType1Choice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TaxIdentification1
- * TaxIdentification1}</li>
- * <li>{@linkplain com.tools20022.repository.choice.TaxType1Choice
- * TaxType1Choice}</li>
- * <li>{@linkplain com.tools20022.repository.choice.ExemptionReason1Choice
- * ExemptionReason1Choice}</li>
- * <li>{@linkplain com.tools20022.repository.choice.TaxBasis1Choice
- * TaxBasis1Choice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.RateTypeAndPercentageRate1
- * RateTypeAndPercentageRate1}</li>
- * <li>{@linkplain com.tools20022.repository.choice.RateType28Choice
- * RateType28Choice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TaxInformation4
- * TaxInformation4}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Tax22 Tax22}</li>
- * <li>{@linkplain com.tools20022.repository.choice.TaxType2Choice
- * TaxType2Choice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Tax23 Tax23}</li>
- * <li>{@linkplain com.tools20022.repository.choice.RateType30Choice
- * RateType30Choice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.RateTypeAndPercentageRate3
- * RateTypeAndPercentageRate3}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TaxIdentification2
- * TaxIdentification2}</li>
+ * {@linkplain com.tools20022.repository.entity.Tax#mmTaxRefundValueCalculation
+ * Tax.mmTaxRefundValueCalculation}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Tax#mmBasis Tax.mmBasis}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Tax#mmSecuritiesTransfer
+ * Tax.mmSecuritiesTransfer}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Tax#mmTaxRateType
+ * Tax.mmTaxRateType}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Tax#mmTaxAccount
+ * Tax.mmTaxAccount}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Tax#mmTaxationConditions
+ * Tax.mmTaxationConditions}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Tax#mmAdjustment
+ * Tax.mmAdjustment}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Tax#mmInterest
+ * Tax.mmInterest}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Tax#mmIdentification
+ * Tax.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.TaxIdentificationType1Choice
- * TaxIdentificationType1Choice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.RateTypeAndPercentageRate8
- * RateTypeAndPercentageRate8}</li>
- * <li>{@linkplain com.tools20022.repository.choice.RateType42Choice
- * RateType42Choice}</li>
- * <li>{@linkplain com.tools20022.repository.choice.RateType37Choice
- * RateType37Choice}</li>
- * <li>{@linkplain com.tools20022.repository.choice.TaxExemptionReason2Choice
- * TaxExemptionReason2Choice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TaxReporting1 TaxReporting1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.RateTypeAndPercentageRate9
- * RateTypeAndPercentageRate9}</li>
- * <li>{@linkplain com.tools20022.repository.choice.RateType46Choice
- * RateType46Choice}</li>
- * <li>{@linkplain com.tools20022.repository.choice.RateType48Choice
- * RateType48Choice}</li>
+ * {@linkplain com.tools20022.repository.entity.Tax#mmRelatedPaymentSettlement
+ * Tax.mmRelatedPaymentSettlement}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Tax#mmTaxableBaseAmount
+ * Tax.mmTaxableBaseAmount}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Tax#mmTaxDate Tax.mmTaxDate}
+ * </li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SettlementSubTotalCalculatedTax2
- * SettlementSubTotalCalculatedTax2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TaxReporting2 TaxReporting2}</li>
+ * {@linkplain com.tools20022.repository.entity.Tax#mmCertificateIdentification
+ * Tax.mmCertificateIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Tax#mmAdministrationZone
+ * Tax.mmAdministrationZone}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Tax#mmMethod Tax.mmMethod}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Tax#mmRecord Tax.mmRecord}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Tax#mmProduct Tax.mmProduct}
+ * </li>
+ * <li>{@linkplain com.tools20022.repository.entity.Tax#mmCurrencyExchange
+ * Tax.mmCurrencyExchange}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Tax#mmCurrency
+ * Tax.mmCurrency}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Tax#mmPartyRole
+ * Tax.mmPartyRole}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Tax#mmTaxDeduction
+ * Tax.mmTaxDeduction}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Tax#mmRelatedCorporateActionDistribution
+ * Tax.mmRelatedCorporateActionDistribution}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Tax#mmCalculationDate
+ * Tax.mmCalculationDate}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Tax#mmDividend
+ * Tax.mmDividend}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Tax#mmWithholdingTaxType
+ * Tax.mmWithholdingTaxType}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Tax#mmCorporateActionEvent
+ * Tax.mmCorporateActionEvent}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Tax#mmTaxIdentificationType
+ * Tax.mmTaxIdentificationType}</li>
  * </ul>
  * </li>
  * <li>
@@ -595,25 +594,17 @@ public class Tax {
 	 */
 	public static final MMBusinessAttribute mmExemptionReason = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentAccount17.mmTaxExemptionReason, com.tools20022.repository.msg.InvestmentAccount17.mmExtendedTaxExemptionReason,
-					com.tools20022.repository.msg.InvestmentAccount27.mmTaxExemptionReason, com.tools20022.repository.msg.InvestmentAccount27.mmExtendedTaxExemptionReason, com.tools20022.repository.choice.TaxExemptionReason1Choice.mmCode,
-					com.tools20022.repository.choice.TaxExemptionReason1Choice.mmProprietary, com.tools20022.repository.msg.InvestmentAccount18.mmTaxExemptionReason,
-					com.tools20022.repository.msg.InvestmentAccount18.mmExtendedTaxExemptionReason, com.tools20022.repository.msg.InvestmentAccount28.mmTaxExemptionReason,
-					com.tools20022.repository.msg.InvestmentAccount28.mmExtendedTaxExemptionReason, com.tools20022.repository.msg.InvestmentAccount16.mmTaxExemptionReason,
-					com.tools20022.repository.msg.InvestmentAccount16.mmExtendedTaxExemptionReason, com.tools20022.repository.msg.InvestmentAccount26.mmTaxExemptionReason,
-					com.tools20022.repository.msg.InvestmentAccount26.mmExtendedTaxExemptionReason, com.tools20022.repository.choice.TaxExemptionReasonFormatChoice.mmUnstructured,
-					com.tools20022.repository.choice.TaxExemptionReasonFormatChoice.mmStructured, com.tools20022.repository.msg.Tax3.mmExemptionReason, com.tools20022.repository.msg.Tax15.mmExemptionReason,
-					com.tools20022.repository.msg.Tax15.mmExtendedExemptionReason, com.tools20022.repository.msg.Tax6.mmExemptionReason, com.tools20022.repository.msg.Tax16.mmExemptionReason,
-					com.tools20022.repository.msg.Tax16.mmExtendedExemptionReason, com.tools20022.repository.msg.Tax7.mmExemptionReason, com.tools20022.repository.msg.Tax14.mmExemptionReason,
-					com.tools20022.repository.msg.Tax14.mmExtendedExemptionReason, com.tools20022.repository.msg.SettlementSubTotalCalculatedTax1.mmExemptionReason,
-					com.tools20022.repository.choice.ExemptionReasonType1Choice.mmExemptionReason, com.tools20022.repository.choice.ExemptionReasonType1Choice.mmProprietary, com.tools20022.repository.msg.Tax18.mmExemptionReasonType,
-					com.tools20022.repository.msg.Tax19.mmExemptionReasonType, com.tools20022.repository.msg.Tax21.mmExemptionReason, com.tools20022.repository.choice.ExemptionReason1Choice.mmCode,
-					com.tools20022.repository.choice.ExemptionReason1Choice.mmProprietary, com.tools20022.repository.msg.Tax25.mmExemptionReason, com.tools20022.repository.choice.TaxExemptionReason2Choice.mmCode,
-					com.tools20022.repository.choice.TaxExemptionReason2Choice.mmProprietary, com.tools20022.repository.msg.Tax28.mmExemptionReason, com.tools20022.repository.msg.Tax32.mmExemptionReason,
-					com.tools20022.repository.msg.Tax30.mmExemptionReason);
+			derivation_lazy = () -> Arrays.asList(InvestmentAccount17.mmTaxExemptionReason, InvestmentAccount17.mmExtendedTaxExemptionReason, InvestmentAccount27.mmTaxExemptionReason, InvestmentAccount27.mmExtendedTaxExemptionReason,
+					TaxExemptionReason1Choice.mmCode, TaxExemptionReason1Choice.mmProprietary, InvestmentAccount18.mmTaxExemptionReason, InvestmentAccount18.mmExtendedTaxExemptionReason, InvestmentAccount28.mmTaxExemptionReason,
+					InvestmentAccount28.mmExtendedTaxExemptionReason, InvestmentAccount16.mmTaxExemptionReason, InvestmentAccount16.mmExtendedTaxExemptionReason, InvestmentAccount26.mmTaxExemptionReason,
+					InvestmentAccount26.mmExtendedTaxExemptionReason, TaxExemptionReasonFormatChoice.mmUnstructured, TaxExemptionReasonFormatChoice.mmStructured, Tax3.mmExemptionReason, Tax15.mmExemptionReason,
+					Tax15.mmExtendedExemptionReason, Tax6.mmExemptionReason, Tax16.mmExemptionReason, Tax16.mmExtendedExemptionReason, Tax7.mmExemptionReason, Tax14.mmExemptionReason, Tax14.mmExtendedExemptionReason,
+					SettlementSubTotalCalculatedTax1.mmExemptionReason, ExemptionReasonType1Choice.mmExemptionReason, ExemptionReasonType1Choice.mmProprietary, Tax18.mmExemptionReasonType, Tax19.mmExemptionReasonType,
+					Tax21.mmExemptionReason, ExemptionReason1Choice.mmCode, ExemptionReason1Choice.mmProprietary, Tax25.mmExemptionReason, TaxExemptionReason2Choice.mmCode, TaxExemptionReason2Choice.mmProprietary, Tax28.mmExemptionReason,
+					Tax32.mmExemptionReason, Tax30.mmExemptionReason);
 			elementContext_lazy = () -> Tax.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ExemptionReason";
 			definition = "Reason for a tax exemption.";
 			maxOccurs = 1;
@@ -694,19 +685,17 @@ public class Tax {
 	 */
 	public static final MMBusinessAssociationEnd mmCountry = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Organisation13.mmTaxationCountry, com.tools20022.repository.msg.IndividualPerson20.mmTaxationCountry,
-					com.tools20022.repository.msg.IndividualPerson21.mmTaxationCountry, com.tools20022.repository.msg.IndividualPerson22.mmTaxationCountry, com.tools20022.repository.msg.Organisation15.mmTaxationCountry,
-					com.tools20022.repository.msg.Organisation16.mmTaxationCountry, com.tools20022.repository.msg.Organisation17.mmTaxationCountry, com.tools20022.repository.msg.IndividualPerson23.mmTaxationCountry,
-					com.tools20022.repository.msg.IndividualPerson24.mmTaxationCountry, com.tools20022.repository.msg.TaxReporting1.mmTaxationCountry, com.tools20022.repository.msg.TaxReporting2.mmTaxationCountry);
+			derivation_lazy = () -> Arrays.asList(Organisation13.mmTaxationCountry, IndividualPerson20.mmTaxationCountry, IndividualPerson21.mmTaxationCountry, IndividualPerson22.mmTaxationCountry, Organisation15.mmTaxationCountry,
+					Organisation16.mmTaxationCountry, Organisation17.mmTaxationCountry, IndividualPerson23.mmTaxationCountry, IndividualPerson24.mmTaxationCountry, TaxReporting1.mmTaxationCountry, TaxReporting2.mmTaxationCountry);
 			elementContext_lazy = () -> Tax.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Country";
 			definition = "Place of taxation of an individual person or an organisation, where the tax is due.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.Country.mmTax;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Country.mmObject();
 		}
 	};
@@ -750,13 +739,13 @@ public class Tax {
 		{
 			elementContext_lazy = () -> Tax.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TaxLiabilityValueCalculation";
 			definition = "Net asset value calculation for which tax liability information is provided.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.NetAssetValueCalculation.mmTaxLiability;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.NetAssetValueCalculation.mmObject();
 		}
 	};
@@ -885,23 +874,15 @@ public class Tax {
 	 */
 	public static final MMBusinessAttribute mmType = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Tax8.mmType, com.tools20022.repository.msg.Tax17.mmType, com.tools20022.repository.msg.Tax17.mmExtendedType,
-					com.tools20022.repository.choice.TaxTypeFormat2Choice.mmStructured, com.tools20022.repository.msg.Tax3.mmType, com.tools20022.repository.msg.Tax15.mmType, com.tools20022.repository.msg.Tax15.mmExtendedType,
-					com.tools20022.repository.choice.TaxAmountType1Choice.mmCode, com.tools20022.repository.choice.TaxAmountType1Choice.mmProprietary, com.tools20022.repository.msg.TaxAmountAndType1.mmType,
-					com.tools20022.repository.msg.Product1.mmTaxType, com.tools20022.repository.msg.Tax6.mmType, com.tools20022.repository.msg.Tax16.mmType, com.tools20022.repository.msg.Tax16.mmExtendedType,
-					com.tools20022.repository.msg.Tax7.mmType, com.tools20022.repository.msg.Tax14.mmType, com.tools20022.repository.msg.Tax14.mmExtendedType, com.tools20022.repository.choice.TaxType3FormatChoice.mmCode,
-					com.tools20022.repository.choice.TaxType3FormatChoice.mmProprietary, com.tools20022.repository.msg.RelatedTaxType1.mmTaxType, com.tools20022.repository.choice.TaxTypeFormat1Choice.mmCode,
-					com.tools20022.repository.choice.TaxTypeFormat1Choice.mmProprietary, com.tools20022.repository.msg.SettlementTax1.mmTypeCode, com.tools20022.repository.msg.SettlementSubTotalCalculatedTax1.mmTypeCode,
-					com.tools20022.repository.msg.LineItemTax1.mmTypeCode, com.tools20022.repository.msg.Tax13.mmType, com.tools20022.repository.msg.Tax13.mmOtherTaxType, com.tools20022.repository.msg.Tax12.mmType,
-					com.tools20022.repository.msg.Tax12.mmOtherTaxType, com.tools20022.repository.choice.TaxDetailsType1Choice.mmType, com.tools20022.repository.choice.TaxDetailsType1Choice.mmProprietary,
-					com.tools20022.repository.msg.Tax20.mmType, com.tools20022.repository.choice.TaxType1Choice.mmCode, com.tools20022.repository.choice.TaxType1Choice.mmProprietary, com.tools20022.repository.msg.Tax21.mmType,
-					com.tools20022.repository.msg.Tax22.mmType, com.tools20022.repository.choice.TaxType2Choice.mmType, com.tools20022.repository.choice.TaxType2Choice.mmOtherTaxType, com.tools20022.repository.msg.Tax23.mmType,
-					com.tools20022.repository.msg.Tax25.mmType, com.tools20022.repository.msg.Tax28.mmType, com.tools20022.repository.msg.Product3.mmTaxType, com.tools20022.repository.msg.SettlementSubTotalCalculatedTax2.mmTypeCode,
-					com.tools20022.repository.msg.SettlementSubTotalCalculatedTax2.mmExemptionReasonCode, com.tools20022.repository.choice.TaxType3Choice.mmCode, com.tools20022.repository.choice.TaxType3Choice.mmProprietary,
-					com.tools20022.repository.msg.Tax32.mmType, com.tools20022.repository.msg.Tax30.mmType, com.tools20022.repository.msg.Tax31.mmType);
+			derivation_lazy = () -> Arrays.asList(Tax8.mmType, Tax17.mmType, Tax17.mmExtendedType, TaxTypeFormat2Choice.mmStructured, Tax3.mmType, Tax15.mmType, Tax15.mmExtendedType, TaxAmountType1Choice.mmCode,
+					TaxAmountType1Choice.mmProprietary, TaxAmountAndType1.mmType, Product1.mmTaxType, Tax6.mmType, Tax16.mmType, Tax16.mmExtendedType, Tax7.mmType, Tax14.mmType, Tax14.mmExtendedType, TaxType3FormatChoice.mmCode,
+					TaxType3FormatChoice.mmProprietary, RelatedTaxType1.mmTaxType, TaxTypeFormat1Choice.mmCode, TaxTypeFormat1Choice.mmProprietary, SettlementTax1.mmTypeCode, SettlementSubTotalCalculatedTax1.mmTypeCode,
+					LineItemTax1.mmTypeCode, Tax13.mmType, Tax13.mmOtherTaxType, Tax12.mmType, Tax12.mmOtherTaxType, TaxDetailsType1Choice.mmType, TaxDetailsType1Choice.mmProprietary, Tax20.mmType, TaxType1Choice.mmCode,
+					TaxType1Choice.mmProprietary, Tax21.mmType, Tax22.mmType, TaxType2Choice.mmType, TaxType2Choice.mmOtherTaxType, Tax23.mmType, Tax25.mmType, Tax28.mmType, Product3.mmTaxType, SettlementSubTotalCalculatedTax2.mmTypeCode,
+					SettlementSubTotalCalculatedTax2.mmExemptionReasonCode, TaxType3Choice.mmCode, TaxType3Choice.mmProprietary, Tax32.mmType, Tax30.mmType, Tax31.mmType);
 			elementContext_lazy = () -> Tax.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Type";
 			definition = "Type of tax applied.";
 			maxOccurs = 1;
@@ -942,7 +923,7 @@ public class Tax {
 			derivation_lazy = () -> ListBuilderForTax_00.addElems(new ArrayList<>());
 			elementContext_lazy = () -> Tax.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Amount";
 			definition = "Amount of money resulting from the calculation of the tax.";
 			maxOccurs = 1;
@@ -1806,104 +1787,58 @@ public class Tax {
 	 */
 	public static final MMBusinessAttribute mmRate = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Tax8.mmRate, com.tools20022.repository.msg.Tax17.mmRate, com.tools20022.repository.msg.CorporateActionRate4.mmFiscalStamp,
-					com.tools20022.repository.msg.CorporateActionRate4.mmNonResidentRate, com.tools20022.repository.msg.CorporateActionRate4.mmTaxRelatedRate, com.tools20022.repository.msg.CorporateActionRate4.mmWithholdingTaxRate,
-					com.tools20022.repository.msg.CorporateActionRate4.mmTaxOnIncome, com.tools20022.repository.msg.CorporateActionRate4.mmTaxOnProfits, com.tools20022.repository.msg.CorporateActionRate4.mmTaxReclaimRate,
-					com.tools20022.repository.msg.CorporateActionRate10.mmFiscalStamp, com.tools20022.repository.msg.CorporateActionRate10.mmNonResidentRate, com.tools20022.repository.msg.CorporateActionRate10.mmTaxRelatedRate,
-					com.tools20022.repository.msg.CorporateActionRate10.mmWithholdingTaxRate, com.tools20022.repository.msg.CorporateActionRate10.mmTaxOnIncome, com.tools20022.repository.msg.CorporateActionRate10.mmTaxOnProfits,
-					com.tools20022.repository.msg.CorporateActionRate10.mmTaxReclaimRate, com.tools20022.repository.msg.CorporateActionRate20.mmTaxRelatedRate, com.tools20022.repository.msg.CorporateActionRate20.mmWithholdingTaxRate,
-					com.tools20022.repository.msg.RateDetails2.mmFiscalStamp, com.tools20022.repository.msg.RateDetails2.mmTaxRelatedRate, com.tools20022.repository.msg.RateDetails2.mmWithholdingTaxRate,
-					com.tools20022.repository.msg.RateDetails2.mmTaxOnIncome, com.tools20022.repository.msg.RateDetails2.mmTaxOnProfits, com.tools20022.repository.msg.RateDetails2.mmTaxReclaimRate,
-					com.tools20022.repository.msg.CorporateActionRate22.mmTaxRelatedRate, com.tools20022.repository.msg.CorporateActionRate22.mmWithholdingTaxRate, com.tools20022.repository.msg.RateDetails4.mmFiscalStamp,
-					com.tools20022.repository.msg.RateDetails4.mmTaxRelatedRate, com.tools20022.repository.msg.RateDetails4.mmWithholdingTaxRate, com.tools20022.repository.msg.RateDetails4.mmTaxOnIncome,
-					com.tools20022.repository.msg.RateDetails4.mmTaxOnProfits, com.tools20022.repository.msg.RateDetails4.mmTaxReclaimRate, com.tools20022.repository.msg.CorporateActionRate26.mmTaxRelatedRate,
-					com.tools20022.repository.msg.CorporateActionRate26.mmWithholdingTaxRate, com.tools20022.repository.msg.CorporateActionRate29.mmFiscalStamp, com.tools20022.repository.msg.RateDetails7.mmFiscalStamp,
-					com.tools20022.repository.msg.RateDetails7.mmTaxRelatedRate, com.tools20022.repository.msg.RateDetails7.mmWithholdingTaxRate, com.tools20022.repository.msg.RateDetails7.mmTaxOnIncome,
-					com.tools20022.repository.msg.RateDetails7.mmTaxOnProfits, com.tools20022.repository.msg.RateDetails7.mmTaxReclaimRate, com.tools20022.repository.msg.CorporateActionRate31.mmTaxRelatedRate,
-					com.tools20022.repository.msg.CorporateActionRate31.mmWithholdingTaxRate, com.tools20022.repository.msg.CorporateActionRate34.mmFiscalStamp, com.tools20022.repository.msg.RateDetails9.mmFiscalStamp,
-					com.tools20022.repository.msg.RateDetails9.mmTaxRelatedRate, com.tools20022.repository.msg.RateDetails9.mmWithholdingTaxRate, com.tools20022.repository.msg.RateDetails9.mmTaxOnIncome,
-					com.tools20022.repository.msg.RateDetails9.mmTaxOnProfits, com.tools20022.repository.msg.RateDetails9.mmTaxReclaimRate, com.tools20022.repository.msg.CorporateActionRate38.mmTaxRelatedRate,
-					com.tools20022.repository.msg.CorporateActionRate38.mmWithholdingTaxRate, com.tools20022.repository.msg.RateDetails11.mmFiscalStamp, com.tools20022.repository.msg.RateDetails11.mmTaxRelatedRate,
-					com.tools20022.repository.msg.RateDetails11.mmWithholdingTaxRate, com.tools20022.repository.msg.RateDetails11.mmTaxOnIncome, com.tools20022.repository.msg.RateDetails11.mmTaxOnProfits,
-					com.tools20022.repository.msg.RateDetails11.mmTaxReclaimRate, com.tools20022.repository.msg.CorporateActionRate39.mmTaxRelatedRate, com.tools20022.repository.msg.CorporateActionRate39.mmWithholdingTaxRate,
-					com.tools20022.repository.msg.RateDetails12.mmFiscalStamp, com.tools20022.repository.msg.RateDetails12.mmTaxRelatedRate, com.tools20022.repository.msg.RateDetails12.mmWithholdingTaxRate,
-					com.tools20022.repository.msg.RateDetails12.mmTaxOnIncome, com.tools20022.repository.msg.RateDetails12.mmTaxOnProfits, com.tools20022.repository.msg.RateDetails12.mmTaxReclaimRate,
-					com.tools20022.repository.msg.CorporateActionRate5.mmFiscalStamp, com.tools20022.repository.msg.CorporateActionRate5.mmNonResidentRate, com.tools20022.repository.msg.CorporateActionRate5.mmWithholdingTaxRate,
-					com.tools20022.repository.msg.CorporateActionRate5.mmTaxOnIncome, com.tools20022.repository.msg.CorporateActionRate5.mmTaxOnProfits, com.tools20022.repository.msg.CorporateActionRate5.mmTaxReclaimRate,
-					com.tools20022.repository.msg.CorporateActionRate5.mmTaxRelatedRate, com.tools20022.repository.msg.CorporateActionRate12.mmFiscalStamp, com.tools20022.repository.msg.CorporateActionRate12.mmNonResidentRate,
-					com.tools20022.repository.msg.CorporateActionRate12.mmWithholdingTaxRate, com.tools20022.repository.msg.CorporateActionRate12.mmTaxOnIncome, com.tools20022.repository.msg.CorporateActionRate12.mmTaxOnProfits,
-					com.tools20022.repository.msg.CorporateActionRate12.mmTaxReclaimRate, com.tools20022.repository.msg.CorporateActionRate12.mmTaxRelatedRate, com.tools20022.repository.msg.CorporateActionRate15.mmWithholdingTaxRate,
-					com.tools20022.repository.msg.CorporateActionRate15.mmTaxRelatedRate, com.tools20022.repository.msg.RateDetails3.mmTaxRelatedRate, com.tools20022.repository.msg.RateDetails3.mmWithholdingTaxRate,
-					com.tools20022.repository.msg.RateDetails3.mmFiscalStamp, com.tools20022.repository.msg.RateDetails3.mmTaxOnIncome, com.tools20022.repository.msg.RateDetails3.mmTaxOnProfits,
-					com.tools20022.repository.msg.RateDetails3.mmTaxReclaimRate, com.tools20022.repository.msg.CorporateActionRate18.mmWithholdingTaxRate, com.tools20022.repository.msg.CorporateActionRate18.mmTaxRelatedRate,
-					com.tools20022.repository.msg.RateDetails5.mmTaxRelatedRate, com.tools20022.repository.msg.RateDetails5.mmWithholdingTaxRate, com.tools20022.repository.msg.RateDetails5.mmFiscalStamp,
-					com.tools20022.repository.msg.RateDetails5.mmTaxOnIncome, com.tools20022.repository.msg.RateDetails5.mmTaxOnProfits, com.tools20022.repository.msg.RateDetails5.mmTaxReclaimRate,
-					com.tools20022.repository.msg.CorporateActionRate25.mmWithholdingTaxRate, com.tools20022.repository.msg.CorporateActionRate25.mmTaxRelatedRate, com.tools20022.repository.msg.CorporateActionRate28.mmFiscalStamp,
-					com.tools20022.repository.msg.CorporateActionRate30.mmWithholdingTaxRate, com.tools20022.repository.msg.CorporateActionRate30.mmTaxRelatedRate, com.tools20022.repository.msg.CorporateActionRate33.mmFiscalStamp,
-					com.tools20022.repository.msg.CorporateActionRate37.mmWithholdingTaxRate, com.tools20022.repository.msg.CorporateActionRate37.mmTaxRelatedRate, com.tools20022.repository.msg.RateDetails10.mmTaxRelatedRate,
-					com.tools20022.repository.msg.RateDetails10.mmWithholdingTaxRate, com.tools20022.repository.msg.RateDetails10.mmFiscalStamp, com.tools20022.repository.msg.RateDetails10.mmTaxOnIncome,
-					com.tools20022.repository.msg.RateDetails10.mmTaxOnProfits, com.tools20022.repository.msg.RateDetails10.mmTaxReclaimRate, com.tools20022.repository.msg.CorporateActionRate40.mmWithholdingTaxRate,
-					com.tools20022.repository.msg.CorporateActionRate40.mmTaxRelatedRate, com.tools20022.repository.msg.RateDetails13.mmTaxRelatedRate, com.tools20022.repository.msg.RateDetails13.mmWithholdingTaxRate,
-					com.tools20022.repository.msg.RateDetails13.mmFiscalStamp, com.tools20022.repository.msg.RateDetails13.mmTaxOnIncome, com.tools20022.repository.msg.RateDetails13.mmTaxOnProfits,
-					com.tools20022.repository.msg.RateDetails13.mmTaxReclaimRate, com.tools20022.repository.msg.CorporateActionRate36.mmWithholdingTaxRate, com.tools20022.repository.msg.CorporateActionRate36.mmTaxRelatedRate,
-					com.tools20022.repository.msg.CorporateActionRate42.mmWithholdingTaxRate, com.tools20022.repository.msg.CorporateActionRate42.mmTaxRelatedRate, com.tools20022.repository.msg.Commission16.mmVATRate,
-					com.tools20022.repository.msg.TaxCharges1.mmRate, com.tools20022.repository.msg.TaxType.mmRate, com.tools20022.repository.msg.TaxCharges2.mmRate, com.tools20022.repository.msg.TaxAmount1.mmRate,
-					com.tools20022.repository.msg.Tax6.mmRate, com.tools20022.repository.msg.Tax16.mmRate, com.tools20022.repository.msg.Tax7.mmRate, com.tools20022.repository.msg.Tax14.mmRate,
-					com.tools20022.repository.msg.CorporateActionRate2.mmWithholdingTax, com.tools20022.repository.msg.CorporateActionRate2.mmTaxOnIncome, com.tools20022.repository.msg.CorporateActionRate2.mmTaxOnProfit,
-					com.tools20022.repository.msg.CorporateActionRate2.mmTaxReclaim, com.tools20022.repository.msg.CorporateActionRate2.mmFiscalStamp, com.tools20022.repository.msg.CorporateActionRate2.mmNonResidentRate,
-					com.tools20022.repository.msg.TaxVoucher1.mmTaxCreditRate, com.tools20022.repository.msg.TaxVoucher1.mmWithholdingTaxRate, com.tools20022.repository.msg.SettlementSubTotalCalculatedTax1.mmCalculatedRate,
-					com.tools20022.repository.msg.LineItemTax1.mmCalculatedRate, com.tools20022.repository.msg.Tax13.mmRate, com.tools20022.repository.msg.Tax18.mmRate, com.tools20022.repository.msg.Tax19.mmRate,
-					com.tools20022.repository.msg.RateTypeAndPercentageRate1.mmRate, com.tools20022.repository.msg.RateDetails15.mmFiscalStamp, com.tools20022.repository.msg.RateDetails15.mmTaxRelatedRate,
-					com.tools20022.repository.msg.RateDetails15.mmWithholdingTaxRate, com.tools20022.repository.msg.RateDetails15.mmTaxOnIncome, com.tools20022.repository.msg.RateDetails15.mmTaxOnProfits,
-					com.tools20022.repository.msg.RateDetails15.mmTaxReclaimRate, com.tools20022.repository.msg.CorporateActionRate46.mmTaxRelatedRate, com.tools20022.repository.msg.CorporateActionRate46.mmWithholdingTaxRate,
-					com.tools20022.repository.msg.CorporateActionRate45.mmWithholdingTaxRate, com.tools20022.repository.msg.CorporateActionRate45.mmTaxRelatedRate, com.tools20022.repository.msg.CorporateActionRate45.mmTaxOnIncome,
-					com.tools20022.repository.choice.RateAndAmountFormat21Choice.mmRate, com.tools20022.repository.msg.CorporateActionRate44.mmWithholdingTaxRate, com.tools20022.repository.msg.CorporateActionRate44.mmTaxRelatedRate,
-					com.tools20022.repository.msg.CorporateActionRate44.mmTaxOnIncome, com.tools20022.repository.msg.CorporateActionRate48.mmFiscalStamp, com.tools20022.repository.msg.CorporateActionRate49.mmFiscalStamp,
-					com.tools20022.repository.msg.RateDetails14.mmTaxRelatedRate, com.tools20022.repository.msg.RateDetails14.mmWithholdingTaxRate, com.tools20022.repository.msg.RateDetails14.mmFiscalStamp,
-					com.tools20022.repository.msg.RateDetails14.mmTaxOnIncome, com.tools20022.repository.msg.RateDetails14.mmTaxOnProfits, com.tools20022.repository.msg.RateDetails14.mmTaxReclaimRate,
-					com.tools20022.repository.msg.CorporateActionRate60.mmWithholdingTaxRate, com.tools20022.repository.msg.CorporateActionRate60.mmTaxRelatedRate, com.tools20022.repository.msg.CorporateActionRate60.mmTaxOnIncome,
-					com.tools20022.repository.msg.CorporateActionRate58.mmFiscalStamp, com.tools20022.repository.msg.RateDetails18.mmTaxRelatedRate, com.tools20022.repository.msg.RateDetails18.mmWithholdingTaxRate,
-					com.tools20022.repository.msg.RateDetails18.mmFiscalStamp, com.tools20022.repository.msg.RateDetails18.mmTaxOnIncome, com.tools20022.repository.msg.RateDetails18.mmTaxOnProfits,
-					com.tools20022.repository.msg.RateDetails18.mmTaxReclaimRate, com.tools20022.repository.msg.RateTypeAndPercentageRate3.mmRate, com.tools20022.repository.msg.CorporateActionRate64.mmTaxRelatedRate,
-					com.tools20022.repository.msg.CorporateActionRate64.mmWithholdingTaxRate, com.tools20022.repository.choice.RateAndAmountFormat35Choice.mmRate, com.tools20022.repository.choice.RateAndAmountFormat32Choice.mmRate,
-					com.tools20022.repository.msg.RateDetails21.mmFiscalStamp, com.tools20022.repository.msg.RateDetails21.mmTaxRelatedRate, com.tools20022.repository.msg.RateDetails21.mmWithholdingTaxRate,
-					com.tools20022.repository.msg.RateDetails21.mmTaxOnIncome, com.tools20022.repository.msg.RateDetails21.mmTaxOnProfits, com.tools20022.repository.msg.RateDetails21.mmTaxReclaimRate,
-					com.tools20022.repository.msg.CorporateActionRate65.mmFiscalStamp, com.tools20022.repository.msg.CorporateActionRate57.mmWithholdingTaxRate, com.tools20022.repository.msg.CorporateActionRate57.mmTaxRelatedRate,
-					com.tools20022.repository.msg.CorporateActionRate57.mmTaxOnIncome, com.tools20022.repository.choice.RateAndAmountFormat40Choice.mmRate, com.tools20022.repository.msg.RateTypeAndPercentageRate8.mmRate,
-					com.tools20022.repository.msg.RateDetails23.mmFiscalStamp, com.tools20022.repository.msg.RateDetails23.mmWithholdingTaxRate, com.tools20022.repository.msg.RateDetails23.mmSecondLevelTax,
-					com.tools20022.repository.msg.RateDetails23.mmTaxOnIncome, com.tools20022.repository.msg.RateDetails23.mmTaxOnProfits, com.tools20022.repository.msg.RateDetails23.mmTaxReclaimRate,
-					com.tools20022.repository.msg.CorporateActionRate68.mmWithholdingTaxRate, com.tools20022.repository.msg.CorporateActionRate68.mmSecondLevelTax, com.tools20022.repository.msg.CorporateActionRate68.mmTaxOnIncome,
-					com.tools20022.repository.msg.CorporateActionRate69.mmFiscalStamp, com.tools20022.repository.msg.CorporateActionRate70.mmWithholdingTaxRate, com.tools20022.repository.msg.CorporateActionRate70.mmSecondLevelTax,
-					com.tools20022.repository.msg.CorporateActionRate67.mmWithholdingTaxRate, com.tools20022.repository.msg.CorporateActionRate67.mmSecondLevelTax, com.tools20022.repository.msg.CorporateActionRate67.mmTaxOnIncome,
-					com.tools20022.repository.msg.RateDetails22.mmWithholdingTaxRate, com.tools20022.repository.msg.RateDetails22.mmSecondLevelTax, com.tools20022.repository.msg.RateDetails22.mmFiscalStamp,
-					com.tools20022.repository.msg.RateDetails22.mmTaxOnIncome, com.tools20022.repository.msg.RateDetails22.mmTaxOnProfits, com.tools20022.repository.msg.RateDetails22.mmTaxReclaimRate,
-					com.tools20022.repository.msg.CorporateActionRate72.mmFiscalStamp, com.tools20022.repository.msg.TaxReporting1.mmTaxRate, com.tools20022.repository.msg.TreasuryProfile1.mmRate,
-					com.tools20022.repository.msg.CorporateActionRate74.mmWithholdingTaxRate, com.tools20022.repository.msg.CorporateActionRate74.mmSecondLevelTax, com.tools20022.repository.msg.CorporateActionRate79.mmWithholdingTaxRate,
-					com.tools20022.repository.msg.CorporateActionRate79.mmSecondLevelTax, com.tools20022.repository.msg.CorporateActionRate79.mmTaxOnIncome, com.tools20022.repository.msg.RateDetails24.mmFiscalStamp,
-					com.tools20022.repository.msg.RateDetails24.mmWithholdingTaxRate, com.tools20022.repository.msg.RateDetails24.mmSecondLevelTax, com.tools20022.repository.msg.RateDetails24.mmTaxOnIncome,
-					com.tools20022.repository.msg.RateDetails24.mmTaxOnProfits, com.tools20022.repository.msg.RateDetails24.mmTaxReclaimRate, com.tools20022.repository.msg.RateTypeAndPercentageRate9.mmRate,
-					com.tools20022.repository.msg.RateDetails25.mmWithholdingTaxRate, com.tools20022.repository.msg.RateDetails25.mmSecondLevelTax, com.tools20022.repository.msg.RateDetails25.mmFiscalStamp,
-					com.tools20022.repository.msg.RateDetails25.mmTaxOnIncome, com.tools20022.repository.msg.RateDetails25.mmTaxOnProfits, com.tools20022.repository.msg.RateDetails25.mmTaxReclaimRate,
-					com.tools20022.repository.msg.CorporateActionRate76.mmWithholdingTaxRate, com.tools20022.repository.msg.CorporateActionRate76.mmSecondLevelTax, com.tools20022.repository.msg.CorporateActionRate76.mmTaxOnIncome,
-					com.tools20022.repository.msg.CorporateActionRate77.mmFiscalStamp, com.tools20022.repository.choice.RateAndAmountFormat45Choice.mmRate, com.tools20022.repository.msg.CorporateActionRate75.mmFiscalStamp,
-					com.tools20022.repository.msg.SettlementSubTotalCalculatedTax2.mmCalculatedRate, com.tools20022.repository.msg.Tax32.mmInformativeRate, com.tools20022.repository.msg.Tax31.mmAppliedRate,
-					com.tools20022.repository.choice.TaxAmountOrRate4Choice.mmRate, com.tools20022.repository.msg.TaxReporting2.mmTaxRate, com.tools20022.repository.msg.RateDetails26.mmWithholdingTaxRate,
-					com.tools20022.repository.msg.RateDetails26.mmSecondLevelTax, com.tools20022.repository.msg.RateDetails26.mmFiscalStamp, com.tools20022.repository.msg.RateDetails26.mmTaxOnIncome,
-					com.tools20022.repository.msg.RateDetails26.mmTaxOnProfits, com.tools20022.repository.msg.RateDetails26.mmTaxReclaimRate, com.tools20022.repository.msg.CorporateActionRate82.mmWithholdingTaxRate,
-					com.tools20022.repository.msg.CorporateActionRate82.mmSecondLevelTax, com.tools20022.repository.msg.CorporateActionRate80.mmWithholdingTaxRate, com.tools20022.repository.msg.CorporateActionRate80.mmSecondLevelTax,
-					com.tools20022.repository.msg.CorporateActionRate80.mmTaxOnIncome, com.tools20022.repository.msg.RateDetails27.mmFiscalStamp, com.tools20022.repository.msg.RateDetails27.mmWithholdingTaxRate,
-					com.tools20022.repository.msg.RateDetails27.mmSecondLevelTax, com.tools20022.repository.msg.RateDetails27.mmTaxOnIncome, com.tools20022.repository.msg.RateDetails27.mmTaxOnProfits,
-					com.tools20022.repository.msg.RateDetails27.mmTaxReclaimRate, com.tools20022.repository.msg.CorporateActionRate81.mmWithholdingTaxRate, com.tools20022.repository.msg.CorporateActionRate81.mmSecondLevelTax,
-					com.tools20022.repository.msg.CorporateActionRate81.mmTaxOnIncome, com.tools20022.repository.msg.CorporateActionRate83.mmWithholdingTaxRate, com.tools20022.repository.msg.CorporateActionRate83.mmSecondLevelTax,
-					com.tools20022.repository.msg.CorporateActionRate83.mmTaxOnIncome, com.tools20022.repository.msg.CorporateActionRate84.mmWithholdingTaxRate, com.tools20022.repository.msg.CorporateActionRate84.mmSecondLevelTax,
-					com.tools20022.repository.msg.CorporateActionRate84.mmTaxOnIncome, com.tools20022.repository.msg.CorporateActionRate85.mmWithholdingTaxRate, com.tools20022.repository.msg.CorporateActionRate85.mmSecondLevelTax,
-					com.tools20022.repository.msg.RateDetails28.mmWithholdingTaxRate, com.tools20022.repository.msg.RateDetails28.mmSecondLevelTax, com.tools20022.repository.msg.RateDetails28.mmFiscalStamp,
-					com.tools20022.repository.msg.RateDetails28.mmTaxOnIncome, com.tools20022.repository.msg.RateDetails28.mmTaxOnProfits, com.tools20022.repository.msg.RateDetails28.mmTaxReclaimRate,
-					com.tools20022.repository.msg.RateDetails30.mmFiscalStamp, com.tools20022.repository.msg.RateDetails30.mmWithholdingTaxRate, com.tools20022.repository.msg.RateDetails30.mmSecondLevelTax,
-					com.tools20022.repository.msg.RateDetails30.mmTaxOnIncome, com.tools20022.repository.msg.RateDetails30.mmTaxOnProfits, com.tools20022.repository.msg.RateDetails30.mmTaxReclaimRate);
+			derivation_lazy = () -> Arrays.asList(Tax8.mmRate, Tax17.mmRate, CorporateActionRate4.mmFiscalStamp, CorporateActionRate4.mmNonResidentRate, CorporateActionRate4.mmTaxRelatedRate, CorporateActionRate4.mmWithholdingTaxRate,
+					CorporateActionRate4.mmTaxOnIncome, CorporateActionRate4.mmTaxOnProfits, CorporateActionRate4.mmTaxReclaimRate, CorporateActionRate10.mmFiscalStamp, CorporateActionRate10.mmNonResidentRate,
+					CorporateActionRate10.mmTaxRelatedRate, CorporateActionRate10.mmWithholdingTaxRate, CorporateActionRate10.mmTaxOnIncome, CorporateActionRate10.mmTaxOnProfits, CorporateActionRate10.mmTaxReclaimRate,
+					CorporateActionRate20.mmTaxRelatedRate, CorporateActionRate20.mmWithholdingTaxRate, RateDetails2.mmFiscalStamp, RateDetails2.mmTaxRelatedRate, RateDetails2.mmWithholdingTaxRate, RateDetails2.mmTaxOnIncome,
+					RateDetails2.mmTaxOnProfits, RateDetails2.mmTaxReclaimRate, CorporateActionRate22.mmTaxRelatedRate, CorporateActionRate22.mmWithholdingTaxRate, RateDetails4.mmFiscalStamp, RateDetails4.mmTaxRelatedRate,
+					RateDetails4.mmWithholdingTaxRate, RateDetails4.mmTaxOnIncome, RateDetails4.mmTaxOnProfits, RateDetails4.mmTaxReclaimRate, CorporateActionRate26.mmTaxRelatedRate, CorporateActionRate26.mmWithholdingTaxRate,
+					CorporateActionRate29.mmFiscalStamp, RateDetails7.mmFiscalStamp, RateDetails7.mmTaxRelatedRate, RateDetails7.mmWithholdingTaxRate, RateDetails7.mmTaxOnIncome, RateDetails7.mmTaxOnProfits, RateDetails7.mmTaxReclaimRate,
+					CorporateActionRate31.mmTaxRelatedRate, CorporateActionRate31.mmWithholdingTaxRate, CorporateActionRate34.mmFiscalStamp, RateDetails9.mmFiscalStamp, RateDetails9.mmTaxRelatedRate, RateDetails9.mmWithholdingTaxRate,
+					RateDetails9.mmTaxOnIncome, RateDetails9.mmTaxOnProfits, RateDetails9.mmTaxReclaimRate, CorporateActionRate38.mmTaxRelatedRate, CorporateActionRate38.mmWithholdingTaxRate, RateDetails11.mmFiscalStamp,
+					RateDetails11.mmTaxRelatedRate, RateDetails11.mmWithholdingTaxRate, RateDetails11.mmTaxOnIncome, RateDetails11.mmTaxOnProfits, RateDetails11.mmTaxReclaimRate, CorporateActionRate39.mmTaxRelatedRate,
+					CorporateActionRate39.mmWithholdingTaxRate, RateDetails12.mmFiscalStamp, RateDetails12.mmTaxRelatedRate, RateDetails12.mmWithholdingTaxRate, RateDetails12.mmTaxOnIncome, RateDetails12.mmTaxOnProfits,
+					RateDetails12.mmTaxReclaimRate, CorporateActionRate5.mmFiscalStamp, CorporateActionRate5.mmNonResidentRate, CorporateActionRate5.mmWithholdingTaxRate, CorporateActionRate5.mmTaxOnIncome,
+					CorporateActionRate5.mmTaxOnProfits, CorporateActionRate5.mmTaxReclaimRate, CorporateActionRate5.mmTaxRelatedRate, CorporateActionRate12.mmFiscalStamp, CorporateActionRate12.mmNonResidentRate,
+					CorporateActionRate12.mmWithholdingTaxRate, CorporateActionRate12.mmTaxOnIncome, CorporateActionRate12.mmTaxOnProfits, CorporateActionRate12.mmTaxReclaimRate, CorporateActionRate12.mmTaxRelatedRate,
+					CorporateActionRate15.mmWithholdingTaxRate, CorporateActionRate15.mmTaxRelatedRate, RateDetails3.mmTaxRelatedRate, RateDetails3.mmWithholdingTaxRate, RateDetails3.mmFiscalStamp, RateDetails3.mmTaxOnIncome,
+					RateDetails3.mmTaxOnProfits, RateDetails3.mmTaxReclaimRate, CorporateActionRate18.mmWithholdingTaxRate, CorporateActionRate18.mmTaxRelatedRate, RateDetails5.mmTaxRelatedRate, RateDetails5.mmWithholdingTaxRate,
+					RateDetails5.mmFiscalStamp, RateDetails5.mmTaxOnIncome, RateDetails5.mmTaxOnProfits, RateDetails5.mmTaxReclaimRate, CorporateActionRate25.mmWithholdingTaxRate, CorporateActionRate25.mmTaxRelatedRate,
+					CorporateActionRate28.mmFiscalStamp, CorporateActionRate30.mmWithholdingTaxRate, CorporateActionRate30.mmTaxRelatedRate, CorporateActionRate33.mmFiscalStamp, CorporateActionRate37.mmWithholdingTaxRate,
+					CorporateActionRate37.mmTaxRelatedRate, RateDetails10.mmTaxRelatedRate, RateDetails10.mmWithholdingTaxRate, RateDetails10.mmFiscalStamp, RateDetails10.mmTaxOnIncome, RateDetails10.mmTaxOnProfits,
+					RateDetails10.mmTaxReclaimRate, CorporateActionRate40.mmWithholdingTaxRate, CorporateActionRate40.mmTaxRelatedRate, RateDetails13.mmTaxRelatedRate, RateDetails13.mmWithholdingTaxRate, RateDetails13.mmFiscalStamp,
+					RateDetails13.mmTaxOnIncome, RateDetails13.mmTaxOnProfits, RateDetails13.mmTaxReclaimRate, CorporateActionRate36.mmWithholdingTaxRate, CorporateActionRate36.mmTaxRelatedRate, CorporateActionRate42.mmWithholdingTaxRate,
+					CorporateActionRate42.mmTaxRelatedRate, Commission16.mmVATRate, TaxCharges1.mmRate, TaxType.mmRate, TaxCharges2.mmRate, TaxAmount1.mmRate, Tax6.mmRate, Tax16.mmRate, Tax7.mmRate, Tax14.mmRate,
+					CorporateActionRate2.mmWithholdingTax, CorporateActionRate2.mmTaxOnIncome, CorporateActionRate2.mmTaxOnProfit, CorporateActionRate2.mmTaxReclaim, CorporateActionRate2.mmFiscalStamp,
+					CorporateActionRate2.mmNonResidentRate, TaxVoucher1.mmTaxCreditRate, TaxVoucher1.mmWithholdingTaxRate, SettlementSubTotalCalculatedTax1.mmCalculatedRate, LineItemTax1.mmCalculatedRate, Tax13.mmRate, Tax18.mmRate,
+					Tax19.mmRate, RateTypeAndPercentageRate1.mmRate, RateDetails15.mmFiscalStamp, RateDetails15.mmTaxRelatedRate, RateDetails15.mmWithholdingTaxRate, RateDetails15.mmTaxOnIncome, RateDetails15.mmTaxOnProfits,
+					RateDetails15.mmTaxReclaimRate, CorporateActionRate46.mmTaxRelatedRate, CorporateActionRate46.mmWithholdingTaxRate, CorporateActionRate45.mmWithholdingTaxRate, CorporateActionRate45.mmTaxRelatedRate,
+					CorporateActionRate45.mmTaxOnIncome, RateAndAmountFormat21Choice.mmRate, CorporateActionRate44.mmWithholdingTaxRate, CorporateActionRate44.mmTaxRelatedRate, CorporateActionRate44.mmTaxOnIncome,
+					CorporateActionRate48.mmFiscalStamp, CorporateActionRate49.mmFiscalStamp, RateDetails14.mmTaxRelatedRate, RateDetails14.mmWithholdingTaxRate, RateDetails14.mmFiscalStamp, RateDetails14.mmTaxOnIncome,
+					RateDetails14.mmTaxOnProfits, RateDetails14.mmTaxReclaimRate, CorporateActionRate60.mmWithholdingTaxRate, CorporateActionRate60.mmTaxRelatedRate, CorporateActionRate60.mmTaxOnIncome, CorporateActionRate58.mmFiscalStamp,
+					RateDetails18.mmTaxRelatedRate, RateDetails18.mmWithholdingTaxRate, RateDetails18.mmFiscalStamp, RateDetails18.mmTaxOnIncome, RateDetails18.mmTaxOnProfits, RateDetails18.mmTaxReclaimRate,
+					RateTypeAndPercentageRate3.mmRate, CorporateActionRate64.mmTaxRelatedRate, CorporateActionRate64.mmWithholdingTaxRate, RateAndAmountFormat35Choice.mmRate, RateAndAmountFormat32Choice.mmRate, RateDetails21.mmFiscalStamp,
+					RateDetails21.mmTaxRelatedRate, RateDetails21.mmWithholdingTaxRate, RateDetails21.mmTaxOnIncome, RateDetails21.mmTaxOnProfits, RateDetails21.mmTaxReclaimRate, CorporateActionRate65.mmFiscalStamp,
+					CorporateActionRate57.mmWithholdingTaxRate, CorporateActionRate57.mmTaxRelatedRate, CorporateActionRate57.mmTaxOnIncome, RateAndAmountFormat40Choice.mmRate, RateTypeAndPercentageRate8.mmRate,
+					RateDetails23.mmFiscalStamp, RateDetails23.mmWithholdingTaxRate, RateDetails23.mmSecondLevelTax, RateDetails23.mmTaxOnIncome, RateDetails23.mmTaxOnProfits, RateDetails23.mmTaxReclaimRate,
+					CorporateActionRate68.mmWithholdingTaxRate, CorporateActionRate68.mmSecondLevelTax, CorporateActionRate68.mmTaxOnIncome, CorporateActionRate69.mmFiscalStamp, CorporateActionRate70.mmWithholdingTaxRate,
+					CorporateActionRate70.mmSecondLevelTax, CorporateActionRate67.mmWithholdingTaxRate, CorporateActionRate67.mmSecondLevelTax, CorporateActionRate67.mmTaxOnIncome, RateDetails22.mmWithholdingTaxRate,
+					RateDetails22.mmSecondLevelTax, RateDetails22.mmFiscalStamp, RateDetails22.mmTaxOnIncome, RateDetails22.mmTaxOnProfits, RateDetails22.mmTaxReclaimRate, CorporateActionRate72.mmFiscalStamp, TaxReporting1.mmTaxRate,
+					TreasuryProfile1.mmRate, CorporateActionRate74.mmWithholdingTaxRate, CorporateActionRate74.mmSecondLevelTax, CorporateActionRate79.mmWithholdingTaxRate, CorporateActionRate79.mmSecondLevelTax,
+					CorporateActionRate79.mmTaxOnIncome, RateDetails24.mmFiscalStamp, RateDetails24.mmWithholdingTaxRate, RateDetails24.mmSecondLevelTax, RateDetails24.mmTaxOnIncome, RateDetails24.mmTaxOnProfits,
+					RateDetails24.mmTaxReclaimRate, RateTypeAndPercentageRate9.mmRate, RateDetails25.mmWithholdingTaxRate, RateDetails25.mmSecondLevelTax, RateDetails25.mmFiscalStamp, RateDetails25.mmTaxOnIncome,
+					RateDetails25.mmTaxOnProfits, RateDetails25.mmTaxReclaimRate, CorporateActionRate76.mmWithholdingTaxRate, CorporateActionRate76.mmSecondLevelTax, CorporateActionRate76.mmTaxOnIncome, CorporateActionRate77.mmFiscalStamp,
+					RateAndAmountFormat45Choice.mmRate, CorporateActionRate75.mmFiscalStamp, SettlementSubTotalCalculatedTax2.mmCalculatedRate, Tax32.mmInformativeRate, Tax31.mmAppliedRate, TaxAmountOrRate4Choice.mmRate,
+					TaxReporting2.mmTaxRate, RateDetails26.mmWithholdingTaxRate, RateDetails26.mmSecondLevelTax, RateDetails26.mmFiscalStamp, RateDetails26.mmTaxOnIncome, RateDetails26.mmTaxOnProfits, RateDetails26.mmTaxReclaimRate,
+					CorporateActionRate82.mmWithholdingTaxRate, CorporateActionRate82.mmSecondLevelTax, CorporateActionRate80.mmWithholdingTaxRate, CorporateActionRate80.mmSecondLevelTax, CorporateActionRate80.mmTaxOnIncome,
+					RateDetails27.mmFiscalStamp, RateDetails27.mmWithholdingTaxRate, RateDetails27.mmSecondLevelTax, RateDetails27.mmTaxOnIncome, RateDetails27.mmTaxOnProfits, RateDetails27.mmTaxReclaimRate,
+					CorporateActionRate81.mmWithholdingTaxRate, CorporateActionRate81.mmSecondLevelTax, CorporateActionRate81.mmTaxOnIncome, CorporateActionRate83.mmWithholdingTaxRate, CorporateActionRate83.mmSecondLevelTax,
+					CorporateActionRate83.mmTaxOnIncome, CorporateActionRate84.mmWithholdingTaxRate, CorporateActionRate84.mmSecondLevelTax, CorporateActionRate84.mmTaxOnIncome, CorporateActionRate85.mmWithholdingTaxRate,
+					CorporateActionRate85.mmSecondLevelTax, RateDetails28.mmWithholdingTaxRate, RateDetails28.mmSecondLevelTax, RateDetails28.mmFiscalStamp, RateDetails28.mmTaxOnIncome, RateDetails28.mmTaxOnProfits,
+					RateDetails28.mmTaxReclaimRate, RateDetails30.mmFiscalStamp, RateDetails30.mmWithholdingTaxRate, RateDetails30.mmSecondLevelTax, RateDetails30.mmTaxOnIncome, RateDetails30.mmTaxOnProfits, RateDetails30.mmTaxReclaimRate);
 			elementContext_lazy = () -> Tax.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Rate";
 			definition = "Rate used for calculation of the tax.";
 			maxOccurs = 1;
@@ -1946,13 +1881,13 @@ public class Tax {
 		{
 			elementContext_lazy = () -> Tax.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TaxableParty";
 			definition = "Party which is taxable at a specific location";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.Party.mmTaxationConditions;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Party.mmObject();
 		}
 	};
@@ -1995,13 +1930,13 @@ public class Tax {
 		{
 			elementContext_lazy = () -> Tax.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TaxRefundValueCalculation";
 			definition = "Net asset value calculation for which tax refund information is provided.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.NetAssetValueCalculation.mmTaxRefund;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.NetAssetValueCalculation.mmObject();
 		}
 	};
@@ -2121,20 +2056,14 @@ public class Tax {
 	 */
 	public static final MMBusinessAttribute mmBasis = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Tax3.mmBasis, com.tools20022.repository.msg.Tax15.mmBasis, com.tools20022.repository.msg.Tax15.mmExtendedBasis,
-					com.tools20022.repository.choice.ChargeTaxBasisType1Choice.mmCode, com.tools20022.repository.choice.ChargeTaxBasisType1Choice.mmProprietary, com.tools20022.repository.msg.Order16.mmChargeTaxBasisType,
-					com.tools20022.repository.msg.Order14.mmChargeTaxBasisType, com.tools20022.repository.msg.TaxationBasis1.mmStructured, com.tools20022.repository.msg.TaxationBasis1.mmAdditionalInformation,
-					com.tools20022.repository.msg.TaxCalculationInformation1.mmBasis, com.tools20022.repository.msg.TaxCalculationInformation5.mmBasis, com.tools20022.repository.msg.TaxCalculationInformation5.mmExtendedBasis,
-					com.tools20022.repository.msg.TaxCalculationInformation3.mmBasis, com.tools20022.repository.msg.TaxCalculationInformation6.mmBasis, com.tools20022.repository.msg.TaxCalculationInformation6.mmExtendedBasis,
-					com.tools20022.repository.choice.TaxCalculationBasisType1Choice.mmBasis, com.tools20022.repository.choice.TaxCalculationBasisType1Choice.mmProprietary,
-					com.tools20022.repository.msg.TaxCalculationInformation7.mmTaxCalculationBasis, com.tools20022.repository.msg.Tax21.mmBasis, com.tools20022.repository.choice.TaxBasis1Choice.mmCode,
-					com.tools20022.repository.choice.TaxBasis1Choice.mmProprietary, com.tools20022.repository.msg.TaxCalculationInformation8.mmBasis, com.tools20022.repository.msg.Order17.mmChargeTaxBasisType,
-					com.tools20022.repository.msg.Order18.mmChargeTaxBasisType, com.tools20022.repository.msg.Tax25.mmBasis, com.tools20022.repository.choice.ChargeBasisType1Choice.mmCode,
-					com.tools20022.repository.choice.ChargeBasisType1Choice.mmProprietary, com.tools20022.repository.msg.Tax28.mmBasis, com.tools20022.repository.msg.TaxCalculationInformation9.mmBasis,
-					com.tools20022.repository.msg.TaxCalculationInformation10.mmBasis);
+			derivation_lazy = () -> Arrays.asList(Tax3.mmBasis, Tax15.mmBasis, Tax15.mmExtendedBasis, ChargeTaxBasisType1Choice.mmCode, ChargeTaxBasisType1Choice.mmProprietary, Order16.mmChargeTaxBasisType, Order14.mmChargeTaxBasisType,
+					TaxationBasis1.mmStructured, TaxationBasis1.mmAdditionalInformation, TaxCalculationInformation1.mmBasis, TaxCalculationInformation5.mmBasis, TaxCalculationInformation5.mmExtendedBasis,
+					TaxCalculationInformation3.mmBasis, TaxCalculationInformation6.mmBasis, TaxCalculationInformation6.mmExtendedBasis, TaxCalculationBasisType1Choice.mmBasis, TaxCalculationBasisType1Choice.mmProprietary,
+					TaxCalculationInformation7.mmTaxCalculationBasis, Tax21.mmBasis, TaxBasis1Choice.mmCode, TaxBasis1Choice.mmProprietary, TaxCalculationInformation8.mmBasis, Order17.mmChargeTaxBasisType, Order18.mmChargeTaxBasisType,
+					Tax25.mmBasis, ChargeBasisType1Choice.mmCode, ChargeBasisType1Choice.mmProprietary, Tax28.mmBasis, TaxCalculationInformation9.mmBasis, TaxCalculationInformation10.mmBasis);
 			elementContext_lazy = () -> Tax.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Basis";
 			definition = "Basis used to determine the capital gain or loss, eg, the purchase price.";
 			maxOccurs = 1;
@@ -2178,13 +2107,13 @@ public class Tax {
 		{
 			elementContext_lazy = () -> Tax.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SecuritiesTransfer";
 			definition = "Transfer process for which a tax is specified.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesTransfer.mmTransferTax;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SecuritiesTransfer.mmObject();
 		}
 	};
@@ -2249,13 +2178,11 @@ public class Tax {
 	 */
 	public static final MMBusinessAttribute mmTaxRateType = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.RateType10Choice.mmCode, com.tools20022.repository.choice.RateType10Choice.mmProprietary, com.tools20022.repository.choice.RateType11Choice.mmCode,
-					com.tools20022.repository.choice.RateType11Choice.mmProprietary, com.tools20022.repository.choice.RateType12Choice.mmCode, com.tools20022.repository.choice.RateType12Choice.mmProprietary,
-					com.tools20022.repository.choice.RateType14Choice.mmCode, com.tools20022.repository.choice.RateType14Choice.mmProprietary, com.tools20022.repository.choice.RateType37Choice.mmCode,
-					com.tools20022.repository.choice.RateType37Choice.mmProprietary, com.tools20022.repository.choice.RateType48Choice.mmCode, com.tools20022.repository.choice.RateType48Choice.mmProprietary);
+			derivation_lazy = () -> Arrays.asList(RateType10Choice.mmCode, RateType10Choice.mmProprietary, RateType11Choice.mmCode, RateType11Choice.mmProprietary, RateType12Choice.mmCode, RateType12Choice.mmProprietary,
+					RateType14Choice.mmCode, RateType14Choice.mmProprietary, RateType37Choice.mmCode, RateType37Choice.mmProprietary, RateType48Choice.mmCode, RateType48Choice.mmProprietary);
 			elementContext_lazy = () -> Tax.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TaxRateType";
 			definition = "Specifies the type of tax rate.";
 			maxOccurs = 1;
@@ -2314,16 +2241,15 @@ public class Tax {
 	 */
 	public static final MMBusinessAssociationEnd mmTaxAccount = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Account8Choice.mmTaxAccount, com.tools20022.repository.choice.Account9Choice.mmTaxAccount, com.tools20022.repository.msg.TaxReporting1.mmCashAccountDetails,
-					com.tools20022.repository.msg.TaxReporting2.mmCashAccountDetails);
+			derivation_lazy = () -> Arrays.asList(Account8Choice.mmTaxAccount, Account9Choice.mmTaxAccount, TaxReporting1.mmCashAccountDetails, TaxReporting2.mmCashAccountDetails);
 			elementContext_lazy = () -> Tax.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TaxAccount";
 			definition = "Account to be used for taxes.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.CashAccount.mmTax;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.CashAccount.mmObject();
 		}
 	};
@@ -2421,20 +2347,15 @@ public class Tax {
 	 */
 	public static final MMBusinessAttribute mmTaxationConditions = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionNarrative4.mmTaxationConditions, com.tools20022.repository.msg.CorporateActionNarrative14.mmTaxationConditions,
-					com.tools20022.repository.msg.CorporateActionNarrative5.mmTaxationConditions, com.tools20022.repository.msg.CorporateActionNarrative6.mmTaxationConditions,
-					com.tools20022.repository.msg.CorporateActionNarrative15.mmTaxationConditions, com.tools20022.repository.msg.CorporateActionNarrative16.mmTaxationConditions,
-					com.tools20022.repository.msg.CorporateActionNarrative20.mmTaxationConditions, com.tools20022.repository.msg.CorporateActionNarrative22.mmTaxationConditions,
-					com.tools20022.repository.msg.CorporateActionNarrative11.mmTaxationConditions, com.tools20022.repository.msg.CorporateActionNarrative17.mmTaxationConditions,
-					com.tools20022.repository.msg.CorporateActionNarrative1.mmTaxationConditions, com.tools20022.repository.msg.CorporateActionNarrative2.mmTaxationConditions,
-					com.tools20022.repository.msg.CorporateActionNarrative27.mmTaxationConditions, com.tools20022.repository.msg.CorporateActionNarrative31.mmTaxationConditions,
-					com.tools20022.repository.msg.CorporateActionNarrative28.mmTaxationConditions, com.tools20022.repository.msg.CorporateActionNarrative29.mmTaxationConditions,
-					com.tools20022.repository.msg.CorporateActionNarrative35.mmTaxationConditions, com.tools20022.repository.msg.CorporateActionNarrative37.mmTaxationConditions,
-					com.tools20022.repository.msg.CorporateActionNarrative41.mmTaxationConditions, com.tools20022.repository.msg.CorporateActionNarrative36.mmTaxationConditions,
-					com.tools20022.repository.msg.SettlementSubTotalCalculatedTax2.mmExemptionReasonText);
+			derivation_lazy = () -> Arrays.asList(CorporateActionNarrative4.mmTaxationConditions, CorporateActionNarrative14.mmTaxationConditions, CorporateActionNarrative5.mmTaxationConditions,
+					CorporateActionNarrative6.mmTaxationConditions, CorporateActionNarrative15.mmTaxationConditions, CorporateActionNarrative16.mmTaxationConditions, CorporateActionNarrative20.mmTaxationConditions,
+					CorporateActionNarrative22.mmTaxationConditions, CorporateActionNarrative11.mmTaxationConditions, CorporateActionNarrative17.mmTaxationConditions, CorporateActionNarrative1.mmTaxationConditions,
+					CorporateActionNarrative2.mmTaxationConditions, CorporateActionNarrative27.mmTaxationConditions, CorporateActionNarrative31.mmTaxationConditions, CorporateActionNarrative28.mmTaxationConditions,
+					CorporateActionNarrative29.mmTaxationConditions, CorporateActionNarrative35.mmTaxationConditions, CorporateActionNarrative37.mmTaxationConditions, CorporateActionNarrative41.mmTaxationConditions,
+					CorporateActionNarrative36.mmTaxationConditions, SettlementSubTotalCalculatedTax2.mmExemptionReasonText);
 			elementContext_lazy = () -> Tax.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TaxationConditions";
 			definition = "Specifies other taxation conditions.";
 			maxOccurs = 1;
@@ -2478,13 +2399,13 @@ public class Tax {
 		{
 			elementContext_lazy = () -> Tax.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Adjustment";
 			definition = "Specifies the adjustments subject to a tax.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.Adjustment.mmTax;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Adjustment.mmObject();
 		}
 	};
@@ -2523,13 +2444,13 @@ public class Tax {
 		{
 			elementContext_lazy = () -> Tax.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Interest";
 			definition = "Interest for which a tax is specified.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.Interest.mmInterestTax;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Interest.mmObject();
 		}
 	};
@@ -2594,12 +2515,11 @@ public class Tax {
 	 */
 	public static final MMBusinessAttribute mmIdentification = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TaxCharges1.mmIdentification, com.tools20022.repository.msg.TaxInformation2.mmTaxReferenceNumber, com.tools20022.repository.msg.TaxCharges2.mmIdentification,
-					com.tools20022.repository.msg.TaxInformation3.mmReferenceNumber, com.tools20022.repository.msg.SettlementSubTotalCalculatedTax1.mmCategoryCode, com.tools20022.repository.msg.TaxIdentification1.mmTaxIdentificationNumber,
-					com.tools20022.repository.msg.Garnishment1.mmReferenceNumber, com.tools20022.repository.msg.TaxInformation4.mmReferenceNumber, com.tools20022.repository.msg.TaxIdentification2.mmIdentification);
+			derivation_lazy = () -> Arrays.asList(TaxCharges1.mmIdentification, TaxInformation2.mmTaxReferenceNumber, TaxCharges2.mmIdentification, TaxInformation3.mmReferenceNumber, SettlementSubTotalCalculatedTax1.mmCategoryCode,
+					TaxIdentification1.mmTaxIdentificationNumber, Garnishment1.mmReferenceNumber, TaxInformation4.mmReferenceNumber, TaxIdentification2.mmIdentification);
 			elementContext_lazy = () -> Tax.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Identification";
 			definition = "Reference used to identify the nature of tax levied, such as Value Added Tax (VAT).";
 			maxOccurs = 1;
@@ -2642,13 +2562,13 @@ public class Tax {
 		{
 			elementContext_lazy = () -> Tax.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedPaymentSettlement";
 			definition = "Payment to which the tax applies.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.Payment.mmTaxOnPayment;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Payment.mmObject();
 		}
 	};
@@ -2732,17 +2652,13 @@ public class Tax {
 	 */
 	public static final MMBusinessAttribute mmTaxableBaseAmount = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays
-					.asList(com.tools20022.repository.msg.TaxType.mmTaxableBaseAmount, com.tools20022.repository.msg.TaxInformation2.mmTotalTaxableBaseAmount, com.tools20022.repository.msg.TaxAmount1.mmTaxableBaseAmount,
-							com.tools20022.repository.msg.TaxInformation3.mmTotalTaxableBaseAmount, com.tools20022.repository.msg.TaxCalculationInformation3.mmTaxableAmount,
-							com.tools20022.repository.msg.TaxCalculationInformation6.mmTaxableAmount, com.tools20022.repository.msg.InvoiceTotals1.mmTotalTaxableAmount,
-							com.tools20022.repository.msg.SettlementMonetarySummation1.mmTaxBasisAmount, com.tools20022.repository.msg.LineItemMonetarySummation1.mmTaxBasisTotalAmount,
-							com.tools20022.repository.msg.TaxCalculationInformation7.mmTaxableAmount, com.tools20022.repository.msg.ServiceItemTotals1.mmTotalTaxableAmount, com.tools20022.repository.msg.InvoiceTotals2.mmTotalTaxableAmount,
-							com.tools20022.repository.msg.ServiceCategoryTotals1.mmTotalTaxableAmount, com.tools20022.repository.msg.TaxCalculationInformation8.mmTaxableAmount,
-							com.tools20022.repository.msg.TaxInformation4.mmTotalTaxableBaseAmount, com.tools20022.repository.msg.TaxCalculationInformation10.mmTaxableAmount);
+			derivation_lazy = () -> Arrays.asList(TaxType.mmTaxableBaseAmount, TaxInformation2.mmTotalTaxableBaseAmount, TaxAmount1.mmTaxableBaseAmount, TaxInformation3.mmTotalTaxableBaseAmount, TaxCalculationInformation3.mmTaxableAmount,
+					TaxCalculationInformation6.mmTaxableAmount, InvoiceTotals1.mmTotalTaxableAmount, SettlementMonetarySummation1.mmTaxBasisAmount, LineItemMonetarySummation1.mmTaxBasisTotalAmount,
+					TaxCalculationInformation7.mmTaxableAmount, ServiceItemTotals1.mmTotalTaxableAmount, InvoiceTotals2.mmTotalTaxableAmount, ServiceCategoryTotals1.mmTotalTaxableAmount, TaxCalculationInformation8.mmTaxableAmount,
+					TaxInformation4.mmTotalTaxableBaseAmount, TaxCalculationInformation10.mmTaxableAmount);
 			elementContext_lazy = () -> Tax.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TaxableBaseAmount";
 			definition = "Amount of money on which the tax is based.";
 			maxOccurs = 1;
@@ -2814,13 +2730,11 @@ public class Tax {
 	 */
 	public static final MMBusinessAttribute mmTaxDate = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TaxInformation2.mmTaxDate, com.tools20022.repository.msg.TaxInformation3.mmDate, com.tools20022.repository.msg.SettlementTax1.mmTaxPointDate,
-					com.tools20022.repository.msg.LineItemTax1.mmTaxPointDate, com.tools20022.repository.msg.BillingTaxRegion1.mmPointDate, com.tools20022.repository.msg.TaxInformation4.mmDate,
-					com.tools20022.repository.msg.InvestmentAccount49.mmFiscalYear, com.tools20022.repository.msg.InvestmentAccount51.mmFiscalYear, com.tools20022.repository.msg.InvestmentAccount50.mmFiscalYear,
-					com.tools20022.repository.msg.InvestmentAccount61.mmFiscalYear, com.tools20022.repository.msg.InvestmentAccount63.mmFiscalYear, com.tools20022.repository.msg.InvestmentAccount62.mmFiscalYear);
+			derivation_lazy = () -> Arrays.asList(TaxInformation2.mmTaxDate, TaxInformation3.mmDate, SettlementTax1.mmTaxPointDate, LineItemTax1.mmTaxPointDate, BillingTaxRegion1.mmPointDate, TaxInformation4.mmDate,
+					InvestmentAccount49.mmFiscalYear, InvestmentAccount51.mmFiscalYear, InvestmentAccount50.mmFiscalYear, InvestmentAccount61.mmFiscalYear, InvestmentAccount63.mmFiscalYear, InvestmentAccount62.mmFiscalYear);
 			elementContext_lazy = () -> Tax.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TaxDate";
 			definition = "Date by which tax is due.";
 			maxOccurs = 1;
@@ -2866,10 +2780,10 @@ public class Tax {
 	 */
 	public static final MMBusinessAttribute mmCertificateIdentification = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TaxDetails.mmCertificateIdentification, com.tools20022.repository.msg.TaxRecord1.mmCertificateIdentification);
+			derivation_lazy = () -> Arrays.asList(TaxDetails.mmCertificateIdentification, TaxRecord1.mmCertificateIdentification);
 			elementContext_lazy = () -> Tax.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CertificateIdentification";
 			definition = "Document issued by taxing authority identifying the tax payer.";
 			maxOccurs = 1;
@@ -2932,12 +2846,11 @@ public class Tax {
 	 */
 	public static final MMBusinessAttribute mmAdministrationZone = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TaxInformation3.mmAdministrationZone, com.tools20022.repository.msg.AccountTax1.mmRegion, com.tools20022.repository.msg.ServiceTaxDesignation1.mmRegion,
-					com.tools20022.repository.msg.BillingTaxRegion1.mmRegionName, com.tools20022.repository.msg.BillingStatement1.mmTaxRegion, com.tools20022.repository.msg.TaxInformation4.mmAdministrationZone,
-					com.tools20022.repository.msg.TaxIdentification2.mmIssuer, com.tools20022.repository.msg.BillingStatement2.mmTaxRegion);
+			derivation_lazy = () -> Arrays.asList(TaxInformation3.mmAdministrationZone, AccountTax1.mmRegion, ServiceTaxDesignation1.mmRegion, BillingTaxRegion1.mmRegionName, BillingStatement1.mmTaxRegion,
+					TaxInformation4.mmAdministrationZone, TaxIdentification2.mmIssuer, BillingStatement2.mmTaxRegion);
 			elementContext_lazy = () -> Tax.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AdministrationZone";
 			definition = "Territorial part of a country to which the tax payment is related.";
 			maxOccurs = 1;
@@ -2982,10 +2895,10 @@ public class Tax {
 	 */
 	public static final MMBusinessAttribute mmMethod = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TaxInformation3.mmMethod, com.tools20022.repository.msg.TaxInformation4.mmMethod);
+			derivation_lazy = () -> Arrays.asList(TaxInformation3.mmMethod, TaxInformation4.mmMethod);
 			elementContext_lazy = () -> Tax.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Method";
 			definition = "Method used to indicate the underlying business or how the tax is paid.";
 			maxOccurs = 1;
@@ -3053,17 +2966,16 @@ public class Tax {
 	 */
 	public static final MMBusinessAssociationEnd mmRecord = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TaxInformation3.mmRecord, com.tools20022.repository.msg.BillingMethod1.mmTaxIdentification, com.tools20022.repository.msg.BillingMethod2.mmTaxIdentification,
-					com.tools20022.repository.msg.BillingMethod3.mmTaxIdentification, com.tools20022.repository.msg.BillingService1.mmTaxDesignation, com.tools20022.repository.msg.TaxCalculation1.mmTaxIdentification,
-					com.tools20022.repository.msg.TaxInformation4.mmRecord, com.tools20022.repository.msg.BillingService2.mmTaxDesignation);
+			derivation_lazy = () -> Arrays.asList(TaxInformation3.mmRecord, BillingMethod1.mmTaxIdentification, BillingMethod2.mmTaxIdentification, BillingMethod3.mmTaxIdentification, BillingService1.mmTaxDesignation,
+					TaxCalculation1.mmTaxIdentification, TaxInformation4.mmRecord, BillingService2.mmTaxDesignation);
 			elementContext_lazy = () -> Tax.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Record";
 			definition = "Record of tax details.";
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.TaxRecord.mmTax;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.TaxRecord.mmObject();
 		}
 	};
@@ -3101,13 +3013,13 @@ public class Tax {
 		{
 			elementContext_lazy = () -> Tax.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Product";
 			definition = "Product on which a tax is applied.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.Product.mmTax;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Product.mmObject();
 		}
 	};
@@ -3153,15 +3065,15 @@ public class Tax {
 	 */
 	public static final MMBusinessAssociationEnd mmCurrencyExchange = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TradeSettlement1.mmTaxCurrencyExchange);
+			derivation_lazy = () -> Arrays.asList(TradeSettlement1.mmTaxCurrencyExchange);
 			elementContext_lazy = () -> Tax.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CurrencyExchange";
 			definition = "Currency exchange applicable to a tax";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmTax;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmObject();
 		}
 	};
@@ -3205,11 +3117,10 @@ public class Tax {
 	 */
 	public static final MMBusinessAttribute mmCurrency = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashAccountCharacteristics1.mmHostCurrencyCode, com.tools20022.repository.msg.TaxCalculation1.mmHostCurrency,
-					com.tools20022.repository.msg.CashAccountCharacteristics2.mmHostCurrencyCode);
+			derivation_lazy = () -> Arrays.asList(CashAccountCharacteristics1.mmHostCurrencyCode, TaxCalculation1.mmHostCurrency, CashAccountCharacteristics2.mmHostCurrencyCode);
 			elementContext_lazy = () -> Tax.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Currency";
 			definition = "Currency in which the tax must be settled.";
 			maxOccurs = 1;
@@ -3262,15 +3173,15 @@ public class Tax {
 	 */
 	public static final MMBusinessAssociationEnd mmPartyRole = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BillingTaxRegion1.mmSendingFinancialInstitution);
+			derivation_lazy = () -> Arrays.asList(BillingTaxRegion1.mmSendingFinancialInstitution);
 			elementContext_lazy = () -> Tax.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PartyRole";
 			definition = "Specifies each role linked to a tax and played by a party in that context.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.TaxPartyRole.mmTax;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.TaxPartyRole.mmObject();
 		}
 	};
@@ -3303,7 +3214,7 @@ public class Tax {
 		{
 			elementContext_lazy = () -> Tax.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TaxDeduction";
 			definition = "Amount of tax that have been previously deducted.";
 			maxOccurs = 1;
@@ -3347,13 +3258,13 @@ public class Tax {
 		{
 			elementContext_lazy = () -> Tax.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedCorporateActionDistribution";
 			definition = "Distribution process for which a tax is specified.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.Distribution.mmDistributionTax;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Distribution.mmObject();
 		}
 	};
@@ -3385,7 +3296,7 @@ public class Tax {
 		{
 			elementContext_lazy = () -> Tax.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CalculationDate";
 			definition = "Date on which the tax is calculated.";
 			maxOccurs = 1;
@@ -3427,12 +3338,12 @@ public class Tax {
 		{
 			elementContext_lazy = () -> Tax.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Dividend";
 			definition = "Dividend for which a tax is specified.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.Dividend.mmTax;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Dividend.mmObject();
 		}
 	};
@@ -3500,14 +3411,12 @@ public class Tax {
 	 */
 	public static final MMBusinessAttribute mmWithholdingTaxType = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RateTypeAndPercentageRate1.mmRateType, com.tools20022.repository.choice.RateType28Choice.mmCode,
-					com.tools20022.repository.choice.RateType28Choice.mmProprietary, com.tools20022.repository.choice.RateType30Choice.mmCode, com.tools20022.repository.choice.RateType30Choice.mmProprietary,
-					com.tools20022.repository.msg.RateTypeAndPercentageRate3.mmRateType, com.tools20022.repository.msg.RateTypeAndPercentageRate8.mmRateType, com.tools20022.repository.choice.RateType42Choice.mmCode,
-					com.tools20022.repository.choice.RateType42Choice.mmProprietary, com.tools20022.repository.msg.RateTypeAndPercentageRate9.mmRateType, com.tools20022.repository.choice.RateType46Choice.mmCode,
-					com.tools20022.repository.choice.RateType46Choice.mmProprietary);
+			derivation_lazy = () -> Arrays.asList(RateTypeAndPercentageRate1.mmRateType, RateType28Choice.mmCode, RateType28Choice.mmProprietary, RateType30Choice.mmCode, RateType30Choice.mmProprietary,
+					RateTypeAndPercentageRate3.mmRateType, RateTypeAndPercentageRate8.mmRateType, RateType42Choice.mmCode, RateType42Choice.mmProprietary, RateTypeAndPercentageRate9.mmRateType, RateType46Choice.mmCode,
+					RateType46Choice.mmProprietary);
 			elementContext_lazy = () -> Tax.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "WithholdingTaxType";
 			definition = "Type of withholding tax rate.";
 			maxOccurs = 1;
@@ -3552,13 +3461,13 @@ public class Tax {
 		{
 			elementContext_lazy = () -> Tax.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorporateActionEvent";
 			definition = "Event for which a transaction tax is specified.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmTransactionTax;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmObject();
 		}
 	};
@@ -3600,10 +3509,10 @@ public class Tax {
 	 */
 	public static final MMBusinessAttribute mmTaxIdentificationType = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TaxIdentification2.mmTaxIdentificationType, com.tools20022.repository.choice.TaxIdentificationType1Choice.mmCode);
+			derivation_lazy = () -> Arrays.asList(TaxIdentification2.mmTaxIdentificationType, TaxIdentificationType1Choice.mmCode);
 			elementContext_lazy = () -> Tax.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TaxIdentificationType";
 			definition = "Type of tax identification number or identifier.";
 			maxOccurs = 1;
@@ -3615,8 +3524,8 @@ public class Tax {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Tax";
 				definition = "Amount of money due to the government or tax authority, according to various pre-defined parameters such as thresholds or income.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Country.mmTax, com.tools20022.repository.entity.Dividend.mmTax, com.tools20022.repository.entity.NetAssetValueCalculation.mmTaxLiability,
@@ -3625,36 +3534,22 @@ public class Tax {
 						com.tools20022.repository.entity.SecuritiesTransfer.mmTransferTax, com.tools20022.repository.entity.Interest.mmInterestTax, com.tools20022.repository.entity.CurrencyExchange.mmTax,
 						com.tools20022.repository.entity.CorporateActionEvent.mmTransactionTax, com.tools20022.repository.entity.TaxPartyRole.mmTax, com.tools20022.repository.entity.TaxRecord.mmTax,
 						com.tools20022.repository.entity.Distribution.mmDistributionTax);
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionRate4.mmAdditionalTax, com.tools20022.repository.msg.CorporateActionRate10.mmAdditionalTax,
-						com.tools20022.repository.msg.CorporateActionRate20.mmAdditionalTax, com.tools20022.repository.msg.CorporateActionRate22.mmAdditionalTax, com.tools20022.repository.msg.CorporateActionRate26.mmAdditionalTax,
-						com.tools20022.repository.msg.CorporateActionRate31.mmAdditionalTax, com.tools20022.repository.msg.CorporateActionRate38.mmAdditionalTax, com.tools20022.repository.msg.CorporateActionRate39.mmAdditionalTax,
-						com.tools20022.repository.msg.CorporateActionRate5.mmAdditionalTax, com.tools20022.repository.msg.CorporateActionRate12.mmAdditionalTax, com.tools20022.repository.msg.CorporateActionRate15.mmAdditionalTax,
-						com.tools20022.repository.msg.CorporateActionRate18.mmAdditionalTax, com.tools20022.repository.msg.CorporateActionRate25.mmAdditionalTax, com.tools20022.repository.msg.CorporateActionRate30.mmAdditionalTax,
-						com.tools20022.repository.msg.CorporateActionRate37.mmAdditionalTax, com.tools20022.repository.msg.CorporateActionRate40.mmAdditionalTax, com.tools20022.repository.msg.CorporateActionRate36.mmAdditionalTax,
-						com.tools20022.repository.msg.CorporateActionRate42.mmAdditionalTax, com.tools20022.repository.msg.TaxDetails.mmTaxType, com.tools20022.repository.msg.TaxInformation2.mmTaxTypeInformation,
-						com.tools20022.repository.msg.CorporateActionRate2.mmGermanLocalTax1, com.tools20022.repository.msg.CorporateActionRate2.mmGermanLocalTax2, com.tools20022.repository.msg.CorporateActionRate2.mmGermanLocalTax3,
-						com.tools20022.repository.msg.CorporateActionRate2.mmGermanLocalTax4, com.tools20022.repository.msg.CorporateActionRate2.mmAdditionalTax, com.tools20022.repository.msg.TaxParty3.mmTaxExemptionReason,
-						com.tools20022.repository.msg.BillingServicesTax1.mmRate, com.tools20022.repository.msg.BillingServicesTax2.mmRate, com.tools20022.repository.choice.BillingMethod1Choice.mmMethodA,
-						com.tools20022.repository.choice.BillingMethod1Choice.mmMethodB, com.tools20022.repository.choice.BillingMethod1Choice.mmMethodD, com.tools20022.repository.msg.BillingServicesTax3.mmRate,
-						com.tools20022.repository.msg.BillingMethod4.mmTaxCalculation, com.tools20022.repository.msg.BillingTaxRegion1.mmMethodC, com.tools20022.repository.msg.Tax18.mmTaxType, com.tools20022.repository.msg.Tax19.mmTaxType,
-						com.tools20022.repository.msg.CorporateActionRate46.mmAdditionalTax, com.tools20022.repository.msg.CorporateActionRate45.mmAdditionalTax, com.tools20022.repository.msg.CorporateActionRate44.mmAdditionalTax,
-						com.tools20022.repository.msg.Tax23.mmAmountOrPercentage, com.tools20022.repository.msg.CorporateActionRate60.mmAdditionalTax, com.tools20022.repository.msg.CorporateActionRate64.mmAdditionalTax,
-						com.tools20022.repository.msg.CorporateActionRate57.mmAdditionalTax, com.tools20022.repository.msg.CorporateActionRate68.mmAdditionalTax, com.tools20022.repository.msg.CorporateActionRate70.mmAdditionalTax,
-						com.tools20022.repository.msg.CorporateActionRate67.mmAdditionalTax, com.tools20022.repository.msg.CorporateActionRate74.mmAdditionalTax, com.tools20022.repository.msg.CorporateActionRate79.mmAdditionalTax,
-						com.tools20022.repository.msg.CorporateActionRate76.mmAdditionalTax, com.tools20022.repository.msg.TradeSettlement2.mmSubTotalCalculatedTax, com.tools20022.repository.msg.CorporateActionRate82.mmAdditionalTax,
-						com.tools20022.repository.msg.CorporateActionRate80.mmAdditionalTax, com.tools20022.repository.msg.CorporateActionRate81.mmAdditionalTax, com.tools20022.repository.msg.CorporateActionRate83.mmAdditionalTax,
-						com.tools20022.repository.msg.CorporateActionRate84.mmAdditionalTax, com.tools20022.repository.msg.CorporateActionRate85.mmAdditionalTax);
+				derivationElement_lazy = () -> Arrays.asList(CorporateActionRate4.mmAdditionalTax, CorporateActionRate10.mmAdditionalTax, CorporateActionRate20.mmAdditionalTax, CorporateActionRate22.mmAdditionalTax,
+						CorporateActionRate26.mmAdditionalTax, CorporateActionRate31.mmAdditionalTax, CorporateActionRate38.mmAdditionalTax, CorporateActionRate39.mmAdditionalTax, CorporateActionRate5.mmAdditionalTax,
+						CorporateActionRate12.mmAdditionalTax, CorporateActionRate15.mmAdditionalTax, CorporateActionRate18.mmAdditionalTax, CorporateActionRate25.mmAdditionalTax, CorporateActionRate30.mmAdditionalTax,
+						CorporateActionRate37.mmAdditionalTax, CorporateActionRate40.mmAdditionalTax, CorporateActionRate36.mmAdditionalTax, CorporateActionRate42.mmAdditionalTax, TaxDetails.mmTaxType, TaxInformation2.mmTaxTypeInformation,
+						CorporateActionRate2.mmGermanLocalTax1, CorporateActionRate2.mmGermanLocalTax2, CorporateActionRate2.mmGermanLocalTax3, CorporateActionRate2.mmGermanLocalTax4, CorporateActionRate2.mmAdditionalTax,
+						TaxParty3.mmTaxExemptionReason, BillingServicesTax1.mmRate, BillingServicesTax2.mmRate, BillingMethod1Choice.mmMethodA, BillingMethod1Choice.mmMethodB, BillingMethod1Choice.mmMethodD, BillingServicesTax3.mmRate,
+						BillingMethod4.mmTaxCalculation, BillingTaxRegion1.mmMethodC, Tax18.mmTaxType, Tax19.mmTaxType, CorporateActionRate46.mmAdditionalTax, CorporateActionRate45.mmAdditionalTax, CorporateActionRate44.mmAdditionalTax,
+						Tax23.mmAmountOrPercentage, CorporateActionRate60.mmAdditionalTax, CorporateActionRate64.mmAdditionalTax, CorporateActionRate57.mmAdditionalTax, CorporateActionRate68.mmAdditionalTax,
+						CorporateActionRate70.mmAdditionalTax, CorporateActionRate67.mmAdditionalTax, CorporateActionRate74.mmAdditionalTax, CorporateActionRate79.mmAdditionalTax, CorporateActionRate76.mmAdditionalTax,
+						TradeSettlement2.mmSubTotalCalculatedTax, CorporateActionRate82.mmAdditionalTax, CorporateActionRate80.mmAdditionalTax, CorporateActionRate81.mmAdditionalTax, CorporateActionRate83.mmAdditionalTax,
+						CorporateActionRate84.mmAdditionalTax, CorporateActionRate85.mmAdditionalTax);
 				subType_lazy = () -> Arrays.asList(SecuritiesTax.mmObject());
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Tax.mmExemptionReason, com.tools20022.repository.entity.Tax.mmCountry, com.tools20022.repository.entity.Tax.mmTaxLiabilityValueCalculation,
-						com.tools20022.repository.entity.Tax.mmType, com.tools20022.repository.entity.Tax.mmAmount, com.tools20022.repository.entity.Tax.mmRate, com.tools20022.repository.entity.Tax.mmTaxableParty,
-						com.tools20022.repository.entity.Tax.mmTaxRefundValueCalculation, com.tools20022.repository.entity.Tax.mmBasis, com.tools20022.repository.entity.Tax.mmSecuritiesTransfer,
-						com.tools20022.repository.entity.Tax.mmTaxRateType, com.tools20022.repository.entity.Tax.mmTaxAccount, com.tools20022.repository.entity.Tax.mmTaxationConditions, com.tools20022.repository.entity.Tax.mmAdjustment,
-						com.tools20022.repository.entity.Tax.mmInterest, com.tools20022.repository.entity.Tax.mmIdentification, com.tools20022.repository.entity.Tax.mmRelatedPaymentSettlement,
-						com.tools20022.repository.entity.Tax.mmTaxableBaseAmount, com.tools20022.repository.entity.Tax.mmTaxDate, com.tools20022.repository.entity.Tax.mmCertificateIdentification,
-						com.tools20022.repository.entity.Tax.mmAdministrationZone, com.tools20022.repository.entity.Tax.mmMethod, com.tools20022.repository.entity.Tax.mmRecord, com.tools20022.repository.entity.Tax.mmProduct,
-						com.tools20022.repository.entity.Tax.mmCurrencyExchange, com.tools20022.repository.entity.Tax.mmCurrency, com.tools20022.repository.entity.Tax.mmPartyRole, com.tools20022.repository.entity.Tax.mmTaxDeduction,
-						com.tools20022.repository.entity.Tax.mmRelatedCorporateActionDistribution, com.tools20022.repository.entity.Tax.mmCalculationDate, com.tools20022.repository.entity.Tax.mmDividend,
-						com.tools20022.repository.entity.Tax.mmWithholdingTaxType, com.tools20022.repository.entity.Tax.mmCorporateActionEvent, com.tools20022.repository.entity.Tax.mmTaxIdentificationType);
+				element_lazy = () -> Arrays.asList(Tax.mmExemptionReason, Tax.mmCountry, Tax.mmTaxLiabilityValueCalculation, Tax.mmType, Tax.mmAmount, Tax.mmRate, Tax.mmTaxableParty, Tax.mmTaxRefundValueCalculation, Tax.mmBasis,
+						Tax.mmSecuritiesTransfer, Tax.mmTaxRateType, Tax.mmTaxAccount, Tax.mmTaxationConditions, Tax.mmAdjustment, Tax.mmInterest, Tax.mmIdentification, Tax.mmRelatedPaymentSettlement, Tax.mmTaxableBaseAmount,
+						Tax.mmTaxDate, Tax.mmCertificateIdentification, Tax.mmAdministrationZone, Tax.mmMethod, Tax.mmRecord, Tax.mmProduct, Tax.mmCurrencyExchange, Tax.mmCurrency, Tax.mmPartyRole, Tax.mmTaxDeduction,
+						Tax.mmRelatedCorporateActionDistribution, Tax.mmCalculationDate, Tax.mmDividend, Tax.mmWithholdingTaxType, Tax.mmCorporateActionEvent, Tax.mmTaxIdentificationType);
 				derivationComponent_lazy = () -> Arrays.asList(TaxExemptionReason1Choice.mmObject(), TaxTypeFormat2Choice.mmObject(), TaxExemptionReasonFormatChoice.mmObject(), Tax3.mmObject(), RateType10Choice.mmObject(),
 						RateType11Choice.mmObject(), RateType12Choice.mmObject(), RateType14Choice.mmObject(), TaxCharges1.mmObject(), TaxType.mmObject(), TaxDetails.mmObject(), TaxInformation2.mmObject(), TaxCharges2.mmObject(),
 						TaxRecordDetails1.mmObject(), TaxAmount1.mmObject(), TaxInformation3.mmObject(), TaxAmountType1Choice.mmObject(), TaxAmountAndType1.mmObject(), TaxationBasis1.mmObject(), TaxExemptionReason1.mmObject(),

@@ -19,7 +19,9 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.Commodity;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.OtherC10CommodityDeliverable2;
 import com.tools20022.repository.msg.OtherC10CommodityNonDeliverable2;
 import java.util.Arrays;
@@ -98,11 +100,11 @@ public class AssetClassCommodityOtherC102Choice {
 	 */
 	public static final MMMessageAssociationEnd mmDeliverable = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Commodity.mmSubProduct;
+			businessElementTrace_lazy = () -> Commodity.mmSubProduct;
 			componentContext_lazy = () -> AssetClassCommodityOtherC102Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Dlvrbl";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Deliverable";
 			definition = "Other C10 deliverable commodity derivative.";
 			maxOccurs = 1;
@@ -146,11 +148,11 @@ public class AssetClassCommodityOtherC102Choice {
 	 */
 	public static final MMMessageAssociationEnd mmNonDeliverable = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Commodity.mmSubProduct;
+			businessElementTrace_lazy = () -> Commodity.mmSubProduct;
 			componentContext_lazy = () -> AssetClassCommodityOtherC102Choice.mmObject();
 			isDerived = false;
 			xmlTag = "NonDlvrbl";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonDeliverable";
 			definition = "Other C10 non-deliverable commodity derivative.";
 			maxOccurs = 1;
@@ -163,10 +165,10 @@ public class AssetClassCommodityOtherC102Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AssetClassCommodityOtherC102Choice.mmDeliverable, com.tools20022.repository.choice.AssetClassCommodityOtherC102Choice.mmNonDeliverable);
+				messageElement_lazy = () -> Arrays.asList(AssetClassCommodityOtherC102Choice.mmDeliverable, AssetClassCommodityOtherC102Choice.mmNonDeliverable);
 				trace_lazy = () -> Commodity.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AssetClassCommodityOtherC102Choice";
 				definition = "Defines commodity attributes of a derivative where the type is other C10.";
 			}

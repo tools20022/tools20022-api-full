@@ -19,9 +19,11 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.DeliveringSettlementParty;
 import com.tools20022.repository.entity.ReceivingSettlementParty;
 import com.tools20022.repository.entity.SecuritiesSettlementPartyRole;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.DeliveringPartiesAndAccount15;
 import com.tools20022.repository.msg.ReceivingPartiesAndAccount15;
 import java.util.Arrays;
@@ -135,11 +137,11 @@ public class SettlementParties5Choice {
 			componentContext_lazy = () -> SettlementParties5Choice.mmObject();
 			isDerived = false;
 			xmlTag = "DlvrgSttlmPties";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeliveringSettlementParties";
 			definition = "Chain of parties involved in the settlement of a transaction, including receipts and deliveries, book transfers, treasury deals, or other activities, resulting in the movement of a security or amount of money from one account to another.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SettlementParties7Choice.mmDeliveringSettlementParties);
-			previousVersion_lazy = () -> com.tools20022.repository.choice.SettlementParties3Choice.mmDeliveringSettlementParties;
+			nextVersions_lazy = () -> Arrays.asList(SettlementParties7Choice.mmDeliveringSettlementParties);
+			previousVersion_lazy = () -> SettlementParties3Choice.mmDeliveringSettlementParties;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -203,11 +205,11 @@ public class SettlementParties5Choice {
 			componentContext_lazy = () -> SettlementParties5Choice.mmObject();
 			isDerived = false;
 			xmlTag = "RcvgSttlmPties";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceivingSettlementParties";
 			definition = "Chain of parties involved in the settlement of a transaction, including receipts and deliveries, book transfers, treasury deals, or other activities, resulting in the movement of a security or amount of money from one account to another.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SettlementParties7Choice.mmReceivingSettlementParties);
-			previousVersion_lazy = () -> com.tools20022.repository.choice.SettlementParties3Choice.mmReceivingSettlementParties;
+			nextVersions_lazy = () -> Arrays.asList(SettlementParties7Choice.mmReceivingSettlementParties);
+			previousVersion_lazy = () -> SettlementParties3Choice.mmReceivingSettlementParties;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -218,10 +220,10 @@ public class SettlementParties5Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SettlementParties5Choice.mmDeliveringSettlementParties, com.tools20022.repository.choice.SettlementParties5Choice.mmReceivingSettlementParties);
+				messageElement_lazy = () -> Arrays.asList(SettlementParties5Choice.mmDeliveringSettlementParties, SettlementParties5Choice.mmReceivingSettlementParties);
 				trace_lazy = () -> SecuritiesSettlementPartyRole.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SettlementParties5Choice";
 				definition = "Provides details on either the delivering or receiving parties.";
 				nextVersions_lazy = () -> Arrays.asList(SettlementParties7Choice.mmObject());

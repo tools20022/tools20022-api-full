@@ -20,6 +20,7 @@ package com.tools20022.repository.area.seev;
 import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.SecuritiesEventsLatestVersion;
 import com.tools20022.repository.msg.CorporateActionInformation2;
 import com.tools20022.repository.msg.CorporateActionNotificationAdvice1;
@@ -44,6 +45,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code seev.010.001.01}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.SecuritiesEventsLatestVersion
@@ -81,9 +85,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * mmCorporateActionNotificationDetails}</li>
  * </ul>
  * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code seev.010.001.01}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -129,7 +130,7 @@ public class AgentCANotificationCancellationRequestV01 {
 	public static final MMMessageBuildingBlock mmIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Identification assigned by the Sender to unambiguously identify the cancellation request.";
 			maxOccurs = 1;
@@ -167,7 +168,7 @@ public class AgentCANotificationCancellationRequestV01 {
 	public static final MMMessageBuildingBlock mmNotificationCancellationTypeAndLinkage = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "NtfctnCxlTpAndLkg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotificationCancellationTypeAndLinkage";
 			definition = "Provides information about the type of  notification cancellation request and linked message.";
 			maxOccurs = 1;
@@ -202,7 +203,7 @@ public class AgentCANotificationCancellationRequestV01 {
 	public static final MMMessageBuildingBlock mmCorporateActionGeneralInformation = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CorpActnGnlInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorporateActionGeneralInformation";
 			definition = "General information about the corporate action event.";
 			maxOccurs = 1;
@@ -238,7 +239,7 @@ public class AgentCANotificationCancellationRequestV01 {
 	public static final MMMessageBuildingBlock mmCorporateActionNotificationDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CorpActnNtfctnDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorporateActionNotificationDetails";
 			definition = "Detailed information of the notification advice to be cancelled.";
 			maxOccurs = 1;
@@ -250,17 +251,15 @@ public class AgentCANotificationCancellationRequestV01 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AgentCANotificationCancellationRequestV01";
 				definition = "Scope\r\nThis message is sent by an issuer (or its agent) to a CSD to request the cancellation of a notification advice message.\r\nUsage\r\nWhen this message is used to request the cancellation of a notification advice message, the function of the message must be cancellation.\r\nWhen this message is used to request the withdrawal of a Corporate Action event or option, then the function of the message must be withdrawal.\r\nIn both cases, the building block notification advice identification must be present to link this cancellation request to the notification advice that was previously sent.";
 				messageSet_lazy = () -> Arrays.asList(IssuersAgentsCommunicationISOLatestversion.mmObject());
 				rootElement = "Document";
 				xmlTag = "AgtCANtfctnCxlReq";
 				businessArea_lazy = () -> SecuritiesEventsLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.AgentCANotificationCancellationRequestV01.mmIdentification,
-						com.tools20022.repository.area.seev.AgentCANotificationCancellationRequestV01.mmNotificationCancellationTypeAndLinkage,
-						com.tools20022.repository.area.seev.AgentCANotificationCancellationRequestV01.mmCorporateActionGeneralInformation,
-						com.tools20022.repository.area.seev.AgentCANotificationCancellationRequestV01.mmCorporateActionNotificationDetails);
+				messageBuildingBlock_lazy = () -> Arrays.asList(AgentCANotificationCancellationRequestV01.mmIdentification, AgentCANotificationCancellationRequestV01.mmNotificationCancellationTypeAndLinkage,
+						AgentCANotificationCancellationRequestV01.mmCorporateActionGeneralInformation, AgentCANotificationCancellationRequestV01.mmCorporateActionNotificationDetails);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "seev";

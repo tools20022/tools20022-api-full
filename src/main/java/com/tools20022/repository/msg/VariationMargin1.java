@@ -19,10 +19,13 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.RoundingMethod1Code;
 import com.tools20022.repository.codeset.ThresholdType1Code;
 import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
+import com.tools20022.repository.entity.ExposureTerm;
 import com.tools20022.repository.entity.VariationMarginTerm;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -115,11 +118,11 @@ public class VariationMargin1 {
 	 */
 	public static final MMMessageAttribute mmThresholdAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.VariationMarginTerm.mmThresholdAmount;
+			businessElementTrace_lazy = () -> VariationMarginTerm.mmThresholdAmount;
 			componentContext_lazy = () -> VariationMargin1.mmObject();
 			isDerived = false;
 			xmlTag = "ThrshldAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ThresholdAmount";
 			definition = "Amount of unsecured exposure a counterparty will accept before issuing a margin call in the base currency.";
 			maxOccurs = 1;
@@ -164,11 +167,11 @@ public class VariationMargin1 {
 	 */
 	public static final MMMessageAttribute mmThresholdType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.VariationMarginTerm.mmThresholdType;
+			businessElementTrace_lazy = () -> VariationMarginTerm.mmThresholdType;
 			componentContext_lazy = () -> VariationMargin1.mmObject();
 			isDerived = false;
 			xmlTag = "ThrshldTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ThresholdType";
 			definition = "Specifies if the threshold amount is secured or unsecured.";
 			maxOccurs = 1;
@@ -216,11 +219,11 @@ public class VariationMargin1 {
 	 */
 	public static final MMMessageAttribute mmMinimumTransferAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ExposureTerm.mmMinimumTransferAmount;
+			businessElementTrace_lazy = () -> ExposureTerm.mmMinimumTransferAmount;
 			componentContext_lazy = () -> VariationMargin1.mmObject();
 			isDerived = false;
 			xmlTag = "MinTrfAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MinimumTransferAmount";
 			definition = "Minimum amount to pay/receive as specified in the agreement in the base currency (to avoid the need to transfer an inconveniently small amount of variation margin).";
 			maxOccurs = 1;
@@ -267,11 +270,11 @@ public class VariationMargin1 {
 	 */
 	public static final MMMessageAttribute mmRoundingAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ExposureTerm.mmRoundingAmount;
+			businessElementTrace_lazy = () -> ExposureTerm.mmRoundingAmount;
 			componentContext_lazy = () -> VariationMargin1.mmObject();
 			isDerived = false;
 			xmlTag = "RndgAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RoundingAmount";
 			definition = "Amount specified to avoid the need to transfer uneven amounts of collateral.";
 			maxOccurs = 1;
@@ -319,11 +322,11 @@ public class VariationMargin1 {
 	 */
 	public static final MMMessageAttribute mmRoundingMethod = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ExposureTerm.mmRoundingMethod;
+			businessElementTrace_lazy = () -> ExposureTerm.mmRoundingMethod;
 			componentContext_lazy = () -> VariationMargin1.mmObject();
 			isDerived = false;
 			xmlTag = "RndgMtd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RoundingMethod";
 			definition = "Defines how the rounding amount was applied in the calculation. For example, should the amount of collateral required be rounded up, down, to the closer integral multiple specified or not rounded.";
 			maxOccurs = 1;
@@ -335,11 +338,10 @@ public class VariationMargin1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.VariationMargin1.mmThresholdAmount, com.tools20022.repository.msg.VariationMargin1.mmThresholdType,
-						com.tools20022.repository.msg.VariationMargin1.mmMinimumTransferAmount, com.tools20022.repository.msg.VariationMargin1.mmRoundingAmount, com.tools20022.repository.msg.VariationMargin1.mmRoundingMethod);
+				messageElement_lazy = () -> Arrays.asList(VariationMargin1.mmThresholdAmount, VariationMargin1.mmThresholdType, VariationMargin1.mmMinimumTransferAmount, VariationMargin1.mmRoundingAmount, VariationMargin1.mmRoundingMethod);
 				trace_lazy = () -> VariationMarginTerm.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "VariationMargin1";
 				definition = "Elements used to calculate the collateral margin call for the variation margin.";
 			}

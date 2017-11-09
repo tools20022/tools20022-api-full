@@ -20,9 +20,12 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.tsmt.ErrorReportV03;
 import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.Number;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -109,7 +112,7 @@ public class ValidationResult3 {
 			componentContext_lazy = () -> ValidationResult3.mmObject();
 			isDerived = false;
 			xmlTag = "SeqNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SequenceNumber";
 			definition = "Sequential number assigned to the error.";
 			maxOccurs = 1;
@@ -153,7 +156,7 @@ public class ValidationResult3 {
 			componentContext_lazy = () -> ValidationResult3.mmObject();
 			isDerived = false;
 			xmlTag = "RuleId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RuleIdentification";
 			definition = "Coded identification of the rule that is violated by the rejected message.";
 			maxOccurs = 1;
@@ -194,7 +197,7 @@ public class ValidationResult3 {
 			componentContext_lazy = () -> ValidationResult3.mmObject();
 			isDerived = false;
 			xmlTag = "RuleDesc";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RuleDescription";
 			definition = "Detailed description of the rule.";
 			maxOccurs = 1;
@@ -234,7 +237,7 @@ public class ValidationResult3 {
 			componentContext_lazy = () -> ValidationResult3.mmObject();
 			isDerived = false;
 			xmlTag = "Elmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Element";
 			definition = "Description of the elements that violated the rule.";
 			minOccurs = 0;
@@ -246,11 +249,10 @@ public class ValidationResult3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ValidationResult3.mmSequenceNumber, com.tools20022.repository.msg.ValidationResult3.mmRuleIdentification,
-						com.tools20022.repository.msg.ValidationResult3.mmRuleDescription, com.tools20022.repository.msg.ValidationResult3.mmElement);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.ErrorReportV03.mmErrorDescription);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(ValidationResult3.mmSequenceNumber, ValidationResult3.mmRuleIdentification, ValidationResult3.mmRuleDescription, ValidationResult3.mmElement);
+				messageBuildingBlock_lazy = () -> Arrays.asList(ErrorReportV03.mmErrorDescription);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ValidationResult3";
 				definition = "Describes the error that is the cause of the rejection.";
 			}

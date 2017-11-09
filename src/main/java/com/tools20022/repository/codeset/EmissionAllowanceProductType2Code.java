@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.AssetClassDetailedSubProductTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -83,7 +85,7 @@ public class EmissionAllowanceProductType2Code extends AssetClassDetailedSubProd
 	 */
 	public static final MMCode mmCER = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CER";
 			owner_lazy = () -> EmissionAllowanceProductType2Code.mmObject();
 		}
@@ -106,7 +108,7 @@ public class EmissionAllowanceProductType2Code extends AssetClassDetailedSubProd
 	 */
 	public static final MMCode mmERU = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ERU";
 			owner_lazy = () -> EmissionAllowanceProductType2Code.mmObject();
 		}
@@ -129,7 +131,7 @@ public class EmissionAllowanceProductType2Code extends AssetClassDetailedSubProd
 	 */
 	public static final MMCode mmEUA = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EUA";
 			owner_lazy = () -> EmissionAllowanceProductType2Code.mmObject();
 		}
@@ -152,7 +154,7 @@ public class EmissionAllowanceProductType2Code extends AssetClassDetailedSubProd
 	 */
 	public static final MMCode mmEUAA = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EUAA";
 			owner_lazy = () -> EmissionAllowanceProductType2Code.mmObject();
 		}
@@ -161,12 +163,11 @@ public class EmissionAllowanceProductType2Code extends AssetClassDetailedSubProd
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "EmissionAllowanceProductType2Code";
 				definition = "Specifies an mission allowance type.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.EmissionAllowanceProductType2Code.mmCER, com.tools20022.repository.codeset.EmissionAllowanceProductType2Code.mmERU,
-						com.tools20022.repository.codeset.EmissionAllowanceProductType2Code.mmEUA, com.tools20022.repository.codeset.EmissionAllowanceProductType2Code.mmEUAA);
+				code_lazy = () -> Arrays.asList(EmissionAllowanceProductType2Code.mmCER, EmissionAllowanceProductType2Code.mmERU, EmissionAllowanceProductType2Code.mmEUA, EmissionAllowanceProductType2Code.mmEUAA);
 				trace_lazy = () -> AssetClassDetailedSubProductTypeCode.mmObject();
 			}
 		});

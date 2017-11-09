@@ -19,7 +19,11 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.seev.CorporateActionEventProcessingStatusAdvice002V06;
 import com.tools20022.repository.entity.CorporateActionStatus;
+import com.tools20022.repository.entity.StatusReason;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.NoSpecifiedReason1;
 import com.tools20022.repository.msg.ProprietaryStatusAndReason7;
 import java.util.Arrays;
@@ -120,7 +124,7 @@ public class EventProcessingStatus4Choice {
 			componentContext_lazy = () -> EventProcessingStatus4Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Cmplt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Complete";
 			definition = "Specifies that a corporate action event processing has been completed.";
 			maxOccurs = 1;
@@ -171,7 +175,7 @@ public class EventProcessingStatus4Choice {
 			componentContext_lazy = () -> EventProcessingStatus4Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Rcncld";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reconciled";
 			definition = "Corporate action event processing specifying that the funds paid have been reconciled with the funds received from the agent (meaning that there is no more risk of payment to be reversed).";
 			maxOccurs = 1;
@@ -218,11 +222,11 @@ public class EventProcessingStatus4Choice {
 	 */
 	public static final MMMessageAssociationEnd mmPending = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmPendingReason;
+			businessElementTrace_lazy = () -> StatusReason.mmPendingReason;
 			componentContext_lazy = () -> EventProcessingStatus4Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Pdg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Pending";
 			definition = "Specifies that a corporate action event processing has not been fully completed and is therefore pending.";
 			maxOccurs = 1;
@@ -264,7 +268,7 @@ public class EventProcessingStatus4Choice {
 			componentContext_lazy = () -> EventProcessingStatus4Choice.mmObject();
 			isDerived = false;
 			xmlTag = "PrtrySts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProprietaryStatus";
 			definition = "Proprietary status related to the event processing.";
 			maxOccurs = 1;
@@ -277,12 +281,11 @@ public class EventProcessingStatus4Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.EventProcessingStatus4Choice.mmComplete, com.tools20022.repository.choice.EventProcessingStatus4Choice.mmReconciled,
-						com.tools20022.repository.choice.EventProcessingStatus4Choice.mmPending, com.tools20022.repository.choice.EventProcessingStatus4Choice.mmProprietaryStatus);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.CorporateActionEventProcessingStatusAdvice002V06.mmEventProcessingStatus);
+				messageElement_lazy = () -> Arrays.asList(EventProcessingStatus4Choice.mmComplete, EventProcessingStatus4Choice.mmReconciled, EventProcessingStatus4Choice.mmPending, EventProcessingStatus4Choice.mmProprietaryStatus);
+				messageBuildingBlock_lazy = () -> Arrays.asList(CorporateActionEventProcessingStatusAdvice002V06.mmEventProcessingStatus);
 				trace_lazy = () -> CorporateActionStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "EventProcessingStatus4Choice";
 				definition = "Provides information about the status of a corporate action or the status of a payment.";
 			}

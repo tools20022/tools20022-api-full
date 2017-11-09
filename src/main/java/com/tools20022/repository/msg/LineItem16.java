@@ -20,12 +20,13 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.CurrencyAndAmount;
 import com.tools20022.repository.datatype.DecimalNumber;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Max35Text;
-import com.tools20022.repository.entity.CommercialTrade;
-import com.tools20022.repository.entity.ShipTo;
+import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -182,14 +183,14 @@ public class LineItem16 {
 	 */
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.LineItem.mmIdentification;
+			businessElementTrace_lazy = () -> LineItem.mmIdentification;
 			componentContext_lazy = () -> LineItem16.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "The unique identification of this invoice line item.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.LineItem10.mmIdentification;
+			previousVersion_lazy = () -> LineItem10.mmIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -236,14 +237,14 @@ public class LineItem16 {
 	 */
 	public static final MMMessageAssociationEnd mmTradeProduct = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.LineItem.mmInvoicedProduct;
+			businessElementTrace_lazy = () -> LineItem.mmInvoicedProduct;
 			componentContext_lazy = () -> LineItem16.mmObject();
 			isDerived = false;
 			xmlTag = "TradPdct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeProduct";
 			definition = "Something that is produced and sold as the result of an industrial process.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.LineItem10.mmTradeProduct;
+			previousVersion_lazy = () -> LineItem10.mmTradeProduct;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -291,10 +292,10 @@ public class LineItem16 {
 			componentContext_lazy = () -> LineItem16.mmObject();
 			isDerived = false;
 			xmlTag = "BuyrOrdrId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BuyerOrderIdentification";
 			definition = "Purchase order reference assigned by the buyer related to the provision of products and/or services for this line item.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.LineItem10.mmBuyerOrderIdentification;
+			previousVersion_lazy = () -> LineItem10.mmBuyerOrderIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.DocumentIdentification23.mmObject();
@@ -341,10 +342,10 @@ public class LineItem16 {
 			componentContext_lazy = () -> LineItem16.mmObject();
 			isDerived = false;
 			xmlTag = "CtrctId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ContractIdentification";
 			definition = "Contract reference related to the provision of products and/or services for this line item.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.LineItem10.mmContractIdentification;
+			previousVersion_lazy = () -> LineItem10.mmContractIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.DocumentIdentification22.mmObject();
@@ -391,14 +392,14 @@ public class LineItem16 {
 	 */
 	public static final MMMessageAssociationEnd mmPurchaseAccountingAccount = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CommercialTrade.mmPurchaseAccount;
+			businessElementTrace_lazy = () -> CommercialTrade.mmPurchaseAccount;
 			componentContext_lazy = () -> LineItem16.mmObject();
 			isDerived = false;
 			xmlTag = "PurchsAcctgAcct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PurchaseAccountingAccount";
 			definition = "Specific purchase account for recording debits and credits for accounting purposes.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.LineItem10.mmPurchaseAccountingAccount;
+			previousVersion_lazy = () -> LineItem10.mmPurchaseAccountingAccount;
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.AccountingAccount1.mmObject();
@@ -444,14 +445,14 @@ public class LineItem16 {
 	 */
 	public static final MMMessageAttribute mmNetPrice = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Product.mmNetPrice;
+			businessElementTrace_lazy = () -> Product.mmNetPrice;
 			componentContext_lazy = () -> LineItem16.mmObject();
 			isDerived = false;
 			xmlTag = "NetPric";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetPrice";
 			definition = "Value of the price, eg, as a currency and value.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.LineItem10.mmNetPrice;
+			previousVersion_lazy = () -> LineItem10.mmNetPrice;
 			minOccurs = 0;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
@@ -498,14 +499,14 @@ public class LineItem16 {
 	 */
 	public static final MMMessageAttribute mmNetPriceQuantity = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Product.mmQuantity;
+			businessElementTrace_lazy = () -> Product.mmQuantity;
 			componentContext_lazy = () -> LineItem16.mmObject();
 			isDerived = false;
 			xmlTag = "NetPricQty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetPriceQuantity";
 			definition = "Quantity and conversion factor on which the net price is based for this line item product and/or service.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.LineItem10.mmNetPriceQuantity;
+			previousVersion_lazy = () -> LineItem10.mmNetPriceQuantity;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.Quantity9.mmObject();
@@ -551,14 +552,14 @@ public class LineItem16 {
 	 */
 	public static final MMMessageAttribute mmNetPriceAllowanceCharge = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Price.mmPriceAdjustment;
+			businessElementTrace_lazy = () -> Price.mmPriceAdjustment;
 			componentContext_lazy = () -> LineItem16.mmObject();
 			isDerived = false;
 			xmlTag = "NetPricAllwncChrg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetPriceAllowanceCharge";
 			definition = "Allowance or charge applied to the net price.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.LineItem10.mmNetPriceAllowanceCharge;
+			previousVersion_lazy = () -> LineItem10.mmNetPriceAllowanceCharge;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.LineItemAllowanceCharge2.mmObject();
 		}
@@ -602,14 +603,14 @@ public class LineItem16 {
 	 */
 	public static final MMMessageAttribute mmNetWeight = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.LineItem.mmNetWeight;
+			businessElementTrace_lazy = () -> LineItem.mmNetWeight;
 			componentContext_lazy = () -> LineItem16.mmObject();
 			isDerived = false;
 			xmlTag = "NetWght";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetWeight";
 			definition = "Net weight of the product.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.LineItem10.mmNetWeight;
+			previousVersion_lazy = () -> LineItem10.mmNetWeight;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.Quantity10.mmObject();
@@ -655,14 +656,14 @@ public class LineItem16 {
 	 */
 	public static final MMMessageAttribute mmGrossPrice = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Product.mmGrossPrice;
+			businessElementTrace_lazy = () -> Product.mmGrossPrice;
 			componentContext_lazy = () -> LineItem16.mmObject();
 			isDerived = false;
 			xmlTag = "GrssPric";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GrossPrice";
 			definition = "Gross price of the product and/or service.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.LineItem10.mmGrossPrice;
+			previousVersion_lazy = () -> LineItem10.mmGrossPrice;
 			minOccurs = 0;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
@@ -709,14 +710,14 @@ public class LineItem16 {
 	 */
 	public static final MMMessageAttribute mmGrossPriceQuantity = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Product.mmQuantity;
+			businessElementTrace_lazy = () -> Product.mmQuantity;
 			componentContext_lazy = () -> LineItem16.mmObject();
 			isDerived = false;
 			xmlTag = "GrssPricQty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GrossPriceQuantity";
 			definition = "Quantity and conversion factor on which the gross price is based for this line item product and/or service.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.LineItem10.mmGrossPriceQuantity;
+			previousVersion_lazy = () -> LineItem10.mmGrossPriceQuantity;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.Quantity9.mmObject();
@@ -761,14 +762,14 @@ public class LineItem16 {
 	 */
 	public static final MMMessageAttribute mmGrossWeight = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Product.mmQuantity;
+			businessElementTrace_lazy = () -> Product.mmQuantity;
 			componentContext_lazy = () -> LineItem16.mmObject();
 			isDerived = false;
 			xmlTag = "GrssWght";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GrossWeight";
 			definition = "Gross weight of the product.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.LineItem10.mmGrossWeight;
+			previousVersion_lazy = () -> LineItem10.mmGrossWeight;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.Quantity10.mmObject();
@@ -813,14 +814,14 @@ public class LineItem16 {
 	 */
 	public static final MMMessageAttribute mmLogisticsCharge = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.LineItem.mmLogisticsCharge;
+			businessElementTrace_lazy = () -> LineItem.mmLogisticsCharge;
 			componentContext_lazy = () -> LineItem16.mmObject();
 			isDerived = false;
 			xmlTag = "LogstcsChrg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LogisticsCharge";
 			definition = "Logistics service charge for this line item.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.LineItem10.mmLogisticsCharge;
+			previousVersion_lazy = () -> LineItem10.mmLogisticsCharge;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.ChargesDetails4.mmObject();
 		}
@@ -866,14 +867,14 @@ public class LineItem16 {
 	 */
 	public static final MMMessageAssociationEnd mmTax = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Product.mmTax;
+			businessElementTrace_lazy = () -> Product.mmTax;
 			componentContext_lazy = () -> LineItem16.mmObject();
 			isDerived = false;
 			xmlTag = "Tax";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Tax";
 			definition = "Amount of money due to the government or tax authority, according to various pre-defined parameters such as thresholds or income.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.LineItem10.mmTax;
+			previousVersion_lazy = () -> LineItem10.mmTax;
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.LineItemTax1.mmObject();
@@ -918,14 +919,14 @@ public class LineItem16 {
 	 */
 	public static final MMMessageAssociationEnd mmAllowanceCharge = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.LineItem.mmFinancialAdjustment;
+			businessElementTrace_lazy = () -> LineItem.mmFinancialAdjustment;
 			componentContext_lazy = () -> LineItem16.mmObject();
 			isDerived = false;
 			xmlTag = "AllwncChrg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AllowanceCharge";
 			definition = "Allowance or charge specified for this line item.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.LineItem10.mmAllowanceCharge;
+			previousVersion_lazy = () -> LineItem10.mmAllowanceCharge;
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.LineItemAllowanceCharge2.mmObject();
@@ -973,14 +974,14 @@ public class LineItem16 {
 	 */
 	public static final MMMessageAttribute mmFinancialAdjustment = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.LineItem.mmFinancialAdjustment;
+			businessElementTrace_lazy = () -> LineItem.mmFinancialAdjustment;
 			componentContext_lazy = () -> LineItem16.mmObject();
 			isDerived = false;
 			xmlTag = "FinAdjstmnt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialAdjustment";
 			definition = "Modification on the value of goods and / or services. For example: rebate, discount, surcharge";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.LineItem10.mmFinancialAdjustment;
+			previousVersion_lazy = () -> LineItem10.mmFinancialAdjustment;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.Adjustment6.mmObject();
 		}
@@ -1024,14 +1025,14 @@ public class LineItem16 {
 	 */
 	public static final MMMessageAttribute mmBilledQuantity = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.LineItem.mmBilledQuantity;
+			businessElementTrace_lazy = () -> LineItem.mmBilledQuantity;
 			componentContext_lazy = () -> LineItem16.mmObject();
 			isDerived = false;
 			xmlTag = "BlldQty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BilledQuantity";
 			definition = "Quantity billed for this line item.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.LineItem10.mmBilledQuantity;
+			previousVersion_lazy = () -> LineItem10.mmBilledQuantity;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.Quantity10.mmObject();
@@ -1077,14 +1078,14 @@ public class LineItem16 {
 	 */
 	public static final MMMessageAttribute mmPackageQuantity = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Packaging.mmQuantity;
+			businessElementTrace_lazy = () -> Packaging.mmQuantity;
 			componentContext_lazy = () -> LineItem16.mmObject();
 			isDerived = false;
 			xmlTag = "PackgQty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PackageQuantity";
 			definition = "Number of product packages delivered.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.LineItem10.mmPackageQuantity;
+			previousVersion_lazy = () -> LineItem10.mmPackageQuantity;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
@@ -1132,14 +1133,14 @@ public class LineItem16 {
 	 */
 	public static final MMMessageAttribute mmPerPackageUnitQuantity = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Packaging.mmPerPackageUnitQuantity;
+			businessElementTrace_lazy = () -> Packaging.mmPerPackageUnitQuantity;
 			componentContext_lazy = () -> LineItem16.mmObject();
 			isDerived = false;
 			xmlTag = "PerPackgUnitQty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PerPackageUnitQuantity";
 			definition = "Number of units per package in this line item for a supply chain trade delivery.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.LineItem10.mmPerPackageUnitQuantity;
+			previousVersion_lazy = () -> LineItem10.mmPerPackageUnitQuantity;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.Quantity10.mmObject();
@@ -1182,14 +1183,14 @@ public class LineItem16 {
 	 */
 	public static final MMMessageAssociationEnd mmPackaging = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Transport.mmPackaging;
+			businessElementTrace_lazy = () -> Transport.mmPackaging;
 			componentContext_lazy = () -> LineItem16.mmObject();
 			isDerived = false;
 			xmlTag = "Packgng";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Packaging";
 			definition = "Physical packaging of the product.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.LineItem10.mmPackaging;
+			previousVersion_lazy = () -> LineItem10.mmPackaging;
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.Packaging1.mmObject();
@@ -1234,14 +1235,14 @@ public class LineItem16 {
 	 */
 	public static final MMMessageAttribute mmChargeFreeQuantity = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.LineItem.mmChargeFreeQuantity;
+			businessElementTrace_lazy = () -> LineItem.mmChargeFreeQuantity;
 			componentContext_lazy = () -> LineItem16.mmObject();
 			isDerived = false;
 			xmlTag = "ChrgFreeQty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChargeFreeQuantity";
 			definition = "Quantity that is free of charge for this line item.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.LineItem10.mmChargeFreeQuantity;
+			previousVersion_lazy = () -> LineItem10.mmChargeFreeQuantity;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.Quantity10.mmObject();
@@ -1290,14 +1291,14 @@ public class LineItem16 {
 	 */
 	public static final MMMessageAttribute mmMeasureQuantityStart = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ProductQuantity.mmMeasureQuantityStart;
+			businessElementTrace_lazy = () -> ProductQuantity.mmMeasureQuantityStart;
 			componentContext_lazy = () -> LineItem16.mmObject();
 			isDerived = false;
 			xmlTag = "MeasrQtyStart";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MeasureQuantityStart";
 			definition = "Quantity value on which the quantity measurement started for a line item. For instance the start amount of a meter reading for an electricity supplier.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.LineItem10.mmMeasureQuantityStart;
+			previousVersion_lazy = () -> LineItem10.mmMeasureQuantityStart;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.Quantity10.mmObject();
@@ -1346,14 +1347,14 @@ public class LineItem16 {
 	 */
 	public static final MMMessageAttribute mmMeasureQuantityEnd = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ProductQuantity.mmMeasureQuantityEnd;
+			businessElementTrace_lazy = () -> ProductQuantity.mmMeasureQuantityEnd;
 			componentContext_lazy = () -> LineItem16.mmObject();
 			isDerived = false;
 			xmlTag = "MeasrQtyEnd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MeasureQuantityEnd";
 			definition = "Quantity value on which the quantity measurement ended for a line item. For instance the end amount of a meter reading for an electricity supplier.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.LineItem10.mmMeasureQuantityEnd;
+			previousVersion_lazy = () -> LineItem10.mmMeasureQuantityEnd;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.Quantity10.mmObject();
@@ -1399,14 +1400,14 @@ public class LineItem16 {
 	 */
 	public static final MMMessageAttribute mmMeasureDateTimeStart = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.LineItem.mmMeasureDateTimeStart;
+			businessElementTrace_lazy = () -> LineItem.mmMeasureDateTimeStart;
 			componentContext_lazy = () -> LineItem16.mmObject();
 			isDerived = false;
 			xmlTag = "MeasrDtTmStart";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MeasureDateTimeStart";
 			definition = "Date/time on which the clock time measure started for a line item.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.LineItem10.mmMeasureDateTimeStart;
+			previousVersion_lazy = () -> LineItem10.mmMeasureDateTimeStart;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
@@ -1452,14 +1453,14 @@ public class LineItem16 {
 	 */
 	public static final MMMessageAttribute mmMeasureDateTimeEnd = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.LineItem.mmMeasureDateTimeEnd;
+			businessElementTrace_lazy = () -> LineItem.mmMeasureDateTimeEnd;
 			componentContext_lazy = () -> LineItem16.mmObject();
 			isDerived = false;
 			xmlTag = "MeasrDtTmEnd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MeasureDateTimeEnd";
 			definition = "Date/time on which the clock time measure ended for a line item.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.LineItem10.mmMeasureDateTimeEnd;
+			previousVersion_lazy = () -> LineItem10.mmMeasureDateTimeEnd;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
@@ -1506,10 +1507,10 @@ public class LineItem16 {
 			componentContext_lazy = () -> LineItem16.mmObject();
 			isDerived = false;
 			xmlTag = "ShipTo";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ShipTo";
 			definition = "Party to whom the goods must be delivered in the end.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.LineItem10.mmShipTo;
+			previousVersion_lazy = () -> LineItem10.mmShipTo;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -1556,14 +1557,14 @@ public class LineItem16 {
 	 */
 	public static final MMMessageAttribute mmIncoterms = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Transport.mmIncoterms;
+			businessElementTrace_lazy = () -> Transport.mmIncoterms;
 			componentContext_lazy = () -> LineItem16.mmObject();
 			isDerived = false;
 			xmlTag = "Incotrms";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Incoterms";
 			definition = "Specifies the applicable Incoterm and associated location.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.LineItem10.mmIncoterms;
+			previousVersion_lazy = () -> LineItem10.mmIncoterms;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.Incoterms3.mmObject();
@@ -1611,14 +1612,14 @@ public class LineItem16 {
 	 */
 	public static final MMMessageAttribute mmDeliveryDateTime = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Transport.mmArrivalDateTime;
+			businessElementTrace_lazy = () -> Transport.mmArrivalDateTime;
 			componentContext_lazy = () -> LineItem16.mmObject();
 			isDerived = false;
 			xmlTag = "DlvryDtTm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeliveryDateTime";
 			definition = "Actual delivery date/time of the products and/or services for this line item.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.LineItem10.mmDeliveryDateTime;
+			previousVersion_lazy = () -> LineItem10.mmDeliveryDateTime;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
@@ -1667,14 +1668,14 @@ public class LineItem16 {
 	 */
 	public static final MMMessageAttribute mmDeliveryNoteIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmIdentification;
+			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> LineItem16.mmObject();
 			isDerived = false;
 			xmlTag = "DlvryNoteId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeliveryNoteIdentification";
 			definition = "Delivery note related to the delivery of the products and/or services for this line item.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.LineItem10.mmDeliveryNoteIdentification;
+			previousVersion_lazy = () -> LineItem10.mmDeliveryNoteIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.DocumentIdentification22.mmObject();
@@ -1717,10 +1718,10 @@ public class LineItem16 {
 			componentContext_lazy = () -> LineItem16.mmObject();
 			isDerived = false;
 			xmlTag = "MntrySummtn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MonetarySummation";
 			definition = "Monetary totals for this line item.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.LineItem10.mmMonetarySummation;
+			previousVersion_lazy = () -> LineItem10.mmMonetarySummation;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -1765,10 +1766,10 @@ public class LineItem16 {
 			componentContext_lazy = () -> LineItem16.mmObject();
 			isDerived = false;
 			xmlTag = "InclNote";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncludedNote";
 			definition = "Note included in this line item.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.LineItem10.mmIncludedNote;
+			previousVersion_lazy = () -> LineItem10.mmIncludedNote;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.AdditionalInformation1.mmObject();
 		}
@@ -1777,20 +1778,14 @@ public class LineItem16 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LineItem16.mmIdentification, com.tools20022.repository.msg.LineItem16.mmTradeProduct,
-						com.tools20022.repository.msg.LineItem16.mmBuyerOrderIdentification, com.tools20022.repository.msg.LineItem16.mmContractIdentification, com.tools20022.repository.msg.LineItem16.mmPurchaseAccountingAccount,
-						com.tools20022.repository.msg.LineItem16.mmNetPrice, com.tools20022.repository.msg.LineItem16.mmNetPriceQuantity, com.tools20022.repository.msg.LineItem16.mmNetPriceAllowanceCharge,
-						com.tools20022.repository.msg.LineItem16.mmNetWeight, com.tools20022.repository.msg.LineItem16.mmGrossPrice, com.tools20022.repository.msg.LineItem16.mmGrossPriceQuantity,
-						com.tools20022.repository.msg.LineItem16.mmGrossWeight, com.tools20022.repository.msg.LineItem16.mmLogisticsCharge, com.tools20022.repository.msg.LineItem16.mmTax,
-						com.tools20022.repository.msg.LineItem16.mmAllowanceCharge, com.tools20022.repository.msg.LineItem16.mmFinancialAdjustment, com.tools20022.repository.msg.LineItem16.mmBilledQuantity,
-						com.tools20022.repository.msg.LineItem16.mmPackageQuantity, com.tools20022.repository.msg.LineItem16.mmPerPackageUnitQuantity, com.tools20022.repository.msg.LineItem16.mmPackaging,
-						com.tools20022.repository.msg.LineItem16.mmChargeFreeQuantity, com.tools20022.repository.msg.LineItem16.mmMeasureQuantityStart, com.tools20022.repository.msg.LineItem16.mmMeasureQuantityEnd,
-						com.tools20022.repository.msg.LineItem16.mmMeasureDateTimeStart, com.tools20022.repository.msg.LineItem16.mmMeasureDateTimeEnd, com.tools20022.repository.msg.LineItem16.mmShipTo,
-						com.tools20022.repository.msg.LineItem16.mmIncoterms, com.tools20022.repository.msg.LineItem16.mmDeliveryDateTime, com.tools20022.repository.msg.LineItem16.mmDeliveryNoteIdentification,
-						com.tools20022.repository.msg.LineItem16.mmMonetarySummation, com.tools20022.repository.msg.LineItem16.mmIncludedNote);
+				messageElement_lazy = () -> Arrays.asList(LineItem16.mmIdentification, LineItem16.mmTradeProduct, LineItem16.mmBuyerOrderIdentification, LineItem16.mmContractIdentification, LineItem16.mmPurchaseAccountingAccount,
+						LineItem16.mmNetPrice, LineItem16.mmNetPriceQuantity, LineItem16.mmNetPriceAllowanceCharge, LineItem16.mmNetWeight, LineItem16.mmGrossPrice, LineItem16.mmGrossPriceQuantity, LineItem16.mmGrossWeight,
+						LineItem16.mmLogisticsCharge, LineItem16.mmTax, LineItem16.mmAllowanceCharge, LineItem16.mmFinancialAdjustment, LineItem16.mmBilledQuantity, LineItem16.mmPackageQuantity, LineItem16.mmPerPackageUnitQuantity,
+						LineItem16.mmPackaging, LineItem16.mmChargeFreeQuantity, LineItem16.mmMeasureQuantityStart, LineItem16.mmMeasureQuantityEnd, LineItem16.mmMeasureDateTimeStart, LineItem16.mmMeasureDateTimeEnd, LineItem16.mmShipTo,
+						LineItem16.mmIncoterms, LineItem16.mmDeliveryDateTime, LineItem16.mmDeliveryNoteIdentification, LineItem16.mmMonetarySummation, LineItem16.mmIncludedNote);
 				trace_lazy = () -> CommercialTrade.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "LineItem16";
 				definition = "Unit of information  showing the related  provision of products and/or services and monetary summations reported as a discrete line items.";
 				previousVersion_lazy = () -> LineItem10.mmObject();

@@ -19,10 +19,14 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.camt.*;
 import com.tools20022.repository.datatype.AnyBICIdentifier;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.InvestigationCase;
+import com.tools20022.repository.entity.Party;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -150,11 +154,11 @@ public class CaseAssignment {
 	 */
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestigationCase.mmAssignmentIdentification;
+			businessElementTrace_lazy = () -> InvestigationCase.mmAssignmentIdentification;
 			componentContext_lazy = () -> CaseAssignment.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Identification of an assignment within a case.";
 			maxOccurs = 1;
@@ -200,11 +204,11 @@ public class CaseAssignment {
 	 */
 	public static final MMMessageAttribute mmAssigner = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> CaseAssignment.mmObject();
 			isDerived = false;
 			xmlTag = "Assgnr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Assigner";
 			definition = "Party that assigns the case to another party. This is also the sender of the message.";
 			maxOccurs = 1;
@@ -250,11 +254,11 @@ public class CaseAssignment {
 	 */
 	public static final MMMessageAttribute mmAssignee = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> CaseAssignment.mmObject();
 			isDerived = false;
 			xmlTag = "Assgne";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Assignee";
 			definition = "Party that the case is assigned to. This is also the receiver of the message.";
 			maxOccurs = 1;
@@ -296,11 +300,11 @@ public class CaseAssignment {
 	 */
 	public static final MMMessageAttribute mmCreationDateTime = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestigationCase.mmCreationDateTime;
+			businessElementTrace_lazy = () -> InvestigationCase.mmCreationDateTime;
 			componentContext_lazy = () -> CaseAssignment.mmObject();
 			isDerived = false;
 			xmlTag = "CreDtTm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreationDateTime";
 			definition = "Date and time at which the assignment was created.";
 			maxOccurs = 1;
@@ -312,17 +316,13 @@ public class CaseAssignment {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CaseAssignment.mmIdentification, com.tools20022.repository.msg.CaseAssignment.mmAssigner, com.tools20022.repository.msg.CaseAssignment.mmAssignee,
-						com.tools20022.repository.msg.CaseAssignment.mmCreationDateTime);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.RequestToModifyPayment.mmAssignment, com.tools20022.repository.area.camt.RequestToCancelPayment.mmAssignment,
-						com.tools20022.repository.area.camt.UnableToApply.mmAssignment, com.tools20022.repository.area.camt.ClaimNonReceipt.mmAssignment, com.tools20022.repository.area.camt.AdditionalPaymentInformation.mmAssignment,
-						com.tools20022.repository.area.camt.ResolutionOfInvestigation.mmAssignment, com.tools20022.repository.area.camt.NotificationOfCaseAssignment.mmAssignment,
-						com.tools20022.repository.area.camt.RejectCaseAssignment.mmAssignment, com.tools20022.repository.area.camt.RequestForDuplicateInstruction.mmAssignment,
-						com.tools20022.repository.area.camt.DebitAuthorisationResponse.mmAssignment, com.tools20022.repository.area.camt.DebitAuthorisationRequest.mmAssignment,
-						com.tools20022.repository.area.camt.CaseStatusReport.mmNewAssignment, com.tools20022.repository.area.camt.CancelCaseAssignment.mmAssignment);
+				messageElement_lazy = () -> Arrays.asList(CaseAssignment.mmIdentification, CaseAssignment.mmAssigner, CaseAssignment.mmAssignee, CaseAssignment.mmCreationDateTime);
+				messageBuildingBlock_lazy = () -> Arrays.asList(RequestToModifyPayment.mmAssignment, RequestToCancelPayment.mmAssignment, UnableToApply.mmAssignment, ClaimNonReceipt.mmAssignment, AdditionalPaymentInformation.mmAssignment,
+						ResolutionOfInvestigation.mmAssignment, NotificationOfCaseAssignment.mmAssignment, RejectCaseAssignment.mmAssignment, RequestForDuplicateInstruction.mmAssignment, DebitAuthorisationResponse.mmAssignment,
+						DebitAuthorisationRequest.mmAssignment, CaseStatusReport.mmNewAssignment, CancelCaseAssignment.mmAssignment);
 				trace_lazy = () -> InvestigationCase.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CaseAssignment";
 				definition = "Represents the assignment of a case to a party. Assignment is a step in the overall process of managing a case.";
 			}

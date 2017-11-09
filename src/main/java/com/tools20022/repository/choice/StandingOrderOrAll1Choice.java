@@ -19,7 +19,9 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.CashStandingOrder;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.StandingOrderIdentification2;
 import com.tools20022.repository.msg.StandingOrderIdentification3;
 import java.util.Arrays;
@@ -109,7 +111,7 @@ public class StandingOrderOrAll1Choice {
 			componentContext_lazy = () -> StandingOrderOrAll1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "StgOrdr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StandingOrder";
 			definition = "Identification of single standing orders defined with specific characteristics.";
 			minOccurs = 1;
@@ -159,7 +161,7 @@ public class StandingOrderOrAll1Choice {
 			componentContext_lazy = () -> StandingOrderOrAll1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "AllStgOrdrs";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AllStandingOrders";
 			definition = "Identification of all standing orders defined with specific characteristics.";
 			minOccurs = 1;
@@ -171,10 +173,10 @@ public class StandingOrderOrAll1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.StandingOrderOrAll1Choice.mmStandingOrder, com.tools20022.repository.choice.StandingOrderOrAll1Choice.mmAllStandingOrders);
+				messageElement_lazy = () -> Arrays.asList(StandingOrderOrAll1Choice.mmStandingOrder, StandingOrderOrAll1Choice.mmAllStandingOrders);
 				trace_lazy = () -> CashStandingOrder.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "StandingOrderOrAll1Choice";
 				definition = "Characteristics of one or all standing orders set by the member and managed by the transaction administrator.";
 			}

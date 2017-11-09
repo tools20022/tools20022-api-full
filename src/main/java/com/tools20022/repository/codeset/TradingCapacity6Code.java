@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.TradingCapacityCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -98,7 +100,7 @@ public class TradingCapacity6Code extends TradingCapacityCode {
 	 */
 	public static final MMCode mmAgent = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Agent";
 			owner_lazy = () -> TradingCapacity6Code.mmObject();
 		}
@@ -121,7 +123,7 @@ public class TradingCapacity6Code extends TradingCapacityCode {
 	 */
 	public static final MMCode mmActingAgent = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ActingAgent";
 			owner_lazy = () -> TradingCapacity6Code.mmObject();
 		}
@@ -144,7 +146,7 @@ public class TradingCapacity6Code extends TradingCapacityCode {
 	 */
 	public static final MMCode mmCrossingAgent = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CrossingAgent";
 			owner_lazy = () -> TradingCapacity6Code.mmObject();
 		}
@@ -167,7 +169,7 @@ public class TradingCapacity6Code extends TradingCapacityCode {
 	 */
 	public static final MMCode mmCrossingPrincipal = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CrossingPrincipal";
 			owner_lazy = () -> TradingCapacity6Code.mmObject();
 		}
@@ -190,7 +192,7 @@ public class TradingCapacity6Code extends TradingCapacityCode {
 	 */
 	public static final MMCode mmOtherAgent = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherAgent";
 			owner_lazy = () -> TradingCapacity6Code.mmObject();
 		}
@@ -213,7 +215,7 @@ public class TradingCapacity6Code extends TradingCapacityCode {
 	 */
 	public static final MMCode mmPrincipalAgent = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PrincipalAgent";
 			owner_lazy = () -> TradingCapacity6Code.mmObject();
 		}
@@ -236,7 +238,7 @@ public class TradingCapacity6Code extends TradingCapacityCode {
 	 */
 	public static final MMCode mmPrincipal = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Principal";
 			owner_lazy = () -> TradingCapacity6Code.mmObject();
 		}
@@ -245,14 +247,13 @@ public class TradingCapacity6Code extends TradingCapacityCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("AGEN");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TradingCapacity6Code";
 				definition = "Specifies the role of a trading party in a transaction.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TradingCapacity6Code.mmAgent, com.tools20022.repository.codeset.TradingCapacity6Code.mmActingAgent,
-						com.tools20022.repository.codeset.TradingCapacity6Code.mmCrossingAgent, com.tools20022.repository.codeset.TradingCapacity6Code.mmCrossingPrincipal,
-						com.tools20022.repository.codeset.TradingCapacity6Code.mmOtherAgent, com.tools20022.repository.codeset.TradingCapacity6Code.mmPrincipalAgent, com.tools20022.repository.codeset.TradingCapacity6Code.mmPrincipal);
+				code_lazy = () -> Arrays.asList(TradingCapacity6Code.mmAgent, TradingCapacity6Code.mmActingAgent, TradingCapacity6Code.mmCrossingAgent, TradingCapacity6Code.mmCrossingPrincipal, TradingCapacity6Code.mmOtherAgent,
+						TradingCapacity6Code.mmPrincipalAgent, TradingCapacity6Code.mmPrincipal);
 				trace_lazy = () -> TradingCapacityCode.mmObject();
 			}
 		});

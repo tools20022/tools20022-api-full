@@ -17,18 +17,14 @@
 
 package com.tools20022.repository.msg;
 
-import com.tools20022.metamodel.MMMessageAssociationEnd;
-import com.tools20022.metamodel.MMMessageAttribute;
-import com.tools20022.metamodel.MMMessageComponent;
-import com.tools20022.metamodel.MMXor;
+import com.tools20022.metamodel.*;
 import com.tools20022.repository.choice.UnitOrFaceAmount1Choice;
 import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
 import com.tools20022.repository.datatype.BaseOneRate;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.PercentageRate;
-import com.tools20022.repository.entity.CurrencyExchange;
-import com.tools20022.repository.entity.Dividend;
-import com.tools20022.repository.entity.TaxVoucher;
+import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -160,11 +156,11 @@ public class TaxVoucher1 {
 	 */
 	public static final MMMessageAttribute mmTaxVoucherRate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TaxVoucher.mmTaxVoucherRate;
+			businessElementTrace_lazy = () -> TaxVoucher.mmTaxVoucherRate;
 			componentContext_lazy = () -> TaxVoucher1.mmObject();
 			isDerived = false;
 			xmlTag = "TaxVchrRate";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxVoucherRate";
 			definition = "Distribution rate per share.";
 			maxOccurs = 1;
@@ -205,7 +201,7 @@ public class TaxVoucher1 {
 			componentContext_lazy = () -> TaxVoucher1.mmObject();
 			isDerived = false;
 			xmlTag = "TaxCdt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxCredit";
 			definition = "Amount of tax that have been previously paid.";
 			maxOccurs = 1;
@@ -246,7 +242,7 @@ public class TaxVoucher1 {
 			componentContext_lazy = () -> TaxVoucher1.mmObject();
 			isDerived = false;
 			xmlTag = "TaxDdctn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxDeduction";
 			definition = "Amount of tax that have been previously deducted.";
 			maxOccurs = 1;
@@ -290,11 +286,11 @@ public class TaxVoucher1 {
 	 */
 	public static final MMMessageAttribute mmGrossAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionDistribution.mmGrossAmount;
+			businessElementTrace_lazy = () -> CorporateActionDistribution.mmGrossAmount;
 			componentContext_lazy = () -> TaxVoucher1.mmObject();
 			isDerived = false;
 			xmlTag = "GrssAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GrossAmount";
 			definition = "Cash amount before any deductions and allowances have been made.";
 			maxOccurs = 1;
@@ -338,11 +334,11 @@ public class TaxVoucher1 {
 	 */
 	public static final MMMessageAttribute mmNetAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionDistribution.mmNetAmount;
+			businessElementTrace_lazy = () -> CorporateActionDistribution.mmNetAmount;
 			componentContext_lazy = () -> TaxVoucher1.mmObject();
 			isDerived = false;
 			xmlTag = "NetAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetAmount";
 			definition = "Cash amount after any deductions and allowances have been made";
 			maxOccurs = 1;
@@ -385,11 +381,11 @@ public class TaxVoucher1 {
 	 */
 	public static final MMMessageAttribute mmRecordDateHolding = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TaxVoucher.mmRecordDateHolding;
+			businessElementTrace_lazy = () -> TaxVoucher.mmRecordDateHolding;
 			componentContext_lazy = () -> TaxVoucher1.mmObject();
 			isDerived = false;
 			xmlTag = "RcrdDtHldg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RecordDateHolding";
 			definition = "Securities holding on record date.";
 			maxOccurs = 1;
@@ -431,11 +427,11 @@ public class TaxVoucher1 {
 	 */
 	public static final MMMessageAttribute mmTaxCreditRate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.mmRate;
+			businessElementTrace_lazy = () -> Tax.mmRate;
 			componentContext_lazy = () -> TaxVoucher1.mmObject();
 			isDerived = false;
 			xmlTag = "TaxCdtRate";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxCreditRate";
 			definition = "Applicable tax rate on the tax credit amount";
 			maxOccurs = 1;
@@ -477,11 +473,11 @@ public class TaxVoucher1 {
 	 */
 	public static final MMMessageAttribute mmWithholdingTaxAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.mmAmount;
+			businessElementTrace_lazy = () -> Tax.mmAmount;
 			componentContext_lazy = () -> TaxVoucher1.mmObject();
 			isDerived = false;
 			xmlTag = "WhldgTaxAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WithholdingTaxAmount";
 			definition = "Cash amount that will be withheld by a tax authority.";
 			maxOccurs = 1;
@@ -524,11 +520,11 @@ public class TaxVoucher1 {
 	 */
 	public static final MMMessageAttribute mmWithholdingTaxRate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.mmRate;
+			businessElementTrace_lazy = () -> Tax.mmRate;
 			componentContext_lazy = () -> TaxVoucher1.mmObject();
 			isDerived = false;
 			xmlTag = "WhldgTaxRate";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WithholdingTaxRate";
 			definition = "Rate of a cash distribution that wil be withheld by a tax authority";
 			maxOccurs = 1;
@@ -570,11 +566,11 @@ public class TaxVoucher1 {
 	 */
 	public static final MMMessageAttribute mmScripDividendReinvestmentPricePerShare = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TaxVoucher.mmScripDividendReinvestmentPricePerShare;
+			businessElementTrace_lazy = () -> TaxVoucher.mmScripDividendReinvestmentPricePerShare;
 			componentContext_lazy = () -> TaxVoucher1.mmObject();
 			isDerived = false;
 			xmlTag = "ScripDvddRinvstmtPricPerShr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ScripDividendReinvestmentPricePerShare";
 			definition = "Cost per share of new shares allotted.";
 			maxOccurs = 1;
@@ -618,11 +614,11 @@ public class TaxVoucher1 {
 	 */
 	public static final MMMessageAttribute mmCashAmountBroughtForward = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TaxVoucher.mmCashAmountBroughtForward;
+			businessElementTrace_lazy = () -> TaxVoucher.mmCashAmountBroughtForward;
 			componentContext_lazy = () -> TaxVoucher1.mmObject();
 			isDerived = false;
 			xmlTag = "CshAmtBrghtFwd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashAmountBroughtForward";
 			definition = "Cash amount retained from previous dividend or interest payment.";
 			maxOccurs = 1;
@@ -664,11 +660,11 @@ public class TaxVoucher1 {
 	 */
 	public static final MMMessageAttribute mmAllotedSharesCost = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TaxVoucher.mmAllotedSharesCost;
+			businessElementTrace_lazy = () -> TaxVoucher.mmAllotedSharesCost;
 			componentContext_lazy = () -> TaxVoucher1.mmObject();
 			isDerived = false;
 			xmlTag = "AlltdShrsCost";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AllotedSharesCost";
 			definition = "Total cash amount required to purchase shares allotted.";
 			maxOccurs = 1;
@@ -712,11 +708,11 @@ public class TaxVoucher1 {
 	 */
 	public static final MMMessageAttribute mmCashAmountCarriedForward = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TaxVoucher.mmCashAmountCarriedForward;
+			businessElementTrace_lazy = () -> TaxVoucher.mmCashAmountCarriedForward;
 			componentContext_lazy = () -> TaxVoucher1.mmObject();
 			isDerived = false;
 			xmlTag = "CshAmtCrrdFwd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashAmountCarriedForward";
 			definition = "Cash amount carried forward to next dividend or interest payment.";
 			maxOccurs = 1;
@@ -761,7 +757,7 @@ public class TaxVoucher1 {
 			componentContext_lazy = () -> TaxVoucher1.mmObject();
 			isDerived = false;
 			xmlTag = "NtnlTax";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotionalTax";
 			definition = "Where new securities are issued in lieu of a cash dividend, the notional tax is the tax on the amount of cash that would have been paid. For scrips only.";
 			maxOccurs = 1;
@@ -810,7 +806,7 @@ public class TaxVoucher1 {
 			componentContext_lazy = () -> TaxVoucher1.mmObject();
 			isDerived = false;
 			xmlTag = "NtnlDvddPybl";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotionalDividendPayable";
 			definition = "Amount of cash that would have been payable if the dividend had been taken in the form of cash rather than shares. For scrip only.";
 			maxOccurs = 1;
@@ -852,11 +848,11 @@ public class TaxVoucher1 {
 	 */
 	public static final MMMessageAttribute mmBargainDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TaxVoucher.mmBargainDate;
+			businessElementTrace_lazy = () -> TaxVoucher.mmBargainDate;
 			componentContext_lazy = () -> TaxVoucher1.mmObject();
 			isDerived = false;
 			xmlTag = "BrgnDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BargainDate";
 			definition = "Date on which DRIP purchase completed.";
 			maxOccurs = 1;
@@ -898,11 +894,11 @@ public class TaxVoucher1 {
 	 */
 	public static final MMMessageAttribute mmBargainSettlementDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TaxVoucher.mmBargainSettlementDate;
+			businessElementTrace_lazy = () -> TaxVoucher.mmBargainSettlementDate;
 			componentContext_lazy = () -> TaxVoucher1.mmObject();
 			isDerived = false;
 			xmlTag = "BrgnSttlmDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BargainSettlementDate";
 			definition = "Settlement date of the DRIP purchase transaction.";
 			maxOccurs = 1;
@@ -944,11 +940,11 @@ public class TaxVoucher1 {
 	 */
 	public static final MMMessageAttribute mmStampDutyAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.mmAmount;
+			businessElementTrace_lazy = () -> Tax.mmAmount;
 			componentContext_lazy = () -> TaxVoucher1.mmObject();
 			isDerived = false;
 			xmlTag = "StmpDtyAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StampDutyAmount";
 			definition = "Amount of stamp duty.";
 			maxOccurs = 1;
@@ -991,11 +987,11 @@ public class TaxVoucher1 {
 	 */
 	public static final MMMessageAttribute mmChargeAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Adjustment.mmAmount;
+			businessElementTrace_lazy = () -> Adjustment.mmAmount;
 			componentContext_lazy = () -> TaxVoucher1.mmObject();
 			isDerived = false;
 			xmlTag = "ChrgAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChargeAmount";
 			definition = "Amount of charges/fees charged to the client.";
 			maxOccurs = 1;
@@ -1038,11 +1034,11 @@ public class TaxVoucher1 {
 	 */
 	public static final MMMessageAttribute mmCommissionAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Adjustment.mmAmount;
+			businessElementTrace_lazy = () -> Adjustment.mmAmount;
 			componentContext_lazy = () -> TaxVoucher1.mmObject();
 			isDerived = false;
 			xmlTag = "ComssnAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommissionAmount";
 			definition = "Amount due to the paying agent.";
 			maxOccurs = 1;
@@ -1088,7 +1084,7 @@ public class TaxVoucher1 {
 			componentContext_lazy = () -> TaxVoucher1.mmObject();
 			isDerived = false;
 			xmlTag = "FXDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForeignExchangeDetails";
 			definition = "Provides information about the foreign exchange transaction.";
 			maxOccurs = 1;
@@ -1102,6 +1098,9 @@ public class TaxVoucher1 {
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
+	 * messageComponent} =
+	 * {@linkplain com.tools20022.repository.msg.TaxVoucher1 TaxVoucher1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getImpactedElements
 	 * impactedElements} =
 	 * <ul>
@@ -1111,9 +1110,6 @@ public class TaxVoucher1 {
 	 * TaxVoucher1.mmTaxDeduction}</li>
 	 * </ul>
 	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
-	 * messageComponent} =
-	 * {@linkplain com.tools20022.repository.msg.TaxVoucher1 TaxVoucher1}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1127,28 +1123,24 @@ public class TaxVoucher1 {
 	 */
 	public static final MMXor mmTaxCreditOrTaxDeductionRule = new MMXor() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxCreditOrTaxDeductionRule";
 			definition = "Either TaxCredit orTaxDeduction must be present.";
 			messageComponent_lazy = () -> TaxVoucher1.mmObject();
-			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TaxVoucher1.mmTaxCredit, com.tools20022.repository.msg.TaxVoucher1.mmTaxDeduction);
+			impactedElements_lazy = () -> Arrays.asList(TaxVoucher1.mmTaxCredit, TaxVoucher1.mmTaxDeduction);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TaxVoucher1.mmTaxVoucherRate, com.tools20022.repository.msg.TaxVoucher1.mmTaxCredit, com.tools20022.repository.msg.TaxVoucher1.mmTaxDeduction,
-						com.tools20022.repository.msg.TaxVoucher1.mmGrossAmount, com.tools20022.repository.msg.TaxVoucher1.mmNetAmount, com.tools20022.repository.msg.TaxVoucher1.mmRecordDateHolding,
-						com.tools20022.repository.msg.TaxVoucher1.mmTaxCreditRate, com.tools20022.repository.msg.TaxVoucher1.mmWithholdingTaxAmount, com.tools20022.repository.msg.TaxVoucher1.mmWithholdingTaxRate,
-						com.tools20022.repository.msg.TaxVoucher1.mmScripDividendReinvestmentPricePerShare, com.tools20022.repository.msg.TaxVoucher1.mmCashAmountBroughtForward,
-						com.tools20022.repository.msg.TaxVoucher1.mmAllotedSharesCost, com.tools20022.repository.msg.TaxVoucher1.mmCashAmountCarriedForward, com.tools20022.repository.msg.TaxVoucher1.mmNotionalTax,
-						com.tools20022.repository.msg.TaxVoucher1.mmNotionalDividendPayable, com.tools20022.repository.msg.TaxVoucher1.mmBargainDate, com.tools20022.repository.msg.TaxVoucher1.mmBargainSettlementDate,
-						com.tools20022.repository.msg.TaxVoucher1.mmStampDutyAmount, com.tools20022.repository.msg.TaxVoucher1.mmChargeAmount, com.tools20022.repository.msg.TaxVoucher1.mmCommissionAmount,
-						com.tools20022.repository.msg.TaxVoucher1.mmForeignExchangeDetails);
+				messageElement_lazy = () -> Arrays.asList(TaxVoucher1.mmTaxVoucherRate, TaxVoucher1.mmTaxCredit, TaxVoucher1.mmTaxDeduction, TaxVoucher1.mmGrossAmount, TaxVoucher1.mmNetAmount, TaxVoucher1.mmRecordDateHolding,
+						TaxVoucher1.mmTaxCreditRate, TaxVoucher1.mmWithholdingTaxAmount, TaxVoucher1.mmWithholdingTaxRate, TaxVoucher1.mmScripDividendReinvestmentPricePerShare, TaxVoucher1.mmCashAmountBroughtForward,
+						TaxVoucher1.mmAllotedSharesCost, TaxVoucher1.mmCashAmountCarriedForward, TaxVoucher1.mmNotionalTax, TaxVoucher1.mmNotionalDividendPayable, TaxVoucher1.mmBargainDate, TaxVoucher1.mmBargainSettlementDate,
+						TaxVoucher1.mmStampDutyAmount, TaxVoucher1.mmChargeAmount, TaxVoucher1.mmCommissionAmount, TaxVoucher1.mmForeignExchangeDetails);
 				trace_lazy = () -> TaxVoucher.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
 						return DateFormat.getDateInstance(java.text.DateFormat.LONG).parse("September 9, 2016");
@@ -1158,7 +1150,7 @@ public class TaxVoucher1 {
 				})).get();
 				name = "TaxVoucher1";
 				definition = "Provides information about the tax voucher.";
-				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TaxVoucher1.mmTaxCreditOrTaxDeductionRule);
+				xors_lazy = () -> Arrays.asList(TaxVoucher1.mmTaxCreditOrTaxDeductionRule);
 			}
 		});
 		return mmObject_lazy.get();

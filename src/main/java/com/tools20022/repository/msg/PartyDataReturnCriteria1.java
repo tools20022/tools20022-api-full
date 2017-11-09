@@ -19,7 +19,9 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.RequestedIndicator;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -126,7 +128,7 @@ public class PartyDataReturnCriteria1 {
 			componentContext_lazy = () -> PartyDataReturnCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "OpngDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OpeningDate";
 			definition = "Indicates whether the opening date of the party is requested.";
 			maxOccurs = 1;
@@ -169,7 +171,7 @@ public class PartyDataReturnCriteria1 {
 			componentContext_lazy = () -> PartyDataReturnCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "ClsgDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClosingDate";
 			definition = "Indicates whether the closing date of the party is requested.";
 			maxOccurs = 1;
@@ -211,7 +213,7 @@ public class PartyDataReturnCriteria1 {
 			componentContext_lazy = () -> PartyDataReturnCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Indicates whether the type is requested.";
 			maxOccurs = 1;
@@ -256,7 +258,7 @@ public class PartyDataReturnCriteria1 {
 			componentContext_lazy = () -> PartyDataReturnCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "PtyId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartyIdentification";
 			definition = "Indicates whether the unique identification to unambiguously identify the party within the system is requested.";
 			maxOccurs = 1;
@@ -301,7 +303,7 @@ public class PartyDataReturnCriteria1 {
 			componentContext_lazy = () -> PartyDataReturnCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "CSDOrNCB";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CSDOrNCB";
 			definition = "Indicates whether the central security depository or the national central bank who initially created the party reference data is requested.";
 			maxOccurs = 1;
@@ -344,7 +346,7 @@ public class PartyDataReturnCriteria1 {
 			componentContext_lazy = () -> PartyDataReturnCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "RstrctnId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RestrictionIdentification";
 			definition = "Indicates whether the identification of the restriction is requested.";
 			maxOccurs = 1;
@@ -389,7 +391,7 @@ public class PartyDataReturnCriteria1 {
 			componentContext_lazy = () -> PartyDataReturnCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "RstrctdOnDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RestrictedOnDate";
 			definition = "Indicates whether the date at which a restriction for party has been issued is requested.";
 			maxOccurs = 1;
@@ -431,7 +433,7 @@ public class PartyDataReturnCriteria1 {
 			componentContext_lazy = () -> PartyDataReturnCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "Nm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Name";
 			definition = "Indicates whether the name for the party is requested.";
 			maxOccurs = 1;
@@ -474,7 +476,7 @@ public class PartyDataReturnCriteria1 {
 			componentContext_lazy = () -> PartyDataReturnCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "ShrtNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ShortName";
 			definition = "Indicates whether the short name for the party is requested.";
 			maxOccurs = 1;
@@ -517,7 +519,7 @@ public class PartyDataReturnCriteria1 {
 			componentContext_lazy = () -> PartyDataReturnCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "Adr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Address";
 			definition = "Indicates whether the address for the party is requested.";
 			maxOccurs = 1;
@@ -560,7 +562,7 @@ public class PartyDataReturnCriteria1 {
 			componentContext_lazy = () -> PartyDataReturnCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "TechAdr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TechnicalAddress";
 			definition = "Indicates whether the technical addresses for the party are requested.";
 			maxOccurs = 1;
@@ -605,7 +607,7 @@ public class PartyDataReturnCriteria1 {
 			componentContext_lazy = () -> PartyDataReturnCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "MktSpcfcAttr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketSpecificAttribute";
 			definition = "Indicates whether the market specific attributes  for the party are requested.";
 			maxOccurs = 1;
@@ -617,13 +619,11 @@ public class PartyDataReturnCriteria1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyDataReturnCriteria1.mmOpeningDate, com.tools20022.repository.msg.PartyDataReturnCriteria1.mmClosingDate,
-						com.tools20022.repository.msg.PartyDataReturnCriteria1.mmType, com.tools20022.repository.msg.PartyDataReturnCriteria1.mmPartyIdentification, com.tools20022.repository.msg.PartyDataReturnCriteria1.mmCSDOrNCB,
-						com.tools20022.repository.msg.PartyDataReturnCriteria1.mmRestrictionIdentification, com.tools20022.repository.msg.PartyDataReturnCriteria1.mmRestrictedOnDate,
-						com.tools20022.repository.msg.PartyDataReturnCriteria1.mmName, com.tools20022.repository.msg.PartyDataReturnCriteria1.mmShortName, com.tools20022.repository.msg.PartyDataReturnCriteria1.mmAddress,
-						com.tools20022.repository.msg.PartyDataReturnCriteria1.mmTechnicalAddress, com.tools20022.repository.msg.PartyDataReturnCriteria1.mmMarketSpecificAttribute);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(PartyDataReturnCriteria1.mmOpeningDate, PartyDataReturnCriteria1.mmClosingDate, PartyDataReturnCriteria1.mmType, PartyDataReturnCriteria1.mmPartyIdentification,
+						PartyDataReturnCriteria1.mmCSDOrNCB, PartyDataReturnCriteria1.mmRestrictionIdentification, PartyDataReturnCriteria1.mmRestrictedOnDate, PartyDataReturnCriteria1.mmName, PartyDataReturnCriteria1.mmShortName,
+						PartyDataReturnCriteria1.mmAddress, PartyDataReturnCriteria1.mmTechnicalAddress, PartyDataReturnCriteria1.mmMarketSpecificAttribute);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "PartyDataReturnCriteria1";
 				definition = "Return criteria for information to be returned in the report deriving from a query about party reference data. ";
 			}

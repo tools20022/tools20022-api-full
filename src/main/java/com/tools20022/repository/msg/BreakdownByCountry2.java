@@ -20,7 +20,9 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CountryCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -107,10 +109,10 @@ public class BreakdownByCountry2 {
 			componentContext_lazy = () -> BreakdownByCountry2.mmObject();
 			isDerived = false;
 			xmlTag = "Ctry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Country";
 			definition = "Country for which the cash flow is being reported.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.BreakdownByCountry1.mmCountry;
+			previousVersion_lazy = () -> BreakdownByCountry1.mmCountry;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CountryCode.mmObject();
@@ -156,10 +158,10 @@ public class BreakdownByCountry2 {
 			componentContext_lazy = () -> BreakdownByCountry2.mmObject();
 			isDerived = false;
 			xmlTag = "CshInFcst";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashInForecast";
 			definition = "Cash movement into the fund as a result of transactions in shares in an investment fund, for example, subscriptions or switch-ins.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.BreakdownByCountry1.mmCashInForecast;
+			previousVersion_lazy = () -> BreakdownByCountry1.mmCashInForecast;
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.CashInForecast5.mmObject();
@@ -205,10 +207,10 @@ public class BreakdownByCountry2 {
 			componentContext_lazy = () -> BreakdownByCountry2.mmObject();
 			isDerived = false;
 			xmlTag = "CshOutFcst";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashOutForecast";
 			definition = "Cash movement out of the fund as a result of transactions in shares in an investment fund, for example, redemptions or switch-outs.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.BreakdownByCountry1.mmCashOutForecast;
+			previousVersion_lazy = () -> BreakdownByCountry1.mmCashOutForecast;
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.CashOutForecast5.mmObject();
@@ -254,10 +256,10 @@ public class BreakdownByCountry2 {
 			componentContext_lazy = () -> BreakdownByCountry2.mmObject();
 			isDerived = false;
 			xmlTag = "NetCshFcst";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetCashForecast";
 			definition = "Net cash as a result of the cash-in and cash-out flows specified for the country.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.BreakdownByCountry1.mmNetCashForecast;
+			previousVersion_lazy = () -> BreakdownByCountry1.mmNetCashForecast;
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.NetCashForecast4.mmObject();
@@ -267,10 +269,9 @@ public class BreakdownByCountry2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BreakdownByCountry2.mmCountry, com.tools20022.repository.msg.BreakdownByCountry2.mmCashInForecast,
-						com.tools20022.repository.msg.BreakdownByCountry2.mmCashOutForecast, com.tools20022.repository.msg.BreakdownByCountry2.mmNetCashForecast);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(BreakdownByCountry2.mmCountry, BreakdownByCountry2.mmCashInForecast, BreakdownByCountry2.mmCashOutForecast, BreakdownByCountry2.mmNetCashForecast);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "BreakdownByCountry2";
 				definition = "Specifies the cash-in and cash-out flows by country.";
 				previousVersion_lazy = () -> BreakdownByCountry1.mmObject();

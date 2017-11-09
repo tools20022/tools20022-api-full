@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.AdditionalBusinessProcessCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -121,9 +123,9 @@ public class AdditionalBusinessProcess5Code extends AdditionalBusinessProcessCod
 	 */
 	public static final MMCode mmAutomaticMarketClaim = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AutomaticMarketClaim";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.AdditionalBusinessProcess1Code.mmAutomaticMarketClaim;
+			previousVersion_lazy = () -> AdditionalBusinessProcess1Code.mmAutomaticMarketClaim;
 			owner_lazy = () -> AdditionalBusinessProcess5Code.mmObject();
 		}
 	};
@@ -150,9 +152,9 @@ public class AdditionalBusinessProcess5Code extends AdditionalBusinessProcessCod
 	 */
 	public static final MMCode mmSubjectToTransformation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubjectToTransformation";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.AdditionalBusinessProcess1Code.mmSubjectToTransformation;
+			previousVersion_lazy = () -> AdditionalBusinessProcess1Code.mmSubjectToTransformation;
 			owner_lazy = () -> AdditionalBusinessProcess5Code.mmObject();
 		}
 	};
@@ -179,9 +181,9 @@ public class AdditionalBusinessProcess5Code extends AdditionalBusinessProcessCod
 	 */
 	public static final MMCode mmCancelUnderlyingTrades = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancelUnderlyingTrades";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.AdditionalBusinessProcess1Code.mmCancelUnderlyingTrades;
+			previousVersion_lazy = () -> AdditionalBusinessProcess1Code.mmCancelUnderlyingTrades;
 			owner_lazy = () -> AdditionalBusinessProcess5Code.mmObject();
 		}
 	};
@@ -209,9 +211,9 @@ public class AdditionalBusinessProcess5Code extends AdditionalBusinessProcessCod
 	 */
 	public static final MMCode mmNoAutomaticMarketClaimsAndTransformations = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoAutomaticMarketClaimsAndTransformations";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.AdditionalBusinessProcess1Code.mmNoAutomaticMarketClaimsAndTransformations;
+			previousVersion_lazy = () -> AdditionalBusinessProcess1Code.mmNoAutomaticMarketClaimsAndTransformations;
 			owner_lazy = () -> AdditionalBusinessProcess5Code.mmObject();
 		}
 	};
@@ -238,9 +240,9 @@ public class AdditionalBusinessProcess5Code extends AdditionalBusinessProcessCod
 	 */
 	public static final MMCode mmNoSplitElection = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoSplitElection";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.AdditionalBusinessProcess1Code.mmNoSplitElection;
+			previousVersion_lazy = () -> AdditionalBusinessProcess1Code.mmNoSplitElection;
 			owner_lazy = () -> AdditionalBusinessProcess5Code.mmObject();
 		}
 	};
@@ -267,9 +269,9 @@ public class AdditionalBusinessProcess5Code extends AdditionalBusinessProcessCod
 	 */
 	public static final MMCode mmSchemeOrPlanOfArrangement = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SchemeOrPlanOfArrangement";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.AdditionalBusinessProcess1Code.mmSchemeOrPlanOfArrangement;
+			previousVersion_lazy = () -> AdditionalBusinessProcess1Code.mmSchemeOrPlanOfArrangement;
 			owner_lazy = () -> AdditionalBusinessProcess5Code.mmObject();
 		}
 	};
@@ -296,9 +298,9 @@ public class AdditionalBusinessProcess5Code extends AdditionalBusinessProcessCod
 	 */
 	public static final MMCode mmConsent = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Consent";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.AdditionalBusinessProcess1Code.mmConsent;
+			previousVersion_lazy = () -> AdditionalBusinessProcess1Code.mmConsent;
 			owner_lazy = () -> AdditionalBusinessProcess5Code.mmObject();
 		}
 	};
@@ -320,7 +322,7 @@ public class AdditionalBusinessProcess5Code extends AdditionalBusinessProcessCod
 	 */
 	public static final MMCode mmPartialMandatoryPutRedemption = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartialMandatoryPutRedemption";
 			owner_lazy = () -> AdditionalBusinessProcess5Code.mmObject();
 		}
@@ -343,7 +345,7 @@ public class AdditionalBusinessProcess5Code extends AdditionalBusinessProcessCod
 	 */
 	public static final MMCode mmFullPrefunding = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FullPrefunding";
 			owner_lazy = () -> AdditionalBusinessProcess5Code.mmObject();
 		}
@@ -366,7 +368,7 @@ public class AdditionalBusinessProcess5Code extends AdditionalBusinessProcessCod
 	 */
 	public static final MMCode mmPartialPreFunding = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartialPreFunding";
 			owner_lazy = () -> AdditionalBusinessProcess5Code.mmObject();
 		}
@@ -389,7 +391,7 @@ public class AdditionalBusinessProcess5Code extends AdditionalBusinessProcessCod
 	 */
 	public static final MMCode mmRequiredAction = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequiredAction";
 			owner_lazy = () -> AdditionalBusinessProcess5Code.mmObject();
 		}
@@ -398,18 +400,16 @@ public class AdditionalBusinessProcess5Code extends AdditionalBusinessProcessCod
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ACLA");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AdditionalBusinessProcess5Code";
 				definition = "Specifies the additional business process linked to a corporate action event.";
 				previousVersion_lazy = () -> AdditionalBusinessProcess1Code.mmObject();
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AdditionalBusinessProcess5Code.mmAutomaticMarketClaim, com.tools20022.repository.codeset.AdditionalBusinessProcess5Code.mmSubjectToTransformation,
-						com.tools20022.repository.codeset.AdditionalBusinessProcess5Code.mmCancelUnderlyingTrades, com.tools20022.repository.codeset.AdditionalBusinessProcess5Code.mmNoAutomaticMarketClaimsAndTransformations,
-						com.tools20022.repository.codeset.AdditionalBusinessProcess5Code.mmNoSplitElection, com.tools20022.repository.codeset.AdditionalBusinessProcess5Code.mmSchemeOrPlanOfArrangement,
-						com.tools20022.repository.codeset.AdditionalBusinessProcess5Code.mmConsent, com.tools20022.repository.codeset.AdditionalBusinessProcess5Code.mmPartialMandatoryPutRedemption,
-						com.tools20022.repository.codeset.AdditionalBusinessProcess5Code.mmFullPrefunding, com.tools20022.repository.codeset.AdditionalBusinessProcess5Code.mmPartialPreFunding,
-						com.tools20022.repository.codeset.AdditionalBusinessProcess5Code.mmRequiredAction);
+				code_lazy = () -> Arrays.asList(AdditionalBusinessProcess5Code.mmAutomaticMarketClaim, AdditionalBusinessProcess5Code.mmSubjectToTransformation, AdditionalBusinessProcess5Code.mmCancelUnderlyingTrades,
+						AdditionalBusinessProcess5Code.mmNoAutomaticMarketClaimsAndTransformations, AdditionalBusinessProcess5Code.mmNoSplitElection, AdditionalBusinessProcess5Code.mmSchemeOrPlanOfArrangement,
+						AdditionalBusinessProcess5Code.mmConsent, AdditionalBusinessProcess5Code.mmPartialMandatoryPutRedemption, AdditionalBusinessProcess5Code.mmFullPrefunding, AdditionalBusinessProcess5Code.mmPartialPreFunding,
+						AdditionalBusinessProcess5Code.mmRequiredAction);
 				trace_lazy = () -> AdditionalBusinessProcessCode.mmObject();
 			}
 		});

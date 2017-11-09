@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -28,6 +30,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.CashMarginOrder1Code
+ * CashMarginOrder1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>{@linkplain com.tools20022.repository.codeset.CashMarginOrderCode#mmCash
@@ -38,13 +47,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.CashMarginOrderCode#mmMarginClose
  * CashMarginOrderCode.mmMarginClose}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.CashMarginOrder1Code
- * CashMarginOrder1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -100,7 +102,7 @@ public class CashMarginOrderCode {
 	 */
 	public static final MMCode mmCash = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Cash";
 			definition = "The principal owns the cash in case of a purchase, or the securities in case of a sale so the execution, if it occurs, will not generate any margin account opening or margin call.";
 			owner_lazy = () -> CashMarginOrderCode.mmObject();
@@ -134,7 +136,7 @@ public class CashMarginOrderCode {
 	 */
 	public static final MMCode mmMarginOpen = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MarginOpen";
 			definition = "The principal order, if  executed, will generate a margin account opening or margin call because the principal does not have the cash in case of a purchase or the securities in case of a sale.";
 			owner_lazy = () -> CashMarginOrderCode.mmObject();
@@ -169,7 +171,7 @@ public class CashMarginOrderCode {
 	 */
 	public static final MMCode mmMarginClose = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MarginClose";
 			definition = "The principal order, if executed, will enable the margin position to be closed and the positions to be covered (for example: purchase of securities that have previously been short-sold, or sale of securities that have been bought on margin).";
 			owner_lazy = () -> CashMarginOrderCode.mmObject();
@@ -180,13 +182,12 @@ public class CashMarginOrderCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CASH");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CashMarginOrderCode";
 				definition = "Identifies whether an order is a non-margin, an opening margin or a closing margin order.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CashMarginOrderCode.mmCash, com.tools20022.repository.codeset.CashMarginOrderCode.mmMarginOpen,
-						com.tools20022.repository.codeset.CashMarginOrderCode.mmMarginClose);
+				code_lazy = () -> Arrays.asList(CashMarginOrderCode.mmCash, CashMarginOrderCode.mmMarginOpen, CashMarginOrderCode.mmMarginClose);
 				derivation_lazy = () -> Arrays.asList(CashMarginOrder1Code.mmObject());
 			}
 		});

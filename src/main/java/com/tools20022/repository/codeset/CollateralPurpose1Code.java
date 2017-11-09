@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CollateralPurposeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -86,7 +88,7 @@ public class CollateralPurpose1Code extends CollateralPurposeCode {
 	 */
 	public static final MMCode mmVariationMargin = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VariationMargin";
 			owner_lazy = () -> CollateralPurpose1Code.mmObject();
 		}
@@ -109,7 +111,7 @@ public class CollateralPurpose1Code extends CollateralPurposeCode {
 	 */
 	public static final MMCode mmSegregatedIndependentAmount = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SegregatedIndependentAmount";
 			owner_lazy = () -> CollateralPurpose1Code.mmObject();
 		}
@@ -118,12 +120,12 @@ public class CollateralPurpose1Code extends CollateralPurposeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("VAMA");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CollateralPurpose1Code";
 				definition = "Indicates whether the collateral has been posted against the variation margin or the segregated independent amount.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CollateralPurpose1Code.mmVariationMargin, com.tools20022.repository.codeset.CollateralPurpose1Code.mmSegregatedIndependentAmount);
+				code_lazy = () -> Arrays.asList(CollateralPurpose1Code.mmVariationMargin, CollateralPurpose1Code.mmSegregatedIndependentAmount);
 				trace_lazy = () -> CollateralPurposeCode.mmObject();
 			}
 		});

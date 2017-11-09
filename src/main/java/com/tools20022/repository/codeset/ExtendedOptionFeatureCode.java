@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -28,6 +30,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.ExtendedOptionFeature1Code
+ * ExtendedOptionFeature1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -60,13 +69,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.ExtendedOptionFeatureCode#mmForeignCurrencyPaymentExempt
  * ExtendedOptionFeatureCode.mmForeignCurrencyPaymentExempt}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.ExtendedOptionFeature1Code
- * ExtendedOptionFeature1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -123,7 +125,7 @@ public class ExtendedOptionFeatureCode {
 	 */
 	public static final MMCode mmForeignTaxUnfavorable = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForeignTaxUnfavorable";
 			definition = "DTC (The Depository Trust Company) only option. The event and security are eligible for the Foreign Tax Relief service at DTC. Option to select unfavourable tax rate. The Foreign Tax Unfavourable option is the default option.";
 			owner_lazy = () -> ExtendedOptionFeatureCode.mmObject();
@@ -158,7 +160,7 @@ public class ExtendedOptionFeatureCode {
 	 */
 	public static final MMCode mmForeignTaxFavorable = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForeignTaxFavorable";
 			definition = "DTC (The Depository Trust Company) only option. The event and security are eligible for the Foreign Tax Relief service at DTC. An election into this option ensures the participant receives their payment at a favourable tax withholding rate. ";
 			owner_lazy = () -> ExtendedOptionFeatureCode.mmObject();
@@ -192,7 +194,7 @@ public class ExtendedOptionFeatureCode {
 	 */
 	public static final MMCode mmForeignTaxExempt = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForeignTaxExempt";
 			definition = "DTC (The Depository Trust Company)  only option. The event and security are eligible for the Foreign Tax Relief service at DTC. An election into this option ensures the participant is exempt from any tax withholding. ";
 			owner_lazy = () -> ExtendedOptionFeatureCode.mmObject();
@@ -228,7 +230,7 @@ public class ExtendedOptionFeatureCode {
 	 */
 	public static final MMCode mmDRIPUnfavorable = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DRIPUnfavorable";
 			definition = "DTC (The Depository Trust Company) only option. The event and security are eligible for both the Dividend Reinvestment and Foreign Tax services at DTC. Participants electing this option will receive additional shares and the tax withholding on those shares will be at the unfavourable tax rate. ";
 			owner_lazy = () -> ExtendedOptionFeatureCode.mmObject();
@@ -264,7 +266,7 @@ public class ExtendedOptionFeatureCode {
 	 */
 	public static final MMCode mmDRIPFavorable = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DRIPFavorable";
 			definition = "DTC (The Depository Trust Company) only option. The event and security are eligible for both the Dividend Reinvestment and Foreign Tax Relief services at DTC. Participants electing this option will receive additional shares and the tax withholding on those shares will be at the favourable tax rate. ";
 			owner_lazy = () -> ExtendedOptionFeatureCode.mmObject();
@@ -299,7 +301,7 @@ public class ExtendedOptionFeatureCode {
 	 */
 	public static final MMCode mmDRIPExempt = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DRIPExempt";
 			definition = "DTC (The Depository Trust Company) only option. The event and security are eligible for both the Dividend Reinvestment and the Foreign Tax Relief services at DTC. Participants electing this option will receive additional shares and will be exempt from any tax withholding.";
 			owner_lazy = () -> ExtendedOptionFeatureCode.mmObject();
@@ -334,7 +336,7 @@ public class ExtendedOptionFeatureCode {
 	 */
 	public static final MMCode mmForeignCurrencyPayment = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForeignCurrencyPayment";
 			definition = "DTC (The Depository Trust Company) only option. The event and security are eligible for  Foreign Currency Payment service at DTC. Participants electing this option will receive their distribution in the foreign currency instructed.";
 			owner_lazy = () -> ExtendedOptionFeatureCode.mmObject();
@@ -370,7 +372,7 @@ public class ExtendedOptionFeatureCode {
 	 */
 	public static final MMCode mmForeignCurrencyPaymentUnfavorable = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForeignCurrencyPaymentUnfavorable";
 			definition = "DTC (The Depository Trust Company) only option. The event and security are eligible for both the Foreign Currency and Foreign Tax services at DTC. Participants electing this option will receive their distribution in a foreign currency and the tax withholding on that distribution will be subject to unfavourable tax withholding. ";
 			owner_lazy = () -> ExtendedOptionFeatureCode.mmObject();
@@ -406,7 +408,7 @@ public class ExtendedOptionFeatureCode {
 	 */
 	public static final MMCode mmForeignCurrencyPaymentFavorable = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForeignCurrencyPaymentFavorable";
 			definition = "DTC (The Depository Trust Company) only option. The event and security are eligible for both the Foreign Currency and Foreign Tax services at DTC. Participants electing the option will receive their distribution in foreign currency and the tax withholding on that distribution will be subject to favourable tax withholding. ";
 			owner_lazy = () -> ExtendedOptionFeatureCode.mmObject();
@@ -441,7 +443,7 @@ public class ExtendedOptionFeatureCode {
 	 */
 	public static final MMCode mmForeignCurrencyPaymentExempt = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForeignCurrencyPaymentExempt";
 			definition = "DTC (The Depository Trust Company) only option. The event and security are eligible for both the Foreign Currency and Foreign Tax services at DTC. Participants electing this option will receive their distribution in a foreign currency and will be exempt from any tax withholding. ";
 			owner_lazy = () -> ExtendedOptionFeatureCode.mmObject();
@@ -452,16 +454,14 @@ public class ExtendedOptionFeatureCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("FORU");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ExtendedOptionFeatureCode";
 				definition = "Specifies DTCC (The Depository Trust and Clearing Corporation) specific options.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ExtendedOptionFeatureCode.mmForeignTaxUnfavorable, com.tools20022.repository.codeset.ExtendedOptionFeatureCode.mmForeignTaxFavorable,
-						com.tools20022.repository.codeset.ExtendedOptionFeatureCode.mmForeignTaxExempt, com.tools20022.repository.codeset.ExtendedOptionFeatureCode.mmDRIPUnfavorable,
-						com.tools20022.repository.codeset.ExtendedOptionFeatureCode.mmDRIPFavorable, com.tools20022.repository.codeset.ExtendedOptionFeatureCode.mmDRIPExempt,
-						com.tools20022.repository.codeset.ExtendedOptionFeatureCode.mmForeignCurrencyPayment, com.tools20022.repository.codeset.ExtendedOptionFeatureCode.mmForeignCurrencyPaymentUnfavorable,
-						com.tools20022.repository.codeset.ExtendedOptionFeatureCode.mmForeignCurrencyPaymentFavorable, com.tools20022.repository.codeset.ExtendedOptionFeatureCode.mmForeignCurrencyPaymentExempt);
+				code_lazy = () -> Arrays.asList(ExtendedOptionFeatureCode.mmForeignTaxUnfavorable, ExtendedOptionFeatureCode.mmForeignTaxFavorable, ExtendedOptionFeatureCode.mmForeignTaxExempt, ExtendedOptionFeatureCode.mmDRIPUnfavorable,
+						ExtendedOptionFeatureCode.mmDRIPFavorable, ExtendedOptionFeatureCode.mmDRIPExempt, ExtendedOptionFeatureCode.mmForeignCurrencyPayment, ExtendedOptionFeatureCode.mmForeignCurrencyPaymentUnfavorable,
+						ExtendedOptionFeatureCode.mmForeignCurrencyPaymentFavorable, ExtendedOptionFeatureCode.mmForeignCurrencyPaymentExempt);
 				derivation_lazy = () -> Arrays.asList(ExtendedOptionFeature1Code.mmObject());
 			}
 		});

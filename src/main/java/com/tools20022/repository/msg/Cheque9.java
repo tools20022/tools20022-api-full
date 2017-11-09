@@ -19,8 +19,13 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.ChequeIssue;
+import com.tools20022.repository.entity.CreditInstrument;
+import com.tools20022.repository.entity.Organisation;
+import com.tools20022.repository.entity.Party;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -112,14 +117,14 @@ public class Cheque9 {
 	 */
 	public static final MMMessageAttribute mmNumber = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CreditInstrument.mmCreditInstrumentIdentification;
+			businessElementTrace_lazy = () -> CreditInstrument.mmCreditInstrumentIdentification;
 			componentContext_lazy = () -> Cheque9.mmObject();
 			isDerived = false;
 			xmlTag = "Nb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Number";
 			definition = "Unique and unambiguous identifier for a cheque as assigned by the financial institution.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Cheque3.mmNumber;
+			previousVersion_lazy = () -> Cheque3.mmNumber;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -165,14 +170,14 @@ public class Cheque9 {
 	 */
 	public static final MMMessageAttribute mmPayeeIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> Cheque9.mmObject();
 			isDerived = false;
 			xmlTag = "PyeeId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PayeeIdentification";
 			definition = "Party to which a cheque is made payable.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Cheque3.mmPayeeIdentification;
+			previousVersion_lazy = () -> Cheque3.mmPayeeIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> com.tools20022.repository.msg.PartyIdentification113.mmObject();
@@ -222,14 +227,14 @@ public class Cheque9 {
 	 */
 	public static final MMMessageAttribute mmDraweeIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Organisation.mmOrganisationIdentification;
+			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> Cheque9.mmObject();
 			isDerived = false;
 			xmlTag = "DrweeId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DraweeIdentification";
 			definition = "Financial institution on which a cheque is drawn, that is, the financial institution that services the account of the entity that issued the cheque.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Cheque3.mmDraweeIdentification;
+			previousVersion_lazy = () -> Cheque3.mmDraweeIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.FinancialInstitutionIdentification10.mmObject();
@@ -278,14 +283,14 @@ public class Cheque9 {
 	 */
 	public static final MMMessageAttribute mmDrawerIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> Cheque9.mmObject();
 			isDerived = false;
 			xmlTag = "DrwrId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DrawerIdentification";
 			definition = "Account owner that issues a cheque ordering the drawee bank to pay a specific amount, upon demand, to the payee.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Cheque3.mmDrawerIdentification;
+			previousVersion_lazy = () -> Cheque3.mmDrawerIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.PartyIdentification113.mmObject();
@@ -295,11 +300,10 @@ public class Cheque9 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Cheque9.mmNumber, com.tools20022.repository.msg.Cheque9.mmPayeeIdentification, com.tools20022.repository.msg.Cheque9.mmDraweeIdentification,
-						com.tools20022.repository.msg.Cheque9.mmDrawerIdentification);
+				messageElement_lazy = () -> Arrays.asList(Cheque9.mmNumber, Cheque9.mmPayeeIdentification, Cheque9.mmDraweeIdentification, Cheque9.mmDrawerIdentification);
 				trace_lazy = () -> ChequeIssue.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Cheque9";
 				definition = "Set of characteristics related to a cheque instruction, such as cheque type or cheque number.";
 				previousVersion_lazy = () -> Cheque3.mmObject();

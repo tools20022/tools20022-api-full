@@ -19,6 +19,7 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.metamodel.MMXor;
 import com.tools20022.repository.choice.DateFormat3Choice;
 import com.tools20022.repository.choice.PriceRateOrAmountChoice;
@@ -26,6 +27,7 @@ import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.IncentivePremium;
+import com.tools20022.repository.GeneratedRepository;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -126,11 +128,11 @@ public class IncentivePremium2 {
 	 */
 	public static final MMMessageAttribute mmDescription = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.IncentivePremium.mmDescription;
+			businessElementTrace_lazy = () -> IncentivePremium.mmDescription;
 			componentContext_lazy = () -> IncentivePremium2.mmObject();
 			isDerived = false;
 			xmlTag = "Desc";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Description";
 			definition = "Description of the premium.";
 			maxOccurs = 1;
@@ -175,11 +177,11 @@ public class IncentivePremium2 {
 	 */
 	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.IncentivePremium.mmPremiumAmount;
+			businessElementTrace_lazy = () -> IncentivePremium.mmPremiumAmount;
 			componentContext_lazy = () -> IncentivePremium2.mmObject();
 			isDerived = false;
 			xmlTag = "Amt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Cash premium paid per security, per vote or per attendee.";
 			maxOccurs = 1;
@@ -222,11 +224,11 @@ public class IncentivePremium2 {
 	 */
 	public static final MMMessageAttribute mmPerSecurity = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.IncentivePremium.mmPerSecurity;
+			businessElementTrace_lazy = () -> IncentivePremium.mmPerSecurity;
 			componentContext_lazy = () -> IncentivePremium2.mmObject();
 			isDerived = false;
 			xmlTag = "PerScty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PerSecurity";
 			definition = "Number of securities giving right to a premium.";
 			maxOccurs = 1;
@@ -269,11 +271,11 @@ public class IncentivePremium2 {
 	 */
 	public static final MMMessageAttribute mmPerVote = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.IncentivePremium.mmPerVote;
+			businessElementTrace_lazy = () -> IncentivePremium.mmPerVote;
 			componentContext_lazy = () -> IncentivePremium2.mmObject();
 			isDerived = false;
 			xmlTag = "PerVote";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PerVote";
 			definition = "Number of votes giving right to a premium.";
 			maxOccurs = 1;
@@ -317,11 +319,11 @@ public class IncentivePremium2 {
 	 */
 	public static final MMMessageAttribute mmPerAttendee = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.IncentivePremium.mmPerAttendee;
+			businessElementTrace_lazy = () -> IncentivePremium.mmPerAttendee;
 			componentContext_lazy = () -> IncentivePremium2.mmObject();
 			isDerived = false;
 			xmlTag = "PerAttndee";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PerAttendee";
 			definition = "Indicates that the premium is given per attendee.";
 			maxOccurs = 1;
@@ -365,11 +367,11 @@ public class IncentivePremium2 {
 	 */
 	public static final MMMessageAttribute mmPaymentDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.IncentivePremium.mmPaymentDate;
+			businessElementTrace_lazy = () -> IncentivePremium.mmPaymentDate;
 			componentContext_lazy = () -> IncentivePremium2.mmObject();
 			isDerived = false;
 			xmlTag = "PmtDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentDate";
 			definition = "Date/time for the payment of the premium.";
 			maxOccurs = 1;
@@ -382,6 +384,10 @@ public class IncentivePremium2 {
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
+	 * messageComponent} =
+	 * {@linkplain com.tools20022.repository.msg.IncentivePremium2
+	 * IncentivePremium2}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getImpactedElements
 	 * impactedElements} =
 	 * <ul>
@@ -396,10 +402,6 @@ public class IncentivePremium2 {
 	 * IncentivePremium2.mmPerAttendee}</li>
 	 * </ul>
 	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
-	 * messageComponent} =
-	 * {@linkplain com.tools20022.repository.msg.IncentivePremium2
-	 * IncentivePremium2}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -414,24 +416,22 @@ public class IncentivePremium2 {
 	 */
 	public static final MMXor mmPerSecurityOrPerVoteOrPerAttendeeRule = new MMXor() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PerSecurityOrPerVoteOrPerAttendeeRule";
 			definition = "Either PerSecurity or PerVote or PerAttendee must be present.";
 			messageComponent_lazy = () -> IncentivePremium2.mmObject();
-			impactedElements_lazy = () -> Arrays
-					.asList(com.tools20022.repository.msg.IncentivePremium2.mmPerSecurity, com.tools20022.repository.msg.IncentivePremium2.mmPerVote, com.tools20022.repository.msg.IncentivePremium2.mmPerAttendee);
+			impactedElements_lazy = () -> Arrays.asList(IncentivePremium2.mmPerSecurity, IncentivePremium2.mmPerVote, IncentivePremium2.mmPerAttendee);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IncentivePremium2.mmDescription, com.tools20022.repository.msg.IncentivePremium2.mmAmount,
-						com.tools20022.repository.msg.IncentivePremium2.mmPerSecurity, com.tools20022.repository.msg.IncentivePremium2.mmPerVote, com.tools20022.repository.msg.IncentivePremium2.mmPerAttendee,
-						com.tools20022.repository.msg.IncentivePremium2.mmPaymentDate);
+				messageElement_lazy = () -> Arrays.asList(IncentivePremium2.mmDescription, IncentivePremium2.mmAmount, IncentivePremium2.mmPerSecurity, IncentivePremium2.mmPerVote, IncentivePremium2.mmPerAttendee,
+						IncentivePremium2.mmPaymentDate);
 				trace_lazy = () -> IncentivePremium.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
 						return DateFormat.getDateInstance(java.text.DateFormat.LONG).parse("September 9, 2016");
@@ -441,7 +441,7 @@ public class IncentivePremium2 {
 				})).get();
 				name = "IncentivePremium2";
 				definition = "Cash premium made available if the securities holder consents or participates to an event.";
-				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IncentivePremium2.mmPerSecurityOrPerVoteOrPerAttendeeRule);
+				xors_lazy = () -> Arrays.asList(IncentivePremium2.mmPerSecurityOrPerVoteOrPerAttendeeRule);
 			}
 		});
 		return mmObject_lazy.get();

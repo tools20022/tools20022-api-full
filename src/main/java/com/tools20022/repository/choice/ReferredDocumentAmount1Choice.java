@@ -19,8 +19,13 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.CurrencyAndAmount;
+import com.tools20022.repository.entity.Discount;
 import com.tools20022.repository.entity.Document;
+import com.tools20022.repository.entity.PaymentObligation;
+import com.tools20022.repository.entity.Tax;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -111,11 +116,11 @@ public class ReferredDocumentAmount1Choice {
 	 */
 	public static final MMMessageAttribute mmDuePayableAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentObligation.mmAmount;
+			businessElementTrace_lazy = () -> PaymentObligation.mmAmount;
 			componentContext_lazy = () -> ReferredDocumentAmount1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "DuePyblAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DuePayableAmount";
 			definition = "Amount specified is the exact amount due and payable to the creditor.";
 			maxOccurs = 1;
@@ -162,11 +167,11 @@ public class ReferredDocumentAmount1Choice {
 	 */
 	public static final MMMessageAttribute mmDiscountAppliedAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Discount.mmDiscountAppliedAmount;
+			businessElementTrace_lazy = () -> Discount.mmDiscountAppliedAmount;
 			componentContext_lazy = () -> ReferredDocumentAmount1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "DscntApldAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DiscountAppliedAmount";
 			definition = "Amount of money that results from the application of an agreed discount to the amount due and payable to the creditor.";
 			maxOccurs = 1;
@@ -210,11 +215,11 @@ public class ReferredDocumentAmount1Choice {
 	 */
 	public static final MMMessageAttribute mmRemittedAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Document.mmRemittedAmount;
+			businessElementTrace_lazy = () -> Document.mmRemittedAmount;
 			componentContext_lazy = () -> ReferredDocumentAmount1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "RmtdAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RemittedAmount";
 			definition = "Amount of money remitted for the referred document.";
 			maxOccurs = 1;
@@ -261,11 +266,11 @@ public class ReferredDocumentAmount1Choice {
 	 */
 	public static final MMMessageAttribute mmCreditNoteAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Document.mmAmount;
+			businessElementTrace_lazy = () -> Document.mmAmount;
 			componentContext_lazy = () -> ReferredDocumentAmount1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "CdtNoteAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditNoteAmount";
 			definition = "Amount specified for the referred document is the amount of a credit note.";
 			maxOccurs = 1;
@@ -309,11 +314,11 @@ public class ReferredDocumentAmount1Choice {
 	 */
 	public static final MMMessageAttribute mmTaxAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.mmAmount;
+			businessElementTrace_lazy = () -> Tax.mmAmount;
 			componentContext_lazy = () -> ReferredDocumentAmount1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "TaxAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxAmount";
 			definition = "Quantity of cash resulting from the calculation of the tax.";
 			maxOccurs = 1;
@@ -325,12 +330,11 @@ public class ReferredDocumentAmount1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ReferredDocumentAmount1Choice.mmDuePayableAmount, com.tools20022.repository.choice.ReferredDocumentAmount1Choice.mmDiscountAppliedAmount,
-						com.tools20022.repository.choice.ReferredDocumentAmount1Choice.mmRemittedAmount, com.tools20022.repository.choice.ReferredDocumentAmount1Choice.mmCreditNoteAmount,
-						com.tools20022.repository.choice.ReferredDocumentAmount1Choice.mmTaxAmount);
+				messageElement_lazy = () -> Arrays.asList(ReferredDocumentAmount1Choice.mmDuePayableAmount, ReferredDocumentAmount1Choice.mmDiscountAppliedAmount, ReferredDocumentAmount1Choice.mmRemittedAmount,
+						ReferredDocumentAmount1Choice.mmCreditNoteAmount, ReferredDocumentAmount1Choice.mmTaxAmount);
 				trace_lazy = () -> Document.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ReferredDocumentAmount1Choice";
 				definition = "Nature of the amount and currency on a document referred to in the remittance section, typically either the original amount due/payable or the amount actually remitted for the referenced document.";
 			}

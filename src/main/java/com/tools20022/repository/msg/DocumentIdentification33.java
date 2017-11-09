@@ -19,9 +19,13 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.seev.*;
 import com.tools20022.repository.choice.DocumentIdentification3Choice;
 import com.tools20022.repository.choice.DocumentNumber5Choice;
 import com.tools20022.repository.entity.Document;
+import com.tools20022.repository.entity.GenericIdentification;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -135,14 +139,14 @@ public class DocumentIdentification33 {
 	 */
 	public static final MMMessageAssociationEnd mmIdentification = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmIdentification;
+			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> DocumentIdentification33.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Unique identifier of the document (message) assigned either by the account servicer or the account owner.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.DocumentIdentification14.mmIdentification;
+			previousVersion_lazy = () -> DocumentIdentification14.mmIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -187,10 +191,10 @@ public class DocumentIdentification33 {
 			componentContext_lazy = () -> DocumentIdentification33.mmObject();
 			isDerived = false;
 			xmlTag = "DocNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DocumentNumber";
 			definition = "Identification of the type of document.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.DocumentIdentification14.mmDocumentNumber;
+			previousVersion_lazy = () -> DocumentIdentification14.mmDocumentNumber;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -201,16 +205,13 @@ public class DocumentIdentification33 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DocumentIdentification33.mmIdentification, com.tools20022.repository.msg.DocumentIdentification33.mmDocumentNumber);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestStatusAdviceV06.mmOtherDocumentIdentification,
-						com.tools20022.repository.area.seev.CorporateActionEventProcessingStatusAdviceV05.mmOtherDocumentIdentification,
-						com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV07.mmOtherDocumentIdentification,
-						com.tools20022.repository.area.seev.CorporateActionEventProcessingStatusAdviceV06.mmOtherDocumentIdentification,
-						com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestStatusAdviceV07.mmOtherDocumentIdentification,
-						com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV08.mmOtherDocumentIdentification);
+				messageElement_lazy = () -> Arrays.asList(DocumentIdentification33.mmIdentification, DocumentIdentification33.mmDocumentNumber);
+				messageBuildingBlock_lazy = () -> Arrays.asList(CorporateActionInstructionCancellationRequestStatusAdviceV06.mmOtherDocumentIdentification, CorporateActionEventProcessingStatusAdviceV05.mmOtherDocumentIdentification,
+						CorporateActionInstructionStatusAdviceV07.mmOtherDocumentIdentification, CorporateActionEventProcessingStatusAdviceV06.mmOtherDocumentIdentification,
+						CorporateActionInstructionCancellationRequestStatusAdviceV07.mmOtherDocumentIdentification, CorporateActionInstructionStatusAdviceV08.mmOtherDocumentIdentification);
 				trace_lazy = () -> Document.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DocumentIdentification33";
 				definition = "Identification of a document as well as the document number.";
 				previousVersion_lazy = () -> DocumentIdentification14.mmObject();

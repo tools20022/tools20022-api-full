@@ -20,9 +20,15 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.trea.NonDeliverableForwardNotificationV02;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.ForeignExchangeTrade;
+import com.tools20022.repository.entity.NonDeliverableTrade;
+import com.tools20022.repository.entity.Trade;
+import com.tools20022.repository.entity.TradeIdentification;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -123,11 +129,11 @@ public class OpeningData2 {
 	 */
 	public static final MMMessageAttribute mmTradeDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Trade.mmTradeDateTime;
+			businessElementTrace_lazy = () -> Trade.mmTradeDateTime;
 			componentContext_lazy = () -> OpeningData2.mmObject();
 			isDerived = false;
 			xmlTag = "TradDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeDate";
 			definition = "Date at which the trading parties execute a treasury trade.";
 			maxOccurs = 1;
@@ -170,7 +176,7 @@ public class OpeningData2 {
 			componentContext_lazy = () -> OpeningData2.mmObject();
 			isDerived = false;
 			xmlTag = "NtfctnId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotificationIdentification";
 			definition = "Refers to the identification of a notification assigned by the trading side.";
 			maxOccurs = 1;
@@ -212,11 +218,11 @@ public class OpeningData2 {
 	 */
 	public static final MMMessageAttribute mmCommonReference = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradeIdentification.mmCommonIdentification;
+			businessElementTrace_lazy = () -> TradeIdentification.mmCommonIdentification;
 			componentContext_lazy = () -> OpeningData2.mmObject();
 			isDerived = false;
 			xmlTag = "CmonRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommonReference";
 			definition = "Reference common to the parties of a trade.";
 			maxOccurs = 1;
@@ -259,7 +265,7 @@ public class OpeningData2 {
 			componentContext_lazy = () -> OpeningData2.mmObject();
 			isDerived = false;
 			xmlTag = "RltdRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedReference";
 			definition = "Refers to the identification of a previous event in the life of a  non deliverable forward trade.";
 			maxOccurs = 1;
@@ -300,7 +306,7 @@ public class OpeningData2 {
 			componentContext_lazy = () -> OpeningData2.mmObject();
 			isDerived = false;
 			xmlTag = "AmdOrCclRsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmendOrCancelReason";
 			definition = "Describes the reason for the cancellation or the amendment.";
 			maxOccurs = 1;
@@ -346,7 +352,7 @@ public class OpeningData2 {
 			componentContext_lazy = () -> OpeningData2.mmObject();
 			isDerived = false;
 			xmlTag = "TradAmts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeAmounts";
 			definition = "Specifies the amounts of the non deliverable trade which is reported.";
 			maxOccurs = 1;
@@ -391,11 +397,11 @@ public class OpeningData2 {
 	 */
 	public static final MMMessageAssociationEnd mmAgreedRate = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ForeignExchangeTrade.mmAgreedRate;
+			businessElementTrace_lazy = () -> ForeignExchangeTrade.mmAgreedRate;
 			componentContext_lazy = () -> OpeningData2.mmObject();
 			isDerived = false;
 			xmlTag = "AgrdRate";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AgreedRate";
 			definition = "Exchange rate between two currencies. The rate is agreed by the trading parties during the negotiation process.";
 			maxOccurs = 1;
@@ -441,11 +447,11 @@ public class OpeningData2 {
 	 */
 	public static final MMMessageAssociationEnd mmValuationConditions = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.NonDeliverableTrade.mmFixingConditions;
+			businessElementTrace_lazy = () -> NonDeliverableTrade.mmFixingConditions;
 			componentContext_lazy = () -> OpeningData2.mmObject();
 			isDerived = false;
 			xmlTag = "ValtnConds";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValuationConditions";
 			definition = "Set of parameters used to calculate the valuation rate to be applied to a non-deliverable agreement.";
 			maxOccurs = 1;
@@ -458,13 +464,12 @@ public class OpeningData2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OpeningData2.mmTradeDate, com.tools20022.repository.msg.OpeningData2.mmNotificationIdentification,
-						com.tools20022.repository.msg.OpeningData2.mmCommonReference, com.tools20022.repository.msg.OpeningData2.mmRelatedReference, com.tools20022.repository.msg.OpeningData2.mmAmendOrCancelReason,
-						com.tools20022.repository.msg.OpeningData2.mmTradeAmounts, com.tools20022.repository.msg.OpeningData2.mmAgreedRate, com.tools20022.repository.msg.OpeningData2.mmValuationConditions);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.trea.NonDeliverableForwardNotificationV02.mmOpeningData);
+				messageElement_lazy = () -> Arrays.asList(OpeningData2.mmTradeDate, OpeningData2.mmNotificationIdentification, OpeningData2.mmCommonReference, OpeningData2.mmRelatedReference, OpeningData2.mmAmendOrCancelReason,
+						OpeningData2.mmTradeAmounts, OpeningData2.mmAgreedRate, OpeningData2.mmValuationConditions);
+				messageBuildingBlock_lazy = () -> Arrays.asList(NonDeliverableForwardNotificationV02.mmOpeningData);
 				trace_lazy = () -> ForeignExchangeTrade.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OpeningData2";
 				definition = "List of elements which specify the opening of a non deliverable trade.";
 			}

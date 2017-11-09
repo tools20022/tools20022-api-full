@@ -20,12 +20,14 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CreditDebitCode;
 import com.tools20022.repository.datatype.DecimalNumber;
 import com.tools20022.repository.datatype.Max15NumericText;
 import com.tools20022.repository.datatype.TrueFalseIndicator;
 import com.tools20022.repository.entity.BankTransaction;
 import com.tools20022.repository.entity.CashAvailability;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -125,7 +127,7 @@ public class TotalsPerBankTransactionCode2 {
 			componentContext_lazy = () -> TotalsPerBankTransactionCode2.mmObject();
 			isDerived = false;
 			xmlTag = "NbOfNtries";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NumberOfEntries";
 			definition = "Number of individual entries for the bank transaction code.";
 			maxOccurs = 1;
@@ -167,7 +169,7 @@ public class TotalsPerBankTransactionCode2 {
 			componentContext_lazy = () -> TotalsPerBankTransactionCode2.mmObject();
 			isDerived = false;
 			xmlTag = "Sum";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Sum";
 			definition = "Total of all individual entries included in the report.";
 			maxOccurs = 1;
@@ -212,7 +214,7 @@ public class TotalsPerBankTransactionCode2 {
 			componentContext_lazy = () -> TotalsPerBankTransactionCode2.mmObject();
 			isDerived = false;
 			xmlTag = "TtlNetNtryAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalNetEntryAmount";
 			definition = "Total amount that is the result of the netted amounts for all debit and credit entries per bank transaction code.";
 			maxOccurs = 1;
@@ -257,7 +259,7 @@ public class TotalsPerBankTransactionCode2 {
 			componentContext_lazy = () -> TotalsPerBankTransactionCode2.mmObject();
 			isDerived = false;
 			xmlTag = "CdtDbtInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditDebitIndicator";
 			definition = "Indicates whether the total net entry amount is a credit or a debit amount.";
 			maxOccurs = 1;
@@ -302,7 +304,7 @@ public class TotalsPerBankTransactionCode2 {
 			componentContext_lazy = () -> TotalsPerBankTransactionCode2.mmObject();
 			isDerived = false;
 			xmlTag = "FcstInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForecastIndicator";
 			definition = "Indicates whether the bank transaction code is related to booked or forecast items.";
 			maxOccurs = 1;
@@ -352,7 +354,7 @@ public class TotalsPerBankTransactionCode2 {
 			componentContext_lazy = () -> TotalsPerBankTransactionCode2.mmObject();
 			isDerived = false;
 			xmlTag = "BkTxCd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BankTransactionCode";
 			definition = "Set of elements used to fully identify the type of underlying transaction resulting in an entry.";
 			maxOccurs = 1;
@@ -403,7 +405,7 @@ public class TotalsPerBankTransactionCode2 {
 			componentContext_lazy = () -> TotalsPerBankTransactionCode2.mmObject();
 			isDerived = false;
 			xmlTag = "Avlbty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Availability";
 			definition = "Set of elements used to indicate when the booked amount of money will become available, that is can be accessed and starts generating interest.";
 			minOccurs = 0;
@@ -415,12 +417,10 @@ public class TotalsPerBankTransactionCode2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TotalsPerBankTransactionCode2.mmNumberOfEntries, com.tools20022.repository.msg.TotalsPerBankTransactionCode2.mmSum,
-						com.tools20022.repository.msg.TotalsPerBankTransactionCode2.mmTotalNetEntryAmount, com.tools20022.repository.msg.TotalsPerBankTransactionCode2.mmCreditDebitIndicator,
-						com.tools20022.repository.msg.TotalsPerBankTransactionCode2.mmForecastIndicator, com.tools20022.repository.msg.TotalsPerBankTransactionCode2.mmBankTransactionCode,
-						com.tools20022.repository.msg.TotalsPerBankTransactionCode2.mmAvailability);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(TotalsPerBankTransactionCode2.mmNumberOfEntries, TotalsPerBankTransactionCode2.mmSum, TotalsPerBankTransactionCode2.mmTotalNetEntryAmount,
+						TotalsPerBankTransactionCode2.mmCreditDebitIndicator, TotalsPerBankTransactionCode2.mmForecastIndicator, TotalsPerBankTransactionCode2.mmBankTransactionCode, TotalsPerBankTransactionCode2.mmAvailability);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TotalsPerBankTransactionCode2";
 				definition = "Set of elements used to provide the total sum of entries per bank transaction code.";
 				nextVersions_lazy = () -> Arrays.asList(TotalsPerBankTransactionCode3.mmObject());

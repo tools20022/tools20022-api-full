@@ -17,12 +17,13 @@
 
 package com.tools20022.repository.entity;
 
-import com.tools20022.metamodel.MMBusinessAssociationEnd;
-import com.tools20022.metamodel.MMBusinessAttribute;
-import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.*;
+import com.tools20022.repository.choice.CategoryPurpose1Choice;
 import com.tools20022.repository.choice.LocalInstrument1Choice;
 import com.tools20022.repository.choice.LocalInstrument2Choice;
+import com.tools20022.repository.choice.MandateClassification1Choice;
 import com.tools20022.repository.codeset.*;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -38,62 +39,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.PaymentProcessing#mmPriority
- * PaymentProcessing.mmPriority}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.PaymentProcessing#mmServiceLevel
- * PaymentProcessing.mmServiceLevel}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.PaymentProcessing#mmClearingChannel
- * PaymentProcessing.mmClearingChannel}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.PaymentProcessing#mmLocalInstrument
- * PaymentProcessing.mmLocalInstrument}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.PaymentProcessing#mmCategoryPurpose
- * PaymentProcessing.mmCategoryPurpose}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.PaymentProcessing#mmPaymentExecution
- * PaymentProcessing.mmPaymentExecution}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.PaymentProcessing#mmSequenceType
- * PaymentProcessing.mmSequenceType}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.PaymentProcessing#mmRelatedMandate
- * PaymentProcessing.mmRelatedMandate}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.PaymentProcessing#mmBankTransaction
- * PaymentProcessing.mmBankTransaction}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.PaymentProcessing#mmContactPoint
- * PaymentProcessing.mmContactPoint}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ContactPoint#mmRelatedPayment
- * ContactPoint.mmRelatedPayment}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.PaymentExecution#mmProcessingInstructions
- * PaymentExecution.mmProcessingInstructions}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.BankTransaction#mmRelatedPayment
- * BankTransaction.mmRelatedPayment}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ServiceLevel#mmPaymentProcessing
- * ServiceLevel.mmPaymentProcessing}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.DirectDebitMandate#mmMandatePaymentType
- * DirectDebitMandate.mmMandatePaymentType}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -154,6 +99,62 @@ import java.util.List;
  * PaymentTypeInformation11}</li>
  * <li>{@linkplain com.tools20022.repository.msg.PaymentTypeInformation17
  * PaymentTypeInformation17}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ContactPoint#mmRelatedPayment
+ * ContactPoint.mmRelatedPayment}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PaymentExecution#mmProcessingInstructions
+ * PaymentExecution.mmProcessingInstructions}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.BankTransaction#mmRelatedPayment
+ * BankTransaction.mmRelatedPayment}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ServiceLevel#mmPaymentProcessing
+ * ServiceLevel.mmPaymentProcessing}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.DirectDebitMandate#mmMandatePaymentType
+ * DirectDebitMandate.mmMandatePaymentType}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PaymentProcessing#mmPriority
+ * PaymentProcessing.mmPriority}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PaymentProcessing#mmServiceLevel
+ * PaymentProcessing.mmServiceLevel}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PaymentProcessing#mmClearingChannel
+ * PaymentProcessing.mmClearingChannel}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PaymentProcessing#mmLocalInstrument
+ * PaymentProcessing.mmLocalInstrument}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PaymentProcessing#mmCategoryPurpose
+ * PaymentProcessing.mmCategoryPurpose}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PaymentProcessing#mmPaymentExecution
+ * PaymentProcessing.mmPaymentExecution}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PaymentProcessing#mmSequenceType
+ * PaymentProcessing.mmSequenceType}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PaymentProcessing#mmRelatedMandate
+ * PaymentProcessing.mmRelatedMandate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PaymentProcessing#mmBankTransaction
+ * PaymentProcessing.mmBankTransaction}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PaymentProcessing#mmContactPoint
+ * PaymentProcessing.mmContactPoint}</li>
  * </ul>
  * </li>
  * <li>
@@ -340,30 +341,20 @@ public class PaymentProcessing {
 	 */
 	public static final MMBusinessAttribute mmPriority = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentDetails2.mmPriority, com.tools20022.repository.msg.PaymentDetails4.mmPriority, com.tools20022.repository.msg.PaymentDetails5.mmPriority,
-					com.tools20022.repository.msg.PaymentDetails6.mmPriority, com.tools20022.repository.msg.PaymentDetails7.mmPriority, com.tools20022.repository.msg.PaymentTypeInformation1.mmInstructionPriority,
-					com.tools20022.repository.msg.PaymentTypeInformation19.mmInstructionPriority, com.tools20022.repository.msg.PaymentTypeInformation2.mmInstructionPriority,
-					com.tools20022.repository.msg.PaymentTypeInformation20.mmInstructionPriority, com.tools20022.repository.msg.PaymentTypeInformation24.mmInstructionPriority,
-					com.tools20022.repository.msg.PaymentTypeInformation6.mmInstructionPriority, com.tools20022.repository.msg.PaymentTypeInformation4.mmInstructionPriority,
-					com.tools20022.repository.msg.PaymentTypeInformation22.mmInstructionPriority, com.tools20022.repository.msg.PaymentTypeInformation25.mmInstructionPriority,
-					com.tools20022.repository.msg.PaymentTypeInformation3.mmInstructionPriority, com.tools20022.repository.msg.PaymentTypeInformation21.mmInstructionPriority,
-					com.tools20022.repository.msg.CreditTransferTransactionInformation11.mmSettlementPriority, com.tools20022.repository.msg.CreditTransferTransaction2.mmSettlementPriority,
-					com.tools20022.repository.msg.CreditTransferTransaction7.mmSettlementPriority, com.tools20022.repository.msg.PaymentTypeInformation5.mmInstructionPriority,
-					com.tools20022.repository.msg.PaymentTypeInformation23.mmInstructionPriority, com.tools20022.repository.msg.CreditTransferTransactionInformation13.mmSettlementPriority,
-					com.tools20022.repository.msg.CreditTransferTransaction4.mmSettlementPriority, com.tools20022.repository.msg.CreditTransferTransaction8.mmSettlementPriority,
-					com.tools20022.repository.msg.DirectDebitTransactionInformation15.mmSettlementPriority, com.tools20022.repository.msg.PaymentTypeInformation12.mmInstructionPriority,
-					com.tools20022.repository.msg.PaymentTypeInformation18.mmInstructionPriority, com.tools20022.repository.msg.PaymentTypeInformation10.mmInstructionPriority,
-					com.tools20022.repository.msg.PaymentTypeInformation16.mmInstructionPriority, com.tools20022.repository.msg.PaymentTypeInformation11.mmInstructionPriority,
-					com.tools20022.repository.msg.PaymentTypeInformation17.mmInstructionPriority, com.tools20022.repository.msg.PaymentTransaction50.mmSettlementPriority,
-					com.tools20022.repository.msg.CreditTransferTransaction17.mmSettlementPriority, com.tools20022.repository.msg.CreditTransferTransaction19.mmSettlementPriority,
-					com.tools20022.repository.msg.DirectDebitTransactionInformation17.mmSettlementPriority, com.tools20022.repository.msg.PaymentTransaction51.mmSettlementPriority,
-					com.tools20022.repository.msg.CreditTransferTransaction23.mmSettlementPriority, com.tools20022.repository.msg.CreditTransferTransaction25.mmSettlementPriority,
-					com.tools20022.repository.msg.PaymentTransaction65.mmSettlementPriority, com.tools20022.repository.msg.DirectDebitTransactionInformation20.mmSettlementPriority,
-					com.tools20022.repository.msg.PaymentTransaction60.mmSettlementPriority, com.tools20022.repository.msg.DirectDebitTransactionInformation21.mmSettlementPriority,
-					com.tools20022.repository.msg.PaymentTransaction81.mmSettlementPriority, com.tools20022.repository.msg.PaymentTransaction76.mmSettlementPriority);
+			derivation_lazy = () -> Arrays.asList(PaymentDetails2.mmPriority, PaymentDetails4.mmPriority, PaymentDetails5.mmPriority, PaymentDetails6.mmPriority, PaymentDetails7.mmPriority, PaymentTypeInformation1.mmInstructionPriority,
+					PaymentTypeInformation19.mmInstructionPriority, PaymentTypeInformation2.mmInstructionPriority, PaymentTypeInformation20.mmInstructionPriority, PaymentTypeInformation24.mmInstructionPriority,
+					PaymentTypeInformation6.mmInstructionPriority, PaymentTypeInformation4.mmInstructionPriority, PaymentTypeInformation22.mmInstructionPriority, PaymentTypeInformation25.mmInstructionPriority,
+					PaymentTypeInformation3.mmInstructionPriority, PaymentTypeInformation21.mmInstructionPriority, CreditTransferTransactionInformation11.mmSettlementPriority, CreditTransferTransaction2.mmSettlementPriority,
+					CreditTransferTransaction7.mmSettlementPriority, PaymentTypeInformation5.mmInstructionPriority, PaymentTypeInformation23.mmInstructionPriority, CreditTransferTransactionInformation13.mmSettlementPriority,
+					CreditTransferTransaction4.mmSettlementPriority, CreditTransferTransaction8.mmSettlementPriority, DirectDebitTransactionInformation15.mmSettlementPriority, PaymentTypeInformation12.mmInstructionPriority,
+					PaymentTypeInformation18.mmInstructionPriority, PaymentTypeInformation10.mmInstructionPriority, PaymentTypeInformation16.mmInstructionPriority, PaymentTypeInformation11.mmInstructionPriority,
+					PaymentTypeInformation17.mmInstructionPriority, PaymentTransaction50.mmSettlementPriority, CreditTransferTransaction17.mmSettlementPriority, CreditTransferTransaction19.mmSettlementPriority,
+					DirectDebitTransactionInformation17.mmSettlementPriority, PaymentTransaction51.mmSettlementPriority, CreditTransferTransaction23.mmSettlementPriority, CreditTransferTransaction25.mmSettlementPriority,
+					PaymentTransaction65.mmSettlementPriority, DirectDebitTransactionInformation20.mmSettlementPriority, PaymentTransaction60.mmSettlementPriority, DirectDebitTransactionInformation21.mmSettlementPriority,
+					PaymentTransaction81.mmSettlementPriority, PaymentTransaction76.mmSettlementPriority);
 			elementContext_lazy = () -> PaymentProcessing.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Priority";
 			definition = "Indicator of the urgency or order of importance that the instructing party would like the instructed party to apply to the processing of the instruction.";
 			maxOccurs = 1;
@@ -496,25 +487,21 @@ public class PaymentProcessing {
 	 */
 	public static final MMBusinessAssociationEnd mmServiceLevel = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentTypeInformation1.mmServiceLevel, com.tools20022.repository.msg.PaymentTypeInformation19.mmServiceLevel,
-					com.tools20022.repository.msg.PaymentTypeInformation2.mmServiceLevel, com.tools20022.repository.msg.PaymentTypeInformation20.mmServiceLevel, com.tools20022.repository.msg.PaymentTypeInformation24.mmServiceLevel,
-					com.tools20022.repository.msg.PaymentTypeInformation6.mmServiceLevel, com.tools20022.repository.msg.PaymentTypeInformation4.mmServiceLevel, com.tools20022.repository.msg.PaymentTypeInformation22.mmServiceLevel,
-					com.tools20022.repository.msg.PaymentTypeInformation25.mmServiceLevel, com.tools20022.repository.msg.PaymentTypeInformation3.mmServiceLevel, com.tools20022.repository.msg.PaymentTypeInformation21.mmServiceLevel,
-					com.tools20022.repository.msg.PaymentTypeInformation5.mmServiceLevel, com.tools20022.repository.msg.PaymentTypeInformation23.mmServiceLevel, com.tools20022.repository.msg.MandateTypeInformation1.mmServiceLevel,
-					com.tools20022.repository.msg.PaymentTypeInformation9.mmServiceLevel, com.tools20022.repository.msg.PaymentTypeInformation15.mmServiceLevel, com.tools20022.repository.msg.PaymentTypeInformation12.mmServiceLevel,
-					com.tools20022.repository.msg.PaymentTypeInformation18.mmServiceLevel, com.tools20022.repository.msg.PaymentTypeInformation7.mmServiceLevel, com.tools20022.repository.msg.PaymentTypeInformation13.mmServiceLevel,
-					com.tools20022.repository.msg.PaymentTypeInformation10.mmServiceLevel, com.tools20022.repository.msg.PaymentTypeInformation16.mmServiceLevel, com.tools20022.repository.msg.PaymentTypeInformation8.mmServiceLevel,
-					com.tools20022.repository.msg.PaymentTypeInformation14.mmServiceLevel, com.tools20022.repository.msg.PaymentTypeInformation11.mmServiceLevel, com.tools20022.repository.msg.PaymentTypeInformation17.mmServiceLevel,
-					com.tools20022.repository.msg.MandateTypeInformation2.mmServiceLevel);
+			derivation_lazy = () -> Arrays.asList(PaymentTypeInformation1.mmServiceLevel, PaymentTypeInformation19.mmServiceLevel, PaymentTypeInformation2.mmServiceLevel, PaymentTypeInformation20.mmServiceLevel,
+					PaymentTypeInformation24.mmServiceLevel, PaymentTypeInformation6.mmServiceLevel, PaymentTypeInformation4.mmServiceLevel, PaymentTypeInformation22.mmServiceLevel, PaymentTypeInformation25.mmServiceLevel,
+					PaymentTypeInformation3.mmServiceLevel, PaymentTypeInformation21.mmServiceLevel, PaymentTypeInformation5.mmServiceLevel, PaymentTypeInformation23.mmServiceLevel, MandateTypeInformation1.mmServiceLevel,
+					PaymentTypeInformation9.mmServiceLevel, PaymentTypeInformation15.mmServiceLevel, PaymentTypeInformation12.mmServiceLevel, PaymentTypeInformation18.mmServiceLevel, PaymentTypeInformation7.mmServiceLevel,
+					PaymentTypeInformation13.mmServiceLevel, PaymentTypeInformation10.mmServiceLevel, PaymentTypeInformation16.mmServiceLevel, PaymentTypeInformation8.mmServiceLevel, PaymentTypeInformation14.mmServiceLevel,
+					PaymentTypeInformation11.mmServiceLevel, PaymentTypeInformation17.mmServiceLevel, MandateTypeInformation2.mmServiceLevel);
 			elementContext_lazy = () -> PaymentProcessing.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ServiceLevel";
 			definition = "Agreement under which or rules under which the transaction should be processed.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.ServiceLevel.mmPaymentProcessing;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.ServiceLevel.mmObject();
 		}
 	};
@@ -603,16 +590,13 @@ public class PaymentProcessing {
 	 */
 	public static final MMBusinessAttribute mmClearingChannel = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentTypeInformation1.mmClearingChannel, com.tools20022.repository.msg.PaymentTypeInformation2.mmClearingChannel,
-					com.tools20022.repository.msg.PaymentTypeInformation6.mmClearingChannel, com.tools20022.repository.msg.PaymentTypeInformation4.mmClearingChannel, com.tools20022.repository.msg.PaymentTypeInformation22.mmClearingChannel,
-					com.tools20022.repository.msg.PaymentTypeInformation25.mmClearingChannel, com.tools20022.repository.msg.PaymentTypeInformation3.mmClearingChannel,
-					com.tools20022.repository.msg.PaymentTypeInformation21.mmClearingChannel, com.tools20022.repository.msg.PaymentTypeInformation5.mmClearingChannel,
-					com.tools20022.repository.msg.PaymentTypeInformation23.mmClearingChannel, com.tools20022.repository.msg.ReturnInformation1.mmClearingChannel, com.tools20022.repository.msg.ResolutionInformation1.mmClearingChannel,
-					com.tools20022.repository.msg.PaymentTypeInformation12.mmClearingChannel, com.tools20022.repository.msg.PaymentTypeInformation10.mmClearingChannel,
-					com.tools20022.repository.msg.PaymentTypeInformation11.mmClearingChannel, com.tools20022.repository.msg.RequestDetails10.mmClearingChannel);
+			derivation_lazy = () -> Arrays.asList(PaymentTypeInformation1.mmClearingChannel, PaymentTypeInformation2.mmClearingChannel, PaymentTypeInformation6.mmClearingChannel, PaymentTypeInformation4.mmClearingChannel,
+					PaymentTypeInformation22.mmClearingChannel, PaymentTypeInformation25.mmClearingChannel, PaymentTypeInformation3.mmClearingChannel, PaymentTypeInformation21.mmClearingChannel, PaymentTypeInformation5.mmClearingChannel,
+					PaymentTypeInformation23.mmClearingChannel, ReturnInformation1.mmClearingChannel, ResolutionInformation1.mmClearingChannel, PaymentTypeInformation12.mmClearingChannel, PaymentTypeInformation10.mmClearingChannel,
+					PaymentTypeInformation11.mmClearingChannel, RequestDetails10.mmClearingChannel);
 			elementContext_lazy = () -> PaymentProcessing.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ClearingChannel";
 			definition = "Specifies the clearing channel to be used to process the payment instruction.";
 			maxOccurs = 1;
@@ -733,21 +717,15 @@ public class PaymentProcessing {
 	 */
 	public static final MMBusinessAttribute mmLocalInstrument = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.LocalInstrument1Choice.mmCode, com.tools20022.repository.choice.LocalInstrument1Choice.mmProprietary,
-					com.tools20022.repository.msg.PaymentTypeInformation1.mmLocalInstrument, com.tools20022.repository.choice.LocalInstrument2Choice.mmCode, com.tools20022.repository.choice.LocalInstrument2Choice.mmProprietary,
-					com.tools20022.repository.msg.PaymentTypeInformation19.mmLocalInstrument, com.tools20022.repository.msg.PaymentTypeInformation2.mmLocalInstrument,
-					com.tools20022.repository.msg.PaymentTypeInformation20.mmLocalInstrument, com.tools20022.repository.msg.PaymentTypeInformation24.mmLocalInstrument,
-					com.tools20022.repository.msg.PaymentTypeInformation6.mmLocalInstrument, com.tools20022.repository.msg.PaymentTypeInformation4.mmLocalInstrument, com.tools20022.repository.msg.PaymentTypeInformation22.mmLocalInstrument,
-					com.tools20022.repository.msg.PaymentTypeInformation25.mmLocalInstrument, com.tools20022.repository.msg.PaymentTypeInformation3.mmLocalInstrument,
-					com.tools20022.repository.msg.PaymentTypeInformation21.mmLocalInstrument, com.tools20022.repository.msg.PaymentTypeInformation5.mmLocalInstrument,
-					com.tools20022.repository.msg.PaymentTypeInformation23.mmLocalInstrument, com.tools20022.repository.msg.LocalInstrument1.mmCode, com.tools20022.repository.msg.PaymentTypeInformation15.mmLocalInstrument,
-					com.tools20022.repository.msg.PaymentTypeInformation12.mmLocalInstrument, com.tools20022.repository.msg.PaymentTypeInformation18.mmLocalInstrument,
-					com.tools20022.repository.msg.PaymentTypeInformation10.mmLocalInstrument, com.tools20022.repository.msg.PaymentTypeInformation16.mmLocalInstrument,
-					com.tools20022.repository.msg.PaymentTypeInformation14.mmLocalInstrument, com.tools20022.repository.msg.PaymentTypeInformation11.mmLocalInstrument,
-					com.tools20022.repository.msg.PaymentTypeInformation17.mmLocalInstrument);
+			derivation_lazy = () -> Arrays.asList(LocalInstrument1Choice.mmCode, LocalInstrument1Choice.mmProprietary, PaymentTypeInformation1.mmLocalInstrument, LocalInstrument2Choice.mmCode, LocalInstrument2Choice.mmProprietary,
+					PaymentTypeInformation19.mmLocalInstrument, PaymentTypeInformation2.mmLocalInstrument, PaymentTypeInformation20.mmLocalInstrument, PaymentTypeInformation24.mmLocalInstrument, PaymentTypeInformation6.mmLocalInstrument,
+					PaymentTypeInformation4.mmLocalInstrument, PaymentTypeInformation22.mmLocalInstrument, PaymentTypeInformation25.mmLocalInstrument, PaymentTypeInformation3.mmLocalInstrument, PaymentTypeInformation21.mmLocalInstrument,
+					PaymentTypeInformation5.mmLocalInstrument, PaymentTypeInformation23.mmLocalInstrument, LocalInstrument1.mmCode, PaymentTypeInformation15.mmLocalInstrument, PaymentTypeInformation12.mmLocalInstrument,
+					PaymentTypeInformation18.mmLocalInstrument, PaymentTypeInformation10.mmLocalInstrument, PaymentTypeInformation16.mmLocalInstrument, PaymentTypeInformation14.mmLocalInstrument, PaymentTypeInformation11.mmLocalInstrument,
+					PaymentTypeInformation17.mmLocalInstrument);
 			elementContext_lazy = () -> PaymentProcessing.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "LocalInstrument";
 			definition = "User community specific instrument.\nUsage : When available, codes provided by local authorities should be used.";
 			maxOccurs = 1;
@@ -918,29 +896,19 @@ public class PaymentProcessing {
 	 */
 	public static final MMBusinessAttribute mmCategoryPurpose = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentTypeInformation1.mmCategoryPurpose, com.tools20022.repository.choice.CategoryPurpose1Choice.mmCode,
-					com.tools20022.repository.choice.CategoryPurpose1Choice.mmProprietary, com.tools20022.repository.msg.PaymentTypeInformation19.mmCategoryPurpose, com.tools20022.repository.msg.PaymentTypeInformation2.mmCategoryPurpose,
-					com.tools20022.repository.msg.DirectDebitTransactionInformation1.mmPurpose, com.tools20022.repository.msg.PaymentTypeInformation20.mmCategoryPurpose,
-					com.tools20022.repository.msg.DirectDebitTransactionInformation9.mmPurpose, com.tools20022.repository.msg.PaymentTypeInformation24.mmCategoryPurpose,
-					com.tools20022.repository.msg.DirectDebitTransactionInformation11.mmPurpose, com.tools20022.repository.msg.DirectDebitTransactionInformation13.mmPurpose,
-					com.tools20022.repository.msg.PaymentTypeInformation6.mmCategoryPurpose, com.tools20022.repository.msg.PaymentTypeInformation4.mmCategoryPurpose, com.tools20022.repository.msg.PaymentTypeInformation22.mmCategoryPurpose,
-					com.tools20022.repository.msg.PaymentTypeInformation25.mmCategoryPurpose, com.tools20022.repository.msg.PaymentTypeInformation3.mmCategoryPurpose,
-					com.tools20022.repository.msg.PaymentTypeInformation21.mmCategoryPurpose, com.tools20022.repository.msg.DirectDebitTransactionInformation2.mmPurpose,
-					com.tools20022.repository.msg.DirectDebitTransactionInformation10.mmPurpose, com.tools20022.repository.msg.DirectDebitTransactionInformation12.mmPurpose,
-					com.tools20022.repository.msg.DirectDebitTransactionInformation14.mmPurpose, com.tools20022.repository.msg.PaymentTypeInformation15.mmCategoryPurpose,
-					com.tools20022.repository.msg.PaymentTypeInformation12.mmCategoryPurpose, com.tools20022.repository.msg.PaymentTypeInformation18.mmCategoryPurpose,
-					com.tools20022.repository.msg.PaymentTypeInformation13.mmCategoryPurpose, com.tools20022.repository.msg.PaymentTypeInformation10.mmCategoryPurpose,
-					com.tools20022.repository.msg.PaymentTypeInformation16.mmCategoryPurpose, com.tools20022.repository.msg.PaymentTypeInformation14.mmCategoryPurpose,
-					com.tools20022.repository.msg.PaymentTypeInformation11.mmCategoryPurpose, com.tools20022.repository.msg.PaymentTypeInformation17.mmCategoryPurpose,
-					com.tools20022.repository.msg.DirectDebitTransactionInformation7.mmPurpose, com.tools20022.repository.msg.DirectDebitTransactionInformation6.mmPurpose,
-					com.tools20022.repository.msg.DirectDebitTransactionInformation8.mmPurpose, com.tools20022.repository.msg.DirectDebitTransactionInformation17.mmPurpose,
-					com.tools20022.repository.msg.DirectDebitTransactionInformation18.mmPurpose, com.tools20022.repository.msg.DirectDebitTransactionInformation20.mmPurpose,
-					com.tools20022.repository.msg.DirectDebitTransactionInformation19.mmPurpose, com.tools20022.repository.msg.DirectDebitTransactionInformation21.mmPurpose,
-					com.tools20022.repository.msg.MandateTypeInformation2.mmCategoryPurpose, com.tools20022.repository.choice.MandateClassification1Choice.mmCode, com.tools20022.repository.choice.MandateClassification1Choice.mmProprietary,
-					com.tools20022.repository.msg.DirectDebitTransactionInformation22.mmPurpose);
+			derivation_lazy = () -> Arrays.asList(PaymentTypeInformation1.mmCategoryPurpose, CategoryPurpose1Choice.mmCode, CategoryPurpose1Choice.mmProprietary, PaymentTypeInformation19.mmCategoryPurpose,
+					PaymentTypeInformation2.mmCategoryPurpose, DirectDebitTransactionInformation1.mmPurpose, PaymentTypeInformation20.mmCategoryPurpose, DirectDebitTransactionInformation9.mmPurpose,
+					PaymentTypeInformation24.mmCategoryPurpose, DirectDebitTransactionInformation11.mmPurpose, DirectDebitTransactionInformation13.mmPurpose, PaymentTypeInformation6.mmCategoryPurpose,
+					PaymentTypeInformation4.mmCategoryPurpose, PaymentTypeInformation22.mmCategoryPurpose, PaymentTypeInformation25.mmCategoryPurpose, PaymentTypeInformation3.mmCategoryPurpose, PaymentTypeInformation21.mmCategoryPurpose,
+					DirectDebitTransactionInformation2.mmPurpose, DirectDebitTransactionInformation10.mmPurpose, DirectDebitTransactionInformation12.mmPurpose, DirectDebitTransactionInformation14.mmPurpose,
+					PaymentTypeInformation15.mmCategoryPurpose, PaymentTypeInformation12.mmCategoryPurpose, PaymentTypeInformation18.mmCategoryPurpose, PaymentTypeInformation13.mmCategoryPurpose, PaymentTypeInformation10.mmCategoryPurpose,
+					PaymentTypeInformation16.mmCategoryPurpose, PaymentTypeInformation14.mmCategoryPurpose, PaymentTypeInformation11.mmCategoryPurpose, PaymentTypeInformation17.mmCategoryPurpose,
+					DirectDebitTransactionInformation7.mmPurpose, DirectDebitTransactionInformation6.mmPurpose, DirectDebitTransactionInformation8.mmPurpose, DirectDebitTransactionInformation17.mmPurpose,
+					DirectDebitTransactionInformation18.mmPurpose, DirectDebitTransactionInformation20.mmPurpose, DirectDebitTransactionInformation19.mmPurpose, DirectDebitTransactionInformation21.mmPurpose,
+					MandateTypeInformation2.mmCategoryPurpose, MandateClassification1Choice.mmCode, MandateClassification1Choice.mmProprietary, DirectDebitTransactionInformation22.mmPurpose);
 			elementContext_lazy = () -> PaymentProcessing.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CategoryPurpose";
 			definition = "Specifies the high level purpose of the instruction based on a set of pre-defined categories.";
 			maxOccurs = 1;
@@ -988,13 +956,13 @@ public class PaymentProcessing {
 		{
 			elementContext_lazy = () -> PaymentProcessing.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PaymentExecution";
 			definition = "Payment execution process for which processing parameters are specified.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.PaymentExecution.mmProcessingInstructions;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.PaymentExecution.mmObject();
 		}
 	};
@@ -1089,16 +1057,13 @@ public class PaymentProcessing {
 	 */
 	public static final MMBusinessAttribute mmSequenceType = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentTypeInformation2.mmSequenceType, com.tools20022.repository.msg.PaymentTypeInformation20.mmSequenceType,
-					com.tools20022.repository.msg.PaymentTypeInformation24.mmSequenceType, com.tools20022.repository.msg.PaymentTypeInformation6.mmSequenceType, com.tools20022.repository.msg.PaymentTypeInformation4.mmSequenceType,
-					com.tools20022.repository.msg.PaymentTypeInformation22.mmSequenceType, com.tools20022.repository.msg.PaymentTypeInformation25.mmSequenceType, com.tools20022.repository.msg.MandateOccurrences1.mmSequenceType,
-					com.tools20022.repository.msg.MandateOccurrences2.mmSequenceType, com.tools20022.repository.msg.PaymentTypeInformation9.mmSequenceType, com.tools20022.repository.msg.PaymentTypeInformation15.mmSequenceType,
-					com.tools20022.repository.msg.PaymentTypeInformation12.mmSequenceType, com.tools20022.repository.msg.PaymentTypeInformation18.mmSequenceType, com.tools20022.repository.msg.PaymentTypeInformation8.mmSequenceType,
-					com.tools20022.repository.msg.PaymentTypeInformation14.mmSequenceType, com.tools20022.repository.msg.PaymentTypeInformation11.mmSequenceType, com.tools20022.repository.msg.PaymentTypeInformation17.mmSequenceType,
-					com.tools20022.repository.msg.MandateOccurrences3.mmSequenceType, com.tools20022.repository.msg.MandateOccurrences4.mmSequenceType);
+			derivation_lazy = () -> Arrays.asList(PaymentTypeInformation2.mmSequenceType, PaymentTypeInformation20.mmSequenceType, PaymentTypeInformation24.mmSequenceType, PaymentTypeInformation6.mmSequenceType,
+					PaymentTypeInformation4.mmSequenceType, PaymentTypeInformation22.mmSequenceType, PaymentTypeInformation25.mmSequenceType, MandateOccurrences1.mmSequenceType, MandateOccurrences2.mmSequenceType,
+					PaymentTypeInformation9.mmSequenceType, PaymentTypeInformation15.mmSequenceType, PaymentTypeInformation12.mmSequenceType, PaymentTypeInformation18.mmSequenceType, PaymentTypeInformation8.mmSequenceType,
+					PaymentTypeInformation14.mmSequenceType, PaymentTypeInformation11.mmSequenceType, PaymentTypeInformation17.mmSequenceType, MandateOccurrences3.mmSequenceType, MandateOccurrences4.mmSequenceType);
 			elementContext_lazy = () -> PaymentProcessing.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SequenceType";
 			definition = "Identifies the payment sequence where applicable.";
 			maxOccurs = 1;
@@ -1145,13 +1110,13 @@ public class PaymentProcessing {
 		{
 			elementContext_lazy = () -> PaymentProcessing.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedMandate";
 			definition = "Mandate for which payment processing parametres are specified.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.DirectDebitMandate.mmMandatePaymentType;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.DirectDebitMandate.mmObject();
 		}
 	};
@@ -1193,12 +1158,12 @@ public class PaymentProcessing {
 		{
 			elementContext_lazy = () -> PaymentProcessing.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BankTransaction";
 			definition = "Code of the underlying bank transaction.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.BankTransaction.mmRelatedPayment;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.BankTransaction.mmObject();
 		}
 	};
@@ -1242,12 +1207,12 @@ public class PaymentProcessing {
 		{
 			elementContext_lazy = () -> PaymentProcessing.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ContactPoint";
 			definition = "Specifies the notification method to be used to inform the beneficiary.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.ContactPoint.mmRelatedPayment;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.ContactPoint.mmObject();
 		}
 	};
@@ -1255,16 +1220,14 @@ public class PaymentProcessing {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PaymentProcessing";
 				definition = "Specifies how a payment must be processed, for instance through which specific clearing channel.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.ContactPoint.mmRelatedPayment, com.tools20022.repository.entity.PaymentExecution.mmProcessingInstructions,
 						com.tools20022.repository.entity.BankTransaction.mmRelatedPayment, com.tools20022.repository.entity.ServiceLevel.mmPaymentProcessing, com.tools20022.repository.entity.DirectDebitMandate.mmMandatePaymentType);
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.PaymentProcessing.mmPriority, com.tools20022.repository.entity.PaymentProcessing.mmServiceLevel,
-						com.tools20022.repository.entity.PaymentProcessing.mmClearingChannel, com.tools20022.repository.entity.PaymentProcessing.mmLocalInstrument, com.tools20022.repository.entity.PaymentProcessing.mmCategoryPurpose,
-						com.tools20022.repository.entity.PaymentProcessing.mmPaymentExecution, com.tools20022.repository.entity.PaymentProcessing.mmSequenceType, com.tools20022.repository.entity.PaymentProcessing.mmRelatedMandate,
-						com.tools20022.repository.entity.PaymentProcessing.mmBankTransaction, com.tools20022.repository.entity.PaymentProcessing.mmContactPoint);
+				element_lazy = () -> Arrays.asList(PaymentProcessing.mmPriority, PaymentProcessing.mmServiceLevel, PaymentProcessing.mmClearingChannel, PaymentProcessing.mmLocalInstrument, PaymentProcessing.mmCategoryPurpose,
+						PaymentProcessing.mmPaymentExecution, PaymentProcessing.mmSequenceType, PaymentProcessing.mmRelatedMandate, PaymentProcessing.mmBankTransaction, PaymentProcessing.mmContactPoint);
 				derivationComponent_lazy = () -> Arrays.asList(LocalInstrument1Choice.mmObject(), PaymentTypeInformation1.mmObject(), LocalInstrument2Choice.mmObject(), PaymentTypeInformation19.mmObject(),
 						PaymentTypeInformation2.mmObject(), PaymentTypeInformation20.mmObject(), PaymentTypeInformation24.mmObject(), PaymentTypeInformation6.mmObject(), PaymentTypeInformation4.mmObject(),
 						PaymentTypeInformation22.mmObject(), PaymentTypeInformation25.mmObject(), PaymentTypeInformation3.mmObject(), PaymentTypeInformation21.mmObject(), PaymentTypeInformation5.mmObject(),

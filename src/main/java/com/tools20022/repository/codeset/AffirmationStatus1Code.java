@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.AffirmationStatusCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -83,7 +85,7 @@ public class AffirmationStatus1Code extends AffirmationStatusCode {
 	 */
 	public static final MMCode mmAffirmed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Affirmed";
 			owner_lazy = () -> AffirmationStatus1Code.mmObject();
 		}
@@ -106,7 +108,7 @@ public class AffirmationStatus1Code extends AffirmationStatusCode {
 	 */
 	public static final MMCode mmUnaffirmed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unaffirmed";
 			owner_lazy = () -> AffirmationStatus1Code.mmObject();
 		}
@@ -115,12 +117,12 @@ public class AffirmationStatus1Code extends AffirmationStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("AFFI");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AffirmationStatus1Code";
 				definition = "Specifies the affirmation status of a trade.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AffirmationStatus1Code.mmAffirmed, com.tools20022.repository.codeset.AffirmationStatus1Code.mmUnaffirmed);
+				code_lazy = () -> Arrays.asList(AffirmationStatus1Code.mmAffirmed, AffirmationStatus1Code.mmUnaffirmed);
 				trace_lazy = () -> AffirmationStatusCode.mmObject();
 			}
 		});

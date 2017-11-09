@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.ContentType1Code
+ * ContentType1Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ContentType2Code
+ * ContentType2Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -47,15 +58,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.ContentTypeCode#mmAuthenticatedData
  * ContentTypeCode.mmAuthenticatedData}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.ContentType1Code
- * ContentType1Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ContentType2Code
- * ContentType2Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -109,7 +111,7 @@ public class ContentTypeCode {
 	 */
 	public static final MMCode mmPlainData = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PlainData";
 			definition = "Generic, non cryptographic, or unqualified data content - (ASN.1 Object Identifier: id-data).";
 			owner_lazy = () -> ContentTypeCode.mmObject();
@@ -140,7 +142,7 @@ public class ContentTypeCode {
 	 */
 	public static final MMCode mmSignedData = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SignedData";
 			definition = "Digital signature - (ASN.1 Object Identifier: id-signedData).";
 			owner_lazy = () -> ContentTypeCode.mmObject();
@@ -173,7 +175,7 @@ public class ContentTypeCode {
 	 */
 	public static final MMCode mmEnvelopedData = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "EnvelopedData";
 			definition = "Encrypted data, with encryption key - (ASN.1 Object Identifier: id-envelopedData).";
 			owner_lazy = () -> ContentTypeCode.mmObject();
@@ -204,7 +206,7 @@ public class ContentTypeCode {
 	 */
 	public static final MMCode mmDigestedData = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DigestedData";
 			definition = "Message digest - (ASN.1 Object Identifier: id-digestedData).";
 			owner_lazy = () -> ContentTypeCode.mmObject();
@@ -235,7 +237,7 @@ public class ContentTypeCode {
 	 */
 	public static final MMCode mmEncryptedData = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "EncryptedData";
 			definition = "Encrypted data - (ASN.1 Object Identifier: id-encryptedData).";
 			owner_lazy = () -> ContentTypeCode.mmObject();
@@ -268,7 +270,7 @@ public class ContentTypeCode {
 	 */
 	public static final MMCode mmAuthenticatedData = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AuthenticatedData";
 			definition = "MAC (Message Authentication Code), with encryption key - (ASN.1 Object Identifier: id-ct-authData).";
 			owner_lazy = () -> ContentTypeCode.mmObject();
@@ -279,14 +281,13 @@ public class ContentTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("DATA");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ContentTypeCode";
 				definition = "Identification of the type of protection for a protected data.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ContentTypeCode.mmPlainData, com.tools20022.repository.codeset.ContentTypeCode.mmSignedData,
-						com.tools20022.repository.codeset.ContentTypeCode.mmEnvelopedData, com.tools20022.repository.codeset.ContentTypeCode.mmDigestedData, com.tools20022.repository.codeset.ContentTypeCode.mmEncryptedData,
-						com.tools20022.repository.codeset.ContentTypeCode.mmAuthenticatedData);
+				code_lazy = () -> Arrays.asList(ContentTypeCode.mmPlainData, ContentTypeCode.mmSignedData, ContentTypeCode.mmEnvelopedData, ContentTypeCode.mmDigestedData, ContentTypeCode.mmEncryptedData,
+						ContentTypeCode.mmAuthenticatedData);
 				derivation_lazy = () -> Arrays.asList(ContentType1Code.mmObject(), ContentType2Code.mmObject());
 			}
 		});

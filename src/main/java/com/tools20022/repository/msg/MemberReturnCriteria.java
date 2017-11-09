@@ -19,7 +19,9 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.RequestedIndicator;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -107,7 +109,7 @@ public class MemberReturnCriteria {
 			componentContext_lazy = () -> MemberReturnCriteria.mmObject();
 			isDerived = false;
 			xmlTag = "NmInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NameIndicator";
 			definition = "Indicates whether the member name is requested.";
 			maxOccurs = 1;
@@ -150,7 +152,7 @@ public class MemberReturnCriteria {
 			componentContext_lazy = () -> MemberReturnCriteria.mmObject();
 			isDerived = false;
 			xmlTag = "MmbRtrAdrInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MemberReturnAddressIndicator";
 			definition = "Indicates whether the member return address is requested.";
 			maxOccurs = 1;
@@ -192,7 +194,7 @@ public class MemberReturnCriteria {
 			componentContext_lazy = () -> MemberReturnCriteria.mmObject();
 			isDerived = false;
 			xmlTag = "AcctInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountIndicator";
 			definition = "Indicates whether the member account is requested.";
 			maxOccurs = 1;
@@ -234,7 +236,7 @@ public class MemberReturnCriteria {
 			componentContext_lazy = () -> MemberReturnCriteria.mmObject();
 			isDerived = false;
 			xmlTag = "TpInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TypeIndicator";
 			definition = "Indicates whether the member type is requested.";
 			maxOccurs = 1;
@@ -276,7 +278,7 @@ public class MemberReturnCriteria {
 			componentContext_lazy = () -> MemberReturnCriteria.mmObject();
 			isDerived = false;
 			xmlTag = "StsInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusIndicator";
 			definition = "Indicates whether the member status is requested.";
 			maxOccurs = 1;
@@ -318,7 +320,7 @@ public class MemberReturnCriteria {
 			componentContext_lazy = () -> MemberReturnCriteria.mmObject();
 			isDerived = false;
 			xmlTag = "CtctRefInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ContactReferenceIndicator";
 			definition = "Indicates whether the contact references are requested.";
 			maxOccurs = 1;
@@ -361,7 +363,7 @@ public class MemberReturnCriteria {
 			componentContext_lazy = () -> MemberReturnCriteria.mmObject();
 			isDerived = false;
 			xmlTag = "ComAdrInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommunicationAddressIndicator";
 			definition = "Indicates whether the communication addresses are requested.";
 			maxOccurs = 1;
@@ -373,11 +375,10 @@ public class MemberReturnCriteria {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MemberReturnCriteria.mmNameIndicator, com.tools20022.repository.msg.MemberReturnCriteria.mmMemberReturnAddressIndicator,
-						com.tools20022.repository.msg.MemberReturnCriteria.mmAccountIndicator, com.tools20022.repository.msg.MemberReturnCriteria.mmTypeIndicator, com.tools20022.repository.msg.MemberReturnCriteria.mmStatusIndicator,
-						com.tools20022.repository.msg.MemberReturnCriteria.mmContactReferenceIndicator, com.tools20022.repository.msg.MemberReturnCriteria.mmCommunicationAddressIndicator);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(MemberReturnCriteria.mmNameIndicator, MemberReturnCriteria.mmMemberReturnAddressIndicator, MemberReturnCriteria.mmAccountIndicator, MemberReturnCriteria.mmTypeIndicator,
+						MemberReturnCriteria.mmStatusIndicator, MemberReturnCriteria.mmContactReferenceIndicator, MemberReturnCriteria.mmCommunicationAddressIndicator);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "MemberReturnCriteria";
 				definition = "Defines the criteria used to report on a member.";
 			}

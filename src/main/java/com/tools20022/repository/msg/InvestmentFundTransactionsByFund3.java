@@ -20,13 +20,15 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsV03;
 import com.tools20022.repository.choice.SecurityIdentification3Choice;
 import com.tools20022.repository.codeset.DistributionPolicy1Code;
 import com.tools20022.repository.codeset.FormOfSecurity1Code;
 import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.datatype.Max35Text;
-import com.tools20022.repository.entity.InvestmentFundOrderExecution;
-import com.tools20022.repository.entity.InvestmentFundTransaction;
+import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -143,14 +145,14 @@ public class InvestmentFundTransactionsByFund3 {
 	 */
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesIdentification.mmSecurityIdentification;
+			businessElementTrace_lazy = () -> SecuritiesIdentification.mmSecurityIdentification;
 			componentContext_lazy = () -> InvestmentFundTransactionsByFund3.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Identification of a security by an ISIN.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.InvestmentFundTransactionsByFund2.mmIdentification;
+			previousVersion_lazy = () -> InvestmentFundTransactionsByFund2.mmIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> SecurityIdentification3Choice.mmObject();
@@ -196,14 +198,14 @@ public class InvestmentFundTransactionsByFund3 {
 	 */
 	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesIdentification.mmName;
+			businessElementTrace_lazy = () -> SecuritiesIdentification.mmName;
 			componentContext_lazy = () -> InvestmentFundTransactionsByFund3.mmObject();
 			isDerived = false;
 			xmlTag = "Nm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Name";
 			definition = "Name of the financial instrument in free format text.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.InvestmentFundTransactionsByFund2.mmName;
+			previousVersion_lazy = () -> InvestmentFundTransactionsByFund2.mmName;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
@@ -250,10 +252,10 @@ public class InvestmentFundTransactionsByFund3 {
 			componentContext_lazy = () -> InvestmentFundTransactionsByFund3.mmObject();
 			isDerived = false;
 			xmlTag = "SplmtryId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryIdentification";
 			definition = "Additional information about a financial instrument to help identify the instrument.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.InvestmentFundTransactionsByFund2.mmSupplementaryIdentification;
+			previousVersion_lazy = () -> InvestmentFundTransactionsByFund2.mmSupplementaryIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -303,14 +305,14 @@ public class InvestmentFundTransactionsByFund3 {
 	 */
 	public static final MMMessageAttribute mmSecuritiesForm = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmRegistrationForm;
+			businessElementTrace_lazy = () -> Security.mmRegistrationForm;
 			componentContext_lazy = () -> InvestmentFundTransactionsByFund3.mmObject();
 			isDerived = false;
 			xmlTag = "SctiesForm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesForm";
 			definition = "Form, that is, ownership, of the security, for example, registered or bearer.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.InvestmentFundTransactionsByFund2.mmSecuritiesForm;
+			previousVersion_lazy = () -> InvestmentFundTransactionsByFund2.mmSecuritiesForm;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> FormOfSecurity1Code.mmObject();
@@ -362,14 +364,14 @@ public class InvestmentFundTransactionsByFund3 {
 	 */
 	public static final MMMessageAttribute mmClassType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmClassType;
+			businessElementTrace_lazy = () -> InvestmentFundClass.mmClassType;
 			componentContext_lazy = () -> InvestmentFundTransactionsByFund3.mmObject();
 			isDerived = false;
 			xmlTag = "ClssTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClassType";
 			definition = "Features of units offered by a fund. For example, a unit may have a specific load structure, for example, front end or back end, an income policy, for example, pay out or accumulate, or a trailer policy, eg, with or without. Fund classes are typically denoted by a single character, for example, 'Class A', 'Class 2'.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.InvestmentFundTransactionsByFund2.mmClassType;
+			previousVersion_lazy = () -> InvestmentFundTransactionsByFund2.mmClassType;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -419,14 +421,14 @@ public class InvestmentFundTransactionsByFund3 {
 	 */
 	public static final MMMessageAttribute mmDistributionPolicy = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmDistributionPolicy;
+			businessElementTrace_lazy = () -> InvestmentFundClass.mmDistributionPolicy;
 			componentContext_lazy = () -> InvestmentFundTransactionsByFund3.mmObject();
 			isDerived = false;
 			xmlTag = "DstrbtnPlcy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DistributionPolicy";
 			definition = "Income policy relating to a class type, that is, if income is paid out or retained in the fund.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.InvestmentFundTransactionsByFund2.mmDistributionPolicy;
+			previousVersion_lazy = () -> InvestmentFundTransactionsByFund2.mmDistributionPolicy;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> DistributionPolicy1Code.mmObject();
@@ -477,10 +479,10 @@ public class InvestmentFundTransactionsByFund3 {
 			componentContext_lazy = () -> InvestmentFundTransactionsByFund3.mmObject();
 			isDerived = false;
 			xmlTag = "TxDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionDetails";
 			definition = "Process of buying, selling, switching or transferring fund units.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.InvestmentFundTransactionsByFund2.mmTransactionDetails;
+			previousVersion_lazy = () -> InvestmentFundTransactionsByFund2.mmTransactionDetails;
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.InvestmentFundTransaction4.mmObject();
@@ -524,10 +526,10 @@ public class InvestmentFundTransactionsByFund3 {
 			componentContext_lazy = () -> InvestmentFundTransactionsByFund3.mmObject();
 			isDerived = false;
 			xmlTag = "BalByPg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BalanceByPage";
 			definition = "Balance of the financial instrument for this specific statement page.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.InvestmentFundTransactionsByFund2.mmBalanceByPage;
+			previousVersion_lazy = () -> InvestmentFundTransactionsByFund2.mmBalanceByPage;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -538,14 +540,13 @@ public class InvestmentFundTransactionsByFund3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentFundTransactionsByFund3.mmIdentification, com.tools20022.repository.msg.InvestmentFundTransactionsByFund3.mmName,
-						com.tools20022.repository.msg.InvestmentFundTransactionsByFund3.mmSupplementaryIdentification, com.tools20022.repository.msg.InvestmentFundTransactionsByFund3.mmSecuritiesForm,
-						com.tools20022.repository.msg.InvestmentFundTransactionsByFund3.mmClassType, com.tools20022.repository.msg.InvestmentFundTransactionsByFund3.mmDistributionPolicy,
-						com.tools20022.repository.msg.InvestmentFundTransactionsByFund3.mmTransactionDetails, com.tools20022.repository.msg.InvestmentFundTransactionsByFund3.mmBalanceByPage);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsV03.mmTransactionOnAccount);
+				messageElement_lazy = () -> Arrays.asList(InvestmentFundTransactionsByFund3.mmIdentification, InvestmentFundTransactionsByFund3.mmName, InvestmentFundTransactionsByFund3.mmSupplementaryIdentification,
+						InvestmentFundTransactionsByFund3.mmSecuritiesForm, InvestmentFundTransactionsByFund3.mmClassType, InvestmentFundTransactionsByFund3.mmDistributionPolicy, InvestmentFundTransactionsByFund3.mmTransactionDetails,
+						InvestmentFundTransactionsByFund3.mmBalanceByPage);
+				messageBuildingBlock_lazy = () -> Arrays.asList(StatementOfInvestmentFundTransactionsV03.mmTransactionOnAccount);
 				trace_lazy = () -> InvestmentFundTransaction.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InvestmentFundTransactionsByFund3";
 				definition = "Investment fund transactions for a specific financial instrument.";
 				previousVersion_lazy = () -> InvestmentFundTransactionsByFund2.mmObject();

@@ -20,9 +20,11 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.ClearingScheme1Choice;
 import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -100,7 +102,7 @@ public class AccountLimits1 {
 			componentContext_lazy = () -> AccountLimits1.mmObject();
 			isDerived = false;
 			xmlTag = "LmtTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LimitType";
 			definition = "Defines type of funds limits.";
 			maxOccurs = 1;
@@ -141,7 +143,7 @@ public class AccountLimits1 {
 			componentContext_lazy = () -> AccountLimits1.mmObject();
 			isDerived = false;
 			xmlTag = "LmtAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LimitAmount";
 			definition = "Amount of money of the limit. ";
 			maxOccurs = 1;
@@ -182,7 +184,7 @@ public class AccountLimits1 {
 			componentContext_lazy = () -> AccountLimits1.mmObject();
 			isDerived = false;
 			xmlTag = "LmtUtlstnAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LimitUtilisationAmount";
 			definition = "Amount of used funds out of defined limit. ";
 			maxOccurs = 1;
@@ -224,7 +226,7 @@ public class AccountLimits1 {
 			componentContext_lazy = () -> AccountLimits1.mmObject();
 			isDerived = false;
 			xmlTag = "BilLmtCtrPtyId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BilateralLimitCounterpartyIdentification";
 			definition = "Identification of the system member for which the limit is established.";
 			maxOccurs = 1;
@@ -266,7 +268,7 @@ public class AccountLimits1 {
 			componentContext_lazy = () -> AccountLimits1.mmObject();
 			isDerived = false;
 			xmlTag = "ClrCrctSchme";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClearingCircuitScheme";
 			definition = "Clearing scheme related to Registry of the Clearing Positions (RCP).";
 			maxOccurs = 1;
@@ -279,11 +281,10 @@ public class AccountLimits1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountLimits1.mmLimitType, com.tools20022.repository.msg.AccountLimits1.mmLimitAmount,
-						com.tools20022.repository.msg.AccountLimits1.mmLimitUtilisationAmount, com.tools20022.repository.msg.AccountLimits1.mmBilateralLimitCounterpartyIdentification,
-						com.tools20022.repository.msg.AccountLimits1.mmClearingCircuitScheme);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(AccountLimits1.mmLimitType, AccountLimits1.mmLimitAmount, AccountLimits1.mmLimitUtilisationAmount, AccountLimits1.mmBilateralLimitCounterpartyIdentification,
+						AccountLimits1.mmClearingCircuitScheme);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "AccountLimits1";
 				definition = "Characteristics and values set for account limits.";
 			}

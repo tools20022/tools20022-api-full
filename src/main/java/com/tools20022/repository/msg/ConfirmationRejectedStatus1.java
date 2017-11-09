@@ -17,13 +17,12 @@
 
 package com.tools20022.repository.msg;
 
-import com.tools20022.metamodel.MMMessageAssociationEnd;
-import com.tools20022.metamodel.MMMessageAttribute;
-import com.tools20022.metamodel.MMMessageComponent;
-import com.tools20022.metamodel.MMXor;
+import com.tools20022.metamodel.*;
 import com.tools20022.repository.codeset.RejectedConfirmationStatusReason1Code;
 import com.tools20022.repository.datatype.Extended350Code;
 import com.tools20022.repository.entity.SecuritiesOrderStatus;
+import com.tools20022.repository.entity.StatusReason;
+import com.tools20022.repository.GeneratedRepository;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -130,14 +129,14 @@ public class ConfirmationRejectedStatus1 {
 	 */
 	public static final MMMessageAttribute mmReason = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrderStatus.mmConfirmationRejectedStatusReason;
+			businessElementTrace_lazy = () -> SecuritiesOrderStatus.mmConfirmationRejectedStatusReason;
 			componentContext_lazy = () -> ConfirmationRejectedStatus1.mmObject();
 			isDerived = false;
 			xmlTag = "Rsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reason";
 			definition = "Reason for the rejected status.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ConfirmationRejectedStatus2.mmReason);
+			nextVersions_lazy = () -> Arrays.asList(ConfirmationRejectedStatus2.mmReason);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RejectedConfirmationStatusReason1Code.mmObject();
@@ -177,7 +176,7 @@ public class ConfirmationRejectedStatus1 {
 			componentContext_lazy = () -> ConfirmationRejectedStatus1.mmObject();
 			isDerived = false;
 			xmlTag = "XtndedRsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExtendedReason";
 			definition = "Reason for the rejected status.";
 			maxOccurs = 1;
@@ -220,11 +219,11 @@ public class ConfirmationRejectedStatus1 {
 	 */
 	public static final MMMessageAssociationEnd mmDataSourceScheme = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmDataSourceScheme;
+			businessElementTrace_lazy = () -> StatusReason.mmDataSourceScheme;
 			componentContext_lazy = () -> ConfirmationRejectedStatus1.mmObject();
 			isDerived = false;
 			xmlTag = "DataSrcSchme";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DataSourceScheme";
 			definition = "Proprietary identification of the reason for a rejected status.";
 			maxOccurs = 1;
@@ -239,6 +238,10 @@ public class ConfirmationRejectedStatus1 {
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
+	 * messageComponent} =
+	 * {@linkplain com.tools20022.repository.msg.ConfirmationRejectedStatus1
+	 * ConfirmationRejectedStatus1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getImpactedElements
 	 * impactedElements} =
 	 * <ul>
@@ -253,10 +256,6 @@ public class ConfirmationRejectedStatus1 {
 	 * ConfirmationRejectedStatus1.mmDataSourceScheme}</li>
 	 * </ul>
 	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
-	 * messageComponent} =
-	 * {@linkplain com.tools20022.repository.msg.ConfirmationRejectedStatus1
-	 * ConfirmationRejectedStatus1}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -272,23 +271,21 @@ public class ConfirmationRejectedStatus1 {
 	 */
 	public static final MMXor mmReasonRule = new MMXor() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReasonRule";
 			definition = "One and only one message element in the list (ExtendedReason, Reason, DataSourceScheme) must be present.";
 			messageComponent_lazy = () -> ConfirmationRejectedStatus1.mmObject();
-			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ConfirmationRejectedStatus1.mmReason, com.tools20022.repository.msg.ConfirmationRejectedStatus1.mmExtendedReason,
-					com.tools20022.repository.msg.ConfirmationRejectedStatus1.mmDataSourceScheme);
+			impactedElements_lazy = () -> Arrays.asList(ConfirmationRejectedStatus1.mmReason, ConfirmationRejectedStatus1.mmExtendedReason, ConfirmationRejectedStatus1.mmDataSourceScheme);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ConfirmationRejectedStatus1.mmReason, com.tools20022.repository.msg.ConfirmationRejectedStatus1.mmExtendedReason,
-						com.tools20022.repository.msg.ConfirmationRejectedStatus1.mmDataSourceScheme);
+				messageElement_lazy = () -> Arrays.asList(ConfirmationRejectedStatus1.mmReason, ConfirmationRejectedStatus1.mmExtendedReason, ConfirmationRejectedStatus1.mmDataSourceScheme);
 				trace_lazy = () -> SecuritiesOrderStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
 						return DateFormat.getDateInstance(java.text.DateFormat.LONG).parse("September 9, 2016");
@@ -299,7 +296,7 @@ public class ConfirmationRejectedStatus1 {
 				name = "ConfirmationRejectedStatus1";
 				definition = "Status is rejected.";
 				nextVersions_lazy = () -> Arrays.asList(ConfirmationRejectedStatus2.mmObject());
-				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ConfirmationRejectedStatus1.mmReasonRule);
+				xors_lazy = () -> Arrays.asList(ConfirmationRejectedStatus1.mmReasonRule);
 			}
 		});
 		return mmObject_lazy.get();

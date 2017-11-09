@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.AttendanceContextCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -86,7 +88,7 @@ public class AttendanceContext1Code extends AttendanceContextCode {
 	 */
 	public static final MMCode mmAttended = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Attended";
 			owner_lazy = () -> AttendanceContext1Code.mmObject();
 		}
@@ -109,7 +111,7 @@ public class AttendanceContext1Code extends AttendanceContextCode {
 	 */
 	public static final MMCode mmSemiAttended = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SemiAttended";
 			owner_lazy = () -> AttendanceContext1Code.mmObject();
 		}
@@ -132,7 +134,7 @@ public class AttendanceContext1Code extends AttendanceContextCode {
 	 */
 	public static final MMCode mmUnattended = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unattended";
 			owner_lazy = () -> AttendanceContext1Code.mmObject();
 		}
@@ -141,13 +143,12 @@ public class AttendanceContext1Code extends AttendanceContextCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ATTD");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AttendanceContext1Code";
 				definition = "Human attendance at the POI location during the transaction.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AttendanceContext1Code.mmAttended, com.tools20022.repository.codeset.AttendanceContext1Code.mmSemiAttended,
-						com.tools20022.repository.codeset.AttendanceContext1Code.mmUnattended);
+				code_lazy = () -> Arrays.asList(AttendanceContext1Code.mmAttended, AttendanceContext1Code.mmSemiAttended, AttendanceContext1Code.mmUnattended);
 				trace_lazy = () -> AttendanceContextCode.mmObject();
 			}
 		});

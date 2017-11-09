@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.PriceReportFunction1Code
+ * PriceReportFunction1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -38,13 +47,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.PriceReportFunctionCode#mmPartialCorrectionPriceReport
  * PriceReportFunctionCode.mmPartialCorrectionPriceReport}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.PriceReportFunction1Code
- * PriceReportFunction1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -97,7 +99,7 @@ public class PriceReportFunctionCode {
 	 */
 	public static final MMCode mmNewPriceReport = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewPriceReport";
 			definition = "The price report is ‘new’, that is the report is not being used as a correction of previously sent prices.";
 			owner_lazy = () -> PriceReportFunctionCode.mmObject();
@@ -130,7 +132,7 @@ public class PriceReportFunctionCode {
 	 */
 	public static final MMCode mmCompleteReplacementPriceReport = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CompleteReplacementPriceReport";
 			definition = "The price report conveys the correction of the complete set of prices previously sent for the same price report identification.";
 			owner_lazy = () -> PriceReportFunctionCode.mmObject();
@@ -163,7 +165,7 @@ public class PriceReportFunctionCode {
 	 */
 	public static final MMCode mmPartialCorrectionPriceReport = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartialCorrectionPriceReport";
 			definition = "The price report conveys the correction of some of the prices previously sent for the same price report identification.";
 			owner_lazy = () -> PriceReportFunctionCode.mmObject();
@@ -174,13 +176,12 @@ public class PriceReportFunctionCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("NEWP");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PriceReportFunctionCode";
 				definition = "Specifies the function of the price report.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PriceReportFunctionCode.mmNewPriceReport, com.tools20022.repository.codeset.PriceReportFunctionCode.mmCompleteReplacementPriceReport,
-						com.tools20022.repository.codeset.PriceReportFunctionCode.mmPartialCorrectionPriceReport);
+				code_lazy = () -> Arrays.asList(PriceReportFunctionCode.mmNewPriceReport, PriceReportFunctionCode.mmCompleteReplacementPriceReport, PriceReportFunctionCode.mmPartialCorrectionPriceReport);
 				derivation_lazy = () -> Arrays.asList(PriceReportFunction1Code.mmObject());
 			}
 		});

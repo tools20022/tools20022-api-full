@@ -19,7 +19,9 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -95,7 +97,7 @@ public class Statement29 {
 			componentContext_lazy = () -> Statement29.mmObject();
 			isDerived = false;
 			xmlTag = "StmtDtOrPrd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatementDateOrPeriod";
 			definition = "Date or period of the statement.";
 			maxOccurs = 1;
@@ -135,7 +137,7 @@ public class Statement29 {
 			componentContext_lazy = () -> Statement29.mmObject();
 			isDerived = false;
 			xmlTag = "Frqcy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Frequency";
 			definition = "Frequency of the statement.";
 			maxOccurs = 1;
@@ -176,7 +178,7 @@ public class Statement29 {
 			componentContext_lazy = () -> Statement29.mmObject();
 			isDerived = false;
 			xmlTag = "UpdTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UpdateType";
 			definition = "Indicates whether the statement is complete or contains changes only.";
 			maxOccurs = 1;
@@ -217,7 +219,7 @@ public class Statement29 {
 			componentContext_lazy = () -> Statement29.mmObject();
 			isDerived = false;
 			xmlTag = "StmtBsis";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatementBasis";
 			definition = "Type of balance on which the statement is prepared.";
 			maxOccurs = 1;
@@ -258,7 +260,7 @@ public class Statement29 {
 			componentContext_lazy = () -> Statement29.mmObject();
 			isDerived = false;
 			xmlTag = "StmtTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatementType";
 			definition = "Type of balance on which the statement is prepared.";
 			maxOccurs = 1;
@@ -271,10 +273,9 @@ public class Statement29 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Statement29.mmStatementDateOrPeriod, com.tools20022.repository.msg.Statement29.mmFrequency, com.tools20022.repository.msg.Statement29.mmUpdateType,
-						com.tools20022.repository.msg.Statement29.mmStatementBasis, com.tools20022.repository.msg.Statement29.mmStatementType);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(Statement29.mmStatementDateOrPeriod, Statement29.mmFrequency, Statement29.mmUpdateType, Statement29.mmStatementBasis, Statement29.mmStatementType);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Statement29";
 				definition = "Characteristics of the statement.";
 			}

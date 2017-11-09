@@ -19,9 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.AmountOrPercentage2Choice;
 import com.tools20022.repository.choice.TaxType2Choice;
 import com.tools20022.repository.entity.Tax;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -108,14 +110,14 @@ public class Tax23 {
 	 */
 	public static final MMMessageAssociationEnd mmType = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.mmType;
+			businessElementTrace_lazy = () -> Tax.mmType;
 			componentContext_lazy = () -> Tax23.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Specifies the type of tax.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Tax22.mmType);
+			nextVersions_lazy = () -> Arrays.asList(Tax22.mmType);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -159,7 +161,7 @@ public class Tax23 {
 			componentContext_lazy = () -> Tax23.mmObject();
 			isDerived = false;
 			xmlTag = "AmtOrPctg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmountOrPercentage";
 			definition = "Specifies the tax as an amount or percentage.";
 			maxOccurs = 1;
@@ -172,10 +174,10 @@ public class Tax23 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Tax23.mmType, com.tools20022.repository.msg.Tax23.mmAmountOrPercentage);
+				messageElement_lazy = () -> Arrays.asList(Tax23.mmType, Tax23.mmAmountOrPercentage);
 				trace_lazy = () -> Tax.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Tax23";
 				definition = "Amount of money due to the government or tax authority, according to various pre-defined parameters such as thresholds or income.";
 				nextVersions_lazy = () -> Arrays.asList(Tax22.mmObject());

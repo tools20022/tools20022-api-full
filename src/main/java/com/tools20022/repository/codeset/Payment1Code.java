@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.PaymentCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -81,7 +83,7 @@ public class Payment1Code extends PaymentCode {
 	 */
 	public static final MMCode mmActualPayment = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ActualPayment";
 			owner_lazy = () -> Payment1Code.mmObject();
 		}
@@ -103,7 +105,7 @@ public class Payment1Code extends PaymentCode {
 	 */
 	public static final MMCode mmContractualPayment = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ContractualPayment";
 			owner_lazy = () -> Payment1Code.mmObject();
 		}
@@ -112,12 +114,12 @@ public class Payment1Code extends PaymentCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ACTU");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Payment1Code";
 				definition = "Specifies the type of payment.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Payment1Code.mmActualPayment, com.tools20022.repository.codeset.Payment1Code.mmContractualPayment);
+				code_lazy = () -> Arrays.asList(Payment1Code.mmActualPayment, Payment1Code.mmContractualPayment);
 				trace_lazy = () -> PaymentCode.mmObject();
 			}
 		});

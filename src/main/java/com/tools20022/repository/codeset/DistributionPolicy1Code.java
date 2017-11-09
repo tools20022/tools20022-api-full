@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.DistributionPolicyCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -86,7 +88,7 @@ public class DistributionPolicy1Code extends DistributionPolicyCode {
 	 */
 	public static final MMCode mmDistribution = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Distribution";
 			owner_lazy = () -> DistributionPolicy1Code.mmObject();
 		}
@@ -109,7 +111,7 @@ public class DistributionPolicy1Code extends DistributionPolicyCode {
 	 */
 	public static final MMCode mmAccumulation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Accumulation";
 			owner_lazy = () -> DistributionPolicy1Code.mmObject();
 		}
@@ -118,12 +120,12 @@ public class DistributionPolicy1Code extends DistributionPolicyCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("DIST");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DistributionPolicy1Code";
 				definition = "Specifies if income is to be paid out (distributed) or retained (accumulated).";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DistributionPolicy1Code.mmDistribution, com.tools20022.repository.codeset.DistributionPolicy1Code.mmAccumulation);
+				code_lazy = () -> Arrays.asList(DistributionPolicy1Code.mmDistribution, DistributionPolicy1Code.mmAccumulation);
 				trace_lazy = () -> DistributionPolicyCode.mmObject();
 			}
 		});

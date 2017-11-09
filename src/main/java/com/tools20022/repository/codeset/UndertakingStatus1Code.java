@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.UndertakingStatusCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -89,7 +91,7 @@ public class UndertakingStatus1Code extends UndertakingStatusCode {
 	 */
 	public static final MMCode mmAcceptedTechnicalValidation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcceptedTechnicalValidation";
 			owner_lazy = () -> UndertakingStatus1Code.mmObject();
 		}
@@ -112,7 +114,7 @@ public class UndertakingStatus1Code extends UndertakingStatusCode {
 	 */
 	public static final MMCode mmPending = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Pending";
 			owner_lazy = () -> UndertakingStatus1Code.mmObject();
 		}
@@ -135,7 +137,7 @@ public class UndertakingStatus1Code extends UndertakingStatusCode {
 	 */
 	public static final MMCode mmReceived = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Received";
 			owner_lazy = () -> UndertakingStatus1Code.mmObject();
 		}
@@ -158,7 +160,7 @@ public class UndertakingStatus1Code extends UndertakingStatusCode {
 	 */
 	public static final MMCode mmRejected = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rejected";
 			owner_lazy = () -> UndertakingStatus1Code.mmObject();
 		}
@@ -167,13 +169,12 @@ public class UndertakingStatus1Code extends UndertakingStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ACTC");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "UndertakingStatus1Code";
 				definition = "Specifies the undertaking transaction status.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UndertakingStatus1Code.mmAcceptedTechnicalValidation, com.tools20022.repository.codeset.UndertakingStatus1Code.mmPending,
-						com.tools20022.repository.codeset.UndertakingStatus1Code.mmReceived, com.tools20022.repository.codeset.UndertakingStatus1Code.mmRejected);
+				code_lazy = () -> Arrays.asList(UndertakingStatus1Code.mmAcceptedTechnicalValidation, UndertakingStatus1Code.mmPending, UndertakingStatus1Code.mmReceived, UndertakingStatus1Code.mmRejected);
 				trace_lazy = () -> UndertakingStatusCode.mmObject();
 			}
 		});

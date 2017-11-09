@@ -20,6 +20,7 @@ package com.tools20022.repository.area.trea;
 import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.TreasuryArchive;
 import com.tools20022.repository.msg.MessageReference;
 import com.tools20022.repository.msgset.ForexNotificationsISOArchive;
@@ -37,6 +38,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code trea.013.001.01}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} = {@linkplain com.tools20022.repository.area.TreasuryArchive
  * TreasuryArchive}</li>
@@ -61,9 +65,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * WithdrawalNotificationV01.mmMatchingSystemUniqueReference}</li>
  * </ul>
  * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code trea.013.001.01}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -109,7 +110,7 @@ public class WithdrawalNotificationV01 {
 	public static final MMMessageBuildingBlock mmMatchingSystemUniqueReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "MtchgSysUnqRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MatchingSystemUniqueReference";
 			definition = "Reference assigned by the central matching system which is notifying the deletion of a previously reported trade.";
 			maxOccurs = 1;
@@ -121,14 +122,14 @@ public class WithdrawalNotificationV01 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "WithdrawalNotificationV01";
 				definition = "Scope\r\nThe WithdrawalNotification message is sent by a central system to notify the withdrawal of a trade which was previously notified to the receiver as an alleged trade.\r\nUsage\r\nThe message is used to confirm the cancellation of a previously notified trade.";
 				messageSet_lazy = () -> Arrays.asList(ForexNotificationsISOArchive.mmObject());
 				rootElement = "Document";
 				xmlTag = "WdrwlNtfctnV01";
 				businessArea_lazy = () -> TreasuryArchive.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.trea.WithdrawalNotificationV01.mmMatchingSystemUniqueReference);
+				messageBuildingBlock_lazy = () -> Arrays.asList(WithdrawalNotificationV01.mmMatchingSystemUniqueReference);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "trea";

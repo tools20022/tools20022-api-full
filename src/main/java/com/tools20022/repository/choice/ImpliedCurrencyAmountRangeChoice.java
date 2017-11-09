@@ -19,8 +19,10 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ImpliedCurrencyAndAmount;
 import com.tools20022.repository.entity.AmountRange;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.AmountRangeBoundary1;
 import com.tools20022.repository.msg.FromToAmountRange;
 import java.util.Arrays;
@@ -112,11 +114,11 @@ public class ImpliedCurrencyAmountRangeChoice {
 	 */
 	public static final MMMessageAttribute mmFromAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AmountRange.mmFromAmount;
+			businessElementTrace_lazy = () -> AmountRange.mmFromAmount;
 			componentContext_lazy = () -> ImpliedCurrencyAmountRangeChoice.mmObject();
 			isDerived = false;
 			xmlTag = "FrAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FromAmount";
 			definition = "Lower boundary of a range of amount values.";
 			maxOccurs = 1;
@@ -160,11 +162,11 @@ public class ImpliedCurrencyAmountRangeChoice {
 	 */
 	public static final MMMessageAttribute mmToAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AmountRange.mmToAmount;
+			businessElementTrace_lazy = () -> AmountRange.mmToAmount;
 			componentContext_lazy = () -> ImpliedCurrencyAmountRangeChoice.mmObject();
 			isDerived = false;
 			xmlTag = "ToAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ToAmount";
 			definition = "Upper boundary of a range of amount values.";
 			maxOccurs = 1;
@@ -211,7 +213,7 @@ public class ImpliedCurrencyAmountRangeChoice {
 			componentContext_lazy = () -> ImpliedCurrencyAmountRangeChoice.mmObject();
 			isDerived = false;
 			xmlTag = "FrToAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FromToAmount";
 			definition = "Range of valid amount values.";
 			maxOccurs = 1;
@@ -255,11 +257,11 @@ public class ImpliedCurrencyAmountRangeChoice {
 	 */
 	public static final MMMessageAttribute mmEqualAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AmountRange.mmEqualAmount;
+			businessElementTrace_lazy = () -> AmountRange.mmEqualAmount;
 			componentContext_lazy = () -> ImpliedCurrencyAmountRangeChoice.mmObject();
 			isDerived = false;
 			xmlTag = "EQAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EqualAmount";
 			definition = "Exact value an amount must match to be considered valid.";
 			maxOccurs = 1;
@@ -304,11 +306,11 @@ public class ImpliedCurrencyAmountRangeChoice {
 	 */
 	public static final MMMessageAttribute mmNotEqualAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AmountRange.mmNotEqualAmount;
+			businessElementTrace_lazy = () -> AmountRange.mmNotEqualAmount;
 			componentContext_lazy = () -> ImpliedCurrencyAmountRangeChoice.mmObject();
 			isDerived = false;
 			xmlTag = "NEQAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotEqualAmount";
 			definition = "Value that an amount must not match to be considered valid.";
 			maxOccurs = 1;
@@ -320,12 +322,11 @@ public class ImpliedCurrencyAmountRangeChoice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ImpliedCurrencyAmountRangeChoice.mmFromAmount, com.tools20022.repository.choice.ImpliedCurrencyAmountRangeChoice.mmToAmount,
-						com.tools20022.repository.choice.ImpliedCurrencyAmountRangeChoice.mmFromToAmount, com.tools20022.repository.choice.ImpliedCurrencyAmountRangeChoice.mmEqualAmount,
-						com.tools20022.repository.choice.ImpliedCurrencyAmountRangeChoice.mmNotEqualAmount);
+				messageElement_lazy = () -> Arrays.asList(ImpliedCurrencyAmountRangeChoice.mmFromAmount, ImpliedCurrencyAmountRangeChoice.mmToAmount, ImpliedCurrencyAmountRangeChoice.mmFromToAmount,
+						ImpliedCurrencyAmountRangeChoice.mmEqualAmount, ImpliedCurrencyAmountRangeChoice.mmNotEqualAmount);
 				trace_lazy = () -> AmountRange.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ImpliedCurrencyAmountRangeChoice";
 				definition = "Choice between ranges of values in which an amount is considered valid or a specified amount value which has to be matched or unmatched to be valid.";
 			}

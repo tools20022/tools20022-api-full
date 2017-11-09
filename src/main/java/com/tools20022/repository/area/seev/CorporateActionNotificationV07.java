@@ -20,6 +20,7 @@ package com.tools20022.repository.area.seev;
 import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.SecuritiesEventsLatestVersion;
 import com.tools20022.repository.choice.AccountIdentification32Choice;
 import com.tools20022.repository.choice.PartyIdentification71Choice;
@@ -55,6 +56,9 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code seev.031.001.07}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.SecuritiesEventsLatestVersion
@@ -147,9 +151,6 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code seev.031.001.07}</li>
- * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -203,10 +204,10 @@ public class CorporateActionNotificationV07 {
 	public static final MMMessageBuildingBlock mmPagination = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Pgntn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Pagination";
 			definition = "Page number of the message and  continuation indicator to indicate that the multi-parts notification is to continue or that the message is the last page of the multi-parts notification.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.seev.CorporateActionNotificationV06.mmPagination;
+			previousVersion_lazy = () -> CorporateActionNotificationV06.mmPagination;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> Pagination.mmObject();
@@ -247,10 +248,10 @@ public class CorporateActionNotificationV07 {
 	public static final MMMessageBuildingBlock mmNotificationGeneralInformation = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "NtfctnGnlInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotificationGeneralInformation";
 			definition = "General information about the event notification type, status and contents.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.seev.CorporateActionNotificationV06.mmNotificationGeneralInformation;
+			previousVersion_lazy = () -> CorporateActionNotificationV06.mmNotificationGeneralInformation;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> CorporateActionNotification5.mmObject();
@@ -289,10 +290,10 @@ public class CorporateActionNotificationV07 {
 	public static final MMMessageBuildingBlock mmPreviousNotificationIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "PrvsNtfctnId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousNotificationIdentification";
 			definition = "Identification of a previously sent notification document.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.seev.CorporateActionNotificationV06.mmPreviousNotificationIdentification;
+			previousVersion_lazy = () -> CorporateActionNotificationV06.mmPreviousNotificationIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DocumentIdentification31.mmObject();
@@ -330,10 +331,10 @@ public class CorporateActionNotificationV07 {
 	public static final MMMessageBuildingBlock mmInstructionIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "InstrId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructionIdentification";
 			definition = "Identification of a related instruction document.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.seev.CorporateActionNotificationV06.mmInstructionIdentification;
+			previousVersion_lazy = () -> CorporateActionNotificationV06.mmInstructionIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DocumentIdentification9.mmObject();
@@ -372,10 +373,10 @@ public class CorporateActionNotificationV07 {
 	public static final MMMessageBuildingBlock mmOtherDocumentIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "OthrDocId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherDocumentIdentification";
 			definition = "Identification of other documents as well as the document number.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.seev.CorporateActionNotificationV06.mmOtherDocumentIdentification;
+			previousVersion_lazy = () -> CorporateActionNotificationV06.mmOtherDocumentIdentification;
 			minOccurs = 0;
 			complexType_lazy = () -> DocumentIdentification32.mmObject();
 		}
@@ -415,10 +416,10 @@ public class CorporateActionNotificationV07 {
 	public static final MMMessageBuildingBlock mmEventsLinkage = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "EvtsLkg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventsLinkage";
 			definition = "Identification of an other corporate action event that needs to be closely linked to the processing of the event notified in this document.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.seev.CorporateActionNotificationV06.mmEventsLinkage;
+			previousVersion_lazy = () -> CorporateActionNotificationV06.mmEventsLinkage;
 			minOccurs = 0;
 			complexType_lazy = () -> CorporateActionEventReference3.mmObject();
 		}
@@ -455,10 +456,10 @@ public class CorporateActionNotificationV07 {
 	public static final MMMessageBuildingBlock mmCorporateActionGeneralInformation = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CorpActnGnlInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorporateActionGeneralInformation";
 			definition = "General information about the corporate action event.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.seev.CorporateActionNotificationV06.mmCorporateActionGeneralInformation;
+			previousVersion_lazy = () -> CorporateActionNotificationV06.mmCorporateActionGeneralInformation;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> CorporateActionGeneralInformation105.mmObject();
@@ -499,10 +500,10 @@ public class CorporateActionNotificationV07 {
 	public static final MMMessageBuildingBlock mmAccountDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "AcctDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountDetails";
 			definition = "General information about the safekeeping account, owner and account balance.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.seev.CorporateActionNotificationV06.mmAccountDetails;
+			previousVersion_lazy = () -> CorporateActionNotificationV06.mmAccountDetails;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> AccountIdentification32Choice.mmObject();
@@ -543,10 +544,10 @@ public class CorporateActionNotificationV07 {
 	public static final MMMessageBuildingBlock mmIntermediateSecurity = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "IntrmdtScty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IntermediateSecurity";
 			definition = "Provides details on rights credited to the account as for instance trading period, expiry date, renounceability.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.seev.CorporateActionNotificationV06.mmIntermediateSecurity;
+			previousVersion_lazy = () -> CorporateActionNotificationV06.mmIntermediateSecurity;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> FinancialInstrumentAttributes68.mmObject();
@@ -584,10 +585,10 @@ public class CorporateActionNotificationV07 {
 	public static final MMMessageBuildingBlock mmCorporateActionDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CorpActnDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorporateActionDetails";
 			definition = "Information about the corporate action event.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.seev.CorporateActionNotificationV06.mmCorporateActionDetails;
+			previousVersion_lazy = () -> CorporateActionNotificationV06.mmCorporateActionDetails;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> CorporateAction31.mmObject();
@@ -625,10 +626,10 @@ public class CorporateActionNotificationV07 {
 	public static final MMMessageBuildingBlock mmCorporateActionOptionDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CorpActnOptnDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorporateActionOptionDetails";
 			definition = "Information about the corporate action option.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.seev.CorporateActionNotificationV06.mmCorporateActionOptionDetails;
+			previousVersion_lazy = () -> CorporateActionNotificationV06.mmCorporateActionOptionDetails;
 			minOccurs = 0;
 			complexType_lazy = () -> CorporateActionOption130.mmObject();
 		}
@@ -665,10 +666,10 @@ public class CorporateActionNotificationV07 {
 	public static final MMMessageBuildingBlock mmAdditionalInformation = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "AddtlInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInformation";
 			definition = "Provides additional information.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.seev.CorporateActionNotificationV06.mmAdditionalInformation;
+			previousVersion_lazy = () -> CorporateActionNotificationV06.mmAdditionalInformation;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> CorporateActionNarrative27.mmObject();
@@ -710,10 +711,10 @@ public class CorporateActionNotificationV07 {
 	public static final MMMessageBuildingBlock mmIssuerAgent = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "IssrAgt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssuerAgent";
 			definition = "Party appointed to administer the event on behalf of the issuer company/offeror. The party may be contacted for more information about the event.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.seev.CorporateActionNotificationV06.mmIssuerAgent;
+			previousVersion_lazy = () -> CorporateActionNotificationV06.mmIssuerAgent;
 			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification71Choice.mmObject();
 		}
@@ -753,10 +754,10 @@ public class CorporateActionNotificationV07 {
 	public static final MMMessageBuildingBlock mmPayingAgent = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "PngAgt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PayingAgent";
 			definition = "Agent (principal or fiscal paying agent) appointed to execute the payment for the corporate action event on behalf of the issuer company/offeror.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.seev.CorporateActionNotificationV06.mmPayingAgent;
+			previousVersion_lazy = () -> CorporateActionNotificationV06.mmPayingAgent;
 			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification71Choice.mmObject();
 		}
@@ -796,10 +797,10 @@ public class CorporateActionNotificationV07 {
 	public static final MMMessageBuildingBlock mmSubPayingAgent = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SubPngAgt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubPayingAgent";
 			definition = "Sub-agent appointed to execute the payment for the corporate action event on behalf of the issuer company/offeror.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.seev.CorporateActionNotificationV06.mmSubPayingAgent;
+			previousVersion_lazy = () -> CorporateActionNotificationV06.mmSubPayingAgent;
 			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification71Choice.mmObject();
 		}
@@ -837,10 +838,10 @@ public class CorporateActionNotificationV07 {
 	public static final MMMessageBuildingBlock mmRegistrar = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Regar";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Registrar";
 			definition = "Party/agent responsible for maintaining the register of a security.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.seev.CorporateActionNotificationV06.mmRegistrar;
+			previousVersion_lazy = () -> CorporateActionNotificationV06.mmRegistrar;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification71Choice.mmObject();
@@ -881,10 +882,10 @@ public class CorporateActionNotificationV07 {
 	public static final MMMessageBuildingBlock mmResellingAgent = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "RsellngAgt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ResellingAgent";
 			definition = "A broker-dealer responsible for reselling to new investors securities (usually bonds) that have been tendered for purchase by their owner. ";
-			previousVersion_lazy = () -> com.tools20022.repository.area.seev.CorporateActionNotificationV06.mmResellingAgent;
+			previousVersion_lazy = () -> CorporateActionNotificationV06.mmResellingAgent;
 			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification71Choice.mmObject();
 		}
@@ -925,10 +926,10 @@ public class CorporateActionNotificationV07 {
 	public static final MMMessageBuildingBlock mmPhysicalSecuritiesAgent = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "PhysSctiesAgt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PhysicalSecuritiesAgent";
 			definition = "A trust company, bank or similar financial institution assigned by an issuer to accept presentations of instruments, usually bonds, for transfer and or exchange.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.seev.CorporateActionNotificationV06.mmPhysicalSecuritiesAgent;
+			previousVersion_lazy = () -> CorporateActionNotificationV06.mmPhysicalSecuritiesAgent;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification71Choice.mmObject();
@@ -970,10 +971,10 @@ public class CorporateActionNotificationV07 {
 	public static final MMMessageBuildingBlock mmDropAgent = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "DrpAgt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DropAgent";
 			definition = "A trust company, bank or similar financial institution who acts on behalf of an out of town agent or event agent where securities can be delivered in person. ";
-			previousVersion_lazy = () -> com.tools20022.repository.area.seev.CorporateActionNotificationV06.mmDropAgent;
+			previousVersion_lazy = () -> CorporateActionNotificationV06.mmDropAgent;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification71Choice.mmObject();
@@ -1015,10 +1016,10 @@ public class CorporateActionNotificationV07 {
 	public static final MMMessageBuildingBlock mmSolicitationAgent = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SlctnAgt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SolicitationAgent";
 			definition = "A trust company, bank or similar financial institution assigned by an issuer to maintain records of investors and account balances and transactions for the consent of a material change. ";
-			previousVersion_lazy = () -> com.tools20022.repository.area.seev.CorporateActionNotificationV06.mmSolicitationAgent;
+			previousVersion_lazy = () -> CorporateActionNotificationV06.mmSolicitationAgent;
 			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification71Choice.mmObject();
 		}
@@ -1058,10 +1059,10 @@ public class CorporateActionNotificationV07 {
 	public static final MMMessageBuildingBlock mmInformationAgent = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "InfAgt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InformationAgent";
 			definition = "A trust company, bank or similar financial institution assigned by an Issuer to provide information and copies of the offering documentation. ";
-			previousVersion_lazy = () -> com.tools20022.repository.area.seev.CorporateActionNotificationV06.mmInformationAgent;
+			previousVersion_lazy = () -> CorporateActionNotificationV06.mmInformationAgent;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification71Choice.mmObject();
@@ -1102,10 +1103,10 @@ public class CorporateActionNotificationV07 {
 	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SplmtryData";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryData";
 			definition = "Additional information that can not be captured in the structured fields and/or any other specific block.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.seev.CorporateActionNotificationV06.mmSupplementaryData;
+			previousVersion_lazy = () -> CorporateActionNotificationV06.mmSupplementaryData;
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
@@ -1114,7 +1115,7 @@ public class CorporateActionNotificationV07 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionNotificationV07";
 				definition = "Scope\r\nAn account servicer sends the CorporateActionNotification message to an account owner or its designated agent to notify details of a corporate action event and optionally account information, eligible balance and entitlements.\r\r\nIt may also include possible elections or choices available to the account owner. The account servicer can initially send the CorporateActionNotification message as a preliminary advice, subsequently replaced by another CorporateActionNotification message with complete or confirmed information.\r\r\nIt may also be sent to an account owner or its designated agent, to remind of event details and/or of missing or incomplete instructions for a corporate action event.\r\nUsage\r\nThe message may also be used to:\r\n- re-send a message previously sent (the sub-function of the message is Duplicate),\r\n- provide a third party with a copy of a message for information (the sub-function of the message is Copy),\r\n- re-send to a third party a copy of a message for information (the sub-function of the message is Copy Duplicate),\r\nusing the relevant elements in the business application header (BAH).";
 				previousVersion_lazy = () -> CorporateActionNotificationV06.mmObject();
@@ -1122,18 +1123,13 @@ public class CorporateActionNotificationV07 {
 				rootElement = "Document";
 				xmlTag = "CorpActnNtfctn";
 				businessArea_lazy = () -> SecuritiesEventsLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.CorporateActionNotificationV07.mmPagination,
-						com.tools20022.repository.area.seev.CorporateActionNotificationV07.mmNotificationGeneralInformation, com.tools20022.repository.area.seev.CorporateActionNotificationV07.mmPreviousNotificationIdentification,
-						com.tools20022.repository.area.seev.CorporateActionNotificationV07.mmInstructionIdentification, com.tools20022.repository.area.seev.CorporateActionNotificationV07.mmOtherDocumentIdentification,
-						com.tools20022.repository.area.seev.CorporateActionNotificationV07.mmEventsLinkage, com.tools20022.repository.area.seev.CorporateActionNotificationV07.mmCorporateActionGeneralInformation,
-						com.tools20022.repository.area.seev.CorporateActionNotificationV07.mmAccountDetails, com.tools20022.repository.area.seev.CorporateActionNotificationV07.mmIntermediateSecurity,
-						com.tools20022.repository.area.seev.CorporateActionNotificationV07.mmCorporateActionDetails, com.tools20022.repository.area.seev.CorporateActionNotificationV07.mmCorporateActionOptionDetails,
-						com.tools20022.repository.area.seev.CorporateActionNotificationV07.mmAdditionalInformation, com.tools20022.repository.area.seev.CorporateActionNotificationV07.mmIssuerAgent,
-						com.tools20022.repository.area.seev.CorporateActionNotificationV07.mmPayingAgent, com.tools20022.repository.area.seev.CorporateActionNotificationV07.mmSubPayingAgent,
-						com.tools20022.repository.area.seev.CorporateActionNotificationV07.mmRegistrar, com.tools20022.repository.area.seev.CorporateActionNotificationV07.mmResellingAgent,
-						com.tools20022.repository.area.seev.CorporateActionNotificationV07.mmPhysicalSecuritiesAgent, com.tools20022.repository.area.seev.CorporateActionNotificationV07.mmDropAgent,
-						com.tools20022.repository.area.seev.CorporateActionNotificationV07.mmSolicitationAgent, com.tools20022.repository.area.seev.CorporateActionNotificationV07.mmInformationAgent,
-						com.tools20022.repository.area.seev.CorporateActionNotificationV07.mmSupplementaryData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(CorporateActionNotificationV07.mmPagination, CorporateActionNotificationV07.mmNotificationGeneralInformation,
+						CorporateActionNotificationV07.mmPreviousNotificationIdentification, CorporateActionNotificationV07.mmInstructionIdentification, CorporateActionNotificationV07.mmOtherDocumentIdentification,
+						CorporateActionNotificationV07.mmEventsLinkage, CorporateActionNotificationV07.mmCorporateActionGeneralInformation, CorporateActionNotificationV07.mmAccountDetails,
+						CorporateActionNotificationV07.mmIntermediateSecurity, CorporateActionNotificationV07.mmCorporateActionDetails, CorporateActionNotificationV07.mmCorporateActionOptionDetails,
+						CorporateActionNotificationV07.mmAdditionalInformation, CorporateActionNotificationV07.mmIssuerAgent, CorporateActionNotificationV07.mmPayingAgent, CorporateActionNotificationV07.mmSubPayingAgent,
+						CorporateActionNotificationV07.mmRegistrar, CorporateActionNotificationV07.mmResellingAgent, CorporateActionNotificationV07.mmPhysicalSecuritiesAgent, CorporateActionNotificationV07.mmDropAgent,
+						CorporateActionNotificationV07.mmSolicitationAgent, CorporateActionNotificationV07.mmInformationAgent, CorporateActionNotificationV07.mmSupplementaryData);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "seev";

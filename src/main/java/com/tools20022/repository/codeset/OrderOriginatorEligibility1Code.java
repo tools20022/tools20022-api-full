@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.OrderOriginatorEligibilityCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -90,7 +92,7 @@ public class OrderOriginatorEligibility1Code extends OrderOriginatorEligibilityC
 	 */
 	public static final MMCode mmEligible = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Eligible";
 			owner_lazy = () -> OrderOriginatorEligibility1Code.mmObject();
 		}
@@ -113,7 +115,7 @@ public class OrderOriginatorEligibility1Code extends OrderOriginatorEligibilityC
 	 */
 	public static final MMCode mmRetail = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Retail";
 			owner_lazy = () -> OrderOriginatorEligibility1Code.mmObject();
 		}
@@ -136,7 +138,7 @@ public class OrderOriginatorEligibility1Code extends OrderOriginatorEligibilityC
 	 */
 	public static final MMCode mmProfessional = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Professional";
 			owner_lazy = () -> OrderOriginatorEligibility1Code.mmObject();
 		}
@@ -145,13 +147,12 @@ public class OrderOriginatorEligibility1Code extends OrderOriginatorEligibilityC
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ELIG");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OrderOriginatorEligibility1Code";
 				definition = "Specifies the type of the counterparties eligibility as defined by article 24 of the EU MiFID Directive applicable to transactions executed by investment firms for eligible counterparties.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OrderOriginatorEligibility1Code.mmEligible, com.tools20022.repository.codeset.OrderOriginatorEligibility1Code.mmRetail,
-						com.tools20022.repository.codeset.OrderOriginatorEligibility1Code.mmProfessional);
+				code_lazy = () -> Arrays.asList(OrderOriginatorEligibility1Code.mmEligible, OrderOriginatorEligibility1Code.mmRetail, OrderOriginatorEligibility1Code.mmProfessional);
 				trace_lazy = () -> OrderOriginatorEligibilityCode.mmObject();
 			}
 		});

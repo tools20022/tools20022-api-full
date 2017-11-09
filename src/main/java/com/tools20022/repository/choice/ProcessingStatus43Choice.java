@@ -19,7 +19,11 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.reda.StandingSettlementInstructionStatusAdviceV01;
+import com.tools20022.repository.entity.CorporateActionStatus;
 import com.tools20022.repository.entity.SecuritiesTradeStatus;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -121,11 +125,11 @@ public class ProcessingStatus43Choice {
 	 */
 	public static final MMMessageAssociationEnd mmReceived = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionStatus.mmCorporateActionInstructionProcessingStatus;
+			businessElementTrace_lazy = () -> CorporateActionStatus.mmCorporateActionInstructionProcessingStatus;
 			componentContext_lazy = () -> ProcessingStatus43Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Rcvd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Received";
 			definition = "Status of the standing settlement instruction, cancellation or deletion is received for further processing.";
 			maxOccurs = 1;
@@ -176,10 +180,10 @@ public class ProcessingStatus43Choice {
 			componentContext_lazy = () -> ProcessingStatus43Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Accptd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Accepted";
 			definition = "Status of the standing settlement instruction, cancellation or deletion is \r\nacknowledged/accepted for further processing. The instruction has been received, is processable and has been validated for further processing.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.ProcessingStatus36Choice.mmAcknowledgedAccepted;
+			previousVersion_lazy = () -> ProcessingStatus36Choice.mmAcknowledgedAccepted;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -227,10 +231,10 @@ public class ProcessingStatus43Choice {
 			componentContext_lazy = () -> ProcessingStatus43Choice.mmObject();
 			isDerived = false;
 			xmlTag = "PdgPrcg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingProcessing";
 			definition = "Status of the standing settlement instruction, cancellation or deletion is pending.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.ProcessingStatus36Choice.mmPendingProcessing;
+			previousVersion_lazy = () -> ProcessingStatus36Choice.mmPendingProcessing;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -277,10 +281,10 @@ public class ProcessingStatus43Choice {
 			componentContext_lazy = () -> ProcessingStatus43Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Rjctd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rejected";
 			definition = "Status of the standing settlement instruction, cancellation or deletion is rejected.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.ProcessingStatus36Choice.mmRejected;
+			previousVersion_lazy = () -> ProcessingStatus36Choice.mmRejected;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -328,10 +332,10 @@ public class ProcessingStatus43Choice {
 			componentContext_lazy = () -> ProcessingStatus43Choice.mmObject();
 			isDerived = false;
 			xmlTag = "PrtrySts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProprietaryStatus";
 			definition = "Status of the standing settlement instruction, cancellation or deletion is expressed in a bilaterally agreed manner.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.ProcessingStatus36Choice.mmProprietary;
+			previousVersion_lazy = () -> ProcessingStatus36Choice.mmProprietary;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -342,13 +346,12 @@ public class ProcessingStatus43Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ProcessingStatus43Choice.mmReceived, com.tools20022.repository.choice.ProcessingStatus43Choice.mmAccepted,
-						com.tools20022.repository.choice.ProcessingStatus43Choice.mmPendingProcessing, com.tools20022.repository.choice.ProcessingStatus43Choice.mmRejected,
-						com.tools20022.repository.choice.ProcessingStatus43Choice.mmProprietaryStatus);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.reda.StandingSettlementInstructionStatusAdviceV01.mmProcessingStatus);
+				messageElement_lazy = () -> Arrays.asList(ProcessingStatus43Choice.mmReceived, ProcessingStatus43Choice.mmAccepted, ProcessingStatus43Choice.mmPendingProcessing, ProcessingStatus43Choice.mmRejected,
+						ProcessingStatus43Choice.mmProprietaryStatus);
+				messageBuildingBlock_lazy = () -> Arrays.asList(StandingSettlementInstructionStatusAdviceV01.mmProcessingStatus);
 				trace_lazy = () -> SecuritiesTradeStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ProcessingStatus43Choice";
 				definition = "Choice of formats for the specification of a status.";
 				previousVersion_lazy = () -> ProcessingStatus36Choice.mmObject();

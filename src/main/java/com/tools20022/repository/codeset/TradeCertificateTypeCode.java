@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.TradeCertificateType1Code
+ * TradeCertificateType1Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TradeCertificateType2Code
+ * TradeCertificateType2Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -62,15 +73,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.TradeCertificateTypeCode#mmUndefined2
  * TradeCertificateTypeCode.mmUndefined2}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.TradeCertificateType1Code
- * TradeCertificateType1Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TradeCertificateType2Code
- * TradeCertificateType2Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -120,7 +122,7 @@ public class TradeCertificateTypeCode {
 	 */
 	public static final MMCode mmAnalysis = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Analysis";
 			definition = "Certificate of analysis.";
 			owner_lazy = () -> TradeCertificateTypeCode.mmObject();
@@ -150,7 +152,7 @@ public class TradeCertificateTypeCode {
 	 */
 	public static final MMCode mmQuality = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Quality";
 			definition = "Certificate of quality.";
 			owner_lazy = () -> TradeCertificateTypeCode.mmObject();
@@ -180,7 +182,7 @@ public class TradeCertificateTypeCode {
 	 */
 	public static final MMCode mmQuantity = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Quantity";
 			definition = "Certificate of quantity.";
 			owner_lazy = () -> TradeCertificateTypeCode.mmObject();
@@ -210,7 +212,7 @@ public class TradeCertificateTypeCode {
 	 */
 	public static final MMCode mmWeight = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Weight";
 			definition = "Certificate of weight.";
 			owner_lazy = () -> TradeCertificateTypeCode.mmObject();
@@ -240,7 +242,7 @@ public class TradeCertificateTypeCode {
 	 */
 	public static final MMCode mmOrigin = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Origin";
 			definition = "Certificate of origin.";
 			owner_lazy = () -> TradeCertificateTypeCode.mmObject();
@@ -270,7 +272,7 @@ public class TradeCertificateTypeCode {
 	 */
 	public static final MMCode mmHealth = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Health";
 			definition = "Certificate of health.";
 			owner_lazy = () -> TradeCertificateTypeCode.mmObject();
@@ -300,7 +302,7 @@ public class TradeCertificateTypeCode {
 	 */
 	public static final MMCode mmPhytosanitary = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Phytosanitary";
 			definition = "Phytosanitary certificate.";
 			owner_lazy = () -> TradeCertificateTypeCode.mmObject();
@@ -330,7 +332,7 @@ public class TradeCertificateTypeCode {
 	 */
 	public static final MMCode mmBeneficiary = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Beneficiary";
 			definition = "Beneficiary certificate.";
 			owner_lazy = () -> TradeCertificateTypeCode.mmObject();
@@ -360,7 +362,7 @@ public class TradeCertificateTypeCode {
 	 */
 	public static final MMCode mmShippingLine = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ShippingLine";
 			definition = "Shipping line certificate.";
 			owner_lazy = () -> TradeCertificateTypeCode.mmObject();
@@ -390,7 +392,7 @@ public class TradeCertificateTypeCode {
 	 */
 	public static final MMCode mmUndefined1 = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Undefined1";
 			definition = "Undefined certificate at this stage.";
 			owner_lazy = () -> TradeCertificateTypeCode.mmObject();
@@ -420,7 +422,7 @@ public class TradeCertificateTypeCode {
 	 */
 	public static final MMCode mmUndefined2 = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Undefined2";
 			definition = "Undefined certificate at this stage.";
 			owner_lazy = () -> TradeCertificateTypeCode.mmObject();
@@ -431,16 +433,14 @@ public class TradeCertificateTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ANLY");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TradeCertificateTypeCode";
 				definition = "Specifies the type of trade certificate.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TradeCertificateTypeCode.mmAnalysis, com.tools20022.repository.codeset.TradeCertificateTypeCode.mmQuality,
-						com.tools20022.repository.codeset.TradeCertificateTypeCode.mmQuantity, com.tools20022.repository.codeset.TradeCertificateTypeCode.mmWeight, com.tools20022.repository.codeset.TradeCertificateTypeCode.mmOrigin,
-						com.tools20022.repository.codeset.TradeCertificateTypeCode.mmHealth, com.tools20022.repository.codeset.TradeCertificateTypeCode.mmPhytosanitary,
-						com.tools20022.repository.codeset.TradeCertificateTypeCode.mmBeneficiary, com.tools20022.repository.codeset.TradeCertificateTypeCode.mmShippingLine,
-						com.tools20022.repository.codeset.TradeCertificateTypeCode.mmUndefined1, com.tools20022.repository.codeset.TradeCertificateTypeCode.mmUndefined2);
+				code_lazy = () -> Arrays.asList(TradeCertificateTypeCode.mmAnalysis, TradeCertificateTypeCode.mmQuality, TradeCertificateTypeCode.mmQuantity, TradeCertificateTypeCode.mmWeight, TradeCertificateTypeCode.mmOrigin,
+						TradeCertificateTypeCode.mmHealth, TradeCertificateTypeCode.mmPhytosanitary, TradeCertificateTypeCode.mmBeneficiary, TradeCertificateTypeCode.mmShippingLine, TradeCertificateTypeCode.mmUndefined1,
+						TradeCertificateTypeCode.mmUndefined2);
 				derivation_lazy = () -> Arrays.asList(TradeCertificateType1Code.mmObject(), TradeCertificateType2Code.mmObject());
 			}
 		});

@@ -19,6 +19,9 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.auth.InformationRequestOpeningV01;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.DatePeriodDetails;
 import com.tools20022.repository.msg.DateTimePeriodDetails;
 import java.util.Arrays;
@@ -101,7 +104,7 @@ public class DateOrDateTimePeriodChoice {
 			componentContext_lazy = () -> DateOrDateTimePeriodChoice.mmObject();
 			isDerived = false;
 			xmlTag = "Dt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Date";
 			definition = "Period expressed with dates.";
 			maxOccurs = 1;
@@ -142,7 +145,7 @@ public class DateOrDateTimePeriodChoice {
 			componentContext_lazy = () -> DateOrDateTimePeriodChoice.mmObject();
 			isDerived = false;
 			xmlTag = "DtTm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DateTime";
 			definition = "Period expressed a dates and times.";
 			maxOccurs = 1;
@@ -155,10 +158,10 @@ public class DateOrDateTimePeriodChoice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.DateOrDateTimePeriodChoice.mmDate, com.tools20022.repository.choice.DateOrDateTimePeriodChoice.mmDateTime);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.auth.InformationRequestOpeningV01.mmInvestigationPeriod);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(DateOrDateTimePeriodChoice.mmDate, DateOrDateTimePeriodChoice.mmDateTime);
+				messageBuildingBlock_lazy = () -> Arrays.asList(InformationRequestOpeningV01.mmInvestigationPeriod);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DateOrDateTimePeriodChoice";
 				definition = "Choice between a date or a date and time format for a period.";
 			}

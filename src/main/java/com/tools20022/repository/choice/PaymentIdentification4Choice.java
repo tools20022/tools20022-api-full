@@ -20,10 +20,12 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.Max70Text;
 import com.tools20022.repository.entity.PaymentIdentification;
 import com.tools20022.repository.entity.PaymentInstruction;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.LongPaymentIdentification1;
 import com.tools20022.repository.msg.QueueTransactionIdentificationDetails;
 import com.tools20022.repository.msg.ShortPaymentIdentification1;
@@ -124,11 +126,11 @@ public class PaymentIdentification4Choice {
 	 */
 	public static final MMMessageAttribute mmTransactionIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentIdentification.mmTransactionIdentification;
+			businessElementTrace_lazy = () -> PaymentIdentification.mmTransactionIdentification;
 			componentContext_lazy = () -> PaymentIdentification4Choice.mmObject();
 			isDerived = false;
 			xmlTag = "TxId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionIdentification";
 			definition = "Unique identification, as assigned by the first instructing agent, to unambiguously identify the transaction that is passed on, unchanged, throughout the entire interbank chain.\nUsage: The transaction identification can be used for reconciliation, tracking or to link tasks relating to the transaction on the interbank level. The instructing agent has to make sure that the transaction identification is unique for a pre-agreed period.\nUsage: this is the former PaymentInstructionReference element.";
 			maxOccurs = 1;
@@ -172,7 +174,7 @@ public class PaymentIdentification4Choice {
 			componentContext_lazy = () -> PaymentIdentification4Choice.mmObject();
 			isDerived = false;
 			xmlTag = "QId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QueueIdentification";
 			definition = "Identification of the payment instruction by its position in a queue managed by the clearing agent.";
 			maxOccurs = 1;
@@ -223,7 +225,7 @@ public class PaymentIdentification4Choice {
 			componentContext_lazy = () -> PaymentIdentification4Choice.mmObject();
 			isDerived = false;
 			xmlTag = "LngBizId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LongBusinessIdentification";
 			definition = "Business identification of the payment instruction given by the clearing agent.";
 			maxOccurs = 1;
@@ -274,7 +276,7 @@ public class PaymentIdentification4Choice {
 			componentContext_lazy = () -> PaymentIdentification4Choice.mmObject();
 			isDerived = false;
 			xmlTag = "ShrtBizId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ShortBusinessIdentification";
 			definition = "Business identification of the payment instruction given by the clearing agent.";
 			maxOccurs = 1;
@@ -319,7 +321,7 @@ public class PaymentIdentification4Choice {
 			componentContext_lazy = () -> PaymentIdentification4Choice.mmObject();
 			isDerived = false;
 			xmlTag = "PrtryId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProprietaryIdentification";
 			definition = "Unique reference of the underlying payment instruction assigned by Target2 SSP.";
 			maxOccurs = 1;
@@ -331,12 +333,11 @@ public class PaymentIdentification4Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PaymentIdentification4Choice.mmTransactionIdentification, com.tools20022.repository.choice.PaymentIdentification4Choice.mmQueueIdentification,
-						com.tools20022.repository.choice.PaymentIdentification4Choice.mmLongBusinessIdentification, com.tools20022.repository.choice.PaymentIdentification4Choice.mmShortBusinessIdentification,
-						com.tools20022.repository.choice.PaymentIdentification4Choice.mmProprietaryIdentification);
+				messageElement_lazy = () -> Arrays.asList(PaymentIdentification4Choice.mmTransactionIdentification, PaymentIdentification4Choice.mmQueueIdentification, PaymentIdentification4Choice.mmLongBusinessIdentification,
+						PaymentIdentification4Choice.mmShortBusinessIdentification, PaymentIdentification4Choice.mmProprietaryIdentification);
 				trace_lazy = () -> PaymentIdentification.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PaymentIdentification4Choice";
 				definition = "Choice between ways of identifying a payment instruction by its references and business identification.";
 			}

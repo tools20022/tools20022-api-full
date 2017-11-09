@@ -19,8 +19,10 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.OrganisationIdentification;
 import com.tools20022.repository.entity.PartyIdentificationInformation;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5;
 import com.tools20022.repository.msg.PartyIdentification94;
 import java.util.Arrays;
@@ -104,7 +106,7 @@ public class Party29Choice {
 			componentContext_lazy = () -> Party29Choice.mmObject();
 			isDerived = false;
 			xmlTag = "OrgId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrganisationIdentification";
 			definition = "Identification of a person or an organisation.";
 			maxOccurs = 1;
@@ -152,7 +154,7 @@ public class Party29Choice {
 			componentContext_lazy = () -> Party29Choice.mmObject();
 			isDerived = false;
 			xmlTag = "FIId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstitutionIdentification";
 			definition = "Identification of a financial institution.";
 			maxOccurs = 1;
@@ -165,10 +167,10 @@ public class Party29Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Party29Choice.mmOrganisationIdentification, com.tools20022.repository.choice.Party29Choice.mmFinancialInstitutionIdentification);
+				messageElement_lazy = () -> Arrays.asList(Party29Choice.mmOrganisationIdentification, Party29Choice.mmFinancialInstitutionIdentification);
 				trace_lazy = () -> PartyIdentificationInformation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Party29Choice";
 				definition = "Identification of a person, an organisation or a financial institution.";
 			}

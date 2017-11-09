@@ -19,9 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ActiveCurrencyAnd13DecimalAmount;
 import com.tools20022.repository.datatype.DecimalNumber;
 import com.tools20022.repository.entity.AmountAndQuantity;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -108,14 +110,14 @@ public class AmountAndQuantityRatio4 {
 	 */
 	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AmountAndQuantity.mmAmount;
+			businessElementTrace_lazy = () -> AmountAndQuantity.mmAmount;
 			componentContext_lazy = () -> AmountAndQuantityRatio4.mmObject();
 			isDerived = false;
 			xmlTag = "Amt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Cash amount.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AmountAndQuantityRatio2.mmAmount;
+			previousVersion_lazy = () -> AmountAndQuantityRatio2.mmAmount;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAnd13DecimalAmount.mmObject();
@@ -162,14 +164,14 @@ public class AmountAndQuantityRatio4 {
 	 */
 	public static final MMMessageAttribute mmQuantity = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AmountAndQuantity.mmQuantity;
+			businessElementTrace_lazy = () -> AmountAndQuantity.mmQuantity;
 			componentContext_lazy = () -> AmountAndQuantityRatio4.mmObject();
 			isDerived = false;
 			xmlTag = "Qty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Quantity";
 			definition = "Quantity expressed as number.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AmountAndQuantityRatio2.mmQuantity;
+			previousVersion_lazy = () -> AmountAndQuantityRatio2.mmQuantity;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
@@ -179,10 +181,10 @@ public class AmountAndQuantityRatio4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AmountAndQuantityRatio4.mmAmount, com.tools20022.repository.msg.AmountAndQuantityRatio4.mmQuantity);
+				messageElement_lazy = () -> Arrays.asList(AmountAndQuantityRatio4.mmAmount, AmountAndQuantityRatio4.mmQuantity);
 				trace_lazy = () -> AmountAndQuantity.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AmountAndQuantityRatio4";
 				definition = "Ratio expressed as amount per quantity.";
 				previousVersion_lazy = () -> AmountAndQuantityRatio2.mmObject();

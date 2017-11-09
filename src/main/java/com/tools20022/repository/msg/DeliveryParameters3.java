@@ -19,8 +19,10 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.PhysicalDelivery;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -96,11 +98,11 @@ public class DeliveryParameters3 {
 	 */
 	public static final MMMessageAttribute mmAddress = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PhysicalDelivery.mmAddress;
+			businessElementTrace_lazy = () -> PhysicalDelivery.mmAddress;
 			componentContext_lazy = () -> DeliveryParameters3.mmObject();
 			isDerived = false;
 			xmlTag = "Adr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Address";
 			definition = "Address for physical delivery.";
 			maxOccurs = 1;
@@ -143,11 +145,11 @@ public class DeliveryParameters3 {
 	 */
 	public static final MMMessageAttribute mmIssuedCertificateNumber = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PhysicalDelivery.mmIssuedCertificateNumber;
+			businessElementTrace_lazy = () -> PhysicalDelivery.mmIssuedCertificateNumber;
 			componentContext_lazy = () -> DeliveryParameters3.mmObject();
 			isDerived = false;
 			xmlTag = "IssdCertNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssuedCertificateNumber";
 			definition = "Certificate representing a security that is delivered.";
 			maxOccurs = 1;
@@ -159,10 +161,10 @@ public class DeliveryParameters3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DeliveryParameters3.mmAddress, com.tools20022.repository.msg.DeliveryParameters3.mmIssuedCertificateNumber);
+				messageElement_lazy = () -> Arrays.asList(DeliveryParameters3.mmAddress, DeliveryParameters3.mmIssuedCertificateNumber);
 				trace_lazy = () -> PhysicalDelivery.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DeliveryParameters3";
 				definition = "Parameters of a physical delivery.";
 			}

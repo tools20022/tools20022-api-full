@@ -19,8 +19,10 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.IntermediaryRole;
 import com.tools20022.repository.entity.SecuritiesBalance;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -112,7 +114,7 @@ public class AggregateHoldingBalance3 {
 			componentContext_lazy = () -> AggregateHoldingBalance3.mmObject();
 			isDerived = false;
 			xmlTag = "BalForAcct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BalanceForAccount";
 			definition = "Report on the net position of a  financial instrument on the sub-account, for a certain date.";
 			minOccurs = 1;
@@ -159,7 +161,7 @@ public class AggregateHoldingBalance3 {
 			componentContext_lazy = () -> AggregateHoldingBalance3.mmObject();
 			isDerived = false;
 			xmlTag = "Agt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Agent";
 			definition = "Agent of the financial instrument, for example, a trade intermediary.";
 			minOccurs = 0;
@@ -171,10 +173,10 @@ public class AggregateHoldingBalance3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AggregateHoldingBalance3.mmBalanceForAccount, com.tools20022.repository.msg.AggregateHoldingBalance3.mmAgent);
+				messageElement_lazy = () -> Arrays.asList(AggregateHoldingBalance3.mmBalanceForAccount, AggregateHoldingBalance3.mmAgent);
 				trace_lazy = () -> SecuritiesBalance.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AggregateHoldingBalance3";
 				definition = "Overall holding position, in a single financial instrument, held in a securities account at a specified place of safekeeping.";
 				previousVersion_lazy = () -> com.tools20022.repository.msg.AggregateHoldingBalance1.mmObject();

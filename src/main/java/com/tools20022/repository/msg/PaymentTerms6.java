@@ -20,8 +20,10 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.*;
-import com.tools20022.repository.entity.PaymentObligation;
+import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -116,11 +118,11 @@ public class PaymentTerms6 {
 	 */
 	public static final MMMessageAttribute mmDueDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashAvailability.mmDate;
+			businessElementTrace_lazy = () -> CashAvailability.mmDate;
 			componentContext_lazy = () -> PaymentTerms6.mmObject();
 			isDerived = false;
 			xmlTag = "DueDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DueDate";
 			definition = "Due date specified for the payment terms.";
 			maxOccurs = 1;
@@ -159,7 +161,7 @@ public class PaymentTerms6 {
 			componentContext_lazy = () -> PaymentTerms6.mmObject();
 			isDerived = false;
 			xmlTag = "PmtPrd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentPeriod";
 			definition = "Payment period specified for these payment terms.";
 			maxOccurs = 1;
@@ -200,7 +202,7 @@ public class PaymentTerms6 {
 			componentContext_lazy = () -> PaymentTerms6.mmObject();
 			isDerived = false;
 			xmlTag = "Desc";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Description";
 			definition = "Textual description of these payment terms.";
 			minOccurs = 0;
@@ -241,7 +243,7 @@ public class PaymentTerms6 {
 			componentContext_lazy = () -> PaymentTerms6.mmObject();
 			isDerived = false;
 			xmlTag = "PrtlPmtPct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartialPaymentPercent";
 			definition = "Partial payment, expressed as a percentage, for the payment terms.";
 			maxOccurs = 1;
@@ -284,11 +286,11 @@ public class PaymentTerms6 {
 	 */
 	public static final MMMessageAttribute mmDirectDebitMandateIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.DirectDebit.mmDirectDebitMandate;
+			businessElementTrace_lazy = () -> DirectDebit.mmDirectDebitMandate;
 			componentContext_lazy = () -> PaymentTerms6.mmObject();
 			isDerived = false;
 			xmlTag = "DrctDbtMndtId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DirectDebitMandateIdentification";
 			definition = "Direct debit mandate identification specified for these payment terms.";
 			minOccurs = 0;
@@ -333,11 +335,11 @@ public class PaymentTerms6 {
 	 */
 	public static final MMMessageAttribute mmBasisAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Discount.mmDiscountBasisAmount;
+			businessElementTrace_lazy = () -> Discount.mmDiscountBasisAmount;
 			componentContext_lazy = () -> PaymentTerms6.mmObject();
 			isDerived = false;
 			xmlTag = "BsisAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BasisAmount";
 			definition = "Amount used as a basis to calculate the discount amount for these payment terms.";
 			maxOccurs = 1;
@@ -383,11 +385,11 @@ public class PaymentTerms6 {
 	 */
 	public static final MMMessageAttribute mmDiscountAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Discount.mmDiscountAppliedAmount;
+			businessElementTrace_lazy = () -> Discount.mmDiscountAppliedAmount;
 			componentContext_lazy = () -> PaymentTerms6.mmObject();
 			isDerived = false;
 			xmlTag = "DscntAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DiscountAmount";
 			definition = "Amount of money that results from the application of an agreed discount percentage to the basis amount and payable to the creditor.";
 			maxOccurs = 1;
@@ -431,11 +433,11 @@ public class PaymentTerms6 {
 	 */
 	public static final MMMessageAttribute mmDiscountPercentRate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Adjustment.mmChargeRate;
+			businessElementTrace_lazy = () -> Adjustment.mmChargeRate;
 			componentContext_lazy = () -> PaymentTerms6.mmObject();
 			isDerived = false;
 			xmlTag = "DscntPctRate";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DiscountPercentRate";
 			definition = "Percent rate used to calculate the discount for these payment terms.";
 			maxOccurs = 1;
@@ -481,11 +483,11 @@ public class PaymentTerms6 {
 	 */
 	public static final MMMessageAttribute mmPenaltyAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Adjustment.mmAmount;
+			businessElementTrace_lazy = () -> Adjustment.mmAmount;
 			componentContext_lazy = () -> PaymentTerms6.mmObject();
 			isDerived = false;
 			xmlTag = "PnltyAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PenaltyAmount";
 			definition = "Amount of money that results from the application of an agreed penalty percentage to the basis amount and payable by the creditor.";
 			maxOccurs = 1;
@@ -529,11 +531,11 @@ public class PaymentTerms6 {
 	 */
 	public static final MMMessageAttribute mmPenaltyPercentRate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Adjustment.mmChargeRate;
+			businessElementTrace_lazy = () -> Adjustment.mmChargeRate;
 			componentContext_lazy = () -> PaymentTerms6.mmObject();
 			isDerived = false;
 			xmlTag = "PnltyPctRate";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PenaltyPercentRate";
 			definition = "Percent rate used to calculate the penalty for these payment terms.";
 			maxOccurs = 1;
@@ -545,13 +547,11 @@ public class PaymentTerms6 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentTerms6.mmDueDate, com.tools20022.repository.msg.PaymentTerms6.mmPaymentPeriod, com.tools20022.repository.msg.PaymentTerms6.mmDescription,
-						com.tools20022.repository.msg.PaymentTerms6.mmPartialPaymentPercent, com.tools20022.repository.msg.PaymentTerms6.mmDirectDebitMandateIdentification, com.tools20022.repository.msg.PaymentTerms6.mmBasisAmount,
-						com.tools20022.repository.msg.PaymentTerms6.mmDiscountAmount, com.tools20022.repository.msg.PaymentTerms6.mmDiscountPercentRate, com.tools20022.repository.msg.PaymentTerms6.mmPenaltyAmount,
-						com.tools20022.repository.msg.PaymentTerms6.mmPenaltyPercentRate);
+				messageElement_lazy = () -> Arrays.asList(PaymentTerms6.mmDueDate, PaymentTerms6.mmPaymentPeriod, PaymentTerms6.mmDescription, PaymentTerms6.mmPartialPaymentPercent, PaymentTerms6.mmDirectDebitMandateIdentification,
+						PaymentTerms6.mmBasisAmount, PaymentTerms6.mmDiscountAmount, PaymentTerms6.mmDiscountPercentRate, PaymentTerms6.mmPenaltyAmount, PaymentTerms6.mmPenaltyPercentRate);
 				trace_lazy = () -> PaymentObligation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PaymentTerms6";
 				definition = "Specifies the payment terms of the underlying transaction.";
 			}

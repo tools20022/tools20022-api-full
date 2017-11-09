@@ -19,8 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.StatusReason5Choice;
+import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.entity.PaymentStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -96,11 +99,11 @@ public class StatusReasonInformation6 {
 	 */
 	public static final MMMessageAssociationEnd mmStatusOriginator = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> StatusReasonInformation6.mmObject();
 			isDerived = false;
 			xmlTag = "StsOrgtr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusOriginator";
 			definition = "Party issuing the status.";
 			maxOccurs = 1;
@@ -147,7 +150,7 @@ public class StatusReasonInformation6 {
 			componentContext_lazy = () -> StatusReasonInformation6.mmObject();
 			isDerived = false;
 			xmlTag = "StsRsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusReason";
 			definition = "Specifies the reason for the status report.";
 			maxOccurs = 1;
@@ -160,10 +163,10 @@ public class StatusReasonInformation6 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StatusReasonInformation6.mmStatusOriginator, com.tools20022.repository.msg.StatusReasonInformation6.mmStatusReason);
+				messageElement_lazy = () -> Arrays.asList(StatusReasonInformation6.mmStatusOriginator, StatusReasonInformation6.mmStatusReason);
 				trace_lazy = () -> PaymentStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "StatusReasonInformation6";
 				definition = "Further information on the status reason of the transaction.";
 			}

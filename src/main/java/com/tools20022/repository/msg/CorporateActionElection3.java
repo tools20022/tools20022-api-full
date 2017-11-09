@@ -20,11 +20,15 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.seev.AgentCAElectionAdviceV01;
+import com.tools20022.repository.area.seev.AgentCAElectionCancellationRequestV01;
 import com.tools20022.repository.choice.CorporateActionOption1FormatChoice;
 import com.tools20022.repository.choice.UnitOrFaceAmount1Choice;
 import com.tools20022.repository.datatype.Exact3NumericText;
 import com.tools20022.repository.datatype.PercentageRate;
-import com.tools20022.repository.entity.CorporateActionElection;
+import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -132,11 +136,11 @@ public class CorporateActionElection3 {
 	 */
 	public static final MMMessageAssociationEnd mmAccountDetails = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionServicing.mmSecuritiesAccount;
+			businessElementTrace_lazy = () -> CorporateActionServicing.mmSecuritiesAccount;
 			componentContext_lazy = () -> CorporateActionElection3.mmObject();
 			isDerived = false;
 			xmlTag = "AcctDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountDetails";
 			definition = "Provides information about the account.";
 			maxOccurs = 1;
@@ -182,11 +186,11 @@ public class CorporateActionElection3 {
 	 */
 	public static final MMMessageAttribute mmOptionType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionOption.mmOptionType;
+			businessElementTrace_lazy = () -> CorporateActionOption.mmOptionType;
 			componentContext_lazy = () -> CorporateActionElection3.mmObject();
 			isDerived = false;
 			xmlTag = "OptnTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionType";
 			definition = "Specifies the corporate action options available to the account owner.";
 			maxOccurs = 1;
@@ -231,11 +235,11 @@ public class CorporateActionElection3 {
 	 */
 	public static final MMMessageAttribute mmOptionNumber = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionOption.mmOptionNumber;
+			businessElementTrace_lazy = () -> CorporateActionOption.mmOptionNumber;
 			componentContext_lazy = () -> CorporateActionElection3.mmObject();
 			isDerived = false;
 			xmlTag = "OptnNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionNumber";
 			definition = "Number identifying the available corporate action options.";
 			maxOccurs = 1;
@@ -280,11 +284,11 @@ public class CorporateActionElection3 {
 	 */
 	public static final MMMessageAttribute mmInstructedUnderlyingSecuritiesQuantity = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionElection.mmQuantity;
+			businessElementTrace_lazy = () -> CorporateActionElection.mmQuantity;
 			componentContext_lazy = () -> CorporateActionElection3.mmObject();
 			isDerived = false;
 			xmlTag = "InstdUndrlygSctiesQty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructedUnderlyingSecuritiesQuantity";
 			definition = "Quantity of underlying securities to which this instruction applies.";
 			maxOccurs = 1;
@@ -331,11 +335,11 @@ public class CorporateActionElection3 {
 	 */
 	public static final MMMessageAttribute mmInstructedSecuritiesQuantityToReceive = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionElection.mmQuantity;
+			businessElementTrace_lazy = () -> CorporateActionElection.mmQuantity;
 			componentContext_lazy = () -> CorporateActionElection3.mmObject();
 			isDerived = false;
 			xmlTag = "InstdSctiesQtyToRcv";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructedSecuritiesQuantityToReceive";
 			definition = "Quantity of the benefits that the account owner wants to receive, eg, as a result of dividend reinvestment.";
 			maxOccurs = 1;
@@ -379,11 +383,11 @@ public class CorporateActionElection3 {
 	 */
 	public static final MMMessageAttribute mmProposedRate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BiddingConditions.mmProposedRate;
+			businessElementTrace_lazy = () -> BiddingConditions.mmProposedRate;
 			componentContext_lazy = () -> CorporateActionElection3.mmObject();
 			isDerived = false;
 			xmlTag = "PropsdRate";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProposedRate";
 			definition = "Rate proposed in a remarketing of variable rate notes.";
 			maxOccurs = 1;
@@ -429,11 +433,11 @@ public class CorporateActionElection3 {
 	 */
 	public static final MMMessageAssociationEnd mmCashMovementDetails = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BookEntry.mmCashEntry;
+			businessElementTrace_lazy = () -> BookEntry.mmCashEntry;
 			componentContext_lazy = () -> CorporateActionElection3.mmObject();
 			isDerived = false;
 			xmlTag = "CshMvmntDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashMovementDetails";
 			definition = "Provides information about the cash movement resulting from the election instruction.";
 			minOccurs = 0;
@@ -479,11 +483,11 @@ public class CorporateActionElection3 {
 	 */
 	public static final MMMessageAssociationEnd mmSecuritiesMovementDetails = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesDeliveryObligation.mmSecuritiesTransfer;
+			businessElementTrace_lazy = () -> SecuritiesDeliveryObligation.mmSecuritiesTransfer;
 			componentContext_lazy = () -> CorporateActionElection3.mmObject();
 			isDerived = false;
 			xmlTag = "SctiesMvmntDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesMovementDetails";
 			definition = "Provides information about the securities movement resulting from the election instruction.";
 			minOccurs = 0;
@@ -495,14 +499,13 @@ public class CorporateActionElection3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionElection3.mmAccountDetails, com.tools20022.repository.msg.CorporateActionElection3.mmOptionType,
-						com.tools20022.repository.msg.CorporateActionElection3.mmOptionNumber, com.tools20022.repository.msg.CorporateActionElection3.mmInstructedUnderlyingSecuritiesQuantity,
-						com.tools20022.repository.msg.CorporateActionElection3.mmInstructedSecuritiesQuantityToReceive, com.tools20022.repository.msg.CorporateActionElection3.mmProposedRate,
-						com.tools20022.repository.msg.CorporateActionElection3.mmCashMovementDetails, com.tools20022.repository.msg.CorporateActionElection3.mmSecuritiesMovementDetails);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.AgentCAElectionAdviceV01.mmElectionDetails, com.tools20022.repository.area.seev.AgentCAElectionCancellationRequestV01.mmElectionDetails);
+				messageElement_lazy = () -> Arrays.asList(CorporateActionElection3.mmAccountDetails, CorporateActionElection3.mmOptionType, CorporateActionElection3.mmOptionNumber,
+						CorporateActionElection3.mmInstructedUnderlyingSecuritiesQuantity, CorporateActionElection3.mmInstructedSecuritiesQuantityToReceive, CorporateActionElection3.mmProposedRate,
+						CorporateActionElection3.mmCashMovementDetails, CorporateActionElection3.mmSecuritiesMovementDetails);
+				messageBuildingBlock_lazy = () -> Arrays.asList(AgentCAElectionAdviceV01.mmElectionDetails, AgentCAElectionCancellationRequestV01.mmElectionDetails);
 				trace_lazy = () -> CorporateActionElection.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionElection3";
 				definition = "Provides information about a corporate action election.";
 			}

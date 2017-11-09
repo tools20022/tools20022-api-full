@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ERISAEligibilityCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -89,7 +91,7 @@ public class ERISAEligibility1Code extends ERISAEligibilityCode {
 	 */
 	public static final MMCode mmERISAEligible = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ERISAEligible";
 			owner_lazy = () -> ERISAEligibility1Code.mmObject();
 		}
@@ -112,7 +114,7 @@ public class ERISAEligibility1Code extends ERISAEligibilityCode {
 	 */
 	public static final MMCode mmNotERISAEligible = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotERISAEligible";
 			owner_lazy = () -> ERISAEligibility1Code.mmObject();
 		}
@@ -135,7 +137,7 @@ public class ERISAEligibility1Code extends ERISAEligibilityCode {
 	 */
 	public static final MMCode mmERISAEligibilityUnknown = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ERISAEligibilityUnknown";
 			owner_lazy = () -> ERISAEligibility1Code.mmObject();
 		}
@@ -144,13 +146,12 @@ public class ERISAEligibility1Code extends ERISAEligibilityCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ELIG");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ERISAEligibility1Code";
 				definition = "Specifies information about ERISA (Eligibility to federal Employee Retirement Income Security Act) eligibility.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ERISAEligibility1Code.mmERISAEligible, com.tools20022.repository.codeset.ERISAEligibility1Code.mmNotERISAEligible,
-						com.tools20022.repository.codeset.ERISAEligibility1Code.mmERISAEligibilityUnknown);
+				code_lazy = () -> Arrays.asList(ERISAEligibility1Code.mmERISAEligible, ERISAEligibility1Code.mmNotERISAEligible, ERISAEligibility1Code.mmERISAEligibilityUnknown);
 				trace_lazy = () -> ERISAEligibilityCode.mmObject();
 			}
 		});

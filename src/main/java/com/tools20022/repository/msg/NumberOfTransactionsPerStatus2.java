@@ -19,9 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.TransactionIndividualStatus2Code;
 import com.tools20022.repository.datatype.DecimalNumber;
 import com.tools20022.repository.datatype.Max15NumericText;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -103,7 +105,7 @@ public class NumberOfTransactionsPerStatus2 {
 			componentContext_lazy = () -> NumberOfTransactionsPerStatus2.mmObject();
 			isDerived = false;
 			xmlTag = "DtldNbOfTxs";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DetailedNumberOfTransactions";
 			definition = "Number of individual transactions contained in the message, detailed per status.";
 			maxOccurs = 1;
@@ -148,7 +150,7 @@ public class NumberOfTransactionsPerStatus2 {
 			componentContext_lazy = () -> NumberOfTransactionsPerStatus2.mmObject();
 			isDerived = false;
 			xmlTag = "DtldSts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DetailedStatus";
 			definition = "Common transaction status for all individual transactions reported with the same status.";
 			maxOccurs = 1;
@@ -193,7 +195,7 @@ public class NumberOfTransactionsPerStatus2 {
 			componentContext_lazy = () -> NumberOfTransactionsPerStatus2.mmObject();
 			isDerived = false;
 			xmlTag = "DtldCtrlSum";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DetailedControlSum";
 			definition = "Total of all individual amounts included in the message, irrespective of currencies, detailed per status.";
 			maxOccurs = 1;
@@ -205,10 +207,9 @@ public class NumberOfTransactionsPerStatus2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.NumberOfTransactionsPerStatus2.mmDetailedNumberOfTransactions, com.tools20022.repository.msg.NumberOfTransactionsPerStatus2.mmDetailedStatus,
-						com.tools20022.repository.msg.NumberOfTransactionsPerStatus2.mmDetailedControlSum);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(NumberOfTransactionsPerStatus2.mmDetailedNumberOfTransactions, NumberOfTransactionsPerStatus2.mmDetailedStatus, NumberOfTransactionsPerStatus2.mmDetailedControlSum);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "NumberOfTransactionsPerStatus2";
 				definition = "Set of additional elements to provide detailed information on the number of transactions that are reported with a specific transaction status.";
 			}

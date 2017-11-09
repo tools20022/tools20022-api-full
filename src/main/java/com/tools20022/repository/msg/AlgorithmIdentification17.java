@@ -20,7 +20,9 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.Algorithm14Code;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -105,10 +107,10 @@ public class AlgorithmIdentification17 {
 			componentContext_lazy = () -> AlgorithmIdentification17.mmObject();
 			isDerived = false;
 			xmlTag = "Algo";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Algorithm";
 			definition = "Identification of the algorithm.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AlgorithmIdentification4.mmAlgorithm;
+			previousVersion_lazy = () -> AlgorithmIdentification4.mmAlgorithm;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Algorithm14Code.mmObject();
@@ -148,7 +150,7 @@ public class AlgorithmIdentification17 {
 			componentContext_lazy = () -> AlgorithmIdentification17.mmObject();
 			isDerived = false;
 			xmlTag = "Param";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Parameter";
 			definition = "Parameters of the RSASSA-PSS digital signature algorithm (RSA signature algorithm with appendix: Probabilistic Signature Scheme).";
 			maxOccurs = 1;
@@ -161,9 +163,9 @@ public class AlgorithmIdentification17 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AlgorithmIdentification17.mmAlgorithm, com.tools20022.repository.msg.AlgorithmIdentification17.mmParameter);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(AlgorithmIdentification17.mmAlgorithm, AlgorithmIdentification17.mmParameter);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AlgorithmIdentification17";
 				definition = "Identification of a cryptographic algorithm and parameters for digital signatures.";
 				previousVersion_lazy = () -> AlgorithmIdentification4.mmObject();

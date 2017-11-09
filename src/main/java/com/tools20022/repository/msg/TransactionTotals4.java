@@ -19,6 +19,8 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -105,7 +107,7 @@ public class TransactionTotals4 {
 			componentContext_lazy = () -> TransactionTotals4.mmObject();
 			isDerived = false;
 			xmlTag = "TtlCdt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalCredit";
 			definition = "Total of credit transactions.";
 			maxOccurs = 1;
@@ -146,7 +148,7 @@ public class TransactionTotals4 {
 			componentContext_lazy = () -> TransactionTotals4.mmObject();
 			isDerived = false;
 			xmlTag = "TtlDbt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalDebit";
 			definition = "Total of debit transactions.";
 			maxOccurs = 1;
@@ -188,7 +190,7 @@ public class TransactionTotals4 {
 			componentContext_lazy = () -> TransactionTotals4.mmObject();
 			isDerived = false;
 			xmlTag = "TtlNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalNumber";
 			definition = "Additional count which may be utilised for reconciliation.";
 			maxOccurs = 1;
@@ -201,10 +203,9 @@ public class TransactionTotals4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionTotals4.mmTotalCredit, com.tools20022.repository.msg.TransactionTotals4.mmTotalDebit,
-						com.tools20022.repository.msg.TransactionTotals4.mmTotalNumber);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(TransactionTotals4.mmTotalCredit, TransactionTotals4.mmTotalDebit, TransactionTotals4.mmTotalNumber);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TransactionTotals4";
 				definition = "Totals of the reconciliation.";
 				nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionTotals5.mmObject(), com.tools20022.repository.msg.TransactionTotals6.mmObject());

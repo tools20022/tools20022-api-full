@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -123,7 +125,7 @@ public class SettlementTransactionType1Code {
 	 */
 	public static final MMCode mmTradeSettlement = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+			registrationStatus = MMRegistrationStatus.OBSOLETE;
 			name = "TradeSettlement";
 			definition = "Transaction relates to the settlement of a trade.";
 			owner_lazy = () -> SettlementTransactionType1Code.mmObject();
@@ -156,7 +158,7 @@ public class SettlementTransactionType1Code {
 	 */
 	public static final MMCode mmWithdrawalSubAccount = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+			registrationStatus = MMRegistrationStatus.OBSOLETE;
 			name = "WithdrawalSubAccount";
 			definition = "Transaction involves the withdrawal of specified amounts from specified sub-accounts.";
 			owner_lazy = () -> SettlementTransactionType1Code.mmObject();
@@ -186,7 +188,7 @@ public class SettlementTransactionType1Code {
 	 */
 	public static final MMCode mmReporting = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+			registrationStatus = MMRegistrationStatus.OBSOLETE;
 			name = "Reporting";
 			definition = "Transaction is for reporting purposes only.";
 			owner_lazy = () -> SettlementTransactionType1Code.mmObject();
@@ -216,7 +218,7 @@ public class SettlementTransactionType1Code {
 	 */
 	public static final MMCode mmExternalOwnAccount = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+			registrationStatus = MMRegistrationStatus.OBSOLETE;
 			name = "ExternalOwnAccount";
 			definition = "Transaction is an external account transfer.";
 			owner_lazy = () -> SettlementTransactionType1Code.mmObject();
@@ -246,7 +248,7 @@ public class SettlementTransactionType1Code {
 	 */
 	public static final MMCode mmInternalOwnAccount = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+			registrationStatus = MMRegistrationStatus.OBSOLETE;
 			name = "InternalOwnAccount";
 			definition = "Transaction is an own account transfer.";
 			owner_lazy = () -> SettlementTransactionType1Code.mmObject();
@@ -276,7 +278,7 @@ public class SettlementTransactionType1Code {
 	 */
 	public static final MMCode mmTurnaround = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+			registrationStatus = MMRegistrationStatus.OBSOLETE;
 			name = "Turnaround";
 			definition = "Transaction is part of a turnaround.";
 			owner_lazy = () -> SettlementTransactionType1Code.mmObject();
@@ -306,7 +308,7 @@ public class SettlementTransactionType1Code {
 	 */
 	public static final MMCode mmPairoff = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+			registrationStatus = MMRegistrationStatus.OBSOLETE;
 			name = "Pairoff";
 			definition = "Transaction is part of a pairoff.";
 			owner_lazy = () -> SettlementTransactionType1Code.mmObject();
@@ -336,7 +338,7 @@ public class SettlementTransactionType1Code {
 	 */
 	public static final MMCode mmPlacement = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+			registrationStatus = MMRegistrationStatus.OBSOLETE;
 			name = "Placement";
 			definition = "Transaction is part of a placement.";
 			owner_lazy = () -> SettlementTransactionType1Code.mmObject();
@@ -366,7 +368,7 @@ public class SettlementTransactionType1Code {
 	 */
 	public static final MMCode mmRepurchaseAgreement = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+			registrationStatus = MMRegistrationStatus.OBSOLETE;
 			name = "RepurchaseAgreement";
 			definition = "Transaction relates to a repo or reverse repo.";
 			owner_lazy = () -> SettlementTransactionType1Code.mmObject();
@@ -396,7 +398,7 @@ public class SettlementTransactionType1Code {
 	 */
 	public static final MMCode mmSecuritiesLending = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+			registrationStatus = MMRegistrationStatus.OBSOLETE;
 			name = "SecuritiesLending";
 			definition = "Transaction is part of a securities lending operation.";
 			owner_lazy = () -> SettlementTransactionType1Code.mmObject();
@@ -427,7 +429,7 @@ public class SettlementTransactionType1Code {
 	 */
 	public static final MMCode mmCollateral = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+			registrationStatus = MMRegistrationStatus.OBSOLETE;
 			name = "Collateral";
 			definition = "Transaction relates to collateral in the form of securities.";
 			owner_lazy = () -> SettlementTransactionType1Code.mmObject();
@@ -457,7 +459,7 @@ public class SettlementTransactionType1Code {
 	 */
 	public static final MMCode mmBuySellBackOpening = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+			registrationStatus = MMRegistrationStatus.OBSOLETE;
 			name = "BuySellBackOpening";
 			definition = "Transaction relates to a buy sell back opening leg.";
 			owner_lazy = () -> SettlementTransactionType1Code.mmObject();
@@ -487,7 +489,7 @@ public class SettlementTransactionType1Code {
 	 */
 	public static final MMCode mmBuySellBackClosure = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+			registrationStatus = MMRegistrationStatus.OBSOLETE;
 			name = "BuySellBackClosure";
 			definition = "Transaction relates to a buy sell back closing leg.";
 			owner_lazy = () -> SettlementTransactionType1Code.mmObject();
@@ -517,7 +519,7 @@ public class SettlementTransactionType1Code {
 	 */
 	public static final MMCode mmBlockTradeChild = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+			registrationStatus = MMRegistrationStatus.OBSOLETE;
 			name = "BlockTradeChild";
 			definition = "Transaction relates to a block trade child.";
 			owner_lazy = () -> SettlementTransactionType1Code.mmObject();
@@ -547,7 +549,7 @@ public class SettlementTransactionType1Code {
 	 */
 	public static final MMCode mmBlockTradeParent = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+			registrationStatus = MMRegistrationStatus.OBSOLETE;
 			name = "BlockTradeParent";
 			definition = "Transaction relates to a block trade parent.";
 			owner_lazy = () -> SettlementTransactionType1Code.mmObject();
@@ -558,19 +560,15 @@ public class SettlementTransactionType1Code {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("TRAD");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				name = "SettlementTransactionType1Code";
 				definition = "Specifies underlying information about the settlement transaction.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SettlementTransactionType1Code.mmTradeSettlement, com.tools20022.repository.codeset.SettlementTransactionType1Code.mmWithdrawalSubAccount,
-						com.tools20022.repository.codeset.SettlementTransactionType1Code.mmReporting, com.tools20022.repository.codeset.SettlementTransactionType1Code.mmExternalOwnAccount,
-						com.tools20022.repository.codeset.SettlementTransactionType1Code.mmInternalOwnAccount, com.tools20022.repository.codeset.SettlementTransactionType1Code.mmTurnaround,
-						com.tools20022.repository.codeset.SettlementTransactionType1Code.mmPairoff, com.tools20022.repository.codeset.SettlementTransactionType1Code.mmPlacement,
-						com.tools20022.repository.codeset.SettlementTransactionType1Code.mmRepurchaseAgreement, com.tools20022.repository.codeset.SettlementTransactionType1Code.mmSecuritiesLending,
-						com.tools20022.repository.codeset.SettlementTransactionType1Code.mmCollateral, com.tools20022.repository.codeset.SettlementTransactionType1Code.mmBuySellBackOpening,
-						com.tools20022.repository.codeset.SettlementTransactionType1Code.mmBuySellBackClosure, com.tools20022.repository.codeset.SettlementTransactionType1Code.mmBlockTradeChild,
-						com.tools20022.repository.codeset.SettlementTransactionType1Code.mmBlockTradeParent);
+				code_lazy = () -> Arrays.asList(SettlementTransactionType1Code.mmTradeSettlement, SettlementTransactionType1Code.mmWithdrawalSubAccount, SettlementTransactionType1Code.mmReporting,
+						SettlementTransactionType1Code.mmExternalOwnAccount, SettlementTransactionType1Code.mmInternalOwnAccount, SettlementTransactionType1Code.mmTurnaround, SettlementTransactionType1Code.mmPairoff,
+						SettlementTransactionType1Code.mmPlacement, SettlementTransactionType1Code.mmRepurchaseAgreement, SettlementTransactionType1Code.mmSecuritiesLending, SettlementTransactionType1Code.mmCollateral,
+						SettlementTransactionType1Code.mmBuySellBackOpening, SettlementTransactionType1Code.mmBuySellBackClosure, SettlementTransactionType1Code.mmBlockTradeChild, SettlementTransactionType1Code.mmBlockTradeParent);
 			}
 		});
 		return mmObject_lazy.get();

@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CorporateActionInstructionCancellationProcessingStatusCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -93,7 +95,7 @@ public class CorporateActionInstructionCancellationProcessingStatus1Code extends
 	 */
 	public static final MMCode mmCancellationCompleted = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationCompleted";
 			owner_lazy = () -> CorporateActionInstructionCancellationProcessingStatus1Code.mmObject();
 		}
@@ -116,7 +118,7 @@ public class CorporateActionInstructionCancellationProcessingStatus1Code extends
 	 */
 	public static final MMCode mmPendingCancellation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingCancellation";
 			owner_lazy = () -> CorporateActionInstructionCancellationProcessingStatus1Code.mmObject();
 		}
@@ -139,7 +141,7 @@ public class CorporateActionInstructionCancellationProcessingStatus1Code extends
 	 */
 	public static final MMCode mmAccepted = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Accepted";
 			owner_lazy = () -> CorporateActionInstructionCancellationProcessingStatus1Code.mmObject();
 		}
@@ -162,7 +164,7 @@ public class CorporateActionInstructionCancellationProcessingStatus1Code extends
 	 */
 	public static final MMCode mmRejected = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rejected";
 			owner_lazy = () -> CorporateActionInstructionCancellationProcessingStatus1Code.mmObject();
 		}
@@ -171,14 +173,13 @@ public class CorporateActionInstructionCancellationProcessingStatus1Code extends
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CAND");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionInstructionCancellationProcessingStatus1Code";
 				definition = "Specifies the status of a corporate action instruction cancellation process.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CorporateActionInstructionCancellationProcessingStatus1Code.mmCancellationCompleted,
-						com.tools20022.repository.codeset.CorporateActionInstructionCancellationProcessingStatus1Code.mmPendingCancellation,
-						com.tools20022.repository.codeset.CorporateActionInstructionCancellationProcessingStatus1Code.mmAccepted, com.tools20022.repository.codeset.CorporateActionInstructionCancellationProcessingStatus1Code.mmRejected);
+				code_lazy = () -> Arrays.asList(CorporateActionInstructionCancellationProcessingStatus1Code.mmCancellationCompleted, CorporateActionInstructionCancellationProcessingStatus1Code.mmPendingCancellation,
+						CorporateActionInstructionCancellationProcessingStatus1Code.mmAccepted, CorporateActionInstructionCancellationProcessingStatus1Code.mmRejected);
 				trace_lazy = () -> CorporateActionInstructionCancellationProcessingStatusCode.mmObject();
 			}
 		});

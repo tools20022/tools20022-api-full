@@ -17,14 +17,13 @@
 
 package com.tools20022.repository.entity;
 
-import com.tools20022.metamodel.MMBusinessAssociationEnd;
-import com.tools20022.metamodel.MMBusinessAttribute;
-import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.*;
 import com.tools20022.repository.codeset.BenchmarkCurveNameCode;
 import com.tools20022.repository.datatype.BaseOneRate;
 import com.tools20022.repository.datatype.CurrencyAndAmount;
 import com.tools20022.repository.datatype.Max256Text;
 import com.tools20022.repository.datatype.PercentageRate;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -38,6 +37,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.FinancialInstrumentSwap#mmSpotSell
+ * FinancialInstrumentSwap.mmSpotSell}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.FinancialInstrumentSwap#mmSpotBuy
+ * FinancialInstrumentSwap.mmSpotBuy}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.FinancialInstrumentSwap#mmForwardBuyBack
+ * FinancialInstrumentSwap.mmForwardBuyBack}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.FinancialInstrumentSwap#mmForwardSellBack
+ * FinancialInstrumentSwap.mmForwardSellBack}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -67,24 +84,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.entity.SecuritiesSwapLeg#mmForwardSellBackSwap
  * SecuritiesSwapLeg.mmForwardSellBackSwap}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.FinancialInstrumentSwap#mmSpotSell
- * FinancialInstrumentSwap.mmSpotSell}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.FinancialInstrumentSwap#mmSpotBuy
- * FinancialInstrumentSwap.mmSpotBuy}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.FinancialInstrumentSwap#mmForwardBuyBack
- * FinancialInstrumentSwap.mmForwardBuyBack}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.FinancialInstrumentSwap#mmForwardSellBack
- * FinancialInstrumentSwap.mmForwardSellBack}</li>
  * </ul>
  * </li>
  * <li>
@@ -141,7 +140,7 @@ public class SecuritiesSwapLeg {
 		{
 			elementContext_lazy = () -> SecuritiesSwapLeg.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Amount";
 			definition = "Contains the currency and amount of a buy or sell leg of a swap for the spot or the forward.";
 			maxOccurs = 1;
@@ -183,7 +182,7 @@ public class SecuritiesSwapLeg {
 		{
 			elementContext_lazy = () -> SecuritiesSwapLeg.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Benchmark";
 			definition = "Contains the benchmark used for a buy or sell leg of a swap for the spot or the forward.";
 			maxOccurs = 1;
@@ -221,7 +220,7 @@ public class SecuritiesSwapLeg {
 		{
 			elementContext_lazy = () -> SecuritiesSwapLeg.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CurvePoint";
 			definition = "Identifies a point on a benchmark curve.";
 			maxOccurs = 1;
@@ -263,7 +262,7 @@ public class SecuritiesSwapLeg {
 		{
 			elementContext_lazy = () -> SecuritiesSwapLeg.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BenchmarkYield";
 			definition = "Contains the yield against a benchmark for a buy or sell leg of a swap for the spot or the forward.";
 			maxOccurs = 1;
@@ -304,7 +303,7 @@ public class SecuritiesSwapLeg {
 		{
 			elementContext_lazy = () -> SecuritiesSwapLeg.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BenchmarkOffset";
 			definition = "Contains the offset in basis points against a benchmark for a buy or sell leg of a swap for the spot or the forward.";
 			maxOccurs = 1;
@@ -351,13 +350,13 @@ public class SecuritiesSwapLeg {
 		{
 			elementContext_lazy = () -> SecuritiesSwapLeg.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SpotSellSwap";
 			definition = "Swap for which a spot sell leg is specified.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.FinancialInstrumentSwap.mmSpotSell;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.FinancialInstrumentSwap.mmObject();
 		}
 	};
@@ -400,13 +399,13 @@ public class SecuritiesSwapLeg {
 		{
 			elementContext_lazy = () -> SecuritiesSwapLeg.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SpotBuySwap";
 			definition = "Swap for which a spot buy leg is specified.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.FinancialInstrumentSwap.mmSpotBuy;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.FinancialInstrumentSwap.mmObject();
 		}
 	};
@@ -449,13 +448,13 @@ public class SecuritiesSwapLeg {
 		{
 			elementContext_lazy = () -> SecuritiesSwapLeg.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ForwardBuyBackSwap";
 			definition = "Swap for which a forward buy back leg is specified.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.FinancialInstrumentSwap.mmForwardBuyBack;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.FinancialInstrumentSwap.mmObject();
 		}
 	};
@@ -498,13 +497,13 @@ public class SecuritiesSwapLeg {
 		{
 			elementContext_lazy = () -> SecuritiesSwapLeg.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ForwardSellBackSwap";
 			definition = "Swap for which a forward sell back leg is specified.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.FinancialInstrumentSwap.mmForwardSellBack;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.FinancialInstrumentSwap.mmObject();
 		}
 	};
@@ -512,16 +511,14 @@ public class SecuritiesSwapLeg {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesSwapLeg";
 				definition = "Contains the details of one of the legs of a swap, both in time (spot versus [partial] forward details) and the side (sell versus buy).";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.FinancialInstrumentSwap.mmSpotSell, com.tools20022.repository.entity.FinancialInstrumentSwap.mmSpotBuy,
 						com.tools20022.repository.entity.FinancialInstrumentSwap.mmForwardBuyBack, com.tools20022.repository.entity.FinancialInstrumentSwap.mmForwardSellBack);
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesSwapLeg.mmAmount, com.tools20022.repository.entity.SecuritiesSwapLeg.mmBenchmark,
-						com.tools20022.repository.entity.SecuritiesSwapLeg.mmCurvePoint, com.tools20022.repository.entity.SecuritiesSwapLeg.mmBenchmarkYield, com.tools20022.repository.entity.SecuritiesSwapLeg.mmBenchmarkOffset,
-						com.tools20022.repository.entity.SecuritiesSwapLeg.mmSpotSellSwap, com.tools20022.repository.entity.SecuritiesSwapLeg.mmSpotBuySwap, com.tools20022.repository.entity.SecuritiesSwapLeg.mmForwardBuyBackSwap,
-						com.tools20022.repository.entity.SecuritiesSwapLeg.mmForwardSellBackSwap);
+				element_lazy = () -> Arrays.asList(SecuritiesSwapLeg.mmAmount, SecuritiesSwapLeg.mmBenchmark, SecuritiesSwapLeg.mmCurvePoint, SecuritiesSwapLeg.mmBenchmarkYield, SecuritiesSwapLeg.mmBenchmarkOffset,
+						SecuritiesSwapLeg.mmSpotSellSwap, SecuritiesSwapLeg.mmSpotBuySwap, SecuritiesSwapLeg.mmForwardBuyBackSwap, SecuritiesSwapLeg.mmForwardSellBackSwap);
 			}
 		});
 		return mmObject_lazy.get();

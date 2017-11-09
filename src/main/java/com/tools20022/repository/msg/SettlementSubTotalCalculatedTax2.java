@@ -20,11 +20,13 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.CurrencyAndAmount;
 import com.tools20022.repository.datatype.Max4Text;
 import com.tools20022.repository.datatype.Max500Text;
 import com.tools20022.repository.datatype.PercentageRate;
 import com.tools20022.repository.entity.Tax;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -116,11 +118,11 @@ public class SettlementSubTotalCalculatedTax2 {
 	 */
 	public static final MMMessageAttribute mmTypeCode = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.mmType;
+			businessElementTrace_lazy = () -> Tax.mmType;
 			componentContext_lazy = () -> SettlementSubTotalCalculatedTax2.mmObject();
 			isDerived = false;
 			xmlTag = "TpCd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TypeCode";
 			definition = "Type of tax applied.";
 			maxOccurs = 1;
@@ -164,11 +166,11 @@ public class SettlementSubTotalCalculatedTax2 {
 	 */
 	public static final MMMessageAttribute mmCalculatedRate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.mmRate;
+			businessElementTrace_lazy = () -> Tax.mmRate;
 			componentContext_lazy = () -> SettlementSubTotalCalculatedTax2.mmObject();
 			isDerived = false;
 			xmlTag = "ClctdRate";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CalculatedRate";
 			definition = "Rate used to calculate the amount of this tax, levy or duty.";
 			maxOccurs = 1;
@@ -214,11 +216,11 @@ public class SettlementSubTotalCalculatedTax2 {
 	 */
 	public static final MMMessageAttribute mmBasisAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.mmAmount;
+			businessElementTrace_lazy = () -> Tax.mmAmount;
 			componentContext_lazy = () -> SettlementSubTotalCalculatedTax2.mmObject();
 			isDerived = false;
 			xmlTag = "BsisAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BasisAmount";
 			definition = "Monetary value used as the basis on which this tax, levy or duty is calculated.";
 			minOccurs = 0;
@@ -262,11 +264,11 @@ public class SettlementSubTotalCalculatedTax2 {
 	 */
 	public static final MMMessageAttribute mmCalculatedAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.mmAmount;
+			businessElementTrace_lazy = () -> Tax.mmAmount;
 			componentContext_lazy = () -> SettlementSubTotalCalculatedTax2.mmObject();
 			isDerived = false;
 			xmlTag = "ClctdAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CalculatedAmount";
 			definition = "Monetary value resulting from the calculation of this tax, levy or duty.";
 			minOccurs = 0;
@@ -310,11 +312,11 @@ public class SettlementSubTotalCalculatedTax2 {
 	 */
 	public static final MMMessageAttribute mmExemptionReasonCode = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.mmType;
+			businessElementTrace_lazy = () -> Tax.mmType;
 			componentContext_lazy = () -> SettlementSubTotalCalculatedTax2.mmObject();
 			isDerived = false;
 			xmlTag = "XmptnRsnCd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExemptionReasonCode";
 			definition = "Reason for tax exemption expressed as a code,  if invoice or card transaction is out of tax processing.";
 			maxOccurs = 1;
@@ -360,11 +362,11 @@ public class SettlementSubTotalCalculatedTax2 {
 	 */
 	public static final MMMessageAttribute mmExemptionReasonText = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.mmTaxationConditions;
+			businessElementTrace_lazy = () -> Tax.mmTaxationConditions;
 			componentContext_lazy = () -> SettlementSubTotalCalculatedTax2.mmObject();
 			isDerived = false;
 			xmlTag = "XmptnRsnTxt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExemptionReasonText";
 			definition = "Reason for a tax exemption,  if invoice or card transaction is out of tax processing.";
 			maxOccurs = 1;
@@ -407,7 +409,7 @@ public class SettlementSubTotalCalculatedTax2 {
 			componentContext_lazy = () -> SettlementSubTotalCalculatedTax2.mmObject();
 			isDerived = false;
 			xmlTag = "TaxCcyXchg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxCurrencyExchange";
 			definition = "If tax currency in tax calculation is different from invoice currency, then applied exchange rate is given in this message structure.";
 			maxOccurs = 1;
@@ -420,13 +422,12 @@ public class SettlementSubTotalCalculatedTax2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SettlementSubTotalCalculatedTax2.mmTypeCode, com.tools20022.repository.msg.SettlementSubTotalCalculatedTax2.mmCalculatedRate,
-						com.tools20022.repository.msg.SettlementSubTotalCalculatedTax2.mmBasisAmount, com.tools20022.repository.msg.SettlementSubTotalCalculatedTax2.mmCalculatedAmount,
-						com.tools20022.repository.msg.SettlementSubTotalCalculatedTax2.mmExemptionReasonCode, com.tools20022.repository.msg.SettlementSubTotalCalculatedTax2.mmExemptionReasonText,
-						com.tools20022.repository.msg.SettlementSubTotalCalculatedTax2.mmTaxCurrencyExchange);
+				messageElement_lazy = () -> Arrays.asList(SettlementSubTotalCalculatedTax2.mmTypeCode, SettlementSubTotalCalculatedTax2.mmCalculatedRate, SettlementSubTotalCalculatedTax2.mmBasisAmount,
+						SettlementSubTotalCalculatedTax2.mmCalculatedAmount, SettlementSubTotalCalculatedTax2.mmExemptionReasonCode, SettlementSubTotalCalculatedTax2.mmExemptionReasonText,
+						SettlementSubTotalCalculatedTax2.mmTaxCurrencyExchange);
 				trace_lazy = () -> Tax.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SettlementSubTotalCalculatedTax2";
 				definition = "Specifies  the subtotal calculated tax applicable for this settlement.";
 			}

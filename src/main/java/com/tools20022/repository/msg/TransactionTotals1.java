@@ -19,6 +19,7 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CurrencyCode;
 import com.tools20022.repository.codeset.TypeTransactionTotals1Code;
 import com.tools20022.repository.datatype.Exact4NumericText;
@@ -26,6 +27,7 @@ import com.tools20022.repository.datatype.ImpliedCurrencyAndAmount;
 import com.tools20022.repository.datatype.Max35NumericText;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.ReconciliationTransaction;
+import com.tools20022.repository.GeneratedRepository;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -128,7 +130,7 @@ public class TransactionTotals1 {
 			componentContext_lazy = () -> TransactionTotals1.mmObject();
 			isDerived = false;
 			xmlTag = "POIGrpId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "POIGroupIdentification";
 			definition = "Identifier assigned by the merchant identifying a set of POI terminals performing some categories of transactions.";
 			maxOccurs = 1;
@@ -173,7 +175,7 @@ public class TransactionTotals1 {
 			componentContext_lazy = () -> TransactionTotals1.mmObject();
 			isDerived = false;
 			xmlTag = "CardPdctPrfl";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CardProductProfile";
 			definition = "Category of cards related the acceptance processing rules defined by the acquirer.";
 			maxOccurs = 1;
@@ -216,11 +218,11 @@ public class TransactionTotals1 {
 	 */
 	public static final MMMessageAttribute mmCurrency = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ReconciliationTransaction.mmCurrency;
+			businessElementTrace_lazy = () -> ReconciliationTransaction.mmCurrency;
 			componentContext_lazy = () -> TransactionTotals1.mmObject();
 			isDerived = false;
 			xmlTag = "Ccy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Currency";
 			definition = "Currency associated with the transaction totals.";
 			maxOccurs = 1;
@@ -264,11 +266,11 @@ public class TransactionTotals1 {
 	 */
 	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ReconciliationTransaction.mmTransactionType;
+			businessElementTrace_lazy = () -> ReconciliationTransaction.mmTransactionType;
 			componentContext_lazy = () -> TransactionTotals1.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Identification of the type of transaction.";
 			maxOccurs = 1;
@@ -313,11 +315,11 @@ public class TransactionTotals1 {
 	 */
 	public static final MMMessageAttribute mmTotalNumber = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ReconciliationTransaction.mmTotalNumber;
+			businessElementTrace_lazy = () -> ReconciliationTransaction.mmTotalNumber;
 			componentContext_lazy = () -> TransactionTotals1.mmObject();
 			isDerived = false;
 			xmlTag = "TtlNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalNumber";
 			definition = "Total number of transactions during a reconciliation period.";
 			maxOccurs = 1;
@@ -361,11 +363,11 @@ public class TransactionTotals1 {
 	 */
 	public static final MMMessageAttribute mmCumulativeAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ReconciliationTransaction.mmCumulativeAmount;
+			businessElementTrace_lazy = () -> ReconciliationTransaction.mmCumulativeAmount;
 			componentContext_lazy = () -> TransactionTotals1.mmObject();
 			isDerived = false;
 			xmlTag = "CmltvAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CumulativeAmount";
 			definition = "Total amount of a collection of transactions.";
 			maxOccurs = 1;
@@ -377,12 +379,11 @@ public class TransactionTotals1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionTotals1.mmPOIGroupIdentification, com.tools20022.repository.msg.TransactionTotals1.mmCardProductProfile,
-						com.tools20022.repository.msg.TransactionTotals1.mmCurrency, com.tools20022.repository.msg.TransactionTotals1.mmType, com.tools20022.repository.msg.TransactionTotals1.mmTotalNumber,
-						com.tools20022.repository.msg.TransactionTotals1.mmCumulativeAmount);
+				messageElement_lazy = () -> Arrays.asList(TransactionTotals1.mmPOIGroupIdentification, TransactionTotals1.mmCardProductProfile, TransactionTotals1.mmCurrency, TransactionTotals1.mmType, TransactionTotals1.mmTotalNumber,
+						TransactionTotals1.mmCumulativeAmount);
 				trace_lazy = () -> ReconciliationTransaction.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
 						return DateFormat.getDateInstance(java.text.DateFormat.LONG).parse("September 9, 2016");

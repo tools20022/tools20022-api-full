@@ -19,9 +19,14 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.DateFormat19Choice;
 import com.tools20022.repository.choice.DateFormat20Choice;
+import com.tools20022.repository.entity.BiddingConditions;
+import com.tools20022.repository.entity.CorporateActionDeadline;
 import com.tools20022.repository.entity.CorporateActionEvent;
+import com.tools20022.repository.entity.Deadline;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -147,15 +152,15 @@ public class CorporateActionDate29 {
 	 */
 	public static final MMMessageAssociationEnd mmEarlyResponseDeadline = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionDeadline.mmEarlyResponseDeadline;
+			businessElementTrace_lazy = () -> CorporateActionDeadline.mmEarlyResponseDeadline;
 			componentContext_lazy = () -> CorporateActionDate29.mmObject();
 			isDerived = false;
 			xmlTag = "EarlyRspnDdln";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EarlyResponseDeadline";
 			definition = "Date/time that the account servicer has set as the deadline to respond, with instructions, to an outstanding event, giving the holder eligibility to incentives. This time is dependent on the reference time zone of the account servicer as specified in a Service Level Agreement (SLA).";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionDate48.mmEarlyResponseDeadline);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionDate15.mmEarlyResponseDeadline;
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionDate48.mmEarlyResponseDeadline);
+			previousVersion_lazy = () -> CorporateActionDate15.mmEarlyResponseDeadline;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -212,15 +217,15 @@ public class CorporateActionDate29 {
 	 */
 	public static final MMMessageAssociationEnd mmCoverExpirationDate = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionDeadline.mmCoverExpirationDate;
+			businessElementTrace_lazy = () -> CorporateActionDeadline.mmCoverExpirationDate;
 			componentContext_lazy = () -> CorporateActionDate29.mmObject();
 			isDerived = false;
 			xmlTag = "CoverXprtnDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoverExpirationDate";
 			definition = "Last day a holder can deliver the securities that it had elected on and/or previously protected.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionDate48.mmCoverExpirationDate);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionDate15.mmCoverExpirationDate;
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionDate48.mmCoverExpirationDate);
+			previousVersion_lazy = () -> CorporateActionDate15.mmCoverExpirationDate;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -278,15 +283,15 @@ public class CorporateActionDate29 {
 	 */
 	public static final MMMessageAssociationEnd mmProtectDate = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionDeadline.mmProtectDate;
+			businessElementTrace_lazy = () -> CorporateActionDeadline.mmProtectDate;
 			componentContext_lazy = () -> CorporateActionDate29.mmObject();
 			isDerived = false;
 			xmlTag = "PrtctDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProtectDate";
 			definition = "Last date/time a holder can request to defer delivery of securities pursuant to a notice of guaranteed delivery or other required documentation.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionDate48.mmProtectDate);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionDate15.mmProtectDate;
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionDate48.mmProtectDate);
+			previousVersion_lazy = () -> CorporateActionDate15.mmProtectDate;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -343,15 +348,15 @@ public class CorporateActionDate29 {
 	 */
 	public static final MMMessageAssociationEnd mmMarketDeadline = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Deadline.mmMarketDeadline;
+			businessElementTrace_lazy = () -> Deadline.mmMarketDeadline;
 			componentContext_lazy = () -> CorporateActionDate29.mmObject();
 			isDerived = false;
 			xmlTag = "MktDdln";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketDeadline";
 			definition = "Issuer or issuer's agent deadline to respond, with an instruction, to an outstanding offer or privilege.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionDate48.mmMarketDeadline);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionDate15.mmMarketDeadline;
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionDate48.mmMarketDeadline);
+			previousVersion_lazy = () -> CorporateActionDate15.mmMarketDeadline;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -410,15 +415,15 @@ public class CorporateActionDate29 {
 	 */
 	public static final MMMessageAssociationEnd mmResponseDeadline = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionDeadline.mmResponseDeadline;
+			businessElementTrace_lazy = () -> CorporateActionDeadline.mmResponseDeadline;
 			componentContext_lazy = () -> CorporateActionDate29.mmObject();
 			isDerived = false;
 			xmlTag = "RspnDdln";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ResponseDeadline";
 			definition = "Date/time at which the account servicer has set as the deadline to respond, with instructions, to an outstanding event. This time is dependent on the reference time zone of the account servicer as specified in a Service Level Agreement (SLA).";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionDate48.mmResponseDeadline);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionDate15.mmResponseDeadline;
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionDate48.mmResponseDeadline);
+			previousVersion_lazy = () -> CorporateActionDate15.mmResponseDeadline;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -475,15 +480,15 @@ public class CorporateActionDate29 {
 	 */
 	public static final MMMessageAssociationEnd mmExpiryDate = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionDeadline.mmExpiryDate;
+			businessElementTrace_lazy = () -> CorporateActionDeadline.mmExpiryDate;
 			componentContext_lazy = () -> CorporateActionDate29.mmObject();
 			isDerived = false;
 			xmlTag = "XpryDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExpiryDate";
 			definition = "Date/time at which an order expires or on which a privilege or offer terminates.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionDate48.mmExpiryDate);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionDate15.mmExpiryDate;
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionDate48.mmExpiryDate);
+			previousVersion_lazy = () -> CorporateActionDate15.mmExpiryDate;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -540,15 +545,15 @@ public class CorporateActionDate29 {
 	 */
 	public static final MMMessageAssociationEnd mmSubscriptionCostDebitDate = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BiddingConditions.mmSubscriptionCostDebitDate;
+			businessElementTrace_lazy = () -> BiddingConditions.mmSubscriptionCostDebitDate;
 			componentContext_lazy = () -> CorporateActionDate29.mmObject();
 			isDerived = false;
 			xmlTag = "SbcptCostDbtDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubscriptionCostDebitDate";
 			definition = "Date/time by which cash must be in place in order to take part in the event.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionDate48.mmSubscriptionCostDebitDate);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionDate15.mmSubscriptionCostDebitDate;
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionDate48.mmSubscriptionCostDebitDate);
+			previousVersion_lazy = () -> CorporateActionDate15.mmSubscriptionCostDebitDate;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -605,15 +610,15 @@ public class CorporateActionDate29 {
 	 */
 	public static final MMMessageAssociationEnd mmDepositoryCoverExpirationDate = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionDeadline.mmDepositoryCoverExpirationDate;
+			businessElementTrace_lazy = () -> CorporateActionDeadline.mmDepositoryCoverExpirationDate;
 			componentContext_lazy = () -> CorporateActionDate29.mmObject();
 			isDerived = false;
 			xmlTag = "DpstryCoverXprtnDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DepositoryCoverExpirationDate";
 			definition = "Last day that a participant of the depository can deliver securities that it had elected on and/or previously protected.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionDate48.mmDepositoryCoverExpirationDate);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionDate15.mmDepositoryCoverExpirationDate;
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionDate48.mmDepositoryCoverExpirationDate);
+			previousVersion_lazy = () -> CorporateActionDate15.mmDepositoryCoverExpirationDate;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -667,14 +672,14 @@ public class CorporateActionDate29 {
 	 */
 	public static final MMMessageAssociationEnd mmStockLendingDeadline = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionDeadline.mmStockLendingDeadline;
+			businessElementTrace_lazy = () -> CorporateActionDeadline.mmStockLendingDeadline;
 			componentContext_lazy = () -> CorporateActionDate29.mmObject();
 			isDerived = false;
 			xmlTag = "StockLndgDdln";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StockLendingDeadline";
 			definition = "Date/time that the account servicer has set as the deadline to respond, with instructions, to an outstanding event, for which the underlying security is out on loan. This time is dependent on the reference time zone of the account servicer as specified in an SLA.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionDate48.mmStockLendingDeadline);
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionDate48.mmStockLendingDeadline);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -685,13 +690,12 @@ public class CorporateActionDate29 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionDate29.mmEarlyResponseDeadline, com.tools20022.repository.msg.CorporateActionDate29.mmCoverExpirationDate,
-						com.tools20022.repository.msg.CorporateActionDate29.mmProtectDate, com.tools20022.repository.msg.CorporateActionDate29.mmMarketDeadline, com.tools20022.repository.msg.CorporateActionDate29.mmResponseDeadline,
-						com.tools20022.repository.msg.CorporateActionDate29.mmExpiryDate, com.tools20022.repository.msg.CorporateActionDate29.mmSubscriptionCostDebitDate,
-						com.tools20022.repository.msg.CorporateActionDate29.mmDepositoryCoverExpirationDate, com.tools20022.repository.msg.CorporateActionDate29.mmStockLendingDeadline);
+				messageElement_lazy = () -> Arrays.asList(CorporateActionDate29.mmEarlyResponseDeadline, CorporateActionDate29.mmCoverExpirationDate, CorporateActionDate29.mmProtectDate, CorporateActionDate29.mmMarketDeadline,
+						CorporateActionDate29.mmResponseDeadline, CorporateActionDate29.mmExpiryDate, CorporateActionDate29.mmSubscriptionCostDebitDate, CorporateActionDate29.mmDepositoryCoverExpirationDate,
+						CorporateActionDate29.mmStockLendingDeadline);
 				trace_lazy = () -> CorporateActionEvent.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionDate29";
 				definition = "Specifies corporate action dates.";
 				nextVersions_lazy = () -> Arrays.asList(CorporateActionDate48.mmObject());

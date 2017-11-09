@@ -20,11 +20,14 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.VoteChoice;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.YesNoIndicator;
+import com.tools20022.repository.entity.InstructionForMeeting;
 import com.tools20022.repository.entity.VoteInstructionRequest;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -108,7 +111,7 @@ public class VoteInstruction {
 			componentContext_lazy = () -> VoteInstruction.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Identifies the instruction.";
 			maxOccurs = 1;
@@ -151,11 +154,11 @@ public class VoteInstruction {
 	 */
 	public static final MMMessageAttribute mmRequestedExecutionDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InstructionForMeeting.mmRequestedExecutionDate;
+			businessElementTrace_lazy = () -> InstructionForMeeting.mmRequestedExecutionDate;
 			componentContext_lazy = () -> VoteInstruction.mmObject();
 			isDerived = false;
 			xmlTag = "ReqdExctnDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestedExecutionDate";
 			definition = "Date at which the instruction must b e executed.";
 			maxOccurs = 1;
@@ -200,11 +203,11 @@ public class VoteInstruction {
 	 */
 	public static final MMMessageAttribute mmVoteExecutionConfirmation = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.VoteInstructionRequest.mmVoteExecutionConfirmation;
+			businessElementTrace_lazy = () -> VoteInstructionRequest.mmVoteExecutionConfirmation;
 			componentContext_lazy = () -> VoteInstruction.mmObject();
 			isDerived = false;
 			xmlTag = "VoteExctnConf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VoteExecutionConfirmation";
 			definition = "Indicates that a Vote execution confirmation is requested.";
 			maxOccurs = 1;
@@ -246,11 +249,11 @@ public class VoteInstruction {
 	 */
 	public static final MMMessageAssociationEnd mmVotePerResolution = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.VoteInstructionRequest.mmVotePerResolution;
+			businessElementTrace_lazy = () -> VoteInstructionRequest.mmVotePerResolution;
 			componentContext_lazy = () -> VoteInstruction.mmObject();
 			isDerived = false;
 			xmlTag = "VotePerRsltn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VotePerResolution";
 			definition = "Details of the vote.";
 			maxOccurs = 1;
@@ -297,11 +300,11 @@ public class VoteInstruction {
 	 */
 	public static final MMMessageAssociationEnd mmVoteInstructionForMeetingResolution = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.VoteInstructionRequest.mmVoteForMeetingResolution;
+			businessElementTrace_lazy = () -> VoteInstructionRequest.mmVoteForMeetingResolution;
 			componentContext_lazy = () -> VoteInstruction.mmObject();
 			isDerived = false;
 			xmlTag = "VoteInstrForMtgRsltn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VoteInstructionForMeetingResolution";
 			definition = "Indicates the vote instruction for the resolutions that would be added during the meeting.";
 			maxOccurs = 1;
@@ -314,12 +317,11 @@ public class VoteInstruction {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.VoteInstruction.mmIdentification, com.tools20022.repository.msg.VoteInstruction.mmRequestedExecutionDate,
-						com.tools20022.repository.msg.VoteInstruction.mmVoteExecutionConfirmation, com.tools20022.repository.msg.VoteInstruction.mmVotePerResolution,
-						com.tools20022.repository.msg.VoteInstruction.mmVoteInstructionForMeetingResolution);
+				messageElement_lazy = () -> Arrays.asList(VoteInstruction.mmIdentification, VoteInstruction.mmRequestedExecutionDate, VoteInstruction.mmVoteExecutionConfirmation, VoteInstruction.mmVotePerResolution,
+						VoteInstruction.mmVoteInstructionForMeetingResolution);
 				trace_lazy = () -> VoteInstructionRequest.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "VoteInstruction";
 				definition = "Specifies the vote instructions.";
 			}

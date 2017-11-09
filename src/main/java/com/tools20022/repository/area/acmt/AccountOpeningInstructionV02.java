@@ -20,6 +20,7 @@ package com.tools20022.repository.area.acmt;
 import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.AccountManagementArchive;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.ISOArchive;
@@ -46,6 +47,9 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code acmt.001.001.02}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.AccountManagementArchive
@@ -109,9 +113,6 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code acmt.001.001.02}</li>
- * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -161,7 +162,7 @@ public class AccountOpeningInstructionV02 {
 	public static final MMMessageBuildingBlock mmMessageIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "MsgId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageIdentification";
 			definition = "Identifies the message.";
 			maxOccurs = 1;
@@ -196,7 +197,7 @@ public class AccountOpeningInstructionV02 {
 	public static final MMMessageBuildingBlock mmOrderReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "OrdrRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrderReference";
 			definition = "Identifies a related order.";
 			maxOccurs = 1;
@@ -231,7 +232,7 @@ public class AccountOpeningInstructionV02 {
 	public static final MMMessageBuildingBlock mmPreviousReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "PrvsRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousReference";
 			definition = "Reference to a linked message that was previously sent.";
 			maxOccurs = 1;
@@ -267,7 +268,7 @@ public class AccountOpeningInstructionV02 {
 	public static final MMMessageBuildingBlock mmInstructionDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "InstrDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructionDetails";
 			definition = "Provide detailed information about the opening instruction.";
 			maxOccurs = 1;
@@ -303,7 +304,7 @@ public class AccountOpeningInstructionV02 {
 	public static final MMMessageBuildingBlock mmInvestmentAccount = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "InvstmtAcct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestmentAccount";
 			definition = "Detailed information about the investment account to be opened";
 			maxOccurs = 1;
@@ -340,7 +341,7 @@ public class AccountOpeningInstructionV02 {
 	public static final MMMessageBuildingBlock mmAccountParties = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "AcctPties";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountParties";
 			definition = "Information related to parties who are related to an investment account; eg. primary account owner.";
 			maxOccurs = 1;
@@ -374,7 +375,7 @@ public class AccountOpeningInstructionV02 {
 	public static final MMMessageBuildingBlock mmIntermediaries = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Intrmies";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Intermediaries";
 			definition = "Information related to an intermediary.";
 			maxOccurs = 10;
@@ -408,7 +409,7 @@ public class AccountOpeningInstructionV02 {
 	public static final MMMessageBuildingBlock mmPlacement = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Plcmnt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Placement";
 			definition = "Placement agent for the hedge fund industry.";
 			maxOccurs = 1;
@@ -446,7 +447,7 @@ public class AccountOpeningInstructionV02 {
 	public static final MMMessageBuildingBlock mmNewIssueAllocation = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "NewIsseAllcn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewIssueAllocation";
 			definition = "Eligibility conditions applicable when there is an allocation of new issues for hedge fund account opening.";
 			maxOccurs = 1;
@@ -483,7 +484,7 @@ public class AccountOpeningInstructionV02 {
 	public static final MMMessageBuildingBlock mmSavingsInvestmentPlan = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SvgsInvstmtPlan";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SavingsInvestmentPlan";
 			definition = "Plan that allows individuals to set aside a fixed amount of money at specified intervals, usually for a special purpose, eg, retirement.";
 			maxOccurs = 50;
@@ -520,7 +521,7 @@ public class AccountOpeningInstructionV02 {
 	public static final MMMessageBuildingBlock mmWithdrawalInvestmentPlan = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "WdrwlInvstmtPlan";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WithdrawalInvestmentPlan";
 			definition = "Plan through which an investment fund investor's holdings are depleted through regular withdrawals at specified intervals.";
 			maxOccurs = 10;
@@ -558,7 +559,7 @@ public class AccountOpeningInstructionV02 {
 	public static final MMMessageBuildingBlock mmCashSettlement = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CshSttlm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashSettlement";
 			definition = "Cash settlement standing instruction associated to the investment fund transaction.";
 			maxOccurs = 1;
@@ -593,7 +594,7 @@ public class AccountOpeningInstructionV02 {
 	public static final MMMessageBuildingBlock mmServiceLevelAgreement = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SvcLvlAgrmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ServiceLevelAgreement";
 			definition = "Identifies documents to be provided for the account opening.";
 			maxOccurs = 30;
@@ -630,7 +631,7 @@ public class AccountOpeningInstructionV02 {
 	public static final MMMessageBuildingBlock mmExtension = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Xtnsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Extension";
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
 			minOccurs = 0;
@@ -641,7 +642,7 @@ public class AccountOpeningInstructionV02 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AccountOpeningInstructionV02";
 				definition = "Scope\r\nAn account owner, for example, an investor or its designated agent sends the AccountOpeningInstruction message to an account servicer, for example, a registrar, transfer agent or custodian to instruct the opening of an account or the opening of an account and establishing an investment plan.\r\nUsage\r\nThe AccountOpeningInstruction is used to open an account directly or indirectly with the account servicer or an intermediary.\r\nIn some markets, for example, Australia, and for some products in the United Kingdom, a first order (also known as a deposit instruction) is placed at the same time as the account opening. To cater for this scenario, an order message can be linked (via references in the message) to the AccountOpeningInstruction message when needed.\r\nExecution of the AccountOpeningInstruction is confirmed via an AccountDetailsConfirmation message.";
 				nextVersions_lazy = () -> Arrays.asList(AccountOpeningInstructionV03.mmObject());
@@ -649,13 +650,10 @@ public class AccountOpeningInstructionV02 {
 				rootElement = "Document";
 				xmlTag = "AcctOpngInstrV02";
 				businessArea_lazy = () -> AccountManagementArchive.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountOpeningInstructionV02.mmMessageIdentification, com.tools20022.repository.area.acmt.AccountOpeningInstructionV02.mmOrderReference,
-						com.tools20022.repository.area.acmt.AccountOpeningInstructionV02.mmPreviousReference, com.tools20022.repository.area.acmt.AccountOpeningInstructionV02.mmInstructionDetails,
-						com.tools20022.repository.area.acmt.AccountOpeningInstructionV02.mmInvestmentAccount, com.tools20022.repository.area.acmt.AccountOpeningInstructionV02.mmAccountParties,
-						com.tools20022.repository.area.acmt.AccountOpeningInstructionV02.mmIntermediaries, com.tools20022.repository.area.acmt.AccountOpeningInstructionV02.mmPlacement,
-						com.tools20022.repository.area.acmt.AccountOpeningInstructionV02.mmNewIssueAllocation, com.tools20022.repository.area.acmt.AccountOpeningInstructionV02.mmSavingsInvestmentPlan,
-						com.tools20022.repository.area.acmt.AccountOpeningInstructionV02.mmWithdrawalInvestmentPlan, com.tools20022.repository.area.acmt.AccountOpeningInstructionV02.mmCashSettlement,
-						com.tools20022.repository.area.acmt.AccountOpeningInstructionV02.mmServiceLevelAgreement, com.tools20022.repository.area.acmt.AccountOpeningInstructionV02.mmExtension);
+				messageBuildingBlock_lazy = () -> Arrays.asList(AccountOpeningInstructionV02.mmMessageIdentification, AccountOpeningInstructionV02.mmOrderReference, AccountOpeningInstructionV02.mmPreviousReference,
+						AccountOpeningInstructionV02.mmInstructionDetails, AccountOpeningInstructionV02.mmInvestmentAccount, AccountOpeningInstructionV02.mmAccountParties, AccountOpeningInstructionV02.mmIntermediaries,
+						AccountOpeningInstructionV02.mmPlacement, AccountOpeningInstructionV02.mmNewIssueAllocation, AccountOpeningInstructionV02.mmSavingsInvestmentPlan, AccountOpeningInstructionV02.mmWithdrawalInvestmentPlan,
+						AccountOpeningInstructionV02.mmCashSettlement, AccountOpeningInstructionV02.mmServiceLevelAgreement, AccountOpeningInstructionV02.mmExtension);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "acmt";

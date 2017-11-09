@@ -19,7 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.acmt.*;
+import com.tools20022.repository.area.supl.InformationResponseSD1V01;
 import com.tools20022.repository.entity.Organisation;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -172,11 +176,11 @@ public class BranchAndFinancialInstitutionIdentification4 {
 	 */
 	public static final MMMessageAssociationEnd mmFinancialInstitutionIdentification = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Organisation.mmOrganisationIdentification;
+			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> BranchAndFinancialInstitutionIdentification4.mmObject();
 			isDerived = false;
 			xmlTag = "FinInstnId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstitutionIdentification";
 			definition = "Unique and unambiguous identification of a financial institution, as assigned under an internationally recognised or proprietary identification scheme.";
 			maxOccurs = 1;
@@ -225,11 +229,11 @@ public class BranchAndFinancialInstitutionIdentification4 {
 	 */
 	public static final MMMessageAssociationEnd mmBranchIdentification = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Organisation.mmOrganisationIdentification;
+			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> BranchAndFinancialInstitutionIdentification4.mmObject();
 			isDerived = false;
 			xmlTag = "BrnchId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BranchIdentification";
 			definition = "Identifies a specific branch of a financial institution.\n\nUsage: This component should be used in case the identification information in the financial institution component does not provide identification up to branch level.";
 			maxOccurs = 1;
@@ -242,25 +246,18 @@ public class BranchAndFinancialInstitutionIdentification4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification4.mmFinancialInstitutionIdentification,
-						com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification4.mmBranchIdentification);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountAdditionalInformationRequestV01.mmAccountServicerIdentification,
-						com.tools20022.repository.area.acmt.AccountClosingAdditionalInformationRequestV01.mmAccountServicerIdentification,
-						com.tools20022.repository.area.acmt.AccountClosingAdditionalInformationRequestV01.mmTransferAccountServicerIdentification,
-						com.tools20022.repository.area.acmt.AccountClosingAmendmentRequestV01.mmAccountServicerIdentification, com.tools20022.repository.area.acmt.AccountClosingAmendmentRequestV01.mmTransferAccountServicerIdentification,
-						com.tools20022.repository.area.acmt.AccountClosingRequestV01.mmAccountServicerIdentification, com.tools20022.repository.area.acmt.AccountClosingRequestV01.mmTransferAccountServicerIdentification,
-						com.tools20022.repository.area.acmt.AccountExcludedMandateMaintenanceAmendmentRequestV01.mmAccountServicerIdentification,
-						com.tools20022.repository.area.acmt.AccountExcludedMandateMaintenanceRequestV01.mmAccountServicerIdentification,
-						com.tools20022.repository.area.acmt.AccountMandateMaintenanceAmendmentRequestV01.mmAccountServicerIdentification,
-						com.tools20022.repository.area.acmt.AccountMandateMaintenanceRequestV01.mmAccountServicerIdentification,
-						com.tools20022.repository.area.acmt.AccountOpeningAdditionalInformationRequestV01.mmAccountServicerIdentification,
-						com.tools20022.repository.area.acmt.AccountOpeningAmendmentRequestV01.mmAccountServicerIdentification, com.tools20022.repository.area.acmt.AccountOpeningRequestV01.mmAccountServicerIdentification,
-						com.tools20022.repository.area.acmt.AccountReportRequestV01.mmAccountServicerIdentification, com.tools20022.repository.area.acmt.AccountReportV01.mmAccountServicerIdentification,
-						com.tools20022.repository.area.acmt.AccountRequestAcknowledgementV01.mmAccountServicerIdentification, com.tools20022.repository.area.acmt.AccountRequestRejectionV01.mmAccountServicerIdentification,
-						com.tools20022.repository.area.supl.InformationResponseSD1V01.mmAccountServicerIdentification);
+				messageElement_lazy = () -> Arrays.asList(BranchAndFinancialInstitutionIdentification4.mmFinancialInstitutionIdentification, BranchAndFinancialInstitutionIdentification4.mmBranchIdentification);
+				messageBuildingBlock_lazy = () -> Arrays.asList(AccountAdditionalInformationRequestV01.mmAccountServicerIdentification, AccountClosingAdditionalInformationRequestV01.mmAccountServicerIdentification,
+						AccountClosingAdditionalInformationRequestV01.mmTransferAccountServicerIdentification, AccountClosingAmendmentRequestV01.mmAccountServicerIdentification,
+						AccountClosingAmendmentRequestV01.mmTransferAccountServicerIdentification, AccountClosingRequestV01.mmAccountServicerIdentification, AccountClosingRequestV01.mmTransferAccountServicerIdentification,
+						AccountExcludedMandateMaintenanceAmendmentRequestV01.mmAccountServicerIdentification, AccountExcludedMandateMaintenanceRequestV01.mmAccountServicerIdentification,
+						AccountMandateMaintenanceAmendmentRequestV01.mmAccountServicerIdentification, AccountMandateMaintenanceRequestV01.mmAccountServicerIdentification,
+						AccountOpeningAdditionalInformationRequestV01.mmAccountServicerIdentification, AccountOpeningAmendmentRequestV01.mmAccountServicerIdentification, AccountOpeningRequestV01.mmAccountServicerIdentification,
+						AccountReportRequestV01.mmAccountServicerIdentification, AccountReportV01.mmAccountServicerIdentification, AccountRequestAcknowledgementV01.mmAccountServicerIdentification,
+						AccountRequestRejectionV01.mmAccountServicerIdentification, InformationResponseSD1V01.mmAccountServicerIdentification);
 				trace_lazy = () -> Organisation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "BranchAndFinancialInstitutionIdentification4";
 				definition = "Set of elements used to uniquely and unambiguously identify a financial institution or a branch of a financial institution.";
 			}

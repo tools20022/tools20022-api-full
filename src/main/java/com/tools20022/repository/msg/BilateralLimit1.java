@@ -20,9 +20,14 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.Amount2Choice;
 import com.tools20022.repository.codeset.CreditDebitCode;
+import com.tools20022.repository.entity.CashAccount;
+import com.tools20022.repository.entity.Limit;
+import com.tools20022.repository.entity.Organisation;
 import com.tools20022.repository.entity.RiskManagementLimit;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -111,11 +116,11 @@ public class BilateralLimit1 {
 	 */
 	public static final MMMessageAssociationEnd mmCounterpartyIdentification = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Organisation.mmOrganisationIdentification;
+			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> BilateralLimit1.mmObject();
 			isDerived = false;
 			xmlTag = "CtrPtyId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CounterpartyIdentification";
 			definition = "Unique and unambiguous identification of a member within a system, assigned using the member identification scheme of the system.";
 			maxOccurs = 1;
@@ -161,11 +166,11 @@ public class BilateralLimit1 {
 	 */
 	public static final MMMessageAttribute mmLimitAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Limit.mmAmount;
+			businessElementTrace_lazy = () -> Limit.mmAmount;
 			componentContext_lazy = () -> BilateralLimit1.mmObject();
 			isDerived = false;
 			xmlTag = "LmtAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LimitAmount";
 			definition = "Amount of money of the limit, expressed in an eligible currency.";
 			maxOccurs = 1;
@@ -209,11 +214,11 @@ public class BilateralLimit1 {
 	 */
 	public static final MMMessageAttribute mmCreditDebitIndicator = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Limit.mmCreditDebitIndicator;
+			businessElementTrace_lazy = () -> Limit.mmCreditDebitIndicator;
 			componentContext_lazy = () -> BilateralLimit1.mmObject();
 			isDerived = false;
 			xmlTag = "CdtDbtInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditDebitIndicator";
 			definition = "Specifies if a limit is a debit limit or a credit limit.";
 			maxOccurs = 1;
@@ -256,11 +261,11 @@ public class BilateralLimit1 {
 	 */
 	public static final MMMessageAssociationEnd mmBilateralBalance = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashAccount.mmCashBalance;
+			businessElementTrace_lazy = () -> CashAccount.mmCashBalance;
 			componentContext_lazy = () -> BilateralLimit1.mmObject();
 			isDerived = false;
 			xmlTag = "BilBal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BilateralBalance";
 			definition = "Balance calculated with regard to one member in the system.";
 			minOccurs = 0;
@@ -272,11 +277,10 @@ public class BilateralLimit1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BilateralLimit1.mmCounterpartyIdentification, com.tools20022.repository.msg.BilateralLimit1.mmLimitAmount,
-						com.tools20022.repository.msg.BilateralLimit1.mmCreditDebitIndicator, com.tools20022.repository.msg.BilateralLimit1.mmBilateralBalance);
+				messageElement_lazy = () -> Arrays.asList(BilateralLimit1.mmCounterpartyIdentification, BilateralLimit1.mmLimitAmount, BilateralLimit1.mmCreditDebitIndicator, BilateralLimit1.mmBilateralBalance);
 				trace_lazy = () -> RiskManagementLimit.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "BilateralLimit1";
 				definition = "Characteristics and values set for a bilateral limit, including the counterparty upon which the limit applies.";
 			}

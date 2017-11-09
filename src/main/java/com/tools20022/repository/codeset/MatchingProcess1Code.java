@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.MatchingProcessCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -84,7 +86,7 @@ public class MatchingProcess1Code extends MatchingProcessCode {
 	 */
 	public static final MMCode mmUnmatch = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unmatch";
 			owner_lazy = () -> MatchingProcess1Code.mmObject();
 		}
@@ -107,7 +109,7 @@ public class MatchingProcess1Code extends MatchingProcessCode {
 	 */
 	public static final MMCode mmResumeMatching = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ResumeMatching";
 			owner_lazy = () -> MatchingProcess1Code.mmObject();
 		}
@@ -116,12 +118,12 @@ public class MatchingProcess1Code extends MatchingProcessCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("UNMT");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MatchingProcess1Code";
 				definition = "Specifies the action to be performed on the matching process.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MatchingProcess1Code.mmUnmatch, com.tools20022.repository.codeset.MatchingProcess1Code.mmResumeMatching);
+				code_lazy = () -> Arrays.asList(MatchingProcess1Code.mmUnmatch, MatchingProcess1Code.mmResumeMatching);
 				trace_lazy = () -> MatchingProcessCode.mmObject();
 			}
 		});

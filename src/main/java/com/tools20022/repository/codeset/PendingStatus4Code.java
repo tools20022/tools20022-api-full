@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.PaymentInstructionStatusCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -130,7 +132,7 @@ public class PendingStatus4Code extends PaymentInstructionStatusCode {
 	 */
 	public static final MMCode mmAccepted = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Accepted";
 			owner_lazy = () -> PendingStatus4Code.mmObject();
 		}
@@ -153,7 +155,7 @@ public class PendingStatus4Code extends PaymentInstructionStatusCode {
 	 */
 	public static final MMCode mmValidated = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Validated";
 			owner_lazy = () -> PendingStatus4Code.mmObject();
 		}
@@ -176,7 +178,7 @@ public class PendingStatus4Code extends PaymentInstructionStatusCode {
 	 */
 	public static final MMCode mmMatched = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Matched";
 			owner_lazy = () -> PendingStatus4Code.mmObject();
 		}
@@ -199,7 +201,7 @@ public class PendingStatus4Code extends PaymentInstructionStatusCode {
 	 */
 	public static final MMCode mmAuthorised = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Authorised";
 			owner_lazy = () -> PendingStatus4Code.mmObject();
 		}
@@ -222,7 +224,7 @@ public class PendingStatus4Code extends PaymentInstructionStatusCode {
 	 */
 	public static final MMCode mmInvalid = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Invalid";
 			owner_lazy = () -> PendingStatus4Code.mmObject();
 		}
@@ -245,7 +247,7 @@ public class PendingStatus4Code extends PaymentInstructionStatusCode {
 	 */
 	public static final MMCode mmUnmatched = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unmatched";
 			owner_lazy = () -> PendingStatus4Code.mmObject();
 		}
@@ -268,7 +270,7 @@ public class PendingStatus4Code extends PaymentInstructionStatusCode {
 	 */
 	public static final MMCode mmSettlementEligible = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementEligible";
 			owner_lazy = () -> PendingStatus4Code.mmObject();
 		}
@@ -291,7 +293,7 @@ public class PendingStatus4Code extends PaymentInstructionStatusCode {
 	 */
 	public static final MMCode mmSettlementMature = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementMature";
 			owner_lazy = () -> PendingStatus4Code.mmObject();
 		}
@@ -314,7 +316,7 @@ public class PendingStatus4Code extends PaymentInstructionStatusCode {
 	 */
 	public static final MMCode mmSuspended = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Suspended";
 			owner_lazy = () -> PendingStatus4Code.mmObject();
 		}
@@ -337,7 +339,7 @@ public class PendingStatus4Code extends PaymentInstructionStatusCode {
 	 */
 	public static final MMCode mmPendingCancellation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingCancellation";
 			owner_lazy = () -> PendingStatus4Code.mmObject();
 		}
@@ -360,7 +362,7 @@ public class PendingStatus4Code extends PaymentInstructionStatusCode {
 	 */
 	public static final MMCode mmPendingSettlement = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingSettlement";
 			owner_lazy = () -> PendingStatus4Code.mmObject();
 		}
@@ -383,7 +385,7 @@ public class PendingStatus4Code extends PaymentInstructionStatusCode {
 	 */
 	public static final MMCode mmPendingFailingSettlement = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingFailingSettlement";
 			owner_lazy = () -> PendingStatus4Code.mmObject();
 		}
@@ -406,7 +408,7 @@ public class PendingStatus4Code extends PaymentInstructionStatusCode {
 	 */
 	public static final MMCode mmSenderMultilateralLimitRelated = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SenderMultilateralLimitRelated";
 			owner_lazy = () -> PendingStatus4Code.mmObject();
 		}
@@ -429,7 +431,7 @@ public class PendingStatus4Code extends PaymentInstructionStatusCode {
 	 */
 	public static final MMCode mmReceiverMultilateralLimitRelated = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceiverMultilateralLimitRelated";
 			owner_lazy = () -> PendingStatus4Code.mmObject();
 		}
@@ -452,7 +454,7 @@ public class PendingStatus4Code extends PaymentInstructionStatusCode {
 	 */
 	public static final MMCode mmSenderReceiverBilateralLimitRelated = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SenderReceiverBilateralLimitRelated";
 			owner_lazy = () -> PendingStatus4Code.mmObject();
 		}
@@ -475,7 +477,7 @@ public class PendingStatus4Code extends PaymentInstructionStatusCode {
 	 */
 	public static final MMCode mmHeldForServiceAvailability = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HeldForServiceAvailability";
 			owner_lazy = () -> PendingStatus4Code.mmObject();
 		}
@@ -498,7 +500,7 @@ public class PendingStatus4Code extends PaymentInstructionStatusCode {
 	 */
 	public static final MMCode mmSenderReceiverMultilateralLimitRelated = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SenderReceiverMultilateralLimitRelated";
 			owner_lazy = () -> PendingStatus4Code.mmObject();
 		}
@@ -507,18 +509,15 @@ public class PendingStatus4Code extends PaymentInstructionStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ACPD");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PendingStatus4Code";
 				definition = "Indicates that the state of a payment at the clearing agent side is pending.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PendingStatus4Code.mmAccepted, com.tools20022.repository.codeset.PendingStatus4Code.mmValidated,
-						com.tools20022.repository.codeset.PendingStatus4Code.mmMatched, com.tools20022.repository.codeset.PendingStatus4Code.mmAuthorised, com.tools20022.repository.codeset.PendingStatus4Code.mmInvalid,
-						com.tools20022.repository.codeset.PendingStatus4Code.mmUnmatched, com.tools20022.repository.codeset.PendingStatus4Code.mmSettlementEligible, com.tools20022.repository.codeset.PendingStatus4Code.mmSettlementMature,
-						com.tools20022.repository.codeset.PendingStatus4Code.mmSuspended, com.tools20022.repository.codeset.PendingStatus4Code.mmPendingCancellation, com.tools20022.repository.codeset.PendingStatus4Code.mmPendingSettlement,
-						com.tools20022.repository.codeset.PendingStatus4Code.mmPendingFailingSettlement, com.tools20022.repository.codeset.PendingStatus4Code.mmSenderMultilateralLimitRelated,
-						com.tools20022.repository.codeset.PendingStatus4Code.mmReceiverMultilateralLimitRelated, com.tools20022.repository.codeset.PendingStatus4Code.mmSenderReceiverBilateralLimitRelated,
-						com.tools20022.repository.codeset.PendingStatus4Code.mmHeldForServiceAvailability, com.tools20022.repository.codeset.PendingStatus4Code.mmSenderReceiverMultilateralLimitRelated);
+				code_lazy = () -> Arrays.asList(PendingStatus4Code.mmAccepted, PendingStatus4Code.mmValidated, PendingStatus4Code.mmMatched, PendingStatus4Code.mmAuthorised, PendingStatus4Code.mmInvalid, PendingStatus4Code.mmUnmatched,
+						PendingStatus4Code.mmSettlementEligible, PendingStatus4Code.mmSettlementMature, PendingStatus4Code.mmSuspended, PendingStatus4Code.mmPendingCancellation, PendingStatus4Code.mmPendingSettlement,
+						PendingStatus4Code.mmPendingFailingSettlement, PendingStatus4Code.mmSenderMultilateralLimitRelated, PendingStatus4Code.mmReceiverMultilateralLimitRelated, PendingStatus4Code.mmSenderReceiverBilateralLimitRelated,
+						PendingStatus4Code.mmHeldForServiceAvailability, PendingStatus4Code.mmSenderReceiverMultilateralLimitRelated);
 				trace_lazy = () -> PaymentInstructionStatusCode.mmObject();
 			}
 		});

@@ -19,9 +19,12 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max140Text;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.entity.GenericIdentification;
 import com.tools20022.repository.entity.PointOfInteraction;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -105,7 +108,7 @@ public class ATMCommandIdentification1 {
 			componentContext_lazy = () -> ATMCommandIdentification1.mmObject();
 			isDerived = false;
 			xmlTag = "Orgn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Origin";
 			definition = "Identification of the entity issuing the command.";
 			maxOccurs = 1;
@@ -147,7 +150,7 @@ public class ATMCommandIdentification1 {
 			componentContext_lazy = () -> ATMCommandIdentification1.mmObject();
 			isDerived = false;
 			xmlTag = "Ref";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reference";
 			definition = "Unique identification of the command for the issuer of the command.";
 			maxOccurs = 1;
@@ -191,11 +194,11 @@ public class ATMCommandIdentification1 {
 	 */
 	public static final MMMessageAttribute mmProcessor = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmIdentification;
+			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> ATMCommandIdentification1.mmObject();
 			isDerived = false;
 			xmlTag = "Prcr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Processor";
 			definition = "Identification or address of the host performing the command.";
 			maxOccurs = 1;
@@ -207,11 +210,10 @@ public class ATMCommandIdentification1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMCommandIdentification1.mmOrigin, com.tools20022.repository.msg.ATMCommandIdentification1.mmReference,
-						com.tools20022.repository.msg.ATMCommandIdentification1.mmProcessor);
+				messageElement_lazy = () -> Arrays.asList(ATMCommandIdentification1.mmOrigin, ATMCommandIdentification1.mmReference, ATMCommandIdentification1.mmProcessor);
 				trace_lazy = () -> PointOfInteraction.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ATMCommandIdentification1";
 				definition = "Identification of the entity issuing the command.";
 			}

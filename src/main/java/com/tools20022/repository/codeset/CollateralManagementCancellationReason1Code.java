@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CollateralManagementCancellationReasonCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -84,7 +86,7 @@ public class CollateralManagementCancellationReason1Code extends CollateralManag
 	 */
 	public static final MMCode mmProcessingError = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProcessingError";
 			owner_lazy = () -> CollateralManagementCancellationReason1Code.mmObject();
 		}
@@ -107,7 +109,7 @@ public class CollateralManagementCancellationReason1Code extends CollateralManag
 	 */
 	public static final MMCode mmPendingNewSubmission = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingNewSubmission";
 			owner_lazy = () -> CollateralManagementCancellationReason1Code.mmObject();
 		}
@@ -116,13 +118,12 @@ public class CollateralManagementCancellationReason1Code extends CollateralManag
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("PRER");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CollateralManagementCancellationReason1Code";
 				definition = "Specifies the reason why the instruction/request has been cancelled.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CollateralManagementCancellationReason1Code.mmProcessingError,
-						com.tools20022.repository.codeset.CollateralManagementCancellationReason1Code.mmPendingNewSubmission);
+				code_lazy = () -> Arrays.asList(CollateralManagementCancellationReason1Code.mmProcessingError, CollateralManagementCancellationReason1Code.mmPendingNewSubmission);
 				trace_lazy = () -> CollateralManagementCancellationReasonCode.mmObject();
 			}
 		});

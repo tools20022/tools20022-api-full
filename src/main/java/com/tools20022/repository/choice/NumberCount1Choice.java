@@ -20,7 +20,16 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.semt.IntraPositionMovementInstruction002V04;
+import com.tools20022.repository.area.semt.IntraPositionMovementInstructionV03;
+import com.tools20022.repository.area.semt.IntraPositionMovementInstructionV04;
+import com.tools20022.repository.area.sese.*;
+import com.tools20022.repository.area.setr.SecuritiesTradeConfirmationV01;
+import com.tools20022.repository.area.setr.SecuritiesTradeConfirmationV02;
+import com.tools20022.repository.area.setr.SecuritiesTradeConfirmationV03;
 import com.tools20022.repository.datatype.Exact3NumericText;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.TotalNumber1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -202,7 +211,7 @@ public class NumberCount1Choice {
 			componentContext_lazy = () -> NumberCount1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "CurInstrNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrentInstructionNumber";
 			definition = "Sequential number of the instruction in a range of linked settlement instructions.";
 			maxOccurs = 1;
@@ -245,7 +254,7 @@ public class NumberCount1Choice {
 			componentContext_lazy = () -> NumberCount1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "TtlNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalNumber";
 			definition = "Total numbers of settlement transactions, receipts and deliveries, and the concerned settlement transaction number.";
 			maxOccurs = 1;
@@ -258,27 +267,20 @@ public class NumberCount1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.NumberCount1Choice.mmCurrentInstructionNumber, com.tools20022.repository.choice.NumberCount1Choice.mmTotalNumber);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesFinancingInstructionV01.mmNumberCounts, com.tools20022.repository.area.sese.SecuritiesFinancingInstructionV02.mmNumberCounts,
-						com.tools20022.repository.area.sese.SecuritiesFinancingInstructionV03.mmNumberCounts, com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV01.mmNumberCounts,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV02.mmNumberCounts,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV03.mmNumberCounts,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV04.mmNumberCounts, com.tools20022.repository.area.sese.SecuritiesSettlementTransactionInstructionV01.mmNumberCounts,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionInstructionV02.mmNumberCounts, com.tools20022.repository.area.sese.SecuritiesSettlementTransactionInstructionV03.mmNumberCounts,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionInstructionV04.mmNumberCounts, com.tools20022.repository.area.setr.SecuritiesTradeConfirmationV01.mmNumberCount,
-						com.tools20022.repository.area.sese.SecuritiesFinancingInstructionV04.mmNumberCounts, com.tools20022.repository.area.setr.SecuritiesTradeConfirmationV02.mmNumberCount,
-						com.tools20022.repository.area.semt.IntraPositionMovementInstructionV03.mmNumberCounts, com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV05.mmNumberCounts,
-						com.tools20022.repository.area.sese.SecuritiesFinancingInstructionV05.mmNumberCounts, com.tools20022.repository.area.sese.SecuritiesSettlementTransactionInstructionV05.mmNumberCounts,
-						com.tools20022.repository.area.setr.SecuritiesTradeConfirmationV03.mmNumberCount, com.tools20022.repository.area.sese.SecuritiesSettlementTransactionInstructionV06.mmNumberCounts,
-						com.tools20022.repository.area.semt.IntraPositionMovementInstructionV04.mmNumberCounts, com.tools20022.repository.area.sese.SecuritiesFinancingInstructionV06.mmNumberCounts,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV06.mmNumberCounts, com.tools20022.repository.area.semt.IntraPositionMovementInstruction002V04.mmNumberCounts,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotification002V06.mmNumberCounts, com.tools20022.repository.area.sese.SecuritiesSettlementTransactionInstruction002V06.mmNumberCounts,
-						com.tools20022.repository.area.sese.SecuritiesFinancingInstruction002V06.mmNumberCounts, com.tools20022.repository.area.sese.SecuritiesFinancingInstructionV07.mmNumberCounts,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV07.mmNumberCounts, com.tools20022.repository.area.sese.SecuritiesSettlementTransactionInstructionV07.mmNumberCounts,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionInstruction002V07.mmNumberCounts, com.tools20022.repository.area.sese.SecuritiesFinancingInstruction002V07.mmNumberCounts,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotification002V07.mmNumberCounts);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(NumberCount1Choice.mmCurrentInstructionNumber, NumberCount1Choice.mmTotalNumber);
+				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesFinancingInstructionV01.mmNumberCounts, SecuritiesFinancingInstructionV02.mmNumberCounts, SecuritiesFinancingInstructionV03.mmNumberCounts,
+						SecuritiesSettlementTransactionGenerationNotificationV01.mmNumberCounts, SecuritiesSettlementTransactionGenerationNotificationV02.mmNumberCounts,
+						SecuritiesSettlementTransactionGenerationNotificationV03.mmNumberCounts, SecuritiesSettlementTransactionGenerationNotificationV04.mmNumberCounts, SecuritiesSettlementTransactionInstructionV01.mmNumberCounts,
+						SecuritiesSettlementTransactionInstructionV02.mmNumberCounts, SecuritiesSettlementTransactionInstructionV03.mmNumberCounts, SecuritiesSettlementTransactionInstructionV04.mmNumberCounts,
+						SecuritiesTradeConfirmationV01.mmNumberCount, SecuritiesFinancingInstructionV04.mmNumberCounts, SecuritiesTradeConfirmationV02.mmNumberCount, IntraPositionMovementInstructionV03.mmNumberCounts,
+						SecuritiesSettlementTransactionGenerationNotificationV05.mmNumberCounts, SecuritiesFinancingInstructionV05.mmNumberCounts, SecuritiesSettlementTransactionInstructionV05.mmNumberCounts,
+						SecuritiesTradeConfirmationV03.mmNumberCount, SecuritiesSettlementTransactionInstructionV06.mmNumberCounts, IntraPositionMovementInstructionV04.mmNumberCounts, SecuritiesFinancingInstructionV06.mmNumberCounts,
+						SecuritiesSettlementTransactionGenerationNotificationV06.mmNumberCounts, IntraPositionMovementInstruction002V04.mmNumberCounts, SecuritiesSettlementTransactionGenerationNotification002V06.mmNumberCounts,
+						SecuritiesSettlementTransactionInstruction002V06.mmNumberCounts, SecuritiesFinancingInstruction002V06.mmNumberCounts, SecuritiesFinancingInstructionV07.mmNumberCounts,
+						SecuritiesSettlementTransactionGenerationNotificationV07.mmNumberCounts, SecuritiesSettlementTransactionInstructionV07.mmNumberCounts, SecuritiesSettlementTransactionInstruction002V07.mmNumberCounts,
+						SecuritiesFinancingInstruction002V07.mmNumberCounts, SecuritiesSettlementTransactionGenerationNotification002V07.mmNumberCounts);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "NumberCount1Choice";
 				definition = "Choice of number count type.";
 			}

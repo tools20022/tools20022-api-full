@@ -19,9 +19,12 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.seev.AgentCANotificationAdviceV01;
 import com.tools20022.repository.choice.ProcessingPosition2FormatChoice;
 import com.tools20022.repository.codeset.CorporateActionNotificationType1Code;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -112,7 +115,7 @@ public class LinkedCorporateAction1 {
 			componentContext_lazy = () -> LinkedCorporateAction1.mmObject();
 			isDerived = false;
 			xmlTag = "NtfctnTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotificationType";
 			definition = "The function of the notification e.g. new notification.";
 			maxOccurs = 1;
@@ -154,7 +157,7 @@ public class LinkedCorporateAction1 {
 			componentContext_lazy = () -> LinkedCorporateAction1.mmObject();
 			isDerived = false;
 			xmlTag = "LkdAgtCANtfctnAdvcId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LinkedAgentCANotificationAdviceIdentification";
 			definition = "The identification of the linked notification advice.";
 			maxOccurs = 1;
@@ -199,7 +202,7 @@ public class LinkedCorporateAction1 {
 			componentContext_lazy = () -> LinkedCorporateAction1.mmObject();
 			isDerived = false;
 			xmlTag = "LkgTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LinkageType";
 			definition = "Specifies when the instruction is to be executed relative to a linked instruction.";
 			maxOccurs = 1;
@@ -241,7 +244,7 @@ public class LinkedCorporateAction1 {
 			componentContext_lazy = () -> LinkedCorporateAction1.mmObject();
 			isDerived = false;
 			xmlTag = "LkdIssrCorpActnId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LinkedIssuerCorporateActionIdentification";
 			definition = "Reference given to the linked event by the CA event issuer (agent).";
 			maxOccurs = 1;
@@ -283,7 +286,7 @@ public class LinkedCorporateAction1 {
 			componentContext_lazy = () -> LinkedCorporateAction1.mmObject();
 			isDerived = false;
 			xmlTag = "LkdCorpActnPrcgId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LinkedCorporateActionProcessingIdentification";
 			definition = "Reference assigned by the CSD to the linked coporate avent.";
 			maxOccurs = 1;
@@ -295,12 +298,11 @@ public class LinkedCorporateAction1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LinkedCorporateAction1.mmNotificationType, com.tools20022.repository.msg.LinkedCorporateAction1.mmLinkedAgentCANotificationAdviceIdentification,
-						com.tools20022.repository.msg.LinkedCorporateAction1.mmLinkageType, com.tools20022.repository.msg.LinkedCorporateAction1.mmLinkedIssuerCorporateActionIdentification,
-						com.tools20022.repository.msg.LinkedCorporateAction1.mmLinkedCorporateActionProcessingIdentification);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.AgentCANotificationAdviceV01.mmNotificationTypeAndLinkage);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(LinkedCorporateAction1.mmNotificationType, LinkedCorporateAction1.mmLinkedAgentCANotificationAdviceIdentification, LinkedCorporateAction1.mmLinkageType,
+						LinkedCorporateAction1.mmLinkedIssuerCorporateActionIdentification, LinkedCorporateAction1.mmLinkedCorporateActionProcessingIdentification);
+				messageBuildingBlock_lazy = () -> Arrays.asList(AgentCANotificationAdviceV01.mmNotificationTypeAndLinkage);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "LinkedCorporateAction1";
 				definition = "Specifies linkage information of a corporate action message.";
 			}

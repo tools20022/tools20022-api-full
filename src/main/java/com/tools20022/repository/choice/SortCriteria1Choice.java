@@ -19,7 +19,9 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ReportSortedType1Code;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -94,7 +96,7 @@ public class SortCriteria1Choice {
 			componentContext_lazy = () -> SortCriteria1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prdfnd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Predefined";
 			definition = "Pre-defined way of indicating how the information is broken down.";
 			maxOccurs = 1;
@@ -137,7 +139,7 @@ public class SortCriteria1Choice {
 			componentContext_lazy = () -> SortCriteria1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "UsrDfnd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UserDefined";
 			definition = "User-defined way of indicating how the information is broken down.";
 			maxOccurs = 1;
@@ -149,9 +151,9 @@ public class SortCriteria1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SortCriteria1Choice.mmPredefined, com.tools20022.repository.choice.SortCriteria1Choice.mmUserDefined);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(SortCriteria1Choice.mmPredefined, SortCriteria1Choice.mmUserDefined);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SortCriteria1Choice";
 				definition = "Choice between pre-defined and user-defined sorting criteria.";
 			}

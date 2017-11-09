@@ -19,10 +19,12 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ActiveCurrencyCode;
 import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
 import com.tools20022.repository.datatype.BaseOneRate;
 import com.tools20022.repository.entity.CurrencyExchange;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -119,14 +121,14 @@ public class ForeignExchangeTerms24 {
 	 */
 	public static final MMMessageAttribute mmUnitCurrency = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmUnitCurrency;
+			businessElementTrace_lazy = () -> CurrencyExchange.mmUnitCurrency;
 			componentContext_lazy = () -> ForeignExchangeTerms24.mmObject();
 			isDerived = false;
 			xmlTag = "UnitCcy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnitCurrency";
 			definition = "Currency in which the rate of exchange is expressed in a currency exchange. In the example 1GBP = xxxCUR, the unit currency is GBP.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ForeignExchangeTerms13.mmUnitCurrency;
+			previousVersion_lazy = () -> ForeignExchangeTerms13.mmUnitCurrency;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyCode.mmObject();
@@ -176,14 +178,14 @@ public class ForeignExchangeTerms24 {
 	 */
 	public static final MMMessageAttribute mmQuotedCurrency = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmQuotedCurrency;
+			businessElementTrace_lazy = () -> CurrencyExchange.mmQuotedCurrency;
 			componentContext_lazy = () -> ForeignExchangeTerms24.mmObject();
 			isDerived = false;
 			xmlTag = "QtdCcy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuotedCurrency";
 			definition = "Currency into which the base currency is converted, in a currency exchange.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ForeignExchangeTerms13.mmQuotedCurrency;
+			previousVersion_lazy = () -> ForeignExchangeTerms13.mmQuotedCurrency;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyCode.mmObject();
@@ -235,14 +237,14 @@ public class ForeignExchangeTerms24 {
 	 */
 	public static final MMMessageAttribute mmExchangeRate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmExchangeRate;
+			businessElementTrace_lazy = () -> CurrencyExchange.mmExchangeRate;
 			componentContext_lazy = () -> ForeignExchangeTerms24.mmObject();
 			isDerived = false;
 			xmlTag = "XchgRate";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExchangeRate";
 			definition = "Factor used for the conversion of an amount from one currency into another. This reflects the price at which one currency was bought with another currency.\nUsage: ExchangeRate expresses the ratio between UnitCurrency and QuotedCurrency (ExchangeRate = UnitCurrency/QuotedCurrency).";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ForeignExchangeTerms13.mmExchangeRate;
+			previousVersion_lazy = () -> ForeignExchangeTerms13.mmExchangeRate;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> BaseOneRate.mmObject();
@@ -289,14 +291,14 @@ public class ForeignExchangeTerms24 {
 	 */
 	public static final MMMessageAttribute mmResultingAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmResultingAmount;
+			businessElementTrace_lazy = () -> CurrencyExchange.mmResultingAmount;
 			componentContext_lazy = () -> ForeignExchangeTerms24.mmObject();
 			isDerived = false;
 			xmlTag = "RsltgAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ResultingAmount";
 			definition = "Counter value of a foreign exchange conversion.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ForeignExchangeTerms13.mmResultingAmount;
+			previousVersion_lazy = () -> ForeignExchangeTerms13.mmResultingAmount;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
@@ -306,11 +308,10 @@ public class ForeignExchangeTerms24 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ForeignExchangeTerms24.mmUnitCurrency, com.tools20022.repository.msg.ForeignExchangeTerms24.mmQuotedCurrency,
-						com.tools20022.repository.msg.ForeignExchangeTerms24.mmExchangeRate, com.tools20022.repository.msg.ForeignExchangeTerms24.mmResultingAmount);
+				messageElement_lazy = () -> Arrays.asList(ForeignExchangeTerms24.mmUnitCurrency, ForeignExchangeTerms24.mmQuotedCurrency, ForeignExchangeTerms24.mmExchangeRate, ForeignExchangeTerms24.mmResultingAmount);
 				trace_lazy = () -> CurrencyExchange.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ForeignExchangeTerms24";
 				definition = "Provides information about the terms of the foreign exchange transaction.";
 				previousVersion_lazy = () -> ForeignExchangeTerms13.mmObject();

@@ -17,8 +17,11 @@
 
 package com.tools20022.repository.entity;
 
+import com.tools20022.metamodel.MMAggregation;
 import com.tools20022.metamodel.MMBusinessAssociationEnd;
 import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -32,23 +35,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.BankingTransaction#mmPaymentObligation
- * BankingTransaction.mmPaymentObligation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.BankingTransaction#mmFinancialTransaction
- * BankingTransaction.mmFinancialTransaction}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.BankingTransaction#mmCashDelivery
- * BankingTransaction.mmCashDelivery}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.BankingTransaction#mmCashDeposit
- * BankingTransaction.mmCashDeposit}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
  * associationDomain} =
@@ -65,6 +51,23 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.entity.FinancialTransaction#mmBankingTransaction
  * FinancialTransaction.mmBankingTransaction}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.BankingTransaction#mmPaymentObligation
+ * BankingTransaction.mmPaymentObligation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.BankingTransaction#mmFinancialTransaction
+ * BankingTransaction.mmFinancialTransaction}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.BankingTransaction#mmCashDelivery
+ * BankingTransaction.mmCashDelivery}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.BankingTransaction#mmCashDeposit
+ * BankingTransaction.mmCashDeposit}</li>
  * </ul>
  * </li>
  * <li>
@@ -125,13 +128,13 @@ public class BankingTransaction {
 		{
 			elementContext_lazy = () -> BankingTransaction.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PaymentObligation";
 			definition = "Payment obligation resulting from a banking transaction.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.PaymentObligation.mmBankingTransaction;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.PaymentObligation.mmObject();
 		}
 	};
@@ -175,13 +178,13 @@ public class BankingTransaction {
 		{
 			elementContext_lazy = () -> BankingTransaction.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialTransaction";
 			definition = "Financial transaction to which the banking transaction is associated.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.FinancialTransaction.mmBankingTransaction;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.FinancialTransaction.mmObject();
 		}
 	};
@@ -224,13 +227,13 @@ public class BankingTransaction {
 		{
 			elementContext_lazy = () -> BankingTransaction.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CashDelivery";
 			definition = "Specifies the cash which is delivered by a financial institution.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.CashDelivery.mmRelatedBankingTransaction;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.CashDelivery.mmObject();
 		}
 	};
@@ -273,13 +276,13 @@ public class BankingTransaction {
 		{
 			elementContext_lazy = () -> BankingTransaction.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CashDeposit";
 			definition = "Specifies the cash which is received by a financial institution.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.CashDeposit.mmRelatedBankingTransaction;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.CashDeposit.mmObject();
 		}
 	};
@@ -287,14 +290,13 @@ public class BankingTransaction {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "BankingTransaction";
 				definition = "Transaction executed by the client of a financial institution from/to the account serviced by the financial institution, such as mortgage payment.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.PaymentObligation.mmBankingTransaction, com.tools20022.repository.entity.CashDeposit.mmRelatedBankingTransaction,
 						com.tools20022.repository.entity.CashDelivery.mmRelatedBankingTransaction, com.tools20022.repository.entity.FinancialTransaction.mmBankingTransaction);
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.BankingTransaction.mmPaymentObligation, com.tools20022.repository.entity.BankingTransaction.mmFinancialTransaction,
-						com.tools20022.repository.entity.BankingTransaction.mmCashDelivery, com.tools20022.repository.entity.BankingTransaction.mmCashDeposit);
+				element_lazy = () -> Arrays.asList(BankingTransaction.mmPaymentObligation, BankingTransaction.mmFinancialTransaction, BankingTransaction.mmCashDelivery, BankingTransaction.mmCashDeposit);
 			}
 		});
 		return mmObject_lazy.get();

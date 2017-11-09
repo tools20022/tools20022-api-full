@@ -20,8 +20,10 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.DistributionType2Code;
 import com.tools20022.repository.entity.CorporateActionDistribution;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification20;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -127,14 +129,14 @@ public class DistributionTypeFormat3Choice {
 	 */
 	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionDistribution.mmOrderType;
+			businessElementTrace_lazy = () -> CorporateActionDistribution.mmOrderType;
 			componentContext_lazy = () -> DistributionTypeFormat3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Cd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Standard code to specify whether the proceeds of the event will be distributed on a rolling basis rather than on a specific date.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.DistributionTypeFormat4Choice.mmCode);
+			nextVersions_lazy = () -> Arrays.asList(DistributionTypeFormat4Choice.mmCode);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DistributionType2Code.mmObject();
@@ -183,14 +185,14 @@ public class DistributionTypeFormat3Choice {
 	 */
 	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionDistribution.mmOrderType;
+			businessElementTrace_lazy = () -> CorporateActionDistribution.mmOrderType;
 			componentContext_lazy = () -> DistributionTypeFormat3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Proprietary identification of the type of distribution.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.DistributionTypeFormat4Choice.mmProprietary);
+			nextVersions_lazy = () -> Arrays.asList(DistributionTypeFormat4Choice.mmProprietary);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -201,10 +203,10 @@ public class DistributionTypeFormat3Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.DistributionTypeFormat3Choice.mmCode, com.tools20022.repository.choice.DistributionTypeFormat3Choice.mmProprietary);
+				messageElement_lazy = () -> Arrays.asList(DistributionTypeFormat3Choice.mmCode, DistributionTypeFormat3Choice.mmProprietary);
 				trace_lazy = () -> CorporateActionDistribution.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DistributionTypeFormat3Choice";
 				definition = "Choice between a standard code or proprietary code to specify the type of distribution.";
 				nextVersions_lazy = () -> Arrays.asList(DistributionTypeFormat4Choice.mmObject());

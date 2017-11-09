@@ -19,8 +19,10 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ISOTime;
 import com.tools20022.repository.entity.SettlementTimeRequest;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -110,11 +112,11 @@ public class SettlementTimeRequest2 {
 	 */
 	public static final MMMessageAttribute mmCLSTime = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SettlementTimeRequest.mmCLSTime;
+			businessElementTrace_lazy = () -> SettlementTimeRequest.mmCLSTime;
 			componentContext_lazy = () -> SettlementTimeRequest2.mmObject();
 			isDerived = false;
 			xmlTag = "CLSTm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CLSTime";
 			definition = "Time by which the amount of money must be credited, with confirmation, to the CLS Bank's account at the central bank.\nUsage: Time must be expressed in Central European Time (CET).";
 			maxOccurs = 1;
@@ -157,11 +159,11 @@ public class SettlementTimeRequest2 {
 	 */
 	public static final MMMessageAttribute mmTillTime = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SettlementTimeRequest.mmTillTime;
+			businessElementTrace_lazy = () -> SettlementTimeRequest.mmTillTime;
 			componentContext_lazy = () -> SettlementTimeRequest2.mmObject();
 			isDerived = false;
 			xmlTag = "TillTm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TillTime";
 			definition = "Time until when the payment may be settled.";
 			maxOccurs = 1;
@@ -204,11 +206,11 @@ public class SettlementTimeRequest2 {
 	 */
 	public static final MMMessageAttribute mmFromTime = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SettlementTimeRequest.mmFromTime;
+			businessElementTrace_lazy = () -> SettlementTimeRequest.mmFromTime;
 			componentContext_lazy = () -> SettlementTimeRequest2.mmObject();
 			isDerived = false;
 			xmlTag = "FrTm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FromTime";
 			definition = "Time as from when the payment may be settled.";
 			maxOccurs = 1;
@@ -252,11 +254,11 @@ public class SettlementTimeRequest2 {
 	 */
 	public static final MMMessageAttribute mmRejectTime = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SettlementTimeRequest.mmRejectTime;
+			businessElementTrace_lazy = () -> SettlementTimeRequest.mmRejectTime;
 			componentContext_lazy = () -> SettlementTimeRequest2.mmObject();
 			isDerived = false;
 			xmlTag = "RjctTm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RejectTime";
 			definition = "Time by when the payment must be settled to avoid rejection.";
 			maxOccurs = 1;
@@ -268,11 +270,10 @@ public class SettlementTimeRequest2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SettlementTimeRequest2.mmCLSTime, com.tools20022.repository.msg.SettlementTimeRequest2.mmTillTime,
-						com.tools20022.repository.msg.SettlementTimeRequest2.mmFromTime, com.tools20022.repository.msg.SettlementTimeRequest2.mmRejectTime);
+				messageElement_lazy = () -> Arrays.asList(SettlementTimeRequest2.mmCLSTime, SettlementTimeRequest2.mmTillTime, SettlementTimeRequest2.mmFromTime, SettlementTimeRequest2.mmRejectTime);
 				trace_lazy = () -> SettlementTimeRequest.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SettlementTimeRequest2";
 				definition = "Provides information on the requested settlement time(s) of the payment instruction.";
 			}

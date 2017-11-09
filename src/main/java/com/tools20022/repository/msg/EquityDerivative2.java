@@ -20,9 +20,11 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.EquityDerivative3Choice;
 import com.tools20022.repository.codeset.EquityReturnParameter1Code;
 import com.tools20022.repository.entity.Derivative;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -97,11 +99,11 @@ public class EquityDerivative2 {
 	 */
 	public static final MMMessageAssociationEnd mmUnderlyingType = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Derivative.mmUnderlyingAsset;
+			businessElementTrace_lazy = () -> Derivative.mmUnderlyingAsset;
 			componentContext_lazy = () -> EquityDerivative2.mmObject();
 			isDerived = false;
 			xmlTag = "UndrlygTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnderlyingType";
 			definition = "Underlying type of the equity derivative.";
 			maxOccurs = 1;
@@ -144,7 +146,7 @@ public class EquityDerivative2 {
 			componentContext_lazy = () -> EquityDerivative2.mmObject();
 			isDerived = false;
 			xmlTag = "Param";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Parameter";
 			definition = "Return parameter for the equity derivative.";
 			maxOccurs = 1;
@@ -156,10 +158,10 @@ public class EquityDerivative2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.EquityDerivative2.mmUnderlyingType, com.tools20022.repository.msg.EquityDerivative2.mmParameter);
+				messageElement_lazy = () -> Arrays.asList(EquityDerivative2.mmUnderlyingType, EquityDerivative2.mmParameter);
 				trace_lazy = () -> Derivative.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "EquityDerivative2";
 				definition = "Element to define an equity instrument.";
 			}

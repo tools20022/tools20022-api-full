@@ -20,10 +20,13 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.acmt.AccountModificationInstructionV06;
 import com.tools20022.repository.choice.AccountParties9Choice;
 import com.tools20022.repository.choice.RegisteredShareholderName1Choice;
 import com.tools20022.repository.codeset.DataModification1Code;
 import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -161,11 +164,11 @@ public class AccountParties14 {
 			componentContext_lazy = () -> AccountParties14.mmObject();
 			isDerived = false;
 			xmlTag = "ModScpIndctn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ModificationScopeIndication";
 			definition = "Specifies the type of modification to be applied.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountParties16.mmModificationScopeIndication);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AccountParties11.mmModificationScopeIndication;
+			nextVersions_lazy = () -> Arrays.asList(AccountParties16.mmModificationScopeIndication);
+			previousVersion_lazy = () -> AccountParties11.mmModificationScopeIndication;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DataModification1Code.mmObject();
@@ -224,11 +227,11 @@ public class AccountParties14 {
 			componentContext_lazy = () -> AccountParties14.mmObject();
 			isDerived = false;
 			xmlTag = "PrncplAcctPty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PrincipalAccountParty";
 			definition = "Main party associated with the account.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountParties16.mmPrincipalAccountParty);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AccountParties11.mmPrincipalAccountParty;
+			nextVersions_lazy = () -> Arrays.asList(AccountParties16.mmPrincipalAccountParty);
+			previousVersion_lazy = () -> AccountParties11.mmPrincipalAccountParty;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> AccountParties9Choice.mmObject();
@@ -289,11 +292,11 @@ public class AccountParties14 {
 			componentContext_lazy = () -> AccountParties14.mmObject();
 			isDerived = false;
 			xmlTag = "ScndryOwnr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecondaryOwner";
 			definition = "Entity that is not the primary owner when the ownership of the investment account is split among several owners.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountParties16.mmSecondaryOwner);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AccountParties11.mmSecondaryOwner;
+			nextVersions_lazy = () -> Arrays.asList(AccountParties16.mmSecondaryOwner);
+			previousVersion_lazy = () -> AccountParties11.mmSecondaryOwner;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -356,11 +359,11 @@ public class AccountParties14 {
 			componentContext_lazy = () -> AccountParties14.mmObject();
 			isDerived = false;
 			xmlTag = "Bnfcry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Beneficiary";
 			definition = "Ultimate party that is entitled to either receive the benefits of the ownership of a financial instrument, or to be paid/credited as a result of a transfer.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountParties16.mmBeneficiary);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AccountParties11.mmBeneficiary;
+			nextVersions_lazy = () -> Arrays.asList(AccountParties16.mmBeneficiary);
+			previousVersion_lazy = () -> AccountParties11.mmBeneficiary;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -422,11 +425,11 @@ public class AccountParties14 {
 			componentContext_lazy = () -> AccountParties14.mmObject();
 			isDerived = false;
 			xmlTag = "PwrOfAttny";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PowerOfAttorney";
 			definition = "Entity that was given the authority by another entity to act on its behalf.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountParties16.mmPowerOfAttorney);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AccountParties11.mmPowerOfAttorney;
+			nextVersions_lazy = () -> Arrays.asList(AccountParties16.mmPowerOfAttorney);
+			previousVersion_lazy = () -> AccountParties11.mmPowerOfAttorney;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -488,11 +491,11 @@ public class AccountParties14 {
 			componentContext_lazy = () -> AccountParties14.mmObject();
 			isDerived = false;
 			xmlTag = "LglGuardn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LegalGuardian";
 			definition = "Entity that has been appointed by a legal authority to act on behalf of a person judged to be incapacitated.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountParties16.mmLegalGuardian);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AccountParties11.mmLegalGuardian;
+			nextVersions_lazy = () -> Arrays.asList(AccountParties16.mmLegalGuardian);
+			previousVersion_lazy = () -> AccountParties11.mmLegalGuardian;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -550,10 +553,10 @@ public class AccountParties14 {
 			componentContext_lazy = () -> AccountParties14.mmObject();
 			isDerived = false;
 			xmlTag = "CtdnForMnr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CustodianForMinor";
 			definition = "Entity that holds shares/units on behalf of a legal minor. Although the account is registered under the name of the minor, the custodian retains control of the account.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountParties16.mmCustodianForMinor);
+			nextVersions_lazy = () -> Arrays.asList(AccountParties16.mmCustodianForMinor);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -615,11 +618,11 @@ public class AccountParties14 {
 			componentContext_lazy = () -> AccountParties14.mmObject();
 			isDerived = false;
 			xmlTag = "SucssrOnDth";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SuccessorOnDeath";
 			definition = "Deceased's estate, or successor, to whom the respective percentage of ownership will be transferred upon the death of one of the owners.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountParties16.mmSuccessorOnDeath);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AccountParties11.mmSuccessorOnDeath;
+			nextVersions_lazy = () -> Arrays.asList(AccountParties16.mmSuccessorOnDeath);
+			previousVersion_lazy = () -> AccountParties11.mmSuccessorOnDeath;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -681,11 +684,11 @@ public class AccountParties14 {
 			componentContext_lazy = () -> AccountParties14.mmObject();
 			isDerived = false;
 			xmlTag = "Admstr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Administrator";
 			definition = "Entity that has been appointed by a legal authority to act on behalf of a person or organisation that has gone bankrupt.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountParties16.mmAdministrator);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AccountParties11.mmAdministrator;
+			nextVersions_lazy = () -> Arrays.asList(AccountParties16.mmAdministrator);
+			previousVersion_lazy = () -> AccountParties11.mmAdministrator;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -743,11 +746,11 @@ public class AccountParties14 {
 			componentContext_lazy = () -> AccountParties14.mmObject();
 			isDerived = false;
 			xmlTag = "OthrPty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherParty";
 			definition = "An other type of party.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountParties16.mmOtherParty);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AccountParties11.mmOtherParty;
+			nextVersions_lazy = () -> Arrays.asList(AccountParties16.mmOtherParty);
+			previousVersion_lazy = () -> AccountParties11.mmOtherParty;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -804,11 +807,11 @@ public class AccountParties14 {
 			componentContext_lazy = () -> AccountParties14.mmObject();
 			isDerived = false;
 			xmlTag = "Grntr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Granter";
 			definition = "Granter role in the hedge funds industry.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountParties16.mmGranter);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AccountParties11.mmGranter;
+			nextVersions_lazy = () -> Arrays.asList(AccountParties16.mmGranter);
+			previousVersion_lazy = () -> AccountParties11.mmGranter;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -866,11 +869,11 @@ public class AccountParties14 {
 			componentContext_lazy = () -> AccountParties14.mmObject();
 			isDerived = false;
 			xmlTag = "Sttlr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Settlor";
 			definition = "Entity that creates a trust or contributes assets to the trust.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountParties16.mmSettlor);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AccountParties11.mmSettlor;
+			nextVersions_lazy = () -> Arrays.asList(AccountParties16.mmSettlor);
+			previousVersion_lazy = () -> AccountParties11.mmSettlor;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -923,10 +926,10 @@ public class AccountParties14 {
 			componentContext_lazy = () -> AccountParties14.mmObject();
 			isDerived = false;
 			xmlTag = "RegdShrhldrNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RegisteredShareholderName";
 			definition = "Party for which shares are to be registered.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountParties16.mmRegisteredShareholderName);
+			nextVersions_lazy = () -> Arrays.asList(AccountParties16.mmRegisteredShareholderName);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -937,15 +940,13 @@ public class AccountParties14 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountParties14.mmModificationScopeIndication, com.tools20022.repository.msg.AccountParties14.mmPrincipalAccountParty,
-						com.tools20022.repository.msg.AccountParties14.mmSecondaryOwner, com.tools20022.repository.msg.AccountParties14.mmBeneficiary, com.tools20022.repository.msg.AccountParties14.mmPowerOfAttorney,
-						com.tools20022.repository.msg.AccountParties14.mmLegalGuardian, com.tools20022.repository.msg.AccountParties14.mmCustodianForMinor, com.tools20022.repository.msg.AccountParties14.mmSuccessorOnDeath,
-						com.tools20022.repository.msg.AccountParties14.mmAdministrator, com.tools20022.repository.msg.AccountParties14.mmOtherParty, com.tools20022.repository.msg.AccountParties14.mmGranter,
-						com.tools20022.repository.msg.AccountParties14.mmSettlor, com.tools20022.repository.msg.AccountParties14.mmRegisteredShareholderName);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountModificationInstructionV06.mmModifiedAccountParties);
+				messageElement_lazy = () -> Arrays.asList(AccountParties14.mmModificationScopeIndication, AccountParties14.mmPrincipalAccountParty, AccountParties14.mmSecondaryOwner, AccountParties14.mmBeneficiary,
+						AccountParties14.mmPowerOfAttorney, AccountParties14.mmLegalGuardian, AccountParties14.mmCustodianForMinor, AccountParties14.mmSuccessorOnDeath, AccountParties14.mmAdministrator, AccountParties14.mmOtherParty,
+						AccountParties14.mmGranter, AccountParties14.mmSettlor, AccountParties14.mmRegisteredShareholderName);
+				messageBuildingBlock_lazy = () -> Arrays.asList(AccountModificationInstructionV06.mmModifiedAccountParties);
 				trace_lazy = () -> InvestmentAccountPartyRole.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AccountParties14";
 				definition = "Information about a party's account.";
 				nextVersions_lazy = () -> Arrays.asList(AccountParties16.mmObject());

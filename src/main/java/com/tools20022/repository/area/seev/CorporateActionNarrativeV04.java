@@ -20,6 +20,7 @@ package com.tools20022.repository.area.seev;
 import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.SecuritiesEventsLatestVersion;
 import com.tools20022.repository.choice.AccountIdentification33Choice;
 import com.tools20022.repository.msg.CorporateActionGeneralInformation92;
@@ -49,6 +50,9 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code seev.038.001.04}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.SecuritiesEventsLatestVersion
@@ -89,9 +93,6 @@ import java.util.List;
  * CorporateActionNarrativeV04.mmSupplementaryData}</li>
  * </ul>
  * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code seev.038.001.04}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -145,10 +146,10 @@ public class CorporateActionNarrativeV04 {
 	public static final MMMessageBuildingBlock mmAccountDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "AcctDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountDetails";
 			definition = "General information about the safekeeping account and the account owner.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.seev.CorporateActionNarrativeV03.mmAccountDetails;
+			previousVersion_lazy = () -> CorporateActionNarrativeV03.mmAccountDetails;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> AccountIdentification33Choice.mmObject();
@@ -187,10 +188,10 @@ public class CorporateActionNarrativeV04 {
 	public static final MMMessageBuildingBlock mmUnderlyingSecurity = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "UndrlygScty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnderlyingSecurity";
 			definition = "Provides information about the securitised right for entitlement.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.seev.CorporateActionNarrativeV03.mmUnderlyingSecurity;
+			previousVersion_lazy = () -> CorporateActionNarrativeV03.mmUnderlyingSecurity;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> SecurityIdentification19.mmObject();
@@ -228,10 +229,10 @@ public class CorporateActionNarrativeV04 {
 	public static final MMMessageBuildingBlock mmCorporateActionGeneralInformation = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CorpActnGnlInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorporateActionGeneralInformation";
 			definition = "General information about the corporate action event.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.seev.CorporateActionNarrativeV03.mmCorporateActionGeneralInformation;
+			previousVersion_lazy = () -> CorporateActionNarrativeV03.mmCorporateActionGeneralInformation;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> CorporateActionGeneralInformation92.mmObject();
@@ -269,10 +270,10 @@ public class CorporateActionNarrativeV04 {
 	public static final MMMessageBuildingBlock mmAdditionalInformation = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "AddtlInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInformation";
 			definition = "Provides additional information.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.seev.CorporateActionNarrativeV03.mmAdditionalInformation;
+			previousVersion_lazy = () -> CorporateActionNarrativeV03.mmAdditionalInformation;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> UpdatedAdditionalInformation8.mmObject();
@@ -313,10 +314,10 @@ public class CorporateActionNarrativeV04 {
 	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SplmtryData";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryData";
 			definition = "Additional information that can not be captured in the structured fields and/or any other specific block.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.seev.CorporateActionNarrativeV03.mmSupplementaryData;
+			previousVersion_lazy = () -> CorporateActionNarrativeV03.mmSupplementaryData;
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
@@ -325,7 +326,7 @@ public class CorporateActionNarrativeV04 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionNarrativeV04";
 				definition = "Scope\r\nThe CorporateActionNarrative message is sent between an account servicer and an account owner or its designated agent to cater for tax reclaims, restrictions, documentation requirements. This message is bi-directional.\r\nUsage\r\nThe message may also be used to:\r\n- re-send a message previously sent (the sub-function of the message is Duplicate),\r\n- provide a third party with a copy of a message for information (the sub-function of the message is Copy),\r\n- re-send to a third party a copy of a message for information (the sub-function of the message is Copy Duplicate),\r\nusing the relevant elements in the business application header (BAH).";
 				previousVersion_lazy = () -> CorporateActionNarrativeV03.mmObject();
@@ -333,9 +334,8 @@ public class CorporateActionNarrativeV04 {
 				rootElement = "Document";
 				xmlTag = "CorpActnNrrtv";
 				businessArea_lazy = () -> SecuritiesEventsLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.CorporateActionNarrativeV04.mmAccountDetails, com.tools20022.repository.area.seev.CorporateActionNarrativeV04.mmUnderlyingSecurity,
-						com.tools20022.repository.area.seev.CorporateActionNarrativeV04.mmCorporateActionGeneralInformation, com.tools20022.repository.area.seev.CorporateActionNarrativeV04.mmAdditionalInformation,
-						com.tools20022.repository.area.seev.CorporateActionNarrativeV04.mmSupplementaryData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(CorporateActionNarrativeV04.mmAccountDetails, CorporateActionNarrativeV04.mmUnderlyingSecurity, CorporateActionNarrativeV04.mmCorporateActionGeneralInformation,
+						CorporateActionNarrativeV04.mmAdditionalInformation, CorporateActionNarrativeV04.mmSupplementaryData);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "seev";

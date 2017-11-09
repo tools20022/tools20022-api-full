@@ -19,6 +19,8 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.AccountReport14;
 import com.tools20022.repository.msg.ErrorHandling3;
 import java.util.Arrays;
@@ -92,7 +94,7 @@ public class AccountReportOrError1Choice {
 			componentContext_lazy = () -> AccountReportOrError1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Err";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Error";
 			definition = "Error that occurred during processing.";
 			minOccurs = 1;
@@ -132,7 +134,7 @@ public class AccountReportOrError1Choice {
 			componentContext_lazy = () -> AccountReportOrError1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "AcctRpt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountReport";
 			definition = "Requested details of the account.";
 			minOccurs = 0;
@@ -144,9 +146,9 @@ public class AccountReportOrError1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AccountReportOrError1Choice.mmError, com.tools20022.repository.choice.AccountReportOrError1Choice.mmAccountReport);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(AccountReportOrError1Choice.mmError, AccountReportOrError1Choice.mmAccountReport);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "AccountReportOrError1Choice";
 				definition = "Choice between account information or an error report.";
 			}

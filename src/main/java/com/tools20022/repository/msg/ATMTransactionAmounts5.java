@@ -19,8 +19,10 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ImpliedCurrencyAndAmount;
 import com.tools20022.repository.datatype.TrueFalseIndicator;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -103,10 +105,10 @@ public class ATMTransactionAmounts5 {
 			componentContext_lazy = () -> ATMTransactionAmounts5.mmObject();
 			isDerived = false;
 			xmlTag = "DispFlg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DisplayFlag";
 			definition = "True if limits may be displayed on the ATM to the customer.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMTransactionAmounts4.mmDisplayFlag;
+			previousVersion_lazy = () -> ATMTransactionAmounts4.mmDisplayFlag;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
@@ -151,10 +153,10 @@ public class ATMTransactionAmounts5 {
 			componentContext_lazy = () -> ATMTransactionAmounts5.mmObject();
 			isDerived = false;
 			xmlTag = "MaxAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaximumAmount";
 			definition = "Maximum amount allowed for deposit on the account.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMTransactionAmounts4.mmAvailableAmount;
+			previousVersion_lazy = () -> ATMTransactionAmounts4.mmAvailableAmount;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
@@ -164,9 +166,9 @@ public class ATMTransactionAmounts5 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMTransactionAmounts5.mmDisplayFlag, com.tools20022.repository.msg.ATMTransactionAmounts5.mmMaximumAmount);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(ATMTransactionAmounts5.mmDisplayFlag, ATMTransactionAmounts5.mmMaximumAmount);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ATMTransactionAmounts5";
 				definition = "Deposit limits for the account.";
 				previousVersion_lazy = () -> ATMTransactionAmounts4.mmObject();

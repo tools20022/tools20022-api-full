@@ -19,7 +19,10 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.entity.PartyIdentificationInformation;
 import com.tools20022.repository.entity.PersonIdentification;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification81;
 import com.tools20022.repository.msg.IndividualPerson30;
 import java.util.Arrays;
@@ -110,14 +113,14 @@ public class IndividualPersonIdentification2Choice {
 	 */
 	public static final MMMessageAssociationEnd mmIdentificationNumber = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.mmOtherIdentification;
+			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmOtherIdentification;
 			componentContext_lazy = () -> IndividualPersonIdentification2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "IdNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IdentificationNumber";
 			definition = "Identification of a party, such as a tax or social security identifier.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.IndividualPersonIdentificationChoice.mmIdentificationNumber;
+			previousVersion_lazy = () -> IndividualPersonIdentificationChoice.mmIdentificationNumber;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -166,14 +169,14 @@ public class IndividualPersonIdentification2Choice {
 	 */
 	public static final MMMessageAssociationEnd mmPersonName = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PersonIdentification.mmPersonName;
+			businessElementTrace_lazy = () -> PersonIdentification.mmPersonName;
 			componentContext_lazy = () -> IndividualPersonIdentification2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "PrsnNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PersonName";
 			definition = "Human entity, as distinguished from a corporate entity (which is sometimes referred to as an 'artificial person').";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.IndividualPersonIdentificationChoice.mmPersonName;
+			previousVersion_lazy = () -> IndividualPersonIdentificationChoice.mmPersonName;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -184,10 +187,10 @@ public class IndividualPersonIdentification2Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.IndividualPersonIdentification2Choice.mmIdentificationNumber, com.tools20022.repository.choice.IndividualPersonIdentification2Choice.mmPersonName);
+				messageElement_lazy = () -> Arrays.asList(IndividualPersonIdentification2Choice.mmIdentificationNumber, IndividualPersonIdentification2Choice.mmPersonName);
 				trace_lazy = () -> PersonIdentification.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "IndividualPersonIdentification2Choice";
 				definition = "Choice of formats for the identification of an individual person.";
 				previousVersion_lazy = () -> IndividualPersonIdentificationChoice.mmObject();

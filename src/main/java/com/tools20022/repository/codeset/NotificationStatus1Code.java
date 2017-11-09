@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.NotificationStatusCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -89,7 +91,7 @@ public class NotificationStatus1Code extends NotificationStatusCode {
 	 */
 	public static final MMCode mmComplete = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Complete";
 			owner_lazy = () -> NotificationStatus1Code.mmObject();
 		}
@@ -112,7 +114,7 @@ public class NotificationStatus1Code extends NotificationStatusCode {
 	 */
 	public static final MMCode mmPreliminaryEventConfirmed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreliminaryEventConfirmed";
 			owner_lazy = () -> NotificationStatus1Code.mmObject();
 		}
@@ -135,7 +137,7 @@ public class NotificationStatus1Code extends NotificationStatusCode {
 	 */
 	public static final MMCode mmPreliminaryEventUnconfirmed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreliminaryEventUnconfirmed";
 			owner_lazy = () -> NotificationStatus1Code.mmObject();
 		}
@@ -144,13 +146,12 @@ public class NotificationStatus1Code extends NotificationStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("COMP");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "NotificationStatus1Code";
 				definition = "Status to define the completeness of information contained in the notification.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.NotificationStatus1Code.mmComplete, com.tools20022.repository.codeset.NotificationStatus1Code.mmPreliminaryEventConfirmed,
-						com.tools20022.repository.codeset.NotificationStatus1Code.mmPreliminaryEventUnconfirmed);
+				code_lazy = () -> Arrays.asList(NotificationStatus1Code.mmComplete, NotificationStatus1Code.mmPreliminaryEventConfirmed, NotificationStatus1Code.mmPreliminaryEventUnconfirmed);
 				trace_lazy = () -> NotificationStatusCode.mmObject();
 			}
 		});

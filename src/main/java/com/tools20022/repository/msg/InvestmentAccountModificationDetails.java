@@ -19,8 +19,13 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.acmt.AccountModificationInstructionV02;
+import com.tools20022.repository.area.acmt.AccountModificationInstructionV03;
+import com.tools20022.repository.area.acmt.AccountModificationInstructionV04;
 import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -128,10 +133,10 @@ public class InvestmentAccountModificationDetails {
 			componentContext_lazy = () -> InvestmentAccountModificationDetails.mmObject();
 			isDerived = false;
 			xmlTag = "ModRsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ModificationReason";
 			definition = "Reason for the modification brought to the investment account information.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentAccountModification1.mmModificationReason);
+			nextVersions_lazy = () -> Arrays.asList(InvestmentAccountModification1.mmModificationReason);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
@@ -179,10 +184,10 @@ public class InvestmentAccountModificationDetails {
 			componentContext_lazy = () -> InvestmentAccountModificationDetails.mmObject();
 			isDerived = false;
 			xmlTag = "AcctApplId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountApplicationIdentification";
 			definition = "Unique and unambiguous identifier of the account modification request.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentAccountModification1.mmAccountApplicationIdentification);
+			nextVersions_lazy = () -> Arrays.asList(InvestmentAccountModification1.mmAccountApplicationIdentification);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -192,12 +197,10 @@ public class InvestmentAccountModificationDetails {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentAccountModificationDetails.mmModificationReason,
-						com.tools20022.repository.msg.InvestmentAccountModificationDetails.mmAccountApplicationIdentification);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountModificationInstructionV02.mmInstructionDetails,
-						com.tools20022.repository.area.acmt.AccountModificationInstructionV03.mmInstructionDetails, com.tools20022.repository.area.acmt.AccountModificationInstructionV04.mmInstructionDetails);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(InvestmentAccountModificationDetails.mmModificationReason, InvestmentAccountModificationDetails.mmAccountApplicationIdentification);
+				messageBuildingBlock_lazy = () -> Arrays.asList(AccountModificationInstructionV02.mmInstructionDetails, AccountModificationInstructionV03.mmInstructionDetails, AccountModificationInstructionV04.mmInstructionDetails);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InvestmentAccountModificationDetails";
 				definition = "Provide information about the reason for the modification and about the application request which triggered this modification.";
 				nextVersions_lazy = () -> Arrays.asList(InvestmentAccountModification1.mmObject());

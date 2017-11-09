@@ -19,9 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max2000Text;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.UndertakingAdvisingParty;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -99,7 +101,7 @@ public class AdvisingPartyAdditionalInformation1 {
 			componentContext_lazy = () -> AdvisingPartyAdditionalInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "RefNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReferenceNumber";
 			definition = "Unique and unambiguous identifier assigned as a reference.";
 			maxOccurs = 1;
@@ -142,7 +144,7 @@ public class AdvisingPartyAdditionalInformation1 {
 			componentContext_lazy = () -> AdvisingPartyAdditionalInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "BkToBnfcryInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BankToBeneficiaryInformation";
 			definition = "Additional information specific to the bank-to-beneficiary communication.";
 			maxOccurs = 5;
@@ -154,11 +156,10 @@ public class AdvisingPartyAdditionalInformation1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays
-						.asList(com.tools20022.repository.msg.AdvisingPartyAdditionalInformation1.mmReferenceNumber, com.tools20022.repository.msg.AdvisingPartyAdditionalInformation1.mmBankToBeneficiaryInformation);
+				messageElement_lazy = () -> Arrays.asList(AdvisingPartyAdditionalInformation1.mmReferenceNumber, AdvisingPartyAdditionalInformation1.mmBankToBeneficiaryInformation);
 				trace_lazy = () -> UndertakingAdvisingParty.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AdvisingPartyAdditionalInformation1";
 				definition = "Additional information related to the advising party.";
 			}

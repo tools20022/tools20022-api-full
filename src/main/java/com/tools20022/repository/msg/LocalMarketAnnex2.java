@@ -20,8 +20,10 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CountryCode;
-import com.tools20022.repository.entity.TradingMarket;
+import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -110,11 +112,11 @@ public class LocalMarketAnnex2 {
 	 */
 	public static final MMMessageAttribute mmCountry = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Country.mmCode;
+			businessElementTrace_lazy = () -> Country.mmCode;
 			componentContext_lazy = () -> LocalMarketAnnex2.mmObject();
 			isDerived = false;
 			xmlTag = "Ctry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Country";
 			definition = "Country in which the processing characteristic applies.";
 			minOccurs = 1;
@@ -156,11 +158,11 @@ public class LocalMarketAnnex2 {
 	 */
 	public static final MMMessageAssociationEnd mmLocalOrderDesk = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmContactPoint;
+			businessElementTrace_lazy = () -> Party.mmContactPoint;
 			componentContext_lazy = () -> LocalMarketAnnex2.mmObject();
 			isDerived = false;
 			xmlTag = "LclOrdrDsk";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LocalOrderDesk";
 			definition = "Organisation established primarily to provide financial services.";
 			maxOccurs = 1;
@@ -207,11 +209,11 @@ public class LocalMarketAnnex2 {
 	 */
 	public static final MMMessageAssociationEnd mmSubscriptionProcessingCharacteristics = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmProcessingCharacteristics;
+			businessElementTrace_lazy = () -> InvestmentFundClass.mmProcessingCharacteristics;
 			componentContext_lazy = () -> LocalMarketAnnex2.mmObject();
 			isDerived = false;
 			xmlTag = "SbcptPrcgChrtcs";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubscriptionProcessingCharacteristics";
 			definition = "Processing characteristics linked to the instrument, ie, not to  the market.";
 			maxOccurs = 1;
@@ -258,11 +260,11 @@ public class LocalMarketAnnex2 {
 	 */
 	public static final MMMessageAssociationEnd mmRedemptionProcessingCharacteristics = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmProcessingCharacteristics;
+			businessElementTrace_lazy = () -> InvestmentFundClass.mmProcessingCharacteristics;
 			componentContext_lazy = () -> LocalMarketAnnex2.mmObject();
 			isDerived = false;
 			xmlTag = "RedPrcgChrtcs";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RedemptionProcessingCharacteristics";
 			definition = "Processing characteristics linked to the instrument, ie, not to  the market.";
 			maxOccurs = 1;
@@ -305,11 +307,11 @@ public class LocalMarketAnnex2 {
 	 */
 	public static final MMMessageAssociationEnd mmSettlementDetails = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashSettlement.mmSettlementAccount;
+			businessElementTrace_lazy = () -> CashSettlement.mmSettlementAccount;
 			componentContext_lazy = () -> LocalMarketAnnex2.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementDetails";
 			definition = "Account to or from which a cash entry is made.";
 			minOccurs = 1;
@@ -321,12 +323,11 @@ public class LocalMarketAnnex2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LocalMarketAnnex2.mmCountry, com.tools20022.repository.msg.LocalMarketAnnex2.mmLocalOrderDesk,
-						com.tools20022.repository.msg.LocalMarketAnnex2.mmSubscriptionProcessingCharacteristics, com.tools20022.repository.msg.LocalMarketAnnex2.mmRedemptionProcessingCharacteristics,
-						com.tools20022.repository.msg.LocalMarketAnnex2.mmSettlementDetails);
+				messageElement_lazy = () -> Arrays.asList(LocalMarketAnnex2.mmCountry, LocalMarketAnnex2.mmLocalOrderDesk, LocalMarketAnnex2.mmSubscriptionProcessingCharacteristics, LocalMarketAnnex2.mmRedemptionProcessingCharacteristics,
+						LocalMarketAnnex2.mmSettlementDetails);
 				trace_lazy = () -> TradingMarket.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "LocalMarketAnnex2";
 				definition = "Context, or geographic environment, in which trading parties may meet in order to negotiate and execute trades among themselves.";
 			}

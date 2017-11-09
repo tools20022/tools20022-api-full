@@ -17,9 +17,14 @@
 
 package com.tools20022.repository.entity;
 
+import com.tools20022.metamodel.MMAggregation;
 import com.tools20022.metamodel.MMBusinessAssociationEnd;
 import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.Settlement;
+import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CardPaymentInvoice1;
+import com.tools20022.repository.msg.CardPaymentInvoice2;
 import com.tools20022.repository.msg.EarlyPaymentsVAT1;
 import com.tools20022.repository.msg.TradeSettlement1;
 import java.util.Arrays;
@@ -37,24 +42,14 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
  * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CommercialTradeSettlement#mmPayment
- * CommercialTradeSettlement.mmPayment}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CommercialTradeSettlement#mmInvoice
- * CommercialTradeSettlement.mmInvoice}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CommercialTradeSettlement#mmLetterOfCredit
- * CommercialTradeSettlement.mmLetterOfCredit}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CommercialTradeSettlement#mmProductDelivery
- * CommercialTradeSettlement.mmProductDelivery}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CommercialTradeSettlement#mmCommercialTrade
- * CommercialTradeSettlement.mmCommercialTrade}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TradeSettlement1
+ * TradeSettlement1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.EarlyPaymentsVAT1
+ * EarlyPaymentsVAT1}</li>
  * </ul>
  * </li>
  * <li>
@@ -79,14 +74,24 @@ import java.util.List;
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
  * superType} = {@linkplain com.tools20022.repository.entity.Settlement
  * Settlement}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.TradeSettlement1
- * TradeSettlement1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.EarlyPaymentsVAT1
- * EarlyPaymentsVAT1}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CommercialTradeSettlement#mmPayment
+ * CommercialTradeSettlement.mmPayment}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CommercialTradeSettlement#mmInvoice
+ * CommercialTradeSettlement.mmInvoice}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CommercialTradeSettlement#mmLetterOfCredit
+ * CommercialTradeSettlement.mmLetterOfCredit}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CommercialTradeSettlement#mmProductDelivery
+ * CommercialTradeSettlement.mmProductDelivery}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CommercialTradeSettlement#mmCommercialTrade
+ * CommercialTradeSettlement.mmCommercialTrade}</li>
  * </ul>
  * </li>
  * <li>
@@ -152,15 +157,15 @@ public class CommercialTradeSettlement extends Settlement {
 	 */
 	public static final MMBusinessAssociationEnd mmPayment = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TradeSettlement1.mmPaymentMeans);
+			derivation_lazy = () -> Arrays.asList(TradeSettlement1.mmPaymentMeans);
 			elementContext_lazy = () -> CommercialTradeSettlement.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Payment";
 			definition = "Settlement of the payment side of a commercial trade.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.Payment.mmTradeSettlement;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Payment.mmObject();
 		}
 	};
@@ -213,16 +218,15 @@ public class CommercialTradeSettlement extends Settlement {
 	 */
 	public static final MMBusinessAssociationEnd mmInvoice = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TradeSettlement1.mmMonetarySummation, com.tools20022.repository.msg.TradeSettlement1.mmInvoiceReferencedDocument,
-					com.tools20022.repository.msg.TradeSettlement1.mmProformaInvoiceReferencedDocument);
+			derivation_lazy = () -> Arrays.asList(TradeSettlement1.mmMonetarySummation, TradeSettlement1.mmInvoiceReferencedDocument, TradeSettlement1.mmProformaInvoiceReferencedDocument);
 			elementContext_lazy = () -> CommercialTradeSettlement.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Invoice";
 			definition = "Specifies for which invoice the settlement takes place.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.Invoice.mmTradeSettlement;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Invoice.mmObject();
 		}
 	};
@@ -265,12 +269,12 @@ public class CommercialTradeSettlement extends Settlement {
 		{
 			elementContext_lazy = () -> CommercialTradeSettlement.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "LetterOfCredit";
 			definition = "Written undertaking by a bank to honour a demand for payment.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.LetterOfCredit.mmCommercialTradeSettlement;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.LetterOfCredit.mmObject();
 		}
 	};
@@ -321,15 +325,15 @@ public class CommercialTradeSettlement extends Settlement {
 	 */
 	public static final MMBusinessAssociationEnd mmProductDelivery = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardPaymentInvoice1.mmTradeDelivery, com.tools20022.repository.msg.CardPaymentInvoice2.mmTradeDelivery);
+			derivation_lazy = () -> Arrays.asList(CardPaymentInvoice1.mmTradeDelivery, CardPaymentInvoice2.mmTradeDelivery);
 			elementContext_lazy = () -> CommercialTradeSettlement.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ProductDelivery";
 			definition = "Delivery of the goods or services to the buyer.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.ProductDelivery.mmTradeSettlement;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.ProductDelivery.mmObject();
 		}
 	};
@@ -371,13 +375,13 @@ public class CommercialTradeSettlement extends Settlement {
 		{
 			elementContext_lazy = () -> CommercialTradeSettlement.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CommercialTrade";
 			definition = "Specifies the commercial trade which is settled.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.CommercialTrade.mmTradeSettlement;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.CommercialTrade.mmObject();
 		}
 	};
@@ -385,16 +389,15 @@ public class CommercialTradeSettlement extends Settlement {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CommercialTradeSettlement";
 				definition = "Settlement of a commercial trade, that is, the instruction to deliver goods or services against the payment of an amount of money.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Payment.mmTradeSettlement, com.tools20022.repository.entity.Invoice.mmTradeSettlement,
 						com.tools20022.repository.entity.CommercialTrade.mmTradeSettlement, com.tools20022.repository.entity.ProductDelivery.mmTradeSettlement, com.tools20022.repository.entity.LetterOfCredit.mmCommercialTradeSettlement);
 				superType_lazy = () -> Settlement.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CommercialTradeSettlement.mmPayment, com.tools20022.repository.entity.CommercialTradeSettlement.mmInvoice,
-						com.tools20022.repository.entity.CommercialTradeSettlement.mmLetterOfCredit, com.tools20022.repository.entity.CommercialTradeSettlement.mmProductDelivery,
-						com.tools20022.repository.entity.CommercialTradeSettlement.mmCommercialTrade);
+				element_lazy = () -> Arrays.asList(CommercialTradeSettlement.mmPayment, CommercialTradeSettlement.mmInvoice, CommercialTradeSettlement.mmLetterOfCredit, CommercialTradeSettlement.mmProductDelivery,
+						CommercialTradeSettlement.mmCommercialTrade);
 				derivationComponent_lazy = () -> Arrays.asList(TradeSettlement1.mmObject(), EarlyPaymentsVAT1.mmObject());
 			}
 		});

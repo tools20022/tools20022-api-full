@@ -20,7 +20,9 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.SecuritiesBalance;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.SignedQuantityFormat8;
 import com.tools20022.repository.msg.SignedQuantityFormat9;
 import java.util.Arrays;
@@ -113,7 +115,7 @@ public class BalanceFormat10Choice {
 			componentContext_lazy = () -> BalanceFormat10Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Bal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Balance";
 			definition = "Provides information about balance related to a corporate action.";
 			maxOccurs = 1;
@@ -161,7 +163,7 @@ public class BalanceFormat10Choice {
 			componentContext_lazy = () -> BalanceFormat10Choice.mmObject();
 			isDerived = false;
 			xmlTag = "ElgblBal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EligibleBalance";
 			definition = "Provide eligible balance information in different formats.";
 			maxOccurs = 1;
@@ -209,7 +211,7 @@ public class BalanceFormat10Choice {
 			componentContext_lazy = () -> BalanceFormat10Choice.mmObject();
 			isDerived = false;
 			xmlTag = "NotElgblBal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotEligibleBalance";
 			definition = "Provide not eligible balance information in different formats.";
 			maxOccurs = 1;
@@ -262,7 +264,7 @@ public class BalanceFormat10Choice {
 			componentContext_lazy = () -> BalanceFormat10Choice.mmObject();
 			isDerived = false;
 			xmlTag = "FullPrdUnits";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FullPeriodUnits";
 			definition = "Number of units of a fund that were purchased in a previous distribution period and/or held at the beginning of a distribution period, for example Group I Units in the UK.";
 			maxOccurs = 1;
@@ -313,7 +315,7 @@ public class BalanceFormat10Choice {
 			componentContext_lazy = () -> BalanceFormat10Choice.mmObject();
 			isDerived = false;
 			xmlTag = "PartWayPrdUnits";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartWayPeriodUnits";
 			definition = "Number of units of a fund that were purchased part way throughout a distribution period, for example Group II Units in the U.K.";
 			maxOccurs = 1;
@@ -325,12 +327,11 @@ public class BalanceFormat10Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.BalanceFormat10Choice.mmBalance, com.tools20022.repository.choice.BalanceFormat10Choice.mmEligibleBalance,
-						com.tools20022.repository.choice.BalanceFormat10Choice.mmNotEligibleBalance, com.tools20022.repository.choice.BalanceFormat10Choice.mmFullPeriodUnits,
-						com.tools20022.repository.choice.BalanceFormat10Choice.mmPartWayPeriodUnits);
+				messageElement_lazy = () -> Arrays.asList(BalanceFormat10Choice.mmBalance, BalanceFormat10Choice.mmEligibleBalance, BalanceFormat10Choice.mmNotEligibleBalance, BalanceFormat10Choice.mmFullPeriodUnits,
+						BalanceFormat10Choice.mmPartWayPeriodUnits);
 				trace_lazy = () -> SecuritiesBalance.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "BalanceFormat10Choice";
 				definition = "Choice between balance, eligible balance and not eligible balance formats.";
 			}

@@ -19,11 +19,13 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Exact4AlphaNumericText;
 import com.tools20022.repository.datatype.Max8Text;
 import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.entity.GenericIdentification;
 import com.tools20022.repository.entity.IdentificationIssuerRole;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -107,7 +109,7 @@ public class GenericIdentification6 {
 			componentContext_lazy = () -> GenericIdentification6.mmObject();
 			isDerived = false;
 			xmlTag = "Issr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Issuer";
 			definition = "Entity that assigns the identification.";
 			maxOccurs = 1;
@@ -152,7 +154,7 @@ public class GenericIdentification6 {
 			componentContext_lazy = () -> GenericIdentification6.mmObject();
 			isDerived = false;
 			xmlTag = "Inf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Information";
 			definition = "Proprietary information, often a code, issued by the data source scheme issuer.";
 			maxOccurs = 1;
@@ -193,7 +195,7 @@ public class GenericIdentification6 {
 			componentContext_lazy = () -> GenericIdentification6.mmObject();
 			isDerived = false;
 			xmlTag = "Bal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Balance";
 			definition = "Value of the balance.";
 			maxOccurs = 1;
@@ -205,11 +207,10 @@ public class GenericIdentification6 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GenericIdentification6.mmIssuer, com.tools20022.repository.msg.GenericIdentification6.mmInformation,
-						com.tools20022.repository.msg.GenericIdentification6.mmBalance);
+				messageElement_lazy = () -> Arrays.asList(GenericIdentification6.mmIssuer, GenericIdentification6.mmInformation, GenericIdentification6.mmBalance);
 				trace_lazy = () -> GenericIdentification.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "GenericIdentification6";
 				definition = "Balance expressed with a data source scheme.";
 			}

@@ -19,7 +19,9 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.InvoiceFinancingPartyRole;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -105,7 +107,7 @@ public class FinancingNotificationParties1 {
 			componentContext_lazy = () -> FinancingNotificationParties1.mmObject();
 			isDerived = false;
 			xmlTag = "NtifngPty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotifyingParty";
 			definition = "Party that notifies a third party.";
 			maxOccurs = 1;
@@ -153,7 +155,7 @@ public class FinancingNotificationParties1 {
 			componentContext_lazy = () -> FinancingNotificationParties1.mmObject();
 			isDerived = false;
 			xmlTag = "NtfctnRcvr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotificationReceiver";
 			definition = "Party (to be) notified.";
 			maxOccurs = 1;
@@ -204,7 +206,7 @@ public class FinancingNotificationParties1 {
 			componentContext_lazy = () -> FinancingNotificationParties1.mmObject();
 			isDerived = false;
 			xmlTag = "AckRcvr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcknowledgementReceiver";
 			definition = "Party to whom a notification acknowledgement has to be sent by the notification receiver.";
 			minOccurs = 0;
@@ -216,10 +218,9 @@ public class FinancingNotificationParties1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancingNotificationParties1.mmNotifyingParty, com.tools20022.repository.msg.FinancingNotificationParties1.mmNotificationReceiver,
-						com.tools20022.repository.msg.FinancingNotificationParties1.mmAcknowledgementReceiver);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(FinancingNotificationParties1.mmNotifyingParty, FinancingNotificationParties1.mmNotificationReceiver, FinancingNotificationParties1.mmAcknowledgementReceiver);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FinancingNotificationParties1";
 				definition = "Identifies a party that notifies a financial document, the party to be notified, and whether notified party must send an acknowledgement and to whom.";
 			}

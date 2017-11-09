@@ -19,9 +19,11 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.PercentageRate;
 import com.tools20022.repository.entity.AdditionalRight;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -101,11 +103,11 @@ public class AdditionalRightThreshold1Choice {
 	 */
 	public static final MMMessageAttribute mmAdditionalRightThreshold = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AdditionalRight.mmAdditionalRightThreshold;
+			businessElementTrace_lazy = () -> AdditionalRight.mmAdditionalRightThreshold;
 			componentContext_lazy = () -> AdditionalRightThreshold1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlRghtThrshld";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalRightThreshold";
 			definition = "Additional right granted to specify the minimum stake in share capital or cash value or number of security holders required to table resolutions.";
 			maxOccurs = 1;
@@ -153,11 +155,11 @@ public class AdditionalRightThreshold1Choice {
 	 */
 	public static final MMMessageAttribute mmAdditionalRightThresholdPercentage = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AdditionalRight.mmAdditionalRightThresholdPercentage;
+			businessElementTrace_lazy = () -> AdditionalRight.mmAdditionalRightThresholdPercentage;
 			componentContext_lazy = () -> AdditionalRightThreshold1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlRghtThrshldPctg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalRightThresholdPercentage";
 			definition = "Additional right granted to specify the minimum stake in share capital or cash value or number of security holders required to table resolutions. This minimum is expressed as a percentage.";
 			maxOccurs = 1;
@@ -169,11 +171,10 @@ public class AdditionalRightThreshold1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AdditionalRightThreshold1Choice.mmAdditionalRightThreshold,
-						com.tools20022.repository.choice.AdditionalRightThreshold1Choice.mmAdditionalRightThresholdPercentage);
+				messageElement_lazy = () -> Arrays.asList(AdditionalRightThreshold1Choice.mmAdditionalRightThreshold, AdditionalRightThreshold1Choice.mmAdditionalRightThresholdPercentage);
 				trace_lazy = () -> AdditionalRight.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AdditionalRightThreshold1Choice";
 				definition = "Choice of additional right threshold.";
 			}

@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesAccountPurposeType1Code
+ * SecuritiesAccountPurposeType1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -53,14 +63,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.SecuritiesAccountPurposeTypeCode#mmNonFungible
  * SecuritiesAccountPurposeTypeCode.mmNonFungible}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesAccountPurposeType1Code
- * SecuritiesAccountPurposeType1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -110,7 +112,7 @@ public class SecuritiesAccountPurposeTypeCode {
 	 */
 	public static final MMCode mmMargin = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Margin";
 			definition = "Account is used when financing is done by the broker.";
 			owner_lazy = () -> SecuritiesAccountPurposeTypeCode.mmObject();
@@ -140,7 +142,7 @@ public class SecuritiesAccountPurposeTypeCode {
 	 */
 	public static final MMCode mmShortSale = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ShortSale";
 			definition = "Account is used for short sale orders.";
 			owner_lazy = () -> SecuritiesAccountPurposeTypeCode.mmObject();
@@ -173,7 +175,7 @@ public class SecuritiesAccountPurposeTypeCode {
 	 */
 	public static final MMCode mmAbroad = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Abroad";
 			definition = "Account is located in a financial institution outside the country where the transaction is taking place.";
 			owner_lazy = () -> SecuritiesAccountPurposeTypeCode.mmObject();
@@ -204,7 +206,7 @@ public class SecuritiesAccountPurposeTypeCode {
 	 */
 	public static final MMCode mmCentralised = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Centralised";
 			definition = "Account and all its related positions are held in one location.";
 			owner_lazy = () -> SecuritiesAccountPurposeTypeCode.mmObject();
@@ -237,7 +239,7 @@ public class SecuritiesAccountPurposeTypeCode {
 	 */
 	public static final MMCode mmCashDVP = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CashDVP";
 			definition = "Account is used for settlement upon delivery, or a collection on a delivery basis.";
 			owner_lazy = () -> SecuritiesAccountPurposeTypeCode.mmObject();
@@ -267,7 +269,7 @@ public class SecuritiesAccountPurposeTypeCode {
 	 */
 	public static final MMCode mmPhysical = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Physical";
 			definition = "Account is used for physical domestic safekeeping.";
 			owner_lazy = () -> SecuritiesAccountPurposeTypeCode.mmObject();
@@ -298,7 +300,7 @@ public class SecuritiesAccountPurposeTypeCode {
 	 */
 	public static final MMCode mmFungible = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Fungible";
 			definition = "Financial instruments in the safekeeping account are fungible.";
 			owner_lazy = () -> SecuritiesAccountPurposeTypeCode.mmObject();
@@ -329,7 +331,7 @@ public class SecuritiesAccountPurposeTypeCode {
 	 */
 	public static final MMCode mmNonFungible = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonFungible";
 			definition = "Financial instruments in the safekeeping account are not fungible.";
 			owner_lazy = () -> SecuritiesAccountPurposeTypeCode.mmObject();
@@ -340,15 +342,13 @@ public class SecuritiesAccountPurposeTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("MARG");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesAccountPurposeTypeCode";
 				definition = "Specifies the purpose of the securities account.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SecuritiesAccountPurposeTypeCode.mmMargin, com.tools20022.repository.codeset.SecuritiesAccountPurposeTypeCode.mmShortSale,
-						com.tools20022.repository.codeset.SecuritiesAccountPurposeTypeCode.mmAbroad, com.tools20022.repository.codeset.SecuritiesAccountPurposeTypeCode.mmCentralised,
-						com.tools20022.repository.codeset.SecuritiesAccountPurposeTypeCode.mmCashDVP, com.tools20022.repository.codeset.SecuritiesAccountPurposeTypeCode.mmPhysical,
-						com.tools20022.repository.codeset.SecuritiesAccountPurposeTypeCode.mmFungible, com.tools20022.repository.codeset.SecuritiesAccountPurposeTypeCode.mmNonFungible);
+				code_lazy = () -> Arrays.asList(SecuritiesAccountPurposeTypeCode.mmMargin, SecuritiesAccountPurposeTypeCode.mmShortSale, SecuritiesAccountPurposeTypeCode.mmAbroad, SecuritiesAccountPurposeTypeCode.mmCentralised,
+						SecuritiesAccountPurposeTypeCode.mmCashDVP, SecuritiesAccountPurposeTypeCode.mmPhysical, SecuritiesAccountPurposeTypeCode.mmFungible, SecuritiesAccountPurposeTypeCode.mmNonFungible);
 				derivation_lazy = () -> Arrays.asList(SecuritiesAccountPurposeType1Code.mmObject());
 			}
 		});

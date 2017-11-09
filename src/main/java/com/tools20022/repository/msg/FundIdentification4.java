@@ -20,9 +20,13 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.PartyIdentification73Choice;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.entity.GenericIdentification;
 import com.tools20022.repository.entity.InvestmentFund;
+import com.tools20022.repository.entity.Party;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -111,11 +115,11 @@ public class FundIdentification4 {
 	 */
 	public static final MMMessageAttribute mmFundIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFund.mmIdentification;
+			businessElementTrace_lazy = () -> InvestmentFund.mmIdentification;
 			componentContext_lazy = () -> FundIdentification4.mmObject();
 			isDerived = false;
 			xmlTag = "FndId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FundIdentification";
 			definition = "Identification of the investment fund.";
 			maxOccurs = 1;
@@ -159,11 +163,11 @@ public class FundIdentification4 {
 	 */
 	public static final MMMessageAttribute mmAccountIdentificationWithCustodian = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmIdentification;
+			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> FundIdentification4.mmObject();
 			isDerived = false;
 			xmlTag = "AcctIdWthCtdn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountIdentificationWithCustodian";
 			definition = "Identifies the account of the fund held with the custodian.";
 			maxOccurs = 1;
@@ -208,11 +212,11 @@ public class FundIdentification4 {
 	 */
 	public static final MMMessageAssociationEnd mmCustodianIdentification = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> FundIdentification4.mmObject();
 			isDerived = false;
 			xmlTag = "CtdnId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CustodianIdentification";
 			definition = "Identification of the custodian which services the account of the fund.";
 			maxOccurs = 1;
@@ -225,11 +229,10 @@ public class FundIdentification4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FundIdentification4.mmFundIdentification, com.tools20022.repository.msg.FundIdentification4.mmAccountIdentificationWithCustodian,
-						com.tools20022.repository.msg.FundIdentification4.mmCustodianIdentification);
+				messageElement_lazy = () -> Arrays.asList(FundIdentification4.mmFundIdentification, FundIdentification4.mmAccountIdentificationWithCustodian, FundIdentification4.mmCustodianIdentification);
 				trace_lazy = () -> InvestmentFund.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FundIdentification4";
 				definition = "Distinct pool of financial instruments managed by a single investment policy. May or may not be part of an umbrella fund.The pool is issued in at least one investment fund class.";
 				previousVersion_lazy = () -> FundIdentification3.mmObject();

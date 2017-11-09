@@ -20,9 +20,12 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.MarginProductType1Choice;
 import com.tools20022.repository.entity.MarginCall;
+import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.entity.SecuritiesAccount;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -107,7 +110,7 @@ public class MarginReport1 {
 			componentContext_lazy = () -> MarginReport1.mmObject();
 			isDerived = false;
 			xmlTag = "MrgnAcct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarginAccount";
 			definition = "Identifies the clearing member's account.";
 			maxOccurs = 1;
@@ -153,11 +156,11 @@ public class MarginReport1 {
 	 */
 	public static final MMMessageAssociationEnd mmNonClearingMember = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> MarginReport1.mmObject();
 			isDerived = false;
 			xmlTag = "NonClrMmb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonClearingMember";
 			definition = "Provides details about the non clearing member identification and account.";
 			minOccurs = 0;
@@ -204,7 +207,7 @@ public class MarginReport1 {
 			componentContext_lazy = () -> MarginReport1.mmObject();
 			isDerived = false;
 			xmlTag = "MrgnPdct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarginProduct";
 			definition = "Specifies if the margin is related to equities or fixed income.";
 			minOccurs = 1;
@@ -249,7 +252,7 @@ public class MarginReport1 {
 			componentContext_lazy = () -> MarginReport1.mmObject();
 			isDerived = false;
 			xmlTag = "MrgnDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarginDetails";
 			definition = "Provides the margin details such as the exposure amount and the initial margin.";
 			minOccurs = 1;
@@ -261,11 +264,10 @@ public class MarginReport1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MarginReport1.mmMarginAccount, com.tools20022.repository.msg.MarginReport1.mmNonClearingMember,
-						com.tools20022.repository.msg.MarginReport1.mmMarginProduct, com.tools20022.repository.msg.MarginReport1.mmMarginDetails);
+				messageElement_lazy = () -> Arrays.asList(MarginReport1.mmMarginAccount, MarginReport1.mmNonClearingMember, MarginReport1.mmMarginProduct, MarginReport1.mmMarginDetails);
 				trace_lazy = () -> MarginCall.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "MarginReport1";
 				definition = "Provides the details on the margin report per clearing member, and optionaly either per financial instrument or per non-clearing member.";
 			}

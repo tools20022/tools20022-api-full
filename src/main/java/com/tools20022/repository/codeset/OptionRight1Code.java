@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.OptionRightCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -89,7 +91,7 @@ public class OptionRight1Code extends OptionRightCode {
 	 */
 	public static final MMCode mmExercise = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Exercise";
 			owner_lazy = () -> OptionRight1Code.mmObject();
 		}
@@ -112,7 +114,7 @@ public class OptionRight1Code extends OptionRightCode {
 	 */
 	public static final MMCode mmAssignment = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Assignment";
 			owner_lazy = () -> OptionRight1Code.mmObject();
 		}
@@ -135,7 +137,7 @@ public class OptionRight1Code extends OptionRightCode {
 	 */
 	public static final MMCode mmRenouncement = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Renouncement";
 			owner_lazy = () -> OptionRight1Code.mmObject();
 		}
@@ -158,7 +160,7 @@ public class OptionRight1Code extends OptionRightCode {
 	 */
 	public static final MMCode mmExpiration = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Expiration";
 			owner_lazy = () -> OptionRight1Code.mmObject();
 		}
@@ -167,13 +169,12 @@ public class OptionRight1Code extends OptionRightCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("EXER");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OptionRight1Code";
 				definition = "Specifies the option rights.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OptionRight1Code.mmExercise, com.tools20022.repository.codeset.OptionRight1Code.mmAssignment,
-						com.tools20022.repository.codeset.OptionRight1Code.mmRenouncement, com.tools20022.repository.codeset.OptionRight1Code.mmExpiration);
+				code_lazy = () -> Arrays.asList(OptionRight1Code.mmExercise, OptionRight1Code.mmAssignment, OptionRight1Code.mmRenouncement, OptionRight1Code.mmExpiration);
 				trace_lazy = () -> OptionRightCode.mmObject();
 			}
 		});

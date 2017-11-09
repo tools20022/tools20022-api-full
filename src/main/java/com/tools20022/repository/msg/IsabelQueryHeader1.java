@@ -20,10 +20,12 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.DateAndDateTimeChoice;
 import com.tools20022.repository.codeset.RequestModeType1Code;
 import com.tools20022.repository.datatype.Max13AlphaNumericText;
 import com.tools20022.repository.datatype.Max14AlphaNumericText;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -105,7 +107,7 @@ public class IsabelQueryHeader1 {
 			componentContext_lazy = () -> IsabelQueryHeader1.mmObject();
 			isDerived = false;
 			xmlTag = "ActlSndrId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ActualSenderIdentification";
 			definition = "Unique identification of the actual sender of the file.";
 			maxOccurs = 1;
@@ -147,7 +149,7 @@ public class IsabelQueryHeader1 {
 			componentContext_lazy = () -> IsabelQueryHeader1.mmObject();
 			isDerived = false;
 			xmlTag = "PyldCreDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PayloadCreationDate";
 			definition = "Date and time at which the file in the payload was actually created.";
 			maxOccurs = 1;
@@ -190,7 +192,7 @@ public class IsabelQueryHeader1 {
 			componentContext_lazy = () -> IsabelQueryHeader1.mmObject();
 			isDerived = false;
 			xmlTag = "TrnsprtId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransportIdentification";
 			definition = "Unique identification of the transport.";
 			maxOccurs = 1;
@@ -235,7 +237,7 @@ public class IsabelQueryHeader1 {
 			componentContext_lazy = () -> IsabelQueryHeader1.mmObject();
 			isDerived = false;
 			xmlTag = "ReqMdAndTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestModeAndType";
 			definition = "Request criteria to identify the information to be returned in the response to the query.";
 			maxOccurs = 1;
@@ -247,10 +249,9 @@ public class IsabelQueryHeader1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IsabelQueryHeader1.mmActualSenderIdentification, com.tools20022.repository.msg.IsabelQueryHeader1.mmPayloadCreationDate,
-						com.tools20022.repository.msg.IsabelQueryHeader1.mmTransportIdentification, com.tools20022.repository.msg.IsabelQueryHeader1.mmRequestModeAndType);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(IsabelQueryHeader1.mmActualSenderIdentification, IsabelQueryHeader1.mmPayloadCreationDate, IsabelQueryHeader1.mmTransportIdentification, IsabelQueryHeader1.mmRequestModeAndType);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "IsabelQueryHeader1";
 				definition = "Specifies the header information for a query file, as part of the RequestForResponse flow.";
 			}

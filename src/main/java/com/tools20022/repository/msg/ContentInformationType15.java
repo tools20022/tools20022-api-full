@@ -20,7 +20,13 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.caaa.*;
+import com.tools20022.repository.area.caam.*;
+import com.tools20022.repository.area.cain.*;
+import com.tools20022.repository.area.catp.*;
 import com.tools20022.repository.codeset.ContentType2Code;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -337,10 +343,10 @@ public class ContentInformationType15 {
 			componentContext_lazy = () -> ContentInformationType15.mmObject();
 			isDerived = false;
 			xmlTag = "CnttTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ContentType";
 			definition = "Type of data protection.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ContentInformationType11.mmContentType;
+			previousVersion_lazy = () -> ContentInformationType11.mmContentType;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ContentType2Code.mmObject();
@@ -383,10 +389,10 @@ public class ContentInformationType15 {
 			componentContext_lazy = () -> ContentInformationType15.mmObject();
 			isDerived = false;
 			xmlTag = "AuthntcdData";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AuthenticatedData";
 			definition = "Data protection by a message authentication code (MAC).";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ContentInformationType11.mmAuthenticatedData;
+			previousVersion_lazy = () -> ContentInformationType11.mmAuthenticatedData;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -397,47 +403,29 @@ public class ContentInformationType15 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ContentInformationType15.mmContentType, com.tools20022.repository.msg.ContentInformationType15.mmAuthenticatedData);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.caam.ATMReconciliationAdviceV01.mmSecurityTrailer, com.tools20022.repository.area.caam.ATMReconciliationAcknowledgementV01.mmSecurityTrailer,
-						com.tools20022.repository.area.caam.HostToATMAcknowledgementV01.mmSecurityTrailer, com.tools20022.repository.area.caam.ATMDiagnosticResponseV01.mmSecurityTrailer,
-						com.tools20022.repository.area.caam.ATMDiagnosticRequestV01.mmSecurityTrailer, com.tools20022.repository.area.caam.HostToATMRequestV01.mmSecurityTrailer,
-						com.tools20022.repository.area.catp.ATMInquiryResponseV01.mmSecurityTrailer, com.tools20022.repository.area.catp.ATMInquiryRequestV01.mmSecurityTrailer,
-						com.tools20022.repository.area.catp.ATMCompletionAdviceV01.mmSecurityTrailer, com.tools20022.repository.area.catp.ATMWithdrawalResponseV01.mmSecurityTrailer,
-						com.tools20022.repository.area.catp.ATMCompletionAcknowledgementV01.mmSecurityTrailer, com.tools20022.repository.area.catp.ATMWithdrawalCompletionAdviceV01.mmSecurityTrailer,
-						com.tools20022.repository.area.catp.ATMWithdrawalCompletionAcknowledgementV01.mmSecurityTrailer, com.tools20022.repository.area.catp.ATMWithdrawalRequestV01.mmSecurityTrailer,
-						com.tools20022.repository.area.catp.ATMPINManagementRequestV01.mmSecurityTrailer, com.tools20022.repository.area.catp.ATMPINManagementResponseV01.mmSecurityTrailer,
-						com.tools20022.repository.area.cain.NetworkManagementResponse.mmSecurityTrailer, com.tools20022.repository.area.cain.AcquirerFinancialResponse.mmSecurityTrailer,
-						com.tools20022.repository.area.cain.AcquirerReversalInitiation.mmSecurityTrailer, com.tools20022.repository.area.cain.AcquirerAuthorisationInitiation.mmSecurityTrailer,
-						com.tools20022.repository.area.cain.ReconciliationInitiation.mmSecurityTrailer, com.tools20022.repository.area.cain.AcquirerAuthorisationResponse.mmSecurityTrailer,
-						com.tools20022.repository.area.cain.NetworkManagementInitiation.mmSecurityTrailer, com.tools20022.repository.area.cain.AcquirerReversalResponse.mmSecurityTrailer,
-						com.tools20022.repository.area.cain.ReconciliationResponse.mmSecurityTrailer, com.tools20022.repository.area.cain.AcquirerFinancialInitiation.mmSecurityTrailer,
-						com.tools20022.repository.area.caaa.AcceptorReconciliationRequestV05.mmSecurityTrailer, com.tools20022.repository.area.caaa.AcceptorCurrencyConversionResponseV03.mmSecurityTrailer,
-						com.tools20022.repository.area.caaa.AcceptorCancellationResponseV05.mmSecurityTrailer, com.tools20022.repository.area.caaa.AcceptorCancellationRequestV05.mmSecurityTrailer,
-						com.tools20022.repository.area.caaa.AcceptorAuthorisationRequestV05.mmSecurityTrailer, com.tools20022.repository.area.caaa.AcceptorCurrencyConversionRequestV03.mmSecurityTrailer,
-						com.tools20022.repository.area.caaa.AcceptorCompletionAdviceV05.mmSecurityTrailer, com.tools20022.repository.area.caaa.AcceptorCompletionAdviceResponseV05.mmSecurityTrailer,
-						com.tools20022.repository.area.caaa.AcceptorDiagnosticRequestV05.mmSecurityTrailer, com.tools20022.repository.area.caaa.AcceptorReconciliationResponseV05.mmSecurityTrailer,
-						com.tools20022.repository.area.caaa.AcceptorCancellationAdviceResponseV05.mmSecurityTrailer, com.tools20022.repository.area.caaa.AcceptorDiagnosticResponseV05.mmSecurityTrailer,
-						com.tools20022.repository.area.caaa.AcceptorCancellationAdviceV05.mmSecurityTrailer, com.tools20022.repository.area.caaa.AcceptorAuthorisationResponseV05.mmSecurityTrailer,
-						com.tools20022.repository.area.caam.ATMExceptionAcknowledgementV01.mmSecurityTrailer, com.tools20022.repository.area.catp.ATMWithdrawalRequestV02.mmSecurityTrailer,
-						com.tools20022.repository.area.caam.ATMExceptionAdviceV01.mmSecurityTrailer, com.tools20022.repository.area.caam.ATMReconciliationAdviceV02.mmSecurityTrailer,
-						com.tools20022.repository.area.caam.ATMReconciliationAcknowledgementV02.mmSecurityTrailer, com.tools20022.repository.area.catp.ATMDepositResponseV01.mmSecurityTrailer,
-						com.tools20022.repository.area.catp.ATMDepositRequestV01.mmSecurityTrailer, com.tools20022.repository.area.catp.ATMWithdrawalCompletionAdviceV02.mmSecurityTrailer,
-						com.tools20022.repository.area.catp.ATMInquiryResponseV02.mmSecurityTrailer, com.tools20022.repository.area.catp.ATMDepositCompletionAcknowledgementV01.mmSecurityTrailer,
-						com.tools20022.repository.area.catp.ATMPINManagementRequestV02.mmSecurityTrailer, com.tools20022.repository.area.catp.ATMTransferRequestV01.mmSecurityTrailer,
-						com.tools20022.repository.area.caam.ATMDiagnosticResponseV02.mmSecurityTrailer, com.tools20022.repository.area.caam.ATMDiagnosticRequestV02.mmSecurityTrailer,
-						com.tools20022.repository.area.catp.ATMWithdrawalResponseV02.mmSecurityTrailer, com.tools20022.repository.area.catp.ATMWithdrawalCompletionAcknowledgementV02.mmSecurityTrailer,
-						com.tools20022.repository.area.catp.ATMPINManagementResponseV02.mmSecurityTrailer, com.tools20022.repository.area.catp.ATMDepositCompletionAdviceV01.mmSecurityTrailer,
-						com.tools20022.repository.area.catp.ATMInquiryRequestV02.mmSecurityTrailer, com.tools20022.repository.area.catp.ATMCompletionAcknowledgementV02.mmSecurityTrailer,
-						com.tools20022.repository.area.catp.ATMCompletionAdviceV02.mmSecurityTrailer, com.tools20022.repository.area.catp.ATMTransferResponseV01.mmSecurityTrailer,
-						com.tools20022.repository.area.caaa.AcceptorAuthorisationResponseV06.mmSecurityTrailer, com.tools20022.repository.area.caaa.AcceptorAuthorisationRequestV06.mmSecurityTrailer,
-						com.tools20022.repository.area.caaa.AcceptorCancellationRequestV06.mmSecurityTrailer, com.tools20022.repository.area.caaa.AcceptorCompletionAdviceResponseV06.mmSecurityTrailer,
-						com.tools20022.repository.area.caaa.AcceptorCancellationAdviceV06.mmSecurityTrailer, com.tools20022.repository.area.caaa.AcceptorCurrencyConversionResponseV04.mmSecurityTrailer,
-						com.tools20022.repository.area.caaa.AcceptorCompletionAdviceV06.mmSecurityTrailer, com.tools20022.repository.area.caaa.AcceptorCurrencyConversionRequestV04.mmSecurityTrailer,
-						com.tools20022.repository.area.caaa.AcceptorCancellationAdviceResponseV06.mmSecurityTrailer, com.tools20022.repository.area.caaa.AcceptorCancellationResponseV06.mmSecurityTrailer,
-						com.tools20022.repository.area.caaa.AcceptorReconciliationRequestV06.mmSecurityTrailer, com.tools20022.repository.area.caaa.AcceptorDiagnosticRequestV06.mmSecurityTrailer,
-						com.tools20022.repository.area.caaa.AcceptorCurrencyConversionAdviceResponseV01.mmSecurityTrailer, com.tools20022.repository.area.caaa.AcceptorCurrencyConversionAdviceV01.mmSecurityTrailer);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(ContentInformationType15.mmContentType, ContentInformationType15.mmAuthenticatedData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(ATMReconciliationAdviceV01.mmSecurityTrailer, ATMReconciliationAcknowledgementV01.mmSecurityTrailer, HostToATMAcknowledgementV01.mmSecurityTrailer,
+						ATMDiagnosticResponseV01.mmSecurityTrailer, ATMDiagnosticRequestV01.mmSecurityTrailer, HostToATMRequestV01.mmSecurityTrailer, ATMInquiryResponseV01.mmSecurityTrailer, ATMInquiryRequestV01.mmSecurityTrailer,
+						ATMCompletionAdviceV01.mmSecurityTrailer, ATMWithdrawalResponseV01.mmSecurityTrailer, ATMCompletionAcknowledgementV01.mmSecurityTrailer, ATMWithdrawalCompletionAdviceV01.mmSecurityTrailer,
+						ATMWithdrawalCompletionAcknowledgementV01.mmSecurityTrailer, ATMWithdrawalRequestV01.mmSecurityTrailer, ATMPINManagementRequestV01.mmSecurityTrailer, ATMPINManagementResponseV01.mmSecurityTrailer,
+						NetworkManagementResponse.mmSecurityTrailer, AcquirerFinancialResponse.mmSecurityTrailer, AcquirerReversalInitiation.mmSecurityTrailer, AcquirerAuthorisationInitiation.mmSecurityTrailer,
+						ReconciliationInitiation.mmSecurityTrailer, AcquirerAuthorisationResponse.mmSecurityTrailer, NetworkManagementInitiation.mmSecurityTrailer, AcquirerReversalResponse.mmSecurityTrailer,
+						ReconciliationResponse.mmSecurityTrailer, AcquirerFinancialInitiation.mmSecurityTrailer, AcceptorReconciliationRequestV05.mmSecurityTrailer, AcceptorCurrencyConversionResponseV03.mmSecurityTrailer,
+						AcceptorCancellationResponseV05.mmSecurityTrailer, AcceptorCancellationRequestV05.mmSecurityTrailer, AcceptorAuthorisationRequestV05.mmSecurityTrailer, AcceptorCurrencyConversionRequestV03.mmSecurityTrailer,
+						AcceptorCompletionAdviceV05.mmSecurityTrailer, AcceptorCompletionAdviceResponseV05.mmSecurityTrailer, AcceptorDiagnosticRequestV05.mmSecurityTrailer, AcceptorReconciliationResponseV05.mmSecurityTrailer,
+						AcceptorCancellationAdviceResponseV05.mmSecurityTrailer, AcceptorDiagnosticResponseV05.mmSecurityTrailer, AcceptorCancellationAdviceV05.mmSecurityTrailer, AcceptorAuthorisationResponseV05.mmSecurityTrailer,
+						ATMExceptionAcknowledgementV01.mmSecurityTrailer, ATMWithdrawalRequestV02.mmSecurityTrailer, ATMExceptionAdviceV01.mmSecurityTrailer, ATMReconciliationAdviceV02.mmSecurityTrailer,
+						ATMReconciliationAcknowledgementV02.mmSecurityTrailer, ATMDepositResponseV01.mmSecurityTrailer, ATMDepositRequestV01.mmSecurityTrailer, ATMWithdrawalCompletionAdviceV02.mmSecurityTrailer,
+						ATMInquiryResponseV02.mmSecurityTrailer, ATMDepositCompletionAcknowledgementV01.mmSecurityTrailer, ATMPINManagementRequestV02.mmSecurityTrailer, ATMTransferRequestV01.mmSecurityTrailer,
+						ATMDiagnosticResponseV02.mmSecurityTrailer, ATMDiagnosticRequestV02.mmSecurityTrailer, ATMWithdrawalResponseV02.mmSecurityTrailer, ATMWithdrawalCompletionAcknowledgementV02.mmSecurityTrailer,
+						ATMPINManagementResponseV02.mmSecurityTrailer, ATMDepositCompletionAdviceV01.mmSecurityTrailer, ATMInquiryRequestV02.mmSecurityTrailer, ATMCompletionAcknowledgementV02.mmSecurityTrailer,
+						ATMCompletionAdviceV02.mmSecurityTrailer, ATMTransferResponseV01.mmSecurityTrailer, AcceptorAuthorisationResponseV06.mmSecurityTrailer, AcceptorAuthorisationRequestV06.mmSecurityTrailer,
+						AcceptorCancellationRequestV06.mmSecurityTrailer, AcceptorCompletionAdviceResponseV06.mmSecurityTrailer, AcceptorCancellationAdviceV06.mmSecurityTrailer, AcceptorCurrencyConversionResponseV04.mmSecurityTrailer,
+						AcceptorCompletionAdviceV06.mmSecurityTrailer, AcceptorCurrencyConversionRequestV04.mmSecurityTrailer, AcceptorCancellationAdviceResponseV06.mmSecurityTrailer, AcceptorCancellationResponseV06.mmSecurityTrailer,
+						AcceptorReconciliationRequestV06.mmSecurityTrailer, AcceptorDiagnosticRequestV06.mmSecurityTrailer, AcceptorCurrencyConversionAdviceResponseV01.mmSecurityTrailer,
+						AcceptorCurrencyConversionAdviceV01.mmSecurityTrailer);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ContentInformationType15";
 				definition = "General cryptographic message syntax (CMS) containing authenticated data.";
 				previousVersion_lazy = () -> ContentInformationType11.mmObject();

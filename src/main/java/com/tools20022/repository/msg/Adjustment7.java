@@ -20,10 +20,12 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.AdjustmentType1Choice;
 import com.tools20022.repository.choice.AmountOrPercentage2Choice;
 import com.tools20022.repository.codeset.AdjustmentDirection1Code;
 import com.tools20022.repository.entity.Adjustment;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -110,14 +112,14 @@ public class Adjustment7 {
 	 */
 	public static final MMMessageAssociationEnd mmType = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Adjustment.mmType;
+			businessElementTrace_lazy = () -> Adjustment.mmType;
 			componentContext_lazy = () -> Adjustment7.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Specifies the type of adjustment.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Adjustment6.mmType;
+			previousVersion_lazy = () -> Adjustment6.mmType;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -164,14 +166,14 @@ public class Adjustment7 {
 	 */
 	public static final MMMessageAttribute mmAmountOrPercentage = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Adjustment.mmAmount;
+			businessElementTrace_lazy = () -> Adjustment.mmAmount;
 			componentContext_lazy = () -> Adjustment7.mmObject();
 			isDerived = false;
 			xmlTag = "AmtOrPctg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmountOrPercentage";
 			definition = "Specifies the monetary amount or rate of the adjustment.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Adjustment6.mmAmount;
+			previousVersion_lazy = () -> Adjustment6.mmAmount;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> AmountOrPercentage2Choice.mmObject();
@@ -220,14 +222,14 @@ public class Adjustment7 {
 	 */
 	public static final MMMessageAttribute mmDirection = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Adjustment.mmDirection;
+			businessElementTrace_lazy = () -> Adjustment.mmDirection;
 			componentContext_lazy = () -> Adjustment7.mmObject();
 			isDerived = false;
 			xmlTag = "Drctn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Direction";
 			definition = "Specifies whether the adjustment must be subtracted or added to the total amount.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Adjustment6.mmDirection;
+			previousVersion_lazy = () -> Adjustment6.mmDirection;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AdjustmentDirection1Code.mmObject();
@@ -237,10 +239,10 @@ public class Adjustment7 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Adjustment7.mmType, com.tools20022.repository.msg.Adjustment7.mmAmountOrPercentage, com.tools20022.repository.msg.Adjustment7.mmDirection);
+				messageElement_lazy = () -> Arrays.asList(Adjustment7.mmType, Adjustment7.mmAmountOrPercentage, Adjustment7.mmDirection);
 				trace_lazy = () -> Adjustment.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Adjustment7";
 				definition = "Modification on the value of goods and / or services. For example: rebate, discount, surcharge";
 				previousVersion_lazy = () -> Adjustment6.mmObject();

@@ -20,11 +20,14 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.BlockedReason2Choice;
 import com.tools20022.repository.choice.TransactionType5Choice;
 import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.datatype.YesNoIndicator;
+import com.tools20022.repository.entity.AccountStatus;
 import com.tools20022.repository.entity.InvestmentFundOrder;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -111,7 +114,7 @@ public class BlockedStatusReason2 {
 			componentContext_lazy = () -> BlockedStatusReason2.mmObject();
 			isDerived = false;
 			xmlTag = "TxTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionType";
 			definition = "Type of transaction for which the account has a blocked status.";
 			maxOccurs = 1;
@@ -156,11 +159,11 @@ public class BlockedStatusReason2 {
 	 */
 	public static final MMMessageAttribute mmBlocked = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AccountStatus.mmBlocked;
+			businessElementTrace_lazy = () -> AccountStatus.mmBlocked;
 			componentContext_lazy = () -> BlockedStatusReason2.mmObject();
 			isDerived = false;
 			xmlTag = "Blckd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Blocked";
 			definition = "Indicates whether the account is blocked.";
 			maxOccurs = 1;
@@ -203,11 +206,11 @@ public class BlockedStatusReason2 {
 	 */
 	public static final MMMessageAssociationEnd mmReason = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AccountStatus.mmBlockedReason;
+			businessElementTrace_lazy = () -> AccountStatus.mmBlockedReason;
 			componentContext_lazy = () -> BlockedStatusReason2.mmObject();
 			isDerived = false;
 			xmlTag = "Rsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reason";
 			definition = "Reason for the blocked status.";
 			minOccurs = 0;
@@ -248,7 +251,7 @@ public class BlockedStatusReason2 {
 			componentContext_lazy = () -> BlockedStatusReason2.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInformation";
 			definition = "Additional information about the blocked account status.";
 			maxOccurs = 1;
@@ -260,11 +263,10 @@ public class BlockedStatusReason2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BlockedStatusReason2.mmTransactionType, com.tools20022.repository.msg.BlockedStatusReason2.mmBlocked,
-						com.tools20022.repository.msg.BlockedStatusReason2.mmReason, com.tools20022.repository.msg.BlockedStatusReason2.mmAdditionalInformation);
+				messageElement_lazy = () -> Arrays.asList(BlockedStatusReason2.mmTransactionType, BlockedStatusReason2.mmBlocked, BlockedStatusReason2.mmReason, BlockedStatusReason2.mmAdditionalInformation);
 				trace_lazy = () -> InvestmentFundOrder.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "BlockedStatusReason2";
 				definition = "Reason for a blocked status.";
 			}

@@ -20,8 +20,10 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.DateAndPeriod1Choice;
 import com.tools20022.repository.datatype.TrueFalseIndicator;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -91,7 +93,7 @@ public class Statement35 {
 			componentContext_lazy = () -> Statement35.mmObject();
 			isDerived = false;
 			xmlTag = "DtOrPrd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DateOrPeriod";
 			definition = "Date or period of the statement.";
 			maxOccurs = 1;
@@ -136,7 +138,7 @@ public class Statement35 {
 			componentContext_lazy = () -> Statement35.mmObject();
 			isDerived = false;
 			xmlTag = "HistrcData";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HistoricData";
 			definition = "Specifies whether the data is either historical (true) or current (false).";
 			maxOccurs = 1;
@@ -148,9 +150,9 @@ public class Statement35 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Statement35.mmDateOrPeriod, com.tools20022.repository.msg.Statement35.mmHistoricData);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(Statement35.mmDateOrPeriod, Statement35.mmHistoricData);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Statement35";
 				definition = "Defines the criteria used to report on the securities account positions.";
 			}

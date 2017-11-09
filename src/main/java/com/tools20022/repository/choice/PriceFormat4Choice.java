@@ -19,8 +19,12 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.DecimalNumber;
+import com.tools20022.repository.entity.Index;
+import com.tools20022.repository.entity.Price;
 import com.tools20022.repository.entity.SecuritiesPricing;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.AmountPrice1;
 import com.tools20022.repository.msg.PriceRate1;
 import java.util.Arrays;
@@ -103,11 +107,11 @@ public class PriceFormat4Choice {
 	 */
 	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Price.mmAmount;
+			businessElementTrace_lazy = () -> Price.mmAmount;
 			componentContext_lazy = () -> PriceFormat4Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Amt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Price expressed as a currency and amount.";
 			maxOccurs = 1;
@@ -150,11 +154,11 @@ public class PriceFormat4Choice {
 	 */
 	public static final MMMessageAttribute mmRate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmRate;
+			businessElementTrace_lazy = () -> SecuritiesPricing.mmRate;
 			componentContext_lazy = () -> PriceFormat4Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Rate";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rate";
 			definition = "Price expressed as a rate, ie, percentage.";
 			maxOccurs = 1;
@@ -196,7 +200,7 @@ public class PriceFormat4Choice {
 			componentContext_lazy = () -> PriceFormat4Choice.mmObject();
 			isDerived = false;
 			xmlTag = "NotSpcfd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotSpecified";
 			definition = "The value of the price is not specified.";
 			maxOccurs = 1;
@@ -240,11 +244,11 @@ public class PriceFormat4Choice {
 	 */
 	public static final MMMessageAttribute mmIndexPoints = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Index.mmIndexPoints;
+			businessElementTrace_lazy = () -> Index.mmIndexPoints;
 			componentContext_lazy = () -> PriceFormat4Choice.mmObject();
 			isDerived = false;
 			xmlTag = "IndxPts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IndexPoints";
 			definition = "Price expressed as index points.";
 			maxOccurs = 1;
@@ -256,11 +260,10 @@ public class PriceFormat4Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PriceFormat4Choice.mmAmount, com.tools20022.repository.choice.PriceFormat4Choice.mmRate,
-						com.tools20022.repository.choice.PriceFormat4Choice.mmNotSpecified, com.tools20022.repository.choice.PriceFormat4Choice.mmIndexPoints);
+				messageElement_lazy = () -> Arrays.asList(PriceFormat4Choice.mmAmount, PriceFormat4Choice.mmRate, PriceFormat4Choice.mmNotSpecified, PriceFormat4Choice.mmIndexPoints);
 				trace_lazy = () -> SecuritiesPricing.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PriceFormat4Choice";
 				definition = "Choice of formats to express a price.";
 			}

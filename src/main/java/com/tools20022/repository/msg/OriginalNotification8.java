@@ -20,10 +20,14 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.camt.NotificationToReceiveCancellationAdviceV04;
 import com.tools20022.repository.datatype.GroupCancellationIndicator;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.entity.PaymentExecution;
 import com.tools20022.repository.entity.PaymentInstruction;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -147,11 +151,11 @@ public class OriginalNotification8 {
 			componentContext_lazy = () -> OriginalNotification8.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlMsgId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalMessageIdentification";
 			definition = "Point to point reference, as assigned by the original sender, to unambiguously identify the original notification to receive message.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OriginalNotification10.mmOriginalMessageIdentification);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.OriginalNotification6.mmOriginalMessageIdentification;
+			nextVersions_lazy = () -> Arrays.asList(OriginalNotification10.mmOriginalMessageIdentification);
+			previousVersion_lazy = () -> OriginalNotification6.mmOriginalMessageIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -205,15 +209,15 @@ public class OriginalNotification8 {
 	 */
 	public static final MMMessageAttribute mmOriginalCreationDateTime = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentExecution.mmCreationDate;
+			businessElementTrace_lazy = () -> PaymentExecution.mmCreationDate;
 			componentContext_lazy = () -> OriginalNotification8.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlCreDtTm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalCreationDateTime";
 			definition = "Date and time at which the original message was created.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OriginalNotification10.mmOriginalCreationDateTime);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.OriginalNotification6.mmOriginalCreationDateTime;
+			nextVersions_lazy = () -> Arrays.asList(OriginalNotification10.mmOriginalCreationDateTime);
+			previousVersion_lazy = () -> OriginalNotification6.mmOriginalCreationDateTime;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
@@ -265,11 +269,11 @@ public class OriginalNotification8 {
 			componentContext_lazy = () -> OriginalNotification8.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlNtfctnId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalNotificationIdentification";
 			definition = "Identification of the original notification.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OriginalNotification10.mmOriginalNotificationIdentification);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.OriginalNotification6.mmOriginalNotificationIdentification;
+			nextVersions_lazy = () -> Arrays.asList(OriginalNotification10.mmOriginalNotificationIdentification);
+			previousVersion_lazy = () -> OriginalNotification6.mmOriginalNotificationIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -325,11 +329,11 @@ public class OriginalNotification8 {
 			componentContext_lazy = () -> OriginalNotification8.mmObject();
 			isDerived = false;
 			xmlTag = "NtfctnCxl";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotificationCancellation";
 			definition = "Indicates whether the cancellation applies to the complete original notification or to individual items within the original notification.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OriginalNotification10.mmNotificationCancellation);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.OriginalNotification6.mmNotificationCancellation;
+			nextVersions_lazy = () -> Arrays.asList(OriginalNotification10.mmNotificationCancellation);
+			previousVersion_lazy = () -> OriginalNotification6.mmNotificationCancellation;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> GroupCancellationIndicator.mmObject();
@@ -390,11 +394,11 @@ public class OriginalNotification8 {
 			componentContext_lazy = () -> OriginalNotification8.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlNtfctnRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalNotificationReference";
 			definition = "Identifies the original notification item, to which the cancellation advice refers.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OriginalNotification10.mmOriginalNotificationReference);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.OriginalNotification6.mmOriginalNotificationReference;
+			nextVersions_lazy = () -> Arrays.asList(OriginalNotification10.mmOriginalNotificationReference);
+			previousVersion_lazy = () -> OriginalNotification6.mmOriginalNotificationReference;
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.OriginalNotificationReference6.mmObject();
@@ -404,13 +408,12 @@ public class OriginalNotification8 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OriginalNotification8.mmOriginalMessageIdentification, com.tools20022.repository.msg.OriginalNotification8.mmOriginalCreationDateTime,
-						com.tools20022.repository.msg.OriginalNotification8.mmOriginalNotificationIdentification, com.tools20022.repository.msg.OriginalNotification8.mmNotificationCancellation,
-						com.tools20022.repository.msg.OriginalNotification8.mmOriginalNotificationReference);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.NotificationToReceiveCancellationAdviceV04.mmOriginalNotification);
+				messageElement_lazy = () -> Arrays.asList(OriginalNotification8.mmOriginalMessageIdentification, OriginalNotification8.mmOriginalCreationDateTime, OriginalNotification8.mmOriginalNotificationIdentification,
+						OriginalNotification8.mmNotificationCancellation, OriginalNotification8.mmOriginalNotificationReference);
+				messageBuildingBlock_lazy = () -> Arrays.asList(NotificationToReceiveCancellationAdviceV04.mmOriginalNotification);
 				trace_lazy = () -> PaymentInstruction.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OriginalNotification8";
 				definition = "Identifies the original notification, to which the cancellation advice refers.";
 				nextVersions_lazy = () -> Arrays.asList(OriginalNotification10.mmObject());

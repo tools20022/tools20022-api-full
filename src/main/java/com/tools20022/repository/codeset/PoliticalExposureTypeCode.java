@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.PoliticalExposureType1Code
+ * PoliticalExposureType1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -38,13 +47,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.PoliticalExposureTypeCode#mmNoPoliticalExposure
  * PoliticalExposureTypeCode.mmNoPoliticalExposure}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.PoliticalExposureType1Code
- * PoliticalExposureType1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -88,7 +90,7 @@ public class PoliticalExposureTypeCode {
 	 */
 	public static final MMCode mmPoliticalExposureDomestic = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PoliticalExposureDomestic";
 			definition = "Political exposure type is domestic.";
 			owner_lazy = () -> PoliticalExposureTypeCode.mmObject();
@@ -118,7 +120,7 @@ public class PoliticalExposureTypeCode {
 	 */
 	public static final MMCode mmPoliticalExposureForeign = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PoliticalExposureForeign";
 			definition = "Political exposure type is foreign.";
 			owner_lazy = () -> PoliticalExposureTypeCode.mmObject();
@@ -148,7 +150,7 @@ public class PoliticalExposureTypeCode {
 	 */
 	public static final MMCode mmNoPoliticalExposure = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoPoliticalExposure";
 			definition = "No political exposure.";
 			owner_lazy = () -> PoliticalExposureTypeCode.mmObject();
@@ -159,12 +161,11 @@ public class PoliticalExposureTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PoliticalExposureTypeCode";
 				definition = "Specifies the political exposure type.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PoliticalExposureTypeCode.mmPoliticalExposureDomestic, com.tools20022.repository.codeset.PoliticalExposureTypeCode.mmPoliticalExposureForeign,
-						com.tools20022.repository.codeset.PoliticalExposureTypeCode.mmNoPoliticalExposure);
+				code_lazy = () -> Arrays.asList(PoliticalExposureTypeCode.mmPoliticalExposureDomestic, PoliticalExposureTypeCode.mmPoliticalExposureForeign, PoliticalExposureTypeCode.mmNoPoliticalExposure);
 				derivation_lazy = () -> Arrays.asList(PoliticalExposureType1Code.mmObject());
 			}
 		});

@@ -20,12 +20,15 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.sese.*;
 import com.tools20022.repository.choice.DateAndDateTimeChoice;
 import com.tools20022.repository.codeset.CreditDebitCode;
 import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
 import com.tools20022.repository.datatype.ActiveOrHistoricCurrencyAndAmount;
 import com.tools20022.repository.datatype.YesNoIndicator;
-import com.tools20022.repository.entity.SecuritiesSettlement;
+import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -178,15 +181,15 @@ public class AmountAndDirection36 {
 	 */
 	public static final MMMessageAttribute mmAccruedInterestIndicator = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmAccruedInterestIndicator;
+			businessElementTrace_lazy = () -> SecuritiesSettlement.mmAccruedInterestIndicator;
 			componentContext_lazy = () -> AmountAndDirection36.mmObject();
 			isDerived = false;
 			xmlTag = "AcrdIntrstInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccruedInterestIndicator";
 			definition = "Indicates whether the net proceeds include interest accrued on the financial instrument.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AmountAndDirection46.mmAccruedInterestIndicator);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AmountAndDirection2.mmAccruedInterestIndicator;
+			nextVersions_lazy = () -> Arrays.asList(AmountAndDirection46.mmAccruedInterestIndicator);
+			previousVersion_lazy = () -> AmountAndDirection2.mmAccruedInterestIndicator;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
@@ -241,15 +244,15 @@ public class AmountAndDirection36 {
 	 */
 	public static final MMMessageAttribute mmStampDutyIndicator = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeExecution.mmStampDutyIndicator;
+			businessElementTrace_lazy = () -> SecuritiesTradeExecution.mmStampDutyIndicator;
 			componentContext_lazy = () -> AmountAndDirection36.mmObject();
 			isDerived = false;
 			xmlTag = "StmpDtyInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StampDutyIndicator";
 			definition = "Whether the net proceeds include stamp duty amount.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AmountAndDirection46.mmStampDutyIndicator);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AmountAndDirection2.mmStampDutyIndicator;
+			nextVersions_lazy = () -> Arrays.asList(AmountAndDirection46.mmStampDutyIndicator);
+			previousVersion_lazy = () -> AmountAndDirection2.mmStampDutyIndicator;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
@@ -300,10 +303,10 @@ public class AmountAndDirection36 {
 			componentContext_lazy = () -> AmountAndDirection36.mmObject();
 			isDerived = false;
 			xmlTag = "BrkrgAmtInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BrokerageAmountIndicator";
 			definition = "Indicates whether the net proceeds include brokerage fees for the transaction. If absent, element is not required.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AmountAndDirection46.mmBrokerageAmountIndicator);
+			nextVersions_lazy = () -> Arrays.asList(AmountAndDirection46.mmBrokerageAmountIndicator);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
@@ -358,15 +361,15 @@ public class AmountAndDirection36 {
 	 */
 	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmSettlementAmount;
+			businessElementTrace_lazy = () -> SecuritiesSettlement.mmSettlementAmount;
 			componentContext_lazy = () -> AmountAndDirection36.mmObject();
 			isDerived = false;
 			xmlTag = "Amt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Amount of money in the cash entry.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AmountAndDirection46.mmAmount);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AmountAndDirection2.mmAmount;
+			nextVersions_lazy = () -> Arrays.asList(AmountAndDirection46.mmAmount);
+			previousVersion_lazy = () -> AmountAndDirection2.mmAmount;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
@@ -421,15 +424,15 @@ public class AmountAndDirection36 {
 	 */
 	public static final MMMessageAttribute mmCreditDebitIndicator = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentExecution.mmCreditDebitIndicator;
+			businessElementTrace_lazy = () -> PaymentExecution.mmCreditDebitIndicator;
 			componentContext_lazy = () -> AmountAndDirection36.mmObject();
 			isDerived = false;
 			xmlTag = "CdtDbtInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditDebitIndicator";
 			definition = "Indicates whether an entry is a credit or a debit.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AmountAndDirection46.mmCreditDebitIndicator);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AmountAndDirection2.mmCreditDebitIndicator;
+			nextVersions_lazy = () -> Arrays.asList(AmountAndDirection46.mmCreditDebitIndicator);
+			previousVersion_lazy = () -> AmountAndDirection2.mmCreditDebitIndicator;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CreditDebitCode.mmObject();
@@ -487,15 +490,15 @@ public class AmountAndDirection36 {
 	 */
 	public static final MMMessageAttribute mmOriginalCurrencyAndOrderedAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmOriginalAmount;
+			businessElementTrace_lazy = () -> CurrencyExchange.mmOriginalAmount;
 			componentContext_lazy = () -> AmountAndDirection36.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlCcyAndOrdrdAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalCurrencyAndOrderedAmount";
 			definition = "Posting/settlement amount in its original currency when conversion from/into another currency has occurred.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AmountAndDirection46.mmOriginalCurrencyAndOrderedAmount);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AmountAndDirection2.mmOriginalCurrencyAndOrderedAmount;
+			nextVersions_lazy = () -> Arrays.asList(AmountAndDirection46.mmOriginalCurrencyAndOrderedAmount);
+			previousVersion_lazy = () -> AmountAndDirection2.mmOriginalCurrencyAndOrderedAmount;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
@@ -549,15 +552,15 @@ public class AmountAndDirection36 {
 	 */
 	public static final MMMessageAssociationEnd mmForeignExchangeDetails = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ForeignExchangeTrade.mmAgreedRate;
+			businessElementTrace_lazy = () -> ForeignExchangeTrade.mmAgreedRate;
 			componentContext_lazy = () -> AmountAndDirection36.mmObject();
 			isDerived = false;
 			xmlTag = "FXDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForeignExchangeDetails";
 			definition = "Information needed to process a currency exchange or conversion.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AmountAndDirection46.mmForeignExchangeDetails);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AmountAndDirection2.mmForeignExchangeDetails;
+			nextVersions_lazy = () -> Arrays.asList(AmountAndDirection46.mmForeignExchangeDetails);
+			previousVersion_lazy = () -> AmountAndDirection2.mmForeignExchangeDetails;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -616,15 +619,15 @@ public class AmountAndDirection36 {
 	 */
 	public static final MMMessageAttribute mmValueDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.mmValueDate;
+			businessElementTrace_lazy = () -> Payment.mmValueDate;
 			componentContext_lazy = () -> AmountAndDirection36.mmObject();
 			isDerived = false;
 			xmlTag = "ValDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValueDate";
 			definition = "Date and time at which the cash is at the disposal of the credit account owner, or ceases to be at the disposal of the debit account owner.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AmountAndDirection46.mmValueDate);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AmountAndDirection2.mmValueDate;
+			nextVersions_lazy = () -> Arrays.asList(AmountAndDirection46.mmValueDate);
+			previousVersion_lazy = () -> AmountAndDirection2.mmValueDate;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
@@ -634,17 +637,14 @@ public class AmountAndDirection36 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AmountAndDirection36.mmAccruedInterestIndicator, com.tools20022.repository.msg.AmountAndDirection36.mmStampDutyIndicator,
-						com.tools20022.repository.msg.AmountAndDirection36.mmBrokerageAmountIndicator, com.tools20022.repository.msg.AmountAndDirection36.mmAmount, com.tools20022.repository.msg.AmountAndDirection36.mmCreditDebitIndicator,
-						com.tools20022.repository.msg.AmountAndDirection36.mmOriginalCurrencyAndOrderedAmount, com.tools20022.repository.msg.AmountAndDirection36.mmForeignExchangeDetails,
-						com.tools20022.repository.msg.AmountAndDirection36.mmValueDate);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV05.mmSettledAmount,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV05.mmSettlementAmount, com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdviceV04.mmSettledAmount,
-						com.tools20022.repository.area.sese.SecuritiesFinancingInstructionV05.mmOpeningSettlementAmount, com.tools20022.repository.area.sese.SecuritiesSettlementTransactionInstructionV05.mmSettlementAmount,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionConfirmationV05.mmSettledAmount);
+				messageElement_lazy = () -> Arrays.asList(AmountAndDirection36.mmAccruedInterestIndicator, AmountAndDirection36.mmStampDutyIndicator, AmountAndDirection36.mmBrokerageAmountIndicator, AmountAndDirection36.mmAmount,
+						AmountAndDirection36.mmCreditDebitIndicator, AmountAndDirection36.mmOriginalCurrencyAndOrderedAmount, AmountAndDirection36.mmForeignExchangeDetails, AmountAndDirection36.mmValueDate);
+				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesFinancingConfirmationV05.mmSettledAmount, SecuritiesSettlementTransactionGenerationNotificationV05.mmSettlementAmount,
+						SecuritiesSettlementTransactionReversalAdviceV04.mmSettledAmount, SecuritiesFinancingInstructionV05.mmOpeningSettlementAmount, SecuritiesSettlementTransactionInstructionV05.mmSettlementAmount,
+						SecuritiesSettlementTransactionConfirmationV05.mmSettledAmount);
 				trace_lazy = () -> SecuritiesSettlement.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
 						return DateFormat.getDateInstance(java.text.DateFormat.LONG).parse("May 5, 2016");

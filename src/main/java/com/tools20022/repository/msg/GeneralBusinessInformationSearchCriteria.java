@@ -20,9 +20,11 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.CharacterSearchChoice;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.SystemBusinessInformation;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -108,11 +110,11 @@ public class GeneralBusinessInformationSearchCriteria {
 	 */
 	public static final MMMessageAttribute mmReference = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SystemBusinessInformation.mmReference;
+			businessElementTrace_lazy = () -> SystemBusinessInformation.mmReference;
 			componentContext_lazy = () -> GeneralBusinessInformationSearchCriteria.mmObject();
 			isDerived = false;
 			xmlTag = "Ref";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reference";
 			definition = "Unique and unambiguous reference assigned to a general business information system.";
 			minOccurs = 0;
@@ -158,11 +160,11 @@ public class GeneralBusinessInformationSearchCriteria {
 	 */
 	public static final MMMessageAttribute mmSubject = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SystemBusinessInformation.mmSubject;
+			businessElementTrace_lazy = () -> SystemBusinessInformation.mmSubject;
 			componentContext_lazy = () -> GeneralBusinessInformationSearchCriteria.mmObject();
 			isDerived = false;
 			xmlTag = "Sbjt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Subject";
 			definition = "Subject line of an item of general business information, summarizing the topic and intended destination of the information.";
 			minOccurs = 0;
@@ -207,11 +209,11 @@ public class GeneralBusinessInformationSearchCriteria {
 	 */
 	public static final MMMessageAssociationEnd mmQualifier = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SystemBusinessInformation.mmQualifier;
+			businessElementTrace_lazy = () -> SystemBusinessInformation.mmQualifier;
 			componentContext_lazy = () -> GeneralBusinessInformationSearchCriteria.mmObject();
 			isDerived = false;
 			xmlTag = "Qlfr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Qualifier";
 			definition = "Further information about the criticality or importance of a general business information system.";
 			minOccurs = 0;
@@ -223,11 +225,10 @@ public class GeneralBusinessInformationSearchCriteria {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GeneralBusinessInformationSearchCriteria.mmReference, com.tools20022.repository.msg.GeneralBusinessInformationSearchCriteria.mmSubject,
-						com.tools20022.repository.msg.GeneralBusinessInformationSearchCriteria.mmQualifier);
+				messageElement_lazy = () -> Arrays.asList(GeneralBusinessInformationSearchCriteria.mmReference, GeneralBusinessInformationSearchCriteria.mmSubject, GeneralBusinessInformationSearchCriteria.mmQualifier);
 				trace_lazy = () -> SystemBusinessInformation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "GeneralBusinessInformationSearchCriteria";
 				definition = "Defines the criteria used to search for business information.";
 			}

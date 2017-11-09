@@ -19,7 +19,9 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max25Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -94,7 +96,7 @@ public class CommodityDerivate5 {
 			componentContext_lazy = () -> CommodityDerivate5.mmObject();
 			isDerived = false;
 			xmlTag = "Sz";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Size";
 			definition = "Specification of the size related to the freight sub type. Field to be populated when the base product field is equal to freight.";
 			maxOccurs = 1;
@@ -138,7 +140,7 @@ public class CommodityDerivate5 {
 			componentContext_lazy = () -> CommodityDerivate5.mmObject();
 			isDerived = false;
 			xmlTag = "AvrgTmChrtr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AverageTimeCharter";
 			definition = "Details the specific route or time charter average. Field to be populated when the base product field is equal to freight.";
 			maxOccurs = 1;
@@ -150,9 +152,9 @@ public class CommodityDerivate5 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CommodityDerivate5.mmSize, com.tools20022.repository.msg.CommodityDerivate5.mmAverageTimeCharter);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(CommodityDerivate5.mmSize, CommodityDerivate5.mmAverageTimeCharter);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CommodityDerivate5";
 				definition = "Transparency calculation specific details for a freight commodity.";
 			}

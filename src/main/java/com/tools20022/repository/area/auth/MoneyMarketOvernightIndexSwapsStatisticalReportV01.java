@@ -20,6 +20,7 @@ package com.tools20022.repository.area.auth;
 import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.AuthoritiesLatestVersion;
 import com.tools20022.repository.choice.OvernightIndexSwap3Choice;
 import com.tools20022.repository.msg.MoneyMarketReportHeader1;
@@ -36,6 +37,9 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code auth.015.001.01}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.AuthoritiesLatestVersion
@@ -68,9 +72,6 @@ import java.util.List;
  * MoneyMarketOvernightIndexSwapsStatisticalReportV01.mmSupplementaryData}</li>
  * </ul>
  * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code auth.015.001.01}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -129,10 +130,10 @@ public class MoneyMarketOvernightIndexSwapsStatisticalReportV01 {
 	public static final MMMessageBuildingBlock mmReportHeader = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "RptHdr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportHeader";
 			definition = "Provides the elements specific to the report.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.auth.MoneyMarketOvernightIndexSwapsStatisticalReportV02.mmReportHeader);
+			nextVersions_lazy = () -> Arrays.asList(MoneyMarketOvernightIndexSwapsStatisticalReportV02.mmReportHeader);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> MoneyMarketReportHeader1.mmObject();
@@ -177,10 +178,10 @@ public class MoneyMarketOvernightIndexSwapsStatisticalReportV01 {
 	public static final MMMessageBuildingBlock mmOvernightIndexSwapsReport = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "OvrnghtIndxSwpsRpt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OvernightIndexSwapsReport";
 			definition = "Provides the reason why no activity is reported or the required list of transactions for the overnight index swaps segment.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.auth.MoneyMarketOvernightIndexSwapsStatisticalReportV02.mmOvernightIndexSwapsReport);
+			nextVersions_lazy = () -> Arrays.asList(MoneyMarketOvernightIndexSwapsStatisticalReportV02.mmOvernightIndexSwapsReport);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> OvernightIndexSwap3Choice.mmObject();
@@ -224,10 +225,10 @@ public class MoneyMarketOvernightIndexSwapsStatisticalReportV01 {
 	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SplmtryData";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryData";
 			definition = "Additional information that can not be captured in the structured fields and/or any other specific block.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.auth.MoneyMarketOvernightIndexSwapsStatisticalReportV02.mmSupplementaryData);
+			nextVersions_lazy = () -> Arrays.asList(MoneyMarketOvernightIndexSwapsStatisticalReportV02.mmSupplementaryData);
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
@@ -236,7 +237,7 @@ public class MoneyMarketOvernightIndexSwapsStatisticalReportV01 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MoneyMarketOvernightIndexSwapsStatisticalReportV01";
 				definition = "The MoneyMarketOvernightIndexSwapsStatisticalReport message is sent by the reporting agents to the relevant competent authority, to report the daily overnight index swaps (OIS) transactions.";
 				nextVersions_lazy = () -> Arrays.asList(MoneyMarketOvernightIndexSwapsStatisticalReportV02.mmObject());
@@ -244,9 +245,8 @@ public class MoneyMarketOvernightIndexSwapsStatisticalReportV01 {
 				rootElement = "Document";
 				xmlTag = "MnyMktOvrnghtIndxSwpsSttstclRpt";
 				businessArea_lazy = () -> AuthoritiesLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.auth.MoneyMarketOvernightIndexSwapsStatisticalReportV01.mmReportHeader,
-						com.tools20022.repository.area.auth.MoneyMarketOvernightIndexSwapsStatisticalReportV01.mmOvernightIndexSwapsReport,
-						com.tools20022.repository.area.auth.MoneyMarketOvernightIndexSwapsStatisticalReportV01.mmSupplementaryData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(MoneyMarketOvernightIndexSwapsStatisticalReportV01.mmReportHeader, MoneyMarketOvernightIndexSwapsStatisticalReportV01.mmOvernightIndexSwapsReport,
+						MoneyMarketOvernightIndexSwapsStatisticalReportV01.mmSupplementaryData);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "auth";

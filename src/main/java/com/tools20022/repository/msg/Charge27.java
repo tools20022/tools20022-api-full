@@ -20,12 +20,16 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.ChargeBasisType1Choice;
 import com.tools20022.repository.choice.ChargeType4Choice;
 import com.tools20022.repository.choice.PartyIdentification2Choice;
 import com.tools20022.repository.codeset.ChargeBearer1Code;
 import com.tools20022.repository.datatype.ActiveOrHistoricCurrencyAndAmount;
+import com.tools20022.repository.entity.Adjustment;
 import com.tools20022.repository.entity.Charges;
+import com.tools20022.repository.entity.Party;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -120,14 +124,14 @@ public class Charge27 {
 	 */
 	public static final MMMessageAssociationEnd mmType = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Charges.mmChargeType;
+			businessElementTrace_lazy = () -> Charges.mmChargeType;
 			componentContext_lazy = () -> Charge27.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Type of charge.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Charge29.mmType);
+			nextVersions_lazy = () -> Arrays.asList(Charge29.mmType);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -181,15 +185,15 @@ public class Charge27 {
 	 */
 	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Adjustment.mmAmount;
+			businessElementTrace_lazy = () -> Adjustment.mmAmount;
 			componentContext_lazy = () -> Charge27.mmObject();
 			isDerived = false;
 			xmlTag = "Amt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Amount of money asked or paid for the charge.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Charge29.mmAmount);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Charge20.mmAmount;
+			nextVersions_lazy = () -> Arrays.asList(Charge29.mmAmount);
+			previousVersion_lazy = () -> Charge20.mmAmount;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
@@ -236,14 +240,14 @@ public class Charge27 {
 	 */
 	public static final MMMessageAssociationEnd mmChargeBasis = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Adjustment.mmCalculationMethod;
+			businessElementTrace_lazy = () -> Adjustment.mmCalculationMethod;
 			componentContext_lazy = () -> Charge27.mmObject();
 			isDerived = false;
 			xmlTag = "ChrgBsis";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChargeBasis";
 			definition = "Method used to calculate the charge.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Charge29.mmChargeBasis);
+			nextVersions_lazy = () -> Arrays.asList(Charge29.mmChargeBasis);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -295,14 +299,14 @@ public class Charge27 {
 	 */
 	public static final MMMessageAttribute mmChargeBearer = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Charges.mmBearerType;
+			businessElementTrace_lazy = () -> Charges.mmBearerType;
 			componentContext_lazy = () -> Charge27.mmObject();
 			isDerived = false;
 			xmlTag = "ChrgBr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChargeBearer";
 			definition = "Specifies the party that will bear the charges associated with a transfer.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Charge29.mmChargeBearer);
+			nextVersions_lazy = () -> Arrays.asList(Charge29.mmChargeBearer);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ChargeBearer1Code.mmObject();
@@ -357,15 +361,15 @@ public class Charge27 {
 	 */
 	public static final MMMessageAttribute mmRecipientIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> Charge27.mmObject();
 			isDerived = false;
 			xmlTag = "RcptId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RecipientIdentification";
 			definition = "Party entitled to the amount of money resulting from a charge.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Charge29.mmRecipientIdentification);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Charge20.mmRecipientIdentification;
+			nextVersions_lazy = () -> Arrays.asList(Charge29.mmRecipientIdentification);
+			previousVersion_lazy = () -> Charge20.mmRecipientIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification2Choice.mmObject();
@@ -375,11 +379,10 @@ public class Charge27 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Charge27.mmType, com.tools20022.repository.msg.Charge27.mmAmount, com.tools20022.repository.msg.Charge27.mmChargeBasis,
-						com.tools20022.repository.msg.Charge27.mmChargeBearer, com.tools20022.repository.msg.Charge27.mmRecipientIdentification);
+				messageElement_lazy = () -> Arrays.asList(Charge27.mmType, Charge27.mmAmount, Charge27.mmChargeBasis, Charge27.mmChargeBearer, Charge27.mmRecipientIdentification);
 				trace_lazy = () -> Charges.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Charge27";
 				definition = "Amount of money associated with a service.";
 				nextVersions_lazy = () -> Arrays.asList(Charge29.mmObject());

@@ -20,7 +20,9 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max64Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -101,10 +103,10 @@ public class IsabelSignature3 {
 			componentContext_lazy = () -> IsabelSignature3.mmObject();
 			isDerived = false;
 			xmlTag = "Hdr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Header";
 			definition = "Common signature elements applicable to all signature records.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.IsabelSignature2.mmHeader;
+			previousVersion_lazy = () -> IsabelSignature2.mmHeader;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -148,10 +150,10 @@ public class IsabelSignature3 {
 			componentContext_lazy = () -> IsabelSignature3.mmObject();
 			isDerived = false;
 			xmlTag = "Rcrd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Record";
 			definition = "Individual record of the file signature.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.IsabelSignature2.mmRecord;
+			previousVersion_lazy = () -> IsabelSignature2.mmRecord;
 			maxOccurs = 5;
 			minOccurs = 1;
 			isComposite = true;
@@ -196,10 +198,10 @@ public class IsabelSignature3 {
 			componentContext_lazy = () -> IsabelSignature3.mmObject();
 			isDerived = false;
 			xmlTag = "RandBlck";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RandomBlock";
 			definition = "Random data related to the signature.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.IsabelSignature2.mmRandomBlock;
+			previousVersion_lazy = () -> IsabelSignature2.mmRandomBlock;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max64Text.mmObject();
@@ -209,9 +211,9 @@ public class IsabelSignature3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IsabelSignature3.mmHeader, com.tools20022.repository.msg.IsabelSignature3.mmRecord, com.tools20022.repository.msg.IsabelSignature3.mmRandomBlock);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(IsabelSignature3.mmHeader, IsabelSignature3.mmRecord, IsabelSignature3.mmRandomBlock);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "IsabelSignature3";
 				definition = "Specifies the signature of an Isabel file.";
 				previousVersion_lazy = () -> IsabelSignature2.mmObject();

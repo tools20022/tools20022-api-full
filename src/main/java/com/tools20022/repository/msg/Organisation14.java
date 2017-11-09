@@ -20,8 +20,13 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.acmt.AccountClosingRequestV02;
+import com.tools20022.repository.area.acmt.AccountMandateMaintenanceRequestV02;
 import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.entity.Organisation;
+import com.tools20022.repository.entity.OrganisationName;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -114,11 +119,11 @@ public class Organisation14 {
 	 */
 	public static final MMMessageAttribute mmFullLegalName = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationName.mmLegalName;
+			businessElementTrace_lazy = () -> OrganisationName.mmLegalName;
 			componentContext_lazy = () -> Organisation14.mmObject();
 			isDerived = false;
 			xmlTag = "FullLglNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FullLegalName";
 			definition = "Name by which a party is known and which is usually used to identify that party.";
 			maxOccurs = 1;
@@ -161,11 +166,11 @@ public class Organisation14 {
 	 */
 	public static final MMMessageAssociationEnd mmOrganisationIdentification = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Organisation.mmOrganisationIdentification;
+			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> Organisation14.mmObject();
 			isDerived = false;
 			xmlTag = "OrgId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrganisationIdentification";
 			definition = "Unique and unambiguous way of identifying an organisation.";
 			maxOccurs = 1;
@@ -178,12 +183,11 @@ public class Organisation14 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Organisation14.mmFullLegalName, com.tools20022.repository.msg.Organisation14.mmOrganisationIdentification);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountClosingRequestV02.mmOrganisationIdentification,
-						com.tools20022.repository.area.acmt.AccountMandateMaintenanceRequestV02.mmOrganisationIdentification);
+				messageElement_lazy = () -> Arrays.asList(Organisation14.mmFullLegalName, Organisation14.mmOrganisationIdentification);
+				messageBuildingBlock_lazy = () -> Arrays.asList(AccountClosingRequestV02.mmOrganisationIdentification, AccountMandateMaintenanceRequestV02.mmOrganisationIdentification);
 				trace_lazy = () -> Organisation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Organisation14";
 				definition = "Information which describes the organisation.";
 				previousVersion_lazy = () -> Organisation12.mmObject();

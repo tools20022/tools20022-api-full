@@ -17,9 +17,13 @@
 
 package com.tools20022.repository.entity;
 
+import com.tools20022.metamodel.MMAggregation;
 import com.tools20022.metamodel.MMBusinessAssociationEnd;
 import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.choice.PriceSourceFormatChoice;
 import com.tools20022.repository.entity.Role;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -33,45 +37,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InformationPartyRole#mmGenericIdentification
- * InformationPartyRole.mmGenericIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InformationPartyRole#mmHaircutValuation
- * InformationPartyRole.mmHaircutValuation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InformationPartyRole#mmPrice
- * InformationPartyRole.mmPrice}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InformationPartyRole#mmScheme
- * InformationPartyRole.mmScheme}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InformationPartyRole#mmQuote
- * InformationPartyRole.mmQuote}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InformationPartyRole#mmTreasuryTrade
- * InformationPartyRole.mmTreasuryTrade}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
- * subType} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.IdentificationIssuerRole
- * IdentificationIssuerRole}</li>
- * <li>{@linkplain com.tools20022.repository.entity.SourceOfPrice SourceOfPrice}
- * </li>
- * <li>{@linkplain com.tools20022.repository.entity.SchemeOwner SchemeOwner}</li>
- * <li>{@linkplain com.tools20022.repository.entity.QuoteOriginator
- * QuoteOriginator}</li>
- * <li>{@linkplain com.tools20022.repository.entity.QuoteRequestor
- * QuoteRequestor}</li>
- * <li>{@linkplain com.tools20022.repository.entity.QuotingInstitution
- * QuotingInstitution}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
  * associationDomain} =
@@ -97,6 +62,45 @@ import java.util.List;
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
  * superType} = {@linkplain com.tools20022.repository.entity.Role Role}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
+ * subType} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.IdentificationIssuerRole
+ * IdentificationIssuerRole}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.SourceOfPrice SourceOfPrice}
+ * </li>
+ * <li>{@linkplain com.tools20022.repository.entity.SchemeOwner SchemeOwner}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.QuoteOriginator
+ * QuoteOriginator}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.QuoteRequestor
+ * QuoteRequestor}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.QuotingInstitution
+ * QuotingInstitution}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InformationPartyRole#mmGenericIdentification
+ * InformationPartyRole.mmGenericIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InformationPartyRole#mmHaircutValuation
+ * InformationPartyRole.mmHaircutValuation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InformationPartyRole#mmPrice
+ * InformationPartyRole.mmPrice}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InformationPartyRole#mmScheme
+ * InformationPartyRole.mmScheme}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InformationPartyRole#mmQuote
+ * InformationPartyRole.mmQuote}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InformationPartyRole#mmTreasuryTrade
+ * InformationPartyRole.mmTreasuryTrade}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -161,15 +165,15 @@ public class InformationPartyRole extends Role {
 	 */
 	public static final MMBusinessAssociationEnd mmGenericIdentification = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PriceSourceFormatChoice.mmPlaceAsDSS);
+			derivation_lazy = () -> Arrays.asList(PriceSourceFormatChoice.mmPlaceAsDSS);
 			elementContext_lazy = () -> InformationPartyRole.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "GenericIdentification";
 			definition = "Specifies the identification for which a party plays the issuer role.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmPartyRole;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmObject();
 		}
 	};
@@ -214,12 +218,12 @@ public class InformationPartyRole extends Role {
 		{
 			elementContext_lazy = () -> InformationPartyRole.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "HaircutValuation";
 			definition = "Specifies the haircut valuation for which a party provides the information.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.HaircutValuation.mmPartyRole;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.HaircutValuation.mmObject();
 		}
 	};
@@ -262,12 +266,12 @@ public class InformationPartyRole extends Role {
 		{
 			elementContext_lazy = () -> InformationPartyRole.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Price";
 			definition = "Specifies the security price for which a party plays a role.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmInformationPartyRole;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 		}
 	};
@@ -308,13 +312,13 @@ public class InformationPartyRole extends Role {
 		{
 			elementContext_lazy = () -> InformationPartyRole.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Scheme";
 			definition = "Scheme for which the party is the source.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.Scheme.mmInformationPartyRole;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Scheme.mmObject();
 		}
 	};
@@ -356,13 +360,13 @@ public class InformationPartyRole extends Role {
 		{
 			elementContext_lazy = () -> InformationPartyRole.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Quote";
 			definition = "Quoting process in which an information party plays a role.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.Quote.mmPartyRole;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Quote.mmObject();
 		}
 	};
@@ -416,12 +420,12 @@ public class InformationPartyRole extends Role {
 		{
 			elementContext_lazy = () -> InformationPartyRole.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TreasuryTrade";
 			definition = "Trade for which a quote is provided.\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.TreasuryTrade.mmInformationPartyRole;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.TreasuryTrade.mmObject();
 		}
 	};
@@ -429,8 +433,8 @@ public class InformationPartyRole extends Role {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InformationPartyRole";
 				definition = "Role played by a party as source of information.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.GenericIdentification.mmPartyRole, com.tools20022.repository.entity.SecuritiesPricing.mmInformationPartyRole,
@@ -438,9 +442,8 @@ public class InformationPartyRole extends Role {
 						com.tools20022.repository.entity.Quote.mmPartyRole);
 				subType_lazy = () -> Arrays.asList(IdentificationIssuerRole.mmObject(), SourceOfPrice.mmObject(), SchemeOwner.mmObject(), QuoteOriginator.mmObject(), QuoteRequestor.mmObject(), QuotingInstitution.mmObject());
 				superType_lazy = () -> Role.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.InformationPartyRole.mmGenericIdentification, com.tools20022.repository.entity.InformationPartyRole.mmHaircutValuation,
-						com.tools20022.repository.entity.InformationPartyRole.mmPrice, com.tools20022.repository.entity.InformationPartyRole.mmScheme, com.tools20022.repository.entity.InformationPartyRole.mmQuote,
-						com.tools20022.repository.entity.InformationPartyRole.mmTreasuryTrade);
+				element_lazy = () -> Arrays.asList(InformationPartyRole.mmGenericIdentification, InformationPartyRole.mmHaircutValuation, InformationPartyRole.mmPrice, InformationPartyRole.mmScheme, InformationPartyRole.mmQuote,
+						InformationPartyRole.mmTreasuryTrade);
 			}
 		});
 		return mmObject_lazy.get();

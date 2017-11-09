@@ -20,9 +20,12 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ATMStatus1Code;
 import com.tools20022.repository.codeset.MessageFunction8Code;
+import com.tools20022.repository.entity.System;
 import com.tools20022.repository.entity.TerminalManagementSystem;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.ATMConfigurationParameter1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -121,14 +124,14 @@ public class ATMCommandParameters1Choice {
 	 */
 	public static final MMMessageAttribute mmATMRequiredGlobalStatus = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.System.mmStatus;
+			businessElementTrace_lazy = () -> System.mmStatus;
 			componentContext_lazy = () -> ATMCommandParameters1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "ATMReqrdGblSts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ATMRequiredGlobalStatus";
 			definition = "Required status of the ATM, parameters of the status update command.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ATMCommandParameters2Choice.mmATMRequiredGlobalStatus);
+			nextVersions_lazy = () -> Arrays.asList(ATMCommandParameters2Choice.mmATMRequiredGlobalStatus);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ATMStatus1Code.mmObject();
@@ -176,10 +179,10 @@ public class ATMCommandParameters1Choice {
 			componentContext_lazy = () -> ATMCommandParameters1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "XpctdMsgFctn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExpectedMessageFunction";
 			definition = "Message to send for the send message command.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ATMCommandParameters2Choice.mmExpectedMessageFunction);
+			nextVersions_lazy = () -> Arrays.asList(ATMCommandParameters2Choice.mmExpectedMessageFunction);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> MessageFunction8Code.mmObject();
@@ -227,10 +230,10 @@ public class ATMCommandParameters1Choice {
 			componentContext_lazy = () -> ATMCommandParameters1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "ReqrdCfgtnParam";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequiredConfigurationParameter";
 			definition = "Parameters to be used by the configuration update command.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ATMCommandParameters2Choice.mmRequiredConfigurationParameter);
+			nextVersions_lazy = () -> Arrays.asList(ATMCommandParameters2Choice.mmRequiredConfigurationParameter);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -241,11 +244,10 @@ public class ATMCommandParameters1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ATMCommandParameters1Choice.mmATMRequiredGlobalStatus, com.tools20022.repository.choice.ATMCommandParameters1Choice.mmExpectedMessageFunction,
-						com.tools20022.repository.choice.ATMCommandParameters1Choice.mmRequiredConfigurationParameter);
+				messageElement_lazy = () -> Arrays.asList(ATMCommandParameters1Choice.mmATMRequiredGlobalStatus, ATMCommandParameters1Choice.mmExpectedMessageFunction, ATMCommandParameters1Choice.mmRequiredConfigurationParameter);
 				trace_lazy = () -> TerminalManagementSystem.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ATMCommandParameters1Choice";
 				definition = "Specific parameters attached to an ATM command.";
 				nextVersions_lazy = () -> Arrays.asList(ATMCommandParameters2Choice.mmObject());

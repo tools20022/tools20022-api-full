@@ -20,9 +20,14 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CreditDebitCode;
 import com.tools20022.repository.codeset.EntryStatus2Code;
+import com.tools20022.repository.entity.AccountStatus;
 import com.tools20022.repository.entity.CashEntry;
+import com.tools20022.repository.entity.CashManagementService;
+import com.tools20022.repository.entity.Entry;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -105,11 +110,11 @@ public class TransactionType1 {
 	 */
 	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AccountStatus.mmEntryStatus;
+			businessElementTrace_lazy = () -> AccountStatus.mmEntryStatus;
 			componentContext_lazy = () -> TransactionType1.mmObject();
 			isDerived = false;
 			xmlTag = "Sts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Status";
 			definition = "Specifies the status on the books of the account servicer of the transactions to be reported.";
 			maxOccurs = 1;
@@ -156,11 +161,11 @@ public class TransactionType1 {
 	 */
 	public static final MMMessageAttribute mmCreditDebitIndicator = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Entry.mmCreditDebitIndicator;
+			businessElementTrace_lazy = () -> Entry.mmCreditDebitIndicator;
 			componentContext_lazy = () -> TransactionType1.mmObject();
 			isDerived = false;
 			xmlTag = "CdtDbtInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditDebitIndicator";
 			definition = "Indicates whether the reporting request refers to credit or debit entries.";
 			maxOccurs = 1;
@@ -204,11 +209,11 @@ public class TransactionType1 {
 	 */
 	public static final MMMessageAssociationEnd mmFloorLimit = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashManagementService.mmLiquidityManagementLimit;
+			businessElementTrace_lazy = () -> CashManagementService.mmLiquidityManagementLimit;
 			componentContext_lazy = () -> TransactionType1.mmObject();
 			isDerived = false;
 			xmlTag = "FlrLmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FloorLimit";
 			definition = "Specifies the minimum value of entries to be reported in the requested message.";
 			minOccurs = 0;
@@ -220,11 +225,10 @@ public class TransactionType1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionType1.mmStatus, com.tools20022.repository.msg.TransactionType1.mmCreditDebitIndicator,
-						com.tools20022.repository.msg.TransactionType1.mmFloorLimit);
+				messageElement_lazy = () -> Arrays.asList(TransactionType1.mmStatus, TransactionType1.mmCreditDebitIndicator, TransactionType1.mmFloorLimit);
 				trace_lazy = () -> CashEntry.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TransactionType1";
 				definition = "Set of elements used to identify the transactions to be reported.";
 			}

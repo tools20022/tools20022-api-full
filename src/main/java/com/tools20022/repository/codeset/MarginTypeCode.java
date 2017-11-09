@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -28,6 +30,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.MarginType1Code
+ * MarginType1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -63,13 +72,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.MarginTypeCode#mmIncreaseCoverageAmount
  * MarginTypeCode.mmIncreaseCoverageAmount}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.MarginType1Code
- * MarginType1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -125,7 +127,7 @@ public class MarginTypeCode {
 	 */
 	public static final MMCode mmSettlementRiskMargin = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementRiskMargin";
 			definition = "Margin required to cover the risk of non settlement of the underlying. Also used to cover the risk linked to the non settlement on payment platforms (for example TARGET2 vs CLS).";
 			owner_lazy = () -> MarginTypeCode.mmObject();
@@ -161,7 +163,7 @@ public class MarginTypeCode {
 	 */
 	public static final MMCode mmAdditionalDefaultFundMargin = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDefaultFundMargin";
 			definition = "Additional margin required to cover the daily risk encountered by the central counterparty before the clearing member is actually called to cover the default fund. Indeed, central counterparty calculates the margin on the default fund on a daily basis but only calls the clearing member at the end of the month.";
 			owner_lazy = () -> MarginTypeCode.mmObject();
@@ -194,7 +196,7 @@ public class MarginTypeCode {
 	 */
 	public static final MMCode mmShortChargeMargin = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ShortChargeMargin";
 			definition = "Margin required to cover the concentration risk linked to the default of the seller of the \"protection\" (for example CDS seller).";
 			owner_lazy = () -> MarginTypeCode.mmObject();
@@ -227,7 +229,7 @@ public class MarginTypeCode {
 	 */
 	public static final MMCode mmCouponMargin = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CouponMargin";
 			definition = "Margin required to cover the non payment of the monthly premium (for credit derivatives).";
 			owner_lazy = () -> MarginTypeCode.mmObject();
@@ -260,7 +262,7 @@ public class MarginTypeCode {
 	 */
 	public static final MMCode mmUpfrontMargin = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UpfrontMargin";
 			definition = "Margin required to cover the non payment of the upfront premium (for credit derivatives).";
 			owner_lazy = () -> MarginTypeCode.mmObject();
@@ -293,7 +295,7 @@ public class MarginTypeCode {
 	 */
 	public static final MMCode mmCreditEventMargin = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditEventMargin";
 			definition = "Margin required to cover the risk of any event linked to the underlying (for example the payment default by the issuer of a debt).";
 			owner_lazy = () -> MarginTypeCode.mmObject();
@@ -326,7 +328,7 @@ public class MarginTypeCode {
 	 */
 	public static final MMCode mmInitialDeposit = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InitialDeposit";
 			definition = "Margin required to enable a member to start trading on a specific market where high risks and amounts are involved.";
 			owner_lazy = () -> MarginTypeCode.mmObject();
@@ -360,7 +362,7 @@ public class MarginTypeCode {
 	 */
 	public static final MMCode mmNegociationMargin = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NegociationMargin";
 			definition = "Margin calculated on the same basis as for the variation margin but the margin is kept by the central counterparty and not \"paid \" to the other clearing member.";
 			owner_lazy = () -> MarginTypeCode.mmObject();
@@ -394,7 +396,7 @@ public class MarginTypeCode {
 	 */
 	public static final MMCode mmInitialMargin = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InitialMargin";
 			definition = "Margin required for absorbing future market price fluctuations (market risks) occurring between the default of a member and close-out of unsettled securities positions by the central counterparty.";
 			owner_lazy = () -> MarginTypeCode.mmObject();
@@ -427,7 +429,7 @@ public class MarginTypeCode {
 	 */
 	public static final MMCode mmVariationMargin = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VariationMargin";
 			definition = "Margin required to cover the risk linked to the price fluctuations occurred on the unsettled exposures towards central counterparty.";
 			owner_lazy = () -> MarginTypeCode.mmObject();
@@ -461,7 +463,7 @@ public class MarginTypeCode {
 	 */
 	public static final MMCode mmIncreaseCoverageAmount = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncreaseCoverageAmount";
 			definition = "Additional margin required to cover a risk increase (expressed in the reporting currency). This results from a risk management decision depending on central counterparty specific criteria.";
 			owner_lazy = () -> MarginTypeCode.mmObject();
@@ -472,15 +474,13 @@ public class MarginTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("SEMA");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MarginTypeCode";
 				definition = "Specifies the type of margin, for example, initial margin, variation margin, initial deposit or coupon margin.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MarginTypeCode.mmSettlementRiskMargin, com.tools20022.repository.codeset.MarginTypeCode.mmAdditionalDefaultFundMargin,
-						com.tools20022.repository.codeset.MarginTypeCode.mmShortChargeMargin, com.tools20022.repository.codeset.MarginTypeCode.mmCouponMargin, com.tools20022.repository.codeset.MarginTypeCode.mmUpfrontMargin,
-						com.tools20022.repository.codeset.MarginTypeCode.mmCreditEventMargin, com.tools20022.repository.codeset.MarginTypeCode.mmInitialDeposit, com.tools20022.repository.codeset.MarginTypeCode.mmNegociationMargin,
-						com.tools20022.repository.codeset.MarginTypeCode.mmInitialMargin, com.tools20022.repository.codeset.MarginTypeCode.mmVariationMargin, com.tools20022.repository.codeset.MarginTypeCode.mmIncreaseCoverageAmount);
+				code_lazy = () -> Arrays.asList(MarginTypeCode.mmSettlementRiskMargin, MarginTypeCode.mmAdditionalDefaultFundMargin, MarginTypeCode.mmShortChargeMargin, MarginTypeCode.mmCouponMargin, MarginTypeCode.mmUpfrontMargin,
+						MarginTypeCode.mmCreditEventMargin, MarginTypeCode.mmInitialDeposit, MarginTypeCode.mmNegociationMargin, MarginTypeCode.mmInitialMargin, MarginTypeCode.mmVariationMargin, MarginTypeCode.mmIncreaseCoverageAmount);
 				derivation_lazy = () -> Arrays.asList(MarginType1Code.mmObject());
 			}
 		});

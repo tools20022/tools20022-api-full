@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ActionTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -100,7 +102,7 @@ public class ActionType5Code extends ActionTypeCode {
 	 */
 	public static final MMCode mmBusy = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Busy";
 			owner_lazy = () -> ActionType5Code.mmObject();
 		}
@@ -123,7 +125,7 @@ public class ActionType5Code extends ActionTypeCode {
 	 */
 	public static final MMCode mmCaptureCard = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CaptureCard";
 			owner_lazy = () -> ActionType5Code.mmObject();
 		}
@@ -146,7 +148,7 @@ public class ActionType5Code extends ActionTypeCode {
 	 */
 	public static final MMCode mmDisplayMessage = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DisplayMessage";
 			owner_lazy = () -> ActionType5Code.mmObject();
 		}
@@ -169,7 +171,7 @@ public class ActionType5Code extends ActionTypeCode {
 	 */
 	public static final MMCode mmForbidOverride = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForbidOverride";
 			owner_lazy = () -> ActionType5Code.mmObject();
 		}
@@ -192,7 +194,7 @@ public class ActionType5Code extends ActionTypeCode {
 	 */
 	public static final MMCode mmIdentificationRequired = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IdentificationRequired";
 			owner_lazy = () -> ActionType5Code.mmObject();
 		}
@@ -215,7 +217,7 @@ public class ActionType5Code extends ActionTypeCode {
 	 */
 	public static final MMCode mmPINLastTry = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PINLastTry";
 			owner_lazy = () -> ActionType5Code.mmObject();
 		}
@@ -238,7 +240,7 @@ public class ActionType5Code extends ActionTypeCode {
 	 */
 	public static final MMCode mmPINRetry = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PINRetry";
 			owner_lazy = () -> ActionType5Code.mmObject();
 		}
@@ -261,7 +263,7 @@ public class ActionType5Code extends ActionTypeCode {
 	 */
 	public static final MMCode mmPrintMessage = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PrintMessage";
 			owner_lazy = () -> ActionType5Code.mmObject();
 		}
@@ -284,7 +286,7 @@ public class ActionType5Code extends ActionTypeCode {
 	 */
 	public static final MMCode mmReferral = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Referral";
 			owner_lazy = () -> ActionType5Code.mmObject();
 		}
@@ -307,7 +309,7 @@ public class ActionType5Code extends ActionTypeCode {
 	 */
 	public static final MMCode mmRequestData = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestData";
 			owner_lazy = () -> ActionType5Code.mmObject();
 		}
@@ -330,7 +332,7 @@ public class ActionType5Code extends ActionTypeCode {
 	 */
 	public static final MMCode mmUpdateTrack = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UpdateTrack";
 			owner_lazy = () -> ActionType5Code.mmObject();
 		}
@@ -339,14 +341,12 @@ public class ActionType5Code extends ActionTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ActionType5Code";
 				definition = "Type of action to be performed.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ActionType5Code.mmBusy, com.tools20022.repository.codeset.ActionType5Code.mmCaptureCard, com.tools20022.repository.codeset.ActionType5Code.mmDisplayMessage,
-						com.tools20022.repository.codeset.ActionType5Code.mmForbidOverride, com.tools20022.repository.codeset.ActionType5Code.mmIdentificationRequired, com.tools20022.repository.codeset.ActionType5Code.mmPINLastTry,
-						com.tools20022.repository.codeset.ActionType5Code.mmPINRetry, com.tools20022.repository.codeset.ActionType5Code.mmPrintMessage, com.tools20022.repository.codeset.ActionType5Code.mmReferral,
-						com.tools20022.repository.codeset.ActionType5Code.mmRequestData, com.tools20022.repository.codeset.ActionType5Code.mmUpdateTrack);
+				code_lazy = () -> Arrays.asList(ActionType5Code.mmBusy, ActionType5Code.mmCaptureCard, ActionType5Code.mmDisplayMessage, ActionType5Code.mmForbidOverride, ActionType5Code.mmIdentificationRequired,
+						ActionType5Code.mmPINLastTry, ActionType5Code.mmPINRetry, ActionType5Code.mmPrintMessage, ActionType5Code.mmReferral, ActionType5Code.mmRequestData, ActionType5Code.mmUpdateTrack);
 				trace_lazy = () -> ActionTypeCode.mmObject();
 			}
 		});

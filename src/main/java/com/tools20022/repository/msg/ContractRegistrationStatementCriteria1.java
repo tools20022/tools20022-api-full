@@ -19,7 +19,9 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.TrueFalseIndicator;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -105,7 +107,7 @@ public class ContractRegistrationStatementCriteria1 {
 			componentContext_lazy = () -> ContractRegistrationStatementCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "TxJrnl";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionJournal";
 			definition = "Indicates whether the journal of the transactions recorded under the registered currency control contract must be returned or not.";
 			maxOccurs = 1;
@@ -150,7 +152,7 @@ public class ContractRegistrationStatementCriteria1 {
 			componentContext_lazy = () -> ContractRegistrationStatementCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "SpprtgDocJrnl";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupportingDocumentJournal";
 			definition = "Indicates whether the journal of the supporting documents recorded under the registered currency control contract must be returned or not.";
 			maxOccurs = 1;
@@ -195,7 +197,7 @@ public class ContractRegistrationStatementCriteria1 {
 			componentContext_lazy = () -> ContractRegistrationStatementCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlSpprtgDocJrnl";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalSupportingDocumentJournal";
 			definition = "Indicates whether the journal of additional supporting documents recorded under the registered currency control contract must be returned or not.";
 			maxOccurs = 1;
@@ -240,7 +242,7 @@ public class ContractRegistrationStatementCriteria1 {
 			componentContext_lazy = () -> ContractRegistrationStatementCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "RgltryRuleVldtn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RegulatoryRuleValidation";
 			definition = "Indicates whether the details on the currency control rule against which has been violated must be returned or not.";
 			maxOccurs = 1;
@@ -252,11 +254,10 @@ public class ContractRegistrationStatementCriteria1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ContractRegistrationStatementCriteria1.mmTransactionJournal,
-						com.tools20022.repository.msg.ContractRegistrationStatementCriteria1.mmSupportingDocumentJournal, com.tools20022.repository.msg.ContractRegistrationStatementCriteria1.mmAdditionalSupportingDocumentJournal,
-						com.tools20022.repository.msg.ContractRegistrationStatementCriteria1.mmRegulatoryRuleValidation);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(ContractRegistrationStatementCriteria1.mmTransactionJournal, ContractRegistrationStatementCriteria1.mmSupportingDocumentJournal,
+						ContractRegistrationStatementCriteria1.mmAdditionalSupportingDocumentJournal, ContractRegistrationStatementCriteria1.mmRegulatoryRuleValidation);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ContractRegistrationStatementCriteria1";
 				definition = "Provides the list of criteria to be returned in the contract registration statement.";
 			}

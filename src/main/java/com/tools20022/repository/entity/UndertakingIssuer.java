@@ -18,7 +18,10 @@
 package com.tools20022.repository.entity;
 
 import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.UndertakingPartyRole;
+import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -75,12 +78,11 @@ public class UndertakingIssuer extends UndertakingPartyRole {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "UndertakingIssuer";
 				definition = "Party that issues the undertaking (or counter-undertaking).";
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Undertaking9.mmIssuer, com.tools20022.repository.msg.Undertaking6.mmIssuer, com.tools20022.repository.msg.Undertaking7.mmIssuer,
-						com.tools20022.repository.msg.Undertaking1.mmIssuer, com.tools20022.repository.msg.Undertaking3.mmIssuer, com.tools20022.repository.msg.Undertaking8.mmIssuer);
+				derivationElement_lazy = () -> Arrays.asList(Undertaking9.mmIssuer, Undertaking6.mmIssuer, Undertaking7.mmIssuer, Undertaking1.mmIssuer, Undertaking3.mmIssuer, Undertaking8.mmIssuer);
 				superType_lazy = () -> UndertakingPartyRole.mmObject();
 			}
 		});

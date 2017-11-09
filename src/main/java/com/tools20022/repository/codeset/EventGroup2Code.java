@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.EventGroupCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -81,7 +83,7 @@ public class EventGroup2Code extends EventGroupCode {
 	 */
 	public static final MMCode mmDistribution = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Distribution";
 			owner_lazy = () -> EventGroup2Code.mmObject();
 		}
@@ -104,7 +106,7 @@ public class EventGroup2Code extends EventGroupCode {
 	 */
 	public static final MMCode mmRedemption = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Redemption";
 			owner_lazy = () -> EventGroup2Code.mmObject();
 		}
@@ -127,7 +129,7 @@ public class EventGroup2Code extends EventGroupCode {
 	 */
 	public static final MMCode mmReorganization = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reorganization";
 			owner_lazy = () -> EventGroup2Code.mmObject();
 		}
@@ -136,12 +138,11 @@ public class EventGroup2Code extends EventGroupCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "EventGroup2Code";
 				definition = "Specifies DTC (The Depository Trust Company) processing domain for the event.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.EventGroup2Code.mmDistribution, com.tools20022.repository.codeset.EventGroup2Code.mmRedemption,
-						com.tools20022.repository.codeset.EventGroup2Code.mmReorganization);
+				code_lazy = () -> Arrays.asList(EventGroup2Code.mmDistribution, EventGroup2Code.mmRedemption, EventGroup2Code.mmReorganization);
 				trace_lazy = () -> EventGroupCode.mmObject();
 			}
 		});

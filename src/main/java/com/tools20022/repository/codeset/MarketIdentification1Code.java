@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.MarketIdentificationCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -78,7 +80,7 @@ public class MarketIdentification1Code extends MarketIdentificationCode {
 	 */
 	public static final MMCode mmSegment = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Segment";
 			owner_lazy = () -> MarketIdentification1Code.mmObject();
 		}
@@ -101,7 +103,7 @@ public class MarketIdentification1Code extends MarketIdentificationCode {
 	 */
 	public static final MMCode mmOperating = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Operating";
 			owner_lazy = () -> MarketIdentification1Code.mmObject();
 		}
@@ -110,11 +112,11 @@ public class MarketIdentification1Code extends MarketIdentificationCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MarketIdentification1Code";
 				definition = "Specifies the type of market identification code which is being defined.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MarketIdentification1Code.mmSegment, com.tools20022.repository.codeset.MarketIdentification1Code.mmOperating);
+				code_lazy = () -> Arrays.asList(MarketIdentification1Code.mmSegment, MarketIdentification1Code.mmOperating);
 				trace_lazy = () -> MarketIdentificationCode.mmObject();
 			}
 		});

@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.TaxTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -99,7 +101,7 @@ public class TaxType15Code extends TaxTypeCode {
 	 */
 	public static final MMCode mmProvincial = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Provincial";
 			owner_lazy = () -> TaxType15Code.mmObject();
 		}
@@ -122,7 +124,7 @@ public class TaxType15Code extends TaxTypeCode {
 	 */
 	public static final MMCode mmNationalTax = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NationalTax";
 			owner_lazy = () -> TaxType15Code.mmObject();
 		}
@@ -145,7 +147,7 @@ public class TaxType15Code extends TaxTypeCode {
 	 */
 	public static final MMCode mmStateTax = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StateTax";
 			owner_lazy = () -> TaxType15Code.mmObject();
 		}
@@ -168,7 +170,7 @@ public class TaxType15Code extends TaxTypeCode {
 	 */
 	public static final MMCode mmWithholdingTax = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WithholdingTax";
 			owner_lazy = () -> TaxType15Code.mmObject();
 		}
@@ -191,7 +193,7 @@ public class TaxType15Code extends TaxTypeCode {
 	 */
 	public static final MMCode mmStampDuty = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StampDuty";
 			owner_lazy = () -> TaxType15Code.mmObject();
 		}
@@ -214,7 +216,7 @@ public class TaxType15Code extends TaxTypeCode {
 	 */
 	public static final MMCode mmConsumptionTax = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConsumptionTax";
 			owner_lazy = () -> TaxType15Code.mmObject();
 		}
@@ -237,7 +239,7 @@ public class TaxType15Code extends TaxTypeCode {
 	 */
 	public static final MMCode mmValueAddedTax = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValueAddedTax";
 			owner_lazy = () -> TaxType15Code.mmObject();
 		}
@@ -260,7 +262,7 @@ public class TaxType15Code extends TaxTypeCode {
 	 */
 	public static final MMCode mmCustomsTax = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CustomsTax";
 			owner_lazy = () -> TaxType15Code.mmObject();
 		}
@@ -283,7 +285,7 @@ public class TaxType15Code extends TaxTypeCode {
 	 */
 	public static final MMCode mmValueAddedTaxOfZeroRate = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValueAddedTaxOfZeroRate";
 			owner_lazy = () -> TaxType15Code.mmObject();
 		}
@@ -292,14 +294,13 @@ public class TaxType15Code extends TaxTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("PROV");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TaxType15Code";
 				definition = "Specifies the type of tax.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TaxType15Code.mmProvincial, com.tools20022.repository.codeset.TaxType15Code.mmNationalTax, com.tools20022.repository.codeset.TaxType15Code.mmStateTax,
-						com.tools20022.repository.codeset.TaxType15Code.mmWithholdingTax, com.tools20022.repository.codeset.TaxType15Code.mmStampDuty, com.tools20022.repository.codeset.TaxType15Code.mmConsumptionTax,
-						com.tools20022.repository.codeset.TaxType15Code.mmValueAddedTax, com.tools20022.repository.codeset.TaxType15Code.mmCustomsTax, com.tools20022.repository.codeset.TaxType15Code.mmValueAddedTaxOfZeroRate);
+				code_lazy = () -> Arrays.asList(TaxType15Code.mmProvincial, TaxType15Code.mmNationalTax, TaxType15Code.mmStateTax, TaxType15Code.mmWithholdingTax, TaxType15Code.mmStampDuty, TaxType15Code.mmConsumptionTax,
+						TaxType15Code.mmValueAddedTax, TaxType15Code.mmCustomsTax, TaxType15Code.mmValueAddedTaxOfZeroRate);
 				trace_lazy = () -> TaxTypeCode.mmObject();
 			}
 		});

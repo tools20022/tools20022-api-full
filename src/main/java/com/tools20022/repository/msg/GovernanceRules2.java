@@ -20,9 +20,11 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.GovernanceIdentification1Choice;
 import com.tools20022.repository.datatype.ID;
 import com.tools20022.repository.entity.GovernanceRules;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -106,7 +108,7 @@ public class GovernanceRules2 {
 			componentContext_lazy = () -> GovernanceRules2.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Local identification to be used in IDREFs.";
 			maxOccurs = 1;
@@ -149,11 +151,11 @@ public class GovernanceRules2 {
 	 */
 	public static final MMMessageAssociationEnd mmRuleIdentification = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GovernanceRules.mmIdentification;
+			businessElementTrace_lazy = () -> GovernanceRules.mmIdentification;
 			componentContext_lazy = () -> GovernanceRules2.mmObject();
 			isDerived = false;
 			xmlTag = "RuleId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RuleIdentification";
 			definition = "Identification of the governance rules.";
 			maxOccurs = 1;
@@ -195,11 +197,11 @@ public class GovernanceRules2 {
 	 */
 	public static final MMMessageAssociationEnd mmApplicableLaw = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GovernanceRules.mmApplicableLaw;
+			businessElementTrace_lazy = () -> GovernanceRules.mmApplicableLaw;
 			componentContext_lazy = () -> GovernanceRules2.mmObject();
 			isDerived = false;
 			xmlTag = "AplblLaw";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ApplicableLaw";
 			definition = "Law applicable to the undertaking.";
 			maxOccurs = 1;
@@ -245,11 +247,11 @@ public class GovernanceRules2 {
 	 */
 	public static final MMMessageAssociationEnd mmJurisdiction = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GovernanceRules.mmJurisdiction;
+			businessElementTrace_lazy = () -> GovernanceRules.mmJurisdiction;
 			componentContext_lazy = () -> GovernanceRules2.mmObject();
 			isDerived = false;
 			xmlTag = "Jursdctn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Jurisdiction";
 			definition = "Place at or system under which any dispute related to the undertaking is to be resolved, such as court or arbitration. This is also known as 'forum'.";
 			minOccurs = 0;
@@ -261,11 +263,10 @@ public class GovernanceRules2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GovernanceRules2.mmIdentification, com.tools20022.repository.msg.GovernanceRules2.mmRuleIdentification,
-						com.tools20022.repository.msg.GovernanceRules2.mmApplicableLaw, com.tools20022.repository.msg.GovernanceRules2.mmJurisdiction);
+				messageElement_lazy = () -> Arrays.asList(GovernanceRules2.mmIdentification, GovernanceRules2.mmRuleIdentification, GovernanceRules2.mmApplicableLaw, GovernanceRules2.mmJurisdiction);
 				trace_lazy = () -> GovernanceRules.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "GovernanceRules2";
 				definition = "Specifies rules governing an undertaking such as a guarantee or standby letter of credit.";
 			}

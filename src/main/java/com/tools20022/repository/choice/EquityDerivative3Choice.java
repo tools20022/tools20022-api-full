@@ -19,11 +19,14 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.UnderlyingEquityType3Code;
 import com.tools20022.repository.codeset.UnderlyingEquityType4Code;
 import com.tools20022.repository.codeset.UnderlyingEquityType5Code;
 import com.tools20022.repository.codeset.UnderlyingEquityType6Code;
+import com.tools20022.repository.entity.AssetClassification;
 import com.tools20022.repository.entity.Derivative;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -110,11 +113,11 @@ public class EquityDerivative3Choice {
 	 */
 	public static final MMMessageAttribute mmBasket = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AssetClassification.mmProductType;
+			businessElementTrace_lazy = () -> AssetClassification.mmProductType;
 			componentContext_lazy = () -> EquityDerivative3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Bskt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Basket";
 			definition = "Populated when sub asset class is either swaps or portfolio swaps and the underlying type is a basket.";
 			maxOccurs = 1;
@@ -161,11 +164,11 @@ public class EquityDerivative3Choice {
 	 */
 	public static final MMMessageAttribute mmIndex = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AssetClassification.mmProductType;
+			businessElementTrace_lazy = () -> AssetClassification.mmProductType;
 			componentContext_lazy = () -> EquityDerivative3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Indx";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Index";
 			definition = "Populated when the sub asset class is either swap or portfolio swap and the underlying type is an index.";
 			maxOccurs = 1;
@@ -212,11 +215,11 @@ public class EquityDerivative3Choice {
 	 */
 	public static final MMMessageAttribute mmSingleName = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AssetClassification.mmProductType;
+			businessElementTrace_lazy = () -> AssetClassification.mmProductType;
 			componentContext_lazy = () -> EquityDerivative3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "SnglNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SingleName";
 			definition = "Populated when sub asset class is either swaps or portfolio swaps and the underlying type is a single name.";
 			maxOccurs = 1;
@@ -262,11 +265,11 @@ public class EquityDerivative3Choice {
 	 */
 	public static final MMMessageAttribute mmOther = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AssetClassification.mmProductType;
+			businessElementTrace_lazy = () -> AssetClassification.mmProductType;
 			componentContext_lazy = () -> EquityDerivative3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Othr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
 			definition = "Populated when the sub asset class is neither swaps nor portfolio swaps.";
 			maxOccurs = 1;
@@ -278,11 +281,10 @@ public class EquityDerivative3Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.EquityDerivative3Choice.mmBasket, com.tools20022.repository.choice.EquityDerivative3Choice.mmIndex,
-						com.tools20022.repository.choice.EquityDerivative3Choice.mmSingleName, com.tools20022.repository.choice.EquityDerivative3Choice.mmOther);
+				messageElement_lazy = () -> Arrays.asList(EquityDerivative3Choice.mmBasket, EquityDerivative3Choice.mmIndex, EquityDerivative3Choice.mmSingleName, EquityDerivative3Choice.mmOther);
 				trace_lazy = () -> Derivative.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "EquityDerivative3Choice";
 				definition = "Element to define an equity instrument underlying code types.";
 			}

@@ -19,7 +19,12 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotificationV05;
+import com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotificationV06;
+import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.entity.Role;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -131,15 +136,15 @@ public class OtherParties28 {
 	 */
 	public static final MMMessageAssociationEnd mmInvestor = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> OtherParties28.mmObject();
 			isDerived = false;
 			xmlTag = "Invstr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Investor";
 			definition = "Party, either an individual or organisation, whose assets are being invested.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OtherParties31.mmInvestor);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.OtherParties11.mmInvestor;
+			nextVersions_lazy = () -> Arrays.asList(OtherParties31.mmInvestor);
+			previousVersion_lazy = () -> OtherParties11.mmInvestor;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -195,15 +200,15 @@ public class OtherParties28 {
 	 */
 	public static final MMMessageAssociationEnd mmQualifiedForeignIntermediary = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> OtherParties28.mmObject();
 			isDerived = false;
 			xmlTag = "QlfdFrgnIntrmy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QualifiedForeignIntermediary";
 			definition = "Foreign Financial Institution which has been authorised by local authorities to act as account management institution in the country.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OtherParties31.mmQualifiedForeignIntermediary);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.OtherParties11.mmQualifiedForeignIntermediary;
+			nextVersions_lazy = () -> Arrays.asList(OtherParties31.mmQualifiedForeignIntermediary);
+			previousVersion_lazy = () -> OtherParties11.mmQualifiedForeignIntermediary;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -259,15 +264,15 @@ public class OtherParties28 {
 	 */
 	public static final MMMessageAssociationEnd mmStockExchange = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> OtherParties28.mmObject();
 			isDerived = false;
 			xmlTag = "StockXchg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StockExchange";
 			definition = "Identification of the stock exchange to which transaction reporting will be done.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OtherParties31.mmStockExchange);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.OtherParties11.mmStockExchange;
+			nextVersions_lazy = () -> Arrays.asList(OtherParties31.mmStockExchange);
+			previousVersion_lazy = () -> OtherParties11.mmStockExchange;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -320,15 +325,15 @@ public class OtherParties28 {
 	 */
 	public static final MMMessageAssociationEnd mmTradeRegulator = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> OtherParties28.mmObject();
 			isDerived = false;
 			xmlTag = "TradRgltr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeRegulator";
 			definition = "Institution to which a trade must be reported.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OtherParties31.mmTradeRegulator);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.OtherParties11.mmTradeRegulator;
+			nextVersions_lazy = () -> Arrays.asList(OtherParties31.mmTradeRegulator);
+			previousVersion_lazy = () -> OtherParties11.mmTradeRegulator;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -385,15 +390,15 @@ public class OtherParties28 {
 	 */
 	public static final MMMessageAssociationEnd mmTripartyAgent = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> OtherParties28.mmObject();
 			isDerived = false;
 			xmlTag = "TrptyAgt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TripartyAgent";
 			definition = "Party responsible for the administration of a tri-party collateral transaction including collateral allocation, marking to market and substitution of collateral.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OtherParties31.mmTripartyAgent);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.OtherParties11.mmTripartyAgent;
+			nextVersions_lazy = () -> Arrays.asList(OtherParties31.mmTripartyAgent);
+			previousVersion_lazy = () -> OtherParties11.mmTripartyAgent;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -404,13 +409,11 @@ public class OtherParties28 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OtherParties28.mmInvestor, com.tools20022.repository.msg.OtherParties28.mmQualifiedForeignIntermediary,
-						com.tools20022.repository.msg.OtherParties28.mmStockExchange, com.tools20022.repository.msg.OtherParties28.mmTradeRegulator, com.tools20022.repository.msg.OtherParties28.mmTripartyAgent);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotificationV05.mmOtherBusinessParties,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotificationV06.mmOtherBusinessParties);
+				messageElement_lazy = () -> Arrays.asList(OtherParties28.mmInvestor, OtherParties28.mmQualifiedForeignIntermediary, OtherParties28.mmStockExchange, OtherParties28.mmTradeRegulator, OtherParties28.mmTripartyAgent);
+				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesSettlementTransactionAllegementNotificationV05.mmOtherBusinessParties, SecuritiesSettlementTransactionAllegementNotificationV06.mmOtherBusinessParties);
 				trace_lazy = () -> Role.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OtherParties28";
 				definition = "Other parties information.";
 				previousVersion_lazy = () -> OtherParties11.mmObject();

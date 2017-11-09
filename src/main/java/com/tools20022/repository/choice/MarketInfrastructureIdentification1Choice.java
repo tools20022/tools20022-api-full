@@ -19,9 +19,11 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ExternalMarketInfrastructure1Code;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.SystemIdentification;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -106,7 +108,7 @@ public class MarketInfrastructureIdentification1Choice {
 			componentContext_lazy = () -> MarketInfrastructureIdentification1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Cd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Infrastructure through which the payment instruction is processed, as published in an external clearing system identification code list.";
 			maxOccurs = 1;
@@ -153,7 +155,7 @@ public class MarketInfrastructureIdentification1Choice {
 			componentContext_lazy = () -> MarketInfrastructureIdentification1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Clearing system identification in a proprietary form.\n";
 			maxOccurs = 1;
@@ -165,10 +167,10 @@ public class MarketInfrastructureIdentification1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.MarketInfrastructureIdentification1Choice.mmCode, com.tools20022.repository.choice.MarketInfrastructureIdentification1Choice.mmProprietary);
+				messageElement_lazy = () -> Arrays.asList(MarketInfrastructureIdentification1Choice.mmCode, MarketInfrastructureIdentification1Choice.mmProprietary);
 				trace_lazy = () -> SystemIdentification.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MarketInfrastructureIdentification1Choice";
 				definition = "Specifies the market infrastructure identification.";
 			}

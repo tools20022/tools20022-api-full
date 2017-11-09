@@ -19,7 +19,13 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.camt.ResolutionOfInvestigationV03;
+import com.tools20022.repository.area.camt.ResolutionOfInvestigationV04;
+import com.tools20022.repository.area.camt.ResolutionOfInvestigationV05;
+import com.tools20022.repository.area.camt.ResolutionOfInvestigationV06;
 import com.tools20022.repository.entity.Payment;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.CorrectiveInterbankTransaction1;
 import com.tools20022.repository.msg.CorrectivePaymentInitiation1;
 import java.util.Arrays;
@@ -136,14 +142,14 @@ public class CorrectiveTransaction1Choice {
 	 */
 	public static final MMMessageAssociationEnd mmInitiation = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.mmPaymentExecution;
+			businessElementTrace_lazy = () -> Payment.mmPaymentExecution;
 			componentContext_lazy = () -> CorrectiveTransaction1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Initn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Initiation";
 			definition = "Set of elements used to reference the details of the corrective payment initiation.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CorrectiveTransaction2Choice.mmInitiation);
+			nextVersions_lazy = () -> Arrays.asList(CorrectiveTransaction2Choice.mmInitiation);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -199,10 +205,10 @@ public class CorrectiveTransaction1Choice {
 			componentContext_lazy = () -> CorrectiveTransaction1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "IntrBk";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Interbank";
 			definition = "Set of elements used to reference the details of the corrective interbank payment transaction.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CorrectiveTransaction2Choice.mmInterbank);
+			nextVersions_lazy = () -> Arrays.asList(CorrectiveTransaction2Choice.mmInterbank);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -213,13 +219,12 @@ public class CorrectiveTransaction1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CorrectiveTransaction1Choice.mmInitiation, com.tools20022.repository.choice.CorrectiveTransaction1Choice.mmInterbank);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.ResolutionOfInvestigationV03.mmCorrectionTransaction,
-						com.tools20022.repository.area.camt.ResolutionOfInvestigationV04.mmCorrectionTransaction, com.tools20022.repository.area.camt.ResolutionOfInvestigationV05.mmCorrectionTransaction,
-						com.tools20022.repository.area.camt.ResolutionOfInvestigationV06.mmCorrectionTransaction);
+				messageElement_lazy = () -> Arrays.asList(CorrectiveTransaction1Choice.mmInitiation, CorrectiveTransaction1Choice.mmInterbank);
+				messageBuildingBlock_lazy = () -> Arrays.asList(ResolutionOfInvestigationV03.mmCorrectionTransaction, ResolutionOfInvestigationV04.mmCorrectionTransaction, ResolutionOfInvestigationV05.mmCorrectionTransaction,
+						ResolutionOfInvestigationV06.mmCorrectionTransaction);
 				trace_lazy = () -> Payment.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorrectiveTransaction1Choice";
 				definition = "Specifies the corrective transaction on which the investigation is processed.";
 				nextVersions_lazy = () -> Arrays.asList(CorrectiveTransaction2Choice.mmObject());

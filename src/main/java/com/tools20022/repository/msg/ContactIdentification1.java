@@ -19,11 +19,14 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.tsmt.*;
 import com.tools20022.repository.codeset.NamePrefix1Code;
 import com.tools20022.repository.datatype.Max256Text;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.PhoneNumber;
-import com.tools20022.repository.entity.ContactPersonRole;
+import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -242,11 +245,11 @@ public class ContactIdentification1 {
 	 */
 	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyName.mmName;
+			businessElementTrace_lazy = () -> PartyName.mmName;
 			componentContext_lazy = () -> ContactIdentification1.mmObject();
 			isDerived = false;
 			xmlTag = "Nm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Name";
 			definition = "Name by which a party is known and which is usually used to identify that party.";
 			maxOccurs = 1;
@@ -290,11 +293,11 @@ public class ContactIdentification1 {
 	 */
 	public static final MMMessageAttribute mmNamePrefix = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PersonName.mmNamePrefix;
+			businessElementTrace_lazy = () -> PersonName.mmNamePrefix;
 			componentContext_lazy = () -> ContactIdentification1.mmObject();
 			isDerived = false;
 			xmlTag = "NmPrfx";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NamePrefix";
 			definition = "Specifies the terms used to formally address a person.";
 			maxOccurs = 1;
@@ -337,11 +340,11 @@ public class ContactIdentification1 {
 	 */
 	public static final MMMessageAttribute mmGivenName = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PersonName.mmGivenName;
+			businessElementTrace_lazy = () -> PersonName.mmGivenName;
 			componentContext_lazy = () -> ContactIdentification1.mmObject();
 			isDerived = false;
 			xmlTag = "GvnNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GivenName";
 			definition = "First name of a person.";
 			maxOccurs = 1;
@@ -384,11 +387,11 @@ public class ContactIdentification1 {
 	 */
 	public static final MMMessageAttribute mmRole = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ContactPersonRole.mmRole;
+			businessElementTrace_lazy = () -> ContactPersonRole.mmRole;
 			componentContext_lazy = () -> ContactIdentification1.mmObject();
 			isDerived = false;
 			xmlTag = "Role";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Role";
 			definition = "Role of the party in the activity.";
 			maxOccurs = 1;
@@ -434,11 +437,11 @@ public class ContactIdentification1 {
 	 */
 	public static final MMMessageAttribute mmPhoneNumber = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PhoneAddress.mmPhoneNumber;
+			businessElementTrace_lazy = () -> PhoneAddress.mmPhoneNumber;
 			componentContext_lazy = () -> ContactIdentification1.mmObject();
 			isDerived = false;
 			xmlTag = "PhneNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PhoneNumber";
 			definition = "Collection of information that identifies a phone number, as defined by telecom services.";
 			maxOccurs = 1;
@@ -484,11 +487,11 @@ public class ContactIdentification1 {
 	 */
 	public static final MMMessageAttribute mmFaxNumber = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PhoneAddress.mmFaxNumber;
+			businessElementTrace_lazy = () -> PhoneAddress.mmFaxNumber;
 			componentContext_lazy = () -> ContactIdentification1.mmObject();
 			isDerived = false;
 			xmlTag = "FaxNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FaxNumber";
 			definition = "Collection of information that identifies a FAX number, as defined by telecom services.";
 			maxOccurs = 1;
@@ -531,11 +534,11 @@ public class ContactIdentification1 {
 	 */
 	public static final MMMessageAttribute mmEmailAddress = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ElectronicAddress.mmEmailAddress;
+			businessElementTrace_lazy = () -> ElectronicAddress.mmEmailAddress;
 			componentContext_lazy = () -> ContactIdentification1.mmObject();
 			isDerived = false;
 			xmlTag = "EmailAdr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EmailAddress";
 			definition = "Address for electronic mail (e-mail).";
 			maxOccurs = 1;
@@ -547,32 +550,22 @@ public class ContactIdentification1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ContactIdentification1.mmName, com.tools20022.repository.msg.ContactIdentification1.mmNamePrefix,
-						com.tools20022.repository.msg.ContactIdentification1.mmGivenName, com.tools20022.repository.msg.ContactIdentification1.mmRole, com.tools20022.repository.msg.ContactIdentification1.mmPhoneNumber,
-						com.tools20022.repository.msg.ContactIdentification1.mmFaxNumber, com.tools20022.repository.msg.ContactIdentification1.mmEmailAddress);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.BaselineAmendmentRequestV03.mmBuyerContactPerson, com.tools20022.repository.area.tsmt.BaselineAmendmentRequestV03.mmSellerContactPerson,
-						com.tools20022.repository.area.tsmt.BaselineAmendmentRequestV03.mmBuyerBankContactPerson, com.tools20022.repository.area.tsmt.BaselineAmendmentRequestV03.mmSellerBankContactPerson,
-						com.tools20022.repository.area.tsmt.BaselineReSubmissionV03.mmBuyerContactPerson, com.tools20022.repository.area.tsmt.BaselineReSubmissionV03.mmSellerContactPerson,
-						com.tools20022.repository.area.tsmt.BaselineReSubmissionV03.mmBuyerBankContactPerson, com.tools20022.repository.area.tsmt.BaselineReSubmissionV03.mmSellerBankContactPerson,
-						com.tools20022.repository.area.tsmt.FullPushThroughReportV03.mmBuyerContactPerson, com.tools20022.repository.area.tsmt.FullPushThroughReportV03.mmSellerContactPerson,
-						com.tools20022.repository.area.tsmt.FullPushThroughReportV03.mmBuyerBankContactPerson, com.tools20022.repository.area.tsmt.FullPushThroughReportV03.mmSellerBankContactPerson,
-						com.tools20022.repository.area.tsmt.InitialBaselineSubmissionV03.mmBuyerContactPerson, com.tools20022.repository.area.tsmt.InitialBaselineSubmissionV03.mmSellerContactPerson,
-						com.tools20022.repository.area.tsmt.InitialBaselineSubmissionV03.mmBuyerBankContactPerson, com.tools20022.repository.area.tsmt.InitialBaselineSubmissionV03.mmSellerBankContactPerson,
-						com.tools20022.repository.area.tsmt.BaselineReSubmissionV04.mmBuyerContactPerson, com.tools20022.repository.area.tsmt.BaselineReSubmissionV04.mmSellerContactPerson,
-						com.tools20022.repository.area.tsmt.FullPushThroughReportV04.mmBuyerContactPerson, com.tools20022.repository.area.tsmt.FullPushThroughReportV04.mmSellerContactPerson,
-						com.tools20022.repository.area.tsmt.FullPushThroughReportV04.mmBuyerBankContactPerson, com.tools20022.repository.area.tsmt.FullPushThroughReportV04.mmSellerBankContactPerson,
-						com.tools20022.repository.area.tsmt.BaselineAmendmentRequestV04.mmBuyerContactPerson, com.tools20022.repository.area.tsmt.BaselineAmendmentRequestV04.mmSellerContactPerson,
-						com.tools20022.repository.area.tsmt.BaselineAmendmentRequestV04.mmBuyerBankContactPerson, com.tools20022.repository.area.tsmt.BaselineAmendmentRequestV04.mmSellerBankContactPerson,
-						com.tools20022.repository.area.tsmt.InitialBaselineSubmissionV04.mmBuyerContactPerson, com.tools20022.repository.area.tsmt.InitialBaselineSubmissionV04.mmSellerContactPerson,
-						com.tools20022.repository.area.tsmt.InitialBaselineSubmissionV05.mmBuyerContactPerson, com.tools20022.repository.area.tsmt.InitialBaselineSubmissionV05.mmSellerContactPerson,
-						com.tools20022.repository.area.tsmt.BaselineAmendmentRequestV05.mmBuyerContactPerson, com.tools20022.repository.area.tsmt.BaselineAmendmentRequestV05.mmSellerContactPerson,
-						com.tools20022.repository.area.tsmt.BaselineAmendmentRequestV05.mmBuyerBankContactPerson, com.tools20022.repository.area.tsmt.BaselineAmendmentRequestV05.mmSellerBankContactPerson,
-						com.tools20022.repository.area.tsmt.FullPushThroughReportV05.mmBuyerContactPerson, com.tools20022.repository.area.tsmt.FullPushThroughReportV05.mmSellerContactPerson,
-						com.tools20022.repository.area.tsmt.FullPushThroughReportV05.mmBuyerBankContactPerson, com.tools20022.repository.area.tsmt.FullPushThroughReportV05.mmSellerBankContactPerson,
-						com.tools20022.repository.area.tsmt.BaselineReSubmissionV05.mmBuyerContactPerson, com.tools20022.repository.area.tsmt.BaselineReSubmissionV05.mmSellerContactPerson);
+				messageElement_lazy = () -> Arrays.asList(ContactIdentification1.mmName, ContactIdentification1.mmNamePrefix, ContactIdentification1.mmGivenName, ContactIdentification1.mmRole, ContactIdentification1.mmPhoneNumber,
+						ContactIdentification1.mmFaxNumber, ContactIdentification1.mmEmailAddress);
+				messageBuildingBlock_lazy = () -> Arrays.asList(BaselineAmendmentRequestV03.mmBuyerContactPerson, BaselineAmendmentRequestV03.mmSellerContactPerson, BaselineAmendmentRequestV03.mmBuyerBankContactPerson,
+						BaselineAmendmentRequestV03.mmSellerBankContactPerson, BaselineReSubmissionV03.mmBuyerContactPerson, BaselineReSubmissionV03.mmSellerContactPerson, BaselineReSubmissionV03.mmBuyerBankContactPerson,
+						BaselineReSubmissionV03.mmSellerBankContactPerson, FullPushThroughReportV03.mmBuyerContactPerson, FullPushThroughReportV03.mmSellerContactPerson, FullPushThroughReportV03.mmBuyerBankContactPerson,
+						FullPushThroughReportV03.mmSellerBankContactPerson, InitialBaselineSubmissionV03.mmBuyerContactPerson, InitialBaselineSubmissionV03.mmSellerContactPerson, InitialBaselineSubmissionV03.mmBuyerBankContactPerson,
+						InitialBaselineSubmissionV03.mmSellerBankContactPerson, BaselineReSubmissionV04.mmBuyerContactPerson, BaselineReSubmissionV04.mmSellerContactPerson, FullPushThroughReportV04.mmBuyerContactPerson,
+						FullPushThroughReportV04.mmSellerContactPerson, FullPushThroughReportV04.mmBuyerBankContactPerson, FullPushThroughReportV04.mmSellerBankContactPerson, BaselineAmendmentRequestV04.mmBuyerContactPerson,
+						BaselineAmendmentRequestV04.mmSellerContactPerson, BaselineAmendmentRequestV04.mmBuyerBankContactPerson, BaselineAmendmentRequestV04.mmSellerBankContactPerson, InitialBaselineSubmissionV04.mmBuyerContactPerson,
+						InitialBaselineSubmissionV04.mmSellerContactPerson, InitialBaselineSubmissionV05.mmBuyerContactPerson, InitialBaselineSubmissionV05.mmSellerContactPerson, BaselineAmendmentRequestV05.mmBuyerContactPerson,
+						BaselineAmendmentRequestV05.mmSellerContactPerson, BaselineAmendmentRequestV05.mmBuyerBankContactPerson, BaselineAmendmentRequestV05.mmSellerBankContactPerson, FullPushThroughReportV05.mmBuyerContactPerson,
+						FullPushThroughReportV05.mmSellerContactPerson, FullPushThroughReportV05.mmBuyerBankContactPerson, FullPushThroughReportV05.mmSellerBankContactPerson, BaselineReSubmissionV05.mmBuyerContactPerson,
+						BaselineReSubmissionV05.mmSellerContactPerson);
 				trace_lazy = () -> ContactPersonRole.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ContactIdentification1";
 				definition = "Information needed to contact a physical person.";
 			}

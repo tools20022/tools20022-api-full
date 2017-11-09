@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.MessageItemCondition1Code
+ * MessageItemCondition1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -50,13 +59,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.MessageItemConditionCode#mmNotSupported
  * MessageItemConditionCode.mmNotSupported}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.MessageItemCondition1Code
- * MessageItemCondition1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -107,7 +109,7 @@ public class MessageItemConditionCode {
 	 */
 	public static final MMCode mmMandatory = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Mandatory";
 			definition = "Message item must be present.";
 			owner_lazy = () -> MessageItemConditionCode.mmObject();
@@ -137,7 +139,7 @@ public class MessageItemConditionCode {
 	 */
 	public static final MMCode mmConfiguredValue = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ConfiguredValue";
 			definition = "Message item must be present with the configured value.";
 			owner_lazy = () -> MessageItemConditionCode.mmObject();
@@ -168,7 +170,7 @@ public class MessageItemConditionCode {
 	 */
 	public static final MMCode mmDefaultValue = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DefaultValue";
 			definition = "Message item has the configured value if the item is absent.";
 			owner_lazy = () -> MessageItemConditionCode.mmObject();
@@ -198,7 +200,7 @@ public class MessageItemConditionCode {
 	 */
 	public static final MMCode mmAllowedValues = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AllowedValues";
 			definition = "Message item must have one of the configured values.";
 			owner_lazy = () -> MessageItemConditionCode.mmObject();
@@ -228,7 +230,7 @@ public class MessageItemConditionCode {
 	 */
 	public static final MMCode mmIfAvailable = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "IfAvailable";
 			definition = "Message item has to be present if available.";
 			owner_lazy = () -> MessageItemConditionCode.mmObject();
@@ -261,7 +263,7 @@ public class MessageItemConditionCode {
 	 */
 	public static final MMCode mmCopy = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Copy";
 			definition = "Message item is present if it was present in a previous related message with the same value.";
 			owner_lazy = () -> MessageItemConditionCode.mmObject();
@@ -291,7 +293,7 @@ public class MessageItemConditionCode {
 	 */
 	public static final MMCode mmNotSupported = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NotSupported";
 			definition = "Message item is not supported and has to be absent.";
 			owner_lazy = () -> MessageItemConditionCode.mmObject();
@@ -302,14 +304,13 @@ public class MessageItemConditionCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("MNDT");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MessageItemConditionCode";
 				definition = "Rule to apply for the presence and the value of a message item.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MessageItemConditionCode.mmMandatory, com.tools20022.repository.codeset.MessageItemConditionCode.mmConfiguredValue,
-						com.tools20022.repository.codeset.MessageItemConditionCode.mmDefaultValue, com.tools20022.repository.codeset.MessageItemConditionCode.mmAllowedValues,
-						com.tools20022.repository.codeset.MessageItemConditionCode.mmIfAvailable, com.tools20022.repository.codeset.MessageItemConditionCode.mmCopy, com.tools20022.repository.codeset.MessageItemConditionCode.mmNotSupported);
+				code_lazy = () -> Arrays.asList(MessageItemConditionCode.mmMandatory, MessageItemConditionCode.mmConfiguredValue, MessageItemConditionCode.mmDefaultValue, MessageItemConditionCode.mmAllowedValues,
+						MessageItemConditionCode.mmIfAvailable, MessageItemConditionCode.mmCopy, MessageItemConditionCode.mmNotSupported);
 				derivation_lazy = () -> Arrays.asList(MessageItemCondition1Code.mmObject());
 			}
 		});

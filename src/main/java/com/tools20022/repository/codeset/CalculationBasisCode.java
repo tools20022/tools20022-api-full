@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.CalculationBasis1Code
+ * CalculationBasis1Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.CalculationBasis2Code
+ * CalculationBasis2Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -44,15 +55,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.CalculationBasisCode#mmAnnual
  * CalculationBasisCode.mmAnnual}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.CalculationBasis1Code
- * CalculationBasis1Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.CalculationBasis2Code
- * CalculationBasis2Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -102,7 +104,7 @@ public class CalculationBasisCode {
 	 */
 	public static final MMCode mmAverage = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Average";
 			definition = "Average basis.";
 			owner_lazy = () -> CalculationBasisCode.mmObject();
@@ -132,7 +134,7 @@ public class CalculationBasisCode {
 	 */
 	public static final MMCode mmDaily = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Daily";
 			definition = "Daily basis.";
 			owner_lazy = () -> CalculationBasisCode.mmObject();
@@ -162,7 +164,7 @@ public class CalculationBasisCode {
 	 */
 	public static final MMCode mmOther = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Other";
 			definition = "Another type of calculation basis.";
 			owner_lazy = () -> CalculationBasisCode.mmObject();
@@ -192,7 +194,7 @@ public class CalculationBasisCode {
 	 */
 	public static final MMCode mmMonthly = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Monthly";
 			definition = "Monthly basis.";
 			owner_lazy = () -> CalculationBasisCode.mmObject();
@@ -222,7 +224,7 @@ public class CalculationBasisCode {
 	 */
 	public static final MMCode mmAnnual = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Annual";
 			definition = "Yearly basis.";
 			owner_lazy = () -> CalculationBasisCode.mmObject();
@@ -233,13 +235,12 @@ public class CalculationBasisCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("AVER");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CalculationBasisCode";
 				definition = "Specifies the calculation basis.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CalculationBasisCode.mmAverage, com.tools20022.repository.codeset.CalculationBasisCode.mmDaily,
-						com.tools20022.repository.codeset.CalculationBasisCode.mmOther, com.tools20022.repository.codeset.CalculationBasisCode.mmMonthly, com.tools20022.repository.codeset.CalculationBasisCode.mmAnnual);
+				code_lazy = () -> Arrays.asList(CalculationBasisCode.mmAverage, CalculationBasisCode.mmDaily, CalculationBasisCode.mmOther, CalculationBasisCode.mmMonthly, CalculationBasisCode.mmAnnual);
 				derivation_lazy = () -> Arrays.asList(CalculationBasis1Code.mmObject(), CalculationBasis2Code.mmObject());
 			}
 		});

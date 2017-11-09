@@ -20,13 +20,18 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.tsin.*;
+import com.tools20022.repository.area.tsmt.InvoicePaymentReconciliationAdviceV01;
+import com.tools20022.repository.area.tsmt.InvoicePaymentReconciliationStatusV01;
+import com.tools20022.repository.area.tsmt.PartyEventAdviceV01;
 import com.tools20022.repository.codeset.Priority3Code;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.Max2000Text;
 import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.datatype.Max35Text;
-import com.tools20022.repository.entity.Document;
-import com.tools20022.repository.entity.ElectronicSignature;
+import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -206,7 +211,7 @@ public class BusinessLetter1 {
 			componentContext_lazy = () -> BusinessLetter1.mmObject();
 			isDerived = false;
 			xmlTag = "ApplCntxt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ApplicationContext";
 			definition = "Application context defined by users. This is typically the name of a product.";
 			maxOccurs = 1;
@@ -249,11 +254,11 @@ public class BusinessLetter1 {
 	 */
 	public static final MMMessageAssociationEnd mmLetterIdentifier = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmIdentification;
+			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> BusinessLetter1.mmObject();
 			isDerived = false;
 			xmlTag = "LttrIdr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LetterIdentifier";
 			definition = "Unambiguous identifier for this letter.";
 			maxOccurs = 1;
@@ -297,11 +302,11 @@ public class BusinessLetter1 {
 	 */
 	public static final MMMessageAttribute mmDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Document.mmIssueDate;
+			businessElementTrace_lazy = () -> Document.mmIssueDate;
 			componentContext_lazy = () -> BusinessLetter1.mmObject();
 			isDerived = false;
 			xmlTag = "Dt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Date";
 			definition = "Purported creation date of the document.";
 			maxOccurs = 1;
@@ -347,7 +352,7 @@ public class BusinessLetter1 {
 			componentContext_lazy = () -> BusinessLetter1.mmObject();
 			isDerived = false;
 			xmlTag = "RltdLttr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedLetter";
 			definition = "Identifier of a related letter.";
 			minOccurs = 0;
@@ -393,7 +398,7 @@ public class BusinessLetter1 {
 			componentContext_lazy = () -> BusinessLetter1.mmObject();
 			isDerived = false;
 			xmlTag = "RltdMsg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedMessage";
 			definition = "Identifier of a related message.";
 			minOccurs = 0;
@@ -437,7 +442,7 @@ public class BusinessLetter1 {
 			componentContext_lazy = () -> BusinessLetter1.mmObject();
 			isDerived = false;
 			xmlTag = "CnttIdr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ContentIdentifier";
 			definition = "Cross references the lists that are associated to this letter inside a message. The identifiers are relative to the Originator.";
 			minOccurs = 0;
@@ -482,7 +487,7 @@ public class BusinessLetter1 {
 			componentContext_lazy = () -> BusinessLetter1.mmObject();
 			isDerived = false;
 			xmlTag = "InstrPrty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructionPriority";
 			definition = "Urgency or order of importance that the originator would like the recipient of the business letter to apply to the processing of the letter.";
 			maxOccurs = 1;
@@ -525,11 +530,11 @@ public class BusinessLetter1 {
 	 */
 	public static final MMMessageAssociationEnd mmOriginator = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> BusinessLetter1.mmObject();
 			isDerived = false;
 			xmlTag = "Orgtr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Originator";
 			definition = "Identification of the originating party of this letter.";
 			maxOccurs = 1;
@@ -576,11 +581,11 @@ public class BusinessLetter1 {
 	 */
 	public static final MMMessageAssociationEnd mmPrimaryRecipient = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> BusinessLetter1.mmObject();
 			isDerived = false;
 			xmlTag = "PmryRcpt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PrimaryRecipient";
 			definition = "Primary recipient of the business letter. The exact meaning is given by the users.";
 			minOccurs = 1;
@@ -625,11 +630,11 @@ public class BusinessLetter1 {
 	 */
 	public static final MMMessageAssociationEnd mmSender = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> BusinessLetter1.mmObject();
 			isDerived = false;
 			xmlTag = "Sndr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Sender";
 			definition = "Sender of the business letter. The exact meaning is given by the users.";
 			minOccurs = 0;
@@ -675,11 +680,11 @@ public class BusinessLetter1 {
 	 */
 	public static final MMMessageAssociationEnd mmAuthorisationUser = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> BusinessLetter1.mmObject();
 			isDerived = false;
 			xmlTag = "AuthstnUsr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AuthorisationUser";
 			definition = "User who, either individually or in concert with others, authorises the origination of a message.";
 			minOccurs = 1;
@@ -722,11 +727,11 @@ public class BusinessLetter1 {
 	 */
 	public static final MMMessageAssociationEnd mmResponseRecipient = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> BusinessLetter1.mmObject();
 			isDerived = false;
 			xmlTag = "RspnRcpt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ResponseRecipient";
 			definition = "Party to receive a reply to this letter.";
 			minOccurs = 0;
@@ -769,11 +774,11 @@ public class BusinessLetter1 {
 	 */
 	public static final MMMessageAssociationEnd mmCopyRecipient = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> BusinessLetter1.mmObject();
 			isDerived = false;
 			xmlTag = "CpyRcpt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CopyRecipient";
 			definition = "Party to receive a copy of the message.";
 			minOccurs = 0;
@@ -817,11 +822,11 @@ public class BusinessLetter1 {
 	 */
 	public static final MMMessageAssociationEnd mmOtherParty = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> BusinessLetter1.mmObject();
 			isDerived = false;
 			xmlTag = "OthrPty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherParty";
 			definition = "Other party involved. This element is usable as a target for IDREFs.";
 			minOccurs = 0;
@@ -867,7 +872,7 @@ public class BusinessLetter1 {
 			componentContext_lazy = () -> BusinessLetter1.mmObject();
 			isDerived = false;
 			xmlTag = "AssoctdDoc";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AssociatedDocument";
 			definition = "Associated free form document.";
 			minOccurs = 0;
@@ -910,11 +915,11 @@ public class BusinessLetter1 {
 	 */
 	public static final MMMessageAssociationEnd mmGoverningContract = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Document.mmAgreement;
+			businessElementTrace_lazy = () -> Document.mmAgreement;
 			componentContext_lazy = () -> BusinessLetter1.mmObject();
 			isDerived = false;
 			xmlTag = "GovngCtrct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GoverningContract";
 			definition = "Governing contract.";
 			minOccurs = 0;
@@ -956,11 +961,11 @@ public class BusinessLetter1 {
 	 */
 	public static final MMMessageAssociationEnd mmLegalContext = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Jurisdiction.mmGovernanceRules;
+			businessElementTrace_lazy = () -> Jurisdiction.mmGovernanceRules;
 			componentContext_lazy = () -> BusinessLetter1.mmObject();
 			isDerived = false;
 			xmlTag = "LglCntxt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LegalContext";
 			definition = "Rules and laws governing the letter.";
 			minOccurs = 0;
@@ -1001,7 +1006,7 @@ public class BusinessLetter1 {
 			componentContext_lazy = () -> BusinessLetter1.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInformation";
 			definition = "Free form information about this message.";
 			maxOccurs = 1;
@@ -1045,7 +1050,7 @@ public class BusinessLetter1 {
 			componentContext_lazy = () -> BusinessLetter1.mmObject();
 			isDerived = false;
 			xmlTag = "Ntce";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Notice";
 			definition = "Free form information unrelated to the message for example advertising or a service notice.";
 			maxOccurs = 1;
@@ -1088,11 +1093,11 @@ public class BusinessLetter1 {
 	 */
 	public static final MMMessageAssociationEnd mmValidationStatusInformation = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvoiceFinancingAgreement.mmInvoiceFinancingStatus;
+			businessElementTrace_lazy = () -> InvoiceFinancingAgreement.mmInvoiceFinancingStatus;
 			componentContext_lazy = () -> BusinessLetter1.mmObject();
 			isDerived = false;
 			xmlTag = "VldtnStsInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValidationStatusInformation";
 			definition = "Status of referenced messages or letters.";
 			maxOccurs = 1;
@@ -1141,7 +1146,7 @@ public class BusinessLetter1 {
 			componentContext_lazy = () -> BusinessLetter1.mmObject();
 			isDerived = false;
 			xmlTag = "DgtlSgntr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DigitalSignature";
 			definition = "Digital signatures and signing parties of this letter or parts of it.";
 			minOccurs = 0;
@@ -1153,23 +1158,16 @@ public class BusinessLetter1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BusinessLetter1.mmApplicationContext, com.tools20022.repository.msg.BusinessLetter1.mmLetterIdentifier,
-						com.tools20022.repository.msg.BusinessLetter1.mmDate, com.tools20022.repository.msg.BusinessLetter1.mmRelatedLetter, com.tools20022.repository.msg.BusinessLetter1.mmRelatedMessage,
-						com.tools20022.repository.msg.BusinessLetter1.mmContentIdentifier, com.tools20022.repository.msg.BusinessLetter1.mmInstructionPriority, com.tools20022.repository.msg.BusinessLetter1.mmOriginator,
-						com.tools20022.repository.msg.BusinessLetter1.mmPrimaryRecipient, com.tools20022.repository.msg.BusinessLetter1.mmSender, com.tools20022.repository.msg.BusinessLetter1.mmAuthorisationUser,
-						com.tools20022.repository.msg.BusinessLetter1.mmResponseRecipient, com.tools20022.repository.msg.BusinessLetter1.mmCopyRecipient, com.tools20022.repository.msg.BusinessLetter1.mmOtherParty,
-						com.tools20022.repository.msg.BusinessLetter1.mmAssociatedDocument, com.tools20022.repository.msg.BusinessLetter1.mmGoverningContract, com.tools20022.repository.msg.BusinessLetter1.mmLegalContext,
-						com.tools20022.repository.msg.BusinessLetter1.mmAdditionalInformation, com.tools20022.repository.msg.BusinessLetter1.mmNotice, com.tools20022.repository.msg.BusinessLetter1.mmValidationStatusInformation,
-						com.tools20022.repository.msg.BusinessLetter1.mmDigitalSignature);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.InvoicePaymentReconciliationAdviceV01.mmHeader, com.tools20022.repository.area.tsin.InvoiceAssignmentRequestV01.mmHeader,
-						com.tools20022.repository.area.tsin.PartyRegistrationAndGuaranteeAcknowledgementV01.mmHeader, com.tools20022.repository.area.tsmt.PartyEventAdviceV01.mmHeader,
-						com.tools20022.repository.area.tsin.PartyRegistrationAndGuaranteeStatusV01.mmHeader, com.tools20022.repository.area.tsin.PartyRegistrationAndGuaranteeNotificationV01.mmHeader,
-						com.tools20022.repository.area.tsin.InvoiceAssignmentNotificationV01.mmHeader, com.tools20022.repository.area.tsin.InvoiceAssignmentAcknowledgementV01.mmHeader,
-						com.tools20022.repository.area.tsin.InvoiceAssignmentStatusV01.mmHeader, com.tools20022.repository.area.tsin.PartyRegistrationAndGuaranteeRequestV01.mmHeader,
-						com.tools20022.repository.area.tsmt.InvoicePaymentReconciliationStatusV01.mmHeader);
+				messageElement_lazy = () -> Arrays.asList(BusinessLetter1.mmApplicationContext, BusinessLetter1.mmLetterIdentifier, BusinessLetter1.mmDate, BusinessLetter1.mmRelatedLetter, BusinessLetter1.mmRelatedMessage,
+						BusinessLetter1.mmContentIdentifier, BusinessLetter1.mmInstructionPriority, BusinessLetter1.mmOriginator, BusinessLetter1.mmPrimaryRecipient, BusinessLetter1.mmSender, BusinessLetter1.mmAuthorisationUser,
+						BusinessLetter1.mmResponseRecipient, BusinessLetter1.mmCopyRecipient, BusinessLetter1.mmOtherParty, BusinessLetter1.mmAssociatedDocument, BusinessLetter1.mmGoverningContract, BusinessLetter1.mmLegalContext,
+						BusinessLetter1.mmAdditionalInformation, BusinessLetter1.mmNotice, BusinessLetter1.mmValidationStatusInformation, BusinessLetter1.mmDigitalSignature);
+				messageBuildingBlock_lazy = () -> Arrays.asList(InvoicePaymentReconciliationAdviceV01.mmHeader, InvoiceAssignmentRequestV01.mmHeader, PartyRegistrationAndGuaranteeAcknowledgementV01.mmHeader, PartyEventAdviceV01.mmHeader,
+						PartyRegistrationAndGuaranteeStatusV01.mmHeader, PartyRegistrationAndGuaranteeNotificationV01.mmHeader, InvoiceAssignmentNotificationV01.mmHeader, InvoiceAssignmentAcknowledgementV01.mmHeader,
+						InvoiceAssignmentStatusV01.mmHeader, PartyRegistrationAndGuaranteeRequestV01.mmHeader, InvoicePaymentReconciliationStatusV01.mmHeader);
 				trace_lazy = () -> Document.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "BusinessLetter1";
 				definition = "Defines a business letter containing identifications of involved entities and their roles, references to documents, free form text and signatures.\r\nThe semantics of this information are defined by usual business practices for the exchange and tracing of business letters. The described references and party identifiers permit to establish a linked informal trace of sequences of letters.\r\nThis message component contains three types of elements that can be referenced using IDREF:\r\n(1) - all elements defining qualified parties,\r\n(2) - all elements defining qualified documents or references to them,\r\n(3) - the LegalContext element.";
 			}

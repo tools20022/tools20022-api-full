@@ -19,7 +19,10 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.setr.*;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -118,7 +121,7 @@ public class TransactiontIdentification4 {
 			componentContext_lazy = () -> TransactiontIdentification4.mmObject();
 			isDerived = false;
 			xmlTag = "TxId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionIdentification";
 			definition = "Unambiguous identification of the transaction as known by the instructing party.";
 			maxOccurs = 1;
@@ -130,13 +133,12 @@ public class TransactiontIdentification4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactiontIdentification4.mmTransactionIdentification);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.SecuritiesTradeConfirmationCancellationV01.mmIdentification,
-						com.tools20022.repository.area.setr.SecuritiesTradeConfirmationResponseV01.mmIdentification, com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV01.mmIdentification,
-						com.tools20022.repository.area.setr.SecuritiesTradeConfirmationV01.mmIdentification, com.tools20022.repository.area.setr.SecuritiesTradeConfirmationV02.mmIdentification,
-						com.tools20022.repository.area.setr.SecuritiesTradeConfirmationV03.mmIdentification, com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV02.mmIdentification);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(TransactiontIdentification4.mmTransactionIdentification);
+				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesTradeConfirmationCancellationV01.mmIdentification, SecuritiesTradeConfirmationResponseV01.mmIdentification,
+						SecuritiesTradeConfirmationStatusAdviceV01.mmIdentification, SecuritiesTradeConfirmationV01.mmIdentification, SecuritiesTradeConfirmationV02.mmIdentification, SecuritiesTradeConfirmationV03.mmIdentification,
+						SecuritiesTradeConfirmationStatusAdviceV02.mmIdentification);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TransactiontIdentification4";
 				definition = "Transaction identification.";
 			}

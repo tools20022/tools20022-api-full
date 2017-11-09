@@ -19,7 +19,12 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.entity.Organisation;
+import com.tools20022.repository.entity.Person;
+import com.tools20022.repository.entity.System;
 import com.tools20022.repository.entity.SystemEventInformation;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -101,11 +106,11 @@ public class ParticipantAndStatus1 {
 	 */
 	public static final MMMessageAssociationEnd mmParticipantIdentification = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Organisation.mmOrganisationIdentification;
+			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> ParticipantAndStatus1.mmObject();
 			isDerived = false;
 			xmlTag = "PtcptId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ParticipantIdentification";
 			definition = "Identification of participant.";
 			maxOccurs = 1;
@@ -149,11 +154,11 @@ public class ParticipantAndStatus1 {
 	 */
 	public static final MMMessageAssociationEnd mmParticipantContactDetails = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Person.mmPersonIdentification;
+			businessElementTrace_lazy = () -> Person.mmPersonIdentification;
 			componentContext_lazy = () -> ParticipantAndStatus1.mmObject();
 			isDerived = false;
 			xmlTag = "PtcptCtctDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ParticipantContactDetails";
 			definition = "Set of elements used to indicate how to contact the participant.";
 			maxOccurs = 1;
@@ -199,11 +204,11 @@ public class ParticipantAndStatus1 {
 	 */
 	public static final MMMessageAssociationEnd mmServiceAvailability = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.System.mmAvailability;
+			businessElementTrace_lazy = () -> System.mmAvailability;
 			componentContext_lazy = () -> ParticipantAndStatus1.mmObject();
 			isDerived = false;
 			xmlTag = "SvcAvlbty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ServiceAvailability";
 			definition = "Provides details on operational availability of the participant business service.";
 			minOccurs = 1;
@@ -215,11 +220,10 @@ public class ParticipantAndStatus1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ParticipantAndStatus1.mmParticipantIdentification, com.tools20022.repository.msg.ParticipantAndStatus1.mmParticipantContactDetails,
-						com.tools20022.repository.msg.ParticipantAndStatus1.mmServiceAvailability);
+				messageElement_lazy = () -> Arrays.asList(ParticipantAndStatus1.mmParticipantIdentification, ParticipantAndStatus1.mmParticipantContactDetails, ParticipantAndStatus1.mmServiceAvailability);
 				trace_lazy = () -> SystemEventInformation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ParticipantAndStatus1";
 				definition = "Provides details on the participant and their operational status.";
 			}

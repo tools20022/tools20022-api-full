@@ -20,6 +20,7 @@ package com.tools20022.repository.area.seev;
 import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.SecuritiesEventsPreviousVersion;
 import com.tools20022.repository.choice.PartyIdentification9Choice;
 import com.tools20022.repository.msg.*;
@@ -45,6 +46,9 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code seev.007.001.04}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.SecuritiesEventsPreviousVersion
@@ -89,9 +93,6 @@ import java.util.List;
  * MeetingVoteExecutionConfirmationV04.mmExtension}</li>
  * </ul>
  * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code seev.007.001.04}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -146,7 +147,7 @@ public class MeetingVoteExecutionConfirmationV04 {
 	public static final MMMessageBuildingBlock mmIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Identifies the vote execution confirmation message.";
 			maxOccurs = 1;
@@ -189,10 +190,10 @@ public class MeetingVoteExecutionConfirmationV04 {
 	public static final MMMessageBuildingBlock mmRelatedReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "RltdRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedReference";
 			definition = "Identifies the meeting instruction message.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.MeetingVoteExecutionConfirmationV05.mmRelatedReference);
+			nextVersions_lazy = () -> Arrays.asList(MeetingVoteExecutionConfirmationV05.mmRelatedReference);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification.mmObject();
@@ -233,10 +234,10 @@ public class MeetingVoteExecutionConfirmationV04 {
 	public static final MMMessageBuildingBlock mmMeetingReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "MtgRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MeetingReference";
 			definition = "Series of elements which allow to identify a meeting.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.MeetingVoteExecutionConfirmationV05.mmMeetingReference);
+			nextVersions_lazy = () -> Arrays.asList(MeetingVoteExecutionConfirmationV05.mmMeetingReference);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> MeetingReference4.mmObject();
@@ -269,7 +270,7 @@ public class MeetingVoteExecutionConfirmationV04 {
 	public static final MMMessageBuildingBlock mmReportingParty = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "RptgPty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportingParty";
 			definition = "Party confirming the votes.";
 			maxOccurs = 1;
@@ -313,10 +314,10 @@ public class MeetingVoteExecutionConfirmationV04 {
 	public static final MMMessageBuildingBlock mmSecurityIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SctyId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityIdentification";
 			definition = "Identifies the securities for which the meeting is organised. ";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.MeetingVoteExecutionConfirmationV05.mmFinancialInstrumentIdentification);
+			nextVersions_lazy = () -> Arrays.asList(MeetingVoteExecutionConfirmationV05.mmFinancialInstrumentIdentification);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> SecurityIdentification11.mmObject();
@@ -357,10 +358,10 @@ public class MeetingVoteExecutionConfirmationV04 {
 	public static final MMMessageBuildingBlock mmVoteInstructions = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "VoteInstrs";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VoteInstructions";
 			definition = "Specifies how a party has voted for each agenda item.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.MeetingVoteExecutionConfirmationV05.mmVoteInstructions);
+			nextVersions_lazy = () -> Arrays.asList(MeetingVoteExecutionConfirmationV05.mmVoteInstructions);
 			minOccurs = 1;
 			complexType_lazy = () -> DetailedInstructionStatus9.mmObject();
 		}
@@ -394,7 +395,7 @@ public class MeetingVoteExecutionConfirmationV04 {
 	public static final MMMessageBuildingBlock mmExtension = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Xtnsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Extension";
 			definition = "Additional information that can not be captured in the structured fields and/or any other specific block.";
 			minOccurs = 0;
@@ -405,7 +406,7 @@ public class MeetingVoteExecutionConfirmationV04 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MeetingVoteExecutionConfirmationV04";
 				definition = "Scope\r\nAn issuer, its agent or an intermediary sends the MeetingVoteExecutionConfirmation message to confirm to the Sender of the MeetingInstruction message, the execution of their voting instruction.\r\nUsage\r\nThis message is sent after the shareholders meeting has taken place. The Sender of this message confirms the execution of the vote at the meeting and confirms that the vote has been processed as instructed via the MeetingInstruction message.\r\nThis messages is sent if the Sender of the MeetingInstruction message has requested such a confirmation or if market practice or regulation stipulates the need for a full audit trail.";
 				nextVersions_lazy = () -> Arrays.asList(MeetingVoteExecutionConfirmationV05.mmObject());
@@ -414,10 +415,9 @@ public class MeetingVoteExecutionConfirmationV04 {
 				rootElement = "Document";
 				xmlTag = "MtgVoteExctnConf";
 				businessArea_lazy = () -> SecuritiesEventsPreviousVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.MeetingVoteExecutionConfirmationV04.mmIdentification,
-						com.tools20022.repository.area.seev.MeetingVoteExecutionConfirmationV04.mmRelatedReference, com.tools20022.repository.area.seev.MeetingVoteExecutionConfirmationV04.mmMeetingReference,
-						com.tools20022.repository.area.seev.MeetingVoteExecutionConfirmationV04.mmReportingParty, com.tools20022.repository.area.seev.MeetingVoteExecutionConfirmationV04.mmSecurityIdentification,
-						com.tools20022.repository.area.seev.MeetingVoteExecutionConfirmationV04.mmVoteInstructions, com.tools20022.repository.area.seev.MeetingVoteExecutionConfirmationV04.mmExtension);
+				messageBuildingBlock_lazy = () -> Arrays.asList(MeetingVoteExecutionConfirmationV04.mmIdentification, MeetingVoteExecutionConfirmationV04.mmRelatedReference, MeetingVoteExecutionConfirmationV04.mmMeetingReference,
+						MeetingVoteExecutionConfirmationV04.mmReportingParty, MeetingVoteExecutionConfirmationV04.mmSecurityIdentification, MeetingVoteExecutionConfirmationV04.mmVoteInstructions,
+						MeetingVoteExecutionConfirmationV04.mmExtension);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "seev";

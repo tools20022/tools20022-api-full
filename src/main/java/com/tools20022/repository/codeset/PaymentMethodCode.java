@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,23 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.PaymentMethod3Code
+ * PaymentMethod3Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PaymentMethod2Code
+ * PaymentMethod2Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PaymentMethod4Code
+ * PaymentMethod4Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PaymentMethod7Code
+ * PaymentMethod7Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PaymentMethod6Code
+ * PaymentMethod6Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PaymentMethod5Code
+ * PaymentMethod5Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>{@linkplain com.tools20022.repository.codeset.PaymentMethodCode#mmCheque
@@ -45,23 +64,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.PaymentMethodCode#mmClassical
  * PaymentMethodCode.mmClassical}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.PaymentMethod3Code
- * PaymentMethod3Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PaymentMethod2Code
- * PaymentMethod2Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PaymentMethod4Code
- * PaymentMethod4Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PaymentMethod7Code
- * PaymentMethod7Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PaymentMethod6Code
- * PaymentMethod6Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PaymentMethod5Code
- * PaymentMethod5Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -115,7 +117,7 @@ public class PaymentMethodCode {
 	 */
 	public static final MMCode mmCheque = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Cheque";
 			definition = "Written order to a bank to pay a certain amount of money from one person to another person.";
 			owner_lazy = () -> PaymentMethodCode.mmObject();
@@ -146,7 +148,7 @@ public class PaymentMethodCode {
 	 */
 	public static final MMCode mmCreditTransfer = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CreditTransfer";
 			definition = "Transfer of an amount of money in the books of the account servicer.";
 			owner_lazy = () -> PaymentMethodCode.mmObject();
@@ -179,7 +181,7 @@ public class PaymentMethodCode {
 	 */
 	public static final MMCode mmDirectDebit = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DirectDebit";
 			definition = "Collection of an amount of money from the debtor's bank account by the creditor.  The amount of money and dates of collections may vary.";
 			owner_lazy = () -> PaymentMethodCode.mmObject();
@@ -212,7 +214,7 @@ public class PaymentMethodCode {
 	 */
 	public static final MMCode mmTransferAdvice = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TransferAdvice";
 			definition = "Transfer of an amount of money in the books of the account servicer. An advice should be sent back to the account owner.";
 			owner_lazy = () -> PaymentMethodCode.mmObject();
@@ -242,7 +244,7 @@ public class PaymentMethodCode {
 	 */
 	public static final MMCode mmDirect = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Direct";
 			definition = "Direct method.";
 			owner_lazy = () -> PaymentMethodCode.mmObject();
@@ -272,7 +274,7 @@ public class PaymentMethodCode {
 	 */
 	public static final MMCode mmClassical = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Classical";
 			definition = "Classical method.";
 			owner_lazy = () -> PaymentMethodCode.mmObject();
@@ -283,14 +285,12 @@ public class PaymentMethodCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CHK");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PaymentMethodCode";
 				definition = "Specifies the transfer method that will be used  to transfer the cash.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PaymentMethodCode.mmCheque, com.tools20022.repository.codeset.PaymentMethodCode.mmCreditTransfer,
-						com.tools20022.repository.codeset.PaymentMethodCode.mmDirectDebit, com.tools20022.repository.codeset.PaymentMethodCode.mmTransferAdvice, com.tools20022.repository.codeset.PaymentMethodCode.mmDirect,
-						com.tools20022.repository.codeset.PaymentMethodCode.mmClassical);
+				code_lazy = () -> Arrays.asList(PaymentMethodCode.mmCheque, PaymentMethodCode.mmCreditTransfer, PaymentMethodCode.mmDirectDebit, PaymentMethodCode.mmTransferAdvice, PaymentMethodCode.mmDirect, PaymentMethodCode.mmClassical);
 				derivation_lazy = () -> Arrays.asList(PaymentMethod3Code.mmObject(), PaymentMethod2Code.mmObject(), PaymentMethod4Code.mmObject(), PaymentMethod7Code.mmObject(), PaymentMethod6Code.mmObject(), PaymentMethod5Code.mmObject());
 			}
 		});

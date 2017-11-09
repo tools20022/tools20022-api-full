@@ -19,8 +19,10 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.SettlementStandingInstructionDatabase1Code;
 import com.tools20022.repository.entity.StandingSettlementInstruction;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification30;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -112,14 +114,14 @@ public class SettlementStandingInstructionDatabase4Choice {
 	 */
 	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StandingSettlementInstruction.mmSettlementStandingInstructionDatabase;
+			businessElementTrace_lazy = () -> StandingSettlementInstruction.mmSettlementStandingInstructionDatabase;
 			componentContext_lazy = () -> SettlementStandingInstructionDatabase4Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Cd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Settlement standing instruction database expressed as an ISO 20022 code.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.SettlementStandingInstructionDatabase1Choice.mmCode;
+			previousVersion_lazy = () -> SettlementStandingInstructionDatabase1Choice.mmCode;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> SettlementStandingInstructionDatabase1Code.mmObject();
@@ -168,14 +170,14 @@ public class SettlementStandingInstructionDatabase4Choice {
 	 */
 	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StandingSettlementInstruction.mmSettlementStandingInstructionDatabase;
+			businessElementTrace_lazy = () -> StandingSettlementInstruction.mmSettlementStandingInstructionDatabase;
 			componentContext_lazy = () -> SettlementStandingInstructionDatabase4Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Settlement standing instruction database expressed as a proprietary code.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.SettlementStandingInstructionDatabase1Choice.mmProprietary;
+			previousVersion_lazy = () -> SettlementStandingInstructionDatabase1Choice.mmProprietary;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification30.mmObject();
@@ -185,10 +187,10 @@ public class SettlementStandingInstructionDatabase4Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SettlementStandingInstructionDatabase4Choice.mmCode, com.tools20022.repository.choice.SettlementStandingInstructionDatabase4Choice.mmProprietary);
+				messageElement_lazy = () -> Arrays.asList(SettlementStandingInstructionDatabase4Choice.mmCode, SettlementStandingInstructionDatabase4Choice.mmProprietary);
 				trace_lazy = () -> StandingSettlementInstruction.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SettlementStandingInstructionDatabase4Choice";
 				definition = "Choice of format for the standing settlement instruction information.";
 				previousVersion_lazy = () -> SettlementStandingInstructionDatabase1Choice.mmObject();

@@ -19,7 +19,11 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.seev.CorporateActionNarrativeV02;
+import com.tools20022.repository.area.seev.CorporateActionNarrativeV03;
 import com.tools20022.repository.entity.AccountIdentification;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.AccountIdentification10;
 import com.tools20022.repository.msg.AccountIdentification18;
 import java.util.Arrays;
@@ -135,10 +139,10 @@ public class AccountIdentification14Choice {
 			componentContext_lazy = () -> AccountIdentification14Choice.mmObject();
 			isDerived = false;
 			xmlTag = "ForAllAccts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForAllAccounts";
 			definition = "All safekeeping accounts that own underlying financial instrument.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AccountIdentification33Choice.mmForAllAccounts);
+			nextVersions_lazy = () -> Arrays.asList(AccountIdentification33Choice.mmForAllAccounts);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -195,10 +199,10 @@ public class AccountIdentification14Choice {
 			componentContext_lazy = () -> AccountIdentification14Choice.mmObject();
 			isDerived = false;
 			xmlTag = "AcctsListAndBalDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountsListAndBalanceDetails";
 			definition = "Selected safekeeping accounts list (and optionally balance information) to which the corporate action event applies.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AccountIdentification33Choice.mmAccountsListAndBalanceDetails);
+			nextVersions_lazy = () -> Arrays.asList(AccountIdentification33Choice.mmAccountsListAndBalanceDetails);
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> AccountIdentification18.mmObject();
@@ -208,11 +212,11 @@ public class AccountIdentification14Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AccountIdentification14Choice.mmForAllAccounts, com.tools20022.repository.choice.AccountIdentification14Choice.mmAccountsListAndBalanceDetails);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.CorporateActionNarrativeV02.mmAccountDetails, com.tools20022.repository.area.seev.CorporateActionNarrativeV03.mmAccountDetails);
+				messageElement_lazy = () -> Arrays.asList(AccountIdentification14Choice.mmForAllAccounts, AccountIdentification14Choice.mmAccountsListAndBalanceDetails);
+				messageBuildingBlock_lazy = () -> Arrays.asList(CorporateActionNarrativeV02.mmAccountDetails, CorporateActionNarrativeV03.mmAccountDetails);
 				trace_lazy = () -> AccountIdentification.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AccountIdentification14Choice";
 				definition = "Choice between all accounts (GENR - General in ISO 15022) or one or more selected accounts and balance information.";
 				nextVersions_lazy = () -> Arrays.asList(AccountIdentification33Choice.mmObject());

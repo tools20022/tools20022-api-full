@@ -20,13 +20,14 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.Party12Choice;
 import com.tools20022.repository.choice.Purpose2Choice;
 import com.tools20022.repository.datatype.ActiveOrHistoricCurrencyAndAmount;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.Max35Text;
-import com.tools20022.repository.entity.CashAccount;
-import com.tools20022.repository.entity.Payment;
+import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -146,14 +147,14 @@ public class NotificationItem6 {
 	 */
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradeIdentification.mmIdentification;
+			businessElementTrace_lazy = () -> TradeIdentification.mmIdentification;
 			componentContext_lazy = () -> NotificationItem6.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Unique identification, as assigned by the account owner, to unambiguously identify the expected credit entry.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.NotificationItem5.mmIdentification;
+			previousVersion_lazy = () -> NotificationItem5.mmIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -204,14 +205,14 @@ public class NotificationItem6 {
 	 */
 	public static final MMMessageAttribute mmEndToEndIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentIdentification.mmEndToEndIdentification;
+			businessElementTrace_lazy = () -> PaymentIdentification.mmEndToEndIdentification;
 			componentContext_lazy = () -> NotificationItem6.mmObject();
 			isDerived = false;
 			xmlTag = "EndToEndId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EndToEndIdentification";
 			definition = "Unique identification, as assigned by the debtor, to unambiguously identify the underlying transaction to the creditor. \nUsage: The end-to-end identification can be used for reconciliation or to link tasks relating to the transaction.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.NotificationItem5.mmEndToEndIdentification;
+			previousVersion_lazy = () -> NotificationItem5.mmEndToEndIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -258,14 +259,14 @@ public class NotificationItem6 {
 	 */
 	public static final MMMessageAssociationEnd mmAccount = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashEntry.mmCashAccount;
+			businessElementTrace_lazy = () -> CashEntry.mmCashAccount;
 			componentContext_lazy = () -> NotificationItem6.mmObject();
 			isDerived = false;
 			xmlTag = "Acct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Account";
 			definition = "Identifies the account to be credited with the incoming amount of money.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.NotificationItem5.mmAccount;
+			previousVersion_lazy = () -> NotificationItem5.mmAccount;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -311,14 +312,14 @@ public class NotificationItem6 {
 	 */
 	public static final MMMessageAssociationEnd mmAccountOwner = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> NotificationItem6.mmObject();
 			isDerived = false;
 			xmlTag = "AcctOwnr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountOwner";
 			definition = "Party that legally owns the account.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.NotificationItem5.mmAccountOwner;
+			previousVersion_lazy = () -> NotificationItem5.mmAccountOwner;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -370,14 +371,14 @@ public class NotificationItem6 {
 	 */
 	public static final MMMessageAssociationEnd mmAccountServicer = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Organisation.mmOrganisationIdentification;
+			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> NotificationItem6.mmObject();
 			isDerived = false;
 			xmlTag = "AcctSvcr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountServicer";
 			definition = "Party that manages the account on behalf of the account owner, that is manages the registration and booking of entries on the account, calculates balances on the account and provides information about the account.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.NotificationItem5.mmAccountServicer;
+			previousVersion_lazy = () -> NotificationItem5.mmAccountServicer;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -429,10 +430,10 @@ public class NotificationItem6 {
 			componentContext_lazy = () -> NotificationItem6.mmObject();
 			isDerived = false;
 			xmlTag = "RltdAcct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedAccount";
 			definition = "Business relationship between two entities; one entity is the account owner, the other entity is the account servicer.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.NotificationItem5.mmRelatedAccount;
+			previousVersion_lazy = () -> NotificationItem5.mmRelatedAccount;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -480,14 +481,14 @@ public class NotificationItem6 {
 	 */
 	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.mmAmount;
+			businessElementTrace_lazy = () -> Payment.mmAmount;
 			componentContext_lazy = () -> NotificationItem6.mmObject();
 			isDerived = false;
 			xmlTag = "Amt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Amount of money expected to be credited to the account.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.NotificationItem5.mmAmount;
+			previousVersion_lazy = () -> NotificationItem5.mmAmount;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
@@ -534,14 +535,14 @@ public class NotificationItem6 {
 	 */
 	public static final MMMessageAttribute mmExpectedValueDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.mmValueDate;
+			businessElementTrace_lazy = () -> Payment.mmValueDate;
 			componentContext_lazy = () -> NotificationItem6.mmObject();
 			isDerived = false;
 			xmlTag = "XpctdValDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExpectedValueDate";
 			definition = "Value date on which the account is expected to be credited.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.NotificationItem5.mmExpectedValueDate;
+			previousVersion_lazy = () -> NotificationItem5.mmExpectedValueDate;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
@@ -587,14 +588,14 @@ public class NotificationItem6 {
 	 */
 	public static final MMMessageAssociationEnd mmDebtor = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> NotificationItem6.mmObject();
 			isDerived = false;
 			xmlTag = "Dbtr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Debtor";
 			definition = "Party that owes an amount of money to the (ultimate) creditor.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.NotificationItem5.mmDebtor;
+			previousVersion_lazy = () -> NotificationItem5.mmDebtor;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -642,14 +643,14 @@ public class NotificationItem6 {
 	 */
 	public static final MMMessageAssociationEnd mmDebtorAgent = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Organisation.mmOrganisationIdentification;
+			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> NotificationItem6.mmObject();
 			isDerived = false;
 			xmlTag = "DbtrAgt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DebtorAgent";
 			definition = "Financial institution servicing an account for the debtor.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.NotificationItem5.mmDebtorAgent;
+			previousVersion_lazy = () -> NotificationItem5.mmDebtorAgent;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -702,14 +703,14 @@ public class NotificationItem6 {
 	 */
 	public static final MMMessageAssociationEnd mmIntermediaryAgent = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Organisation.mmOrganisationIdentification;
+			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> NotificationItem6.mmObject();
 			isDerived = false;
 			xmlTag = "IntrmyAgt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IntermediaryAgent";
 			definition = "Agent between the debtor agent and the account servicer.\nUsage: This is the agent from which the account servicer will get the amount of money. If there is more than one intermediary agent, then IntermediaryAgent identifies the agent closest to the account servicer.\nIntermediaryAgent must only be included when different from the debtor agent.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.NotificationItem5.mmIntermediaryAgent;
+			previousVersion_lazy = () -> NotificationItem5.mmIntermediaryAgent;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -755,14 +756,14 @@ public class NotificationItem6 {
 	 */
 	public static final MMMessageAssociationEnd mmPurpose = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentObligation.mmPurpose;
+			businessElementTrace_lazy = () -> PaymentObligation.mmPurpose;
 			componentContext_lazy = () -> NotificationItem6.mmObject();
 			isDerived = false;
 			xmlTag = "Purp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Purpose";
 			definition = "Underlying reason for the payment transaction.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.NotificationItem5.mmPurpose;
+			previousVersion_lazy = () -> NotificationItem5.mmPurpose;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -811,14 +812,14 @@ public class NotificationItem6 {
 	 */
 	public static final MMMessageAssociationEnd mmRelatedRemittanceInformation = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Document.mmPlaceOfStorage;
+			businessElementTrace_lazy = () -> Document.mmPlaceOfStorage;
 			componentContext_lazy = () -> NotificationItem6.mmObject();
 			isDerived = false;
 			xmlTag = "RltdRmtInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedRemittanceInformation";
 			definition = "Provides information related to the handling of the remittance information by any of the agents in the transaction processing chain.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.NotificationItem5.mmRelatedRemittanceInformation;
+			previousVersion_lazy = () -> NotificationItem5.mmRelatedRemittanceInformation;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -869,14 +870,14 @@ public class NotificationItem6 {
 	 */
 	public static final MMMessageAssociationEnd mmRemittanceInformation = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentObligation.mmAssociatedDocument;
+			businessElementTrace_lazy = () -> PaymentObligation.mmAssociatedDocument;
 			componentContext_lazy = () -> NotificationItem6.mmObject();
 			isDerived = false;
 			xmlTag = "RmtInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RemittanceInformation";
 			definition = "Structured information that enables the reconciliation of a payment with the items that the payment is intended to settle, such as commercial invoices in an account receivable system.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.NotificationItem5.mmRemittanceInformation;
+			previousVersion_lazy = () -> NotificationItem5.mmRemittanceInformation;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -887,14 +888,12 @@ public class NotificationItem6 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.NotificationItem6.mmIdentification, com.tools20022.repository.msg.NotificationItem6.mmEndToEndIdentification,
-						com.tools20022.repository.msg.NotificationItem6.mmAccount, com.tools20022.repository.msg.NotificationItem6.mmAccountOwner, com.tools20022.repository.msg.NotificationItem6.mmAccountServicer,
-						com.tools20022.repository.msg.NotificationItem6.mmRelatedAccount, com.tools20022.repository.msg.NotificationItem6.mmAmount, com.tools20022.repository.msg.NotificationItem6.mmExpectedValueDate,
-						com.tools20022.repository.msg.NotificationItem6.mmDebtor, com.tools20022.repository.msg.NotificationItem6.mmDebtorAgent, com.tools20022.repository.msg.NotificationItem6.mmIntermediaryAgent,
-						com.tools20022.repository.msg.NotificationItem6.mmPurpose, com.tools20022.repository.msg.NotificationItem6.mmRelatedRemittanceInformation, com.tools20022.repository.msg.NotificationItem6.mmRemittanceInformation);
+				messageElement_lazy = () -> Arrays.asList(NotificationItem6.mmIdentification, NotificationItem6.mmEndToEndIdentification, NotificationItem6.mmAccount, NotificationItem6.mmAccountOwner, NotificationItem6.mmAccountServicer,
+						NotificationItem6.mmRelatedAccount, NotificationItem6.mmAmount, NotificationItem6.mmExpectedValueDate, NotificationItem6.mmDebtor, NotificationItem6.mmDebtorAgent, NotificationItem6.mmIntermediaryAgent,
+						NotificationItem6.mmPurpose, NotificationItem6.mmRelatedRemittanceInformation, NotificationItem6.mmRemittanceInformation);
 				trace_lazy = () -> Payment.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "NotificationItem6";
 				definition = "Provides further means of referencing a payment transaction.";
 				previousVersion_lazy = () -> NotificationItem5.mmObject();

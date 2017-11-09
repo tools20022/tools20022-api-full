@@ -19,7 +19,9 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -106,7 +108,7 @@ public class SingleTransport2 {
 			componentContext_lazy = () -> SingleTransport2.mmObject();
 			isDerived = false;
 			xmlTag = "TrnsprtByAir";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransportByAir";
 			definition = "Information related to the transportation of goods by air.";
 			minOccurs = 0;
@@ -153,7 +155,7 @@ public class SingleTransport2 {
 			componentContext_lazy = () -> SingleTransport2.mmObject();
 			isDerived = false;
 			xmlTag = "TrnsprtBySea";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransportBySea";
 			definition = "Information related for the transportation of goods by sea.";
 			minOccurs = 0;
@@ -200,7 +202,7 @@ public class SingleTransport2 {
 			componentContext_lazy = () -> SingleTransport2.mmObject();
 			isDerived = false;
 			xmlTag = "TrnsprtByRoad";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransportByRoad";
 			definition = "Moving of goods or people from one place to another by vehicle.";
 			minOccurs = 0;
@@ -247,7 +249,7 @@ public class SingleTransport2 {
 			componentContext_lazy = () -> SingleTransport2.mmObject();
 			isDerived = false;
 			xmlTag = "TrnsprtByRail";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransportByRail";
 			definition = "Information related to the transportation of goods by rail.";
 			minOccurs = 0;
@@ -259,11 +261,10 @@ public class SingleTransport2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SingleTransport2.mmTransportByAir, com.tools20022.repository.msg.SingleTransport2.mmTransportBySea,
-						com.tools20022.repository.msg.SingleTransport2.mmTransportByRoad, com.tools20022.repository.msg.SingleTransport2.mmTransportByRail);
+				messageElement_lazy = () -> Arrays.asList(SingleTransport2.mmTransportByAir, SingleTransport2.mmTransportBySea, SingleTransport2.mmTransportByRoad, SingleTransport2.mmTransportByRail);
 				trace_lazy = () -> Transport.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SingleTransport2";
 				definition = "Specifies individually each leg of a transport of goods.";
 			}

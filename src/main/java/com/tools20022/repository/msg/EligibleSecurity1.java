@@ -19,9 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.NCBOrPaymentBank1Choice;
 import com.tools20022.repository.codeset.ActiveOrHistoricCurrencyCode;
 import com.tools20022.repository.datatype.ISINIdentifier;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -100,7 +102,7 @@ public class EligibleSecurity1 {
 			componentContext_lazy = () -> EligibleSecurity1.mmObject();
 			isDerived = false;
 			xmlTag = "SctyId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityIdentification";
 			definition = "Identification of a security by an ISIN.";
 			maxOccurs = 1;
@@ -145,7 +147,7 @@ public class EligibleSecurity1 {
 			componentContext_lazy = () -> EligibleSecurity1.mmObject();
 			isDerived = false;
 			xmlTag = "CollstnCcy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralisationCurrency";
 			definition = "Currency which may be processed by the system. A system may process transactions in a single currency or in multiple currencies.";
 			maxOccurs = 1;
@@ -188,7 +190,7 @@ public class EligibleSecurity1 {
 			componentContext_lazy = () -> EligibleSecurity1.mmObject();
 			isDerived = false;
 			xmlTag = "PtyId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartyIdentification";
 			definition = "Identifies the party for which the eligible security is defined.";
 			maxOccurs = 1;
@@ -200,10 +202,9 @@ public class EligibleSecurity1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.EligibleSecurity1.mmSecurityIdentification, com.tools20022.repository.msg.EligibleSecurity1.mmCollateralisationCurrency,
-						com.tools20022.repository.msg.EligibleSecurity1.mmPartyIdentification);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(EligibleSecurity1.mmSecurityIdentification, EligibleSecurity1.mmCollateralisationCurrency, EligibleSecurity1.mmPartyIdentification);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "EligibleSecurity1";
 				definition = "Provides details of the eligible securities as defined in the collateral reference data.";
 			}

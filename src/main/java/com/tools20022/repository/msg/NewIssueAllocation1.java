@@ -17,13 +17,12 @@
 
 package com.tools20022.repository.msg;
 
-import com.tools20022.metamodel.MMMessageAssociationEnd;
-import com.tools20022.metamodel.MMMessageAttribute;
-import com.tools20022.metamodel.MMMessageComponent;
-import com.tools20022.metamodel.MMXor;
+import com.tools20022.metamodel.*;
+import com.tools20022.repository.area.acmt.*;
 import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.Investor;
+import com.tools20022.repository.GeneratedRepository;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -162,14 +161,14 @@ public class NewIssueAllocation1 {
 	 */
 	public static final MMMessageAttribute mmRestricted = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Investor.mmRestricted;
+			businessElementTrace_lazy = () -> Investor.mmRestricted;
 			componentContext_lazy = () -> NewIssueAllocation1.mmObject();
 			isDerived = false;
 			xmlTag = "Rstrctd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Restricted";
 			definition = "Indicates whether the investor is eligible to participate in the profits and losses from a new issue.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.NewIssueAllocation2.mmRestricted);
+			nextVersions_lazy = () -> Arrays.asList(NewIssueAllocation2.mmRestricted);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
@@ -216,10 +215,10 @@ public class NewIssueAllocation1 {
 			componentContext_lazy = () -> NewIssueAllocation1.mmObject();
 			isDerived = false;
 			xmlTag = "XmptPrsnRsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExemptPersonReason";
 			definition = "Reason for exemption.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.NewIssueAllocation2.mmExemptPersonReason);
+			nextVersions_lazy = () -> Arrays.asList(NewIssueAllocation2.mmExemptPersonReason);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
@@ -262,11 +261,11 @@ public class NewIssueAllocation1 {
 	 */
 	public static final MMMessageAssociationEnd mmDeMinimusApplicable = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Investor.mmDeMinimusApplicable;
+			businessElementTrace_lazy = () -> Investor.mmDeMinimusApplicable;
 			componentContext_lazy = () -> NewIssueAllocation1.mmObject();
 			isDerived = false;
 			xmlTag = "DeMnmsAplbl";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeMinimusApplicable";
 			definition = "Conditions applicable when the investor is covered by the \"de minimis\" exemption.";
 			maxOccurs = 1;
@@ -316,7 +315,7 @@ public class NewIssueAllocation1 {
 			componentContext_lazy = () -> NewIssueAllocation1.mmObject();
 			isDerived = false;
 			xmlTag = "DeMnmsNotAplbl";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeMinimusNotApplicable";
 			definition = "Conditions applicable when the investor is not covered by the \"de minimis\" exemption.";
 			maxOccurs = 1;
@@ -331,6 +330,10 @@ public class NewIssueAllocation1 {
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
+	 * messageComponent} =
+	 * {@linkplain com.tools20022.repository.msg.NewIssueAllocation1
+	 * NewIssueAllocation1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getImpactedElements
 	 * impactedElements} =
 	 * <ul>
@@ -342,10 +345,6 @@ public class NewIssueAllocation1 {
 	 * NewIssueAllocation1.mmDeMinimusNotApplicable}</li>
 	 * </ul>
 	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
-	 * messageComponent} =
-	 * {@linkplain com.tools20022.repository.msg.NewIssueAllocation1
-	 * NewIssueAllocation1}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -361,25 +360,23 @@ public class NewIssueAllocation1 {
 	 */
 	public static final MMXor mmDeMinimusApplicableOrNotApplicableRule = new MMXor() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeMinimusApplicableOrNotApplicableRule";
 			definition = "Either DeMinimusApplicable Or DeMinimusNotApplicable maybe present, but not both.";
 			messageComponent_lazy = () -> NewIssueAllocation1.mmObject();
-			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.NewIssueAllocation1.mmDeMinimusApplicable, com.tools20022.repository.msg.NewIssueAllocation1.mmDeMinimusNotApplicable);
+			impactedElements_lazy = () -> Arrays.asList(NewIssueAllocation1.mmDeMinimusApplicable, NewIssueAllocation1.mmDeMinimusNotApplicable);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.NewIssueAllocation1.mmRestricted, com.tools20022.repository.msg.NewIssueAllocation1.mmExemptPersonReason,
-						com.tools20022.repository.msg.NewIssueAllocation1.mmDeMinimusApplicable, com.tools20022.repository.msg.NewIssueAllocation1.mmDeMinimusNotApplicable);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountDetailsConfirmationV02.mmNewIssueAllocation, com.tools20022.repository.area.acmt.AccountDetailsConfirmationV03.mmNewIssueAllocation,
-						com.tools20022.repository.area.acmt.AccountOpeningInstructionV02.mmNewIssueAllocation, com.tools20022.repository.area.acmt.AccountOpeningInstructionV03.mmNewIssueAllocation,
-						com.tools20022.repository.area.acmt.AccountDetailsConfirmationV04.mmNewIssueAllocation, com.tools20022.repository.area.acmt.AccountOpeningInstructionV04.mmNewIssueAllocation);
+				messageElement_lazy = () -> Arrays.asList(NewIssueAllocation1.mmRestricted, NewIssueAllocation1.mmExemptPersonReason, NewIssueAllocation1.mmDeMinimusApplicable, NewIssueAllocation1.mmDeMinimusNotApplicable);
+				messageBuildingBlock_lazy = () -> Arrays.asList(AccountDetailsConfirmationV02.mmNewIssueAllocation, AccountDetailsConfirmationV03.mmNewIssueAllocation, AccountOpeningInstructionV02.mmNewIssueAllocation,
+						AccountOpeningInstructionV03.mmNewIssueAllocation, AccountDetailsConfirmationV04.mmNewIssueAllocation, AccountOpeningInstructionV04.mmNewIssueAllocation);
 				trace_lazy = () -> Investor.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
 						return DateFormat.getDateInstance(java.text.DateFormat.LONG).parse("September 9, 2016");
@@ -390,7 +387,7 @@ public class NewIssueAllocation1 {
 				name = "NewIssueAllocation1";
 				definition = "Information about the investment account ownership with respect to new issue allocation for a hedge fund.";
 				nextVersions_lazy = () -> Arrays.asList(NewIssueAllocation2.mmObject());
-				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.NewIssueAllocation1.mmDeMinimusApplicableOrNotApplicableRule);
+				xors_lazy = () -> Arrays.asList(NewIssueAllocation1.mmDeMinimusApplicableOrNotApplicableRule);
 			}
 		});
 		return mmObject_lazy.get();

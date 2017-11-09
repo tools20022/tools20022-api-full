@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.RejectionReasonCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -141,7 +143,7 @@ public class RejectionReason6Code extends RejectionReasonCode {
 	 */
 	public static final MMCode mmFailedValidation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FailedValidation";
 			owner_lazy = () -> RejectionReason6Code.mmObject();
 		}
@@ -164,7 +166,7 @@ public class RejectionReason6Code extends RejectionReasonCode {
 	 */
 	public static final MMCode mmMissingOption = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MissingOption";
 			owner_lazy = () -> RejectionReason6Code.mmObject();
 		}
@@ -187,7 +189,7 @@ public class RejectionReason6Code extends RejectionReasonCode {
 	 */
 	public static final MMCode mmNotDefinedAgent = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotDefinedAgent";
 			owner_lazy = () -> RejectionReason6Code.mmObject();
 		}
@@ -210,7 +212,7 @@ public class RejectionReason6Code extends RejectionReasonCode {
 	 */
 	public static final MMCode mmMissingPeriodEndDate = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MissingPeriodEndDate";
 			owner_lazy = () -> RejectionReason6Code.mmObject();
 		}
@@ -233,7 +235,7 @@ public class RejectionReason6Code extends RejectionReasonCode {
 	 */
 	public static final MMCode mmMissingPeriodStartDate = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MissingPeriodStartDate";
 			owner_lazy = () -> RejectionReason6Code.mmObject();
 		}
@@ -256,7 +258,7 @@ public class RejectionReason6Code extends RejectionReasonCode {
 	 */
 	public static final MMCode mmMissingResultingAmount = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MissingResultingAmount";
 			owner_lazy = () -> RejectionReason6Code.mmObject();
 		}
@@ -279,7 +281,7 @@ public class RejectionReason6Code extends RejectionReasonCode {
 	 */
 	public static final MMCode mmWrongSecurityType = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WrongSecurityType";
 			owner_lazy = () -> RejectionReason6Code.mmObject();
 		}
@@ -302,7 +304,7 @@ public class RejectionReason6Code extends RejectionReasonCode {
 	 */
 	public static final MMCode mmNotEligibleDisperseSecurity = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotEligibleDisperseSecurity";
 			owner_lazy = () -> RejectionReason6Code.mmObject();
 		}
@@ -325,7 +327,7 @@ public class RejectionReason6Code extends RejectionReasonCode {
 	 */
 	public static final MMCode mmNonEligibleSecurity = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonEligibleSecurity";
 			owner_lazy = () -> RejectionReason6Code.mmObject();
 		}
@@ -348,7 +350,7 @@ public class RejectionReason6Code extends RejectionReasonCode {
 	 */
 	public static final MMCode mmMissingExchangeRate = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MissingExchangeRate";
 			owner_lazy = () -> RejectionReason6Code.mmObject();
 		}
@@ -371,7 +373,7 @@ public class RejectionReason6Code extends RejectionReasonCode {
 	 */
 	public static final MMCode mmValueDateBeforePaymentDate = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValueDateBeforePaymentDate";
 			owner_lazy = () -> RejectionReason6Code.mmObject();
 		}
@@ -394,7 +396,7 @@ public class RejectionReason6Code extends RejectionReasonCode {
 	 */
 	public static final MMCode mmUnexpectedAccruedInterest = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnexpectedAccruedInterest";
 			owner_lazy = () -> RejectionReason6Code.mmObject();
 		}
@@ -417,7 +419,7 @@ public class RejectionReason6Code extends RejectionReasonCode {
 	 */
 	public static final MMCode mmNoAccessToService = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoAccessToService";
 			owner_lazy = () -> RejectionReason6Code.mmObject();
 		}
@@ -440,7 +442,7 @@ public class RejectionReason6Code extends RejectionReasonCode {
 	 */
 	public static final MMCode mmMissingCertification = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MissingCertification";
 			owner_lazy = () -> RejectionReason6Code.mmObject();
 		}
@@ -463,7 +465,7 @@ public class RejectionReason6Code extends RejectionReasonCode {
 	 */
 	public static final MMCode mmNotBusinessDay = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotBusinessDay";
 			owner_lazy = () -> RejectionReason6Code.mmObject();
 		}
@@ -486,7 +488,7 @@ public class RejectionReason6Code extends RejectionReasonCode {
 	 */
 	public static final MMCode mmEffectiveDayAfterPaymentDate = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EffectiveDayAfterPaymentDate";
 			owner_lazy = () -> RejectionReason6Code.mmObject();
 		}
@@ -509,7 +511,7 @@ public class RejectionReason6Code extends RejectionReasonCode {
 	 */
 	public static final MMCode mmGrossAmountLessThanNetAmount = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GrossAmountLessThanNetAmount";
 			owner_lazy = () -> RejectionReason6Code.mmObject();
 		}
@@ -532,7 +534,7 @@ public class RejectionReason6Code extends RejectionReasonCode {
 	 */
 	public static final MMCode mmMissingDefaultOption = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MissingDefaultOption";
 			owner_lazy = () -> RejectionReason6Code.mmObject();
 		}
@@ -555,7 +557,7 @@ public class RejectionReason6Code extends RejectionReasonCode {
 	 */
 	public static final MMCode mmNonActiveParty = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonActiveParty";
 			owner_lazy = () -> RejectionReason6Code.mmObject();
 		}
@@ -578,7 +580,7 @@ public class RejectionReason6Code extends RejectionReasonCode {
 	 */
 	public static final MMCode mmPeriodEndDateBeforeStartDate = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PeriodEndDateBeforeStartDate";
 			owner_lazy = () -> RejectionReason6Code.mmObject();
 		}
@@ -601,7 +603,7 @@ public class RejectionReason6Code extends RejectionReasonCode {
 	 */
 	public static final MMCode mmRecordDateAfterPaymentDate = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RecordDateAfterPaymentDate";
 			owner_lazy = () -> RejectionReason6Code.mmObject();
 		}
@@ -610,22 +612,17 @@ public class RejectionReason6Code extends RejectionReasonCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("FAIL");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RejectionReason6Code";
 				definition = "Specifies the reason of a rejection of the notification advice.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RejectionReason6Code.mmFailedValidation, com.tools20022.repository.codeset.RejectionReason6Code.mmMissingOption,
-						com.tools20022.repository.codeset.RejectionReason6Code.mmNotDefinedAgent, com.tools20022.repository.codeset.RejectionReason6Code.mmMissingPeriodEndDate,
-						com.tools20022.repository.codeset.RejectionReason6Code.mmMissingPeriodStartDate, com.tools20022.repository.codeset.RejectionReason6Code.mmMissingResultingAmount,
-						com.tools20022.repository.codeset.RejectionReason6Code.mmWrongSecurityType, com.tools20022.repository.codeset.RejectionReason6Code.mmNotEligibleDisperseSecurity,
-						com.tools20022.repository.codeset.RejectionReason6Code.mmNonEligibleSecurity, com.tools20022.repository.codeset.RejectionReason6Code.mmMissingExchangeRate,
-						com.tools20022.repository.codeset.RejectionReason6Code.mmValueDateBeforePaymentDate, com.tools20022.repository.codeset.RejectionReason6Code.mmUnexpectedAccruedInterest,
-						com.tools20022.repository.codeset.RejectionReason6Code.mmNoAccessToService, com.tools20022.repository.codeset.RejectionReason6Code.mmMissingCertification,
-						com.tools20022.repository.codeset.RejectionReason6Code.mmNotBusinessDay, com.tools20022.repository.codeset.RejectionReason6Code.mmEffectiveDayAfterPaymentDate,
-						com.tools20022.repository.codeset.RejectionReason6Code.mmGrossAmountLessThanNetAmount, com.tools20022.repository.codeset.RejectionReason6Code.mmMissingDefaultOption,
-						com.tools20022.repository.codeset.RejectionReason6Code.mmNonActiveParty, com.tools20022.repository.codeset.RejectionReason6Code.mmPeriodEndDateBeforeStartDate,
-						com.tools20022.repository.codeset.RejectionReason6Code.mmRecordDateAfterPaymentDate);
+				code_lazy = () -> Arrays.asList(RejectionReason6Code.mmFailedValidation, RejectionReason6Code.mmMissingOption, RejectionReason6Code.mmNotDefinedAgent, RejectionReason6Code.mmMissingPeriodEndDate,
+						RejectionReason6Code.mmMissingPeriodStartDate, RejectionReason6Code.mmMissingResultingAmount, RejectionReason6Code.mmWrongSecurityType, RejectionReason6Code.mmNotEligibleDisperseSecurity,
+						RejectionReason6Code.mmNonEligibleSecurity, RejectionReason6Code.mmMissingExchangeRate, RejectionReason6Code.mmValueDateBeforePaymentDate, RejectionReason6Code.mmUnexpectedAccruedInterest,
+						RejectionReason6Code.mmNoAccessToService, RejectionReason6Code.mmMissingCertification, RejectionReason6Code.mmNotBusinessDay, RejectionReason6Code.mmEffectiveDayAfterPaymentDate,
+						RejectionReason6Code.mmGrossAmountLessThanNetAmount, RejectionReason6Code.mmMissingDefaultOption, RejectionReason6Code.mmNonActiveParty, RejectionReason6Code.mmPeriodEndDateBeforeStartDate,
+						RejectionReason6Code.mmRecordDateAfterPaymentDate);
 				trace_lazy = () -> RejectionReasonCode.mmObject();
 			}
 		});

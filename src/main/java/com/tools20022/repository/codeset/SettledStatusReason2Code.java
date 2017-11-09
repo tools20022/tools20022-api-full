@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.SettledStatusReasonCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -87,7 +89,7 @@ public class SettledStatusReason2Code extends SettledStatusReasonCode {
 	 */
 	public static final MMCode mmCashPartiallySettled = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashPartiallySettled";
 			owner_lazy = () -> SettledStatusReason2Code.mmObject();
 		}
@@ -110,7 +112,7 @@ public class SettledStatusReason2Code extends SettledStatusReasonCode {
 	 */
 	public static final MMCode mmGatedMultipleNAV = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GatedMultipleNAV";
 			owner_lazy = () -> SettledStatusReason2Code.mmObject();
 		}
@@ -133,7 +135,7 @@ public class SettledStatusReason2Code extends SettledStatusReasonCode {
 	 */
 	public static final MMCode mmGatedOneNAV = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GatedOneNAV";
 			owner_lazy = () -> SettledStatusReason2Code.mmObject();
 		}
@@ -156,7 +158,7 @@ public class SettledStatusReason2Code extends SettledStatusReasonCode {
 	 */
 	public static final MMCode mmUnitsCashPartiallySettled = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnitsCashPartiallySettled";
 			owner_lazy = () -> SettledStatusReason2Code.mmObject();
 		}
@@ -179,7 +181,7 @@ public class SettledStatusReason2Code extends SettledStatusReasonCode {
 	 */
 	public static final MMCode mmUnitsPartiallySettled = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnitsPartiallySettled";
 			owner_lazy = () -> SettledStatusReason2Code.mmObject();
 		}
@@ -188,13 +190,12 @@ public class SettledStatusReason2Code extends SettledStatusReasonCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SettledStatusReason2Code";
 				definition = "Partial settlement status information or information about gating";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SettledStatusReason2Code.mmCashPartiallySettled, com.tools20022.repository.codeset.SettledStatusReason2Code.mmGatedMultipleNAV,
-						com.tools20022.repository.codeset.SettledStatusReason2Code.mmGatedOneNAV, com.tools20022.repository.codeset.SettledStatusReason2Code.mmUnitsCashPartiallySettled,
-						com.tools20022.repository.codeset.SettledStatusReason2Code.mmUnitsPartiallySettled);
+				code_lazy = () -> Arrays.asList(SettledStatusReason2Code.mmCashPartiallySettled, SettledStatusReason2Code.mmGatedMultipleNAV, SettledStatusReason2Code.mmGatedOneNAV, SettledStatusReason2Code.mmUnitsCashPartiallySettled,
+						SettledStatusReason2Code.mmUnitsPartiallySettled);
 				trace_lazy = () -> SettledStatusReasonCode.mmObject();
 			}
 		});

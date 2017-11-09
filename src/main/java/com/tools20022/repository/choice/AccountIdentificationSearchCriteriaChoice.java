@@ -19,7 +19,9 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -99,7 +101,7 @@ public class AccountIdentificationSearchCriteriaChoice {
 			componentContext_lazy = () -> AccountIdentificationSearchCriteriaChoice.mmObject();
 			isDerived = false;
 			xmlTag = "EQ";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Equal";
 			definition = "Search for one or more accounts based on exact identification of the account(s).";
 			maxOccurs = 1;
@@ -143,7 +145,7 @@ public class AccountIdentificationSearchCriteriaChoice {
 			componentContext_lazy = () -> AccountIdentificationSearchCriteriaChoice.mmObject();
 			isDerived = false;
 			xmlTag = "CTTxt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ContainText";
 			definition = "Search for one or more accounts based on partial identification of the account(s).";
 			maxOccurs = 1;
@@ -187,7 +189,7 @@ public class AccountIdentificationSearchCriteriaChoice {
 			componentContext_lazy = () -> AccountIdentificationSearchCriteriaChoice.mmObject();
 			isDerived = false;
 			xmlTag = "NCTTxt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotContainText";
 			definition = "Search for one or more accounts based on a pattern that cannot be contained in the account identification.";
 			maxOccurs = 1;
@@ -199,10 +201,9 @@ public class AccountIdentificationSearchCriteriaChoice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AccountIdentificationSearchCriteriaChoice.mmEqual, com.tools20022.repository.choice.AccountIdentificationSearchCriteriaChoice.mmContainText,
-						com.tools20022.repository.choice.AccountIdentificationSearchCriteriaChoice.mmNotContainText);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(AccountIdentificationSearchCriteriaChoice.mmEqual, AccountIdentificationSearchCriteriaChoice.mmContainText, AccountIdentificationSearchCriteriaChoice.mmNotContainText);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "AccountIdentificationSearchCriteriaChoice";
 				definition = "Choice between the different options to search for an account.";
 			}

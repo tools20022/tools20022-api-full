@@ -17,9 +17,13 @@
 
 package com.tools20022.repository.entity;
 
+import com.tools20022.metamodel.MMAggregation;
 import com.tools20022.metamodel.MMBusinessAssociationEnd;
 import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.Payment;
+import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.TransactionCertificate2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -33,26 +37,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.IndividualPayment#mmBulkPayment
- * IndividualPayment.mmBulkPayment}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
- * subType} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.ChequePayment ChequePayment}
- * </li>
- * <li>{@linkplain com.tools20022.repository.entity.CardPayment CardPayment}</li>
- * <li>{@linkplain com.tools20022.repository.entity.DirectDebit DirectDebit}</li>
- * <li>{@linkplain com.tools20022.repository.entity.CashDeposit CashDeposit}</li>
- * <li>{@linkplain com.tools20022.repository.entity.CreditTransfer
- * CreditTransfer}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
  * associationDomain} =
@@ -72,6 +56,26 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
  * superType} = {@linkplain com.tools20022.repository.entity.Payment Payment}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
+ * subType} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.ChequePayment ChequePayment}
+ * </li>
+ * <li>{@linkplain com.tools20022.repository.entity.CardPayment CardPayment}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.DirectDebit DirectDebit}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.CashDeposit CashDeposit}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.CreditTransfer
+ * CreditTransfer}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.IndividualPayment#mmBulkPayment
+ * IndividualPayment.mmBulkPayment}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -130,13 +134,13 @@ public class IndividualPayment extends Payment {
 		{
 			elementContext_lazy = () -> IndividualPayment.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BulkPayment";
 			definition = "Payment hich groups a series of individual payments.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.BulkPayment.mmGroups;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.BulkPayment.mmObject();
 		}
 	};
@@ -144,15 +148,15 @@ public class IndividualPayment extends Payment {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "IndividualPayment";
 				definition = "Payment which consists of one single transaction. This payment may be grouped with other similar payments to form a bulk payment.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.BulkPayment.mmGroups);
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionCertificate2.mmReferredDocument);
+				derivationElement_lazy = () -> Arrays.asList(TransactionCertificate2.mmReferredDocument);
 				subType_lazy = () -> Arrays.asList(ChequePayment.mmObject(), CardPayment.mmObject(), DirectDebit.mmObject(), CashDeposit.mmObject(), CreditTransfer.mmObject());
 				superType_lazy = () -> Payment.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.IndividualPayment.mmBulkPayment);
+				element_lazy = () -> Arrays.asList(IndividualPayment.mmBulkPayment);
 			}
 		});
 		return mmObject_lazy.get();

@@ -20,8 +20,10 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.StatisticalReportingStatus2Code;
 import com.tools20022.repository.datatype.Max105Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -124,10 +126,10 @@ public class MoneyMarketTransactionStatus1 {
 			componentContext_lazy = () -> MoneyMarketTransactionStatus1.mmObject();
 			isDerived = false;
 			xmlTag = "UnqTxIdr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UniqueTransactionIdentifier";
 			definition = "Unique transaction identifier will be created at the time a transaction is first executed, shared with all registered entities and counterparties involved in the transaction, and used to track that particular transaction during its lifetime.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MoneyMarketTransactionStatus2.mmUniqueTransactionIdentifier);
+			nextVersions_lazy = () -> Arrays.asList(MoneyMarketTransactionStatus2.mmUniqueTransactionIdentifier);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max105Text.mmObject();
@@ -177,10 +179,10 @@ public class MoneyMarketTransactionStatus1 {
 			componentContext_lazy = () -> MoneyMarketTransactionStatus1.mmObject();
 			isDerived = false;
 			xmlTag = "PrtryTxId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProprietaryTransactionIdentification";
 			definition = "Internal unique transaction identifier used by the reporting agent for each transaction. ";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MoneyMarketTransactionStatus2.mmProprietaryTransactionIdentification);
+			nextVersions_lazy = () -> Arrays.asList(MoneyMarketTransactionStatus2.mmProprietaryTransactionIdentification);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max105Text.mmObject();
@@ -228,10 +230,10 @@ public class MoneyMarketTransactionStatus1 {
 			componentContext_lazy = () -> MoneyMarketTransactionStatus1.mmObject();
 			isDerived = false;
 			xmlTag = "Sts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Status";
 			definition = "Defines status of the reported transaction.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MoneyMarketTransactionStatus2.mmStatus);
+			nextVersions_lazy = () -> Arrays.asList(MoneyMarketTransactionStatus2.mmStatus);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> StatisticalReportingStatus2Code.mmObject();
@@ -279,10 +281,10 @@ public class MoneyMarketTransactionStatus1 {
 			componentContext_lazy = () -> MoneyMarketTransactionStatus1.mmObject();
 			isDerived = false;
 			xmlTag = "VldtnRule";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValidationRule";
 			definition = "Provides the details of the rule which could not be validated.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MoneyMarketTransactionStatus2.mmValidationRule);
+			nextVersions_lazy = () -> Arrays.asList(MoneyMarketTransactionStatus2.mmValidationRule);
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.GenericValidationRuleIdentification1.mmObject();
@@ -331,10 +333,10 @@ public class MoneyMarketTransactionStatus1 {
 			componentContext_lazy = () -> MoneyMarketTransactionStatus1.mmObject();
 			isDerived = false;
 			xmlTag = "SplmtryData";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryData";
 			definition = "Additional information that can not be captured in the structured fields and/or any other specific block.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MoneyMarketTransactionStatus2.mmSupplementaryData);
+			nextVersions_lazy = () -> Arrays.asList(MoneyMarketTransactionStatus2.mmSupplementaryData);
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.SupplementaryData1.mmObject();
@@ -344,11 +346,10 @@ public class MoneyMarketTransactionStatus1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MoneyMarketTransactionStatus1.mmUniqueTransactionIdentifier,
-						com.tools20022.repository.msg.MoneyMarketTransactionStatus1.mmProprietaryTransactionIdentification, com.tools20022.repository.msg.MoneyMarketTransactionStatus1.mmStatus,
-						com.tools20022.repository.msg.MoneyMarketTransactionStatus1.mmValidationRule, com.tools20022.repository.msg.MoneyMarketTransactionStatus1.mmSupplementaryData);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(MoneyMarketTransactionStatus1.mmUniqueTransactionIdentifier, MoneyMarketTransactionStatus1.mmProprietaryTransactionIdentification, MoneyMarketTransactionStatus1.mmStatus,
+						MoneyMarketTransactionStatus1.mmValidationRule, MoneyMarketTransactionStatus1.mmSupplementaryData);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MoneyMarketTransactionStatus1";
 				definition = "Provides the details of each individual secured market transaction.";
 				nextVersions_lazy = () -> Arrays.asList(MoneyMarketTransactionStatus2.mmObject());

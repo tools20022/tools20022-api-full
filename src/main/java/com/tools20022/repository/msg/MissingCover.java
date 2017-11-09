@@ -19,8 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.camt.ClaimNonReceipt;
 import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.PaymentInvestigationCase;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -106,11 +109,11 @@ public class MissingCover {
 	 */
 	public static final MMMessageAttribute mmMissingCoverIndication = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentInvestigationCase.mmMissingCoverIndication;
+			businessElementTrace_lazy = () -> PaymentInvestigationCase.mmMissingCoverIndication;
 			componentContext_lazy = () -> MissingCover.mmObject();
 			isDerived = false;
 			xmlTag = "MssngCoverIndctn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MissingCoverIndication";
 			definition = "Indicates whether or not the claim is related to a missing cover.";
 			maxOccurs = 1;
@@ -122,11 +125,11 @@ public class MissingCover {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MissingCover.mmMissingCoverIndication);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.ClaimNonReceipt.mmMissingCover);
+				messageElement_lazy = () -> Arrays.asList(MissingCover.mmMissingCoverIndication);
+				messageBuildingBlock_lazy = () -> Arrays.asList(ClaimNonReceipt.mmMissingCover);
 				trace_lazy = () -> PaymentInvestigationCase.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MissingCover";
 				definition = "Indicates that the claim for non receipt is effectively a missing cover.";
 			}

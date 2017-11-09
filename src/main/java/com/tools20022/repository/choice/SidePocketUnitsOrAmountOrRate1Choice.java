@@ -19,9 +19,14 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
 import com.tools20022.repository.datatype.PercentageRate;
+import com.tools20022.repository.entity.InvestmentFundOrder;
+import com.tools20022.repository.entity.InvestmentFundOrderExecution;
+import com.tools20022.repository.entity.SecuritiesOrder;
 import com.tools20022.repository.entity.SecuritiesQuantity;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.FinancialInstrumentQuantity1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -105,11 +110,11 @@ public class SidePocketUnitsOrAmountOrRate1Choice {
 	 */
 	public static final MMMessageAttribute mmUnitsNumber = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrderExecution.mmUnitsNumber;
+			businessElementTrace_lazy = () -> InvestmentFundOrderExecution.mmUnitsNumber;
 			componentContext_lazy = () -> SidePocketUnitsOrAmountOrRate1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "UnitsNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnitsNumber";
 			definition = "Total quantity of units to be subscribed or redeemed in the side pocket.";
 			maxOccurs = 1;
@@ -154,11 +159,11 @@ public class SidePocketUnitsOrAmountOrRate1Choice {
 	 */
 	public static final MMMessageAttribute mmOrderedAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmOrderedAmount;
+			businessElementTrace_lazy = () -> SecuritiesOrder.mmOrderedAmount;
 			componentContext_lazy = () -> SidePocketUnitsOrAmountOrRate1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "OrdrdAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrderedAmount";
 			definition = "Amount of money to be invested or redeemed into the side pocket.";
 			maxOccurs = 1;
@@ -205,11 +210,11 @@ public class SidePocketUnitsOrAmountOrRate1Choice {
 	 */
 	public static final MMMessageAttribute mmHoldingsRate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrder.mmHoldingsRate;
+			businessElementTrace_lazy = () -> InvestmentFundOrder.mmHoldingsRate;
 			componentContext_lazy = () -> SidePocketUnitsOrAmountOrRate1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "HldgsRate";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HoldingsRate";
 			definition = "Percentage of the financial instrument quantity to be invested or redeemed in the side pocket or lot.";
 			maxOccurs = 1;
@@ -221,11 +226,10 @@ public class SidePocketUnitsOrAmountOrRate1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SidePocketUnitsOrAmountOrRate1Choice.mmUnitsNumber, com.tools20022.repository.choice.SidePocketUnitsOrAmountOrRate1Choice.mmOrderedAmount,
-						com.tools20022.repository.choice.SidePocketUnitsOrAmountOrRate1Choice.mmHoldingsRate);
+				messageElement_lazy = () -> Arrays.asList(SidePocketUnitsOrAmountOrRate1Choice.mmUnitsNumber, SidePocketUnitsOrAmountOrRate1Choice.mmOrderedAmount, SidePocketUnitsOrAmountOrRate1Choice.mmHoldingsRate);
 				trace_lazy = () -> SecuritiesQuantity.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SidePocketUnitsOrAmountOrRate1Choice";
 				definition = "Choice of side pocket units, or amount, or rate.";
 			}

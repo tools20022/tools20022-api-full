@@ -20,8 +20,12 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.entity.Entry;
 import com.tools20022.repository.entity.PaymentIdentification;
+import com.tools20022.repository.entity.TradeIdentification;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -120,10 +124,10 @@ public class CertificateIdentification1 {
 			componentContext_lazy = () -> CertificateIdentification1.mmObject();
 			isDerived = false;
 			xmlTag = "MsgId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageIdentification";
 			definition = "Point to point reference, as assigned by the instructing party of the underlying message.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TransactionReferences2.mmMessageIdentification;
+			previousVersion_lazy = () -> TransactionReferences2.mmMessageIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -172,14 +176,14 @@ public class CertificateIdentification1 {
 	 */
 	public static final MMMessageAttribute mmAccountServicerReference = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Entry.mmIdentification;
+			businessElementTrace_lazy = () -> Entry.mmIdentification;
 			componentContext_lazy = () -> CertificateIdentification1.mmObject();
 			isDerived = false;
 			xmlTag = "AcctSvcrRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountServicerReference";
 			definition = "Unique reference, as assigned by the account servicing institution, to unambiguously identify the instruction.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TransactionReferences2.mmAccountServicerReference;
+			previousVersion_lazy = () -> TransactionReferences2.mmAccountServicerReference;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -228,14 +232,14 @@ public class CertificateIdentification1 {
 	 */
 	public static final MMMessageAttribute mmPaymentInformationIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradeIdentification.mmIdentification;
+			businessElementTrace_lazy = () -> TradeIdentification.mmIdentification;
 			componentContext_lazy = () -> CertificateIdentification1.mmObject();
 			isDerived = false;
 			xmlTag = "PmtInfId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentInformationIdentification";
 			definition = "Unique identification, as assigned by a sending party, to unambiguously identify the payment information group within the message.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TransactionReferences2.mmPaymentInformationIdentification;
+			previousVersion_lazy = () -> TransactionReferences2.mmPaymentInformationIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -289,14 +293,14 @@ public class CertificateIdentification1 {
 	 */
 	public static final MMMessageAttribute mmInstructionIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentIdentification.mmInstructionIdentification;
+			businessElementTrace_lazy = () -> PaymentIdentification.mmInstructionIdentification;
 			componentContext_lazy = () -> CertificateIdentification1.mmObject();
 			isDerived = false;
 			xmlTag = "InstrId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructionIdentification";
 			definition = "Unique identification, as assigned by an instructing party for an instructed party, to unambiguously identify the instruction.\n\nUsage: The instruction identification is a point to point reference that can be used between the instructing party and the instructed party to refer to the individual instruction. It can be included in several messages related to the instruction.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TransactionReferences2.mmInstructionIdentification;
+			previousVersion_lazy = () -> TransactionReferences2.mmInstructionIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -354,14 +358,14 @@ public class CertificateIdentification1 {
 	 */
 	public static final MMMessageAttribute mmEndToEndIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentIdentification.mmEndToEndIdentification;
+			businessElementTrace_lazy = () -> PaymentIdentification.mmEndToEndIdentification;
 			componentContext_lazy = () -> CertificateIdentification1.mmObject();
 			isDerived = false;
 			xmlTag = "EndToEndId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EndToEndIdentification";
 			definition = "Unique identification, as assigned by the initiating party, to unambiguously identify the transaction. This identification is passed on, unchanged, throughout the entire end-to-end chain.\n\nUsage: The end-to-end identification can be used for reconciliation or to link tasks relating to the transaction. It can be included in several messages related to the transaction.\n\nUsage: In case there are technical limitations to pass on multiple references, the end-to-end identification must be passed on throughout the entire end-to-end chain.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TransactionReferences2.mmEndToEndIdentification;
+			previousVersion_lazy = () -> TransactionReferences2.mmEndToEndIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -405,10 +409,10 @@ public class CertificateIdentification1 {
 			componentContext_lazy = () -> CertificateIdentification1.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Proprietary reference related to the underlying transaction.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TransactionReferences2.mmProprietary;
+			previousVersion_lazy = () -> TransactionReferences2.mmProprietary;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -419,12 +423,11 @@ public class CertificateIdentification1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CertificateIdentification1.mmMessageIdentification, com.tools20022.repository.msg.CertificateIdentification1.mmAccountServicerReference,
-						com.tools20022.repository.msg.CertificateIdentification1.mmPaymentInformationIdentification, com.tools20022.repository.msg.CertificateIdentification1.mmInstructionIdentification,
-						com.tools20022.repository.msg.CertificateIdentification1.mmEndToEndIdentification, com.tools20022.repository.msg.CertificateIdentification1.mmProprietary);
+				messageElement_lazy = () -> Arrays.asList(CertificateIdentification1.mmMessageIdentification, CertificateIdentification1.mmAccountServicerReference, CertificateIdentification1.mmPaymentInformationIdentification,
+						CertificateIdentification1.mmInstructionIdentification, CertificateIdentification1.mmEndToEndIdentification, CertificateIdentification1.mmProprietary);
 				trace_lazy = () -> PaymentIdentification.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CertificateIdentification1";
 				definition = "Identification references of the underlying transaction.";
 				previousVersion_lazy = () -> TransactionReferences2.mmObject();

@@ -20,9 +20,12 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.Max4AlphaNumericText;
 import com.tools20022.repository.entity.AmendmentOfUndertaking;
+import com.tools20022.repository.entity.Party;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -104,11 +107,11 @@ public class Amendment8 {
 	 */
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AmendmentOfUndertaking.mmAmendmentIdentification;
+			businessElementTrace_lazy = () -> AmendmentOfUndertaking.mmAmendmentIdentification;
 			componentContext_lazy = () -> Amendment8.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Unique and unambiguous identifier assigned by the issuer to the undertaking, for example the guarantee or standby number.";
 			maxOccurs = 1;
@@ -152,7 +155,7 @@ public class Amendment8 {
 			componentContext_lazy = () -> Amendment8.mmObject();
 			isDerived = false;
 			xmlTag = "SeqNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SequenceNumber";
 			definition = "Sequence number assigned by the issuer to each amendment of the undertaking.";
 			maxOccurs = 1;
@@ -195,7 +198,7 @@ public class Amendment8 {
 			componentContext_lazy = () -> Amendment8.mmObject();
 			isDerived = false;
 			xmlTag = "BnfcryRefNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BeneficiaryReferenceNumber";
 			definition = "Unique and unambiguous identifier assigned by the beneficiary to the undertaking.";
 			maxOccurs = 1;
@@ -236,11 +239,11 @@ public class Amendment8 {
 	 */
 	public static final MMMessageAssociationEnd mmIssuer = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> Amendment8.mmObject();
 			isDerived = false;
 			xmlTag = "Issr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Issuer";
 			definition = "Party that issues the undertaking. ";
 			maxOccurs = 1;
@@ -253,11 +256,10 @@ public class Amendment8 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Amendment8.mmIdentification, com.tools20022.repository.msg.Amendment8.mmSequenceNumber,
-						com.tools20022.repository.msg.Amendment8.mmBeneficiaryReferenceNumber, com.tools20022.repository.msg.Amendment8.mmIssuer);
+				messageElement_lazy = () -> Arrays.asList(Amendment8.mmIdentification, Amendment8.mmSequenceNumber, Amendment8.mmBeneficiaryReferenceNumber, Amendment8.mmIssuer);
 				trace_lazy = () -> AmendmentOfUndertaking.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Amendment8";
 				definition = "Amendment identification.";
 			}

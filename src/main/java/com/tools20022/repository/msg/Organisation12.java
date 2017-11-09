@@ -20,11 +20,15 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.acmt.AccountOpeningAmendmentRequestV02;
+import com.tools20022.repository.area.acmt.AccountOpeningRequestV02;
+import com.tools20022.repository.area.acmt.AccountReportV02;
 import com.tools20022.repository.codeset.CountryCode;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.Max350Text;
-import com.tools20022.repository.entity.Organisation;
-import com.tools20022.repository.entity.PostalAddress;
+import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -162,11 +166,11 @@ public class Organisation12 {
 	 */
 	public static final MMMessageAttribute mmFullLegalName = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationName.mmLegalName;
+			businessElementTrace_lazy = () -> OrganisationName.mmLegalName;
 			componentContext_lazy = () -> Organisation12.mmObject();
 			isDerived = false;
 			xmlTag = "FullLglNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FullLegalName";
 			definition = "Name by which a party is known and which is usually used to identify that party.";
 			maxOccurs = 1;
@@ -212,11 +216,11 @@ public class Organisation12 {
 	 */
 	public static final MMMessageAttribute mmTradingName = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationName.mmTradingName;
+			businessElementTrace_lazy = () -> OrganisationName.mmTradingName;
 			componentContext_lazy = () -> Organisation12.mmObject();
 			isDerived = false;
 			xmlTag = "TradgNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradingName";
 			definition = "Name used by a business for commercial purposes, although its registered legal name, used for contracts and other formal situations, may be another.";
 			maxOccurs = 1;
@@ -259,11 +263,11 @@ public class Organisation12 {
 	 */
 	public static final MMMessageAttribute mmCountryOfOperation = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Country.mmCode;
+			businessElementTrace_lazy = () -> Country.mmCode;
 			componentContext_lazy = () -> Organisation12.mmObject();
 			isDerived = false;
 			xmlTag = "CtryOfOpr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CountryOfOperation";
 			definition = "Country in which the organisation has its business activity.";
 			maxOccurs = 1;
@@ -306,11 +310,11 @@ public class Organisation12 {
 	 */
 	public static final MMMessageAttribute mmRegistrationDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Organisation.mmRegistrationDate;
+			businessElementTrace_lazy = () -> Organisation.mmRegistrationDate;
 			componentContext_lazy = () -> Organisation12.mmObject();
 			isDerived = false;
 			xmlTag = "RegnDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RegistrationDate";
 			definition = "Date and time at which a given organisation was officially registered.";
 			maxOccurs = 1;
@@ -352,11 +356,11 @@ public class Organisation12 {
 	 */
 	public static final MMMessageAssociationEnd mmOperationalAddress = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Location.mmAddress;
+			businessElementTrace_lazy = () -> Location.mmAddress;
 			componentContext_lazy = () -> Organisation12.mmObject();
 			isDerived = false;
 			xmlTag = "OprlAdr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OperationalAddress";
 			definition = "Is an operational address, for example, of a shared services center.";
 			maxOccurs = 1;
@@ -403,7 +407,7 @@ public class Organisation12 {
 			componentContext_lazy = () -> Organisation12.mmObject();
 			isDerived = false;
 			xmlTag = "BizAdr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BusinessAddress";
 			definition = "Is the address where the business activity is taking place.";
 			maxOccurs = 1;
@@ -452,7 +456,7 @@ public class Organisation12 {
 			componentContext_lazy = () -> Organisation12.mmObject();
 			isDerived = false;
 			xmlTag = "LglAdr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LegalAddress";
 			definition = "Is the address where the entity resides and is registered. More generically, it is the home address (Residential address).";
 			maxOccurs = 1;
@@ -499,7 +503,7 @@ public class Organisation12 {
 			componentContext_lazy = () -> Organisation12.mmObject();
 			isDerived = false;
 			xmlTag = "BllgAdr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BillingAddress";
 			definition = "Address where invoices must be sent.";
 			maxOccurs = 1;
@@ -542,11 +546,11 @@ public class Organisation12 {
 	 */
 	public static final MMMessageAssociationEnd mmOrganisationIdentification = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Organisation.mmOrganisationIdentification;
+			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> Organisation12.mmObject();
 			isDerived = false;
 			xmlTag = "OrgId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrganisationIdentification";
 			definition = "Unique and unambiguous way of identifying an organisation.";
 			maxOccurs = 1;
@@ -591,11 +595,11 @@ public class Organisation12 {
 	 */
 	public static final MMMessageAssociationEnd mmRepresentativeOfficer = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> Organisation12.mmObject();
 			isDerived = false;
 			xmlTag = "RprtvOffcr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RepresentativeOfficer";
 			definition = "Person in the customer's organisation who can be contacted by the account servicer in relation to the account(s) identified in this instruction.";
 			minOccurs = 0;
@@ -639,11 +643,11 @@ public class Organisation12 {
 	 */
 	public static final MMMessageAssociationEnd mmTreasuryManager = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> Organisation12.mmObject();
 			isDerived = false;
 			xmlTag = "TrsrMgr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TreasuryManager";
 			definition = "Person responsible of the treasury department within the customer’s organisation.";
 			maxOccurs = 1;
@@ -689,11 +693,11 @@ public class Organisation12 {
 	 */
 	public static final MMMessageAssociationEnd mmMainMandateHolder = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> Organisation12.mmObject();
 			isDerived = false;
 			xmlTag = "MainMndtHldr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MainMandateHolder";
 			definition = "Person that has the mandate to delegate authority, to assign mandates to other individuals (mandate holders) to perform specific bank operations on the account.";
 			minOccurs = 0;
@@ -735,7 +739,7 @@ public class Organisation12 {
 			componentContext_lazy = () -> Organisation12.mmObject();
 			isDerived = false;
 			xmlTag = "Sndr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Sender";
 			definition = "Person that may be the potential sender of a message related to the life cycle of the account.";
 			minOccurs = 0;
@@ -784,11 +788,11 @@ public class Organisation12 {
 	 */
 	public static final MMMessageAttribute mmLegalRepresentative = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> Organisation12.mmObject();
 			isDerived = false;
 			xmlTag = "LglRprtv";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LegalRepresentative";
 			definition = "Person that is officially and legally mandated to represent the organisation. Depending on legislation, the legal representative(s) might for instance be assigned by the Board, identified in the by-laws of the organisation, be publicly announced in the official journal of a country, etc.";
 			minOccurs = 0;
@@ -799,16 +803,13 @@ public class Organisation12 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Organisation12.mmFullLegalName, com.tools20022.repository.msg.Organisation12.mmTradingName,
-						com.tools20022.repository.msg.Organisation12.mmCountryOfOperation, com.tools20022.repository.msg.Organisation12.mmRegistrationDate, com.tools20022.repository.msg.Organisation12.mmOperationalAddress,
-						com.tools20022.repository.msg.Organisation12.mmBusinessAddress, com.tools20022.repository.msg.Organisation12.mmLegalAddress, com.tools20022.repository.msg.Organisation12.mmBillingAddress,
-						com.tools20022.repository.msg.Organisation12.mmOrganisationIdentification, com.tools20022.repository.msg.Organisation12.mmRepresentativeOfficer, com.tools20022.repository.msg.Organisation12.mmTreasuryManager,
-						com.tools20022.repository.msg.Organisation12.mmMainMandateHolder, com.tools20022.repository.msg.Organisation12.mmSender, com.tools20022.repository.msg.Organisation12.mmLegalRepresentative);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountOpeningAmendmentRequestV02.mmOrganisation, com.tools20022.repository.area.acmt.AccountOpeningRequestV02.mmOrganisation,
-						com.tools20022.repository.area.acmt.AccountReportV02.mmOrganisation);
+				messageElement_lazy = () -> Arrays.asList(Organisation12.mmFullLegalName, Organisation12.mmTradingName, Organisation12.mmCountryOfOperation, Organisation12.mmRegistrationDate, Organisation12.mmOperationalAddress,
+						Organisation12.mmBusinessAddress, Organisation12.mmLegalAddress, Organisation12.mmBillingAddress, Organisation12.mmOrganisationIdentification, Organisation12.mmRepresentativeOfficer,
+						Organisation12.mmTreasuryManager, Organisation12.mmMainMandateHolder, Organisation12.mmSender, Organisation12.mmLegalRepresentative);
+				messageBuildingBlock_lazy = () -> Arrays.asList(AccountOpeningAmendmentRequestV02.mmOrganisation, AccountOpeningRequestV02.mmOrganisation, AccountReportV02.mmOrganisation);
 				trace_lazy = () -> Organisation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Organisation12";
 				definition = "Information which describes the organisation.";
 				nextVersions_lazy = () -> Arrays.asList(Organisation14.mmObject(), OrganisationModification1.mmObject());

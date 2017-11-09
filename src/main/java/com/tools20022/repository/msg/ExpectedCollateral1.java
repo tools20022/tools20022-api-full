@@ -19,7 +19,9 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.ExpectedCollateralType;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -121,10 +123,10 @@ public class ExpectedCollateral1 {
 			componentContext_lazy = () -> ExpectedCollateral1.mmObject();
 			isDerived = false;
 			xmlTag = "VartnMrgn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VariationMargin";
 			definition = "Provides the expected collateral type and direction for the variation margin.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ExpectedCollateral2.mmVariationMargin);
+			nextVersions_lazy = () -> Arrays.asList(ExpectedCollateral2.mmVariationMargin);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -181,10 +183,10 @@ public class ExpectedCollateral1 {
 			componentContext_lazy = () -> ExpectedCollateral1.mmObject();
 			isDerived = false;
 			xmlTag = "SgrtdIndpdntAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SegregatedIndependentAmount";
 			definition = "Provides the expected collateral type and direction for the segregated independent amount.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ExpectedCollateral2.mmSegregatedIndependentAmount);
+			nextVersions_lazy = () -> Arrays.asList(ExpectedCollateral2.mmSegregatedIndependentAmount);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -195,10 +197,10 @@ public class ExpectedCollateral1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ExpectedCollateral1.mmVariationMargin, com.tools20022.repository.msg.ExpectedCollateral1.mmSegregatedIndependentAmount);
+				messageElement_lazy = () -> Arrays.asList(ExpectedCollateral1.mmVariationMargin, ExpectedCollateral1.mmSegregatedIndependentAmount);
 				trace_lazy = () -> ExpectedCollateralType.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ExpectedCollateral1";
 				definition = "Provides the expected collateral type and direction for the variation margin and optionaly the segregated independent amount.";
 				nextVersions_lazy = () -> Arrays.asList(ExpectedCollateral2.mmObject());

@@ -20,9 +20,12 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CountryCode;
 import com.tools20022.repository.datatype.MICIdentifier;
 import com.tools20022.repository.entity.OrganisationIdentification;
+import com.tools20022.repository.entity.PostalAddress;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.TradingVenueIdentification2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -108,11 +111,11 @@ public class TradingVenueIdentification1Choice {
 	 */
 	public static final MMMessageAttribute mmMarketIdentificationCode = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.mmMIC;
+			businessElementTrace_lazy = () -> OrganisationIdentification.mmMIC;
 			componentContext_lazy = () -> TradingVenueIdentification1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "MktIdCd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketIdentificationCode";
 			definition = "Identification used where reporting entity uses a market identification code (MIC).";
 			maxOccurs = 1;
@@ -158,11 +161,11 @@ public class TradingVenueIdentification1Choice {
 	 */
 	public static final MMMessageAttribute mmNationalCompetentAuthority = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PostalAddress.mmCountry;
+			businessElementTrace_lazy = () -> PostalAddress.mmCountry;
 			componentContext_lazy = () -> TradingVenueIdentification1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "NtlCmptntAuthrty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NationalCompetentAuthority";
 			definition = "Identification used where reporting entity is a national competent authority.";
 			maxOccurs = 1;
@@ -212,7 +215,7 @@ public class TradingVenueIdentification1Choice {
 			componentContext_lazy = () -> TradingVenueIdentification1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Othr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
 			definition = "Identification used where a venue does not have an already defined code type.";
 			maxOccurs = 1;
@@ -225,11 +228,10 @@ public class TradingVenueIdentification1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.TradingVenueIdentification1Choice.mmMarketIdentificationCode,
-						com.tools20022.repository.choice.TradingVenueIdentification1Choice.mmNationalCompetentAuthority, com.tools20022.repository.choice.TradingVenueIdentification1Choice.mmOther);
+				messageElement_lazy = () -> Arrays.asList(TradingVenueIdentification1Choice.mmMarketIdentificationCode, TradingVenueIdentification1Choice.mmNationalCompetentAuthority, TradingVenueIdentification1Choice.mmOther);
 				trace_lazy = () -> OrganisationIdentification.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TradingVenueIdentification1Choice";
 				definition = "Trade venue related fields.";
 			}

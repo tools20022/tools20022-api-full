@@ -20,9 +20,11 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.Vote3Choice;
 import com.tools20022.repository.codeset.ProxyType2Code;
 import com.tools20022.repository.entity.ProxyAppointment;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -110,14 +112,14 @@ public class Proxy6 {
 	 */
 	public static final MMMessageAttribute mmProxyType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ProxyAppointment.mmProxyType;
+			businessElementTrace_lazy = () -> ProxyAppointment.mmProxyType;
 			componentContext_lazy = () -> Proxy6.mmObject();
 			isDerived = false;
 			xmlTag = "PrxyTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProxyType";
 			definition = "Specifies the type of proxy.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Proxy4.mmProxyType;
+			previousVersion_lazy = () -> Proxy4.mmProxyType;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ProxyType2Code.mmObject();
@@ -162,10 +164,10 @@ public class Proxy6 {
 			componentContext_lazy = () -> Proxy6.mmObject();
 			isDerived = false;
 			xmlTag = "PrsnDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PersonDetails";
 			definition = "Person, other than the chairman of the meeting, assigned by the security holder as the proxy.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Proxy4.mmPersonDetails;
+			previousVersion_lazy = () -> Proxy4.mmPersonDetails;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -211,10 +213,10 @@ public class Proxy6 {
 			componentContext_lazy = () -> Proxy6.mmObject();
 			isDerived = false;
 			xmlTag = "VoteInstrForAgndRsltn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VoteInstructionForAgendaResolution";
 			definition = "Indicates the vote instruction for the resolutions that are announced via the meeting agenda in advance of the meeting.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Proxy4.mmVoteInstructionForAgendaResolution;
+			previousVersion_lazy = () -> Proxy4.mmVoteInstructionForAgendaResolution;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -225,10 +227,10 @@ public class Proxy6 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Proxy6.mmProxyType, com.tools20022.repository.msg.Proxy6.mmPersonDetails, com.tools20022.repository.msg.Proxy6.mmVoteInstructionForAgendaResolution);
+				messageElement_lazy = () -> Arrays.asList(Proxy6.mmProxyType, Proxy6.mmPersonDetails, Proxy6.mmVoteInstructionForAgendaResolution);
 				trace_lazy = () -> ProxyAppointment.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Proxy6";
 				definition = "Specifies the elements that identify a proxy appointed to represent a party authorised to vote at a shareholders meeting.";
 				previousVersion_lazy = () -> Proxy4.mmObject();

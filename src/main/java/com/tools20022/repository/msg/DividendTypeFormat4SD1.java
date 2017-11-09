@@ -19,8 +19,10 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.datatype.YesNoIndicator;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -105,7 +107,7 @@ public class DividendTypeFormat4SD1 {
 			componentContext_lazy = () -> DividendTypeFormat4SD1.mmObject();
 			isDerived = false;
 			xmlTag = "PlcAndNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "Unambiguous reference to the location where the supplementary data must be inserted in the message instance. \r\n\r\nIn the case of XML, this is expressed by a valid XPath.";
 			maxOccurs = 1;
@@ -152,7 +154,7 @@ public class DividendTypeFormat4SD1 {
 			componentContext_lazy = () -> DividendTypeFormat4SD1.mmObject();
 			isDerived = false;
 			xmlTag = "PrvsnlDvddFlg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProvisionalDividendFlag";
 			definition = "Specifies whether the dividend is provisional 予想区分.\r\nIf the value is No, then the dividend is actual.\r\nProvisionalDividendFlag can only be used with corporate action event type code DVCA.";
 			maxOccurs = 1;
@@ -198,7 +200,7 @@ public class DividendTypeFormat4SD1 {
 			componentContext_lazy = () -> DividendTypeFormat4SD1.mmObject();
 			isDerived = false;
 			xmlTag = "CommrtvDvddFlg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommemorativeDividendFlag";
 			definition = "Specifies whether the dividend includes commemorative dividend. 記念配当区分\r\nCommemorativeDividendFlag can only be used with corporate action event type code DVCA.";
 			maxOccurs = 1;
@@ -245,7 +247,7 @@ public class DividendTypeFormat4SD1 {
 			componentContext_lazy = () -> DividendTypeFormat4SD1.mmObject();
 			isDerived = false;
 			xmlTag = "SpclDvddFlg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SpecialDividendFlag";
 			definition = "Specifies whether the dividend includes special dividend.\r\n特別配当区分\r\nSpecialDividendFlag can only be used with corporate action event type code DVCA.";
 			maxOccurs = 1;
@@ -257,10 +259,10 @@ public class DividendTypeFormat4SD1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DividendTypeFormat4SD1.mmPlaceAndName, com.tools20022.repository.msg.DividendTypeFormat4SD1.mmProvisionalDividendFlag,
-						com.tools20022.repository.msg.DividendTypeFormat4SD1.mmCommemorativeDividendFlag, com.tools20022.repository.msg.DividendTypeFormat4SD1.mmSpecialDividendFlag);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(DividendTypeFormat4SD1.mmPlaceAndName, DividendTypeFormat4SD1.mmProvisionalDividendFlag, DividendTypeFormat4SD1.mmCommemorativeDividendFlag,
+						DividendTypeFormat4SD1.mmSpecialDividendFlag);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DividendTypeFormat4SD1";
 				definition = "Extension to specify additional information related to the type of dividend.";
 			}

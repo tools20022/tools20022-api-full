@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -87,7 +89,7 @@ public class QueryType1Code {
 	 */
 	public static final MMCode mmAll = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "All";
 			definition = "Specifies that the query requests that all matching items be returned.";
 			owner_lazy = () -> QueryType1Code.mmObject();
@@ -120,7 +122,7 @@ public class QueryType1Code {
 	 */
 	public static final MMCode mmChanges = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Changes";
 			definition = "Specifies that the query requests that only new matching items since the last similar query be returned.";
 			owner_lazy = () -> QueryType1Code.mmObject();
@@ -131,12 +133,12 @@ public class QueryType1Code {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ALLL");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "QueryType1Code";
 				definition = "Specifyies the nature of the query, i.e. whether the query requests that all matching items be returned or only new matching items since the last similar query be returned.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.QueryType1Code.mmAll, com.tools20022.repository.codeset.QueryType1Code.mmChanges);
+				code_lazy = () -> Arrays.asList(QueryType1Code.mmAll, QueryType1Code.mmChanges);
 			}
 		});
 		return mmObject_lazy.get();

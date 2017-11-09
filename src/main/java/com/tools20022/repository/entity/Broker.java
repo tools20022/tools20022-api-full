@@ -17,11 +17,11 @@
 
 package com.tools20022.repository.entity;
 
-import com.tools20022.metamodel.MMBusinessAssociationEnd;
-import com.tools20022.metamodel.MMBusinessAttribute;
-import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.*;
 import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
 import com.tools20022.repository.entity.TradePartyRole;
+import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -36,28 +36,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Broker#mmRemunerationAmount
- * Broker.mmRemunerationAmount}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Broker#mmCommission
- * Broker.mmCommission}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
- * subType} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.StepInBroker StepInBroker}</li>
- * <li>{@linkplain com.tools20022.repository.entity.StepOutBroker StepOutBroker}
- * </li>
- * <li>{@linkplain com.tools20022.repository.entity.ClearingBroker
- * ClearingBroker}</li>
- * <li>{@linkplain com.tools20022.repository.entity.ExecutingBrokerRole
- * ExecutingBrokerRole}</li>
- * <li>{@linkplain com.tools20022.repository.entity.LocalBroker LocalBroker}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
  * associationDomain} =
@@ -87,6 +65,28 @@ import java.util.List;
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
  * superType} = {@linkplain com.tools20022.repository.entity.TradePartyRole
  * TradePartyRole}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
+ * subType} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.StepInBroker StepInBroker}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.StepOutBroker StepOutBroker}
+ * </li>
+ * <li>{@linkplain com.tools20022.repository.entity.ClearingBroker
+ * ClearingBroker}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.ExecutingBrokerRole
+ * ExecutingBrokerRole}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.LocalBroker LocalBroker}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.Broker#mmRemunerationAmount
+ * Broker.mmRemunerationAmount}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Broker#mmCommission
+ * Broker.mmCommission}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -146,10 +146,10 @@ public class Broker extends TradePartyRole {
 	 */
 	public static final MMBusinessAttribute mmRemunerationAmount = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OtherAmounts16.mmRemunerationAmount);
+			derivation_lazy = () -> Arrays.asList(OtherAmounts16.mmRemunerationAmount);
 			elementContext_lazy = () -> Broker.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RemunerationAmount";
 			definition = "Amount of any remuneration other than commission received or to be received by the broker in connection with a trade.";
 			maxOccurs = 1;
@@ -209,16 +209,16 @@ public class Broker extends TradePartyRole {
 	 */
 	public static final MMBusinessAssociationEnd mmCommission = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19.mmLocalBrokerCommission, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails20.mmLocalBrokerCommission,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27.mmLocalBrokerCommission, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails32.mmLocalBrokerCommission);
+			derivation_lazy = () -> Arrays.asList(SecuritiesFinancingTransactionDetails19.mmLocalBrokerCommission, SecuritiesFinancingTransactionDetails20.mmLocalBrokerCommission,
+					SecuritiesFinancingTransactionDetails27.mmLocalBrokerCommission, SecuritiesFinancingTransactionDetails32.mmLocalBrokerCommission);
 			elementContext_lazy = () -> Broker.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Commission";
 			definition = "Amount of money paid to a broker as a commission.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.Commission.mmBroker;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Commission.mmObject();
 		}
 	};
@@ -226,16 +226,15 @@ public class Broker extends TradePartyRole {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Broker";
 				definition = "Party that identifies a broker when required (for example, authorised broker, prime broker, etc).";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Commission.mmBroker);
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ConfirmationParties4.mmBrokerOfCredit, com.tools20022.repository.msg.ConfirmationParties2.mmBrokerOfCredit,
-						com.tools20022.repository.msg.TradeLeg8.mmBroker, com.tools20022.repository.msg.TradeLeg10.mmBroker, com.tools20022.repository.msg.TradeLeg9.mmBroker);
+				derivationElement_lazy = () -> Arrays.asList(ConfirmationParties4.mmBrokerOfCredit, ConfirmationParties2.mmBrokerOfCredit, TradeLeg8.mmBroker, TradeLeg10.mmBroker, TradeLeg9.mmBroker);
 				subType_lazy = () -> Arrays.asList(StepInBroker.mmObject(), StepOutBroker.mmObject(), ClearingBroker.mmObject(), ExecutingBrokerRole.mmObject(), LocalBroker.mmObject());
 				superType_lazy = () -> TradePartyRole.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Broker.mmRemunerationAmount, com.tools20022.repository.entity.Broker.mmCommission);
+				element_lazy = () -> Arrays.asList(Broker.mmRemunerationAmount, Broker.mmCommission);
 			}
 		});
 		return mmObject_lazy.get();

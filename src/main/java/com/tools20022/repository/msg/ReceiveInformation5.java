@@ -20,11 +20,13 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.sese.TransferOutInstructionV03;
 import com.tools20022.repository.codeset.PhysicalTransferType1Code;
 import com.tools20022.repository.codeset.StampDutyType2Code;
 import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
-import com.tools20022.repository.entity.InvestmentFundTax;
-import com.tools20022.repository.entity.SecuritiesSettlement;
+import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -151,11 +153,11 @@ public class ReceiveInformation5 {
 	 */
 	public static final MMMessageAttribute mmSettlementAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmSettlementAmount;
+			businessElementTrace_lazy = () -> SecuritiesSettlement.mmSettlementAmount;
 			componentContext_lazy = () -> ReceiveInformation5.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementAmount";
 			definition = "Total amount of money paid /to be paid or received in exchange for the financial instrument in the individual order.";
 			maxOccurs = 1;
@@ -201,11 +203,11 @@ public class ReceiveInformation5 {
 	 */
 	public static final MMMessageAttribute mmStampDuty = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTax.mmStampDutyType;
+			businessElementTrace_lazy = () -> SecuritiesTax.mmStampDutyType;
 			componentContext_lazy = () -> ReceiveInformation5.mmObject();
 			isDerived = false;
 			xmlTag = "StmpDty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StampDuty";
 			definition = "Indicates whether the settlement amount includes the stamp duty amount.";
 			maxOccurs = 1;
@@ -249,11 +251,11 @@ public class ReceiveInformation5 {
 	 */
 	public static final MMMessageAttribute mmNetAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTrade.mmTradeAmount;
+			businessElementTrace_lazy = () -> SecuritiesTrade.mmTradeAmount;
 			componentContext_lazy = () -> ReceiveInformation5.mmObject();
 			isDerived = false;
 			xmlTag = "NetAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetAmount";
 			definition = "Deal amount.";
 			maxOccurs = 1;
@@ -297,11 +299,11 @@ public class ReceiveInformation5 {
 	 */
 	public static final MMMessageAssociationEnd mmSettlementPartiesDetails = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmPartyRole;
+			businessElementTrace_lazy = () -> SecuritiesSettlement.mmPartyRole;
 			componentContext_lazy = () -> ReceiveInformation5.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmPtiesDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementPartiesDetails";
 			definition = "Chain of parties involved in the settlement of a transaction.";
 			maxOccurs = 1;
@@ -344,11 +346,11 @@ public class ReceiveInformation5 {
 	 */
 	public static final MMMessageAssociationEnd mmChargeDetails = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmFees;
+			businessElementTrace_lazy = () -> Security.mmFees;
 			componentContext_lazy = () -> ReceiveInformation5.mmObject();
 			isDerived = false;
 			xmlTag = "ChrgDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChargeDetails";
 			definition = "Charge related to the transfer of a financial instrument.";
 			minOccurs = 0;
@@ -391,11 +393,11 @@ public class ReceiveInformation5 {
 	 */
 	public static final MMMessageAssociationEnd mmCommissionDetails = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Trade.mmTradeCommission;
+			businessElementTrace_lazy = () -> Trade.mmTradeCommission;
 			componentContext_lazy = () -> ReceiveInformation5.mmObject();
 			isDerived = false;
 			xmlTag = "ComssnDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommissionDetails";
 			definition = "Commission related to the transfer of a financial instrument.";
 			minOccurs = 0;
@@ -440,7 +442,7 @@ public class ReceiveInformation5 {
 			componentContext_lazy = () -> ReceiveInformation5.mmObject();
 			isDerived = false;
 			xmlTag = "TaxDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxDetails";
 			definition = "Tax related to the transfer of a financial instrument.";
 			minOccurs = 0;
@@ -486,11 +488,11 @@ public class ReceiveInformation5 {
 	 */
 	public static final MMMessageAttribute mmPhysicalTransfer = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PhysicalDelivery.mmType;
+			businessElementTrace_lazy = () -> PhysicalDelivery.mmType;
 			componentContext_lazy = () -> ReceiveInformation5.mmObject();
 			isDerived = false;
 			xmlTag = "PhysTrf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PhysicalTransfer";
 			definition = "Indicates whether the financial instrument is to be physically delivered.";
 			maxOccurs = 1;
@@ -532,11 +534,11 @@ public class ReceiveInformation5 {
 	 */
 	public static final MMMessageAssociationEnd mmPhysicalTransferDetails = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTransfer.mmPhysicalDelivery;
+			businessElementTrace_lazy = () -> SecuritiesTransfer.mmPhysicalDelivery;
 			componentContext_lazy = () -> ReceiveInformation5.mmObject();
 			isDerived = false;
 			xmlTag = "PhysTrfDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PhysicalTransferDetails";
 			definition = "Parameters of a physical delivery.";
 			maxOccurs = 1;
@@ -549,14 +551,12 @@ public class ReceiveInformation5 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReceiveInformation5.mmSettlementAmount, com.tools20022.repository.msg.ReceiveInformation5.mmStampDuty,
-						com.tools20022.repository.msg.ReceiveInformation5.mmNetAmount, com.tools20022.repository.msg.ReceiveInformation5.mmSettlementPartiesDetails, com.tools20022.repository.msg.ReceiveInformation5.mmChargeDetails,
-						com.tools20022.repository.msg.ReceiveInformation5.mmCommissionDetails, com.tools20022.repository.msg.ReceiveInformation5.mmTaxDetails, com.tools20022.repository.msg.ReceiveInformation5.mmPhysicalTransfer,
-						com.tools20022.repository.msg.ReceiveInformation5.mmPhysicalTransferDetails);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.TransferOutInstructionV03.mmSettlementDetails);
+				messageElement_lazy = () -> Arrays.asList(ReceiveInformation5.mmSettlementAmount, ReceiveInformation5.mmStampDuty, ReceiveInformation5.mmNetAmount, ReceiveInformation5.mmSettlementPartiesDetails,
+						ReceiveInformation5.mmChargeDetails, ReceiveInformation5.mmCommissionDetails, ReceiveInformation5.mmTaxDetails, ReceiveInformation5.mmPhysicalTransfer, ReceiveInformation5.mmPhysicalTransferDetails);
+				messageBuildingBlock_lazy = () -> Arrays.asList(TransferOutInstructionV03.mmSettlementDetails);
 				trace_lazy = () -> SecuritiesSettlement.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
 						return DateFormat.getDateInstance(java.text.DateFormat.LONG).parse("September 9, 2016");

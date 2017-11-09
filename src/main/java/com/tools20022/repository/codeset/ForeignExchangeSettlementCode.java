@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -91,7 +93,7 @@ public class ForeignExchangeSettlementCode {
 	 */
 	public static final MMCode mmCLS = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+			registrationStatus = MMRegistrationStatus.OBSOLETE;
 			name = "CLS";
 			definition = "Settlement is done through the Continuous Link Settlement (CLS) Bank.";
 			owner_lazy = () -> ForeignExchangeSettlementCode.mmObject();
@@ -124,7 +126,7 @@ public class ForeignExchangeSettlementCode {
 	 */
 	public static final MMCode mmNet = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+			registrationStatus = MMRegistrationStatus.OBSOLETE;
 			name = "Net";
 			definition = "Settlement done by netting amounts (for trades in the same currency and for the same value date).";
 			owner_lazy = () -> ForeignExchangeSettlementCode.mmObject();
@@ -157,7 +159,7 @@ public class ForeignExchangeSettlementCode {
 	 */
 	public static final MMCode mmGross = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+			registrationStatus = MMRegistrationStatus.OBSOLETE;
 			name = "Gross";
 			definition = "Each trade is settled by a single entry to the account of the beneficiary.";
 			owner_lazy = () -> ForeignExchangeSettlementCode.mmObject();
@@ -190,7 +192,7 @@ public class ForeignExchangeSettlementCode {
 	 */
 	public static final MMCode mmSplit = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+			registrationStatus = MMRegistrationStatus.OBSOLETE;
 			name = "Split";
 			definition = "Each trade is split into several amounts and delivered to different accounts of the buyer.";
 			owner_lazy = () -> ForeignExchangeSettlementCode.mmObject();
@@ -201,13 +203,12 @@ public class ForeignExchangeSettlementCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CLSB");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				name = "ForeignExchangeSettlementCode";
 				definition = "Specifies the method to be used to settle a foreign exchange trade.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ForeignExchangeSettlementCode.mmCLS, com.tools20022.repository.codeset.ForeignExchangeSettlementCode.mmNet,
-						com.tools20022.repository.codeset.ForeignExchangeSettlementCode.mmGross, com.tools20022.repository.codeset.ForeignExchangeSettlementCode.mmSplit);
+				code_lazy = () -> Arrays.asList(ForeignExchangeSettlementCode.mmCLS, ForeignExchangeSettlementCode.mmNet, ForeignExchangeSettlementCode.mmGross, ForeignExchangeSettlementCode.mmSplit);
 			}
 		});
 		return mmObject_lazy.get();

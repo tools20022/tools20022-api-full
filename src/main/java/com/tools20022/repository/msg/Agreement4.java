@@ -19,11 +19,16 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.colr.*;
 import com.tools20022.repository.choice.AgreementFramework1Choice;
 import com.tools20022.repository.codeset.ActiveCurrencyCode;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.Max140Text;
+import com.tools20022.repository.entity.Agreement;
 import com.tools20022.repository.entity.CollateralAgreement;
+import com.tools20022.repository.entity.GenericIdentification;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -155,14 +160,14 @@ public class Agreement4 {
 	 */
 	public static final MMMessageAttribute mmAgreementDetails = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Agreement.mmDescription;
+			businessElementTrace_lazy = () -> Agreement.mmDescription;
 			componentContext_lazy = () -> Agreement4.mmObject();
 			isDerived = false;
 			xmlTag = "AgrmtDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AgreementDetails";
 			definition = "Full details of the supporting legal agreement under which the margin call can be issued and/or governed.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Agreement2.mmAgreementDetails;
+			previousVersion_lazy = () -> Agreement2.mmAgreementDetails;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max140Text.mmObject();
@@ -208,14 +213,14 @@ public class Agreement4 {
 	 */
 	public static final MMMessageAttribute mmAgreementIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmIdentification;
+			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> Agreement4.mmObject();
 			isDerived = false;
 			xmlTag = "AgrmtId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AgreementIdentification";
 			definition = "Common reference to the agreement between the two counterparties.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Agreement2.mmAgreementIdentification;
+			previousVersion_lazy = () -> Agreement2.mmAgreementIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
@@ -260,14 +265,14 @@ public class Agreement4 {
 	 */
 	public static final MMMessageAttribute mmAgreementDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Agreement.mmDateSigned;
+			businessElementTrace_lazy = () -> Agreement.mmDateSigned;
 			componentContext_lazy = () -> Agreement4.mmObject();
 			isDerived = false;
 			xmlTag = "AgrmtDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AgreementDate";
 			definition = "Date on which the collateral agreement was signed.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Agreement2.mmAgreementDate;
+			previousVersion_lazy = () -> Agreement2.mmAgreementDate;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
@@ -314,14 +319,14 @@ public class Agreement4 {
 	 */
 	public static final MMMessageAttribute mmBaseCurrency = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CollateralAgreement.mmBaseCurrency;
+			businessElementTrace_lazy = () -> CollateralAgreement.mmBaseCurrency;
 			componentContext_lazy = () -> Agreement4.mmObject();
 			isDerived = false;
 			xmlTag = "BaseCcy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BaseCurrency";
 			definition = "Denomination currency as specified in the collateral agreement.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Agreement2.mmBaseCurrency;
+			previousVersion_lazy = () -> Agreement2.mmBaseCurrency;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyCode.mmObject();
@@ -367,14 +372,14 @@ public class Agreement4 {
 	 */
 	public static final MMMessageAttribute mmAgreementFramework = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CollateralAgreement.mmAssociatedMasterAgreement;
+			businessElementTrace_lazy = () -> CollateralAgreement.mmAssociatedMasterAgreement;
 			componentContext_lazy = () -> Agreement4.mmObject();
 			isDerived = false;
 			xmlTag = "AgrmtFrmwk";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AgreementFramework";
 			definition = "Specifies the underlying master agreement.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Agreement2.mmAgreementFramework;
+			previousVersion_lazy = () -> Agreement2.mmAgreementFramework;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> AgreementFramework1Choice.mmObject();
@@ -384,17 +389,13 @@ public class Agreement4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Agreement4.mmAgreementDetails, com.tools20022.repository.msg.Agreement4.mmAgreementIdentification,
-						com.tools20022.repository.msg.Agreement4.mmAgreementDate, com.tools20022.repository.msg.Agreement4.mmBaseCurrency, com.tools20022.repository.msg.Agreement4.mmAgreementFramework);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.colr.MarginCallRequestV04.mmAgreement, com.tools20022.repository.area.colr.InterestPaymentResponseV04.mmAgreement,
-						com.tools20022.repository.area.colr.CollateralProposalV04.mmAgreement, com.tools20022.repository.area.colr.CollateralSubstitutionResponseV04.mmAgreement,
-						com.tools20022.repository.area.colr.MarginCallResponseV04.mmAgreement, com.tools20022.repository.area.colr.InterestPaymentStatementV04.mmAgreement,
-						com.tools20022.repository.area.colr.CollateralSubstitutionConfirmationV04.mmAgreement, com.tools20022.repository.area.colr.InterestPaymentRequestV04.mmAgreement,
-						com.tools20022.repository.area.colr.CollateralSubstitutionRequestV04.mmAgreement, com.tools20022.repository.area.colr.CollateralAndExposureReportV03.mmAgreement,
-						com.tools20022.repository.area.colr.CollateralProposalV05.mmAgreement);
+				messageElement_lazy = () -> Arrays.asList(Agreement4.mmAgreementDetails, Agreement4.mmAgreementIdentification, Agreement4.mmAgreementDate, Agreement4.mmBaseCurrency, Agreement4.mmAgreementFramework);
+				messageBuildingBlock_lazy = () -> Arrays.asList(MarginCallRequestV04.mmAgreement, InterestPaymentResponseV04.mmAgreement, CollateralProposalV04.mmAgreement, CollateralSubstitutionResponseV04.mmAgreement,
+						MarginCallResponseV04.mmAgreement, InterestPaymentStatementV04.mmAgreement, CollateralSubstitutionConfirmationV04.mmAgreement, InterestPaymentRequestV04.mmAgreement, CollateralSubstitutionRequestV04.mmAgreement,
+						CollateralAndExposureReportV03.mmAgreement, CollateralProposalV05.mmAgreement);
 				trace_lazy = () -> CollateralAgreement.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Agreement4";
 				definition = "Agreement details for the over the counter market.";
 				previousVersion_lazy = () -> Agreement2.mmObject();

@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.InvestigatedParties1Code
+ * InvestigatedParties1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -35,13 +44,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.InvestigatedPartiesCode#mmOwner
  * InvestigatedPartiesCode.mmOwner}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.InvestigatedParties1Code
- * InvestigatedParties1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -94,7 +96,7 @@ public class InvestigatedPartiesCode {
 	 */
 	public static final MMCode mmAllParties = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AllParties";
 			definition = "Investigated parties are all parties playig a role matching the search criteria.";
 			owner_lazy = () -> InvestigatedPartiesCode.mmObject();
@@ -124,7 +126,7 @@ public class InvestigatedPartiesCode {
 	 */
 	public static final MMCode mmOwner = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Owner";
 			definition = "Investigated party is the owner.";
 			owner_lazy = () -> InvestigatedPartiesCode.mmObject();
@@ -135,12 +137,12 @@ public class InvestigatedPartiesCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ALLP");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InvestigatedPartiesCode";
 				definition = "Specifies the investigated parties.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.InvestigatedPartiesCode.mmAllParties, com.tools20022.repository.codeset.InvestigatedPartiesCode.mmOwner);
+				code_lazy = () -> Arrays.asList(InvestigatedPartiesCode.mmAllParties, InvestigatedPartiesCode.mmOwner);
 				derivation_lazy = () -> Arrays.asList(InvestigatedParties1Code.mmObject());
 			}
 		});

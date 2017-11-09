@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.BookingTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -89,7 +91,7 @@ public class BookingType1Code extends BookingTypeCode {
 	 */
 	public static final MMCode mmRegular = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Regular";
 			owner_lazy = () -> BookingType1Code.mmObject();
 		}
@@ -112,7 +114,7 @@ public class BookingType1Code extends BookingTypeCode {
 	 */
 	public static final MMCode mmContractForDifference = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ContractForDifference";
 			owner_lazy = () -> BookingType1Code.mmObject();
 		}
@@ -135,7 +137,7 @@ public class BookingType1Code extends BookingTypeCode {
 	 */
 	public static final MMCode mmTotalReturnSwap = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalReturnSwap";
 			owner_lazy = () -> BookingType1Code.mmObject();
 		}
@@ -144,13 +146,12 @@ public class BookingType1Code extends BookingTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("REGU");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "BookingType1Code";
 				definition = "Method for booking out an order. Used when notifying a broker that an order to be settled by that broker is to be booked out as an Over The Counter derivative (for example, Contract For Difference - CFD or similar).";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.BookingType1Code.mmRegular, com.tools20022.repository.codeset.BookingType1Code.mmContractForDifference,
-						com.tools20022.repository.codeset.BookingType1Code.mmTotalReturnSwap);
+				code_lazy = () -> Arrays.asList(BookingType1Code.mmRegular, BookingType1Code.mmContractForDifference, BookingType1Code.mmTotalReturnSwap);
 				trace_lazy = () -> BookingTypeCode.mmObject();
 			}
 		});

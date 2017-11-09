@@ -20,9 +20,15 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAllegementReport002V06;
+import com.tools20022.repository.area.semt.SecuritiesTransactionPendingReport002V08;
+import com.tools20022.repository.area.semt.SecuritiesTransactionPostingReport002V07;
+import com.tools20022.repository.area.sese.SecuritiesSettlementConditionsModificationRequest002V07;
 import com.tools20022.repository.choice.PartyIdentification103Choice;
 import com.tools20022.repository.datatype.LEIIdentifier;
 import com.tools20022.repository.entity.PartyIdentificationInformation;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -130,10 +136,10 @@ public class PartyIdentification119 {
 			componentContext_lazy = () -> PartyIdentification119.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Unique identification of the party.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PartyIdentification109.mmIdentification;
+			previousVersion_lazy = () -> PartyIdentification109.mmIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -181,10 +187,10 @@ public class PartyIdentification119 {
 			componentContext_lazy = () -> PartyIdentification119.mmObject();
 			isDerived = false;
 			xmlTag = "LEI";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LEI";
 			definition = "Legal entity identification as an alternate identification for a party.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PartyIdentification109.mmLEI;
+			previousVersion_lazy = () -> PartyIdentification109.mmLEI;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> LEIIdentifier.mmObject();
@@ -194,13 +200,12 @@ public class PartyIdentification119 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyIdentification119.mmIdentification, com.tools20022.repository.msg.PartyIdentification119.mmLEI);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.SecuritiesTransactionPendingReport002V08.mmAccountOwner,
-						com.tools20022.repository.area.sese.SecuritiesSettlementConditionsModificationRequest002V07.mmAccountOwner, com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAllegementReport002V06.mmAccountOwner,
-						com.tools20022.repository.area.semt.SecuritiesTransactionPostingReport002V07.mmAccountOwner);
+				messageElement_lazy = () -> Arrays.asList(PartyIdentification119.mmIdentification, PartyIdentification119.mmLEI);
+				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesTransactionPendingReport002V08.mmAccountOwner, SecuritiesSettlementConditionsModificationRequest002V07.mmAccountOwner,
+						SecuritiesSettlementTransactionAllegementReport002V06.mmAccountOwner, SecuritiesTransactionPostingReport002V07.mmAccountOwner);
 				trace_lazy = () -> PartyIdentificationInformation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PartyIdentification119";
 				definition = "Identification of the party.";
 				previousVersion_lazy = () -> PartyIdentification109.mmObject();

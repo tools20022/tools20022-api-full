@@ -19,7 +19,9 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max140Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -99,10 +101,10 @@ public class KEKIdentifier4 {
 			componentContext_lazy = () -> KEKIdentifier4.mmObject();
 			isDerived = false;
 			xmlTag = "Nm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Name";
 			definition = "Name or label of the key.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.KEKIdentifier3.mmName;
+			previousVersion_lazy = () -> KEKIdentifier3.mmName;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
@@ -145,10 +147,10 @@ public class KEKIdentifier4 {
 			componentContext_lazy = () -> KEKIdentifier4.mmObject();
 			isDerived = false;
 			xmlTag = "KeyId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "KeyIdentification";
 			definition = "Identification of the cryptographic key.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.KEKIdentifier3.mmIdentification;
+			previousVersion_lazy = () -> KEKIdentifier3.mmIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
@@ -191,10 +193,10 @@ public class KEKIdentifier4 {
 			componentContext_lazy = () -> KEKIdentifier4.mmObject();
 			isDerived = false;
 			xmlTag = "KeyVrsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "KeyVersion";
 			definition = "Version of the cryptographic key.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.KEKIdentifier3.mmVersion;
+			previousVersion_lazy = () -> KEKIdentifier3.mmVersion;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
@@ -204,9 +206,9 @@ public class KEKIdentifier4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.KEKIdentifier4.mmName, com.tools20022.repository.msg.KEKIdentifier4.mmKeyIdentification, com.tools20022.repository.msg.KEKIdentifier4.mmKeyVersion);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(KEKIdentifier4.mmName, KEKIdentifier4.mmKeyIdentification, KEKIdentifier4.mmKeyVersion);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "KEKIdentifier4";
 				definition = "Cryptographic key involved in the security command.";
 				previousVersion_lazy = () -> KEKIdentifier3.mmObject();

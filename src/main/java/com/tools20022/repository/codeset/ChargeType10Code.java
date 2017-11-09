@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ChargeTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -85,7 +87,7 @@ public class ChargeType10Code extends ChargeTypeCode {
 	 */
 	public static final MMCode mmBackEndLoad = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BackEndLoad";
 			owner_lazy = () -> ChargeType10Code.mmObject();
 		}
@@ -108,7 +110,7 @@ public class ChargeType10Code extends ChargeTypeCode {
 	 */
 	public static final MMCode mmFrontEndLoad = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FrontEndLoad";
 			owner_lazy = () -> ChargeType10Code.mmObject();
 		}
@@ -131,7 +133,7 @@ public class ChargeType10Code extends ChargeTypeCode {
 	 */
 	public static final MMCode mmPenalty = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Penalty";
 			owner_lazy = () -> ChargeType10Code.mmObject();
 		}
@@ -140,13 +142,12 @@ public class ChargeType10Code extends ChargeTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("BEND");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ChargeType10Code";
 				definition = "Specifies the type of service for which a charge is asked or paid.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ChargeType10Code.mmBackEndLoad, com.tools20022.repository.codeset.ChargeType10Code.mmFrontEndLoad,
-						com.tools20022.repository.codeset.ChargeType10Code.mmPenalty);
+				code_lazy = () -> Arrays.asList(ChargeType10Code.mmBackEndLoad, ChargeType10Code.mmFrontEndLoad, ChargeType10Code.mmPenalty);
 				trace_lazy = () -> ChargeTypeCode.mmObject();
 			}
 		});

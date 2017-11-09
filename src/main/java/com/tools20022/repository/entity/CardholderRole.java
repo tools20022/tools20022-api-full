@@ -17,9 +17,12 @@
 
 package com.tools20022.repository.entity;
 
+import com.tools20022.metamodel.MMAggregation;
 import com.tools20022.metamodel.MMBusinessAssociationEnd;
 import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.CardPaymentPartyRole;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -34,12 +37,30 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CardholderRole#mmAuthentication
- * CardholderRole.mmAuthentication}</li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.Cardholder2 Cardholder2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Cardholder4 Cardholder4}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Cardholder1 Cardholder1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Cardholder3 Cardholder3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Cardholder5 Cardholder5}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Cardholder6 Cardholder6}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Cardholder8 Cardholder8}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Cardholder7 Cardholder7}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ATMCustomer1 ATMCustomer1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ATMCustomer2 ATMCustomer2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ATMCustomer3 ATMCustomer3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Cardholder9 Cardholder9}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AntiMoneyLaundering1
+ * AntiMoneyLaundering1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Cardholder11 Cardholder11}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Cardholder10 Cardholder10}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ATMCustomer5 ATMCustomer5}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ATMCustomer6 ATMCustomer6}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ATMCustomer4 ATMCustomer4}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Cardholder12 Cardholder12}</li>
  * </ul>
  * </li>
  * <li>
@@ -126,30 +147,12 @@ import java.util.List;
  * superType} =
  * {@linkplain com.tools20022.repository.entity.CardPaymentPartyRole
  * CardPaymentPartyRole}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Cardholder2 Cardholder2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Cardholder4 Cardholder4}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Cardholder1 Cardholder1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Cardholder3 Cardholder3}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Cardholder5 Cardholder5}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Cardholder6 Cardholder6}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Cardholder8 Cardholder8}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Cardholder7 Cardholder7}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ATMCustomer1 ATMCustomer1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ATMCustomer2 ATMCustomer2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ATMCustomer3 ATMCustomer3}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Cardholder9 Cardholder9}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AntiMoneyLaundering1
- * AntiMoneyLaundering1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Cardholder11 Cardholder11}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Cardholder10 Cardholder10}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ATMCustomer5 ATMCustomer5}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ATMCustomer6 ATMCustomer6}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ATMCustomer4 ATMCustomer4}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Cardholder12 Cardholder12}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CardholderRole#mmAuthentication
+ * CardholderRole.mmAuthentication}</li>
  * </ul>
  * </li>
  * <li>
@@ -250,19 +253,16 @@ public class CardholderRole extends CardPaymentPartyRole {
 	 */
 	public static final MMBusinessAssociationEnd mmAuthentication = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentContext3.mmAuthenticationMethod, com.tools20022.repository.msg.Cardholder2.mmAuthentication, com.tools20022.repository.msg.Cardholder4.mmAuthentication,
-					com.tools20022.repository.msg.Cardholder1.mmAuthentication, com.tools20022.repository.msg.Cardholder3.mmAuthentication, com.tools20022.repository.msg.Cardholder5.mmAuthentication,
-					com.tools20022.repository.msg.Cardholder6.mmAuthentication, com.tools20022.repository.msg.Cardholder7.mmAuthentication, com.tools20022.repository.msg.ATMCustomer1.mmAuthentication,
-					com.tools20022.repository.msg.Cardholder9.mmAuthentication, com.tools20022.repository.msg.Cardholder10.mmAuthentication, com.tools20022.repository.msg.ATMCustomer4.mmAuthentication,
-					com.tools20022.repository.msg.Cardholder12.mmAuthentication);
+			derivation_lazy = () -> Arrays.asList(PaymentContext3.mmAuthenticationMethod, Cardholder2.mmAuthentication, Cardholder4.mmAuthentication, Cardholder1.mmAuthentication, Cardholder3.mmAuthentication, Cardholder5.mmAuthentication,
+					Cardholder6.mmAuthentication, Cardholder7.mmAuthentication, ATMCustomer1.mmAuthentication, Cardholder9.mmAuthentication, Cardholder10.mmAuthentication, ATMCustomer4.mmAuthentication, Cardholder12.mmAuthentication);
 			elementContext_lazy = () -> CardholderRole.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Authentication";
 			definition = "Data related to the authentication of the cardholder.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.Authentication.mmCardholder;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Authentication.mmObject();
 		}
 	};
@@ -270,21 +270,18 @@ public class CardholderRole extends CardPaymentPartyRole {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CardholderRole";
 				definition = "Party entitled by a card issuer to use a card.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Authentication.mmCardholder);
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentCard2.mmHolderName, com.tools20022.repository.msg.CardPaymentEnvironment6.mmCardholder,
-						com.tools20022.repository.msg.CardPaymentEnvironment14.mmCardholder, com.tools20022.repository.msg.CardPaymentEnvironment1.mmCardholder, com.tools20022.repository.msg.CardPaymentEnvironment9.mmCardholder,
-						com.tools20022.repository.msg.CardPaymentEnvironment2.mmCardholder, com.tools20022.repository.msg.CardPaymentEnvironment10.mmCardholder, com.tools20022.repository.msg.CardPaymentEnvironment20.mmCardholder,
-						com.tools20022.repository.msg.CardPaymentEnvironment27.mmCardholder, com.tools20022.repository.msg.CardPaymentEnvironment22.mmCardholder, com.tools20022.repository.msg.CardPaymentEnvironment32.mmCardholder,
-						com.tools20022.repository.msg.CardPaymentEnvironment40.mmCardholder, com.tools20022.repository.msg.CardPaymentEnvironment34.mmCardholder, com.tools20022.repository.msg.PaymentCard18.mmHolderName,
-						com.tools20022.repository.msg.CardPaymentEnvironment52.mmCardholder, com.tools20022.repository.msg.CardPaymentEnvironment45.mmCardholder, com.tools20022.repository.msg.CardPaymentEnvironment53.mmCardholder,
-						com.tools20022.repository.msg.CardPaymentEnvironment47.mmCardholder, com.tools20022.repository.msg.PaymentCard25.mmHolderName, com.tools20022.repository.msg.CardPaymentEnvironment61.mmCardholder,
-						com.tools20022.repository.msg.CardPaymentEnvironment60.mmCardholder, com.tools20022.repository.msg.CardPaymentEnvironment62.mmCardholder, com.tools20022.repository.msg.CardPaymentEnvironment57.mmCardholder);
+				derivationElement_lazy = () -> Arrays.asList(PaymentCard2.mmHolderName, CardPaymentEnvironment6.mmCardholder, CardPaymentEnvironment14.mmCardholder, CardPaymentEnvironment1.mmCardholder,
+						CardPaymentEnvironment9.mmCardholder, CardPaymentEnvironment2.mmCardholder, CardPaymentEnvironment10.mmCardholder, CardPaymentEnvironment20.mmCardholder, CardPaymentEnvironment27.mmCardholder,
+						CardPaymentEnvironment22.mmCardholder, CardPaymentEnvironment32.mmCardholder, CardPaymentEnvironment40.mmCardholder, CardPaymentEnvironment34.mmCardholder, PaymentCard18.mmHolderName,
+						CardPaymentEnvironment52.mmCardholder, CardPaymentEnvironment45.mmCardholder, CardPaymentEnvironment53.mmCardholder, CardPaymentEnvironment47.mmCardholder, PaymentCard25.mmHolderName,
+						CardPaymentEnvironment61.mmCardholder, CardPaymentEnvironment60.mmCardholder, CardPaymentEnvironment62.mmCardholder, CardPaymentEnvironment57.mmCardholder);
 				superType_lazy = () -> CardPaymentPartyRole.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CardholderRole.mmAuthentication);
+				element_lazy = () -> Arrays.asList(CardholderRole.mmAuthentication);
 				derivationComponent_lazy = () -> Arrays.asList(Cardholder2.mmObject(), Cardholder4.mmObject(), Cardholder1.mmObject(), Cardholder3.mmObject(), Cardholder5.mmObject(), Cardholder6.mmObject(), Cardholder8.mmObject(),
 						Cardholder7.mmObject(), ATMCustomer1.mmObject(), ATMCustomer2.mmObject(), ATMCustomer3.mmObject(), Cardholder9.mmObject(), AntiMoneyLaundering1.mmObject(), Cardholder11.mmObject(), Cardholder10.mmObject(),
 						ATMCustomer5.mmObject(), ATMCustomer6.mmObject(), ATMCustomer4.mmObject(), Cardholder12.mmObject());

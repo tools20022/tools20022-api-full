@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.RegistrationProcessingStatusCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -83,7 +85,7 @@ public class RegistrationProcessingStatus1Code extends RegistrationProcessingSta
 	 */
 	public static final MMCode mmAcknowledgedAccepted = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcknowledgedAccepted";
 			owner_lazy = () -> RegistrationProcessingStatus1Code.mmObject();
 		}
@@ -106,7 +108,7 @@ public class RegistrationProcessingStatus1Code extends RegistrationProcessingSta
 	 */
 	public static final MMCode mmRejected = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rejected";
 			owner_lazy = () -> RegistrationProcessingStatus1Code.mmObject();
 		}
@@ -115,12 +117,12 @@ public class RegistrationProcessingStatus1Code extends RegistrationProcessingSta
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("PACK");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RegistrationProcessingStatus1Code";
 				definition = "Specifies the status of the registration processing.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RegistrationProcessingStatus1Code.mmAcknowledgedAccepted, com.tools20022.repository.codeset.RegistrationProcessingStatus1Code.mmRejected);
+				code_lazy = () -> Arrays.asList(RegistrationProcessingStatus1Code.mmAcknowledgedAccepted, RegistrationProcessingStatus1Code.mmRejected);
 				trace_lazy = () -> RegistrationProcessingStatusCode.mmObject();
 			}
 		});

@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,18 +29,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.PriorityCode#mmUrgent
- * PriorityCode.mmUrgent}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PriorityCode#mmHigh
- * PriorityCode.mmHigh}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PriorityCode#mmNormal
- * PriorityCode.mmNormal}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PriorityCode#mmLow
- * PriorityCode.mmLow}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
  * =
  * <ul>
@@ -50,6 +40,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * Priority3Code}</li>
  * <li>{@linkplain com.tools20022.repository.codeset.Priority4Code
  * Priority4Code}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.PriorityCode#mmUrgent
+ * PriorityCode.mmUrgent}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PriorityCode#mmHigh
+ * PriorityCode.mmHigh}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PriorityCode#mmNormal
+ * PriorityCode.mmNormal}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PriorityCode#mmLow
+ * PriorityCode.mmLow}</li>
  * </ul>
  * </li>
  * <li>
@@ -98,7 +100,7 @@ public class PriorityCode {
 	 */
 	public static final MMCode mmUrgent = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Urgent";
 			definition = "Priority level is urgent (highest priority possible)";
 			owner_lazy = () -> PriorityCode.mmObject();
@@ -127,7 +129,7 @@ public class PriorityCode {
 	 */
 	public static final MMCode mmHigh = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "High";
 			definition = "Priority level is high.";
 			owner_lazy = () -> PriorityCode.mmObject();
@@ -156,7 +158,7 @@ public class PriorityCode {
 	 */
 	public static final MMCode mmNormal = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Normal";
 			definition = "Priority level is normal.";
 			owner_lazy = () -> PriorityCode.mmObject();
@@ -185,7 +187,7 @@ public class PriorityCode {
 	 */
 	public static final MMCode mmLow = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Low";
 			definition = "Priority level is low.";
 			owner_lazy = () -> PriorityCode.mmObject();
@@ -196,13 +198,12 @@ public class PriorityCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("URGT");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PriorityCode";
 				definition = "Specifies the priority level of an event.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PriorityCode.mmUrgent, com.tools20022.repository.codeset.PriorityCode.mmHigh, com.tools20022.repository.codeset.PriorityCode.mmNormal,
-						com.tools20022.repository.codeset.PriorityCode.mmLow);
+				code_lazy = () -> Arrays.asList(PriorityCode.mmUrgent, PriorityCode.mmHigh, PriorityCode.mmNormal, PriorityCode.mmLow);
 				derivation_lazy = () -> Arrays.asList(Priority1Code.mmObject(), Priority2Code.mmObject(), Priority3Code.mmObject(), Priority4Code.mmObject());
 			}
 		});

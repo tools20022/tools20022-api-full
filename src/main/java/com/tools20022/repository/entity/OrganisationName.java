@@ -17,14 +17,12 @@
 
 package com.tools20022.repository.entity;
 
-import com.tools20022.metamodel.MMBusinessAssociationEnd;
-import com.tools20022.metamodel.MMBusinessAttribute;
-import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.*;
 import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.PartyName;
-import com.tools20022.repository.msg.FullLegalNameModification1;
-import com.tools20022.repository.msg.TradingNameModification1;
+import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -38,6 +36,28 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.FullLegalNameModification1
+ * FullLegalNameModification1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TradingNameModification1
+ * TradingNameModification1}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#mmOrganisationName
+ * OrganisationIdentification.mmOrganisationName}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.PartyName
+ * PartyName}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -53,28 +73,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.entity.OrganisationName#mmShortName
  * OrganisationName.mmShortName}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#mmOrganisationName
- * OrganisationIdentification.mmOrganisationName}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.PartyName
- * PartyName}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.FullLegalNameModification1
- * FullLegalNameModification1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TradingNameModification1
- * TradingNameModification1}</li>
  * </ul>
  * </li>
  * <li>
@@ -136,13 +134,13 @@ public class OrganisationName extends PartyName {
 		{
 			elementContext_lazy = () -> OrganisationName.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Organisation";
 			definition = "Organisation identification which contains a name.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.mmOrganisationName;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.mmObject();
 		}
 	};
@@ -200,12 +198,11 @@ public class OrganisationName extends PartyName {
 	 */
 	public static final MMBusinessAttribute mmLegalName = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Organisation6.mmFullLegalName, com.tools20022.repository.msg.Organisation12.mmFullLegalName, com.tools20022.repository.msg.Organisation14.mmFullLegalName,
-					com.tools20022.repository.msg.FullLegalNameModification1.mmFullLegalName, com.tools20022.repository.msg.OrganisationModification1.mmFullLegalName, com.tools20022.repository.msg.Organisation7.mmFullLegalName,
-					com.tools20022.repository.msg.PartyIdentification58.mmLegalName);
+			derivation_lazy = () -> Arrays.asList(Organisation6.mmFullLegalName, Organisation12.mmFullLegalName, Organisation14.mmFullLegalName, FullLegalNameModification1.mmFullLegalName, OrganisationModification1.mmFullLegalName,
+					Organisation7.mmFullLegalName, PartyIdentification58.mmLegalName);
 			elementContext_lazy = () -> OrganisationName.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "LegalName";
 			definition = "Official name under which an organisation is registered.";
 			maxOccurs = 1;
@@ -265,11 +262,10 @@ public class OrganisationName extends PartyName {
 	 */
 	public static final MMBusinessAttribute mmTradingName = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Organisation6.mmTradingName, com.tools20022.repository.msg.Organisation12.mmTradingName, com.tools20022.repository.msg.TradingNameModification1.mmTradingName,
-					com.tools20022.repository.msg.OrganisationModification1.mmTradingName, com.tools20022.repository.msg.Organisation7.mmTradingName);
+			derivation_lazy = () -> Arrays.asList(Organisation6.mmTradingName, Organisation12.mmTradingName, TradingNameModification1.mmTradingName, OrganisationModification1.mmTradingName, Organisation7.mmTradingName);
 			elementContext_lazy = () -> OrganisationName.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TradingName";
 			definition = "Name used by a business for commercial purposes, although its registered legal name, used for contracts and other formal situations, may be another.";
 			maxOccurs = 1;
@@ -377,18 +373,14 @@ public class OrganisationName extends PartyName {
 	 */
 	public static final MMBusinessAttribute mmShortName = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GenericIdentification32.mmShortName, com.tools20022.repository.msg.GenericIdentification35.mmShortName,
-					com.tools20022.repository.msg.GenericIdentification31.mmShortName, com.tools20022.repository.msg.GenericIdentification33.mmShortName, com.tools20022.repository.msg.GenericIdentification53.mmShortName,
-					com.tools20022.repository.msg.GenericIdentification71.mmShortName, com.tools20022.repository.msg.GenericIdentification73.mmShortName, com.tools20022.repository.msg.GenericIdentification74.mmShortName,
-					com.tools20022.repository.msg.GenericIdentification72.mmShortName, com.tools20022.repository.msg.GenericIdentification70.mmShortName, com.tools20022.repository.msg.GenericIdentification75.mmShortName,
-					com.tools20022.repository.msg.GenericIdentification76.mmShortName, com.tools20022.repository.msg.GenericIdentification77.mmShortName, com.tools20022.repository.msg.Organisation18.mmCommonName,
-					com.tools20022.repository.msg.Organisation19.mmCommonName, com.tools20022.repository.msg.Organisation22.mmShortName, com.tools20022.repository.msg.Organisation23.mmShortName,
-					com.tools20022.repository.msg.Organisation24.mmShortName, com.tools20022.repository.msg.GenericIdentification94.mmShortName, com.tools20022.repository.msg.GenericIdentification90.mmShortName,
-					com.tools20022.repository.msg.GenericIdentification93.mmShortName, com.tools20022.repository.msg.GenericIdentification92.mmShortName, com.tools20022.repository.msg.Organisation30.mmShortName,
-					com.tools20022.repository.msg.Organisation29.mmShortName);
+			derivation_lazy = () -> Arrays.asList(GenericIdentification32.mmShortName, GenericIdentification35.mmShortName, GenericIdentification31.mmShortName, GenericIdentification33.mmShortName, GenericIdentification53.mmShortName,
+					GenericIdentification71.mmShortName, GenericIdentification73.mmShortName, GenericIdentification74.mmShortName, GenericIdentification72.mmShortName, GenericIdentification70.mmShortName,
+					GenericIdentification75.mmShortName, GenericIdentification76.mmShortName, GenericIdentification77.mmShortName, Organisation18.mmCommonName, Organisation19.mmCommonName, Organisation22.mmShortName,
+					Organisation23.mmShortName, Organisation24.mmShortName, GenericIdentification94.mmShortName, GenericIdentification90.mmShortName, GenericIdentification93.mmShortName, GenericIdentification92.mmShortName,
+					Organisation30.mmShortName, Organisation29.mmShortName);
 			elementContext_lazy = () -> OrganisationName.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ShortName";
 			definition = "Specifies the short name of the organisation.";
 			maxOccurs = 1;
@@ -400,14 +392,13 @@ public class OrganisationName extends PartyName {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OrganisationName";
 				definition = "Name by which an organisation is known and which is usually used to identify that organisation.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.OrganisationIdentification.mmOrganisationName);
 				superType_lazy = () -> PartyName.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.OrganisationName.mmOrganisation, com.tools20022.repository.entity.OrganisationName.mmLegalName,
-						com.tools20022.repository.entity.OrganisationName.mmTradingName, com.tools20022.repository.entity.OrganisationName.mmShortName);
+				element_lazy = () -> Arrays.asList(OrganisationName.mmOrganisation, OrganisationName.mmLegalName, OrganisationName.mmTradingName, OrganisationName.mmShortName);
 				derivationComponent_lazy = () -> Arrays.asList(FullLegalNameModification1.mmObject(), TradingNameModification1.mmObject());
 			}
 		});

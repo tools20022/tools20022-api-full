@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.MeetingInstructionRejection1Code
+ * MeetingInstructionRejection1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -65,14 +75,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.MeetingInstructionRejectionCode#mmOther
  * MeetingInstructionRejectionCode.mmOther}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.MeetingInstructionRejection1Code
- * MeetingInstructionRejection1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -122,7 +124,7 @@ public class MeetingInstructionRejectionCode {
 	 */
 	public static final MMCode mmInvalidMeetingReference = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvalidMeetingReference";
 			definition = "Instruction contains an invalid meeting reference.";
 			owner_lazy = () -> MeetingInstructionRejectionCode.mmObject();
@@ -152,7 +154,7 @@ public class MeetingInstructionRejectionCode {
 	 */
 	public static final MMCode mmInvalidAccount = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvalidAccount";
 			definition = "Instruction contains an invalid account identification.";
 			owner_lazy = () -> MeetingInstructionRejectionCode.mmObject();
@@ -183,7 +185,7 @@ public class MeetingInstructionRejectionCode {
 	 */
 	public static final MMCode mmInsufficientSecurityPosition = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InsufficientSecurityPosition";
 			definition = "Position is less than required threshold to be allowed to vote.";
 			owner_lazy = () -> MeetingInstructionRejectionCode.mmObject();
@@ -216,7 +218,7 @@ public class MeetingInstructionRejectionCode {
 	 */
 	public static final MMCode mmInvalidInstructedQuantity = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvalidInstructedQuantity";
 			definition = "Instruction contains an invalid instructed quantity (eg the instructed quantity is greater than the entitlement).";
 			owner_lazy = () -> MeetingInstructionRejectionCode.mmObject();
@@ -246,7 +248,7 @@ public class MeetingInstructionRejectionCode {
 	 */
 	public static final MMCode mmInvalidDate = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvalidDate";
 			definition = "Instruction received after the specified deadline.";
 			owner_lazy = () -> MeetingInstructionRejectionCode.mmObject();
@@ -276,7 +278,7 @@ public class MeetingInstructionRejectionCode {
 	 */
 	public static final MMCode mmSplitVoteNotAllowed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SplitVoteNotAllowed";
 			definition = "Split voting is not allowed.";
 			owner_lazy = () -> MeetingInstructionRejectionCode.mmObject();
@@ -306,7 +308,7 @@ public class MeetingInstructionRejectionCode {
 	 */
 	public static final MMCode mmPartialVoteNotAllowed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartialVoteNotAllowed";
 			definition = "Partial voting is not allowed.";
 			owner_lazy = () -> MeetingInstructionRejectionCode.mmObject();
@@ -336,7 +338,7 @@ public class MeetingInstructionRejectionCode {
 	 */
 	public static final MMCode mmMissingOrInvalidPOA = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MissingOrInvalidPOA";
 			definition = "Missing or invalid power of attorney.";
 			owner_lazy = () -> MeetingInstructionRejectionCode.mmObject();
@@ -366,7 +368,7 @@ public class MeetingInstructionRejectionCode {
 	 */
 	public static final MMCode mmProxyCardDiscrepancy = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProxyCardDiscrepancy";
 			definition = "Invalid proxy information.";
 			owner_lazy = () -> MeetingInstructionRejectionCode.mmObject();
@@ -396,7 +398,7 @@ public class MeetingInstructionRejectionCode {
 	 */
 	public static final MMCode mmReRegistrationDiscrepancy = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReRegistrationDiscrepancy";
 			definition = "Invalid re-registration information.";
 			owner_lazy = () -> MeetingInstructionRejectionCode.mmObject();
@@ -426,7 +428,7 @@ public class MeetingInstructionRejectionCode {
 	 */
 	public static final MMCode mmRejectedByIssuer = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RejectedByIssuer";
 			definition = "Issuer has rejected the instruction.";
 			owner_lazy = () -> MeetingInstructionRejectionCode.mmObject();
@@ -456,7 +458,7 @@ public class MeetingInstructionRejectionCode {
 	 */
 	public static final MMCode mmOther = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
 			definition = "Other errors.";
 			owner_lazy = () -> MeetingInstructionRejectionCode.mmObject();
@@ -467,17 +469,15 @@ public class MeetingInstructionRejectionCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("INMR");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MeetingInstructionRejectionCode";
 				definition = "Identifies the possible rejection reasons.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MeetingInstructionRejectionCode.mmInvalidMeetingReference, com.tools20022.repository.codeset.MeetingInstructionRejectionCode.mmInvalidAccount,
-						com.tools20022.repository.codeset.MeetingInstructionRejectionCode.mmInsufficientSecurityPosition, com.tools20022.repository.codeset.MeetingInstructionRejectionCode.mmInvalidInstructedQuantity,
-						com.tools20022.repository.codeset.MeetingInstructionRejectionCode.mmInvalidDate, com.tools20022.repository.codeset.MeetingInstructionRejectionCode.mmSplitVoteNotAllowed,
-						com.tools20022.repository.codeset.MeetingInstructionRejectionCode.mmPartialVoteNotAllowed, com.tools20022.repository.codeset.MeetingInstructionRejectionCode.mmMissingOrInvalidPOA,
-						com.tools20022.repository.codeset.MeetingInstructionRejectionCode.mmProxyCardDiscrepancy, com.tools20022.repository.codeset.MeetingInstructionRejectionCode.mmReRegistrationDiscrepancy,
-						com.tools20022.repository.codeset.MeetingInstructionRejectionCode.mmRejectedByIssuer, com.tools20022.repository.codeset.MeetingInstructionRejectionCode.mmOther);
+				code_lazy = () -> Arrays.asList(MeetingInstructionRejectionCode.mmInvalidMeetingReference, MeetingInstructionRejectionCode.mmInvalidAccount, MeetingInstructionRejectionCode.mmInsufficientSecurityPosition,
+						MeetingInstructionRejectionCode.mmInvalidInstructedQuantity, MeetingInstructionRejectionCode.mmInvalidDate, MeetingInstructionRejectionCode.mmSplitVoteNotAllowed,
+						MeetingInstructionRejectionCode.mmPartialVoteNotAllowed, MeetingInstructionRejectionCode.mmMissingOrInvalidPOA, MeetingInstructionRejectionCode.mmProxyCardDiscrepancy,
+						MeetingInstructionRejectionCode.mmReRegistrationDiscrepancy, MeetingInstructionRejectionCode.mmRejectedByIssuer, MeetingInstructionRejectionCode.mmOther);
 				derivation_lazy = () -> Arrays.asList(MeetingInstructionRejection1Code.mmObject());
 			}
 		});

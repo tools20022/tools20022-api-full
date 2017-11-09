@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -28,6 +30,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.ChargeBearer1Code
+ * ChargeBearer1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -44,13 +53,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.ChargeBearerCode#mmIntermediary
  * ChargeBearerCode.mmIntermediary}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.ChargeBearer1Code
- * ChargeBearer1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -102,7 +104,7 @@ public class ChargeBearerCode {
 	 */
 	public static final MMCode mmBorneByDebtor = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BorneByDebtor";
 			definition = "All transaction charges are to be borne by the debtor.";
 			owner_lazy = () -> ChargeBearerCode.mmObject();
@@ -132,7 +134,7 @@ public class ChargeBearerCode {
 	 */
 	public static final MMCode mmBorneByCreditor = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BorneByCreditor";
 			definition = "All transaction charges are to be borne by the creditor.";
 			owner_lazy = () -> ChargeBearerCode.mmObject();
@@ -166,7 +168,7 @@ public class ChargeBearerCode {
 	 */
 	public static final MMCode mmShared = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Shared";
 			definition = "Under the credit transfer scenario, transaction charges on the sender's side are to be borne by the debtor; transaction charges on the receiver's side are to be borne by the creditor.";
 			owner_lazy = () -> ChargeBearerCode.mmObject();
@@ -196,7 +198,7 @@ public class ChargeBearerCode {
 	 */
 	public static final MMCode mmInvestor = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Investor";
 			definition = "All charges are to be borne by the investor.";
 			owner_lazy = () -> ChargeBearerCode.mmObject();
@@ -226,7 +228,7 @@ public class ChargeBearerCode {
 	 */
 	public static final MMCode mmIntermediary = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Intermediary";
 			definition = "All charges are to be borne by the intermediary.";
 			owner_lazy = () -> ChargeBearerCode.mmObject();
@@ -237,13 +239,12 @@ public class ChargeBearerCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("OUR");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ChargeBearerCode";
 				definition = "Specifies which party(ies) will pay charges due for processing of the payment transaction.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ChargeBearerCode.mmBorneByDebtor, com.tools20022.repository.codeset.ChargeBearerCode.mmBorneByCreditor,
-						com.tools20022.repository.codeset.ChargeBearerCode.mmShared, com.tools20022.repository.codeset.ChargeBearerCode.mmInvestor, com.tools20022.repository.codeset.ChargeBearerCode.mmIntermediary);
+				code_lazy = () -> Arrays.asList(ChargeBearerCode.mmBorneByDebtor, ChargeBearerCode.mmBorneByCreditor, ChargeBearerCode.mmShared, ChargeBearerCode.mmInvestor, ChargeBearerCode.mmIntermediary);
 				derivation_lazy = () -> Arrays.asList(ChargeBearer1Code.mmObject());
 			}
 		});

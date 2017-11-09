@@ -17,12 +17,12 @@
 
 package com.tools20022.repository.entity;
 
-import com.tools20022.metamodel.MMBusinessAssociationEnd;
-import com.tools20022.metamodel.MMBusinessAttribute;
-import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.*;
 import com.tools20022.repository.choice.*;
 import com.tools20022.repository.codeset.LotteryTypeCode;
 import com.tools20022.repository.datatype.ISODateTime;
+import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -35,33 +35,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Lottery#mmLotteryDate
- * Lottery.mmLotteryDate}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Lottery#mmIncrementalDenomination
- * Lottery.mmIncrementalDenomination}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Lottery#mmLotteryType
- * Lottery.mmLotteryType}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Lottery#mmRelatedCorporateEvent
- * Lottery.mmRelatedCorporateEvent}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmLottery
- * SecuritiesQuantity.mmLottery}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmLottery
- * CorporateActionEvent.mmLottery}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -78,6 +51,33 @@ import java.util.concurrent.atomic.AtomicReference;
  * LotteryTypeFormat4Choice}</li>
  * <li>{@linkplain com.tools20022.repository.choice.LotteryTypeFormat5Choice
  * LotteryTypeFormat5Choice}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmLottery
+ * SecuritiesQuantity.mmLottery}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmLottery
+ * CorporateActionEvent.mmLottery}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.Lottery#mmLotteryDate
+ * Lottery.mmLotteryDate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Lottery#mmIncrementalDenomination
+ * Lottery.mmIncrementalDenomination}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Lottery#mmLotteryType
+ * Lottery.mmLotteryType}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Lottery#mmRelatedCorporateEvent
+ * Lottery.mmRelatedCorporateEvent}</li>
  * </ul>
  * </li>
  * <li>
@@ -188,16 +188,13 @@ public class Lottery {
 	 */
 	public static final MMBusinessAttribute mmLotteryDate = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionDate1.mmLotteryDate, com.tools20022.repository.msg.CorporateActionDate13.mmLotteryDate,
-					com.tools20022.repository.msg.CorporateActionDate14.mmLotteryDate, com.tools20022.repository.msg.CorporateActionDate21.mmLotteryDate, com.tools20022.repository.msg.CorporateActionDate22.mmLotteryDate,
-					com.tools20022.repository.msg.CorporateActionDate25.mmLotteryDate, com.tools20022.repository.msg.CorporateActionDate27.mmLotteryDate, com.tools20022.repository.msg.CorporateActionDate28.mmLotteryDate,
-					com.tools20022.repository.msg.CorporateActionDate2.mmLotteryDate, com.tools20022.repository.msg.CorporateActionSD9.mmLotteryDate, com.tools20022.repository.msg.CorporateActionSD10.mmLotteryDate,
-					com.tools20022.repository.msg.CorporateActionDate41.mmLotteryDate, com.tools20022.repository.msg.CorporateActionDate43.mmLotteryDate, com.tools20022.repository.msg.CorporateActionDate45.mmLotteryDate,
-					com.tools20022.repository.msg.CorporateActionDate44.mmLotteryDate, com.tools20022.repository.msg.CorporateActionDate54.mmLotteryDate, com.tools20022.repository.msg.CorporateActionDate58.mmLotteryDate,
-					com.tools20022.repository.msg.CorporateActionSD16.mmLotteryDate);
+			derivation_lazy = () -> Arrays.asList(CorporateActionDate1.mmLotteryDate, CorporateActionDate13.mmLotteryDate, CorporateActionDate14.mmLotteryDate, CorporateActionDate21.mmLotteryDate, CorporateActionDate22.mmLotteryDate,
+					CorporateActionDate25.mmLotteryDate, CorporateActionDate27.mmLotteryDate, CorporateActionDate28.mmLotteryDate, CorporateActionDate2.mmLotteryDate, CorporateActionSD9.mmLotteryDate, CorporateActionSD10.mmLotteryDate,
+					CorporateActionDate41.mmLotteryDate, CorporateActionDate43.mmLotteryDate, CorporateActionDate45.mmLotteryDate, CorporateActionDate44.mmLotteryDate, CorporateActionDate54.mmLotteryDate,
+					CorporateActionDate58.mmLotteryDate, CorporateActionSD16.mmLotteryDate);
 			elementContext_lazy = () -> Lottery.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "LotteryDate";
 			definition = "Date on which the lottery is run and applied to the holder's positions. This is also applicable to partial calls.";
 			maxOccurs = 1;
@@ -278,20 +275,18 @@ public class Lottery {
 	 */
 	public static final MMBusinessAssociationEnd mmIncrementalDenomination = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionQuantity1.mmIncrementalDenomination, com.tools20022.repository.msg.CorporateActionQuantity2.mmIncrementalDenomination,
-					com.tools20022.repository.msg.CorporateActionQuantity3.mmIncrementalDenomination, com.tools20022.repository.msg.CorporateActionQuantity4.mmIncrementalDenomination,
-					com.tools20022.repository.msg.CorporateActionQuantity5.mmIncrementalDenomination, com.tools20022.repository.msg.CorporateActionQuantity6.mmIncrementalDenomination,
-					com.tools20022.repository.msg.CorporateAction2.mmIncrementalDenomination, com.tools20022.repository.msg.CorporateActionQuantity7.mmIncrementalDenomination,
-					com.tools20022.repository.msg.CorporateActionQuantity8.mmIncrementalDenomination, com.tools20022.repository.msg.CorporateActionQuantitySD2.mmIncrementalDenomination);
+			derivation_lazy = () -> Arrays.asList(CorporateActionQuantity1.mmIncrementalDenomination, CorporateActionQuantity2.mmIncrementalDenomination, CorporateActionQuantity3.mmIncrementalDenomination,
+					CorporateActionQuantity4.mmIncrementalDenomination, CorporateActionQuantity5.mmIncrementalDenomination, CorporateActionQuantity6.mmIncrementalDenomination, CorporateAction2.mmIncrementalDenomination,
+					CorporateActionQuantity7.mmIncrementalDenomination, CorporateActionQuantity8.mmIncrementalDenomination, CorporateActionQuantitySD2.mmIncrementalDenomination);
 			elementContext_lazy = () -> Lottery.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "IncrementalDenomination";
 			definition = "Amount used when the called amount is not met by running the lottery with the base denomination.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmLottery;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmObject();
 		}
 	};
@@ -445,23 +440,16 @@ public class Lottery {
 	 */
 	public static final MMBusinessAttribute mmLotteryType = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.LotteryTypeFormat1Choice.mmCode, com.tools20022.repository.choice.LotteryTypeFormat1Choice.mmProprietary,
-					com.tools20022.repository.msg.CorporateAction3.mmLotteryType, com.tools20022.repository.choice.LotteryTypeFormat2Choice.mmCode, com.tools20022.repository.choice.LotteryTypeFormat2Choice.mmProprietary,
-					com.tools20022.repository.msg.CorporateAction4.mmLotteryType, com.tools20022.repository.msg.CorporateAction5.mmLotteryType, com.tools20022.repository.msg.CorporateAction6.mmLotteryType,
-					com.tools20022.repository.msg.CorporateAction7.mmLotteryType, com.tools20022.repository.msg.CorporateAction8.mmLotteryType, com.tools20022.repository.msg.CorporateAction10.mmLotteryType,
-					com.tools20022.repository.msg.CorporateAction11.mmLotteryType, com.tools20022.repository.choice.LotteryType1FormatChoice.mmCode, com.tools20022.repository.choice.LotteryType1FormatChoice.mmProprietary,
-					com.tools20022.repository.msg.CorporateAction2.mmLotteryType, com.tools20022.repository.msg.CorporateAction13.mmLotteryType, com.tools20022.repository.msg.CorporateAction12.mmLotteryType,
-					com.tools20022.repository.msg.CorporateAction14.mmLotteryType, com.tools20022.repository.msg.CorporateAction20.mmLotteryType, com.tools20022.repository.msg.CorporateAction18.mmLotteryType,
-					com.tools20022.repository.msg.CorporateAction17.mmLotteryType, com.tools20022.repository.choice.LotteryTypeFormat3Choice.mmCode, com.tools20022.repository.choice.LotteryTypeFormat3Choice.mmProprietary,
-					com.tools20022.repository.msg.CorporateAction24.mmLotteryType, com.tools20022.repository.msg.CorporateAction30.mmLotteryType, com.tools20022.repository.msg.CorporateAction28.mmLotteryType,
-					com.tools20022.repository.msg.CorporateAction29.mmLotteryType, com.tools20022.repository.msg.CorporateAction33.mmLotteryType, com.tools20022.repository.msg.CorporateAction32.mmLotteryType,
-					com.tools20022.repository.msg.CorporateAction31.mmLotteryType, com.tools20022.repository.choice.LotteryTypeFormat4Choice.mmCode, com.tools20022.repository.choice.LotteryTypeFormat4Choice.mmProprietary,
-					com.tools20022.repository.msg.CorporateAction34.mmLotteryType, com.tools20022.repository.msg.CorporateAction35.mmLotteryType, com.tools20022.repository.msg.CorporateAction36.mmLotteryType,
-					com.tools20022.repository.msg.CorporateAction38.mmLotteryType, com.tools20022.repository.msg.CorporateAction40.mmLotteryType, com.tools20022.repository.choice.LotteryTypeFormat5Choice.mmCode,
-					com.tools20022.repository.choice.LotteryTypeFormat5Choice.mmProprietary);
+			derivation_lazy = () -> Arrays.asList(LotteryTypeFormat1Choice.mmCode, LotteryTypeFormat1Choice.mmProprietary, CorporateAction3.mmLotteryType, LotteryTypeFormat2Choice.mmCode, LotteryTypeFormat2Choice.mmProprietary,
+					CorporateAction4.mmLotteryType, CorporateAction5.mmLotteryType, CorporateAction6.mmLotteryType, CorporateAction7.mmLotteryType, CorporateAction8.mmLotteryType, CorporateAction10.mmLotteryType,
+					CorporateAction11.mmLotteryType, LotteryType1FormatChoice.mmCode, LotteryType1FormatChoice.mmProprietary, CorporateAction2.mmLotteryType, CorporateAction13.mmLotteryType, CorporateAction12.mmLotteryType,
+					CorporateAction14.mmLotteryType, CorporateAction20.mmLotteryType, CorporateAction18.mmLotteryType, CorporateAction17.mmLotteryType, LotteryTypeFormat3Choice.mmCode, LotteryTypeFormat3Choice.mmProprietary,
+					CorporateAction24.mmLotteryType, CorporateAction30.mmLotteryType, CorporateAction28.mmLotteryType, CorporateAction29.mmLotteryType, CorporateAction33.mmLotteryType, CorporateAction32.mmLotteryType,
+					CorporateAction31.mmLotteryType, LotteryTypeFormat4Choice.mmCode, LotteryTypeFormat4Choice.mmProprietary, CorporateAction34.mmLotteryType, CorporateAction35.mmLotteryType, CorporateAction36.mmLotteryType,
+					CorporateAction38.mmLotteryType, CorporateAction40.mmLotteryType, LotteryTypeFormat5Choice.mmCode, LotteryTypeFormat5Choice.mmProprietary);
 			elementContext_lazy = () -> Lottery.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "LotteryType";
 			definition = "Specifies the type of lottery announced.";
 			maxOccurs = 1;
@@ -508,13 +496,13 @@ public class Lottery {
 		{
 			elementContext_lazy = () -> Lottery.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedCorporateEvent";
 			definition = "Corporate event for which lottery information is provided.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmLottery;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmObject();
 		}
 	};
@@ -522,13 +510,12 @@ public class Lottery {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Lottery";
 				definition = "The parameters required to manage the organisation of a lottery.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesQuantity.mmLottery, com.tools20022.repository.entity.CorporateActionEvent.mmLottery);
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Lottery.mmLotteryDate, com.tools20022.repository.entity.Lottery.mmIncrementalDenomination, com.tools20022.repository.entity.Lottery.mmLotteryType,
-						com.tools20022.repository.entity.Lottery.mmRelatedCorporateEvent);
+				element_lazy = () -> Arrays.asList(Lottery.mmLotteryDate, Lottery.mmIncrementalDenomination, Lottery.mmLotteryType, Lottery.mmRelatedCorporateEvent);
 				derivationComponent_lazy = () -> Arrays.asList(LotteryTypeFormat1Choice.mmObject(), LotteryTypeFormat2Choice.mmObject(), LotteryType1FormatChoice.mmObject(), LotteryTypeFormat3Choice.mmObject(),
 						LotteryTypeFormat4Choice.mmObject(), LotteryTypeFormat5Choice.mmObject());
 			}

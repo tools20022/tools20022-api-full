@@ -20,7 +20,9 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.Algorithm3Code;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -117,10 +119,10 @@ public class AlgorithmIdentification3 {
 			componentContext_lazy = () -> AlgorithmIdentification3.mmObject();
 			isDerived = false;
 			xmlTag = "Algo";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Algorithm";
 			definition = "Identification of the algorithm.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AlgorithmIdentification10.mmAlgorithm);
+			nextVersions_lazy = () -> Arrays.asList(AlgorithmIdentification10.mmAlgorithm);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Algorithm3Code.mmObject();
@@ -165,10 +167,10 @@ public class AlgorithmIdentification3 {
 			componentContext_lazy = () -> AlgorithmIdentification3.mmObject();
 			isDerived = false;
 			xmlTag = "Param";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Parameter";
 			definition = "Parameters associated to the algorithm.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AlgorithmIdentification10.mmParameter);
+			nextVersions_lazy = () -> Arrays.asList(AlgorithmIdentification10.mmParameter);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -179,9 +181,9 @@ public class AlgorithmIdentification3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AlgorithmIdentification3.mmAlgorithm, com.tools20022.repository.msg.AlgorithmIdentification3.mmParameter);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(AlgorithmIdentification3.mmAlgorithm, AlgorithmIdentification3.mmParameter);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AlgorithmIdentification3";
 				definition = "Identification of a cryptographic algorithm and parameters for the MAC computation.";
 				nextVersions_lazy = () -> Arrays.asList(AlgorithmIdentification4.mmObject(), AlgorithmIdentification10.mmObject());

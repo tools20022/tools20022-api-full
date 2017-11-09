@@ -19,8 +19,10 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max9NumericText;
 import com.tools20022.repository.datatype.Number;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -97,7 +99,7 @@ public class ProcessRetry2 {
 			componentContext_lazy = () -> ProcessRetry2.mmObject();
 			isDerived = false;
 			xmlTag = "Dely";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Delay";
 			definition = "Time period to wait for a retry in months, days, hours and minutes, leading zeros could be omitted.";
 			maxOccurs = 1;
@@ -137,7 +139,7 @@ public class ProcessRetry2 {
 			componentContext_lazy = () -> ProcessRetry2.mmObject();
 			isDerived = false;
 			xmlTag = "MaxNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaximumNumber";
 			definition = "Maximum number of retries.";
 			maxOccurs = 1;
@@ -149,9 +151,9 @@ public class ProcessRetry2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ProcessRetry2.mmDelay, com.tools20022.repository.msg.ProcessRetry2.mmMaximumNumber);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(ProcessRetry2.mmDelay, ProcessRetry2.mmMaximumNumber);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ProcessRetry2";
 				definition = "Definition of retry process if activation of an action fails.";
 				previousVersion_lazy = () -> ProcessRetry1.mmObject();

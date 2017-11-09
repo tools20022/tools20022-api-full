@@ -19,6 +19,8 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -99,7 +101,7 @@ public class PayloadDescription1 {
 			componentContext_lazy = () -> PayloadDescription1.mmObject();
 			isDerived = false;
 			xmlTag = "PyldDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PayloadDetails";
 			definition = "This component is used to identify the instance of the document exchanged.";
 			maxOccurs = 1;
@@ -143,7 +145,7 @@ public class PayloadDescription1 {
 			componentContext_lazy = () -> PayloadDescription1.mmObject();
 			isDerived = false;
 			xmlTag = "ApplSpcfcInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ApplicationSpecificInformation";
 			definition = "Contains business information that is considered as necessary by the service provider.";
 			maxOccurs = 1;
@@ -184,7 +186,7 @@ public class PayloadDescription1 {
 			componentContext_lazy = () -> PayloadDescription1.mmObject();
 			isDerived = false;
 			xmlTag = "PyldTpDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PayloadTypeDetails";
 			definition = "Identification of the type of payload.";
 			maxOccurs = 1;
@@ -228,7 +230,7 @@ public class PayloadDescription1 {
 			componentContext_lazy = () -> PayloadDescription1.mmObject();
 			isDerived = false;
 			xmlTag = "MnfstDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ManifestDetails";
 			definition = "Manifest that describes the related items or attachments.\r\nThis block is repeated for each different type of item.";
 			minOccurs = 0;
@@ -240,10 +242,9 @@ public class PayloadDescription1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PayloadDescription1.mmPayloadDetails, com.tools20022.repository.msg.PayloadDescription1.mmApplicationSpecificInformation,
-						com.tools20022.repository.msg.PayloadDescription1.mmPayloadTypeDetails, com.tools20022.repository.msg.PayloadDescription1.mmManifestDetails);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(PayloadDescription1.mmPayloadDetails, PayloadDescription1.mmApplicationSpecificInformation, PayloadDescription1.mmPayloadTypeDetails, PayloadDescription1.mmManifestDetails);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "PayloadDescription1";
 				definition = "Contains information about the payload.";
 			}

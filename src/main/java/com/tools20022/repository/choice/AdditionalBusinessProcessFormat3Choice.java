@@ -20,8 +20,10 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.AdditionalBusinessProcess3Code;
 import com.tools20022.repository.entity.CorporateActionEvent;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification20;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -114,11 +116,11 @@ public class AdditionalBusinessProcessFormat3Choice {
 	 */
 	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmAdditionalBusinessProcess;
+			businessElementTrace_lazy = () -> CorporateActionEvent.mmAdditionalBusinessProcess;
 			componentContext_lazy = () -> AdditionalBusinessProcessFormat3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Cd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Standard code to specify the additional business process \"tax refund\" linked to a corporate action event.";
 			maxOccurs = 1;
@@ -164,11 +166,11 @@ public class AdditionalBusinessProcessFormat3Choice {
 	 */
 	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmAdditionalBusinessProcess;
+			businessElementTrace_lazy = () -> CorporateActionEvent.mmAdditionalBusinessProcess;
 			componentContext_lazy = () -> AdditionalBusinessProcessFormat3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Proprietary identification of the additional business process \"tax refund\" linked to a corporate action event.";
 			maxOccurs = 1;
@@ -181,10 +183,10 @@ public class AdditionalBusinessProcessFormat3Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AdditionalBusinessProcessFormat3Choice.mmCode, com.tools20022.repository.choice.AdditionalBusinessProcessFormat3Choice.mmProprietary);
+				messageElement_lazy = () -> Arrays.asList(AdditionalBusinessProcessFormat3Choice.mmCode, AdditionalBusinessProcessFormat3Choice.mmProprietary);
 				trace_lazy = () -> CorporateActionEvent.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AdditionalBusinessProcessFormat3Choice";
 				definition = "Choice between a standard code or proprietary code to specify the type of the additional business process, that is, a tax refund.";
 				nextVersions_lazy = () -> Arrays.asList(AdditionalBusinessProcessFormat7Choice.mmObject());

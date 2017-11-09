@@ -20,6 +20,10 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.setr.SecuritiesTradeConfirmationV01;
+import com.tools20022.repository.area.setr.SecuritiesTradeConfirmationV02;
+import com.tools20022.repository.area.setr.SecuritiesTradeConfirmationV03;
 import com.tools20022.repository.choice.ClosingDate1Choice;
 import com.tools20022.repository.choice.TradeDate1Choice;
 import com.tools20022.repository.choice.TradeDate4Choice;
@@ -27,6 +31,10 @@ import com.tools20022.repository.choice.TwoLegTransactionType1Choice;
 import com.tools20022.repository.datatype.Max140Text;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.SecuritiesFinancing;
+import com.tools20022.repository.entity.SecuritiesTrade;
+import com.tools20022.repository.entity.Trade;
+import com.tools20022.repository.entity.TradeIdentification;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -148,11 +156,11 @@ public class TwoLegTransactionDetails1 {
 	 */
 	public static final MMMessageAttribute mmTradeDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Trade.mmTradeDateTime;
+			businessElementTrace_lazy = () -> Trade.mmTradeDateTime;
 			componentContext_lazy = () -> TwoLegTransactionDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "TradDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeDate";
 			definition = "Specifies the date/time on which the trade was executed.";
 			maxOccurs = 1;
@@ -198,11 +206,11 @@ public class TwoLegTransactionDetails1 {
 	 */
 	public static final MMMessageAttribute mmOpeningLegIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradeIdentification.mmIdentification;
+			businessElementTrace_lazy = () -> TradeIdentification.mmIdentification;
 			componentContext_lazy = () -> TwoLegTransactionDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "OpngLegId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OpeningLegIdentification";
 			definition = "Unambiguous identification of the reference assigned in the first leg of the transaction.";
 			maxOccurs = 1;
@@ -248,11 +256,11 @@ public class TwoLegTransactionDetails1 {
 	 */
 	public static final MMMessageAttribute mmClosingLegIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradeIdentification.mmIdentification;
+			businessElementTrace_lazy = () -> TradeIdentification.mmIdentification;
 			componentContext_lazy = () -> TwoLegTransactionDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "ClsgLegId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClosingLegIdentification";
 			definition = "Unambiguous identification of the second leg of the transaction as known by the account owner (or the instructing party acting on its behalf).";
 			maxOccurs = 1;
@@ -297,11 +305,11 @@ public class TwoLegTransactionDetails1 {
 	 */
 	public static final MMMessageAttribute mmGrossTradeAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTrade.mmTradeAmount;
+			businessElementTrace_lazy = () -> SecuritiesTrade.mmTradeAmount;
 			componentContext_lazy = () -> TwoLegTransactionDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "GrssTradAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GrossTradeAmount";
 			definition = "Principal amount of a trade (price multiplied by quantity).";
 			maxOccurs = 1;
@@ -347,7 +355,7 @@ public class TwoLegTransactionDetails1 {
 			componentContext_lazy = () -> TwoLegTransactionDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "OthrAmts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherAmounts";
 			definition = "Identifies other amounts pertaining to the transaction.";
 			minOccurs = 0;
@@ -390,7 +398,7 @@ public class TwoLegTransactionDetails1 {
 			componentContext_lazy = () -> TwoLegTransactionDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "ScndLegNrrtv";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecondLegNarrative";
 			definition = "Provides additional information about the second leg in narrative form.";
 			maxOccurs = 1;
@@ -432,11 +440,11 @@ public class TwoLegTransactionDetails1 {
 	 */
 	public static final MMMessageAttribute mmEndPrice = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancing.mmEndPrice;
+			businessElementTrace_lazy = () -> SecuritiesFinancing.mmEndPrice;
 			componentContext_lazy = () -> TwoLegTransactionDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "EndPric";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EndPrice";
 			definition = "Negotiated fixed price of the security to buy it back.";
 			maxOccurs = 1;
@@ -479,11 +487,11 @@ public class TwoLegTransactionDetails1 {
 	 */
 	public static final MMMessageAssociationEnd mmClosingDate = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancing.mmTerminationDateTime;
+			businessElementTrace_lazy = () -> SecuritiesFinancing.mmTerminationDateTime;
 			componentContext_lazy = () -> TwoLegTransactionDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "ClsgDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClosingDate";
 			definition = "Closing date/time or maturity date/time of the transaction.";
 			maxOccurs = 1;
@@ -530,11 +538,11 @@ public class TwoLegTransactionDetails1 {
 	 */
 	public static final MMMessageAssociationEnd mmClosingSettlementAmount = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancing.mmTerminationTransactionAmount;
+			businessElementTrace_lazy = () -> SecuritiesFinancing.mmTerminationTransactionAmount;
 			componentContext_lazy = () -> TwoLegTransactionDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "ClsgSttlmAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClosingSettlementAmount";
 			definition = "Total amount of money to be paid or received in exchange for the securities.  The amount includes the principal with any commissions and fees or accrued interest.";
 			maxOccurs = 1;
@@ -577,7 +585,7 @@ public class TwoLegTransactionDetails1 {
 			componentContext_lazy = () -> TwoLegTransactionDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "PrcgDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProcessingDate";
 			definition = "Processing date of the trading session.";
 			maxOccurs = 1;
@@ -624,7 +632,7 @@ public class TwoLegTransactionDetails1 {
 			componentContext_lazy = () -> TwoLegTransactionDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "TwoLegTxTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TwoLegTransactionType";
 			definition = "Specifies the type of the second leg transaction.";
 			maxOccurs = 1;
@@ -637,17 +645,14 @@ public class TwoLegTransactionDetails1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TwoLegTransactionDetails1.mmTradeDate, com.tools20022.repository.msg.TwoLegTransactionDetails1.mmOpeningLegIdentification,
-						com.tools20022.repository.msg.TwoLegTransactionDetails1.mmClosingLegIdentification, com.tools20022.repository.msg.TwoLegTransactionDetails1.mmGrossTradeAmount,
-						com.tools20022.repository.msg.TwoLegTransactionDetails1.mmOtherAmounts, com.tools20022.repository.msg.TwoLegTransactionDetails1.mmSecondLegNarrative,
-						com.tools20022.repository.msg.TwoLegTransactionDetails1.mmEndPrice, com.tools20022.repository.msg.TwoLegTransactionDetails1.mmClosingDate,
-						com.tools20022.repository.msg.TwoLegTransactionDetails1.mmClosingSettlementAmount, com.tools20022.repository.msg.TwoLegTransactionDetails1.mmProcessingDate,
-						com.tools20022.repository.msg.TwoLegTransactionDetails1.mmTwoLegTransactionType);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.SecuritiesTradeConfirmationV01.mmTwoLegTransactionDetails,
-						com.tools20022.repository.area.setr.SecuritiesTradeConfirmationV02.mmTwoLegTransactionDetails, com.tools20022.repository.area.setr.SecuritiesTradeConfirmationV03.mmTwoLegTransactionDetails);
+				messageElement_lazy = () -> Arrays.asList(TwoLegTransactionDetails1.mmTradeDate, TwoLegTransactionDetails1.mmOpeningLegIdentification, TwoLegTransactionDetails1.mmClosingLegIdentification,
+						TwoLegTransactionDetails1.mmGrossTradeAmount, TwoLegTransactionDetails1.mmOtherAmounts, TwoLegTransactionDetails1.mmSecondLegNarrative, TwoLegTransactionDetails1.mmEndPrice, TwoLegTransactionDetails1.mmClosingDate,
+						TwoLegTransactionDetails1.mmClosingSettlementAmount, TwoLegTransactionDetails1.mmProcessingDate, TwoLegTransactionDetails1.mmTwoLegTransactionType);
+				messageBuildingBlock_lazy = () -> Arrays
+						.asList(SecuritiesTradeConfirmationV01.mmTwoLegTransactionDetails, SecuritiesTradeConfirmationV02.mmTwoLegTransactionDetails, SecuritiesTradeConfirmationV03.mmTwoLegTransactionDetails);
 				trace_lazy = () -> SecuritiesFinancing.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TwoLegTransactionDetails1";
 				definition = "Specifies the details of the first leg in a two leg transaction process.";
 			}

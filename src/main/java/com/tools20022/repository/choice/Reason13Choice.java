@@ -19,7 +19,10 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.SecuritiesTradeStatusReason;
+import com.tools20022.repository.entity.StatusReason;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -133,11 +136,11 @@ public class Reason13Choice {
 	 */
 	public static final MMMessageAssociationEnd mmRepoCallAcknowledgementReason = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeStatusReason.mmRepoCallAcknowledgementReason;
+			businessElementTrace_lazy = () -> SecuritiesTradeStatusReason.mmRepoCallAcknowledgementReason;
 			componentContext_lazy = () -> Reason13Choice.mmObject();
 			isDerived = false;
 			xmlTag = "RepoCallAckRsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RepoCallAcknowledgementReason";
 			definition = "Specifies additional information on the repurchase agreement call request acknowledgement.";
 			maxOccurs = 1;
@@ -184,11 +187,11 @@ public class Reason13Choice {
 	 */
 	public static final MMMessageAssociationEnd mmCancellationReason = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmCancellationReason;
+			businessElementTrace_lazy = () -> StatusReason.mmCancellationReason;
 			componentContext_lazy = () -> Reason13Choice.mmObject();
 			isDerived = false;
 			xmlTag = "CxlRsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationReason";
 			definition = "Specifies the reason why the related instruction is cancelled, or the related cancellation request is executed.";
 			maxOccurs = 1;
@@ -233,11 +236,11 @@ public class Reason13Choice {
 	 */
 	public static final MMMessageAssociationEnd mmPendingCancellationReason = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmPendingReason;
+			businessElementTrace_lazy = () -> StatusReason.mmPendingReason;
 			componentContext_lazy = () -> Reason13Choice.mmObject();
 			isDerived = false;
 			xmlTag = "PdgCxlRsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingCancellationReason";
 			definition = "Specifies the reason why the cancellation request is pending.";
 			maxOccurs = 1;
@@ -281,11 +284,11 @@ public class Reason13Choice {
 	 */
 	public static final MMMessageAssociationEnd mmGeneratedReason = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeStatusReason.mmGeneratedReason;
+			businessElementTrace_lazy = () -> SecuritiesTradeStatusReason.mmGeneratedReason;
 			componentContext_lazy = () -> Reason13Choice.mmObject();
 			isDerived = false;
 			xmlTag = "GnrtdRsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GeneratedReason";
 			definition = "Specifies the reason why the transaction was generated.";
 			maxOccurs = 1;
@@ -328,11 +331,11 @@ public class Reason13Choice {
 	 */
 	public static final MMMessageAssociationEnd mmDeniedReason = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeStatusReason.mmDeniedReason;
+			businessElementTrace_lazy = () -> SecuritiesTradeStatusReason.mmDeniedReason;
 			componentContext_lazy = () -> Reason13Choice.mmObject();
 			isDerived = false;
 			xmlTag = "DndRsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeniedReason";
 			definition = "Specifies the reason why the request was denied.";
 			maxOccurs = 1;
@@ -377,11 +380,11 @@ public class Reason13Choice {
 	 */
 	public static final MMMessageAssociationEnd mmAcknowledgedAcceptedReason = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmAcknowledgedAcceptedReason;
+			businessElementTrace_lazy = () -> StatusReason.mmAcknowledgedAcceptedReason;
 			componentContext_lazy = () -> Reason13Choice.mmObject();
 			isDerived = false;
 			xmlTag = "AckdAccptdRsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcknowledgedAcceptedReason";
 			definition = "Specifies additional information about the processed instruction.";
 			maxOccurs = 1;
@@ -426,11 +429,11 @@ public class Reason13Choice {
 	 */
 	public static final MMMessageAssociationEnd mmPendingReason = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmPendingReason;
+			businessElementTrace_lazy = () -> StatusReason.mmPendingReason;
 			componentContext_lazy = () -> Reason13Choice.mmObject();
 			isDerived = false;
 			xmlTag = "PdgRsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingReason";
 			definition = "Specifies the reason why the instruction has a pending status.";
 			maxOccurs = 1;
@@ -476,11 +479,11 @@ public class Reason13Choice {
 	 */
 	public static final MMMessageAssociationEnd mmFailingReason = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmFailingReason;
+			businessElementTrace_lazy = () -> StatusReason.mmFailingReason;
 			componentContext_lazy = () -> Reason13Choice.mmObject();
 			isDerived = false;
 			xmlTag = "FlngRsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FailingReason";
 			definition = "Specifies the reason why the instruction has a failing settlement status.";
 			maxOccurs = 1;
@@ -526,11 +529,11 @@ public class Reason13Choice {
 	 */
 	public static final MMMessageAssociationEnd mmPendingProcessingReason = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmPendingReason;
+			businessElementTrace_lazy = () -> StatusReason.mmPendingReason;
 			componentContext_lazy = () -> Reason13Choice.mmObject();
 			isDerived = false;
 			xmlTag = "PdgPrcgRsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingProcessingReason";
 			definition = "Specifies the reason why the instruction has a pending processing status.";
 			maxOccurs = 1;
@@ -576,11 +579,11 @@ public class Reason13Choice {
 	 */
 	public static final MMMessageAssociationEnd mmRejectionReason = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmRejectionReason;
+			businessElementTrace_lazy = () -> StatusReason.mmRejectionReason;
 			componentContext_lazy = () -> Reason13Choice.mmObject();
 			isDerived = false;
 			xmlTag = "RjctnRsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RejectionReason";
 			definition = "Specifies the reason why the instruction/request has a rejected status.";
 			maxOccurs = 1;
@@ -623,11 +626,11 @@ public class Reason13Choice {
 	 */
 	public static final MMMessageAssociationEnd mmRepairReason = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeStatusReason.mmRepairReason;
+			businessElementTrace_lazy = () -> SecuritiesTradeStatusReason.mmRepairReason;
 			componentContext_lazy = () -> Reason13Choice.mmObject();
 			isDerived = false;
 			xmlTag = "RprRsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RepairReason";
 			definition = "Specifies the reason why the instruction is in repair.";
 			maxOccurs = 1;
@@ -672,11 +675,11 @@ public class Reason13Choice {
 	 */
 	public static final MMMessageAssociationEnd mmPendingModificationReason = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmPendingReason;
+			businessElementTrace_lazy = () -> StatusReason.mmPendingReason;
 			componentContext_lazy = () -> Reason13Choice.mmObject();
 			isDerived = false;
 			xmlTag = "PdgModRsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingModificationReason";
 			definition = "Specifies the reason why the modification request is pending.";
 			maxOccurs = 1;
@@ -721,11 +724,11 @@ public class Reason13Choice {
 	 */
 	public static final MMMessageAssociationEnd mmUnmatchedReason = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeStatusReason.mmUnmatchedReason;
+			businessElementTrace_lazy = () -> SecuritiesTradeStatusReason.mmUnmatchedReason;
 			componentContext_lazy = () -> Reason13Choice.mmObject();
 			isDerived = false;
 			xmlTag = "UmtchdRsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnmatchedReason";
 			definition = "Specifies the reason why the instruction has an unmatched status.";
 			maxOccurs = 1;
@@ -738,14 +741,12 @@ public class Reason13Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Reason13Choice.mmRepoCallAcknowledgementReason, com.tools20022.repository.choice.Reason13Choice.mmCancellationReason,
-						com.tools20022.repository.choice.Reason13Choice.mmPendingCancellationReason, com.tools20022.repository.choice.Reason13Choice.mmGeneratedReason, com.tools20022.repository.choice.Reason13Choice.mmDeniedReason,
-						com.tools20022.repository.choice.Reason13Choice.mmAcknowledgedAcceptedReason, com.tools20022.repository.choice.Reason13Choice.mmPendingReason, com.tools20022.repository.choice.Reason13Choice.mmFailingReason,
-						com.tools20022.repository.choice.Reason13Choice.mmPendingProcessingReason, com.tools20022.repository.choice.Reason13Choice.mmRejectionReason, com.tools20022.repository.choice.Reason13Choice.mmRepairReason,
-						com.tools20022.repository.choice.Reason13Choice.mmPendingModificationReason, com.tools20022.repository.choice.Reason13Choice.mmUnmatchedReason);
+				messageElement_lazy = () -> Arrays.asList(Reason13Choice.mmRepoCallAcknowledgementReason, Reason13Choice.mmCancellationReason, Reason13Choice.mmPendingCancellationReason, Reason13Choice.mmGeneratedReason,
+						Reason13Choice.mmDeniedReason, Reason13Choice.mmAcknowledgedAcceptedReason, Reason13Choice.mmPendingReason, Reason13Choice.mmFailingReason, Reason13Choice.mmPendingProcessingReason, Reason13Choice.mmRejectionReason,
+						Reason13Choice.mmRepairReason, Reason13Choice.mmPendingModificationReason, Reason13Choice.mmUnmatchedReason);
 				trace_lazy = () -> SecuritiesTradeStatusReason.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Reason13Choice";
 				definition = "Choice of reason.";
 			}

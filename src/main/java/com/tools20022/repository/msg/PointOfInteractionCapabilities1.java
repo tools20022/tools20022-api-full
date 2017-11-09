@@ -19,11 +19,13 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CardDataReading1Code;
 import com.tools20022.repository.codeset.CardholderVerificationCapability1Code;
 import com.tools20022.repository.codeset.OnLineCapability1Code;
 import com.tools20022.repository.datatype.Max3NumericText;
 import com.tools20022.repository.entity.PointOfInteraction;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -128,14 +130,14 @@ public class PointOfInteractionCapabilities1 {
 	 */
 	public static final MMMessageAttribute mmCardReadingCapabilities = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PointOfInteraction.mmCardReadingCapabilities;
+			businessElementTrace_lazy = () -> PointOfInteraction.mmCardReadingCapabilities;
 			componentContext_lazy = () -> PointOfInteractionCapabilities1.mmObject();
 			isDerived = false;
 			xmlTag = "CardRdngCpblties";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CardReadingCapabilities";
 			definition = "Card reading capabilities of the POI performing the transaction.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PointOfInteractionCapabilities2.mmCardReadingCapabilities);
+			nextVersions_lazy = () -> Arrays.asList(PointOfInteractionCapabilities2.mmCardReadingCapabilities);
 			minOccurs = 0;
 			simpleType_lazy = () -> CardDataReading1Code.mmObject();
 		}
@@ -187,14 +189,14 @@ public class PointOfInteractionCapabilities1 {
 	 */
 	public static final MMMessageAttribute mmCardholderVerificationCapabilities = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PointOfInteraction.mmCardholderVerificationCapabilities;
+			businessElementTrace_lazy = () -> PointOfInteraction.mmCardholderVerificationCapabilities;
 			componentContext_lazy = () -> PointOfInteractionCapabilities1.mmObject();
 			isDerived = false;
 			xmlTag = "CrdhldrVrfctnCpblties";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CardholderVerificationCapabilities";
 			definition = "Cardholder verification capabilities of the POI performing the transaction.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PointOfInteractionCapabilities2.mmCardholderVerificationCapabilities);
+			nextVersions_lazy = () -> Arrays.asList(PointOfInteractionCapabilities2.mmCardholderVerificationCapabilities);
 			minOccurs = 0;
 			simpleType_lazy = () -> CardholderVerificationCapability1Code.mmObject();
 		}
@@ -243,14 +245,14 @@ public class PointOfInteractionCapabilities1 {
 	 */
 	public static final MMMessageAttribute mmOnLineCapabilities = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PointOfInteraction.mmOnLineCapabilities;
+			businessElementTrace_lazy = () -> PointOfInteraction.mmOnLineCapabilities;
 			componentContext_lazy = () -> PointOfInteractionCapabilities1.mmObject();
 			isDerived = false;
 			xmlTag = "OnLineCpblties";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OnLineCapabilities";
 			definition = "On-line and off-line capabilities of the POI.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PointOfInteractionCapabilities2.mmOnLineCapabilities);
+			nextVersions_lazy = () -> Arrays.asList(PointOfInteractionCapabilities2.mmOnLineCapabilities);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> OnLineCapability1Code.mmObject();
@@ -301,14 +303,14 @@ public class PointOfInteractionCapabilities1 {
 	 */
 	public static final MMMessageAttribute mmDisplayCapabilities = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PointOfInteraction.mmDisplayCapabilities;
+			businessElementTrace_lazy = () -> PointOfInteraction.mmDisplayCapabilities;
 			componentContext_lazy = () -> PointOfInteractionCapabilities1.mmObject();
 			isDerived = false;
 			xmlTag = "DispCpblties";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DisplayCapabilities";
 			definition = "Capabilities of the display components performing the transaction.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PointOfInteractionCapabilities2.mmDisplayCapabilities);
+			nextVersions_lazy = () -> Arrays.asList(PointOfInteractionCapabilities2.mmDisplayCapabilities);
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.DisplayCapabilities1.mmObject();
 		}
@@ -357,14 +359,14 @@ public class PointOfInteractionCapabilities1 {
 	 */
 	public static final MMMessageAttribute mmPrintLineWidth = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PointOfInteraction.mmPrintLineWidth;
+			businessElementTrace_lazy = () -> PointOfInteraction.mmPrintLineWidth;
 			componentContext_lazy = () -> PointOfInteractionCapabilities1.mmObject();
 			isDerived = false;
 			xmlTag = "PrtLineWidth";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PrintLineWidth";
 			definition = "Number of columns of the printer component.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PointOfInteractionCapabilities2.mmPrintLineWidth);
+			nextVersions_lazy = () -> Arrays.asList(PointOfInteractionCapabilities2.mmPrintLineWidth);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max3NumericText.mmObject();
@@ -374,12 +376,11 @@ public class PointOfInteractionCapabilities1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PointOfInteractionCapabilities1.mmCardReadingCapabilities,
-						com.tools20022.repository.msg.PointOfInteractionCapabilities1.mmCardholderVerificationCapabilities, com.tools20022.repository.msg.PointOfInteractionCapabilities1.mmOnLineCapabilities,
-						com.tools20022.repository.msg.PointOfInteractionCapabilities1.mmDisplayCapabilities, com.tools20022.repository.msg.PointOfInteractionCapabilities1.mmPrintLineWidth);
+				messageElement_lazy = () -> Arrays.asList(PointOfInteractionCapabilities1.mmCardReadingCapabilities, PointOfInteractionCapabilities1.mmCardholderVerificationCapabilities,
+						PointOfInteractionCapabilities1.mmOnLineCapabilities, PointOfInteractionCapabilities1.mmDisplayCapabilities, PointOfInteractionCapabilities1.mmPrintLineWidth);
 				trace_lazy = () -> PointOfInteraction.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PointOfInteractionCapabilities1";
 				definition = "Capabilities of the POI performing the transaction.";
 				nextVersions_lazy = () -> Arrays.asList(PointOfInteractionCapabilities2.mmObject());

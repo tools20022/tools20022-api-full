@@ -19,7 +19,9 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.Interest;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.Rate2;
 import com.tools20022.repository.msg.RateName2;
 import java.util.Arrays;
@@ -94,11 +96,11 @@ public class RateOrName2Choice {
 	 */
 	public static final MMMessageAssociationEnd mmRate = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Interest.mmRate;
+			businessElementTrace_lazy = () -> Interest.mmRate;
 			componentContext_lazy = () -> RateOrName2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Rate";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rate";
 			definition = "Pricing expressed as a rate.";
 			maxOccurs = 1;
@@ -138,7 +140,7 @@ public class RateOrName2Choice {
 			componentContext_lazy = () -> RateOrName2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "RateNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RateName";
 			definition = "Pricing expressed as a rate name.";
 			maxOccurs = 1;
@@ -151,10 +153,10 @@ public class RateOrName2Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.RateOrName2Choice.mmRate, com.tools20022.repository.choice.RateOrName2Choice.mmRateName);
+				messageElement_lazy = () -> Arrays.asList(RateOrName2Choice.mmRate, RateOrName2Choice.mmRateName);
 				trace_lazy = () -> Interest.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RateOrName2Choice";
 				definition = "Choice between a percentage rate or a rate name.";
 			}

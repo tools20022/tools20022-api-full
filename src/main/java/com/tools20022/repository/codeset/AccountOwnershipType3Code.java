@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.AccountOwnershipTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -122,7 +124,7 @@ public class AccountOwnershipType3Code extends AccountOwnershipTypeCode {
 	 */
 	public static final MMCode mmJointAccountWithSurvivorshipRights = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "JointAccountWithSurvivorshipRights";
 			owner_lazy = () -> AccountOwnershipType3Code.mmObject();
 		}
@@ -145,7 +147,7 @@ public class AccountOwnershipType3Code extends AccountOwnershipTypeCode {
 	 */
 	public static final MMCode mmJointAccountInCommon = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "JointAccountInCommon";
 			owner_lazy = () -> AccountOwnershipType3Code.mmObject();
 		}
@@ -168,7 +170,7 @@ public class AccountOwnershipType3Code extends AccountOwnershipTypeCode {
 	 */
 	public static final MMCode mmCustodialAccount = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CustodialAccount";
 			owner_lazy = () -> AccountOwnershipType3Code.mmObject();
 		}
@@ -191,7 +193,7 @@ public class AccountOwnershipType3Code extends AccountOwnershipTypeCode {
 	 */
 	public static final MMCode mmSingleOwnerAccount = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SingleOwnerAccount";
 			owner_lazy = () -> AccountOwnershipType3Code.mmObject();
 		}
@@ -214,7 +216,7 @@ public class AccountOwnershipType3Code extends AccountOwnershipTypeCode {
 	 */
 	public static final MMCode mmJointAccount = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "JointAccount";
 			owner_lazy = () -> AccountOwnershipType3Code.mmObject();
 		}
@@ -237,7 +239,7 @@ public class AccountOwnershipType3Code extends AccountOwnershipTypeCode {
 	 */
 	public static final MMCode mmCorporation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Corporation";
 			owner_lazy = () -> AccountOwnershipType3Code.mmObject();
 		}
@@ -260,7 +262,7 @@ public class AccountOwnershipType3Code extends AccountOwnershipTypeCode {
 	 */
 	public static final MMCode mmFormalPartnership = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FormalPartnership";
 			owner_lazy = () -> AccountOwnershipType3Code.mmObject();
 		}
@@ -283,7 +285,7 @@ public class AccountOwnershipType3Code extends AccountOwnershipTypeCode {
 	 */
 	public static final MMCode mmFormalTrust = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FormalTrust";
 			owner_lazy = () -> AccountOwnershipType3Code.mmObject();
 		}
@@ -306,7 +308,7 @@ public class AccountOwnershipType3Code extends AccountOwnershipTypeCode {
 	 */
 	public static final MMCode mmNominee = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Nominee";
 			owner_lazy = () -> AccountOwnershipType3Code.mmObject();
 		}
@@ -329,7 +331,7 @@ public class AccountOwnershipType3Code extends AccountOwnershipTypeCode {
 	 */
 	public static final MMCode mmNonProfitOrganisation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonProfitOrganisation";
 			owner_lazy = () -> AccountOwnershipType3Code.mmObject();
 		}
@@ -352,7 +354,7 @@ public class AccountOwnershipType3Code extends AccountOwnershipTypeCode {
 	 */
 	public static final MMCode mmOtherNonIndividual = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherNonIndividual";
 			owner_lazy = () -> AccountOwnershipType3Code.mmObject();
 		}
@@ -375,7 +377,7 @@ public class AccountOwnershipType3Code extends AccountOwnershipTypeCode {
 	 */
 	public static final MMCode mmEUResidualEntity = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EUResidualEntity";
 			owner_lazy = () -> AccountOwnershipType3Code.mmObject();
 		}
@@ -398,7 +400,7 @@ public class AccountOwnershipType3Code extends AccountOwnershipTypeCode {
 	 */
 	public static final MMCode mmGovernmentOrganisation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GovernmentOrganisation";
 			owner_lazy = () -> AccountOwnershipType3Code.mmObject();
 		}
@@ -421,7 +423,7 @@ public class AccountOwnershipType3Code extends AccountOwnershipTypeCode {
 	 */
 	public static final MMCode mmLimitedLiabilityCompany = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LimitedLiabilityCompany";
 			owner_lazy = () -> AccountOwnershipType3Code.mmObject();
 		}
@@ -444,7 +446,7 @@ public class AccountOwnershipType3Code extends AccountOwnershipTypeCode {
 	 */
 	public static final MMCode mmRegisteredInvestmentCompany = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RegisteredInvestmentCompany";
 			owner_lazy = () -> AccountOwnershipType3Code.mmObject();
 		}
@@ -453,19 +455,15 @@ public class AccountOwnershipType3Code extends AccountOwnershipTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("JOIN");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AccountOwnershipType3Code";
 				definition = "Specifies the type of account ownership.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AccountOwnershipType3Code.mmJointAccountWithSurvivorshipRights, com.tools20022.repository.codeset.AccountOwnershipType3Code.mmJointAccountInCommon,
-						com.tools20022.repository.codeset.AccountOwnershipType3Code.mmCustodialAccount, com.tools20022.repository.codeset.AccountOwnershipType3Code.mmSingleOwnerAccount,
-						com.tools20022.repository.codeset.AccountOwnershipType3Code.mmJointAccount, com.tools20022.repository.codeset.AccountOwnershipType3Code.mmCorporation,
-						com.tools20022.repository.codeset.AccountOwnershipType3Code.mmFormalPartnership, com.tools20022.repository.codeset.AccountOwnershipType3Code.mmFormalTrust,
-						com.tools20022.repository.codeset.AccountOwnershipType3Code.mmNominee, com.tools20022.repository.codeset.AccountOwnershipType3Code.mmNonProfitOrganisation,
-						com.tools20022.repository.codeset.AccountOwnershipType3Code.mmOtherNonIndividual, com.tools20022.repository.codeset.AccountOwnershipType3Code.mmEUResidualEntity,
-						com.tools20022.repository.codeset.AccountOwnershipType3Code.mmGovernmentOrganisation, com.tools20022.repository.codeset.AccountOwnershipType3Code.mmLimitedLiabilityCompany,
-						com.tools20022.repository.codeset.AccountOwnershipType3Code.mmRegisteredInvestmentCompany);
+				code_lazy = () -> Arrays.asList(AccountOwnershipType3Code.mmJointAccountWithSurvivorshipRights, AccountOwnershipType3Code.mmJointAccountInCommon, AccountOwnershipType3Code.mmCustodialAccount,
+						AccountOwnershipType3Code.mmSingleOwnerAccount, AccountOwnershipType3Code.mmJointAccount, AccountOwnershipType3Code.mmCorporation, AccountOwnershipType3Code.mmFormalPartnership,
+						AccountOwnershipType3Code.mmFormalTrust, AccountOwnershipType3Code.mmNominee, AccountOwnershipType3Code.mmNonProfitOrganisation, AccountOwnershipType3Code.mmOtherNonIndividual,
+						AccountOwnershipType3Code.mmEUResidualEntity, AccountOwnershipType3Code.mmGovernmentOrganisation, AccountOwnershipType3Code.mmLimitedLiabilityCompany, AccountOwnershipType3Code.mmRegisteredInvestmentCompany);
 				trace_lazy = () -> AccountOwnershipTypeCode.mmObject();
 			}
 		});

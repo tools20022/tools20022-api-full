@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.ReceiveDelivery1Code
+ * ReceiveDelivery1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -35,13 +44,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.ReceiveDeliveryCode#mmReceive
  * ReceiveDeliveryCode.mmReceive}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.ReceiveDelivery1Code
- * ReceiveDelivery1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -93,7 +95,7 @@ public class ReceiveDeliveryCode {
 	 */
 	public static final MMCode mmDelivery = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Delivery";
 			definition = "Financial instruments will be debited from the safekeeping account.";
 			owner_lazy = () -> ReceiveDeliveryCode.mmObject();
@@ -124,7 +126,7 @@ public class ReceiveDeliveryCode {
 	 */
 	public static final MMCode mmReceive = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Receive";
 			definition = "Financial instruments will be credited to the safekeeping account.";
 			owner_lazy = () -> ReceiveDeliveryCode.mmObject();
@@ -135,12 +137,12 @@ public class ReceiveDeliveryCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("DELI");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ReceiveDeliveryCode";
 				definition = "Specifies whether the settlement transaction is a delivery or receipt.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ReceiveDeliveryCode.mmDelivery, com.tools20022.repository.codeset.ReceiveDeliveryCode.mmReceive);
+				code_lazy = () -> Arrays.asList(ReceiveDeliveryCode.mmDelivery, ReceiveDeliveryCode.mmReceive);
 				derivation_lazy = () -> Arrays.asList(ReceiveDelivery1Code.mmObject());
 			}
 		});

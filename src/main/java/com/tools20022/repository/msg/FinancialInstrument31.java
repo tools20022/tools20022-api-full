@@ -19,12 +19,14 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.Quantity12Choice;
 import com.tools20022.repository.choice.SecurityIdentification3Choice;
 import com.tools20022.repository.codeset.TransferType1Code;
 import com.tools20022.repository.datatype.ActiveOrHistoricCurrencyAndAmount;
 import com.tools20022.repository.datatype.Max350Text;
-import com.tools20022.repository.entity.InvestmentFundClass;
+import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -147,14 +149,14 @@ public class FinancialInstrument31 {
 	 */
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmIdentification;
+			businessElementTrace_lazy = () -> Security.mmIdentification;
 			componentContext_lazy = () -> FinancialInstrument31.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Unique and unambiguous identifier of a security, assigned under a formal or proprietary identification scheme.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrument34.mmIdentification);
+			nextVersions_lazy = () -> Arrays.asList(FinancialInstrument34.mmIdentification);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> SecurityIdentification3Choice.mmObject();
@@ -203,14 +205,14 @@ public class FinancialInstrument31 {
 	 */
 	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.LocalName.mmFullName;
+			businessElementTrace_lazy = () -> LocalName.mmFullName;
 			componentContext_lazy = () -> FinancialInstrument31.mmObject();
 			isDerived = false;
 			xmlTag = "Nm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Name";
 			definition = "Name of the financial instrument in free format text.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrument34.mmName);
+			nextVersions_lazy = () -> Arrays.asList(FinancialInstrument34.mmName);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
@@ -263,14 +265,14 @@ public class FinancialInstrument31 {
 	 */
 	public static final MMMessageAttribute mmTransferType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTransfer.mmTransferType;
+			businessElementTrace_lazy = () -> SecuritiesTransfer.mmTransferType;
 			componentContext_lazy = () -> FinancialInstrument31.mmObject();
 			isDerived = false;
 			xmlTag = "TrfTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransferType";
 			definition = "Specifies whether the financial instrument is transferred as an asset or as cash.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrument34.mmTransferType);
+			nextVersions_lazy = () -> Arrays.asList(FinancialInstrument34.mmTransferType);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TransferType1Code.mmObject();
@@ -323,14 +325,14 @@ public class FinancialInstrument31 {
 	 */
 	public static final MMMessageAttribute mmQuantity = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmSecuritiesQuantity;
+			businessElementTrace_lazy = () -> Security.mmSecuritiesQuantity;
 			componentContext_lazy = () -> FinancialInstrument31.mmObject();
 			isDerived = false;
 			xmlTag = "Qty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Quantity";
 			definition = "Specifies the quantity of assets to be transferred in units or in a percentage rate.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrument34.mmQuantity);
+			nextVersions_lazy = () -> Arrays.asList(FinancialInstrument34.mmQuantity);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> Quantity12Choice.mmObject();
@@ -383,14 +385,14 @@ public class FinancialInstrument31 {
 	 */
 	public static final MMMessageAttribute mmAverageAcquisitionPrice = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmBookValue;
+			businessElementTrace_lazy = () -> AssetHolding.mmBookValue;
 			componentContext_lazy = () -> FinancialInstrument31.mmObject();
 			isDerived = false;
 			xmlTag = "AvrgAcqstnPric";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AverageAcquisitionPrice";
 			definition = "Average cost per share of a security, including all charges and commissions.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrument34.mmAverageAcquisitionPrice);
+			nextVersions_lazy = () -> Arrays.asList(FinancialInstrument34.mmAverageAcquisitionPrice);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
@@ -443,14 +445,14 @@ public class FinancialInstrument31 {
 	 */
 	public static final MMMessageAttribute mmTotalBookValue = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmBookValue;
+			businessElementTrace_lazy = () -> AssetHolding.mmBookValue;
 			componentContext_lazy = () -> FinancialInstrument31.mmObject();
 			isDerived = false;
 			xmlTag = "TtlBookVal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalBookValue";
 			definition = "Net asset on balance sheet - total portfolio value minus or plus the unrealised gain or loss.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrument34.mmTotalBookValue);
+			nextVersions_lazy = () -> Arrays.asList(FinancialInstrument34.mmTotalBookValue);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
@@ -502,14 +504,14 @@ public class FinancialInstrument31 {
 	 */
 	public static final MMMessageAttribute mmTransfereeAccount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmInvestmentAccount;
+			businessElementTrace_lazy = () -> InvestmentFundClass.mmInvestmentAccount;
 			componentContext_lazy = () -> FinancialInstrument31.mmObject();
 			isDerived = false;
 			xmlTag = "TrfeeAcct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransfereeAccount";
 			definition = "Account held in the name of a party that is not the name of the beneficial owner of the shares.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrument34.mmTransfereeAccount);
+			nextVersions_lazy = () -> Arrays.asList(FinancialInstrument34.mmTransfereeAccount);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.Account6.mmObject();
@@ -562,14 +564,14 @@ public class FinancialInstrument31 {
 	 */
 	public static final MMMessageAttribute mmReceivingAgentDetails = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> FinancialInstrument31.mmObject();
 			isDerived = false;
 			xmlTag = "RcvgAgtDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceivingAgentDetails";
 			definition = "Party that receives securities from the delivering agent via the place of settlement, for example, securities central depository.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrument34.mmReceivingAgentDetails);
+			nextVersions_lazy = () -> Arrays.asList(FinancialInstrument34.mmReceivingAgentDetails);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount93.mmObject();
@@ -622,14 +624,14 @@ public class FinancialInstrument31 {
 	 */
 	public static final MMMessageAttribute mmDeliveringAgentDetails = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> FinancialInstrument31.mmObject();
 			isDerived = false;
 			xmlTag = "DlvrgAgtDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeliveringAgentDetails";
 			definition = "Party that delivers securities to the receiving agent at the place of settlement, for example, a central securities depository.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrument34.mmDeliveringAgentDetails);
+			nextVersions_lazy = () -> Arrays.asList(FinancialInstrument34.mmDeliveringAgentDetails);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount93.mmObject();
@@ -639,13 +641,12 @@ public class FinancialInstrument31 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrument31.mmIdentification, com.tools20022.repository.msg.FinancialInstrument31.mmName,
-						com.tools20022.repository.msg.FinancialInstrument31.mmTransferType, com.tools20022.repository.msg.FinancialInstrument31.mmQuantity, com.tools20022.repository.msg.FinancialInstrument31.mmAverageAcquisitionPrice,
-						com.tools20022.repository.msg.FinancialInstrument31.mmTotalBookValue, com.tools20022.repository.msg.FinancialInstrument31.mmTransfereeAccount,
-						com.tools20022.repository.msg.FinancialInstrument31.mmReceivingAgentDetails, com.tools20022.repository.msg.FinancialInstrument31.mmDeliveringAgentDetails);
+				messageElement_lazy = () -> Arrays.asList(FinancialInstrument31.mmIdentification, FinancialInstrument31.mmName, FinancialInstrument31.mmTransferType, FinancialInstrument31.mmQuantity,
+						FinancialInstrument31.mmAverageAcquisitionPrice, FinancialInstrument31.mmTotalBookValue, FinancialInstrument31.mmTransfereeAccount, FinancialInstrument31.mmReceivingAgentDetails,
+						FinancialInstrument31.mmDeliveringAgentDetails);
 				trace_lazy = () -> InvestmentFundClass.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FinancialInstrument31";
 				definition = "Security that is a sub-set of an investment fund, and is governed by the same investment fund policy, eg, dividend option or valuation currency.";
 				nextVersions_lazy = () -> Arrays.asList(FinancialInstrument34.mmObject());

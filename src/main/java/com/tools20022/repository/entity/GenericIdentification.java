@@ -17,15 +17,11 @@
 
 package com.tools20022.repository.entity;
 
-import com.tools20022.metamodel.MMBusinessAssociationEnd;
-import com.tools20022.metamodel.MMBusinessAttribute;
-import com.tools20022.metamodel.MMBusinessComponent;
-import com.tools20022.repository.choice.OtherIdentification1Choice;
-import com.tools20022.repository.choice.OtherIdentification2Choice;
-import com.tools20022.repository.choice.OtherIdentification3Choice;
-import com.tools20022.repository.choice.OtherIdentification4Choice;
+import com.tools20022.metamodel.*;
+import com.tools20022.repository.choice.*;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -42,246 +38,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmIdentification
- * GenericIdentification.mmIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmIdentificationForContactPoint
- * GenericIdentification.mmIdentificationForContactPoint}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmIdentificationForAccount
- * GenericIdentification.mmIdentificationForAccount}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmRelatedPartyIdentification
- * GenericIdentification.mmRelatedPartyIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmIssueDate
- * GenericIdentification.mmIssueDate}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmExpiryDate
- * GenericIdentification.mmExpiryDate}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmScheme
- * GenericIdentification.mmScheme}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmIdentificationForSecuritiesCertificate
- * GenericIdentification.mmIdentificationForSecuritiesCertificate}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmIdentificationForLot
- * GenericIdentification.mmIdentificationForLot}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmPartyRole
- * GenericIdentification.mmPartyRole}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmIdentificationForCashProceedsIncome
- * GenericIdentification.mmIdentificationForCashProceedsIncome}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmRelatedStatusReason
- * GenericIdentification.mmRelatedStatusReason}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmIdentificationForBankTransaction
- * GenericIdentification.mmIdentificationForBankTransaction}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmIdentificationForAccountCostReferencePattern
- * GenericIdentification.mmIdentificationForAccountCostReferencePattern}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmAccount
- * GenericIdentification.mmAccount}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmRelatedSystemIdentification
- * GenericIdentification.mmRelatedSystemIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmIdentificationForInterestName
- * GenericIdentification.mmIdentificationForInterestName}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmRelatedCashAccountService
- * GenericIdentification.mmRelatedCashAccountService}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmIdentificationForInvestmentFundClass
- * GenericIdentification.mmIdentificationForInvestmentFundClass}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmIdentifiedLocation
- * GenericIdentification.mmIdentifiedLocation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmRelatedSecuritiesIdentification
- * GenericIdentification.mmRelatedSecuritiesIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmIdentifiedDocument
- * GenericIdentification.mmIdentifiedDocument}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmRelatedPurchaseOrder
- * GenericIdentification.mmRelatedPurchaseOrder}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmRelatedCertificate
- * GenericIdentification.mmRelatedCertificate}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InvestmentFundClass#mmFundClassification
- * InvestmentFundClass.mmFundClassification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification#mmGenericIdentification
- * SecuritiesIdentification.mmGenericIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InformationPartyRole#mmGenericIdentification
- * InformationPartyRole.mmGenericIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ContactPoint#mmIdentification
- * ContactPoint.mmIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation#mmOtherIdentification
- * PartyIdentificationInformation.mmOtherIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Account#mmType
- * Account.mmType}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.AccountIdentification#mmProprietaryIdentification
- * AccountIdentification.mmProprietaryIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.AccountIdentification#mmCostReferencePattern
- * AccountIdentification.mmCostReferencePattern}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Location#mmIdentification
- * Location.mmIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Scheme#mmIdentification
- * Scheme.mmIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Document#mmDocumentIdentification
- * Document.mmDocumentIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.StatusReason#mmDataSourceScheme
- * StatusReason.mmDataSourceScheme}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SystemIdentification#mmIdentification
- * SystemIdentification.mmIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.entity.LotBreakdown#mmLotNumber
- * LotBreakdown.mmLotNumber}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CashAccountService#mmIdentification
- * CashAccountService.mmIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesCertificate#mmNumber
- * SecuritiesCertificate.mmNumber}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Interest#mmInterestName
- * Interest.mmInterestName}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CashProceedsDefinition#mmIncomeType
- * CashProceedsDefinition.mmIncomeType}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.BankTransaction#mmProprietaryIdentification
- * BankTransaction.mmProprietaryIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.PurchaseOrder#mmIdentification
- * PurchaseOrder.mmIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.RegisteredContract#mmCertificate
- * RegisteredContract.mmCertificate}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
- * derivationElement} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.choice.OtherIdentification1Choice#mmProprietary
- * OtherIdentification1Choice.mmProprietary}</li>
- * <li>{@linkplain com.tools20022.repository.msg.GenericIdentification46#mmType
- * GenericIdentification46.mmType}</li>
- * <li>{@linkplain com.tools20022.repository.msg.GenericIdentification14#mmType
- * GenericIdentification14.mmType}</li>
- * <li>{@linkplain com.tools20022.repository.msg.GenericIdentification21#mmType
- * GenericIdentification21.mmType}</li>
- * <li>{@linkplain com.tools20022.repository.msg.GenericIdentification26#mmType
- * GenericIdentification26.mmType}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PreAllocation1#mmAllocationIdentification
- * PreAllocation1.mmAllocationIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PreAllocation1#mmIndividualAllocationIdentification
- * PreAllocation1.mmIndividualAllocationIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.GenericIdentification32#mmType
- * GenericIdentification32.mmType}</li>
- * <li>{@linkplain com.tools20022.repository.msg.GenericIdentification35#mmType
- * GenericIdentification35.mmType}</li>
- * <li>{@linkplain com.tools20022.repository.msg.GenericIdentification31#mmType
- * GenericIdentification31.mmType}</li>
- * <li>{@linkplain com.tools20022.repository.msg.GenericIdentification33#mmType
- * GenericIdentification33.mmType}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.ReversedStatus1#mmDataSourceScheme
- * ReversedStatus1.mmDataSourceScheme}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.RejectedCancellationStatusReason1Choice#mmDataSourceScheme
- * RejectedCancellationStatusReason1Choice.mmDataSourceScheme}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.GenericIdentification55#mmIssuerCountry
- * GenericIdentification55.mmIssuerCountry}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.OtherIdentification2Choice#mmProprietary
- * OtherIdentification2Choice.mmProprietary}</li>
- * <li>{@linkplain com.tools20022.repository.msg.GenericIdentification58#mmType
- * GenericIdentification58.mmType}</li>
- * <li>{@linkplain com.tools20022.repository.msg.GenericIdentification59#mmType
- * GenericIdentification59.mmType}</li>
- * <li>{@linkplain com.tools20022.repository.msg.GenericIdentification61#mmType
- * GenericIdentification61.mmType}</li>
- * <li>{@linkplain com.tools20022.repository.msg.GenericIdentification53#mmType
- * GenericIdentification53.mmType}</li>
- * <li>{@linkplain com.tools20022.repository.msg.GenericIdentification71#mmType
- * GenericIdentification71.mmType}</li>
- * <li>{@linkplain com.tools20022.repository.msg.GenericIdentification73#mmType
- * GenericIdentification73.mmType}</li>
- * <li>{@linkplain com.tools20022.repository.msg.GenericIdentification74#mmType
- * GenericIdentification74.mmType}</li>
- * <li>{@linkplain com.tools20022.repository.msg.GenericIdentification70#mmType
- * GenericIdentification70.mmType}</li>
- * <li>{@linkplain com.tools20022.repository.msg.GenericIdentification75#mmType
- * GenericIdentification75.mmType}</li>
- * <li>{@linkplain com.tools20022.repository.msg.GenericIdentification76#mmType
- * GenericIdentification76.mmType}</li>
- * <li>{@linkplain com.tools20022.repository.msg.GenericIdentification77#mmType
- * GenericIdentification77.mmType}</li>
- * <li>{@linkplain com.tools20022.repository.msg.GenericIdentification78#mmType
- * GenericIdentification78.mmType}</li>
- * <li>{@linkplain com.tools20022.repository.msg.GenericIdentification80#mmType
- * GenericIdentification80.mmType}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.AlternateIdentification4#mmIssuerCountry
- * AlternateIdentification4.mmIssuerCountry}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.OtherIdentification4Choice#mmProprietary
- * OtherIdentification4Choice.mmProprietary}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.GenericIdentification81#mmIdentificationType
- * GenericIdentification81.mmIdentificationType}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.ReversedStatus2Choice#mmDataSourceScheme
- * ReversedStatus2Choice.mmDataSourceScheme}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PostalAddress21#mmCareOf
- * PostalAddress21.mmCareOf}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.GenericIdentification82#mmIssuerCountry
- * GenericIdentification82.mmIssuerCountry}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.OtherIdentification3Choice#mmProprietary
- * OtherIdentification3Choice.mmProprietary}</li>
- * <li>{@linkplain com.tools20022.repository.msg.GenericIdentification85#mmType
- * GenericIdentification85.mmType}</li>
- * <li>{@linkplain com.tools20022.repository.msg.GenericIdentification89#mmType
- * GenericIdentification89.mmType}</li>
- * <li>{@linkplain com.tools20022.repository.msg.GenericIdentification94#mmType
- * GenericIdentification94.mmType}</li>
- * <li>{@linkplain com.tools20022.repository.msg.GenericIdentification90#mmType
- * GenericIdentification90.mmType}</li>
- * <li>{@linkplain com.tools20022.repository.msg.GenericIdentification92#mmType
- * GenericIdentification92.mmType}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -512,6 +268,246 @@ import java.util.List;
  * GenericIdentification164}</li>
  * <li>{@linkplain com.tools20022.repository.msg.AdditionalReference9
  * AdditionalReference9}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InvestmentFundClass#mmFundClassification
+ * InvestmentFundClass.mmFundClassification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification#mmGenericIdentification
+ * SecuritiesIdentification.mmGenericIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InformationPartyRole#mmGenericIdentification
+ * InformationPartyRole.mmGenericIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ContactPoint#mmIdentification
+ * ContactPoint.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation#mmOtherIdentification
+ * PartyIdentificationInformation.mmOtherIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Account#mmType
+ * Account.mmType}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.AccountIdentification#mmProprietaryIdentification
+ * AccountIdentification.mmProprietaryIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.AccountIdentification#mmCostReferencePattern
+ * AccountIdentification.mmCostReferencePattern}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Location#mmIdentification
+ * Location.mmIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Scheme#mmIdentification
+ * Scheme.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Document#mmDocumentIdentification
+ * Document.mmDocumentIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.StatusReason#mmDataSourceScheme
+ * StatusReason.mmDataSourceScheme}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SystemIdentification#mmIdentification
+ * SystemIdentification.mmIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.LotBreakdown#mmLotNumber
+ * LotBreakdown.mmLotNumber}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CashAccountService#mmIdentification
+ * CashAccountService.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesCertificate#mmNumber
+ * SecuritiesCertificate.mmNumber}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Interest#mmInterestName
+ * Interest.mmInterestName}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CashProceedsDefinition#mmIncomeType
+ * CashProceedsDefinition.mmIncomeType}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.BankTransaction#mmProprietaryIdentification
+ * BankTransaction.mmProprietaryIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PurchaseOrder#mmIdentification
+ * PurchaseOrder.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.RegisteredContract#mmCertificate
+ * RegisteredContract.mmCertificate}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
+ * derivationElement} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.OtherIdentification1Choice#mmProprietary
+ * OtherIdentification1Choice.mmProprietary}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.GenericIdentification46#mmType
+ * GenericIdentification46.mmType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.GenericIdentification14#mmType
+ * GenericIdentification14.mmType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.GenericIdentification21#mmType
+ * GenericIdentification21.mmType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.GenericIdentification26#mmType
+ * GenericIdentification26.mmType}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PreAllocation1#mmAllocationIdentification
+ * PreAllocation1.mmAllocationIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PreAllocation1#mmIndividualAllocationIdentification
+ * PreAllocation1.mmIndividualAllocationIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.GenericIdentification32#mmType
+ * GenericIdentification32.mmType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.GenericIdentification35#mmType
+ * GenericIdentification35.mmType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.GenericIdentification31#mmType
+ * GenericIdentification31.mmType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.GenericIdentification33#mmType
+ * GenericIdentification33.mmType}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.ReversedStatus1#mmDataSourceScheme
+ * ReversedStatus1.mmDataSourceScheme}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.RejectedCancellationStatusReason1Choice#mmDataSourceScheme
+ * RejectedCancellationStatusReason1Choice.mmDataSourceScheme}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.GenericIdentification55#mmIssuerCountry
+ * GenericIdentification55.mmIssuerCountry}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.OtherIdentification2Choice#mmProprietary
+ * OtherIdentification2Choice.mmProprietary}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.GenericIdentification58#mmType
+ * GenericIdentification58.mmType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.GenericIdentification59#mmType
+ * GenericIdentification59.mmType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.GenericIdentification61#mmType
+ * GenericIdentification61.mmType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.GenericIdentification53#mmType
+ * GenericIdentification53.mmType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.GenericIdentification71#mmType
+ * GenericIdentification71.mmType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.GenericIdentification73#mmType
+ * GenericIdentification73.mmType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.GenericIdentification74#mmType
+ * GenericIdentification74.mmType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.GenericIdentification70#mmType
+ * GenericIdentification70.mmType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.GenericIdentification75#mmType
+ * GenericIdentification75.mmType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.GenericIdentification76#mmType
+ * GenericIdentification76.mmType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.GenericIdentification77#mmType
+ * GenericIdentification77.mmType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.GenericIdentification78#mmType
+ * GenericIdentification78.mmType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.GenericIdentification80#mmType
+ * GenericIdentification80.mmType}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AlternateIdentification4#mmIssuerCountry
+ * AlternateIdentification4.mmIssuerCountry}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.OtherIdentification4Choice#mmProprietary
+ * OtherIdentification4Choice.mmProprietary}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.GenericIdentification81#mmIdentificationType
+ * GenericIdentification81.mmIdentificationType}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.ReversedStatus2Choice#mmDataSourceScheme
+ * ReversedStatus2Choice.mmDataSourceScheme}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PostalAddress21#mmCareOf
+ * PostalAddress21.mmCareOf}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.GenericIdentification82#mmIssuerCountry
+ * GenericIdentification82.mmIssuerCountry}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.OtherIdentification3Choice#mmProprietary
+ * OtherIdentification3Choice.mmProprietary}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.GenericIdentification85#mmType
+ * GenericIdentification85.mmType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.GenericIdentification89#mmType
+ * GenericIdentification89.mmType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.GenericIdentification94#mmType
+ * GenericIdentification94.mmType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.GenericIdentification90#mmType
+ * GenericIdentification90.mmType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.GenericIdentification92#mmType
+ * GenericIdentification92.mmType}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmIdentification
+ * GenericIdentification.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmIdentificationForContactPoint
+ * GenericIdentification.mmIdentificationForContactPoint}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmIdentificationForAccount
+ * GenericIdentification.mmIdentificationForAccount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmRelatedPartyIdentification
+ * GenericIdentification.mmRelatedPartyIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmIssueDate
+ * GenericIdentification.mmIssueDate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmExpiryDate
+ * GenericIdentification.mmExpiryDate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmScheme
+ * GenericIdentification.mmScheme}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmIdentificationForSecuritiesCertificate
+ * GenericIdentification.mmIdentificationForSecuritiesCertificate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmIdentificationForLot
+ * GenericIdentification.mmIdentificationForLot}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmPartyRole
+ * GenericIdentification.mmPartyRole}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmIdentificationForCashProceedsIncome
+ * GenericIdentification.mmIdentificationForCashProceedsIncome}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmRelatedStatusReason
+ * GenericIdentification.mmRelatedStatusReason}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmIdentificationForBankTransaction
+ * GenericIdentification.mmIdentificationForBankTransaction}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmIdentificationForAccountCostReferencePattern
+ * GenericIdentification.mmIdentificationForAccountCostReferencePattern}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmAccount
+ * GenericIdentification.mmAccount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmRelatedSystemIdentification
+ * GenericIdentification.mmRelatedSystemIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmIdentificationForInterestName
+ * GenericIdentification.mmIdentificationForInterestName}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmRelatedCashAccountService
+ * GenericIdentification.mmRelatedCashAccountService}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmIdentificationForInvestmentFundClass
+ * GenericIdentification.mmIdentificationForInvestmentFundClass}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmIdentifiedLocation
+ * GenericIdentification.mmIdentifiedLocation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmRelatedSecuritiesIdentification
+ * GenericIdentification.mmRelatedSecuritiesIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmIdentifiedDocument
+ * GenericIdentification.mmIdentifiedDocument}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmRelatedPurchaseOrder
+ * GenericIdentification.mmRelatedPurchaseOrder}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmRelatedCertificate
+ * GenericIdentification.mmRelatedCertificate}</li>
  * </ul>
  * </li>
  * <li>
@@ -1681,165 +1677,96 @@ public class GenericIdentification {
 	 */
 	public static final MMBusinessAttribute mmIdentification = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AlternateSecurityIdentification3.mmIdentification, com.tools20022.repository.msg.SimpleIdentificationInformation.mmIdentification,
-					com.tools20022.repository.msg.GenericIdentification1.mmIdentification, com.tools20022.repository.msg.AccountIdentification3.mmIssuer, com.tools20022.repository.msg.AdditionalReference2.mmReference,
-					com.tools20022.repository.msg.AdditionalReference3.mmReference, com.tools20022.repository.msg.AlternateSecurityIdentification1.mmIdentification, com.tools20022.repository.msg.GenericIdentification8.mmIdentification,
-					com.tools20022.repository.msg.GenericIdentification9.mmIdentification, com.tools20022.repository.msg.InvestmentAccountOwnershipInformation5.mmClientIdentification,
-					com.tools20022.repository.msg.InvestmentAccountOwnershipInformation2.mmClientIdentification, com.tools20022.repository.msg.BranchData.mmIdentification,
-					com.tools20022.repository.msg.DirectDebitMandate2.mmMandateIdentification, com.tools20022.repository.msg.DirectDebitMandate3.mmMandateIdentification,
-					com.tools20022.repository.msg.DirectDebitMandate4.mmMandateIdentification, com.tools20022.repository.msg.GenericIdentification13.mmIdentification, com.tools20022.repository.msg.GenericIdentification20.mmIdentification,
-					com.tools20022.repository.msg.GenericIdentification25.mmIdentification, com.tools20022.repository.msg.GenericIdentification47.mmIdentification,
-					com.tools20022.repository.msg.BlockedHoldingDetails1.mmHoldingCertificateNumber, com.tools20022.repository.msg.GenericIdentification44.mmIdentification,
-					com.tools20022.repository.msg.GenericIdentification41.mmIdentification, com.tools20022.repository.msg.PartyProfileInformation2.mmValidatingParty, com.tools20022.repository.msg.PartyProfileInformation2.mmCheckingParty,
-					com.tools20022.repository.msg.PartyProfileInformation2.mmResponsibleParty, com.tools20022.repository.msg.InvestmentAccountOwnershipInformation6.mmClientIdentification,
-					com.tools20022.repository.msg.GenericIdentification46.mmIdentification, com.tools20022.repository.msg.GenericIdentification10.mmIdentification,
-					com.tools20022.repository.msg.InvestmentAccountOwnershipInformation3.mmClientIdentification, com.tools20022.repository.msg.InvestmentAccountOwnershipInformation4.mmClientIdentification,
-					com.tools20022.repository.msg.InvestmentAccountOwnershipInformation7.mmClientIdentification, com.tools20022.repository.msg.ClearingSystemMemberIdentification2.mmMemberIdentification,
-					com.tools20022.repository.msg.GenericIdentification3.mmIdentification, com.tools20022.repository.msg.GenericFinancialIdentification1.mmIdentification, com.tools20022.repository.msg.BranchData2.mmIdentification,
-					com.tools20022.repository.msg.SimpleIdentificationInformation2.mmIdentification, com.tools20022.repository.msg.GenericAccountIdentification1.mmIdentification,
-					com.tools20022.repository.msg.GenericIdentification4.mmIdentification, com.tools20022.repository.msg.GenericOrganisationIdentification1.mmIdentification,
-					com.tools20022.repository.msg.GenericPersonIdentification1.mmIdentification, com.tools20022.repository.msg.AdditionalReferences.mmReference, com.tools20022.repository.msg.SecuritiesAccount13.mmIdentification,
-					com.tools20022.repository.msg.GenericIdentification19.mmIdentification, com.tools20022.repository.msg.SecuritiesAccount17.mmIdentification, com.tools20022.repository.msg.GenericIdentification24.mmIdentification,
-					com.tools20022.repository.msg.GenericOrganisationIdentification2.mmIdentification, com.tools20022.repository.msg.AlternateIdentification1.mmIdentification,
-					com.tools20022.repository.msg.OtherIdentification1.mmIdentification, com.tools20022.repository.msg.GenericIdentification14.mmIdentification, com.tools20022.repository.msg.GenericIdentification37.mmIdentification,
-					com.tools20022.repository.msg.SafekeepingPlaceTypeAndText3.mmIdentification, com.tools20022.repository.msg.GenericIdentification21.mmIdentification,
-					com.tools20022.repository.msg.AlternatePartyIdentification1.mmAlternateIdentification, com.tools20022.repository.msg.AlternatePartyIdentification2.mmAlternateIdentification,
-					com.tools20022.repository.msg.SecuritiesCertificate1.mmNumber, com.tools20022.repository.msg.OtherIdentification2.mmIdentification, com.tools20022.repository.msg.GenericIdentification23.mmIdentification,
-					com.tools20022.repository.msg.GenericIdentification18.mmIdentification, com.tools20022.repository.msg.GenericIdentification39.mmIdentification,
-					com.tools20022.repository.msg.SafekeepingPlaceTypeAndText4.mmIdentification, com.tools20022.repository.msg.GenericIdentification26.mmIdentification,
-					com.tools20022.repository.msg.AlternatePartyIdentification3.mmAlternateIdentification, com.tools20022.repository.msg.SecuritiesCertificate2.mmNumber,
-					com.tools20022.repository.msg.GenericIdentification27.mmIdentification, com.tools20022.repository.msg.DocumentIdentification11.mmIdentification,
-					com.tools20022.repository.msg.SafekeepingPlaceTypeAndText2.mmIdentification, com.tools20022.repository.msg.DocumentIdentification16.mmIdentification,
-					com.tools20022.repository.msg.AlternateIdentification2.mmIdentification, com.tools20022.repository.msg.SafekeepingPlaceTypeAndText5.mmIdentification,
-					com.tools20022.repository.msg.DocumentIdentification9.mmIdentification, com.tools20022.repository.choice.DocumentIdentification1Choice.mmAccountServicerDocumentIdentification,
-					com.tools20022.repository.choice.DocumentIdentification1Choice.mmAccountOwnerDocumentIdentification, com.tools20022.repository.msg.DocumentIdentification14.mmIdentification,
-					com.tools20022.repository.msg.DocumentIdentification17.mmIdentification, com.tools20022.repository.choice.DocumentIdentification2Choice.mmAccountServicerDocumentIdentification,
-					com.tools20022.repository.choice.DocumentIdentification2Choice.mmAccountOwnerDocumentIdentification, com.tools20022.repository.msg.DocumentIdentification21.mmIdentification,
-					com.tools20022.repository.msg.DocumentIdentification12.mmIdentification, com.tools20022.repository.msg.DocumentIdentification15.mmIdentification, com.tools20022.repository.msg.DocumentIdentification13.mmIdentification,
-					com.tools20022.repository.msg.DocumentIdentification18.mmIdentification, com.tools20022.repository.msg.DocumentIdentification19.mmIdentification, com.tools20022.repository.msg.DocumentIdentification20.mmIdentification,
-					com.tools20022.repository.msg.OtherIdentification3.mmIdentification, com.tools20022.repository.msg.SecuritiesAccount11.mmIdentification, com.tools20022.repository.msg.GenericIdentification22.mmIdentification,
-					com.tools20022.repository.msg.SecuritiesAccount2.mmIdentification, com.tools20022.repository.msg.SecuritiesAccount14.mmIdentification, com.tools20022.repository.msg.SecuritiesAccount15.mmIdentification,
-					com.tools20022.repository.msg.SimpleIdentificationInformation4.mmIdentification, com.tools20022.repository.msg.SimpleIdentificationInformation1.mmIdentification,
-					com.tools20022.repository.msg.GenericIdentification28.mmIdentification, com.tools20022.repository.msg.SecuritiesAccount16.mmIdentification, com.tools20022.repository.msg.GenericIdentification34.mmIdentification,
-					com.tools20022.repository.msg.GenericIdentification38.mmIdentification, com.tools20022.repository.msg.GenericIdentification29.mmIdentification,
-					com.tools20022.repository.msg.AlternatePartyIdentification5.mmAlternateIdentification, com.tools20022.repository.msg.AlternatePartyIdentification6.mmAlternateIdentification,
-					com.tools20022.repository.msg.SecuritiesAccount3.mmIdentification, com.tools20022.repository.msg.FinancialInstrumentStipulations.mmPriceSource, com.tools20022.repository.msg.GenericIdentification36.mmIdentification,
-					com.tools20022.repository.msg.FinancialInstrumentStipulations2.mmPriceSource, com.tools20022.repository.msg.ProprietaryBankTransactionCodeStructure1.mmCode,
-					com.tools20022.repository.msg.OperationMandate1.mmIdentification, com.tools20022.repository.msg.ReferredDocumentInformation1.mmReferredDocumentNumber,
-					com.tools20022.repository.msg.AlternateSecurityIdentification2.mmIdentification, com.tools20022.repository.msg.ReferredDocumentInformation3.mmNumber,
-					com.tools20022.repository.msg.GenericIdentification32.mmIdentification, com.tools20022.repository.msg.PointOfInteractionComponent1.mmManufacturerIdentification, com.tools20022.repository.msg.Document9.mmIdentification,
-					com.tools20022.repository.msg.MandateInformation1.mmMandateIdentification, com.tools20022.repository.msg.Mandate1.mmMandateIdentification, com.tools20022.repository.msg.MandateInformation3.mmMandateIdentification,
-					com.tools20022.repository.msg.Mandate3.mmMandateIdentification, com.tools20022.repository.msg.MandateInformation2.mmMandateIdentification, com.tools20022.repository.msg.Mandate2.mmMandateIdentification,
-					com.tools20022.repository.msg.Mandate4.mmMandateIdentification, com.tools20022.repository.msg.TradeData1.mmMatchingSystemUniqueReference, com.tools20022.repository.msg.TradeData10.mmStatusOriginator,
-					com.tools20022.repository.msg.NameAndAddress8.mmAlternativeIdentifier, com.tools20022.repository.msg.RegulatoryReporting1.mmReportingJurisdiction, com.tools20022.repository.msg.RegulatoryReporting1.mmExecutionVenue,
-					com.tools20022.repository.msg.TradeAgreement2.mmRelatedReference, com.tools20022.repository.msg.TradeAgreement4.mmRelatedReference, com.tools20022.repository.msg.FundIdentification1.mmAccountIdentificationWithCustodian,
-					com.tools20022.repository.msg.FundIdentification2.mmAccountIdentificationWithCustodian, com.tools20022.repository.msg.FundIdentification3.mmAccountIdentificationWithCustodian,
-					com.tools20022.repository.msg.FundIdentification4.mmAccountIdentificationWithCustodian, com.tools20022.repository.msg.TradeAgreement5.mmRelatedReference, com.tools20022.repository.msg.TradeData9.mmStatusOriginator,
-					com.tools20022.repository.msg.TradeData7.mmStatusOriginator, com.tools20022.repository.msg.GenericIdentification35.mmIdentification,
-					com.tools20022.repository.msg.PointOfInteractionComponent2.mmManufacturerIdentification, com.tools20022.repository.msg.PointOfInteractionComponentIdentification1.mmProviderIdentification,
-					com.tools20022.repository.msg.GenericIdentification48.mmIdentification, com.tools20022.repository.msg.PointOfInteractionComponentAssessment1.mmAssigner,
-					com.tools20022.repository.msg.GenericIdentification31.mmIdentification, com.tools20022.repository.msg.SaleContext1.mmCashierIdentification,
-					com.tools20022.repository.msg.CardholderIdentification1.mmCardholderIdentificationValue, com.tools20022.repository.msg.GenericIdentification33.mmIdentification,
-					com.tools20022.repository.msg.FundSettlementParameters3.mmSecuritiesSettlementSystemIdentification, com.tools20022.repository.msg.GenericIdentification11.mmIdentification,
-					com.tools20022.repository.msg.FundSettlementParameters4.mmSecuritiesSettlementSystemIdentification, com.tools20022.repository.msg.StructuredRemittanceInformation2.mmDocumentReferenceNumber,
-					com.tools20022.repository.msg.AlternateFinancialInstrumentIdentification1.mmIdentification, com.tools20022.repository.msg.EligiblePosition.mmAccountIdentification,
-					com.tools20022.repository.msg.SafekeepingAccount3.mmAccountIdentification, com.tools20022.repository.msg.SafekeepingAccount4.mmAccountIdentification,
-					com.tools20022.repository.msg.MeetingInstructionDetailedStatus.mmAccountIdentification, com.tools20022.repository.msg.EligiblePosition1.mmAccountIdentification,
-					com.tools20022.repository.msg.DocumentIdentification8.mmIdentification, com.tools20022.repository.choice.AccountIdentification2Choice.mmCashAccountIdentification,
-					com.tools20022.repository.choice.AccountIdentification2Choice.mmSecuritiesAccountIdentification, com.tools20022.repository.msg.SecuritiesAccount7.mmAccountIdentification,
-					com.tools20022.repository.msg.SecuritiesAccount9.mmAccountIdentification, com.tools20022.repository.msg.GenericIdentification16.mmIdentification,
-					com.tools20022.repository.msg.ProceedsDelivery1.mmSecuritiesAccountIdentification, com.tools20022.repository.msg.SecuritiesAccount12.mmAccountIdentification,
-					com.tools20022.repository.msg.CorporateActionMovement1.mmAccountIdentification, com.tools20022.repository.msg.SecuritiesAccount8.mmAccountIdentification,
-					com.tools20022.repository.msg.SecuritiesAccount10.mmAccountIdentification, com.tools20022.repository.msg.SecuritiesAccount6.mmSecuritiesAccountIdentification,
-					com.tools20022.repository.msg.IdentificationModification1.mmIdentification, com.tools20022.repository.msg.IdentificationModification2.mmIdentification, com.tools20022.repository.msg.TradeStatus1.mmStatusOriginator,
-					com.tools20022.repository.msg.DocumentGeneralInformation1.mmDocumentNumber, com.tools20022.repository.msg.ReferredDocumentInformation2.mmDocumentNumber,
-					com.tools20022.repository.msg.OriginalInvoiceInformation1.mmDocumentNumber, com.tools20022.repository.msg.LegalOrganisation1.mmIdentification, com.tools20022.repository.msg.InvoiceHeader1.mmIdentification,
-					com.tools20022.repository.msg.DocumentIdentification22.mmIdentification, com.tools20022.repository.msg.DocumentGeneralInformation2.mmDocumentNumber,
-					com.tools20022.repository.msg.TradeAgreement6.mmQuotationDocumentIdentification, com.tools20022.repository.msg.TradeAgreement6.mmContractDocumentIdentification,
-					com.tools20022.repository.msg.TradeAgreement6.mmBuyerOrderIdentificationDocument, com.tools20022.repository.msg.DocumentIdentification7.mmIdentification,
-					com.tools20022.repository.msg.TradeSettlement1.mmLetterOfCreditReferencedDocument, com.tools20022.repository.msg.DocumentIdentification23.mmIdentification,
-					com.tools20022.repository.msg.LineItem10.mmDeliveryNoteIdentification, com.tools20022.repository.msg.DocumentIdentification3.mmIdentification, com.tools20022.repository.msg.DocumentIdentification5.mmIdentification,
-					com.tools20022.repository.msg.DocumentIdentification1.mmIdentification, com.tools20022.repository.msg.AirportDescription1.mmAirportName, com.tools20022.repository.msg.DocumentIdentification4.mmIdentification,
-					com.tools20022.repository.msg.DocumentIdentification6.mmIdentification, com.tools20022.repository.msg.DocumentIdentification2.mmIdentification, com.tools20022.repository.msg.DocumentIdentification10.mmIdentification,
-					com.tools20022.repository.msg.MultimodalTransport2.mmTransitLocation, com.tools20022.repository.msg.InvoiceIdentification1.mmInvoiceNumber,
-					com.tools20022.repository.msg.InsuranceDataSet1.mmInsuranceDocumentIdentification, com.tools20022.repository.msg.CertificateDataSet1.mmCertificateIdentification,
-					com.tools20022.repository.msg.OtherCertificateDataSet1.mmCertificateIdentification, com.tools20022.repository.msg.GenericIdentification30.mmIdentification,
-					com.tools20022.repository.msg.Agreement2.mmAgreementIdentification, com.tools20022.repository.msg.AccountIdentification5.mmIdentification,
-					com.tools20022.repository.msg.AlternatePartyIdentification4.mmAlternateIdentification, com.tools20022.repository.msg.BillingSubServiceIdentification1.mmIssuer,
-					com.tools20022.repository.msg.BillingSubServiceIdentification1.mmIdentification, com.tools20022.repository.msg.BillingServiceCommonIdentification1.mmIdentification,
-					com.tools20022.repository.msg.BillingTaxRegion1.mmInvoiceNumber, com.tools20022.repository.msg.BillingStatement1.mmStatementIdentification, com.tools20022.repository.msg.AdditionalReference4.mmReference,
-					com.tools20022.repository.msg.SecuritiesAccount5.mmIdentification, com.tools20022.repository.msg.GenericIdentification12.mmIdentification, com.tools20022.repository.msg.RestrictedIdentification2.mmIdentification,
-					com.tools20022.repository.msg.RestrictedIdentification1.mmIdentification, com.tools20022.repository.msg.GenericIdentification17.mmIdentification, com.tools20022.repository.msg.AdditionalReference5.mmReference,
-					com.tools20022.repository.msg.SimpleIdentificationInformation3.mmIdentification, com.tools20022.repository.msg.AlternateSecurityIdentification4.mmIdentification,
-					com.tools20022.repository.msg.GenericIdentification40.mmIdentification, com.tools20022.repository.msg.GenericIdentification15.mmIdentification, com.tools20022.repository.msg.Debt2.mmPriceSource,
-					com.tools20022.repository.msg.Agreement1.mmIdentification, com.tools20022.repository.msg.DocumentIdentification27.mmIdentification, com.tools20022.repository.msg.SafekeepingPlaceTypeAndText1.mmIdentification,
-					com.tools20022.repository.msg.BillingReport1.mmBillingIdentification, com.tools20022.repository.msg.BillingCancellationReport1.mmBillingIdentification,
-					com.tools20022.repository.msg.BillingSearchCriteria1.mmBillingIdentification, com.tools20022.repository.msg.InvestmentAccountOwnershipInformation8.mmClientIdentification,
-					com.tools20022.repository.msg.InvestmentAccountOwnershipInformation9.mmClientIdentification, com.tools20022.repository.msg.PartyProfileInformation3.mmValidatingParty,
-					com.tools20022.repository.msg.PartyProfileInformation3.mmCheckingParty, com.tools20022.repository.msg.PartyProfileInformation3.mmResponsibleParty, com.tools20022.repository.msg.DocumentLineType1.mmIssuer,
-					com.tools20022.repository.msg.RemittanceInformation8.mmRemittanceIdentification, com.tools20022.repository.msg.DocumentLineInformation1.mmIdentification,
-					com.tools20022.repository.msg.SecuritiesAccount22.mmIdentification, com.tools20022.repository.msg.CertificateDataSet2.mmDataSetIdentification,
-					com.tools20022.repository.msg.CertificateDataSet2.mmCertificateIdentification, com.tools20022.repository.msg.GenericIdentification49.mmIdentification,
-					com.tools20022.repository.msg.GenericIdentification51.mmIdentification, com.tools20022.repository.msg.RegulatoryReporting4.mmExecutionVenue,
-					com.tools20022.repository.msg.CounterpartySideTransactionReporting1.mmReportingJurisdiction, com.tools20022.repository.msg.TradingSideTransactionReporting1.mmReportingJurisdiction,
-					com.tools20022.repository.msg.UpdatedAdditionalInformation6SD2.mmFullLocalLanguageSecurityName, com.tools20022.repository.msg.OtherIdentification2SD1.mmLocalLanguageSecurityName,
-					com.tools20022.repository.msg.InvestmentAccountOwnershipInformation10.mmClientIdentification, com.tools20022.repository.msg.GenericIdentification55.mmIdentification,
-					com.tools20022.repository.msg.InvestmentAccountOwnershipInformation11.mmClientIdentification, com.tools20022.repository.msg.PartyProfileInformation4.mmValidatingParty,
-					com.tools20022.repository.msg.PartyProfileInformation4.mmCheckingParty, com.tools20022.repository.msg.PartyProfileInformation4.mmResponsibleParty, com.tools20022.repository.msg.Mandate7.mmMandateIdentification,
-					com.tools20022.repository.msg.Mandate6.mmMandateIdentification, com.tools20022.repository.msg.Mandate5.mmMandateIdentification, com.tools20022.repository.msg.ReferredDocumentInformation6.mmNumber,
-					com.tools20022.repository.msg.OtherCertificateDataSet2.mmCertificateIdentification, com.tools20022.repository.msg.GenericIdentification56.mmIdentification,
-					com.tools20022.repository.msg.GenericIdentification58.mmIdentification, com.tools20022.repository.msg.OtherIdentification4.mmIdentification, com.tools20022.repository.msg.SafekeepingAccount6.mmAccountIdentification,
-					com.tools20022.repository.msg.GenericIdentification65.mmIdentification, com.tools20022.repository.msg.GenericIdentification63.mmIdentification, com.tools20022.repository.msg.GenericIdentification66.mmIdentification,
-					com.tools20022.repository.msg.GenericIdentification62.mmIdentification, com.tools20022.repository.msg.GenericIdentification60.mmIdentification, com.tools20022.repository.msg.GenericIdentification64.mmIdentification,
-					com.tools20022.repository.msg.GenericIdentification59.mmIdentification, com.tools20022.repository.msg.GenericIdentification61.mmIdentification, com.tools20022.repository.msg.GenericIdentification67.mmIdentification,
-					com.tools20022.repository.msg.GenericIdentification53.mmIdentification, com.tools20022.repository.msg.GenericIdentification71.mmIdentification, com.tools20022.repository.msg.GenericIdentification73.mmIdentification,
-					com.tools20022.repository.msg.GenericIdentification74.mmIdentification, com.tools20022.repository.msg.GenericIdentification72.mmIdentification, com.tools20022.repository.msg.GenericIdentification70.mmIdentification,
-					com.tools20022.repository.msg.GenericIdentification75.mmIdentification, com.tools20022.repository.msg.GenericIdentification76.mmIdentification, com.tools20022.repository.msg.BusinessLetter1.mmLetterIdentifier,
-					com.tools20022.repository.msg.QualifiedDocumentInformation1.mmItemListIdentifier, com.tools20022.repository.msg.QualifiedDocumentInformation1.mmItemIdentifier,
-					com.tools20022.repository.msg.ATMCommandIdentification1.mmProcessor, com.tools20022.repository.msg.GenericIdentification77.mmIdentification, com.tools20022.repository.msg.AdditionalReference6.mmReference,
-					com.tools20022.repository.msg.SecuritiesAccount24.mmIdentification, com.tools20022.repository.msg.AlternatePartyIdentification7.mmAlternateIdentification,
-					com.tools20022.repository.msg.GenericIdentification78.mmIdentification, com.tools20022.repository.msg.SafekeepingPlaceTypeAndText6.mmIdentification,
-					com.tools20022.repository.msg.DocumentIdentification29.mmIdentification, com.tools20022.repository.msg.SupportingDocumentEntry1.mmEntryIdentification,
-					com.tools20022.repository.msg.DocumentGeneralInformation3.mmDocumentNumber, com.tools20022.repository.msg.TradeContract1.mmContractDocumentIdentification,
-					com.tools20022.repository.msg.InterestPaymentDateRange1.mmInterestScheduleIdentification, com.tools20022.repository.msg.LegalOrganisation2.mmIdentification,
-					com.tools20022.repository.msg.DocumentIdentification28.mmIdentification, com.tools20022.repository.msg.TransactionCertificateRecord1.mmCertificateRecordIdentification,
-					com.tools20022.repository.choice.ContractClosureReason1Choice.mmCode, com.tools20022.repository.choice.ContractClosureReason1Choice.mmProprietary, com.tools20022.repository.msg.SecuritiesAccount26.mmIdentification,
-					com.tools20022.repository.msg.SecuritiesCertificate4.mmNumber, com.tools20022.repository.msg.SafekeepingPlaceTypeAndText8.mmIdentification, com.tools20022.repository.msg.SecuritiesAccount25.mmIdentification,
-					com.tools20022.repository.msg.GenericIdentification80.mmIdentification, com.tools20022.repository.msg.RemittanceInformation12.mmRemittanceIdentification,
-					com.tools20022.repository.msg.ReferredDocumentInformation7.mmNumber, com.tools20022.repository.msg.BillingStatement2.mmStatementIdentification, com.tools20022.repository.msg.AlternateIdentification4.mmIdentification,
-					com.tools20022.repository.msg.DocumentIdentification31.mmIdentification, com.tools20022.repository.msg.DocumentIdentification32.mmIdentification, com.tools20022.repository.msg.DocumentIdentification33.mmIdentification,
-					com.tools20022.repository.choice.DocumentIdentification3Choice.mmAccountServicerDocumentIdentification, com.tools20022.repository.choice.DocumentIdentification3Choice.mmAccountOwnerDocumentIdentification,
-					com.tools20022.repository.msg.AdditionalReference7.mmReference, com.tools20022.repository.msg.GenericIdentification81.mmIdentification, com.tools20022.repository.msg.DirectDebitMandate5.mmMandateIdentification,
-					com.tools20022.repository.msg.AlternateSecurityIdentification7.mmIdentification, com.tools20022.repository.msg.InvestmentAccountOwnershipInformation12.mmClientIdentification,
-					com.tools20022.repository.msg.GenericIdentification82.mmIdentification, com.tools20022.repository.msg.PartyProfileInformation5.mmValidatingParty, com.tools20022.repository.msg.PartyProfileInformation5.mmCheckingParty,
-					com.tools20022.repository.msg.PartyProfileInformation5.mmResponsibleParty, com.tools20022.repository.msg.InvestmentAccountOwnershipInformation13.mmClientIdentification,
-					com.tools20022.repository.msg.BlockedHoldingDetails2.mmHoldingCertificateNumber, com.tools20022.repository.msg.Agreement4.mmAgreementIdentification,
-					com.tools20022.repository.msg.AlternatePartyIdentification8.mmAlternateIdentification, com.tools20022.repository.msg.DocumentIdentification38.mmIdentification,
-					com.tools20022.repository.msg.DocumentIdentification37.mmIdentification, com.tools20022.repository.msg.DocumentIdentification34.mmIdentification, com.tools20022.repository.msg.GenericIdentification84.mmIdentification,
-					com.tools20022.repository.choice.DocumentIdentification4Choice.mmAccountServicerDocumentIdentification, com.tools20022.repository.choice.DocumentIdentification4Choice.mmAccountOwnerDocumentIdentification,
-					com.tools20022.repository.msg.SafekeepingPlaceTypeAndText9.mmIdentification, com.tools20022.repository.msg.GenericIdentification85.mmIdentification,
-					com.tools20022.repository.msg.SafekeepingPlaceTypeAndText15.mmIdentification, com.tools20022.repository.msg.AlternatePartyIdentification9.mmAlternateIdentification,
-					com.tools20022.repository.msg.GenericIdentification86.mmIdentification, com.tools20022.repository.msg.SecuritiesAccount33.mmIdentification, com.tools20022.repository.msg.SecuritiesAccount27.mmIdentification,
-					com.tools20022.repository.msg.SecuritiesCertificate5.mmNumber, com.tools20022.repository.msg.GenericIdentification144.mmIdentification, com.tools20022.repository.msg.GenericIdentification163.mmIdentification,
-					com.tools20022.repository.msg.SecuritiesAccount34.mmIdentification, com.tools20022.repository.msg.DocumentIdentification49.mmIdentification, com.tools20022.repository.msg.GenericIdentification89.mmIdentification,
-					com.tools20022.repository.msg.SafekeepingPlaceTypeAndText25.mmIdentification, com.tools20022.repository.msg.GenericIdentification79.mmIdentification, com.tools20022.repository.msg.SaleContext2.mmCashierIdentification,
-					com.tools20022.repository.msg.GenericIdentification94.mmIdentification, com.tools20022.repository.msg.GenericIdentification90.mmIdentification, com.tools20022.repository.msg.GenericIdentification93.mmIdentification,
-					com.tools20022.repository.msg.GenericIdentification92.mmIdentification, com.tools20022.repository.msg.GenericIdentificationSD1.mmAccountServicerIdentification,
-					com.tools20022.repository.msg.GenericIdentificationSD1.mmAccountOwnerIdentification, com.tools20022.repository.msg.InvoiceHeader2.mmIdentification,
-					com.tools20022.repository.msg.TradeAgreement13.mmQuotationDocumentIdentification, com.tools20022.repository.msg.TradeAgreement13.mmContractDocumentIdentification,
-					com.tools20022.repository.msg.TradeAgreement13.mmBuyerOrderIdentificationDocument, com.tools20022.repository.msg.LineItem16.mmDeliveryNoteIdentification,
-					com.tools20022.repository.msg.MarketClaimDetailsSD1.mmAccountServicerIdentification, com.tools20022.repository.msg.MarketClaimDetailsSD1.mmAccountOwnerIdentification,
-					com.tools20022.repository.msg.TradingVenueIdentification2.mmIdentification, com.tools20022.repository.msg.AdditionalReference8.mmReference,
-					com.tools20022.repository.msg.FundSettlementParameters11.mmSecuritiesSettlementSystemIdentification, com.tools20022.repository.msg.GenericIdentification164.mmIdentification,
-					com.tools20022.repository.msg.FundSettlementParameters12.mmSecuritiesSettlementSystemIdentification, com.tools20022.repository.msg.InvestmentAccountOwnershipInformation15.mmClientIdentification,
-					com.tools20022.repository.msg.InvestmentAccountOwnershipInformation14.mmClientIdentification, com.tools20022.repository.msg.DirectDebitMandate6.mmMandateIdentification,
-					com.tools20022.repository.msg.AdditionalReference9.mmReference, com.tools20022.repository.msg.RegulatoryReporting6.mmExecutionVenue, com.tools20022.repository.msg.TradeData14.mmStatusOriginator,
-					com.tools20022.repository.msg.TradeData12.mmStatusOriginator, com.tools20022.repository.msg.TradeData15.mmStatusOriginator, com.tools20022.repository.msg.Mandate10.mmMandateIdentification,
-					com.tools20022.repository.msg.RemittanceInformation13.mmRemittanceIdentification, com.tools20022.repository.msg.Mandate9.mmMandateIdentification, com.tools20022.repository.msg.Mandate11.mmMandateIdentification,
-					com.tools20022.repository.msg.ReferredMandateDocument1.mmNumber, com.tools20022.repository.msg.Mandate8.mmMandateIdentification, com.tools20022.repository.msg.TradeData16.mmStatusOriginator);
+			derivation_lazy = () -> Arrays.asList(AlternateSecurityIdentification3.mmIdentification, SimpleIdentificationInformation.mmIdentification, GenericIdentification1.mmIdentification, AccountIdentification3.mmIssuer,
+					AdditionalReference2.mmReference, AdditionalReference3.mmReference, AlternateSecurityIdentification1.mmIdentification, GenericIdentification8.mmIdentification, GenericIdentification9.mmIdentification,
+					InvestmentAccountOwnershipInformation5.mmClientIdentification, InvestmentAccountOwnershipInformation2.mmClientIdentification, BranchData.mmIdentification, DirectDebitMandate2.mmMandateIdentification,
+					DirectDebitMandate3.mmMandateIdentification, DirectDebitMandate4.mmMandateIdentification, GenericIdentification13.mmIdentification, GenericIdentification20.mmIdentification, GenericIdentification25.mmIdentification,
+					GenericIdentification47.mmIdentification, BlockedHoldingDetails1.mmHoldingCertificateNumber, GenericIdentification44.mmIdentification, GenericIdentification41.mmIdentification,
+					PartyProfileInformation2.mmValidatingParty, PartyProfileInformation2.mmCheckingParty, PartyProfileInformation2.mmResponsibleParty, InvestmentAccountOwnershipInformation6.mmClientIdentification,
+					GenericIdentification46.mmIdentification, GenericIdentification10.mmIdentification, InvestmentAccountOwnershipInformation3.mmClientIdentification, InvestmentAccountOwnershipInformation4.mmClientIdentification,
+					InvestmentAccountOwnershipInformation7.mmClientIdentification, ClearingSystemMemberIdentification2.mmMemberIdentification, GenericIdentification3.mmIdentification, GenericFinancialIdentification1.mmIdentification,
+					BranchData2.mmIdentification, SimpleIdentificationInformation2.mmIdentification, GenericAccountIdentification1.mmIdentification, GenericIdentification4.mmIdentification,
+					GenericOrganisationIdentification1.mmIdentification, GenericPersonIdentification1.mmIdentification, AdditionalReferences.mmReference, SecuritiesAccount13.mmIdentification, GenericIdentification19.mmIdentification,
+					SecuritiesAccount17.mmIdentification, GenericIdentification24.mmIdentification, GenericOrganisationIdentification2.mmIdentification, AlternateIdentification1.mmIdentification, OtherIdentification1.mmIdentification,
+					GenericIdentification14.mmIdentification, GenericIdentification37.mmIdentification, SafekeepingPlaceTypeAndText3.mmIdentification, GenericIdentification21.mmIdentification,
+					AlternatePartyIdentification1.mmAlternateIdentification, AlternatePartyIdentification2.mmAlternateIdentification, SecuritiesCertificate1.mmNumber, OtherIdentification2.mmIdentification,
+					GenericIdentification23.mmIdentification, GenericIdentification18.mmIdentification, GenericIdentification39.mmIdentification, SafekeepingPlaceTypeAndText4.mmIdentification, GenericIdentification26.mmIdentification,
+					AlternatePartyIdentification3.mmAlternateIdentification, SecuritiesCertificate2.mmNumber, GenericIdentification27.mmIdentification, DocumentIdentification11.mmIdentification,
+					SafekeepingPlaceTypeAndText2.mmIdentification, DocumentIdentification16.mmIdentification, AlternateIdentification2.mmIdentification, SafekeepingPlaceTypeAndText5.mmIdentification,
+					DocumentIdentification9.mmIdentification, DocumentIdentification1Choice.mmAccountServicerDocumentIdentification, DocumentIdentification1Choice.mmAccountOwnerDocumentIdentification,
+					DocumentIdentification14.mmIdentification, DocumentIdentification17.mmIdentification, DocumentIdentification2Choice.mmAccountServicerDocumentIdentification,
+					DocumentIdentification2Choice.mmAccountOwnerDocumentIdentification, DocumentIdentification21.mmIdentification, DocumentIdentification12.mmIdentification, DocumentIdentification15.mmIdentification,
+					DocumentIdentification13.mmIdentification, DocumentIdentification18.mmIdentification, DocumentIdentification19.mmIdentification, DocumentIdentification20.mmIdentification, OtherIdentification3.mmIdentification,
+					SecuritiesAccount11.mmIdentification, GenericIdentification22.mmIdentification, SecuritiesAccount2.mmIdentification, SecuritiesAccount14.mmIdentification, SecuritiesAccount15.mmIdentification,
+					SimpleIdentificationInformation4.mmIdentification, SimpleIdentificationInformation1.mmIdentification, GenericIdentification28.mmIdentification, SecuritiesAccount16.mmIdentification,
+					GenericIdentification34.mmIdentification, GenericIdentification38.mmIdentification, GenericIdentification29.mmIdentification, AlternatePartyIdentification5.mmAlternateIdentification,
+					AlternatePartyIdentification6.mmAlternateIdentification, SecuritiesAccount3.mmIdentification, FinancialInstrumentStipulations.mmPriceSource, GenericIdentification36.mmIdentification,
+					FinancialInstrumentStipulations2.mmPriceSource, ProprietaryBankTransactionCodeStructure1.mmCode, OperationMandate1.mmIdentification, ReferredDocumentInformation1.mmReferredDocumentNumber,
+					AlternateSecurityIdentification2.mmIdentification, ReferredDocumentInformation3.mmNumber, GenericIdentification32.mmIdentification, PointOfInteractionComponent1.mmManufacturerIdentification, Document9.mmIdentification,
+					MandateInformation1.mmMandateIdentification, Mandate1.mmMandateIdentification, MandateInformation3.mmMandateIdentification, Mandate3.mmMandateIdentification, MandateInformation2.mmMandateIdentification,
+					Mandate2.mmMandateIdentification, Mandate4.mmMandateIdentification, TradeData1.mmMatchingSystemUniqueReference, TradeData10.mmStatusOriginator, NameAndAddress8.mmAlternativeIdentifier,
+					RegulatoryReporting1.mmReportingJurisdiction, RegulatoryReporting1.mmExecutionVenue, TradeAgreement2.mmRelatedReference, TradeAgreement4.mmRelatedReference, FundIdentification1.mmAccountIdentificationWithCustodian,
+					FundIdentification2.mmAccountIdentificationWithCustodian, FundIdentification3.mmAccountIdentificationWithCustodian, FundIdentification4.mmAccountIdentificationWithCustodian, TradeAgreement5.mmRelatedReference,
+					TradeData9.mmStatusOriginator, TradeData7.mmStatusOriginator, GenericIdentification35.mmIdentification, PointOfInteractionComponent2.mmManufacturerIdentification,
+					PointOfInteractionComponentIdentification1.mmProviderIdentification, GenericIdentification48.mmIdentification, PointOfInteractionComponentAssessment1.mmAssigner, GenericIdentification31.mmIdentification,
+					SaleContext1.mmCashierIdentification, CardholderIdentification1.mmCardholderIdentificationValue, GenericIdentification33.mmIdentification, FundSettlementParameters3.mmSecuritiesSettlementSystemIdentification,
+					GenericIdentification11.mmIdentification, FundSettlementParameters4.mmSecuritiesSettlementSystemIdentification, StructuredRemittanceInformation2.mmDocumentReferenceNumber,
+					AlternateFinancialInstrumentIdentification1.mmIdentification, EligiblePosition.mmAccountIdentification, SafekeepingAccount3.mmAccountIdentification, SafekeepingAccount4.mmAccountIdentification,
+					MeetingInstructionDetailedStatus.mmAccountIdentification, EligiblePosition1.mmAccountIdentification, DocumentIdentification8.mmIdentification, AccountIdentification2Choice.mmCashAccountIdentification,
+					AccountIdentification2Choice.mmSecuritiesAccountIdentification, SecuritiesAccount7.mmAccountIdentification, SecuritiesAccount9.mmAccountIdentification, GenericIdentification16.mmIdentification,
+					ProceedsDelivery1.mmSecuritiesAccountIdentification, SecuritiesAccount12.mmAccountIdentification, CorporateActionMovement1.mmAccountIdentification, SecuritiesAccount8.mmAccountIdentification,
+					SecuritiesAccount10.mmAccountIdentification, SecuritiesAccount6.mmSecuritiesAccountIdentification, IdentificationModification1.mmIdentification, IdentificationModification2.mmIdentification,
+					TradeStatus1.mmStatusOriginator, DocumentGeneralInformation1.mmDocumentNumber, ReferredDocumentInformation2.mmDocumentNumber, OriginalInvoiceInformation1.mmDocumentNumber, LegalOrganisation1.mmIdentification,
+					InvoiceHeader1.mmIdentification, DocumentIdentification22.mmIdentification, DocumentGeneralInformation2.mmDocumentNumber, TradeAgreement6.mmQuotationDocumentIdentification,
+					TradeAgreement6.mmContractDocumentIdentification, TradeAgreement6.mmBuyerOrderIdentificationDocument, DocumentIdentification7.mmIdentification, TradeSettlement1.mmLetterOfCreditReferencedDocument,
+					DocumentIdentification23.mmIdentification, LineItem10.mmDeliveryNoteIdentification, DocumentIdentification3.mmIdentification, DocumentIdentification5.mmIdentification, DocumentIdentification1.mmIdentification,
+					AirportDescription1.mmAirportName, DocumentIdentification4.mmIdentification, DocumentIdentification6.mmIdentification, DocumentIdentification2.mmIdentification, DocumentIdentification10.mmIdentification,
+					MultimodalTransport2.mmTransitLocation, InvoiceIdentification1.mmInvoiceNumber, InsuranceDataSet1.mmInsuranceDocumentIdentification, CertificateDataSet1.mmCertificateIdentification,
+					OtherCertificateDataSet1.mmCertificateIdentification, GenericIdentification30.mmIdentification, Agreement2.mmAgreementIdentification, AccountIdentification5.mmIdentification,
+					AlternatePartyIdentification4.mmAlternateIdentification, BillingSubServiceIdentification1.mmIssuer, BillingSubServiceIdentification1.mmIdentification, BillingServiceCommonIdentification1.mmIdentification,
+					BillingTaxRegion1.mmInvoiceNumber, BillingStatement1.mmStatementIdentification, AdditionalReference4.mmReference, SecuritiesAccount5.mmIdentification, GenericIdentification12.mmIdentification,
+					RestrictedIdentification2.mmIdentification, RestrictedIdentification1.mmIdentification, GenericIdentification17.mmIdentification, AdditionalReference5.mmReference, SimpleIdentificationInformation3.mmIdentification,
+					AlternateSecurityIdentification4.mmIdentification, GenericIdentification40.mmIdentification, GenericIdentification15.mmIdentification, Debt2.mmPriceSource, Agreement1.mmIdentification,
+					DocumentIdentification27.mmIdentification, SafekeepingPlaceTypeAndText1.mmIdentification, BillingReport1.mmBillingIdentification, BillingCancellationReport1.mmBillingIdentification,
+					BillingSearchCriteria1.mmBillingIdentification, InvestmentAccountOwnershipInformation8.mmClientIdentification, InvestmentAccountOwnershipInformation9.mmClientIdentification, PartyProfileInformation3.mmValidatingParty,
+					PartyProfileInformation3.mmCheckingParty, PartyProfileInformation3.mmResponsibleParty, DocumentLineType1.mmIssuer, RemittanceInformation8.mmRemittanceIdentification, DocumentLineInformation1.mmIdentification,
+					SecuritiesAccount22.mmIdentification, CertificateDataSet2.mmDataSetIdentification, CertificateDataSet2.mmCertificateIdentification, GenericIdentification49.mmIdentification, GenericIdentification51.mmIdentification,
+					RegulatoryReporting4.mmExecutionVenue, CounterpartySideTransactionReporting1.mmReportingJurisdiction, TradingSideTransactionReporting1.mmReportingJurisdiction,
+					UpdatedAdditionalInformation6SD2.mmFullLocalLanguageSecurityName, OtherIdentification2SD1.mmLocalLanguageSecurityName, InvestmentAccountOwnershipInformation10.mmClientIdentification,
+					GenericIdentification55.mmIdentification, InvestmentAccountOwnershipInformation11.mmClientIdentification, PartyProfileInformation4.mmValidatingParty, PartyProfileInformation4.mmCheckingParty,
+					PartyProfileInformation4.mmResponsibleParty, Mandate7.mmMandateIdentification, Mandate6.mmMandateIdentification, Mandate5.mmMandateIdentification, ReferredDocumentInformation6.mmNumber,
+					OtherCertificateDataSet2.mmCertificateIdentification, GenericIdentification56.mmIdentification, GenericIdentification58.mmIdentification, OtherIdentification4.mmIdentification,
+					SafekeepingAccount6.mmAccountIdentification, GenericIdentification65.mmIdentification, GenericIdentification63.mmIdentification, GenericIdentification66.mmIdentification, GenericIdentification62.mmIdentification,
+					GenericIdentification60.mmIdentification, GenericIdentification64.mmIdentification, GenericIdentification59.mmIdentification, GenericIdentification61.mmIdentification, GenericIdentification67.mmIdentification,
+					GenericIdentification53.mmIdentification, GenericIdentification71.mmIdentification, GenericIdentification73.mmIdentification, GenericIdentification74.mmIdentification, GenericIdentification72.mmIdentification,
+					GenericIdentification70.mmIdentification, GenericIdentification75.mmIdentification, GenericIdentification76.mmIdentification, BusinessLetter1.mmLetterIdentifier, QualifiedDocumentInformation1.mmItemListIdentifier,
+					QualifiedDocumentInformation1.mmItemIdentifier, ATMCommandIdentification1.mmProcessor, GenericIdentification77.mmIdentification, AdditionalReference6.mmReference, SecuritiesAccount24.mmIdentification,
+					AlternatePartyIdentification7.mmAlternateIdentification, GenericIdentification78.mmIdentification, SafekeepingPlaceTypeAndText6.mmIdentification, DocumentIdentification29.mmIdentification,
+					SupportingDocumentEntry1.mmEntryIdentification, DocumentGeneralInformation3.mmDocumentNumber, TradeContract1.mmContractDocumentIdentification, InterestPaymentDateRange1.mmInterestScheduleIdentification,
+					LegalOrganisation2.mmIdentification, DocumentIdentification28.mmIdentification, TransactionCertificateRecord1.mmCertificateRecordIdentification, ContractClosureReason1Choice.mmCode,
+					ContractClosureReason1Choice.mmProprietary, SecuritiesAccount26.mmIdentification, SecuritiesCertificate4.mmNumber, SafekeepingPlaceTypeAndText8.mmIdentification, SecuritiesAccount25.mmIdentification,
+					GenericIdentification80.mmIdentification, RemittanceInformation12.mmRemittanceIdentification, ReferredDocumentInformation7.mmNumber, BillingStatement2.mmStatementIdentification,
+					AlternateIdentification4.mmIdentification, DocumentIdentification31.mmIdentification, DocumentIdentification32.mmIdentification, DocumentIdentification33.mmIdentification,
+					DocumentIdentification3Choice.mmAccountServicerDocumentIdentification, DocumentIdentification3Choice.mmAccountOwnerDocumentIdentification, AdditionalReference7.mmReference, GenericIdentification81.mmIdentification,
+					DirectDebitMandate5.mmMandateIdentification, AlternateSecurityIdentification7.mmIdentification, InvestmentAccountOwnershipInformation12.mmClientIdentification, GenericIdentification82.mmIdentification,
+					PartyProfileInformation5.mmValidatingParty, PartyProfileInformation5.mmCheckingParty, PartyProfileInformation5.mmResponsibleParty, InvestmentAccountOwnershipInformation13.mmClientIdentification,
+					BlockedHoldingDetails2.mmHoldingCertificateNumber, Agreement4.mmAgreementIdentification, AlternatePartyIdentification8.mmAlternateIdentification, DocumentIdentification38.mmIdentification,
+					DocumentIdentification37.mmIdentification, DocumentIdentification34.mmIdentification, GenericIdentification84.mmIdentification, DocumentIdentification4Choice.mmAccountServicerDocumentIdentification,
+					DocumentIdentification4Choice.mmAccountOwnerDocumentIdentification, SafekeepingPlaceTypeAndText9.mmIdentification, GenericIdentification85.mmIdentification, SafekeepingPlaceTypeAndText15.mmIdentification,
+					AlternatePartyIdentification9.mmAlternateIdentification, GenericIdentification86.mmIdentification, SecuritiesAccount33.mmIdentification, SecuritiesAccount27.mmIdentification, SecuritiesCertificate5.mmNumber,
+					GenericIdentification144.mmIdentification, GenericIdentification163.mmIdentification, SecuritiesAccount34.mmIdentification, DocumentIdentification49.mmIdentification, GenericIdentification89.mmIdentification,
+					SafekeepingPlaceTypeAndText25.mmIdentification, GenericIdentification79.mmIdentification, SaleContext2.mmCashierIdentification, GenericIdentification94.mmIdentification, GenericIdentification90.mmIdentification,
+					GenericIdentification93.mmIdentification, GenericIdentification92.mmIdentification, GenericIdentificationSD1.mmAccountServicerIdentification, GenericIdentificationSD1.mmAccountOwnerIdentification,
+					InvoiceHeader2.mmIdentification, TradeAgreement13.mmQuotationDocumentIdentification, TradeAgreement13.mmContractDocumentIdentification, TradeAgreement13.mmBuyerOrderIdentificationDocument,
+					LineItem16.mmDeliveryNoteIdentification, MarketClaimDetailsSD1.mmAccountServicerIdentification, MarketClaimDetailsSD1.mmAccountOwnerIdentification, TradingVenueIdentification2.mmIdentification,
+					AdditionalReference8.mmReference, FundSettlementParameters11.mmSecuritiesSettlementSystemIdentification, GenericIdentification164.mmIdentification, FundSettlementParameters12.mmSecuritiesSettlementSystemIdentification,
+					InvestmentAccountOwnershipInformation15.mmClientIdentification, InvestmentAccountOwnershipInformation14.mmClientIdentification, DirectDebitMandate6.mmMandateIdentification, AdditionalReference9.mmReference,
+					RegulatoryReporting6.mmExecutionVenue, TradeData14.mmStatusOriginator, TradeData12.mmStatusOriginator, TradeData15.mmStatusOriginator, Mandate10.mmMandateIdentification,
+					RemittanceInformation13.mmRemittanceIdentification, Mandate9.mmMandateIdentification, Mandate11.mmMandateIdentification, ReferredMandateDocument1.mmNumber, Mandate8.mmMandateIdentification,
+					TradeData16.mmStatusOriginator);
 			elementContext_lazy = () -> GenericIdentification.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Identification";
 			definition = "Name or number assigned by an entity to enable recognition of that entity, for example account identifier, identification assigned by a provider to identify its customers.";
 			maxOccurs = 1;
@@ -1886,12 +1813,12 @@ public class GenericIdentification {
 		{
 			elementContext_lazy = () -> GenericIdentification.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "IdentificationForContactPoint";
 			definition = "Contact point which uses a generic identification as identification.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.ContactPoint.mmIdentification;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.ContactPoint.mmObject();
 		}
 	};
@@ -1937,13 +1864,13 @@ public class GenericIdentification {
 		{
 			elementContext_lazy = () -> GenericIdentification.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "IdentificationForAccount";
 			definition = "Account Identification which uses a generic identification as proprietary identification.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.AccountIdentification.mmProprietaryIdentification;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.AccountIdentification.mmObject();
 		}
 	};
@@ -1986,13 +1913,13 @@ public class GenericIdentification {
 		{
 			elementContext_lazy = () -> GenericIdentification.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedPartyIdentification";
 			definition = "Party identified with a scheme.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.mmOtherIdentification;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.mmObject();
 		}
 	};
@@ -2044,11 +1971,10 @@ public class GenericIdentification {
 	 */
 	public static final MMBusinessAttribute mmIssueDate = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GenericIdentification9.mmIssueDate, com.tools20022.repository.msg.GenericIdentification44.mmIssueDate,
-					com.tools20022.repository.msg.GenericIdentification55.mmIssueDate, com.tools20022.repository.msg.AlternateIdentification4.mmIssueDate, com.tools20022.repository.msg.GenericIdentification82.mmIssueDate);
+			derivation_lazy = () -> Arrays.asList(GenericIdentification9.mmIssueDate, GenericIdentification44.mmIssueDate, GenericIdentification55.mmIssueDate, AlternateIdentification4.mmIssueDate, GenericIdentification82.mmIssueDate);
 			elementContext_lazy = () -> GenericIdentification.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "IssueDate";
 			definition = "Date at which the identification was issued.";
 			maxOccurs = 1;
@@ -2104,11 +2030,10 @@ public class GenericIdentification {
 	 */
 	public static final MMBusinessAttribute mmExpiryDate = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GenericIdentification9.mmExpiryDate, com.tools20022.repository.msg.GenericIdentification44.mmExpiryDate,
-					com.tools20022.repository.msg.GenericIdentification55.mmExpiryDate, com.tools20022.repository.msg.AlternateIdentification4.mmExpiryDate, com.tools20022.repository.msg.GenericIdentification82.mmExpiryDate);
+			derivation_lazy = () -> Arrays.asList(GenericIdentification9.mmExpiryDate, GenericIdentification44.mmExpiryDate, GenericIdentification55.mmExpiryDate, AlternateIdentification4.mmExpiryDate, GenericIdentification82.mmExpiryDate);
 			elementContext_lazy = () -> GenericIdentification.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ExpiryDate";
 			definition = "Date at which the identification expires.";
 			maxOccurs = 1;
@@ -2175,18 +2100,17 @@ public class GenericIdentification {
 	 */
 	public static final MMBusinessAssociationEnd mmScheme = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GenericFinancialIdentification1.mmSchemeName, com.tools20022.repository.msg.GenericAccountIdentification1.mmSchemeName,
-					com.tools20022.repository.msg.GenericOrganisationIdentification1.mmSchemeName, com.tools20022.repository.msg.GenericPersonIdentification1.mmSchemeName,
-					com.tools20022.repository.msg.GenericOrganisationIdentification2.mmSchemeName, com.tools20022.repository.msg.TradingVenueIdentification2.mmType);
+			derivation_lazy = () -> Arrays.asList(GenericFinancialIdentification1.mmSchemeName, GenericAccountIdentification1.mmSchemeName, GenericOrganisationIdentification1.mmSchemeName, GenericPersonIdentification1.mmSchemeName,
+					GenericOrganisationIdentification2.mmSchemeName, TradingVenueIdentification2.mmType);
 			elementContext_lazy = () -> GenericIdentification.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Scheme";
 			definition = "Information regarding an enumerated code list and its owner.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.Scheme.mmIdentification;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Scheme.mmObject();
 		}
 	};
@@ -2232,13 +2156,13 @@ public class GenericIdentification {
 		{
 			elementContext_lazy = () -> GenericIdentification.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "IdentificationForSecuritiesCertificate";
 			definition = "Securities certificate which uses a generic identification as certificate number.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesCertificate.mmNumber;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SecuritiesCertificate.mmObject();
 		}
 	};
@@ -2281,13 +2205,13 @@ public class GenericIdentification {
 		{
 			elementContext_lazy = () -> GenericIdentification.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "IdentificationForLot";
 			definition = "Lot breakdown which uses a generic identification as lot number.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.LotBreakdown.mmLotNumber;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.LotBreakdown.mmObject();
 		}
 	};
@@ -2363,18 +2287,16 @@ public class GenericIdentification {
 	 */
 	public static final MMBusinessAssociationEnd mmPartyRole = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ProprietaryQuantity3.mmIssuer, com.tools20022.repository.msg.ProprietaryQuantity2.mmIssuer, com.tools20022.repository.msg.ProprietaryQuantity5.mmIssuer,
-					com.tools20022.repository.msg.ProprietaryQuantity4.mmIssuer, com.tools20022.repository.msg.PersonIdentification6.mmIssuer, com.tools20022.repository.msg.ProprietaryQuantity6.mmIssuer,
-					com.tools20022.repository.msg.ProprietaryQuantity8.mmIssuer, com.tools20022.repository.msg.ProprietaryQuantity7.mmIssuer, com.tools20022.repository.msg.ProprietaryQuantity10.mmIssuer,
-					com.tools20022.repository.msg.ProprietaryQuantity9.mmIssuer);
+			derivation_lazy = () -> Arrays.asList(ProprietaryQuantity3.mmIssuer, ProprietaryQuantity2.mmIssuer, ProprietaryQuantity5.mmIssuer, ProprietaryQuantity4.mmIssuer, PersonIdentification6.mmIssuer, ProprietaryQuantity6.mmIssuer,
+					ProprietaryQuantity8.mmIssuer, ProprietaryQuantity7.mmIssuer, ProprietaryQuantity10.mmIssuer, ProprietaryQuantity9.mmIssuer);
 			elementContext_lazy = () -> GenericIdentification.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PartyRole";
 			definition = "Entity that assigns the identification.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.InformationPartyRole.mmGenericIdentification;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.InformationPartyRole.mmObject();
 		}
 	};
@@ -2420,13 +2342,13 @@ public class GenericIdentification {
 		{
 			elementContext_lazy = () -> GenericIdentification.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "IdentificationForCashProceedsIncome";
 			definition = "Cash proceeds definition which uses a generic identification as type of income.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.CashProceedsDefinition.mmIncomeType;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.CashProceedsDefinition.mmObject();
 		}
 	};
@@ -2470,13 +2392,13 @@ public class GenericIdentification {
 		{
 			elementContext_lazy = () -> GenericIdentification.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedStatusReason";
 			definition = "Specifies the status reason for which a data source scheme is specified.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.StatusReason.mmDataSourceScheme;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.StatusReason.mmObject();
 		}
 	};
@@ -2521,12 +2443,12 @@ public class GenericIdentification {
 		{
 			elementContext_lazy = () -> GenericIdentification.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "IdentificationForBankTransaction";
 			definition = "Bank transaction which uses a generic identification as proprietary identification.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.BankTransaction.mmProprietaryIdentification;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.BankTransaction.mmObject();
 		}
 	};
@@ -2570,13 +2492,13 @@ public class GenericIdentification {
 		{
 			elementContext_lazy = () -> GenericIdentification.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "IdentificationForAccountCostReferencePattern";
 			definition = "Account identification for which a cost reference pattern is provided.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.AccountIdentification.mmCostReferencePattern;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.AccountIdentification.mmObject();
 		}
 	};
@@ -2616,13 +2538,13 @@ public class GenericIdentification {
 		{
 			elementContext_lazy = () -> GenericIdentification.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Account";
 			definition = "Account for which a type is specified";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.Account.mmType;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Account.mmObject();
 		}
 	};
@@ -2666,13 +2588,13 @@ public class GenericIdentification {
 		{
 			elementContext_lazy = () -> GenericIdentification.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedSystemIdentification";
 			definition = "System identification which uses a generic identification.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.SystemIdentification.mmIdentification;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SystemIdentification.mmObject();
 		}
 	};
@@ -2713,13 +2635,13 @@ public class GenericIdentification {
 		{
 			elementContext_lazy = () -> GenericIdentification.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "IdentificationForInterestName";
 			definition = "Interest which uses a generic identification as name.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.Interest.mmInterestName;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Interest.mmObject();
 		}
 	};
@@ -2761,13 +2683,13 @@ public class GenericIdentification {
 		{
 			elementContext_lazy = () -> GenericIdentification.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedCashAccountService";
 			definition = "Cash account service identified in a generic way.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.CashAccountService.mmIdentification;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.CashAccountService.mmObject();
 		}
 	};
@@ -2812,13 +2734,13 @@ public class GenericIdentification {
 		{
 			elementContext_lazy = () -> GenericIdentification.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "IdentificationForInvestmentFundClass";
 			definition = "Investment fund class which uses a generic identification as fund classification.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmFundClassification;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmObject();
 		}
 	};
@@ -2859,13 +2781,13 @@ public class GenericIdentification {
 		{
 			elementContext_lazy = () -> GenericIdentification.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "IdentifiedLocation";
 			definition = "Location for which an identification is provided.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.Location.mmIdentification;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Location.mmObject();
 		}
 	};
@@ -2911,13 +2833,13 @@ public class GenericIdentification {
 		{
 			elementContext_lazy = () -> GenericIdentification.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedSecuritiesIdentification";
 			definition = "Securities identification for which generic identification elements and scheme are provided.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesIdentification.mmGenericIdentification;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SecuritiesIdentification.mmObject();
 		}
 	};
@@ -2958,13 +2880,13 @@ public class GenericIdentification {
 		{
 			elementContext_lazy = () -> GenericIdentification.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "IdentifiedDocument";
 			definition = "Document for which an identification is provided.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.Document.mmDocumentIdentification;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Document.mmObject();
 		}
 	};
@@ -3006,13 +2928,13 @@ public class GenericIdentification {
 		{
 			elementContext_lazy = () -> GenericIdentification.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedPurchaseOrder";
 			definition = "Purchase order for which an identification is provided.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.PurchaseOrder.mmIdentification;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.PurchaseOrder.mmObject();
 		}
 	};
@@ -3057,13 +2979,13 @@ public class GenericIdentification {
 		{
 			elementContext_lazy = () -> GenericIdentification.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedCertificate";
 			definition = "Related certificate against which all transactions in the scope of the regulatory requirements are registered.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.RegisteredContract.mmCertificate;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.RegisteredContract.mmObject();
 		}
 	};
@@ -3071,8 +2993,8 @@ public class GenericIdentification {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "GenericIdentification";
 				definition = "Information related to a non-standardised identification, such as a proprietary party identification or account identification.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.InvestmentFundClass.mmFundClassification, com.tools20022.repository.entity.SecuritiesIdentification.mmGenericIdentification,
@@ -3084,33 +3006,21 @@ public class GenericIdentification {
 						com.tools20022.repository.entity.CashAccountService.mmIdentification, com.tools20022.repository.entity.SecuritiesCertificate.mmNumber, com.tools20022.repository.entity.Interest.mmInterestName,
 						com.tools20022.repository.entity.CashProceedsDefinition.mmIncomeType, com.tools20022.repository.entity.BankTransaction.mmProprietaryIdentification, com.tools20022.repository.entity.PurchaseOrder.mmIdentification,
 						com.tools20022.repository.entity.RegisteredContract.mmCertificate);
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.OtherIdentification1Choice.mmProprietary, com.tools20022.repository.msg.GenericIdentification46.mmType,
-						com.tools20022.repository.msg.GenericIdentification14.mmType, com.tools20022.repository.msg.GenericIdentification21.mmType, com.tools20022.repository.msg.GenericIdentification26.mmType,
-						com.tools20022.repository.msg.PreAllocation1.mmAllocationIdentification, com.tools20022.repository.msg.PreAllocation1.mmIndividualAllocationIdentification,
-						com.tools20022.repository.msg.GenericIdentification32.mmType, com.tools20022.repository.msg.GenericIdentification35.mmType, com.tools20022.repository.msg.GenericIdentification31.mmType,
-						com.tools20022.repository.msg.GenericIdentification33.mmType, com.tools20022.repository.msg.ReversedStatus1.mmDataSourceScheme,
-						com.tools20022.repository.choice.RejectedCancellationStatusReason1Choice.mmDataSourceScheme, com.tools20022.repository.msg.GenericIdentification55.mmIssuerCountry,
-						com.tools20022.repository.choice.OtherIdentification2Choice.mmProprietary, com.tools20022.repository.msg.GenericIdentification58.mmType, com.tools20022.repository.msg.GenericIdentification59.mmType,
-						com.tools20022.repository.msg.GenericIdentification61.mmType, com.tools20022.repository.msg.GenericIdentification53.mmType, com.tools20022.repository.msg.GenericIdentification71.mmType,
-						com.tools20022.repository.msg.GenericIdentification73.mmType, com.tools20022.repository.msg.GenericIdentification74.mmType, com.tools20022.repository.msg.GenericIdentification70.mmType,
-						com.tools20022.repository.msg.GenericIdentification75.mmType, com.tools20022.repository.msg.GenericIdentification76.mmType, com.tools20022.repository.msg.GenericIdentification77.mmType,
-						com.tools20022.repository.msg.GenericIdentification78.mmType, com.tools20022.repository.msg.GenericIdentification80.mmType, com.tools20022.repository.msg.AlternateIdentification4.mmIssuerCountry,
-						com.tools20022.repository.choice.OtherIdentification4Choice.mmProprietary, com.tools20022.repository.msg.GenericIdentification81.mmIdentificationType,
-						com.tools20022.repository.choice.ReversedStatus2Choice.mmDataSourceScheme, com.tools20022.repository.msg.PostalAddress21.mmCareOf, com.tools20022.repository.msg.GenericIdentification82.mmIssuerCountry,
-						com.tools20022.repository.choice.OtherIdentification3Choice.mmProprietary, com.tools20022.repository.msg.GenericIdentification85.mmType, com.tools20022.repository.msg.GenericIdentification89.mmType,
-						com.tools20022.repository.msg.GenericIdentification94.mmType, com.tools20022.repository.msg.GenericIdentification90.mmType, com.tools20022.repository.msg.GenericIdentification92.mmType);
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.GenericIdentification.mmIdentification, com.tools20022.repository.entity.GenericIdentification.mmIdentificationForContactPoint,
-						com.tools20022.repository.entity.GenericIdentification.mmIdentificationForAccount, com.tools20022.repository.entity.GenericIdentification.mmRelatedPartyIdentification,
-						com.tools20022.repository.entity.GenericIdentification.mmIssueDate, com.tools20022.repository.entity.GenericIdentification.mmExpiryDate, com.tools20022.repository.entity.GenericIdentification.mmScheme,
-						com.tools20022.repository.entity.GenericIdentification.mmIdentificationForSecuritiesCertificate, com.tools20022.repository.entity.GenericIdentification.mmIdentificationForLot,
-						com.tools20022.repository.entity.GenericIdentification.mmPartyRole, com.tools20022.repository.entity.GenericIdentification.mmIdentificationForCashProceedsIncome,
-						com.tools20022.repository.entity.GenericIdentification.mmRelatedStatusReason, com.tools20022.repository.entity.GenericIdentification.mmIdentificationForBankTransaction,
-						com.tools20022.repository.entity.GenericIdentification.mmIdentificationForAccountCostReferencePattern, com.tools20022.repository.entity.GenericIdentification.mmAccount,
-						com.tools20022.repository.entity.GenericIdentification.mmRelatedSystemIdentification, com.tools20022.repository.entity.GenericIdentification.mmIdentificationForInterestName,
-						com.tools20022.repository.entity.GenericIdentification.mmRelatedCashAccountService, com.tools20022.repository.entity.GenericIdentification.mmIdentificationForInvestmentFundClass,
-						com.tools20022.repository.entity.GenericIdentification.mmIdentifiedLocation, com.tools20022.repository.entity.GenericIdentification.mmRelatedSecuritiesIdentification,
-						com.tools20022.repository.entity.GenericIdentification.mmIdentifiedDocument, com.tools20022.repository.entity.GenericIdentification.mmRelatedPurchaseOrder,
-						com.tools20022.repository.entity.GenericIdentification.mmRelatedCertificate);
+				derivationElement_lazy = () -> Arrays.asList(OtherIdentification1Choice.mmProprietary, GenericIdentification46.mmType, GenericIdentification14.mmType, GenericIdentification21.mmType, GenericIdentification26.mmType,
+						PreAllocation1.mmAllocationIdentification, PreAllocation1.mmIndividualAllocationIdentification, GenericIdentification32.mmType, GenericIdentification35.mmType, GenericIdentification31.mmType,
+						GenericIdentification33.mmType, ReversedStatus1.mmDataSourceScheme, RejectedCancellationStatusReason1Choice.mmDataSourceScheme, GenericIdentification55.mmIssuerCountry, OtherIdentification2Choice.mmProprietary,
+						GenericIdentification58.mmType, GenericIdentification59.mmType, GenericIdentification61.mmType, GenericIdentification53.mmType, GenericIdentification71.mmType, GenericIdentification73.mmType,
+						GenericIdentification74.mmType, GenericIdentification70.mmType, GenericIdentification75.mmType, GenericIdentification76.mmType, GenericIdentification77.mmType, GenericIdentification78.mmType,
+						GenericIdentification80.mmType, AlternateIdentification4.mmIssuerCountry, OtherIdentification4Choice.mmProprietary, GenericIdentification81.mmIdentificationType, ReversedStatus2Choice.mmDataSourceScheme,
+						PostalAddress21.mmCareOf, GenericIdentification82.mmIssuerCountry, OtherIdentification3Choice.mmProprietary, GenericIdentification85.mmType, GenericIdentification89.mmType, GenericIdentification94.mmType,
+						GenericIdentification90.mmType, GenericIdentification92.mmType);
+				element_lazy = () -> Arrays.asList(GenericIdentification.mmIdentification, GenericIdentification.mmIdentificationForContactPoint, GenericIdentification.mmIdentificationForAccount,
+						GenericIdentification.mmRelatedPartyIdentification, GenericIdentification.mmIssueDate, GenericIdentification.mmExpiryDate, GenericIdentification.mmScheme,
+						GenericIdentification.mmIdentificationForSecuritiesCertificate, GenericIdentification.mmIdentificationForLot, GenericIdentification.mmPartyRole, GenericIdentification.mmIdentificationForCashProceedsIncome,
+						GenericIdentification.mmRelatedStatusReason, GenericIdentification.mmIdentificationForBankTransaction, GenericIdentification.mmIdentificationForAccountCostReferencePattern, GenericIdentification.mmAccount,
+						GenericIdentification.mmRelatedSystemIdentification, GenericIdentification.mmIdentificationForInterestName, GenericIdentification.mmRelatedCashAccountService,
+						GenericIdentification.mmIdentificationForInvestmentFundClass, GenericIdentification.mmIdentifiedLocation, GenericIdentification.mmRelatedSecuritiesIdentification, GenericIdentification.mmIdentifiedDocument,
+						GenericIdentification.mmRelatedPurchaseOrder, GenericIdentification.mmRelatedCertificate);
 				derivationComponent_lazy = () -> Arrays.asList(SimpleIdentificationInformation.mmObject(), GenericIdentification1.mmObject(), GenericIdentification7.mmObject(), AdditionalReference2.mmObject(),
 						AdditionalReference3.mmObject(), GenericIdentification8.mmObject(), GenericIdentification9.mmObject(), GenericIdentification13.mmObject(), GenericIdentification20.mmObject(), GenericIdentification25.mmObject(),
 						GenericIdentification47.mmObject(), OtherIdentification1Choice.mmObject(), GenericIdentification44.mmObject(), GenericIdentification41.mmObject(), GenericIdentification46.mmObject(),

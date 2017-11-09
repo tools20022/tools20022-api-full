@@ -20,13 +20,15 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV06;
+import com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV07;
 import com.tools20022.repository.choice.SafekeepingPlaceFormat3Choice;
 import com.tools20022.repository.codeset.CorporateActionOption5Code;
 import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.datatype.Number;
-import com.tools20022.repository.entity.InvestmentFundClass;
-import com.tools20022.repository.entity.SafekeepingPlace;
-import com.tools20022.repository.entity.SecuritiesBalance;
+import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -197,14 +199,14 @@ public class AggregateBalanceInformation22 {
 	 */
 	public static final MMMessageAssociationEnd mmFinancialInstrumentIdentification = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmIdentification;
+			businessElementTrace_lazy = () -> Security.mmIdentification;
 			componentContext_lazy = () -> AggregateBalanceInformation22.mmObject();
 			isDerived = false;
 			xmlTag = "FinInstrmId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentIdentification";
 			definition = "Financial instruments representing a sum of rights of the investor vis-a-vis the issuer.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AggregateBalanceInformation26.mmFinancialInstrumentIdentification);
+			nextVersions_lazy = () -> Arrays.asList(AggregateBalanceInformation26.mmFinancialInstrumentIdentification);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -254,14 +256,14 @@ public class AggregateBalanceInformation22 {
 	 */
 	public static final MMMessageAssociationEnd mmFinancialInstrumentAttributes = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesBalance.mmSecurity;
+			businessElementTrace_lazy = () -> SecuritiesBalance.mmSecurity;
 			componentContext_lazy = () -> AggregateBalanceInformation22.mmObject();
 			isDerived = false;
 			xmlTag = "FinInstrmAttrbts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentAttributes";
 			definition = "Elements characterising a financial instrument.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AggregateBalanceInformation26.mmFinancialInstrumentAttributes);
+			nextVersions_lazy = () -> Arrays.asList(AggregateBalanceInformation26.mmFinancialInstrumentAttributes);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -316,10 +318,10 @@ public class AggregateBalanceInformation22 {
 			componentContext_lazy = () -> AggregateBalanceInformation22.mmObject();
 			isDerived = false;
 			xmlTag = "InvstmtFndsFinInstrmAttrbts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestmentFundsFinancialInstrumentAttributes";
 			definition = "Elements characterising an investment funds financial instrument.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AggregateBalanceInformation26.mmInvestmentFundsFinancialInstrumentAttributes);
+			nextVersions_lazy = () -> Arrays.asList(AggregateBalanceInformation26.mmInvestmentFundsFinancialInstrumentAttributes);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -369,14 +371,14 @@ public class AggregateBalanceInformation22 {
 	 */
 	public static final MMMessageAssociationEnd mmAdditionalDerivativeAttributes = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Asset.mmDerivative;
+			businessElementTrace_lazy = () -> Asset.mmDerivative;
 			componentContext_lazy = () -> AggregateBalanceInformation22.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlDerivAttrbts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDerivativeAttributes";
 			definition = "Details of the swap contract.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AggregateBalanceInformation26.mmAdditionalDerivativeAttributes);
+			nextVersions_lazy = () -> Arrays.asList(AggregateBalanceInformation26.mmAdditionalDerivativeAttributes);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -428,10 +430,10 @@ public class AggregateBalanceInformation22 {
 			componentContext_lazy = () -> AggregateBalanceInformation22.mmObject();
 			isDerived = false;
 			xmlTag = "AggtBal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AggregateBalance";
 			definition = "Total quantity of financial instruments of the balance.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AggregateBalanceInformation26.mmAggregateBalance);
+			nextVersions_lazy = () -> Arrays.asList(AggregateBalanceInformation26.mmAggregateBalance);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -490,10 +492,10 @@ public class AggregateBalanceInformation22 {
 			componentContext_lazy = () -> AggregateBalanceInformation22.mmObject();
 			isDerived = false;
 			xmlTag = "SfkpgPlc";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlace";
 			definition = "Place where the securities are safe-kept, physically or notionally.  This place can be, for example, a local custodian, a Central Securities Depository (CSD) or an International Central Securities Depository (ICSD).";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AggregateBalanceInformation26.mmSafekeepingPlace);
+			nextVersions_lazy = () -> Arrays.asList(AggregateBalanceInformation26.mmSafekeepingPlace);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -545,14 +547,14 @@ public class AggregateBalanceInformation22 {
 	 */
 	public static final MMMessageAttribute mmCorporateActionOptionType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionOption.mmOptionType;
+			businessElementTrace_lazy = () -> CorporateActionOption.mmOptionType;
 			componentContext_lazy = () -> AggregateBalanceInformation22.mmObject();
 			isDerived = false;
 			xmlTag = "CorpActnOptnTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorporateActionOptionType";
 			definition = "Specifies the corporate action options available to the account owner.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AggregateBalanceInformation26.mmCorporateActionOptionType);
+			nextVersions_lazy = () -> Arrays.asList(AggregateBalanceInformation26.mmCorporateActionOptionType);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CorporateActionOption5Code.mmObject();
@@ -601,14 +603,14 @@ public class AggregateBalanceInformation22 {
 	 */
 	public static final MMMessageAssociationEnd mmPriceDetails = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmPricing;
+			businessElementTrace_lazy = () -> Security.mmPricing;
 			componentContext_lazy = () -> AggregateBalanceInformation22.mmObject();
 			isDerived = false;
 			xmlTag = "PricDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PriceDetails";
 			definition = "Price of the financial instrument in one or more currencies.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AggregateBalanceInformation26.mmPriceDetails);
+			nextVersions_lazy = () -> Arrays.asList(AggregateBalanceInformation26.mmPriceDetails);
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.PriceInformation5.mmObject();
@@ -657,14 +659,14 @@ public class AggregateBalanceInformation22 {
 	 */
 	public static final MMMessageAssociationEnd mmForeignExchangeDetails = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesBalance.mmExchangeRate;
+			businessElementTrace_lazy = () -> SecuritiesBalance.mmExchangeRate;
 			componentContext_lazy = () -> AggregateBalanceInformation22.mmObject();
 			isDerived = false;
 			xmlTag = "FXDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForeignExchangeDetails";
 			definition = "Information needed to process a currency exchange or conversion.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AggregateBalanceInformation26.mmForeignExchangeDetails);
+			nextVersions_lazy = () -> Arrays.asList(AggregateBalanceInformation26.mmForeignExchangeDetails);
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.ForeignExchangeTerms14.mmObject();
@@ -716,14 +718,14 @@ public class AggregateBalanceInformation22 {
 	 */
 	public static final MMMessageAttribute mmDaysAccrued = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmNumberOfDays;
+			businessElementTrace_lazy = () -> DateTimePeriod.mmNumberOfDays;
 			componentContext_lazy = () -> AggregateBalanceInformation22.mmObject();
 			isDerived = false;
 			xmlTag = "DaysAcrd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DaysAccrued";
 			definition = "Specifies the number of days used for calculating the accrued interest amount.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AggregateBalanceInformation26.mmDaysAccrued);
+			nextVersions_lazy = () -> Arrays.asList(AggregateBalanceInformation26.mmDaysAccrued);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
@@ -772,14 +774,14 @@ public class AggregateBalanceInformation22 {
 	 */
 	public static final MMMessageAssociationEnd mmAccountBaseCurrencyAmounts = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Balance.mmAssetHolding;
+			businessElementTrace_lazy = () -> Balance.mmAssetHolding;
 			componentContext_lazy = () -> AggregateBalanceInformation22.mmObject();
 			isDerived = false;
 			xmlTag = "AcctBaseCcyAmts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountBaseCurrencyAmounts";
 			definition = "Valuation amounts provided in the base currency of the account.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AggregateBalanceInformation26.mmAccountBaseCurrencyAmounts);
+			nextVersions_lazy = () -> Arrays.asList(AggregateBalanceInformation26.mmAccountBaseCurrencyAmounts);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -830,14 +832,14 @@ public class AggregateBalanceInformation22 {
 	 */
 	public static final MMMessageAssociationEnd mmInstrumentCurrencyAmounts = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Balance.mmAssetHolding;
+			businessElementTrace_lazy = () -> Balance.mmAssetHolding;
 			componentContext_lazy = () -> AggregateBalanceInformation22.mmObject();
 			isDerived = false;
 			xmlTag = "InstrmCcyAmts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstrumentCurrencyAmounts";
 			definition = "Valuation amounts provided in the currency of the financial instrument.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AggregateBalanceInformation26.mmInstrumentCurrencyAmounts);
+			nextVersions_lazy = () -> Arrays.asList(AggregateBalanceInformation26.mmInstrumentCurrencyAmounts);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -889,14 +891,14 @@ public class AggregateBalanceInformation22 {
 	 */
 	public static final MMMessageAssociationEnd mmAlternateReportingCurrencyAmounts = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Balance.mmAssetHolding;
+			businessElementTrace_lazy = () -> Balance.mmAssetHolding;
 			componentContext_lazy = () -> AggregateBalanceInformation22.mmObject();
 			isDerived = false;
 			xmlTag = "AltrnRptgCcyAmts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AlternateReportingCurrencyAmounts";
 			definition = "Valuation amounts provided in another currency than the base currency of the account.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AggregateBalanceInformation26.mmAlternateReportingCurrencyAmounts);
+			nextVersions_lazy = () -> Arrays.asList(AggregateBalanceInformation26.mmAlternateReportingCurrencyAmounts);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -948,14 +950,14 @@ public class AggregateBalanceInformation22 {
 	 */
 	public static final MMMessageAssociationEnd mmQuantityBreakdown = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmLotBreakdown;
+			businessElementTrace_lazy = () -> SecuritiesQuantity.mmLotBreakdown;
 			componentContext_lazy = () -> AggregateBalanceInformation22.mmObject();
 			isDerived = false;
 			xmlTag = "QtyBrkdwn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuantityBreakdown";
 			definition = "Breakdown of the aggregate quantity reported into significant lots, for example, tax lots.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AggregateBalanceInformation26.mmQuantityBreakdown);
+			nextVersions_lazy = () -> Arrays.asList(AggregateBalanceInformation26.mmQuantityBreakdown);
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.QuantityBreakdown24.mmObject();
@@ -1006,14 +1008,14 @@ public class AggregateBalanceInformation22 {
 	 */
 	public static final MMMessageAssociationEnd mmBalanceBreakdown = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesBalance.mmSecuritiesSubBalance;
+			businessElementTrace_lazy = () -> SecuritiesBalance.mmSecuritiesSubBalance;
 			componentContext_lazy = () -> AggregateBalanceInformation22.mmObject();
 			isDerived = false;
 			xmlTag = "BalBrkdwn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BalanceBreakdown";
 			definition = "Breakdown of the aggregate balance per meaningful sub-balances and availability.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AggregateBalanceInformation26.mmBalanceBreakdown);
+			nextVersions_lazy = () -> Arrays.asList(AggregateBalanceInformation26.mmBalanceBreakdown);
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.SubBalanceInformation6.mmObject();
@@ -1065,14 +1067,14 @@ public class AggregateBalanceInformation22 {
 	 */
 	public static final MMMessageAssociationEnd mmAdditionalBalanceBreakdown = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesBalance.mmSecuritiesSubBalance;
+			businessElementTrace_lazy = () -> SecuritiesBalance.mmSecuritiesSubBalance;
 			componentContext_lazy = () -> AggregateBalanceInformation22.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlBalBrkdwn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalBalanceBreakdown";
 			definition = "Provides additional instrument sub-balance information on all or parts of the reported financial instrument (unregistered, tax exempt, etc.).";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AggregateBalanceInformation26.mmAdditionalBalanceBreakdown);
+			nextVersions_lazy = () -> Arrays.asList(AggregateBalanceInformation26.mmAdditionalBalanceBreakdown);
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.AdditionalBalanceInformation6.mmObject();
@@ -1124,14 +1126,14 @@ public class AggregateBalanceInformation22 {
 	 */
 	public static final MMMessageAssociationEnd mmBalanceAtSafekeepingPlace = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesBalance.mmSecuritiesSubBalance;
+			businessElementTrace_lazy = () -> SecuritiesBalance.mmSecuritiesSubBalance;
 			componentContext_lazy = () -> AggregateBalanceInformation22.mmObject();
 			isDerived = false;
 			xmlTag = "BalAtSfkpgPlc";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BalanceAtSafekeepingPlace";
 			definition = "Breakdown of positions per place of safekeeping (and optionally per place of listing).";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AggregateBalanceInformation26.mmBalanceAtSafekeepingPlace);
+			nextVersions_lazy = () -> Arrays.asList(AggregateBalanceInformation26.mmBalanceAtSafekeepingPlace);
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace21.mmObject();
@@ -1178,10 +1180,10 @@ public class AggregateBalanceInformation22 {
 			componentContext_lazy = () -> AggregateBalanceInformation22.mmObject();
 			isDerived = false;
 			xmlTag = "HldgAddtlDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HoldingAdditionalDetails";
 			definition = "Provides additional information on the holding.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AggregateBalanceInformation26.mmHoldingAdditionalDetails);
+			nextVersions_lazy = () -> Arrays.asList(AggregateBalanceInformation26.mmHoldingAdditionalDetails);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
@@ -1230,10 +1232,10 @@ public class AggregateBalanceInformation22 {
 			componentContext_lazy = () -> AggregateBalanceInformation22.mmObject();
 			isDerived = false;
 			xmlTag = "SplmtryData";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryData";
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AggregateBalanceInformation26.mmSupplementaryData);
+			nextVersions_lazy = () -> Arrays.asList(AggregateBalanceInformation26.mmSupplementaryData);
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.SupplementaryData1.mmObject();
@@ -1243,21 +1245,17 @@ public class AggregateBalanceInformation22 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AggregateBalanceInformation22.mmFinancialInstrumentIdentification,
-						com.tools20022.repository.msg.AggregateBalanceInformation22.mmFinancialInstrumentAttributes, com.tools20022.repository.msg.AggregateBalanceInformation22.mmInvestmentFundsFinancialInstrumentAttributes,
-						com.tools20022.repository.msg.AggregateBalanceInformation22.mmAdditionalDerivativeAttributes, com.tools20022.repository.msg.AggregateBalanceInformation22.mmAggregateBalance,
-						com.tools20022.repository.msg.AggregateBalanceInformation22.mmSafekeepingPlace, com.tools20022.repository.msg.AggregateBalanceInformation22.mmCorporateActionOptionType,
-						com.tools20022.repository.msg.AggregateBalanceInformation22.mmPriceDetails, com.tools20022.repository.msg.AggregateBalanceInformation22.mmForeignExchangeDetails,
-						com.tools20022.repository.msg.AggregateBalanceInformation22.mmDaysAccrued, com.tools20022.repository.msg.AggregateBalanceInformation22.mmAccountBaseCurrencyAmounts,
-						com.tools20022.repository.msg.AggregateBalanceInformation22.mmInstrumentCurrencyAmounts, com.tools20022.repository.msg.AggregateBalanceInformation22.mmAlternateReportingCurrencyAmounts,
-						com.tools20022.repository.msg.AggregateBalanceInformation22.mmQuantityBreakdown, com.tools20022.repository.msg.AggregateBalanceInformation22.mmBalanceBreakdown,
-						com.tools20022.repository.msg.AggregateBalanceInformation22.mmAdditionalBalanceBreakdown, com.tools20022.repository.msg.AggregateBalanceInformation22.mmBalanceAtSafekeepingPlace,
-						com.tools20022.repository.msg.AggregateBalanceInformation22.mmHoldingAdditionalDetails, com.tools20022.repository.msg.AggregateBalanceInformation22.mmSupplementaryData);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV06.mmBalanceForAccount,
-						com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV07.mmBalanceForAccount);
+				messageElement_lazy = () -> Arrays.asList(AggregateBalanceInformation22.mmFinancialInstrumentIdentification, AggregateBalanceInformation22.mmFinancialInstrumentAttributes,
+						AggregateBalanceInformation22.mmInvestmentFundsFinancialInstrumentAttributes, AggregateBalanceInformation22.mmAdditionalDerivativeAttributes, AggregateBalanceInformation22.mmAggregateBalance,
+						AggregateBalanceInformation22.mmSafekeepingPlace, AggregateBalanceInformation22.mmCorporateActionOptionType, AggregateBalanceInformation22.mmPriceDetails, AggregateBalanceInformation22.mmForeignExchangeDetails,
+						AggregateBalanceInformation22.mmDaysAccrued, AggregateBalanceInformation22.mmAccountBaseCurrencyAmounts, AggregateBalanceInformation22.mmInstrumentCurrencyAmounts,
+						AggregateBalanceInformation22.mmAlternateReportingCurrencyAmounts, AggregateBalanceInformation22.mmQuantityBreakdown, AggregateBalanceInformation22.mmBalanceBreakdown,
+						AggregateBalanceInformation22.mmAdditionalBalanceBreakdown, AggregateBalanceInformation22.mmBalanceAtSafekeepingPlace, AggregateBalanceInformation22.mmHoldingAdditionalDetails,
+						AggregateBalanceInformation22.mmSupplementaryData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesBalanceAccountingReportV06.mmBalanceForAccount, SecuritiesBalanceAccountingReportV07.mmBalanceForAccount);
 				trace_lazy = () -> SecuritiesBalance.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
 						return DateFormat.getDateInstance(java.text.DateFormat.LONG).parse("May 5, 2016");

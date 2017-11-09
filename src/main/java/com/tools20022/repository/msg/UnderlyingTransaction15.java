@@ -19,7 +19,10 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.camt.CustomerPaymentCancellationRequestV06;
 import com.tools20022.repository.entity.PaymentInstruction;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -124,10 +127,10 @@ public class UnderlyingTransaction15 {
 			componentContext_lazy = () -> UnderlyingTransaction15.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlGrpInfAndCxl";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalGroupInformationAndCancellation";
 			definition = "Provides information on the original message, to which the cancellation refers.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.UnderlyingTransaction12.mmOriginalGroupInformationAndCancellation;
+			previousVersion_lazy = () -> UnderlyingTransaction12.mmOriginalGroupInformationAndCancellation;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -181,10 +184,10 @@ public class UnderlyingTransaction15 {
 			componentContext_lazy = () -> UnderlyingTransaction15.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlPmtInfAndCxl";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalPaymentInformationAndCancellation";
 			definition = "Provides information on the original (group of) transactions, to which the cancellation request refers.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.UnderlyingTransaction12.mmOriginalPaymentInformationAndCancellation;
+			previousVersion_lazy = () -> UnderlyingTransaction12.mmOriginalPaymentInformationAndCancellation;
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.OriginalPaymentInstruction20.mmObject();
@@ -194,12 +197,11 @@ public class UnderlyingTransaction15 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UnderlyingTransaction15.mmOriginalGroupInformationAndCancellation,
-						com.tools20022.repository.msg.UnderlyingTransaction15.mmOriginalPaymentInformationAndCancellation);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.CustomerPaymentCancellationRequestV06.mmUnderlying);
+				messageElement_lazy = () -> Arrays.asList(UnderlyingTransaction15.mmOriginalGroupInformationAndCancellation, UnderlyingTransaction15.mmOriginalPaymentInformationAndCancellation);
+				messageBuildingBlock_lazy = () -> Arrays.asList(CustomerPaymentCancellationRequestV06.mmUnderlying);
 				trace_lazy = () -> PaymentInstruction.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "UnderlyingTransaction15";
 				definition = "Identifies the underlying (group of) transaction(s) to which the investigation applies.";
 				previousVersion_lazy = () -> UnderlyingTransaction12.mmObject();

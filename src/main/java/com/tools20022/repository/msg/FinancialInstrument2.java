@@ -19,7 +19,10 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.entity.Asset;
 import com.tools20022.repository.entity.Security;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -101,11 +104,11 @@ public class FinancialInstrument2 {
 	 */
 	public static final MMMessageAssociationEnd mmIdentification = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmIdentification;
+			businessElementTrace_lazy = () -> Security.mmIdentification;
 			componentContext_lazy = () -> FinancialInstrument2.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Identification of a security.";
 			maxOccurs = 1;
@@ -152,7 +155,7 @@ public class FinancialInstrument2 {
 			componentContext_lazy = () -> FinancialInstrument2.mmObject();
 			isDerived = false;
 			xmlTag = "Attrbts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Attributes";
 			definition = "Elements characterising a financial instrument.";
 			maxOccurs = 1;
@@ -196,11 +199,11 @@ public class FinancialInstrument2 {
 	 */
 	public static final MMMessageAssociationEnd mmAdditionalDerivativeAttributes = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Asset.mmDerivative;
+			businessElementTrace_lazy = () -> Asset.mmDerivative;
 			componentContext_lazy = () -> FinancialInstrument2.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlDerivAttrbts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDerivativeAttributes";
 			definition = "Details of the swap contract.";
 			maxOccurs = 1;
@@ -213,11 +216,10 @@ public class FinancialInstrument2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrument2.mmIdentification, com.tools20022.repository.msg.FinancialInstrument2.mmAttributes,
-						com.tools20022.repository.msg.FinancialInstrument2.mmAdditionalDerivativeAttributes);
+				messageElement_lazy = () -> Arrays.asList(FinancialInstrument2.mmIdentification, FinancialInstrument2.mmAttributes, FinancialInstrument2.mmAdditionalDerivativeAttributes);
 				trace_lazy = () -> Security.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "FinancialInstrument2";
 				definition = "Identification and attributes of a financial instrument for an accounting process.";
 			}

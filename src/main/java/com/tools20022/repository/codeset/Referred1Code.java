@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ReferredCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -83,7 +85,7 @@ public class Referred1Code extends ReferredCode {
 	 */
 	public static final MMCode mmReferred = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Referred";
 			owner_lazy = () -> Referred1Code.mmObject();
 		}
@@ -106,7 +108,7 @@ public class Referred1Code extends ReferredCode {
 	 */
 	public static final MMCode mmNotReferred = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotReferred";
 			owner_lazy = () -> Referred1Code.mmObject();
 		}
@@ -129,7 +131,7 @@ public class Referred1Code extends ReferredCode {
 	 */
 	public static final MMCode mmNotKnown = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotKnown";
 			owner_lazy = () -> Referred1Code.mmObject();
 		}
@@ -138,12 +140,12 @@ public class Referred1Code extends ReferredCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("REFR");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Referred1Code";
 				definition = "Indicates if the investor was referred.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Referred1Code.mmReferred, com.tools20022.repository.codeset.Referred1Code.mmNotReferred, com.tools20022.repository.codeset.Referred1Code.mmNotKnown);
+				code_lazy = () -> Arrays.asList(Referred1Code.mmReferred, Referred1Code.mmNotReferred, Referred1Code.mmNotKnown);
 				trace_lazy = () -> ReferredCode.mmObject();
 			}
 		});

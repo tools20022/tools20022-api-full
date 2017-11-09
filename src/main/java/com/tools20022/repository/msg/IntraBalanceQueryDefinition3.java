@@ -19,8 +19,10 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.MovementResponseType1Code;
 import com.tools20022.repository.entity.IntraPositionTransfer;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -97,7 +99,7 @@ public class IntraBalanceQueryDefinition3 {
 			componentContext_lazy = () -> IntraBalanceQueryDefinition3.mmObject();
 			isDerived = false;
 			xmlTag = "QryTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QueryType";
 			definition = "Defines the type of query.";
 			maxOccurs = 1;
@@ -148,7 +150,7 @@ public class IntraBalanceQueryDefinition3 {
 			componentContext_lazy = () -> IntraBalanceQueryDefinition3.mmObject();
 			isDerived = false;
 			xmlTag = "SchCrit";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SearchCriteria";
 			definition = "Defines the criteria to extract the intra-balance movement instruction information.";
 			maxOccurs = 1;
@@ -160,10 +162,10 @@ public class IntraBalanceQueryDefinition3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IntraBalanceQueryDefinition3.mmQueryType, com.tools20022.repository.msg.IntraBalanceQueryDefinition3.mmSearchCriteria);
+				messageElement_lazy = () -> Arrays.asList(IntraBalanceQueryDefinition3.mmQueryType, IntraBalanceQueryDefinition3.mmSearchCriteria);
 				trace_lazy = () -> IntraPositionTransfer.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "IntraBalanceQueryDefinition3";
 				definition = "Defines the information that is searched through specific criteria.";
 			}

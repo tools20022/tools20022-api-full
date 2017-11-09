@@ -17,16 +17,16 @@
 
 package com.tools20022.repository.msg;
 
-import com.tools20022.metamodel.MMMessageAssociationEnd;
-import com.tools20022.metamodel.MMMessageAttribute;
-import com.tools20022.metamodel.MMMessageComponent;
-import com.tools20022.metamodel.MMXor;
+import com.tools20022.metamodel.*;
 import com.tools20022.repository.codeset.CountryCode;
 import com.tools20022.repository.datatype.CurrencyAndAmount;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.PercentageRate;
+import com.tools20022.repository.entity.Adjustment;
 import com.tools20022.repository.entity.FinancialInstitution;
+import com.tools20022.repository.entity.PaymentInstruction;
 import com.tools20022.repository.entity.PaymentObligation;
+import com.tools20022.repository.GeneratedRepository;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -159,10 +159,10 @@ public class PaymentObligation1 {
 			componentContext_lazy = () -> PaymentObligation1.mmObject();
 			isDerived = false;
 			xmlTag = "OblgrBk";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ObligorBank";
 			definition = "Bank that has to pay under the obligation.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentObligation2.mmObligorBank);
+			nextVersions_lazy = () -> Arrays.asList(PaymentObligation2.mmObligorBank);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -215,10 +215,10 @@ public class PaymentObligation1 {
 			componentContext_lazy = () -> PaymentObligation1.mmObject();
 			isDerived = false;
 			xmlTag = "RcptBk";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RecipientBank";
 			definition = "Bank that will be paid under the obligation.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentObligation2.mmRecipientBank);
+			nextVersions_lazy = () -> Arrays.asList(PaymentObligation2.mmRecipientBank);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -261,11 +261,11 @@ public class PaymentObligation1 {
 	 */
 	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentObligation.mmMaximumAmount;
+			businessElementTrace_lazy = () -> PaymentObligation.mmMaximumAmount;
 			componentContext_lazy = () -> PaymentObligation1.mmObject();
 			isDerived = false;
 			xmlTag = "Amt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Maximum amount that will be paid under the obligation.";
 			maxOccurs = 1;
@@ -312,11 +312,11 @@ public class PaymentObligation1 {
 	 */
 	public static final MMMessageAttribute mmPercentage = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentObligation.mmPercentage;
+			businessElementTrace_lazy = () -> PaymentObligation.mmPercentage;
 			componentContext_lazy = () -> PaymentObligation1.mmObject();
 			isDerived = false;
 			xmlTag = "Pctg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Percentage";
 			definition = "Maximum amount that will be paid under the obligation, expressed as a percentage of the purchase order net amount.";
 			maxOccurs = 1;
@@ -360,11 +360,11 @@ public class PaymentObligation1 {
 	 */
 	public static final MMMessageAttribute mmChargesAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Adjustment.mmAmount;
+			businessElementTrace_lazy = () -> Adjustment.mmAmount;
 			componentContext_lazy = () -> PaymentObligation1.mmObject();
 			isDerived = false;
 			xmlTag = "ChrgsAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChargesAmount";
 			definition = "Amount of the charges taken by the obligor bank.";
 			maxOccurs = 1;
@@ -411,11 +411,11 @@ public class PaymentObligation1 {
 	 */
 	public static final MMMessageAttribute mmChargesPercentage = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Adjustment.mmChargeRate;
+			businessElementTrace_lazy = () -> Adjustment.mmChargeRate;
 			componentContext_lazy = () -> PaymentObligation1.mmObject();
 			isDerived = false;
 			xmlTag = "ChrgsPctg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChargesPercentage";
 			definition = "Amount of the charges expressed as a percentage of the amount paid by the obligor bank.";
 			maxOccurs = 1;
@@ -466,14 +466,14 @@ public class PaymentObligation1 {
 	 */
 	public static final MMMessageAttribute mmExpiryDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentObligation.mmExpiryDate;
+			businessElementTrace_lazy = () -> PaymentObligation.mmExpiryDate;
 			componentContext_lazy = () -> PaymentObligation1.mmObject();
 			isDerived = false;
 			xmlTag = "XpryDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExpiryDate";
 			definition = "Date at which the obligation will expire.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentObligation2.mmExpiryDate);
+			nextVersions_lazy = () -> Arrays.asList(PaymentObligation2.mmExpiryDate);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
@@ -523,14 +523,14 @@ public class PaymentObligation1 {
 	 */
 	public static final MMMessageAttribute mmApplicableLaw = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentObligation.mmApplicableLaw;
+			businessElementTrace_lazy = () -> PaymentObligation.mmApplicableLaw;
 			componentContext_lazy = () -> PaymentObligation1.mmObject();
 			isDerived = false;
 			xmlTag = "AplblLaw";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ApplicableLaw";
 			definition = "Country of which the law governs the bank payment obligation.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentObligation2.mmApplicableLaw);
+			nextVersions_lazy = () -> Arrays.asList(PaymentObligation2.mmApplicableLaw);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CountryCode.mmObject();
@@ -585,10 +585,10 @@ public class PaymentObligation1 {
 			componentContext_lazy = () -> PaymentObligation1.mmObject();
 			isDerived = false;
 			xmlTag = "PmtTerms";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentTerms";
 			definition = "Payment processes required to transfer cash from the debtor to the creditor.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentObligation2.mmPaymentTerms);
+			nextVersions_lazy = () -> Arrays.asList(PaymentObligation2.mmPaymentTerms);
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.PaymentTerms2.mmObject();
@@ -639,14 +639,14 @@ public class PaymentObligation1 {
 	 */
 	public static final MMMessageAssociationEnd mmSettlementTerms = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentInstruction.mmSettlementInstruction;
+			businessElementTrace_lazy = () -> PaymentInstruction.mmSettlementInstruction;
 			componentContext_lazy = () -> PaymentObligation1.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmTerms";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementTerms";
 			definition = "Instruction between two clearing agents stipulating the cash transfer characteristics between the two parties.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentObligation2.mmSettlementTerms);
+			nextVersions_lazy = () -> Arrays.asList(PaymentObligation2.mmSettlementTerms);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -658,6 +658,10 @@ public class PaymentObligation1 {
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
+	 * messageComponent} =
+	 * {@linkplain com.tools20022.repository.msg.PaymentObligation1
+	 * PaymentObligation1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getImpactedElements
 	 * impactedElements} =
 	 * <ul>
@@ -669,10 +673,6 @@ public class PaymentObligation1 {
 	 * PaymentObligation1.mmPercentage}</li>
 	 * </ul>
 	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
-	 * messageComponent} =
-	 * {@linkplain com.tools20022.repository.msg.PaymentObligation1
-	 * PaymentObligation1}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -683,23 +683,21 @@ public class PaymentObligation1 {
 	 */
 	public static final MMXor mmAmountOrPercentageRule = new MMXor() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmountOrPercentageRule";
 			messageComponent_lazy = () -> PaymentObligation1.mmObject();
-			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentObligation1.mmAmount, com.tools20022.repository.msg.PaymentObligation1.mmPercentage);
+			impactedElements_lazy = () -> Arrays.asList(PaymentObligation1.mmAmount, PaymentObligation1.mmPercentage);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentObligation1.mmObligorBank, com.tools20022.repository.msg.PaymentObligation1.mmRecipientBank,
-						com.tools20022.repository.msg.PaymentObligation1.mmAmount, com.tools20022.repository.msg.PaymentObligation1.mmPercentage, com.tools20022.repository.msg.PaymentObligation1.mmChargesAmount,
-						com.tools20022.repository.msg.PaymentObligation1.mmChargesPercentage, com.tools20022.repository.msg.PaymentObligation1.mmExpiryDate, com.tools20022.repository.msg.PaymentObligation1.mmApplicableLaw,
-						com.tools20022.repository.msg.PaymentObligation1.mmPaymentTerms, com.tools20022.repository.msg.PaymentObligation1.mmSettlementTerms);
+				messageElement_lazy = () -> Arrays.asList(PaymentObligation1.mmObligorBank, PaymentObligation1.mmRecipientBank, PaymentObligation1.mmAmount, PaymentObligation1.mmPercentage, PaymentObligation1.mmChargesAmount,
+						PaymentObligation1.mmChargesPercentage, PaymentObligation1.mmExpiryDate, PaymentObligation1.mmApplicableLaw, PaymentObligation1.mmPaymentTerms, PaymentObligation1.mmSettlementTerms);
 				trace_lazy = () -> PaymentObligation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
 						return DateFormat.getDateInstance(java.text.DateFormat.LONG).parse("September 9, 2016");
@@ -710,7 +708,7 @@ public class PaymentObligation1 {
 				name = "PaymentObligation1";
 				definition = "Payment obligation contracted between two financial institutions related to the financing of a commercial transaction.";
 				nextVersions_lazy = () -> Arrays.asList(PaymentObligation2.mmObject());
-				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentObligation1.mmAmountOrPercentageRule);
+				xors_lazy = () -> Arrays.asList(PaymentObligation1.mmAmountOrPercentageRule);
 			}
 		});
 		return mmObject_lazy.get();

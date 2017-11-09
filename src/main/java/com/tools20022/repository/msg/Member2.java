@@ -20,10 +20,13 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.MemberIdentification2Choice;
 import com.tools20022.repository.entity.FinancialInstitution;
+import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.entity.Person;
 import com.tools20022.repository.entity.SystemMemberRole;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -110,7 +113,7 @@ public class Member2 {
 			componentContext_lazy = () -> Member2.mmObject();
 			isDerived = false;
 			xmlTag = "RtrAdr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReturnAddress";
 			definition = "Physical/logical address belonging to a member, segregated from its main address that is used for normal operations. The fund return address is used to route messages that require specific attention/exception handling, for example returns or rejects.";
 			minOccurs = 0;
@@ -154,7 +157,7 @@ public class Member2 {
 			componentContext_lazy = () -> Member2.mmObject();
 			isDerived = false;
 			xmlTag = "CtctRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ContactReference";
 			definition = "Person to be contacted in a given organisation.";
 			minOccurs = 0;
@@ -196,11 +199,11 @@ public class Member2 {
 	 */
 	public static final MMMessageAssociationEnd mmCommunicationAddress = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmContactPoint;
+			businessElementTrace_lazy = () -> Party.mmContactPoint;
 			componentContext_lazy = () -> Member2.mmObject();
 			isDerived = false;
 			xmlTag = "ComAdr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommunicationAddress";
 			definition = "Number, or virtual address, used for communication.";
 			maxOccurs = 1;
@@ -213,10 +216,10 @@ public class Member2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Member2.mmReturnAddress, com.tools20022.repository.msg.Member2.mmContactReference, com.tools20022.repository.msg.Member2.mmCommunicationAddress);
+				messageElement_lazy = () -> Arrays.asList(Member2.mmReturnAddress, Member2.mmContactReference, Member2.mmCommunicationAddress);
 				trace_lazy = () -> SystemMemberRole.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Member2";
 				definition = "Information about the members of a system.";
 			}

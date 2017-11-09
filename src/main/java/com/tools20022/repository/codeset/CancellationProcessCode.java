@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -28,6 +30,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.CancellationProcess1Code
+ * CancellationProcess1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -39,13 +48,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.CancellationProcessCode#mmRequest
  * CancellationProcessCode.mmRequest}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.CancellationProcess1Code
- * CancellationProcess1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -98,7 +100,7 @@ public class CancellationProcessCode {
 	 */
 	public static final MMCode mmNotAllowed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NotAllowed";
 			definition = "Card payment transaction cannot be cancelled by the acquirer.";
 			owner_lazy = () -> CancellationProcessCode.mmObject();
@@ -131,7 +133,7 @@ public class CancellationProcessCode {
 	 */
 	public static final MMCode mmAdvice = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Advice";
 			definition = "Card payment transaction may be cancelled by an advice only before closure of the reconciliation period or before the capture by batch.";
 			owner_lazy = () -> CancellationProcessCode.mmObject();
@@ -165,7 +167,7 @@ public class CancellationProcessCode {
 	 */
 	public static final MMCode mmRequest = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Request";
 			definition = "Card payment transaction may also be cancelled after the closure of the reconciliation period or after the capture by batch. In this case a cancellation request exchange is required.";
 			owner_lazy = () -> CancellationProcessCode.mmObject();
@@ -176,13 +178,12 @@ public class CancellationProcessCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("NALW");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CancellationProcessCode";
 				definition = "Configuration of the exchanges to perform the cancellation of a payment transaction.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CancellationProcessCode.mmNotAllowed, com.tools20022.repository.codeset.CancellationProcessCode.mmAdvice,
-						com.tools20022.repository.codeset.CancellationProcessCode.mmRequest);
+				code_lazy = () -> Arrays.asList(CancellationProcessCode.mmNotAllowed, CancellationProcessCode.mmAdvice, CancellationProcessCode.mmRequest);
 				derivation_lazy = () -> Arrays.asList(CancellationProcess1Code.mmObject());
 			}
 		});

@@ -19,8 +19,10 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.EUDividendStatus1Code;
 import com.tools20022.repository.entity.SecuritiesTax;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification13;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -119,14 +121,14 @@ public class EUDividendStatusType1Choice {
 	 */
 	public static final MMMessageAttribute mmEUDividendStatus = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTax.mmEUDividendStatus;
+			businessElementTrace_lazy = () -> SecuritiesTax.mmEUDividendStatus;
 			componentContext_lazy = () -> EUDividendStatusType1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "EUDvddSts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EUDividendStatus";
 			definition = "Specifies whether dividend is in the scope of the European directive on taxation of savings income in the form of interest payments (Council Directive 2003/48/EC 3 June), or an income realised upon sale, a refund or redemption of shares and units, etc.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.EUDividendStatusType2Choice.mmCode);
+			nextVersions_lazy = () -> Arrays.asList(EUDividendStatusType2Choice.mmCode);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> EUDividendStatus1Code.mmObject();
@@ -181,14 +183,14 @@ public class EUDividendStatusType1Choice {
 	 */
 	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTax.mmEUDividendStatus;
+			businessElementTrace_lazy = () -> SecuritiesTax.mmEUDividendStatus;
 			componentContext_lazy = () -> EUDividendStatusType1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Specifies whether dividend is in the scope of the European directive on taxation of savings income in the form of interest payments (Council Directive 2003/48/EC 3 June), or an income realised upon sale, a refund or redemption of shares and units, etc.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.EUDividendStatusType2Choice.mmProprietary);
+			nextVersions_lazy = () -> Arrays.asList(EUDividendStatusType2Choice.mmProprietary);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification13.mmObject();
@@ -198,10 +200,10 @@ public class EUDividendStatusType1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.EUDividendStatusType1Choice.mmEUDividendStatus, com.tools20022.repository.choice.EUDividendStatusType1Choice.mmProprietary);
+				messageElement_lazy = () -> Arrays.asList(EUDividendStatusType1Choice.mmEUDividendStatus, EUDividendStatusType1Choice.mmProprietary);
 				trace_lazy = () -> SecuritiesTax.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "EUDividendStatusType1Choice";
 				definition = "Choice of an EU dividen status type.";
 				nextVersions_lazy = () -> Arrays.asList(EUDividendStatusType2Choice.mmObject());

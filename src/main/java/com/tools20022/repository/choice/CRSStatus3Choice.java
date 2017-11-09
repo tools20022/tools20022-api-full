@@ -20,8 +20,10 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CRSStatus1Code;
 import com.tools20022.repository.entity.CRSStatus;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification47;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -105,14 +107,14 @@ public class CRSStatus3Choice {
 	 */
 	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CRSStatus.mmCRSStatus;
+			businessElementTrace_lazy = () -> CRSStatus.mmCRSStatus;
 			componentContext_lazy = () -> CRSStatus3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Cd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Common Reporting Standard (CRS) status expressed as a code.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.FATCAStatus2Choice.mmCode;
+			previousVersion_lazy = () -> FATCAStatus2Choice.mmCode;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CRSStatus1Code.mmObject();
@@ -158,10 +160,10 @@ public class CRSStatus3Choice {
 			componentContext_lazy = () -> CRSStatus3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Common Reporting Standard (CRS) status expressed as a proprietary code.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.FATCAStatus2Choice.mmProprietary;
+			previousVersion_lazy = () -> FATCAStatus2Choice.mmProprietary;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -172,10 +174,10 @@ public class CRSStatus3Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CRSStatus3Choice.mmCode, com.tools20022.repository.choice.CRSStatus3Choice.mmProprietary);
+				messageElement_lazy = () -> Arrays.asList(CRSStatus3Choice.mmCode, CRSStatus3Choice.mmProprietary);
 				trace_lazy = () -> CRSStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CRSStatus3Choice";
 				definition = "Choice of formats for the Common Reporting Standard (CRS) status.";
 			}

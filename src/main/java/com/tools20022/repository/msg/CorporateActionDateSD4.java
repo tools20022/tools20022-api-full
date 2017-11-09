@@ -19,8 +19,10 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.Max350Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -108,7 +110,7 @@ public class CorporateActionDateSD4 {
 			componentContext_lazy = () -> CorporateActionDateSD4.mmObject();
 			isDerived = false;
 			xmlTag = "PlcAndNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "xPath to the element that is being extended.";
 			maxOccurs = 1;
@@ -152,7 +154,7 @@ public class CorporateActionDateSD4 {
 			componentContext_lazy = () -> CorporateActionDateSD4.mmObject();
 			isDerived = false;
 			xmlTag = "IntrmAcctgStartDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterimAccountingStartDate";
 			definition = "Date on which accounting for due bills starts and associated tracking begins.";
 			maxOccurs = 1;
@@ -194,7 +196,7 @@ public class CorporateActionDateSD4 {
 			componentContext_lazy = () -> CorporateActionDateSD4.mmObject();
 			isDerived = false;
 			xmlTag = "DlistgDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DelistingDate";
 			definition = "Date on which the event security is no longer listed on the exchange.";
 			maxOccurs = 1;
@@ -235,7 +237,7 @@ public class CorporateActionDateSD4 {
 			componentContext_lazy = () -> CorporateActionDateSD4.mmObject();
 			isDerived = false;
 			xmlTag = "ExrcPrdBegnDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExercisePeriodBeginDate";
 			definition = "Date by which a holder can exercise warrants.";
 			maxOccurs = 1;
@@ -279,7 +281,7 @@ public class CorporateActionDateSD4 {
 			componentContext_lazy = () -> CorporateActionDateSD4.mmObject();
 			isDerived = false;
 			xmlTag = "ObjctnDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ObjectionDate";
 			definition = "Date by which a holder listed as a member of the claimant group in a lawsuit may object to the proposed solution.";
 			maxOccurs = 1;
@@ -323,7 +325,7 @@ public class CorporateActionDateSD4 {
 			componentContext_lazy = () -> CorporateActionDateSD4.mmObject();
 			isDerived = false;
 			xmlTag = "ExclsnDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExclusionDate";
 			definition = "Date by which claimants may exclude themselves from an ongoing class action lawsuit.";
 			maxOccurs = 1;
@@ -367,7 +369,7 @@ public class CorporateActionDateSD4 {
 			componentContext_lazy = () -> CorporateActionDateSD4.mmObject();
 			isDerived = false;
 			xmlTag = "ProofOfClmFilgDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProofOfClaimFilingDate";
 			definition = "Date by which a holder must file claim forms to become a member of the claimant group in a lawsuit.";
 			maxOccurs = 1;
@@ -379,12 +381,10 @@ public class CorporateActionDateSD4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionDateSD4.mmPlaceAndName, com.tools20022.repository.msg.CorporateActionDateSD4.mmInterimAccountingStartDate,
-						com.tools20022.repository.msg.CorporateActionDateSD4.mmDelistingDate, com.tools20022.repository.msg.CorporateActionDateSD4.mmExercisePeriodBeginDate,
-						com.tools20022.repository.msg.CorporateActionDateSD4.mmObjectionDate, com.tools20022.repository.msg.CorporateActionDateSD4.mmExclusionDate,
-						com.tools20022.repository.msg.CorporateActionDateSD4.mmProofOfClaimFilingDate);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(CorporateActionDateSD4.mmPlaceAndName, CorporateActionDateSD4.mmInterimAccountingStartDate, CorporateActionDateSD4.mmDelistingDate, CorporateActionDateSD4.mmExercisePeriodBeginDate,
+						CorporateActionDateSD4.mmObjectionDate, CorporateActionDateSD4.mmExclusionDate, CorporateActionDateSD4.mmProofOfClaimFilingDate);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CorporateActionDateSD4";
 				definition = "Provides additional information regarding corporate action date details.";
 			}

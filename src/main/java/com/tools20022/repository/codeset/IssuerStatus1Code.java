@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.IssuerStatusCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -137,7 +139,7 @@ public class IssuerStatus1Code extends IssuerStatusCode {
 	 */
 	public static final MMCode mmApprovedBySEC = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ApprovedBySEC";
 			owner_lazy = () -> IssuerStatus1Code.mmObject();
 		}
@@ -160,7 +162,7 @@ public class IssuerStatus1Code extends IssuerStatusCode {
 	 */
 	public static final MMCode mmApprovedByShareholders = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ApprovedByShareholders";
 			owner_lazy = () -> IssuerStatus1Code.mmObject();
 		}
@@ -183,7 +185,7 @@ public class IssuerStatus1Code extends IssuerStatusCode {
 	 */
 	public static final MMCode mmApprovedByShareholdersAndSEC = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ApprovedByShareholdersAndSEC";
 			owner_lazy = () -> IssuerStatus1Code.mmObject();
 		}
@@ -206,7 +208,7 @@ public class IssuerStatus1Code extends IssuerStatusCode {
 	 */
 	public static final MMCode mmApproximateRate = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ApproximateRate";
 			owner_lazy = () -> IssuerStatus1Code.mmObject();
 		}
@@ -229,7 +231,7 @@ public class IssuerStatus1Code extends IssuerStatusCode {
 	 */
 	public static final MMCode mmAwaitingInformationFromCompany = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AwaitingInformationFromCompany";
 			owner_lazy = () -> IssuerStatus1Code.mmObject();
 		}
@@ -252,7 +254,7 @@ public class IssuerStatus1Code extends IssuerStatusCode {
 	 */
 	public static final MMCode mmDayGracePeriod = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DayGracePeriod";
 			owner_lazy = () -> IssuerStatus1Code.mmObject();
 		}
@@ -275,7 +277,7 @@ public class IssuerStatus1Code extends IssuerStatusCode {
 	 */
 	public static final MMCode mmDistributionRejected = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DistributionRejected";
 			owner_lazy = () -> IssuerStatus1Code.mmObject();
 		}
@@ -298,7 +300,7 @@ public class IssuerStatus1Code extends IssuerStatusCode {
 	 */
 	public static final MMCode mmSeeComments = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SeeComments";
 			owner_lazy = () -> IssuerStatus1Code.mmObject();
 		}
@@ -321,7 +323,7 @@ public class IssuerStatus1Code extends IssuerStatusCode {
 	 */
 	public static final MMCode mmHolidayInCountryofOrigin = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HolidayInCountryofOrigin";
 			owner_lazy = () -> IssuerStatus1Code.mmObject();
 		}
@@ -344,7 +346,7 @@ public class IssuerStatus1Code extends IssuerStatusCode {
 	 */
 	public static final MMCode mmIssueNotFunded = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssueNotFunded";
 			owner_lazy = () -> IssuerStatus1Code.mmObject();
 		}
@@ -367,7 +369,7 @@ public class IssuerStatus1Code extends IssuerStatusCode {
 	 */
 	public static final MMCode mmIssueTradingFlat = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssueTradingFlat";
 			owner_lazy = () -> IssuerStatus1Code.mmObject();
 		}
@@ -390,7 +392,7 @@ public class IssuerStatus1Code extends IssuerStatusCode {
 	 */
 	public static final MMCode mmLateAnnouncementWithElections = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LateAnnouncementWithElections";
 			owner_lazy = () -> IssuerStatus1Code.mmObject();
 		}
@@ -413,7 +415,7 @@ public class IssuerStatus1Code extends IssuerStatusCode {
 	 */
 	public static final MMCode mmLiquidation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Liquidation";
 			owner_lazy = () -> IssuerStatus1Code.mmObject();
 		}
@@ -436,7 +438,7 @@ public class IssuerStatus1Code extends IssuerStatusCode {
 	 */
 	public static final MMCode mmPaidUponrReceiptOfFunds = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaidUponrReceiptOfFunds";
 			owner_lazy = () -> IssuerStatus1Code.mmObject();
 		}
@@ -459,7 +461,7 @@ public class IssuerStatus1Code extends IssuerStatusCode {
 	 */
 	public static final MMCode mmPendingConversionOfFunds = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingConversionOfFunds";
 			owner_lazy = () -> IssuerStatus1Code.mmObject();
 		}
@@ -482,7 +484,7 @@ public class IssuerStatus1Code extends IssuerStatusCode {
 	 */
 	public static final MMCode mmPendingEDSElections = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingEDSElections";
 			owner_lazy = () -> IssuerStatus1Code.mmObject();
 		}
@@ -505,7 +507,7 @@ public class IssuerStatus1Code extends IssuerStatusCode {
 	 */
 	public static final MMCode mmPendingSECApproval = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingSECApproval";
 			owner_lazy = () -> IssuerStatus1Code.mmObject();
 		}
@@ -528,7 +530,7 @@ public class IssuerStatus1Code extends IssuerStatusCode {
 	 */
 	public static final MMCode mmPendingShareholderAndSECApproval = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingShareholderAndSECApproval";
 			owner_lazy = () -> IssuerStatus1Code.mmObject();
 		}
@@ -551,7 +553,7 @@ public class IssuerStatus1Code extends IssuerStatusCode {
 	 */
 	public static final MMCode mmPendingShareholderApproval = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingShareholderApproval";
 			owner_lazy = () -> IssuerStatus1Code.mmObject();
 		}
@@ -560,21 +562,16 @@ public class IssuerStatus1Code extends IssuerStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ASEC");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "IssuerStatus1Code";
 				definition = "Specifies DTC (The Depository Trust Company) defined issuer status of the event.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.IssuerStatus1Code.mmApprovedBySEC, com.tools20022.repository.codeset.IssuerStatus1Code.mmApprovedByShareholders,
-						com.tools20022.repository.codeset.IssuerStatus1Code.mmApprovedByShareholdersAndSEC, com.tools20022.repository.codeset.IssuerStatus1Code.mmApproximateRate,
-						com.tools20022.repository.codeset.IssuerStatus1Code.mmAwaitingInformationFromCompany, com.tools20022.repository.codeset.IssuerStatus1Code.mmDayGracePeriod,
-						com.tools20022.repository.codeset.IssuerStatus1Code.mmDistributionRejected, com.tools20022.repository.codeset.IssuerStatus1Code.mmSeeComments,
-						com.tools20022.repository.codeset.IssuerStatus1Code.mmHolidayInCountryofOrigin, com.tools20022.repository.codeset.IssuerStatus1Code.mmIssueNotFunded,
-						com.tools20022.repository.codeset.IssuerStatus1Code.mmIssueTradingFlat, com.tools20022.repository.codeset.IssuerStatus1Code.mmLateAnnouncementWithElections,
-						com.tools20022.repository.codeset.IssuerStatus1Code.mmLiquidation, com.tools20022.repository.codeset.IssuerStatus1Code.mmPaidUponrReceiptOfFunds,
-						com.tools20022.repository.codeset.IssuerStatus1Code.mmPendingConversionOfFunds, com.tools20022.repository.codeset.IssuerStatus1Code.mmPendingEDSElections,
-						com.tools20022.repository.codeset.IssuerStatus1Code.mmPendingSECApproval, com.tools20022.repository.codeset.IssuerStatus1Code.mmPendingShareholderAndSECApproval,
-						com.tools20022.repository.codeset.IssuerStatus1Code.mmPendingShareholderApproval);
+				code_lazy = () -> Arrays.asList(IssuerStatus1Code.mmApprovedBySEC, IssuerStatus1Code.mmApprovedByShareholders, IssuerStatus1Code.mmApprovedByShareholdersAndSEC, IssuerStatus1Code.mmApproximateRate,
+						IssuerStatus1Code.mmAwaitingInformationFromCompany, IssuerStatus1Code.mmDayGracePeriod, IssuerStatus1Code.mmDistributionRejected, IssuerStatus1Code.mmSeeComments, IssuerStatus1Code.mmHolidayInCountryofOrigin,
+						IssuerStatus1Code.mmIssueNotFunded, IssuerStatus1Code.mmIssueTradingFlat, IssuerStatus1Code.mmLateAnnouncementWithElections, IssuerStatus1Code.mmLiquidation, IssuerStatus1Code.mmPaidUponrReceiptOfFunds,
+						IssuerStatus1Code.mmPendingConversionOfFunds, IssuerStatus1Code.mmPendingEDSElections, IssuerStatus1Code.mmPendingSECApproval, IssuerStatus1Code.mmPendingShareholderAndSECApproval,
+						IssuerStatus1Code.mmPendingShareholderApproval);
 				trace_lazy = () -> IssuerStatusCode.mmObject();
 			}
 		});

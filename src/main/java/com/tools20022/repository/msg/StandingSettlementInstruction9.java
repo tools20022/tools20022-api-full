@@ -20,11 +20,17 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.setr.SecuritiesTradeConfirmationV01;
+import com.tools20022.repository.area.setr.SecuritiesTradeConfirmationV02;
+import com.tools20022.repository.area.setr.SecuritiesTradeConfirmationV03;
 import com.tools20022.repository.choice.PartyIdentification32Choice;
 import com.tools20022.repository.choice.SettlementStandingInstructionDatabase3Choice;
 import com.tools20022.repository.entity.DeliveringSettlementParty;
+import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.entity.ReceivingSettlementParty;
 import com.tools20022.repository.entity.StandingSettlementInstruction;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -132,7 +138,7 @@ public class StandingSettlementInstruction9 {
 			componentContext_lazy = () -> StandingSettlementInstruction9.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmStgInstrDB";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementStandingInstructionDatabase";
 			definition = "Specifies what settlement standing instruction database is to be used to derive the settlement parties involved in the transaction.";
 			maxOccurs = 1;
@@ -179,11 +185,11 @@ public class StandingSettlementInstruction9 {
 	 */
 	public static final MMMessageAttribute mmVendor = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> StandingSettlementInstruction9.mmObject();
 			isDerived = false;
 			xmlTag = "Vndr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Vendor";
 			definition = "Vendor of the Settlement Standing Instruction database requested to be consulted.";
 			maxOccurs = 1;
@@ -233,7 +239,7 @@ public class StandingSettlementInstruction9 {
 			componentContext_lazy = () -> StandingSettlementInstruction9.mmObject();
 			isDerived = false;
 			xmlTag = "OthrDlvrgSttlmPties";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherDeliveringSettlementParties";
 			definition = "Delivering parties, other than the seller, needed for deriving the standing settlement instruction (for example, depository) or provided for information purposes (for example, instructing party settlement chain).";
 			maxOccurs = 1;
@@ -284,7 +290,7 @@ public class StandingSettlementInstruction9 {
 			componentContext_lazy = () -> StandingSettlementInstruction9.mmObject();
 			isDerived = false;
 			xmlTag = "OthrRcvgSttlmPties";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherReceivingSettlementParties";
 			definition = "Receiving parties, other than the buyer, needed for deriving the standing settlement instruction (for example, depository) or provided for information purposes (for example, instructing party settlement chain).";
 			maxOccurs = 1;
@@ -297,13 +303,13 @@ public class StandingSettlementInstruction9 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StandingSettlementInstruction9.mmSettlementStandingInstructionDatabase, com.tools20022.repository.msg.StandingSettlementInstruction9.mmVendor,
-						com.tools20022.repository.msg.StandingSettlementInstruction9.mmOtherDeliveringSettlementParties, com.tools20022.repository.msg.StandingSettlementInstruction9.mmOtherReceivingSettlementParties);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.SecuritiesTradeConfirmationV01.mmStandingSettlementInstruction,
-						com.tools20022.repository.area.setr.SecuritiesTradeConfirmationV02.mmStandingSettlementInstruction, com.tools20022.repository.area.setr.SecuritiesTradeConfirmationV03.mmStandingSettlementInstruction);
+				messageElement_lazy = () -> Arrays.asList(StandingSettlementInstruction9.mmSettlementStandingInstructionDatabase, StandingSettlementInstruction9.mmVendor, StandingSettlementInstruction9.mmOtherDeliveringSettlementParties,
+						StandingSettlementInstruction9.mmOtherReceivingSettlementParties);
+				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesTradeConfirmationV01.mmStandingSettlementInstruction, SecuritiesTradeConfirmationV02.mmStandingSettlementInstruction,
+						SecuritiesTradeConfirmationV03.mmStandingSettlementInstruction);
 				trace_lazy = () -> StandingSettlementInstruction.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "StandingSettlementInstruction9";
 				definition = "Details of the standing settlement instruction to be applied.";
 			}

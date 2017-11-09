@@ -19,7 +19,9 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.Commodity;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -115,11 +117,11 @@ public class AssetClassCommodityEnergy1Choice {
 	 */
 	public static final MMMessageAssociationEnd mmElectricity = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Commodity.mmSubProduct;
+			businessElementTrace_lazy = () -> Commodity.mmSubProduct;
 			componentContext_lazy = () -> AssetClassCommodityEnergy1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Elctrcty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Electricity";
 			definition = "Definition of Electricity energy commodity derivative.";
 			maxOccurs = 1;
@@ -163,11 +165,11 @@ public class AssetClassCommodityEnergy1Choice {
 	 */
 	public static final MMMessageAssociationEnd mmNaturalGas = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Commodity.mmBaseProduct;
+			businessElementTrace_lazy = () -> Commodity.mmBaseProduct;
 			componentContext_lazy = () -> AssetClassCommodityEnergy1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "NtrlGas";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NaturalGas";
 			definition = "Definition of Natural Gas energy commodity derivative.";
 			maxOccurs = 1;
@@ -210,11 +212,11 @@ public class AssetClassCommodityEnergy1Choice {
 	 */
 	public static final MMMessageAssociationEnd mmOil = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Commodity.mmSubProduct;
+			businessElementTrace_lazy = () -> Commodity.mmSubProduct;
 			componentContext_lazy = () -> AssetClassCommodityEnergy1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Oil";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Oil";
 			definition = "Definition of Oil energy commodity derivative.";
 			maxOccurs = 1;
@@ -257,11 +259,11 @@ public class AssetClassCommodityEnergy1Choice {
 	 */
 	public static final MMMessageAssociationEnd mmCoal = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Commodity.mmSubProduct;
+			businessElementTrace_lazy = () -> Commodity.mmSubProduct;
 			componentContext_lazy = () -> AssetClassCommodityEnergy1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Coal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Coal";
 			definition = "Definition of Coal energy commodity derivative.";
 			maxOccurs = 1;
@@ -305,11 +307,11 @@ public class AssetClassCommodityEnergy1Choice {
 	 */
 	public static final MMMessageAssociationEnd mmInterEnergy = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Commodity.mmSubProduct;
+			businessElementTrace_lazy = () -> Commodity.mmSubProduct;
 			componentContext_lazy = () -> AssetClassCommodityEnergy1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "IntrNrgy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterEnergy";
 			definition = "Inter energy commodity derivative.";
 			maxOccurs = 1;
@@ -353,11 +355,11 @@ public class AssetClassCommodityEnergy1Choice {
 	 */
 	public static final MMMessageAssociationEnd mmRenewableEnergy = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Commodity.mmSubProduct;
+			businessElementTrace_lazy = () -> Commodity.mmSubProduct;
 			componentContext_lazy = () -> AssetClassCommodityEnergy1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "RnwblNrgy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RenewableEnergy";
 			definition = "Renewable energy commodity derivative.";
 			maxOccurs = 1;
@@ -401,11 +403,11 @@ public class AssetClassCommodityEnergy1Choice {
 	 */
 	public static final MMMessageAssociationEnd mmLightEnd = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Commodity.mmSubProduct;
+			businessElementTrace_lazy = () -> Commodity.mmSubProduct;
 			componentContext_lazy = () -> AssetClassCommodityEnergy1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "LghtEnd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LightEnd";
 			definition = "Light end energy commodity derivative.";
 			maxOccurs = 1;
@@ -449,11 +451,11 @@ public class AssetClassCommodityEnergy1Choice {
 	 */
 	public static final MMMessageAssociationEnd mmDistillates = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Commodity.mmSubProduct;
+			businessElementTrace_lazy = () -> Commodity.mmSubProduct;
 			componentContext_lazy = () -> AssetClassCommodityEnergy1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Dstllts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Distillates";
 			definition = "Distillates energy commodity derivative.";
 			maxOccurs = 1;
@@ -466,13 +468,11 @@ public class AssetClassCommodityEnergy1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AssetClassCommodityEnergy1Choice.mmElectricity, com.tools20022.repository.choice.AssetClassCommodityEnergy1Choice.mmNaturalGas,
-						com.tools20022.repository.choice.AssetClassCommodityEnergy1Choice.mmOil, com.tools20022.repository.choice.AssetClassCommodityEnergy1Choice.mmCoal,
-						com.tools20022.repository.choice.AssetClassCommodityEnergy1Choice.mmInterEnergy, com.tools20022.repository.choice.AssetClassCommodityEnergy1Choice.mmRenewableEnergy,
-						com.tools20022.repository.choice.AssetClassCommodityEnergy1Choice.mmLightEnd, com.tools20022.repository.choice.AssetClassCommodityEnergy1Choice.mmDistillates);
+				messageElement_lazy = () -> Arrays.asList(AssetClassCommodityEnergy1Choice.mmElectricity, AssetClassCommodityEnergy1Choice.mmNaturalGas, AssetClassCommodityEnergy1Choice.mmOil, AssetClassCommodityEnergy1Choice.mmCoal,
+						AssetClassCommodityEnergy1Choice.mmInterEnergy, AssetClassCommodityEnergy1Choice.mmRenewableEnergy, AssetClassCommodityEnergy1Choice.mmLightEnd, AssetClassCommodityEnergy1Choice.mmDistillates);
 				trace_lazy = () -> Commodity.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AssetClassCommodityEnergy1Choice";
 				definition = "Defines commodity attributes of a derivative where the type is energy.";
 			}

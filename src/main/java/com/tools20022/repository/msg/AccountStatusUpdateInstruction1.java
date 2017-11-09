@@ -19,8 +19,10 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.AccountStatusUpdateInstruction1Choice;
 import com.tools20022.repository.choice.AccountStatusUpdateInstructionReason1Choice;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -93,7 +95,7 @@ public class AccountStatusUpdateInstruction1 {
 			componentContext_lazy = () -> AccountStatusUpdateInstruction1.mmObject();
 			isDerived = false;
 			xmlTag = "UpdInstr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UpdateInstruction";
 			definition = "Type of status change instructed for the account status.";
 			maxOccurs = 1;
@@ -135,7 +137,7 @@ public class AccountStatusUpdateInstruction1 {
 			componentContext_lazy = () -> AccountStatusUpdateInstruction1.mmObject();
 			isDerived = false;
 			xmlTag = "UpdInstrRsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UpdateInstructionReason";
 			definition = "Reason for the instruction to change the account status.";
 			maxOccurs = 1;
@@ -148,9 +150,9 @@ public class AccountStatusUpdateInstruction1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountStatusUpdateInstruction1.mmUpdateInstruction, com.tools20022.repository.msg.AccountStatusUpdateInstruction1.mmUpdateInstructionReason);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(AccountStatusUpdateInstruction1.mmUpdateInstruction, AccountStatusUpdateInstruction1.mmUpdateInstructionReason);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AccountStatusUpdateInstruction1";
 				definition = "Instruction for a change to an account status and reason for the change.";
 			}

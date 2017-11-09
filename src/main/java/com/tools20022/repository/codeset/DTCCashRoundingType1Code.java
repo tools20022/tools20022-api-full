@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.DTCCashRoundingTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -89,7 +91,7 @@ public class DTCCashRoundingType1Code extends DTCCashRoundingTypeCode {
 	 */
 	public static final MMCode mmRoundDownToTheNearestCent = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RoundDownToTheNearestCent";
 			owner_lazy = () -> DTCCashRoundingType1Code.mmObject();
 		}
@@ -112,7 +114,7 @@ public class DTCCashRoundingType1Code extends DTCCashRoundingTypeCode {
 	 */
 	public static final MMCode mmRoundDownToTheNearestDollar = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RoundDownToTheNearestDollar";
 			owner_lazy = () -> DTCCashRoundingType1Code.mmObject();
 		}
@@ -135,7 +137,7 @@ public class DTCCashRoundingType1Code extends DTCCashRoundingTypeCode {
 	 */
 	public static final MMCode mmRoundUpToTheNearestCent = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RoundUpToTheNearestCent";
 			owner_lazy = () -> DTCCashRoundingType1Code.mmObject();
 		}
@@ -158,7 +160,7 @@ public class DTCCashRoundingType1Code extends DTCCashRoundingTypeCode {
 	 */
 	public static final MMCode mmRoundUpToTheNearestDollar = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RoundUpToTheNearestDollar";
 			owner_lazy = () -> DTCCashRoundingType1Code.mmObject();
 		}
@@ -167,13 +169,13 @@ public class DTCCashRoundingType1Code extends DTCCashRoundingTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("RDNC");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DTCCashRoundingType1Code";
 				definition = "Code qualifying types of cash rounding.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DTCCashRoundingType1Code.mmRoundDownToTheNearestCent, com.tools20022.repository.codeset.DTCCashRoundingType1Code.mmRoundDownToTheNearestDollar,
-						com.tools20022.repository.codeset.DTCCashRoundingType1Code.mmRoundUpToTheNearestCent, com.tools20022.repository.codeset.DTCCashRoundingType1Code.mmRoundUpToTheNearestDollar);
+				code_lazy = () -> Arrays.asList(DTCCashRoundingType1Code.mmRoundDownToTheNearestCent, DTCCashRoundingType1Code.mmRoundDownToTheNearestDollar, DTCCashRoundingType1Code.mmRoundUpToTheNearestCent,
+						DTCCashRoundingType1Code.mmRoundUpToTheNearestDollar);
 				trace_lazy = () -> DTCCashRoundingTypeCode.mmObject();
 			}
 		});

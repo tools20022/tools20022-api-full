@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.SignatureOriginTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -83,7 +85,7 @@ public class SignatureOriginType1Code extends SignatureOriginTypeCode {
 	 */
 	public static final MMCode mmValue = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Value";
 			owner_lazy = () -> SignatureOriginType1Code.mmObject();
 		}
@@ -106,7 +108,7 @@ public class SignatureOriginType1Code extends SignatureOriginTypeCode {
 	 */
 	public static final MMCode mmTechnical = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Technical";
 			owner_lazy = () -> SignatureOriginType1Code.mmObject();
 		}
@@ -129,7 +131,7 @@ public class SignatureOriginType1Code extends SignatureOriginTypeCode {
 	 */
 	public static final MMCode mmContract = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Contract";
 			owner_lazy = () -> SignatureOriginType1Code.mmObject();
 		}
@@ -152,7 +154,7 @@ public class SignatureOriginType1Code extends SignatureOriginTypeCode {
 	 */
 	public static final MMCode mmBank = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Bank";
 			owner_lazy = () -> SignatureOriginType1Code.mmObject();
 		}
@@ -161,12 +163,11 @@ public class SignatureOriginType1Code extends SignatureOriginTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SignatureOriginType1Code";
 				definition = "Specifies the origin of the signature.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SignatureOriginType1Code.mmValue, com.tools20022.repository.codeset.SignatureOriginType1Code.mmTechnical,
-						com.tools20022.repository.codeset.SignatureOriginType1Code.mmContract, com.tools20022.repository.codeset.SignatureOriginType1Code.mmBank);
+				code_lazy = () -> Arrays.asList(SignatureOriginType1Code.mmValue, SignatureOriginType1Code.mmTechnical, SignatureOriginType1Code.mmContract, SignatureOriginType1Code.mmBank);
 				trace_lazy = () -> SignatureOriginTypeCode.mmObject();
 			}
 		});

@@ -19,6 +19,7 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.MoveType1Code;
 import com.tools20022.repository.codeset.OffsetType1Code;
 import com.tools20022.repository.codeset.PriceProtectionScope2Code;
@@ -27,6 +28,7 @@ import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.PlusOrMinusIndicator;
 import com.tools20022.repository.entity.Discretion;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -128,11 +130,11 @@ public class DiscretionInstructions1 {
 	 */
 	public static final MMMessageAttribute mmOffset = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Discretion.mmOffset;
+			businessElementTrace_lazy = () -> Discretion.mmOffset;
 			componentContext_lazy = () -> DiscretionInstructions1.mmObject();
 			isDerived = false;
 			xmlTag = "Offset";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Offset";
 			definition = "Information for the executing party about the price to be obtained for an order. It is expressed as an offset from a reference price such as the market price or last trade price.";
 			maxOccurs = 1;
@@ -179,11 +181,11 @@ public class DiscretionInstructions1 {
 	 */
 	public static final MMMessageAttribute mmOffsetSign = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Discretion.mmOffsetSign;
+			businessElementTrace_lazy = () -> Discretion.mmOffsetSign;
 			componentContext_lazy = () -> DiscretionInstructions1.mmObject();
 			isDerived = false;
 			xmlTag = "OffsetSgn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OffsetSign";
 			definition = "Indicates whether the offset should be added or subtracted from the related price.";
 			maxOccurs = 1;
@@ -230,11 +232,11 @@ public class DiscretionInstructions1 {
 	 */
 	public static final MMMessageAttribute mmRelatedPriceType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Discretion.mmRelatedPriceType;
+			businessElementTrace_lazy = () -> Discretion.mmRelatedPriceType;
 			componentContext_lazy = () -> DiscretionInstructions1.mmObject();
 			isDerived = false;
 			xmlTag = "RltdPricTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedPriceType";
 			definition = "Identify the type of price an offset is related to. The offset can either be added or subtracted.";
 			maxOccurs = 1;
@@ -279,11 +281,11 @@ public class DiscretionInstructions1 {
 	 */
 	public static final MMMessageAttribute mmMoveType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Discretion.mmMoveType;
+			businessElementTrace_lazy = () -> Discretion.mmMoveType;
 			componentContext_lazy = () -> DiscretionInstructions1.mmObject();
 			isDerived = false;
 			xmlTag = "MvTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MoveType";
 			definition = "Describes whether discretion price is static/fixed or floats.";
 			maxOccurs = 1;
@@ -329,11 +331,11 @@ public class DiscretionInstructions1 {
 	 */
 	public static final MMMessageAttribute mmLimitType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Discretion.mmLimitType;
+			businessElementTrace_lazy = () -> Discretion.mmLimitType;
 			componentContext_lazy = () -> DiscretionInstructions1.mmObject();
 			isDerived = false;
 			xmlTag = "LmtTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LimitType";
 			definition = "Specifies the nature of the resulting discretion price (e.g. or better limit, strict limit etc).";
 			maxOccurs = 1;
@@ -379,11 +381,11 @@ public class DiscretionInstructions1 {
 	 */
 	public static final MMMessageAttribute mmRoundDirection = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Discretion.mmRoundDirection;
+			businessElementTrace_lazy = () -> Discretion.mmRoundDirection;
 			componentContext_lazy = () -> DiscretionInstructions1.mmObject();
 			isDerived = false;
 			xmlTag = "RndDrctn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RoundDirection";
 			definition = "If the calculated discretion price is not a valid tick price, specifies how to round the price (e.g. to be more or less aggressive)";
 			maxOccurs = 1;
@@ -430,11 +432,11 @@ public class DiscretionInstructions1 {
 	 */
 	public static final MMMessageAttribute mmScope = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Discretion.mmScope;
+			businessElementTrace_lazy = () -> Discretion.mmScope;
 			componentContext_lazy = () -> DiscretionInstructions1.mmObject();
 			isDerived = false;
 			xmlTag = "Scp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Scope";
 			definition = "The scope of \"related to\" price of the discretion (e.g. local, global etc)";
 			maxOccurs = 1;
@@ -478,11 +480,11 @@ public class DiscretionInstructions1 {
 	 */
 	public static final MMMessageAttribute mmOffsetType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Discretion.mmOffsetType;
+			businessElementTrace_lazy = () -> Discretion.mmOffsetType;
 			componentContext_lazy = () -> DiscretionInstructions1.mmObject();
 			isDerived = false;
 			xmlTag = "OffsetTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OffsetType";
 			definition = "Describes the type of Discretion Offset .";
 			maxOccurs = 1;
@@ -494,12 +496,11 @@ public class DiscretionInstructions1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DiscretionInstructions1.mmOffset, com.tools20022.repository.msg.DiscretionInstructions1.mmOffsetSign,
-						com.tools20022.repository.msg.DiscretionInstructions1.mmRelatedPriceType, com.tools20022.repository.msg.DiscretionInstructions1.mmMoveType, com.tools20022.repository.msg.DiscretionInstructions1.mmLimitType,
-						com.tools20022.repository.msg.DiscretionInstructions1.mmRoundDirection, com.tools20022.repository.msg.DiscretionInstructions1.mmScope, com.tools20022.repository.msg.DiscretionInstructions1.mmOffsetType);
+				messageElement_lazy = () -> Arrays.asList(DiscretionInstructions1.mmOffset, DiscretionInstructions1.mmOffsetSign, DiscretionInstructions1.mmRelatedPriceType, DiscretionInstructions1.mmMoveType,
+						DiscretionInstructions1.mmLimitType, DiscretionInstructions1.mmRoundDirection, DiscretionInstructions1.mmScope, DiscretionInstructions1.mmOffsetType);
 				trace_lazy = () -> Discretion.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "DiscretionInstructions1";
 				definition = "Indicates on an order that the trader wishes to display one price in the market but will accept trades at another price.";
 			}

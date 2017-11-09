@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ATMMediaTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -87,7 +89,7 @@ public class ATMMediaType3Code extends ATMMediaTypeCode {
 	 */
 	public static final MMCode mmCounterfeit = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Counterfeit";
 			owner_lazy = () -> ATMMediaType3Code.mmObject();
 		}
@@ -110,7 +112,7 @@ public class ATMMediaType3Code extends ATMMediaTypeCode {
 	 */
 	public static final MMCode mmFit = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Fit";
 			owner_lazy = () -> ATMMediaType3Code.mmObject();
 		}
@@ -133,7 +135,7 @@ public class ATMMediaType3Code extends ATMMediaTypeCode {
 	 */
 	public static final MMCode mmFitAndUnfit = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FitAndUnfit";
 			owner_lazy = () -> ATMMediaType3Code.mmObject();
 		}
@@ -156,7 +158,7 @@ public class ATMMediaType3Code extends ATMMediaTypeCode {
 	 */
 	public static final MMCode mmSuspect = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Suspect";
 			owner_lazy = () -> ATMMediaType3Code.mmObject();
 		}
@@ -179,7 +181,7 @@ public class ATMMediaType3Code extends ATMMediaTypeCode {
 	 */
 	public static final MMCode mmUnfit = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unfit";
 			owner_lazy = () -> ATMMediaType3Code.mmObject();
 		}
@@ -202,7 +204,7 @@ public class ATMMediaType3Code extends ATMMediaTypeCode {
 	 */
 	public static final MMCode mmUnrecognised = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unrecognised";
 			owner_lazy = () -> ATMMediaType3Code.mmObject();
 		}
@@ -211,13 +213,11 @@ public class ATMMediaType3Code extends ATMMediaTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ATMMediaType3Code";
 				definition = "Category of media items.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ATMMediaType3Code.mmCounterfeit, com.tools20022.repository.codeset.ATMMediaType3Code.mmFit,
-						com.tools20022.repository.codeset.ATMMediaType3Code.mmFitAndUnfit, com.tools20022.repository.codeset.ATMMediaType3Code.mmSuspect, com.tools20022.repository.codeset.ATMMediaType3Code.mmUnfit,
-						com.tools20022.repository.codeset.ATMMediaType3Code.mmUnrecognised);
+				code_lazy = () -> Arrays.asList(ATMMediaType3Code.mmCounterfeit, ATMMediaType3Code.mmFit, ATMMediaType3Code.mmFitAndUnfit, ATMMediaType3Code.mmSuspect, ATMMediaType3Code.mmUnfit, ATMMediaType3Code.mmUnrecognised);
 				trace_lazy = () -> ATMMediaTypeCode.mmObject();
 			}
 		});

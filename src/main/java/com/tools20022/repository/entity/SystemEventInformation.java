@@ -17,15 +17,13 @@
 
 package com.tools20022.repository.entity;
 
-import com.tools20022.metamodel.MMBusinessAssociationEnd;
-import com.tools20022.metamodel.MMBusinessAttribute;
-import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.*;
+import com.tools20022.repository.choice.SystemEventType1Choice;
+import com.tools20022.repository.choice.SystemEventType2Choice;
 import com.tools20022.repository.codeset.SystemEventTypeCode;
 import com.tools20022.repository.datatype.ISODateTime;
-import com.tools20022.repository.msg.ParticipantAndStatus1;
-import com.tools20022.repository.msg.ServiceAvailability1;
-import com.tools20022.repository.msg.SystemEvent1;
-import com.tools20022.repository.msg.SystemEvent2;
+import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -42,18 +40,16 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
  * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SystemEventInformation#mmType
- * SystemEventInformation.mmType}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SystemEventInformation#mmTime
- * SystemEventInformation.mmTime}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SystemEventInformation#mmSystem
- * SystemEventInformation.mmSystem}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SystemEvent1 SystemEvent1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SystemEvent2 SystemEvent2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ParticipantAndStatus1
+ * ParticipantAndStatus1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ServiceAvailability1
+ * ServiceAvailability1}</li>
  * </ul>
  * </li>
  * <li>
@@ -79,16 +75,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * CutOff1.mmCutOffUpdateIdentification}</li>
  * </ul>
  * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.SystemEvent1 SystemEvent1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SystemEvent2 SystemEvent2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ParticipantAndStatus1
- * ParticipantAndStatus1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ServiceAvailability1
- * ServiceAvailability1}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SystemEventInformation#mmType
+ * SystemEventInformation.mmType}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SystemEventInformation#mmTime
+ * SystemEventInformation.mmTime}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SystemEventInformation#mmSystem
+ * SystemEventInformation.mmSystem}</li>
  * </ul>
  * </li>
  * <li>
@@ -161,12 +159,10 @@ public class SystemEventInformation {
 	 */
 	public static final MMBusinessAttribute mmType = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SystemEventType1Choice.mmCode, com.tools20022.repository.choice.SystemEventType2Choice.mmCode,
-					com.tools20022.repository.choice.SystemEventType2Choice.mmProprietary, com.tools20022.repository.msg.SystemEvent1.mmType, com.tools20022.repository.msg.SystemEvent2.mmType,
-					com.tools20022.repository.msg.ServiceAvailability1.mmAvailabilityStatus);
+			derivation_lazy = () -> Arrays.asList(SystemEventType1Choice.mmCode, SystemEventType2Choice.mmCode, SystemEventType2Choice.mmProprietary, SystemEvent1.mmType, SystemEvent2.mmType, ServiceAvailability1.mmAvailabilityStatus);
 			elementContext_lazy = () -> SystemEventInformation.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Type";
 			definition = "Nature of the event that has occurred.";
 			maxOccurs = 1;
@@ -231,12 +227,11 @@ public class SystemEventInformation {
 	 */
 	public static final MMBusinessAttribute mmTime = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SystemEvent1.mmScheduledTime, com.tools20022.repository.msg.SystemEvent1.mmEffectiveTime, com.tools20022.repository.msg.SystemEvent2.mmScheduledTime,
-					com.tools20022.repository.msg.SystemEvent2.mmEffectiveTime, com.tools20022.repository.msg.SystemEvent2.mmStartTime, com.tools20022.repository.msg.SystemEvent2.mmEndTime,
-					com.tools20022.repository.msg.RequestorDetails1.mmDateTimeStamp, com.tools20022.repository.msg.ResponderDetails1.mmDateTimeStamp, com.tools20022.repository.msg.CutOff1.mmCutOffTime);
+			derivation_lazy = () -> Arrays.asList(SystemEvent1.mmScheduledTime, SystemEvent1.mmEffectiveTime, SystemEvent2.mmScheduledTime, SystemEvent2.mmEffectiveTime, SystemEvent2.mmStartTime, SystemEvent2.mmEndTime,
+					RequestorDetails1.mmDateTimeStamp, ResponderDetails1.mmDateTimeStamp, CutOff1.mmCutOffTime);
 			elementContext_lazy = () -> SystemEventInformation.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Time";
 			definition = "Date and time at which the event occurred.";
 			maxOccurs = 1;
@@ -280,13 +275,13 @@ public class SystemEventInformation {
 		{
 			elementContext_lazy = () -> SystemEventInformation.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "System";
 			definition = "System for which event information is provided.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.System.mmEvent;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.System.mmObject();
 		}
 	};
@@ -294,15 +289,13 @@ public class SystemEventInformation {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SystemEventInformation";
 				definition = "Detailed information about an event occurring on a system, whether planned, for example, cut-off time for a specific type of eligible transfer, or unplanned, for example, an unsolicited failure, as stipulated in the specifications of the system.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.System.mmEvent);
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SystemAvailabilityAndEventsDetails1.mmEvent, com.tools20022.repository.msg.SystemAvailabilityAndEvents1.mmEvent,
-						com.tools20022.repository.msg.CutOff1.mmCutOffUpdateIdentification);
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SystemEventInformation.mmType, com.tools20022.repository.entity.SystemEventInformation.mmTime,
-						com.tools20022.repository.entity.SystemEventInformation.mmSystem);
+				derivationElement_lazy = () -> Arrays.asList(SystemAvailabilityAndEventsDetails1.mmEvent, SystemAvailabilityAndEvents1.mmEvent, CutOff1.mmCutOffUpdateIdentification);
+				element_lazy = () -> Arrays.asList(SystemEventInformation.mmType, SystemEventInformation.mmTime, SystemEventInformation.mmSystem);
 				derivationComponent_lazy = () -> Arrays.asList(SystemEvent1.mmObject(), SystemEvent2.mmObject(), ParticipantAndStatus1.mmObject(), ServiceAvailability1.mmObject());
 			}
 		});

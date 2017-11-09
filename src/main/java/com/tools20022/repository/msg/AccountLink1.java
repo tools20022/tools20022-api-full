@@ -20,9 +20,12 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.DateAndDateTimeChoice;
 import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.AccountLink;
+import com.tools20022.repository.entity.DateTimePeriod;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -110,11 +113,11 @@ public class AccountLink1 {
 	 */
 	public static final MMMessageAssociationEnd mmSecuritiesAccount = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AccountLink.mmSecuritiesAccount;
+			businessElementTrace_lazy = () -> AccountLink.mmSecuritiesAccount;
 			componentContext_lazy = () -> AccountLink1.mmObject();
 			isDerived = false;
 			xmlTag = "SctiesAcct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesAccount";
 			definition = "Account to or from which a securities entry is made.";
 			maxOccurs = 1;
@@ -156,11 +159,11 @@ public class AccountLink1 {
 	 */
 	public static final MMMessageAssociationEnd mmCashAccount = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AccountLink.mmCashAccount;
+			businessElementTrace_lazy = () -> AccountLink.mmCashAccount;
 			componentContext_lazy = () -> AccountLink1.mmObject();
 			isDerived = false;
 			xmlTag = "CshAcct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashAccount";
 			definition = "Account to or from which a cash entry is made.";
 			maxOccurs = 1;
@@ -207,11 +210,11 @@ public class AccountLink1 {
 	 */
 	public static final MMMessageAttribute mmValidFrom = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmFromDateTime;
+			businessElementTrace_lazy = () -> DateTimePeriod.mmFromDateTime;
 			componentContext_lazy = () -> AccountLink1.mmObject();
 			isDerived = false;
 			xmlTag = "VldFr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValidFrom";
 			definition = "Defines the date since when the securities account is linked to the cash account.";
 			maxOccurs = 1;
@@ -257,11 +260,11 @@ public class AccountLink1 {
 	 */
 	public static final MMMessageAttribute mmValidTo = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmToDateTime;
+			businessElementTrace_lazy = () -> DateTimePeriod.mmToDateTime;
 			componentContext_lazy = () -> AccountLink1.mmObject();
 			isDerived = false;
 			xmlTag = "VldTo";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValidTo";
 			definition = "Defines the date until when the securities account is linked to the cash account.";
 			maxOccurs = 1;
@@ -306,11 +309,11 @@ public class AccountLink1 {
 	 */
 	public static final MMMessageAttribute mmDefaultIndicator = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AccountLink.mmDefaultIndicator;
+			businessElementTrace_lazy = () -> AccountLink.mmDefaultIndicator;
 			componentContext_lazy = () -> AccountLink1.mmObject();
 			isDerived = false;
 			xmlTag = "DfltInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DefaultIndicator";
 			definition = "Specifies whether created account link is set as default for settlement.";
 			maxOccurs = 1;
@@ -358,11 +361,11 @@ public class AccountLink1 {
 	 */
 	public static final MMMessageAttribute mmCollateralisationIndicator = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AccountLink.mmCollateralisationIndicator;
+			businessElementTrace_lazy = () -> AccountLink.mmCollateralisationIndicator;
 			componentContext_lazy = () -> AccountLink1.mmObject();
 			isDerived = false;
 			xmlTag = "CollstnInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralisationIndicator";
 			definition = "Specifies whether market infrastructure can use the securities, earmarked as collateral and held on the securities account, for auto-collateralisation operations on the linked market infrastructure dedicated cash account.";
 			maxOccurs = 1;
@@ -409,11 +412,11 @@ public class AccountLink1 {
 	 */
 	public static final MMMessageAttribute mmCashSettlementIndicator = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AccountLink.mmCashSettlementIndicator;
+			businessElementTrace_lazy = () -> AccountLink.mmCashSettlementIndicator;
 			componentContext_lazy = () -> AccountLink1.mmObject();
 			isDerived = false;
 			xmlTag = "CshSttlmInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashSettlementIndicator";
 			definition = "Specifies whether market infrastructure can use the link between the securities account and the market infrastructure dedicated cash account for the settlement of the cash leg of a settlement instruction.";
 			maxOccurs = 1;
@@ -425,12 +428,11 @@ public class AccountLink1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountLink1.mmSecuritiesAccount, com.tools20022.repository.msg.AccountLink1.mmCashAccount, com.tools20022.repository.msg.AccountLink1.mmValidFrom,
-						com.tools20022.repository.msg.AccountLink1.mmValidTo, com.tools20022.repository.msg.AccountLink1.mmDefaultIndicator, com.tools20022.repository.msg.AccountLink1.mmCollateralisationIndicator,
-						com.tools20022.repository.msg.AccountLink1.mmCashSettlementIndicator);
+				messageElement_lazy = () -> Arrays.asList(AccountLink1.mmSecuritiesAccount, AccountLink1.mmCashAccount, AccountLink1.mmValidFrom, AccountLink1.mmValidTo, AccountLink1.mmDefaultIndicator,
+						AccountLink1.mmCollateralisationIndicator, AccountLink1.mmCashSettlementIndicator);
 				trace_lazy = () -> AccountLink.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "AccountLink1";
 				definition = "Defines how the securities account is linked to the cash account.";
 			}

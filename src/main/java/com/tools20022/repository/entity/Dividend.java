@@ -17,15 +17,14 @@
 
 package com.tools20022.repository.entity;
 
-import com.tools20022.metamodel.MMBusinessAssociationEnd;
-import com.tools20022.metamodel.MMBusinessAttribute;
-import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.*;
 import com.tools20022.repository.choice.*;
 import com.tools20022.repository.codeset.*;
 import com.tools20022.repository.datatype.CurrencyAndAmount;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.PercentageRate;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -42,120 +41,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Dividend#mmDividendFrequency
- * Dividend.mmDividendFrequency}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Dividend#mmAnnualTotalDividendRate
- * Dividend.mmAnnualTotalDividendRate}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Dividend#mmFinalDividend
- * Dividend.mmFinalDividend}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Dividend#mmFullyFrankedRateAndAmount
- * Dividend.mmFullyFrankedRateAndAmount}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Dividend#mmGrossDividend
- * Dividend.mmGrossDividend}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Dividend#mmRateType
- * Dividend.mmRateType}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Dividend#mmNetDividend
- * Dividend.mmNetDividend}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Dividend#mmProvisionalDividend
- * Dividend.mmProvisionalDividend}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Dividend#mmDividendRankingDate
- * Dividend.mmDividendRankingDate}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Dividend#mmManufacturedDividendAmount
- * Dividend.mmManufacturedDividendAmount}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Dividend#mmUnfrankedAmount
- * Dividend.mmUnfrankedAmount}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Dividend#mmNotionalDividendPayableAmount
- * Dividend.mmNotionalDividendPayableAmount}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Dividend#mmRate
- * Dividend.mmRate}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Dividend#mmExDividendDate
- * Dividend.mmExDividendDate}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Dividend#mmSecurity
- * Dividend.mmSecurity}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Dividend#mmType
- * Dividend.mmType}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Dividend#mmCashProceeds
- * Dividend.mmCashProceeds}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Dividend#mmObligation
- * Dividend.mmObligation}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Dividend#mmTax
- * Dividend.mmTax}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Dividend#mmRelatedDistribution
- * Dividend.mmRelatedDistribution}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Dividend#mmDividendFrequenceType
- * Dividend.mmDividendFrequenceType}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Dividend#mmDividendRatio
- * Dividend.mmDividendRatio}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Dividend#mmPaymentDate
- * Dividend.mmPaymentDate}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Dividend#mmPaymentFrequency
- * Dividend.mmPaymentFrequency}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Dividend#mmReinvestmentDate
- * Dividend.mmReinvestmentDate}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Dividend#mmValue
- * Dividend.mmValue}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Security#mmDividend
- * Security.mmDividend}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Tax#mmDividend
- * Tax.mmDividend}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.PaymentObligation#mmDividend
- * PaymentObligation.mmDividend}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.RateAndAmount#mmFinalDividendParameters
- * RateAndAmount.mmFinalDividendParameters}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.RateAndAmount#mmFullyFrankedRateAndAmountDividendParameters
- * RateAndAmount.mmFullyFrankedRateAndAmountDividendParameters}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.RateAndAmount#mmGrossDividendParameters
- * RateAndAmount.mmGrossDividendParameters}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.RateAndAmount#mmNetDividendParameters
- * RateAndAmount.mmNetDividendParameters}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.RateAndAmount#mmProvisionalDividendParameters
- * RateAndAmount.mmProvisionalDividendParameters}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CashProceedsDefinition#mmDividend
- * CashProceedsDefinition.mmDividend}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Distribution#mmDividend
- * Distribution.mmDividend}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
- * derivationElement} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.choice.GrossDividendRate1Choice#mmRateTypeAmount
- * GrossDividendRate1Choice.mmRateTypeAmount}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.NetDividendRate1Choice#mmRateTypeAmount
- * NetDividendRate1Choice.mmRateTypeAmount}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.TaxVoucher1#mmNotionalDividendPayable
- * TaxVoucher1.mmNotionalDividendPayable}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -388,6 +273,120 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.Security#mmDividend
+ * Security.mmDividend}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Tax#mmDividend
+ * Tax.mmDividend}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PaymentObligation#mmDividend
+ * PaymentObligation.mmDividend}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.RateAndAmount#mmFinalDividendParameters
+ * RateAndAmount.mmFinalDividendParameters}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.RateAndAmount#mmFullyFrankedRateAndAmountDividendParameters
+ * RateAndAmount.mmFullyFrankedRateAndAmountDividendParameters}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.RateAndAmount#mmGrossDividendParameters
+ * RateAndAmount.mmGrossDividendParameters}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.RateAndAmount#mmNetDividendParameters
+ * RateAndAmount.mmNetDividendParameters}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.RateAndAmount#mmProvisionalDividendParameters
+ * RateAndAmount.mmProvisionalDividendParameters}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CashProceedsDefinition#mmDividend
+ * CashProceedsDefinition.mmDividend}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Distribution#mmDividend
+ * Distribution.mmDividend}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
+ * derivationElement} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.GrossDividendRate1Choice#mmRateTypeAmount
+ * GrossDividendRate1Choice.mmRateTypeAmount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.NetDividendRate1Choice#mmRateTypeAmount
+ * NetDividendRate1Choice.mmRateTypeAmount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.TaxVoucher1#mmNotionalDividendPayable
+ * TaxVoucher1.mmNotionalDividendPayable}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Dividend#mmDividendFrequency
+ * Dividend.mmDividendFrequency}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Dividend#mmAnnualTotalDividendRate
+ * Dividend.mmAnnualTotalDividendRate}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Dividend#mmFinalDividend
+ * Dividend.mmFinalDividend}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Dividend#mmFullyFrankedRateAndAmount
+ * Dividend.mmFullyFrankedRateAndAmount}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Dividend#mmGrossDividend
+ * Dividend.mmGrossDividend}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Dividend#mmRateType
+ * Dividend.mmRateType}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Dividend#mmNetDividend
+ * Dividend.mmNetDividend}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Dividend#mmProvisionalDividend
+ * Dividend.mmProvisionalDividend}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Dividend#mmDividendRankingDate
+ * Dividend.mmDividendRankingDate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Dividend#mmManufacturedDividendAmount
+ * Dividend.mmManufacturedDividendAmount}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Dividend#mmUnfrankedAmount
+ * Dividend.mmUnfrankedAmount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Dividend#mmNotionalDividendPayableAmount
+ * Dividend.mmNotionalDividendPayableAmount}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Dividend#mmRate
+ * Dividend.mmRate}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Dividend#mmExDividendDate
+ * Dividend.mmExDividendDate}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Dividend#mmSecurity
+ * Dividend.mmSecurity}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Dividend#mmType
+ * Dividend.mmType}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Dividend#mmCashProceeds
+ * Dividend.mmCashProceeds}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Dividend#mmObligation
+ * Dividend.mmObligation}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Dividend#mmTax
+ * Dividend.mmTax}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Dividend#mmRelatedDistribution
+ * Dividend.mmRelatedDistribution}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Dividend#mmDividendFrequenceType
+ * Dividend.mmDividendFrequenceType}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Dividend#mmDividendRatio
+ * Dividend.mmDividendRatio}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Dividend#mmPaymentDate
+ * Dividend.mmPaymentDate}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Dividend#mmPaymentFrequency
+ * Dividend.mmPaymentFrequency}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Dividend#mmReinvestmentDate
+ * Dividend.mmReinvestmentDate}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Dividend#mmValue
+ * Dividend.mmValue}</li>
+ * </ul>
+ * </li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
@@ -447,10 +446,10 @@ public class Dividend {
 	 */
 	public static final MMBusinessAttribute mmDividendFrequency = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrument16.mmDividendFrequency, com.tools20022.repository.msg.FinancialInstrument20.mmDividendFrequency);
+			derivation_lazy = () -> Arrays.asList(FinancialInstrument16.mmDividendFrequency, FinancialInstrument20.mmDividendFrequency);
 			elementContext_lazy = () -> Dividend.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DividendFrequency";
 			definition = "Frequency with which the income is allocated to investors.";
 			maxOccurs = 1;
@@ -518,13 +517,12 @@ public class Dividend {
 	 */
 	public static final MMBusinessAttribute mmAnnualTotalDividendRate = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentInstrument10.mmDividendPercentage, com.tools20022.repository.msg.PaymentInstrument12.mmDividendPercentage,
-					com.tools20022.repository.msg.DividendSD1.mmTotalAnnualDividendRate, com.tools20022.repository.msg.DividendSD1.mmMaximumAnnualTotalDividendRate,
-					com.tools20022.repository.msg.DividendSD1.mmMinimumAnnualTotalDividendRate, com.tools20022.repository.msg.GrossDividendRateFormat6SD1.mmMaximumDividendRate,
-					com.tools20022.repository.msg.GrossDividendRateFormat6SD1.mmMinimumDividendRate, com.tools20022.repository.msg.CashAccount33.mmDividendPercentage, com.tools20022.repository.msg.PaymentInstrument13.mmDividendPercentage);
+			derivation_lazy = () -> Arrays.asList(PaymentInstrument10.mmDividendPercentage, PaymentInstrument12.mmDividendPercentage, DividendSD1.mmTotalAnnualDividendRate, DividendSD1.mmMaximumAnnualTotalDividendRate,
+					DividendSD1.mmMinimumAnnualTotalDividendRate, GrossDividendRateFormat6SD1.mmMaximumDividendRate, GrossDividendRateFormat6SD1.mmMinimumDividendRate, CashAccount33.mmDividendPercentage,
+					PaymentInstrument13.mmDividendPercentage);
 			elementContext_lazy = () -> Dividend.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AnnualTotalDividendRate";
 			definition = "Provides the annual total dividend rate.";
 			maxOccurs = 1;
@@ -632,22 +630,19 @@ public class Dividend {
 	 */
 	public static final MMBusinessAssociationEnd mmFinalDividend = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionRate4.mmFinalDividendRate, com.tools20022.repository.msg.CorporateActionRate10.mmFinalDividendRate,
-					com.tools20022.repository.msg.RateDetails2.mmFinalDividendRate, com.tools20022.repository.msg.RateDetails4.mmFinalDividendRate, com.tools20022.repository.msg.RateDetails7.mmFinalDividendRate,
-					com.tools20022.repository.msg.RateDetails9.mmFinalDividendRate, com.tools20022.repository.msg.RateDetails11.mmFinalDividendRate, com.tools20022.repository.msg.RateDetails12.mmFinalDividendRate,
-					com.tools20022.repository.msg.CorporateActionRate5.mmFinalDividendRate, com.tools20022.repository.msg.CorporateActionRate12.mmFinalDividendRate, com.tools20022.repository.msg.RateDetails3.mmFinalDividendRate,
-					com.tools20022.repository.msg.RateDetails5.mmFinalDividendRate, com.tools20022.repository.msg.RateDetails10.mmFinalDividendRate, com.tools20022.repository.msg.RateDetails13.mmFinalDividendRate,
-					com.tools20022.repository.choice.GrossDividendRate1Choice.mmAmount, com.tools20022.repository.msg.CorporateActionRate2.mmFinalDividend, com.tools20022.repository.msg.RateDetails15.mmFinalDividendRate,
-					com.tools20022.repository.msg.RateDetails14.mmFinalDividendRate, com.tools20022.repository.msg.RateDetails18.mmFinalDividendRate, com.tools20022.repository.msg.RateDetails21.mmFinalDividendRate);
+			derivation_lazy = () -> Arrays.asList(CorporateActionRate4.mmFinalDividendRate, CorporateActionRate10.mmFinalDividendRate, RateDetails2.mmFinalDividendRate, RateDetails4.mmFinalDividendRate, RateDetails7.mmFinalDividendRate,
+					RateDetails9.mmFinalDividendRate, RateDetails11.mmFinalDividendRate, RateDetails12.mmFinalDividendRate, CorporateActionRate5.mmFinalDividendRate, CorporateActionRate12.mmFinalDividendRate,
+					RateDetails3.mmFinalDividendRate, RateDetails5.mmFinalDividendRate, RateDetails10.mmFinalDividendRate, RateDetails13.mmFinalDividendRate, GrossDividendRate1Choice.mmAmount, CorporateActionRate2.mmFinalDividend,
+					RateDetails15.mmFinalDividendRate, RateDetails14.mmFinalDividendRate, RateDetails18.mmFinalDividendRate, RateDetails21.mmFinalDividendRate);
 			elementContext_lazy = () -> Dividend.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "FinalDividend";
 			definition = "Dividend is final.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.RateAndAmount.mmFinalDividendParameters;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.RateAndAmount.mmObject();
 		}
 	};
@@ -765,23 +760,19 @@ public class Dividend {
 	 */
 	public static final MMBusinessAssociationEnd mmFullyFrankedRateAndAmount = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionRate4.mmFullyFrankedRate, com.tools20022.repository.msg.CorporateActionRate10.mmFullyFrankedRate,
-					com.tools20022.repository.msg.RateDetails2.mmFullyFrankedRate, com.tools20022.repository.msg.RateDetails4.mmFullyFrankedRate, com.tools20022.repository.msg.RateDetails7.mmFullyFrankedRate,
-					com.tools20022.repository.msg.RateDetails9.mmFullyFrankedRate, com.tools20022.repository.msg.RateDetails11.mmFullyFrankedRate, com.tools20022.repository.msg.RateDetails12.mmFullyFrankedRate,
-					com.tools20022.repository.msg.CorporateActionRate5.mmFullyFrankedRate, com.tools20022.repository.msg.CorporateActionRate12.mmFullyFrankedRate, com.tools20022.repository.msg.RateDetails3.mmFullyFrankedRate,
-					com.tools20022.repository.msg.RateDetails5.mmFullyFrankedRate, com.tools20022.repository.msg.RateDetails10.mmFullyFrankedRate, com.tools20022.repository.msg.RateDetails13.mmFullyFrankedRate,
-					com.tools20022.repository.msg.CorporateActionRate2.mmFullyFranked, com.tools20022.repository.msg.RateDetails15.mmFullyFrankedRate, com.tools20022.repository.msg.RateDetails14.mmFullyFrankedRate,
-					com.tools20022.repository.msg.RateDetails18.mmFullyFrankedRate, com.tools20022.repository.msg.RateDetails21.mmFullyFrankedRate, com.tools20022.repository.msg.RateDetails23.mmFullyFrankedRate,
-					com.tools20022.repository.msg.RateDetails22.mmFullyFrankedRate, com.tools20022.repository.msg.RateDetails24.mmFullyFrankedRate, com.tools20022.repository.msg.RateDetails25.mmFullyFrankedRate);
+			derivation_lazy = () -> Arrays.asList(CorporateActionRate4.mmFullyFrankedRate, CorporateActionRate10.mmFullyFrankedRate, RateDetails2.mmFullyFrankedRate, RateDetails4.mmFullyFrankedRate, RateDetails7.mmFullyFrankedRate,
+					RateDetails9.mmFullyFrankedRate, RateDetails11.mmFullyFrankedRate, RateDetails12.mmFullyFrankedRate, CorporateActionRate5.mmFullyFrankedRate, CorporateActionRate12.mmFullyFrankedRate, RateDetails3.mmFullyFrankedRate,
+					RateDetails5.mmFullyFrankedRate, RateDetails10.mmFullyFrankedRate, RateDetails13.mmFullyFrankedRate, CorporateActionRate2.mmFullyFranked, RateDetails15.mmFullyFrankedRate, RateDetails14.mmFullyFrankedRate,
+					RateDetails18.mmFullyFrankedRate, RateDetails21.mmFullyFrankedRate, RateDetails23.mmFullyFrankedRate, RateDetails22.mmFullyFrankedRate, RateDetails24.mmFullyFrankedRate, RateDetails25.mmFullyFrankedRate);
 			elementContext_lazy = () -> Dividend.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "FullyFrankedRateAndAmount";
 			definition = "Rate of a fully franked dividend paid by a company, or amount resulting from a fully franked dividend paid by a company; amount includes tax credit for companies that have made sufficient tax payments during the fiscal period.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.RateAndAmount.mmFullyFrankedRateAndAmountDividendParameters;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.RateAndAmount.mmObject();
 		}
 	};
@@ -1011,37 +1002,28 @@ public class Dividend {
 	 */
 	public static final MMBusinessAssociationEnd mmGrossDividend = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionRate4.mmGrossDividendRate, com.tools20022.repository.msg.CorporateActionRate10.mmGrossDividendRate,
-					com.tools20022.repository.msg.CorporateActionRate20.mmGrossDividendRate, com.tools20022.repository.msg.RateDetails2.mmGrossDividendRate, com.tools20022.repository.msg.CorporateActionRate22.mmGrossDividendRate,
-					com.tools20022.repository.msg.RateDetails4.mmGrossDividendRate, com.tools20022.repository.msg.CorporateActionRate26.mmGrossDividendRate, com.tools20022.repository.msg.RateDetails7.mmGrossDividendRate,
-					com.tools20022.repository.msg.CorporateActionRate31.mmGrossDividendRate, com.tools20022.repository.msg.RateDetails9.mmGrossDividendRate, com.tools20022.repository.msg.CorporateActionRate38.mmGrossDividendRate,
-					com.tools20022.repository.msg.RateDetails11.mmGrossDividendRate, com.tools20022.repository.msg.CorporateActionRate39.mmGrossDividendRate, com.tools20022.repository.msg.RateDetails12.mmGrossDividendRate,
-					com.tools20022.repository.msg.CorporateActionRate5.mmGrossDividendRate, com.tools20022.repository.msg.CorporateActionRate12.mmGrossDividendRate, com.tools20022.repository.msg.CorporateActionRate15.mmGrossDividendRate,
-					com.tools20022.repository.msg.RateDetails3.mmGrossDividendRate, com.tools20022.repository.msg.CorporateActionRate18.mmGrossDividendRate, com.tools20022.repository.msg.RateDetails5.mmGrossDividendRate,
-					com.tools20022.repository.msg.CorporateActionRate25.mmGrossDividendRate, com.tools20022.repository.msg.CorporateActionRate30.mmGrossDividendRate, com.tools20022.repository.msg.CorporateActionRate37.mmGrossDividendRate,
-					com.tools20022.repository.msg.RateDetails10.mmGrossDividendRate, com.tools20022.repository.msg.CorporateActionRate40.mmGrossDividendRate, com.tools20022.repository.msg.RateDetails13.mmGrossDividendRate,
-					com.tools20022.repository.msg.CorporateActionRate36.mmGrossDividendRate, com.tools20022.repository.msg.CorporateActionRate42.mmGrossDividendRate, com.tools20022.repository.msg.CorporateActionRate2.mmGrossDividend,
-					com.tools20022.repository.msg.RateDetails15.mmGrossDividendRate, com.tools20022.repository.msg.CorporateActionRate46.mmGrossDividendRate, com.tools20022.repository.msg.CorporateActionRate45.mmGrossDividendRate,
-					com.tools20022.repository.msg.CorporateActionRate44.mmGrossDividendRate, com.tools20022.repository.msg.RateDetails14.mmGrossDividendRate, com.tools20022.repository.msg.CorporateActionRate60.mmGrossDividendRate,
-					com.tools20022.repository.msg.RateDetails18.mmGrossDividendRate, com.tools20022.repository.msg.CorporateActionRate64.mmGrossDividendRate, com.tools20022.repository.msg.RateDetails21.mmGrossDividendRate,
-					com.tools20022.repository.msg.CorporateActionRate57.mmGrossDividendRate, com.tools20022.repository.msg.UpdatedAdditionalInformation5SD3.mmNetAssetDecreaseRatio,
-					com.tools20022.repository.msg.UpdatedAdditionalInformation5SD3.mmAccumulatedProfitPerShare, com.tools20022.repository.msg.RateDetails23.mmGrossDividendRate,
-					com.tools20022.repository.msg.CorporateActionRate68.mmGrossDividendRate, com.tools20022.repository.msg.CorporateActionRate70.mmGrossDividendRate, com.tools20022.repository.msg.CorporateActionRate67.mmGrossDividendRate,
-					com.tools20022.repository.msg.RateDetails22.mmGrossDividendRate, com.tools20022.repository.msg.CorporateActionRate74.mmGrossDividendRate, com.tools20022.repository.msg.CorporateActionRate79.mmGrossDividendRate,
-					com.tools20022.repository.msg.RateDetails24.mmGrossDividendRate, com.tools20022.repository.msg.RateDetails25.mmGrossDividendRate, com.tools20022.repository.msg.CorporateActionRate76.mmGrossDividendRate,
-					com.tools20022.repository.msg.RateDetails26.mmGrossDividendRate, com.tools20022.repository.msg.CorporateActionRate82.mmGrossDividendRate, com.tools20022.repository.msg.CorporateActionRate80.mmGrossDividendRate,
-					com.tools20022.repository.msg.RateDetails27.mmGrossDividendRate, com.tools20022.repository.msg.CorporateActionRate81.mmGrossDividendRate, com.tools20022.repository.msg.CorporateActionRate83.mmGrossDividendRate,
-					com.tools20022.repository.msg.CorporateActionRate84.mmGrossDividendRate, com.tools20022.repository.msg.CorporateActionRate85.mmGrossDividendRate, com.tools20022.repository.msg.RateDetails28.mmGrossDividendRate,
-					com.tools20022.repository.msg.RateDetails30.mmGrossDividendRate);
+			derivation_lazy = () -> Arrays.asList(CorporateActionRate4.mmGrossDividendRate, CorporateActionRate10.mmGrossDividendRate, CorporateActionRate20.mmGrossDividendRate, RateDetails2.mmGrossDividendRate,
+					CorporateActionRate22.mmGrossDividendRate, RateDetails4.mmGrossDividendRate, CorporateActionRate26.mmGrossDividendRate, RateDetails7.mmGrossDividendRate, CorporateActionRate31.mmGrossDividendRate,
+					RateDetails9.mmGrossDividendRate, CorporateActionRate38.mmGrossDividendRate, RateDetails11.mmGrossDividendRate, CorporateActionRate39.mmGrossDividendRate, RateDetails12.mmGrossDividendRate,
+					CorporateActionRate5.mmGrossDividendRate, CorporateActionRate12.mmGrossDividendRate, CorporateActionRate15.mmGrossDividendRate, RateDetails3.mmGrossDividendRate, CorporateActionRate18.mmGrossDividendRate,
+					RateDetails5.mmGrossDividendRate, CorporateActionRate25.mmGrossDividendRate, CorporateActionRate30.mmGrossDividendRate, CorporateActionRate37.mmGrossDividendRate, RateDetails10.mmGrossDividendRate,
+					CorporateActionRate40.mmGrossDividendRate, RateDetails13.mmGrossDividendRate, CorporateActionRate36.mmGrossDividendRate, CorporateActionRate42.mmGrossDividendRate, CorporateActionRate2.mmGrossDividend,
+					RateDetails15.mmGrossDividendRate, CorporateActionRate46.mmGrossDividendRate, CorporateActionRate45.mmGrossDividendRate, CorporateActionRate44.mmGrossDividendRate, RateDetails14.mmGrossDividendRate,
+					CorporateActionRate60.mmGrossDividendRate, RateDetails18.mmGrossDividendRate, CorporateActionRate64.mmGrossDividendRate, RateDetails21.mmGrossDividendRate, CorporateActionRate57.mmGrossDividendRate,
+					UpdatedAdditionalInformation5SD3.mmNetAssetDecreaseRatio, UpdatedAdditionalInformation5SD3.mmAccumulatedProfitPerShare, RateDetails23.mmGrossDividendRate, CorporateActionRate68.mmGrossDividendRate,
+					CorporateActionRate70.mmGrossDividendRate, CorporateActionRate67.mmGrossDividendRate, RateDetails22.mmGrossDividendRate, CorporateActionRate74.mmGrossDividendRate, CorporateActionRate79.mmGrossDividendRate,
+					RateDetails24.mmGrossDividendRate, RateDetails25.mmGrossDividendRate, CorporateActionRate76.mmGrossDividendRate, RateDetails26.mmGrossDividendRate, CorporateActionRate82.mmGrossDividendRate,
+					CorporateActionRate80.mmGrossDividendRate, RateDetails27.mmGrossDividendRate, CorporateActionRate81.mmGrossDividendRate, CorporateActionRate83.mmGrossDividendRate, CorporateActionRate84.mmGrossDividendRate,
+					CorporateActionRate85.mmGrossDividendRate, RateDetails28.mmGrossDividendRate, RateDetails30.mmGrossDividendRate);
 			elementContext_lazy = () -> Dividend.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "GrossDividend";
 			definition = "Cash dividend amount per equity before deductions or allowances have been made.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.RateAndAmount.mmGrossDividendParameters;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.RateAndAmount.mmObject();
 		}
 	};
@@ -1210,27 +1192,17 @@ public class Dividend {
 	 */
 	public static final MMBusinessAttribute mmRateType = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.RateType13Choice.mmCode, com.tools20022.repository.choice.RateType13Choice.mmProprietary, com.tools20022.repository.choice.RateType7Choice.mmCode,
-					com.tools20022.repository.choice.RateType7Choice.mmProprietary, com.tools20022.repository.choice.RateType15Choice.mmCode, com.tools20022.repository.choice.RateType15Choice.mmProprietary,
-					com.tools20022.repository.choice.RateType16Choice.mmCode, com.tools20022.repository.choice.RateType16Choice.mmProprietary, com.tools20022.repository.choice.RateType17Choice.mmCode,
-					com.tools20022.repository.choice.RateType17Choice.mmProprietary, com.tools20022.repository.choice.RateType18Choice.mmCode, com.tools20022.repository.choice.RateType18Choice.mmProprietary,
-					com.tools20022.repository.choice.RateType22Choice.mmCode, com.tools20022.repository.choice.RateType22Choice.mmProprietary, com.tools20022.repository.choice.RateType23Choice.mmCode,
-					com.tools20022.repository.choice.RateType23Choice.mmProprietary, com.tools20022.repository.choice.RateType20Choice.mmCode, com.tools20022.repository.choice.RateType20Choice.mmProprietary,
-					com.tools20022.repository.choice.RateType21Choice.mmCode, com.tools20022.repository.choice.RateType21Choice.mmProprietary, com.tools20022.repository.choice.RateType24Choice.mmCode,
-					com.tools20022.repository.choice.RateType24Choice.mmProprietary, com.tools20022.repository.choice.RateType25Choice.mmCode, com.tools20022.repository.choice.RateType25Choice.mmProprietary,
-					com.tools20022.repository.choice.RateType26Choice.mmCode, com.tools20022.repository.choice.RateType26Choice.mmProprietary, com.tools20022.repository.choice.RateType27Choice.mmCode,
-					com.tools20022.repository.choice.RateType27Choice.mmProprietary, com.tools20022.repository.msg.GrossDividendRate2.mmRateType, com.tools20022.repository.choice.NetDividendRateType1FormatChoice.mmCode,
-					com.tools20022.repository.choice.NetDividendRateType1FormatChoice.mmProprietary, com.tools20022.repository.msg.NetDividendRate2.mmRateType, com.tools20022.repository.choice.RateType38Choice.mmCode,
-					com.tools20022.repository.choice.RateType38Choice.mmProprietary, com.tools20022.repository.choice.RateType40Choice.mmCode, com.tools20022.repository.choice.RateType40Choice.mmProprietary,
-					com.tools20022.repository.choice.RateType41Choice.mmCode, com.tools20022.repository.choice.RateType41Choice.mmProprietary, com.tools20022.repository.choice.RateType36Choice.mmCode,
-					com.tools20022.repository.choice.RateType36Choice.mmProprietary, com.tools20022.repository.choice.RateType39Choice.mmCode, com.tools20022.repository.choice.RateType39Choice.mmProprietary,
-					com.tools20022.repository.choice.RateType44Choice.mmCode, com.tools20022.repository.choice.RateType44Choice.mmProprietary, com.tools20022.repository.choice.RateType47Choice.mmCode,
-					com.tools20022.repository.choice.RateType47Choice.mmProprietary, com.tools20022.repository.choice.RateType49Choice.mmCode, com.tools20022.repository.choice.RateType49Choice.mmProprietary,
-					com.tools20022.repository.choice.RateType50Choice.mmCode, com.tools20022.repository.choice.RateType50Choice.mmProprietary, com.tools20022.repository.choice.RateType51Choice.mmCode,
-					com.tools20022.repository.choice.RateType51Choice.mmProprietary);
+			derivation_lazy = () -> Arrays.asList(RateType13Choice.mmCode, RateType13Choice.mmProprietary, RateType7Choice.mmCode, RateType7Choice.mmProprietary, RateType15Choice.mmCode, RateType15Choice.mmProprietary,
+					RateType16Choice.mmCode, RateType16Choice.mmProprietary, RateType17Choice.mmCode, RateType17Choice.mmProprietary, RateType18Choice.mmCode, RateType18Choice.mmProprietary, RateType22Choice.mmCode,
+					RateType22Choice.mmProprietary, RateType23Choice.mmCode, RateType23Choice.mmProprietary, RateType20Choice.mmCode, RateType20Choice.mmProprietary, RateType21Choice.mmCode, RateType21Choice.mmProprietary,
+					RateType24Choice.mmCode, RateType24Choice.mmProprietary, RateType25Choice.mmCode, RateType25Choice.mmProprietary, RateType26Choice.mmCode, RateType26Choice.mmProprietary, RateType27Choice.mmCode,
+					RateType27Choice.mmProprietary, GrossDividendRate2.mmRateType, NetDividendRateType1FormatChoice.mmCode, NetDividendRateType1FormatChoice.mmProprietary, NetDividendRate2.mmRateType, RateType38Choice.mmCode,
+					RateType38Choice.mmProprietary, RateType40Choice.mmCode, RateType40Choice.mmProprietary, RateType41Choice.mmCode, RateType41Choice.mmProprietary, RateType36Choice.mmCode, RateType36Choice.mmProprietary,
+					RateType39Choice.mmCode, RateType39Choice.mmProprietary, RateType44Choice.mmCode, RateType44Choice.mmProprietary, RateType47Choice.mmCode, RateType47Choice.mmProprietary, RateType49Choice.mmCode,
+					RateType49Choice.mmProprietary, RateType50Choice.mmCode, RateType50Choice.mmProprietary, RateType51Choice.mmCode, RateType51Choice.mmProprietary);
 			elementContext_lazy = () -> Dividend.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RateType";
 			definition = "Specifies the type of dividend rate.";
 			maxOccurs = 1;
@@ -1523,43 +1495,32 @@ public class Dividend {
 	 */
 	public static final MMBusinessAssociationEnd mmNetDividend = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.NetDividendRateFormat2Choice.mmAmount, com.tools20022.repository.msg.CorporateActionRate4.mmNetDividendRate,
-					com.tools20022.repository.choice.NetDividendRateFormat3Choice.mmAmount, com.tools20022.repository.msg.CorporateActionRate10.mmNetDividendRate, com.tools20022.repository.msg.RateDetails2.mmNetDividendRate,
-					com.tools20022.repository.msg.RateDetails4.mmNetDividendRate, com.tools20022.repository.choice.NetDividendRateFormat1Choice.mmAmount, com.tools20022.repository.choice.NetDividendRateFormat5Choice.mmAmount,
-					com.tools20022.repository.choice.NetDividendRateFormat7Choice.mmAmount, com.tools20022.repository.msg.CorporateActionRate26.mmNetDividendRate, com.tools20022.repository.msg.RateDetails7.mmNetDividendRate,
-					com.tools20022.repository.choice.NetDividendRateFormat8Choice.mmAmount, com.tools20022.repository.msg.CorporateActionRate31.mmNetDividendRate, com.tools20022.repository.msg.RateDetails9.mmNetDividendRate,
-					com.tools20022.repository.choice.NetDividendRateFormat12Choice.mmAmount, com.tools20022.repository.msg.CorporateActionRate38.mmNetDividendRate, com.tools20022.repository.choice.NetDividendRateFormat10Choice.mmAmount,
-					com.tools20022.repository.msg.RateDetails11.mmNetDividendRate, com.tools20022.repository.choice.NetDividendRateFormat13Choice.mmAmount, com.tools20022.repository.msg.CorporateActionRate39.mmNetDividendRate,
-					com.tools20022.repository.choice.NetDividendRateFormat14Choice.mmAmount, com.tools20022.repository.msg.RateDetails12.mmNetDividendRate, com.tools20022.repository.msg.CorporateActionRate5.mmNetDividendRate,
-					com.tools20022.repository.choice.NetDividendRateFormat4Choice.mmAmount, com.tools20022.repository.msg.CorporateActionRate12.mmNetDividendRate, com.tools20022.repository.msg.RateDetails3.mmNetDividendRate,
-					com.tools20022.repository.choice.NetDividendRateFormat6Choice.mmAmount, com.tools20022.repository.msg.RateDetails5.mmNetDividendRate, com.tools20022.repository.msg.CorporateActionRate25.mmNetDividendRate,
-					com.tools20022.repository.msg.CorporateActionRate30.mmNetDividendRate, com.tools20022.repository.choice.NetDividendRateFormat11Choice.mmAmount, com.tools20022.repository.msg.CorporateActionRate37.mmNetDividendRate,
-					com.tools20022.repository.choice.NetDividendRateFormat9Choice.mmAmount, com.tools20022.repository.msg.RateDetails10.mmNetDividendRate, com.tools20022.repository.choice.NetDividendRateFormat15Choice.mmAmount,
-					com.tools20022.repository.msg.CorporateActionRate40.mmNetDividendRate, com.tools20022.repository.choice.NetDividendRateFormat16Choice.mmAmount, com.tools20022.repository.msg.RateDetails13.mmNetDividendRate,
-					com.tools20022.repository.msg.CorporateActionRate36.mmNetDividendRate, com.tools20022.repository.msg.CorporateActionRate42.mmNetDividendRate, com.tools20022.repository.msg.NetDividendRate2.mmAmount,
-					com.tools20022.repository.choice.NetDividendRate1Choice.mmAmount, com.tools20022.repository.msg.CorporateActionRate2.mmNetDividend, com.tools20022.repository.msg.RateDetails15.mmNetDividendRate,
-					com.tools20022.repository.msg.CorporateActionRate46.mmNetDividendRate, com.tools20022.repository.msg.CorporateActionRate45.mmNetDividendRate, com.tools20022.repository.msg.CorporateActionRate44.mmNetDividendRate,
-					com.tools20022.repository.msg.RateDetails14.mmNetDividendRate, com.tools20022.repository.msg.CorporateActionRate60.mmNetDividendRate, com.tools20022.repository.msg.RateDetails18.mmNetDividendRate,
-					com.tools20022.repository.msg.CorporateActionRate64.mmNetDividendRate, com.tools20022.repository.msg.RateDetails21.mmNetDividendRate, com.tools20022.repository.msg.CorporateActionRate57.mmNetDividendRate,
-					com.tools20022.repository.msg.RateDetails23.mmNetDividendRate, com.tools20022.repository.msg.CorporateActionRate68.mmNetDividendRate, com.tools20022.repository.msg.CorporateActionRate70.mmNetDividendRate,
-					com.tools20022.repository.msg.CorporateActionRate67.mmNetDividendRate, com.tools20022.repository.msg.RateDetails22.mmNetDividendRate, com.tools20022.repository.choice.NetDividendRateFormat21Choice.mmAmount,
-					com.tools20022.repository.choice.NetDividendRateFormat23Choice.mmAmount, com.tools20022.repository.choice.NetDividendRateFormat22Choice.mmAmount, com.tools20022.repository.choice.NetDividendRateFormat24Choice.mmAmount,
-					com.tools20022.repository.msg.CorporateActionRate74.mmNetDividendRate, com.tools20022.repository.msg.CorporateActionRate79.mmNetDividendRate, com.tools20022.repository.msg.RateDetails24.mmNetDividendRate,
-					com.tools20022.repository.msg.RateDetails25.mmNetDividendRate, com.tools20022.repository.msg.CorporateActionRate76.mmNetDividendRate, com.tools20022.repository.choice.NetDividendRateFormat28Choice.mmAmount,
-					com.tools20022.repository.choice.NetDividendRateFormat25Choice.mmAmount, com.tools20022.repository.choice.NetDividendRateFormat26Choice.mmAmount, com.tools20022.repository.choice.NetDividendRateFormat27Choice.mmAmount,
-					com.tools20022.repository.msg.RateDetails26.mmNetDividendRate, com.tools20022.repository.msg.CorporateActionRate82.mmNetDividendRate, com.tools20022.repository.msg.CorporateActionRate80.mmNetDividendRate,
-					com.tools20022.repository.msg.RateDetails27.mmNetDividendRate, com.tools20022.repository.msg.CorporateActionRate81.mmNetDividendRate, com.tools20022.repository.msg.CorporateActionRate83.mmNetDividendRate,
-					com.tools20022.repository.msg.CorporateActionRate84.mmNetDividendRate, com.tools20022.repository.msg.CorporateActionRate85.mmNetDividendRate, com.tools20022.repository.msg.RateDetails28.mmNetDividendRate,
-					com.tools20022.repository.msg.RateDetails30.mmNetDividendRate);
+			derivation_lazy = () -> Arrays.asList(NetDividendRateFormat2Choice.mmAmount, CorporateActionRate4.mmNetDividendRate, NetDividendRateFormat3Choice.mmAmount, CorporateActionRate10.mmNetDividendRate,
+					RateDetails2.mmNetDividendRate, RateDetails4.mmNetDividendRate, NetDividendRateFormat1Choice.mmAmount, NetDividendRateFormat5Choice.mmAmount, NetDividendRateFormat7Choice.mmAmount,
+					CorporateActionRate26.mmNetDividendRate, RateDetails7.mmNetDividendRate, NetDividendRateFormat8Choice.mmAmount, CorporateActionRate31.mmNetDividendRate, RateDetails9.mmNetDividendRate,
+					NetDividendRateFormat12Choice.mmAmount, CorporateActionRate38.mmNetDividendRate, NetDividendRateFormat10Choice.mmAmount, RateDetails11.mmNetDividendRate, NetDividendRateFormat13Choice.mmAmount,
+					CorporateActionRate39.mmNetDividendRate, NetDividendRateFormat14Choice.mmAmount, RateDetails12.mmNetDividendRate, CorporateActionRate5.mmNetDividendRate, NetDividendRateFormat4Choice.mmAmount,
+					CorporateActionRate12.mmNetDividendRate, RateDetails3.mmNetDividendRate, NetDividendRateFormat6Choice.mmAmount, RateDetails5.mmNetDividendRate, CorporateActionRate25.mmNetDividendRate,
+					CorporateActionRate30.mmNetDividendRate, NetDividendRateFormat11Choice.mmAmount, CorporateActionRate37.mmNetDividendRate, NetDividendRateFormat9Choice.mmAmount, RateDetails10.mmNetDividendRate,
+					NetDividendRateFormat15Choice.mmAmount, CorporateActionRate40.mmNetDividendRate, NetDividendRateFormat16Choice.mmAmount, RateDetails13.mmNetDividendRate, CorporateActionRate36.mmNetDividendRate,
+					CorporateActionRate42.mmNetDividendRate, NetDividendRate2.mmAmount, NetDividendRate1Choice.mmAmount, CorporateActionRate2.mmNetDividend, RateDetails15.mmNetDividendRate, CorporateActionRate46.mmNetDividendRate,
+					CorporateActionRate45.mmNetDividendRate, CorporateActionRate44.mmNetDividendRate, RateDetails14.mmNetDividendRate, CorporateActionRate60.mmNetDividendRate, RateDetails18.mmNetDividendRate,
+					CorporateActionRate64.mmNetDividendRate, RateDetails21.mmNetDividendRate, CorporateActionRate57.mmNetDividendRate, RateDetails23.mmNetDividendRate, CorporateActionRate68.mmNetDividendRate,
+					CorporateActionRate70.mmNetDividendRate, CorporateActionRate67.mmNetDividendRate, RateDetails22.mmNetDividendRate, NetDividendRateFormat21Choice.mmAmount, NetDividendRateFormat23Choice.mmAmount,
+					NetDividendRateFormat22Choice.mmAmount, NetDividendRateFormat24Choice.mmAmount, CorporateActionRate74.mmNetDividendRate, CorporateActionRate79.mmNetDividendRate, RateDetails24.mmNetDividendRate,
+					RateDetails25.mmNetDividendRate, CorporateActionRate76.mmNetDividendRate, NetDividendRateFormat28Choice.mmAmount, NetDividendRateFormat25Choice.mmAmount, NetDividendRateFormat26Choice.mmAmount,
+					NetDividendRateFormat27Choice.mmAmount, RateDetails26.mmNetDividendRate, CorporateActionRate82.mmNetDividendRate, CorporateActionRate80.mmNetDividendRate, RateDetails27.mmNetDividendRate,
+					CorporateActionRate81.mmNetDividendRate, CorporateActionRate83.mmNetDividendRate, CorporateActionRate84.mmNetDividendRate, CorporateActionRate85.mmNetDividendRate, RateDetails28.mmNetDividendRate,
+					RateDetails30.mmNetDividendRate);
 			elementContext_lazy = () -> Dividend.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NetDividend";
 			definition = "Cash dividend amount per equity after deductions or allowances have been made.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.RateAndAmount.mmNetDividendParameters;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.RateAndAmount.mmObject();
 		}
 	};
@@ -1660,22 +1621,19 @@ public class Dividend {
 	 */
 	public static final MMBusinessAssociationEnd mmProvisionalDividend = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionRate4.mmProvisionalDividendRate, com.tools20022.repository.msg.CorporateActionRate10.mmProvisionalDividendRate,
-					com.tools20022.repository.msg.RateDetails2.mmProvisionalDividendRate, com.tools20022.repository.msg.RateDetails4.mmProvisionalDividendRate, com.tools20022.repository.msg.RateDetails7.mmProvisionalDividendRate,
-					com.tools20022.repository.msg.RateDetails9.mmProvisionalDividendRate, com.tools20022.repository.msg.RateDetails11.mmProvisionalDividendRate, com.tools20022.repository.msg.RateDetails12.mmProvisionalDividendRate,
-					com.tools20022.repository.msg.CorporateActionRate5.mmProvisionalDividendRate, com.tools20022.repository.msg.CorporateActionRate12.mmProvisionalDividendRate,
-					com.tools20022.repository.msg.RateDetails3.mmProvisionalDividendRate, com.tools20022.repository.msg.RateDetails5.mmProvisionalDividendRate, com.tools20022.repository.msg.RateDetails10.mmProvisionalDividendRate,
-					com.tools20022.repository.msg.RateDetails13.mmProvisionalDividendRate, com.tools20022.repository.msg.CorporateActionRate2.mmProvisionalDividend, com.tools20022.repository.msg.RateDetails15.mmProvisionalDividendRate,
-					com.tools20022.repository.msg.RateDetails14.mmProvisionalDividendRate, com.tools20022.repository.msg.RateDetails18.mmProvisionalDividendRate, com.tools20022.repository.msg.RateDetails21.mmProvisionalDividendRate);
+			derivation_lazy = () -> Arrays.asList(CorporateActionRate4.mmProvisionalDividendRate, CorporateActionRate10.mmProvisionalDividendRate, RateDetails2.mmProvisionalDividendRate, RateDetails4.mmProvisionalDividendRate,
+					RateDetails7.mmProvisionalDividendRate, RateDetails9.mmProvisionalDividendRate, RateDetails11.mmProvisionalDividendRate, RateDetails12.mmProvisionalDividendRate, CorporateActionRate5.mmProvisionalDividendRate,
+					CorporateActionRate12.mmProvisionalDividendRate, RateDetails3.mmProvisionalDividendRate, RateDetails5.mmProvisionalDividendRate, RateDetails10.mmProvisionalDividendRate, RateDetails13.mmProvisionalDividendRate,
+					CorporateActionRate2.mmProvisionalDividend, RateDetails15.mmProvisionalDividendRate, RateDetails14.mmProvisionalDividendRate, RateDetails18.mmProvisionalDividendRate, RateDetails21.mmProvisionalDividendRate);
 			elementContext_lazy = () -> Dividend.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ProvisionalDividend";
 			definition = "Dividend is provisional.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.RateAndAmount.mmProvisionalDividendParameters;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.RateAndAmount.mmObject();
 		}
 	};
@@ -1756,15 +1714,12 @@ public class Dividend {
 	 */
 	public static final MMBusinessAttribute mmDividendRankingDate = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecurityDate1.mmDividendRankingDate, com.tools20022.repository.msg.SecurityDate3.mmDividendRankingDate,
-					com.tools20022.repository.msg.SecurityDate6.mmDividendRankingDate, com.tools20022.repository.msg.SecurityDate7.mmDividendRankingDate, com.tools20022.repository.msg.SecurityDate2.mmDividendRankingDate,
-					com.tools20022.repository.msg.SecurityDate4.mmDividendRankingDate, com.tools20022.repository.msg.SecurityDate5.mmDividendRankingDate, com.tools20022.repository.msg.SecurityDate8.mmDividendRankingDate,
-					com.tools20022.repository.msg.SecurityDate9.mmDividendRankingDate, com.tools20022.repository.msg.SecurityDate10.mmDividendRankingDate, com.tools20022.repository.msg.CorporateActionDate3.mmDividendRankingDate,
-					com.tools20022.repository.msg.SecurityDate12.mmDividendRankingDate, com.tools20022.repository.msg.SecurityDate11.mmDividendRankingDate, com.tools20022.repository.msg.SecurityDate14.mmDividendRankingDate,
-					com.tools20022.repository.msg.SecurityDate13.mmDividendRankingDate);
+			derivation_lazy = () -> Arrays.asList(SecurityDate1.mmDividendRankingDate, SecurityDate3.mmDividendRankingDate, SecurityDate6.mmDividendRankingDate, SecurityDate7.mmDividendRankingDate, SecurityDate2.mmDividendRankingDate,
+					SecurityDate4.mmDividendRankingDate, SecurityDate5.mmDividendRankingDate, SecurityDate8.mmDividendRankingDate, SecurityDate9.mmDividendRankingDate, SecurityDate10.mmDividendRankingDate,
+					CorporateActionDate3.mmDividendRankingDate, SecurityDate12.mmDividendRankingDate, SecurityDate11.mmDividendRankingDate, SecurityDate14.mmDividendRankingDate, SecurityDate13.mmDividendRankingDate);
 			elementContext_lazy = () -> Dividend.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DividendRankingDate";
 			definition = "Date on which a security will be entitled to a dividend.";
 			maxOccurs = 1;
@@ -1920,28 +1875,22 @@ public class Dividend {
 	 */
 	public static final MMBusinessAttribute mmManufacturedDividendAmount = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionAmounts2.mmManufacturedDividendAmount, com.tools20022.repository.msg.CorporateActionAmounts5.mmManufacturedDividendAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts11.mmManufacturedDividendPaymentAmount, com.tools20022.repository.msg.CorporateActionAmounts12.mmManufacturedDividendPaymentAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts17.mmManufacturedDividendPaymentAmount, com.tools20022.repository.msg.CorporateActionAmounts20.mmManufacturedDividendPaymentAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts23.mmManufacturedDividendPaymentAmount, com.tools20022.repository.msg.CorporateActionAmounts24.mmManufacturedDividendPaymentAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts3.mmManufacturedDividendAmount, com.tools20022.repository.msg.CorporateActionAmounts6.mmManufacturedDividendAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts9.mmManufacturedDividendPaymentAmount, com.tools20022.repository.msg.CorporateActionAmounts13.mmManufacturedDividendPaymentAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts16.mmManufacturedDividendPaymentAmount, com.tools20022.repository.msg.CorporateActionAmounts19.mmManufacturedDividendPaymentAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts22.mmManufacturedDividendPaymentAmount, com.tools20022.repository.msg.CorporateActionAmounts25.mmManufacturedDividendPaymentAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts4.mmManufacturedDividendAmount, com.tools20022.repository.msg.CorporateActionAmounts7.mmManufacturedDividendAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts10.mmManufacturedDividendPaymentAmount, com.tools20022.repository.msg.CorporateActionAmounts14.mmManufacturedDividendPaymentAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts15.mmManufacturedDividendPaymentAmount, com.tools20022.repository.msg.CorporateActionAmounts18.mmManufacturedDividendPaymentAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts21.mmManufacturedDividendPaymentAmount, com.tools20022.repository.msg.CorporateActionAmounts26.mmManufacturedDividendPaymentAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts1.mmManufacturedDividendAmount, com.tools20022.repository.msg.CorporateActionAmounts29.mmManufacturedDividendPaymentAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts27.mmManufacturedDividendPaymentAmount, com.tools20022.repository.msg.CorporateActionAmounts28.mmManufacturedDividendPaymentAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts33.mmManufacturedDividendPaymentAmount, com.tools20022.repository.msg.CorporateActionAmounts32.mmManufacturedDividendPaymentAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts35.mmManufacturedDividendPaymentAmount, com.tools20022.repository.msg.CorporateActionAmounts37.mmManufacturedDividendPaymentAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts36.mmManufacturedDividendPaymentAmount, com.tools20022.repository.msg.CorporateActionAmounts38.mmManufacturedDividendPaymentAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts39.mmManufacturedDividendPaymentAmount, com.tools20022.repository.msg.CorporateActionAmounts41.mmManufacturedDividendPaymentAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts40.mmManufacturedDividendPaymentAmount);
+			derivation_lazy = () -> Arrays.asList(CorporateActionAmounts2.mmManufacturedDividendAmount, CorporateActionAmounts5.mmManufacturedDividendAmount, CorporateActionAmounts11.mmManufacturedDividendPaymentAmount,
+					CorporateActionAmounts12.mmManufacturedDividendPaymentAmount, CorporateActionAmounts17.mmManufacturedDividendPaymentAmount, CorporateActionAmounts20.mmManufacturedDividendPaymentAmount,
+					CorporateActionAmounts23.mmManufacturedDividendPaymentAmount, CorporateActionAmounts24.mmManufacturedDividendPaymentAmount, CorporateActionAmounts3.mmManufacturedDividendAmount,
+					CorporateActionAmounts6.mmManufacturedDividendAmount, CorporateActionAmounts9.mmManufacturedDividendPaymentAmount, CorporateActionAmounts13.mmManufacturedDividendPaymentAmount,
+					CorporateActionAmounts16.mmManufacturedDividendPaymentAmount, CorporateActionAmounts19.mmManufacturedDividendPaymentAmount, CorporateActionAmounts22.mmManufacturedDividendPaymentAmount,
+					CorporateActionAmounts25.mmManufacturedDividendPaymentAmount, CorporateActionAmounts4.mmManufacturedDividendAmount, CorporateActionAmounts7.mmManufacturedDividendAmount,
+					CorporateActionAmounts10.mmManufacturedDividendPaymentAmount, CorporateActionAmounts14.mmManufacturedDividendPaymentAmount, CorporateActionAmounts15.mmManufacturedDividendPaymentAmount,
+					CorporateActionAmounts18.mmManufacturedDividendPaymentAmount, CorporateActionAmounts21.mmManufacturedDividendPaymentAmount, CorporateActionAmounts26.mmManufacturedDividendPaymentAmount,
+					CorporateActionAmounts1.mmManufacturedDividendAmount, CorporateActionAmounts29.mmManufacturedDividendPaymentAmount, CorporateActionAmounts27.mmManufacturedDividendPaymentAmount,
+					CorporateActionAmounts28.mmManufacturedDividendPaymentAmount, CorporateActionAmounts33.mmManufacturedDividendPaymentAmount, CorporateActionAmounts32.mmManufacturedDividendPaymentAmount,
+					CorporateActionAmounts35.mmManufacturedDividendPaymentAmount, CorporateActionAmounts37.mmManufacturedDividendPaymentAmount, CorporateActionAmounts36.mmManufacturedDividendPaymentAmount,
+					CorporateActionAmounts38.mmManufacturedDividendPaymentAmount, CorporateActionAmounts39.mmManufacturedDividendPaymentAmount, CorporateActionAmounts41.mmManufacturedDividendPaymentAmount,
+					CorporateActionAmounts40.mmManufacturedDividendPaymentAmount);
 			elementContext_lazy = () -> Dividend.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ManufacturedDividendAmount";
 			definition = "Amount of money that the borrower pays to the lender as a compensation. It does not entitle the lender to reclaim any tax credit and is sometimes treated differently by the local tax authorities of the lender.";
 			maxOccurs = 1;
@@ -2096,27 +2045,17 @@ public class Dividend {
 	 */
 	public static final MMBusinessAttribute mmUnfrankedAmount = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionAmounts2.mmUnfrankedAmount, com.tools20022.repository.msg.CorporateActionAmounts5.mmUnfrankedAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts11.mmUnfrankedAmount, com.tools20022.repository.msg.CorporateActionAmounts12.mmUnfrankedAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts17.mmUnfrankedAmount, com.tools20022.repository.msg.CorporateActionAmounts20.mmUnfrankedAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts23.mmUnfrankedAmount, com.tools20022.repository.msg.CorporateActionAmounts24.mmUnfrankedAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts3.mmUnfrankedAmount, com.tools20022.repository.msg.CorporateActionAmounts6.mmUnfrankedAmount, com.tools20022.repository.msg.CorporateActionAmounts9.mmUnfrankedAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts13.mmUnfrankedAmount, com.tools20022.repository.msg.CorporateActionAmounts16.mmUnfrankedAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts19.mmUnfrankedAmount, com.tools20022.repository.msg.CorporateActionAmounts22.mmUnfrankedAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts25.mmUnfrankedAmount, com.tools20022.repository.msg.CorporateActionAmounts4.mmUnfrankedAmount, com.tools20022.repository.msg.CorporateActionAmounts7.mmUnfrankedAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts10.mmUnfrankedAmount, com.tools20022.repository.msg.CorporateActionAmounts14.mmUnfrankedAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts15.mmUnfrankedAmount, com.tools20022.repository.msg.CorporateActionAmounts18.mmUnfrankedAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts21.mmUnfrankedAmount, com.tools20022.repository.msg.CorporateActionAmounts26.mmUnfrankedAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts1.mmUnfrankedAmount, com.tools20022.repository.msg.CorporateActionAmounts29.mmUnfrankedAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts27.mmUnfrankedAmount, com.tools20022.repository.msg.CorporateActionAmounts28.mmUnfrankedAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts33.mmUnfrankedAmount, com.tools20022.repository.msg.CorporateActionAmounts32.mmUnfrankedAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts35.mmUnfrankedAmount, com.tools20022.repository.msg.CorporateActionAmounts37.mmUnfrankedAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts36.mmUnfrankedAmount, com.tools20022.repository.msg.CorporateActionAmounts38.mmUnfrankedAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts39.mmUnfrankedAmount, com.tools20022.repository.msg.CorporateActionAmounts41.mmUnfrankedAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts40.mmUnfrankedAmount);
+			derivation_lazy = () -> Arrays.asList(CorporateActionAmounts2.mmUnfrankedAmount, CorporateActionAmounts5.mmUnfrankedAmount, CorporateActionAmounts11.mmUnfrankedAmount, CorporateActionAmounts12.mmUnfrankedAmount,
+					CorporateActionAmounts17.mmUnfrankedAmount, CorporateActionAmounts20.mmUnfrankedAmount, CorporateActionAmounts23.mmUnfrankedAmount, CorporateActionAmounts24.mmUnfrankedAmount, CorporateActionAmounts3.mmUnfrankedAmount,
+					CorporateActionAmounts6.mmUnfrankedAmount, CorporateActionAmounts9.mmUnfrankedAmount, CorporateActionAmounts13.mmUnfrankedAmount, CorporateActionAmounts16.mmUnfrankedAmount, CorporateActionAmounts19.mmUnfrankedAmount,
+					CorporateActionAmounts22.mmUnfrankedAmount, CorporateActionAmounts25.mmUnfrankedAmount, CorporateActionAmounts4.mmUnfrankedAmount, CorporateActionAmounts7.mmUnfrankedAmount, CorporateActionAmounts10.mmUnfrankedAmount,
+					CorporateActionAmounts14.mmUnfrankedAmount, CorporateActionAmounts15.mmUnfrankedAmount, CorporateActionAmounts18.mmUnfrankedAmount, CorporateActionAmounts21.mmUnfrankedAmount, CorporateActionAmounts26.mmUnfrankedAmount,
+					CorporateActionAmounts1.mmUnfrankedAmount, CorporateActionAmounts29.mmUnfrankedAmount, CorporateActionAmounts27.mmUnfrankedAmount, CorporateActionAmounts28.mmUnfrankedAmount, CorporateActionAmounts33.mmUnfrankedAmount,
+					CorporateActionAmounts32.mmUnfrankedAmount, CorporateActionAmounts35.mmUnfrankedAmount, CorporateActionAmounts37.mmUnfrankedAmount, CorporateActionAmounts36.mmUnfrankedAmount, CorporateActionAmounts38.mmUnfrankedAmount,
+					CorporateActionAmounts39.mmUnfrankedAmount, CorporateActionAmounts41.mmUnfrankedAmount, CorporateActionAmounts40.mmUnfrankedAmount);
 			elementContext_lazy = () -> Dividend.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "UnfrankedAmount";
 			definition = "Amount resulting from an unfranked dividend paid by a company; the amount does not include tax credit and is subject to withholding tax.";
 			maxOccurs = 1;
@@ -2196,15 +2135,13 @@ public class Dividend {
 	 */
 	public static final MMBusinessAttribute mmNotionalDividendPayableAmount = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionAmounts2.mmNotionalDividendPayableAmount, com.tools20022.repository.msg.CorporateActionAmounts5.mmNotionalDividendPayableAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts11.mmNotionalDividendPayableAmount, com.tools20022.repository.msg.CorporateActionAmounts12.mmNotionalDividendPayableAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts17.mmNotionalDividendPayableAmount, com.tools20022.repository.msg.CorporateActionAmounts20.mmNotionalDividendPayableAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts23.mmNotionalDividendPayableAmount, com.tools20022.repository.msg.CorporateActionAmounts24.mmNotionalDividendPayableAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts29.mmNotionalDividendPayableAmount, com.tools20022.repository.msg.CorporateActionAmounts35.mmNotionalDividendPayableAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts37.mmNotionalDividendPayableAmount, com.tools20022.repository.msg.CorporateActionAmounts39.mmNotionalDividendPayableAmount);
+			derivation_lazy = () -> Arrays.asList(CorporateActionAmounts2.mmNotionalDividendPayableAmount, CorporateActionAmounts5.mmNotionalDividendPayableAmount, CorporateActionAmounts11.mmNotionalDividendPayableAmount,
+					CorporateActionAmounts12.mmNotionalDividendPayableAmount, CorporateActionAmounts17.mmNotionalDividendPayableAmount, CorporateActionAmounts20.mmNotionalDividendPayableAmount,
+					CorporateActionAmounts23.mmNotionalDividendPayableAmount, CorporateActionAmounts24.mmNotionalDividendPayableAmount, CorporateActionAmounts29.mmNotionalDividendPayableAmount,
+					CorporateActionAmounts35.mmNotionalDividendPayableAmount, CorporateActionAmounts37.mmNotionalDividendPayableAmount, CorporateActionAmounts39.mmNotionalDividendPayableAmount);
 			elementContext_lazy = () -> Dividend.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NotionalDividendPayableAmount";
 			definition = "Amount of cash that would have been payable if the dividend had been taken in the form of cash rather than shares.";
 			maxOccurs = 1;
@@ -2315,17 +2252,13 @@ public class Dividend {
 	 */
 	public static final MMBusinessAttribute mmRate = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RateDetails2.mmNonResidentRate, com.tools20022.repository.msg.RateDetails4.mmNonResidentRate, com.tools20022.repository.msg.RateDetails7.mmNonResidentRate,
-					com.tools20022.repository.msg.RateDetails9.mmNonResidentRate, com.tools20022.repository.msg.RateDetails11.mmNonResidentRate, com.tools20022.repository.msg.RateDetails12.mmNonResidentRate,
-					com.tools20022.repository.msg.RateDetails3.mmNonResidentRate, com.tools20022.repository.msg.RateDetails5.mmNonResidentRate, com.tools20022.repository.msg.RateDetails10.mmNonResidentRate,
-					com.tools20022.repository.msg.RateDetails13.mmNonResidentRate, com.tools20022.repository.msg.SecuritiesFinancing10.mmDividendRatio, com.tools20022.repository.msg.RateDetails15.mmNonResidentRate,
-					com.tools20022.repository.msg.RateDetails14.mmNonResidentRate, com.tools20022.repository.msg.RateDetails18.mmNonResidentRate, com.tools20022.repository.msg.RateDetails21.mmNonResidentRate,
-					com.tools20022.repository.msg.RateDetails23.mmNonResidentRate, com.tools20022.repository.msg.RateDetails22.mmNonResidentRate, com.tools20022.repository.msg.RateDetails24.mmNonResidentRate,
-					com.tools20022.repository.msg.RateDetails25.mmNonResidentRate, com.tools20022.repository.msg.RateDetails26.mmNonResidentRate, com.tools20022.repository.msg.RateDetails27.mmNonResidentRate,
-					com.tools20022.repository.msg.RateDetails28.mmNonResidentRate, com.tools20022.repository.msg.RateDetails30.mmNonResidentRate);
+			derivation_lazy = () -> Arrays.asList(RateDetails2.mmNonResidentRate, RateDetails4.mmNonResidentRate, RateDetails7.mmNonResidentRate, RateDetails9.mmNonResidentRate, RateDetails11.mmNonResidentRate,
+					RateDetails12.mmNonResidentRate, RateDetails3.mmNonResidentRate, RateDetails5.mmNonResidentRate, RateDetails10.mmNonResidentRate, RateDetails13.mmNonResidentRate, SecuritiesFinancing10.mmDividendRatio,
+					RateDetails15.mmNonResidentRate, RateDetails14.mmNonResidentRate, RateDetails18.mmNonResidentRate, RateDetails21.mmNonResidentRate, RateDetails23.mmNonResidentRate, RateDetails22.mmNonResidentRate,
+					RateDetails24.mmNonResidentRate, RateDetails25.mmNonResidentRate, RateDetails26.mmNonResidentRate, RateDetails27.mmNonResidentRate, RateDetails28.mmNonResidentRate, RateDetails30.mmNonResidentRate);
 			elementContext_lazy = () -> Dividend.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Rate";
 			definition = "Planned dividend rate, for example, for preferred shares.";
 			maxOccurs = 1;
@@ -2425,16 +2358,13 @@ public class Dividend {
 	 */
 	public static final MMBusinessAttribute mmExDividendDate = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionDate1.mmExDividendDate, com.tools20022.repository.msg.CorporateActionDate13.mmExDividendDate,
-					com.tools20022.repository.msg.CorporateActionDate14.mmExDividendDate, com.tools20022.repository.msg.CorporateActionDate21.mmExDividendDate, com.tools20022.repository.msg.CorporateActionDate22.mmExDividendDate,
-					com.tools20022.repository.msg.CorporateActionDate25.mmExDividendDate, com.tools20022.repository.msg.CorporateActionDate27.mmExDividendDate, com.tools20022.repository.msg.CorporateActionDate28.mmExDividendDate,
-					com.tools20022.repository.msg.CorporateActionDate2.mmExDividendDate, com.tools20022.repository.msg.CorporateActionDate30.mmExDividendDate, com.tools20022.repository.msg.CorporateActionDate34.mmExDividendDate,
-					com.tools20022.repository.msg.CorporateActionDate41.mmExDividendDate, com.tools20022.repository.msg.CorporateActionDate43.mmExDividendDate, com.tools20022.repository.msg.CorporateActionDate49.mmExDividendDate,
-					com.tools20022.repository.msg.CorporateActionDate45.mmExDividendDate, com.tools20022.repository.msg.CorporateActionDate44.mmExDividendDate, com.tools20022.repository.msg.CorporateActionDate54.mmExDividendDate,
-					com.tools20022.repository.msg.CorporateActionDate50.mmExDividendDate, com.tools20022.repository.msg.CorporateActionDate58.mmExDividendDate);
+			derivation_lazy = () -> Arrays.asList(CorporateActionDate1.mmExDividendDate, CorporateActionDate13.mmExDividendDate, CorporateActionDate14.mmExDividendDate, CorporateActionDate21.mmExDividendDate,
+					CorporateActionDate22.mmExDividendDate, CorporateActionDate25.mmExDividendDate, CorporateActionDate27.mmExDividendDate, CorporateActionDate28.mmExDividendDate, CorporateActionDate2.mmExDividendDate,
+					CorporateActionDate30.mmExDividendDate, CorporateActionDate34.mmExDividendDate, CorporateActionDate41.mmExDividendDate, CorporateActionDate43.mmExDividendDate, CorporateActionDate49.mmExDividendDate,
+					CorporateActionDate45.mmExDividendDate, CorporateActionDate44.mmExDividendDate, CorporateActionDate54.mmExDividendDate, CorporateActionDate50.mmExDividendDate, CorporateActionDate58.mmExDividendDate);
 			elementContext_lazy = () -> Dividend.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ExDividendDate";
 			definition = "Date/time as from which trading (including exchange and OTC trading) occurs on the underlying security without the benefit.";
 			maxOccurs = 1;
@@ -2478,12 +2408,12 @@ public class Dividend {
 		{
 			elementContext_lazy = () -> Dividend.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Security";
 			definition = "Security for which a dividend is specified.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.Security.mmDividend;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 		}
 	};
@@ -2574,16 +2504,13 @@ public class Dividend {
 	 */
 	public static final MMBusinessAttribute mmType = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.DividendTypeFormat1Choice.mmCode, com.tools20022.repository.choice.DividendTypeFormat1Choice.mmProprietary,
-					com.tools20022.repository.choice.DividendTypeFormat2Choice.mmCode, com.tools20022.repository.choice.DividendTypeFormat2Choice.mmProprietary, com.tools20022.repository.choice.DividendTypeFormat3Choice.mmCode,
-					com.tools20022.repository.choice.DividendTypeFormat3Choice.mmProprietary, com.tools20022.repository.msg.CorporateAction5.mmDividendType, com.tools20022.repository.choice.DividendTypeFormat4Choice.mmCode,
-					com.tools20022.repository.choice.DividendTypeFormat4Choice.mmProprietary, com.tools20022.repository.msg.CorporateAction6.mmDividendType, com.tools20022.repository.choice.DividendTypeFormat5Choice.mmCode,
-					com.tools20022.repository.choice.DividendTypeFormat5Choice.mmProprietary, com.tools20022.repository.choice.DividendTypeFormat8Choice.mmCode, com.tools20022.repository.choice.DividendTypeFormat8Choice.mmProprietary,
-					com.tools20022.repository.choice.DividendTypeFormat9Choice.mmCode, com.tools20022.repository.choice.DividendTypeFormat9Choice.mmProprietary, com.tools20022.repository.choice.DividendTypeFormat10Choice.mmCode,
-					com.tools20022.repository.choice.DividendTypeFormat10Choice.mmProprietary);
+			derivation_lazy = () -> Arrays.asList(DividendTypeFormat1Choice.mmCode, DividendTypeFormat1Choice.mmProprietary, DividendTypeFormat2Choice.mmCode, DividendTypeFormat2Choice.mmProprietary, DividendTypeFormat3Choice.mmCode,
+					DividendTypeFormat3Choice.mmProprietary, CorporateAction5.mmDividendType, DividendTypeFormat4Choice.mmCode, DividendTypeFormat4Choice.mmProprietary, CorporateAction6.mmDividendType, DividendTypeFormat5Choice.mmCode,
+					DividendTypeFormat5Choice.mmProprietary, DividendTypeFormat8Choice.mmCode, DividendTypeFormat8Choice.mmProprietary, DividendTypeFormat9Choice.mmCode, DividendTypeFormat9Choice.mmProprietary,
+					DividendTypeFormat10Choice.mmCode, DividendTypeFormat10Choice.mmProprietary);
 			elementContext_lazy = () -> Dividend.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Type";
 			definition = "Nature of the dividend.";
 			maxOccurs = 1;
@@ -2629,12 +2556,12 @@ public class Dividend {
 		{
 			elementContext_lazy = () -> Dividend.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CashProceeds";
 			definition = "Defines the proceeds which resulted in dividends.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.CashProceedsDefinition.mmDividend;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.CashProceedsDefinition.mmObject();
 		}
 	};
@@ -2675,12 +2602,12 @@ public class Dividend {
 		{
 			elementContext_lazy = () -> Dividend.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Obligation";
 			definition = "Specifies the  payment terms of the dividend.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.PaymentObligation.mmDividend;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.PaymentObligation.mmObject();
 		}
 	};
@@ -2719,13 +2646,13 @@ public class Dividend {
 		{
 			elementContext_lazy = () -> Dividend.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Tax";
 			definition = "Tax on dividend.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.Tax.mmDividend;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Tax.mmObject();
 		}
 	};
@@ -2766,13 +2693,13 @@ public class Dividend {
 		{
 			elementContext_lazy = () -> Dividend.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedDistribution";
 			definition = "Distribution for which a dividend is specified.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.Distribution.mmDividend;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Distribution.mmObject();
 		}
 	};
@@ -2806,7 +2733,7 @@ public class Dividend {
 		{
 			elementContext_lazy = () -> Dividend.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DividendFrequenceType";
 			definition = "Specifies the cycle of dividends.";
 			maxOccurs = 1;
@@ -2845,7 +2772,7 @@ public class Dividend {
 		{
 			elementContext_lazy = () -> Dividend.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DividendRatio";
 			definition = "Percentage of earnings paid to shareholders in dividends.";
 			maxOccurs = 1;
@@ -2882,7 +2809,7 @@ public class Dividend {
 		{
 			elementContext_lazy = () -> Dividend.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PaymentDate";
 			definition = "Date upon which the dividend is paid.";
 			maxOccurs = 1;
@@ -2927,10 +2854,10 @@ public class Dividend {
 	 */
 	public static final MMBusinessAttribute mmPaymentFrequency = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Debt1.mmPaymentFrequency, com.tools20022.repository.msg.Debt2.mmPaymentFrequency);
+			derivation_lazy = () -> Arrays.asList(Debt1.mmPaymentFrequency, Debt2.mmPaymentFrequency);
 			elementContext_lazy = () -> Dividend.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PaymentFrequency";
 			definition = "Specifies the cycle of dividend payments.";
 			maxOccurs = 1;
@@ -2967,7 +2894,7 @@ public class Dividend {
 		{
 			elementContext_lazy = () -> Dividend.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ReinvestmentDate";
 			definition = "Date upon which the dividend is reinvested.";
 			maxOccurs = 1;
@@ -3005,7 +2932,7 @@ public class Dividend {
 		{
 			elementContext_lazy = () -> Dividend.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Value";
 			definition = "Value of the dividend expressed as an amount.";
 			maxOccurs = 1;
@@ -3017,25 +2944,19 @@ public class Dividend {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Dividend";
 				definition = "Distribution of earnings to shareholders, paid for in cash, stock, scrip issue or, rarely, in kind, for example, in company products or property. The dividend amount is decided by the board of directors.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Security.mmDividend, com.tools20022.repository.entity.Tax.mmDividend, com.tools20022.repository.entity.PaymentObligation.mmDividend,
 						com.tools20022.repository.entity.RateAndAmount.mmFinalDividendParameters, com.tools20022.repository.entity.RateAndAmount.mmFullyFrankedRateAndAmountDividendParameters,
 						com.tools20022.repository.entity.RateAndAmount.mmGrossDividendParameters, com.tools20022.repository.entity.RateAndAmount.mmNetDividendParameters,
 						com.tools20022.repository.entity.RateAndAmount.mmProvisionalDividendParameters, com.tools20022.repository.entity.CashProceedsDefinition.mmDividend, com.tools20022.repository.entity.Distribution.mmDividend);
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.GrossDividendRate1Choice.mmRateTypeAmount, com.tools20022.repository.choice.NetDividendRate1Choice.mmRateTypeAmount,
-						com.tools20022.repository.msg.TaxVoucher1.mmNotionalDividendPayable);
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Dividend.mmDividendFrequency, com.tools20022.repository.entity.Dividend.mmAnnualTotalDividendRate,
-						com.tools20022.repository.entity.Dividend.mmFinalDividend, com.tools20022.repository.entity.Dividend.mmFullyFrankedRateAndAmount, com.tools20022.repository.entity.Dividend.mmGrossDividend,
-						com.tools20022.repository.entity.Dividend.mmRateType, com.tools20022.repository.entity.Dividend.mmNetDividend, com.tools20022.repository.entity.Dividend.mmProvisionalDividend,
-						com.tools20022.repository.entity.Dividend.mmDividendRankingDate, com.tools20022.repository.entity.Dividend.mmManufacturedDividendAmount, com.tools20022.repository.entity.Dividend.mmUnfrankedAmount,
-						com.tools20022.repository.entity.Dividend.mmNotionalDividendPayableAmount, com.tools20022.repository.entity.Dividend.mmRate, com.tools20022.repository.entity.Dividend.mmExDividendDate,
-						com.tools20022.repository.entity.Dividend.mmSecurity, com.tools20022.repository.entity.Dividend.mmType, com.tools20022.repository.entity.Dividend.mmCashProceeds,
-						com.tools20022.repository.entity.Dividend.mmObligation, com.tools20022.repository.entity.Dividend.mmTax, com.tools20022.repository.entity.Dividend.mmRelatedDistribution,
-						com.tools20022.repository.entity.Dividend.mmDividendFrequenceType, com.tools20022.repository.entity.Dividend.mmDividendRatio, com.tools20022.repository.entity.Dividend.mmPaymentDate,
-						com.tools20022.repository.entity.Dividend.mmPaymentFrequency, com.tools20022.repository.entity.Dividend.mmReinvestmentDate, com.tools20022.repository.entity.Dividend.mmValue);
+				derivationElement_lazy = () -> Arrays.asList(GrossDividendRate1Choice.mmRateTypeAmount, NetDividendRate1Choice.mmRateTypeAmount, TaxVoucher1.mmNotionalDividendPayable);
+				element_lazy = () -> Arrays.asList(Dividend.mmDividendFrequency, Dividend.mmAnnualTotalDividendRate, Dividend.mmFinalDividend, Dividend.mmFullyFrankedRateAndAmount, Dividend.mmGrossDividend, Dividend.mmRateType,
+						Dividend.mmNetDividend, Dividend.mmProvisionalDividend, Dividend.mmDividendRankingDate, Dividend.mmManufacturedDividendAmount, Dividend.mmUnfrankedAmount, Dividend.mmNotionalDividendPayableAmount, Dividend.mmRate,
+						Dividend.mmExDividendDate, Dividend.mmSecurity, Dividend.mmType, Dividend.mmCashProceeds, Dividend.mmObligation, Dividend.mmTax, Dividend.mmRelatedDistribution, Dividend.mmDividendFrequenceType,
+						Dividend.mmDividendRatio, Dividend.mmPaymentDate, Dividend.mmPaymentFrequency, Dividend.mmReinvestmentDate, Dividend.mmValue);
 				derivationComponent_lazy = () -> Arrays.asList(RateType13Choice.mmObject(), GrossDividendRateFormat2Choice.mmObject(), RateType7Choice.mmObject(), NetDividendRateFormat2Choice.mmObject(), RateType15Choice.mmObject(),
 						GrossDividendRateFormat3Choice.mmObject(), RateType16Choice.mmObject(), NetDividendRateFormat3Choice.mmObject(), RateType17Choice.mmObject(), RateType18Choice.mmObject(), NetDividendRateFormat1Choice.mmObject(),
 						NetDividendRateFormat5Choice.mmObject(), NetDividendRateFormat7Choice.mmObject(), NetDividendRateFormat8Choice.mmObject(), RateType22Choice.mmObject(), GrossDividendRateFormat10Choice.mmObject(),

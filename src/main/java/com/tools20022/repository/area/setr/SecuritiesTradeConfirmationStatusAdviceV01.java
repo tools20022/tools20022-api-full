@@ -20,6 +20,7 @@ package com.tools20022.repository.area.setr;
 import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.SecuritiesTradePreviousVersion;
 import com.tools20022.repository.choice.*;
 import com.tools20022.repository.msg.*;
@@ -49,6 +50,9 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code setr.044.001.01}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.SecuritiesTradePreviousVersion
@@ -112,9 +116,6 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code setr.044.001.01}</li>
- * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -176,10 +177,10 @@ public class SecuritiesTradeConfirmationStatusAdviceV01 {
 	public static final MMMessageBuildingBlock mmIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Information that unambiguously identifies an SecuritiesTradeConfirmationStatusAdvice message as known by the account owner (or the instructing party acting on its behalf).";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV02.mmIdentification);
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesTradeConfirmationStatusAdviceV02.mmIdentification);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> TransactiontIdentification4.mmObject();
@@ -222,10 +223,10 @@ public class SecuritiesTradeConfirmationStatusAdviceV01 {
 	public static final MMMessageBuildingBlock mmReferences = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Refs";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "References";
 			definition = "Link to another transaction that must be processed after, before or at the same time.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV02.mmReferences);
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesTradeConfirmationStatusAdviceV02.mmReferences);
 			minOccurs = 1;
 			complexType_lazy = () -> Linkages18.mmObject();
 		}
@@ -265,10 +266,10 @@ public class SecuritiesTradeConfirmationStatusAdviceV01 {
 	public static final MMMessageBuildingBlock mmAffirmationStatus = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "AffirmSts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AffirmationStatus";
 			definition = "Provides details on the affitrmation status of a trade.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV02.mmAffirmationStatus);
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesTradeConfirmationStatusAdviceV02.mmAffirmationStatus);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> AffirmationStatus6Choice.mmObject();
@@ -309,10 +310,10 @@ public class SecuritiesTradeConfirmationStatusAdviceV01 {
 	public static final MMMessageBuildingBlock mmProcessingStatus = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "PrcgSts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProcessingStatus";
 			definition = "Provides the processing status of a trade.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV02.mmProcessingStatus);
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesTradeConfirmationStatusAdviceV02.mmProcessingStatus);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> ProcessingStatus17Choice.mmObject();
@@ -353,10 +354,10 @@ public class SecuritiesTradeConfirmationStatusAdviceV01 {
 	public static final MMMessageBuildingBlock mmMatchingStatus = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "MtchgSts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MatchingStatus";
 			definition = "Provides details on the matching status of a trade.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV02.mmMatchingStatus);
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesTradeConfirmationStatusAdviceV02.mmMatchingStatus);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> MatchingStatus9Choice.mmObject();
@@ -398,10 +399,10 @@ public class SecuritiesTradeConfirmationStatusAdviceV01 {
 	public static final MMMessageBuildingBlock mmReplacementProcessingStatus = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "RplcmntPrcgSts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReplacementProcessingStatus";
 			definition = "Provides the replacement processing status of a trade.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV02.mmReplacementProcessingStatus);
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesTradeConfirmationStatusAdviceV02.mmReplacementProcessingStatus);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> ReplacementProcessingStatus7Choice.mmObject();
@@ -443,10 +444,10 @@ public class SecuritiesTradeConfirmationStatusAdviceV01 {
 	public static final MMMessageBuildingBlock mmCancellationProcessingStatus = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CxlPrcgSts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationProcessingStatus";
 			definition = "Provides details on the cancellation status of a trade.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV02.mmCancellationProcessingStatus);
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesTradeConfirmationStatusAdviceV02.mmCancellationProcessingStatus);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> CancellationProcessingStatus6Choice.mmObject();
@@ -486,10 +487,10 @@ public class SecuritiesTradeConfirmationStatusAdviceV01 {
 	public static final MMMessageBuildingBlock mmPartyTradingDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "PtyTradgDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartyTradingDetails";
 			definition = "Details of the trading party.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV02.mmPartyTradingDetails);
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesTradeConfirmationStatusAdviceV02.mmPartyTradingDetails);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> Order16.mmObject();
@@ -529,10 +530,10 @@ public class SecuritiesTradeConfirmationStatusAdviceV01 {
 	public static final MMMessageBuildingBlock mmCounterpartyTradingDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CtrPtyTradgDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CounterpartyTradingDetails";
 			definition = "Details of the trading counterparty.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV02.mmCounterpartyTradingDetails);
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesTradeConfirmationStatusAdviceV02.mmCounterpartyTradingDetails);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> Order16.mmObject();
@@ -576,10 +577,10 @@ public class SecuritiesTradeConfirmationStatusAdviceV01 {
 	public static final MMMessageBuildingBlock mmConfirmationParties = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "ConfPties";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConfirmationParties";
 			definition = "Parties used for acting parties that applies either to the whole message or to individual sides.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV02.mmConfirmationParties);
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesTradeConfirmationStatusAdviceV02.mmConfirmationParties);
 			minOccurs = 0;
 			complexType_lazy = () -> ConfirmationParties4.mmObject();
 		}
@@ -620,10 +621,10 @@ public class SecuritiesTradeConfirmationStatusAdviceV01 {
 	public static final MMMessageBuildingBlock mmDeliveringSettlementParties = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "DlvrgSttlmPties";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeliveringSettlementParties";
 			definition = "Identifies the chain of delivering settlement parties.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV02.mmDeliveringSettlementParties);
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesTradeConfirmationStatusAdviceV02.mmDeliveringSettlementParties);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> SettlementParties23.mmObject();
@@ -664,10 +665,10 @@ public class SecuritiesTradeConfirmationStatusAdviceV01 {
 	public static final MMMessageBuildingBlock mmReceivingSettlementParties = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "RcvgSttlmPties";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceivingSettlementParties";
 			definition = "Identifies the chain of receiving settlement parties.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV02.mmReceivingSettlementParties);
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesTradeConfirmationStatusAdviceV02.mmReceivingSettlementParties);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> SettlementParties23.mmObject();
@@ -711,10 +712,10 @@ public class SecuritiesTradeConfirmationStatusAdviceV01 {
 	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SplmtryData";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryData";
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV02.mmSupplementaryData);
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesTradeConfirmationStatusAdviceV02.mmSupplementaryData);
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
@@ -723,7 +724,7 @@ public class SecuritiesTradeConfirmationStatusAdviceV01 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesTradeConfirmationStatusAdviceV01";
 				definition = "Scope\r\nThis message is sent from Central Matching Utility (CMU) to an executing party or an instructing party to advise the status of the SecuritiesTradeConfirmation message previously sent by the party. The status may be a processing, pending processing, affirmed or disaffirmed, cancel or replacement by an instructing party, a custodian or an affirming party, internal matching, and/or matching status.\r\nThe instructing party is typically the investment manager or an intermediary system/vendor communicating on behalf of the investment manager or of other categories of investors. The executing party is typically the broker/dealer or an intermediary system/vendor communicating on behalf of the broker/dealer.\r\nThe ISO 20022 Business Application Header must be used\r\nUsage\r\nInitiator: In central matching the Initiator is the Central Matching Utility.\r\nRespondent: no response is needed by the recipient of the message.";
 				nextVersions_lazy = () -> Arrays.asList(SecuritiesTradeConfirmationStatusAdviceV02.mmObject());
@@ -731,14 +732,11 @@ public class SecuritiesTradeConfirmationStatusAdviceV01 {
 				rootElement = "Document";
 				xmlTag = "SctiesTradConfStsAdvc";
 				businessArea_lazy = () -> SecuritiesTradePreviousVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV01.mmIdentification,
-						com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV01.mmReferences, com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV01.mmAffirmationStatus,
-						com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV01.mmProcessingStatus, com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV01.mmMatchingStatus,
-						com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV01.mmReplacementProcessingStatus,
-						com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV01.mmCancellationProcessingStatus, com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV01.mmPartyTradingDetails,
-						com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV01.mmCounterpartyTradingDetails, com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV01.mmConfirmationParties,
-						com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV01.mmDeliveringSettlementParties,
-						com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV01.mmReceivingSettlementParties, com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV01.mmSupplementaryData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesTradeConfirmationStatusAdviceV01.mmIdentification, SecuritiesTradeConfirmationStatusAdviceV01.mmReferences,
+						SecuritiesTradeConfirmationStatusAdviceV01.mmAffirmationStatus, SecuritiesTradeConfirmationStatusAdviceV01.mmProcessingStatus, SecuritiesTradeConfirmationStatusAdviceV01.mmMatchingStatus,
+						SecuritiesTradeConfirmationStatusAdviceV01.mmReplacementProcessingStatus, SecuritiesTradeConfirmationStatusAdviceV01.mmCancellationProcessingStatus, SecuritiesTradeConfirmationStatusAdviceV01.mmPartyTradingDetails,
+						SecuritiesTradeConfirmationStatusAdviceV01.mmCounterpartyTradingDetails, SecuritiesTradeConfirmationStatusAdviceV01.mmConfirmationParties, SecuritiesTradeConfirmationStatusAdviceV01.mmDeliveringSettlementParties,
+						SecuritiesTradeConfirmationStatusAdviceV01.mmReceivingSettlementParties, SecuritiesTradeConfirmationStatusAdviceV01.mmSupplementaryData);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "setr";

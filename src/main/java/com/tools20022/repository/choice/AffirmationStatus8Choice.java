@@ -19,8 +19,10 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.AffirmationStatus1Code;
 import com.tools20022.repository.entity.SecuritiesTradeStatus;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification30;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -111,14 +113,14 @@ public class AffirmationStatus8Choice {
 	 */
 	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeStatus.mmAffirmationStatus;
+			businessElementTrace_lazy = () -> SecuritiesTradeStatus.mmAffirmationStatus;
 			componentContext_lazy = () -> AffirmationStatus8Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Cd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Provides the status of the trade at confirmation level at the time the settlement instruction was sent.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.AffirmationStatus1Choice.mmCode;
+			previousVersion_lazy = () -> AffirmationStatus1Choice.mmCode;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AffirmationStatus1Code.mmObject();
@@ -168,14 +170,14 @@ public class AffirmationStatus8Choice {
 	 */
 	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeStatus.mmAffirmationStatus;
+			businessElementTrace_lazy = () -> SecuritiesTradeStatus.mmAffirmationStatus;
 			componentContext_lazy = () -> AffirmationStatus8Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Provides the status of the trade at confirmation level at the time the settlement instruction was sent.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.AffirmationStatus1Choice.mmProprietary;
+			previousVersion_lazy = () -> AffirmationStatus1Choice.mmProprietary;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification30.mmObject();
@@ -185,10 +187,10 @@ public class AffirmationStatus8Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AffirmationStatus8Choice.mmCode, com.tools20022.repository.choice.AffirmationStatus8Choice.mmProprietary);
+				messageElement_lazy = () -> Arrays.asList(AffirmationStatus8Choice.mmCode, AffirmationStatus8Choice.mmProprietary);
 				trace_lazy = () -> SecuritiesTradeStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AffirmationStatus8Choice";
 				definition = "Choice of format for the affirmation status.";
 				previousVersion_lazy = () -> AffirmationStatus1Choice.mmObject();

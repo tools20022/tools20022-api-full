@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.DTCUnallocatedAdjustmentReason1Code
+ * DTCUnallocatedAdjustmentReason1Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.DTCUnallocatedAdjustmentReason2Code
+ * DTCUnallocatedAdjustmentReason2Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.DTCUnallocatedAdjustmentReason3Code
+ * DTCUnallocatedAdjustmentReason3Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -142,20 +158,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * DTCUnallocatedAdjustmentReasonCode.mmCanadianDepositoryInventory}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCUnallocatedAdjustmentReason1Code
- * DTCUnallocatedAdjustmentReason1Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCUnallocatedAdjustmentReason2Code
- * DTCUnallocatedAdjustmentReason2Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCUnallocatedAdjustmentReason3Code
- * DTCUnallocatedAdjustmentReason3Code}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -197,7 +199,7 @@ public class DTCUnallocatedAdjustmentReasonCode {
 	 */
 	public static final MMCode mmGracePeriod = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GracePeriod";
 			definition = "Company is taking a 30 day grace period.";
 			owner_lazy = () -> DTCUnallocatedAdjustmentReasonCode.mmObject();
@@ -227,7 +229,7 @@ public class DTCUnallocatedAdjustmentReasonCode {
 	 */
 	public static final MMCode mmApproximateRate = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ApproximateRate";
 			definition = "Rate is not final. Rate is approximate.";
 			owner_lazy = () -> DTCUnallocatedAdjustmentReasonCode.mmObject();
@@ -257,7 +259,7 @@ public class DTCUnallocatedAdjustmentReasonCode {
 	 */
 	public static final MMCode mmBadAnnouncement = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BadAnnouncement";
 			definition = "Incorrect announcement.";
 			owner_lazy = () -> DTCUnallocatedAdjustmentReasonCode.mmObject();
@@ -287,7 +289,7 @@ public class DTCUnallocatedAdjustmentReasonCode {
 	 */
 	public static final MMCode mmBadPayableDate = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BadPayableDate";
 			definition = "Incorrect payable date.";
 			owner_lazy = () -> DTCUnallocatedAdjustmentReasonCode.mmObject();
@@ -317,7 +319,7 @@ public class DTCUnallocatedAdjustmentReasonCode {
 	 */
 	public static final MMCode mmCashRateUnknown = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashRateUnknown";
 			definition = "Cash rate for allocation is zero.";
 			owner_lazy = () -> DTCUnallocatedAdjustmentReasonCode.mmObject();
@@ -347,7 +349,7 @@ public class DTCUnallocatedAdjustmentReasonCode {
 	 */
 	public static final MMCode mmCashRateZero = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashRateZero";
 			definition = "Cash rate for allocation is zero.";
 			owner_lazy = () -> DTCUnallocatedAdjustmentReasonCode.mmObject();
@@ -378,7 +380,7 @@ public class DTCUnallocatedAdjustmentReasonCode {
 	 */
 	public static final MMCode mmConditionalPayment = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConditionalPayment";
 			definition = "Payment is conditional and conditions have not been met yet.";
 			owner_lazy = () -> DTCUnallocatedAdjustmentReasonCode.mmObject();
@@ -408,7 +410,7 @@ public class DTCUnallocatedAdjustmentReasonCode {
 	 */
 	public static final MMCode mmDefault = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Default";
 			definition = "Issue is in default.";
 			owner_lazy = () -> DTCUnallocatedAdjustmentReasonCode.mmObject();
@@ -438,7 +440,7 @@ public class DTCUnallocatedAdjustmentReasonCode {
 	 */
 	public static final MMCode mmFundsNotReceivedByAgent = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FundsNotReceivedByAgent";
 			definition = "Funds were not received by the agent.";
 			owner_lazy = () -> DTCUnallocatedAdjustmentReasonCode.mmObject();
@@ -468,7 +470,7 @@ public class DTCUnallocatedAdjustmentReasonCode {
 	 */
 	public static final MMCode mmHolidayInCountryOfOrigin = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HolidayInCountryOfOrigin";
 			definition = "Holiday  in country of origin.";
 			owner_lazy = () -> DTCUnallocatedAdjustmentReasonCode.mmObject();
@@ -498,7 +500,7 @@ public class DTCUnallocatedAdjustmentReasonCode {
 	 */
 	public static final MMCode mmInsufficientFundsReceivedFromAgent = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InsufficientFundsReceivedFromAgent";
 			definition = "Insufficient funds  were received from the agent.";
 			owner_lazy = () -> DTCUnallocatedAdjustmentReasonCode.mmObject();
@@ -528,7 +530,7 @@ public class DTCUnallocatedAdjustmentReasonCode {
 	 */
 	public static final MMCode mmIssueNotFunded = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssueNotFunded";
 			definition = "Issue was not funded.";
 			owner_lazy = () -> DTCUnallocatedAdjustmentReasonCode.mmObject();
@@ -558,7 +560,7 @@ public class DTCUnallocatedAdjustmentReasonCode {
 	 */
 	public static final MMCode mmIssueNotMaturing = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssueNotMaturing";
 			definition = "Issue is not maturing.";
 			owner_lazy = () -> DTCUnallocatedAdjustmentReasonCode.mmObject();
@@ -588,7 +590,7 @@ public class DTCUnallocatedAdjustmentReasonCode {
 	 */
 	public static final MMCode mmAfterCycleCutOff = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AfterCycleCutOff";
 			definition = "Issues funded and/or identified after the cycle cut off.";
 			owner_lazy = () -> DTCUnallocatedAdjustmentReasonCode.mmObject();
@@ -618,7 +620,7 @@ public class DTCUnallocatedAdjustmentReasonCode {
 	 */
 	public static final MMCode mmItemIsPending = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ItemIsPending";
 			definition = "Item is pending.";
 			owner_lazy = () -> DTCUnallocatedAdjustmentReasonCode.mmObject();
@@ -648,7 +650,7 @@ public class DTCUnallocatedAdjustmentReasonCode {
 	 */
 	public static final MMCode mmLiquidation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Liquidation";
 			definition = "Issue is being liquidated.";
 			owner_lazy = () -> DTCUnallocatedAdjustmentReasonCode.mmObject();
@@ -678,7 +680,7 @@ public class DTCUnallocatedAdjustmentReasonCode {
 	 */
 	public static final MMCode mmNotionalBalance = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotionalBalance";
 			definition = "Notional balance pincipal will not be paid.";
 			owner_lazy = () -> DTCUnallocatedAdjustmentReasonCode.mmObject();
@@ -708,7 +710,7 @@ public class DTCUnallocatedAdjustmentReasonCode {
 	 */
 	public static final MMCode mmOther = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
 			definition = "Reserved for new user defined reason codes.";
 			owner_lazy = () -> DTCUnallocatedAdjustmentReasonCode.mmObject();
@@ -738,7 +740,7 @@ public class DTCUnallocatedAdjustmentReasonCode {
 	 */
 	public static final MMCode mmPaidUponReceiptOfCheck = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaidUponReceiptOfCheck";
 			definition = "Paid upon receipt of check.";
 			owner_lazy = () -> DTCUnallocatedAdjustmentReasonCode.mmObject();
@@ -768,7 +770,7 @@ public class DTCUnallocatedAdjustmentReasonCode {
 	 */
 	public static final MMCode mmPendingConversionOfFunds = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingConversionOfFunds";
 			definition = "Pending conversion of funds. ";
 			owner_lazy = () -> DTCUnallocatedAdjustmentReasonCode.mmObject();
@@ -798,7 +800,7 @@ public class DTCUnallocatedAdjustmentReasonCode {
 	 */
 	public static final MMCode mmRecapitalizationNotFunded = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RecapitalizationNotFunded";
 			definition = "Recapitalization. Issue not funded.";
 			owner_lazy = () -> DTCUnallocatedAdjustmentReasonCode.mmObject();
@@ -828,7 +830,7 @@ public class DTCUnallocatedAdjustmentReasonCode {
 	 */
 	public static final MMCode mmRedemptionOfRatesNotYetFunded = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RedemptionOfRatesNotYetFunded";
 			definition = "Redemption of rates. Issue not funded.";
 			owner_lazy = () -> DTCUnallocatedAdjustmentReasonCode.mmObject();
@@ -858,7 +860,7 @@ public class DTCUnallocatedAdjustmentReasonCode {
 	 */
 	public static final MMCode mmReleasedPledgePosition = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReleasedPledgePosition";
 			definition = "Released pledge position.";
 			owner_lazy = () -> DTCUnallocatedAdjustmentReasonCode.mmObject();
@@ -888,7 +890,7 @@ public class DTCUnallocatedAdjustmentReasonCode {
 	 */
 	public static final MMCode mmSaleOfAssetsNotYetFunded = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SaleOfAssetsNotYetFunded";
 			definition = "Sale of asset. Issue not funded.";
 			owner_lazy = () -> DTCUnallocatedAdjustmentReasonCode.mmObject();
@@ -918,7 +920,7 @@ public class DTCUnallocatedAdjustmentReasonCode {
 	 */
 	public static final MMCode mmSameDayPositionCapture = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SameDayPositionCapture";
 			definition = "Same day position capture.";
 			owner_lazy = () -> DTCUnallocatedAdjustmentReasonCode.mmObject();
@@ -948,7 +950,7 @@ public class DTCUnallocatedAdjustmentReasonCode {
 	 */
 	public static final MMCode mmSpecialDistributionNotYetFunded = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SpecialDistributionNotYetFunded";
 			definition = "Special distribution. Issue not funded.";
 			owner_lazy = () -> DTCUnallocatedAdjustmentReasonCode.mmObject();
@@ -978,7 +980,7 @@ public class DTCUnallocatedAdjustmentReasonCode {
 	 */
 	public static final MMCode mmSpecificIssuesSuppressed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SpecificIssuesSuppressed";
 			definition = "Specific issues have been suppressed.";
 			owner_lazy = () -> DTCUnallocatedAdjustmentReasonCode.mmObject();
@@ -1008,7 +1010,7 @@ public class DTCUnallocatedAdjustmentReasonCode {
 	 */
 	public static final MMCode mmCallRescinded = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CallRescinded";
 			definition = "Call Rescinded";
 			owner_lazy = () -> DTCUnallocatedAdjustmentReasonCode.mmObject();
@@ -1038,7 +1040,7 @@ public class DTCUnallocatedAdjustmentReasonCode {
 	 */
 	public static final MMCode mmCDAcceleratedMaturity = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CDAcceleratedMaturity";
 			definition = "CD Accelerated Maturity";
 			owner_lazy = () -> DTCUnallocatedAdjustmentReasonCode.mmObject();
@@ -1068,7 +1070,7 @@ public class DTCUnallocatedAdjustmentReasonCode {
 	 */
 	public static final MMCode mmCHIPSPayment = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CHIPSPayment";
 			definition = "CHIPS Payment.";
 			owner_lazy = () -> DTCUnallocatedAdjustmentReasonCode.mmObject();
@@ -1098,7 +1100,7 @@ public class DTCUnallocatedAdjustmentReasonCode {
 	 */
 	public static final MMCode mmFiveDayGracePeriod = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FiveDayGracePeriod";
 			definition = "Five Day Grace Period";
 			owner_lazy = () -> DTCUnallocatedAdjustmentReasonCode.mmObject();
@@ -1128,7 +1130,7 @@ public class DTCUnallocatedAdjustmentReasonCode {
 	 */
 	public static final MMCode mmFDIC = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FDIC";
 			definition = "Failed Bank, FDIC Assumed.";
 			owner_lazy = () -> DTCUnallocatedAdjustmentReasonCode.mmObject();
@@ -1158,7 +1160,7 @@ public class DTCUnallocatedAdjustmentReasonCode {
 	 */
 	public static final MMCode mmPledgedPosition = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PledgedPosition";
 			definition = "Pledged Position";
 			owner_lazy = () -> DTCUnallocatedAdjustmentReasonCode.mmObject();
@@ -1188,7 +1190,7 @@ public class DTCUnallocatedAdjustmentReasonCode {
 	 */
 	public static final MMCode mmMaturityForStockPaymentOption = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaturityForStockPaymentOption";
 			definition = "Maturity for stock payment option.";
 			owner_lazy = () -> DTCUnallocatedAdjustmentReasonCode.mmObject();
@@ -1218,7 +1220,7 @@ public class DTCUnallocatedAdjustmentReasonCode {
 	 */
 	public static final MMCode mmChurchBondNotFunded = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChurchBondNotFunded";
 			definition = "Church bond not funded.";
 			owner_lazy = () -> DTCUnallocatedAdjustmentReasonCode.mmObject();
@@ -1248,7 +1250,7 @@ public class DTCUnallocatedAdjustmentReasonCode {
 	 */
 	public static final MMCode mmFundsHeldAtChaseForOFAC = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FundsHeldAtChaseForOFAC";
 			definition = "Funds held at Chase for OFAC.";
 			owner_lazy = () -> DTCUnallocatedAdjustmentReasonCode.mmObject();
@@ -1278,7 +1280,7 @@ public class DTCUnallocatedAdjustmentReasonCode {
 	 */
 	public static final MMCode mmCanadianDepositoryInventory = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CanadianDepositoryInventory";
 			definition = "Canadian depository inventory.";
 			owner_lazy = () -> DTCUnallocatedAdjustmentReasonCode.mmObject();
@@ -1289,29 +1291,22 @@ public class DTCUnallocatedAdjustmentReasonCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DTCUnallocatedAdjustmentReasonCode";
 				definition = "DTC Unallocated reason codes for payment adjustments.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DTCUnallocatedAdjustmentReasonCode.mmGracePeriod, com.tools20022.repository.codeset.DTCUnallocatedAdjustmentReasonCode.mmApproximateRate,
-						com.tools20022.repository.codeset.DTCUnallocatedAdjustmentReasonCode.mmBadAnnouncement, com.tools20022.repository.codeset.DTCUnallocatedAdjustmentReasonCode.mmBadPayableDate,
-						com.tools20022.repository.codeset.DTCUnallocatedAdjustmentReasonCode.mmCashRateUnknown, com.tools20022.repository.codeset.DTCUnallocatedAdjustmentReasonCode.mmCashRateZero,
-						com.tools20022.repository.codeset.DTCUnallocatedAdjustmentReasonCode.mmConditionalPayment, com.tools20022.repository.codeset.DTCUnallocatedAdjustmentReasonCode.mmDefault,
-						com.tools20022.repository.codeset.DTCUnallocatedAdjustmentReasonCode.mmFundsNotReceivedByAgent, com.tools20022.repository.codeset.DTCUnallocatedAdjustmentReasonCode.mmHolidayInCountryOfOrigin,
-						com.tools20022.repository.codeset.DTCUnallocatedAdjustmentReasonCode.mmInsufficientFundsReceivedFromAgent, com.tools20022.repository.codeset.DTCUnallocatedAdjustmentReasonCode.mmIssueNotFunded,
-						com.tools20022.repository.codeset.DTCUnallocatedAdjustmentReasonCode.mmIssueNotMaturing, com.tools20022.repository.codeset.DTCUnallocatedAdjustmentReasonCode.mmAfterCycleCutOff,
-						com.tools20022.repository.codeset.DTCUnallocatedAdjustmentReasonCode.mmItemIsPending, com.tools20022.repository.codeset.DTCUnallocatedAdjustmentReasonCode.mmLiquidation,
-						com.tools20022.repository.codeset.DTCUnallocatedAdjustmentReasonCode.mmNotionalBalance, com.tools20022.repository.codeset.DTCUnallocatedAdjustmentReasonCode.mmOther,
-						com.tools20022.repository.codeset.DTCUnallocatedAdjustmentReasonCode.mmPaidUponReceiptOfCheck, com.tools20022.repository.codeset.DTCUnallocatedAdjustmentReasonCode.mmPendingConversionOfFunds,
-						com.tools20022.repository.codeset.DTCUnallocatedAdjustmentReasonCode.mmRecapitalizationNotFunded, com.tools20022.repository.codeset.DTCUnallocatedAdjustmentReasonCode.mmRedemptionOfRatesNotYetFunded,
-						com.tools20022.repository.codeset.DTCUnallocatedAdjustmentReasonCode.mmReleasedPledgePosition, com.tools20022.repository.codeset.DTCUnallocatedAdjustmentReasonCode.mmSaleOfAssetsNotYetFunded,
-						com.tools20022.repository.codeset.DTCUnallocatedAdjustmentReasonCode.mmSameDayPositionCapture, com.tools20022.repository.codeset.DTCUnallocatedAdjustmentReasonCode.mmSpecialDistributionNotYetFunded,
-						com.tools20022.repository.codeset.DTCUnallocatedAdjustmentReasonCode.mmSpecificIssuesSuppressed, com.tools20022.repository.codeset.DTCUnallocatedAdjustmentReasonCode.mmCallRescinded,
-						com.tools20022.repository.codeset.DTCUnallocatedAdjustmentReasonCode.mmCDAcceleratedMaturity, com.tools20022.repository.codeset.DTCUnallocatedAdjustmentReasonCode.mmCHIPSPayment,
-						com.tools20022.repository.codeset.DTCUnallocatedAdjustmentReasonCode.mmFiveDayGracePeriod, com.tools20022.repository.codeset.DTCUnallocatedAdjustmentReasonCode.mmFDIC,
-						com.tools20022.repository.codeset.DTCUnallocatedAdjustmentReasonCode.mmPledgedPosition, com.tools20022.repository.codeset.DTCUnallocatedAdjustmentReasonCode.mmMaturityForStockPaymentOption,
-						com.tools20022.repository.codeset.DTCUnallocatedAdjustmentReasonCode.mmChurchBondNotFunded, com.tools20022.repository.codeset.DTCUnallocatedAdjustmentReasonCode.mmFundsHeldAtChaseForOFAC,
-						com.tools20022.repository.codeset.DTCUnallocatedAdjustmentReasonCode.mmCanadianDepositoryInventory);
+				code_lazy = () -> Arrays.asList(DTCUnallocatedAdjustmentReasonCode.mmGracePeriod, DTCUnallocatedAdjustmentReasonCode.mmApproximateRate, DTCUnallocatedAdjustmentReasonCode.mmBadAnnouncement,
+						DTCUnallocatedAdjustmentReasonCode.mmBadPayableDate, DTCUnallocatedAdjustmentReasonCode.mmCashRateUnknown, DTCUnallocatedAdjustmentReasonCode.mmCashRateZero, DTCUnallocatedAdjustmentReasonCode.mmConditionalPayment,
+						DTCUnallocatedAdjustmentReasonCode.mmDefault, DTCUnallocatedAdjustmentReasonCode.mmFundsNotReceivedByAgent, DTCUnallocatedAdjustmentReasonCode.mmHolidayInCountryOfOrigin,
+						DTCUnallocatedAdjustmentReasonCode.mmInsufficientFundsReceivedFromAgent, DTCUnallocatedAdjustmentReasonCode.mmIssueNotFunded, DTCUnallocatedAdjustmentReasonCode.mmIssueNotMaturing,
+						DTCUnallocatedAdjustmentReasonCode.mmAfterCycleCutOff, DTCUnallocatedAdjustmentReasonCode.mmItemIsPending, DTCUnallocatedAdjustmentReasonCode.mmLiquidation, DTCUnallocatedAdjustmentReasonCode.mmNotionalBalance,
+						DTCUnallocatedAdjustmentReasonCode.mmOther, DTCUnallocatedAdjustmentReasonCode.mmPaidUponReceiptOfCheck, DTCUnallocatedAdjustmentReasonCode.mmPendingConversionOfFunds,
+						DTCUnallocatedAdjustmentReasonCode.mmRecapitalizationNotFunded, DTCUnallocatedAdjustmentReasonCode.mmRedemptionOfRatesNotYetFunded, DTCUnallocatedAdjustmentReasonCode.mmReleasedPledgePosition,
+						DTCUnallocatedAdjustmentReasonCode.mmSaleOfAssetsNotYetFunded, DTCUnallocatedAdjustmentReasonCode.mmSameDayPositionCapture, DTCUnallocatedAdjustmentReasonCode.mmSpecialDistributionNotYetFunded,
+						DTCUnallocatedAdjustmentReasonCode.mmSpecificIssuesSuppressed, DTCUnallocatedAdjustmentReasonCode.mmCallRescinded, DTCUnallocatedAdjustmentReasonCode.mmCDAcceleratedMaturity,
+						DTCUnallocatedAdjustmentReasonCode.mmCHIPSPayment, DTCUnallocatedAdjustmentReasonCode.mmFiveDayGracePeriod, DTCUnallocatedAdjustmentReasonCode.mmFDIC, DTCUnallocatedAdjustmentReasonCode.mmPledgedPosition,
+						DTCUnallocatedAdjustmentReasonCode.mmMaturityForStockPaymentOption, DTCUnallocatedAdjustmentReasonCode.mmChurchBondNotFunded, DTCUnallocatedAdjustmentReasonCode.mmFundsHeldAtChaseForOFAC,
+						DTCUnallocatedAdjustmentReasonCode.mmCanadianDepositoryInventory);
 				derivation_lazy = () -> Arrays.asList(DTCUnallocatedAdjustmentReason1Code.mmObject(), DTCUnallocatedAdjustmentReason2Code.mmObject(), DTCUnallocatedAdjustmentReason3Code.mmObject());
 			}
 		});

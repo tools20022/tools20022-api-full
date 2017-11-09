@@ -20,8 +20,11 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.NoReasonCode;
 import com.tools20022.repository.entity.SecuritiesTradeStatusReason;
+import com.tools20022.repository.entity.StatusReason;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.AllegementMatchingReason1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -110,14 +113,14 @@ public class MatchingReason4Choice {
 	 */
 	public static final MMMessageAssociationEnd mmReason = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeStatusReason.mmUnmatchedReason;
+			businessElementTrace_lazy = () -> SecuritiesTradeStatusReason.mmUnmatchedReason;
 			componentContext_lazy = () -> MatchingReason4Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Rsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reason";
 			definition = "Specifies the reason of the MatchedAlleged Status.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.MatchingReason3Choice.mmReason;
+			previousVersion_lazy = () -> MatchingReason3Choice.mmReason;
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> AllegementMatchingReason1.mmObject();
@@ -164,14 +167,14 @@ public class MatchingReason4Choice {
 	 */
 	public static final MMMessageAttribute mmNoSpecifiedReason = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmNoSpecifiedReason;
+			businessElementTrace_lazy = () -> StatusReason.mmNoSpecifiedReason;
 			componentContext_lazy = () -> MatchingReason4Choice.mmObject();
 			isDerived = false;
 			xmlTag = "NoSpcfdRsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoSpecifiedReason";
 			definition = "Indicates that there is no reason available or to report.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.MatchingReason3Choice.mmNoSpecifiedReason;
+			previousVersion_lazy = () -> MatchingReason3Choice.mmNoSpecifiedReason;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> NoReasonCode.mmObject();
@@ -181,10 +184,10 @@ public class MatchingReason4Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.MatchingReason4Choice.mmReason, com.tools20022.repository.choice.MatchingReason4Choice.mmNoSpecifiedReason);
+				messageElement_lazy = () -> Arrays.asList(MatchingReason4Choice.mmReason, MatchingReason4Choice.mmNoSpecifiedReason);
 				trace_lazy = () -> SecuritiesTradeStatusReason.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MatchingReason4Choice";
 				definition = "Choice of format for the matching processing status.";
 				previousVersion_lazy = () -> MatchingReason3Choice.mmObject();

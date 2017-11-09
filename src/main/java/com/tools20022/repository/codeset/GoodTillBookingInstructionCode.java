@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -28,6 +30,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.GoodTillBookingInstruction1Code
+ * GoodTillBookingInstruction1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -39,14 +49,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.GoodTillBookingInstructionCode#mmAccumulateTillTold
  * GoodTillBookingInstructionCode.mmAccumulateTillTold}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.GoodTillBookingInstruction1Code
- * GoodTillBookingInstruction1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -98,7 +100,7 @@ public class GoodTillBookingInstructionCode {
 	 */
 	public static final MMCode mmBookOnExecutionDay = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BookOnExecutionDay";
 			definition = "Book out all trades on day of execution.";
 			owner_lazy = () -> GoodTillBookingInstructionCode.mmObject();
@@ -128,7 +130,7 @@ public class GoodTillBookingInstructionCode {
 	 */
 	public static final MMCode mmAccumulateTillEnd = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccumulateTillEnd";
 			definition = "Accumulate executions until order is filled or expires.";
 			owner_lazy = () -> GoodTillBookingInstructionCode.mmObject();
@@ -158,7 +160,7 @@ public class GoodTillBookingInstructionCode {
 	 */
 	public static final MMCode mmAccumulateTillTold = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccumulateTillTold";
 			definition = "Accumulate until verbally notified otherwise.";
 			owner_lazy = () -> GoodTillBookingInstructionCode.mmObject();
@@ -169,13 +171,12 @@ public class GoodTillBookingInstructionCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("BOEX");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "GoodTillBookingInstructionCode";
 				definition = "States whether executions are booked out or accumulated on a partially filled good till order on the day of execution or to accumulate.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.GoodTillBookingInstructionCode.mmBookOnExecutionDay, com.tools20022.repository.codeset.GoodTillBookingInstructionCode.mmAccumulateTillEnd,
-						com.tools20022.repository.codeset.GoodTillBookingInstructionCode.mmAccumulateTillTold);
+				code_lazy = () -> Arrays.asList(GoodTillBookingInstructionCode.mmBookOnExecutionDay, GoodTillBookingInstructionCode.mmAccumulateTillEnd, GoodTillBookingInstructionCode.mmAccumulateTillTold);
 				derivation_lazy = () -> Arrays.asList(GoodTillBookingInstruction1Code.mmObject());
 			}
 		});

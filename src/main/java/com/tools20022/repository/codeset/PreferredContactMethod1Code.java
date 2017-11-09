@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.PreferredContactMethodCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -94,7 +96,7 @@ public class PreferredContactMethod1Code extends PreferredContactMethodCode {
 	 */
 	public static final MMCode mmLetter = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Letter";
 			owner_lazy = () -> PreferredContactMethod1Code.mmObject();
 		}
@@ -117,7 +119,7 @@ public class PreferredContactMethod1Code extends PreferredContactMethodCode {
 	 */
 	public static final MMCode mmEmail = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Email";
 			owner_lazy = () -> PreferredContactMethod1Code.mmObject();
 		}
@@ -140,7 +142,7 @@ public class PreferredContactMethod1Code extends PreferredContactMethodCode {
 	 */
 	public static final MMCode mmPhone = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Phone";
 			owner_lazy = () -> PreferredContactMethod1Code.mmObject();
 		}
@@ -163,7 +165,7 @@ public class PreferredContactMethod1Code extends PreferredContactMethodCode {
 	 */
 	public static final MMCode mmFax = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Fax";
 			owner_lazy = () -> PreferredContactMethod1Code.mmObject();
 		}
@@ -186,7 +188,7 @@ public class PreferredContactMethod1Code extends PreferredContactMethodCode {
 	 */
 	public static final MMCode mmMobileOrCellPhone = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MobileOrCellPhone";
 			owner_lazy = () -> PreferredContactMethod1Code.mmObject();
 		}
@@ -195,14 +197,13 @@ public class PreferredContactMethod1Code extends PreferredContactMethodCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("LETT");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PreferredContactMethod1Code";
 				definition = "Preferred method used to reach the individual contact within an organisation.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PreferredContactMethod1Code.mmLetter, com.tools20022.repository.codeset.PreferredContactMethod1Code.mmEmail,
-						com.tools20022.repository.codeset.PreferredContactMethod1Code.mmPhone, com.tools20022.repository.codeset.PreferredContactMethod1Code.mmFax,
-						com.tools20022.repository.codeset.PreferredContactMethod1Code.mmMobileOrCellPhone);
+				code_lazy = () -> Arrays.asList(PreferredContactMethod1Code.mmLetter, PreferredContactMethod1Code.mmEmail, PreferredContactMethod1Code.mmPhone, PreferredContactMethod1Code.mmFax,
+						PreferredContactMethod1Code.mmMobileOrCellPhone);
 				trace_lazy = () -> PreferredContactMethodCode.mmObject();
 			}
 		});

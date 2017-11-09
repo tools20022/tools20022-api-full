@@ -19,7 +19,10 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.entity.PairOff;
 import com.tools20022.repository.entity.SecuritiesSettlement;
+import com.tools20022.repository.GeneratedRepository;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -106,11 +109,11 @@ public class PairedOrTurnedQuantity2Choice {
 	 */
 	public static final MMMessageAssociationEnd mmPairedOffQuantity = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PairOff.mmPairedOffQuantity;
+			businessElementTrace_lazy = () -> PairOff.mmPairedOffQuantity;
 			componentContext_lazy = () -> PairedOrTurnedQuantity2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "PairdOffQty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PairedOffQuantity";
 			definition = "Quantity of financial instruments of the linked transaction to be paired-off.";
 			maxOccurs = 1;
@@ -156,11 +159,11 @@ public class PairedOrTurnedQuantity2Choice {
 	 */
 	public static final MMMessageAssociationEnd mmTurnedQuantity = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmTurnedQuantity;
+			businessElementTrace_lazy = () -> SecuritiesSettlement.mmTurnedQuantity;
 			componentContext_lazy = () -> PairedOrTurnedQuantity2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "TrndQty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TurnedQuantity";
 			definition = "Quantity of financial instruments of the linked transaction to be turned.";
 			maxOccurs = 1;
@@ -173,10 +176,10 @@ public class PairedOrTurnedQuantity2Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PairedOrTurnedQuantity2Choice.mmPairedOffQuantity, com.tools20022.repository.choice.PairedOrTurnedQuantity2Choice.mmTurnedQuantity);
+				messageElement_lazy = () -> Arrays.asList(PairedOrTurnedQuantity2Choice.mmPairedOffQuantity, PairedOrTurnedQuantity2Choice.mmTurnedQuantity);
 				trace_lazy = () -> SecuritiesSettlement.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
 						return DateFormat.getDateInstance(java.text.DateFormat.LONG).parse("May 5, 2016");

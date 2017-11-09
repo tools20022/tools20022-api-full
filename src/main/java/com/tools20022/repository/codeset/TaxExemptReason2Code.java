@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.TaxExemptReasonCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -170,7 +172,7 @@ public class TaxExemptReason2Code extends TaxExemptReasonCode {
 	 */
 	public static final MMCode mmNone = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "None";
 			owner_lazy = () -> TaxExemptReason2Code.mmObject();
 		}
@@ -193,7 +195,7 @@ public class TaxExemptReason2Code extends TaxExemptReasonCode {
 	 */
 	public static final MMCode mmMaxiISA = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaxiISA";
 			owner_lazy = () -> TaxExemptReason2Code.mmObject();
 		}
@@ -216,7 +218,7 @@ public class TaxExemptReason2Code extends TaxExemptReasonCode {
 	 */
 	public static final MMCode mmMiniCashISA = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MiniCashISA";
 			owner_lazy = () -> TaxExemptReason2Code.mmObject();
 		}
@@ -239,7 +241,7 @@ public class TaxExemptReason2Code extends TaxExemptReasonCode {
 	 */
 	public static final MMCode mmMiniStocksAndSharesISA = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MiniStocksAndSharesISA";
 			owner_lazy = () -> TaxExemptReason2Code.mmObject();
 		}
@@ -262,7 +264,7 @@ public class TaxExemptReason2Code extends TaxExemptReasonCode {
 	 */
 	public static final MMCode mmMiniInsuranceISA = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MiniInsuranceISA";
 			owner_lazy = () -> TaxExemptReason2Code.mmObject();
 		}
@@ -285,7 +287,7 @@ public class TaxExemptReason2Code extends TaxExemptReasonCode {
 	 */
 	public static final MMCode mmCurrentYearPayment = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrentYearPayment";
 			owner_lazy = () -> TaxExemptReason2Code.mmObject();
 		}
@@ -308,7 +310,7 @@ public class TaxExemptReason2Code extends TaxExemptReasonCode {
 	 */
 	public static final MMCode mmPriorYearPayment = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PriorYearPayment";
 			owner_lazy = () -> TaxExemptReason2Code.mmObject();
 		}
@@ -331,7 +333,7 @@ public class TaxExemptReason2Code extends TaxExemptReasonCode {
 	 */
 	public static final MMCode mmAssetTransfer = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AssetTransfer";
 			owner_lazy = () -> TaxExemptReason2Code.mmObject();
 		}
@@ -354,7 +356,7 @@ public class TaxExemptReason2Code extends TaxExemptReasonCode {
 	 */
 	public static final MMCode mmEmployeePriorYear = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EmployeePriorYear";
 			owner_lazy = () -> TaxExemptReason2Code.mmObject();
 		}
@@ -377,7 +379,7 @@ public class TaxExemptReason2Code extends TaxExemptReasonCode {
 	 */
 	public static final MMCode mmEmployeeCurrentYear = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EmployeeCurrentYear";
 			owner_lazy = () -> TaxExemptReason2Code.mmObject();
 		}
@@ -400,7 +402,7 @@ public class TaxExemptReason2Code extends TaxExemptReasonCode {
 	 */
 	public static final MMCode mmEmployerPriorYear = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EmployerPriorYear";
 			owner_lazy = () -> TaxExemptReason2Code.mmObject();
 		}
@@ -423,7 +425,7 @@ public class TaxExemptReason2Code extends TaxExemptReasonCode {
 	 */
 	public static final MMCode mmEmployerCurrentYear = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EmployerCurrentYear";
 			owner_lazy = () -> TaxExemptReason2Code.mmObject();
 		}
@@ -446,7 +448,7 @@ public class TaxExemptReason2Code extends TaxExemptReasonCode {
 	 */
 	public static final MMCode mmNonFundPrototypeIRA = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonFundPrototypeIRA";
 			owner_lazy = () -> TaxExemptReason2Code.mmObject();
 		}
@@ -469,7 +471,7 @@ public class TaxExemptReason2Code extends TaxExemptReasonCode {
 	 */
 	public static final MMCode mmNonFundQualifiedPlan = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonFundQualifiedPlan";
 			owner_lazy = () -> TaxExemptReason2Code.mmObject();
 		}
@@ -492,7 +494,7 @@ public class TaxExemptReason2Code extends TaxExemptReasonCode {
 	 */
 	public static final MMCode mmDefinedContributionPlan = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DefinedContributionPlan";
 			owner_lazy = () -> TaxExemptReason2Code.mmObject();
 		}
@@ -515,7 +517,7 @@ public class TaxExemptReason2Code extends TaxExemptReasonCode {
 	 */
 	public static final MMCode mmIndividualRetirementAccount = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IndividualRetirementAccount";
 			owner_lazy = () -> TaxExemptReason2Code.mmObject();
 		}
@@ -538,7 +540,7 @@ public class TaxExemptReason2Code extends TaxExemptReasonCode {
 	 */
 	public static final MMCode mmIndividualRetirementAccountRollover = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IndividualRetirementAccountRollover";
 			owner_lazy = () -> TaxExemptReason2Code.mmObject();
 		}
@@ -561,7 +563,7 @@ public class TaxExemptReason2Code extends TaxExemptReasonCode {
 	 */
 	public static final MMCode mmKEOGH = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "KEOGH";
 			owner_lazy = () -> TaxExemptReason2Code.mmObject();
 		}
@@ -584,7 +586,7 @@ public class TaxExemptReason2Code extends TaxExemptReasonCode {
 	 */
 	public static final MMCode mmProfitSharingPlan = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProfitSharingPlan";
 			owner_lazy = () -> TaxExemptReason2Code.mmObject();
 		}
@@ -607,7 +609,7 @@ public class TaxExemptReason2Code extends TaxExemptReasonCode {
 	 */
 	public static final MMCode mmFourHundredAndOneK = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FourHundredAndOneK";
 			owner_lazy = () -> TaxExemptReason2Code.mmObject();
 		}
@@ -630,7 +632,7 @@ public class TaxExemptReason2Code extends TaxExemptReasonCode {
 	 */
 	public static final MMCode mmSelfDirectedIRA = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SelfDirectedIRA";
 			owner_lazy = () -> TaxExemptReason2Code.mmObject();
 		}
@@ -653,7 +655,7 @@ public class TaxExemptReason2Code extends TaxExemptReasonCode {
 	 */
 	public static final MMCode mmFourHundredAndThreeB = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FourHundredAndThreeB";
 			owner_lazy = () -> TaxExemptReason2Code.mmObject();
 		}
@@ -676,7 +678,7 @@ public class TaxExemptReason2Code extends TaxExemptReasonCode {
 	 */
 	public static final MMCode mmFourHundredFiftySeven = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FourHundredFiftySeven";
 			owner_lazy = () -> TaxExemptReason2Code.mmObject();
 		}
@@ -699,7 +701,7 @@ public class TaxExemptReason2Code extends TaxExemptReasonCode {
 	 */
 	public static final MMCode mmRothIRAFundPrototype = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RothIRAFundPrototype";
 			owner_lazy = () -> TaxExemptReason2Code.mmObject();
 		}
@@ -722,7 +724,7 @@ public class TaxExemptReason2Code extends TaxExemptReasonCode {
 	 */
 	public static final MMCode mmRothIRANonPrototype = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RothIRANonPrototype";
 			owner_lazy = () -> TaxExemptReason2Code.mmObject();
 		}
@@ -745,7 +747,7 @@ public class TaxExemptReason2Code extends TaxExemptReasonCode {
 	 */
 	public static final MMCode mmRothConversionIRAFundPrototype = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RothConversionIRAFundPrototype";
 			owner_lazy = () -> TaxExemptReason2Code.mmObject();
 		}
@@ -768,7 +770,7 @@ public class TaxExemptReason2Code extends TaxExemptReasonCode {
 	 */
 	public static final MMCode mmRothConversionIRANonPrototype = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RothConversionIRANonPrototype";
 			owner_lazy = () -> TaxExemptReason2Code.mmObject();
 		}
@@ -791,7 +793,7 @@ public class TaxExemptReason2Code extends TaxExemptReasonCode {
 	 */
 	public static final MMCode mmEducationIRAFundPrototype = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EducationIRAFundPrototype";
 			owner_lazy = () -> TaxExemptReason2Code.mmObject();
 		}
@@ -814,7 +816,7 @@ public class TaxExemptReason2Code extends TaxExemptReasonCode {
 	 */
 	public static final MMCode mmEducationIRANonPrototype = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EducationIRANonPrototype";
 			owner_lazy = () -> TaxExemptReason2Code.mmObject();
 		}
@@ -837,7 +839,7 @@ public class TaxExemptReason2Code extends TaxExemptReasonCode {
 	 */
 	public static final MMCode mmOther = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
 			owner_lazy = () -> TaxExemptReason2Code.mmObject();
 		}
@@ -846,26 +848,18 @@ public class TaxExemptReason2Code extends TaxExemptReasonCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("NONE");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TaxExemptReason2Code";
 				definition = "Specifies the reason a specific tax has not been levied/deducted on a given transaction.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TaxExemptReason2Code.mmNone, com.tools20022.repository.codeset.TaxExemptReason2Code.mmMaxiISA,
-						com.tools20022.repository.codeset.TaxExemptReason2Code.mmMiniCashISA, com.tools20022.repository.codeset.TaxExemptReason2Code.mmMiniStocksAndSharesISA,
-						com.tools20022.repository.codeset.TaxExemptReason2Code.mmMiniInsuranceISA, com.tools20022.repository.codeset.TaxExemptReason2Code.mmCurrentYearPayment,
-						com.tools20022.repository.codeset.TaxExemptReason2Code.mmPriorYearPayment, com.tools20022.repository.codeset.TaxExemptReason2Code.mmAssetTransfer,
-						com.tools20022.repository.codeset.TaxExemptReason2Code.mmEmployeePriorYear, com.tools20022.repository.codeset.TaxExemptReason2Code.mmEmployeeCurrentYear,
-						com.tools20022.repository.codeset.TaxExemptReason2Code.mmEmployerPriorYear, com.tools20022.repository.codeset.TaxExemptReason2Code.mmEmployerCurrentYear,
-						com.tools20022.repository.codeset.TaxExemptReason2Code.mmNonFundPrototypeIRA, com.tools20022.repository.codeset.TaxExemptReason2Code.mmNonFundQualifiedPlan,
-						com.tools20022.repository.codeset.TaxExemptReason2Code.mmDefinedContributionPlan, com.tools20022.repository.codeset.TaxExemptReason2Code.mmIndividualRetirementAccount,
-						com.tools20022.repository.codeset.TaxExemptReason2Code.mmIndividualRetirementAccountRollover, com.tools20022.repository.codeset.TaxExemptReason2Code.mmKEOGH,
-						com.tools20022.repository.codeset.TaxExemptReason2Code.mmProfitSharingPlan, com.tools20022.repository.codeset.TaxExemptReason2Code.mmFourHundredAndOneK,
-						com.tools20022.repository.codeset.TaxExemptReason2Code.mmSelfDirectedIRA, com.tools20022.repository.codeset.TaxExemptReason2Code.mmFourHundredAndThreeB,
-						com.tools20022.repository.codeset.TaxExemptReason2Code.mmFourHundredFiftySeven, com.tools20022.repository.codeset.TaxExemptReason2Code.mmRothIRAFundPrototype,
-						com.tools20022.repository.codeset.TaxExemptReason2Code.mmRothIRANonPrototype, com.tools20022.repository.codeset.TaxExemptReason2Code.mmRothConversionIRAFundPrototype,
-						com.tools20022.repository.codeset.TaxExemptReason2Code.mmRothConversionIRANonPrototype, com.tools20022.repository.codeset.TaxExemptReason2Code.mmEducationIRAFundPrototype,
-						com.tools20022.repository.codeset.TaxExemptReason2Code.mmEducationIRANonPrototype, com.tools20022.repository.codeset.TaxExemptReason2Code.mmOther);
+				code_lazy = () -> Arrays.asList(TaxExemptReason2Code.mmNone, TaxExemptReason2Code.mmMaxiISA, TaxExemptReason2Code.mmMiniCashISA, TaxExemptReason2Code.mmMiniStocksAndSharesISA, TaxExemptReason2Code.mmMiniInsuranceISA,
+						TaxExemptReason2Code.mmCurrentYearPayment, TaxExemptReason2Code.mmPriorYearPayment, TaxExemptReason2Code.mmAssetTransfer, TaxExemptReason2Code.mmEmployeePriorYear, TaxExemptReason2Code.mmEmployeeCurrentYear,
+						TaxExemptReason2Code.mmEmployerPriorYear, TaxExemptReason2Code.mmEmployerCurrentYear, TaxExemptReason2Code.mmNonFundPrototypeIRA, TaxExemptReason2Code.mmNonFundQualifiedPlan,
+						TaxExemptReason2Code.mmDefinedContributionPlan, TaxExemptReason2Code.mmIndividualRetirementAccount, TaxExemptReason2Code.mmIndividualRetirementAccountRollover, TaxExemptReason2Code.mmKEOGH,
+						TaxExemptReason2Code.mmProfitSharingPlan, TaxExemptReason2Code.mmFourHundredAndOneK, TaxExemptReason2Code.mmSelfDirectedIRA, TaxExemptReason2Code.mmFourHundredAndThreeB, TaxExemptReason2Code.mmFourHundredFiftySeven,
+						TaxExemptReason2Code.mmRothIRAFundPrototype, TaxExemptReason2Code.mmRothIRANonPrototype, TaxExemptReason2Code.mmRothConversionIRAFundPrototype, TaxExemptReason2Code.mmRothConversionIRANonPrototype,
+						TaxExemptReason2Code.mmEducationIRAFundPrototype, TaxExemptReason2Code.mmEducationIRANonPrototype, TaxExemptReason2Code.mmOther);
 				trace_lazy = () -> TaxExemptReasonCode.mmObject();
 			}
 		});

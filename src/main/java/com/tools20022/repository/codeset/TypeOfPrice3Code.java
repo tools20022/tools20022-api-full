@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.TypeOfPriceCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -96,7 +98,7 @@ public class TypeOfPrice3Code extends TypeOfPriceCode {
 	 */
 	public static final MMCode mmAverage = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Average";
 			owner_lazy = () -> TypeOfPrice3Code.mmObject();
 		}
@@ -119,7 +121,7 @@ public class TypeOfPrice3Code extends TypeOfPriceCode {
 	 */
 	public static final MMCode mmAverageOverride = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AverageOverride";
 			owner_lazy = () -> TypeOfPrice3Code.mmObject();
 		}
@@ -142,7 +144,7 @@ public class TypeOfPrice3Code extends TypeOfPriceCode {
 	 */
 	public static final MMCode mmGrossOfAll = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GrossOfAll";
 			owner_lazy = () -> TypeOfPrice3Code.mmObject();
 		}
@@ -165,7 +167,7 @@ public class TypeOfPrice3Code extends TypeOfPriceCode {
 	 */
 	public static final MMCode mmNet = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Net";
 			owner_lazy = () -> TypeOfPrice3Code.mmObject();
 		}
@@ -188,7 +190,7 @@ public class TypeOfPrice3Code extends TypeOfPriceCode {
 	 */
 	public static final MMCode mmNetOfAll = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetOfAll";
 			owner_lazy = () -> TypeOfPrice3Code.mmObject();
 		}
@@ -211,7 +213,7 @@ public class TypeOfPrice3Code extends TypeOfPriceCode {
 	 */
 	public static final MMCode mmParValue = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ParValue";
 			owner_lazy = () -> TypeOfPrice3Code.mmObject();
 		}
@@ -234,7 +236,7 @@ public class TypeOfPrice3Code extends TypeOfPriceCode {
 	 */
 	public static final MMCode mmRoundedAverage = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RoundedAverage";
 			owner_lazy = () -> TypeOfPrice3Code.mmObject();
 		}
@@ -243,14 +245,13 @@ public class TypeOfPrice3Code extends TypeOfPriceCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("AVER");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TypeOfPrice3Code";
 				definition = "Specifies the type of price and information about the price.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TypeOfPrice3Code.mmAverage, com.tools20022.repository.codeset.TypeOfPrice3Code.mmAverageOverride,
-						com.tools20022.repository.codeset.TypeOfPrice3Code.mmGrossOfAll, com.tools20022.repository.codeset.TypeOfPrice3Code.mmNet, com.tools20022.repository.codeset.TypeOfPrice3Code.mmNetOfAll,
-						com.tools20022.repository.codeset.TypeOfPrice3Code.mmParValue, com.tools20022.repository.codeset.TypeOfPrice3Code.mmRoundedAverage);
+				code_lazy = () -> Arrays.asList(TypeOfPrice3Code.mmAverage, TypeOfPrice3Code.mmAverageOverride, TypeOfPrice3Code.mmGrossOfAll, TypeOfPrice3Code.mmNet, TypeOfPrice3Code.mmNetOfAll, TypeOfPrice3Code.mmParValue,
+						TypeOfPrice3Code.mmRoundedAverage);
 				trace_lazy = () -> TypeOfPriceCode.mmObject();
 			}
 		});

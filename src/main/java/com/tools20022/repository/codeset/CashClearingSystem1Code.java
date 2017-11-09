@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CashClearingSystemCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -209,7 +211,7 @@ public class CashClearingSystem1Code extends CashClearingSystemCode {
 	 */
 	public static final MMCode mmEBAEuro1Step1 = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EBAEuro1Step1";
 			owner_lazy = () -> CashClearingSystem1Code.mmObject();
 		}
@@ -232,7 +234,7 @@ public class CashClearingSystem1Code extends CashClearingSystemCode {
 	 */
 	public static final MMCode mmAustrian = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Austrian";
 			owner_lazy = () -> CashClearingSystem1Code.mmObject();
 		}
@@ -255,7 +257,7 @@ public class CashClearingSystem1Code extends CashClearingSystemCode {
 	 */
 	public static final MMCode mmNewZealand = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewZealand";
 			owner_lazy = () -> CashClearingSystem1Code.mmObject();
 		}
@@ -278,7 +280,7 @@ public class CashClearingSystem1Code extends CashClearingSystemCode {
 	 */
 	public static final MMCode mmAzerbaijan = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Azerbaijan";
 			owner_lazy = () -> CashClearingSystem1Code.mmObject();
 		}
@@ -301,7 +303,7 @@ public class CashClearingSystem1Code extends CashClearingSystemCode {
 	 */
 	public static final MMCode mmBosniaHerzegovina = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BosniaHerzegovina";
 			owner_lazy = () -> CashClearingSystem1Code.mmObject();
 		}
@@ -324,7 +326,7 @@ public class CashClearingSystem1Code extends CashClearingSystemCode {
 	 */
 	public static final MMCode mmBelgium = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Belgium";
 			owner_lazy = () -> CashClearingSystem1Code.mmObject();
 		}
@@ -347,7 +349,7 @@ public class CashClearingSystem1Code extends CashClearingSystemCode {
 	 */
 	public static final MMCode mmFinland = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Finland";
 			owner_lazy = () -> CashClearingSystem1Code.mmObject();
 		}
@@ -370,7 +372,7 @@ public class CashClearingSystem1Code extends CashClearingSystemCode {
 	 */
 	public static final MMCode mmItaly = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Italy";
 			owner_lazy = () -> CashClearingSystem1Code.mmObject();
 		}
@@ -393,7 +395,7 @@ public class CashClearingSystem1Code extends CashClearingSystemCode {
 	 */
 	public static final MMCode mmCanada = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Canada";
 			owner_lazy = () -> CashClearingSystem1Code.mmObject();
 		}
@@ -416,7 +418,7 @@ public class CashClearingSystem1Code extends CashClearingSystemCode {
 	 */
 	public static final MMCode mmSpainCAM = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SpainCAM";
 			owner_lazy = () -> CashClearingSystem1Code.mmObject();
 		}
@@ -439,7 +441,7 @@ public class CashClearingSystem1Code extends CashClearingSystemCode {
 	 */
 	public static final MMCode mmIreland = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Ireland";
 			owner_lazy = () -> CashClearingSystem1Code.mmObject();
 		}
@@ -462,7 +464,7 @@ public class CashClearingSystem1Code extends CashClearingSystemCode {
 	 */
 	public static final MMCode mmUnitedKingdom = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnitedKingdom";
 			owner_lazy = () -> CashClearingSystem1Code.mmObject();
 		}
@@ -485,7 +487,7 @@ public class CashClearingSystem1Code extends CashClearingSystemCode {
 	 */
 	public static final MMCode mmDenmark = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Denmark";
 			owner_lazy = () -> CashClearingSystem1Code.mmObject();
 		}
@@ -508,7 +510,7 @@ public class CashClearingSystem1Code extends CashClearingSystemCode {
 	 */
 	public static final MMCode mmGermanyRTGSPlus = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GermanyRTGSPlus";
 			owner_lazy = () -> CashClearingSystem1Code.mmObject();
 		}
@@ -531,7 +533,7 @@ public class CashClearingSystem1Code extends CashClearingSystemCode {
 	 */
 	public static final MMCode mmEBAEuro1 = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EBAEuro1";
 			owner_lazy = () -> CashClearingSystem1Code.mmObject();
 		}
@@ -554,7 +556,7 @@ public class CashClearingSystem1Code extends CashClearingSystemCode {
 	 */
 	public static final MMCode mmGermanyELS = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GermanyELS";
 			owner_lazy = () -> CashClearingSystem1Code.mmObject();
 		}
@@ -577,7 +579,7 @@ public class CashClearingSystem1Code extends CashClearingSystemCode {
 	 */
 	public static final MMCode mmEBAStep1 = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EBAStep1";
 			owner_lazy = () -> CashClearingSystem1Code.mmObject();
 		}
@@ -600,7 +602,7 @@ public class CashClearingSystem1Code extends CashClearingSystemCode {
 	 */
 	public static final MMCode mmEBAStep2 = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EBAStep2";
 			owner_lazy = () -> CashClearingSystem1Code.mmObject();
 		}
@@ -623,7 +625,7 @@ public class CashClearingSystem1Code extends CashClearingSystemCode {
 	 */
 	public static final MMCode mmCroatia = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Croatia";
 			owner_lazy = () -> CashClearingSystem1Code.mmObject();
 		}
@@ -646,7 +648,7 @@ public class CashClearingSystem1Code extends CashClearingSystemCode {
 	 */
 	public static final MMCode mmGreece = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Greece";
 			owner_lazy = () -> CashClearingSystem1Code.mmObject();
 		}
@@ -669,7 +671,7 @@ public class CashClearingSystem1Code extends CashClearingSystemCode {
 	 */
 	public static final MMCode mmHungary = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Hungary";
 			owner_lazy = () -> CashClearingSystem1Code.mmObject();
 		}
@@ -692,7 +694,7 @@ public class CashClearingSystem1Code extends CashClearingSystemCode {
 	 */
 	public static final MMCode mmLuxemburg = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Luxemburg";
 			owner_lazy = () -> CashClearingSystem1Code.mmObject();
 		}
@@ -715,7 +717,7 @@ public class CashClearingSystem1Code extends CashClearingSystemCode {
 	 */
 	public static final MMCode mmLatvia = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Latvia";
 			owner_lazy = () -> CashClearingSystem1Code.mmObject();
 		}
@@ -738,7 +740,7 @@ public class CashClearingSystem1Code extends CashClearingSystemCode {
 	 */
 	public static final MMCode mmSouthAfrica = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SouthAfrica";
 			owner_lazy = () -> CashClearingSystem1Code.mmObject();
 		}
@@ -761,7 +763,7 @@ public class CashClearingSystem1Code extends CashClearingSystemCode {
 	 */
 	public static final MMCode mmMauritius = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Mauritius";
 			owner_lazy = () -> CashClearingSystem1Code.mmObject();
 		}
@@ -784,7 +786,7 @@ public class CashClearingSystem1Code extends CashClearingSystemCode {
 	 */
 	public static final MMCode mmNorway = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Norway";
 			owner_lazy = () -> CashClearingSystem1Code.mmObject();
 		}
@@ -807,7 +809,7 @@ public class CashClearingSystem1Code extends CashClearingSystemCode {
 	 */
 	public static final MMCode mmSwitzerland = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Switzerland";
 			owner_lazy = () -> CashClearingSystem1Code.mmObject();
 		}
@@ -830,7 +832,7 @@ public class CashClearingSystem1Code extends CashClearingSystemCode {
 	 */
 	public static final MMCode mmAustralia = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Australia";
 			owner_lazy = () -> CashClearingSystem1Code.mmObject();
 		}
@@ -853,7 +855,7 @@ public class CashClearingSystem1Code extends CashClearingSystemCode {
 	 */
 	public static final MMCode mmEgypt = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Egypt";
 			owner_lazy = () -> CashClearingSystem1Code.mmObject();
 		}
@@ -876,7 +878,7 @@ public class CashClearingSystem1Code extends CashClearingSystemCode {
 	 */
 	public static final MMCode mmFrancePNS = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FrancePNS";
 			owner_lazy = () -> CashClearingSystem1Code.mmObject();
 		}
@@ -899,7 +901,7 @@ public class CashClearingSystem1Code extends CashClearingSystemCode {
 	 */
 	public static final MMCode mmVenezuela = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Venezuela";
 			owner_lazy = () -> CashClearingSystem1Code.mmObject();
 		}
@@ -922,7 +924,7 @@ public class CashClearingSystem1Code extends CashClearingSystemCode {
 	 */
 	public static final MMCode mmSwedenSEC = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SwedenSEC";
 			owner_lazy = () -> CashClearingSystem1Code.mmObject();
 		}
@@ -945,7 +947,7 @@ public class CashClearingSystem1Code extends CashClearingSystemCode {
 	 */
 	public static final MMCode mmSlovania = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Slovania";
 			owner_lazy = () -> CashClearingSystem1Code.mmObject();
 		}
@@ -968,7 +970,7 @@ public class CashClearingSystem1Code extends CashClearingSystemCode {
 	 */
 	public static final MMCode mmSpainES = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SpainES";
 			owner_lazy = () -> CashClearingSystem1Code.mmObject();
 		}
@@ -991,7 +993,7 @@ public class CashClearingSystem1Code extends CashClearingSystemCode {
 	 */
 	public static final MMCode mmPortugal = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Portugal";
 			owner_lazy = () -> CashClearingSystem1Code.mmObject();
 		}
@@ -1014,7 +1016,7 @@ public class CashClearingSystem1Code extends CashClearingSystemCode {
 	 */
 	public static final MMCode mmSwedenSSK = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SwedenSSK";
 			owner_lazy = () -> CashClearingSystem1Code.mmObject();
 		}
@@ -1037,7 +1039,7 @@ public class CashClearingSystem1Code extends CashClearingSystemCode {
 	 */
 	public static final MMCode mmFranceFR = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FranceFR";
 			owner_lazy = () -> CashClearingSystem1Code.mmObject();
 		}
@@ -1060,7 +1062,7 @@ public class CashClearingSystem1Code extends CashClearingSystemCode {
 	 */
 	public static final MMCode mmTarget = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Target";
 			owner_lazy = () -> CashClearingSystem1Code.mmObject();
 		}
@@ -1083,7 +1085,7 @@ public class CashClearingSystem1Code extends CashClearingSystemCode {
 	 */
 	public static final MMCode mmNetherlands = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Netherlands";
 			owner_lazy = () -> CashClearingSystem1Code.mmObject();
 		}
@@ -1106,7 +1108,7 @@ public class CashClearingSystem1Code extends CashClearingSystemCode {
 	 */
 	public static final MMCode mmFedwire = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Fedwire";
 			owner_lazy = () -> CashClearingSystem1Code.mmObject();
 		}
@@ -1129,7 +1131,7 @@ public class CashClearingSystem1Code extends CashClearingSystemCode {
 	 */
 	public static final MMCode mmBankOfJapanNet = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BankOfJapanNet";
 			owner_lazy = () -> CashClearingSystem1Code.mmObject();
 		}
@@ -1152,7 +1154,7 @@ public class CashClearingSystem1Code extends CashClearingSystemCode {
 	 */
 	public static final MMCode mmForeignExchangeYenClearing = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForeignExchangeYenClearing";
 			owner_lazy = () -> CashClearingSystem1Code.mmObject();
 		}
@@ -1175,7 +1177,7 @@ public class CashClearingSystem1Code extends CashClearingSystemCode {
 	 */
 	public static final MMCode mmZengin = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Zengin";
 			owner_lazy = () -> CashClearingSystem1Code.mmObject();
 		}
@@ -1184,27 +1186,20 @@ public class CashClearingSystem1Code extends CashClearingSystemCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ABE");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CashClearingSystem1Code";
 				definition = "Specification of a pre-agreed offering between clearing agents or the channel through which the payment instruction is to be processed.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CashClearingSystem1Code.mmEBAEuro1Step1, com.tools20022.repository.codeset.CashClearingSystem1Code.mmAustrian,
-						com.tools20022.repository.codeset.CashClearingSystem1Code.mmNewZealand, com.tools20022.repository.codeset.CashClearingSystem1Code.mmAzerbaijan,
-						com.tools20022.repository.codeset.CashClearingSystem1Code.mmBosniaHerzegovina, com.tools20022.repository.codeset.CashClearingSystem1Code.mmBelgium,
-						com.tools20022.repository.codeset.CashClearingSystem1Code.mmFinland, com.tools20022.repository.codeset.CashClearingSystem1Code.mmItaly, com.tools20022.repository.codeset.CashClearingSystem1Code.mmCanada,
-						com.tools20022.repository.codeset.CashClearingSystem1Code.mmSpainCAM, com.tools20022.repository.codeset.CashClearingSystem1Code.mmIreland, com.tools20022.repository.codeset.CashClearingSystem1Code.mmUnitedKingdom,
-						com.tools20022.repository.codeset.CashClearingSystem1Code.mmDenmark, com.tools20022.repository.codeset.CashClearingSystem1Code.mmGermanyRTGSPlus, com.tools20022.repository.codeset.CashClearingSystem1Code.mmEBAEuro1,
-						com.tools20022.repository.codeset.CashClearingSystem1Code.mmGermanyELS, com.tools20022.repository.codeset.CashClearingSystem1Code.mmEBAStep1, com.tools20022.repository.codeset.CashClearingSystem1Code.mmEBAStep2,
-						com.tools20022.repository.codeset.CashClearingSystem1Code.mmCroatia, com.tools20022.repository.codeset.CashClearingSystem1Code.mmGreece, com.tools20022.repository.codeset.CashClearingSystem1Code.mmHungary,
-						com.tools20022.repository.codeset.CashClearingSystem1Code.mmLuxemburg, com.tools20022.repository.codeset.CashClearingSystem1Code.mmLatvia, com.tools20022.repository.codeset.CashClearingSystem1Code.mmSouthAfrica,
-						com.tools20022.repository.codeset.CashClearingSystem1Code.mmMauritius, com.tools20022.repository.codeset.CashClearingSystem1Code.mmNorway, com.tools20022.repository.codeset.CashClearingSystem1Code.mmSwitzerland,
-						com.tools20022.repository.codeset.CashClearingSystem1Code.mmAustralia, com.tools20022.repository.codeset.CashClearingSystem1Code.mmEgypt, com.tools20022.repository.codeset.CashClearingSystem1Code.mmFrancePNS,
-						com.tools20022.repository.codeset.CashClearingSystem1Code.mmVenezuela, com.tools20022.repository.codeset.CashClearingSystem1Code.mmSwedenSEC, com.tools20022.repository.codeset.CashClearingSystem1Code.mmSlovania,
-						com.tools20022.repository.codeset.CashClearingSystem1Code.mmSpainES, com.tools20022.repository.codeset.CashClearingSystem1Code.mmPortugal, com.tools20022.repository.codeset.CashClearingSystem1Code.mmSwedenSSK,
-						com.tools20022.repository.codeset.CashClearingSystem1Code.mmFranceFR, com.tools20022.repository.codeset.CashClearingSystem1Code.mmTarget, com.tools20022.repository.codeset.CashClearingSystem1Code.mmNetherlands,
-						com.tools20022.repository.codeset.CashClearingSystem1Code.mmFedwire, com.tools20022.repository.codeset.CashClearingSystem1Code.mmBankOfJapanNet,
-						com.tools20022.repository.codeset.CashClearingSystem1Code.mmForeignExchangeYenClearing, com.tools20022.repository.codeset.CashClearingSystem1Code.mmZengin);
+				code_lazy = () -> Arrays.asList(CashClearingSystem1Code.mmEBAEuro1Step1, CashClearingSystem1Code.mmAustrian, CashClearingSystem1Code.mmNewZealand, CashClearingSystem1Code.mmAzerbaijan,
+						CashClearingSystem1Code.mmBosniaHerzegovina, CashClearingSystem1Code.mmBelgium, CashClearingSystem1Code.mmFinland, CashClearingSystem1Code.mmItaly, CashClearingSystem1Code.mmCanada,
+						CashClearingSystem1Code.mmSpainCAM, CashClearingSystem1Code.mmIreland, CashClearingSystem1Code.mmUnitedKingdom, CashClearingSystem1Code.mmDenmark, CashClearingSystem1Code.mmGermanyRTGSPlus,
+						CashClearingSystem1Code.mmEBAEuro1, CashClearingSystem1Code.mmGermanyELS, CashClearingSystem1Code.mmEBAStep1, CashClearingSystem1Code.mmEBAStep2, CashClearingSystem1Code.mmCroatia, CashClearingSystem1Code.mmGreece,
+						CashClearingSystem1Code.mmHungary, CashClearingSystem1Code.mmLuxemburg, CashClearingSystem1Code.mmLatvia, CashClearingSystem1Code.mmSouthAfrica, CashClearingSystem1Code.mmMauritius, CashClearingSystem1Code.mmNorway,
+						CashClearingSystem1Code.mmSwitzerland, CashClearingSystem1Code.mmAustralia, CashClearingSystem1Code.mmEgypt, CashClearingSystem1Code.mmFrancePNS, CashClearingSystem1Code.mmVenezuela,
+						CashClearingSystem1Code.mmSwedenSEC, CashClearingSystem1Code.mmSlovania, CashClearingSystem1Code.mmSpainES, CashClearingSystem1Code.mmPortugal, CashClearingSystem1Code.mmSwedenSSK,
+						CashClearingSystem1Code.mmFranceFR, CashClearingSystem1Code.mmTarget, CashClearingSystem1Code.mmNetherlands, CashClearingSystem1Code.mmFedwire, CashClearingSystem1Code.mmBankOfJapanNet,
+						CashClearingSystem1Code.mmForeignExchangeYenClearing, CashClearingSystem1Code.mmZengin);
 				trace_lazy = () -> CashClearingSystemCode.mmObject();
 			}
 		});

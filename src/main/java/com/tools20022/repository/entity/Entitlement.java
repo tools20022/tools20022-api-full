@@ -17,14 +17,15 @@
 
 package com.tools20022.repository.entity;
 
-import com.tools20022.metamodel.MMBusinessAssociationEnd;
-import com.tools20022.metamodel.MMBusinessAttribute;
-import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.*;
 import com.tools20022.repository.codeset.OptionStyleCode;
 import com.tools20022.repository.codeset.OptionTypeCode;
 import com.tools20022.repository.datatype.CurrencyAndAmount;
 import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.Security;
+import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1;
+import com.tools20022.repository.msg.FinancialInstrumentAttributes44;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -38,6 +39,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmEntitlement
+ * SecuritiesPricing.mmEntitlement}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.Security Security}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -57,17 +69,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * Entitlement.mmCappedIndicator}</li>
  * </ul>
  * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmEntitlement
- * SecuritiesPricing.mmEntitlement}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.Security Security}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -128,13 +129,13 @@ public class Entitlement extends Security {
 		{
 			elementContext_lazy = () -> Entitlement.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "StrikePrice";
 			definition = "Predetermined price at which the holder buys or sells the underlying assets.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmEntitlement;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 		}
 	};
@@ -180,10 +181,10 @@ public class Entitlement extends Security {
 	 */
 	public static final MMBusinessAttribute mmCoveredIndicator = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrumentAttributes44.mmCoveredIndicator, com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.mmCoveredIndicator);
+			derivation_lazy = () -> Arrays.asList(FinancialInstrumentAttributes44.mmCoveredIndicator, CommonFinancialInstrumentAttributes1.mmCoveredIndicator);
 			elementContext_lazy = () -> Entitlement.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CoveredIndicator";
 			definition = "Indicates whether the underlying security is owned by the writer of the entitlement.";
 			maxOccurs = 1;
@@ -221,7 +222,7 @@ public class Entitlement extends Security {
 		{
 			elementContext_lazy = () -> Entitlement.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "OptionStyle";
 			definition = "Specifies how an option can be exercised.";
 			maxOccurs = 1;
@@ -263,7 +264,7 @@ public class Entitlement extends Security {
 		{
 			elementContext_lazy = () -> Entitlement.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "OptionType";
 			definition = "Specifies whether it is a call option (right to purchase a specific underlying asset) or a put option (right to sell a specific underlying asset).";
 			maxOccurs = 1;
@@ -305,7 +306,7 @@ public class Entitlement extends Security {
 		{
 			elementContext_lazy = () -> Entitlement.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CappedValue";
 			definition = "Limit on the pay-out on the expiration of the entitlement. The positive difference between the cap value and the strike price is the maximum amount that would be paid off at expiration.";
 			maxOccurs = 1;
@@ -343,7 +344,7 @@ public class Entitlement extends Security {
 		{
 			elementContext_lazy = () -> Entitlement.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CappedIndicator";
 			definition = "Indicates whether an entitlement is capped.";
 			maxOccurs = 1;
@@ -355,14 +356,13 @@ public class Entitlement extends Security {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Entitlement";
 				definition = "Financial instrument providing the holder the privilege to subscribe to or to receive specific assets on terms specified.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesPricing.mmEntitlement);
 				superType_lazy = () -> Security.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Entitlement.mmStrikePrice, com.tools20022.repository.entity.Entitlement.mmCoveredIndicator, com.tools20022.repository.entity.Entitlement.mmOptionStyle,
-						com.tools20022.repository.entity.Entitlement.mmOptionType, com.tools20022.repository.entity.Entitlement.mmCappedValue, com.tools20022.repository.entity.Entitlement.mmCappedIndicator);
+				element_lazy = () -> Arrays.asList(Entitlement.mmStrikePrice, Entitlement.mmCoveredIndicator, Entitlement.mmOptionStyle, Entitlement.mmOptionType, Entitlement.mmCappedValue, Entitlement.mmCappedIndicator);
 			}
 		});
 		return mmObject_lazy.get();

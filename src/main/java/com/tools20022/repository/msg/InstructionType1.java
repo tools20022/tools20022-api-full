@@ -19,7 +19,12 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.tsmt.InitialBaselineSubmissionV03;
+import com.tools20022.repository.area.tsmt.InitialBaselineSubmissionV04;
+import com.tools20022.repository.area.tsmt.InitialBaselineSubmissionV05;
 import com.tools20022.repository.codeset.InstructionType1Code;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -109,7 +114,7 @@ public class InstructionType1 {
 			componentContext_lazy = () -> InstructionType1.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Specifies whether the baseline has to be pushed to the other party or simply lodged.";
 			maxOccurs = 1;
@@ -121,11 +126,10 @@ public class InstructionType1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InstructionType1.mmType);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.InitialBaselineSubmissionV03.mmInstruction, com.tools20022.repository.area.tsmt.InitialBaselineSubmissionV04.mmInstruction,
-						com.tools20022.repository.area.tsmt.InitialBaselineSubmissionV05.mmInstruction);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(InstructionType1.mmType);
+				messageBuildingBlock_lazy = () -> Arrays.asList(InitialBaselineSubmissionV03.mmInstruction, InitialBaselineSubmissionV04.mmInstruction, InitialBaselineSubmissionV05.mmInstruction);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InstructionType1";
 				definition = "Specifies the type of instruction requested by the submitter by means of a code.";
 			}

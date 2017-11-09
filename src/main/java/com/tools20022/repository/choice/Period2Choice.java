@@ -19,7 +19,9 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.DateTimePeriod;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.DateTimePeriodDetails;
 import com.tools20022.repository.msg.Period2;
 import java.util.Arrays;
@@ -103,7 +105,7 @@ public class Period2Choice {
 			componentContext_lazy = () -> Period2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "FrDtTmToDtTm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FromDateTimeToDateTime";
 			definition = "Time span defined by a start date and time, and an end date and time.";
 			maxOccurs = 1;
@@ -150,7 +152,7 @@ public class Period2Choice {
 			componentContext_lazy = () -> Period2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "FrDtToDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FromDateToDate";
 			definition = "Time span defined by a start date and time, and an end date and time.";
 			maxOccurs = 1;
@@ -163,10 +165,10 @@ public class Period2Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Period2Choice.mmFromDateTimeToDateTime, com.tools20022.repository.choice.Period2Choice.mmFromDateToDate);
+				messageElement_lazy = () -> Arrays.asList(Period2Choice.mmFromDateTimeToDateTime, Period2Choice.mmFromDateToDate);
 				trace_lazy = () -> DateTimePeriod.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Period2Choice";
 				definition = "Choice between date and date-time for the specification of a period.";
 			}

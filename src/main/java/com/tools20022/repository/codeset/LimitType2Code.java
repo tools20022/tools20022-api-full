@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.LimitTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -110,7 +112,7 @@ public class LimitType2Code extends LimitTypeCode {
 	 */
 	public static final MMCode mmMultilateral = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Multilateral";
 			owner_lazy = () -> LimitType2Code.mmObject();
 		}
@@ -133,7 +135,7 @@ public class LimitType2Code extends LimitTypeCode {
 	 */
 	public static final MMCode mmBilateral = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Bilateral";
 			owner_lazy = () -> LimitType2Code.mmObject();
 		}
@@ -156,7 +158,7 @@ public class LimitType2Code extends LimitTypeCode {
 	 */
 	public static final MMCode mmMandatoryBilateral = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MandatoryBilateral";
 			owner_lazy = () -> LimitType2Code.mmObject();
 		}
@@ -179,7 +181,7 @@ public class LimitType2Code extends LimitTypeCode {
 	 */
 	public static final MMCode mmDiscretionaryBilateral = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DiscretionaryBilateral";
 			owner_lazy = () -> LimitType2Code.mmObject();
 		}
@@ -202,7 +204,7 @@ public class LimitType2Code extends LimitTypeCode {
 	 */
 	public static final MMCode mmNetBilateral = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetBilateral";
 			owner_lazy = () -> LimitType2Code.mmObject();
 		}
@@ -225,7 +227,7 @@ public class LimitType2Code extends LimitTypeCode {
 	 */
 	public static final MMCode mmIndirectBilateral = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IndirectBilateral";
 			owner_lazy = () -> LimitType2Code.mmObject();
 		}
@@ -248,7 +250,7 @@ public class LimitType2Code extends LimitTypeCode {
 	 */
 	public static final MMCode mmGlobal = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Global";
 			owner_lazy = () -> LimitType2Code.mmObject();
 		}
@@ -271,7 +273,7 @@ public class LimitType2Code extends LimitTypeCode {
 	 */
 	public static final MMCode mmDirectDebit = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DirectDebit";
 			owner_lazy = () -> LimitType2Code.mmObject();
 		}
@@ -294,7 +296,7 @@ public class LimitType2Code extends LimitTypeCode {
 	 */
 	public static final MMCode mmSingleCustomerDirectDebit = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SingleCustomerDirectDebit";
 			owner_lazy = () -> LimitType2Code.mmObject();
 		}
@@ -317,7 +319,7 @@ public class LimitType2Code extends LimitTypeCode {
 	 */
 	public static final MMCode mmSingleFinancialInstitutionDirectDebit = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SingleFinancialInstitutionDirectDebit";
 			owner_lazy = () -> LimitType2Code.mmObject();
 		}
@@ -340,7 +342,7 @@ public class LimitType2Code extends LimitTypeCode {
 	 */
 	public static final MMCode mmTotalDailyCustomerDirectDebit = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalDailyCustomerDirectDebit";
 			owner_lazy = () -> LimitType2Code.mmObject();
 		}
@@ -363,7 +365,7 @@ public class LimitType2Code extends LimitTypeCode {
 	 */
 	public static final MMCode mmTotalDailyFinancialInstitutionDirectDebit = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalDailyFinancialInstitutionDirectDebit";
 			owner_lazy = () -> LimitType2Code.mmObject();
 		}
@@ -372,16 +374,14 @@ public class LimitType2Code extends LimitTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("MULT");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "LimitType2Code";
 				definition = "Specifies the type of risk management limit.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.LimitType2Code.mmMultilateral, com.tools20022.repository.codeset.LimitType2Code.mmBilateral,
-						com.tools20022.repository.codeset.LimitType2Code.mmMandatoryBilateral, com.tools20022.repository.codeset.LimitType2Code.mmDiscretionaryBilateral, com.tools20022.repository.codeset.LimitType2Code.mmNetBilateral,
-						com.tools20022.repository.codeset.LimitType2Code.mmIndirectBilateral, com.tools20022.repository.codeset.LimitType2Code.mmGlobal, com.tools20022.repository.codeset.LimitType2Code.mmDirectDebit,
-						com.tools20022.repository.codeset.LimitType2Code.mmSingleCustomerDirectDebit, com.tools20022.repository.codeset.LimitType2Code.mmSingleFinancialInstitutionDirectDebit,
-						com.tools20022.repository.codeset.LimitType2Code.mmTotalDailyCustomerDirectDebit, com.tools20022.repository.codeset.LimitType2Code.mmTotalDailyFinancialInstitutionDirectDebit);
+				code_lazy = () -> Arrays.asList(LimitType2Code.mmMultilateral, LimitType2Code.mmBilateral, LimitType2Code.mmMandatoryBilateral, LimitType2Code.mmDiscretionaryBilateral, LimitType2Code.mmNetBilateral,
+						LimitType2Code.mmIndirectBilateral, LimitType2Code.mmGlobal, LimitType2Code.mmDirectDebit, LimitType2Code.mmSingleCustomerDirectDebit, LimitType2Code.mmSingleFinancialInstitutionDirectDebit,
+						LimitType2Code.mmTotalDailyCustomerDirectDebit, LimitType2Code.mmTotalDailyFinancialInstitutionDirectDebit);
 				trace_lazy = () -> LimitTypeCode.mmObject();
 			}
 		});

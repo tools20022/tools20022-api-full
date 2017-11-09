@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CorporateActionReferenceDateCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -86,7 +88,7 @@ public class CorporateActionDeadline1Code extends CorporateActionReferenceDateCo
 	 */
 	public static final MMCode mmMarketDeadline = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketDeadline";
 			owner_lazy = () -> CorporateActionDeadline1Code.mmObject();
 		}
@@ -109,7 +111,7 @@ public class CorporateActionDeadline1Code extends CorporateActionReferenceDateCo
 	 */
 	public static final MMCode mmResponseDeadline = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ResponseDeadline";
 			owner_lazy = () -> CorporateActionDeadline1Code.mmObject();
 		}
@@ -132,7 +134,7 @@ public class CorporateActionDeadline1Code extends CorporateActionReferenceDateCo
 	 */
 	public static final MMCode mmEarlyResponseDeadline = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EarlyResponseDeadline";
 			owner_lazy = () -> CorporateActionDeadline1Code.mmObject();
 		}
@@ -141,13 +143,12 @@ public class CorporateActionDeadline1Code extends CorporateActionReferenceDateCo
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("MKDT");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionDeadline1Code";
 				definition = "Specifies the deadline reference of a corporate action.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CorporateActionDeadline1Code.mmMarketDeadline, com.tools20022.repository.codeset.CorporateActionDeadline1Code.mmResponseDeadline,
-						com.tools20022.repository.codeset.CorporateActionDeadline1Code.mmEarlyResponseDeadline);
+				code_lazy = () -> Arrays.asList(CorporateActionDeadline1Code.mmMarketDeadline, CorporateActionDeadline1Code.mmResponseDeadline, CorporateActionDeadline1Code.mmEarlyResponseDeadline);
 				trace_lazy = () -> CorporateActionReferenceDateCode.mmObject();
 			}
 		});

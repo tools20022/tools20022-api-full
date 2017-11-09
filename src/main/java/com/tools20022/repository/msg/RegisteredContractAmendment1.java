@@ -20,10 +20,14 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.Max1025Text;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.entity.Agreement;
 import com.tools20022.repository.entity.RegisteredContract;
+import com.tools20022.repository.entity.StatusReason;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -110,11 +114,11 @@ public class RegisteredContractAmendment1 {
 	 */
 	public static final MMMessageAttribute mmAmendmentDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.RegisteredContract.mmSubmissionDate;
+			businessElementTrace_lazy = () -> RegisteredContract.mmSubmissionDate;
 			componentContext_lazy = () -> RegisteredContractAmendment1.mmObject();
 			isDerived = false;
 			xmlTag = "AmdmntDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmendmentDate";
 			definition = "Date of the amendment of the registered contract.";
 			maxOccurs = 1;
@@ -157,11 +161,11 @@ public class RegisteredContractAmendment1 {
 	 */
 	public static final MMMessageAssociationEnd mmDocument = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Agreement.mmDocument;
+			businessElementTrace_lazy = () -> Agreement.mmDocument;
 			componentContext_lazy = () -> RegisteredContractAmendment1.mmObject();
 			isDerived = false;
 			xmlTag = "Doc";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Document";
 			definition = "Reference of the amendment document.";
 			maxOccurs = 1;
@@ -205,11 +209,11 @@ public class RegisteredContractAmendment1 {
 	 */
 	public static final MMMessageAttribute mmStartDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Agreement.mmDateSigned;
+			businessElementTrace_lazy = () -> Agreement.mmDateSigned;
 			componentContext_lazy = () -> RegisteredContractAmendment1.mmObject();
 			isDerived = false;
 			xmlTag = "StartDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StartDate";
 			definition = "Date from which the amendment is applicable.";
 			maxOccurs = 1;
@@ -252,11 +256,11 @@ public class RegisteredContractAmendment1 {
 	 */
 	public static final MMMessageAttribute mmAmendmentReason = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmReason;
+			businessElementTrace_lazy = () -> StatusReason.mmReason;
 			componentContext_lazy = () -> RegisteredContractAmendment1.mmObject();
 			isDerived = false;
 			xmlTag = "AmdmntRsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmendmentReason";
 			definition = "Reason for the amendment.";
 			maxOccurs = 1;
@@ -297,7 +301,7 @@ public class RegisteredContractAmendment1 {
 			componentContext_lazy = () -> RegisteredContractAmendment1.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInformation";
 			definition = "Further details on the amendment.";
 			maxOccurs = 1;
@@ -309,12 +313,11 @@ public class RegisteredContractAmendment1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RegisteredContractAmendment1.mmAmendmentDate, com.tools20022.repository.msg.RegisteredContractAmendment1.mmDocument,
-						com.tools20022.repository.msg.RegisteredContractAmendment1.mmStartDate, com.tools20022.repository.msg.RegisteredContractAmendment1.mmAmendmentReason,
-						com.tools20022.repository.msg.RegisteredContractAmendment1.mmAdditionalInformation);
+				messageElement_lazy = () -> Arrays.asList(RegisteredContractAmendment1.mmAmendmentDate, RegisteredContractAmendment1.mmDocument, RegisteredContractAmendment1.mmStartDate, RegisteredContractAmendment1.mmAmendmentReason,
+						RegisteredContractAmendment1.mmAdditionalInformation);
 				trace_lazy = () -> RegisteredContract.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RegisteredContractAmendment1";
 				definition = "Amendment details and reason related to the registered contract.";
 			}

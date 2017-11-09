@@ -20,11 +20,16 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ActiveCurrencyCode;
 import com.tools20022.repository.codeset.ATMDevice2Code;
 import com.tools20022.repository.codeset.TransactionEnvironment2Code;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.entity.Payment;
+import com.tools20022.repository.entity.PointOfInteraction;
+import com.tools20022.repository.entity.System;
 import com.tools20022.repository.entity.SystemIdentification;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -124,11 +129,11 @@ public class AutomatedTellerMachine10 {
 	 */
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SystemIdentification.mmIdentificationForSystem;
+			businessElementTrace_lazy = () -> SystemIdentification.mmIdentificationForSystem;
 			componentContext_lazy = () -> AutomatedTellerMachine10.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "ATM terminal device identification for the acquirer and the issuer.";
 			maxOccurs = 1;
@@ -169,7 +174,7 @@ public class AutomatedTellerMachine10 {
 			componentContext_lazy = () -> AutomatedTellerMachine10.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalIdentification";
 			definition = "ATM terminal device identification for the ATM manager.";
 			maxOccurs = 1;
@@ -212,11 +217,11 @@ public class AutomatedTellerMachine10 {
 	 */
 	public static final MMMessageAttribute mmSequenceNumber = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SystemIdentification.mmSystemName;
+			businessElementTrace_lazy = () -> SystemIdentification.mmSystemName;
 			componentContext_lazy = () -> AutomatedTellerMachine10.mmObject();
 			isDerived = false;
 			xmlTag = "SeqNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SequenceNumber";
 			definition = "ATM terminal device identification for the branch.";
 			maxOccurs = 1;
@@ -260,11 +265,11 @@ public class AutomatedTellerMachine10 {
 	 */
 	public static final MMMessageAttribute mmBaseCurrency = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.mmCurrencyOfTransfer;
+			businessElementTrace_lazy = () -> Payment.mmCurrencyOfTransfer;
 			componentContext_lazy = () -> AutomatedTellerMachine10.mmObject();
 			isDerived = false;
 			xmlTag = "BaseCcy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BaseCurrency";
 			definition = "Reference currency of the ATM.";
 			maxOccurs = 1;
@@ -306,11 +311,11 @@ public class AutomatedTellerMachine10 {
 	 */
 	public static final MMMessageAssociationEnd mmLocation = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.System.mmLocation;
+			businessElementTrace_lazy = () -> System.mmLocation;
 			componentContext_lazy = () -> AutomatedTellerMachine10.mmObject();
 			isDerived = false;
 			xmlTag = "Lctn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Location";
 			definition = "Location of the ATM.";
 			maxOccurs = 1;
@@ -353,7 +358,7 @@ public class AutomatedTellerMachine10 {
 			componentContext_lazy = () -> AutomatedTellerMachine10.mmObject();
 			isDerived = false;
 			xmlTag = "LctnCtgy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LocationCategory";
 			definition = "Indicates the environment of the transaction.";
 			maxOccurs = 1;
@@ -397,11 +402,11 @@ public class AutomatedTellerMachine10 {
 	 */
 	public static final MMMessageAssociationEnd mmCapabilities = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PointOfInteraction.mmCardReadingCapabilities;
+			businessElementTrace_lazy = () -> PointOfInteraction.mmCardReadingCapabilities;
 			componentContext_lazy = () -> AutomatedTellerMachine10.mmObject();
 			isDerived = false;
 			xmlTag = "Cpblties";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Capabilities";
 			definition = "Capabilities of the ATM terminal performing the transaction.";
 			maxOccurs = 1;
@@ -442,7 +447,7 @@ public class AutomatedTellerMachine10 {
 			componentContext_lazy = () -> AutomatedTellerMachine10.mmObject();
 			isDerived = false;
 			xmlTag = "Eqpmnt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Equipment";
 			definition = "ATM terminal equipment.";
 			maxOccurs = 1;
@@ -485,7 +490,7 @@ public class AutomatedTellerMachine10 {
 			componentContext_lazy = () -> AutomatedTellerMachine10.mmObject();
 			isDerived = false;
 			xmlTag = "AvlblDvc";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AvailableDevice";
 			definition = "List of ATM devices out of service.";
 			minOccurs = 0;
@@ -496,13 +501,11 @@ public class AutomatedTellerMachine10 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AutomatedTellerMachine10.mmIdentification, com.tools20022.repository.msg.AutomatedTellerMachine10.mmAdditionalIdentification,
-						com.tools20022.repository.msg.AutomatedTellerMachine10.mmSequenceNumber, com.tools20022.repository.msg.AutomatedTellerMachine10.mmBaseCurrency, com.tools20022.repository.msg.AutomatedTellerMachine10.mmLocation,
-						com.tools20022.repository.msg.AutomatedTellerMachine10.mmLocationCategory, com.tools20022.repository.msg.AutomatedTellerMachine10.mmCapabilities, com.tools20022.repository.msg.AutomatedTellerMachine10.mmEquipment,
-						com.tools20022.repository.msg.AutomatedTellerMachine10.mmAvailableDevice);
+				messageElement_lazy = () -> Arrays.asList(AutomatedTellerMachine10.mmIdentification, AutomatedTellerMachine10.mmAdditionalIdentification, AutomatedTellerMachine10.mmSequenceNumber, AutomatedTellerMachine10.mmBaseCurrency,
+						AutomatedTellerMachine10.mmLocation, AutomatedTellerMachine10.mmLocationCategory, AutomatedTellerMachine10.mmCapabilities, AutomatedTellerMachine10.mmEquipment, AutomatedTellerMachine10.mmAvailableDevice);
 				trace_lazy = () -> SystemIdentification.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AutomatedTellerMachine10";
 				definition = "ATM information.";
 			}

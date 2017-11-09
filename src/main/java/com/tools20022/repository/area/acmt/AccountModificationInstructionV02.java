@@ -20,6 +20,7 @@ package com.tools20022.repository.area.acmt;
 import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.AccountManagementArchive;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.ISOArchive;
@@ -53,6 +54,9 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code acmt.003.001.02}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.AccountManagementArchive
@@ -116,9 +120,6 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code acmt.003.001.02}</li>
- * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -168,7 +169,7 @@ public class AccountModificationInstructionV02 {
 	public static final MMMessageBuildingBlock mmMessageIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "MsgId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageIdentification";
 			definition = "Identifies the message.";
 			maxOccurs = 1;
@@ -203,7 +204,7 @@ public class AccountModificationInstructionV02 {
 	public static final MMMessageBuildingBlock mmPreviousReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "PrvsRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousReference";
 			definition = "Reference to a linked message that was previously sent.";
 			maxOccurs = 1;
@@ -241,7 +242,7 @@ public class AccountModificationInstructionV02 {
 	public static final MMMessageBuildingBlock mmInstructionDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "InstrDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructionDetails";
 			definition = "Provide detailed information about the application modification instruction. ";
 			maxOccurs = 1;
@@ -279,7 +280,7 @@ public class AccountModificationInstructionV02 {
 	public static final MMMessageBuildingBlock mmInvestmentAccountSelection = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "InvstmtAcctSelctn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestmentAccountSelection";
 			definition = "Investment account selection information used to identify the account for which the information is modified..";
 			maxOccurs = 1;
@@ -317,7 +318,7 @@ public class AccountModificationInstructionV02 {
 	public static final MMMessageBuildingBlock mmModifiedInvestmentAccount = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "ModfdInvstmtAcct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ModifiedInvestmentAccount";
 			definition = "Information related to general characteristics of an investment account to be inserted, updated or deleted.";
 			maxOccurs = 1;
@@ -354,7 +355,7 @@ public class AccountModificationInstructionV02 {
 	public static final MMMessageBuildingBlock mmModifiedAccountParties = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "ModfdAcctPties";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ModifiedAccountParties";
 			definition = "Information related to the account related parties (eg. account owner) to be inserted, updated or deleted.";
 			maxOccurs = 10;
@@ -391,7 +392,7 @@ public class AccountModificationInstructionV02 {
 	public static final MMMessageBuildingBlock mmModifiedIntermediaries = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "ModfdIntrmies";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ModifiedIntermediaries";
 			definition = "Information related to intermediaries to be inserted, updated or deleted.";
 			maxOccurs = 10;
@@ -428,7 +429,7 @@ public class AccountModificationInstructionV02 {
 	public static final MMMessageBuildingBlock mmModifiedPlacement = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "ModfdPlcmnt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ModifiedPlacement";
 			definition = "Information related to referred placement agent in the hedge fund industry to be inserted, updated or deleted.";
 			maxOccurs = 1;
@@ -466,7 +467,7 @@ public class AccountModificationInstructionV02 {
 	public static final MMMessageBuildingBlock mmModifiedIssueAllocation = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "ModfdIsseAllcn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ModifiedIssueAllocation";
 			definition = "Eligibility conditions information related to new issues allocation to be inserted, updated or deleted.";
 			maxOccurs = 1;
@@ -504,7 +505,7 @@ public class AccountModificationInstructionV02 {
 	public static final MMMessageBuildingBlock mmModifiedSavingsInvestmentPlan = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "ModfdSvgsInvstmtPlan";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ModifiedSavingsInvestmentPlan";
 			definition = "Information related to a savings plan to be either inserted, updated or deleted.";
 			maxOccurs = 50;
@@ -542,7 +543,7 @@ public class AccountModificationInstructionV02 {
 	public static final MMMessageBuildingBlock mmModifiedWithdrawalInvestmentPlan = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "ModfdWdrwlInvstmtPlan";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ModifiedWithdrawalInvestmentPlan";
 			definition = "Information related to a withrawal plan to be either inserted, updated or deleted.";
 			maxOccurs = 10;
@@ -580,7 +581,7 @@ public class AccountModificationInstructionV02 {
 	public static final MMMessageBuildingBlock mmModifiedCashSettlement = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "ModfdCshSttlm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ModifiedCashSettlement";
 			definition = "Cash settlement standing instruction associated to the investment fund transaction and to be either inserted or deleted.";
 			maxOccurs = 8;
@@ -616,7 +617,7 @@ public class AccountModificationInstructionV02 {
 	public static final MMMessageBuildingBlock mmModifiedServiceLevelAgreement = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "ModfdSvcLvlAgrmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ModifiedServiceLevelAgreement";
 			definition = "Information related to documents to be added, deleted or updated.\n";
 			maxOccurs = 30;
@@ -653,7 +654,7 @@ public class AccountModificationInstructionV02 {
 	public static final MMMessageBuildingBlock mmExtension = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Xtnsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Extension";
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
 			minOccurs = 0;
@@ -664,7 +665,7 @@ public class AccountModificationInstructionV02 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AccountModificationInstructionV02";
 				definition = "Scope\r\nAn account owner, eg, and investor or its designated agent, sends the AccountModificationInstruction message to an account servicer, eg, a registrar, transfer agent or custodian bank to modify, ie, create, update or delete specific details of an existing investment fund account.\r\nUsage\r\nThe AccountModificationInstruction message is used to modify the details of an existing account.\r\nThe AccountModificationInstruction message has three specific uses:\r\n- to maintain/update any of the existing account details, eg, to update the address of the beneficiary or modify the preference to income from distribution to capitalisation, or,\r\n- to add/create specific details to the existing account when these details were not yet recorded at the time of account creation, eg, to add a second address or to establish new cash settlement standing instructions, or,\r\n- to delete specific account details, eg, delete cash standing instructions.\r\nThis message cannot be used to delete an entire account, as institution specific and regulatory rules pertaining to account deletion are diverse.\r\nThe usage of this message may be subject to service level agreement (SLA) between the counterparties.\r\nExecution of the AccountModificationInstruction is confirmed via an AccountDetailsConfirmation message.";
 				nextVersions_lazy = () -> Arrays.asList(AccountModificationInstructionV03.mmObject());
@@ -672,14 +673,11 @@ public class AccountModificationInstructionV02 {
 				rootElement = "Document";
 				xmlTag = "AcctModInstrV02";
 				businessArea_lazy = () -> AccountManagementArchive.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountModificationInstructionV02.mmMessageIdentification,
-						com.tools20022.repository.area.acmt.AccountModificationInstructionV02.mmPreviousReference, com.tools20022.repository.area.acmt.AccountModificationInstructionV02.mmInstructionDetails,
-						com.tools20022.repository.area.acmt.AccountModificationInstructionV02.mmInvestmentAccountSelection, com.tools20022.repository.area.acmt.AccountModificationInstructionV02.mmModifiedInvestmentAccount,
-						com.tools20022.repository.area.acmt.AccountModificationInstructionV02.mmModifiedAccountParties, com.tools20022.repository.area.acmt.AccountModificationInstructionV02.mmModifiedIntermediaries,
-						com.tools20022.repository.area.acmt.AccountModificationInstructionV02.mmModifiedPlacement, com.tools20022.repository.area.acmt.AccountModificationInstructionV02.mmModifiedIssueAllocation,
-						com.tools20022.repository.area.acmt.AccountModificationInstructionV02.mmModifiedSavingsInvestmentPlan, com.tools20022.repository.area.acmt.AccountModificationInstructionV02.mmModifiedWithdrawalInvestmentPlan,
-						com.tools20022.repository.area.acmt.AccountModificationInstructionV02.mmModifiedCashSettlement, com.tools20022.repository.area.acmt.AccountModificationInstructionV02.mmModifiedServiceLevelAgreement,
-						com.tools20022.repository.area.acmt.AccountModificationInstructionV02.mmExtension);
+				messageBuildingBlock_lazy = () -> Arrays.asList(AccountModificationInstructionV02.mmMessageIdentification, AccountModificationInstructionV02.mmPreviousReference, AccountModificationInstructionV02.mmInstructionDetails,
+						AccountModificationInstructionV02.mmInvestmentAccountSelection, AccountModificationInstructionV02.mmModifiedInvestmentAccount, AccountModificationInstructionV02.mmModifiedAccountParties,
+						AccountModificationInstructionV02.mmModifiedIntermediaries, AccountModificationInstructionV02.mmModifiedPlacement, AccountModificationInstructionV02.mmModifiedIssueAllocation,
+						AccountModificationInstructionV02.mmModifiedSavingsInvestmentPlan, AccountModificationInstructionV02.mmModifiedWithdrawalInvestmentPlan, AccountModificationInstructionV02.mmModifiedCashSettlement,
+						AccountModificationInstructionV02.mmModifiedServiceLevelAgreement, AccountModificationInstructionV02.mmExtension);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "acmt";

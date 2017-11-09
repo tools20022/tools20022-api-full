@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.PINFormatCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -104,7 +106,7 @@ public class PINFormat4Code extends PINFormatCode {
 	 */
 	public static final MMCode mmANSI0 = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ANSI0";
 			owner_lazy = () -> PINFormat4Code.mmObject();
 		}
@@ -127,7 +129,7 @@ public class PINFormat4Code extends PINFormatCode {
 	 */
 	public static final MMCode mmBancomat = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Bancomat";
 			owner_lazy = () -> PINFormat4Code.mmObject();
 		}
@@ -150,7 +152,7 @@ public class PINFormat4Code extends PINFormatCode {
 	 */
 	public static final MMCode mmBanksys = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Banksys";
 			owner_lazy = () -> PINFormat4Code.mmObject();
 		}
@@ -173,7 +175,7 @@ public class PINFormat4Code extends PINFormatCode {
 	 */
 	public static final MMCode mmDiebold = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Diebold";
 			owner_lazy = () -> PINFormat4Code.mmObject();
 		}
@@ -196,7 +198,7 @@ public class PINFormat4Code extends PINFormatCode {
 	 */
 	public static final MMCode mmDieboldCO = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DieboldCO";
 			owner_lazy = () -> PINFormat4Code.mmObject();
 		}
@@ -219,7 +221,7 @@ public class PINFormat4Code extends PINFormatCode {
 	 */
 	public static final MMCode mmECI2 = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ECI2";
 			owner_lazy = () -> PINFormat4Code.mmObject();
 		}
@@ -242,7 +244,7 @@ public class PINFormat4Code extends PINFormatCode {
 	 */
 	public static final MMCode mmECI3 = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ECI3";
 			owner_lazy = () -> PINFormat4Code.mmObject();
 		}
@@ -265,7 +267,7 @@ public class PINFormat4Code extends PINFormatCode {
 	 */
 	public static final MMCode mmEMVRSA = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EMVRSA";
 			owner_lazy = () -> PINFormat4Code.mmObject();
 		}
@@ -288,7 +290,7 @@ public class PINFormat4Code extends PINFormatCode {
 	 */
 	public static final MMCode mmIBM3624 = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IBM3624";
 			owner_lazy = () -> PINFormat4Code.mmObject();
 		}
@@ -311,7 +313,7 @@ public class PINFormat4Code extends PINFormatCode {
 	 */
 	public static final MMCode mmISO0 = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ISO0";
 			owner_lazy = () -> PINFormat4Code.mmObject();
 		}
@@ -334,7 +336,7 @@ public class PINFormat4Code extends PINFormatCode {
 	 */
 	public static final MMCode mmISO1 = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ISO1";
 			owner_lazy = () -> PINFormat4Code.mmObject();
 		}
@@ -357,7 +359,7 @@ public class PINFormat4Code extends PINFormatCode {
 	 */
 	public static final MMCode mmISO2 = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ISO2";
 			owner_lazy = () -> PINFormat4Code.mmObject();
 		}
@@ -380,7 +382,7 @@ public class PINFormat4Code extends PINFormatCode {
 	 */
 	public static final MMCode mmISO3 = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ISO3";
 			owner_lazy = () -> PINFormat4Code.mmObject();
 		}
@@ -403,7 +405,7 @@ public class PINFormat4Code extends PINFormatCode {
 	 */
 	public static final MMCode mmISO4 = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ISO4";
 			owner_lazy = () -> PINFormat4Code.mmObject();
 		}
@@ -426,7 +428,7 @@ public class PINFormat4Code extends PINFormatCode {
 	 */
 	public static final MMCode mmISO5 = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ISO5";
 			owner_lazy = () -> PINFormat4Code.mmObject();
 		}
@@ -449,7 +451,7 @@ public class PINFormat4Code extends PINFormatCode {
 	 */
 	public static final MMCode mmVISA2 = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VISA2";
 			owner_lazy = () -> PINFormat4Code.mmObject();
 		}
@@ -472,7 +474,7 @@ public class PINFormat4Code extends PINFormatCode {
 	 */
 	public static final MMCode mmVISA3 = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VISA3";
 			owner_lazy = () -> PINFormat4Code.mmObject();
 		}
@@ -481,16 +483,13 @@ public class PINFormat4Code extends PINFormatCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PINFormat4Code";
 				definition = "Format of an ATM PIN block before encryption.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PINFormat4Code.mmANSI0, com.tools20022.repository.codeset.PINFormat4Code.mmBancomat, com.tools20022.repository.codeset.PINFormat4Code.mmBanksys,
-						com.tools20022.repository.codeset.PINFormat4Code.mmDiebold, com.tools20022.repository.codeset.PINFormat4Code.mmDieboldCO, com.tools20022.repository.codeset.PINFormat4Code.mmECI2,
-						com.tools20022.repository.codeset.PINFormat4Code.mmECI3, com.tools20022.repository.codeset.PINFormat4Code.mmEMVRSA, com.tools20022.repository.codeset.PINFormat4Code.mmIBM3624,
-						com.tools20022.repository.codeset.PINFormat4Code.mmISO0, com.tools20022.repository.codeset.PINFormat4Code.mmISO1, com.tools20022.repository.codeset.PINFormat4Code.mmISO2,
-						com.tools20022.repository.codeset.PINFormat4Code.mmISO3, com.tools20022.repository.codeset.PINFormat4Code.mmISO4, com.tools20022.repository.codeset.PINFormat4Code.mmISO5,
-						com.tools20022.repository.codeset.PINFormat4Code.mmVISA2, com.tools20022.repository.codeset.PINFormat4Code.mmVISA3);
+				code_lazy = () -> Arrays.asList(PINFormat4Code.mmANSI0, PINFormat4Code.mmBancomat, PINFormat4Code.mmBanksys, PINFormat4Code.mmDiebold, PINFormat4Code.mmDieboldCO, PINFormat4Code.mmECI2, PINFormat4Code.mmECI3,
+						PINFormat4Code.mmEMVRSA, PINFormat4Code.mmIBM3624, PINFormat4Code.mmISO0, PINFormat4Code.mmISO1, PINFormat4Code.mmISO2, PINFormat4Code.mmISO3, PINFormat4Code.mmISO4, PINFormat4Code.mmISO5, PINFormat4Code.mmVISA2,
+						PINFormat4Code.mmVISA3);
 				trace_lazy = () -> PINFormatCode.mmObject();
 			}
 		});

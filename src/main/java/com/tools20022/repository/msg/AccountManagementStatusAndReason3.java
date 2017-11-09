@@ -19,9 +19,12 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.acmt.AccountManagementStatusReportV04;
 import com.tools20022.repository.choice.Status14Choice;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.AccountStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -143,11 +146,11 @@ public class AccountManagementStatusAndReason3 {
 			componentContext_lazy = () -> AccountManagementStatusAndReason3.mmObject();
 			isDerived = false;
 			xmlTag = "Sts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Status";
 			definition = "Status of the account opening instruction or account modification instruction.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountManagementStatusAndReason4.mmStatus);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AccountManagementStatusAndReason2.mmStatus;
+			nextVersions_lazy = () -> Arrays.asList(AccountManagementStatusAndReason4.mmStatus);
+			previousVersion_lazy = () -> AccountManagementStatusAndReason2.mmStatus;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> Status14Choice.mmObject();
@@ -202,11 +205,11 @@ public class AccountManagementStatusAndReason3 {
 			componentContext_lazy = () -> AccountManagementStatusAndReason3.mmObject();
 			isDerived = false;
 			xmlTag = "AcctApplId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountApplicationIdentification";
 			definition = "Unique and unambiguous identifier of the account opening or modification instruction at application level.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountManagementStatusAndReason4.mmAccountApplicationIdentification);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AccountManagementStatusAndReason2.mmAccountApplicationIdentification;
+			nextVersions_lazy = () -> Arrays.asList(AccountManagementStatusAndReason4.mmAccountApplicationIdentification);
+			previousVersion_lazy = () -> AccountManagementStatusAndReason2.mmAccountApplicationIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -216,11 +219,11 @@ public class AccountManagementStatusAndReason3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountManagementStatusAndReason3.mmStatus, com.tools20022.repository.msg.AccountManagementStatusAndReason3.mmAccountApplicationIdentification);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountManagementStatusReportV04.mmStatusReport);
+				messageElement_lazy = () -> Arrays.asList(AccountManagementStatusAndReason3.mmStatus, AccountManagementStatusAndReason3.mmAccountApplicationIdentification);
+				messageBuildingBlock_lazy = () -> Arrays.asList(AccountManagementStatusReportV04.mmStatusReport);
 				trace_lazy = () -> AccountStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AccountManagementStatusAndReason3";
 				definition = "Status report of an account opening instruction or account modification instruction that was previously received.";
 				nextVersions_lazy = () -> Arrays.asList(AccountManagementStatusAndReason4.mmObject());

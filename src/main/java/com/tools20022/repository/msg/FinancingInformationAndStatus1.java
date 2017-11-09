@@ -19,7 +19,10 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.tsin.InvoiceFinancingRequestStatusV01;
 import com.tools20022.repository.entity.InvoiceFinancingAgreement;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -114,7 +117,7 @@ public class FinancingInformationAndStatus1 {
 			componentContext_lazy = () -> FinancingInformationAndStatus1.mmObject();
 			isDerived = false;
 			xmlTag = "FincgAllwdSummry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancingAllowedSummary";
 			definition = "Specifies summary information about invoices/instalments financed, such as total amount financed, number of single requests accepted.";
 			maxOccurs = 1;
@@ -166,7 +169,7 @@ public class FinancingInformationAndStatus1 {
 			componentContext_lazy = () -> FinancingInformationAndStatus1.mmObject();
 			isDerived = false;
 			xmlTag = "InvcFincgDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvoiceFinancingDetails";
 			definition = "Specifies detailed information about single invoice/instalment financing result, such as result of request (financed or not financed), amount, percentage applied.";
 			minOccurs = 1;
@@ -178,11 +181,11 @@ public class FinancingInformationAndStatus1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancingInformationAndStatus1.mmFinancingAllowedSummary, com.tools20022.repository.msg.FinancingInformationAndStatus1.mmInvoiceFinancingDetails);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsin.InvoiceFinancingRequestStatusV01.mmFinancingInformationAndStatus);
+				messageElement_lazy = () -> Arrays.asList(FinancingInformationAndStatus1.mmFinancingAllowedSummary, FinancingInformationAndStatus1.mmInvoiceFinancingDetails);
+				messageBuildingBlock_lazy = () -> Arrays.asList(InvoiceFinancingRequestStatusV01.mmFinancingInformationAndStatus);
 				trace_lazy = () -> InvoiceFinancingAgreement.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FinancingInformationAndStatus1";
 				definition = "Financing information and status.";
 			}

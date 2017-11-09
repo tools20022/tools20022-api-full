@@ -20,8 +20,11 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CertificationFormatType1Code;
+import com.tools20022.repository.entity.BeneficialOwner;
 import com.tools20022.repository.entity.CorporateActionEvent;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification20;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -122,14 +125,14 @@ public class CertificationTypeFormat1Choice {
 	 */
 	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BeneficialOwner.mmCertificationFormat;
+			businessElementTrace_lazy = () -> BeneficialOwner.mmCertificationFormat;
 			componentContext_lazy = () -> CertificationTypeFormat1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Cd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Standard code to specify the certification format required, that is, physical or electronic format.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CertificationTypeFormat3Choice.mmCode);
+			nextVersions_lazy = () -> Arrays.asList(CertificationTypeFormat3Choice.mmCode);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CertificationFormatType1Code.mmObject();
@@ -178,14 +181,14 @@ public class CertificationTypeFormat1Choice {
 	 */
 	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BeneficialOwner.mmCertificationFormat;
+			businessElementTrace_lazy = () -> BeneficialOwner.mmCertificationFormat;
 			componentContext_lazy = () -> CertificationTypeFormat1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Proprietary identification of the certification format.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CertificationTypeFormat3Choice.mmProprietary);
+			nextVersions_lazy = () -> Arrays.asList(CertificationTypeFormat3Choice.mmProprietary);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -196,10 +199,10 @@ public class CertificationTypeFormat1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CertificationTypeFormat1Choice.mmCode, com.tools20022.repository.choice.CertificationTypeFormat1Choice.mmProprietary);
+				messageElement_lazy = () -> Arrays.asList(CertificationTypeFormat1Choice.mmCode, CertificationTypeFormat1Choice.mmProprietary);
 				trace_lazy = () -> CorporateActionEvent.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CertificationTypeFormat1Choice";
 				definition = "Choice between a standard code or proprietary code to specify the certification format required.";
 				nextVersions_lazy = () -> Arrays.asList(CertificationTypeFormat3Choice.mmObject());

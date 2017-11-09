@@ -19,6 +19,8 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.DeceasedExemptionStatus1;
 import com.tools20022.repository.msg.IncompetentExemptionStatus1;
 import com.tools20022.repository.msg.NonExemptExemptionStatus1;
@@ -99,7 +101,7 @@ public class BeneficialOwnerExemptionStatus1Choice {
 			componentContext_lazy = () -> BeneficialOwnerExemptionStatus1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Dcsd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Deceased";
 			definition = "Beneficial owner is deceased.";
 			maxOccurs = 1;
@@ -141,7 +143,7 @@ public class BeneficialOwnerExemptionStatus1Choice {
 			componentContext_lazy = () -> BeneficialOwnerExemptionStatus1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Incmptnt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Incompetent";
 			definition = "Beneficial owner is incompetent.";
 			maxOccurs = 1;
@@ -183,7 +185,7 @@ public class BeneficialOwnerExemptionStatus1Choice {
 			componentContext_lazy = () -> BeneficialOwnerExemptionStatus1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "NonXmpt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonExempt";
 			definition = "Beneficial owner is non-exempt.";
 			maxOccurs = 1;
@@ -196,10 +198,9 @@ public class BeneficialOwnerExemptionStatus1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.BeneficialOwnerExemptionStatus1Choice.mmDeceased, com.tools20022.repository.choice.BeneficialOwnerExemptionStatus1Choice.mmIncompetent,
-						com.tools20022.repository.choice.BeneficialOwnerExemptionStatus1Choice.mmNonExempt);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(BeneficialOwnerExemptionStatus1Choice.mmDeceased, BeneficialOwnerExemptionStatus1Choice.mmIncompetent, BeneficialOwnerExemptionStatus1Choice.mmNonExempt);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "BeneficialOwnerExemptionStatus1Choice";
 				definition = "Exemption reason for the beneficial owner. Usually applicable for CD (Cash Deposit) Early Redemption events.";
 			}

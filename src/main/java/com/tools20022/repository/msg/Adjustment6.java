@@ -20,10 +20,12 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.AdjustmentType1Choice;
 import com.tools20022.repository.codeset.AdjustmentDirection1Code;
 import com.tools20022.repository.datatype.CurrencyAndAmount;
 import com.tools20022.repository.entity.Adjustment;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -117,14 +119,14 @@ public class Adjustment6 {
 	 */
 	public static final MMMessageAssociationEnd mmType = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Adjustment.mmType;
+			businessElementTrace_lazy = () -> Adjustment.mmType;
 			componentContext_lazy = () -> Adjustment6.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Specifies the type of adjustment.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Adjustment7.mmType);
+			nextVersions_lazy = () -> Arrays.asList(Adjustment7.mmType);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -181,15 +183,15 @@ public class Adjustment6 {
 	 */
 	public static final MMMessageAttribute mmDirection = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Adjustment.mmDirection;
+			businessElementTrace_lazy = () -> Adjustment.mmDirection;
 			componentContext_lazy = () -> Adjustment6.mmObject();
 			isDerived = false;
 			xmlTag = "Drctn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Direction";
 			definition = "Specifies whether the adjustment must be subtracted or added to the total amount.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Adjustment7.mmDirection);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Adjustment4.mmDirection;
+			nextVersions_lazy = () -> Arrays.asList(Adjustment7.mmDirection);
+			previousVersion_lazy = () -> Adjustment4.mmDirection;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AdjustmentDirection1Code.mmObject();
@@ -243,15 +245,15 @@ public class Adjustment6 {
 	 */
 	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Adjustment.mmAmount;
+			businessElementTrace_lazy = () -> Adjustment.mmAmount;
 			componentContext_lazy = () -> Adjustment6.mmObject();
 			isDerived = false;
 			xmlTag = "Amt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Specifies the monetary amount of the adjustment.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Adjustment7.mmAmountOrPercentage);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Adjustment4.mmAmount;
+			nextVersions_lazy = () -> Arrays.asList(Adjustment7.mmAmountOrPercentage);
+			previousVersion_lazy = () -> Adjustment4.mmAmount;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
@@ -261,10 +263,10 @@ public class Adjustment6 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Adjustment6.mmType, com.tools20022.repository.msg.Adjustment6.mmDirection, com.tools20022.repository.msg.Adjustment6.mmAmount);
+				messageElement_lazy = () -> Arrays.asList(Adjustment6.mmType, Adjustment6.mmDirection, Adjustment6.mmAmount);
 				trace_lazy = () -> Adjustment.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Adjustment6";
 				definition = "Modification on the value of goods and / or services. For example: rebate, discount, surcharge";
 				nextVersions_lazy = () -> Arrays.asList(Adjustment7.mmObject());

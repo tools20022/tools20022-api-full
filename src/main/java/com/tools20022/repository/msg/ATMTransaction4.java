@@ -20,10 +20,14 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.Response4Code;
 import com.tools20022.repository.codeset.ResultDetail2Code;
 import com.tools20022.repository.datatype.Max10000Binary;
 import com.tools20022.repository.entity.CardPayment;
+import com.tools20022.repository.entity.CardPaymentValidation;
+import com.tools20022.repository.entity.Response;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -115,14 +119,14 @@ public class ATMTransaction4 {
 	 */
 	public static final MMMessageAssociationEnd mmTransactionIdentification = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPayment.mmCardPaymentAcquiring;
+			businessElementTrace_lazy = () -> CardPayment.mmCardPaymentAcquiring;
 			componentContext_lazy = () -> ATMTransaction4.mmObject();
 			isDerived = false;
 			xmlTag = "TxId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionIdentification";
 			definition = "Identification of the transaction assigned by the ATM.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMTransaction2.mmTransactionIdentification;
+			previousVersion_lazy = () -> ATMTransaction2.mmTransactionIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -165,11 +169,11 @@ public class ATMTransaction4 {
 	 */
 	public static final MMMessageAttribute mmResponse = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPaymentValidation.mmResponse;
+			businessElementTrace_lazy = () -> CardPaymentValidation.mmResponse;
 			componentContext_lazy = () -> ATMTransaction4.mmObject();
 			isDerived = false;
 			xmlTag = "Rspn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Response";
 			definition = "Response to the withdrawal advice.";
 			maxOccurs = 1;
@@ -213,11 +217,11 @@ public class ATMTransaction4 {
 	 */
 	public static final MMMessageAttribute mmResponseReason = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Response.mmResponseReason;
+			businessElementTrace_lazy = () -> Response.mmResponseReason;
 			componentContext_lazy = () -> ATMTransaction4.mmObject();
 			isDerived = false;
 			xmlTag = "RspnRsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ResponseReason";
 			definition = "Detail of the response.";
 			maxOccurs = 1;
@@ -268,10 +272,10 @@ public class ATMTransaction4 {
 			componentContext_lazy = () -> ATMTransaction4.mmObject();
 			isDerived = false;
 			xmlTag = "ICCRltdData";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ICCRelatedData";
 			definition = "Sequence of one or more TLV data elements from the ATM application, in accordance with ISO 7816-6, not in a specific order. Present if the transaction is performed with an EMV chip card application.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMTransaction2.mmICCRelatedData;
+			previousVersion_lazy = () -> ATMTransaction2.mmICCRelatedData;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max10000Binary.mmObject();
@@ -314,10 +318,10 @@ public class ATMTransaction4 {
 			componentContext_lazy = () -> ATMTransaction4.mmObject();
 			isDerived = false;
 			xmlTag = "Cmd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Command";
 			definition = "Maintenance command to perform on the ATM.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMTransaction2.mmCommand;
+			previousVersion_lazy = () -> ATMTransaction2.mmCommand;
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.ATMCommand1.mmObject();
@@ -327,11 +331,10 @@ public class ATMTransaction4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMTransaction4.mmTransactionIdentification, com.tools20022.repository.msg.ATMTransaction4.mmResponse,
-						com.tools20022.repository.msg.ATMTransaction4.mmResponseReason, com.tools20022.repository.msg.ATMTransaction4.mmICCRelatedData, com.tools20022.repository.msg.ATMTransaction4.mmCommand);
+				messageElement_lazy = () -> Arrays.asList(ATMTransaction4.mmTransactionIdentification, ATMTransaction4.mmResponse, ATMTransaction4.mmResponseReason, ATMTransaction4.mmICCRelatedData, ATMTransaction4.mmCommand);
 				trace_lazy = () -> CardPayment.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ATMTransaction4";
 				definition = "Acknowledgement of a completion advice.";
 				previousVersion_lazy = () -> ATMTransaction2.mmObject();

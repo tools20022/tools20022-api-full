@@ -19,6 +19,8 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.InterestPaymentDateRange1;
 import com.tools20022.repository.msg.InterestPaymentDateRange2;
 import java.util.Arrays;
@@ -97,7 +99,7 @@ public class InterestPaymentSchedule1Choice {
 			componentContext_lazy = () -> InterestPaymentSchedule1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "DtRg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DateRange";
 			definition = "Specifies an expected date and a due date for the interest payment.";
 			maxOccurs = 1;
@@ -143,7 +145,7 @@ public class InterestPaymentSchedule1Choice {
 			componentContext_lazy = () -> InterestPaymentSchedule1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "SubSchdl";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubSchedule";
 			definition = "Specifies an interest payment schedule, that is an interest amount that must be paid no sooner than the expected payment date and no later than the due date.";
 			minOccurs = 2;
@@ -155,9 +157,9 @@ public class InterestPaymentSchedule1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.InterestPaymentSchedule1Choice.mmDateRange, com.tools20022.repository.choice.InterestPaymentSchedule1Choice.mmSubSchedule);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(InterestPaymentSchedule1Choice.mmDateRange, InterestPaymentSchedule1Choice.mmSubSchedule);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InterestPaymentSchedule1Choice";
 				definition = "Choice between expected/due interest payment date and a interest payment schedule per amount and due date.";
 			}

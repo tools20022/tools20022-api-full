@@ -17,12 +17,11 @@
 
 package com.tools20022.repository.entity;
 
-import com.tools20022.metamodel.MMBusinessAssociationEnd;
-import com.tools20022.metamodel.MMBusinessAttribute;
-import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.*;
 import com.tools20022.repository.codeset.DemandTypeCode;
 import com.tools20022.repository.datatype.CurrencyAndAmount;
 import com.tools20022.repository.datatype.ISODateTime;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -37,23 +36,16 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Demand#mmUndertaking
- * Demand.mmUndertaking}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Demand#mmSubmissionDateTime
- * Demand.mmSubmissionDateTime}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Demand#mmDemandAmount
- * Demand.mmDemandAmount}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Demand#mmType Demand.mmType}
- * </li>
- * <li>{@linkplain com.tools20022.repository.entity.Demand#mmTotalClaimAmount
- * Demand.mmTotalClaimAmount}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Demand#mmPayment
- * Demand.mmPayment}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Demand#mmAssociatedDocument
- * Demand.mmAssociatedDocument}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Demand2 Demand2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Demand3 Demand3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.UndertakingDemandWithdrawal1
+ * UndertakingDemandWithdrawal1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Demand4 Demand4}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Demand1 Demand1}</li>
  * </ul>
  * </li>
  * <li>
@@ -79,16 +71,23 @@ import java.util.concurrent.atomic.AtomicReference;
  * UndertakingDemandWithdrawal1.mmDemandDetails}</li>
  * </ul>
  * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Demand2 Demand2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Demand3 Demand3}</li>
- * <li>{@linkplain com.tools20022.repository.msg.UndertakingDemandWithdrawal1
- * UndertakingDemandWithdrawal1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Demand4 Demand4}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Demand1 Demand1}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Demand#mmUndertaking
+ * Demand.mmUndertaking}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Demand#mmSubmissionDateTime
+ * Demand.mmSubmissionDateTime}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Demand#mmDemandAmount
+ * Demand.mmDemandAmount}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Demand#mmType Demand.mmType}
+ * </li>
+ * <li>{@linkplain com.tools20022.repository.entity.Demand#mmTotalClaimAmount
+ * Demand.mmTotalClaimAmount}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Demand#mmPayment
+ * Demand.mmPayment}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Demand#mmAssociatedDocument
+ * Demand.mmAssociatedDocument}</li>
  * </ul>
  * </li>
  * <li>
@@ -157,16 +156,16 @@ public class Demand {
 	 */
 	public static final MMBusinessAssociationEnd mmUndertaking = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UndertakingDemandWithdrawal1.mmUndertakingIdentification);
+			derivation_lazy = () -> Arrays.asList(UndertakingDemandWithdrawal1.mmUndertakingIdentification);
 			elementContext_lazy = () -> Demand.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Undertaking";
 			definition = "Undertaking for which a document signed by the beneficiary demanding payment is specified.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.Undertaking.mmDemand;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Undertaking.mmObject();
 		}
 	};
@@ -208,10 +207,10 @@ public class Demand {
 	 */
 	public static final MMBusinessAttribute mmSubmissionDateTime = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Demand2.mmSubmissionDateTime, com.tools20022.repository.msg.Demand3.mmSubmissionDateTime);
+			derivation_lazy = () -> Arrays.asList(Demand2.mmSubmissionDateTime, Demand3.mmSubmissionDateTime);
 			elementContext_lazy = () -> Demand.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SubmissionDateTime";
 			definition = "Date and time the demand is submitted.";
 			maxOccurs = 1;
@@ -260,11 +259,10 @@ public class Demand {
 	 */
 	public static final MMBusinessAttribute mmDemandAmount = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Demand2.mmAmount, com.tools20022.repository.msg.Demand3.mmAmount, com.tools20022.repository.msg.Demand4.mmAmount,
-					com.tools20022.repository.msg.Demand1.mmDemandAmount);
+			derivation_lazy = () -> Arrays.asList(Demand2.mmAmount, Demand3.mmAmount, Demand4.mmAmount, Demand1.mmDemandAmount);
 			elementContext_lazy = () -> Demand.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DemandAmount";
 			definition = "Amount to be paid.";
 			maxOccurs = 1;
@@ -307,10 +305,10 @@ public class Demand {
 	 */
 	public static final MMBusinessAttribute mmType = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Demand1.mmType);
+			derivation_lazy = () -> Arrays.asList(Demand1.mmType);
 			elementContext_lazy = () -> Demand.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Type";
 			definition = "Type of demand, for example, pay or extend.";
 			maxOccurs = 1;
@@ -351,7 +349,7 @@ public class Demand {
 		{
 			elementContext_lazy = () -> Demand.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TotalClaimAmount";
 			definition = "Amount and currency of the total amount claimed (sum of the demand amount plus counterparty commission and charges).";
 			maxOccurs = 1;
@@ -396,13 +394,13 @@ public class Demand {
 		{
 			elementContext_lazy = () -> Demand.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Payment";
 			definition = "Payment of the demand.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.PaymentObligation.mmPaymentSourceUndertakingDemand;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.PaymentObligation.mmObject();
 		}
 	};
@@ -443,13 +441,13 @@ public class Demand {
 		{
 			elementContext_lazy = () -> Demand.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AssociatedDocument";
 			definition = "Documents which are associated with a demand.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.UndertakingDocument.mmDemand;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.UndertakingDocument.mmObject();
 		}
 	};
@@ -457,16 +455,14 @@ public class Demand {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Demand";
 				definition = "Document signed by the beneficiary demanding payment under a demand guarantee or standby letter of credit.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.PaymentObligation.mmPaymentSourceUndertakingDemand, com.tools20022.repository.entity.Undertaking.mmDemand,
 						com.tools20022.repository.entity.UndertakingDocument.mmDemand);
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UndertakingDemandWithdrawal1.mmDemandDetails);
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Demand.mmUndertaking, com.tools20022.repository.entity.Demand.mmSubmissionDateTime, com.tools20022.repository.entity.Demand.mmDemandAmount,
-						com.tools20022.repository.entity.Demand.mmType, com.tools20022.repository.entity.Demand.mmTotalClaimAmount, com.tools20022.repository.entity.Demand.mmPayment,
-						com.tools20022.repository.entity.Demand.mmAssociatedDocument);
+				derivationElement_lazy = () -> Arrays.asList(UndertakingDemandWithdrawal1.mmDemandDetails);
+				element_lazy = () -> Arrays.asList(Demand.mmUndertaking, Demand.mmSubmissionDateTime, Demand.mmDemandAmount, Demand.mmType, Demand.mmTotalClaimAmount, Demand.mmPayment, Demand.mmAssociatedDocument);
 				derivationComponent_lazy = () -> Arrays.asList(Demand2.mmObject(), Demand3.mmObject(), UndertakingDemandWithdrawal1.mmObject(), Demand4.mmObject(), Demand1.mmObject());
 			}
 		});

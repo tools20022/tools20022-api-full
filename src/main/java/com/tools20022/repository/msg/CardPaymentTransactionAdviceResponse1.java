@@ -20,8 +20,11 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.Response1Code;
+import com.tools20022.repository.entity.CardPaymentValidation;
 import com.tools20022.repository.entity.Response;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -115,14 +118,14 @@ public class CardPaymentTransactionAdviceResponse1 {
 	 */
 	public static final MMMessageAssociationEnd mmTransactionIdentification = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPaymentValidation.mmCardPayment;
+			businessElementTrace_lazy = () -> CardPaymentValidation.mmCardPayment;
 			componentContext_lazy = () -> CardPaymentTransactionAdviceResponse1.mmObject();
 			isDerived = false;
 			xmlTag = "TxId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionIdentification";
 			definition = "Unique identification of the transaction by the POI.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardPaymentTransactionAdviceResponse5.mmTransactionIdentification);
+			nextVersions_lazy = () -> Arrays.asList(CardPaymentTransactionAdviceResponse5.mmTransactionIdentification);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -173,14 +176,14 @@ public class CardPaymentTransactionAdviceResponse1 {
 	 */
 	public static final MMMessageAttribute mmResponse = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Response.mmResponseToAuthorisation;
+			businessElementTrace_lazy = () -> Response.mmResponseToAuthorisation;
 			componentContext_lazy = () -> CardPaymentTransactionAdviceResponse1.mmObject();
 			isDerived = false;
 			xmlTag = "Rspn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Response";
 			definition = "Result of a requested service.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardPaymentTransactionAdviceResponse5.mmResponse);
+			nextVersions_lazy = () -> Arrays.asList(CardPaymentTransactionAdviceResponse5.mmResponse);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Response1Code.mmObject();
@@ -190,10 +193,10 @@ public class CardPaymentTransactionAdviceResponse1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardPaymentTransactionAdviceResponse1.mmTransactionIdentification, com.tools20022.repository.msg.CardPaymentTransactionAdviceResponse1.mmResponse);
+				messageElement_lazy = () -> Arrays.asList(CardPaymentTransactionAdviceResponse1.mmTransactionIdentification, CardPaymentTransactionAdviceResponse1.mmResponse);
 				trace_lazy = () -> Response.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CardPaymentTransactionAdviceResponse1";
 				definition = "Card payment completion advice response from the acquirer.";
 				nextVersions_lazy = () -> Arrays.asList(CardPaymentTransactionAdviceResponse3.mmObject(), CardPaymentTransactionAdviceResponse5.mmObject());

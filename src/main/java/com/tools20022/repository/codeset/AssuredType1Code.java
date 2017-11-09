@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.AssuredTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -90,7 +92,7 @@ public class AssuredType1Code extends AssuredTypeCode {
 	 */
 	public static final MMCode mmBuyer = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Buyer";
 			owner_lazy = () -> AssuredType1Code.mmObject();
 		}
@@ -113,7 +115,7 @@ public class AssuredType1Code extends AssuredTypeCode {
 	 */
 	public static final MMCode mmSeller = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Seller";
 			owner_lazy = () -> AssuredType1Code.mmObject();
 		}
@@ -136,7 +138,7 @@ public class AssuredType1Code extends AssuredTypeCode {
 	 */
 	public static final MMCode mmBuyerBank = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BuyerBank";
 			owner_lazy = () -> AssuredType1Code.mmObject();
 		}
@@ -159,7 +161,7 @@ public class AssuredType1Code extends AssuredTypeCode {
 	 */
 	public static final MMCode mmSellerBank = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SellerBank";
 			owner_lazy = () -> AssuredType1Code.mmObject();
 		}
@@ -168,13 +170,12 @@ public class AssuredType1Code extends AssuredTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("BUYE");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AssuredType1Code";
 				definition = "Specifies which type of party should be the assured on the insurance certificate.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AssuredType1Code.mmBuyer, com.tools20022.repository.codeset.AssuredType1Code.mmSeller, com.tools20022.repository.codeset.AssuredType1Code.mmBuyerBank,
-						com.tools20022.repository.codeset.AssuredType1Code.mmSellerBank);
+				code_lazy = () -> Arrays.asList(AssuredType1Code.mmBuyer, AssuredType1Code.mmSeller, AssuredType1Code.mmBuyerBank, AssuredType1Code.mmSellerBank);
 				trace_lazy = () -> AssuredTypeCode.mmObject();
 			}
 		});

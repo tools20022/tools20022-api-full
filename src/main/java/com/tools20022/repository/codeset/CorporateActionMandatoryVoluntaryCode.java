@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -28,6 +30,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionMandatoryVoluntary1Code
+ * CorporateActionMandatoryVoluntary1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -39,14 +49,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.CorporateActionMandatoryVoluntaryCode#mmVoluntary
  * CorporateActionMandatoryVoluntaryCode.mmVoluntary}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionMandatoryVoluntary1Code
- * CorporateActionMandatoryVoluntary1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -101,7 +103,7 @@ public class CorporateActionMandatoryVoluntaryCode {
 	 */
 	public static final MMCode mmMandatory = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Mandatory";
 			definition = "Participation in CA event is mandatory. Further instructions from the account owner are not required.";
 			owner_lazy = () -> CorporateActionMandatoryVoluntaryCode.mmObject();
@@ -135,7 +137,7 @@ public class CorporateActionMandatoryVoluntaryCode {
 	 */
 	public static final MMCode mmMandatoryWithOptions = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MandatoryWithOptions";
 			definition = "Participation in the corporate action is mandatory and further instructions from the account owner are required, unless a default option has been specified.";
 			owner_lazy = () -> CorporateActionMandatoryVoluntaryCode.mmObject();
@@ -169,7 +171,7 @@ public class CorporateActionMandatoryVoluntaryCode {
 	 */
 	public static final MMCode mmVoluntary = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Voluntary";
 			definition = "Participation in the corporate action is voluntary. If the owner wishes to take part in the event, instructions from the account owner are required.";
 			owner_lazy = () -> CorporateActionMandatoryVoluntaryCode.mmObject();
@@ -180,13 +182,12 @@ public class CorporateActionMandatoryVoluntaryCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("MAND");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionMandatoryVoluntaryCode";
 				definition = "Specifies whether the event is mandatory, mandatory with options or voluntary.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CorporateActionMandatoryVoluntaryCode.mmMandatory, com.tools20022.repository.codeset.CorporateActionMandatoryVoluntaryCode.mmMandatoryWithOptions,
-						com.tools20022.repository.codeset.CorporateActionMandatoryVoluntaryCode.mmVoluntary);
+				code_lazy = () -> Arrays.asList(CorporateActionMandatoryVoluntaryCode.mmMandatory, CorporateActionMandatoryVoluntaryCode.mmMandatoryWithOptions, CorporateActionMandatoryVoluntaryCode.mmVoluntary);
 				derivation_lazy = () -> Arrays.asList(CorporateActionMandatoryVoluntary1Code.mmObject());
 			}
 		});

@@ -19,7 +19,10 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.entity.CorporateActionEvent;
 import com.tools20022.repository.entity.InvestmentFundTransaction;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -97,11 +100,11 @@ public class TransactionType1Choice {
 	 */
 	public static final MMMessageAssociationEnd mmTransactionType = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundTransaction.mmType;
+			businessElementTrace_lazy = () -> InvestmentFundTransaction.mmType;
 			componentContext_lazy = () -> TransactionType1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "TxTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionType";
 			definition = "Type of investment fund transaction.";
 			maxOccurs = 1;
@@ -145,11 +148,11 @@ public class TransactionType1Choice {
 	 */
 	public static final MMMessageAssociationEnd mmCorporateActionType = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmType;
+			businessElementTrace_lazy = () -> CorporateActionEvent.mmType;
 			componentContext_lazy = () -> TransactionType1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "CorpActnTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorporateActionType";
 			definition = "Type of corporate action event.";
 			maxOccurs = 1;
@@ -162,10 +165,10 @@ public class TransactionType1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.TransactionType1Choice.mmTransactionType, com.tools20022.repository.choice.TransactionType1Choice.mmCorporateActionType);
+				messageElement_lazy = () -> Arrays.asList(TransactionType1Choice.mmTransactionType, TransactionType1Choice.mmCorporateActionType);
 				trace_lazy = () -> InvestmentFundTransaction.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TransactionType1Choice";
 				definition = "Choice of transaction type or corporation action event type.";
 			}

@@ -18,7 +18,9 @@
 package com.tools20022.repository.entity;
 
 import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.CashSettlementInstructionPartyRole;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.concurrent.atomic.AtomicReference;
 
 /**
@@ -62,8 +64,8 @@ public class InstructingReimbursementAgent extends CashSettlementInstructionPart
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InstructingReimbursementAgent";
 				definition = "Specifies the agent through which the instructing agent will reimburse the instructed agent.\nUsage: If the instructing and instructed agents have the same reimbursement agent, then only InstructingReimbursementAgent must be used.";
 				superType_lazy = () -> CashSettlementInstructionPartyRole.mmObject();

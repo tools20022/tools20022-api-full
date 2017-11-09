@@ -19,8 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.PercentageRate;
 import com.tools20022.repository.entity.HaircutValuation;
+import com.tools20022.repository.entity.Party;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -103,11 +106,11 @@ public class BasicCollateralValuation1Details {
 	 */
 	public static final MMMessageAttribute mmValuationHaircut = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.HaircutValuation.mmHaircut;
+			businessElementTrace_lazy = () -> HaircutValuation.mmHaircut;
 			componentContext_lazy = () -> BasicCollateralValuation1Details.mmObject();
 			isDerived = false;
 			xmlTag = "ValtnHrcut";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValuationHaircut";
 			definition = "Haircut percentage applied to the market value of underlying assets used as collateral as a risk control measure. The institution valuating the collateral calculates the value of underlying assets based on its market value less a certain percentage (the haircut).";
 			maxOccurs = 1;
@@ -151,11 +154,11 @@ public class BasicCollateralValuation1Details {
 	 */
 	public static final MMMessageAttribute mmHaircutSource = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> BasicCollateralValuation1Details.mmObject();
 			isDerived = false;
 			xmlTag = "HrcutSrc";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HaircutSource";
 			definition = "Place where the valuation haircut was calculated.";
 			maxOccurs = 1;
@@ -167,10 +170,10 @@ public class BasicCollateralValuation1Details {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BasicCollateralValuation1Details.mmValuationHaircut, com.tools20022.repository.msg.BasicCollateralValuation1Details.mmHaircutSource);
+				messageElement_lazy = () -> Arrays.asList(BasicCollateralValuation1Details.mmValuationHaircut, BasicCollateralValuation1Details.mmHaircutSource);
 				trace_lazy = () -> HaircutValuation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "BasicCollateralValuation1Details";
 				definition = "Basic valuation details of a collateral position.";
 			}

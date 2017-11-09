@@ -18,7 +18,9 @@
 package com.tools20022.repository.msgset;
 
 import com.tools20022.metamodel.MMMessageSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.pacs.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -73,8 +75,8 @@ public class PaymentsClearingandSettlementISOPreviousversion {
 	final static public MMMessageSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageSet() {
 			{
-				businessProcessCatalogue_lazy = () -> com.tools20022.repository.GeneratedRepository.mmcatalogue;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				businessProcessCatalogue_lazy = () -> GeneratedRepository.mmcatalogue;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Payments Clearing and Settlement - ISO - Previous version";
 				definition = "Set of messages used between financial institutions for the clearing and settlement of payment transactions.\r\n";
 				messageDefinition_lazy = () -> Arrays.asList(FinancialInstitutionCreditTransferV05.mmObject(), FIToFICustomerCreditTransferV05.mmObject(), FIToFICustomerDirectDebitV06.mmObject(), FIToFIPaymentStatusReportV07.mmObject(),

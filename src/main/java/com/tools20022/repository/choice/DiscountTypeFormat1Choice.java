@@ -19,8 +19,10 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.DiscountType1Code;
 import com.tools20022.repository.entity.Discount;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification13;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -101,11 +103,11 @@ public class DiscountTypeFormat1Choice {
 	 */
 	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Discount.mmDiscountType;
+			businessElementTrace_lazy = () -> Discount.mmDiscountType;
 			componentContext_lazy = () -> DiscountTypeFormat1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Cd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Standard code to specify the type of discount.";
 			maxOccurs = 1;
@@ -149,11 +151,11 @@ public class DiscountTypeFormat1Choice {
 	 */
 	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Discount.mmDiscountType;
+			businessElementTrace_lazy = () -> Discount.mmDiscountType;
 			componentContext_lazy = () -> DiscountTypeFormat1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Proprietary code for specifying the type of discount.";
 			maxOccurs = 1;
@@ -165,10 +167,10 @@ public class DiscountTypeFormat1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.DiscountTypeFormat1Choice.mmCode, com.tools20022.repository.choice.DiscountTypeFormat1Choice.mmProprietary);
+				messageElement_lazy = () -> Arrays.asList(DiscountTypeFormat1Choice.mmCode, DiscountTypeFormat1Choice.mmProprietary);
 				trace_lazy = () -> Discount.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DiscountTypeFormat1Choice";
 				definition = "Choice between a standard code or a proprietary code for specifying the type of discount.";
 			}

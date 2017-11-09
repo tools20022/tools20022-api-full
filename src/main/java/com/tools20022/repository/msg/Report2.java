@@ -19,7 +19,9 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.Party;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -113,10 +115,10 @@ public class Report2 {
 			componentContext_lazy = () -> Report2.mmObject();
 			isDerived = false;
 			xmlTag = "NonClrMmb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonClearingMember";
 			definition = "Provides the identification for the non-clearing member. This is mandatory if the clearing member identification equals a general clearing member.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Report5.mmNonClearingMember);
+			nextVersions_lazy = () -> Arrays.asList(Report5.mmNonClearingMember);
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount31.mmObject();
@@ -162,10 +164,10 @@ public class Report2 {
 			componentContext_lazy = () -> Report2.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmOblgtnDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementObligationDetails";
 			definition = "Provides information about the settlement obligation details.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Report5.mmSettlementObligationDetails);
+			nextVersions_lazy = () -> Arrays.asList(Report5.mmSettlementObligationDetails);
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.SettlementObligation4.mmObject();
@@ -175,9 +177,9 @@ public class Report2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Report2.mmNonClearingMember, com.tools20022.repository.msg.Report2.mmSettlementObligationDetails);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(Report2.mmNonClearingMember, Report2.mmSettlementObligationDetails);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Report2";
 				definition = "Provides details on the settlement obligation report.";
 				nextVersions_lazy = () -> Arrays.asList(Report5.mmObject());

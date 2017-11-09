@@ -20,11 +20,13 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.CashAccountIdentification5Choice;
 import com.tools20022.repository.choice.NonEligibleProceedsIndicator3Choice;
 import com.tools20022.repository.codeset.CountryCode;
 import com.tools20022.repository.codeset.CreditDebitCode;
-import com.tools20022.repository.entity.CashProceedsDefinition;
+import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -149,15 +151,15 @@ public class CashOption43 {
 	 */
 	public static final MMMessageAttribute mmCreditDebitIndicator = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ProceedsDefinition.mmCreditDebitIndicator;
+			businessElementTrace_lazy = () -> ProceedsDefinition.mmCreditDebitIndicator;
 			componentContext_lazy = () -> CashOption43.mmObject();
 			isDerived = false;
 			xmlTag = "CdtDbtInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditDebitIndicator";
 			definition = "Indicates whether the value is a debit or a credit.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashOption50.mmCreditDebitIndicator);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CashOption32.mmCreditDebitIndicator;
+			nextVersions_lazy = () -> Arrays.asList(CashOption50.mmCreditDebitIndicator);
+			previousVersion_lazy = () -> CashOption32.mmCreditDebitIndicator;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CreditDebitCode.mmObject();
@@ -215,15 +217,15 @@ public class CashOption43 {
 	 */
 	public static final MMMessageAssociationEnd mmNonEligibleProceedsIndicator = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ProceedsDefinition.mmNonEligibleProceedsIndicator;
+			businessElementTrace_lazy = () -> ProceedsDefinition.mmNonEligibleProceedsIndicator;
 			componentContext_lazy = () -> CashOption43.mmObject();
 			isDerived = false;
 			xmlTag = "NonElgblPrcdsInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonEligibleProceedsIndicator";
 			definition = "Specifies information regarding outturn resources that cannot be processed by the Central Securities Depository (CSD). Special delivery instruction is required from the account owner for the corporate action outcome to be credited.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashOption50.mmNonEligibleProceedsIndicator);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CashOption32.mmNonEligibleProceedsIndicator;
+			nextVersions_lazy = () -> Arrays.asList(CashOption50.mmNonEligibleProceedsIndicator);
+			previousVersion_lazy = () -> CashOption32.mmNonEligibleProceedsIndicator;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -281,15 +283,15 @@ public class CashOption43 {
 	 */
 	public static final MMMessageAttribute mmIssuerOfferorTaxabilityIndicator = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ProceedsDefinition.mmIssuerOfferorTaxabilityIndicator;
+			businessElementTrace_lazy = () -> ProceedsDefinition.mmIssuerOfferorTaxabilityIndicator;
 			componentContext_lazy = () -> CashOption43.mmObject();
 			isDerived = false;
 			xmlTag = "IssrOfferrTaxbltyInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssuerOfferorTaxabilityIndicator";
 			definition = "Proceeds are taxable according to the information provided by the issuer / offeror.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashOption50.mmIssuerOfferorTaxabilityIndicator);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CashOption32.mmIssuerOfferorTaxabilityIndicator;
+			nextVersions_lazy = () -> Arrays.asList(CashOption50.mmIssuerOfferorTaxabilityIndicator);
+			previousVersion_lazy = () -> CashOption32.mmIssuerOfferorTaxabilityIndicator;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.GenericIdentification30.mmObject();
@@ -344,15 +346,15 @@ public class CashOption43 {
 	 */
 	public static final MMMessageAssociationEnd mmIncomeType = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashProceedsDefinition.mmIncomeType;
+			businessElementTrace_lazy = () -> CashProceedsDefinition.mmIncomeType;
 			componentContext_lazy = () -> CashOption43.mmObject();
 			isDerived = false;
 			xmlTag = "IncmTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncomeType";
 			definition = "Specifies the type of income.\nThe lists of income type codes to be used, are available on the SMPG website at www.smpg.info.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashOption50.mmIncomeType);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CashOption32.mmIncomeType;
+			nextVersions_lazy = () -> Arrays.asList(CashOption50.mmIncomeType);
+			previousVersion_lazy = () -> CashOption32.mmIncomeType;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -404,11 +406,11 @@ public class CashOption43 {
 			componentContext_lazy = () -> CashOption43.mmObject();
 			isDerived = false;
 			xmlTag = "XmptnTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExemptionType";
 			definition = "Specifies the basis for the reduced rate of withholding.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashOption50.mmExemptionType);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CashOption32.mmExemptionType;
+			nextVersions_lazy = () -> Arrays.asList(CashOption50.mmExemptionType);
+			previousVersion_lazy = () -> CashOption32.mmExemptionType;
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification30.mmObject();
@@ -456,14 +458,14 @@ public class CashOption43 {
 	 */
 	public static final MMMessageAttribute mmCountryOfIncomeSource = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ProceedsDefinition.mmCountryOfIncomeSource;
+			businessElementTrace_lazy = () -> ProceedsDefinition.mmCountryOfIncomeSource;
 			componentContext_lazy = () -> CashOption43.mmObject();
 			isDerived = false;
 			xmlTag = "CtryOfIncmSrc";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CountryOfIncomeSource";
 			definition = "Indicates the country from which the income originates.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashOption50.mmCountryOfIncomeSource);
+			nextVersions_lazy = () -> Arrays.asList(CashOption50.mmCountryOfIncomeSource);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CountryCode.mmObject();
@@ -517,15 +519,15 @@ public class CashOption43 {
 	 */
 	public static final MMMessageAssociationEnd mmCashAccountIdentification = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.mmIdentification;
+			businessElementTrace_lazy = () -> Account.mmIdentification;
 			componentContext_lazy = () -> CashOption43.mmObject();
 			isDerived = false;
 			xmlTag = "CshAcctId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashAccountIdentification";
 			definition = "Identification of the account in which cash is maintained.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashOption50.mmCashAccountIdentification);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CashOption32.mmCashAccountIdentification;
+			nextVersions_lazy = () -> Arrays.asList(CashOption50.mmCashAccountIdentification);
+			previousVersion_lazy = () -> CashOption32.mmCashAccountIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -580,15 +582,15 @@ public class CashOption43 {
 	 */
 	public static final MMMessageAssociationEnd mmAmountDetails = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionOption.mmRelatedChoiceCorporateAction;
+			businessElementTrace_lazy = () -> CorporateActionOption.mmRelatedChoiceCorporateAction;
 			componentContext_lazy = () -> CashOption43.mmObject();
 			isDerived = false;
 			xmlTag = "AmtDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmountDetails";
 			definition = "Provides information about the amounts related to a cash movement.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashOption50.mmAmountDetails);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CashOption32.mmAmountDetails;
+			nextVersions_lazy = () -> Arrays.asList(CashOption50.mmAmountDetails);
+			previousVersion_lazy = () -> CashOption32.mmAmountDetails;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -641,15 +643,15 @@ public class CashOption43 {
 	 */
 	public static final MMMessageAssociationEnd mmDateDetails = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionOption.mmRelatedChoiceCorporateAction;
+			businessElementTrace_lazy = () -> CorporateActionOption.mmRelatedChoiceCorporateAction;
 			componentContext_lazy = () -> CashOption43.mmObject();
 			isDerived = false;
 			xmlTag = "DtDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DateDetails";
 			definition = "Provides information about the dates related to a cash movement.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashOption50.mmDateDetails);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CashOption32.mmDateDetails;
+			nextVersions_lazy = () -> Arrays.asList(CashOption50.mmDateDetails);
+			previousVersion_lazy = () -> CashOption32.mmDateDetails;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -703,15 +705,15 @@ public class CashOption43 {
 	 */
 	public static final MMMessageAssociationEnd mmForeignExchangeDetails = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmExchangeRate;
+			businessElementTrace_lazy = () -> CorporateActionEvent.mmExchangeRate;
 			componentContext_lazy = () -> CashOption43.mmObject();
 			isDerived = false;
 			xmlTag = "FXDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForeignExchangeDetails";
 			definition = "Exchange rate between the amount and the resulting amount";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashOption50.mmForeignExchangeDetails);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CashOption32.mmForeignExchangeDetails;
+			nextVersions_lazy = () -> Arrays.asList(CashOption50.mmForeignExchangeDetails);
+			previousVersion_lazy = () -> CashOption32.mmForeignExchangeDetails;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -764,15 +766,15 @@ public class CashOption43 {
 	 */
 	public static final MMMessageAssociationEnd mmRateAndAmountDetails = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionOption.mmRelatedChoiceCorporateAction;
+			businessElementTrace_lazy = () -> CorporateActionOption.mmRelatedChoiceCorporateAction;
 			componentContext_lazy = () -> CashOption43.mmObject();
 			isDerived = false;
 			xmlTag = "RateAndAmtDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RateAndAmountDetails";
 			definition = "Provides information about the corporate action option.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashOption50.mmRateAndAmountDetails);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CashOption32.mmRateAndAmountDetails;
+			nextVersions_lazy = () -> Arrays.asList(CashOption50.mmRateAndAmountDetails);
+			previousVersion_lazy = () -> CashOption32.mmRateAndAmountDetails;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -828,15 +830,15 @@ public class CashOption43 {
 	 */
 	public static final MMMessageAssociationEnd mmPriceDetails = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmCorporateActionPrice;
+			businessElementTrace_lazy = () -> CorporateActionEvent.mmCorporateActionPrice;
 			componentContext_lazy = () -> CashOption43.mmObject();
 			isDerived = false;
 			xmlTag = "PricDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PriceDetails";
 			definition = "Provides information about the prices related to a corporate action option.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashOption50.mmPriceDetails);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CashOption32.mmPriceDetails;
+			nextVersions_lazy = () -> Arrays.asList(CashOption50.mmPriceDetails);
+			previousVersion_lazy = () -> CashOption32.mmPriceDetails;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -847,14 +849,12 @@ public class CashOption43 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashOption43.mmCreditDebitIndicator, com.tools20022.repository.msg.CashOption43.mmNonEligibleProceedsIndicator,
-						com.tools20022.repository.msg.CashOption43.mmIssuerOfferorTaxabilityIndicator, com.tools20022.repository.msg.CashOption43.mmIncomeType, com.tools20022.repository.msg.CashOption43.mmExemptionType,
-						com.tools20022.repository.msg.CashOption43.mmCountryOfIncomeSource, com.tools20022.repository.msg.CashOption43.mmCashAccountIdentification, com.tools20022.repository.msg.CashOption43.mmAmountDetails,
-						com.tools20022.repository.msg.CashOption43.mmDateDetails, com.tools20022.repository.msg.CashOption43.mmForeignExchangeDetails, com.tools20022.repository.msg.CashOption43.mmRateAndAmountDetails,
-						com.tools20022.repository.msg.CashOption43.mmPriceDetails);
+				messageElement_lazy = () -> Arrays.asList(CashOption43.mmCreditDebitIndicator, CashOption43.mmNonEligibleProceedsIndicator, CashOption43.mmIssuerOfferorTaxabilityIndicator, CashOption43.mmIncomeType,
+						CashOption43.mmExemptionType, CashOption43.mmCountryOfIncomeSource, CashOption43.mmCashAccountIdentification, CashOption43.mmAmountDetails, CashOption43.mmDateDetails, CashOption43.mmForeignExchangeDetails,
+						CashOption43.mmRateAndAmountDetails, CashOption43.mmPriceDetails);
 				trace_lazy = () -> CashProceedsDefinition.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CashOption43";
 				definition = "Provides information about the cash option.";
 				nextVersions_lazy = () -> Arrays.asList(CashOption50.mmObject());

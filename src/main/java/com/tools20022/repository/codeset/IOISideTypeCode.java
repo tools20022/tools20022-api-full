@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.SideCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -88,7 +90,7 @@ public class IOISideTypeCode extends SideCode {
 	 */
 	public static final MMCode mmBuy = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Buy";
 			owner_lazy = () -> IOISideTypeCode.mmObject();
 		}
@@ -111,7 +113,7 @@ public class IOISideTypeCode extends SideCode {
 	 */
 	public static final MMCode mmSell = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Sell";
 			owner_lazy = () -> IOISideTypeCode.mmObject();
 		}
@@ -134,7 +136,7 @@ public class IOISideTypeCode extends SideCode {
 	 */
 	public static final MMCode mmUndisclosed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Undisclosed";
 			owner_lazy = () -> IOISideTypeCode.mmObject();
 		}
@@ -157,7 +159,7 @@ public class IOISideTypeCode extends SideCode {
 	 */
 	public static final MMCode mmAsDefined = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AsDefined";
 			owner_lazy = () -> IOISideTypeCode.mmObject();
 		}
@@ -180,7 +182,7 @@ public class IOISideTypeCode extends SideCode {
 	 */
 	public static final MMCode mmOpposite = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Opposite";
 			owner_lazy = () -> IOISideTypeCode.mmObject();
 		}
@@ -189,13 +191,12 @@ public class IOISideTypeCode extends SideCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("BUYI");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "IOISideTypeCode";
 				definition = "Indicates the type of the side of the indication.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.IOISideTypeCode.mmBuy, com.tools20022.repository.codeset.IOISideTypeCode.mmSell, com.tools20022.repository.codeset.IOISideTypeCode.mmUndisclosed,
-						com.tools20022.repository.codeset.IOISideTypeCode.mmAsDefined, com.tools20022.repository.codeset.IOISideTypeCode.mmOpposite);
+				code_lazy = () -> Arrays.asList(IOISideTypeCode.mmBuy, IOISideTypeCode.mmSell, IOISideTypeCode.mmUndisclosed, IOISideTypeCode.mmAsDefined, IOISideTypeCode.mmOpposite);
 				trace_lazy = () -> SideCode.mmObject();
 			}
 		});

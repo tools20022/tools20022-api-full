@@ -20,6 +20,7 @@ package com.tools20022.repository.area.reda;
 import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.ReferenceDataLatestVersion;
 import com.tools20022.repository.codeset.PriceReportFunction1Code;
 import com.tools20022.repository.datatype.Max35Text;
@@ -52,6 +53,9 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code reda.001.001.04}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.ReferenceDataLatestVersion
@@ -108,9 +112,6 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code reda.001.001.04}</li>
- * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -159,7 +160,7 @@ public class PriceReportV04 {
 	public static final MMMessageBuildingBlock mmMessageIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "MsgId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageIdentification";
 			definition = "Reference that uniquely identifies a message from a business application standpoint. ";
 			maxOccurs = 1;
@@ -194,7 +195,7 @@ public class PriceReportV04 {
 	public static final MMMessageBuildingBlock mmPoolReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "PoolRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PoolReference";
 			definition = "Collective reference identifying a set of messages.";
 			maxOccurs = 1;
@@ -229,7 +230,7 @@ public class PriceReportV04 {
 	public static final MMMessageBuildingBlock mmPreviousReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "PrvsRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousReference";
 			definition = "Reference to a linked message that was previously sent.";
 			minOccurs = 0;
@@ -264,7 +265,7 @@ public class PriceReportV04 {
 	public static final MMMessageBuildingBlock mmRelatedReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "RltdRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedReference";
 			definition = "Reference to a linked message that was previously received.";
 			maxOccurs = 1;
@@ -298,7 +299,7 @@ public class PriceReportV04 {
 	public static final MMMessageBuildingBlock mmMessagePagination = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "MsgPgntn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessagePagination";
 			definition = "Pagination of the message.";
 			maxOccurs = 1;
@@ -335,7 +336,7 @@ public class PriceReportV04 {
 	public static final MMMessageBuildingBlock mmPriceReportIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "PricRptId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PriceReportIdentification";
 			definition = "Unique and unambiguous identifier for the price report, as assigned by the reporting party.";
 			maxOccurs = 1;
@@ -373,7 +374,7 @@ public class PriceReportV04 {
 	public static final MMMessageBuildingBlock mmFunction = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Fctn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Function";
 			definition = "Function of the price report, that is, whether the price report is a new price report or a replacement of some kind.";
 			maxOccurs = 1;
@@ -410,7 +411,7 @@ public class PriceReportV04 {
 	public static final MMMessageBuildingBlock mmCancellationIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CxlId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationIdentification";
 			definition = "Unique and unambiguous identifier for the cancellation of the previous price report, as assigned by the reporting party.";
 			maxOccurs = 1;
@@ -445,7 +446,7 @@ public class PriceReportV04 {
 	public static final MMMessageBuildingBlock mmPriceValuationDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "PricValtnDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PriceValuationDetails";
 			definition = "Information related to the price valuation of a financial instrument.";
 			minOccurs = 1;
@@ -481,7 +482,7 @@ public class PriceReportV04 {
 	public static final MMMessageBuildingBlock mmExtension = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Xtnsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Extension";
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
 			minOccurs = 0;
@@ -492,7 +493,7 @@ public class PriceReportV04 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PriceReportV04";
 				definition = "SCOPE\n\nA report provider, for example, a transfer agent, fund accountant or market data provider, sends the PriceReport message to the report recipient, for example, a fund management company, transfer agent, market data provider, regulator or any other interested party to provide the net asset value and price information for financial instruments on specific trade dates and, optionally, to quote price variation information.\n\nUSAGE\n\nThe PriceReport message is sent by the report provider to the report recipient to:\n- report prices for one or several different financial instruments for one or several different trade dates,\n- report statistical information about the valuation of a financial instrument,\n- inform another party that the quotation of a financial instrument is suspended,\n- report prices that are used for other purposes than the execution of investment funds orders.\n";
 				previousVersion_lazy = () -> PriceReportV03.mmObject();
@@ -500,11 +501,9 @@ public class PriceReportV04 {
 				rootElement = "Document";
 				xmlTag = "PricRpt";
 				businessArea_lazy = () -> ReferenceDataLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.reda.PriceReportV04.mmMessageIdentification, com.tools20022.repository.area.reda.PriceReportV04.mmPoolReference,
-						com.tools20022.repository.area.reda.PriceReportV04.mmPreviousReference, com.tools20022.repository.area.reda.PriceReportV04.mmRelatedReference, com.tools20022.repository.area.reda.PriceReportV04.mmMessagePagination,
-						com.tools20022.repository.area.reda.PriceReportV04.mmPriceReportIdentification, com.tools20022.repository.area.reda.PriceReportV04.mmFunction,
-						com.tools20022.repository.area.reda.PriceReportV04.mmCancellationIdentification, com.tools20022.repository.area.reda.PriceReportV04.mmPriceValuationDetails,
-						com.tools20022.repository.area.reda.PriceReportV04.mmExtension);
+				messageBuildingBlock_lazy = () -> Arrays.asList(PriceReportV04.mmMessageIdentification, PriceReportV04.mmPoolReference, PriceReportV04.mmPreviousReference, PriceReportV04.mmRelatedReference,
+						PriceReportV04.mmMessagePagination, PriceReportV04.mmPriceReportIdentification, PriceReportV04.mmFunction, PriceReportV04.mmCancellationIdentification, PriceReportV04.mmPriceValuationDetails,
+						PriceReportV04.mmExtension);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "reda";

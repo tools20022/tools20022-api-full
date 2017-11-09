@@ -20,8 +20,10 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.Max9NumericText;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -96,7 +98,7 @@ public class CBRFReportEntry1 {
 			componentContext_lazy = () -> CBRFReportEntry1.mmObject();
 			isDerived = false;
 			xmlTag = "MsgNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageName";
 			definition = "Name of the message.";
 			maxOccurs = 1;
@@ -138,7 +140,7 @@ public class CBRFReportEntry1 {
 			componentContext_lazy = () -> CBRFReportEntry1.mmObject();
 			isDerived = false;
 			xmlTag = "TtlNbOfNtries";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalNumberOfEntries";
 			definition = "Total number of entries in the group.";
 			maxOccurs = 1;
@@ -179,7 +181,7 @@ public class CBRFReportEntry1 {
 			componentContext_lazy = () -> CBRFReportEntry1.mmObject();
 			isDerived = false;
 			xmlTag = "MsgDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageDetails";
 			definition = "Information identifying electronic messages.";
 			minOccurs = 1;
@@ -191,10 +193,9 @@ public class CBRFReportEntry1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CBRFReportEntry1.mmMessageName, com.tools20022.repository.msg.CBRFReportEntry1.mmTotalNumberOfEntries,
-						com.tools20022.repository.msg.CBRFReportEntry1.mmMessageDetails);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(CBRFReportEntry1.mmMessageName, CBRFReportEntry1.mmTotalNumberOfEntries, CBRFReportEntry1.mmMessageDetails);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CBRFReportEntry1";
 				definition = "Report entry details.";
 			}

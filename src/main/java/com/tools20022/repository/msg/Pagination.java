@@ -19,8 +19,27 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.camt.*;
+import com.tools20022.repository.area.colr.CollateralAndExposureReportV02;
+import com.tools20022.repository.area.colr.CollateralAndExposureReportV03;
+import com.tools20022.repository.area.colr.InterestPaymentStatementV03;
+import com.tools20022.repository.area.colr.InterestPaymentStatementV04;
+import com.tools20022.repository.area.fxtr.ForeignExchangeTradeBulkStatusNotificationV04;
+import com.tools20022.repository.area.other.ForeignExchangeTradeBulkStatusNotificationV02;
+import com.tools20022.repository.area.reda.*;
+import com.tools20022.repository.area.secl.MarginReportV02;
+import com.tools20022.repository.area.secl.NetPositionV03;
+import com.tools20022.repository.area.secl.SettlementObligationReportV03;
+import com.tools20022.repository.area.secl.TradeLegStatementV03;
+import com.tools20022.repository.area.seev.*;
+import com.tools20022.repository.area.semt.*;
+import com.tools20022.repository.area.sese.*;
+import com.tools20022.repository.area.setr.SwitchOrderV03;
+import com.tools20022.repository.area.setr.SwitchOrderV04;
 import com.tools20022.repository.datatype.Max5NumericText;
 import com.tools20022.repository.datatype.YesNoIndicator;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -478,7 +497,7 @@ public class Pagination {
 			componentContext_lazy = () -> Pagination.mmObject();
 			isDerived = false;
 			xmlTag = "PgNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PageNumber";
 			definition = "Page number.";
 			maxOccurs = 1;
@@ -519,7 +538,7 @@ public class Pagination {
 			componentContext_lazy = () -> Pagination.mmObject();
 			isDerived = false;
 			xmlTag = "LastPgInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LastPageIndicator";
 			definition = "Indicates the last page.";
 			maxOccurs = 1;
@@ -531,73 +550,45 @@ public class Pagination {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Pagination.mmPageNumber, com.tools20022.repository.msg.Pagination.mmLastPageIndicator);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.reda.PriceReportCancellationV03.mmMessagePagination, com.tools20022.repository.area.reda.PriceReportCancellationV04.mmMessagePagination,
-						com.tools20022.repository.area.reda.PriceReportV03.mmMessagePagination, com.tools20022.repository.area.reda.PriceReportV04.mmMessagePagination,
-						com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAuditTrailReportV01.mmPagination, com.tools20022.repository.area.seev.CorporateActionInstructionStatementReportV01.mmPagination,
-						com.tools20022.repository.area.seev.CorporateActionInstructionStatementReportV02.mmPagination, com.tools20022.repository.area.seev.CorporateActionInstructionStatementReportV03.mmPagination,
-						com.tools20022.repository.area.seev.CorporateActionInstructionStatementReportV04.mmPagination, com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV03.mmPagination,
-						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV04.mmPagination, com.tools20022.repository.area.seev.CorporateActionNotificationV03.mmPagination,
-						com.tools20022.repository.area.seev.CorporateActionNotificationV04.mmPagination, com.tools20022.repository.area.semt.IntraPositionMovementPostingReportV01.mmPagination,
-						com.tools20022.repository.area.semt.IntraPositionMovementPostingReportV02.mmPagination, com.tools20022.repository.area.semt.IntraPositionMovementPostingReportV03.mmPagination,
-						com.tools20022.repository.area.semt.IntraPositionMovementPostingReportV04.mmPagination, com.tools20022.repository.area.semt.AccountingStatementOfHoldings.mmMessagePagination,
-						com.tools20022.repository.area.semt.AccountingStatementOfHoldingsV02.mmMessagePagination, com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV03.mmPagination,
-						com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV04.mmPagination, com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV05.mmPagination,
-						com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV06.mmPagination, com.tools20022.repository.area.semt.CustodyStatementOfHoldings.mmMessagePagination,
-						com.tools20022.repository.area.semt.CustodyStatementOfHoldingsV02.mmMessagePagination, com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV03.mmPagination,
-						com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV04.mmPagination, com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV05.mmPagination,
-						com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV06.mmPagination, com.tools20022.repository.area.semt.SecuritiesTransactionPendingReportV01.mmPagination,
-						com.tools20022.repository.area.semt.SecuritiesTransactionPendingReportV02.mmPagination, com.tools20022.repository.area.semt.SecuritiesTransactionPendingReportV03.mmPagination,
-						com.tools20022.repository.area.semt.SecuritiesTransactionPendingReportV04.mmPagination, com.tools20022.repository.area.semt.SecuritiesTransactionPostingReportV01.mmPagination,
-						com.tools20022.repository.area.semt.SecuritiesTransactionPostingReportV02.mmPagination, com.tools20022.repository.area.semt.SecuritiesTransactionPostingReportV03.mmPagination,
-						com.tools20022.repository.area.semt.SecuritiesTransactionPostingReportV04.mmPagination, com.tools20022.repository.area.other.ForeignExchangeTradeBulkStatusNotificationV02.mmMessagePagination,
-						com.tools20022.repository.area.semt.AccountingStatementOfHoldingsCancellation.mmMessagePagination, com.tools20022.repository.area.semt.AccountingStatementOfHoldingsCancellationV02.mmMessagePagination,
-						com.tools20022.repository.area.semt.CustodyStatementOfHoldingsCancellation.mmMessagePagination, com.tools20022.repository.area.semt.CustodyStatementOfHoldingsCancellationV02.mmMessagePagination,
-						com.tools20022.repository.area.camt.FundConfirmedCashForecastReportCancellationV02.mmMessagePagination, com.tools20022.repository.area.camt.FundConfirmedCashForecastReportV03.mmMessagePagination,
-						com.tools20022.repository.area.camt.FundDetailedConfirmedCashForecastReportCancellationV02.mmMessagePagination, com.tools20022.repository.area.camt.FundDetailedConfirmedCashForecastReportV03.mmMessagePagination,
-						com.tools20022.repository.area.camt.FundDetailedEstimatedCashForecastReportV03.mmMessagePagination, com.tools20022.repository.area.camt.FundEstimatedCashForecastReportV03.mmMessagePagination,
-						com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsCancellation.mmMessagePagination,
-						com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsCancellationV02.mmMessagePagination, com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactions.mmMessagePagination,
-						com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsV02.mmMessagePagination, com.tools20022.repository.area.setr.SwitchOrderV03.mmMessagePagination,
-						com.tools20022.repository.area.sese.PortfolioTransferNotificationV01.mmPagination, com.tools20022.repository.area.sese.PortfolioTransferNotificationV02.mmPagination,
-						com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAllegementReportV01.mmPagination, com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAllegementReportV02.mmPagination,
-						com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAllegementReportV03.mmPagination, com.tools20022.repository.area.sese.PortfolioTransferNotificationV03.mmPagination,
-						com.tools20022.repository.area.semt.SecuritiesEndOfProcessReportV01.mmPagination, com.tools20022.repository.area.semt.TotalPortfolioValuationReportV01.mmPagination,
-						com.tools20022.repository.area.secl.MarginReportV02.mmPagination, com.tools20022.repository.area.reda.PriceReportCorrectionV03.mmMessagePagination,
-						com.tools20022.repository.area.seev.CorporateActionNotificationV05.mmPagination, com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV05.mmPagination,
-						com.tools20022.repository.area.semt.SecuritiesTransactionPendingReportV05.mmPagination, com.tools20022.repository.area.semt.SecuritiesTransactionPostingReportV05.mmPagination,
-						com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV07.mmPagination, com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV07.mmPagination,
-						com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAllegementReportV04.mmPagination, com.tools20022.repository.area.camt.FundDetailedEstimatedCashForecastReportV04.mmMessagePagination,
-						com.tools20022.repository.area.camt.FundConfirmedCashForecastReportV04.mmMessagePagination, com.tools20022.repository.area.camt.FundDetailedConfirmedCashForecastReportCancellationV03.mmMessagePagination,
-						com.tools20022.repository.area.camt.FundEstimatedCashForecastReportV04.mmMessagePagination, com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsV03.mmMessagePagination,
-						com.tools20022.repository.area.camt.FundConfirmedCashForecastReportCancellationV03.mmMessagePagination, com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsCancellationV03.mmMessagePagination,
-						com.tools20022.repository.area.camt.FundDetailedConfirmedCashForecastReportV04.mmMessagePagination, com.tools20022.repository.area.secl.NetPositionV03.mmPagination,
-						com.tools20022.repository.area.secl.TradeLegStatementV03.mmPagination, com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV08.mmPagination,
-						com.tools20022.repository.area.semt.SecuritiesTransactionPendingReportV06.mmPagination, com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV08.mmPagination,
-						com.tools20022.repository.area.secl.SettlementObligationReportV03.mmPagination, com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAuditTrailReportV02.mmPagination,
-						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV06.mmPagination, com.tools20022.repository.area.colr.InterestPaymentStatementV03.mmPagination,
-						com.tools20022.repository.area.colr.CollateralAndExposureReportV02.mmPagination, com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV09.mmPagination,
-						com.tools20022.repository.area.sese.PortfolioTransferNotificationV04.mmPagination, com.tools20022.repository.area.semt.SecuritiesTransactionPostingReportV06.mmPagination,
-						com.tools20022.repository.area.semt.IntraPositionMovementPostingReportV05.mmPagination, com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV09.mmPagination,
-						com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAllegementReportV05.mmPagination, com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAuditTrailReportV03.mmPagination,
-						com.tools20022.repository.area.semt.SecuritiesTransactionPendingReportV07.mmPagination, com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV07.mmPagination,
-						com.tools20022.repository.area.seev.CorporateActionInstructionStatementReportV05.mmPagination, com.tools20022.repository.area.seev.CorporateActionNotificationV06.mmPagination,
-						com.tools20022.repository.area.colr.InterestPaymentStatementV04.mmPagination, com.tools20022.repository.area.colr.CollateralAndExposureReportV03.mmPagination,
-						com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAllegementReport002V05.mmPagination, com.tools20022.repository.area.sese.PortfolioTransferNotification002V04.mmPagination,
-						com.tools20022.repository.area.semt.SecuritiesTransactionPostingReport002V06.mmPagination, com.tools20022.repository.area.semt.IntraPositionMovementPostingReport002V05.mmPagination,
-						com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAuditTrailReport002V03.mmPagination, com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReport002V09.mmPagination,
-						com.tools20022.repository.area.semt.SecuritiesTransactionPendingReport002V07.mmPagination, com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReport002V09.mmPagination,
-						com.tools20022.repository.area.semt.SecuritiesBalanceTransparencyReportV02.mmPagination, com.tools20022.repository.area.setr.SwitchOrderV04.mmMessagePagination,
-						com.tools20022.repository.area.seev.CorporateActionNotificationV07.mmPagination, com.tools20022.repository.area.seev.CorporateActionInstructionStatementReportV06.mmPagination,
-						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV08.mmPagination, com.tools20022.repository.area.fxtr.ForeignExchangeTradeBulkStatusNotificationV04.mmMessagePagination,
-						com.tools20022.repository.area.semt.IntraPositionMovementPostingReportV06.mmPagination, com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAllegementReportV06.mmPagination,
-						com.tools20022.repository.area.semt.SecuritiesTransactionPendingReportV08.mmPagination, com.tools20022.repository.area.semt.SecuritiesTransactionPostingReportV07.mmPagination,
-						com.tools20022.repository.area.semt.SecuritiesTransactionPendingReport002V08.mmPagination, com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdvice002V08.mmPagination,
-						com.tools20022.repository.area.semt.IntraPositionMovementPostingReport002V06.mmPagination, com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAllegementReport002V06.mmPagination,
-						com.tools20022.repository.area.seev.CorporateActionNotification002V07.mmPagination, com.tools20022.repository.area.seev.CorporateActionInstructionStatementReport002V06.mmPagination,
-						com.tools20022.repository.area.semt.SecuritiesTransactionPostingReport002V07.mmPagination);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(Pagination.mmPageNumber, Pagination.mmLastPageIndicator);
+				messageBuildingBlock_lazy = () -> Arrays.asList(PriceReportCancellationV03.mmMessagePagination, PriceReportCancellationV04.mmMessagePagination, PriceReportV03.mmMessagePagination, PriceReportV04.mmMessagePagination,
+						SecuritiesSettlementTransactionAuditTrailReportV01.mmPagination, CorporateActionInstructionStatementReportV01.mmPagination, CorporateActionInstructionStatementReportV02.mmPagination,
+						CorporateActionInstructionStatementReportV03.mmPagination, CorporateActionInstructionStatementReportV04.mmPagination, CorporateActionMovementPreliminaryAdviceV03.mmPagination,
+						CorporateActionMovementPreliminaryAdviceV04.mmPagination, CorporateActionNotificationV03.mmPagination, CorporateActionNotificationV04.mmPagination, IntraPositionMovementPostingReportV01.mmPagination,
+						IntraPositionMovementPostingReportV02.mmPagination, IntraPositionMovementPostingReportV03.mmPagination, IntraPositionMovementPostingReportV04.mmPagination, AccountingStatementOfHoldings.mmMessagePagination,
+						AccountingStatementOfHoldingsV02.mmMessagePagination, SecuritiesBalanceAccountingReportV03.mmPagination, SecuritiesBalanceAccountingReportV04.mmPagination, SecuritiesBalanceAccountingReportV05.mmPagination,
+						SecuritiesBalanceAccountingReportV06.mmPagination, CustodyStatementOfHoldings.mmMessagePagination, CustodyStatementOfHoldingsV02.mmMessagePagination, SecuritiesBalanceCustodyReportV03.mmPagination,
+						SecuritiesBalanceCustodyReportV04.mmPagination, SecuritiesBalanceCustodyReportV05.mmPagination, SecuritiesBalanceCustodyReportV06.mmPagination, SecuritiesTransactionPendingReportV01.mmPagination,
+						SecuritiesTransactionPendingReportV02.mmPagination, SecuritiesTransactionPendingReportV03.mmPagination, SecuritiesTransactionPendingReportV04.mmPagination, SecuritiesTransactionPostingReportV01.mmPagination,
+						SecuritiesTransactionPostingReportV02.mmPagination, SecuritiesTransactionPostingReportV03.mmPagination, SecuritiesTransactionPostingReportV04.mmPagination,
+						ForeignExchangeTradeBulkStatusNotificationV02.mmMessagePagination, AccountingStatementOfHoldingsCancellation.mmMessagePagination, AccountingStatementOfHoldingsCancellationV02.mmMessagePagination,
+						CustodyStatementOfHoldingsCancellation.mmMessagePagination, CustodyStatementOfHoldingsCancellationV02.mmMessagePagination, FundConfirmedCashForecastReportCancellationV02.mmMessagePagination,
+						FundConfirmedCashForecastReportV03.mmMessagePagination, FundDetailedConfirmedCashForecastReportCancellationV02.mmMessagePagination, FundDetailedConfirmedCashForecastReportV03.mmMessagePagination,
+						FundDetailedEstimatedCashForecastReportV03.mmMessagePagination, FundEstimatedCashForecastReportV03.mmMessagePagination, StatementOfInvestmentFundTransactionsCancellation.mmMessagePagination,
+						StatementOfInvestmentFundTransactionsCancellationV02.mmMessagePagination, StatementOfInvestmentFundTransactions.mmMessagePagination, StatementOfInvestmentFundTransactionsV02.mmMessagePagination,
+						SwitchOrderV03.mmMessagePagination, PortfolioTransferNotificationV01.mmPagination, PortfolioTransferNotificationV02.mmPagination, SecuritiesSettlementTransactionAllegementReportV01.mmPagination,
+						SecuritiesSettlementTransactionAllegementReportV02.mmPagination, SecuritiesSettlementTransactionAllegementReportV03.mmPagination, PortfolioTransferNotificationV03.mmPagination,
+						SecuritiesEndOfProcessReportV01.mmPagination, TotalPortfolioValuationReportV01.mmPagination, MarginReportV02.mmPagination, PriceReportCorrectionV03.mmMessagePagination, CorporateActionNotificationV05.mmPagination,
+						CorporateActionMovementPreliminaryAdviceV05.mmPagination, SecuritiesTransactionPendingReportV05.mmPagination, SecuritiesTransactionPostingReportV05.mmPagination, SecuritiesBalanceCustodyReportV07.mmPagination,
+						SecuritiesBalanceAccountingReportV07.mmPagination, SecuritiesSettlementTransactionAllegementReportV04.mmPagination, FundDetailedEstimatedCashForecastReportV04.mmMessagePagination,
+						FundConfirmedCashForecastReportV04.mmMessagePagination, FundDetailedConfirmedCashForecastReportCancellationV03.mmMessagePagination, FundEstimatedCashForecastReportV04.mmMessagePagination,
+						StatementOfInvestmentFundTransactionsV03.mmMessagePagination, FundConfirmedCashForecastReportCancellationV03.mmMessagePagination, StatementOfInvestmentFundTransactionsCancellationV03.mmMessagePagination,
+						FundDetailedConfirmedCashForecastReportV04.mmMessagePagination, NetPositionV03.mmPagination, TradeLegStatementV03.mmPagination, SecuritiesBalanceCustodyReportV08.mmPagination,
+						SecuritiesTransactionPendingReportV06.mmPagination, SecuritiesBalanceAccountingReportV08.mmPagination, SettlementObligationReportV03.mmPagination, SecuritiesSettlementTransactionAuditTrailReportV02.mmPagination,
+						CorporateActionMovementPreliminaryAdviceV06.mmPagination, InterestPaymentStatementV03.mmPagination, CollateralAndExposureReportV02.mmPagination, SecuritiesBalanceCustodyReportV09.mmPagination,
+						PortfolioTransferNotificationV04.mmPagination, SecuritiesTransactionPostingReportV06.mmPagination, IntraPositionMovementPostingReportV05.mmPagination, SecuritiesBalanceAccountingReportV09.mmPagination,
+						SecuritiesSettlementTransactionAllegementReportV05.mmPagination, SecuritiesSettlementTransactionAuditTrailReportV03.mmPagination, SecuritiesTransactionPendingReportV07.mmPagination,
+						CorporateActionMovementPreliminaryAdviceV07.mmPagination, CorporateActionInstructionStatementReportV05.mmPagination, CorporateActionNotificationV06.mmPagination, InterestPaymentStatementV04.mmPagination,
+						CollateralAndExposureReportV03.mmPagination, SecuritiesSettlementTransactionAllegementReport002V05.mmPagination, PortfolioTransferNotification002V04.mmPagination,
+						SecuritiesTransactionPostingReport002V06.mmPagination, IntraPositionMovementPostingReport002V05.mmPagination, SecuritiesSettlementTransactionAuditTrailReport002V03.mmPagination,
+						SecuritiesBalanceAccountingReport002V09.mmPagination, SecuritiesTransactionPendingReport002V07.mmPagination, SecuritiesBalanceCustodyReport002V09.mmPagination, SecuritiesBalanceTransparencyReportV02.mmPagination,
+						SwitchOrderV04.mmMessagePagination, CorporateActionNotificationV07.mmPagination, CorporateActionInstructionStatementReportV06.mmPagination, CorporateActionMovementPreliminaryAdviceV08.mmPagination,
+						ForeignExchangeTradeBulkStatusNotificationV04.mmMessagePagination, IntraPositionMovementPostingReportV06.mmPagination, SecuritiesSettlementTransactionAllegementReportV06.mmPagination,
+						SecuritiesTransactionPendingReportV08.mmPagination, SecuritiesTransactionPostingReportV07.mmPagination, SecuritiesTransactionPendingReport002V08.mmPagination,
+						CorporateActionMovementPreliminaryAdvice002V08.mmPagination, IntraPositionMovementPostingReport002V06.mmPagination, SecuritiesSettlementTransactionAllegementReport002V06.mmPagination,
+						CorporateActionNotification002V07.mmPagination, CorporateActionInstructionStatementReport002V06.mmPagination, SecuritiesTransactionPostingReport002V07.mmPagination);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Pagination";
 				definition = "Number used to sequence pages when it is not possible for data to be conveyed in a single message and the data has to be split across several pages (messages).";
 			}

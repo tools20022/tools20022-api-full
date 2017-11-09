@@ -19,6 +19,8 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -93,7 +95,7 @@ public class BankToCustomerAccountReportCopy1 {
 			componentContext_lazy = () -> BankToCustomerAccountReportCopy1.mmObject();
 			isDerived = false;
 			xmlTag = "GrpHdr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GroupHeader";
 			definition = "Common information for the message.";
 			maxOccurs = 1;
@@ -134,7 +136,7 @@ public class BankToCustomerAccountReportCopy1 {
 			componentContext_lazy = () -> BankToCustomerAccountReportCopy1.mmObject();
 			isDerived = false;
 			xmlTag = "Rpt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Report";
 			definition = "Reports on a cash account.";
 			minOccurs = 1;
@@ -177,7 +179,7 @@ public class BankToCustomerAccountReportCopy1 {
 			componentContext_lazy = () -> BankToCustomerAccountReportCopy1.mmObject();
 			isDerived = false;
 			xmlTag = "SplmtryData";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryData";
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
 			minOccurs = 0;
@@ -189,10 +191,9 @@ public class BankToCustomerAccountReportCopy1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BankToCustomerAccountReportCopy1.mmGroupHeader, com.tools20022.repository.msg.BankToCustomerAccountReportCopy1.mmReport,
-						com.tools20022.repository.msg.BankToCustomerAccountReportCopy1.mmSupplementaryData);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(BankToCustomerAccountReportCopy1.mmGroupHeader, BankToCustomerAccountReportCopy1.mmReport, BankToCustomerAccountReportCopy1.mmSupplementaryData);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "BankToCustomerAccountReportCopy1";
 				definition = "Details of the Bank To Customer Account Report message.";
 			}

@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.InvestorTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -87,7 +89,7 @@ public class InvestorType1Code extends InvestorTypeCode {
 	 */
 	public static final MMCode mmRetail = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Retail";
 			owner_lazy = () -> InvestorType1Code.mmObject();
 		}
@@ -110,7 +112,7 @@ public class InvestorType1Code extends InvestorTypeCode {
 	 */
 	public static final MMCode mmProfessional = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Professional";
 			owner_lazy = () -> InvestorType1Code.mmObject();
 		}
@@ -133,7 +135,7 @@ public class InvestorType1Code extends InvestorTypeCode {
 	 */
 	public static final MMCode mmStaff = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Staff";
 			owner_lazy = () -> InvestorType1Code.mmObject();
 		}
@@ -156,7 +158,7 @@ public class InvestorType1Code extends InvestorTypeCode {
 	 */
 	public static final MMCode mmPhysicalPerson = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PhysicalPerson";
 			owner_lazy = () -> InvestorType1Code.mmObject();
 		}
@@ -165,13 +167,12 @@ public class InvestorType1Code extends InvestorTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("RETL");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InvestorType1Code";
 				definition = "Specifies the  type of investor.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.InvestorType1Code.mmRetail, com.tools20022.repository.codeset.InvestorType1Code.mmProfessional, com.tools20022.repository.codeset.InvestorType1Code.mmStaff,
-						com.tools20022.repository.codeset.InvestorType1Code.mmPhysicalPerson);
+				code_lazy = () -> Arrays.asList(InvestorType1Code.mmRetail, InvestorType1Code.mmProfessional, InvestorType1Code.mmStaff, InvestorType1Code.mmPhysicalPerson);
 				trace_lazy = () -> InvestorTypeCode.mmObject();
 			}
 		});

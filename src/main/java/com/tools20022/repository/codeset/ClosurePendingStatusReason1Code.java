@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ClosurePendingStatusReasonCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -77,7 +79,7 @@ public class ClosurePendingStatusReason1Code extends ClosurePendingStatusReasonC
 	 */
 	public static final MMCode mmAccountClosingInProcess = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountClosingInProcess";
 			owner_lazy = () -> ClosurePendingStatusReason1Code.mmObject();
 		}
@@ -100,7 +102,7 @@ public class ClosurePendingStatusReason1Code extends ClosurePendingStatusReasonC
 	 */
 	public static final MMCode mmPendingConditions = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingConditions";
 			owner_lazy = () -> ClosurePendingStatusReason1Code.mmObject();
 		}
@@ -109,11 +111,11 @@ public class ClosurePendingStatusReason1Code extends ClosurePendingStatusReasonC
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ClosurePendingStatusReason1Code";
 				definition = "Specifies the reason for the closure pending status.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ClosurePendingStatusReason1Code.mmAccountClosingInProcess, com.tools20022.repository.codeset.ClosurePendingStatusReason1Code.mmPendingConditions);
+				code_lazy = () -> Arrays.asList(ClosurePendingStatusReason1Code.mmAccountClosingInProcess, ClosurePendingStatusReason1Code.mmPendingConditions);
 				trace_lazy = () -> ClosurePendingStatusReasonCode.mmObject();
 			}
 		});

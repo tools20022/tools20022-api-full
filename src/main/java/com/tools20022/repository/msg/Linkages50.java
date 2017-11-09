@@ -20,8 +20,14 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.sese.SecuritiesSettlementTransactionConfirmation002V06;
+import com.tools20022.repository.area.sese.SecuritiesSettlementTransactionConfirmation002V07;
+import com.tools20022.repository.area.sese.SecuritiesSettlementTransactionStatusAdvice002V07;
+import com.tools20022.repository.area.sese.SecuritiesSettlementTransactionStatusAdvice002V08;
 import com.tools20022.repository.choice.ProcessingPosition23Choice;
 import com.tools20022.repository.datatype.RestrictedFINMax16Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -118,10 +124,10 @@ public class Linkages50 {
 			componentContext_lazy = () -> Linkages50.mmObject();
 			isDerived = false;
 			xmlTag = "PrcgPos";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProcessingPosition";
 			definition = "When the transaction is to be executed relative to a linked transaction - for information only.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Linkages41.mmProcessingPosition;
+			previousVersion_lazy = () -> Linkages41.mmProcessingPosition;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -169,10 +175,10 @@ public class Linkages50 {
 			componentContext_lazy = () -> Linkages50.mmObject();
 			isDerived = false;
 			xmlTag = "SctiesSttlmTxId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesSettlementTransactionIdentification";
 			definition = "Unambiguous identification of a securities settlement transaction as known by the account owner (or instructing party acting on its behalf).";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Linkages41.mmSecuritiesSettlementTransactionIdentification;
+			previousVersion_lazy = () -> Linkages41.mmSecuritiesSettlementTransactionIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RestrictedFINMax16Text.mmObject();
@@ -182,12 +188,11 @@ public class Linkages50 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Linkages50.mmProcessingPosition, com.tools20022.repository.msg.Linkages50.mmSecuritiesSettlementTransactionIdentification);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesSettlementTransactionStatusAdvice002V07.mmLinkages,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionConfirmation002V06.mmLinkages, com.tools20022.repository.area.sese.SecuritiesSettlementTransactionStatusAdvice002V08.mmLinkages,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionConfirmation002V07.mmLinkages);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(Linkages50.mmProcessingPosition, Linkages50.mmSecuritiesSettlementTransactionIdentification);
+				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesSettlementTransactionStatusAdvice002V07.mmLinkages, SecuritiesSettlementTransactionConfirmation002V06.mmLinkages,
+						SecuritiesSettlementTransactionStatusAdvice002V08.mmLinkages, SecuritiesSettlementTransactionConfirmation002V07.mmLinkages);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Linkages50";
 				definition = "Information related to a linked transaction.";
 			}

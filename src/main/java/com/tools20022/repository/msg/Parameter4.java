@@ -19,8 +19,10 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.Algorithm11Code;
 import com.tools20022.repository.codeset.EncryptionFormat1Code;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -105,7 +107,7 @@ public class Parameter4 {
 			componentContext_lazy = () -> Parameter4.mmObject();
 			isDerived = false;
 			xmlTag = "NcrptnFrmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EncryptionFormat";
 			definition = "Format of data before encryption, if the format is not plaintext or implicit.";
 			maxOccurs = 1;
@@ -159,11 +161,11 @@ public class Parameter4 {
 			componentContext_lazy = () -> Parameter4.mmObject();
 			isDerived = false;
 			xmlTag = "DgstAlgo";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DigestAlgorithm";
 			definition = "Identification of the digest algorithm.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Parameter8.mmDigestAlgorithm);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Parameter2.mmDigestAlgorithm;
+			nextVersions_lazy = () -> Arrays.asList(Parameter8.mmDigestAlgorithm);
+			previousVersion_lazy = () -> Parameter2.mmDigestAlgorithm;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Algorithm11Code.mmObject();
@@ -216,11 +218,11 @@ public class Parameter4 {
 			componentContext_lazy = () -> Parameter4.mmObject();
 			isDerived = false;
 			xmlTag = "MskGnrtrAlgo";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaskGeneratorAlgorithm";
 			definition = "Mask generator function cryptographic algorithm and parameters.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Parameter8.mmMaskGeneratorAlgorithm);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Parameter2.mmMaskGeneratorAlgorithm;
+			nextVersions_lazy = () -> Arrays.asList(Parameter8.mmMaskGeneratorAlgorithm);
+			previousVersion_lazy = () -> Parameter2.mmMaskGeneratorAlgorithm;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.AlgorithmIdentification12.mmObject();
@@ -230,10 +232,9 @@ public class Parameter4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Parameter4.mmEncryptionFormat, com.tools20022.repository.msg.Parameter4.mmDigestAlgorithm,
-						com.tools20022.repository.msg.Parameter4.mmMaskGeneratorAlgorithm);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(Parameter4.mmEncryptionFormat, Parameter4.mmDigestAlgorithm, Parameter4.mmMaskGeneratorAlgorithm);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Parameter4";
 				definition = "Parameters of the asymmetric encryption algorithm.";
 				nextVersions_lazy = () -> Arrays.asList(Parameter8.mmObject());

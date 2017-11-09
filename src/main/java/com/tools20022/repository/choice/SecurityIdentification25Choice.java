@@ -19,8 +19,10 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.*;
 import com.tools20022.repository.entity.SecuritiesIdentification;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.AlternateSecurityIdentification7;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -157,14 +159,14 @@ public class SecurityIdentification25Choice {
 	 */
 	public static final MMMessageAttribute mmISIN = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesIdentification.mmSecurityIdentification;
+			businessElementTrace_lazy = () -> SecuritiesIdentification.mmSecurityIdentification;
 			componentContext_lazy = () -> SecurityIdentification25Choice.mmObject();
 			isDerived = false;
 			xmlTag = "ISIN";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ISIN";
 			definition = "International Securities Identification Number (ISIN). A numbering system designed by the United Nation's International Organisation for Standardisation (ISO). The ISIN is composed of a 2-character prefix representing the country of issue, followed by the national security number (if one exists), and a check digit. Each country has a national numbering agency that assigns ISIN numbers for securities in that country.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.SecurityIdentification23Choice.mmISIN;
+			previousVersion_lazy = () -> SecurityIdentification23Choice.mmISIN;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISINOct2015Identifier.mmObject();
@@ -215,14 +217,14 @@ public class SecurityIdentification25Choice {
 	 */
 	public static final MMMessageAttribute mmSEDOL = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesIdentification.mmSEDOL;
+			businessElementTrace_lazy = () -> SecuritiesIdentification.mmSEDOL;
 			componentContext_lazy = () -> SecurityIdentification25Choice.mmObject();
 			isDerived = false;
 			xmlTag = "SEDOL";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SEDOL";
 			definition = "Stock Exchange Daily Official List (SEDOL) number.  A code used by the London Stock Exchange to identify foreign stocks, especially those that aren't actively traded in the US and don't have a CUSIP number.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.SecurityIdentification23Choice.mmSEDOL;
+			previousVersion_lazy = () -> SecurityIdentification23Choice.mmSEDOL;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> SEDOLIdentifier.mmObject();
@@ -275,14 +277,14 @@ public class SecurityIdentification25Choice {
 	 */
 	public static final MMMessageAttribute mmCUSIP = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesIdentification.mmCUSIP;
+			businessElementTrace_lazy = () -> SecuritiesIdentification.mmCUSIP;
 			componentContext_lazy = () -> SecurityIdentification25Choice.mmObject();
 			isDerived = false;
 			xmlTag = "CUSIP";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CUSIP";
 			definition = "Committee on Uniform Securities and Identification Procedures (CUSIP). The standards body that created and maintains the securities classification system in the US. The CUSIP is composed of a 9-character number that uniquely identifies a particular security. Non-US securities have a similar number called the CINS number.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.SecurityIdentification23Choice.mmCUSIP;
+			previousVersion_lazy = () -> SecurityIdentification23Choice.mmCUSIP;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CUSIPIdentifier.mmObject();
@@ -335,14 +337,14 @@ public class SecurityIdentification25Choice {
 	 */
 	public static final MMMessageAttribute mmRIC = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesIdentification.mmRIC;
+			businessElementTrace_lazy = () -> SecuritiesIdentification.mmRIC;
 			componentContext_lazy = () -> SecurityIdentification25Choice.mmObject();
 			isDerived = false;
 			xmlTag = "RIC";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RIC";
 			definition = "Reuters Identification Code (RIC). A numbering system used within the Reuters system to identify instruments worldwide. The RIC contains an X-character market specific code (can be the CUSIP or EPIC codes) followed by a full stop, then the two-digit ISO country code, for example, IBM in UK is IBM.UK.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.SecurityIdentification23Choice.mmRIC;
+			previousVersion_lazy = () -> SecurityIdentification23Choice.mmRIC;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RICIdentifier.mmObject();
@@ -393,14 +395,14 @@ public class SecurityIdentification25Choice {
 	 */
 	public static final MMMessageAttribute mmTickerSymbol = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesIdentification.mmTickerSymbol;
+			businessElementTrace_lazy = () -> SecuritiesIdentification.mmTickerSymbol;
 			componentContext_lazy = () -> SecurityIdentification25Choice.mmObject();
 			isDerived = false;
 			xmlTag = "TckrSymb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TickerSymbol";
 			definition = "Letters that identify a stock traded on a stock exchange. The Ticker Symbol is a short and convenient way of identifying a stock, for example, RTR.L for Reuters quoted in London.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.SecurityIdentification23Choice.mmTickerSymbol;
+			previousVersion_lazy = () -> SecurityIdentification23Choice.mmTickerSymbol;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TickerIdentifier.mmObject();
@@ -448,14 +450,14 @@ public class SecurityIdentification25Choice {
 	 */
 	public static final MMMessageAttribute mmBloomberg = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesIdentification.mmBloomberg;
+			businessElementTrace_lazy = () -> SecuritiesIdentification.mmBloomberg;
 			componentContext_lazy = () -> SecurityIdentification25Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Blmbrg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Bloomberg";
 			definition = "Identifier of a security assigned by the Bloomberg organisation.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.SecurityIdentification23Choice.mmBloomberg;
+			previousVersion_lazy = () -> SecurityIdentification23Choice.mmBloomberg;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Bloomberg2Identifier.mmObject();
@@ -504,14 +506,14 @@ public class SecurityIdentification25Choice {
 	 */
 	public static final MMMessageAttribute mmCTA = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesIdentification.mmCTA;
+			businessElementTrace_lazy = () -> SecuritiesIdentification.mmCTA;
 			componentContext_lazy = () -> SecurityIdentification25Choice.mmObject();
 			isDerived = false;
 			xmlTag = "CTA";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CTA";
 			definition = "Identifier of a security assigned by the Consolidated Tape Association.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.SecurityIdentification23Choice.mmCTA;
+			previousVersion_lazy = () -> SecurityIdentification23Choice.mmCTA;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ConsolidatedTapeAssociationIdentifier.mmObject();
@@ -561,14 +563,14 @@ public class SecurityIdentification25Choice {
 	 */
 	public static final MMMessageAttribute mmQUICK = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesIdentification.mmQUICK;
+			businessElementTrace_lazy = () -> SecuritiesIdentification.mmQUICK;
 			componentContext_lazy = () -> SecurityIdentification25Choice.mmObject();
 			isDerived = false;
 			xmlTag = "QUICK";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QUICK";
 			definition = "Identifier of a security assigned by the Japanese QUICK identification scheme for financial instruments.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.SecurityIdentification23Choice.mmQUICK;
+			previousVersion_lazy = () -> SecurityIdentification23Choice.mmQUICK;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> QUICKIdentifier.mmObject();
@@ -620,14 +622,14 @@ public class SecurityIdentification25Choice {
 	 */
 	public static final MMMessageAttribute mmWertpapier = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesIdentification.mmWertpapier;
+			businessElementTrace_lazy = () -> SecuritiesIdentification.mmWertpapier;
 			componentContext_lazy = () -> SecurityIdentification25Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Wrtppr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Wertpapier";
 			definition = "Wertpapier Kenn-nummer.  A number issued in Germany by the Wertpapier Mitteilungen. The Wertpapier Kenn-nummer, sometimes called WPK, contains 6-digits, but no check digit. There are different ranges of numbers representing different classes of securities.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.SecurityIdentification23Choice.mmWertpapier;
+			previousVersion_lazy = () -> SecurityIdentification23Choice.mmWertpapier;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> WertpapierIdentifier.mmObject();
@@ -674,14 +676,14 @@ public class SecurityIdentification25Choice {
 	 */
 	public static final MMMessageAttribute mmDutch = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesIdentification.mmDutch;
+			businessElementTrace_lazy = () -> SecuritiesIdentification.mmDutch;
 			componentContext_lazy = () -> SecurityIdentification25Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Dtch";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Dutch";
 			definition = "Identifier for Dutch securities.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.SecurityIdentification23Choice.mmDutch;
+			previousVersion_lazy = () -> SecurityIdentification23Choice.mmDutch;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DutchIdentifier.mmObject();
@@ -731,14 +733,14 @@ public class SecurityIdentification25Choice {
 	 */
 	public static final MMMessageAttribute mmValoren = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesIdentification.mmValoren;
+			businessElementTrace_lazy = () -> SecuritiesIdentification.mmValoren;
 			componentContext_lazy = () -> SecurityIdentification25Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Vlrn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Valoren";
 			definition = "Identifier for Swiss securities assigned by Telekurs Financial, the Swiss numbering agency.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.SecurityIdentification23Choice.mmValoren;
+			previousVersion_lazy = () -> SecurityIdentification23Choice.mmValoren;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ValorenIdentifier.mmObject();
@@ -789,14 +791,14 @@ public class SecurityIdentification25Choice {
 	 */
 	public static final MMMessageAttribute mmSicovam = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesIdentification.mmSicovam;
+			businessElementTrace_lazy = () -> SecuritiesIdentification.mmSicovam;
 			componentContext_lazy = () -> SecurityIdentification25Choice.mmObject();
 			isDerived = false;
 			xmlTag = "SCVM";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Sicovam";
 			definition = "Identifier for French securities assigned by the Societe Interprofessionnelle Pour La Compensation des Valeurs Mobilieres in France. The Sicovam is composed of 5-digits.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.SecurityIdentification23Choice.mmSicovam;
+			previousVersion_lazy = () -> SecurityIdentification23Choice.mmSicovam;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> SicovamIdentifier.mmObject();
@@ -843,14 +845,14 @@ public class SecurityIdentification25Choice {
 	 */
 	public static final MMMessageAttribute mmBelgian = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesIdentification.mmBelgian;
+			businessElementTrace_lazy = () -> SecuritiesIdentification.mmBelgian;
 			componentContext_lazy = () -> SecurityIdentification25Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Belgn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Belgian";
 			definition = "Identifier for Belgian securities.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.SecurityIdentification23Choice.mmBelgian;
+			previousVersion_lazy = () -> SecurityIdentification23Choice.mmBelgian;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> BelgianIdentifier.mmObject();
@@ -900,14 +902,14 @@ public class SecurityIdentification25Choice {
 	 */
 	public static final MMMessageAttribute mmCommon = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesIdentification.mmCommon;
+			businessElementTrace_lazy = () -> SecuritiesIdentification.mmCommon;
 			componentContext_lazy = () -> SecurityIdentification25Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Cmon";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Common";
 			definition = "Identifier of securities issued in Luxembourg. The common code is a 9-digit code that replaces the CEDEL (Clearstream) and Euroclear codes.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.SecurityIdentification23Choice.mmCommon;
+			previousVersion_lazy = () -> SecurityIdentification23Choice.mmCommon;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> EuroclearClearstreamIdentifier.mmObject();
@@ -961,10 +963,10 @@ public class SecurityIdentification25Choice {
 			componentContext_lazy = () -> SecurityIdentification25Choice.mmObject();
 			isDerived = false;
 			xmlTag = "OthrPrtryId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherProprietaryIdentification";
 			definition = "Proprietary identification of the security assigned by an institution or organisation.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.SecurityIdentification23Choice.mmOtherProprietaryIdentification;
+			previousVersion_lazy = () -> SecurityIdentification23Choice.mmOtherProprietaryIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> AlternateSecurityIdentification7.mmObject();
@@ -974,17 +976,13 @@ public class SecurityIdentification25Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SecurityIdentification25Choice.mmISIN, com.tools20022.repository.choice.SecurityIdentification25Choice.mmSEDOL,
-						com.tools20022.repository.choice.SecurityIdentification25Choice.mmCUSIP, com.tools20022.repository.choice.SecurityIdentification25Choice.mmRIC,
-						com.tools20022.repository.choice.SecurityIdentification25Choice.mmTickerSymbol, com.tools20022.repository.choice.SecurityIdentification25Choice.mmBloomberg,
-						com.tools20022.repository.choice.SecurityIdentification25Choice.mmCTA, com.tools20022.repository.choice.SecurityIdentification25Choice.mmQUICK,
-						com.tools20022.repository.choice.SecurityIdentification25Choice.mmWertpapier, com.tools20022.repository.choice.SecurityIdentification25Choice.mmDutch,
-						com.tools20022.repository.choice.SecurityIdentification25Choice.mmValoren, com.tools20022.repository.choice.SecurityIdentification25Choice.mmSicovam,
-						com.tools20022.repository.choice.SecurityIdentification25Choice.mmBelgian, com.tools20022.repository.choice.SecurityIdentification25Choice.mmCommon,
-						com.tools20022.repository.choice.SecurityIdentification25Choice.mmOtherProprietaryIdentification);
+				messageElement_lazy = () -> Arrays.asList(SecurityIdentification25Choice.mmISIN, SecurityIdentification25Choice.mmSEDOL, SecurityIdentification25Choice.mmCUSIP, SecurityIdentification25Choice.mmRIC,
+						SecurityIdentification25Choice.mmTickerSymbol, SecurityIdentification25Choice.mmBloomberg, SecurityIdentification25Choice.mmCTA, SecurityIdentification25Choice.mmQUICK, SecurityIdentification25Choice.mmWertpapier,
+						SecurityIdentification25Choice.mmDutch, SecurityIdentification25Choice.mmValoren, SecurityIdentification25Choice.mmSicovam, SecurityIdentification25Choice.mmBelgian, SecurityIdentification25Choice.mmCommon,
+						SecurityIdentification25Choice.mmOtherProprietaryIdentification);
 				trace_lazy = () -> SecuritiesIdentification.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecurityIdentification25Choice";
 				definition = "Choice of formats for the identification of a financial instrument.";
 				previousVersion_lazy = () -> SecurityIdentification23Choice.mmObject();

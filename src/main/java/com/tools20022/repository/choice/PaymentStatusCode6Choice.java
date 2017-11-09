@@ -19,11 +19,15 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.FinalStatus1Code;
 import com.tools20022.repository.codeset.PendingStatus4Code;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.Max4AlphaNumericText;
+import com.tools20022.repository.entity.CashSettlement;
+import com.tools20022.repository.entity.PaymentInstruction;
 import com.tools20022.repository.entity.PaymentStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -119,14 +123,14 @@ public class PaymentStatusCode6Choice {
 	 */
 	public static final MMMessageAttribute mmPending = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentStatus.mmInstructionStatus;
+			businessElementTrace_lazy = () -> PaymentStatus.mmInstructionStatus;
 			componentContext_lazy = () -> PaymentStatusCode6Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Pdg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Pending";
 			definition = "Qualifies further the pending status.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.PaymentStatusCode5Choice.mmPending;
+			previousVersion_lazy = () -> PaymentStatusCode5Choice.mmPending;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PendingStatus4Code.mmObject();
@@ -173,14 +177,14 @@ public class PaymentStatusCode6Choice {
 	 */
 	public static final MMMessageAttribute mmFinal = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentStatus.mmInstructionStatus;
+			businessElementTrace_lazy = () -> PaymentStatus.mmInstructionStatus;
 			componentContext_lazy = () -> PaymentStatusCode6Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Fnl";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Final";
 			definition = "Qualifies further the final status.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.PaymentStatusCode5Choice.mmFinal;
+			previousVersion_lazy = () -> PaymentStatusCode5Choice.mmFinal;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> FinalStatus1Code.mmObject();
@@ -227,14 +231,14 @@ public class PaymentStatusCode6Choice {
 	 */
 	public static final MMMessageAttribute mmRTGS = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashSettlement.mmRTGS;
+			businessElementTrace_lazy = () -> CashSettlement.mmRTGS;
 			componentContext_lazy = () -> PaymentStatusCode6Choice.mmObject();
 			isDerived = false;
 			xmlTag = "RTGS";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RTGS";
 			definition = "Qualifies further the RTGS status.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.PaymentStatusCode5Choice.mmRTGS;
+			previousVersion_lazy = () -> PaymentStatusCode5Choice.mmRTGS;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max4AlphaNumericText.mmObject();
@@ -281,14 +285,14 @@ public class PaymentStatusCode6Choice {
 	 */
 	public static final MMMessageAttribute mmSettlement = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentInstruction.mmSettlementInstruction;
+			businessElementTrace_lazy = () -> PaymentInstruction.mmSettlementInstruction;
 			componentContext_lazy = () -> PaymentStatusCode6Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Sttlm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Settlement";
 			definition = "Qualifies further the settlement status.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.PaymentStatusCode5Choice.mmSettlement;
+			previousVersion_lazy = () -> PaymentStatusCode5Choice.mmSettlement;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max4AlphaNumericText.mmObject();
@@ -334,14 +338,14 @@ public class PaymentStatusCode6Choice {
 	 */
 	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentStatus.mmInstructionStatus;
+			businessElementTrace_lazy = () -> PaymentStatus.mmInstructionStatus;
 			componentContext_lazy = () -> PaymentStatusCode6Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Qualifies further the proprietary status.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.PaymentStatusCode5Choice.mmProprietary;
+			previousVersion_lazy = () -> PaymentStatusCode5Choice.mmProprietary;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -351,11 +355,10 @@ public class PaymentStatusCode6Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PaymentStatusCode6Choice.mmPending, com.tools20022.repository.choice.PaymentStatusCode6Choice.mmFinal,
-						com.tools20022.repository.choice.PaymentStatusCode6Choice.mmRTGS, com.tools20022.repository.choice.PaymentStatusCode6Choice.mmSettlement, com.tools20022.repository.choice.PaymentStatusCode6Choice.mmProprietary);
+				messageElement_lazy = () -> Arrays.asList(PaymentStatusCode6Choice.mmPending, PaymentStatusCode6Choice.mmFinal, PaymentStatusCode6Choice.mmRTGS, PaymentStatusCode6Choice.mmSettlement, PaymentStatusCode6Choice.mmProprietary);
 				trace_lazy = () -> PaymentStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PaymentStatusCode6Choice";
 				definition = "Choice between a list of pending statuses or final statuses.";
 				previousVersion_lazy = () -> PaymentStatusCode5Choice.mmObject();

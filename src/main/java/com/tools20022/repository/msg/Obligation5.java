@@ -20,10 +20,14 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.colr.CollateralProposalResponseV05;
+import com.tools20022.repository.area.colr.CollateralProposalV05;
 import com.tools20022.repository.choice.DateAndDateTimeChoice;
 import com.tools20022.repository.choice.PartyIdentification100Choice;
 import com.tools20022.repository.codeset.ExposureType5Code;
-import com.tools20022.repository.entity.CollateralAgreement;
+import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -133,14 +137,14 @@ public class Obligation5 {
 	 */
 	public static final MMMessageAssociationEnd mmPartyA = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> Obligation5.mmObject();
 			isDerived = false;
 			xmlTag = "PtyA";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartyA";
 			definition = "Defines one of the entities associated with the collateral agreement.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Obligation4.mmPartyA;
+			previousVersion_lazy = () -> Obligation4.mmPartyA;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -189,14 +193,14 @@ public class Obligation5 {
 	 */
 	public static final MMMessageAssociationEnd mmServicingPartyA = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> Obligation5.mmObject();
 			isDerived = false;
 			xmlTag = "SvcgPtyA";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ServicingPartyA";
 			definition = "Specifies the party that is acting on behalf of party A and that offers collateral management services.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Obligation4.mmServicingPartyA;
+			previousVersion_lazy = () -> Obligation4.mmServicingPartyA;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -243,14 +247,14 @@ public class Obligation5 {
 	 */
 	public static final MMMessageAssociationEnd mmPartyB = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> Obligation5.mmObject();
 			isDerived = false;
 			xmlTag = "PtyB";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartyB";
 			definition = "Defines the other entity associated with the collateral agreement.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Obligation4.mmPartyB;
+			previousVersion_lazy = () -> Obligation4.mmPartyB;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -299,14 +303,14 @@ public class Obligation5 {
 	 */
 	public static final MMMessageAssociationEnd mmServicingPartyB = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> Obligation5.mmObject();
 			isDerived = false;
 			xmlTag = "SvcgPtyB";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ServicingPartyB";
 			definition = "Specifies the party that is acting on behalf of party B and that offers collateral management services.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Obligation4.mmServicingPartyB;
+			previousVersion_lazy = () -> Obligation4.mmServicingPartyB;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -356,14 +360,14 @@ public class Obligation5 {
 	 */
 	public static final MMMessageAttribute mmCollateralAccountIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Collateral.mmCollateralAccount;
+			businessElementTrace_lazy = () -> Collateral.mmCollateralAccount;
 			componentContext_lazy = () -> Obligation5.mmObject();
 			isDerived = false;
 			xmlTag = "CollAcctId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralAccountIdentification";
 			definition = "Provides additional information on the collateral account of the party delivering/receiving the collateral.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Obligation4.mmCollateralAccountIdentification;
+			previousVersion_lazy = () -> Obligation4.mmCollateralAccountIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.CollateralAccount3.mmObject();
@@ -412,14 +416,14 @@ public class Obligation5 {
 	 */
 	public static final MMMessageAttribute mmExposureType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ExposureTerm.mmExposureType;
+			businessElementTrace_lazy = () -> ExposureTerm.mmExposureType;
 			componentContext_lazy = () -> Obligation5.mmObject();
 			isDerived = false;
 			xmlTag = "XpsrTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExposureType";
 			definition = "Specifies the underlying business area or type of trade causing the collateral movement.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Obligation4.mmExposureType;
+			previousVersion_lazy = () -> Obligation4.mmExposureType;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ExposureType5Code.mmObject();
@@ -468,14 +472,14 @@ public class Obligation5 {
 	 */
 	public static final MMMessageAttribute mmValuationDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.MarginCall.mmMarginCallValuationDate;
+			businessElementTrace_lazy = () -> MarginCall.mmMarginCallValuationDate;
 			componentContext_lazy = () -> Obligation5.mmObject();
 			isDerived = false;
 			xmlTag = "ValtnDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValuationDate";
 			definition = "Indicates the close of business date on which the initiating party is valuing the margin call.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Obligation4.mmValuationDate;
+			previousVersion_lazy = () -> Obligation4.mmValuationDate;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
@@ -485,13 +489,12 @@ public class Obligation5 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Obligation5.mmPartyA, com.tools20022.repository.msg.Obligation5.mmServicingPartyA, com.tools20022.repository.msg.Obligation5.mmPartyB,
-						com.tools20022.repository.msg.Obligation5.mmServicingPartyB, com.tools20022.repository.msg.Obligation5.mmCollateralAccountIdentification, com.tools20022.repository.msg.Obligation5.mmExposureType,
-						com.tools20022.repository.msg.Obligation5.mmValuationDate);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.colr.CollateralProposalResponseV05.mmObligation, com.tools20022.repository.area.colr.CollateralProposalV05.mmObligation);
+				messageElement_lazy = () -> Arrays.asList(Obligation5.mmPartyA, Obligation5.mmServicingPartyA, Obligation5.mmPartyB, Obligation5.mmServicingPartyB, Obligation5.mmCollateralAccountIdentification, Obligation5.mmExposureType,
+						Obligation5.mmValuationDate);
+				messageBuildingBlock_lazy = () -> Arrays.asList(CollateralProposalResponseV05.mmObligation, CollateralProposalV05.mmObligation);
 				trace_lazy = () -> CollateralAgreement.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Obligation5";
 				definition = "Provides information like the identification of the party or parties associated with the collateral agreement, the exposure type and the valuation date.";
 				previousVersion_lazy = () -> Obligation4.mmObject();

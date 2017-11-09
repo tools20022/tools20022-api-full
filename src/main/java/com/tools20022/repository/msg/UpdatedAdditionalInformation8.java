@@ -19,9 +19,12 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.seev.CorporateActionNarrativeV04;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.Max140Text;
 import com.tools20022.repository.datatype.Max8000Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -116,10 +119,10 @@ public class UpdatedAdditionalInformation8 {
 			componentContext_lazy = () -> UpdatedAdditionalInformation8.mmObject();
 			isDerived = false;
 			xmlTag = "UpdDesc";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UpdateDescription";
 			definition = "Specifies the amendments made to the narrative since the last message.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.UpdatedAdditionalInformation2.mmUpdateDescription;
+			previousVersion_lazy = () -> UpdatedAdditionalInformation2.mmUpdateDescription;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
@@ -164,10 +167,10 @@ public class UpdatedAdditionalInformation8 {
 			componentContext_lazy = () -> UpdatedAdditionalInformation8.mmObject();
 			isDerived = false;
 			xmlTag = "UpdDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UpdateDate";
 			definition = "Specifies the date at which the narrative has been updated.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.UpdatedAdditionalInformation2.mmUpdateDate;
+			previousVersion_lazy = () -> UpdatedAdditionalInformation2.mmUpdateDate;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
@@ -211,10 +214,10 @@ public class UpdatedAdditionalInformation8 {
 			componentContext_lazy = () -> UpdatedAdditionalInformation8.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInformation";
 			definition = "Provides additional textual information.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.UpdatedAdditionalInformation2.mmAdditionalInformation;
+			previousVersion_lazy = () -> UpdatedAdditionalInformation2.mmAdditionalInformation;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max8000Text.mmObject();
 		}
@@ -223,11 +226,10 @@ public class UpdatedAdditionalInformation8 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UpdatedAdditionalInformation8.mmUpdateDescription, com.tools20022.repository.msg.UpdatedAdditionalInformation8.mmUpdateDate,
-						com.tools20022.repository.msg.UpdatedAdditionalInformation8.mmAdditionalInformation);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.CorporateActionNarrativeV04.mmAdditionalInformation);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(UpdatedAdditionalInformation8.mmUpdateDescription, UpdatedAdditionalInformation8.mmUpdateDate, UpdatedAdditionalInformation8.mmAdditionalInformation);
+				messageBuildingBlock_lazy = () -> Arrays.asList(CorporateActionNarrativeV04.mmAdditionalInformation);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "UpdatedAdditionalInformation8";
 				definition = "Additional information with update description and date.";
 				previousVersion_lazy = () -> UpdatedAdditionalInformation2.mmObject();

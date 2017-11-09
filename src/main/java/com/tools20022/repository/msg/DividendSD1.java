@@ -19,9 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.RateAndAmountFormat16Choice;
 import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.entity.Dividend;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -104,7 +106,7 @@ public class DividendSD1 {
 			componentContext_lazy = () -> DividendSD1.mmObject();
 			isDerived = false;
 			xmlTag = "PlcAndNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "Unambiguous reference to the location where the supplementary data must be inserted in the message instance. \r\n\r\nIn the case of XML, this is expressed by a valid XPath.";
 			maxOccurs = 1;
@@ -148,11 +150,11 @@ public class DividendSD1 {
 	 */
 	public static final MMMessageAttribute mmTotalAnnualDividendRate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Dividend.mmAnnualTotalDividendRate;
+			businessElementTrace_lazy = () -> Dividend.mmAnnualTotalDividendRate;
 			componentContext_lazy = () -> DividendSD1.mmObject();
 			isDerived = false;
 			xmlTag = "TtlAnlDvddRate";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalAnnualDividendRate";
 			definition = "Provides the total annual dividend rate as announced by the Issuer.";
 			maxOccurs = 1;
@@ -198,11 +200,11 @@ public class DividendSD1 {
 	 */
 	public static final MMMessageAttribute mmMaximumAnnualTotalDividendRate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Dividend.mmAnnualTotalDividendRate;
+			businessElementTrace_lazy = () -> Dividend.mmAnnualTotalDividendRate;
 			componentContext_lazy = () -> DividendSD1.mmObject();
 			isDerived = false;
 			xmlTag = "MaxAnlTtlDvddRate";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaximumAnnualTotalDividendRate";
 			definition = "Provides the maximum annual total dividend rate as announced by the Issuer.";
 			maxOccurs = 1;
@@ -248,11 +250,11 @@ public class DividendSD1 {
 	 */
 	public static final MMMessageAttribute mmMinimumAnnualTotalDividendRate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Dividend.mmAnnualTotalDividendRate;
+			businessElementTrace_lazy = () -> Dividend.mmAnnualTotalDividendRate;
 			componentContext_lazy = () -> DividendSD1.mmObject();
 			isDerived = false;
 			xmlTag = "MinAnlTtlDvddRate";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MinimumAnnualTotalDividendRate";
 			definition = "Provides the minimum annual total dividend rate as announced by the Issuer.";
 			maxOccurs = 1;
@@ -264,11 +266,10 @@ public class DividendSD1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DividendSD1.mmPlaceAndName, com.tools20022.repository.msg.DividendSD1.mmTotalAnnualDividendRate,
-						com.tools20022.repository.msg.DividendSD1.mmMaximumAnnualTotalDividendRate, com.tools20022.repository.msg.DividendSD1.mmMinimumAnnualTotalDividendRate);
+				messageElement_lazy = () -> Arrays.asList(DividendSD1.mmPlaceAndName, DividendSD1.mmTotalAnnualDividendRate, DividendSD1.mmMaximumAnnualTotalDividendRate, DividendSD1.mmMinimumAnnualTotalDividendRate);
 				trace_lazy = () -> Dividend.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DividendSD1";
 				definition = "Extension to specify rates of a corporate action.";
 			}

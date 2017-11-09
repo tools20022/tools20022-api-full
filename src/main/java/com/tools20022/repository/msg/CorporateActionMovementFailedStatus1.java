@@ -20,9 +20,13 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.PartyIdentification2Choice;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.entity.Account;
 import com.tools20022.repository.entity.CorporateActionStatus;
+import com.tools20022.repository.entity.Party;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -107,11 +111,11 @@ public class CorporateActionMovementFailedStatus1 {
 	 */
 	public static final MMMessageAttribute mmAgentAccountIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.mmIdentification;
+			businessElementTrace_lazy = () -> Account.mmIdentification;
 			componentContext_lazy = () -> CorporateActionMovementFailedStatus1.mmObject();
 			isDerived = false;
 			xmlTag = "AgtAcctId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AgentAccountIdentification";
 			definition = "Identification of the agent account.";
 			maxOccurs = 1;
@@ -154,11 +158,11 @@ public class CorporateActionMovementFailedStatus1 {
 	 */
 	public static final MMMessageAttribute mmClientAccountIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.mmIdentification;
+			businessElementTrace_lazy = () -> Account.mmIdentification;
 			componentContext_lazy = () -> CorporateActionMovementFailedStatus1.mmObject();
 			isDerived = false;
 			xmlTag = "ClntAcctId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClientAccountIdentification";
 			definition = "Identification of the client account.";
 			maxOccurs = 1;
@@ -203,11 +207,11 @@ public class CorporateActionMovementFailedStatus1 {
 	 */
 	public static final MMMessageAttribute mmAccountOwnerIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> CorporateActionMovementFailedStatus1.mmObject();
 			isDerived = false;
 			xmlTag = "AcctOwnrId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountOwnerIdentification";
 			definition = "Identification of the party that owns the client account.";
 			maxOccurs = 1;
@@ -256,7 +260,7 @@ public class CorporateActionMovementFailedStatus1 {
 			componentContext_lazy = () -> CorporateActionMovementFailedStatus1.mmObject();
 			isDerived = false;
 			xmlTag = "RsrcDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ResourceDetails";
 			definition = "Provides information about the resource movement that failed and the reason of the failure.";
 			minOccurs = 1;
@@ -268,12 +272,11 @@ public class CorporateActionMovementFailedStatus1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionMovementFailedStatus1.mmAgentAccountIdentification,
-						com.tools20022.repository.msg.CorporateActionMovementFailedStatus1.mmClientAccountIdentification, com.tools20022.repository.msg.CorporateActionMovementFailedStatus1.mmAccountOwnerIdentification,
-						com.tools20022.repository.msg.CorporateActionMovementFailedStatus1.mmResourceDetails);
+				messageElement_lazy = () -> Arrays.asList(CorporateActionMovementFailedStatus1.mmAgentAccountIdentification, CorporateActionMovementFailedStatus1.mmClientAccountIdentification,
+						CorporateActionMovementFailedStatus1.mmAccountOwnerIdentification, CorporateActionMovementFailedStatus1.mmResourceDetails);
 				trace_lazy = () -> CorporateActionStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionMovementFailedStatus1";
 				definition = "Provides information about the failure of the settlement of a movement.";
 			}

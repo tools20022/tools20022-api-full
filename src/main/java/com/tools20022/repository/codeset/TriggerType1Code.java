@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.TriggerTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -92,7 +94,7 @@ public class TriggerType1Code extends TriggerTypeCode {
 	 */
 	public static final MMCode mmPartialExecution = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartialExecution";
 			owner_lazy = () -> TriggerType1Code.mmObject();
 		}
@@ -115,7 +117,7 @@ public class TriggerType1Code extends TriggerTypeCode {
 	 */
 	public static final MMCode mmSpecifiedTradingSession = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SpecifiedTradingSession";
 			owner_lazy = () -> TriggerType1Code.mmObject();
 		}
@@ -138,7 +140,7 @@ public class TriggerType1Code extends TriggerTypeCode {
 	 */
 	public static final MMCode mmNextAuction = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NextAuction";
 			owner_lazy = () -> TriggerType1Code.mmObject();
 		}
@@ -161,7 +163,7 @@ public class TriggerType1Code extends TriggerTypeCode {
 	 */
 	public static final MMCode mmPriceMovement = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PriceMovement";
 			owner_lazy = () -> TriggerType1Code.mmObject();
 		}
@@ -170,13 +172,12 @@ public class TriggerType1Code extends TriggerTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("PAEX");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TriggerType1Code";
 				definition = "Defines when the trigger will hit, i.e. the action specified by the trigger instructions will come into effect.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TriggerType1Code.mmPartialExecution, com.tools20022.repository.codeset.TriggerType1Code.mmSpecifiedTradingSession,
-						com.tools20022.repository.codeset.TriggerType1Code.mmNextAuction, com.tools20022.repository.codeset.TriggerType1Code.mmPriceMovement);
+				code_lazy = () -> Arrays.asList(TriggerType1Code.mmPartialExecution, TriggerType1Code.mmSpecifiedTradingSession, TriggerType1Code.mmNextAuction, TriggerType1Code.mmPriceMovement);
 				trace_lazy = () -> TriggerTypeCode.mmObject();
 			}
 		});

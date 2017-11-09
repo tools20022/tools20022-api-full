@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,26 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition4Code
+ * TradeTransactionCondition4Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition2Code
+ * TradeTransactionCondition2Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition1Code
+ * TradeTransactionCondition1Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition3Code
+ * TradeTransactionCondition3Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition5Code
+ * TradeTransactionCondition5Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -196,26 +218,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * TradeTransactionConditionCode.mmNonMarketPrice}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition4Code
- * TradeTransactionCondition4Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition2Code
- * TradeTransactionCondition2Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition1Code
- * TradeTransactionCondition1Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition3Code
- * TradeTransactionCondition3Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition5Code
- * TradeTransactionCondition5Code}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -265,7 +267,7 @@ public class TradeTransactionConditionCode {
 	 */
 	public static final MMCode mmCumBonus = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CumBonus";
 			definition = "Indicates whether the trade is executed cum bonus.";
 			owner_lazy = () -> TradeTransactionConditionCode.mmObject();
@@ -295,7 +297,7 @@ public class TradeTransactionConditionCode {
 	 */
 	public static final MMCode mmExBonus = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ExBonus";
 			definition = "Indicates whether the trade is executed ex bonus.";
 			owner_lazy = () -> TradeTransactionConditionCode.mmObject();
@@ -325,7 +327,7 @@ public class TradeTransactionConditionCode {
 	 */
 	public static final MMCode mmCumCoupon = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CumCoupon";
 			definition = "Indicates whether the trade is executed cum coupon.";
 			owner_lazy = () -> TradeTransactionConditionCode.mmObject();
@@ -355,7 +357,7 @@ public class TradeTransactionConditionCode {
 	 */
 	public static final MMCode mmExCoupon = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ExCoupon";
 			definition = "Indicates whether the trade is executed ex coupon.";
 			owner_lazy = () -> TradeTransactionConditionCode.mmObject();
@@ -385,7 +387,7 @@ public class TradeTransactionConditionCode {
 	 */
 	public static final MMCode mmCumDividend = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CumDividend";
 			definition = "Indicates whether the trade is executed cum dividend.";
 			owner_lazy = () -> TradeTransactionConditionCode.mmObject();
@@ -415,7 +417,7 @@ public class TradeTransactionConditionCode {
 	 */
 	public static final MMCode mmExDividend = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ExDividend";
 			definition = "Indicates whether the trade is executed ex dividend.";
 			owner_lazy = () -> TradeTransactionConditionCode.mmObject();
@@ -445,7 +447,7 @@ public class TradeTransactionConditionCode {
 	 */
 	public static final MMCode mmCumRights = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CumRights";
 			definition = "Indicates whether the trade is executed cum rights.";
 			owner_lazy = () -> TradeTransactionConditionCode.mmObject();
@@ -475,7 +477,7 @@ public class TradeTransactionConditionCode {
 	 */
 	public static final MMCode mmExRights = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ExRights";
 			definition = "Indicates whether the trade is executed ex rights.";
 			owner_lazy = () -> TradeTransactionConditionCode.mmObject();
@@ -505,7 +507,7 @@ public class TradeTransactionConditionCode {
 	 */
 	public static final MMCode mmCumWarrant = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CumWarrant";
 			definition = "Indicates whether the trade is executed cum warrant.";
 			owner_lazy = () -> TradeTransactionConditionCode.mmObject();
@@ -535,7 +537,7 @@ public class TradeTransactionConditionCode {
 	 */
 	public static final MMCode mmExWarrant = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ExWarrant";
 			definition = "Indicates whether the trade is executed ex warrant.";
 			owner_lazy = () -> TradeTransactionConditionCode.mmObject();
@@ -568,7 +570,7 @@ public class TradeTransactionConditionCode {
 	 */
 	public static final MMCode mmSpecialCumDividend = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SpecialCumDividend";
 			definition = "Indicates whether the trade is executed  with a special cum \ndividend, ie, buying after the ex date and getting the dividend.";
 			owner_lazy = () -> TradeTransactionConditionCode.mmObject();
@@ -601,7 +603,7 @@ public class TradeTransactionConditionCode {
 	 */
 	public static final MMCode mmSpecialExDividend = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SpecialExDividend";
 			definition = "Indicates whether the trade is executed  with a special ex \ndividend, ie, selling before the ex date without the coupon.";
 			owner_lazy = () -> TradeTransactionConditionCode.mmObject();
@@ -635,7 +637,7 @@ public class TradeTransactionConditionCode {
 	 */
 	public static final MMCode mmBrokerDueBill = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BrokerDueBill";
 			definition = "Indicates that the trade is executed cum-dividend or cum-coupon and a due bill is required. \nA due bill is a contractual agreement to pay the dividend along with the delivery of \nthe financial instrument.";
 			owner_lazy = () -> TradeTransactionConditionCode.mmObject();
@@ -669,7 +671,7 @@ public class TradeTransactionConditionCode {
 	 */
 	public static final MMCode mmSoldShort = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SoldShort";
 			definition = "Indicates whether the trade is sold short. When the seller does not have the \nfinancial instrument, the delivery is effected by borrowing the financial instrument by or \nfor the account of the seller.";
 			owner_lazy = () -> TradeTransactionConditionCode.mmObject();
@@ -702,7 +704,7 @@ public class TradeTransactionConditionCode {
 	 */
 	public static final MMCode mmDirty = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Dirty";
 			definition = "Indicates that the trade is executed dirty, ie government tax must be paid on the accrued interest on the bond.";
 			owner_lazy = () -> TradeTransactionConditionCode.mmObject();
@@ -735,7 +737,7 @@ public class TradeTransactionConditionCode {
 	 */
 	public static final MMCode mmClean = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Clean";
 			definition = "Indicates that the trade is executed clean, ie government tax must not be paid on the accrued interest on the bond.";
 			owner_lazy = () -> TradeTransactionConditionCode.mmObject();
@@ -768,7 +770,7 @@ public class TradeTransactionConditionCode {
 	 */
 	public static final MMCode mmBlock = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Block";
 			definition = "Indicates whether the trade is a block trade or not, ie, whether allocation instruction will follow or not.";
 			owner_lazy = () -> TradeTransactionConditionCode.mmObject();
@@ -801,7 +803,7 @@ public class TradeTransactionConditionCode {
 	 */
 	public static final MMCode mmGuaranteedDelivery = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "GuaranteedDelivery";
 			definition = "Indicates whether the delivery of the financial instrument on settlement date \nis guaranteed.";
 			owner_lazy = () -> TradeTransactionConditionCode.mmObject();
@@ -831,7 +833,7 @@ public class TradeTransactionConditionCode {
 	 */
 	public static final MMCode mmFractions = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Fractions";
 			definition = "Indicates whether fractional parts are allowed.";
 			owner_lazy = () -> TradeTransactionConditionCode.mmObject();
@@ -864,7 +866,7 @@ public class TradeTransactionConditionCode {
 	 */
 	public static final MMCode mmCrossTrade = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CrossTrade";
 			definition = "Indicates that cross trades are allowed whereby buy and sell orders are offset without recording the trade on the exchange";
 			owner_lazy = () -> TradeTransactionConditionCode.mmObject();
@@ -897,7 +899,7 @@ public class TradeTransactionConditionCode {
 	 */
 	public static final MMCode mmNoCrossTrade = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NoCrossTrade";
 			definition = "Indicates that cross trades, whereby buy and sell orders are offset without recording the trade on the exchange, are not allowed.";
 			owner_lazy = () -> TradeTransactionConditionCode.mmObject();
@@ -933,7 +935,7 @@ public class TradeTransactionConditionCode {
 	 */
 	public static final MMCode mmDirectOrder = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DirectOrder";
 			definition = "Indicates that the order is to be executed by a trading party other than the trading party to which the \norder is sent. In this case, the instructing party has traded with another broker which will \nsubsequently send an advice of execution to the executing party who received the order \nand which is acting as clearing broker.";
 			owner_lazy = () -> TradeTransactionConditionCode.mmObject();
@@ -965,7 +967,7 @@ public class TradeTransactionConditionCode {
 	 */
 	public static final MMCode mmDirectedOrder = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DirectedOrder";
 			definition = "Indicates that the order must be executed with a specific trading party.";
 			owner_lazy = () -> TradeTransactionConditionCode.mmObject();
@@ -995,7 +997,7 @@ public class TradeTransactionConditionCode {
 	 */
 	public static final MMCode mmWarehouseTrade = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "WarehouseTrade";
 			definition = "Warehouse Trade.";
 			owner_lazy = () -> TradeTransactionConditionCode.mmObject();
@@ -1029,7 +1031,7 @@ public class TradeTransactionConditionCode {
 	 */
 	public static final MMCode mmNotIncrease = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NotIncrease";
 			definition = "A limit order to buy or a stop order to sell or a stop limit order which is not to be increased in shares on the ex-dividend date as a result of a stock dividend or distribution.";
 			owner_lazy = () -> TradeTransactionConditionCode.mmObject();
@@ -1065,7 +1067,7 @@ public class TradeTransactionConditionCode {
 	 */
 	public static final MMCode mmNotReduce = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NotReduce";
 			definition = "A limit order to buy or a stop order to sell, or a stop-limit order to sell which is not to be reduced in price by the amount of an ordinary cash dividend. Only applies to ordinary stock dividends; it should be reduced for other distributions. e.g. when a stock goes 'ex' stock dividend or rights.";
 			owner_lazy = () -> TradeTransactionConditionCode.mmObject();
@@ -1095,7 +1097,7 @@ public class TradeTransactionConditionCode {
 	 */
 	public static final MMCode mmForwardPriceTrade = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ForwardPriceTrade";
 			definition = "Indicates that the order is based on a forward price.";
 			owner_lazy = () -> TradeTransactionConditionCode.mmObject();
@@ -1125,7 +1127,7 @@ public class TradeTransactionConditionCode {
 	 */
 	public static final MMCode mmHistoricPriceTrade = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "HistoricPriceTrade";
 			definition = "Indicates that the order is based on a historic price.";
 			owner_lazy = () -> TradeTransactionConditionCode.mmObject();
@@ -1155,7 +1157,7 @@ public class TradeTransactionConditionCode {
 	 */
 	public static final MMCode mmResultOption = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ResultOption";
 			definition = "Result of option when set. (UK specific)";
 			owner_lazy = () -> TradeTransactionConditionCode.mmObject();
@@ -1185,7 +1187,7 @@ public class TradeTransactionConditionCode {
 	 */
 	public static final MMCode mmResultRepo = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ResultRepo";
 			definition = "Result of repo when set (UK specific).";
 			owner_lazy = () -> TradeTransactionConditionCode.mmObject();
@@ -1217,7 +1219,7 @@ public class TradeTransactionConditionCode {
 	 */
 	public static final MMCode mmDeliverCountryIncorporation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DeliverCountryIncorporation";
 			definition = "Place of delivery, in country of incorporation when unset (UK specific).";
 			owner_lazy = () -> TradeTransactionConditionCode.mmObject();
@@ -1249,7 +1251,7 @@ public class TradeTransactionConditionCode {
 	 */
 	public static final MMCode mmDeliveryForm = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DeliveryForm";
 			definition = "Form of delivery, not for foreign registration when unset (UK specific).";
 			owner_lazy = () -> TradeTransactionConditionCode.mmObject();
@@ -1279,7 +1281,7 @@ public class TradeTransactionConditionCode {
 	 */
 	public static final MMCode mmBoardLot = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BoardLot";
 			definition = "Board lots, not set for odd lots (UK specific).";
 			owner_lazy = () -> TradeTransactionConditionCode.mmObject();
@@ -1309,7 +1311,7 @@ public class TradeTransactionConditionCode {
 	 */
 	public static final MMCode mmBadName = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BadName";
 			definition = "Bad names, not set for good names (UK specific).";
 			owner_lazy = () -> TradeTransactionConditionCode.mmObject();
@@ -1339,7 +1341,7 @@ public class TradeTransactionConditionCode {
 	 */
 	public static final MMCode mmAutomated = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Automated";
 			definition = "Automated.";
 			owner_lazy = () -> TradeTransactionConditionCode.mmObject();
@@ -1369,7 +1371,7 @@ public class TradeTransactionConditionCode {
 	 */
 	public static final MMCode mmBestExecution = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BestExecution";
 			definition = "Trade to be executed done at best execution.";
 			owner_lazy = () -> TradeTransactionConditionCode.mmObject();
@@ -1402,7 +1404,7 @@ public class TradeTransactionConditionCode {
 	 */
 	public static final MMCode mmCall = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Call";
 			definition = "Trade to be executed following the exercise of a call option on the security.";
 			owner_lazy = () -> TradeTransactionConditionCode.mmObject();
@@ -1435,7 +1437,7 @@ public class TradeTransactionConditionCode {
 	 */
 	public static final MMCode mmClosureBeforeRollOver = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ClosureBeforeRollOver";
 			definition = "Trade to be executed for closure of a previous position before the rollover of a position (Deferred Settlement Service).";
 			owner_lazy = () -> TradeTransactionConditionCode.mmObject();
@@ -1468,7 +1470,7 @@ public class TradeTransactionConditionCode {
 	 */
 	public static final MMCode mmMonthly = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Monthly";
 			definition = "Trade to be executed for month-end settlement (Deferred Settlement Service).";
 			owner_lazy = () -> TradeTransactionConditionCode.mmObject();
@@ -1501,7 +1503,7 @@ public class TradeTransactionConditionCode {
 	 */
 	public static final MMCode mmNewTradeFollowingRollover = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NewTradeFollowingRollover";
 			definition = "Trade to be executed for a new trade position on the next month following the roll-over of a position (Deferred Settlement Service).";
 			owner_lazy = () -> TradeTransactionConditionCode.mmObject();
@@ -1534,7 +1536,7 @@ public class TradeTransactionConditionCode {
 	 */
 	public static final MMCode mmPutt = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Putt";
 			definition = "Trade to be executed following the exercise of a put option on the security.";
 			owner_lazy = () -> TradeTransactionConditionCode.mmObject();
@@ -1567,7 +1569,7 @@ public class TradeTransactionConditionCode {
 	 */
 	public static final MMCode mmTradeFollowingRollover = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TradeFollowingRollover";
 			definition = "Trade to be executed on the next month following the roll-over of positions.";
 			owner_lazy = () -> TradeTransactionConditionCode.mmObject();
@@ -1598,7 +1600,7 @@ public class TradeTransactionConditionCode {
 	 */
 	public static final MMCode mmSpecialCumCoupon = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SpecialCumCoupon";
 			definition = "Indicates whether the trade is executed with a special cum coupon.";
 			owner_lazy = () -> TradeTransactionConditionCode.mmObject();
@@ -1629,7 +1631,7 @@ public class TradeTransactionConditionCode {
 	 */
 	public static final MMCode mmSpecialExCoupon = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SpecialExCoupon";
 			definition = "Indicates whether the trade is executed with a special ex coupon.";
 			owner_lazy = () -> TradeTransactionConditionCode.mmObject();
@@ -1660,7 +1662,7 @@ public class TradeTransactionConditionCode {
 	 */
 	public static final MMCode mmSpecialExBonus = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SpecialExBonus";
 			definition = "Indicates whether the trade is executed special ex bonus.";
 			owner_lazy = () -> TradeTransactionConditionCode.mmObject();
@@ -1691,7 +1693,7 @@ public class TradeTransactionConditionCode {
 	 */
 	public static final MMCode mmSpecialCumBonus = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SpecialCumBonus";
 			definition = "Indicates whether the trade is executed special cum bonus.";
 			owner_lazy = () -> TradeTransactionConditionCode.mmObject();
@@ -1722,7 +1724,7 @@ public class TradeTransactionConditionCode {
 	 */
 	public static final MMCode mmSpecialCumRights = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SpecialCumRights";
 			definition = "Indicates whether the trade is executed special cum rights.";
 			owner_lazy = () -> TradeTransactionConditionCode.mmObject();
@@ -1753,7 +1755,7 @@ public class TradeTransactionConditionCode {
 	 */
 	public static final MMCode mmSpecialExRights = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SpecialExRights";
 			definition = "Indicates whether the trade is executed special ex rights.";
 			owner_lazy = () -> TradeTransactionConditionCode.mmObject();
@@ -1785,7 +1787,7 @@ public class TradeTransactionConditionCode {
 	 */
 	public static final MMCode mmSpecialCumCapitalRepayments = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SpecialCumCapitalRepayments";
 			definition = "Indicates whether the trade is executed special cum capital repayments.";
 			owner_lazy = () -> TradeTransactionConditionCode.mmObject();
@@ -1816,7 +1818,7 @@ public class TradeTransactionConditionCode {
 	 */
 	public static final MMCode mmSpecialExCapitalRepayments = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SpecialExCapitalRepayments";
 			definition = "Indicates whether the trade is executed special ex capital repayments.";
 			owner_lazy = () -> TradeTransactionConditionCode.mmObject();
@@ -1847,7 +1849,7 @@ public class TradeTransactionConditionCode {
 	 */
 	public static final MMCode mmCashSettlement = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CashSettlement";
 			definition = "Indicates whether the trade is executed with a cash settlement.";
 			owner_lazy = () -> TradeTransactionConditionCode.mmObject();
@@ -1878,7 +1880,7 @@ public class TradeTransactionConditionCode {
 	 */
 	public static final MMCode mmSpecialPrice = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SpecialPrice";
 			definition = "Indicates whether the trade is executed with a special price.";
 			owner_lazy = () -> TradeTransactionConditionCode.mmObject();
@@ -1908,7 +1910,7 @@ public class TradeTransactionConditionCode {
 	 */
 	public static final MMCode mmMarketPrice = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MarketPrice";
 			definition = "Trade was executed at market price.";
 			owner_lazy = () -> TradeTransactionConditionCode.mmObject();
@@ -1941,7 +1943,7 @@ public class TradeTransactionConditionCode {
 	 */
 	public static final MMCode mmNegotiatedTrade = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NegotiatedTrade";
 			definition = "Trade for which the price is not the one quoted but an improved one, that is, the negotiated price.";
 			owner_lazy = () -> TradeTransactionConditionCode.mmObject();
@@ -1974,7 +1976,7 @@ public class TradeTransactionConditionCode {
 	 */
 	public static final MMCode mmNonMarketPrice = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NonMarketPrice";
 			definition = "Trade was executed outside of normal market conditions, for example, in the case of an iceberg order.";
 			owner_lazy = () -> TradeTransactionConditionCode.mmObject();
@@ -1985,39 +1987,25 @@ public class TradeTransactionConditionCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CBNS");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TradeTransactionConditionCode";
 				definition = "Indicates the conditions under which the order/trade is to be/was executed.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TradeTransactionConditionCode.mmCumBonus, com.tools20022.repository.codeset.TradeTransactionConditionCode.mmExBonus,
-						com.tools20022.repository.codeset.TradeTransactionConditionCode.mmCumCoupon, com.tools20022.repository.codeset.TradeTransactionConditionCode.mmExCoupon,
-						com.tools20022.repository.codeset.TradeTransactionConditionCode.mmCumDividend, com.tools20022.repository.codeset.TradeTransactionConditionCode.mmExDividend,
-						com.tools20022.repository.codeset.TradeTransactionConditionCode.mmCumRights, com.tools20022.repository.codeset.TradeTransactionConditionCode.mmExRights,
-						com.tools20022.repository.codeset.TradeTransactionConditionCode.mmCumWarrant, com.tools20022.repository.codeset.TradeTransactionConditionCode.mmExWarrant,
-						com.tools20022.repository.codeset.TradeTransactionConditionCode.mmSpecialCumDividend, com.tools20022.repository.codeset.TradeTransactionConditionCode.mmSpecialExDividend,
-						com.tools20022.repository.codeset.TradeTransactionConditionCode.mmBrokerDueBill, com.tools20022.repository.codeset.TradeTransactionConditionCode.mmSoldShort,
-						com.tools20022.repository.codeset.TradeTransactionConditionCode.mmDirty, com.tools20022.repository.codeset.TradeTransactionConditionCode.mmClean,
-						com.tools20022.repository.codeset.TradeTransactionConditionCode.mmBlock, com.tools20022.repository.codeset.TradeTransactionConditionCode.mmGuaranteedDelivery,
-						com.tools20022.repository.codeset.TradeTransactionConditionCode.mmFractions, com.tools20022.repository.codeset.TradeTransactionConditionCode.mmCrossTrade,
-						com.tools20022.repository.codeset.TradeTransactionConditionCode.mmNoCrossTrade, com.tools20022.repository.codeset.TradeTransactionConditionCode.mmDirectOrder,
-						com.tools20022.repository.codeset.TradeTransactionConditionCode.mmDirectedOrder, com.tools20022.repository.codeset.TradeTransactionConditionCode.mmWarehouseTrade,
-						com.tools20022.repository.codeset.TradeTransactionConditionCode.mmNotIncrease, com.tools20022.repository.codeset.TradeTransactionConditionCode.mmNotReduce,
-						com.tools20022.repository.codeset.TradeTransactionConditionCode.mmForwardPriceTrade, com.tools20022.repository.codeset.TradeTransactionConditionCode.mmHistoricPriceTrade,
-						com.tools20022.repository.codeset.TradeTransactionConditionCode.mmResultOption, com.tools20022.repository.codeset.TradeTransactionConditionCode.mmResultRepo,
-						com.tools20022.repository.codeset.TradeTransactionConditionCode.mmDeliverCountryIncorporation, com.tools20022.repository.codeset.TradeTransactionConditionCode.mmDeliveryForm,
-						com.tools20022.repository.codeset.TradeTransactionConditionCode.mmBoardLot, com.tools20022.repository.codeset.TradeTransactionConditionCode.mmBadName,
-						com.tools20022.repository.codeset.TradeTransactionConditionCode.mmAutomated, com.tools20022.repository.codeset.TradeTransactionConditionCode.mmBestExecution,
-						com.tools20022.repository.codeset.TradeTransactionConditionCode.mmCall, com.tools20022.repository.codeset.TradeTransactionConditionCode.mmClosureBeforeRollOver,
-						com.tools20022.repository.codeset.TradeTransactionConditionCode.mmMonthly, com.tools20022.repository.codeset.TradeTransactionConditionCode.mmNewTradeFollowingRollover,
-						com.tools20022.repository.codeset.TradeTransactionConditionCode.mmPutt, com.tools20022.repository.codeset.TradeTransactionConditionCode.mmTradeFollowingRollover,
-						com.tools20022.repository.codeset.TradeTransactionConditionCode.mmSpecialCumCoupon, com.tools20022.repository.codeset.TradeTransactionConditionCode.mmSpecialExCoupon,
-						com.tools20022.repository.codeset.TradeTransactionConditionCode.mmSpecialExBonus, com.tools20022.repository.codeset.TradeTransactionConditionCode.mmSpecialCumBonus,
-						com.tools20022.repository.codeset.TradeTransactionConditionCode.mmSpecialCumRights, com.tools20022.repository.codeset.TradeTransactionConditionCode.mmSpecialExRights,
-						com.tools20022.repository.codeset.TradeTransactionConditionCode.mmSpecialCumCapitalRepayments, com.tools20022.repository.codeset.TradeTransactionConditionCode.mmSpecialExCapitalRepayments,
-						com.tools20022.repository.codeset.TradeTransactionConditionCode.mmCashSettlement, com.tools20022.repository.codeset.TradeTransactionConditionCode.mmSpecialPrice,
-						com.tools20022.repository.codeset.TradeTransactionConditionCode.mmMarketPrice, com.tools20022.repository.codeset.TradeTransactionConditionCode.mmNegotiatedTrade,
-						com.tools20022.repository.codeset.TradeTransactionConditionCode.mmNonMarketPrice);
+				code_lazy = () -> Arrays.asList(TradeTransactionConditionCode.mmCumBonus, TradeTransactionConditionCode.mmExBonus, TradeTransactionConditionCode.mmCumCoupon, TradeTransactionConditionCode.mmExCoupon,
+						TradeTransactionConditionCode.mmCumDividend, TradeTransactionConditionCode.mmExDividend, TradeTransactionConditionCode.mmCumRights, TradeTransactionConditionCode.mmExRights,
+						TradeTransactionConditionCode.mmCumWarrant, TradeTransactionConditionCode.mmExWarrant, TradeTransactionConditionCode.mmSpecialCumDividend, TradeTransactionConditionCode.mmSpecialExDividend,
+						TradeTransactionConditionCode.mmBrokerDueBill, TradeTransactionConditionCode.mmSoldShort, TradeTransactionConditionCode.mmDirty, TradeTransactionConditionCode.mmClean, TradeTransactionConditionCode.mmBlock,
+						TradeTransactionConditionCode.mmGuaranteedDelivery, TradeTransactionConditionCode.mmFractions, TradeTransactionConditionCode.mmCrossTrade, TradeTransactionConditionCode.mmNoCrossTrade,
+						TradeTransactionConditionCode.mmDirectOrder, TradeTransactionConditionCode.mmDirectedOrder, TradeTransactionConditionCode.mmWarehouseTrade, TradeTransactionConditionCode.mmNotIncrease,
+						TradeTransactionConditionCode.mmNotReduce, TradeTransactionConditionCode.mmForwardPriceTrade, TradeTransactionConditionCode.mmHistoricPriceTrade, TradeTransactionConditionCode.mmResultOption,
+						TradeTransactionConditionCode.mmResultRepo, TradeTransactionConditionCode.mmDeliverCountryIncorporation, TradeTransactionConditionCode.mmDeliveryForm, TradeTransactionConditionCode.mmBoardLot,
+						TradeTransactionConditionCode.mmBadName, TradeTransactionConditionCode.mmAutomated, TradeTransactionConditionCode.mmBestExecution, TradeTransactionConditionCode.mmCall,
+						TradeTransactionConditionCode.mmClosureBeforeRollOver, TradeTransactionConditionCode.mmMonthly, TradeTransactionConditionCode.mmNewTradeFollowingRollover, TradeTransactionConditionCode.mmPutt,
+						TradeTransactionConditionCode.mmTradeFollowingRollover, TradeTransactionConditionCode.mmSpecialCumCoupon, TradeTransactionConditionCode.mmSpecialExCoupon, TradeTransactionConditionCode.mmSpecialExBonus,
+						TradeTransactionConditionCode.mmSpecialCumBonus, TradeTransactionConditionCode.mmSpecialCumRights, TradeTransactionConditionCode.mmSpecialExRights, TradeTransactionConditionCode.mmSpecialCumCapitalRepayments,
+						TradeTransactionConditionCode.mmSpecialExCapitalRepayments, TradeTransactionConditionCode.mmCashSettlement, TradeTransactionConditionCode.mmSpecialPrice, TradeTransactionConditionCode.mmMarketPrice,
+						TradeTransactionConditionCode.mmNegotiatedTrade, TradeTransactionConditionCode.mmNonMarketPrice);
 				derivation_lazy = () -> Arrays.asList(TradeTransactionCondition4Code.mmObject(), TradeTransactionCondition2Code.mmObject(), TradeTransactionCondition1Code.mmObject(), TradeTransactionCondition3Code.mmObject(),
 						TradeTransactionCondition5Code.mmObject());
 			}

@@ -19,8 +19,10 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -104,7 +106,7 @@ public class UnderlyingGroupInformation1 {
 			componentContext_lazy = () -> UnderlyingGroupInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlMsgId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalMessageIdentification";
 			definition = "Point to point reference, as assigned by the original instructing party, to unambiguously identify the original message.";
 			maxOccurs = 1;
@@ -148,7 +150,7 @@ public class UnderlyingGroupInformation1 {
 			componentContext_lazy = () -> UnderlyingGroupInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlMsgNmId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalMessageNameIdentification";
 			definition = "Specifies the original message name identifier to which the message refers.";
 			maxOccurs = 1;
@@ -189,7 +191,7 @@ public class UnderlyingGroupInformation1 {
 			componentContext_lazy = () -> UnderlyingGroupInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlCreDtTm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalCreationDateTime";
 			definition = "Date and time at which the original message was created.";
 			maxOccurs = 1;
@@ -233,7 +235,7 @@ public class UnderlyingGroupInformation1 {
 			componentContext_lazy = () -> UnderlyingGroupInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlMsgDlvryChanl";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalMessageDeliveryChannel";
 			definition = "Original channel used for the delivery of the message, to allow the receiver of the request to locate the payment with greater ease.";
 			maxOccurs = 1;
@@ -245,11 +247,10 @@ public class UnderlyingGroupInformation1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UnderlyingGroupInformation1.mmOriginalMessageIdentification,
-						com.tools20022.repository.msg.UnderlyingGroupInformation1.mmOriginalMessageNameIdentification, com.tools20022.repository.msg.UnderlyingGroupInformation1.mmOriginalCreationDateTime,
-						com.tools20022.repository.msg.UnderlyingGroupInformation1.mmOriginalMessageDeliveryChannel);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(UnderlyingGroupInformation1.mmOriginalMessageIdentification, UnderlyingGroupInformation1.mmOriginalMessageNameIdentification, UnderlyingGroupInformation1.mmOriginalCreationDateTime,
+						UnderlyingGroupInformation1.mmOriginalMessageDeliveryChannel);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "UnderlyingGroupInformation1";
 				definition = "Unique identification, as assigned by the first instructing agent, to unambiguously identify the group of transactions.";
 			}

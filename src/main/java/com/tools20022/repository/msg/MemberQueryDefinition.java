@@ -20,8 +20,10 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.MemberCriteriaDefinitionChoice;
 import com.tools20022.repository.codeset.QueryType1Code;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -97,7 +99,7 @@ public class MemberQueryDefinition {
 			componentContext_lazy = () -> MemberQueryDefinition.mmObject();
 			isDerived = false;
 			xmlTag = "QryTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QueryType";
 			definition = "Specifies if all matching items  or only the new matching items since the latest query are returned.";
 			maxOccurs = 1;
@@ -138,7 +140,7 @@ public class MemberQueryDefinition {
 			componentContext_lazy = () -> MemberQueryDefinition.mmObject();
 			isDerived = false;
 			xmlTag = "MmbCrit";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MemberCriteria";
 			definition = "Defines the member query criteria.";
 			maxOccurs = 1;
@@ -151,9 +153,9 @@ public class MemberQueryDefinition {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MemberQueryDefinition.mmQueryType, com.tools20022.repository.msg.MemberQueryDefinition.mmMemberCriteria);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(MemberQueryDefinition.mmQueryType, MemberQueryDefinition.mmMemberCriteria);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "MemberQueryDefinition";
 				definition = "Defines the query criteria.";
 			}

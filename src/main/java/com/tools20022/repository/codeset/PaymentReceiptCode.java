@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.PaymentReceipt1Code
+ * PaymentReceipt1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -37,13 +46,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * PaymentReceiptCode.mmReceipt}</li>
  * <li>{@linkplain com.tools20022.repository.codeset.PaymentReceiptCode#mmNone
  * PaymentReceiptCode.mmNone}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.PaymentReceipt1Code
- * PaymentReceipt1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -88,7 +90,7 @@ public class PaymentReceiptCode {
 	 */
 	public static final MMCode mmPayment = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Payment";
 			definition = "Operation is a payment.";
 			owner_lazy = () -> PaymentReceiptCode.mmObject();
@@ -118,7 +120,7 @@ public class PaymentReceiptCode {
 	 */
 	public static final MMCode mmReceipt = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Receipt";
 			definition = "Operation is a receipt.";
 			owner_lazy = () -> PaymentReceiptCode.mmObject();
@@ -148,7 +150,7 @@ public class PaymentReceiptCode {
 	 */
 	public static final MMCode mmNone = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "None";
 			definition = "Operation is null.";
 			owner_lazy = () -> PaymentReceiptCode.mmObject();
@@ -159,11 +161,11 @@ public class PaymentReceiptCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PaymentReceiptCode";
 				definition = "Specifies if an operation is a payment, or a receipt or none.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PaymentReceiptCode.mmPayment, com.tools20022.repository.codeset.PaymentReceiptCode.mmReceipt, com.tools20022.repository.codeset.PaymentReceiptCode.mmNone);
+				code_lazy = () -> Arrays.asList(PaymentReceiptCode.mmPayment, PaymentReceiptCode.mmReceipt, PaymentReceiptCode.mmNone);
 				derivation_lazy = () -> Arrays.asList(PaymentReceipt1Code.mmObject());
 			}
 		});

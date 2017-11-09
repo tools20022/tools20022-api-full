@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.InvestigationExecutionConfirmationCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -84,7 +86,7 @@ public class InvestigationExecutionConfirmation4Code extends InvestigationExecut
 	 */
 	public static final MMCode mmPartiallyExecutedCancellationRequest = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartiallyExecutedCancellationRequest";
 			owner_lazy = () -> InvestigationExecutionConfirmation4Code.mmObject();
 		}
@@ -107,7 +109,7 @@ public class InvestigationExecutionConfirmation4Code extends InvestigationExecut
 	 */
 	public static final MMCode mmRejectedCancellationRequest = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RejectedCancellationRequest";
 			owner_lazy = () -> InvestigationExecutionConfirmation4Code.mmObject();
 		}
@@ -116,13 +118,12 @@ public class InvestigationExecutionConfirmation4Code extends InvestigationExecut
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("PECR");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InvestigationExecutionConfirmation4Code";
 				definition = "Indicates the result of an investigation.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.InvestigationExecutionConfirmation4Code.mmPartiallyExecutedCancellationRequest,
-						com.tools20022.repository.codeset.InvestigationExecutionConfirmation4Code.mmRejectedCancellationRequest);
+				code_lazy = () -> Arrays.asList(InvestigationExecutionConfirmation4Code.mmPartiallyExecutedCancellationRequest, InvestigationExecutionConfirmation4Code.mmRejectedCancellationRequest);
 				trace_lazy = () -> InvestigationExecutionConfirmationCode.mmObject();
 			}
 		});

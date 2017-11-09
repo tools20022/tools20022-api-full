@@ -20,9 +20,13 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.AccountIdentification4Choice;
 import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
+import com.tools20022.repository.entity.Account;
 import com.tools20022.repository.entity.DefaultFund;
+import com.tools20022.repository.entity.DefaultFundContribution;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -111,11 +115,11 @@ public class DefaultFund1 {
 	 */
 	public static final MMMessageAttribute mmDefaultFundAccount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.mmIdentification;
+			businessElementTrace_lazy = () -> Account.mmIdentification;
 			componentContext_lazy = () -> DefaultFund1.mmObject();
 			isDerived = false;
 			xmlTag = "DfltFndAcct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DefaultFundAccount";
 			definition = "Specifies the account identification of the clearing member at the ICSD (International Central Securities Depository) or at the central bank.";
 			maxOccurs = 1;
@@ -161,11 +165,11 @@ public class DefaultFund1 {
 	 */
 	public static final MMMessageAttribute mmTotalDefaultFundAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.DefaultFund.mmTotalAmount;
+			businessElementTrace_lazy = () -> DefaultFund.mmTotalAmount;
 			componentContext_lazy = () -> DefaultFund1.mmObject();
 			isDerived = false;
 			xmlTag = "TtlDfltFndAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalDefaultFundAmount";
 			definition = "Total amount required by the clearing member to participate to the default fund.";
 			maxOccurs = 1;
@@ -209,11 +213,11 @@ public class DefaultFund1 {
 	 */
 	public static final MMMessageAssociationEnd mmContribution = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.DefaultFund.mmContribution;
+			businessElementTrace_lazy = () -> DefaultFund.mmContribution;
 			componentContext_lazy = () -> DefaultFund1.mmObject();
 			isDerived = false;
 			xmlTag = "Cntrbtn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Contribution";
 			definition = "Provides details about the contribution to the default fund by trading venues/products.";
 			minOccurs = 0;
@@ -260,11 +264,11 @@ public class DefaultFund1 {
 	 */
 	public static final MMMessageAttribute mmIncreaseCoverageAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.DefaultFundContribution.mmExcessOrDeficitAmount;
+			businessElementTrace_lazy = () -> DefaultFundContribution.mmExcessOrDeficitAmount;
 			componentContext_lazy = () -> DefaultFund1.mmObject();
 			isDerived = false;
 			xmlTag = "IncrCvrgAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncreaseCoverageAmount";
 			definition = "Additional amount that the clearing member will have to provide to cover a risk increase. This results from a risk management decision depending on central counterparty specific criteria.";
 			maxOccurs = 1;
@@ -276,11 +280,10 @@ public class DefaultFund1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DefaultFund1.mmDefaultFundAccount, com.tools20022.repository.msg.DefaultFund1.mmTotalDefaultFundAmount,
-						com.tools20022.repository.msg.DefaultFund1.mmContribution, com.tools20022.repository.msg.DefaultFund1.mmIncreaseCoverageAmount);
+				messageElement_lazy = () -> Arrays.asList(DefaultFund1.mmDefaultFundAccount, DefaultFund1.mmTotalDefaultFundAmount, DefaultFund1.mmContribution, DefaultFund1.mmIncreaseCoverageAmount);
 				trace_lazy = () -> DefaultFund.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DefaultFund1";
 				definition = "Provides information such as the default fund account identification or the default fund amount.";
 			}

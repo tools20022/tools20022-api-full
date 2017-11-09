@@ -19,8 +19,11 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.AnyBICIdentifier;
+import com.tools20022.repository.entity.OrganisationIdentification;
 import com.tools20022.repository.entity.PartyIdentificationInformation;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification1;
 import com.tools20022.repository.msg.NameAndAddress5;
 import java.util.Arrays;
@@ -123,14 +126,14 @@ public class PartyIdentification90Choice {
 	 */
 	public static final MMMessageAttribute mmAnyBIC = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.mmAnyBIC;
+			businessElementTrace_lazy = () -> OrganisationIdentification.mmAnyBIC;
 			componentContext_lazy = () -> PartyIdentification90Choice.mmObject();
 			isDerived = false;
 			xmlTag = "AnyBIC";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AnyBIC";
 			definition = "Identification of the party expressed as a BIC.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PartyIdentification96Choice.mmAnyBIC);
+			nextVersions_lazy = () -> Arrays.asList(PartyIdentification96Choice.mmAnyBIC);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AnyBICIdentifier.mmObject();
@@ -188,15 +191,15 @@ public class PartyIdentification90Choice {
 	 */
 	public static final MMMessageAttribute mmProprietaryIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.mmOtherIdentification;
+			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmOtherIdentification;
 			componentContext_lazy = () -> PartyIdentification90Choice.mmObject();
 			isDerived = false;
 			xmlTag = "PrtryId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProprietaryIdentification";
 			definition = "Unique and unambiguous identifier, as assigned to the party using a proprietary identification scheme.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PartyIdentification96Choice.mmProprietaryIdentification);
-			previousVersion_lazy = () -> com.tools20022.repository.choice.PartyIdentification2Choice.mmProprietaryIdentification;
+			nextVersions_lazy = () -> Arrays.asList(PartyIdentification96Choice.mmProprietaryIdentification);
+			previousVersion_lazy = () -> PartyIdentification2Choice.mmProprietaryIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification1.mmObject();
@@ -254,11 +257,11 @@ public class PartyIdentification90Choice {
 			componentContext_lazy = () -> PartyIdentification90Choice.mmObject();
 			isDerived = false;
 			xmlTag = "NmAndAdr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NameAndAddress";
 			definition = "Name and address of the party.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PartyIdentification96Choice.mmNameAndAddress);
-			previousVersion_lazy = () -> com.tools20022.repository.choice.PartyIdentification2Choice.mmNameAndAddress;
+			nextVersions_lazy = () -> Arrays.asList(PartyIdentification96Choice.mmNameAndAddress);
+			previousVersion_lazy = () -> PartyIdentification2Choice.mmNameAndAddress;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> NameAndAddress5.mmObject();
@@ -268,11 +271,10 @@ public class PartyIdentification90Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PartyIdentification90Choice.mmAnyBIC, com.tools20022.repository.choice.PartyIdentification90Choice.mmProprietaryIdentification,
-						com.tools20022.repository.choice.PartyIdentification90Choice.mmNameAndAddress);
+				messageElement_lazy = () -> Arrays.asList(PartyIdentification90Choice.mmAnyBIC, PartyIdentification90Choice.mmProprietaryIdentification, PartyIdentification90Choice.mmNameAndAddress);
 				trace_lazy = () -> PartyIdentificationInformation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PartyIdentification90Choice";
 				definition = "Choice of formats for the identification of a party.";
 				nextVersions_lazy = () -> Arrays.asList(PartyIdentification96Choice.mmObject());

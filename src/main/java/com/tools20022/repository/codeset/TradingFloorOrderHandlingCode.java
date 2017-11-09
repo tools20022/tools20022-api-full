@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -28,6 +30,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.TradingFloorOrderHandling1Code
+ * TradingFloorOrderHandling1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -39,14 +49,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.TradingFloorOrderHandlingCode#mmManual
  * TradingFloorOrderHandlingCode.mmManual}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.TradingFloorOrderHandling1Code
- * TradingFloorOrderHandling1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -102,7 +104,7 @@ public class TradingFloorOrderHandlingCode {
 	 */
 	public static final MMCode mmAutomatedPrivate = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AutomatedPrivate";
 			definition = "Indicates that the order should be executed automatically, private initiative, no broker intervention. Its sales trading desk will not be informed of the order and trade.";
 			owner_lazy = () -> TradingFloorOrderHandlingCode.mmObject();
@@ -135,7 +137,7 @@ public class TradingFloorOrderHandlingCode {
 	 */
 	public static final MMCode mmAutomatedPublic = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AutomatedPublic";
 			definition = "Indicates that the order should be executed automatically, public initiative, broker intervention allowed.";
 			owner_lazy = () -> TradingFloorOrderHandlingCode.mmObject();
@@ -165,7 +167,7 @@ public class TradingFloorOrderHandlingCode {
 	 */
 	public static final MMCode mmManual = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Manual";
 			definition = "Manual order, best execution.";
 			owner_lazy = () -> TradingFloorOrderHandlingCode.mmObject();
@@ -176,13 +178,12 @@ public class TradingFloorOrderHandlingCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ATPR");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TradingFloorOrderHandlingCode";
 				definition = "Description of the parameters under which an order must be handled on the floor.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TradingFloorOrderHandlingCode.mmAutomatedPrivate, com.tools20022.repository.codeset.TradingFloorOrderHandlingCode.mmAutomatedPublic,
-						com.tools20022.repository.codeset.TradingFloorOrderHandlingCode.mmManual);
+				code_lazy = () -> Arrays.asList(TradingFloorOrderHandlingCode.mmAutomatedPrivate, TradingFloorOrderHandlingCode.mmAutomatedPublic, TradingFloorOrderHandlingCode.mmManual);
 				derivation_lazy = () -> Arrays.asList(TradingFloorOrderHandling1Code.mmObject());
 			}
 		});

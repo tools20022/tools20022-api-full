@@ -19,12 +19,15 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.Amount2Choice;
 import com.tools20022.repository.choice.DateAndDateTimeChoice;
 import com.tools20022.repository.codeset.CreditDebitCode;
 import com.tools20022.repository.codeset.LimitStatus1Code;
 import com.tools20022.repository.datatype.PercentageRate;
+import com.tools20022.repository.entity.DateTimePeriod;
 import com.tools20022.repository.entity.Limit;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -112,11 +115,11 @@ public class Limit4 {
 	 */
 	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Limit.mmAmount;
+			businessElementTrace_lazy = () -> Limit.mmAmount;
 			componentContext_lazy = () -> Limit4.mmObject();
 			isDerived = false;
 			xmlTag = "Amt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Amount of money of the limit, expressed in an eligible currency.";
 			maxOccurs = 1;
@@ -159,11 +162,11 @@ public class Limit4 {
 	 */
 	public static final MMMessageAttribute mmCreditDebitIndicator = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Limit.mmCreditDebitIndicator;
+			businessElementTrace_lazy = () -> Limit.mmCreditDebitIndicator;
 			componentContext_lazy = () -> Limit4.mmObject();
 			isDerived = false;
 			xmlTag = "CdtDbtInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditDebitIndicator";
 			definition = "Specifies if a limit is a debit limit or a credit limit.";
 			maxOccurs = 1;
@@ -206,11 +209,11 @@ public class Limit4 {
 	 */
 	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Limit.mmLimitStatus;
+			businessElementTrace_lazy = () -> Limit.mmLimitStatus;
 			componentContext_lazy = () -> Limit4.mmObject();
 			isDerived = false;
 			xmlTag = "Sts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Status";
 			definition = "Status of the limit, such as enabled or disabled.";
 			maxOccurs = 1;
@@ -253,11 +256,11 @@ public class Limit4 {
 	 */
 	public static final MMMessageAttribute mmStartDateTime = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmFromDateTime;
+			businessElementTrace_lazy = () -> DateTimePeriod.mmFromDateTime;
 			componentContext_lazy = () -> Limit4.mmObject();
 			isDerived = false;
 			xmlTag = "StartDtTm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StartDateTime";
 			definition = "Date and time at which the limit becomes effective.";
 			maxOccurs = 1;
@@ -300,11 +303,11 @@ public class Limit4 {
 	 */
 	public static final MMMessageAttribute mmUsedAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Limit.mmUsedAmount;
+			businessElementTrace_lazy = () -> Limit.mmUsedAmount;
 			componentContext_lazy = () -> Limit4.mmObject();
 			isDerived = false;
 			xmlTag = "UsdAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UsedAmount";
 			definition = "Actual usage of the limit expressed as an amount.";
 			maxOccurs = 1;
@@ -350,11 +353,11 @@ public class Limit4 {
 	 */
 	public static final MMMessageAttribute mmUsedAmountCreditDebitIndicator = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Limit.mmCreditDebitIndicator;
+			businessElementTrace_lazy = () -> Limit.mmCreditDebitIndicator;
 			componentContext_lazy = () -> Limit4.mmObject();
 			isDerived = false;
 			xmlTag = "UsdAmtCdtDbtInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UsedAmountCreditDebitIndicator";
 			definition = "Specifies if the used amount of the limit is a debit amount or a credit amount.";
 			maxOccurs = 1;
@@ -397,11 +400,11 @@ public class Limit4 {
 	 */
 	public static final MMMessageAttribute mmUsedPercentage = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Limit.mmPercentage;
+			businessElementTrace_lazy = () -> Limit.mmPercentage;
 			componentContext_lazy = () -> Limit4.mmObject();
 			isDerived = false;
 			xmlTag = "UsdPctg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UsedPercentage";
 			definition = "Actual usage of the limit expressed as a percentage.";
 			maxOccurs = 1;
@@ -444,11 +447,11 @@ public class Limit4 {
 	 */
 	public static final MMMessageAttribute mmRemainingAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Limit.mmAmount;
+			businessElementTrace_lazy = () -> Limit.mmAmount;
 			componentContext_lazy = () -> Limit4.mmObject();
 			isDerived = false;
 			xmlTag = "RmngAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RemainingAmount";
 			definition = "Actual usage of the limit expressed as an amount.";
 			maxOccurs = 1;
@@ -460,12 +463,11 @@ public class Limit4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Limit4.mmAmount, com.tools20022.repository.msg.Limit4.mmCreditDebitIndicator, com.tools20022.repository.msg.Limit4.mmStatus,
-						com.tools20022.repository.msg.Limit4.mmStartDateTime, com.tools20022.repository.msg.Limit4.mmUsedAmount, com.tools20022.repository.msg.Limit4.mmUsedAmountCreditDebitIndicator,
-						com.tools20022.repository.msg.Limit4.mmUsedPercentage, com.tools20022.repository.msg.Limit4.mmRemainingAmount);
+				messageElement_lazy = () -> Arrays.asList(Limit4.mmAmount, Limit4.mmCreditDebitIndicator, Limit4.mmStatus, Limit4.mmStartDateTime, Limit4.mmUsedAmount, Limit4.mmUsedAmountCreditDebitIndicator, Limit4.mmUsedPercentage,
+						Limit4.mmRemainingAmount);
 				trace_lazy = () -> Limit.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Limit4";
 				definition = "Details on the limits.";
 			}

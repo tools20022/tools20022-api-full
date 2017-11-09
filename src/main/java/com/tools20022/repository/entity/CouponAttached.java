@@ -17,13 +17,13 @@
 
 package com.tools20022.repository.entity;
 
-import com.tools20022.metamodel.MMBusinessAssociationEnd;
-import com.tools20022.metamodel.MMBusinessAttribute;
-import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.*;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.Max3NumericText;
+import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -37,6 +37,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.Security#mmCouponAttached
+ * Security.mmCouponAttached}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -52,14 +60,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.entity.CouponAttached#mmIdentification
  * CouponAttached.mmIdentification}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Security#mmCouponAttached
- * Security.mmCouponAttached}</li>
  * </ul>
  * </li>
  * <li>
@@ -188,21 +188,15 @@ public class CouponAttached {
 	 */
 	public static final MMBusinessAttribute mmDate = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrumentAttributes8.mmCouponDate, com.tools20022.repository.msg.FinancialInstrumentAttributes20.mmCouponDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes35.mmCouponDate, com.tools20022.repository.msg.FinancialInstrumentAttributes41.mmCouponDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes4.mmCouponDate, com.tools20022.repository.msg.FinancialInstrumentAttributes13.mmCouponDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes21.mmCouponDate, com.tools20022.repository.msg.FinancialInstrumentAttributes26.mmCouponDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes36.mmCouponDate, com.tools20022.repository.msg.FinancialInstrumentAttributes42.mmCouponDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes27.mmCouponDate, com.tools20022.repository.msg.FinancialInstrumentAttributes14.mmCouponDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes30.mmCouponDate, com.tools20022.repository.msg.FinancialInstrumentAttributes28.mmCouponDate, com.tools20022.repository.msg.Debt1.mmNextCouponDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes31.mmCouponDate, com.tools20022.repository.msg.FinancialInstrumentAttributes44.mmCouponDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes15.mmCouponDate, com.tools20022.repository.msg.FinancialInstrumentAttributes29.mmCouponDate, com.tools20022.repository.msg.Debt2.mmNextCouponDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes2.mmCouponDate, com.tools20022.repository.msg.FinancialInstrumentAttributes63.mmCouponDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes64.mmCouponDate, com.tools20022.repository.msg.FinancialInstrumentAttributes75.mmCouponDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes78.mmCouponDate);
+			derivation_lazy = () -> Arrays.asList(FinancialInstrumentAttributes8.mmCouponDate, FinancialInstrumentAttributes20.mmCouponDate, FinancialInstrumentAttributes35.mmCouponDate, FinancialInstrumentAttributes41.mmCouponDate,
+					FinancialInstrumentAttributes4.mmCouponDate, FinancialInstrumentAttributes13.mmCouponDate, FinancialInstrumentAttributes21.mmCouponDate, FinancialInstrumentAttributes26.mmCouponDate,
+					FinancialInstrumentAttributes36.mmCouponDate, FinancialInstrumentAttributes42.mmCouponDate, FinancialInstrumentAttributes27.mmCouponDate, FinancialInstrumentAttributes14.mmCouponDate,
+					FinancialInstrumentAttributes30.mmCouponDate, FinancialInstrumentAttributes28.mmCouponDate, Debt1.mmNextCouponDate, FinancialInstrumentAttributes31.mmCouponDate, FinancialInstrumentAttributes44.mmCouponDate,
+					FinancialInstrumentAttributes15.mmCouponDate, FinancialInstrumentAttributes29.mmCouponDate, Debt2.mmNextCouponDate, FinancialInstrumentAttributes2.mmCouponDate, FinancialInstrumentAttributes63.mmCouponDate,
+					FinancialInstrumentAttributes64.mmCouponDate, FinancialInstrumentAttributes75.mmCouponDate, FinancialInstrumentAttributes78.mmCouponDate);
 			elementContext_lazy = () -> CouponAttached.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Date";
 			definition = "Date of the coupon attached to the physical security.";
 			maxOccurs = 1;
@@ -358,26 +352,20 @@ public class CouponAttached {
 	 */
 	public static final MMBusinessAttribute mmNumber = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrumentAttributes8.mmCouponAttachedNumber, com.tools20022.repository.msg.FinancialInstrumentAttributes20.mmCouponAttachedNumber,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes35.mmCouponAttachedNumber, com.tools20022.repository.msg.FinancialInstrumentAttributes41.mmCouponAttachedNumber,
-					com.tools20022.repository.msg.CorporateAction3.mmCouponNumber, com.tools20022.repository.msg.CorporateAction4.mmCouponNumber, com.tools20022.repository.msg.CorporateAction5.mmCouponNumber,
-					com.tools20022.repository.msg.CorporateAction6.mmCouponNumber, com.tools20022.repository.msg.CorporateAction7.mmCouponNumber, com.tools20022.repository.msg.CorporateAction8.mmCouponNumber,
-					com.tools20022.repository.msg.CorporateAction10.mmCouponNumber, com.tools20022.repository.msg.CorporateAction11.mmCouponNumber, com.tools20022.repository.msg.FinancialInstrumentAttributes4.mmCouponAttachedNumber,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes13.mmCouponAttachedNumber, com.tools20022.repository.msg.FinancialInstrumentAttributes21.mmCouponAttachedNumber,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes26.mmCouponAttachedNumber, com.tools20022.repository.msg.FinancialInstrumentAttributes36.mmCouponAttachedNumber,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes42.mmCouponAttachedNumber, com.tools20022.repository.msg.FinancialInstrumentAttributes27.mmCouponAttachedNumber,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes14.mmCouponAttachedNumber, com.tools20022.repository.msg.FinancialInstrumentAttributes30.mmCouponAttachedNumber,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes28.mmCouponAttachedNumber, com.tools20022.repository.msg.FinancialInstrumentAttributes1.mmCouponAttachedNumber,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes31.mmCouponAttachedNumber, com.tools20022.repository.msg.FinancialInstrumentAttributes44.mmCouponAttachedNumber,
-					com.tools20022.repository.msg.CorporateAction2.mmCouponNumber, com.tools20022.repository.msg.FinancialInstrumentAttributes15.mmCouponAttachedNumber,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes29.mmCouponAttachedNumber, com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.mmCouponAttachedNumber,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes2.mmCouponAttachedNumber, com.tools20022.repository.msg.CorporateAction12.mmCouponNumber, com.tools20022.repository.msg.CorporateAction17.mmCouponNumber,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes63.mmCouponAttachedNumber, com.tools20022.repository.msg.FinancialInstrumentAttributes64.mmCouponAttachedNumber,
-					com.tools20022.repository.msg.CorporateAction31.mmCouponNumber, com.tools20022.repository.msg.CorporateAction40.mmCouponNumber, com.tools20022.repository.msg.FinancialInstrumentAttributes75.mmCouponAttachedNumber,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes78.mmCouponAttachedNumber);
+			derivation_lazy = () -> Arrays.asList(FinancialInstrumentAttributes8.mmCouponAttachedNumber, FinancialInstrumentAttributes20.mmCouponAttachedNumber, FinancialInstrumentAttributes35.mmCouponAttachedNumber,
+					FinancialInstrumentAttributes41.mmCouponAttachedNumber, CorporateAction3.mmCouponNumber, CorporateAction4.mmCouponNumber, CorporateAction5.mmCouponNumber, CorporateAction6.mmCouponNumber,
+					CorporateAction7.mmCouponNumber, CorporateAction8.mmCouponNumber, CorporateAction10.mmCouponNumber, CorporateAction11.mmCouponNumber, FinancialInstrumentAttributes4.mmCouponAttachedNumber,
+					FinancialInstrumentAttributes13.mmCouponAttachedNumber, FinancialInstrumentAttributes21.mmCouponAttachedNumber, FinancialInstrumentAttributes26.mmCouponAttachedNumber,
+					FinancialInstrumentAttributes36.mmCouponAttachedNumber, FinancialInstrumentAttributes42.mmCouponAttachedNumber, FinancialInstrumentAttributes27.mmCouponAttachedNumber,
+					FinancialInstrumentAttributes14.mmCouponAttachedNumber, FinancialInstrumentAttributes30.mmCouponAttachedNumber, FinancialInstrumentAttributes28.mmCouponAttachedNumber,
+					FinancialInstrumentAttributes1.mmCouponAttachedNumber, FinancialInstrumentAttributes31.mmCouponAttachedNumber, FinancialInstrumentAttributes44.mmCouponAttachedNumber, CorporateAction2.mmCouponNumber,
+					FinancialInstrumentAttributes15.mmCouponAttachedNumber, FinancialInstrumentAttributes29.mmCouponAttachedNumber, CommonFinancialInstrumentAttributes1.mmCouponAttachedNumber,
+					FinancialInstrumentAttributes2.mmCouponAttachedNumber, CorporateAction12.mmCouponNumber, CorporateAction17.mmCouponNumber, FinancialInstrumentAttributes63.mmCouponAttachedNumber,
+					FinancialInstrumentAttributes64.mmCouponAttachedNumber, CorporateAction31.mmCouponNumber, CorporateAction40.mmCouponNumber, FinancialInstrumentAttributes75.mmCouponAttachedNumber,
+					FinancialInstrumentAttributes78.mmCouponAttachedNumber);
 			elementContext_lazy = () -> CouponAttached.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Number";
 			definition = "Number of the coupon attached to the physical security.";
 			maxOccurs = 1;
@@ -422,13 +410,13 @@ public class CouponAttached {
 		{
 			elementContext_lazy = () -> CouponAttached.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Security";
 			definition = "Instrument to which a coupon is specified.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.Security.mmCouponAttached;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 		}
 	};
@@ -471,10 +459,10 @@ public class CouponAttached {
 	 */
 	public static final MMBusinessAttribute mmCouponClippingDate = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionDate4.mmCouponClippingDate);
+			derivation_lazy = () -> Arrays.asList(CorporateActionDate4.mmCouponClippingDate);
 			elementContext_lazy = () -> CouponAttached.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CouponClippingDate";
 			definition = "Date on which the coupons are to be/were submitted for payment of interest.";
 			maxOccurs = 1;
@@ -512,7 +500,7 @@ public class CouponAttached {
 		{
 			elementContext_lazy = () -> CouponAttached.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Identification";
 			definition = "Identification of the coupon.";
 			maxOccurs = 1;
@@ -524,13 +512,12 @@ public class CouponAttached {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CouponAttached";
 				definition = "Physical certificates representing rights attached to the physical certificates representing a security.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Security.mmCouponAttached);
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CouponAttached.mmDate, com.tools20022.repository.entity.CouponAttached.mmNumber, com.tools20022.repository.entity.CouponAttached.mmSecurity,
-						com.tools20022.repository.entity.CouponAttached.mmCouponClippingDate, com.tools20022.repository.entity.CouponAttached.mmIdentification);
+				element_lazy = () -> Arrays.asList(CouponAttached.mmDate, CouponAttached.mmNumber, CouponAttached.mmSecurity, CouponAttached.mmCouponClippingDate, CouponAttached.mmIdentification);
 			}
 		});
 		return mmObject_lazy.get();

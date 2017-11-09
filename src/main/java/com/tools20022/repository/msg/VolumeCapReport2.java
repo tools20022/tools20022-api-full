@@ -19,10 +19,13 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ActiveOrHistoricCurrencyCode;
 import com.tools20022.repository.datatype.ImpliedCurrencyAndAmount;
 import com.tools20022.repository.datatype.ISINOct2015Identifier;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.entity.SecuritiesIdentification;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -111,7 +114,7 @@ public class VolumeCapReport2 {
 			componentContext_lazy = () -> VolumeCapReport2.mmObject();
 			isDerived = false;
 			xmlTag = "TechRcrdId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TechnicalRecordIdentification";
 			definition = "Unique identifier of a record in a message used as part of error management and feedback messages.\r\n\r\nUsage:\r\nThis identification will be used in the status advice report sent back.";
 			maxOccurs = 1;
@@ -155,11 +158,11 @@ public class VolumeCapReport2 {
 	 */
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesIdentification.mmSecurityIdentification;
+			businessElementTrace_lazy = () -> SecuritiesIdentification.mmSecurityIdentification;
 			componentContext_lazy = () -> VolumeCapReport2.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Identifies the financial instrument using an ISIN.";
 			maxOccurs = 1;
@@ -201,7 +204,7 @@ public class VolumeCapReport2 {
 			componentContext_lazy = () -> VolumeCapReport2.mmObject();
 			isDerived = false;
 			xmlTag = "Ccy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Currency";
 			definition = "Currency of the transaction.";
 			maxOccurs = 1;
@@ -245,7 +248,7 @@ public class VolumeCapReport2 {
 			componentContext_lazy = () -> VolumeCapReport2.mmObject();
 			isDerived = false;
 			xmlTag = "TtlTradgVol";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalTradingVolume";
 			definition = "Total traded volume of the instrument in this specific reporting period.";
 			maxOccurs = 1;
@@ -290,7 +293,7 @@ public class VolumeCapReport2 {
 			componentContext_lazy = () -> VolumeCapReport2.mmObject();
 			isDerived = false;
 			xmlTag = "TtlRefPricTradgVol";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalReferencePriceTradingVolume";
 			definition = "Total volume of trading under reference price waiver as defined under the local regulation";
 			maxOccurs = 1;
@@ -335,7 +338,7 @@ public class VolumeCapReport2 {
 			componentContext_lazy = () -> VolumeCapReport2.mmObject();
 			isDerived = false;
 			xmlTag = "TtlNgtdTxsTradgVol";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalNegotiatedTransactionsTradingVolume";
 			definition = "Total volume of trading under negotiated transactions waiver as defined under the local regulation.";
 			maxOccurs = 1;
@@ -347,11 +350,10 @@ public class VolumeCapReport2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.VolumeCapReport2.mmTechnicalRecordIdentification, com.tools20022.repository.msg.VolumeCapReport2.mmIdentification,
-						com.tools20022.repository.msg.VolumeCapReport2.mmCurrency, com.tools20022.repository.msg.VolumeCapReport2.mmTotalTradingVolume, com.tools20022.repository.msg.VolumeCapReport2.mmTotalReferencePriceTradingVolume,
-						com.tools20022.repository.msg.VolumeCapReport2.mmTotalNegotiatedTransactionsTradingVolume);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(VolumeCapReport2.mmTechnicalRecordIdentification, VolumeCapReport2.mmIdentification, VolumeCapReport2.mmCurrency, VolumeCapReport2.mmTotalTradingVolume,
+						VolumeCapReport2.mmTotalReferencePriceTradingVolume, VolumeCapReport2.mmTotalNegotiatedTransactionsTradingVolume);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "VolumeCapReport2";
 				definition = "Double volume cap report.";
 			}

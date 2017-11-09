@@ -20,7 +20,9 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max350Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -108,7 +110,7 @@ public class AccountBalanceSD6 {
 			componentContext_lazy = () -> AccountBalanceSD6.mmObject();
 			isDerived = false;
 			xmlTag = "PlcAndNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "xPath to the element that is being extended.";
 			maxOccurs = 1;
@@ -154,7 +156,7 @@ public class AccountBalanceSD6 {
 			componentContext_lazy = () -> AccountBalanceSD6.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlBal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalBalance";
 			definition = "Position held in a security as of the day prior to publication date. This position is subject to a redemption lottery call when this is the first lottery. This balance will not be adjusted for the supplemental or concurrent lotteries and will remain constant to report the original position.";
 			maxOccurs = 1;
@@ -197,7 +199,7 @@ public class AccountBalanceSD6 {
 			componentContext_lazy = () -> AccountBalanceSD6.mmObject();
 			isDerived = false;
 			xmlTag = "AdjstdBal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdjustedBalance";
 			definition = "Adjusted position held in  a security that is subject to redemption call.";
 			maxOccurs = 1;
@@ -242,7 +244,7 @@ public class AccountBalanceSD6 {
 			componentContext_lazy = () -> AccountBalanceSD6.mmObject();
 			isDerived = false;
 			xmlTag = "UpldgdBal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnpledgedBalance";
 			definition = "Portion of the Original Balance position held in DTC General Free account as of day prior to Publication Date. Position held in this account is subject to redemption lottery call.";
 			maxOccurs = 1;
@@ -288,7 +290,7 @@ public class AccountBalanceSD6 {
 			componentContext_lazy = () -> AccountBalanceSD6.mmObject();
 			isDerived = false;
 			xmlTag = "InvstmtUpldgdBal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestmentUnpledgedBalance";
 			definition = "Portion of the Original Balance position held in DTC Segregated account as of day prior to Publication Date. Position held in this account is subject to redemption lottery call and must be released to allow allocation.";
 			maxOccurs = 1;
@@ -334,7 +336,7 @@ public class AccountBalanceSD6 {
 			componentContext_lazy = () -> AccountBalanceSD6.mmObject();
 			isDerived = false;
 			xmlTag = "InvstmtPldgdBal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestmentPledgedBalance";
 			definition = "Portion of the Original Balance position held in DTC Investment account as of day prior to Publication Date. Position held in this account is subject to redemption lottery call and must be released to allow allocation.";
 			maxOccurs = 1;
@@ -347,11 +349,10 @@ public class AccountBalanceSD6 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountBalanceSD6.mmPlaceAndName, com.tools20022.repository.msg.AccountBalanceSD6.mmOriginalBalance,
-						com.tools20022.repository.msg.AccountBalanceSD6.mmAdjustedBalance, com.tools20022.repository.msg.AccountBalanceSD6.mmUnpledgedBalance, com.tools20022.repository.msg.AccountBalanceSD6.mmInvestmentUnpledgedBalance,
-						com.tools20022.repository.msg.AccountBalanceSD6.mmInvestmentPledgedBalance);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(AccountBalanceSD6.mmPlaceAndName, AccountBalanceSD6.mmOriginalBalance, AccountBalanceSD6.mmAdjustedBalance, AccountBalanceSD6.mmUnpledgedBalance,
+						AccountBalanceSD6.mmInvestmentUnpledgedBalance, AccountBalanceSD6.mmInvestmentPledgedBalance);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AccountBalanceSD6";
 				definition = "Provides additional information regarding account balance. Contains transaction details of the stock loans, repurchase agreements (REPOs) and undelivered trades (FAILs).  ";
 			}

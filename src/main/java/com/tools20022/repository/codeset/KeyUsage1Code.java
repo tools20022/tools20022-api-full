@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.KeyUsageCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -123,7 +125,7 @@ public class KeyUsage1Code extends KeyUsageCode {
 	 */
 	public static final MMCode mmEncryption = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Encryption";
 			owner_lazy = () -> KeyUsage1Code.mmObject();
 		}
@@ -146,7 +148,7 @@ public class KeyUsage1Code extends KeyUsageCode {
 	 */
 	public static final MMCode mmDecryption = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Decryption";
 			owner_lazy = () -> KeyUsage1Code.mmObject();
 		}
@@ -169,7 +171,7 @@ public class KeyUsage1Code extends KeyUsageCode {
 	 */
 	public static final MMCode mmDataEncryption = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DataEncryption";
 			owner_lazy = () -> KeyUsage1Code.mmObject();
 		}
@@ -192,7 +194,7 @@ public class KeyUsage1Code extends KeyUsageCode {
 	 */
 	public static final MMCode mmDataDecryption = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DataDecryption";
 			owner_lazy = () -> KeyUsage1Code.mmObject();
 		}
@@ -215,7 +217,7 @@ public class KeyUsage1Code extends KeyUsageCode {
 	 */
 	public static final MMCode mmTranslateInput = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TranslateInput";
 			owner_lazy = () -> KeyUsage1Code.mmObject();
 		}
@@ -238,7 +240,7 @@ public class KeyUsage1Code extends KeyUsageCode {
 	 */
 	public static final MMCode mmTranslateOutput = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TranslateOutput";
 			owner_lazy = () -> KeyUsage1Code.mmObject();
 		}
@@ -261,7 +263,7 @@ public class KeyUsage1Code extends KeyUsageCode {
 	 */
 	public static final MMCode mmMessageAuthenticationCodeGeneration = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageAuthenticationCodeGeneration";
 			owner_lazy = () -> KeyUsage1Code.mmObject();
 		}
@@ -284,7 +286,7 @@ public class KeyUsage1Code extends KeyUsageCode {
 	 */
 	public static final MMCode mmMessageAuthenticationCodeVerification = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageAuthenticationCodeVerification";
 			owner_lazy = () -> KeyUsage1Code.mmObject();
 		}
@@ -307,7 +309,7 @@ public class KeyUsage1Code extends KeyUsageCode {
 	 */
 	public static final MMCode mmSignatureGeneration = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SignatureGeneration";
 			owner_lazy = () -> KeyUsage1Code.mmObject();
 		}
@@ -330,7 +332,7 @@ public class KeyUsage1Code extends KeyUsageCode {
 	 */
 	public static final MMCode mmSignatureVerification = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SignatureVerification";
 			owner_lazy = () -> KeyUsage1Code.mmObject();
 		}
@@ -353,7 +355,7 @@ public class KeyUsage1Code extends KeyUsageCode {
 	 */
 	public static final MMCode mmPINEncryption = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PINEncryption";
 			owner_lazy = () -> KeyUsage1Code.mmObject();
 		}
@@ -376,7 +378,7 @@ public class KeyUsage1Code extends KeyUsageCode {
 	 */
 	public static final MMCode mmPINDecryption = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PINDecryption";
 			owner_lazy = () -> KeyUsage1Code.mmObject();
 		}
@@ -399,7 +401,7 @@ public class KeyUsage1Code extends KeyUsageCode {
 	 */
 	public static final MMCode mmPINVerification = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PINVerification";
 			owner_lazy = () -> KeyUsage1Code.mmObject();
 		}
@@ -422,7 +424,7 @@ public class KeyUsage1Code extends KeyUsageCode {
 	 */
 	public static final MMCode mmKeyGeneration = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "KeyGeneration";
 			owner_lazy = () -> KeyUsage1Code.mmObject();
 		}
@@ -445,7 +447,7 @@ public class KeyUsage1Code extends KeyUsageCode {
 	 */
 	public static final MMCode mmKeyImport = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "KeyImport";
 			owner_lazy = () -> KeyUsage1Code.mmObject();
 		}
@@ -468,7 +470,7 @@ public class KeyUsage1Code extends KeyUsageCode {
 	 */
 	public static final MMCode mmKeyExport = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "KeyExport";
 			owner_lazy = () -> KeyUsage1Code.mmObject();
 		}
@@ -491,7 +493,7 @@ public class KeyUsage1Code extends KeyUsageCode {
 	 */
 	public static final MMCode mmKeyDerivation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "KeyDerivation";
 			owner_lazy = () -> KeyUsage1Code.mmObject();
 		}
@@ -500,17 +502,14 @@ public class KeyUsage1Code extends KeyUsageCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ENCR");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "KeyUsage1Code";
 				definition = "Allowed usages of the key.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.KeyUsage1Code.mmEncryption, com.tools20022.repository.codeset.KeyUsage1Code.mmDecryption, com.tools20022.repository.codeset.KeyUsage1Code.mmDataEncryption,
-						com.tools20022.repository.codeset.KeyUsage1Code.mmDataDecryption, com.tools20022.repository.codeset.KeyUsage1Code.mmTranslateInput, com.tools20022.repository.codeset.KeyUsage1Code.mmTranslateOutput,
-						com.tools20022.repository.codeset.KeyUsage1Code.mmMessageAuthenticationCodeGeneration, com.tools20022.repository.codeset.KeyUsage1Code.mmMessageAuthenticationCodeVerification,
-						com.tools20022.repository.codeset.KeyUsage1Code.mmSignatureGeneration, com.tools20022.repository.codeset.KeyUsage1Code.mmSignatureVerification, com.tools20022.repository.codeset.KeyUsage1Code.mmPINEncryption,
-						com.tools20022.repository.codeset.KeyUsage1Code.mmPINDecryption, com.tools20022.repository.codeset.KeyUsage1Code.mmPINVerification, com.tools20022.repository.codeset.KeyUsage1Code.mmKeyGeneration,
-						com.tools20022.repository.codeset.KeyUsage1Code.mmKeyImport, com.tools20022.repository.codeset.KeyUsage1Code.mmKeyExport, com.tools20022.repository.codeset.KeyUsage1Code.mmKeyDerivation);
+				code_lazy = () -> Arrays.asList(KeyUsage1Code.mmEncryption, KeyUsage1Code.mmDecryption, KeyUsage1Code.mmDataEncryption, KeyUsage1Code.mmDataDecryption, KeyUsage1Code.mmTranslateInput, KeyUsage1Code.mmTranslateOutput,
+						KeyUsage1Code.mmMessageAuthenticationCodeGeneration, KeyUsage1Code.mmMessageAuthenticationCodeVerification, KeyUsage1Code.mmSignatureGeneration, KeyUsage1Code.mmSignatureVerification, KeyUsage1Code.mmPINEncryption,
+						KeyUsage1Code.mmPINDecryption, KeyUsage1Code.mmPINVerification, KeyUsage1Code.mmKeyGeneration, KeyUsage1Code.mmKeyImport, KeyUsage1Code.mmKeyExport, KeyUsage1Code.mmKeyDerivation);
 				trace_lazy = () -> KeyUsageCode.mmObject();
 			}
 		});

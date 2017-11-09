@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.SettlementSystemMethodCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -86,7 +88,7 @@ public class SettlementSystemMethod1Code extends SettlementSystemMethodCode {
 	 */
 	public static final MMCode mmDefault = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Default";
 			owner_lazy = () -> SettlementSystemMethod1Code.mmObject();
 		}
@@ -109,7 +111,7 @@ public class SettlementSystemMethod1Code extends SettlementSystemMethodCode {
 	 */
 	public static final MMCode mmAlternative = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Alternative";
 			owner_lazy = () -> SettlementSystemMethod1Code.mmObject();
 		}
@@ -118,12 +120,12 @@ public class SettlementSystemMethod1Code extends SettlementSystemMethodCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("NSET");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SettlementSystemMethod1Code";
 				definition = "Specifies whether the settlement instruction is to be settled through the default or the alternate settlement system.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SettlementSystemMethod1Code.mmDefault, com.tools20022.repository.codeset.SettlementSystemMethod1Code.mmAlternative);
+				code_lazy = () -> Arrays.asList(SettlementSystemMethod1Code.mmDefault, SettlementSystemMethod1Code.mmAlternative);
 				trace_lazy = () -> SettlementSystemMethodCode.mmObject();
 			}
 		});

@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CorporateActionChangeTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -107,7 +109,7 @@ public class CorporateActionChangeType2Code extends CorporateActionChangeTypeCod
 	 */
 	public static final MMCode mmBearToRegistered = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BearToRegistered";
 			owner_lazy = () -> CorporateActionChangeType2Code.mmObject();
 		}
@@ -130,7 +132,7 @@ public class CorporateActionChangeType2Code extends CorporateActionChangeTypeCod
 	 */
 	public static final MMCode mmCertificates = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Certificates";
 			owner_lazy = () -> CorporateActionChangeType2Code.mmObject();
 		}
@@ -153,7 +155,7 @@ public class CorporateActionChangeType2Code extends CorporateActionChangeTypeCod
 	 */
 	public static final MMCode mmDematerialisedToPhysical = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DematerialisedToPhysical";
 			owner_lazy = () -> CorporateActionChangeType2Code.mmObject();
 		}
@@ -176,7 +178,7 @@ public class CorporateActionChangeType2Code extends CorporateActionChangeTypeCod
 	 */
 	public static final MMCode mmGlobalPermanentToPhysical = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GlobalPermanentToPhysical";
 			owner_lazy = () -> CorporateActionChangeType2Code.mmObject();
 		}
@@ -199,7 +201,7 @@ public class CorporateActionChangeType2Code extends CorporateActionChangeTypeCod
 	 */
 	public static final MMCode mmGlobalTemporaryToGlobalPermanent = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GlobalTemporaryToGlobalPermanent";
 			owner_lazy = () -> CorporateActionChangeType2Code.mmObject();
 		}
@@ -222,7 +224,7 @@ public class CorporateActionChangeType2Code extends CorporateActionChangeTypeCod
 	 */
 	public static final MMCode mmGlobalTemporaryToPhysical = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GlobalTemporaryToPhysical";
 			owner_lazy = () -> CorporateActionChangeType2Code.mmObject();
 		}
@@ -245,7 +247,7 @@ public class CorporateActionChangeType2Code extends CorporateActionChangeTypeCod
 	 */
 	public static final MMCode mmName = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Name";
 			owner_lazy = () -> CorporateActionChangeType2Code.mmObject();
 		}
@@ -268,7 +270,7 @@ public class CorporateActionChangeType2Code extends CorporateActionChangeTypeCod
 	 */
 	public static final MMCode mmPhysicalToDematerialised = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PhysicalToDematerialised";
 			owner_lazy = () -> CorporateActionChangeType2Code.mmObject();
 		}
@@ -291,7 +293,7 @@ public class CorporateActionChangeType2Code extends CorporateActionChangeTypeCod
 	 */
 	public static final MMCode mmRegisteredToBearer = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RegisteredToBearer";
 			owner_lazy = () -> CorporateActionChangeType2Code.mmObject();
 		}
@@ -314,7 +316,7 @@ public class CorporateActionChangeType2Code extends CorporateActionChangeTypeCod
 	 */
 	public static final MMCode mmTerms = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Terms";
 			owner_lazy = () -> CorporateActionChangeType2Code.mmObject();
 		}
@@ -323,16 +325,14 @@ public class CorporateActionChangeType2Code extends CorporateActionChangeTypeCod
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("BERE");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionChangeType2Code";
 				definition = "Specifies the type of changes.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CorporateActionChangeType2Code.mmBearToRegistered, com.tools20022.repository.codeset.CorporateActionChangeType2Code.mmCertificates,
-						com.tools20022.repository.codeset.CorporateActionChangeType2Code.mmDematerialisedToPhysical, com.tools20022.repository.codeset.CorporateActionChangeType2Code.mmGlobalPermanentToPhysical,
-						com.tools20022.repository.codeset.CorporateActionChangeType2Code.mmGlobalTemporaryToGlobalPermanent, com.tools20022.repository.codeset.CorporateActionChangeType2Code.mmGlobalTemporaryToPhysical,
-						com.tools20022.repository.codeset.CorporateActionChangeType2Code.mmName, com.tools20022.repository.codeset.CorporateActionChangeType2Code.mmPhysicalToDematerialised,
-						com.tools20022.repository.codeset.CorporateActionChangeType2Code.mmRegisteredToBearer, com.tools20022.repository.codeset.CorporateActionChangeType2Code.mmTerms);
+				code_lazy = () -> Arrays.asList(CorporateActionChangeType2Code.mmBearToRegistered, CorporateActionChangeType2Code.mmCertificates, CorporateActionChangeType2Code.mmDematerialisedToPhysical,
+						CorporateActionChangeType2Code.mmGlobalPermanentToPhysical, CorporateActionChangeType2Code.mmGlobalTemporaryToGlobalPermanent, CorporateActionChangeType2Code.mmGlobalTemporaryToPhysical,
+						CorporateActionChangeType2Code.mmName, CorporateActionChangeType2Code.mmPhysicalToDematerialised, CorporateActionChangeType2Code.mmRegisteredToBearer, CorporateActionChangeType2Code.mmTerms);
 				trace_lazy = () -> CorporateActionChangeTypeCode.mmObject();
 			}
 		});

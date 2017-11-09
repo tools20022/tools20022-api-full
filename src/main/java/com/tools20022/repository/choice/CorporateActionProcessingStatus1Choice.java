@@ -20,8 +20,14 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV01;
+import com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV02;
+import com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV03;
+import com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV04;
 import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.CorporateActionStatus;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.CorporateActionEventStatus1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -130,11 +136,11 @@ public class CorporateActionProcessingStatus1Choice {
 	 */
 	public static final MMMessageAssociationEnd mmEventStatus = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionStatus.mmProcessingStatus;
+			businessElementTrace_lazy = () -> CorporateActionStatus.mmProcessingStatus;
 			componentContext_lazy = () -> CorporateActionProcessingStatus1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "EvtSts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventStatus";
 			definition = "Specifies the status of the details of the event.";
 			maxOccurs = 1;
@@ -180,7 +186,7 @@ public class CorporateActionProcessingStatus1Choice {
 			componentContext_lazy = () -> CorporateActionProcessingStatus1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "ForInfOnlyInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForInformationOnlyIndicator";
 			definition = "Indicates that the message is for information only, that is processing of client's instruction will not be supported by the Account Servicer.";
 			maxOccurs = 1;
@@ -192,15 +198,13 @@ public class CorporateActionProcessingStatus1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CorporateActionProcessingStatus1Choice.mmEventStatus,
-						com.tools20022.repository.choice.CorporateActionProcessingStatus1Choice.mmForInformationOnlyIndicator);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV01.mmCancellationAdviceGeneralInformation,
-						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV02.mmCancellationAdviceGeneralInformation,
-						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV03.mmCancellationAdviceGeneralInformation,
-						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV04.mmCancellationAdviceGeneralInformation);
+				messageElement_lazy = () -> Arrays.asList(CorporateActionProcessingStatus1Choice.mmEventStatus, CorporateActionProcessingStatus1Choice.mmForInformationOnlyIndicator);
+				messageBuildingBlock_lazy = () -> Arrays.asList(CorporateActionMovementPreliminaryAdviceCancellationAdviceV01.mmCancellationAdviceGeneralInformation,
+						CorporateActionMovementPreliminaryAdviceCancellationAdviceV02.mmCancellationAdviceGeneralInformation, CorporateActionMovementPreliminaryAdviceCancellationAdviceV03.mmCancellationAdviceGeneralInformation,
+						CorporateActionMovementPreliminaryAdviceCancellationAdviceV04.mmCancellationAdviceGeneralInformation);
 				trace_lazy = () -> CorporateActionStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionProcessingStatus1Choice";
 				definition = "Specifies the status of the details of the corporate action event.";
 				nextVersions_lazy = () -> Arrays.asList(CorporateActionProcessingStatus2Choice.mmObject());

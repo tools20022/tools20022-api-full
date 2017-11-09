@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.RejectionReasonCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -96,7 +98,7 @@ public class RejectionReason4Code extends RejectionReasonCode {
 	 */
 	public static final MMCode mmUnknownSymbol = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnknownSymbol";
 			owner_lazy = () -> RejectionReason4Code.mmObject();
 		}
@@ -119,7 +121,7 @@ public class RejectionReason4Code extends RejectionReasonCode {
 	 */
 	public static final MMCode mmWrongSide = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WrongSide";
 			owner_lazy = () -> RejectionReason4Code.mmObject();
 		}
@@ -142,7 +144,7 @@ public class RejectionReason4Code extends RejectionReasonCode {
 	 */
 	public static final MMCode mmNoMatchInquiry = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoMatchInquiry";
 			owner_lazy = () -> RejectionReason4Code.mmObject();
 		}
@@ -165,7 +167,7 @@ public class RejectionReason4Code extends RejectionReasonCode {
 	 */
 	public static final MMCode mmQuantityExceeds = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuantityExceeds";
 			owner_lazy = () -> RejectionReason4Code.mmObject();
 		}
@@ -188,7 +190,7 @@ public class RejectionReason4Code extends RejectionReasonCode {
 	 */
 	public static final MMCode mmPriceExceeds = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PriceExceeds";
 			owner_lazy = () -> RejectionReason4Code.mmObject();
 		}
@@ -211,7 +213,7 @@ public class RejectionReason4Code extends RejectionReasonCode {
 	 */
 	public static final MMCode mmCalculationDifference = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CalculationDifference";
 			owner_lazy = () -> RejectionReason4Code.mmObject();
 		}
@@ -220,14 +222,13 @@ public class RejectionReason4Code extends RejectionReasonCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("UKWN");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RejectionReason4Code";
 				definition = "Specifies the reason for which an execution has not been accepted.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RejectionReason4Code.mmUnknownSymbol, com.tools20022.repository.codeset.RejectionReason4Code.mmWrongSide,
-						com.tools20022.repository.codeset.RejectionReason4Code.mmNoMatchInquiry, com.tools20022.repository.codeset.RejectionReason4Code.mmQuantityExceeds,
-						com.tools20022.repository.codeset.RejectionReason4Code.mmPriceExceeds, com.tools20022.repository.codeset.RejectionReason4Code.mmCalculationDifference);
+				code_lazy = () -> Arrays.asList(RejectionReason4Code.mmUnknownSymbol, RejectionReason4Code.mmWrongSide, RejectionReason4Code.mmNoMatchInquiry, RejectionReason4Code.mmQuantityExceeds, RejectionReason4Code.mmPriceExceeds,
+						RejectionReason4Code.mmCalculationDifference);
 				trace_lazy = () -> RejectionReasonCode.mmObject();
 			}
 		});

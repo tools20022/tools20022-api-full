@@ -19,10 +19,13 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.Max4Text;
+import com.tools20022.repository.entity.TradeIdentification;
 import com.tools20022.repository.entity.TreasuryTrade;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -112,7 +115,7 @@ public class TradeAgreement3 {
 			componentContext_lazy = () -> TradeAgreement3.mmObject();
 			isDerived = false;
 			xmlTag = "TradDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeDate";
 			definition = "Date on which the trading parties agree on the trade.";
 			maxOccurs = 1;
@@ -156,7 +159,7 @@ public class TradeAgreement3 {
 			componentContext_lazy = () -> TradeAgreement3.mmObject();
 			isDerived = false;
 			xmlTag = "NtfctnId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotificationIdentification";
 			definition = "Identification of the notification.This identification must be unique amongst all notifications of same type confirmed by the same party.";
 			maxOccurs = 1;
@@ -199,11 +202,11 @@ public class TradeAgreement3 {
 	 */
 	public static final MMMessageAttribute mmCommonReference = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradeIdentification.mmCommonIdentification;
+			businessElementTrace_lazy = () -> TradeIdentification.mmCommonIdentification;
 			componentContext_lazy = () -> TradeAgreement3.mmObject();
 			isDerived = false;
 			xmlTag = "CmonRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommonReference";
 			definition = "Reference common to both parties of the trade.";
 			maxOccurs = 1;
@@ -245,7 +248,7 @@ public class TradeAgreement3 {
 			componentContext_lazy = () -> TradeAgreement3.mmObject();
 			isDerived = false;
 			xmlTag = "OprTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OperationType";
 			definition = "Specifies the type of underlying transaction, for example, option.";
 			maxOccurs = 1;
@@ -289,7 +292,7 @@ public class TradeAgreement3 {
 			componentContext_lazy = () -> TradeAgreement3.mmObject();
 			isDerived = false;
 			xmlTag = "OprScp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OperationScope";
 			definition = "Specifies the business role between the submitter and the trade party, for example Agent (AGNT).";
 			maxOccurs = 1;
@@ -301,11 +304,10 @@ public class TradeAgreement3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TradeAgreement3.mmTradeDate, com.tools20022.repository.msg.TradeAgreement3.mmNotificationIdentification,
-						com.tools20022.repository.msg.TradeAgreement3.mmCommonReference, com.tools20022.repository.msg.TradeAgreement3.mmOperationType, com.tools20022.repository.msg.TradeAgreement3.mmOperationScope);
+				messageElement_lazy = () -> Arrays.asList(TradeAgreement3.mmTradeDate, TradeAgreement3.mmNotificationIdentification, TradeAgreement3.mmCommonReference, TradeAgreement3.mmOperationType, TradeAgreement3.mmOperationScope);
 				trace_lazy = () -> TreasuryTrade.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "TradeAgreement3";
 				definition = "Date and identification of a trade.";
 				nextVersions_lazy = () -> Arrays.asList(TradeAgreement7.mmObject());

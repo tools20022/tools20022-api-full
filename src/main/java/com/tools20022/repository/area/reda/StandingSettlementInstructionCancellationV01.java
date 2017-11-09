@@ -20,6 +20,7 @@ package com.tools20022.repository.area.reda;
 import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.ReferenceDataLatestVersion;
 import com.tools20022.repository.choice.MarketIdentificationOrCashPurpose1Choice;
 import com.tools20022.repository.choice.PartyOrCurrency1Choice;
@@ -58,6 +59,9 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code reda.059.001.01}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.ReferenceDataLatestVersion
@@ -103,9 +107,6 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code reda.059.001.01}</li>
- * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -146,7 +147,7 @@ public class StandingSettlementInstructionCancellationV01 {
 	public static final MMMessageBuildingBlock mmMessageReferenceIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "MsgRefId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageReferenceIdentification";
 			definition = "Reference of this message.";
 			maxOccurs = 1;
@@ -180,7 +181,7 @@ public class StandingSettlementInstructionCancellationV01 {
 	public static final MMMessageBuildingBlock mmEffectiveDateDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "FctvDtDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EffectiveDateDetails";
 			definition = "Date on which the SSI is effective.";
 			maxOccurs = 1;
@@ -220,7 +221,7 @@ public class StandingSettlementInstructionCancellationV01 {
 	public static final MMMessageBuildingBlock mmAccountIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "AcctId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountIdentification";
 			definition = "Unique and unambiguous master identification known to the sender (or its authorised agent) and receiver (or its authorised agent), below which the SSI will be lodged. This may be an account number or reference to a fund.\r\nIf no account or reference is available then “NONREF” must be specified.";
 			minOccurs = 1;
@@ -255,7 +256,7 @@ public class StandingSettlementInstructionCancellationV01 {
 	public static final MMMessageBuildingBlock mmMarketIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "MktId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketIdentification";
 			definition = "Identifies the market for the standing settlement instruction. ";
 			maxOccurs = 1;
@@ -293,7 +294,7 @@ public class StandingSettlementInstructionCancellationV01 {
 	public static final MMMessageBuildingBlock mmSettlementDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SttlmDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementDetails";
 			definition = "Settlement information that helps to identify the standing settlement  instruction for which the cancellation is sent.";
 			maxOccurs = 1;
@@ -327,7 +328,7 @@ public class StandingSettlementInstructionCancellationV01 {
 	public static final MMMessageBuildingBlock mmPreviousMessageReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "PrvsMsgRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousMessageReference";
 			definition = "Reference to a linked message that was previously sent.";
 			maxOccurs = 1;
@@ -365,7 +366,7 @@ public class StandingSettlementInstructionCancellationV01 {
 	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SplmtryData";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryData";
 			definition = "Additional information that can not be captured in the structured fields and/or any other specific block.";
 			minOccurs = 0;
@@ -376,17 +377,16 @@ public class StandingSettlementInstructionCancellationV01 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "StandingSettlementInstructionCancellationV01";
 				definition = "Scope\r\nAn instructing party sends the StandingSettlementInstructionCancellation message to the receiver to cancel a previously sent StandingSettlementInstruction message. The message can also be used to notify a counterparty of the deletion of a standing settlement information.\r\n\r\nUsage\r\nThe instructing party (initiator) is:\r\n• An account servicer, for example, a global custodian or prime broker\r\n• A counterparty in a transaction, for example:\r\n\t- an investment manager (executing broker),\r\n\t- a global custodian (executing broker, prime broker)\r\n• A vendor's application communicating on behalf of an account servicer or counterparty\r\nThe receiver is:\r\n• An account owner, for example, an investment manager, hedge fund administrator or a party to which SSI operations have been outsourced\r\n• A counterparty, for example:\r\n\t- an investment manager (executing broker)\r\n\t- a global custodian (executing broker, prime broker)\r\n• A vendor's application communicating on behalf of the account owner or counterparty.";
 				messageSet_lazy = () -> Arrays.asList(SSIforSecuritiesPaymentsandForeignExchange.mmObject());
 				rootElement = "Document";
 				xmlTag = "StgSttlmInstrCxl";
 				businessArea_lazy = () -> ReferenceDataLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.reda.StandingSettlementInstructionCancellationV01.mmMessageReferenceIdentification,
-						com.tools20022.repository.area.reda.StandingSettlementInstructionCancellationV01.mmEffectiveDateDetails, com.tools20022.repository.area.reda.StandingSettlementInstructionCancellationV01.mmAccountIdentification,
-						com.tools20022.repository.area.reda.StandingSettlementInstructionCancellationV01.mmMarketIdentification, com.tools20022.repository.area.reda.StandingSettlementInstructionCancellationV01.mmSettlementDetails,
-						com.tools20022.repository.area.reda.StandingSettlementInstructionCancellationV01.mmPreviousMessageReference, com.tools20022.repository.area.reda.StandingSettlementInstructionCancellationV01.mmSupplementaryData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(StandingSettlementInstructionCancellationV01.mmMessageReferenceIdentification, StandingSettlementInstructionCancellationV01.mmEffectiveDateDetails,
+						StandingSettlementInstructionCancellationV01.mmAccountIdentification, StandingSettlementInstructionCancellationV01.mmMarketIdentification, StandingSettlementInstructionCancellationV01.mmSettlementDetails,
+						StandingSettlementInstructionCancellationV01.mmPreviousMessageReference, StandingSettlementInstructionCancellationV01.mmSupplementaryData);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "reda";

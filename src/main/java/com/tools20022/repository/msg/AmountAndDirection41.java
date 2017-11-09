@@ -19,9 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.CurrencyAndAmount;
 import com.tools20022.repository.datatype.PlusOrMinusIndicator;
 import com.tools20022.repository.entity.CardPayment;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -119,11 +121,11 @@ public class AmountAndDirection41 {
 			componentContext_lazy = () -> AmountAndDirection41.mmObject();
 			isDerived = false;
 			xmlTag = "Amt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Amount value.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AmountAndDirection43.mmAmount);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AmountAndDirection30.mmAmount;
+			nextVersions_lazy = () -> Arrays.asList(AmountAndDirection43.mmAmount);
+			previousVersion_lazy = () -> AmountAndDirection30.mmAmount;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
@@ -176,11 +178,11 @@ public class AmountAndDirection41 {
 			componentContext_lazy = () -> AmountAndDirection41.mmObject();
 			isDerived = false;
 			xmlTag = "Sgn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Sign";
 			definition = "Indicates that the amount value is positive or negative.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AmountAndDirection43.mmSign);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AmountAndDirection30.mmSign;
+			nextVersions_lazy = () -> Arrays.asList(AmountAndDirection43.mmSign);
+			previousVersion_lazy = () -> AmountAndDirection30.mmSign;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PlusOrMinusIndicator.mmObject();
@@ -190,10 +192,10 @@ public class AmountAndDirection41 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AmountAndDirection41.mmAmount, com.tools20022.repository.msg.AmountAndDirection41.mmSign);
+				messageElement_lazy = () -> Arrays.asList(AmountAndDirection41.mmAmount, AmountAndDirection41.mmSign);
 				trace_lazy = () -> CardPayment.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AmountAndDirection41";
 				definition = "Signed amount.";
 				nextVersions_lazy = () -> Arrays.asList(AmountAndDirection43.mmObject());

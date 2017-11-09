@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.PresentationPartyCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -86,7 +88,7 @@ public class PresentationParty1Code extends PresentationPartyCode {
 	 */
 	public static final MMCode mmIssuerOrOtherNominatatedParty = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssuerOrOtherNominatatedParty";
 			owner_lazy = () -> PresentationParty1Code.mmObject();
 		}
@@ -109,7 +111,7 @@ public class PresentationParty1Code extends PresentationPartyCode {
 	 */
 	public static final MMCode mmExclusiveConfirmer = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExclusiveConfirmer";
 			owner_lazy = () -> PresentationParty1Code.mmObject();
 		}
@@ -132,7 +134,7 @@ public class PresentationParty1Code extends PresentationPartyCode {
 	 */
 	public static final MMCode mmExclusiveIssuer = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExclusiveIssuer";
 			owner_lazy = () -> PresentationParty1Code.mmObject();
 		}
@@ -141,13 +143,12 @@ public class PresentationParty1Code extends PresentationPartyCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ETHR");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PresentationParty1Code";
 				definition = "Specifies the party to receive the presentation.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PresentationParty1Code.mmIssuerOrOtherNominatatedParty, com.tools20022.repository.codeset.PresentationParty1Code.mmExclusiveConfirmer,
-						com.tools20022.repository.codeset.PresentationParty1Code.mmExclusiveIssuer);
+				code_lazy = () -> Arrays.asList(PresentationParty1Code.mmIssuerOrOtherNominatatedParty, PresentationParty1Code.mmExclusiveConfirmer, PresentationParty1Code.mmExclusiveIssuer);
 				trace_lazy = () -> PresentationPartyCode.mmObject();
 			}
 		});

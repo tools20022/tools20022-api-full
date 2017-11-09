@@ -20,9 +20,14 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.sese.*;
 import com.tools20022.repository.choice.DateAndDateTimeChoice;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.BasicSecuritiesRegistration;
+import com.tools20022.repository.entity.RegistrarRole;
+import com.tools20022.repository.entity.SecuritiesCertificate;
+import com.tools20022.repository.GeneratedRepository;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -208,14 +213,14 @@ public class RegistrationParameters1 {
 	 */
 	public static final MMMessageAttribute mmCertificationIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BasicSecuritiesRegistration.mmCertificationIdentification;
+			businessElementTrace_lazy = () -> BasicSecuritiesRegistration.mmCertificationIdentification;
 			componentContext_lazy = () -> RegistrationParameters1.mmObject();
 			isDerived = false;
 			xmlTag = "CertfctnId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CertificationIdentification";
 			definition = "Identification assigned to a deposit.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RegistrationParameters4.mmCertificationIdentification);
+			nextVersions_lazy = () -> Arrays.asList(RegistrationParameters4.mmCertificationIdentification);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -268,14 +273,14 @@ public class RegistrationParameters1 {
 	 */
 	public static final MMMessageAttribute mmCertificationDateTime = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BasicSecuritiesRegistration.mmCertificationDate;
+			businessElementTrace_lazy = () -> BasicSecuritiesRegistration.mmCertificationDate;
 			componentContext_lazy = () -> RegistrationParameters1.mmObject();
 			isDerived = false;
 			xmlTag = "CertfctnDtTm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CertificationDateTime";
 			definition = "Date/time at which the certificates in the deposit were validated by the agent.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RegistrationParameters4.mmCertificationDateTime);
+			nextVersions_lazy = () -> Arrays.asList(RegistrationParameters4.mmCertificationDateTime);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
@@ -325,14 +330,14 @@ public class RegistrationParameters1 {
 	 */
 	public static final MMMessageAttribute mmRegistrarAccount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.RegistrarRole.mmRegistrarAccount;
+			businessElementTrace_lazy = () -> RegistrarRole.mmRegistrarAccount;
 			componentContext_lazy = () -> RegistrationParameters1.mmObject();
 			isDerived = false;
 			xmlTag = "RegarAcct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RegistrarAccount";
 			definition = "Account at the registrar where financial instruments are registered.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RegistrationParameters4.mmRegistrarAccount);
+			nextVersions_lazy = () -> Arrays.asList(RegistrationParameters4.mmRegistrarAccount);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -383,14 +388,14 @@ public class RegistrationParameters1 {
 	 */
 	public static final MMMessageAssociationEnd mmCertificateNumber = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesCertificate.mmNumber;
+			businessElementTrace_lazy = () -> SecuritiesCertificate.mmNumber;
 			componentContext_lazy = () -> RegistrationParameters1.mmObject();
 			isDerived = false;
 			xmlTag = "CertNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CertificateNumber";
 			definition = "Unique and unambiguous identifier of a certificate assigned by the issuer.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RegistrationParameters4.mmCertificateNumber);
+			nextVersions_lazy = () -> Arrays.asList(RegistrationParameters4.mmCertificateNumber);
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.SecuritiesCertificate1.mmObject();
@@ -400,30 +405,21 @@ public class RegistrationParameters1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RegistrationParameters1.mmCertificationIdentification, com.tools20022.repository.msg.RegistrationParameters1.mmCertificationDateTime,
-						com.tools20022.repository.msg.RegistrationParameters1.mmRegistrarAccount, com.tools20022.repository.msg.RegistrationParameters1.mmCertificateNumber);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesSettlementTransactionConfirmationV01.mmAdditionalPhysicalOrRegistrationDetails,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionConfirmationV02.mmAdditionalPhysicalOrRegistrationDetails,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionConfirmationV03.mmAdditionalPhysicalOrRegistrationDetails,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionConfirmationV04.mmAdditionalPhysicalOrRegistrationDetails,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV01.mmAdditionalPhysicalOrRegistrationDetails,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV02.mmAdditionalPhysicalOrRegistrationDetails,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV03.mmAdditionalPhysicalOrRegistrationDetails,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV04.mmAdditionalPhysicalOrRegistrationDetails,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionInstructionV01.mmAdditionalPhysicalOrRegistrationDetails,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionInstructionV02.mmAdditionalPhysicalOrRegistrationDetails,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionInstructionV03.mmAdditionalPhysicalOrRegistrationDetails,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionInstructionV04.mmAdditionalPhysicalOrRegistrationDetails,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdviceV01.mmAdditionalPhysicalOrRegistrationDetails,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdviceV02.mmAdditionalPhysicalOrRegistrationDetails,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdviceV03.mmAdditionalPhysicalOrRegistrationDetails,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV05.mmAdditionalPhysicalOrRegistrationDetails,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdviceV04.mmAdditionalPhysicalOrRegistrationDetails,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionInstructionV05.mmAdditionalPhysicalOrRegistrationDetails,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionConfirmationV05.mmAdditionalPhysicalOrRegistrationDetails);
+				messageElement_lazy = () -> Arrays.asList(RegistrationParameters1.mmCertificationIdentification, RegistrationParameters1.mmCertificationDateTime, RegistrationParameters1.mmRegistrarAccount,
+						RegistrationParameters1.mmCertificateNumber);
+				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesSettlementTransactionConfirmationV01.mmAdditionalPhysicalOrRegistrationDetails,
+						SecuritiesSettlementTransactionConfirmationV02.mmAdditionalPhysicalOrRegistrationDetails, SecuritiesSettlementTransactionConfirmationV03.mmAdditionalPhysicalOrRegistrationDetails,
+						SecuritiesSettlementTransactionConfirmationV04.mmAdditionalPhysicalOrRegistrationDetails, SecuritiesSettlementTransactionGenerationNotificationV01.mmAdditionalPhysicalOrRegistrationDetails,
+						SecuritiesSettlementTransactionGenerationNotificationV02.mmAdditionalPhysicalOrRegistrationDetails, SecuritiesSettlementTransactionGenerationNotificationV03.mmAdditionalPhysicalOrRegistrationDetails,
+						SecuritiesSettlementTransactionGenerationNotificationV04.mmAdditionalPhysicalOrRegistrationDetails, SecuritiesSettlementTransactionInstructionV01.mmAdditionalPhysicalOrRegistrationDetails,
+						SecuritiesSettlementTransactionInstructionV02.mmAdditionalPhysicalOrRegistrationDetails, SecuritiesSettlementTransactionInstructionV03.mmAdditionalPhysicalOrRegistrationDetails,
+						SecuritiesSettlementTransactionInstructionV04.mmAdditionalPhysicalOrRegistrationDetails, SecuritiesSettlementTransactionReversalAdviceV01.mmAdditionalPhysicalOrRegistrationDetails,
+						SecuritiesSettlementTransactionReversalAdviceV02.mmAdditionalPhysicalOrRegistrationDetails, SecuritiesSettlementTransactionReversalAdviceV03.mmAdditionalPhysicalOrRegistrationDetails,
+						SecuritiesSettlementTransactionGenerationNotificationV05.mmAdditionalPhysicalOrRegistrationDetails, SecuritiesSettlementTransactionReversalAdviceV04.mmAdditionalPhysicalOrRegistrationDetails,
+						SecuritiesSettlementTransactionInstructionV05.mmAdditionalPhysicalOrRegistrationDetails, SecuritiesSettlementTransactionConfirmationV05.mmAdditionalPhysicalOrRegistrationDetails);
 				trace_lazy = () -> BasicSecuritiesRegistration.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
 						return DateFormat.getDateInstance(java.text.DateFormat.LONG).parse("May 5, 2016");

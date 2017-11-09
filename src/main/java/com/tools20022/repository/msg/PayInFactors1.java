@@ -19,8 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.camt.PayInScheduleV03;
 import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
 import com.tools20022.repository.entity.CashEntry;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -107,7 +110,7 @@ public class PayInFactors1 {
 			componentContext_lazy = () -> PayInFactors1.mmObject();
 			isDerived = false;
 			xmlTag = "AggtShrtPosLmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AggregateShortPositionLimit";
 			definition = "Maximum allowed sum of short positions in all currencies, converted to base currency, during settlement.";
 			maxOccurs = 1;
@@ -148,7 +151,7 @@ public class PayInFactors1 {
 			componentContext_lazy = () -> PayInFactors1.mmObject();
 			isDerived = false;
 			xmlTag = "CcyFctrs";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrencyFactors";
 			definition = "Currency specific pay-in factors.";
 			minOccurs = 1;
@@ -159,11 +162,11 @@ public class PayInFactors1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PayInFactors1.mmAggregateShortPositionLimit, com.tools20022.repository.msg.PayInFactors1.mmCurrencyFactors);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.PayInScheduleV03.mmPayInFactors);
+				messageElement_lazy = () -> Arrays.asList(PayInFactors1.mmAggregateShortPositionLimit, PayInFactors1.mmCurrencyFactors);
+				messageBuildingBlock_lazy = () -> Arrays.asList(PayInScheduleV03.mmPayInFactors);
 				trace_lazy = () -> CashEntry.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PayInFactors1";
 				definition = "Factors used in the calculation of the pay in schedule.";
 			}

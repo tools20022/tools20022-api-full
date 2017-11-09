@@ -17,12 +17,11 @@
 
 package com.tools20022.repository.entity;
 
-import com.tools20022.metamodel.MMBusinessAssociationEnd;
-import com.tools20022.metamodel.MMBusinessAttribute;
-import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.*;
 import com.tools20022.repository.codeset.SettlementDateCode;
 import com.tools20022.repository.datatype.CurrencyAndAmount;
 import com.tools20022.repository.entity.ListTrading;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.DisclosedBid1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -40,6 +39,25 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.DisclosedBid1 DisclosedBid1}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesAccount#mmDisclosedListTrading
+ * SecuritiesAccount.mmDisclosedListTrading}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.ListTrading
+ * ListTrading}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -55,25 +73,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.entity.DisclosedListTrading#mmRequestedSettlementDateCode
  * DisclosedListTrading.mmRequestedSettlementDateCode}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesAccount#mmDisclosedListTrading
- * SecuritiesAccount.mmDisclosedListTrading}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.ListTrading
- * ListTrading}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.DisclosedBid1 DisclosedBid1}</li>
  * </ul>
  * </li>
  * <li>
@@ -137,13 +136,13 @@ public class DisclosedListTrading extends ListTrading {
 		{
 			elementContext_lazy = () -> DisclosedListTrading.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DisclosedListTradingAccount";
 			definition = "Securities account used for the trade of a disclosed list of securities, eg, in basket or program trading.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesAccount.mmDisclosedListTrading;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SecuritiesAccount.mmObject();
 		}
 	};
@@ -181,7 +180,7 @@ public class DisclosedListTrading extends ListTrading {
 		{
 			elementContext_lazy = () -> DisclosedListTrading.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BuyAmount";
 			definition = "Total trade value for which a party is willing to purchase financial instruments.";
 			maxOccurs = 1;
@@ -223,7 +222,7 @@ public class DisclosedListTrading extends ListTrading {
 		{
 			elementContext_lazy = () -> DisclosedListTrading.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SellAmount";
 			definition = "Total trade value for which a party is willing to sell financial instruments.";
 			maxOccurs = 1;
@@ -263,7 +262,7 @@ public class DisclosedListTrading extends ListTrading {
 		{
 			elementContext_lazy = () -> DisclosedListTrading.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RequestedSettlementDateCode";
 			definition = "Requested date of trade settlement in coded form (eg, trade date +1).";
 			maxOccurs = 1;
@@ -275,14 +274,13 @@ public class DisclosedListTrading extends ListTrading {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DisclosedListTrading";
 				definition = "List trading by which the buy-side details the exact stocks and sizes to be traded and the sell-side offers the buy-side a two-way price, to buy or to sell the indicated stocks. All sell-side firms see all of the stocks and quantities in the portfolio during the bidding phase regardless of whether or not they win the business.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesAccount.mmDisclosedListTrading);
 				superType_lazy = () -> ListTrading.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.DisclosedListTrading.mmDisclosedListTradingAccount, com.tools20022.repository.entity.DisclosedListTrading.mmBuyAmount,
-						com.tools20022.repository.entity.DisclosedListTrading.mmSellAmount, com.tools20022.repository.entity.DisclosedListTrading.mmRequestedSettlementDateCode);
+				element_lazy = () -> Arrays.asList(DisclosedListTrading.mmDisclosedListTradingAccount, DisclosedListTrading.mmBuyAmount, DisclosedListTrading.mmSellAmount, DisclosedListTrading.mmRequestedSettlementDateCode);
 				derivationComponent_lazy = () -> Arrays.asList(DisclosedBid1.mmObject());
 			}
 		});

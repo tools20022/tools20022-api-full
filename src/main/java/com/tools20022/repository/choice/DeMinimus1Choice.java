@@ -19,7 +19,9 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.Investor;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.DeMinimusApplicable1;
 import com.tools20022.repository.msg.DeMinimusNotApplicable1;
 import java.util.Arrays;
@@ -99,11 +101,11 @@ public class DeMinimus1Choice {
 	 */
 	public static final MMMessageAssociationEnd mmDeMinimusApplicable = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Investor.mmDeMinimusApplicable;
+			businessElementTrace_lazy = () -> Investor.mmDeMinimusApplicable;
 			componentContext_lazy = () -> DeMinimus1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "DeMnmsAplbl";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeMinimusApplicable";
 			definition = "Conditions applicable when the investor is covered by the \"de minimis\" exemption.";
 			maxOccurs = 1;
@@ -150,11 +152,11 @@ public class DeMinimus1Choice {
 	 */
 	public static final MMMessageAssociationEnd mmDeMinimusNotApplicable = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Investor.mmDeMinimusApplicable;
+			businessElementTrace_lazy = () -> Investor.mmDeMinimusApplicable;
 			componentContext_lazy = () -> DeMinimus1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "DeMnmsNotAplbl";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeMinimusNotApplicable";
 			definition = "Conditions applicable when the investor is not covered by the \"de minimis\" exemption.";
 			maxOccurs = 1;
@@ -167,10 +169,10 @@ public class DeMinimus1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.DeMinimus1Choice.mmDeMinimusApplicable, com.tools20022.repository.choice.DeMinimus1Choice.mmDeMinimusNotApplicable);
+				messageElement_lazy = () -> Arrays.asList(DeMinimus1Choice.mmDeMinimusApplicable, DeMinimus1Choice.mmDeMinimusNotApplicable);
 				trace_lazy = () -> Investor.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DeMinimus1Choice";
 				definition = "De minimus applicability conditions.";
 			}

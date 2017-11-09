@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.SecuritiesSettlementStatusCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -83,7 +85,7 @@ public class SecuritiesSettlementStatus1Code extends SecuritiesSettlementStatusC
 	 */
 	public static final MMCode mmPending = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Pending";
 			owner_lazy = () -> SecuritiesSettlementStatus1Code.mmObject();
 		}
@@ -106,7 +108,7 @@ public class SecuritiesSettlementStatus1Code extends SecuritiesSettlementStatusC
 	 */
 	public static final MMCode mmFailing = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Failing";
 			owner_lazy = () -> SecuritiesSettlementStatus1Code.mmObject();
 		}
@@ -115,12 +117,12 @@ public class SecuritiesSettlementStatus1Code extends SecuritiesSettlementStatusC
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("PEND");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesSettlementStatus1Code";
 				definition = "Provides the status of settlement of an instruction.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SecuritiesSettlementStatus1Code.mmPending, com.tools20022.repository.codeset.SecuritiesSettlementStatus1Code.mmFailing);
+				code_lazy = () -> Arrays.asList(SecuritiesSettlementStatus1Code.mmPending, SecuritiesSettlementStatus1Code.mmFailing);
 				trace_lazy = () -> SecuritiesSettlementStatusCode.mmObject();
 			}
 		});

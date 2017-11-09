@@ -19,9 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.entity.InvestmentFundClass;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -114,14 +116,14 @@ public class HoldBackInformation1 {
 	 */
 	public static final MMMessageAttribute mmHoldBackAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmHoldBackAmount;
+			businessElementTrace_lazy = () -> InvestmentFundClass.mmHoldBackAmount;
 			componentContext_lazy = () -> HoldBackInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "HldBckAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HoldBackAmount";
 			definition = "Value of the redemption amount subject to hold back.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.HoldBackInformation2.mmAmount);
+			nextVersions_lazy = () -> Arrays.asList(HoldBackInformation2.mmAmount);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
@@ -170,14 +172,14 @@ public class HoldBackInformation1 {
 	 */
 	public static final MMMessageAttribute mmHoldBackReleaseDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmHoldBackReleaseDate;
+			businessElementTrace_lazy = () -> InvestmentFundClass.mmHoldBackReleaseDate;
 			componentContext_lazy = () -> HoldBackInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "HldBckRlsDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HoldBackReleaseDate";
 			definition = "Date on which the hold back amount is to be released.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.HoldBackInformation2.mmExpectedReleaseDate);
+			nextVersions_lazy = () -> Arrays.asList(HoldBackInformation2.mmExpectedReleaseDate);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
@@ -187,10 +189,10 @@ public class HoldBackInformation1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.HoldBackInformation1.mmHoldBackAmount, com.tools20022.repository.msg.HoldBackInformation1.mmHoldBackReleaseDate);
+				messageElement_lazy = () -> Arrays.asList(HoldBackInformation1.mmHoldBackAmount, HoldBackInformation1.mmHoldBackReleaseDate);
 				trace_lazy = () -> InvestmentFundClass.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "HoldBackInformation1";
 				definition = "Information about hold back.";
 				nextVersions_lazy = () -> Arrays.asList(HoldBackInformation2.mmObject());

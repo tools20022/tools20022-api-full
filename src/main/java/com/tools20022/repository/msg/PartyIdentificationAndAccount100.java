@@ -20,10 +20,12 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.PartyIdentification83Choice;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.PartyIdentificationInformation;
 import com.tools20022.repository.entity.SecuritiesAccount;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -124,10 +126,10 @@ public class PartyIdentificationAndAccount100 {
 			componentContext_lazy = () -> PartyIdentificationAndAccount100.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Identification of the party.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount77.mmIdentification;
+			previousVersion_lazy = () -> PartyIdentificationAndAccount77.mmIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> PartyIdentification83Choice.mmObject();
@@ -177,10 +179,10 @@ public class PartyIdentificationAndAccount100 {
 			componentContext_lazy = () -> PartyIdentificationAndAccount100.mmObject();
 			isDerived = false;
 			xmlTag = "AltrnId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AlternateIdentification";
 			definition = "Alternate identification for a party.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount77.mmAlternateIdentification;
+			previousVersion_lazy = () -> PartyIdentificationAndAccount77.mmAlternateIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -231,10 +233,10 @@ public class PartyIdentificationAndAccount100 {
 			componentContext_lazy = () -> PartyIdentificationAndAccount100.mmObject();
 			isDerived = false;
 			xmlTag = "SfkpgAcct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingAccount";
 			definition = "Account to or from which a securities entry is made.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount77.mmSafekeepingAccount;
+			previousVersion_lazy = () -> PartyIdentificationAndAccount77.mmSafekeepingAccount;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -280,10 +282,10 @@ public class PartyIdentificationAndAccount100 {
 			componentContext_lazy = () -> PartyIdentificationAndAccount100.mmObject();
 			isDerived = false;
 			xmlTag = "PrcgId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProcessingIdentification";
 			definition = "Unambiguous identification of the transaction for the party identified.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount77.mmProcessingIdentification;
+			previousVersion_lazy = () -> PartyIdentificationAndAccount77.mmProcessingIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -332,10 +334,10 @@ public class PartyIdentificationAndAccount100 {
 			componentContext_lazy = () -> PartyIdentificationAndAccount100.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInformation";
 			definition = "Provides additional information regarding the party,";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount77.mmAdditionalInformation;
+			previousVersion_lazy = () -> PartyIdentificationAndAccount77.mmAdditionalInformation;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -346,12 +348,11 @@ public class PartyIdentificationAndAccount100 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyIdentificationAndAccount100.mmIdentification, com.tools20022.repository.msg.PartyIdentificationAndAccount100.mmAlternateIdentification,
-						com.tools20022.repository.msg.PartyIdentificationAndAccount100.mmSafekeepingAccount, com.tools20022.repository.msg.PartyIdentificationAndAccount100.mmProcessingIdentification,
-						com.tools20022.repository.msg.PartyIdentificationAndAccount100.mmAdditionalInformation);
+				messageElement_lazy = () -> Arrays.asList(PartyIdentificationAndAccount100.mmIdentification, PartyIdentificationAndAccount100.mmAlternateIdentification, PartyIdentificationAndAccount100.mmSafekeepingAccount,
+						PartyIdentificationAndAccount100.mmProcessingIdentification, PartyIdentificationAndAccount100.mmAdditionalInformation);
 				trace_lazy = () -> PartyIdentificationInformation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PartyIdentificationAndAccount100";
 				definition = "Party and account details.";
 				previousVersion_lazy = () -> PartyIdentificationAndAccount77.mmObject();

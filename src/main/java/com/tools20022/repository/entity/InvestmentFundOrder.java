@@ -17,9 +17,7 @@
 
 package com.tools20022.repository.entity;
 
-import com.tools20022.metamodel.MMBusinessAssociationEnd;
-import com.tools20022.metamodel.MMBusinessAttribute;
-import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.*;
 import com.tools20022.repository.choice.*;
 import com.tools20022.repository.codeset.*;
 import com.tools20022.repository.datatype.CurrencyAndAmount;
@@ -27,6 +25,7 @@ import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.PercentageRate;
 import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.SecuritiesOrder;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -42,116 +41,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InvestmentFundOrder#mmGrossAmountIndicator
- * InvestmentFundOrder.mmGrossAmountIndicator}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InvestmentFundOrder#mmRelatedTransaction
- * InvestmentFundOrder.mmRelatedTransaction}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InvestmentFundOrder#mmOrderType
- * InvestmentFundOrder.mmOrderType}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InvestmentFundOrder#mmGrossAmount
- * InvestmentFundOrder.mmGrossAmount}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InvestmentFundOrder#mmUnitsNumber
- * InvestmentFundOrder.mmUnitsNumber}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InvestmentFundOrder#mmInvestmentFundOrderExecution
- * InvestmentFundOrder.mmInvestmentFundOrderExecution}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InvestmentFundOrder#mmNetAmount
- * InvestmentFundOrder.mmNetAmount}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InvestmentFundOrder#mmOrderDateTime
- * InvestmentFundOrder.mmOrderDateTime}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InvestmentFundOrder#mmExpiryDateTime
- * InvestmentFundOrder.mmExpiryDateTime}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InvestmentFundOrder#mmCancellationRight
- * InvestmentFundOrder.mmCancellationRight}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InvestmentFundOrder#mmRequestedSettlementCurrency
- * InvestmentFundOrder.mmRequestedSettlementCurrency}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InvestmentFundOrder#mmRequestedExecutionDateTime
- * InvestmentFundOrder.mmRequestedExecutionDateTime}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InvestmentFundOrder#mmFinancialAdvice
- * InvestmentFundOrder.mmFinancialAdvice}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InvestmentFundOrder#mmNegotiatedTrade
- * InvestmentFundOrder.mmNegotiatedTrade}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InvestmentFundOrder#mmHoldingsRate
- * InvestmentFundOrder.mmHoldingsRate}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InvestmentFundOrder#mmOrderWaiverReason
- * InvestmentFundOrder.mmOrderWaiverReason}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InvestmentFundOrder#mmInitialOrderIndicator
- * InvestmentFundOrder.mmInitialOrderIndicator}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InvestmentFundOrder#mmOrderBookingDate
- * InvestmentFundOrder.mmOrderBookingDate}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InvestmentFundOrder#mmInvestmentPlan
- * InvestmentFundOrder.mmInvestmentPlan}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InvestmentFundOrder#mmOrderStatus
- * InvestmentFundOrder.mmOrderStatus}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InvestmentFundOrder#mmTotalAmount
- * InvestmentFundOrder.mmTotalAmount}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
- * subType} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.RedemptionOrder
- * RedemptionOrder}</li>
- * <li>{@linkplain com.tools20022.repository.entity.SwitchOrder SwitchOrder}</li>
- * <li>{@linkplain com.tools20022.repository.entity.SubscriptionOrder
- * SubscriptionOrder}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InvestmentPlan#mmStandingOrder
- * InvestmentPlan.mmStandingOrder}</li>
- * <li>{@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmOrder
- * SecuritiesQuantity.mmOrder}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InvestmentFundTransaction#mmInvestmentFundOrder
- * InvestmentFundTransaction.mmInvestmentFundOrder}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InvestmentFundOrderExecution#mmOrder
- * InvestmentFundOrderExecution.mmOrder}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesOrderStatus#mmInvestmentFundOrder
- * SecuritiesOrderStatus.mmInvestmentFundOrder}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
- * derivationElement} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msg.BlockedStatusReason2#mmTransactionType
- * BlockedStatusReason2.mmTransactionType}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.SecuritiesOrder
- * SecuritiesOrder}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -275,6 +164,116 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InvestmentPlan#mmStandingOrder
+ * InvestmentPlan.mmStandingOrder}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmOrder
+ * SecuritiesQuantity.mmOrder}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InvestmentFundTransaction#mmInvestmentFundOrder
+ * InvestmentFundTransaction.mmInvestmentFundOrder}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InvestmentFundOrderExecution#mmOrder
+ * InvestmentFundOrderExecution.mmOrder}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesOrderStatus#mmInvestmentFundOrder
+ * SecuritiesOrderStatus.mmInvestmentFundOrder}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
+ * derivationElement} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.BlockedStatusReason2#mmTransactionType
+ * BlockedStatusReason2.mmTransactionType}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.SecuritiesOrder
+ * SecuritiesOrder}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
+ * subType} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.RedemptionOrder
+ * RedemptionOrder}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.SwitchOrder SwitchOrder}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.SubscriptionOrder
+ * SubscriptionOrder}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InvestmentFundOrder#mmGrossAmountIndicator
+ * InvestmentFundOrder.mmGrossAmountIndicator}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InvestmentFundOrder#mmRelatedTransaction
+ * InvestmentFundOrder.mmRelatedTransaction}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InvestmentFundOrder#mmOrderType
+ * InvestmentFundOrder.mmOrderType}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InvestmentFundOrder#mmGrossAmount
+ * InvestmentFundOrder.mmGrossAmount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InvestmentFundOrder#mmUnitsNumber
+ * InvestmentFundOrder.mmUnitsNumber}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InvestmentFundOrder#mmInvestmentFundOrderExecution
+ * InvestmentFundOrder.mmInvestmentFundOrderExecution}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InvestmentFundOrder#mmNetAmount
+ * InvestmentFundOrder.mmNetAmount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InvestmentFundOrder#mmOrderDateTime
+ * InvestmentFundOrder.mmOrderDateTime}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InvestmentFundOrder#mmExpiryDateTime
+ * InvestmentFundOrder.mmExpiryDateTime}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InvestmentFundOrder#mmCancellationRight
+ * InvestmentFundOrder.mmCancellationRight}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InvestmentFundOrder#mmRequestedSettlementCurrency
+ * InvestmentFundOrder.mmRequestedSettlementCurrency}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InvestmentFundOrder#mmRequestedExecutionDateTime
+ * InvestmentFundOrder.mmRequestedExecutionDateTime}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InvestmentFundOrder#mmFinancialAdvice
+ * InvestmentFundOrder.mmFinancialAdvice}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InvestmentFundOrder#mmNegotiatedTrade
+ * InvestmentFundOrder.mmNegotiatedTrade}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InvestmentFundOrder#mmHoldingsRate
+ * InvestmentFundOrder.mmHoldingsRate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InvestmentFundOrder#mmOrderWaiverReason
+ * InvestmentFundOrder.mmOrderWaiverReason}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InvestmentFundOrder#mmInitialOrderIndicator
+ * InvestmentFundOrder.mmInitialOrderIndicator}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InvestmentFundOrder#mmOrderBookingDate
+ * InvestmentFundOrder.mmOrderBookingDate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InvestmentFundOrder#mmInvestmentPlan
+ * InvestmentFundOrder.mmInvestmentPlan}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InvestmentFundOrder#mmOrderStatus
+ * InvestmentFundOrder.mmOrderStatus}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InvestmentFundOrder#mmTotalAmount
+ * InvestmentFundOrder.mmTotalAmount}</li>
+ * </ul>
+ * </li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
@@ -375,14 +374,12 @@ public class InvestmentFundOrder extends SecuritiesOrder {
 	 */
 	public static final MMBusinessAttribute mmGrossAmountIndicator = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentPlan2.mmGrossAmountIndicator, com.tools20022.repository.msg.InvestmentPlan4.mmGrossAmountIndicator,
-					com.tools20022.repository.msg.InvestmentPlan6.mmGrossAmountIndicator, com.tools20022.repository.msg.InvestmentPlan5.mmGrossAmountIndicator, com.tools20022.repository.msg.InvestmentPlan3.mmGrossAmountIndicator,
-					com.tools20022.repository.msg.InvestmentPlan7.mmGrossAmountIndicator, com.tools20022.repository.msg.InvestmentPlan9.mmGrossAmountIndicator, com.tools20022.repository.msg.InvestmentPlan8.mmGrossAmountIndicator,
-					com.tools20022.repository.msg.InvestmentPlan10.mmGrossAmountIndicator, com.tools20022.repository.msg.InvestmentPlan11.mmGrossAmountIndicator, com.tools20022.repository.msg.InvestmentPlan12.mmGrossAmountIndicator,
-					com.tools20022.repository.msg.InvestmentPlan13.mmGrossAmountIndicator, com.tools20022.repository.msg.InvestmentPlan14.mmGrossAmountIndicator, com.tools20022.repository.msg.InvestmentPlan15.mmGrossAmountIndicator);
+			derivation_lazy = () -> Arrays.asList(InvestmentPlan2.mmGrossAmountIndicator, InvestmentPlan4.mmGrossAmountIndicator, InvestmentPlan6.mmGrossAmountIndicator, InvestmentPlan5.mmGrossAmountIndicator,
+					InvestmentPlan3.mmGrossAmountIndicator, InvestmentPlan7.mmGrossAmountIndicator, InvestmentPlan9.mmGrossAmountIndicator, InvestmentPlan8.mmGrossAmountIndicator, InvestmentPlan10.mmGrossAmountIndicator,
+					InvestmentPlan11.mmGrossAmountIndicator, InvestmentPlan12.mmGrossAmountIndicator, InvestmentPlan13.mmGrossAmountIndicator, InvestmentPlan14.mmGrossAmountIndicator, InvestmentPlan15.mmGrossAmountIndicator);
 			elementContext_lazy = () -> InvestmentFundOrder.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "GrossAmountIndicator";
 			definition = "Indicates whether an ordered amount is a gross amount (including all charges, commissions, tax). If it is not a gross amount, the ordered amount is a net amount (amount to be invested or redeemed from the fund to which other elements will be added).";
 			maxOccurs = 1;
@@ -439,16 +436,16 @@ public class InvestmentFundOrder extends SecuritiesOrder {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedTransaction = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IndividualOrderStatusAndReason1.mmInvestmentAccountOrFinancialInstrument, com.tools20022.repository.msg.InvestmentFundOrder6.mmOrderDetails);
+			derivation_lazy = () -> Arrays.asList(IndividualOrderStatusAndReason1.mmInvestmentAccountOrFinancialInstrument, InvestmentFundOrder6.mmOrderDetails);
 			elementContext_lazy = () -> InvestmentFundOrder.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedTransaction";
 			definition = "Transaction which is the source of the order.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.InvestmentFundTransaction.mmInvestmentFundOrder;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.InvestmentFundTransaction.mmObject();
 		}
 	};
@@ -636,27 +633,19 @@ public class InvestmentFundOrder extends SecuritiesOrder {
 	 */
 	public static final MMBusinessAttribute mmOrderType = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.FundOrderType1Choice.mmType, com.tools20022.repository.choice.FundOrderType1Choice.mmProprietary,
-					com.tools20022.repository.msg.RedemptionOrder3.mmOrderType, com.tools20022.repository.msg.FundOrderType2.mmOrderType, com.tools20022.repository.msg.FundOrderType2.mmExtendedOrderType,
-					com.tools20022.repository.msg.InvestmentFundsOrderBreakdown1.mmOrderBreakdownType, com.tools20022.repository.msg.InvestmentFundsOrderBreakdown1.mmExtendedOrderBreakdownType,
-					com.tools20022.repository.msg.RedemptionOrder5.mmOrderType, com.tools20022.repository.msg.RedemptionExecution3.mmOrderType, com.tools20022.repository.msg.FundOrderType3.mmOrderType,
-					com.tools20022.repository.msg.FundOrderType3.mmExtendedOrderType, com.tools20022.repository.msg.RedemptionExecution5.mmOrderType, com.tools20022.repository.msg.RedemptionOrder7.mmOrderType,
-					com.tools20022.repository.msg.RedemptionOrder4.mmOrderType, com.tools20022.repository.msg.RedemptionOrder6.mmOrderType, com.tools20022.repository.msg.RedemptionExecution4.mmOrderType,
-					com.tools20022.repository.msg.RedemptionExecution6.mmOrderType, com.tools20022.repository.msg.RedemptionOrder8.mmOrderType, com.tools20022.repository.msg.SubscriptionOrder3.mmOrderType,
-					com.tools20022.repository.msg.SubscriptionOrder5.mmOrderType, com.tools20022.repository.msg.SubscriptionExecution3.mmOrderType, com.tools20022.repository.msg.SubscriptionExecution5.mmOrderType,
-					com.tools20022.repository.msg.SubscriptionOrder7.mmOrderType, com.tools20022.repository.msg.SubscriptionOrder4.mmOrderType, com.tools20022.repository.msg.SubscriptionOrder6.mmOrderType,
-					com.tools20022.repository.msg.SubscriptionExecution4.mmOrderType, com.tools20022.repository.msg.SubscriptionExecution6.mmOrderType, com.tools20022.repository.msg.SubscriptionOrder8.mmOrderType,
-					com.tools20022.repository.msg.RedemptionExecution10.mmHedgeFundOrderType, com.tools20022.repository.msg.RedemptionOrder9.mmHedgeFundOrderType, com.tools20022.repository.msg.SubscriptionExecution7.mmHedgeFundOrderType,
-					com.tools20022.repository.msg.SubscriptionOrder9.mmHedgeFundOrderType, com.tools20022.repository.msg.InvestmentFundOrderExecution3.mmConfirmationType, com.tools20022.repository.msg.InvestmentFundOrder6.mmOrderType,
-					com.tools20022.repository.choice.OrderType2Choice.mmType, com.tools20022.repository.choice.OrderType2Choice.mmProprietary, com.tools20022.repository.choice.OrderBreakdownType1Choice.mmCode,
-					com.tools20022.repository.choice.OrderBreakdownType1Choice.mmProprietary, com.tools20022.repository.msg.RedemptionOrder14.mmOrderType, com.tools20022.repository.choice.TransactionType5Choice.mmCode,
-					com.tools20022.repository.choice.TransactionType5Choice.mmProprietary, com.tools20022.repository.choice.FundOrderType4Choice.mmCode, com.tools20022.repository.choice.FundOrderType4Choice.mmProprietary,
-					com.tools20022.repository.msg.SubscriptionExecution13.mmOrderType, com.tools20022.repository.msg.InvestmentFundsOrderBreakdown2.mmOrderBreakdownType, com.tools20022.repository.msg.SubscriptionExecution12.mmOrderType,
-					com.tools20022.repository.msg.SubscriptionOrder15.mmOrderType, com.tools20022.repository.msg.RedemptionOrder15.mmOrderType, com.tools20022.repository.msg.RedemptionExecution16.mmOrderType,
-					com.tools20022.repository.msg.SubscriptionOrder14.mmOrderType, com.tools20022.repository.msg.RedemptionExecution15.mmOrderType);
+			derivation_lazy = () -> Arrays.asList(FundOrderType1Choice.mmType, FundOrderType1Choice.mmProprietary, RedemptionOrder3.mmOrderType, FundOrderType2.mmOrderType, FundOrderType2.mmExtendedOrderType,
+					InvestmentFundsOrderBreakdown1.mmOrderBreakdownType, InvestmentFundsOrderBreakdown1.mmExtendedOrderBreakdownType, RedemptionOrder5.mmOrderType, RedemptionExecution3.mmOrderType, FundOrderType3.mmOrderType,
+					FundOrderType3.mmExtendedOrderType, RedemptionExecution5.mmOrderType, RedemptionOrder7.mmOrderType, RedemptionOrder4.mmOrderType, RedemptionOrder6.mmOrderType, RedemptionExecution4.mmOrderType,
+					RedemptionExecution6.mmOrderType, RedemptionOrder8.mmOrderType, SubscriptionOrder3.mmOrderType, SubscriptionOrder5.mmOrderType, SubscriptionExecution3.mmOrderType, SubscriptionExecution5.mmOrderType,
+					SubscriptionOrder7.mmOrderType, SubscriptionOrder4.mmOrderType, SubscriptionOrder6.mmOrderType, SubscriptionExecution4.mmOrderType, SubscriptionExecution6.mmOrderType, SubscriptionOrder8.mmOrderType,
+					RedemptionExecution10.mmHedgeFundOrderType, RedemptionOrder9.mmHedgeFundOrderType, SubscriptionExecution7.mmHedgeFundOrderType, SubscriptionOrder9.mmHedgeFundOrderType, InvestmentFundOrderExecution3.mmConfirmationType,
+					InvestmentFundOrder6.mmOrderType, OrderType2Choice.mmType, OrderType2Choice.mmProprietary, OrderBreakdownType1Choice.mmCode, OrderBreakdownType1Choice.mmProprietary, RedemptionOrder14.mmOrderType,
+					TransactionType5Choice.mmCode, TransactionType5Choice.mmProprietary, FundOrderType4Choice.mmCode, FundOrderType4Choice.mmProprietary, SubscriptionExecution13.mmOrderType,
+					InvestmentFundsOrderBreakdown2.mmOrderBreakdownType, SubscriptionExecution12.mmOrderType, SubscriptionOrder15.mmOrderType, RedemptionOrder15.mmOrderType, RedemptionExecution16.mmOrderType,
+					SubscriptionOrder14.mmOrderType, RedemptionExecution15.mmOrderType);
 			elementContext_lazy = () -> InvestmentFundOrder.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "OrderType";
 			definition = "Specifies the category of the investment fund order.";
 			maxOccurs = 1;
@@ -853,30 +842,20 @@ public class InvestmentFundOrder extends SecuritiesOrder {
 	 */
 	public static final MMBusinessAttribute mmGrossAmount = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FundOrderData1.mmGrossAmount, com.tools20022.repository.msg.RedemptionOrder3.mmGrossAmount, com.tools20022.repository.msg.RedemptionOrder5.mmGrossAmount,
-					com.tools20022.repository.msg.RedemptionExecution3.mmGrossAmount, com.tools20022.repository.msg.RedemptionExecution5.mmGrossAmount, com.tools20022.repository.msg.RedemptionOrder7.mmGrossAmount,
-					com.tools20022.repository.msg.RedemptionOrder4.mmGrossAmount, com.tools20022.repository.msg.RedemptionOrder6.mmGrossAmount, com.tools20022.repository.msg.RedemptionExecution4.mmGrossAmount,
-					com.tools20022.repository.msg.RedemptionExecution6.mmGrossAmount, com.tools20022.repository.msg.RedemptionOrder8.mmGrossAmount, com.tools20022.repository.msg.SubscriptionOrder3.mmGrossAmount,
-					com.tools20022.repository.msg.SubscriptionOrder5.mmGrossAmount, com.tools20022.repository.msg.SubscriptionExecution3.mmGrossAmount, com.tools20022.repository.msg.SubscriptionExecution5.mmGrossAmount,
-					com.tools20022.repository.msg.SubscriptionOrder7.mmGrossAmount, com.tools20022.repository.msg.SubscriptionOrder4.mmGrossAmount, com.tools20022.repository.msg.SubscriptionOrder6.mmGrossAmount,
-					com.tools20022.repository.msg.SubscriptionExecution4.mmGrossAmount, com.tools20022.repository.msg.SubscriptionExecution6.mmGrossAmount, com.tools20022.repository.msg.SubscriptionOrder8.mmGrossAmount,
-					com.tools20022.repository.choice.FinancialInstrumentQuantity3Choice.mmGrossAmount, com.tools20022.repository.choice.FinancialInstrumentQuantity4Choice.mmGrossAmount,
-					com.tools20022.repository.choice.FinancialInstrumentQuantity5Choice.mmGrossAmount, com.tools20022.repository.choice.FinancialInstrumentQuantity6Choice.mmGrossAmount,
-					com.tools20022.repository.msg.SwitchRedemptionLegExecution2.mmGrossAmount, com.tools20022.repository.msg.SwitchSubscriptionLegExecution2.mmGrossAmount,
-					com.tools20022.repository.msg.SwitchRedemptionLegExecution3.mmGrossAmount, com.tools20022.repository.msg.SwitchSubscriptionLegExecution3.mmGrossAmount,
-					com.tools20022.repository.msg.FinancialInstrumentQuantity2.mmGrossAmount, com.tools20022.repository.msg.FinancialInstrumentQuantity3.mmGrossAmount,
-					com.tools20022.repository.choice.FinancialInstrumentQuantity7Choice.mmGrossAmount, com.tools20022.repository.choice.FinancialInstrumentQuantity8Choice.mmGrossAmount,
-					com.tools20022.repository.choice.FinancialInstrumentQuantity12Choice.mmGrossAmount, com.tools20022.repository.choice.FinancialInstrumentQuantity13Choice.mmGrossAmount,
-					com.tools20022.repository.msg.RedemptionOrder11.mmGrossAmount, com.tools20022.repository.msg.RedemptionExecution12.mmGrossAmount, com.tools20022.repository.msg.SubscriptionOrder11.mmGrossAmount,
-					com.tools20022.repository.msg.SubscriptionExecution9.mmGrossAmount, com.tools20022.repository.choice.FinancialInstrumentQuantity26Choice.mmGrossAmount,
-					com.tools20022.repository.msg.SubscriptionExecution13.mmGrossAmount, com.tools20022.repository.msg.SubscriptionExecution12.mmGrossAmount, com.tools20022.repository.msg.FundOrderData5.mmGrossAmount,
-					com.tools20022.repository.choice.FinancialInstrumentQuantity29Choice.mmGrossAmount, com.tools20022.repository.choice.FinancialInstrumentQuantity28Choice.mmGrossAmount,
-					com.tools20022.repository.msg.RedemptionExecution16.mmGrossAmount, com.tools20022.repository.msg.SwitchSubscriptionLegExecution4.mmGrossAmount,
-					com.tools20022.repository.choice.FinancialInstrumentQuantity27Choice.mmGrossAmount, com.tools20022.repository.msg.RedemptionExecution15.mmGrossAmount,
-					com.tools20022.repository.msg.SwitchRedemptionLegExecution4.mmGrossAmount);
+			derivation_lazy = () -> Arrays.asList(FundOrderData1.mmGrossAmount, RedemptionOrder3.mmGrossAmount, RedemptionOrder5.mmGrossAmount, RedemptionExecution3.mmGrossAmount, RedemptionExecution5.mmGrossAmount,
+					RedemptionOrder7.mmGrossAmount, RedemptionOrder4.mmGrossAmount, RedemptionOrder6.mmGrossAmount, RedemptionExecution4.mmGrossAmount, RedemptionExecution6.mmGrossAmount, RedemptionOrder8.mmGrossAmount,
+					SubscriptionOrder3.mmGrossAmount, SubscriptionOrder5.mmGrossAmount, SubscriptionExecution3.mmGrossAmount, SubscriptionExecution5.mmGrossAmount, SubscriptionOrder7.mmGrossAmount, SubscriptionOrder4.mmGrossAmount,
+					SubscriptionOrder6.mmGrossAmount, SubscriptionExecution4.mmGrossAmount, SubscriptionExecution6.mmGrossAmount, SubscriptionOrder8.mmGrossAmount, FinancialInstrumentQuantity3Choice.mmGrossAmount,
+					FinancialInstrumentQuantity4Choice.mmGrossAmount, FinancialInstrumentQuantity5Choice.mmGrossAmount, FinancialInstrumentQuantity6Choice.mmGrossAmount, SwitchRedemptionLegExecution2.mmGrossAmount,
+					SwitchSubscriptionLegExecution2.mmGrossAmount, SwitchRedemptionLegExecution3.mmGrossAmount, SwitchSubscriptionLegExecution3.mmGrossAmount, FinancialInstrumentQuantity2.mmGrossAmount,
+					FinancialInstrumentQuantity3.mmGrossAmount, FinancialInstrumentQuantity7Choice.mmGrossAmount, FinancialInstrumentQuantity8Choice.mmGrossAmount, FinancialInstrumentQuantity12Choice.mmGrossAmount,
+					FinancialInstrumentQuantity13Choice.mmGrossAmount, RedemptionOrder11.mmGrossAmount, RedemptionExecution12.mmGrossAmount, SubscriptionOrder11.mmGrossAmount, SubscriptionExecution9.mmGrossAmount,
+					FinancialInstrumentQuantity26Choice.mmGrossAmount, SubscriptionExecution13.mmGrossAmount, SubscriptionExecution12.mmGrossAmount, FundOrderData5.mmGrossAmount, FinancialInstrumentQuantity29Choice.mmGrossAmount,
+					FinancialInstrumentQuantity28Choice.mmGrossAmount, RedemptionExecution16.mmGrossAmount, SwitchSubscriptionLegExecution4.mmGrossAmount, FinancialInstrumentQuantity27Choice.mmGrossAmount,
+					RedemptionExecution15.mmGrossAmount, SwitchRedemptionLegExecution4.mmGrossAmount);
 			elementContext_lazy = () -> InvestmentFundOrder.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "GrossAmount";
 			definition = "Amount of money used to derive the quantity of investment fund units sold or subscribed, before deduction of charges, commissions, and taxes, expressed in the currency requested by the investor.\r\n[Quantity * Price] + (Charges + Commissions +Taxes)]";
 			maxOccurs = 1;
@@ -1070,37 +1049,27 @@ public class InvestmentFundOrder extends SecuritiesOrder {
 	 */
 	public static final MMBusinessAssociationEnd mmUnitsNumber = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FundOrderData1.mmUnitsNumber, com.tools20022.repository.msg.RedemptionOrder3.mmUnitsNumber, com.tools20022.repository.msg.RedemptionOrder5.mmUnitsNumber,
-					com.tools20022.repository.msg.RedemptionOrder7.mmUnitsNumber, com.tools20022.repository.msg.RedemptionOrder4.mmUnitsNumber, com.tools20022.repository.msg.RedemptionOrder6.mmUnitsNumber,
-					com.tools20022.repository.msg.RedemptionOrder8.mmUnitsNumber, com.tools20022.repository.msg.SubscriptionOrder3.mmUnitsNumber, com.tools20022.repository.msg.SubscriptionOrder5.mmUnitsNumber,
-					com.tools20022.repository.msg.SubscriptionOrder7.mmUnitsNumber, com.tools20022.repository.msg.SubscriptionOrder4.mmUnitsNumber, com.tools20022.repository.msg.SubscriptionOrder6.mmUnitsNumber,
-					com.tools20022.repository.msg.SubscriptionOrder8.mmUnitsNumber, com.tools20022.repository.choice.FinancialInstrumentQuantity3Choice.mmUnitsNumber,
-					com.tools20022.repository.msg.SwitchRedemptionLegOrder2.mmFinancialInstrumentQuantityChoice, com.tools20022.repository.choice.FinancialInstrumentQuantity4Choice.mmUnitsNumber,
-					com.tools20022.repository.msg.SwitchSubscriptionLegOrder2.mmFinancialInstrumentQuantityChoice, com.tools20022.repository.choice.FinancialInstrumentQuantity5Choice.mmUnitsNumber,
-					com.tools20022.repository.msg.SwitchRedemptionLegOrder3.mmFinancialInstrumentQuantityChoice, com.tools20022.repository.choice.FinancialInstrumentQuantity6Choice.mmUnitsNumber,
-					com.tools20022.repository.msg.SwitchSubscriptionLegOrder3.mmFinancialInstrumentQuantityChoice, com.tools20022.repository.choice.FinancialInstrumentQuantity11Choice.mmUnitsNumber,
-					com.tools20022.repository.msg.FundOrderData3.mmFinancialInstrumentQuantity, com.tools20022.repository.choice.FinancialInstrumentQuantity10Choice.mmUnitsNumber,
-					com.tools20022.repository.msg.RedemptionOrder9.mmFinancialInstrumentQuantity, com.tools20022.repository.choice.FinancialInstrumentQuantity9Choice.mmUnitsNumber,
-					com.tools20022.repository.msg.SubscriptionOrder9.mmFinancialInstrumentQuantity, com.tools20022.repository.msg.SubscriptionExecution8.mmFinancialInstrumentQuantity,
-					com.tools20022.repository.msg.RedemptionExecution11.mmFinancialInstrumentQuantity, com.tools20022.repository.msg.SwitchExecutionRedemptionLeg4.mmFinancialInstrumentQuantity,
-					com.tools20022.repository.msg.SwitchExecutionSubscriptionLeg4.mmFinancialInstrumentQuantity, com.tools20022.repository.choice.FinancialInstrumentQuantity7Choice.mmUnitsNumber,
-					com.tools20022.repository.msg.SubscriptionOrder10.mmFinancialInstrumentQuantity, com.tools20022.repository.choice.FinancialInstrumentQuantity8Choice.mmUnitsNumber,
-					com.tools20022.repository.msg.RedemptionOrder10.mmFinancialInstrumentQuantity, com.tools20022.repository.choice.FinancialInstrumentQuantity12Choice.mmUnitsNumber,
-					com.tools20022.repository.msg.SwitchRedemptionLegOrder4.mmFinancialInstrumentQuantity, com.tools20022.repository.choice.FinancialInstrumentQuantity13Choice.mmUnitsNumber,
-					com.tools20022.repository.msg.SwitchSubscriptionLegOrder4.mmFinancialInstrumentQuantity, com.tools20022.repository.msg.RedemptionOrder11.mmUnitsNumber, com.tools20022.repository.msg.SubscriptionOrder11.mmUnitsNumber,
-					com.tools20022.repository.msg.SwitchSubscriptionLegOrder6.mmFinancialInstrumentQuantityChoice, com.tools20022.repository.choice.FinancialInstrumentQuantity26Choice.mmUnitsNumber,
-					com.tools20022.repository.msg.FundOrderData5.mmUnitsNumber, com.tools20022.repository.msg.SwitchRedemptionLegOrder6.mmFinancialInstrumentQuantityChoice,
-					com.tools20022.repository.choice.FinancialInstrumentQuantity29Choice.mmUnitsNumber, com.tools20022.repository.choice.FinancialInstrumentQuantity28Choice.mmUnitsNumber,
-					com.tools20022.repository.choice.FinancialInstrumentQuantity27Choice.mmUnitsNumber);
+			derivation_lazy = () -> Arrays.asList(FundOrderData1.mmUnitsNumber, RedemptionOrder3.mmUnitsNumber, RedemptionOrder5.mmUnitsNumber, RedemptionOrder7.mmUnitsNumber, RedemptionOrder4.mmUnitsNumber, RedemptionOrder6.mmUnitsNumber,
+					RedemptionOrder8.mmUnitsNumber, SubscriptionOrder3.mmUnitsNumber, SubscriptionOrder5.mmUnitsNumber, SubscriptionOrder7.mmUnitsNumber, SubscriptionOrder4.mmUnitsNumber, SubscriptionOrder6.mmUnitsNumber,
+					SubscriptionOrder8.mmUnitsNumber, FinancialInstrumentQuantity3Choice.mmUnitsNumber, SwitchRedemptionLegOrder2.mmFinancialInstrumentQuantityChoice, FinancialInstrumentQuantity4Choice.mmUnitsNumber,
+					SwitchSubscriptionLegOrder2.mmFinancialInstrumentQuantityChoice, FinancialInstrumentQuantity5Choice.mmUnitsNumber, SwitchRedemptionLegOrder3.mmFinancialInstrumentQuantityChoice,
+					FinancialInstrumentQuantity6Choice.mmUnitsNumber, SwitchSubscriptionLegOrder3.mmFinancialInstrumentQuantityChoice, FinancialInstrumentQuantity11Choice.mmUnitsNumber, FundOrderData3.mmFinancialInstrumentQuantity,
+					FinancialInstrumentQuantity10Choice.mmUnitsNumber, RedemptionOrder9.mmFinancialInstrumentQuantity, FinancialInstrumentQuantity9Choice.mmUnitsNumber, SubscriptionOrder9.mmFinancialInstrumentQuantity,
+					SubscriptionExecution8.mmFinancialInstrumentQuantity, RedemptionExecution11.mmFinancialInstrumentQuantity, SwitchExecutionRedemptionLeg4.mmFinancialInstrumentQuantity,
+					SwitchExecutionSubscriptionLeg4.mmFinancialInstrumentQuantity, FinancialInstrumentQuantity7Choice.mmUnitsNumber, SubscriptionOrder10.mmFinancialInstrumentQuantity, FinancialInstrumentQuantity8Choice.mmUnitsNumber,
+					RedemptionOrder10.mmFinancialInstrumentQuantity, FinancialInstrumentQuantity12Choice.mmUnitsNumber, SwitchRedemptionLegOrder4.mmFinancialInstrumentQuantity, FinancialInstrumentQuantity13Choice.mmUnitsNumber,
+					SwitchSubscriptionLegOrder4.mmFinancialInstrumentQuantity, RedemptionOrder11.mmUnitsNumber, SubscriptionOrder11.mmUnitsNumber, SwitchSubscriptionLegOrder6.mmFinancialInstrumentQuantityChoice,
+					FinancialInstrumentQuantity26Choice.mmUnitsNumber, FundOrderData5.mmUnitsNumber, SwitchRedemptionLegOrder6.mmFinancialInstrumentQuantityChoice, FinancialInstrumentQuantity29Choice.mmUnitsNumber,
+					FinancialInstrumentQuantity28Choice.mmUnitsNumber, FinancialInstrumentQuantity27Choice.mmUnitsNumber);
 			elementContext_lazy = () -> InvestmentFundOrder.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "UnitsNumber";
 			definition = "Quantity of investment fund units to be subscribed or redeemed.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmOrder;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmObject();
 		}
 	};
@@ -1164,18 +1133,17 @@ public class InvestmentFundOrder extends SecuritiesOrder {
 	 */
 	public static final MMBusinessAssociationEnd mmInvestmentFundOrderExecution = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IndividualOrderStatusAndReason1.mmNewDetails, com.tools20022.repository.msg.IndividualOrderStatusAndReason2.mmNewDetails,
-					com.tools20022.repository.msg.SwitchOrderStatusAndReason1.mmNewDetails, com.tools20022.repository.msg.IndividualOrderStatusAndReason3.mmNewDetails,
-					com.tools20022.repository.msg.IndividualOrderStatusAndReason7.mmNewDetails, com.tools20022.repository.msg.SwitchOrderStatusAndReason2.mmNewDetails);
+			derivation_lazy = () -> Arrays.asList(IndividualOrderStatusAndReason1.mmNewDetails, IndividualOrderStatusAndReason2.mmNewDetails, SwitchOrderStatusAndReason1.mmNewDetails, IndividualOrderStatusAndReason3.mmNewDetails,
+					IndividualOrderStatusAndReason7.mmNewDetails, SwitchOrderStatusAndReason2.mmNewDetails);
 			elementContext_lazy = () -> InvestmentFundOrder.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InvestmentFundOrderExecution";
 			definition = "Execution of an investment fund order.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrderExecution.mmOrder;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrderExecution.mmObject();
 		}
 	};
@@ -1307,22 +1275,16 @@ public class InvestmentFundOrder extends SecuritiesOrder {
 	 */
 	public static final MMBusinessAttribute mmNetAmount = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FundOrderData1.mmNetAmount, com.tools20022.repository.msg.RedemptionOrder3.mmNetAmount, com.tools20022.repository.msg.RedemptionOrder5.mmNetAmount,
-					com.tools20022.repository.msg.RedemptionOrder7.mmNetAmount, com.tools20022.repository.msg.RedemptionOrder4.mmNetAmount, com.tools20022.repository.msg.RedemptionOrder6.mmNetAmount,
-					com.tools20022.repository.msg.RedemptionOrder8.mmNetAmount, com.tools20022.repository.msg.SubscriptionOrder3.mmNetAmount, com.tools20022.repository.msg.SubscriptionOrder5.mmNetAmount,
-					com.tools20022.repository.msg.SubscriptionOrder7.mmNetAmount, com.tools20022.repository.msg.SubscriptionOrder4.mmNetAmount, com.tools20022.repository.msg.SubscriptionOrder6.mmNetAmount,
-					com.tools20022.repository.msg.SubscriptionOrder8.mmNetAmount, com.tools20022.repository.choice.FinancialInstrumentQuantity3Choice.mmNetAmount,
-					com.tools20022.repository.choice.FinancialInstrumentQuantity4Choice.mmNetAmount, com.tools20022.repository.choice.FinancialInstrumentQuantity5Choice.mmNetAmount,
-					com.tools20022.repository.choice.FinancialInstrumentQuantity6Choice.mmNetAmount, com.tools20022.repository.msg.FinancialInstrumentQuantity2.mmOrderedAmount,
-					com.tools20022.repository.msg.FinancialInstrumentQuantity2.mmNetAmount, com.tools20022.repository.msg.FinancialInstrumentQuantity3.mmNetAmount,
-					com.tools20022.repository.choice.FinancialInstrumentQuantity7Choice.mmNetAmount, com.tools20022.repository.choice.FinancialInstrumentQuantity8Choice.mmNetAmount,
-					com.tools20022.repository.choice.FinancialInstrumentQuantity12Choice.mmNetAmount, com.tools20022.repository.choice.FinancialInstrumentQuantity13Choice.mmNetAmount,
-					com.tools20022.repository.msg.RedemptionOrder11.mmNetAmount, com.tools20022.repository.msg.SubscriptionOrder11.mmNetAmount, com.tools20022.repository.choice.FinancialInstrumentQuantity26Choice.mmNetAmount,
-					com.tools20022.repository.msg.FundOrderData5.mmNetAmount, com.tools20022.repository.choice.FinancialInstrumentQuantity29Choice.mmNetAmount,
-					com.tools20022.repository.choice.FinancialInstrumentQuantity28Choice.mmNetAmount, com.tools20022.repository.choice.FinancialInstrumentQuantity27Choice.mmNetAmount);
+			derivation_lazy = () -> Arrays.asList(FundOrderData1.mmNetAmount, RedemptionOrder3.mmNetAmount, RedemptionOrder5.mmNetAmount, RedemptionOrder7.mmNetAmount, RedemptionOrder4.mmNetAmount, RedemptionOrder6.mmNetAmount,
+					RedemptionOrder8.mmNetAmount, SubscriptionOrder3.mmNetAmount, SubscriptionOrder5.mmNetAmount, SubscriptionOrder7.mmNetAmount, SubscriptionOrder4.mmNetAmount, SubscriptionOrder6.mmNetAmount,
+					SubscriptionOrder8.mmNetAmount, FinancialInstrumentQuantity3Choice.mmNetAmount, FinancialInstrumentQuantity4Choice.mmNetAmount, FinancialInstrumentQuantity5Choice.mmNetAmount,
+					FinancialInstrumentQuantity6Choice.mmNetAmount, FinancialInstrumentQuantity2.mmOrderedAmount, FinancialInstrumentQuantity2.mmNetAmount, FinancialInstrumentQuantity3.mmNetAmount,
+					FinancialInstrumentQuantity7Choice.mmNetAmount, FinancialInstrumentQuantity8Choice.mmNetAmount, FinancialInstrumentQuantity12Choice.mmNetAmount, FinancialInstrumentQuantity13Choice.mmNetAmount,
+					RedemptionOrder11.mmNetAmount, SubscriptionOrder11.mmNetAmount, FinancialInstrumentQuantity26Choice.mmNetAmount, FundOrderData5.mmNetAmount, FinancialInstrumentQuantity29Choice.mmNetAmount,
+					FinancialInstrumentQuantity28Choice.mmNetAmount, FinancialInstrumentQuantity27Choice.mmNetAmount);
 			elementContext_lazy = () -> InvestmentFundOrder.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NetAmount";
 			definition = "Amount of money used to determine the quantity of investment fund units to be subscribed or to be sold.";
 			maxOccurs = 1;
@@ -1478,23 +1440,17 @@ public class InvestmentFundOrder extends SecuritiesOrder {
 	 */
 	public static final MMBusinessAttribute mmOrderDateTime = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RedemptionBulkOrder2.mmOrderDateTime, com.tools20022.repository.msg.RedemptionBulkOrder3.mmOrderDateTime,
-					com.tools20022.repository.msg.RedemptionBulkExecution2.mmOrderDateTime, com.tools20022.repository.msg.RedemptionBulkExecution3.mmOrderDateTime, com.tools20022.repository.msg.RedemptionBulkOrder4.mmOrderDateTime,
-					com.tools20022.repository.msg.RedemptionMultipleOrder2.mmOrderDateTime, com.tools20022.repository.msg.RedemptionMultipleOrder3.mmOrderDateTime, com.tools20022.repository.msg.RedemptionMultipleExecution2.mmOrderDateTime,
-					com.tools20022.repository.msg.RedemptionMultipleExecution3.mmOrderDateTime, com.tools20022.repository.msg.RedemptionMultipleOrder4.mmOrderDateTime,
-					com.tools20022.repository.msg.InvestmentFundTransaction2.mmOrderDateTime, com.tools20022.repository.msg.InvestmentFundTransaction3.mmOrderDateTime, com.tools20022.repository.msg.SubscriptionBulkOrder2.mmOrderDateTime,
-					com.tools20022.repository.msg.SubscriptionBulkOrder3.mmOrderDateTime, com.tools20022.repository.msg.SubscriptionBulkExecution2.mmOrderDateTime, com.tools20022.repository.msg.SubscriptionBulkExecution3.mmOrderDateTime,
-					com.tools20022.repository.msg.SubscriptionBulkOrder4.mmOrderDateTime, com.tools20022.repository.msg.SubscriptionMultipleOrder2.mmOrderDateTime, com.tools20022.repository.msg.SubscriptionMultipleOrder3.mmOrderDateTime,
-					com.tools20022.repository.msg.SubscriptionMultipleExecution2.mmOrderDateTime, com.tools20022.repository.msg.SubscriptionMultipleExecution3.mmOrderDateTime,
-					com.tools20022.repository.msg.SubscriptionMultipleOrder4.mmOrderDateTime, com.tools20022.repository.msg.SwitchOrder2.mmOrderDateTime, com.tools20022.repository.msg.SwitchOrder3.mmOrderDateTime,
-					com.tools20022.repository.msg.SwitchExecution3.mmOrderDateTime, com.tools20022.repository.msg.SwitchExecution4.mmOrderDateTime, com.tools20022.repository.msg.SwitchOrder4.mmOrderDateTime,
-					com.tools20022.repository.msg.InvestmentFundTransaction4.mmOrderDateTime, com.tools20022.repository.msg.SwitchExecution7.mmOrderDateTime, com.tools20022.repository.msg.SubscriptionBulkOrder5.mmOrderDateTime,
-					com.tools20022.repository.msg.RedemptionBulkExecution5.mmOrderDateTime, com.tools20022.repository.msg.RedemptionMultipleExecution5.mmOrderDateTime, com.tools20022.repository.msg.RedemptionMultipleOrder6.mmOrderDateTime,
-					com.tools20022.repository.msg.SubscriptionMultipleOrder6.mmOrderDateTime, com.tools20022.repository.msg.SubscriptionBulkExecution4.mmOrderDateTime, com.tools20022.repository.msg.SwitchOrder7.mmOrderDateTime,
-					com.tools20022.repository.msg.RedemptionBulkOrder6.mmOrderDateTime, com.tools20022.repository.msg.SubscriptionMultipleExecution5.mmOrderDateTime);
+			derivation_lazy = () -> Arrays.asList(RedemptionBulkOrder2.mmOrderDateTime, RedemptionBulkOrder3.mmOrderDateTime, RedemptionBulkExecution2.mmOrderDateTime, RedemptionBulkExecution3.mmOrderDateTime,
+					RedemptionBulkOrder4.mmOrderDateTime, RedemptionMultipleOrder2.mmOrderDateTime, RedemptionMultipleOrder3.mmOrderDateTime, RedemptionMultipleExecution2.mmOrderDateTime, RedemptionMultipleExecution3.mmOrderDateTime,
+					RedemptionMultipleOrder4.mmOrderDateTime, InvestmentFundTransaction2.mmOrderDateTime, InvestmentFundTransaction3.mmOrderDateTime, SubscriptionBulkOrder2.mmOrderDateTime, SubscriptionBulkOrder3.mmOrderDateTime,
+					SubscriptionBulkExecution2.mmOrderDateTime, SubscriptionBulkExecution3.mmOrderDateTime, SubscriptionBulkOrder4.mmOrderDateTime, SubscriptionMultipleOrder2.mmOrderDateTime, SubscriptionMultipleOrder3.mmOrderDateTime,
+					SubscriptionMultipleExecution2.mmOrderDateTime, SubscriptionMultipleExecution3.mmOrderDateTime, SubscriptionMultipleOrder4.mmOrderDateTime, SwitchOrder2.mmOrderDateTime, SwitchOrder3.mmOrderDateTime,
+					SwitchExecution3.mmOrderDateTime, SwitchExecution4.mmOrderDateTime, SwitchOrder4.mmOrderDateTime, InvestmentFundTransaction4.mmOrderDateTime, SwitchExecution7.mmOrderDateTime, SubscriptionBulkOrder5.mmOrderDateTime,
+					RedemptionBulkExecution5.mmOrderDateTime, RedemptionMultipleExecution5.mmOrderDateTime, RedemptionMultipleOrder6.mmOrderDateTime, SubscriptionMultipleOrder6.mmOrderDateTime, SubscriptionBulkExecution4.mmOrderDateTime,
+					SwitchOrder7.mmOrderDateTime, RedemptionBulkOrder6.mmOrderDateTime, SubscriptionMultipleExecution5.mmOrderDateTime);
 			elementContext_lazy = () -> InvestmentFundOrder.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "OrderDateTime";
 			definition = "Date and time at which the order was placed by the investor.";
 			maxOccurs = 1;
@@ -1601,17 +1557,14 @@ public class InvestmentFundOrder extends SecuritiesOrder {
 	 */
 	public static final MMBusinessAttribute mmExpiryDateTime = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RedemptionBulkOrder2.mmExpiryDateTime, com.tools20022.repository.msg.RedemptionBulkOrder3.mmExpiryDateTime,
-					com.tools20022.repository.msg.RedemptionBulkOrder4.mmExpiryDateTime, com.tools20022.repository.msg.RedemptionMultipleOrder2.mmExpiryDateTime, com.tools20022.repository.msg.RedemptionMultipleOrder3.mmExpiryDateTime,
-					com.tools20022.repository.msg.RedemptionMultipleOrder4.mmExpiryDateTime, com.tools20022.repository.msg.SubscriptionBulkOrder2.mmExpiryDateTime, com.tools20022.repository.msg.SubscriptionBulkOrder3.mmExpiryDateTime,
-					com.tools20022.repository.msg.SubscriptionBulkOrder4.mmExpiryDateTime, com.tools20022.repository.msg.SubscriptionMultipleOrder2.mmExpiryDateTime,
-					com.tools20022.repository.msg.SubscriptionMultipleOrder3.mmExpiryDateTime, com.tools20022.repository.msg.SubscriptionMultipleOrder4.mmExpiryDateTime, com.tools20022.repository.msg.SwitchOrder2.mmExpiryDateTime,
-					com.tools20022.repository.msg.SwitchOrder3.mmExpiryDateTime, com.tools20022.repository.msg.SwitchOrder4.mmExpiryDateTime, com.tools20022.repository.msg.RedemptionMultipleOrder5.mmExpiryDateTime,
-					com.tools20022.repository.msg.SubscriptionMultipleOrder5.mmExpiryDateTime, com.tools20022.repository.msg.SubscriptionBulkOrder5.mmExpiryDateTime, com.tools20022.repository.msg.RedemptionMultipleOrder6.mmExpiryDateTime,
-					com.tools20022.repository.msg.SubscriptionMultipleOrder6.mmExpiryDateTime, com.tools20022.repository.msg.SwitchOrder7.mmExpiryDateTime, com.tools20022.repository.msg.RedemptionBulkOrder6.mmExpiryDateTime);
+			derivation_lazy = () -> Arrays.asList(RedemptionBulkOrder2.mmExpiryDateTime, RedemptionBulkOrder3.mmExpiryDateTime, RedemptionBulkOrder4.mmExpiryDateTime, RedemptionMultipleOrder2.mmExpiryDateTime,
+					RedemptionMultipleOrder3.mmExpiryDateTime, RedemptionMultipleOrder4.mmExpiryDateTime, SubscriptionBulkOrder2.mmExpiryDateTime, SubscriptionBulkOrder3.mmExpiryDateTime, SubscriptionBulkOrder4.mmExpiryDateTime,
+					SubscriptionMultipleOrder2.mmExpiryDateTime, SubscriptionMultipleOrder3.mmExpiryDateTime, SubscriptionMultipleOrder4.mmExpiryDateTime, SwitchOrder2.mmExpiryDateTime, SwitchOrder3.mmExpiryDateTime,
+					SwitchOrder4.mmExpiryDateTime, RedemptionMultipleOrder5.mmExpiryDateTime, SubscriptionMultipleOrder5.mmExpiryDateTime, SubscriptionBulkOrder5.mmExpiryDateTime, RedemptionMultipleOrder6.mmExpiryDateTime,
+					SubscriptionMultipleOrder6.mmExpiryDateTime, SwitchOrder7.mmExpiryDateTime, RedemptionBulkOrder6.mmExpiryDateTime);
 			elementContext_lazy = () -> InvestmentFundOrder.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ExpiryDateTime";
 			definition = "Date on which the order expires.";
 			maxOccurs = 1;
@@ -1803,32 +1756,21 @@ public class InvestmentFundOrder extends SecuritiesOrder {
 	 */
 	public static final MMBusinessAttribute mmCancellationRight = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RedemptionBulkOrder2.mmCancellationRight, com.tools20022.repository.msg.RedemptionBulkOrder3.mmCancellationRight,
-					com.tools20022.repository.msg.RedemptionBulkOrder3.mmExtendedCancellationRight, com.tools20022.repository.msg.RedemptionBulkExecution2.mmCancellationRight,
-					com.tools20022.repository.msg.RedemptionBulkExecution3.mmCancellationRight, com.tools20022.repository.msg.RedemptionBulkExecution3.mmExtendedCancellationRight,
-					com.tools20022.repository.msg.RedemptionBulkOrder4.mmCancellationRight, com.tools20022.repository.msg.RedemptionBulkOrder4.mmExtendedCancellationRight,
-					com.tools20022.repository.msg.RedemptionMultipleOrder2.mmCancellationRight, com.tools20022.repository.msg.RedemptionMultipleOrder3.mmCancellationRight,
-					com.tools20022.repository.msg.RedemptionMultipleOrder3.mmExtendedCancellationRight, com.tools20022.repository.msg.RedemptionMultipleExecution2.mmCancellationRight,
-					com.tools20022.repository.msg.RedemptionMultipleExecution3.mmCancellationRight, com.tools20022.repository.msg.RedemptionMultipleExecution3.mmExtendedCancellationRight,
-					com.tools20022.repository.msg.RedemptionMultipleOrder4.mmCancellationRight, com.tools20022.repository.msg.RedemptionMultipleOrder4.mmExtendedCancellationRight,
-					com.tools20022.repository.msg.SubscriptionBulkOrder2.mmCancellationRight, com.tools20022.repository.msg.SubscriptionBulkOrder3.mmCancellationRight,
-					com.tools20022.repository.msg.SubscriptionBulkOrder3.mmExtendedCancellationRight, com.tools20022.repository.msg.SubscriptionBulkExecution2.mmCancellationRight,
-					com.tools20022.repository.msg.SubscriptionBulkExecution3.mmCancellationRight, com.tools20022.repository.msg.SubscriptionBulkExecution3.mmExtendedCancellationRight,
-					com.tools20022.repository.msg.SubscriptionBulkOrder4.mmCancellationRight, com.tools20022.repository.msg.SubscriptionBulkOrder4.mmExtendedCancellationRight,
-					com.tools20022.repository.msg.SubscriptionMultipleOrder2.mmCancellationRight, com.tools20022.repository.msg.SubscriptionMultipleOrder3.mmCancellationRight,
-					com.tools20022.repository.msg.SubscriptionMultipleOrder3.mmExtendedCancellationRight, com.tools20022.repository.msg.SubscriptionMultipleExecution2.mmCancellationRight,
-					com.tools20022.repository.msg.SubscriptionMultipleExecution3.mmCancellationRight, com.tools20022.repository.msg.SubscriptionMultipleExecution3.mmExtendedCancellationRight,
-					com.tools20022.repository.msg.SubscriptionMultipleOrder4.mmCancellationRight, com.tools20022.repository.msg.SubscriptionMultipleOrder4.mmExtendedCancellationRight,
-					com.tools20022.repository.msg.SwitchOrder2.mmCancellationRight, com.tools20022.repository.msg.SwitchOrder3.mmCancellationRight, com.tools20022.repository.msg.SwitchOrder3.mmExtendedCancellationRight,
-					com.tools20022.repository.msg.SwitchOrder4.mmCancellationRight, com.tools20022.repository.msg.SwitchOrder4.mmExtendedCancellationRight, com.tools20022.repository.msg.SwitchExecution7.mmCancellationRight,
-					com.tools20022.repository.msg.SubscriptionBulkOrder5.mmCancellationRight, com.tools20022.repository.msg.RedemptionBulkExecution5.mmCancellationRight,
-					com.tools20022.repository.msg.RedemptionMultipleExecution5.mmCancellationRight, com.tools20022.repository.msg.RedemptionMultipleOrder6.mmCancellationRight,
-					com.tools20022.repository.msg.SubscriptionMultipleOrder6.mmCancellationRight, com.tools20022.repository.msg.SubscriptionBulkExecution4.mmCancellationRight, com.tools20022.repository.msg.SwitchOrder7.mmCancellationRight,
-					com.tools20022.repository.msg.RedemptionBulkOrder6.mmCancellationRight, com.tools20022.repository.msg.SubscriptionMultipleExecution5.mmCancellationRight, com.tools20022.repository.choice.CancellationRight1Choice.mmCode,
-					com.tools20022.repository.choice.CancellationRight1Choice.mmProprietary);
+			derivation_lazy = () -> Arrays.asList(RedemptionBulkOrder2.mmCancellationRight, RedemptionBulkOrder3.mmCancellationRight, RedemptionBulkOrder3.mmExtendedCancellationRight, RedemptionBulkExecution2.mmCancellationRight,
+					RedemptionBulkExecution3.mmCancellationRight, RedemptionBulkExecution3.mmExtendedCancellationRight, RedemptionBulkOrder4.mmCancellationRight, RedemptionBulkOrder4.mmExtendedCancellationRight,
+					RedemptionMultipleOrder2.mmCancellationRight, RedemptionMultipleOrder3.mmCancellationRight, RedemptionMultipleOrder3.mmExtendedCancellationRight, RedemptionMultipleExecution2.mmCancellationRight,
+					RedemptionMultipleExecution3.mmCancellationRight, RedemptionMultipleExecution3.mmExtendedCancellationRight, RedemptionMultipleOrder4.mmCancellationRight, RedemptionMultipleOrder4.mmExtendedCancellationRight,
+					SubscriptionBulkOrder2.mmCancellationRight, SubscriptionBulkOrder3.mmCancellationRight, SubscriptionBulkOrder3.mmExtendedCancellationRight, SubscriptionBulkExecution2.mmCancellationRight,
+					SubscriptionBulkExecution3.mmCancellationRight, SubscriptionBulkExecution3.mmExtendedCancellationRight, SubscriptionBulkOrder4.mmCancellationRight, SubscriptionBulkOrder4.mmExtendedCancellationRight,
+					SubscriptionMultipleOrder2.mmCancellationRight, SubscriptionMultipleOrder3.mmCancellationRight, SubscriptionMultipleOrder3.mmExtendedCancellationRight, SubscriptionMultipleExecution2.mmCancellationRight,
+					SubscriptionMultipleExecution3.mmCancellationRight, SubscriptionMultipleExecution3.mmExtendedCancellationRight, SubscriptionMultipleOrder4.mmCancellationRight, SubscriptionMultipleOrder4.mmExtendedCancellationRight,
+					SwitchOrder2.mmCancellationRight, SwitchOrder3.mmCancellationRight, SwitchOrder3.mmExtendedCancellationRight, SwitchOrder4.mmCancellationRight, SwitchOrder4.mmExtendedCancellationRight,
+					SwitchExecution7.mmCancellationRight, SubscriptionBulkOrder5.mmCancellationRight, RedemptionBulkExecution5.mmCancellationRight, RedemptionMultipleExecution5.mmCancellationRight,
+					RedemptionMultipleOrder6.mmCancellationRight, SubscriptionMultipleOrder6.mmCancellationRight, SubscriptionBulkExecution4.mmCancellationRight, SwitchOrder7.mmCancellationRight, RedemptionBulkOrder6.mmCancellationRight,
+					SubscriptionMultipleExecution5.mmCancellationRight, CancellationRight1Choice.mmCode, CancellationRight1Choice.mmProprietary);
 			elementContext_lazy = () -> InvestmentFundOrder.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CancellationRight";
 			definition = "Cancellation right of an investor with respect to an investment fund order.";
 			maxOccurs = 1;
@@ -2013,33 +1955,23 @@ public class InvestmentFundOrder extends SecuritiesOrder {
 	 */
 	public static final MMBusinessAttribute mmRequestedSettlementCurrency = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RedemptionBulkOrder2.mmRequestedSettlementCurrency, com.tools20022.repository.msg.RedemptionBulkOrder3.mmRequestedSettlementCurrency,
-					com.tools20022.repository.msg.RedemptionBulkExecution2.mmRequestedSettlementCurrency, com.tools20022.repository.msg.RedemptionBulkExecution3.mmRequestedSettlementCurrency,
-					com.tools20022.repository.msg.RedemptionBulkOrder4.mmRequestedSettlementCurrency, com.tools20022.repository.msg.RedemptionOrder4.mmRequestedSettlementCurrency,
-					com.tools20022.repository.msg.RedemptionOrder6.mmRequestedSettlementCurrency, com.tools20022.repository.msg.RedemptionExecution4.mmRequestedSettlementCurrency,
-					com.tools20022.repository.msg.RedemptionExecution6.mmRequestedSettlementCurrency, com.tools20022.repository.msg.RedemptionOrder8.mmRequestedSettlementCurrency,
-					com.tools20022.repository.msg.SubscriptionBulkOrder2.mmRequestedSettlementCurrency, com.tools20022.repository.msg.SubscriptionBulkOrder3.mmRequestedSettlementCurrency,
-					com.tools20022.repository.msg.SubscriptionBulkExecution2.mmRequestedSettlementCurrency, com.tools20022.repository.msg.SubscriptionBulkExecution3.mmRequestedSettlementCurrency,
-					com.tools20022.repository.msg.SubscriptionBulkOrder4.mmRequestedSettlementCurrency, com.tools20022.repository.msg.SubscriptionOrder4.mmRequestedSettlementCurrency,
-					com.tools20022.repository.msg.SubscriptionOrder6.mmRequestedSettlementCurrency, com.tools20022.repository.msg.SubscriptionExecution4.mmRequestedSettlementCurrency,
-					com.tools20022.repository.msg.SubscriptionExecution6.mmRequestedSettlementCurrency, com.tools20022.repository.msg.SubscriptionOrder8.mmRequestedSettlementCurrency,
-					com.tools20022.repository.msg.SwitchRedemptionLegOrder2.mmRequestedSettlementCurrency, com.tools20022.repository.msg.SwitchSubscriptionLegOrder2.mmRequestedSettlementCurrency,
-					com.tools20022.repository.msg.SwitchRedemptionLegOrder3.mmRequestedSettlementCurrency, com.tools20022.repository.msg.SwitchSubscriptionLegOrder3.mmRequestedSettlementCurrency,
-					com.tools20022.repository.msg.SwitchRedemptionLegExecution2.mmRequestedSettlementCurrency, com.tools20022.repository.msg.SwitchSubscriptionLegExecution2.mmRequestedSettlementCurrency,
-					com.tools20022.repository.msg.SwitchRedemptionLegExecution3.mmRequestedSettlementCurrency, com.tools20022.repository.msg.SwitchSubscriptionLegExecution3.mmRequestedSettlementCurrency,
-					com.tools20022.repository.msg.RedemptionExecution10.mmRequestedSettlementCurrency, com.tools20022.repository.msg.RedemptionOrder9.mmRequestedSettlementCurrency,
-					com.tools20022.repository.msg.SubscriptionExecution7.mmRequestedSettlementCurrency, com.tools20022.repository.msg.SubscriptionOrder9.mmRequestedSettlementCurrency,
-					com.tools20022.repository.msg.RedemptionOrder11.mmRequestedSettlementCurrency, com.tools20022.repository.msg.RedemptionExecution12.mmRequestedSettlementCurrency,
-					com.tools20022.repository.msg.SubscriptionOrder11.mmRequestedSettlementCurrency, com.tools20022.repository.msg.SubscriptionExecution9.mmRequestedSettlementCurrency,
-					com.tools20022.repository.msg.SubscriptionBulkOrder5.mmRequestedSettlementCurrency, com.tools20022.repository.msg.RedemptionBulkExecution5.mmRequestedSettlementCurrency,
-					com.tools20022.repository.msg.SubscriptionBulkExecution4.mmRequestedSettlementCurrency, com.tools20022.repository.msg.RedemptionBulkOrder6.mmRequestedSettlementCurrency,
-					com.tools20022.repository.msg.RedemptionOrder14.mmRequestedSettlementCurrency, com.tools20022.repository.msg.SwitchSubscriptionLegOrder6.mmRequestedSettlementCurrency,
-					com.tools20022.repository.msg.SubscriptionExecution13.mmRequestedSettlementCurrency, com.tools20022.repository.msg.SwitchRedemptionLegOrder6.mmRequestedSettlementCurrency,
-					com.tools20022.repository.msg.SubscriptionOrder14.mmRequestedSettlementCurrency, com.tools20022.repository.msg.SwitchSubscriptionLegExecution4.mmRequestedSettlementCurrency,
-					com.tools20022.repository.msg.RedemptionExecution15.mmRequestedSettlementCurrency, com.tools20022.repository.msg.SwitchRedemptionLegExecution4.mmRequestedSettlementCurrency);
+			derivation_lazy = () -> Arrays.asList(RedemptionBulkOrder2.mmRequestedSettlementCurrency, RedemptionBulkOrder3.mmRequestedSettlementCurrency, RedemptionBulkExecution2.mmRequestedSettlementCurrency,
+					RedemptionBulkExecution3.mmRequestedSettlementCurrency, RedemptionBulkOrder4.mmRequestedSettlementCurrency, RedemptionOrder4.mmRequestedSettlementCurrency, RedemptionOrder6.mmRequestedSettlementCurrency,
+					RedemptionExecution4.mmRequestedSettlementCurrency, RedemptionExecution6.mmRequestedSettlementCurrency, RedemptionOrder8.mmRequestedSettlementCurrency, SubscriptionBulkOrder2.mmRequestedSettlementCurrency,
+					SubscriptionBulkOrder3.mmRequestedSettlementCurrency, SubscriptionBulkExecution2.mmRequestedSettlementCurrency, SubscriptionBulkExecution3.mmRequestedSettlementCurrency,
+					SubscriptionBulkOrder4.mmRequestedSettlementCurrency, SubscriptionOrder4.mmRequestedSettlementCurrency, SubscriptionOrder6.mmRequestedSettlementCurrency, SubscriptionExecution4.mmRequestedSettlementCurrency,
+					SubscriptionExecution6.mmRequestedSettlementCurrency, SubscriptionOrder8.mmRequestedSettlementCurrency, SwitchRedemptionLegOrder2.mmRequestedSettlementCurrency, SwitchSubscriptionLegOrder2.mmRequestedSettlementCurrency,
+					SwitchRedemptionLegOrder3.mmRequestedSettlementCurrency, SwitchSubscriptionLegOrder3.mmRequestedSettlementCurrency, SwitchRedemptionLegExecution2.mmRequestedSettlementCurrency,
+					SwitchSubscriptionLegExecution2.mmRequestedSettlementCurrency, SwitchRedemptionLegExecution3.mmRequestedSettlementCurrency, SwitchSubscriptionLegExecution3.mmRequestedSettlementCurrency,
+					RedemptionExecution10.mmRequestedSettlementCurrency, RedemptionOrder9.mmRequestedSettlementCurrency, SubscriptionExecution7.mmRequestedSettlementCurrency, SubscriptionOrder9.mmRequestedSettlementCurrency,
+					RedemptionOrder11.mmRequestedSettlementCurrency, RedemptionExecution12.mmRequestedSettlementCurrency, SubscriptionOrder11.mmRequestedSettlementCurrency, SubscriptionExecution9.mmRequestedSettlementCurrency,
+					SubscriptionBulkOrder5.mmRequestedSettlementCurrency, RedemptionBulkExecution5.mmRequestedSettlementCurrency, SubscriptionBulkExecution4.mmRequestedSettlementCurrency, RedemptionBulkOrder6.mmRequestedSettlementCurrency,
+					RedemptionOrder14.mmRequestedSettlementCurrency, SwitchSubscriptionLegOrder6.mmRequestedSettlementCurrency, SubscriptionExecution13.mmRequestedSettlementCurrency, SwitchRedemptionLegOrder6.mmRequestedSettlementCurrency,
+					SubscriptionOrder14.mmRequestedSettlementCurrency, SwitchSubscriptionLegExecution4.mmRequestedSettlementCurrency, RedemptionExecution15.mmRequestedSettlementCurrency,
+					SwitchRedemptionLegExecution4.mmRequestedSettlementCurrency);
 			elementContext_lazy = () -> InvestmentFundOrder.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RequestedSettlementCurrency";
 			definition = "Currency requested for settlement of cash proceeds.";
 			maxOccurs = 1;
@@ -2171,23 +2103,17 @@ public class InvestmentFundOrder extends SecuritiesOrder {
 	 */
 	public static final MMBusinessAttribute mmRequestedExecutionDateTime = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RedemptionBulkOrder3.mmRequestedFutureTradeDate, com.tools20022.repository.msg.RedemptionBulkExecution3.mmRequestedFutureTradeDate,
-					com.tools20022.repository.msg.RedemptionBulkOrder4.mmRequestedFutureTradeDate, com.tools20022.repository.msg.RedemptionMultipleOrder3.mmRequestedFutureTradeDate,
-					com.tools20022.repository.msg.RedemptionMultipleExecution3.mmRequestedFutureTradeDate, com.tools20022.repository.msg.RedemptionMultipleOrder4.mmRequestedFutureTradeDate,
-					com.tools20022.repository.msg.SubscriptionBulkOrder3.mmRequestedFutureTradeDate, com.tools20022.repository.msg.SubscriptionBulkExecution3.mmRequestedFutureTradeDate,
-					com.tools20022.repository.msg.SubscriptionBulkOrder4.mmRequestedFutureTradeDate, com.tools20022.repository.msg.SubscriptionMultipleOrder3.mmRequestedFutureTradeDate,
-					com.tools20022.repository.msg.SubscriptionMultipleExecution3.mmRequestedFutureTradeDate, com.tools20022.repository.msg.SubscriptionMultipleOrder4.mmRequestedFutureTradeDate,
-					com.tools20022.repository.msg.SwitchOrder3.mmRequestedFutureTradeDate, com.tools20022.repository.msg.SwitchExecution4.mmRequestedFutureTradeDate, com.tools20022.repository.msg.SwitchOrder4.mmRequestedFutureTradeDate,
-					com.tools20022.repository.msg.FundOrderData3.mmRequestedTradeDate, com.tools20022.repository.msg.RedemptionExecution10.mmRequestedTradeDate, com.tools20022.repository.msg.RedemptionOrder9.mmRequestedTradeDate,
-					com.tools20022.repository.msg.SubscriptionExecution7.mmRequestedTradeDate, com.tools20022.repository.msg.SubscriptionOrder9.mmRequestedTradeDate,
-					com.tools20022.repository.msg.SwitchExecution7.mmRequestedFutureTradeDate, com.tools20022.repository.msg.SubscriptionBulkOrder5.mmRequestedFutureTradeDate,
-					com.tools20022.repository.msg.RedemptionBulkExecution5.mmRequestedFutureTradeDate, com.tools20022.repository.msg.RedemptionMultipleExecution5.mmRequestedFutureTradeDate,
-					com.tools20022.repository.msg.RedemptionMultipleOrder6.mmRequestedFutureTradeDate, com.tools20022.repository.msg.SubscriptionMultipleOrder6.mmRequestedFutureTradeDate,
-					com.tools20022.repository.msg.SubscriptionBulkExecution4.mmRequestedFutureTradeDate, com.tools20022.repository.msg.SwitchOrder7.mmRequestedFutureTradeDate,
-					com.tools20022.repository.msg.RedemptionBulkOrder6.mmRequestedFutureTradeDate, com.tools20022.repository.msg.SubscriptionMultipleExecution5.mmRequestedFutureTradeDate);
+			derivation_lazy = () -> Arrays.asList(RedemptionBulkOrder3.mmRequestedFutureTradeDate, RedemptionBulkExecution3.mmRequestedFutureTradeDate, RedemptionBulkOrder4.mmRequestedFutureTradeDate,
+					RedemptionMultipleOrder3.mmRequestedFutureTradeDate, RedemptionMultipleExecution3.mmRequestedFutureTradeDate, RedemptionMultipleOrder4.mmRequestedFutureTradeDate, SubscriptionBulkOrder3.mmRequestedFutureTradeDate,
+					SubscriptionBulkExecution3.mmRequestedFutureTradeDate, SubscriptionBulkOrder4.mmRequestedFutureTradeDate, SubscriptionMultipleOrder3.mmRequestedFutureTradeDate, SubscriptionMultipleExecution3.mmRequestedFutureTradeDate,
+					SubscriptionMultipleOrder4.mmRequestedFutureTradeDate, SwitchOrder3.mmRequestedFutureTradeDate, SwitchExecution4.mmRequestedFutureTradeDate, SwitchOrder4.mmRequestedFutureTradeDate, FundOrderData3.mmRequestedTradeDate,
+					RedemptionExecution10.mmRequestedTradeDate, RedemptionOrder9.mmRequestedTradeDate, SubscriptionExecution7.mmRequestedTradeDate, SubscriptionOrder9.mmRequestedTradeDate, SwitchExecution7.mmRequestedFutureTradeDate,
+					SubscriptionBulkOrder5.mmRequestedFutureTradeDate, RedemptionBulkExecution5.mmRequestedFutureTradeDate, RedemptionMultipleExecution5.mmRequestedFutureTradeDate, RedemptionMultipleOrder6.mmRequestedFutureTradeDate,
+					SubscriptionMultipleOrder6.mmRequestedFutureTradeDate, SubscriptionBulkExecution4.mmRequestedFutureTradeDate, SwitchOrder7.mmRequestedFutureTradeDate, RedemptionBulkOrder6.mmRequestedFutureTradeDate,
+					SubscriptionMultipleExecution5.mmRequestedFutureTradeDate);
 			elementContext_lazy = () -> InvestmentFundOrder.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RequestedExecutionDateTime";
 			definition = "Date and time at which the investor requests the order to be executed.";
 			maxOccurs = 1;
@@ -2307,18 +2233,14 @@ public class InvestmentFundOrder extends SecuritiesOrder {
 	 */
 	public static final MMBusinessAttribute mmFinancialAdvice = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RedemptionOrder5.mmFinancialAdvice, com.tools20022.repository.msg.RedemptionExecution5.mmFinancialAdvice,
-					com.tools20022.repository.msg.RedemptionOrder7.mmFinancialAdvice, com.tools20022.repository.msg.RedemptionOrder6.mmFinancialAdvice, com.tools20022.repository.msg.RedemptionExecution6.mmFinancialAdvice,
-					com.tools20022.repository.msg.RedemptionOrder8.mmFinancialAdvice, com.tools20022.repository.msg.SubscriptionOrder5.mmFinancialAdvice, com.tools20022.repository.msg.SubscriptionExecution5.mmFinancialAdvice,
-					com.tools20022.repository.msg.SubscriptionOrder7.mmFinancialAdvice, com.tools20022.repository.msg.SubscriptionOrder6.mmFinancialAdvice, com.tools20022.repository.msg.SubscriptionExecution6.mmFinancialAdvice,
-					com.tools20022.repository.msg.SubscriptionOrder8.mmFinancialAdvice, com.tools20022.repository.msg.SwitchOrder3.mmFinancialAdvice, com.tools20022.repository.msg.SwitchExecution4.mmFinancialAdvice,
-					com.tools20022.repository.msg.SwitchOrder4.mmFinancialAdvice, com.tools20022.repository.msg.SwitchExecution7.mmFinancialAdvice, com.tools20022.repository.msg.SwitchOrder7.mmFinancialAdvice,
-					com.tools20022.repository.msg.RedemptionOrder14.mmFinancialAdvice, com.tools20022.repository.msg.SubscriptionExecution13.mmFinancialAdvice, com.tools20022.repository.msg.SubscriptionExecution12.mmFinancialAdvice,
-					com.tools20022.repository.msg.SubscriptionOrder15.mmFinancialAdvice, com.tools20022.repository.msg.RedemptionOrder15.mmFinancialAdvice, com.tools20022.repository.msg.RedemptionExecution16.mmFinancialAdvice,
-					com.tools20022.repository.msg.SubscriptionOrder14.mmFinancialAdvice, com.tools20022.repository.msg.RedemptionExecution15.mmFinancialAdvice);
+			derivation_lazy = () -> Arrays.asList(RedemptionOrder5.mmFinancialAdvice, RedemptionExecution5.mmFinancialAdvice, RedemptionOrder7.mmFinancialAdvice, RedemptionOrder6.mmFinancialAdvice, RedemptionExecution6.mmFinancialAdvice,
+					RedemptionOrder8.mmFinancialAdvice, SubscriptionOrder5.mmFinancialAdvice, SubscriptionExecution5.mmFinancialAdvice, SubscriptionOrder7.mmFinancialAdvice, SubscriptionOrder6.mmFinancialAdvice,
+					SubscriptionExecution6.mmFinancialAdvice, SubscriptionOrder8.mmFinancialAdvice, SwitchOrder3.mmFinancialAdvice, SwitchExecution4.mmFinancialAdvice, SwitchOrder4.mmFinancialAdvice, SwitchExecution7.mmFinancialAdvice,
+					SwitchOrder7.mmFinancialAdvice, RedemptionOrder14.mmFinancialAdvice, SubscriptionExecution13.mmFinancialAdvice, SubscriptionExecution12.mmFinancialAdvice, SubscriptionOrder15.mmFinancialAdvice,
+					RedemptionOrder15.mmFinancialAdvice, RedemptionExecution16.mmFinancialAdvice, SubscriptionOrder14.mmFinancialAdvice, RedemptionExecution15.mmFinancialAdvice);
 			elementContext_lazy = () -> InvestmentFundOrder.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "FinancialAdvice";
 			definition = "Specifies if advice has been received from an independent financial advisor.";
 			maxOccurs = 1;
@@ -2435,18 +2357,14 @@ public class InvestmentFundOrder extends SecuritiesOrder {
 	 */
 	public static final MMBusinessAttribute mmNegotiatedTrade = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RedemptionOrder5.mmNegotiatedTrade, com.tools20022.repository.msg.RedemptionExecution5.mmNegotiatedTrade,
-					com.tools20022.repository.msg.RedemptionOrder7.mmNegotiatedTrade, com.tools20022.repository.msg.RedemptionOrder6.mmNegotiatedTrade, com.tools20022.repository.msg.RedemptionExecution6.mmNegotiatedTrade,
-					com.tools20022.repository.msg.RedemptionOrder8.mmNegotiatedTrade, com.tools20022.repository.msg.SubscriptionOrder5.mmNegotiatedTrade, com.tools20022.repository.msg.SubscriptionExecution5.mmNegotiatedTrade,
-					com.tools20022.repository.msg.SubscriptionOrder7.mmNegotiatedTrade, com.tools20022.repository.msg.SubscriptionOrder6.mmNegotiatedTrade, com.tools20022.repository.msg.SubscriptionExecution6.mmNegotiatedTrade,
-					com.tools20022.repository.msg.SubscriptionOrder8.mmNegotiatedTrade, com.tools20022.repository.msg.SwitchOrder3.mmNegotiatedTrade, com.tools20022.repository.msg.SwitchExecution4.mmNegotiatedTrade,
-					com.tools20022.repository.msg.SwitchOrder4.mmNegotiatedTrade, com.tools20022.repository.msg.SwitchExecution7.mmNegotiatedTrade, com.tools20022.repository.msg.SwitchOrder7.mmNegotiatedTrade,
-					com.tools20022.repository.msg.RedemptionOrder14.mmNegotiatedTrade, com.tools20022.repository.msg.SubscriptionExecution13.mmNegotiatedTrade, com.tools20022.repository.msg.SubscriptionExecution12.mmNegotiatedTrade,
-					com.tools20022.repository.msg.SubscriptionOrder15.mmNegotiatedTrade, com.tools20022.repository.msg.RedemptionOrder15.mmNegotiatedTrade, com.tools20022.repository.msg.RedemptionExecution16.mmNegotiatedTrade,
-					com.tools20022.repository.msg.SubscriptionOrder14.mmNegotiatedTrade, com.tools20022.repository.msg.RedemptionExecution15.mmNegotiatedTrade);
+			derivation_lazy = () -> Arrays.asList(RedemptionOrder5.mmNegotiatedTrade, RedemptionExecution5.mmNegotiatedTrade, RedemptionOrder7.mmNegotiatedTrade, RedemptionOrder6.mmNegotiatedTrade, RedemptionExecution6.mmNegotiatedTrade,
+					RedemptionOrder8.mmNegotiatedTrade, SubscriptionOrder5.mmNegotiatedTrade, SubscriptionExecution5.mmNegotiatedTrade, SubscriptionOrder7.mmNegotiatedTrade, SubscriptionOrder6.mmNegotiatedTrade,
+					SubscriptionExecution6.mmNegotiatedTrade, SubscriptionOrder8.mmNegotiatedTrade, SwitchOrder3.mmNegotiatedTrade, SwitchExecution4.mmNegotiatedTrade, SwitchOrder4.mmNegotiatedTrade, SwitchExecution7.mmNegotiatedTrade,
+					SwitchOrder7.mmNegotiatedTrade, RedemptionOrder14.mmNegotiatedTrade, SubscriptionExecution13.mmNegotiatedTrade, SubscriptionExecution12.mmNegotiatedTrade, SubscriptionOrder15.mmNegotiatedTrade,
+					RedemptionOrder15.mmNegotiatedTrade, RedemptionExecution16.mmNegotiatedTrade, SubscriptionOrder14.mmNegotiatedTrade, RedemptionExecution15.mmNegotiatedTrade);
 			elementContext_lazy = () -> InvestmentFundOrder.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NegotiatedTrade";
 			definition = "Specifies whether the trade is negotiated.";
 			maxOccurs = 1;
@@ -2507,12 +2425,11 @@ public class InvestmentFundOrder extends SecuritiesOrder {
 	 */
 	public static final MMBusinessAttribute mmHoldingsRate = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.FinancialInstrumentQuantity11Choice.mmHoldingsRate, com.tools20022.repository.msg.SidePocketQuantityAndAmount1.mmHoldingsRate,
-					com.tools20022.repository.choice.FinancialInstrumentQuantity10Choice.mmHoldingsRate, com.tools20022.repository.choice.SidePocketUnitsOrAmountOrRate1Choice.mmHoldingsRate,
-					com.tools20022.repository.choice.FinancialInstrumentQuantity8Choice.mmHoldingsRate, com.tools20022.repository.choice.FinancialInstrumentQuantity12Choice.mmHoldingsRate);
+			derivation_lazy = () -> Arrays.asList(FinancialInstrumentQuantity11Choice.mmHoldingsRate, SidePocketQuantityAndAmount1.mmHoldingsRate, FinancialInstrumentQuantity10Choice.mmHoldingsRate,
+					SidePocketUnitsOrAmountOrRate1Choice.mmHoldingsRate, FinancialInstrumentQuantity8Choice.mmHoldingsRate, FinancialInstrumentQuantity12Choice.mmHoldingsRate);
 			elementContext_lazy = () -> InvestmentFundOrder.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "HoldingsRate";
 			definition = "Percentage of the financial quantity to be invested or redeemed.";
 			maxOccurs = 1;
@@ -2612,16 +2529,13 @@ public class InvestmentFundOrder extends SecuritiesOrder {
 	 */
 	public static final MMBusinessAttribute mmOrderWaiverReason = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.OrderWaiverReason1Choice.mmReason, com.tools20022.repository.choice.OrderWaiverReason1Choice.mmProprietary,
-					com.tools20022.repository.msg.AdditionalInformation2.mmOrderWaiverReason, com.tools20022.repository.msg.RedemptionOrder9.mmOrderWaiverDetails, com.tools20022.repository.msg.SubscriptionOrder9.mmOrderWaiverDetails,
-					com.tools20022.repository.msg.SwitchExecution7.mmOrderWaiverDetails, com.tools20022.repository.msg.SwitchOrder7.mmOrderWaiverDetails, com.tools20022.repository.msg.RedemptionOrder14.mmOrderWaiverDetails,
-					com.tools20022.repository.msg.SubscriptionExecution13.mmOrderWaiverDetails, com.tools20022.repository.msg.OrderWaiver1.mmOrderWaiverReason, com.tools20022.repository.msg.SubscriptionExecution12.mmOrderWaiverDetails,
-					com.tools20022.repository.msg.SubscriptionOrder15.mmOrderWaiverDetails, com.tools20022.repository.choice.OrderWaiverReason3Choice.mmCode, com.tools20022.repository.choice.OrderWaiverReason3Choice.mmProprietary,
-					com.tools20022.repository.msg.RedemptionOrder15.mmOrderWaiverDetails, com.tools20022.repository.msg.RedemptionExecution16.mmOrderWaiverDetails, com.tools20022.repository.msg.SubscriptionOrder14.mmOrderWaiverDetails,
-					com.tools20022.repository.msg.RedemptionExecution15.mmOrderWaiverDetails);
+			derivation_lazy = () -> Arrays.asList(OrderWaiverReason1Choice.mmReason, OrderWaiverReason1Choice.mmProprietary, AdditionalInformation2.mmOrderWaiverReason, RedemptionOrder9.mmOrderWaiverDetails,
+					SubscriptionOrder9.mmOrderWaiverDetails, SwitchExecution7.mmOrderWaiverDetails, SwitchOrder7.mmOrderWaiverDetails, RedemptionOrder14.mmOrderWaiverDetails, SubscriptionExecution13.mmOrderWaiverDetails,
+					OrderWaiver1.mmOrderWaiverReason, SubscriptionExecution12.mmOrderWaiverDetails, SubscriptionOrder15.mmOrderWaiverDetails, OrderWaiverReason3Choice.mmCode, OrderWaiverReason3Choice.mmProprietary,
+					RedemptionOrder15.mmOrderWaiverDetails, RedemptionExecution16.mmOrderWaiverDetails, SubscriptionOrder14.mmOrderWaiverDetails, RedemptionExecution15.mmOrderWaiverDetails);
 			elementContext_lazy = () -> InvestmentFundOrder.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "OrderWaiverReason";
 			definition = "Reason why an order has to be handled differently, probably in a manual fashion, because for example, the investment manager has agreed a waiver to the extended terms.";
 			maxOccurs = 1;
@@ -2667,10 +2581,10 @@ public class InvestmentFundOrder extends SecuritiesOrder {
 	 */
 	public static final MMBusinessAttribute mmInitialOrderIndicator = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SubscriptionOrder9.mmInitialOrderIndicator);
+			derivation_lazy = () -> Arrays.asList(SubscriptionOrder9.mmInitialOrderIndicator);
 			elementContext_lazy = () -> InvestmentFundOrder.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InitialOrderIndicator";
 			definition = "Indicates whether the subscription order is an initial order.";
 			maxOccurs = 1;
@@ -2711,7 +2625,7 @@ public class InvestmentFundOrder extends SecuritiesOrder {
 		{
 			elementContext_lazy = () -> InvestmentFundOrder.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "OrderBookingDate";
 			definition = "Date and time an investment fund order is registered on the books of either the fund or its designated agent, eg, transfer agent.";
 			maxOccurs = 1;
@@ -2757,13 +2671,13 @@ public class InvestmentFundOrder extends SecuritiesOrder {
 		{
 			elementContext_lazy = () -> InvestmentFundOrder.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InvestmentPlan";
 			definition = "Investment plan which triggers the standing orders.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.InvestmentPlan.mmStandingOrder;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.InvestmentPlan.mmObject();
 		}
 	};
@@ -2824,17 +2738,16 @@ public class InvestmentFundOrder extends SecuritiesOrder {
 	 */
 	public static final MMBusinessAssociationEnd mmOrderStatus = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IndividualOrderConfirmationStatusAndReason1.mmConfirmationRejected,
-					com.tools20022.repository.msg.IndividualOrderConfirmationStatusAndReason1.mmAmendmentRejected, com.tools20022.repository.msg.SwitchLegReferences1.mmRepairedConditions,
-					com.tools20022.repository.msg.SwitchOrderStatusAndReason1.mmRejected, com.tools20022.repository.msg.SwitchOrderStatusAndReason1.mmInRepair);
+			derivation_lazy = () -> Arrays.asList(IndividualOrderConfirmationStatusAndReason1.mmConfirmationRejected, IndividualOrderConfirmationStatusAndReason1.mmAmendmentRejected, SwitchLegReferences1.mmRepairedConditions,
+					SwitchOrderStatusAndReason1.mmRejected, SwitchOrderStatusAndReason1.mmInRepair);
 			elementContext_lazy = () -> InvestmentFundOrder.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "OrderStatus";
 			definition = "Status of an investment fund order.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesOrderStatus.mmInvestmentFundOrder;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SecuritiesOrderStatus.mmObject();
 		}
 	};
@@ -2878,10 +2791,10 @@ public class InvestmentFundOrder extends SecuritiesOrder {
 	 */
 	public static final MMBusinessAttribute mmTotalAmount = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SubscriptionInformation.mmTotalAmountYearToDate, com.tools20022.repository.msg.SubscriptionInformation1.mmTotalAmountYearToDate);
+			derivation_lazy = () -> Arrays.asList(SubscriptionInformation.mmTotalAmountYearToDate, SubscriptionInformation1.mmTotalAmountYearToDate);
 			elementContext_lazy = () -> InvestmentFundOrder.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TotalAmount";
 			definition = "Total amount subscribed in the current tax year.";
 			maxOccurs = 1;
@@ -2893,25 +2806,21 @@ public class InvestmentFundOrder extends SecuritiesOrder {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InvestmentFundOrder";
 				definition = "An investor's instruction to either subscribe or redeem an amount of money or its equivalent, for example other assets, into or out of an investment fund.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.InvestmentPlan.mmStandingOrder, com.tools20022.repository.entity.SecuritiesQuantity.mmOrder,
 						com.tools20022.repository.entity.InvestmentFundTransaction.mmInvestmentFundOrder, com.tools20022.repository.entity.InvestmentFundOrderExecution.mmOrder,
 						com.tools20022.repository.entity.SecuritiesOrderStatus.mmInvestmentFundOrder);
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BlockedStatusReason2.mmTransactionType);
+				derivationElement_lazy = () -> Arrays.asList(BlockedStatusReason2.mmTransactionType);
 				subType_lazy = () -> Arrays.asList(RedemptionOrder.mmObject(), SwitchOrder.mmObject(), SubscriptionOrder.mmObject());
 				superType_lazy = () -> SecuritiesOrder.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.InvestmentFundOrder.mmGrossAmountIndicator, com.tools20022.repository.entity.InvestmentFundOrder.mmRelatedTransaction,
-						com.tools20022.repository.entity.InvestmentFundOrder.mmOrderType, com.tools20022.repository.entity.InvestmentFundOrder.mmGrossAmount, com.tools20022.repository.entity.InvestmentFundOrder.mmUnitsNumber,
-						com.tools20022.repository.entity.InvestmentFundOrder.mmInvestmentFundOrderExecution, com.tools20022.repository.entity.InvestmentFundOrder.mmNetAmount,
-						com.tools20022.repository.entity.InvestmentFundOrder.mmOrderDateTime, com.tools20022.repository.entity.InvestmentFundOrder.mmExpiryDateTime, com.tools20022.repository.entity.InvestmentFundOrder.mmCancellationRight,
-						com.tools20022.repository.entity.InvestmentFundOrder.mmRequestedSettlementCurrency, com.tools20022.repository.entity.InvestmentFundOrder.mmRequestedExecutionDateTime,
-						com.tools20022.repository.entity.InvestmentFundOrder.mmFinancialAdvice, com.tools20022.repository.entity.InvestmentFundOrder.mmNegotiatedTrade, com.tools20022.repository.entity.InvestmentFundOrder.mmHoldingsRate,
-						com.tools20022.repository.entity.InvestmentFundOrder.mmOrderWaiverReason, com.tools20022.repository.entity.InvestmentFundOrder.mmInitialOrderIndicator,
-						com.tools20022.repository.entity.InvestmentFundOrder.mmOrderBookingDate, com.tools20022.repository.entity.InvestmentFundOrder.mmInvestmentPlan, com.tools20022.repository.entity.InvestmentFundOrder.mmOrderStatus,
-						com.tools20022.repository.entity.InvestmentFundOrder.mmTotalAmount);
+				element_lazy = () -> Arrays.asList(InvestmentFundOrder.mmGrossAmountIndicator, InvestmentFundOrder.mmRelatedTransaction, InvestmentFundOrder.mmOrderType, InvestmentFundOrder.mmGrossAmount, InvestmentFundOrder.mmUnitsNumber,
+						InvestmentFundOrder.mmInvestmentFundOrderExecution, InvestmentFundOrder.mmNetAmount, InvestmentFundOrder.mmOrderDateTime, InvestmentFundOrder.mmExpiryDateTime, InvestmentFundOrder.mmCancellationRight,
+						InvestmentFundOrder.mmRequestedSettlementCurrency, InvestmentFundOrder.mmRequestedExecutionDateTime, InvestmentFundOrder.mmFinancialAdvice, InvestmentFundOrder.mmNegotiatedTrade, InvestmentFundOrder.mmHoldingsRate,
+						InvestmentFundOrder.mmOrderWaiverReason, InvestmentFundOrder.mmInitialOrderIndicator, InvestmentFundOrder.mmOrderBookingDate, InvestmentFundOrder.mmInvestmentPlan, InvestmentFundOrder.mmOrderStatus,
+						InvestmentFundOrder.mmTotalAmount);
 				derivationComponent_lazy = () -> Arrays.asList(InvestmentFundOrder4.mmObject(), FundOrderType1.mmObject(), FundOrderType1Choice.mmObject(), TransferReference3.mmObject(), TransferReference2.mmObject(),
 						TransferReference1.mmObject(), OriginalOrderQuantityType1.mmObject(), IndividualOrderConfirmationStatusAndReason1.mmObject(), FundOrderData1.mmObject(), SwitchLegReferences1.mmObject(),
 						InvestmentFundOrder5.mmObject(), InvestmentFundOrder1.mmObject(), FundOrderType2.mmObject(), InvestmentFundsOrderBreakdown1.mmObject(), FundOrderType3.mmObject(), OrderConfirmationDetails1.mmObject(),

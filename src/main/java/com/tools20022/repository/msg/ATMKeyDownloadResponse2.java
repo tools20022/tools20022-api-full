@@ -20,7 +20,10 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.caam.ATMKeyDownloadResponseV02;
 import com.tools20022.repository.datatype.Max140Binary;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -113,7 +116,7 @@ public class ATMKeyDownloadResponse2 {
 			componentContext_lazy = () -> ATMKeyDownloadResponse2.mmObject();
 			isDerived = false;
 			xmlTag = "Envt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Environment";
 			definition = "Environment of the key download.";
 			maxOccurs = 1;
@@ -154,7 +157,7 @@ public class ATMKeyDownloadResponse2 {
 			componentContext_lazy = () -> ATMKeyDownloadResponse2.mmObject();
 			isDerived = false;
 			xmlTag = "ATMSctyCntxt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ATMSecurityContext";
 			definition = "Context of the ATM for the key download.";
 			maxOccurs = 1;
@@ -198,7 +201,7 @@ public class ATMKeyDownloadResponse2 {
 			componentContext_lazy = () -> ATMKeyDownloadResponse2.mmObject();
 			isDerived = false;
 			xmlTag = "ATMChllng";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ATMChallenge";
 			definition = "Random value from the ATM provided during a previous exchange.";
 			maxOccurs = 1;
@@ -238,7 +241,7 @@ public class ATMKeyDownloadResponse2 {
 			componentContext_lazy = () -> ATMKeyDownloadResponse2.mmObject();
 			isDerived = false;
 			xmlTag = "HstSctyParams";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HostSecurityParameters";
 			definition = "Security parameters of the host downloading the key.";
 			maxOccurs = 1;
@@ -279,7 +282,7 @@ public class ATMKeyDownloadResponse2 {
 			componentContext_lazy = () -> ATMKeyDownloadResponse2.mmObject();
 			isDerived = false;
 			xmlTag = "Cmd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Command";
 			definition = "Maintenance command to perform on the ATM.";
 			minOccurs = 0;
@@ -291,11 +294,11 @@ public class ATMKeyDownloadResponse2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMKeyDownloadResponse2.mmEnvironment, com.tools20022.repository.msg.ATMKeyDownloadResponse2.mmATMSecurityContext,
-						com.tools20022.repository.msg.ATMKeyDownloadResponse2.mmATMChallenge, com.tools20022.repository.msg.ATMKeyDownloadResponse2.mmHostSecurityParameters, com.tools20022.repository.msg.ATMKeyDownloadResponse2.mmCommand);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.caam.ATMKeyDownloadResponseV02.mmATMKeyDownloadResponse);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(ATMKeyDownloadResponse2.mmEnvironment, ATMKeyDownloadResponse2.mmATMSecurityContext, ATMKeyDownloadResponse2.mmATMChallenge, ATMKeyDownloadResponse2.mmHostSecurityParameters,
+						ATMKeyDownloadResponse2.mmCommand);
+				messageBuildingBlock_lazy = () -> Arrays.asList(ATMKeyDownloadResponseV02.mmATMKeyDownloadResponse);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ATMKeyDownloadResponse2";
 				definition = "Information related to the response of an ATM key download from an ATM manager.";
 			}

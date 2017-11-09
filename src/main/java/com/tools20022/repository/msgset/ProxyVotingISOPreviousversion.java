@@ -18,7 +18,9 @@
 package com.tools20022.repository.msgset;
 
 import com.tools20022.metamodel.MMMessageSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.seev.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -80,8 +82,8 @@ public class ProxyVotingISOPreviousversion {
 	final static public MMMessageSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageSet() {
 			{
-				businessProcessCatalogue_lazy = () -> com.tools20022.repository.GeneratedRepository.mmcatalogue;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				businessProcessCatalogue_lazy = () -> GeneratedRepository.mmcatalogue;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Proxy Voting - ISO - Previous version";
 				definition = "Set of messages used by parties involved in the organisation of a shareholders meeting. It covers the complete end to end flow of messages between the issuer and its agent and the parties holding the right to vote, through a certain number of intermediaries.\r\n";
 				messageDefinition_lazy = () -> Arrays.asList(MeetingNotificationV04.mmObject(), MeetingCancellationV04.mmObject(), MeetingEntitlementNotificationV04.mmObject(), MeetingInstructionV04.mmObject(),

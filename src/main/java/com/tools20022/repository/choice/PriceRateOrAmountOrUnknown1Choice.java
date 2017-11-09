@@ -19,10 +19,12 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.PercentageRate;
 import com.tools20022.repository.datatype.RestrictedFINActiveOrHistoricCurrencyAnd13DecimalAmount;
 import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.SecuritiesPricing;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -103,11 +105,11 @@ public class PriceRateOrAmountOrUnknown1Choice {
 	 */
 	public static final MMMessageAttribute mmRate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmRate;
+			businessElementTrace_lazy = () -> SecuritiesPricing.mmRate;
 			componentContext_lazy = () -> PriceRateOrAmountOrUnknown1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Rate";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rate";
 			definition = "Price expressed as a rate, ie, percentage.";
 			maxOccurs = 1;
@@ -151,11 +153,11 @@ public class PriceRateOrAmountOrUnknown1Choice {
 	 */
 	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmPrice;
+			businessElementTrace_lazy = () -> SecuritiesPricing.mmPrice;
 			componentContext_lazy = () -> PriceRateOrAmountOrUnknown1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Amt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Price expressed as a currency and value.";
 			maxOccurs = 1;
@@ -197,7 +199,7 @@ public class PriceRateOrAmountOrUnknown1Choice {
 			componentContext_lazy = () -> PriceRateOrAmountOrUnknown1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "UknwnInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnknownIndicator";
 			definition = "Indicates whether the market price is unknown.";
 			maxOccurs = 1;
@@ -209,11 +211,10 @@ public class PriceRateOrAmountOrUnknown1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PriceRateOrAmountOrUnknown1Choice.mmRate, com.tools20022.repository.choice.PriceRateOrAmountOrUnknown1Choice.mmAmount,
-						com.tools20022.repository.choice.PriceRateOrAmountOrUnknown1Choice.mmUnknownIndicator);
+				messageElement_lazy = () -> Arrays.asList(PriceRateOrAmountOrUnknown1Choice.mmRate, PriceRateOrAmountOrUnknown1Choice.mmAmount, PriceRateOrAmountOrUnknown1Choice.mmUnknownIndicator);
 				trace_lazy = () -> SecuritiesPricing.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PriceRateOrAmountOrUnknown1Choice";
 				definition = "Choice of formats for the price.";
 			}

@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CorporateActionReversalReasonCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -107,7 +109,7 @@ public class CorporateActionReversalReason1Code extends CorporateActionReversalR
 	 */
 	public static final MMCode mmDayCountBasisDifference = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DayCountBasisDifference";
 			owner_lazy = () -> CorporateActionReversalReason1Code.mmObject();
 		}
@@ -130,7 +132,7 @@ public class CorporateActionReversalReason1Code extends CorporateActionReversalR
 	 */
 	public static final MMCode mmIncorrectValueDate = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncorrectValueDate";
 			owner_lazy = () -> CorporateActionReversalReason1Code.mmObject();
 		}
@@ -153,7 +155,7 @@ public class CorporateActionReversalReason1Code extends CorporateActionReversalR
 	 */
 	public static final MMCode mmIncorrectRecordDate = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncorrectRecordDate";
 			owner_lazy = () -> CorporateActionReversalReason1Code.mmObject();
 		}
@@ -176,7 +178,7 @@ public class CorporateActionReversalReason1Code extends CorporateActionReversalR
 	 */
 	public static final MMCode mmIncorrectPrice = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncorrectPrice";
 			owner_lazy = () -> CorporateActionReversalReason1Code.mmObject();
 		}
@@ -199,7 +201,7 @@ public class CorporateActionReversalReason1Code extends CorporateActionReversalR
 	 */
 	public static final MMCode mmUnduePayment = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnduePayment";
 			owner_lazy = () -> CorporateActionReversalReason1Code.mmObject();
 		}
@@ -222,7 +224,7 @@ public class CorporateActionReversalReason1Code extends CorporateActionReversalR
 	 */
 	public static final MMCode mmIncorrectEventLevelTaxRate = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncorrectEventLevelTaxRate";
 			owner_lazy = () -> CorporateActionReversalReason1Code.mmObject();
 		}
@@ -245,7 +247,7 @@ public class CorporateActionReversalReason1Code extends CorporateActionReversalR
 	 */
 	public static final MMCode mmFundsNotReceived = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FundsNotReceived";
 			owner_lazy = () -> CorporateActionReversalReason1Code.mmObject();
 		}
@@ -268,7 +270,7 @@ public class CorporateActionReversalReason1Code extends CorporateActionReversalR
 	 */
 	public static final MMCode mmPaymentOutsideClearingSystem = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentOutsideClearingSystem";
 			owner_lazy = () -> CorporateActionReversalReason1Code.mmObject();
 		}
@@ -291,7 +293,7 @@ public class CorporateActionReversalReason1Code extends CorporateActionReversalR
 	 */
 	public static final MMCode mmIncorrectPaymentCurrency = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncorrectPaymentCurrency";
 			owner_lazy = () -> CorporateActionReversalReason1Code.mmObject();
 		}
@@ -300,16 +302,14 @@ public class CorporateActionReversalReason1Code extends CorporateActionReversalR
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("DCBD");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionReversalReason1Code";
 				definition = "The reason why a reversal of payment is taking place in corporate action processing.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CorporateActionReversalReason1Code.mmDayCountBasisDifference, com.tools20022.repository.codeset.CorporateActionReversalReason1Code.mmIncorrectValueDate,
-						com.tools20022.repository.codeset.CorporateActionReversalReason1Code.mmIncorrectRecordDate, com.tools20022.repository.codeset.CorporateActionReversalReason1Code.mmIncorrectPrice,
-						com.tools20022.repository.codeset.CorporateActionReversalReason1Code.mmUnduePayment, com.tools20022.repository.codeset.CorporateActionReversalReason1Code.mmIncorrectEventLevelTaxRate,
-						com.tools20022.repository.codeset.CorporateActionReversalReason1Code.mmFundsNotReceived, com.tools20022.repository.codeset.CorporateActionReversalReason1Code.mmPaymentOutsideClearingSystem,
-						com.tools20022.repository.codeset.CorporateActionReversalReason1Code.mmIncorrectPaymentCurrency);
+				code_lazy = () -> Arrays.asList(CorporateActionReversalReason1Code.mmDayCountBasisDifference, CorporateActionReversalReason1Code.mmIncorrectValueDate, CorporateActionReversalReason1Code.mmIncorrectRecordDate,
+						CorporateActionReversalReason1Code.mmIncorrectPrice, CorporateActionReversalReason1Code.mmUnduePayment, CorporateActionReversalReason1Code.mmIncorrectEventLevelTaxRate,
+						CorporateActionReversalReason1Code.mmFundsNotReceived, CorporateActionReversalReason1Code.mmPaymentOutsideClearingSystem, CorporateActionReversalReason1Code.mmIncorrectPaymentCurrency);
 				trace_lazy = () -> CorporateActionReversalReasonCode.mmObject();
 			}
 		});

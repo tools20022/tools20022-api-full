@@ -19,11 +19,15 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.FinancialInstrumentQuantity1Choice;
 import com.tools20022.repository.choice.UnitOrFaceAmountChoice;
 import com.tools20022.repository.datatype.MICIdentifier;
 import com.tools20022.repository.datatype.Number;
+import com.tools20022.repository.entity.OrganisationIdentification;
+import com.tools20022.repository.entity.Security;
 import com.tools20022.repository.entity.TradingMarket;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -123,11 +127,11 @@ public class TradingParameters1 {
 	 */
 	public static final MMMessageAttribute mmMarketIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.mmMIC;
+			businessElementTrace_lazy = () -> OrganisationIdentification.mmMIC;
 			componentContext_lazy = () -> TradingParameters1.mmObject();
 			isDerived = false;
 			xmlTag = "MktId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketIdentification";
 			definition = "Code allocated to places of trade, ie, stock exchanges, regulated markets, for example, Electronic Trading Platforms (ECN), and unregulated markets, for example, Automated Trading Systems (ATS) (MIC - ISO 3166).";
 			maxOccurs = 1;
@@ -176,11 +180,11 @@ public class TradingParameters1 {
 	 */
 	public static final MMMessageAttribute mmRoundLot = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradingMarket.mmRoundLot;
+			businessElementTrace_lazy = () -> TradingMarket.mmRoundLot;
 			componentContext_lazy = () -> TradingParameters1.mmObject();
 			isDerived = false;
 			xmlTag = "RndLot";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RoundLot";
 			definition = "Minimum quantity of securities that can be purchased without incurring a larger fee. For example, if the round lot size is 100 and the trade is for 125  shares, then 100 will be processed without a fee and the remaining 25 will incur a service fee for being an odd lot size.";
 			maxOccurs = 1;
@@ -224,11 +228,11 @@ public class TradingParameters1 {
 	 */
 	public static final MMMessageAttribute mmTradeLotSize = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradingMarket.mmTradeLotSize;
+			businessElementTrace_lazy = () -> TradingMarket.mmTradeLotSize;
 			componentContext_lazy = () -> TradingParameters1.mmObject();
 			isDerived = false;
 			xmlTag = "TradLotSz";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeLotSize";
 			definition = "Minimum number of securities that can be traded.";
 			maxOccurs = 1;
@@ -272,11 +276,11 @@ public class TradingParameters1 {
 	 */
 	public static final MMMessageAttribute mmSecondaryPlaceOfListing = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmPlaceOfListing;
+			businessElementTrace_lazy = () -> Security.mmPlaceOfListing;
 			componentContext_lazy = () -> TradingParameters1.mmObject();
 			isDerived = false;
 			xmlTag = "ScndryPlcOfListg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecondaryPlaceOfListing";
 			definition = "Market(s) on which the security is listed.";
 			maxOccurs = 5;
@@ -320,11 +324,11 @@ public class TradingParameters1 {
 	 */
 	public static final MMMessageAttribute mmMinimumTradedNominalQuantity = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradingMarket.mmMinimumTradedNominalQuantity;
+			businessElementTrace_lazy = () -> TradingMarket.mmMinimumTradedNominalQuantity;
 			componentContext_lazy = () -> TradingParameters1.mmObject();
 			isDerived = false;
 			xmlTag = "MinTraddNmnlQty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MinimumTradedNominalQuantity";
 			definition = "Minimum number of securities that can be traded.";
 			maxOccurs = 1;
@@ -368,11 +372,11 @@ public class TradingParameters1 {
 	 */
 	public static final MMMessageAttribute mmMaximumTradedNominalQuantity = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradingMarket.mmMaximumTradedNominalQuantity;
+			businessElementTrace_lazy = () -> TradingMarket.mmMaximumTradedNominalQuantity;
 			componentContext_lazy = () -> TradingParameters1.mmObject();
 			isDerived = false;
 			xmlTag = "MaxTraddNmnlQty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaximumTradedNominalQuantity";
 			definition = "Maximum number of securities that can be traded.";
 			maxOccurs = 1;
@@ -418,11 +422,11 @@ public class TradingParameters1 {
 	 */
 	public static final MMMessageAttribute mmMinimumTradingPricingIncrement = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmMinimumTradingPricingIncrement;
+			businessElementTrace_lazy = () -> Security.mmMinimumTradingPricingIncrement;
 			componentContext_lazy = () -> TradingParameters1.mmObject();
 			isDerived = false;
 			xmlTag = "MinTradgPricgIncrmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MinimumTradingPricingIncrement";
 			definition = "Indicates the minimum or smallest movement (up or down) in the price allowed for the security.";
 			maxOccurs = 1;
@@ -466,11 +470,11 @@ public class TradingParameters1 {
 	 */
 	public static final MMMessageAttribute mmPrimaryPlaceOfListingIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmPlaceOfListing;
+			businessElementTrace_lazy = () -> Security.mmPlaceOfListing;
 			componentContext_lazy = () -> TradingParameters1.mmObject();
 			isDerived = false;
 			xmlTag = "PmryPlcOfListgId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PrimaryPlaceOfListingIdentification";
 			definition = "Market(s) on which the security is listed.";
 			maxOccurs = 1;
@@ -482,13 +486,11 @@ public class TradingParameters1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TradingParameters1.mmMarketIdentification, com.tools20022.repository.msg.TradingParameters1.mmRoundLot,
-						com.tools20022.repository.msg.TradingParameters1.mmTradeLotSize, com.tools20022.repository.msg.TradingParameters1.mmSecondaryPlaceOfListing,
-						com.tools20022.repository.msg.TradingParameters1.mmMinimumTradedNominalQuantity, com.tools20022.repository.msg.TradingParameters1.mmMaximumTradedNominalQuantity,
-						com.tools20022.repository.msg.TradingParameters1.mmMinimumTradingPricingIncrement, com.tools20022.repository.msg.TradingParameters1.mmPrimaryPlaceOfListingIdentification);
+				messageElement_lazy = () -> Arrays.asList(TradingParameters1.mmMarketIdentification, TradingParameters1.mmRoundLot, TradingParameters1.mmTradeLotSize, TradingParameters1.mmSecondaryPlaceOfListing,
+						TradingParameters1.mmMinimumTradedNominalQuantity, TradingParameters1.mmMaximumTradedNominalQuantity, TradingParameters1.mmMinimumTradingPricingIncrement, TradingParameters1.mmPrimaryPlaceOfListingIdentification);
 				trace_lazy = () -> TradingMarket.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "TradingParameters1";
 				definition = "Place at which the security is traded.";
 			}

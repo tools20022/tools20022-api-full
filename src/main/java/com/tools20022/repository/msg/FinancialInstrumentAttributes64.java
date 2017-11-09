@@ -20,10 +20,13 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.sese.*;
 import com.tools20022.repository.choice.*;
 import com.tools20022.repository.codeset.ActiveOrHistoricCurrencyCode;
 import com.tools20022.repository.datatype.*;
-import com.tools20022.repository.entity.Asset;
+import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -283,14 +286,14 @@ public class FinancialInstrumentAttributes64 {
 	 */
 	public static final MMMessageAssociationEnd mmPlaceOfListing = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmPlaceOfListing;
+			businessElementTrace_lazy = () -> Security.mmPlaceOfListing;
 			componentContext_lazy = () -> FinancialInstrumentAttributes64.mmObject();
 			isDerived = false;
 			xmlTag = "PlcOfListg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceOfListing";
 			definition = "Market(s) on which the security is listed.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributes35.mmPlaceOfListing;
+			previousVersion_lazy = () -> FinancialInstrumentAttributes35.mmPlaceOfListing;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -339,14 +342,14 @@ public class FinancialInstrumentAttributes64 {
 	 */
 	public static final MMMessageAssociationEnd mmDayCountBasis = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InterestCalculation.mmDayCountBasis;
+			businessElementTrace_lazy = () -> InterestCalculation.mmDayCountBasis;
 			componentContext_lazy = () -> FinancialInstrumentAttributes64.mmObject();
 			isDerived = false;
 			xmlTag = "DayCntBsis";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DayCountBasis";
 			definition = "Specifies the computation method of (accrued) interest of the security.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributes35.mmDayCountBasis;
+			previousVersion_lazy = () -> FinancialInstrumentAttributes35.mmDayCountBasis;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -393,14 +396,14 @@ public class FinancialInstrumentAttributes64 {
 	 */
 	public static final MMMessageAssociationEnd mmRegistrationForm = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmRegistrationForm;
+			businessElementTrace_lazy = () -> Security.mmRegistrationForm;
 			componentContext_lazy = () -> FinancialInstrumentAttributes64.mmObject();
 			isDerived = false;
 			xmlTag = "RegnForm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RegistrationForm";
 			definition = "Specifies the form, this is, ownership, of the security.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributes35.mmRegistrationForm;
+			previousVersion_lazy = () -> FinancialInstrumentAttributes35.mmRegistrationForm;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -446,14 +449,14 @@ public class FinancialInstrumentAttributes64 {
 	 */
 	public static final MMMessageAssociationEnd mmPaymentFrequency = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InterestCalculation.mmPaymentFrequency;
+			businessElementTrace_lazy = () -> InterestCalculation.mmPaymentFrequency;
 			componentContext_lazy = () -> FinancialInstrumentAttributes64.mmObject();
 			isDerived = false;
 			xmlTag = "PmtFrqcy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentFrequency";
 			definition = "Specifies the frequency of an interest payment.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributes35.mmPaymentFrequency;
+			previousVersion_lazy = () -> FinancialInstrumentAttributes35.mmPaymentFrequency;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -500,14 +503,14 @@ public class FinancialInstrumentAttributes64 {
 	 */
 	public static final MMMessageAssociationEnd mmPaymentStatus = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesStatus.mmPaymentStatus;
+			businessElementTrace_lazy = () -> SecuritiesStatus.mmPaymentStatus;
 			componentContext_lazy = () -> FinancialInstrumentAttributes64.mmObject();
 			isDerived = false;
 			xmlTag = "PmtSts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentStatus";
 			definition = "Status of payment of a security at a particular time.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributes35.mmPaymentStatus;
+			previousVersion_lazy = () -> FinancialInstrumentAttributes35.mmPaymentStatus;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -556,14 +559,14 @@ public class FinancialInstrumentAttributes64 {
 	 */
 	public static final MMMessageAssociationEnd mmVariableRateChangeFrequency = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.VariableInterest.mmVariableRateChangeFrequency;
+			businessElementTrace_lazy = () -> VariableInterest.mmVariableRateChangeFrequency;
 			componentContext_lazy = () -> FinancialInstrumentAttributes64.mmObject();
 			isDerived = false;
 			xmlTag = "VarblRateChngFrqcy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VariableRateChangeFrequency";
 			definition = "Specifies the frequency of change to the variable rate of an interest bearing instrument.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributes35.mmVariableRateChangeFrequency;
+			previousVersion_lazy = () -> FinancialInstrumentAttributes35.mmVariableRateChangeFrequency;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -614,14 +617,14 @@ public class FinancialInstrumentAttributes64 {
 	 */
 	public static final MMMessageAssociationEnd mmClassificationType = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AssetClassification.mmClassificationType;
+			businessElementTrace_lazy = () -> AssetClassification.mmClassificationType;
 			componentContext_lazy = () -> FinancialInstrumentAttributes64.mmObject();
 			isDerived = false;
 			xmlTag = "ClssfctnTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClassificationType";
 			definition = "Classification type of the financial instrument, as per the ISO Classification of Financial Instrument (CFI) codification, for example, common share with voting rights, fully paid, or registered.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributes35.mmClassificationType;
+			previousVersion_lazy = () -> FinancialInstrumentAttributes35.mmClassificationType;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -669,14 +672,14 @@ public class FinancialInstrumentAttributes64 {
 	 */
 	public static final MMMessageAssociationEnd mmOptionStyle = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Option.mmOptionStyle;
+			businessElementTrace_lazy = () -> Option.mmOptionStyle;
 			componentContext_lazy = () -> FinancialInstrumentAttributes64.mmObject();
 			isDerived = false;
 			xmlTag = "OptnStyle";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionStyle";
 			definition = "Specifies how an option can be exercised (American, European, Bermudan)";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributes35.mmOptionStyle;
+			previousVersion_lazy = () -> FinancialInstrumentAttributes35.mmOptionStyle;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -726,14 +729,14 @@ public class FinancialInstrumentAttributes64 {
 	 */
 	public static final MMMessageAssociationEnd mmOptionType = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Option.mmOptionType;
+			businessElementTrace_lazy = () -> Option.mmOptionType;
 			componentContext_lazy = () -> FinancialInstrumentAttributes64.mmObject();
 			isDerived = false;
 			xmlTag = "OptnTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionType";
 			definition = "Specifies whether it is a Call option (right to purchase a specific underlying asset) or a Put option (right to sell a specific underlying asset).";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributes35.mmOptionType;
+			previousVersion_lazy = () -> FinancialInstrumentAttributes35.mmOptionType;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -781,14 +784,14 @@ public class FinancialInstrumentAttributes64 {
 	 */
 	public static final MMMessageAttribute mmDenominationCurrency = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmDenominationCurrency;
+			businessElementTrace_lazy = () -> Security.mmDenominationCurrency;
 			componentContext_lazy = () -> FinancialInstrumentAttributes64.mmObject();
 			isDerived = false;
 			xmlTag = "DnmtnCcy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DenominationCurrency";
 			definition = "Currency in which a security is issued or redenominated.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributes35.mmDenominationCurrency;
+			previousVersion_lazy = () -> FinancialInstrumentAttributes35.mmDenominationCurrency;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyCode.mmObject();
@@ -835,14 +838,14 @@ public class FinancialInstrumentAttributes64 {
 	 */
 	public static final MMMessageAttribute mmCouponDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CouponAttached.mmDate;
+			businessElementTrace_lazy = () -> CouponAttached.mmDate;
 			componentContext_lazy = () -> FinancialInstrumentAttributes64.mmObject();
 			isDerived = false;
 			xmlTag = "CpnDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CouponDate";
 			definition = "Next payment date of an interest bearing financial instrument.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributes35.mmCouponDate;
+			previousVersion_lazy = () -> FinancialInstrumentAttributes35.mmCouponDate;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
@@ -888,14 +891,14 @@ public class FinancialInstrumentAttributes64 {
 	 */
 	public static final MMMessageAttribute mmExpiryDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Asset.mmExpiryDate;
+			businessElementTrace_lazy = () -> Asset.mmExpiryDate;
 			componentContext_lazy = () -> FinancialInstrumentAttributes64.mmObject();
 			isDerived = false;
 			xmlTag = "XpryDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExpiryDate";
 			definition = "Date on which a privilege expires.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributes35.mmExpiryDate;
+			previousVersion_lazy = () -> FinancialInstrumentAttributes35.mmExpiryDate;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
@@ -944,14 +947,14 @@ public class FinancialInstrumentAttributes64 {
 	 */
 	public static final MMMessageAttribute mmFloatingRateFixingDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.VariableInterest.mmFixingDate;
+			businessElementTrace_lazy = () -> VariableInterest.mmFixingDate;
 			componentContext_lazy = () -> FinancialInstrumentAttributes64.mmObject();
 			isDerived = false;
 			xmlTag = "FltgRateFxgDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FloatingRateFixingDate";
 			definition = "Date at which the interest rate of an interest bearing security will be calculated and reset, according to the terms of the issue.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributes35.mmFloatingRateFixingDate;
+			previousVersion_lazy = () -> FinancialInstrumentAttributes35.mmFloatingRateFixingDate;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
@@ -997,14 +1000,14 @@ public class FinancialInstrumentAttributes64 {
 	 */
 	public static final MMMessageAttribute mmMaturityDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Asset.mmMaturityDate;
+			businessElementTrace_lazy = () -> Asset.mmMaturityDate;
 			componentContext_lazy = () -> FinancialInstrumentAttributes64.mmObject();
 			isDerived = false;
 			xmlTag = "MtrtyDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaturityDate";
 			definition = "Planned final repayment date at the time of issuance.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributes35.mmMaturityDate;
+			previousVersion_lazy = () -> FinancialInstrumentAttributes35.mmMaturityDate;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
@@ -1050,14 +1053,14 @@ public class FinancialInstrumentAttributes64 {
 	 */
 	public static final MMMessageAttribute mmIssueDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Issuance.mmIssueDate;
+			businessElementTrace_lazy = () -> Issuance.mmIssueDate;
 			componentContext_lazy = () -> FinancialInstrumentAttributes64.mmObject();
 			isDerived = false;
 			xmlTag = "IsseDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssueDate";
 			definition = "Date at which the security was made available.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributes35.mmIssueDate;
+			previousVersion_lazy = () -> FinancialInstrumentAttributes35.mmIssueDate;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
@@ -1106,14 +1109,14 @@ public class FinancialInstrumentAttributes64 {
 	 */
 	public static final MMMessageAttribute mmNextCallableDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Debt.mmNextCallableDate;
+			businessElementTrace_lazy = () -> Debt.mmNextCallableDate;
 			componentContext_lazy = () -> FinancialInstrumentAttributes64.mmObject();
 			isDerived = false;
 			xmlTag = "NxtCllblDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NextCallableDate";
 			definition = "Next date at which the issuer has the right to pay the security prior to maturity.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributes35.mmNextCallableDate;
+			previousVersion_lazy = () -> FinancialInstrumentAttributes35.mmNextCallableDate;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
@@ -1162,14 +1165,14 @@ public class FinancialInstrumentAttributes64 {
 	 */
 	public static final MMMessageAttribute mmPutableDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Debt.mmPutableDate;
+			businessElementTrace_lazy = () -> Debt.mmPutableDate;
 			componentContext_lazy = () -> FinancialInstrumentAttributes64.mmObject();
 			isDerived = false;
 			xmlTag = "PutblDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PutableDate";
 			definition = "Date at which the holder has the right to ask for redemption of the security prior to final maturity.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributes35.mmPutableDate;
+			previousVersion_lazy = () -> FinancialInstrumentAttributes35.mmPutableDate;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
@@ -1216,14 +1219,14 @@ public class FinancialInstrumentAttributes64 {
 	 */
 	public static final MMMessageAttribute mmDatedDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Debt.mmDatedDate;
+			businessElementTrace_lazy = () -> Debt.mmDatedDate;
 			componentContext_lazy = () -> FinancialInstrumentAttributes64.mmObject();
 			isDerived = false;
 			xmlTag = "DtdDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DatedDate";
 			definition = "First date at which a security begins to accrue interest.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributes35.mmDatedDate;
+			previousVersion_lazy = () -> FinancialInstrumentAttributes35.mmDatedDate;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
@@ -1272,14 +1275,14 @@ public class FinancialInstrumentAttributes64 {
 	 */
 	public static final MMMessageAttribute mmFirstPaymentDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Debt.mmFirstPaymentDate;
+			businessElementTrace_lazy = () -> Debt.mmFirstPaymentDate;
 			componentContext_lazy = () -> FinancialInstrumentAttributes64.mmObject();
 			isDerived = false;
 			xmlTag = "FrstPmtDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FirstPaymentDate";
 			definition = "Date at which the first interest payment is due to holders of the security.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributes35.mmFirstPaymentDate;
+			previousVersion_lazy = () -> FinancialInstrumentAttributes35.mmFirstPaymentDate;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
@@ -1329,14 +1332,14 @@ public class FinancialInstrumentAttributes64 {
 	 */
 	public static final MMMessageAttribute mmPreviousFactor = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Debt.mmFactor;
+			businessElementTrace_lazy = () -> Debt.mmFactor;
 			componentContext_lazy = () -> FinancialInstrumentAttributes64.mmObject();
 			isDerived = false;
 			xmlTag = "PrvsFctr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousFactor";
 			definition = "Rate expressed as a decimal between 0 and 1 that was applicable before the current factor and defines the outstanding principal of the financial instrument (for factored securities).";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributes35.mmPreviousFactor;
+			previousVersion_lazy = () -> FinancialInstrumentAttributes35.mmPreviousFactor;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> BaseOneRate.mmObject();
@@ -1385,14 +1388,14 @@ public class FinancialInstrumentAttributes64 {
 	 */
 	public static final MMMessageAttribute mmCurrentFactor = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Debt.mmFactor;
+			businessElementTrace_lazy = () -> Debt.mmFactor;
 			componentContext_lazy = () -> FinancialInstrumentAttributes64.mmObject();
 			isDerived = false;
 			xmlTag = "CurFctr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrentFactor";
 			definition = "Rate expressed as a decimal between 0 and 1 defining the outstanding principal of the financial instrument (for factored securities).";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributes35.mmCurrentFactor;
+			previousVersion_lazy = () -> FinancialInstrumentAttributes35.mmCurrentFactor;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> BaseOneRate.mmObject();
@@ -1442,14 +1445,14 @@ public class FinancialInstrumentAttributes64 {
 	 */
 	public static final MMMessageAttribute mmNextFactor = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Debt.mmFactor;
+			businessElementTrace_lazy = () -> Debt.mmFactor;
 			componentContext_lazy = () -> FinancialInstrumentAttributes64.mmObject();
 			isDerived = false;
 			xmlTag = "NxtFctr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NextFactor";
 			definition = "Rate expressed as a decimal between 0 and 1 that will be applicable as of the next factor date and defines the outstanding principal of the financial instrument (for factored securities).";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributes35.mmNextFactor;
+			previousVersion_lazy = () -> FinancialInstrumentAttributes35.mmNextFactor;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> BaseOneRate.mmObject();
@@ -1499,14 +1502,14 @@ public class FinancialInstrumentAttributes64 {
 	 */
 	public static final MMMessageAttribute mmInterestRate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InterestCalculation.mmRate;
+			businessElementTrace_lazy = () -> InterestCalculation.mmRate;
 			componentContext_lazy = () -> FinancialInstrumentAttributes64.mmObject();
 			isDerived = false;
 			xmlTag = "IntrstRate";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterestRate";
 			definition = "Per annum ratio of interest paid to the principal amount of the financial instrument for a specific period of time.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributes35.mmInterestRate;
+			previousVersion_lazy = () -> FinancialInstrumentAttributes35.mmInterestRate;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
@@ -1554,14 +1557,14 @@ public class FinancialInstrumentAttributes64 {
 	 */
 	public static final MMMessageAttribute mmYieldToMaturityRate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Debt.mmYieldToMaturityRate;
+			businessElementTrace_lazy = () -> Debt.mmYieldToMaturityRate;
 			componentContext_lazy = () -> FinancialInstrumentAttributes64.mmObject();
 			isDerived = false;
 			xmlTag = "YldToMtrtyRate";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "YieldToMaturityRate";
 			definition = "Rate of return anticipated on a bond when held until maturity date.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributes35.mmYieldToMaturityRate;
+			previousVersion_lazy = () -> FinancialInstrumentAttributes35.mmYieldToMaturityRate;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
@@ -1611,14 +1614,14 @@ public class FinancialInstrumentAttributes64 {
 	 */
 	public static final MMMessageAttribute mmNextInterestRate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InterestCalculation.mmRate;
+			businessElementTrace_lazy = () -> InterestCalculation.mmRate;
 			componentContext_lazy = () -> FinancialInstrumentAttributes64.mmObject();
 			isDerived = false;
 			xmlTag = "NxtIntrstRate";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NextInterestRate";
 			definition = "Interest rate applicable to the next interest payment period in relation to variable rate instruments.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributes35.mmNextInterestRate;
+			previousVersion_lazy = () -> FinancialInstrumentAttributes35.mmNextInterestRate;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
@@ -1668,14 +1671,14 @@ public class FinancialInstrumentAttributes64 {
 	 */
 	public static final MMMessageAttribute mmIndexRateBasis = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Index.mmIndexRateBasis;
+			businessElementTrace_lazy = () -> Index.mmIndexRateBasis;
 			componentContext_lazy = () -> FinancialInstrumentAttributes64.mmObject();
 			isDerived = false;
 			xmlTag = "IndxRateBsis";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IndexRateBasis";
 			definition = "Specifies the reference rate for fixed income instruments where the \nprice of the instrument is indexed to the price of an underlying benchmark.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributes35.mmIndexRateBasis;
+			previousVersion_lazy = () -> FinancialInstrumentAttributes35.mmIndexRateBasis;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
@@ -1720,14 +1723,14 @@ public class FinancialInstrumentAttributes64 {
 	 */
 	public static final MMMessageAssociationEnd mmCouponAttachedNumber = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CouponAttached.mmNumber;
+			businessElementTrace_lazy = () -> CouponAttached.mmNumber;
 			componentContext_lazy = () -> FinancialInstrumentAttributes64.mmObject();
 			isDerived = false;
 			xmlTag = "CpnAttchdNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CouponAttachedNumber";
 			definition = "Number of the coupon attached to the physical security.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributes35.mmCouponAttachedNumber;
+			previousVersion_lazy = () -> FinancialInstrumentAttributes35.mmCouponAttachedNumber;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -1777,14 +1780,14 @@ public class FinancialInstrumentAttributes64 {
 	 */
 	public static final MMMessageAssociationEnd mmPoolNumber = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Debt.mmPoolNumber;
+			businessElementTrace_lazy = () -> Debt.mmPoolNumber;
 			componentContext_lazy = () -> FinancialInstrumentAttributes64.mmObject();
 			isDerived = false;
 			xmlTag = "PoolNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PoolNumber";
 			definition = "Number identifying a group of underlying assets assigned by the issuer of a factored security.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributes35.mmPoolNumber;
+			previousVersion_lazy = () -> FinancialInstrumentAttributes35.mmPoolNumber;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -1835,14 +1838,14 @@ public class FinancialInstrumentAttributes64 {
 	 */
 	public static final MMMessageAttribute mmVariableRateIndicator = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Debt.mmVariableRateIndicator;
+			businessElementTrace_lazy = () -> Debt.mmVariableRateIndicator;
 			componentContext_lazy = () -> FinancialInstrumentAttributes64.mmObject();
 			isDerived = false;
 			xmlTag = "VarblRateInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VariableRateIndicator";
 			definition = "Indicates whether the interest rate of an interest bearing instrument is reset periodically.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributes35.mmVariableRateIndicator;
+			previousVersion_lazy = () -> FinancialInstrumentAttributes35.mmVariableRateIndicator;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
@@ -1892,14 +1895,14 @@ public class FinancialInstrumentAttributes64 {
 	 */
 	public static final MMMessageAttribute mmCallableIndicator = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Debt.mmCallableIndicator;
+			businessElementTrace_lazy = () -> Debt.mmCallableIndicator;
 			componentContext_lazy = () -> FinancialInstrumentAttributes64.mmObject();
 			isDerived = false;
 			xmlTag = "CllblInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CallableIndicator";
 			definition = "Indicates whether the issuer has the right to pay the security prior to maturity. Also called RetractableIndicator.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributes35.mmCallableIndicator;
+			previousVersion_lazy = () -> FinancialInstrumentAttributes35.mmCallableIndicator;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
@@ -1949,14 +1952,14 @@ public class FinancialInstrumentAttributes64 {
 	 */
 	public static final MMMessageAttribute mmPutableIndicator = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Debt.mmPutableIndicator;
+			businessElementTrace_lazy = () -> Debt.mmPutableIndicator;
 			componentContext_lazy = () -> FinancialInstrumentAttributes64.mmObject();
 			isDerived = false;
 			xmlTag = "PutblInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PutableIndicator";
 			definition = "Indicates whether the holder has the right to ask for redemption of the security prior to final maturity. Also called RedeemableIndicator.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributes35.mmPutableIndicator;
+			previousVersion_lazy = () -> FinancialInstrumentAttributes35.mmPutableIndicator;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
@@ -2002,10 +2005,10 @@ public class FinancialInstrumentAttributes64 {
 			componentContext_lazy = () -> FinancialInstrumentAttributes64.mmObject();
 			isDerived = false;
 			xmlTag = "MktOrIndctvPric";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketOrIndicativePrice";
 			definition = "Value of the price, for example, as a currency and value per unit or as a percentage.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributes35.mmMarketOrIndicativePrice;
+			previousVersion_lazy = () -> FinancialInstrumentAttributes35.mmMarketOrIndicativePrice;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -2053,14 +2056,14 @@ public class FinancialInstrumentAttributes64 {
 	 */
 	public static final MMMessageAssociationEnd mmExercisePrice = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Derivative.mmExercisePrice;
+			businessElementTrace_lazy = () -> Derivative.mmExercisePrice;
 			componentContext_lazy = () -> FinancialInstrumentAttributes64.mmObject();
 			isDerived = false;
 			xmlTag = "ExrcPric";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExercisePrice";
 			definition = "Predetermined price at which the holder of a derivative will buy or sell the underlying instrument.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributes35.mmExercisePrice;
+			previousVersion_lazy = () -> FinancialInstrumentAttributes35.mmExercisePrice;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -2108,14 +2111,14 @@ public class FinancialInstrumentAttributes64 {
 	 */
 	public static final MMMessageAssociationEnd mmSubscriptionPrice = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Warrant.mmSubscriptionPrice;
+			businessElementTrace_lazy = () -> Warrant.mmSubscriptionPrice;
 			componentContext_lazy = () -> FinancialInstrumentAttributes64.mmObject();
 			isDerived = false;
 			xmlTag = "SbcptPric";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubscriptionPrice";
 			definition = "Pre-determined price at which the holder of a right is entitled to buy the underlying instrument.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributes35.mmSubscriptionPrice;
+			previousVersion_lazy = () -> FinancialInstrumentAttributes35.mmSubscriptionPrice;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -2160,14 +2163,14 @@ public class FinancialInstrumentAttributes64 {
 	 */
 	public static final MMMessageAssociationEnd mmConversionPrice = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesConversion.mmConversionPrice;
+			businessElementTrace_lazy = () -> SecuritiesConversion.mmConversionPrice;
 			componentContext_lazy = () -> FinancialInstrumentAttributes64.mmObject();
 			isDerived = false;
 			xmlTag = "ConvsPric";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConversionPrice";
 			definition = "Price of one target security in the conversion.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributes35.mmConversionPrice;
+			previousVersion_lazy = () -> FinancialInstrumentAttributes35.mmConversionPrice;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -2215,14 +2218,14 @@ public class FinancialInstrumentAttributes64 {
 	 */
 	public static final MMMessageAssociationEnd mmStrikePrice = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Price.mmSecuritiesPricing;
+			businessElementTrace_lazy = () -> Price.mmSecuritiesPricing;
 			componentContext_lazy = () -> FinancialInstrumentAttributes64.mmObject();
 			isDerived = false;
 			xmlTag = "StrkPric";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StrikePrice";
 			definition = "Predetermined price at which the holder will have to buy or sell the underlying instrument.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributes35.mmStrikePrice;
+			previousVersion_lazy = () -> FinancialInstrumentAttributes35.mmStrikePrice;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -2269,14 +2272,14 @@ public class FinancialInstrumentAttributes64 {
 	 */
 	public static final MMMessageAssociationEnd mmMinimumNominalQuantity = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmMinimumQuantity;
+			businessElementTrace_lazy = () -> Security.mmMinimumQuantity;
 			componentContext_lazy = () -> FinancialInstrumentAttributes64.mmObject();
 			isDerived = false;
 			xmlTag = "MinNmnlQty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MinimumNominalQuantity";
 			definition = "Minimum nominal quantity of financial instrument.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributes35.mmMinimumNominalQuantity;
+			previousVersion_lazy = () -> FinancialInstrumentAttributes35.mmMinimumNominalQuantity;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -2325,14 +2328,14 @@ public class FinancialInstrumentAttributes64 {
 	 */
 	public static final MMMessageAssociationEnd mmContractSize = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesConversion.mmContractSize;
+			businessElementTrace_lazy = () -> SecuritiesConversion.mmContractSize;
 			componentContext_lazy = () -> FinancialInstrumentAttributes64.mmObject();
 			isDerived = false;
 			xmlTag = "CtrctSz";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ContractSize";
 			definition = "Ratio or multiplying factor used to convert one contract into a quantity.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributes35.mmContractSize;
+			previousVersion_lazy = () -> FinancialInstrumentAttributes35.mmContractSize;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -2380,14 +2383,14 @@ public class FinancialInstrumentAttributes64 {
 	 */
 	public static final MMMessageAssociationEnd mmUnderlyingFinancialInstrumentIdentification = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmIdentification;
+			businessElementTrace_lazy = () -> Security.mmIdentification;
 			componentContext_lazy = () -> FinancialInstrumentAttributes64.mmObject();
 			isDerived = false;
 			xmlTag = "UndrlygFinInstrmId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnderlyingFinancialInstrumentIdentification";
 			definition = "Identification of the underlying security.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributes35.mmUnderlyingFinancialInstrumentIdentification;
+			previousVersion_lazy = () -> FinancialInstrumentAttributes35.mmUnderlyingFinancialInstrumentIdentification;
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.SecurityIdentification19.mmObject();
@@ -2435,10 +2438,10 @@ public class FinancialInstrumentAttributes64 {
 			componentContext_lazy = () -> FinancialInstrumentAttributes64.mmObject();
 			isDerived = false;
 			xmlTag = "FinInstrmAttrAddtlDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentAttributeAdditionalDetails";
 			definition = "Provides additional information about the financial instrument in narrative form.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributes35.mmFinancialInstrumentAttributeAdditionalDetails;
+			previousVersion_lazy = () -> FinancialInstrumentAttributes35.mmFinancialInstrumentAttributeAdditionalDetails;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
@@ -2448,44 +2451,27 @@ public class FinancialInstrumentAttributes64 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrumentAttributes64.mmPlaceOfListing, com.tools20022.repository.msg.FinancialInstrumentAttributes64.mmDayCountBasis,
-						com.tools20022.repository.msg.FinancialInstrumentAttributes64.mmRegistrationForm, com.tools20022.repository.msg.FinancialInstrumentAttributes64.mmPaymentFrequency,
-						com.tools20022.repository.msg.FinancialInstrumentAttributes64.mmPaymentStatus, com.tools20022.repository.msg.FinancialInstrumentAttributes64.mmVariableRateChangeFrequency,
-						com.tools20022.repository.msg.FinancialInstrumentAttributes64.mmClassificationType, com.tools20022.repository.msg.FinancialInstrumentAttributes64.mmOptionStyle,
-						com.tools20022.repository.msg.FinancialInstrumentAttributes64.mmOptionType, com.tools20022.repository.msg.FinancialInstrumentAttributes64.mmDenominationCurrency,
-						com.tools20022.repository.msg.FinancialInstrumentAttributes64.mmCouponDate, com.tools20022.repository.msg.FinancialInstrumentAttributes64.mmExpiryDate,
-						com.tools20022.repository.msg.FinancialInstrumentAttributes64.mmFloatingRateFixingDate, com.tools20022.repository.msg.FinancialInstrumentAttributes64.mmMaturityDate,
-						com.tools20022.repository.msg.FinancialInstrumentAttributes64.mmIssueDate, com.tools20022.repository.msg.FinancialInstrumentAttributes64.mmNextCallableDate,
-						com.tools20022.repository.msg.FinancialInstrumentAttributes64.mmPutableDate, com.tools20022.repository.msg.FinancialInstrumentAttributes64.mmDatedDate,
-						com.tools20022.repository.msg.FinancialInstrumentAttributes64.mmFirstPaymentDate, com.tools20022.repository.msg.FinancialInstrumentAttributes64.mmPreviousFactor,
-						com.tools20022.repository.msg.FinancialInstrumentAttributes64.mmCurrentFactor, com.tools20022.repository.msg.FinancialInstrumentAttributes64.mmNextFactor,
-						com.tools20022.repository.msg.FinancialInstrumentAttributes64.mmInterestRate, com.tools20022.repository.msg.FinancialInstrumentAttributes64.mmYieldToMaturityRate,
-						com.tools20022.repository.msg.FinancialInstrumentAttributes64.mmNextInterestRate, com.tools20022.repository.msg.FinancialInstrumentAttributes64.mmIndexRateBasis,
-						com.tools20022.repository.msg.FinancialInstrumentAttributes64.mmCouponAttachedNumber, com.tools20022.repository.msg.FinancialInstrumentAttributes64.mmPoolNumber,
-						com.tools20022.repository.msg.FinancialInstrumentAttributes64.mmVariableRateIndicator, com.tools20022.repository.msg.FinancialInstrumentAttributes64.mmCallableIndicator,
-						com.tools20022.repository.msg.FinancialInstrumentAttributes64.mmPutableIndicator, com.tools20022.repository.msg.FinancialInstrumentAttributes64.mmMarketOrIndicativePrice,
-						com.tools20022.repository.msg.FinancialInstrumentAttributes64.mmExercisePrice, com.tools20022.repository.msg.FinancialInstrumentAttributes64.mmSubscriptionPrice,
-						com.tools20022.repository.msg.FinancialInstrumentAttributes64.mmConversionPrice, com.tools20022.repository.msg.FinancialInstrumentAttributes64.mmStrikePrice,
-						com.tools20022.repository.msg.FinancialInstrumentAttributes64.mmMinimumNominalQuantity, com.tools20022.repository.msg.FinancialInstrumentAttributes64.mmContractSize,
-						com.tools20022.repository.msg.FinancialInstrumentAttributes64.mmUnderlyingFinancialInstrumentIdentification,
-						com.tools20022.repository.msg.FinancialInstrumentAttributes64.mmFinancialInstrumentAttributeAdditionalDetails);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesSettlementTransactionInstructionV06.mmFinancialInstrumentAttributes,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionConfirmationV06.mmFinancialInstrumentAttributes,
-						com.tools20022.repository.area.sese.SecuritiesFinancingInstructionV06.mmFinancialInstrumentAttributes,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV06.mmFinancialInstrumentAttributes,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdviceV05.mmFinancialInstrumentAttributes,
-						com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV06.mmFinancialInstrumentAttributes,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotificationV05.mmFinancialInstrumentAttributes,
-						com.tools20022.repository.area.sese.SecuritiesFinancingInstructionV07.mmFinancialInstrumentAttributes,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotificationV06.mmFinancialInstrumentAttributes,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV07.mmFinancialInstrumentAttributes,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionConfirmationV07.mmFinancialInstrumentAttributes,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdviceV06.mmFinancialInstrumentAttributes,
-						com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV07.mmFinancialInstrumentAttributes,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionInstructionV07.mmFinancialInstrumentAttributes);
+				messageElement_lazy = () -> Arrays.asList(FinancialInstrumentAttributes64.mmPlaceOfListing, FinancialInstrumentAttributes64.mmDayCountBasis, FinancialInstrumentAttributes64.mmRegistrationForm,
+						FinancialInstrumentAttributes64.mmPaymentFrequency, FinancialInstrumentAttributes64.mmPaymentStatus, FinancialInstrumentAttributes64.mmVariableRateChangeFrequency,
+						FinancialInstrumentAttributes64.mmClassificationType, FinancialInstrumentAttributes64.mmOptionStyle, FinancialInstrumentAttributes64.mmOptionType, FinancialInstrumentAttributes64.mmDenominationCurrency,
+						FinancialInstrumentAttributes64.mmCouponDate, FinancialInstrumentAttributes64.mmExpiryDate, FinancialInstrumentAttributes64.mmFloatingRateFixingDate, FinancialInstrumentAttributes64.mmMaturityDate,
+						FinancialInstrumentAttributes64.mmIssueDate, FinancialInstrumentAttributes64.mmNextCallableDate, FinancialInstrumentAttributes64.mmPutableDate, FinancialInstrumentAttributes64.mmDatedDate,
+						FinancialInstrumentAttributes64.mmFirstPaymentDate, FinancialInstrumentAttributes64.mmPreviousFactor, FinancialInstrumentAttributes64.mmCurrentFactor, FinancialInstrumentAttributes64.mmNextFactor,
+						FinancialInstrumentAttributes64.mmInterestRate, FinancialInstrumentAttributes64.mmYieldToMaturityRate, FinancialInstrumentAttributes64.mmNextInterestRate, FinancialInstrumentAttributes64.mmIndexRateBasis,
+						FinancialInstrumentAttributes64.mmCouponAttachedNumber, FinancialInstrumentAttributes64.mmPoolNumber, FinancialInstrumentAttributes64.mmVariableRateIndicator, FinancialInstrumentAttributes64.mmCallableIndicator,
+						FinancialInstrumentAttributes64.mmPutableIndicator, FinancialInstrumentAttributes64.mmMarketOrIndicativePrice, FinancialInstrumentAttributes64.mmExercisePrice, FinancialInstrumentAttributes64.mmSubscriptionPrice,
+						FinancialInstrumentAttributes64.mmConversionPrice, FinancialInstrumentAttributes64.mmStrikePrice, FinancialInstrumentAttributes64.mmMinimumNominalQuantity, FinancialInstrumentAttributes64.mmContractSize,
+						FinancialInstrumentAttributes64.mmUnderlyingFinancialInstrumentIdentification, FinancialInstrumentAttributes64.mmFinancialInstrumentAttributeAdditionalDetails);
+				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesSettlementTransactionInstructionV06.mmFinancialInstrumentAttributes, SecuritiesSettlementTransactionConfirmationV06.mmFinancialInstrumentAttributes,
+						SecuritiesFinancingInstructionV06.mmFinancialInstrumentAttributes, SecuritiesSettlementTransactionGenerationNotificationV06.mmFinancialInstrumentAttributes,
+						SecuritiesSettlementTransactionReversalAdviceV05.mmFinancialInstrumentAttributes, SecuritiesFinancingConfirmationV06.mmFinancialInstrumentAttributes,
+						SecuritiesSettlementTransactionAllegementNotificationV05.mmFinancialInstrumentAttributes, SecuritiesFinancingInstructionV07.mmFinancialInstrumentAttributes,
+						SecuritiesSettlementTransactionAllegementNotificationV06.mmFinancialInstrumentAttributes, SecuritiesSettlementTransactionGenerationNotificationV07.mmFinancialInstrumentAttributes,
+						SecuritiesSettlementTransactionConfirmationV07.mmFinancialInstrumentAttributes, SecuritiesSettlementTransactionReversalAdviceV06.mmFinancialInstrumentAttributes,
+						SecuritiesFinancingConfirmationV07.mmFinancialInstrumentAttributes, SecuritiesSettlementTransactionInstructionV07.mmFinancialInstrumentAttributes);
 				trace_lazy = () -> Asset.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FinancialInstrumentAttributes64";
 				definition = "Elements characterising a financial instrument.";
 				previousVersion_lazy = () -> FinancialInstrumentAttributes35.mmObject();

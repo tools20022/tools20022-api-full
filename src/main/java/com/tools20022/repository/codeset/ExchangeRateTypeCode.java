@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.ExchangeRateType1Code
+ * ExchangeRateType1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -38,13 +47,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.ExchangeRateTypeCode#mmAgreed
  * ExchangeRateTypeCode.mmAgreed}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.ExchangeRateType1Code
- * ExchangeRateType1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -94,7 +96,7 @@ public class ExchangeRateTypeCode {
 	 */
 	public static final MMCode mmSpot = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Spot";
 			definition = "Exchange rate applied is the spot rate.";
 			owner_lazy = () -> ExchangeRateTypeCode.mmObject();
@@ -125,7 +127,7 @@ public class ExchangeRateTypeCode {
 	 */
 	public static final MMCode mmSale = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Sale";
 			definition = "Exchange rate applied is the market rate at the time of the sale.";
 			owner_lazy = () -> ExchangeRateTypeCode.mmObject();
@@ -156,7 +158,7 @@ public class ExchangeRateTypeCode {
 	 */
 	public static final MMCode mmAgreed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Agreed";
 			definition = "Exchange rate applied is the rate agreed between the parties.";
 			owner_lazy = () -> ExchangeRateTypeCode.mmObject();
@@ -167,12 +169,12 @@ public class ExchangeRateTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("SPOT");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ExchangeRateTypeCode";
 				definition = "Code used to define the type of the currency exchange.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ExchangeRateTypeCode.mmSpot, com.tools20022.repository.codeset.ExchangeRateTypeCode.mmSale, com.tools20022.repository.codeset.ExchangeRateTypeCode.mmAgreed);
+				code_lazy = () -> Arrays.asList(ExchangeRateTypeCode.mmSpot, ExchangeRateTypeCode.mmSale, ExchangeRateTypeCode.mmAgreed);
 				derivation_lazy = () -> Arrays.asList(ExchangeRateType1Code.mmObject());
 			}
 		});

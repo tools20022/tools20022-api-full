@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.BasisPriceTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -104,7 +106,7 @@ public class BasisPriceType1Code extends BasisPriceTypeCode {
 	 */
 	public static final MMCode mmMorningSessionClosePrice = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MorningSessionClosePrice";
 			owner_lazy = () -> BasisPriceType1Code.mmObject();
 		}
@@ -127,7 +129,7 @@ public class BasisPriceType1Code extends BasisPriceTypeCode {
 	 */
 	public static final MMCode mmClosingPrice = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClosingPrice";
 			owner_lazy = () -> BasisPriceType1Code.mmObject();
 		}
@@ -150,7 +152,7 @@ public class BasisPriceType1Code extends BasisPriceTypeCode {
 	 */
 	public static final MMCode mmCurrentPrice = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrentPrice";
 			owner_lazy = () -> BasisPriceType1Code.mmObject();
 		}
@@ -173,7 +175,7 @@ public class BasisPriceType1Code extends BasisPriceTypeCode {
 	 */
 	public static final MMCode mmSpecialQuotation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SpecialQuotation";
 			owner_lazy = () -> BasisPriceType1Code.mmObject();
 		}
@@ -196,7 +198,7 @@ public class BasisPriceType1Code extends BasisPriceTypeCode {
 	 */
 	public static final MMCode mmVWAPDay = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VWAPDay";
 			owner_lazy = () -> BasisPriceType1Code.mmObject();
 		}
@@ -219,7 +221,7 @@ public class BasisPriceType1Code extends BasisPriceTypeCode {
 	 */
 	public static final MMCode mmVWAPMorning = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VWAPMorning";
 			owner_lazy = () -> BasisPriceType1Code.mmObject();
 		}
@@ -242,7 +244,7 @@ public class BasisPriceType1Code extends BasisPriceTypeCode {
 	 */
 	public static final MMCode mmVWAPAfternoon = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VWAPAfternoon";
 			owner_lazy = () -> BasisPriceType1Code.mmObject();
 		}
@@ -265,7 +267,7 @@ public class BasisPriceType1Code extends BasisPriceTypeCode {
 	 */
 	public static final MMCode mmStrikePrice = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StrikePrice";
 			owner_lazy = () -> BasisPriceType1Code.mmObject();
 		}
@@ -288,7 +290,7 @@ public class BasisPriceType1Code extends BasisPriceTypeCode {
 	 */
 	public static final MMCode mmOpenPrice = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OpenPrice";
 			owner_lazy = () -> BasisPriceType1Code.mmObject();
 		}
@@ -297,15 +299,13 @@ public class BasisPriceType1Code extends BasisPriceTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("MSCP");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "BasisPriceType1Code";
 				definition = "Basis price type in a bid order. Used for list trading.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.BasisPriceType1Code.mmMorningSessionClosePrice, com.tools20022.repository.codeset.BasisPriceType1Code.mmClosingPrice,
-						com.tools20022.repository.codeset.BasisPriceType1Code.mmCurrentPrice, com.tools20022.repository.codeset.BasisPriceType1Code.mmSpecialQuotation, com.tools20022.repository.codeset.BasisPriceType1Code.mmVWAPDay,
-						com.tools20022.repository.codeset.BasisPriceType1Code.mmVWAPMorning, com.tools20022.repository.codeset.BasisPriceType1Code.mmVWAPAfternoon, com.tools20022.repository.codeset.BasisPriceType1Code.mmStrikePrice,
-						com.tools20022.repository.codeset.BasisPriceType1Code.mmOpenPrice);
+				code_lazy = () -> Arrays.asList(BasisPriceType1Code.mmMorningSessionClosePrice, BasisPriceType1Code.mmClosingPrice, BasisPriceType1Code.mmCurrentPrice, BasisPriceType1Code.mmSpecialQuotation, BasisPriceType1Code.mmVWAPDay,
+						BasisPriceType1Code.mmVWAPMorning, BasisPriceType1Code.mmVWAPAfternoon, BasisPriceType1Code.mmStrikePrice, BasisPriceType1Code.mmOpenPrice);
 				trace_lazy = () -> BasisPriceTypeCode.mmObject();
 			}
 		});

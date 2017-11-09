@@ -19,8 +19,10 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.ReservationOrError3Choice;
 import com.tools20022.repository.entity.Reservation;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -116,10 +118,10 @@ public class ReservationReport3 {
 			componentContext_lazy = () -> ReservationReport3.mmObject();
 			isDerived = false;
 			xmlTag = "RsvatnId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReservationIdentification";
 			definition = "Identification of the reservation on which information is requested.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReservationReport4.mmReservationIdentification);
+			nextVersions_lazy = () -> Arrays.asList(ReservationReport4.mmReservationIdentification);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -167,10 +169,10 @@ public class ReservationReport3 {
 			componentContext_lazy = () -> ReservationReport3.mmObject();
 			isDerived = false;
 			xmlTag = "RsvatnOrErr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReservationOrError";
 			definition = "Requested information on the limit.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReservationReport4.mmReservationOrError);
+			nextVersions_lazy = () -> Arrays.asList(ReservationReport4.mmReservationOrError);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -181,10 +183,10 @@ public class ReservationReport3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReservationReport3.mmReservationIdentification, com.tools20022.repository.msg.ReservationReport3.mmReservationOrError);
+				messageElement_lazy = () -> Arrays.asList(ReservationReport3.mmReservationIdentification, ReservationReport3.mmReservationOrError);
 				trace_lazy = () -> Reservation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ReservationReport3";
 				definition = "Reports either on the reservation or on a business error.";
 				nextVersions_lazy = () -> Arrays.asList(ReservationReport4.mmObject());

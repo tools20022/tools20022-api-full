@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -28,6 +30,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.EventWorkflowStatus1Code
+ * EventWorkflowStatus1Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.EventWorkflowStatus2Code
+ * EventWorkflowStatus2Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -66,15 +77,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.EventWorkflowStatusCode#mmPendingNotSupported
  * EventWorkflowStatusCode.mmPendingNotSupported}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.EventWorkflowStatus1Code
- * EventWorkflowStatus1Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.EventWorkflowStatus2Code
- * EventWorkflowStatus2Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -131,7 +133,7 @@ public class EventWorkflowStatusCode {
 	 */
 	public static final MMCode mmApproved = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Approved";
 			definition = "All of the required data has been populated. Any conflicting data has been resolved. Either all information was in agreement (STP) or if manual validation was necessary  authorised review and changes/updates were performed.";
 			owner_lazy = () -> EventWorkflowStatusCode.mmObject();
@@ -165,7 +167,7 @@ public class EventWorkflowStatusCode {
 	 */
 	public static final MMCode mmConditionallyApproved = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConditionallyApproved";
 			definition = "Announcement has been confirmed but not all of the required data is available. Event was validated or specific STP criteria was met, however data is still pending confirmation of the event.";
 			owner_lazy = () -> EventWorkflowStatusCode.mmObject();
@@ -199,7 +201,7 @@ public class EventWorkflowStatusCode {
 	 */
 	public static final MMCode mmCancelled = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cancelled";
 			definition = "Validation has determined event is being cancelled by the issuer/offeror. Either all information was in agreement (STP) or if manual validation was necessary authorised review and changes/updates were performed.";
 			owner_lazy = () -> EventWorkflowStatusCode.mmObject();
@@ -230,7 +232,7 @@ public class EventWorkflowStatusCode {
 	 */
 	public static final MMCode mmInConflict = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InConflict";
 			definition = "Two or more sources disagree on one or more data elements.";
 			owner_lazy = () -> EventWorkflowStatusCode.mmObject();
@@ -261,7 +263,7 @@ public class EventWorkflowStatusCode {
 	 */
 	public static final MMCode mmDeleted = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Deleted";
 			definition = "Announcement record has been deleted/ removed as an invalid record.";
 			owner_lazy = () -> EventWorkflowStatusCode.mmObject();
@@ -293,7 +295,7 @@ public class EventWorkflowStatusCode {
 	 */
 	public static final MMCode mmIncomplete = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Incomplete";
 			definition = "Required data is not available. Announcement record cannot be verified.";
 			owner_lazy = () -> EventWorkflowStatusCode.mmObject();
@@ -324,7 +326,7 @@ public class EventWorkflowStatusCode {
 	 */
 	public static final MMCode mmNotSupported = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotSupported";
 			definition = "Announcement record is not supported by validation service.";
 			owner_lazy = () -> EventWorkflowStatusCode.mmObject();
@@ -357,7 +359,7 @@ public class EventWorkflowStatusCode {
 	 */
 	public static final MMCode mmPendingApproval = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingApproval";
 			definition = "Validation review was performed and event has been modified. Event is pending authorised approval.";
 			owner_lazy = () -> EventWorkflowStatusCode.mmObject();
@@ -390,7 +392,7 @@ public class EventWorkflowStatusCode {
 	 */
 	public static final MMCode mmPendingCancelled = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingCancelled";
 			definition = "Validation has determined event is being cancelled by the issuer/offeror. Pending authorisation.";
 			owner_lazy = () -> EventWorkflowStatusCode.mmObject();
@@ -424,7 +426,7 @@ public class EventWorkflowStatusCode {
 	 */
 	public static final MMCode mmPendingConditionalApproval = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingConditionalApproval";
 			definition = "Validation review has been performed and event has been modified. Announcement has been confirmed but not all of the required data is available. Even record is pending authorised approval.";
 			owner_lazy = () -> EventWorkflowStatusCode.mmObject();
@@ -457,7 +459,7 @@ public class EventWorkflowStatusCode {
 	 */
 	public static final MMCode mmPendingDeleted = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingDeleted";
 			definition = "Validation has determined the announcement record to be invalid. Pending authorisation.";
 			owner_lazy = () -> EventWorkflowStatusCode.mmObject();
@@ -490,7 +492,7 @@ public class EventWorkflowStatusCode {
 	 */
 	public static final MMCode mmPendingNotSupported = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingNotSupported";
 			definition = "Validation has determined that the record is not supported. Pending authorisations.";
 			owner_lazy = () -> EventWorkflowStatusCode.mmObject();
@@ -501,17 +503,14 @@ public class EventWorkflowStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("WSAP");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "EventWorkflowStatusCode";
 				definition = "Specifies the workflow status of the announcement record based on validation procedure.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.EventWorkflowStatusCode.mmApproved, com.tools20022.repository.codeset.EventWorkflowStatusCode.mmConditionallyApproved,
-						com.tools20022.repository.codeset.EventWorkflowStatusCode.mmCancelled, com.tools20022.repository.codeset.EventWorkflowStatusCode.mmInConflict, com.tools20022.repository.codeset.EventWorkflowStatusCode.mmDeleted,
-						com.tools20022.repository.codeset.EventWorkflowStatusCode.mmIncomplete, com.tools20022.repository.codeset.EventWorkflowStatusCode.mmNotSupported,
-						com.tools20022.repository.codeset.EventWorkflowStatusCode.mmPendingApproval, com.tools20022.repository.codeset.EventWorkflowStatusCode.mmPendingCancelled,
-						com.tools20022.repository.codeset.EventWorkflowStatusCode.mmPendingConditionalApproval, com.tools20022.repository.codeset.EventWorkflowStatusCode.mmPendingDeleted,
-						com.tools20022.repository.codeset.EventWorkflowStatusCode.mmPendingNotSupported);
+				code_lazy = () -> Arrays.asList(EventWorkflowStatusCode.mmApproved, EventWorkflowStatusCode.mmConditionallyApproved, EventWorkflowStatusCode.mmCancelled, EventWorkflowStatusCode.mmInConflict,
+						EventWorkflowStatusCode.mmDeleted, EventWorkflowStatusCode.mmIncomplete, EventWorkflowStatusCode.mmNotSupported, EventWorkflowStatusCode.mmPendingApproval, EventWorkflowStatusCode.mmPendingCancelled,
+						EventWorkflowStatusCode.mmPendingConditionalApproval, EventWorkflowStatusCode.mmPendingDeleted, EventWorkflowStatusCode.mmPendingNotSupported);
 				derivation_lazy = () -> Arrays.asList(EventWorkflowStatus1Code.mmObject(), EventWorkflowStatus2Code.mmObject());
 			}
 		});

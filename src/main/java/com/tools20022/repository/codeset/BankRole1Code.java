@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.BankRoleCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -81,7 +83,7 @@ public class BankRole1Code extends BankRoleCode {
 	 */
 	public static final MMCode mmBuyersBank = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BuyersBank";
 			owner_lazy = () -> BankRole1Code.mmObject();
 		}
@@ -104,7 +106,7 @@ public class BankRole1Code extends BankRoleCode {
 	 */
 	public static final MMCode mmObligorBank = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ObligorBank";
 			owner_lazy = () -> BankRole1Code.mmObject();
 		}
@@ -127,7 +129,7 @@ public class BankRole1Code extends BankRoleCode {
 	 */
 	public static final MMCode mmRecipientBank = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RecipientBank";
 			owner_lazy = () -> BankRole1Code.mmObject();
 		}
@@ -150,7 +152,7 @@ public class BankRole1Code extends BankRoleCode {
 	 */
 	public static final MMCode mmSellersBank = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SellersBank";
 			owner_lazy = () -> BankRole1Code.mmObject();
 		}
@@ -159,12 +161,11 @@ public class BankRole1Code extends BankRoleCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "BankRole1Code";
 				definition = "Specifies the role of the bank in the transaction.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.BankRole1Code.mmBuyersBank, com.tools20022.repository.codeset.BankRole1Code.mmObligorBank, com.tools20022.repository.codeset.BankRole1Code.mmRecipientBank,
-						com.tools20022.repository.codeset.BankRole1Code.mmSellersBank);
+				code_lazy = () -> Arrays.asList(BankRole1Code.mmBuyersBank, BankRole1Code.mmObligorBank, BankRole1Code.mmRecipientBank, BankRole1Code.mmSellersBank);
 				trace_lazy = () -> BankRoleCode.mmObject();
 			}
 		});

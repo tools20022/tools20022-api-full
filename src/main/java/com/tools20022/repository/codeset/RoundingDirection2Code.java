@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.RoundingDirectionCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -83,7 +85,7 @@ public class RoundingDirection2Code extends RoundingDirectionCode {
 	 */
 	public static final MMCode mmRoundUp = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RoundUp";
 			owner_lazy = () -> RoundingDirection2Code.mmObject();
 		}
@@ -106,7 +108,7 @@ public class RoundingDirection2Code extends RoundingDirectionCode {
 	 */
 	public static final MMCode mmRoundDown = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RoundDown";
 			owner_lazy = () -> RoundingDirection2Code.mmObject();
 		}
@@ -115,12 +117,12 @@ public class RoundingDirection2Code extends RoundingDirectionCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("RDUP");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RoundingDirection2Code";
 				definition = "Specifies the rounding direction applied to nearest unit.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RoundingDirection2Code.mmRoundUp, com.tools20022.repository.codeset.RoundingDirection2Code.mmRoundDown);
+				code_lazy = () -> Arrays.asList(RoundingDirection2Code.mmRoundUp, RoundingDirection2Code.mmRoundDown);
 				trace_lazy = () -> RoundingDirectionCode.mmObject();
 			}
 		});

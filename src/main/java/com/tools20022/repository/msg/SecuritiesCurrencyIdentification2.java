@@ -20,11 +20,14 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.auth.FinancialInstrumentReportingCurrencyCodeReportV01;
 import com.tools20022.repository.choice.Period4Choice;
 import com.tools20022.repository.codeset.Modification1Code;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.Max1Number;
 import com.tools20022.repository.datatype.TrueFalseIndicator;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -123,7 +126,7 @@ public class SecuritiesCurrencyIdentification2 {
 			componentContext_lazy = () -> SecuritiesCurrencyIdentification2.mmObject();
 			isDerived = false;
 			xmlTag = "Ccy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Currency";
 			definition = "Details the currency name and ISO 4217 currency code.\r\n";
 			maxOccurs = 1;
@@ -168,7 +171,7 @@ public class SecuritiesCurrencyIdentification2 {
 			componentContext_lazy = () -> SecuritiesCurrencyIdentification2.mmObject();
 			isDerived = false;
 			xmlTag = "FrctnlDgt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FractionalDigit";
 			definition = "Fractional digit for the currency, that is, the number of decimals to use.";
 			maxOccurs = 1;
@@ -208,7 +211,7 @@ public class SecuritiesCurrencyIdentification2 {
 			componentContext_lazy = () -> SecuritiesCurrencyIdentification2.mmObject();
 			isDerived = false;
 			xmlTag = "CtryDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CountryDetails";
 			definition = "Details the country name and ISO 3166 country code.";
 			maxOccurs = 1;
@@ -251,7 +254,7 @@ public class SecuritiesCurrencyIdentification2 {
 			componentContext_lazy = () -> SecuritiesCurrencyIdentification2.mmObject();
 			isDerived = false;
 			xmlTag = "PreEuro";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreEuro";
 			definition = "Specifies if a currency is a pre Euro currency or not.";
 			maxOccurs = 1;
@@ -294,7 +297,7 @@ public class SecuritiesCurrencyIdentification2 {
 			componentContext_lazy = () -> SecuritiesCurrencyIdentification2.mmObject();
 			isDerived = false;
 			xmlTag = "Mod";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Modification";
 			definition = "Modification status for the record compared to the previous report.";
 			maxOccurs = 1;
@@ -334,7 +337,7 @@ public class SecuritiesCurrencyIdentification2 {
 			componentContext_lazy = () -> SecuritiesCurrencyIdentification2.mmObject();
 			isDerived = false;
 			xmlTag = "VldtyPrd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValidityPeriod";
 			definition = "Details the validity of the specific record.";
 			maxOccurs = 1;
@@ -376,7 +379,7 @@ public class SecuritiesCurrencyIdentification2 {
 			componentContext_lazy = () -> SecuritiesCurrencyIdentification2.mmObject();
 			isDerived = false;
 			xmlTag = "LastUpdtd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LastUpdated";
 			definition = "Date when this record was last modified.";
 			maxOccurs = 1;
@@ -388,13 +391,11 @@ public class SecuritiesCurrencyIdentification2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesCurrencyIdentification2.mmCurrency, com.tools20022.repository.msg.SecuritiesCurrencyIdentification2.mmFractionalDigit,
-						com.tools20022.repository.msg.SecuritiesCurrencyIdentification2.mmCountryDetails, com.tools20022.repository.msg.SecuritiesCurrencyIdentification2.mmPreEuro,
-						com.tools20022.repository.msg.SecuritiesCurrencyIdentification2.mmModification, com.tools20022.repository.msg.SecuritiesCurrencyIdentification2.mmValidityPeriod,
-						com.tools20022.repository.msg.SecuritiesCurrencyIdentification2.mmLastUpdated);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.auth.FinancialInstrumentReportingCurrencyCodeReportV01.mmCurrencyData);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(SecuritiesCurrencyIdentification2.mmCurrency, SecuritiesCurrencyIdentification2.mmFractionalDigit, SecuritiesCurrencyIdentification2.mmCountryDetails,
+						SecuritiesCurrencyIdentification2.mmPreEuro, SecuritiesCurrencyIdentification2.mmModification, SecuritiesCurrencyIdentification2.mmValidityPeriod, SecuritiesCurrencyIdentification2.mmLastUpdated);
+				messageBuildingBlock_lazy = () -> Arrays.asList(FinancialInstrumentReportingCurrencyCodeReportV01.mmCurrencyData);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesCurrencyIdentification2";
 				definition = "Details an individual currency including details on which country trades the currency.";
 			}

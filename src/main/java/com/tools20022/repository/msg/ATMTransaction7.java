@@ -20,8 +20,11 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max10000Binary;
 import com.tools20022.repository.entity.CardPayment;
+import com.tools20022.repository.entity.Payment;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -128,14 +131,14 @@ public class ATMTransaction7 {
 	 */
 	public static final MMMessageAssociationEnd mmTransactionIdentification = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPayment.mmCardPaymentAcquiring;
+			businessElementTrace_lazy = () -> CardPayment.mmCardPaymentAcquiring;
 			componentContext_lazy = () -> ATMTransaction7.mmObject();
 			isDerived = false;
 			xmlTag = "TxId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionIdentification";
 			definition = "Identification of the transaction assigned by the ATM.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMTransaction1.mmTransactionIdentification;
+			previousVersion_lazy = () -> ATMTransaction1.mmTransactionIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -174,7 +177,7 @@ public class ATMTransaction7 {
 			componentContext_lazy = () -> ATMTransaction7.mmObject();
 			isDerived = false;
 			xmlTag = "TxRspn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionResponse";
 			definition = "Result of the inquiry service.";
 			maxOccurs = 1;
@@ -217,7 +220,7 @@ public class ATMTransaction7 {
 			componentContext_lazy = () -> ATMTransaction7.mmObject();
 			isDerived = false;
 			xmlTag = "Actn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Action";
 			definition = "Sequence of actions to be performed by the ATM to complete the transaction.";
 			minOccurs = 0;
@@ -258,7 +261,7 @@ public class ATMTransaction7 {
 			componentContext_lazy = () -> ATMTransaction7.mmObject();
 			isDerived = false;
 			xmlTag = "CstmrSvcPrfl";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CustomerServiceProfile";
 			definition = "Profile of the customer with the allowed services and restrictions.";
 			maxOccurs = 1;
@@ -306,14 +309,14 @@ public class ATMTransaction7 {
 	 */
 	public static final MMMessageAssociationEnd mmCurrencyConversion = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.mmCurrencyExchange;
+			businessElementTrace_lazy = () -> Payment.mmCurrencyExchange;
 			componentContext_lazy = () -> ATMTransaction7.mmObject();
 			isDerived = false;
 			xmlTag = "CcyConvs";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrencyConversion";
 			definition = "Dynamic currency conversion result.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMTransaction1.mmCurrencyConversion;
+			previousVersion_lazy = () -> ATMTransaction1.mmCurrencyConversion;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -359,14 +362,14 @@ public class ATMTransaction7 {
 	 */
 	public static final MMMessageAssociationEnd mmAccountInformation = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.mmAccount;
+			businessElementTrace_lazy = () -> Payment.mmAccount;
 			componentContext_lazy = () -> ATMTransaction7.mmObject();
 			isDerived = false;
 			xmlTag = "AcctInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountInformation";
 			definition = "Account information associated to the customer.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMTransaction1.mmAccountData;
+			previousVersion_lazy = () -> ATMTransaction1.mmAccountData;
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.CardAccount6.mmObject();
@@ -404,7 +407,7 @@ public class ATMTransaction7 {
 			componentContext_lazy = () -> ATMTransaction7.mmObject();
 			isDerived = false;
 			xmlTag = "AcctStmtData";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountStatementData";
 			definition = "Statement information of an account.";
 			minOccurs = 0;
@@ -450,11 +453,11 @@ public class ATMTransaction7 {
 	 */
 	public static final MMMessageAssociationEnd mmCurrencyExchange = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.mmCurrencyExchange;
+			businessElementTrace_lazy = () -> Payment.mmCurrencyExchange;
 			componentContext_lazy = () -> ATMTransaction7.mmObject();
 			isDerived = false;
 			xmlTag = "CcyXchg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrencyExchange";
 			definition = "Exchange rate and calculated amount to be presented to the customer when the dispense currency or the deposit currency (target currency) is different to account currency (source currency).";
 			maxOccurs = 1;
@@ -506,10 +509,10 @@ public class ATMTransaction7 {
 			componentContext_lazy = () -> ATMTransaction7.mmObject();
 			isDerived = false;
 			xmlTag = "ICCRltdData";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ICCRelatedData";
 			definition = "Sequence of one or more TLV data elements from the ATM application, in accordance with ISO 7816-6, not in a specific order. Present if the transaction is performed with an EMV chip card application.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMTransaction1.mmICCRelatedData;
+			previousVersion_lazy = () -> ATMTransaction1.mmICCRelatedData;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max10000Binary.mmObject();
@@ -547,7 +550,7 @@ public class ATMTransaction7 {
 			componentContext_lazy = () -> ATMTransaction7.mmObject();
 			isDerived = false;
 			xmlTag = "Cmd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Command";
 			definition = "Maintenance command to perform on the ATM.";
 			minOccurs = 0;
@@ -559,13 +562,11 @@ public class ATMTransaction7 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMTransaction7.mmTransactionIdentification, com.tools20022.repository.msg.ATMTransaction7.mmTransactionResponse,
-						com.tools20022.repository.msg.ATMTransaction7.mmAction, com.tools20022.repository.msg.ATMTransaction7.mmCustomerServiceProfile, com.tools20022.repository.msg.ATMTransaction7.mmCurrencyConversion,
-						com.tools20022.repository.msg.ATMTransaction7.mmAccountInformation, com.tools20022.repository.msg.ATMTransaction7.mmAccountStatementData, com.tools20022.repository.msg.ATMTransaction7.mmCurrencyExchange,
-						com.tools20022.repository.msg.ATMTransaction7.mmICCRelatedData, com.tools20022.repository.msg.ATMTransaction7.mmCommand);
+				messageElement_lazy = () -> Arrays.asList(ATMTransaction7.mmTransactionIdentification, ATMTransaction7.mmTransactionResponse, ATMTransaction7.mmAction, ATMTransaction7.mmCustomerServiceProfile,
+						ATMTransaction7.mmCurrencyConversion, ATMTransaction7.mmAccountInformation, ATMTransaction7.mmAccountStatementData, ATMTransaction7.mmCurrencyExchange, ATMTransaction7.mmICCRelatedData, ATMTransaction7.mmCommand);
 				trace_lazy = () -> CardPayment.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ATMTransaction7";
 				definition = "Inquiry information for the transaction.";
 				previousVersion_lazy = () -> ATMTransaction1.mmObject();

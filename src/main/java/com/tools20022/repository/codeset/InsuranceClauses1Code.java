@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.InsuranceClausesCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -114,7 +116,7 @@ public class InsuranceClauses1Code extends InsuranceClausesCode {
 	 */
 	public static final MMCode mmInstituteCargoClauseA = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstituteCargoClauseA";
 			owner_lazy = () -> InsuranceClauses1Code.mmObject();
 		}
@@ -137,7 +139,7 @@ public class InsuranceClauses1Code extends InsuranceClausesCode {
 	 */
 	public static final MMCode mmInstituteCargoClauseB = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstituteCargoClauseB";
 			owner_lazy = () -> InsuranceClauses1Code.mmObject();
 		}
@@ -160,7 +162,7 @@ public class InsuranceClauses1Code extends InsuranceClausesCode {
 	 */
 	public static final MMCode mmInstituteCargoClauseC = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstituteCargoClauseC";
 			owner_lazy = () -> InsuranceClauses1Code.mmObject();
 		}
@@ -183,7 +185,7 @@ public class InsuranceClauses1Code extends InsuranceClausesCode {
 	 */
 	public static final MMCode mmInstituteCargoClauseAir = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstituteCargoClauseAir";
 			owner_lazy = () -> InsuranceClauses1Code.mmObject();
 		}
@@ -206,7 +208,7 @@ public class InsuranceClauses1Code extends InsuranceClausesCode {
 	 */
 	public static final MMCode mmInstituteWarClauseCargo = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstituteWarClauseCargo";
 			owner_lazy = () -> InsuranceClauses1Code.mmObject();
 		}
@@ -229,7 +231,7 @@ public class InsuranceClauses1Code extends InsuranceClausesCode {
 	 */
 	public static final MMCode mmInstituteStrikesClauseCargo = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstituteStrikesClauseCargo";
 			owner_lazy = () -> InsuranceClauses1Code.mmObject();
 		}
@@ -252,7 +254,7 @@ public class InsuranceClauses1Code extends InsuranceClausesCode {
 	 */
 	public static final MMCode mmInstituteReplacementClause = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstituteReplacementClause";
 			owner_lazy = () -> InsuranceClauses1Code.mmObject();
 		}
@@ -275,7 +277,7 @@ public class InsuranceClauses1Code extends InsuranceClausesCode {
 	 */
 	public static final MMCode mmInstituteClassificationClause = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstituteClassificationClause";
 			owner_lazy = () -> InsuranceClauses1Code.mmObject();
 		}
@@ -298,7 +300,7 @@ public class InsuranceClauses1Code extends InsuranceClausesCode {
 	 */
 	public static final MMCode mmISMCodeEndorsement = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ISMCodeEndorsement";
 			owner_lazy = () -> InsuranceClauses1Code.mmObject();
 		}
@@ -321,7 +323,7 @@ public class InsuranceClauses1Code extends InsuranceClausesCode {
 	 */
 	public static final MMCode mmComputerMilleniumClauseCargo = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ComputerMilleniumClauseCargo";
 			owner_lazy = () -> InsuranceClauses1Code.mmObject();
 		}
@@ -344,7 +346,7 @@ public class InsuranceClauses1Code extends InsuranceClausesCode {
 	 */
 	public static final MMCode mmInstituteRadioactiveContaminationExclusionClause = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstituteRadioactiveContaminationExclusionClause";
 			owner_lazy = () -> InsuranceClauses1Code.mmObject();
 		}
@@ -353,17 +355,14 @@ public class InsuranceClauses1Code extends InsuranceClausesCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ICCA");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InsuranceClauses1Code";
 				definition = "List of standards insurance clauses. (standard policy wordings issued by the Institute of London Underwriters or the American Institute of Marine Underwriters)";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.InsuranceClauses1Code.mmInstituteCargoClauseA, com.tools20022.repository.codeset.InsuranceClauses1Code.mmInstituteCargoClauseB,
-						com.tools20022.repository.codeset.InsuranceClauses1Code.mmInstituteCargoClauseC, com.tools20022.repository.codeset.InsuranceClauses1Code.mmInstituteCargoClauseAir,
-						com.tools20022.repository.codeset.InsuranceClauses1Code.mmInstituteWarClauseCargo, com.tools20022.repository.codeset.InsuranceClauses1Code.mmInstituteStrikesClauseCargo,
-						com.tools20022.repository.codeset.InsuranceClauses1Code.mmInstituteReplacementClause, com.tools20022.repository.codeset.InsuranceClauses1Code.mmInstituteClassificationClause,
-						com.tools20022.repository.codeset.InsuranceClauses1Code.mmISMCodeEndorsement, com.tools20022.repository.codeset.InsuranceClauses1Code.mmComputerMilleniumClauseCargo,
-						com.tools20022.repository.codeset.InsuranceClauses1Code.mmInstituteRadioactiveContaminationExclusionClause);
+				code_lazy = () -> Arrays.asList(InsuranceClauses1Code.mmInstituteCargoClauseA, InsuranceClauses1Code.mmInstituteCargoClauseB, InsuranceClauses1Code.mmInstituteCargoClauseC, InsuranceClauses1Code.mmInstituteCargoClauseAir,
+						InsuranceClauses1Code.mmInstituteWarClauseCargo, InsuranceClauses1Code.mmInstituteStrikesClauseCargo, InsuranceClauses1Code.mmInstituteReplacementClause, InsuranceClauses1Code.mmInstituteClassificationClause,
+						InsuranceClauses1Code.mmISMCodeEndorsement, InsuranceClauses1Code.mmComputerMilleniumClauseCargo, InsuranceClauses1Code.mmInstituteRadioactiveContaminationExclusionClause);
 				trace_lazy = () -> InsuranceClausesCode.mmObject();
 			}
 		});

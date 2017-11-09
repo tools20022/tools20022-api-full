@@ -18,7 +18,11 @@
 package com.tools20022.repository.entity;
 
 import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.Broker;
+import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.ConfirmationParties2;
+import com.tools20022.repository.msg.ConfirmationParties4;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -70,11 +74,11 @@ public class StepOutBroker extends Broker {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "StepOutBroker";
 				definition = "Brokerage firm that executes an order, but gives other firms credit and some of the commission for the trade.";
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ConfirmationParties4.mmStepOutFirm, com.tools20022.repository.msg.ConfirmationParties2.mmStepOutFirm);
+				derivationElement_lazy = () -> Arrays.asList(ConfirmationParties4.mmStepOutFirm, ConfirmationParties2.mmStepOutFirm);
 				superType_lazy = () -> Broker.mmObject();
 			}
 		});

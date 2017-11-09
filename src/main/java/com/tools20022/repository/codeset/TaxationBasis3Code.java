@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.TaxationBasisCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -84,7 +86,7 @@ public class TaxationBasis3Code extends TaxationBasisCode {
 	 */
 	public static final MMCode mmFlat = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Flat";
 			owner_lazy = () -> TaxationBasis3Code.mmObject();
 		}
@@ -107,7 +109,7 @@ public class TaxationBasis3Code extends TaxationBasisCode {
 	 */
 	public static final MMCode mmPerUnit = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PerUnit";
 			owner_lazy = () -> TaxationBasis3Code.mmObject();
 		}
@@ -130,7 +132,7 @@ public class TaxationBasis3Code extends TaxationBasisCode {
 	 */
 	public static final MMCode mmOther = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
 			owner_lazy = () -> TaxationBasis3Code.mmObject();
 		}
@@ -139,12 +141,12 @@ public class TaxationBasis3Code extends TaxationBasisCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("FLAT");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TaxationBasis3Code";
 				definition = "Specifies the tax basis.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TaxationBasis3Code.mmFlat, com.tools20022.repository.codeset.TaxationBasis3Code.mmPerUnit, com.tools20022.repository.codeset.TaxationBasis3Code.mmOther);
+				code_lazy = () -> Arrays.asList(TaxationBasis3Code.mmFlat, TaxationBasis3Code.mmPerUnit, TaxationBasis3Code.mmOther);
 				trace_lazy = () -> TaxationBasisCode.mmObject();
 			}
 		});

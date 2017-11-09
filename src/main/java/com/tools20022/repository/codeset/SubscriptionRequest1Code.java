@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.SubscriptionRequestCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -86,7 +88,7 @@ public class SubscriptionRequest1Code extends SubscriptionRequestCode {
 	 */
 	public static final MMCode mmSnapshot = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Snapshot";
 			owner_lazy = () -> SubscriptionRequest1Code.mmObject();
 		}
@@ -109,7 +111,7 @@ public class SubscriptionRequest1Code extends SubscriptionRequestCode {
 	 */
 	public static final MMCode mmSubscribe = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Subscribe";
 			owner_lazy = () -> SubscriptionRequest1Code.mmObject();
 		}
@@ -132,7 +134,7 @@ public class SubscriptionRequest1Code extends SubscriptionRequestCode {
 	 */
 	public static final MMCode mmUnsubscribe = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unsubscribe";
 			owner_lazy = () -> SubscriptionRequest1Code.mmObject();
 		}
@@ -141,13 +143,12 @@ public class SubscriptionRequest1Code extends SubscriptionRequestCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("SNAP");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SubscriptionRequest1Code";
 				definition = "Type of subscription to market data.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SubscriptionRequest1Code.mmSnapshot, com.tools20022.repository.codeset.SubscriptionRequest1Code.mmSubscribe,
-						com.tools20022.repository.codeset.SubscriptionRequest1Code.mmUnsubscribe);
+				code_lazy = () -> Arrays.asList(SubscriptionRequest1Code.mmSnapshot, SubscriptionRequest1Code.mmSubscribe, SubscriptionRequest1Code.mmUnsubscribe);
 				trace_lazy = () -> SubscriptionRequestCode.mmObject();
 			}
 		});

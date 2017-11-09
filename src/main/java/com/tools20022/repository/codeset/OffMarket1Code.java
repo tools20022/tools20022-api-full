@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.OffMarketCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -81,7 +83,7 @@ public class OffMarket1Code extends OffMarketCode {
 	 */
 	public static final MMCode mmOffMarket = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OffMarket";
 			owner_lazy = () -> OffMarket1Code.mmObject();
 		}
@@ -104,7 +106,7 @@ public class OffMarket1Code extends OffMarketCode {
 	 */
 	public static final MMCode mmNotAdmittedOnExchange = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotAdmittedOnExchange";
 			owner_lazy = () -> OffMarket1Code.mmObject();
 		}
@@ -113,12 +115,12 @@ public class OffMarket1Code extends OffMarketCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("XOFF");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OffMarket1Code";
 				definition = "Indicates that the trade was executed off-market.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OffMarket1Code.mmOffMarket, com.tools20022.repository.codeset.OffMarket1Code.mmNotAdmittedOnExchange);
+				code_lazy = () -> Arrays.asList(OffMarket1Code.mmOffMarket, OffMarket1Code.mmNotAdmittedOnExchange);
 				trace_lazy = () -> OffMarketCode.mmObject();
 			}
 		});

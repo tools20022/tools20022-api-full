@@ -19,7 +19,13 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.sese.ReversalOfTransferInConfirmationV07;
+import com.tools20022.repository.area.sese.ReversalOfTransferOutConfirmationV07;
+import com.tools20022.repository.area.sese.TransferInCancellationRequestV07;
+import com.tools20022.repository.area.sese.TransferOutCancellationRequestV07;
 import com.tools20022.repository.entity.SecuritiesTradeIdentification;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -127,10 +133,10 @@ public class References20 {
 			componentContext_lazy = () -> References20.mmObject();
 			isDerived = false;
 			xmlTag = "PoolRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PoolReference";
 			definition = "Collective reference identifying a set of messages.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.References15.mmPoolReference;
+			previousVersion_lazy = () -> References15.mmPoolReference;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.AdditionalReference6.mmObject();
@@ -175,10 +181,10 @@ public class References20 {
 			componentContext_lazy = () -> References20.mmObject();
 			isDerived = false;
 			xmlTag = "PrvsRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousReference";
 			definition = "Reference of the linked message that was previously sent.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.References15.mmPreviousReference;
+			previousVersion_lazy = () -> References15.mmPreviousReference;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.AdditionalReference6.mmObject();
@@ -223,10 +229,10 @@ public class References20 {
 			componentContext_lazy = () -> References20.mmObject();
 			isDerived = false;
 			xmlTag = "RltdRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedReference";
 			definition = "Reference to a linked message that was previously received.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.References15.mmRelatedReference;
+			previousVersion_lazy = () -> References15.mmRelatedReference;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.AdditionalReference6.mmObject();
@@ -236,13 +242,12 @@ public class References20 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.References20.mmPoolReference, com.tools20022.repository.msg.References20.mmPreviousReference,
-						com.tools20022.repository.msg.References20.mmRelatedReference);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.ReversalOfTransferOutConfirmationV07.mmReferences, com.tools20022.repository.area.sese.TransferOutCancellationRequestV07.mmReferences,
-						com.tools20022.repository.area.sese.TransferInCancellationRequestV07.mmReferences, com.tools20022.repository.area.sese.ReversalOfTransferInConfirmationV07.mmReferences);
+				messageElement_lazy = () -> Arrays.asList(References20.mmPoolReference, References20.mmPreviousReference, References20.mmRelatedReference);
+				messageBuildingBlock_lazy = () -> Arrays.asList(ReversalOfTransferOutConfirmationV07.mmReferences, TransferOutCancellationRequestV07.mmReferences, TransferInCancellationRequestV07.mmReferences,
+						ReversalOfTransferInConfirmationV07.mmReferences);
 				trace_lazy = () -> SecuritiesTradeIdentification.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "References20";
 				definition = "Reference to the transaction identifier issued by the counterparty. Building block may also be used to reference a previous transaction, or tie a set of messages together.";
 				previousVersion_lazy = () -> References15.mmObject();

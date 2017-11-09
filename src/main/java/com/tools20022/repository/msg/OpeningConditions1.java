@@ -20,9 +20,12 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ActiveCurrencyCode;
 import com.tools20022.repository.datatype.ISODate;
+import com.tools20022.repository.entity.CurrencyExchange;
 import com.tools20022.repository.entity.FixingCondition;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -105,11 +108,11 @@ public class OpeningConditions1 {
 	 */
 	public static final MMMessageAttribute mmSettlementCurrency = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmQuotedCurrency;
+			businessElementTrace_lazy = () -> CurrencyExchange.mmQuotedCurrency;
 			componentContext_lazy = () -> OpeningConditions1.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmCcy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementCurrency";
 			definition = "Specifies the settlement currency of the non deliverable trade.";
 			maxOccurs = 1;
@@ -153,11 +156,11 @@ public class OpeningConditions1 {
 	 */
 	public static final MMMessageAttribute mmValuationDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.FixingCondition.mmFixingDateTime;
+			businessElementTrace_lazy = () -> FixingCondition.mmFixingDateTime;
 			componentContext_lazy = () -> OpeningConditions1.mmObject();
 			isDerived = false;
 			xmlTag = "ValtnDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValuationDate";
 			definition = "Specifies the valuation date for a non deliverable trade.";
 			maxOccurs = 1;
@@ -200,11 +203,11 @@ public class OpeningConditions1 {
 	 */
 	public static final MMMessageAssociationEnd mmSettlementRateSource = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.FixingCondition.mmSettlementRateOption;
+			businessElementTrace_lazy = () -> FixingCondition.mmSettlementRateOption;
 			componentContext_lazy = () -> OpeningConditions1.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmRateSrc";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementRateSource";
 			definition = "Specifies the rate source associated with the non deliverable trade.";
 			maxOccurs = 2;
@@ -217,11 +220,10 @@ public class OpeningConditions1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OpeningConditions1.mmSettlementCurrency, com.tools20022.repository.msg.OpeningConditions1.mmValuationDate,
-						com.tools20022.repository.msg.OpeningConditions1.mmSettlementRateSource);
+				messageElement_lazy = () -> Arrays.asList(OpeningConditions1.mmSettlementCurrency, OpeningConditions1.mmValuationDate, OpeningConditions1.mmSettlementRateSource);
 				trace_lazy = () -> FixingCondition.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OpeningConditions1";
 				definition = "Specifies the conditions for the NDF opening.";
 			}

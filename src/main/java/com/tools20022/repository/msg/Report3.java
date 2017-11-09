@@ -19,11 +19,14 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.semt.SecuritiesEndOfProcessReportV01;
 import com.tools20022.repository.choice.DateAndDateTime1Choice;
 import com.tools20022.repository.choice.Frequency4Choice;
 import com.tools20022.repository.choice.StatementUpdateTypeCodeAndDSSCodeChoice;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.Max5NumericText;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -115,7 +118,7 @@ public class Report3 {
 			componentContext_lazy = () -> Report3.mmObject();
 			isDerived = false;
 			xmlTag = "RptNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportNumber";
 			definition = "Sequential number of the report.";
 			maxOccurs = 1;
@@ -155,7 +158,7 @@ public class Report3 {
 			componentContext_lazy = () -> Report3.mmObject();
 			isDerived = false;
 			xmlTag = "QryRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QueryReference";
 			definition = "Gives the name and the reference of the query.";
 			maxOccurs = 1;
@@ -195,7 +198,7 @@ public class Report3 {
 			componentContext_lazy = () -> Report3.mmObject();
 			isDerived = false;
 			xmlTag = "RptId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportIdentification";
 			definition = "Reference of the report.";
 			maxOccurs = 1;
@@ -236,7 +239,7 @@ public class Report3 {
 			componentContext_lazy = () -> Report3.mmObject();
 			isDerived = false;
 			xmlTag = "RptDtTm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportDateTime";
 			definition = "Date of the statement.";
 			maxOccurs = 1;
@@ -277,7 +280,7 @@ public class Report3 {
 			componentContext_lazy = () -> Report3.mmObject();
 			isDerived = false;
 			xmlTag = "Frqcy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Frequency";
 			definition = "Specifies the regularity of an event.";
 			maxOccurs = 1;
@@ -319,7 +322,7 @@ public class Report3 {
 			componentContext_lazy = () -> Report3.mmObject();
 			isDerived = false;
 			xmlTag = "UpdTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UpdateType";
 			definition = "Indicates whether the report is complete or contains changes only.";
 			maxOccurs = 1;
@@ -360,7 +363,7 @@ public class Report3 {
 			componentContext_lazy = () -> Report3.mmObject();
 			isDerived = false;
 			xmlTag = "NtceTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoticeType";
 			definition = "Notifies the type of report transmitted.";
 			maxOccurs = 1;
@@ -372,11 +375,10 @@ public class Report3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Report3.mmReportNumber, com.tools20022.repository.msg.Report3.mmQueryReference, com.tools20022.repository.msg.Report3.mmReportIdentification,
-						com.tools20022.repository.msg.Report3.mmReportDateTime, com.tools20022.repository.msg.Report3.mmFrequency, com.tools20022.repository.msg.Report3.mmUpdateType, com.tools20022.repository.msg.Report3.mmNoticeType);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.SecuritiesEndOfProcessReportV01.mmReportGeneralDetails);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(Report3.mmReportNumber, Report3.mmQueryReference, Report3.mmReportIdentification, Report3.mmReportDateTime, Report3.mmFrequency, Report3.mmUpdateType, Report3.mmNoticeType);
+				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesEndOfProcessReportV01.mmReportGeneralDetails);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Report3";
 				definition = "General characteristics related to a statement which reports information for a precise date.";
 			}

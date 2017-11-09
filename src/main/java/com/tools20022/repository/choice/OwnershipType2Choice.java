@@ -19,8 +19,10 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.AccountOwnershipType4Code;
 import com.tools20022.repository.entity.InvestmentAccount;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification47;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -108,14 +110,14 @@ public class OwnershipType2Choice {
 	 */
 	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentAccount.mmOwnershipType;
+			businessElementTrace_lazy = () -> InvestmentAccount.mmOwnershipType;
 			componentContext_lazy = () -> OwnershipType2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Cd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Ownership type expressed as a code.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.OwnershipType1Choice.mmCode;
+			previousVersion_lazy = () -> OwnershipType1Choice.mmCode;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AccountOwnershipType4Code.mmObject();
@@ -162,14 +164,14 @@ public class OwnershipType2Choice {
 	 */
 	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentAccount.mmOwnershipType;
+			businessElementTrace_lazy = () -> InvestmentAccount.mmOwnershipType;
 			componentContext_lazy = () -> OwnershipType2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Ownership type expressed as a proprietary code.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.OwnershipType1Choice.mmProprietary;
+			previousVersion_lazy = () -> OwnershipType1Choice.mmProprietary;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification47.mmObject();
@@ -179,10 +181,10 @@ public class OwnershipType2Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.OwnershipType2Choice.mmCode, com.tools20022.repository.choice.OwnershipType2Choice.mmProprietary);
+				messageElement_lazy = () -> Arrays.asList(OwnershipType2Choice.mmCode, OwnershipType2Choice.mmProprietary);
 				trace_lazy = () -> InvestmentAccount.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OwnershipType2Choice";
 				definition = "Choice of formats for the specification of the ownership type.";
 				previousVersion_lazy = () -> OwnershipType1Choice.mmObject();

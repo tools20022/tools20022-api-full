@@ -20,12 +20,14 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.AnyBICIdentifier;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.ElectronicAddress;
 import com.tools20022.repository.entity.PhoneAddress;
 import com.tools20022.repository.entity.PostalAddress;
 import com.tools20022.repository.entity.VotingCondition;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -109,11 +111,11 @@ public class VoteMethods2 {
 	 */
 	public static final MMMessageAttribute mmVoteThroughNetwork = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.VotingCondition.mmVoteLocation;
+			businessElementTrace_lazy = () -> VotingCondition.mmVoteLocation;
 			componentContext_lazy = () -> VoteMethods2.mmObject();
 			isDerived = false;
 			xmlTag = "VoteThrghNtwk";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VoteThroughNetwork";
 			definition = "Network address through which a voting party can cast its vote via a structured message.";
 			maxOccurs = 5;
@@ -158,7 +160,7 @@ public class VoteMethods2 {
 			componentContext_lazy = () -> VoteMethods2.mmObject();
 			isDerived = false;
 			xmlTag = "VoteByMail";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VoteByMail";
 			definition = "Specifies the address where voting ballot can be sent.";
 			maxOccurs = 5;
@@ -206,7 +208,7 @@ public class VoteMethods2 {
 			componentContext_lazy = () -> VoteMethods2.mmObject();
 			isDerived = false;
 			xmlTag = "ElctrncVote";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ElectronicVote";
 			definition = "Electronic address, e-mail or website, where a security holder can vote.";
 			maxOccurs = 5;
@@ -253,7 +255,7 @@ public class VoteMethods2 {
 			componentContext_lazy = () -> VoteMethods2.mmObject();
 			isDerived = false;
 			xmlTag = "VoteByTel";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VoteByTelephone";
 			definition = "Telephone number providing access to an automated voting system.";
 			maxOccurs = 5;
@@ -265,11 +267,10 @@ public class VoteMethods2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.VoteMethods2.mmVoteThroughNetwork, com.tools20022.repository.msg.VoteMethods2.mmVoteByMail,
-						com.tools20022.repository.msg.VoteMethods2.mmElectronicVote, com.tools20022.repository.msg.VoteMethods2.mmVoteByTelephone);
+				messageElement_lazy = () -> Arrays.asList(VoteMethods2.mmVoteThroughNetwork, VoteMethods2.mmVoteByMail, VoteMethods2.mmElectronicVote, VoteMethods2.mmVoteByTelephone);
 				trace_lazy = () -> VotingCondition.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "VoteMethods2";
 				definition = "List of the different methods that can be used to vote.";
 			}

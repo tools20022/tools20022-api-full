@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.TypeOfPriceCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -82,7 +84,7 @@ public class TypeOfPrice16Code extends TypeOfPriceCode {
 	 */
 	public static final MMCode mmMarket = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Market";
 			owner_lazy = () -> TypeOfPrice16Code.mmObject();
 		}
@@ -105,7 +107,7 @@ public class TypeOfPrice16Code extends TypeOfPriceCode {
 	 */
 	public static final MMCode mmIndicative = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Indicative";
 			owner_lazy = () -> TypeOfPrice16Code.mmObject();
 		}
@@ -114,12 +116,12 @@ public class TypeOfPrice16Code extends TypeOfPriceCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("MRKT");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TypeOfPrice16Code";
 				definition = "Specifies the type of price and information about the price.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TypeOfPrice16Code.mmMarket, com.tools20022.repository.codeset.TypeOfPrice16Code.mmIndicative);
+				code_lazy = () -> Arrays.asList(TypeOfPrice16Code.mmMarket, TypeOfPrice16Code.mmIndicative);
 				trace_lazy = () -> TypeOfPriceCode.mmObject();
 			}
 		});

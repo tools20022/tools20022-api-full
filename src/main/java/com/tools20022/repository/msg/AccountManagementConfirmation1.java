@@ -19,8 +19,13 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.acmt.AccountDetailsConfirmationV02;
+import com.tools20022.repository.area.acmt.AccountDetailsConfirmationV03;
+import com.tools20022.repository.area.acmt.AccountDetailsConfirmationV04;
 import com.tools20022.repository.codeset.AccountManagementType2Code;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -129,10 +134,10 @@ public class AccountManagementConfirmation1 {
 			componentContext_lazy = () -> AccountManagementConfirmation1.mmObject();
 			isDerived = false;
 			xmlTag = "ConfTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConfirmationType";
 			definition = "Specifies if the confirmation message applies to an account opening,  an account modification request or to a get account details.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountManagementConfirmation2.mmConfirmationType);
+			nextVersions_lazy = () -> Arrays.asList(AccountManagementConfirmation2.mmConfirmationType);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AccountManagementType2Code.mmObject();
@@ -182,10 +187,10 @@ public class AccountManagementConfirmation1 {
 			componentContext_lazy = () -> AccountManagementConfirmation1.mmObject();
 			isDerived = false;
 			xmlTag = "AcctApplId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountApplicationIdentification";
 			definition = "Unique and unambiguous identifier of the account opening or modification instruction at application level.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountManagementConfirmation2.mmAccountApplicationIdentification);
+			nextVersions_lazy = () -> Arrays.asList(AccountManagementConfirmation2.mmAccountApplicationIdentification);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -195,11 +200,10 @@ public class AccountManagementConfirmation1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountManagementConfirmation1.mmConfirmationType, com.tools20022.repository.msg.AccountManagementConfirmation1.mmAccountApplicationIdentification);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountDetailsConfirmationV02.mmConfirmationDetails,
-						com.tools20022.repository.area.acmt.AccountDetailsConfirmationV03.mmConfirmationDetails, com.tools20022.repository.area.acmt.AccountDetailsConfirmationV04.mmConfirmationDetails);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(AccountManagementConfirmation1.mmConfirmationType, AccountManagementConfirmation1.mmAccountApplicationIdentification);
+				messageBuildingBlock_lazy = () -> Arrays.asList(AccountDetailsConfirmationV02.mmConfirmationDetails, AccountDetailsConfirmationV03.mmConfirmationDetails, AccountDetailsConfirmationV04.mmConfirmationDetails);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AccountManagementConfirmation1";
 				definition = "Provide information about the type of request or instruction which triggered this confirmation.";
 				nextVersions_lazy = () -> Arrays.asList(AccountManagementConfirmation2.mmObject());

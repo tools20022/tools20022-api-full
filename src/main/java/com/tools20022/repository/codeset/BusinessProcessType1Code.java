@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.BusinessProcessTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -102,7 +104,7 @@ public class BusinessProcessType1Code extends BusinessProcessTypeCode {
 	 */
 	public static final MMCode mmTripartiteCentralMatching = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TripartiteCentralMatching";
 			owner_lazy = () -> BusinessProcessType1Code.mmObject();
 		}
@@ -125,7 +127,7 @@ public class BusinessProcessType1Code extends BusinessProcessTypeCode {
 	 */
 	public static final MMCode mmNotCoveredByInvestmentInstructions = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotCoveredByInvestmentInstructions";
 			owner_lazy = () -> BusinessProcessType1Code.mmObject();
 		}
@@ -148,7 +150,7 @@ public class BusinessProcessType1Code extends BusinessProcessTypeCode {
 	 */
 	public static final MMCode mmPreAccepted = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreAccepted";
 			owner_lazy = () -> BusinessProcessType1Code.mmObject();
 		}
@@ -171,7 +173,7 @@ public class BusinessProcessType1Code extends BusinessProcessTypeCode {
 	 */
 	public static final MMCode mmReversal = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reversal";
 			owner_lazy = () -> BusinessProcessType1Code.mmObject();
 		}
@@ -194,7 +196,7 @@ public class BusinessProcessType1Code extends BusinessProcessTypeCode {
 	 */
 	public static final MMCode mmOwnAccountTradeType = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OwnAccountTradeType";
 			owner_lazy = () -> BusinessProcessType1Code.mmObject();
 		}
@@ -217,7 +219,7 @@ public class BusinessProcessType1Code extends BusinessProcessTypeCode {
 	 */
 	public static final MMCode mmThroughType = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ThroughType";
 			owner_lazy = () -> BusinessProcessType1Code.mmObject();
 		}
@@ -240,7 +242,7 @@ public class BusinessProcessType1Code extends BusinessProcessTypeCode {
 	 */
 	public static final MMCode mmBillateralCentralMatching = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BillateralCentralMatching";
 			owner_lazy = () -> BusinessProcessType1Code.mmObject();
 		}
@@ -263,7 +265,7 @@ public class BusinessProcessType1Code extends BusinessProcessTypeCode {
 	 */
 	public static final MMCode mmDuplexType = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DuplexType";
 			owner_lazy = () -> BusinessProcessType1Code.mmObject();
 		}
@@ -272,15 +274,14 @@ public class BusinessProcessType1Code extends BusinessProcessTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ISUP");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "BusinessProcessType1Code";
 				definition = "Type of business process model used to carry out the transaction.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.BusinessProcessType1Code.mmTripartiteCentralMatching, com.tools20022.repository.codeset.BusinessProcessType1Code.mmNotCoveredByInvestmentInstructions,
-						com.tools20022.repository.codeset.BusinessProcessType1Code.mmPreAccepted, com.tools20022.repository.codeset.BusinessProcessType1Code.mmReversal,
-						com.tools20022.repository.codeset.BusinessProcessType1Code.mmOwnAccountTradeType, com.tools20022.repository.codeset.BusinessProcessType1Code.mmThroughType,
-						com.tools20022.repository.codeset.BusinessProcessType1Code.mmBillateralCentralMatching, com.tools20022.repository.codeset.BusinessProcessType1Code.mmDuplexType);
+				code_lazy = () -> Arrays.asList(BusinessProcessType1Code.mmTripartiteCentralMatching, BusinessProcessType1Code.mmNotCoveredByInvestmentInstructions, BusinessProcessType1Code.mmPreAccepted,
+						BusinessProcessType1Code.mmReversal, BusinessProcessType1Code.mmOwnAccountTradeType, BusinessProcessType1Code.mmThroughType, BusinessProcessType1Code.mmBillateralCentralMatching,
+						BusinessProcessType1Code.mmDuplexType);
 				trace_lazy = () -> BusinessProcessTypeCode.mmObject();
 			}
 		});

@@ -17,10 +17,10 @@
 
 package com.tools20022.repository.entity;
 
-import com.tools20022.metamodel.MMBusinessAssociationEnd;
-import com.tools20022.metamodel.MMBusinessAttribute;
-import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.*;
 import com.tools20022.repository.choice.CurrentLimitChoice;
+import com.tools20022.repository.choice.LimitType1Choice;
+import com.tools20022.repository.choice.ReservationStatus1Choice;
 import com.tools20022.repository.codeset.CurrencyCode;
 import com.tools20022.repository.codeset.FloorLimitTypeCode;
 import com.tools20022.repository.codeset.FrequencyCode;
@@ -28,6 +28,7 @@ import com.tools20022.repository.codeset.LimitTypeCode;
 import com.tools20022.repository.datatype.CurrencyAndAmount;
 import com.tools20022.repository.datatype.DecimalNumber;
 import com.tools20022.repository.datatype.PercentageRate;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -43,75 +44,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Limit#mmType Limit.mmType}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Limit#mmAmount
- * Limit.mmAmount}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Limit#mmCreditDebitIndicator
- * Limit.mmCreditDebitIndicator}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Limit#mmUsedAmount
- * Limit.mmUsedAmount}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Limit#mmUsedPercentage
- * Limit.mmUsedPercentage}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Limit#mmCurrency
- * Limit.mmCurrency}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Limit#mmLimitStatus
- * Limit.mmLimitStatus}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Limit#mmPercentage
- * Limit.mmPercentage}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Limit#mmRelatedDebitCreditFacility
- * Limit.mmRelatedDebitCreditFacility}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Limit#mmPeriodicity
- * Limit.mmPeriodicity}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Limit#mmQuantity
- * Limit.mmQuantity}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Limit#mmValidityPeriod
- * Limit.mmValidityPeriod}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Limit#mmRelatedPaymentCard
- * Limit.mmRelatedPaymentCard}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Limit#mmAvailableAmount
- * Limit.mmAvailableAmount}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
- * subType} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.RiskManagementLimit
- * RiskManagementLimit}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Reservation Reservation}</li>
- * <li>{@linkplain com.tools20022.repository.entity.LiquidityManagementLimit
- * LiquidityManagementLimit}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.DateTimePeriod#mmRelatedLimit
- * DateTimePeriod.mmRelatedLimit}</li>
- * <li>{@linkplain com.tools20022.repository.entity.PaymentCard#mmLimit
- * PaymentCard.mmLimit}</li>
- * <li>{@linkplain com.tools20022.repository.entity.LimitStatus#mmLimit
- * LimitStatus.mmLimit}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.DebitCreditFacility#mmCreditLine
- * DebitCreditFacility.mmCreditLine}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
- * derivationElement} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Limit1#mmCurrent
- * Limit1.mmCurrent}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Limit1#mmLimit Limit1.mmLimit}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -150,6 +82,75 @@ import java.util.List;
  * ATMTransactionAmounts6}</li>
  * <li>{@linkplain com.tools20022.repository.msg.ATMTransactionAmounts7
  * ATMTransactionAmounts7}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.DateTimePeriod#mmRelatedLimit
+ * DateTimePeriod.mmRelatedLimit}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.PaymentCard#mmLimit
+ * PaymentCard.mmLimit}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.LimitStatus#mmLimit
+ * LimitStatus.mmLimit}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.DebitCreditFacility#mmCreditLine
+ * DebitCreditFacility.mmCreditLine}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
+ * derivationElement} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.Limit1#mmCurrent
+ * Limit1.mmCurrent}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Limit1#mmLimit Limit1.mmLimit}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
+ * subType} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.RiskManagementLimit
+ * RiskManagementLimit}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Reservation Reservation}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.LiquidityManagementLimit
+ * LiquidityManagementLimit}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.Limit#mmType Limit.mmType}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Limit#mmAmount
+ * Limit.mmAmount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Limit#mmCreditDebitIndicator
+ * Limit.mmCreditDebitIndicator}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Limit#mmUsedAmount
+ * Limit.mmUsedAmount}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Limit#mmUsedPercentage
+ * Limit.mmUsedPercentage}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Limit#mmCurrency
+ * Limit.mmCurrency}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Limit#mmLimitStatus
+ * Limit.mmLimitStatus}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Limit#mmPercentage
+ * Limit.mmPercentage}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Limit#mmRelatedDebitCreditFacility
+ * Limit.mmRelatedDebitCreditFacility}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Limit#mmPeriodicity
+ * Limit.mmPeriodicity}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Limit#mmQuantity
+ * Limit.mmQuantity}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Limit#mmValidityPeriod
+ * Limit.mmValidityPeriod}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Limit#mmRelatedPaymentCard
+ * Limit.mmRelatedPaymentCard}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Limit#mmAvailableAmount
+ * Limit.mmAvailableAmount}</li>
  * </ul>
  * </li>
  * <li>
@@ -261,16 +262,13 @@ public class Limit {
 	 */
 	public static final MMBusinessAttribute mmType = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RiskManagementLimitIdentificationDetails.mmType, com.tools20022.repository.msg.LimitIdentificationDetails1.mmType,
-					com.tools20022.repository.msg.LimitIdentificationDetails2.mmType, com.tools20022.repository.msg.LimitIdentificationDetails3.mmType, com.tools20022.repository.choice.LimitType1Choice.mmCode,
-					com.tools20022.repository.choice.LimitType1Choice.mmProprietary, com.tools20022.repository.msg.LimitIdentification1.mmType, com.tools20022.repository.msg.LimitIdentification2.mmType,
-					com.tools20022.repository.msg.LimitSearchCriteria1.mmDefaultLimitType, com.tools20022.repository.msg.LimitSearchCriteria1.mmCurrentLimitType, com.tools20022.repository.msg.LimitSearchCriteria2.mmDefaultLimitType,
-					com.tools20022.repository.msg.LimitSearchCriteria2.mmCurrentLimitType, com.tools20022.repository.msg.LimitSearchCriteria3.mmDefaultLimitType, com.tools20022.repository.msg.LimitSearchCriteria3.mmCurrentLimitType,
-					com.tools20022.repository.msg.LimitIdentification4.mmType, com.tools20022.repository.msg.LimitUtilisationJournalSearchCriteria1.mmLimitType, com.tools20022.repository.msg.ATMTransactionAmounts3.mmType,
-					com.tools20022.repository.msg.ATMTransactionAmounts9.mmMediaType, com.tools20022.repository.msg.ATMTransactionAmounts7.mmType);
+			derivation_lazy = () -> Arrays.asList(RiskManagementLimitIdentificationDetails.mmType, LimitIdentificationDetails1.mmType, LimitIdentificationDetails2.mmType, LimitIdentificationDetails3.mmType, LimitType1Choice.mmCode,
+					LimitType1Choice.mmProprietary, LimitIdentification1.mmType, LimitIdentification2.mmType, LimitSearchCriteria1.mmDefaultLimitType, LimitSearchCriteria1.mmCurrentLimitType, LimitSearchCriteria2.mmDefaultLimitType,
+					LimitSearchCriteria2.mmCurrentLimitType, LimitSearchCriteria3.mmDefaultLimitType, LimitSearchCriteria3.mmCurrentLimitType, LimitIdentification4.mmType, LimitUtilisationJournalSearchCriteria1.mmLimitType,
+					ATMTransactionAmounts3.mmType, ATMTransactionAmounts9.mmMediaType, ATMTransactionAmounts7.mmType);
 			elementContext_lazy = () -> Limit.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Type";
 			definition = "Nature of the limit.";
 			maxOccurs = 1;
@@ -387,18 +385,14 @@ public class Limit {
 	 */
 	public static final MMBusinessAttribute mmAmount = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LimitDetails2.mmAmount, com.tools20022.repository.msg.LimitDetails4.mmAmount, com.tools20022.repository.msg.LimitSearchCriteria3.mmLimitAmount,
-					com.tools20022.repository.msg.Limit6.mmAmount, com.tools20022.repository.msg.ReservationDetails2.mmAmount, com.tools20022.repository.msg.Reservation2.mmAmount, com.tools20022.repository.msg.LimitDetails.mmAmount,
-					com.tools20022.repository.msg.BilateralLimitDetails1.mmLimitAmount, com.tools20022.repository.msg.BilateralLimitDetails2.mmLimitAmount, com.tools20022.repository.msg.BilateralLimitDetails3.mmLimitAmount,
-					com.tools20022.repository.msg.Limit5.mmAmount, com.tools20022.repository.msg.BilateralLimit1.mmLimitAmount, com.tools20022.repository.msg.LimitDetails3.mmAmount, com.tools20022.repository.msg.Limit4.mmAmount,
-					com.tools20022.repository.msg.Limit4.mmRemainingAmount, com.tools20022.repository.msg.ReservationDetails1.mmAmount, com.tools20022.repository.msg.Reservation1.mmAmount,
-					com.tools20022.repository.msg.CreditLine1.mmAmount, com.tools20022.repository.msg.CreditLine2.mmAmount, com.tools20022.repository.msg.CurrencyFactors1.mmShortPositionLimit, com.tools20022.repository.msg.Limit2.mmAmount,
-					com.tools20022.repository.msg.FinancialCard1.mmCreditLimitAmount, com.tools20022.repository.msg.LimitAmount1.mmAmount, com.tools20022.repository.msg.ATMTransactionAmounts2.mmMinimumAllowedAmount,
-					com.tools20022.repository.msg.ATMTransactionAmounts2.mmMaximumAllowedAmount, com.tools20022.repository.msg.ATMTransactionAmounts3.mmMinimumAmount, com.tools20022.repository.msg.ATMTransactionAmounts3.mmMaximumAmount,
-					com.tools20022.repository.msg.ATMTransactionAmounts8.mmMinimumPossibleAmount, com.tools20022.repository.msg.ATMTransactionAmounts6.mmMinimumPossibleAmount, com.tools20022.repository.msg.ATMTransactionAmounts7.mmAmount);
+			derivation_lazy = () -> Arrays.asList(LimitDetails2.mmAmount, LimitDetails4.mmAmount, LimitSearchCriteria3.mmLimitAmount, Limit6.mmAmount, ReservationDetails2.mmAmount, Reservation2.mmAmount, LimitDetails.mmAmount,
+					BilateralLimitDetails1.mmLimitAmount, BilateralLimitDetails2.mmLimitAmount, BilateralLimitDetails3.mmLimitAmount, Limit5.mmAmount, BilateralLimit1.mmLimitAmount, LimitDetails3.mmAmount, Limit4.mmAmount,
+					Limit4.mmRemainingAmount, ReservationDetails1.mmAmount, Reservation1.mmAmount, CreditLine1.mmAmount, CreditLine2.mmAmount, CurrencyFactors1.mmShortPositionLimit, Limit2.mmAmount, FinancialCard1.mmCreditLimitAmount,
+					LimitAmount1.mmAmount, ATMTransactionAmounts2.mmMinimumAllowedAmount, ATMTransactionAmounts2.mmMaximumAllowedAmount, ATMTransactionAmounts3.mmMinimumAmount, ATMTransactionAmounts3.mmMaximumAmount,
+					ATMTransactionAmounts8.mmMinimumPossibleAmount, ATMTransactionAmounts6.mmMinimumPossibleAmount, ATMTransactionAmounts7.mmAmount);
 			elementContext_lazy = () -> Limit.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Amount";
 			definition = "Amount of money of the limit, expressed in a currency.";
 			maxOccurs = 1;
@@ -478,14 +472,12 @@ public class Limit {
 	 */
 	public static final MMBusinessAttribute mmCreditDebitIndicator = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LimitDetails2.mmCreditDebitIndicator, com.tools20022.repository.msg.LimitDetails4.mmCreditDebitIndicator,
-					com.tools20022.repository.msg.Limit6.mmCreditDebitIndicator, com.tools20022.repository.msg.LimitDetails.mmCreditDebitIndicator, com.tools20022.repository.msg.BilateralLimitDetails1.mmCreditDebitIndicator,
-					com.tools20022.repository.msg.BilateralLimitDetails2.mmCreditDebitIndicator, com.tools20022.repository.msg.BilateralLimitDetails3.mmCreditDebitIndicator, com.tools20022.repository.msg.Limit5.mmCreditDebitIndicator,
-					com.tools20022.repository.msg.BilateralLimit1.mmCreditDebitIndicator, com.tools20022.repository.msg.LimitDetails3.mmCreditDebitIndicator, com.tools20022.repository.msg.Limit4.mmCreditDebitIndicator,
-					com.tools20022.repository.msg.Limit4.mmUsedAmountCreditDebitIndicator, com.tools20022.repository.msg.Limit2.mmCreditDebitIndicator);
+			derivation_lazy = () -> Arrays.asList(LimitDetails2.mmCreditDebitIndicator, LimitDetails4.mmCreditDebitIndicator, Limit6.mmCreditDebitIndicator, LimitDetails.mmCreditDebitIndicator,
+					BilateralLimitDetails1.mmCreditDebitIndicator, BilateralLimitDetails2.mmCreditDebitIndicator, BilateralLimitDetails3.mmCreditDebitIndicator, Limit5.mmCreditDebitIndicator, BilateralLimit1.mmCreditDebitIndicator,
+					LimitDetails3.mmCreditDebitIndicator, Limit4.mmCreditDebitIndicator, Limit4.mmUsedAmountCreditDebitIndicator, Limit2.mmCreditDebitIndicator);
 			elementContext_lazy = () -> Limit.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CreditDebitIndicator";
 			definition = "Specifies if a limit is a debit limit or a credit limit.";
 			maxOccurs = 1;
@@ -534,10 +526,10 @@ public class Limit {
 	 */
 	public static final MMBusinessAttribute mmUsedAmount = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LimitSearchCriteria3.mmUsedAmount, com.tools20022.repository.msg.Limit4.mmUsedAmount, com.tools20022.repository.msg.LimitAmount1.mmUtilisationAmount);
+			derivation_lazy = () -> Arrays.asList(LimitSearchCriteria3.mmUsedAmount, Limit4.mmUsedAmount, LimitAmount1.mmUtilisationAmount);
 			elementContext_lazy = () -> Limit.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "UsedAmount";
 			definition = "Actual usage of the limit expressed as an amount.";
 			maxOccurs = 1;
@@ -581,10 +573,10 @@ public class Limit {
 	 */
 	public static final MMBusinessAttribute mmUsedPercentage = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LimitSearchCriteria3.mmUsedPercentage);
+			derivation_lazy = () -> Arrays.asList(LimitSearchCriteria3.mmUsedPercentage);
 			elementContext_lazy = () -> Limit.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UsedPercentage";
 			definition = "Actual usage of the limit expressed as a percentage.";
 			maxOccurs = 1;
@@ -654,13 +646,11 @@ public class Limit {
 	 */
 	public static final MMBusinessAttribute mmCurrency = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LimitSearchCriteria3.mmLimitCurrency, com.tools20022.repository.msg.CurrencyFactors1.mmCurrency,
-					com.tools20022.repository.msg.LimitIdentification4.mmLimitCurrency, com.tools20022.repository.msg.LimitUtilisationJournalSearchCriteria1.mmLimitCurrency, com.tools20022.repository.msg.ATMTransactionAmounts2.mmCurrency,
-					com.tools20022.repository.msg.ATMTransactionAmounts3.mmCurrency, com.tools20022.repository.msg.ATMTransactionAmounts8.mmCurrency, com.tools20022.repository.msg.ATMTransactionAmounts9.mmCurrency,
-					com.tools20022.repository.msg.ATMTransactionAmounts6.mmCurrency, com.tools20022.repository.msg.ATMTransactionAmounts7.mmCurrency);
+			derivation_lazy = () -> Arrays.asList(LimitSearchCriteria3.mmLimitCurrency, CurrencyFactors1.mmCurrency, LimitIdentification4.mmLimitCurrency, LimitUtilisationJournalSearchCriteria1.mmLimitCurrency,
+					ATMTransactionAmounts2.mmCurrency, ATMTransactionAmounts3.mmCurrency, ATMTransactionAmounts8.mmCurrency, ATMTransactionAmounts9.mmCurrency, ATMTransactionAmounts6.mmCurrency, ATMTransactionAmounts7.mmCurrency);
 			elementContext_lazy = () -> Limit.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Currency";
 			definition = "Currency unit used to specify the limit amount.";
 			maxOccurs = 1;
@@ -723,16 +713,15 @@ public class Limit {
 	 */
 	public static final MMBusinessAssociationEnd mmLimitStatus = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LimitDetails3.mmStatus, com.tools20022.repository.msg.Limit4.mmStatus, com.tools20022.repository.msg.ReservationDetails1.mmStatus,
-					com.tools20022.repository.choice.ReservationStatus1Choice.mmCode, com.tools20022.repository.choice.ReservationStatus1Choice.mmProprietary, com.tools20022.repository.msg.Reservation1.mmStatus);
+			derivation_lazy = () -> Arrays.asList(LimitDetails3.mmStatus, Limit4.mmStatus, ReservationDetails1.mmStatus, ReservationStatus1Choice.mmCode, ReservationStatus1Choice.mmProprietary, Reservation1.mmStatus);
 			elementContext_lazy = () -> Limit.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "LimitStatus";
 			definition = "Current status of the limit.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.LimitStatus.mmLimit;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.LimitStatus.mmObject();
 		}
 	};
@@ -772,10 +761,10 @@ public class Limit {
 	 */
 	public static final MMBusinessAttribute mmPercentage = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Limit4.mmUsedPercentage);
+			derivation_lazy = () -> Arrays.asList(Limit4.mmUsedPercentage);
 			elementContext_lazy = () -> Limit.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Percentage";
 			definition = "Specifies that the limit is a percentage of a related amount.";
 			maxOccurs = 1;
@@ -821,13 +810,13 @@ public class Limit {
 		{
 			elementContext_lazy = () -> Limit.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedDebitCreditFacility";
 			definition = "Overdraft conditions for which limit parameters are specified.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.DebitCreditFacility.mmCreditLine;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.DebitCreditFacility.mmObject();
 		}
 	};
@@ -864,7 +853,7 @@ public class Limit {
 		{
 			elementContext_lazy = () -> Limit.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Periodicity";
 			definition = "Specifies the periodicity linked to a limit for example the periodicity can indicate that the limit can be reached daily or monthly.";
 			maxOccurs = 1;
@@ -902,7 +891,7 @@ public class Limit {
 		{
 			elementContext_lazy = () -> Limit.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Quantity";
 			definition = "Specifies that the limit is a quantity.";
 			maxOccurs = 1;
@@ -947,12 +936,12 @@ public class Limit {
 		{
 			elementContext_lazy = () -> Limit.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ValidityPeriod";
 			definition = "Period at which the limit is effective.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmRelatedLimit;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmObject();
 		}
 	};
@@ -993,13 +982,13 @@ public class Limit {
 		{
 			elementContext_lazy = () -> Limit.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedPaymentCard";
 			definition = "Payment card for which a limit is specified.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.PaymentCard.mmLimit;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.PaymentCard.mmObject();
 		}
 	};
@@ -1051,12 +1040,11 @@ public class Limit {
 	 */
 	public static final MMBusinessAttribute mmAvailableAmount = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LimitAmount1.mmAvailableAmount, com.tools20022.repository.msg.ATMTransactionAmounts4.mmAvailableAmount,
-					com.tools20022.repository.msg.ATMTransactionAmounts2.mmMaximumAuthorisableAmount, com.tools20022.repository.msg.ATMTransactionAmounts8.mmMaximumPossibleAmount,
-					com.tools20022.repository.msg.ATMTransactionAmounts6.mmMaximumPossibleAmount);
+			derivation_lazy = () -> Arrays.asList(LimitAmount1.mmAvailableAmount, ATMTransactionAmounts4.mmAvailableAmount, ATMTransactionAmounts2.mmMaximumAuthorisableAmount, ATMTransactionAmounts8.mmMaximumPossibleAmount,
+					ATMTransactionAmounts6.mmMaximumPossibleAmount);
 			elementContext_lazy = () -> Limit.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AvailableAmount";
 			definition = "Remaining amount of money of the limit.";
 			maxOccurs = 1;
@@ -1068,19 +1056,16 @@ public class Limit {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Limit";
 				definition = "Value used for risk containment in a system or towards counterparts. The limit may be a current limit or a default limit.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.DateTimePeriod.mmRelatedLimit, com.tools20022.repository.entity.PaymentCard.mmLimit, com.tools20022.repository.entity.LimitStatus.mmLimit,
 						com.tools20022.repository.entity.DebitCreditFacility.mmCreditLine);
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Limit1.mmCurrent, com.tools20022.repository.msg.Limit1.mmLimit);
+				derivationElement_lazy = () -> Arrays.asList(Limit1.mmCurrent, Limit1.mmLimit);
 				subType_lazy = () -> Arrays.asList(RiskManagementLimit.mmObject(), Reservation.mmObject(), LiquidityManagementLimit.mmObject());
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Limit.mmType, com.tools20022.repository.entity.Limit.mmAmount, com.tools20022.repository.entity.Limit.mmCreditDebitIndicator,
-						com.tools20022.repository.entity.Limit.mmUsedAmount, com.tools20022.repository.entity.Limit.mmUsedPercentage, com.tools20022.repository.entity.Limit.mmCurrency, com.tools20022.repository.entity.Limit.mmLimitStatus,
-						com.tools20022.repository.entity.Limit.mmPercentage, com.tools20022.repository.entity.Limit.mmRelatedDebitCreditFacility, com.tools20022.repository.entity.Limit.mmPeriodicity,
-						com.tools20022.repository.entity.Limit.mmQuantity, com.tools20022.repository.entity.Limit.mmValidityPeriod, com.tools20022.repository.entity.Limit.mmRelatedPaymentCard,
-						com.tools20022.repository.entity.Limit.mmAvailableAmount);
+				element_lazy = () -> Arrays.asList(Limit.mmType, Limit.mmAmount, Limit.mmCreditDebitIndicator, Limit.mmUsedAmount, Limit.mmUsedPercentage, Limit.mmCurrency, Limit.mmLimitStatus, Limit.mmPercentage,
+						Limit.mmRelatedDebitCreditFacility, Limit.mmPeriodicity, Limit.mmQuantity, Limit.mmValidityPeriod, Limit.mmRelatedPaymentCard, Limit.mmAvailableAmount);
 				derivationComponent_lazy = () -> Arrays.asList(LimitDetails2.mmObject(), LimitDetails4.mmObject(), LimitSearchCriteria1.mmObject(), LimitSearchCriteria2.mmObject(), LimitSearchCriteria3.mmObject(), Limit6.mmObject(),
 						LimitDetails.mmObject(), Limit5.mmObject(), LimitDetails3.mmObject(), Limit4.mmObject(), CreditLine1.mmObject(), CreditLine2.mmObject(), Limit2.mmObject(), Limit1.mmObject(), CurrentLimitChoice.mmObject(),
 						LimitAmount1.mmObject(), ATMTransactionAmounts4.mmObject(), ATMTransactionAmounts2.mmObject(), ATMTransactionAmounts3.mmObject(), ATMTransactionAmounts8.mmObject(), ATMTransactionAmounts9.mmObject(),

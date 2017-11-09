@@ -20,10 +20,14 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.DateAndDateTimeChoice;
 import com.tools20022.repository.codeset.CreditDebitCode;
 import com.tools20022.repository.datatype.ActiveOrHistoricCurrencyAndAmount;
+import com.tools20022.repository.entity.Balance;
 import com.tools20022.repository.entity.CashBalance;
+import com.tools20022.repository.entity.DebitCreditFacility;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -119,14 +123,14 @@ public class CashBalance3 {
 	 */
 	public static final MMMessageAssociationEnd mmType = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Balance.mmType;
+			businessElementTrace_lazy = () -> Balance.mmType;
 			componentContext_lazy = () -> CashBalance3.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Specifies the nature of a balance.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashBalance7.mmType);
+			nextVersions_lazy = () -> Arrays.asList(CashBalance7.mmType);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -174,14 +178,14 @@ public class CashBalance3 {
 	 */
 	public static final MMMessageAssociationEnd mmCreditLine = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.DebitCreditFacility.mmCreditLine;
+			businessElementTrace_lazy = () -> DebitCreditFacility.mmCreditLine;
 			componentContext_lazy = () -> CashBalance3.mmObject();
 			isDerived = false;
 			xmlTag = "CdtLine";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditLine";
 			definition = "Set of elements used to provide details on the credit line.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashBalance7.mmCreditLine);
+			nextVersions_lazy = () -> Arrays.asList(CashBalance7.mmCreditLine);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -230,14 +234,14 @@ public class CashBalance3 {
 	 */
 	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashBalance.mmAmount;
+			businessElementTrace_lazy = () -> CashBalance.mmAmount;
 			componentContext_lazy = () -> CashBalance3.mmObject();
 			isDerived = false;
 			xmlTag = "Amt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Amount of money of the cash balance.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashBalance7.mmAmount);
+			nextVersions_lazy = () -> Arrays.asList(CashBalance7.mmAmount);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
@@ -289,14 +293,14 @@ public class CashBalance3 {
 	 */
 	public static final MMMessageAttribute mmCreditDebitIndicator = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Balance.mmCreditDebitIndicator;
+			businessElementTrace_lazy = () -> Balance.mmCreditDebitIndicator;
 			componentContext_lazy = () -> CashBalance3.mmObject();
 			isDerived = false;
 			xmlTag = "CdtDbtInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditDebitIndicator";
 			definition = "Indicates whether the balance is a credit or a debit balance. \nUsage: A zero balance is considered to be a credit balance.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashBalance7.mmCreditDebitIndicator);
+			nextVersions_lazy = () -> Arrays.asList(CashBalance7.mmCreditDebitIndicator);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CreditDebitCode.mmObject();
@@ -344,14 +348,14 @@ public class CashBalance3 {
 	 */
 	public static final MMMessageAttribute mmDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Balance.mmValueDate;
+			businessElementTrace_lazy = () -> Balance.mmValueDate;
 			componentContext_lazy = () -> CashBalance3.mmObject();
 			isDerived = false;
 			xmlTag = "Dt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Date";
 			definition = "Indicates the date (and time) of the balance.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashBalance7.mmDate);
+			nextVersions_lazy = () -> Arrays.asList(CashBalance7.mmDate);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
@@ -408,14 +412,14 @@ public class CashBalance3 {
 	 */
 	public static final MMMessageAssociationEnd mmAvailability = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashBalance.mmAvailability;
+			businessElementTrace_lazy = () -> CashBalance.mmAvailability;
 			componentContext_lazy = () -> CashBalance3.mmObject();
 			isDerived = false;
 			xmlTag = "Avlbty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Availability";
 			definition = "Set of elements used to indicate when the booked amount of money will become available, that is can be accessed and starts generating interest. \n\nUsage: This type of information is used in the US and is linked to particular instruments such as cheques.\nExample: When a cheque is deposited, it will be booked on the deposit day, but the amount of money will only be accessible as of the indicated availability day (according to national banking regulations).";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashBalance7.mmAvailability);
+			nextVersions_lazy = () -> Arrays.asList(CashBalance7.mmAvailability);
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.CashBalanceAvailability2.mmObject();
@@ -425,11 +429,10 @@ public class CashBalance3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashBalance3.mmType, com.tools20022.repository.msg.CashBalance3.mmCreditLine, com.tools20022.repository.msg.CashBalance3.mmAmount,
-						com.tools20022.repository.msg.CashBalance3.mmCreditDebitIndicator, com.tools20022.repository.msg.CashBalance3.mmDate, com.tools20022.repository.msg.CashBalance3.mmAvailability);
+				messageElement_lazy = () -> Arrays.asList(CashBalance3.mmType, CashBalance3.mmCreditLine, CashBalance3.mmAmount, CashBalance3.mmCreditDebitIndicator, CashBalance3.mmDate, CashBalance3.mmAvailability);
 				trace_lazy = () -> CashBalance.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CashBalance3";
 				definition = "Set of elements used to define the balance details.";
 				nextVersions_lazy = () -> Arrays.asList(CashBalance7.mmObject());

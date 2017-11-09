@@ -20,9 +20,14 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.pacs.PaymentReturnV03;
+import com.tools20022.repository.area.pacs.PaymentReturnV04;
+import com.tools20022.repository.area.pacs.PaymentReturnV05;
 import com.tools20022.repository.choice.Authorisation1Choice;
 import com.tools20022.repository.datatype.*;
-import com.tools20022.repository.entity.Payment;
+import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -161,14 +166,14 @@ public class GroupHeader54 {
 	 */
 	public static final MMMessageAttribute mmMessageIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentIdentification.mmExecutionIdentification;
+			businessElementTrace_lazy = () -> PaymentIdentification.mmExecutionIdentification;
 			componentContext_lazy = () -> GroupHeader54.mmObject();
 			isDerived = false;
 			xmlTag = "MsgId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageIdentification";
 			definition = "Point to point reference, as assigned by the instructing party and sent to the next party in the chain, to unambiguously identify the message.\nUsage: The instructing party has to make sure that MessageIdentification is unique per instructed party for a pre-agreed period.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GroupHeader72.mmMessageIdentification);
+			nextVersions_lazy = () -> Arrays.asList(GroupHeader72.mmMessageIdentification);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -216,14 +221,14 @@ public class GroupHeader54 {
 	 */
 	public static final MMMessageAttribute mmCreationDateTime = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentExecution.mmCreationDate;
+			businessElementTrace_lazy = () -> PaymentExecution.mmCreationDate;
 			componentContext_lazy = () -> GroupHeader54.mmObject();
 			isDerived = false;
 			xmlTag = "CreDtTm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreationDateTime";
 			definition = "Date and time at which the message was created.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GroupHeader72.mmCreationDateTime);
+			nextVersions_lazy = () -> Arrays.asList(GroupHeader72.mmCreationDateTime);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
@@ -280,10 +285,10 @@ public class GroupHeader54 {
 			componentContext_lazy = () -> GroupHeader54.mmObject();
 			isDerived = false;
 			xmlTag = "Authstn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Authorisation";
 			definition = "User identification or any user key to be used to check whether the initiating party is allowed to initiate transactions from the account specified in the message.\n\nUsage: The content is not of a technical nature, but reflects the organisational structure at the initiating side.\nThe authorisation element can typically be used in relay scenarios, payment initiations, payment returns or payment reversals that are initiated on behalf of a party different from the initiating party.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GroupHeader72.mmAuthorisation);
+			nextVersions_lazy = () -> Arrays.asList(GroupHeader72.mmAuthorisation);
 			maxOccurs = 2;
 			minOccurs = 0;
 			complexType_lazy = () -> Authorisation1Choice.mmObject();
@@ -335,10 +340,10 @@ public class GroupHeader54 {
 			componentContext_lazy = () -> GroupHeader54.mmObject();
 			isDerived = false;
 			xmlTag = "BtchBookg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BatchBooking";
 			definition = "Identifies whether a single entry per individual transaction or a batch entry for the sum of the amounts of all transactions within the group of a message is requested.\nUsage: Batch booking is used to request and not order a possible batch booking.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GroupHeader72.mmBatchBooking);
+			nextVersions_lazy = () -> Arrays.asList(GroupHeader72.mmBatchBooking);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> BatchBookingIndicator.mmObject();
@@ -386,10 +391,10 @@ public class GroupHeader54 {
 			componentContext_lazy = () -> GroupHeader54.mmObject();
 			isDerived = false;
 			xmlTag = "NbOfTxs";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NumberOfTransactions";
 			definition = "Number of individual transactions contained in the message.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GroupHeader72.mmNumberOfTransactions);
+			nextVersions_lazy = () -> Arrays.asList(GroupHeader72.mmNumberOfTransactions);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max15NumericText.mmObject();
@@ -438,10 +443,10 @@ public class GroupHeader54 {
 			componentContext_lazy = () -> GroupHeader54.mmObject();
 			isDerived = false;
 			xmlTag = "CtrlSum";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ControlSum";
 			definition = "Total of all individual amounts included in the message, irrespective of currencies.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GroupHeader72.mmControlSum);
+			nextVersions_lazy = () -> Arrays.asList(GroupHeader72.mmControlSum);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
@@ -491,10 +496,10 @@ public class GroupHeader54 {
 			componentContext_lazy = () -> GroupHeader54.mmObject();
 			isDerived = false;
 			xmlTag = "GrpRtr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GroupReturn";
 			definition = "Indicates whether the return applies to the whole group of transactions or to individual transactions within the original group(s).";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GroupHeader72.mmGroupReturn);
+			nextVersions_lazy = () -> Arrays.asList(GroupHeader72.mmGroupReturn);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
@@ -546,14 +551,14 @@ public class GroupHeader54 {
 	 */
 	public static final MMMessageAttribute mmTotalReturnedInterbankSettlementAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashSettlement.mmInterbankSettlementAmount;
+			businessElementTrace_lazy = () -> CashSettlement.mmInterbankSettlementAmount;
 			componentContext_lazy = () -> GroupHeader54.mmObject();
 			isDerived = false;
 			xmlTag = "TtlRtrdIntrBkSttlmAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalReturnedInterbankSettlementAmount";
 			definition = "Total amount of money moved between the instructing agent and the instructed agent in the return message.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GroupHeader72.mmTotalReturnedInterbankSettlementAmount);
+			nextVersions_lazy = () -> Arrays.asList(GroupHeader72.mmTotalReturnedInterbankSettlementAmount);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
@@ -605,14 +610,14 @@ public class GroupHeader54 {
 	 */
 	public static final MMMessageAttribute mmInterbankSettlementDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashSettlement.mmInterbankSettlementDate;
+			businessElementTrace_lazy = () -> CashSettlement.mmInterbankSettlementDate;
 			componentContext_lazy = () -> GroupHeader54.mmObject();
 			isDerived = false;
 			xmlTag = "IntrBkSttlmDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterbankSettlementDate";
 			definition = "Date on which the amount of money ceases to be available to the agent that owes it and when the amount of money becomes available to the agent to which it is due.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GroupHeader72.mmInterbankSettlementDate);
+			nextVersions_lazy = () -> Arrays.asList(GroupHeader72.mmInterbankSettlementDate);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
@@ -662,14 +667,14 @@ public class GroupHeader54 {
 	 */
 	public static final MMMessageAssociationEnd mmSettlementInformation = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentInstruction.mmSettlementInstruction;
+			businessElementTrace_lazy = () -> PaymentInstruction.mmSettlementInstruction;
 			componentContext_lazy = () -> GroupHeader54.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementInformation";
 			definition = "Specifies the details on how the settlement of the transaction(s) between the instructing agent and the instructed agent is completed.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GroupHeader72.mmSettlementInformation);
+			nextVersions_lazy = () -> Arrays.asList(GroupHeader72.mmSettlementInformation);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -723,14 +728,14 @@ public class GroupHeader54 {
 	 */
 	public static final MMMessageAssociationEnd mmInstructingAgent = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Organisation.mmOrganisationIdentification;
+			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> GroupHeader54.mmObject();
 			isDerived = false;
 			xmlTag = "InstgAgt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructingAgent";
 			definition = "Agent that instructs the next party in the chain to carry out the (set of) instruction(s).\nUsage: The instructing agent is the party sending the return message and not the party that sent the original instruction that is being returned.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GroupHeader72.mmInstructingAgent);
+			nextVersions_lazy = () -> Arrays.asList(GroupHeader72.mmInstructingAgent);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -784,14 +789,14 @@ public class GroupHeader54 {
 	 */
 	public static final MMMessageAssociationEnd mmInstructedAgent = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Organisation.mmOrganisationIdentification;
+			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> GroupHeader54.mmObject();
 			isDerived = false;
 			xmlTag = "InstdAgt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructedAgent";
 			definition = "Agent that is instructed by the previous party in the chain to carry out the (set of) instruction(s).\nUsage: The instructed agent is the party receiving the return message and not the party that received the original instruction that is being returned.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GroupHeader72.mmInstructedAgent);
+			nextVersions_lazy = () -> Arrays.asList(GroupHeader72.mmInstructedAgent);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -802,16 +807,13 @@ public class GroupHeader54 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GroupHeader54.mmMessageIdentification, com.tools20022.repository.msg.GroupHeader54.mmCreationDateTime,
-						com.tools20022.repository.msg.GroupHeader54.mmAuthorisation, com.tools20022.repository.msg.GroupHeader54.mmBatchBooking, com.tools20022.repository.msg.GroupHeader54.mmNumberOfTransactions,
-						com.tools20022.repository.msg.GroupHeader54.mmControlSum, com.tools20022.repository.msg.GroupHeader54.mmGroupReturn, com.tools20022.repository.msg.GroupHeader54.mmTotalReturnedInterbankSettlementAmount,
-						com.tools20022.repository.msg.GroupHeader54.mmInterbankSettlementDate, com.tools20022.repository.msg.GroupHeader54.mmSettlementInformation, com.tools20022.repository.msg.GroupHeader54.mmInstructingAgent,
-						com.tools20022.repository.msg.GroupHeader54.mmInstructedAgent);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.pacs.PaymentReturnV03.mmGroupHeader, com.tools20022.repository.area.pacs.PaymentReturnV04.mmGroupHeader,
-						com.tools20022.repository.area.pacs.PaymentReturnV05.mmGroupHeader);
+				messageElement_lazy = () -> Arrays.asList(GroupHeader54.mmMessageIdentification, GroupHeader54.mmCreationDateTime, GroupHeader54.mmAuthorisation, GroupHeader54.mmBatchBooking, GroupHeader54.mmNumberOfTransactions,
+						GroupHeader54.mmControlSum, GroupHeader54.mmGroupReturn, GroupHeader54.mmTotalReturnedInterbankSettlementAmount, GroupHeader54.mmInterbankSettlementDate, GroupHeader54.mmSettlementInformation,
+						GroupHeader54.mmInstructingAgent, GroupHeader54.mmInstructedAgent);
+				messageBuildingBlock_lazy = () -> Arrays.asList(PaymentReturnV03.mmGroupHeader, PaymentReturnV04.mmGroupHeader, PaymentReturnV05.mmGroupHeader);
 				trace_lazy = () -> Payment.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "GroupHeader54";
 				definition = "Set of characteristics shared by all individual transactions included in the message.";
 				nextVersions_lazy = () -> Arrays.asList(GroupHeader72.mmObject());

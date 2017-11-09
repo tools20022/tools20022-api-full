@@ -20,6 +20,7 @@ package com.tools20022.repository.area.semt;
 import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.SecuritiesManagementArchive;
 import com.tools20022.repository.choice.PartyIdentification36Choice;
 import com.tools20022.repository.msg.*;
@@ -58,6 +59,9 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code semt.021.001.04}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.SecuritiesManagementArchive
@@ -96,9 +100,6 @@ import java.util.List;
  * SecuritiesStatementQueryV04.mmSupplementaryData}</li>
  * </ul>
  * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code semt.021.001.04}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -165,11 +166,11 @@ public class SecuritiesStatementQueryV04 {
 	public static final MMMessageBuildingBlock mmStatementRequested = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "StmtReqd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatementRequested";
 			definition = "Description of the statement requested.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.SecuritiesStatementQueryV05.mmStatementRequested);
-			previousVersion_lazy = () -> com.tools20022.repository.area.semt.SecuritiesStatementQueryV03.mmStatementRequested;
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesStatementQueryV05.mmStatementRequested);
+			previousVersion_lazy = () -> SecuritiesStatementQueryV03.mmStatementRequested;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> DocumentNumber1.mmObject();
@@ -214,11 +215,11 @@ public class SecuritiesStatementQueryV04 {
 	public static final MMMessageBuildingBlock mmStatementGeneralDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "StmtGnlDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatementGeneralDetails";
 			definition = "General information related to report.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.SecuritiesStatementQueryV05.mmStatementGeneralDetails);
-			previousVersion_lazy = () -> com.tools20022.repository.area.semt.SecuritiesStatementQueryV03.mmStatementGeneralDetails;
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesStatementQueryV05.mmStatementGeneralDetails);
+			previousVersion_lazy = () -> SecuritiesStatementQueryV03.mmStatementGeneralDetails;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> Statement16.mmObject();
@@ -264,11 +265,11 @@ public class SecuritiesStatementQueryV04 {
 	public static final MMMessageBuildingBlock mmAccountOwner = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "AcctOwnr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountOwner";
 			definition = "Party that legally owns the account.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.SecuritiesStatementQueryV05.mmAccountOwner);
-			previousVersion_lazy = () -> com.tools20022.repository.area.semt.SecuritiesStatementQueryV03.mmAccountOwner;
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesStatementQueryV05.mmAccountOwner);
+			previousVersion_lazy = () -> SecuritiesStatementQueryV03.mmAccountOwner;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification36Choice.mmObject();
@@ -314,11 +315,11 @@ public class SecuritiesStatementQueryV04 {
 	public static final MMMessageBuildingBlock mmSafekeepingAccount = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SfkpgAcct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingAccount";
 			definition = "Account to or from which a securities entry is made.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.SecuritiesStatementQueryV05.mmSafekeepingAccount);
-			previousVersion_lazy = () -> com.tools20022.repository.area.semt.SecuritiesStatementQueryV03.mmSafekeepingAccount;
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesStatementQueryV05.mmSafekeepingAccount);
+			previousVersion_lazy = () -> SecuritiesStatementQueryV03.mmSafekeepingAccount;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> SecuritiesAccount13.mmObject();
@@ -364,11 +365,11 @@ public class SecuritiesStatementQueryV04 {
 	public static final MMMessageBuildingBlock mmAdditionalQueryParameters = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "AddtlQryParams";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalQueryParameters";
 			definition = "Additional specific query criteria.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.SecuritiesStatementQueryV05.mmAdditionalQueryParameters);
-			previousVersion_lazy = () -> com.tools20022.repository.area.semt.SecuritiesStatementQueryV03.mmAdditionalQueryParameters;
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesStatementQueryV05.mmAdditionalQueryParameters);
+			previousVersion_lazy = () -> SecuritiesStatementQueryV03.mmAdditionalQueryParameters;
 			minOccurs = 0;
 			complexType_lazy = () -> AdditionalQueryParameters7.mmObject();
 		}
@@ -416,11 +417,11 @@ public class SecuritiesStatementQueryV04 {
 	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SplmtryData";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryData";
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.SecuritiesStatementQueryV05.mmSupplementaryData);
-			previousVersion_lazy = () -> com.tools20022.repository.area.semt.SecuritiesStatementQueryV03.mmSupplementaryData;
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesStatementQueryV05.mmSupplementaryData);
+			previousVersion_lazy = () -> SecuritiesStatementQueryV03.mmSupplementaryData;
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
@@ -429,7 +430,7 @@ public class SecuritiesStatementQueryV04 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesStatementQueryV04";
 				definition = "Scope\nAn account owner sends a SecuritiesStatementQuery to an account servicer to request any existing securities statement.\nThe account owner/servicer relationship may be:\n- a global custodian which has an account with a local custodian, or\n- an investment management institution which manage a fund account opened at a custodian, or\n- a broker which has an account with a custodian, or\n- a central securities depository participant which has an account with a central securities depository, or\n- a central securities depository which has an account with a custodian, another central securities depository or another settlement market infrastructure, or\n- a central counterparty or a stock exchange or a trade matching utility which need to instruct to a central securities depository or another settlement market infrastructure.\n\nUsage\nThe message may also be used to:\n- re-send a message previously sent,\n- provide a third party with a copy of a message for information,\n- re-send to a third party a copy of a message for information\nusing the relevant elements in the Business Application Header.\n\nISO 15022 - 20022 Coexistence\nThis ISO 20022 message is reversed engineered from ISO 15022. Both standards will coexist for a certain number of years. Until this coexistence period ends, the usage of certain data types is restricted to ensure interoperability between ISO 15022 and 20022 users. Compliance to these rules is mandatory in a coexistence environment.  The coexistence restrictions are described in a Textual Rule linked to the Message Items they concern. These coexistence textual rules are clearly identified as follows:  “CoexistenceXxxxRule”.";
 				nextVersions_lazy = () -> Arrays.asList(SecuritiesStatementQueryV05.mmObject());
@@ -438,10 +439,8 @@ public class SecuritiesStatementQueryV04 {
 				rootElement = "Document";
 				xmlTag = "SctiesStmtQry";
 				businessArea_lazy = () -> SecuritiesManagementArchive.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.SecuritiesStatementQueryV04.mmStatementRequested,
-						com.tools20022.repository.area.semt.SecuritiesStatementQueryV04.mmStatementGeneralDetails, com.tools20022.repository.area.semt.SecuritiesStatementQueryV04.mmAccountOwner,
-						com.tools20022.repository.area.semt.SecuritiesStatementQueryV04.mmSafekeepingAccount, com.tools20022.repository.area.semt.SecuritiesStatementQueryV04.mmAdditionalQueryParameters,
-						com.tools20022.repository.area.semt.SecuritiesStatementQueryV04.mmSupplementaryData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesStatementQueryV04.mmStatementRequested, SecuritiesStatementQueryV04.mmStatementGeneralDetails, SecuritiesStatementQueryV04.mmAccountOwner,
+						SecuritiesStatementQueryV04.mmSafekeepingAccount, SecuritiesStatementQueryV04.mmAdditionalQueryParameters, SecuritiesStatementQueryV04.mmSupplementaryData);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "semt";

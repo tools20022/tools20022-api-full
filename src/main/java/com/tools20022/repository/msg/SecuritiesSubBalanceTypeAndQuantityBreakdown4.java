@@ -19,8 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.SecuritiesBalanceType8Choice;
 import com.tools20022.repository.entity.SecuritiesBalance;
+import com.tools20022.repository.entity.SecuritiesQuantity;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -103,11 +106,11 @@ public class SecuritiesSubBalanceTypeAndQuantityBreakdown4 {
 	 */
 	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesBalance.mmSecuritiesBalanceType;
+			businessElementTrace_lazy = () -> SecuritiesBalance.mmSecuritiesBalanceType;
 			componentContext_lazy = () -> SecuritiesSubBalanceTypeAndQuantityBreakdown4.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Specifies the securities sub balance type indicator (example restriction type for a market infrastructure).";
 			maxOccurs = 1;
@@ -152,11 +155,11 @@ public class SecuritiesSubBalanceTypeAndQuantityBreakdown4 {
 	 */
 	public static final MMMessageAttribute mmQuantityBreakdown = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmLotBreakdown;
+			businessElementTrace_lazy = () -> SecuritiesQuantity.mmLotBreakdown;
 			componentContext_lazy = () -> SecuritiesSubBalanceTypeAndQuantityBreakdown4.mmObject();
 			isDerived = false;
 			xmlTag = "QtyBrkdwn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuantityBreakdown";
 			definition = "Breakdown of a quantity into lots such as tax lots, instrument series.";
 			minOccurs = 0;
@@ -167,10 +170,10 @@ public class SecuritiesSubBalanceTypeAndQuantityBreakdown4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesSubBalanceTypeAndQuantityBreakdown4.mmType, com.tools20022.repository.msg.SecuritiesSubBalanceTypeAndQuantityBreakdown4.mmQuantityBreakdown);
+				messageElement_lazy = () -> Arrays.asList(SecuritiesSubBalanceTypeAndQuantityBreakdown4.mmType, SecuritiesSubBalanceTypeAndQuantityBreakdown4.mmQuantityBreakdown);
 				trace_lazy = () -> SecuritiesBalance.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesSubBalanceTypeAndQuantityBreakdown4";
 				definition = "Quantity breakdown information for a specific securities balance.";
 			}

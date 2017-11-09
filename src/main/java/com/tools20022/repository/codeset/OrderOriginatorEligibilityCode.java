@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -29,6 +31,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.OrderOriginatorEligibility1Code
+ * OrderOriginatorEligibility1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -40,14 +50,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.OrderOriginatorEligibilityCode#mmProfessional
  * OrderOriginatorEligibilityCode.mmProfessional}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.OrderOriginatorEligibility1Code
- * OrderOriginatorEligibility1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -104,7 +106,7 @@ public class OrderOriginatorEligibilityCode {
 	 */
 	public static final MMCode mmEligible = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Eligible";
 			definition = "Eligible counterparty - MiFID classification of counterparty. Eligible customers are the most sophisticated level of investor, able to opt out of some the protections afforded by conduct of business rules defined under MiFID.";
 			owner_lazy = () -> OrderOriginatorEligibilityCode.mmObject();
@@ -137,7 +139,7 @@ public class OrderOriginatorEligibilityCode {
 	 */
 	public static final MMCode mmRetail = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Retail";
 			definition = "Retail client - MiFID classification of counterparty. Retail customers are the least sophisticated level of investor.";
 			owner_lazy = () -> OrderOriginatorEligibilityCode.mmObject();
@@ -171,7 +173,7 @@ public class OrderOriginatorEligibilityCode {
 	 */
 	public static final MMCode mmProfessional = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Professional";
 			definition = "Professional client - MiFID classification of counterparty. Professional customers are, for example, investment firms, credit institutions, insurance companies.";
 			owner_lazy = () -> OrderOriginatorEligibilityCode.mmObject();
@@ -182,13 +184,12 @@ public class OrderOriginatorEligibilityCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ELIG");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OrderOriginatorEligibilityCode";
 				definition = "Specifies  the type of the counterparties eligibility as defined by article 24 of the EU MiFID Directive applicable to transactions executed by investment firms for eligible counterparties.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OrderOriginatorEligibilityCode.mmEligible, com.tools20022.repository.codeset.OrderOriginatorEligibilityCode.mmRetail,
-						com.tools20022.repository.codeset.OrderOriginatorEligibilityCode.mmProfessional);
+				code_lazy = () -> Arrays.asList(OrderOriginatorEligibilityCode.mmEligible, OrderOriginatorEligibilityCode.mmRetail, OrderOriginatorEligibilityCode.mmProfessional);
 				derivation_lazy = () -> Arrays.asList(OrderOriginatorEligibility1Code.mmObject());
 			}
 		});

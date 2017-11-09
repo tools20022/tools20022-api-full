@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.SourceOfCash1Code
+ * SourceOfCash1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -73,13 +82,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * SourceOfCashCode.mmCompensation}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.SourceOfCash1Code
- * SourceOfCash1Code}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -121,7 +123,7 @@ public class SourceOfCashCode {
 	 */
 	public static final MMCode mmRetirementPolicy = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RetirementPolicy";
 			definition = "Income from a retirement policy.";
 			owner_lazy = () -> SourceOfCashCode.mmObject();
@@ -151,7 +153,7 @@ public class SourceOfCashCode {
 	 */
 	public static final MMCode mmSelfEmploymentIncome = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SelfEmploymentIncome";
 			definition = "Income from self-employment.";
 			owner_lazy = () -> SourceOfCashCode.mmObject();
@@ -181,7 +183,7 @@ public class SourceOfCashCode {
 	 */
 	public static final MMCode mmEmployeeIncome = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EmployeeIncome";
 			definition = "Employee income.";
 			owner_lazy = () -> SourceOfCashCode.mmObject();
@@ -211,7 +213,7 @@ public class SourceOfCashCode {
 	 */
 	public static final MMCode mmSavings = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Savings";
 			definition = "Income from a savings plan.";
 			owner_lazy = () -> SourceOfCashCode.mmObject();
@@ -241,7 +243,7 @@ public class SourceOfCashCode {
 	 */
 	public static final MMCode mmGift = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Gift";
 			definition = "Income was a cash gift.";
 			owner_lazy = () -> SourceOfCashCode.mmObject();
@@ -271,7 +273,7 @@ public class SourceOfCashCode {
 	 */
 	public static final MMCode mmInheritance = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Inheritance";
 			definition = "Cash from an inheritance.";
 			owner_lazy = () -> SourceOfCashCode.mmObject();
@@ -301,7 +303,7 @@ public class SourceOfCashCode {
 	 */
 	public static final MMCode mmRedemption = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Redemption";
 			definition = "Redemption of an investment fund.";
 			owner_lazy = () -> SourceOfCashCode.mmObject();
@@ -331,7 +333,7 @@ public class SourceOfCashCode {
 	 */
 	public static final MMCode mmWinnings = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Winnings";
 			definition = "Income from a cash win.";
 			owner_lazy = () -> SourceOfCashCode.mmObject();
@@ -361,7 +363,7 @@ public class SourceOfCashCode {
 	 */
 	public static final MMCode mmInsurancePremiumLiquidation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InsurancePremiumLiquidation";
 			definition = "Income from the liquidation of an insurance premium.";
 			owner_lazy = () -> SourceOfCashCode.mmObject();
@@ -391,7 +393,7 @@ public class SourceOfCashCode {
 	 */
 	public static final MMCode mmSaleOfGoods = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SaleOfGoods";
 			definition = "Sale of goods.";
 			owner_lazy = () -> SourceOfCashCode.mmObject();
@@ -421,7 +423,7 @@ public class SourceOfCashCode {
 	 */
 	public static final MMCode mmRealEstateSale = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RealEstateSale";
 			definition = "Income from the sale of real estate.";
 			owner_lazy = () -> SourceOfCashCode.mmObject();
@@ -451,7 +453,7 @@ public class SourceOfCashCode {
 	 */
 	public static final MMCode mmSaleAquisitionCorporation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SaleAquisitionCorporation";
 			definition = "Sale and acquisition of a corporation.";
 			owner_lazy = () -> SourceOfCashCode.mmObject();
@@ -481,7 +483,7 @@ public class SourceOfCashCode {
 	 */
 	public static final MMCode mmCashProceeds = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashProceeds";
 			definition = "Income is cash proceeds from customers.";
 			owner_lazy = () -> SourceOfCashCode.mmObject();
@@ -511,7 +513,7 @@ public class SourceOfCashCode {
 	 */
 	public static final MMCode mmAlimony = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Alimony";
 			definition = "Income as a result of alimony.";
 			owner_lazy = () -> SourceOfCashCode.mmObject();
@@ -541,7 +543,7 @@ public class SourceOfCashCode {
 	 */
 	public static final MMCode mmCompensation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Compensation";
 			definition = "Income is from compensation received.";
 			owner_lazy = () -> SourceOfCashCode.mmObject();
@@ -552,16 +554,13 @@ public class SourceOfCashCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SourceOfCashCode";
 				definition = "Specifies the origin of cash.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SourceOfCashCode.mmRetirementPolicy, com.tools20022.repository.codeset.SourceOfCashCode.mmSelfEmploymentIncome,
-						com.tools20022.repository.codeset.SourceOfCashCode.mmEmployeeIncome, com.tools20022.repository.codeset.SourceOfCashCode.mmSavings, com.tools20022.repository.codeset.SourceOfCashCode.mmGift,
-						com.tools20022.repository.codeset.SourceOfCashCode.mmInheritance, com.tools20022.repository.codeset.SourceOfCashCode.mmRedemption, com.tools20022.repository.codeset.SourceOfCashCode.mmWinnings,
-						com.tools20022.repository.codeset.SourceOfCashCode.mmInsurancePremiumLiquidation, com.tools20022.repository.codeset.SourceOfCashCode.mmSaleOfGoods,
-						com.tools20022.repository.codeset.SourceOfCashCode.mmRealEstateSale, com.tools20022.repository.codeset.SourceOfCashCode.mmSaleAquisitionCorporation, com.tools20022.repository.codeset.SourceOfCashCode.mmCashProceeds,
-						com.tools20022.repository.codeset.SourceOfCashCode.mmAlimony, com.tools20022.repository.codeset.SourceOfCashCode.mmCompensation);
+				code_lazy = () -> Arrays.asList(SourceOfCashCode.mmRetirementPolicy, SourceOfCashCode.mmSelfEmploymentIncome, SourceOfCashCode.mmEmployeeIncome, SourceOfCashCode.mmSavings, SourceOfCashCode.mmGift,
+						SourceOfCashCode.mmInheritance, SourceOfCashCode.mmRedemption, SourceOfCashCode.mmWinnings, SourceOfCashCode.mmInsurancePremiumLiquidation, SourceOfCashCode.mmSaleOfGoods, SourceOfCashCode.mmRealEstateSale,
+						SourceOfCashCode.mmSaleAquisitionCorporation, SourceOfCashCode.mmCashProceeds, SourceOfCashCode.mmAlimony, SourceOfCashCode.mmCompensation);
 				derivation_lazy = () -> Arrays.asList(SourceOfCash1Code.mmObject());
 			}
 		});

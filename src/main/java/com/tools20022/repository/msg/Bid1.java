@@ -20,11 +20,13 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.BasisPriceType1Choice;
 import com.tools20022.repository.codeset.TradeType2Code;
 import com.tools20022.repository.datatype.*;
 import com.tools20022.repository.datatype.Number;
-import com.tools20022.repository.entity.SecuritiesOrder;
+import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -129,7 +131,7 @@ public class Bid1 {
 			componentContext_lazy = () -> Bid1.mmObject();
 			isDerived = false;
 			xmlTag = "ClntBidId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClientBidIdentification";
 			definition = "Unique identifier for a Bid Request as assigned by institution. Uniqueness must be guaranteed within a single trading day.";
 			maxOccurs = 1;
@@ -170,11 +172,11 @@ public class Bid1 {
 	 */
 	public static final MMMessageAttribute mmListName = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ListTrading.mmListName;
+			businessElementTrace_lazy = () -> ListTrading.mmListName;
 			componentContext_lazy = () -> Bid1.mmObject();
 			isDerived = false;
 			xmlTag = "ListNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ListName";
 			definition = "Provides the name of the order list.";
 			maxOccurs = 1;
@@ -213,7 +215,7 @@ public class Bid1 {
 			componentContext_lazy = () -> Bid1.mmObject();
 			isDerived = false;
 			xmlTag = "BidId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BidIdentification";
 			definition = "Unique and unambiguous identification of the bid.";
 			maxOccurs = 1;
@@ -257,11 +259,11 @@ public class Bid1 {
 	 */
 	public static final MMMessageAttribute mmTotalNumberSecurities = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmOrderedQuantity;
+			businessElementTrace_lazy = () -> SecuritiesOrder.mmOrderedQuantity;
 			componentContext_lazy = () -> Bid1.mmObject();
 			isDerived = false;
 			xmlTag = "TtlNbScties";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalNumberSecurities";
 			definition = "Total number of distinct financial instruments for which the bid is applicable.";
 			maxOccurs = 1;
@@ -303,11 +305,11 @@ public class Bid1 {
 	 */
 	public static final MMMessageAttribute mmExchangeForPhysicalIndicator = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmExchangeForPhysicalTrade;
+			businessElementTrace_lazy = () -> SecuritiesOrder.mmExchangeForPhysicalTrade;
 			componentContext_lazy = () -> Bid1.mmObject();
 			isDerived = false;
 			xmlTag = "XchgForPhysInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExchangeForPhysicalIndicator";
 			definition = "Indicates whether or not to exchange for physical.";
 			maxOccurs = 1;
@@ -352,11 +354,11 @@ public class Bid1 {
 	 */
 	public static final MMMessageAttribute mmForeignExchangeExecutionRequestedIndicator = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmForeignExchangeExecutionRequested;
+			businessElementTrace_lazy = () -> SecuritiesOrder.mmForeignExchangeExecutionRequested;
 			componentContext_lazy = () -> Bid1.mmObject();
 			isDerived = false;
 			xmlTag = "FrgnXchgExctnReqdInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForeignExchangeExecutionRequestedIndicator";
 			definition = "Indicates a request for a foreign exchange accommodation trade to be executed along with security transaction.";
 			maxOccurs = 1;
@@ -399,11 +401,11 @@ public class Bid1 {
 	 */
 	public static final MMMessageAttribute mmTradeType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTrade.mmTransactionType;
+			businessElementTrace_lazy = () -> SecuritiesTrade.mmTransactionType;
 			componentContext_lazy = () -> Bid1.mmObject();
 			isDerived = false;
 			xmlTag = "TradTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeType";
 			definition = "Indicates the type of transaction of which the order is a component.";
 			maxOccurs = 1;
@@ -445,11 +447,11 @@ public class Bid1 {
 	 */
 	public static final MMMessageAttribute mmTotalNumberTickets = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmSecuritiesOrderAllocation;
+			businessElementTrace_lazy = () -> SecuritiesOrder.mmSecuritiesOrderAllocation;
 			componentContext_lazy = () -> Bid1.mmObject();
 			isDerived = false;
 			xmlTag = "TtlNbTckts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalNumberTickets";
 			definition = "Expected total number of tickets/allocations to be fully executed.";
 			maxOccurs = 1;
@@ -495,7 +497,7 @@ public class Bid1 {
 			componentContext_lazy = () -> Bid1.mmObject();
 			isDerived = false;
 			xmlTag = "PrgrsRptInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProgressReportIndicator";
 			definition = "Identifies the request to receive a report on the progress of the order or not.\n\nA 'Yes' value means a request for regular status messages to be sent.\nA 'No' value means no request to receive regular status messages.";
 			maxOccurs = 1;
@@ -537,7 +539,7 @@ public class Bid1 {
 			componentContext_lazy = () -> Bid1.mmObject();
 			isDerived = false;
 			xmlTag = "PrgrsPrdIntrvl";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProgressPeriodInterval";
 			definition = "Identifies the interval period in minutes between each ListStatus you wish to receive.";
 			maxOccurs = 1;
@@ -579,11 +581,11 @@ public class Bid1 {
 	 */
 	public static final MMMessageAttribute mmTotalNumberOfBidders = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.NonDisclosedListTrading.mmNumberOfBidders;
+			businessElementTrace_lazy = () -> NonDisclosedListTrading.mmNumberOfBidders;
 			componentContext_lazy = () -> Bid1.mmObject();
 			isDerived = false;
 			xmlTag = "TtlNbOfBddrs";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalNumberOfBidders";
 			definition = "Indicates the total number of bidders participating to a list trade.";
 			maxOccurs = 1;
@@ -624,11 +626,11 @@ public class Bid1 {
 	 */
 	public static final MMMessageAttribute mmTradeDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Trade.mmTradeDateTime;
+			businessElementTrace_lazy = () -> Trade.mmTradeDateTime;
 			componentContext_lazy = () -> Bid1.mmObject();
 			isDerived = false;
 			xmlTag = "TradDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeDate";
 			definition = "Specifies the date/time on which the trade was executed.";
 			maxOccurs = 1;
@@ -672,11 +674,11 @@ public class Bid1 {
 	 */
 	public static final MMMessageAttribute mmStrikeTime = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ListTrading.mmStrikeTime;
+			businessElementTrace_lazy = () -> ListTrading.mmStrikeTime;
 			componentContext_lazy = () -> Bid1.mmObject();
 			isDerived = false;
 			xmlTag = "StrkTm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StrikeTime";
 			definition = "Time at which current market prices are used to determine the value of a basket.";
 			maxOccurs = 1;
@@ -718,11 +720,11 @@ public class Bid1 {
 	 */
 	public static final MMMessageAssociationEnd mmBasisPriceType = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ListTrading.mmBasisPriceType;
+			businessElementTrace_lazy = () -> ListTrading.mmBasisPriceType;
 			componentContext_lazy = () -> Bid1.mmObject();
 			isDerived = false;
 			xmlTag = "BsisPricTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BasisPriceType";
 			definition = "Represents the basis price type in a bid order (list trading).";
 			maxOccurs = 1;
@@ -765,11 +767,11 @@ public class Bid1 {
 	 */
 	public static final MMMessageAssociationEnd mmLiquidityAndStatistics = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ListTrading.mmLiquidity;
+			businessElementTrace_lazy = () -> ListTrading.mmLiquidity;
 			componentContext_lazy = () -> Bid1.mmObject();
 			isDerived = false;
 			xmlTag = "LqdtyAndSttstcs";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LiquidityAndStatistics";
 			definition = "General details about the liquidity of the financial instrument.";
 			maxOccurs = 1;
@@ -782,14 +784,12 @@ public class Bid1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Bid1.mmClientBidIdentification, com.tools20022.repository.msg.Bid1.mmListName, com.tools20022.repository.msg.Bid1.mmBidIdentification,
-						com.tools20022.repository.msg.Bid1.mmTotalNumberSecurities, com.tools20022.repository.msg.Bid1.mmExchangeForPhysicalIndicator, com.tools20022.repository.msg.Bid1.mmForeignExchangeExecutionRequestedIndicator,
-						com.tools20022.repository.msg.Bid1.mmTradeType, com.tools20022.repository.msg.Bid1.mmTotalNumberTickets, com.tools20022.repository.msg.Bid1.mmProgressReportIndicator,
-						com.tools20022.repository.msg.Bid1.mmProgressPeriodInterval, com.tools20022.repository.msg.Bid1.mmTotalNumberOfBidders, com.tools20022.repository.msg.Bid1.mmTradeDate,
-						com.tools20022.repository.msg.Bid1.mmStrikeTime, com.tools20022.repository.msg.Bid1.mmBasisPriceType, com.tools20022.repository.msg.Bid1.mmLiquidityAndStatistics);
+				messageElement_lazy = () -> Arrays.asList(Bid1.mmClientBidIdentification, Bid1.mmListName, Bid1.mmBidIdentification, Bid1.mmTotalNumberSecurities, Bid1.mmExchangeForPhysicalIndicator,
+						Bid1.mmForeignExchangeExecutionRequestedIndicator, Bid1.mmTradeType, Bid1.mmTotalNumberTickets, Bid1.mmProgressReportIndicator, Bid1.mmProgressPeriodInterval, Bid1.mmTotalNumberOfBidders, Bid1.mmTradeDate,
+						Bid1.mmStrikeTime, Bid1.mmBasisPriceType, Bid1.mmLiquidityAndStatistics);
 				trace_lazy = () -> SecuritiesOrder.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Bid1";
 				definition = "Attempt to buy or sell a large number of financial instruments contained in or comprising a portfolio.";
 			}

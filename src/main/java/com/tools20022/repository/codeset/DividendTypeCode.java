@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -86,7 +88,7 @@ public class DividendTypeCode {
 	 */
 	public static final MMCode mmCash = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Cash";
 			definition = "Dividend is paid in cash.";
 			owner_lazy = () -> DividendTypeCode.mmObject();
@@ -116,7 +118,7 @@ public class DividendTypeCode {
 	 */
 	public static final MMCode mmUnits = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Units";
 			definition = "Dividend is paid in units.";
 			owner_lazy = () -> DividendTypeCode.mmObject();
@@ -146,7 +148,7 @@ public class DividendTypeCode {
 	 */
 	public static final MMCode mmScrip = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Scrip";
 			definition = "Dividend is paid in the form of scrip.";
 			owner_lazy = () -> DividendTypeCode.mmObject();
@@ -176,7 +178,7 @@ public class DividendTypeCode {
 	 */
 	public static final MMCode mmInKind = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InKind";
 			definition = "Dividend is paid in kind.";
 			owner_lazy = () -> DividendTypeCode.mmObject();
@@ -187,13 +189,12 @@ public class DividendTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CASH");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DividendTypeCode";
 				definition = "Specifies the nature of the dividend.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DividendTypeCode.mmCash, com.tools20022.repository.codeset.DividendTypeCode.mmUnits, com.tools20022.repository.codeset.DividendTypeCode.mmScrip,
-						com.tools20022.repository.codeset.DividendTypeCode.mmInKind);
+				code_lazy = () -> Arrays.asList(DividendTypeCode.mmCash, DividendTypeCode.mmUnits, DividendTypeCode.mmScrip, DividendTypeCode.mmInKind);
 			}
 		});
 		return mmObject_lazy.get();

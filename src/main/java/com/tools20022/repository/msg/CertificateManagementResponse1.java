@@ -20,10 +20,13 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.catm.CertificateManagementResponseV01;
 import com.tools20022.repository.codeset.CardPaymentServiceType10Code;
 import com.tools20022.repository.datatype.Max10KBinary;
 import com.tools20022.repository.datatype.Max3000Binary;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -127,7 +130,7 @@ public class CertificateManagementResponse1 {
 			componentContext_lazy = () -> CertificateManagementResponse1.mmObject();
 			isDerived = false;
 			xmlTag = "POIId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "POIIdentification";
 			definition = "Identification of the terminal or system using the certificate management service.";
 			maxOccurs = 1;
@@ -172,7 +175,7 @@ public class CertificateManagementResponse1 {
 			componentContext_lazy = () -> CertificateManagementResponse1.mmObject();
 			isDerived = false;
 			xmlTag = "TMId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TMIdentification";
 			definition = "Identification of the TM or the MTM providing the Certificate Authority service.";
 			maxOccurs = 1;
@@ -215,7 +218,7 @@ public class CertificateManagementResponse1 {
 			componentContext_lazy = () -> CertificateManagementResponse1.mmObject();
 			isDerived = false;
 			xmlTag = "CertSvc";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CertificateService";
 			definition = "Requested certificate management service.";
 			maxOccurs = 1;
@@ -255,7 +258,7 @@ public class CertificateManagementResponse1 {
 			componentContext_lazy = () -> CertificateManagementResponse1.mmObject();
 			isDerived = false;
 			xmlTag = "Rslt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Result";
 			definition = "Outcome of the certificate service processing.";
 			maxOccurs = 1;
@@ -300,7 +303,7 @@ public class CertificateManagementResponse1 {
 			componentContext_lazy = () -> CertificateManagementResponse1.mmObject();
 			isDerived = false;
 			xmlTag = "SctyPrfl";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityProfile";
 			definition = "Identification of the security profile, for creation, renewal or revocation of certificate.";
 			maxOccurs = 1;
@@ -343,7 +346,7 @@ public class CertificateManagementResponse1 {
 			componentContext_lazy = () -> CertificateManagementResponse1.mmObject();
 			isDerived = false;
 			xmlTag = "ClntCert";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClientCertificate";
 			definition = "Created or renewed certificate. The certificate is ASN.1/DER encoded.";
 			maxOccurs = 1;
@@ -389,7 +392,7 @@ public class CertificateManagementResponse1 {
 			componentContext_lazy = () -> CertificateManagementResponse1.mmObject();
 			isDerived = false;
 			xmlTag = "ClntCertPth";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClientCertificatePath";
 			definition = "Certificate of the client certificate path, from the CA (Certificate Authority) certificate, to the root certificate, for renewal or revocation of certificate.";
 			minOccurs = 0;
@@ -434,7 +437,7 @@ public class CertificateManagementResponse1 {
 			componentContext_lazy = () -> CertificateManagementResponse1.mmObject();
 			isDerived = false;
 			xmlTag = "SvrCertPth";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ServerCertificatePath";
 			definition = "Certificate of the server certificate path, from the CA (Certificate Authority) certificate, to the root certificate, for renewal or revocation of certificate.";
 			minOccurs = 0;
@@ -445,13 +448,12 @@ public class CertificateManagementResponse1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CertificateManagementResponse1.mmPOIIdentification, com.tools20022.repository.msg.CertificateManagementResponse1.mmTMIdentification,
-						com.tools20022.repository.msg.CertificateManagementResponse1.mmCertificateService, com.tools20022.repository.msg.CertificateManagementResponse1.mmResult,
-						com.tools20022.repository.msg.CertificateManagementResponse1.mmSecurityProfile, com.tools20022.repository.msg.CertificateManagementResponse1.mmClientCertificate,
-						com.tools20022.repository.msg.CertificateManagementResponse1.mmClientCertificatePath, com.tools20022.repository.msg.CertificateManagementResponse1.mmServerCertificatePath);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.catm.CertificateManagementResponseV01.mmCertificateManagementResponse);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(CertificateManagementResponse1.mmPOIIdentification, CertificateManagementResponse1.mmTMIdentification, CertificateManagementResponse1.mmCertificateService,
+						CertificateManagementResponse1.mmResult, CertificateManagementResponse1.mmSecurityProfile, CertificateManagementResponse1.mmClientCertificate, CertificateManagementResponse1.mmClientCertificatePath,
+						CertificateManagementResponse1.mmServerCertificatePath);
+				messageBuildingBlock_lazy = () -> Arrays.asList(CertificateManagementResponseV01.mmCertificateManagementResponse);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CertificateManagementResponse1";
 				definition = "Information related to the result of the certificate management request.";
 			}

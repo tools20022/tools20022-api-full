@@ -20,10 +20,13 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.auth.FinancialInstrumentReportingInstrumentClassificationReportV01;
 import com.tools20022.repository.choice.Period4Choice;
 import com.tools20022.repository.codeset.Modification1Code;
 import com.tools20022.repository.datatype.CFIOct2015Identifier;
 import com.tools20022.repository.datatype.ISODate;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -116,7 +119,7 @@ public class SecuritiesInstrumentClassification2 {
 			componentContext_lazy = () -> SecuritiesInstrumentClassification2.mmObject();
 			isDerived = false;
 			xmlTag = "Idr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identifier";
 			definition = "Identifier of the financial instrument classification type code.";
 			maxOccurs = 1;
@@ -159,7 +162,7 @@ public class SecuritiesInstrumentClassification2 {
 			componentContext_lazy = () -> SecuritiesInstrumentClassification2.mmObject();
 			isDerived = false;
 			xmlTag = "Mod";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Modification";
 			definition = "Modification status for the record compared to the previous report.";
 			maxOccurs = 1;
@@ -205,7 +208,7 @@ public class SecuritiesInstrumentClassification2 {
 			componentContext_lazy = () -> SecuritiesInstrumentClassification2.mmObject();
 			isDerived = false;
 			xmlTag = "VldtyPrd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValidityPeriod";
 			definition = "Details the validity of the specific record.\r\n\r\nUsage:\r\nWithin MiFIR, the FromDate is populated while the instrument is valid.  From Date To Date is only populated when the record is being invalidated.";
 			maxOccurs = 1;
@@ -247,7 +250,7 @@ public class SecuritiesInstrumentClassification2 {
 			componentContext_lazy = () -> SecuritiesInstrumentClassification2.mmObject();
 			isDerived = false;
 			xmlTag = "LastUpdtd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LastUpdated";
 			definition = "Date when this record was last modified.";
 			maxOccurs = 1;
@@ -259,11 +262,11 @@ public class SecuritiesInstrumentClassification2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesInstrumentClassification2.mmIdentifier, com.tools20022.repository.msg.SecuritiesInstrumentClassification2.mmModification,
-						com.tools20022.repository.msg.SecuritiesInstrumentClassification2.mmValidityPeriod, com.tools20022.repository.msg.SecuritiesInstrumentClassification2.mmLastUpdated);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.auth.FinancialInstrumentReportingInstrumentClassificationReportV01.mmInstrumentClassification);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(SecuritiesInstrumentClassification2.mmIdentifier, SecuritiesInstrumentClassification2.mmModification, SecuritiesInstrumentClassification2.mmValidityPeriod,
+						SecuritiesInstrumentClassification2.mmLastUpdated);
+				messageBuildingBlock_lazy = () -> Arrays.asList(FinancialInstrumentReportingInstrumentClassificationReportV01.mmInstrumentClassification);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesInstrumentClassification2";
 				definition = "Details an individuation of the classification type of the financial instrument.";
 			}

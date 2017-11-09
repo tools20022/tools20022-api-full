@@ -20,9 +20,12 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
 import com.tools20022.repository.datatype.Max70Text;
+import com.tools20022.repository.entity.InvoiceFinancingAgreement;
 import com.tools20022.repository.entity.Payment;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -103,7 +106,7 @@ public class InstalmentFinancingInformation1 {
 			componentContext_lazy = () -> InstalmentFinancingInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "InstlmtSeqId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstalmentSequenceIdentification";
 			definition = "Progressive number of the single instalment related to an invoice.";
 			maxOccurs = 1;
@@ -151,11 +154,11 @@ public class InstalmentFinancingInformation1 {
 	 */
 	public static final MMMessageAttribute mmInstalmentTotalAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.mmInstructedAmount;
+			businessElementTrace_lazy = () -> Payment.mmInstructedAmount;
 			componentContext_lazy = () -> InstalmentFinancingInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "InstlmtTtlAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstalmentTotalAmount";
 			definition = "Amount of money to be moved between the debtor and creditor, before deduction of charges, expressed in the currency as ordered by the initiating party.";
 			maxOccurs = 1;
@@ -198,11 +201,11 @@ public class InstalmentFinancingInformation1 {
 	 */
 	public static final MMMessageAssociationEnd mmInstalmentFinancingResult = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvoiceFinancingAgreement.mmInvoiceFinancingStatus;
+			businessElementTrace_lazy = () -> InvoiceFinancingAgreement.mmInvoiceFinancingStatus;
 			componentContext_lazy = () -> InstalmentFinancingInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "InstlmtFincgRslt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstalmentFinancingResult";
 			definition = "Information about the financing result of one instalment.";
 			maxOccurs = 1;
@@ -215,11 +218,11 @@ public class InstalmentFinancingInformation1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InstalmentFinancingInformation1.mmInstalmentSequenceIdentification,
-						com.tools20022.repository.msg.InstalmentFinancingInformation1.mmInstalmentTotalAmount, com.tools20022.repository.msg.InstalmentFinancingInformation1.mmInstalmentFinancingResult);
+				messageElement_lazy = () -> Arrays.asList(InstalmentFinancingInformation1.mmInstalmentSequenceIdentification, InstalmentFinancingInformation1.mmInstalmentTotalAmount,
+						InstalmentFinancingInformation1.mmInstalmentFinancingResult);
 				trace_lazy = () -> Payment.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InstalmentFinancingInformation1";
 				definition = "Information about result of a single instalment (financed or not) within an invoice.";
 			}

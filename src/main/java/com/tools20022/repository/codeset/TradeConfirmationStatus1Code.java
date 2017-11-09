@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.TradeConfirmationStatusCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -98,7 +100,7 @@ public class TradeConfirmationStatus1Code extends TradeConfirmationStatusCode {
 	 */
 	public static final MMCode mmAllStatus = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AllStatus";
 			owner_lazy = () -> TradeConfirmationStatus1Code.mmObject();
 		}
@@ -121,7 +123,7 @@ public class TradeConfirmationStatus1Code extends TradeConfirmationStatusCode {
 	 */
 	public static final MMCode mmConfirmed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Confirmed";
 			owner_lazy = () -> TradeConfirmationStatus1Code.mmObject();
 		}
@@ -144,7 +146,7 @@ public class TradeConfirmationStatus1Code extends TradeConfirmationStatusCode {
 	 */
 	public static final MMCode mmDisaccord = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Disaccord";
 			owner_lazy = () -> TradeConfirmationStatus1Code.mmObject();
 		}
@@ -167,7 +169,7 @@ public class TradeConfirmationStatus1Code extends TradeConfirmationStatusCode {
 	 */
 	public static final MMCode mmEmergencyConfirmed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EmergencyConfirmed";
 			owner_lazy = () -> TradeConfirmationStatus1Code.mmObject();
 		}
@@ -190,7 +192,7 @@ public class TradeConfirmationStatus1Code extends TradeConfirmationStatusCode {
 	 */
 	public static final MMCode mmMismatched = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Mismatched";
 			owner_lazy = () -> TradeConfirmationStatus1Code.mmObject();
 		}
@@ -213,7 +215,7 @@ public class TradeConfirmationStatus1Code extends TradeConfirmationStatusCode {
 	 */
 	public static final MMCode mmSelfConfirmedAndCouterpartyNotConfirmed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SelfConfirmedAndCouterpartyNotConfirmed";
 			owner_lazy = () -> TradeConfirmationStatus1Code.mmObject();
 		}
@@ -236,7 +238,7 @@ public class TradeConfirmationStatus1Code extends TradeConfirmationStatusCode {
 	 */
 	public static final MMCode mmSelfNotConfirmedAndCouterpartyConfirmed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SelfNotConfirmedAndCouterpartyConfirmed";
 			owner_lazy = () -> TradeConfirmationStatus1Code.mmObject();
 		}
@@ -259,7 +261,7 @@ public class TradeConfirmationStatus1Code extends TradeConfirmationStatusCode {
 	 */
 	public static final MMCode mmSelfNotConfirmedAndCouterpartyNotConfirmed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SelfNotConfirmedAndCouterpartyNotConfirmed";
 			owner_lazy = () -> TradeConfirmationStatus1Code.mmObject();
 		}
@@ -282,7 +284,7 @@ public class TradeConfirmationStatus1Code extends TradeConfirmationStatusCode {
 	 */
 	public static final MMCode mmUnconfirmed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unconfirmed";
 			owner_lazy = () -> TradeConfirmationStatus1Code.mmObject();
 		}
@@ -291,15 +293,13 @@ public class TradeConfirmationStatus1Code extends TradeConfirmationStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TradeConfirmationStatus1Code";
 				definition = "Identifies the status of the confirmation.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TradeConfirmationStatus1Code.mmAllStatus, com.tools20022.repository.codeset.TradeConfirmationStatus1Code.mmConfirmed,
-						com.tools20022.repository.codeset.TradeConfirmationStatus1Code.mmDisaccord, com.tools20022.repository.codeset.TradeConfirmationStatus1Code.mmEmergencyConfirmed,
-						com.tools20022.repository.codeset.TradeConfirmationStatus1Code.mmMismatched, com.tools20022.repository.codeset.TradeConfirmationStatus1Code.mmSelfConfirmedAndCouterpartyNotConfirmed,
-						com.tools20022.repository.codeset.TradeConfirmationStatus1Code.mmSelfNotConfirmedAndCouterpartyConfirmed, com.tools20022.repository.codeset.TradeConfirmationStatus1Code.mmSelfNotConfirmedAndCouterpartyNotConfirmed,
-						com.tools20022.repository.codeset.TradeConfirmationStatus1Code.mmUnconfirmed);
+				code_lazy = () -> Arrays.asList(TradeConfirmationStatus1Code.mmAllStatus, TradeConfirmationStatus1Code.mmConfirmed, TradeConfirmationStatus1Code.mmDisaccord, TradeConfirmationStatus1Code.mmEmergencyConfirmed,
+						TradeConfirmationStatus1Code.mmMismatched, TradeConfirmationStatus1Code.mmSelfConfirmedAndCouterpartyNotConfirmed, TradeConfirmationStatus1Code.mmSelfNotConfirmedAndCouterpartyConfirmed,
+						TradeConfirmationStatus1Code.mmSelfNotConfirmedAndCouterpartyNotConfirmed, TradeConfirmationStatus1Code.mmUnconfirmed);
 				trace_lazy = () -> TradeConfirmationStatusCode.mmObject();
 			}
 		});

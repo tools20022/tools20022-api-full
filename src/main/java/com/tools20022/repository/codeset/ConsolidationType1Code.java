@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ConsolidationTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -77,7 +79,7 @@ public class ConsolidationType1Code extends ConsolidationTypeCode {
 	 */
 	public static final MMCode mmGeneral = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "General";
 			owner_lazy = () -> ConsolidationType1Code.mmObject();
 		}
@@ -100,7 +102,7 @@ public class ConsolidationType1Code extends ConsolidationTypeCode {
 	 */
 	public static final MMCode mmParticipation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Participation";
 			owner_lazy = () -> ConsolidationType1Code.mmObject();
 		}
@@ -109,11 +111,11 @@ public class ConsolidationType1Code extends ConsolidationTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ConsolidationType1Code";
 				definition = "Specifies the consolidation type.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ConsolidationType1Code.mmGeneral, com.tools20022.repository.codeset.ConsolidationType1Code.mmParticipation);
+				code_lazy = () -> Arrays.asList(ConsolidationType1Code.mmGeneral, ConsolidationType1Code.mmParticipation);
 				trace_lazy = () -> ConsolidationTypeCode.mmObject();
 			}
 		});

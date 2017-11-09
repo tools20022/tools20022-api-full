@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.AuthenticationEntityCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -104,9 +106,9 @@ public class AuthenticationEntity2Code extends AuthenticationEntityCode {
 	 */
 	public static final MMCode mmICC = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ICC";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.AuthenticationEntity1Code.mmICC;
+			previousVersion_lazy = () -> AuthenticationEntity1Code.mmICC;
 			owner_lazy = () -> AuthenticationEntity2Code.mmObject();
 		}
 	};
@@ -133,9 +135,9 @@ public class AuthenticationEntity2Code extends AuthenticationEntityCode {
 	 */
 	public static final MMCode mmAuthorisedAgent = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AuthorisedAgent";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.AuthenticationEntity1Code.mmAuthorisedAgent;
+			previousVersion_lazy = () -> AuthenticationEntity1Code.mmAuthorisedAgent;
 			owner_lazy = () -> AuthenticationEntity2Code.mmObject();
 		}
 	};
@@ -162,9 +164,9 @@ public class AuthenticationEntity2Code extends AuthenticationEntityCode {
 	 */
 	public static final MMCode mmMerchant = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Merchant";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.AuthenticationEntity1Code.mmMerchant;
+			previousVersion_lazy = () -> AuthenticationEntity1Code.mmMerchant;
 			owner_lazy = () -> AuthenticationEntity2Code.mmObject();
 		}
 	};
@@ -186,7 +188,7 @@ public class AuthenticationEntity2Code extends AuthenticationEntityCode {
 	 */
 	public static final MMCode mmAcquirer = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Acquirer";
 			owner_lazy = () -> AuthenticationEntity2Code.mmObject();
 		}
@@ -209,7 +211,7 @@ public class AuthenticationEntity2Code extends AuthenticationEntityCode {
 	 */
 	public static final MMCode mmIssuer = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Issuer";
 			owner_lazy = () -> AuthenticationEntity2Code.mmObject();
 		}
@@ -232,7 +234,7 @@ public class AuthenticationEntity2Code extends AuthenticationEntityCode {
 	 */
 	public static final MMCode mmTerminal = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Terminal";
 			owner_lazy = () -> AuthenticationEntity2Code.mmObject();
 		}
@@ -241,15 +243,14 @@ public class AuthenticationEntity2Code extends AuthenticationEntityCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ICCD");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AuthenticationEntity2Code";
 				definition = "Entity or device that has performed the verification.";
 				previousVersion_lazy = () -> AuthenticationEntity1Code.mmObject();
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AuthenticationEntity2Code.mmICC, com.tools20022.repository.codeset.AuthenticationEntity2Code.mmAuthorisedAgent,
-						com.tools20022.repository.codeset.AuthenticationEntity2Code.mmMerchant, com.tools20022.repository.codeset.AuthenticationEntity2Code.mmAcquirer, com.tools20022.repository.codeset.AuthenticationEntity2Code.mmIssuer,
-						com.tools20022.repository.codeset.AuthenticationEntity2Code.mmTerminal);
+				code_lazy = () -> Arrays.asList(AuthenticationEntity2Code.mmICC, AuthenticationEntity2Code.mmAuthorisedAgent, AuthenticationEntity2Code.mmMerchant, AuthenticationEntity2Code.mmAcquirer, AuthenticationEntity2Code.mmIssuer,
+						AuthenticationEntity2Code.mmTerminal);
 				trace_lazy = () -> AuthenticationEntityCode.mmObject();
 			}
 		});

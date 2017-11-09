@@ -19,6 +19,10 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.caam.ATMDeviceControlV01;
+import com.tools20022.repository.area.caam.ATMDeviceControlV02;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -101,7 +105,7 @@ public class ATMDeviceControl1 {
 			componentContext_lazy = () -> ATMDeviceControl1.mmObject();
 			isDerived = false;
 			xmlTag = "Envt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Environment";
 			definition = "Environment of the transaction.";
 			maxOccurs = 1;
@@ -142,7 +146,7 @@ public class ATMDeviceControl1 {
 			componentContext_lazy = () -> ATMDeviceControl1.mmObject();
 			isDerived = false;
 			xmlTag = "Cmd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Command";
 			definition = "Maintenance command the ATM must perform.";
 			minOccurs = 0;
@@ -154,10 +158,10 @@ public class ATMDeviceControl1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMDeviceControl1.mmEnvironment, com.tools20022.repository.msg.ATMDeviceControl1.mmCommand);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.caam.ATMDeviceControlV01.mmATMDeviceControl, com.tools20022.repository.area.caam.ATMDeviceControlV02.mmATMDeviceControl);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(ATMDeviceControl1.mmEnvironment, ATMDeviceControl1.mmCommand);
+				messageBuildingBlock_lazy = () -> Arrays.asList(ATMDeviceControlV01.mmATMDeviceControl, ATMDeviceControlV02.mmATMDeviceControl);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ATMDeviceControl1";
 				definition = "Information related to the control of an ATM device.";
 			}

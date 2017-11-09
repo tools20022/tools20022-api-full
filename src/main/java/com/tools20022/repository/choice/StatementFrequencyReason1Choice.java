@@ -19,8 +19,10 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.EventFrequency1Code;
 import com.tools20022.repository.entity.ReportingService;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification47;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -114,10 +116,10 @@ public class StatementFrequencyReason1Choice {
 			componentContext_lazy = () -> StatementFrequencyReason1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Cd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Statement frequency expressed as a code.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.StatementFrequencyReason2Choice.mmCode);
+			nextVersions_lazy = () -> Arrays.asList(StatementFrequencyReason2Choice.mmCode);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> EventFrequency1Code.mmObject();
@@ -165,10 +167,10 @@ public class StatementFrequencyReason1Choice {
 			componentContext_lazy = () -> StatementFrequencyReason1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Statement frequency expressed as a proprietary code.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.StatementFrequencyReason2Choice.mmProprietary);
+			nextVersions_lazy = () -> Arrays.asList(StatementFrequencyReason2Choice.mmProprietary);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification47.mmObject();
@@ -178,10 +180,10 @@ public class StatementFrequencyReason1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.StatementFrequencyReason1Choice.mmCode, com.tools20022.repository.choice.StatementFrequencyReason1Choice.mmProprietary);
+				messageElement_lazy = () -> Arrays.asList(StatementFrequencyReason1Choice.mmCode, StatementFrequencyReason1Choice.mmProprietary);
 				trace_lazy = () -> ReportingService.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "StatementFrequencyReason1Choice";
 				definition = "Choice of formats for the specification of the statement frequency.";
 				nextVersions_lazy = () -> Arrays.asList(StatementFrequencyReason2Choice.mmObject());

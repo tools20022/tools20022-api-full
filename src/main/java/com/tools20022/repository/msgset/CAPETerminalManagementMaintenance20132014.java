@@ -18,10 +18,12 @@
 package com.tools20022.repository.msgset;
 
 import com.tools20022.metamodel.MMMessageSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.catm.AcceptorConfigurationUpdateV03;
 import com.tools20022.repository.area.catm.ManagementPlanReplacementV03;
 import com.tools20022.repository.area.catm.StatusReportV03;
 import com.tools20022.repository.area.catm.TerminalManagementRejectionV02;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -71,8 +73,8 @@ public class CAPETerminalManagementMaintenance20132014 {
 	final static public MMMessageSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageSet() {
 			{
-				businessProcessCatalogue_lazy = () -> com.tools20022.repository.GeneratedRepository.mmcatalogue;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				businessProcessCatalogue_lazy = () -> GeneratedRepository.mmcatalogue;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CAPE - Terminal Management - Maintenance 2013 - 2014";
 				definition = "Message set defined for the implementation of the CRs related the SR2014 Card Payments Exchanges";
 				messageDefinition_lazy = () -> Arrays.asList(TerminalManagementRejectionV02.mmObject(), AcceptorConfigurationUpdateV03.mmObject(), ManagementPlanReplacementV03.mmObject(), StatusReportV03.mmObject());

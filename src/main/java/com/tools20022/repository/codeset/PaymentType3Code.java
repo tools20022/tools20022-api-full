@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.PaymentTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -146,7 +148,7 @@ public class PaymentType3Code extends PaymentTypeCode {
 	 */
 	public static final MMCode mmCrossBorderPayment = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CrossBorderPayment";
 			owner_lazy = () -> PaymentType3Code.mmObject();
 		}
@@ -169,7 +171,7 @@ public class PaymentType3Code extends PaymentTypeCode {
 	 */
 	public static final MMCode mmBackUp = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BackUp";
 			owner_lazy = () -> PaymentType3Code.mmObject();
 		}
@@ -192,7 +194,7 @@ public class PaymentType3Code extends PaymentTypeCode {
 	 */
 	public static final MMCode mmBalanceRetail = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BalanceRetail";
 			owner_lazy = () -> PaymentType3Code.mmObject();
 		}
@@ -215,7 +217,7 @@ public class PaymentType3Code extends PaymentTypeCode {
 	 */
 	public static final MMCode mmCLSPayment = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CLSPayment";
 			owner_lazy = () -> PaymentType3Code.mmObject();
 		}
@@ -238,7 +240,7 @@ public class PaymentType3Code extends PaymentTypeCode {
 	 */
 	public static final MMCode mmCentralBankOperation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CentralBankOperation";
 			owner_lazy = () -> PaymentType3Code.mmObject();
 		}
@@ -261,7 +263,7 @@ public class PaymentType3Code extends PaymentTypeCode {
 	 */
 	public static final MMCode mmCrossBorderHighValuePayment = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CrossBorderHighValuePayment";
 			owner_lazy = () -> PaymentType3Code.mmObject();
 		}
@@ -284,7 +286,7 @@ public class PaymentType3Code extends PaymentTypeCode {
 	 */
 	public static final MMCode mmCrossBorderPriorityPayment = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CrossBorderPriorityPayment";
 			owner_lazy = () -> PaymentType3Code.mmObject();
 		}
@@ -307,7 +309,7 @@ public class PaymentType3Code extends PaymentTypeCode {
 	 */
 	public static final MMCode mmDVPGross = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DVPGross";
 			owner_lazy = () -> PaymentType3Code.mmObject();
 		}
@@ -330,7 +332,7 @@ public class PaymentType3Code extends PaymentTypeCode {
 	 */
 	public static final MMCode mmDVPNet = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DVPNet";
 			owner_lazy = () -> PaymentType3Code.mmObject();
 		}
@@ -353,7 +355,7 @@ public class PaymentType3Code extends PaymentTypeCode {
 	 */
 	public static final MMCode mmExpressPayment = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExpressPayment";
 			owner_lazy = () -> PaymentType3Code.mmObject();
 		}
@@ -376,7 +378,7 @@ public class PaymentType3Code extends PaymentTypeCode {
 	 */
 	public static final MMCode mmThirdCurrencyHighValuePayment = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ThirdCurrencyHighValuePayment";
 			owner_lazy = () -> PaymentType3Code.mmObject();
 		}
@@ -399,7 +401,7 @@ public class PaymentType3Code extends PaymentTypeCode {
 	 */
 	public static final MMCode mmLimitPayment = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LimitPayment";
 			owner_lazy = () -> PaymentType3Code.mmObject();
 		}
@@ -422,7 +424,7 @@ public class PaymentType3Code extends PaymentTypeCode {
 	 */
 	public static final MMCode mmLiquidityTransfer = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LiquidityTransfer";
 			owner_lazy = () -> PaymentType3Code.mmObject();
 		}
@@ -445,7 +447,7 @@ public class PaymentType3Code extends PaymentTypeCode {
 	 */
 	public static final MMCode mmDomesticPriorityPayment = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DomesticPriorityPayment";
 			owner_lazy = () -> PaymentType3Code.mmObject();
 		}
@@ -468,7 +470,7 @@ public class PaymentType3Code extends PaymentTypeCode {
 	 */
 	public static final MMCode mmDomesticHighValuePayment = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DomesticHighValuePayment";
 			owner_lazy = () -> PaymentType3Code.mmObject();
 		}
@@ -491,7 +493,7 @@ public class PaymentType3Code extends PaymentTypeCode {
 	 */
 	public static final MMCode mmDomesticPayment = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DomesticPayment";
 			owner_lazy = () -> PaymentType3Code.mmObject();
 		}
@@ -514,7 +516,7 @@ public class PaymentType3Code extends PaymentTypeCode {
 	 */
 	public static final MMCode mmStandingFacilities = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StandingFacilities";
 			owner_lazy = () -> PaymentType3Code.mmObject();
 		}
@@ -537,7 +539,7 @@ public class PaymentType3Code extends PaymentTypeCode {
 	 */
 	public static final MMCode mmTreasuryStatePayment = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TreasuryStatePayment";
 			owner_lazy = () -> PaymentType3Code.mmObject();
 		}
@@ -560,7 +562,7 @@ public class PaymentType3Code extends PaymentTypeCode {
 	 */
 	public static final MMCode mmThirdCurrencyPayment = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ThirdCurrencyPayment";
 			owner_lazy = () -> PaymentType3Code.mmObject();
 		}
@@ -583,7 +585,7 @@ public class PaymentType3Code extends PaymentTypeCode {
 	 */
 	public static final MMCode mmLoan = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Loan";
 			owner_lazy = () -> PaymentType3Code.mmObject();
 		}
@@ -606,7 +608,7 @@ public class PaymentType3Code extends PaymentTypeCode {
 	 */
 	public static final MMCode mmLoanRepayment = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LoanRepayment";
 			owner_lazy = () -> PaymentType3Code.mmObject();
 		}
@@ -629,7 +631,7 @@ public class PaymentType3Code extends PaymentTypeCode {
 	 */
 	public static final MMCode mmThirdCurrencyPriorityPayment = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ThirdCurrencyPriorityPayment";
 			owner_lazy = () -> PaymentType3Code.mmObject();
 		}
@@ -652,7 +654,7 @@ public class PaymentType3Code extends PaymentTypeCode {
 	 */
 	public static final MMCode mmOvernightDeposit = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OvernightDeposit";
 			owner_lazy = () -> PaymentType3Code.mmObject();
 		}
@@ -675,7 +677,7 @@ public class PaymentType3Code extends PaymentTypeCode {
 	 */
 	public static final MMCode mmMarginalLending = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarginalLending";
 			owner_lazy = () -> PaymentType3Code.mmObject();
 		}
@@ -684,22 +686,16 @@ public class PaymentType3Code extends PaymentTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CBS");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PaymentType3Code";
 				definition = "Specifies the type, or nature, of the payment.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PaymentType3Code.mmCrossBorderPayment, com.tools20022.repository.codeset.PaymentType3Code.mmBackUp,
-						com.tools20022.repository.codeset.PaymentType3Code.mmBalanceRetail, com.tools20022.repository.codeset.PaymentType3Code.mmCLSPayment, com.tools20022.repository.codeset.PaymentType3Code.mmCentralBankOperation,
-						com.tools20022.repository.codeset.PaymentType3Code.mmCrossBorderHighValuePayment, com.tools20022.repository.codeset.PaymentType3Code.mmCrossBorderPriorityPayment,
-						com.tools20022.repository.codeset.PaymentType3Code.mmDVPGross, com.tools20022.repository.codeset.PaymentType3Code.mmDVPNet, com.tools20022.repository.codeset.PaymentType3Code.mmExpressPayment,
-						com.tools20022.repository.codeset.PaymentType3Code.mmThirdCurrencyHighValuePayment, com.tools20022.repository.codeset.PaymentType3Code.mmLimitPayment,
-						com.tools20022.repository.codeset.PaymentType3Code.mmLiquidityTransfer, com.tools20022.repository.codeset.PaymentType3Code.mmDomesticPriorityPayment,
-						com.tools20022.repository.codeset.PaymentType3Code.mmDomesticHighValuePayment, com.tools20022.repository.codeset.PaymentType3Code.mmDomesticPayment,
-						com.tools20022.repository.codeset.PaymentType3Code.mmStandingFacilities, com.tools20022.repository.codeset.PaymentType3Code.mmTreasuryStatePayment,
-						com.tools20022.repository.codeset.PaymentType3Code.mmThirdCurrencyPayment, com.tools20022.repository.codeset.PaymentType3Code.mmLoan, com.tools20022.repository.codeset.PaymentType3Code.mmLoanRepayment,
-						com.tools20022.repository.codeset.PaymentType3Code.mmThirdCurrencyPriorityPayment, com.tools20022.repository.codeset.PaymentType3Code.mmOvernightDeposit,
-						com.tools20022.repository.codeset.PaymentType3Code.mmMarginalLending);
+				code_lazy = () -> Arrays.asList(PaymentType3Code.mmCrossBorderPayment, PaymentType3Code.mmBackUp, PaymentType3Code.mmBalanceRetail, PaymentType3Code.mmCLSPayment, PaymentType3Code.mmCentralBankOperation,
+						PaymentType3Code.mmCrossBorderHighValuePayment, PaymentType3Code.mmCrossBorderPriorityPayment, PaymentType3Code.mmDVPGross, PaymentType3Code.mmDVPNet, PaymentType3Code.mmExpressPayment,
+						PaymentType3Code.mmThirdCurrencyHighValuePayment, PaymentType3Code.mmLimitPayment, PaymentType3Code.mmLiquidityTransfer, PaymentType3Code.mmDomesticPriorityPayment, PaymentType3Code.mmDomesticHighValuePayment,
+						PaymentType3Code.mmDomesticPayment, PaymentType3Code.mmStandingFacilities, PaymentType3Code.mmTreasuryStatePayment, PaymentType3Code.mmThirdCurrencyPayment, PaymentType3Code.mmLoan, PaymentType3Code.mmLoanRepayment,
+						PaymentType3Code.mmThirdCurrencyPriorityPayment, PaymentType3Code.mmOvernightDeposit, PaymentType3Code.mmMarginalLending);
 				trace_lazy = () -> PaymentTypeCode.mmObject();
 			}
 		});

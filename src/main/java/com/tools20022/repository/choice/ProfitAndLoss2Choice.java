@@ -19,7 +19,10 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
+import com.tools20022.repository.entity.InvestmentFundOrderExecution;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -102,14 +105,14 @@ public class ProfitAndLoss2Choice {
 	 */
 	public static final MMMessageAttribute mmProfit = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrderExecution.mmInterimProfitAmount;
+			businessElementTrace_lazy = () -> InvestmentFundOrderExecution.mmInterimProfitAmount;
 			componentContext_lazy = () -> ProfitAndLoss2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prft";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Profit";
 			definition = "Value of the positive amount.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.ProfitAndLoss1Choice.mmProfit;
+			previousVersion_lazy = () -> ProfitAndLoss1Choice.mmProfit;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
@@ -156,14 +159,14 @@ public class ProfitAndLoss2Choice {
 	 */
 	public static final MMMessageAttribute mmLoss = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrderExecution.mmInterimProfitAmount;
+			businessElementTrace_lazy = () -> InvestmentFundOrderExecution.mmInterimProfitAmount;
 			componentContext_lazy = () -> ProfitAndLoss2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Loss";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Loss";
 			definition = "Value of the negative amount.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.ProfitAndLoss1Choice.mmLoss;
+			previousVersion_lazy = () -> ProfitAndLoss1Choice.mmLoss;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
@@ -173,9 +176,9 @@ public class ProfitAndLoss2Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ProfitAndLoss2Choice.mmProfit, com.tools20022.repository.choice.ProfitAndLoss2Choice.mmLoss);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(ProfitAndLoss2Choice.mmProfit, ProfitAndLoss2Choice.mmLoss);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ProfitAndLoss2Choice";
 				definition = "Choice between profit and loss.";
 				previousVersion_lazy = () -> ProfitAndLoss1Choice.mmObject();

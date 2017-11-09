@@ -19,8 +19,11 @@ package com.tools20022.repository.entity;
 
 import com.tools20022.metamodel.MMBusinessAttribute;
 import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.choice.ReportingTransactionType1Choice;
 import com.tools20022.repository.datatype.CurrencyAndAmount;
 import com.tools20022.repository.entity.SecuritiesTrade;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.SecuritiesTransaction1;
 import com.tools20022.repository.msg.SecuritiesTransactionReport2;
 import com.tools20022.repository.msg.SecuritiesTransactionReport4;
@@ -37,12 +40,16 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesTransaction#mmReplacedAmount
- * SecuritiesTransaction.mmReplacedAmount}</li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.SecuritiesTransaction1
+ * SecuritiesTransaction1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SecuritiesTransactionReport2
+ * SecuritiesTransactionReport2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SecuritiesTransactionReport4
+ * SecuritiesTransactionReport4}</li>
  * </ul>
  * </li>
  * <li>
@@ -63,16 +70,12 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
  * superType} = {@linkplain com.tools20022.repository.entity.SecuritiesTrade
  * SecuritiesTrade}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.SecuritiesTransaction1
- * SecuritiesTransaction1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SecuritiesTransactionReport2
- * SecuritiesTransactionReport2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SecuritiesTransactionReport4
- * SecuritiesTransactionReport4}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesTransaction#mmReplacedAmount
+ * SecuritiesTransaction.mmReplacedAmount}</li>
  * </ul>
  * </li>
  * <li>
@@ -125,7 +128,7 @@ public class SecuritiesTransaction extends SecuritiesTrade {
 		{
 			elementContext_lazy = () -> SecuritiesTransaction.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReplacedAmount";
 			definition = "Specifies the amount requested to be replaced or actually replaced.";
 			maxOccurs = 1;
@@ -137,14 +140,13 @@ public class SecuritiesTransaction extends SecuritiesTrade {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesTransaction";
 				definition = "Exchange of securities.";
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ReportingTransactionType1Choice.mmNew, com.tools20022.repository.choice.ReportingTransactionType1Choice.mmCancellation,
-						com.tools20022.repository.msg.SecuritiesTransactionReport4.mmTransaction);
+				derivationElement_lazy = () -> Arrays.asList(ReportingTransactionType1Choice.mmNew, ReportingTransactionType1Choice.mmCancellation, SecuritiesTransactionReport4.mmTransaction);
 				superType_lazy = () -> SecuritiesTrade.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesTransaction.mmReplacedAmount);
+				element_lazy = () -> Arrays.asList(SecuritiesTransaction.mmReplacedAmount);
 				derivationComponent_lazy = () -> Arrays.asList(SecuritiesTransaction1.mmObject(), SecuritiesTransactionReport2.mmObject(), SecuritiesTransactionReport4.mmObject());
 			}
 		});

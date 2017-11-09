@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.NetworkTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -77,7 +79,7 @@ public class NetworkType1Code extends NetworkTypeCode {
 	 */
 	public static final MMCode mmInternetProtocol = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InternetProtocol";
 			owner_lazy = () -> NetworkType1Code.mmObject();
 		}
@@ -100,7 +102,7 @@ public class NetworkType1Code extends NetworkTypeCode {
 	 */
 	public static final MMCode mmPublicTelephone = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PublicTelephone";
 			owner_lazy = () -> NetworkType1Code.mmObject();
 		}
@@ -109,11 +111,11 @@ public class NetworkType1Code extends NetworkTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "NetworkType1Code";
 				definition = "Type of communication network.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.NetworkType1Code.mmInternetProtocol, com.tools20022.repository.codeset.NetworkType1Code.mmPublicTelephone);
+				code_lazy = () -> Arrays.asList(NetworkType1Code.mmInternetProtocol, NetworkType1Code.mmPublicTelephone);
 				trace_lazy = () -> NetworkTypeCode.mmObject();
 			}
 		});

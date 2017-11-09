@@ -20,9 +20,11 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CancellationProcess1Code;
 import com.tools20022.repository.codeset.FinancialCapture1Code;
 import com.tools20022.repository.entity.AcceptorConfiguration;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -126,14 +128,14 @@ public class AcquirerProtocolParameters4 {
 	 */
 	public static final MMMessageAttribute mmFinancialCapture = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AcceptorConfiguration.mmFinancialCapture;
+			businessElementTrace_lazy = () -> AcceptorConfiguration.mmFinancialCapture;
 			componentContext_lazy = () -> AcquirerProtocolParameters4.mmObject();
 			isDerived = false;
 			xmlTag = "FinCaptr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialCapture";
 			definition = "Mode for the financial capture of the transaction by the acquirer.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcquirerProtocolParameters5.mmFinancialCapture);
+			nextVersions_lazy = () -> Arrays.asList(AcquirerProtocolParameters5.mmFinancialCapture);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> FinancialCapture1Code.mmObject();
@@ -181,14 +183,14 @@ public class AcquirerProtocolParameters4 {
 	 */
 	public static final MMMessageAssociationEnd mmBatchTransfer = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AcceptorConfiguration.mmBatchTransferContent;
+			businessElementTrace_lazy = () -> AcceptorConfiguration.mmBatchTransferContent;
 			componentContext_lazy = () -> AcquirerProtocolParameters4.mmObject();
 			isDerived = false;
 			xmlTag = "BtchTrf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BatchTransfer";
 			definition = "Configuration of the batch transfers.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcquirerProtocolParameters5.mmBatchTransfer);
+			nextVersions_lazy = () -> Arrays.asList(AcquirerProtocolParameters5.mmBatchTransfer);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -241,10 +243,10 @@ public class AcquirerProtocolParameters4 {
 			componentContext_lazy = () -> AcquirerProtocolParameters4.mmObject();
 			isDerived = false;
 			xmlTag = "CmpltnXchg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CompletionExchange";
 			definition = "Configuration parameters of completion exchanges.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcquirerProtocolParameters5.mmCompletionExchange);
+			nextVersions_lazy = () -> Arrays.asList(AcquirerProtocolParameters5.mmCompletionExchange);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -293,10 +295,10 @@ public class AcquirerProtocolParameters4 {
 			componentContext_lazy = () -> AcquirerProtocolParameters4.mmObject();
 			isDerived = false;
 			xmlTag = "CxlXchg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationExchange";
 			definition = "Configuration of the cancellation exchanges.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcquirerProtocolParameters5.mmCancellationExchange);
+			nextVersions_lazy = () -> Arrays.asList(AcquirerProtocolParameters5.mmCancellationExchange);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CancellationProcess1Code.mmObject();
@@ -306,11 +308,11 @@ public class AcquirerProtocolParameters4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcquirerProtocolParameters4.mmFinancialCapture, com.tools20022.repository.msg.AcquirerProtocolParameters4.mmBatchTransfer,
-						com.tools20022.repository.msg.AcquirerProtocolParameters4.mmCompletionExchange, com.tools20022.repository.msg.AcquirerProtocolParameters4.mmCancellationExchange);
+				messageElement_lazy = () -> Arrays.asList(AcquirerProtocolParameters4.mmFinancialCapture, AcquirerProtocolParameters4.mmBatchTransfer, AcquirerProtocolParameters4.mmCompletionExchange,
+						AcquirerProtocolParameters4.mmCancellationExchange);
 				trace_lazy = () -> AcceptorConfiguration.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AcquirerProtocolParameters4";
 				definition = "Acceptor parameters dedicated to the acquirer protocol.";
 				nextVersions_lazy = () -> Arrays.asList(AcquirerProtocolParameters5.mmObject());

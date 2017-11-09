@@ -20,7 +20,9 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ATMServiceType8Code;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -102,10 +104,10 @@ public class ATMService19 {
 			componentContext_lazy = () -> ATMService19.mmObject();
 			isDerived = false;
 			xmlTag = "SvcTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ServiceType";
 			definition = "Describes the type of inquiry selected by the customer or the ATM.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMService17.mmServiceType;
+			previousVersion_lazy = () -> ATMService17.mmServiceType;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ATMServiceType8Code.mmObject();
@@ -147,10 +149,10 @@ public class ATMService19 {
 			componentContext_lazy = () -> ATMService19.mmObject();
 			isDerived = false;
 			xmlTag = "SvcVarnt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ServiceVariant";
 			definition = "Variant of the service.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMService17.mmServiceVariant;
+			previousVersion_lazy = () -> ATMService17.mmServiceVariant;
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.ATMService18.mmObject();
@@ -192,10 +194,10 @@ public class ATMService19 {
 			componentContext_lazy = () -> ATMService19.mmObject();
 			isDerived = false;
 			xmlTag = "Lmts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Limits";
 			definition = "Limits of amounts.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMService17.mmLimits;
+			previousVersion_lazy = () -> ATMService17.mmLimits;
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.ATMTransactionAmounts6.mmObject();
@@ -205,9 +207,9 @@ public class ATMService19 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMService19.mmServiceType, com.tools20022.repository.msg.ATMService19.mmServiceVariant, com.tools20022.repository.msg.ATMService19.mmLimits);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(ATMService19.mmServiceType, ATMService19.mmServiceVariant, ATMService19.mmLimits);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ATMService19";
 				definition = "Service allowed on the account.";
 				previousVersion_lazy = () -> ATMService17.mmObject();

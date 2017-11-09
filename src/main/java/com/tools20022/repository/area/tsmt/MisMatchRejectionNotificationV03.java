@@ -20,6 +20,7 @@ package com.tools20022.repository.area.tsmt;
 import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.TradeServicesManagementLatestVersion;
 import com.tools20022.repository.choice.RejectionReason1Choice;
 import com.tools20022.repository.msg.*;
@@ -44,6 +45,9 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code tsmt.023.001.03}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.TradeServicesManagementLatestVersion
@@ -94,9 +98,6 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code tsmt.023.001.03}</li>
- * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -138,7 +139,7 @@ public class MisMatchRejectionNotificationV03 {
 	public static final MMMessageBuildingBlock mmNotificationIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "NtfctnId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotificationIdentification";
 			definition = "Identifies the notification message.";
 			maxOccurs = 1;
@@ -177,7 +178,7 @@ public class MisMatchRejectionNotificationV03 {
 	public static final MMMessageBuildingBlock mmTransactionIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "TxId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionIdentification";
 			definition = "Unique identification assigned by the matching application to the transaction.\nThis identification is to be used in any communication between the parties.\n";
 			maxOccurs = 1;
@@ -215,7 +216,7 @@ public class MisMatchRejectionNotificationV03 {
 	public static final MMMessageBuildingBlock mmEstablishedBaselineIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "EstblishdBaselnId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EstablishedBaselineIdentification";
 			definition = "Unique identification assigned by the matching application to the baseline when it is established. ";
 			maxOccurs = 1;
@@ -251,7 +252,7 @@ public class MisMatchRejectionNotificationV03 {
 	public static final MMMessageBuildingBlock mmTransactionStatus = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "TxSts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionStatus";
 			definition = "Identifies the status of the transaction by means of a code.";
 			maxOccurs = 1;
@@ -289,7 +290,7 @@ public class MisMatchRejectionNotificationV03 {
 	public static final MMMessageBuildingBlock mmUserTransactionReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "UsrTxRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UserTransactionReference";
 			definition = "Reference to the transaction for each financial institution which is a party to the transaction.";
 			maxOccurs = 2;
@@ -327,7 +328,7 @@ public class MisMatchRejectionNotificationV03 {
 	public static final MMMessageBuildingBlock mmDataSetMatchReportReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "DataSetMtchRptRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DataSetMatchReportReference";
 			definition = "Reference to the identification of the report that contained the difference. ";
 			maxOccurs = 1;
@@ -364,7 +365,7 @@ public class MisMatchRejectionNotificationV03 {
 	public static final MMMessageBuildingBlock mmRejectionReason = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "RjctnRsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RejectionReason";
 			definition = "Specifies the reaons for rejecting the mismatch.                                                    ";
 			maxOccurs = 1;
@@ -399,7 +400,7 @@ public class MisMatchRejectionNotificationV03 {
 	public static final MMMessageBuildingBlock mmRequestForAction = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "ReqForActn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestForAction";
 			definition = "Information on the next processing step required.";
 			maxOccurs = 1;
@@ -411,18 +412,16 @@ public class MisMatchRejectionNotificationV03 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MisMatchRejectionNotificationV03";
 				definition = "Scope\r\nThe MisMatchRejectionNotification message is sent by the matching application to the parties involved in the transaction.\r\nThis message is used to notify the rejection of mis-matched data sets.\r\nUsage\r\nThe MisMatchRejectionNotification message can be sent by the matching application to pass on the information about the rejection of mis-matched data sets that it has obtained through the receipt of an MisMatchRejection message.\r\nIn order to pass on information about the acceptance of mis-matched data sets the matching application sends an MisMatchAcceptanceNotification message.";
 				messageSet_lazy = () -> Arrays.asList(TradeServicesManagementISOPreviousversion.mmObject(), TradeServicesManagementISOLatestversion.mmObject());
 				rootElement = "Document";
 				xmlTag = "MisMtchRjctnNtfctn";
 				businessArea_lazy = () -> TradeServicesManagementLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.MisMatchRejectionNotificationV03.mmNotificationIdentification,
-						com.tools20022.repository.area.tsmt.MisMatchRejectionNotificationV03.mmTransactionIdentification, com.tools20022.repository.area.tsmt.MisMatchRejectionNotificationV03.mmEstablishedBaselineIdentification,
-						com.tools20022.repository.area.tsmt.MisMatchRejectionNotificationV03.mmTransactionStatus, com.tools20022.repository.area.tsmt.MisMatchRejectionNotificationV03.mmUserTransactionReference,
-						com.tools20022.repository.area.tsmt.MisMatchRejectionNotificationV03.mmDataSetMatchReportReference, com.tools20022.repository.area.tsmt.MisMatchRejectionNotificationV03.mmRejectionReason,
-						com.tools20022.repository.area.tsmt.MisMatchRejectionNotificationV03.mmRequestForAction);
+				messageBuildingBlock_lazy = () -> Arrays.asList(MisMatchRejectionNotificationV03.mmNotificationIdentification, MisMatchRejectionNotificationV03.mmTransactionIdentification,
+						MisMatchRejectionNotificationV03.mmEstablishedBaselineIdentification, MisMatchRejectionNotificationV03.mmTransactionStatus, MisMatchRejectionNotificationV03.mmUserTransactionReference,
+						MisMatchRejectionNotificationV03.mmDataSetMatchReportReference, MisMatchRejectionNotificationV03.mmRejectionReason, MisMatchRejectionNotificationV03.mmRequestForAction);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "tsmt";

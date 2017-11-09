@@ -18,8 +18,10 @@
 package com.tools20022.repository.entity;
 
 import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.UndertakingPartyRole;
-import com.tools20022.repository.msg.Beneficiary1;
+import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -33,6 +35,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.Beneficiary1 Beneficiary1}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
  * derivationElement} =
@@ -53,13 +62,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * superType} =
  * {@linkplain com.tools20022.repository.entity.UndertakingPartyRole
  * UndertakingPartyRole}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Beneficiary1 Beneficiary1}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -83,12 +85,11 @@ public class UndertakingBeneficiary extends UndertakingPartyRole {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "UndertakingBeneficiary";
 				definition = "Party in whose favour the undertaking (or counter-undertaking) is issued.";
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Amendment3.mmNewBeneficiary, com.tools20022.repository.msg.Undertaking2.mmBeneficiary, com.tools20022.repository.msg.Undertaking1.mmBeneficiary,
-						com.tools20022.repository.msg.Undertaking4.mmBeneficiary, com.tools20022.repository.msg.Undertaking3.mmBeneficiary);
+				derivationElement_lazy = () -> Arrays.asList(Amendment3.mmNewBeneficiary, Undertaking2.mmBeneficiary, Undertaking1.mmBeneficiary, Undertaking4.mmBeneficiary, Undertaking3.mmBeneficiary);
 				superType_lazy = () -> UndertakingPartyRole.mmObject();
 				derivationComponent_lazy = () -> Arrays.asList(Beneficiary1.mmObject());
 			}

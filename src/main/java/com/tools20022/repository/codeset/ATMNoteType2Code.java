@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ATMNoteTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -89,7 +91,7 @@ public class ATMNoteType2Code extends ATMNoteTypeCode {
 	 */
 	public static final MMCode mmCounterfeit = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Counterfeit";
 			owner_lazy = () -> ATMNoteType2Code.mmObject();
 		}
@@ -112,7 +114,7 @@ public class ATMNoteType2Code extends ATMNoteTypeCode {
 	 */
 	public static final MMCode mmFit = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Fit";
 			owner_lazy = () -> ATMNoteType2Code.mmObject();
 		}
@@ -135,7 +137,7 @@ public class ATMNoteType2Code extends ATMNoteTypeCode {
 	 */
 	public static final MMCode mmFitAndUnfit = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FitAndUnfit";
 			owner_lazy = () -> ATMNoteType2Code.mmObject();
 		}
@@ -158,7 +160,7 @@ public class ATMNoteType2Code extends ATMNoteTypeCode {
 	 */
 	public static final MMCode mmNeutralised = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Neutralised";
 			owner_lazy = () -> ATMNoteType2Code.mmObject();
 		}
@@ -181,7 +183,7 @@ public class ATMNoteType2Code extends ATMNoteTypeCode {
 	 */
 	public static final MMCode mmSuspect = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Suspect";
 			owner_lazy = () -> ATMNoteType2Code.mmObject();
 		}
@@ -204,7 +206,7 @@ public class ATMNoteType2Code extends ATMNoteTypeCode {
 	 */
 	public static final MMCode mmUnfit = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unfit";
 			owner_lazy = () -> ATMNoteType2Code.mmObject();
 		}
@@ -227,7 +229,7 @@ public class ATMNoteType2Code extends ATMNoteTypeCode {
 	 */
 	public static final MMCode mmUnrecognised = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unrecognised";
 			owner_lazy = () -> ATMNoteType2Code.mmObject();
 		}
@@ -236,13 +238,12 @@ public class ATMNoteType2Code extends ATMNoteTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ATMNoteType2Code";
 				definition = "Type of notes.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ATMNoteType2Code.mmCounterfeit, com.tools20022.repository.codeset.ATMNoteType2Code.mmFit, com.tools20022.repository.codeset.ATMNoteType2Code.mmFitAndUnfit,
-						com.tools20022.repository.codeset.ATMNoteType2Code.mmNeutralised, com.tools20022.repository.codeset.ATMNoteType2Code.mmSuspect, com.tools20022.repository.codeset.ATMNoteType2Code.mmUnfit,
-						com.tools20022.repository.codeset.ATMNoteType2Code.mmUnrecognised);
+				code_lazy = () -> Arrays.asList(ATMNoteType2Code.mmCounterfeit, ATMNoteType2Code.mmFit, ATMNoteType2Code.mmFitAndUnfit, ATMNoteType2Code.mmNeutralised, ATMNoteType2Code.mmSuspect, ATMNoteType2Code.mmUnfit,
+						ATMNoteType2Code.mmUnrecognised);
 				trace_lazy = () -> ATMNoteTypeCode.mmObject();
 			}
 		});

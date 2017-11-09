@@ -19,7 +19,11 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.CashAccount;
+import com.tools20022.repository.entity.Charges;
+import com.tools20022.repository.entity.Tax;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -102,7 +106,7 @@ public class Account9Choice {
 			componentContext_lazy = () -> Account9Choice.mmObject();
 			isDerived = false;
 			xmlTag = "CshAcct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashAccount";
 			definition = "Account in which cash is maintained.";
 			maxOccurs = 1;
@@ -148,11 +152,11 @@ public class Account9Choice {
 	 */
 	public static final MMMessageAssociationEnd mmChargesAccount = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Charges.mmChargesDebitAccount;
+			businessElementTrace_lazy = () -> Charges.mmChargesDebitAccount;
 			componentContext_lazy = () -> Account9Choice.mmObject();
 			isDerived = false;
 			xmlTag = "ChrgsAcct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChargesAccount";
 			definition = "Account to be used for charges if different from the account for payment.";
 			maxOccurs = 1;
@@ -198,11 +202,11 @@ public class Account9Choice {
 	 */
 	public static final MMMessageAssociationEnd mmTaxAccount = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.mmTaxAccount;
+			businessElementTrace_lazy = () -> Tax.mmTaxAccount;
 			componentContext_lazy = () -> Account9Choice.mmObject();
 			isDerived = false;
 			xmlTag = "TaxAcct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxAccount";
 			definition = "Account to be used for taxes if different from the account for payment.";
 			maxOccurs = 1;
@@ -215,11 +219,10 @@ public class Account9Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Account9Choice.mmCashAccount, com.tools20022.repository.choice.Account9Choice.mmChargesAccount,
-						com.tools20022.repository.choice.Account9Choice.mmTaxAccount);
+				messageElement_lazy = () -> Arrays.asList(Account9Choice.mmCashAccount, Account9Choice.mmChargesAccount, Account9Choice.mmTaxAccount);
 				trace_lazy = () -> CashAccount.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Account9Choice";
 				definition = "Choice between a cash account, a charges account or a tax account.";
 			}

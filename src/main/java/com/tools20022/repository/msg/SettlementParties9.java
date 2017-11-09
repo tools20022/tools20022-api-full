@@ -19,8 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.PartyIdentification19Choice;
+import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.entity.PaymentPartyRole;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -114,11 +117,11 @@ public class SettlementParties9 {
 	 */
 	public static final MMMessageAssociationEnd mmDeliveryAgent = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> SettlementParties9.mmObject();
 			isDerived = false;
 			xmlTag = "DlvryAgt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeliveryAgent";
 			definition = "Financial institution from which cash will be transferred.";
 			maxOccurs = 1;
@@ -165,11 +168,11 @@ public class SettlementParties9 {
 	 */
 	public static final MMMessageAssociationEnd mmIntermediary = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> SettlementParties9.mmObject();
 			isDerived = false;
 			xmlTag = "Intrmy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Intermediary";
 			definition = "Party, within the settlement chain, between the delivery and receiving agents.";
 			maxOccurs = 1;
@@ -214,11 +217,11 @@ public class SettlementParties9 {
 	 */
 	public static final MMMessageAssociationEnd mmReceivingAgent = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> SettlementParties9.mmObject();
 			isDerived = false;
 			xmlTag = "RcvgAgt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceivingAgent";
 			definition = "Financial institution where the payee will receive the funds.";
 			maxOccurs = 1;
@@ -265,11 +268,11 @@ public class SettlementParties9 {
 	 */
 	public static final MMMessageAssociationEnd mmBeneficiaryInstitution = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> SettlementParties9.mmObject();
 			isDerived = false;
 			xmlTag = "BnfcryInstn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BeneficiaryInstitution";
 			definition = "Ultimate institution that will receive the funds when different than the trading or counterparty side.";
 			maxOccurs = 1;
@@ -282,11 +285,10 @@ public class SettlementParties9 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SettlementParties9.mmDeliveryAgent, com.tools20022.repository.msg.SettlementParties9.mmIntermediary,
-						com.tools20022.repository.msg.SettlementParties9.mmReceivingAgent, com.tools20022.repository.msg.SettlementParties9.mmBeneficiaryInstitution);
+				messageElement_lazy = () -> Arrays.asList(SettlementParties9.mmDeliveryAgent, SettlementParties9.mmIntermediary, SettlementParties9.mmReceivingAgent, SettlementParties9.mmBeneficiaryInstitution);
 				trace_lazy = () -> PaymentPartyRole.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SettlementParties9";
 				definition = "Identification of a settlement party by a choice between a BIC or a name and address.";
 				nextVersions_lazy = () -> Arrays.asList(SettlementParties29.mmObject());

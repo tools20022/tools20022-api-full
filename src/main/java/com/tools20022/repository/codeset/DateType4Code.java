@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.DateTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -80,7 +82,7 @@ public class DateType4Code extends DateTypeCode {
 	 */
 	public static final MMCode mmOpen = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Open";
 			owner_lazy = () -> DateType4Code.mmObject();
 		}
@@ -103,7 +105,7 @@ public class DateType4Code extends DateTypeCode {
 	 */
 	public static final MMCode mmUnknown = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unknown";
 			owner_lazy = () -> DateType4Code.mmObject();
 		}
@@ -112,12 +114,12 @@ public class DateType4Code extends DateTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("OPEN");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DateType4Code";
 				definition = "Specifies a type of date.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DateType4Code.mmOpen, com.tools20022.repository.codeset.DateType4Code.mmUnknown);
+				code_lazy = () -> Arrays.asList(DateType4Code.mmOpen, DateType4Code.mmUnknown);
 				trace_lazy = () -> DateTypeCode.mmObject();
 			}
 		});

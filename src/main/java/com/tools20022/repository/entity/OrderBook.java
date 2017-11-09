@@ -17,10 +17,9 @@
 
 package com.tools20022.repository.entity;
 
-import com.tools20022.metamodel.MMBusinessAssociationEnd;
-import com.tools20022.metamodel.MMBusinessAttribute;
-import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.*;
 import com.tools20022.repository.datatype.Max16Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -34,6 +33,15 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#mmRelatedOrderBook
+ * SecuritiesOrder.mmRelatedOrderBook}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -42,15 +50,6 @@ import java.util.List;
  * <li>
  * {@linkplain com.tools20022.repository.entity.OrderBook#mmPriceTimePriority
  * OrderBook.mmPriceTimePriority}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#mmRelatedOrderBook
- * SecuritiesOrder.mmRelatedOrderBook}</li>
  * </ul>
  * </li>
  * <li>
@@ -109,12 +108,12 @@ public class OrderBook {
 		{
 			elementContext_lazy = () -> OrderBook.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Order";
 			definition = "Instruction to a broker or dealer to buy or sell a specific security.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmRelatedOrderBook;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmObject();
 		}
 	};
@@ -149,7 +148,7 @@ public class OrderBook {
 		{
 			elementContext_lazy = () -> OrderBook.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PriceTimePriority";
 			definition = "Priority given to an order based on its price and/or time specification.";
 			maxOccurs = 1;
@@ -161,12 +160,12 @@ public class OrderBook {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OrderBook";
 				definition = "Record of orders to buy and sell a financial instrument.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesOrder.mmRelatedOrderBook);
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.OrderBook.mmOrder, com.tools20022.repository.entity.OrderBook.mmPriceTimePriority);
+				element_lazy = () -> Arrays.asList(OrderBook.mmOrder, OrderBook.mmPriceTimePriority);
 			}
 		});
 		return mmObject_lazy.get();

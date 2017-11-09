@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -28,6 +30,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.AccountOpeningType1Code
+ * AccountOpeningType1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -36,13 +45,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.AccountOpeningTypeCode#mmSupplementaryAccountOpening
  * AccountOpeningTypeCode.mmSupplementaryAccountOpening}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.AccountOpeningType1Code
- * AccountOpeningType1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -94,7 +96,7 @@ public class AccountOpeningTypeCode {
 	 */
 	public static final MMCode mmNewAccountOpening = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewAccountOpening";
 			definition = "Account request is to open a new account.";
 			owner_lazy = () -> AccountOpeningTypeCode.mmObject();
@@ -127,7 +129,7 @@ public class AccountOpeningTypeCode {
 	 */
 	public static final MMCode mmSupplementaryAccountOpening = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryAccountOpening";
 			definition = "Account request is to open a supplementary account, that is, based on an existing account.";
 			owner_lazy = () -> AccountOpeningTypeCode.mmObject();
@@ -138,12 +140,12 @@ public class AccountOpeningTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("NEWA");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AccountOpeningTypeCode";
 				definition = "Specifies the type of account to which an account opening request is related, for instance a new account.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AccountOpeningTypeCode.mmNewAccountOpening, com.tools20022.repository.codeset.AccountOpeningTypeCode.mmSupplementaryAccountOpening);
+				code_lazy = () -> Arrays.asList(AccountOpeningTypeCode.mmNewAccountOpening, AccountOpeningTypeCode.mmSupplementaryAccountOpening);
 				derivation_lazy = () -> Arrays.asList(AccountOpeningType1Code.mmObject());
 			}
 		});

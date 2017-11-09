@@ -19,8 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.PriceFormat59Choice;
+import com.tools20022.repository.entity.BiddingConditions;
 import com.tools20022.repository.entity.CorporateActionPrice;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -99,11 +102,11 @@ public class CorporateActionPrice67 {
 	 */
 	public static final MMMessageAssociationEnd mmMaximumPrice = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BiddingConditions.mmMaximumPrice;
+			businessElementTrace_lazy = () -> BiddingConditions.mmMaximumPrice;
 			componentContext_lazy = () -> CorporateActionPrice67.mmObject();
 			isDerived = false;
 			xmlTag = "MaxPric";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaximumPrice";
 			definition = "Maximum or cap price at which a holder can bid, for example, on a Dutch auction offer.";
 			maxOccurs = 1;
@@ -149,11 +152,11 @@ public class CorporateActionPrice67 {
 	 */
 	public static final MMMessageAssociationEnd mmMinimumPrice = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BiddingConditions.mmMinimumPrice;
+			businessElementTrace_lazy = () -> BiddingConditions.mmMinimumPrice;
 			componentContext_lazy = () -> CorporateActionPrice67.mmObject();
 			isDerived = false;
 			xmlTag = "MinPric";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MinimumPrice";
 			definition = "Minimum or floor price at which a holder can bid, for example, on a Dutch auction offer.";
 			maxOccurs = 1;
@@ -166,10 +169,10 @@ public class CorporateActionPrice67 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionPrice67.mmMaximumPrice, com.tools20022.repository.msg.CorporateActionPrice67.mmMinimumPrice);
+				messageElement_lazy = () -> Arrays.asList(CorporateActionPrice67.mmMaximumPrice, CorporateActionPrice67.mmMinimumPrice);
 				trace_lazy = () -> CorporateActionPrice.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionPrice67";
 				definition = "Specifies prices of a corporate action.";
 			}

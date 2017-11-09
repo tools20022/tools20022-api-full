@@ -19,7 +19,9 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.SecuritiesTradeStatus;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.ProprietaryReason4;
 import com.tools20022.repository.msg.ProprietaryStatusAndReason6;
 import java.util.Arrays;
@@ -109,14 +111,14 @@ public class MatchingStatus25Choice {
 	 */
 	public static final MMMessageAssociationEnd mmMatched = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeStatus.mmMatchingStatus;
+			businessElementTrace_lazy = () -> SecuritiesTradeStatus.mmMatchingStatus;
 			componentContext_lazy = () -> MatchingStatus25Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Mtchd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Matched";
 			definition = "Status is matched.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.MatchingStatus7Choice.mmMatched;
+			previousVersion_lazy = () -> MatchingStatus7Choice.mmMatched;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -163,14 +165,14 @@ public class MatchingStatus25Choice {
 	 */
 	public static final MMMessageAssociationEnd mmUnmatched = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeStatus.mmReason;
+			businessElementTrace_lazy = () -> SecuritiesTradeStatus.mmReason;
 			componentContext_lazy = () -> MatchingStatus25Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Umtchd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unmatched";
 			definition = "Status is unmatched.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.MatchingStatus7Choice.mmUnmatched;
+			previousVersion_lazy = () -> MatchingStatus7Choice.mmUnmatched;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -221,10 +223,10 @@ public class MatchingStatus25Choice {
 			componentContext_lazy = () -> MatchingStatus25Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Proprietary status.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.MatchingStatus7Choice.mmProprietary;
+			previousVersion_lazy = () -> MatchingStatus7Choice.mmProprietary;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -235,11 +237,10 @@ public class MatchingStatus25Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.MatchingStatus25Choice.mmMatched, com.tools20022.repository.choice.MatchingStatus25Choice.mmUnmatched,
-						com.tools20022.repository.choice.MatchingStatus25Choice.mmProprietary);
+				messageElement_lazy = () -> Arrays.asList(MatchingStatus25Choice.mmMatched, MatchingStatus25Choice.mmUnmatched, MatchingStatus25Choice.mmProprietary);
 				trace_lazy = () -> SecuritiesTradeStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MatchingStatus25Choice";
 				definition = "Choice of format for the matching status.";
 				previousVersion_lazy = () -> MatchingStatus7Choice.mmObject();

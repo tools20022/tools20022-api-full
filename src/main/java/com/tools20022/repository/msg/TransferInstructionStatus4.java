@@ -19,10 +19,12 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.TransferStatus4Code;
 import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.entity.SecuritiesTradeStatus;
 import com.tools20022.repository.entity.SecuritiesTradeStatusReason;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -109,14 +111,14 @@ public class TransferInstructionStatus4 {
 	 */
 	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeStatus.mmTransferStatus;
+			businessElementTrace_lazy = () -> SecuritiesTradeStatus.mmTransferStatus;
 			componentContext_lazy = () -> TransferInstructionStatus4.mmObject();
 			isDerived = false;
 			xmlTag = "Sts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Status";
 			definition = "Status code.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TransferInstructionStatus3.mmStatus;
+			previousVersion_lazy = () -> TransferInstructionStatus3.mmStatus;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TransferStatus4Code.mmObject();
@@ -166,10 +168,10 @@ public class TransferInstructionStatus4 {
 			componentContext_lazy = () -> TransferInstructionStatus4.mmObject();
 			isDerived = false;
 			xmlTag = "Rsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reason";
 			definition = "Reason for the status.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TransferInstructionStatus3.mmReason;
+			previousVersion_lazy = () -> TransferInstructionStatus3.mmReason;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
@@ -179,10 +181,10 @@ public class TransferInstructionStatus4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransferInstructionStatus4.mmStatus, com.tools20022.repository.msg.TransferInstructionStatus4.mmReason);
+				messageElement_lazy = () -> Arrays.asList(TransferInstructionStatus4.mmStatus, TransferInstructionStatus4.mmReason);
 				trace_lazy = () -> SecuritiesTradeStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TransferInstructionStatus4";
 				definition = "Instruction status.";
 				previousVersion_lazy = () -> TransferInstructionStatus3.mmObject();

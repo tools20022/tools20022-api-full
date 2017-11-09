@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.TradeTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -86,7 +88,7 @@ public class TradeType2Code extends TradeTypeCode {
 	 */
 	public static final MMCode mmRiskTrade = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RiskTrade";
 			owner_lazy = () -> TradeType2Code.mmObject();
 		}
@@ -109,7 +111,7 @@ public class TradeType2Code extends TradeTypeCode {
 	 */
 	public static final MMCode mmVWAPGuarantee = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VWAPGuarantee";
 			owner_lazy = () -> TradeType2Code.mmObject();
 		}
@@ -132,7 +134,7 @@ public class TradeType2Code extends TradeTypeCode {
 	 */
 	public static final MMCode mmAgency = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Agency";
 			owner_lazy = () -> TradeType2Code.mmObject();
 		}
@@ -155,7 +157,7 @@ public class TradeType2Code extends TradeTypeCode {
 	 */
 	public static final MMCode mmGuaranteedClose = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GuaranteedClose";
 			owner_lazy = () -> TradeType2Code.mmObject();
 		}
@@ -164,13 +166,12 @@ public class TradeType2Code extends TradeTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("RISK");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TradeType2Code";
 				definition = "Specifies the type of executed order in a bidding process.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TradeType2Code.mmRiskTrade, com.tools20022.repository.codeset.TradeType2Code.mmVWAPGuarantee, com.tools20022.repository.codeset.TradeType2Code.mmAgency,
-						com.tools20022.repository.codeset.TradeType2Code.mmGuaranteedClose);
+				code_lazy = () -> Arrays.asList(TradeType2Code.mmRiskTrade, TradeType2Code.mmVWAPGuarantee, TradeType2Code.mmAgency, TradeType2Code.mmGuaranteedClose);
 				trace_lazy = () -> TradeTypeCode.mmObject();
 			}
 		});

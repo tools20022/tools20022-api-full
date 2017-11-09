@@ -20,9 +20,11 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.OrderWaiverReason1Choice;
 import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.entity.InvestmentFundOrder;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -115,14 +117,14 @@ public class AdditionalInformation2 {
 	 */
 	public static final MMMessageAssociationEnd mmOrderWaiverReason = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrder.mmOrderWaiverReason;
+			businessElementTrace_lazy = () -> InvestmentFundOrder.mmOrderWaiverReason;
 			componentContext_lazy = () -> AdditionalInformation2.mmObject();
 			isDerived = false;
 			xmlTag = "OrdrWvrRsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrderWaiverReason";
 			definition = "Reason for the waiver.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OrderWaiver1.mmOrderWaiverReason);
+			nextVersions_lazy = () -> Arrays.asList(OrderWaiver1.mmOrderWaiverReason);
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> OrderWaiverReason1Choice.mmObject();
@@ -169,10 +171,10 @@ public class AdditionalInformation2 {
 			componentContext_lazy = () -> AdditionalInformation2.mmObject();
 			isDerived = false;
 			xmlTag = "InfVal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InformationValue";
 			definition = "Contents of the additional information.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OrderWaiver1.mmInformationValue);
+			nextVersions_lazy = () -> Arrays.asList(OrderWaiver1.mmInformationValue);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
@@ -182,10 +184,10 @@ public class AdditionalInformation2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AdditionalInformation2.mmOrderWaiverReason, com.tools20022.repository.msg.AdditionalInformation2.mmInformationValue);
+				messageElement_lazy = () -> Arrays.asList(AdditionalInformation2.mmOrderWaiverReason, AdditionalInformation2.mmInformationValue);
 				trace_lazy = () -> InvestmentFundOrder.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "AdditionalInformation2";
 				definition = "Additional information about a request (e.g. financing request).";
 				nextVersions_lazy = () -> Arrays.asList(OrderWaiver1.mmObject());

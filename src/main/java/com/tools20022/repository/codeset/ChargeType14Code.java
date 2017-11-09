@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ChargeTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -93,7 +95,7 @@ public class ChargeType14Code extends ChargeTypeCode {
 	 */
 	public static final MMCode mmADRFee = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ADRFee";
 			owner_lazy = () -> ChargeType14Code.mmObject();
 		}
@@ -116,7 +118,7 @@ public class ChargeType14Code extends ChargeTypeCode {
 	 */
 	public static final MMCode mmIssuanceCancellationFee = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssuanceCancellationFee";
 			owner_lazy = () -> ChargeType14Code.mmObject();
 		}
@@ -139,7 +141,7 @@ public class ChargeType14Code extends ChargeTypeCode {
 	 */
 	public static final MMCode mmCustodyFee = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CustodyFee";
 			owner_lazy = () -> ChargeType14Code.mmObject();
 		}
@@ -162,7 +164,7 @@ public class ChargeType14Code extends ChargeTypeCode {
 	 */
 	public static final MMCode mmServiceProvisionFee = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ServiceProvisionFee";
 			owner_lazy = () -> ChargeType14Code.mmObject();
 		}
@@ -185,7 +187,7 @@ public class ChargeType14Code extends ChargeTypeCode {
 	 */
 	public static final MMCode mmMiscellaneousFee = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MiscellaneousFee";
 			owner_lazy = () -> ChargeType14Code.mmObject();
 		}
@@ -208,7 +210,7 @@ public class ChargeType14Code extends ChargeTypeCode {
 	 */
 	public static final MMCode mmIssuanceFee = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssuanceFee";
 			owner_lazy = () -> ChargeType14Code.mmObject();
 		}
@@ -217,14 +219,13 @@ public class ChargeType14Code extends ChargeTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ADRF");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ChargeType14Code";
 				definition = "Identifies charges linked to the type of service.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ChargeType14Code.mmADRFee, com.tools20022.repository.codeset.ChargeType14Code.mmIssuanceCancellationFee,
-						com.tools20022.repository.codeset.ChargeType14Code.mmCustodyFee, com.tools20022.repository.codeset.ChargeType14Code.mmServiceProvisionFee, com.tools20022.repository.codeset.ChargeType14Code.mmMiscellaneousFee,
-						com.tools20022.repository.codeset.ChargeType14Code.mmIssuanceFee);
+				code_lazy = () -> Arrays.asList(ChargeType14Code.mmADRFee, ChargeType14Code.mmIssuanceCancellationFee, ChargeType14Code.mmCustodyFee, ChargeType14Code.mmServiceProvisionFee, ChargeType14Code.mmMiscellaneousFee,
+						ChargeType14Code.mmIssuanceFee);
 				trace_lazy = () -> ChargeTypeCode.mmObject();
 			}
 		});

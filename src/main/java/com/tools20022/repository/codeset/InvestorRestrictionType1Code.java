@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.InvestorRestrictionTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -86,7 +88,7 @@ public class InvestorRestrictionType1Code extends InvestorRestrictionTypeCode {
 	 */
 	public static final MMCode mmLegalResident = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LegalResident";
 			owner_lazy = () -> InvestorRestrictionType1Code.mmObject();
 		}
@@ -109,7 +111,7 @@ public class InvestorRestrictionType1Code extends InvestorRestrictionTypeCode {
 	 */
 	public static final MMCode mmCitizen = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Citizen";
 			owner_lazy = () -> InvestorRestrictionType1Code.mmObject();
 		}
@@ -132,7 +134,7 @@ public class InvestorRestrictionType1Code extends InvestorRestrictionTypeCode {
 	 */
 	public static final MMCode mmIndividual = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Individual";
 			owner_lazy = () -> InvestorRestrictionType1Code.mmObject();
 		}
@@ -141,13 +143,12 @@ public class InvestorRestrictionType1Code extends InvestorRestrictionTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("LERE");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InvestorRestrictionType1Code";
 				definition = "Specifies to whom or what the restriction applies.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.InvestorRestrictionType1Code.mmLegalResident, com.tools20022.repository.codeset.InvestorRestrictionType1Code.mmCitizen,
-						com.tools20022.repository.codeset.InvestorRestrictionType1Code.mmIndividual);
+				code_lazy = () -> Arrays.asList(InvestorRestrictionType1Code.mmLegalResident, InvestorRestrictionType1Code.mmCitizen, InvestorRestrictionType1Code.mmIndividual);
 				trace_lazy = () -> InvestorRestrictionTypeCode.mmObject();
 			}
 		});

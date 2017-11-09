@@ -18,6 +18,8 @@
 package com.tools20022.repository.datatype;
 
 import com.tools20022.metamodel.MMDateTime;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.concurrent.atomic.AtomicReference;
 
 /**
@@ -52,8 +54,8 @@ public class ISONormalisedDateTime {
 		mmObject_lazy.compareAndSet(null, new MMDateTime() {
 			{
 				pattern = ".*Z";
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ISONormalisedDateTime";
 				definition = "an ISODateTime whereby all timezoned dateTime values are UTC.";
 			}

@@ -20,10 +20,12 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.AuthenticationMethod7Code;
 import com.tools20022.repository.datatype.Max5000Binary;
 import com.tools20022.repository.datatype.TrueFalseIndicator;
 import com.tools20022.repository.entity.Authentication;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -123,14 +125,14 @@ public class CardholderAuthentication8 {
 	 */
 	public static final MMMessageAttribute mmAuthenticationMethod = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Authentication.mmAuthenticationMethod;
+			businessElementTrace_lazy = () -> Authentication.mmAuthenticationMethod;
 			componentContext_lazy = () -> CardholderAuthentication8.mmObject();
 			isDerived = false;
 			xmlTag = "AuthntcnMtd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AuthenticationMethod";
 			definition = "Method and data intended to be used for this transaction to authenticate the customer or its card.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CardholderAuthentication7.mmAuthenticationMethod;
+			previousVersion_lazy = () -> CardholderAuthentication7.mmAuthenticationMethod;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AuthenticationMethod7Code.mmObject();
@@ -173,7 +175,7 @@ public class CardholderAuthentication8 {
 			componentContext_lazy = () -> CardholderAuthentication8.mmObject();
 			isDerived = false;
 			xmlTag = "TknReqd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TokenRequested";
 			definition = "True if an authentication token is requested to the host. This token will be provided to the ATM for further authentication.";
 			maxOccurs = 1;
@@ -223,14 +225,14 @@ public class CardholderAuthentication8 {
 	 */
 	public static final MMMessageAttribute mmAuthenticationValue = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Authentication.mmAuthenticationValue;
+			businessElementTrace_lazy = () -> Authentication.mmAuthenticationValue;
 			componentContext_lazy = () -> CardholderAuthentication8.mmObject();
 			isDerived = false;
 			xmlTag = "AuthntcnVal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AuthenticationValue";
 			definition = "Value or token to be used for customer or card authentication.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CardholderAuthentication7.mmAuthenticationValue;
+			previousVersion_lazy = () -> CardholderAuthentication7.mmAuthenticationValue;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max5000Binary.mmObject();
@@ -274,10 +276,10 @@ public class CardholderAuthentication8 {
 			componentContext_lazy = () -> CardholderAuthentication8.mmObject();
 			isDerived = false;
 			xmlTag = "PrtctdAuthntcnVal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProtectedAuthenticationValue";
 			definition = "Protection of the authentication value.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CardholderAuthentication7.mmProtectedAuthenticationValue;
+			previousVersion_lazy = () -> CardholderAuthentication7.mmProtectedAuthenticationValue;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -328,10 +330,10 @@ public class CardholderAuthentication8 {
 			componentContext_lazy = () -> CardholderAuthentication8.mmObject();
 			isDerived = false;
 			xmlTag = "CrdhldrOnLinePIN";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CardholderOnLinePIN";
 			definition = "Encrypted personal identification number (PIN) and related information.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CardholderAuthentication7.mmCardholderOnLinePIN;
+			previousVersion_lazy = () -> CardholderAuthentication7.mmCardholderOnLinePIN;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -342,12 +344,11 @@ public class CardholderAuthentication8 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardholderAuthentication8.mmAuthenticationMethod, com.tools20022.repository.msg.CardholderAuthentication8.mmTokenRequested,
-						com.tools20022.repository.msg.CardholderAuthentication8.mmAuthenticationValue, com.tools20022.repository.msg.CardholderAuthentication8.mmProtectedAuthenticationValue,
-						com.tools20022.repository.msg.CardholderAuthentication8.mmCardholderOnLinePIN);
+				messageElement_lazy = () -> Arrays.asList(CardholderAuthentication8.mmAuthenticationMethod, CardholderAuthentication8.mmTokenRequested, CardholderAuthentication8.mmAuthenticationValue,
+						CardholderAuthentication8.mmProtectedAuthenticationValue, CardholderAuthentication8.mmCardholderOnLinePIN);
 				trace_lazy = () -> Authentication.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CardholderAuthentication8";
 				definition = "Data related to the authentication of the card and the cardholder.";
 				previousVersion_lazy = () -> CardholderAuthentication7.mmObject();

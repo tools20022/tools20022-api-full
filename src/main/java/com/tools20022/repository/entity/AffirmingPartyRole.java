@@ -18,7 +18,12 @@
 package com.tools20022.repository.entity;
 
 import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.SecuritiesTradePartyRole;
+import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.ConfirmationParties2;
+import com.tools20022.repository.msg.ConfirmationParties3;
+import com.tools20022.repository.msg.ConfirmationParties4;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -75,12 +80,11 @@ public class AffirmingPartyRole extends SecuritiesTradePartyRole {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AffirmingPartyRole";
 				definition = "Party (buyer or seller) that positively affirms the details of a previously agreed security trade confirmation.";
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ConfirmationParties3.mmAffirmingParty, com.tools20022.repository.msg.ConfirmationParties4.mmAffirmingParty,
-						com.tools20022.repository.msg.ConfirmationParties2.mmAffirmingParty);
+				derivationElement_lazy = () -> Arrays.asList(ConfirmationParties3.mmAffirmingParty, ConfirmationParties4.mmAffirmingParty, ConfirmationParties2.mmAffirmingParty);
 				superType_lazy = () -> SecuritiesTradePartyRole.mmObject();
 			}
 		});

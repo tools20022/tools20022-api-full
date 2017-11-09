@@ -17,11 +17,11 @@
 
 package com.tools20022.repository.entity;
 
-import com.tools20022.metamodel.MMBusinessAssociationEnd;
-import com.tools20022.metamodel.MMBusinessAttribute;
-import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.*;
+import com.tools20022.repository.choice.UnderlyingContract1Choice;
 import com.tools20022.repository.datatype.CurrencyAndAmount;
 import com.tools20022.repository.entity.Trade;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -36,39 +36,38 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
  * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CommercialTrade#mmPurchaseAccount
- * CommercialTrade.mmPurchaseAccount}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CommercialTrade#mmPaymentObligation
- * CommercialTrade.mmPaymentObligation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CommercialTrade#mmTotalAcceptedAmount
- * CommercialTrade.mmTotalAcceptedAmount}</li>
- * <li>{@linkplain com.tools20022.repository.entity.CommercialTrade#mmPartyRole
- * CommercialTrade.mmPartyRole}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CommercialTrade#mmTradeSettlement
- * CommercialTrade.mmTradeSettlement}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CommercialTrade#mmProductDeliveryObligation
- * CommercialTrade.mmProductDeliveryObligation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CommercialTrade#mmPurchaseOrder
- * CommercialTrade.mmPurchaseOrder}</li>
- * <li>{@linkplain com.tools20022.repository.entity.CommercialTrade#mmDocuments
- * CommercialTrade.mmDocuments}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CommercialTrade#mmRelatedUndertaking
- * CommercialTrade.mmRelatedUndertaking}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CommercialTrade#mmTransactionStatus
- * CommercialTrade.mmTransactionStatus}</li>
- * <li>{@linkplain com.tools20022.repository.entity.CommercialTrade#mmAgreement
- * CommercialTrade.mmAgreement}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.LineItem10 LineItem10}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.LineItem5 LineItem5}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Baseline2 Baseline2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.LineItem7 LineItem7}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Baseline3 Baseline3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.LineItem4 LineItem4}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CommercialDataSet2
+ * CommercialDataSet2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.LineItem9 LineItem9}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CommercialDataSet3
+ * CommercialDataSet3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Baseline4 Baseline4}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CommercialDataSet4
+ * CommercialDataSet4}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.LineItem11 LineItem11}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.LineItem12 LineItem12}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentInvoice1
+ * CardPaymentInvoice1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Baseline5 Baseline5}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CommercialDataSet5
+ * CommercialDataSet5}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.LineItem13 LineItem13}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.LineItem15 LineItem15}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TradeSettlement2
+ * TradeSettlement2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentInvoice2
+ * CardPaymentInvoice2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.LineItem16 LineItem16}</li>
  * </ul>
  * </li>
  * <li>
@@ -120,38 +119,39 @@ import java.util.List;
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
  * superType} = {@linkplain com.tools20022.repository.entity.Trade Trade}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.LineItem10 LineItem10}</li>
- * <li>{@linkplain com.tools20022.repository.msg.LineItem5 LineItem5}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Baseline2 Baseline2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.LineItem7 LineItem7}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Baseline3 Baseline3}</li>
- * <li>{@linkplain com.tools20022.repository.msg.LineItem4 LineItem4}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CommercialDataSet2
- * CommercialDataSet2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.LineItem9 LineItem9}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CommercialDataSet3
- * CommercialDataSet3}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Baseline4 Baseline4}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CommercialDataSet4
- * CommercialDataSet4}</li>
- * <li>{@linkplain com.tools20022.repository.msg.LineItem11 LineItem11}</li>
- * <li>{@linkplain com.tools20022.repository.msg.LineItem12 LineItem12}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentInvoice1
- * CardPaymentInvoice1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Baseline5 Baseline5}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CommercialDataSet5
- * CommercialDataSet5}</li>
- * <li>{@linkplain com.tools20022.repository.msg.LineItem13 LineItem13}</li>
- * <li>{@linkplain com.tools20022.repository.msg.LineItem15 LineItem15}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TradeSettlement2
- * TradeSettlement2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentInvoice2
- * CardPaymentInvoice2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.LineItem16 LineItem16}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CommercialTrade#mmPurchaseAccount
+ * CommercialTrade.mmPurchaseAccount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CommercialTrade#mmPaymentObligation
+ * CommercialTrade.mmPaymentObligation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CommercialTrade#mmTotalAcceptedAmount
+ * CommercialTrade.mmTotalAcceptedAmount}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.CommercialTrade#mmPartyRole
+ * CommercialTrade.mmPartyRole}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CommercialTrade#mmTradeSettlement
+ * CommercialTrade.mmTradeSettlement}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CommercialTrade#mmProductDeliveryObligation
+ * CommercialTrade.mmProductDeliveryObligation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CommercialTrade#mmPurchaseOrder
+ * CommercialTrade.mmPurchaseOrder}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.CommercialTrade#mmDocuments
+ * CommercialTrade.mmDocuments}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CommercialTrade#mmRelatedUndertaking
+ * CommercialTrade.mmRelatedUndertaking}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CommercialTrade#mmTransactionStatus
+ * CommercialTrade.mmTransactionStatus}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.CommercialTrade#mmAgreement
+ * CommercialTrade.mmAgreement}</li>
  * </ul>
  * </li>
  * <li>
@@ -226,16 +226,15 @@ public class CommercialTrade extends Trade {
 	 */
 	public static final MMBusinessAssociationEnd mmPurchaseAccount = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TradeSettlement1.mmPurchaseAccountingAccount, com.tools20022.repository.msg.LineItem10.mmPurchaseAccountingAccount,
-					com.tools20022.repository.msg.LineItem16.mmPurchaseAccountingAccount);
+			derivation_lazy = () -> Arrays.asList(TradeSettlement1.mmPurchaseAccountingAccount, LineItem10.mmPurchaseAccountingAccount, LineItem16.mmPurchaseAccountingAccount);
 			elementContext_lazy = () -> CommercialTrade.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PurchaseAccount";
 			definition = "Specific purchase account for recording debits and credits for accounting purposes.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.CashAccount.mmRelatedCommercialTrade;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.CashAccount.mmObject();
 		}
 	};
@@ -310,18 +309,16 @@ public class CommercialTrade extends Trade {
 	 */
 	public static final MMBusinessAssociationEnd mmPaymentObligation = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Baseline2.mmPaymentTerms, com.tools20022.repository.msg.Baseline3.mmPaymentTerms, com.tools20022.repository.msg.Baseline3.mmPaymentObligation,
-					com.tools20022.repository.msg.CommercialDataSet2.mmPaymentTerms, com.tools20022.repository.msg.CommercialDataSet3.mmPaymentTerms, com.tools20022.repository.msg.Baseline4.mmPaymentTerms,
-					com.tools20022.repository.msg.Baseline4.mmPaymentObligation, com.tools20022.repository.msg.CommercialDataSet4.mmPaymentTerms, com.tools20022.repository.msg.Baseline5.mmPaymentTerms,
-					com.tools20022.repository.msg.Baseline5.mmPaymentObligation, com.tools20022.repository.msg.CommercialDataSet5.mmPaymentTerms);
+			derivation_lazy = () -> Arrays.asList(Baseline2.mmPaymentTerms, Baseline3.mmPaymentTerms, Baseline3.mmPaymentObligation, CommercialDataSet2.mmPaymentTerms, CommercialDataSet3.mmPaymentTerms, Baseline4.mmPaymentTerms,
+					Baseline4.mmPaymentObligation, CommercialDataSet4.mmPaymentTerms, Baseline5.mmPaymentTerms, Baseline5.mmPaymentObligation, CommercialDataSet5.mmPaymentTerms);
 			elementContext_lazy = () -> CommercialTrade.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PaymentObligation";
 			definition = "Obligation for the buyer to settle the value of the products bought.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.PaymentObligation.mmCommercialTrade;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.PaymentObligation.mmObject();
 		}
 	};
@@ -372,11 +369,10 @@ public class CommercialTrade extends Trade {
 	 */
 	public static final MMBusinessAttribute mmTotalAcceptedAmount = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LineItem6.mmAcceptedLineItemsTotalAmount, com.tools20022.repository.msg.LineItem8.mmAcceptedLineItemsTotalAmount,
-					com.tools20022.repository.msg.LineItem14.mmAcceptedLineItemsTotalAmount, com.tools20022.repository.msg.TradeSettlement2.mmTaxTotalAmount);
+			derivation_lazy = () -> Arrays.asList(LineItem6.mmAcceptedLineItemsTotalAmount, LineItem8.mmAcceptedLineItemsTotalAmount, LineItem14.mmAcceptedLineItemsTotalAmount, TradeSettlement2.mmTaxTotalAmount);
 			elementContext_lazy = () -> CommercialTrade.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TotalAcceptedAmount";
 			definition = "Total amount of a trade, that is the sum of the accepted items.";
 			maxOccurs = 1;
@@ -423,12 +419,12 @@ public class CommercialTrade extends Trade {
 		{
 			elementContext_lazy = () -> CommercialTrade.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PartyRole";
 			definition = "Role played by a party in the context of a trade.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.CommercialTradePartyRole.mmCommercialTrade;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.CommercialTradePartyRole.mmObject();
 		}
 	};
@@ -471,12 +467,12 @@ public class CommercialTrade extends Trade {
 		{
 			elementContext_lazy = () -> CommercialTrade.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TradeSettlement";
 			definition = "Process of settling a commercial trade.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.CommercialTradeSettlement.mmCommercialTrade;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.CommercialTradeSettlement.mmObject();
 		}
 	};
@@ -520,12 +516,12 @@ public class CommercialTrade extends Trade {
 		{
 			elementContext_lazy = () -> CommercialTrade.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ProductDeliveryObligation";
 			definition = "Obligation for the seller to deliver the products to the buyer.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.ProductDeliveryObligation.mmCommercialTrade;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.ProductDeliveryObligation.mmObject();
 		}
 	};
@@ -574,16 +570,16 @@ public class CommercialTrade extends Trade {
 	 */
 	public static final MMBusinessAssociationEnd mmPurchaseOrder = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LineItemAndPOIdentification1.mmPurchaseOrderReference);
+			derivation_lazy = () -> Arrays.asList(LineItemAndPOIdentification1.mmPurchaseOrderReference);
 			elementContext_lazy = () -> CommercialTrade.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PurchaseOrder";
 			definition = "Specifies the purchase order related to a commercial trade.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.PurchaseOrder.mmResultingCommercialTrade;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.PurchaseOrder.mmObject();
 		}
 	};
@@ -626,13 +622,13 @@ public class CommercialTrade extends Trade {
 		{
 			elementContext_lazy = () -> CommercialTrade.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Documents";
 			definition = "Documents related to                             a commercial trade transaction.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.Document.mmCommercialTrade;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Document.mmObject();
 		}
 	};
@@ -675,13 +671,13 @@ public class CommercialTrade extends Trade {
 		{
 			elementContext_lazy = () -> CommercialTrade.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedUndertaking";
 			definition = "Undertaking related to the commercial trade.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.UnderlyingTransaction.mmCommercialTrade;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.UnderlyingTransaction.mmObject();
 		}
 	};
@@ -724,13 +720,13 @@ public class CommercialTrade extends Trade {
 		{
 			elementContext_lazy = () -> CommercialTrade.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TransactionStatus";
 			definition = "Status of a commercial trade processed in a central system.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.BaselineStatus.mmCommercialTrade;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.BaselineStatus.mmObject();
 		}
 	};
@@ -775,13 +771,13 @@ public class CommercialTrade extends Trade {
 		{
 			elementContext_lazy = () -> CommercialTrade.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Agreement";
 			definition = "Agreement between trade parties which describes the conditions under which they agree to execute trades amongst themselves.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.Agreement.mmTrade;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Agreement.mmObject();
 		}
 	};
@@ -789,8 +785,8 @@ public class CommercialTrade extends Trade {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CommercialTrade";
 				definition = "Commercial details of a trade transaction between a buyer and a seller.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CashAccount.mmRelatedCommercialTrade, com.tools20022.repository.entity.Agreement.mmTrade,
@@ -798,12 +794,10 @@ public class CommercialTrade extends Trade {
 						com.tools20022.repository.entity.CommercialTradePartyRole.mmCommercialTrade, com.tools20022.repository.entity.CommercialTradeSettlement.mmCommercialTrade,
 						com.tools20022.repository.entity.BaselineStatus.mmCommercialTrade, com.tools20022.repository.entity.PurchaseOrder.mmResultingCommercialTrade,
 						com.tools20022.repository.entity.ProductDeliveryObligation.mmCommercialTrade);
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Baseline2.mmGoods, com.tools20022.repository.msg.Baseline3.mmGoods, com.tools20022.repository.choice.UnderlyingContract1Choice.mmTrade);
+				derivationElement_lazy = () -> Arrays.asList(Baseline2.mmGoods, Baseline3.mmGoods, UnderlyingContract1Choice.mmTrade);
 				superType_lazy = () -> Trade.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CommercialTrade.mmPurchaseAccount, com.tools20022.repository.entity.CommercialTrade.mmPaymentObligation,
-						com.tools20022.repository.entity.CommercialTrade.mmTotalAcceptedAmount, com.tools20022.repository.entity.CommercialTrade.mmPartyRole, com.tools20022.repository.entity.CommercialTrade.mmTradeSettlement,
-						com.tools20022.repository.entity.CommercialTrade.mmProductDeliveryObligation, com.tools20022.repository.entity.CommercialTrade.mmPurchaseOrder, com.tools20022.repository.entity.CommercialTrade.mmDocuments,
-						com.tools20022.repository.entity.CommercialTrade.mmRelatedUndertaking, com.tools20022.repository.entity.CommercialTrade.mmTransactionStatus, com.tools20022.repository.entity.CommercialTrade.mmAgreement);
+				element_lazy = () -> Arrays.asList(CommercialTrade.mmPurchaseAccount, CommercialTrade.mmPaymentObligation, CommercialTrade.mmTotalAcceptedAmount, CommercialTrade.mmPartyRole, CommercialTrade.mmTradeSettlement,
+						CommercialTrade.mmProductDeliveryObligation, CommercialTrade.mmPurchaseOrder, CommercialTrade.mmDocuments, CommercialTrade.mmRelatedUndertaking, CommercialTrade.mmTransactionStatus, CommercialTrade.mmAgreement);
 				derivationComponent_lazy = () -> Arrays.asList(LineItem10.mmObject(), LineItem5.mmObject(), Baseline2.mmObject(), LineItem7.mmObject(), Baseline3.mmObject(), LineItem4.mmObject(), CommercialDataSet2.mmObject(),
 						LineItem9.mmObject(), CommercialDataSet3.mmObject(), Baseline4.mmObject(), CommercialDataSet4.mmObject(), LineItem11.mmObject(), LineItem12.mmObject(), CardPaymentInvoice1.mmObject(), Baseline5.mmObject(),
 						CommercialDataSet5.mmObject(), LineItem13.mmObject(), LineItem15.mmObject(), TradeSettlement2.mmObject(), CardPaymentInvoice2.mmObject(), LineItem16.mmObject());

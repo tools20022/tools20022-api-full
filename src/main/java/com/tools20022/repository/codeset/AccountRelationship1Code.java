@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -93,7 +95,7 @@ public class AccountRelationship1Code {
 	 */
 	public static final MMCode mmBeneficiary = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+			registrationStatus = MMRegistrationStatus.OBSOLETE;
 			name = "Beneficiary";
 			definition = "Ultimate party that is entitled to either receive the benefits of the ownership of a financial instrument, or to be paid/credited as a result of a transfer.";
 			owner_lazy = () -> AccountRelationship1Code.mmObject();
@@ -126,7 +128,7 @@ public class AccountRelationship1Code {
 	 */
 	public static final MMCode mmPowerOfAttorney = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+			registrationStatus = MMRegistrationStatus.OBSOLETE;
 			name = "PowerOfAttorney";
 			definition = "Entity that was given the authority by another entity to act on its behalf.";
 			owner_lazy = () -> AccountRelationship1Code.mmObject();
@@ -159,7 +161,7 @@ public class AccountRelationship1Code {
 	 */
 	public static final MMCode mmLegalGuardian = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+			registrationStatus = MMRegistrationStatus.OBSOLETE;
 			name = "LegalGuardian";
 			definition = "Entity that has been appointed by a legal authority to act on behalf of a person judged to be incapacitated.";
 			owner_lazy = () -> AccountRelationship1Code.mmObject();
@@ -192,7 +194,7 @@ public class AccountRelationship1Code {
 	 */
 	public static final MMCode mmSuccessorOnDeath = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+			registrationStatus = MMRegistrationStatus.OBSOLETE;
 			name = "SuccessorOnDeath";
 			definition = "Deceased's estate, or successor, to whom the respective percentage of ownership will be transferred upon the death of one of the owners.";
 			owner_lazy = () -> AccountRelationship1Code.mmObject();
@@ -203,13 +205,12 @@ public class AccountRelationship1Code {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("BENF");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				name = "AccountRelationship1Code";
 				definition = "Specifies the role of a party with respect to an account.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AccountRelationship1Code.mmBeneficiary, com.tools20022.repository.codeset.AccountRelationship1Code.mmPowerOfAttorney,
-						com.tools20022.repository.codeset.AccountRelationship1Code.mmLegalGuardian, com.tools20022.repository.codeset.AccountRelationship1Code.mmSuccessorOnDeath);
+				code_lazy = () -> Arrays.asList(AccountRelationship1Code.mmBeneficiary, AccountRelationship1Code.mmPowerOfAttorney, AccountRelationship1Code.mmLegalGuardian, AccountRelationship1Code.mmSuccessorOnDeath);
 			}
 		});
 		return mmObject_lazy.get();

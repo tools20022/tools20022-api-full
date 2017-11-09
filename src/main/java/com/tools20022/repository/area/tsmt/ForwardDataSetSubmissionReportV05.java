@@ -20,6 +20,7 @@ package com.tools20022.repository.area.tsmt;
 import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.TradeServicesManagementLatestVersion;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.TradeServicesManagementISOLatestversion;
@@ -39,6 +40,9 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code tsmt.017.001.05}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.TradeServicesManagementLatestVersion
@@ -98,9 +102,6 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code tsmt.017.001.05}</li>
- * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -151,10 +152,10 @@ public class ForwardDataSetSubmissionReportV05 {
 	public static final MMMessageBuildingBlock mmReportIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "RptId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportIdentification";
 			definition = "Identifies the report. ";
-			previousVersion_lazy = () -> com.tools20022.repository.area.tsmt.ForwardDataSetSubmissionReportV04.mmReportIdentification;
+			previousVersion_lazy = () -> ForwardDataSetSubmissionReportV04.mmReportIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
@@ -195,10 +196,10 @@ public class ForwardDataSetSubmissionReportV05 {
 	public static final MMMessageBuildingBlock mmRelatedTransactionReferences = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "RltdTxRefs";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedTransactionReferences";
 			definition = "Identifies the transactions that this submission relates to and provides associated information.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.tsmt.ForwardDataSetSubmissionReportV04.mmRelatedTransactionReferences;
+			previousVersion_lazy = () -> ForwardDataSetSubmissionReportV04.mmRelatedTransactionReferences;
 			minOccurs = 1;
 			complexType_lazy = () -> DataSetSubmissionReferences4.mmObject();
 		}
@@ -238,10 +239,10 @@ public class ForwardDataSetSubmissionReportV05 {
 	public static final MMMessageBuildingBlock mmCommonSubmissionReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CmonSubmissnRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommonSubmissionReference";
 			definition = "This reference must be used for all data sets belonging to the same submission group.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.tsmt.ForwardDataSetSubmissionReportV04.mmCommonSubmissionReference;
+			previousVersion_lazy = () -> ForwardDataSetSubmissionReportV04.mmCommonSubmissionReference;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> SimpleIdentificationInformation.mmObject();
@@ -282,10 +283,10 @@ public class ForwardDataSetSubmissionReportV05 {
 	public static final MMMessageBuildingBlock mmSubmitter = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Submitr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Submitter";
 			definition = "The financial institution that has submitted the data sets to the matching engine.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.tsmt.ForwardDataSetSubmissionReportV04.mmSubmitter;
+			previousVersion_lazy = () -> ForwardDataSetSubmissionReportV04.mmSubmitter;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> BICIdentification1.mmObject();
@@ -325,10 +326,10 @@ public class ForwardDataSetSubmissionReportV05 {
 	public static final MMMessageBuildingBlock mmBuyerBank = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "BuyrBk";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BuyerBank";
 			definition = "The financial institution of the buyer, uniquely identified by its BIC. ";
-			previousVersion_lazy = () -> com.tools20022.repository.area.tsmt.ForwardDataSetSubmissionReportV04.mmBuyerBank;
+			previousVersion_lazy = () -> ForwardDataSetSubmissionReportV04.mmBuyerBank;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> BICIdentification1.mmObject();
@@ -368,10 +369,10 @@ public class ForwardDataSetSubmissionReportV05 {
 	public static final MMMessageBuildingBlock mmSellerBank = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SellrBk";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SellerBank";
 			definition = "The financial institution of the seller, uniquely identified by its BIC. ";
-			previousVersion_lazy = () -> com.tools20022.repository.area.tsmt.ForwardDataSetSubmissionReportV04.mmSellerBank;
+			previousVersion_lazy = () -> ForwardDataSetSubmissionReportV04.mmSellerBank;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> BICIdentification1.mmObject();
@@ -412,10 +413,10 @@ public class ForwardDataSetSubmissionReportV05 {
 	public static final MMMessageBuildingBlock mmCommercialDataSet = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "ComrclDataSet";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommercialDataSet";
 			definition = "Commercial information that has been submitted to the matching application by the other party.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.tsmt.ForwardDataSetSubmissionReportV04.mmCommercialDataSet;
+			previousVersion_lazy = () -> ForwardDataSetSubmissionReportV04.mmCommercialDataSet;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> CommercialDataSet5.mmObject();
@@ -456,10 +457,10 @@ public class ForwardDataSetSubmissionReportV05 {
 	public static final MMMessageBuildingBlock mmTransportDataSet = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "TrnsprtDataSet";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransportDataSet";
 			definition = "Transport information that has been submitted to the matching application by the other party.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.tsmt.ForwardDataSetSubmissionReportV04.mmTransportDataSet;
+			previousVersion_lazy = () -> ForwardDataSetSubmissionReportV04.mmTransportDataSet;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> TransportDataSet5.mmObject();
@@ -500,10 +501,10 @@ public class ForwardDataSetSubmissionReportV05 {
 	public static final MMMessageBuildingBlock mmInsuranceDataSet = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "InsrncDataSet";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InsuranceDataSet";
 			definition = "Insurance information that has been submitted to the matching application by the other party.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.tsmt.ForwardDataSetSubmissionReportV04.mmInsuranceDataSet;
+			previousVersion_lazy = () -> ForwardDataSetSubmissionReportV04.mmInsuranceDataSet;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> InsuranceDataSet1.mmObject();
@@ -544,10 +545,10 @@ public class ForwardDataSetSubmissionReportV05 {
 	public static final MMMessageBuildingBlock mmCertificateDataSet = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CertDataSet";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CertificateDataSet";
 			definition = "Certificate information that has been submitted to the matching application by the other party.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.tsmt.ForwardDataSetSubmissionReportV04.mmCertificateDataSet;
+			previousVersion_lazy = () -> ForwardDataSetSubmissionReportV04.mmCertificateDataSet;
 			minOccurs = 0;
 			complexType_lazy = () -> CertificateDataSet2.mmObject();
 		}
@@ -587,10 +588,10 @@ public class ForwardDataSetSubmissionReportV05 {
 	public static final MMMessageBuildingBlock mmOtherCertificateDataSet = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "OthrCertDataSet";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherCertificateDataSet";
 			definition = "Other certificate information that has been submitted to the matching application by the other party.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.tsmt.ForwardDataSetSubmissionReportV04.mmOtherCertificateDataSet;
+			previousVersion_lazy = () -> ForwardDataSetSubmissionReportV04.mmOtherCertificateDataSet;
 			minOccurs = 0;
 			complexType_lazy = () -> OtherCertificateDataSet2.mmObject();
 		}
@@ -627,10 +628,10 @@ public class ForwardDataSetSubmissionReportV05 {
 	public static final MMMessageBuildingBlock mmRequestForAction = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "ReqForActn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestForAction";
 			definition = "Next processing step required.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.tsmt.ForwardDataSetSubmissionReportV04.mmRequestForAction;
+			previousVersion_lazy = () -> ForwardDataSetSubmissionReportV04.mmRequestForAction;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> PendingActivity2.mmObject();
@@ -640,7 +641,7 @@ public class ForwardDataSetSubmissionReportV05 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ForwardDataSetSubmissionReportV05";
 				definition = "Scope\r\nThe ForwardDataSetSubmissionReport message is sent by the matching application to the counterparty(ies) of the submitter of data sets.\r\nThis message is used to pass on information related to the purchasing agreement(s) covered by the transaction(s) referred to in the message.\r\nUsage\r\nThe ForwardDataSetSubmission message can be sent by the matching application to forward the details of a DataSetSubmission message that it has obtained.";
 				previousVersion_lazy = () -> ForwardDataSetSubmissionReportV04.mmObject();
@@ -648,13 +649,10 @@ public class ForwardDataSetSubmissionReportV05 {
 				rootElement = "Document";
 				xmlTag = "FwdDataSetSubmissnRpt";
 				businessArea_lazy = () -> TradeServicesManagementLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.ForwardDataSetSubmissionReportV05.mmReportIdentification,
-						com.tools20022.repository.area.tsmt.ForwardDataSetSubmissionReportV05.mmRelatedTransactionReferences, com.tools20022.repository.area.tsmt.ForwardDataSetSubmissionReportV05.mmCommonSubmissionReference,
-						com.tools20022.repository.area.tsmt.ForwardDataSetSubmissionReportV05.mmSubmitter, com.tools20022.repository.area.tsmt.ForwardDataSetSubmissionReportV05.mmBuyerBank,
-						com.tools20022.repository.area.tsmt.ForwardDataSetSubmissionReportV05.mmSellerBank, com.tools20022.repository.area.tsmt.ForwardDataSetSubmissionReportV05.mmCommercialDataSet,
-						com.tools20022.repository.area.tsmt.ForwardDataSetSubmissionReportV05.mmTransportDataSet, com.tools20022.repository.area.tsmt.ForwardDataSetSubmissionReportV05.mmInsuranceDataSet,
-						com.tools20022.repository.area.tsmt.ForwardDataSetSubmissionReportV05.mmCertificateDataSet, com.tools20022.repository.area.tsmt.ForwardDataSetSubmissionReportV05.mmOtherCertificateDataSet,
-						com.tools20022.repository.area.tsmt.ForwardDataSetSubmissionReportV05.mmRequestForAction);
+				messageBuildingBlock_lazy = () -> Arrays.asList(ForwardDataSetSubmissionReportV05.mmReportIdentification, ForwardDataSetSubmissionReportV05.mmRelatedTransactionReferences,
+						ForwardDataSetSubmissionReportV05.mmCommonSubmissionReference, ForwardDataSetSubmissionReportV05.mmSubmitter, ForwardDataSetSubmissionReportV05.mmBuyerBank, ForwardDataSetSubmissionReportV05.mmSellerBank,
+						ForwardDataSetSubmissionReportV05.mmCommercialDataSet, ForwardDataSetSubmissionReportV05.mmTransportDataSet, ForwardDataSetSubmissionReportV05.mmInsuranceDataSet,
+						ForwardDataSetSubmissionReportV05.mmCertificateDataSet, ForwardDataSetSubmissionReportV05.mmOtherCertificateDataSet, ForwardDataSetSubmissionReportV05.mmRequestForAction);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "tsmt";

@@ -20,9 +20,13 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.OrderStatus3Choice;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.entity.Order;
+import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.entity.SecuritiesOrderStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -117,14 +121,14 @@ public class OrderStatusAndReason10 {
 	 */
 	public static final MMMessageAttribute mmMasterReference = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Order.mmMasterIdentification;
+			businessElementTrace_lazy = () -> Order.mmMasterIdentification;
 			componentContext_lazy = () -> OrderStatusAndReason10.mmObject();
 			isDerived = false;
 			xmlTag = "MstrRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MasterReference";
 			definition = "Reference assigned to a set of orders or trades in order to link them together.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.OrderStatusAndReason7.mmMasterReference;
+			previousVersion_lazy = () -> OrderStatusAndReason7.mmMasterReference;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -167,11 +171,11 @@ public class OrderStatusAndReason10 {
 	 */
 	public static final MMMessageAssociationEnd mmOrderStatus = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrderStatus.mmOrderStatus;
+			businessElementTrace_lazy = () -> SecuritiesOrderStatus.mmOrderStatus;
 			componentContext_lazy = () -> OrderStatusAndReason10.mmObject();
 			isDerived = false;
 			xmlTag = "OrdrSts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrderStatus";
 			definition = "Status of a 'bulk' of orders. Can be used if all the individual orders conveyed in a bulk or multiple order message have the same status.";
 			maxOccurs = 1;
@@ -219,14 +223,14 @@ public class OrderStatusAndReason10 {
 	 */
 	public static final MMMessageAssociationEnd mmStatusInitiator = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> OrderStatusAndReason10.mmObject();
 			isDerived = false;
 			xmlTag = "StsInitr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusInitiator";
 			definition = "Party that initiates the status of the order.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.OrderStatusAndReason7.mmStatusInitiator;
+			previousVersion_lazy = () -> OrderStatusAndReason7.mmStatusInitiator;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -237,11 +241,10 @@ public class OrderStatusAndReason10 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OrderStatusAndReason10.mmMasterReference, com.tools20022.repository.msg.OrderStatusAndReason10.mmOrderStatus,
-						com.tools20022.repository.msg.OrderStatusAndReason10.mmStatusInitiator);
+				messageElement_lazy = () -> Arrays.asList(OrderStatusAndReason10.mmMasterReference, OrderStatusAndReason10.mmOrderStatus, OrderStatusAndReason10.mmStatusInitiator);
 				trace_lazy = () -> SecuritiesOrderStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OrderStatusAndReason10";
 				definition = "Status report of a bulk or multiple or switch order that was previously received.";
 				previousVersion_lazy = () -> OrderStatusAndReason7.mmObject();

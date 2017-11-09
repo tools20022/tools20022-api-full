@@ -20,14 +20,14 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.PartyIdentification4Choice;
 import com.tools20022.repository.codeset.CountryCode;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.Max140Text;
 import com.tools20022.repository.datatype.Max35Text;
-import com.tools20022.repository.entity.ElectronicAddress;
-import com.tools20022.repository.entity.Organisation;
-import com.tools20022.repository.entity.PostalAddress;
+import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -156,14 +156,14 @@ public class Organisation13 {
 	 */
 	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyName.mmName;
+			businessElementTrace_lazy = () -> PartyName.mmName;
 			componentContext_lazy = () -> Organisation13.mmObject();
 			isDerived = false;
 			xmlTag = "Nm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Name";
 			definition = "Name by which a party is known and which is usually used to identify that party.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Organisation15.mmName, com.tools20022.repository.msg.Organisation16.mmName);
+			nextVersions_lazy = () -> Arrays.asList(Organisation15.mmName, Organisation16.mmName);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max140Text.mmObject();
@@ -218,14 +218,14 @@ public class Organisation13 {
 	 */
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> Organisation13.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Unique and unambiguous identifier for an organisation that is allocated by an institution, eg, Dun & Bradstreet Identification.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Organisation15.mmIdentification, com.tools20022.repository.msg.Organisation16.mmIdentification);
+			nextVersions_lazy = () -> Arrays.asList(Organisation15.mmIdentification, Organisation16.mmIdentification);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification4Choice.mmObject();
@@ -274,14 +274,14 @@ public class Organisation13 {
 	 */
 	public static final MMMessageAttribute mmPurpose = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Organisation.mmPurpose;
+			businessElementTrace_lazy = () -> Organisation.mmPurpose;
 			componentContext_lazy = () -> Organisation13.mmObject();
 			isDerived = false;
 			xmlTag = "Purp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Purpose";
 			definition = "Purpose of the organisation, eg, charity.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Organisation15.mmPurpose, com.tools20022.repository.msg.Organisation16.mmPurpose);
+			nextVersions_lazy = () -> Arrays.asList(Organisation15.mmPurpose, Organisation16.mmPurpose);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -332,14 +332,14 @@ public class Organisation13 {
 	 */
 	public static final MMMessageAttribute mmTaxationCountry = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.mmCountry;
+			businessElementTrace_lazy = () -> Tax.mmCountry;
 			componentContext_lazy = () -> Organisation13.mmObject();
 			isDerived = false;
 			xmlTag = "TaxtnCtry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxationCountry";
 			definition = "Country of taxation of an organisation.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Organisation15.mmTaxationCountry, com.tools20022.repository.msg.Organisation16.mmTaxationCountry);
+			nextVersions_lazy = () -> Arrays.asList(Organisation15.mmTaxationCountry, Organisation16.mmTaxationCountry);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CountryCode.mmObject();
@@ -390,14 +390,14 @@ public class Organisation13 {
 	 */
 	public static final MMMessageAttribute mmRegistrationCountry = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Country.mmCode;
+			businessElementTrace_lazy = () -> Country.mmCode;
 			componentContext_lazy = () -> Organisation13.mmObject();
 			isDerived = false;
 			xmlTag = "RegnCtry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RegistrationCountry";
 			definition = "Country in which the organisation is registered.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Organisation15.mmRegistrationCountry, com.tools20022.repository.msg.Organisation16.mmRegistrationCountry);
+			nextVersions_lazy = () -> Arrays.asList(Organisation15.mmRegistrationCountry, Organisation16.mmRegistrationCountry);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CountryCode.mmObject();
@@ -449,14 +449,14 @@ public class Organisation13 {
 	 */
 	public static final MMMessageAttribute mmRegistrationDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Organisation.mmRegistrationDate;
+			businessElementTrace_lazy = () -> Organisation.mmRegistrationDate;
 			componentContext_lazy = () -> Organisation13.mmObject();
 			isDerived = false;
 			xmlTag = "RegnDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RegistrationDate";
 			definition = "Date and time at which a given organisation was officially registered.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Organisation15.mmRegistrationDate, com.tools20022.repository.msg.Organisation16.mmRegistrationDate);
+			nextVersions_lazy = () -> Arrays.asList(Organisation15.mmRegistrationDate, Organisation16.mmRegistrationDate);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
@@ -507,14 +507,14 @@ public class Organisation13 {
 	 */
 	public static final MMMessageAttribute mmTaxIdentificationNumber = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.mmTaxIdentificationNumber;
+			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmTaxIdentificationNumber;
 			componentContext_lazy = () -> Organisation13.mmObject();
 			isDerived = false;
 			xmlTag = "TaxIdNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxIdentificationNumber";
 			definition = "Number assigned by a tax authority to an entity.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Organisation15.mmTaxIdentificationNumber, com.tools20022.repository.msg.Organisation16.mmTaxIdentification);
+			nextVersions_lazy = () -> Arrays.asList(Organisation15.mmTaxIdentificationNumber, Organisation16.mmTaxIdentification);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -566,14 +566,14 @@ public class Organisation13 {
 	 */
 	public static final MMMessageAttribute mmNationalRegistrationNumber = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.mmNationalRegistrationNumber;
+			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmNationalRegistrationNumber;
 			componentContext_lazy = () -> Organisation13.mmObject();
 			isDerived = false;
 			xmlTag = "NtlRegnNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NationalRegistrationNumber";
 			definition = "Number assigned by a national registration authority to an entity.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Organisation15.mmNationalRegistrationNumber, com.tools20022.repository.msg.Organisation16.mmNationalRegistrationNumber);
+			nextVersions_lazy = () -> Arrays.asList(Organisation15.mmNationalRegistrationNumber, Organisation16.mmNationalRegistrationNumber);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -630,10 +630,10 @@ public class Organisation13 {
 			componentContext_lazy = () -> Organisation13.mmObject();
 			isDerived = false;
 			xmlTag = "PstlAdr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PostalAddress";
 			definition = "Information that locates and identifies a specific address, as defined by postal services.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Organisation15.mmModifiedPostalAddress, com.tools20022.repository.msg.Organisation16.mmPostalAddress);
+			nextVersions_lazy = () -> Arrays.asList(Organisation15.mmModifiedPostalAddress, Organisation16.mmPostalAddress);
 			maxOccurs = 5;
 			minOccurs = 1;
 			isComposite = true;
@@ -690,10 +690,10 @@ public class Organisation13 {
 			componentContext_lazy = () -> Organisation13.mmObject();
 			isDerived = false;
 			xmlTag = "PmryComAdr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PrimaryCommunicationAddress";
 			definition = "Communication device number or electronic address used for communication.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Organisation15.mmPrimaryCommunicationAddress, com.tools20022.repository.msg.Organisation16.mmPrimaryCommunicationAddress);
+			nextVersions_lazy = () -> Arrays.asList(Organisation15.mmPrimaryCommunicationAddress, Organisation16.mmPrimaryCommunicationAddress);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -750,10 +750,10 @@ public class Organisation13 {
 			componentContext_lazy = () -> Organisation13.mmObject();
 			isDerived = false;
 			xmlTag = "ScndryComAdr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecondaryCommunicationAddress";
 			definition = "Communication device number or electronic address used for communication.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Organisation15.mmSecondaryCommunicationAddress, com.tools20022.repository.msg.Organisation16.mmSecondaryCommunicationAddress);
+			nextVersions_lazy = () -> Arrays.asList(Organisation15.mmSecondaryCommunicationAddress, Organisation16.mmSecondaryCommunicationAddress);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -807,10 +807,10 @@ public class Organisation13 {
 			componentContext_lazy = () -> Organisation13.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlRgltryInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalRegulatoryInformation";
 			definition = "Additional regulatory information about the investor that is required in some markets to support anti-money laundering laws.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Organisation15.mmAdditionalRegulatoryInformation, com.tools20022.repository.msg.Organisation16.mmAdditionalRegulatoryInformation);
+			nextVersions_lazy = () -> Arrays.asList(Organisation15.mmAdditionalRegulatoryInformation, Organisation16.mmAdditionalRegulatoryInformation);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.RegulatoryInformation1.mmObject();
@@ -820,14 +820,12 @@ public class Organisation13 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Organisation13.mmName, com.tools20022.repository.msg.Organisation13.mmIdentification, com.tools20022.repository.msg.Organisation13.mmPurpose,
-						com.tools20022.repository.msg.Organisation13.mmTaxationCountry, com.tools20022.repository.msg.Organisation13.mmRegistrationCountry, com.tools20022.repository.msg.Organisation13.mmRegistrationDate,
-						com.tools20022.repository.msg.Organisation13.mmTaxIdentificationNumber, com.tools20022.repository.msg.Organisation13.mmNationalRegistrationNumber, com.tools20022.repository.msg.Organisation13.mmPostalAddress,
-						com.tools20022.repository.msg.Organisation13.mmPrimaryCommunicationAddress, com.tools20022.repository.msg.Organisation13.mmSecondaryCommunicationAddress,
-						com.tools20022.repository.msg.Organisation13.mmAdditionalRegulatoryInformation);
+				messageElement_lazy = () -> Arrays.asList(Organisation13.mmName, Organisation13.mmIdentification, Organisation13.mmPurpose, Organisation13.mmTaxationCountry, Organisation13.mmRegistrationCountry,
+						Organisation13.mmRegistrationDate, Organisation13.mmTaxIdentificationNumber, Organisation13.mmNationalRegistrationNumber, Organisation13.mmPostalAddress, Organisation13.mmPrimaryCommunicationAddress,
+						Organisation13.mmSecondaryCommunicationAddress, Organisation13.mmAdditionalRegulatoryInformation);
 				trace_lazy = () -> Organisation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Organisation13";
 				definition = "Organised structure that is set up for a particular purpose, eg, a business, government body, department, charity, or financial institution.";
 				nextVersions_lazy = () -> Arrays.asList(Organisation15.mmObject(), Organisation16.mmObject());

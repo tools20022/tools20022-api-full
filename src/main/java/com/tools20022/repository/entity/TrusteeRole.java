@@ -18,7 +18,14 @@
 package com.tools20022.repository.entity;
 
 import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.choice.*;
 import com.tools20022.repository.entity.InvestmentAccountPartyRole;
+import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.AccountParties2;
+import com.tools20022.repository.msg.AccountParties3;
+import com.tools20022.repository.msg.AccountParties4;
+import com.tools20022.repository.msg.AccountParties5;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -108,16 +115,13 @@ public class TrusteeRole extends InvestmentAccountPartyRole {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TrusteeRole";
 				definition = "Legal owner of the property. However, the beneficiary has the equitable or beneficial ownership. The trustee must ensure all terms and conditions of the security are adhered to.";
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountParties2.mmTrustee, com.tools20022.repository.msg.AccountParties5.mmTrustee,
-						com.tools20022.repository.choice.AccountParties1Choice.mmTrustee, com.tools20022.repository.msg.AccountParties3.mmTrustee, com.tools20022.repository.msg.AccountParties4.mmTrustee,
-						com.tools20022.repository.choice.AccountParties2Choice.mmTrustee, com.tools20022.repository.choice.AccountParties3Choice.mmTrustee, com.tools20022.repository.choice.AccountParties4Choice.mmTrustee,
-						com.tools20022.repository.choice.AccountParties7Choice.mmTrustee, com.tools20022.repository.choice.AccountParties6Choice.mmTrustee, com.tools20022.repository.choice.AccountParties5Choice.mmTrustee,
-						com.tools20022.repository.choice.AccountParties9Choice.mmTrustee, com.tools20022.repository.choice.AccountParties8Choice.mmTrustee, com.tools20022.repository.choice.AccountParties11Choice.mmTrustee,
-						com.tools20022.repository.choice.AccountParties10Choice.mmTrustee);
+				derivationElement_lazy = () -> Arrays.asList(AccountParties2.mmTrustee, AccountParties5.mmTrustee, AccountParties1Choice.mmTrustee, AccountParties3.mmTrustee, AccountParties4.mmTrustee, AccountParties2Choice.mmTrustee,
+						AccountParties3Choice.mmTrustee, AccountParties4Choice.mmTrustee, AccountParties7Choice.mmTrustee, AccountParties6Choice.mmTrustee, AccountParties5Choice.mmTrustee, AccountParties9Choice.mmTrustee,
+						AccountParties8Choice.mmTrustee, AccountParties11Choice.mmTrustee, AccountParties10Choice.mmTrustee);
 				superType_lazy = () -> InvestmentAccountPartyRole.mmObject();
 			}
 		});

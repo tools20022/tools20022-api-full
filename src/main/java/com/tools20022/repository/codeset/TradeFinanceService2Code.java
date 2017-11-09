@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.TradeFinanceServiceCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -86,7 +88,7 @@ public class TradeFinanceService2Code extends TradeFinanceServiceCode {
 	 */
 	public static final MMCode mmLevel1Services = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Level1Services";
 			owner_lazy = () -> TradeFinanceService2Code.mmObject();
 		}
@@ -109,7 +111,7 @@ public class TradeFinanceService2Code extends TradeFinanceServiceCode {
 	 */
 	public static final MMCode mmLevel2Services = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Level2Services";
 			owner_lazy = () -> TradeFinanceService2Code.mmObject();
 		}
@@ -132,7 +134,7 @@ public class TradeFinanceService2Code extends TradeFinanceServiceCode {
 	 */
 	public static final MMCode mmLevel3Services = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Level3Services";
 			owner_lazy = () -> TradeFinanceService2Code.mmObject();
 		}
@@ -141,13 +143,12 @@ public class TradeFinanceService2Code extends TradeFinanceServiceCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("LEV1");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TradeFinanceService2Code";
 				definition = "Specifies the level of service offered.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TradeFinanceService2Code.mmLevel1Services, com.tools20022.repository.codeset.TradeFinanceService2Code.mmLevel2Services,
-						com.tools20022.repository.codeset.TradeFinanceService2Code.mmLevel3Services);
+				code_lazy = () -> Arrays.asList(TradeFinanceService2Code.mmLevel1Services, TradeFinanceService2Code.mmLevel2Services, TradeFinanceService2Code.mmLevel3Services);
 				trace_lazy = () -> TradeFinanceServiceCode.mmObject();
 			}
 		});

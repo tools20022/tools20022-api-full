@@ -20,8 +20,11 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ActiveOrHistoricCurrencyAndAmount;
+import com.tools20022.repository.entity.Adjustment;
 import com.tools20022.repository.entity.Charges;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -102,11 +105,11 @@ public class Charges4 {
 	 */
 	public static final MMMessageAttribute mmTotalChargesAndTaxAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Adjustment.mmAmount;
+			businessElementTrace_lazy = () -> Adjustment.mmAmount;
 			componentContext_lazy = () -> Charges4.mmObject();
 			isDerived = false;
 			xmlTag = "TtlChrgsAndTaxAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalChargesAndTaxAmount";
 			definition = "Total of all charges and taxes applied to the entry.";
 			maxOccurs = 1;
@@ -150,7 +153,7 @@ public class Charges4 {
 			componentContext_lazy = () -> Charges4.mmObject();
 			isDerived = false;
 			xmlTag = "Rcrd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Record";
 			definition = "Provides details of the individual charges record.";
 			minOccurs = 0;
@@ -162,10 +165,10 @@ public class Charges4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Charges4.mmTotalChargesAndTaxAmount, com.tools20022.repository.msg.Charges4.mmRecord);
+				messageElement_lazy = () -> Arrays.asList(Charges4.mmTotalChargesAndTaxAmount, Charges4.mmRecord);
 				trace_lazy = () -> Charges.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Charges4";
 				definition = "Provides further details on the charges related to the payment transaction.";
 				previousVersion_lazy = () -> Charges3.mmObject();

@@ -19,8 +19,10 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.SignatureOriginType1Code;
 import com.tools20022.repository.datatype.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -120,10 +122,10 @@ public class IsabelSignatureRecord1 {
 			componentContext_lazy = () -> IsabelSignatureRecord1.mmObject();
 			isDerived = false;
 			xmlTag = "SgntrTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SignatureType";
 			definition = "Type of the signature.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IsabelSignatureRecord2.mmSignatureType);
+			nextVersions_lazy = () -> Arrays.asList(IsabelSignatureRecord2.mmSignatureType);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> SignatureOriginType1Code.mmObject();
@@ -171,10 +173,10 @@ public class IsabelSignatureRecord1 {
 			componentContext_lazy = () -> IsabelSignatureRecord1.mmObject();
 			isDerived = false;
 			xmlTag = "SrlNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SerialNumber";
 			definition = "Serial number of the certificate.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IsabelSignatureRecord2.mmSerialNumber);
+			nextVersions_lazy = () -> Arrays.asList(IsabelSignatureRecord2.mmSerialNumber);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max20AlphaNumericText.mmObject();
@@ -224,10 +226,10 @@ public class IsabelSignatureRecord1 {
 			componentContext_lazy = () -> IsabelSignatureRecord1.mmObject();
 			isDerived = false;
 			xmlTag = "Cert";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Certificate";
 			definition = "Electronic document which uses a digital signature to bind together a public key with an identity.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IsabelSignatureRecord2.mmCertificate);
+			nextVersions_lazy = () -> Arrays.asList(IsabelSignatureRecord2.mmCertificate);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max4kBinary.mmObject();
@@ -277,10 +279,10 @@ public class IsabelSignatureRecord1 {
 			componentContext_lazy = () -> IsabelSignatureRecord1.mmObject();
 			isDerived = false;
 			xmlTag = "Sgntr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Signature";
 			definition = "Mathematical scheme for demonstrating the authenticity of a digital message or document.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IsabelSignatureRecord2.mmSignature);
+			nextVersions_lazy = () -> Arrays.asList(IsabelSignatureRecord2.mmSignature);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max1kBinary.mmObject();
@@ -330,10 +332,10 @@ public class IsabelSignatureRecord1 {
 			componentContext_lazy = () -> IsabelSignatureRecord1.mmObject();
 			isDerived = false;
 			xmlTag = "Algo";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Algorithm";
 			definition = "Effective method for calculating the signature using a finite sequence of instructions.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IsabelSignatureRecord2.mmAlgorithm);
+			nextVersions_lazy = () -> Arrays.asList(IsabelSignatureRecord2.mmAlgorithm);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max105Text.mmObject();
@@ -382,10 +384,10 @@ public class IsabelSignatureRecord1 {
 			componentContext_lazy = () -> IsabelSignatureRecord1.mmObject();
 			isDerived = false;
 			xmlTag = "SgnrId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SignerIdentification";
 			definition = "Unique identification of the signer that issued the signature.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IsabelSignatureRecord2.mmSignerIdentification);
+			nextVersions_lazy = () -> Arrays.asList(IsabelSignatureRecord2.mmSignerIdentification);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max13AlphaNumericText.mmObject();
@@ -395,11 +397,10 @@ public class IsabelSignatureRecord1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IsabelSignatureRecord1.mmSignatureType, com.tools20022.repository.msg.IsabelSignatureRecord1.mmSerialNumber,
-						com.tools20022.repository.msg.IsabelSignatureRecord1.mmCertificate, com.tools20022.repository.msg.IsabelSignatureRecord1.mmSignature, com.tools20022.repository.msg.IsabelSignatureRecord1.mmAlgorithm,
-						com.tools20022.repository.msg.IsabelSignatureRecord1.mmSignerIdentification);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(IsabelSignatureRecord1.mmSignatureType, IsabelSignatureRecord1.mmSerialNumber, IsabelSignatureRecord1.mmCertificate, IsabelSignatureRecord1.mmSignature,
+						IsabelSignatureRecord1.mmAlgorithm, IsabelSignatureRecord1.mmSignerIdentification);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "IsabelSignatureRecord1";
 				definition = "Specifies the individual record of the file signature.";
 				nextVersions_lazy = () -> Arrays.asList(IsabelSignatureRecord2.mmObject());

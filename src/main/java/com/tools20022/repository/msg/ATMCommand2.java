@@ -20,10 +20,12 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ATMCommand2Code;
 import com.tools20022.repository.codeset.TerminalManagementActionResult2Code;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Max140Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -128,11 +130,11 @@ public class ATMCommand2 {
 			componentContext_lazy = () -> ATMCommand2.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Type of command to be performed by the ATM.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMCommand3.mmType, com.tools20022.repository.msg.ATMCommand5.mmType);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMCommand1.mmType;
+			nextVersions_lazy = () -> Arrays.asList(ATMCommand3.mmType, ATMCommand5.mmType);
+			previousVersion_lazy = () -> ATMCommand1.mmType;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ATMCommand2Code.mmObject();
@@ -184,11 +186,11 @@ public class ATMCommand2 {
 			componentContext_lazy = () -> ATMCommand2.mmObject();
 			isDerived = false;
 			xmlTag = "ReqrdDtTm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequiredDateTime";
 			definition = "Date time on which the command has been requested to be performed.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMCommand5.mmRequiredDateTime);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMCommand1.mmDateTime;
+			nextVersions_lazy = () -> Arrays.asList(ATMCommand5.mmRequiredDateTime);
+			previousVersion_lazy = () -> ATMCommand1.mmDateTime;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
@@ -234,10 +236,10 @@ public class ATMCommand2 {
 			componentContext_lazy = () -> ATMCommand2.mmObject();
 			isDerived = false;
 			xmlTag = "PrcdDtTm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProcessedDateTime";
 			definition = "Date time on which the command has been performed.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMCommand5.mmProcessedDateTime);
+			nextVersions_lazy = () -> Arrays.asList(ATMCommand5.mmProcessedDateTime);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
@@ -291,11 +293,11 @@ public class ATMCommand2 {
 			componentContext_lazy = () -> ATMCommand2.mmObject();
 			isDerived = false;
 			xmlTag = "CmdId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommandIdentification";
 			definition = "Identification of the entity issuing the command.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMCommand3.mmCommandIdentification, com.tools20022.repository.msg.ATMCommand5.mmCommandIdentification);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMCommand1.mmCommandIdentification;
+			nextVersions_lazy = () -> Arrays.asList(ATMCommand3.mmCommandIdentification, ATMCommand5.mmCommandIdentification);
+			previousVersion_lazy = () -> ATMCommand1.mmCommandIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -342,10 +344,10 @@ public class ATMCommand2 {
 			componentContext_lazy = () -> ATMCommand2.mmObject();
 			isDerived = false;
 			xmlTag = "Rslt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Result";
 			definition = "Final result of the processed command at the ATM.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMCommand5.mmResult);
+			nextVersions_lazy = () -> Arrays.asList(ATMCommand5.mmResult);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TerminalManagementActionResult2Code.mmObject();
@@ -394,10 +396,10 @@ public class ATMCommand2 {
 			componentContext_lazy = () -> ATMCommand2.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlErrInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalErrorInformation";
 			definition = "Additional information on the failure to be logged for further examination.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMCommand5.mmAdditionalErrorInformation);
+			nextVersions_lazy = () -> Arrays.asList(ATMCommand5.mmAdditionalErrorInformation);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
@@ -407,10 +409,10 @@ public class ATMCommand2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMCommand2.mmType, com.tools20022.repository.msg.ATMCommand2.mmRequiredDateTime, com.tools20022.repository.msg.ATMCommand2.mmProcessedDateTime,
-						com.tools20022.repository.msg.ATMCommand2.mmCommandIdentification, com.tools20022.repository.msg.ATMCommand2.mmResult, com.tools20022.repository.msg.ATMCommand2.mmAdditionalErrorInformation);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(ATMCommand2.mmType, ATMCommand2.mmRequiredDateTime, ATMCommand2.mmProcessedDateTime, ATMCommand2.mmCommandIdentification, ATMCommand2.mmResult,
+						ATMCommand2.mmAdditionalErrorInformation);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ATMCommand2";
 				definition = "Result of a maintenance command performed by the ATM.";
 				nextVersions_lazy = () -> Arrays.asList(ATMCommand3.mmObject(), ATMCommand5.mmObject());

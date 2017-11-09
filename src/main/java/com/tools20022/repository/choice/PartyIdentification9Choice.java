@@ -19,8 +19,12 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.seev.*;
 import com.tools20022.repository.datatype.AnyBICIdentifier;
+import com.tools20022.repository.entity.OrganisationIdentification;
 import com.tools20022.repository.entity.PartyIdentificationInformation;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification1;
 import com.tools20022.repository.msg.NameAndAddress5;
 import java.text.DateFormat;
@@ -194,11 +198,11 @@ public class PartyIdentification9Choice {
 	 */
 	public static final MMMessageAttribute mmBICOrBEI = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.mmAnyBIC;
+			businessElementTrace_lazy = () -> OrganisationIdentification.mmAnyBIC;
 			componentContext_lazy = () -> PartyIdentification9Choice.mmObject();
 			isDerived = false;
 			xmlTag = "BICOrBEI";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BICOrBEI";
 			definition = "Code allocated to a financial or non-financial institution by the ISO 9362 Registration Authority, as described in ISO 9362 \"Banking - Banking telecommunication messages - Business identifier code (BIC)\".";
 			maxOccurs = 1;
@@ -245,11 +249,11 @@ public class PartyIdentification9Choice {
 	 */
 	public static final MMMessageAttribute mmProprietaryIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.mmOtherIdentification;
+			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmOtherIdentification;
 			componentContext_lazy = () -> PartyIdentification9Choice.mmObject();
 			isDerived = false;
 			xmlTag = "PrtryId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProprietaryIdentification";
 			definition = "Unique and unambiguous identifier, as assigned to a financial institution using a proprietary identification scheme.";
 			maxOccurs = 1;
@@ -299,7 +303,7 @@ public class PartyIdentification9Choice {
 			componentContext_lazy = () -> PartyIdentification9Choice.mmObject();
 			isDerived = false;
 			xmlTag = "NmAndAdr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NameAndAddress";
 			definition = "Name by which a party is known and which is usually used to identify that party.";
 			maxOccurs = 1;
@@ -311,24 +315,17 @@ public class PartyIdentification9Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PartyIdentification9Choice.mmBICOrBEI, com.tools20022.repository.choice.PartyIdentification9Choice.mmProprietaryIdentification,
-						com.tools20022.repository.choice.PartyIdentification9Choice.mmNameAndAddress);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.MeetingNotificationV02.mmNotifyingParty, com.tools20022.repository.area.seev.MeetingNotificationV02.mmIssuer,
-						com.tools20022.repository.area.seev.MeetingNotificationV03.mmNotifyingParty, com.tools20022.repository.area.seev.MeetingNotificationV04.mmNotifyingParty,
-						com.tools20022.repository.area.seev.MeetingCancellationV02.mmNotifyingParty, com.tools20022.repository.area.seev.MeetingCancellationV03.mmNotifyingParty,
-						com.tools20022.repository.area.seev.MeetingCancellationV04.mmNotifyingParty, com.tools20022.repository.area.seev.MeetingEntitlementNotificationV02.mmNotifyingParty,
-						com.tools20022.repository.area.seev.MeetingEntitlementNotificationV03.mmNotifyingParty, com.tools20022.repository.area.seev.MeetingEntitlementNotificationV04.mmNotifyingParty,
-						com.tools20022.repository.area.seev.MeetingInstructionV02.mmInstructingParty, com.tools20022.repository.area.seev.MeetingInstructionV03.mmInstructingParty,
-						com.tools20022.repository.area.seev.MeetingInstructionV04.mmInstructingParty, com.tools20022.repository.area.seev.MeetingInstructionCancellationRequestV02.mmRequestingParty,
-						com.tools20022.repository.area.seev.MeetingInstructionCancellationRequestV03.mmRequestingParty, com.tools20022.repository.area.seev.MeetingInstructionCancellationRequestV04.mmRequestingParty,
-						com.tools20022.repository.area.seev.MeetingInstructionStatusV02.mmReportingParty, com.tools20022.repository.area.seev.MeetingInstructionStatusV03.mmReportingParty,
-						com.tools20022.repository.area.seev.MeetingInstructionStatusV04.mmReportingParty, com.tools20022.repository.area.seev.MeetingVoteExecutionConfirmationV02.mmReportingParty,
-						com.tools20022.repository.area.seev.MeetingVoteExecutionConfirmationV03.mmReportingParty, com.tools20022.repository.area.seev.MeetingVoteExecutionConfirmationV04.mmReportingParty,
-						com.tools20022.repository.area.seev.MeetingResultDisseminationV02.mmReportingParty, com.tools20022.repository.area.seev.MeetingResultDisseminationV03.mmReportingParty,
-						com.tools20022.repository.area.seev.MeetingResultDisseminationV04.mmReportingParty);
+				messageElement_lazy = () -> Arrays.asList(PartyIdentification9Choice.mmBICOrBEI, PartyIdentification9Choice.mmProprietaryIdentification, PartyIdentification9Choice.mmNameAndAddress);
+				messageBuildingBlock_lazy = () -> Arrays.asList(MeetingNotificationV02.mmNotifyingParty, MeetingNotificationV02.mmIssuer, MeetingNotificationV03.mmNotifyingParty, MeetingNotificationV04.mmNotifyingParty,
+						MeetingCancellationV02.mmNotifyingParty, MeetingCancellationV03.mmNotifyingParty, MeetingCancellationV04.mmNotifyingParty, MeetingEntitlementNotificationV02.mmNotifyingParty,
+						MeetingEntitlementNotificationV03.mmNotifyingParty, MeetingEntitlementNotificationV04.mmNotifyingParty, MeetingInstructionV02.mmInstructingParty, MeetingInstructionV03.mmInstructingParty,
+						MeetingInstructionV04.mmInstructingParty, MeetingInstructionCancellationRequestV02.mmRequestingParty, MeetingInstructionCancellationRequestV03.mmRequestingParty,
+						MeetingInstructionCancellationRequestV04.mmRequestingParty, MeetingInstructionStatusV02.mmReportingParty, MeetingInstructionStatusV03.mmReportingParty, MeetingInstructionStatusV04.mmReportingParty,
+						MeetingVoteExecutionConfirmationV02.mmReportingParty, MeetingVoteExecutionConfirmationV03.mmReportingParty, MeetingVoteExecutionConfirmationV04.mmReportingParty, MeetingResultDisseminationV02.mmReportingParty,
+						MeetingResultDisseminationV03.mmReportingParty, MeetingResultDisseminationV04.mmReportingParty);
 				trace_lazy = () -> PartyIdentificationInformation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
 						return DateFormat.getDateInstance(java.text.DateFormat.LONG).parse("September 9, 2016");

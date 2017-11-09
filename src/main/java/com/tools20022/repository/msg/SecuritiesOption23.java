@@ -19,9 +19,14 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.FinancialInstrumentQuantity19Choice;
 import com.tools20022.repository.choice.FinancialInstrumentQuantity20Choice;
+import com.tools20022.repository.entity.BiddingConditions;
 import com.tools20022.repository.entity.CorporateActionOption;
+import com.tools20022.repository.entity.SecuritiesConversion;
+import com.tools20022.repository.entity.SecuritiesProceedsDefinition;
+import com.tools20022.repository.GeneratedRepository;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -139,14 +144,14 @@ public class SecuritiesOption23 {
 	 */
 	public static final MMMessageAssociationEnd mmMaximumExercisableQuantity = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesConversion.mmMaximumExercisableQuantity;
+			businessElementTrace_lazy = () -> SecuritiesConversion.mmMaximumExercisableQuantity;
 			componentContext_lazy = () -> SecuritiesOption23.mmObject();
 			isDerived = false;
 			xmlTag = "MaxExrcblQty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaximumExercisableQuantity";
 			definition = "Maximum quantity (or lot) of financial instrument that may be exercised or tendered.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesOption51.mmMaximumQuantityToInstruct);
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesOption51.mmMaximumQuantityToInstruct);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -199,14 +204,14 @@ public class SecuritiesOption23 {
 	 */
 	public static final MMMessageAssociationEnd mmMinimumExercisableQuantity = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesConversion.mmMinimumExercisableQuantity;
+			businessElementTrace_lazy = () -> SecuritiesConversion.mmMinimumExercisableQuantity;
 			componentContext_lazy = () -> SecuritiesOption23.mmObject();
 			isDerived = false;
 			xmlTag = "MinExrcblQty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MinimumExercisableQuantity";
 			definition = "Minimum quantity (or lot) of financial instrument that may be exercised or tendered.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesOption51.mmMinimumQuantityToInstruct);
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesOption51.mmMinimumQuantityToInstruct);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -259,14 +264,14 @@ public class SecuritiesOption23 {
 	 */
 	public static final MMMessageAssociationEnd mmMinimumExercisableMultipleQuantity = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesConversion.mmMinimumExercisableMultipleQuantity;
+			businessElementTrace_lazy = () -> SecuritiesConversion.mmMinimumExercisableMultipleQuantity;
 			componentContext_lazy = () -> SecuritiesOption23.mmObject();
 			isDerived = false;
 			xmlTag = "MinExrcblMltplQty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MinimumExercisableMultipleQuantity";
 			definition = "Minimum multiple quantity (or lot) of financial  instrument that may be exercised or tendered.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesOption51.mmMinimumMultipleQuantityToInstruct);
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesOption51.mmMinimumMultipleQuantityToInstruct);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -316,14 +321,14 @@ public class SecuritiesOption23 {
 	 */
 	public static final MMMessageAssociationEnd mmNewBoardLotQuantity = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesProceedsDefinition.mmBoardLotSecuritiesQuantity;
+			businessElementTrace_lazy = () -> SecuritiesProceedsDefinition.mmBoardLotSecuritiesQuantity;
 			componentContext_lazy = () -> SecuritiesOption23.mmObject();
 			isDerived = false;
 			xmlTag = "NewBrdLotQty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewBoardLotQuantity";
 			definition = "Quantity of equity that makes up the new board lot.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesOption51.mmNewBoardLotQuantity);
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesOption51.mmNewBoardLotQuantity);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -376,14 +381,14 @@ public class SecuritiesOption23 {
 	 */
 	public static final MMMessageAssociationEnd mmNewDenominationQuantity = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesProceedsDefinition.mmNewDenominationSecuritiesQuantity;
+			businessElementTrace_lazy = () -> SecuritiesProceedsDefinition.mmNewDenominationSecuritiesQuantity;
 			componentContext_lazy = () -> SecuritiesOption23.mmObject();
 			isDerived = false;
 			xmlTag = "NewDnmtnQty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewDenominationQuantity";
 			definition = "New denomination of the equity following, for example, an increase or decrease in nominal value.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesOption51.mmNewDenominationQuantity);
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesOption51.mmNewDenominationQuantity);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -437,14 +442,14 @@ public class SecuritiesOption23 {
 	 */
 	public static final MMMessageAssociationEnd mmFrontEndOddLotQuantity = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BiddingConditions.mmFrontEndOddLotQuantity;
+			businessElementTrace_lazy = () -> BiddingConditions.mmFrontEndOddLotQuantity;
 			componentContext_lazy = () -> SecuritiesOption23.mmObject();
 			isDerived = false;
 			xmlTag = "FrntEndOddLotQty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FrontEndOddLotQuantity";
 			definition = "Specifies that if an order is prorated holders of odd lots who tender their full position will not have tendered position prorated but rather accepted in full.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesOption51.mmFrontEndOddLotQuantity);
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesOption51.mmFrontEndOddLotQuantity);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -497,14 +502,14 @@ public class SecuritiesOption23 {
 	 */
 	public static final MMMessageAssociationEnd mmBackEndOddLotQuantity = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BiddingConditions.mmBackEndOddLotQuantity;
+			businessElementTrace_lazy = () -> BiddingConditions.mmBackEndOddLotQuantity;
 			componentContext_lazy = () -> SecuritiesOption23.mmObject();
 			isDerived = false;
 			xmlTag = "BckEndOddLotQty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BackEndOddLotQuantity";
 			definition = "Represents the presence of a back end odd lot provision and the quantity of equity required after proration to be eligible for this privilege.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesOption51.mmBackEndOddLotQuantity);
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesOption51.mmBackEndOddLotQuantity);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -515,13 +520,11 @@ public class SecuritiesOption23 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesOption23.mmMaximumExercisableQuantity, com.tools20022.repository.msg.SecuritiesOption23.mmMinimumExercisableQuantity,
-						com.tools20022.repository.msg.SecuritiesOption23.mmMinimumExercisableMultipleQuantity, com.tools20022.repository.msg.SecuritiesOption23.mmNewBoardLotQuantity,
-						com.tools20022.repository.msg.SecuritiesOption23.mmNewDenominationQuantity, com.tools20022.repository.msg.SecuritiesOption23.mmFrontEndOddLotQuantity,
-						com.tools20022.repository.msg.SecuritiesOption23.mmBackEndOddLotQuantity);
+				messageElement_lazy = () -> Arrays.asList(SecuritiesOption23.mmMaximumExercisableQuantity, SecuritiesOption23.mmMinimumExercisableQuantity, SecuritiesOption23.mmMinimumExercisableMultipleQuantity,
+						SecuritiesOption23.mmNewBoardLotQuantity, SecuritiesOption23.mmNewDenominationQuantity, SecuritiesOption23.mmFrontEndOddLotQuantity, SecuritiesOption23.mmBackEndOddLotQuantity);
 				trace_lazy = () -> CorporateActionOption.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
 						return DateFormat.getDateInstance(java.text.DateFormat.LONG).parse("May 5, 2016");

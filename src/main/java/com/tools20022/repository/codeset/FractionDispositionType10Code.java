@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.FractionDispositionTypeV2Code;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -90,7 +92,7 @@ public class FractionDispositionType10Code extends FractionDispositionTypeV2Code
 	 */
 	public static final MMCode mmBuyUp = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BuyUp";
 			owner_lazy = () -> FractionDispositionType10Code.mmObject();
 		}
@@ -113,7 +115,7 @@ public class FractionDispositionType10Code extends FractionDispositionTypeV2Code
 	 */
 	public static final MMCode mmCashInLieuOfFraction = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashInLieuOfFraction";
 			owner_lazy = () -> FractionDispositionType10Code.mmObject();
 		}
@@ -136,7 +138,7 @@ public class FractionDispositionType10Code extends FractionDispositionTypeV2Code
 	 */
 	public static final MMCode mmExpire = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Expire";
 			owner_lazy = () -> FractionDispositionType10Code.mmObject();
 		}
@@ -159,7 +161,7 @@ public class FractionDispositionType10Code extends FractionDispositionTypeV2Code
 	 */
 	public static final MMCode mmIssueFraction = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssueFraction";
 			owner_lazy = () -> FractionDispositionType10Code.mmObject();
 		}
@@ -168,13 +170,12 @@ public class FractionDispositionType10Code extends FractionDispositionTypeV2Code
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("BUYU");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FractionDispositionType10Code";
 				definition = "Indicates that fractional value should be retained; no rounding.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.FractionDispositionType10Code.mmBuyUp, com.tools20022.repository.codeset.FractionDispositionType10Code.mmCashInLieuOfFraction,
-						com.tools20022.repository.codeset.FractionDispositionType10Code.mmExpire, com.tools20022.repository.codeset.FractionDispositionType10Code.mmIssueFraction);
+				code_lazy = () -> Arrays.asList(FractionDispositionType10Code.mmBuyUp, FractionDispositionType10Code.mmCashInLieuOfFraction, FractionDispositionType10Code.mmExpire, FractionDispositionType10Code.mmIssueFraction);
 				trace_lazy = () -> FractionDispositionTypeV2Code.mmObject();
 			}
 		});

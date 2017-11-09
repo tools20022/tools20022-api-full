@@ -20,10 +20,12 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.FinancialInstrumentQuantity15Choice;
 import com.tools20022.repository.choice.PlannedQuantity1Choice;
 import com.tools20022.repository.codeset.SecuritiesQuantity1Code;
 import com.tools20022.repository.datatype.Max350Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -115,7 +117,7 @@ public class CorporateActionQuantity4SD2 {
 			componentContext_lazy = () -> CorporateActionQuantity4SD2.mmObject();
 			isDerived = false;
 			xmlTag = "PlcAndNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "Unambiguous reference to the location where the supplementary data must be inserted in the message instance. \r\n\r\nIn the case of XML, this is expressed by a valid XPath.";
 			maxOccurs = 1;
@@ -158,7 +160,7 @@ public class CorporateActionQuantity4SD2 {
 			componentContext_lazy = () -> CorporateActionQuantity4SD2.mmObject();
 			isDerived = false;
 			xmlTag = "PlandQty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlannedQuantity";
 			definition = "Planned number of shares to be purchased.\r\n 買付予定株式数";
 			maxOccurs = 1;
@@ -201,7 +203,7 @@ public class CorporateActionQuantity4SD2 {
 			componentContext_lazy = () -> CorporateActionQuantity4SD2.mmObject();
 			isDerived = false;
 			xmlTag = "PlandXcssPurchsQty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlannedExcessPurchaseQuantity";
 			definition = "Planned excess quantity of share purchase.\r\n買付超過予定数\r\n";
 			maxOccurs = 1;
@@ -248,7 +250,7 @@ public class CorporateActionQuantity4SD2 {
 			componentContext_lazy = () -> CorporateActionQuantity4SD2.mmObject();
 			isDerived = false;
 			xmlTag = "MinQtyCd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MinimumQuantityCode";
 			definition = "TSE/JASDEC code for the minimum number of shares to be purchased when the corporate action event type code  is TEND or BIDS.\r\n買付株数に係る下限設定が「下限設定あり」「未定」";
 			maxOccurs = 1;
@@ -294,7 +296,7 @@ public class CorporateActionQuantity4SD2 {
 			componentContext_lazy = () -> CorporateActionQuantity4SD2.mmObject();
 			isDerived = false;
 			xmlTag = "MaxQtyCd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaximumQuantityCode";
 			definition = "TSE/JASDEC code for the maximum number of shares to be purchased when the corporate action event type code is TEND or BIDS.\r\n 買付株数に係る上限設定が「上限設定あり」「未定」";
 			maxOccurs = 1;
@@ -336,7 +338,7 @@ public class CorporateActionQuantity4SD2 {
 			componentContext_lazy = () -> CorporateActionQuantity4SD2.mmObject();
 			isDerived = false;
 			xmlTag = "OdShrUnitQty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OldShareUnitQuantity";
 			definition = "Old share unit quantity.";
 			maxOccurs = 1;
@@ -377,7 +379,7 @@ public class CorporateActionQuantity4SD2 {
 			componentContext_lazy = () -> CorporateActionQuantity4SD2.mmObject();
 			isDerived = false;
 			xmlTag = "NewShrUnitQty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewShareUnitQuantity";
 			definition = "New share unit quantity.\r\n";
 			maxOccurs = 1;
@@ -390,12 +392,10 @@ public class CorporateActionQuantity4SD2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionQuantity4SD2.mmPlaceAndName, com.tools20022.repository.msg.CorporateActionQuantity4SD2.mmPlannedQuantity,
-						com.tools20022.repository.msg.CorporateActionQuantity4SD2.mmPlannedExcessPurchaseQuantity, com.tools20022.repository.msg.CorporateActionQuantity4SD2.mmMinimumQuantityCode,
-						com.tools20022.repository.msg.CorporateActionQuantity4SD2.mmMaximumQuantityCode, com.tools20022.repository.msg.CorporateActionQuantity4SD2.mmOldShareUnitQuantity,
-						com.tools20022.repository.msg.CorporateActionQuantity4SD2.mmNewShareUnitQuantity);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(CorporateActionQuantity4SD2.mmPlaceAndName, CorporateActionQuantity4SD2.mmPlannedQuantity, CorporateActionQuantity4SD2.mmPlannedExcessPurchaseQuantity,
+						CorporateActionQuantity4SD2.mmMinimumQuantityCode, CorporateActionQuantity4SD2.mmMaximumQuantityCode, CorporateActionQuantity4SD2.mmOldShareUnitQuantity, CorporateActionQuantity4SD2.mmNewShareUnitQuantity);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionQuantity4SD2";
 				definition = "Extension to specify corporate action quantities.";
 			}

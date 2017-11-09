@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.AmountDirectionCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -81,7 +83,7 @@ public class CreditDebit3Code extends AmountDirectionCode {
 	 */
 	public static final MMCode mmCredit = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Credit";
 			owner_lazy = () -> CreditDebit3Code.mmObject();
 		}
@@ -104,7 +106,7 @@ public class CreditDebit3Code extends AmountDirectionCode {
 	 */
 	public static final MMCode mmDebit = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Debit";
 			owner_lazy = () -> CreditDebit3Code.mmObject();
 		}
@@ -113,12 +115,12 @@ public class CreditDebit3Code extends AmountDirectionCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CRDT");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CreditDebit3Code";
 				definition = "Specifies if an operation is an increase or a decrease.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CreditDebit3Code.mmCredit, com.tools20022.repository.codeset.CreditDebit3Code.mmDebit);
+				code_lazy = () -> Arrays.asList(CreditDebit3Code.mmCredit, CreditDebit3Code.mmDebit);
 				trace_lazy = () -> AmountDirectionCode.mmObject();
 			}
 		});

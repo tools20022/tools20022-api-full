@@ -19,6 +19,9 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.catm.StatusReportV04;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -126,11 +129,11 @@ public class StatusReport4 {
 			componentContext_lazy = () -> StatusReport4.mmObject();
 			isDerived = false;
 			xmlTag = "POIId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "POIIdentification";
 			definition = "Identification of the point of interaction for terminal management.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StatusReport5.mmPOIIdentification);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.StatusReport3.mmPOIIdentification;
+			nextVersions_lazy = () -> Arrays.asList(StatusReport5.mmPOIIdentification);
+			previousVersion_lazy = () -> StatusReport3.mmPOIIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -185,11 +188,11 @@ public class StatusReport4 {
 			componentContext_lazy = () -> StatusReport4.mmObject();
 			isDerived = false;
 			xmlTag = "TermnlMgrId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TerminalManagerIdentification";
 			definition = "Identification of the terminal management system (TMS) to contact for the maintenance.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StatusReport5.mmTerminalManagerIdentification);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.StatusReport3.mmTerminalManagerIdentification;
+			nextVersions_lazy = () -> Arrays.asList(StatusReport5.mmTerminalManagerIdentification);
+			previousVersion_lazy = () -> StatusReport3.mmTerminalManagerIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -241,11 +244,11 @@ public class StatusReport4 {
 			componentContext_lazy = () -> StatusReport4.mmObject();
 			isDerived = false;
 			xmlTag = "DataSet";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DataSet";
 			definition = "Data related to a status report of a point of interaction (POI).";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StatusReport5.mmDataSet);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.StatusReport3.mmDataSet;
+			nextVersions_lazy = () -> Arrays.asList(StatusReport5.mmDataSet);
+			previousVersion_lazy = () -> StatusReport3.mmDataSet;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -256,11 +259,10 @@ public class StatusReport4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StatusReport4.mmPOIIdentification, com.tools20022.repository.msg.StatusReport4.mmTerminalManagerIdentification,
-						com.tools20022.repository.msg.StatusReport4.mmDataSet);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.catm.StatusReportV04.mmStatusReport);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(StatusReport4.mmPOIIdentification, StatusReport4.mmTerminalManagerIdentification, StatusReport4.mmDataSet);
+				messageBuildingBlock_lazy = () -> Arrays.asList(StatusReportV04.mmStatusReport);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "StatusReport4";
 				definition = "Status of the acceptor system containing the identification of the POI (Point Of Interaction), its components and their installed versions.";
 				nextVersions_lazy = () -> Arrays.asList(StatusReport5.mmObject());

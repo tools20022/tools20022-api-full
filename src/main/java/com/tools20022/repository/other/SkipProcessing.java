@@ -17,7 +17,11 @@
 
 package com.tools20022.repository.other;
 
+import com.tools20022.metamodel.MMNamespace;
+import com.tools20022.metamodel.MMProcessContent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.metamodel.MMUserDefined;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.concurrent.atomic.AtomicReference;
 
 /**
@@ -51,12 +55,12 @@ public class SkipProcessing {
 	final static public MMUserDefined mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMUserDefined() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SkipProcessing";
 				definition = "The Any element without further validation processing.";
-				namespace = com.tools20022.metamodel.MMNamespace.any;
-				processContents = com.tools20022.metamodel.MMProcessContent.SKIP;
+				namespace = MMNamespace.any;
+				processContents = MMProcessContent.SKIP;
 			}
 		});
 		return mmObject_lazy.get();

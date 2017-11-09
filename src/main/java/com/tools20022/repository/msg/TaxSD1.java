@@ -19,10 +19,12 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.TaxAdvantageType1Code;
 import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.datatype.PercentageRate;
 import com.tools20022.repository.datatype.RestrictedFINActiveCurrencyAndAmount;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -115,7 +117,7 @@ public class TaxSD1 {
 			componentContext_lazy = () -> TaxSD1.mmObject();
 			isDerived = false;
 			xmlTag = "PlcAndNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "Unambiguous reference to the location where the supplementary data must be inserted in the message instance. \r\n\r\nIn the case of XML, this is expressed by a valid XPath.";
 			maxOccurs = 1;
@@ -156,7 +158,7 @@ public class TaxSD1 {
 			componentContext_lazy = () -> TaxSD1.mmObject();
 			isDerived = false;
 			xmlTag = "FrgnTaxCdtAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForeignTaxCreditAmount";
 			definition = "Amount of foreign tax credit per security.";
 			maxOccurs = 1;
@@ -197,7 +199,7 @@ public class TaxSD1 {
 			componentContext_lazy = () -> TaxSD1.mmObject();
 			isDerived = false;
 			xmlTag = "FrgnTaxCdtRate";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForeignTaxCreditRate";
 			definition = "Percent of foreign tax credit per security\n.\r\n";
 			maxOccurs = 1;
@@ -241,7 +243,7 @@ public class TaxSD1 {
 			componentContext_lazy = () -> TaxSD1.mmObject();
 			isDerived = false;
 			xmlTag = "FrgnSrcAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForeignSourceAmount";
 			definition = "Amount of the dividend that is being paid out of income earned in a foreign jurisdiction.";
 			maxOccurs = 1;
@@ -285,7 +287,7 @@ public class TaxSD1 {
 			componentContext_lazy = () -> TaxSD1.mmObject();
 			isDerived = false;
 			xmlTag = "FrgnSrcRate";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForeignSourceRate";
 			definition = "Percentage of the dividend that is being paid out of income earned in a foreign jurisdiction.";
 			maxOccurs = 1;
@@ -326,7 +328,7 @@ public class TaxSD1 {
 			componentContext_lazy = () -> TaxSD1.mmObject();
 			isDerived = false;
 			xmlTag = "TaxAdvntgTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxAdvantageType";
 			definition = "Form of tax advantage on the dividend.";
 			maxOccurs = 1;
@@ -367,7 +369,7 @@ public class TaxSD1 {
 			componentContext_lazy = () -> TaxSD1.mmObject();
 			isDerived = false;
 			xmlTag = "TaxAdvntgAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxAdvantageAmount";
 			definition = "Amount of the tax advantage on the dividend.";
 			maxOccurs = 1;
@@ -408,7 +410,7 @@ public class TaxSD1 {
 			componentContext_lazy = () -> TaxSD1.mmObject();
 			isDerived = false;
 			xmlTag = "TaxAdvntgRate";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxAdvantageRate";
 			definition = "Percent of the tax advantage on the dividend.";
 			maxOccurs = 1;
@@ -452,7 +454,7 @@ public class TaxSD1 {
 			componentContext_lazy = () -> TaxSD1.mmObject();
 			isDerived = false;
 			xmlTag = "SndryOrOthrRate";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SundryOrOtherRate";
 			definition = "Percentage of the amount of money related to taxable income that cannot be categorised.";
 			maxOccurs = 1;
@@ -494,7 +496,7 @@ public class TaxSD1 {
 			componentContext_lazy = () -> TaxSD1.mmObject();
 			isDerived = false;
 			xmlTag = "TaxDfrrdRate";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxDeferredRate";
 			definition = "Percentage of the amount of income eligible for deferred taxation.";
 			maxOccurs = 1;
@@ -537,7 +539,7 @@ public class TaxSD1 {
 			componentContext_lazy = () -> TaxSD1.mmObject();
 			isDerived = false;
 			xmlTag = "TaxFreeRate";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxFreeRate";
 			definition = "Percentage of the amount of money that has not been subject to taxation.";
 			maxOccurs = 1;
@@ -549,12 +551,10 @@ public class TaxSD1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TaxSD1.mmPlaceAndName, com.tools20022.repository.msg.TaxSD1.mmForeignTaxCreditAmount, com.tools20022.repository.msg.TaxSD1.mmForeignTaxCreditRate,
-						com.tools20022.repository.msg.TaxSD1.mmForeignSourceAmount, com.tools20022.repository.msg.TaxSD1.mmForeignSourceRate, com.tools20022.repository.msg.TaxSD1.mmTaxAdvantageType,
-						com.tools20022.repository.msg.TaxSD1.mmTaxAdvantageAmount, com.tools20022.repository.msg.TaxSD1.mmTaxAdvantageRate, com.tools20022.repository.msg.TaxSD1.mmSundryOrOtherRate,
-						com.tools20022.repository.msg.TaxSD1.mmTaxDeferredRate, com.tools20022.repository.msg.TaxSD1.mmTaxFreeRate);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(TaxSD1.mmPlaceAndName, TaxSD1.mmForeignTaxCreditAmount, TaxSD1.mmForeignTaxCreditRate, TaxSD1.mmForeignSourceAmount, TaxSD1.mmForeignSourceRate, TaxSD1.mmTaxAdvantageType,
+						TaxSD1.mmTaxAdvantageAmount, TaxSD1.mmTaxAdvantageRate, TaxSD1.mmSundryOrOtherRate, TaxSD1.mmTaxDeferredRate, TaxSD1.mmTaxFreeRate);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TaxSD1";
 				definition = "Provides extra tax details.";
 			}

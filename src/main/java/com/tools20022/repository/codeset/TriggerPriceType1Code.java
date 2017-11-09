@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.TriggerPriceTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -95,7 +97,7 @@ public class TriggerPriceType1Code extends TriggerPriceTypeCode {
 	 */
 	public static final MMCode mmBestOffer = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BestOffer";
 			owner_lazy = () -> TriggerPriceType1Code.mmObject();
 		}
@@ -118,7 +120,7 @@ public class TriggerPriceType1Code extends TriggerPriceTypeCode {
 	 */
 	public static final MMCode mmLastTrade = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LastTrade";
 			owner_lazy = () -> TriggerPriceType1Code.mmObject();
 		}
@@ -141,7 +143,7 @@ public class TriggerPriceType1Code extends TriggerPriceTypeCode {
 	 */
 	public static final MMCode mmBestBid = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BestBid";
 			owner_lazy = () -> TriggerPriceType1Code.mmObject();
 		}
@@ -164,7 +166,7 @@ public class TriggerPriceType1Code extends TriggerPriceTypeCode {
 	 */
 	public static final MMCode mmBestBidOrLastTrade = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BestBidOrLastTrade";
 			owner_lazy = () -> TriggerPriceType1Code.mmObject();
 		}
@@ -187,7 +189,7 @@ public class TriggerPriceType1Code extends TriggerPriceTypeCode {
 	 */
 	public static final MMCode mmBestOfferOrLastTrade = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BestOfferOrLastTrade";
 			owner_lazy = () -> TriggerPriceType1Code.mmObject();
 		}
@@ -210,7 +212,7 @@ public class TriggerPriceType1Code extends TriggerPriceTypeCode {
 	 */
 	public static final MMCode mmBestMid = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BestMid";
 			owner_lazy = () -> TriggerPriceType1Code.mmObject();
 		}
@@ -219,14 +221,13 @@ public class TriggerPriceType1Code extends TriggerPriceTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("BEOF");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TriggerPriceType1Code";
 				definition = "Specifies the type of price that the trigger is compared to.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TriggerPriceType1Code.mmBestOffer, com.tools20022.repository.codeset.TriggerPriceType1Code.mmLastTrade,
-						com.tools20022.repository.codeset.TriggerPriceType1Code.mmBestBid, com.tools20022.repository.codeset.TriggerPriceType1Code.mmBestBidOrLastTrade,
-						com.tools20022.repository.codeset.TriggerPriceType1Code.mmBestOfferOrLastTrade, com.tools20022.repository.codeset.TriggerPriceType1Code.mmBestMid);
+				code_lazy = () -> Arrays.asList(TriggerPriceType1Code.mmBestOffer, TriggerPriceType1Code.mmLastTrade, TriggerPriceType1Code.mmBestBid, TriggerPriceType1Code.mmBestBidOrLastTrade,
+						TriggerPriceType1Code.mmBestOfferOrLastTrade, TriggerPriceType1Code.mmBestMid);
 				trace_lazy = () -> TriggerPriceTypeCode.mmObject();
 			}
 		});

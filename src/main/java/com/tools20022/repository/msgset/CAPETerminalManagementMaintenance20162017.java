@@ -18,7 +18,9 @@
 package com.tools20022.repository.msgset;
 
 import com.tools20022.metamodel.MMMessageSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.catm.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -83,8 +85,8 @@ public class CAPETerminalManagementMaintenance20162017 {
 	final static public MMMessageSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageSet() {
 			{
-				businessProcessCatalogue_lazy = () -> com.tools20022.repository.GeneratedRepository.mmcatalogue;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				businessProcessCatalogue_lazy = () -> GeneratedRepository.mmcatalogue;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CAPE - Terminal Management - Maintenance 2016 - 2017";
 				definition = "This document describes the Card Payments Exchanges - Terminal Management message set. It includes the new candidate versions of the MessageDefinitions that have been impacted by the maintenance cycle 2016/2017 (MCR #120) and are submitted to the approval of the Cards Standards Evaluation Group as ISO 20022 MessageDefinitions.";
 				messageDefinition_lazy = () -> Arrays.asList(MaintenanceDelegationResponseV02.mmObject(), TerminalManagementRejectionV04.mmObject(), CertificateManagementResponseV01.mmObject(), CertificateManagementRequestV01.mmObject(),

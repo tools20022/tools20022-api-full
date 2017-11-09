@@ -19,8 +19,10 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Max350Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -100,7 +102,7 @@ public class CorporateActionOptionSecuritiesMovementDateDetailsExtension1 {
 			componentContext_lazy = () -> CorporateActionOptionSecuritiesMovementDateDetailsExtension1.mmObject();
 			isDerived = false;
 			xmlTag = "PlcAndNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "xPath to the element that is being extended.";
 			maxOccurs = 1;
@@ -144,7 +146,7 @@ public class CorporateActionOptionSecuritiesMovementDateDetailsExtension1 {
 			componentContext_lazy = () -> CorporateActionOptionSecuritiesMovementDateDetailsExtension1.mmObject();
 			isDerived = false;
 			xmlTag = "DTCAllcnDtAndTm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCAllocationDateAndTime";
 			definition = "Date and time at which DTC (The Depository Trust Corporation) will allocate payments to its participants.";
 			maxOccurs = 1;
@@ -190,7 +192,7 @@ public class CorporateActionOptionSecuritiesMovementDateDetailsExtension1 {
 			componentContext_lazy = () -> CorporateActionOptionSecuritiesMovementDateDetailsExtension1.mmObject();
 			isDerived = false;
 			xmlTag = "DTCCILAllcnDtAndTm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCCILAllocationDateAndTime";
 			definition = "Date and time at which Cash In Lieu (CIL) will be paid to DTC  (The Depository Trust Corporation) participants. On a single option that has multiple payouts, one of which is CIL, the payouts can be allocated on different days.";
 			maxOccurs = 1;
@@ -202,11 +204,10 @@ public class CorporateActionOptionSecuritiesMovementDateDetailsExtension1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionOptionSecuritiesMovementDateDetailsExtension1.mmPlaceAndName,
-						com.tools20022.repository.msg.CorporateActionOptionSecuritiesMovementDateDetailsExtension1.mmDTCAllocationDateAndTime,
-						com.tools20022.repository.msg.CorporateActionOptionSecuritiesMovementDateDetailsExtension1.mmDTCCILAllocationDateAndTime);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(CorporateActionOptionSecuritiesMovementDateDetailsExtension1.mmPlaceAndName, CorporateActionOptionSecuritiesMovementDateDetailsExtension1.mmDTCAllocationDateAndTime,
+						CorporateActionOptionSecuritiesMovementDateDetailsExtension1.mmDTCCILAllocationDateAndTime);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CorporateActionOptionSecuritiesMovementDateDetailsExtension1";
 				definition = "Provides additional information regarding corporate action securities movement date details.";
 			}

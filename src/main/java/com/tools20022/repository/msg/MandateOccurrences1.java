@@ -19,10 +19,14 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.Frequency1Code;
 import com.tools20022.repository.codeset.SequenceType2Code;
 import com.tools20022.repository.datatype.ISODate;
+import com.tools20022.repository.entity.Agreement;
 import com.tools20022.repository.entity.DirectDebitMandate;
+import com.tools20022.repository.entity.PaymentProcessing;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -114,11 +118,11 @@ public class MandateOccurrences1 {
 	 */
 	public static final MMMessageAttribute mmSequenceType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentProcessing.mmSequenceType;
+			businessElementTrace_lazy = () -> PaymentProcessing.mmSequenceType;
 			componentContext_lazy = () -> MandateOccurrences1.mmObject();
 			isDerived = false;
 			xmlTag = "SeqTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SequenceType";
 			definition = "Identifies the underlying transaction sequence as either recurring or one-off.";
 			maxOccurs = 1;
@@ -163,11 +167,11 @@ public class MandateOccurrences1 {
 	 */
 	public static final MMMessageAttribute mmFrequency = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.DirectDebitMandate.mmFrequency;
+			businessElementTrace_lazy = () -> DirectDebitMandate.mmFrequency;
 			componentContext_lazy = () -> MandateOccurrences1.mmObject();
 			isDerived = false;
 			xmlTag = "Frqcy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Frequency";
 			definition = "Regularity with which instructions are to be created and processed.";
 			maxOccurs = 1;
@@ -211,11 +215,11 @@ public class MandateOccurrences1 {
 	 */
 	public static final MMMessageAttribute mmDuration = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Agreement.mmValidityPeriod;
+			businessElementTrace_lazy = () -> Agreement.mmValidityPeriod;
 			componentContext_lazy = () -> MandateOccurrences1.mmObject();
 			isDerived = false;
 			xmlTag = "Drtn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Duration";
 			definition = "Length of time for which the mandate remains valid.";
 			maxOccurs = 1;
@@ -259,11 +263,11 @@ public class MandateOccurrences1 {
 	 */
 	public static final MMMessageAttribute mmFirstCollectionDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.DirectDebitMandate.mmFirstCollectionDate;
+			businessElementTrace_lazy = () -> DirectDebitMandate.mmFirstCollectionDate;
 			componentContext_lazy = () -> MandateOccurrences1.mmObject();
 			isDerived = false;
 			xmlTag = "FrstColltnDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FirstCollectionDate";
 			definition = "Date of the first collection of a direct debit as per the mandate.";
 			maxOccurs = 1;
@@ -307,11 +311,11 @@ public class MandateOccurrences1 {
 	 */
 	public static final MMMessageAttribute mmFinalCollectionDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.DirectDebitMandate.mmFinalCollectionDate;
+			businessElementTrace_lazy = () -> DirectDebitMandate.mmFinalCollectionDate;
 			componentContext_lazy = () -> MandateOccurrences1.mmObject();
 			isDerived = false;
 			xmlTag = "FnlColltnDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinalCollectionDate";
 			definition = "Date of the final collection of a direct debit as per the mandate.";
 			maxOccurs = 1;
@@ -323,11 +327,11 @@ public class MandateOccurrences1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MandateOccurrences1.mmSequenceType, com.tools20022.repository.msg.MandateOccurrences1.mmFrequency,
-						com.tools20022.repository.msg.MandateOccurrences1.mmDuration, com.tools20022.repository.msg.MandateOccurrences1.mmFirstCollectionDate, com.tools20022.repository.msg.MandateOccurrences1.mmFinalCollectionDate);
+				messageElement_lazy = () -> Arrays.asList(MandateOccurrences1.mmSequenceType, MandateOccurrences1.mmFrequency, MandateOccurrences1.mmDuration, MandateOccurrences1.mmFirstCollectionDate,
+						MandateOccurrences1.mmFinalCollectionDate);
 				trace_lazy = () -> DirectDebitMandate.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MandateOccurrences1";
 				definition = "Set of elements used to provide further details related to the duration of the mandate and the occurrence of the underlying transactions.";
 			}

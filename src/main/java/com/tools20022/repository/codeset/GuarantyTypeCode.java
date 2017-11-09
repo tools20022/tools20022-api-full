@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -99,7 +101,7 @@ public class GuarantyTypeCode {
 	 */
 	public static final MMCode mmSimple = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Simple";
 			definition = "Simple guaranty.";
 			owner_lazy = () -> GuarantyTypeCode.mmObject();
@@ -129,7 +131,7 @@ public class GuarantyTypeCode {
 	 */
 	public static final MMCode mmJoint = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Joint";
 			definition = "Joint guaranty.";
 			owner_lazy = () -> GuarantyTypeCode.mmObject();
@@ -162,7 +164,7 @@ public class GuarantyTypeCode {
 	 */
 	public static final MMCode mmCollateral = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Collateral";
 			definition = "Security is guaranteed by collateral, ie, assets pledged to a lender until a loan is repaid.";
 			owner_lazy = () -> GuarantyTypeCode.mmObject();
@@ -192,7 +194,7 @@ public class GuarantyTypeCode {
 	 */
 	public static final MMCode mmGovernment = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Government";
 			definition = "Security is guaranteed by the government.";
 			owner_lazy = () -> GuarantyTypeCode.mmObject();
@@ -225,7 +227,7 @@ public class GuarantyTypeCode {
 	 */
 	public static final MMCode mmLien = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Lien";
 			definition = "Security is guaranteed by a lien, ie, a creditor's claim against property, for example, a mortgage is a lien against a house.";
 			owner_lazy = () -> GuarantyTypeCode.mmObject();
@@ -259,7 +261,7 @@ public class GuarantyTypeCode {
 	 */
 	public static final MMCode mmLetterOfCredit = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "LetterOfCredit";
 			definition = "Security is guaranteed by a letter of credit, ie, a document issued by a bank guaranteeing the payment up to a stated amount for a specified period.";
 			owner_lazy = () -> GuarantyTypeCode.mmObject();
@@ -292,7 +294,7 @@ public class GuarantyTypeCode {
 	 */
 	public static final MMCode mmNegativePledge = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NegativePledge";
 			definition = "Security has a negative pledge, ie, the issuer will not pledge any assets if doing so would result in less security for the investors.";
 			owner_lazy = () -> GuarantyTypeCode.mmObject();
@@ -322,7 +324,7 @@ public class GuarantyTypeCode {
 	 */
 	public static final MMCode mmInsurance = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Insurance";
 			definition = "Security is guaranteed by an insurance policy.";
 			owner_lazy = () -> GuarantyTypeCode.mmObject();
@@ -333,14 +335,13 @@ public class GuarantyTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("SIMP");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "GuarantyTypeCode";
 				definition = "Specifies the type of credit enhancement.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.GuarantyTypeCode.mmSimple, com.tools20022.repository.codeset.GuarantyTypeCode.mmJoint, com.tools20022.repository.codeset.GuarantyTypeCode.mmCollateral,
-						com.tools20022.repository.codeset.GuarantyTypeCode.mmGovernment, com.tools20022.repository.codeset.GuarantyTypeCode.mmLien, com.tools20022.repository.codeset.GuarantyTypeCode.mmLetterOfCredit,
-						com.tools20022.repository.codeset.GuarantyTypeCode.mmNegativePledge, com.tools20022.repository.codeset.GuarantyTypeCode.mmInsurance);
+				code_lazy = () -> Arrays.asList(GuarantyTypeCode.mmSimple, GuarantyTypeCode.mmJoint, GuarantyTypeCode.mmCollateral, GuarantyTypeCode.mmGovernment, GuarantyTypeCode.mmLien, GuarantyTypeCode.mmLetterOfCredit,
+						GuarantyTypeCode.mmNegativePledge, GuarantyTypeCode.mmInsurance);
 			}
 		});
 		return mmObject_lazy.get();

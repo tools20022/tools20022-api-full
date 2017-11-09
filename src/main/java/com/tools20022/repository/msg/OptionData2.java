@@ -20,9 +20,14 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.trea.ForeignExchangeOptionNotificationV02;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.CurrencyOption;
+import com.tools20022.repository.entity.Trade;
+import com.tools20022.repository.entity.TradeIdentification;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -117,11 +122,11 @@ public class OptionData2 {
 	 */
 	public static final MMMessageAttribute mmTradeDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Trade.mmTradeDateTime;
+			businessElementTrace_lazy = () -> Trade.mmTradeDateTime;
 			componentContext_lazy = () -> OptionData2.mmObject();
 			isDerived = false;
 			xmlTag = "TradDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeDate";
 			definition = "Date at which the trading parties have agreed on an option trade.";
 			maxOccurs = 1;
@@ -164,7 +169,7 @@ public class OptionData2 {
 			componentContext_lazy = () -> OptionData2.mmObject();
 			isDerived = false;
 			xmlTag = "NtfctnId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotificationIdentification";
 			definition = "Refers to the identification of a trade assigned by the trading side of a foreign exchange option trade.";
 			maxOccurs = 1;
@@ -206,11 +211,11 @@ public class OptionData2 {
 	 */
 	public static final MMMessageAttribute mmCommonReference = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradeIdentification.mmCommonIdentification;
+			businessElementTrace_lazy = () -> TradeIdentification.mmCommonIdentification;
 			componentContext_lazy = () -> OptionData2.mmObject();
 			isDerived = false;
 			xmlTag = "CmonRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommonReference";
 			definition = "Reference common to the parties of a trade.";
 			maxOccurs = 1;
@@ -253,7 +258,7 @@ public class OptionData2 {
 			componentContext_lazy = () -> OptionData2.mmObject();
 			isDerived = false;
 			xmlTag = "RltdRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedReference";
 			definition = "Refers to the identification of a previous event in the life of a foreign exchange option trade.";
 			maxOccurs = 1;
@@ -294,7 +299,7 @@ public class OptionData2 {
 			componentContext_lazy = () -> OptionData2.mmObject();
 			isDerived = false;
 			xmlTag = "AmdOrCclRsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmendOrCancelReason";
 			definition = "Describes the reason for the cancellation or the amendment.";
 			maxOccurs = 1;
@@ -338,7 +343,7 @@ public class OptionData2 {
 			componentContext_lazy = () -> OptionData2.mmObject();
 			isDerived = false;
 			xmlTag = "Optn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Option";
 			definition = "Set of data defining a foreign exchange option sold.";
 			maxOccurs = 1;
@@ -351,13 +356,12 @@ public class OptionData2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OptionData2.mmTradeDate, com.tools20022.repository.msg.OptionData2.mmNotificationIdentification,
-						com.tools20022.repository.msg.OptionData2.mmCommonReference, com.tools20022.repository.msg.OptionData2.mmRelatedReference, com.tools20022.repository.msg.OptionData2.mmAmendOrCancelReason,
-						com.tools20022.repository.msg.OptionData2.mmOption);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.trea.ForeignExchangeOptionNotificationV02.mmOptionData);
+				messageElement_lazy = () -> Arrays.asList(OptionData2.mmTradeDate, OptionData2.mmNotificationIdentification, OptionData2.mmCommonReference, OptionData2.mmRelatedReference, OptionData2.mmAmendOrCancelReason,
+						OptionData2.mmOption);
+				messageBuildingBlock_lazy = () -> Arrays.asList(ForeignExchangeOptionNotificationV02.mmOptionData);
 				trace_lazy = () -> CurrencyOption.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OptionData2";
 				definition = "Set of data which contains the link to a previously notified option trade.";
 			}

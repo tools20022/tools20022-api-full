@@ -20,10 +20,14 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.PlaceOfTradeIdentification3Choice;
 import com.tools20022.repository.datatype.RestrictedFINMax16Text;
+import com.tools20022.repository.entity.InvestmentFundTransaction;
+import com.tools20022.repository.entity.Order;
 import com.tools20022.repository.entity.SubscriptionExecution;
 import com.tools20022.repository.entity.TradingMarket;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -111,11 +115,11 @@ public class SubscriptionMultipleExecution4 {
 	 */
 	public static final MMMessageAttribute mmMasterReference = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Order.mmMasterIdentification;
+			businessElementTrace_lazy = () -> Order.mmMasterIdentification;
 			componentContext_lazy = () -> SubscriptionMultipleExecution4.mmObject();
 			isDerived = false;
 			xmlTag = "MstrRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MasterReference";
 			definition = "Unique and unambiguous identifier for a group of individual orders, as assigned by the instructing party. This identifier links the individual orders together.";
 			maxOccurs = 1;
@@ -164,7 +168,7 @@ public class SubscriptionMultipleExecution4 {
 			componentContext_lazy = () -> SubscriptionMultipleExecution4.mmObject();
 			isDerived = false;
 			xmlTag = "PlcOfTrad";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceOfTrade";
 			definition = "Market in which the advised trade transaction was executed.";
 			maxOccurs = 1;
@@ -207,11 +211,11 @@ public class SubscriptionMultipleExecution4 {
 	 */
 	public static final MMMessageAssociationEnd mmInvestmentAccountDetails = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundTransaction.mmInvestmentAccount;
+			businessElementTrace_lazy = () -> InvestmentFundTransaction.mmInvestmentAccount;
 			componentContext_lazy = () -> SubscriptionMultipleExecution4.mmObject();
 			isDerived = false;
 			xmlTag = "InvstmtAcctDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestmentAccountDetails";
 			definition = "Account information impacted by an investment fund order.";
 			maxOccurs = 1;
@@ -258,7 +262,7 @@ public class SubscriptionMultipleExecution4 {
 			componentContext_lazy = () -> SubscriptionMultipleExecution4.mmObject();
 			isDerived = false;
 			xmlTag = "IndvExctnDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IndividualExecutionDetails";
 			definition = "Execution of a subscription order.";
 			maxOccurs = 1;
@@ -271,11 +275,11 @@ public class SubscriptionMultipleExecution4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SubscriptionMultipleExecution4.mmMasterReference, com.tools20022.repository.msg.SubscriptionMultipleExecution4.mmPlaceOfTrade,
-						com.tools20022.repository.msg.SubscriptionMultipleExecution4.mmInvestmentAccountDetails, com.tools20022.repository.msg.SubscriptionMultipleExecution4.mmIndividualExecutionDetails);
+				messageElement_lazy = () -> Arrays.asList(SubscriptionMultipleExecution4.mmMasterReference, SubscriptionMultipleExecution4.mmPlaceOfTrade, SubscriptionMultipleExecution4.mmInvestmentAccountDetails,
+						SubscriptionMultipleExecution4.mmIndividualExecutionDetails);
 				trace_lazy = () -> SubscriptionExecution.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SubscriptionMultipleExecution4";
 				definition = "Execution of a subscription order.";
 			}

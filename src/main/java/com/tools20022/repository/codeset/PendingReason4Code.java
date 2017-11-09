@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.PendingFailingReasonCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -94,7 +96,7 @@ public class PendingReason4Code extends PendingFailingReasonCode {
 	 */
 	public static final MMCode mmNotDelivered = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotDelivered";
 			owner_lazy = () -> PendingReason4Code.mmObject();
 		}
@@ -117,7 +119,7 @@ public class PendingReason4Code extends PendingFailingReasonCode {
 	 */
 	public static final MMCode mmNoPayment = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoPayment";
 			owner_lazy = () -> PendingReason4Code.mmObject();
 		}
@@ -140,7 +142,7 @@ public class PendingReason4Code extends PendingFailingReasonCode {
 	 */
 	public static final MMCode mmOther = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
 			owner_lazy = () -> PendingReason4Code.mmObject();
 		}
@@ -163,7 +165,7 @@ public class PendingReason4Code extends PendingFailingReasonCode {
 	 */
 	public static final MMCode mmSentToTaxAuthorities = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SentToTaxAuthorities";
 			owner_lazy = () -> PendingReason4Code.mmObject();
 		}
@@ -186,7 +188,7 @@ public class PendingReason4Code extends PendingFailingReasonCode {
 	 */
 	public static final MMCode mmValidForTaxAuthorities = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValidForTaxAuthorities";
 			owner_lazy = () -> PendingReason4Code.mmObject();
 		}
@@ -195,14 +197,12 @@ public class PendingReason4Code extends PendingFailingReasonCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("NSEC");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PendingReason4Code";
 				definition = "Standard code to specify the reason why the instruction/event has a pending status.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PendingReason4Code.mmNotDelivered, com.tools20022.repository.codeset.PendingReason4Code.mmNoPayment,
-						com.tools20022.repository.codeset.PendingReason4Code.mmOther, com.tools20022.repository.codeset.PendingReason4Code.mmSentToTaxAuthorities,
-						com.tools20022.repository.codeset.PendingReason4Code.mmValidForTaxAuthorities);
+				code_lazy = () -> Arrays.asList(PendingReason4Code.mmNotDelivered, PendingReason4Code.mmNoPayment, PendingReason4Code.mmOther, PendingReason4Code.mmSentToTaxAuthorities, PendingReason4Code.mmValidForTaxAuthorities);
 				trace_lazy = () -> PendingFailingReasonCode.mmObject();
 			}
 		});

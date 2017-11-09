@@ -20,7 +20,10 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.acmt.AccountModificationInstructionV07;
 import com.tools20022.repository.codeset.DataModification1Code;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -114,10 +117,10 @@ public class ModificationScope35 {
 			componentContext_lazy = () -> ModificationScope35.mmObject();
 			isDerived = false;
 			xmlTag = "ModScpIndctn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ModificationScopeIndication";
 			definition = "Type of modification to be applied.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ModificationScope30.mmModificationScopeIndication;
+			previousVersion_lazy = () -> ModificationScope30.mmModificationScopeIndication;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DataModification1Code.mmObject();
@@ -164,10 +167,10 @@ public class ModificationScope35 {
 			componentContext_lazy = () -> ModificationScope35.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInformation";
 			definition = "Additional information such as remarks or notes that must be conveyed about the party and or  limitations and restrictions.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ModificationScope30.mmAdditionalInformation;
+			previousVersion_lazy = () -> ModificationScope30.mmAdditionalInformation;
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.AdditiononalInformation12.mmObject();
@@ -177,10 +180,10 @@ public class ModificationScope35 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ModificationScope35.mmModificationScopeIndication, com.tools20022.repository.msg.ModificationScope35.mmAdditionalInformation);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountModificationInstructionV07.mmModifiedAdditionalInformation);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(ModificationScope35.mmModificationScopeIndication, ModificationScope35.mmAdditionalInformation);
+				messageBuildingBlock_lazy = () -> Arrays.asList(AccountModificationInstructionV07.mmModifiedAdditionalInformation);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ModificationScope35";
 				definition = "Scope of the modification to be applied on an identified set of information.";
 				previousVersion_lazy = () -> ModificationScope30.mmObject();

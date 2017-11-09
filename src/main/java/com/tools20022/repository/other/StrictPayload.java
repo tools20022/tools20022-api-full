@@ -18,6 +18,9 @@
 package com.tools20022.repository.other;
 
 import com.tools20022.metamodel.MMExternalSchema;
+import com.tools20022.metamodel.MMProcessContent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.concurrent.atomic.AtomicReference;
 
 /**
@@ -56,11 +59,11 @@ public class StrictPayload {
 	final static public MMExternalSchema mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMExternalSchema() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "StrictPayload";
 				definition = "Specifies a data structure that allows the inclusion of any valid XML structure, for example, through an XML Schema. The property namespace is set to 'any'.\r\nThe processContents value is 'strict' which according to the above specification and to ISO 20022:2013 means that the application must understand and validate the content.";
-				processContent = com.tools20022.metamodel.MMProcessContent.STRICT;
+				processContent = MMProcessContent.STRICT;
 			}
 		});
 		return mmObject_lazy.get();

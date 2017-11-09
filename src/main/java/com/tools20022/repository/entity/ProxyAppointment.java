@@ -17,12 +17,11 @@
 
 package com.tools20022.repository.entity;
 
-import com.tools20022.metamodel.MMBusinessAssociationEnd;
-import com.tools20022.metamodel.MMBusinessAttribute;
-import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.*;
 import com.tools20022.repository.codeset.ProxyTypeCode;
 import com.tools20022.repository.datatype.CurrencyAndAmount;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -38,6 +37,31 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.Proxy Proxy}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Proxy1 Proxy1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Proxy3 Proxy3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Proxy2 Proxy2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Proxy4 Proxy4}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Proxy5 Proxy5}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Proxy6 Proxy6}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.VoteInstructionRequest#mmRelatedProxyAppointment
+ * VoteInstructionRequest.mmRelatedProxyAppointment}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InstructionForMeeting#mmProxyAppointment
+ * InstructionForMeeting.mmProxyAppointment}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -55,31 +79,6 @@ import java.util.List;
  * <li>
  * {@linkplain com.tools20022.repository.entity.ProxyAppointment#mmAdditionalParticipationCost
  * ProxyAppointment.mmAdditionalParticipationCost}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.VoteInstructionRequest#mmRelatedProxyAppointment
- * VoteInstructionRequest.mmRelatedProxyAppointment}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InstructionForMeeting#mmProxyAppointment
- * InstructionForMeeting.mmProxyAppointment}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Proxy Proxy}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Proxy1 Proxy1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Proxy3 Proxy3}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Proxy2 Proxy2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Proxy4 Proxy4}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Proxy5 Proxy5}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Proxy6 Proxy6}</li>
  * </ul>
  * </li>
  * <li>
@@ -150,11 +149,10 @@ public class ProxyAppointment {
 	 */
 	public static final MMBusinessAttribute mmProxyType = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Proxy.mmProxyType, com.tools20022.repository.msg.Proxy1.mmProxyType, com.tools20022.repository.msg.Proxy3.mmProxyType,
-					com.tools20022.repository.msg.Proxy2.mmProxyType, com.tools20022.repository.msg.Proxy4.mmProxyType, com.tools20022.repository.msg.Proxy5.mmProxyType, com.tools20022.repository.msg.Proxy6.mmProxyType);
+			derivation_lazy = () -> Arrays.asList(Proxy.mmProxyType, Proxy1.mmProxyType, Proxy3.mmProxyType, Proxy2.mmProxyType, Proxy4.mmProxyType, Proxy5.mmProxyType, Proxy6.mmProxyType);
 			elementContext_lazy = () -> ProxyAppointment.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ProxyType";
 			definition = "Specifies the type of proxy.";
 			maxOccurs = 1;
@@ -203,13 +201,13 @@ public class ProxyAppointment {
 		{
 			elementContext_lazy = () -> ProxyAppointment.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedMeetingInstruction";
 			definition = "Instruction in which the parameters for proxy appointment are included.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.InstructionForMeeting.mmProxyAppointment;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.InstructionForMeeting.mmObject();
 		}
 	};
@@ -243,7 +241,7 @@ public class ProxyAppointment {
 		{
 			elementContext_lazy = () -> ProxyAppointment.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Identification";
 			definition = "Uniquely identifies a proxy card.";
 			maxOccurs = 1;
@@ -290,12 +288,12 @@ public class ProxyAppointment {
 		{
 			elementContext_lazy = () -> ProxyAppointment.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Vote";
 			definition = "Voting instructions for the proxy.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.VoteInstructionRequest.mmRelatedProxyAppointment;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.VoteInstructionRequest.mmObject();
 		}
 	};
@@ -333,7 +331,7 @@ public class ProxyAppointment {
 		{
 			elementContext_lazy = () -> ProxyAppointment.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AdditionalParticipationCost";
 			definition = "Aditional fee associated to the participation of a proxy person such as hotel expenses.";
 			maxOccurs = 1;
@@ -345,13 +343,12 @@ public class ProxyAppointment {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ProxyAppointment";
 				definition = "Specifies that a proxy has been appointed  to represent a party authorised to vote at a general meeting.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.VoteInstructionRequest.mmRelatedProxyAppointment, com.tools20022.repository.entity.InstructionForMeeting.mmProxyAppointment);
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.ProxyAppointment.mmProxyType, com.tools20022.repository.entity.ProxyAppointment.mmRelatedMeetingInstruction,
-						com.tools20022.repository.entity.ProxyAppointment.mmIdentification, com.tools20022.repository.entity.ProxyAppointment.mmVote, com.tools20022.repository.entity.ProxyAppointment.mmAdditionalParticipationCost);
+				element_lazy = () -> Arrays.asList(ProxyAppointment.mmProxyType, ProxyAppointment.mmRelatedMeetingInstruction, ProxyAppointment.mmIdentification, ProxyAppointment.mmVote, ProxyAppointment.mmAdditionalParticipationCost);
 				derivationComponent_lazy = () -> Arrays.asList(Proxy.mmObject(), Proxy1.mmObject(), Proxy3.mmObject(), Proxy2.mmObject(), Proxy4.mmObject(), Proxy5.mmObject(), Proxy6.mmObject());
 			}
 		});

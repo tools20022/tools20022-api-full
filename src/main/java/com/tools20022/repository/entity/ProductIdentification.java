@@ -17,13 +17,12 @@
 
 package com.tools20022.repository.entity;
 
-import com.tools20022.metamodel.MMBusinessAssociationEnd;
-import com.tools20022.metamodel.MMBusinessAttribute;
-import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.*;
 import com.tools20022.repository.choice.ProductIdentifier2Choice;
 import com.tools20022.repository.codeset.ProductIdentifierCode;
 import com.tools20022.repository.datatype.Max35Text;
-import com.tools20022.repository.msg.ProductIdentifier2;
+import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -37,21 +36,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
  * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ProductIdentification#mmIdentifier
- * ProductIdentification.mmIdentifier}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ProductIdentification#mmProduct
- * ProductIdentification.mmProduct}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ProductIdentification#mmType
- * ProductIdentification.mmType}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ProductIdentification#mmGlobalSerialIdentifier
- * ProductIdentification.mmGlobalSerialIdentifier}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ProductIdentifier2
+ * ProductIdentifier2}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.ProductIdentifier2Choice
+ * ProductIdentifier2Choice}</li>
  * </ul>
  * </li>
  * <li>
@@ -75,14 +67,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * ProductIdentifier2Choice.mmOtherProductIdentifier}</li>
  * </ul>
  * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.ProductIdentifier2
- * ProductIdentifier2}</li>
- * <li>{@linkplain com.tools20022.repository.choice.ProductIdentifier2Choice
- * ProductIdentifier2Choice}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ProductIdentification#mmIdentifier
+ * ProductIdentification.mmIdentifier}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ProductIdentification#mmProduct
+ * ProductIdentification.mmProduct}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ProductIdentification#mmType
+ * ProductIdentification.mmType}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ProductIdentification#mmGlobalSerialIdentifier
+ * ProductIdentification.mmGlobalSerialIdentifier}</li>
  * </ul>
  * </li>
  * <li>
@@ -155,12 +154,11 @@ public class ProductIdentification {
 	 */
 	public static final MMBusinessAttribute mmIdentifier = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Product2.mmProductCode, com.tools20022.repository.msg.Product1.mmProductCode, com.tools20022.repository.msg.ProductIdentifier2.mmIdentifier,
-					com.tools20022.repository.msg.TradeProduct1.mmGlobalSerialIdentifier, com.tools20022.repository.msg.Product3.mmProductCode, com.tools20022.repository.msg.Product4.mmProductCode,
-					com.tools20022.repository.msg.Product5.mmProductCode, com.tools20022.repository.msg.TradeProduct2.mmGlobalSerialIdentifier);
+			derivation_lazy = () -> Arrays.asList(Product2.mmProductCode, Product1.mmProductCode, ProductIdentifier2.mmIdentifier, TradeProduct1.mmGlobalSerialIdentifier, Product3.mmProductCode, Product4.mmProductCode,
+					Product5.mmProductCode, TradeProduct2.mmGlobalSerialIdentifier);
 			elementContext_lazy = () -> ProductIdentification.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Identifier";
 			definition = "Specifies the product identifier.";
 			maxOccurs = 1;
@@ -206,13 +204,13 @@ public class ProductIdentification {
 		{
 			elementContext_lazy = () -> ProductIdentification.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Product";
 			definition = "Specifies the product for which an identification is specified.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.Product.mmProductIdentification;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Product.mmObject();
 		}
 	};
@@ -253,10 +251,10 @@ public class ProductIdentification {
 	 */
 	public static final MMBusinessAttribute mmType = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ProductIdentifier2.mmType);
+			derivation_lazy = () -> Arrays.asList(ProductIdentifier2.mmType);
 			elementContext_lazy = () -> ProductIdentification.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Type";
 			definition = "Specifies the type of product identifier by means of a code.";
 			maxOccurs = 1;
@@ -294,7 +292,7 @@ public class ProductIdentification {
 		{
 			elementContext_lazy = () -> ProductIdentification.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "GlobalSerialIdentifier";
 			definition = "Unique global serial identifier for a product instance.";
 			maxOccurs = 1;
@@ -306,14 +304,13 @@ public class ProductIdentification {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ProductIdentification";
 				definition = "Information used to identify a product.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Product.mmProductIdentification);
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ProductIdentifier2Choice.mmStructuredProductIdentifier, com.tools20022.repository.choice.ProductIdentifier2Choice.mmOtherProductIdentifier);
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.ProductIdentification.mmIdentifier, com.tools20022.repository.entity.ProductIdentification.mmProduct,
-						com.tools20022.repository.entity.ProductIdentification.mmType, com.tools20022.repository.entity.ProductIdentification.mmGlobalSerialIdentifier);
+				derivationElement_lazy = () -> Arrays.asList(ProductIdentifier2Choice.mmStructuredProductIdentifier, ProductIdentifier2Choice.mmOtherProductIdentifier);
+				element_lazy = () -> Arrays.asList(ProductIdentification.mmIdentifier, ProductIdentification.mmProduct, ProductIdentification.mmType, ProductIdentification.mmGlobalSerialIdentifier);
 				derivationComponent_lazy = () -> Arrays.asList(ProductIdentifier2.mmObject(), ProductIdentifier2Choice.mmObject());
 			}
 		});

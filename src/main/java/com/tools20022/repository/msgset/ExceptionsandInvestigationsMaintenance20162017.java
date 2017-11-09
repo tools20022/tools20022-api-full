@@ -18,7 +18,9 @@
 package com.tools20022.repository.msgset;
 
 import com.tools20022.metamodel.MMMessageSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.camt.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -99,8 +101,8 @@ public class ExceptionsandInvestigationsMaintenance20162017 {
 	final static public MMMessageSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageSet() {
 			{
-				businessProcessCatalogue_lazy = () -> com.tools20022.repository.GeneratedRepository.mmcatalogue;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				businessProcessCatalogue_lazy = () -> GeneratedRepository.mmcatalogue;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Exceptions and Investigations - Maintenance 2016 - 2017";
 				definition = "This document describes the Exceptions and Investigations message set. ";
 				messageDefinition_lazy = () -> Arrays.asList(NotificationOfCaseAssignmentV04.mmObject(), RejectInvestigationV04.mmObject(), CancelCaseAssignmentV03.mmObject(), RequestForDuplicateV04.mmObject(), DuplicateV04.mmObject(),

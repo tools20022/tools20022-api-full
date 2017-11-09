@@ -19,7 +19,9 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.ShipmentDateRange;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.ShipmentDateRange1;
 import com.tools20022.repository.msg.ShipmentDateRange2;
 import java.util.Arrays;
@@ -130,11 +132,11 @@ public class ShipmentSchedule2Choice {
 			componentContext_lazy = () -> ShipmentSchedule2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "ShipmntDtRg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ShipmentDateRange";
 			definition = "Specifies an earliest shipment date and a latest shipment date.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PaymentSchedule1Choice.mmDateRange);
-			previousVersion_lazy = () -> com.tools20022.repository.choice.ShipmentSchedule1Choice.mmShipmentDateRange;
+			nextVersions_lazy = () -> Arrays.asList(PaymentSchedule1Choice.mmDateRange);
+			previousVersion_lazy = () -> ShipmentSchedule1Choice.mmShipmentDateRange;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -196,11 +198,11 @@ public class ShipmentSchedule2Choice {
 			componentContext_lazy = () -> ShipmentSchedule2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "ShipmntSubSchdl";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ShipmentSubSchedule";
 			definition = "Specifies a shipment schedule, ie, quantity that must be shipped no sooner than the earliest shipment date and no later than the latest shipment date.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PaymentSchedule1Choice.mmSubSchedule);
-			previousVersion_lazy = () -> com.tools20022.repository.choice.ShipmentSchedule1Choice.mmShipmentSubSchedule;
+			nextVersions_lazy = () -> Arrays.asList(PaymentSchedule1Choice.mmSubSchedule);
+			previousVersion_lazy = () -> ShipmentSchedule1Choice.mmShipmentSubSchedule;
 			minOccurs = 2;
 			isComposite = true;
 			type_lazy = () -> ShipmentDateRange2.mmObject();
@@ -210,10 +212,10 @@ public class ShipmentSchedule2Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ShipmentSchedule2Choice.mmShipmentDateRange, com.tools20022.repository.choice.ShipmentSchedule2Choice.mmShipmentSubSchedule);
+				messageElement_lazy = () -> Arrays.asList(ShipmentSchedule2Choice.mmShipmentDateRange, ShipmentSchedule2Choice.mmShipmentSubSchedule);
 				trace_lazy = () -> ShipmentDateRange.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ShipmentSchedule2Choice";
 				definition = "Choice between earliest/latest shipment date and a shipment schedule per sub quantity of line item quantity.";
 				nextVersions_lazy = () -> Arrays.asList(PaymentSchedule1Choice.mmObject());

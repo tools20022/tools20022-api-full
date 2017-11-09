@@ -19,7 +19,9 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.ProductIdentification;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification4;
 import com.tools20022.repository.msg.ProductIdentifier2;
 import java.util.Arrays;
@@ -101,7 +103,7 @@ public class ProductIdentifier2Choice {
 			componentContext_lazy = () -> ProductIdentifier2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "StrdPdctIdr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StructuredProductIdentifier";
 			definition = "Specifies the type of product identifier.";
 			maxOccurs = 1;
@@ -149,7 +151,7 @@ public class ProductIdentifier2Choice {
 			componentContext_lazy = () -> ProductIdentifier2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "OthrPdctIdr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherProductIdentifier";
 			definition = "Specifies the type of product identifier not present in the code list.";
 			maxOccurs = 1;
@@ -162,10 +164,10 @@ public class ProductIdentifier2Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ProductIdentifier2Choice.mmStructuredProductIdentifier, com.tools20022.repository.choice.ProductIdentifier2Choice.mmOtherProductIdentifier);
+				messageElement_lazy = () -> Arrays.asList(ProductIdentifier2Choice.mmStructuredProductIdentifier, ProductIdentifier2Choice.mmOtherProductIdentifier);
 				trace_lazy = () -> ProductIdentification.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ProductIdentifier2Choice";
 				definition = "Identifies a product in coded form or free text.";
 			}

@@ -19,10 +19,12 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.InvestorRestrictionType2Choice;
 import com.tools20022.repository.choice.InvestorType2Choice;
 import com.tools20022.repository.choice.LegalRestrictions2Choice;
 import com.tools20022.repository.choice.SecurityRestrictionType1Choice;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -105,7 +107,7 @@ public class SecurityRestriction1 {
 			componentContext_lazy = () -> SecurityRestriction1.mmObject();
 			isDerived = false;
 			xmlTag = "FctvPrd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EffectivePeriod";
 			definition = "Period during which the restriction applies.";
 			maxOccurs = 1;
@@ -150,7 +152,7 @@ public class SecurityRestriction1 {
 			componentContext_lazy = () -> SecurityRestriction1.mmObject();
 			isDerived = false;
 			xmlTag = "RstrctnTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RestrictionType";
 			definition = "Type of the restriction, for example, selling restriction, buying restriction, placing restriction.";
 			maxOccurs = 1;
@@ -193,7 +195,7 @@ public class SecurityRestriction1 {
 			componentContext_lazy = () -> SecurityRestriction1.mmObject();
 			isDerived = false;
 			xmlTag = "LglRstrctnTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LegalRestrictionType";
 			definition = "Specifies the regulatory restrictions applicable to a security.";
 			maxOccurs = 1;
@@ -238,7 +240,7 @@ public class SecurityRestriction1 {
 			componentContext_lazy = () -> SecurityRestriction1.mmObject();
 			isDerived = false;
 			xmlTag = "InvstrRstrctnTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestorRestrictionType";
 			definition = "Specifies whether the restriction to be applied is relevant for citizen, resident, country.";
 			minOccurs = 0;
@@ -279,7 +281,7 @@ public class SecurityRestriction1 {
 			componentContext_lazy = () -> SecurityRestriction1.mmObject();
 			isDerived = false;
 			xmlTag = "InvstrTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestorType";
 			definition = "Type of investor that is allowed to hold the security.";
 			minOccurs = 0;
@@ -290,11 +292,10 @@ public class SecurityRestriction1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecurityRestriction1.mmEffectivePeriod, com.tools20022.repository.msg.SecurityRestriction1.mmRestrictionType,
-						com.tools20022.repository.msg.SecurityRestriction1.mmLegalRestrictionType, com.tools20022.repository.msg.SecurityRestriction1.mmInvestorRestrictionType,
-						com.tools20022.repository.msg.SecurityRestriction1.mmInvestorType);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(SecurityRestriction1.mmEffectivePeriod, SecurityRestriction1.mmRestrictionType, SecurityRestriction1.mmLegalRestrictionType, SecurityRestriction1.mmInvestorRestrictionType,
+						SecurityRestriction1.mmInvestorType);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SecurityRestriction1";
 				definition = "Restrictions applicable to the security.";
 			}

@@ -18,7 +18,11 @@
 package com.tools20022.repository.entity;
 
 import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.TransportPartyRole;
+import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.Consignment2;
+import com.tools20022.repository.msg.Consignment4;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -66,11 +70,11 @@ public class Consignee extends TransportPartyRole {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Consignee";
 				definition = "Party to whom the goods must be delivered.";
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Consignment2.mmConsignee, com.tools20022.repository.msg.Consignment4.mmConsignee);
+				derivationElement_lazy = () -> Arrays.asList(Consignment2.mmConsignee, Consignment4.mmConsignee);
 				superType_lazy = () -> TransportPartyRole.mmObject();
 			}
 		});

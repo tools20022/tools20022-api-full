@@ -20,11 +20,13 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.PriceRateOrAmountChoice;
 import com.tools20022.repository.codeset.PriceSource2Code;
 import com.tools20022.repository.codeset.TypeOfPrice13Code;
 import com.tools20022.repository.entity.SecuritiesPricing;
 import com.tools20022.repository.entity.SourceOfPrice;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -100,11 +102,11 @@ public class Price6 {
 	 */
 	public static final MMMessageAssociationEnd mmRateOrAmount = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmRate;
+			businessElementTrace_lazy = () -> SecuritiesPricing.mmRate;
 			componentContext_lazy = () -> Price6.mmObject();
 			isDerived = false;
 			xmlTag = "RateOrAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RateOrAmount";
 			definition = "Value of the price expressed as a currency and value or as a rate.";
 			maxOccurs = 1;
@@ -148,11 +150,11 @@ public class Price6 {
 	 */
 	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmPriceType;
+			businessElementTrace_lazy = () -> SecuritiesPricing.mmPriceType;
 			componentContext_lazy = () -> Price6.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Specification of the price type.";
 			maxOccurs = 1;
@@ -199,7 +201,7 @@ public class Price6 {
 			componentContext_lazy = () -> Price6.mmObject();
 			isDerived = false;
 			xmlTag = "Src";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Source";
 			definition = "Source for the price valuation.";
 			maxOccurs = 1;
@@ -211,10 +213,10 @@ public class Price6 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Price6.mmRateOrAmount, com.tools20022.repository.msg.Price6.mmType, com.tools20022.repository.msg.Price6.mmSource);
+				messageElement_lazy = () -> Arrays.asList(Price6.mmRateOrAmount, Price6.mmType, Price6.mmSource);
 				trace_lazy = () -> SecuritiesPricing.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Price6";
 				definition = "Provides the value, type and source of price.";
 			}

@@ -17,9 +17,13 @@
 
 package com.tools20022.repository.entity;
 
+import com.tools20022.metamodel.MMAggregation;
 import com.tools20022.metamodel.MMBusinessAssociationEnd;
 import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.MandatoryCorporateAction;
+import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -36,14 +40,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ChoiceCorporateAction#mmCorporateActionOptionDefinition
- * ChoiceCorporateAction.mmCorporateActionOptionDefinition}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
  * associationDomain} =
@@ -57,6 +53,14 @@ import java.util.List;
  * superType} =
  * {@linkplain com.tools20022.repository.entity.MandatoryCorporateAction
  * MandatoryCorporateAction}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ChoiceCorporateAction#mmCorporateActionOptionDefinition
+ * ChoiceCorporateAction.mmCorporateActionOptionDefinition}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -140,18 +144,16 @@ public class ChoiceCorporateAction extends MandatoryCorporateAction {
 	 */
 	public static final MMBusinessAssociationEnd mmCorporateActionOptionDefinition = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InstructedBalanceDetails1.mmOptionDetails, com.tools20022.repository.msg.InstructedBalanceDetails2.mmOptionDetails,
-					com.tools20022.repository.msg.InstructedBalanceDetails3.mmOptionDetails, com.tools20022.repository.msg.InstructedBalanceDetails4.mmOptionDetails,
-					com.tools20022.repository.msg.CorporateActionDeactivationInstruction1.mmOptionDetails, com.tools20022.repository.msg.InstructedBalanceDetails5.mmOptionDetails,
-					com.tools20022.repository.msg.InstructedBalanceDetails6.mmOptionDetails);
+			derivation_lazy = () -> Arrays.asList(InstructedBalanceDetails1.mmOptionDetails, InstructedBalanceDetails2.mmOptionDetails, InstructedBalanceDetails3.mmOptionDetails, InstructedBalanceDetails4.mmOptionDetails,
+					CorporateActionDeactivationInstruction1.mmOptionDetails, InstructedBalanceDetails5.mmOptionDetails, InstructedBalanceDetails6.mmOptionDetails);
 			elementContext_lazy = () -> ChoiceCorporateAction.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CorporateActionOptionDefinition";
 			definition = "Definition of the option of a corporate event.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.CorporateActionOption.mmRelatedChoiceCorporateAction;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.CorporateActionOption.mmObject();
 		}
 	};
@@ -159,13 +161,13 @@ public class ChoiceCorporateAction extends MandatoryCorporateAction {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ChoiceCorporateAction";
 				definition = "Mandatory with choice corporate action event that involves a choice on behalf of the owner of the securities. The shareholders are given a chance to choose among several options.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CorporateActionOption.mmRelatedChoiceCorporateAction);
 				superType_lazy = () -> MandatoryCorporateAction.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.ChoiceCorporateAction.mmCorporateActionOptionDefinition);
+				element_lazy = () -> Arrays.asList(ChoiceCorporateAction.mmCorporateActionOptionDefinition);
 			}
 		});
 		return mmObject_lazy.get();

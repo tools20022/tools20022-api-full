@@ -20,8 +20,10 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
 import com.tools20022.repository.entity.ExposureCalculation;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.Collateral1;
 import com.tools20022.repository.msg.MarginCollateral1;
 import java.util.Arrays;
@@ -114,7 +116,7 @@ public class CollateralBalance1Choice {
 			componentContext_lazy = () -> CollateralBalance1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "TtlColl";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalCollateral";
 			definition = "Collateral currently received (+)/delivered (-) in the base currency. This amount is after the haircut has been applied.";
 			maxOccurs = 1;
@@ -164,7 +166,7 @@ public class CollateralBalance1Choice {
 			componentContext_lazy = () -> CollateralBalance1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "CollDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralDetails";
 			definition = "Provides details about the collateral held, in transit or that still needs to be agreed by both parties, for the variation margin and optionally the segregated independent amount.";
 			maxOccurs = 1;
@@ -211,11 +213,11 @@ public class CollateralBalance1Choice {
 	 */
 	public static final MMMessageAssociationEnd mmSegregatedIndependentAmount = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ExposureCalculation.mmCurrentSegregatedIndependentAmount;
+			businessElementTrace_lazy = () -> ExposureCalculation.mmCurrentSegregatedIndependentAmount;
 			componentContext_lazy = () -> CollateralBalance1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "SgrtdIndpdntAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SegregatedIndependentAmount";
 			definition = "Provides details about the collateral held, in transit or that still needs to be agreed by both parties, against the segregated independent amount only.";
 			maxOccurs = 1;
@@ -228,11 +230,10 @@ public class CollateralBalance1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CollateralBalance1Choice.mmTotalCollateral, com.tools20022.repository.choice.CollateralBalance1Choice.mmCollateralDetails,
-						com.tools20022.repository.choice.CollateralBalance1Choice.mmSegregatedIndependentAmount);
+				messageElement_lazy = () -> Arrays.asList(CollateralBalance1Choice.mmTotalCollateral, CollateralBalance1Choice.mmCollateralDetails, CollateralBalance1Choice.mmSegregatedIndependentAmount);
 				trace_lazy = () -> ExposureCalculation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CollateralBalance1Choice";
 				definition = "Choice to provide the collateral balance for the variation margin and the segregated independent amount, or the segregated independent amount only.";
 			}

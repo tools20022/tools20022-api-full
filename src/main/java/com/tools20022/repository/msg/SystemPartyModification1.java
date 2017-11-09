@@ -20,8 +20,10 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.SystemPartyModification1Choice;
 import com.tools20022.repository.codeset.DataModification1Code;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -96,7 +98,7 @@ public class SystemPartyModification1 {
 			componentContext_lazy = () -> SystemPartyModification1.mmObject();
 			isDerived = false;
 			xmlTag = "ScpIndctn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ScopeIndication";
 			definition = "Specifies the type of requested modification.";
 			maxOccurs = 1;
@@ -140,7 +142,7 @@ public class SystemPartyModification1 {
 			componentContext_lazy = () -> SystemPartyModification1.mmObject();
 			isDerived = false;
 			xmlTag = "ReqdMod";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestedModification";
 			definition = "Specifies the set of elements to be modified for the party reference data.";
 			maxOccurs = 1;
@@ -153,9 +155,9 @@ public class SystemPartyModification1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SystemPartyModification1.mmScopeIndication, com.tools20022.repository.msg.SystemPartyModification1.mmRequestedModification);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(SystemPartyModification1.mmScopeIndication, SystemPartyModification1.mmRequestedModification);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SystemPartyModification1";
 				definition = "Information about the kind of modification request for party reference data.";
 			}

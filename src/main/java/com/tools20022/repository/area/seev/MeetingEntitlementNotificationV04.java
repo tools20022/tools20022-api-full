@@ -20,6 +20,7 @@ package com.tools20022.repository.area.seev;
 import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.SecuritiesEventsPreviousVersion;
 import com.tools20022.repository.choice.PartyIdentification9Choice;
 import com.tools20022.repository.msg.*;
@@ -48,6 +49,9 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code seev.003.001.04}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.SecuritiesEventsPreviousVersion
@@ -92,9 +96,6 @@ import java.util.List;
  * MeetingEntitlementNotificationV04.mmExtension}</li>
  * </ul>
  * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code seev.003.001.04}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -149,7 +150,7 @@ public class MeetingEntitlementNotificationV04 {
 	public static final MMMessageBuildingBlock mmIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Identifies the notification of entitlement instruction.";
 			maxOccurs = 1;
@@ -193,10 +194,10 @@ public class MeetingEntitlementNotificationV04 {
 	public static final MMMessageBuildingBlock mmRelatedReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "RltdRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedReference";
 			definition = "Identifies the meeting entitlement message to be modified.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.MeetingEntitlementNotificationV05.mmRelatedReference);
+			nextVersions_lazy = () -> Arrays.asList(MeetingEntitlementNotificationV05.mmRelatedReference);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> MessageIdentification.mmObject();
@@ -237,10 +238,10 @@ public class MeetingEntitlementNotificationV04 {
 	public static final MMMessageBuildingBlock mmMeetingReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "MtgRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MeetingReference";
 			definition = "Series of elements which allow to identify a meeting.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.MeetingEntitlementNotificationV05.mmMeetingReference);
+			nextVersions_lazy = () -> Arrays.asList(MeetingEntitlementNotificationV05.mmMeetingReference);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> MeetingReference4.mmObject();
@@ -273,7 +274,7 @@ public class MeetingEntitlementNotificationV04 {
 	public static final MMMessageBuildingBlock mmNotifyingParty = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "NtifngPty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotifyingParty";
 			definition = "Party notifying the entitlement.";
 			maxOccurs = 1;
@@ -319,10 +320,10 @@ public class MeetingEntitlementNotificationV04 {
 	public static final MMMessageBuildingBlock mmSecurity = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Scty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Security";
 			definition = "Identifies the security for which the meeting is organised, the account and the positions of the security holder.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.MeetingEntitlementNotificationV05.mmSecurity);
+			nextVersions_lazy = () -> Arrays.asList(MeetingEntitlementNotificationV05.mmSecurity);
 			maxOccurs = 200;
 			minOccurs = 1;
 			complexType_lazy = () -> SecurityPosition7.mmObject();
@@ -363,10 +364,10 @@ public class MeetingEntitlementNotificationV04 {
 	public static final MMMessageBuildingBlock mmEligibility = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Elgblty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Eligibility";
 			definition = "Defines the dates determining eligibility.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.MeetingEntitlementNotificationV05.mmEligibility);
+			nextVersions_lazy = () -> Arrays.asList(MeetingEntitlementNotificationV05.mmEligibility);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> EligibilityDates1.mmObject();
@@ -401,7 +402,7 @@ public class MeetingEntitlementNotificationV04 {
 	public static final MMMessageBuildingBlock mmExtension = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Xtnsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Extension";
 			definition = "Additional information that can not be captured in the structured fields and/or any other specific block.";
 			minOccurs = 0;
@@ -412,7 +413,7 @@ public class MeetingEntitlementNotificationV04 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MeetingEntitlementNotificationV04";
 				definition = "Scope\r\nAn account servicer sends the MeetingEntitlementNotification to an issuer, its agent, an intermediary or an account owner to advise the entitlement in relation to a shareholders meeting.\r\nUsage\r\nThis message is sent to advise the quantity of securities held by an account owner. The balance is specified for the securities for which the meeting is taking place.\r\nThis entitlement message is sent by the account servicer or the registrar to an intermediary, the issuer's agent or the issuer. It is also sent between the account servicer and the account owner or the party holding the right to vote.\r\nThe message is also used to amend a previously sent MeetingEntitlementNotification. To notify an update, the RelatedReference must be included in the message.";
 				nextVersions_lazy = () -> Arrays.asList(MeetingEntitlementNotificationV05.mmObject());
@@ -421,10 +422,8 @@ public class MeetingEntitlementNotificationV04 {
 				rootElement = "Document";
 				xmlTag = "MtgEntitlmntNtfctn";
 				businessArea_lazy = () -> SecuritiesEventsPreviousVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.MeetingEntitlementNotificationV04.mmIdentification,
-						com.tools20022.repository.area.seev.MeetingEntitlementNotificationV04.mmRelatedReference, com.tools20022.repository.area.seev.MeetingEntitlementNotificationV04.mmMeetingReference,
-						com.tools20022.repository.area.seev.MeetingEntitlementNotificationV04.mmNotifyingParty, com.tools20022.repository.area.seev.MeetingEntitlementNotificationV04.mmSecurity,
-						com.tools20022.repository.area.seev.MeetingEntitlementNotificationV04.mmEligibility, com.tools20022.repository.area.seev.MeetingEntitlementNotificationV04.mmExtension);
+				messageBuildingBlock_lazy = () -> Arrays.asList(MeetingEntitlementNotificationV04.mmIdentification, MeetingEntitlementNotificationV04.mmRelatedReference, MeetingEntitlementNotificationV04.mmMeetingReference,
+						MeetingEntitlementNotificationV04.mmNotifyingParty, MeetingEntitlementNotificationV04.mmSecurity, MeetingEntitlementNotificationV04.mmEligibility, MeetingEntitlementNotificationV04.mmExtension);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "seev";

@@ -19,8 +19,10 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.MessageFunction2Code;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -99,7 +101,7 @@ public class GeneralInformation3 {
 			componentContext_lazy = () -> GeneralInformation3.mmObject();
 			isDerived = false;
 			xmlTag = "MsgId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageIdentification";
 			definition = "Unique and unambiguous identifier for the message, as assigned by the sender.";
 			maxOccurs = 1;
@@ -142,7 +144,7 @@ public class GeneralInformation3 {
 			componentContext_lazy = () -> GeneralInformation3.mmObject();
 			isDerived = false;
 			xmlTag = "MsgFctn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageFunction";
 			definition = "Indicates whether the message is sent as a request or as a response.";
 			maxOccurs = 1;
@@ -184,7 +186,7 @@ public class GeneralInformation3 {
 			componentContext_lazy = () -> GeneralInformation3.mmObject();
 			isDerived = false;
 			xmlTag = "ReqRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestReference";
 			definition = "Reference to the request message for which the notification is sent.";
 			maxOccurs = 1;
@@ -196,10 +198,9 @@ public class GeneralInformation3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GeneralInformation3.mmMessageIdentification, com.tools20022.repository.msg.GeneralInformation3.mmMessageFunction,
-						com.tools20022.repository.msg.GeneralInformation3.mmRequestReference);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(GeneralInformation3.mmMessageIdentification, GeneralInformation3.mmMessageFunction, GeneralInformation3.mmRequestReference);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "GeneralInformation3";
 				definition = "General Information, indicating the function of the  message.";
 			}

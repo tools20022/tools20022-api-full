@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.FlowDirectionTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -83,7 +85,7 @@ public class FlowDirectionType1Code extends FlowDirectionTypeCode {
 	 */
 	public static final MMCode mmIncoming = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Incoming";
 			owner_lazy = () -> FlowDirectionType1Code.mmObject();
 		}
@@ -106,7 +108,7 @@ public class FlowDirectionType1Code extends FlowDirectionTypeCode {
 	 */
 	public static final MMCode mmOutgoing = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Outgoing";
 			owner_lazy = () -> FlowDirectionType1Code.mmObject();
 		}
@@ -115,12 +117,12 @@ public class FlowDirectionType1Code extends FlowDirectionTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("INCG");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FlowDirectionType1Code";
 				definition = "Specifies the direction of a cash flow.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.FlowDirectionType1Code.mmIncoming, com.tools20022.repository.codeset.FlowDirectionType1Code.mmOutgoing);
+				code_lazy = () -> Arrays.asList(FlowDirectionType1Code.mmIncoming, FlowDirectionType1Code.mmOutgoing);
 				trace_lazy = () -> FlowDirectionTypeCode.mmObject();
 			}
 		});

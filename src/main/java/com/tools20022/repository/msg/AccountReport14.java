@@ -19,8 +19,9 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
-import com.tools20022.repository.entity.AccountServicerRole;
-import com.tools20022.repository.entity.CashAccountContract;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -117,11 +118,11 @@ public class AccountReport14 {
 	 */
 	public static final MMMessageAssociationEnd mmAccount = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashAccountContract.mmCashAccount;
+			businessElementTrace_lazy = () -> CashAccountContract.mmCashAccount;
 			componentContext_lazy = () -> AccountReport14.mmObject();
 			isDerived = false;
 			xmlTag = "Acct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Account";
 			definition = "Characteristics of the account.";
 			maxOccurs = 1;
@@ -172,7 +173,7 @@ public class AccountReport14 {
 			componentContext_lazy = () -> AccountReport14.mmObject();
 			isDerived = false;
 			xmlTag = "UndrlygMstrAgrmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnderlyingMasterAgreement";
 			definition = "Account contract established between the organisation or the group to which the organisation belongs, and the account servicer. This contract has to be applied for the new account to be opened and maintained.";
 			maxOccurs = 1;
@@ -219,7 +220,7 @@ public class AccountReport14 {
 			componentContext_lazy = () -> AccountReport14.mmObject();
 			isDerived = false;
 			xmlTag = "CtrctDts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ContractDates";
 			definition = "Specifies target and actual dates.";
 			maxOccurs = 1;
@@ -262,11 +263,11 @@ public class AccountReport14 {
 	 */
 	public static final MMMessageAssociationEnd mmMandate = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashAccountService.mmCashAccountMandate;
+			businessElementTrace_lazy = () -> CashAccountService.mmCashAccountMandate;
 			componentContext_lazy = () -> AccountReport14.mmObject();
 			isDerived = false;
 			xmlTag = "Mndt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Mandate";
 			definition = "Information specifying the account mandate.";
 			minOccurs = 0;
@@ -311,11 +312,11 @@ public class AccountReport14 {
 	 */
 	public static final MMMessageAssociationEnd mmReferenceAccount = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashAccountContract.mmCashAccount;
+			businessElementTrace_lazy = () -> CashAccountContract.mmCashAccount;
 			componentContext_lazy = () -> AccountReport14.mmObject();
 			isDerived = false;
 			xmlTag = "RefAcct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReferenceAccount";
 			definition = "Unique and unambiguous identification of the account used as a reference for the opening of another account.";
 			maxOccurs = 1;
@@ -361,11 +362,11 @@ public class AccountReport14 {
 	 */
 	public static final MMMessageAssociationEnd mmBalanceTransferAccount = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentPartyRole.mmCashAccount;
+			businessElementTrace_lazy = () -> PaymentPartyRole.mmCashAccount;
 			componentContext_lazy = () -> AccountReport14.mmObject();
 			isDerived = false;
 			xmlTag = "BalTrfAcct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BalanceTransferAccount";
 			definition = "Unique and unambiguous identification of the account where to transfer the balance.";
 			maxOccurs = 1;
@@ -413,7 +414,7 @@ public class AccountReport14 {
 			componentContext_lazy = () -> AccountReport14.mmObject();
 			isDerived = false;
 			xmlTag = "TrfAcctSvcrId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransferAccountServicerIdentification";
 			definition = "Identification of  the transfer account servicer.";
 			maxOccurs = 1;
@@ -457,11 +458,11 @@ public class AccountReport14 {
 	 */
 	public static final MMMessageAssociationEnd mmAccountOwner = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Organisation.mmOrganisationIdentification;
+			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> AccountReport14.mmObject();
 			isDerived = false;
 			xmlTag = "AcctOwnr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountOwner";
 			definition = "Party that legally owns the account.";
 			maxOccurs = 1;
@@ -502,7 +503,7 @@ public class AccountReport14 {
 			componentContext_lazy = () -> AccountReport14.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Proprietary characteristics of the account.";
 			minOccurs = 0;
@@ -514,13 +515,11 @@ public class AccountReport14 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountReport14.mmAccount, com.tools20022.repository.msg.AccountReport14.mmUnderlyingMasterAgreement,
-						com.tools20022.repository.msg.AccountReport14.mmContractDates, com.tools20022.repository.msg.AccountReport14.mmMandate, com.tools20022.repository.msg.AccountReport14.mmReferenceAccount,
-						com.tools20022.repository.msg.AccountReport14.mmBalanceTransferAccount, com.tools20022.repository.msg.AccountReport14.mmTransferAccountServicerIdentification,
-						com.tools20022.repository.msg.AccountReport14.mmAccountOwner, com.tools20022.repository.msg.AccountReport14.mmProprietary);
+				messageElement_lazy = () -> Arrays.asList(AccountReport14.mmAccount, AccountReport14.mmUnderlyingMasterAgreement, AccountReport14.mmContractDates, AccountReport14.mmMandate, AccountReport14.mmReferenceAccount,
+						AccountReport14.mmBalanceTransferAccount, AccountReport14.mmTransferAccountServicerIdentification, AccountReport14.mmAccountOwner, AccountReport14.mmProprietary);
 				trace_lazy = () -> CashAccountContract.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "AccountReport14";
 				definition = "Reports on the actual set up up of the account, related services and mandates.";
 			}

@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.RejectionReasonV3Code;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -87,7 +89,7 @@ public class PendingCancellationReason5Code extends RejectionReasonV3Code {
 	 */
 	public static final MMCode mmAccountServicerDeadlineMissed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountServicerDeadlineMissed";
 			owner_lazy = () -> PendingCancellationReason5Code.mmObject();
 		}
@@ -110,7 +112,7 @@ public class PendingCancellationReason5Code extends RejectionReasonV3Code {
 	 */
 	public static final MMCode mmQuantityRejection = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuantityRejection";
 			owner_lazy = () -> PendingCancellationReason5Code.mmObject();
 		}
@@ -133,7 +135,7 @@ public class PendingCancellationReason5Code extends RejectionReasonV3Code {
 	 */
 	public static final MMCode mmAmountRejection = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmountRejection";
 			owner_lazy = () -> PendingCancellationReason5Code.mmObject();
 		}
@@ -156,7 +158,7 @@ public class PendingCancellationReason5Code extends RejectionReasonV3Code {
 	 */
 	public static final MMCode mmMarketDeadlineMissed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketDeadlineMissed";
 			owner_lazy = () -> PendingCancellationReason5Code.mmObject();
 		}
@@ -179,7 +181,7 @@ public class PendingCancellationReason5Code extends RejectionReasonV3Code {
 	 */
 	public static final MMCode mmOther = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
 			owner_lazy = () -> PendingCancellationReason5Code.mmObject();
 		}
@@ -188,13 +190,12 @@ public class PendingCancellationReason5Code extends RejectionReasonV3Code {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PendingCancellationReason5Code";
 				definition = "Specifies the reason why the cancellation request has a pending status.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PendingCancellationReason5Code.mmAccountServicerDeadlineMissed, com.tools20022.repository.codeset.PendingCancellationReason5Code.mmQuantityRejection,
-						com.tools20022.repository.codeset.PendingCancellationReason5Code.mmAmountRejection, com.tools20022.repository.codeset.PendingCancellationReason5Code.mmMarketDeadlineMissed,
-						com.tools20022.repository.codeset.PendingCancellationReason5Code.mmOther);
+				code_lazy = () -> Arrays.asList(PendingCancellationReason5Code.mmAccountServicerDeadlineMissed, PendingCancellationReason5Code.mmQuantityRejection, PendingCancellationReason5Code.mmAmountRejection,
+						PendingCancellationReason5Code.mmMarketDeadlineMissed, PendingCancellationReason5Code.mmOther);
 				trace_lazy = () -> RejectionReasonV3Code.mmObject();
 			}
 		});

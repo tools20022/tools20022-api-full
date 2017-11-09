@@ -19,7 +19,9 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.Reservation;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -108,10 +110,10 @@ public class CurrentAndDefaultReservation2 {
 			componentContext_lazy = () -> CurrentAndDefaultReservation2.mmObject();
 			isDerived = false;
 			xmlTag = "CurRsvatn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrentReservation";
 			definition = "Report is given for a current reservation.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CurrentAndDefaultReservation1.mmCurrentReservation;
+			previousVersion_lazy = () -> CurrentAndDefaultReservation1.mmCurrentReservation;
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.ReservationReport4.mmObject();
@@ -159,10 +161,10 @@ public class CurrentAndDefaultReservation2 {
 			componentContext_lazy = () -> CurrentAndDefaultReservation2.mmObject();
 			isDerived = false;
 			xmlTag = "DfltRsvatn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DefaultReservation";
 			definition = "Report is given for a default reservation.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CurrentAndDefaultReservation1.mmDefaultReservation;
+			previousVersion_lazy = () -> CurrentAndDefaultReservation1.mmDefaultReservation;
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.ReservationReport4.mmObject();
@@ -172,10 +174,10 @@ public class CurrentAndDefaultReservation2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CurrentAndDefaultReservation2.mmCurrentReservation, com.tools20022.repository.msg.CurrentAndDefaultReservation2.mmDefaultReservation);
+				messageElement_lazy = () -> Arrays.asList(CurrentAndDefaultReservation2.mmCurrentReservation, CurrentAndDefaultReservation2.mmDefaultReservation);
 				trace_lazy = () -> Reservation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CurrentAndDefaultReservation2";
 				definition = "Reports on reservations.";
 				previousVersion_lazy = () -> CurrentAndDefaultReservation1.mmObject();

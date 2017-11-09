@@ -19,8 +19,13 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.seev.CorporateActionMovementConfirmationV05;
+import com.tools20022.repository.area.seev.CorporateActionMovementReversalAdviceV05;
 import com.tools20022.repository.choice.LotteryTypeFormat1Choice;
 import com.tools20022.repository.entity.CorporateActionEvent;
+import com.tools20022.repository.entity.Lottery;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -114,7 +119,7 @@ public class CorporateAction14 {
 			componentContext_lazy = () -> CorporateAction14.mmObject();
 			isDerived = false;
 			xmlTag = "DtDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DateDetails";
 			definition = "Provides information about the dates related to a corporate action event.";
 			maxOccurs = 1;
@@ -158,11 +163,11 @@ public class CorporateAction14 {
 	 */
 	public static final MMMessageAssociationEnd mmLotteryType = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Lottery.mmLotteryType;
+			businessElementTrace_lazy = () -> Lottery.mmLotteryType;
 			componentContext_lazy = () -> CorporateAction14.mmObject();
 			isDerived = false;
 			xmlTag = "LtryTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LotteryType";
 			definition = "Specifies the type of lottery announced.";
 			maxOccurs = 1;
@@ -175,12 +180,11 @@ public class CorporateAction14 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateAction14.mmDateDetails, com.tools20022.repository.msg.CorporateAction14.mmLotteryType);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.CorporateActionMovementConfirmationV05.mmCorporateActionDetails,
-						com.tools20022.repository.area.seev.CorporateActionMovementReversalAdviceV05.mmCorporateActionDetails);
+				messageElement_lazy = () -> Arrays.asList(CorporateAction14.mmDateDetails, CorporateAction14.mmLotteryType);
+				messageBuildingBlock_lazy = () -> Arrays.asList(CorporateActionMovementConfirmationV05.mmCorporateActionDetails, CorporateActionMovementReversalAdviceV05.mmCorporateActionDetails);
 				trace_lazy = () -> CorporateActionEvent.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateAction14";
 				definition = "Provides information about the corporate action event.";
 			}

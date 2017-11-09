@@ -17,12 +17,11 @@
 
 package com.tools20022.repository.entity;
 
-import com.tools20022.metamodel.MMBusinessAssociationEnd;
-import com.tools20022.metamodel.MMBusinessAttribute;
-import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.*;
 import com.tools20022.repository.choice.*;
 import com.tools20022.repository.codeset.*;
 import com.tools20022.repository.entity.Status;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -36,126 +35,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.PaymentStatus#mmStatus
- * PaymentStatus.mmStatus}</li>
- * <li>{@linkplain com.tools20022.repository.entity.PaymentStatus#mmPayment
- * PaymentStatus.mmPayment}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.PaymentStatus#mmUnmatchedStatusReason
- * PaymentStatus.mmUnmatchedStatusReason}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.PaymentStatus#mmSuspendedStatusReason
- * PaymentStatus.mmSuspendedStatusReason}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.PaymentStatus#mmPendingSettlement
- * PaymentStatus.mmPendingSettlement}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.PaymentStatus#mmInstructionStatus
- * PaymentStatus.mmInstructionStatus}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.PaymentStatus#mmTransactionRejectionReason
- * PaymentStatus.mmTransactionRejectionReason}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.PaymentStatus#mmRelatedInvestigationCase
- * PaymentStatus.mmRelatedInvestigationCase}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.PaymentStatus#mmNotificationStatus
- * PaymentStatus.mmNotificationStatus}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.PaymentStatus#mmTransactionStatus
- * PaymentStatus.mmTransactionStatus}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.PaymentStatus#mmCashPaymentStatus
- * PaymentStatus.mmCashPaymentStatus}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.PaymentStatus#mmUnsuccessfulStatusReason
- * PaymentStatus.mmUnsuccessfulStatusReason}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.PaymentStatus#mmCancellationReason
- * PaymentStatus.mmCancellationReason}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.PaymentStatus#mmMandateRejectionReason
- * PaymentStatus.mmMandateRejectionReason}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.PaymentStatus#mmPendingFailingSettlement
- * PaymentStatus.mmPendingFailingSettlement}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Payment#mmPaymentStatus
- * Payment.mmPaymentStatus}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.PaymentInvestigationCase#mmPaymentStatus
- * PaymentInvestigationCase.mmPaymentStatus}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
- * derivationElement} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msg.InstructionStatusSearch2#mmPaymentInstructionStatus
- * InstructionStatusSearch2.mmPaymentInstructionStatus}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.InstructionStatusSearch3#mmPaymentInstructionStatus
- * InstructionStatusSearch3.mmPaymentInstructionStatus}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PaymentSearch4#mmStatus
- * PaymentSearch4.mmStatus}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentStatusDetails1#mmPaymentInstructionStatus
- * PaymentStatusDetails1.mmPaymentInstructionStatus}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PaymentStatus1#mmCode
- * PaymentStatus1.mmCode}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.ReturnReasonInformation10#mmReason
- * ReturnReasonInformation10.mmReason}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.ReversalReasonInformation1#mmReversalReason
- * ReversalReasonInformation1.mmReversalReason}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.StatusReasonInformation1#mmStatusReason
- * StatusReasonInformation1.mmStatusReason}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.StatusReasonInformation8#mmReason
- * StatusReasonInformation8.mmReason}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.StatusReasonInformation4#mmStatusReason
- * StatusReasonInformation4.mmStatusReason}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.StatusReasonInformation6#mmStatusReason
- * StatusReasonInformation6.mmStatusReason}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.StatusReasonInformation5#mmStatusReason
- * StatusReasonInformation5.mmStatusReason}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.StatusReasonInformation7#mmStatusReason
- * StatusReasonInformation7.mmStatusReason}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.ReversalReasonInformation4#mmReversalReason
- * ReversalReasonInformation4.mmReversalReason}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.ReversalReasonInformation5#mmReversalReason
- * ReversalReasonInformation5.mmReversalReason}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.AccountLinkStatus1#mmStatusReason
- * AccountLinkStatus1.mmStatusReason}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PaymentSearch5#mmStatus
- * PaymentSearch5.mmStatus}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PaymentStatus2#mmCode
- * PaymentStatus2.mmCode}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.CurrencyControlGroupStatus1#mmStatusReason
- * CurrencyControlGroupStatus1.mmStatusReason}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.Status Status}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -278,6 +157,126 @@ import java.util.concurrent.atomic.AtomicReference;
  * MandateSuspensionReason1Choice}</li>
  * <li>{@linkplain com.tools20022.repository.msg.MandateSuspensionReason1
  * MandateSuspensionReason1}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.Payment#mmPaymentStatus
+ * Payment.mmPaymentStatus}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PaymentInvestigationCase#mmPaymentStatus
+ * PaymentInvestigationCase.mmPaymentStatus}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
+ * derivationElement} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.InstructionStatusSearch2#mmPaymentInstructionStatus
+ * InstructionStatusSearch2.mmPaymentInstructionStatus}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.InstructionStatusSearch3#mmPaymentInstructionStatus
+ * InstructionStatusSearch3.mmPaymentInstructionStatus}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PaymentSearch4#mmStatus
+ * PaymentSearch4.mmStatus}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentStatusDetails1#mmPaymentInstructionStatus
+ * PaymentStatusDetails1.mmPaymentInstructionStatus}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PaymentStatus1#mmCode
+ * PaymentStatus1.mmCode}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.ReturnReasonInformation10#mmReason
+ * ReturnReasonInformation10.mmReason}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.ReversalReasonInformation1#mmReversalReason
+ * ReversalReasonInformation1.mmReversalReason}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.StatusReasonInformation1#mmStatusReason
+ * StatusReasonInformation1.mmStatusReason}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.StatusReasonInformation8#mmReason
+ * StatusReasonInformation8.mmReason}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.StatusReasonInformation4#mmStatusReason
+ * StatusReasonInformation4.mmStatusReason}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.StatusReasonInformation6#mmStatusReason
+ * StatusReasonInformation6.mmStatusReason}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.StatusReasonInformation5#mmStatusReason
+ * StatusReasonInformation5.mmStatusReason}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.StatusReasonInformation7#mmStatusReason
+ * StatusReasonInformation7.mmStatusReason}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.ReversalReasonInformation4#mmReversalReason
+ * ReversalReasonInformation4.mmReversalReason}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.ReversalReasonInformation5#mmReversalReason
+ * ReversalReasonInformation5.mmReversalReason}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AccountLinkStatus1#mmStatusReason
+ * AccountLinkStatus1.mmStatusReason}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PaymentSearch5#mmStatus
+ * PaymentSearch5.mmStatus}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PaymentStatus2#mmCode
+ * PaymentStatus2.mmCode}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CurrencyControlGroupStatus1#mmStatusReason
+ * CurrencyControlGroupStatus1.mmStatusReason}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.Status Status}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.PaymentStatus#mmStatus
+ * PaymentStatus.mmStatus}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.PaymentStatus#mmPayment
+ * PaymentStatus.mmPayment}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PaymentStatus#mmUnmatchedStatusReason
+ * PaymentStatus.mmUnmatchedStatusReason}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PaymentStatus#mmSuspendedStatusReason
+ * PaymentStatus.mmSuspendedStatusReason}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PaymentStatus#mmPendingSettlement
+ * PaymentStatus.mmPendingSettlement}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PaymentStatus#mmInstructionStatus
+ * PaymentStatus.mmInstructionStatus}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PaymentStatus#mmTransactionRejectionReason
+ * PaymentStatus.mmTransactionRejectionReason}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PaymentStatus#mmRelatedInvestigationCase
+ * PaymentStatus.mmRelatedInvestigationCase}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PaymentStatus#mmNotificationStatus
+ * PaymentStatus.mmNotificationStatus}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PaymentStatus#mmTransactionStatus
+ * PaymentStatus.mmTransactionStatus}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PaymentStatus#mmCashPaymentStatus
+ * PaymentStatus.mmCashPaymentStatus}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PaymentStatus#mmUnsuccessfulStatusReason
+ * PaymentStatus.mmUnsuccessfulStatusReason}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PaymentStatus#mmCancellationReason
+ * PaymentStatus.mmCancellationReason}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PaymentStatus#mmMandateRejectionReason
+ * PaymentStatus.mmMandateRejectionReason}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PaymentStatus#mmPendingFailingSettlement
+ * PaymentStatus.mmPendingFailingSettlement}</li>
  * </ul>
  * </li>
  * <li>
@@ -452,29 +451,21 @@ public class PaymentStatus extends Status {
 	 */
 	public static final MMBusinessAttribute mmStatus = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentSearch2.mmInstructionStatus, com.tools20022.repository.msg.PaymentSearch3.mmInstructionStatus,
-					com.tools20022.repository.msg.OriginalGroupInformation1.mmGroupStatus, com.tools20022.repository.msg.PaymentTransactionInformation1.mmTransactionStatus,
-					com.tools20022.repository.msg.OriginalGroupInformation20.mmGroupStatus, com.tools20022.repository.msg.PaymentTransactionInformation25.mmTransactionStatus,
-					com.tools20022.repository.msg.OriginalPaymentInformation1.mmPaymentInformationStatus, com.tools20022.repository.msg.OriginalGroupHeader1.mmGroupStatus,
-					com.tools20022.repository.msg.OriginalPaymentInstruction1.mmPaymentInformationStatus, com.tools20022.repository.msg.OriginalPaymentInstruction6.mmPaymentInformationStatus,
-					com.tools20022.repository.msg.PaymentTransactionInformation26.mmTransactionStatus, com.tools20022.repository.msg.OriginalGroupInformation25.mmGroupStatus,
-					com.tools20022.repository.msg.PaymentTransactionInformation34.mmTransactionStatus, com.tools20022.repository.msg.OriginalPaymentInformation5.mmPaymentInformationStatus,
-					com.tools20022.repository.msg.OriginalPaymentInstruction5.mmPaymentInformationStatus, com.tools20022.repository.msg.OriginalPaymentInstruction9.mmPaymentInformationStatus,
-					com.tools20022.repository.msg.OriginalGroupInformation24.mmGroupCancellationStatus, com.tools20022.repository.msg.PaymentTransactionInformation32.mmTransactionCancellationStatus,
-					com.tools20022.repository.msg.OriginalPaymentInformation3.mmPaymentInformationCancellationStatus, com.tools20022.repository.msg.PaymentTransactionInformation33.mmTransactionCancellationStatus,
-					com.tools20022.repository.msg.OriginalPaymentInstruction3.mmPaymentInformationCancellationStatus, com.tools20022.repository.msg.OriginalGroupInformation13.mmGroupStatus,
-					com.tools20022.repository.msg.OriginalGroupInformation17.mmGroupStatus, com.tools20022.repository.msg.OriginalGroupInformation15.mmGroupStatus, com.tools20022.repository.msg.OriginalGroupInformation19.mmGroupStatus,
-					com.tools20022.repository.msg.PaymentTransactionInformation15.mmTransactionStatus, com.tools20022.repository.msg.PaymentTransactionInformation22.mmTransactionStatus,
-					com.tools20022.repository.msg.PaymentTransactionInformation12.mmTransactionStatus, com.tools20022.repository.msg.PaymentTransactionInformation19.mmTransactionStatus,
-					com.tools20022.repository.msg.OriginalPaymentInstruction12.mmPaymentInformationStatus, com.tools20022.repository.msg.OriginalPaymentInstruction10.mmPaymentInformationCancellationStatus,
-					com.tools20022.repository.msg.OriginalPaymentInstruction14.mmPaymentInformationStatus, com.tools20022.repository.msg.OriginalPaymentInstruction18.mmPaymentInformationStatus,
-					com.tools20022.repository.msg.OriginalPaymentInstruction17.mmPaymentInformationCancellationStatus, com.tools20022.repository.msg.OriginalPaymentInstruction19.mmPaymentInformationStatus,
-					com.tools20022.repository.msg.OriginalGroupHeader7.mmGroupStatus, com.tools20022.repository.msg.OriginalPaymentInstruction23.mmPaymentInformationStatus,
-					com.tools20022.repository.msg.OriginalPaymentInstruction24.mmPaymentInformationStatus, com.tools20022.repository.msg.OriginalGroupInformation28.mmGroupStatus,
-					com.tools20022.repository.msg.OriginalPaymentInstruction22.mmPaymentInformationCancellationStatus);
+			derivation_lazy = () -> Arrays.asList(PaymentSearch2.mmInstructionStatus, PaymentSearch3.mmInstructionStatus, OriginalGroupInformation1.mmGroupStatus, PaymentTransactionInformation1.mmTransactionStatus,
+					OriginalGroupInformation20.mmGroupStatus, PaymentTransactionInformation25.mmTransactionStatus, OriginalPaymentInformation1.mmPaymentInformationStatus, OriginalGroupHeader1.mmGroupStatus,
+					OriginalPaymentInstruction1.mmPaymentInformationStatus, OriginalPaymentInstruction6.mmPaymentInformationStatus, PaymentTransactionInformation26.mmTransactionStatus, OriginalGroupInformation25.mmGroupStatus,
+					PaymentTransactionInformation34.mmTransactionStatus, OriginalPaymentInformation5.mmPaymentInformationStatus, OriginalPaymentInstruction5.mmPaymentInformationStatus,
+					OriginalPaymentInstruction9.mmPaymentInformationStatus, OriginalGroupInformation24.mmGroupCancellationStatus, PaymentTransactionInformation32.mmTransactionCancellationStatus,
+					OriginalPaymentInformation3.mmPaymentInformationCancellationStatus, PaymentTransactionInformation33.mmTransactionCancellationStatus, OriginalPaymentInstruction3.mmPaymentInformationCancellationStatus,
+					OriginalGroupInformation13.mmGroupStatus, OriginalGroupInformation17.mmGroupStatus, OriginalGroupInformation15.mmGroupStatus, OriginalGroupInformation19.mmGroupStatus,
+					PaymentTransactionInformation15.mmTransactionStatus, PaymentTransactionInformation22.mmTransactionStatus, PaymentTransactionInformation12.mmTransactionStatus, PaymentTransactionInformation19.mmTransactionStatus,
+					OriginalPaymentInstruction12.mmPaymentInformationStatus, OriginalPaymentInstruction10.mmPaymentInformationCancellationStatus, OriginalPaymentInstruction14.mmPaymentInformationStatus,
+					OriginalPaymentInstruction18.mmPaymentInformationStatus, OriginalPaymentInstruction17.mmPaymentInformationCancellationStatus, OriginalPaymentInstruction19.mmPaymentInformationStatus, OriginalGroupHeader7.mmGroupStatus,
+					OriginalPaymentInstruction23.mmPaymentInformationStatus, OriginalPaymentInstruction24.mmPaymentInformationStatus, OriginalGroupInformation28.mmGroupStatus,
+					OriginalPaymentInstruction22.mmPaymentInformationCancellationStatus);
 			elementContext_lazy = () -> PaymentStatus.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Status";
 			definition = "Specifies the status of the payment execution.";
 			maxOccurs = 1;
@@ -519,13 +510,13 @@ public class PaymentStatus extends Status {
 		{
 			elementContext_lazy = () -> PaymentStatus.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Payment";
 			definition = "Payment for which a status is provided.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.Payment.mmPaymentStatus;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Payment.mmObject();
 		}
 	};
@@ -572,11 +563,10 @@ public class PaymentStatus extends Status {
 	 */
 	public static final MMBusinessAttribute mmUnmatchedStatusReason = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PaymentStatusReasonCode4Choice.mmUnmatchedStatusReason, com.tools20022.repository.choice.PaymentStatusReasonCode5Choice.mmUnmatched,
-					com.tools20022.repository.choice.PaymentStatusReasonCode6Choice.mmUnmatched);
+			derivation_lazy = () -> Arrays.asList(PaymentStatusReasonCode4Choice.mmUnmatchedStatusReason, PaymentStatusReasonCode5Choice.mmUnmatched, PaymentStatusReasonCode6Choice.mmUnmatched);
 			elementContext_lazy = () -> PaymentStatus.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "UnmatchedStatusReason";
 			definition = "Reason the transaction/instruction is unmatched.";
 			maxOccurs = 1;
@@ -627,11 +617,10 @@ public class PaymentStatus extends Status {
 	 */
 	public static final MMBusinessAttribute mmSuspendedStatusReason = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PaymentStatusReasonCode4Choice.mmSuspendedStatusReason, com.tools20022.repository.choice.PaymentStatusReasonCode5Choice.mmSuspended,
-					com.tools20022.repository.choice.PaymentStatusReasonCode6Choice.mmSuspended);
+			derivation_lazy = () -> Arrays.asList(PaymentStatusReasonCode4Choice.mmSuspendedStatusReason, PaymentStatusReasonCode5Choice.mmSuspended, PaymentStatusReasonCode6Choice.mmSuspended);
 			elementContext_lazy = () -> PaymentStatus.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SuspendedStatusReason";
 			definition = "Reason the transaction/instruction is suspended.";
 			maxOccurs = 1;
@@ -689,11 +678,11 @@ public class PaymentStatus extends Status {
 	 */
 	public static final MMBusinessAttribute mmPendingSettlement = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PaymentStatusReasonCode3Choice.mmPendingSettlement, com.tools20022.repository.choice.PaymentStatusReasonCode4Choice.mmPendingSettlement,
-					com.tools20022.repository.choice.PaymentStatusReasonCode5Choice.mmPendingSettlement, com.tools20022.repository.choice.PaymentStatusReasonCode6Choice.mmPendingSettlement);
+			derivation_lazy = () -> Arrays.asList(PaymentStatusReasonCode3Choice.mmPendingSettlement, PaymentStatusReasonCode4Choice.mmPendingSettlement, PaymentStatusReasonCode5Choice.mmPendingSettlement,
+					PaymentStatusReasonCode6Choice.mmPendingSettlement);
 			elementContext_lazy = () -> PaymentStatus.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PendingSettlement";
 			definition = "Reason the instruction is pending settlement, ie, delivery or receipt of the financial instrument. Settlement on the instructed settlement date is still possible.";
 			maxOccurs = 1;
@@ -795,18 +784,14 @@ public class PaymentStatus extends Status {
 	 */
 	public static final MMBusinessAttribute mmInstructionStatus = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentInstructionReference2Details.mmStatusValue, com.tools20022.repository.choice.PaymentStatusCodeSearchChoice.mmPendingStatus,
-					com.tools20022.repository.choice.PaymentStatusCodeSearchChoice.mmFinalStatus, com.tools20022.repository.choice.PaymentStatusCodeSearch2Choice.mmPendingStatus,
-					com.tools20022.repository.choice.PaymentStatusCodeSearch2Choice.mmFinalStatus, com.tools20022.repository.choice.PaymentStatusCodeChoice.mmPendingStatus,
-					com.tools20022.repository.choice.PaymentStatusCodeChoice.mmFinalStatus, com.tools20022.repository.choice.PaymentStatusCode2Choice.mmPendingStatus, com.tools20022.repository.choice.PaymentStatusCode2Choice.mmFinalStatus,
-					com.tools20022.repository.choice.PaymentStatusCode3Choice.mmPendingStatus, com.tools20022.repository.choice.PaymentStatusCode3Choice.mmFinalStatus,
-					com.tools20022.repository.choice.PaymentStatusCode4Choice.mmPendingStatus, com.tools20022.repository.choice.PaymentStatusCode4Choice.mmFinalStatus,
-					com.tools20022.repository.choice.PaymentStatusCode4Choice.mmProprietaryStatus, com.tools20022.repository.choice.PaymentStatusCode5Choice.mmPending, com.tools20022.repository.choice.PaymentStatusCode5Choice.mmFinal,
-					com.tools20022.repository.choice.PaymentStatusCode5Choice.mmProprietary, com.tools20022.repository.choice.PaymentStatusCode6Choice.mmPending, com.tools20022.repository.choice.PaymentStatusCode6Choice.mmFinal,
-					com.tools20022.repository.choice.PaymentStatusCode6Choice.mmProprietary);
+			derivation_lazy = () -> Arrays.asList(PaymentInstructionReference2Details.mmStatusValue, PaymentStatusCodeSearchChoice.mmPendingStatus, PaymentStatusCodeSearchChoice.mmFinalStatus,
+					PaymentStatusCodeSearch2Choice.mmPendingStatus, PaymentStatusCodeSearch2Choice.mmFinalStatus, PaymentStatusCodeChoice.mmPendingStatus, PaymentStatusCodeChoice.mmFinalStatus, PaymentStatusCode2Choice.mmPendingStatus,
+					PaymentStatusCode2Choice.mmFinalStatus, PaymentStatusCode3Choice.mmPendingStatus, PaymentStatusCode3Choice.mmFinalStatus, PaymentStatusCode4Choice.mmPendingStatus, PaymentStatusCode4Choice.mmFinalStatus,
+					PaymentStatusCode4Choice.mmProprietaryStatus, PaymentStatusCode5Choice.mmPending, PaymentStatusCode5Choice.mmFinal, PaymentStatusCode5Choice.mmProprietary, PaymentStatusCode6Choice.mmPending,
+					PaymentStatusCode6Choice.mmFinal, PaymentStatusCode6Choice.mmProprietary);
 			elementContext_lazy = () -> PaymentStatus.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InstructionStatus";
 			definition = "Specifies the state of a payment instruction.";
 			maxOccurs = 1;
@@ -897,15 +882,12 @@ public class PaymentStatus extends Status {
 	 */
 	public static final MMBusinessAttribute mmTransactionRejectionReason = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ReversalReason1Choice.mmCode, com.tools20022.repository.choice.ReversalReason1Choice.mmProprietary,
-					com.tools20022.repository.msg.OriginalGroupInformation5.mmReversalReasonInformation, com.tools20022.repository.choice.ReversalReason4Choice.mmCode, com.tools20022.repository.choice.ReversalReason4Choice.mmProprietary,
-					com.tools20022.repository.msg.OriginalGroupInformation22.mmReversalReasonInformation, com.tools20022.repository.choice.StatusReason1Choice.mmCode, com.tools20022.repository.choice.StatusReason1Choice.mmProprietary,
-					com.tools20022.repository.choice.StatusReason3Choice.mmCode, com.tools20022.repository.choice.StatusReason3Choice.mmProprietary, com.tools20022.repository.choice.StatusReason5Choice.mmCode,
-					com.tools20022.repository.choice.StatusReason5Choice.mmProprietary, com.tools20022.repository.choice.ReversalReason3Choice.mmCode, com.tools20022.repository.choice.ReversalReason3Choice.mmProprietary,
-					com.tools20022.repository.msg.OriginalGroupInformation16.mmReversalReasonInformation, com.tools20022.repository.msg.OriginalGroupInformation14.mmReversalReasonInformation);
+			derivation_lazy = () -> Arrays.asList(ReversalReason1Choice.mmCode, ReversalReason1Choice.mmProprietary, OriginalGroupInformation5.mmReversalReasonInformation, ReversalReason4Choice.mmCode, ReversalReason4Choice.mmProprietary,
+					OriginalGroupInformation22.mmReversalReasonInformation, StatusReason1Choice.mmCode, StatusReason1Choice.mmProprietary, StatusReason3Choice.mmCode, StatusReason3Choice.mmProprietary, StatusReason5Choice.mmCode,
+					StatusReason5Choice.mmProprietary, ReversalReason3Choice.mmCode, ReversalReason3Choice.mmProprietary, OriginalGroupInformation16.mmReversalReasonInformation, OriginalGroupInformation14.mmReversalReasonInformation);
 			elementContext_lazy = () -> PaymentStatus.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TransactionRejectionReason";
 			definition = "Specifies the reason to reject, return or reverse the transaction.";
 			maxOccurs = 1;
@@ -953,13 +935,13 @@ public class PaymentStatus extends Status {
 		{
 			elementContext_lazy = () -> PaymentStatus.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedInvestigationCase";
 			definition = "Specifies an investigation case in relation with the payment status.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.PaymentInvestigationCase.mmPaymentStatus;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.PaymentInvestigationCase.mmObject();
 		}
 	};
@@ -1027,13 +1009,11 @@ public class PaymentStatus extends Status {
 	 */
 	public static final MMBusinessAttribute mmNotificationStatus = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OriginalNotification2.mmNotificationStatus, com.tools20022.repository.msg.OriginalItemAndStatus2.mmItemStatus,
-					com.tools20022.repository.msg.OriginalNotification3.mmNotificationStatus, com.tools20022.repository.msg.OriginalItemAndStatus3.mmItemStatus, com.tools20022.repository.msg.OriginalNotification5.mmNotificationStatus,
-					com.tools20022.repository.msg.OriginalNotification7.mmNotificationStatus, com.tools20022.repository.msg.OriginalItemAndStatus4.mmItemStatus, com.tools20022.repository.msg.OriginalNotification9.mmNotificationStatus,
-					com.tools20022.repository.msg.OriginalItemAndStatus5.mmItemStatus);
+			derivation_lazy = () -> Arrays.asList(OriginalNotification2.mmNotificationStatus, OriginalItemAndStatus2.mmItemStatus, OriginalNotification3.mmNotificationStatus, OriginalItemAndStatus3.mmItemStatus,
+					OriginalNotification5.mmNotificationStatus, OriginalNotification7.mmNotificationStatus, OriginalItemAndStatus4.mmItemStatus, OriginalNotification9.mmNotificationStatus, OriginalItemAndStatus5.mmItemStatus);
 			elementContext_lazy = () -> PaymentStatus.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NotificationStatus";
 			definition = "Specifies the status of the payment in comparison with the notification to receive.";
 			maxOccurs = 1;
@@ -1079,10 +1059,10 @@ public class PaymentStatus extends Status {
 	 */
 	public static final MMBusinessAttribute mmTransactionStatus = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OriginalItemAndStatus1.mmItemStatus);
+			derivation_lazy = () -> Arrays.asList(OriginalItemAndStatus1.mmItemStatus);
 			elementContext_lazy = () -> PaymentStatus.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TransactionStatus";
 			definition = "Specifies the processing status of an investment fund transaction.";
 			maxOccurs = 1;
@@ -1131,10 +1111,10 @@ public class PaymentStatus extends Status {
 	 */
 	public static final MMBusinessAttribute mmCashPaymentStatus = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PaymentStatusCodeSearchChoice.mmPendingAndFinalStatus, com.tools20022.repository.choice.PaymentStatusCodeSearch2Choice.mmPendingAndFinalStatus);
+			derivation_lazy = () -> Arrays.asList(PaymentStatusCodeSearchChoice.mmPendingAndFinalStatus, PaymentStatusCodeSearch2Choice.mmPendingAndFinalStatus);
 			elementContext_lazy = () -> PaymentStatus.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CashPaymentStatus";
 			definition = "Specifies a generic status of a payment at a specified time.";
 			maxOccurs = 1;
@@ -1176,7 +1156,7 @@ public class PaymentStatus extends Status {
 		{
 			elementContext_lazy = () -> PaymentStatus.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "UnsuccessfulStatusReason";
 			definition = "Reason provided for the status of a transaction.The reason may be in coded or free text form.";
 			maxOccurs = 1;
@@ -1320,25 +1300,18 @@ public class PaymentStatus extends Status {
 	 */
 	public static final MMBusinessAttribute mmCancellationReason = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CancellationReason1Choice.mmCode, com.tools20022.repository.choice.CancellationReason1Choice.mmProprietary,
-					com.tools20022.repository.msg.CancellationReasonInformation1.mmCancellationReason, com.tools20022.repository.msg.OriginalGroupInformation4.mmCancellationReasonInformation,
-					com.tools20022.repository.msg.PaymentTransactionInformation3.mmCancellationReasonInformation, com.tools20022.repository.choice.CancellationReason2Choice.mmCode,
-					com.tools20022.repository.choice.CancellationReason2Choice.mmProprietary, com.tools20022.repository.msg.CancellationReasonInformation3.mmReason,
-					com.tools20022.repository.msg.OriginalGroupInformation23.mmCancellationReasonInformation, com.tools20022.repository.msg.PaymentTransactionInformation30.mmCancellationReasonInformation,
-					com.tools20022.repository.choice.CancellationReason14Choice.mmCode, com.tools20022.repository.choice.CancellationReason14Choice.mmProprietary, com.tools20022.repository.msg.PaymentCancellationReason2.mmReason,
-					com.tools20022.repository.msg.OriginalGroupHeader4.mmCancellationReasonInformation, com.tools20022.repository.msg.PaymentTransaction37.mmCancellationReasonInformation,
-					com.tools20022.repository.msg.PaymentTransaction47.mmCancellationReasonInformation, com.tools20022.repository.msg.PaymentTransactionInformation31.mmCancellationReasonInformation,
-					com.tools20022.repository.msg.PaymentTransaction38.mmCancellationReasonInformation, com.tools20022.repository.msg.PaymentTransaction48.mmCancellationReasonInformation,
-					com.tools20022.repository.msg.DebitAuthorisationDetails.mmCancellationReason, com.tools20022.repository.msg.DebitAuthorisationDetails2.mmCancellationReason,
-					com.tools20022.repository.msg.DebitAuthorisationDetails3.mmCancellationReason, com.tools20022.repository.msg.DebitAuthorisation1.mmCancellationReason,
-					com.tools20022.repository.msg.PaymentTransaction58.mmCancellationReasonInformation, com.tools20022.repository.msg.PaymentTransaction55.mmCancellationReasonInformation,
-					com.tools20022.repository.msg.PaymentTransaction61.mmCancellationReasonInformation, com.tools20022.repository.msg.PaymentTransaction62.mmCancellationReasonInformation,
-					com.tools20022.repository.msg.PaymentCancellationReason3.mmReason, com.tools20022.repository.msg.DebitAuthorisation2.mmCancellationReason, com.tools20022.repository.choice.CancellationReason33Choice.mmCode,
-					com.tools20022.repository.choice.CancellationReason33Choice.mmProprietary, com.tools20022.repository.msg.PaymentTransaction74.mmCancellationReasonInformation,
-					com.tools20022.repository.msg.OriginalGroupHeader6.mmCancellationReasonInformation, com.tools20022.repository.msg.PaymentTransaction75.mmCancellationReasonInformation);
+			derivation_lazy = () -> Arrays.asList(CancellationReason1Choice.mmCode, CancellationReason1Choice.mmProprietary, CancellationReasonInformation1.mmCancellationReason, OriginalGroupInformation4.mmCancellationReasonInformation,
+					PaymentTransactionInformation3.mmCancellationReasonInformation, CancellationReason2Choice.mmCode, CancellationReason2Choice.mmProprietary, CancellationReasonInformation3.mmReason,
+					OriginalGroupInformation23.mmCancellationReasonInformation, PaymentTransactionInformation30.mmCancellationReasonInformation, CancellationReason14Choice.mmCode, CancellationReason14Choice.mmProprietary,
+					PaymentCancellationReason2.mmReason, OriginalGroupHeader4.mmCancellationReasonInformation, PaymentTransaction37.mmCancellationReasonInformation, PaymentTransaction47.mmCancellationReasonInformation,
+					PaymentTransactionInformation31.mmCancellationReasonInformation, PaymentTransaction38.mmCancellationReasonInformation, PaymentTransaction48.mmCancellationReasonInformation,
+					DebitAuthorisationDetails.mmCancellationReason, DebitAuthorisationDetails2.mmCancellationReason, DebitAuthorisationDetails3.mmCancellationReason, DebitAuthorisation1.mmCancellationReason,
+					PaymentTransaction58.mmCancellationReasonInformation, PaymentTransaction55.mmCancellationReasonInformation, PaymentTransaction61.mmCancellationReasonInformation, PaymentTransaction62.mmCancellationReasonInformation,
+					PaymentCancellationReason3.mmReason, DebitAuthorisation2.mmCancellationReason, CancellationReason33Choice.mmCode, CancellationReason33Choice.mmProprietary, PaymentTransaction74.mmCancellationReasonInformation,
+					OriginalGroupHeader6.mmCancellationReasonInformation, PaymentTransaction75.mmCancellationReasonInformation);
 			elementContext_lazy = () -> PaymentStatus.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CancellationReason";
 			definition = "Reason for the cancellation of the payment.";
 			maxOccurs = 1;
@@ -1399,12 +1372,11 @@ public class PaymentStatus extends Status {
 	 */
 	public static final MMBusinessAttribute mmMandateRejectionReason = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.MandateReason1Choice.mmCode, com.tools20022.repository.choice.MandateReason1Choice.mmProprietary,
-					com.tools20022.repository.msg.CancellationReasonInformation2.mmReason, com.tools20022.repository.msg.PaymentCancellationReason1.mmReason, com.tools20022.repository.choice.MandateSuspensionReason1Choice.mmCode,
-					com.tools20022.repository.choice.MandateSuspensionReason1Choice.mmProprietary);
+			derivation_lazy = () -> Arrays.asList(MandateReason1Choice.mmCode, MandateReason1Choice.mmProprietary, CancellationReasonInformation2.mmReason, PaymentCancellationReason1.mmReason, MandateSuspensionReason1Choice.mmCode,
+					MandateSuspensionReason1Choice.mmProprietary);
 			elementContext_lazy = () -> PaymentStatus.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MandateRejectionReason";
 			definition = "Reason for requesting the cancellation or the amendment of a mandate.";
 			maxOccurs = 1;
@@ -1460,11 +1432,11 @@ public class PaymentStatus extends Status {
 	 */
 	public static final MMBusinessAttribute mmPendingFailingSettlement = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PaymentStatusReasonCode3Choice.mmPendingFailingSettlement, com.tools20022.repository.choice.PaymentStatusReasonCode4Choice.mmPendingFailingSettlement,
-					com.tools20022.repository.choice.PaymentStatusReasonCode5Choice.mmPendingFailingSettlement, com.tools20022.repository.choice.PaymentStatusReasonCode6Choice.mmPendingFailingSettlement);
+			derivation_lazy = () -> Arrays.asList(PaymentStatusReasonCode3Choice.mmPendingFailingSettlement, PaymentStatusReasonCode4Choice.mmPendingFailingSettlement, PaymentStatusReasonCode5Choice.mmPendingFailingSettlement,
+					PaymentStatusReasonCode6Choice.mmPendingFailingSettlement);
 			elementContext_lazy = () -> PaymentStatus.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PendingFailingSettlement";
 			definition = "Reason the transaction/instruction is pending due to failing settlement.";
 			maxOccurs = 1;
@@ -1476,25 +1448,20 @@ public class PaymentStatus extends Status {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PaymentStatus";
 				definition = "Specifies the status of a payment at a specified time.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Payment.mmPaymentStatus, com.tools20022.repository.entity.PaymentInvestigationCase.mmPaymentStatus);
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InstructionStatusSearch2.mmPaymentInstructionStatus, com.tools20022.repository.msg.InstructionStatusSearch3.mmPaymentInstructionStatus,
-						com.tools20022.repository.msg.PaymentSearch4.mmStatus, com.tools20022.repository.msg.PaymentStatusDetails1.mmPaymentInstructionStatus, com.tools20022.repository.msg.PaymentStatus1.mmCode,
-						com.tools20022.repository.msg.ReturnReasonInformation10.mmReason, com.tools20022.repository.msg.ReversalReasonInformation1.mmReversalReason, com.tools20022.repository.msg.StatusReasonInformation1.mmStatusReason,
-						com.tools20022.repository.msg.StatusReasonInformation8.mmReason, com.tools20022.repository.msg.StatusReasonInformation4.mmStatusReason, com.tools20022.repository.msg.StatusReasonInformation6.mmStatusReason,
-						com.tools20022.repository.msg.StatusReasonInformation5.mmStatusReason, com.tools20022.repository.msg.StatusReasonInformation7.mmStatusReason,
-						com.tools20022.repository.msg.ReversalReasonInformation4.mmReversalReason, com.tools20022.repository.msg.ReversalReasonInformation5.mmReversalReason, com.tools20022.repository.msg.AccountLinkStatus1.mmStatusReason,
-						com.tools20022.repository.msg.PaymentSearch5.mmStatus, com.tools20022.repository.msg.PaymentStatus2.mmCode, com.tools20022.repository.msg.CurrencyControlGroupStatus1.mmStatusReason);
+				derivationElement_lazy = () -> Arrays
+						.asList(InstructionStatusSearch2.mmPaymentInstructionStatus, InstructionStatusSearch3.mmPaymentInstructionStatus, PaymentSearch4.mmStatus, PaymentStatusDetails1.mmPaymentInstructionStatus, PaymentStatus1.mmCode,
+								ReturnReasonInformation10.mmReason, ReversalReasonInformation1.mmReversalReason, StatusReasonInformation1.mmStatusReason, StatusReasonInformation8.mmReason, StatusReasonInformation4.mmStatusReason,
+								StatusReasonInformation6.mmStatusReason, StatusReasonInformation5.mmStatusReason, StatusReasonInformation7.mmStatusReason, ReversalReasonInformation4.mmReversalReason,
+								ReversalReasonInformation5.mmReversalReason, AccountLinkStatus1.mmStatusReason, PaymentSearch5.mmStatus, PaymentStatus2.mmCode, CurrencyControlGroupStatus1.mmStatusReason);
 				superType_lazy = () -> com.tools20022.repository.entity.Status.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.PaymentStatus.mmStatus, com.tools20022.repository.entity.PaymentStatus.mmPayment, com.tools20022.repository.entity.PaymentStatus.mmUnmatchedStatusReason,
-						com.tools20022.repository.entity.PaymentStatus.mmSuspendedStatusReason, com.tools20022.repository.entity.PaymentStatus.mmPendingSettlement, com.tools20022.repository.entity.PaymentStatus.mmInstructionStatus,
-						com.tools20022.repository.entity.PaymentStatus.mmTransactionRejectionReason, com.tools20022.repository.entity.PaymentStatus.mmRelatedInvestigationCase,
-						com.tools20022.repository.entity.PaymentStatus.mmNotificationStatus, com.tools20022.repository.entity.PaymentStatus.mmTransactionStatus, com.tools20022.repository.entity.PaymentStatus.mmCashPaymentStatus,
-						com.tools20022.repository.entity.PaymentStatus.mmUnsuccessfulStatusReason, com.tools20022.repository.entity.PaymentStatus.mmCancellationReason,
-						com.tools20022.repository.entity.PaymentStatus.mmMandateRejectionReason, com.tools20022.repository.entity.PaymentStatus.mmPendingFailingSettlement);
+				element_lazy = () -> Arrays.asList(PaymentStatus.mmStatus, PaymentStatus.mmPayment, PaymentStatus.mmUnmatchedStatusReason, PaymentStatus.mmSuspendedStatusReason, PaymentStatus.mmPendingSettlement,
+						PaymentStatus.mmInstructionStatus, PaymentStatus.mmTransactionRejectionReason, PaymentStatus.mmRelatedInvestigationCase, PaymentStatus.mmNotificationStatus, PaymentStatus.mmTransactionStatus,
+						PaymentStatus.mmCashPaymentStatus, PaymentStatus.mmUnsuccessfulStatusReason, PaymentStatus.mmCancellationReason, PaymentStatus.mmMandateRejectionReason, PaymentStatus.mmPendingFailingSettlement);
 				derivationComponent_lazy = () -> Arrays.asList(PaymentStatusCodeSearchChoice.mmObject(), InstructionStatusSearch2.mmObject(), PaymentStatusCodeSearch2Choice.mmObject(), InstructionStatusSearch3.mmObject(),
 						PaymentStatusCodeChoice.mmObject(), PaymentStatusCode2Choice.mmObject(), PaymentStatusReasonCode3Choice.mmObject(), PaymentStatusDetails1.mmObject(), PaymentStatusCode3Choice.mmObject(),
 						PaymentStatusDetails3.mmObject(), PaymentStatusCode4Choice.mmObject(), PaymentStatusReasonCode4Choice.mmObject(), PaymentStatusDetails4.mmObject(), PaymentStatusCode5Choice.mmObject(), PaymentStatus1.mmObject(),

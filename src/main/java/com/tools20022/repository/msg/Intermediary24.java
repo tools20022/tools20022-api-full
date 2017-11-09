@@ -20,12 +20,16 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.acmt.AccountDetailsConfirmationV04;
+import com.tools20022.repository.area.acmt.AccountDetailsConfirmationV05;
+import com.tools20022.repository.area.acmt.AccountOpeningInstructionV04;
+import com.tools20022.repository.area.acmt.AccountOpeningInstructionV05;
 import com.tools20022.repository.choice.PartyIdentification4Choice;
 import com.tools20022.repository.choice.PartyRole2Choice;
 import com.tools20022.repository.datatype.YesNoIndicator;
-import com.tools20022.repository.entity.ElectronicAddress;
-import com.tools20022.repository.entity.IntermediaryRole;
-import com.tools20022.repository.entity.TradePartyRole;
+import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -159,15 +163,15 @@ public class Intermediary24 {
 	 */
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> Intermediary24.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Unique and unambiguous identifier for an organisation that is allocated by an institution, eg, Dun & Bradstreet Identification.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Intermediary36.mmIdentification);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Intermediary13.mmIdentification;
+			nextVersions_lazy = () -> Arrays.asList(Intermediary36.mmIdentification);
+			previousVersion_lazy = () -> Intermediary13.mmIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> PartyIdentification4Choice.mmObject();
@@ -222,15 +226,15 @@ public class Intermediary24 {
 	 */
 	public static final MMMessageAttribute mmAccount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AccountPartyRole.mmAccount;
+			businessElementTrace_lazy = () -> AccountPartyRole.mmAccount;
 			componentContext_lazy = () -> Intermediary24.mmObject();
 			isDerived = false;
 			xmlTag = "Acct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Account";
 			definition = "Business relationship between two entities; one entity is the account owner, the other entity is the account servicer.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Intermediary36.mmAccount);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Intermediary13.mmAccount;
+			nextVersions_lazy = () -> Arrays.asList(Intermediary36.mmAccount);
+			previousVersion_lazy = () -> Intermediary13.mmAccount;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.Account2.mmObject();
@@ -287,15 +291,15 @@ public class Intermediary24 {
 	 */
 	public static final MMMessageAttribute mmWaivedTrailerCommissionIndicator = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Commission.mmCommissionWaiving;
+			businessElementTrace_lazy = () -> Commission.mmCommissionWaiving;
 			componentContext_lazy = () -> Intermediary24.mmObject();
 			isDerived = false;
 			xmlTag = "WvdTrlrComssnInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WaivedTrailerCommissionIndicator";
 			definition = "Non-enforcement of the right to all or part of a commission by the party entitled to the commission.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Intermediary36.mmWaivedTrailerCommissionIndicator);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Intermediary13.mmWaivedTrailerCommissionIndicator;
+			nextVersions_lazy = () -> Arrays.asList(Intermediary36.mmWaivedTrailerCommissionIndicator);
+			previousVersion_lazy = () -> Intermediary13.mmWaivedTrailerCommissionIndicator;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
@@ -345,10 +349,10 @@ public class Intermediary24 {
 			componentContext_lazy = () -> Intermediary24.mmObject();
 			isDerived = false;
 			xmlTag = "Role";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Role";
 			definition = "Role or function performed by the intermediary.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Intermediary36.mmRole);
+			nextVersions_lazy = () -> Arrays.asList(Intermediary36.mmRole);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -407,11 +411,11 @@ public class Intermediary24 {
 			componentContext_lazy = () -> Intermediary24.mmObject();
 			isDerived = false;
 			xmlTag = "PmryComAdr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PrimaryCommunicationAddress";
 			definition = "Communication device number or electronic address used for communication.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Intermediary36.mmPrimaryCommunicationAddress);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Intermediary13.mmPrimaryCommunicationAddress;
+			nextVersions_lazy = () -> Arrays.asList(Intermediary36.mmPrimaryCommunicationAddress);
+			previousVersion_lazy = () -> Intermediary13.mmPrimaryCommunicationAddress;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -470,11 +474,11 @@ public class Intermediary24 {
 			componentContext_lazy = () -> Intermediary24.mmObject();
 			isDerived = false;
 			xmlTag = "ScndryComAdr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecondaryCommunicationAddress";
 			definition = "Communication device number or electronic address used for communication.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Intermediary36.mmSecondaryCommunicationAddress);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Intermediary13.mmSecondaryCommunicationAddress;
+			nextVersions_lazy = () -> Arrays.asList(Intermediary36.mmSecondaryCommunicationAddress);
+			previousVersion_lazy = () -> Intermediary13.mmSecondaryCommunicationAddress;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -530,15 +534,15 @@ public class Intermediary24 {
 	 */
 	public static final MMMessageAssociationEnd mmNameAndAddress = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Organisation.mmOrganisationIdentification;
+			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> Intermediary24.mmObject();
 			isDerived = false;
 			xmlTag = "NmAndAdr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NameAndAddress";
 			definition = "Information that locates and identifies a specific address, as defined by postal services.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Intermediary36.mmNameAndAddress);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Intermediary13.mmNameAndAddress;
+			nextVersions_lazy = () -> Arrays.asList(Intermediary36.mmNameAndAddress);
+			previousVersion_lazy = () -> Intermediary13.mmNameAndAddress;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -549,14 +553,13 @@ public class Intermediary24 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Intermediary24.mmIdentification, com.tools20022.repository.msg.Intermediary24.mmAccount,
-						com.tools20022.repository.msg.Intermediary24.mmWaivedTrailerCommissionIndicator, com.tools20022.repository.msg.Intermediary24.mmRole, com.tools20022.repository.msg.Intermediary24.mmPrimaryCommunicationAddress,
-						com.tools20022.repository.msg.Intermediary24.mmSecondaryCommunicationAddress, com.tools20022.repository.msg.Intermediary24.mmNameAndAddress);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountDetailsConfirmationV04.mmIntermediaries, com.tools20022.repository.area.acmt.AccountOpeningInstructionV04.mmIntermediaries,
-						com.tools20022.repository.area.acmt.AccountOpeningInstructionV05.mmIntermediaries, com.tools20022.repository.area.acmt.AccountDetailsConfirmationV05.mmIntermediaries);
+				messageElement_lazy = () -> Arrays.asList(Intermediary24.mmIdentification, Intermediary24.mmAccount, Intermediary24.mmWaivedTrailerCommissionIndicator, Intermediary24.mmRole, Intermediary24.mmPrimaryCommunicationAddress,
+						Intermediary24.mmSecondaryCommunicationAddress, Intermediary24.mmNameAndAddress);
+				messageBuildingBlock_lazy = () -> Arrays.asList(AccountDetailsConfirmationV04.mmIntermediaries, AccountOpeningInstructionV04.mmIntermediaries, AccountOpeningInstructionV05.mmIntermediaries,
+						AccountDetailsConfirmationV05.mmIntermediaries);
 				trace_lazy = () -> IntermediaryRole.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Intermediary24";
 				definition = "Party that provides services to investors relating to financial products.";
 				nextVersions_lazy = () -> Arrays.asList(Intermediary36.mmObject());

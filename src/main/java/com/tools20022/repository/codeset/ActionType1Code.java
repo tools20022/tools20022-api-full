@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ActionTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -100,7 +102,7 @@ public class ActionType1Code extends ActionTypeCode {
 	 */
 	public static final MMCode mmDisplayMessage = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DisplayMessage";
 			owner_lazy = () -> ActionType1Code.mmObject();
 		}
@@ -123,7 +125,7 @@ public class ActionType1Code extends ActionTypeCode {
 	 */
 	public static final MMCode mmPrintMessage = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PrintMessage";
 			owner_lazy = () -> ActionType1Code.mmObject();
 		}
@@ -146,7 +148,7 @@ public class ActionType1Code extends ActionTypeCode {
 	 */
 	public static final MMCode mmReferral = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Referral";
 			owner_lazy = () -> ActionType1Code.mmObject();
 		}
@@ -169,7 +171,7 @@ public class ActionType1Code extends ActionTypeCode {
 	 */
 	public static final MMCode mmCaptureCard = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CaptureCard";
 			owner_lazy = () -> ActionType1Code.mmObject();
 		}
@@ -192,7 +194,7 @@ public class ActionType1Code extends ActionTypeCode {
 	 */
 	public static final MMCode mmPINRetry = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PINRetry";
 			owner_lazy = () -> ActionType1Code.mmObject();
 		}
@@ -215,7 +217,7 @@ public class ActionType1Code extends ActionTypeCode {
 	 */
 	public static final MMCode mmPINLastTry = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PINLastTry";
 			owner_lazy = () -> ActionType1Code.mmObject();
 		}
@@ -238,7 +240,7 @@ public class ActionType1Code extends ActionTypeCode {
 	 */
 	public static final MMCode mmRequestData = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestData";
 			owner_lazy = () -> ActionType1Code.mmObject();
 		}
@@ -261,7 +263,7 @@ public class ActionType1Code extends ActionTypeCode {
 	 */
 	public static final MMCode mmBusy = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Busy";
 			owner_lazy = () -> ActionType1Code.mmObject();
 		}
@@ -284,7 +286,7 @@ public class ActionType1Code extends ActionTypeCode {
 	 */
 	public static final MMCode mmIdentificationRequired = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IdentificationRequired";
 			owner_lazy = () -> ActionType1Code.mmObject();
 		}
@@ -293,15 +295,13 @@ public class ActionType1Code extends ActionTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("DISP");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ActionType1Code";
 				definition = "Type of action to be performed by the POI System.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ActionType1Code.mmDisplayMessage, com.tools20022.repository.codeset.ActionType1Code.mmPrintMessage,
-						com.tools20022.repository.codeset.ActionType1Code.mmReferral, com.tools20022.repository.codeset.ActionType1Code.mmCaptureCard, com.tools20022.repository.codeset.ActionType1Code.mmPINRetry,
-						com.tools20022.repository.codeset.ActionType1Code.mmPINLastTry, com.tools20022.repository.codeset.ActionType1Code.mmRequestData, com.tools20022.repository.codeset.ActionType1Code.mmBusy,
-						com.tools20022.repository.codeset.ActionType1Code.mmIdentificationRequired);
+				code_lazy = () -> Arrays.asList(ActionType1Code.mmDisplayMessage, ActionType1Code.mmPrintMessage, ActionType1Code.mmReferral, ActionType1Code.mmCaptureCard, ActionType1Code.mmPINRetry, ActionType1Code.mmPINLastTry,
+						ActionType1Code.mmRequestData, ActionType1Code.mmBusy, ActionType1Code.mmIdentificationRequired);
 				trace_lazy = () -> ActionTypeCode.mmObject();
 			}
 		});

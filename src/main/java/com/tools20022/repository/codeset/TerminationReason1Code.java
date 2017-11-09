@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.TerminationReasonCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -89,7 +91,7 @@ public class TerminationReason1Code extends TerminationReasonCode {
 	 */
 	public static final MMCode mmReductionTermsFulfilled = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReductionTermsFulfilled";
 			owner_lazy = () -> TerminationReason1Code.mmObject();
 		}
@@ -112,7 +114,7 @@ public class TerminationReason1Code extends TerminationReasonCode {
 	 */
 	public static final MMCode mmTenderNonAcceptance = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TenderNonAcceptance";
 			owner_lazy = () -> TerminationReason1Code.mmObject();
 		}
@@ -135,7 +137,7 @@ public class TerminationReason1Code extends TerminationReasonCode {
 	 */
 	public static final MMCode mmUnderlyingBusinessFinished = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnderlyingBusinessFinished";
 			owner_lazy = () -> TerminationReason1Code.mmObject();
 		}
@@ -158,7 +160,7 @@ public class TerminationReason1Code extends TerminationReasonCode {
 	 */
 	public static final MMCode mmWarrantyObligationPeriodExpired = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WarrantyObligationPeriodExpired";
 			owner_lazy = () -> TerminationReason1Code.mmObject();
 		}
@@ -167,13 +169,13 @@ public class TerminationReason1Code extends TerminationReasonCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("REFU");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TerminationReason1Code";
 				definition = "Specifies the termination reason.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TerminationReason1Code.mmReductionTermsFulfilled, com.tools20022.repository.codeset.TerminationReason1Code.mmTenderNonAcceptance,
-						com.tools20022.repository.codeset.TerminationReason1Code.mmUnderlyingBusinessFinished, com.tools20022.repository.codeset.TerminationReason1Code.mmWarrantyObligationPeriodExpired);
+				code_lazy = () -> Arrays.asList(TerminationReason1Code.mmReductionTermsFulfilled, TerminationReason1Code.mmTenderNonAcceptance, TerminationReason1Code.mmUnderlyingBusinessFinished,
+						TerminationReason1Code.mmWarrantyObligationPeriodExpired);
 				trace_lazy = () -> TerminationReasonCode.mmObject();
 			}
 		});

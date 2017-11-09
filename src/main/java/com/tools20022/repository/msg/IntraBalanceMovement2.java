@@ -20,12 +20,14 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.Amount2Choice;
 import com.tools20022.repository.choice.DateAndDateTimeChoice;
 import com.tools20022.repository.choice.PriorityNumeric1Choice;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Max350Text;
-import com.tools20022.repository.entity.BookEntry;
+import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -145,11 +147,11 @@ public class IntraBalanceMovement2 {
 	 */
 	public static final MMMessageAssociationEnd mmBalanceFrom = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashEntry.mmCashBalance;
+			businessElementTrace_lazy = () -> CashEntry.mmCashBalance;
 			componentContext_lazy = () -> IntraBalanceMovement2.mmObject();
 			isDerived = false;
 			xmlTag = "BalFr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BalanceFrom";
 			definition = "Balance from which the amount of money is moved.";
 			maxOccurs = 1;
@@ -193,11 +195,11 @@ public class IntraBalanceMovement2 {
 	 */
 	public static final MMMessageAssociationEnd mmBalanceTo = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashEntry.mmCashBalance;
+			businessElementTrace_lazy = () -> CashEntry.mmCashBalance;
 			componentContext_lazy = () -> IntraBalanceMovement2.mmObject();
 			isDerived = false;
 			xmlTag = "BalTo";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BalanceTo";
 			definition = "Balance to which the amount of money is moved.";
 			maxOccurs = 1;
@@ -246,11 +248,11 @@ public class IntraBalanceMovement2 {
 	 */
 	public static final MMMessageAttribute mmSettlementAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Obligation.mmRequestedSettlementAmount;
+			businessElementTrace_lazy = () -> Obligation.mmRequestedSettlementAmount;
 			componentContext_lazy = () -> IntraBalanceMovement2.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementAmount";
 			definition = "Amount of money effectively settled and which will be credited to/debited from the account owner's cash account. It may differ from the instructed settlement amount based on market tolerance level.";
 			maxOccurs = 1;
@@ -298,11 +300,11 @@ public class IntraBalanceMovement2 {
 	 */
 	public static final MMMessageAttribute mmSettledAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashEntry.mmAmount;
+			businessElementTrace_lazy = () -> CashEntry.mmAmount;
 			componentContext_lazy = () -> IntraBalanceMovement2.mmObject();
 			isDerived = false;
 			xmlTag = "SttldAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettledAmount";
 			definition = "Amount of money effectively settled and which will be credited to/debited from the account owner's cash account. It may differ from the instructed settlement amount based on market tolerance level.";
 			maxOccurs = 1;
@@ -346,11 +348,11 @@ public class IntraBalanceMovement2 {
 	 */
 	public static final MMMessageAttribute mmPreviouslySettledAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashEntry.mmAmount;
+			businessElementTrace_lazy = () -> CashEntry.mmAmount;
 			componentContext_lazy = () -> IntraBalanceMovement2.mmObject();
 			isDerived = false;
 			xmlTag = "PrevslySttldAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviouslySettledAmount";
 			definition = "Amount of money previously settled.";
 			maxOccurs = 1;
@@ -394,11 +396,11 @@ public class IntraBalanceMovement2 {
 	 */
 	public static final MMMessageAttribute mmRemainingSettlementAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashEntry.mmAmount;
+			businessElementTrace_lazy = () -> CashEntry.mmAmount;
 			componentContext_lazy = () -> IntraBalanceMovement2.mmObject();
 			isDerived = false;
 			xmlTag = "RmngSttlmAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RemainingSettlementAmount";
 			definition = "Amount of money remaining to be settled.";
 			maxOccurs = 1;
@@ -443,11 +445,11 @@ public class IntraBalanceMovement2 {
 	 */
 	public static final MMMessageAttribute mmIntendedSettlementDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Obligation.mmRequestedSettlementDate;
+			businessElementTrace_lazy = () -> Obligation.mmRequestedSettlementDate;
 			componentContext_lazy = () -> IntraBalanceMovement2.mmObject();
 			isDerived = false;
 			xmlTag = "IntnddSttlmDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IntendedSettlementDate";
 			definition = "Date and time at which the amount of money is intended to be moved.";
 			maxOccurs = 1;
@@ -491,11 +493,11 @@ public class IntraBalanceMovement2 {
 	 */
 	public static final MMMessageAttribute mmEffectiveSettlementDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Entry.mmValueDate;
+			businessElementTrace_lazy = () -> Entry.mmValueDate;
 			componentContext_lazy = () -> IntraBalanceMovement2.mmObject();
 			isDerived = false;
 			xmlTag = "FctvSttlmDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EffectiveSettlementDate";
 			definition = "Date and time at which the amount of money is moved.";
 			maxOccurs = 1;
@@ -538,11 +540,11 @@ public class IntraBalanceMovement2 {
 	 */
 	public static final MMMessageAttribute mmStatusDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.mmStatusDateTime;
+			businessElementTrace_lazy = () -> Status.mmStatusDateTime;
 			componentContext_lazy = () -> IntraBalanceMovement2.mmObject();
 			isDerived = false;
 			xmlTag = "StsDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusDate";
 			definition = "Date and time at which the status was assigned.";
 			maxOccurs = 1;
@@ -583,7 +585,7 @@ public class IntraBalanceMovement2 {
 			componentContext_lazy = () -> IntraBalanceMovement2.mmObject();
 			isDerived = false;
 			xmlTag = "CshSubBalId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashSubBalanceIdentification";
 			definition = "Number identifying a lot constituting the sub-balance.";
 			maxOccurs = 1;
@@ -628,7 +630,7 @@ public class IntraBalanceMovement2 {
 			componentContext_lazy = () -> IntraBalanceMovement2.mmObject();
 			isDerived = false;
 			xmlTag = "Lnkgs";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Linkages";
 			definition = "Link to another transaction that must be processed after, before or at the same time.";
 			minOccurs = 0;
@@ -671,7 +673,7 @@ public class IntraBalanceMovement2 {
 			componentContext_lazy = () -> IntraBalanceMovement2.mmObject();
 			isDerived = false;
 			xmlTag = "Prty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Priority";
 			definition = "Specifies whether the transaction is to be executed with a high priority.";
 			maxOccurs = 1;
@@ -713,7 +715,7 @@ public class IntraBalanceMovement2 {
 			componentContext_lazy = () -> IntraBalanceMovement2.mmObject();
 			isDerived = false;
 			xmlTag = "MsgOrgtr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageOriginator";
 			definition = "Party that originated the message, if other than the sender.";
 			maxOccurs = 1;
@@ -755,7 +757,7 @@ public class IntraBalanceMovement2 {
 			componentContext_lazy = () -> IntraBalanceMovement2.mmObject();
 			isDerived = false;
 			xmlTag = "CreDtTm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreationDateTime";
 			definition = "Specifies the date/time on which the trade was executed.";
 			maxOccurs = 1;
@@ -799,7 +801,7 @@ public class IntraBalanceMovement2 {
 			componentContext_lazy = () -> IntraBalanceMovement2.mmObject();
 			isDerived = false;
 			xmlTag = "InstrPrcgAddtlDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructionProcessingAdditionalDetails";
 			definition = "Provides additional settlement processing information which can not be included within the structured fields of the message.";
 			maxOccurs = 1;
@@ -842,7 +844,7 @@ public class IntraBalanceMovement2 {
 			componentContext_lazy = () -> IntraBalanceMovement2.mmObject();
 			isDerived = false;
 			xmlTag = "SplmtryData";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryData";
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
 			minOccurs = 0;
@@ -854,16 +856,13 @@ public class IntraBalanceMovement2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IntraBalanceMovement2.mmBalanceFrom, com.tools20022.repository.msg.IntraBalanceMovement2.mmBalanceTo,
-						com.tools20022.repository.msg.IntraBalanceMovement2.mmSettlementAmount, com.tools20022.repository.msg.IntraBalanceMovement2.mmSettledAmount,
-						com.tools20022.repository.msg.IntraBalanceMovement2.mmPreviouslySettledAmount, com.tools20022.repository.msg.IntraBalanceMovement2.mmRemainingSettlementAmount,
-						com.tools20022.repository.msg.IntraBalanceMovement2.mmIntendedSettlementDate, com.tools20022.repository.msg.IntraBalanceMovement2.mmEffectiveSettlementDate,
-						com.tools20022.repository.msg.IntraBalanceMovement2.mmStatusDate, com.tools20022.repository.msg.IntraBalanceMovement2.mmCashSubBalanceIdentification, com.tools20022.repository.msg.IntraBalanceMovement2.mmLinkages,
-						com.tools20022.repository.msg.IntraBalanceMovement2.mmPriority, com.tools20022.repository.msg.IntraBalanceMovement2.mmMessageOriginator, com.tools20022.repository.msg.IntraBalanceMovement2.mmCreationDateTime,
-						com.tools20022.repository.msg.IntraBalanceMovement2.mmInstructionProcessingAdditionalDetails, com.tools20022.repository.msg.IntraBalanceMovement2.mmSupplementaryData);
+				messageElement_lazy = () -> Arrays.asList(IntraBalanceMovement2.mmBalanceFrom, IntraBalanceMovement2.mmBalanceTo, IntraBalanceMovement2.mmSettlementAmount, IntraBalanceMovement2.mmSettledAmount,
+						IntraBalanceMovement2.mmPreviouslySettledAmount, IntraBalanceMovement2.mmRemainingSettlementAmount, IntraBalanceMovement2.mmIntendedSettlementDate, IntraBalanceMovement2.mmEffectiveSettlementDate,
+						IntraBalanceMovement2.mmStatusDate, IntraBalanceMovement2.mmCashSubBalanceIdentification, IntraBalanceMovement2.mmLinkages, IntraBalanceMovement2.mmPriority, IntraBalanceMovement2.mmMessageOriginator,
+						IntraBalanceMovement2.mmCreationDateTime, IntraBalanceMovement2.mmInstructionProcessingAdditionalDetails, IntraBalanceMovement2.mmSupplementaryData);
 				trace_lazy = () -> BookEntry.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "IntraBalanceMovement2";
 				definition = "Provides additional details of the intra-balance movements data.";
 			}

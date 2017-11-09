@@ -19,8 +19,14 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.seev.*;
+import com.tools20022.repository.area.semt.*;
+import com.tools20022.repository.area.sese.*;
 import com.tools20022.repository.datatype.AnyBICIdentifier;
+import com.tools20022.repository.entity.OrganisationIdentification;
 import com.tools20022.repository.entity.PartyIdentificationInformation;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification19;
 import com.tools20022.repository.msg.NameAndAddress5;
 import java.text.DateFormat;
@@ -515,11 +521,11 @@ public class PartyIdentification10Choice {
 	 */
 	public static final MMMessageAttribute mmBICOrBEI = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.mmAnyBIC;
+			businessElementTrace_lazy = () -> OrganisationIdentification.mmAnyBIC;
 			componentContext_lazy = () -> PartyIdentification10Choice.mmObject();
 			isDerived = false;
 			xmlTag = "BICOrBEI";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BICOrBEI";
 			definition = "Code allocated to a financial or non-financial institution by the ISO 9362 Registration Authority, as described in ISO 9362 \"Banking - Banking telecommunication messages - Business identifier code (BIC)\".";
 			maxOccurs = 1;
@@ -566,11 +572,11 @@ public class PartyIdentification10Choice {
 	 */
 	public static final MMMessageAttribute mmProprietaryIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.mmOtherIdentification;
+			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmOtherIdentification;
 			componentContext_lazy = () -> PartyIdentification10Choice.mmObject();
 			isDerived = false;
 			xmlTag = "PrtryId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProprietaryIdentification";
 			definition = "Unique and unambiguous identifier, as assigned to a financial institution using a proprietary identification scheme.";
 			maxOccurs = 1;
@@ -617,7 +623,7 @@ public class PartyIdentification10Choice {
 			componentContext_lazy = () -> PartyIdentification10Choice.mmObject();
 			isDerived = false;
 			xmlTag = "NmAndAdr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NameAndAddress";
 			definition = "Name and address of a party.";
 			maxOccurs = 1;
@@ -629,86 +635,54 @@ public class PartyIdentification10Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PartyIdentification10Choice.mmBICOrBEI, com.tools20022.repository.choice.PartyIdentification10Choice.mmProprietaryIdentification,
-						com.tools20022.repository.choice.PartyIdentification10Choice.mmNameAndAddress);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV01.mmMessageOriginator,
-						com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV01.mmMessageRecipient, com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV01.mmIssuerAgent,
-						com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV01.mmPayingAgent, com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV01.mmSubPayingAgent,
-						com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV01.mmRegistrar, com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV01.mmResellingAgent,
-						com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV01.mmPhysicalSecuritiesAgent, com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV01.mmDropAgent,
-						com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV01.mmSolicitationAgent, com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV01.mmInformationAgent,
-						com.tools20022.repository.area.seev.CorporateActionEventProcessingStatusAdviceV01.mmMessageOriginator, com.tools20022.repository.area.seev.CorporateActionEventProcessingStatusAdviceV01.mmMessageRecipient,
-						com.tools20022.repository.area.seev.CorporateActionInstructionV01.mmMessageOriginator, com.tools20022.repository.area.seev.CorporateActionInstructionV01.mmMessageRecipient,
-						com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestV01.mmMessageOriginator, com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestV01.mmMessageRecipient,
-						com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestStatusAdviceV01.mmMessageOriginator,
-						com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestStatusAdviceV01.mmMessageRecipient,
-						com.tools20022.repository.area.seev.CorporateActionInstructionStatementReportV01.mmMessageOriginator, com.tools20022.repository.area.seev.CorporateActionInstructionStatementReportV01.mmMessageRecipient,
-						com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV01.mmMessageOriginator, com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV01.mmMessageRecipient,
-						com.tools20022.repository.area.seev.CorporateActionMovementConfirmationV01.mmMessageOriginator, com.tools20022.repository.area.seev.CorporateActionMovementConfirmationV01.mmMessageRecipient,
-						com.tools20022.repository.area.seev.CorporateActionMovementConfirmationV01.mmIssuerAgent, com.tools20022.repository.area.seev.CorporateActionMovementConfirmationV01.mmPayingAgent,
-						com.tools20022.repository.area.seev.CorporateActionMovementConfirmationV01.mmSubPayingAgent, com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV01.mmMessageOriginator,
-						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV01.mmMessageRecipient, com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV01.mmIssuerAgent,
-						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV01.mmPayingAgent, com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV01.mmSubPayingAgent,
-						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV01.mmRegistrar, com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV01.mmResellingAgent,
-						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV01.mmPhysicalSecuritiesAgent, com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV01.mmDropAgent,
-						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV01.mmSolicitationAgent, com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV01.mmInformationAgent,
-						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV01.mmMessageOriginator,
-						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV01.mmMessageRecipient,
-						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV01.mmIssuerAgent,
-						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV01.mmPayingAgent,
-						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV01.mmSubPayingAgent,
-						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV01.mmRegistrar,
-						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV01.mmResellingAgent,
-						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV01.mmPhysicalSecuritiesAgent,
-						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV01.mmDropAgent,
-						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV01.mmSolicitationAgent,
-						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV01.mmInformationAgent, com.tools20022.repository.area.seev.CorporateActionMovementReversalAdviceV01.mmMessageOriginator,
-						com.tools20022.repository.area.seev.CorporateActionMovementReversalAdviceV01.mmMessageRecipient, com.tools20022.repository.area.seev.CorporateActionMovementReversalAdviceV01.mmIssuerAgent,
-						com.tools20022.repository.area.seev.CorporateActionMovementReversalAdviceV01.mmPayingAgent, com.tools20022.repository.area.seev.CorporateActionMovementReversalAdviceV01.mmSubPayingAgent,
-						com.tools20022.repository.area.seev.CorporateActionNotificationV01.mmMessageOriginator, com.tools20022.repository.area.seev.CorporateActionNotificationV01.mmMessageRecipient,
-						com.tools20022.repository.area.seev.CorporateActionNotificationV01.mmIssuerAgent, com.tools20022.repository.area.seev.CorporateActionNotificationV01.mmPayingAgent,
-						com.tools20022.repository.area.seev.CorporateActionNotificationV01.mmSubPayingAgent, com.tools20022.repository.area.seev.CorporateActionNotificationV01.mmRegistrar,
-						com.tools20022.repository.area.seev.CorporateActionNotificationV01.mmResellingAgent, com.tools20022.repository.area.seev.CorporateActionNotificationV01.mmPhysicalSecuritiesAgent,
-						com.tools20022.repository.area.seev.CorporateActionNotificationV01.mmDropAgent, com.tools20022.repository.area.seev.CorporateActionNotificationV01.mmSolicitationAgent,
-						com.tools20022.repository.area.seev.CorporateActionNotificationV01.mmInformationAgent, com.tools20022.repository.area.semt.IntraPositionMovementConfirmationV01.mmMessageOriginator,
-						com.tools20022.repository.area.semt.IntraPositionMovementConfirmationV01.mmMessageRecipient, com.tools20022.repository.area.semt.IntraPositionMovementPostingReportV01.mmMessageOriginator,
-						com.tools20022.repository.area.semt.IntraPositionMovementPostingReportV01.mmMessageRecipient, com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV03.mmAccountServicer,
-						com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV03.mmMessageOriginator, com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV03.mmMessageRecipient,
-						com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV03.mmAccountServicer, com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV03.mmMessageOriginator,
-						com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV03.mmMessageRecipient, com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV01.mmMessageOriginator,
-						com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV01.mmMessageRecipient, com.tools20022.repository.area.sese.SecuritiesFinancingInstructionV01.mmMessageOriginator,
-						com.tools20022.repository.area.sese.SecuritiesFinancingInstructionV01.mmMessageRecipient, com.tools20022.repository.area.semt.SecuritiesMessageCancellationAdviceV01.mmMessageOriginator,
-						com.tools20022.repository.area.semt.SecuritiesMessageCancellationAdviceV01.mmMessageRecipient, com.tools20022.repository.area.sese.SecuritiesSettlementConditionModificationStatusAdviceV01.mmMessageOriginator,
-						com.tools20022.repository.area.sese.SecuritiesSettlementConditionModificationStatusAdviceV01.mmMessageRecipient,
-						com.tools20022.repository.area.sese.SecuritiesSettlementConditionsModificationRequestV01.mmMessageOriginator,
-						com.tools20022.repository.area.sese.SecuritiesSettlementConditionsModificationRequestV01.mmMessageRecipient, com.tools20022.repository.area.sese.SecuritiesSettlementTransactionConfirmationV01.mmMessageOriginator,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionConfirmationV01.mmMessageRecipient,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV01.mmMessageOriginator,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV01.mmMessageRecipient, com.tools20022.repository.area.sese.SecuritiesSettlementTransactionInstructionV01.mmMessageOriginator,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionInstructionV01.mmMessageRecipient, com.tools20022.repository.area.sese.SecuritiesSettlementTransactionStatusAdviceV01.mmMessageOriginator,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionStatusAdviceV01.mmMessageRecipient, com.tools20022.repository.area.semt.SecuritiesTransactionPendingReportV01.mmMessageOriginator,
-						com.tools20022.repository.area.semt.SecuritiesTransactionPendingReportV01.mmMessageRecipient, com.tools20022.repository.area.semt.SecuritiesTransactionPostingReportV01.mmMessageOriginator,
-						com.tools20022.repository.area.semt.SecuritiesTransactionPostingReportV01.mmMessageRecipient, com.tools20022.repository.area.semt.IntraPositionMovementInstructionV01.mmMessageOriginator,
-						com.tools20022.repository.area.semt.IntraPositionMovementInstructionV01.mmMessageRecipient, com.tools20022.repository.area.semt.IntraPositionMovementStatusAdviceV01.mmMessageOriginator,
-						com.tools20022.repository.area.semt.IntraPositionMovementStatusAdviceV01.mmMessageRecipient, com.tools20022.repository.area.sese.PortfolioTransferNotificationV01.mmMessageOriginator,
-						com.tools20022.repository.area.sese.PortfolioTransferNotificationV01.mmMessageRecipient, com.tools20022.repository.area.sese.SecuritiesFinancingModificationInstructionV01.mmMessageOriginator,
-						com.tools20022.repository.area.sese.SecuritiesFinancingModificationInstructionV01.mmMessageRecipient, com.tools20022.repository.area.sese.SecuritiesFinancingStatusAdviceV01.mmMessageOriginator,
-						com.tools20022.repository.area.sese.SecuritiesFinancingStatusAdviceV01.mmMessageRecipient, com.tools20022.repository.area.sese.SecuritiesSettlementAllegementRemovalAdviceV01.mmMessageOriginator,
-						com.tools20022.repository.area.sese.SecuritiesSettlementAllegementRemovalAdviceV01.mmMessageRecipient,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotificationV01.mmMessageOriginator,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotificationV01.mmMessageRecipient,
-						com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAllegementReportV01.mmMessageOriginator, com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAllegementReportV01.mmMessageRecipient,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdviceV01.mmMessageOriginator, com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdviceV01.mmMessageRecipient,
-						com.tools20022.repository.area.semt.SecuritiesStatementQueryV01.mmMessageOriginator, com.tools20022.repository.area.semt.SecuritiesStatementQueryV01.mmMessageRecipient,
-						com.tools20022.repository.area.sese.SecuritiesStatusOrStatementQueryStatusAdviceV01.mmMessageOriginator, com.tools20022.repository.area.sese.SecuritiesStatusOrStatementQueryStatusAdviceV01.mmMessageRecipient,
-						com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestStatusAdviceV01.mmMessageOriginator,
-						com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestStatusAdviceV01.mmMessageRecipient, com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestV01.mmMessageOriginator,
-						com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestV01.mmMessageRecipient, com.tools20022.repository.area.sese.SecuritiesTransactionStatusQueryV01.mmMessageOriginator,
-						com.tools20022.repository.area.sese.SecuritiesTransactionStatusQueryV01.mmMessageRecipient, com.tools20022.repository.area.seev.CorporateActionNarrativeV01.mmMessageOriginator,
-						com.tools20022.repository.area.seev.CorporateActionNarrativeV01.mmMessageRecipient);
+				messageElement_lazy = () -> Arrays.asList(PartyIdentification10Choice.mmBICOrBEI, PartyIdentification10Choice.mmProprietaryIdentification, PartyIdentification10Choice.mmNameAndAddress);
+				messageBuildingBlock_lazy = () -> Arrays.asList(CorporateActionCancellationAdviceV01.mmMessageOriginator, CorporateActionCancellationAdviceV01.mmMessageRecipient, CorporateActionCancellationAdviceV01.mmIssuerAgent,
+						CorporateActionCancellationAdviceV01.mmPayingAgent, CorporateActionCancellationAdviceV01.mmSubPayingAgent, CorporateActionCancellationAdviceV01.mmRegistrar, CorporateActionCancellationAdviceV01.mmResellingAgent,
+						CorporateActionCancellationAdviceV01.mmPhysicalSecuritiesAgent, CorporateActionCancellationAdviceV01.mmDropAgent, CorporateActionCancellationAdviceV01.mmSolicitationAgent,
+						CorporateActionCancellationAdviceV01.mmInformationAgent, CorporateActionEventProcessingStatusAdviceV01.mmMessageOriginator, CorporateActionEventProcessingStatusAdviceV01.mmMessageRecipient,
+						CorporateActionInstructionV01.mmMessageOriginator, CorporateActionInstructionV01.mmMessageRecipient, CorporateActionInstructionCancellationRequestV01.mmMessageOriginator,
+						CorporateActionInstructionCancellationRequestV01.mmMessageRecipient, CorporateActionInstructionCancellationRequestStatusAdviceV01.mmMessageOriginator,
+						CorporateActionInstructionCancellationRequestStatusAdviceV01.mmMessageRecipient, CorporateActionInstructionStatementReportV01.mmMessageOriginator, CorporateActionInstructionStatementReportV01.mmMessageRecipient,
+						CorporateActionInstructionStatusAdviceV01.mmMessageOriginator, CorporateActionInstructionStatusAdviceV01.mmMessageRecipient, CorporateActionMovementConfirmationV01.mmMessageOriginator,
+						CorporateActionMovementConfirmationV01.mmMessageRecipient, CorporateActionMovementConfirmationV01.mmIssuerAgent, CorporateActionMovementConfirmationV01.mmPayingAgent,
+						CorporateActionMovementConfirmationV01.mmSubPayingAgent, CorporateActionMovementPreliminaryAdviceV01.mmMessageOriginator, CorporateActionMovementPreliminaryAdviceV01.mmMessageRecipient,
+						CorporateActionMovementPreliminaryAdviceV01.mmIssuerAgent, CorporateActionMovementPreliminaryAdviceV01.mmPayingAgent, CorporateActionMovementPreliminaryAdviceV01.mmSubPayingAgent,
+						CorporateActionMovementPreliminaryAdviceV01.mmRegistrar, CorporateActionMovementPreliminaryAdviceV01.mmResellingAgent, CorporateActionMovementPreliminaryAdviceV01.mmPhysicalSecuritiesAgent,
+						CorporateActionMovementPreliminaryAdviceV01.mmDropAgent, CorporateActionMovementPreliminaryAdviceV01.mmSolicitationAgent, CorporateActionMovementPreliminaryAdviceV01.mmInformationAgent,
+						CorporateActionMovementPreliminaryAdviceCancellationAdviceV01.mmMessageOriginator, CorporateActionMovementPreliminaryAdviceCancellationAdviceV01.mmMessageRecipient,
+						CorporateActionMovementPreliminaryAdviceCancellationAdviceV01.mmIssuerAgent, CorporateActionMovementPreliminaryAdviceCancellationAdviceV01.mmPayingAgent,
+						CorporateActionMovementPreliminaryAdviceCancellationAdviceV01.mmSubPayingAgent, CorporateActionMovementPreliminaryAdviceCancellationAdviceV01.mmRegistrar,
+						CorporateActionMovementPreliminaryAdviceCancellationAdviceV01.mmResellingAgent, CorporateActionMovementPreliminaryAdviceCancellationAdviceV01.mmPhysicalSecuritiesAgent,
+						CorporateActionMovementPreliminaryAdviceCancellationAdviceV01.mmDropAgent, CorporateActionMovementPreliminaryAdviceCancellationAdviceV01.mmSolicitationAgent,
+						CorporateActionMovementPreliminaryAdviceCancellationAdviceV01.mmInformationAgent, CorporateActionMovementReversalAdviceV01.mmMessageOriginator, CorporateActionMovementReversalAdviceV01.mmMessageRecipient,
+						CorporateActionMovementReversalAdviceV01.mmIssuerAgent, CorporateActionMovementReversalAdviceV01.mmPayingAgent, CorporateActionMovementReversalAdviceV01.mmSubPayingAgent,
+						CorporateActionNotificationV01.mmMessageOriginator, CorporateActionNotificationV01.mmMessageRecipient, CorporateActionNotificationV01.mmIssuerAgent, CorporateActionNotificationV01.mmPayingAgent,
+						CorporateActionNotificationV01.mmSubPayingAgent, CorporateActionNotificationV01.mmRegistrar, CorporateActionNotificationV01.mmResellingAgent, CorporateActionNotificationV01.mmPhysicalSecuritiesAgent,
+						CorporateActionNotificationV01.mmDropAgent, CorporateActionNotificationV01.mmSolicitationAgent, CorporateActionNotificationV01.mmInformationAgent, IntraPositionMovementConfirmationV01.mmMessageOriginator,
+						IntraPositionMovementConfirmationV01.mmMessageRecipient, IntraPositionMovementPostingReportV01.mmMessageOriginator, IntraPositionMovementPostingReportV01.mmMessageRecipient,
+						SecuritiesBalanceAccountingReportV03.mmAccountServicer, SecuritiesBalanceAccountingReportV03.mmMessageOriginator, SecuritiesBalanceAccountingReportV03.mmMessageRecipient,
+						SecuritiesBalanceCustodyReportV03.mmAccountServicer, SecuritiesBalanceCustodyReportV03.mmMessageOriginator, SecuritiesBalanceCustodyReportV03.mmMessageRecipient,
+						SecuritiesFinancingConfirmationV01.mmMessageOriginator, SecuritiesFinancingConfirmationV01.mmMessageRecipient, SecuritiesFinancingInstructionV01.mmMessageOriginator,
+						SecuritiesFinancingInstructionV01.mmMessageRecipient, SecuritiesMessageCancellationAdviceV01.mmMessageOriginator, SecuritiesMessageCancellationAdviceV01.mmMessageRecipient,
+						SecuritiesSettlementConditionModificationStatusAdviceV01.mmMessageOriginator, SecuritiesSettlementConditionModificationStatusAdviceV01.mmMessageRecipient,
+						SecuritiesSettlementConditionsModificationRequestV01.mmMessageOriginator, SecuritiesSettlementConditionsModificationRequestV01.mmMessageRecipient, SecuritiesSettlementTransactionConfirmationV01.mmMessageOriginator,
+						SecuritiesSettlementTransactionConfirmationV01.mmMessageRecipient, SecuritiesSettlementTransactionGenerationNotificationV01.mmMessageOriginator,
+						SecuritiesSettlementTransactionGenerationNotificationV01.mmMessageRecipient, SecuritiesSettlementTransactionInstructionV01.mmMessageOriginator, SecuritiesSettlementTransactionInstructionV01.mmMessageRecipient,
+						SecuritiesSettlementTransactionStatusAdviceV01.mmMessageOriginator, SecuritiesSettlementTransactionStatusAdviceV01.mmMessageRecipient, SecuritiesTransactionPendingReportV01.mmMessageOriginator,
+						SecuritiesTransactionPendingReportV01.mmMessageRecipient, SecuritiesTransactionPostingReportV01.mmMessageOriginator, SecuritiesTransactionPostingReportV01.mmMessageRecipient,
+						IntraPositionMovementInstructionV01.mmMessageOriginator, IntraPositionMovementInstructionV01.mmMessageRecipient, IntraPositionMovementStatusAdviceV01.mmMessageOriginator,
+						IntraPositionMovementStatusAdviceV01.mmMessageRecipient, PortfolioTransferNotificationV01.mmMessageOriginator, PortfolioTransferNotificationV01.mmMessageRecipient,
+						SecuritiesFinancingModificationInstructionV01.mmMessageOriginator, SecuritiesFinancingModificationInstructionV01.mmMessageRecipient, SecuritiesFinancingStatusAdviceV01.mmMessageOriginator,
+						SecuritiesFinancingStatusAdviceV01.mmMessageRecipient, SecuritiesSettlementAllegementRemovalAdviceV01.mmMessageOriginator, SecuritiesSettlementAllegementRemovalAdviceV01.mmMessageRecipient,
+						SecuritiesSettlementTransactionAllegementNotificationV01.mmMessageOriginator, SecuritiesSettlementTransactionAllegementNotificationV01.mmMessageRecipient,
+						SecuritiesSettlementTransactionAllegementReportV01.mmMessageOriginator, SecuritiesSettlementTransactionAllegementReportV01.mmMessageRecipient, SecuritiesSettlementTransactionReversalAdviceV01.mmMessageOriginator,
+						SecuritiesSettlementTransactionReversalAdviceV01.mmMessageRecipient, SecuritiesStatementQueryV01.mmMessageOriginator, SecuritiesStatementQueryV01.mmMessageRecipient,
+						SecuritiesStatusOrStatementQueryStatusAdviceV01.mmMessageOriginator, SecuritiesStatusOrStatementQueryStatusAdviceV01.mmMessageRecipient, SecuritiesTransactionCancellationRequestStatusAdviceV01.mmMessageOriginator,
+						SecuritiesTransactionCancellationRequestStatusAdviceV01.mmMessageRecipient, SecuritiesTransactionCancellationRequestV01.mmMessageOriginator, SecuritiesTransactionCancellationRequestV01.mmMessageRecipient,
+						SecuritiesTransactionStatusQueryV01.mmMessageOriginator, SecuritiesTransactionStatusQueryV01.mmMessageRecipient, CorporateActionNarrativeV01.mmMessageOriginator, CorporateActionNarrativeV01.mmMessageRecipient);
 				trace_lazy = () -> PartyIdentificationInformation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
 						return DateFormat.getDateInstance(java.text.DateFormat.LONG).parse("May 5, 2016");

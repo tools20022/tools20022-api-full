@@ -19,9 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CommunicationMethod4Code;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.entity.Presentation;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -101,11 +103,11 @@ public class RegisteredContractCommunication1 {
 	 */
 	public static final MMMessageAttribute mmMethod = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Presentation.mmCommunicationMethod;
+			businessElementTrace_lazy = () -> Presentation.mmCommunicationMethod;
 			componentContext_lazy = () -> RegisteredContractCommunication1.mmObject();
 			isDerived = false;
 			xmlTag = "Mtd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Method";
 			definition = "Method by which the registered contract document is exchanged.";
 			maxOccurs = 1;
@@ -148,11 +150,11 @@ public class RegisteredContractCommunication1 {
 	 */
 	public static final MMMessageAttribute mmDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Presentation.mmPresentationDate;
+			businessElementTrace_lazy = () -> Presentation.mmPresentationDate;
 			componentContext_lazy = () -> RegisteredContractCommunication1.mmObject();
 			isDerived = false;
 			xmlTag = "Dt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Date";
 			definition = "Date of the exchange.";
 			maxOccurs = 1;
@@ -164,10 +166,10 @@ public class RegisteredContractCommunication1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RegisteredContractCommunication1.mmMethod, com.tools20022.repository.msg.RegisteredContractCommunication1.mmDate);
+				messageElement_lazy = () -> Arrays.asList(RegisteredContractCommunication1.mmMethod, RegisteredContractCommunication1.mmDate);
 				trace_lazy = () -> Presentation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RegisteredContractCommunication1";
 				definition = "Communication details related to the registered currency control contract.";
 			}

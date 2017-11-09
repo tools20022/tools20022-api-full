@@ -19,7 +19,9 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.MarginCall;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -96,11 +98,11 @@ public class AgreedAmount1 {
 	 */
 	public static final MMMessageAssociationEnd mmVariationMarginAmount = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.MarginCall.mmVariationMargin;
+			businessElementTrace_lazy = () -> MarginCall.mmVariationMargin;
 			componentContext_lazy = () -> AgreedAmount1.mmObject();
 			isDerived = false;
 			xmlTag = "VartnMrgnAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VariationMarginAmount";
 			definition = "Provides details about the agreed amount for the variation margin.";
 			maxOccurs = 1;
@@ -144,11 +146,11 @@ public class AgreedAmount1 {
 	 */
 	public static final MMMessageAssociationEnd mmSegregatedIndependentAmount = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.MarginCall.mmSegregatedIndependentAmount;
+			businessElementTrace_lazy = () -> MarginCall.mmSegregatedIndependentAmount;
 			componentContext_lazy = () -> AgreedAmount1.mmObject();
 			isDerived = false;
 			xmlTag = "SgrtdIndpdntAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SegregatedIndependentAmount";
 			definition = "Provides details about the agreed amount for the segregated independent amount.";
 			maxOccurs = 1;
@@ -161,10 +163,10 @@ public class AgreedAmount1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AgreedAmount1.mmVariationMarginAmount, com.tools20022.repository.msg.AgreedAmount1.mmSegregatedIndependentAmount);
+				messageElement_lazy = () -> Arrays.asList(AgreedAmount1.mmVariationMarginAmount, AgreedAmount1.mmSegregatedIndependentAmount);
 				trace_lazy = () -> MarginCall.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AgreedAmount1";
 				definition = "Provides details about the agreed amount for the variation margin and optionaly the segregated independent amount.";
 			}

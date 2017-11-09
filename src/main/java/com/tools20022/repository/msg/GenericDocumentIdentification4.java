@@ -19,8 +19,10 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.DocumentNumber5Choice;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -105,10 +107,10 @@ public class GenericDocumentIdentification4 {
 			componentContext_lazy = () -> GenericDocumentIdentification4.mmObject();
 			isDerived = false;
 			xmlTag = "MsgNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageNumber";
 			definition = "Message type number/message identifier of the message referenced in the linkage sequence.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.GenericDocumentIdentification1.mmMessageNumber;
+			previousVersion_lazy = () -> GenericDocumentIdentification1.mmMessageNumber;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DocumentNumber5Choice.mmObject();
@@ -152,10 +154,10 @@ public class GenericDocumentIdentification4 {
 			componentContext_lazy = () -> GenericDocumentIdentification4.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Identification of the document.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.GenericDocumentIdentification1.mmIdentification;
+			previousVersion_lazy = () -> GenericDocumentIdentification1.mmIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -165,9 +167,9 @@ public class GenericDocumentIdentification4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GenericDocumentIdentification4.mmMessageNumber, com.tools20022.repository.msg.GenericDocumentIdentification4.mmIdentification);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(GenericDocumentIdentification4.mmMessageNumber, GenericDocumentIdentification4.mmIdentification);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "GenericDocumentIdentification4";
 				definition = "Generic identification scheme for a document.";
 				previousVersion_lazy = () -> GenericDocumentIdentification1.mmObject();

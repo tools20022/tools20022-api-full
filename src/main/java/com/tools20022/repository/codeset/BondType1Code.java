@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.BondTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -87,7 +89,7 @@ public class BondType1Code extends BondTypeCode {
 	 */
 	public static final MMCode mmSovereignBond = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SovereignBond";
 			owner_lazy = () -> BondType1Code.mmObject();
 		}
@@ -110,7 +112,7 @@ public class BondType1Code extends BondTypeCode {
 	 */
 	public static final MMCode mmOtherPublicBond = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherPublicBond";
 			owner_lazy = () -> BondType1Code.mmObject();
 		}
@@ -133,7 +135,7 @@ public class BondType1Code extends BondTypeCode {
 	 */
 	public static final MMCode mmConvertibleBond = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConvertibleBond";
 			owner_lazy = () -> BondType1Code.mmObject();
 		}
@@ -156,7 +158,7 @@ public class BondType1Code extends BondTypeCode {
 	 */
 	public static final MMCode mmCorporateBond = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorporateBond";
 			owner_lazy = () -> BondType1Code.mmObject();
 		}
@@ -179,7 +181,7 @@ public class BondType1Code extends BondTypeCode {
 	 */
 	public static final MMCode mmCoveredBond = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoveredBond";
 			owner_lazy = () -> BondType1Code.mmObject();
 		}
@@ -202,7 +204,7 @@ public class BondType1Code extends BondTypeCode {
 	 */
 	public static final MMCode mmOther = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
 			owner_lazy = () -> BondType1Code.mmObject();
 		}
@@ -211,13 +213,11 @@ public class BondType1Code extends BondTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "BondType1Code";
 				definition = "Specifies the type of bonds.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.BondType1Code.mmSovereignBond, com.tools20022.repository.codeset.BondType1Code.mmOtherPublicBond,
-						com.tools20022.repository.codeset.BondType1Code.mmConvertibleBond, com.tools20022.repository.codeset.BondType1Code.mmCorporateBond, com.tools20022.repository.codeset.BondType1Code.mmCoveredBond,
-						com.tools20022.repository.codeset.BondType1Code.mmOther);
+				code_lazy = () -> Arrays.asList(BondType1Code.mmSovereignBond, BondType1Code.mmOtherPublicBond, BondType1Code.mmConvertibleBond, BondType1Code.mmCorporateBond, BondType1Code.mmCoveredBond, BondType1Code.mmOther);
 				trace_lazy = () -> BondTypeCode.mmObject();
 			}
 		});

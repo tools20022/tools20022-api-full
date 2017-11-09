@@ -19,9 +19,11 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
 import com.tools20022.repository.datatype.DecimalNumber;
 import com.tools20022.repository.datatype.PercentageRate;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -97,7 +99,7 @@ public class UnitsOrAmountOrPercentage1Choice {
 			componentContext_lazy = () -> UnitsOrAmountOrPercentage1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Amt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Cash amount.";
 			maxOccurs = 1;
@@ -139,7 +141,7 @@ public class UnitsOrAmountOrPercentage1Choice {
 			componentContext_lazy = () -> UnitsOrAmountOrPercentage1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Unit";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unit";
 			definition = "Number of units.";
 			maxOccurs = 1;
@@ -181,7 +183,7 @@ public class UnitsOrAmountOrPercentage1Choice {
 			componentContext_lazy = () -> UnitsOrAmountOrPercentage1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Pctg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Percentage";
 			definition = "Percentage of cash amount.";
 			maxOccurs = 1;
@@ -193,10 +195,9 @@ public class UnitsOrAmountOrPercentage1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.UnitsOrAmountOrPercentage1Choice.mmAmount, com.tools20022.repository.choice.UnitsOrAmountOrPercentage1Choice.mmUnit,
-						com.tools20022.repository.choice.UnitsOrAmountOrPercentage1Choice.mmPercentage);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(UnitsOrAmountOrPercentage1Choice.mmAmount, UnitsOrAmountOrPercentage1Choice.mmUnit, UnitsOrAmountOrPercentage1Choice.mmPercentage);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "UnitsOrAmountOrPercentage1Choice";
 				definition = "Choice between an amount or number of units or percentage.";
 			}

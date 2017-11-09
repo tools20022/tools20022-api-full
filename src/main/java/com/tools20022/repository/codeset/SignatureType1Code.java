@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.SignatureTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -88,7 +90,7 @@ public class SignatureType1Code extends SignatureTypeCode {
 	 */
 	public static final MMCode mmOriginal = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Original";
 			owner_lazy = () -> SignatureType1Code.mmObject();
 		}
@@ -111,7 +113,7 @@ public class SignatureType1Code extends SignatureTypeCode {
 	 */
 	public static final MMCode mmDigital = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Digital";
 			owner_lazy = () -> SignatureType1Code.mmObject();
 		}
@@ -134,7 +136,7 @@ public class SignatureType1Code extends SignatureTypeCode {
 	 */
 	public static final MMCode mmElectronic = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Electronic";
 			owner_lazy = () -> SignatureType1Code.mmObject();
 		}
@@ -157,7 +159,7 @@ public class SignatureType1Code extends SignatureTypeCode {
 	 */
 	public static final MMCode mmNone = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "None";
 			owner_lazy = () -> SignatureType1Code.mmObject();
 		}
@@ -166,13 +168,12 @@ public class SignatureType1Code extends SignatureTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ORIG");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SignatureType1Code";
 				definition = "Type of signature form.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SignatureType1Code.mmOriginal, com.tools20022.repository.codeset.SignatureType1Code.mmDigital,
-						com.tools20022.repository.codeset.SignatureType1Code.mmElectronic, com.tools20022.repository.codeset.SignatureType1Code.mmNone);
+				code_lazy = () -> Arrays.asList(SignatureType1Code.mmOriginal, SignatureType1Code.mmDigital, SignatureType1Code.mmElectronic, SignatureType1Code.mmNone);
 				trace_lazy = () -> SignatureTypeCode.mmObject();
 			}
 		});

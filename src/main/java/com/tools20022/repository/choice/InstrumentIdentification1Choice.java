@@ -19,8 +19,10 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.InvestmentFundClass;
 import com.tools20022.repository.entity.Security;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.FinancialInstrument1;
 import com.tools20022.repository.msg.FinancialInstrument13;
 import java.util.Arrays;
@@ -103,7 +105,7 @@ public class InstrumentIdentification1Choice {
 			componentContext_lazy = () -> InstrumentIdentification1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "OthrFinInstrm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherFinancialInstrument";
 			definition = "Financial Instrument excluding investment funds.";
 			maxOccurs = 1;
@@ -154,7 +156,7 @@ public class InstrumentIdentification1Choice {
 			componentContext_lazy = () -> InstrumentIdentification1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "InvstmtFnd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestmentFund";
 			definition = "Distinct pool of financial instruments managed by a single investment policy. May or not be part of an umbrella fund.The pool is issued in at least one investment fund class.";
 			maxOccurs = 1;
@@ -167,10 +169,10 @@ public class InstrumentIdentification1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.InstrumentIdentification1Choice.mmOtherFinancialInstrument, com.tools20022.repository.choice.InstrumentIdentification1Choice.mmInvestmentFund);
+				messageElement_lazy = () -> Arrays.asList(InstrumentIdentification1Choice.mmOtherFinancialInstrument, InstrumentIdentification1Choice.mmInvestmentFund);
 				trace_lazy = () -> Security.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "InstrumentIdentification1Choice";
 				definition = "Choice between the identification of an investment fund and another financial instrument (equity, fixed income, etc.).";
 			}

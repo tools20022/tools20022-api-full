@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.InterestTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -85,7 +87,7 @@ public class InterestType2Code extends InterestTypeCode {
 	 */
 	public static final MMCode mmCumInterest = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CumInterest";
 			owner_lazy = () -> InterestType2Code.mmObject();
 		}
@@ -108,7 +110,7 @@ public class InterestType2Code extends InterestTypeCode {
 	 */
 	public static final MMCode mmExInterest = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExInterest";
 			owner_lazy = () -> InterestType2Code.mmObject();
 		}
@@ -117,12 +119,12 @@ public class InterestType2Code extends InterestTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CINT");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InterestType2Code";
 				definition = "Indicates if the deal price is excluding or including the accrued interest.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.InterestType2Code.mmCumInterest, com.tools20022.repository.codeset.InterestType2Code.mmExInterest);
+				code_lazy = () -> Arrays.asList(InterestType2Code.mmCumInterest, InterestType2Code.mmExInterest);
 				trace_lazy = () -> InterestTypeCode.mmObject();
 			}
 		});

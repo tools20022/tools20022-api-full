@@ -20,8 +20,12 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.tsrv.ExtendOrPayResponseV01;
 import com.tools20022.repository.codeset.DemandStatus1Code;
+import com.tools20022.repository.entity.Undertaking;
 import com.tools20022.repository.entity.UndertakingStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -109,11 +113,11 @@ public class ExtendOrPayQuery2 {
 	 */
 	public static final MMMessageAssociationEnd mmUndertakingIdentification = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.UndertakingStatus.mmUndertaking;
+			businessElementTrace_lazy = () -> UndertakingStatus.mmUndertaking;
 			componentContext_lazy = () -> ExtendOrPayQuery2.mmObject();
 			isDerived = false;
 			xmlTag = "UdrtkgId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UndertakingIdentification";
 			definition = "Details related to the identification of the undertaking.";
 			maxOccurs = 1;
@@ -155,11 +159,11 @@ public class ExtendOrPayQuery2 {
 	 */
 	public static final MMMessageAssociationEnd mmDemandDetails = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Undertaking.mmDemand;
+			businessElementTrace_lazy = () -> Undertaking.mmDemand;
 			componentContext_lazy = () -> ExtendOrPayQuery2.mmObject();
 			isDerived = false;
 			xmlTag = "DmndDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DemandDetails";
 			definition = "Details related to the demand.";
 			maxOccurs = 1;
@@ -204,11 +208,11 @@ public class ExtendOrPayQuery2 {
 	 */
 	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.UndertakingStatus.mmDemandStatus;
+			businessElementTrace_lazy = () -> UndertakingStatus.mmDemandStatus;
 			componentContext_lazy = () -> ExtendOrPayQuery2.mmObject();
 			isDerived = false;
 			xmlTag = "Sts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Status";
 			definition = "Processing status reported by the applicant.";
 			maxOccurs = 1;
@@ -220,12 +224,11 @@ public class ExtendOrPayQuery2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ExtendOrPayQuery2.mmUndertakingIdentification, com.tools20022.repository.msg.ExtendOrPayQuery2.mmDemandDetails,
-						com.tools20022.repository.msg.ExtendOrPayQuery2.mmStatus);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsrv.ExtendOrPayResponseV01.mmExtendOrPayResponseDetails);
+				messageElement_lazy = () -> Arrays.asList(ExtendOrPayQuery2.mmUndertakingIdentification, ExtendOrPayQuery2.mmDemandDetails, ExtendOrPayQuery2.mmStatus);
+				messageBuildingBlock_lazy = () -> Arrays.asList(ExtendOrPayResponseV01.mmExtendOrPayResponseDetails);
 				trace_lazy = () -> UndertakingStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ExtendOrPayQuery2";
 				definition = "Undertaking extend or pay query details.";
 			}

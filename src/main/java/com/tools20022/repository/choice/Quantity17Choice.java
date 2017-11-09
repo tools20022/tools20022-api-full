@@ -19,7 +19,9 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.SecuritiesQuantity;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.ProprietaryQuantity7;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -103,10 +105,10 @@ public class Quantity17Choice {
 			componentContext_lazy = () -> Quantity17Choice.mmObject();
 			isDerived = false;
 			xmlTag = "QtyChc";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuantityChoice";
 			definition = "Choice between different quantity of security formats.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.Quantity3Choice.mmQuantityChoice;
+			previousVersion_lazy = () -> Quantity3Choice.mmQuantityChoice;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -150,10 +152,10 @@ public class Quantity17Choice {
 			componentContext_lazy = () -> Quantity17Choice.mmObject();
 			isDerived = false;
 			xmlTag = "PrtryQty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProprietaryQuantity";
 			definition = "Proprietary quantity of security format.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.Quantity3Choice.mmProprietaryQuantity;
+			previousVersion_lazy = () -> Quantity3Choice.mmProprietaryQuantity;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -164,10 +166,10 @@ public class Quantity17Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Quantity17Choice.mmQuantityChoice, com.tools20022.repository.choice.Quantity17Choice.mmProprietaryQuantity);
+				messageElement_lazy = () -> Arrays.asList(Quantity17Choice.mmQuantityChoice, Quantity17Choice.mmProprietaryQuantity);
 				trace_lazy = () -> SecuritiesQuantity.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Quantity17Choice";
 				definition = "Choice between different quantity of security formats.";
 				previousVersion_lazy = () -> Quantity3Choice.mmObject();

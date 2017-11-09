@@ -19,7 +19,9 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.CollateralProposal;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -121,15 +123,15 @@ public class CollateralMovement8 {
 	 */
 	public static final MMMessageAssociationEnd mmDeliver = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CollateralProposal.mmProposedCollateralMovement;
+			businessElementTrace_lazy = () -> CollateralProposal.mmProposedCollateralMovement;
 			componentContext_lazy = () -> CollateralMovement8.mmObject();
 			isDerived = false;
 			xmlTag = "Dlvr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Deliver";
 			definition = "Provides the collateral movement direction that is a delivery only.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CollateralMovement11.mmDeliver);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CollateralMovement6.mmDeliver;
+			nextVersions_lazy = () -> Arrays.asList(CollateralMovement11.mmDeliver);
+			previousVersion_lazy = () -> CollateralMovement6.mmDeliver;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -184,15 +186,15 @@ public class CollateralMovement8 {
 	 */
 	public static final MMMessageAssociationEnd mmReturn = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CollateralProposal.mmProposedCollateralMovement;
+			businessElementTrace_lazy = () -> CollateralProposal.mmProposedCollateralMovement;
 			componentContext_lazy = () -> CollateralMovement8.mmObject();
 			isDerived = false;
 			xmlTag = "Rtr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Return";
 			definition = "Provides the collateral movement direction that is a return only.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CollateralMovement11.mmReturn);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CollateralMovement6.mmReturn;
+			nextVersions_lazy = () -> Arrays.asList(CollateralMovement11.mmReturn);
+			previousVersion_lazy = () -> CollateralMovement6.mmReturn;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -203,10 +205,10 @@ public class CollateralMovement8 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CollateralMovement8.mmDeliver, com.tools20022.repository.msg.CollateralMovement8.mmReturn);
+				messageElement_lazy = () -> Arrays.asList(CollateralMovement8.mmDeliver, CollateralMovement8.mmReturn);
 				trace_lazy = () -> CollateralProposal.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CollateralMovement8";
 				definition = "Provides the collateral movement direction that is a delivery and optionaly a return.";
 				nextVersions_lazy = () -> Arrays.asList(CollateralMovement11.mmObject());

@@ -20,8 +20,14 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.semt.IntraPositionMovementConfirmation002V05;
+import com.tools20022.repository.area.semt.IntraPositionMovementConfirmation002V06;
+import com.tools20022.repository.area.semt.IntraPositionMovementInstruction002V04;
 import com.tools20022.repository.codeset.CountryCode;
+import com.tools20022.repository.entity.PartyIdentificationInformation;
 import com.tools20022.repository.entity.SafekeepingPlace;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification85;
 import com.tools20022.repository.msg.SafekeepingPlaceTypeAndAnyBICIdentifier1;
 import com.tools20022.repository.msg.SafekeepingPlaceTypeAndText15;
@@ -127,7 +133,7 @@ public class SafekeepingPlaceFormat17Choice {
 			componentContext_lazy = () -> SafekeepingPlaceFormat17Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Place of safekeeping expressed as a code and a narrative description.";
 			maxOccurs = 1;
@@ -171,11 +177,11 @@ public class SafekeepingPlaceFormat17Choice {
 	 */
 	public static final MMMessageAttribute mmCountry = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SafekeepingPlace.mmCountry;
+			businessElementTrace_lazy = () -> SafekeepingPlace.mmCountry;
 			componentContext_lazy = () -> SafekeepingPlaceFormat17Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Ctry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Country";
 			definition = "Place of safekeeping expressed with a country code.";
 			maxOccurs = 1;
@@ -223,7 +229,7 @@ public class SafekeepingPlaceFormat17Choice {
 			componentContext_lazy = () -> SafekeepingPlaceFormat17Choice.mmObject();
 			isDerived = false;
 			xmlTag = "TpAndId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TypeAndIdentification";
 			definition = "Place of safekeeping expressed with a type and identification.";
 			maxOccurs = 1;
@@ -268,11 +274,11 @@ public class SafekeepingPlaceFormat17Choice {
 	 */
 	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.mmOtherIdentification;
+			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmOtherIdentification;
 			componentContext_lazy = () -> SafekeepingPlaceFormat17Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Place of safekeeping expressed with a propriety identification scheme.";
 			maxOccurs = 1;
@@ -285,13 +291,13 @@ public class SafekeepingPlaceFormat17Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SafekeepingPlaceFormat17Choice.mmIdentification, com.tools20022.repository.choice.SafekeepingPlaceFormat17Choice.mmCountry,
-						com.tools20022.repository.choice.SafekeepingPlaceFormat17Choice.mmTypeAndIdentification, com.tools20022.repository.choice.SafekeepingPlaceFormat17Choice.mmProprietary);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.IntraPositionMovementInstruction002V04.mmSafekeepingPlace,
-						com.tools20022.repository.area.semt.IntraPositionMovementConfirmation002V05.mmSafekeepingPlace, com.tools20022.repository.area.semt.IntraPositionMovementConfirmation002V06.mmSafekeepingPlace);
+				messageElement_lazy = () -> Arrays.asList(SafekeepingPlaceFormat17Choice.mmIdentification, SafekeepingPlaceFormat17Choice.mmCountry, SafekeepingPlaceFormat17Choice.mmTypeAndIdentification,
+						SafekeepingPlaceFormat17Choice.mmProprietary);
+				messageBuildingBlock_lazy = () -> Arrays.asList(IntraPositionMovementInstruction002V04.mmSafekeepingPlace, IntraPositionMovementConfirmation002V05.mmSafekeepingPlace,
+						IntraPositionMovementConfirmation002V06.mmSafekeepingPlace);
 				trace_lazy = () -> SafekeepingPlace.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SafekeepingPlaceFormat17Choice";
 				definition = "Choice between formats for the place of safekeeping.";
 			}

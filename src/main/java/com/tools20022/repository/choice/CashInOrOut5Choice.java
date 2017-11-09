@@ -19,7 +19,9 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.Payment;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -114,10 +116,10 @@ public class CashInOrOut5Choice {
 			componentContext_lazy = () -> CashInOrOut5Choice.mmObject();
 			isDerived = false;
 			xmlTag = "CshInPmtInstrm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashInPaymentInstrument";
 			definition = "Payment instrument for the cash-in flow.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CashInOrOut7Choice.mmCashInPaymentInstrument);
+			nextVersions_lazy = () -> Arrays.asList(CashInOrOut7Choice.mmCashInPaymentInstrument);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -170,10 +172,10 @@ public class CashInOrOut5Choice {
 			componentContext_lazy = () -> CashInOrOut5Choice.mmObject();
 			isDerived = false;
 			xmlTag = "CshOutPmtInstrm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashOutPaymentInstrument";
 			definition = "Payment instrument for the cash-out flow.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CashInOrOut7Choice.mmCashOutPaymentInstrument);
+			nextVersions_lazy = () -> Arrays.asList(CashInOrOut7Choice.mmCashOutPaymentInstrument);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -184,10 +186,10 @@ public class CashInOrOut5Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CashInOrOut5Choice.mmCashInPaymentInstrument, com.tools20022.repository.choice.CashInOrOut5Choice.mmCashOutPaymentInstrument);
+				messageElement_lazy = () -> Arrays.asList(CashInOrOut5Choice.mmCashInPaymentInstrument, CashInOrOut5Choice.mmCashOutPaymentInstrument);
 				trace_lazy = () -> Payment.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CashInOrOut5Choice";
 				definition = "Choice of a payment instrument for the cash-in flow or cash-out flow.";
 				nextVersions_lazy = () -> Arrays.asList(CashInOrOut7Choice.mmObject());

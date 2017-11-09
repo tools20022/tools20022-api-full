@@ -20,7 +20,9 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.Algorithm8Code;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -103,10 +105,10 @@ public class AlgorithmIdentification12 {
 			componentContext_lazy = () -> AlgorithmIdentification12.mmObject();
 			isDerived = false;
 			xmlTag = "Algo";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Algorithm";
 			definition = "Mask generator function cryptographic algorithm.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AlgorithmIdentification8.mmAlgorithm;
+			previousVersion_lazy = () -> AlgorithmIdentification8.mmAlgorithm;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Algorithm8Code.mmObject();
@@ -151,10 +153,10 @@ public class AlgorithmIdentification12 {
 			componentContext_lazy = () -> AlgorithmIdentification12.mmObject();
 			isDerived = false;
 			xmlTag = "Param";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Parameter";
 			definition = "Parameters associated to the mask generator function cryptographic algorithm";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AlgorithmIdentification8.mmParameter;
+			previousVersion_lazy = () -> AlgorithmIdentification8.mmParameter;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -165,9 +167,9 @@ public class AlgorithmIdentification12 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AlgorithmIdentification12.mmAlgorithm, com.tools20022.repository.msg.AlgorithmIdentification12.mmParameter);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(AlgorithmIdentification12.mmAlgorithm, AlgorithmIdentification12.mmParameter);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AlgorithmIdentification12";
 				definition = "Mask generator function cryptographic algorithm and parameters.";
 				previousVersion_lazy = () -> AlgorithmIdentification8.mmObject();

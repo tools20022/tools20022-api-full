@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.SettlementTransactionConditionCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -99,7 +101,7 @@ public class SettlementTransactionCondition4Code extends SettlementTransactionCo
 	 */
 	public static final MMCode mmClean = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Clean";
 			owner_lazy = () -> SettlementTransactionCondition4Code.mmObject();
 		}
@@ -122,7 +124,7 @@ public class SettlementTransactionCondition4Code extends SettlementTransactionCo
 	 */
 	public static final MMCode mmDirty = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Dirty";
 			owner_lazy = () -> SettlementTransactionCondition4Code.mmObject();
 		}
@@ -145,7 +147,7 @@ public class SettlementTransactionCondition4Code extends SettlementTransactionCo
 	 */
 	public static final MMCode mmDeliveryWithoutMatching = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeliveryWithoutMatching";
 			owner_lazy = () -> SettlementTransactionCondition4Code.mmObject();
 		}
@@ -168,7 +170,7 @@ public class SettlementTransactionCondition4Code extends SettlementTransactionCo
 	 */
 	public static final MMCode mmPhysical = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Physical";
 			owner_lazy = () -> SettlementTransactionCondition4Code.mmObject();
 		}
@@ -191,7 +193,7 @@ public class SettlementTransactionCondition4Code extends SettlementTransactionCo
 	 */
 	public static final MMCode mmSpecialDelivery = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SpecialDelivery";
 			owner_lazy = () -> SettlementTransactionCondition4Code.mmObject();
 		}
@@ -214,7 +216,7 @@ public class SettlementTransactionCondition4Code extends SettlementTransactionCo
 	 */
 	public static final MMCode mmSplitSettlement = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SplitSettlement";
 			owner_lazy = () -> SettlementTransactionCondition4Code.mmObject();
 		}
@@ -237,7 +239,7 @@ public class SettlementTransactionCondition4Code extends SettlementTransactionCo
 	 */
 	public static final MMCode mmNoAutomaticMarketClaim = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoAutomaticMarketClaim";
 			owner_lazy = () -> SettlementTransactionCondition4Code.mmObject();
 		}
@@ -246,15 +248,14 @@ public class SettlementTransactionCondition4Code extends SettlementTransactionCo
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CLEN");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SettlementTransactionCondition4Code";
 				definition = "Specifies the conditions under which the order/trade is to be settled.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SettlementTransactionCondition4Code.mmClean, com.tools20022.repository.codeset.SettlementTransactionCondition4Code.mmDirty,
-						com.tools20022.repository.codeset.SettlementTransactionCondition4Code.mmDeliveryWithoutMatching, com.tools20022.repository.codeset.SettlementTransactionCondition4Code.mmPhysical,
-						com.tools20022.repository.codeset.SettlementTransactionCondition4Code.mmSpecialDelivery, com.tools20022.repository.codeset.SettlementTransactionCondition4Code.mmSplitSettlement,
-						com.tools20022.repository.codeset.SettlementTransactionCondition4Code.mmNoAutomaticMarketClaim);
+				code_lazy = () -> Arrays.asList(SettlementTransactionCondition4Code.mmClean, SettlementTransactionCondition4Code.mmDirty, SettlementTransactionCondition4Code.mmDeliveryWithoutMatching,
+						SettlementTransactionCondition4Code.mmPhysical, SettlementTransactionCondition4Code.mmSpecialDelivery, SettlementTransactionCondition4Code.mmSplitSettlement,
+						SettlementTransactionCondition4Code.mmNoAutomaticMarketClaim);
 				trace_lazy = () -> SettlementTransactionConditionCode.mmObject();
 			}
 		});

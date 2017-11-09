@@ -19,6 +19,8 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -94,7 +96,7 @@ public class SecurityAttributes3 {
 			componentContext_lazy = () -> SecurityAttributes3.mmObject();
 			isDerived = false;
 			xmlTag = "FinInstrmId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentIdentification";
 			definition = "Way(s) of identifying the security.";
 			minOccurs = 0;
@@ -135,7 +137,7 @@ public class SecurityAttributes3 {
 			componentContext_lazy = () -> SecurityAttributes3.mmObject();
 			isDerived = false;
 			xmlTag = "FinInstrmTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentType";
 			definition = "Provides additional details about the financial instrument.";
 			maxOccurs = 1;
@@ -180,7 +182,7 @@ public class SecurityAttributes3 {
 			componentContext_lazy = () -> SecurityAttributes3.mmObject();
 			isDerived = false;
 			xmlTag = "FinInstrmAttrbts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentAttributes";
 			definition = "Financial instruments representing a sum of rights of the investor vis-a-vis the issuer.";
 			minOccurs = 0;
@@ -192,10 +194,9 @@ public class SecurityAttributes3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecurityAttributes3.mmFinancialInstrumentIdentification, com.tools20022.repository.msg.SecurityAttributes3.mmFinancialInstrumentType,
-						com.tools20022.repository.msg.SecurityAttributes3.mmFinancialInstrumentAttributes);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(SecurityAttributes3.mmFinancialInstrumentIdentification, SecurityAttributes3.mmFinancialInstrumentType, SecurityAttributes3.mmFinancialInstrumentAttributes);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SecurityAttributes3";
 				definition = "Tangible items of value to a business.";
 			}

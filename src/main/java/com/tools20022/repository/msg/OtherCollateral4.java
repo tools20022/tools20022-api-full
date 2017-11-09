@@ -20,12 +20,13 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.DateFormat14Choice;
 import com.tools20022.repository.choice.PartyIdentification33Choice;
 import com.tools20022.repository.choice.SafekeepingPlaceFormat7Choice;
 import com.tools20022.repository.datatype.*;
-import com.tools20022.repository.entity.Asset;
-import com.tools20022.repository.entity.SafekeepingPlace;
+import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -163,11 +164,11 @@ public class OtherCollateral4 {
 			componentContext_lazy = () -> OtherCollateral4.mmObject();
 			isDerived = false;
 			xmlTag = "CollId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralIdentification";
 			definition = "Provides the identification of the proposed collateral.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OtherCollateral7.mmCollateralIdentification);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.OtherCollateral2.mmCollateralIdentification;
+			nextVersions_lazy = () -> Arrays.asList(OtherCollateral7.mmCollateralIdentification);
+			previousVersion_lazy = () -> OtherCollateral2.mmCollateralIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -217,10 +218,10 @@ public class OtherCollateral4 {
 			componentContext_lazy = () -> OtherCollateral4.mmObject();
 			isDerived = false;
 			xmlTag = "AsstNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AssetNumber";
 			definition = "Identifies the register number of the collateral deposit assigned by the central counterparty.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OtherCollateral7.mmAssetNumber);
+			nextVersions_lazy = () -> Arrays.asList(OtherCollateral7.mmAssetNumber);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -275,15 +276,15 @@ public class OtherCollateral4 {
 	 */
 	public static final MMMessageAttribute mmLetterOfCreditIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Document.mmDocumentIdentification;
+			businessElementTrace_lazy = () -> Document.mmDocumentIdentification;
 			componentContext_lazy = () -> OtherCollateral4.mmObject();
 			isDerived = false;
 			xmlTag = "LttrOfCdtId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LetterOfCreditIdentification";
 			definition = "Provides the unique identification of the letter of credit.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OtherCollateral7.mmLetterOfCreditIdentification);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.OtherCollateral2.mmLetterOfCreditIdentification;
+			nextVersions_lazy = () -> Arrays.asList(OtherCollateral7.mmLetterOfCreditIdentification);
+			previousVersion_lazy = () -> OtherCollateral2.mmLetterOfCreditIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -338,15 +339,15 @@ public class OtherCollateral4 {
 	 */
 	public static final MMMessageAttribute mmLetterOfCreditAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.LetterOfCredit.mmAmount;
+			businessElementTrace_lazy = () -> LetterOfCredit.mmAmount;
 			componentContext_lazy = () -> OtherCollateral4.mmObject();
 			isDerived = false;
 			xmlTag = "LttrOfCdtAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LetterOfCreditAmount";
 			definition = "Amount of the letter/documentary credit.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OtherCollateral7.mmLetterOfCreditAmount);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.OtherCollateral2.mmLetterOfCreditAmount;
+			nextVersions_lazy = () -> Arrays.asList(OtherCollateral7.mmLetterOfCreditAmount);
+			previousVersion_lazy = () -> OtherCollateral2.mmLetterOfCreditAmount;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
@@ -401,15 +402,15 @@ public class OtherCollateral4 {
 	 */
 	public static final MMMessageAttribute mmGuaranteeAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Guarantee.mmCoveredAmount;
+			businessElementTrace_lazy = () -> Guarantee.mmCoveredAmount;
 			componentContext_lazy = () -> OtherCollateral4.mmObject();
 			isDerived = false;
 			xmlTag = "GrntAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GuaranteeAmount";
 			definition = "Amount of the bank guarantee.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OtherCollateral7.mmGuaranteeAmount);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.OtherCollateral2.mmGuaranteeAmount;
+			nextVersions_lazy = () -> Arrays.asList(OtherCollateral7.mmGuaranteeAmount);
+			previousVersion_lazy = () -> OtherCollateral2.mmGuaranteeAmount;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
@@ -466,11 +467,11 @@ public class OtherCollateral4 {
 			componentContext_lazy = () -> OtherCollateral4.mmObject();
 			isDerived = false;
 			xmlTag = "OthrTpOfColl";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherTypeOfCollateral";
 			definition = "Provides a description and an amount of another type of collateral.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OtherCollateral7.mmOtherTypeOfCollateral);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.OtherCollateral2.mmOtherTypeOfCollateral;
+			nextVersions_lazy = () -> Arrays.asList(OtherCollateral7.mmOtherTypeOfCollateral);
+			previousVersion_lazy = () -> OtherCollateral2.mmOtherTypeOfCollateral;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -524,15 +525,15 @@ public class OtherCollateral4 {
 	 */
 	public static final MMMessageAssociationEnd mmIssueDate = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Issuance.mmIssueDate;
+			businessElementTrace_lazy = () -> Issuance.mmIssueDate;
 			componentContext_lazy = () -> OtherCollateral4.mmObject();
 			isDerived = false;
 			xmlTag = "IsseDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssueDate";
 			definition = "Date on which the other collateral was issued.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OtherCollateral7.mmIssueDate);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.OtherCollateral2.mmIssueDate;
+			nextVersions_lazy = () -> Arrays.asList(OtherCollateral7.mmIssueDate);
+			previousVersion_lazy = () -> OtherCollateral2.mmIssueDate;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -586,15 +587,15 @@ public class OtherCollateral4 {
 	 */
 	public static final MMMessageAssociationEnd mmExpiryDate = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Asset.mmExpiryDate;
+			businessElementTrace_lazy = () -> Asset.mmExpiryDate;
 			componentContext_lazy = () -> OtherCollateral4.mmObject();
 			isDerived = false;
 			xmlTag = "XpryDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExpiryDate";
 			definition = "Date on which the other collateral expires.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OtherCollateral7.mmExpiryDate);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.OtherCollateral2.mmExpiryDate;
+			nextVersions_lazy = () -> Arrays.asList(OtherCollateral7.mmExpiryDate);
+			previousVersion_lazy = () -> OtherCollateral2.mmExpiryDate;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -651,11 +652,11 @@ public class OtherCollateral4 {
 			componentContext_lazy = () -> OtherCollateral4.mmObject();
 			isDerived = false;
 			xmlTag = "LtdCvrgInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LimitedCoverageIndicator";
 			definition = "Indicates that the collateral deposited in the clearing house covers the margin until a specific timeframe.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OtherCollateral7.mmLimitedCoverageIndicator);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.OtherCollateral2.mmLimitedCoverageIndicator;
+			nextVersions_lazy = () -> Arrays.asList(OtherCollateral7.mmLimitedCoverageIndicator);
+			previousVersion_lazy = () -> OtherCollateral2.mmLimitedCoverageIndicator;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
@@ -710,15 +711,15 @@ public class OtherCollateral4 {
 	 */
 	public static final MMMessageAssociationEnd mmIssuer = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> OtherCollateral4.mmObject();
 			isDerived = false;
 			xmlTag = "Issr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Issuer";
 			definition = "Party that issues the bank guarantee or letter of / documentary credit.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OtherCollateral7.mmIssuer);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.OtherCollateral2.mmIssuer;
+			nextVersions_lazy = () -> Arrays.asList(OtherCollateral7.mmIssuer);
+			previousVersion_lazy = () -> OtherCollateral2.mmIssuer;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -775,15 +776,15 @@ public class OtherCollateral4 {
 	 */
 	public static final MMMessageAttribute mmValueDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CollateralValuation.mmCollateralValuationDate;
+			businessElementTrace_lazy = () -> CollateralValuation.mmCollateralValuationDate;
 			componentContext_lazy = () -> OtherCollateral4.mmObject();
 			isDerived = false;
 			xmlTag = "ValDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValueDate";
 			definition = "Valuation date of the other collateral when it was taken as collateral.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OtherCollateral7.mmValueDate);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.OtherCollateral2.mmValueDate;
+			nextVersions_lazy = () -> Arrays.asList(OtherCollateral7.mmValueDate);
+			previousVersion_lazy = () -> OtherCollateral2.mmValueDate;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
@@ -837,15 +838,15 @@ public class OtherCollateral4 {
 	 */
 	public static final MMMessageAttribute mmExchangeRate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmExchangeRate;
+			businessElementTrace_lazy = () -> AssetHolding.mmExchangeRate;
 			componentContext_lazy = () -> OtherCollateral4.mmObject();
 			isDerived = false;
 			xmlTag = "XchgRate";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExchangeRate";
 			definition = "Exchange rate.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OtherCollateral7.mmExchangeRate);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.OtherCollateral2.mmExchangeRate;
+			nextVersions_lazy = () -> Arrays.asList(OtherCollateral7.mmExchangeRate);
+			previousVersion_lazy = () -> OtherCollateral2.mmExchangeRate;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> BaseOneRate.mmObject();
@@ -900,15 +901,15 @@ public class OtherCollateral4 {
 	 */
 	public static final MMMessageAttribute mmMarketValue = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmMarketValue;
+			businessElementTrace_lazy = () -> AssetHolding.mmMarketValue;
 			componentContext_lazy = () -> OtherCollateral4.mmObject();
 			isDerived = false;
 			xmlTag = "MktVal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketValue";
 			definition = "Value of the collateral based on current market prices.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OtherCollateral7.mmMarketValue);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.OtherCollateral2.mmMarketValue;
+			nextVersions_lazy = () -> Arrays.asList(OtherCollateral7.mmMarketValue);
+			previousVersion_lazy = () -> OtherCollateral2.mmMarketValue;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
@@ -964,15 +965,15 @@ public class OtherCollateral4 {
 	 */
 	public static final MMMessageAttribute mmHaircut = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.HaircutValuation.mmHaircut;
+			businessElementTrace_lazy = () -> HaircutValuation.mmHaircut;
 			componentContext_lazy = () -> OtherCollateral4.mmObject();
 			isDerived = false;
 			xmlTag = "Hrcut";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Haircut";
 			definition = "Haircut or valuation factor on the collateral expressed as a percentage.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OtherCollateral7.mmHaircut);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.OtherCollateral2.mmHaircut;
+			nextVersions_lazy = () -> Arrays.asList(OtherCollateral7.mmHaircut);
+			previousVersion_lazy = () -> OtherCollateral2.mmHaircut;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
@@ -1028,15 +1029,15 @@ public class OtherCollateral4 {
 	 */
 	public static final MMMessageAttribute mmCollateralValue = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmRiskAdjustedValue;
+			businessElementTrace_lazy = () -> AssetHolding.mmRiskAdjustedValue;
 			componentContext_lazy = () -> OtherCollateral4.mmObject();
 			isDerived = false;
 			xmlTag = "CollVal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralValue";
 			definition = "Value of the collateral after taking into account the haircut, if any.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OtherCollateral7.mmCollateralValue);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.OtherCollateral2.mmCollateralValue;
+			nextVersions_lazy = () -> Arrays.asList(OtherCollateral7.mmCollateralValue);
+			previousVersion_lazy = () -> OtherCollateral2.mmCollateralValue;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
@@ -1099,11 +1100,11 @@ public class OtherCollateral4 {
 			componentContext_lazy = () -> OtherCollateral4.mmObject();
 			isDerived = false;
 			xmlTag = "SfkpgPlc";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlace";
 			definition = "Place where the securities are safe-kept, physically or notionally.  This place can be, for example, a local custodian, a Central Securities Depository (CSD) or an International Central Securities Depository (ICSD).";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OtherCollateral7.mmSafekeepingPlace);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.OtherCollateral2.mmSafekeepingPlace;
+			nextVersions_lazy = () -> Arrays.asList(OtherCollateral7.mmSafekeepingPlace);
+			previousVersion_lazy = () -> OtherCollateral2.mmSafekeepingPlace;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -1157,15 +1158,15 @@ public class OtherCollateral4 {
 	 */
 	public static final MMMessageAssociationEnd mmSafekeepingAccount = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmSecuritiesAccount;
+			businessElementTrace_lazy = () -> Security.mmSecuritiesAccount;
 			componentContext_lazy = () -> OtherCollateral4.mmObject();
 			isDerived = false;
 			xmlTag = "SfkpgAcct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingAccount";
 			definition = "Account to or from which a securities entry is made.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OtherCollateral7.mmSafekeepingAccount);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.OtherCollateral2.mmSafekeepingAccount;
+			nextVersions_lazy = () -> Arrays.asList(OtherCollateral7.mmSafekeepingAccount);
+			previousVersion_lazy = () -> OtherCollateral2.mmSafekeepingAccount;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -1176,15 +1177,13 @@ public class OtherCollateral4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OtherCollateral4.mmCollateralIdentification, com.tools20022.repository.msg.OtherCollateral4.mmAssetNumber,
-						com.tools20022.repository.msg.OtherCollateral4.mmLetterOfCreditIdentification, com.tools20022.repository.msg.OtherCollateral4.mmLetterOfCreditAmount, com.tools20022.repository.msg.OtherCollateral4.mmGuaranteeAmount,
-						com.tools20022.repository.msg.OtherCollateral4.mmOtherTypeOfCollateral, com.tools20022.repository.msg.OtherCollateral4.mmIssueDate, com.tools20022.repository.msg.OtherCollateral4.mmExpiryDate,
-						com.tools20022.repository.msg.OtherCollateral4.mmLimitedCoverageIndicator, com.tools20022.repository.msg.OtherCollateral4.mmIssuer, com.tools20022.repository.msg.OtherCollateral4.mmValueDate,
-						com.tools20022.repository.msg.OtherCollateral4.mmExchangeRate, com.tools20022.repository.msg.OtherCollateral4.mmMarketValue, com.tools20022.repository.msg.OtherCollateral4.mmHaircut,
-						com.tools20022.repository.msg.OtherCollateral4.mmCollateralValue, com.tools20022.repository.msg.OtherCollateral4.mmSafekeepingPlace, com.tools20022.repository.msg.OtherCollateral4.mmSafekeepingAccount);
+				messageElement_lazy = () -> Arrays.asList(OtherCollateral4.mmCollateralIdentification, OtherCollateral4.mmAssetNumber, OtherCollateral4.mmLetterOfCreditIdentification, OtherCollateral4.mmLetterOfCreditAmount,
+						OtherCollateral4.mmGuaranteeAmount, OtherCollateral4.mmOtherTypeOfCollateral, OtherCollateral4.mmIssueDate, OtherCollateral4.mmExpiryDate, OtherCollateral4.mmLimitedCoverageIndicator, OtherCollateral4.mmIssuer,
+						OtherCollateral4.mmValueDate, OtherCollateral4.mmExchangeRate, OtherCollateral4.mmMarketValue, OtherCollateral4.mmHaircut, OtherCollateral4.mmCollateralValue, OtherCollateral4.mmSafekeepingPlace,
+						OtherCollateral4.mmSafekeepingAccount);
 				trace_lazy = () -> Asset.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OtherCollateral4";
 				definition = "Provides details about the letter of credit or bank guarantee, or other collateral, posted as collateral.";
 				nextVersions_lazy = () -> Arrays.asList(OtherCollateral7.mmObject());

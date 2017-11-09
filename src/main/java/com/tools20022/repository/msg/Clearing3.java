@@ -19,8 +19,15 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.setr.SecuritiesTradeConfirmationResponseV01;
+import com.tools20022.repository.area.setr.SecuritiesTradeConfirmationV01;
+import com.tools20022.repository.area.setr.SecuritiesTradeConfirmationV02;
+import com.tools20022.repository.area.setr.SecuritiesTradeConfirmationV03;
 import com.tools20022.repository.choice.PartyIdentification35Choice;
 import com.tools20022.repository.entity.Clearing;
+import com.tools20022.repository.entity.Party;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -114,11 +121,11 @@ public class Clearing3 {
 	 */
 	public static final MMMessageAttribute mmClearingMember = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> Clearing3.mmObject();
 			isDerived = false;
 			xmlTag = "ClrMmb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClearingMember";
 			definition = "Provides details about the clearing member identification and account.";
 			minOccurs = 1;
@@ -166,11 +173,11 @@ public class Clearing3 {
 	 */
 	public static final MMMessageAttribute mmClearingSegment = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> Clearing3.mmObject();
 			isDerived = false;
 			xmlTag = "ClrSgmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClearingSegment";
 			definition = "Clearing organisation that will clear the trade.\r\nNote: This field allows Clearing Member Firm to segregate flows coming from clearing counterparty's clearing system. Indeed, Clearing Member Firms receive messages from the same system (same sender) and this field allows them to know if the message is related to equities or derivatives.";
 			maxOccurs = 1;
@@ -182,13 +189,12 @@ public class Clearing3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Clearing3.mmClearingMember, com.tools20022.repository.msg.Clearing3.mmClearingSegment);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.SecuritiesTradeConfirmationResponseV01.mmClearingDetails,
-						com.tools20022.repository.area.setr.SecuritiesTradeConfirmationV01.mmClearingDetails, com.tools20022.repository.area.setr.SecuritiesTradeConfirmationV02.mmClearingDetails,
-						com.tools20022.repository.area.setr.SecuritiesTradeConfirmationV03.mmClearingDetails);
+				messageElement_lazy = () -> Arrays.asList(Clearing3.mmClearingMember, Clearing3.mmClearingSegment);
+				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesTradeConfirmationResponseV01.mmClearingDetails, SecuritiesTradeConfirmationV01.mmClearingDetails, SecuritiesTradeConfirmationV02.mmClearingDetails,
+						SecuritiesTradeConfirmationV03.mmClearingDetails);
 				trace_lazy = () -> Clearing.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Clearing3";
 				definition = "Provides the clearing details.";
 			}

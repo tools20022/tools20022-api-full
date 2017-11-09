@@ -20,10 +20,12 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.TerminalManagementAction3Code;
 import com.tools20022.repository.datatype.Max10000Binary;
 import com.tools20022.repository.datatype.Max256Text;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -114,10 +116,10 @@ public class MerchantConfigurationParameters3 {
 			componentContext_lazy = () -> MerchantConfigurationParameters3.mmObject();
 			isDerived = false;
 			xmlTag = "ActnTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ActionType";
 			definition = "Type of action for the configuration parameters.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.MerchantConfigurationParameters2.mmActionType;
+			previousVersion_lazy = () -> MerchantConfigurationParameters2.mmActionType;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TerminalManagementAction3Code.mmObject();
@@ -164,10 +166,10 @@ public class MerchantConfigurationParameters3 {
 			componentContext_lazy = () -> MerchantConfigurationParameters3.mmObject();
 			isDerived = false;
 			xmlTag = "MrchntId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MerchantIdentification";
 			definition = "Identification of the merchant for the MTM, if the POI manages several merchants.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.MerchantConfigurationParameters2.mmMerchantIdentification;
+			previousVersion_lazy = () -> MerchantConfigurationParameters2.mmMerchantIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -211,10 +213,10 @@ public class MerchantConfigurationParameters3 {
 			componentContext_lazy = () -> MerchantConfigurationParameters3.mmObject();
 			isDerived = false;
 			xmlTag = "Vrsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Version";
 			definition = "Version of the merchant parameters.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.MerchantConfigurationParameters2.mmVersion;
+			previousVersion_lazy = () -> MerchantConfigurationParameters2.mmVersion;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max256Text.mmObject();
@@ -257,10 +259,10 @@ public class MerchantConfigurationParameters3 {
 			componentContext_lazy = () -> MerchantConfigurationParameters3.mmObject();
 			isDerived = false;
 			xmlTag = "Prxy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proxy";
 			definition = "Local proxy configuration.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.MerchantConfigurationParameters2.mmProxy;
+			previousVersion_lazy = () -> MerchantConfigurationParameters2.mmProxy;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -306,10 +308,10 @@ public class MerchantConfigurationParameters3 {
 			componentContext_lazy = () -> MerchantConfigurationParameters3.mmObject();
 			isDerived = false;
 			xmlTag = "OthrParams";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherParameters";
 			definition = "Other merchant parameters.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.MerchantConfigurationParameters2.mmOtherParameters;
+			previousVersion_lazy = () -> MerchantConfigurationParameters2.mmOtherParameters;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max10000Binary.mmObject();
@@ -319,11 +321,10 @@ public class MerchantConfigurationParameters3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MerchantConfigurationParameters3.mmActionType, com.tools20022.repository.msg.MerchantConfigurationParameters3.mmMerchantIdentification,
-						com.tools20022.repository.msg.MerchantConfigurationParameters3.mmVersion, com.tools20022.repository.msg.MerchantConfigurationParameters3.mmProxy,
-						com.tools20022.repository.msg.MerchantConfigurationParameters3.mmOtherParameters);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(MerchantConfigurationParameters3.mmActionType, MerchantConfigurationParameters3.mmMerchantIdentification, MerchantConfigurationParameters3.mmVersion,
+						MerchantConfigurationParameters3.mmProxy, MerchantConfigurationParameters3.mmOtherParameters);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MerchantConfigurationParameters3";
 				definition = "Acceptor parameters dedicated to the merchant.";
 				previousVersion_lazy = () -> MerchantConfigurationParameters2.mmObject();

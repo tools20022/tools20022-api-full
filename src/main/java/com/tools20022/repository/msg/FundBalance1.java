@@ -20,8 +20,11 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ActiveOrHistoricCurrencyAndAmount;
 import com.tools20022.repository.entity.FundsCashFlow;
+import com.tools20022.repository.entity.InvestmentFundOrderExecution;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -104,11 +107,11 @@ public class FundBalance1 {
 	 */
 	public static final MMMessageAssociationEnd mmTotalUnitsFromUnitOrders = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrderExecution.mmUnitsNumber;
+			businessElementTrace_lazy = () -> InvestmentFundOrderExecution.mmUnitsNumber;
 			componentContext_lazy = () -> FundBalance1.mmObject();
 			isDerived = false;
 			xmlTag = "TtlUnitsFrUnitOrdrs";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalUnitsFromUnitOrders";
 			definition = "Total number of units from orders placed in units.";
 			maxOccurs = 1;
@@ -151,11 +154,11 @@ public class FundBalance1 {
 	 */
 	public static final MMMessageAssociationEnd mmTotalUnitsFromCashOrders = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrderExecution.mmUnitsNumber;
+			businessElementTrace_lazy = () -> InvestmentFundOrderExecution.mmUnitsNumber;
 			componentContext_lazy = () -> FundBalance1.mmObject();
 			isDerived = false;
 			xmlTag = "TtlUnitsFrCshOrdrs";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalUnitsFromCashOrders";
 			definition = "Number of units derived from orders placed in cash.";
 			maxOccurs = 1;
@@ -200,11 +203,11 @@ public class FundBalance1 {
 	 */
 	public static final MMMessageAttribute mmTotalCashFromUnitOrders = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrderExecution.mmExecutedAmount;
+			businessElementTrace_lazy = () -> InvestmentFundOrderExecution.mmExecutedAmount;
 			componentContext_lazy = () -> FundBalance1.mmObject();
 			isDerived = false;
 			xmlTag = "TtlCshFrUnitOrdrs";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalCashFromUnitOrders";
 			definition = "Total amount of cash derived from orders placed as units.";
 			maxOccurs = 1;
@@ -247,11 +250,11 @@ public class FundBalance1 {
 	 */
 	public static final MMMessageAttribute mmTotalCashFromCashOrders = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrderExecution.mmExecutedAmount;
+			businessElementTrace_lazy = () -> InvestmentFundOrderExecution.mmExecutedAmount;
 			componentContext_lazy = () -> FundBalance1.mmObject();
 			isDerived = false;
 			xmlTag = "TtlCshFrCshOrdrs";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalCashFromCashOrders";
 			definition = "Total amount of cash from orders placed in cash.";
 			maxOccurs = 1;
@@ -263,11 +266,10 @@ public class FundBalance1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FundBalance1.mmTotalUnitsFromUnitOrders, com.tools20022.repository.msg.FundBalance1.mmTotalUnitsFromCashOrders,
-						com.tools20022.repository.msg.FundBalance1.mmTotalCashFromUnitOrders, com.tools20022.repository.msg.FundBalance1.mmTotalCashFromCashOrders);
+				messageElement_lazy = () -> Arrays.asList(FundBalance1.mmTotalUnitsFromUnitOrders, FundBalance1.mmTotalUnitsFromCashOrders, FundBalance1.mmTotalCashFromUnitOrders, FundBalance1.mmTotalCashFromCashOrders);
 				trace_lazy = () -> FundsCashFlow.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FundBalance1";
 				definition = "Balances of units and cash derived from investment fund orders.";
 			}

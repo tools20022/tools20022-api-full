@@ -19,6 +19,8 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -116,11 +118,11 @@ public class ATMEnvironment7 {
 			componentContext_lazy = () -> ATMEnvironment7.mmObject();
 			isDerived = false;
 			xmlTag = "Acqrr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Acquirer";
 			definition = "Acquirer of the ATM transaction, in charge of the funds settlement with the issuer.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMEnvironment8.mmAcquirer);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMEnvironment6.mmAcquirer;
+			nextVersions_lazy = () -> Arrays.asList(ATMEnvironment8.mmAcquirer);
+			previousVersion_lazy = () -> ATMEnvironment6.mmAcquirer;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -171,11 +173,11 @@ public class ATMEnvironment7 {
 			componentContext_lazy = () -> ATMEnvironment7.mmObject();
 			isDerived = false;
 			xmlTag = "ATMMgr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ATMManager";
 			definition = "Institution in charge of managing the ATM.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMEnvironment8.mmATMManagerIdentification);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMEnvironment6.mmATMManagerIdentification;
+			nextVersions_lazy = () -> Arrays.asList(ATMEnvironment8.mmATMManagerIdentification);
+			previousVersion_lazy = () -> ATMEnvironment6.mmATMManagerIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -227,11 +229,11 @@ public class ATMEnvironment7 {
 			componentContext_lazy = () -> ATMEnvironment7.mmObject();
 			isDerived = false;
 			xmlTag = "HstgNtty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HostingEntity";
 			definition = "Entity hosting the ATM terminal.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMEnvironment8.mmHostingEntity);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMEnvironment6.mmHostingEntity;
+			nextVersions_lazy = () -> Arrays.asList(ATMEnvironment8.mmHostingEntity);
+			previousVersion_lazy = () -> ATMEnvironment6.mmHostingEntity;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -283,11 +285,11 @@ public class ATMEnvironment7 {
 			componentContext_lazy = () -> ATMEnvironment7.mmObject();
 			isDerived = false;
 			xmlTag = "ATM";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ATM";
 			definition = "ATM information.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMEnvironment8.mmATM);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMEnvironment6.mmATM;
+			nextVersions_lazy = () -> Arrays.asList(ATMEnvironment8.mmATM);
+			previousVersion_lazy = () -> ATMEnvironment6.mmATM;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -298,10 +300,9 @@ public class ATMEnvironment7 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMEnvironment7.mmAcquirer, com.tools20022.repository.msg.ATMEnvironment7.mmATMManager, com.tools20022.repository.msg.ATMEnvironment7.mmHostingEntity,
-						com.tools20022.repository.msg.ATMEnvironment7.mmATM);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(ATMEnvironment7.mmAcquirer, ATMEnvironment7.mmATMManager, ATMEnvironment7.mmHostingEntity, ATMEnvironment7.mmATM);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ATMEnvironment7";
 				definition = "Environment of the transaction.";
 				nextVersions_lazy = () -> Arrays.asList(ATMEnvironment8.mmObject());

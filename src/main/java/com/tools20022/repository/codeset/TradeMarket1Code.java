@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.TradeMarketCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -85,7 +87,7 @@ public class TradeMarket1Code extends TradeMarketCode {
 	 */
 	public static final MMCode mmDomestic = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Domestic";
 			owner_lazy = () -> TradeMarket1Code.mmObject();
 		}
@@ -108,7 +110,7 @@ public class TradeMarket1Code extends TradeMarketCode {
 	 */
 	public static final MMCode mmEuroDomestic = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EuroDomestic";
 			owner_lazy = () -> TradeMarket1Code.mmObject();
 		}
@@ -131,7 +133,7 @@ public class TradeMarket1Code extends TradeMarketCode {
 	 */
 	public static final MMCode mmFrenchDomTom = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FrenchDomTom";
 			owner_lazy = () -> TradeMarket1Code.mmObject();
 		}
@@ -154,7 +156,7 @@ public class TradeMarket1Code extends TradeMarketCode {
 	 */
 	public static final MMCode mmInternational = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "International";
 			owner_lazy = () -> TradeMarket1Code.mmObject();
 		}
@@ -177,7 +179,7 @@ public class TradeMarket1Code extends TradeMarketCode {
 	 */
 	public static final MMCode mmNAFTA = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NAFTA";
 			owner_lazy = () -> TradeMarket1Code.mmObject();
 		}
@@ -186,12 +188,11 @@ public class TradeMarket1Code extends TradeMarketCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TradeMarket1Code";
 				definition = "Specifies a code for a trade market.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TradeMarket1Code.mmDomestic, com.tools20022.repository.codeset.TradeMarket1Code.mmEuroDomestic,
-						com.tools20022.repository.codeset.TradeMarket1Code.mmFrenchDomTom, com.tools20022.repository.codeset.TradeMarket1Code.mmInternational, com.tools20022.repository.codeset.TradeMarket1Code.mmNAFTA);
+				code_lazy = () -> Arrays.asList(TradeMarket1Code.mmDomestic, TradeMarket1Code.mmEuroDomestic, TradeMarket1Code.mmFrenchDomTom, TradeMarket1Code.mmInternational, TradeMarket1Code.mmNAFTA);
 				trace_lazy = () -> TradeMarketCode.mmObject();
 			}
 		});

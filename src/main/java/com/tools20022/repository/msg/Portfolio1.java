@@ -19,8 +19,10 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.entity.Portfolio;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -96,7 +98,7 @@ public class Portfolio1 {
 			componentContext_lazy = () -> Portfolio1.mmObject();
 			isDerived = false;
 			xmlTag = "PrtflInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PortfolioInformation";
 			definition = "Additional information related to the portfolio.";
 			maxOccurs = 5;
@@ -108,10 +110,10 @@ public class Portfolio1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Portfolio1.mmPortfolioInformation);
+				messageElement_lazy = () -> Arrays.asList(Portfolio1.mmPortfolioInformation);
 				trace_lazy = () -> Portfolio.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Portfolio1";
 				definition = "Describes the characteristics of a portfolio.";
 			}

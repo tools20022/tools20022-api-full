@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.AccountChoiceMethod1Code
+ * AccountChoiceMethod1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -47,13 +56,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.AccountChoiceMethodCode#mmNoSelection
  * AccountChoiceMethodCode.mmNoSelection}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.AccountChoiceMethod1Code
- * AccountChoiceMethod1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -99,7 +101,7 @@ public class AccountChoiceMethodCode {
 	 */
 	public static final MMCode mmAccountSelected = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountSelected";
 			definition = "Account selected in an account list.";
 			owner_lazy = () -> AccountChoiceMethodCode.mmObject();
@@ -129,7 +131,7 @@ public class AccountChoiceMethodCode {
 	 */
 	public static final MMCode mmEntered = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Entered";
 			definition = "Account identification is entered by the customer.";
 			owner_lazy = () -> AccountChoiceMethodCode.mmObject();
@@ -159,7 +161,7 @@ public class AccountChoiceMethodCode {
 	 */
 	public static final MMCode mmImplicitAccount = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ImplicitAccount";
 			definition = "Account is selected according to the configuration.";
 			owner_lazy = () -> AccountChoiceMethodCode.mmObject();
@@ -190,7 +192,7 @@ public class AccountChoiceMethodCode {
 	 */
 	public static final MMCode mmImplicitType = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ImplicitType";
 			definition = "Type of account is selected according to the configuration.";
 			owner_lazy = () -> AccountChoiceMethodCode.mmObject();
@@ -220,7 +222,7 @@ public class AccountChoiceMethodCode {
 	 */
 	public static final MMCode mmTypeSelected = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TypeSelected";
 			definition = "Type of account selected in a list.";
 			owner_lazy = () -> AccountChoiceMethodCode.mmObject();
@@ -252,7 +254,7 @@ public class AccountChoiceMethodCode {
 	 */
 	public static final MMCode mmNoSelection = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoSelection";
 			definition = "Account is not selected by the customer or a profile, but by the issuer.";
 			owner_lazy = () -> AccountChoiceMethodCode.mmObject();
@@ -263,13 +265,12 @@ public class AccountChoiceMethodCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AccountChoiceMethodCode";
 				definition = "Method used by the cardholder and the terminal for the choice of the account.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AccountChoiceMethodCode.mmAccountSelected, com.tools20022.repository.codeset.AccountChoiceMethodCode.mmEntered,
-						com.tools20022.repository.codeset.AccountChoiceMethodCode.mmImplicitAccount, com.tools20022.repository.codeset.AccountChoiceMethodCode.mmImplicitType,
-						com.tools20022.repository.codeset.AccountChoiceMethodCode.mmTypeSelected, com.tools20022.repository.codeset.AccountChoiceMethodCode.mmNoSelection);
+				code_lazy = () -> Arrays.asList(AccountChoiceMethodCode.mmAccountSelected, AccountChoiceMethodCode.mmEntered, AccountChoiceMethodCode.mmImplicitAccount, AccountChoiceMethodCode.mmImplicitType,
+						AccountChoiceMethodCode.mmTypeSelected, AccountChoiceMethodCode.mmNoSelection);
 				derivation_lazy = () -> Arrays.asList(AccountChoiceMethod1Code.mmObject());
 			}
 		});

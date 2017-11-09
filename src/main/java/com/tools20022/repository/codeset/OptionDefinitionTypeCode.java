@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -29,6 +31,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.OptionType1Code
+ * OptionType1Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.OptionTypeCode
+ * OptionTypeCode}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.OptionType2Code
+ * OptionType2Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -40,17 +53,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.OptionDefinitionTypeCode#mmOther
  * OptionDefinitionTypeCode.mmOther}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.OptionType1Code
- * OptionType1Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.OptionTypeCode
- * OptionTypeCode}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.OptionType2Code
- * OptionType2Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -104,7 +106,7 @@ public class OptionDefinitionTypeCode {
 	 */
 	public static final MMCode mmCall = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Call";
 			definition = "Right to buy a quantity of an asset for an agreed price at exercise date.";
 			owner_lazy = () -> OptionDefinitionTypeCode.mmObject();
@@ -137,7 +139,7 @@ public class OptionDefinitionTypeCode {
 	 */
 	public static final MMCode mmPut = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Put";
 			definition = "Right to sell a quantity of an asset for an agreed price at exercise date.";
 			owner_lazy = () -> OptionDefinitionTypeCode.mmObject();
@@ -170,7 +172,7 @@ public class OptionDefinitionTypeCode {
 	 */
 	public static final MMCode mmOther = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
 			definition = "Right where the holder of the option decides whether the option is put or call.";
 			owner_lazy = () -> OptionDefinitionTypeCode.mmObject();
@@ -181,13 +183,12 @@ public class OptionDefinitionTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CALL");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OptionDefinitionTypeCode";
 				definition = "Indicates whether it is a Call option (right to purchase a specific underlying asset) or a Put option (right to sell a specific underlying asset).";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OptionDefinitionTypeCode.mmCall, com.tools20022.repository.codeset.OptionDefinitionTypeCode.mmPut,
-						com.tools20022.repository.codeset.OptionDefinitionTypeCode.mmOther);
+				code_lazy = () -> Arrays.asList(OptionDefinitionTypeCode.mmCall, OptionDefinitionTypeCode.mmPut, OptionDefinitionTypeCode.mmOther);
 				derivation_lazy = () -> Arrays.asList(OptionType1Code.mmObject(), OptionTypeCode.mmObject(), OptionType2Code.mmObject());
 			}
 		});

@@ -20,8 +20,10 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ReportingRecordStatus1Code;
 import com.tools20022.repository.datatype.Max140Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -102,7 +104,7 @@ public class StatusReportRecord3 {
 			componentContext_lazy = () -> StatusReportRecord3.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlRcrdId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalRecordIdentification";
 			definition = "Unique and unambiguous technical identification of the original data for which the status is provided.";
 			maxOccurs = 1;
@@ -144,7 +146,7 @@ public class StatusReportRecord3 {
 			componentContext_lazy = () -> StatusReportRecord3.mmObject();
 			isDerived = false;
 			xmlTag = "Sts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Status";
 			definition = "Defines status of the reported transaction.";
 			maxOccurs = 1;
@@ -186,7 +188,7 @@ public class StatusReportRecord3 {
 			componentContext_lazy = () -> StatusReportRecord3.mmObject();
 			isDerived = false;
 			xmlTag = "VldtnRule";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValidationRule";
 			definition = "Provides the details of the rule which could not be validated.";
 			minOccurs = 0;
@@ -229,7 +231,7 @@ public class StatusReportRecord3 {
 			componentContext_lazy = () -> StatusReportRecord3.mmObject();
 			isDerived = false;
 			xmlTag = "SplmtryData";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryData";
 			definition = "Additional information that can not be captured in the structured fields and/or any other specific block.";
 			minOccurs = 0;
@@ -241,10 +243,9 @@ public class StatusReportRecord3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StatusReportRecord3.mmOriginalRecordIdentification, com.tools20022.repository.msg.StatusReportRecord3.mmStatus,
-						com.tools20022.repository.msg.StatusReportRecord3.mmValidationRule, com.tools20022.repository.msg.StatusReportRecord3.mmSupplementaryData);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(StatusReportRecord3.mmOriginalRecordIdentification, StatusReportRecord3.mmStatus, StatusReportRecord3.mmValidationRule, StatusReportRecord3.mmSupplementaryData);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "StatusReportRecord3";
 				definition = "Provides the per record status details.";
 			}

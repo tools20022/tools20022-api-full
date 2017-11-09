@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.AccountUsageType1Code
+ * AccountUsageType1Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.AccountUsageType2Code
+ * AccountUsageType2Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -41,15 +52,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.AccountUsageTypeCode#mmIssuingParticipant
  * AccountUsageTypeCode.mmIssuingParticipant}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.AccountUsageType1Code
- * AccountUsageType1Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.AccountUsageType2Code
- * AccountUsageType2Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -99,7 +101,7 @@ public class AccountUsageTypeCode {
 	 */
 	public static final MMCode mmInvestor = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Investor";
 			definition = "Investor.";
 			owner_lazy = () -> AccountUsageTypeCode.mmObject();
@@ -129,7 +131,7 @@ public class AccountUsageTypeCode {
 	 */
 	public static final MMCode mmSettlementParticipant = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementParticipant";
 			definition = "Settlement participant.";
 			owner_lazy = () -> AccountUsageTypeCode.mmObject();
@@ -159,7 +161,7 @@ public class AccountUsageTypeCode {
 	 */
 	public static final MMCode mmTradingParticipant = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TradingParticipant";
 			definition = "Trading participant.";
 			owner_lazy = () -> AccountUsageTypeCode.mmObject();
@@ -189,7 +191,7 @@ public class AccountUsageTypeCode {
 	 */
 	public static final MMCode mmIssuingParticipant = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "IssuingParticipant";
 			definition = "Issuing participant.";
 			owner_lazy = () -> AccountUsageTypeCode.mmObject();
@@ -200,13 +202,12 @@ public class AccountUsageTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("INVE");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AccountUsageTypeCode";
 				definition = "Specifies the type of usage of the account";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AccountUsageTypeCode.mmInvestor, com.tools20022.repository.codeset.AccountUsageTypeCode.mmSettlementParticipant,
-						com.tools20022.repository.codeset.AccountUsageTypeCode.mmTradingParticipant, com.tools20022.repository.codeset.AccountUsageTypeCode.mmIssuingParticipant);
+				code_lazy = () -> Arrays.asList(AccountUsageTypeCode.mmInvestor, AccountUsageTypeCode.mmSettlementParticipant, AccountUsageTypeCode.mmTradingParticipant, AccountUsageTypeCode.mmIssuingParticipant);
 				derivation_lazy = () -> Arrays.asList(AccountUsageType1Code.mmObject(), AccountUsageType2Code.mmObject());
 			}
 		});

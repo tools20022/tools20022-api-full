@@ -19,6 +19,8 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.AccountOwnerAndIdentification1;
 import com.tools20022.repository.msg.AccountOwnerAndIdentificationList1;
 import java.util.Arrays;
@@ -95,7 +97,7 @@ public class LiquidityPoolMembers1Choice {
 			componentContext_lazy = () -> LiquidityPoolMembers1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "HeadMmbDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HeadMemberDetails";
 			definition = "Information about head member of liquidity pool.";
 			maxOccurs = 1;
@@ -137,7 +139,7 @@ public class LiquidityPoolMembers1Choice {
 			componentContext_lazy = () -> LiquidityPoolMembers1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "SubrdntMmbDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubordinateMemberDetails";
 			definition = "List of subordinate liquidity pool member.";
 			maxOccurs = 1;
@@ -150,9 +152,9 @@ public class LiquidityPoolMembers1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.LiquidityPoolMembers1Choice.mmHeadMemberDetails, com.tools20022.repository.choice.LiquidityPoolMembers1Choice.mmSubordinateMemberDetails);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(LiquidityPoolMembers1Choice.mmHeadMemberDetails, LiquidityPoolMembers1Choice.mmSubordinateMemberDetails);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "LiquidityPoolMembers1Choice";
 				definition = "Choice between head member or subordinate member identifiers of liquidity pool. ";
 			}

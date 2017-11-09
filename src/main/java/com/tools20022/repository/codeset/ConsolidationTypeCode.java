@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.ConsolidationType1Code
+ * ConsolidationType1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -35,13 +44,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.ConsolidationTypeCode#mmParticipation
  * ConsolidationTypeCode.mmParticipation}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.ConsolidationType1Code
- * ConsolidationType1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -85,7 +87,7 @@ public class ConsolidationTypeCode {
 	 */
 	public static final MMCode mmGeneral = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "General";
 			definition = "Consolidation is general.";
 			owner_lazy = () -> ConsolidationTypeCode.mmObject();
@@ -115,7 +117,7 @@ public class ConsolidationTypeCode {
 	 */
 	public static final MMCode mmParticipation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Participation";
 			definition = "Consolidation is at the level of the participant.";
 			owner_lazy = () -> ConsolidationTypeCode.mmObject();
@@ -126,11 +128,11 @@ public class ConsolidationTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ConsolidationTypeCode";
 				definition = "Specifies the consolidation type.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ConsolidationTypeCode.mmGeneral, com.tools20022.repository.codeset.ConsolidationTypeCode.mmParticipation);
+				code_lazy = () -> Arrays.asList(ConsolidationTypeCode.mmGeneral, ConsolidationTypeCode.mmParticipation);
 				derivation_lazy = () -> Arrays.asList(ConsolidationType1Code.mmObject());
 			}
 		});

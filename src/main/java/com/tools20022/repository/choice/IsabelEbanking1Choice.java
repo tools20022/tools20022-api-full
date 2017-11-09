@@ -19,7 +19,9 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max13AlphaNumericText;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -96,7 +98,7 @@ public class IsabelEbanking1Choice {
 			componentContext_lazy = () -> IsabelEbanking1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "UsrId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UserIdentification";
 			definition = "Identification of the e-banking through a user identification.";
 			maxOccurs = 1;
@@ -139,7 +141,7 @@ public class IsabelEbanking1Choice {
 			componentContext_lazy = () -> IsabelEbanking1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "CtrctId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ContractIdentification";
 			definition = "Identification of the e-banking through a contract identification.";
 			maxOccurs = 1;
@@ -151,9 +153,9 @@ public class IsabelEbanking1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.IsabelEbanking1Choice.mmUserIdentification, com.tools20022.repository.choice.IsabelEbanking1Choice.mmContractIdentification);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(IsabelEbanking1Choice.mmUserIdentification, IsabelEbanking1Choice.mmContractIdentification);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "IsabelEbanking1Choice";
 				definition = "Specifies the choice of identification of the e-banking application as a contract or a user identification.";
 			}

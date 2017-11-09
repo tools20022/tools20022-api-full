@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.GateHoldBackCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -76,7 +78,7 @@ public class GateHoldBack1Code extends GateHoldBackCode {
 	 */
 	public static final MMCode mmGating = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Gating";
 			owner_lazy = () -> GateHoldBack1Code.mmObject();
 		}
@@ -99,7 +101,7 @@ public class GateHoldBack1Code extends GateHoldBackCode {
 	 */
 	public static final MMCode mmHoldBack = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HoldBack";
 			owner_lazy = () -> GateHoldBack1Code.mmObject();
 		}
@@ -108,11 +110,11 @@ public class GateHoldBack1Code extends GateHoldBackCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "GateHoldBack1Code";
 				definition = "Specifies the type of hold back on redemption proceeds.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.GateHoldBack1Code.mmGating, com.tools20022.repository.codeset.GateHoldBack1Code.mmHoldBack);
+				code_lazy = () -> Arrays.asList(GateHoldBack1Code.mmGating, GateHoldBack1Code.mmHoldBack);
 				trace_lazy = () -> GateHoldBackCode.mmObject();
 			}
 		});

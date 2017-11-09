@@ -20,8 +20,15 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.seev.CorporateActionNotificationV02;
+import com.tools20022.repository.area.seev.CorporateActionNotificationV03;
+import com.tools20022.repository.area.seev.CorporateActionNotificationV04;
+import com.tools20022.repository.area.seev.CorporateActionNotificationV05;
 import com.tools20022.repository.datatype.AnyBICIdentifier;
+import com.tools20022.repository.entity.OrganisationIdentification;
 import com.tools20022.repository.entity.PartyIdentificationInformation;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification19;
 import com.tools20022.repository.msg.NameAndAddress5;
 import java.text.DateFormat;
@@ -228,11 +235,11 @@ public class PartyIdentification47Choice {
 	 */
 	public static final MMMessageAttribute mmAnyBIC = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.mmAnyBIC;
+			businessElementTrace_lazy = () -> OrganisationIdentification.mmAnyBIC;
 			componentContext_lazy = () -> PartyIdentification47Choice.mmObject();
 			isDerived = false;
 			xmlTag = "AnyBIC";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AnyBIC";
 			definition = "Code allocated to a financial or non-financial institution by the ISO 9362 Registration Authority, as described in ISO 9362 \"Banking - Banking telecommunication messages - Business identifier code (BIC)\".";
 			maxOccurs = 1;
@@ -278,11 +285,11 @@ public class PartyIdentification47Choice {
 	 */
 	public static final MMMessageAssociationEnd mmProprietaryIdentification = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.mmOtherIdentification;
+			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmOtherIdentification;
 			componentContext_lazy = () -> PartyIdentification47Choice.mmObject();
 			isDerived = false;
 			xmlTag = "PrtryId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProprietaryIdentification";
 			definition = "Unique and unambiguous identifier, as assigned to a financial institution using a proprietary identification scheme.";
 			maxOccurs = 1;
@@ -329,7 +336,7 @@ public class PartyIdentification47Choice {
 			componentContext_lazy = () -> PartyIdentification47Choice.mmObject();
 			isDerived = false;
 			xmlTag = "NmAndAdr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NameAndAddress";
 			definition = "Name and address of a party.";
 			maxOccurs = 1;
@@ -342,29 +349,20 @@ public class PartyIdentification47Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PartyIdentification47Choice.mmAnyBIC, com.tools20022.repository.choice.PartyIdentification47Choice.mmProprietaryIdentification,
-						com.tools20022.repository.choice.PartyIdentification47Choice.mmNameAndAddress);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.CorporateActionNotificationV02.mmIssuerAgent, com.tools20022.repository.area.seev.CorporateActionNotificationV02.mmPayingAgent,
-						com.tools20022.repository.area.seev.CorporateActionNotificationV02.mmSubPayingAgent, com.tools20022.repository.area.seev.CorporateActionNotificationV02.mmRegistrar,
-						com.tools20022.repository.area.seev.CorporateActionNotificationV02.mmResellingAgent, com.tools20022.repository.area.seev.CorporateActionNotificationV02.mmPhysicalSecuritiesAgent,
-						com.tools20022.repository.area.seev.CorporateActionNotificationV02.mmDropAgent, com.tools20022.repository.area.seev.CorporateActionNotificationV02.mmSolicitationAgent,
-						com.tools20022.repository.area.seev.CorporateActionNotificationV02.mmInformationAgent, com.tools20022.repository.area.seev.CorporateActionNotificationV03.mmIssuerAgent,
-						com.tools20022.repository.area.seev.CorporateActionNotificationV03.mmPayingAgent, com.tools20022.repository.area.seev.CorporateActionNotificationV03.mmSubPayingAgent,
-						com.tools20022.repository.area.seev.CorporateActionNotificationV03.mmRegistrar, com.tools20022.repository.area.seev.CorporateActionNotificationV03.mmResellingAgent,
-						com.tools20022.repository.area.seev.CorporateActionNotificationV03.mmPhysicalSecuritiesAgent, com.tools20022.repository.area.seev.CorporateActionNotificationV03.mmDropAgent,
-						com.tools20022.repository.area.seev.CorporateActionNotificationV03.mmSolicitationAgent, com.tools20022.repository.area.seev.CorporateActionNotificationV03.mmInformationAgent,
-						com.tools20022.repository.area.seev.CorporateActionNotificationV04.mmIssuerAgent, com.tools20022.repository.area.seev.CorporateActionNotificationV04.mmPayingAgent,
-						com.tools20022.repository.area.seev.CorporateActionNotificationV04.mmSubPayingAgent, com.tools20022.repository.area.seev.CorporateActionNotificationV04.mmRegistrar,
-						com.tools20022.repository.area.seev.CorporateActionNotificationV04.mmResellingAgent, com.tools20022.repository.area.seev.CorporateActionNotificationV04.mmPhysicalSecuritiesAgent,
-						com.tools20022.repository.area.seev.CorporateActionNotificationV04.mmDropAgent, com.tools20022.repository.area.seev.CorporateActionNotificationV04.mmSolicitationAgent,
-						com.tools20022.repository.area.seev.CorporateActionNotificationV04.mmInformationAgent, com.tools20022.repository.area.seev.CorporateActionNotificationV05.mmIssuerAgent,
-						com.tools20022.repository.area.seev.CorporateActionNotificationV05.mmPayingAgent, com.tools20022.repository.area.seev.CorporateActionNotificationV05.mmSubPayingAgent,
-						com.tools20022.repository.area.seev.CorporateActionNotificationV05.mmRegistrar, com.tools20022.repository.area.seev.CorporateActionNotificationV05.mmResellingAgent,
-						com.tools20022.repository.area.seev.CorporateActionNotificationV05.mmPhysicalSecuritiesAgent, com.tools20022.repository.area.seev.CorporateActionNotificationV05.mmDropAgent,
-						com.tools20022.repository.area.seev.CorporateActionNotificationV05.mmSolicitationAgent, com.tools20022.repository.area.seev.CorporateActionNotificationV05.mmInformationAgent);
+				messageElement_lazy = () -> Arrays.asList(PartyIdentification47Choice.mmAnyBIC, PartyIdentification47Choice.mmProprietaryIdentification, PartyIdentification47Choice.mmNameAndAddress);
+				messageBuildingBlock_lazy = () -> Arrays.asList(CorporateActionNotificationV02.mmIssuerAgent, CorporateActionNotificationV02.mmPayingAgent, CorporateActionNotificationV02.mmSubPayingAgent,
+						CorporateActionNotificationV02.mmRegistrar, CorporateActionNotificationV02.mmResellingAgent, CorporateActionNotificationV02.mmPhysicalSecuritiesAgent, CorporateActionNotificationV02.mmDropAgent,
+						CorporateActionNotificationV02.mmSolicitationAgent, CorporateActionNotificationV02.mmInformationAgent, CorporateActionNotificationV03.mmIssuerAgent, CorporateActionNotificationV03.mmPayingAgent,
+						CorporateActionNotificationV03.mmSubPayingAgent, CorporateActionNotificationV03.mmRegistrar, CorporateActionNotificationV03.mmResellingAgent, CorporateActionNotificationV03.mmPhysicalSecuritiesAgent,
+						CorporateActionNotificationV03.mmDropAgent, CorporateActionNotificationV03.mmSolicitationAgent, CorporateActionNotificationV03.mmInformationAgent, CorporateActionNotificationV04.mmIssuerAgent,
+						CorporateActionNotificationV04.mmPayingAgent, CorporateActionNotificationV04.mmSubPayingAgent, CorporateActionNotificationV04.mmRegistrar, CorporateActionNotificationV04.mmResellingAgent,
+						CorporateActionNotificationV04.mmPhysicalSecuritiesAgent, CorporateActionNotificationV04.mmDropAgent, CorporateActionNotificationV04.mmSolicitationAgent, CorporateActionNotificationV04.mmInformationAgent,
+						CorporateActionNotificationV05.mmIssuerAgent, CorporateActionNotificationV05.mmPayingAgent, CorporateActionNotificationV05.mmSubPayingAgent, CorporateActionNotificationV05.mmRegistrar,
+						CorporateActionNotificationV05.mmResellingAgent, CorporateActionNotificationV05.mmPhysicalSecuritiesAgent, CorporateActionNotificationV05.mmDropAgent, CorporateActionNotificationV05.mmSolicitationAgent,
+						CorporateActionNotificationV05.mmInformationAgent);
 				trace_lazy = () -> PartyIdentificationInformation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
 						return DateFormat.getDateInstance(java.text.DateFormat.LONG).parse("May 5, 2016");

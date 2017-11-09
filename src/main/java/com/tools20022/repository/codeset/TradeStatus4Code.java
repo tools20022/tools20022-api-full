@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.TradeStatusCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -132,7 +134,7 @@ public class TradeStatus4Code extends TradeStatusCode {
 	 */
 	public static final MMCode mmRejected = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rejected";
 			owner_lazy = () -> TradeStatus4Code.mmObject();
 		}
@@ -155,7 +157,7 @@ public class TradeStatus4Code extends TradeStatusCode {
 	 */
 	public static final MMCode mmMatched = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Matched";
 			owner_lazy = () -> TradeStatus4Code.mmObject();
 		}
@@ -178,7 +180,7 @@ public class TradeStatus4Code extends TradeStatusCode {
 	 */
 	public static final MMCode mmSuspended = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Suspended";
 			owner_lazy = () -> TradeStatus4Code.mmObject();
 		}
@@ -201,7 +203,7 @@ public class TradeStatus4Code extends TradeStatusCode {
 	 */
 	public static final MMCode mmSettlementMature = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementMature";
 			owner_lazy = () -> TradeStatus4Code.mmObject();
 		}
@@ -224,7 +226,7 @@ public class TradeStatus4Code extends TradeStatusCode {
 	 */
 	public static final MMCode mmNotAuthorised = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotAuthorised";
 			owner_lazy = () -> TradeStatus4Code.mmObject();
 		}
@@ -247,7 +249,7 @@ public class TradeStatus4Code extends TradeStatusCode {
 	 */
 	public static final MMCode mmUnmatched = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unmatched";
 			owner_lazy = () -> TradeStatus4Code.mmObject();
 		}
@@ -270,7 +272,7 @@ public class TradeStatus4Code extends TradeStatusCode {
 	 */
 	public static final MMCode mmSplit = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Split";
 			owner_lazy = () -> TradeStatus4Code.mmObject();
 		}
@@ -293,7 +295,7 @@ public class TradeStatus4Code extends TradeStatusCode {
 	 */
 	public static final MMCode mmInvalid = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Invalid";
 			owner_lazy = () -> TradeStatus4Code.mmObject();
 		}
@@ -316,7 +318,7 @@ public class TradeStatus4Code extends TradeStatusCode {
 	 */
 	public static final MMCode mmSettlementMemberNotAuthorised = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementMemberNotAuthorised";
 			owner_lazy = () -> TradeStatus4Code.mmObject();
 		}
@@ -339,7 +341,7 @@ public class TradeStatus4Code extends TradeStatusCode {
 	 */
 	public static final MMCode mmSettled = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Settled";
 			owner_lazy = () -> TradeStatus4Code.mmObject();
 		}
@@ -362,7 +364,7 @@ public class TradeStatus4Code extends TradeStatusCode {
 	 */
 	public static final MMCode mmRescinded = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rescinded";
 			owner_lazy = () -> TradeStatus4Code.mmObject();
 		}
@@ -385,7 +387,7 @@ public class TradeStatus4Code extends TradeStatusCode {
 	 */
 	public static final MMCode mmSettlementMemberAuthorised = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementMemberAuthorised";
 			owner_lazy = () -> TradeStatus4Code.mmObject();
 		}
@@ -408,7 +410,7 @@ public class TradeStatus4Code extends TradeStatusCode {
 	 */
 	public static final MMCode mmValidated = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Validated";
 			owner_lazy = () -> TradeStatus4Code.mmObject();
 		}
@@ -431,7 +433,7 @@ public class TradeStatus4Code extends TradeStatusCode {
 	 */
 	public static final MMCode mmRegulatoryChecked = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RegulatoryChecked";
 			owner_lazy = () -> TradeStatus4Code.mmObject();
 		}
@@ -454,7 +456,7 @@ public class TradeStatus4Code extends TradeStatusCode {
 	 */
 	public static final MMCode mmMatchedValued = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MatchedValued";
 			owner_lazy = () -> TradeStatus4Code.mmObject();
 		}
@@ -477,7 +479,7 @@ public class TradeStatus4Code extends TradeStatusCode {
 	 */
 	public static final MMCode mmPartiallySettled = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartiallySettled";
 			owner_lazy = () -> TradeStatus4Code.mmObject();
 		}
@@ -500,7 +502,7 @@ public class TradeStatus4Code extends TradeStatusCode {
 	 */
 	public static final MMCode mmRegulatorySuspended = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RegulatorySuspended";
 			owner_lazy = () -> TradeStatus4Code.mmObject();
 		}
@@ -523,7 +525,7 @@ public class TradeStatus4Code extends TradeStatusCode {
 	 */
 	public static final MMCode mmSettlementRejected = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementRejected";
 			owner_lazy = () -> TradeStatus4Code.mmObject();
 		}
@@ -546,7 +548,7 @@ public class TradeStatus4Code extends TradeStatusCode {
 	 */
 	public static final MMCode mmOptionMature = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionMature";
 			owner_lazy = () -> TradeStatus4Code.mmObject();
 		}
@@ -555,18 +557,15 @@ public class TradeStatus4Code extends TradeStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("RJCT");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TradeStatus4Code";
 				definition = "Specifies the status of a trade in a central matching and settlement system.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TradeStatus4Code.mmRejected, com.tools20022.repository.codeset.TradeStatus4Code.mmMatched, com.tools20022.repository.codeset.TradeStatus4Code.mmSuspended,
-						com.tools20022.repository.codeset.TradeStatus4Code.mmSettlementMature, com.tools20022.repository.codeset.TradeStatus4Code.mmNotAuthorised, com.tools20022.repository.codeset.TradeStatus4Code.mmUnmatched,
-						com.tools20022.repository.codeset.TradeStatus4Code.mmSplit, com.tools20022.repository.codeset.TradeStatus4Code.mmInvalid, com.tools20022.repository.codeset.TradeStatus4Code.mmSettlementMemberNotAuthorised,
-						com.tools20022.repository.codeset.TradeStatus4Code.mmSettled, com.tools20022.repository.codeset.TradeStatus4Code.mmRescinded, com.tools20022.repository.codeset.TradeStatus4Code.mmSettlementMemberAuthorised,
-						com.tools20022.repository.codeset.TradeStatus4Code.mmValidated, com.tools20022.repository.codeset.TradeStatus4Code.mmRegulatoryChecked, com.tools20022.repository.codeset.TradeStatus4Code.mmMatchedValued,
-						com.tools20022.repository.codeset.TradeStatus4Code.mmPartiallySettled, com.tools20022.repository.codeset.TradeStatus4Code.mmRegulatorySuspended,
-						com.tools20022.repository.codeset.TradeStatus4Code.mmSettlementRejected, com.tools20022.repository.codeset.TradeStatus4Code.mmOptionMature);
+				code_lazy = () -> Arrays.asList(TradeStatus4Code.mmRejected, TradeStatus4Code.mmMatched, TradeStatus4Code.mmSuspended, TradeStatus4Code.mmSettlementMature, TradeStatus4Code.mmNotAuthorised, TradeStatus4Code.mmUnmatched,
+						TradeStatus4Code.mmSplit, TradeStatus4Code.mmInvalid, TradeStatus4Code.mmSettlementMemberNotAuthorised, TradeStatus4Code.mmSettled, TradeStatus4Code.mmRescinded, TradeStatus4Code.mmSettlementMemberAuthorised,
+						TradeStatus4Code.mmValidated, TradeStatus4Code.mmRegulatoryChecked, TradeStatus4Code.mmMatchedValued, TradeStatus4Code.mmPartiallySettled, TradeStatus4Code.mmRegulatorySuspended,
+						TradeStatus4Code.mmSettlementRejected, TradeStatus4Code.mmOptionMature);
 				trace_lazy = () -> TradeStatusCode.mmObject();
 			}
 		});

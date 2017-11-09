@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.AlgorithmCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -81,7 +83,7 @@ public class Algorithm7Code extends AlgorithmCode {
 	 */
 	public static final MMCode mmRSAEncryption = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RSAEncryption";
 			owner_lazy = () -> Algorithm7Code.mmObject();
 		}
@@ -104,7 +106,7 @@ public class Algorithm7Code extends AlgorithmCode {
 	 */
 	public static final MMCode mmRSAESOAEP = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RSAES-OAEP";
 			owner_lazy = () -> Algorithm7Code.mmObject();
 		}
@@ -113,12 +115,12 @@ public class Algorithm7Code extends AlgorithmCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ERSA");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Algorithm7Code";
 				definition = "Asymmetric encryption algorithm of a transport key.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Algorithm7Code.mmRSAEncryption, com.tools20022.repository.codeset.Algorithm7Code.mmRSAESOAEP);
+				code_lazy = () -> Arrays.asList(Algorithm7Code.mmRSAEncryption, Algorithm7Code.mmRSAESOAEP);
 				trace_lazy = () -> AlgorithmCode.mmObject();
 			}
 		});

@@ -19,7 +19,10 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.entity.AssetHolding;
 import com.tools20022.repository.entity.SecuritiesQuantity;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.OriginalAndCurrentQuantities7;
 import com.tools20022.repository.msg.SignedQuantityFormat9;
 import java.util.Arrays;
@@ -98,11 +101,11 @@ public class Quantity23Choice {
 	 */
 	public static final MMMessageAssociationEnd mmOriginalAndCurrentFaceAmount = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmFaceAmount;
+			businessElementTrace_lazy = () -> AssetHolding.mmFaceAmount;
 			componentContext_lazy = () -> Quantity23Choice.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlAndCurFaceAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalAndCurrentFaceAmount";
 			definition = "Signed face amount and amortised value of security.";
 			maxOccurs = 1;
@@ -143,7 +146,7 @@ public class Quantity23Choice {
 			componentContext_lazy = () -> Quantity23Choice.mmObject();
 			isDerived = false;
 			xmlTag = "SgndQty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SignedQuantity";
 			definition = "Signed quantity of security.";
 			maxOccurs = 1;
@@ -156,10 +159,10 @@ public class Quantity23Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Quantity23Choice.mmOriginalAndCurrentFaceAmount, com.tools20022.repository.choice.Quantity23Choice.mmSignedQuantity);
+				messageElement_lazy = () -> Arrays.asList(Quantity23Choice.mmOriginalAndCurrentFaceAmount, Quantity23Choice.mmSignedQuantity);
 				trace_lazy = () -> SecuritiesQuantity.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Quantity23Choice";
 				definition = "Choice between different quantity of security formats.";
 			}

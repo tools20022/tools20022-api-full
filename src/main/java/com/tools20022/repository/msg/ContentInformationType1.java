@@ -20,7 +20,14 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.caaa.AcceptorBatchTransferResponseV01;
+import com.tools20022.repository.area.caaa.AcceptorBatchTransferV01;
+import com.tools20022.repository.area.catm.AcceptorConfigurationUpdateV01;
+import com.tools20022.repository.area.catm.ManagementPlanReplacementV01;
+import com.tools20022.repository.area.catm.StatusReportV01;
 import com.tools20022.repository.codeset.ContentType1Code;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -134,7 +141,7 @@ public class ContentInformationType1 {
 			componentContext_lazy = () -> ContentInformationType1.mmObject();
 			isDerived = false;
 			xmlTag = "CnttTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ContentType";
 			definition = "Type of data protection.";
 			maxOccurs = 1;
@@ -174,7 +181,7 @@ public class ContentInformationType1 {
 			componentContext_lazy = () -> ContentInformationType1.mmObject();
 			isDerived = false;
 			xmlTag = "EnvlpdData";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EnvelopedData";
 			definition = "Data protection by encryption, with a session key.";
 			maxOccurs = 1;
@@ -215,7 +222,7 @@ public class ContentInformationType1 {
 			componentContext_lazy = () -> ContentInformationType1.mmObject();
 			isDerived = false;
 			xmlTag = "AuthntcdData";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AuthenticatedData";
 			definition = "Data protection by a message authentication code (MAC).";
 			maxOccurs = 1;
@@ -256,7 +263,7 @@ public class ContentInformationType1 {
 			componentContext_lazy = () -> ContentInformationType1.mmObject();
 			isDerived = false;
 			xmlTag = "SgndData";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SignedData";
 			definition = "Data protected by digital signatures.";
 			maxOccurs = 1;
@@ -297,7 +304,7 @@ public class ContentInformationType1 {
 			componentContext_lazy = () -> ContentInformationType1.mmObject();
 			isDerived = false;
 			xmlTag = "DgstdData";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DigestedData";
 			definition = "Data protected by a digest.";
 			maxOccurs = 1;
@@ -341,7 +348,7 @@ public class ContentInformationType1 {
 			componentContext_lazy = () -> ContentInformationType1.mmObject();
 			isDerived = false;
 			xmlTag = "NmdKeyNcrptdData";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NamedKeyEncryptedData";
 			definition = "Data protection by encryption with a previously exchanged key identified by a name.";
 			maxOccurs = 1;
@@ -354,14 +361,12 @@ public class ContentInformationType1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ContentInformationType1.mmContentType, com.tools20022.repository.msg.ContentInformationType1.mmEnvelopedData,
-						com.tools20022.repository.msg.ContentInformationType1.mmAuthenticatedData, com.tools20022.repository.msg.ContentInformationType1.mmSignedData, com.tools20022.repository.msg.ContentInformationType1.mmDigestedData,
-						com.tools20022.repository.msg.ContentInformationType1.mmNamedKeyEncryptedData);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.catm.ManagementPlanReplacementV01.mmSecurityTrailer, com.tools20022.repository.area.catm.StatusReportV01.mmSecurityTrailer,
-						com.tools20022.repository.area.catm.AcceptorConfigurationUpdateV01.mmSecurityTrailer, com.tools20022.repository.area.caaa.AcceptorBatchTransferV01.mmSecurityTrailer,
-						com.tools20022.repository.area.caaa.AcceptorBatchTransferResponseV01.mmSecurityTrailer);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(ContentInformationType1.mmContentType, ContentInformationType1.mmEnvelopedData, ContentInformationType1.mmAuthenticatedData, ContentInformationType1.mmSignedData,
+						ContentInformationType1.mmDigestedData, ContentInformationType1.mmNamedKeyEncryptedData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(ManagementPlanReplacementV01.mmSecurityTrailer, StatusReportV01.mmSecurityTrailer, AcceptorConfigurationUpdateV01.mmSecurityTrailer,
+						AcceptorBatchTransferV01.mmSecurityTrailer, AcceptorBatchTransferResponseV01.mmSecurityTrailer);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ContentInformationType1";
 				definition = "General cryptographic message syntax (CMS) containing protected data.";
 				nextVersions_lazy = () -> Arrays.asList(ContentInformationType4.mmObject());

@@ -19,8 +19,11 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ChargeTaxBasis1Code;
 import com.tools20022.repository.entity.Adjustment;
+import com.tools20022.repository.entity.Tax;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification38;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -113,14 +116,14 @@ public class ChargeTaxBasisType1Choice {
 	 */
 	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.mmBasis;
+			businessElementTrace_lazy = () -> Tax.mmBasis;
 			componentContext_lazy = () -> ChargeTaxBasisType1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Cd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Securities transaction type expressed as an ISO 20022 code.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ChargeBasisType1Choice.mmCode);
+			nextVersions_lazy = () -> Arrays.asList(ChargeBasisType1Choice.mmCode);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ChargeTaxBasis1Code.mmObject();
@@ -170,14 +173,14 @@ public class ChargeTaxBasisType1Choice {
 	 */
 	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.mmBasis;
+			businessElementTrace_lazy = () -> Tax.mmBasis;
 			componentContext_lazy = () -> ChargeTaxBasisType1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Securities transaction type expressed as a proprietary code.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ChargeBasisType1Choice.mmProprietary);
+			nextVersions_lazy = () -> Arrays.asList(ChargeBasisType1Choice.mmProprietary);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification38.mmObject();
@@ -187,10 +190,10 @@ public class ChargeTaxBasisType1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ChargeTaxBasisType1Choice.mmCode, com.tools20022.repository.choice.ChargeTaxBasisType1Choice.mmProprietary);
+				messageElement_lazy = () -> Arrays.asList(ChargeTaxBasisType1Choice.mmCode, ChargeTaxBasisType1Choice.mmProprietary);
 				trace_lazy = () -> Adjustment.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ChargeTaxBasisType1Choice";
 				definition = "Choice of format for the charge tax basis.";
 				nextVersions_lazy = () -> Arrays.asList(ChargeBasisType1Choice.mmObject());

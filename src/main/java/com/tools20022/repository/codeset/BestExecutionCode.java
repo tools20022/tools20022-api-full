@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -28,17 +30,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.BestExecutionCode#mmBest
- * BestExecutionCode.mmBest}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
  * =
  * <ul>
  * <li>{@linkplain com.tools20022.repository.codeset.BestExecution1Code
  * BestExecution1Code}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.BestExecutionCode#mmBest
+ * BestExecutionCode.mmBest}</li>
  * </ul>
  * </li>
  * <li>
@@ -90,7 +92,7 @@ public class BestExecutionCode {
 	 */
 	public static final MMCode mmBest = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Best";
 			definition = "Best execution rules were followed.";
 			owner_lazy = () -> BestExecutionCode.mmObject();
@@ -101,12 +103,12 @@ public class BestExecutionCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("BTEX");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "BestExecutionCode";
 				definition = "Specifies whether best execution rules as defined in the EU MiFID directive were followed for a transaction.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.BestExecutionCode.mmBest);
+				code_lazy = () -> Arrays.asList(BestExecutionCode.mmBest);
 				derivation_lazy = () -> Arrays.asList(BestExecution1Code.mmObject());
 			}
 		});

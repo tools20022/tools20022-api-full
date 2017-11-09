@@ -20,11 +20,14 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.MeetingType1Code;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.entity.IssuerMeeting;
 import com.tools20022.repository.entity.Meeting;
 import com.tools20022.repository.entity.PostalAddress;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -111,11 +114,11 @@ public class MeetingReference1 {
 	 */
 	public static final MMMessageAttribute mmMeetingIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Meeting.mmIdentification;
+			businessElementTrace_lazy = () -> Meeting.mmIdentification;
 			componentContext_lazy = () -> MeetingReference1.mmObject();
 			isDerived = false;
 			xmlTag = "MtgId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MeetingIdentification";
 			definition = "Identification assigned to a general meeting by the party notifying the meeting. It must be unique for the party notifying the meeting.";
 			maxOccurs = 1;
@@ -161,11 +164,11 @@ public class MeetingReference1 {
 	 */
 	public static final MMMessageAttribute mmIssuerMeetingIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.IssuerMeeting.mmIssuerMeetingIdentification;
+			businessElementTrace_lazy = () -> IssuerMeeting.mmIssuerMeetingIdentification;
 			componentContext_lazy = () -> MeetingReference1.mmObject();
 			isDerived = false;
 			xmlTag = "IssrMtgId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssuerMeetingIdentification";
 			definition = "Identification assigned to a general meeting by the issuer. It must be unique for the issuer.";
 			maxOccurs = 1;
@@ -208,11 +211,11 @@ public class MeetingReference1 {
 	 */
 	public static final MMMessageAttribute mmMeetingDateAndTime = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Meeting.mmDateAndTime;
+			businessElementTrace_lazy = () -> Meeting.mmDateAndTime;
 			componentContext_lazy = () -> MeetingReference1.mmObject();
 			isDerived = false;
 			xmlTag = "MtgDtAndTm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MeetingDateAndTime";
 			definition = "Date and time at which the meeting will take place.";
 			maxOccurs = 1;
@@ -257,11 +260,11 @@ public class MeetingReference1 {
 	 */
 	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Meeting.mmType;
+			businessElementTrace_lazy = () -> Meeting.mmType;
 			componentContext_lazy = () -> MeetingReference1.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Specifies the type of meeting for which  instructions are sent.";
 			maxOccurs = 1;
@@ -308,7 +311,7 @@ public class MeetingReference1 {
 			componentContext_lazy = () -> MeetingReference1.mmObject();
 			isDerived = false;
 			xmlTag = "Lctn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Location";
 			definition = "Place of the company meeting for the scheduled meeting date.";
 			maxOccurs = 5;
@@ -321,11 +324,11 @@ public class MeetingReference1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MeetingReference1.mmMeetingIdentification, com.tools20022.repository.msg.MeetingReference1.mmIssuerMeetingIdentification,
-						com.tools20022.repository.msg.MeetingReference1.mmMeetingDateAndTime, com.tools20022.repository.msg.MeetingReference1.mmType, com.tools20022.repository.msg.MeetingReference1.mmLocation);
+				messageElement_lazy = () -> Arrays.asList(MeetingReference1.mmMeetingIdentification, MeetingReference1.mmIssuerMeetingIdentification, MeetingReference1.mmMeetingDateAndTime, MeetingReference1.mmType,
+						MeetingReference1.mmLocation);
 				trace_lazy = () -> Meeting.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "MeetingReference1";
 				definition = "Elements which allow to identify a meeting.";
 			}

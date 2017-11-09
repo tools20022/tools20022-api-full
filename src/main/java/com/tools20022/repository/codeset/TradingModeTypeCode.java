@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.TradingModeType1Code
+ * TradingModeType1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -50,13 +59,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.TradingModeTypeCode#mmMatching
  * TradingModeTypeCode.mmMatching}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.TradingModeType1Code
- * TradingModeType1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -103,7 +105,7 @@ public class TradingModeTypeCode {
 	 */
 	public static final MMCode mmQuotationDriven = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuotationDriven";
 			definition = "Members could click When market makers quote continuously,or enter RFQ trading process, and make a deal with market makers finally.";
 			owner_lazy = () -> TradingModeTypeCode.mmObject();
@@ -136,7 +138,7 @@ public class TradingModeTypeCode {
 	 */
 	public static final MMCode mmOrderDriven = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrderDriven";
 			definition = "Using matchmaking mechanism to match orders which are submitted by members.";
 			owner_lazy = () -> TradingModeTypeCode.mmObject();
@@ -171,7 +173,7 @@ public class TradingModeTypeCode {
 	 */
 	public static final MMCode mmNegotiationTrade = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NegotiationTrade";
 			definition = "Members send advertisements, and then other members could enter negotiation trade process. In the negotiation trade process, the member completes product elements and submits, and the counterpart just confirms the deal to make a negotiation trade.";
 			owner_lazy = () -> TradingModeTypeCode.mmObject();
@@ -203,7 +205,7 @@ public class TradingModeTypeCode {
 	 */
 	public static final MMCode mmAuction = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Auction";
 			definition = "When issuer issues the deposits, market members subscribe the deposits.  ";
 			owner_lazy = () -> TradingModeTypeCode.mmObject();
@@ -234,7 +236,7 @@ public class TradingModeTypeCode {
 	 */
 	public static final MMCode mmBilateral = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Bilateral";
 			definition = "Counterparties neogiate trading details to execute trades. .";
 			owner_lazy = () -> TradingModeTypeCode.mmObject();
@@ -267,7 +269,7 @@ public class TradingModeTypeCode {
 	 */
 	public static final MMCode mmAnonymous = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Anonymous";
 			definition = "Trades are executed anonymously to each counterparty, based on rule \"pritority of price and time\" to match trade.";
 			owner_lazy = () -> TradingModeTypeCode.mmObject();
@@ -297,7 +299,7 @@ public class TradingModeTypeCode {
 	 */
 	public static final MMCode mmMatching = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Matching";
 			definition = "Trades are executed through matching system.";
 			owner_lazy = () -> TradingModeTypeCode.mmObject();
@@ -308,13 +310,12 @@ public class TradingModeTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TradingModeTypeCode";
 				definition = "Identifies the type of the trading mode.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TradingModeTypeCode.mmQuotationDriven, com.tools20022.repository.codeset.TradingModeTypeCode.mmOrderDriven,
-						com.tools20022.repository.codeset.TradingModeTypeCode.mmNegotiationTrade, com.tools20022.repository.codeset.TradingModeTypeCode.mmAuction, com.tools20022.repository.codeset.TradingModeTypeCode.mmBilateral,
-						com.tools20022.repository.codeset.TradingModeTypeCode.mmAnonymous, com.tools20022.repository.codeset.TradingModeTypeCode.mmMatching);
+				code_lazy = () -> Arrays.asList(TradingModeTypeCode.mmQuotationDriven, TradingModeTypeCode.mmOrderDriven, TradingModeTypeCode.mmNegotiationTrade, TradingModeTypeCode.mmAuction, TradingModeTypeCode.mmBilateral,
+						TradingModeTypeCode.mmAnonymous, TradingModeTypeCode.mmMatching);
 				derivation_lazy = () -> Arrays.asList(TradingModeType1Code.mmObject());
 			}
 		});

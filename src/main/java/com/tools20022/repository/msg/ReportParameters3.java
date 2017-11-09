@@ -19,12 +19,15 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.secl.MarginReportV02;
 import com.tools20022.repository.choice.DateAndDateTimeChoice;
 import com.tools20022.repository.codeset.CurrencyCode;
 import com.tools20022.repository.codeset.EventFrequency6Code;
 import com.tools20022.repository.datatype.Exact5NumericText;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -120,7 +123,7 @@ public class ReportParameters3 {
 			componentContext_lazy = () -> ReportParameters3.mmObject();
 			isDerived = false;
 			xmlTag = "RptId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportIdentification";
 			definition = "Unique identification of the report.";
 			maxOccurs = 1;
@@ -162,7 +165,7 @@ public class ReportParameters3 {
 			componentContext_lazy = () -> ReportParameters3.mmObject();
 			isDerived = false;
 			xmlTag = "RptDtAndTm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportDateAndTime";
 			definition = "Date (and time) and time of the report.";
 			maxOccurs = 1;
@@ -203,7 +206,7 @@ public class ReportParameters3 {
 			componentContext_lazy = () -> ReportParameters3.mmObject();
 			isDerived = false;
 			xmlTag = "RptCcy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportCurrency";
 			definition = "Currency used for the calculation of the margin.";
 			maxOccurs = 1;
@@ -244,7 +247,7 @@ public class ReportParameters3 {
 			componentContext_lazy = () -> ReportParameters3.mmObject();
 			isDerived = false;
 			xmlTag = "ClctnDtAndTm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CalculationDateAndTime";
 			definition = "Date of calculation of the margin.";
 			maxOccurs = 1;
@@ -286,7 +289,7 @@ public class ReportParameters3 {
 			componentContext_lazy = () -> ReportParameters3.mmObject();
 			isDerived = false;
 			xmlTag = "Frqcy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Frequency";
 			definition = "Frequency of the report.";
 			maxOccurs = 1;
@@ -328,7 +331,7 @@ public class ReportParameters3 {
 			componentContext_lazy = () -> ReportParameters3.mmObject();
 			isDerived = false;
 			xmlTag = "RptNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportNumber";
 			definition = "Sequential number of the report.";
 			maxOccurs = 1;
@@ -340,12 +343,11 @@ public class ReportParameters3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReportParameters3.mmReportIdentification, com.tools20022.repository.msg.ReportParameters3.mmReportDateAndTime,
-						com.tools20022.repository.msg.ReportParameters3.mmReportCurrency, com.tools20022.repository.msg.ReportParameters3.mmCalculationDateAndTime, com.tools20022.repository.msg.ReportParameters3.mmFrequency,
-						com.tools20022.repository.msg.ReportParameters3.mmReportNumber);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.secl.MarginReportV02.mmReportParameters);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+				messageElement_lazy = () -> Arrays.asList(ReportParameters3.mmReportIdentification, ReportParameters3.mmReportDateAndTime, ReportParameters3.mmReportCurrency, ReportParameters3.mmCalculationDateAndTime,
+						ReportParameters3.mmFrequency, ReportParameters3.mmReportNumber);
+				messageBuildingBlock_lazy = () -> Arrays.asList(MarginReportV02.mmReportParameters);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
 						return DateFormat.getDateInstance(java.text.DateFormat.LONG).parse("September 9, 2016");

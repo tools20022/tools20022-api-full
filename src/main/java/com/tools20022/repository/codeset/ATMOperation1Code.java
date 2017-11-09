@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ATMOperationCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -85,7 +87,7 @@ public class ATMOperation1Code extends ATMOperationCode {
 	 */
 	public static final MMCode mmAdjust = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Adjust";
 			owner_lazy = () -> ATMOperation1Code.mmObject();
 		}
@@ -108,7 +110,7 @@ public class ATMOperation1Code extends ATMOperationCode {
 	 */
 	public static final MMCode mmInsertMedia = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InsertMedia";
 			owner_lazy = () -> ATMOperation1Code.mmObject();
 		}
@@ -131,7 +133,7 @@ public class ATMOperation1Code extends ATMOperationCode {
 	 */
 	public static final MMCode mmLoading = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Loading";
 			owner_lazy = () -> ATMOperation1Code.mmObject();
 		}
@@ -154,7 +156,7 @@ public class ATMOperation1Code extends ATMOperationCode {
 	 */
 	public static final MMCode mmRemoveMedia = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RemoveMedia";
 			owner_lazy = () -> ATMOperation1Code.mmObject();
 		}
@@ -177,7 +179,7 @@ public class ATMOperation1Code extends ATMOperationCode {
 	 */
 	public static final MMCode mmUnloading = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unloading";
 			owner_lazy = () -> ATMOperation1Code.mmObject();
 		}
@@ -186,12 +188,11 @@ public class ATMOperation1Code extends ATMOperationCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ATMOperation1Code";
 				definition = "Type of logical or physical operation on an ATM.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ATMOperation1Code.mmAdjust, com.tools20022.repository.codeset.ATMOperation1Code.mmInsertMedia, com.tools20022.repository.codeset.ATMOperation1Code.mmLoading,
-						com.tools20022.repository.codeset.ATMOperation1Code.mmRemoveMedia, com.tools20022.repository.codeset.ATMOperation1Code.mmUnloading);
+				code_lazy = () -> Arrays.asList(ATMOperation1Code.mmAdjust, ATMOperation1Code.mmInsertMedia, ATMOperation1Code.mmLoading, ATMOperation1Code.mmRemoveMedia, ATMOperation1Code.mmUnloading);
 				trace_lazy = () -> ATMOperationCode.mmObject();
 			}
 		});

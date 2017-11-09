@@ -19,8 +19,10 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.UserInterface2Code;
 import com.tools20022.repository.datatype.Number;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -113,10 +115,10 @@ public class DisplayCapabilities2 {
 			componentContext_lazy = () -> DisplayCapabilities2.mmObject();
 			isDerived = false;
 			xmlTag = "DispTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DisplayType";
 			definition = "Type of display (for example merchant or cardholder).";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.DisplayCapabilities1.mmDisplayType;
+			previousVersion_lazy = () -> DisplayCapabilities1.mmDisplayType;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> UserInterface2Code.mmObject();
@@ -168,11 +170,11 @@ public class DisplayCapabilities2 {
 			componentContext_lazy = () -> DisplayCapabilities2.mmObject();
 			isDerived = false;
 			xmlTag = "NbOfLines";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NumberOfLines";
 			definition = "Number of lines of the display component.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DisplayCapabilities3.mmNumberOfLines);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.DisplayCapabilities1.mmNumberOfLines;
+			nextVersions_lazy = () -> Arrays.asList(DisplayCapabilities3.mmNumberOfLines);
+			previousVersion_lazy = () -> DisplayCapabilities1.mmNumberOfLines;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
@@ -224,11 +226,11 @@ public class DisplayCapabilities2 {
 			componentContext_lazy = () -> DisplayCapabilities2.mmObject();
 			isDerived = false;
 			xmlTag = "LineWidth";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LineWidth";
 			definition = "Number of columns of the display component.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DisplayCapabilities3.mmLineWidth);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.DisplayCapabilities1.mmLineWidth;
+			nextVersions_lazy = () -> Arrays.asList(DisplayCapabilities3.mmLineWidth);
+			previousVersion_lazy = () -> DisplayCapabilities1.mmLineWidth;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
@@ -238,10 +240,9 @@ public class DisplayCapabilities2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DisplayCapabilities2.mmDisplayType, com.tools20022.repository.msg.DisplayCapabilities2.mmNumberOfLines,
-						com.tools20022.repository.msg.DisplayCapabilities2.mmLineWidth);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(DisplayCapabilities2.mmDisplayType, DisplayCapabilities2.mmNumberOfLines, DisplayCapabilities2.mmLineWidth);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DisplayCapabilities2";
 				definition = "The capabilities of the display components performing the transaction.";
 				nextVersions_lazy = () -> Arrays.asList(DisplayCapabilities3.mmObject());

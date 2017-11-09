@@ -20,10 +20,15 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.RateAndAmountFormat21Choice;
 import com.tools20022.repository.choice.RateAndAmountFormat5Choice;
 import com.tools20022.repository.datatype.PercentageRate;
+import com.tools20022.repository.entity.BiddingConditions;
 import com.tools20022.repository.entity.CorporateActionEvent;
+import com.tools20022.repository.entity.Tax;
+import com.tools20022.repository.entity.TaxVoucher;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -135,15 +140,15 @@ public class CorporateActionRate47 {
 	 */
 	public static final MMMessageAttribute mmProposedRate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BiddingConditions.mmProposedRate;
+			businessElementTrace_lazy = () -> BiddingConditions.mmProposedRate;
 			componentContext_lazy = () -> CorporateActionRate47.mmObject();
 			isDerived = false;
 			xmlTag = "PropsdRate";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProposedRate";
 			definition = "Rate proposed in a remarketing of variable rate notes.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionRate71.mmProposedRate);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionRate8.mmProposedRate;
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionRate71.mmProposedRate);
+			previousVersion_lazy = () -> CorporateActionRate8.mmProposedRate;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
@@ -198,15 +203,15 @@ public class CorporateActionRate47 {
 	 */
 	public static final MMMessageAttribute mmOversubscriptionRate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BiddingConditions.mmOversubscriptionRate;
+			businessElementTrace_lazy = () -> BiddingConditions.mmOversubscriptionRate;
 			componentContext_lazy = () -> CorporateActionRate47.mmObject();
 			isDerived = false;
 			xmlTag = "OvrsbcptRate";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OversubscriptionRate";
 			definition = "Rate of allowed over-subscription.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionRate71.mmOversubscriptionRate);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionRate8.mmOversubscriptionRate;
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionRate71.mmOversubscriptionRate);
+			previousVersion_lazy = () -> CorporateActionRate8.mmOversubscriptionRate;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> RateAndAmountFormat5Choice.mmObject();
@@ -264,15 +269,15 @@ public class CorporateActionRate47 {
 	 */
 	public static final MMMessageAttribute mmRequestedTaxationRate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TaxVoucher.mmRequestedTaxationRate;
+			businessElementTrace_lazy = () -> TaxVoucher.mmRequestedTaxationRate;
 			componentContext_lazy = () -> CorporateActionRate47.mmObject();
 			isDerived = false;
 			xmlTag = "ReqdTaxtnRate";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestedTaxationRate";
 			definition = "Requested tax rate in case of breakdown of tax rate, for example, used for adjustment of tax rate. This is the new requested applicable rate.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionRate71.mmRequestedWithholdingTaxRate);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionRate8.mmRequestedTaxationRate;
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionRate71.mmRequestedWithholdingTaxRate);
+			previousVersion_lazy = () -> CorporateActionRate8.mmRequestedTaxationRate;
 			minOccurs = 0;
 			complexType_lazy = () -> RateAndAmountFormat21Choice.mmObject();
 		}
@@ -315,11 +320,11 @@ public class CorporateActionRate47 {
 	 */
 	public static final MMMessageAssociationEnd mmRequestedWithholdingOfForeignTax = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.mmAmount;
+			businessElementTrace_lazy = () -> Tax.mmAmount;
 			componentContext_lazy = () -> CorporateActionRate47.mmObject();
 			isDerived = false;
 			xmlTag = "ReqdWhldgOfFrgnTax";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestedWithholdingOfForeignTax";
 			definition = "Requested rate at which the income will be withheld by the jurisdiction in which the income was originally paid, for which relief at source and/or reclaim may be possible.";
 			minOccurs = 0;
@@ -373,14 +378,14 @@ public class CorporateActionRate47 {
 	 */
 	public static final MMMessageAssociationEnd mmRequestedWithholdingOfLocalTax = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.mmAmount;
+			businessElementTrace_lazy = () -> Tax.mmAmount;
 			componentContext_lazy = () -> CorporateActionRate47.mmObject();
 			isDerived = false;
 			xmlTag = "ReqdWhldgOfLclTax";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestedWithholdingOfLocalTax";
 			definition = "Requested rate at which the income will be withheld by the jurisdiction in which the account owner is located, for which relief at source and/or reclaim may be possible.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionRate71.mmRequestedSecondLevelTaxRate);
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionRate71.mmRequestedSecondLevelTaxRate);
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> RateAndAmountFormat21Choice.mmObject();
@@ -390,12 +395,11 @@ public class CorporateActionRate47 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionRate47.mmProposedRate, com.tools20022.repository.msg.CorporateActionRate47.mmOversubscriptionRate,
-						com.tools20022.repository.msg.CorporateActionRate47.mmRequestedTaxationRate, com.tools20022.repository.msg.CorporateActionRate47.mmRequestedWithholdingOfForeignTax,
-						com.tools20022.repository.msg.CorporateActionRate47.mmRequestedWithholdingOfLocalTax);
+				messageElement_lazy = () -> Arrays.asList(CorporateActionRate47.mmProposedRate, CorporateActionRate47.mmOversubscriptionRate, CorporateActionRate47.mmRequestedTaxationRate,
+						CorporateActionRate47.mmRequestedWithholdingOfForeignTax, CorporateActionRate47.mmRequestedWithholdingOfLocalTax);
 				trace_lazy = () -> CorporateActionEvent.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionRate47";
 				definition = "Specifies rates related to a corporate action option.";
 				nextVersions_lazy = () -> Arrays.asList(CorporateActionRate71.mmObject());

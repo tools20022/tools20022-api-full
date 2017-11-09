@@ -20,6 +20,8 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.camt.RequestToModifyPayment;
 import com.tools20022.repository.choice.PaymentSchemeChoice;
 import com.tools20022.repository.choice.PurposeChoice;
 import com.tools20022.repository.choice.RemittanceInformation3Choice;
@@ -29,10 +31,8 @@ import com.tools20022.repository.codeset.SWIFTServiceLevel2Code;
 import com.tools20022.repository.datatype.CurrencyAndAmount;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.Max35Text;
-import com.tools20022.repository.entity.CashAccount;
-import com.tools20022.repository.entity.CashClearingSystem;
-import com.tools20022.repository.entity.Document;
-import com.tools20022.repository.entity.PaymentInstruction;
+import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -171,7 +171,7 @@ public class RequestedModification {
 			componentContext_lazy = () -> RequestedModification.mmObject();
 			isDerived = false;
 			xmlTag = "RltdRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedReference";
 			definition = "Reference relating to a linked payment instruction or agreement which is meaningful to both parties (eg, the content of field 21 in a cover instruction).";
 			maxOccurs = 1;
@@ -216,11 +216,11 @@ public class RequestedModification {
 	 */
 	public static final MMMessageAttribute mmBankOperationCode = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ServiceLevel.mmOther;
+			businessElementTrace_lazy = () -> ServiceLevel.mmOther;
 			componentContext_lazy = () -> RequestedModification.mmObject();
 			isDerived = false;
 			xmlTag = "BkOprCd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BankOperationCode";
 			definition = "SWIFT defined service level applies to the payment instruction.";
 			maxOccurs = 1;
@@ -269,11 +269,11 @@ public class RequestedModification {
 	 */
 	public static final MMMessageAttribute mmInstructionCode = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentInstruction.mmInstructionForNextAgent;
+			businessElementTrace_lazy = () -> PaymentInstruction.mmInstructionForNextAgent;
 			componentContext_lazy = () -> RequestedModification.mmObject();
 			isDerived = false;
 			xmlTag = "InstrCd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructionCode";
 			definition = "Further information related to the processing of the payment instruction. The instruction can relate to a level of service between the bank and the customer, or give instructions to and for specific parties in the payment chain.";
 			maxOccurs = 1;
@@ -319,11 +319,11 @@ public class RequestedModification {
 	 */
 	public static final MMMessageAttribute mmRequestedExecutionDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Obligation.mmRequestedSettlementDate;
+			businessElementTrace_lazy = () -> Obligation.mmRequestedSettlementDate;
 			componentContext_lazy = () -> RequestedModification.mmObject();
 			isDerived = false;
 			xmlTag = "ReqdExctnDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestedExecutionDate";
 			definition = "Date and time the debtor requests the clearing agent to process the payment instruction.";
 			maxOccurs = 1;
@@ -370,11 +370,11 @@ public class RequestedModification {
 	 */
 	public static final MMMessageAttribute mmValueDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.mmValueDate;
+			businessElementTrace_lazy = () -> Payment.mmValueDate;
 			componentContext_lazy = () -> RequestedModification.mmObject();
 			isDerived = false;
 			xmlTag = "ValDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValueDate";
 			definition = "Date on which the amount of money ceases to be available to the agent that owes it and when the amount of money becomes available to the agent to which it is due.";
 			maxOccurs = 1;
@@ -421,11 +421,11 @@ public class RequestedModification {
 	 */
 	public static final MMMessageAttribute mmInterbankSettledAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashSettlement.mmInterbankSettlementAmount;
+			businessElementTrace_lazy = () -> CashSettlement.mmInterbankSettlementAmount;
 			componentContext_lazy = () -> RequestedModification.mmObject();
 			isDerived = false;
 			xmlTag = "IntrBkSttldAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterbankSettledAmount";
 			definition = "Amount of money moved between the instructing agent and the instructed agent.";
 			maxOccurs = 1;
@@ -467,11 +467,11 @@ public class RequestedModification {
 	 */
 	public static final MMMessageAssociationEnd mmDebtor = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> RequestedModification.mmObject();
 			isDerived = false;
 			xmlTag = "Dbtr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Debtor";
 			definition = "Debtor or Ordering customer of the payment instruction.";
 			maxOccurs = 1;
@@ -514,11 +514,11 @@ public class RequestedModification {
 	 */
 	public static final MMMessageAssociationEnd mmDebtorAccount = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentPartyRole.mmCashAccount;
+			businessElementTrace_lazy = () -> PaymentPartyRole.mmCashAccount;
 			componentContext_lazy = () -> RequestedModification.mmObject();
 			isDerived = false;
 			xmlTag = "DbtrAcct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DebtorAccount";
 			definition = "Account to or from which a cash entry is made.";
 			maxOccurs = 1;
@@ -565,11 +565,11 @@ public class RequestedModification {
 	 */
 	public static final MMMessageAssociationEnd mmIntermediarySettlementAgent = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Organisation.mmOrganisationIdentification;
+			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> RequestedModification.mmObject();
 			isDerived = false;
 			xmlTag = "IntrmySttlmAgt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IntermediarySettlementAgent";
 			definition = "Party that executes a cash transfer received via a clearing agent or on request of an agreement party.";
 			maxOccurs = 1;
@@ -616,11 +616,11 @@ public class RequestedModification {
 	 */
 	public static final MMMessageAssociationEnd mmLastSettlementAgent = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Organisation.mmOrganisationIdentification;
+			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> RequestedModification.mmObject();
 			isDerived = false;
 			xmlTag = "LastSttlmAgt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LastSettlementAgent";
 			definition = "Party that executes a cash transfer received via a clearing agent or on request of an agreement party.";
 			maxOccurs = 1;
@@ -672,7 +672,7 @@ public class RequestedModification {
 			componentContext_lazy = () -> RequestedModification.mmObject();
 			isDerived = false;
 			xmlTag = "PmtSchme";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentScheme";
 			definition = "Specification of a pre-agreed offering between clearing agents, or the channel through which the payment instruction is to be processed. This payment scheme can point to a specific rulebook governing the rules of clearing and settlement between two parties.";
 			maxOccurs = 1;
@@ -718,7 +718,7 @@ public class RequestedModification {
 			componentContext_lazy = () -> RequestedModification.mmObject();
 			isDerived = false;
 			xmlTag = "BnfcryInstnAcct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BeneficiaryInstitutionAccount";
 			definition = "Account to or from which a cash entry is made.";
 			maxOccurs = 1;
@@ -761,11 +761,11 @@ public class RequestedModification {
 	 */
 	public static final MMMessageAssociationEnd mmCreditor = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> RequestedModification.mmObject();
 			isDerived = false;
 			xmlTag = "Cdtr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Creditor";
 			definition = "Entity involved in an activity.";
 			maxOccurs = 1;
@@ -808,11 +808,11 @@ public class RequestedModification {
 	 */
 	public static final MMMessageAssociationEnd mmCreditorAccount = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentPartyRole.mmCashAccount;
+			businessElementTrace_lazy = () -> PaymentPartyRole.mmCashAccount;
 			componentContext_lazy = () -> RequestedModification.mmObject();
 			isDerived = false;
 			xmlTag = "CdtrAcct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditorAccount";
 			definition = "Account to or from which a cash entry is made.";
 			maxOccurs = 1;
@@ -863,7 +863,7 @@ public class RequestedModification {
 			componentContext_lazy = () -> RequestedModification.mmObject();
 			isDerived = false;
 			xmlTag = "RmtInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RemittanceInformation";
 			definition = "Structured information that enables the matching, ie, reconciliation, of a payment with the items that the payment is intended to settle, such as commercial invoices in an account receivable system.";
 			maxOccurs = 1;
@@ -906,11 +906,11 @@ public class RequestedModification {
 	 */
 	public static final MMMessageAssociationEnd mmPurpose = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentObligation.mmPurpose;
+			businessElementTrace_lazy = () -> PaymentObligation.mmPurpose;
 			componentContext_lazy = () -> RequestedModification.mmObject();
 			isDerived = false;
 			xmlTag = "Purp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Purpose";
 			definition = "Underlying reason for the payment transaction.";
 			maxOccurs = 1;
@@ -959,11 +959,11 @@ public class RequestedModification {
 	 */
 	public static final MMMessageAssociationEnd mmInstructionForFinalAgent = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.mmInstructionForCreditorAgent;
+			businessElementTrace_lazy = () -> Payment.mmInstructionForCreditorAgent;
 			componentContext_lazy = () -> RequestedModification.mmObject();
 			isDerived = false;
 			xmlTag = "InstrForFnlAgt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructionForFinalAgent";
 			definition = "Further information related to the processing of the payment instruction. The instruction can relate to a level of service between the bank and the customer, or give instructions to and for specific parties in the payment chain.";
 			maxOccurs = 1;
@@ -1007,7 +1007,7 @@ public class RequestedModification {
 			componentContext_lazy = () -> RequestedModification.mmObject();
 			isDerived = false;
 			xmlTag = "DtlsOfChrgs";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DetailsOfCharges";
 			definition = "Party(ies) liable for a charge associated with the transfer of cash.";
 			maxOccurs = 1;
@@ -1048,7 +1048,7 @@ public class RequestedModification {
 			componentContext_lazy = () -> RequestedModification.mmObject();
 			isDerived = false;
 			xmlTag = "SndrToRcvrInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SenderToReceiverInformation";
 			definition = "Unformatted information from the sender to the receiver.";
 			maxOccurs = 6;
@@ -1060,18 +1060,15 @@ public class RequestedModification {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RequestedModification.mmRelatedReference, com.tools20022.repository.msg.RequestedModification.mmBankOperationCode,
-						com.tools20022.repository.msg.RequestedModification.mmInstructionCode, com.tools20022.repository.msg.RequestedModification.mmRequestedExecutionDate, com.tools20022.repository.msg.RequestedModification.mmValueDate,
-						com.tools20022.repository.msg.RequestedModification.mmInterbankSettledAmount, com.tools20022.repository.msg.RequestedModification.mmDebtor, com.tools20022.repository.msg.RequestedModification.mmDebtorAccount,
-						com.tools20022.repository.msg.RequestedModification.mmIntermediarySettlementAgent, com.tools20022.repository.msg.RequestedModification.mmLastSettlementAgent,
-						com.tools20022.repository.msg.RequestedModification.mmPaymentScheme, com.tools20022.repository.msg.RequestedModification.mmBeneficiaryInstitutionAccount,
-						com.tools20022.repository.msg.RequestedModification.mmCreditor, com.tools20022.repository.msg.RequestedModification.mmCreditorAccount, com.tools20022.repository.msg.RequestedModification.mmRemittanceInformation,
-						com.tools20022.repository.msg.RequestedModification.mmPurpose, com.tools20022.repository.msg.RequestedModification.mmInstructionForFinalAgent, com.tools20022.repository.msg.RequestedModification.mmDetailsOfCharges,
-						com.tools20022.repository.msg.RequestedModification.mmSenderToReceiverInformation);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.RequestToModifyPayment.mmModification);
+				messageElement_lazy = () -> Arrays.asList(RequestedModification.mmRelatedReference, RequestedModification.mmBankOperationCode, RequestedModification.mmInstructionCode, RequestedModification.mmRequestedExecutionDate,
+						RequestedModification.mmValueDate, RequestedModification.mmInterbankSettledAmount, RequestedModification.mmDebtor, RequestedModification.mmDebtorAccount, RequestedModification.mmIntermediarySettlementAgent,
+						RequestedModification.mmLastSettlementAgent, RequestedModification.mmPaymentScheme, RequestedModification.mmBeneficiaryInstitutionAccount, RequestedModification.mmCreditor, RequestedModification.mmCreditorAccount,
+						RequestedModification.mmRemittanceInformation, RequestedModification.mmPurpose, RequestedModification.mmInstructionForFinalAgent, RequestedModification.mmDetailsOfCharges,
+						RequestedModification.mmSenderToReceiverInformation);
+				messageBuildingBlock_lazy = () -> Arrays.asList(RequestToModifyPayment.mmModification);
 				trace_lazy = () -> PaymentInstruction.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RequestedModification";
 				definition = "Contains the requested modifications.";
 			}

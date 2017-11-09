@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CommissionTypeV2Code;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -110,7 +112,7 @@ public class CommissionType9Code extends CommissionTypeV2Code {
 	 */
 	public static final MMCode mmClientDirected = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClientDirected";
 			owner_lazy = () -> CommissionType9Code.mmObject();
 		}
@@ -133,7 +135,7 @@ public class CommissionType9Code extends CommissionTypeV2Code {
 	 */
 	public static final MMCode mmStepOut = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StepOut";
 			owner_lazy = () -> CommissionType9Code.mmObject();
 		}
@@ -156,7 +158,7 @@ public class CommissionType9Code extends CommissionTypeV2Code {
 	 */
 	public static final MMCode mmSoftDollar = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SoftDollar";
 			owner_lazy = () -> CommissionType9Code.mmObject();
 		}
@@ -179,7 +181,7 @@ public class CommissionType9Code extends CommissionTypeV2Code {
 	 */
 	public static final MMCode mmPercentageOfPrincipal = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PercentageOfPrincipal";
 			owner_lazy = () -> CommissionType9Code.mmObject();
 		}
@@ -202,7 +204,7 @@ public class CommissionType9Code extends CommissionTypeV2Code {
 	 */
 	public static final MMCode mmFlatFee = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FlatFee";
 			owner_lazy = () -> CommissionType9Code.mmObject();
 		}
@@ -225,7 +227,7 @@ public class CommissionType9Code extends CommissionTypeV2Code {
 	 */
 	public static final MMCode mmPerUnit = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PerUnit";
 			owner_lazy = () -> CommissionType9Code.mmObject();
 		}
@@ -248,7 +250,7 @@ public class CommissionType9Code extends CommissionTypeV2Code {
 	 */
 	public static final MMCode mmPercentageCommissionWaivedAsCashDiscount = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PercentageCommissionWaivedAsCashDiscount";
 			owner_lazy = () -> CommissionType9Code.mmObject();
 		}
@@ -271,7 +273,7 @@ public class CommissionType9Code extends CommissionTypeV2Code {
 	 */
 	public static final MMCode mmPercentageCommissionWaivedAsAdditionalUnits = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PercentageCommissionWaivedAsAdditionalUnits";
 			owner_lazy = () -> CommissionType9Code.mmObject();
 		}
@@ -294,7 +296,7 @@ public class CommissionType9Code extends CommissionTypeV2Code {
 	 */
 	public static final MMCode mmBrokerageRate = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BrokerageRate";
 			owner_lazy = () -> CommissionType9Code.mmObject();
 		}
@@ -317,7 +319,7 @@ public class CommissionType9Code extends CommissionTypeV2Code {
 	 */
 	public static final MMCode mmDifferentialOrDeferredPayment = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DifferentialOrDeferredPayment";
 			owner_lazy = () -> CommissionType9Code.mmObject();
 		}
@@ -340,7 +342,7 @@ public class CommissionType9Code extends CommissionTypeV2Code {
 	 */
 	public static final MMCode mmPointsPerBondOrContract = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PointsPerBondOrContract";
 			owner_lazy = () -> CommissionType9Code.mmObject();
 		}
@@ -349,16 +351,14 @@ public class CommissionType9Code extends CommissionTypeV2Code {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CLDI");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CommissionType9Code";
 				definition = "Type of service for which the commission is asked or paid.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CommissionType9Code.mmClientDirected, com.tools20022.repository.codeset.CommissionType9Code.mmStepOut,
-						com.tools20022.repository.codeset.CommissionType9Code.mmSoftDollar, com.tools20022.repository.codeset.CommissionType9Code.mmPercentageOfPrincipal, com.tools20022.repository.codeset.CommissionType9Code.mmFlatFee,
-						com.tools20022.repository.codeset.CommissionType9Code.mmPerUnit, com.tools20022.repository.codeset.CommissionType9Code.mmPercentageCommissionWaivedAsCashDiscount,
-						com.tools20022.repository.codeset.CommissionType9Code.mmPercentageCommissionWaivedAsAdditionalUnits, com.tools20022.repository.codeset.CommissionType9Code.mmBrokerageRate,
-						com.tools20022.repository.codeset.CommissionType9Code.mmDifferentialOrDeferredPayment, com.tools20022.repository.codeset.CommissionType9Code.mmPointsPerBondOrContract);
+				code_lazy = () -> Arrays.asList(CommissionType9Code.mmClientDirected, CommissionType9Code.mmStepOut, CommissionType9Code.mmSoftDollar, CommissionType9Code.mmPercentageOfPrincipal, CommissionType9Code.mmFlatFee,
+						CommissionType9Code.mmPerUnit, CommissionType9Code.mmPercentageCommissionWaivedAsCashDiscount, CommissionType9Code.mmPercentageCommissionWaivedAsAdditionalUnits, CommissionType9Code.mmBrokerageRate,
+						CommissionType9Code.mmDifferentialOrDeferredPayment, CommissionType9Code.mmPointsPerBondOrContract);
 				trace_lazy = () -> CommissionTypeV2Code.mmObject();
 			}
 		});

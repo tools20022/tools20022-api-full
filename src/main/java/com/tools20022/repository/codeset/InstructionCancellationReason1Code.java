@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.InstructionCancellationReasonCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -86,7 +88,7 @@ public class InstructionCancellationReason1Code extends InstructionCancellationR
 	 */
 	public static final MMCode mmCancelledByYourselves = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancelledByYourselves";
 			owner_lazy = () -> InstructionCancellationReason1Code.mmObject();
 		}
@@ -109,7 +111,7 @@ public class InstructionCancellationReason1Code extends InstructionCancellationR
 	 */
 	public static final MMCode mmCancelledBySystem = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancelledBySystem";
 			owner_lazy = () -> InstructionCancellationReason1Code.mmObject();
 		}
@@ -132,7 +134,7 @@ public class InstructionCancellationReason1Code extends InstructionCancellationR
 	 */
 	public static final MMCode mmCancelledByAgent = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancelledByAgent";
 			owner_lazy = () -> InstructionCancellationReason1Code.mmObject();
 		}
@@ -141,13 +143,12 @@ public class InstructionCancellationReason1Code extends InstructionCancellationR
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CANI");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InstructionCancellationReason1Code";
 				definition = "Specifies the reason why the instruction is cancelled.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.InstructionCancellationReason1Code.mmCancelledByYourselves, com.tools20022.repository.codeset.InstructionCancellationReason1Code.mmCancelledBySystem,
-						com.tools20022.repository.codeset.InstructionCancellationReason1Code.mmCancelledByAgent);
+				code_lazy = () -> Arrays.asList(InstructionCancellationReason1Code.mmCancelledByYourselves, InstructionCancellationReason1Code.mmCancelledBySystem, InstructionCancellationReason1Code.mmCancelledByAgent);
 				trace_lazy = () -> InstructionCancellationReasonCode.mmObject();
 			}
 		});

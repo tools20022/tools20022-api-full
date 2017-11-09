@@ -20,7 +20,9 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ISOTime;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.TransferEvent1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -93,7 +95,7 @@ public class DailyFundTransfer1Choice {
 			componentContext_lazy = () -> DailyFundTransfer1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "TrfTm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransferTime";
 			definition = "Time daily balances are transferred.";
 			maxOccurs = 1;
@@ -133,7 +135,7 @@ public class DailyFundTransfer1Choice {
 			componentContext_lazy = () -> DailyFundTransfer1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "TrfEvt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransferEvent";
 			definition = "Information about code and number of transfer.";
 			maxOccurs = 1;
@@ -146,9 +148,9 @@ public class DailyFundTransfer1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.DailyFundTransfer1Choice.mmTransferTime, com.tools20022.repository.choice.DailyFundTransfer1Choice.mmTransferEvent);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(DailyFundTransfer1Choice.mmTransferTime, DailyFundTransfer1Choice.mmTransferEvent);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "DailyFundTransfer1Choice";
 				definition = "Choice between time and event fund transfer.";
 			}

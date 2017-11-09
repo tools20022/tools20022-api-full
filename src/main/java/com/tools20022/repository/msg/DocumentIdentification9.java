@@ -19,8 +19,13 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.auth.RegulatoryTransactionReportCancellationRequestV02;
+import com.tools20022.repository.area.seev.*;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.Document;
+import com.tools20022.repository.entity.GenericIdentification;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -241,11 +246,11 @@ public class DocumentIdentification9 {
 	 */
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmIdentification;
+			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> DocumentIdentification9.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Identifies the document.";
 			maxOccurs = 1;
@@ -257,41 +262,30 @@ public class DocumentIdentification9 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DocumentIdentification9.mmIdentification);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.CorporateActionEventProcessingStatusAdviceV01.mmNotificationIdentification,
-						com.tools20022.repository.area.seev.CorporateActionEventProcessingStatusAdviceV02.mmNotificationIdentification,
-						com.tools20022.repository.area.seev.CorporateActionEventProcessingStatusAdviceV03.mmNotificationIdentification,
-						com.tools20022.repository.area.seev.CorporateActionEventProcessingStatusAdviceV04.mmNotificationIdentification,
-						com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestStatusAdviceV01.mmInstructionCancellationRequestIdentification,
-						com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestStatusAdviceV02.mmInstructionCancellationRequestIdentification,
-						com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestStatusAdviceV03.mmInstructionCancellationRequestIdentification,
-						com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestStatusAdviceV04.mmInstructionCancellationRequestIdentification,
-						com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV01.mmInstructionIdentification, com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV02.mmInstructionIdentification,
-						com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV03.mmInstructionIdentification, com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV04.mmInstructionIdentification,
-						com.tools20022.repository.area.seev.CorporateActionMovementConfirmationV01.mmInstructionIdentification, com.tools20022.repository.area.seev.CorporateActionMovementConfirmationV02.mmInstructionIdentification,
-						com.tools20022.repository.area.seev.CorporateActionMovementConfirmationV03.mmInstructionIdentification, com.tools20022.repository.area.seev.CorporateActionMovementConfirmationV04.mmInstructionIdentification,
-						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV01.mmInstructionIdentification,
-						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV02.mmInstructionIdentification,
-						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV03.mmInstructionIdentification,
-						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV04.mmInstructionIdentification, com.tools20022.repository.area.seev.CorporateActionNotificationV01.mmInstructionIdentification,
-						com.tools20022.repository.area.seev.CorporateActionNotificationV02.mmInstructionIdentification, com.tools20022.repository.area.seev.CorporateActionNotificationV03.mmInstructionIdentification,
-						com.tools20022.repository.area.seev.CorporateActionNotificationV04.mmInstructionIdentification, com.tools20022.repository.area.auth.RegulatoryTransactionReportCancellationRequestV02.mmPreviousReference,
-						com.tools20022.repository.area.seev.CorporateActionMovementConfirmationV05.mmInstructionIdentification, com.tools20022.repository.area.seev.CorporateActionNotificationV05.mmInstructionIdentification,
-						com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV05.mmInstructionIdentification, com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV05.mmInstructionIdentification,
-						com.tools20022.repository.area.seev.CorporateActionMovementConfirmationV06.mmInstructionIdentification,
-						com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestStatusAdviceV05.mmInstructionCancellationRequestIdentification,
-						com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV06.mmInstructionIdentification, com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV06.mmInstructionIdentification,
-						com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestStatusAdviceV06.mmInstructionCancellationRequestIdentification,
-						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV07.mmInstructionIdentification, com.tools20022.repository.area.seev.CorporateActionMovementConfirmationV07.mmInstructionIdentification,
-						com.tools20022.repository.area.seev.CorporateActionNotificationV06.mmInstructionIdentification, com.tools20022.repository.area.seev.CorporateActionEventProcessingStatusAdviceV05.mmNotificationIdentification,
-						com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV07.mmInstructionIdentification, com.tools20022.repository.area.seev.CorporateActionNotificationV07.mmInstructionIdentification,
-						com.tools20022.repository.area.seev.CorporateActionMovementConfirmationV08.mmInstructionIdentification, com.tools20022.repository.area.seev.CorporateActionEventProcessingStatusAdviceV06.mmNotificationIdentification,
-						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV08.mmInstructionIdentification,
-						com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestStatusAdviceV07.mmInstructionCancellationRequestIdentification,
-						com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV08.mmInstructionIdentification);
+				messageElement_lazy = () -> Arrays.asList(DocumentIdentification9.mmIdentification);
+				messageBuildingBlock_lazy = () -> Arrays.asList(CorporateActionEventProcessingStatusAdviceV01.mmNotificationIdentification, CorporateActionEventProcessingStatusAdviceV02.mmNotificationIdentification,
+						CorporateActionEventProcessingStatusAdviceV03.mmNotificationIdentification, CorporateActionEventProcessingStatusAdviceV04.mmNotificationIdentification,
+						CorporateActionInstructionCancellationRequestStatusAdviceV01.mmInstructionCancellationRequestIdentification,
+						CorporateActionInstructionCancellationRequestStatusAdviceV02.mmInstructionCancellationRequestIdentification,
+						CorporateActionInstructionCancellationRequestStatusAdviceV03.mmInstructionCancellationRequestIdentification,
+						CorporateActionInstructionCancellationRequestStatusAdviceV04.mmInstructionCancellationRequestIdentification, CorporateActionInstructionStatusAdviceV01.mmInstructionIdentification,
+						CorporateActionInstructionStatusAdviceV02.mmInstructionIdentification, CorporateActionInstructionStatusAdviceV03.mmInstructionIdentification, CorporateActionInstructionStatusAdviceV04.mmInstructionIdentification,
+						CorporateActionMovementConfirmationV01.mmInstructionIdentification, CorporateActionMovementConfirmationV02.mmInstructionIdentification, CorporateActionMovementConfirmationV03.mmInstructionIdentification,
+						CorporateActionMovementConfirmationV04.mmInstructionIdentification, CorporateActionMovementPreliminaryAdviceV01.mmInstructionIdentification, CorporateActionMovementPreliminaryAdviceV02.mmInstructionIdentification,
+						CorporateActionMovementPreliminaryAdviceV03.mmInstructionIdentification, CorporateActionMovementPreliminaryAdviceV04.mmInstructionIdentification, CorporateActionNotificationV01.mmInstructionIdentification,
+						CorporateActionNotificationV02.mmInstructionIdentification, CorporateActionNotificationV03.mmInstructionIdentification, CorporateActionNotificationV04.mmInstructionIdentification,
+						RegulatoryTransactionReportCancellationRequestV02.mmPreviousReference, CorporateActionMovementConfirmationV05.mmInstructionIdentification, CorporateActionNotificationV05.mmInstructionIdentification,
+						CorporateActionInstructionStatusAdviceV05.mmInstructionIdentification, CorporateActionMovementPreliminaryAdviceV05.mmInstructionIdentification, CorporateActionMovementConfirmationV06.mmInstructionIdentification,
+						CorporateActionInstructionCancellationRequestStatusAdviceV05.mmInstructionCancellationRequestIdentification, CorporateActionInstructionStatusAdviceV06.mmInstructionIdentification,
+						CorporateActionMovementPreliminaryAdviceV06.mmInstructionIdentification, CorporateActionInstructionCancellationRequestStatusAdviceV06.mmInstructionCancellationRequestIdentification,
+						CorporateActionMovementPreliminaryAdviceV07.mmInstructionIdentification, CorporateActionMovementConfirmationV07.mmInstructionIdentification, CorporateActionNotificationV06.mmInstructionIdentification,
+						CorporateActionEventProcessingStatusAdviceV05.mmNotificationIdentification, CorporateActionInstructionStatusAdviceV07.mmInstructionIdentification, CorporateActionNotificationV07.mmInstructionIdentification,
+						CorporateActionMovementConfirmationV08.mmInstructionIdentification, CorporateActionEventProcessingStatusAdviceV06.mmNotificationIdentification,
+						CorporateActionMovementPreliminaryAdviceV08.mmInstructionIdentification, CorporateActionInstructionCancellationRequestStatusAdviceV07.mmInstructionCancellationRequestIdentification,
+						CorporateActionInstructionStatusAdviceV08.mmInstructionIdentification);
 				trace_lazy = () -> Document.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DocumentIdentification9";
 				definition = "Identifies a document by a unique identification.";
 			}

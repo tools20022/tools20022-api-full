@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -91,7 +93,7 @@ public class EventClassificationCode {
 	 */
 	public static final MMCode mmMandatory = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Mandatory";
 			definition = "Specifies that the event will occur without the beneficial owner or agent taking any action.";
 			owner_lazy = () -> EventClassificationCode.mmObject();
@@ -124,7 +126,7 @@ public class EventClassificationCode {
 	 */
 	public static final MMCode mmMandatoryWithOptions = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MandatoryWithOptions";
 			definition = "Specifies that the event will occur but the beneficial owner or agent has a choice as to the action taken against the holdings.";
 			owner_lazy = () -> EventClassificationCode.mmObject();
@@ -157,7 +159,7 @@ public class EventClassificationCode {
 	 */
 	public static final MMCode mmVoluntary = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Voluntary";
 			definition = "Specifies that this is an event in whichthe beneficial owner or agent of a security need to take action if the event is to affect their holdings.";
 			owner_lazy = () -> EventClassificationCode.mmObject();
@@ -168,13 +170,12 @@ public class EventClassificationCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("MAND");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "EventClassificationCode";
 				definition = "Provides information about how the holder must participate in the event.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.EventClassificationCode.mmMandatory, com.tools20022.repository.codeset.EventClassificationCode.mmMandatoryWithOptions,
-						com.tools20022.repository.codeset.EventClassificationCode.mmVoluntary);
+				code_lazy = () -> Arrays.asList(EventClassificationCode.mmMandatory, EventClassificationCode.mmMandatoryWithOptions, EventClassificationCode.mmVoluntary);
 			}
 		});
 		return mmObject_lazy.get();

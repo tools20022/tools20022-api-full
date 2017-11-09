@@ -19,8 +19,10 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.IdentificationType1Code;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -93,7 +95,7 @@ public class PartyIdentification78 {
 			componentContext_lazy = () -> PartyIdentification78.mmObject();
 			isDerived = false;
 			xmlTag = "PtySrc";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartySource";
 			definition = "Indicate the source of the party.";
 			maxOccurs = 1;
@@ -134,7 +136,7 @@ public class PartyIdentification78 {
 			componentContext_lazy = () -> PartyIdentification78.mmObject();
 			isDerived = false;
 			xmlTag = "TradPtyId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradePartyIdentification";
 			definition = "Identification of the party.";
 			maxOccurs = 1;
@@ -146,9 +148,9 @@ public class PartyIdentification78 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyIdentification78.mmPartySource, com.tools20022.repository.msg.PartyIdentification78.mmTradePartyIdentification);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(PartyIdentification78.mmPartySource, PartyIdentification78.mmTradePartyIdentification);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PartyIdentification78";
 				definition = "Identification of an entity involved in an activity.";
 			}

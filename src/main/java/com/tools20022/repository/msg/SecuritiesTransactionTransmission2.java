@@ -19,9 +19,12 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.LEIIdentifier;
 import com.tools20022.repository.datatype.TrueFalseIndicator;
 import com.tools20022.repository.entity.OrganisationIdentification;
+import com.tools20022.repository.entity.PartyIdentificationInformation;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -107,7 +110,7 @@ public class SecuritiesTransactionTransmission2 {
 			componentContext_lazy = () -> SecuritiesTransactionTransmission2.mmObject();
 			isDerived = false;
 			xmlTag = "TrnsmssnInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransmissionIndicator";
 			definition = "Indication as to whether the transaction results from an order  transmitted by the reporting of a client to a third party.\r\n\r\nUsage: Only applicable when the conditions for transmission are not satisfied.";
 			maxOccurs = 1;
@@ -156,11 +159,11 @@ public class SecuritiesTransactionTransmission2 {
 	 */
 	public static final MMMessageAttribute mmTransmittingBuyer = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.mmLEI;
+			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmLEI;
 			componentContext_lazy = () -> SecuritiesTransactionTransmission2.mmObject();
 			isDerived = false;
 			xmlTag = "TrnsmttgBuyr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransmittingBuyer";
 			definition = "Identifies the buyer transmitting the order to the reporting firm. \r\n\r\nUsage: Only required for reporting firms reporting transactions on behalf of order transmitting firm. ";
 			maxOccurs = 1;
@@ -209,11 +212,11 @@ public class SecuritiesTransactionTransmission2 {
 	 */
 	public static final MMMessageAttribute mmTransmittingSeller = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.mmLEI;
+			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmLEI;
 			componentContext_lazy = () -> SecuritiesTransactionTransmission2.mmObject();
 			isDerived = false;
 			xmlTag = "TrnsmttgSellr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransmittingSeller";
 			definition = "Identifies the seller transmitting the order to the reporting firm. \r\n\r\nUsage: Only required for reporting firms reporting transactions on behalf of order transmitting firm. ";
 			maxOccurs = 1;
@@ -225,11 +228,10 @@ public class SecuritiesTransactionTransmission2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesTransactionTransmission2.mmTransmissionIndicator, com.tools20022.repository.msg.SecuritiesTransactionTransmission2.mmTransmittingBuyer,
-						com.tools20022.repository.msg.SecuritiesTransactionTransmission2.mmTransmittingSeller);
+				messageElement_lazy = () -> Arrays.asList(SecuritiesTransactionTransmission2.mmTransmissionIndicator, SecuritiesTransactionTransmission2.mmTransmittingBuyer, SecuritiesTransactionTransmission2.mmTransmittingSeller);
 				trace_lazy = () -> OrganisationIdentification.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesTransactionTransmission2";
 				definition = "Specifies the securities order transmission attributes.\r\n";
 			}

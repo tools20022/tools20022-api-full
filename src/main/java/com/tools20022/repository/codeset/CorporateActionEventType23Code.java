@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CorporateActionEventTypeV6Code;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -271,7 +273,7 @@ public class CorporateActionEventType23Code extends CorporateActionEventTypeV6Co
 	 */
 	public static final MMCode mmActiveTradingStatus = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ActiveTradingStatus";
 			owner_lazy = () -> CorporateActionEventType23Code.mmObject();
 		}
@@ -294,7 +296,7 @@ public class CorporateActionEventType23Code extends CorporateActionEventTypeV6Co
 	 */
 	public static final MMCode mmAttachment = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Attachment";
 			owner_lazy = () -> CorporateActionEventType23Code.mmObject();
 		}
@@ -317,7 +319,7 @@ public class CorporateActionEventType23Code extends CorporateActionEventTypeV6Co
 	 */
 	public static final MMCode mmBankruptcy = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Bankruptcy";
 			owner_lazy = () -> CorporateActionEventType23Code.mmObject();
 		}
@@ -340,7 +342,7 @@ public class CorporateActionEventType23Code extends CorporateActionEventTypeV6Co
 	 */
 	public static final MMCode mmBondDefault = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BondDefault";
 			owner_lazy = () -> CorporateActionEventType23Code.mmObject();
 		}
@@ -363,7 +365,7 @@ public class CorporateActionEventType23Code extends CorporateActionEventTypeV6Co
 	 */
 	public static final MMCode mmBonusIssue = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BonusIssue";
 			owner_lazy = () -> CorporateActionEventType23Code.mmObject();
 		}
@@ -386,7 +388,7 @@ public class CorporateActionEventType23Code extends CorporateActionEventTypeV6Co
 	 */
 	public static final MMCode mmCallOnIntermediateSecurities = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CallOnIntermediateSecurities";
 			owner_lazy = () -> CorporateActionEventType23Code.mmObject();
 		}
@@ -409,7 +411,7 @@ public class CorporateActionEventType23Code extends CorporateActionEventTypeV6Co
 	 */
 	public static final MMCode mmCapitalDistribution = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CapitalDistribution";
 			owner_lazy = () -> CorporateActionEventType23Code.mmObject();
 		}
@@ -432,7 +434,7 @@ public class CorporateActionEventType23Code extends CorporateActionEventTypeV6Co
 	 */
 	public static final MMCode mmCapitalGainsDistribution = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CapitalGainsDistribution";
 			owner_lazy = () -> CorporateActionEventType23Code.mmObject();
 		}
@@ -455,7 +457,7 @@ public class CorporateActionEventType23Code extends CorporateActionEventTypeV6Co
 	 */
 	public static final MMCode mmCapitalisation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Capitalisation";
 			owner_lazy = () -> CorporateActionEventType23Code.mmObject();
 		}
@@ -478,7 +480,7 @@ public class CorporateActionEventType23Code extends CorporateActionEventTypeV6Co
 	 */
 	public static final MMCode mmCashDistributionFromNonEligibleSecuritiesSales = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashDistributionFromNonEligibleSecuritiesSales";
 			owner_lazy = () -> CorporateActionEventType23Code.mmObject();
 		}
@@ -501,7 +503,7 @@ public class CorporateActionEventType23Code extends CorporateActionEventTypeV6Co
 	 */
 	public static final MMCode mmCashDividend = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashDividend";
 			owner_lazy = () -> CorporateActionEventType23Code.mmObject();
 		}
@@ -524,7 +526,7 @@ public class CorporateActionEventType23Code extends CorporateActionEventTypeV6Co
 	 */
 	public static final MMCode mmChange = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Change";
 			owner_lazy = () -> CorporateActionEventType23Code.mmObject();
 		}
@@ -547,7 +549,7 @@ public class CorporateActionEventType23Code extends CorporateActionEventTypeV6Co
 	 */
 	public static final MMCode mmCompanyOption = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CompanyOption";
 			owner_lazy = () -> CorporateActionEventType23Code.mmObject();
 		}
@@ -570,7 +572,7 @@ public class CorporateActionEventType23Code extends CorporateActionEventTypeV6Co
 	 */
 	public static final MMCode mmClassActionProposedSettlement = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClassActionProposedSettlement";
 			owner_lazy = () -> CorporateActionEventType23Code.mmObject();
 		}
@@ -593,7 +595,7 @@ public class CorporateActionEventType23Code extends CorporateActionEventTypeV6Co
 	 */
 	public static final MMCode mmConsent = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Consent";
 			owner_lazy = () -> CorporateActionEventType23Code.mmObject();
 		}
@@ -616,7 +618,7 @@ public class CorporateActionEventType23Code extends CorporateActionEventTypeV6Co
 	 */
 	public static final MMCode mmConversion = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Conversion";
 			owner_lazy = () -> CorporateActionEventType23Code.mmObject();
 		}
@@ -639,7 +641,7 @@ public class CorporateActionEventType23Code extends CorporateActionEventTypeV6Co
 	 */
 	public static final MMCode mmCreditEvent = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditEvent";
 			owner_lazy = () -> CorporateActionEventType23Code.mmObject();
 		}
@@ -662,7 +664,7 @@ public class CorporateActionEventType23Code extends CorporateActionEventTypeV6Co
 	 */
 	public static final MMCode mmDecreaseInValue = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DecreaseInValue";
 			owner_lazy = () -> CorporateActionEventType23Code.mmObject();
 		}
@@ -685,7 +687,7 @@ public class CorporateActionEventType23Code extends CorporateActionEventTypeV6Co
 	 */
 	public static final MMCode mmDetachment = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Detachment";
 			owner_lazy = () -> CorporateActionEventType23Code.mmObject();
 		}
@@ -708,7 +710,7 @@ public class CorporateActionEventType23Code extends CorporateActionEventTypeV6Co
 	 */
 	public static final MMCode mmDisclosure = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Disclosure";
 			owner_lazy = () -> CorporateActionEventType23Code.mmObject();
 		}
@@ -731,7 +733,7 @@ public class CorporateActionEventType23Code extends CorporateActionEventTypeV6Co
 	 */
 	public static final MMCode mmDividendOption = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DividendOption";
 			owner_lazy = () -> CorporateActionEventType23Code.mmObject();
 		}
@@ -754,7 +756,7 @@ public class CorporateActionEventType23Code extends CorporateActionEventTypeV6Co
 	 */
 	public static final MMCode mmDividendReinvestment = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DividendReinvestment";
 			owner_lazy = () -> CorporateActionEventType23Code.mmObject();
 		}
@@ -777,7 +779,7 @@ public class CorporateActionEventType23Code extends CorporateActionEventTypeV6Co
 	 */
 	public static final MMCode mmDrawing = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Drawing";
 			owner_lazy = () -> CorporateActionEventType23Code.mmObject();
 		}
@@ -800,7 +802,7 @@ public class CorporateActionEventType23Code extends CorporateActionEventTypeV6Co
 	 */
 	public static final MMCode mmDutchAuction = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DutchAuction";
 			owner_lazy = () -> CorporateActionEventType23Code.mmObject();
 		}
@@ -823,7 +825,7 @@ public class CorporateActionEventType23Code extends CorporateActionEventTypeV6Co
 	 */
 	public static final MMCode mmExchange = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Exchange";
 			owner_lazy = () -> CorporateActionEventType23Code.mmObject();
 		}
@@ -846,7 +848,7 @@ public class CorporateActionEventType23Code extends CorporateActionEventTypeV6Co
 	 */
 	public static final MMCode mmFinalMaturity = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinalMaturity";
 			owner_lazy = () -> CorporateActionEventType23Code.mmObject();
 		}
@@ -869,7 +871,7 @@ public class CorporateActionEventType23Code extends CorporateActionEventTypeV6Co
 	 */
 	public static final MMCode mmFullCall = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FullCall";
 			owner_lazy = () -> CorporateActionEventType23Code.mmObject();
 		}
@@ -892,7 +894,7 @@ public class CorporateActionEventType23Code extends CorporateActionEventTypeV6Co
 	 */
 	public static final MMCode mmIncreaseInValue = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncreaseInValue";
 			owner_lazy = () -> CorporateActionEventType23Code.mmObject();
 		}
@@ -915,7 +917,7 @@ public class CorporateActionEventType23Code extends CorporateActionEventTypeV6Co
 	 */
 	public static final MMCode mmInstalmentCall = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstalmentCall";
 			owner_lazy = () -> CorporateActionEventType23Code.mmObject();
 		}
@@ -938,7 +940,7 @@ public class CorporateActionEventType23Code extends CorporateActionEventTypeV6Co
 	 */
 	public static final MMCode mmInterestPayment = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterestPayment";
 			owner_lazy = () -> CorporateActionEventType23Code.mmObject();
 		}
@@ -961,7 +963,7 @@ public class CorporateActionEventType23Code extends CorporateActionEventTypeV6Co
 	 */
 	public static final MMCode mmInterestPaymentWithPrincipal = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterestPaymentWithPrincipal";
 			owner_lazy = () -> CorporateActionEventType23Code.mmObject();
 		}
@@ -984,7 +986,7 @@ public class CorporateActionEventType23Code extends CorporateActionEventTypeV6Co
 	 */
 	public static final MMCode mmIntermediateSecuritiesDistribution = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IntermediateSecuritiesDistribution";
 			owner_lazy = () -> CorporateActionEventType23Code.mmObject();
 		}
@@ -1007,7 +1009,7 @@ public class CorporateActionEventType23Code extends CorporateActionEventTypeV6Co
 	 */
 	public static final MMCode mmLiquidationDividend = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LiquidationDividend";
 			owner_lazy = () -> CorporateActionEventType23Code.mmObject();
 		}
@@ -1030,7 +1032,7 @@ public class CorporateActionEventType23Code extends CorporateActionEventTypeV6Co
 	 */
 	public static final MMCode mmMaturityExtension = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaturityExtension";
 			owner_lazy = () -> CorporateActionEventType23Code.mmObject();
 		}
@@ -1053,7 +1055,7 @@ public class CorporateActionEventType23Code extends CorporateActionEventTypeV6Co
 	 */
 	public static final MMCode mmMerger = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Merger";
 			owner_lazy = () -> CorporateActionEventType23Code.mmObject();
 		}
@@ -1076,7 +1078,7 @@ public class CorporateActionEventType23Code extends CorporateActionEventTypeV6Co
 	 */
 	public static final MMCode mmNonOfficialOffer = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonOfficialOffer";
 			owner_lazy = () -> CorporateActionEventType23Code.mmObject();
 		}
@@ -1099,7 +1101,7 @@ public class CorporateActionEventType23Code extends CorporateActionEventTypeV6Co
 	 */
 	public static final MMCode mmNonUSTEFRADCertification = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonUSTEFRADCertification";
 			owner_lazy = () -> CorporateActionEventType23Code.mmObject();
 		}
@@ -1122,7 +1124,7 @@ public class CorporateActionEventType23Code extends CorporateActionEventTypeV6Co
 	 */
 	public static final MMCode mmOddLotSalePurchase = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OddLotSalePurchase";
 			owner_lazy = () -> CorporateActionEventType23Code.mmObject();
 		}
@@ -1145,7 +1147,7 @@ public class CorporateActionEventType23Code extends CorporateActionEventTypeV6Co
 	 */
 	public static final MMCode mmOtherEvent = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherEvent";
 			owner_lazy = () -> CorporateActionEventType23Code.mmObject();
 		}
@@ -1168,7 +1170,7 @@ public class CorporateActionEventType23Code extends CorporateActionEventTypeV6Co
 	 */
 	public static final MMCode mmPariPassu = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PariPassu";
 			owner_lazy = () -> CorporateActionEventType23Code.mmObject();
 		}
@@ -1191,7 +1193,7 @@ public class CorporateActionEventType23Code extends CorporateActionEventTypeV6Co
 	 */
 	public static final MMCode mmPartialRedemptionWithoutPoolFactorReduction = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartialRedemptionWithoutPoolFactorReduction";
 			owner_lazy = () -> CorporateActionEventType23Code.mmObject();
 		}
@@ -1214,7 +1216,7 @@ public class CorporateActionEventType23Code extends CorporateActionEventTypeV6Co
 	 */
 	public static final MMCode mmPartialRedemptionWithPoolFactorReduction = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartialRedemptionWithPoolFactorReduction";
 			owner_lazy = () -> CorporateActionEventType23Code.mmObject();
 		}
@@ -1237,7 +1239,7 @@ public class CorporateActionEventType23Code extends CorporateActionEventTypeV6Co
 	 */
 	public static final MMCode mmPayInKind = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PayInKind";
 			owner_lazy = () -> CorporateActionEventType23Code.mmObject();
 		}
@@ -1260,7 +1262,7 @@ public class CorporateActionEventType23Code extends CorporateActionEventTypeV6Co
 	 */
 	public static final MMCode mmPlaceOfIncorporation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceOfIncorporation";
 			owner_lazy = () -> CorporateActionEventType23Code.mmObject();
 		}
@@ -1283,7 +1285,7 @@ public class CorporateActionEventType23Code extends CorporateActionEventTypeV6Co
 	 */
 	public static final MMCode mmPrefunding = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Prefunding";
 			owner_lazy = () -> CorporateActionEventType23Code.mmObject();
 		}
@@ -1306,7 +1308,7 @@ public class CorporateActionEventType23Code extends CorporateActionEventTypeV6Co
 	 */
 	public static final MMCode mmPriorityIssue = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PriorityIssue";
 			owner_lazy = () -> CorporateActionEventType23Code.mmObject();
 		}
@@ -1329,7 +1331,7 @@ public class CorporateActionEventType23Code extends CorporateActionEventTypeV6Co
 	 */
 	public static final MMCode mmPutRedemption = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PutRedemption";
 			owner_lazy = () -> CorporateActionEventType23Code.mmObject();
 		}
@@ -1352,7 +1354,7 @@ public class CorporateActionEventType23Code extends CorporateActionEventTypeV6Co
 	 */
 	public static final MMCode mmRedenomination = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Redenomination";
 			owner_lazy = () -> CorporateActionEventType23Code.mmObject();
 		}
@@ -1375,7 +1377,7 @@ public class CorporateActionEventType23Code extends CorporateActionEventTypeV6Co
 	 */
 	public static final MMCode mmRemarketingAgreement = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RemarketingAgreement";
 			owner_lazy = () -> CorporateActionEventType23Code.mmObject();
 		}
@@ -1398,7 +1400,7 @@ public class CorporateActionEventType23Code extends CorporateActionEventTypeV6Co
 	 */
 	public static final MMCode mmRepurchaseOffer = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RepurchaseOffer";
 			owner_lazy = () -> CorporateActionEventType23Code.mmObject();
 		}
@@ -1421,7 +1423,7 @@ public class CorporateActionEventType23Code extends CorporateActionEventTypeV6Co
 	 */
 	public static final MMCode mmReverseStockSplit = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReverseStockSplit";
 			owner_lazy = () -> CorporateActionEventType23Code.mmObject();
 		}
@@ -1444,7 +1446,7 @@ public class CorporateActionEventType23Code extends CorporateActionEventTypeV6Co
 	 */
 	public static final MMCode mmRightsIssue = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RightsIssue";
 			owner_lazy = () -> CorporateActionEventType23Code.mmObject();
 		}
@@ -1467,7 +1469,7 @@ public class CorporateActionEventType23Code extends CorporateActionEventTypeV6Co
 	 */
 	public static final MMCode mmScripDividend = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ScripDividend";
 			owner_lazy = () -> CorporateActionEventType23Code.mmObject();
 		}
@@ -1490,7 +1492,7 @@ public class CorporateActionEventType23Code extends CorporateActionEventTypeV6Co
 	 */
 	public static final MMCode mmSharesPremiumDividend = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SharesPremiumDividend";
 			owner_lazy = () -> CorporateActionEventType23Code.mmObject();
 		}
@@ -1513,7 +1515,7 @@ public class CorporateActionEventType23Code extends CorporateActionEventTypeV6Co
 	 */
 	public static final MMCode mmSmallestNegotiableUnit = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SmallestNegotiableUnit";
 			owner_lazy = () -> CorporateActionEventType23Code.mmObject();
 		}
@@ -1536,7 +1538,7 @@ public class CorporateActionEventType23Code extends CorporateActionEventTypeV6Co
 	 */
 	public static final MMCode mmSpinOff = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SpinOff";
 			owner_lazy = () -> CorporateActionEventType23Code.mmObject();
 		}
@@ -1559,7 +1561,7 @@ public class CorporateActionEventType23Code extends CorporateActionEventTypeV6Co
 	 */
 	public static final MMCode mmStockDividend = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StockDividend";
 			owner_lazy = () -> CorporateActionEventType23Code.mmObject();
 		}
@@ -1582,7 +1584,7 @@ public class CorporateActionEventType23Code extends CorporateActionEventTypeV6Co
 	 */
 	public static final MMCode mmStockSplit = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StockSplit";
 			owner_lazy = () -> CorporateActionEventType23Code.mmObject();
 		}
@@ -1605,7 +1607,7 @@ public class CorporateActionEventType23Code extends CorporateActionEventTypeV6Co
 	 */
 	public static final MMCode mmTaxReclaim = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxReclaim";
 			owner_lazy = () -> CorporateActionEventType23Code.mmObject();
 		}
@@ -1628,7 +1630,7 @@ public class CorporateActionEventType23Code extends CorporateActionEventTypeV6Co
 	 */
 	public static final MMCode mmTender = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Tender";
 			owner_lazy = () -> CorporateActionEventType23Code.mmObject();
 		}
@@ -1651,7 +1653,7 @@ public class CorporateActionEventType23Code extends CorporateActionEventTypeV6Co
 	 */
 	public static final MMCode mmTradingStatusDelisted = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradingStatusDelisted";
 			owner_lazy = () -> CorporateActionEventType23Code.mmObject();
 		}
@@ -1674,7 +1676,7 @@ public class CorporateActionEventType23Code extends CorporateActionEventTypeV6Co
 	 */
 	public static final MMCode mmTradingStatusSuspended = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradingStatusSuspended";
 			owner_lazy = () -> CorporateActionEventType23Code.mmObject();
 		}
@@ -1697,7 +1699,7 @@ public class CorporateActionEventType23Code extends CorporateActionEventTypeV6Co
 	 */
 	public static final MMCode mmWarrantExercise = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WarrantExercise";
 			owner_lazy = () -> CorporateActionEventType23Code.mmObject();
 		}
@@ -1720,7 +1722,7 @@ public class CorporateActionEventType23Code extends CorporateActionEventTypeV6Co
 	 */
 	public static final MMCode mmWithholdingTaxReliefCertification = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WithholdingTaxReliefCertification";
 			owner_lazy = () -> CorporateActionEventType23Code.mmObject();
 		}
@@ -1743,7 +1745,7 @@ public class CorporateActionEventType23Code extends CorporateActionEventTypeV6Co
 	 */
 	public static final MMCode mmWorthless = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Worthless";
 			owner_lazy = () -> CorporateActionEventType23Code.mmObject();
 		}
@@ -1766,7 +1768,7 @@ public class CorporateActionEventType23Code extends CorporateActionEventTypeV6Co
 	 */
 	public static final MMCode mmAccumulation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Accumulation";
 			owner_lazy = () -> CorporateActionEventType23Code.mmObject();
 		}
@@ -1775,44 +1777,28 @@ public class CorporateActionEventType23Code extends CorporateActionEventTypeV6Co
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionEventType23Code";
 				definition = "Specifies the corporate action event type.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CorporateActionEventType23Code.mmActiveTradingStatus, com.tools20022.repository.codeset.CorporateActionEventType23Code.mmAttachment,
-						com.tools20022.repository.codeset.CorporateActionEventType23Code.mmBankruptcy, com.tools20022.repository.codeset.CorporateActionEventType23Code.mmBondDefault,
-						com.tools20022.repository.codeset.CorporateActionEventType23Code.mmBonusIssue, com.tools20022.repository.codeset.CorporateActionEventType23Code.mmCallOnIntermediateSecurities,
-						com.tools20022.repository.codeset.CorporateActionEventType23Code.mmCapitalDistribution, com.tools20022.repository.codeset.CorporateActionEventType23Code.mmCapitalGainsDistribution,
-						com.tools20022.repository.codeset.CorporateActionEventType23Code.mmCapitalisation, com.tools20022.repository.codeset.CorporateActionEventType23Code.mmCashDistributionFromNonEligibleSecuritiesSales,
-						com.tools20022.repository.codeset.CorporateActionEventType23Code.mmCashDividend, com.tools20022.repository.codeset.CorporateActionEventType23Code.mmChange,
-						com.tools20022.repository.codeset.CorporateActionEventType23Code.mmCompanyOption, com.tools20022.repository.codeset.CorporateActionEventType23Code.mmClassActionProposedSettlement,
-						com.tools20022.repository.codeset.CorporateActionEventType23Code.mmConsent, com.tools20022.repository.codeset.CorporateActionEventType23Code.mmConversion,
-						com.tools20022.repository.codeset.CorporateActionEventType23Code.mmCreditEvent, com.tools20022.repository.codeset.CorporateActionEventType23Code.mmDecreaseInValue,
-						com.tools20022.repository.codeset.CorporateActionEventType23Code.mmDetachment, com.tools20022.repository.codeset.CorporateActionEventType23Code.mmDisclosure,
-						com.tools20022.repository.codeset.CorporateActionEventType23Code.mmDividendOption, com.tools20022.repository.codeset.CorporateActionEventType23Code.mmDividendReinvestment,
-						com.tools20022.repository.codeset.CorporateActionEventType23Code.mmDrawing, com.tools20022.repository.codeset.CorporateActionEventType23Code.mmDutchAuction,
-						com.tools20022.repository.codeset.CorporateActionEventType23Code.mmExchange, com.tools20022.repository.codeset.CorporateActionEventType23Code.mmFinalMaturity,
-						com.tools20022.repository.codeset.CorporateActionEventType23Code.mmFullCall, com.tools20022.repository.codeset.CorporateActionEventType23Code.mmIncreaseInValue,
-						com.tools20022.repository.codeset.CorporateActionEventType23Code.mmInstalmentCall, com.tools20022.repository.codeset.CorporateActionEventType23Code.mmInterestPayment,
-						com.tools20022.repository.codeset.CorporateActionEventType23Code.mmInterestPaymentWithPrincipal, com.tools20022.repository.codeset.CorporateActionEventType23Code.mmIntermediateSecuritiesDistribution,
-						com.tools20022.repository.codeset.CorporateActionEventType23Code.mmLiquidationDividend, com.tools20022.repository.codeset.CorporateActionEventType23Code.mmMaturityExtension,
-						com.tools20022.repository.codeset.CorporateActionEventType23Code.mmMerger, com.tools20022.repository.codeset.CorporateActionEventType23Code.mmNonOfficialOffer,
-						com.tools20022.repository.codeset.CorporateActionEventType23Code.mmNonUSTEFRADCertification, com.tools20022.repository.codeset.CorporateActionEventType23Code.mmOddLotSalePurchase,
-						com.tools20022.repository.codeset.CorporateActionEventType23Code.mmOtherEvent, com.tools20022.repository.codeset.CorporateActionEventType23Code.mmPariPassu,
-						com.tools20022.repository.codeset.CorporateActionEventType23Code.mmPartialRedemptionWithoutPoolFactorReduction,
-						com.tools20022.repository.codeset.CorporateActionEventType23Code.mmPartialRedemptionWithPoolFactorReduction, com.tools20022.repository.codeset.CorporateActionEventType23Code.mmPayInKind,
-						com.tools20022.repository.codeset.CorporateActionEventType23Code.mmPlaceOfIncorporation, com.tools20022.repository.codeset.CorporateActionEventType23Code.mmPrefunding,
-						com.tools20022.repository.codeset.CorporateActionEventType23Code.mmPriorityIssue, com.tools20022.repository.codeset.CorporateActionEventType23Code.mmPutRedemption,
-						com.tools20022.repository.codeset.CorporateActionEventType23Code.mmRedenomination, com.tools20022.repository.codeset.CorporateActionEventType23Code.mmRemarketingAgreement,
-						com.tools20022.repository.codeset.CorporateActionEventType23Code.mmRepurchaseOffer, com.tools20022.repository.codeset.CorporateActionEventType23Code.mmReverseStockSplit,
-						com.tools20022.repository.codeset.CorporateActionEventType23Code.mmRightsIssue, com.tools20022.repository.codeset.CorporateActionEventType23Code.mmScripDividend,
-						com.tools20022.repository.codeset.CorporateActionEventType23Code.mmSharesPremiumDividend, com.tools20022.repository.codeset.CorporateActionEventType23Code.mmSmallestNegotiableUnit,
-						com.tools20022.repository.codeset.CorporateActionEventType23Code.mmSpinOff, com.tools20022.repository.codeset.CorporateActionEventType23Code.mmStockDividend,
-						com.tools20022.repository.codeset.CorporateActionEventType23Code.mmStockSplit, com.tools20022.repository.codeset.CorporateActionEventType23Code.mmTaxReclaim,
-						com.tools20022.repository.codeset.CorporateActionEventType23Code.mmTender, com.tools20022.repository.codeset.CorporateActionEventType23Code.mmTradingStatusDelisted,
-						com.tools20022.repository.codeset.CorporateActionEventType23Code.mmTradingStatusSuspended, com.tools20022.repository.codeset.CorporateActionEventType23Code.mmWarrantExercise,
-						com.tools20022.repository.codeset.CorporateActionEventType23Code.mmWithholdingTaxReliefCertification, com.tools20022.repository.codeset.CorporateActionEventType23Code.mmWorthless,
-						com.tools20022.repository.codeset.CorporateActionEventType23Code.mmAccumulation);
+				code_lazy = () -> Arrays.asList(CorporateActionEventType23Code.mmActiveTradingStatus, CorporateActionEventType23Code.mmAttachment, CorporateActionEventType23Code.mmBankruptcy, CorporateActionEventType23Code.mmBondDefault,
+						CorporateActionEventType23Code.mmBonusIssue, CorporateActionEventType23Code.mmCallOnIntermediateSecurities, CorporateActionEventType23Code.mmCapitalDistribution,
+						CorporateActionEventType23Code.mmCapitalGainsDistribution, CorporateActionEventType23Code.mmCapitalisation, CorporateActionEventType23Code.mmCashDistributionFromNonEligibleSecuritiesSales,
+						CorporateActionEventType23Code.mmCashDividend, CorporateActionEventType23Code.mmChange, CorporateActionEventType23Code.mmCompanyOption, CorporateActionEventType23Code.mmClassActionProposedSettlement,
+						CorporateActionEventType23Code.mmConsent, CorporateActionEventType23Code.mmConversion, CorporateActionEventType23Code.mmCreditEvent, CorporateActionEventType23Code.mmDecreaseInValue,
+						CorporateActionEventType23Code.mmDetachment, CorporateActionEventType23Code.mmDisclosure, CorporateActionEventType23Code.mmDividendOption, CorporateActionEventType23Code.mmDividendReinvestment,
+						CorporateActionEventType23Code.mmDrawing, CorporateActionEventType23Code.mmDutchAuction, CorporateActionEventType23Code.mmExchange, CorporateActionEventType23Code.mmFinalMaturity,
+						CorporateActionEventType23Code.mmFullCall, CorporateActionEventType23Code.mmIncreaseInValue, CorporateActionEventType23Code.mmInstalmentCall, CorporateActionEventType23Code.mmInterestPayment,
+						CorporateActionEventType23Code.mmInterestPaymentWithPrincipal, CorporateActionEventType23Code.mmIntermediateSecuritiesDistribution, CorporateActionEventType23Code.mmLiquidationDividend,
+						CorporateActionEventType23Code.mmMaturityExtension, CorporateActionEventType23Code.mmMerger, CorporateActionEventType23Code.mmNonOfficialOffer, CorporateActionEventType23Code.mmNonUSTEFRADCertification,
+						CorporateActionEventType23Code.mmOddLotSalePurchase, CorporateActionEventType23Code.mmOtherEvent, CorporateActionEventType23Code.mmPariPassu,
+						CorporateActionEventType23Code.mmPartialRedemptionWithoutPoolFactorReduction, CorporateActionEventType23Code.mmPartialRedemptionWithPoolFactorReduction, CorporateActionEventType23Code.mmPayInKind,
+						CorporateActionEventType23Code.mmPlaceOfIncorporation, CorporateActionEventType23Code.mmPrefunding, CorporateActionEventType23Code.mmPriorityIssue, CorporateActionEventType23Code.mmPutRedemption,
+						CorporateActionEventType23Code.mmRedenomination, CorporateActionEventType23Code.mmRemarketingAgreement, CorporateActionEventType23Code.mmRepurchaseOffer, CorporateActionEventType23Code.mmReverseStockSplit,
+						CorporateActionEventType23Code.mmRightsIssue, CorporateActionEventType23Code.mmScripDividend, CorporateActionEventType23Code.mmSharesPremiumDividend, CorporateActionEventType23Code.mmSmallestNegotiableUnit,
+						CorporateActionEventType23Code.mmSpinOff, CorporateActionEventType23Code.mmStockDividend, CorporateActionEventType23Code.mmStockSplit, CorporateActionEventType23Code.mmTaxReclaim,
+						CorporateActionEventType23Code.mmTender, CorporateActionEventType23Code.mmTradingStatusDelisted, CorporateActionEventType23Code.mmTradingStatusSuspended, CorporateActionEventType23Code.mmWarrantExercise,
+						CorporateActionEventType23Code.mmWithholdingTaxReliefCertification, CorporateActionEventType23Code.mmWorthless, CorporateActionEventType23Code.mmAccumulation);
 				trace_lazy = () -> CorporateActionEventTypeV6Code.mmObject();
 			}
 		});

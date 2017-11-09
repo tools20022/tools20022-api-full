@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.AdditionalBusinessProcessCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -116,9 +118,9 @@ public class AdditionalBusinessProcess1Code extends AdditionalBusinessProcessCod
 	 */
 	public static final MMCode mmAutomaticMarketClaim = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AutomaticMarketClaim";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AdditionalBusinessProcess5Code.mmAutomaticMarketClaim);
+			nextVersions_lazy = () -> Arrays.asList(AdditionalBusinessProcess5Code.mmAutomaticMarketClaim);
 			owner_lazy = () -> AdditionalBusinessProcess1Code.mmObject();
 		}
 	};
@@ -148,9 +150,9 @@ public class AdditionalBusinessProcess1Code extends AdditionalBusinessProcessCod
 	 */
 	public static final MMCode mmSubjectToTransformation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubjectToTransformation";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AdditionalBusinessProcess5Code.mmSubjectToTransformation);
+			nextVersions_lazy = () -> Arrays.asList(AdditionalBusinessProcess5Code.mmSubjectToTransformation);
 			owner_lazy = () -> AdditionalBusinessProcess1Code.mmObject();
 		}
 	};
@@ -180,9 +182,9 @@ public class AdditionalBusinessProcess1Code extends AdditionalBusinessProcessCod
 	 */
 	public static final MMCode mmCancelUnderlyingTrades = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancelUnderlyingTrades";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AdditionalBusinessProcess5Code.mmCancelUnderlyingTrades);
+			nextVersions_lazy = () -> Arrays.asList(AdditionalBusinessProcess5Code.mmCancelUnderlyingTrades);
 			owner_lazy = () -> AdditionalBusinessProcess1Code.mmObject();
 		}
 	};
@@ -213,9 +215,9 @@ public class AdditionalBusinessProcess1Code extends AdditionalBusinessProcessCod
 	 */
 	public static final MMCode mmNoAutomaticMarketClaimsAndTransformations = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoAutomaticMarketClaimsAndTransformations";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AdditionalBusinessProcess5Code.mmNoAutomaticMarketClaimsAndTransformations);
+			nextVersions_lazy = () -> Arrays.asList(AdditionalBusinessProcess5Code.mmNoAutomaticMarketClaimsAndTransformations);
 			owner_lazy = () -> AdditionalBusinessProcess1Code.mmObject();
 		}
 	};
@@ -245,9 +247,9 @@ public class AdditionalBusinessProcess1Code extends AdditionalBusinessProcessCod
 	 */
 	public static final MMCode mmNoSplitElection = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoSplitElection";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AdditionalBusinessProcess5Code.mmNoSplitElection);
+			nextVersions_lazy = () -> Arrays.asList(AdditionalBusinessProcess5Code.mmNoSplitElection);
 			owner_lazy = () -> AdditionalBusinessProcess1Code.mmObject();
 		}
 	};
@@ -277,9 +279,9 @@ public class AdditionalBusinessProcess1Code extends AdditionalBusinessProcessCod
 	 */
 	public static final MMCode mmSchemeOrPlanOfArrangement = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SchemeOrPlanOfArrangement";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AdditionalBusinessProcess5Code.mmSchemeOrPlanOfArrangement);
+			nextVersions_lazy = () -> Arrays.asList(AdditionalBusinessProcess5Code.mmSchemeOrPlanOfArrangement);
 			owner_lazy = () -> AdditionalBusinessProcess1Code.mmObject();
 		}
 	};
@@ -309,9 +311,9 @@ public class AdditionalBusinessProcess1Code extends AdditionalBusinessProcessCod
 	 */
 	public static final MMCode mmConsent = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Consent";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AdditionalBusinessProcess5Code.mmConsent);
+			nextVersions_lazy = () -> Arrays.asList(AdditionalBusinessProcess5Code.mmConsent);
 			owner_lazy = () -> AdditionalBusinessProcess1Code.mmObject();
 		}
 	};
@@ -319,16 +321,15 @@ public class AdditionalBusinessProcess1Code extends AdditionalBusinessProcessCod
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ACLA");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AdditionalBusinessProcess1Code";
 				definition = "Specifies the additional business process linked to a corporate action event.";
 				nextVersions_lazy = () -> Arrays.asList(AdditionalBusinessProcess5Code.mmObject());
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AdditionalBusinessProcess1Code.mmAutomaticMarketClaim, com.tools20022.repository.codeset.AdditionalBusinessProcess1Code.mmSubjectToTransformation,
-						com.tools20022.repository.codeset.AdditionalBusinessProcess1Code.mmCancelUnderlyingTrades, com.tools20022.repository.codeset.AdditionalBusinessProcess1Code.mmNoAutomaticMarketClaimsAndTransformations,
-						com.tools20022.repository.codeset.AdditionalBusinessProcess1Code.mmNoSplitElection, com.tools20022.repository.codeset.AdditionalBusinessProcess1Code.mmSchemeOrPlanOfArrangement,
-						com.tools20022.repository.codeset.AdditionalBusinessProcess1Code.mmConsent);
+				code_lazy = () -> Arrays.asList(AdditionalBusinessProcess1Code.mmAutomaticMarketClaim, AdditionalBusinessProcess1Code.mmSubjectToTransformation, AdditionalBusinessProcess1Code.mmCancelUnderlyingTrades,
+						AdditionalBusinessProcess1Code.mmNoAutomaticMarketClaimsAndTransformations, AdditionalBusinessProcess1Code.mmNoSplitElection, AdditionalBusinessProcess1Code.mmSchemeOrPlanOfArrangement,
+						AdditionalBusinessProcess1Code.mmConsent);
 				trace_lazy = () -> AdditionalBusinessProcessCode.mmObject();
 			}
 		});

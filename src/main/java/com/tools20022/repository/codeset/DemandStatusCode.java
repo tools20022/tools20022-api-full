@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.DemandStatus1Code
+ * DemandStatus1Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.DemandStatus2Code
+ * DemandStatus2Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>{@linkplain com.tools20022.repository.codeset.DemandStatusCode#mmRefused
@@ -35,15 +46,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * DemandStatusCode.mmExtend}</li>
  * <li>{@linkplain com.tools20022.repository.codeset.DemandStatusCode#mmPAY
  * DemandStatusCode.mmPAY}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.DemandStatus1Code
- * DemandStatus1Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.DemandStatus2Code
- * DemandStatus2Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -93,7 +95,7 @@ public class DemandStatusCode {
 	 */
 	public static final MMCode mmRefused = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Refused";
 			definition = "Demand refused.";
 			owner_lazy = () -> DemandStatusCode.mmObject();
@@ -123,7 +125,7 @@ public class DemandStatusCode {
 	 */
 	public static final MMCode mmExtend = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Extend";
 			definition = "Extend undertaking expiry date. ";
 			owner_lazy = () -> DemandStatusCode.mmObject();
@@ -153,7 +155,7 @@ public class DemandStatusCode {
 	 */
 	public static final MMCode mmPAY = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PAY";
 			definition = "Pay undertaking demand.";
 			owner_lazy = () -> DemandStatusCode.mmObject();
@@ -164,12 +166,12 @@ public class DemandStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("REFD");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DemandStatusCode";
 				definition = "Specifies the status of the demand for payment.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DemandStatusCode.mmRefused, com.tools20022.repository.codeset.DemandStatusCode.mmExtend, com.tools20022.repository.codeset.DemandStatusCode.mmPAY);
+				code_lazy = () -> Arrays.asList(DemandStatusCode.mmRefused, DemandStatusCode.mmExtend, DemandStatusCode.mmPAY);
 				derivation_lazy = () -> Arrays.asList(DemandStatus1Code.mmObject(), DemandStatus2Code.mmObject());
 			}
 		});

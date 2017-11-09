@@ -20,10 +20,13 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.AuthenticationChannel1Choice;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.Max16Text;
 import com.tools20022.repository.entity.Authentication;
+import com.tools20022.repository.entity.ObligationFulfilment;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -107,11 +110,11 @@ public class MandateAuthentication1 {
 	 */
 	public static final MMMessageAttribute mmMessageAuthenticationCode = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Authentication.mmAuthenticationEntity;
+			businessElementTrace_lazy = () -> Authentication.mmAuthenticationEntity;
 			componentContext_lazy = () -> MandateAuthentication1.mmObject();
 			isDerived = false;
 			xmlTag = "MsgAuthntcnCd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageAuthenticationCode";
 			definition = "Specifies a piece of information used to authenticate a message, that is  to confirm that the message came from the stated sender (its authenticity) and has not been changed in transit (its integrity).";
 			maxOccurs = 1;
@@ -154,11 +157,11 @@ public class MandateAuthentication1 {
 	 */
 	public static final MMMessageAttribute mmDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ObligationFulfilment.mmDate;
+			businessElementTrace_lazy = () -> ObligationFulfilment.mmDate;
 			componentContext_lazy = () -> MandateAuthentication1.mmObject();
 			isDerived = false;
 			xmlTag = "Dt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Date";
 			definition = "Date when the authentication was conducted.";
 			maxOccurs = 1;
@@ -201,11 +204,11 @@ public class MandateAuthentication1 {
 	 */
 	public static final MMMessageAssociationEnd mmChannel = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Authentication.mmAuthenticationMethod;
+			businessElementTrace_lazy = () -> Authentication.mmAuthenticationMethod;
 			componentContext_lazy = () -> MandateAuthentication1.mmObject();
 			isDerived = false;
 			xmlTag = "Chanl";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Channel";
 			definition = "Channel used to transmit the authentication information.";
 			maxOccurs = 1;
@@ -218,11 +221,10 @@ public class MandateAuthentication1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MandateAuthentication1.mmMessageAuthenticationCode, com.tools20022.repository.msg.MandateAuthentication1.mmDate,
-						com.tools20022.repository.msg.MandateAuthentication1.mmChannel);
+				messageElement_lazy = () -> Arrays.asList(MandateAuthentication1.mmMessageAuthenticationCode, MandateAuthentication1.mmDate, MandateAuthentication1.mmChannel);
 				trace_lazy = () -> Authentication.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MandateAuthentication1";
 				definition = "Specifies the transport authentication details related to the mandate.";
 			}

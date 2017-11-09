@@ -20,6 +20,7 @@ package com.tools20022.repository.area.caaa;
 import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.AcceptortoAcquirerCardTransactionArchive;
 import com.tools20022.repository.msg.AcceptorDiagnosticResponse1;
 import com.tools20022.repository.msg.ContentInformationType3;
@@ -41,6 +42,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code caaa.014.001.01}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.AcceptortoAcquirerCardTransactionArchive
@@ -70,9 +74,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * AcceptorDiagnosticResponseV01.mmSecurityTrailer}</li>
  * </ul>
  * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code caaa.014.001.01}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -122,7 +123,7 @@ public class AcceptorDiagnosticResponseV01 {
 	public static final MMMessageBuildingBlock mmHeader = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Hdr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Header";
 			definition = "Diagnostic response message management information.";
 			maxOccurs = 1;
@@ -157,7 +158,7 @@ public class AcceptorDiagnosticResponseV01 {
 	public static final MMMessageBuildingBlock mmDiagnosticResponse = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "DgnstcRspn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DiagnosticResponse";
 			definition = "Information related to the diagnostic response.";
 			maxOccurs = 1;
@@ -192,7 +193,7 @@ public class AcceptorDiagnosticResponseV01 {
 	public static final MMMessageBuildingBlock mmSecurityTrailer = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SctyTrlr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityTrailer";
 			definition = "Trailer of the message containing a MAC.";
 			maxOccurs = 1;
@@ -204,7 +205,7 @@ public class AcceptorDiagnosticResponseV01 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AcceptorDiagnosticResponseV01";
 				definition = "Scope\r\nThe AcceptorDiagnosticResponse message is sent by the acquirer to the card acceptor to confirm the availability of the acquirer. An agent never forwards the message.\r\nUsage\r\nThe AcceptorDiagnosticResponse message is used to:\r\n- confirm the availability of the acquirer;\r\n- validate the security of the exchanges with the acquirer;\r\n- validate the version of the configuration parameters.";
 				nextVersions_lazy = () -> Arrays.asList(AcceptorDiagnosticResponseV02.mmObject());
@@ -212,8 +213,7 @@ public class AcceptorDiagnosticResponseV01 {
 				rootElement = "Document";
 				xmlTag = "AccptrDgnstcRspn";
 				businessArea_lazy = () -> AcceptortoAcquirerCardTransactionArchive.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.caaa.AcceptorDiagnosticResponseV01.mmHeader, com.tools20022.repository.area.caaa.AcceptorDiagnosticResponseV01.mmDiagnosticResponse,
-						com.tools20022.repository.area.caaa.AcceptorDiagnosticResponseV01.mmSecurityTrailer);
+				messageBuildingBlock_lazy = () -> Arrays.asList(AcceptorDiagnosticResponseV01.mmHeader, AcceptorDiagnosticResponseV01.mmDiagnosticResponse, AcceptorDiagnosticResponseV01.mmSecurityTrailer);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "caaa";

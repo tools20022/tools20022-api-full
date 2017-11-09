@@ -20,6 +20,7 @@ package com.tools20022.repository.area.admi;
 import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.AdministrationLatestVersion;
 import com.tools20022.repository.datatype.Exact4AlphaNumericText;
 import com.tools20022.repository.datatype.Max35Text;
@@ -38,6 +39,9 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code admi.011.001.01}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.AdministrationLatestVersion
@@ -78,9 +82,6 @@ import java.util.List;
  * SystemEventAcknowledgementV01.mmSupplementaryData}</li>
  * </ul>
  * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code admi.011.001.01}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -125,7 +126,7 @@ public class SystemEventAcknowledgementV01 {
 	public static final MMMessageBuildingBlock mmMessageIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "MsgId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageIdentification";
 			definition = "Unique and unambiguous identifier for the message, as assigned by the sender.";
 			maxOccurs = 1;
@@ -162,7 +163,7 @@ public class SystemEventAcknowledgementV01 {
 	public static final MMMessageBuildingBlock mmOriginatorReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "OrgtrRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginatorReference";
 			definition = "Represents the original reference of the system event notification for which the acknowledgement is given, as assigned by the central system.";
 			maxOccurs = 1;
@@ -200,7 +201,7 @@ public class SystemEventAcknowledgementV01 {
 	public static final MMMessageBuildingBlock mmSettlementSessionIdentifier = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SttlmSsnIdr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementSessionIdentifier";
 			definition = "To indicate the requested CLS Settlement Session that the related trade is part of.";
 			maxOccurs = 1;
@@ -233,7 +234,7 @@ public class SystemEventAcknowledgementV01 {
 	public static final MMMessageBuildingBlock mmAcknowledgementDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "AckDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcknowledgementDetails";
 			definition = "Details of the system event being acknowledged.";
 			maxOccurs = 1;
@@ -271,7 +272,7 @@ public class SystemEventAcknowledgementV01 {
 	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SplmtryData";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryData";
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
 			minOccurs = 0;
@@ -282,16 +283,15 @@ public class SystemEventAcknowledgementV01 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SystemEventAcknowledgementV01";
 				definition = "The SystemEventAcknowledgement message is sent by a participant of a central system to the central system to acknowledge the notification of an occurrence of an event in a central system.\r\n";
 				messageSet_lazy = () -> Arrays.asList(PostTradeForeignExchangeISOLatestversion.mmObject(), PostTradeForeignExchangeMaintenance20162017andSupplement.mmObject());
 				rootElement = "Document";
 				xmlTag = "SysEvtAck";
 				businessArea_lazy = () -> AdministrationLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.admi.SystemEventAcknowledgementV01.mmMessageIdentification,
-						com.tools20022.repository.area.admi.SystemEventAcknowledgementV01.mmOriginatorReference, com.tools20022.repository.area.admi.SystemEventAcknowledgementV01.mmSettlementSessionIdentifier,
-						com.tools20022.repository.area.admi.SystemEventAcknowledgementV01.mmAcknowledgementDetails, com.tools20022.repository.area.admi.SystemEventAcknowledgementV01.mmSupplementaryData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(SystemEventAcknowledgementV01.mmMessageIdentification, SystemEventAcknowledgementV01.mmOriginatorReference, SystemEventAcknowledgementV01.mmSettlementSessionIdentifier,
+						SystemEventAcknowledgementV01.mmAcknowledgementDetails, SystemEventAcknowledgementV01.mmSupplementaryData);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "admi";

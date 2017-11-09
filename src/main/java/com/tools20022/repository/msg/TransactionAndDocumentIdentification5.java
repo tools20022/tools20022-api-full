@@ -20,10 +20,12 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.DateAndDateTimeChoice;
 import com.tools20022.repository.choice.PartyIdentification71Choice;
 import com.tools20022.repository.codeset.CopyDuplicate1Code;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -110,7 +112,7 @@ public class TransactionAndDocumentIdentification5 {
 			componentContext_lazy = () -> TransactionAndDocumentIdentification5.mmObject();
 			isDerived = false;
 			xmlTag = "TxId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionIdentification";
 			definition = "Unambiguous identification of the transaction as known by the instructing party.";
 			maxOccurs = 1;
@@ -154,7 +156,7 @@ public class TransactionAndDocumentIdentification5 {
 			componentContext_lazy = () -> TransactionAndDocumentIdentification5.mmObject();
 			isDerived = false;
 			xmlTag = "DocId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DocumentIdentification";
 			definition = "Unique identifier of the document (message) assigned by the sender of the document.";
 			maxOccurs = 1;
@@ -199,7 +201,7 @@ public class TransactionAndDocumentIdentification5 {
 			componentContext_lazy = () -> TransactionAndDocumentIdentification5.mmObject();
 			isDerived = false;
 			xmlTag = "CreDtTm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreationDateTime";
 			definition = "Date and time at which the transaction was created by the instructing party in its business application.";
 			maxOccurs = 1;
@@ -244,7 +246,7 @@ public class TransactionAndDocumentIdentification5 {
 			componentContext_lazy = () -> TransactionAndDocumentIdentification5.mmObject();
 			isDerived = false;
 			xmlTag = "CpyDplct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CopyDuplicate";
 			definition = "Specifies if this document is a copy, a duplicate, or a duplicate of a copy.";
 			maxOccurs = 1;
@@ -286,7 +288,7 @@ public class TransactionAndDocumentIdentification5 {
 			componentContext_lazy = () -> TransactionAndDocumentIdentification5.mmObject();
 			isDerived = false;
 			xmlTag = "MsgOrgtr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageOriginator";
 			definition = "Party that originated the message, if other than the sender.";
 			maxOccurs = 1;
@@ -331,7 +333,7 @@ public class TransactionAndDocumentIdentification5 {
 			componentContext_lazy = () -> TransactionAndDocumentIdentification5.mmObject();
 			isDerived = false;
 			xmlTag = "MsgRcpt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageRecipient";
 			definition = "Party that is the final destination of the message, if other than the receiver.";
 			maxOccurs = 1;
@@ -344,12 +346,11 @@ public class TransactionAndDocumentIdentification5 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionAndDocumentIdentification5.mmTransactionIdentification,
-						com.tools20022.repository.msg.TransactionAndDocumentIdentification5.mmDocumentIdentification, com.tools20022.repository.msg.TransactionAndDocumentIdentification5.mmCreationDateTime,
-						com.tools20022.repository.msg.TransactionAndDocumentIdentification5.mmCopyDuplicate, com.tools20022.repository.msg.TransactionAndDocumentIdentification5.mmMessageOriginator,
-						com.tools20022.repository.msg.TransactionAndDocumentIdentification5.mmMessageRecipient);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(TransactionAndDocumentIdentification5.mmTransactionIdentification, TransactionAndDocumentIdentification5.mmDocumentIdentification,
+						TransactionAndDocumentIdentification5.mmCreationDateTime, TransactionAndDocumentIdentification5.mmCopyDuplicate, TransactionAndDocumentIdentification5.mmMessageOriginator,
+						TransactionAndDocumentIdentification5.mmMessageRecipient);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "TransactionAndDocumentIdentification5";
 				definition = "Transaction and document identification details.";
 			}

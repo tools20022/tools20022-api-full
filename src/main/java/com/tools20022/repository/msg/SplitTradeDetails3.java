@@ -19,8 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.fxtr.ForeignExchangeTradeStatusAndDetailsNotificationV04;
 import com.tools20022.repository.entity.ForeignExchangeTrade;
 import com.tools20022.repository.entity.TreasuryTrade;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -112,11 +115,11 @@ public class SplitTradeDetails3 {
 	 */
 	public static final MMMessageAssociationEnd mmStatusDetails = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TreasuryTrade.mmTreasuryTradeSettlementStatus;
+			businessElementTrace_lazy = () -> TreasuryTrade.mmTreasuryTradeSettlementStatus;
 			componentContext_lazy = () -> SplitTradeDetails3.mmObject();
 			isDerived = false;
 			xmlTag = "StsDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusDetails";
 			definition = "Provides information on the status of a foreign exchange trade in the system.";
 			maxOccurs = 1;
@@ -163,7 +166,7 @@ public class SplitTradeDetails3 {
 			componentContext_lazy = () -> SplitTradeDetails3.mmObject();
 			isDerived = false;
 			xmlTag = "TradAmts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeAmounts";
 			definition = "Amounts of the foreign exchange trade.";
 			maxOccurs = 1;
@@ -206,11 +209,11 @@ public class SplitTradeDetails3 {
 	 */
 	public static final MMMessageAssociationEnd mmAgreedRate = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ForeignExchangeTrade.mmAgreedRate;
+			businessElementTrace_lazy = () -> ForeignExchangeTrade.mmAgreedRate;
 			componentContext_lazy = () -> SplitTradeDetails3.mmObject();
 			isDerived = false;
 			xmlTag = "AgrdRate";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AgreedRate";
 			definition = "Exchange rate as agreed by the traders.";
 			maxOccurs = 1;
@@ -223,12 +226,11 @@ public class SplitTradeDetails3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SplitTradeDetails3.mmStatusDetails, com.tools20022.repository.msg.SplitTradeDetails3.mmTradeAmounts,
-						com.tools20022.repository.msg.SplitTradeDetails3.mmAgreedRate);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.fxtr.ForeignExchangeTradeStatusAndDetailsNotificationV04.mmSplitTradeInformation);
+				messageElement_lazy = () -> Arrays.asList(SplitTradeDetails3.mmStatusDetails, SplitTradeDetails3.mmTradeAmounts, SplitTradeDetails3.mmAgreedRate);
+				messageBuildingBlock_lazy = () -> Arrays.asList(ForeignExchangeTradeStatusAndDetailsNotificationV04.mmSplitTradeInformation);
 				trace_lazy = () -> TreasuryTrade.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SplitTradeDetails3";
 				definition = "Information describing the high level details of a split trade.";
 			}

@@ -19,6 +19,8 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.SecurityAttributes2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -90,7 +92,7 @@ public class UpdateType8Choice {
 			componentContext_lazy = () -> UpdateType8Choice.mmObject();
 			isDerived = false;
 			xmlTag = "UpdTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UpdateType";
 			definition = "Request to add, modify or delete datas of a security.";
 			maxOccurs = 3;
@@ -131,7 +133,7 @@ public class UpdateType8Choice {
 			componentContext_lazy = () -> UpdateType8Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Rplc";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Replace";
 			definition = "Request to replace all present data of a security.";
 			maxOccurs = 1;
@@ -144,9 +146,9 @@ public class UpdateType8Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.UpdateType8Choice.mmUpdateType, com.tools20022.repository.choice.UpdateType8Choice.mmReplace);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(UpdateType8Choice.mmUpdateType, UpdateType8Choice.mmReplace);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "UpdateType8Choice";
 				definition = "Choice between action to request on a security.";
 			}

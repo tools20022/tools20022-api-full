@@ -20,10 +20,12 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.tsrv.UndertakingAmendmentRequestV01;
 import com.tools20022.repository.datatype.Max2000Text;
 import com.tools20022.repository.datatype.Max35Text;
-import com.tools20022.repository.entity.AmendmentOfUndertaking;
-import com.tools20022.repository.entity.UndertakingBeneficiary;
+import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -135,7 +137,7 @@ public class Amendment3 {
 			componentContext_lazy = () -> Amendment3.mmObject();
 			isDerived = false;
 			xmlTag = "ApplcntReqNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ApplicantRequestNumber";
 			definition = "Unique and unambiguous identifier assigned by the applicant to the undertaking amendment request.";
 			maxOccurs = 1;
@@ -176,11 +178,11 @@ public class Amendment3 {
 	 */
 	public static final MMMessageAssociationEnd mmUndertakingIdentification = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AmendmentOfUndertaking.mmUndertaking;
+			businessElementTrace_lazy = () -> AmendmentOfUndertaking.mmUndertaking;
 			componentContext_lazy = () -> Amendment3.mmObject();
 			isDerived = false;
 			xmlTag = "UdrtkgId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UndertakingIdentification";
 			definition = "Identification of the undertaking.";
 			maxOccurs = 1;
@@ -222,11 +224,11 @@ public class Amendment3 {
 	 */
 	public static final MMMessageAssociationEnd mmApplicant = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> Amendment3.mmObject();
 			isDerived = false;
 			xmlTag = "Applcnt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Applicant";
 			definition = "Party requesting the issuance of the amendment.";
 			maxOccurs = 1;
@@ -270,11 +272,11 @@ public class Amendment3 {
 	 */
 	public static final MMMessageAssociationEnd mmTerminationDetails = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Undertaking.mmUndertakingStatus;
+			businessElementTrace_lazy = () -> Undertaking.mmUndertakingStatus;
 			componentContext_lazy = () -> Amendment3.mmObject();
 			isDerived = false;
 			xmlTag = "TermntnDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TerminationDetails";
 			definition = "Details concerning the requested termination of the undertaking.";
 			maxOccurs = 1;
@@ -319,11 +321,11 @@ public class Amendment3 {
 	 */
 	public static final MMMessageAssociationEnd mmIncreaseDecreaseAmount = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Undertaking.mmUndertakingAmount;
+			businessElementTrace_lazy = () -> Undertaking.mmUndertakingAmount;
 			componentContext_lazy = () -> Amendment3.mmObject();
 			isDerived = false;
 			xmlTag = "IncrDcrAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncreaseDecreaseAmount";
 			definition = "Indication of the amount of increase or decrease to the undertaking amount.";
 			maxOccurs = 1;
@@ -365,11 +367,11 @@ public class Amendment3 {
 	 */
 	public static final MMMessageAssociationEnd mmNewExpiryDetails = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Undertaking.mmExpiry;
+			businessElementTrace_lazy = () -> Undertaking.mmExpiry;
 			componentContext_lazy = () -> Amendment3.mmObject();
 			isDerived = false;
 			xmlTag = "NewXpryDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewExpiryDetails";
 			definition = "Requested new expiry terms for the undertaking.";
 			maxOccurs = 1;
@@ -415,7 +417,7 @@ public class Amendment3 {
 			componentContext_lazy = () -> Amendment3.mmObject();
 			isDerived = false;
 			xmlTag = "NewBnfcry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewBeneficiary";
 			definition = "Requested new beneficiary of the undertaking.";
 			maxOccurs = 1;
@@ -454,7 +456,7 @@ public class Amendment3 {
 			componentContext_lazy = () -> Amendment3.mmObject();
 			isDerived = false;
 			xmlTag = "NewUdrtkgTermsAndConds";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewUndertakingTermsAndConditions";
 			definition = "Requested new terms and conditions of the undertaking.";
 			minOccurs = 0;
@@ -496,11 +498,11 @@ public class Amendment3 {
 	 */
 	public static final MMMessageAttribute mmCounterUndertaking = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AmendmentOfUndertaking.mmUndertaking;
+			businessElementTrace_lazy = () -> AmendmentOfUndertaking.mmUndertaking;
 			componentContext_lazy = () -> Amendment3.mmObject();
 			isDerived = false;
 			xmlTag = "CntrUdrtkg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CounterUndertaking";
 			definition = "Amendment details related to the counter-undertaking.";
 			maxOccurs = 1;
@@ -541,11 +543,11 @@ public class Amendment3 {
 	 */
 	public static final MMMessageAssociationEnd mmDeliveryChannel = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Presentation.mmCommunicationMethod;
+			businessElementTrace_lazy = () -> Presentation.mmCommunicationMethod;
 			componentContext_lazy = () -> Amendment3.mmObject();
 			isDerived = false;
 			xmlTag = "DlvryChanl";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeliveryChannel";
 			definition = "Communication channel for delivery of the amendment.";
 			maxOccurs = 1;
@@ -586,11 +588,11 @@ public class Amendment3 {
 	 */
 	public static final MMMessageAssociationEnd mmEnclosedFile = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Undertaking.mmSpecifiedDocument;
+			businessElementTrace_lazy = () -> Undertaking.mmSpecifiedDocument;
 			componentContext_lazy = () -> Amendment3.mmObject();
 			isDerived = false;
 			xmlTag = "NclsdFile";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EnclosedFile";
 			definition = "Document or template enclosed in the request.";
 			minOccurs = 0;
@@ -630,7 +632,7 @@ public class Amendment3 {
 			componentContext_lazy = () -> Amendment3.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInformation";
 			definition = "Additional information related to the request.";
 			maxOccurs = 5;
@@ -642,15 +644,13 @@ public class Amendment3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Amendment3.mmApplicantRequestNumber, com.tools20022.repository.msg.Amendment3.mmUndertakingIdentification,
-						com.tools20022.repository.msg.Amendment3.mmApplicant, com.tools20022.repository.msg.Amendment3.mmTerminationDetails, com.tools20022.repository.msg.Amendment3.mmIncreaseDecreaseAmount,
-						com.tools20022.repository.msg.Amendment3.mmNewExpiryDetails, com.tools20022.repository.msg.Amendment3.mmNewBeneficiary, com.tools20022.repository.msg.Amendment3.mmNewUndertakingTermsAndConditions,
-						com.tools20022.repository.msg.Amendment3.mmCounterUndertaking, com.tools20022.repository.msg.Amendment3.mmDeliveryChannel, com.tools20022.repository.msg.Amendment3.mmEnclosedFile,
-						com.tools20022.repository.msg.Amendment3.mmAdditionalInformation);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsrv.UndertakingAmendmentRequestV01.mmUndertakingAmendmentRequestDetails);
+				messageElement_lazy = () -> Arrays.asList(Amendment3.mmApplicantRequestNumber, Amendment3.mmUndertakingIdentification, Amendment3.mmApplicant, Amendment3.mmTerminationDetails, Amendment3.mmIncreaseDecreaseAmount,
+						Amendment3.mmNewExpiryDetails, Amendment3.mmNewBeneficiary, Amendment3.mmNewUndertakingTermsAndConditions, Amendment3.mmCounterUndertaking, Amendment3.mmDeliveryChannel, Amendment3.mmEnclosedFile,
+						Amendment3.mmAdditionalInformation);
+				messageBuildingBlock_lazy = () -> Arrays.asList(UndertakingAmendmentRequestV01.mmUndertakingAmendmentRequestDetails);
 				trace_lazy = () -> AmendmentOfUndertaking.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Amendment3";
 				definition = "Details of the amendent request.";
 			}

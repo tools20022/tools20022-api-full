@@ -20,9 +20,11 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.PendingOpeningStatusReason2Choice;
 import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.entity.StatusReason;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -108,14 +110,14 @@ public class PendingOpeningStatusReason1 {
 	 */
 	public static final MMMessageAssociationEnd mmCode = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmPendingReason;
+			businessElementTrace_lazy = () -> StatusReason.mmPendingReason;
 			componentContext_lazy = () -> PendingOpeningStatusReason1.mmObject();
 			isDerived = false;
 			xmlTag = "Cd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Reason for the pending account opening status.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PendingStatusReason14.mmCode;
+			previousVersion_lazy = () -> PendingStatusReason14.mmCode;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -163,10 +165,10 @@ public class PendingOpeningStatusReason1 {
 			componentContext_lazy = () -> PendingOpeningStatusReason1.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInformation";
 			definition = "Additional information about the reason for the pending account opening status.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PendingStatusReason14.mmAdditionalInformation;
+			previousVersion_lazy = () -> PendingStatusReason14.mmAdditionalInformation;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
@@ -176,10 +178,10 @@ public class PendingOpeningStatusReason1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PendingOpeningStatusReason1.mmCode, com.tools20022.repository.msg.PendingOpeningStatusReason1.mmAdditionalInformation);
+				messageElement_lazy = () -> Arrays.asList(PendingOpeningStatusReason1.mmCode, PendingOpeningStatusReason1.mmAdditionalInformation);
 				trace_lazy = () -> StatusReason.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PendingOpeningStatusReason1";
 				definition = "Reason for a pending account opening status.";
 				previousVersion_lazy = () -> PendingStatusReason14.mmObject();

@@ -20,9 +20,11 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.ProformaStatusReason2Choice;
 import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.entity.StatusReason;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -124,11 +126,11 @@ public class ProformaStatusReason1 {
 			componentContext_lazy = () -> ProformaStatusReason1.mmObject();
 			isDerived = false;
 			xmlTag = "Cd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Reason for the proforma account status.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ClosedStatusReason1.mmCode);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.EnabledStatusReason1.mmCode;
+			nextVersions_lazy = () -> Arrays.asList(ClosedStatusReason1.mmCode);
+			previousVersion_lazy = () -> EnabledStatusReason1.mmCode;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -183,11 +185,11 @@ public class ProformaStatusReason1 {
 			componentContext_lazy = () -> ProformaStatusReason1.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInformation";
 			definition = "Additional information about the reason for the proforma account status.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ClosedStatusReason1.mmAdditionalInformation);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.EnabledStatusReason1.mmAdditionalInformation;
+			nextVersions_lazy = () -> Arrays.asList(ClosedStatusReason1.mmAdditionalInformation);
+			previousVersion_lazy = () -> EnabledStatusReason1.mmAdditionalInformation;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
@@ -197,10 +199,10 @@ public class ProformaStatusReason1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ProformaStatusReason1.mmCode, com.tools20022.repository.msg.ProformaStatusReason1.mmAdditionalInformation);
+				messageElement_lazy = () -> Arrays.asList(ProformaStatusReason1.mmCode, ProformaStatusReason1.mmAdditionalInformation);
 				trace_lazy = () -> StatusReason.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ProformaStatusReason1";
 				definition = "Reason for an proforma status.";
 				nextVersions_lazy = () -> Arrays.asList(ClosedStatusReason1.mmObject());

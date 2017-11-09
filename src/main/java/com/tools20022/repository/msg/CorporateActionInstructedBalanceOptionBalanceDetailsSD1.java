@@ -20,7 +20,9 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max350Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -108,7 +110,7 @@ public class CorporateActionInstructedBalanceOptionBalanceDetailsSD1 {
 			componentContext_lazy = () -> CorporateActionInstructedBalanceOptionBalanceDetailsSD1.mmObject();
 			isDerived = false;
 			xmlTag = "PlcAndNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "xPath to the element that is being extended.";
 			maxOccurs = 1;
@@ -149,7 +151,7 @@ public class CorporateActionInstructedBalanceOptionBalanceDetailsSD1 {
 			componentContext_lazy = () -> CorporateActionInstructedBalanceOptionBalanceDetailsSD1.mmObject();
 			isDerived = false;
 			xmlTag = "OptnUcvrdPrtctBal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionUncoveredProtectBalance";
 			definition = "Balance of uncovered protect transactions at an option level.";
 			maxOccurs = 1;
@@ -193,7 +195,7 @@ public class CorporateActionInstructedBalanceOptionBalanceDetailsSD1 {
 			componentContext_lazy = () -> CorporateActionInstructedBalanceOptionBalanceDetailsSD1.mmObject();
 			isDerived = false;
 			xmlTag = "OptnDalyInstdBal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionDailyInstructedBalance";
 			definition = "Daily total of instructions for a given option.  Balance will include only made instructions.  ";
 			maxOccurs = 1;
@@ -238,7 +240,7 @@ public class CorporateActionInstructedBalanceOptionBalanceDetailsSD1 {
 			componentContext_lazy = () -> CorporateActionInstructedBalanceOptionBalanceDetailsSD1.mmObject();
 			isDerived = false;
 			xmlTag = "OptnOvrsbcptQty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionOversubscriptionQuantity";
 			definition = "For rights subscription events, total number of oversubscribed units.  When there is an oversubscription priviledge, this quantity will be included within the Instructed quantityin the core message.";
 			maxOccurs = 1;
@@ -282,7 +284,7 @@ public class CorporateActionInstructedBalanceOptionBalanceDetailsSD1 {
 			componentContext_lazy = () -> CorporateActionInstructedBalanceOptionBalanceDetailsSD1.mmObject();
 			isDerived = false;
 			xmlTag = "OptnUaccptdBal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionUnacceptedBalance";
 			definition = "For election merger events, the balance that is being moved into another option number for payment due to the proration of the original option.";
 			maxOccurs = 1;
@@ -295,13 +297,11 @@ public class CorporateActionInstructedBalanceOptionBalanceDetailsSD1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionInstructedBalanceOptionBalanceDetailsSD1.mmPlaceAndName,
-						com.tools20022.repository.msg.CorporateActionInstructedBalanceOptionBalanceDetailsSD1.mmOptionUncoveredProtectBalance,
-						com.tools20022.repository.msg.CorporateActionInstructedBalanceOptionBalanceDetailsSD1.mmOptionDailyInstructedBalance,
-						com.tools20022.repository.msg.CorporateActionInstructedBalanceOptionBalanceDetailsSD1.mmOptionOversubscriptionQuantity,
-						com.tools20022.repository.msg.CorporateActionInstructedBalanceOptionBalanceDetailsSD1.mmOptionUnacceptedBalance);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(CorporateActionInstructedBalanceOptionBalanceDetailsSD1.mmPlaceAndName, CorporateActionInstructedBalanceOptionBalanceDetailsSD1.mmOptionUncoveredProtectBalance,
+						CorporateActionInstructedBalanceOptionBalanceDetailsSD1.mmOptionDailyInstructedBalance, CorporateActionInstructedBalanceOptionBalanceDetailsSD1.mmOptionOversubscriptionQuantity,
+						CorporateActionInstructedBalanceOptionBalanceDetailsSD1.mmOptionUnacceptedBalance);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CorporateActionInstructedBalanceOptionBalanceDetailsSD1";
 				definition = "Provides additional information regarding corporate action instructed balance details at option level.";
 			}

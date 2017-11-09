@@ -20,9 +20,16 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.seev.CorporateActionNarrative002V04;
+import com.tools20022.repository.area.semt.IntraPositionMovementConfirmation002V05;
+import com.tools20022.repository.area.semt.IntraPositionMovementConfirmation002V06;
+import com.tools20022.repository.area.semt.IntraPositionMovementInstruction002V04;
+import com.tools20022.repository.area.sese.*;
 import com.tools20022.repository.datatype.ISINOct2015Identifier;
 import com.tools20022.repository.datatype.RestrictedFINXMax140Text;
 import com.tools20022.repository.entity.SecuritiesIdentification;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -191,11 +198,11 @@ public class SecurityIdentification20 {
 	 */
 	public static final MMMessageAttribute mmISIN = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesIdentification.mmSecurityIdentification;
+			businessElementTrace_lazy = () -> SecuritiesIdentification.mmSecurityIdentification;
 			componentContext_lazy = () -> SecurityIdentification20.mmObject();
 			isDerived = false;
 			xmlTag = "ISIN";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ISIN";
 			definition = "International Securities Identification Number (ISIN).  A numbering system designed by the United Nation's International Organisation for Standardisation (ISO). The ISIN is composed of a 2-character prefix representing the country of issue, followed by the national security number (if one exists), and a check digit. Each country has a national numbering agency that assigns ISIN numbers for securities in that country.";
 			maxOccurs = 1;
@@ -244,7 +251,7 @@ public class SecurityIdentification20 {
 			componentContext_lazy = () -> SecurityIdentification20.mmObject();
 			isDerived = false;
 			xmlTag = "OthrId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherIdentification";
 			definition = "Identification of a security by proprietary or domestic identification scheme.";
 			minOccurs = 0;
@@ -292,7 +299,7 @@ public class SecurityIdentification20 {
 			componentContext_lazy = () -> SecurityIdentification20.mmObject();
 			isDerived = false;
 			xmlTag = "Desc";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Description";
 			definition = "Textual description of a security instrument.";
 			maxOccurs = 1;
@@ -304,31 +311,20 @@ public class SecurityIdentification20 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecurityIdentification20.mmISIN, com.tools20022.repository.msg.SecurityIdentification20.mmOtherIdentification,
-						com.tools20022.repository.msg.SecurityIdentification20.mmDescription);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.CorporateActionNarrative002V04.mmUnderlyingSecurity,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotification002V05.mmFinancialInstrumentIdentification,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdvice002V05.mmFinancialInstrumentIdentification,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionConfirmation002V06.mmFinancialInstrumentIdentification,
-						com.tools20022.repository.area.sese.SecuritiesFinancingModificationInstruction002V05.mmFinancialInstrumentIdentification,
-						com.tools20022.repository.area.semt.IntraPositionMovementInstruction002V04.mmFinancialInstrumentIdentification,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotification002V06.mmFinancialInstrumentIdentification,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionInstruction002V06.mmFinancialInstrumentIdentification,
-						com.tools20022.repository.area.sese.SecuritiesFinancingInstruction002V06.mmFinancialInstrumentIdentification,
-						com.tools20022.repository.area.sese.SecuritiesFinancingConfirmation002V06.mmFinancialInstrumentIdentification,
-						com.tools20022.repository.area.semt.IntraPositionMovementConfirmation002V05.mmFinancialInstrumentIdentification,
-						com.tools20022.repository.area.semt.IntraPositionMovementConfirmation002V06.mmFinancialInstrumentIdentification,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotification002V06.mmFinancialInstrumentIdentification,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionInstruction002V07.mmFinancialInstrumentIdentification,
-						com.tools20022.repository.area.sese.SecuritiesFinancingConfirmation002V07.mmFinancialInstrumentIdentification,
-						com.tools20022.repository.area.sese.SecuritiesFinancingInstruction002V07.mmFinancialInstrumentIdentification,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotification002V07.mmFinancialInstrumentIdentification,
-						com.tools20022.repository.area.sese.SecuritiesFinancingModificationInstruction002V06.mmFinancialInstrumentIdentification,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionConfirmation002V07.mmFinancialInstrumentIdentification,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdvice002V06.mmFinancialInstrumentIdentification);
+				messageElement_lazy = () -> Arrays.asList(SecurityIdentification20.mmISIN, SecurityIdentification20.mmOtherIdentification, SecurityIdentification20.mmDescription);
+				messageBuildingBlock_lazy = () -> Arrays.asList(CorporateActionNarrative002V04.mmUnderlyingSecurity, SecuritiesSettlementTransactionAllegementNotification002V05.mmFinancialInstrumentIdentification,
+						SecuritiesSettlementTransactionReversalAdvice002V05.mmFinancialInstrumentIdentification, SecuritiesSettlementTransactionConfirmation002V06.mmFinancialInstrumentIdentification,
+						SecuritiesFinancingModificationInstruction002V05.mmFinancialInstrumentIdentification, IntraPositionMovementInstruction002V04.mmFinancialInstrumentIdentification,
+						SecuritiesSettlementTransactionGenerationNotification002V06.mmFinancialInstrumentIdentification, SecuritiesSettlementTransactionInstruction002V06.mmFinancialInstrumentIdentification,
+						SecuritiesFinancingInstruction002V06.mmFinancialInstrumentIdentification, SecuritiesFinancingConfirmation002V06.mmFinancialInstrumentIdentification,
+						IntraPositionMovementConfirmation002V05.mmFinancialInstrumentIdentification, IntraPositionMovementConfirmation002V06.mmFinancialInstrumentIdentification,
+						SecuritiesSettlementTransactionAllegementNotification002V06.mmFinancialInstrumentIdentification, SecuritiesSettlementTransactionInstruction002V07.mmFinancialInstrumentIdentification,
+						SecuritiesFinancingConfirmation002V07.mmFinancialInstrumentIdentification, SecuritiesFinancingInstruction002V07.mmFinancialInstrumentIdentification,
+						SecuritiesSettlementTransactionGenerationNotification002V07.mmFinancialInstrumentIdentification, SecuritiesFinancingModificationInstruction002V06.mmFinancialInstrumentIdentification,
+						SecuritiesSettlementTransactionConfirmation002V07.mmFinancialInstrumentIdentification, SecuritiesSettlementTransactionReversalAdvice002V06.mmFinancialInstrumentIdentification);
 				trace_lazy = () -> SecuritiesIdentification.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecurityIdentification20";
 				definition = "Identification of a security.";
 			}

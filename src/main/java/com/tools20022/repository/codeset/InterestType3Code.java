@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.InterestTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -93,7 +95,7 @@ public class InterestType3Code extends InterestTypeCode {
 	 */
 	public static final MMCode mmZeroCoupon = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ZeroCoupon";
 			owner_lazy = () -> InterestType3Code.mmObject();
 		}
@@ -116,7 +118,7 @@ public class InterestType3Code extends InterestTypeCode {
 	 */
 	public static final MMCode mmFixed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Fixed";
 			owner_lazy = () -> InterestType3Code.mmObject();
 		}
@@ -139,7 +141,7 @@ public class InterestType3Code extends InterestTypeCode {
 	 */
 	public static final MMCode mmFloatingRateNote = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FloatingRateNote";
 			owner_lazy = () -> InterestType3Code.mmObject();
 		}
@@ -162,7 +164,7 @@ public class InterestType3Code extends InterestTypeCode {
 	 */
 	public static final MMCode mmDualBasis = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DualBasis";
 			owner_lazy = () -> InterestType3Code.mmObject();
 		}
@@ -185,7 +187,7 @@ public class InterestType3Code extends InterestTypeCode {
 	 */
 	public static final MMCode mmIndex = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Index";
 			owner_lazy = () -> InterestType3Code.mmObject();
 		}
@@ -208,7 +210,7 @@ public class InterestType3Code extends InterestTypeCode {
 	 */
 	public static final MMCode mmDiscounted = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Discounted";
 			owner_lazy = () -> InterestType3Code.mmObject();
 		}
@@ -217,14 +219,12 @@ public class InterestType3Code extends InterestTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ZCPN");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InterestType3Code";
 				definition = "Indicates whether interest rate is fixed, variable or other.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.InterestType3Code.mmZeroCoupon, com.tools20022.repository.codeset.InterestType3Code.mmFixed,
-						com.tools20022.repository.codeset.InterestType3Code.mmFloatingRateNote, com.tools20022.repository.codeset.InterestType3Code.mmDualBasis, com.tools20022.repository.codeset.InterestType3Code.mmIndex,
-						com.tools20022.repository.codeset.InterestType3Code.mmDiscounted);
+				code_lazy = () -> Arrays.asList(InterestType3Code.mmZeroCoupon, InterestType3Code.mmFixed, InterestType3Code.mmFloatingRateNote, InterestType3Code.mmDualBasis, InterestType3Code.mmIndex, InterestType3Code.mmDiscounted);
 				trace_lazy = () -> InterestTypeCode.mmObject();
 			}
 		});

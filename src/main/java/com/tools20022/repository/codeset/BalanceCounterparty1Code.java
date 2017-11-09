@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.BalanceCounterpartyCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -86,7 +88,7 @@ public class BalanceCounterparty1Code extends BalanceCounterpartyCode {
 	 */
 	public static final MMCode mmBilateral = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Bilateral";
 			owner_lazy = () -> BalanceCounterparty1Code.mmObject();
 		}
@@ -109,7 +111,7 @@ public class BalanceCounterparty1Code extends BalanceCounterpartyCode {
 	 */
 	public static final MMCode mmMultilateral = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Multilateral";
 			owner_lazy = () -> BalanceCounterparty1Code.mmObject();
 		}
@@ -118,12 +120,12 @@ public class BalanceCounterparty1Code extends BalanceCounterpartyCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("BILA");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "BalanceCounterparty1Code";
 				definition = "Specifies the type of counterparty to be taken into account for calculation of the balance.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.BalanceCounterparty1Code.mmBilateral, com.tools20022.repository.codeset.BalanceCounterparty1Code.mmMultilateral);
+				code_lazy = () -> Arrays.asList(BalanceCounterparty1Code.mmBilateral, BalanceCounterparty1Code.mmMultilateral);
 				trace_lazy = () -> BalanceCounterpartyCode.mmObject();
 			}
 		});

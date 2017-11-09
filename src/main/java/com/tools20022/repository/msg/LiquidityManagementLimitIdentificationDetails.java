@@ -19,9 +19,12 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.SystemIdentificationChoice;
 import com.tools20022.repository.codeset.LiquidityLimitType1Code;
 import com.tools20022.repository.entity.LiquidityManagementLimit;
+import com.tools20022.repository.entity.TransactionAdministrator;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -106,11 +109,11 @@ public class LiquidityManagementLimitIdentificationDetails {
 	 */
 	public static final MMMessageAttribute mmSystemIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TransactionAdministrator.mmCashClearingSystem;
+			businessElementTrace_lazy = () -> TransactionAdministrator.mmCashClearingSystem;
 			componentContext_lazy = () -> LiquidityManagementLimitIdentificationDetails.mmObject();
 			isDerived = false;
 			xmlTag = "SysId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SystemIdentification";
 			definition = "Identification of a particular cash clearing system. ";
 			maxOccurs = 1;
@@ -154,11 +157,11 @@ public class LiquidityManagementLimitIdentificationDetails {
 	 */
 	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.LiquidityManagementLimit.mmLiquidityLimitType;
+			businessElementTrace_lazy = () -> LiquidityManagementLimit.mmLiquidityLimitType;
 			componentContext_lazy = () -> LiquidityManagementLimitIdentificationDetails.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Type of liquidity management limit.";
 			maxOccurs = 1;
@@ -170,11 +173,10 @@ public class LiquidityManagementLimitIdentificationDetails {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LiquidityManagementLimitIdentificationDetails.mmSystemIdentification,
-						com.tools20022.repository.msg.LiquidityManagementLimitIdentificationDetails.mmType);
+				messageElement_lazy = () -> Arrays.asList(LiquidityManagementLimitIdentificationDetails.mmSystemIdentification, LiquidityManagementLimitIdentificationDetails.mmType);
 				trace_lazy = () -> LiquidityManagementLimit.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "LiquidityManagementLimitIdentificationDetails";
 				definition = "Cash management feature limiting the amount of liquidity needed to perform clearing and settlement operations. At any point in time during the process, the limit imposes the maximum amount of liquidity available for operations concerning the system or other managed elements, eg, transaction amount or counterparty.";
 			}

@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.RejectionReasonV2Code;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -111,7 +113,7 @@ public class RejectionReason27Code extends RejectionReasonV2Code {
 	 */
 	public static final MMCode mmAccountServicerDeadlineMissed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountServicerDeadlineMissed";
 			owner_lazy = () -> RejectionReason27Code.mmObject();
 		}
@@ -134,7 +136,7 @@ public class RejectionReason27Code extends RejectionReasonV2Code {
 	 */
 	public static final MMCode mmMarketDeadlineMissed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketDeadlineMissed";
 			owner_lazy = () -> RejectionReason27Code.mmObject();
 		}
@@ -157,7 +159,7 @@ public class RejectionReason27Code extends RejectionReasonV2Code {
 	 */
 	public static final MMCode mmSafekeepingAccountRejection = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingAccountRejection";
 			owner_lazy = () -> RejectionReason27Code.mmObject();
 		}
@@ -180,7 +182,7 @@ public class RejectionReason27Code extends RejectionReasonV2Code {
 	 */
 	public static final MMCode mmNoMatch = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoMatch";
 			owner_lazy = () -> RejectionReason27Code.mmObject();
 		}
@@ -203,7 +205,7 @@ public class RejectionReason27Code extends RejectionReasonV2Code {
 	 */
 	public static final MMCode mmNotFoundRejection = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotFoundRejection";
 			owner_lazy = () -> RejectionReason27Code.mmObject();
 		}
@@ -226,7 +228,7 @@ public class RejectionReason27Code extends RejectionReasonV2Code {
 	 */
 	public static final MMCode mmOther = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
 			owner_lazy = () -> RejectionReason27Code.mmObject();
 		}
@@ -249,7 +251,7 @@ public class RejectionReason27Code extends RejectionReasonV2Code {
 	 */
 	public static final MMCode mmReferenceRejection = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReferenceRejection";
 			owner_lazy = () -> RejectionReason27Code.mmObject();
 		}
@@ -272,7 +274,7 @@ public class RejectionReason27Code extends RejectionReasonV2Code {
 	 */
 	public static final MMCode mmInvalidModificationRequest = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvalidModificationRequest";
 			owner_lazy = () -> RejectionReason27Code.mmObject();
 		}
@@ -295,7 +297,7 @@ public class RejectionReason27Code extends RejectionReasonV2Code {
 	 */
 	public static final MMCode mmInvalidLink = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvalidLink";
 			owner_lazy = () -> RejectionReason27Code.mmObject();
 		}
@@ -304,17 +306,14 @@ public class RejectionReason27Code extends RejectionReasonV2Code {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ADEA");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RejectionReason27Code";
 				definition = "Specifies the reason why the instruction/cancellation request has a rejected status.";
 				previousVersion_lazy = () -> RejectionReason21Code.mmObject();
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RejectionReason27Code.mmAccountServicerDeadlineMissed, com.tools20022.repository.codeset.RejectionReason27Code.mmMarketDeadlineMissed,
-						com.tools20022.repository.codeset.RejectionReason27Code.mmSafekeepingAccountRejection, com.tools20022.repository.codeset.RejectionReason27Code.mmNoMatch,
-						com.tools20022.repository.codeset.RejectionReason27Code.mmNotFoundRejection, com.tools20022.repository.codeset.RejectionReason27Code.mmOther,
-						com.tools20022.repository.codeset.RejectionReason27Code.mmReferenceRejection, com.tools20022.repository.codeset.RejectionReason27Code.mmInvalidModificationRequest,
-						com.tools20022.repository.codeset.RejectionReason27Code.mmInvalidLink);
+				code_lazy = () -> Arrays.asList(RejectionReason27Code.mmAccountServicerDeadlineMissed, RejectionReason27Code.mmMarketDeadlineMissed, RejectionReason27Code.mmSafekeepingAccountRejection, RejectionReason27Code.mmNoMatch,
+						RejectionReason27Code.mmNotFoundRejection, RejectionReason27Code.mmOther, RejectionReason27Code.mmReferenceRejection, RejectionReason27Code.mmInvalidModificationRequest, RejectionReason27Code.mmInvalidLink);
 				trace_lazy = () -> RejectionReasonV2Code.mmObject();
 			}
 		});

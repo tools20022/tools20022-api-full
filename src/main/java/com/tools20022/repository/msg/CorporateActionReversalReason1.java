@@ -20,9 +20,13 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.seev.*;
 import com.tools20022.repository.choice.CorporateActionReversalReason1Choice;
 import com.tools20022.repository.datatype.Max256Text;
 import com.tools20022.repository.entity.CorporateActionStatusReason;
+import com.tools20022.repository.entity.StatusReason;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -162,10 +166,10 @@ public class CorporateActionReversalReason1 {
 			componentContext_lazy = () -> CorporateActionReversalReason1.mmObject();
 			isDerived = false;
 			xmlTag = "Rsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reason";
 			definition = "Specifies the reason for the reversal.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionReversalReason3.mmReason);
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionReversalReason3.mmReason);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -216,14 +220,14 @@ public class CorporateActionReversalReason1 {
 	 */
 	public static final MMMessageAttribute mmAdditionalReasonInformation = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmReason;
+			businessElementTrace_lazy = () -> StatusReason.mmReason;
 			componentContext_lazy = () -> CorporateActionReversalReason1.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlRsnInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalReasonInformation";
 			definition = "Provides additional information about the processed instruction.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionReversalReason3.mmAdditionalReasonInformation);
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionReversalReason3.mmAdditionalReasonInformation);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max256Text.mmObject();
@@ -233,17 +237,15 @@ public class CorporateActionReversalReason1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionReversalReason1.mmReason, com.tools20022.repository.msg.CorporateActionReversalReason1.mmAdditionalReasonInformation);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV01.mmReversalReason,
-						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV02.mmReversalReason, com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV03.mmReversalReason,
-						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV04.mmReversalReason, com.tools20022.repository.area.seev.CorporateActionMovementReversalAdviceV01.mmReversalReason,
-						com.tools20022.repository.area.seev.CorporateActionMovementReversalAdviceV02.mmReversalReason, com.tools20022.repository.area.seev.CorporateActionMovementReversalAdviceV03.mmReversalReason,
-						com.tools20022.repository.area.seev.CorporateActionMovementReversalAdviceV04.mmReversalReason, com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV05.mmReversalReason,
-						com.tools20022.repository.area.seev.CorporateActionMovementReversalAdviceV05.mmReversalReason, com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV06.mmReversalReason,
-						com.tools20022.repository.area.seev.CorporateActionMovementReversalAdviceV06.mmReversalReason);
+				messageElement_lazy = () -> Arrays.asList(CorporateActionReversalReason1.mmReason, CorporateActionReversalReason1.mmAdditionalReasonInformation);
+				messageBuildingBlock_lazy = () -> Arrays.asList(CorporateActionMovementPreliminaryAdviceV01.mmReversalReason, CorporateActionMovementPreliminaryAdviceV02.mmReversalReason,
+						CorporateActionMovementPreliminaryAdviceV03.mmReversalReason, CorporateActionMovementPreliminaryAdviceV04.mmReversalReason, CorporateActionMovementReversalAdviceV01.mmReversalReason,
+						CorporateActionMovementReversalAdviceV02.mmReversalReason, CorporateActionMovementReversalAdviceV03.mmReversalReason, CorporateActionMovementReversalAdviceV04.mmReversalReason,
+						CorporateActionMovementPreliminaryAdviceV05.mmReversalReason, CorporateActionMovementReversalAdviceV05.mmReversalReason, CorporateActionMovementPreliminaryAdviceV06.mmReversalReason,
+						CorporateActionMovementReversalAdviceV06.mmReversalReason);
 				trace_lazy = () -> CorporateActionStatusReason.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionReversalReason1";
 				definition = "Specifies the reason why the corporate action reversal occurs.";
 				nextVersions_lazy = () -> Arrays.asList(CorporateActionReversalReason3.mmObject());

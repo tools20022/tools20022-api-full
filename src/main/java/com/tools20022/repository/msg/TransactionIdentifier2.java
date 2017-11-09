@@ -19,9 +19,12 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.CardPaymentAcquiring;
+import com.tools20022.repository.entity.ReconciliationTransaction;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -107,7 +110,7 @@ public class TransactionIdentifier2 {
 			componentContext_lazy = () -> TransactionIdentifier2.mmObject();
 			isDerived = false;
 			xmlTag = "RcncltnDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReconciliationDate";
 			definition = "Date of the reconciliation.\r\nIt correspond to the ISO 8583 field number 28 for the versions 1993 and 2003.";
 			maxOccurs = 1;
@@ -154,11 +157,11 @@ public class TransactionIdentifier2 {
 	 */
 	public static final MMMessageAttribute mmReconciliationIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ReconciliationTransaction.mmReconciliationIdentification;
+			businessElementTrace_lazy = () -> ReconciliationTransaction.mmReconciliationIdentification;
 			componentContext_lazy = () -> TransactionIdentifier2.mmObject();
 			isDerived = false;
 			xmlTag = "RcncltnId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReconciliationIdentification";
 			definition = "Identification of the reconciliation.\r\nIt correspond to the ISO 8583 field number 29 for the versions 1993 and 2003.";
 			maxOccurs = 1;
@@ -170,10 +173,10 @@ public class TransactionIdentifier2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionIdentifier2.mmReconciliationDate, com.tools20022.repository.msg.TransactionIdentifier2.mmReconciliationIdentification);
+				messageElement_lazy = () -> Arrays.asList(TransactionIdentifier2.mmReconciliationDate, TransactionIdentifier2.mmReconciliationIdentification);
 				trace_lazy = () -> CardPaymentAcquiring.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TransactionIdentifier2";
 				definition = "Identification of the reconciliation period between the acquirer and the issuer or their respective agents.";
 				previousVersion_lazy = () -> TransactionIdentifier1.mmObject();

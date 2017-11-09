@@ -17,13 +17,13 @@
 
 package com.tools20022.repository.msg;
 
-import com.tools20022.metamodel.MMMessageAssociationEnd;
-import com.tools20022.metamodel.MMMessageAttribute;
-import com.tools20022.metamodel.MMMessageComponent;
-import com.tools20022.metamodel.MMXor;
+import com.tools20022.metamodel.*;
 import com.tools20022.repository.choice.InRepairStatusReason4Choice;
 import com.tools20022.repository.codeset.NoReasonCode;
 import com.tools20022.repository.entity.SecuritiesOrderStatus;
+import com.tools20022.repository.entity.Status;
+import com.tools20022.repository.entity.StatusReason;
+import com.tools20022.repository.GeneratedRepository;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -117,11 +117,11 @@ public class InRepairStatus2 {
 	 */
 	public static final MMMessageAssociationEnd mmReasonDetails = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.mmStatusReason;
+			businessElementTrace_lazy = () -> Status.mmStatusReason;
 			componentContext_lazy = () -> InRepairStatus2.mmObject();
 			isDerived = false;
 			xmlTag = "RsnDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReasonDetails";
 			definition = "Reason for the in-repair status.";
 			maxOccurs = 1;
@@ -166,11 +166,11 @@ public class InRepairStatus2 {
 	 */
 	public static final MMMessageAttribute mmNoSpecifiedReason = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmNoSpecifiedReason;
+			businessElementTrace_lazy = () -> StatusReason.mmNoSpecifiedReason;
 			componentContext_lazy = () -> InRepairStatus2.mmObject();
 			isDerived = false;
 			xmlTag = "NoSpcfdRsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoSpecifiedReason";
 			definition = "Indicates that there is no reason available or to report.";
 			maxOccurs = 1;
@@ -183,6 +183,10 @@ public class InRepairStatus2 {
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
+	 * messageComponent} =
+	 * {@linkplain com.tools20022.repository.msg.InRepairStatus2
+	 * InRepairStatus2}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getImpactedElements
 	 * impactedElements} =
 	 * <ul>
@@ -194,10 +198,6 @@ public class InRepairStatus2 {
 	 * InRepairStatus2.mmNoSpecifiedReason}</li>
 	 * </ul>
 	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
-	 * messageComponent} =
-	 * {@linkplain com.tools20022.repository.msg.InRepairStatus2
-	 * InRepairStatus2}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -213,21 +213,21 @@ public class InRepairStatus2 {
 	 */
 	public static final MMXor mmNoSpecifiedReasonOrReasonDetailsRule = new MMXor() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoSpecifiedReasonOrReasonDetailsRule";
 			definition = "Either NoSpecifiedReason or ReasonDetails must be present, but not both.";
 			messageComponent_lazy = () -> InRepairStatus2.mmObject();
-			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InRepairStatus2.mmReasonDetails, com.tools20022.repository.msg.InRepairStatus2.mmNoSpecifiedReason);
+			impactedElements_lazy = () -> Arrays.asList(InRepairStatus2.mmReasonDetails, InRepairStatus2.mmNoSpecifiedReason);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InRepairStatus2.mmReasonDetails, com.tools20022.repository.msg.InRepairStatus2.mmNoSpecifiedReason);
+				messageElement_lazy = () -> Arrays.asList(InRepairStatus2.mmReasonDetails, InRepairStatus2.mmNoSpecifiedReason);
 				trace_lazy = () -> SecuritiesOrderStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
 						return DateFormat.getDateInstance(java.text.DateFormat.LONG).parse("September 9, 2016");
@@ -238,7 +238,7 @@ public class InRepairStatus2 {
 				name = "InRepairStatus2";
 				definition = "Status is in repair.";
 				nextVersions_lazy = () -> Arrays.asList(InRepairStatusReason4Choice.mmObject());
-				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InRepairStatus2.mmNoSpecifiedReasonOrReasonDetailsRule);
+				xors_lazy = () -> Arrays.asList(InRepairStatus2.mmNoSpecifiedReasonOrReasonDetailsRule);
 			}
 		});
 		return mmObject_lazy.get();

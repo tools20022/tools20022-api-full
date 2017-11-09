@@ -19,10 +19,14 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.camt.DebitAuthorisationResponse;
 import com.tools20022.repository.datatype.CurrencyAndAmount;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.Max140Text;
 import com.tools20022.repository.datatype.YesNoIndicator;
+import com.tools20022.repository.entity.DebitAuthorisation;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -115,11 +119,11 @@ public class DebitAuthorisationConfirmation {
 	 */
 	public static final MMMessageAttribute mmDebitAuthorisation = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.DebitAuthorisation.mmDebitAuthorisationDecision;
+			businessElementTrace_lazy = () -> DebitAuthorisation.mmDebitAuthorisationDecision;
 			componentContext_lazy = () -> DebitAuthorisationConfirmation.mmObject();
 			isDerived = false;
 			xmlTag = "DbtAuthstn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DebitAuthorisation";
 			definition = "Code expressing the decision taken by the account owner relative to the request for debit authorization.";
 			maxOccurs = 1;
@@ -167,11 +171,11 @@ public class DebitAuthorisationConfirmation {
 	 */
 	public static final MMMessageAttribute mmAmountToDebit = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.DebitAuthorisation.mmAmountToDebit;
+			businessElementTrace_lazy = () -> DebitAuthorisation.mmAmountToDebit;
 			componentContext_lazy = () -> DebitAuthorisationConfirmation.mmObject();
 			isDerived = false;
 			xmlTag = "AmtToDbt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmountToDebit";
 			definition = "Amount authorised for debit. The party providing the debit authority may want to authorise the amount less charges and they may only be prepared to approve the debit for value today rather than the original value date.";
 			maxOccurs = 1;
@@ -214,11 +218,11 @@ public class DebitAuthorisationConfirmation {
 	 */
 	public static final MMMessageAttribute mmValueDateToDebit = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.DebitAuthorisation.mmValueDateToDebit;
+			businessElementTrace_lazy = () -> DebitAuthorisation.mmValueDateToDebit;
 			componentContext_lazy = () -> DebitAuthorisationConfirmation.mmObject();
 			isDerived = false;
 			xmlTag = "ValDtToDbt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValueDateToDebit";
 			definition = "Value date for debiting the amount.";
 			maxOccurs = 1;
@@ -261,11 +265,11 @@ public class DebitAuthorisationConfirmation {
 	 */
 	public static final MMMessageAttribute mmReason = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.DebitAuthorisation.mmReason;
+			businessElementTrace_lazy = () -> DebitAuthorisation.mmReason;
 			componentContext_lazy = () -> DebitAuthorisationConfirmation.mmObject();
 			isDerived = false;
 			xmlTag = "Rsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reason";
 			definition = "Justification of the (partial) debit authorisation.";
 			maxOccurs = 1;
@@ -277,11 +281,11 @@ public class DebitAuthorisationConfirmation {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DebitAuthorisationConfirmation.mmDebitAuthorisation, com.tools20022.repository.msg.DebitAuthorisationConfirmation.mmAmountToDebit,
-						com.tools20022.repository.msg.DebitAuthorisationConfirmation.mmValueDateToDebit, com.tools20022.repository.msg.DebitAuthorisationConfirmation.mmReason);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.DebitAuthorisationResponse.mmConfirmation);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(DebitAuthorisationConfirmation.mmDebitAuthorisation, DebitAuthorisationConfirmation.mmAmountToDebit, DebitAuthorisationConfirmation.mmValueDateToDebit,
+						DebitAuthorisationConfirmation.mmReason);
+				messageBuildingBlock_lazy = () -> Arrays.asList(DebitAuthorisationResponse.mmConfirmation);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DebitAuthorisationConfirmation";
 				definition = "Indicates if the debit authorisation is granted or not.";
 			}

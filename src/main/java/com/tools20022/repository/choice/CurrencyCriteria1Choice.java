@@ -20,7 +20,9 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.CurrencyExchangeCriteria1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -99,7 +101,7 @@ public class CurrencyCriteria1Choice {
 			componentContext_lazy = () -> CurrencyCriteria1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "QryNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QueryName";
 			definition = "Recalls the criteria (search and return criteria) defined in a preceding query.";
 			maxOccurs = 1;
@@ -141,7 +143,7 @@ public class CurrencyCriteria1Choice {
 			componentContext_lazy = () -> CurrencyCriteria1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "NewCrit";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewCriteria";
 			definition = "Defines the criteria based on which the information is extracted.";
 			maxOccurs = 1;
@@ -154,9 +156,9 @@ public class CurrencyCriteria1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CurrencyCriteria1Choice.mmQueryName, com.tools20022.repository.choice.CurrencyCriteria1Choice.mmNewCriteria);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(CurrencyCriteria1Choice.mmQueryName, CurrencyCriteria1Choice.mmNewCriteria);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CurrencyCriteria1Choice";
 				definition = "Defines the information that is searched either implicitly by recalling a previous query or explicitly by defining the criteria.";
 			}

@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ModificationProcessingStatusCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -95,7 +97,7 @@ public class ModificationProcessingStatus1Code extends ModificationProcessingSta
 	 */
 	public static final MMCode mmAccepted = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Accepted";
 			owner_lazy = () -> ModificationProcessingStatus1Code.mmObject();
 		}
@@ -118,7 +120,7 @@ public class ModificationProcessingStatus1Code extends ModificationProcessingSta
 	 */
 	public static final MMCode mmRejected = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rejected";
 			owner_lazy = () -> ModificationProcessingStatus1Code.mmObject();
 		}
@@ -141,7 +143,7 @@ public class ModificationProcessingStatus1Code extends ModificationProcessingSta
 	 */
 	public static final MMCode mmCompleted = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Completed";
 			owner_lazy = () -> ModificationProcessingStatus1Code.mmObject();
 		}
@@ -164,7 +166,7 @@ public class ModificationProcessingStatus1Code extends ModificationProcessingSta
 	 */
 	public static final MMCode mmDenied = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Denied";
 			owner_lazy = () -> ModificationProcessingStatus1Code.mmObject();
 		}
@@ -187,7 +189,7 @@ public class ModificationProcessingStatus1Code extends ModificationProcessingSta
 	 */
 	public static final MMCode mmPending = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Pending";
 			owner_lazy = () -> ModificationProcessingStatus1Code.mmObject();
 		}
@@ -210,7 +212,7 @@ public class ModificationProcessingStatus1Code extends ModificationProcessingSta
 	 */
 	public static final MMCode mmInRepair = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InRepair";
 			owner_lazy = () -> ModificationProcessingStatus1Code.mmObject();
 		}
@@ -219,14 +221,13 @@ public class ModificationProcessingStatus1Code extends ModificationProcessingSta
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("PACK");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ModificationProcessingStatus1Code";
 				definition = "Specifies the status of a cancellation request.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ModificationProcessingStatus1Code.mmAccepted, com.tools20022.repository.codeset.ModificationProcessingStatus1Code.mmRejected,
-						com.tools20022.repository.codeset.ModificationProcessingStatus1Code.mmCompleted, com.tools20022.repository.codeset.ModificationProcessingStatus1Code.mmDenied,
-						com.tools20022.repository.codeset.ModificationProcessingStatus1Code.mmPending, com.tools20022.repository.codeset.ModificationProcessingStatus1Code.mmInRepair);
+				code_lazy = () -> Arrays.asList(ModificationProcessingStatus1Code.mmAccepted, ModificationProcessingStatus1Code.mmRejected, ModificationProcessingStatus1Code.mmCompleted, ModificationProcessingStatus1Code.mmDenied,
+						ModificationProcessingStatus1Code.mmPending, ModificationProcessingStatus1Code.mmInRepair);
 				trace_lazy = () -> ModificationProcessingStatusCode.mmObject();
 			}
 		});

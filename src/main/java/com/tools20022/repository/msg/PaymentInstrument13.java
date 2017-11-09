@@ -20,11 +20,15 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.PaymentInstrument18Choice;
 import com.tools20022.repository.choice.PaymentInstrument19Choice;
 import com.tools20022.repository.codeset.ActiveCurrencyCode;
 import com.tools20022.repository.datatype.PercentageBoundedRate;
+import com.tools20022.repository.entity.CurrencyExchange;
+import com.tools20022.repository.entity.Dividend;
 import com.tools20022.repository.entity.Payment;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -116,11 +120,11 @@ public class PaymentInstrument13 {
 	 */
 	public static final MMMessageAttribute mmSettlementCurrency = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmTargetCurrency;
+			businessElementTrace_lazy = () -> CurrencyExchange.mmTargetCurrency;
 			componentContext_lazy = () -> PaymentInstrument13.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmCcy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementCurrency";
 			definition = "Currency associated with the payment instrument.";
 			maxOccurs = 1;
@@ -167,11 +171,11 @@ public class PaymentInstrument13 {
 	 */
 	public static final MMMessageAttribute mmDividendPercentage = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Dividend.mmAnnualTotalDividendRate;
+			businessElementTrace_lazy = () -> Dividend.mmAnnualTotalDividendRate;
 			componentContext_lazy = () -> PaymentInstrument13.mmObject();
 			isDerived = false;
 			xmlTag = "DvddPctg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DividendPercentage";
 			definition = "Percentage of the dividend payment not to be reinvested, that is, to be paid in cash.";
 			maxOccurs = 1;
@@ -220,7 +224,7 @@ public class PaymentInstrument13 {
 			componentContext_lazy = () -> PaymentInstrument13.mmObject();
 			isDerived = false;
 			xmlTag = "SbcptPmtInstrm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubscriptionPaymentInstrument";
 			definition = "Instrument that has or represents monetary value and is used to process a payment instruction for a subscription payment.";
 			maxOccurs = 1;
@@ -270,7 +274,7 @@ public class PaymentInstrument13 {
 			componentContext_lazy = () -> PaymentInstrument13.mmObject();
 			isDerived = false;
 			xmlTag = "RedPmtInstrm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RedemptionPaymentInstrument";
 			definition = "Instrument that has or represents monetary value and is used to process a payment instruction for a redemption payment.";
 			maxOccurs = 1;
@@ -320,7 +324,7 @@ public class PaymentInstrument13 {
 			componentContext_lazy = () -> PaymentInstrument13.mmObject();
 			isDerived = false;
 			xmlTag = "DvddPmtInstrm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DividendPaymentInstrument";
 			definition = "Instrument that has or represents monetary value and is used to process a payment instruction for a dividend payment.";
 			maxOccurs = 1;
@@ -370,7 +374,7 @@ public class PaymentInstrument13 {
 			componentContext_lazy = () -> PaymentInstrument13.mmObject();
 			isDerived = false;
 			xmlTag = "SvgsPlanPmtInstrm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SavingsPlanPaymentInstrument";
 			definition = "Instrument that has or represents monetary value and is used to process a payment instruction for a savings plan payment.";
 			maxOccurs = 1;
@@ -421,7 +425,7 @@ public class PaymentInstrument13 {
 			componentContext_lazy = () -> PaymentInstrument13.mmObject();
 			isDerived = false;
 			xmlTag = "IntrstPmtInstrm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterestPaymentInstrument";
 			definition = "Instrument that has or represents monetary value and is used to process a payment instruction for an interest payment.";
 			maxOccurs = 1;
@@ -433,13 +437,11 @@ public class PaymentInstrument13 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentInstrument13.mmSettlementCurrency, com.tools20022.repository.msg.PaymentInstrument13.mmDividendPercentage,
-						com.tools20022.repository.msg.PaymentInstrument13.mmSubscriptionPaymentInstrument, com.tools20022.repository.msg.PaymentInstrument13.mmRedemptionPaymentInstrument,
-						com.tools20022.repository.msg.PaymentInstrument13.mmDividendPaymentInstrument, com.tools20022.repository.msg.PaymentInstrument13.mmSavingsPlanPaymentInstrument,
-						com.tools20022.repository.msg.PaymentInstrument13.mmInterestPaymentInstrument);
+				messageElement_lazy = () -> Arrays.asList(PaymentInstrument13.mmSettlementCurrency, PaymentInstrument13.mmDividendPercentage, PaymentInstrument13.mmSubscriptionPaymentInstrument,
+						PaymentInstrument13.mmRedemptionPaymentInstrument, PaymentInstrument13.mmDividendPaymentInstrument, PaymentInstrument13.mmSavingsPlanPaymentInstrument, PaymentInstrument13.mmInterestPaymentInstrument);
 				trace_lazy = () -> Payment.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PaymentInstrument13";
 				definition = "Instrument used to process a payment instruction.";
 			}

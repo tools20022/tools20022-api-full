@@ -19,9 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.Modification1Code;
 import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.entity.OrganisationName;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -97,7 +99,7 @@ public class TradingNameModification1 {
 			componentContext_lazy = () -> TradingNameModification1.mmObject();
 			isDerived = false;
 			xmlTag = "ModCd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ModificationCode";
 			definition = "Specifies the type of change.";
 			maxOccurs = 1;
@@ -144,11 +146,11 @@ public class TradingNameModification1 {
 	 */
 	public static final MMMessageAttribute mmTradingName = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationName.mmTradingName;
+			businessElementTrace_lazy = () -> OrganisationName.mmTradingName;
 			componentContext_lazy = () -> TradingNameModification1.mmObject();
 			isDerived = false;
 			xmlTag = "TradgNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradingName";
 			definition = "Name used by a business for commercial purposes, although its registered legal name, used for contracts and other formal situations, may be another.";
 			maxOccurs = 1;
@@ -160,10 +162,10 @@ public class TradingNameModification1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TradingNameModification1.mmModificationCode, com.tools20022.repository.msg.TradingNameModification1.mmTradingName);
+				messageElement_lazy = () -> Arrays.asList(TradingNameModification1.mmModificationCode, TradingNameModification1.mmTradingName);
 				trace_lazy = () -> OrganisationName.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TradingNameModification1";
 				definition = "Specifies the type of change to the trading name.";
 			}

@@ -20,7 +20,9 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max15NumericText;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -97,7 +99,7 @@ public class OriginalReportStatistics3 {
 			componentContext_lazy = () -> OriginalReportStatistics3.mmObject();
 			isDerived = false;
 			xmlTag = "TtlNbOfRcrds";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalNumberOfRecords";
 			definition = "Total numbers of records included in the original file.";
 			maxOccurs = 1;
@@ -139,7 +141,7 @@ public class OriginalReportStatistics3 {
 			componentContext_lazy = () -> OriginalReportStatistics3.mmObject();
 			isDerived = false;
 			xmlTag = "NbOfRcrdsPerSts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NumberOfRecordsPerStatus";
 			definition = "Detailed information on the number of records for each records status.";
 			minOccurs = 1;
@@ -151,9 +153,9 @@ public class OriginalReportStatistics3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OriginalReportStatistics3.mmTotalNumberOfRecords, com.tools20022.repository.msg.OriginalReportStatistics3.mmNumberOfRecordsPerStatus);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(OriginalReportStatistics3.mmTotalNumberOfRecords, OriginalReportStatistics3.mmNumberOfRecordsPerStatus);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OriginalReportStatistics3";
 				definition = "Statistical information on the processing of records included in the original report.";
 			}

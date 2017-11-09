@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.ResolutionType1Code
+ * ResolutionType1Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ResolutionType2Code
+ * ResolutionType2Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -38,15 +49,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.ResolutionTypeCode#mmSpecial
  * ResolutionTypeCode.mmSpecial}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.ResolutionType1Code
- * ResolutionType1Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ResolutionType2Code
- * ResolutionType2Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -99,7 +101,7 @@ public class ResolutionTypeCode {
 	 */
 	public static final MMCode mmOrdinary = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Ordinary";
 			definition = "Meeting resolution is ordinary and is not subject to any specific voting requirements.";
 			owner_lazy = () -> ResolutionTypeCode.mmObject();
@@ -132,7 +134,7 @@ public class ResolutionTypeCode {
 	 */
 	public static final MMCode mmExtraordinary = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Extraordinary";
 			definition = "Meeting resolution is extraordinary and may be subject to specific voting requirements.";
 			owner_lazy = () -> ResolutionTypeCode.mmObject();
@@ -165,7 +167,7 @@ public class ResolutionTypeCode {
 	 */
 	public static final MMCode mmSpecial = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Special";
 			definition = "Resolution that is neither ordinary nor extraordinary (eg. decision on an investment strategy).";
 			owner_lazy = () -> ResolutionTypeCode.mmObject();
@@ -176,13 +178,12 @@ public class ResolutionTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ORDI");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ResolutionTypeCode";
 				definition = "Specifies the type of resolution.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ResolutionTypeCode.mmOrdinary, com.tools20022.repository.codeset.ResolutionTypeCode.mmExtraordinary,
-						com.tools20022.repository.codeset.ResolutionTypeCode.mmSpecial);
+				code_lazy = () -> Arrays.asList(ResolutionTypeCode.mmOrdinary, ResolutionTypeCode.mmExtraordinary, ResolutionTypeCode.mmSpecial);
 				derivation_lazy = () -> Arrays.asList(ResolutionType1Code.mmObject(), ResolutionType2Code.mmObject());
 			}
 		});

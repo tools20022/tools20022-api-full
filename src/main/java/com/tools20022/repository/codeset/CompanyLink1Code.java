@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CompanyLinkCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -87,7 +89,7 @@ public class CompanyLink1Code extends CompanyLinkCode {
 	 */
 	public static final MMCode mmAgent = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Agent";
 			owner_lazy = () -> CompanyLink1Code.mmObject();
 		}
@@ -110,7 +112,7 @@ public class CompanyLink1Code extends CompanyLinkCode {
 	 */
 	public static final MMCode mmBroker = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Broker";
 			owner_lazy = () -> CompanyLink1Code.mmObject();
 		}
@@ -133,7 +135,7 @@ public class CompanyLink1Code extends CompanyLinkCode {
 	 */
 	public static final MMCode mmBrokeragePartner = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BrokeragePartner";
 			owner_lazy = () -> CompanyLink1Code.mmObject();
 		}
@@ -156,7 +158,7 @@ public class CompanyLink1Code extends CompanyLinkCode {
 	 */
 	public static final MMCode mmMemberBroker = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MemberBroker";
 			owner_lazy = () -> CompanyLink1Code.mmObject();
 		}
@@ -179,7 +181,7 @@ public class CompanyLink1Code extends CompanyLinkCode {
 	 */
 	public static final MMCode mmParentCompany = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ParentCompany";
 			owner_lazy = () -> CompanyLink1Code.mmObject();
 		}
@@ -202,7 +204,7 @@ public class CompanyLink1Code extends CompanyLinkCode {
 	 */
 	public static final MMCode mmRelative = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Relative";
 			owner_lazy = () -> CompanyLink1Code.mmObject();
 		}
@@ -211,12 +213,11 @@ public class CompanyLink1Code extends CompanyLinkCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CompanyLink1Code";
 				definition = "Specifies the type of links to a company.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CompanyLink1Code.mmAgent, com.tools20022.repository.codeset.CompanyLink1Code.mmBroker, com.tools20022.repository.codeset.CompanyLink1Code.mmBrokeragePartner,
-						com.tools20022.repository.codeset.CompanyLink1Code.mmMemberBroker, com.tools20022.repository.codeset.CompanyLink1Code.mmParentCompany, com.tools20022.repository.codeset.CompanyLink1Code.mmRelative);
+				code_lazy = () -> Arrays.asList(CompanyLink1Code.mmAgent, CompanyLink1Code.mmBroker, CompanyLink1Code.mmBrokeragePartner, CompanyLink1Code.mmMemberBroker, CompanyLink1Code.mmParentCompany, CompanyLink1Code.mmRelative);
 				trace_lazy = () -> CompanyLinkCode.mmObject();
 			}
 		});

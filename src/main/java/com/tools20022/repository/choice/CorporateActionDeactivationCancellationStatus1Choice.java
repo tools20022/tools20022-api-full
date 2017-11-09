@@ -19,7 +19,10 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.seev.AgentCADeactivationStatusAdviceV01;
 import com.tools20022.repository.entity.CorporateActionStatus;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.CorporateActionDeactivationCancellationProcessingStatus1;
 import com.tools20022.repository.msg.CorporateActionDeactivationCancellationRejectionStatus1;
 import java.util.Arrays;
@@ -116,7 +119,7 @@ public class CorporateActionDeactivationCancellationStatus1Choice {
 			componentContext_lazy = () -> CorporateActionDeactivationCancellationStatus1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "PrcdSts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProcessedStatus";
 			definition = "Provides information about the processing status of the cancellation request.";
 			maxOccurs = 1;
@@ -164,7 +167,7 @@ public class CorporateActionDeactivationCancellationStatus1Choice {
 			componentContext_lazy = () -> CorporateActionDeactivationCancellationStatus1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "RjctdSts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RejectedStatus";
 			definition = "Provides information about the rejection status.";
 			maxOccurs = 1;
@@ -177,12 +180,11 @@ public class CorporateActionDeactivationCancellationStatus1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CorporateActionDeactivationCancellationStatus1Choice.mmProcessedStatus,
-						com.tools20022.repository.choice.CorporateActionDeactivationCancellationStatus1Choice.mmRejectedStatus);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.AgentCADeactivationStatusAdviceV01.mmDeactivationCancellationRequestStatus);
+				messageElement_lazy = () -> Arrays.asList(CorporateActionDeactivationCancellationStatus1Choice.mmProcessedStatus, CorporateActionDeactivationCancellationStatus1Choice.mmRejectedStatus);
+				messageBuildingBlock_lazy = () -> Arrays.asList(AgentCADeactivationStatusAdviceV01.mmDeactivationCancellationRequestStatus);
 				trace_lazy = () -> CorporateActionStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionDeactivationCancellationStatus1Choice";
 				definition = "Choice between the different statuses of a deactivation cancellation request.";
 			}

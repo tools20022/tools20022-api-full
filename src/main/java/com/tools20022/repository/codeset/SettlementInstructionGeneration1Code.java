@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.SettlementInstructionGenerationCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -84,7 +86,7 @@ public class SettlementInstructionGeneration1Code extends SettlementInstructionG
 	 */
 	public static final MMCode mmInstructionGenerationByETCProvider = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructionGenerationByETCProvider";
 			owner_lazy = () -> SettlementInstructionGeneration1Code.mmObject();
 		}
@@ -107,7 +109,7 @@ public class SettlementInstructionGeneration1Code extends SettlementInstructionG
 	 */
 	public static final MMCode mmNotInstructionGenerationByETCProvider = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotInstructionGenerationByETCProvider";
 			owner_lazy = () -> SettlementInstructionGeneration1Code.mmObject();
 		}
@@ -116,13 +118,12 @@ public class SettlementInstructionGeneration1Code extends SettlementInstructionG
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("GENS");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SettlementInstructionGeneration1Code";
 				definition = "Settlement Instruction Generation Code";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SettlementInstructionGeneration1Code.mmInstructionGenerationByETCProvider,
-						com.tools20022.repository.codeset.SettlementInstructionGeneration1Code.mmNotInstructionGenerationByETCProvider);
+				code_lazy = () -> Arrays.asList(SettlementInstructionGeneration1Code.mmInstructionGenerationByETCProvider, SettlementInstructionGeneration1Code.mmNotInstructionGenerationByETCProvider);
 				trace_lazy = () -> SettlementInstructionGenerationCode.mmObject();
 			}
 		});

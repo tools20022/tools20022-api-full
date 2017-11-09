@@ -20,6 +20,7 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.AssetClassAttributes1Choice;
 import com.tools20022.repository.choice.SecuritiesTransactionPrice4Choice;
 import com.tools20022.repository.choice.UnderlyingIdentification2Choice;
@@ -29,6 +30,9 @@ import com.tools20022.repository.codeset.PhysicalTransferType4Code;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.NonNegativeDecimalNumber;
 import com.tools20022.repository.entity.Derivative;
+import com.tools20022.repository.entity.Option;
+import com.tools20022.repository.entity.SecuritiesTransfer;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -127,11 +131,11 @@ public class DerivativeInstrument6 {
 	 */
 	public static final MMMessageAttribute mmExpiryDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Derivative.mmExerciseDate;
+			businessElementTrace_lazy = () -> Derivative.mmExerciseDate;
 			componentContext_lazy = () -> DerivativeInstrument6.mmObject();
 			isDerived = false;
 			xmlTag = "XpryDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExpiryDate";
 			definition = "Original expiry date of the reported financial instrument. \r\n\r\nUsage:\r\nField applies to derivatives with defined expiry date.";
 			maxOccurs = 1;
@@ -180,11 +184,11 @@ public class DerivativeInstrument6 {
 	 */
 	public static final MMMessageAttribute mmPriceMultiplier = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Option.mmStrikeMultiplier;
+			businessElementTrace_lazy = () -> Option.mmStrikeMultiplier;
 			componentContext_lazy = () -> DerivativeInstrument6.mmObject();
 			isDerived = false;
 			xmlTag = "PricMltplr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PriceMultiplier";
 			definition = "Number of units of the underlying instrument represented by a single derivative contract.\r\n\r\nFor a future or option on an index, the amount per index point.";
 			maxOccurs = 1;
@@ -230,11 +234,11 @@ public class DerivativeInstrument6 {
 	 */
 	public static final MMMessageAssociationEnd mmUnderlyingInstrument = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Derivative.mmUnderlyingAsset;
+			businessElementTrace_lazy = () -> Derivative.mmUnderlyingAsset;
 			componentContext_lazy = () -> DerivativeInstrument6.mmObject();
 			isDerived = false;
 			xmlTag = "UndrlygInstrm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnderlyingInstrument";
 			definition = "Choice to specify the type(s) of underlying instrument(s) that make up the financial instrument.";
 			maxOccurs = 1;
@@ -283,11 +287,11 @@ public class DerivativeInstrument6 {
 	 */
 	public static final MMMessageAttribute mmOptionType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Option.mmOptionType;
+			businessElementTrace_lazy = () -> Option.mmOptionType;
 			componentContext_lazy = () -> DerivativeInstrument6.mmObject();
 			isDerived = false;
 			xmlTag = "OptnTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionType";
 			definition = "Specifies whether it is a call option (right to purchase a specific underlying asset) or a put option (right to sell a specific underlying asset).";
 			maxOccurs = 1;
@@ -334,11 +338,11 @@ public class DerivativeInstrument6 {
 	 */
 	public static final MMMessageAttribute mmStrikePrice = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Option.mmStrikePrice;
+			businessElementTrace_lazy = () -> Option.mmStrikePrice;
 			componentContext_lazy = () -> DerivativeInstrument6.mmObject();
 			isDerived = false;
 			xmlTag = "StrkPric";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StrikePrice";
 			definition = "Predetermined price at which the holder will have to buy or sell the underlying instrument.";
 			maxOccurs = 1;
@@ -387,11 +391,11 @@ public class DerivativeInstrument6 {
 	 */
 	public static final MMMessageAttribute mmOptionExerciseStyle = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Option.mmOptionStyle;
+			businessElementTrace_lazy = () -> Option.mmOptionStyle;
 			componentContext_lazy = () -> DerivativeInstrument6.mmObject();
 			isDerived = false;
 			xmlTag = "OptnExrcStyle";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionExerciseStyle";
 			definition = "Indication as to whether the option may be exercised only at a fixed date (European, and Asian style), a series of pre-specified dates (Bermudan) or at any time during the life of the contract (American style). This field does not have to be populated for ISIN instruments.";
 			maxOccurs = 1;
@@ -436,11 +440,11 @@ public class DerivativeInstrument6 {
 	 */
 	public static final MMMessageAttribute mmDeliveryType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTransfer.mmPhysicalDelivery;
+			businessElementTrace_lazy = () -> SecuritiesTransfer.mmPhysicalDelivery;
 			componentContext_lazy = () -> DerivativeInstrument6.mmObject();
 			isDerived = false;
 			xmlTag = "DlvryTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeliveryType";
 			definition = "Indicates whether the transaction is settled physically or in cash.";
 			maxOccurs = 1;
@@ -489,7 +493,7 @@ public class DerivativeInstrument6 {
 			componentContext_lazy = () -> DerivativeInstrument6.mmObject();
 			isDerived = false;
 			xmlTag = "AsstClssSpcfcAttrbts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AssetClassSpecificAttributes";
 			definition = "Specific attributes of the underlying asset class of the financial instrument.";
 			maxOccurs = 1;
@@ -502,13 +506,11 @@ public class DerivativeInstrument6 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DerivativeInstrument6.mmExpiryDate, com.tools20022.repository.msg.DerivativeInstrument6.mmPriceMultiplier,
-						com.tools20022.repository.msg.DerivativeInstrument6.mmUnderlyingInstrument, com.tools20022.repository.msg.DerivativeInstrument6.mmOptionType, com.tools20022.repository.msg.DerivativeInstrument6.mmStrikePrice,
-						com.tools20022.repository.msg.DerivativeInstrument6.mmOptionExerciseStyle, com.tools20022.repository.msg.DerivativeInstrument6.mmDeliveryType,
-						com.tools20022.repository.msg.DerivativeInstrument6.mmAssetClassSpecificAttributes);
+				messageElement_lazy = () -> Arrays.asList(DerivativeInstrument6.mmExpiryDate, DerivativeInstrument6.mmPriceMultiplier, DerivativeInstrument6.mmUnderlyingInstrument, DerivativeInstrument6.mmOptionType,
+						DerivativeInstrument6.mmStrikePrice, DerivativeInstrument6.mmOptionExerciseStyle, DerivativeInstrument6.mmDeliveryType, DerivativeInstrument6.mmAssetClassSpecificAttributes);
 				trace_lazy = () -> Derivative.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DerivativeInstrument6";
 				definition = "Specifies the derivative instrument.";
 			}

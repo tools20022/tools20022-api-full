@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.ATMCassetteType1Code
+ * ATMCassetteType1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>{@linkplain com.tools20022.repository.codeset.ATMCassetteTypeCode#mmIn
@@ -45,13 +54,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.ATMCassetteTypeCode#mmRetract
  * ATMCassetteTypeCode.mmRetract}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.ATMCassetteType1Code
- * ATMCassetteType1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -95,7 +97,7 @@ public class ATMCassetteTypeCode {
 	 */
 	public static final MMCode mmIn = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "In";
 			definition = "Cassette for deposits.";
 			owner_lazy = () -> ATMCassetteTypeCode.mmObject();
@@ -125,7 +127,7 @@ public class ATMCassetteTypeCode {
 	 */
 	public static final MMCode mmOut = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Out";
 			definition = "Cassette for dispense.";
 			owner_lazy = () -> ATMCassetteTypeCode.mmObject();
@@ -155,7 +157,7 @@ public class ATMCassetteTypeCode {
 	 */
 	public static final MMCode mmRecycling = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Recycling";
 			definition = "Cassette for recycling.";
 			owner_lazy = () -> ATMCassetteTypeCode.mmObject();
@@ -185,7 +187,7 @@ public class ATMCassetteTypeCode {
 	 */
 	public static final MMCode mmReplenishment = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Replenishment";
 			definition = "Cassette for replenishment.";
 			owner_lazy = () -> ATMCassetteTypeCode.mmObject();
@@ -215,7 +217,7 @@ public class ATMCassetteTypeCode {
 	 */
 	public static final MMCode mmReject = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reject";
 			definition = "Cassette for reject.";
 			owner_lazy = () -> ATMCassetteTypeCode.mmObject();
@@ -245,7 +247,7 @@ public class ATMCassetteTypeCode {
 	 */
 	public static final MMCode mmRetract = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Retract";
 			definition = "Cassette for retract.";
 			owner_lazy = () -> ATMCassetteTypeCode.mmObject();
@@ -256,12 +258,11 @@ public class ATMCassetteTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ATMCassetteTypeCode";
 				definition = "Type of cassette.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ATMCassetteTypeCode.mmIn, com.tools20022.repository.codeset.ATMCassetteTypeCode.mmOut, com.tools20022.repository.codeset.ATMCassetteTypeCode.mmRecycling,
-						com.tools20022.repository.codeset.ATMCassetteTypeCode.mmReplenishment, com.tools20022.repository.codeset.ATMCassetteTypeCode.mmReject, com.tools20022.repository.codeset.ATMCassetteTypeCode.mmRetract);
+				code_lazy = () -> Arrays.asList(ATMCassetteTypeCode.mmIn, ATMCassetteTypeCode.mmOut, ATMCassetteTypeCode.mmRecycling, ATMCassetteTypeCode.mmReplenishment, ATMCassetteTypeCode.mmReject, ATMCassetteTypeCode.mmRetract);
 				derivation_lazy = () -> Arrays.asList(ATMCassetteType1Code.mmObject());
 			}
 		});

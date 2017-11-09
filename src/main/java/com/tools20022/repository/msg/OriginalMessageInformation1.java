@@ -19,9 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.PaymentInstruction;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -105,7 +107,7 @@ public class OriginalMessageInformation1 {
 			componentContext_lazy = () -> OriginalMessageInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "MsgId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageIdentification";
 			definition = "Point to point reference, as assigned by the original initiating party, to unambiguously identify the original mandate request message.";
 			maxOccurs = 1;
@@ -147,7 +149,7 @@ public class OriginalMessageInformation1 {
 			componentContext_lazy = () -> OriginalMessageInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "MsgNmId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageNameIdentification";
 			definition = "Specifies the message name identifier to which the message refers.";
 			maxOccurs = 1;
@@ -188,7 +190,7 @@ public class OriginalMessageInformation1 {
 			componentContext_lazy = () -> OriginalMessageInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "CreDtTm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreationDateTime";
 			definition = "Date and time at which the message was created.";
 			maxOccurs = 1;
@@ -200,11 +202,10 @@ public class OriginalMessageInformation1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OriginalMessageInformation1.mmMessageIdentification, com.tools20022.repository.msg.OriginalMessageInformation1.mmMessageNameIdentification,
-						com.tools20022.repository.msg.OriginalMessageInformation1.mmCreationDateTime);
+				messageElement_lazy = () -> Arrays.asList(OriginalMessageInformation1.mmMessageIdentification, OriginalMessageInformation1.mmMessageNameIdentification, OriginalMessageInformation1.mmCreationDateTime);
 				trace_lazy = () -> PaymentInstruction.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OriginalMessageInformation1";
 				definition = "Unique identification, as assigned by the original instructing party, to unambiguously identify the message.";
 			}

@@ -17,11 +17,11 @@
 
 package com.tools20022.repository.entity;
 
-import com.tools20022.metamodel.MMBusinessAssociationEnd;
-import com.tools20022.metamodel.MMBusinessAttribute;
-import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.*;
 import com.tools20022.repository.choice.*;
 import com.tools20022.repository.datatype.YesNoIndicator;
+import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -36,47 +36,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Settlement#mmCentralCounterpartyEligibilityIndicator
- * Settlement.mmCentralCounterpartyEligibilityIndicator}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Settlement#mmStandingSettlementInstruction
- * Settlement.mmStandingSettlementInstruction}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Settlement#mmSettlementPartyRole
- * Settlement.mmSettlementPartyRole}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Settlement#mmTrade
- * Settlement.mmTrade}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
- * subType} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.CashSettlement
- * CashSettlement}</li>
- * <li>{@linkplain com.tools20022.repository.entity.SecuritiesSettlement
- * SecuritiesSettlement}</li>
- * <li>{@linkplain com.tools20022.repository.entity.CommercialTradeSettlement
- * CommercialTradeSettlement}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Trade#mmSettlement
- * Trade.mmSettlement}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SettlementPartyRole#mmSettlement
- * SettlementPartyRole.mmSettlement}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.StandingSettlementInstruction#mmSettlement
- * StandingSettlementInstruction.mmSettlement}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -96,6 +55,47 @@ import java.util.List;
  * <li>
  * {@linkplain com.tools20022.repository.choice.CentralCounterPartyEligibility5Choice
  * CentralCounterPartyEligibility5Choice}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.Trade#mmSettlement
+ * Trade.mmSettlement}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SettlementPartyRole#mmSettlement
+ * SettlementPartyRole.mmSettlement}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.StandingSettlementInstruction#mmSettlement
+ * StandingSettlementInstruction.mmSettlement}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
+ * subType} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.CashSettlement
+ * CashSettlement}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.SecuritiesSettlement
+ * SecuritiesSettlement}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.CommercialTradeSettlement
+ * CommercialTradeSettlement}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Settlement#mmCentralCounterpartyEligibilityIndicator
+ * Settlement.mmCentralCounterpartyEligibilityIndicator}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Settlement#mmStandingSettlementInstruction
+ * Settlement.mmStandingSettlementInstruction}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Settlement#mmSettlementPartyRole
+ * Settlement.mmSettlementPartyRole}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Settlement#mmTrade
+ * Settlement.mmTrade}</li>
  * </ul>
  * </li>
  * <li>
@@ -181,14 +181,12 @@ public class Settlement {
 	 */
 	public static final MMBusinessAttribute mmCentralCounterpartyEligibilityIndicator = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CentralCounterPartyEligibility1Choice.mmIndicator, com.tools20022.repository.choice.CentralCounterPartyEligibility1Choice.mmProprietary,
-					com.tools20022.repository.choice.CentralCounterPartyEligibility2Choice.mmIndicator, com.tools20022.repository.choice.CentralCounterPartyEligibility2Choice.mmProprietary,
-					com.tools20022.repository.choice.CentralCounterPartyEligibility3Choice.mmIndicator, com.tools20022.repository.choice.CentralCounterPartyEligibility4Choice.mmIndicator,
-					com.tools20022.repository.choice.CentralCounterPartyEligibility4Choice.mmProprietary, com.tools20022.repository.choice.CentralCounterPartyEligibility5Choice.mmIndicator,
-					com.tools20022.repository.choice.CentralCounterPartyEligibility5Choice.mmProprietary);
+			derivation_lazy = () -> Arrays.asList(CentralCounterPartyEligibility1Choice.mmIndicator, CentralCounterPartyEligibility1Choice.mmProprietary, CentralCounterPartyEligibility2Choice.mmIndicator,
+					CentralCounterPartyEligibility2Choice.mmProprietary, CentralCounterPartyEligibility3Choice.mmIndicator, CentralCounterPartyEligibility4Choice.mmIndicator, CentralCounterPartyEligibility4Choice.mmProprietary,
+					CentralCounterPartyEligibility5Choice.mmIndicator, CentralCounterPartyEligibility5Choice.mmProprietary);
 			elementContext_lazy = () -> Settlement.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CentralCounterpartyEligibilityIndicator";
 			definition = "Specifies whether the settlement transaction is CCP (Central Counterparty) eligible.";
 			maxOccurs = 1;
@@ -478,56 +476,37 @@ public class Settlement {
 	 */
 	public static final MMBusinessAssociationEnd mmStandingSettlementInstruction = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SettlementDetails50.mmFXStandingInstruction, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails3.mmStandingSettlementInstructionDetails,
-					com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails4.mmStandingSettlementInstructionDetails, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails2.mmStandingSettlementInstructionDetails,
-					com.tools20022.repository.msg.SettlementDetails51.mmFXStandingInstruction, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails5.mmStandingSettlementInstructionDetails,
-					com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails6.mmStandingSettlementInstructionDetails, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails7.mmStandingSettlementInstructionDetails,
-					com.tools20022.repository.msg.SettlementDetails3.mmFXStandingInstruction, com.tools20022.repository.msg.SettlementDetails16.mmFXStandingInstruction,
-					com.tools20022.repository.msg.SettlementDetails31.mmFXStandingInstruction, com.tools20022.repository.msg.SettlementDetails40.mmFXStandingInstruction,
-					com.tools20022.repository.msg.SettlementDetails62.mmFXStandingInstruction, com.tools20022.repository.msg.SettlementDetails63.mmFXStandingInstruction,
-					com.tools20022.repository.msg.SettlementDetails1.mmFXStandingInstruction, com.tools20022.repository.msg.SettlementDetails19.mmFXStandingInstruction,
-					com.tools20022.repository.msg.SettlementDetails22.mmFXStandingInstruction, com.tools20022.repository.msg.SettlementDetails35.mmFXStandingInstruction,
-					com.tools20022.repository.msg.SettlementDetails42.mmFXStandingInstruction, com.tools20022.repository.msg.SettlementDetails52.mmFXStandingInstruction,
-					com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails8.mmStandingSettlementInstructionDetails, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails9.mmStandingSettlementInstructionDetails,
-					com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails10.mmStandingSettlementInstructionDetails,
-					com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails11.mmStandingSettlementInstructionDetails,
-					com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails12.mmStandingSettlementInstructionDetails,
-					com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails13.mmStandingSettlementInstructionDetails, com.tools20022.repository.msg.SettlementDetails43.mmFXStandingInstruction,
-					com.tools20022.repository.msg.InterestAmount1.mmStandardSettlementInstructions, com.tools20022.repository.msg.InterestAmount2.mmStandardSettlementInstructions,
-					com.tools20022.repository.msg.SettlementDetails65.mmFXStandingInstruction, com.tools20022.repository.msg.SettlementDetails67.mmFXStandingInstruction,
-					com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails16.mmStandingSettlementInstructionDetails, com.tools20022.repository.msg.SettlementDetails68.mmFXStandingInstruction,
-					com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails14.mmStandingSettlementInstructionDetails,
-					com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails15.mmStandingSettlementInstructionDetails, com.tools20022.repository.msg.SettlementDetails72.mmFXStandingInstruction,
-					com.tools20022.repository.msg.SettlementDetails81.mmFXStandingInstruction, com.tools20022.repository.msg.SettlementDetails78.mmFXStandingInstruction,
-					com.tools20022.repository.msg.SettlementDetails77.mmFXStandingInstruction, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails17.mmStandingSettlementInstructionDetails,
-					com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails18.mmStandingSettlementInstructionDetails,
-					com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails19.mmStandingSettlementInstructionDetails, com.tools20022.repository.msg.SettlementDetails83.mmFXStandingInstruction,
-					com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails21.mmStandingSettlementInstructionDetails,
-					com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails22.mmStandingSettlementInstructionDetails,
-					com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails20.mmStandingSettlementInstructionDetails, com.tools20022.repository.msg.SettlementDetails93.mmFXStandingInstruction,
-					com.tools20022.repository.msg.SettlementDetails97.mmFXStandingInstruction, com.tools20022.repository.msg.SettlementDetails94.mmFXStandingInstruction,
-					com.tools20022.repository.msg.SettlementDetails101.mmFXStandingInstruction, com.tools20022.repository.msg.SettlementDetails105.mmFXStandingInstruction,
-					com.tools20022.repository.msg.SettlementDetails106.mmFXStandingInstruction, com.tools20022.repository.msg.SettlementDetails111.mmFXStandingInstruction,
-					com.tools20022.repository.msg.SettlementDetails112.mmFXStandingInstruction, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails23.mmStandingSettlementInstructionDetails,
-					com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails25.mmStandingSettlementInstructionDetails,
-					com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails24.mmStandingSettlementInstructionDetails, com.tools20022.repository.msg.SettlementDetails113.mmFXStandingInstruction,
-					com.tools20022.repository.msg.SettlementDetails120.mmFXStandingInstruction, com.tools20022.repository.msg.SettlementDetails119.mmFXStandingInstruction,
-					com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails27.mmStandingSettlementInstructionDetails,
-					com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails28.mmStandingSettlementInstructionDetails,
-					com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails26.mmStandingSettlementInstructionDetails, com.tools20022.repository.msg.SettlementDetails122.mmFXStandingInstruction,
-					com.tools20022.repository.msg.SettlementDetails137.mmFXStandingInstruction, com.tools20022.repository.msg.SettlementDetails132.mmFXStandingInstruction,
-					com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails30.mmStandingSettlementInstructionDetails, com.tools20022.repository.msg.SettlementDetails138.mmFXStandingInstruction,
-					com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails29.mmStandingSettlementInstructionDetails,
-					com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails31.mmStandingSettlementInstructionDetails);
+			derivation_lazy = () -> Arrays.asList(SettlementDetails50.mmFXStandingInstruction, SecuritiesSettlementTransactionDetails3.mmStandingSettlementInstructionDetails,
+					SecuritiesSettlementTransactionDetails4.mmStandingSettlementInstructionDetails, SecuritiesSettlementTransactionDetails2.mmStandingSettlementInstructionDetails, SettlementDetails51.mmFXStandingInstruction,
+					SecuritiesSettlementTransactionDetails5.mmStandingSettlementInstructionDetails, SecuritiesSettlementTransactionDetails6.mmStandingSettlementInstructionDetails,
+					SecuritiesSettlementTransactionDetails7.mmStandingSettlementInstructionDetails, SettlementDetails3.mmFXStandingInstruction, SettlementDetails16.mmFXStandingInstruction, SettlementDetails31.mmFXStandingInstruction,
+					SettlementDetails40.mmFXStandingInstruction, SettlementDetails62.mmFXStandingInstruction, SettlementDetails63.mmFXStandingInstruction, SettlementDetails1.mmFXStandingInstruction,
+					SettlementDetails19.mmFXStandingInstruction, SettlementDetails22.mmFXStandingInstruction, SettlementDetails35.mmFXStandingInstruction, SettlementDetails42.mmFXStandingInstruction,
+					SettlementDetails52.mmFXStandingInstruction, SecuritiesSettlementTransactionDetails8.mmStandingSettlementInstructionDetails, SecuritiesSettlementTransactionDetails9.mmStandingSettlementInstructionDetails,
+					SecuritiesSettlementTransactionDetails10.mmStandingSettlementInstructionDetails, SecuritiesSettlementTransactionDetails11.mmStandingSettlementInstructionDetails,
+					SecuritiesSettlementTransactionDetails12.mmStandingSettlementInstructionDetails, SecuritiesSettlementTransactionDetails13.mmStandingSettlementInstructionDetails, SettlementDetails43.mmFXStandingInstruction,
+					InterestAmount1.mmStandardSettlementInstructions, InterestAmount2.mmStandardSettlementInstructions, SettlementDetails65.mmFXStandingInstruction, SettlementDetails67.mmFXStandingInstruction,
+					SecuritiesSettlementTransactionDetails16.mmStandingSettlementInstructionDetails, SettlementDetails68.mmFXStandingInstruction, SecuritiesSettlementTransactionDetails14.mmStandingSettlementInstructionDetails,
+					SecuritiesSettlementTransactionDetails15.mmStandingSettlementInstructionDetails, SettlementDetails72.mmFXStandingInstruction, SettlementDetails81.mmFXStandingInstruction, SettlementDetails78.mmFXStandingInstruction,
+					SettlementDetails77.mmFXStandingInstruction, SecuritiesSettlementTransactionDetails17.mmStandingSettlementInstructionDetails, SecuritiesSettlementTransactionDetails18.mmStandingSettlementInstructionDetails,
+					SecuritiesSettlementTransactionDetails19.mmStandingSettlementInstructionDetails, SettlementDetails83.mmFXStandingInstruction, SecuritiesSettlementTransactionDetails21.mmStandingSettlementInstructionDetails,
+					SecuritiesSettlementTransactionDetails22.mmStandingSettlementInstructionDetails, SecuritiesSettlementTransactionDetails20.mmStandingSettlementInstructionDetails, SettlementDetails93.mmFXStandingInstruction,
+					SettlementDetails97.mmFXStandingInstruction, SettlementDetails94.mmFXStandingInstruction, SettlementDetails101.mmFXStandingInstruction, SettlementDetails105.mmFXStandingInstruction,
+					SettlementDetails106.mmFXStandingInstruction, SettlementDetails111.mmFXStandingInstruction, SettlementDetails112.mmFXStandingInstruction, SecuritiesSettlementTransactionDetails23.mmStandingSettlementInstructionDetails,
+					SecuritiesSettlementTransactionDetails25.mmStandingSettlementInstructionDetails, SecuritiesSettlementTransactionDetails24.mmStandingSettlementInstructionDetails, SettlementDetails113.mmFXStandingInstruction,
+					SettlementDetails120.mmFXStandingInstruction, SettlementDetails119.mmFXStandingInstruction, SecuritiesSettlementTransactionDetails27.mmStandingSettlementInstructionDetails,
+					SecuritiesSettlementTransactionDetails28.mmStandingSettlementInstructionDetails, SecuritiesSettlementTransactionDetails26.mmStandingSettlementInstructionDetails, SettlementDetails122.mmFXStandingInstruction,
+					SettlementDetails137.mmFXStandingInstruction, SettlementDetails132.mmFXStandingInstruction, SecuritiesSettlementTransactionDetails30.mmStandingSettlementInstructionDetails, SettlementDetails138.mmFXStandingInstruction,
+					SecuritiesSettlementTransactionDetails29.mmStandingSettlementInstructionDetails, SecuritiesSettlementTransactionDetails31.mmStandingSettlementInstructionDetails);
 			elementContext_lazy = () -> Settlement.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "StandingSettlementInstruction";
 			definition = "Settlement Standing Instruction database to be used for settlement.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.StandingSettlementInstruction.mmSettlement;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.StandingSettlementInstruction.mmObject();
 		}
 	};
@@ -575,15 +554,15 @@ public class Settlement {
 	 */
 	public static final MMBusinessAssociationEnd mmSettlementPartyRole = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.NetObligation1.mmCounterpartySettlementInstructions);
+			derivation_lazy = () -> Arrays.asList(NetObligation1.mmCounterpartySettlementInstructions);
 			elementContext_lazy = () -> Settlement.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SettlementPartyRole";
 			definition = "Specifies roles played by a party in the settlement process.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.SettlementPartyRole.mmSettlement;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SettlementPartyRole.mmObject();
 		}
 	};
@@ -623,13 +602,13 @@ public class Settlement {
 		{
 			elementContext_lazy = () -> Settlement.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Trade";
 			definition = "Trade for which settlement information is provided.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.Trade.mmSettlement;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Trade.mmObject();
 		}
 	};
@@ -637,15 +616,14 @@ public class Settlement {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Settlement";
 				definition = "Process which consists in transferring the proceeds related to a trade from one party to the next one.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Trade.mmSettlement, com.tools20022.repository.entity.SettlementPartyRole.mmSettlement,
 						com.tools20022.repository.entity.StandingSettlementInstruction.mmSettlement);
 				subType_lazy = () -> Arrays.asList(CashSettlement.mmObject(), SecuritiesSettlement.mmObject(), CommercialTradeSettlement.mmObject());
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Settlement.mmCentralCounterpartyEligibilityIndicator, com.tools20022.repository.entity.Settlement.mmStandingSettlementInstruction,
-						com.tools20022.repository.entity.Settlement.mmSettlementPartyRole, com.tools20022.repository.entity.Settlement.mmTrade);
+				element_lazy = () -> Arrays.asList(Settlement.mmCentralCounterpartyEligibilityIndicator, Settlement.mmStandingSettlementInstruction, Settlement.mmSettlementPartyRole, Settlement.mmTrade);
 				derivationComponent_lazy = () -> Arrays.asList(CentralCounterPartyEligibility1Choice.mmObject(), CentralCounterPartyEligibility2Choice.mmObject(), CentralCounterPartyEligibility3Choice.mmObject(),
 						CentralCounterPartyEligibility4Choice.mmObject(), CentralCounterPartyEligibility5Choice.mmObject());
 			}

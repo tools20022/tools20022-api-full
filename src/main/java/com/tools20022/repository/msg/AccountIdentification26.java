@@ -19,7 +19,13 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.reda.StandingSettlementInstructionCancellationV01;
+import com.tools20022.repository.area.reda.StandingSettlementInstructionDeletionV01;
+import com.tools20022.repository.area.reda.StandingSettlementInstructionStatusAdviceV01;
+import com.tools20022.repository.area.reda.StandingSettlementInstructionV01;
 import com.tools20022.repository.entity.AccountIdentification;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -120,11 +126,11 @@ public class AccountIdentification26 {
 	 */
 	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AccountIdentification.mmProprietaryIdentification;
+			businessElementTrace_lazy = () -> AccountIdentification.mmProprietaryIdentification;
 			componentContext_lazy = () -> AccountIdentification26.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Unique identifier for an account. It is assigned by the account servicer using a proprietary identification scheme.";
 			maxOccurs = 1;
@@ -136,13 +142,12 @@ public class AccountIdentification26 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountIdentification26.mmProprietary);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.reda.StandingSettlementInstructionV01.mmAccountIdentification,
-						com.tools20022.repository.area.reda.StandingSettlementInstructionCancellationV01.mmAccountIdentification, com.tools20022.repository.area.reda.StandingSettlementInstructionStatusAdviceV01.mmAccountIdentification,
-						com.tools20022.repository.area.reda.StandingSettlementInstructionDeletionV01.mmAccountIdentification);
+				messageElement_lazy = () -> Arrays.asList(AccountIdentification26.mmProprietary);
+				messageBuildingBlock_lazy = () -> Arrays.asList(StandingSettlementInstructionV01.mmAccountIdentification, StandingSettlementInstructionCancellationV01.mmAccountIdentification,
+						StandingSettlementInstructionStatusAdviceV01.mmAccountIdentification, StandingSettlementInstructionDeletionV01.mmAccountIdentification);
 				trace_lazy = () -> AccountIdentification.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AccountIdentification26";
 				definition = "Unique identifier of an account, as assigned by the account servicer.";
 				previousVersion_lazy = () -> AccountIdentification1.mmObject();

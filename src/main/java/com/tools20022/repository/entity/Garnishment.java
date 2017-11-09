@@ -18,8 +18,13 @@
 package com.tools20022.repository.entity;
 
 import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.PaymentObligation;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.Garnishment1;
+import com.tools20022.repository.msg.StructuredRemittanceInformation10;
+import com.tools20022.repository.msg.StructuredRemittanceInformation12;
+import com.tools20022.repository.msg.StructuredRemittanceInformation13;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -33,6 +38,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.Garnishment1 Garnishment1}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
  * derivationElement} =
@@ -51,13 +63,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
  * superType} = {@linkplain com.tools20022.repository.entity.PaymentObligation
  * PaymentObligation}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Garnishment1 Garnishment1}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -82,12 +87,11 @@ public class Garnishment extends PaymentObligation {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Garnishment";
 				definition = "Legal process whereby the debtor pays another party than the creditor to settle a debt due by the creditor to that other party.";
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StructuredRemittanceInformation10.mmGarnishmentRemittance, com.tools20022.repository.msg.StructuredRemittanceInformation12.mmGarnishmentRemittance,
-						com.tools20022.repository.msg.StructuredRemittanceInformation13.mmGarnishmentRemittance);
+				derivationElement_lazy = () -> Arrays.asList(StructuredRemittanceInformation10.mmGarnishmentRemittance, StructuredRemittanceInformation12.mmGarnishmentRemittance, StructuredRemittanceInformation13.mmGarnishmentRemittance);
 				superType_lazy = () -> PaymentObligation.mmObject();
 				derivationComponent_lazy = () -> Arrays.asList(Garnishment1.mmObject());
 			}

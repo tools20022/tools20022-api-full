@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.PriceValueTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -83,7 +85,7 @@ public class CommissionValueType1Code extends PriceValueTypeCode {
 	 */
 	public static final MMCode mmPerUnit = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PerUnit";
 			owner_lazy = () -> CommissionValueType1Code.mmObject();
 		}
@@ -106,7 +108,7 @@ public class CommissionValueType1Code extends PriceValueTypeCode {
 	 */
 	public static final MMCode mmAbsolute = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Absolute";
 			owner_lazy = () -> CommissionValueType1Code.mmObject();
 		}
@@ -115,12 +117,12 @@ public class CommissionValueType1Code extends PriceValueTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("PEUN");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CommissionValueType1Code";
 				definition = "Specifies a type of value of the commission.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CommissionValueType1Code.mmPerUnit, com.tools20022.repository.codeset.CommissionValueType1Code.mmAbsolute);
+				code_lazy = () -> Arrays.asList(CommissionValueType1Code.mmPerUnit, CommissionValueType1Code.mmAbsolute);
 				trace_lazy = () -> PriceValueTypeCode.mmObject();
 			}
 		});

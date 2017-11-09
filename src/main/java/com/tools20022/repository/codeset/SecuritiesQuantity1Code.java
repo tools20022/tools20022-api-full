@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.SecuritiesQuantityTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -84,7 +86,7 @@ public class SecuritiesQuantity1Code extends SecuritiesQuantityTypeCode {
 	 */
 	public static final MMCode mmNo = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "No";
 			owner_lazy = () -> SecuritiesQuantity1Code.mmObject();
 			codeName = "SQNO";
@@ -110,7 +112,7 @@ public class SecuritiesQuantity1Code extends SecuritiesQuantityTypeCode {
 	 */
 	public static final MMCode mmUnknown = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unknown";
 			owner_lazy = () -> SecuritiesQuantity1Code.mmObject();
 			codeName = "UKWN";
@@ -136,7 +138,7 @@ public class SecuritiesQuantity1Code extends SecuritiesQuantityTypeCode {
 	 */
 	public static final MMCode mmYes = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Yes";
 			owner_lazy = () -> SecuritiesQuantity1Code.mmObject();
 			codeName = "SQYS";
@@ -146,12 +148,11 @@ public class SecuritiesQuantity1Code extends SecuritiesQuantityTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesQuantity1Code";
 				definition = "TSE/JASDEC codes for planned, maximum and minimum of shares to be purchased.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SecuritiesQuantity1Code.mmNo, com.tools20022.repository.codeset.SecuritiesQuantity1Code.mmUnknown,
-						com.tools20022.repository.codeset.SecuritiesQuantity1Code.mmYes);
+				code_lazy = () -> Arrays.asList(SecuritiesQuantity1Code.mmNo, SecuritiesQuantity1Code.mmUnknown, SecuritiesQuantity1Code.mmYes);
 				trace_lazy = () -> SecuritiesQuantityTypeCode.mmObject();
 			}
 		});

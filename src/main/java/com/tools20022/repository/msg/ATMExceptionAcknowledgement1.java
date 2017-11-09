@@ -19,6 +19,9 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.caam.ATMExceptionAcknowledgementV01;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -103,7 +106,7 @@ public class ATMExceptionAcknowledgement1 {
 			componentContext_lazy = () -> ATMExceptionAcknowledgement1.mmObject();
 			isDerived = false;
 			xmlTag = "ATM";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ATM";
 			definition = "ATM information.";
 			maxOccurs = 1;
@@ -144,7 +147,7 @@ public class ATMExceptionAcknowledgement1 {
 			componentContext_lazy = () -> ATMExceptionAcknowledgement1.mmObject();
 			isDerived = false;
 			xmlTag = "Cntxt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Context";
 			definition = "Context in which the transaction is performed, if any.";
 			maxOccurs = 1;
@@ -185,7 +188,7 @@ public class ATMExceptionAcknowledgement1 {
 			componentContext_lazy = () -> ATMExceptionAcknowledgement1.mmObject();
 			isDerived = false;
 			xmlTag = "Tx";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Transaction";
 			definition = "Acknowledgement of the exception advice.";
 			maxOccurs = 1;
@@ -198,11 +201,10 @@ public class ATMExceptionAcknowledgement1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMExceptionAcknowledgement1.mmATM, com.tools20022.repository.msg.ATMExceptionAcknowledgement1.mmContext,
-						com.tools20022.repository.msg.ATMExceptionAcknowledgement1.mmTransaction);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.caam.ATMExceptionAcknowledgementV01.mmATMExceptionAcknowledgement);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(ATMExceptionAcknowledgement1.mmATM, ATMExceptionAcknowledgement1.mmContext, ATMExceptionAcknowledgement1.mmTransaction);
+				messageBuildingBlock_lazy = () -> Arrays.asList(ATMExceptionAcknowledgementV01.mmATMExceptionAcknowledgement);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ATMExceptionAcknowledgement1";
 				definition = "Information related to the acknowledgement  of an ATM exception.";
 			}

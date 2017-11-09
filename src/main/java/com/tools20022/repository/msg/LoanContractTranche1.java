@@ -19,9 +19,13 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.*;
 import com.tools20022.repository.datatype.Number;
+import com.tools20022.repository.entity.Asset;
 import com.tools20022.repository.entity.Loan;
+import com.tools20022.repository.entity.PaymentTerms;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -106,7 +110,7 @@ public class LoanContractTranche1 {
 			componentContext_lazy = () -> LoanContractTranche1.mmObject();
 			isDerived = false;
 			xmlTag = "TrchNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TrancheNumber";
 			definition = "Unique sequence number of the tranche.";
 			maxOccurs = 1;
@@ -149,11 +153,11 @@ public class LoanContractTranche1 {
 	 */
 	public static final MMMessageAttribute mmExpectedDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Asset.mmMaturityDate;
+			businessElementTrace_lazy = () -> Asset.mmMaturityDate;
 			componentContext_lazy = () -> LoanContractTranche1.mmObject();
 			isDerived = false;
 			xmlTag = "XpctdDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExpectedDate";
 			definition = "Expected tranche payment date.";
 			maxOccurs = 1;
@@ -197,11 +201,11 @@ public class LoanContractTranche1 {
 	 */
 	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentTerms.mmAmount;
+			businessElementTrace_lazy = () -> PaymentTerms.mmAmount;
 			componentContext_lazy = () -> LoanContractTranche1.mmObject();
 			isDerived = false;
 			xmlTag = "Amt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Amount of the tranche as defined in the loan contract.";
 			maxOccurs = 1;
@@ -244,11 +248,11 @@ public class LoanContractTranche1 {
 	 */
 	public static final MMMessageAttribute mmDueDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Asset.mmMaturityDate;
+			businessElementTrace_lazy = () -> Asset.mmMaturityDate;
 			componentContext_lazy = () -> LoanContractTranche1.mmObject();
 			isDerived = false;
 			xmlTag = "DueDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DueDate";
 			definition = "Loan tranche due date.";
 			maxOccurs = 1;
@@ -290,7 +294,7 @@ public class LoanContractTranche1 {
 			componentContext_lazy = () -> LoanContractTranche1.mmObject();
 			isDerived = false;
 			xmlTag = "DrtnCd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DurationCode";
 			definition = "Loan tranche duration in a coded form.";
 			maxOccurs = 1;
@@ -333,7 +337,7 @@ public class LoanContractTranche1 {
 			componentContext_lazy = () -> LoanContractTranche1.mmObject();
 			isDerived = false;
 			xmlTag = "LastTrchInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LastTrancheIndicator";
 			definition = "Indicates whether this tranche is the last tranche of the full report.";
 			maxOccurs = 1;
@@ -345,12 +349,11 @@ public class LoanContractTranche1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LoanContractTranche1.mmTrancheNumber, com.tools20022.repository.msg.LoanContractTranche1.mmExpectedDate,
-						com.tools20022.repository.msg.LoanContractTranche1.mmAmount, com.tools20022.repository.msg.LoanContractTranche1.mmDueDate, com.tools20022.repository.msg.LoanContractTranche1.mmDurationCode,
-						com.tools20022.repository.msg.LoanContractTranche1.mmLastTrancheIndicator);
+				messageElement_lazy = () -> Arrays.asList(LoanContractTranche1.mmTrancheNumber, LoanContractTranche1.mmExpectedDate, LoanContractTranche1.mmAmount, LoanContractTranche1.mmDueDate, LoanContractTranche1.mmDurationCode,
+						LoanContractTranche1.mmLastTrancheIndicator);
 				trace_lazy = () -> Loan.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "LoanContractTranche1";
 				definition = "Provides details on the tranches defined for the loan contract.";
 			}

@@ -19,6 +19,8 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.SignedQuantityFormat4;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -104,10 +106,10 @@ public class AdjustedBalanceTypeSD3Choice {
 			componentContext_lazy = () -> AdjustedBalanceTypeSD3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "StockLn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StockLoan";
 			definition = "Stock loan transaction position. Stock loan is loaned / borrowed from / to a third party.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.AdjustedBalanceTypeSD1Choice.mmStockLoan;
+			previousVersion_lazy = () -> AdjustedBalanceTypeSD1Choice.mmStockLoan;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> SignedQuantityFormat4.mmObject();
@@ -156,10 +158,10 @@ public class AdjustedBalanceTypeSD3Choice {
 			componentContext_lazy = () -> AdjustedBalanceTypeSD3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Repo";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Repo";
 			definition = "Repurchase agreement (REPO) between a seller and a buyer whereby the seller agrees to repurchase the securities at an agreed upon price, and usually at a stated time. ";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.AdjustedBalanceTypeSD1Choice.mmRepo;
+			previousVersion_lazy = () -> AdjustedBalanceTypeSD1Choice.mmRepo;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> SignedQuantityFormat4.mmObject();
@@ -169,9 +171,9 @@ public class AdjustedBalanceTypeSD3Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AdjustedBalanceTypeSD3Choice.mmStockLoan, com.tools20022.repository.choice.AdjustedBalanceTypeSD3Choice.mmRepo);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(AdjustedBalanceTypeSD3Choice.mmStockLoan, AdjustedBalanceTypeSD3Choice.mmRepo);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AdjustedBalanceTypeSD3Choice";
 				definition = "Choice of balance types to provide transaction details.";
 				previousVersion_lazy = () -> AdjustedBalanceTypeSD1Choice.mmObject();

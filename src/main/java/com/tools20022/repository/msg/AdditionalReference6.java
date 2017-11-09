@@ -19,9 +19,14 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.acmt.*;
+import com.tools20022.repository.area.sese.*;
 import com.tools20022.repository.choice.PartyIdentification90Choice;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.GenericIdentification;
+import com.tools20022.repository.entity.Party;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -239,15 +244,15 @@ public class AdditionalReference6 {
 	 */
 	public static final MMMessageAttribute mmReference = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmIdentification;
+			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> AdditionalReference6.mmObject();
 			isDerived = false;
 			xmlTag = "Ref";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reference";
 			definition = "Message identification of a message. This reference was assigned by the party issuing the message.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AdditionalReference7.mmReference);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AdditionalReference4.mmReference;
+			nextVersions_lazy = () -> Arrays.asList(AdditionalReference7.mmReference);
+			previousVersion_lazy = () -> AdditionalReference4.mmReference;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -302,15 +307,15 @@ public class AdditionalReference6 {
 	 */
 	public static final MMMessageAttribute mmReferenceIssuer = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> AdditionalReference6.mmObject();
 			isDerived = false;
 			xmlTag = "RefIssr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReferenceIssuer";
 			definition = "Issuer of the reference.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AdditionalReference7.mmReferenceIssuer);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AdditionalReference4.mmReferenceIssuer;
+			nextVersions_lazy = () -> Arrays.asList(AdditionalReference7.mmReferenceIssuer);
+			previousVersion_lazy = () -> AdditionalReference4.mmReferenceIssuer;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification90Choice.mmObject();
@@ -362,11 +367,11 @@ public class AdditionalReference6 {
 			componentContext_lazy = () -> AdditionalReference6.mmObject();
 			isDerived = false;
 			xmlTag = "MsgNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageName";
 			definition = "Name of the message.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AdditionalReference7.mmMessageName);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AdditionalReference4.mmMessageName;
+			nextVersions_lazy = () -> Arrays.asList(AdditionalReference7.mmMessageName);
+			previousVersion_lazy = () -> AdditionalReference4.mmMessageName;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -376,29 +381,19 @@ public class AdditionalReference6 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AdditionalReference6.mmReference, com.tools20022.repository.msg.AdditionalReference6.mmReferenceIssuer,
-						com.tools20022.repository.msg.AdditionalReference6.mmMessageName);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.PortfolioTransferInstructionV07.mmPoolReference, com.tools20022.repository.area.sese.PortfolioTransferInstructionV07.mmPreviousReference,
-						com.tools20022.repository.area.sese.PortfolioTransferInstructionV07.mmRelatedReference, com.tools20022.repository.area.sese.AccountHoldingInformationV05.mmPoolReference,
-						com.tools20022.repository.area.sese.AccountHoldingInformationV05.mmPreviousReference, com.tools20022.repository.area.sese.AccountHoldingInformationV05.mmRelatedReference,
-						com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV07.mmPoolReference, com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV07.mmPreviousReference,
-						com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV07.mmRelatedReference, com.tools20022.repository.area.sese.TransferInConfirmationV07.mmPoolReference,
-						com.tools20022.repository.area.sese.TransferInConfirmationV07.mmPreviousReference, com.tools20022.repository.area.sese.TransferInConfirmationV07.mmRelatedReference,
-						com.tools20022.repository.area.acmt.AccountOpeningInstructionV06.mmPreviousReference, com.tools20022.repository.area.sese.TransferOutConfirmationV07.mmPoolReference,
-						com.tools20022.repository.area.sese.TransferOutConfirmationV07.mmPreviousReference, com.tools20022.repository.area.sese.TransferOutConfirmationV07.mmRelatedReference,
-						com.tools20022.repository.area.acmt.AccountDetailsConfirmationV06.mmRelatedReference, com.tools20022.repository.area.sese.PortfolioTransferConfirmationV07.mmPoolReference,
-						com.tools20022.repository.area.sese.PortfolioTransferConfirmationV07.mmPreviousReference, com.tools20022.repository.area.sese.PortfolioTransferConfirmationV07.mmRelatedReference,
-						com.tools20022.repository.area.sese.TransferOutInstructionV07.mmPoolReference, com.tools20022.repository.area.sese.TransferOutInstructionV07.mmPreviousReference,
-						com.tools20022.repository.area.sese.TransferOutInstructionV07.mmRelatedReference, com.tools20022.repository.area.acmt.AccountManagementStatusReportV05.mmRelatedReference,
-						com.tools20022.repository.area.acmt.AccountModificationInstructionV06.mmPreviousReference, com.tools20022.repository.area.sese.TransferInInstructionV07.mmPoolReference,
-						com.tools20022.repository.area.sese.TransferInInstructionV07.mmPreviousReference, com.tools20022.repository.area.sese.TransferInInstructionV07.mmRelatedReference,
-						com.tools20022.repository.area.sese.AccountHoldingInformationRequestV04.mmPoolReference, com.tools20022.repository.area.sese.AccountHoldingInformationRequestV04.mmPreviousReference,
-						com.tools20022.repository.area.sese.AccountHoldingInformationRequestV04.mmRelatedReference, com.tools20022.repository.area.acmt.AccountDetailsConfirmationV07.mmRelatedReference,
-						com.tools20022.repository.area.acmt.AccountModificationInstructionV07.mmPreviousReference, com.tools20022.repository.area.acmt.AccountOpeningInstructionV07.mmPreviousReference,
-						com.tools20022.repository.area.acmt.AccountManagementStatusReportV06.mmRelatedReference);
+				messageElement_lazy = () -> Arrays.asList(AdditionalReference6.mmReference, AdditionalReference6.mmReferenceIssuer, AdditionalReference6.mmMessageName);
+				messageBuildingBlock_lazy = () -> Arrays.asList(PortfolioTransferInstructionV07.mmPoolReference, PortfolioTransferInstructionV07.mmPreviousReference, PortfolioTransferInstructionV07.mmRelatedReference,
+						AccountHoldingInformationV05.mmPoolReference, AccountHoldingInformationV05.mmPreviousReference, AccountHoldingInformationV05.mmRelatedReference, PortfolioTransferCancellationRequestV07.mmPoolReference,
+						PortfolioTransferCancellationRequestV07.mmPreviousReference, PortfolioTransferCancellationRequestV07.mmRelatedReference, TransferInConfirmationV07.mmPoolReference, TransferInConfirmationV07.mmPreviousReference,
+						TransferInConfirmationV07.mmRelatedReference, AccountOpeningInstructionV06.mmPreviousReference, TransferOutConfirmationV07.mmPoolReference, TransferOutConfirmationV07.mmPreviousReference,
+						TransferOutConfirmationV07.mmRelatedReference, AccountDetailsConfirmationV06.mmRelatedReference, PortfolioTransferConfirmationV07.mmPoolReference, PortfolioTransferConfirmationV07.mmPreviousReference,
+						PortfolioTransferConfirmationV07.mmRelatedReference, TransferOutInstructionV07.mmPoolReference, TransferOutInstructionV07.mmPreviousReference, TransferOutInstructionV07.mmRelatedReference,
+						AccountManagementStatusReportV05.mmRelatedReference, AccountModificationInstructionV06.mmPreviousReference, TransferInInstructionV07.mmPoolReference, TransferInInstructionV07.mmPreviousReference,
+						TransferInInstructionV07.mmRelatedReference, AccountHoldingInformationRequestV04.mmPoolReference, AccountHoldingInformationRequestV04.mmPreviousReference, AccountHoldingInformationRequestV04.mmRelatedReference,
+						AccountDetailsConfirmationV07.mmRelatedReference, AccountModificationInstructionV07.mmPreviousReference, AccountOpeningInstructionV07.mmPreviousReference, AccountManagementStatusReportV06.mmRelatedReference);
 				trace_lazy = () -> GenericIdentification.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AdditionalReference6";
 				definition = "Reference to a related message or transaction.";
 				nextVersions_lazy = () -> Arrays.asList(AdditionalReference7.mmObject());

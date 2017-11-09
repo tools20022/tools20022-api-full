@@ -19,9 +19,11 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.CommercialTrade;
 import com.tools20022.repository.entity.Contract;
 import com.tools20022.repository.entity.Loan;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.LoanContract1;
 import com.tools20022.repository.msg.TradeContract1;
 import java.util.Arrays;
@@ -101,7 +103,7 @@ public class UnderlyingContract1Choice {
 			componentContext_lazy = () -> UnderlyingContract1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Ln";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Loan";
 			definition = "Underlying registered contract is a loan.";
 			maxOccurs = 1;
@@ -148,7 +150,7 @@ public class UnderlyingContract1Choice {
 			componentContext_lazy = () -> UnderlyingContract1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Trad";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Trade";
 			definition = "Underlying registered contract is a commercial trade.";
 			maxOccurs = 1;
@@ -161,10 +163,10 @@ public class UnderlyingContract1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.UnderlyingContract1Choice.mmLoan, com.tools20022.repository.choice.UnderlyingContract1Choice.mmTrade);
+				messageElement_lazy = () -> Arrays.asList(UnderlyingContract1Choice.mmLoan, UnderlyingContract1Choice.mmTrade);
 				trace_lazy = () -> Contract.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "UnderlyingContract1Choice";
 				definition = "Choice of the type of underlying contract.";
 			}

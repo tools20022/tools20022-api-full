@@ -20,9 +20,13 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.PriceValueType9Code;
 import com.tools20022.repository.datatype.RestrictedFINDecimalNumber;
+import com.tools20022.repository.entity.Index;
+import com.tools20022.repository.entity.Price;
 import com.tools20022.repository.entity.SecuritiesPricing;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.AmountPrice5;
 import com.tools20022.repository.msg.AmountPricePerAmount3;
 import com.tools20022.repository.msg.AmountPricePerFinancialInstrumentQuantity4;
@@ -122,11 +126,11 @@ public class PriceFormat40Choice {
 	 */
 	public static final MMMessageAssociationEnd mmPercentagePrice = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmRate;
+			businessElementTrace_lazy = () -> SecuritiesPricing.mmRate;
 			componentContext_lazy = () -> PriceFormat40Choice.mmObject();
 			isDerived = false;
 			xmlTag = "PctgPric";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PercentagePrice";
 			definition = "Price expressed as a percentage.";
 			maxOccurs = 1;
@@ -169,11 +173,11 @@ public class PriceFormat40Choice {
 	 */
 	public static final MMMessageAssociationEnd mmAmountPrice = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Price.mmAmount;
+			businessElementTrace_lazy = () -> Price.mmAmount;
 			componentContext_lazy = () -> PriceFormat40Choice.mmObject();
 			isDerived = false;
 			xmlTag = "AmtPric";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmountPrice";
 			definition = "Price expressed as a currency and amount.";
 			maxOccurs = 1;
@@ -216,7 +220,7 @@ public class PriceFormat40Choice {
 			componentContext_lazy = () -> PriceFormat40Choice.mmObject();
 			isDerived = false;
 			xmlTag = "NotSpcfdPric";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotSpecifiedPrice";
 			definition = "Value of the price not specified.";
 			maxOccurs = 1;
@@ -262,11 +266,11 @@ public class PriceFormat40Choice {
 	 */
 	public static final MMMessageAssociationEnd mmAmountPricePerFinancialInstrumentQuantity = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmAmountPricePerFinancialInstrumentQuantity;
+			businessElementTrace_lazy = () -> SecuritiesPricing.mmAmountPricePerFinancialInstrumentQuantity;
 			componentContext_lazy = () -> PriceFormat40Choice.mmObject();
 			isDerived = false;
 			xmlTag = "AmtPricPerFinInstrmQty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmountPricePerFinancialInstrumentQuantity";
 			definition = "Price expressed as a ratio: amount price per financial instrument quantity.";
 			maxOccurs = 1;
@@ -309,11 +313,11 @@ public class PriceFormat40Choice {
 	 */
 	public static final MMMessageAssociationEnd mmAmountPricePerAmount = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmAmountPricePerAmount;
+			businessElementTrace_lazy = () -> SecuritiesPricing.mmAmountPricePerAmount;
 			componentContext_lazy = () -> PriceFormat40Choice.mmObject();
 			isDerived = false;
 			xmlTag = "AmtPricPerAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmountPricePerAmount";
 			definition = "Price expressed as a ratio: amount price per amount";
 			maxOccurs = 1;
@@ -358,11 +362,11 @@ public class PriceFormat40Choice {
 	 */
 	public static final MMMessageAttribute mmIndexPoints = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Index.mmIndexPoints;
+			businessElementTrace_lazy = () -> Index.mmIndexPoints;
 			componentContext_lazy = () -> PriceFormat40Choice.mmObject();
 			isDerived = false;
 			xmlTag = "IndxPts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IndexPoints";
 			definition = "Price expressed in index points.";
 			maxOccurs = 1;
@@ -374,12 +378,11 @@ public class PriceFormat40Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PriceFormat40Choice.mmPercentagePrice, com.tools20022.repository.choice.PriceFormat40Choice.mmAmountPrice,
-						com.tools20022.repository.choice.PriceFormat40Choice.mmNotSpecifiedPrice, com.tools20022.repository.choice.PriceFormat40Choice.mmAmountPricePerFinancialInstrumentQuantity,
-						com.tools20022.repository.choice.PriceFormat40Choice.mmAmountPricePerAmount, com.tools20022.repository.choice.PriceFormat40Choice.mmIndexPoints);
+				messageElement_lazy = () -> Arrays.asList(PriceFormat40Choice.mmPercentagePrice, PriceFormat40Choice.mmAmountPrice, PriceFormat40Choice.mmNotSpecifiedPrice, PriceFormat40Choice.mmAmountPricePerFinancialInstrumentQuantity,
+						PriceFormat40Choice.mmAmountPricePerAmount, PriceFormat40Choice.mmIndexPoints);
 				trace_lazy = () -> SecuritiesPricing.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
 						return DateFormat.getDateInstance(java.text.DateFormat.LONG).parse("May 5, 2016");

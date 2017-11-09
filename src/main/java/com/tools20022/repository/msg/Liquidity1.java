@@ -19,10 +19,12 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
 import com.tools20022.repository.datatype.DecimalNumber;
 import com.tools20022.repository.datatype.PercentageRate;
 import com.tools20022.repository.entity.Liquidity;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -107,11 +109,11 @@ public class Liquidity1 {
 	 */
 	public static final MMMessageAttribute mmValue = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Liquidity.mmValue;
+			businessElementTrace_lazy = () -> Liquidity.mmValue;
 			componentContext_lazy = () -> Liquidity1.mmObject();
 			isDerived = false;
 			xmlTag = "Val";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Value";
 			definition = "Market value of the securities position for which liquidity details are provided.";
 			maxOccurs = 1;
@@ -153,7 +155,7 @@ public class Liquidity1 {
 			componentContext_lazy = () -> Liquidity1.mmObject();
 			isDerived = false;
 			xmlTag = "NbOfScties";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NumberOfSecurities";
 			definition = "Number of securities for which liquidity range details are provided.";
 			maxOccurs = 1;
@@ -199,11 +201,11 @@ public class Liquidity1 {
 	 */
 	public static final MMMessageAttribute mmUpper = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Liquidity.mmUpper;
+			businessElementTrace_lazy = () -> Liquidity.mmUpper;
 			componentContext_lazy = () -> Liquidity1.mmObject();
 			isDerived = false;
 			xmlTag = "Upper";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Upper";
 			definition = "Upper liquidity indicator, represented as a percentage of the average trade daily volume.";
 			maxOccurs = 1;
@@ -249,11 +251,11 @@ public class Liquidity1 {
 	 */
 	public static final MMMessageAttribute mmLower = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Liquidity.mmLower;
+			businessElementTrace_lazy = () -> Liquidity.mmLower;
 			componentContext_lazy = () -> Liquidity1.mmObject();
 			isDerived = false;
 			xmlTag = "Lwr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Lower";
 			definition = "Lower liquidity indicator, represented as a percentage of the average trade daily volume.";
 			maxOccurs = 1;
@@ -265,11 +267,10 @@ public class Liquidity1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Liquidity1.mmValue, com.tools20022.repository.msg.Liquidity1.mmNumberOfSecurities, com.tools20022.repository.msg.Liquidity1.mmUpper,
-						com.tools20022.repository.msg.Liquidity1.mmLower);
+				messageElement_lazy = () -> Arrays.asList(Liquidity1.mmValue, Liquidity1.mmNumberOfSecurities, Liquidity1.mmUpper, Liquidity1.mmLower);
 				trace_lazy = () -> Liquidity.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Liquidity1";
 				definition = "Ability of a financial instrument to be easily traded and converted to cash, at conditions that do not affect its price.";
 			}

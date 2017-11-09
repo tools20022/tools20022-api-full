@@ -19,10 +19,14 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.seev.*;
 import com.tools20022.repository.choice.DocumentIdentification1Choice;
 import com.tools20022.repository.choice.DocumentNumber1Choice;
 import com.tools20022.repository.choice.ProcessingPosition1Choice;
 import com.tools20022.repository.entity.Document;
+import com.tools20022.repository.entity.GenericIdentification;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -211,14 +215,14 @@ public class DocumentIdentification13 {
 	 */
 	public static final MMMessageAssociationEnd mmIdentification = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmIdentification;
+			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> DocumentIdentification13.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Unique identifier of the document (message) assigned either by the account servicer or the account owner.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DocumentIdentification32.mmIdentification);
+			nextVersions_lazy = () -> Arrays.asList(DocumentIdentification32.mmIdentification);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -266,10 +270,10 @@ public class DocumentIdentification13 {
 			componentContext_lazy = () -> DocumentIdentification13.mmObject();
 			isDerived = false;
 			xmlTag = "DocNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DocumentNumber";
 			definition = "Identification of the type of document.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DocumentIdentification32.mmDocumentNumber);
+			nextVersions_lazy = () -> Arrays.asList(DocumentIdentification32.mmDocumentNumber);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -320,10 +324,10 @@ public class DocumentIdentification13 {
 			componentContext_lazy = () -> DocumentIdentification13.mmObject();
 			isDerived = false;
 			xmlTag = "LkgTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LinkageType";
 			definition = "Specifies when this document is to be processed relative to an other referred document.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DocumentIdentification32.mmLinkageType);
+			nextVersions_lazy = () -> Arrays.asList(DocumentIdentification32.mmLinkageType);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -334,29 +338,21 @@ public class DocumentIdentification13 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DocumentIdentification13.mmIdentification, com.tools20022.repository.msg.DocumentIdentification13.mmDocumentNumber,
-						com.tools20022.repository.msg.DocumentIdentification13.mmLinkageType);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.CorporateActionInstructionV01.mmOtherDocumentIdentification,
-						com.tools20022.repository.area.seev.CorporateActionInstructionV02.mmOtherDocumentIdentification, com.tools20022.repository.area.seev.CorporateActionInstructionV03.mmOtherDocumentIdentification,
-						com.tools20022.repository.area.seev.CorporateActionInstructionV04.mmOtherDocumentIdentification, com.tools20022.repository.area.seev.CorporateActionMovementConfirmationV01.mmOtherDocumentIdentification,
-						com.tools20022.repository.area.seev.CorporateActionMovementConfirmationV02.mmOtherDocumentIdentification, com.tools20022.repository.area.seev.CorporateActionMovementConfirmationV03.mmOtherDocumentIdentification,
-						com.tools20022.repository.area.seev.CorporateActionMovementConfirmationV04.mmOtherDocumentIdentification,
-						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV01.mmOtherDocumentIdentification,
-						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV02.mmOtherDocumentIdentification,
-						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV03.mmOtherDocumentIdentification,
-						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV04.mmOtherDocumentIdentification,
-						com.tools20022.repository.area.seev.CorporateActionMovementReversalAdviceV01.mmOtherDocumentIdentification, com.tools20022.repository.area.seev.CorporateActionMovementReversalAdviceV02.mmOtherDocumentIdentification,
-						com.tools20022.repository.area.seev.CorporateActionMovementReversalAdviceV03.mmOtherDocumentIdentification, com.tools20022.repository.area.seev.CorporateActionMovementReversalAdviceV04.mmOtherDocumentIdentification,
-						com.tools20022.repository.area.seev.CorporateActionNotificationV01.mmOtherDocumentIdentification, com.tools20022.repository.area.seev.CorporateActionNotificationV02.mmOtherDocumentIdentification,
-						com.tools20022.repository.area.seev.CorporateActionNotificationV03.mmOtherDocumentIdentification, com.tools20022.repository.area.seev.CorporateActionNotificationV04.mmOtherDocumentIdentification,
-						com.tools20022.repository.area.seev.CorporateActionMovementConfirmationV05.mmOtherDocumentIdentification, com.tools20022.repository.area.seev.CorporateActionNotificationV05.mmOtherDocumentIdentification,
-						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV05.mmOtherDocumentIdentification, com.tools20022.repository.area.seev.CorporateActionInstructionV05.mmOtherDocumentIdentification,
-						com.tools20022.repository.area.seev.CorporateActionMovementReversalAdviceV05.mmOtherDocumentIdentification, com.tools20022.repository.area.seev.CorporateActionMovementConfirmationV06.mmOtherDocumentIdentification,
-						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV06.mmOtherDocumentIdentification,
-						com.tools20022.repository.area.seev.CorporateActionMovementReversalAdviceV06.mmOtherDocumentIdentification);
+				messageElement_lazy = () -> Arrays.asList(DocumentIdentification13.mmIdentification, DocumentIdentification13.mmDocumentNumber, DocumentIdentification13.mmLinkageType);
+				messageBuildingBlock_lazy = () -> Arrays.asList(CorporateActionInstructionV01.mmOtherDocumentIdentification, CorporateActionInstructionV02.mmOtherDocumentIdentification,
+						CorporateActionInstructionV03.mmOtherDocumentIdentification, CorporateActionInstructionV04.mmOtherDocumentIdentification, CorporateActionMovementConfirmationV01.mmOtherDocumentIdentification,
+						CorporateActionMovementConfirmationV02.mmOtherDocumentIdentification, CorporateActionMovementConfirmationV03.mmOtherDocumentIdentification, CorporateActionMovementConfirmationV04.mmOtherDocumentIdentification,
+						CorporateActionMovementPreliminaryAdviceV01.mmOtherDocumentIdentification, CorporateActionMovementPreliminaryAdviceV02.mmOtherDocumentIdentification,
+						CorporateActionMovementPreliminaryAdviceV03.mmOtherDocumentIdentification, CorporateActionMovementPreliminaryAdviceV04.mmOtherDocumentIdentification,
+						CorporateActionMovementReversalAdviceV01.mmOtherDocumentIdentification, CorporateActionMovementReversalAdviceV02.mmOtherDocumentIdentification, CorporateActionMovementReversalAdviceV03.mmOtherDocumentIdentification,
+						CorporateActionMovementReversalAdviceV04.mmOtherDocumentIdentification, CorporateActionNotificationV01.mmOtherDocumentIdentification, CorporateActionNotificationV02.mmOtherDocumentIdentification,
+						CorporateActionNotificationV03.mmOtherDocumentIdentification, CorporateActionNotificationV04.mmOtherDocumentIdentification, CorporateActionMovementConfirmationV05.mmOtherDocumentIdentification,
+						CorporateActionNotificationV05.mmOtherDocumentIdentification, CorporateActionMovementPreliminaryAdviceV05.mmOtherDocumentIdentification, CorporateActionInstructionV05.mmOtherDocumentIdentification,
+						CorporateActionMovementReversalAdviceV05.mmOtherDocumentIdentification, CorporateActionMovementConfirmationV06.mmOtherDocumentIdentification,
+						CorporateActionMovementPreliminaryAdviceV06.mmOtherDocumentIdentification, CorporateActionMovementReversalAdviceV06.mmOtherDocumentIdentification);
 				trace_lazy = () -> Document.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DocumentIdentification13";
 				definition = "Identification of a document as well as the document number and type of link.";
 				nextVersions_lazy = () -> Arrays.asList(DocumentIdentification32.mmObject());

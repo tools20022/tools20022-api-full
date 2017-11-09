@@ -20,8 +20,10 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ActiveOrHistoricCurrencyCode;
 import com.tools20022.repository.codeset.CountryCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -96,7 +98,7 @@ public class ReportParameters {
 			componentContext_lazy = () -> ReportParameters.mmObject();
 			isDerived = false;
 			xmlTag = "Ctry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Country";
 			definition = "Country for which the cash flow is to be reported.";
 			maxOccurs = 1;
@@ -138,7 +140,7 @@ public class ReportParameters {
 			componentContext_lazy = () -> ReportParameters.mmObject();
 			isDerived = false;
 			xmlTag = "Ccy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Currency";
 			definition = "Currency for which the cash flow is to be reported.";
 			maxOccurs = 1;
@@ -181,7 +183,7 @@ public class ReportParameters {
 			componentContext_lazy = () -> ReportParameters.mmObject();
 			isDerived = false;
 			xmlTag = "Pty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Party";
 			definition = "Party, eg, fund management company, for which the cash flow report is requested.";
 			maxOccurs = 1;
@@ -224,7 +226,7 @@ public class ReportParameters {
 			componentContext_lazy = () -> ReportParameters.mmObject();
 			isDerived = false;
 			xmlTag = "UsrDfndParam";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UserDefinedParameter";
 			definition = "User defined parameter/s to be used for the cash forecast report.";
 			maxOccurs = 1;
@@ -237,10 +239,9 @@ public class ReportParameters {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReportParameters.mmCountry, com.tools20022.repository.msg.ReportParameters.mmCurrency, com.tools20022.repository.msg.ReportParameters.mmParty,
-						com.tools20022.repository.msg.ReportParameters.mmUserDefinedParameter);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(ReportParameters.mmCountry, ReportParameters.mmCurrency, ReportParameters.mmParty, ReportParameters.mmUserDefinedParameter);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ReportParameters";
 				definition = "Parameters to be used in a report.";
 			}

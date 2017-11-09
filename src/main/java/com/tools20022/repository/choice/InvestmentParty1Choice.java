@@ -20,7 +20,9 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max50Text;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.PersonIdentification12;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -107,10 +109,10 @@ public class InvestmentParty1Choice {
 			componentContext_lazy = () -> InvestmentParty1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Person";
 			definition = "Identification of a person.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ExecutingParty1Choice.mmPerson);
+			nextVersions_lazy = () -> Arrays.asList(ExecutingParty1Choice.mmPerson);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -158,10 +160,10 @@ public class InvestmentParty1Choice {
 			componentContext_lazy = () -> InvestmentParty1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Algo";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Algorithm";
 			definition = "Identification of an algorithm.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ExecutingParty1Choice.mmAlgorithm);
+			nextVersions_lazy = () -> Arrays.asList(ExecutingParty1Choice.mmAlgorithm);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max50Text.mmObject();
@@ -171,9 +173,9 @@ public class InvestmentParty1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.InvestmentParty1Choice.mmPerson, com.tools20022.repository.choice.InvestmentParty1Choice.mmAlgorithm);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(InvestmentParty1Choice.mmPerson, InvestmentParty1Choice.mmAlgorithm);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InvestmentParty1Choice";
 				definition = "Identification of the investment party.";
 				nextVersions_lazy = () -> Arrays.asList(ExecutingParty1Choice.mmObject());

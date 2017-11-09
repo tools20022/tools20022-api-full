@@ -20,8 +20,10 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.ReportParameter2Choice;
 import com.tools20022.repository.entity.FundsCashFlow;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -110,7 +112,7 @@ public class ForecastParameter1 {
 			componentContext_lazy = () -> ForecastParameter1.mmObject();
 			isDerived = false;
 			xmlTag = "RptParam";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportParameter";
 			definition = "Type of parameter used for grouping the information in a report, eg, country code, currency code, BIC or a user defined parameter.";
 			maxOccurs = 1;
@@ -159,7 +161,7 @@ public class ForecastParameter1 {
 			componentContext_lazy = () -> ForecastParameter1.mmObject();
 			isDerived = false;
 			xmlTag = "EstmtdCshInFcstDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EstimatedCashInForecastDetails";
 			definition = "Cash movements into a fund as a result of investment funds transactions, eg, subscriptions or switch-in.";
 			minOccurs = 0;
@@ -208,7 +210,7 @@ public class ForecastParameter1 {
 			componentContext_lazy = () -> ForecastParameter1.mmObject();
 			isDerived = false;
 			xmlTag = "EstmtdCshOutFcstDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EstimatedCashOutForecastDetails";
 			definition = "Cash movements out of a fund as a result of investment funds transactions, eg, redemptions or switch-out.";
 			minOccurs = 0;
@@ -257,7 +259,7 @@ public class ForecastParameter1 {
 			componentContext_lazy = () -> ForecastParameter1.mmObject();
 			isDerived = false;
 			xmlTag = "EstmtdNetCshFcstDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EstimatedNetCashForecastDetails";
 			definition = "Net cash movements to a fund as a result of investment funds transactions.";
 			minOccurs = 0;
@@ -269,11 +271,11 @@ public class ForecastParameter1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ForecastParameter1.mmReportParameter, com.tools20022.repository.msg.ForecastParameter1.mmEstimatedCashInForecastDetails,
-						com.tools20022.repository.msg.ForecastParameter1.mmEstimatedCashOutForecastDetails, com.tools20022.repository.msg.ForecastParameter1.mmEstimatedNetCashForecastDetails);
+				messageElement_lazy = () -> Arrays.asList(ForecastParameter1.mmReportParameter, ForecastParameter1.mmEstimatedCashInForecastDetails, ForecastParameter1.mmEstimatedCashOutForecastDetails,
+						ForecastParameter1.mmEstimatedNetCashForecastDetails);
 				trace_lazy = () -> FundsCashFlow.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ForecastParameter1";
 				definition = "Parameters used to report cash movements,eg, country code, currency code, BIC or a user defined parameter.";
 			}

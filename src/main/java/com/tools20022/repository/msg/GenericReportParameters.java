@@ -20,9 +20,11 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.AccountIdentificationFormatChoice;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.Max70Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -107,7 +109,7 @@ public class GenericReportParameters {
 			componentContext_lazy = () -> GenericReportParameters.mmObject();
 			isDerived = false;
 			xmlTag = "AcctId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountIdentification";
 			definition = "Unique and unambiguous identification for the account between the account owner and the account servicer.";
 			minOccurs = 0;
@@ -147,7 +149,7 @@ public class GenericReportParameters {
 			componentContext_lazy = () -> GenericReportParameters.mmObject();
 			isDerived = false;
 			xmlTag = "FinInstrmDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentDetails";
 			definition = "Financial instrument for which the user-defined report is requested.";
 			minOccurs = 0;
@@ -188,7 +190,7 @@ public class GenericReportParameters {
 			componentContext_lazy = () -> GenericReportParameters.mmObject();
 			isDerived = false;
 			xmlTag = "RptDesc";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportDescription";
 			definition = "Type of report requested.";
 			maxOccurs = 1;
@@ -229,7 +231,7 @@ public class GenericReportParameters {
 			componentContext_lazy = () -> GenericReportParameters.mmObject();
 			isDerived = false;
 			xmlTag = "Dt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Date";
 			definition = "Date for which the report is requested.";
 			maxOccurs = 1;
@@ -271,7 +273,7 @@ public class GenericReportParameters {
 			componentContext_lazy = () -> GenericReportParameters.mmObject();
 			isDerived = false;
 			xmlTag = "UsrDfndParam";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UserDefinedParameter";
 			definition = "Parameters that cannot be specifed in the structured fields provided.";
 			maxOccurs = 10;
@@ -283,10 +285,10 @@ public class GenericReportParameters {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GenericReportParameters.mmAccountIdentification, com.tools20022.repository.msg.GenericReportParameters.mmFinancialInstrumentDetails,
-						com.tools20022.repository.msg.GenericReportParameters.mmReportDescription, com.tools20022.repository.msg.GenericReportParameters.mmDate, com.tools20022.repository.msg.GenericReportParameters.mmUserDefinedParameter);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(GenericReportParameters.mmAccountIdentification, GenericReportParameters.mmFinancialInstrumentDetails, GenericReportParameters.mmReportDescription, GenericReportParameters.mmDate,
+						GenericReportParameters.mmUserDefinedParameter);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "GenericReportParameters";
 				definition = "Parameters for which a user defined report is requested.";
 			}

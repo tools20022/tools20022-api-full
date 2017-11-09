@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ResponseStatusCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -93,7 +95,7 @@ public class ResponseStatus1Code extends ResponseStatusCode {
 	 */
 	public static final MMCode mmPartlyAccepted = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartlyAccepted";
 			owner_lazy = () -> ResponseStatus1Code.mmObject();
 		}
@@ -116,7 +118,7 @@ public class ResponseStatus1Code extends ResponseStatusCode {
 	 */
 	public static final MMCode mmAccepted = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Accepted";
 			owner_lazy = () -> ResponseStatus1Code.mmObject();
 		}
@@ -139,7 +141,7 @@ public class ResponseStatus1Code extends ResponseStatusCode {
 	 */
 	public static final MMCode mmRejected = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rejected";
 			owner_lazy = () -> ResponseStatus1Code.mmObject();
 		}
@@ -162,7 +164,7 @@ public class ResponseStatus1Code extends ResponseStatusCode {
 	 */
 	public static final MMCode mmSubstitutionAccepted = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubstitutionAccepted";
 			owner_lazy = () -> ResponseStatus1Code.mmObject();
 		}
@@ -171,13 +173,12 @@ public class ResponseStatus1Code extends ResponseStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ACCP");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ResponseStatus1Code";
 				definition = "Specifies the status of the received collateral message (collateral claim, a collateral proposal or a proposal/request for collateral substitution) from a collateral management perspective.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ResponseStatus1Code.mmPartlyAccepted, com.tools20022.repository.codeset.ResponseStatus1Code.mmAccepted,
-						com.tools20022.repository.codeset.ResponseStatus1Code.mmRejected, com.tools20022.repository.codeset.ResponseStatus1Code.mmSubstitutionAccepted);
+				code_lazy = () -> Arrays.asList(ResponseStatus1Code.mmPartlyAccepted, ResponseStatus1Code.mmAccepted, ResponseStatus1Code.mmRejected, ResponseStatus1Code.mmSubstitutionAccepted);
 				trace_lazy = () -> ResponseStatusCode.mmObject();
 			}
 		});

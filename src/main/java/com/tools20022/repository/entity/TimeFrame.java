@@ -17,13 +17,15 @@
 
 package com.tools20022.repository.entity;
 
-import com.tools20022.metamodel.MMBusinessAssociationEnd;
-import com.tools20022.metamodel.MMBusinessAttribute;
-import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.*;
 import com.tools20022.repository.choice.*;
 import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.datatype.YesNoIndicator;
+import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.ProcessingCharacteristics1;
+import com.tools20022.repository.msg.ProcessingCharacteristics2;
+import com.tools20022.repository.msg.ProcessingCharacteristics3;
 import com.tools20022.repository.msg.TimeFrame3;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -38,30 +40,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.TimeFrame#mmTradeMinus
- * TimeFrame.mmTradeMinus}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.TimeFrame#mmRenunciationMinus
- * TimeFrame.mmRenunciationMinus}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.TimeFrame#mmSubscriptionSettlementRelatedFundProcessing
- * TimeFrame.mmSubscriptionSettlementRelatedFundProcessing}</li>
- * <li>{@linkplain com.tools20022.repository.entity.TimeFrame#mmTradePlus
- * TimeFrame.mmTradePlus}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.TimeFrame#mmRenunciationPlus
- * TimeFrame.mmRenunciationPlus}</li>
- * <li>{@linkplain com.tools20022.repository.entity.TimeFrame#mmPrepayment
- * TimeFrame.mmPrepayment}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.TimeFrame#mmOtherTimeFrameDescription
- * TimeFrame.mmOtherTimeFrameDescription}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.TimeFrame#mmRelatedProcessingCharacteristics
- * TimeFrame.mmRelatedProcessingCharacteristics}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.TimeFrame3Choice
+ * TimeFrame3Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.Timeframe2Choice
+ * Timeframe2Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TimeFrame3 TimeFrame3}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.TimeFrame5Choice
+ * TimeFrame5Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.TimeFrame4Choice
+ * TimeFrame4Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.TimeFrame1Choice
+ * TimeFrame1Choice}</li>
  * </ul>
  * </li>
  * <li>
@@ -91,21 +84,30 @@ import java.util.concurrent.atomic.AtomicReference;
  * ProcessingCharacteristics3.mmDealingCutOffTimeFrame}</li>
  * </ul>
  * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.choice.TimeFrame3Choice
- * TimeFrame3Choice}</li>
- * <li>{@linkplain com.tools20022.repository.choice.Timeframe2Choice
- * Timeframe2Choice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TimeFrame3 TimeFrame3}</li>
- * <li>{@linkplain com.tools20022.repository.choice.TimeFrame5Choice
- * TimeFrame5Choice}</li>
- * <li>{@linkplain com.tools20022.repository.choice.TimeFrame4Choice
- * TimeFrame4Choice}</li>
- * <li>{@linkplain com.tools20022.repository.choice.TimeFrame1Choice
- * TimeFrame1Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.TimeFrame#mmTradeMinus
+ * TimeFrame.mmTradeMinus}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.TimeFrame#mmRenunciationMinus
+ * TimeFrame.mmRenunciationMinus}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.TimeFrame#mmSubscriptionSettlementRelatedFundProcessing
+ * TimeFrame.mmSubscriptionSettlementRelatedFundProcessing}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.TimeFrame#mmTradePlus
+ * TimeFrame.mmTradePlus}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.TimeFrame#mmRenunciationPlus
+ * TimeFrame.mmRenunciationPlus}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.TimeFrame#mmPrepayment
+ * TimeFrame.mmPrepayment}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.TimeFrame#mmOtherTimeFrameDescription
+ * TimeFrame.mmOtherTimeFrameDescription}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.TimeFrame#mmRelatedProcessingCharacteristics
+ * TimeFrame.mmRelatedProcessingCharacteristics}</li>
  * </ul>
  * </li>
  * <li>
@@ -172,10 +174,10 @@ public class TimeFrame {
 	 */
 	public static final MMBusinessAttribute mmTradeMinus = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.TimeFrame3Choice.mmTradeMinus, com.tools20022.repository.msg.TimeFrame3.mmTradeMinus, com.tools20022.repository.choice.TimeFrame1Choice.mmTradeMinus);
+			derivation_lazy = () -> Arrays.asList(TimeFrame3Choice.mmTradeMinus, TimeFrame3.mmTradeMinus, TimeFrame1Choice.mmTradeMinus);
 			elementContext_lazy = () -> TimeFrame.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TradeMinus";
 			definition = "An agreed number of days before the Trade date (T) used to define standard timeframes e.g. T-1 Dealing cut off or T-2 prepayment condition\r\nWhere = T is the date that the price is applied to a transaction,";
 			maxOccurs = 1;
@@ -224,10 +226,10 @@ public class TimeFrame {
 	 */
 	public static final MMBusinessAttribute mmRenunciationMinus = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.TimeFrame3Choice.mmRenunciationMinus, com.tools20022.repository.choice.TimeFrame1Choice.mmRenunciationMinus);
+			derivation_lazy = () -> Arrays.asList(TimeFrame3Choice.mmRenunciationMinus, TimeFrame1Choice.mmRenunciationMinus);
 			elementContext_lazy = () -> TimeFrame.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RenunciationMinus";
 			definition = "An agreed number of days before the Renunciation of Title documents are received used to define standard timeframes in redemption.";
 			maxOccurs = 1;
@@ -274,13 +276,13 @@ public class TimeFrame {
 		{
 			elementContext_lazy = () -> TimeFrame.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SubscriptionSettlementRelatedFundProcessing";
 			definition = "Fund processing characteristics related to a subscription cycle.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics.mmSettlementCycle;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics.mmObject();
 		}
 	};
@@ -332,11 +334,10 @@ public class TimeFrame {
 	 */
 	public static final MMBusinessAttribute mmTradePlus = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Timeframe2Choice.mmTradePlus, com.tools20022.repository.choice.TimeFrame5Choice.mmTradePlus, com.tools20022.repository.choice.TimeFrame4Choice.mmTradePlus,
-					com.tools20022.repository.choice.TimeFrame1Choice.mmTradePlus);
+			derivation_lazy = () -> Arrays.asList(Timeframe2Choice.mmTradePlus, TimeFrame5Choice.mmTradePlus, TimeFrame4Choice.mmTradePlus, TimeFrame1Choice.mmTradePlus);
 			elementContext_lazy = () -> TimeFrame.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TradePlus";
 			definition = "An agreed number of days after the Trade date (T) used to define standard timeframes e.g T+3 settlement period. \r\nWhere = T is the date that the price is applied to a transaction.";
 			maxOccurs = 1;
@@ -389,11 +390,10 @@ public class TimeFrame {
 	 */
 	public static final MMBusinessAttribute mmRenunciationPlus = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Timeframe2Choice.mmRenunciationPlus, com.tools20022.repository.choice.TimeFrame4Choice.mmRenunciationPlus,
-					com.tools20022.repository.choice.TimeFrame1Choice.mmRenunciationPlus);
+			derivation_lazy = () -> Arrays.asList(Timeframe2Choice.mmRenunciationPlus, TimeFrame4Choice.mmRenunciationPlus, TimeFrame1Choice.mmRenunciationPlus);
 			elementContext_lazy = () -> TimeFrame.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RenunciationPlus";
 			definition = "An agreed number of days after the renunciation of title documents are received used to define standard timeframes in Redemption e.g R+3 Redemption settlement cycle.";
 			maxOccurs = 1;
@@ -440,10 +440,10 @@ public class TimeFrame {
 	 */
 	public static final MMBusinessAttribute mmPrepayment = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Timeframe2Choice.mmPrepayment, com.tools20022.repository.choice.TimeFrame5Choice.mmPrepayment);
+			derivation_lazy = () -> Arrays.asList(Timeframe2Choice.mmPrepayment, TimeFrame5Choice.mmPrepayment);
 			elementContext_lazy = () -> TimeFrame.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Prepayment";
 			definition = "Indicates whether pre-payment is necessary.";
 			maxOccurs = 1;
@@ -489,10 +489,10 @@ public class TimeFrame {
 	 */
 	public static final MMBusinessAttribute mmOtherTimeFrameDescription = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TimeFrame3.mmOtherTimeFrameDescription);
+			derivation_lazy = () -> Arrays.asList(TimeFrame3.mmOtherTimeFrameDescription);
 			elementContext_lazy = () -> TimeFrame.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "OtherTimeFrameDescription";
 			definition = "Specifies a description of any other TimeFrame that may be used for the DealingCutOffTimeFrame";
 			maxOccurs = 1;
@@ -540,13 +540,13 @@ public class TimeFrame {
 		{
 			elementContext_lazy = () -> TimeFrame.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedProcessingCharacteristics";
 			definition = "Processing characteristics for which a cut off time frame is specified.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics.mmDealingCutOffTimeFrame;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics.mmObject();
 		}
 	};
@@ -554,17 +554,15 @@ public class TimeFrame {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TimeFrame";
 				definition = "TimeFrame or period concept that allows definition of a period as number of days before or after a defined activity.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics.mmSettlementCycle,
 						com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics.mmDealingCutOffTimeFrame);
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ProcessingCharacteristics1.mmDealingCutOffTimeFrame, com.tools20022.repository.msg.ProcessingCharacteristics2.mmDealingCutOffTimeFrame,
-						com.tools20022.repository.msg.ProcessingCharacteristics3.mmDealingCutOffTimeFrame);
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.TimeFrame.mmTradeMinus, com.tools20022.repository.entity.TimeFrame.mmRenunciationMinus,
-						com.tools20022.repository.entity.TimeFrame.mmSubscriptionSettlementRelatedFundProcessing, com.tools20022.repository.entity.TimeFrame.mmTradePlus, com.tools20022.repository.entity.TimeFrame.mmRenunciationPlus,
-						com.tools20022.repository.entity.TimeFrame.mmPrepayment, com.tools20022.repository.entity.TimeFrame.mmOtherTimeFrameDescription, com.tools20022.repository.entity.TimeFrame.mmRelatedProcessingCharacteristics);
+				derivationElement_lazy = () -> Arrays.asList(ProcessingCharacteristics1.mmDealingCutOffTimeFrame, ProcessingCharacteristics2.mmDealingCutOffTimeFrame, ProcessingCharacteristics3.mmDealingCutOffTimeFrame);
+				element_lazy = () -> Arrays.asList(TimeFrame.mmTradeMinus, TimeFrame.mmRenunciationMinus, TimeFrame.mmSubscriptionSettlementRelatedFundProcessing, TimeFrame.mmTradePlus, TimeFrame.mmRenunciationPlus, TimeFrame.mmPrepayment,
+						TimeFrame.mmOtherTimeFrameDescription, TimeFrame.mmRelatedProcessingCharacteristics);
 				derivationComponent_lazy = () -> Arrays.asList(TimeFrame3Choice.mmObject(), Timeframe2Choice.mmObject(), TimeFrame3.mmObject(), TimeFrame5Choice.mmObject(), TimeFrame4Choice.mmObject(), TimeFrame1Choice.mmObject());
 			}
 		});

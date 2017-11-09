@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.FractionDispositionTypeV2Code;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -93,7 +95,7 @@ public class FractionDispositionType9Code extends FractionDispositionTypeV2Code 
 	 */
 	public static final MMCode mmIssueFraction = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssueFraction";
 			owner_lazy = () -> FractionDispositionType9Code.mmObject();
 		}
@@ -116,7 +118,7 @@ public class FractionDispositionType9Code extends FractionDispositionTypeV2Code 
 	 */
 	public static final MMCode mmRoundDown = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RoundDown";
 			owner_lazy = () -> FractionDispositionType9Code.mmObject();
 		}
@@ -139,7 +141,7 @@ public class FractionDispositionType9Code extends FractionDispositionTypeV2Code 
 	 */
 	public static final MMCode mmRoundToNearest = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RoundToNearest";
 			owner_lazy = () -> FractionDispositionType9Code.mmObject();
 		}
@@ -162,7 +164,7 @@ public class FractionDispositionType9Code extends FractionDispositionTypeV2Code 
 	 */
 	public static final MMCode mmRoundUp = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RoundUp";
 			owner_lazy = () -> FractionDispositionType9Code.mmObject();
 		}
@@ -185,7 +187,7 @@ public class FractionDispositionType9Code extends FractionDispositionTypeV2Code 
 	 */
 	public static final MMCode mmUnknown = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unknown";
 			owner_lazy = () -> FractionDispositionType9Code.mmObject();
 		}
@@ -194,14 +196,13 @@ public class FractionDispositionType9Code extends FractionDispositionTypeV2Code 
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("DIST");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FractionDispositionType9Code";
 				definition = "Indicates that fractional value should be retained; no rounding.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.FractionDispositionType9Code.mmIssueFraction, com.tools20022.repository.codeset.FractionDispositionType9Code.mmRoundDown,
-						com.tools20022.repository.codeset.FractionDispositionType9Code.mmRoundToNearest, com.tools20022.repository.codeset.FractionDispositionType9Code.mmRoundUp,
-						com.tools20022.repository.codeset.FractionDispositionType9Code.mmUnknown);
+				code_lazy = () -> Arrays.asList(FractionDispositionType9Code.mmIssueFraction, FractionDispositionType9Code.mmRoundDown, FractionDispositionType9Code.mmRoundToNearest, FractionDispositionType9Code.mmRoundUp,
+						FractionDispositionType9Code.mmUnknown);
 				trace_lazy = () -> FractionDispositionTypeV2Code.mmObject();
 			}
 		});

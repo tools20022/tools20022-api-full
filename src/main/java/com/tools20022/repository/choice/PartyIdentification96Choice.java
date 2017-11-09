@@ -19,9 +19,12 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.AnyBICIdentifier;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.entity.OrganisationIdentification;
 import com.tools20022.repository.entity.PartyIdentificationInformation;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification1;
 import com.tools20022.repository.msg.NameAndAddress15;
 import java.util.Arrays;
@@ -120,14 +123,14 @@ public class PartyIdentification96Choice {
 	 */
 	public static final MMMessageAttribute mmAnyBIC = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.mmAnyBIC;
+			businessElementTrace_lazy = () -> OrganisationIdentification.mmAnyBIC;
 			componentContext_lazy = () -> PartyIdentification96Choice.mmObject();
 			isDerived = false;
 			xmlTag = "AnyBIC";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AnyBIC";
 			definition = "Identification of the party expressed as a BIC.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.PartyIdentification90Choice.mmAnyBIC;
+			previousVersion_lazy = () -> PartyIdentification90Choice.mmAnyBIC;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AnyBICIdentifier.mmObject();
@@ -177,14 +180,14 @@ public class PartyIdentification96Choice {
 	 */
 	public static final MMMessageAttribute mmProprietaryIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.mmOtherIdentification;
+			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmOtherIdentification;
 			componentContext_lazy = () -> PartyIdentification96Choice.mmObject();
 			isDerived = false;
 			xmlTag = "PrtryId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProprietaryIdentification";
 			definition = "Unique and unambiguous identifier, as assigned to the party using a proprietary identification scheme.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.PartyIdentification90Choice.mmProprietaryIdentification;
+			previousVersion_lazy = () -> PartyIdentification90Choice.mmProprietaryIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification1.mmObject();
@@ -235,10 +238,10 @@ public class PartyIdentification96Choice {
 			componentContext_lazy = () -> PartyIdentification96Choice.mmObject();
 			isDerived = false;
 			xmlTag = "NmAndAdr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NameAndAddress";
 			definition = "Name and address of the party.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.PartyIdentification90Choice.mmNameAndAddress;
+			previousVersion_lazy = () -> PartyIdentification90Choice.mmNameAndAddress;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> NameAndAddress15.mmObject();
@@ -279,11 +282,11 @@ public class PartyIdentification96Choice {
 	 */
 	public static final MMMessageAttribute mmTaxIdentificationNumber = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.mmTaxIdentificationNumber;
+			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmTaxIdentificationNumber;
 			componentContext_lazy = () -> PartyIdentification96Choice.mmObject();
 			isDerived = false;
 			xmlTag = "TaxIdNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxIdentificationNumber";
 			definition = "Number assigned by a tax authority to an entity.";
 			maxOccurs = 1;
@@ -327,11 +330,11 @@ public class PartyIdentification96Choice {
 	 */
 	public static final MMMessageAttribute mmNationalRegistrationNumber = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.mmNationalRegistrationNumber;
+			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmNationalRegistrationNumber;
 			componentContext_lazy = () -> PartyIdentification96Choice.mmObject();
 			isDerived = false;
 			xmlTag = "NtlRegnNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NationalRegistrationNumber";
 			definition = "Number assigned by a national registration authority to an entity.";
 			maxOccurs = 1;
@@ -343,12 +346,11 @@ public class PartyIdentification96Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PartyIdentification96Choice.mmAnyBIC, com.tools20022.repository.choice.PartyIdentification96Choice.mmProprietaryIdentification,
-						com.tools20022.repository.choice.PartyIdentification96Choice.mmNameAndAddress, com.tools20022.repository.choice.PartyIdentification96Choice.mmTaxIdentificationNumber,
-						com.tools20022.repository.choice.PartyIdentification96Choice.mmNationalRegistrationNumber);
+				messageElement_lazy = () -> Arrays.asList(PartyIdentification96Choice.mmAnyBIC, PartyIdentification96Choice.mmProprietaryIdentification, PartyIdentification96Choice.mmNameAndAddress,
+						PartyIdentification96Choice.mmTaxIdentificationNumber, PartyIdentification96Choice.mmNationalRegistrationNumber);
 				trace_lazy = () -> PartyIdentificationInformation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PartyIdentification96Choice";
 				definition = "Choice of formats for the identification of a party.";
 				previousVersion_lazy = () -> PartyIdentification90Choice.mmObject();

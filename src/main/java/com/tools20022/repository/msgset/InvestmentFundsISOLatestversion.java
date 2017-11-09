@@ -18,6 +18,7 @@
 package com.tools20022.repository.msgset;
 
 import com.tools20022.metamodel.MMMessageSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.acmt.*;
 import com.tools20022.repository.area.camt.*;
 import com.tools20022.repository.area.reda.FundProcessingPassportReportV02;
@@ -27,6 +28,7 @@ import com.tools20022.repository.area.reda.PriceReportV04;
 import com.tools20022.repository.area.semt.*;
 import com.tools20022.repository.area.sese.*;
 import com.tools20022.repository.area.setr.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -250,8 +252,8 @@ public class InvestmentFundsISOLatestversion {
 	final static public MMMessageSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageSet() {
 			{
-				businessProcessCatalogue_lazy = () -> com.tools20022.repository.GeneratedRepository.mmcatalogue;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				businessProcessCatalogue_lazy = () -> GeneratedRepository.mmcatalogue;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Investment Funds - ISO - Latest version";
 				definition = "Set of messages designed for the investment funds industry to support account management; subscription, redemption and switch order and confirmation; order status reporting, fund cash forecast reporting, price reporting, fund processing passsport, statements of holdings and transactions; transfer and confirmation; transfer status reporting and portfolio transfer.";
 				messageDefinition_lazy = () -> Arrays.asList(FundProcessingPassportReportV02.mmObject(), InvestmentFundReportRequestV02.mmObject(), PriceReportCancellationV04.mmObject(), PriceReportV04.mmObject(),

@@ -20,7 +20,9 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max140Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -104,7 +106,7 @@ public class CertificationRequest1 {
 			componentContext_lazy = () -> CertificationRequest1.mmObject();
 			isDerived = false;
 			xmlTag = "CertReqInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CertificateRequestInformation";
 			definition = "Information of the certificate to create.";
 			maxOccurs = 1;
@@ -154,7 +156,7 @@ public class CertificationRequest1 {
 			componentContext_lazy = () -> CertificationRequest1.mmObject();
 			isDerived = false;
 			xmlTag = "KeyId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "KeyIdentification";
 			definition = "Identification of the key.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CertificationRequest2.mmVersion);
@@ -196,7 +198,7 @@ public class CertificationRequest1 {
 			componentContext_lazy = () -> CertificationRequest1.mmObject();
 			isDerived = false;
 			xmlTag = "KeyVrsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "KeyVersion";
 			definition = "Version of the key.";
 			maxOccurs = 1;
@@ -208,10 +210,9 @@ public class CertificationRequest1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CertificationRequest1.mmCertificateRequestInformation, com.tools20022.repository.msg.CertificationRequest1.mmKeyIdentification,
-						com.tools20022.repository.msg.CertificationRequest1.mmKeyVersion);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(CertificationRequest1.mmCertificateRequestInformation, CertificationRequest1.mmKeyIdentification, CertificationRequest1.mmKeyVersion);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CertificationRequest1";
 				definition = "Certification request PKCS#10 (Public Key Certificate Standard 10) for creation or renewal of an X.509 certificate.";
 				nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CertificationRequest2.mmObject());

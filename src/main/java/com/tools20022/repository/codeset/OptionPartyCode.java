@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.OptionParty1Code
+ * OptionParty1Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.OptionParty3Code
+ * OptionParty3Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>{@linkplain com.tools20022.repository.codeset.OptionPartyCode#mmSeller
@@ -37,15 +48,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * OptionPartyCode.mmTaker}</li>
  * <li>{@linkplain com.tools20022.repository.codeset.OptionPartyCode#mmMaker
  * OptionPartyCode.mmMaker}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.OptionParty1Code
- * OptionParty1Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.OptionParty3Code
- * OptionParty3Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -95,7 +97,7 @@ public class OptionPartyCode {
 	 */
 	public static final MMCode mmSeller = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Seller";
 			definition = "Seller in a trade.";
 			owner_lazy = () -> OptionPartyCode.mmObject();
@@ -125,7 +127,7 @@ public class OptionPartyCode {
 	 */
 	public static final MMCode mmBuyer = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Buyer";
 			definition = "Buyer in a trade.";
 			owner_lazy = () -> OptionPartyCode.mmObject();
@@ -155,7 +157,7 @@ public class OptionPartyCode {
 	 */
 	public static final MMCode mmTaker = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Taker";
 			definition = "Indicates the initiator of the trade.";
 			owner_lazy = () -> OptionPartyCode.mmObject();
@@ -185,7 +187,7 @@ public class OptionPartyCode {
 	 */
 	public static final MMCode mmMaker = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Maker";
 			definition = "Indicates the receiver of the trade.";
 			owner_lazy = () -> OptionPartyCode.mmObject();
@@ -196,13 +198,12 @@ public class OptionPartyCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("SLLR");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OptionPartyCode";
 				definition = "Specifies if a trade party is a buyer or a seller.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OptionPartyCode.mmSeller, com.tools20022.repository.codeset.OptionPartyCode.mmBuyer, com.tools20022.repository.codeset.OptionPartyCode.mmTaker,
-						com.tools20022.repository.codeset.OptionPartyCode.mmMaker);
+				code_lazy = () -> Arrays.asList(OptionPartyCode.mmSeller, OptionPartyCode.mmBuyer, OptionPartyCode.mmTaker, OptionPartyCode.mmMaker);
 				derivation_lazy = () -> Arrays.asList(OptionParty1Code.mmObject(), OptionParty3Code.mmObject());
 			}
 		});

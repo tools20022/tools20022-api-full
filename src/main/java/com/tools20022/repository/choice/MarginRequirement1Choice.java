@@ -19,7 +19,11 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.colr.MarginCallRequestV03;
+import com.tools20022.repository.area.colr.MarginCallRequestV04;
 import com.tools20022.repository.entity.ExposureCalculation;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.MarginRequirement1;
 import com.tools20022.repository.msg.Requirement1;
 import java.util.Arrays;
@@ -121,11 +125,11 @@ public class MarginRequirement1Choice {
 	 */
 	public static final MMMessageAssociationEnd mmMarginRequirement = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ExposureCalculation.mmVariationMarginAmountRequirement;
+			businessElementTrace_lazy = () -> ExposureCalculation.mmVariationMarginAmountRequirement;
 			componentContext_lazy = () -> MarginRequirement1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "MrgnRqrmnt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarginRequirement";
 			definition = "Provides details about the margin requirements for the variation margin and optionally the segregated independent amount.";
 			maxOccurs = 1;
@@ -171,11 +175,11 @@ public class MarginRequirement1Choice {
 	 */
 	public static final MMMessageAssociationEnd mmSegregatedIndependentAmountRequirement = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ExposureCalculation.mmSegregatedAmountRequirement;
+			businessElementTrace_lazy = () -> ExposureCalculation.mmSegregatedAmountRequirement;
 			componentContext_lazy = () -> MarginRequirement1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "SgrtdIndpdntAmtRqrmnt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SegregatedIndependentAmountRequirement";
 			definition = "Provides details about the margin requirements for the segregated independent amount only.";
 			maxOccurs = 1;
@@ -188,12 +192,12 @@ public class MarginRequirement1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.MarginRequirement1Choice.mmMarginRequirement, com.tools20022.repository.choice.MarginRequirement1Choice.mmSegregatedIndependentAmountRequirement);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.colr.MarginCallRequestV03.mmRequirementDetailsDueToA, com.tools20022.repository.area.colr.MarginCallRequestV03.mmRequirementDetailsDueToB,
-						com.tools20022.repository.area.colr.MarginCallRequestV04.mmRequirementDetailsDueToA, com.tools20022.repository.area.colr.MarginCallRequestV04.mmRequirementDetailsDueToB);
+				messageElement_lazy = () -> Arrays.asList(MarginRequirement1Choice.mmMarginRequirement, MarginRequirement1Choice.mmSegregatedIndependentAmountRequirement);
+				messageBuildingBlock_lazy = () -> Arrays.asList(MarginCallRequestV03.mmRequirementDetailsDueToA, MarginCallRequestV03.mmRequirementDetailsDueToB, MarginCallRequestV04.mmRequirementDetailsDueToA,
+						MarginCallRequestV04.mmRequirementDetailsDueToB);
 				trace_lazy = () -> ExposureCalculation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MarginRequirement1Choice";
 				definition = "Provides the margin requirements for the variation margin and the segregated independent amount, or the segregated independent amount only.";
 			}

@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.AwaitingCancellationReasonCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -82,7 +84,7 @@ public class AwaitingCancellationReason1Code extends AwaitingCancellationReasonC
 	 */
 	public static final MMCode mmAwaitingCancellation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AwaitingCancellation";
 			owner_lazy = () -> AwaitingCancellationReason1Code.mmObject();
 		}
@@ -91,12 +93,12 @@ public class AwaitingCancellationReason1Code extends AwaitingCancellationReasonC
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("WCAN");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AwaitingCancellationReason1Code";
 				definition = "Specifies the reason why the instruction has an awaiting cancellation status.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AwaitingCancellationReason1Code.mmAwaitingCancellation);
+				code_lazy = () -> Arrays.asList(AwaitingCancellationReason1Code.mmAwaitingCancellation);
 				trace_lazy = () -> AwaitingCancellationReasonCode.mmObject();
 			}
 		});

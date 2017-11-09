@@ -20,14 +20,14 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.*;
 import com.tools20022.repository.codeset.ActiveCurrencyCode;
 import com.tools20022.repository.codeset.CreditDebitCode;
 import com.tools20022.repository.codeset.IssuerTaxability1Code;
 import com.tools20022.repository.codeset.NewSecuritiesIssuanceType1Code;
-import com.tools20022.repository.entity.CorporateActionEvent;
-import com.tools20022.repository.entity.CorporateActionOption;
-import com.tools20022.repository.entity.SafekeepingPlace;
+import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -167,14 +167,14 @@ public class SecuritiesOption38 {
 	 */
 	public static final MMMessageAssociationEnd mmSecurityDetails = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmUnderlyingSecurity;
+			businessElementTrace_lazy = () -> CorporateActionEvent.mmUnderlyingSecurity;
 			componentContext_lazy = () -> SecuritiesOption38.mmObject();
 			isDerived = false;
 			xmlTag = "SctyDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityDetails";
 			definition = "Provides description of the financial instrument related to securities movement.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesOption40.mmSecurityDetails);
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesOption40.mmSecurityDetails);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -225,14 +225,14 @@ public class SecuritiesOption38 {
 	 */
 	public static final MMMessageAttribute mmCreditDebitIndicator = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ProceedsDefinition.mmCreditDebitIndicator;
+			businessElementTrace_lazy = () -> ProceedsDefinition.mmCreditDebitIndicator;
 			componentContext_lazy = () -> SecuritiesOption38.mmObject();
 			isDerived = false;
 			xmlTag = "CdtDbtInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditDebitIndicator";
 			definition = "Specifies whether the value is a debit or credit.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesOption40.mmCreditDebitIndicator);
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesOption40.mmCreditDebitIndicator);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CreditDebitCode.mmObject();
@@ -285,14 +285,14 @@ public class SecuritiesOption38 {
 	 */
 	public static final MMMessageAssociationEnd mmTemporaryFinancialInstrumentIndicator = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmTemporaryFinancialInstrumentIndicator;
+			businessElementTrace_lazy = () -> Security.mmTemporaryFinancialInstrumentIndicator;
 			componentContext_lazy = () -> SecuritiesOption38.mmObject();
 			isDerived = false;
 			xmlTag = "TempFinInstrmInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TemporaryFinancialInstrumentIndicator";
 			definition = "Specifies that the security identified  is a temporary security identification used for processing reasons, for example, contra security used in the US.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesOption40.mmTemporaryFinancialInstrumentIndicator);
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesOption40.mmTemporaryFinancialInstrumentIndicator);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -347,14 +347,14 @@ public class SecuritiesOption38 {
 	 */
 	public static final MMMessageAssociationEnd mmNonEligibleProceedsIndicator = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ProceedsDefinition.mmNonEligibleProceedsIndicator;
+			businessElementTrace_lazy = () -> ProceedsDefinition.mmNonEligibleProceedsIndicator;
 			componentContext_lazy = () -> SecuritiesOption38.mmObject();
 			isDerived = false;
 			xmlTag = "NonElgblPrcdsInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonEligibleProceedsIndicator";
 			definition = "Specifies information regarding outturn resources that cannot be processed by the Central Securities Depository (CSD). Special delivery instruction is required from the account owner for the corporate action outcome to be credited.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesOption40.mmNonEligibleProceedsIndicator);
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesOption40.mmNonEligibleProceedsIndicator);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -408,14 +408,14 @@ public class SecuritiesOption38 {
 	 */
 	public static final MMMessageAttribute mmIssuerOfferorTaxabilityIndicator = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ProceedsDefinition.mmIssuerOfferorTaxabilityIndicator;
+			businessElementTrace_lazy = () -> ProceedsDefinition.mmIssuerOfferorTaxabilityIndicator;
 			componentContext_lazy = () -> SecuritiesOption38.mmObject();
 			isDerived = false;
 			xmlTag = "IssrOfferrTaxbltyInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssuerOfferorTaxabilityIndicator";
 			definition = "Proceeds are taxable according to the information provided by the issuer / offeror.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesOption40.mmIssuerOfferorTaxabilityIndicator);
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesOption40.mmIssuerOfferorTaxabilityIndicator);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> IssuerTaxability1Code.mmObject();
@@ -464,10 +464,10 @@ public class SecuritiesOption38 {
 			componentContext_lazy = () -> SecuritiesOption38.mmObject();
 			isDerived = false;
 			xmlTag = "NewSctiesIssncInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewSecuritiesIssuanceIndicator";
 			definition = "Indicates whether the securities are newly issued or not.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesOption40.mmNewSecuritiesIssuanceIndicator);
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesOption40.mmNewSecuritiesIssuanceIndicator);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> NewSecuritiesIssuanceType1Code.mmObject();
@@ -519,14 +519,14 @@ public class SecuritiesOption38 {
 	 */
 	public static final MMMessageAssociationEnd mmEntitledQuantity = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionSecuritiesEntitlement.mmEntitledSecuritiesQuantity;
+			businessElementTrace_lazy = () -> CorporateActionSecuritiesEntitlement.mmEntitledSecuritiesQuantity;
 			componentContext_lazy = () -> SecuritiesOption38.mmObject();
 			isDerived = false;
 			xmlTag = "EntitldQty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EntitledQuantity";
 			definition = "Quantity of securities based on the terms of the corporate action event and balance of underlying securities entitled to the account owner. (This quantity can be positive or negative).";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesOption40.mmEntitledQuantity);
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesOption40.mmEntitledQuantity);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -585,10 +585,10 @@ public class SecuritiesOption38 {
 			componentContext_lazy = () -> SecuritiesOption38.mmObject();
 			isDerived = false;
 			xmlTag = "SfkpgPlc";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlace";
 			definition = "Place where the securities are safe-kept, physically or notionally.  This place can be, for example, a local custodian, a Central Securities Depository (CSD) or an International Central Securities Depository (ICSD).";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesOption40.mmSafekeepingPlace);
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesOption40.mmSafekeepingPlace);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -642,14 +642,14 @@ public class SecuritiesOption38 {
 	 */
 	public static final MMMessageAssociationEnd mmFractionDisposition = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionOption.mmFractionDisposition;
+			businessElementTrace_lazy = () -> CorporateActionOption.mmFractionDisposition;
 			componentContext_lazy = () -> SecuritiesOption38.mmObject();
 			isDerived = false;
 			xmlTag = "FrctnDspstn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FractionDisposition";
 			definition = "Specifies how fractions resulting from derived securities will be processed or how prorated decisions will be rounding, if provided with a pro ration rate.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesOption40.mmFractionDisposition);
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesOption40.mmFractionDisposition);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -703,14 +703,14 @@ public class SecuritiesOption38 {
 	 */
 	public static final MMMessageAttribute mmCurrencyOption = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionOption.mmCurrencyOption;
+			businessElementTrace_lazy = () -> CorporateActionOption.mmCurrencyOption;
 			componentContext_lazy = () -> SecuritiesOption38.mmObject();
 			isDerived = false;
 			xmlTag = "CcyOptn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrencyOption";
 			definition = "Currency in which the cash disbursed from an interest or dividend payment is offered.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesOption40.mmCurrencyOption);
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesOption40.mmCurrencyOption);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyCode.mmObject();
@@ -761,14 +761,14 @@ public class SecuritiesOption38 {
 	 */
 	public static final MMMessageAssociationEnd mmTradingPeriod = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmTradingPeriod;
+			businessElementTrace_lazy = () -> CorporateActionEvent.mmTradingPeriod;
 			componentContext_lazy = () -> SecuritiesOption38.mmObject();
 			isDerived = false;
 			xmlTag = "TradgPrd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradingPeriod";
 			definition = "Period during which intermediate or outturn securities are tradable in a secondary market.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesOption40.mmTradingPeriod);
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesOption40.mmTradingPeriod);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -818,14 +818,14 @@ public class SecuritiesOption38 {
 	 */
 	public static final MMMessageAssociationEnd mmDateDetails = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmUnderlyingSecurity;
+			businessElementTrace_lazy = () -> CorporateActionEvent.mmUnderlyingSecurity;
 			componentContext_lazy = () -> SecuritiesOption38.mmObject();
 			isDerived = false;
 			xmlTag = "DtDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DateDetails";
 			definition = "Provides information about the dates related to securities movement.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesOption40.mmDateDetails);
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesOption40.mmDateDetails);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -879,10 +879,10 @@ public class SecuritiesOption38 {
 			componentContext_lazy = () -> SecuritiesOption38.mmObject();
 			isDerived = false;
 			xmlTag = "RateDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RateDetails";
 			definition = "Provides information about the rates related to securities movement.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesOption40.mmRateDetails);
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesOption40.mmRateDetails);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -932,14 +932,14 @@ public class SecuritiesOption38 {
 	 */
 	public static final MMMessageAssociationEnd mmPriceDetails = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmCorporateActionPrice;
+			businessElementTrace_lazy = () -> CorporateActionEvent.mmCorporateActionPrice;
 			componentContext_lazy = () -> SecuritiesOption38.mmObject();
 			isDerived = false;
 			xmlTag = "PricDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PriceDetails";
 			definition = "Provides information about the prices related to securities movement.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesOption40.mmPriceDetails);
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesOption40.mmPriceDetails);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -950,15 +950,13 @@ public class SecuritiesOption38 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesOption38.mmSecurityDetails, com.tools20022.repository.msg.SecuritiesOption38.mmCreditDebitIndicator,
-						com.tools20022.repository.msg.SecuritiesOption38.mmTemporaryFinancialInstrumentIndicator, com.tools20022.repository.msg.SecuritiesOption38.mmNonEligibleProceedsIndicator,
-						com.tools20022.repository.msg.SecuritiesOption38.mmIssuerOfferorTaxabilityIndicator, com.tools20022.repository.msg.SecuritiesOption38.mmNewSecuritiesIssuanceIndicator,
-						com.tools20022.repository.msg.SecuritiesOption38.mmEntitledQuantity, com.tools20022.repository.msg.SecuritiesOption38.mmSafekeepingPlace, com.tools20022.repository.msg.SecuritiesOption38.mmFractionDisposition,
-						com.tools20022.repository.msg.SecuritiesOption38.mmCurrencyOption, com.tools20022.repository.msg.SecuritiesOption38.mmTradingPeriod, com.tools20022.repository.msg.SecuritiesOption38.mmDateDetails,
-						com.tools20022.repository.msg.SecuritiesOption38.mmRateDetails, com.tools20022.repository.msg.SecuritiesOption38.mmPriceDetails);
+				messageElement_lazy = () -> Arrays.asList(SecuritiesOption38.mmSecurityDetails, SecuritiesOption38.mmCreditDebitIndicator, SecuritiesOption38.mmTemporaryFinancialInstrumentIndicator,
+						SecuritiesOption38.mmNonEligibleProceedsIndicator, SecuritiesOption38.mmIssuerOfferorTaxabilityIndicator, SecuritiesOption38.mmNewSecuritiesIssuanceIndicator, SecuritiesOption38.mmEntitledQuantity,
+						SecuritiesOption38.mmSafekeepingPlace, SecuritiesOption38.mmFractionDisposition, SecuritiesOption38.mmCurrencyOption, SecuritiesOption38.mmTradingPeriod, SecuritiesOption38.mmDateDetails,
+						SecuritiesOption38.mmRateDetails, SecuritiesOption38.mmPriceDetails);
 				trace_lazy = () -> CorporateActionOption.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
 						return DateFormat.getDateInstance(java.text.DateFormat.LONG).parse("May 5, 2016");

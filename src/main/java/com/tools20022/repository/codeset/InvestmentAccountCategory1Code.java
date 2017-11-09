@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.InvestmentAccountCategoryCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -77,7 +79,7 @@ public class InvestmentAccountCategory1Code extends InvestmentAccountCategoryCod
 	 */
 	public static final MMCode mmMandateAccount = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MandateAccount";
 			owner_lazy = () -> InvestmentAccountCategory1Code.mmObject();
 		}
@@ -100,7 +102,7 @@ public class InvestmentAccountCategory1Code extends InvestmentAccountCategoryCod
 	 */
 	public static final MMCode mmRetailAccount = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RetailAccount";
 			owner_lazy = () -> InvestmentAccountCategory1Code.mmObject();
 		}
@@ -109,11 +111,11 @@ public class InvestmentAccountCategory1Code extends InvestmentAccountCategoryCod
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InvestmentAccountCategory1Code";
 				definition = "Specifies the investment account category.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.InvestmentAccountCategory1Code.mmMandateAccount, com.tools20022.repository.codeset.InvestmentAccountCategory1Code.mmRetailAccount);
+				code_lazy = () -> Arrays.asList(InvestmentAccountCategory1Code.mmMandateAccount, InvestmentAccountCategory1Code.mmRetailAccount);
 				trace_lazy = () -> InvestmentAccountCategoryCode.mmObject();
 			}
 		});

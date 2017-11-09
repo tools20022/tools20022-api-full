@@ -20,9 +20,12 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.DeliveryPlace1Code;
 import com.tools20022.repository.datatype.Max105Text;
 import com.tools20022.repository.entity.AttendanceCard;
+import com.tools20022.repository.entity.Party;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -101,11 +104,11 @@ public class AttendanceCard2 {
 	 */
 	public static final MMMessageAttribute mmAttendanceCardLabelling = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AttendanceCard.mmAttendanceCardLabelling;
+			businessElementTrace_lazy = () -> AttendanceCard.mmAttendanceCardLabelling;
 			componentContext_lazy = () -> AttendanceCard2.mmObject();
 			isDerived = false;
 			xmlTag = "AttndncCardLbllg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AttendanceCardLabelling";
 			definition = "Information to be indicated on the attendance card.";
 			maxOccurs = 1;
@@ -149,11 +152,11 @@ public class AttendanceCard2 {
 	 */
 	public static final MMMessageAttribute mmDeliveryMethod = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AttendanceCard.mmDeliveryMethod;
+			businessElementTrace_lazy = () -> AttendanceCard.mmDeliveryMethod;
 			componentContext_lazy = () -> AttendanceCard2.mmObject();
 			isDerived = false;
 			xmlTag = "DlvryMtd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeliveryMethod";
 			definition = "Specifies where the attendance card must be delivered.";
 			maxOccurs = 1;
@@ -195,11 +198,11 @@ public class AttendanceCard2 {
 	 */
 	public static final MMMessageAssociationEnd mmOtherAddress = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> AttendanceCard2.mmObject();
 			isDerived = false;
 			xmlTag = "OthrAdr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherAddress";
 			definition = "Name and address of a party.";
 			maxOccurs = 1;
@@ -212,11 +215,10 @@ public class AttendanceCard2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AttendanceCard2.mmAttendanceCardLabelling, com.tools20022.repository.msg.AttendanceCard2.mmDeliveryMethod,
-						com.tools20022.repository.msg.AttendanceCard2.mmOtherAddress);
+				messageElement_lazy = () -> Arrays.asList(AttendanceCard2.mmAttendanceCardLabelling, AttendanceCard2.mmDeliveryMethod, AttendanceCard2.mmOtherAddress);
 				trace_lazy = () -> AttendanceCard.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AttendanceCard2";
 				definition = "Specifies details related to the attendance card.";
 			}

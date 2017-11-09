@@ -20,8 +20,12 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.BICFIIdentifier;
+import com.tools20022.repository.entity.OrganisationIdentification;
+import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.entity.SystemPartyRole;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -98,11 +102,11 @@ public class SystemPartyIdentification5 {
 	 */
 	public static final MMMessageAssociationEnd mmRelatedPartyIdentification = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> SystemPartyIdentification5.mmObject();
 			isDerived = false;
 			xmlTag = "RltdPtyId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedPartyIdentification";
 			definition = "Unique identification of the party referenced by a request.";
 			maxOccurs = 1;
@@ -150,11 +154,11 @@ public class SystemPartyIdentification5 {
 	 */
 	public static final MMMessageAttribute mmResponsiblePartyIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.mmBICFI;
+			businessElementTrace_lazy = () -> OrganisationIdentification.mmBICFI;
 			componentContext_lazy = () -> SystemPartyIdentification5.mmObject();
 			isDerived = false;
 			xmlTag = "RspnsblPtyId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ResponsiblePartyIdentification";
 			definition = "Unique identification of the party responsible for the maintenance of the party reference data.";
 			maxOccurs = 1;
@@ -166,10 +170,10 @@ public class SystemPartyIdentification5 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SystemPartyIdentification5.mmRelatedPartyIdentification, com.tools20022.repository.msg.SystemPartyIdentification5.mmResponsiblePartyIdentification);
+				messageElement_lazy = () -> Arrays.asList(SystemPartyIdentification5.mmRelatedPartyIdentification, SystemPartyIdentification5.mmResponsiblePartyIdentification);
 				trace_lazy = () -> SystemPartyRole.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SystemPartyIdentification5";
 				definition = "Unique and unambiguous way to identify a system party.";
 			}

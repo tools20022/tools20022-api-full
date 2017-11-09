@@ -20,6 +20,7 @@ package com.tools20022.repository.area.caaa;
 import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.AcceptortoAcquirerCardTransactionPreviousVersion;
 import com.tools20022.repository.msg.CardPaymentBatchTransferResponse2;
 import com.tools20022.repository.msg.ContentInformationType9;
@@ -36,6 +37,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code caaa.012.001.03}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.AcceptortoAcquirerCardTransactionPreviousVersion
@@ -68,9 +72,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * AcceptorBatchTransferResponseV03.mmSecurityTrailer}</li>
  * </ul>
  * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code caaa.012.001.03}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -137,11 +138,11 @@ public class AcceptorBatchTransferResponseV03 {
 	public static final MMMessageBuildingBlock mmHeader = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Hdr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Header";
 			definition = "Capture advice response message management information.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.caaa.AcceptorBatchTransferResponseV04.mmHeader);
-			previousVersion_lazy = () -> com.tools20022.repository.area.caaa.AcceptorBatchTransferResponseV02.mmHeader;
+			nextVersions_lazy = () -> Arrays.asList(AcceptorBatchTransferResponseV04.mmHeader);
+			previousVersion_lazy = () -> AcceptorBatchTransferResponseV02.mmHeader;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> Header3.mmObject();
@@ -188,11 +189,11 @@ public class AcceptorBatchTransferResponseV03 {
 	public static final MMMessageBuildingBlock mmBatchTransferResponse = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "BtchTrfRspn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BatchTransferResponse";
 			definition = "Information related to the previously sent set of transaction.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.caaa.AcceptorBatchTransferResponseV04.mmBatchTransferResponse);
-			previousVersion_lazy = () -> com.tools20022.repository.area.caaa.AcceptorBatchTransferResponseV02.mmBatchTransferResponse;
+			nextVersions_lazy = () -> Arrays.asList(AcceptorBatchTransferResponseV04.mmBatchTransferResponse);
+			previousVersion_lazy = () -> AcceptorBatchTransferResponseV02.mmBatchTransferResponse;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> CardPaymentBatchTransferResponse2.mmObject();
@@ -239,11 +240,11 @@ public class AcceptorBatchTransferResponseV03 {
 	public static final MMMessageBuildingBlock mmSecurityTrailer = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SctyTrlr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityTrailer";
 			definition = "Trailer of the message containing a MAC or a digital signature.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.caaa.AcceptorBatchTransferResponseV04.mmSecurityTrailer);
-			previousVersion_lazy = () -> com.tools20022.repository.area.caaa.AcceptorBatchTransferResponseV02.mmSecurityTrailer;
+			nextVersions_lazy = () -> Arrays.asList(AcceptorBatchTransferResponseV04.mmSecurityTrailer);
+			previousVersion_lazy = () -> AcceptorBatchTransferResponseV02.mmSecurityTrailer;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> ContentInformationType9.mmObject();
@@ -253,7 +254,7 @@ public class AcceptorBatchTransferResponseV03 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AcceptorBatchTransferResponseV03";
 				definition = "The AcceptorBatchTransferResponse is sent by the acquirer (or its agent) to inform the acceptor (or its agent) of the transfer in a previous AcceptorBatchTransfer of a collection of transactions.";
 				nextVersions_lazy = () -> Arrays.asList(AcceptorBatchTransferResponseV04.mmObject());
@@ -262,8 +263,7 @@ public class AcceptorBatchTransferResponseV03 {
 				rootElement = "Document";
 				xmlTag = "AccptrBtchTrfRspn";
 				businessArea_lazy = () -> AcceptortoAcquirerCardTransactionPreviousVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.caaa.AcceptorBatchTransferResponseV03.mmHeader, com.tools20022.repository.area.caaa.AcceptorBatchTransferResponseV03.mmBatchTransferResponse,
-						com.tools20022.repository.area.caaa.AcceptorBatchTransferResponseV03.mmSecurityTrailer);
+				messageBuildingBlock_lazy = () -> Arrays.asList(AcceptorBatchTransferResponseV03.mmHeader, AcceptorBatchTransferResponseV03.mmBatchTransferResponse, AcceptorBatchTransferResponseV03.mmSecurityTrailer);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "caaa";

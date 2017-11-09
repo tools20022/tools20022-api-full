@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -30,6 +32,56 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.PendingProcessingReason1Code
+ * PendingProcessingReason1Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PendingReason6Code
+ * PendingReason6Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.PendingProcessingReason2Code
+ * PendingProcessingReason2Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PendingReason1Code
+ * PendingReason1Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.FailingReason1Code
+ * FailingReason1Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PendingReason2Code
+ * PendingReason2Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.FailingReason2Code
+ * FailingReason2Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.PendingProcessingReason3Code
+ * PendingProcessingReason3Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PendingReason9Code
+ * PendingReason9Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PendingReason4Code
+ * PendingReason4Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PendingReason5Code
+ * PendingReason5Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PendingReason7Code
+ * PendingReason7Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PendingReason3Code
+ * PendingReason3Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PendingReason8Code
+ * PendingReason8Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PendingReason10Code
+ * PendingReason10Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.FailingReason3Code
+ * FailingReason3Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.PendingCancellationReason1Code
+ * PendingCancellationReason1Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.PendingCancellationReason2Code
+ * PendingCancellationReason2Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PendingReason11Code
+ * PendingReason11Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PendingReason13Code
+ * PendingReason13Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -364,56 +416,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * PendingFailingReasonCode.mmPendingBeneficiaryOwnerDetails}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingProcessingReason1Code
- * PendingProcessingReason1Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PendingReason6Code
- * PendingReason6Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingProcessingReason2Code
- * PendingProcessingReason2Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PendingReason1Code
- * PendingReason1Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.FailingReason1Code
- * FailingReason1Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PendingReason2Code
- * PendingReason2Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.FailingReason2Code
- * FailingReason2Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingProcessingReason3Code
- * PendingProcessingReason3Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PendingReason9Code
- * PendingReason9Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PendingReason4Code
- * PendingReason4Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PendingReason5Code
- * PendingReason5Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PendingReason7Code
- * PendingReason7Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PendingReason3Code
- * PendingReason3Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PendingReason8Code
- * PendingReason8Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PendingReason10Code
- * PendingReason10Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.FailingReason3Code
- * FailingReason3Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingCancellationReason1Code
- * PendingCancellationReason1Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingCancellationReason2Code
- * PendingCancellationReason2Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PendingReason11Code
- * PendingReason11Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PendingReason13Code
- * PendingReason13Code}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -466,7 +468,7 @@ public class PendingFailingReasonCode {
 	 */
 	public static final MMCode mmAwaitingMoney = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AwaitingMoney";
 			definition = "Financial instruments are delivered, but still awaiting money from counterparty.";
 			owner_lazy = () -> PendingFailingReasonCode.mmObject();
@@ -499,7 +501,7 @@ public class PendingFailingReasonCode {
 	 */
 	public static final MMCode mmAccountServicerDeadlineMissed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountServicerDeadlineMissed";
 			definition = "Instruction was received after the account servicer's deadline. Processed on best effort basis.";
 			owner_lazy = () -> PendingFailingReasonCode.mmObject();
@@ -529,7 +531,7 @@ public class PendingFailingReasonCode {
 	 */
 	public static final MMCode mmSentToTaxAuthorities = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SentToTaxAuthorities";
 			definition = "Tax reclaim has been sent to the tax authorities.";
 			owner_lazy = () -> PendingFailingReasonCode.mmObject();
@@ -563,7 +565,7 @@ public class PendingFailingReasonCode {
 	 */
 	public static final MMCode mmAwaitingSecurities = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AwaitingSecurities";
 			definition = "Awaiting financial instruments from a corporate action or other procedure, for example, conversion, dematerialisation, exchange, registration, stamping, splitting.";
 			owner_lazy = () -> PendingFailingReasonCode.mmObject();
@@ -596,7 +598,7 @@ public class PendingFailingReasonCode {
 	 */
 	public static final MMCode mmInstructionRefusedOrNotRecognised = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructionRefusedOrNotRecognised";
 			definition = "Instruction has been refused or not recognised and is represented automatically.";
 			owner_lazy = () -> PendingFailingReasonCode.mmObject();
@@ -629,7 +631,7 @@ public class PendingFailingReasonCode {
 	 */
 	public static final MMCode mmAwaitingSecuritiesFromCounterparty = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AwaitingSecuritiesFromCounterparty";
 			definition = "Financial instruments have not yet been received from the counterparty (if receive against payment trade), the money has been delivered.";
 			owner_lazy = () -> PendingFailingReasonCode.mmObject();
@@ -660,7 +662,7 @@ public class PendingFailingReasonCode {
 	 */
 	public static final MMCode mmPhysicalDeliveryDelay = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PhysicalDeliveryDelay";
 			definition = "Settlement is physical. Financial instruments are being delivered.";
 			owner_lazy = () -> PendingFailingReasonCode.mmObject();
@@ -690,7 +692,7 @@ public class PendingFailingReasonCode {
 	 */
 	public static final MMCode mmTradeAmendedInMarket = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeAmendedInMarket";
 			definition = "Trade is being amended in the market.";
 			owner_lazy = () -> PendingFailingReasonCode.mmObject();
@@ -720,7 +722,7 @@ public class PendingFailingReasonCode {
 	 */
 	public static final MMCode mmAwaitingDocumentsOrEndorsementsFromYou = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AwaitingDocumentsOrEndorsementsFromYou";
 			definition = "Awaiting documents or endorsements from you.";
 			owner_lazy = () -> PendingFailingReasonCode.mmObject();
@@ -750,7 +752,7 @@ public class PendingFailingReasonCode {
 	 */
 	public static final MMCode mmAwaitingDocumentsOrEndorsementsFromCounterparty = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AwaitingDocumentsOrEndorsementsFromCounterparty";
 			definition = "Awaiting documents or endorsements from counterparty.";
 			owner_lazy = () -> PendingFailingReasonCode.mmObject();
@@ -781,7 +783,7 @@ public class PendingFailingReasonCode {
 	 */
 	public static final MMCode mmAccountBlocked = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountBlocked";
 			definition = "Your account is blocked, no instruction can settle over the account.";
 			owner_lazy = () -> PendingFailingReasonCode.mmObject();
@@ -811,7 +813,7 @@ public class PendingFailingReasonCode {
 	 */
 	public static final MMCode mmEnquirySent = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EnquirySent";
 			definition = "A chaser/enquiry has been sent.";
 			owner_lazy = () -> PendingFailingReasonCode.mmObject();
@@ -842,7 +844,7 @@ public class PendingFailingReasonCode {
 	 */
 	public static final MMCode mmNewIssues = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewIssues";
 			definition = "Financial instrument is a new issue and not yet available/tradable.";
 			owner_lazy = () -> PendingFailingReasonCode.mmObject();
@@ -875,7 +877,7 @@ public class PendingFailingReasonCode {
 	 */
 	public static final MMCode mmCounterpartyInsufficientSecurities = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CounterpartyInsufficientSecurities";
 			definition = "Insufficient deliverable financial instruments in counterparty's account or counterparty does not hold financial instruments.";
 			owner_lazy = () -> PendingFailingReasonCode.mmObject();
@@ -908,7 +910,7 @@ public class PendingFailingReasonCode {
 	 */
 	public static final MMCode mmMultipleSettlementAmount = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MultipleSettlementAmount";
 			definition = "Quantity instructed is not a multiple of an existing settlement quantity lot for the financial instrument.";
 			owner_lazy = () -> PendingFailingReasonCode.mmObject();
@@ -940,7 +942,7 @@ public class PendingFailingReasonCode {
 	 */
 	public static final MMCode mmGlobalFormSecurities = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GlobalFormSecurities";
 			definition = "Settlement cannot be executed; financial instruments are in global form.";
 			owner_lazy = () -> PendingFailingReasonCode.mmObject();
@@ -971,7 +973,7 @@ public class PendingFailingReasonCode {
 	 */
 	public static final MMCode mmYourInstructionOnHold = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "YourInstructionOnHold";
 			definition = "Your instruction is a preadvice, that is, for matching only.";
 			owner_lazy = () -> PendingFailingReasonCode.mmObject();
@@ -1003,7 +1005,7 @@ public class PendingFailingReasonCode {
 	 */
 	public static final MMCode mmGuaranteedDeliveryIndicatorDifference = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GuaranteedDeliveryIndicatorDifference";
 			definition = "Guaranteed delivery indicator differs in the counterparty's instruction.";
 			owner_lazy = () -> PendingFailingReasonCode.mmObject();
@@ -1033,7 +1035,7 @@ public class PendingFailingReasonCode {
 	 */
 	public static final MMCode mmTradeSettlesInPartials = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeSettlesInPartials";
 			definition = "Trade will settle in partials.";
 			owner_lazy = () -> PendingFailingReasonCode.mmObject();
@@ -1064,7 +1066,7 @@ public class PendingFailingReasonCode {
 	 */
 	public static final MMCode mmNoMatchingRequired = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoMatchingRequired";
 			definition = "Instruction has not been matched; matching process is not required.";
 			owner_lazy = () -> PendingFailingReasonCode.mmObject();
@@ -1094,7 +1096,7 @@ public class PendingFailingReasonCode {
 	 */
 	public static final MMCode mmCounterpartyInsufficientMoney = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CounterpartyInsufficientMoney";
 			definition = "Insufficient money in counterparty's account.";
 			owner_lazy = () -> PendingFailingReasonCode.mmObject();
@@ -1125,7 +1127,7 @@ public class PendingFailingReasonCode {
 	 */
 	public static final MMCode mmCollateralShortage = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralShortage";
 			definition = "Insufficient collateral in your account to execute the instruction.";
 			owner_lazy = () -> PendingFailingReasonCode.mmObject();
@@ -1158,7 +1160,7 @@ public class PendingFailingReasonCode {
 	 */
 	public static final MMCode mmSecuritiesPledgedAsCollateral = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesPledgedAsCollateral";
 			definition = "Financial instruments are not deliverable as they are pledged as collateral.";
 			owner_lazy = () -> PendingFailingReasonCode.mmObject();
@@ -1192,7 +1194,7 @@ public class PendingFailingReasonCode {
 	 */
 	public static final MMCode mmRefusedDepositForIssueOfDepositaryReceipts = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RefusedDepositForIssueOfDepositaryReceipts";
 			definition = "Deposit of shares for the issuing of depositary receipts has been refused. The allotment granted by the issuer is exceeded by your transaction.";
 			owner_lazy = () -> PendingFailingReasonCode.mmObject();
@@ -1225,7 +1227,7 @@ public class PendingFailingReasonCode {
 	 */
 	public static final MMCode mmMaximumForeignLimitReached = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaximumForeignLimitReached";
 			definition = "Insufficient deliverable financial instruments in your account as maximum foreign limit has been reached.";
 			owner_lazy = () -> PendingFailingReasonCode.mmObject();
@@ -1255,7 +1257,7 @@ public class PendingFailingReasonCode {
 	 */
 	public static final MMCode mmNoForeignExchangeInstruction = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoForeignExchangeInstruction";
 			definition = "A foreign exchange instruction from you is missing.";
 			owner_lazy = () -> PendingFailingReasonCode.mmObject();
@@ -1288,7 +1290,7 @@ public class PendingFailingReasonCode {
 	 */
 	public static final MMCode mmIncomeAdjustementRequired = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncomeAdjustementRequired";
 			definition = "Financial instruments require income adjustment, for example, dividend or interest.";
 			owner_lazy = () -> PendingFailingReasonCode.mmObject();
@@ -1321,7 +1323,7 @@ public class PendingFailingReasonCode {
 	 */
 	public static final MMCode mmPendingLinkedInstruction = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingLinkedInstruction";
 			definition = "Your instruction is pending settlement because the instruction linked to it is pending.";
 			owner_lazy = () -> PendingFailingReasonCode.mmObject();
@@ -1352,7 +1354,7 @@ public class PendingFailingReasonCode {
 	 */
 	public static final MMCode mmAwaitingSettlementDate = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AwaitingSettlementDate";
 			definition = "Awaiting settlement date. No settlement problems to be reported.";
 			owner_lazy = () -> PendingFailingReasonCode.mmObject();
@@ -1382,7 +1384,7 @@ public class PendingFailingReasonCode {
 	 */
 	public static final MMCode mmLackOfSecurities = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LackOfSecurities";
 			definition = "Insufficient financial instruments in your account.";
 			owner_lazy = () -> PendingFailingReasonCode.mmObject();
@@ -1412,7 +1414,7 @@ public class PendingFailingReasonCode {
 	 */
 	public static final MMCode mmSecuritiesLoanedOut = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesLoanedOut";
 			definition = "Financial instruments are out on loan.";
 			owner_lazy = () -> PendingFailingReasonCode.mmObject();
@@ -1442,7 +1444,7 @@ public class PendingFailingReasonCode {
 	 */
 	public static final MMCode mmInsufficientMoney = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InsufficientMoney";
 			definition = "Insufficient money in your account.";
 			owner_lazy = () -> PendingFailingReasonCode.mmObject();
@@ -1472,7 +1474,7 @@ public class PendingFailingReasonCode {
 	 */
 	public static final MMCode mmConfirmationNotReceived = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConfirmationNotReceived";
 			definition = "Confirmation of settlement has not yet been received.";
 			owner_lazy = () -> PendingFailingReasonCode.mmObject();
@@ -1505,7 +1507,7 @@ public class PendingFailingReasonCode {
 	 */
 	public static final MMCode mmNotInGoodOrder = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotInGoodOrder";
 			definition = "Delivery/receipt was refused because physical financial instruments are not in good order.";
 			owner_lazy = () -> PendingFailingReasonCode.mmObject();
@@ -1535,7 +1537,7 @@ public class PendingFailingReasonCode {
 	 */
 	public static final MMCode mmLackOfStampDutyInformation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LackOfStampDutyInformation";
 			definition = "Stamp duty information is missing.";
 			owner_lazy = () -> PendingFailingReasonCode.mmObject();
@@ -1568,7 +1570,7 @@ public class PendingFailingReasonCode {
 	 */
 	public static final MMCode mmProcessingBatchDifference = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProcessingBatchDifference";
 			definition = "Processing batch differs in the counterparty's instruction, for example, daytime/real-time versus overnight.";
 			owner_lazy = () -> PendingFailingReasonCode.mmObject();
@@ -1601,7 +1603,7 @@ public class PendingFailingReasonCode {
 	 */
 	public static final MMCode mmAwaitingNextSettlementCycle = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AwaitingNextSettlementCycle";
 			definition = "Your instruction is confirmed in the local market or is ready for settlement, awaiting next settlement cycle.";
 			owner_lazy = () -> PendingFailingReasonCode.mmObject();
@@ -1634,7 +1636,7 @@ public class PendingFailingReasonCode {
 	 */
 	public static final MMCode mmSecuritiesBlocked = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesBlocked";
 			definition = "Financial instruments are blocked due to a corporate action event, realignment, etc.";
 			owner_lazy = () -> PendingFailingReasonCode.mmObject();
@@ -1667,7 +1669,7 @@ public class PendingFailingReasonCode {
 	 */
 	public static final MMCode mmCounterpartyInReceivership = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CounterpartyInReceivership";
 			definition = "Counterparty is in receivership (form of bankruptcy where a court appointed person - the receiver - manages the affairs of the business).";
 			owner_lazy = () -> PendingFailingReasonCode.mmObject();
@@ -1700,7 +1702,7 @@ public class PendingFailingReasonCode {
 	 */
 	public static final MMCode mmMinimumSettlementAmount = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MinimumSettlementAmount";
 			definition = "Quantity instructed is lower than the minimum existing settlement quantity for the financial instrument.";
 			owner_lazy = () -> PendingFailingReasonCode.mmObject();
@@ -1734,7 +1736,7 @@ public class PendingFailingReasonCode {
 	 */
 	public static final MMCode mmPendingCAP = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingCAP";
 			definition = "Payment is pending, and does not settle because the actual use of the risk management limit on the counterpart (bilateral limit) prevents settlement.";
 			owner_lazy = () -> PendingFailingReasonCode.mmObject();
@@ -1764,7 +1766,7 @@ public class PendingFailingReasonCode {
 	 */
 	public static final MMCode mmStatusReasonInvestigation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusReasonInvestigation";
 			definition = "Pending reason being investigated.";
 			owner_lazy = () -> PendingFailingReasonCode.mmObject();
@@ -1794,7 +1796,7 @@ public class PendingFailingReasonCode {
 	 */
 	public static final MMCode mmOther = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
 			definition = "Other. See Narrative.";
 			owner_lazy = () -> PendingFailingReasonCode.mmObject();
@@ -1827,7 +1829,7 @@ public class PendingFailingReasonCode {
 	 */
 	public static final MMCode mmPhysicalSecuritiesVerification = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PhysicalSecuritiesVerification";
 			definition = "Physical financial instruments have been received and are being checked for authenticity.";
 			owner_lazy = () -> PendingFailingReasonCode.mmObject();
@@ -1859,7 +1861,7 @@ public class PendingFailingReasonCode {
 	 */
 	public static final MMCode mmMissingInformation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MissingInformation";
 			definition = "Information, for example, telephone number, contact person, is missing.";
 			owner_lazy = () -> PendingFailingReasonCode.mmObject();
@@ -1890,7 +1892,7 @@ public class PendingFailingReasonCode {
 	 */
 	public static final MMCode mmAccountNotOpen = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountNotOpen";
 			definition = "Account must already be opened in order to process the transfer.";
 			owner_lazy = () -> PendingFailingReasonCode.mmObject();
@@ -1921,7 +1923,7 @@ public class PendingFailingReasonCode {
 	 */
 	public static final MMCode mmUnderInvestigation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnderInvestigation";
 			definition = "Intermediary is investigating the reason why the transfer is pending.";
 			owner_lazy = () -> PendingFailingReasonCode.mmObject();
@@ -1952,7 +1954,7 @@ public class PendingFailingReasonCode {
 	 */
 	public static final MMCode mmUnderClientInvestigation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnderClientInvestigation";
 			definition = "Client has been informed of a problem and is investigating.";
 			owner_lazy = () -> PendingFailingReasonCode.mmObject();
@@ -1982,7 +1984,7 @@ public class PendingFailingReasonCode {
 	 */
 	public static final MMCode mmUnderTransferAgentInvestigation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnderTransferAgentInvestigation";
 			definition = "Transfer agent is investigating.";
 			owner_lazy = () -> PendingFailingReasonCode.mmObject();
@@ -2015,7 +2017,7 @@ public class PendingFailingReasonCode {
 	 */
 	public static final MMCode mmAwaitingTransferAgentStatus = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AwaitingTransferAgentStatus";
 			definition = "Transfer is being processed by the transfer agent, awaiting status from transfer agent.";
 			owner_lazy = () -> PendingFailingReasonCode.mmObject();
@@ -2045,7 +2047,7 @@ public class PendingFailingReasonCode {
 	 */
 	public static final MMCode mmUsualTransactionTime = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UsualTransactionTime";
 			definition = "Usual transfer agent's processing timeframe.";
 			owner_lazy = () -> PendingFailingReasonCode.mmObject();
@@ -2078,7 +2080,7 @@ public class PendingFailingReasonCode {
 	 */
 	public static final MMCode mmAwaitingStatus = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AwaitingStatus";
 			definition = "At your request, the Intermediary is checking the status of your instruction with the transfer agent.";
 			owner_lazy = () -> PendingFailingReasonCode.mmObject();
@@ -2108,7 +2110,7 @@ public class PendingFailingReasonCode {
 	 */
 	public static final MMCode mmApplicationFormSent = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ApplicationFormSent";
 			definition = "Application form has been sent to the transfer agent.";
 			owner_lazy = () -> PendingFailingReasonCode.mmObject();
@@ -2141,7 +2143,7 @@ public class PendingFailingReasonCode {
 	 */
 	public static final MMCode mmStockTransferFormSent = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StockTransferFormSent";
 			definition = "Stock transfer form has been sent to the counterparty to sign and forward to the transfer agent.";
 			owner_lazy = () -> PendingFailingReasonCode.mmObject();
@@ -2174,7 +2176,7 @@ public class PendingFailingReasonCode {
 	 */
 	public static final MMCode mmLongerProcessing = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LongerProcessing";
 			definition = "Longer processing timeframe for this type of transfer, due to documentation requirements.";
 			owner_lazy = () -> PendingFailingReasonCode.mmObject();
@@ -2205,7 +2207,7 @@ public class PendingFailingReasonCode {
 	 */
 	public static final MMCode mmAdditionalDocumentsRequested = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDocumentsRequested";
 			definition = "Additional documents have been requested by the transfer agent.";
 			owner_lazy = () -> PendingFailingReasonCode.mmObject();
@@ -2235,7 +2237,7 @@ public class PendingFailingReasonCode {
 	 */
 	public static final MMCode mmAdditionalDocumentsSent1 = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDocumentsSent1";
 			definition = "Additional documents have been sent.";
 			owner_lazy = () -> PendingFailingReasonCode.mmObject();
@@ -2269,7 +2271,7 @@ public class PendingFailingReasonCode {
 	 */
 	public static final MMCode mmAdditionalDocumentsSent2 = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDocumentsSent2";
 			definition = "Upon request of the transfer agent, the intermediary has sent additional documents. The transfer agent has confirmed that all the necessary information is now in place.";
 			owner_lazy = () -> PendingFailingReasonCode.mmObject();
@@ -2299,7 +2301,7 @@ public class PendingFailingReasonCode {
 	 */
 	public static final MMCode mmDocumentsRejected = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DocumentsRejected";
 			definition = "Documents are rejected by the transfer agent.";
 			owner_lazy = () -> PendingFailingReasonCode.mmObject();
@@ -2332,7 +2334,7 @@ public class PendingFailingReasonCode {
 	 */
 	public static final MMCode mmAwaitingCounterpartyReceipt = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AwaitingCounterpartyReceipt";
 			definition = "Counterparty has not sent an instruction to receive. Check with counterparty.";
 			owner_lazy = () -> PendingFailingReasonCode.mmObject();
@@ -2365,7 +2367,7 @@ public class PendingFailingReasonCode {
 	 */
 	public static final MMCode mmAwaitingCounterpartyDelivery = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AwaitingCounterpartyDelivery";
 			definition = "Counterparty has not sent an instruction to deliver or delivered the shares. Check with counterparty.";
 			owner_lazy = () -> PendingFailingReasonCode.mmObject();
@@ -2395,7 +2397,7 @@ public class PendingFailingReasonCode {
 	 */
 	public static final MMCode mmNormalProcessingPeriodLapsed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NormalProcessingPeriodLapsed";
 			definition = "The instructed position exceeds the eligible balance.";
 			owner_lazy = () -> PendingFailingReasonCode.mmObject();
@@ -2425,7 +2427,7 @@ public class PendingFailingReasonCode {
 	 */
 	public static final MMCode mmWrongCounterpartyAccount = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WrongCounterpartyAccount";
 			definition = "Wrong counterparty account details.";
 			owner_lazy = () -> PendingFailingReasonCode.mmObject();
@@ -2455,7 +2457,7 @@ public class PendingFailingReasonCode {
 	 */
 	public static final MMCode mmTransferAgentProcessing = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransferAgentProcessing";
 			definition = "Transfer is being processed by transfer agent.";
 			owner_lazy = () -> PendingFailingReasonCode.mmObject();
@@ -2485,7 +2487,7 @@ public class PendingFailingReasonCode {
 	 */
 	public static final MMCode mmExpectedConfirmation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExpectedConfirmation";
 			definition = "Confirmation is expected from transfer agent.";
 			owner_lazy = () -> PendingFailingReasonCode.mmObject();
@@ -2515,7 +2517,7 @@ public class PendingFailingReasonCode {
 	 */
 	public static final MMCode mmEscalation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Escalation";
 			definition = "Special follow-up is taking place.";
 			owner_lazy = () -> PendingFailingReasonCode.mmObject();
@@ -2545,7 +2547,7 @@ public class PendingFailingReasonCode {
 	 */
 	public static final MMCode mmTransferAgentNonReceipt = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransferAgentNonReceipt";
 			definition = "Transfer agent claims non-receipt of physical shares.";
 			owner_lazy = () -> PendingFailingReasonCode.mmObject();
@@ -2575,7 +2577,7 @@ public class PendingFailingReasonCode {
 	 */
 	public static final MMCode mmFinalVerification = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinalVerification";
 			definition = "Confirmed but finality is to be verified.";
 			owner_lazy = () -> PendingFailingReasonCode.mmObject();
@@ -2605,7 +2607,7 @@ public class PendingFailingReasonCode {
 	 */
 	public static final MMCode mmBeneficialOwnershipDisagreement = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BeneficialOwnershipDisagreement";
 			definition = "Disagreement in beneficial ownership.";
 			owner_lazy = () -> PendingFailingReasonCode.mmObject();
@@ -2638,7 +2640,7 @@ public class PendingFailingReasonCode {
 	 */
 	public static final MMCode mmBothInstructionsOnHold = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BothInstructionsOnHold";
 			definition = "Counterparty's instruction and your instruction are on hold/frozen/ in a preadvice mode.";
 			owner_lazy = () -> PendingFailingReasonCode.mmObject();
@@ -2671,7 +2673,7 @@ public class PendingFailingReasonCode {
 	 */
 	public static final MMCode mmClearingHouseTrade = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClearingHouseTrade";
 			definition = "Instructed settlement date does not agree with the settlement date on the clearing house trade, that is, a specific type of trade in India.";
 			owner_lazy = () -> PendingFailingReasonCode.mmObject();
@@ -2704,7 +2706,7 @@ public class PendingFailingReasonCode {
 	 */
 	public static final MMCode mmConfirmationOfPayment = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConfirmationOfPayment";
 			definition = "Prior payment credited to account based contractual income collection agreement has been collected from issuer.";
 			owner_lazy = () -> PendingFailingReasonCode.mmObject();
@@ -2738,7 +2740,7 @@ public class PendingFailingReasonCode {
 	 */
 	public static final MMCode mmUnavailableDeliverableDenominatedQuantity = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnavailableDeliverableDenominatedQuantity";
 			definition = "Quantity instructed does not match the denomination available/deliverable. Physical securities need to be obtained in deliverable denominated quantities.";
 			owner_lazy = () -> PendingFailingReasonCode.mmObject();
@@ -2771,7 +2773,7 @@ public class PendingFailingReasonCode {
 	 */
 	public static final MMCode mmNaturalDisaster = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NaturalDisaster";
 			definition = "Exceptional closing of all financial institutions due to natural disaster, for example, earthquake.";
 			owner_lazy = () -> PendingFailingReasonCode.mmObject();
@@ -2801,7 +2803,7 @@ public class PendingFailingReasonCode {
 	 */
 	public static final MMCode mmCounterpartyReturnedShares = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CounterpartyReturnedShares";
 			definition = "Counterparty has returned or refuses the securities.";
 			owner_lazy = () -> PendingFailingReasonCode.mmObject();
@@ -2831,7 +2833,7 @@ public class PendingFailingReasonCode {
 	 */
 	public static final MMCode mmQuantityDisagreement = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuantityDisagreement";
 			definition = "Quantity of financial instruments does not match.";
 			owner_lazy = () -> PendingFailingReasonCode.mmObject();
@@ -2864,7 +2866,7 @@ public class PendingFailingReasonCode {
 	 */
 	public static final MMCode mmSecuritiesFrozenAtCSD = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesFrozenAtCSD";
 			definition = "Financial instruments are blocked at the Central Security Depository (CSD) following a corporate event.";
 			owner_lazy = () -> PendingFailingReasonCode.mmObject();
@@ -2895,7 +2897,7 @@ public class PendingFailingReasonCode {
 	 */
 	public static final MMCode mmAwaitingOtherTransaction = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AwaitingOtherTransaction";
 			definition = "Awaiting settlement of a purchase to cover failing positions.";
 			owner_lazy = () -> PendingFailingReasonCode.mmObject();
@@ -2925,7 +2927,7 @@ public class PendingFailingReasonCode {
 	 */
 	public static final MMCode mmMarketDeadlineMissed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketDeadlineMissed";
 			definition = "Instruction was received after market deadline.";
 			owner_lazy = () -> PendingFailingReasonCode.mmObject();
@@ -2955,7 +2957,7 @@ public class PendingFailingReasonCode {
 	 */
 	public static final MMCode mmInsufficientCentralBankLiquidity = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InsufficientCentralBankLiquidity";
 			definition = "Central bank liquidity is insufficient.";
 			owner_lazy = () -> PendingFailingReasonCode.mmObject();
@@ -2985,7 +2987,7 @@ public class PendingFailingReasonCode {
 	 */
 	public static final MMCode mmMissingCertification = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MissingCertification";
 			definition = "Awaiting receipt of adequate certification.";
 			owner_lazy = () -> PendingFailingReasonCode.mmObject();
@@ -3015,7 +3017,7 @@ public class PendingFailingReasonCode {
 	 */
 	public static final MMCode mmNoPayment = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoPayment";
 			definition = "Payment has not been made by issuer.";
 			owner_lazy = () -> PendingFailingReasonCode.mmObject();
@@ -3046,7 +3048,7 @@ public class PendingFailingReasonCode {
 	 */
 	public static final MMCode mmNotDelivered = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotDelivered";
 			definition = "Financial instruments have not been delivered by the issuer.";
 			owner_lazy = () -> PendingFailingReasonCode.mmObject();
@@ -3079,7 +3081,7 @@ public class PendingFailingReasonCode {
 	 */
 	public static final MMCode mmPendingReceipt = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingReceipt";
 			definition = "The instruction is pending receipt of securities, for example, from a purchase, loan etc.";
 			owner_lazy = () -> PendingFailingReasonCode.mmObject();
@@ -3110,7 +3112,7 @@ public class PendingFailingReasonCode {
 	 */
 	public static final MMCode mmCounterpartyInstructionOnHold = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CounterpartyInstructionOnHold";
 			definition = "Counterparty's instruction is a preadvice, that is, for matching only.";
 			owner_lazy = () -> PendingFailingReasonCode.mmObject();
@@ -3143,7 +3145,7 @@ public class PendingFailingReasonCode {
 	 */
 	public static final MMCode mmCertificatesRejected = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CertificatesRejected";
 			definition = "Certificates have been lodged with the registrar but rejected due to incomplete documentation or foreign ownership limitation reached.";
 			owner_lazy = () -> PendingFailingReasonCode.mmObject();
@@ -3176,7 +3178,7 @@ public class PendingFailingReasonCode {
 	 */
 	public static final MMCode mmSettlementSystemMethodModified = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementSystemMethodModified";
 			definition = "Settlement system/method has been modified at central securities depository to allow settlement.";
 			owner_lazy = () -> PendingFailingReasonCode.mmObject();
@@ -3209,7 +3211,7 @@ public class PendingFailingReasonCode {
 	 */
 	public static final MMCode mmValidForTaxAuthorities = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValidForTaxAuthorities";
 			definition = "For tax reclaim, the event is pending, the tax reclaim is valid for the tax authorities.";
 			owner_lazy = () -> PendingFailingReasonCode.mmObject();
@@ -3243,7 +3245,7 @@ public class PendingFailingReasonCode {
 	 */
 	public static final MMCode mmBuyInProcedure = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BuyInProcedure";
 			definition = "Buy-in procedure has started on the market (on your behalf if your instruction is a receipt, by the counterparty if your instruction is a delivery).";
 			owner_lazy = () -> PendingFailingReasonCode.mmObject();
@@ -3276,7 +3278,7 @@ public class PendingFailingReasonCode {
 	 */
 	public static final MMCode mmCancellationConfirmationRequested = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationConfirmationRequested";
 			definition = "Instruction was in suspense. Suspense period is finished so your cancellation or confirmation of instruction is required.";
 			owner_lazy = () -> PendingFailingReasonCode.mmObject();
@@ -3306,7 +3308,7 @@ public class PendingFailingReasonCode {
 	 */
 	public static final MMCode mmWrongCertificatesNumbers = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WrongCertificatesNumbers";
 			definition = "Certificate number error.";
 			owner_lazy = () -> PendingFailingReasonCode.mmObject();
@@ -3337,7 +3339,7 @@ public class PendingFailingReasonCode {
 	 */
 	public static final MMCode mmUnderObjection = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnderObjection";
 			definition = "Financial instruments are stolen, in dispute, under objection etc.";
 			owner_lazy = () -> PendingFailingReasonCode.mmObject();
@@ -3367,7 +3369,7 @@ public class PendingFailingReasonCode {
 	 */
 	public static final MMCode mmConfirmationDiscrepency = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConfirmationDiscrepency";
 			definition = "Discrepancy in the settlement confirmation.";
 			owner_lazy = () -> PendingFailingReasonCode.mmObject();
@@ -3400,7 +3402,7 @@ public class PendingFailingReasonCode {
 	 */
 	public static final MMCode mmCounterpartyTooLateForSettlement = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CounterpartyTooLateForSettlement";
 			definition = "Counterparty's instruction was too late for settlement, that is the matching or settlement problems was solved too late.";
 			owner_lazy = () -> PendingFailingReasonCode.mmObject();
@@ -3433,7 +3435,7 @@ public class PendingFailingReasonCode {
 	 */
 	public static final MMCode mmMoneySecuritiesTooLateForSettlement = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MoneySecuritiesTooLateForSettlement";
 			definition = "Covering money/financial instruments were received too late for completing settlement on a same day basis.";
 			owner_lazy = () -> PendingFailingReasonCode.mmObject();
@@ -3465,7 +3467,7 @@ public class PendingFailingReasonCode {
 	 */
 	public static final MMCode mmNextProcess = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NextProcess";
 			definition = "Next process is launched. No processing pending problems to be reported.";
 			owner_lazy = () -> PendingFailingReasonCode.mmObject();
@@ -3495,7 +3497,7 @@ public class PendingFailingReasonCode {
 	 */
 	public static final MMCode mmAwaitingConfirmation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AwaitingConfirmation";
 			definition = "Awaiting confirmation from the counterparty.";
 			owner_lazy = () -> PendingFailingReasonCode.mmObject();
@@ -3525,7 +3527,7 @@ public class PendingFailingReasonCode {
 	 */
 	public static final MMCode mmSystemOnHold = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SystemOnHold";
 			definition = "Transaction was put on hold/frozen by the system.";
 			owner_lazy = () -> PendingFailingReasonCode.mmObject();
@@ -3558,7 +3560,7 @@ public class PendingFailingReasonCode {
 	 */
 	public static final MMCode mmConditionalRealignement = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConditionalRealignement";
 			definition = "Execution is conditional to the execution of a process of realignment at the issuer CSD.";
 			owner_lazy = () -> PendingFailingReasonCode.mmObject();
@@ -3591,7 +3593,7 @@ public class PendingFailingReasonCode {
 	 */
 	public static final MMCode mmConditionalCurrency = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConditionalCurrency";
 			definition = "Execution is conditional to the execution of a process linked to the currency of the transaction.";
 			owner_lazy = () -> PendingFailingReasonCode.mmObject();
@@ -3623,7 +3625,7 @@ public class PendingFailingReasonCode {
 	 */
 	public static final MMCode mmConditionalRegistrar = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConditionalRegistrar";
 			definition = "Execution is conditional to the execution of a process at the registrar.";
 			owner_lazy = () -> PendingFailingReasonCode.mmObject();
@@ -3653,7 +3655,7 @@ public class PendingFailingReasonCode {
 	 */
 	public static final MMCode mmCancelNotPossible = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancelNotPossible";
 			definition = "Instruction has been processed and cannot be cancelled.";
 			owner_lazy = () -> PendingFailingReasonCode.mmObject();
@@ -3686,7 +3688,7 @@ public class PendingFailingReasonCode {
 	 */
 	public static final MMCode mmCSDHold = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CSDHold";
 			definition = "Central securities depository sets the  instruction in a hold/frozen/preadvice mode.";
 			owner_lazy = () -> PendingFailingReasonCode.mmObject();
@@ -3720,7 +3722,7 @@ public class PendingFailingReasonCode {
 	 */
 	public static final MMCode mmConditionalDelivery = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConditionalDelivery";
 			definition = "Instruction is in a hold/frozen/preadvice mode as it fulfils predefined conditional delivery rules in the market infrastructure platform for conditional delivery.";
 			owner_lazy = () -> PendingFailingReasonCode.mmObject();
@@ -3754,7 +3756,7 @@ public class PendingFailingReasonCode {
 	 */
 	public static final MMCode mmCSDValidation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CSDValidation";
 			definition = "Instruction is in a hold/frozen/preadvice mode as it fulfils predefined conditions of a restriction processing type in the market infrastructure platform.";
 			owner_lazy = () -> PendingFailingReasonCode.mmObject();
@@ -3787,7 +3789,7 @@ public class PendingFailingReasonCode {
 	 */
 	public static final MMCode mmConditionalDeliveryAwaitingRelease = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConditionalDeliveryAwaitingRelease";
 			definition = "Instruction is in a hold/frozen/preadvice mode. Market infrastructure platform is awaiting release.";
 			owner_lazy = () -> PendingFailingReasonCode.mmObject();
@@ -3818,7 +3820,7 @@ public class PendingFailingReasonCode {
 	 */
 	public static final MMCode mmIncompleteNumberCount = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncompleteNumberCount";
 			definition = "Not all the instructions part of a pool have been received.";
 			owner_lazy = () -> PendingFailingReasonCode.mmObject();
@@ -3848,7 +3850,7 @@ public class PendingFailingReasonCode {
 	 */
 	public static final MMCode mmConditionalDeliveryAwaitingCancellation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConditionalDeliveryAwaitingCancellation";
 			definition = "Awaiting cancellation of one of the party.";
 			owner_lazy = () -> PendingFailingReasonCode.mmObject();
@@ -3881,7 +3883,7 @@ public class PendingFailingReasonCode {
 	 */
 	public static final MMCode mmConditionalDeliveryCancellationPending = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConditionalDeliveryCancellationPending";
 			definition = "Conditional Delivery is still pending awaiting the cancellation from at least another party.";
 			owner_lazy = () -> PendingFailingReasonCode.mmObject();
@@ -3911,7 +3913,7 @@ public class PendingFailingReasonCode {
 	 */
 	public static final MMCode mmPendingBeneficiaryOwnerDetails = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingBeneficiaryOwnerDetails";
 			definition = "Pending receipt of beneficiary owner details.";
 			owner_lazy = () -> PendingFailingReasonCode.mmObject();
@@ -3922,66 +3924,41 @@ public class PendingFailingReasonCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("AWMO");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PendingFailingReasonCode";
 				definition = "Specifies the reason the transaction/instruction is pending or failing settlement. Settlement on the instructed settlement date is still possible, status is pending. Settlement on the instructed settlement date is no longer possible, status is failing.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PendingFailingReasonCode.mmAwaitingMoney, com.tools20022.repository.codeset.PendingFailingReasonCode.mmAccountServicerDeadlineMissed,
-						com.tools20022.repository.codeset.PendingFailingReasonCode.mmSentToTaxAuthorities, com.tools20022.repository.codeset.PendingFailingReasonCode.mmAwaitingSecurities,
-						com.tools20022.repository.codeset.PendingFailingReasonCode.mmInstructionRefusedOrNotRecognised, com.tools20022.repository.codeset.PendingFailingReasonCode.mmAwaitingSecuritiesFromCounterparty,
-						com.tools20022.repository.codeset.PendingFailingReasonCode.mmPhysicalDeliveryDelay, com.tools20022.repository.codeset.PendingFailingReasonCode.mmTradeAmendedInMarket,
-						com.tools20022.repository.codeset.PendingFailingReasonCode.mmAwaitingDocumentsOrEndorsementsFromYou, com.tools20022.repository.codeset.PendingFailingReasonCode.mmAwaitingDocumentsOrEndorsementsFromCounterparty,
-						com.tools20022.repository.codeset.PendingFailingReasonCode.mmAccountBlocked, com.tools20022.repository.codeset.PendingFailingReasonCode.mmEnquirySent,
-						com.tools20022.repository.codeset.PendingFailingReasonCode.mmNewIssues, com.tools20022.repository.codeset.PendingFailingReasonCode.mmCounterpartyInsufficientSecurities,
-						com.tools20022.repository.codeset.PendingFailingReasonCode.mmMultipleSettlementAmount, com.tools20022.repository.codeset.PendingFailingReasonCode.mmGlobalFormSecurities,
-						com.tools20022.repository.codeset.PendingFailingReasonCode.mmYourInstructionOnHold, com.tools20022.repository.codeset.PendingFailingReasonCode.mmGuaranteedDeliveryIndicatorDifference,
-						com.tools20022.repository.codeset.PendingFailingReasonCode.mmTradeSettlesInPartials, com.tools20022.repository.codeset.PendingFailingReasonCode.mmNoMatchingRequired,
-						com.tools20022.repository.codeset.PendingFailingReasonCode.mmCounterpartyInsufficientMoney, com.tools20022.repository.codeset.PendingFailingReasonCode.mmCollateralShortage,
-						com.tools20022.repository.codeset.PendingFailingReasonCode.mmSecuritiesPledgedAsCollateral, com.tools20022.repository.codeset.PendingFailingReasonCode.mmRefusedDepositForIssueOfDepositaryReceipts,
-						com.tools20022.repository.codeset.PendingFailingReasonCode.mmMaximumForeignLimitReached, com.tools20022.repository.codeset.PendingFailingReasonCode.mmNoForeignExchangeInstruction,
-						com.tools20022.repository.codeset.PendingFailingReasonCode.mmIncomeAdjustementRequired, com.tools20022.repository.codeset.PendingFailingReasonCode.mmPendingLinkedInstruction,
-						com.tools20022.repository.codeset.PendingFailingReasonCode.mmAwaitingSettlementDate, com.tools20022.repository.codeset.PendingFailingReasonCode.mmLackOfSecurities,
-						com.tools20022.repository.codeset.PendingFailingReasonCode.mmSecuritiesLoanedOut, com.tools20022.repository.codeset.PendingFailingReasonCode.mmInsufficientMoney,
-						com.tools20022.repository.codeset.PendingFailingReasonCode.mmConfirmationNotReceived, com.tools20022.repository.codeset.PendingFailingReasonCode.mmNotInGoodOrder,
-						com.tools20022.repository.codeset.PendingFailingReasonCode.mmLackOfStampDutyInformation, com.tools20022.repository.codeset.PendingFailingReasonCode.mmProcessingBatchDifference,
-						com.tools20022.repository.codeset.PendingFailingReasonCode.mmAwaitingNextSettlementCycle, com.tools20022.repository.codeset.PendingFailingReasonCode.mmSecuritiesBlocked,
-						com.tools20022.repository.codeset.PendingFailingReasonCode.mmCounterpartyInReceivership, com.tools20022.repository.codeset.PendingFailingReasonCode.mmMinimumSettlementAmount,
-						com.tools20022.repository.codeset.PendingFailingReasonCode.mmPendingCAP, com.tools20022.repository.codeset.PendingFailingReasonCode.mmStatusReasonInvestigation,
-						com.tools20022.repository.codeset.PendingFailingReasonCode.mmOther, com.tools20022.repository.codeset.PendingFailingReasonCode.mmPhysicalSecuritiesVerification,
-						com.tools20022.repository.codeset.PendingFailingReasonCode.mmMissingInformation, com.tools20022.repository.codeset.PendingFailingReasonCode.mmAccountNotOpen,
-						com.tools20022.repository.codeset.PendingFailingReasonCode.mmUnderInvestigation, com.tools20022.repository.codeset.PendingFailingReasonCode.mmUnderClientInvestigation,
-						com.tools20022.repository.codeset.PendingFailingReasonCode.mmUnderTransferAgentInvestigation, com.tools20022.repository.codeset.PendingFailingReasonCode.mmAwaitingTransferAgentStatus,
-						com.tools20022.repository.codeset.PendingFailingReasonCode.mmUsualTransactionTime, com.tools20022.repository.codeset.PendingFailingReasonCode.mmAwaitingStatus,
-						com.tools20022.repository.codeset.PendingFailingReasonCode.mmApplicationFormSent, com.tools20022.repository.codeset.PendingFailingReasonCode.mmStockTransferFormSent,
-						com.tools20022.repository.codeset.PendingFailingReasonCode.mmLongerProcessing, com.tools20022.repository.codeset.PendingFailingReasonCode.mmAdditionalDocumentsRequested,
-						com.tools20022.repository.codeset.PendingFailingReasonCode.mmAdditionalDocumentsSent1, com.tools20022.repository.codeset.PendingFailingReasonCode.mmAdditionalDocumentsSent2,
-						com.tools20022.repository.codeset.PendingFailingReasonCode.mmDocumentsRejected, com.tools20022.repository.codeset.PendingFailingReasonCode.mmAwaitingCounterpartyReceipt,
-						com.tools20022.repository.codeset.PendingFailingReasonCode.mmAwaitingCounterpartyDelivery, com.tools20022.repository.codeset.PendingFailingReasonCode.mmNormalProcessingPeriodLapsed,
-						com.tools20022.repository.codeset.PendingFailingReasonCode.mmWrongCounterpartyAccount, com.tools20022.repository.codeset.PendingFailingReasonCode.mmTransferAgentProcessing,
-						com.tools20022.repository.codeset.PendingFailingReasonCode.mmExpectedConfirmation, com.tools20022.repository.codeset.PendingFailingReasonCode.mmEscalation,
-						com.tools20022.repository.codeset.PendingFailingReasonCode.mmTransferAgentNonReceipt, com.tools20022.repository.codeset.PendingFailingReasonCode.mmFinalVerification,
-						com.tools20022.repository.codeset.PendingFailingReasonCode.mmBeneficialOwnershipDisagreement, com.tools20022.repository.codeset.PendingFailingReasonCode.mmBothInstructionsOnHold,
-						com.tools20022.repository.codeset.PendingFailingReasonCode.mmClearingHouseTrade, com.tools20022.repository.codeset.PendingFailingReasonCode.mmConfirmationOfPayment,
-						com.tools20022.repository.codeset.PendingFailingReasonCode.mmUnavailableDeliverableDenominatedQuantity, com.tools20022.repository.codeset.PendingFailingReasonCode.mmNaturalDisaster,
-						com.tools20022.repository.codeset.PendingFailingReasonCode.mmCounterpartyReturnedShares, com.tools20022.repository.codeset.PendingFailingReasonCode.mmQuantityDisagreement,
-						com.tools20022.repository.codeset.PendingFailingReasonCode.mmSecuritiesFrozenAtCSD, com.tools20022.repository.codeset.PendingFailingReasonCode.mmAwaitingOtherTransaction,
-						com.tools20022.repository.codeset.PendingFailingReasonCode.mmMarketDeadlineMissed, com.tools20022.repository.codeset.PendingFailingReasonCode.mmInsufficientCentralBankLiquidity,
-						com.tools20022.repository.codeset.PendingFailingReasonCode.mmMissingCertification, com.tools20022.repository.codeset.PendingFailingReasonCode.mmNoPayment,
-						com.tools20022.repository.codeset.PendingFailingReasonCode.mmNotDelivered, com.tools20022.repository.codeset.PendingFailingReasonCode.mmPendingReceipt,
-						com.tools20022.repository.codeset.PendingFailingReasonCode.mmCounterpartyInstructionOnHold, com.tools20022.repository.codeset.PendingFailingReasonCode.mmCertificatesRejected,
-						com.tools20022.repository.codeset.PendingFailingReasonCode.mmSettlementSystemMethodModified, com.tools20022.repository.codeset.PendingFailingReasonCode.mmValidForTaxAuthorities,
-						com.tools20022.repository.codeset.PendingFailingReasonCode.mmBuyInProcedure, com.tools20022.repository.codeset.PendingFailingReasonCode.mmCancellationConfirmationRequested,
-						com.tools20022.repository.codeset.PendingFailingReasonCode.mmWrongCertificatesNumbers, com.tools20022.repository.codeset.PendingFailingReasonCode.mmUnderObjection,
-						com.tools20022.repository.codeset.PendingFailingReasonCode.mmConfirmationDiscrepency, com.tools20022.repository.codeset.PendingFailingReasonCode.mmCounterpartyTooLateForSettlement,
-						com.tools20022.repository.codeset.PendingFailingReasonCode.mmMoneySecuritiesTooLateForSettlement, com.tools20022.repository.codeset.PendingFailingReasonCode.mmNextProcess,
-						com.tools20022.repository.codeset.PendingFailingReasonCode.mmAwaitingConfirmation, com.tools20022.repository.codeset.PendingFailingReasonCode.mmSystemOnHold,
-						com.tools20022.repository.codeset.PendingFailingReasonCode.mmConditionalRealignement, com.tools20022.repository.codeset.PendingFailingReasonCode.mmConditionalCurrency,
-						com.tools20022.repository.codeset.PendingFailingReasonCode.mmConditionalRegistrar, com.tools20022.repository.codeset.PendingFailingReasonCode.mmCancelNotPossible,
-						com.tools20022.repository.codeset.PendingFailingReasonCode.mmCSDHold, com.tools20022.repository.codeset.PendingFailingReasonCode.mmConditionalDelivery,
-						com.tools20022.repository.codeset.PendingFailingReasonCode.mmCSDValidation, com.tools20022.repository.codeset.PendingFailingReasonCode.mmConditionalDeliveryAwaitingRelease,
-						com.tools20022.repository.codeset.PendingFailingReasonCode.mmIncompleteNumberCount, com.tools20022.repository.codeset.PendingFailingReasonCode.mmConditionalDeliveryAwaitingCancellation,
-						com.tools20022.repository.codeset.PendingFailingReasonCode.mmConditionalDeliveryCancellationPending, com.tools20022.repository.codeset.PendingFailingReasonCode.mmPendingBeneficiaryOwnerDetails);
+				code_lazy = () -> Arrays.asList(PendingFailingReasonCode.mmAwaitingMoney, PendingFailingReasonCode.mmAccountServicerDeadlineMissed, PendingFailingReasonCode.mmSentToTaxAuthorities,
+						PendingFailingReasonCode.mmAwaitingSecurities, PendingFailingReasonCode.mmInstructionRefusedOrNotRecognised, PendingFailingReasonCode.mmAwaitingSecuritiesFromCounterparty,
+						PendingFailingReasonCode.mmPhysicalDeliveryDelay, PendingFailingReasonCode.mmTradeAmendedInMarket, PendingFailingReasonCode.mmAwaitingDocumentsOrEndorsementsFromYou,
+						PendingFailingReasonCode.mmAwaitingDocumentsOrEndorsementsFromCounterparty, PendingFailingReasonCode.mmAccountBlocked, PendingFailingReasonCode.mmEnquirySent, PendingFailingReasonCode.mmNewIssues,
+						PendingFailingReasonCode.mmCounterpartyInsufficientSecurities, PendingFailingReasonCode.mmMultipleSettlementAmount, PendingFailingReasonCode.mmGlobalFormSecurities, PendingFailingReasonCode.mmYourInstructionOnHold,
+						PendingFailingReasonCode.mmGuaranteedDeliveryIndicatorDifference, PendingFailingReasonCode.mmTradeSettlesInPartials, PendingFailingReasonCode.mmNoMatchingRequired,
+						PendingFailingReasonCode.mmCounterpartyInsufficientMoney, PendingFailingReasonCode.mmCollateralShortage, PendingFailingReasonCode.mmSecuritiesPledgedAsCollateral,
+						PendingFailingReasonCode.mmRefusedDepositForIssueOfDepositaryReceipts, PendingFailingReasonCode.mmMaximumForeignLimitReached, PendingFailingReasonCode.mmNoForeignExchangeInstruction,
+						PendingFailingReasonCode.mmIncomeAdjustementRequired, PendingFailingReasonCode.mmPendingLinkedInstruction, PendingFailingReasonCode.mmAwaitingSettlementDate, PendingFailingReasonCode.mmLackOfSecurities,
+						PendingFailingReasonCode.mmSecuritiesLoanedOut, PendingFailingReasonCode.mmInsufficientMoney, PendingFailingReasonCode.mmConfirmationNotReceived, PendingFailingReasonCode.mmNotInGoodOrder,
+						PendingFailingReasonCode.mmLackOfStampDutyInformation, PendingFailingReasonCode.mmProcessingBatchDifference, PendingFailingReasonCode.mmAwaitingNextSettlementCycle, PendingFailingReasonCode.mmSecuritiesBlocked,
+						PendingFailingReasonCode.mmCounterpartyInReceivership, PendingFailingReasonCode.mmMinimumSettlementAmount, PendingFailingReasonCode.mmPendingCAP, PendingFailingReasonCode.mmStatusReasonInvestigation,
+						PendingFailingReasonCode.mmOther, PendingFailingReasonCode.mmPhysicalSecuritiesVerification, PendingFailingReasonCode.mmMissingInformation, PendingFailingReasonCode.mmAccountNotOpen,
+						PendingFailingReasonCode.mmUnderInvestigation, PendingFailingReasonCode.mmUnderClientInvestigation, PendingFailingReasonCode.mmUnderTransferAgentInvestigation, PendingFailingReasonCode.mmAwaitingTransferAgentStatus,
+						PendingFailingReasonCode.mmUsualTransactionTime, PendingFailingReasonCode.mmAwaitingStatus, PendingFailingReasonCode.mmApplicationFormSent, PendingFailingReasonCode.mmStockTransferFormSent,
+						PendingFailingReasonCode.mmLongerProcessing, PendingFailingReasonCode.mmAdditionalDocumentsRequested, PendingFailingReasonCode.mmAdditionalDocumentsSent1, PendingFailingReasonCode.mmAdditionalDocumentsSent2,
+						PendingFailingReasonCode.mmDocumentsRejected, PendingFailingReasonCode.mmAwaitingCounterpartyReceipt, PendingFailingReasonCode.mmAwaitingCounterpartyDelivery, PendingFailingReasonCode.mmNormalProcessingPeriodLapsed,
+						PendingFailingReasonCode.mmWrongCounterpartyAccount, PendingFailingReasonCode.mmTransferAgentProcessing, PendingFailingReasonCode.mmExpectedConfirmation, PendingFailingReasonCode.mmEscalation,
+						PendingFailingReasonCode.mmTransferAgentNonReceipt, PendingFailingReasonCode.mmFinalVerification, PendingFailingReasonCode.mmBeneficialOwnershipDisagreement, PendingFailingReasonCode.mmBothInstructionsOnHold,
+						PendingFailingReasonCode.mmClearingHouseTrade, PendingFailingReasonCode.mmConfirmationOfPayment, PendingFailingReasonCode.mmUnavailableDeliverableDenominatedQuantity, PendingFailingReasonCode.mmNaturalDisaster,
+						PendingFailingReasonCode.mmCounterpartyReturnedShares, PendingFailingReasonCode.mmQuantityDisagreement, PendingFailingReasonCode.mmSecuritiesFrozenAtCSD, PendingFailingReasonCode.mmAwaitingOtherTransaction,
+						PendingFailingReasonCode.mmMarketDeadlineMissed, PendingFailingReasonCode.mmInsufficientCentralBankLiquidity, PendingFailingReasonCode.mmMissingCertification, PendingFailingReasonCode.mmNoPayment,
+						PendingFailingReasonCode.mmNotDelivered, PendingFailingReasonCode.mmPendingReceipt, PendingFailingReasonCode.mmCounterpartyInstructionOnHold, PendingFailingReasonCode.mmCertificatesRejected,
+						PendingFailingReasonCode.mmSettlementSystemMethodModified, PendingFailingReasonCode.mmValidForTaxAuthorities, PendingFailingReasonCode.mmBuyInProcedure, PendingFailingReasonCode.mmCancellationConfirmationRequested,
+						PendingFailingReasonCode.mmWrongCertificatesNumbers, PendingFailingReasonCode.mmUnderObjection, PendingFailingReasonCode.mmConfirmationDiscrepency, PendingFailingReasonCode.mmCounterpartyTooLateForSettlement,
+						PendingFailingReasonCode.mmMoneySecuritiesTooLateForSettlement, PendingFailingReasonCode.mmNextProcess, PendingFailingReasonCode.mmAwaitingConfirmation, PendingFailingReasonCode.mmSystemOnHold,
+						PendingFailingReasonCode.mmConditionalRealignement, PendingFailingReasonCode.mmConditionalCurrency, PendingFailingReasonCode.mmConditionalRegistrar, PendingFailingReasonCode.mmCancelNotPossible,
+						PendingFailingReasonCode.mmCSDHold, PendingFailingReasonCode.mmConditionalDelivery, PendingFailingReasonCode.mmCSDValidation, PendingFailingReasonCode.mmConditionalDeliveryAwaitingRelease,
+						PendingFailingReasonCode.mmIncompleteNumberCount, PendingFailingReasonCode.mmConditionalDeliveryAwaitingCancellation, PendingFailingReasonCode.mmConditionalDeliveryCancellationPending,
+						PendingFailingReasonCode.mmPendingBeneficiaryOwnerDetails);
 				derivation_lazy = () -> Arrays.asList(PendingProcessingReason1Code.mmObject(), PendingReason6Code.mmObject(), PendingProcessingReason2Code.mmObject(), PendingReason1Code.mmObject(), FailingReason1Code.mmObject(),
 						PendingReason2Code.mmObject(), FailingReason2Code.mmObject(), PendingProcessingReason3Code.mmObject(), PendingReason9Code.mmObject(), PendingReason4Code.mmObject(), PendingReason5Code.mmObject(),
 						PendingReason7Code.mmObject(), PendingReason3Code.mmObject(), PendingReason8Code.mmObject(), PendingReason10Code.mmObject(), FailingReason3Code.mmObject(), PendingCancellationReason1Code.mmObject(),

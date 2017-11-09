@@ -20,12 +20,18 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.PartyIdentification8Choice;
 import com.tools20022.repository.codeset.Trading1MethodCode;
 import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
 import com.tools20022.repository.datatype.Max140Text;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.YesNoIndicator;
+import com.tools20022.repository.entity.Commission;
+import com.tools20022.repository.entity.Negotiation;
+import com.tools20022.repository.entity.Party;
+import com.tools20022.repository.entity.Trade;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -133,11 +139,11 @@ public class GeneralInformation1 {
 	 */
 	public static final MMMessageAttribute mmBlockIndicator = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Trade.mmBlockIndicator;
+			businessElementTrace_lazy = () -> Trade.mmBlockIndicator;
 			componentContext_lazy = () -> GeneralInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "BlckInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BlockIndicator";
 			definition = "Indicates whether the trade is a block or single trade.";
 			maxOccurs = 1;
@@ -179,7 +185,7 @@ public class GeneralInformation1 {
 			componentContext_lazy = () -> GeneralInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "RltdTradRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedTradeReference";
 			definition = "Reference to a preceeding transaction, for example, an option or swap.";
 			maxOccurs = 1;
@@ -224,11 +230,11 @@ public class GeneralInformation1 {
 	 */
 	public static final MMMessageAttribute mmDealingMethod = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Negotiation.mmTradingMethod;
+			businessElementTrace_lazy = () -> Negotiation.mmTradingMethod;
 			componentContext_lazy = () -> GeneralInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "DealgMtd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DealingMethod";
 			definition = "Method used by the trading parties to negotiate and/or execute a deal.";
 			maxOccurs = 1;
@@ -275,11 +281,11 @@ public class GeneralInformation1 {
 	 */
 	public static final MMMessageAssociationEnd mmBrokerIdentification = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> GeneralInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "BrkrId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BrokerIdentification";
 			definition = "Specifies the broker which arranged the deal between the trading side and the counterparty side or, when two money brokers are involved, between the trading side and the other money broker.";
 			maxOccurs = 1;
@@ -321,7 +327,7 @@ public class GeneralInformation1 {
 			componentContext_lazy = () -> GeneralInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "CtrPtyRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CounterpartyReference";
 			definition = "Counterparty's reference for the trade.";
 			maxOccurs = 1;
@@ -365,11 +371,11 @@ public class GeneralInformation1 {
 	 */
 	public static final MMMessageAttribute mmBrokersCommission = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Commission.mmCommissionAmount;
+			businessElementTrace_lazy = () -> Commission.mmCommissionAmount;
 			componentContext_lazy = () -> GeneralInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "BrkrsComssn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BrokersCommission";
 			definition = "Brokerage fee for a broker confirmation.";
 			maxOccurs = 1;
@@ -413,7 +419,7 @@ public class GeneralInformation1 {
 			componentContext_lazy = () -> GeneralInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "SndrToRcvrInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SenderToReceiverInformation";
 			definition = "This field specifies additional information for the Receiver and applies to the whole message";
 			maxOccurs = 1;
@@ -459,11 +465,11 @@ public class GeneralInformation1 {
 	 */
 	public static final MMMessageAssociationEnd mmDealingBranchTradingSide = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> GeneralInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "DealgBrnchTradgSd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DealingBranchTradingSide";
 			definition = "Specifies the branch at the counterparty side with which the deal was done.";
 			maxOccurs = 1;
@@ -510,11 +516,11 @@ public class GeneralInformation1 {
 	 */
 	public static final MMMessageAssociationEnd mmDealingBranchCounterpartySide = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> GeneralInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "DealgBrnchCtrPtySd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DealingBranchCounterpartySide";
 			definition = "Specifies the branch at the counterparty side with which the deal was done.";
 			maxOccurs = 1;
@@ -560,11 +566,11 @@ public class GeneralInformation1 {
 	 */
 	public static final MMMessageAssociationEnd mmContactInformation = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmContactPoint;
+			businessElementTrace_lazy = () -> Party.mmContactPoint;
 			componentContext_lazy = () -> GeneralInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "CtctInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ContactInformation";
 			definition = "Specifies the name and/or electronic address of the the receiver of the message who may be contacted for any queries concerning this trade.";
 			maxOccurs = 1;
@@ -577,13 +583,11 @@ public class GeneralInformation1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GeneralInformation1.mmBlockIndicator, com.tools20022.repository.msg.GeneralInformation1.mmRelatedTradeReference,
-						com.tools20022.repository.msg.GeneralInformation1.mmDealingMethod, com.tools20022.repository.msg.GeneralInformation1.mmBrokerIdentification, com.tools20022.repository.msg.GeneralInformation1.mmCounterpartyReference,
-						com.tools20022.repository.msg.GeneralInformation1.mmBrokersCommission, com.tools20022.repository.msg.GeneralInformation1.mmSenderToReceiverInformation,
-						com.tools20022.repository.msg.GeneralInformation1.mmDealingBranchTradingSide, com.tools20022.repository.msg.GeneralInformation1.mmDealingBranchCounterpartySide,
-						com.tools20022.repository.msg.GeneralInformation1.mmContactInformation);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(GeneralInformation1.mmBlockIndicator, GeneralInformation1.mmRelatedTradeReference, GeneralInformation1.mmDealingMethod, GeneralInformation1.mmBrokerIdentification,
+						GeneralInformation1.mmCounterpartyReference, GeneralInformation1.mmBrokersCommission, GeneralInformation1.mmSenderToReceiverInformation, GeneralInformation1.mmDealingBranchTradingSide,
+						GeneralInformation1.mmDealingBranchCounterpartySide, GeneralInformation1.mmContactInformation);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "GeneralInformation1";
 				definition = "Information concerning the negotiation process leading to a treasury trade.";
 				nextVersions_lazy = () -> Arrays.asList(GeneralInformation4.mmObject());

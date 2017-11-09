@@ -19,6 +19,8 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.PaymentDateRange1;
 import com.tools20022.repository.msg.PaymentDateRange2;
 import java.util.Arrays;
@@ -105,10 +107,10 @@ public class PaymentSchedule1Choice {
 			componentContext_lazy = () -> PaymentSchedule1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "DtRg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DateRange";
 			definition = "Specifies an expected date and a due date for the payment.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.ShipmentSchedule2Choice.mmShipmentDateRange;
+			previousVersion_lazy = () -> ShipmentSchedule2Choice.mmShipmentDateRange;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -156,10 +158,10 @@ public class PaymentSchedule1Choice {
 			componentContext_lazy = () -> PaymentSchedule1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "SubSchdl";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubSchedule";
 			definition = "Specifies a payment sub-schedule, that is the amount of money that must be paid no sooner than the expected date and no later than the latest shipment date.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.ShipmentSchedule2Choice.mmShipmentSubSchedule;
+			previousVersion_lazy = () -> ShipmentSchedule2Choice.mmShipmentSubSchedule;
 			minOccurs = 2;
 			isComposite = true;
 			type_lazy = () -> PaymentDateRange2.mmObject();
@@ -169,9 +171,9 @@ public class PaymentSchedule1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PaymentSchedule1Choice.mmDateRange, com.tools20022.repository.choice.PaymentSchedule1Choice.mmSubSchedule);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(PaymentSchedule1Choice.mmDateRange, PaymentSchedule1Choice.mmSubSchedule);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PaymentSchedule1Choice";
 				definition = "Choice between expected/due payment date and a payment schedule per amount and due date.";
 				previousVersion_lazy = () -> ShipmentSchedule2Choice.mmObject();

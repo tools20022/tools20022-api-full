@@ -18,7 +18,9 @@
 package com.tools20022.repository.entity;
 
 import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.CardPaymentPartyRole;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -32,6 +34,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.Acquirer1 Acquirer1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Acquirer2 Acquirer2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Acquirer3 Acquirer3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Acquirer4 Acquirer4}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Acquirer6 Acquirer6}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Acquirer5 Acquirer5}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Acquirer7 Acquirer7}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Acquirer8 Acquirer8}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
  * derivationElement} =
@@ -238,20 +254,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.repository.entity.CardPaymentPartyRole
  * CardPaymentPartyRole}</li>
  * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Acquirer1 Acquirer1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Acquirer2 Acquirer2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Acquirer3 Acquirer3}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Acquirer4 Acquirer4}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Acquirer6 Acquirer6}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Acquirer5 Acquirer5}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Acquirer7 Acquirer7}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Acquirer8 Acquirer8}</li>
- * </ul>
- * </li>
- * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
@@ -273,34 +275,24 @@ public class AcquirerRole extends CardPaymentPartyRole {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AcquirerRole";
 				definition = "Entity acquiring card payment transactions.";
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardPaymentEnvironment5.mmAcquirer, com.tools20022.repository.msg.CardPaymentEnvironment6.mmAcquirer,
-						com.tools20022.repository.msg.CardPaymentEnvironment13.mmAcquirer, com.tools20022.repository.msg.CardPaymentEnvironment14.mmAcquirer, com.tools20022.repository.msg.CardPaymentEnvironment3.mmAcquirer,
-						com.tools20022.repository.msg.CardPaymentEnvironment11.mmAcquirerIdentification, com.tools20022.repository.msg.CardPaymentEnvironment16.mmAcquirerIdentification,
-						com.tools20022.repository.msg.CardPaymentEnvironment1.mmAcquirer, com.tools20022.repository.msg.CardPaymentEnvironment9.mmAcquirer, com.tools20022.repository.msg.CardPaymentEnvironment7.mmAcquirer,
-						com.tools20022.repository.msg.CardPaymentEnvironment15.mmAcquirer, com.tools20022.repository.msg.CardPaymentEnvironment19.mmAcquirerIdentification, com.tools20022.repository.msg.CardPaymentEnvironment4.mmAcquirer,
-						com.tools20022.repository.msg.CardPaymentEnvironment12.mmAcquirer, com.tools20022.repository.msg.CardPaymentEnvironment2.mmAcquirer, com.tools20022.repository.msg.CardPaymentEnvironment10.mmAcquirer,
-						com.tools20022.repository.msg.CardPaymentEnvironment18.mmAcquirer, com.tools20022.repository.msg.CardPaymentEnvironment31.mmAcquirer, com.tools20022.repository.msg.CardPaymentEnvironment29.mmAcquirer,
-						com.tools20022.repository.msg.CardPaymentEnvironment24.mmAcquirer, com.tools20022.repository.msg.CardPaymentEnvironment25.mmAcquirer, com.tools20022.repository.msg.CardPaymentEnvironment20.mmAcquirer,
-						com.tools20022.repository.msg.CardPaymentEnvironment30.mmAcquirerIdentification, com.tools20022.repository.msg.CardPaymentEnvironment27.mmAcquirer,
-						com.tools20022.repository.msg.CardPaymentEnvironment28.mmAcquirerIdentification, com.tools20022.repository.msg.CardPaymentEnvironment21.mmAcquirerIdentification,
-						com.tools20022.repository.msg.CardPaymentEnvironment26.mmAcquirer, com.tools20022.repository.msg.CardPaymentEnvironment23.mmAcquirer, com.tools20022.repository.msg.CardPaymentEnvironment22.mmAcquirer,
-						com.tools20022.repository.msg.CardPaymentEnvironment37.mmAcquirer, com.tools20022.repository.msg.CardPaymentEnvironment33.mmAcquirerIdentification, com.tools20022.repository.msg.CardPaymentEnvironment32.mmAcquirer,
-						com.tools20022.repository.msg.CardPaymentEnvironment36.mmAcquirer, com.tools20022.repository.msg.CardPaymentEnvironment43.mmAcquirer, com.tools20022.repository.msg.CardPaymentEnvironment41.mmAcquirerIdentification,
-						com.tools20022.repository.msg.CardPaymentEnvironment42.mmAcquirer, com.tools20022.repository.msg.CardPaymentEnvironment40.mmAcquirer, com.tools20022.repository.msg.CardPaymentEnvironment44.mmAcquirerIdentification,
-						com.tools20022.repository.msg.CardPaymentEnvironment34.mmAcquirer, com.tools20022.repository.msg.CardPaymentEnvironment35.mmAcquirer, com.tools20022.repository.msg.CardPaymentEnvironment38.mmAcquirerIdentification,
-						com.tools20022.repository.msg.CardPaymentEnvironment39.mmAcquirer, com.tools20022.repository.msg.CardPaymentEnvironment46.mmAcquirerIdentification, com.tools20022.repository.msg.CardPaymentEnvironment50.mmAcquirer,
-						com.tools20022.repository.msg.CardPaymentEnvironment52.mmAcquirer, com.tools20022.repository.msg.CardPaymentEnvironment49.mmAcquirer, com.tools20022.repository.msg.CardPaymentEnvironment51.mmAcquirer,
-						com.tools20022.repository.msg.CardPaymentEnvironment48.mmAcquirer, com.tools20022.repository.msg.CardPaymentEnvironment56.mmAcquirerIdentification, com.tools20022.repository.msg.CardPaymentEnvironment45.mmAcquirer,
-						com.tools20022.repository.msg.CardPaymentEnvironment55.mmAcquirer, com.tools20022.repository.msg.CardPaymentEnvironment54.mmAcquirerIdentification, com.tools20022.repository.msg.CardPaymentEnvironment53.mmAcquirer,
-						com.tools20022.repository.msg.CardPaymentEnvironment47.mmAcquirer, com.tools20022.repository.msg.CardPaymentEnvironment61.mmAcquirer, com.tools20022.repository.msg.CardPaymentEnvironment64.mmAcquirer,
-						com.tools20022.repository.msg.CardPaymentEnvironment60.mmAcquirer, com.tools20022.repository.msg.CardPaymentEnvironment65.mmAcquirerIdentification, com.tools20022.repository.msg.CardPaymentEnvironment67.mmAcquirer,
-						com.tools20022.repository.msg.CardPaymentEnvironment66.mmAcquirerIdentification, com.tools20022.repository.msg.CardPaymentEnvironment62.mmAcquirer,
-						com.tools20022.repository.msg.CardPaymentEnvironment63.mmAcquirerIdentification, com.tools20022.repository.msg.CardPaymentEnvironment58.mmAcquirer, com.tools20022.repository.msg.CardPaymentEnvironment59.mmAcquirer,
-						com.tools20022.repository.msg.CardPaymentEnvironment57.mmAcquirer);
+				derivationElement_lazy = () -> Arrays.asList(CardPaymentEnvironment5.mmAcquirer, CardPaymentEnvironment6.mmAcquirer, CardPaymentEnvironment13.mmAcquirer, CardPaymentEnvironment14.mmAcquirer,
+						CardPaymentEnvironment3.mmAcquirer, CardPaymentEnvironment11.mmAcquirerIdentification, CardPaymentEnvironment16.mmAcquirerIdentification, CardPaymentEnvironment1.mmAcquirer, CardPaymentEnvironment9.mmAcquirer,
+						CardPaymentEnvironment7.mmAcquirer, CardPaymentEnvironment15.mmAcquirer, CardPaymentEnvironment19.mmAcquirerIdentification, CardPaymentEnvironment4.mmAcquirer, CardPaymentEnvironment12.mmAcquirer,
+						CardPaymentEnvironment2.mmAcquirer, CardPaymentEnvironment10.mmAcquirer, CardPaymentEnvironment18.mmAcquirer, CardPaymentEnvironment31.mmAcquirer, CardPaymentEnvironment29.mmAcquirer,
+						CardPaymentEnvironment24.mmAcquirer, CardPaymentEnvironment25.mmAcquirer, CardPaymentEnvironment20.mmAcquirer, CardPaymentEnvironment30.mmAcquirerIdentification, CardPaymentEnvironment27.mmAcquirer,
+						CardPaymentEnvironment28.mmAcquirerIdentification, CardPaymentEnvironment21.mmAcquirerIdentification, CardPaymentEnvironment26.mmAcquirer, CardPaymentEnvironment23.mmAcquirer, CardPaymentEnvironment22.mmAcquirer,
+						CardPaymentEnvironment37.mmAcquirer, CardPaymentEnvironment33.mmAcquirerIdentification, CardPaymentEnvironment32.mmAcquirer, CardPaymentEnvironment36.mmAcquirer, CardPaymentEnvironment43.mmAcquirer,
+						CardPaymentEnvironment41.mmAcquirerIdentification, CardPaymentEnvironment42.mmAcquirer, CardPaymentEnvironment40.mmAcquirer, CardPaymentEnvironment44.mmAcquirerIdentification, CardPaymentEnvironment34.mmAcquirer,
+						CardPaymentEnvironment35.mmAcquirer, CardPaymentEnvironment38.mmAcquirerIdentification, CardPaymentEnvironment39.mmAcquirer, CardPaymentEnvironment46.mmAcquirerIdentification, CardPaymentEnvironment50.mmAcquirer,
+						CardPaymentEnvironment52.mmAcquirer, CardPaymentEnvironment49.mmAcquirer, CardPaymentEnvironment51.mmAcquirer, CardPaymentEnvironment48.mmAcquirer, CardPaymentEnvironment56.mmAcquirerIdentification,
+						CardPaymentEnvironment45.mmAcquirer, CardPaymentEnvironment55.mmAcquirer, CardPaymentEnvironment54.mmAcquirerIdentification, CardPaymentEnvironment53.mmAcquirer, CardPaymentEnvironment47.mmAcquirer,
+						CardPaymentEnvironment61.mmAcquirer, CardPaymentEnvironment64.mmAcquirer, CardPaymentEnvironment60.mmAcquirer, CardPaymentEnvironment65.mmAcquirerIdentification, CardPaymentEnvironment67.mmAcquirer,
+						CardPaymentEnvironment66.mmAcquirerIdentification, CardPaymentEnvironment62.mmAcquirer, CardPaymentEnvironment63.mmAcquirerIdentification, CardPaymentEnvironment58.mmAcquirer, CardPaymentEnvironment59.mmAcquirer,
+						CardPaymentEnvironment57.mmAcquirer);
 				superType_lazy = () -> CardPaymentPartyRole.mmObject();
 				derivationComponent_lazy = () -> Arrays.asList(Acquirer1.mmObject(), Acquirer2.mmObject(), Acquirer3.mmObject(), Acquirer4.mmObject(), Acquirer6.mmObject(), Acquirer5.mmObject(), Acquirer7.mmObject(), Acquirer8.mmObject());
 			}

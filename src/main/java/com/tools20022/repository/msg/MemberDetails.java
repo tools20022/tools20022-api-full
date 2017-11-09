@@ -20,12 +20,13 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.MemberIdentificationChoice;
 import com.tools20022.repository.codeset.MemberStatus1Code;
 import com.tools20022.repository.codeset.MemberType1Code;
 import com.tools20022.repository.datatype.Max35Text;
-import com.tools20022.repository.entity.Person;
-import com.tools20022.repository.entity.SystemMemberRole;
+import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -116,11 +117,11 @@ public class MemberDetails {
 	 */
 	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyName.mmName;
+			businessElementTrace_lazy = () -> PartyName.mmName;
 			componentContext_lazy = () -> MemberDetails.mmObject();
 			isDerived = false;
 			xmlTag = "Nm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Name";
 			definition = "Word by which something is called or known or the family name of a person.";
 			maxOccurs = 1;
@@ -168,11 +169,11 @@ public class MemberDetails {
 	 */
 	public static final MMMessageAttribute mmMemberReturnAddress = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ContactPoint.mmBICAddress;
+			businessElementTrace_lazy = () -> ContactPoint.mmBICAddress;
 			componentContext_lazy = () -> MemberDetails.mmObject();
 			isDerived = false;
 			xmlTag = "MmbRtrAdr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MemberReturnAddress";
 			definition = "Physical/logical address belonging to a member, segregated from its main address that is used for normal operations. The fund return address is used to route messages that require specific attention/exception handling, eg, returns or rejects.";
 			minOccurs = 0;
@@ -213,11 +214,11 @@ public class MemberDetails {
 	 */
 	public static final MMMessageAssociationEnd mmAccount = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.mmIdentification;
+			businessElementTrace_lazy = () -> Account.mmIdentification;
 			componentContext_lazy = () -> MemberDetails.mmObject();
 			isDerived = false;
 			xmlTag = "Acct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Account";
 			definition = "Account to or from which a cash entry is made.";
 			minOccurs = 0;
@@ -260,11 +261,11 @@ public class MemberDetails {
 	 */
 	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SystemMemberRole.mmType;
+			businessElementTrace_lazy = () -> SystemMemberRole.mmType;
 			componentContext_lazy = () -> MemberDetails.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Nature of the relationship a member has with a system.";
 			maxOccurs = 1;
@@ -307,11 +308,11 @@ public class MemberDetails {
 	 */
 	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SystemStatus.mmMemberStatus;
+			businessElementTrace_lazy = () -> SystemStatus.mmMemberStatus;
 			componentContext_lazy = () -> MemberDetails.mmObject();
 			isDerived = false;
 			xmlTag = "Sts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Status";
 			definition = "Status of a member in a system, eg, enabled or deleted.";
 			maxOccurs = 1;
@@ -356,7 +357,7 @@ public class MemberDetails {
 			componentContext_lazy = () -> MemberDetails.mmObject();
 			isDerived = false;
 			xmlTag = "CtctRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ContactReference";
 			definition = "Person to be contacted in a given organisation.";
 			minOccurs = 0;
@@ -398,11 +399,11 @@ public class MemberDetails {
 	 */
 	public static final MMMessageAssociationEnd mmCommunicationAddress = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmContactPoint;
+			businessElementTrace_lazy = () -> Party.mmContactPoint;
 			componentContext_lazy = () -> MemberDetails.mmObject();
 			isDerived = false;
 			xmlTag = "ComAdr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommunicationAddress";
 			definition = "Number, or virtual address, used for communication.";
 			maxOccurs = 1;
@@ -415,12 +416,11 @@ public class MemberDetails {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MemberDetails.mmName, com.tools20022.repository.msg.MemberDetails.mmMemberReturnAddress, com.tools20022.repository.msg.MemberDetails.mmAccount,
-						com.tools20022.repository.msg.MemberDetails.mmType, com.tools20022.repository.msg.MemberDetails.mmStatus, com.tools20022.repository.msg.MemberDetails.mmContactReference,
-						com.tools20022.repository.msg.MemberDetails.mmCommunicationAddress);
+				messageElement_lazy = () -> Arrays.asList(MemberDetails.mmName, MemberDetails.mmMemberReturnAddress, MemberDetails.mmAccount, MemberDetails.mmType, MemberDetails.mmStatus, MemberDetails.mmContactReference,
+						MemberDetails.mmCommunicationAddress);
 				trace_lazy = () -> SystemMemberRole.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "MemberDetails";
 				definition = "Information about the members of a system.";
 			}

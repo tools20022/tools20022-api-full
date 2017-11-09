@@ -20,9 +20,11 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.CurrencyAndAmount;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.CashEntry;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -102,7 +104,7 @@ public class AmountAndCurrencyExchangeDetails2 {
 			componentContext_lazy = () -> AmountAndCurrencyExchangeDetails2.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Identifies the type of amount.";
 			maxOccurs = 1;
@@ -146,11 +148,11 @@ public class AmountAndCurrencyExchangeDetails2 {
 	 */
 	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashEntry.mmAmount;
+			businessElementTrace_lazy = () -> CashEntry.mmAmount;
 			componentContext_lazy = () -> AmountAndCurrencyExchangeDetails2.mmObject();
 			isDerived = false;
 			xmlTag = "Amt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Identifies the proprietary amount.";
 			maxOccurs = 1;
@@ -192,11 +194,11 @@ public class AmountAndCurrencyExchangeDetails2 {
 	 */
 	public static final MMMessageAssociationEnd mmCurrencyExchange = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashEntry.mmCurrencyExchange;
+			businessElementTrace_lazy = () -> CashEntry.mmCurrencyExchange;
 			componentContext_lazy = () -> AmountAndCurrencyExchangeDetails2.mmObject();
 			isDerived = false;
 			xmlTag = "CcyXchg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrencyExchange";
 			definition = "Reports on currency exchange information.";
 			maxOccurs = 1;
@@ -209,11 +211,10 @@ public class AmountAndCurrencyExchangeDetails2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AmountAndCurrencyExchangeDetails2.mmType, com.tools20022.repository.msg.AmountAndCurrencyExchangeDetails2.mmAmount,
-						com.tools20022.repository.msg.AmountAndCurrencyExchangeDetails2.mmCurrencyExchange);
+				messageElement_lazy = () -> Arrays.asList(AmountAndCurrencyExchangeDetails2.mmType, AmountAndCurrencyExchangeDetails2.mmAmount, AmountAndCurrencyExchangeDetails2.mmCurrencyExchange);
 				trace_lazy = () -> CashEntry.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AmountAndCurrencyExchangeDetails2";
 				definition = "Set of elements providing information on the original amount and currency information.";
 			}

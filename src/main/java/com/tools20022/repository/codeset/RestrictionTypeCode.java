@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.RestrictionType1Code
+ * RestrictionType1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -44,13 +53,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.RestrictionTypeCode#mmVoting
  * RestrictionTypeCode.mmVoting}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.RestrictionType1Code
- * RestrictionType1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -100,7 +102,7 @@ public class RestrictionTypeCode {
 	 */
 	public static final MMCode mmSelling = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Selling";
 			definition = "Selling restriction.";
 			owner_lazy = () -> RestrictionTypeCode.mmObject();
@@ -130,7 +132,7 @@ public class RestrictionTypeCode {
 	 */
 	public static final MMCode mmBuying = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Buying";
 			definition = "Buying restriction.";
 			owner_lazy = () -> RestrictionTypeCode.mmObject();
@@ -160,7 +162,7 @@ public class RestrictionTypeCode {
 	 */
 	public static final MMCode mmPlacing = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Placing";
 			definition = "Placing restriction.";
 			owner_lazy = () -> RestrictionTypeCode.mmObject();
@@ -190,7 +192,7 @@ public class RestrictionTypeCode {
 	 */
 	public static final MMCode mmHolding = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Holding";
 			definition = "Holding restriction.";
 			owner_lazy = () -> RestrictionTypeCode.mmObject();
@@ -220,7 +222,7 @@ public class RestrictionTypeCode {
 	 */
 	public static final MMCode mmVoting = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Voting";
 			definition = "Voting restriction.";
 			owner_lazy = () -> RestrictionTypeCode.mmObject();
@@ -231,13 +233,12 @@ public class RestrictionTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("SELR");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RestrictionTypeCode";
 				definition = "Specifies the type of restriction.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RestrictionTypeCode.mmSelling, com.tools20022.repository.codeset.RestrictionTypeCode.mmBuying,
-						com.tools20022.repository.codeset.RestrictionTypeCode.mmPlacing, com.tools20022.repository.codeset.RestrictionTypeCode.mmHolding, com.tools20022.repository.codeset.RestrictionTypeCode.mmVoting);
+				code_lazy = () -> Arrays.asList(RestrictionTypeCode.mmSelling, RestrictionTypeCode.mmBuying, RestrictionTypeCode.mmPlacing, RestrictionTypeCode.mmHolding, RestrictionTypeCode.mmVoting);
 				derivation_lazy = () -> Arrays.asList(RestrictionType1Code.mmObject());
 			}
 		});

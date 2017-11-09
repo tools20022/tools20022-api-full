@@ -20,10 +20,13 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.NoReasonCode;
 import com.tools20022.repository.codeset.PendingSettlementStatusReason2Code;
 import com.tools20022.repository.datatype.Extended350Code;
 import com.tools20022.repository.entity.SecuritiesTradeStatusReason;
+import com.tools20022.repository.entity.StatusReason;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification1;
 import com.tools20022.repository.msg.PendingSettlementStatus2;
 import java.util.Arrays;
@@ -119,14 +122,14 @@ public class PendingSettlementStatus3Choice {
 	 */
 	public static final MMMessageAttribute mmReason = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeStatusReason.mmPendingSettlementReason;
+			businessElementTrace_lazy = () -> SecuritiesTradeStatusReason.mmPendingSettlementReason;
 			componentContext_lazy = () -> PendingSettlementStatus3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Rsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reason";
 			definition = "Reason for the settlement pending status.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PendingSettlementStatus2.mmReason;
+			previousVersion_lazy = () -> PendingSettlementStatus2.mmReason;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PendingSettlementStatusReason2Code.mmObject();
@@ -171,10 +174,10 @@ public class PendingSettlementStatus3Choice {
 			componentContext_lazy = () -> PendingSettlementStatus3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "XtndedRsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExtendedReason";
 			definition = "Reason for the settlement pending status.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PendingSettlementStatus2.mmExtendedReason;
+			previousVersion_lazy = () -> PendingSettlementStatus2.mmExtendedReason;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Extended350Code.mmObject();
@@ -222,14 +225,14 @@ public class PendingSettlementStatus3Choice {
 	 */
 	public static final MMMessageAssociationEnd mmDataSourceScheme = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmDataSourceScheme;
+			businessElementTrace_lazy = () -> StatusReason.mmDataSourceScheme;
 			componentContext_lazy = () -> PendingSettlementStatus3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "DataSrcSchme";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DataSourceScheme";
 			definition = "Proprietary identification of the reason for the pending settlement status.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PendingSettlementStatus2.mmDataSourceScheme;
+			previousVersion_lazy = () -> PendingSettlementStatus2.mmDataSourceScheme;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -277,14 +280,14 @@ public class PendingSettlementStatus3Choice {
 	 */
 	public static final MMMessageAttribute mmNoSpecifiedReason = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmNoSpecifiedReason;
+			businessElementTrace_lazy = () -> StatusReason.mmNoSpecifiedReason;
 			componentContext_lazy = () -> PendingSettlementStatus3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "NoSpcfdRsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoSpecifiedReason";
 			definition = "Indicates that there is no reason available or to report.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PendingSettlementStatus2.mmNoSpecifiedReason;
+			previousVersion_lazy = () -> PendingSettlementStatus2.mmNoSpecifiedReason;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> NoReasonCode.mmObject();
@@ -294,11 +297,11 @@ public class PendingSettlementStatus3Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PendingSettlementStatus3Choice.mmReason, com.tools20022.repository.choice.PendingSettlementStatus3Choice.mmExtendedReason,
-						com.tools20022.repository.choice.PendingSettlementStatus3Choice.mmDataSourceScheme, com.tools20022.repository.choice.PendingSettlementStatus3Choice.mmNoSpecifiedReason);
+				messageElement_lazy = () -> Arrays.asList(PendingSettlementStatus3Choice.mmReason, PendingSettlementStatus3Choice.mmExtendedReason, PendingSettlementStatus3Choice.mmDataSourceScheme,
+						PendingSettlementStatus3Choice.mmNoSpecifiedReason);
 				trace_lazy = () -> SecuritiesTradeStatusReason.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PendingSettlementStatus3Choice";
 				definition = "Reason for the pending settlement status.";
 				previousVersion_lazy = () -> PendingSettlementStatus2.mmObject();

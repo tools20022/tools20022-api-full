@@ -19,7 +19,9 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -98,7 +100,7 @@ public class CharacterSearchChoice {
 			componentContext_lazy = () -> CharacterSearchChoice.mmObject();
 			isDerived = false;
 			xmlTag = "EQ";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Equal";
 			definition = "Exact set of characters to be matched to be considered valid.";
 			maxOccurs = 1;
@@ -140,7 +142,7 @@ public class CharacterSearchChoice {
 			componentContext_lazy = () -> CharacterSearchChoice.mmObject();
 			isDerived = false;
 			xmlTag = "NEQ";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotEqual";
 			definition = "Exact set of characters that cannot match to be considered valid.";
 			maxOccurs = 1;
@@ -181,7 +183,7 @@ public class CharacterSearchChoice {
 			componentContext_lazy = () -> CharacterSearchChoice.mmObject();
 			isDerived = false;
 			xmlTag = "CT";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Contain";
 			definition = "Set of characters to be matched to be considered valid.";
 			maxOccurs = 1;
@@ -223,7 +225,7 @@ public class CharacterSearchChoice {
 			componentContext_lazy = () -> CharacterSearchChoice.mmObject();
 			isDerived = false;
 			xmlTag = "NCT";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotContain";
 			definition = "Set of characters that cannot match to be considered valid.";
 			maxOccurs = 1;
@@ -235,10 +237,9 @@ public class CharacterSearchChoice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CharacterSearchChoice.mmEqual, com.tools20022.repository.choice.CharacterSearchChoice.mmNotEqual,
-						com.tools20022.repository.choice.CharacterSearchChoice.mmContain, com.tools20022.repository.choice.CharacterSearchChoice.mmNotContain);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(CharacterSearchChoice.mmEqual, CharacterSearchChoice.mmNotEqual, CharacterSearchChoice.mmContain, CharacterSearchChoice.mmNotContain);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CharacterSearchChoice";
 				definition = "Set of characters to be matched to be considered as valid.";
 			}

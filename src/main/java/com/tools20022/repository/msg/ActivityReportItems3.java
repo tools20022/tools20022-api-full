@@ -20,7 +20,10 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.tsmt.ActivityReportV04;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -124,10 +127,10 @@ public class ActivityReportItems3 {
 			componentContext_lazy = () -> ActivityReportItems3.mmObject();
 			isDerived = false;
 			xmlTag = "TxId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionIdentification";
 			definition = "Unique identification assigned by the matching application to the transaction.\nThis identification is to be used in any communication between the parties.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ActivityReportItems2.mmTransactionIdentification;
+			previousVersion_lazy = () -> ActivityReportItems2.mmTransactionIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -174,10 +177,10 @@ public class ActivityReportItems3 {
 			componentContext_lazy = () -> ActivityReportItems3.mmObject();
 			isDerived = false;
 			xmlTag = "UsrTxRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UserTransactionReference";
 			definition = "Reference to the transaction for each financial institution which is a party to the transaction.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ActivityReportItems2.mmUserTransactionReference;
+			previousVersion_lazy = () -> ActivityReportItems2.mmUserTransactionReference;
 			maxOccurs = 2;
 			minOccurs = 0;
 			isComposite = true;
@@ -221,10 +224,10 @@ public class ActivityReportItems3 {
 			componentContext_lazy = () -> ActivityReportItems3.mmObject();
 			isDerived = false;
 			xmlTag = "RptdNtty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportedEntity";
 			definition = "Entity for which the activity is reported.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ActivityReportItems2.mmReportedEntity;
+			previousVersion_lazy = () -> ActivityReportItems2.mmReportedEntity;
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.BICIdentification1.mmObject();
@@ -267,10 +270,10 @@ public class ActivityReportItems3 {
 			componentContext_lazy = () -> ActivityReportItems3.mmObject();
 			isDerived = false;
 			xmlTag = "RptdItm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportedItem";
 			definition = "Describes an activity that took place during a period.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ActivityReportItems2.mmReportedItem;
+			previousVersion_lazy = () -> ActivityReportItems2.mmReportedItem;
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.ActivityDetails1.mmObject();
@@ -313,10 +316,10 @@ public class ActivityReportItems3 {
 			componentContext_lazy = () -> ActivityReportItems3.mmObject();
 			isDerived = false;
 			xmlTag = "PdgReqForActn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingRequestForAction";
 			definition = "Next processing step required.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ActivityReportItems2.mmPendingRequestForAction;
+			previousVersion_lazy = () -> ActivityReportItems2.mmPendingRequestForAction;
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.PendingActivity2.mmObject();
@@ -326,11 +329,11 @@ public class ActivityReportItems3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ActivityReportItems3.mmTransactionIdentification, com.tools20022.repository.msg.ActivityReportItems3.mmUserTransactionReference,
-						com.tools20022.repository.msg.ActivityReportItems3.mmReportedEntity, com.tools20022.repository.msg.ActivityReportItems3.mmReportedItem, com.tools20022.repository.msg.ActivityReportItems3.mmPendingRequestForAction);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.ActivityReportV04.mmReport);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(ActivityReportItems3.mmTransactionIdentification, ActivityReportItems3.mmUserTransactionReference, ActivityReportItems3.mmReportedEntity, ActivityReportItems3.mmReportedItem,
+						ActivityReportItems3.mmPendingRequestForAction);
+				messageBuildingBlock_lazy = () -> Arrays.asList(ActivityReportV04.mmReport);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ActivityReportItems3";
 				definition = "Describes the events that occurred for one transaction.";
 				previousVersion_lazy = () -> ActivityReportItems2.mmObject();

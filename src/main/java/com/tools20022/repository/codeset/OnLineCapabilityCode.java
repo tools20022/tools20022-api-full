@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.OnLineCapability1Code
+ * OnLineCapability1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -38,13 +47,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.OnLineCapabilityCode#mmSemiOffLine
  * OnLineCapabilityCode.mmSemiOffLine}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.OnLineCapability1Code
- * OnLineCapability1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -95,7 +97,7 @@ public class OnLineCapabilityCode {
 	 */
 	public static final MMCode mmOffLine = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "OffLine";
 			definition = "Off-line only capable.";
 			owner_lazy = () -> OnLineCapabilityCode.mmObject();
@@ -125,7 +127,7 @@ public class OnLineCapabilityCode {
 	 */
 	public static final MMCode mmOnLine = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "OnLine";
 			definition = "On-line only capable.";
 			owner_lazy = () -> OnLineCapabilityCode.mmObject();
@@ -156,7 +158,7 @@ public class OnLineCapabilityCode {
 	 */
 	public static final MMCode mmSemiOffLine = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SemiOffLine";
 			definition = "Off-line capable with possible on-line requests to the acquirer.";
 			owner_lazy = () -> OnLineCapabilityCode.mmObject();
@@ -167,13 +169,12 @@ public class OnLineCapabilityCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("OFLN");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OnLineCapabilityCode";
 				definition = "On-line and off-line capabilities of the POI (Point Of Interaction).";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OnLineCapabilityCode.mmOffLine, com.tools20022.repository.codeset.OnLineCapabilityCode.mmOnLine,
-						com.tools20022.repository.codeset.OnLineCapabilityCode.mmSemiOffLine);
+				code_lazy = () -> Arrays.asList(OnLineCapabilityCode.mmOffLine, OnLineCapabilityCode.mmOnLine, OnLineCapabilityCode.mmSemiOffLine);
 				derivation_lazy = () -> Arrays.asList(OnLineCapability1Code.mmObject());
 			}
 		});

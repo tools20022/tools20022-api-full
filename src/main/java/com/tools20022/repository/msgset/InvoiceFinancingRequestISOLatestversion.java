@@ -18,9 +18,11 @@
 package com.tools20022.repository.msgset;
 
 import com.tools20022.metamodel.MMMessageSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.tsin.InvoiceFinancingCancellationRequestV01;
 import com.tools20022.repository.area.tsin.InvoiceFinancingRequestStatusV01;
 import com.tools20022.repository.area.tsin.InvoiceFinancingRequestV01;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -69,8 +71,8 @@ public class InvoiceFinancingRequestISOLatestversion {
 	final static public MMMessageSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageSet() {
 			{
-				businessProcessCatalogue_lazy = () -> com.tools20022.repository.GeneratedRepository.mmcatalogue;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				businessProcessCatalogue_lazy = () -> GeneratedRepository.mmcatalogue;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Invoice Financing Request - ISO - Latest version";
 				definition = "Set of messages used to request invoice financing services from a financial institution, to cancel a previously submitted financing request, and for financial institutions to report back on the status of the request.\r\n";
 				messageDefinition_lazy = () -> Arrays.asList(InvoiceFinancingRequestV01.mmObject(), InvoiceFinancingRequestStatusV01.mmObject(), InvoiceFinancingCancellationRequestV01.mmObject());

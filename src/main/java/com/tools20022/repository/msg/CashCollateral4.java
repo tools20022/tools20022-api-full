@@ -19,9 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.DepositType1Code;
 import com.tools20022.repository.datatype.*;
-import com.tools20022.repository.entity.Money;
+import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -116,7 +118,7 @@ public class CashCollateral4 {
 			componentContext_lazy = () -> CashCollateral4.mmObject();
 			isDerived = false;
 			xmlTag = "AsstNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AssetNumber";
 			definition = "Identifies the register number of the collateral deposit assigned by the central counterparty.";
 			maxOccurs = 1;
@@ -165,14 +167,14 @@ public class CashCollateral4 {
 	 */
 	public static final MMMessageAttribute mmDepositAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Money.mmCashAmount;
+			businessElementTrace_lazy = () -> Money.mmCashAmount;
 			componentContext_lazy = () -> CashCollateral4.mmObject();
 			isDerived = false;
 			xmlTag = "DpstAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DepositAmount";
 			definition = "Amount of the deposit.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CashCollateral1.mmDepositAmount;
+			previousVersion_lazy = () -> CashCollateral1.mmDepositAmount;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
@@ -220,14 +222,14 @@ public class CashCollateral4 {
 	 */
 	public static final MMMessageAttribute mmDepositType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Deposit.mmDepositType;
+			businessElementTrace_lazy = () -> Deposit.mmDepositType;
 			componentContext_lazy = () -> CashCollateral4.mmObject();
 			isDerived = false;
 			xmlTag = "DpstTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DepositType";
 			definition = "Specifies whether the deposit is fixed term or call/notice.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CashCollateral1.mmDepositType;
+			previousVersion_lazy = () -> CashCollateral1.mmDepositType;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> DepositType1Code.mmObject();
@@ -273,11 +275,11 @@ public class CashCollateral4 {
 	 */
 	public static final MMMessageAttribute mmBlockedAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Money.mmCashAmount;
+			businessElementTrace_lazy = () -> Money.mmCashAmount;
 			componentContext_lazy = () -> CashCollateral4.mmObject();
 			isDerived = false;
 			xmlTag = "BlckdAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BlockedAmount";
 			definition = "Amount blocked by the central counterparty for any reasonable reason ( for example for judicial reasons). In this case the investor can not withdraw or distribute this collateral. ";
 			maxOccurs = 1;
@@ -325,14 +327,14 @@ public class CashCollateral4 {
 	 */
 	public static final MMMessageAttribute mmMaturityDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Asset.mmMaturityDate;
+			businessElementTrace_lazy = () -> Asset.mmMaturityDate;
 			componentContext_lazy = () -> CashCollateral4.mmObject();
 			isDerived = false;
 			xmlTag = "MtrtyDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaturityDate";
 			definition = "Planned final repayment date at the time of issuance.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CashCollateral1.mmMaturityDate;
+			previousVersion_lazy = () -> CashCollateral1.mmMaturityDate;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
@@ -378,14 +380,14 @@ public class CashCollateral4 {
 	 */
 	public static final MMMessageAttribute mmValueDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CollateralValuation.mmCollateralValuationDate;
+			businessElementTrace_lazy = () -> CollateralValuation.mmCollateralValuationDate;
 			componentContext_lazy = () -> CashCollateral4.mmObject();
 			isDerived = false;
 			xmlTag = "ValDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValueDate";
 			definition = "Valuation date of the cash taken as collateral.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CashCollateral1.mmValueDate;
+			previousVersion_lazy = () -> CashCollateral1.mmValueDate;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
@@ -431,14 +433,14 @@ public class CashCollateral4 {
 	 */
 	public static final MMMessageAttribute mmExchangeRate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmExchangeRate;
+			businessElementTrace_lazy = () -> AssetHolding.mmExchangeRate;
 			componentContext_lazy = () -> CashCollateral4.mmObject();
 			isDerived = false;
 			xmlTag = "XchgRate";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExchangeRate";
 			definition = "Exchange rate.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CashCollateral1.mmExchangeRate;
+			previousVersion_lazy = () -> CashCollateral1.mmExchangeRate;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> BaseOneRate.mmObject();
@@ -486,14 +488,14 @@ public class CashCollateral4 {
 	 */
 	public static final MMMessageAttribute mmCollateralValue = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmRiskAdjustedValue;
+			businessElementTrace_lazy = () -> AssetHolding.mmRiskAdjustedValue;
 			componentContext_lazy = () -> CashCollateral4.mmObject();
 			isDerived = false;
 			xmlTag = "CollVal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralValue";
 			definition = "Value of the collateral after taking into account the haircut.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CashCollateral1.mmCollateralValue;
+			previousVersion_lazy = () -> CashCollateral1.mmCollateralValue;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
@@ -542,14 +544,14 @@ public class CashCollateral4 {
 	 */
 	public static final MMMessageAttribute mmHaircut = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.HaircutValuation.mmHaircut;
+			businessElementTrace_lazy = () -> HaircutValuation.mmHaircut;
 			componentContext_lazy = () -> CashCollateral4.mmObject();
 			isDerived = false;
 			xmlTag = "Hrcut";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Haircut";
 			definition = "Haircut or valuation factor on the collateral expressed as a percentage.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CashCollateral1.mmHaircut;
+			previousVersion_lazy = () -> CashCollateral1.mmHaircut;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
@@ -559,13 +561,11 @@ public class CashCollateral4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashCollateral4.mmAssetNumber, com.tools20022.repository.msg.CashCollateral4.mmDepositAmount,
-						com.tools20022.repository.msg.CashCollateral4.mmDepositType, com.tools20022.repository.msg.CashCollateral4.mmBlockedAmount, com.tools20022.repository.msg.CashCollateral4.mmMaturityDate,
-						com.tools20022.repository.msg.CashCollateral4.mmValueDate, com.tools20022.repository.msg.CashCollateral4.mmExchangeRate, com.tools20022.repository.msg.CashCollateral4.mmCollateralValue,
-						com.tools20022.repository.msg.CashCollateral4.mmHaircut);
+				messageElement_lazy = () -> Arrays.asList(CashCollateral4.mmAssetNumber, CashCollateral4.mmDepositAmount, CashCollateral4.mmDepositType, CashCollateral4.mmBlockedAmount, CashCollateral4.mmMaturityDate,
+						CashCollateral4.mmValueDate, CashCollateral4.mmExchangeRate, CashCollateral4.mmCollateralValue, CashCollateral4.mmHaircut);
 				trace_lazy = () -> Money.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CashCollateral4";
 				definition = "Provides details about the cash posted as collateral.";
 				previousVersion_lazy = () -> CashCollateral1.mmObject();

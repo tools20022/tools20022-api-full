@@ -20,11 +20,13 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.Amount2Choice;
 import com.tools20022.repository.choice.DateAndDateTimeChoice;
 import com.tools20022.repository.codeset.CreditDebitCode;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.Max500Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -116,7 +118,7 @@ public class LimitJournalEntry1 {
 			componentContext_lazy = () -> LimitJournalEntry1.mmObject();
 			isDerived = false;
 			xmlTag = "JrnlDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "JournalDate";
 			definition = "Date and time for which the limit journal entry applies.";
 			maxOccurs = 1;
@@ -160,7 +162,7 @@ public class LimitJournalEntry1 {
 			componentContext_lazy = () -> LimitJournalEntry1.mmObject();
 			isDerived = false;
 			xmlTag = "CdtDbtInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditDebitIndicator";
 			definition = "Indicates whether the entry is a credit or a debit entry.";
 			maxOccurs = 1;
@@ -202,7 +204,7 @@ public class LimitJournalEntry1 {
 			componentContext_lazy = () -> LimitJournalEntry1.mmObject();
 			isDerived = false;
 			xmlTag = "Amt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Amount of money of individual entry impacting the limit.";
 			maxOccurs = 1;
@@ -245,7 +247,7 @@ public class LimitJournalEntry1 {
 			componentContext_lazy = () -> LimitJournalEntry1.mmObject();
 			isDerived = false;
 			xmlTag = "NtryRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EntryReference";
 			definition = "Unique reference for the entry, as assigned by the market infrastructure.";
 			maxOccurs = 1;
@@ -289,7 +291,7 @@ public class LimitJournalEntry1 {
 			componentContext_lazy = () -> LimitJournalEntry1.mmObject();
 			isDerived = false;
 			xmlTag = "TxId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionIdentification";
 			definition = "Unique reference as assigned by the account owner institution to unambiguously identify the entry.";
 			maxOccurs = 1;
@@ -333,7 +335,7 @@ public class LimitJournalEntry1 {
 			componentContext_lazy = () -> LimitJournalEntry1.mmObject();
 			isDerived = false;
 			xmlTag = "AcctSvcrRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountServicerReference";
 			definition = "Unique reference as assigned by the account servicing institution to unambiguously identify the entry.";
 			maxOccurs = 1;
@@ -375,7 +377,7 @@ public class LimitJournalEntry1 {
 			componentContext_lazy = () -> LimitJournalEntry1.mmObject();
 			isDerived = false;
 			xmlTag = "PrcrTxId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProcessorTransactionIdentification";
 			definition = "Identification of the transaction assigned by the processor.";
 			maxOccurs = 1;
@@ -416,7 +418,7 @@ public class LimitJournalEntry1 {
 			componentContext_lazy = () -> LimitJournalEntry1.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlNtryInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalEntryInformation";
 			definition = "Further details of the entry.";
 			maxOccurs = 1;
@@ -428,12 +430,10 @@ public class LimitJournalEntry1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LimitJournalEntry1.mmJournalDate, com.tools20022.repository.msg.LimitJournalEntry1.mmCreditDebitIndicator,
-						com.tools20022.repository.msg.LimitJournalEntry1.mmAmount, com.tools20022.repository.msg.LimitJournalEntry1.mmEntryReference, com.tools20022.repository.msg.LimitJournalEntry1.mmTransactionIdentification,
-						com.tools20022.repository.msg.LimitJournalEntry1.mmAccountServicerReference, com.tools20022.repository.msg.LimitJournalEntry1.mmProcessorTransactionIdentification,
-						com.tools20022.repository.msg.LimitJournalEntry1.mmAdditionalEntryInformation);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(LimitJournalEntry1.mmJournalDate, LimitJournalEntry1.mmCreditDebitIndicator, LimitJournalEntry1.mmAmount, LimitJournalEntry1.mmEntryReference,
+						LimitJournalEntry1.mmTransactionIdentification, LimitJournalEntry1.mmAccountServicerReference, LimitJournalEntry1.mmProcessorTransactionIdentification, LimitJournalEntry1.mmAdditionalEntryInformation);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "LimitJournalEntry1";
 				definition = "Journal entries track changes to the utilisation of the limit. Entries exist for all activity impacting the limit.";
 			}

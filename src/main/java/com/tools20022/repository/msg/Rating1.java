@@ -19,10 +19,12 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.RatingValueIdentifier;
 import com.tools20022.repository.entity.Rating;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -98,11 +100,11 @@ public class Rating1 {
 	 */
 	public static final MMMessageAttribute mmRatingScheme = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Rating.mmRatingScheme;
+			businessElementTrace_lazy = () -> Rating.mmRatingScheme;
 			componentContext_lazy = () -> Rating1.mmObject();
 			isDerived = false;
 			xmlTag = "RatgSchme";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RatingScheme";
 			definition = "Information regarding the entity that assigns the rating.";
 			maxOccurs = 1;
@@ -144,11 +146,11 @@ public class Rating1 {
 	 */
 	public static final MMMessageAttribute mmValueDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Rating.mmValueDate;
+			businessElementTrace_lazy = () -> Rating.mmValueDate;
 			componentContext_lazy = () -> Rating1.mmObject();
 			isDerived = false;
 			xmlTag = "ValDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValueDate";
 			definition = "Date/time as from which the rating is valid.";
 			maxOccurs = 1;
@@ -194,11 +196,11 @@ public class Rating1 {
 	 */
 	public static final MMMessageAttribute mmValueIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Rating.mmValue;
+			businessElementTrace_lazy = () -> Rating.mmValue;
 			componentContext_lazy = () -> Rating1.mmObject();
 			isDerived = false;
 			xmlTag = "ValId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValueIdentification";
 			definition = "Specifies the rating, which has been assigned to a security by a rating agency.";
 			maxOccurs = 1;
@@ -210,10 +212,10 @@ public class Rating1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Rating1.mmRatingScheme, com.tools20022.repository.msg.Rating1.mmValueDate, com.tools20022.repository.msg.Rating1.mmValueIdentification);
+				messageElement_lazy = () -> Arrays.asList(Rating1.mmRatingScheme, Rating1.mmValueDate, Rating1.mmValueIdentification);
 				trace_lazy = () -> Rating.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Rating1";
 				definition = "Assessment of securities credit and investment risk.";
 			}

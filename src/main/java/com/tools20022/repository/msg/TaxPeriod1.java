@@ -19,9 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.TaxRecordPeriod1Code;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.entity.TaxPeriod;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -96,11 +98,11 @@ public class TaxPeriod1 {
 	 */
 	public static final MMMessageAttribute mmYear = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TaxPeriod.mmYear;
+			businessElementTrace_lazy = () -> TaxPeriod.mmYear;
 			componentContext_lazy = () -> TaxPeriod1.mmObject();
 			isDerived = false;
 			xmlTag = "Yr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Year";
 			definition = "Year related to the tax payment.";
 			maxOccurs = 1;
@@ -143,11 +145,11 @@ public class TaxPeriod1 {
 	 */
 	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TaxPeriod.mmType;
+			businessElementTrace_lazy = () -> TaxPeriod.mmType;
 			componentContext_lazy = () -> TaxPeriod1.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Identification of the period related to the tax payment.";
 			maxOccurs = 1;
@@ -193,11 +195,11 @@ public class TaxPeriod1 {
 	 */
 	public static final MMMessageAttribute mmFromToDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TaxPeriod.mmFromToDate;
+			businessElementTrace_lazy = () -> TaxPeriod.mmFromToDate;
 			componentContext_lazy = () -> TaxPeriod1.mmObject();
 			isDerived = false;
 			xmlTag = "FrToDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FromToDate";
 			definition = "Range of time between a start date and an end date for which the tax report is provided.";
 			maxOccurs = 1;
@@ -209,10 +211,10 @@ public class TaxPeriod1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TaxPeriod1.mmYear, com.tools20022.repository.msg.TaxPeriod1.mmType, com.tools20022.repository.msg.TaxPeriod1.mmFromToDate);
+				messageElement_lazy = () -> Arrays.asList(TaxPeriod1.mmYear, TaxPeriod1.mmType, TaxPeriod1.mmFromToDate);
 				trace_lazy = () -> TaxPeriod.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TaxPeriod1";
 				definition = "Period of time details related to the tax payment.";
 			}

@@ -20,7 +20,10 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.ElectronicSignature;
+import com.tools20022.repository.entity.Party;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.other.SignatureEnvelope;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -99,11 +102,11 @@ public class QualifiedPartyAndXMLSignature1 {
 	 */
 	public static final MMMessageAssociationEnd mmParty = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> QualifiedPartyAndXMLSignature1.mmObject();
 			isDerived = false;
 			xmlTag = "Pty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Party";
 			definition = "Identification of the signing party.";
 			maxOccurs = 1;
@@ -153,7 +156,7 @@ public class QualifiedPartyAndXMLSignature1 {
 			componentContext_lazy = () -> QualifiedPartyAndXMLSignature1.mmObject();
 			isDerived = false;
 			xmlTag = "Sgntr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Signature";
 			definition = "Digital signature in XML-DSIG format and reference to signing party.";
 			maxOccurs = 1;
@@ -165,10 +168,10 @@ public class QualifiedPartyAndXMLSignature1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.QualifiedPartyAndXMLSignature1.mmParty, com.tools20022.repository.msg.QualifiedPartyAndXMLSignature1.mmSignature);
+				messageElement_lazy = () -> Arrays.asList(QualifiedPartyAndXMLSignature1.mmParty, QualifiedPartyAndXMLSignature1.mmSignature);
 				trace_lazy = () -> ElectronicSignature.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "QualifiedPartyAndXMLSignature1";
 				definition = "Defines a signing party and a digital signature made by this party.";
 			}

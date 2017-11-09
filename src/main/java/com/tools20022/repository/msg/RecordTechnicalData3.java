@@ -20,10 +20,12 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.Period4Choice;
 import com.tools20022.repository.codeset.CountryCode;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.TrueFalseIndicator;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -116,7 +118,7 @@ public class RecordTechnicalData3 {
 			componentContext_lazy = () -> RecordTechnicalData3.mmObject();
 			isDerived = false;
 			xmlTag = "IncnsstncyInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InconsistencyIndicator";
 			definition = "Flag to say if there is an inconsistency across all submitting entities records.";
 			maxOccurs = 1;
@@ -158,7 +160,7 @@ public class RecordTechnicalData3 {
 			componentContext_lazy = () -> RecordTechnicalData3.mmObject();
 			isDerived = false;
 			xmlTag = "LastUpd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LastUpdate";
 			definition = "Last date for which data was received for this instrument.";
 			maxOccurs = 1;
@@ -202,7 +204,7 @@ public class RecordTechnicalData3 {
 			componentContext_lazy = () -> RecordTechnicalData3.mmObject();
 			isDerived = false;
 			xmlTag = "SubmissnDtTm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubmissionDateTime";
 			definition = "Defines the date and time when this instrument was originally received at the submission destination.";
 			maxOccurs = 1;
@@ -244,7 +246,7 @@ public class RecordTechnicalData3 {
 			componentContext_lazy = () -> RecordTechnicalData3.mmObject();
 			isDerived = false;
 			xmlTag = "RlvntCmptntAuthrty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelevantCompetentAuthority";
 			definition = "Country code of the relevant competent authority of the instrument.";
 			maxOccurs = 1;
@@ -286,7 +288,7 @@ public class RecordTechnicalData3 {
 			componentContext_lazy = () -> RecordTechnicalData3.mmObject();
 			isDerived = false;
 			xmlTag = "PblctnPrd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PublicationPeriod";
 			definition = "Period for which the associated instrument has been publically available.";
 			maxOccurs = 1;
@@ -329,7 +331,7 @@ public class RecordTechnicalData3 {
 			componentContext_lazy = () -> RecordTechnicalData3.mmObject();
 			isDerived = false;
 			xmlTag = "NvrPblshd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NeverPublished";
 			definition = "Flag to say if the record has ever been published.";
 			maxOccurs = 1;
@@ -341,11 +343,10 @@ public class RecordTechnicalData3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RecordTechnicalData3.mmInconsistencyIndicator, com.tools20022.repository.msg.RecordTechnicalData3.mmLastUpdate,
-						com.tools20022.repository.msg.RecordTechnicalData3.mmSubmissionDateTime, com.tools20022.repository.msg.RecordTechnicalData3.mmRelevantCompetentAuthority,
-						com.tools20022.repository.msg.RecordTechnicalData3.mmPublicationPeriod, com.tools20022.repository.msg.RecordTechnicalData3.mmNeverPublished);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(RecordTechnicalData3.mmInconsistencyIndicator, RecordTechnicalData3.mmLastUpdate, RecordTechnicalData3.mmSubmissionDateTime, RecordTechnicalData3.mmRelevantCompetentAuthority,
+						RecordTechnicalData3.mmPublicationPeriod, RecordTechnicalData3.mmNeverPublished);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RecordTechnicalData3";
 				definition = "Instrument specific technical data to support identification.";
 				previousVersion_lazy = () -> RecordTechnicalData2.mmObject();

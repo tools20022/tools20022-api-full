@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.RegisteredNumberTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -86,7 +88,7 @@ public class RegisteredNumberType1Code extends RegisteredNumberTypeCode {
 	 */
 	public static final MMCode mmAustralianBusinessNumber = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AustralianBusinessNumber";
 			owner_lazy = () -> RegisteredNumberType1Code.mmObject();
 		}
@@ -109,7 +111,7 @@ public class RegisteredNumberType1Code extends RegisteredNumberTypeCode {
 	 */
 	public static final MMCode mmAustralianCompanyNumber = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AustralianCompanyNumber";
 			owner_lazy = () -> RegisteredNumberType1Code.mmObject();
 		}
@@ -132,7 +134,7 @@ public class RegisteredNumberType1Code extends RegisteredNumberTypeCode {
 	 */
 	public static final MMCode mmAustralianRegisteredBodyNumber = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AustralianRegisteredBodyNumber";
 			owner_lazy = () -> RegisteredNumberType1Code.mmObject();
 		}
@@ -155,7 +157,7 @@ public class RegisteredNumberType1Code extends RegisteredNumberTypeCode {
 	 */
 	public static final MMCode mmAustralianRegisteredSchemeNumber = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AustralianRegisteredSchemeNumber";
 			owner_lazy = () -> RegisteredNumberType1Code.mmObject();
 		}
@@ -178,7 +180,7 @@ public class RegisteredNumberType1Code extends RegisteredNumberTypeCode {
 	 */
 	public static final MMCode mmOther = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
 			owner_lazy = () -> RegisteredNumberType1Code.mmObject();
 		}
@@ -187,13 +189,12 @@ public class RegisteredNumberType1Code extends RegisteredNumberTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RegisteredNumberType1Code";
 				definition = "Code values for the registered number type.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RegisteredNumberType1Code.mmAustralianBusinessNumber, com.tools20022.repository.codeset.RegisteredNumberType1Code.mmAustralianCompanyNumber,
-						com.tools20022.repository.codeset.RegisteredNumberType1Code.mmAustralianRegisteredBodyNumber, com.tools20022.repository.codeset.RegisteredNumberType1Code.mmAustralianRegisteredSchemeNumber,
-						com.tools20022.repository.codeset.RegisteredNumberType1Code.mmOther);
+				code_lazy = () -> Arrays.asList(RegisteredNumberType1Code.mmAustralianBusinessNumber, RegisteredNumberType1Code.mmAustralianCompanyNumber, RegisteredNumberType1Code.mmAustralianRegisteredBodyNumber,
+						RegisteredNumberType1Code.mmAustralianRegisteredSchemeNumber, RegisteredNumberType1Code.mmOther);
 				trace_lazy = () -> RegisteredNumberTypeCode.mmObject();
 			}
 		});

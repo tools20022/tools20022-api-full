@@ -19,7 +19,9 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.CorporateActionStatus;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.CorporateActionEventStatus1;
 import com.tools20022.repository.msg.GenericIdentification25;
 import java.util.Arrays;
@@ -126,15 +128,15 @@ public class CorporateActionProcessingStatus4Choice {
 	 */
 	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionStatus.mmProcessingStatus;
+			businessElementTrace_lazy = () -> CorporateActionStatus.mmProcessingStatus;
 			componentContext_lazy = () -> CorporateActionProcessingStatus4Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Cd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Specifies the status of the details of the corporate action event.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CorporateActionProcessingStatus5Choice.mmCode);
-			previousVersion_lazy = () -> com.tools20022.repository.choice.CorporateActionProcessingStatus3Choice.mmCode;
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionProcessingStatus5Choice.mmCode);
+			previousVersion_lazy = () -> CorporateActionProcessingStatus3Choice.mmCode;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> CorporateActionEventStatus1.mmObject();
@@ -192,15 +194,15 @@ public class CorporateActionProcessingStatus4Choice {
 	 */
 	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionStatus.mmProcessingStatus;
+			businessElementTrace_lazy = () -> CorporateActionStatus.mmProcessingStatus;
 			componentContext_lazy = () -> CorporateActionProcessingStatus4Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Information related to an identification, for example, party identification or account identification.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CorporateActionProcessingStatus5Choice.mmProprietary);
-			previousVersion_lazy = () -> com.tools20022.repository.choice.CorporateActionProcessingStatus3Choice.mmProprietary;
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionProcessingStatus5Choice.mmProprietary);
+			previousVersion_lazy = () -> CorporateActionProcessingStatus3Choice.mmProprietary;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification25.mmObject();
@@ -210,10 +212,10 @@ public class CorporateActionProcessingStatus4Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CorporateActionProcessingStatus4Choice.mmCode, com.tools20022.repository.choice.CorporateActionProcessingStatus4Choice.mmProprietary);
+				messageElement_lazy = () -> Arrays.asList(CorporateActionProcessingStatus4Choice.mmCode, CorporateActionProcessingStatus4Choice.mmProprietary);
 				trace_lazy = () -> CorporateActionStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionProcessingStatus4Choice";
 				definition = "Specifies the status of the details of the corporate action event.";
 				nextVersions_lazy = () -> Arrays.asList(CorporateActionProcessingStatus5Choice.mmObject());

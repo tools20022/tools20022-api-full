@@ -19,9 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.EventCompletenessStatus1Code;
 import com.tools20022.repository.codeset.EventConfirmationStatus1Code;
 import com.tools20022.repository.entity.CorporateActionStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -105,11 +107,11 @@ public class CorporateActionEventStatus1 {
 	 */
 	public static final MMMessageAttribute mmEventCompletenessStatus = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionStatus.mmProcessingStatus;
+			businessElementTrace_lazy = () -> CorporateActionStatus.mmProcessingStatus;
 			componentContext_lazy = () -> CorporateActionEventStatus1.mmObject();
 			isDerived = false;
 			xmlTag = "EvtCmpltnsSts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventCompletenessStatus";
 			definition = "Indicates whether the details provided about an event are complete or incomplete.";
 			maxOccurs = 1;
@@ -153,11 +155,11 @@ public class CorporateActionEventStatus1 {
 	 */
 	public static final MMMessageAttribute mmEventConfirmationStatus = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionStatus.mmProcessingStatus;
+			businessElementTrace_lazy = () -> CorporateActionStatus.mmProcessingStatus;
 			componentContext_lazy = () -> CorporateActionEventStatus1.mmObject();
 			isDerived = false;
 			xmlTag = "EvtConfSts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventConfirmationStatus";
 			definition = "Indicates the status of the occurrence of an event.";
 			maxOccurs = 1;
@@ -169,10 +171,10 @@ public class CorporateActionEventStatus1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionEventStatus1.mmEventCompletenessStatus, com.tools20022.repository.msg.CorporateActionEventStatus1.mmEventConfirmationStatus);
+				messageElement_lazy = () -> Arrays.asList(CorporateActionEventStatus1.mmEventCompletenessStatus, CorporateActionEventStatus1.mmEventConfirmationStatus);
 				trace_lazy = () -> CorporateActionStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionEventStatus1";
 				definition = "The process of notifying of an upcoming corporate action. It provides corporate action details including the different options.";
 			}

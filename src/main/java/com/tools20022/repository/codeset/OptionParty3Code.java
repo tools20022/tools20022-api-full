@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.OptionPartyCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -75,7 +77,7 @@ public class OptionParty3Code extends OptionPartyCode {
 	 */
 	public static final MMCode mmMaker = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Maker";
 			owner_lazy = () -> OptionParty3Code.mmObject();
 		}
@@ -98,7 +100,7 @@ public class OptionParty3Code extends OptionPartyCode {
 	 */
 	public static final MMCode mmTaker = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Taker";
 			owner_lazy = () -> OptionParty3Code.mmObject();
 		}
@@ -107,11 +109,11 @@ public class OptionParty3Code extends OptionPartyCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OptionParty3Code";
 				definition = "Specifies if a trade party is a taker or a maker.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OptionParty3Code.mmMaker, com.tools20022.repository.codeset.OptionParty3Code.mmTaker);
+				code_lazy = () -> Arrays.asList(OptionParty3Code.mmMaker, OptionParty3Code.mmTaker);
 				trace_lazy = () -> OptionPartyCode.mmObject();
 			}
 		});

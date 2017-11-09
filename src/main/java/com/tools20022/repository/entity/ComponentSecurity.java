@@ -17,12 +17,11 @@
 
 package com.tools20022.repository.entity;
 
-import com.tools20022.metamodel.MMBusinessAssociationEnd;
-import com.tools20022.metamodel.MMBusinessAttribute;
-import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.*;
 import com.tools20022.repository.codeset.ChoiceCode;
 import com.tools20022.repository.datatype.BaseOneRate;
 import com.tools20022.repository.datatype.ISODateTime;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -36,6 +35,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Security#mmComponentSecurity
+ * Security.mmComponentSecurity}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.DateTimePeriod#mmComponentSecurity
+ * DateTimePeriod.mmComponentSecurity}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -57,18 +68,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.entity.ComponentSecurity#mmSeparationDate
  * ComponentSecurity.mmSeparationDate}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Security#mmComponentSecurity
- * Security.mmComponentSecurity}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.DateTimePeriod#mmComponentSecurity
- * DateTimePeriod.mmComponentSecurity}</li>
  * </ul>
  * </li>
  * <li>
@@ -132,13 +131,13 @@ public class ComponentSecurity {
 		{
 			elementContext_lazy = () -> ComponentSecurity.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SeparationPeriod";
 			definition = "Period during which the related security can (optional) or must (mandatory) be separated.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmComponentSecurity;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmObject();
 		}
 	};
@@ -179,13 +178,13 @@ public class ComponentSecurity {
 		{
 			elementContext_lazy = () -> ComponentSecurity.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Security";
 			definition = "Security for which a component security is specified.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.Security.mmComponentSecurity;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 		}
 	};
@@ -220,7 +219,7 @@ public class ComponentSecurity {
 		{
 			elementContext_lazy = () -> ComponentSecurity.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SeparationChoice";
 			definition = " Defines if the separation of the security is optional or mandatory.";
 			maxOccurs = 1;
@@ -258,7 +257,7 @@ public class ComponentSecurity {
 		{
 			elementContext_lazy = () -> ComponentSecurity.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "QuantityNumerator";
 			definition = "Number of related securities for the exercise.";
 			maxOccurs = 1;
@@ -296,7 +295,7 @@ public class ComponentSecurity {
 		{
 			elementContext_lazy = () -> ComponentSecurity.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "QuantityDenominator";
 			definition = "Number of held securities for the exercise.";
 			maxOccurs = 1;
@@ -337,7 +336,7 @@ public class ComponentSecurity {
 		{
 			elementContext_lazy = () -> ComponentSecurity.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SeparationDate";
 			definition = "Date/time at which the related security can (optional) or must (mandatory) be separated.";
 			maxOccurs = 1;
@@ -349,14 +348,13 @@ public class ComponentSecurity {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ComponentSecurity";
 				definition = "Security which forms a component of another security, for example, underlying.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Security.mmComponentSecurity, com.tools20022.repository.entity.DateTimePeriod.mmComponentSecurity);
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.ComponentSecurity.mmSeparationPeriod, com.tools20022.repository.entity.ComponentSecurity.mmSecurity,
-						com.tools20022.repository.entity.ComponentSecurity.mmSeparationChoice, com.tools20022.repository.entity.ComponentSecurity.mmQuantityNumerator,
-						com.tools20022.repository.entity.ComponentSecurity.mmQuantityDenominator, com.tools20022.repository.entity.ComponentSecurity.mmSeparationDate);
+				element_lazy = () -> Arrays.asList(ComponentSecurity.mmSeparationPeriod, ComponentSecurity.mmSecurity, ComponentSecurity.mmSeparationChoice, ComponentSecurity.mmQuantityNumerator, ComponentSecurity.mmQuantityDenominator,
+						ComponentSecurity.mmSeparationDate);
 			}
 		});
 		return mmObject_lazy.get();

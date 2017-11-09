@@ -19,7 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.camt.FundDetailedConfirmedCashForecastReportCancellationV03;
 import com.tools20022.repository.entity.FundsCashFlow;
+import com.tools20022.repository.entity.InvestmentFundTransaction;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -118,11 +122,11 @@ public class FundDetailedConfirmedCashForecastReport3 {
 	 */
 	public static final MMMessageAssociationEnd mmFundOrSubFundDetails = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundTransaction.mmInvestmentFundClass;
+			businessElementTrace_lazy = () -> InvestmentFundTransaction.mmInvestmentFundClass;
 			componentContext_lazy = () -> FundDetailedConfirmedCashForecastReport3.mmObject();
 			isDerived = false;
 			xmlTag = "FndOrSubFndDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FundOrSubFundDetails";
 			definition = "Information about the fund/sub fund when the report either specifies cash flow for the fund/sub fund or for a share class of the fund/sub fund.";
 			maxOccurs = 1;
@@ -180,10 +184,10 @@ public class FundDetailedConfirmedCashForecastReport3 {
 			componentContext_lazy = () -> FundDetailedConfirmedCashForecastReport3.mmObject();
 			isDerived = false;
 			xmlTag = "FndCshFcstDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FundCashForecastDetails";
 			definition = "Information related to the cash-in and cash-out flows for a specific trade date as a result of transactions in shares in an investment fund, for example, subscriptions, redemptions or switches. The information provided is sorted by pre-defined criteria such as country, institution, currency or user defined criteria.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.FundDetailedConfirmedCashForecastReport2.mmFundCashForecastDetails;
+			previousVersion_lazy = () -> FundDetailedConfirmedCashForecastReport2.mmFundCashForecastDetails;
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.FundCashForecast6.mmObject();
@@ -233,10 +237,10 @@ public class FundDetailedConfirmedCashForecastReport3 {
 			componentContext_lazy = () -> FundDetailedConfirmedCashForecastReport3.mmObject();
 			isDerived = false;
 			xmlTag = "CnsltdNetCshFcst";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConsolidatedNetCashForecast";
 			definition = "Estimated net cash as a result of the cash-in and cash-out flows.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.FundDetailedConfirmedCashForecastReport2.mmConsolidatedNetCashForecast;
+			previousVersion_lazy = () -> FundDetailedConfirmedCashForecastReport2.mmConsolidatedNetCashForecast;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -282,10 +286,10 @@ public class FundDetailedConfirmedCashForecastReport3 {
 			componentContext_lazy = () -> FundDetailedConfirmedCashForecastReport3.mmObject();
 			isDerived = false;
 			xmlTag = "Xtnsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Extension";
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.FundDetailedConfirmedCashForecastReport2.mmExtension;
+			previousVersion_lazy = () -> FundDetailedConfirmedCashForecastReport2.mmExtension;
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.Extension1.mmObject();
@@ -295,13 +299,12 @@ public class FundDetailedConfirmedCashForecastReport3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FundDetailedConfirmedCashForecastReport3.mmFundOrSubFundDetails,
-						com.tools20022.repository.msg.FundDetailedConfirmedCashForecastReport3.mmFundCashForecastDetails, com.tools20022.repository.msg.FundDetailedConfirmedCashForecastReport3.mmConsolidatedNetCashForecast,
-						com.tools20022.repository.msg.FundDetailedConfirmedCashForecastReport3.mmExtension);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.FundDetailedConfirmedCashForecastReportCancellationV03.mmCashForecastReportToBeCancelled);
+				messageElement_lazy = () -> Arrays.asList(FundDetailedConfirmedCashForecastReport3.mmFundOrSubFundDetails, FundDetailedConfirmedCashForecastReport3.mmFundCashForecastDetails,
+						FundDetailedConfirmedCashForecastReport3.mmConsolidatedNetCashForecast, FundDetailedConfirmedCashForecastReport3.mmExtension);
+				messageBuildingBlock_lazy = () -> Arrays.asList(FundDetailedConfirmedCashForecastReportCancellationV03.mmCashForecastReportToBeCancelled);
 				trace_lazy = () -> FundsCashFlow.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FundDetailedConfirmedCashForecastReport3";
 				definition = "Information about a cash forecast report.";
 				previousVersion_lazy = () -> FundDetailedConfirmedCashForecastReport2.mmObject();

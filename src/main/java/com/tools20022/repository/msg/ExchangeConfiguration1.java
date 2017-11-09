@@ -20,10 +20,12 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ExchangePolicy1Code;
 import com.tools20022.repository.datatype.ImpliedCurrencyAndAmount;
 import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.entity.AcceptorConfiguration;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -115,11 +117,11 @@ public class ExchangeConfiguration1 {
 	 */
 	public static final MMMessageAttribute mmExchangePolicy = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AcceptorConfiguration.mmExchangePolicy;
+			businessElementTrace_lazy = () -> AcceptorConfiguration.mmExchangePolicy;
 			componentContext_lazy = () -> ExchangeConfiguration1.mmObject();
 			isDerived = false;
 			xmlTag = "XchgPlcy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExchangePolicy";
 			definition = "Exchange policy between parties.";
 			minOccurs = 1;
@@ -161,11 +163,11 @@ public class ExchangeConfiguration1 {
 	 */
 	public static final MMMessageAttribute mmMaximumNumber = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AcceptorConfiguration.mmMaximumNumber;
+			businessElementTrace_lazy = () -> AcceptorConfiguration.mmMaximumNumber;
 			componentContext_lazy = () -> ExchangeConfiguration1.mmObject();
 			isDerived = false;
 			xmlTag = "MaxNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaximumNumber";
 			definition = "Maximum number of transactions without exchange.";
 			maxOccurs = 1;
@@ -210,11 +212,11 @@ public class ExchangeConfiguration1 {
 	 */
 	public static final MMMessageAttribute mmMaximumAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AcceptorConfiguration.mmMaximumAmount;
+			businessElementTrace_lazy = () -> AcceptorConfiguration.mmMaximumAmount;
 			componentContext_lazy = () -> ExchangeConfiguration1.mmObject();
 			isDerived = false;
 			xmlTag = "MaxAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaximumAmount";
 			definition = "Maximum cumulative amount of the transactions without exchange.";
 			maxOccurs = 1;
@@ -254,7 +256,7 @@ public class ExchangeConfiguration1 {
 			componentContext_lazy = () -> ExchangeConfiguration1.mmObject();
 			isDerived = false;
 			xmlTag = "TmCond";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TimeCondition";
 			definition = "Timing condition for periodic exchanges.";
 			maxOccurs = 1;
@@ -267,11 +269,10 @@ public class ExchangeConfiguration1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ExchangeConfiguration1.mmExchangePolicy, com.tools20022.repository.msg.ExchangeConfiguration1.mmMaximumNumber,
-						com.tools20022.repository.msg.ExchangeConfiguration1.mmMaximumAmount, com.tools20022.repository.msg.ExchangeConfiguration1.mmTimeCondition);
+				messageElement_lazy = () -> Arrays.asList(ExchangeConfiguration1.mmExchangePolicy, ExchangeConfiguration1.mmMaximumNumber, ExchangeConfiguration1.mmMaximumAmount, ExchangeConfiguration1.mmTimeCondition);
 				trace_lazy = () -> AcceptorConfiguration.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ExchangeConfiguration1";
 				definition = "Configuration parameters of data exchanges.";
 				nextVersions_lazy = () -> Arrays.asList(ExchangeConfiguration2.mmObject());

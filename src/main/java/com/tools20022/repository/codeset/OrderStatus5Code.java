@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.OrderStatusCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -97,7 +99,7 @@ public class OrderStatus5Code extends OrderStatusCode {
 	 */
 	public static final MMCode mmReceived = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Received";
 			owner_lazy = () -> OrderStatus5Code.mmObject();
 		}
@@ -120,7 +122,7 @@ public class OrderStatus5Code extends OrderStatusCode {
 	 */
 	public static final MMCode mmAccepted = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Accepted";
 			owner_lazy = () -> OrderStatus5Code.mmObject();
 		}
@@ -143,7 +145,7 @@ public class OrderStatus5Code extends OrderStatusCode {
 	 */
 	public static final MMCode mmAlreadyExecuted = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AlreadyExecuted";
 			owner_lazy = () -> OrderStatus5Code.mmObject();
 		}
@@ -166,7 +168,7 @@ public class OrderStatus5Code extends OrderStatusCode {
 	 */
 	public static final MMCode mmSentToNextParty = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SentToNextParty";
 			owner_lazy = () -> OrderStatus5Code.mmObject();
 		}
@@ -189,7 +191,7 @@ public class OrderStatus5Code extends OrderStatusCode {
 	 */
 	public static final MMCode mmCommunicationProblemNextParty = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommunicationProblemNextParty";
 			owner_lazy = () -> OrderStatus5Code.mmObject();
 		}
@@ -212,7 +214,7 @@ public class OrderStatus5Code extends OrderStatusCode {
 	 */
 	public static final MMCode mmSettled = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Settled";
 			owner_lazy = () -> OrderStatus5Code.mmObject();
 		}
@@ -235,7 +237,7 @@ public class OrderStatus5Code extends OrderStatusCode {
 	 */
 	public static final MMCode mmCashSettledOrderNotExecuted = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashSettledOrderNotExecuted";
 			owner_lazy = () -> OrderStatus5Code.mmObject();
 		}
@@ -244,15 +246,13 @@ public class OrderStatus5Code extends OrderStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("RECE");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OrderStatus5Code";
 				definition = "Specifies the current status of the order.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OrderStatus5Code.mmReceived, com.tools20022.repository.codeset.OrderStatus5Code.mmAccepted,
-						com.tools20022.repository.codeset.OrderStatus5Code.mmAlreadyExecuted, com.tools20022.repository.codeset.OrderStatus5Code.mmSentToNextParty,
-						com.tools20022.repository.codeset.OrderStatus5Code.mmCommunicationProblemNextParty, com.tools20022.repository.codeset.OrderStatus5Code.mmSettled,
-						com.tools20022.repository.codeset.OrderStatus5Code.mmCashSettledOrderNotExecuted);
+				code_lazy = () -> Arrays.asList(OrderStatus5Code.mmReceived, OrderStatus5Code.mmAccepted, OrderStatus5Code.mmAlreadyExecuted, OrderStatus5Code.mmSentToNextParty, OrderStatus5Code.mmCommunicationProblemNextParty,
+						OrderStatus5Code.mmSettled, OrderStatus5Code.mmCashSettledOrderNotExecuted);
 				trace_lazy = () -> OrderStatusCode.mmObject();
 			}
 		});

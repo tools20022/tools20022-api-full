@@ -20,12 +20,12 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.CustomerHandlingInstructionChoice;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.YesNoIndicator;
-import com.tools20022.repository.entity.SecuritiesFinancing;
-import com.tools20022.repository.entity.SecuritiesOrder;
-import com.tools20022.repository.entity.Spread;
+import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -123,11 +123,11 @@ public class SingleOrder1 {
 	 */
 	public static final MMMessageAttribute mmManualOrderIndicator = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrderParameters.mmManualOrderIndicator;
+			businessElementTrace_lazy = () -> SecuritiesOrderParameters.mmManualOrderIndicator;
 			componentContext_lazy = () -> SingleOrder1.mmObject();
 			isDerived = false;
 			xmlTag = "MnlOrdrInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ManualOrderIndicator";
 			definition = "Indicates if the order was initially received manually (as opposed to electronically).";
 			maxOccurs = 1;
@@ -173,11 +173,11 @@ public class SingleOrder1 {
 	 */
 	public static final MMMessageAttribute mmDirectedOrder = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrderParameters.mmDirectedOrder;
+			businessElementTrace_lazy = () -> SecuritiesOrderParameters.mmDirectedOrder;
 			componentContext_lazy = () -> SingleOrder1.mmObject();
 			isDerived = false;
 			xmlTag = "DrctdOrdr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DirectedOrder";
 			definition = "Indicates if the customer directed this order to a specific execution venue (Y) or not (N).";
 			maxOccurs = 1;
@@ -220,11 +220,11 @@ public class SingleOrder1 {
 	 */
 	public static final MMMessageAttribute mmReceivedDepartment = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrderParameters.mmReceivedDepartment;
+			businessElementTrace_lazy = () -> SecuritiesOrderParameters.mmReceivedDepartment;
 			componentContext_lazy = () -> SingleOrder1.mmObject();
 			isDerived = false;
 			xmlTag = "RcvdDptmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceivedDepartment";
 			definition = "Identifies the Broker / Dealer Department that first took the order.";
 			maxOccurs = 1;
@@ -270,11 +270,11 @@ public class SingleOrder1 {
 	 */
 	public static final MMMessageAttribute mmCustomerHandlingInstruction = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrderParameters.mmCustomerHandlingInstruction;
+			businessElementTrace_lazy = () -> SecuritiesOrderParameters.mmCustomerHandlingInstruction;
 			componentContext_lazy = () -> SingleOrder1.mmObject();
 			isDerived = false;
 			xmlTag = "CstmrHdlgInstr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CustomerHandlingInstruction";
 			definition = "Codes that apply special information that the Broker / Dealer needs to report, as specified by the customer.";
 			maxOccurs = 1;
@@ -318,7 +318,7 @@ public class SingleOrder1 {
 			componentContext_lazy = () -> SingleOrder1.mmObject();
 			isDerived = false;
 			xmlTag = "OrdrDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrderDetails";
 			definition = "Provides order details.";
 			maxOccurs = 1;
@@ -366,7 +366,7 @@ public class SingleOrder1 {
 			componentContext_lazy = () -> SingleOrder1.mmObject();
 			isDerived = false;
 			xmlTag = "SprdAndBchmkCrvDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SpreadAndBenchmarkCurveDetails";
 			definition = "Indicates the difference in value between a financial instrument and a benchmark for an indication of interest.";
 			maxOccurs = 1;
@@ -409,11 +409,11 @@ public class SingleOrder1 {
 	 */
 	public static final MMMessageAssociationEnd mmYieldDetails = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmYieldCalculation;
+			businessElementTrace_lazy = () -> SecuritiesPricing.mmYieldCalculation;
 			componentContext_lazy = () -> SingleOrder1.mmObject();
 			isDerived = false;
 			xmlTag = "YldDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "YieldDetails";
 			definition = "Details about the return provided by a financial instrument.";
 			maxOccurs = 1;
@@ -459,7 +459,7 @@ public class SingleOrder1 {
 			componentContext_lazy = () -> SingleOrder1.mmObject();
 			isDerived = false;
 			xmlTag = "TwoLegTxDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TwoLegTransactionDetails";
 			definition = "Provides details about the two leg transaction.";
 			maxOccurs = 1;
@@ -501,7 +501,7 @@ public class SingleOrder1 {
 			componentContext_lazy = () -> SingleOrder1.mmObject();
 			isDerived = false;
 			xmlTag = "TradRgltryTmStmpsDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeRegulatoryTimeStampsDetails";
 			definition = "Provides details about the time the order was received and executed.";
 			maxOccurs = 1;
@@ -514,13 +514,11 @@ public class SingleOrder1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SingleOrder1.mmManualOrderIndicator, com.tools20022.repository.msg.SingleOrder1.mmDirectedOrder,
-						com.tools20022.repository.msg.SingleOrder1.mmReceivedDepartment, com.tools20022.repository.msg.SingleOrder1.mmCustomerHandlingInstruction, com.tools20022.repository.msg.SingleOrder1.mmOrderDetails,
-						com.tools20022.repository.msg.SingleOrder1.mmSpreadAndBenchmarkCurveDetails, com.tools20022.repository.msg.SingleOrder1.mmYieldDetails, com.tools20022.repository.msg.SingleOrder1.mmTwoLegTransactionDetails,
-						com.tools20022.repository.msg.SingleOrder1.mmTradeRegulatoryTimeStampsDetails);
+				messageElement_lazy = () -> Arrays.asList(SingleOrder1.mmManualOrderIndicator, SingleOrder1.mmDirectedOrder, SingleOrder1.mmReceivedDepartment, SingleOrder1.mmCustomerHandlingInstruction, SingleOrder1.mmOrderDetails,
+						SingleOrder1.mmSpreadAndBenchmarkCurveDetails, SingleOrder1.mmYieldDetails, SingleOrder1.mmTwoLegTransactionDetails, SingleOrder1.mmTradeRegulatoryTimeStampsDetails);
 				trace_lazy = () -> SecuritiesOrder.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SingleOrder1";
 				definition = "Provides details about the single order.";
 			}

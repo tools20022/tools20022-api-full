@@ -19,9 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.TerminalManagementAction3Code;
 import com.tools20022.repository.datatype.Max140Binary;
 import com.tools20022.repository.datatype.Max256Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -110,7 +112,7 @@ public class SecurityParameters6 {
 			componentContext_lazy = () -> SecurityParameters6.mmObject();
 			isDerived = false;
 			xmlTag = "ActnTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ActionType";
 			definition = "Type of action for the configuration parameters.";
 			maxOccurs = 1;
@@ -156,10 +158,10 @@ public class SecurityParameters6 {
 			componentContext_lazy = () -> SecurityParameters6.mmObject();
 			isDerived = false;
 			xmlTag = "Vrsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Version";
 			definition = "Version of the security parameters.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SecurityParameters3.mmVersion;
+			previousVersion_lazy = () -> SecurityParameters3.mmVersion;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max256Text.mmObject();
@@ -205,10 +207,10 @@ public class SecurityParameters6 {
 			componentContext_lazy = () -> SecurityParameters6.mmObject();
 			isDerived = false;
 			xmlTag = "POIChllng";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "POIChallenge";
 			definition = "Point of interaction challenge for cryptographic key injection.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SecurityParameters3.mmPOIChallenge;
+			previousVersion_lazy = () -> SecurityParameters3.mmPOIChallenge;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max140Binary.mmObject();
@@ -254,10 +256,10 @@ public class SecurityParameters6 {
 			componentContext_lazy = () -> SecurityParameters6.mmObject();
 			isDerived = false;
 			xmlTag = "TMChllng";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TMChallenge";
 			definition = "Terminal manager challenge for cryptographic key injection.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SecurityParameters3.mmTMChallenge;
+			previousVersion_lazy = () -> SecurityParameters3.mmTMChallenge;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max140Binary.mmObject();
@@ -305,10 +307,10 @@ public class SecurityParameters6 {
 			componentContext_lazy = () -> SecurityParameters6.mmObject();
 			isDerived = false;
 			xmlTag = "SmmtrcKey";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SymmetricKey";
 			definition = "Key to inject in the point of interaction, protected by the temporary key previously sent.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SecurityParameters3.mmSymmetricKey;
+			previousVersion_lazy = () -> SecurityParameters3.mmSymmetricKey;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.CryptographicKey5.mmObject();
 		}
@@ -317,10 +319,9 @@ public class SecurityParameters6 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecurityParameters6.mmActionType, com.tools20022.repository.msg.SecurityParameters6.mmVersion,
-						com.tools20022.repository.msg.SecurityParameters6.mmPOIChallenge, com.tools20022.repository.msg.SecurityParameters6.mmTMChallenge, com.tools20022.repository.msg.SecurityParameters6.mmSymmetricKey);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(SecurityParameters6.mmActionType, SecurityParameters6.mmVersion, SecurityParameters6.mmPOIChallenge, SecurityParameters6.mmTMChallenge, SecurityParameters6.mmSymmetricKey);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecurityParameters6";
 				definition = "Parameters related to the security of software application and application protocol.";
 				previousVersion_lazy = () -> SecurityParameters3.mmObject();

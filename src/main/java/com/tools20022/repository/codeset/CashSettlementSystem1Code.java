@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CashSettlementSystemCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -98,7 +100,7 @@ public class CashSettlementSystem1Code extends CashSettlementSystemCode {
 	 */
 	public static final MMCode mmBankOfKoreaWire = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BankOfKoreaWire";
 			owner_lazy = () -> CashSettlementSystem1Code.mmObject();
 		}
@@ -121,7 +123,7 @@ public class CashSettlementSystem1Code extends CashSettlementSystemCode {
 	 */
 	public static final MMCode mmCheque = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cheque";
 			owner_lazy = () -> CashSettlementSystem1Code.mmObject();
 		}
@@ -144,7 +146,7 @@ public class CashSettlementSystem1Code extends CashSettlementSystemCode {
 	 */
 	public static final MMCode mmUKDomestic = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UKDomestic";
 			owner_lazy = () -> CashSettlementSystem1Code.mmObject();
 		}
@@ -167,7 +169,7 @@ public class CashSettlementSystem1Code extends CashSettlementSystemCode {
 	 */
 	public static final MMCode mmGrossSettlementSystem = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GrossSettlementSystem";
 			owner_lazy = () -> CashSettlementSystem1Code.mmObject();
 		}
@@ -190,7 +192,7 @@ public class CashSettlementSystem1Code extends CashSettlementSystemCode {
 	 */
 	public static final MMCode mmNetSettlementSystem = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetSettlementSystem";
 			owner_lazy = () -> CashSettlementSystem1Code.mmObject();
 		}
@@ -213,7 +215,7 @@ public class CashSettlementSystem1Code extends CashSettlementSystemCode {
 	 */
 	public static final MMCode mmUSChips = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "USChips";
 			owner_lazy = () -> CashSettlementSystem1Code.mmObject();
 		}
@@ -236,7 +238,7 @@ public class CashSettlementSystem1Code extends CashSettlementSystemCode {
 	 */
 	public static final MMCode mmFedWireUS = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FedWireUS";
 			owner_lazy = () -> CashSettlementSystem1Code.mmObject();
 		}
@@ -245,15 +247,13 @@ public class CashSettlementSystem1Code extends CashSettlementSystemCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("BOKW");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CashSettlementSystem1Code";
 				definition = "Specifies the cash settlement system used.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CashSettlementSystem1Code.mmBankOfKoreaWire, com.tools20022.repository.codeset.CashSettlementSystem1Code.mmCheque,
-						com.tools20022.repository.codeset.CashSettlementSystem1Code.mmUKDomestic, com.tools20022.repository.codeset.CashSettlementSystem1Code.mmGrossSettlementSystem,
-						com.tools20022.repository.codeset.CashSettlementSystem1Code.mmNetSettlementSystem, com.tools20022.repository.codeset.CashSettlementSystem1Code.mmUSChips,
-						com.tools20022.repository.codeset.CashSettlementSystem1Code.mmFedWireUS);
+				code_lazy = () -> Arrays.asList(CashSettlementSystem1Code.mmBankOfKoreaWire, CashSettlementSystem1Code.mmCheque, CashSettlementSystem1Code.mmUKDomestic, CashSettlementSystem1Code.mmGrossSettlementSystem,
+						CashSettlementSystem1Code.mmNetSettlementSystem, CashSettlementSystem1Code.mmUSChips, CashSettlementSystem1Code.mmFedWireUS);
 				trace_lazy = () -> CashSettlementSystemCode.mmObject();
 			}
 		});

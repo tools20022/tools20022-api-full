@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.DTCCQuantitySought1Code
+ * DTCCQuantitySought1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -38,13 +47,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.DTCCQuantitySoughtCode#mmPercentage
  * DTCCQuantitySoughtCode.mmPercentage}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.DTCCQuantitySought1Code
- * DTCCQuantitySought1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -94,7 +96,7 @@ public class DTCCQuantitySoughtCode {
 	 */
 	public static final MMCode mmQuantity = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Quantity";
 			definition = "Quantity Sought expressed as quantity.";
 			owner_lazy = () -> DTCCQuantitySoughtCode.mmObject();
@@ -126,7 +128,7 @@ public class DTCCQuantitySoughtCode {
 	 */
 	public static final MMCode mmCheckComments = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CheckComments";
 			definition = "Check Quantity Sought Comments for quantity sought (irregular expression)";
 			owner_lazy = () -> DTCCQuantitySoughtCode.mmObject();
@@ -156,7 +158,7 @@ public class DTCCQuantitySoughtCode {
 	 */
 	public static final MMCode mmPercentage = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Percentage";
 			definition = "Quantity sought is expressed as percentage.";
 			owner_lazy = () -> DTCCQuantitySoughtCode.mmObject();
@@ -167,13 +169,12 @@ public class DTCCQuantitySoughtCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("QTTY");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DTCCQuantitySoughtCode";
 				definition = "Specifies the quantity sought type.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DTCCQuantitySoughtCode.mmQuantity, com.tools20022.repository.codeset.DTCCQuantitySoughtCode.mmCheckComments,
-						com.tools20022.repository.codeset.DTCCQuantitySoughtCode.mmPercentage);
+				code_lazy = () -> Arrays.asList(DTCCQuantitySoughtCode.mmQuantity, DTCCQuantitySoughtCode.mmCheckComments, DTCCQuantitySoughtCode.mmPercentage);
 				derivation_lazy = () -> Arrays.asList(DTCCQuantitySought1Code.mmObject());
 			}
 		});

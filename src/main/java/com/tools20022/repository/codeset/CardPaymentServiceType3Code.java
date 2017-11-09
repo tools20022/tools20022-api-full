@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CardPaymentServiceTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -98,7 +100,7 @@ public class CardPaymentServiceType3Code extends CardPaymentServiceTypeCode {
 	 */
 	public static final MMCode mmInitialReservation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InitialReservation";
 			owner_lazy = () -> CardPaymentServiceType3Code.mmObject();
 		}
@@ -121,7 +123,7 @@ public class CardPaymentServiceType3Code extends CardPaymentServiceTypeCode {
 	 */
 	public static final MMCode mmUpdateReservation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UpdateReservation";
 			owner_lazy = () -> CardPaymentServiceType3Code.mmObject();
 		}
@@ -144,7 +146,7 @@ public class CardPaymentServiceType3Code extends CardPaymentServiceTypeCode {
 	 */
 	public static final MMCode mmPaymentReservation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentReservation";
 			owner_lazy = () -> CardPaymentServiceType3Code.mmObject();
 		}
@@ -167,7 +169,7 @@ public class CardPaymentServiceType3Code extends CardPaymentServiceTypeCode {
 	 */
 	public static final MMCode mmAdditionalPayment = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalPayment";
 			owner_lazy = () -> CardPaymentServiceType3Code.mmObject();
 		}
@@ -190,7 +192,7 @@ public class CardPaymentServiceType3Code extends CardPaymentServiceTypeCode {
 	 */
 	public static final MMCode mmFirstRecurring = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FirstRecurring";
 			owner_lazy = () -> CardPaymentServiceType3Code.mmObject();
 		}
@@ -213,7 +215,7 @@ public class CardPaymentServiceType3Code extends CardPaymentServiceTypeCode {
 	 */
 	public static final MMCode mmFollowingRecurring = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FollowingRecurring";
 			owner_lazy = () -> CardPaymentServiceType3Code.mmObject();
 		}
@@ -222,14 +224,13 @@ public class CardPaymentServiceType3Code extends CardPaymentServiceTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("IRES");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CardPaymentServiceType3Code";
 				definition = "Additional attributes of the service provided by the card payment transaction.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CardPaymentServiceType3Code.mmInitialReservation, com.tools20022.repository.codeset.CardPaymentServiceType3Code.mmUpdateReservation,
-						com.tools20022.repository.codeset.CardPaymentServiceType3Code.mmPaymentReservation, com.tools20022.repository.codeset.CardPaymentServiceType3Code.mmAdditionalPayment,
-						com.tools20022.repository.codeset.CardPaymentServiceType3Code.mmFirstRecurring, com.tools20022.repository.codeset.CardPaymentServiceType3Code.mmFollowingRecurring);
+				code_lazy = () -> Arrays.asList(CardPaymentServiceType3Code.mmInitialReservation, CardPaymentServiceType3Code.mmUpdateReservation, CardPaymentServiceType3Code.mmPaymentReservation,
+						CardPaymentServiceType3Code.mmAdditionalPayment, CardPaymentServiceType3Code.mmFirstRecurring, CardPaymentServiceType3Code.mmFollowingRecurring);
 				trace_lazy = () -> CardPaymentServiceTypeCode.mmObject();
 			}
 		});

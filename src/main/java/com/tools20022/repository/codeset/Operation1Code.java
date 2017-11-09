@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.OperationCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -82,7 +84,7 @@ public class Operation1Code extends OperationCode {
 	 */
 	public static final MMCode mmTill = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Till";
 			owner_lazy = () -> Operation1Code.mmObject();
 		}
@@ -105,7 +107,7 @@ public class Operation1Code extends OperationCode {
 	 */
 	public static final MMCode mmOr = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Or";
 			owner_lazy = () -> Operation1Code.mmObject();
 		}
@@ -128,7 +130,7 @@ public class Operation1Code extends OperationCode {
 	 */
 	public static final MMCode mmAnd = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "And";
 			owner_lazy = () -> Operation1Code.mmObject();
 		}
@@ -137,12 +139,12 @@ public class Operation1Code extends OperationCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("TILL");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Operation1Code";
 				definition = "Indicates the relationship between two variables.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Operation1Code.mmTill, com.tools20022.repository.codeset.Operation1Code.mmOr, com.tools20022.repository.codeset.Operation1Code.mmAnd);
+				code_lazy = () -> Arrays.asList(Operation1Code.mmTill, Operation1Code.mmOr, Operation1Code.mmAnd);
 				trace_lazy = () -> OperationCode.mmObject();
 			}
 		});

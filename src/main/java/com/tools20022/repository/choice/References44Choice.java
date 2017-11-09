@@ -20,8 +20,12 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.entity.SecuritiesTradeExecution;
 import com.tools20022.repository.entity.SecuritiesTradeIdentification;
+import com.tools20022.repository.entity.TradeIdentification;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericDocumentIdentification4;
 import com.tools20022.repository.msg.SettlementTypeAndIdentification18;
 import java.util.Arrays;
@@ -119,14 +123,14 @@ public class References44Choice {
 	 */
 	public static final MMMessageAssociationEnd mmOtherTransactionIdentification = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradeIdentification.mmIdentification;
+			businessElementTrace_lazy = () -> TradeIdentification.mmIdentification;
 			componentContext_lazy = () -> References44Choice.mmObject();
 			isDerived = false;
 			xmlTag = "OthrTxId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherTransactionIdentification";
 			definition = "Reference to a transaction that cannot be identified using a standard reference element present in the message.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.References22Choice.mmOtherTransactionIdentification;
+			previousVersion_lazy = () -> References22Choice.mmOtherTransactionIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -177,14 +181,14 @@ public class References44Choice {
 	 */
 	public static final MMMessageAssociationEnd mmSecuritiesFinancingTransactionIdentification = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeExecution.mmSecuritiesSettlement;
+			businessElementTrace_lazy = () -> SecuritiesTradeExecution.mmSecuritiesSettlement;
 			componentContext_lazy = () -> References44Choice.mmObject();
 			isDerived = false;
 			xmlTag = "SctiesFincgTxId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesFinancingTransactionIdentification";
 			definition = "Unambiguous identification of the underlying securities financing transaction (not the underlying securities financing trade) as assigned by the instructing party.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.References22Choice.mmSecuritiesFinancingTransactionIdentification;
+			previousVersion_lazy = () -> References22Choice.mmSecuritiesFinancingTransactionIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -232,14 +236,14 @@ public class References44Choice {
 	 */
 	public static final MMMessageAssociationEnd mmSecuritiesSettlementTransactionIdentification = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeExecution.mmSecuritiesSettlement;
+			businessElementTrace_lazy = () -> SecuritiesTradeExecution.mmSecuritiesSettlement;
 			componentContext_lazy = () -> References44Choice.mmObject();
 			isDerived = false;
 			xmlTag = "SctiesSttlmTxId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesSettlementTransactionIdentification";
 			definition = "Unambiguous identification of the securities settlement transaction.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.References22Choice.mmSecuritiesSettlementTransactionIdentification;
+			previousVersion_lazy = () -> References22Choice.mmSecuritiesSettlementTransactionIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -288,10 +292,10 @@ public class References44Choice {
 			componentContext_lazy = () -> References44Choice.mmObject();
 			isDerived = false;
 			xmlTag = "IntraPosMvmntId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IntraPositionMovementIdentification";
 			definition = "Reference to the intra-position movement transaction requested to be cancelled as known by the account owner (or instructing party acting on its behalf).";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.References22Choice.mmIntraPositionMovementIdentification;
+			previousVersion_lazy = () -> References22Choice.mmIntraPositionMovementIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -301,12 +305,11 @@ public class References44Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.References44Choice.mmOtherTransactionIdentification,
-						com.tools20022.repository.choice.References44Choice.mmSecuritiesFinancingTransactionIdentification, com.tools20022.repository.choice.References44Choice.mmSecuritiesSettlementTransactionIdentification,
-						com.tools20022.repository.choice.References44Choice.mmIntraPositionMovementIdentification);
+				messageElement_lazy = () -> Arrays.asList(References44Choice.mmOtherTransactionIdentification, References44Choice.mmSecuritiesFinancingTransactionIdentification,
+						References44Choice.mmSecuritiesSettlementTransactionIdentification, References44Choice.mmIntraPositionMovementIdentification);
 				trace_lazy = () -> SecuritiesTradeIdentification.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "References44Choice";
 				definition = "Choice of reference.";
 				previousVersion_lazy = () -> References22Choice.mmObject();

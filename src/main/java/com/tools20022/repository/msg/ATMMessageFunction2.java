@@ -19,8 +19,10 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.MessageFunction11Code;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -95,7 +97,7 @@ public class ATMMessageFunction2 {
 			componentContext_lazy = () -> ATMMessageFunction2.mmObject();
 			isDerived = false;
 			xmlTag = "Fctn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Function";
 			definition = "Type of requested function.";
 			maxOccurs = 1;
@@ -136,7 +138,7 @@ public class ATMMessageFunction2 {
 			componentContext_lazy = () -> ATMMessageFunction2.mmObject();
 			isDerived = false;
 			xmlTag = "ATMSvcCd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ATMServiceCode";
 			definition = "Codification of the type of service for the ATM.";
 			maxOccurs = 1;
@@ -178,7 +180,7 @@ public class ATMMessageFunction2 {
 			componentContext_lazy = () -> ATMMessageFunction2.mmObject();
 			isDerived = false;
 			xmlTag = "HstSvcCd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HostServiceCode";
 			definition = "Codification of the type of service for the ATM manager host.";
 			maxOccurs = 1;
@@ -190,10 +192,9 @@ public class ATMMessageFunction2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMMessageFunction2.mmFunction, com.tools20022.repository.msg.ATMMessageFunction2.mmATMServiceCode,
-						com.tools20022.repository.msg.ATMMessageFunction2.mmHostServiceCode);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(ATMMessageFunction2.mmFunction, ATMMessageFunction2.mmATMServiceCode, ATMMessageFunction2.mmHostServiceCode);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ATMMessageFunction2";
 				definition = "Identifies the type of process related to an ATM message.";
 			}

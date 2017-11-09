@@ -20,8 +20,13 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.entity.Balance;
+import com.tools20022.repository.entity.CashAccount;
+import com.tools20022.repository.entity.CashAccountContract;
 import com.tools20022.repository.entity.ReportingService;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -112,7 +117,7 @@ public class ReportingRequest1 {
 			componentContext_lazy = () -> ReportingRequest1.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Unique identification, as assigned by the account owner, to unambiguously identify the account reporting request.";
 			maxOccurs = 1;
@@ -153,7 +158,7 @@ public class ReportingRequest1 {
 			componentContext_lazy = () -> ReportingRequest1.mmObject();
 			isDerived = false;
 			xmlTag = "ReqdMsgTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestedMessageType";
 			definition = "Specifies the type of the requested reporting message.";
 			maxOccurs = 1;
@@ -198,11 +203,11 @@ public class ReportingRequest1 {
 	 */
 	public static final MMMessageAssociationEnd mmAccount = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashAccountContract.mmCashAccount;
+			businessElementTrace_lazy = () -> CashAccountContract.mmCashAccount;
 			componentContext_lazy = () -> ReportingRequest1.mmObject();
 			isDerived = false;
 			xmlTag = "Acct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Account";
 			definition = "Unambiguous identification of the account to which the reporting request refers.";
 			maxOccurs = 1;
@@ -243,7 +248,7 @@ public class ReportingRequest1 {
 			componentContext_lazy = () -> ReportingRequest1.mmObject();
 			isDerived = false;
 			xmlTag = "RptgPrd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportingPeriod";
 			definition = "Specifies the requested reporting period.";
 			maxOccurs = 1;
@@ -287,11 +292,11 @@ public class ReportingRequest1 {
 	 */
 	public static final MMMessageAssociationEnd mmRequestedTransactionType = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashAccount.mmCashEntry;
+			businessElementTrace_lazy = () -> CashAccount.mmCashEntry;
 			componentContext_lazy = () -> ReportingRequest1.mmObject();
 			isDerived = false;
 			xmlTag = "ReqdTxTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestedTransactionType";
 			definition = "Set of elements used to identify the transactions to be reported.";
 			maxOccurs = 1;
@@ -337,11 +342,11 @@ public class ReportingRequest1 {
 	 */
 	public static final MMMessageAssociationEnd mmRequestedBalanceType = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Balance.mmType;
+			businessElementTrace_lazy = () -> Balance.mmType;
 			componentContext_lazy = () -> ReportingRequest1.mmObject();
 			isDerived = false;
 			xmlTag = "ReqdBalTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestedBalanceType";
 			definition = "Set of elements used to provide details on the requested balance reporting.";
 			minOccurs = 0;
@@ -353,12 +358,11 @@ public class ReportingRequest1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReportingRequest1.mmIdentification, com.tools20022.repository.msg.ReportingRequest1.mmRequestedMessageType,
-						com.tools20022.repository.msg.ReportingRequest1.mmAccount, com.tools20022.repository.msg.ReportingRequest1.mmReportingPeriod, com.tools20022.repository.msg.ReportingRequest1.mmRequestedTransactionType,
-						com.tools20022.repository.msg.ReportingRequest1.mmRequestedBalanceType);
+				messageElement_lazy = () -> Arrays.asList(ReportingRequest1.mmIdentification, ReportingRequest1.mmRequestedMessageType, ReportingRequest1.mmAccount, ReportingRequest1.mmReportingPeriod,
+						ReportingRequest1.mmRequestedTransactionType, ReportingRequest1.mmRequestedBalanceType);
 				trace_lazy = () -> ReportingService.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ReportingRequest1";
 				definition = "Set of elements used to provide details of the reporting request.";
 			}

@@ -17,11 +17,12 @@
 
 package com.tools20022.repository.entity;
 
+import com.tools20022.metamodel.MMAggregation;
 import com.tools20022.metamodel.MMBusinessAssociationEnd;
 import com.tools20022.metamodel.MMBusinessComponent;
-import com.tools20022.repository.msg.ProceedsDelivery1;
-import com.tools20022.repository.msg.SecuritiesProceeds1;
-import com.tools20022.repository.msg.SecurityMovement1;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -37,25 +38,16 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
  * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionProceedsDeliveryInstruction#mmRelatedDistribution
- * CorporateActionProceedsDeliveryInstruction.mmRelatedDistribution}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionProceedsDeliveryInstruction#mmSecuritiesProceedsMovement
- * CorporateActionProceedsDeliveryInstruction.mmSecuritiesProceedsMovement}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionProceedsDeliveryInstruction#mmCashProceedsMovement
- * CorporateActionProceedsDeliveryInstruction.mmCashProceedsMovement}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionProceedsDeliveryInstruction#mmSettlementAccount
- * CorporateActionProceedsDeliveryInstruction.mmSettlementAccount}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionProceedsDeliveryInstruction#mmCorporateActionStandingInstruction
- * CorporateActionProceedsDeliveryInstruction.
- * mmCorporateActionStandingInstruction}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ProceedsDelivery1
+ * ProceedsDelivery1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SecurityMovement1
+ * SecurityMovement1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SecuritiesProceeds1
+ * SecuritiesProceeds1}</li>
  * </ul>
  * </li>
  * <li>
@@ -79,16 +71,25 @@ import java.util.List;
  * AgentCorporateActionStandingInstruction.mmRelatedDeliveryInstructions}</li>
  * </ul>
  * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.ProceedsDelivery1
- * ProceedsDelivery1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SecurityMovement1
- * SecurityMovement1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SecuritiesProceeds1
- * SecuritiesProceeds1}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionProceedsDeliveryInstruction#mmRelatedDistribution
+ * CorporateActionProceedsDeliveryInstruction.mmRelatedDistribution}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionProceedsDeliveryInstruction#mmSecuritiesProceedsMovement
+ * CorporateActionProceedsDeliveryInstruction.mmSecuritiesProceedsMovement}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionProceedsDeliveryInstruction#mmCashProceedsMovement
+ * CorporateActionProceedsDeliveryInstruction.mmCashProceedsMovement}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionProceedsDeliveryInstruction#mmSettlementAccount
+ * CorporateActionProceedsDeliveryInstruction.mmSettlementAccount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionProceedsDeliveryInstruction#mmCorporateActionStandingInstruction
+ * CorporateActionProceedsDeliveryInstruction.
+ * mmCorporateActionStandingInstruction}</li>
  * </ul>
  * </li>
  * <li>
@@ -152,13 +153,13 @@ public class CorporateActionProceedsDeliveryInstruction {
 		{
 			elementContext_lazy = () -> CorporateActionProceedsDeliveryInstruction.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedDistribution";
 			definition = "Parameters of the distribution of the proceeds of a CA event.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.CorporateActionDistribution.mmCorporateActionProceedsDeliveryInstruction;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.CorporateActionDistribution.mmObject();
 		}
 	};
@@ -369,41 +370,28 @@ public class CorporateActionProceedsDeliveryInstruction {
 	 */
 	public static final MMBusinessAssociationEnd mmSecuritiesProceedsMovement = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionOption4.mmSecuritiesMovementDetails, com.tools20022.repository.msg.CorporateActionOption14.mmSecuritiesMovementDetails,
-					com.tools20022.repository.msg.CorporateActionOption23.mmSecuritiesMovementDetails, com.tools20022.repository.msg.CorporateActionOption31.mmSecuritiesMovementDetails,
-					com.tools20022.repository.msg.CorporateActionOption37.mmSecuritiesMovementDetails, com.tools20022.repository.msg.CorporateActionOption46.mmSecuritiesMovementDetails,
-					com.tools20022.repository.msg.CorporateActionOption53.mmSecuritiesMovementDetails, com.tools20022.repository.msg.CorporateActionOption54.mmSecuritiesMovementDetails,
-					com.tools20022.repository.msg.CorporateActionOption10.mmSecuritiesMovementDetails, com.tools20022.repository.msg.CorporateActionOption15.mmSecuritiesMovementDetails,
-					com.tools20022.repository.msg.CorporateActionOption20.mmSecuritiesMovementDetails, com.tools20022.repository.msg.CorporateActionOption32.mmSecuritiesMovementDetails,
-					com.tools20022.repository.msg.CorporateActionOption35.mmSecuritiesMovementDetails, com.tools20022.repository.msg.CorporateActionOption44.mmSecuritiesMovementDetails,
-					com.tools20022.repository.msg.CorporateActionOption52.mmSecuritiesMovementDetails, com.tools20022.repository.msg.CorporateActionOption55.mmSecuritiesMovementDetails,
-					com.tools20022.repository.msg.CorporateActionOption12.mmSecuritiesMovementDetails, com.tools20022.repository.msg.CorporateActionOption16.mmSecuritiesMovementDetails,
-					com.tools20022.repository.msg.CorporateActionOption24.mmSecuritiesMovementDetails, com.tools20022.repository.msg.CorporateActionOption33.mmSecuritiesMovementDetails,
-					com.tools20022.repository.msg.CorporateActionOption39.mmSecuritiesMovementDetails, com.tools20022.repository.msg.CorporateActionOption48.mmSecuritiesMovementDetails,
-					com.tools20022.repository.msg.CorporateActionOption3.mmSecuritiesMovementDetails, com.tools20022.repository.msg.CorporateActionOption17.mmSecuritiesMovementDetails,
-					com.tools20022.repository.msg.CorporateActionOption19.mmSecuritiesMovementDetails, com.tools20022.repository.msg.CorporateActionOption34.mmSecuritiesMovementDetails,
-					com.tools20022.repository.msg.CorporateActionOption36.mmSecuritiesMovementDetails, com.tools20022.repository.msg.CorporateActionOption45.mmSecuritiesMovementDetails,
-					com.tools20022.repository.msg.CorporateActionOption51.mmSecuritiesMovementDetails, com.tools20022.repository.msg.CorporateActionOption56.mmSecuritiesMovementDetails,
-					com.tools20022.repository.msg.CorporateActionOption1.mmSecuritiesMovementDetails, com.tools20022.repository.msg.GlobalDistributionRequest1.mmSecuritiesMovement,
-					com.tools20022.repository.msg.CorporateActionOption100.mmSecuritiesMovementDetails, com.tools20022.repository.msg.CorporateActionOption101.mmSecuritiesMovementDetails,
-					com.tools20022.repository.msg.CorporateActionOption102.mmSecuritiesMovementDetails, com.tools20022.repository.msg.CorporateActionOption110.mmSecuritiesMovementDetails,
-					com.tools20022.repository.msg.CorporateActionOption108.mmSecuritiesMovementDetails, com.tools20022.repository.msg.CorporateActionOption106.mmSecuritiesMovementDetails,
-					com.tools20022.repository.msg.CorporateActionOption111.mmSecuritiesMovementDetails, com.tools20022.repository.msg.CorporateActionOption113.mmSecuritiesMovementDetails,
-					com.tools20022.repository.msg.CorporateActionOption117.mmSecuritiesMovementDetails, com.tools20022.repository.msg.CorporateActionOption119.mmSecuritiesMovementDetails,
-					com.tools20022.repository.msg.CorporateActionOption115.mmSecuritiesMovementDetails, com.tools20022.repository.msg.CorporateActionOption114.mmSecuritiesMovementDetails,
-					com.tools20022.repository.msg.CorporateActionOption126.mmSecuritiesMovementDetails, com.tools20022.repository.msg.CorporateActionOption124.mmSecuritiesMovementDetails,
-					com.tools20022.repository.msg.CorporateActionOption125.mmSecuritiesMovementDetails, com.tools20022.repository.msg.CorporateActionOption127.mmSecuritiesMovementDetails,
-					com.tools20022.repository.msg.CorporateActionOption132.mmSecuritiesMovementDetails, com.tools20022.repository.msg.CorporateActionOption130.mmSecuritiesMovementDetails,
-					com.tools20022.repository.msg.CorporateActionOption129.mmSecuritiesMovementDetails, com.tools20022.repository.msg.CorporateActionOption136.mmSecuritiesMovementDetails,
-					com.tools20022.repository.msg.CorporateActionOption135.mmSecuritiesMovementDetails, com.tools20022.repository.msg.CorporateActionOption133.mmSecuritiesMovementDetails);
+			derivation_lazy = () -> Arrays.asList(CorporateActionOption4.mmSecuritiesMovementDetails, CorporateActionOption14.mmSecuritiesMovementDetails, CorporateActionOption23.mmSecuritiesMovementDetails,
+					CorporateActionOption31.mmSecuritiesMovementDetails, CorporateActionOption37.mmSecuritiesMovementDetails, CorporateActionOption46.mmSecuritiesMovementDetails, CorporateActionOption53.mmSecuritiesMovementDetails,
+					CorporateActionOption54.mmSecuritiesMovementDetails, CorporateActionOption10.mmSecuritiesMovementDetails, CorporateActionOption15.mmSecuritiesMovementDetails, CorporateActionOption20.mmSecuritiesMovementDetails,
+					CorporateActionOption32.mmSecuritiesMovementDetails, CorporateActionOption35.mmSecuritiesMovementDetails, CorporateActionOption44.mmSecuritiesMovementDetails, CorporateActionOption52.mmSecuritiesMovementDetails,
+					CorporateActionOption55.mmSecuritiesMovementDetails, CorporateActionOption12.mmSecuritiesMovementDetails, CorporateActionOption16.mmSecuritiesMovementDetails, CorporateActionOption24.mmSecuritiesMovementDetails,
+					CorporateActionOption33.mmSecuritiesMovementDetails, CorporateActionOption39.mmSecuritiesMovementDetails, CorporateActionOption48.mmSecuritiesMovementDetails, CorporateActionOption3.mmSecuritiesMovementDetails,
+					CorporateActionOption17.mmSecuritiesMovementDetails, CorporateActionOption19.mmSecuritiesMovementDetails, CorporateActionOption34.mmSecuritiesMovementDetails, CorporateActionOption36.mmSecuritiesMovementDetails,
+					CorporateActionOption45.mmSecuritiesMovementDetails, CorporateActionOption51.mmSecuritiesMovementDetails, CorporateActionOption56.mmSecuritiesMovementDetails, CorporateActionOption1.mmSecuritiesMovementDetails,
+					GlobalDistributionRequest1.mmSecuritiesMovement, CorporateActionOption100.mmSecuritiesMovementDetails, CorporateActionOption101.mmSecuritiesMovementDetails, CorporateActionOption102.mmSecuritiesMovementDetails,
+					CorporateActionOption110.mmSecuritiesMovementDetails, CorporateActionOption108.mmSecuritiesMovementDetails, CorporateActionOption106.mmSecuritiesMovementDetails, CorporateActionOption111.mmSecuritiesMovementDetails,
+					CorporateActionOption113.mmSecuritiesMovementDetails, CorporateActionOption117.mmSecuritiesMovementDetails, CorporateActionOption119.mmSecuritiesMovementDetails, CorporateActionOption115.mmSecuritiesMovementDetails,
+					CorporateActionOption114.mmSecuritiesMovementDetails, CorporateActionOption126.mmSecuritiesMovementDetails, CorporateActionOption124.mmSecuritiesMovementDetails, CorporateActionOption125.mmSecuritiesMovementDetails,
+					CorporateActionOption127.mmSecuritiesMovementDetails, CorporateActionOption132.mmSecuritiesMovementDetails, CorporateActionOption130.mmSecuritiesMovementDetails, CorporateActionOption129.mmSecuritiesMovementDetails,
+					CorporateActionOption136.mmSecuritiesMovementDetails, CorporateActionOption135.mmSecuritiesMovementDetails, CorporateActionOption133.mmSecuritiesMovementDetails);
 			elementContext_lazy = () -> CorporateActionProceedsDeliveryInstruction.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SecuritiesProceedsMovement";
 			definition = "Instructions for the movement of securities related to a corporate action.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesDeliveryObligation.mmRelatedCorporateAction;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SecuritiesDeliveryObligation.mmObject();
 		}
 	};
@@ -452,15 +440,15 @@ public class CorporateActionProceedsDeliveryInstruction {
 	 */
 	public static final MMBusinessAssociationEnd mmCashProceedsMovement = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GlobalDistributionRequest1.mmCashMovement);
+			derivation_lazy = () -> Arrays.asList(GlobalDistributionRequest1.mmCashMovement);
 			elementContext_lazy = () -> CorporateActionProceedsDeliveryInstruction.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CashProceedsMovement";
 			definition = "Instructions for the movement of cash related to a corporate action.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.PaymentObligation.mmRelatedCorporateAction;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.PaymentObligation.mmObject();
 		}
 	};
@@ -504,12 +492,12 @@ public class CorporateActionProceedsDeliveryInstruction {
 		{
 			elementContext_lazy = () -> CorporateActionProceedsDeliveryInstruction.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SettlementAccount";
 			definition = "Information relative to the account(s) to be used for the delivery of the proceeds (cash or securities)";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.Account.mmRelatedProceedsDelivery;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Account.mmObject();
 		}
 	};
@@ -552,13 +540,13 @@ public class CorporateActionProceedsDeliveryInstruction {
 		{
 			elementContext_lazy = () -> CorporateActionProceedsDeliveryInstruction.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CorporateActionStandingInstruction";
 			definition = "Standing instruction related to a corporate action.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.AgentCorporateActionStandingInstruction.mmRelatedDeliveryInstructions;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.AgentCorporateActionStandingInstruction.mmObject();
 		}
 	};
@@ -566,16 +554,15 @@ public class CorporateActionProceedsDeliveryInstruction {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionProceedsDeliveryInstruction";
 				definition = "Specifies the delivery instructions for the securities and cash proceeds at any stage of the Corporate Action process.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Account.mmRelatedProceedsDelivery, com.tools20022.repository.entity.PaymentObligation.mmRelatedCorporateAction,
 						com.tools20022.repository.entity.SecuritiesDeliveryObligation.mmRelatedCorporateAction, com.tools20022.repository.entity.CorporateActionDistribution.mmCorporateActionProceedsDeliveryInstruction,
 						com.tools20022.repository.entity.AgentCorporateActionStandingInstruction.mmRelatedDeliveryInstructions);
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CorporateActionProceedsDeliveryInstruction.mmRelatedDistribution,
-						com.tools20022.repository.entity.CorporateActionProceedsDeliveryInstruction.mmSecuritiesProceedsMovement, com.tools20022.repository.entity.CorporateActionProceedsDeliveryInstruction.mmCashProceedsMovement,
-						com.tools20022.repository.entity.CorporateActionProceedsDeliveryInstruction.mmSettlementAccount, com.tools20022.repository.entity.CorporateActionProceedsDeliveryInstruction.mmCorporateActionStandingInstruction);
+				element_lazy = () -> Arrays.asList(CorporateActionProceedsDeliveryInstruction.mmRelatedDistribution, CorporateActionProceedsDeliveryInstruction.mmSecuritiesProceedsMovement,
+						CorporateActionProceedsDeliveryInstruction.mmCashProceedsMovement, CorporateActionProceedsDeliveryInstruction.mmSettlementAccount, CorporateActionProceedsDeliveryInstruction.mmCorporateActionStandingInstruction);
 				derivationComponent_lazy = () -> Arrays.asList(ProceedsDelivery1.mmObject(), SecurityMovement1.mmObject(), SecuritiesProceeds1.mmObject());
 			}
 		});

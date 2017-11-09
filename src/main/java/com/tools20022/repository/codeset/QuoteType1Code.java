@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.QuoteTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -89,7 +91,7 @@ public class QuoteType1Code extends QuoteTypeCode {
 	 */
 	public static final MMCode mmIndicative = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Indicative";
 			owner_lazy = () -> QuoteType1Code.mmObject();
 		}
@@ -112,7 +114,7 @@ public class QuoteType1Code extends QuoteTypeCode {
 	 */
 	public static final MMCode mmTradeable = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Tradeable";
 			owner_lazy = () -> QuoteType1Code.mmObject();
 		}
@@ -135,7 +137,7 @@ public class QuoteType1Code extends QuoteTypeCode {
 	 */
 	public static final MMCode mmRestrictedTradeable = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RestrictedTradeable";
 			owner_lazy = () -> QuoteType1Code.mmObject();
 		}
@@ -158,7 +160,7 @@ public class QuoteType1Code extends QuoteTypeCode {
 	 */
 	public static final MMCode mmCounter = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Counter";
 			owner_lazy = () -> QuoteType1Code.mmObject();
 		}
@@ -167,13 +169,12 @@ public class QuoteType1Code extends QuoteTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("INDI");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "QuoteType1Code";
 				definition = "Identifies the type of quote. Can be either an indicative, a tradeable or a restricted tradeable quote.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.QuoteType1Code.mmIndicative, com.tools20022.repository.codeset.QuoteType1Code.mmTradeable,
-						com.tools20022.repository.codeset.QuoteType1Code.mmRestrictedTradeable, com.tools20022.repository.codeset.QuoteType1Code.mmCounter);
+				code_lazy = () -> Arrays.asList(QuoteType1Code.mmIndicative, QuoteType1Code.mmTradeable, QuoteType1Code.mmRestrictedTradeable, QuoteType1Code.mmCounter);
 				trace_lazy = () -> QuoteTypeCode.mmObject();
 			}
 		});

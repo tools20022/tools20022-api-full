@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -94,7 +96,7 @@ public class ConditionallyAcceptedStatusReason1Code {
 	 */
 	public static final MMCode mmAwaitingMoney = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AwaitingMoney";
 			definition = "Specifies that the order is accepted for further processing but that the execution of the order is pending until there is enough cash in the account to pay the subscription.";
 			owner_lazy = () -> ConditionallyAcceptedStatusReason1Code.mmObject();
@@ -128,7 +130,7 @@ public class ConditionallyAcceptedStatusReason1Code {
 	 */
 	public static final MMCode mmAwaitingFunds = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AwaitingFunds";
 			definition = "Specifies that the order is accepted for further processing but that the execution of the order is pending until there are enough funds in the account to complete the redemption.";
 			owner_lazy = () -> ConditionallyAcceptedStatusReason1Code.mmObject();
@@ -162,7 +164,7 @@ public class ConditionallyAcceptedStatusReason1Code {
 	 */
 	public static final MMCode mmAwaitingDocuments = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AwaitingDocuments";
 			definition = "Specifies that the order is pending until documents are completed and received, eg, legal documents from the successor, legal proceeds because of bankruptcy, missing signature.";
 			owner_lazy = () -> ConditionallyAcceptedStatusReason1Code.mmObject();
@@ -192,7 +194,7 @@ public class ConditionallyAcceptedStatusReason1Code {
 	 */
 	public static final MMCode mmOther = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Other";
 			definition = "Another reason for the status conditionally accepted.";
 			owner_lazy = () -> ConditionallyAcceptedStatusReason1Code.mmObject();
@@ -203,13 +205,13 @@ public class ConditionallyAcceptedStatusReason1Code {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("AWMO");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ConditionallyAcceptedStatusReason1Code";
 				definition = "Specifies the reason for a conditionally accepted status.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ConditionallyAcceptedStatusReason1Code.mmAwaitingMoney, com.tools20022.repository.codeset.ConditionallyAcceptedStatusReason1Code.mmAwaitingFunds,
-						com.tools20022.repository.codeset.ConditionallyAcceptedStatusReason1Code.mmAwaitingDocuments, com.tools20022.repository.codeset.ConditionallyAcceptedStatusReason1Code.mmOther);
+				code_lazy = () -> Arrays.asList(ConditionallyAcceptedStatusReason1Code.mmAwaitingMoney, ConditionallyAcceptedStatusReason1Code.mmAwaitingFunds, ConditionallyAcceptedStatusReason1Code.mmAwaitingDocuments,
+						ConditionallyAcceptedStatusReason1Code.mmOther);
 			}
 		});
 		return mmObject_lazy.get();

@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.CashPaymentStatus2Code
+ * CashPaymentStatus2Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -38,13 +47,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.CashPaymentStatusCode#mmCancelled
  * CashPaymentStatusCode.mmCancelled}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.CashPaymentStatus2Code
- * CashPaymentStatus2Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -95,7 +97,7 @@ public class CashPaymentStatusCode {
 	 */
 	public static final MMCode mmPending = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Pending";
 			definition = "The payment is awaiting settlement.";
 			owner_lazy = () -> CashPaymentStatusCode.mmObject();
@@ -125,7 +127,7 @@ public class CashPaymentStatusCode {
 	 */
 	public static final MMCode mmFinal = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Final";
 			definition = "The payment has been settled or stopped.";
 			owner_lazy = () -> CashPaymentStatusCode.mmObject();
@@ -155,7 +157,7 @@ public class CashPaymentStatusCode {
 	 */
 	public static final MMCode mmCancelled = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cancelled";
 			definition = "The payment is cancelled.";
 			owner_lazy = () -> CashPaymentStatusCode.mmObject();
@@ -166,13 +168,12 @@ public class CashPaymentStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("PDNG");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CashPaymentStatusCode";
 				definition = "Specifies the state of a payment instruction at a specified time.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CashPaymentStatusCode.mmPending, com.tools20022.repository.codeset.CashPaymentStatusCode.mmFinal,
-						com.tools20022.repository.codeset.CashPaymentStatusCode.mmCancelled);
+				code_lazy = () -> Arrays.asList(CashPaymentStatusCode.mmPending, CashPaymentStatusCode.mmFinal, CashPaymentStatusCode.mmCancelled);
 				derivation_lazy = () -> Arrays.asList(CashPaymentStatus2Code.mmObject());
 			}
 		});

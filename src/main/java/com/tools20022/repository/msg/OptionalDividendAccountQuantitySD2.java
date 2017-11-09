@@ -19,9 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.FinancialInstrumentQuantity15Choice;
 import com.tools20022.repository.datatype.Max15NumericText;
 import com.tools20022.repository.datatype.Max350Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -102,7 +104,7 @@ public class OptionalDividendAccountQuantitySD2 {
 			componentContext_lazy = () -> OptionalDividendAccountQuantitySD2.mmObject();
 			isDerived = false;
 			xmlTag = "PlcAndNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "xPath to the element that is being extended.";
 			maxOccurs = 1;
@@ -144,7 +146,7 @@ public class OptionalDividendAccountQuantitySD2 {
 			componentContext_lazy = () -> OptionalDividendAccountQuantitySD2.mmObject();
 			isDerived = false;
 			xmlTag = "BnfclOwnrQty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BeneficialOwnerQuantity";
 			definition = "Beneficial owner quantity to be paid.";
 			maxOccurs = 1;
@@ -187,7 +189,7 @@ public class OptionalDividendAccountQuantitySD2 {
 			componentContext_lazy = () -> OptionalDividendAccountQuantitySD2.mmObject();
 			isDerived = false;
 			xmlTag = "NbOfAccts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NumberOfAccounts";
 			definition = "Number of accounts for which the beneficial quantity is elected.";
 			maxOccurs = 1;
@@ -199,10 +201,9 @@ public class OptionalDividendAccountQuantitySD2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OptionalDividendAccountQuantitySD2.mmPlaceAndName, com.tools20022.repository.msg.OptionalDividendAccountQuantitySD2.mmBeneficialOwnerQuantity,
-						com.tools20022.repository.msg.OptionalDividendAccountQuantitySD2.mmNumberOfAccounts);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(OptionalDividendAccountQuantitySD2.mmPlaceAndName, OptionalDividendAccountQuantitySD2.mmBeneficialOwnerQuantity, OptionalDividendAccountQuantitySD2.mmNumberOfAccounts);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "OptionalDividendAccountQuantitySD2";
 				definition = "Provides additional information regarding optional dividend election details.";
 				previousVersion_lazy = () -> OptionalDividendAccountQuantitySD1.mmObject();

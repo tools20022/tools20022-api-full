@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ExtendedEventTypeV2Code;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -92,9 +94,9 @@ public class ExtendedEventType4Code extends ExtendedEventTypeV2Code {
 	 */
 	public static final MMCode mmTermination = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Termination";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.ExtendedEventType3Code.mmTermination;
+			previousVersion_lazy = () -> ExtendedEventType3Code.mmTermination;
 			owner_lazy = () -> ExtendedEventType4Code.mmObject();
 		}
 	};
@@ -116,7 +118,7 @@ public class ExtendedEventType4Code extends ExtendedEventTypeV2Code {
 	 */
 	public static final MMCode mmFinalPaydown = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinalPaydown";
 			owner_lazy = () -> ExtendedEventType4Code.mmObject();
 		}
@@ -139,7 +141,7 @@ public class ExtendedEventType4Code extends ExtendedEventTypeV2Code {
 	 */
 	public static final MMCode mmCertificateOfDepositEarlyRedemption = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CertificateOfDepositEarlyRedemption";
 			owner_lazy = () -> ExtendedEventType4Code.mmObject();
 		}
@@ -148,13 +150,12 @@ public class ExtendedEventType4Code extends ExtendedEventTypeV2Code {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ExtendedEventType4Code";
 				definition = "Specifies DTCC (The Depository Trust and Clearing Corporation) defined corporate action event type.";
 				previousVersion_lazy = () -> ExtendedEventType3Code.mmObject();
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ExtendedEventType4Code.mmTermination, com.tools20022.repository.codeset.ExtendedEventType4Code.mmFinalPaydown,
-						com.tools20022.repository.codeset.ExtendedEventType4Code.mmCertificateOfDepositEarlyRedemption);
+				code_lazy = () -> Arrays.asList(ExtendedEventType4Code.mmTermination, ExtendedEventType4Code.mmFinalPaydown, ExtendedEventType4Code.mmCertificateOfDepositEarlyRedemption);
 				trace_lazy = () -> ExtendedEventTypeV2Code.mmObject();
 			}
 		});

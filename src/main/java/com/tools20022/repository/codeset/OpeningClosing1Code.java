@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.OpeningClosingCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -84,7 +86,7 @@ public class OpeningClosing1Code extends OpeningClosingCode {
 	 */
 	public static final MMCode mmClosePosition = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClosePosition";
 			owner_lazy = () -> OpeningClosing1Code.mmObject();
 		}
@@ -107,7 +109,7 @@ public class OpeningClosing1Code extends OpeningClosingCode {
 	 */
 	public static final MMCode mmOpenPosition = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OpenPosition";
 			owner_lazy = () -> OpeningClosing1Code.mmObject();
 		}
@@ -116,12 +118,12 @@ public class OpeningClosing1Code extends OpeningClosingCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CLOP");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OpeningClosing1Code";
 				definition = "Specifies additional information relative to the processing of the trade.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OpeningClosing1Code.mmClosePosition, com.tools20022.repository.codeset.OpeningClosing1Code.mmOpenPosition);
+				code_lazy = () -> Arrays.asList(OpeningClosing1Code.mmClosePosition, OpeningClosing1Code.mmOpenPosition);
 				trace_lazy = () -> OpeningClosingCode.mmObject();
 			}
 		});

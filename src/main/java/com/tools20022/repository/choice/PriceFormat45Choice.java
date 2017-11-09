@@ -20,8 +20,11 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.PriceValueType10Code;
+import com.tools20022.repository.entity.Price;
 import com.tools20022.repository.entity.SecuritiesPricing;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.AmountPrice3;
 import com.tools20022.repository.msg.PercentagePrice1;
 import java.util.Arrays;
@@ -113,14 +116,14 @@ public class PriceFormat45Choice {
 	 */
 	public static final MMMessageAssociationEnd mmPercentagePrice = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmRate;
+			businessElementTrace_lazy = () -> SecuritiesPricing.mmRate;
 			componentContext_lazy = () -> PriceFormat45Choice.mmObject();
 			isDerived = false;
 			xmlTag = "PctgPric";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PercentagePrice";
 			definition = "Price expressed as a percentage.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.PriceFormat19Choice.mmPercentagePrice;
+			previousVersion_lazy = () -> PriceFormat19Choice.mmPercentagePrice;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -166,14 +169,14 @@ public class PriceFormat45Choice {
 	 */
 	public static final MMMessageAssociationEnd mmAmountPrice = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Price.mmAmount;
+			businessElementTrace_lazy = () -> Price.mmAmount;
 			componentContext_lazy = () -> PriceFormat45Choice.mmObject();
 			isDerived = false;
 			xmlTag = "AmtPric";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmountPrice";
 			definition = "Price expressed as a currency and amount.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.PriceFormat19Choice.mmAmountPrice;
+			previousVersion_lazy = () -> PriceFormat19Choice.mmAmountPrice;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -219,10 +222,10 @@ public class PriceFormat45Choice {
 			componentContext_lazy = () -> PriceFormat45Choice.mmObject();
 			isDerived = false;
 			xmlTag = "NotSpcfdPric";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotSpecifiedPrice";
 			definition = "Value of the price not specified.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.PriceFormat19Choice.mmNotSpecifiedPrice;
+			previousVersion_lazy = () -> PriceFormat19Choice.mmNotSpecifiedPrice;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PriceValueType10Code.mmObject();
@@ -232,11 +235,10 @@ public class PriceFormat45Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PriceFormat45Choice.mmPercentagePrice, com.tools20022.repository.choice.PriceFormat45Choice.mmAmountPrice,
-						com.tools20022.repository.choice.PriceFormat45Choice.mmNotSpecifiedPrice);
+				messageElement_lazy = () -> Arrays.asList(PriceFormat45Choice.mmPercentagePrice, PriceFormat45Choice.mmAmountPrice, PriceFormat45Choice.mmNotSpecifiedPrice);
 				trace_lazy = () -> SecuritiesPricing.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PriceFormat45Choice";
 				definition = "Choice between a percentage price or an amount price or an unspecified price.";
 				previousVersion_lazy = () -> PriceFormat19Choice.mmObject();

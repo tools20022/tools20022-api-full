@@ -20,6 +20,7 @@ package com.tools20022.repository.area.sese;
 import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.SecuritiesSettlementPreviousVersion;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.SettlementAndReconciliationISOPreviousversion;
@@ -50,6 +51,9 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code sese.026.001.05}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.SecuritiesSettlementPreviousVersion
@@ -132,9 +136,6 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code sese.026.001.05}</li>
- * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -204,11 +205,11 @@ public class SecuritiesSettlementTransactionReversalAdviceV05 {
 	public static final MMMessageBuildingBlock mmTransactionIdentificationDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "TxIdDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionIdentificationDetails";
 			definition = "Provides transaction type and identification information.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdviceV06.mmTransactionIdentificationDetails);
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdviceV04.mmTransactionIdentificationDetails;
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesSettlementTransactionReversalAdviceV06.mmTransactionIdentificationDetails);
+			previousVersion_lazy = () -> SecuritiesSettlementTransactionReversalAdviceV04.mmTransactionIdentificationDetails;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> SettlementTypeAndIdentification19.mmObject();
@@ -259,11 +260,11 @@ public class SecuritiesSettlementTransactionReversalAdviceV05 {
 	public static final MMMessageBuildingBlock mmConfirmationReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "ConfRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConfirmationReference";
 			definition = "Reference to the unambiguous identification of the confirmation as per the account servicer.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdviceV06.mmConfirmationReference);
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdviceV04.mmConfirmationReference;
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesSettlementTransactionReversalAdviceV06.mmConfirmationReference);
+			previousVersion_lazy = () -> SecuritiesSettlementTransactionReversalAdviceV04.mmConfirmationReference;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> Identification14.mmObject();
@@ -309,11 +310,11 @@ public class SecuritiesSettlementTransactionReversalAdviceV05 {
 	public static final MMMessageBuildingBlock mmAdditionalParameters = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "AddtlParams";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalParameters";
 			definition = "Additional parameters to the transaction.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdviceV06.mmAdditionalParameters);
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdviceV04.mmAdditionalParameters;
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesSettlementTransactionReversalAdviceV06.mmAdditionalParameters);
+			previousVersion_lazy = () -> SecuritiesSettlementTransactionReversalAdviceV04.mmAdditionalParameters;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> AdditionalParameters23.mmObject();
@@ -359,11 +360,11 @@ public class SecuritiesSettlementTransactionReversalAdviceV05 {
 	public static final MMMessageBuildingBlock mmTradeDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "TradDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeDetails";
 			definition = "Details of the trade.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdviceV06.mmTradeDetails);
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdviceV04.mmTradeDetails;
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesSettlementTransactionReversalAdviceV06.mmTradeDetails);
+			previousVersion_lazy = () -> SecuritiesSettlementTransactionReversalAdviceV04.mmTradeDetails;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> SecuritiesTradeDetails53.mmObject();
@@ -414,11 +415,11 @@ public class SecuritiesSettlementTransactionReversalAdviceV05 {
 	public static final MMMessageBuildingBlock mmFinancialInstrumentIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "FinInstrmId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentIdentification";
 			definition = "Financial instrument representing a sum of rights of the investor vis-a-vis the issuer.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdviceV06.mmFinancialInstrumentIdentification);
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdviceV04.mmFinancialInstrumentIdentification;
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesSettlementTransactionReversalAdviceV06.mmFinancialInstrumentIdentification);
+			previousVersion_lazy = () -> SecuritiesSettlementTransactionReversalAdviceV04.mmFinancialInstrumentIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> SecurityIdentification19.mmObject();
@@ -466,11 +467,11 @@ public class SecuritiesSettlementTransactionReversalAdviceV05 {
 	public static final MMMessageBuildingBlock mmFinancialInstrumentAttributes = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "FinInstrmAttrbts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentAttributes";
 			definition = "Elements characterising a financial instrument.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdviceV06.mmFinancialInstrumentAttributes);
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdviceV04.mmFinancialInstrumentAttributes;
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesSettlementTransactionReversalAdviceV06.mmFinancialInstrumentAttributes);
+			previousVersion_lazy = () -> SecuritiesSettlementTransactionReversalAdviceV04.mmFinancialInstrumentAttributes;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> FinancialInstrumentAttributes64.mmObject();
@@ -520,11 +521,11 @@ public class SecuritiesSettlementTransactionReversalAdviceV05 {
 	public static final MMMessageBuildingBlock mmQuantityAndAccountDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "QtyAndAcctDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuantityAndAccountDetails";
 			definition = "Details related to the account and quantity involved in the transaction.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdviceV06.mmQuantityAndAccountDetails);
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdviceV04.mmQuantityAndAccountDetails;
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesSettlementTransactionReversalAdviceV06.mmQuantityAndAccountDetails);
+			previousVersion_lazy = () -> SecuritiesSettlementTransactionReversalAdviceV04.mmQuantityAndAccountDetails;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> QuantityAndAccount41.mmObject();
@@ -575,11 +576,11 @@ public class SecuritiesSettlementTransactionReversalAdviceV05 {
 	public static final MMMessageBuildingBlock mmSettlementParameters = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SttlmParams";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementParameters";
 			definition = "Parameters which explicitly state the conditions that must be fulfilled before a particular  transaction of a financial instrument can be settled.  These parameters are defined by the instructing party in compliance with settlement rules in the market the transaction will settle in.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdviceV06.mmSettlementParameters);
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdviceV04.mmSettlementParameters;
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesSettlementTransactionReversalAdviceV06.mmSettlementParameters);
+			previousVersion_lazy = () -> SecuritiesSettlementTransactionReversalAdviceV04.mmSettlementParameters;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> SettlementDetails90.mmObject();
@@ -630,11 +631,11 @@ public class SecuritiesSettlementTransactionReversalAdviceV05 {
 	public static final MMMessageBuildingBlock mmStandingSettlementInstructionDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "StgSttlmInstrDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StandingSettlementInstructionDetails";
 			definition = "Specifies what settlement standing instruction database is to be used to derive the settlement parties involved in the transaction.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdviceV06.mmStandingSettlementInstructionDetails);
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdviceV04.mmStandingSettlementInstructionDetails;
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesSettlementTransactionReversalAdviceV06.mmStandingSettlementInstructionDetails);
+			previousVersion_lazy = () -> SecuritiesSettlementTransactionReversalAdviceV04.mmStandingSettlementInstructionDetails;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> StandingSettlementInstruction11.mmObject();
@@ -682,11 +683,11 @@ public class SecuritiesSettlementTransactionReversalAdviceV05 {
 	public static final MMMessageBuildingBlock mmDeliveringSettlementParties = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "DlvrgSttlmPties";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeliveringSettlementParties";
 			definition = "Identifies the chain of delivering settlement parties.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdviceV06.mmDeliveringSettlementParties);
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdviceV04.mmDeliveringSettlementParties;
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesSettlementTransactionReversalAdviceV06.mmDeliveringSettlementParties);
+			previousVersion_lazy = () -> SecuritiesSettlementTransactionReversalAdviceV04.mmDeliveringSettlementParties;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> SettlementParties36.mmObject();
@@ -734,11 +735,11 @@ public class SecuritiesSettlementTransactionReversalAdviceV05 {
 	public static final MMMessageBuildingBlock mmReceivingSettlementParties = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "RcvgSttlmPties";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceivingSettlementParties";
 			definition = "Identifies the chain of receiving settlement parties.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdviceV06.mmReceivingSettlementParties);
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdviceV04.mmReceivingSettlementParties;
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesSettlementTransactionReversalAdviceV06.mmReceivingSettlementParties);
+			previousVersion_lazy = () -> SecuritiesSettlementTransactionReversalAdviceV04.mmReceivingSettlementParties;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> SettlementParties36.mmObject();
@@ -786,11 +787,11 @@ public class SecuritiesSettlementTransactionReversalAdviceV05 {
 	public static final MMMessageBuildingBlock mmCashParties = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CshPties";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashParties";
 			definition = "Cash parties involved in the transaction if different for the securities settlement parties.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdviceV06.mmCashParties);
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdviceV04.mmCashParties;
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesSettlementTransactionReversalAdviceV06.mmCashParties);
+			previousVersion_lazy = () -> SecuritiesSettlementTransactionReversalAdviceV04.mmCashParties;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> CashParties25.mmObject();
@@ -840,11 +841,11 @@ public class SecuritiesSettlementTransactionReversalAdviceV05 {
 	public static final MMMessageBuildingBlock mmSettledAmount = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SttldAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettledAmount";
 			definition = "Amount effectively settled and which will be credited to/debited from the account owner's cash account. It may differ from the instructed settlement amount based on market tolerance level.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdviceV06.mmSettledAmount);
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdviceV04.mmSettledAmount;
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesSettlementTransactionReversalAdviceV06.mmSettledAmount);
+			previousVersion_lazy = () -> SecuritiesSettlementTransactionReversalAdviceV04.mmSettledAmount;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> AmountAndDirection46.mmObject();
@@ -889,11 +890,11 @@ public class SecuritiesSettlementTransactionReversalAdviceV05 {
 	public static final MMMessageBuildingBlock mmOtherAmounts = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "OthrAmts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherAmounts";
 			definition = "Other amounts than the settlement amount.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdviceV06.mmOtherAmounts);
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdviceV04.mmOtherAmounts;
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesSettlementTransactionReversalAdviceV06.mmOtherAmounts);
+			previousVersion_lazy = () -> SecuritiesSettlementTransactionReversalAdviceV04.mmOtherAmounts;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> OtherAmounts30.mmObject();
@@ -938,11 +939,11 @@ public class SecuritiesSettlementTransactionReversalAdviceV05 {
 	public static final MMMessageBuildingBlock mmOtherBusinessParties = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "OthrBizPties";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherBusinessParties";
 			definition = "Other business parties relevant to the transaction.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdviceV06.mmOtherBusinessParties);
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdviceV04.mmOtherBusinessParties;
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesSettlementTransactionReversalAdviceV06.mmOtherBusinessParties);
+			previousVersion_lazy = () -> SecuritiesSettlementTransactionReversalAdviceV04.mmOtherBusinessParties;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> OtherParties27.mmObject();
@@ -993,11 +994,11 @@ public class SecuritiesSettlementTransactionReversalAdviceV05 {
 	public static final MMMessageBuildingBlock mmAdditionalPhysicalOrRegistrationDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "AddtlPhysOrRegnDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalPhysicalOrRegistrationDetails";
 			definition = "Provides information required for the registration or physical settlement.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdviceV06.mmAdditionalPhysicalOrRegistrationDetails);
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdviceV04.mmAdditionalPhysicalOrRegistrationDetails;
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesSettlementTransactionReversalAdviceV06.mmAdditionalPhysicalOrRegistrationDetails);
+			previousVersion_lazy = () -> SecuritiesSettlementTransactionReversalAdviceV04.mmAdditionalPhysicalOrRegistrationDetails;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> RegistrationParameters4.mmObject();
@@ -1046,11 +1047,11 @@ public class SecuritiesSettlementTransactionReversalAdviceV05 {
 	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SplmtryData";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryData";
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdviceV06.mmSupplementaryData);
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdviceV04.mmSupplementaryData;
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesSettlementTransactionReversalAdviceV06.mmSupplementaryData);
+			previousVersion_lazy = () -> SecuritiesSettlementTransactionReversalAdviceV04.mmSupplementaryData;
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
@@ -1059,7 +1060,7 @@ public class SecuritiesSettlementTransactionReversalAdviceV05 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesSettlementTransactionReversalAdviceV05";
 				definition = "Scope\r\nAn account servicer sends a SecuritiesSettlementTransactionReversalAdvice to an account owner to reverse the confirmation of a partial or full delivery or receipt of financial instruments, free or against of payment, physically or by book-entry.\r\nThe account servicer/owner relationship may be:\r\n- a central securities depository or another settlement market infrastructure acting on behalf of their participants\r\n- an agent (sub-custodian) acting on behalf of their global custodian customer, or\r\n- a custodian acting on behalf of an investment management institution or a broker/dealer.\r\n\r\nUsage\r\nThe message may also be used to:\r\n- re-send a message previously sent,\r\n- provide a third party with a copy of a message for information,\r\n- re-send to a third party a copy of a message for information\r\nusing the relevant elements in the Business Application Header.";
 				nextVersions_lazy = () -> Arrays.asList(SecuritiesSettlementTransactionReversalAdviceV06.mmObject());
@@ -1068,20 +1069,14 @@ public class SecuritiesSettlementTransactionReversalAdviceV05 {
 				rootElement = "Document";
 				xmlTag = "SctiesSttlmTxRvslAdvc";
 				businessArea_lazy = () -> SecuritiesSettlementPreviousVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdviceV05.mmTransactionIdentificationDetails,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdviceV05.mmConfirmationReference,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdviceV05.mmAdditionalParameters, com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdviceV05.mmTradeDetails,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdviceV05.mmFinancialInstrumentIdentification,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdviceV05.mmFinancialInstrumentAttributes,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdviceV05.mmQuantityAndAccountDetails,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdviceV05.mmSettlementParameters,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdviceV05.mmStandingSettlementInstructionDetails,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdviceV05.mmDeliveringSettlementParties,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdviceV05.mmReceivingSettlementParties, com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdviceV05.mmCashParties,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdviceV05.mmSettledAmount, com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdviceV05.mmOtherAmounts,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdviceV05.mmOtherBusinessParties,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdviceV05.mmAdditionalPhysicalOrRegistrationDetails,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdviceV05.mmSupplementaryData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesSettlementTransactionReversalAdviceV05.mmTransactionIdentificationDetails, SecuritiesSettlementTransactionReversalAdviceV05.mmConfirmationReference,
+						SecuritiesSettlementTransactionReversalAdviceV05.mmAdditionalParameters, SecuritiesSettlementTransactionReversalAdviceV05.mmTradeDetails,
+						SecuritiesSettlementTransactionReversalAdviceV05.mmFinancialInstrumentIdentification, SecuritiesSettlementTransactionReversalAdviceV05.mmFinancialInstrumentAttributes,
+						SecuritiesSettlementTransactionReversalAdviceV05.mmQuantityAndAccountDetails, SecuritiesSettlementTransactionReversalAdviceV05.mmSettlementParameters,
+						SecuritiesSettlementTransactionReversalAdviceV05.mmStandingSettlementInstructionDetails, SecuritiesSettlementTransactionReversalAdviceV05.mmDeliveringSettlementParties,
+						SecuritiesSettlementTransactionReversalAdviceV05.mmReceivingSettlementParties, SecuritiesSettlementTransactionReversalAdviceV05.mmCashParties, SecuritiesSettlementTransactionReversalAdviceV05.mmSettledAmount,
+						SecuritiesSettlementTransactionReversalAdviceV05.mmOtherAmounts, SecuritiesSettlementTransactionReversalAdviceV05.mmOtherBusinessParties,
+						SecuritiesSettlementTransactionReversalAdviceV05.mmAdditionalPhysicalOrRegistrationDetails, SecuritiesSettlementTransactionReversalAdviceV05.mmSupplementaryData);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "sese";

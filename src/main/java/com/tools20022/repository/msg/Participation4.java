@@ -19,11 +19,14 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.seev.MeetingResultDisseminationV05;
 import com.tools20022.repository.choice.UnitOrFaceAmount1Choice;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.datatype.PercentageRate;
 import com.tools20022.repository.entity.MeetingParticipation;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -123,14 +126,14 @@ public class Participation4 {
 	 */
 	public static final MMMessageAttribute mmTotalNumberOfVotingRights = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.MeetingParticipation.mmTotalNumberOfVotingRights;
+			businessElementTrace_lazy = () -> MeetingParticipation.mmTotalNumberOfVotingRights;
 			componentContext_lazy = () -> Participation4.mmObject();
 			isDerived = false;
 			xmlTag = "TtlNbOfVtngRghts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalNumberOfVotingRights";
 			definition = "Number of rights admitted to the vote.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Participation3.mmTotalNumberOfVotingRights;
+			previousVersion_lazy = () -> Participation3.mmTotalNumberOfVotingRights;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
@@ -177,10 +180,10 @@ public class Participation4 {
 			componentContext_lazy = () -> Participation4.mmObject();
 			isDerived = false;
 			xmlTag = "PctgOfVtngRghts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PercentageOfVotingRights";
 			definition = "Percentage of rights participating to the vote versus total voting rights.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Participation3.mmPercentageOfVotingRights;
+			previousVersion_lazy = () -> Participation3.mmPercentageOfVotingRights;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
@@ -229,14 +232,14 @@ public class Participation4 {
 	 */
 	public static final MMMessageAttribute mmTotalNumberOfSecuritiesOutstanding = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.MeetingParticipation.mmTotalNumberOfSecuritiesOutstanding;
+			businessElementTrace_lazy = () -> MeetingParticipation.mmTotalNumberOfSecuritiesOutstanding;
 			componentContext_lazy = () -> Participation4.mmObject();
 			isDerived = false;
 			xmlTag = "TtlNbOfSctiesOutsdng";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalNumberOfSecuritiesOutstanding";
 			definition = "Number of securities admitted to the vote, expressed as an amount and a currency.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Participation3.mmTotalNumberOfSecuritiesOutstanding;
+			previousVersion_lazy = () -> Participation3.mmTotalNumberOfSecuritiesOutstanding;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> UnitOrFaceAmount1Choice.mmObject();
@@ -282,14 +285,14 @@ public class Participation4 {
 	 */
 	public static final MMMessageAttribute mmCalculationDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.MeetingParticipation.mmCalculationDate;
+			businessElementTrace_lazy = () -> MeetingParticipation.mmCalculationDate;
 			componentContext_lazy = () -> Participation4.mmObject();
 			isDerived = false;
 			xmlTag = "ClctnDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CalculationDate";
 			definition = "Date of calculation of the total number of outstanding securities.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Participation3.mmCalculationDate;
+			previousVersion_lazy = () -> Participation3.mmCalculationDate;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
@@ -299,12 +302,11 @@ public class Participation4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Participation4.mmTotalNumberOfVotingRights, com.tools20022.repository.msg.Participation4.mmPercentageOfVotingRights,
-						com.tools20022.repository.msg.Participation4.mmTotalNumberOfSecuritiesOutstanding, com.tools20022.repository.msg.Participation4.mmCalculationDate);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.MeetingResultDisseminationV05.mmParticipation);
+				messageElement_lazy = () -> Arrays.asList(Participation4.mmTotalNumberOfVotingRights, Participation4.mmPercentageOfVotingRights, Participation4.mmTotalNumberOfSecuritiesOutstanding, Participation4.mmCalculationDate);
+				messageBuildingBlock_lazy = () -> Arrays.asList(MeetingResultDisseminationV05.mmParticipation);
 				trace_lazy = () -> MeetingParticipation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Participation4";
 				definition = "Specifies the level of participation to a shareholders meeting.";
 				previousVersion_lazy = () -> Participation3.mmObject();

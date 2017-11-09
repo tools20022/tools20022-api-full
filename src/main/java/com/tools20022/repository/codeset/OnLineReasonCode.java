@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.OnLineReason1Code
+ * OnLineReason1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -68,13 +77,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.OnLineReasonCode#mmUnavailableCurrency
  * OnLineReasonCode.mmUnavailableCurrency}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.OnLineReason1Code
- * OnLineReason1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -124,7 +126,7 @@ public class OnLineReasonCode {
 	 */
 	public static final MMCode mmRandomSelection = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RandomSelection";
 			definition = "Transaction random selection to go online.";
 			owner_lazy = () -> OnLineReasonCode.mmObject();
@@ -156,7 +158,7 @@ public class OnLineReasonCode {
 	 */
 	public static final MMCode mmICCForced = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ICCForced";
 			definition = "Payment application in the Integrated Circuit Card forces to go on-line.";
 			owner_lazy = () -> OnLineReasonCode.mmObject();
@@ -186,7 +188,7 @@ public class OnLineReasonCode {
 	 */
 	public static final MMCode mmMerchantForced = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MerchantForced";
 			definition = "On line forced by card acceptor.";
 			owner_lazy = () -> OnLineReasonCode.mmObject();
@@ -216,7 +218,7 @@ public class OnLineReasonCode {
 	 */
 	public static final MMCode mmTerminalForced = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TerminalForced";
 			definition = "Terminal random selection to go online.";
 			owner_lazy = () -> OnLineReasonCode.mmObject();
@@ -246,7 +248,7 @@ public class OnLineReasonCode {
 	 */
 	public static final MMCode mmIssuerForced = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "IssuerForced";
 			definition = "On line forced by card issuer.";
 			owner_lazy = () -> OnLineReasonCode.mmObject();
@@ -276,7 +278,7 @@ public class OnLineReasonCode {
 	 */
 	public static final MMCode mmFloorLimit = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "FloorLimit";
 			definition = "Over floor limit.";
 			owner_lazy = () -> OnLineReasonCode.mmObject();
@@ -306,7 +308,7 @@ public class OnLineReasonCode {
 	 */
 	public static final MMCode mmExceptionFile = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ExceptionFile";
 			definition = "Card appears on terminal exception file.";
 			owner_lazy = () -> OnLineReasonCode.mmObject();
@@ -339,7 +341,7 @@ public class OnLineReasonCode {
 	 */
 	public static final MMCode mmTotalAmount = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TotalAmount";
 			definition = "Total amount of purchases per cardholder and per application above floor limit.";
 			owner_lazy = () -> OnLineReasonCode.mmObject();
@@ -369,7 +371,7 @@ public class OnLineReasonCode {
 	 */
 	public static final MMCode mmControlledBIN = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ControlledBIN";
 			definition = "Bank Identification Number under control.";
 			owner_lazy = () -> OnLineReasonCode.mmObject();
@@ -399,7 +401,7 @@ public class OnLineReasonCode {
 	 */
 	public static final MMCode mmUnknownBIN = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "UnknownBIN";
 			definition = "Unknown Bank Identification Number.";
 			owner_lazy = () -> OnLineReasonCode.mmObject();
@@ -429,7 +431,7 @@ public class OnLineReasonCode {
 	 */
 	public static final MMCode mmControlledPAN = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ControlledPAN";
 			definition = "Primary account number (card number) under control.";
 			owner_lazy = () -> OnLineReasonCode.mmObject();
@@ -459,7 +461,7 @@ public class OnLineReasonCode {
 	 */
 	public static final MMCode mmFlowControl = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "FlowControl";
 			definition = "Flow control.";
 			owner_lazy = () -> OnLineReasonCode.mmObject();
@@ -489,7 +491,7 @@ public class OnLineReasonCode {
 	 */
 	public static final MMCode mmUnavailableCurrency = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "UnavailableCurrency";
 			definition = "Unknown currency code or foreign currency.";
 			owner_lazy = () -> OnLineReasonCode.mmObject();
@@ -500,16 +502,14 @@ public class OnLineReasonCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("RNDM");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OnLineReasonCode";
 				definition = "Reason to process an online authorisation.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OnLineReasonCode.mmRandomSelection, com.tools20022.repository.codeset.OnLineReasonCode.mmICCForced,
-						com.tools20022.repository.codeset.OnLineReasonCode.mmMerchantForced, com.tools20022.repository.codeset.OnLineReasonCode.mmTerminalForced, com.tools20022.repository.codeset.OnLineReasonCode.mmIssuerForced,
-						com.tools20022.repository.codeset.OnLineReasonCode.mmFloorLimit, com.tools20022.repository.codeset.OnLineReasonCode.mmExceptionFile, com.tools20022.repository.codeset.OnLineReasonCode.mmTotalAmount,
-						com.tools20022.repository.codeset.OnLineReasonCode.mmControlledBIN, com.tools20022.repository.codeset.OnLineReasonCode.mmUnknownBIN, com.tools20022.repository.codeset.OnLineReasonCode.mmControlledPAN,
-						com.tools20022.repository.codeset.OnLineReasonCode.mmFlowControl, com.tools20022.repository.codeset.OnLineReasonCode.mmUnavailableCurrency);
+				code_lazy = () -> Arrays.asList(OnLineReasonCode.mmRandomSelection, OnLineReasonCode.mmICCForced, OnLineReasonCode.mmMerchantForced, OnLineReasonCode.mmTerminalForced, OnLineReasonCode.mmIssuerForced,
+						OnLineReasonCode.mmFloorLimit, OnLineReasonCode.mmExceptionFile, OnLineReasonCode.mmTotalAmount, OnLineReasonCode.mmControlledBIN, OnLineReasonCode.mmUnknownBIN, OnLineReasonCode.mmControlledPAN,
+						OnLineReasonCode.mmFlowControl, OnLineReasonCode.mmUnavailableCurrency);
 				derivation_lazy = () -> Arrays.asList(OnLineReason1Code.mmObject());
 			}
 		});

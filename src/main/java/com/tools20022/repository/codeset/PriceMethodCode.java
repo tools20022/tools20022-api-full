@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.PriceMethod1Code
+ * PriceMethod1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -35,13 +44,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.PriceMethodCode#mmHistoricalPrice
  * PriceMethodCode.mmHistoricalPrice}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.PriceMethod1Code
- * PriceMethod1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -94,7 +96,7 @@ public class PriceMethodCode {
 	 */
 	public static final MMCode mmForwardPrice = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ForwardPrice";
 			definition = "Price will be calculated after the close of the dealing period. An investor, therefore, does not know the exact buy or sell price.";
 			owner_lazy = () -> PriceMethodCode.mmObject();
@@ -127,7 +129,7 @@ public class PriceMethodCode {
 	 */
 	public static final MMCode mmHistoricalPrice = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "HistoricalPrice";
 			definition = "Price is calculated at an earlier valuation point preceding the dealing period. An investor, therefore, knows the exact buy or sell price.";
 			owner_lazy = () -> PriceMethodCode.mmObject();
@@ -138,12 +140,12 @@ public class PriceMethodCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("FORW");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PriceMethodCode";
 				definition = "Specifies the type of pricing calculation method.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PriceMethodCode.mmForwardPrice, com.tools20022.repository.codeset.PriceMethodCode.mmHistoricalPrice);
+				code_lazy = () -> Arrays.asList(PriceMethodCode.mmForwardPrice, PriceMethodCode.mmHistoricalPrice);
 				derivation_lazy = () -> Arrays.asList(PriceMethod1Code.mmObject());
 			}
 		});

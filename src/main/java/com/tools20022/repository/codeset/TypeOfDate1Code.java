@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.TypeOfDateCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -75,7 +77,7 @@ public class TypeOfDate1Code extends TypeOfDateCode {
 	 */
 	public static final MMCode mmActual = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Actual";
 			owner_lazy = () -> TypeOfDate1Code.mmObject();
 		}
@@ -98,7 +100,7 @@ public class TypeOfDate1Code extends TypeOfDateCode {
 	 */
 	public static final MMCode mmEstimated = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Estimated";
 			owner_lazy = () -> TypeOfDate1Code.mmObject();
 		}
@@ -107,11 +109,11 @@ public class TypeOfDate1Code extends TypeOfDateCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TypeOfDate1Code";
 				definition = "Specifies whether a date is actual or estimated.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TypeOfDate1Code.mmActual, com.tools20022.repository.codeset.TypeOfDate1Code.mmEstimated);
+				code_lazy = () -> Arrays.asList(TypeOfDate1Code.mmActual, TypeOfDate1Code.mmEstimated);
 				trace_lazy = () -> TypeOfDateCode.mmObject();
 			}
 		});

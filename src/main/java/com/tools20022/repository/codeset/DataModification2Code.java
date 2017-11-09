@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.DataModificationCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -84,7 +86,7 @@ public class DataModification2Code extends DataModificationCode {
 	 */
 	public static final MMCode mmInsertNewDataSet = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InsertNewDataSet";
 			owner_lazy = () -> DataModification2Code.mmObject();
 		}
@@ -107,7 +109,7 @@ public class DataModification2Code extends DataModificationCode {
 	 */
 	public static final MMCode mmDeleteDataSet = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeleteDataSet";
 			owner_lazy = () -> DataModification2Code.mmObject();
 		}
@@ -116,12 +118,12 @@ public class DataModification2Code extends DataModificationCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("INSE");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DataModification2Code";
 				definition = "Specified the type of modification to be applied on a data set.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DataModification2Code.mmInsertNewDataSet, com.tools20022.repository.codeset.DataModification2Code.mmDeleteDataSet);
+				code_lazy = () -> Arrays.asList(DataModification2Code.mmInsertNewDataSet, DataModification2Code.mmDeleteDataSet);
 				trace_lazy = () -> DataModificationCode.mmObject();
 			}
 		});

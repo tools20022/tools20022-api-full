@@ -19,7 +19,10 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.entity.PartyIdentificationInformation;
 import com.tools20022.repository.entity.Pledgee;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification80;
 import com.tools20022.repository.msg.PledgeeTypeAndAnyBICIdentifier1;
 import com.tools20022.repository.msg.PledgeeTypeAndText1;
@@ -127,11 +130,11 @@ public class PledgeeFormat3Choice {
 			componentContext_lazy = () -> PledgeeFormat3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "TpAndId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TypeAndIdentification";
 			definition = "Identification of the entity to which the financial instruments are pledged expressed as a code and a BIC.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PledgeeFormat4Choice.mmTypeAndIdentification);
-			previousVersion_lazy = () -> com.tools20022.repository.choice.PledgeeFormat1Choice.mmTypeAndIdentification;
+			nextVersions_lazy = () -> Arrays.asList(PledgeeFormat4Choice.mmTypeAndIdentification);
+			previousVersion_lazy = () -> PledgeeFormat1Choice.mmTypeAndIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -191,11 +194,11 @@ public class PledgeeFormat3Choice {
 			componentContext_lazy = () -> PledgeeFormat3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Identification of the entity to which the financial instruments are pledged expressed as a code and a narrative description.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PledgeeFormat4Choice.mmIdentification);
-			previousVersion_lazy = () -> com.tools20022.repository.choice.PledgeeFormat1Choice.mmIdentification;
+			nextVersions_lazy = () -> Arrays.asList(PledgeeFormat4Choice.mmIdentification);
+			previousVersion_lazy = () -> PledgeeFormat1Choice.mmIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -253,15 +256,15 @@ public class PledgeeFormat3Choice {
 	 */
 	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.mmOtherIdentification;
+			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmOtherIdentification;
 			componentContext_lazy = () -> PledgeeFormat3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Identification of the entity to which the financial instruments are pledged expressed as a proprietary type and narrative description.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PledgeeFormat4Choice.mmProprietary);
-			previousVersion_lazy = () -> com.tools20022.repository.choice.PledgeeFormat1Choice.mmProprietary;
+			nextVersions_lazy = () -> Arrays.asList(PledgeeFormat4Choice.mmProprietary);
+			previousVersion_lazy = () -> PledgeeFormat1Choice.mmProprietary;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -272,11 +275,10 @@ public class PledgeeFormat3Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PledgeeFormat3Choice.mmTypeAndIdentification, com.tools20022.repository.choice.PledgeeFormat3Choice.mmIdentification,
-						com.tools20022.repository.choice.PledgeeFormat3Choice.mmProprietary);
+				messageElement_lazy = () -> Arrays.asList(PledgeeFormat3Choice.mmTypeAndIdentification, PledgeeFormat3Choice.mmIdentification, PledgeeFormat3Choice.mmProprietary);
 				trace_lazy = () -> Pledgee.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PledgeeFormat3Choice";
 				definition = "Choice between formats for the entity to which the financial instruments are pledged.";
 				previousVersion_lazy = () -> PledgeeFormat1Choice.mmObject();

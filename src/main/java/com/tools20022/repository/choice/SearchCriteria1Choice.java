@@ -19,6 +19,10 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.auth.InformationRequestOpeningV01;
+import com.tools20022.repository.area.auth.InformationRequestResponseV01;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.AccountAndParties1;
 import com.tools20022.repository.msg.CustomerIdentification1;
 import com.tools20022.repository.msg.PaymentInstrumentType1;
@@ -117,7 +121,7 @@ public class SearchCriteria1Choice {
 			componentContext_lazy = () -> SearchCriteria1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Acct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Account";
 			definition = "Identifies the account as the search criteria for the financial institution to do the investigation.";
 			maxOccurs = 1;
@@ -162,7 +166,7 @@ public class SearchCriteria1Choice {
 			componentContext_lazy = () -> SearchCriteria1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "CstmrId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CustomerIdentification";
 			definition = "Identifies a customer identification as the search criteria for the financial institution to do the investigation.";
 			maxOccurs = 1;
@@ -207,7 +211,7 @@ public class SearchCriteria1Choice {
 			componentContext_lazy = () -> SearchCriteria1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "PmtInstrm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentInstrument";
 			definition = "Identifies a payment instrument as the search criteria for the financial institution to do the investigation.";
 			maxOccurs = 1;
@@ -248,7 +252,7 @@ public class SearchCriteria1Choice {
 			componentContext_lazy = () -> SearchCriteria1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlTxNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalTransactionNumber";
 			definition = "Specifies the original transaction number.";
 			minOccurs = 1;
@@ -259,11 +263,10 @@ public class SearchCriteria1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SearchCriteria1Choice.mmAccount, com.tools20022.repository.choice.SearchCriteria1Choice.mmCustomerIdentification,
-						com.tools20022.repository.choice.SearchCriteria1Choice.mmPaymentInstrument, com.tools20022.repository.choice.SearchCriteria1Choice.mmOriginalTransactionNumber);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.auth.InformationRequestOpeningV01.mmSearchCriteria, com.tools20022.repository.area.auth.InformationRequestResponseV01.mmSearchCriteria);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(SearchCriteria1Choice.mmAccount, SearchCriteria1Choice.mmCustomerIdentification, SearchCriteria1Choice.mmPaymentInstrument, SearchCriteria1Choice.mmOriginalTransactionNumber);
+				messageBuildingBlock_lazy = () -> Arrays.asList(InformationRequestOpeningV01.mmSearchCriteria, InformationRequestResponseV01.mmSearchCriteria);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SearchCriteria1Choice";
 				definition = "Choice of search criteria for the financial investigation.";
 			}

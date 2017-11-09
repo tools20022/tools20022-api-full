@@ -19,9 +19,11 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.DecimalNumber;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.MeetingEntitlement;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -96,11 +98,11 @@ public class Entitlement1Choice {
 	 */
 	public static final MMMessageAttribute mmEntitlementRatio = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.MeetingEntitlement.mmEntitlementRatio;
+			businessElementTrace_lazy = () -> MeetingEntitlement.mmEntitlementRatio;
 			componentContext_lazy = () -> Entitlement1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "EntitlmntRatio";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EntitlementRatio";
 			definition = "Number of votes assigned to one security.";
 			maxOccurs = 1;
@@ -151,7 +153,7 @@ public class Entitlement1Choice {
 			componentContext_lazy = () -> Entitlement1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "EntitlmntDesc";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EntitlementDescription";
 			definition = "Specifies the calculation method of the number of votes assigned to one security. This element should be used when the entitlement calculation rule is complex.";
 			maxOccurs = 1;
@@ -163,9 +165,9 @@ public class Entitlement1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Entitlement1Choice.mmEntitlementRatio, com.tools20022.repository.choice.Entitlement1Choice.mmEntitlementDescription);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(Entitlement1Choice.mmEntitlementRatio, Entitlement1Choice.mmEntitlementDescription);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Entitlement1Choice";
 				definition = "Choice of entitlement calculation method.";
 			}

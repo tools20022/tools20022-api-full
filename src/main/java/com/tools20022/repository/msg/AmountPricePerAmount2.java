@@ -19,9 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.AmountPriceType1Code;
 import com.tools20022.repository.datatype.ActiveCurrencyAnd13DecimalAmount;
 import com.tools20022.repository.entity.SecuritiesPricing;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -105,11 +107,11 @@ public class AmountPricePerAmount2 {
 	 */
 	public static final MMMessageAttribute mmAmountPriceType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmTypeOfAmount;
+			businessElementTrace_lazy = () -> SecuritiesPricing.mmTypeOfAmount;
 			componentContext_lazy = () -> AmountPricePerAmount2.mmObject();
 			isDerived = false;
 			xmlTag = "AmtPricTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmountPriceType";
 			definition = "Type of amount price.";
 			maxOccurs = 1;
@@ -153,11 +155,11 @@ public class AmountPricePerAmount2 {
 	 */
 	public static final MMMessageAttribute mmPriceValue = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmPrice;
+			businessElementTrace_lazy = () -> SecuritiesPricing.mmPrice;
 			componentContext_lazy = () -> AmountPricePerAmount2.mmObject();
 			isDerived = false;
 			xmlTag = "PricVal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PriceValue";
 			definition = "Value of the price.";
 			maxOccurs = 1;
@@ -201,11 +203,11 @@ public class AmountPricePerAmount2 {
 	 */
 	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmAmountPricePerAmount;
+			businessElementTrace_lazy = () -> SecuritiesPricing.mmAmountPricePerAmount;
 			componentContext_lazy = () -> AmountPricePerAmount2.mmObject();
 			isDerived = false;
 			xmlTag = "Amt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "The amount on which the price is based.";
 			maxOccurs = 1;
@@ -217,11 +219,10 @@ public class AmountPricePerAmount2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AmountPricePerAmount2.mmAmountPriceType, com.tools20022.repository.msg.AmountPricePerAmount2.mmPriceValue,
-						com.tools20022.repository.msg.AmountPricePerAmount2.mmAmount);
+				messageElement_lazy = () -> Arrays.asList(AmountPricePerAmount2.mmAmountPriceType, AmountPricePerAmount2.mmPriceValue, AmountPricePerAmount2.mmAmount);
 				trace_lazy = () -> SecuritiesPricing.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AmountPricePerAmount2";
 				definition = "Specifies a ratio: Amount price per amount.\nExample:\nISIN US629377AS17. Repurchase USD1087.17 cash for every USD1000 stock (NRG Energy Inc 8% Senior Notes 15/12/13).";
 			}

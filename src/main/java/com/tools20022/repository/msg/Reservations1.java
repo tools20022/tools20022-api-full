@@ -19,7 +19,9 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.Reservation;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -98,7 +100,7 @@ public class Reservations1 {
 			componentContext_lazy = () -> Reservations1.mmObject();
 			isDerived = false;
 			xmlTag = "CurRsvatn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrentReservation";
 			definition = "Report is given for a current reservation.";
 			minOccurs = 0;
@@ -142,7 +144,7 @@ public class Reservations1 {
 			componentContext_lazy = () -> Reservations1.mmObject();
 			isDerived = false;
 			xmlTag = "DfltRsvatn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DefaultReservation";
 			definition = "Report is given for a default reservation.";
 			minOccurs = 0;
@@ -154,10 +156,10 @@ public class Reservations1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Reservations1.mmCurrentReservation, com.tools20022.repository.msg.Reservations1.mmDefaultReservation);
+				messageElement_lazy = () -> Arrays.asList(Reservations1.mmCurrentReservation, Reservations1.mmDefaultReservation);
 				trace_lazy = () -> Reservation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Reservations1";
 				definition = "Reports on reservations.";
 			}

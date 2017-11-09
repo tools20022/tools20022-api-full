@@ -19,9 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.UnableToApplyIncorrectInformation3Code;
 import com.tools20022.repository.codeset.UnableToApplyMissingInformation2Code;
 import com.tools20022.repository.datatype.AMLIndicator;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -119,10 +121,10 @@ public class MissingOrIncorrectInformation2 {
 			componentContext_lazy = () -> MissingOrIncorrectInformation2.mmObject();
 			isDerived = false;
 			xmlTag = "AMLReq";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AntiMoneyLaunderingRequest";
 			definition = "Indicates whether the request is related to an AML (Anti Money Laundering) investigation or not.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MissingOrIncorrectInformation3.mmAntiMoneyLaunderingRequest);
+			nextVersions_lazy = () -> Arrays.asList(MissingOrIncorrectInformation3.mmAntiMoneyLaunderingRequest);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> AMLIndicator.mmObject();
@@ -170,10 +172,10 @@ public class MissingOrIncorrectInformation2 {
 			componentContext_lazy = () -> MissingOrIncorrectInformation2.mmObject();
 			isDerived = false;
 			xmlTag = "MssngInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MissingInformation";
 			definition = "Indicates the missing information.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MissingOrIncorrectInformation3.mmMissingInformation);
+			nextVersions_lazy = () -> Arrays.asList(MissingOrIncorrectInformation3.mmMissingInformation);
 			maxOccurs = 10;
 			minOccurs = 0;
 			simpleType_lazy = () -> UnableToApplyMissingInformation2Code.mmObject();
@@ -221,10 +223,10 @@ public class MissingOrIncorrectInformation2 {
 			componentContext_lazy = () -> MissingOrIncorrectInformation2.mmObject();
 			isDerived = false;
 			xmlTag = "IncrrctInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncorrectInformation";
 			definition = "Indicates, in a coded form, the incorrect information.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MissingOrIncorrectInformation3.mmIncorrectInformation);
+			nextVersions_lazy = () -> Arrays.asList(MissingOrIncorrectInformation3.mmIncorrectInformation);
 			maxOccurs = 10;
 			minOccurs = 0;
 			simpleType_lazy = () -> UnableToApplyIncorrectInformation3Code.mmObject();
@@ -234,10 +236,9 @@ public class MissingOrIncorrectInformation2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MissingOrIncorrectInformation2.mmAntiMoneyLaunderingRequest, com.tools20022.repository.msg.MissingOrIncorrectInformation2.mmMissingInformation,
-						com.tools20022.repository.msg.MissingOrIncorrectInformation2.mmIncorrectInformation);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(MissingOrIncorrectInformation2.mmAntiMoneyLaunderingRequest, MissingOrIncorrectInformation2.mmMissingInformation, MissingOrIncorrectInformation2.mmIncorrectInformation);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MissingOrIncorrectInformation2";
 				definition = "Set of elements used to provide further information on the reason for the unable to apply investigation.";
 				nextVersions_lazy = () -> Arrays.asList(MissingOrIncorrectInformation3.mmObject());

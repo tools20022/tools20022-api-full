@@ -19,10 +19,14 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.semt.TotalPortfolioValuationReportV01;
 import com.tools20022.repository.choice.*;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.Max5NumericText;
 import com.tools20022.repository.datatype.YesNoIndicator;
+import com.tools20022.repository.entity.Document;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -124,7 +128,7 @@ public class Report4 {
 			componentContext_lazy = () -> Report4.mmObject();
 			isDerived = false;
 			xmlTag = "RptNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportNumber";
 			definition = "Sequential number of the report.";
 			maxOccurs = 1;
@@ -167,7 +171,7 @@ public class Report4 {
 			componentContext_lazy = () -> Report4.mmObject();
 			isDerived = false;
 			xmlTag = "QryRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QueryReference";
 			definition = "Identification of the SecuritiesStatementQuery message sent to request this statement.";
 			maxOccurs = 1;
@@ -207,7 +211,7 @@ public class Report4 {
 			componentContext_lazy = () -> Report4.mmObject();
 			isDerived = false;
 			xmlTag = "RptId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportIdentification";
 			definition = "Unique identification of the report.";
 			maxOccurs = 1;
@@ -248,7 +252,7 @@ public class Report4 {
 			componentContext_lazy = () -> Report4.mmObject();
 			isDerived = false;
 			xmlTag = "RptDtTm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportDateTime";
 			definition = "Date and time of the report.";
 			maxOccurs = 1;
@@ -291,11 +295,11 @@ public class Report4 {
 	 */
 	public static final MMMessageAttribute mmCreationDateTime = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Document.mmIssueDate;
+			businessElementTrace_lazy = () -> Document.mmIssueDate;
 			componentContext_lazy = () -> Report4.mmObject();
 			isDerived = false;
 			xmlTag = "CreDtTm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreationDateTime";
 			definition = "Preparation date and time of the report.";
 			maxOccurs = 1;
@@ -336,7 +340,7 @@ public class Report4 {
 			componentContext_lazy = () -> Report4.mmObject();
 			isDerived = false;
 			xmlTag = "PrvsRptDtTm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousReportDateTime";
 			definition = "Previous report date and time.";
 			maxOccurs = 1;
@@ -377,7 +381,7 @@ public class Report4 {
 			componentContext_lazy = () -> Report4.mmObject();
 			isDerived = false;
 			xmlTag = "Frqcy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Frequency";
 			definition = "Specifies the frequency of the report.";
 			maxOccurs = 1;
@@ -419,7 +423,7 @@ public class Report4 {
 			componentContext_lazy = () -> Report4.mmObject();
 			isDerived = false;
 			xmlTag = "UpdTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UpdateType";
 			definition = "Specifies whether the report is complete or contains changes only.";
 			maxOccurs = 1;
@@ -461,7 +465,7 @@ public class Report4 {
 			componentContext_lazy = () -> Report4.mmObject();
 			isDerived = false;
 			xmlTag = "RptBsis";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportBasis";
 			definition = "Specifies the type of balance on which the report is prepared.";
 			maxOccurs = 1;
@@ -502,7 +506,7 @@ public class Report4 {
 			componentContext_lazy = () -> Report4.mmObject();
 			isDerived = false;
 			xmlTag = "RptPrd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportPeriod";
 			definition = "Period for which the report is given.";
 			maxOccurs = 1;
@@ -543,7 +547,7 @@ public class Report4 {
 			componentContext_lazy = () -> Report4.mmObject();
 			isDerived = false;
 			xmlTag = "RptSrc";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportSource";
 			definition = "Specifies the source of the report.";
 			maxOccurs = 1;
@@ -584,7 +588,7 @@ public class Report4 {
 			componentContext_lazy = () -> Report4.mmObject();
 			isDerived = false;
 			xmlTag = "AudtdInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AuditedIndicator";
 			definition = "Indicates whether the report is audited or not.";
 			maxOccurs = 1;
@@ -628,7 +632,7 @@ public class Report4 {
 			componentContext_lazy = () -> Report4.mmObject();
 			isDerived = false;
 			xmlTag = "ActvtyInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ActivityIndicator";
 			definition = "Indicates whether there is activity or an information update reported in the report.";
 			maxOccurs = 1;
@@ -640,13 +644,11 @@ public class Report4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Report4.mmReportNumber, com.tools20022.repository.msg.Report4.mmQueryReference, com.tools20022.repository.msg.Report4.mmReportIdentification,
-						com.tools20022.repository.msg.Report4.mmReportDateTime, com.tools20022.repository.msg.Report4.mmCreationDateTime, com.tools20022.repository.msg.Report4.mmPreviousReportDateTime,
-						com.tools20022.repository.msg.Report4.mmFrequency, com.tools20022.repository.msg.Report4.mmUpdateType, com.tools20022.repository.msg.Report4.mmReportBasis, com.tools20022.repository.msg.Report4.mmReportPeriod,
-						com.tools20022.repository.msg.Report4.mmReportSource, com.tools20022.repository.msg.Report4.mmAuditedIndicator, com.tools20022.repository.msg.Report4.mmActivityIndicator);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.TotalPortfolioValuationReportV01.mmReportGeneralDetails);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(Report4.mmReportNumber, Report4.mmQueryReference, Report4.mmReportIdentification, Report4.mmReportDateTime, Report4.mmCreationDateTime, Report4.mmPreviousReportDateTime,
+						Report4.mmFrequency, Report4.mmUpdateType, Report4.mmReportBasis, Report4.mmReportPeriod, Report4.mmReportSource, Report4.mmAuditedIndicator, Report4.mmActivityIndicator);
+				messageBuildingBlock_lazy = () -> Arrays.asList(TotalPortfolioValuationReportV01.mmReportGeneralDetails);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Report4";
 				definition = "General characteristics of the report.";
 			}

@@ -19,9 +19,11 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.PriceValueType1Code;
 import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.SecuritiesPricing;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -99,11 +101,11 @@ public class YieldedOrValueType1Choice {
 	 */
 	public static final MMMessageAttribute mmYielded = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmYielded;
+			businessElementTrace_lazy = () -> SecuritiesPricing.mmYielded;
 			componentContext_lazy = () -> YieldedOrValueType1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Yldd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Yielded";
 			definition = "Indicates whether the price is expressed as a yield.";
 			maxOccurs = 1;
@@ -147,11 +149,11 @@ public class YieldedOrValueType1Choice {
 	 */
 	public static final MMMessageAttribute mmValueType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmTypeOfRate;
+			businessElementTrace_lazy = () -> SecuritiesPricing.mmTypeOfRate;
 			componentContext_lazy = () -> YieldedOrValueType1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "ValTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValueType";
 			definition = "Type of value in which the price is expressed.";
 			maxOccurs = 1;
@@ -163,10 +165,10 @@ public class YieldedOrValueType1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.YieldedOrValueType1Choice.mmYielded, com.tools20022.repository.choice.YieldedOrValueType1Choice.mmValueType);
+				messageElement_lazy = () -> Arrays.asList(YieldedOrValueType1Choice.mmYielded, YieldedOrValueType1Choice.mmValueType);
 				trace_lazy = () -> SecuritiesPricing.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "YieldedOrValueType1Choice";
 				definition = "Choice of value type.";
 			}

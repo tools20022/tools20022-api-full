@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.RejectedStatusReasonCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -92,7 +94,7 @@ public class RejectedStatusReason4Code extends RejectedStatusReasonCode {
 	 */
 	public static final MMCode mmCutOffTime = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CutOffTime";
 			owner_lazy = () -> RejectedStatusReason4Code.mmObject();
 		}
@@ -115,7 +117,7 @@ public class RejectedStatusReason4Code extends RejectedStatusReasonCode {
 	 */
 	public static final MMCode mmNotAllowedToCancel = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotAllowedToCancel";
 			owner_lazy = () -> RejectedStatusReason4Code.mmObject();
 		}
@@ -138,7 +140,7 @@ public class RejectedStatusReason4Code extends RejectedStatusReasonCode {
 	 */
 	public static final MMCode mmNotCompliantWithSLA = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotCompliantWithSLA";
 			owner_lazy = () -> RejectedStatusReason4Code.mmObject();
 		}
@@ -161,7 +163,7 @@ public class RejectedStatusReason4Code extends RejectedStatusReasonCode {
 	 */
 	public static final MMCode mmLegallyImpossible = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LegallyImpossible";
 			owner_lazy = () -> RejectedStatusReason4Code.mmObject();
 		}
@@ -184,7 +186,7 @@ public class RejectedStatusReason4Code extends RejectedStatusReasonCode {
 	 */
 	public static final MMCode mmOther = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
 			owner_lazy = () -> RejectedStatusReason4Code.mmObject();
 		}
@@ -193,14 +195,13 @@ public class RejectedStatusReason4Code extends RejectedStatusReasonCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CUTO");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RejectedStatusReason4Code";
 				definition = "Specifies the reason for a rejected status.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RejectedStatusReason4Code.mmCutOffTime, com.tools20022.repository.codeset.RejectedStatusReason4Code.mmNotAllowedToCancel,
-						com.tools20022.repository.codeset.RejectedStatusReason4Code.mmNotCompliantWithSLA, com.tools20022.repository.codeset.RejectedStatusReason4Code.mmLegallyImpossible,
-						com.tools20022.repository.codeset.RejectedStatusReason4Code.mmOther);
+				code_lazy = () -> Arrays.asList(RejectedStatusReason4Code.mmCutOffTime, RejectedStatusReason4Code.mmNotAllowedToCancel, RejectedStatusReason4Code.mmNotCompliantWithSLA, RejectedStatusReason4Code.mmLegallyImpossible,
+						RejectedStatusReason4Code.mmOther);
 				trace_lazy = () -> RejectedStatusReasonCode.mmObject();
 			}
 		});

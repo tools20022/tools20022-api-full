@@ -19,10 +19,14 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.seev.*;
 import com.tools20022.repository.choice.DocumentIdentification3Choice;
 import com.tools20022.repository.choice.DocumentNumber5Choice;
 import com.tools20022.repository.choice.ProcessingPosition7Choice;
 import com.tools20022.repository.entity.Document;
+import com.tools20022.repository.entity.GenericIdentification;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -151,14 +155,14 @@ public class DocumentIdentification32 {
 	 */
 	public static final MMMessageAssociationEnd mmIdentification = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmIdentification;
+			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> DocumentIdentification32.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Unique identifier of the document (message) assigned either by the account servicer or the account owner.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.DocumentIdentification13.mmIdentification;
+			previousVersion_lazy = () -> DocumentIdentification13.mmIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -203,10 +207,10 @@ public class DocumentIdentification32 {
 			componentContext_lazy = () -> DocumentIdentification32.mmObject();
 			isDerived = false;
 			xmlTag = "DocNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DocumentNumber";
 			definition = "Identification of the type of document.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.DocumentIdentification13.mmDocumentNumber;
+			previousVersion_lazy = () -> DocumentIdentification13.mmDocumentNumber;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -254,10 +258,10 @@ public class DocumentIdentification32 {
 			componentContext_lazy = () -> DocumentIdentification32.mmObject();
 			isDerived = false;
 			xmlTag = "LkgTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LinkageType";
 			definition = "Specifies when this document is to be processed relative to an other referred document.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.DocumentIdentification13.mmLinkageType;
+			previousVersion_lazy = () -> DocumentIdentification13.mmLinkageType;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -268,18 +272,14 @@ public class DocumentIdentification32 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DocumentIdentification32.mmIdentification, com.tools20022.repository.msg.DocumentIdentification32.mmDocumentNumber,
-						com.tools20022.repository.msg.DocumentIdentification32.mmLinkageType);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.CorporateActionInstructionV06.mmOtherDocumentIdentification,
-						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV07.mmOtherDocumentIdentification,
-						com.tools20022.repository.area.seev.CorporateActionMovementConfirmationV07.mmOtherDocumentIdentification, com.tools20022.repository.area.seev.CorporateActionNotificationV06.mmOtherDocumentIdentification,
-						com.tools20022.repository.area.seev.CorporateActionMovementReversalAdviceV07.mmOtherDocumentIdentification, com.tools20022.repository.area.seev.CorporateActionNotificationV07.mmOtherDocumentIdentification,
-						com.tools20022.repository.area.seev.CorporateActionMovementConfirmationV08.mmOtherDocumentIdentification,
-						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV08.mmOtherDocumentIdentification,
-						com.tools20022.repository.area.seev.CorporateActionMovementReversalAdviceV08.mmOtherDocumentIdentification, com.tools20022.repository.area.seev.CorporateActionInstructionV07.mmOtherDocumentIdentification);
+				messageElement_lazy = () -> Arrays.asList(DocumentIdentification32.mmIdentification, DocumentIdentification32.mmDocumentNumber, DocumentIdentification32.mmLinkageType);
+				messageBuildingBlock_lazy = () -> Arrays.asList(CorporateActionInstructionV06.mmOtherDocumentIdentification, CorporateActionMovementPreliminaryAdviceV07.mmOtherDocumentIdentification,
+						CorporateActionMovementConfirmationV07.mmOtherDocumentIdentification, CorporateActionNotificationV06.mmOtherDocumentIdentification, CorporateActionMovementReversalAdviceV07.mmOtherDocumentIdentification,
+						CorporateActionNotificationV07.mmOtherDocumentIdentification, CorporateActionMovementConfirmationV08.mmOtherDocumentIdentification, CorporateActionMovementPreliminaryAdviceV08.mmOtherDocumentIdentification,
+						CorporateActionMovementReversalAdviceV08.mmOtherDocumentIdentification, CorporateActionInstructionV07.mmOtherDocumentIdentification);
 				trace_lazy = () -> Document.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DocumentIdentification32";
 				definition = "Identification of a document as well as the document number and type of link.";
 				previousVersion_lazy = () -> DocumentIdentification13.mmObject();

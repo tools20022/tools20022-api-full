@@ -19,9 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.PriceRateType3Code;
 import com.tools20022.repository.datatype.PercentageRate;
 import com.tools20022.repository.entity.SecuritiesPricing;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -98,11 +100,11 @@ public class PercentagePrice1 {
 	 */
 	public static final MMMessageAttribute mmPercentagePriceType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmTypeOfRate;
+			businessElementTrace_lazy = () -> SecuritiesPricing.mmTypeOfRate;
 			componentContext_lazy = () -> PercentagePrice1.mmObject();
 			isDerived = false;
 			xmlTag = "PctgPricTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PercentagePriceType";
 			definition = "Specifies the type of percentage price.";
 			maxOccurs = 1;
@@ -146,11 +148,11 @@ public class PercentagePrice1 {
 	 */
 	public static final MMMessageAttribute mmPriceValue = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmRate;
+			businessElementTrace_lazy = () -> SecuritiesPricing.mmRate;
 			componentContext_lazy = () -> PercentagePrice1.mmObject();
 			isDerived = false;
 			xmlTag = "PricVal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PriceValue";
 			definition = "Specifies the value of price.";
 			maxOccurs = 1;
@@ -162,10 +164,10 @@ public class PercentagePrice1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PercentagePrice1.mmPercentagePriceType, com.tools20022.repository.msg.PercentagePrice1.mmPriceValue);
+				messageElement_lazy = () -> Arrays.asList(PercentagePrice1.mmPercentagePriceType, PercentagePrice1.mmPriceValue);
 				trace_lazy = () -> SecuritiesPricing.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PercentagePrice1";
 				definition = "Price expressed as a percentage price.";
 			}

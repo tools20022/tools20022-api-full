@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.RejectionReasonCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -95,7 +97,7 @@ public class RejectionReason45Code extends RejectionReasonCode {
 	 */
 	public static final MMCode mmAccountServicerDeadlineMissed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountServicerDeadlineMissed";
 			owner_lazy = () -> RejectionReason45Code.mmObject();
 		}
@@ -118,7 +120,7 @@ public class RejectionReason45Code extends RejectionReasonCode {
 	 */
 	public static final MMCode mmInvalidReference = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvalidReference";
 			owner_lazy = () -> RejectionReason45Code.mmObject();
 		}
@@ -141,7 +143,7 @@ public class RejectionReason45Code extends RejectionReasonCode {
 	 */
 	public static final MMCode mmOther = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
 			owner_lazy = () -> RejectionReason45Code.mmObject();
 		}
@@ -164,7 +166,7 @@ public class RejectionReason45Code extends RejectionReasonCode {
 	 */
 	public static final MMCode mmRejectedSinceAlreadyCancelled = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RejectedSinceAlreadyCancelled";
 			owner_lazy = () -> RejectionReason45Code.mmObject();
 		}
@@ -187,7 +189,7 @@ public class RejectionReason45Code extends RejectionReasonCode {
 	 */
 	public static final MMCode mmRejectedSinceInProgress = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RejectedSinceInProgress";
 			owner_lazy = () -> RejectionReason45Code.mmObject();
 		}
@@ -210,7 +212,7 @@ public class RejectionReason45Code extends RejectionReasonCode {
 	 */
 	public static final MMCode mmInstructionIrrevocable = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructionIrrevocable";
 			owner_lazy = () -> RejectionReason45Code.mmObject();
 		}
@@ -233,7 +235,7 @@ public class RejectionReason45Code extends RejectionReasonCode {
 	 */
 	public static final MMCode mmMarketDeadlineMissed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketDeadlineMissed";
 			owner_lazy = () -> RejectionReason45Code.mmObject();
 		}
@@ -242,14 +244,12 @@ public class RejectionReason45Code extends RejectionReasonCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RejectionReason45Code";
 				definition = "Specify  the reason why the instruction cancellation request has a rejected status.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RejectionReason45Code.mmAccountServicerDeadlineMissed, com.tools20022.repository.codeset.RejectionReason45Code.mmInvalidReference,
-						com.tools20022.repository.codeset.RejectionReason45Code.mmOther, com.tools20022.repository.codeset.RejectionReason45Code.mmRejectedSinceAlreadyCancelled,
-						com.tools20022.repository.codeset.RejectionReason45Code.mmRejectedSinceInProgress, com.tools20022.repository.codeset.RejectionReason45Code.mmInstructionIrrevocable,
-						com.tools20022.repository.codeset.RejectionReason45Code.mmMarketDeadlineMissed);
+				code_lazy = () -> Arrays.asList(RejectionReason45Code.mmAccountServicerDeadlineMissed, RejectionReason45Code.mmInvalidReference, RejectionReason45Code.mmOther, RejectionReason45Code.mmRejectedSinceAlreadyCancelled,
+						RejectionReason45Code.mmRejectedSinceInProgress, RejectionReason45Code.mmInstructionIrrevocable, RejectionReason45Code.mmMarketDeadlineMissed);
 				trace_lazy = () -> RejectionReasonCode.mmObject();
 			}
 		});

@@ -19,9 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.ClosureReason2Choice;
 import com.tools20022.repository.choice.DateTimePeriodChoice;
 import com.tools20022.repository.entity.SystemClosureInformation;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -97,11 +99,11 @@ public class SystemClosure1 {
 	 */
 	public static final MMMessageAttribute mmPeriod = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SystemClosureInformation.mmPeriod;
+			businessElementTrace_lazy = () -> SystemClosureInformation.mmPeriod;
 			componentContext_lazy = () -> SystemClosure1.mmObject();
 			isDerived = false;
 			xmlTag = "Prd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Period";
 			definition = "Period of time when the system is closed/not operating.";
 			maxOccurs = 1;
@@ -142,7 +144,7 @@ public class SystemClosure1 {
 			componentContext_lazy = () -> SystemClosure1.mmObject();
 			isDerived = false;
 			xmlTag = "Rsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reason";
 			definition = "Reason the system is closed/not operating.";
 			maxOccurs = 1;
@@ -154,10 +156,10 @@ public class SystemClosure1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SystemClosure1.mmPeriod, com.tools20022.repository.msg.SystemClosure1.mmReason);
+				messageElement_lazy = () -> Arrays.asList(SystemClosure1.mmPeriod, SystemClosure1.mmReason);
 				trace_lazy = () -> SystemClosureInformation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SystemClosure1";
 				definition = "Information about inactivity of a system.";
 			}

@@ -20,8 +20,11 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.IntraPositionTransfer;
+import com.tools20022.repository.entity.System;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -122,11 +125,11 @@ public class IntraPositionMovement1 {
 	 */
 	public static final MMMessageAssociationEnd mmAccountOwner = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.System.mmPartyRole;
+			businessElementTrace_lazy = () -> System.mmPartyRole;
 			componentContext_lazy = () -> IntraPositionMovement1.mmObject();
 			isDerived = false;
 			xmlTag = "AcctOwnr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountOwner";
 			definition = "Party that owns the account.";
 			maxOccurs = 1;
@@ -167,7 +170,7 @@ public class IntraPositionMovement1 {
 			componentContext_lazy = () -> IntraPositionMovement1.mmObject();
 			isDerived = false;
 			xmlTag = "SfkpgAcct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingAccount";
 			definition = "Account to or from which a securities entry is made.";
 			maxOccurs = 1;
@@ -209,7 +212,7 @@ public class IntraPositionMovement1 {
 			componentContext_lazy = () -> IntraPositionMovement1.mmObject();
 			isDerived = false;
 			xmlTag = "StsAndRsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusAndReason";
 			definition = "Status and status reason of the transaction.";
 			maxOccurs = 1;
@@ -254,7 +257,7 @@ public class IntraPositionMovement1 {
 			componentContext_lazy = () -> IntraPositionMovement1.mmObject();
 			isDerived = false;
 			xmlTag = "AcctOwnrTxId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountOwnerTransactionIdentification";
 			definition = "Unambiguous identification of the transaction as known by the account owner (or the instructing party managing the account).";
 			maxOccurs = 1;
@@ -298,7 +301,7 @@ public class IntraPositionMovement1 {
 			componentContext_lazy = () -> IntraPositionMovement1.mmObject();
 			isDerived = false;
 			xmlTag = "AcctSvcrTxId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountServicerTransactionIdentification";
 			definition = "Unambiguous identification of the transaction as known by the account servicer.";
 			maxOccurs = 1;
@@ -342,7 +345,7 @@ public class IntraPositionMovement1 {
 			componentContext_lazy = () -> IntraPositionMovement1.mmObject();
 			isDerived = false;
 			xmlTag = "MktInfrstrctrTxId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketInfrastructureTransactionIdentification";
 			definition = "Identification of a transaction assigned by a market infrastructure other than a central securities depository, for example, Target2-Securities.";
 			maxOccurs = 1;
@@ -384,7 +387,7 @@ public class IntraPositionMovement1 {
 			componentContext_lazy = () -> IntraPositionMovement1.mmObject();
 			isDerived = false;
 			xmlTag = "PrcrTxId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProcessorTransactionIdentification";
 			definition = "Identification of the transaction as assigned by the processor.";
 			maxOccurs = 1;
@@ -425,7 +428,7 @@ public class IntraPositionMovement1 {
 			componentContext_lazy = () -> IntraPositionMovement1.mmObject();
 			isDerived = false;
 			xmlTag = "PoolId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PoolIdentification";
 			definition = "Collective reference identifying a set of messages.";
 			maxOccurs = 1;
@@ -469,7 +472,7 @@ public class IntraPositionMovement1 {
 			componentContext_lazy = () -> IntraPositionMovement1.mmObject();
 			isDerived = false;
 			xmlTag = "CorpActnEvtId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorporateActionEventIdentification";
 			definition = "Identification assigned by the account servicer to unambiguously identify a corporate action event.";
 			maxOccurs = 1;
@@ -509,7 +512,7 @@ public class IntraPositionMovement1 {
 			componentContext_lazy = () -> IntraPositionMovement1.mmObject();
 			isDerived = false;
 			xmlTag = "MvmntDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MovementDetails";
 			definition = "Identifies additional details of the transaction.";
 			maxOccurs = 1;
@@ -522,14 +525,12 @@ public class IntraPositionMovement1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IntraPositionMovement1.mmAccountOwner, com.tools20022.repository.msg.IntraPositionMovement1.mmSafekeepingAccount,
-						com.tools20022.repository.msg.IntraPositionMovement1.mmStatusAndReason, com.tools20022.repository.msg.IntraPositionMovement1.mmAccountOwnerTransactionIdentification,
-						com.tools20022.repository.msg.IntraPositionMovement1.mmAccountServicerTransactionIdentification, com.tools20022.repository.msg.IntraPositionMovement1.mmMarketInfrastructureTransactionIdentification,
-						com.tools20022.repository.msg.IntraPositionMovement1.mmProcessorTransactionIdentification, com.tools20022.repository.msg.IntraPositionMovement1.mmPoolIdentification,
-						com.tools20022.repository.msg.IntraPositionMovement1.mmCorporateActionEventIdentification, com.tools20022.repository.msg.IntraPositionMovement1.mmMovementDetails);
+				messageElement_lazy = () -> Arrays.asList(IntraPositionMovement1.mmAccountOwner, IntraPositionMovement1.mmSafekeepingAccount, IntraPositionMovement1.mmStatusAndReason,
+						IntraPositionMovement1.mmAccountOwnerTransactionIdentification, IntraPositionMovement1.mmAccountServicerTransactionIdentification, IntraPositionMovement1.mmMarketInfrastructureTransactionIdentification,
+						IntraPositionMovement1.mmProcessorTransactionIdentification, IntraPositionMovement1.mmPoolIdentification, IntraPositionMovement1.mmCorporateActionEventIdentification, IntraPositionMovement1.mmMovementDetails);
 				trace_lazy = () -> IntraPositionTransfer.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "IntraPositionMovement1";
 				definition = "Identifies the details of the transaction.";
 			}

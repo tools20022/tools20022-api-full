@@ -20,8 +20,12 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.semt.*;
 import com.tools20022.repository.datatype.AnyBICIdentifier;
+import com.tools20022.repository.entity.OrganisationIdentification;
 import com.tools20022.repository.entity.PartyIdentificationInformation;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification19;
 import com.tools20022.repository.msg.NameAndAddress5;
 import java.text.DateFormat;
@@ -150,11 +154,11 @@ public class PartyIdentification49Choice {
 	 */
 	public static final MMMessageAttribute mmAnyBIC = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.mmAnyBIC;
+			businessElementTrace_lazy = () -> OrganisationIdentification.mmAnyBIC;
 			componentContext_lazy = () -> PartyIdentification49Choice.mmObject();
 			isDerived = false;
 			xmlTag = "AnyBIC";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AnyBIC";
 			definition = "Code allocated to a financial or non-financial institution by the ISO 9362 Registration Authority, as described in ISO 9362 \"Banking - Banking telecommunication messages - Business identifier code (BIC)\".";
 			maxOccurs = 1;
@@ -200,11 +204,11 @@ public class PartyIdentification49Choice {
 	 */
 	public static final MMMessageAssociationEnd mmProprietaryIdentification = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.mmOtherIdentification;
+			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmOtherIdentification;
 			componentContext_lazy = () -> PartyIdentification49Choice.mmObject();
 			isDerived = false;
 			xmlTag = "PrtryId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProprietaryIdentification";
 			definition = "Unique and unambiguous identifier, as assigned to a financial institution using a proprietary identification scheme.";
 			maxOccurs = 1;
@@ -251,7 +255,7 @@ public class PartyIdentification49Choice {
 			componentContext_lazy = () -> PartyIdentification49Choice.mmObject();
 			isDerived = false;
 			xmlTag = "NmAndAdr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NameAndAddress";
 			definition = "Name and address of a party.";
 			maxOccurs = 1;
@@ -264,17 +268,13 @@ public class PartyIdentification49Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PartyIdentification49Choice.mmAnyBIC, com.tools20022.repository.choice.PartyIdentification49Choice.mmProprietaryIdentification,
-						com.tools20022.repository.choice.PartyIdentification49Choice.mmNameAndAddress);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV04.mmAccountServicer,
-						com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV05.mmAccountServicer, com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV06.mmAccountServicer,
-						com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV04.mmAccountServicer, com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV05.mmAccountServicer,
-						com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV06.mmAccountServicer, com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV07.mmAccountServicer,
-						com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV07.mmAccountServicer, com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV08.mmAccountServicer,
-						com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV08.mmAccountServicer);
+				messageElement_lazy = () -> Arrays.asList(PartyIdentification49Choice.mmAnyBIC, PartyIdentification49Choice.mmProprietaryIdentification, PartyIdentification49Choice.mmNameAndAddress);
+				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesBalanceAccountingReportV04.mmAccountServicer, SecuritiesBalanceAccountingReportV05.mmAccountServicer, SecuritiesBalanceAccountingReportV06.mmAccountServicer,
+						SecuritiesBalanceCustodyReportV04.mmAccountServicer, SecuritiesBalanceCustodyReportV05.mmAccountServicer, SecuritiesBalanceCustodyReportV06.mmAccountServicer, SecuritiesBalanceCustodyReportV07.mmAccountServicer,
+						SecuritiesBalanceAccountingReportV07.mmAccountServicer, SecuritiesBalanceCustodyReportV08.mmAccountServicer, SecuritiesBalanceAccountingReportV08.mmAccountServicer);
 				trace_lazy = () -> PartyIdentificationInformation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
 						return DateFormat.getDateInstance(java.text.DateFormat.LONG).parse("May 5, 2016");

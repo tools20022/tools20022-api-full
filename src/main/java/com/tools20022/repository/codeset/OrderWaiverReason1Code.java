@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.OrderWaiverReasonCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -95,7 +97,7 @@ public class OrderWaiverReason1Code extends OrderWaiverReasonCode {
 	 */
 	public static final MMCode mmLateTradeDealing = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LateTradeDealing";
 			owner_lazy = () -> OrderWaiverReason1Code.mmObject();
 		}
@@ -118,7 +120,7 @@ public class OrderWaiverReason1Code extends OrderWaiverReasonCode {
 	 */
 	public static final MMCode mmFrontEndLoadCharge = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FrontEndLoadCharge";
 			owner_lazy = () -> OrderWaiverReason1Code.mmObject();
 		}
@@ -141,7 +143,7 @@ public class OrderWaiverReason1Code extends OrderWaiverReasonCode {
 	 */
 	public static final MMCode mmBelowMinimumInvestmentAmount = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BelowMinimumInvestmentAmount";
 			owner_lazy = () -> OrderWaiverReason1Code.mmObject();
 		}
@@ -164,7 +166,7 @@ public class OrderWaiverReason1Code extends OrderWaiverReasonCode {
 	 */
 	public static final MMCode mmCutOffDate = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CutOffDate";
 			owner_lazy = () -> OrderWaiverReason1Code.mmObject();
 		}
@@ -187,7 +189,7 @@ public class OrderWaiverReason1Code extends OrderWaiverReasonCode {
 	 */
 	public static final MMCode mmCommissionWaiver = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommissionWaiver";
 			owner_lazy = () -> OrderWaiverReason1Code.mmObject();
 		}
@@ -196,14 +198,13 @@ public class OrderWaiverReason1Code extends OrderWaiverReasonCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("LATE");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OrderWaiverReason1Code";
 				definition = "Relates to non-standard orders, to handle them differently, probably in a manual fashion.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OrderWaiverReason1Code.mmLateTradeDealing, com.tools20022.repository.codeset.OrderWaiverReason1Code.mmFrontEndLoadCharge,
-						com.tools20022.repository.codeset.OrderWaiverReason1Code.mmBelowMinimumInvestmentAmount, com.tools20022.repository.codeset.OrderWaiverReason1Code.mmCutOffDate,
-						com.tools20022.repository.codeset.OrderWaiverReason1Code.mmCommissionWaiver);
+				code_lazy = () -> Arrays.asList(OrderWaiverReason1Code.mmLateTradeDealing, OrderWaiverReason1Code.mmFrontEndLoadCharge, OrderWaiverReason1Code.mmBelowMinimumInvestmentAmount, OrderWaiverReason1Code.mmCutOffDate,
+						OrderWaiverReason1Code.mmCommissionWaiver);
 				trace_lazy = () -> OrderWaiverReasonCode.mmObject();
 			}
 		});

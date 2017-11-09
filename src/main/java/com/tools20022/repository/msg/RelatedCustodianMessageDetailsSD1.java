@@ -19,7 +19,9 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -123,7 +125,7 @@ public class RelatedCustodianMessageDetailsSD1 {
 			componentContext_lazy = () -> RelatedCustodianMessageDetailsSD1.mmObject();
 			isDerived = false;
 			xmlTag = "RcvdEvtTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceivedEventType";
 			definition = "Reference the CAEV value from the received custodian message. Applicable to custodian service only.";
 			maxOccurs = 1;
@@ -168,7 +170,7 @@ public class RelatedCustodianMessageDetailsSD1 {
 			componentContext_lazy = () -> RelatedCustodianMessageDetailsSD1.mmObject();
 			isDerived = false;
 			xmlTag = "RcvdMndtryVlntryEvtTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceivedMandatoryVoluntaryEventType";
 			definition = "Reference the CAMV value from the received custodian message. Applicable to custodian service only.";
 			maxOccurs = 1;
@@ -213,7 +215,7 @@ public class RelatedCustodianMessageDetailsSD1 {
 			componentContext_lazy = () -> RelatedCustodianMessageDetailsSD1.mmObject();
 			isDerived = false;
 			xmlTag = "RcvdCorpActnEvtId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceivedCorporateActionEventIdentification";
 			definition = "Reference the CORP value from the received custodian message. Applicable to custodian service only.";
 			maxOccurs = 1;
@@ -257,7 +259,7 @@ public class RelatedCustodianMessageDetailsSD1 {
 			componentContext_lazy = () -> RelatedCustodianMessageDetailsSD1.mmObject();
 			isDerived = false;
 			xmlTag = "RcvdDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceivedDate";
 			definition = "Rate that the  ISO message was received from the custodian. Applicable to custodian service only.";
 			maxOccurs = 1;
@@ -301,7 +303,7 @@ public class RelatedCustodianMessageDetailsSD1 {
 			componentContext_lazy = () -> RelatedCustodianMessageDetailsSD1.mmObject();
 			isDerived = false;
 			xmlTag = "RcvdTm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceivedTime";
 			definition = "Time of day that the ISO message was received from the custodian. Applicable to custodian service only.";
 			maxOccurs = 1;
@@ -346,7 +348,7 @@ public class RelatedCustodianMessageDetailsSD1 {
 			componentContext_lazy = () -> RelatedCustodianMessageDetailsSD1.mmObject();
 			isDerived = false;
 			xmlTag = "InbndISOMT";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InboundISOMessageType";
 			definition = "Reference of the ISO15022 MT message type received from the custodian message. Applicable to custodian service only.";
 			maxOccurs = 1;
@@ -391,7 +393,7 @@ public class RelatedCustodianMessageDetailsSD1 {
 			componentContext_lazy = () -> RelatedCustodianMessageDetailsSD1.mmObject();
 			isDerived = false;
 			xmlTag = "InbndISOMsgRcvrBIC";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InboundISOMessageReceiverBIC";
 			definition = "BIC Code of the recipient of the custodian record on a received message. Applicable to custodian service only.";
 			maxOccurs = 1;
@@ -436,7 +438,7 @@ public class RelatedCustodianMessageDetailsSD1 {
 			componentContext_lazy = () -> RelatedCustodianMessageDetailsSD1.mmObject();
 			isDerived = false;
 			xmlTag = "RcvdRltdRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceivedRelatedReference";
 			definition = "Sender related reference from the received custodian message. Applicable to custodian service only.";
 			maxOccurs = 1;
@@ -481,7 +483,7 @@ public class RelatedCustodianMessageDetailsSD1 {
 			componentContext_lazy = () -> RelatedCustodianMessageDetailsSD1.mmObject();
 			isDerived = false;
 			xmlTag = "RcvdSndrMsgRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceivedSenderMessageReference";
 			definition = "Sender SEME from received custodian message. Applicable to custodian service only.";
 			maxOccurs = 1;
@@ -526,7 +528,7 @@ public class RelatedCustodianMessageDetailsSD1 {
 			componentContext_lazy = () -> RelatedCustodianMessageDetailsSD1.mmObject();
 			isDerived = false;
 			xmlTag = "InbndISOMsgSndrBIC";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InboundISOMessageSenderBIC";
 			definition = "BIC Code of the sender of the custodian record on a received message. Applicable to custodian service only.";
 			maxOccurs = 1;
@@ -538,14 +540,12 @@ public class RelatedCustodianMessageDetailsSD1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RelatedCustodianMessageDetailsSD1.mmReceivedEventType,
-						com.tools20022.repository.msg.RelatedCustodianMessageDetailsSD1.mmReceivedMandatoryVoluntaryEventType, com.tools20022.repository.msg.RelatedCustodianMessageDetailsSD1.mmReceivedCorporateActionEventIdentification,
-						com.tools20022.repository.msg.RelatedCustodianMessageDetailsSD1.mmReceivedDate, com.tools20022.repository.msg.RelatedCustodianMessageDetailsSD1.mmReceivedTime,
-						com.tools20022.repository.msg.RelatedCustodianMessageDetailsSD1.mmInboundISOMessageType, com.tools20022.repository.msg.RelatedCustodianMessageDetailsSD1.mmInboundISOMessageReceiverBIC,
-						com.tools20022.repository.msg.RelatedCustodianMessageDetailsSD1.mmReceivedRelatedReference, com.tools20022.repository.msg.RelatedCustodianMessageDetailsSD1.mmReceivedSenderMessageReference,
-						com.tools20022.repository.msg.RelatedCustodianMessageDetailsSD1.mmInboundISOMessageSenderBIC);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(RelatedCustodianMessageDetailsSD1.mmReceivedEventType, RelatedCustodianMessageDetailsSD1.mmReceivedMandatoryVoluntaryEventType,
+						RelatedCustodianMessageDetailsSD1.mmReceivedCorporateActionEventIdentification, RelatedCustodianMessageDetailsSD1.mmReceivedDate, RelatedCustodianMessageDetailsSD1.mmReceivedTime,
+						RelatedCustodianMessageDetailsSD1.mmInboundISOMessageType, RelatedCustodianMessageDetailsSD1.mmInboundISOMessageReceiverBIC, RelatedCustodianMessageDetailsSD1.mmReceivedRelatedReference,
+						RelatedCustodianMessageDetailsSD1.mmReceivedSenderMessageReference, RelatedCustodianMessageDetailsSD1.mmInboundISOMessageSenderBIC);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "RelatedCustodianMessageDetailsSD1";
 				definition = "Provides selected corporate action events message details extracted from the related custodian messages received.";
 			}

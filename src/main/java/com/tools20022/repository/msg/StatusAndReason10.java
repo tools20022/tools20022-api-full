@@ -19,10 +19,15 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.setr.SecuritiesTradeConfirmationResponseV01;
 import com.tools20022.repository.choice.AffirmationStatus7Choice;
 import com.tools20022.repository.choice.UnaffirmedReason2Choice;
 import com.tools20022.repository.datatype.Max210Text;
+import com.tools20022.repository.entity.SecuritiesTradeStatus;
 import com.tools20022.repository.entity.Status;
+import com.tools20022.repository.entity.StatusReason;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -111,11 +116,11 @@ public class StatusAndReason10 {
 	 */
 	public static final MMMessageAttribute mmAffirmationStatus = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeStatus.mmAffirmationStatus;
+			businessElementTrace_lazy = () -> SecuritiesTradeStatus.mmAffirmationStatus;
 			componentContext_lazy = () -> StatusAndReason10.mmObject();
 			isDerived = false;
 			xmlTag = "AffirmSts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AffirmationStatus";
 			definition = "Status of affirmation of a trade.";
 			maxOccurs = 1;
@@ -158,7 +163,7 @@ public class StatusAndReason10 {
 			componentContext_lazy = () -> StatusAndReason10.mmObject();
 			isDerived = false;
 			xmlTag = "UaffrmdRsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnaffirmedReason";
 			definition = "Specifies the reason why the instruction has an unaffirmed status.";
 			maxOccurs = 1;
@@ -202,11 +207,11 @@ public class StatusAndReason10 {
 	 */
 	public static final MMMessageAttribute mmAdditionalReasonInformation = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmReason;
+			businessElementTrace_lazy = () -> StatusReason.mmReason;
 			componentContext_lazy = () -> StatusAndReason10.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlRsnInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalReasonInformation";
 			definition = "Provides additional information about the reason in narrative form.";
 			maxOccurs = 1;
@@ -218,12 +223,11 @@ public class StatusAndReason10 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StatusAndReason10.mmAffirmationStatus, com.tools20022.repository.msg.StatusAndReason10.mmUnaffirmedReason,
-						com.tools20022.repository.msg.StatusAndReason10.mmAdditionalReasonInformation);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.SecuritiesTradeConfirmationResponseV01.mmStatus);
+				messageElement_lazy = () -> Arrays.asList(StatusAndReason10.mmAffirmationStatus, StatusAndReason10.mmUnaffirmedReason, StatusAndReason10.mmAdditionalReasonInformation);
+				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesTradeConfirmationResponseV01.mmStatus);
 				trace_lazy = () -> Status.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "StatusAndReason10";
 				definition = "Provides details related to the status of the order.";
 			}

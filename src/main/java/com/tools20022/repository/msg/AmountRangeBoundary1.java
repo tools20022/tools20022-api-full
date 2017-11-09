@@ -19,9 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ImpliedCurrencyAndAmount;
 import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.AmountRangeBoundary;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -99,11 +101,11 @@ public class AmountRangeBoundary1 {
 	 */
 	public static final MMMessageAttribute mmBoundaryAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AmountRangeBoundary.mmBoundaryAmount;
+			businessElementTrace_lazy = () -> AmountRangeBoundary.mmBoundaryAmount;
 			componentContext_lazy = () -> AmountRangeBoundary1.mmObject();
 			isDerived = false;
 			xmlTag = "BdryAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BoundaryAmount";
 			definition = "Amount value of the range limit.";
 			maxOccurs = 1;
@@ -150,11 +152,11 @@ public class AmountRangeBoundary1 {
 	 */
 	public static final MMMessageAttribute mmIncluded = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AmountRangeBoundary.mmIncluded;
+			businessElementTrace_lazy = () -> AmountRangeBoundary.mmIncluded;
 			componentContext_lazy = () -> AmountRangeBoundary1.mmObject();
 			isDerived = false;
 			xmlTag = "Incl";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Included";
 			definition = "Indicates whether the boundary amount is included in the range of amount values.";
 			maxOccurs = 1;
@@ -166,10 +168,10 @@ public class AmountRangeBoundary1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AmountRangeBoundary1.mmBoundaryAmount, com.tools20022.repository.msg.AmountRangeBoundary1.mmIncluded);
+				messageElement_lazy = () -> Arrays.asList(AmountRangeBoundary1.mmBoundaryAmount, AmountRangeBoundary1.mmIncluded);
 				trace_lazy = () -> AmountRangeBoundary.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AmountRangeBoundary1";
 				definition = "Limit for an amount range.";
 			}

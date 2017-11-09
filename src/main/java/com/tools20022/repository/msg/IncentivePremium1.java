@@ -19,10 +19,12 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.metamodel.MMXor;
 import com.tools20022.repository.datatype.*;
 import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.entity.IncentivePremium;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -120,11 +122,11 @@ public class IncentivePremium1 {
 	 */
 	public static final MMMessageAttribute mmPremiumDescription = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.IncentivePremium.mmDescription;
+			businessElementTrace_lazy = () -> IncentivePremium.mmDescription;
 			componentContext_lazy = () -> IncentivePremium1.mmObject();
 			isDerived = false;
 			xmlTag = "PrmDesc";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PremiumDescription";
 			definition = "Description of the premium.";
 			maxOccurs = 1;
@@ -169,11 +171,11 @@ public class IncentivePremium1 {
 	 */
 	public static final MMMessageAttribute mmPremiumAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.IncentivePremium.mmPremiumAmount;
+			businessElementTrace_lazy = () -> IncentivePremium.mmPremiumAmount;
 			componentContext_lazy = () -> IncentivePremium1.mmObject();
 			isDerived = false;
 			xmlTag = "PrmAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PremiumAmount";
 			definition = "Cash premium paid per security, per vote or per attendee.";
 			maxOccurs = 1;
@@ -216,11 +218,11 @@ public class IncentivePremium1 {
 	 */
 	public static final MMMessageAttribute mmPerSecurity = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.IncentivePremium.mmPerSecurity;
+			businessElementTrace_lazy = () -> IncentivePremium.mmPerSecurity;
 			componentContext_lazy = () -> IncentivePremium1.mmObject();
 			isDerived = false;
 			xmlTag = "PerScty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PerSecurity";
 			definition = "Number of securities giving right to a premium.";
 			maxOccurs = 1;
@@ -263,11 +265,11 @@ public class IncentivePremium1 {
 	 */
 	public static final MMMessageAttribute mmPerVote = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.IncentivePremium.mmPerVote;
+			businessElementTrace_lazy = () -> IncentivePremium.mmPerVote;
 			componentContext_lazy = () -> IncentivePremium1.mmObject();
 			isDerived = false;
 			xmlTag = "PerVote";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PerVote";
 			definition = "Number of votes giving right to a premium.";
 			maxOccurs = 1;
@@ -311,11 +313,11 @@ public class IncentivePremium1 {
 	 */
 	public static final MMMessageAttribute mmPerAttendee = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.IncentivePremium.mmPerAttendee;
+			businessElementTrace_lazy = () -> IncentivePremium.mmPerAttendee;
 			componentContext_lazy = () -> IncentivePremium1.mmObject();
 			isDerived = false;
 			xmlTag = "PerAttndee";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PerAttendee";
 			definition = "Indicates that the premium is given per attendee.";
 			maxOccurs = 1;
@@ -358,11 +360,11 @@ public class IncentivePremium1 {
 	 */
 	public static final MMMessageAttribute mmPaymentDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.IncentivePremium.mmPaymentDate;
+			businessElementTrace_lazy = () -> IncentivePremium.mmPaymentDate;
 			componentContext_lazy = () -> IncentivePremium1.mmObject();
 			isDerived = false;
 			xmlTag = "PmtDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentDate";
 			definition = "Date/time for the payment of the premium.";
 			maxOccurs = 1;
@@ -375,6 +377,10 @@ public class IncentivePremium1 {
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
+	 * messageComponent} =
+	 * {@linkplain com.tools20022.repository.msg.IncentivePremium1
+	 * IncentivePremium1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getImpactedElements
 	 * impactedElements} =
 	 * <ul>
@@ -389,10 +395,6 @@ public class IncentivePremium1 {
 	 * IncentivePremium1.mmPerAttendee}</li>
 	 * </ul>
 	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
-	 * messageComponent} =
-	 * {@linkplain com.tools20022.repository.msg.IncentivePremium1
-	 * IncentivePremium1}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -407,27 +409,25 @@ public class IncentivePremium1 {
 	 */
 	public static final MMXor mmPerSecurityOrPerVoteOrPerAttendeeRule = new MMXor() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PerSecurityOrPerVoteOrPerAttendeeRule";
 			definition = "Either PerSecurity or PerVote or PerAttendee must be present.";
 			messageComponent_lazy = () -> IncentivePremium1.mmObject();
-			impactedElements_lazy = () -> Arrays
-					.asList(com.tools20022.repository.msg.IncentivePremium1.mmPerSecurity, com.tools20022.repository.msg.IncentivePremium1.mmPerVote, com.tools20022.repository.msg.IncentivePremium1.mmPerAttendee);
+			impactedElements_lazy = () -> Arrays.asList(IncentivePremium1.mmPerSecurity, IncentivePremium1.mmPerVote, IncentivePremium1.mmPerAttendee);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IncentivePremium1.mmPremiumDescription, com.tools20022.repository.msg.IncentivePremium1.mmPremiumAmount,
-						com.tools20022.repository.msg.IncentivePremium1.mmPerSecurity, com.tools20022.repository.msg.IncentivePremium1.mmPerVote, com.tools20022.repository.msg.IncentivePremium1.mmPerAttendee,
-						com.tools20022.repository.msg.IncentivePremium1.mmPaymentDate);
+				messageElement_lazy = () -> Arrays.asList(IncentivePremium1.mmPremiumDescription, IncentivePremium1.mmPremiumAmount, IncentivePremium1.mmPerSecurity, IncentivePremium1.mmPerVote, IncentivePremium1.mmPerAttendee,
+						IncentivePremium1.mmPaymentDate);
 				trace_lazy = () -> IncentivePremium.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "IncentivePremium1";
 				definition = "Cash premium made available if the securities holder consents or participates to an event.";
-				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IncentivePremium1.mmPerSecurityOrPerVoteOrPerAttendeeRule);
+				xors_lazy = () -> Arrays.asList(IncentivePremium1.mmPerSecurityOrPerVoteOrPerAttendeeRule);
 			}
 		});
 		return mmObject_lazy.get();

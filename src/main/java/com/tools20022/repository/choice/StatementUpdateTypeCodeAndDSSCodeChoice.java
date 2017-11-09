@@ -19,7 +19,9 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.StatementUpdateTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification7;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -93,7 +95,7 @@ public class StatementUpdateTypeCodeAndDSSCodeChoice {
 			componentContext_lazy = () -> StatementUpdateTypeCodeAndDSSCodeChoice.mmObject();
 			isDerived = false;
 			xmlTag = "StmtUpdTpAsCd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatementUpdateTypeAsCode";
 			definition = "Update type expressed as a code.";
 			maxOccurs = 1;
@@ -138,7 +140,7 @@ public class StatementUpdateTypeCodeAndDSSCodeChoice {
 			componentContext_lazy = () -> StatementUpdateTypeCodeAndDSSCodeChoice.mmObject();
 			isDerived = false;
 			xmlTag = "StmtUpdTpAsDSS";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatementUpdateTypeAsDSS";
 			definition = "Update type expressed as a data source scheme and a code used within the data source scheme.";
 			maxOccurs = 1;
@@ -150,10 +152,9 @@ public class StatementUpdateTypeCodeAndDSSCodeChoice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.StatementUpdateTypeCodeAndDSSCodeChoice.mmStatementUpdateTypeAsCode,
-						com.tools20022.repository.choice.StatementUpdateTypeCodeAndDSSCodeChoice.mmStatementUpdateTypeAsDSS);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(StatementUpdateTypeCodeAndDSSCodeChoice.mmStatementUpdateTypeAsCode, StatementUpdateTypeCodeAndDSSCodeChoice.mmStatementUpdateTypeAsDSS);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "StatementUpdateTypeCodeAndDSSCodeChoice";
 				definition = "Choice between formats for the update type.";
 			}

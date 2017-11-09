@@ -20,12 +20,16 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.ChargeBasis2Choice;
 import com.tools20022.repository.choice.ChargeType5Choice;
 import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.PercentageRate;
+import com.tools20022.repository.entity.Adjustment;
 import com.tools20022.repository.entity.Charges;
+import com.tools20022.repository.entity.Party;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -119,14 +123,14 @@ public class Fee1 {
 	 */
 	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Charges.mmChargeType;
+			businessElementTrace_lazy = () -> Charges.mmChargeType;
 			componentContext_lazy = () -> Fee1.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Type of fee (charge/commission).";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Fee2.mmType);
+			nextVersions_lazy = () -> Arrays.asList(Fee2.mmType);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> ChargeType5Choice.mmObject();
@@ -172,14 +176,14 @@ public class Fee1 {
 	 */
 	public static final MMMessageAttribute mmBasis = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Adjustment.mmCalculationMethod;
+			businessElementTrace_lazy = () -> Adjustment.mmCalculationMethod;
 			componentContext_lazy = () -> Fee1.mmObject();
 			isDerived = false;
 			xmlTag = "Bsis";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Basis";
 			definition = "Method used to calculate the fee (charge/commission). ";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Fee2.mmBasis);
+			nextVersions_lazy = () -> Arrays.asList(Fee2.mmBasis);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> ChargeBasis2Choice.mmObject();
@@ -229,14 +233,14 @@ public class Fee1 {
 	 */
 	public static final MMMessageAttribute mmStandardAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Adjustment.mmAmount;
+			businessElementTrace_lazy = () -> Adjustment.mmAmount;
 			componentContext_lazy = () -> Fee1.mmObject();
 			isDerived = false;
 			xmlTag = "StdAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StandardAmount";
 			definition = "Standard fee (charge/commission) amount as specified in the fund prospectus or agreed for the account.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Fee2.mmStandardAmount);
+			nextVersions_lazy = () -> Arrays.asList(Fee2.mmStandardAmount);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
@@ -287,14 +291,14 @@ public class Fee1 {
 	 */
 	public static final MMMessageAttribute mmStandardRate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Adjustment.mmChargeRate;
+			businessElementTrace_lazy = () -> Adjustment.mmChargeRate;
 			componentContext_lazy = () -> Fee1.mmObject();
 			isDerived = false;
 			xmlTag = "StdRate";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StandardRate";
 			definition = "Standard fee (charge/commission) rate used to calculate the amount of the charge or fee, as specified in the fund prospectus or agreed for the account.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Fee2.mmStandardRate);
+			nextVersions_lazy = () -> Arrays.asList(Fee2.mmStandardRate);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
@@ -337,7 +341,7 @@ public class Fee1 {
 			componentContext_lazy = () -> Fee1.mmObject();
 			isDerived = false;
 			xmlTag = "DscntDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DiscountDetails";
 			definition = "Discount or waiver applied to the fee (charge/commission).";
 			maxOccurs = 1;
@@ -381,11 +385,11 @@ public class Fee1 {
 	 */
 	public static final MMMessageAttribute mmRequestedAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Adjustment.mmAmount;
+			businessElementTrace_lazy = () -> Adjustment.mmAmount;
 			componentContext_lazy = () -> Fee1.mmObject();
 			isDerived = false;
 			xmlTag = "ReqdAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestedAmount";
 			definition = "Requested fee (charge/commission) amount as agreed for the account.";
 			maxOccurs = 1;
@@ -430,11 +434,11 @@ public class Fee1 {
 	 */
 	public static final MMMessageAttribute mmRequestedRate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Adjustment.mmChargeRate;
+			businessElementTrace_lazy = () -> Adjustment.mmChargeRate;
 			componentContext_lazy = () -> Fee1.mmObject();
 			isDerived = false;
 			xmlTag = "ReqdRate";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestedRate";
 			definition = "Requested rate used to calculate the amount of the fee (charge/commission), as agreed for the account.";
 			maxOccurs = 1;
@@ -484,10 +488,10 @@ public class Fee1 {
 			componentContext_lazy = () -> Fee1.mmObject();
 			isDerived = false;
 			xmlTag = "NonStdSLARef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonStandardSLAReference";
 			definition = "Reference to a sales agreement that overrides normal processing or the Service Level Agreement (SLA), such as a fee (charge/commission).";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Fee2.mmNonStandardSLAReference);
+			nextVersions_lazy = () -> Arrays.asList(Fee2.mmNonStandardSLAReference);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -538,14 +542,14 @@ public class Fee1 {
 	 */
 	public static final MMMessageAttribute mmRecipientIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> Fee1.mmObject();
 			isDerived = false;
 			xmlTag = "RcptId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RecipientIdentification";
 			definition = "Party entitled to the amount of money resulting from a fee (charge/commission).";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Fee2.mmRecipientIdentification);
+			nextVersions_lazy = () -> Arrays.asList(Fee2.mmRecipientIdentification);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.PartyIdentification113.mmObject();
@@ -555,12 +559,11 @@ public class Fee1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Fee1.mmType, com.tools20022.repository.msg.Fee1.mmBasis, com.tools20022.repository.msg.Fee1.mmStandardAmount,
-						com.tools20022.repository.msg.Fee1.mmStandardRate, com.tools20022.repository.msg.Fee1.mmDiscountDetails, com.tools20022.repository.msg.Fee1.mmRequestedAmount, com.tools20022.repository.msg.Fee1.mmRequestedRate,
-						com.tools20022.repository.msg.Fee1.mmNonStandardSLAReference, com.tools20022.repository.msg.Fee1.mmRecipientIdentification);
+				messageElement_lazy = () -> Arrays.asList(Fee1.mmType, Fee1.mmBasis, Fee1.mmStandardAmount, Fee1.mmStandardRate, Fee1.mmDiscountDetails, Fee1.mmRequestedAmount, Fee1.mmRequestedRate, Fee1.mmNonStandardSLAReference,
+						Fee1.mmRecipientIdentification);
 				trace_lazy = () -> Charges.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Fee1";
 				definition = "Amount of money associated with a service.";
 				previousVersion_lazy = () -> Charge17.mmObject();

@@ -20,8 +20,11 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.AccountManagementStatus1Code;
 import com.tools20022.repository.entity.AccountStatus;
+import com.tools20022.repository.entity.StatusReason;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -115,14 +118,14 @@ public class Status12Choice {
 	 */
 	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AccountStatus.mmManagementStatus;
+			businessElementTrace_lazy = () -> AccountStatus.mmManagementStatus;
 			componentContext_lazy = () -> Status12Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Sts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Status";
 			definition = "Status of the account opening instruction or account modification instruction.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Status14Choice.mmStatus);
+			nextVersions_lazy = () -> Arrays.asList(Status14Choice.mmStatus);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AccountManagementStatus1Code.mmObject();
@@ -171,14 +174,14 @@ public class Status12Choice {
 	 */
 	public static final MMMessageAssociationEnd mmRejected = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmRejectedStatusReason;
+			businessElementTrace_lazy = () -> StatusReason.mmRejectedStatusReason;
 			componentContext_lazy = () -> Status12Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Rjctd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rejected";
 			definition = "Status of the order is rejected.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Status14Choice.mmRejected);
+			nextVersions_lazy = () -> Arrays.asList(Status14Choice.mmRejected);
 			maxOccurs = 10;
 			minOccurs = 1;
 			isComposite = true;
@@ -189,10 +192,10 @@ public class Status12Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Status12Choice.mmStatus, com.tools20022.repository.choice.Status12Choice.mmRejected);
+				messageElement_lazy = () -> Arrays.asList(Status12Choice.mmStatus, Status12Choice.mmRejected);
 				trace_lazy = () -> AccountStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Status12Choice";
 				definition = "Choice of formats for the specification of the status.";
 				nextVersions_lazy = () -> Arrays.asList(Status14Choice.mmObject());

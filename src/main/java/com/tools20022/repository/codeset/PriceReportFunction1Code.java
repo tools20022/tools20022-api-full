@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.PriceReportFunctionCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -86,7 +88,7 @@ public class PriceReportFunction1Code extends PriceReportFunctionCode {
 	 */
 	public static final MMCode mmCompleteReplacementPriceReport = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CompleteReplacementPriceReport";
 			owner_lazy = () -> PriceReportFunction1Code.mmObject();
 		}
@@ -109,7 +111,7 @@ public class PriceReportFunction1Code extends PriceReportFunctionCode {
 	 */
 	public static final MMCode mmNewPriceReport = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewPriceReport";
 			owner_lazy = () -> PriceReportFunction1Code.mmObject();
 		}
@@ -132,7 +134,7 @@ public class PriceReportFunction1Code extends PriceReportFunctionCode {
 	 */
 	public static final MMCode mmPartialCorrectionPriceReport = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartialCorrectionPriceReport";
 			owner_lazy = () -> PriceReportFunction1Code.mmObject();
 		}
@@ -141,13 +143,12 @@ public class PriceReportFunction1Code extends PriceReportFunctionCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("REPL");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PriceReportFunction1Code";
 				definition = "Specifies the function of the price report.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PriceReportFunction1Code.mmCompleteReplacementPriceReport, com.tools20022.repository.codeset.PriceReportFunction1Code.mmNewPriceReport,
-						com.tools20022.repository.codeset.PriceReportFunction1Code.mmPartialCorrectionPriceReport);
+				code_lazy = () -> Arrays.asList(PriceReportFunction1Code.mmCompleteReplacementPriceReport, PriceReportFunction1Code.mmNewPriceReport, PriceReportFunction1Code.mmPartialCorrectionPriceReport);
 				trace_lazy = () -> PriceReportFunctionCode.mmObject();
 			}
 		});

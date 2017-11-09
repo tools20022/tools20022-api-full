@@ -17,17 +17,14 @@
 
 package com.tools20022.repository.entity;
 
-import com.tools20022.metamodel.MMBusinessAssociationEnd;
-import com.tools20022.metamodel.MMBusinessAttribute;
-import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.*;
 import com.tools20022.repository.codeset.ResolutionTypeCode;
 import com.tools20022.repository.codeset.VoteInstructionCode;
 import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.YesNoIndicator;
-import com.tools20022.repository.msg.Resolution1;
-import com.tools20022.repository.msg.Resolution2;
-import com.tools20022.repository.msg.Resolution3;
+import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -42,6 +39,25 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.Resolution1 Resolution1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Resolution2 Resolution2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Resolution3 Resolution3}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.Meeting#mmAgendaItem
+ * Meeting.mmAgendaItem}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Vote#mmResolution
+ * Vote.mmResolution}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -71,25 +87,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * Resolution.mmMeeting}</li>
  * <li>{@linkplain com.tools20022.repository.entity.Resolution#mmVoteOptions
  * Resolution.mmVoteOptions}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Meeting#mmAgendaItem
- * Meeting.mmAgendaItem}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Vote#mmResolution
- * Vote.mmResolution}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Resolution1 Resolution1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Resolution2 Resolution2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Resolution3 Resolution3}</li>
  * </ul>
  * </li>
  * <li>
@@ -169,13 +166,11 @@ public class Resolution {
 	 */
 	public static final MMBusinessAttribute mmIssuerLabel = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Resolution1.mmIssuerLabel, com.tools20022.repository.msg.Resolution2.mmIssuerLabel, com.tools20022.repository.msg.Vote1.mmIssuerLabel,
-					com.tools20022.repository.msg.Vote3.mmIssuerLabel, com.tools20022.repository.msg.Vote4.mmIssuerLabel, com.tools20022.repository.msg.Vote2.mmIssuerLabel, com.tools20022.repository.msg.Vote5.mmIssuerLabel,
-					com.tools20022.repository.msg.Vote7.mmIssuerLabel, com.tools20022.repository.msg.Resolution3.mmIssuerLabel, com.tools20022.repository.msg.Vote6.mmIssuerLabel, com.tools20022.repository.msg.Vote9.mmIssuerLabel,
-					com.tools20022.repository.msg.Vote8.mmIssuerLabel);
+			derivation_lazy = () -> Arrays.asList(Resolution1.mmIssuerLabel, Resolution2.mmIssuerLabel, Vote1.mmIssuerLabel, Vote3.mmIssuerLabel, Vote4.mmIssuerLabel, Vote2.mmIssuerLabel, Vote5.mmIssuerLabel, Vote7.mmIssuerLabel,
+					Resolution3.mmIssuerLabel, Vote6.mmIssuerLabel, Vote9.mmIssuerLabel, Vote8.mmIssuerLabel);
 			elementContext_lazy = () -> Resolution.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "IssuerLabel";
 			definition = "Numbering of the resolution as specified by the issuer or  its agent.";
 			maxOccurs = 1;
@@ -221,10 +216,10 @@ public class Resolution {
 	 */
 	public static final MMBusinessAttribute mmDescription = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Resolution1.mmDescription, com.tools20022.repository.msg.Resolution2.mmDescription, com.tools20022.repository.msg.Resolution3.mmDescription);
+			derivation_lazy = () -> Arrays.asList(Resolution1.mmDescription, Resolution2.mmDescription, Resolution3.mmDescription);
 			elementContext_lazy = () -> Resolution.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Description";
 			definition = "Free text description of the resolution.";
 			maxOccurs = 1;
@@ -270,10 +265,10 @@ public class Resolution {
 	 */
 	public static final MMBusinessAttribute mmTitle = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Resolution1.mmTitle, com.tools20022.repository.msg.Resolution2.mmTitle, com.tools20022.repository.msg.Resolution3.mmTitle);
+			derivation_lazy = () -> Arrays.asList(Resolution1.mmTitle, Resolution2.mmTitle, Resolution3.mmTitle);
 			elementContext_lazy = () -> Resolution.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Title";
 			definition = "Abbreviated description of the resolution.";
 			maxOccurs = 1;
@@ -321,10 +316,10 @@ public class Resolution {
 	 */
 	public static final MMBusinessAttribute mmType = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Resolution1.mmType, com.tools20022.repository.msg.Resolution2.mmType, com.tools20022.repository.msg.Resolution3.mmType);
+			derivation_lazy = () -> Arrays.asList(Resolution1.mmType, Resolution2.mmType, Resolution3.mmType);
 			elementContext_lazy = () -> Resolution.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Type";
 			definition = "Indicates whether a resolution is ordinary, extraordinary or special.";
 			maxOccurs = 1;
@@ -376,11 +371,10 @@ public class Resolution {
 	 */
 	public static final MMBusinessAttribute mmForInformationOnly = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Resolution1.mmForInformationOnly, com.tools20022.repository.msg.Resolution2.mmForInformationOnly,
-					com.tools20022.repository.msg.Resolution3.mmForInformationOnly);
+			derivation_lazy = () -> Arrays.asList(Resolution1.mmForInformationOnly, Resolution2.mmForInformationOnly, Resolution3.mmForInformationOnly);
 			elementContext_lazy = () -> Resolution.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ForInformationOnly";
 			definition = "Indicates whether the resolution is listed for information or for voting.";
 			maxOccurs = 1;
@@ -433,11 +427,10 @@ public class Resolution {
 	 */
 	public static final MMBusinessAttribute mmSubmittedBySecurityHolder = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Resolution1.mmSubmittedBySecurityHolder, com.tools20022.repository.msg.Resolution2.mmSubmittedBySecurityHolder,
-					com.tools20022.repository.msg.Resolution3.mmSubmittedBySecurityHolder);
+			derivation_lazy = () -> Arrays.asList(Resolution1.mmSubmittedBySecurityHolder, Resolution2.mmSubmittedBySecurityHolder, Resolution3.mmSubmittedBySecurityHolder);
 			elementContext_lazy = () -> Resolution.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SubmittedBySecurityHolder";
 			definition = "Indicates whether the resolution has been submitted by the security holder.";
 			maxOccurs = 1;
@@ -490,11 +483,10 @@ public class Resolution {
 	 */
 	public static final MMBusinessAttribute mmManagementRecommendation = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Resolution1.mmManagementRecommendation, com.tools20022.repository.msg.Resolution2.mmManagementRecommendation,
-					com.tools20022.repository.msg.Resolution3.mmManagementRecommendation);
+			derivation_lazy = () -> Arrays.asList(Resolution1.mmManagementRecommendation, Resolution2.mmManagementRecommendation, Resolution3.mmManagementRecommendation);
 			elementContext_lazy = () -> Resolution.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ManagementRecommendation";
 			definition = "Indicates how the management of the issuing company wishes the security holders to vote.";
 			maxOccurs = 1;
@@ -547,11 +539,10 @@ public class Resolution {
 	 */
 	public static final MMBusinessAttribute mmNotifyingPartyRecommendation = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Resolution1.mmNotifyingPartyRecommendation, com.tools20022.repository.msg.Resolution2.mmNotifyingPartyRecommendation,
-					com.tools20022.repository.msg.Resolution3.mmNotifyingPartyRecommendation);
+			derivation_lazy = () -> Arrays.asList(Resolution1.mmNotifyingPartyRecommendation, Resolution2.mmNotifyingPartyRecommendation, Resolution3.mmNotifyingPartyRecommendation);
 			elementContext_lazy = () -> Resolution.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NotifyingPartyRecommendation";
 			definition = "Indicates how the notifying party recommends that the security holders vote.";
 			maxOccurs = 1;
@@ -598,13 +589,13 @@ public class Resolution {
 		{
 			elementContext_lazy = () -> Resolution.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CastVotes";
 			definition = "Specifies whether a resolution is accepted or not and details the number of votes and their status.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.Vote.mmResolution;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Vote.mmObject();
 		}
 	};
@@ -644,13 +635,13 @@ public class Resolution {
 		{
 			elementContext_lazy = () -> Resolution.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Meeting";
 			definition = "Meeting for which an agenda item is specified.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.Meeting.mmAgendaItem;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Meeting.mmObject();
 		}
 	};
@@ -687,7 +678,7 @@ public class Resolution {
 		{
 			elementContext_lazy = () -> Resolution.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "VoteOptions";
 			definition = "Vote options allowed at the resolution level. When specified, it supersedes the vote options given for the meeting.";
 			maxOccurs = 1;
@@ -699,15 +690,13 @@ public class Resolution {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Resolution";
 				definition = "Specifies an item in the agenda of the meeting. Some resolutions are submitted to the vote of the security holders, some are presented for information only.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Meeting.mmAgendaItem, com.tools20022.repository.entity.Vote.mmResolution);
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Resolution.mmIssuerLabel, com.tools20022.repository.entity.Resolution.mmDescription, com.tools20022.repository.entity.Resolution.mmTitle,
-						com.tools20022.repository.entity.Resolution.mmType, com.tools20022.repository.entity.Resolution.mmForInformationOnly, com.tools20022.repository.entity.Resolution.mmSubmittedBySecurityHolder,
-						com.tools20022.repository.entity.Resolution.mmManagementRecommendation, com.tools20022.repository.entity.Resolution.mmNotifyingPartyRecommendation, com.tools20022.repository.entity.Resolution.mmCastVotes,
-						com.tools20022.repository.entity.Resolution.mmMeeting, com.tools20022.repository.entity.Resolution.mmVoteOptions);
+				element_lazy = () -> Arrays.asList(Resolution.mmIssuerLabel, Resolution.mmDescription, Resolution.mmTitle, Resolution.mmType, Resolution.mmForInformationOnly, Resolution.mmSubmittedBySecurityHolder,
+						Resolution.mmManagementRecommendation, Resolution.mmNotifyingPartyRecommendation, Resolution.mmCastVotes, Resolution.mmMeeting, Resolution.mmVoteOptions);
 				derivationComponent_lazy = () -> Arrays.asList(Resolution1.mmObject(), Resolution2.mmObject(), Resolution3.mmObject());
 			}
 		});

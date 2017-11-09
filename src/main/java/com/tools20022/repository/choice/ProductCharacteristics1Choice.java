@@ -19,7 +19,9 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.ProductCharacteristics;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification4;
 import com.tools20022.repository.msg.ProductCharacteristics1;
 import java.util.Arrays;
@@ -105,7 +107,7 @@ public class ProductCharacteristics1Choice {
 			componentContext_lazy = () -> ProductCharacteristics1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "StrdPdctChrtcs";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StructuredProductCharacteristics";
 			definition = "Specifies the type of product characteristic.";
 			maxOccurs = 1;
@@ -155,7 +157,7 @@ public class ProductCharacteristics1Choice {
 			componentContext_lazy = () -> ProductCharacteristics1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "OthrPdctChrtcs";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherProductCharacteristics";
 			definition = "Specifies the type of product characteristic not present in the code list.";
 			maxOccurs = 1;
@@ -168,11 +170,10 @@ public class ProductCharacteristics1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ProductCharacteristics1Choice.mmStructuredProductCharacteristics,
-						com.tools20022.repository.choice.ProductCharacteristics1Choice.mmOtherProductCharacteristics);
+				messageElement_lazy = () -> Arrays.asList(ProductCharacteristics1Choice.mmStructuredProductCharacteristics, ProductCharacteristics1Choice.mmOtherProductCharacteristics);
 				trace_lazy = () -> ProductCharacteristics.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ProductCharacteristics1Choice";
 				definition = "Specifies that the category of a product may be indicated by a code or by free text.";
 			}

@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ChargePaymentMethodCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -77,7 +79,7 @@ public class ChargePaymentMethod1Code extends ChargePaymentMethodCode {
 	 */
 	public static final MMCode mmCash = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cash";
 			owner_lazy = () -> ChargePaymentMethod1Code.mmObject();
 		}
@@ -100,7 +102,7 @@ public class ChargePaymentMethod1Code extends ChargePaymentMethodCode {
 	 */
 	public static final MMCode mmUnit = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unit";
 			owner_lazy = () -> ChargePaymentMethod1Code.mmObject();
 		}
@@ -109,11 +111,11 @@ public class ChargePaymentMethod1Code extends ChargePaymentMethodCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ChargePaymentMethod1Code";
 				definition = "Specifies how expenses are paid.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ChargePaymentMethod1Code.mmCash, com.tools20022.repository.codeset.ChargePaymentMethod1Code.mmUnit);
+				code_lazy = () -> Arrays.asList(ChargePaymentMethod1Code.mmCash, ChargePaymentMethod1Code.mmUnit);
 				trace_lazy = () -> ChargePaymentMethodCode.mmObject();
 			}
 		});

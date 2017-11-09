@@ -19,7 +19,10 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.entity.PairOff;
 import com.tools20022.repository.entity.SecuritiesSettlement;
+import com.tools20022.repository.GeneratedRepository;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -123,14 +126,14 @@ public class PairedOrTurnedQuantity1Choice {
 	 */
 	public static final MMMessageAttribute mmPairedOffQuantity = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PairOff.mmPairedOffQuantity;
+			businessElementTrace_lazy = () -> PairOff.mmPairedOffQuantity;
 			componentContext_lazy = () -> PairedOrTurnedQuantity1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "PairdOffQty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PairedOffQuantity";
 			definition = "Quantity of financial instruments of the linked transaction to be paired-off.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PairedOrTurnedQuantity3Choice.mmPairedOffQuantity);
+			nextVersions_lazy = () -> Arrays.asList(PairedOrTurnedQuantity3Choice.mmPairedOffQuantity);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.choice.FinancialInstrumentQuantity1Choice.mmObject();
@@ -182,14 +185,14 @@ public class PairedOrTurnedQuantity1Choice {
 	 */
 	public static final MMMessageAttribute mmTurnedQuantity = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmTurnedQuantity;
+			businessElementTrace_lazy = () -> SecuritiesSettlement.mmTurnedQuantity;
 			componentContext_lazy = () -> PairedOrTurnedQuantity1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "TrndQty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TurnedQuantity";
 			definition = "Quantity of financial instruments of the linked transaction to be turned.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PairedOrTurnedQuantity3Choice.mmTurnedQuantity);
+			nextVersions_lazy = () -> Arrays.asList(PairedOrTurnedQuantity3Choice.mmTurnedQuantity);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.choice.FinancialInstrumentQuantity1Choice.mmObject();
@@ -199,10 +202,10 @@ public class PairedOrTurnedQuantity1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PairedOrTurnedQuantity1Choice.mmPairedOffQuantity, com.tools20022.repository.choice.PairedOrTurnedQuantity1Choice.mmTurnedQuantity);
+				messageElement_lazy = () -> Arrays.asList(PairedOrTurnedQuantity1Choice.mmPairedOffQuantity, PairedOrTurnedQuantity1Choice.mmTurnedQuantity);
 				trace_lazy = () -> SecuritiesSettlement.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
 						return DateFormat.getDateInstance(java.text.DateFormat.LONG).parse("May 5, 2016");

@@ -19,10 +19,15 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CountryCode;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.Max70Text;
+import com.tools20022.repository.entity.Country;
+import com.tools20022.repository.entity.PartyName;
+import com.tools20022.repository.entity.Transport;
 import com.tools20022.repository.entity.TransportBySea;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -123,14 +128,14 @@ public class TransportBySea6 {
 	 */
 	public static final MMMessageAttribute mmPortOfLoading = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Transport.mmPlaceOfDeparture;
+			businessElementTrace_lazy = () -> Transport.mmPlaceOfDeparture;
 			componentContext_lazy = () -> TransportBySea6.mmObject();
 			isDerived = false;
 			xmlTag = "PortOfLoadng";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PortOfLoading";
 			definition = "Identifies the port where the goods are loaded on board the ship.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TransportBySea5.mmPortOfLoading;
+			previousVersion_lazy = () -> TransportBySea5.mmPortOfLoading;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
@@ -175,14 +180,14 @@ public class TransportBySea6 {
 	 */
 	public static final MMMessageAttribute mmPortOfDischarge = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Transport.mmPlaceOfDestination;
+			businessElementTrace_lazy = () -> Transport.mmPlaceOfDestination;
 			componentContext_lazy = () -> TransportBySea6.mmObject();
 			isDerived = false;
 			xmlTag = "PortOfDschrge";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PortOfDischarge";
 			definition = "Identifies the port where the goods are discharged.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TransportBySea5.mmPortOfDischarge;
+			previousVersion_lazy = () -> TransportBySea5.mmPortOfDischarge;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
@@ -222,11 +227,11 @@ public class TransportBySea6 {
 	 */
 	public static final MMMessageAttribute mmVesselName = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TransportBySea.mmVesselName;
+			businessElementTrace_lazy = () -> TransportBySea.mmVesselName;
 			componentContext_lazy = () -> TransportBySea6.mmObject();
 			isDerived = false;
 			xmlTag = "VsslNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VesselName";
 			definition = "Name of a vessel.";
 			maxOccurs = 1;
@@ -277,14 +282,14 @@ public class TransportBySea6 {
 	 */
 	public static final MMMessageAttribute mmSeaCarrierName = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyName.mmName;
+			businessElementTrace_lazy = () -> PartyName.mmName;
 			componentContext_lazy = () -> TransportBySea6.mmObject();
 			isDerived = false;
 			xmlTag = "SeaCrrierNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SeaCarrierName";
 			definition = "Identifies the party that is responsible for the conveyance of the goods from one place to another.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TransportBySea5.mmSeaCarrierName;
+			previousVersion_lazy = () -> TransportBySea5.mmSeaCarrierName;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max70Text.mmObject();
@@ -333,14 +338,14 @@ public class TransportBySea6 {
 	 */
 	public static final MMMessageAttribute mmSeaCarrierCountry = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Country.mmCode;
+			businessElementTrace_lazy = () -> Country.mmCode;
 			componentContext_lazy = () -> TransportBySea6.mmObject();
 			isDerived = false;
 			xmlTag = "SeaCrrierCtry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SeaCarrierCountry";
 			definition = "Country in which the carrier of the goods, for example, shipping company, is located or registered.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TransportBySea5.mmSeaCarrierCountry;
+			previousVersion_lazy = () -> TransportBySea5.mmSeaCarrierCountry;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CountryCode.mmObject();
@@ -390,14 +395,14 @@ public class TransportBySea6 {
 	 */
 	public static final MMMessageAttribute mmCarrierAgentName = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyName.mmName;
+			businessElementTrace_lazy = () -> PartyName.mmName;
 			componentContext_lazy = () -> TransportBySea6.mmObject();
 			isDerived = false;
 			xmlTag = "CrrierAgtNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CarrierAgentName";
 			definition = "Name of the carrier's (for example, shipping company's) agent that acts on behalf of the carrier and may be the issuer of transport documents relating to the underlying shipment.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TransportBySea5.mmCarrierAgentName;
+			previousVersion_lazy = () -> TransportBySea5.mmCarrierAgentName;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max70Text.mmObject();
@@ -447,14 +452,14 @@ public class TransportBySea6 {
 	 */
 	public static final MMMessageAttribute mmCarrierAgentCountry = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Country.mmCode;
+			businessElementTrace_lazy = () -> Country.mmCode;
 			componentContext_lazy = () -> TransportBySea6.mmObject();
 			isDerived = false;
 			xmlTag = "CrrierAgtCtry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CarrierAgentCountry";
 			definition = "Country of registration of the carrier's (for example, shipping company's) agent that acts on behalf of the carrier and may be the issuer of transport documents relating to the underlying shipment.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TransportBySea5.mmCarrierAgentCountry;
+			previousVersion_lazy = () -> TransportBySea5.mmCarrierAgentCountry;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CountryCode.mmObject();
@@ -464,12 +469,11 @@ public class TransportBySea6 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransportBySea6.mmPortOfLoading, com.tools20022.repository.msg.TransportBySea6.mmPortOfDischarge,
-						com.tools20022.repository.msg.TransportBySea6.mmVesselName, com.tools20022.repository.msg.TransportBySea6.mmSeaCarrierName, com.tools20022.repository.msg.TransportBySea6.mmSeaCarrierCountry,
-						com.tools20022.repository.msg.TransportBySea6.mmCarrierAgentName, com.tools20022.repository.msg.TransportBySea6.mmCarrierAgentCountry);
+				messageElement_lazy = () -> Arrays.asList(TransportBySea6.mmPortOfLoading, TransportBySea6.mmPortOfDischarge, TransportBySea6.mmVesselName, TransportBySea6.mmSeaCarrierName, TransportBySea6.mmSeaCarrierCountry,
+						TransportBySea6.mmCarrierAgentName, TransportBySea6.mmCarrierAgentCountry);
 				trace_lazy = () -> TransportBySea.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TransportBySea6";
 				definition = "Information related for the transportation of goods by sea.";
 				previousVersion_lazy = () -> TransportBySea5.mmObject();

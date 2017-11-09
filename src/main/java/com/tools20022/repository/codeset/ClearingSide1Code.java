@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ClearingSideCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -85,7 +87,7 @@ public class ClearingSide1Code extends ClearingSideCode {
 	 */
 	public static final MMCode mmBuy = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Buy";
 			owner_lazy = () -> ClearingSide1Code.mmObject();
 		}
@@ -108,7 +110,7 @@ public class ClearingSide1Code extends ClearingSideCode {
 	 */
 	public static final MMCode mmSell = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Sell";
 			owner_lazy = () -> ClearingSide1Code.mmObject();
 		}
@@ -131,7 +133,7 @@ public class ClearingSide1Code extends ClearingSideCode {
 	 */
 	public static final MMCode mmLend = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Lend";
 			owner_lazy = () -> ClearingSide1Code.mmObject();
 		}
@@ -154,7 +156,7 @@ public class ClearingSide1Code extends ClearingSideCode {
 	 */
 	public static final MMCode mmBorrow = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Borrow";
 			owner_lazy = () -> ClearingSide1Code.mmObject();
 		}
@@ -163,13 +165,12 @@ public class ClearingSide1Code extends ClearingSideCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("BUYI");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ClearingSide1Code";
 				definition = "Side taken by a party on an order.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ClearingSide1Code.mmBuy, com.tools20022.repository.codeset.ClearingSide1Code.mmSell, com.tools20022.repository.codeset.ClearingSide1Code.mmLend,
-						com.tools20022.repository.codeset.ClearingSide1Code.mmBorrow);
+				code_lazy = () -> Arrays.asList(ClearingSide1Code.mmBuy, ClearingSide1Code.mmSell, ClearingSide1Code.mmLend, ClearingSide1Code.mmBorrow);
 				trace_lazy = () -> ClearingSideCode.mmObject();
 			}
 		});

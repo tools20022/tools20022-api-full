@@ -20,11 +20,14 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.ProductCategory1Choice;
 import com.tools20022.repository.choice.ProductIdentifier2Choice;
 import com.tools20022.repository.datatype.Max140Text;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.Product;
+import com.tools20022.repository.entity.ProductIdentification;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -124,14 +127,14 @@ public class TradeProduct2 {
 	 */
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Product.mmProductIdentification;
+			businessElementTrace_lazy = () -> Product.mmProductIdentification;
 			componentContext_lazy = () -> TradeProduct2.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Identification of the product.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TradeProduct1.mmIdentification;
+			previousVersion_lazy = () -> TradeProduct1.mmIdentification;
 			minOccurs = 0;
 			complexType_lazy = () -> ProductIdentifier2Choice.mmObject();
 		}
@@ -175,14 +178,14 @@ public class TradeProduct2 {
 	 */
 	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Product.mmName;
+			businessElementTrace_lazy = () -> Product.mmName;
 			componentContext_lazy = () -> TradeProduct2.mmObject();
 			isDerived = false;
 			xmlTag = "Nm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Name";
 			definition = "Name of a product.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TradeProduct1.mmName;
+			previousVersion_lazy = () -> TradeProduct1.mmName;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -228,14 +231,14 @@ public class TradeProduct2 {
 	 */
 	public static final MMMessageAttribute mmDescription = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Product.mmDescription;
+			businessElementTrace_lazy = () -> Product.mmDescription;
 			componentContext_lazy = () -> TradeProduct2.mmObject();
 			isDerived = false;
 			xmlTag = "Desc";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Description";
 			definition = "Information about the goods and/or services of a trade transaction.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TradeProduct1.mmDescription;
+			previousVersion_lazy = () -> TradeProduct1.mmDescription;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
@@ -281,14 +284,14 @@ public class TradeProduct2 {
 	 */
 	public static final MMMessageAttribute mmCountryOfOrigin = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Product.mmOrigin;
+			businessElementTrace_lazy = () -> Product.mmOrigin;
 			componentContext_lazy = () -> TradeProduct2.mmObject();
 			isDerived = false;
 			xmlTag = "CtryOfOrgn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CountryOfOrigin";
 			definition = "Country of origin of the product.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TradeProduct1.mmCountryOfOrigin;
+			previousVersion_lazy = () -> TradeProduct1.mmCountryOfOrigin;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.CountryCodeAndName1.mmObject();
 		}
@@ -332,14 +335,14 @@ public class TradeProduct2 {
 	 */
 	public static final MMMessageAssociationEnd mmProductCharacteristics = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Product.mmCharacteristics;
+			businessElementTrace_lazy = () -> Product.mmCharacteristics;
 			componentContext_lazy = () -> TradeProduct2.mmObject();
 			isDerived = false;
 			xmlTag = "PdctChrtcs";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProductCharacteristics";
 			definition = "Identifies the characteristic of a product.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TradeProduct1.mmProductCharacteristics;
+			previousVersion_lazy = () -> TradeProduct1.mmProductCharacteristics;
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.ProductCharacteristics3.mmObject();
@@ -385,14 +388,14 @@ public class TradeProduct2 {
 	 */
 	public static final MMMessageAttribute mmProductCategory = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Product.mmProductCategory;
+			businessElementTrace_lazy = () -> Product.mmProductCategory;
 			componentContext_lazy = () -> TradeProduct2.mmObject();
 			isDerived = false;
 			xmlTag = "PdctCtgy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProductCategory";
 			definition = "Category of the product.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TradeProduct1.mmProductCategory;
+			previousVersion_lazy = () -> TradeProduct1.mmProductCategory;
 			minOccurs = 0;
 			complexType_lazy = () -> ProductCategory1Choice.mmObject();
 		}
@@ -437,14 +440,14 @@ public class TradeProduct2 {
 	 */
 	public static final MMMessageAttribute mmGlobalSerialIdentifier = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ProductIdentification.mmIdentifier;
+			businessElementTrace_lazy = () -> ProductIdentification.mmIdentifier;
 			componentContext_lazy = () -> TradeProduct2.mmObject();
 			isDerived = false;
 			xmlTag = "GblSrlIdr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GlobalSerialIdentifier";
 			definition = "Unique global serial identifier for this product instance.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TradeProduct1.mmGlobalSerialIdentifier;
+			previousVersion_lazy = () -> TradeProduct1.mmGlobalSerialIdentifier;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
@@ -453,12 +456,11 @@ public class TradeProduct2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TradeProduct2.mmIdentification, com.tools20022.repository.msg.TradeProduct2.mmName, com.tools20022.repository.msg.TradeProduct2.mmDescription,
-						com.tools20022.repository.msg.TradeProduct2.mmCountryOfOrigin, com.tools20022.repository.msg.TradeProduct2.mmProductCharacteristics, com.tools20022.repository.msg.TradeProduct2.mmProductCategory,
-						com.tools20022.repository.msg.TradeProduct2.mmGlobalSerialIdentifier);
+				messageElement_lazy = () -> Arrays.asList(TradeProduct2.mmIdentification, TradeProduct2.mmName, TradeProduct2.mmDescription, TradeProduct2.mmCountryOfOrigin, TradeProduct2.mmProductCharacteristics,
+						TradeProduct2.mmProductCategory, TradeProduct2.mmGlobalSerialIdentifier);
 				trace_lazy = () -> Product.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TradeProduct2";
 				definition = "Tangible output or service produced by human or mechanical effort, or by a natural process for purposes of specifying a product.";
 				previousVersion_lazy = () -> TradeProduct1.mmObject();

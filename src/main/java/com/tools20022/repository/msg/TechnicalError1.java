@@ -20,9 +20,11 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.TechnicalError1Choice;
 import com.tools20022.repository.codeset.ErrorSeverity1Code;
 import com.tools20022.repository.datatype.Max140Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -99,7 +101,7 @@ public class TechnicalError1 {
 			componentContext_lazy = () -> TechnicalError1.mmObject();
 			isDerived = false;
 			xmlTag = "svrty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Severity";
 			definition = "Indicates the severity of the related error.";
 			maxOccurs = 1;
@@ -140,7 +142,7 @@ public class TechnicalError1 {
 			componentContext_lazy = () -> TechnicalError1.mmObject();
 			isDerived = false;
 			xmlTag = "ErrCd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ErrorCode";
 			definition = "Specifies the error code.";
 			maxOccurs = 1;
@@ -182,7 +184,7 @@ public class TechnicalError1 {
 			componentContext_lazy = () -> TechnicalError1.mmObject();
 			isDerived = false;
 			xmlTag = "Desc";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Description";
 			definition = "Specification of the error, in free format.";
 			minOccurs = 1;
@@ -193,9 +195,9 @@ public class TechnicalError1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TechnicalError1.mmSeverity, com.tools20022.repository.msg.TechnicalError1.mmErrorCode, com.tools20022.repository.msg.TechnicalError1.mmDescription);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(TechnicalError1.mmSeverity, TechnicalError1.mmErrorCode, TechnicalError1.mmDescription);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "TechnicalError1";
 				definition = "Specifies information concerning the technical error that prevented delivery of the referenced messaging by the payment gateway application.";
 			}

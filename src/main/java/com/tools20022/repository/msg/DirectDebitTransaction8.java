@@ -20,9 +20,12 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.DirectDebit;
+import com.tools20022.repository.entity.Party;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -135,15 +138,15 @@ public class DirectDebitTransaction8 {
 	 */
 	public static final MMMessageAssociationEnd mmMandateRelatedInformation = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.DirectDebit.mmDirectDebitMandate;
+			businessElementTrace_lazy = () -> DirectDebit.mmDirectDebitMandate;
 			componentContext_lazy = () -> DirectDebitTransaction8.mmObject();
 			isDerived = false;
 			xmlTag = "MndtRltdInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MandateRelatedInformation";
 			definition = "Provides further details of the direct debit mandate signed between the creditor and the debtor.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DirectDebitTransaction9.mmMandateRelatedInformation);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.DirectDebitTransaction7.mmMandateRelatedInformation;
+			nextVersions_lazy = () -> Arrays.asList(DirectDebitTransaction9.mmMandateRelatedInformation);
+			previousVersion_lazy = () -> DirectDebitTransaction7.mmMandateRelatedInformation;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -197,15 +200,15 @@ public class DirectDebitTransaction8 {
 	 */
 	public static final MMMessageAssociationEnd mmCreditorSchemeIdentification = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> DirectDebitTransaction8.mmObject();
 			isDerived = false;
 			xmlTag = "CdtrSchmeId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditorSchemeIdentification";
 			definition = "Credit party that signs the mandate.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DirectDebitTransaction9.mmCreditorSchemeIdentification);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.DirectDebitTransaction7.mmCreditorSchemeIdentification;
+			nextVersions_lazy = () -> Arrays.asList(DirectDebitTransaction9.mmCreditorSchemeIdentification);
+			previousVersion_lazy = () -> DirectDebitTransaction7.mmCreditorSchemeIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -267,15 +270,15 @@ public class DirectDebitTransaction8 {
 	 */
 	public static final MMMessageAttribute mmPreNotificationIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.DirectDebit.mmPreNotificationIdentification;
+			businessElementTrace_lazy = () -> DirectDebit.mmPreNotificationIdentification;
 			componentContext_lazy = () -> DirectDebitTransaction8.mmObject();
 			isDerived = false;
 			xmlTag = "PreNtfctnId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreNotificationIdentification";
 			definition = "Unique and unambiguous identification of the pre-notification which is sent separately from the direct debit instruction.\n\nUsage: The direct debit pre-notification is used to reconcile separately sent collection information with the direct debit transaction information.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DirectDebitTransaction9.mmPreNotificationIdentification);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.DirectDebitTransaction7.mmPreNotificationIdentification;
+			nextVersions_lazy = () -> Arrays.asList(DirectDebitTransaction9.mmPreNotificationIdentification);
+			previousVersion_lazy = () -> DirectDebitTransaction7.mmPreNotificationIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -333,15 +336,15 @@ public class DirectDebitTransaction8 {
 	 */
 	public static final MMMessageAttribute mmPreNotificationDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.DirectDebit.mmPreNotificationDate;
+			businessElementTrace_lazy = () -> DirectDebit.mmPreNotificationDate;
 			componentContext_lazy = () -> DirectDebitTransaction8.mmObject();
 			isDerived = false;
 			xmlTag = "PreNtfctnDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreNotificationDate";
 			definition = "Date on which the creditor notifies the debtor about the amount and date on which the direct debit instruction will be presented to the debtor's agent.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DirectDebitTransaction9.mmPreNotificationDate);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.DirectDebitTransaction7.mmPreNotificationDate;
+			nextVersions_lazy = () -> Arrays.asList(DirectDebitTransaction9.mmPreNotificationDate);
+			previousVersion_lazy = () -> DirectDebitTransaction7.mmPreNotificationDate;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
@@ -351,11 +354,11 @@ public class DirectDebitTransaction8 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DirectDebitTransaction8.mmMandateRelatedInformation, com.tools20022.repository.msg.DirectDebitTransaction8.mmCreditorSchemeIdentification,
-						com.tools20022.repository.msg.DirectDebitTransaction8.mmPreNotificationIdentification, com.tools20022.repository.msg.DirectDebitTransaction8.mmPreNotificationDate);
+				messageElement_lazy = () -> Arrays.asList(DirectDebitTransaction8.mmMandateRelatedInformation, DirectDebitTransaction8.mmCreditorSchemeIdentification, DirectDebitTransaction8.mmPreNotificationIdentification,
+						DirectDebitTransaction8.mmPreNotificationDate);
 				trace_lazy = () -> DirectDebit.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DirectDebitTransaction8";
 				definition = "Provides further specific details on the direct debit transaction and the related mandate.";
 				nextVersions_lazy = () -> Arrays.asList(DirectDebitTransaction9.mmObject());

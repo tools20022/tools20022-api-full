@@ -19,7 +19,10 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.entity.InvestmentFundTransaction;
 import com.tools20022.repository.entity.SwitchExecution;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -102,11 +105,11 @@ public class SwitchExecution5 {
 	 */
 	public static final MMMessageAssociationEnd mmInvestmentAccountDetails = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundTransaction.mmInvestmentAccount;
+			businessElementTrace_lazy = () -> InvestmentFundTransaction.mmInvestmentAccount;
 			componentContext_lazy = () -> SwitchExecution5.mmObject();
 			isDerived = false;
 			xmlTag = "InvstmtAcctDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestmentAccountDetails";
 			definition = "Account information of the switch order / switch order confirmation for which the advice is given.";
 			maxOccurs = 1;
@@ -153,11 +156,11 @@ public class SwitchExecution5 {
 	 */
 	public static final MMMessageAssociationEnd mmRedemptionLeg = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SwitchExecution.mmRedemptionLeg;
+			businessElementTrace_lazy = () -> SwitchExecution.mmRedemptionLeg;
 			componentContext_lazy = () -> SwitchExecution5.mmObject();
 			isDerived = false;
 			xmlTag = "RedLeg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RedemptionLeg";
 			definition = "Redemption leg information of the switch order / switch order confirmation for which the advice is given.";
 			minOccurs = 1;
@@ -203,11 +206,11 @@ public class SwitchExecution5 {
 	 */
 	public static final MMMessageAssociationEnd mmSubscriptionLeg = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SwitchExecution.mmSubscriptionLeg;
+			businessElementTrace_lazy = () -> SwitchExecution.mmSubscriptionLeg;
 			componentContext_lazy = () -> SwitchExecution5.mmObject();
 			isDerived = false;
 			xmlTag = "SbcptLeg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubscriptionLeg";
 			definition = "Subscription leg information of the switch order / switch order confirmation for which the advice is given.";
 			minOccurs = 1;
@@ -219,11 +222,10 @@ public class SwitchExecution5 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SwitchExecution5.mmInvestmentAccountDetails, com.tools20022.repository.msg.SwitchExecution5.mmRedemptionLeg,
-						com.tools20022.repository.msg.SwitchExecution5.mmSubscriptionLeg);
+				messageElement_lazy = () -> Arrays.asList(SwitchExecution5.mmInvestmentAccountDetails, SwitchExecution5.mmRedemptionLeg, SwitchExecution5.mmSubscriptionLeg);
 				trace_lazy = () -> SwitchExecution.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SwitchExecution5";
 				definition = "Extract of trade data for a switch order confirmation.";
 			}

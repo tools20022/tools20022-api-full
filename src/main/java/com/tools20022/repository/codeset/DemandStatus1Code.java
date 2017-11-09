@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.DemandStatusCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -81,7 +83,7 @@ public class DemandStatus1Code extends DemandStatusCode {
 	 */
 	public static final MMCode mmExtend = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Extend";
 			owner_lazy = () -> DemandStatus1Code.mmObject();
 		}
@@ -104,7 +106,7 @@ public class DemandStatus1Code extends DemandStatusCode {
 	 */
 	public static final MMCode mmPAY = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PAY";
 			owner_lazy = () -> DemandStatus1Code.mmObject();
 		}
@@ -113,12 +115,12 @@ public class DemandStatus1Code extends DemandStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("EXTD");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DemandStatus1Code";
 				definition = "Specifies the status of the demand for payment.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DemandStatus1Code.mmExtend, com.tools20022.repository.codeset.DemandStatus1Code.mmPAY);
+				code_lazy = () -> Arrays.asList(DemandStatus1Code.mmExtend, DemandStatus1Code.mmPAY);
 				trace_lazy = () -> DemandStatusCode.mmObject();
 			}
 		});

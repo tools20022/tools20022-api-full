@@ -17,12 +17,13 @@
 
 package com.tools20022.repository.entity;
 
-import com.tools20022.metamodel.MMBusinessAssociationEnd;
-import com.tools20022.metamodel.MMBusinessAttribute;
-import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.*;
 import com.tools20022.repository.codeset.TimeUnitCode;
 import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.datatype.PercentageRate;
+import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.Future1;
+import com.tools20022.repository.msg.Future2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -35,6 +36,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.Future#mmFutureRule
+ * Future.mmFutureRule}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -52,14 +61,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.entity.FutureRule#mmBaseInterestRate
  * FutureRule.mmBaseInterestRate}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Future#mmFutureRule
- * Future.mmFutureRule}</li>
  * </ul>
  * </li>
  * <li>
@@ -117,10 +118,10 @@ public class FutureRule {
 	 */
 	public static final MMBusinessAttribute mmTimeType = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Future1.mmTimeUnit, com.tools20022.repository.msg.Future2.mmTimeUnit);
+			derivation_lazy = () -> Arrays.asList(Future1.mmTimeUnit, Future2.mmTimeUnit);
 			elementContext_lazy = () -> FutureRule.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TimeType";
 			definition = "Indicates whether the time to maturity is measured in months or years.";
 			maxOccurs = 1;
@@ -164,13 +165,13 @@ public class FutureRule {
 		{
 			elementContext_lazy = () -> FutureRule.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedFutureInstrument";
 			definition = "Future instrument for which a rule is specified.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.Future.mmFutureRule;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Future.mmObject();
 		}
 	};
@@ -205,7 +206,7 @@ public class FutureRule {
 		{
 			elementContext_lazy = () -> FutureRule.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MaximumTimeToMaturity";
 			definition = "Maximum number of time types up to maturity or first redemption option.";
 			maxOccurs = 1;
@@ -244,7 +245,7 @@ public class FutureRule {
 		{
 			elementContext_lazy = () -> FutureRule.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MinimumTimeToMaturity";
 			definition = "Minimum number of time types up to maturity or first redemption option.";
 			maxOccurs = 1;
@@ -282,7 +283,7 @@ public class FutureRule {
 		{
 			elementContext_lazy = () -> FutureRule.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BaseInterestRate";
 			definition = "Nominal interest rate of synthetic bond.";
 			maxOccurs = 1;
@@ -294,13 +295,12 @@ public class FutureRule {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FutureRule";
 				definition = "Timing characteristics of the maturity of the future.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Future.mmFutureRule);
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.FutureRule.mmTimeType, com.tools20022.repository.entity.FutureRule.mmRelatedFutureInstrument,
-						com.tools20022.repository.entity.FutureRule.mmMaximumTimeToMaturity, com.tools20022.repository.entity.FutureRule.mmMinimumTimeToMaturity, com.tools20022.repository.entity.FutureRule.mmBaseInterestRate);
+				element_lazy = () -> Arrays.asList(FutureRule.mmTimeType, FutureRule.mmRelatedFutureInstrument, FutureRule.mmMaximumTimeToMaturity, FutureRule.mmMinimumTimeToMaturity, FutureRule.mmBaseInterestRate);
 			}
 		});
 		return mmObject_lazy.get();

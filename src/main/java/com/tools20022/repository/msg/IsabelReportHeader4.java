@@ -20,8 +20,10 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.DateAndDateTimeChoice;
 import com.tools20022.repository.datatype.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -115,7 +117,7 @@ public class IsabelReportHeader4 {
 			componentContext_lazy = () -> IsabelReportHeader4.mmObject();
 			isDerived = false;
 			xmlTag = "ActlSndrId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ActualSenderIdentification";
 			definition = "Unique identification of the actual sender of the file.";
 			maxOccurs = 1;
@@ -157,7 +159,7 @@ public class IsabelReportHeader4 {
 			componentContext_lazy = () -> IsabelReportHeader4.mmObject();
 			isDerived = false;
 			xmlTag = "PyldCreDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PayloadCreationDate";
 			definition = "Date and time at which the file in the payload was actually created.";
 			maxOccurs = 1;
@@ -199,7 +201,7 @@ public class IsabelReportHeader4 {
 			componentContext_lazy = () -> IsabelReportHeader4.mmObject();
 			isDerived = false;
 			xmlTag = "FileFrmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FileFormat";
 			definition = "Format of the file.";
 			maxOccurs = 1;
@@ -240,7 +242,7 @@ public class IsabelReportHeader4 {
 			componentContext_lazy = () -> IsabelReportHeader4.mmObject();
 			isDerived = false;
 			xmlTag = "SndTmStmp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SendTimeStamp";
 			definition = "Time stamp on when the file is sent.";
 			maxOccurs = 1;
@@ -282,7 +284,7 @@ public class IsabelReportHeader4 {
 			componentContext_lazy = () -> IsabelReportHeader4.mmObject();
 			isDerived = false;
 			xmlTag = "TrnsprtId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransportIdentification";
 			definition = "Unique identification of the transport.";
 			maxOccurs = 1;
@@ -324,7 +326,7 @@ public class IsabelReportHeader4 {
 			componentContext_lazy = () -> IsabelReportHeader4.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlReqId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalRequestIdentification";
 			definition = "Unique identification of the actual sender of the file.";
 			maxOccurs = 1;
@@ -366,7 +368,7 @@ public class IsabelReportHeader4 {
 			componentContext_lazy = () -> IsabelReportHeader4.mmObject();
 			isDerived = false;
 			xmlTag = "MptyPyld";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EmptyPayload";
 			definition = "Specifies whether the payload is empty.";
 			maxOccurs = 1;
@@ -407,7 +409,7 @@ public class IsabelReportHeader4 {
 			componentContext_lazy = () -> IsabelReportHeader4.mmObject();
 			isDerived = false;
 			xmlTag = "BkRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BankReference";
 			definition = "Unique reference as assigned by the bank to the report.";
 			maxOccurs = 1;
@@ -419,11 +421,10 @@ public class IsabelReportHeader4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IsabelReportHeader4.mmActualSenderIdentification, com.tools20022.repository.msg.IsabelReportHeader4.mmPayloadCreationDate,
-						com.tools20022.repository.msg.IsabelReportHeader4.mmFileFormat, com.tools20022.repository.msg.IsabelReportHeader4.mmSendTimeStamp, com.tools20022.repository.msg.IsabelReportHeader4.mmTransportIdentification,
-						com.tools20022.repository.msg.IsabelReportHeader4.mmOriginalRequestIdentification, com.tools20022.repository.msg.IsabelReportHeader4.mmEmptyPayload, com.tools20022.repository.msg.IsabelReportHeader4.mmBankReference);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(IsabelReportHeader4.mmActualSenderIdentification, IsabelReportHeader4.mmPayloadCreationDate, IsabelReportHeader4.mmFileFormat, IsabelReportHeader4.mmSendTimeStamp,
+						IsabelReportHeader4.mmTransportIdentification, IsabelReportHeader4.mmOriginalRequestIdentification, IsabelReportHeader4.mmEmptyPayload, IsabelReportHeader4.mmBankReference);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "IsabelReportHeader4";
 				definition = "Specifies the header information for a query response file, as part of the RequestForResponse flow.";
 			}

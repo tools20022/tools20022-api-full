@@ -20,9 +20,14 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.semt.TotalPortfolioValuationReportV01;
 import com.tools20022.repository.codeset.ActiveOrHistoricCurrencyCode;
 import com.tools20022.repository.datatype.BaseOneRate;
+import com.tools20022.repository.entity.Account;
+import com.tools20022.repository.entity.CurrencyExchange;
 import com.tools20022.repository.entity.SecuritiesAccount;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -118,11 +123,11 @@ public class SecuritiesAccount21 {
 	 */
 	public static final MMMessageAssociationEnd mmAccount = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.mmIdentification;
+			businessElementTrace_lazy = () -> Account.mmIdentification;
 			componentContext_lazy = () -> SecuritiesAccount21.mmObject();
 			isDerived = false;
 			xmlTag = "Acct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Account";
 			definition = "Account identification.";
 			maxOccurs = 1;
@@ -169,7 +174,7 @@ public class SecuritiesAccount21 {
 			componentContext_lazy = () -> SecuritiesAccount21.mmObject();
 			isDerived = false;
 			xmlTag = "SubAcct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubAccount";
 			definition = "Sub-account identification.";
 			maxOccurs = 1;
@@ -214,11 +219,11 @@ public class SecuritiesAccount21 {
 	 */
 	public static final MMMessageAttribute mmBaseCurrency = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.mmBaseCurrency;
+			businessElementTrace_lazy = () -> Account.mmBaseCurrency;
 			componentContext_lazy = () -> SecuritiesAccount21.mmObject();
 			isDerived = false;
 			xmlTag = "BaseCcy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BaseCurrency";
 			definition = "Base currency for the account.";
 			maxOccurs = 1;
@@ -265,11 +270,11 @@ public class SecuritiesAccount21 {
 	 */
 	public static final MMMessageAttribute mmReportingCurrency = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.mmReportingCurrency;
+			businessElementTrace_lazy = () -> Account.mmReportingCurrency;
 			componentContext_lazy = () -> SecuritiesAccount21.mmObject();
 			isDerived = false;
 			xmlTag = "RptgCcy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportingCurrency";
 			definition = "Currency chosen for reporting purposes by the account owner in agreement with the account servicer.";
 			maxOccurs = 1;
@@ -315,11 +320,11 @@ public class SecuritiesAccount21 {
 	 */
 	public static final MMMessageAttribute mmForeignExchangeRate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmExchangeRate;
+			businessElementTrace_lazy = () -> CurrencyExchange.mmExchangeRate;
 			componentContext_lazy = () -> SecuritiesAccount21.mmObject();
 			isDerived = false;
 			xmlTag = "FXRate";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForeignExchangeRate";
 			definition = "Foreign exchange rate applied between the reporting and base currencies. It is assumed the valuation date is the same as the report date.";
 			maxOccurs = 1;
@@ -331,12 +336,12 @@ public class SecuritiesAccount21 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesAccount21.mmAccount, com.tools20022.repository.msg.SecuritiesAccount21.mmSubAccount,
-						com.tools20022.repository.msg.SecuritiesAccount21.mmBaseCurrency, com.tools20022.repository.msg.SecuritiesAccount21.mmReportingCurrency, com.tools20022.repository.msg.SecuritiesAccount21.mmForeignExchangeRate);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.TotalPortfolioValuationReportV01.mmAccountDetails);
+				messageElement_lazy = () -> Arrays.asList(SecuritiesAccount21.mmAccount, SecuritiesAccount21.mmSubAccount, SecuritiesAccount21.mmBaseCurrency, SecuritiesAccount21.mmReportingCurrency,
+						SecuritiesAccount21.mmForeignExchangeRate);
+				messageBuildingBlock_lazy = () -> Arrays.asList(TotalPortfolioValuationReportV01.mmAccountDetails);
 				trace_lazy = () -> SecuritiesAccount.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesAccount21";
 				definition = "Unambiguous identification for the account between the account owner and the account servicer.";
 			}

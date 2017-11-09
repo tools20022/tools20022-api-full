@@ -20,11 +20,11 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.FormOfSecurity1Code;
 import com.tools20022.repository.codeset.PhysicalTransferType1Code;
-import com.tools20022.repository.entity.AssetHolding;
-import com.tools20022.repository.entity.SecuritiesBalance;
-import com.tools20022.repository.entity.SecuritiesIdentification;
+import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -128,7 +128,7 @@ public class AggregateHoldingBalance1 {
 			componentContext_lazy = () -> AggregateHoldingBalance1.mmObject();
 			isDerived = false;
 			xmlTag = "FinInstrmId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentIdentification";
 			definition = "Identification of the financial instrument for which the balance information is specified.";
 			maxOccurs = 1;
@@ -173,11 +173,11 @@ public class AggregateHoldingBalance1 {
 	 */
 	public static final MMMessageAttribute mmHoldingForm = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmRegistrationForm;
+			businessElementTrace_lazy = () -> Security.mmRegistrationForm;
 			componentContext_lazy = () -> AggregateHoldingBalance1.mmObject();
 			isDerived = false;
 			xmlTag = "HldgForm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HoldingForm";
 			definition = "Form of ownership of the holding.";
 			maxOccurs = 1;
@@ -224,11 +224,11 @@ public class AggregateHoldingBalance1 {
 	 */
 	public static final MMMessageAttribute mmHoldingPhysicalType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PhysicalDelivery.mmType;
+			businessElementTrace_lazy = () -> PhysicalDelivery.mmType;
 			componentContext_lazy = () -> AggregateHoldingBalance1.mmObject();
 			isDerived = false;
 			xmlTag = "HldgPhysTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HoldingPhysicalType";
 			definition = "Specifies whether the holding is physically delivered or is a book entry only.";
 			maxOccurs = 1;
@@ -275,7 +275,7 @@ public class AggregateHoldingBalance1 {
 			componentContext_lazy = () -> AggregateHoldingBalance1.mmObject();
 			isDerived = false;
 			xmlTag = "BalForFinInstrm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BalanceForFinancialInstrument";
 			definition = "Balance breakdown on the net position of the financial instrument.";
 			minOccurs = 1;
@@ -318,7 +318,7 @@ public class AggregateHoldingBalance1 {
 			componentContext_lazy = () -> AggregateHoldingBalance1.mmObject();
 			isDerived = false;
 			xmlTag = "SplmtryData";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryData";
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
 			minOccurs = 0;
@@ -330,12 +330,11 @@ public class AggregateHoldingBalance1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AggregateHoldingBalance1.mmFinancialInstrumentIdentification, com.tools20022.repository.msg.AggregateHoldingBalance1.mmHoldingForm,
-						com.tools20022.repository.msg.AggregateHoldingBalance1.mmHoldingPhysicalType, com.tools20022.repository.msg.AggregateHoldingBalance1.mmBalanceForFinancialInstrument,
-						com.tools20022.repository.msg.AggregateHoldingBalance1.mmSupplementaryData);
+				messageElement_lazy = () -> Arrays.asList(AggregateHoldingBalance1.mmFinancialInstrumentIdentification, AggregateHoldingBalance1.mmHoldingForm, AggregateHoldingBalance1.mmHoldingPhysicalType,
+						AggregateHoldingBalance1.mmBalanceForFinancialInstrument, AggregateHoldingBalance1.mmSupplementaryData);
 				trace_lazy = () -> SecuritiesBalance.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AggregateHoldingBalance1";
 				definition = "Overall holding position, in a single financial instrument, held in a securities account at a specified place of safekeeping.";
 				nextVersions_lazy = () -> Arrays.asList(AggregateHoldingBalance3.mmObject());

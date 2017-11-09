@@ -17,9 +17,7 @@
 
 package com.tools20022.repository.entity;
 
-import com.tools20022.metamodel.MMBusinessAssociationEnd;
-import com.tools20022.metamodel.MMBusinessAttribute;
-import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.*;
 import com.tools20022.repository.choice.*;
 import com.tools20022.repository.codeset.BeneficiaryCertificationTypeCode;
 import com.tools20022.repository.codeset.CertificationFormatTypeCode;
@@ -27,10 +25,8 @@ import com.tools20022.repository.codeset.ERISAEligibilityCode;
 import com.tools20022.repository.datatype.PercentageRate;
 import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.SecuritiesPartyRole;
-import com.tools20022.repository.msg.BeneficialOwner1;
-import com.tools20022.repository.msg.BeneficialOwner2;
-import com.tools20022.repository.msg.BeneficiaryInformation1;
-import com.tools20022.repository.msg.BeneficiaryInformation2;
+import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -45,29 +41,57 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.BeneficialOwner#mmCertificationType
- * BeneficialOwner.mmCertificationType}</li>
+ * {@linkplain com.tools20022.repository.choice.BeneficiaryCertificationType2Choice
+ * BeneficiaryCertificationType2Choice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.BeneficialOwner#mmNonDomicileCountry
- * BeneficialOwner.mmNonDomicileCountry}</li>
+ * {@linkplain com.tools20022.repository.choice.BeneficiaryCertificationType4Choice
+ * BeneficiaryCertificationType4Choice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.BeneficialOwner#mmCertificationIndicator
- * BeneficialOwner.mmCertificationIndicator}</li>
+ * {@linkplain com.tools20022.repository.choice.BeneficiaryCertificationType6Choice
+ * BeneficiaryCertificationType6Choice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.BeneficialOwner#mmCertificationFormat
- * BeneficialOwner.mmCertificationFormat}</li>
+ * {@linkplain com.tools20022.repository.choice.BeneficiaryCertificationType8Choice
+ * BeneficiaryCertificationType8Choice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.BeneficialOwner#mmERISAEligibility
- * BeneficialOwner.mmERISAEligibility}</li>
- * <li>{@linkplain com.tools20022.repository.entity.BeneficialOwner#mmERISARate
- * BeneficialOwner.mmERISARate}</li>
+ * {@linkplain com.tools20022.repository.choice.BeneficiaryCertificationType1Choice
+ * BeneficiaryCertificationType1Choice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.BeneficialOwner#mmBenefitPlanDeclarationIndicator
- * BeneficialOwner.mmBenefitPlanDeclarationIndicator}</li>
+ * {@linkplain com.tools20022.repository.choice.BeneficiaryCertificationType3Choice
+ * BeneficiaryCertificationType3Choice}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.BeneficiaryCertificationType5Choice
+ * BeneficiaryCertificationType5Choice}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.BeneficiaryCertificationType7Choice
+ * BeneficiaryCertificationType7Choice}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.BeneficiaryCertificationType1FormatChoice
+ * BeneficiaryCertificationType1FormatChoice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.BeneficialOwner1
+ * BeneficialOwner1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.BeneficiaryInformation2
+ * BeneficiaryInformation2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.BeneficiaryInformation1
+ * BeneficiaryInformation1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.BeneficialOwner2
+ * BeneficialOwner2}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.BeneficiaryCertificationType9Choice
+ * BeneficiaryCertificationType9Choice}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.BeneficiaryCertificationType10Choice
+ * BeneficiaryCertificationType10Choice}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.BeneficiaryCertificationType11Choice
+ * BeneficiaryCertificationType11Choice}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.BeneficiaryCertificationType12Choice
+ * BeneficiaryCertificationType12Choice}</li>
  * </ul>
  * </li>
  * <li>
@@ -215,57 +239,29 @@ import java.util.concurrent.atomic.AtomicReference;
  * superType} =
  * {@linkplain com.tools20022.repository.entity.SecuritiesPartyRole
  * SecuritiesPartyRole}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.BeneficiaryCertificationType2Choice
- * BeneficiaryCertificationType2Choice}</li>
+ * {@linkplain com.tools20022.repository.entity.BeneficialOwner#mmCertificationType
+ * BeneficialOwner.mmCertificationType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.BeneficiaryCertificationType4Choice
- * BeneficiaryCertificationType4Choice}</li>
+ * {@linkplain com.tools20022.repository.entity.BeneficialOwner#mmNonDomicileCountry
+ * BeneficialOwner.mmNonDomicileCountry}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.BeneficiaryCertificationType6Choice
- * BeneficiaryCertificationType6Choice}</li>
+ * {@linkplain com.tools20022.repository.entity.BeneficialOwner#mmCertificationIndicator
+ * BeneficialOwner.mmCertificationIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.BeneficiaryCertificationType8Choice
- * BeneficiaryCertificationType8Choice}</li>
+ * {@linkplain com.tools20022.repository.entity.BeneficialOwner#mmCertificationFormat
+ * BeneficialOwner.mmCertificationFormat}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.BeneficiaryCertificationType1Choice
- * BeneficiaryCertificationType1Choice}</li>
+ * {@linkplain com.tools20022.repository.entity.BeneficialOwner#mmERISAEligibility
+ * BeneficialOwner.mmERISAEligibility}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.BeneficialOwner#mmERISARate
+ * BeneficialOwner.mmERISARate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.BeneficiaryCertificationType3Choice
- * BeneficiaryCertificationType3Choice}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.BeneficiaryCertificationType5Choice
- * BeneficiaryCertificationType5Choice}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.BeneficiaryCertificationType7Choice
- * BeneficiaryCertificationType7Choice}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.BeneficiaryCertificationType1FormatChoice
- * BeneficiaryCertificationType1FormatChoice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.BeneficialOwner1
- * BeneficialOwner1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.BeneficiaryInformation2
- * BeneficiaryInformation2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.BeneficiaryInformation1
- * BeneficiaryInformation1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.BeneficialOwner2
- * BeneficialOwner2}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.BeneficiaryCertificationType9Choice
- * BeneficiaryCertificationType9Choice}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.BeneficiaryCertificationType10Choice
- * BeneficiaryCertificationType10Choice}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.BeneficiaryCertificationType11Choice
- * BeneficiaryCertificationType11Choice}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.BeneficiaryCertificationType12Choice
- * BeneficiaryCertificationType12Choice}</li>
+ * {@linkplain com.tools20022.repository.entity.BeneficialOwner#mmBenefitPlanDeclarationIndicator
+ * BeneficialOwner.mmBenefitPlanDeclarationIndicator}</li>
  * </ul>
  * </li>
  * <li>
@@ -559,47 +555,29 @@ public class BeneficialOwner extends SecuritiesPartyRole {
 	 */
 	public static final MMBusinessAttribute mmCertificationType = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.BeneficiaryCertificationType2Choice.mmCode, com.tools20022.repository.choice.BeneficiaryCertificationType2Choice.mmProprietary,
-					com.tools20022.repository.msg.PartyIdentification33.mmCertificationType, com.tools20022.repository.choice.BeneficiaryCertificationType4Choice.mmCode,
-					com.tools20022.repository.choice.BeneficiaryCertificationType4Choice.mmProprietary, com.tools20022.repository.msg.PartyIdentification34.mmCertificationType,
-					com.tools20022.repository.msg.PartyIdentification50.mmCertificationType, com.tools20022.repository.msg.PartyIdentification51.mmCertificationType,
-					com.tools20022.repository.choice.BeneficiaryCertificationType6Choice.mmCode, com.tools20022.repository.choice.BeneficiaryCertificationType6Choice.mmProprietary,
-					com.tools20022.repository.msg.PartyIdentification56.mmCertificationType, com.tools20022.repository.choice.BeneficiaryCertificationType8Choice.mmCode,
-					com.tools20022.repository.choice.BeneficiaryCertificationType8Choice.mmProprietary, com.tools20022.repository.msg.PartyIdentification57.mmCertificationType,
-					com.tools20022.repository.choice.BeneficiaryCertificationType1Choice.mmCode, com.tools20022.repository.choice.BeneficiaryCertificationType1Choice.mmProprietary,
-					com.tools20022.repository.msg.CorporateActionOption10.mmCertificationType, com.tools20022.repository.choice.BeneficiaryCertificationType3Choice.mmCode,
-					com.tools20022.repository.choice.BeneficiaryCertificationType3Choice.mmProprietary, com.tools20022.repository.msg.CorporateActionOption15.mmCertificationType,
-					com.tools20022.repository.msg.CorporateActionOption20.mmCertificationType, com.tools20022.repository.msg.CorporateActionOption32.mmCertificationType,
-					com.tools20022.repository.choice.BeneficiaryCertificationType5Choice.mmCode, com.tools20022.repository.choice.BeneficiaryCertificationType5Choice.mmProprietary,
-					com.tools20022.repository.msg.CorporateActionOption35.mmCertificationBreakdownType, com.tools20022.repository.choice.BeneficiaryCertificationType7Choice.mmCode,
-					com.tools20022.repository.choice.BeneficiaryCertificationType7Choice.mmProprietary, com.tools20022.repository.msg.CorporateActionOption44.mmCertificationBreakdownType,
-					com.tools20022.repository.msg.CorporateActionOption52.mmCertificationBreakdownType, com.tools20022.repository.msg.CorporateActionOption55.mmCertificationBreakdownType,
-					com.tools20022.repository.msg.CorporateAction3.mmCertificationType, com.tools20022.repository.msg.CorporateActionOption3.mmCertificationType, com.tools20022.repository.msg.CorporateAction4.mmCertificationType,
-					com.tools20022.repository.msg.CorporateActionOption17.mmCertificationType, com.tools20022.repository.msg.CorporateAction5.mmCertificationType, com.tools20022.repository.msg.CorporateActionOption19.mmCertificationType,
-					com.tools20022.repository.msg.CorporateAction6.mmCertificationType, com.tools20022.repository.msg.CorporateActionOption34.mmCertificationType, com.tools20022.repository.msg.CorporateAction7.mmCertificationType,
-					com.tools20022.repository.msg.CorporateActionOption36.mmCertificationBreakdownType, com.tools20022.repository.msg.CorporateAction8.mmCertificationType,
-					com.tools20022.repository.msg.CorporateActionOption45.mmCertificationBreakdownType, com.tools20022.repository.msg.CorporateAction10.mmCertificationType,
-					com.tools20022.repository.msg.CorporateActionOption51.mmCertificationBreakdownType, com.tools20022.repository.msg.CorporateAction11.mmCertificationType,
-					com.tools20022.repository.msg.CorporateActionOption56.mmCertificationBreakdownType, com.tools20022.repository.choice.BeneficiaryCertificationType1FormatChoice.mmCode,
-					com.tools20022.repository.choice.BeneficiaryCertificationType1FormatChoice.mmProprietary, com.tools20022.repository.msg.CorporateAction2.mmCertificationType,
-					com.tools20022.repository.msg.CorporateActionOption1.mmCertificationType, com.tools20022.repository.msg.BeneficialOwner1.mmCertificationType,
-					com.tools20022.repository.msg.CorporateActionAdditionalInformation1.mmCertificationType, com.tools20022.repository.msg.CorporateActionOption100.mmCertificationBreakdownType,
-					com.tools20022.repository.msg.CorporateActionOption101.mmCertificationBreakdownType, com.tools20022.repository.msg.CorporateAction12.mmCertificationType,
-					com.tools20022.repository.msg.CorporateActionOption108.mmCertificationBreakdownType, com.tools20022.repository.msg.CorporateActionOption106.mmCertificationBreakdownType,
-					com.tools20022.repository.msg.CorporateAction17.mmCertificationType, com.tools20022.repository.msg.BeneficialOwner2.mmCertificationType, com.tools20022.repository.choice.BeneficiaryCertificationType9Choice.mmCode,
-					com.tools20022.repository.choice.BeneficiaryCertificationType9Choice.mmProprietary, com.tools20022.repository.msg.PartyIdentification93.mmCertificationType,
-					com.tools20022.repository.msg.CorporateActionOption115.mmCertificationBreakdownType, com.tools20022.repository.msg.CorporateActionOption114.mmCertificationBreakdownType,
-					com.tools20022.repository.msg.CorporateAction31.mmCertificationType, com.tools20022.repository.choice.BeneficiaryCertificationType10Choice.mmCode,
-					com.tools20022.repository.choice.BeneficiaryCertificationType10Choice.mmProprietary, com.tools20022.repository.msg.CorporateActionOption125.mmCertificationBreakdownType,
-					com.tools20022.repository.msg.PartyIdentification101.mmCertificationType, com.tools20022.repository.msg.CorporateActionOption127.mmCertificationBreakdownType,
-					com.tools20022.repository.msg.CorporateAction40.mmCertificationType, com.tools20022.repository.choice.BeneficiaryCertificationType11Choice.mmCode,
-					com.tools20022.repository.choice.BeneficiaryCertificationType11Choice.mmProprietary, com.tools20022.repository.choice.BeneficiaryCertificationType12Choice.mmCode,
-					com.tools20022.repository.choice.BeneficiaryCertificationType12Choice.mmProprietary, com.tools20022.repository.msg.CorporateActionOption130.mmCertificationBreakdownType,
-					com.tools20022.repository.msg.CorporateActionOption129.mmCertificationBreakdownType, com.tools20022.repository.msg.CorporateActionOption135.mmCertificationBreakdownType,
-					com.tools20022.repository.msg.CorporateActionOption133.mmCertificationBreakdownType);
+			derivation_lazy = () -> Arrays.asList(BeneficiaryCertificationType2Choice.mmCode, BeneficiaryCertificationType2Choice.mmProprietary, PartyIdentification33.mmCertificationType, BeneficiaryCertificationType4Choice.mmCode,
+					BeneficiaryCertificationType4Choice.mmProprietary, PartyIdentification34.mmCertificationType, PartyIdentification50.mmCertificationType, PartyIdentification51.mmCertificationType,
+					BeneficiaryCertificationType6Choice.mmCode, BeneficiaryCertificationType6Choice.mmProprietary, PartyIdentification56.mmCertificationType, BeneficiaryCertificationType8Choice.mmCode,
+					BeneficiaryCertificationType8Choice.mmProprietary, PartyIdentification57.mmCertificationType, BeneficiaryCertificationType1Choice.mmCode, BeneficiaryCertificationType1Choice.mmProprietary,
+					CorporateActionOption10.mmCertificationType, BeneficiaryCertificationType3Choice.mmCode, BeneficiaryCertificationType3Choice.mmProprietary, CorporateActionOption15.mmCertificationType,
+					CorporateActionOption20.mmCertificationType, CorporateActionOption32.mmCertificationType, BeneficiaryCertificationType5Choice.mmCode, BeneficiaryCertificationType5Choice.mmProprietary,
+					CorporateActionOption35.mmCertificationBreakdownType, BeneficiaryCertificationType7Choice.mmCode, BeneficiaryCertificationType7Choice.mmProprietary, CorporateActionOption44.mmCertificationBreakdownType,
+					CorporateActionOption52.mmCertificationBreakdownType, CorporateActionOption55.mmCertificationBreakdownType, CorporateAction3.mmCertificationType, CorporateActionOption3.mmCertificationType,
+					CorporateAction4.mmCertificationType, CorporateActionOption17.mmCertificationType, CorporateAction5.mmCertificationType, CorporateActionOption19.mmCertificationType, CorporateAction6.mmCertificationType,
+					CorporateActionOption34.mmCertificationType, CorporateAction7.mmCertificationType, CorporateActionOption36.mmCertificationBreakdownType, CorporateAction8.mmCertificationType,
+					CorporateActionOption45.mmCertificationBreakdownType, CorporateAction10.mmCertificationType, CorporateActionOption51.mmCertificationBreakdownType, CorporateAction11.mmCertificationType,
+					CorporateActionOption56.mmCertificationBreakdownType, BeneficiaryCertificationType1FormatChoice.mmCode, BeneficiaryCertificationType1FormatChoice.mmProprietary, CorporateAction2.mmCertificationType,
+					CorporateActionOption1.mmCertificationType, BeneficialOwner1.mmCertificationType, CorporateActionAdditionalInformation1.mmCertificationType, CorporateActionOption100.mmCertificationBreakdownType,
+					CorporateActionOption101.mmCertificationBreakdownType, CorporateAction12.mmCertificationType, CorporateActionOption108.mmCertificationBreakdownType, CorporateActionOption106.mmCertificationBreakdownType,
+					CorporateAction17.mmCertificationType, BeneficialOwner2.mmCertificationType, BeneficiaryCertificationType9Choice.mmCode, BeneficiaryCertificationType9Choice.mmProprietary, PartyIdentification93.mmCertificationType,
+					CorporateActionOption115.mmCertificationBreakdownType, CorporateActionOption114.mmCertificationBreakdownType, CorporateAction31.mmCertificationType, BeneficiaryCertificationType10Choice.mmCode,
+					BeneficiaryCertificationType10Choice.mmProprietary, CorporateActionOption125.mmCertificationBreakdownType, PartyIdentification101.mmCertificationType, CorporateActionOption127.mmCertificationBreakdownType,
+					CorporateAction40.mmCertificationType, BeneficiaryCertificationType11Choice.mmCode, BeneficiaryCertificationType11Choice.mmProprietary, BeneficiaryCertificationType12Choice.mmCode,
+					BeneficiaryCertificationType12Choice.mmProprietary, CorporateActionOption130.mmCertificationBreakdownType, CorporateActionOption129.mmCertificationBreakdownType, CorporateActionOption135.mmCertificationBreakdownType,
+					CorporateActionOption133.mmCertificationBreakdownType);
 			elementContext_lazy = () -> BeneficialOwner.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CertificationType";
 			definition = "Type of certification which is required.";
 			maxOccurs = 1;
@@ -740,30 +718,23 @@ public class BeneficialOwner extends SecuritiesPartyRole {
 	 */
 	public static final MMBusinessAssociationEnd mmNonDomicileCountry = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionOption10.mmNonDomicileCountry, com.tools20022.repository.msg.CorporateActionOption15.mmNonDomicileCountry,
-					com.tools20022.repository.msg.CorporateActionOption20.mmNonDomicileCountry, com.tools20022.repository.msg.CorporateActionOption32.mmNonDomicileCountry,
-					com.tools20022.repository.msg.CorporateActionOption35.mmNonDomicileCountry, com.tools20022.repository.msg.CorporateActionOption44.mmNonDomicileCountry,
-					com.tools20022.repository.msg.CorporateActionOption52.mmNonDomicileCountry, com.tools20022.repository.msg.CorporateActionOption55.mmNonDomicileCountry,
-					com.tools20022.repository.msg.CorporateActionOption3.mmNonDomicileCountry, com.tools20022.repository.msg.CorporateActionOption17.mmNonDomicileCountry,
-					com.tools20022.repository.msg.CorporateActionOption19.mmNonDomicileCountry, com.tools20022.repository.msg.CorporateActionOption34.mmNonDomicileCountry,
-					com.tools20022.repository.msg.CorporateActionOption36.mmNonDomicileCountry, com.tools20022.repository.msg.CorporateActionOption45.mmNonDomicileCountry,
-					com.tools20022.repository.msg.CorporateActionOption51.mmNonDomicileCountry, com.tools20022.repository.msg.CorporateActionOption56.mmNonDomicileCountry,
-					com.tools20022.repository.msg.BeneficialOwner1.mmNonDomicileCountry, com.tools20022.repository.msg.CorporateActionOption100.mmNonDomicileCountry,
-					com.tools20022.repository.msg.CorporateActionOption101.mmNonDomicileCountry, com.tools20022.repository.msg.CorporateActionOption108.mmNonDomicileCountry,
-					com.tools20022.repository.msg.CorporateActionOption106.mmNonDomicileCountry, com.tools20022.repository.msg.BeneficialOwner2.mmNonDomicileCountry,
-					com.tools20022.repository.msg.CorporateActionOption115.mmNonDomicileCountry, com.tools20022.repository.msg.CorporateActionOption114.mmNonDomicileCountry,
-					com.tools20022.repository.msg.CorporateActionOption125.mmNonDomicileCountry, com.tools20022.repository.msg.CorporateActionOption127.mmNonDomicileCountry,
-					com.tools20022.repository.msg.CorporateActionOption130.mmNonDomicileCountry, com.tools20022.repository.msg.CorporateActionOption129.mmNonDomicileCountry,
-					com.tools20022.repository.msg.CorporateActionOption135.mmNonDomicileCountry, com.tools20022.repository.msg.CorporateActionOption133.mmNonDomicileCountry);
+			derivation_lazy = () -> Arrays.asList(CorporateActionOption10.mmNonDomicileCountry, CorporateActionOption15.mmNonDomicileCountry, CorporateActionOption20.mmNonDomicileCountry, CorporateActionOption32.mmNonDomicileCountry,
+					CorporateActionOption35.mmNonDomicileCountry, CorporateActionOption44.mmNonDomicileCountry, CorporateActionOption52.mmNonDomicileCountry, CorporateActionOption55.mmNonDomicileCountry,
+					CorporateActionOption3.mmNonDomicileCountry, CorporateActionOption17.mmNonDomicileCountry, CorporateActionOption19.mmNonDomicileCountry, CorporateActionOption34.mmNonDomicileCountry,
+					CorporateActionOption36.mmNonDomicileCountry, CorporateActionOption45.mmNonDomicileCountry, CorporateActionOption51.mmNonDomicileCountry, CorporateActionOption56.mmNonDomicileCountry,
+					BeneficialOwner1.mmNonDomicileCountry, CorporateActionOption100.mmNonDomicileCountry, CorporateActionOption101.mmNonDomicileCountry, CorporateActionOption108.mmNonDomicileCountry,
+					CorporateActionOption106.mmNonDomicileCountry, BeneficialOwner2.mmNonDomicileCountry, CorporateActionOption115.mmNonDomicileCountry, CorporateActionOption114.mmNonDomicileCountry,
+					CorporateActionOption125.mmNonDomicileCountry, CorporateActionOption127.mmNonDomicileCountry, CorporateActionOption130.mmNonDomicileCountry, CorporateActionOption129.mmNonDomicileCountry,
+					CorporateActionOption135.mmNonDomicileCountry, CorporateActionOption133.mmNonDomicileCountry);
 			elementContext_lazy = () -> BeneficialOwner.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NonDomicileCountry";
 			definition = "The holder of the security has to certify, in line with the terms of the corporate action, that it is not domiciled in the country indicated.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.Country.mmCountryForBeneficialOwner;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Country.mmObject();
 		}
 	};
@@ -942,32 +913,23 @@ public class BeneficialOwner extends SecuritiesPartyRole {
 	 */
 	public static final MMBusinessAttribute mmCertificationIndicator = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionOption10.mmCertificationIndicator, com.tools20022.repository.msg.CorporateActionOption15.mmCertificationIndicator,
-					com.tools20022.repository.msg.CorporateActionOption20.mmCertificationIndicator, com.tools20022.repository.msg.CorporateActionOption32.mmCertificationIndicator,
-					com.tools20022.repository.msg.CorporateActionOption35.mmCertificationBreakdownIndicator, com.tools20022.repository.msg.CorporateActionOption44.mmCertificationBreakdownIndicator,
-					com.tools20022.repository.msg.CorporateActionOption52.mmCertificationBreakdownIndicator, com.tools20022.repository.msg.CorporateActionOption55.mmCertificationBreakdownIndicator,
-					com.tools20022.repository.msg.CorporateAction3.mmCertificationRequiredIndicator, com.tools20022.repository.msg.CorporateActionOption3.mmCertificationIndicator,
-					com.tools20022.repository.msg.CorporateAction4.mmCertificationRequiredIndicator, com.tools20022.repository.msg.CorporateActionOption17.mmCertificationIndicator,
-					com.tools20022.repository.msg.CorporateAction5.mmCertificationRequiredIndicator, com.tools20022.repository.msg.CorporateActionOption19.mmCertificationIndicator,
-					com.tools20022.repository.msg.CorporateAction6.mmCertificationRequiredIndicator, com.tools20022.repository.msg.CorporateActionOption34.mmCertificationIndicator,
-					com.tools20022.repository.msg.CorporateAction7.mmCertificationBreakdownIndicator, com.tools20022.repository.msg.CorporateActionOption36.mmCertificationBreakdownIndicator,
-					com.tools20022.repository.msg.CorporateAction8.mmCertificationBreakdownIndicator, com.tools20022.repository.msg.CorporateActionOption45.mmCertificationBreakdownIndicator,
-					com.tools20022.repository.msg.CorporateAction10.mmCertificationBreakdownIndicator, com.tools20022.repository.msg.CorporateActionOption51.mmCertificationBreakdownIndicator,
-					com.tools20022.repository.msg.CorporateAction11.mmCertificationBreakdownIndicator, com.tools20022.repository.msg.CorporateActionOption56.mmCertificationBreakdownIndicator,
-					com.tools20022.repository.msg.CorporateAction2.mmCertificationRequiredIndicator, com.tools20022.repository.msg.CorporateActionOption1.mmCertificationIndicator,
-					com.tools20022.repository.msg.BeneficialOwner1.mmCertificationIndicator, com.tools20022.repository.msg.CorporateActionAdditionalInformation1.mmCertificationIndicator,
-					com.tools20022.repository.msg.CorporateActionOption100.mmCertificationBreakdownIndicator, com.tools20022.repository.msg.CorporateActionOption101.mmCertificationBreakdownIndicator,
-					com.tools20022.repository.msg.CorporateAction12.mmCertificationBreakdownIndicator, com.tools20022.repository.msg.CorporateActionOption108.mmCertificationBreakdownIndicator,
-					com.tools20022.repository.msg.CorporateActionOption106.mmCertificationBreakdownIndicator, com.tools20022.repository.msg.CorporateAction17.mmCertificationBreakdownIndicator,
-					com.tools20022.repository.msg.BeneficialOwner2.mmCertificationIndicator, com.tools20022.repository.msg.CorporateActionOption115.mmCertificationBreakdownIndicator,
-					com.tools20022.repository.msg.CorporateActionOption114.mmCertificationBreakdownIndicator, com.tools20022.repository.msg.CorporateAction31.mmCertificationBreakdownIndicator,
-					com.tools20022.repository.msg.CorporateActionOption125.mmCertificationBreakdownIndicator, com.tools20022.repository.msg.CorporateActionOption127.mmCertificationBreakdownIndicator,
-					com.tools20022.repository.msg.CorporateAction40.mmCertificationBreakdownIndicator, com.tools20022.repository.msg.CorporateActionOption130.mmCertificationBreakdownIndicator,
-					com.tools20022.repository.msg.CorporateActionOption129.mmCertificationBreakdownIndicator, com.tools20022.repository.msg.CorporateActionOption135.mmCertificationBreakdownIndicator,
-					com.tools20022.repository.msg.CorporateActionOption133.mmCertificationBreakdownIndicator);
+			derivation_lazy = () -> Arrays.asList(CorporateActionOption10.mmCertificationIndicator, CorporateActionOption15.mmCertificationIndicator, CorporateActionOption20.mmCertificationIndicator,
+					CorporateActionOption32.mmCertificationIndicator, CorporateActionOption35.mmCertificationBreakdownIndicator, CorporateActionOption44.mmCertificationBreakdownIndicator,
+					CorporateActionOption52.mmCertificationBreakdownIndicator, CorporateActionOption55.mmCertificationBreakdownIndicator, CorporateAction3.mmCertificationRequiredIndicator, CorporateActionOption3.mmCertificationIndicator,
+					CorporateAction4.mmCertificationRequiredIndicator, CorporateActionOption17.mmCertificationIndicator, CorporateAction5.mmCertificationRequiredIndicator, CorporateActionOption19.mmCertificationIndicator,
+					CorporateAction6.mmCertificationRequiredIndicator, CorporateActionOption34.mmCertificationIndicator, CorporateAction7.mmCertificationBreakdownIndicator, CorporateActionOption36.mmCertificationBreakdownIndicator,
+					CorporateAction8.mmCertificationBreakdownIndicator, CorporateActionOption45.mmCertificationBreakdownIndicator, CorporateAction10.mmCertificationBreakdownIndicator,
+					CorporateActionOption51.mmCertificationBreakdownIndicator, CorporateAction11.mmCertificationBreakdownIndicator, CorporateActionOption56.mmCertificationBreakdownIndicator,
+					CorporateAction2.mmCertificationRequiredIndicator, CorporateActionOption1.mmCertificationIndicator, BeneficialOwner1.mmCertificationIndicator, CorporateActionAdditionalInformation1.mmCertificationIndicator,
+					CorporateActionOption100.mmCertificationBreakdownIndicator, CorporateActionOption101.mmCertificationBreakdownIndicator, CorporateAction12.mmCertificationBreakdownIndicator,
+					CorporateActionOption108.mmCertificationBreakdownIndicator, CorporateActionOption106.mmCertificationBreakdownIndicator, CorporateAction17.mmCertificationBreakdownIndicator, BeneficialOwner2.mmCertificationIndicator,
+					CorporateActionOption115.mmCertificationBreakdownIndicator, CorporateActionOption114.mmCertificationBreakdownIndicator, CorporateAction31.mmCertificationBreakdownIndicator,
+					CorporateActionOption125.mmCertificationBreakdownIndicator, CorporateActionOption127.mmCertificationBreakdownIndicator, CorporateAction40.mmCertificationBreakdownIndicator,
+					CorporateActionOption130.mmCertificationBreakdownIndicator, CorporateActionOption129.mmCertificationBreakdownIndicator, CorporateActionOption135.mmCertificationBreakdownIndicator,
+					CorporateActionOption133.mmCertificationBreakdownIndicator);
 			elementContext_lazy = () -> BeneficialOwner.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CertificationIndicator";
 			definition = "Indicates whether or not certification is required from the account owner, for instance a certification is required to participate to a corporate action event.\r\nY: certification required \r\nN: no certification required";
 			maxOccurs = 1;
@@ -1042,14 +1004,12 @@ public class BeneficialOwner extends SecuritiesPartyRole {
 	 */
 	public static final MMBusinessAttribute mmCertificationFormat = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CertificationTypeFormat1Choice.mmCode, com.tools20022.repository.choice.CertificationTypeFormat1Choice.mmProprietary,
-					com.tools20022.repository.choice.CertificationTypeFormat2Choice.mmCode, com.tools20022.repository.choice.CertificationTypeFormat2Choice.mmProprietary,
-					com.tools20022.repository.choice.CertificationType1FormatChoice.mmCode, com.tools20022.repository.choice.CertificationType1FormatChoice.mmProprietary,
-					com.tools20022.repository.choice.CertificationTypeFormat3Choice.mmCode, com.tools20022.repository.choice.CertificationTypeFormat3Choice.mmProprietary,
-					com.tools20022.repository.choice.CertificationTypeFormat4Choice.mmCode, com.tools20022.repository.choice.CertificationTypeFormat4Choice.mmProprietary);
+			derivation_lazy = () -> Arrays.asList(CertificationTypeFormat1Choice.mmCode, CertificationTypeFormat1Choice.mmProprietary, CertificationTypeFormat2Choice.mmCode, CertificationTypeFormat2Choice.mmProprietary,
+					CertificationType1FormatChoice.mmCode, CertificationType1FormatChoice.mmProprietary, CertificationTypeFormat3Choice.mmCode, CertificationTypeFormat3Choice.mmProprietary, CertificationTypeFormat4Choice.mmCode,
+					CertificationTypeFormat4Choice.mmProprietary);
 			elementContext_lazy = () -> BeneficialOwner.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CertificationFormat";
 			definition = "Specifies the certification format required, that is, physical or electronic format.";
 			maxOccurs = 1;
@@ -1098,10 +1058,10 @@ public class BeneficialOwner extends SecuritiesPartyRole {
 	 */
 	public static final MMBusinessAttribute mmERISAEligibility = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BeneficiaryInformation2.mmERISAEligibility, com.tools20022.repository.msg.BeneficiaryInformation1.mmERISAEligibility);
+			derivation_lazy = () -> Arrays.asList(BeneficiaryInformation2.mmERISAEligibility, BeneficiaryInformation1.mmERISAEligibility);
 			elementContext_lazy = () -> BeneficialOwner.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ERISAEligibility";
 			definition = "Eligibility to federal Employee Retirement Income Security Act.";
 			maxOccurs = 1;
@@ -1150,10 +1110,10 @@ public class BeneficialOwner extends SecuritiesPartyRole {
 	 */
 	public static final MMBusinessAttribute mmERISARate = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BeneficiaryInformation2.mmERISARate, com.tools20022.repository.msg.BeneficiaryInformation1.mmERISARate);
+			derivation_lazy = () -> Arrays.asList(BeneficiaryInformation2.mmERISARate, BeneficiaryInformation1.mmERISARate);
 			elementContext_lazy = () -> BeneficialOwner.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ERISARate";
 			definition = "Federal Employee Retirement Income Security Act (ERISA) rate.";
 			maxOccurs = 1;
@@ -1202,10 +1162,10 @@ public class BeneficialOwner extends SecuritiesPartyRole {
 	 */
 	public static final MMBusinessAttribute mmBenefitPlanDeclarationIndicator = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BeneficiaryInformation2.mmBenefitPlanDeclarationIndicator, com.tools20022.repository.msg.BeneficiaryInformation1.mmBenefitPlanDeclarationIndicator);
+			derivation_lazy = () -> Arrays.asList(BeneficiaryInformation2.mmBenefitPlanDeclarationIndicator, BeneficiaryInformation1.mmBenefitPlanDeclarationIndicator);
 			elementContext_lazy = () -> BeneficialOwner.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BenefitPlanDeclarationIndicator";
 			definition = "Indicates whether the investor is a benefit plan investor.";
 			maxOccurs = 1;
@@ -1217,33 +1177,24 @@ public class BeneficialOwner extends SecuritiesPartyRole {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "BeneficialOwner";
 				definition = "Characteristics of an individual or entity that is ultimately entitled to the benefit of income and rights in a security, as opposed to a nominal or legal owner.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Country.mmCountryForBeneficialOwner);
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountParties2.mmBeneficiary, com.tools20022.repository.msg.AccountParties5.mmBeneficiary,
-						com.tools20022.repository.msg.AccountParties6.mmBeneficiary, com.tools20022.repository.msg.AccountParties3.mmBeneficiary, com.tools20022.repository.msg.AccountParties4.mmBeneficiary,
-						com.tools20022.repository.msg.AccountParties7.mmBeneficiary, com.tools20022.repository.msg.PartyIdentification33.mmOwnerIdentification, com.tools20022.repository.msg.PartyIdentification34.mmOwnerIdentification,
-						com.tools20022.repository.msg.PartyIdentification50.mmOwnerIdentification, com.tools20022.repository.msg.PartyIdentification51.mmOwnerIdentification,
-						com.tools20022.repository.msg.PartyIdentification56.mmOwnerIdentification, com.tools20022.repository.msg.PartyIdentification57.mmOwnerIdentification,
-						com.tools20022.repository.msg.ConfirmationParties3.mmTradeBeneficiaryParty, com.tools20022.repository.msg.ConfirmationParties4.mmTradeBeneficiaryParty,
-						com.tools20022.repository.msg.ConfirmationParties2.mmTradeBeneficiaryParty, com.tools20022.repository.msg.CorporateActionAdditionalInformation1.mmBeneficialOwnerDetails,
-						com.tools20022.repository.msg.AccountParties9.mmBeneficiary, com.tools20022.repository.msg.AccountParties8.mmBeneficiary, com.tools20022.repository.msg.AccountParties11.mmBeneficiary,
-						com.tools20022.repository.msg.AccountParties10.mmBeneficiary, com.tools20022.repository.msg.AccountParties12.mmBeneficiary, com.tools20022.repository.msg.SafekeepingAccount5.mmBeneficialOwner,
-						com.tools20022.repository.msg.AccountSubLevel1.mmBeneficialOwner, com.tools20022.repository.msg.AccountSubLevel4.mmBeneficialOwner, com.tools20022.repository.msg.AccountSubLevel5.mmBeneficialOwner,
-						com.tools20022.repository.msg.AccountSubLevel2.mmBeneficialOwner, com.tools20022.repository.msg.AccountSubLevel3.mmBeneficialOwner, com.tools20022.repository.msg.AccountSubLevel6.mmBeneficialOwner,
-						com.tools20022.repository.msg.AccountSubLevel7.mmBeneficialOwner, com.tools20022.repository.msg.AccountSubLevel8.mmBeneficialOwner, com.tools20022.repository.msg.AccountSubLevel9.mmBeneficialOwner,
-						com.tools20022.repository.msg.PartyIdentification93.mmOwnerIdentification, com.tools20022.repository.msg.AccountParties13.mmBeneficiary, com.tools20022.repository.msg.AccountParties14.mmBeneficiary,
-						com.tools20022.repository.msg.PartyIdentification101.mmOwnerIdentification, com.tools20022.repository.msg.AccountParties15.mmBeneficiary, com.tools20022.repository.msg.SafekeepingAccount7.mmBeneficialOwner,
-						com.tools20022.repository.msg.AccountParties16.mmBeneficiary, com.tools20022.repository.msg.AccountSubLevel15.mmBeneficialOwner, com.tools20022.repository.msg.AccountSubLevel16.mmBeneficialOwner,
-						com.tools20022.repository.msg.AccountSubLevel18.mmBeneficialOwner, com.tools20022.repository.msg.AccountSubLevel19.mmBeneficialOwner, com.tools20022.repository.msg.AccountSubLevel11.mmBeneficialOwner,
-						com.tools20022.repository.msg.AccountSubLevel12.mmBeneficialOwner, com.tools20022.repository.msg.AccountSubLevel17.mmBeneficialOwner, com.tools20022.repository.msg.AccountSubLevel13.mmBeneficialOwner,
-						com.tools20022.repository.msg.AccountSubLevel14.mmBeneficialOwner);
+				derivationElement_lazy = () -> Arrays.asList(AccountParties2.mmBeneficiary, AccountParties5.mmBeneficiary, AccountParties6.mmBeneficiary, AccountParties3.mmBeneficiary, AccountParties4.mmBeneficiary,
+						AccountParties7.mmBeneficiary, PartyIdentification33.mmOwnerIdentification, PartyIdentification34.mmOwnerIdentification, PartyIdentification50.mmOwnerIdentification, PartyIdentification51.mmOwnerIdentification,
+						PartyIdentification56.mmOwnerIdentification, PartyIdentification57.mmOwnerIdentification, ConfirmationParties3.mmTradeBeneficiaryParty, ConfirmationParties4.mmTradeBeneficiaryParty,
+						ConfirmationParties2.mmTradeBeneficiaryParty, CorporateActionAdditionalInformation1.mmBeneficialOwnerDetails, AccountParties9.mmBeneficiary, AccountParties8.mmBeneficiary, AccountParties11.mmBeneficiary,
+						AccountParties10.mmBeneficiary, AccountParties12.mmBeneficiary, SafekeepingAccount5.mmBeneficialOwner, AccountSubLevel1.mmBeneficialOwner, AccountSubLevel4.mmBeneficialOwner, AccountSubLevel5.mmBeneficialOwner,
+						AccountSubLevel2.mmBeneficialOwner, AccountSubLevel3.mmBeneficialOwner, AccountSubLevel6.mmBeneficialOwner, AccountSubLevel7.mmBeneficialOwner, AccountSubLevel8.mmBeneficialOwner, AccountSubLevel9.mmBeneficialOwner,
+						PartyIdentification93.mmOwnerIdentification, AccountParties13.mmBeneficiary, AccountParties14.mmBeneficiary, PartyIdentification101.mmOwnerIdentification, AccountParties15.mmBeneficiary,
+						SafekeepingAccount7.mmBeneficialOwner, AccountParties16.mmBeneficiary, AccountSubLevel15.mmBeneficialOwner, AccountSubLevel16.mmBeneficialOwner, AccountSubLevel18.mmBeneficialOwner,
+						AccountSubLevel19.mmBeneficialOwner, AccountSubLevel11.mmBeneficialOwner, AccountSubLevel12.mmBeneficialOwner, AccountSubLevel17.mmBeneficialOwner, AccountSubLevel13.mmBeneficialOwner,
+						AccountSubLevel14.mmBeneficialOwner);
 				superType_lazy = () -> SecuritiesPartyRole.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.BeneficialOwner.mmCertificationType, com.tools20022.repository.entity.BeneficialOwner.mmNonDomicileCountry,
-						com.tools20022.repository.entity.BeneficialOwner.mmCertificationIndicator, com.tools20022.repository.entity.BeneficialOwner.mmCertificationFormat, com.tools20022.repository.entity.BeneficialOwner.mmERISAEligibility,
-						com.tools20022.repository.entity.BeneficialOwner.mmERISARate, com.tools20022.repository.entity.BeneficialOwner.mmBenefitPlanDeclarationIndicator);
+				element_lazy = () -> Arrays.asList(BeneficialOwner.mmCertificationType, BeneficialOwner.mmNonDomicileCountry, BeneficialOwner.mmCertificationIndicator, BeneficialOwner.mmCertificationFormat,
+						BeneficialOwner.mmERISAEligibility, BeneficialOwner.mmERISARate, BeneficialOwner.mmBenefitPlanDeclarationIndicator);
 				derivationComponent_lazy = () -> Arrays.asList(BeneficiaryCertificationType2Choice.mmObject(), BeneficiaryCertificationType4Choice.mmObject(), BeneficiaryCertificationType6Choice.mmObject(),
 						BeneficiaryCertificationType8Choice.mmObject(), BeneficiaryCertificationType1Choice.mmObject(), BeneficiaryCertificationType3Choice.mmObject(), BeneficiaryCertificationType5Choice.mmObject(),
 						BeneficiaryCertificationType7Choice.mmObject(), BeneficiaryCertificationType1FormatChoice.mmObject(), BeneficialOwner1.mmObject(), BeneficiaryInformation2.mmObject(), BeneficiaryInformation1.mmObject(),

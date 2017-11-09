@@ -20,7 +20,9 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max9NumericText;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -108,10 +110,10 @@ public class CardPaymentDataSet17 {
 			componentContext_lazy = () -> CardPaymentDataSet17.mmObject();
 			isDerived = false;
 			xmlTag = "TxSeqCntr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionSequenceCounter";
 			definition = "Sequential counter of the transaction.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CardPaymentDataSet15.mmTransactionSequenceCounter;
+			previousVersion_lazy = () -> CardPaymentDataSet15.mmTransactionSequenceCounter;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max9NumericText.mmObject();
@@ -154,10 +156,10 @@ public class CardPaymentDataSet17 {
 			componentContext_lazy = () -> CardPaymentDataSet17.mmObject();
 			isDerived = false;
 			xmlTag = "TxRspn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionResponse";
 			definition = "Response to the capture of the transaction.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CardPaymentDataSet15.mmTransactionResponse;
+			previousVersion_lazy = () -> CardPaymentDataSet15.mmTransactionResponse;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -202,10 +204,10 @@ public class CardPaymentDataSet17 {
 			componentContext_lazy = () -> CardPaymentDataSet17.mmObject();
 			isDerived = false;
 			xmlTag = "Envt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Environment";
 			definition = "Data related to the environment of the transaction.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CardPaymentDataSet15.mmEnvironment;
+			previousVersion_lazy = () -> CardPaymentDataSet15.mmEnvironment;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -250,10 +252,10 @@ public class CardPaymentDataSet17 {
 			componentContext_lazy = () -> CardPaymentDataSet17.mmObject();
 			isDerived = false;
 			xmlTag = "Tx";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Transaction";
 			definition = "Transaction that has been rejected.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CardPaymentDataSet15.mmTransaction;
+			previousVersion_lazy = () -> CardPaymentDataSet15.mmTransaction;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -264,10 +266,9 @@ public class CardPaymentDataSet17 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardPaymentDataSet17.mmTransactionSequenceCounter, com.tools20022.repository.msg.CardPaymentDataSet17.mmTransactionResponse,
-						com.tools20022.repository.msg.CardPaymentDataSet17.mmEnvironment, com.tools20022.repository.msg.CardPaymentDataSet17.mmTransaction);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(CardPaymentDataSet17.mmTransactionSequenceCounter, CardPaymentDataSet17.mmTransactionResponse, CardPaymentDataSet17.mmEnvironment, CardPaymentDataSet17.mmTransaction);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CardPaymentDataSet17";
 				definition = "Transaction for whose batch capture has been rejected.";
 				previousVersion_lazy = () -> CardPaymentDataSet15.mmObject();

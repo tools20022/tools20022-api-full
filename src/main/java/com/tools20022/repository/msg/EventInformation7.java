@@ -20,10 +20,14 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.CorporateActionEventType32Choice;
 import com.tools20022.repository.choice.CorporateActionMandatoryVoluntary3Choice;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.CorporateActionEvent;
+import com.tools20022.repository.entity.CorporateActionEventRegistration;
+import com.tools20022.repository.entity.CorporateActionServicing;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -135,15 +139,15 @@ public class EventInformation7 {
 	 */
 	public static final MMMessageAttribute mmCorporateActionEventIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEventRegistration.mmCorporateActionEventIdentification;
+			businessElementTrace_lazy = () -> CorporateActionEventRegistration.mmCorporateActionEventIdentification;
 			componentContext_lazy = () -> EventInformation7.mmObject();
 			isDerived = false;
 			xmlTag = "CorpActnEvtId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorporateActionEventIdentification";
 			definition = "Reference assigned by the account servicer to unambiguously identify a corporate action event.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.EventInformation9.mmCorporateActionEventIdentification);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.EventInformation5.mmCorporateActionEventIdentification;
+			nextVersions_lazy = () -> Arrays.asList(EventInformation9.mmCorporateActionEventIdentification);
+			previousVersion_lazy = () -> EventInformation5.mmCorporateActionEventIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -199,15 +203,15 @@ public class EventInformation7 {
 	 */
 	public static final MMMessageAttribute mmOfficialCorporateActionEventIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEventRegistration.mmOfficialCorporateActionEventIdentification;
+			businessElementTrace_lazy = () -> CorporateActionEventRegistration.mmOfficialCorporateActionEventIdentification;
 			componentContext_lazy = () -> EventInformation7.mmObject();
 			isDerived = false;
 			xmlTag = "OffclCorpActnEvtId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OfficialCorporateActionEventIdentification";
 			definition = "Provides the reference of the linked official corporate action event.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.EventInformation9.mmOfficialCorporateActionEventIdentification);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.EventInformation5.mmOfficialCorporateActionEventIdentification;
+			nextVersions_lazy = () -> Arrays.asList(EventInformation9.mmOfficialCorporateActionEventIdentification);
+			previousVersion_lazy = () -> EventInformation5.mmOfficialCorporateActionEventIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -262,15 +266,15 @@ public class EventInformation7 {
 	 */
 	public static final MMMessageAttribute mmEventType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmType;
+			businessElementTrace_lazy = () -> CorporateActionEvent.mmType;
 			componentContext_lazy = () -> EventInformation7.mmObject();
 			isDerived = false;
 			xmlTag = "EvtTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventType";
 			definition = "Type of corporate action event.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.EventInformation9.mmEventType);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.EventInformation5.mmEventType;
+			nextVersions_lazy = () -> Arrays.asList(EventInformation9.mmEventType);
+			previousVersion_lazy = () -> EventInformation5.mmEventType;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> CorporateActionEventType32Choice.mmObject();
@@ -328,15 +332,15 @@ public class EventInformation7 {
 	 */
 	public static final MMMessageAttribute mmMandatoryVoluntaryEventType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmMandatoryVoluntaryEventType;
+			businessElementTrace_lazy = () -> CorporateActionEvent.mmMandatoryVoluntaryEventType;
 			componentContext_lazy = () -> EventInformation7.mmObject();
 			isDerived = false;
 			xmlTag = "MndtryVlntryEvtTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MandatoryVoluntaryEventType";
 			definition = "Specifies whether the event is mandatory, mandatory with options or voluntary.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.EventInformation9.mmMandatoryVoluntaryEventType);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.EventInformation5.mmMandatoryVoluntaryEventType;
+			nextVersions_lazy = () -> Arrays.asList(EventInformation9.mmMandatoryVoluntaryEventType);
+			previousVersion_lazy = () -> EventInformation5.mmMandatoryVoluntaryEventType;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> CorporateActionMandatoryVoluntary3Choice.mmObject();
@@ -392,15 +396,15 @@ public class EventInformation7 {
 	 */
 	public static final MMMessageAssociationEnd mmLastNotificationIdentification = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionServicing.mmCorporateActionEventNotification;
+			businessElementTrace_lazy = () -> CorporateActionServicing.mmCorporateActionEventNotification;
 			componentContext_lazy = () -> EventInformation7.mmObject();
 			isDerived = false;
 			xmlTag = "LastNtfctnId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LastNotificationIdentification";
 			definition = "Provides information about the identification of the last notification.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.EventInformation9.mmLastNotificationIdentification);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.EventInformation5.mmLastNotificationIdentification;
+			nextVersions_lazy = () -> Arrays.asList(EventInformation9.mmLastNotificationIdentification);
+			previousVersion_lazy = () -> EventInformation5.mmLastNotificationIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -411,12 +415,11 @@ public class EventInformation7 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.EventInformation7.mmCorporateActionEventIdentification, com.tools20022.repository.msg.EventInformation7.mmOfficialCorporateActionEventIdentification,
-						com.tools20022.repository.msg.EventInformation7.mmEventType, com.tools20022.repository.msg.EventInformation7.mmMandatoryVoluntaryEventType,
-						com.tools20022.repository.msg.EventInformation7.mmLastNotificationIdentification);
+				messageElement_lazy = () -> Arrays.asList(EventInformation7.mmCorporateActionEventIdentification, EventInformation7.mmOfficialCorporateActionEventIdentification, EventInformation7.mmEventType,
+						EventInformation7.mmMandatoryVoluntaryEventType, EventInformation7.mmLastNotificationIdentification);
 				trace_lazy = () -> CorporateActionEvent.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "EventInformation7";
 				definition = "Provides information about event of a corporate action.";
 				nextVersions_lazy = () -> Arrays.asList(EventInformation9.mmObject());

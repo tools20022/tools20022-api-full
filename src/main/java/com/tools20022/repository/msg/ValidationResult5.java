@@ -20,9 +20,11 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.Number;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -101,7 +103,7 @@ public class ValidationResult5 {
 			componentContext_lazy = () -> ValidationResult5.mmObject();
 			isDerived = false;
 			xmlTag = "SeqNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SequenceNumber";
 			definition = "Sequential number assigned to the mismatch.";
 			maxOccurs = 1;
@@ -143,7 +145,7 @@ public class ValidationResult5 {
 			componentContext_lazy = () -> ValidationResult5.mmObject();
 			isDerived = false;
 			xmlTag = "RuleId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RuleIdentification";
 			definition = "Coded identification of the matching rule that is violated.";
 			maxOccurs = 1;
@@ -184,7 +186,7 @@ public class ValidationResult5 {
 			componentContext_lazy = () -> ValidationResult5.mmObject();
 			isDerived = false;
 			xmlTag = "RuleDesc";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RuleDescription";
 			definition = "Detailed description of the rule.";
 			maxOccurs = 1;
@@ -224,7 +226,7 @@ public class ValidationResult5 {
 			componentContext_lazy = () -> ValidationResult5.mmObject();
 			isDerived = false;
 			xmlTag = "MisMtchdElmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MisMatchedElement";
 			definition = "Description of the element that creates the mismatch.";
 			minOccurs = 0;
@@ -236,10 +238,9 @@ public class ValidationResult5 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ValidationResult5.mmSequenceNumber, com.tools20022.repository.msg.ValidationResult5.mmRuleIdentification,
-						com.tools20022.repository.msg.ValidationResult5.mmRuleDescription, com.tools20022.repository.msg.ValidationResult5.mmMisMatchedElement);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(ValidationResult5.mmSequenceNumber, ValidationResult5.mmRuleIdentification, ValidationResult5.mmRuleDescription, ValidationResult5.mmMisMatchedElement);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ValidationResult5";
 				definition = "Detailed description of the differences.";
 			}

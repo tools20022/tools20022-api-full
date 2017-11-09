@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.TaxIdentificationNumberTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -77,7 +79,7 @@ public class TaxIdentificationNumberType1Code extends TaxIdentificationNumberTyp
 	 */
 	public static final MMCode mmGlobalIntermediaryIdentificationNumber = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GlobalIntermediaryIdentificationNumber";
 			owner_lazy = () -> TaxIdentificationNumberType1Code.mmObject();
 		}
@@ -100,7 +102,7 @@ public class TaxIdentificationNumberType1Code extends TaxIdentificationNumberTyp
 	 */
 	public static final MMCode mmTaxIdentificationNumber = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxIdentificationNumber";
 			owner_lazy = () -> TaxIdentificationNumberType1Code.mmObject();
 		}
@@ -109,12 +111,11 @@ public class TaxIdentificationNumberType1Code extends TaxIdentificationNumberTyp
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TaxIdentificationNumberType1Code";
 				definition = "Specifies the type of tax identification number.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TaxIdentificationNumberType1Code.mmGlobalIntermediaryIdentificationNumber,
-						com.tools20022.repository.codeset.TaxIdentificationNumberType1Code.mmTaxIdentificationNumber);
+				code_lazy = () -> Arrays.asList(TaxIdentificationNumberType1Code.mmGlobalIntermediaryIdentificationNumber, TaxIdentificationNumberType1Code.mmTaxIdentificationNumber);
 				trace_lazy = () -> TaxIdentificationNumberTypeCode.mmObject();
 			}
 		});

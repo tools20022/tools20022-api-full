@@ -20,6 +20,7 @@ package com.tools20022.repository.area.camt;
 import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.CashManagementLatestVersion;
 import com.tools20022.repository.choice.UnderlyingTransaction3Choice;
 import com.tools20022.repository.msg.Case3;
@@ -61,6 +62,9 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code camt.037.001.05}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.CashManagementLatestVersion
@@ -104,9 +108,6 @@ import java.util.List;
  * DebitAuthorisationRequestV05.mmSupplementaryData}</li>
  * </ul>
  * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code camt.037.001.05}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -161,10 +162,10 @@ public class DebitAuthorisationRequestV05 {
 	public static final MMMessageBuildingBlock mmAssignment = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Assgnmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Assignment";
 			definition = "Identifies the assignment of an investigation case from an assigner to an assignee.\nUsage: The Assigner must be the sender of this confirmation and the Assignee must be the receiver.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.camt.DebitAuthorisationRequestV04.mmAssignment;
+			previousVersion_lazy = () -> DebitAuthorisationRequestV04.mmAssignment;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> CaseAssignment3.mmObject();
@@ -200,10 +201,10 @@ public class DebitAuthorisationRequestV05 {
 	public static final MMMessageBuildingBlock mmCase = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Case";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Case";
 			definition = "Identifies the investigation case.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.camt.DebitAuthorisationRequestV04.mmCase;
+			previousVersion_lazy = () -> DebitAuthorisationRequestV04.mmCase;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> Case3.mmObject();
@@ -241,10 +242,10 @@ public class DebitAuthorisationRequestV05 {
 	public static final MMMessageBuildingBlock mmUnderlying = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Undrlyg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Underlying";
 			definition = "Identifies the underlying payment instruction.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.camt.DebitAuthorisationRequestV04.mmUnderlying;
+			previousVersion_lazy = () -> DebitAuthorisationRequestV04.mmUnderlying;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> UnderlyingTransaction3Choice.mmObject();
@@ -282,10 +283,10 @@ public class DebitAuthorisationRequestV05 {
 	public static final MMMessageBuildingBlock mmDetail = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Dtl";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Detail";
 			definition = "Detailed information about the request.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.camt.DebitAuthorisationRequestV04.mmDetail;
+			previousVersion_lazy = () -> DebitAuthorisationRequestV04.mmDetail;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> DebitAuthorisation2.mmObject();
@@ -326,10 +327,10 @@ public class DebitAuthorisationRequestV05 {
 	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SplmtryData";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryData";
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.camt.DebitAuthorisationRequestV04.mmSupplementaryData;
+			previousVersion_lazy = () -> DebitAuthorisationRequestV04.mmSupplementaryData;
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
@@ -338,7 +339,7 @@ public class DebitAuthorisationRequestV05 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DebitAuthorisationRequestV05";
 				definition = "Scope\r\nThe Debit Authorisation Request message is sent by an account servicing institution to an account owner. This message is used to request authorisation to debit an account.\r\nUsage\r\nThe Debit Authorisation Request message must be answered with a Debit Authorisation Response message.\r\nThe Debit Authorisation Request message can be used to request debit authorisation in a:\r\n- request to modify payment case (in the case of a lower final amount or change of creditor)\r\n- request to cancel payment case (full amount)\r\n- unable to apply case (the creditor whose account has been credited is not the intended beneficiary)\r\n- claim non receipt case (the creditor whose account has been credited is not the intended beneficiary)\r\nThe Debit Authorisation Request message covers one and only one payment instruction at a time. If an account servicing institution needs to request debit authorisation for several instructions, then multiple Debit Authorisation Request messages must be sent.\r\nThe Debit Authorisation Request must be used exclusively between the account servicing institution and the account owner. It must not be used in place of a Request To Modify Payment or Request To Cancel Payment message between subsequent agents.";
 				previousVersion_lazy = () -> DebitAuthorisationRequestV04.mmObject();
@@ -346,9 +347,8 @@ public class DebitAuthorisationRequestV05 {
 				rootElement = "Document";
 				xmlTag = "DbtAuthstnReq";
 				businessArea_lazy = () -> CashManagementLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.DebitAuthorisationRequestV05.mmAssignment, com.tools20022.repository.area.camt.DebitAuthorisationRequestV05.mmCase,
-						com.tools20022.repository.area.camt.DebitAuthorisationRequestV05.mmUnderlying, com.tools20022.repository.area.camt.DebitAuthorisationRequestV05.mmDetail,
-						com.tools20022.repository.area.camt.DebitAuthorisationRequestV05.mmSupplementaryData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(DebitAuthorisationRequestV05.mmAssignment, DebitAuthorisationRequestV05.mmCase, DebitAuthorisationRequestV05.mmUnderlying, DebitAuthorisationRequestV05.mmDetail,
+						DebitAuthorisationRequestV05.mmSupplementaryData);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "camt";

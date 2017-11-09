@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.CrossType1Code
+ * CrossType1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>{@linkplain com.tools20022.repository.codeset.CrossTypeCode#mmAllOrNone
@@ -38,13 +47,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * CrossTypeCode.mmOneSide}</li>
  * <li>{@linkplain com.tools20022.repository.codeset.CrossTypeCode#mmSamePrice
  * CrossTypeCode.mmSamePrice}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.CrossType1Code
- * CrossType1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -99,7 +101,7 @@ public class CrossTypeCode {
 	 */
 	public static final MMCode mmAllOrNone = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AllOrNone";
 			definition = "Cross All or None - Cross trade that is executed completely or not. Both sides are treated in the same manner. This is equivalent to Fill or Kill type behavior, where the cross order meets the crossing criteria  within the market and is executed or it is rejected.";
 			owner_lazy = () -> CrossTypeCode.mmObject();
@@ -135,7 +137,7 @@ public class CrossTypeCode {
 	 */
 	public static final MMCode mmImmediateOrCancel = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ImmediateOrCancel";
 			definition = "Cross trade that is executed partially and the rest is canceled. One side is fully executed, the other side is partially executed with the remainder being canceled. This is equivalent to an Immediate or Cancel on the other side. Note: The CrossPrioritization field is used to indicate which side should fully execute in this scenario.";
 			owner_lazy = () -> CrossTypeCode.mmObject();
@@ -169,7 +171,7 @@ public class CrossTypeCode {
 	 */
 	public static final MMCode mmOneSide = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OneSide";
 			definition = "Cross trade that is partially executed with the unfilled portions remaining active. One side of the cross is fully executed (the side that was prioritised) but the unfilled portion remains active.";
 			owner_lazy = () -> CrossTypeCode.mmObject();
@@ -205,7 +207,7 @@ public class CrossTypeCode {
 	 */
 	public static final MMCode mmSamePrice = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SamePrice";
 			definition = "Cross trade is executed with existing orders with the same price. In the case other orders exist with the same price, the quantity of the Cross is executed against the existing orders and quotes, the remainder of the cross is executed against the other side of the cross.The two sides potentially have different quantities.";
 			owner_lazy = () -> CrossTypeCode.mmObject();
@@ -216,13 +218,12 @@ public class CrossTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ALON");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CrossTypeCode";
 				definition = "Type of cross being submitted to a market.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CrossTypeCode.mmAllOrNone, com.tools20022.repository.codeset.CrossTypeCode.mmImmediateOrCancel, com.tools20022.repository.codeset.CrossTypeCode.mmOneSide,
-						com.tools20022.repository.codeset.CrossTypeCode.mmSamePrice);
+				code_lazy = () -> Arrays.asList(CrossTypeCode.mmAllOrNone, CrossTypeCode.mmImmediateOrCancel, CrossTypeCode.mmOneSide, CrossTypeCode.mmSamePrice);
 				derivation_lazy = () -> Arrays.asList(CrossType1Code.mmObject());
 			}
 		});

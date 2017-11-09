@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.AccountingStatusCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -77,7 +79,7 @@ public class AccountingStatus1Code extends AccountingStatusCode {
 	 */
 	public static final MMCode mmDomestic = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Domestic";
 			owner_lazy = () -> AccountingStatus1Code.mmObject();
 		}
@@ -100,7 +102,7 @@ public class AccountingStatus1Code extends AccountingStatusCode {
 	 */
 	public static final MMCode mmNotDomestic = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotDomestic";
 			owner_lazy = () -> AccountingStatus1Code.mmObject();
 		}
@@ -109,11 +111,11 @@ public class AccountingStatus1Code extends AccountingStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AccountingStatus1Code";
 				definition = "Specifies the accounting status.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AccountingStatus1Code.mmDomestic, com.tools20022.repository.codeset.AccountingStatus1Code.mmNotDomestic);
+				code_lazy = () -> Arrays.asList(AccountingStatus1Code.mmDomestic, AccountingStatus1Code.mmNotDomestic);
 				trace_lazy = () -> AccountingStatusCode.mmObject();
 			}
 		});

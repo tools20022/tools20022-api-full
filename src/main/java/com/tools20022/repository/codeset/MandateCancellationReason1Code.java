@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.MandateReasonCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -93,7 +95,7 @@ public class MandateCancellationReason1Code extends MandateReasonCode {
 	 */
 	public static final MMCode mmIncorrectAgent = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncorrectAgent";
 			owner_lazy = () -> MandateCancellationReason1Code.mmObject();
 		}
@@ -116,7 +118,7 @@ public class MandateCancellationReason1Code extends MandateReasonCode {
 	 */
 	public static final MMCode mmIncorrectCurrency = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncorrectCurrency";
 			owner_lazy = () -> MandateCancellationReason1Code.mmObject();
 		}
@@ -139,7 +141,7 @@ public class MandateCancellationReason1Code extends MandateReasonCode {
 	 */
 	public static final MMCode mmRequestedByCustomer = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestedByCustomer";
 			owner_lazy = () -> MandateCancellationReason1Code.mmObject();
 		}
@@ -162,7 +164,7 @@ public class MandateCancellationReason1Code extends MandateReasonCode {
 	 */
 	public static final MMCode mmInsufficientDebtorDetails = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InsufficientDebtorDetails";
 			owner_lazy = () -> MandateCancellationReason1Code.mmObject();
 		}
@@ -185,7 +187,7 @@ public class MandateCancellationReason1Code extends MandateReasonCode {
 	 */
 	public static final MMCode mmInsufficientCreditorDetails = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InsufficientCreditorDetails";
 			owner_lazy = () -> MandateCancellationReason1Code.mmObject();
 		}
@@ -194,14 +196,13 @@ public class MandateCancellationReason1Code extends MandateReasonCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("AGNT");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MandateCancellationReason1Code";
 				definition = "Specifies the reason for requesting the cancellation of a mandate.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MandateCancellationReason1Code.mmIncorrectAgent, com.tools20022.repository.codeset.MandateCancellationReason1Code.mmIncorrectCurrency,
-						com.tools20022.repository.codeset.MandateCancellationReason1Code.mmRequestedByCustomer, com.tools20022.repository.codeset.MandateCancellationReason1Code.mmInsufficientDebtorDetails,
-						com.tools20022.repository.codeset.MandateCancellationReason1Code.mmInsufficientCreditorDetails);
+				code_lazy = () -> Arrays.asList(MandateCancellationReason1Code.mmIncorrectAgent, MandateCancellationReason1Code.mmIncorrectCurrency, MandateCancellationReason1Code.mmRequestedByCustomer,
+						MandateCancellationReason1Code.mmInsufficientDebtorDetails, MandateCancellationReason1Code.mmInsufficientCreditorDetails);
 				trace_lazy = () -> MandateReasonCode.mmObject();
 			}
 		});

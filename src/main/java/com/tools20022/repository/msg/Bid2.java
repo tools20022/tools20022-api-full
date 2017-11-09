@@ -20,8 +20,12 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.entity.ListTrading;
 import com.tools20022.repository.entity.SecuritiesOrder;
+import com.tools20022.repository.entity.SecuritiesQuoteVariable;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -100,7 +104,7 @@ public class Bid2 {
 			componentContext_lazy = () -> Bid2.mmObject();
 			isDerived = false;
 			xmlTag = "BidId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BidIdentification";
 			definition = "Unique and unambiguous identification of the bid.";
 			maxOccurs = 1;
@@ -142,7 +146,7 @@ public class Bid2 {
 			componentContext_lazy = () -> Bid2.mmObject();
 			isDerived = false;
 			xmlTag = "ClntBidId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClientBidIdentification";
 			definition = "Unique identifier for a Bid Request as assigned by institution. Uniqueness must be guaranteed within a single trading day.";
 			maxOccurs = 1;
@@ -186,11 +190,11 @@ public class Bid2 {
 	 */
 	public static final MMMessageAttribute mmListIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ListTrading.mmListIdentification;
+			businessElementTrace_lazy = () -> ListTrading.mmListIdentification;
 			componentContext_lazy = () -> Bid2.mmObject();
 			isDerived = false;
 			xmlTag = "ListId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ListIdentification";
 			definition = "Name or number assigned by an entity to enable recognition of that entity, eg, account identifier.";
 			maxOccurs = 1;
@@ -231,11 +235,11 @@ public class Bid2 {
 	 */
 	public static final MMMessageAssociationEnd mmBidResponsePriceDetails = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesQuoteVariable.mmBidSide;
+			businessElementTrace_lazy = () -> SecuritiesQuoteVariable.mmBidSide;
 			componentContext_lazy = () -> Bid2.mmObject();
 			isDerived = false;
 			xmlTag = "BidRspnPricDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BidResponsePriceDetails";
 			definition = "Provides details about the price linked to a particular bid.";
 			minOccurs = 1;
@@ -247,11 +251,10 @@ public class Bid2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Bid2.mmBidIdentification, com.tools20022.repository.msg.Bid2.mmClientBidIdentification, com.tools20022.repository.msg.Bid2.mmListIdentification,
-						com.tools20022.repository.msg.Bid2.mmBidResponsePriceDetails);
+				messageElement_lazy = () -> Arrays.asList(Bid2.mmBidIdentification, Bid2.mmClientBidIdentification, Bid2.mmListIdentification, Bid2.mmBidResponsePriceDetails);
 				trace_lazy = () -> SecuritiesOrder.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Bid2";
 				definition = "Identification of an attempt to buy or sell a large number of financial instruments contained in or comprising a portfolio.";
 			}

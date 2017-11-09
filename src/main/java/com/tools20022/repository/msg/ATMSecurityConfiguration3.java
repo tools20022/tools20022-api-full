@@ -19,11 +19,13 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.Algorithm13Code;
 import com.tools20022.repository.codeset.Algorithm15Code;
 import com.tools20022.repository.codeset.Algorithm7Code;
 import com.tools20022.repository.codeset.EncryptionFormat1Code;
 import com.tools20022.repository.datatype.TrueFalseIndicator;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -129,7 +131,7 @@ public class ATMSecurityConfiguration3 {
 			componentContext_lazy = () -> ATMSecurityConfiguration3.mmObject();
 			isDerived = false;
 			xmlTag = "AsmmtrcNcrptn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AsymmetricEncryption";
 			definition = "True if the security module is able to perform encryption with an asymmetric key.";
 			maxOccurs = 1;
@@ -175,7 +177,7 @@ public class ATMSecurityConfiguration3 {
 			componentContext_lazy = () -> ATMSecurityConfiguration3.mmObject();
 			isDerived = false;
 			xmlTag = "AsmmtrcKeyStdId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AsymmetricKeyStandardIdentification";
 			definition = "True if the security module is able to identify an asymmetric key with certificate issuer X.500 name and certificate serial number. False if a proprietary asymmetric key identifier is required.";
 			maxOccurs = 1;
@@ -218,7 +220,7 @@ public class ATMSecurityConfiguration3 {
 			componentContext_lazy = () -> ATMSecurityConfiguration3.mmObject();
 			isDerived = false;
 			xmlTag = "AsmmtrcNcrptnAlgo";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AsymmetricEncryptionAlgorithm";
 			definition = "Asymmetric encryption algorithm the security module is able to manage.";
 			minOccurs = 0;
@@ -264,7 +266,7 @@ public class ATMSecurityConfiguration3 {
 			componentContext_lazy = () -> ATMSecurityConfiguration3.mmObject();
 			isDerived = false;
 			xmlTag = "SmmtrcTrnsprtKey";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SymmetricTransportKey";
 			definition = "True if the security module is able to manage a symmetric transport session key to protect cryptographic keys and data. False if only a previously exchanged symmetric key must be used; a proprietary symmetric key identifier is then used.";
 			maxOccurs = 1;
@@ -317,10 +319,10 @@ public class ATMSecurityConfiguration3 {
 			componentContext_lazy = () -> ATMSecurityConfiguration3.mmObject();
 			isDerived = false;
 			xmlTag = "SmmtrcTrnsprtKeyAlgo";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SymmetricTransportKeyAlgorithm";
 			definition = "Symmetric transport session key algorithm the security module is able to manage.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMSecurityConfiguration4.mmDigitalSignatureAlgorithm);
+			nextVersions_lazy = () -> Arrays.asList(ATMSecurityConfiguration4.mmDigitalSignatureAlgorithm);
 			minOccurs = 0;
 			simpleType_lazy = () -> Algorithm13Code.mmObject();
 		}
@@ -360,7 +362,7 @@ public class ATMSecurityConfiguration3 {
 			componentContext_lazy = () -> ATMSecurityConfiguration3.mmObject();
 			isDerived = false;
 			xmlTag = "SmmtrcNcrptnAlgo";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SymmetricEncryptionAlgorithm";
 			definition = "Symmetric encryption algorithm the security module is able to manage.";
 			minOccurs = 0;
@@ -404,7 +406,7 @@ public class ATMSecurityConfiguration3 {
 			componentContext_lazy = () -> ATMSecurityConfiguration3.mmObject();
 			isDerived = false;
 			xmlTag = "NcrptnFrmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EncryptionFormat";
 			definition = "Format of data before encryption, if the format is not plaintext or implicit.";
 			minOccurs = 0;
@@ -415,12 +417,10 @@ public class ATMSecurityConfiguration3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMSecurityConfiguration3.mmAsymmetricEncryption, com.tools20022.repository.msg.ATMSecurityConfiguration3.mmAsymmetricKeyStandardIdentification,
-						com.tools20022.repository.msg.ATMSecurityConfiguration3.mmAsymmetricEncryptionAlgorithm, com.tools20022.repository.msg.ATMSecurityConfiguration3.mmSymmetricTransportKey,
-						com.tools20022.repository.msg.ATMSecurityConfiguration3.mmSymmetricTransportKeyAlgorithm, com.tools20022.repository.msg.ATMSecurityConfiguration3.mmSymmetricEncryptionAlgorithm,
-						com.tools20022.repository.msg.ATMSecurityConfiguration3.mmEncryptionFormat);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(ATMSecurityConfiguration3.mmAsymmetricEncryption, ATMSecurityConfiguration3.mmAsymmetricKeyStandardIdentification, ATMSecurityConfiguration3.mmAsymmetricEncryptionAlgorithm,
+						ATMSecurityConfiguration3.mmSymmetricTransportKey, ATMSecurityConfiguration3.mmSymmetricTransportKeyAlgorithm, ATMSecurityConfiguration3.mmSymmetricEncryptionAlgorithm, ATMSecurityConfiguration3.mmEncryptionFormat);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ATMSecurityConfiguration3";
 				definition = "Configuration of the encryption or digital envelope, if the security module is able to perform encryption.";
 				nextVersions_lazy = () -> Arrays.asList(ATMSecurityConfiguration4.mmObject());

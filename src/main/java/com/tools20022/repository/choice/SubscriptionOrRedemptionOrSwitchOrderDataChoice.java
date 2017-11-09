@@ -19,10 +19,12 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.InvestmentFundTransaction;
 import com.tools20022.repository.entity.RedemptionOrder;
 import com.tools20022.repository.entity.SubscriptionOrder;
 import com.tools20022.repository.entity.SwitchOrder;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.RedemptionOrder10;
 import com.tools20022.repository.msg.SubscriptionOrder10;
 import com.tools20022.repository.msg.SwitchOrder5;
@@ -109,7 +111,7 @@ public class SubscriptionOrRedemptionOrSwitchOrderDataChoice {
 			componentContext_lazy = () -> SubscriptionOrRedemptionOrSwitchOrderDataChoice.mmObject();
 			isDerived = false;
 			xmlTag = "SbcptDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubscriptionDetails";
 			definition = "Subscription order data.";
 			maxOccurs = 1;
@@ -156,7 +158,7 @@ public class SubscriptionOrRedemptionOrSwitchOrderDataChoice {
 			componentContext_lazy = () -> SubscriptionOrRedemptionOrSwitchOrderDataChoice.mmObject();
 			isDerived = false;
 			xmlTag = "RedDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RedemptionDetails";
 			definition = "Redemption order data.";
 			maxOccurs = 1;
@@ -202,7 +204,7 @@ public class SubscriptionOrRedemptionOrSwitchOrderDataChoice {
 			componentContext_lazy = () -> SubscriptionOrRedemptionOrSwitchOrderDataChoice.mmObject();
 			isDerived = false;
 			xmlTag = "SwtchDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SwitchDetails";
 			definition = "Switch order data.";
 			maxOccurs = 1;
@@ -215,11 +217,11 @@ public class SubscriptionOrRedemptionOrSwitchOrderDataChoice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SubscriptionOrRedemptionOrSwitchOrderDataChoice.mmSubscriptionDetails,
-						com.tools20022.repository.choice.SubscriptionOrRedemptionOrSwitchOrderDataChoice.mmRedemptionDetails, com.tools20022.repository.choice.SubscriptionOrRedemptionOrSwitchOrderDataChoice.mmSwitchDetails);
+				messageElement_lazy = () -> Arrays.asList(SubscriptionOrRedemptionOrSwitchOrderDataChoice.mmSubscriptionDetails, SubscriptionOrRedemptionOrSwitchOrderDataChoice.mmRedemptionDetails,
+						SubscriptionOrRedemptionOrSwitchOrderDataChoice.mmSwitchDetails);
 				trace_lazy = () -> InvestmentFundTransaction.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SubscriptionOrRedemptionOrSwitchOrderDataChoice";
 				definition = "Choice of subscription, redemption or switch order details.";
 			}

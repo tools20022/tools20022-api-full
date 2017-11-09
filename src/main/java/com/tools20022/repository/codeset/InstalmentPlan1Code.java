@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.InstalmentPlanCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -80,7 +82,7 @@ public class InstalmentPlan1Code extends InstalmentPlanCode {
 	 */
 	public static final MMCode mmEqualPayment = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EqualPayment";
 			owner_lazy = () -> InstalmentPlan1Code.mmObject();
 		}
@@ -103,7 +105,7 @@ public class InstalmentPlan1Code extends InstalmentPlanCode {
 	 */
 	public static final MMCode mmInequalPayment = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InequalPayment";
 			owner_lazy = () -> InstalmentPlan1Code.mmObject();
 		}
@@ -126,7 +128,7 @@ public class InstalmentPlan1Code extends InstalmentPlanCode {
 	 */
 	public static final MMCode mmDeferredInstalment = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeferredInstalment";
 			owner_lazy = () -> InstalmentPlan1Code.mmObject();
 		}
@@ -135,12 +137,11 @@ public class InstalmentPlan1Code extends InstalmentPlanCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InstalmentPlan1Code";
 				definition = "Type of instalment plan.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.InstalmentPlan1Code.mmEqualPayment, com.tools20022.repository.codeset.InstalmentPlan1Code.mmInequalPayment,
-						com.tools20022.repository.codeset.InstalmentPlan1Code.mmDeferredInstalment);
+				code_lazy = () -> Arrays.asList(InstalmentPlan1Code.mmEqualPayment, InstalmentPlan1Code.mmInequalPayment, InstalmentPlan1Code.mmDeferredInstalment);
 				trace_lazy = () -> InstalmentPlanCode.mmObject();
 			}
 		});

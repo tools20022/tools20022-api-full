@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.AlgorithmCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -94,9 +96,9 @@ public class Algorithm4Code extends AlgorithmCode {
 	 */
 	public static final MMCode mmSHA256WithRSA = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SHA256WithRSA";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Algorithm14Code.mmSHA256WithRSA);
+			nextVersions_lazy = () -> Arrays.asList(Algorithm14Code.mmSHA256WithRSA);
 			owner_lazy = () -> Algorithm4Code.mmObject();
 		}
 	};
@@ -104,13 +106,13 @@ public class Algorithm4Code extends AlgorithmCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ERS2");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Algorithm4Code";
 				definition = "Cryptographic algorithms for digital signatures.";
 				nextVersions_lazy = () -> Arrays.asList(Algorithm14Code.mmObject());
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Algorithm4Code.mmSHA256WithRSA);
+				code_lazy = () -> Arrays.asList(Algorithm4Code.mmSHA256WithRSA);
 				trace_lazy = () -> AlgorithmCode.mmObject();
 			}
 		});

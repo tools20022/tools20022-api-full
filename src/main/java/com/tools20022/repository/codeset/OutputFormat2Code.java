@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.OutputFormatCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -82,7 +84,7 @@ public class OutputFormat2Code extends OutputFormatCode {
 	 */
 	public static final MMCode mmMessageReference = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageReference";
 			owner_lazy = () -> OutputFormat2Code.mmObject();
 		}
@@ -105,7 +107,7 @@ public class OutputFormat2Code extends OutputFormatCode {
 	 */
 	public static final MMCode mmScreenReference = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ScreenReference";
 			owner_lazy = () -> OutputFormat2Code.mmObject();
 		}
@@ -128,7 +130,7 @@ public class OutputFormat2Code extends OutputFormatCode {
 	 */
 	public static final MMCode mmSimpleText = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SimpleText";
 			owner_lazy = () -> OutputFormat2Code.mmObject();
 		}
@@ -151,7 +153,7 @@ public class OutputFormat2Code extends OutputFormatCode {
 	 */
 	public static final MMCode mmXHTML = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "XHTML";
 			owner_lazy = () -> OutputFormat2Code.mmObject();
 		}
@@ -160,12 +162,11 @@ public class OutputFormat2Code extends OutputFormatCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OutputFormat2Code";
 				definition = "Information format.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OutputFormat2Code.mmMessageReference, com.tools20022.repository.codeset.OutputFormat2Code.mmScreenReference,
-						com.tools20022.repository.codeset.OutputFormat2Code.mmSimpleText, com.tools20022.repository.codeset.OutputFormat2Code.mmXHTML);
+				code_lazy = () -> Arrays.asList(OutputFormat2Code.mmMessageReference, OutputFormat2Code.mmScreenReference, OutputFormat2Code.mmSimpleText, OutputFormat2Code.mmXHTML);
 				trace_lazy = () -> OutputFormatCode.mmObject();
 			}
 		});

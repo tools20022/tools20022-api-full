@@ -20,9 +20,13 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.InstructionStatus6Choice;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.entity.AccountIdentification;
 import com.tools20022.repository.entity.MeetingStatus;
+import com.tools20022.repository.entity.Status;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -114,10 +118,10 @@ public class DetailedInstructionStatus11 {
 			componentContext_lazy = () -> DetailedInstructionStatus11.mmObject();
 			isDerived = false;
 			xmlTag = "InstrId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructionIdentification";
 			definition = "Identifies the detailed instruction within an instruction message.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.DetailedInstructionStatus8.mmInstructionIdentification;
+			previousVersion_lazy = () -> DetailedInstructionStatus8.mmInstructionIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -163,14 +167,14 @@ public class DetailedInstructionStatus11 {
 	 */
 	public static final MMMessageAttribute mmAccountIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AccountIdentification.mmNumber;
+			businessElementTrace_lazy = () -> AccountIdentification.mmNumber;
 			componentContext_lazy = () -> DetailedInstructionStatus11.mmObject();
 			isDerived = false;
 			xmlTag = "AcctId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountIdentification";
 			definition = "Identifies the safekeeping account.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.DetailedInstructionStatus8.mmAccountIdentification;
+			previousVersion_lazy = () -> DetailedInstructionStatus8.mmAccountIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -216,14 +220,14 @@ public class DetailedInstructionStatus11 {
 	 */
 	public static final MMMessageAttribute mmSubAccountIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AccountIdentification.mmNumber;
+			businessElementTrace_lazy = () -> AccountIdentification.mmNumber;
 			componentContext_lazy = () -> DetailedInstructionStatus11.mmObject();
 			isDerived = false;
 			xmlTag = "SubAcctId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubAccountIdentification";
 			definition = "Identifies the subaccount of the safekeeping account.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.DetailedInstructionStatus8.mmSubAccountIdentification;
+			previousVersion_lazy = () -> DetailedInstructionStatus8.mmSubAccountIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -270,14 +274,14 @@ public class DetailedInstructionStatus11 {
 	 */
 	public static final MMMessageAssociationEnd mmInstructionStatus = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.mmInstructionProcessingStatus;
+			businessElementTrace_lazy = () -> Status.mmInstructionProcessingStatus;
 			componentContext_lazy = () -> DetailedInstructionStatus11.mmObject();
 			isDerived = false;
 			xmlTag = "InstrSts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructionStatus";
 			definition = "Status applying to individual instructions of a MeetingInstruction.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.DetailedInstructionStatus8.mmInstructionStatus;
+			previousVersion_lazy = () -> DetailedInstructionStatus8.mmInstructionStatus;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -288,11 +292,11 @@ public class DetailedInstructionStatus11 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DetailedInstructionStatus11.mmInstructionIdentification, com.tools20022.repository.msg.DetailedInstructionStatus11.mmAccountIdentification,
-						com.tools20022.repository.msg.DetailedInstructionStatus11.mmSubAccountIdentification, com.tools20022.repository.msg.DetailedInstructionStatus11.mmInstructionStatus);
+				messageElement_lazy = () -> Arrays.asList(DetailedInstructionStatus11.mmInstructionIdentification, DetailedInstructionStatus11.mmAccountIdentification, DetailedInstructionStatus11.mmSubAccountIdentification,
+						DetailedInstructionStatus11.mmInstructionStatus);
 				trace_lazy = () -> MeetingStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DetailedInstructionStatus11";
 				definition = "Status applying to individual instructions of a MeetingInstruction.";
 				previousVersion_lazy = () -> DetailedInstructionStatus8.mmObject();

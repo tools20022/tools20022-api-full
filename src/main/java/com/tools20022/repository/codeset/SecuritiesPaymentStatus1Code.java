@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.SecuritiesPaymentStatusCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -87,7 +89,7 @@ public class SecuritiesPaymentStatus1Code extends SecuritiesPaymentStatusCode {
 	 */
 	public static final MMCode mmFullyPaid = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FullyPaid";
 			owner_lazy = () -> SecuritiesPaymentStatus1Code.mmObject();
 		}
@@ -110,7 +112,7 @@ public class SecuritiesPaymentStatus1Code extends SecuritiesPaymentStatusCode {
 	 */
 	public static final MMCode mmNillPaid = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NillPaid";
 			owner_lazy = () -> SecuritiesPaymentStatus1Code.mmObject();
 		}
@@ -133,7 +135,7 @@ public class SecuritiesPaymentStatus1Code extends SecuritiesPaymentStatusCode {
 	 */
 	public static final MMCode mmPartiallyPaid = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartiallyPaid";
 			owner_lazy = () -> SecuritiesPaymentStatus1Code.mmObject();
 		}
@@ -142,13 +144,12 @@ public class SecuritiesPaymentStatus1Code extends SecuritiesPaymentStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("FULL");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesPaymentStatus1Code";
 				definition = "Specifies the state of payment of a security at a particular time.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SecuritiesPaymentStatus1Code.mmFullyPaid, com.tools20022.repository.codeset.SecuritiesPaymentStatus1Code.mmNillPaid,
-						com.tools20022.repository.codeset.SecuritiesPaymentStatus1Code.mmPartiallyPaid);
+				code_lazy = () -> Arrays.asList(SecuritiesPaymentStatus1Code.mmFullyPaid, SecuritiesPaymentStatus1Code.mmNillPaid, SecuritiesPaymentStatus1Code.mmPartiallyPaid);
 				trace_lazy = () -> SecuritiesPaymentStatusCode.mmObject();
 			}
 		});

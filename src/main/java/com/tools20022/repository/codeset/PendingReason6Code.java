@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.PendingFailingReasonCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -104,7 +106,7 @@ public class PendingReason6Code extends PendingFailingReasonCode {
 	 */
 	public static final MMCode mmAccountServicerDeadlineMissed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountServicerDeadlineMissed";
 			owner_lazy = () -> PendingReason6Code.mmObject();
 		}
@@ -127,7 +129,7 @@ public class PendingReason6Code extends PendingFailingReasonCode {
 	 */
 	public static final MMCode mmAwaitingConfirmation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AwaitingConfirmation";
 			owner_lazy = () -> PendingReason6Code.mmObject();
 		}
@@ -150,7 +152,7 @@ public class PendingReason6Code extends PendingFailingReasonCode {
 	 */
 	public static final MMCode mmOther = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
 			owner_lazy = () -> PendingReason6Code.mmObject();
 		}
@@ -173,7 +175,7 @@ public class PendingReason6Code extends PendingFailingReasonCode {
 	 */
 	public static final MMCode mmConditionalRegistrar = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConditionalRegistrar";
 			owner_lazy = () -> PendingReason6Code.mmObject();
 		}
@@ -196,7 +198,7 @@ public class PendingReason6Code extends PendingFailingReasonCode {
 	 */
 	public static final MMCode mmConditionalCurrency = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConditionalCurrency";
 			owner_lazy = () -> PendingReason6Code.mmObject();
 		}
@@ -219,7 +221,7 @@ public class PendingReason6Code extends PendingFailingReasonCode {
 	 */
 	public static final MMCode mmConditionalRealignement = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConditionalRealignement";
 			owner_lazy = () -> PendingReason6Code.mmObject();
 		}
@@ -228,15 +230,14 @@ public class PendingReason6Code extends PendingFailingReasonCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ADEA");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PendingReason6Code";
 				definition = "Specifies the reason why a cancellation request sent for the related instruction is pending.";
 				nextVersions_lazy = () -> Arrays.asList(PendingReason9Code.mmObject());
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PendingReason6Code.mmAccountServicerDeadlineMissed, com.tools20022.repository.codeset.PendingReason6Code.mmAwaitingConfirmation,
-						com.tools20022.repository.codeset.PendingReason6Code.mmOther, com.tools20022.repository.codeset.PendingReason6Code.mmConditionalRegistrar, com.tools20022.repository.codeset.PendingReason6Code.mmConditionalCurrency,
-						com.tools20022.repository.codeset.PendingReason6Code.mmConditionalRealignement);
+				code_lazy = () -> Arrays.asList(PendingReason6Code.mmAccountServicerDeadlineMissed, PendingReason6Code.mmAwaitingConfirmation, PendingReason6Code.mmOther, PendingReason6Code.mmConditionalRegistrar,
+						PendingReason6Code.mmConditionalCurrency, PendingReason6Code.mmConditionalRealignement);
 				trace_lazy = () -> PendingFailingReasonCode.mmObject();
 			}
 		});

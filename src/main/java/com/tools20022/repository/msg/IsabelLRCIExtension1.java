@@ -20,8 +20,10 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max105Text;
 import com.tools20022.repository.datatype.PositiveNumber;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -99,7 +101,7 @@ public class IsabelLRCIExtension1 {
 			componentContext_lazy = () -> IsabelLRCIExtension1.mmObject();
 			isDerived = false;
 			xmlTag = "ImgHashAlgo";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ImageHashAlgorithm";
 			definition = "Effective method for calculating the (cryptographic) hash value of each visual representation of a payment file.";
 			maxOccurs = 1;
@@ -141,7 +143,7 @@ public class IsabelLRCIExtension1 {
 			componentContext_lazy = () -> IsabelLRCIExtension1.mmObject();
 			isDerived = false;
 			xmlTag = "TknRspn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TokenResponse";
 			definition = "Block of data on which the signature is calculated by the LRCI client.";
 			maxOccurs = 1;
@@ -188,7 +190,7 @@ public class IsabelLRCIExtension1 {
 			componentContext_lazy = () -> IsabelLRCIExtension1.mmObject();
 			isDerived = false;
 			xmlTag = "TknRspnPmtInfIndx";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TokenResponsePaymentInformationIndex";
 			definition = "Index of the payment information element containing the hash of the visual representation and the hash of the payment file relevant for this signature.";
 			maxOccurs = 1;
@@ -200,10 +202,9 @@ public class IsabelLRCIExtension1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IsabelLRCIExtension1.mmImageHashAlgorithm, com.tools20022.repository.msg.IsabelLRCIExtension1.mmTokenResponse,
-						com.tools20022.repository.msg.IsabelLRCIExtension1.mmTokenResponsePaymentInformationIndex);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(IsabelLRCIExtension1.mmImageHashAlgorithm, IsabelLRCIExtension1.mmTokenResponse, IsabelLRCIExtension1.mmTokenResponsePaymentInformationIndex);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "IsabelLRCIExtension1";
 				definition = "Specifies the LRCI protocol extension details.";
 			}

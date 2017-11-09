@@ -19,8 +19,10 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.RateAndAmountFormat1Choice;
 import com.tools20022.repository.codeset.CountryCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -97,7 +99,7 @@ public class SecurityWithHoldingTax1 {
 			componentContext_lazy = () -> SecurityWithHoldingTax1.mmObject();
 			isDerived = false;
 			xmlTag = "WhldgTaxVal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WithholdingTaxValue";
 			definition = "Value of the withholding tax as rate, amount or not specified.";
 			maxOccurs = 1;
@@ -138,7 +140,7 @@ public class SecurityWithHoldingTax1 {
 			componentContext_lazy = () -> SecurityWithHoldingTax1.mmObject();
 			isDerived = false;
 			xmlTag = "Ctry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Country";
 			definition = "Represents the tax authority.";
 			maxOccurs = 1;
@@ -150,9 +152,9 @@ public class SecurityWithHoldingTax1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecurityWithHoldingTax1.mmWithholdingTaxValue, com.tools20022.repository.msg.SecurityWithHoldingTax1.mmCountry);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(SecurityWithHoldingTax1.mmWithholdingTaxValue, SecurityWithHoldingTax1.mmCountry);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SecurityWithHoldingTax1";
 				definition = "Set of elements of a cash distribution that will be withheld by a tax authority.";
 			}

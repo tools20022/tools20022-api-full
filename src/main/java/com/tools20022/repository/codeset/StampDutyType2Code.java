@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.StampDutyTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -83,7 +85,7 @@ public class StampDutyType2Code extends StampDutyTypeCode {
 	 */
 	public static final MMCode mmApplicable = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Applicable";
 			owner_lazy = () -> StampDutyType2Code.mmObject();
 		}
@@ -106,7 +108,7 @@ public class StampDutyType2Code extends StampDutyTypeCode {
 	 */
 	public static final MMCode mmNotApplicable = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotApplicable";
 			owner_lazy = () -> StampDutyType2Code.mmObject();
 		}
@@ -115,12 +117,12 @@ public class StampDutyType2Code extends StampDutyTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ASTD");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "StampDutyType2Code";
 				definition = "Specifies if the stamp duty is applicable.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.StampDutyType2Code.mmApplicable, com.tools20022.repository.codeset.StampDutyType2Code.mmNotApplicable);
+				code_lazy = () -> Arrays.asList(StampDutyType2Code.mmApplicable, StampDutyType2Code.mmNotApplicable);
 				trace_lazy = () -> StampDutyTypeCode.mmObject();
 			}
 		});

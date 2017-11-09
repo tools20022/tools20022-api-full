@@ -20,10 +20,12 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.QuoteRequestType1Code;
 import com.tools20022.repository.codeset.Side1Code;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -151,7 +153,7 @@ public class QuoteRequest1 {
 			componentContext_lazy = () -> QuoteRequest1.mmObject();
 			isDerived = false;
 			xmlTag = "QtReqTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuoteRequestType";
 			definition = "Specifies the type of quote request being sent.";
 			maxOccurs = 1;
@@ -193,11 +195,11 @@ public class QuoteRequest1 {
 	 */
 	public static final MMMessageAttribute mmExpiryDateTime = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Quote.mmValidUntilDateTime;
+			businessElementTrace_lazy = () -> Quote.mmValidUntilDateTime;
 			componentContext_lazy = () -> QuoteRequest1.mmObject();
 			isDerived = false;
 			xmlTag = "XpryDtTm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExpiryDateTime";
 			definition = "Expresses the validity date and time of the Quote.";
 			maxOccurs = 1;
@@ -239,7 +241,7 @@ public class QuoteRequest1 {
 			componentContext_lazy = () -> QuoteRequest1.mmObject();
 			isDerived = false;
 			xmlTag = "PrvsClsgPric";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousClosingPrice";
 			definition = "Price of a financial instrument at closing time of the exchange in which it is traded.";
 			minOccurs = 0;
@@ -280,11 +282,11 @@ public class QuoteRequest1 {
 	 */
 	public static final MMMessageAttribute mmSide = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesQuoteVariable.mmOfferSide;
+			businessElementTrace_lazy = () -> SecuritiesQuoteVariable.mmOfferSide;
 			componentContext_lazy = () -> QuoteRequest1.mmObject();
 			isDerived = false;
 			xmlTag = "Sd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Side";
 			definition = "Specifies the side of the requested quote.";
 			maxOccurs = 1;
@@ -329,7 +331,7 @@ public class QuoteRequest1 {
 			componentContext_lazy = () -> QuoteRequest1.mmObject();
 			isDerived = false;
 			xmlTag = "FinInstrmDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentDetails";
 			definition = "Provides details about the financial instrument.";
 			maxOccurs = 1;
@@ -376,7 +378,7 @@ public class QuoteRequest1 {
 			componentContext_lazy = () -> QuoteRequest1.mmObject();
 			isDerived = false;
 			xmlTag = "FinInstrmAttrbts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentAttributes";
 			definition = "Provides details about the financial instrument attributes.";
 			maxOccurs = 1;
@@ -423,7 +425,7 @@ public class QuoteRequest1 {
 			componentContext_lazy = () -> QuoteRequest1.mmObject();
 			isDerived = false;
 			xmlTag = "Stiptns";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Stipulations";
 			definition = "Provides details about the financial instrument stipulations.";
 			maxOccurs = 1;
@@ -470,7 +472,7 @@ public class QuoteRequest1 {
 			componentContext_lazy = () -> QuoteRequest1.mmObject();
 			isDerived = false;
 			xmlTag = "UndrlygFinInstrmDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnderlyingFinancialInstrumentDetails";
 			definition = "Provides details about the underlying financial instrument.";
 			minOccurs = 0;
@@ -516,7 +518,7 @@ public class QuoteRequest1 {
 			componentContext_lazy = () -> QuoteRequest1.mmObject();
 			isDerived = false;
 			xmlTag = "UndrlygFinInstrmAttrbts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnderlyingFinancialInstrumentAttributes";
 			definition = "Provides details about the underlying financial instrument attributes.";
 			minOccurs = 0;
@@ -563,7 +565,7 @@ public class QuoteRequest1 {
 			componentContext_lazy = () -> QuoteRequest1.mmObject();
 			isDerived = false;
 			xmlTag = "UndrlygStiptns";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnderlyingStipulations";
 			definition = "Provides details about the underlying financial instrument stipulations.";
 			minOccurs = 0;
@@ -607,7 +609,7 @@ public class QuoteRequest1 {
 			componentContext_lazy = () -> QuoteRequest1.mmObject();
 			isDerived = false;
 			xmlTag = "InstrmLegGrpDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstrumentLegGroupDetails";
 			definition = "Provides details about each intrument leg.";
 			minOccurs = 0;
@@ -651,7 +653,7 @@ public class QuoteRequest1 {
 			componentContext_lazy = () -> QuoteRequest1.mmObject();
 			isDerived = false;
 			xmlTag = "QtDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuoteDetails";
 			definition = "Details of the requested quote.";
 			minOccurs = 1;
@@ -696,7 +698,7 @@ public class QuoteRequest1 {
 			componentContext_lazy = () -> QuoteRequest1.mmObject();
 			isDerived = false;
 			xmlTag = "YldDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "YieldDetails";
 			definition = "Characteristics related to the yield.";
 			maxOccurs = 1;
@@ -744,7 +746,7 @@ public class QuoteRequest1 {
 			componentContext_lazy = () -> QuoteRequest1.mmObject();
 			isDerived = false;
 			xmlTag = "SprdAndBchmkCrvDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SpreadAndBenchmarkCurveDetails";
 			definition = "Provides details about the benchmark against which the financial instrument is measured.";
 			maxOccurs = 1;
@@ -790,7 +792,7 @@ public class QuoteRequest1 {
 			componentContext_lazy = () -> QuoteRequest1.mmObject();
 			isDerived = false;
 			xmlTag = "TradgSsnDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradingSessionDetails";
 			definition = "Established constraints under which a market operates";
 			maxOccurs = 1;
@@ -836,7 +838,7 @@ public class QuoteRequest1 {
 			componentContext_lazy = () -> QuoteRequest1.mmObject();
 			isDerived = false;
 			xmlTag = "TwoLegTxDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TwoLegTransactionDetails";
 			definition = "Provides details about the trading session.";
 			maxOccurs = 1;
@@ -881,7 +883,7 @@ public class QuoteRequest1 {
 			componentContext_lazy = () -> QuoteRequest1.mmObject();
 			isDerived = false;
 			xmlTag = "TradgPties";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradingParties";
 			definition = "Parties involved in the process of quote request.";
 			minOccurs = 0;
@@ -929,7 +931,7 @@ public class QuoteRequest1 {
 			componentContext_lazy = () -> QuoteRequest1.mmObject();
 			isDerived = false;
 			xmlTag = "CshPties";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashParties";
 			definition = "Payment processes required to transfer cash from the debtor to the creditor.";
 			maxOccurs = 1;
@@ -980,7 +982,7 @@ public class QuoteRequest1 {
 			componentContext_lazy = () -> QuoteRequest1.mmObject();
 			isDerived = false;
 			xmlTag = "RcvgSttlmPties";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceivingSettlementParties";
 			definition = "Chain of parties involved in the settlement of a transaction, including receipts and deliveries, book transfers, treasury deals, or other activities, resulting in the movement of a security or amount of money from one account to another.";
 			maxOccurs = 1;
@@ -1031,7 +1033,7 @@ public class QuoteRequest1 {
 			componentContext_lazy = () -> QuoteRequest1.mmObject();
 			isDerived = false;
 			xmlTag = "DlvrgSttlmPties";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeliveringSettlementParties";
 			definition = "Chain of parties involved in the settlement of a transaction, including receipts and deliveries, book transfers, treasury deals, or other activities, resulting in the movement of a security or amount of money from one account to another.";
 			maxOccurs = 1;
@@ -1076,7 +1078,7 @@ public class QuoteRequest1 {
 			componentContext_lazy = () -> QuoteRequest1.mmObject();
 			isDerived = false;
 			xmlTag = "OthrBizPties";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherBusinessParties";
 			definition = "Chain of parties involved in the settlement of a transaction, including receipts and deliveries, book transfers, treasury deals, or other activities, resulting in the movement of a security or amount of money from one account to another.";
 			maxOccurs = 1;
@@ -1089,19 +1091,14 @@ public class QuoteRequest1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays
-						.asList(com.tools20022.repository.msg.QuoteRequest1.mmQuoteRequestType, com.tools20022.repository.msg.QuoteRequest1.mmExpiryDateTime, com.tools20022.repository.msg.QuoteRequest1.mmPreviousClosingPrice,
-								com.tools20022.repository.msg.QuoteRequest1.mmSide, com.tools20022.repository.msg.QuoteRequest1.mmFinancialInstrumentDetails, com.tools20022.repository.msg.QuoteRequest1.mmFinancialInstrumentAttributes,
-								com.tools20022.repository.msg.QuoteRequest1.mmStipulations, com.tools20022.repository.msg.QuoteRequest1.mmUnderlyingFinancialInstrumentDetails,
-								com.tools20022.repository.msg.QuoteRequest1.mmUnderlyingFinancialInstrumentAttributes, com.tools20022.repository.msg.QuoteRequest1.mmUnderlyingStipulations,
-								com.tools20022.repository.msg.QuoteRequest1.mmInstrumentLegGroupDetails, com.tools20022.repository.msg.QuoteRequest1.mmQuoteDetails, com.tools20022.repository.msg.QuoteRequest1.mmYieldDetails,
-								com.tools20022.repository.msg.QuoteRequest1.mmSpreadAndBenchmarkCurveDetails, com.tools20022.repository.msg.QuoteRequest1.mmTradingSessionDetails,
-								com.tools20022.repository.msg.QuoteRequest1.mmTwoLegTransactionDetails, com.tools20022.repository.msg.QuoteRequest1.mmTradingParties, com.tools20022.repository.msg.QuoteRequest1.mmCashParties,
-								com.tools20022.repository.msg.QuoteRequest1.mmReceivingSettlementParties, com.tools20022.repository.msg.QuoteRequest1.mmDeliveringSettlementParties,
-								com.tools20022.repository.msg.QuoteRequest1.mmOtherBusinessParties);
+				messageElement_lazy = () -> Arrays.asList(QuoteRequest1.mmQuoteRequestType, QuoteRequest1.mmExpiryDateTime, QuoteRequest1.mmPreviousClosingPrice, QuoteRequest1.mmSide, QuoteRequest1.mmFinancialInstrumentDetails,
+						QuoteRequest1.mmFinancialInstrumentAttributes, QuoteRequest1.mmStipulations, QuoteRequest1.mmUnderlyingFinancialInstrumentDetails, QuoteRequest1.mmUnderlyingFinancialInstrumentAttributes,
+						QuoteRequest1.mmUnderlyingStipulations, QuoteRequest1.mmInstrumentLegGroupDetails, QuoteRequest1.mmQuoteDetails, QuoteRequest1.mmYieldDetails, QuoteRequest1.mmSpreadAndBenchmarkCurveDetails,
+						QuoteRequest1.mmTradingSessionDetails, QuoteRequest1.mmTwoLegTransactionDetails, QuoteRequest1.mmTradingParties, QuoteRequest1.mmCashParties, QuoteRequest1.mmReceivingSettlementParties,
+						QuoteRequest1.mmDeliveringSettlementParties, QuoteRequest1.mmOtherBusinessParties);
 				trace_lazy = () -> SecuritiesQuoteVariable.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "QuoteRequest1";
 				definition = "Request for a proposition of price for a financial instrument.";
 			}

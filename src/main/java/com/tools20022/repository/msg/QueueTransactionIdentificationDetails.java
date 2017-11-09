@@ -19,7 +19,9 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max16Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -97,7 +99,7 @@ public class QueueTransactionIdentificationDetails {
 			componentContext_lazy = () -> QueueTransactionIdentificationDetails.mmObject();
 			isDerived = false;
 			xmlTag = "QId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QueueIdentification";
 			definition = "Identification of the payment queue where the payment instruction resides.";
 			maxOccurs = 1;
@@ -139,7 +141,7 @@ public class QueueTransactionIdentificationDetails {
 			componentContext_lazy = () -> QueueTransactionIdentificationDetails.mmObject();
 			isDerived = false;
 			xmlTag = "PosInQ";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PositionInQueue";
 			definition = "Position of the payment instruction within the identified queue.";
 			maxOccurs = 1;
@@ -151,9 +153,9 @@ public class QueueTransactionIdentificationDetails {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.QueueTransactionIdentificationDetails.mmQueueIdentification, com.tools20022.repository.msg.QueueTransactionIdentificationDetails.mmPositionInQueue);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(QueueTransactionIdentificationDetails.mmQueueIdentification, QueueTransactionIdentificationDetails.mmPositionInQueue);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "QueueTransactionIdentificationDetails";
 				definition = "Identification of a payment instruction by its relative position in a queue of payment transactions managed by the clearing agent.";
 			}

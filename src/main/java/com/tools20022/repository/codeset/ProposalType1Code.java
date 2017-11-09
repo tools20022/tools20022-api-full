@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ProposalTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -84,7 +86,7 @@ public class ProposalType1Code extends ProposalTypeCode {
 	 */
 	public static final MMCode mmInitial = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Initial";
 			owner_lazy = () -> ProposalType1Code.mmObject();
 		}
@@ -107,7 +109,7 @@ public class ProposalType1Code extends ProposalTypeCode {
 	 */
 	public static final MMCode mmCounter = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Counter";
 			owner_lazy = () -> ProposalType1Code.mmObject();
 		}
@@ -116,12 +118,12 @@ public class ProposalType1Code extends ProposalTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("INIT");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ProposalType1Code";
 				definition = "Specifies whether the proposal is an initial or a counter proposal.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ProposalType1Code.mmInitial, com.tools20022.repository.codeset.ProposalType1Code.mmCounter);
+				code_lazy = () -> Arrays.asList(ProposalType1Code.mmInitial, ProposalType1Code.mmCounter);
 				trace_lazy = () -> ProposalTypeCode.mmObject();
 			}
 		});

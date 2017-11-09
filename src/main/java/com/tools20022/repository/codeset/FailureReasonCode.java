@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,27 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.FailureReason1Code
+ * FailureReason1Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.FailureReason2Code
+ * FailureReason2Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.FailureReason3Code
+ * FailureReason3Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.FailureReason4Code
+ * FailureReason4Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.FailureReason6Code
+ * FailureReason6Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.FailureReason5Code
+ * FailureReason5Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.FailureReason8Code
+ * FailureReason8Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.FailureReason7Code
+ * FailureReason7Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -112,27 +135,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * FailureReasonCode.mmCustomerTimeOut}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.FailureReason1Code
- * FailureReason1Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.FailureReason2Code
- * FailureReason2Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.FailureReason3Code
- * FailureReason3Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.FailureReason4Code
- * FailureReason4Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.FailureReason6Code
- * FailureReason6Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.FailureReason5Code
- * FailureReason5Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.FailureReason8Code
- * FailureReason8Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.FailureReason7Code
- * FailureReason7Code}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -183,7 +185,7 @@ public class FailureReasonCode {
 	 */
 	public static final MMCode mmCustomerCancel = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CustomerCancel";
 			definition = "Customer cancellation, for example removing the card before the end of the transaction.";
 			owner_lazy = () -> FailureReasonCode.mmObject();
@@ -213,7 +215,7 @@ public class FailureReasonCode {
 	 */
 	public static final MMCode mmMalfunction = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Malfunction";
 			definition = "Suspected malfunction.";
 			owner_lazy = () -> FailureReasonCode.mmObject();
@@ -243,7 +245,7 @@ public class FailureReasonCode {
 	 */
 	public static final MMCode mmPartial = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Partial";
 			definition = "Completed partially.";
 			owner_lazy = () -> FailureReasonCode.mmObject();
@@ -273,7 +275,7 @@ public class FailureReasonCode {
 	 */
 	public static final MMCode mmTooLateResponse = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TooLateResponse";
 			definition = "Response to the previous message was received too late.";
 			owner_lazy = () -> FailureReasonCode.mmObject();
@@ -304,7 +306,7 @@ public class FailureReasonCode {
 	 */
 	public static final MMCode mmUnableToComplete = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "UnableToComplete";
 			definition = "Unable to complete the transaction after the authorisation response.";
 			owner_lazy = () -> FailureReasonCode.mmObject();
@@ -335,7 +337,7 @@ public class FailureReasonCode {
 	 */
 	public static final MMCode mmUnableToSend = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "UnableToSend";
 			definition = "Unable to deliver the request message to the recipient party.";
 			owner_lazy = () -> FailureReasonCode.mmObject();
@@ -369,7 +371,7 @@ public class FailureReasonCode {
 	 */
 	public static final MMCode mmTimeOut = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TimeOut";
 			definition = "Timeout while waiting for a response to a request message, or no response was received (for example connection release before receiving the response).";
 			owner_lazy = () -> FailureReasonCode.mmObject();
@@ -402,7 +404,7 @@ public class FailureReasonCode {
 	 */
 	public static final MMCode mmCardDeclined = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CardDeclined";
 			definition = "Integrated circuit card declines the transaction before or after the authorisation.";
 			owner_lazy = () -> FailureReasonCode.mmObject();
@@ -432,7 +434,7 @@ public class FailureReasonCode {
 	 */
 	public static final MMCode mmOnLineDeclined = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "OnLineDeclined";
 			definition = "Online authorisation declined the transaction.";
 			owner_lazy = () -> FailureReasonCode.mmObject();
@@ -462,7 +464,7 @@ public class FailureReasonCode {
 	 */
 	public static final MMCode mmOfflineDeclined = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "OfflineDeclined";
 			definition = "Offline authorisation declined the transaction.";
 			owner_lazy = () -> FailureReasonCode.mmObject();
@@ -493,7 +495,7 @@ public class FailureReasonCode {
 	 */
 	public static final MMCode mmSuspectedFraud = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SuspectedFraud";
 			definition = "Card payment transaction fails because the merchant suspect a fraud.";
 			owner_lazy = () -> FailureReasonCode.mmObject();
@@ -526,7 +528,7 @@ public class FailureReasonCode {
 	 */
 	public static final MMCode mmSecurityError = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityError";
 			definition = "Security error has occurred in the authorisation response message sent by the acquirer.";
 			owner_lazy = () -> FailureReasonCode.mmObject();
@@ -556,7 +558,7 @@ public class FailureReasonCode {
 	 */
 	public static final MMCode mmCardCaptured = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CardCaptured";
 			definition = "ATM manager has requested to capture the card.";
 			owner_lazy = () -> FailureReasonCode.mmObject();
@@ -586,7 +588,7 @@ public class FailureReasonCode {
 	 */
 	public static final MMCode mmCardError = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CardError";
 			definition = "Unable to complete transaction with the card.";
 			owner_lazy = () -> FailureReasonCode.mmObject();
@@ -619,7 +621,7 @@ public class FailureReasonCode {
 	 */
 	public static final MMCode mmCustomerDecline = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CustomerDecline";
 			definition = "Customer has declined additional fees or a lower amount, transaction fails.";
 			owner_lazy = () -> FailureReasonCode.mmObject();
@@ -650,7 +652,7 @@ public class FailureReasonCode {
 	 */
 	public static final MMCode mmForgottenCard = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForgottenCard";
 			definition = "Customer has left the card in the ATM or a motorised card reader.";
 			owner_lazy = () -> FailureReasonCode.mmObject();
@@ -680,7 +682,7 @@ public class FailureReasonCode {
 	 */
 	public static final MMCode mmFullfilmentError = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FullfilmentError";
 			definition = "Unable to fulfil, for instance dispensing the cash.";
 			owner_lazy = () -> FailureReasonCode.mmObject();
@@ -711,7 +713,7 @@ public class FailureReasonCode {
 	 */
 	public static final MMCode mmOutOfCustomerService = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OutOfCustomerService";
 			definition = "ATM manager has requested to the ATM to stop customer services.";
 			owner_lazy = () -> FailureReasonCode.mmObject();
@@ -741,7 +743,7 @@ public class FailureReasonCode {
 	 */
 	public static final MMCode mmUnableToCapture = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnableToCapture";
 			definition = "Unable to capture the card as requested.";
 			owner_lazy = () -> FailureReasonCode.mmObject();
@@ -771,7 +773,7 @@ public class FailureReasonCode {
 	 */
 	public static final MMCode mmSecurity = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Security";
 			definition = "General security error.";
 			owner_lazy = () -> FailureReasonCode.mmObject();
@@ -801,7 +803,7 @@ public class FailureReasonCode {
 	 */
 	public static final MMCode mmHardware = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Hardware";
 			definition = "Hardware error on the device.";
 			owner_lazy = () -> FailureReasonCode.mmObject();
@@ -831,7 +833,7 @@ public class FailureReasonCode {
 	 */
 	public static final MMCode mmCompromised = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Compromised";
 			definition = "Key is compromised.";
 			owner_lazy = () -> FailureReasonCode.mmObject();
@@ -861,7 +863,7 @@ public class FailureReasonCode {
 	 */
 	public static final MMCode mmExpired = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Expired";
 			definition = "Key has expired.";
 			owner_lazy = () -> FailureReasonCode.mmObject();
@@ -891,7 +893,7 @@ public class FailureReasonCode {
 	 */
 	public static final MMCode mmInvalidKCV = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvalidKCV";
 			definition = "Key check value is incorrect.";
 			owner_lazy = () -> FailureReasonCode.mmObject();
@@ -921,7 +923,7 @@ public class FailureReasonCode {
 	 */
 	public static final MMCode mmKeyLoadError = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "KeyLoadError";
 			definition = "Error during the key download in the security device.";
 			owner_lazy = () -> FailureReasonCode.mmObject();
@@ -951,7 +953,7 @@ public class FailureReasonCode {
 	 */
 	public static final MMCode mmCardRetained = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CardRetained";
 			definition = "Card has been retained by the ATM or the terminal.";
 			owner_lazy = () -> FailureReasonCode.mmObject();
@@ -981,7 +983,7 @@ public class FailureReasonCode {
 	 */
 	public static final MMCode mmCustomerTimeOut = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CustomerTimeOut";
 			definition = "Customer has not been performed in time an action.";
 			owner_lazy = () -> FailureReasonCode.mmObject();
@@ -992,21 +994,16 @@ public class FailureReasonCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CUCL");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FailureReasonCode";
 				definition = "List of incidents happening during the transaction.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.FailureReasonCode.mmCustomerCancel, com.tools20022.repository.codeset.FailureReasonCode.mmMalfunction,
-						com.tools20022.repository.codeset.FailureReasonCode.mmPartial, com.tools20022.repository.codeset.FailureReasonCode.mmTooLateResponse, com.tools20022.repository.codeset.FailureReasonCode.mmUnableToComplete,
-						com.tools20022.repository.codeset.FailureReasonCode.mmUnableToSend, com.tools20022.repository.codeset.FailureReasonCode.mmTimeOut, com.tools20022.repository.codeset.FailureReasonCode.mmCardDeclined,
-						com.tools20022.repository.codeset.FailureReasonCode.mmOnLineDeclined, com.tools20022.repository.codeset.FailureReasonCode.mmOfflineDeclined, com.tools20022.repository.codeset.FailureReasonCode.mmSuspectedFraud,
-						com.tools20022.repository.codeset.FailureReasonCode.mmSecurityError, com.tools20022.repository.codeset.FailureReasonCode.mmCardCaptured, com.tools20022.repository.codeset.FailureReasonCode.mmCardError,
-						com.tools20022.repository.codeset.FailureReasonCode.mmCustomerDecline, com.tools20022.repository.codeset.FailureReasonCode.mmForgottenCard, com.tools20022.repository.codeset.FailureReasonCode.mmFullfilmentError,
-						com.tools20022.repository.codeset.FailureReasonCode.mmOutOfCustomerService, com.tools20022.repository.codeset.FailureReasonCode.mmUnableToCapture, com.tools20022.repository.codeset.FailureReasonCode.mmSecurity,
-						com.tools20022.repository.codeset.FailureReasonCode.mmHardware, com.tools20022.repository.codeset.FailureReasonCode.mmCompromised, com.tools20022.repository.codeset.FailureReasonCode.mmExpired,
-						com.tools20022.repository.codeset.FailureReasonCode.mmInvalidKCV, com.tools20022.repository.codeset.FailureReasonCode.mmKeyLoadError, com.tools20022.repository.codeset.FailureReasonCode.mmCardRetained,
-						com.tools20022.repository.codeset.FailureReasonCode.mmCustomerTimeOut);
+				code_lazy = () -> Arrays.asList(FailureReasonCode.mmCustomerCancel, FailureReasonCode.mmMalfunction, FailureReasonCode.mmPartial, FailureReasonCode.mmTooLateResponse, FailureReasonCode.mmUnableToComplete,
+						FailureReasonCode.mmUnableToSend, FailureReasonCode.mmTimeOut, FailureReasonCode.mmCardDeclined, FailureReasonCode.mmOnLineDeclined, FailureReasonCode.mmOfflineDeclined, FailureReasonCode.mmSuspectedFraud,
+						FailureReasonCode.mmSecurityError, FailureReasonCode.mmCardCaptured, FailureReasonCode.mmCardError, FailureReasonCode.mmCustomerDecline, FailureReasonCode.mmForgottenCard, FailureReasonCode.mmFullfilmentError,
+						FailureReasonCode.mmOutOfCustomerService, FailureReasonCode.mmUnableToCapture, FailureReasonCode.mmSecurity, FailureReasonCode.mmHardware, FailureReasonCode.mmCompromised, FailureReasonCode.mmExpired,
+						FailureReasonCode.mmInvalidKCV, FailureReasonCode.mmKeyLoadError, FailureReasonCode.mmCardRetained, FailureReasonCode.mmCustomerTimeOut);
 				derivation_lazy = () -> Arrays.asList(FailureReason1Code.mmObject(), FailureReason2Code.mmObject(), FailureReason3Code.mmObject(), FailureReason4Code.mmObject(), FailureReason6Code.mmObject(), FailureReason5Code.mmObject(),
 						FailureReason8Code.mmObject(), FailureReason7Code.mmObject());
 			}

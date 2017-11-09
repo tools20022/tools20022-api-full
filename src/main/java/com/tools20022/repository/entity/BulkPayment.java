@@ -17,11 +17,13 @@
 
 package com.tools20022.repository.entity;
 
+import com.tools20022.metamodel.MMAggregation;
 import com.tools20022.metamodel.MMBusinessAssociationEnd;
 import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.Payment;
-import com.tools20022.repository.msg.AggregationTransaction1;
-import com.tools20022.repository.msg.AggregationTransaction2;
+import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -37,11 +39,14 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.BulkPayment#mmGroups
- * BulkPayment.mmGroups}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AggregationTransaction1
+ * AggregationTransaction1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AggregationTransaction2
+ * AggregationTransaction2}</li>
  * </ul>
  * </li>
  * <li>
@@ -145,14 +150,11 @@ import java.util.List;
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
  * superType} = {@linkplain com.tools20022.repository.entity.Payment Payment}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.AggregationTransaction1
- * AggregationTransaction1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AggregationTransaction2
- * AggregationTransaction2}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.BulkPayment#mmGroups
+ * BulkPayment.mmGroups}</li>
  * </ul>
  * </li>
  * <li>
@@ -215,12 +217,12 @@ public class BulkPayment extends Payment {
 		{
 			elementContext_lazy = () -> BulkPayment.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Groups";
 			definition = "Indicates that a bulk payment groups several individual payments of the same type (credit transfer or direct debit).";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.IndividualPayment.mmBulkPayment;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.IndividualPayment.mmObject();
 		}
 	};
@@ -228,27 +230,22 @@ public class BulkPayment extends Payment {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "BulkPayment";
 				definition = "Payment which contains a series of other payments which have been grouped under specific criteria. A bulk payment can only contain individual payments of the same type (credit transfer or direct debit).";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.IndividualPayment.mmBulkPayment);
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RedemptionBulkOrder2.mmBulkCashSettlementDetails, com.tools20022.repository.msg.RedemptionBulkOrder3.mmBulkCashSettlementDetails,
-						com.tools20022.repository.msg.RedemptionBulkExecution2.mmBulkCashSettlementDetails, com.tools20022.repository.msg.RedemptionBulkExecution3.mmBulkCashSettlementDetails,
-						com.tools20022.repository.msg.RedemptionBulkOrder4.mmBulkCashSettlementDetails, com.tools20022.repository.msg.RedemptionMultipleOrder2.mmBulkCashSettlementDetails,
-						com.tools20022.repository.msg.RedemptionMultipleOrder3.mmBulkCashSettlementDetails, com.tools20022.repository.msg.RedemptionMultipleExecution2.mmBulkCashSettlementDetails,
-						com.tools20022.repository.msg.RedemptionMultipleExecution3.mmBulkCashSettlementDetails, com.tools20022.repository.msg.RedemptionMultipleOrder4.mmBulkCashSettlementDetails,
-						com.tools20022.repository.msg.SubscriptionBulkOrder2.mmBulkCashSettlementDetails, com.tools20022.repository.msg.SubscriptionBulkOrder3.mmBulkCashSettlementDetails,
-						com.tools20022.repository.msg.SubscriptionBulkExecution2.mmBulkCashSettlementDetails, com.tools20022.repository.msg.SubscriptionBulkExecution3.mmBulkCashSettlementDetails,
-						com.tools20022.repository.msg.SubscriptionBulkOrder4.mmBulkCashSettlementDetails, com.tools20022.repository.msg.SubscriptionMultipleOrder2.mmBulkCashSettlementDetails,
-						com.tools20022.repository.msg.SubscriptionMultipleOrder3.mmBulkCashSettlementDetails, com.tools20022.repository.msg.SubscriptionMultipleExecution2.mmBulkCashSettlementDetails,
-						com.tools20022.repository.msg.SubscriptionMultipleExecution3.mmBulkCashSettlementDetails, com.tools20022.repository.msg.SubscriptionMultipleOrder4.mmBulkCashSettlementDetails,
-						com.tools20022.repository.msg.SubscriptionBulkOrder5.mmBulkCashSettlementDetails, com.tools20022.repository.msg.RedemptionBulkExecution5.mmBulkCashSettlementDetails,
-						com.tools20022.repository.msg.RedemptionMultipleExecution5.mmBulkCashSettlementDetails, com.tools20022.repository.msg.RedemptionMultipleOrder6.mmBulkCashSettlementDetails,
-						com.tools20022.repository.msg.SubscriptionMultipleOrder6.mmBulkCashSettlementDetails, com.tools20022.repository.msg.SubscriptionBulkExecution4.mmBulkCashSettlementDetails,
-						com.tools20022.repository.msg.RedemptionBulkOrder6.mmBulkCashSettlementDetails, com.tools20022.repository.msg.SubscriptionMultipleExecution5.mmBulkCashSettlementDetails);
+				derivationElement_lazy = () -> Arrays.asList(RedemptionBulkOrder2.mmBulkCashSettlementDetails, RedemptionBulkOrder3.mmBulkCashSettlementDetails, RedemptionBulkExecution2.mmBulkCashSettlementDetails,
+						RedemptionBulkExecution3.mmBulkCashSettlementDetails, RedemptionBulkOrder4.mmBulkCashSettlementDetails, RedemptionMultipleOrder2.mmBulkCashSettlementDetails, RedemptionMultipleOrder3.mmBulkCashSettlementDetails,
+						RedemptionMultipleExecution2.mmBulkCashSettlementDetails, RedemptionMultipleExecution3.mmBulkCashSettlementDetails, RedemptionMultipleOrder4.mmBulkCashSettlementDetails,
+						SubscriptionBulkOrder2.mmBulkCashSettlementDetails, SubscriptionBulkOrder3.mmBulkCashSettlementDetails, SubscriptionBulkExecution2.mmBulkCashSettlementDetails, SubscriptionBulkExecution3.mmBulkCashSettlementDetails,
+						SubscriptionBulkOrder4.mmBulkCashSettlementDetails, SubscriptionMultipleOrder2.mmBulkCashSettlementDetails, SubscriptionMultipleOrder3.mmBulkCashSettlementDetails,
+						SubscriptionMultipleExecution2.mmBulkCashSettlementDetails, SubscriptionMultipleExecution3.mmBulkCashSettlementDetails, SubscriptionMultipleOrder4.mmBulkCashSettlementDetails,
+						SubscriptionBulkOrder5.mmBulkCashSettlementDetails, RedemptionBulkExecution5.mmBulkCashSettlementDetails, RedemptionMultipleExecution5.mmBulkCashSettlementDetails,
+						RedemptionMultipleOrder6.mmBulkCashSettlementDetails, SubscriptionMultipleOrder6.mmBulkCashSettlementDetails, SubscriptionBulkExecution4.mmBulkCashSettlementDetails, RedemptionBulkOrder6.mmBulkCashSettlementDetails,
+						SubscriptionMultipleExecution5.mmBulkCashSettlementDetails);
 				superType_lazy = () -> Payment.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.BulkPayment.mmGroups);
+				element_lazy = () -> Arrays.asList(BulkPayment.mmGroups);
 				derivationComponent_lazy = () -> Arrays.asList(AggregationTransaction1.mmObject(), AggregationTransaction2.mmObject());
 			}
 		});

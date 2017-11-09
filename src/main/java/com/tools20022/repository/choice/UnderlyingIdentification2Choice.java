@@ -19,6 +19,8 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.SwapLegIdentification2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -90,7 +92,7 @@ public class UnderlyingIdentification2Choice {
 			componentContext_lazy = () -> UnderlyingIdentification2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Swp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Swap";
 			definition = "Underlying of a swap transaction.";
 			maxOccurs = 1;
@@ -132,7 +134,7 @@ public class UnderlyingIdentification2Choice {
 			componentContext_lazy = () -> UnderlyingIdentification2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Othr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
 			definition = "Underlying of any other type of transaction.";
 			maxOccurs = 1;
@@ -145,9 +147,9 @@ public class UnderlyingIdentification2Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.UnderlyingIdentification2Choice.mmSwap, com.tools20022.repository.choice.UnderlyingIdentification2Choice.mmOther);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(UnderlyingIdentification2Choice.mmSwap, UnderlyingIdentification2Choice.mmOther);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "UnderlyingIdentification2Choice";
 				definition = "Details of the underlying of a security transaction.";
 			}

@@ -19,10 +19,12 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CardholderAddressVerificationResult1Code;
 import com.tools20022.repository.codeset.CSCResult1Code;
 import com.tools20022.repository.datatype.Max500Text;
 import com.tools20022.repository.datatype.Max70Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -115,7 +117,7 @@ public class TransactionVerificationResult2 {
 			componentContext_lazy = () -> TransactionVerificationResult2.mmObject();
 			isDerived = false;
 			xmlTag = "ElctrncComrcAuthntcnRslt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ElectronicCommerceAuthenticationResult";
 			definition = "Result of an e-commerce authentication process.";
 			maxOccurs = 1;
@@ -158,7 +160,7 @@ public class TransactionVerificationResult2 {
 			componentContext_lazy = () -> TransactionVerificationResult2.mmObject();
 			isDerived = false;
 			xmlTag = "CSCRslt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CSCResult";
 			definition = "Result of the printed card security code (CSC) validation.";
 			maxOccurs = 1;
@@ -203,7 +205,7 @@ public class TransactionVerificationResult2 {
 			componentContext_lazy = () -> TransactionVerificationResult2.mmObject();
 			isDerived = false;
 			xmlTag = "CrdhldrAdrVrfctnRslt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CardholderAddressVerificationResult";
 			definition = "Result of the cardholder verification address checks on the street number and the postal code.";
 			minOccurs = 0;
@@ -243,7 +245,7 @@ public class TransactionVerificationResult2 {
 			componentContext_lazy = () -> TransactionVerificationResult2.mmObject();
 			isDerived = false;
 			xmlTag = "DclndPdctCd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeclinedProductCode";
 			definition = "Product code for which the authorisation was declined.";
 			minOccurs = 0;
@@ -254,10 +256,10 @@ public class TransactionVerificationResult2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionVerificationResult2.mmElectronicCommerceAuthenticationResult, com.tools20022.repository.msg.TransactionVerificationResult2.mmCSCResult,
-						com.tools20022.repository.msg.TransactionVerificationResult2.mmCardholderAddressVerificationResult, com.tools20022.repository.msg.TransactionVerificationResult2.mmDeclinedProductCode);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(TransactionVerificationResult2.mmElectronicCommerceAuthenticationResult, TransactionVerificationResult2.mmCSCResult,
+						TransactionVerificationResult2.mmCardholderAddressVerificationResult, TransactionVerificationResult2.mmDeclinedProductCode);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TransactionVerificationResult2";
 				definition = "Result of the verifications performed by the issuer to deliver or decline the authorisation.";
 				nextVersions_lazy = () -> Arrays.asList(TransactionVerificationResult3.mmObject());

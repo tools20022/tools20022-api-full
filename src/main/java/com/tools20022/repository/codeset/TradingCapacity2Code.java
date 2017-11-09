@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -85,7 +87,7 @@ public class TradingCapacity2Code {
 	 */
 	public static final MMCode mmTradingPrincipal = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TradingPrincipal";
 			definition = "Broker is buying or selling securities for its own account.";
 			owner_lazy = () -> TradingCapacity2Code.mmObject();
@@ -115,7 +117,7 @@ public class TradingCapacity2Code {
 	 */
 	public static final MMCode mmTradingAgent = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TradingAgent";
 			definition = "Broker is trading on behalf of another party.";
 			owner_lazy = () -> TradingCapacity2Code.mmObject();
@@ -126,12 +128,12 @@ public class TradingCapacity2Code {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("PRIN");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TradingCapacity2Code";
 				definition = "Specifies the role of a trading party in a transaction.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TradingCapacity2Code.mmTradingPrincipal, com.tools20022.repository.codeset.TradingCapacity2Code.mmTradingAgent);
+				code_lazy = () -> Arrays.asList(TradingCapacity2Code.mmTradingPrincipal, TradingCapacity2Code.mmTradingAgent);
 			}
 		});
 		return mmObject_lazy.get();

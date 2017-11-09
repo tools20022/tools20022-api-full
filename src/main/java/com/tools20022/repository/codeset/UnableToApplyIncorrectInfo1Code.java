@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.UnableToApplyIncorrectInfoCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -144,7 +146,7 @@ public class UnableToApplyIncorrectInfo1Code extends UnableToApplyIncorrectInfoC
 	 */
 	public static final MMCode mmIncorrectRelatedReference = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncorrectRelatedReference";
 			owner_lazy = () -> UnableToApplyIncorrectInfo1Code.mmObject();
 		}
@@ -167,7 +169,7 @@ public class UnableToApplyIncorrectInfo1Code extends UnableToApplyIncorrectInfoC
 	 */
 	public static final MMCode mmIncorrectBankOperationCode = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncorrectBankOperationCode";
 			owner_lazy = () -> UnableToApplyIncorrectInfo1Code.mmObject();
 		}
@@ -190,7 +192,7 @@ public class UnableToApplyIncorrectInfo1Code extends UnableToApplyIncorrectInfoC
 	 */
 	public static final MMCode mmIncorrectInstructionCode = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncorrectInstructionCode";
 			owner_lazy = () -> UnableToApplyIncorrectInfo1Code.mmObject();
 		}
@@ -213,7 +215,7 @@ public class UnableToApplyIncorrectInfo1Code extends UnableToApplyIncorrectInfoC
 	 */
 	public static final MMCode mmIncorrectRequestedExecutionDate = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncorrectRequestedExecutionDate";
 			owner_lazy = () -> UnableToApplyIncorrectInfo1Code.mmObject();
 		}
@@ -236,7 +238,7 @@ public class UnableToApplyIncorrectInfo1Code extends UnableToApplyIncorrectInfoC
 	 */
 	public static final MMCode mmIncorrectValueDate = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncorrectValueDate";
 			owner_lazy = () -> UnableToApplyIncorrectInfo1Code.mmObject();
 		}
@@ -259,7 +261,7 @@ public class UnableToApplyIncorrectInfo1Code extends UnableToApplyIncorrectInfoC
 	 */
 	public static final MMCode mmIncorrectInterbankSettledAmount = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncorrectInterbankSettledAmount";
 			owner_lazy = () -> UnableToApplyIncorrectInfo1Code.mmObject();
 		}
@@ -282,7 +284,7 @@ public class UnableToApplyIncorrectInfo1Code extends UnableToApplyIncorrectInfoC
 	 */
 	public static final MMCode mmIncorrectDebtor = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncorrectDebtor";
 			owner_lazy = () -> UnableToApplyIncorrectInfo1Code.mmObject();
 		}
@@ -305,7 +307,7 @@ public class UnableToApplyIncorrectInfo1Code extends UnableToApplyIncorrectInfoC
 	 */
 	public static final MMCode mmIncorrectDebtorAccount = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncorrectDebtorAccount";
 			owner_lazy = () -> UnableToApplyIncorrectInfo1Code.mmObject();
 		}
@@ -328,7 +330,7 @@ public class UnableToApplyIncorrectInfo1Code extends UnableToApplyIncorrectInfoC
 	 */
 	public static final MMCode mmIncorrectReceiverCorrespondent = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncorrectReceiverCorrespondent";
 			owner_lazy = () -> UnableToApplyIncorrectInfo1Code.mmObject();
 		}
@@ -351,7 +353,7 @@ public class UnableToApplyIncorrectInfo1Code extends UnableToApplyIncorrectInfoC
 	 */
 	public static final MMCode mmIncorrectThirdReimbursementInstitution = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncorrectThirdReimbursementInstitution";
 			owner_lazy = () -> UnableToApplyIncorrectInfo1Code.mmObject();
 		}
@@ -374,7 +376,7 @@ public class UnableToApplyIncorrectInfo1Code extends UnableToApplyIncorrectInfoC
 	 */
 	public static final MMCode mmIncorrectPaymentScheme = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncorrectPaymentScheme";
 			owner_lazy = () -> UnableToApplyIncorrectInfo1Code.mmObject();
 		}
@@ -397,7 +399,7 @@ public class UnableToApplyIncorrectInfo1Code extends UnableToApplyIncorrectInfoC
 	 */
 	public static final MMCode mmIncorrectAccountOfBeneficiaryInstitution = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncorrectAccountOfBeneficiaryInstitution";
 			owner_lazy = () -> UnableToApplyIncorrectInfo1Code.mmObject();
 		}
@@ -420,7 +422,7 @@ public class UnableToApplyIncorrectInfo1Code extends UnableToApplyIncorrectInfoC
 	 */
 	public static final MMCode mmIncorrectCreditor = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncorrectCreditor";
 			owner_lazy = () -> UnableToApplyIncorrectInfo1Code.mmObject();
 		}
@@ -443,7 +445,7 @@ public class UnableToApplyIncorrectInfo1Code extends UnableToApplyIncorrectInfoC
 	 */
 	public static final MMCode mmIncorrectCreditorAccount = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncorrectCreditorAccount";
 			owner_lazy = () -> UnableToApplyIncorrectInfo1Code.mmObject();
 		}
@@ -466,7 +468,7 @@ public class UnableToApplyIncorrectInfo1Code extends UnableToApplyIncorrectInfoC
 	 */
 	public static final MMCode mmIncorrectRemittanceInformation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncorrectRemittanceInformation";
 			owner_lazy = () -> UnableToApplyIncorrectInfo1Code.mmObject();
 		}
@@ -489,7 +491,7 @@ public class UnableToApplyIncorrectInfo1Code extends UnableToApplyIncorrectInfoC
 	 */
 	public static final MMCode mmIncorrectPaymentPurpose = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncorrectPaymentPurpose";
 			owner_lazy = () -> UnableToApplyIncorrectInfo1Code.mmObject();
 		}
@@ -512,7 +514,7 @@ public class UnableToApplyIncorrectInfo1Code extends UnableToApplyIncorrectInfoC
 	 */
 	public static final MMCode mmIncorrectDetailsOfCharges = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncorrectDetailsOfCharges";
 			owner_lazy = () -> UnableToApplyIncorrectInfo1Code.mmObject();
 		}
@@ -535,7 +537,7 @@ public class UnableToApplyIncorrectInfo1Code extends UnableToApplyIncorrectInfoC
 	 */
 	public static final MMCode mmIncorrectSenderToReceiverInformation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncorrectSenderToReceiverInformation";
 			owner_lazy = () -> UnableToApplyIncorrectInfo1Code.mmObject();
 		}
@@ -558,7 +560,7 @@ public class UnableToApplyIncorrectInfo1Code extends UnableToApplyIncorrectInfoC
 	 */
 	public static final MMCode mmIncorrectInstructionForFinalAgent = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncorrectInstructionForFinalAgent";
 			owner_lazy = () -> UnableToApplyIncorrectInfo1Code.mmObject();
 		}
@@ -581,7 +583,7 @@ public class UnableToApplyIncorrectInfo1Code extends UnableToApplyIncorrectInfoC
 	 */
 	public static final MMCode mmMismatchCreditorNameAccount = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MismatchCreditorNameAccount";
 			owner_lazy = () -> UnableToApplyIncorrectInfo1Code.mmObject();
 		}
@@ -604,7 +606,7 @@ public class UnableToApplyIncorrectInfo1Code extends UnableToApplyIncorrectInfoC
 	 */
 	public static final MMCode mmMismatchDebtorNameAccount = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MismatchDebtorNameAccount";
 			owner_lazy = () -> UnableToApplyIncorrectInfo1Code.mmObject();
 		}
@@ -627,7 +629,7 @@ public class UnableToApplyIncorrectInfo1Code extends UnableToApplyIncorrectInfoC
 	 */
 	public static final MMCode mmMismatchFinalAgentNameAccount = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MismatchFinalAgentNameAccount";
 			owner_lazy = () -> UnableToApplyIncorrectInfo1Code.mmObject();
 		}
@@ -636,22 +638,19 @@ public class UnableToApplyIncorrectInfo1Code extends UnableToApplyIncorrectInfoC
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("IN01");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "UnableToApplyIncorrectInfo1Code";
 				definition = "Used when the unable to apply is due to incorrect information.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnableToApplyIncorrectInfo1Code.mmIncorrectRelatedReference, com.tools20022.repository.codeset.UnableToApplyIncorrectInfo1Code.mmIncorrectBankOperationCode,
-						com.tools20022.repository.codeset.UnableToApplyIncorrectInfo1Code.mmIncorrectInstructionCode, com.tools20022.repository.codeset.UnableToApplyIncorrectInfo1Code.mmIncorrectRequestedExecutionDate,
-						com.tools20022.repository.codeset.UnableToApplyIncorrectInfo1Code.mmIncorrectValueDate, com.tools20022.repository.codeset.UnableToApplyIncorrectInfo1Code.mmIncorrectInterbankSettledAmount,
-						com.tools20022.repository.codeset.UnableToApplyIncorrectInfo1Code.mmIncorrectDebtor, com.tools20022.repository.codeset.UnableToApplyIncorrectInfo1Code.mmIncorrectDebtorAccount,
-						com.tools20022.repository.codeset.UnableToApplyIncorrectInfo1Code.mmIncorrectReceiverCorrespondent, com.tools20022.repository.codeset.UnableToApplyIncorrectInfo1Code.mmIncorrectThirdReimbursementInstitution,
-						com.tools20022.repository.codeset.UnableToApplyIncorrectInfo1Code.mmIncorrectPaymentScheme, com.tools20022.repository.codeset.UnableToApplyIncorrectInfo1Code.mmIncorrectAccountOfBeneficiaryInstitution,
-						com.tools20022.repository.codeset.UnableToApplyIncorrectInfo1Code.mmIncorrectCreditor, com.tools20022.repository.codeset.UnableToApplyIncorrectInfo1Code.mmIncorrectCreditorAccount,
-						com.tools20022.repository.codeset.UnableToApplyIncorrectInfo1Code.mmIncorrectRemittanceInformation, com.tools20022.repository.codeset.UnableToApplyIncorrectInfo1Code.mmIncorrectPaymentPurpose,
-						com.tools20022.repository.codeset.UnableToApplyIncorrectInfo1Code.mmIncorrectDetailsOfCharges, com.tools20022.repository.codeset.UnableToApplyIncorrectInfo1Code.mmIncorrectSenderToReceiverInformation,
-						com.tools20022.repository.codeset.UnableToApplyIncorrectInfo1Code.mmIncorrectInstructionForFinalAgent, com.tools20022.repository.codeset.UnableToApplyIncorrectInfo1Code.mmMismatchCreditorNameAccount,
-						com.tools20022.repository.codeset.UnableToApplyIncorrectInfo1Code.mmMismatchDebtorNameAccount, com.tools20022.repository.codeset.UnableToApplyIncorrectInfo1Code.mmMismatchFinalAgentNameAccount);
+				code_lazy = () -> Arrays.asList(UnableToApplyIncorrectInfo1Code.mmIncorrectRelatedReference, UnableToApplyIncorrectInfo1Code.mmIncorrectBankOperationCode, UnableToApplyIncorrectInfo1Code.mmIncorrectInstructionCode,
+						UnableToApplyIncorrectInfo1Code.mmIncorrectRequestedExecutionDate, UnableToApplyIncorrectInfo1Code.mmIncorrectValueDate, UnableToApplyIncorrectInfo1Code.mmIncorrectInterbankSettledAmount,
+						UnableToApplyIncorrectInfo1Code.mmIncorrectDebtor, UnableToApplyIncorrectInfo1Code.mmIncorrectDebtorAccount, UnableToApplyIncorrectInfo1Code.mmIncorrectReceiverCorrespondent,
+						UnableToApplyIncorrectInfo1Code.mmIncorrectThirdReimbursementInstitution, UnableToApplyIncorrectInfo1Code.mmIncorrectPaymentScheme, UnableToApplyIncorrectInfo1Code.mmIncorrectAccountOfBeneficiaryInstitution,
+						UnableToApplyIncorrectInfo1Code.mmIncorrectCreditor, UnableToApplyIncorrectInfo1Code.mmIncorrectCreditorAccount, UnableToApplyIncorrectInfo1Code.mmIncorrectRemittanceInformation,
+						UnableToApplyIncorrectInfo1Code.mmIncorrectPaymentPurpose, UnableToApplyIncorrectInfo1Code.mmIncorrectDetailsOfCharges, UnableToApplyIncorrectInfo1Code.mmIncorrectSenderToReceiverInformation,
+						UnableToApplyIncorrectInfo1Code.mmIncorrectInstructionForFinalAgent, UnableToApplyIncorrectInfo1Code.mmMismatchCreditorNameAccount, UnableToApplyIncorrectInfo1Code.mmMismatchDebtorNameAccount,
+						UnableToApplyIncorrectInfo1Code.mmMismatchFinalAgentNameAccount);
 				trace_lazy = () -> UnableToApplyIncorrectInfoCode.mmObject();
 			}
 		});

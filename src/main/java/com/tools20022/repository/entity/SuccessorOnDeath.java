@@ -18,7 +18,10 @@
 package com.tools20022.repository.entity;
 
 import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.InvestmentAccountPartyRole;
+import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -111,16 +114,14 @@ public class SuccessorOnDeath extends InvestmentAccountPartyRole {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SuccessorOnDeath";
 				definition = "Deceased's estate, or successor, to whom the respective percentage of ownership will be transferred upon the death of one of the owners.";
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountParties2.mmSuccessorOnDeath, com.tools20022.repository.msg.AccountParties5.mmSuccessorOnDeath,
-						com.tools20022.repository.msg.AccountParties6.mmSuccessorOnDeath, com.tools20022.repository.msg.AccountParties3.mmSuccessorOnDeath, com.tools20022.repository.msg.AccountParties4.mmSuccessorOnDeath,
-						com.tools20022.repository.msg.AccountParties7.mmSuccessorOnDeath, com.tools20022.repository.msg.AccountParties9.mmSuccessorOnDeath, com.tools20022.repository.msg.AccountParties8.mmSuccessorOnDeath,
-						com.tools20022.repository.msg.AccountParties11.mmSuccessorOnDeath, com.tools20022.repository.msg.AccountParties10.mmSuccessorOnDeath, com.tools20022.repository.msg.AccountParties12.mmSuccessorOnDeath,
-						com.tools20022.repository.msg.AccountParties13.mmSuccessorOnDeath, com.tools20022.repository.msg.AccountParties14.mmSuccessorOnDeath, com.tools20022.repository.msg.AccountParties15.mmSuccessorOnDeath,
-						com.tools20022.repository.msg.AccountParties16.mmSuccessorOnDeath);
+				derivationElement_lazy = () -> Arrays.asList(AccountParties2.mmSuccessorOnDeath, AccountParties5.mmSuccessorOnDeath, AccountParties6.mmSuccessorOnDeath, AccountParties3.mmSuccessorOnDeath,
+						AccountParties4.mmSuccessorOnDeath, AccountParties7.mmSuccessorOnDeath, AccountParties9.mmSuccessorOnDeath, AccountParties8.mmSuccessorOnDeath, AccountParties11.mmSuccessorOnDeath,
+						AccountParties10.mmSuccessorOnDeath, AccountParties12.mmSuccessorOnDeath, AccountParties13.mmSuccessorOnDeath, AccountParties14.mmSuccessorOnDeath, AccountParties15.mmSuccessorOnDeath,
+						AccountParties16.mmSuccessorOnDeath);
 				superType_lazy = () -> InvestmentAccountPartyRole.mmObject();
 			}
 		});

@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.QualityIndicationCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -87,7 +89,7 @@ public class QualityIndication1Code extends QualityIndicationCode {
 	 */
 	public static final MMCode mmLow = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Low";
 			owner_lazy = () -> QualityIndication1Code.mmObject();
 		}
@@ -110,7 +112,7 @@ public class QualityIndication1Code extends QualityIndicationCode {
 	 */
 	public static final MMCode mmMedium = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Medium";
 			owner_lazy = () -> QualityIndication1Code.mmObject();
 		}
@@ -133,7 +135,7 @@ public class QualityIndication1Code extends QualityIndicationCode {
 	 */
 	public static final MMCode mmHigh = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "High";
 			owner_lazy = () -> QualityIndication1Code.mmObject();
 		}
@@ -142,13 +144,12 @@ public class QualityIndication1Code extends QualityIndicationCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("LOWE");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "QualityIndication1Code";
 				definition = "Indicates the relative quality of the indication of interest.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.QualityIndication1Code.mmLow, com.tools20022.repository.codeset.QualityIndication1Code.mmMedium,
-						com.tools20022.repository.codeset.QualityIndication1Code.mmHigh);
+				code_lazy = () -> Arrays.asList(QualityIndication1Code.mmLow, QualityIndication1Code.mmMedium, QualityIndication1Code.mmHigh);
 				trace_lazy = () -> QualityIndicationCode.mmObject();
 			}
 		});

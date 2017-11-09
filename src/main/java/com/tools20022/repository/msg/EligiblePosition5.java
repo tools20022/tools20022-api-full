@@ -20,9 +20,13 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.PartyIdentification40Choice;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.entity.Account;
+import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.entity.SecuritiesBalance;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -115,14 +119,14 @@ public class EligiblePosition5 {
 	 */
 	public static final MMMessageAttribute mmAccountIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.mmIdentification;
+			businessElementTrace_lazy = () -> Account.mmIdentification;
 			componentContext_lazy = () -> EligiblePosition5.mmObject();
 			isDerived = false;
 			xmlTag = "AcctId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountIdentification";
 			definition = "Identification of the securities account.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.EligiblePosition3.mmAccountIdentification;
+			previousVersion_lazy = () -> EligiblePosition3.mmAccountIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -168,14 +172,14 @@ public class EligiblePosition5 {
 	 */
 	public static final MMMessageAssociationEnd mmAccountOwner = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> EligiblePosition5.mmObject();
 			isDerived = false;
 			xmlTag = "AcctOwnr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountOwner";
 			definition = "Identifies the party that legally owns the account.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.EligiblePosition3.mmAccountOwner;
+			previousVersion_lazy = () -> EligiblePosition3.mmAccountOwner;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -225,14 +229,14 @@ public class EligiblePosition5 {
 	 */
 	public static final MMMessageAssociationEnd mmHoldingBalance = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesBalance.mmSecuritiesSubBalance;
+			businessElementTrace_lazy = () -> SecuritiesBalance.mmSecuritiesSubBalance;
 			componentContext_lazy = () -> EligiblePosition5.mmObject();
 			isDerived = false;
 			xmlTag = "HldgBal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HoldingBalance";
 			definition = "Net position of a segregated holding of a single security within the overall position held in a securities account, for example, sub-balance per status.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.EligiblePosition3.mmHoldingBalance;
+			previousVersion_lazy = () -> EligiblePosition3.mmHoldingBalance;
 			maxOccurs = 10;
 			minOccurs = 0;
 			isComposite = true;
@@ -279,14 +283,14 @@ public class EligiblePosition5 {
 	 */
 	public static final MMMessageAssociationEnd mmRightsHolder = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> EligiblePosition5.mmObject();
 			isDerived = false;
 			xmlTag = "RghtsHldr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RightsHolder";
 			definition = "Identifies the owner of the voting rights.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.EligiblePosition3.mmRightsHolder;
+			previousVersion_lazy = () -> EligiblePosition3.mmRightsHolder;
 			maxOccurs = 10;
 			minOccurs = 0;
 			isComposite = true;
@@ -297,11 +301,10 @@ public class EligiblePosition5 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.EligiblePosition5.mmAccountIdentification, com.tools20022.repository.msg.EligiblePosition5.mmAccountOwner,
-						com.tools20022.repository.msg.EligiblePosition5.mmHoldingBalance, com.tools20022.repository.msg.EligiblePosition5.mmRightsHolder);
+				messageElement_lazy = () -> Arrays.asList(EligiblePosition5.mmAccountIdentification, EligiblePosition5.mmAccountOwner, EligiblePosition5.mmHoldingBalance, EligiblePosition5.mmRightsHolder);
 				trace_lazy = () -> SecuritiesBalance.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "EligiblePosition5";
 				definition = "Specifies the voting entitlement.";
 				previousVersion_lazy = () -> EligiblePosition3.mmObject();

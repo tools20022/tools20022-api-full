@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.EventGroup1Code
+ * EventGroup1Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.EventGroup2Code
+ * EventGroup2Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -38,15 +49,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.EventGroupCode#mmDistribution
  * EventGroupCode.mmDistribution}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.EventGroup1Code
- * EventGroup1Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.EventGroup2Code
- * EventGroup2Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -98,7 +100,7 @@ public class EventGroupCode {
 	 */
 	public static final MMCode mmRedemption = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Redemption";
 			definition = "Redemption domain events.";
 			owner_lazy = () -> EventGroupCode.mmObject();
@@ -128,7 +130,7 @@ public class EventGroupCode {
 	 */
 	public static final MMCode mmReorganization = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reorganization";
 			definition = "Reorganization domain events.";
 			owner_lazy = () -> EventGroupCode.mmObject();
@@ -158,7 +160,7 @@ public class EventGroupCode {
 	 */
 	public static final MMCode mmDistribution = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Distribution";
 			definition = "Distribution domain events.";
 			owner_lazy = () -> EventGroupCode.mmObject();
@@ -169,13 +171,12 @@ public class EventGroupCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("REDM");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "EventGroupCode";
 				definition = "Specifies DTC (The Depository Trust Company) processing domain for the event.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.EventGroupCode.mmRedemption, com.tools20022.repository.codeset.EventGroupCode.mmReorganization,
-						com.tools20022.repository.codeset.EventGroupCode.mmDistribution);
+				code_lazy = () -> Arrays.asList(EventGroupCode.mmRedemption, EventGroupCode.mmReorganization, EventGroupCode.mmDistribution);
 				derivation_lazy = () -> Arrays.asList(EventGroup1Code.mmObject(), EventGroup2Code.mmObject());
 			}
 		});

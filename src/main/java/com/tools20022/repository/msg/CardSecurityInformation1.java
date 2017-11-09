@@ -19,9 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CSCManagement1Code;
 import com.tools20022.repository.datatype.Min3Max4NumericText;
 import com.tools20022.repository.entity.PaymentCard;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -102,11 +104,11 @@ public class CardSecurityInformation1 {
 	 */
 	public static final MMMessageAttribute mmCSCManagement = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentCard.mmSecurityCodeManagement;
+			businessElementTrace_lazy = () -> PaymentCard.mmSecurityCodeManagement;
 			componentContext_lazy = () -> CardSecurityInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "CSCMgmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CSCManagement";
 			definition = "Card security code (CSC) management associated with the transaction.";
 			maxOccurs = 1;
@@ -150,11 +152,11 @@ public class CardSecurityInformation1 {
 	 */
 	public static final MMMessageAttribute mmCSCValue = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentCard.mmSecurityCode;
+			businessElementTrace_lazy = () -> PaymentCard.mmSecurityCode;
 			componentContext_lazy = () -> CardSecurityInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "CSCVal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CSCValue";
 			definition = "Card security code (CSC).";
 			maxOccurs = 1;
@@ -166,10 +168,10 @@ public class CardSecurityInformation1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardSecurityInformation1.mmCSCManagement, com.tools20022.repository.msg.CardSecurityInformation1.mmCSCValue);
+				messageElement_lazy = () -> Arrays.asList(CardSecurityInformation1.mmCSCManagement, CardSecurityInformation1.mmCSCValue);
 				trace_lazy = () -> PaymentCard.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CardSecurityInformation1";
 				definition = "Card security code (CSC) associated with the card performing the transaction.";
 			}

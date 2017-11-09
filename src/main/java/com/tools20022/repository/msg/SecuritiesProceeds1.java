@@ -20,10 +20,14 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.UnitOrFaceAmount1Choice;
 import com.tools20022.repository.datatype.Max350Text;
+import com.tools20022.repository.entity.CorporateActionDistribution;
 import com.tools20022.repository.entity.CorporateActionProceedsDeliveryInstruction;
 import com.tools20022.repository.entity.SecuritiesAccount;
+import com.tools20022.repository.entity.Security;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -109,11 +113,11 @@ public class SecuritiesProceeds1 {
 	 */
 	public static final MMMessageAttribute mmSecurityIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmIdentification;
+			businessElementTrace_lazy = () -> Security.mmIdentification;
 			componentContext_lazy = () -> SecuritiesProceeds1.mmObject();
 			isDerived = false;
 			xmlTag = "SctyId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityIdentification";
 			definition = "Identification of the financial instrument.";
 			maxOccurs = 1;
@@ -157,11 +161,11 @@ public class SecuritiesProceeds1 {
 	 */
 	public static final MMMessageAttribute mmPostingQuantity = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionDistribution.mmPostingQuantity;
+			businessElementTrace_lazy = () -> CorporateActionDistribution.mmPostingQuantity;
 			componentContext_lazy = () -> SecuritiesProceeds1.mmObject();
 			isDerived = false;
 			xmlTag = "PstngQty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PostingQuantity";
 			definition = "The quantity of financial instruments that is posted.";
 			maxOccurs = 1;
@@ -208,7 +212,7 @@ public class SecuritiesProceeds1 {
 			componentContext_lazy = () -> SecuritiesProceeds1.mmObject();
 			isDerived = false;
 			xmlTag = "AcctDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountDetails";
 			definition = "Provides information about the account that is debited/credited.";
 			maxOccurs = 2;
@@ -250,7 +254,7 @@ public class SecuritiesProceeds1 {
 			componentContext_lazy = () -> SecuritiesProceeds1.mmObject();
 			isDerived = false;
 			xmlTag = "RcncltnDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReconciliationDetails";
 			definition = "Provides reconciliation information.";
 			maxOccurs = 1;
@@ -262,11 +266,10 @@ public class SecuritiesProceeds1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesProceeds1.mmSecurityIdentification, com.tools20022.repository.msg.SecuritiesProceeds1.mmPostingQuantity,
-						com.tools20022.repository.msg.SecuritiesProceeds1.mmAccountDetails, com.tools20022.repository.msg.SecuritiesProceeds1.mmReconciliationDetails);
+				messageElement_lazy = () -> Arrays.asList(SecuritiesProceeds1.mmSecurityIdentification, SecuritiesProceeds1.mmPostingQuantity, SecuritiesProceeds1.mmAccountDetails, SecuritiesProceeds1.mmReconciliationDetails);
 				trace_lazy = () -> CorporateActionProceedsDeliveryInstruction.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesProceeds1";
 				definition = "Provides securities proceeds information.";
 			}

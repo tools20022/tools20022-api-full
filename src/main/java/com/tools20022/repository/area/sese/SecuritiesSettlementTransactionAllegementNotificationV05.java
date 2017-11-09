@@ -20,6 +20,7 @@ package com.tools20022.repository.area.sese;
 import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.SecuritiesSettlementPreviousVersion;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.msg.*;
@@ -53,6 +54,9 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code sese.028.001.05}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.SecuritiesSettlementPreviousVersion
@@ -136,9 +140,6 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code sese.028.001.05}</li>
- * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -209,11 +210,11 @@ public class SecuritiesSettlementTransactionAllegementNotificationV05 {
 	public static final MMMessageBuildingBlock mmTransactionIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "TxId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionIdentification";
 			definition = "Unambiguous identification of the transaction as know by the instructing party.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotificationV06.mmTransactionIdentification);
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotificationV04.mmTransactionIdentification;
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesSettlementTransactionAllegementNotificationV06.mmTransactionIdentification);
+			previousVersion_lazy = () -> SecuritiesSettlementTransactionAllegementNotificationV04.mmTransactionIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -261,11 +262,11 @@ public class SecuritiesSettlementTransactionAllegementNotificationV05 {
 	public static final MMMessageBuildingBlock mmSettlementTypeAndAdditionalParameters = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SttlmTpAndAddtlParams";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementTypeAndAdditionalParameters";
 			definition = "Provides settlement type and identification information.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotificationV06.mmSettlementTypeAndAdditionalParameters);
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotificationV04.mmSettlementTypeAndAdditionalParameters;
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesSettlementTransactionAllegementNotificationV06.mmSettlementTypeAndAdditionalParameters);
+			previousVersion_lazy = () -> SecuritiesSettlementTransactionAllegementNotificationV04.mmSettlementTypeAndAdditionalParameters;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> SettlementTypeAndAdditionalParameters12.mmObject();
@@ -316,11 +317,11 @@ public class SecuritiesSettlementTransactionAllegementNotificationV05 {
 	public static final MMMessageBuildingBlock mmMarketInfrastructureTransactionIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "MktInfrstrctrTxId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketInfrastructureTransactionIdentification";
 			definition = "Identification of a transaction assigned by a market infrastructure other than a central securities depository, for example, Target2-Securities.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotificationV06.mmMarketInfrastructureTransactionIdentification);
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotificationV04.mmMarketInfrastructureTransactionIdentification;
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesSettlementTransactionAllegementNotificationV06.mmMarketInfrastructureTransactionIdentification);
+			previousVersion_lazy = () -> SecuritiesSettlementTransactionAllegementNotificationV04.mmMarketInfrastructureTransactionIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> Identification14.mmObject();
@@ -366,11 +367,11 @@ public class SecuritiesSettlementTransactionAllegementNotificationV05 {
 	public static final MMMessageBuildingBlock mmTradeDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "TradDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeDetails";
 			definition = "Details of the trade.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotificationV06.mmTradeDetails);
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotificationV04.mmTradeDetails;
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesSettlementTransactionAllegementNotificationV06.mmTradeDetails);
+			previousVersion_lazy = () -> SecuritiesSettlementTransactionAllegementNotificationV04.mmTradeDetails;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> SecuritiesTradeDetails54.mmObject();
@@ -421,11 +422,11 @@ public class SecuritiesSettlementTransactionAllegementNotificationV05 {
 	public static final MMMessageBuildingBlock mmFinancialInstrumentIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "FinInstrmId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentIdentification";
 			definition = "Financial instrument representing a sum of rights of the investor vis-a-vis the issuer.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotificationV06.mmFinancialInstrumentIdentification);
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotificationV04.mmFinancialInstrumentIdentification;
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesSettlementTransactionAllegementNotificationV06.mmFinancialInstrumentIdentification);
+			previousVersion_lazy = () -> SecuritiesSettlementTransactionAllegementNotificationV04.mmFinancialInstrumentIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> SecurityIdentification19.mmObject();
@@ -473,11 +474,11 @@ public class SecuritiesSettlementTransactionAllegementNotificationV05 {
 	public static final MMMessageBuildingBlock mmFinancialInstrumentAttributes = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "FinInstrmAttrbts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentAttributes";
 			definition = "Elements characterising a financial instrument.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotificationV06.mmFinancialInstrumentAttributes);
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotificationV04.mmFinancialInstrumentAttributes;
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesSettlementTransactionAllegementNotificationV06.mmFinancialInstrumentAttributes);
+			previousVersion_lazy = () -> SecuritiesSettlementTransactionAllegementNotificationV04.mmFinancialInstrumentAttributes;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> FinancialInstrumentAttributes64.mmObject();
@@ -527,11 +528,11 @@ public class SecuritiesSettlementTransactionAllegementNotificationV05 {
 	public static final MMMessageBuildingBlock mmQuantityAndAccountDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "QtyAndAcctDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuantityAndAccountDetails";
 			definition = "Details related to the account and quantity involved in the transaction.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotificationV06.mmQuantityAndAccountDetails);
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotificationV04.mmQuantityAndAccountDetails;
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesSettlementTransactionAllegementNotificationV06.mmQuantityAndAccountDetails);
+			previousVersion_lazy = () -> SecuritiesSettlementTransactionAllegementNotificationV04.mmQuantityAndAccountDetails;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> QuantityAndAccount42.mmObject();
@@ -580,11 +581,11 @@ public class SecuritiesSettlementTransactionAllegementNotificationV05 {
 	public static final MMMessageBuildingBlock mmSecuritiesFinancingDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SctiesFincgDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesFinancingDetails";
 			definition = "Details of the closing of the securities financing transaction.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotificationV06.mmSecuritiesFinancingDetails);
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotificationV04.mmSecuritiesFinancingDetails;
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesSettlementTransactionAllegementNotificationV06.mmSecuritiesFinancingDetails);
+			previousVersion_lazy = () -> SecuritiesSettlementTransactionAllegementNotificationV04.mmSecuritiesFinancingDetails;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> SecuritiesFinancingTransactionDetails29.mmObject();
@@ -637,11 +638,11 @@ public class SecuritiesSettlementTransactionAllegementNotificationV05 {
 	public static final MMMessageBuildingBlock mmSettlementParameters = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SttlmParams";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementParameters";
 			definition = "Parameters which explicitly state the conditions that must be fulfilled before a particular  transaction of a financial instrument can be settled.  These parameters are defined by the instructing party in compliance with settlement rules in the market the transaction will settle in.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotificationV06.mmSettlementParameters);
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotificationV04.mmSettlementParameters;
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesSettlementTransactionAllegementNotificationV06.mmSettlementParameters);
+			previousVersion_lazy = () -> SecuritiesSettlementTransactionAllegementNotificationV04.mmSettlementParameters;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> SettlementDetails99.mmObject();
@@ -689,11 +690,11 @@ public class SecuritiesSettlementTransactionAllegementNotificationV05 {
 	public static final MMMessageBuildingBlock mmDeliveringSettlementParties = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "DlvrgSttlmPties";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeliveringSettlementParties";
 			definition = "Identifies the chain of delivering settlement parties.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotificationV06.mmDeliveringSettlementParties);
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotificationV04.mmDeliveringSettlementParties;
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesSettlementTransactionAllegementNotificationV06.mmDeliveringSettlementParties);
+			previousVersion_lazy = () -> SecuritiesSettlementTransactionAllegementNotificationV04.mmDeliveringSettlementParties;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> SettlementParties36.mmObject();
@@ -741,11 +742,11 @@ public class SecuritiesSettlementTransactionAllegementNotificationV05 {
 	public static final MMMessageBuildingBlock mmReceivingSettlementParties = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "RcvgSttlmPties";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceivingSettlementParties";
 			definition = "Identifies the chain of receiving settlement parties.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotificationV06.mmReceivingSettlementParties);
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotificationV04.mmReceivingSettlementParties;
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesSettlementTransactionAllegementNotificationV06.mmReceivingSettlementParties);
+			previousVersion_lazy = () -> SecuritiesSettlementTransactionAllegementNotificationV04.mmReceivingSettlementParties;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> SettlementParties36.mmObject();
@@ -791,11 +792,11 @@ public class SecuritiesSettlementTransactionAllegementNotificationV05 {
 	public static final MMMessageBuildingBlock mmCashParties = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CshPties";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashParties";
 			definition = "Specifies cash parties in the framework of a corporate action event.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotificationV06.mmCashParties);
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotificationV04.mmCashParties;
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesSettlementTransactionAllegementNotificationV06.mmCashParties);
+			previousVersion_lazy = () -> SecuritiesSettlementTransactionAllegementNotificationV04.mmCashParties;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> CashParties25.mmObject();
@@ -846,11 +847,11 @@ public class SecuritiesSettlementTransactionAllegementNotificationV05 {
 	public static final MMMessageBuildingBlock mmSettlementAmount = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SttlmAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementAmount";
 			definition = "Total amount of money to be paid or received in exchange for the securities.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotificationV06.mmSettlementAmount);
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotificationV04.mmSettlementAmount;
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesSettlementTransactionAllegementNotificationV06.mmSettlementAmount);
+			previousVersion_lazy = () -> SecuritiesSettlementTransactionAllegementNotificationV04.mmSettlementAmount;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> AmountAndDirection48.mmObject();
@@ -895,11 +896,11 @@ public class SecuritiesSettlementTransactionAllegementNotificationV05 {
 	public static final MMMessageBuildingBlock mmOtherAmounts = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "OthrAmts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherAmounts";
 			definition = "Other amounts than the settlement amount.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotificationV06.mmOtherAmounts);
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotificationV04.mmOtherAmounts;
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesSettlementTransactionAllegementNotificationV06.mmOtherAmounts);
+			previousVersion_lazy = () -> SecuritiesSettlementTransactionAllegementNotificationV04.mmOtherAmounts;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> OtherAmounts32.mmObject();
@@ -946,11 +947,11 @@ public class SecuritiesSettlementTransactionAllegementNotificationV05 {
 	public static final MMMessageBuildingBlock mmOtherBusinessParties = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "OthrBizPties";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherBusinessParties";
 			definition = "Other business parties relevant to the transaction.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotificationV06.mmOtherBusinessParties);
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotificationV04.mmOtherBusinessParties;
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesSettlementTransactionAllegementNotificationV06.mmOtherBusinessParties);
+			previousVersion_lazy = () -> SecuritiesSettlementTransactionAllegementNotificationV04.mmOtherBusinessParties;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> OtherParties28.mmObject();
@@ -1001,11 +1002,11 @@ public class SecuritiesSettlementTransactionAllegementNotificationV05 {
 	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SplmtryData";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryData";
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotificationV06.mmSupplementaryData);
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotificationV04.mmSupplementaryData;
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesSettlementTransactionAllegementNotificationV06.mmSupplementaryData);
+			previousVersion_lazy = () -> SecuritiesSettlementTransactionAllegementNotificationV04.mmSupplementaryData;
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
@@ -1014,7 +1015,7 @@ public class SecuritiesSettlementTransactionAllegementNotificationV05 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesSettlementTransactionAllegementNotificationV05";
 				definition = "Scope\r\nAn account servicer sends a SecuritiesSettlementTransactionAllegementNotification to an account owner to advise the account owner that a counterparty has alleged an instruction against the account owner's account at the account servicer and that the account servicer could not find the corresponding instruction of the account owner.\r\nThe account servicer/owner relationship may be:\r\n- a central securities depository or another settlement market infrastructure acting on behalf of their participants\r\n- an agent (sub-custodian) acting on behalf of their global custodian customer, or\r\n- a custodian acting on behalf of an investment management institution or a broker/dealer.\r\n\r\nUsage\r\nThe message may also be used to:\r\n- re-send a message previously sent,\r\n- provide a third party with a copy of a message for information,\r\n- re-send to a third party a copy of a message for information\r\nusing the relevant elements in the Business Application Header.";
 				nextVersions_lazy = () -> Arrays.asList(SecuritiesSettlementTransactionAllegementNotificationV06.mmObject());
@@ -1023,22 +1024,15 @@ public class SecuritiesSettlementTransactionAllegementNotificationV05 {
 				rootElement = "Document";
 				xmlTag = "SctiesSttlmTxAllgmtNtfctn";
 				businessArea_lazy = () -> SecuritiesSettlementPreviousVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotificationV05.mmTransactionIdentification,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotificationV05.mmSettlementTypeAndAdditionalParameters,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotificationV05.mmMarketInfrastructureTransactionIdentification,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotificationV05.mmTradeDetails,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotificationV05.mmFinancialInstrumentIdentification,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotificationV05.mmFinancialInstrumentAttributes,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotificationV05.mmQuantityAndAccountDetails,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotificationV05.mmSecuritiesFinancingDetails,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotificationV05.mmSettlementParameters,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotificationV05.mmDeliveringSettlementParties,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotificationV05.mmReceivingSettlementParties,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotificationV05.mmCashParties,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotificationV05.mmSettlementAmount,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotificationV05.mmOtherAmounts,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotificationV05.mmOtherBusinessParties,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotificationV05.mmSupplementaryData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesSettlementTransactionAllegementNotificationV05.mmTransactionIdentification,
+						SecuritiesSettlementTransactionAllegementNotificationV05.mmSettlementTypeAndAdditionalParameters, SecuritiesSettlementTransactionAllegementNotificationV05.mmMarketInfrastructureTransactionIdentification,
+						SecuritiesSettlementTransactionAllegementNotificationV05.mmTradeDetails, SecuritiesSettlementTransactionAllegementNotificationV05.mmFinancialInstrumentIdentification,
+						SecuritiesSettlementTransactionAllegementNotificationV05.mmFinancialInstrumentAttributes, SecuritiesSettlementTransactionAllegementNotificationV05.mmQuantityAndAccountDetails,
+						SecuritiesSettlementTransactionAllegementNotificationV05.mmSecuritiesFinancingDetails, SecuritiesSettlementTransactionAllegementNotificationV05.mmSettlementParameters,
+						SecuritiesSettlementTransactionAllegementNotificationV05.mmDeliveringSettlementParties, SecuritiesSettlementTransactionAllegementNotificationV05.mmReceivingSettlementParties,
+						SecuritiesSettlementTransactionAllegementNotificationV05.mmCashParties, SecuritiesSettlementTransactionAllegementNotificationV05.mmSettlementAmount,
+						SecuritiesSettlementTransactionAllegementNotificationV05.mmOtherAmounts, SecuritiesSettlementTransactionAllegementNotificationV05.mmOtherBusinessParties,
+						SecuritiesSettlementTransactionAllegementNotificationV05.mmSupplementaryData);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "sese";

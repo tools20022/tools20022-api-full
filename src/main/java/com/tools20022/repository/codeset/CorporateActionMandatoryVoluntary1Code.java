@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CorporateActionMandatoryVoluntaryCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -89,7 +91,7 @@ public class CorporateActionMandatoryVoluntary1Code extends CorporateActionManda
 	 */
 	public static final MMCode mmMandatory = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Mandatory";
 			owner_lazy = () -> CorporateActionMandatoryVoluntary1Code.mmObject();
 		}
@@ -112,7 +114,7 @@ public class CorporateActionMandatoryVoluntary1Code extends CorporateActionManda
 	 */
 	public static final MMCode mmMandatoryWithOptions = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MandatoryWithOptions";
 			owner_lazy = () -> CorporateActionMandatoryVoluntary1Code.mmObject();
 		}
@@ -135,7 +137,7 @@ public class CorporateActionMandatoryVoluntary1Code extends CorporateActionManda
 	 */
 	public static final MMCode mmVoluntary = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Voluntary";
 			owner_lazy = () -> CorporateActionMandatoryVoluntary1Code.mmObject();
 		}
@@ -144,13 +146,12 @@ public class CorporateActionMandatoryVoluntary1Code extends CorporateActionManda
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("MAND");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionMandatoryVoluntary1Code";
 				definition = "Specifies whether the event is mandatory, mandatory with options or voluntary.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CorporateActionMandatoryVoluntary1Code.mmMandatory, com.tools20022.repository.codeset.CorporateActionMandatoryVoluntary1Code.mmMandatoryWithOptions,
-						com.tools20022.repository.codeset.CorporateActionMandatoryVoluntary1Code.mmVoluntary);
+				code_lazy = () -> Arrays.asList(CorporateActionMandatoryVoluntary1Code.mmMandatory, CorporateActionMandatoryVoluntary1Code.mmMandatoryWithOptions, CorporateActionMandatoryVoluntary1Code.mmVoluntary);
 				trace_lazy = () -> CorporateActionMandatoryVoluntaryCode.mmObject();
 			}
 		});

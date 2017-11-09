@@ -17,12 +17,12 @@
 
 package com.tools20022.repository.entity;
 
-import com.tools20022.metamodel.MMBusinessAssociationEnd;
-import com.tools20022.metamodel.MMBusinessAttribute;
-import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.*;
+import com.tools20022.repository.choice.ATMCommandParameters1Choice;
 import com.tools20022.repository.codeset.ISO2ALanguageCode;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.entity.RolePlayer;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -38,61 +38,20 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
  * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.SystemDetails1 SystemDetails1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SystemSearch2 SystemSearch2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SystemSearch3 SystemSearch3}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.System#mmSystemIdentification
- * System.mmSystemIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.entity.System#mmLocation
- * System.mmLocation}</li>
- * <li>{@linkplain com.tools20022.repository.entity.System#mmReconciliation
- * System.mmReconciliation}</li>
- * <li>{@linkplain com.tools20022.repository.entity.System#mmAvailability
- * System.mmAvailability}</li>
- * <li>{@linkplain com.tools20022.repository.entity.System#mmEvent
- * System.mmEvent}</li>
- * <li>{@linkplain com.tools20022.repository.entity.System#mmPartyRole
- * System.mmPartyRole}</li>
- * <li>{@linkplain com.tools20022.repository.entity.System#mmStatus
- * System.mmStatus}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.System#mmSystemGeneratedInformation
- * System.mmSystemGeneratedInformation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.System#mmVersionValidityPeriod
- * System.mmVersionValidityPeriod}</li>
- * <li>{@linkplain com.tools20022.repository.entity.System#mmSystemDateTime
- * System.mmSystemDateTime}</li>
- * <li>{@linkplain com.tools20022.repository.entity.System#mmNegotiation
- * System.mmNegotiation}</li>
- * <li>{@linkplain com.tools20022.repository.entity.System#mmAccount
- * System.mmAccount}</li>
- * <li>{@linkplain com.tools20022.repository.entity.System#mmTrade
- * System.mmTrade}</li>
- * <li>{@linkplain com.tools20022.repository.entity.System#mmAssessment
- * System.mmAssessment}</li>
- * <li>{@linkplain com.tools20022.repository.entity.System#mmTradesPosition
- * System.mmTradesPosition}</li>
- * <li>{@linkplain com.tools20022.repository.entity.System#mmSystemLanguage
- * System.mmSystemLanguage}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
- * subType} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.ClearingSystem
- * ClearingSystem}</li>
- * <li>{@linkplain com.tools20022.repository.entity.SecuritiesSettlementSystem
- * SecuritiesSettlementSystem}</li>
- * <li>{@linkplain com.tools20022.repository.entity.PointOfInteraction
- * PointOfInteraction}</li>
- * <li>{@linkplain com.tools20022.repository.entity.TerminalManagementSystem
- * TerminalManagementSystem}</li>
- * <li>{@linkplain com.tools20022.repository.entity.MatchingSystem
- * MatchingSystem}</li>
- * <li>{@linkplain com.tools20022.repository.entity.TreasurySettlementSystem
- * TreasurySettlementSystem}</li>
+ * {@linkplain com.tools20022.repository.msg.SystemAvailabilityAndEventsDetails1
+ * SystemAvailabilityAndEventsDetails1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SystemAvailabilityAndEvents1
+ * SystemAvailabilityAndEvents1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SystemDetails2 SystemDetails2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.System1 System1}</li>
  * </ul>
  * </li>
  * <li>
@@ -162,20 +121,61 @@ import java.util.List;
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
  * superType} = {@linkplain com.tools20022.repository.entity.RolePlayer
  * RolePlayer}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
+ * subType} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.SystemDetails1 SystemDetails1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SystemSearch2 SystemSearch2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SystemSearch3 SystemSearch3}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.ClearingSystem
+ * ClearingSystem}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.SecuritiesSettlementSystem
+ * SecuritiesSettlementSystem}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.PointOfInteraction
+ * PointOfInteraction}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.TerminalManagementSystem
+ * TerminalManagementSystem}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.MatchingSystem
+ * MatchingSystem}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.TreasurySettlementSystem
+ * TreasurySettlementSystem}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SystemAvailabilityAndEventsDetails1
- * SystemAvailabilityAndEventsDetails1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SystemAvailabilityAndEvents1
- * SystemAvailabilityAndEvents1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SystemDetails2 SystemDetails2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.System1 System1}</li>
+ * {@linkplain com.tools20022.repository.entity.System#mmSystemIdentification
+ * System.mmSystemIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.System#mmLocation
+ * System.mmLocation}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.System#mmReconciliation
+ * System.mmReconciliation}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.System#mmAvailability
+ * System.mmAvailability}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.System#mmEvent
+ * System.mmEvent}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.System#mmPartyRole
+ * System.mmPartyRole}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.System#mmStatus
+ * System.mmStatus}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.System#mmSystemGeneratedInformation
+ * System.mmSystemGeneratedInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.System#mmVersionValidityPeriod
+ * System.mmVersionValidityPeriod}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.System#mmSystemDateTime
+ * System.mmSystemDateTime}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.System#mmNegotiation
+ * System.mmNegotiation}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.System#mmAccount
+ * System.mmAccount}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.System#mmTrade
+ * System.mmTrade}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.System#mmAssessment
+ * System.mmAssessment}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.System#mmTradesPosition
+ * System.mmTradesPosition}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.System#mmSystemLanguage
+ * System.mmSystemLanguage}</li>
  * </ul>
  * </li>
  * <li>
@@ -326,29 +326,23 @@ public class System extends RolePlayer {
 	 */
 	public static final MMBusinessAssociationEnd mmSystemIdentification = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SystemDetails1.mmSystemIdentification, com.tools20022.repository.msg.ReservationIdentificationDetails1.mmSystemIdentification,
-					com.tools20022.repository.msg.ReservationIdentification1.mmSystemIdentification, com.tools20022.repository.msg.ReservationSearchCriteria1.mmSystemIdentification,
-					com.tools20022.repository.msg.ReservationSearchCriteria2.mmSystemIdentification, com.tools20022.repository.msg.SystemSearch3.mmSystemIdentification, com.tools20022.repository.msg.SystemDetails2.mmSystemIdentification,
-					com.tools20022.repository.msg.System1.mmSystemIdentification, com.tools20022.repository.msg.AcquirerHostConfiguration1.mmHostIdentification,
-					com.tools20022.repository.msg.HostCommunicationParameter1.mmHostIdentification, com.tools20022.repository.msg.AcceptorConfiguration1.mmPOIIdentification,
-					com.tools20022.repository.msg.AcceptorConfiguration1.mmTerminalManagerIdentification, com.tools20022.repository.msg.AcquirerHostConfiguration2.mmHostIdentification,
-					com.tools20022.repository.msg.HostCommunicationParameter2.mmHostIdentification, com.tools20022.repository.msg.AcceptorConfiguration2.mmPOIIdentification,
-					com.tools20022.repository.msg.AcceptorConfiguration2.mmTerminalManagerIdentification, com.tools20022.repository.msg.AcceptorConfiguration3.mmPOIIdentification,
-					com.tools20022.repository.msg.AcceptorConfiguration3.mmTerminalManagerIdentification, com.tools20022.repository.msg.AcceptorConfiguration4.mmPOIIdentification,
-					com.tools20022.repository.msg.AcceptorConfiguration4.mmTerminalManagerIdentification, com.tools20022.repository.msg.AcquirerHostConfiguration3.mmHostIdentification,
-					com.tools20022.repository.msg.HostCommunicationParameter3.mmHostIdentification, com.tools20022.repository.msg.ATMCompletionAcknowledgement1.mmATM, com.tools20022.repository.msg.CardAcceptorTerminal1.mmIdentification,
-					com.tools20022.repository.msg.AcceptorConfiguration5.mmTerminalManagerIdentification, com.tools20022.repository.msg.HostCommunicationParameter4.mmHostIdentification,
-					com.tools20022.repository.msg.ATMCompletionAcknowledgement2.mmATM, com.tools20022.repository.msg.AcceptorConfiguration6.mmTerminalManagerIdentification,
-					com.tools20022.repository.msg.AcquirerHostConfiguration4.mmHostIdentification);
+			derivation_lazy = () -> Arrays.asList(SystemDetails1.mmSystemIdentification, ReservationIdentificationDetails1.mmSystemIdentification, ReservationIdentification1.mmSystemIdentification,
+					ReservationSearchCriteria1.mmSystemIdentification, ReservationSearchCriteria2.mmSystemIdentification, SystemSearch3.mmSystemIdentification, SystemDetails2.mmSystemIdentification, System1.mmSystemIdentification,
+					AcquirerHostConfiguration1.mmHostIdentification, HostCommunicationParameter1.mmHostIdentification, AcceptorConfiguration1.mmPOIIdentification, AcceptorConfiguration1.mmTerminalManagerIdentification,
+					AcquirerHostConfiguration2.mmHostIdentification, HostCommunicationParameter2.mmHostIdentification, AcceptorConfiguration2.mmPOIIdentification, AcceptorConfiguration2.mmTerminalManagerIdentification,
+					AcceptorConfiguration3.mmPOIIdentification, AcceptorConfiguration3.mmTerminalManagerIdentification, AcceptorConfiguration4.mmPOIIdentification, AcceptorConfiguration4.mmTerminalManagerIdentification,
+					AcquirerHostConfiguration3.mmHostIdentification, HostCommunicationParameter3.mmHostIdentification, ATMCompletionAcknowledgement1.mmATM, CardAcceptorTerminal1.mmIdentification,
+					AcceptorConfiguration5.mmTerminalManagerIdentification, HostCommunicationParameter4.mmHostIdentification, ATMCompletionAcknowledgement2.mmATM, AcceptorConfiguration6.mmTerminalManagerIdentification,
+					AcquirerHostConfiguration4.mmHostIdentification);
 			elementContext_lazy = () -> System.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SystemIdentification";
 			definition = "Identification of the system.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.SystemIdentification.mmIdentificationForSystem;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SystemIdentification.mmObject();
 		}
 	};
@@ -406,17 +400,16 @@ public class System extends RolePlayer {
 	 */
 	public static final MMBusinessAssociationEnd mmLocation = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SystemSearch2.mmCountry, com.tools20022.repository.msg.AutomatedTellerMachine3.mmLocation, com.tools20022.repository.msg.AutomatedTellerMachine4.mmLocation,
-					com.tools20022.repository.msg.CardAcceptorTerminal1.mmLocation, com.tools20022.repository.msg.AutomatedTellerMachine10.mmLocation);
+			derivation_lazy = () -> Arrays.asList(SystemSearch2.mmCountry, AutomatedTellerMachine3.mmLocation, AutomatedTellerMachine4.mmLocation, CardAcceptorTerminal1.mmLocation, AutomatedTellerMachine10.mmLocation);
 			elementContext_lazy = () -> System.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Location";
 			definition = "Location, address and country in which the system is located.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.Location.mmSystem;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Location.mmObject();
 		}
 	};
@@ -457,13 +450,13 @@ public class System extends RolePlayer {
 		{
 			elementContext_lazy = () -> System.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reconciliation";
 			definition = "Reconciliation process provided by the system.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.Reconciliation.mmSystem;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Reconciliation.mmObject();
 		}
 	};
@@ -511,16 +504,16 @@ public class System extends RolePlayer {
 	 */
 	public static final MMBusinessAssociationEnd mmAvailability = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ParticipantAndStatus1.mmServiceAvailability);
+			derivation_lazy = () -> Arrays.asList(ParticipantAndStatus1.mmServiceAvailability);
 			elementContext_lazy = () -> System.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Availability";
 			definition = "Information about the activity or non-activity of the system.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.SystemAvailability.mmSystem;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SystemAvailability.mmObject();
 		}
 	};
@@ -568,13 +561,13 @@ public class System extends RolePlayer {
 		{
 			elementContext_lazy = () -> System.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Event";
 			definition = "Specific point in time associated with the system's processing cycle. Operations of a system are composed of a series of processes, the closing, or completion, of which constitutes an event with an associated time stamp. An event may have a series of time stamps associated with it, such as the scheduled and effective completion times.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.SystemEventInformation.mmSystem;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SystemEventInformation.mmObject();
 		}
 	};
@@ -660,20 +653,17 @@ public class System extends RolePlayer {
 	 */
 	public static final MMBusinessAssociationEnd mmPartyRole = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IntraBalanceCancellation2.mmAccountOwner, com.tools20022.repository.msg.IntraBalanceCancellation1.mmAccountOwner,
-					com.tools20022.repository.msg.IntraBalanceMovement1.mmAccountOwner, com.tools20022.repository.msg.IntraBalanceMovements1.mmAccountOwner, com.tools20022.repository.msg.IntraPositionMovement1.mmAccountOwner,
-					com.tools20022.repository.msg.IntraPositionMovements1.mmAccountOwner, com.tools20022.repository.msg.IntraPositionQueryCriteria1.mmSafekeepingAccountOwner,
-					com.tools20022.repository.msg.IntraBalanceModification2.mmAccountOwner, com.tools20022.repository.msg.IntraBalanceModification1.mmAccountOwner,
-					com.tools20022.repository.msg.IntraBalanceQueryCriteria3.mmCashAccountOwner, com.tools20022.repository.msg.IntraPositionModification2.mmAccountOwner,
-					com.tools20022.repository.msg.IntraPositionModification1.mmAccountOwner, com.tools20022.repository.msg.IntraPositionCancellation2.mmAccountOwner, com.tools20022.repository.msg.IntraPositionCancellation1.mmAccountOwner);
+			derivation_lazy = () -> Arrays.asList(IntraBalanceCancellation2.mmAccountOwner, IntraBalanceCancellation1.mmAccountOwner, IntraBalanceMovement1.mmAccountOwner, IntraBalanceMovements1.mmAccountOwner,
+					IntraPositionMovement1.mmAccountOwner, IntraPositionMovements1.mmAccountOwner, IntraPositionQueryCriteria1.mmSafekeepingAccountOwner, IntraBalanceModification2.mmAccountOwner, IntraBalanceModification1.mmAccountOwner,
+					IntraBalanceQueryCriteria3.mmCashAccountOwner, IntraPositionModification2.mmAccountOwner, IntraPositionModification1.mmAccountOwner, IntraPositionCancellation2.mmAccountOwner, IntraPositionCancellation1.mmAccountOwner);
 			elementContext_lazy = () -> System.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PartyRole";
 			definition = "Specifies each role linked to a system.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.SystemPartyRole.mmRelatedSystem;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SystemPartyRole.mmObject();
 		}
 	};
@@ -720,16 +710,16 @@ public class System extends RolePlayer {
 	 */
 	public static final MMBusinessAssociationEnd mmStatus = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ATMCommandParameters1Choice.mmATMRequiredGlobalStatus);
+			derivation_lazy = () -> Arrays.asList(ATMCommandParameters1Choice.mmATMRequiredGlobalStatus);
 			elementContext_lazy = () -> System.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Status";
 			definition = "Status of the system.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.SystemStatus.mmSystem;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SystemStatus.mmObject();
 		}
 	};
@@ -771,13 +761,13 @@ public class System extends RolePlayer {
 		{
 			elementContext_lazy = () -> System.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SystemGeneratedInformation";
 			definition = "Business details provided for an information system.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.SystemBusinessInformation.mmSystem;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SystemBusinessInformation.mmObject();
 		}
 	};
@@ -821,13 +811,13 @@ public class System extends RolePlayer {
 		{
 			elementContext_lazy = () -> System.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "VersionValidityPeriod";
 			definition = "Date at, or period of time during which, the stipulated version is in effect.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmSystem;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmObject();
 		}
 	};
@@ -860,7 +850,7 @@ public class System extends RolePlayer {
 		{
 			elementContext_lazy = () -> System.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SystemDateTime";
 			definition = "Date time of a system performing a task.";
 			maxOccurs = 1;
@@ -905,13 +895,13 @@ public class System extends RolePlayer {
 		{
 			elementContext_lazy = () -> System.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Negotiation";
 			definition = "Negotiation process which uses a ssystem.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.Negotiation.mmTradingSystem;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Negotiation.mmObject();
 		}
 	};
@@ -951,13 +941,13 @@ public class System extends RolePlayer {
 		{
 			elementContext_lazy = () -> System.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Account";
 			definition = "Account managed by a system and held by a system member.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.Account.mmSystem;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Account.mmObject();
 		}
 	};
@@ -996,13 +986,13 @@ public class System extends RolePlayer {
 		{
 			elementContext_lazy = () -> System.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Trade";
 			definition = "Trade processed by a system.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.Trade.mmSystem;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Trade.mmObject();
 		}
 	};
@@ -1043,13 +1033,13 @@ public class System extends RolePlayer {
 		{
 			elementContext_lazy = () -> System.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Assessment";
 			definition = "Assessment associated with a system.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.Assessment.mmSystem;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Assessment.mmObject();
 		}
 	};
@@ -1090,13 +1080,13 @@ public class System extends RolePlayer {
 		{
 			elementContext_lazy = () -> System.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradesPosition";
 			definition = "Specifies the status of trades and their value inside a system.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.Position.mmSystem;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Position.mmObject();
 		}
 	};
@@ -1130,7 +1120,7 @@ public class System extends RolePlayer {
 		{
 			elementContext_lazy = () -> System.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SystemLanguage";
 			definition = "Specifies the language used by the system.";
 			maxOccurs = 1;
@@ -1142,8 +1132,8 @@ public class System extends RolePlayer {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "System";
 				definition = "Set of integrated applications that provides centralised services such as clearing, netting, reconciliation, trading and/or settlement.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Account.mmSystem, com.tools20022.repository.entity.Location.mmSystem, com.tools20022.repository.entity.Trade.mmSystem,
@@ -1151,18 +1141,13 @@ public class System extends RolePlayer {
 						com.tools20022.repository.entity.SystemEventInformation.mmSystem, com.tools20022.repository.entity.SystemStatus.mmSystem, com.tools20022.repository.entity.SystemAvailability.mmSystem,
 						com.tools20022.repository.entity.SystemBusinessInformation.mmSystem, com.tools20022.repository.entity.Negotiation.mmTradingSystem, com.tools20022.repository.entity.Reconciliation.mmSystem,
 						com.tools20022.repository.entity.Assessment.mmSystem, com.tools20022.repository.entity.Position.mmSystem);
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Transaction3.mmPaymentTo, com.tools20022.repository.msg.Transaction3.mmPaymentFrom, com.tools20022.repository.msg.Transaction4.mmPaymentTo,
-						com.tools20022.repository.msg.Transaction4.mmPaymentFrom, com.tools20022.repository.msg.Transaction5.mmPaymentTo, com.tools20022.repository.msg.Transaction5.mmPaymentFrom,
-						com.tools20022.repository.msg.Transaction24.mmPaymentTo, com.tools20022.repository.msg.Transaction24.mmPaymentFrom, com.tools20022.repository.msg.Transaction33.mmPaymentTo,
-						com.tools20022.repository.msg.Transaction33.mmPaymentFrom);
+				derivationElement_lazy = () -> Arrays.asList(Transaction3.mmPaymentTo, Transaction3.mmPaymentFrom, Transaction4.mmPaymentTo, Transaction4.mmPaymentFrom, Transaction5.mmPaymentTo, Transaction5.mmPaymentFrom,
+						Transaction24.mmPaymentTo, Transaction24.mmPaymentFrom, Transaction33.mmPaymentTo, Transaction33.mmPaymentFrom);
 				subType_lazy = () -> Arrays.asList(ClearingSystem.mmObject(), SecuritiesSettlementSystem.mmObject(), PointOfInteraction.mmObject(), TerminalManagementSystem.mmObject(), MatchingSystem.mmObject(),
 						TreasurySettlementSystem.mmObject());
 				superType_lazy = () -> RolePlayer.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.System.mmSystemIdentification, com.tools20022.repository.entity.System.mmLocation, com.tools20022.repository.entity.System.mmReconciliation,
-						com.tools20022.repository.entity.System.mmAvailability, com.tools20022.repository.entity.System.mmEvent, com.tools20022.repository.entity.System.mmPartyRole, com.tools20022.repository.entity.System.mmStatus,
-						com.tools20022.repository.entity.System.mmSystemGeneratedInformation, com.tools20022.repository.entity.System.mmVersionValidityPeriod, com.tools20022.repository.entity.System.mmSystemDateTime,
-						com.tools20022.repository.entity.System.mmNegotiation, com.tools20022.repository.entity.System.mmAccount, com.tools20022.repository.entity.System.mmTrade, com.tools20022.repository.entity.System.mmAssessment,
-						com.tools20022.repository.entity.System.mmTradesPosition, com.tools20022.repository.entity.System.mmSystemLanguage);
+				element_lazy = () -> Arrays.asList(System.mmSystemIdentification, System.mmLocation, System.mmReconciliation, System.mmAvailability, System.mmEvent, System.mmPartyRole, System.mmStatus, System.mmSystemGeneratedInformation,
+						System.mmVersionValidityPeriod, System.mmSystemDateTime, System.mmNegotiation, System.mmAccount, System.mmTrade, System.mmAssessment, System.mmTradesPosition, System.mmSystemLanguage);
 				derivationComponent_lazy = () -> Arrays.asList(SystemDetails1.mmObject(), SystemSearch2.mmObject(), SystemSearch3.mmObject(), SystemAvailabilityAndEventsDetails1.mmObject(), SystemAvailabilityAndEvents1.mmObject(),
 						SystemDetails2.mmObject(), System1.mmObject());
 			}

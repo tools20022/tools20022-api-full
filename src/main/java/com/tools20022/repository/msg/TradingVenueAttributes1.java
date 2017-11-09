@@ -19,10 +19,13 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.MICIdentifier;
 import com.tools20022.repository.datatype.TrueFalseIndicator;
+import com.tools20022.repository.entity.OrganisationIdentification;
 import com.tools20022.repository.entity.TradingMarket;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -115,11 +118,11 @@ public class TradingVenueAttributes1 {
 	 */
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.mmMIC;
+			businessElementTrace_lazy = () -> OrganisationIdentification.mmMIC;
 			componentContext_lazy = () -> TradingVenueAttributes1.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Segment MIC for the trading venue or systematic internaliser, where applicable, otherwise the operating MIC.";
 			maxOccurs = 1;
@@ -165,7 +168,7 @@ public class TradingVenueAttributes1 {
 			componentContext_lazy = () -> TradingVenueAttributes1.mmObject();
 			isDerived = false;
 			xmlTag = "IssrReq";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssuerRequest";
 			definition = "Indicates whether the issuer of the financial instrument has requested or approved the trading or admission to trading of their financial instruments on a trading venue.";
 			maxOccurs = 1;
@@ -209,7 +212,7 @@ public class TradingVenueAttributes1 {
 			componentContext_lazy = () -> TradingVenueAttributes1.mmObject();
 			isDerived = false;
 			xmlTag = "AdmssnApprvlDtByIssr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdmissionApprovalDateByIssuer";
 			definition = "Date and time the issuer has approved the admission to trading or trading of its financial instruments on the trading venue.";
 			maxOccurs = 1;
@@ -253,7 +256,7 @@ public class TradingVenueAttributes1 {
 			componentContext_lazy = () -> TradingVenueAttributes1.mmObject();
 			isDerived = false;
 			xmlTag = "ReqForAdmssnDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestForAdmissionDate";
 			definition = "Date and time when the request for admission on the trading venue was made for the instrument.";
 			maxOccurs = 1;
@@ -298,7 +301,7 @@ public class TradingVenueAttributes1 {
 			componentContext_lazy = () -> TradingVenueAttributes1.mmObject();
 			isDerived = false;
 			xmlTag = "FrstTradDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FirstTradeDate";
 			definition = "Date and time of the admission to trading on the trading venue or the date and time when the instrument was first traded or an order or quote was first received by the trading venue. ";
 			maxOccurs = 1;
@@ -343,7 +346,7 @@ public class TradingVenueAttributes1 {
 			componentContext_lazy = () -> TradingVenueAttributes1.mmObject();
 			isDerived = false;
 			xmlTag = "TermntnDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TerminationDate";
 			definition = "Date and time when the financial instrument ceases to be traded or to be admitted to trading on the trading venue. Where this date and time is unavailable, the field shall not be populated.";
 			maxOccurs = 1;
@@ -355,12 +358,11 @@ public class TradingVenueAttributes1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TradingVenueAttributes1.mmIdentification, com.tools20022.repository.msg.TradingVenueAttributes1.mmIssuerRequest,
-						com.tools20022.repository.msg.TradingVenueAttributes1.mmAdmissionApprovalDateByIssuer, com.tools20022.repository.msg.TradingVenueAttributes1.mmRequestForAdmissionDate,
-						com.tools20022.repository.msg.TradingVenueAttributes1.mmFirstTradeDate, com.tools20022.repository.msg.TradingVenueAttributes1.mmTerminationDate);
+				messageElement_lazy = () -> Arrays.asList(TradingVenueAttributes1.mmIdentification, TradingVenueAttributes1.mmIssuerRequest, TradingVenueAttributes1.mmAdmissionApprovalDateByIssuer,
+						TradingVenueAttributes1.mmRequestForAdmissionDate, TradingVenueAttributes1.mmFirstTradeDate, TradingVenueAttributes1.mmTerminationDate);
 				trace_lazy = () -> TradingMarket.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TradingVenueAttributes1";
 				definition = "Traded venue related fields.";
 			}

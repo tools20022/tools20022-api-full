@@ -19,8 +19,10 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.PercentageRate;
 import com.tools20022.repository.datatype.YesNoIndicator;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -93,7 +95,7 @@ public class PercentageRangeBoundary1 {
 			componentContext_lazy = () -> PercentageRangeBoundary1.mmObject();
 			isDerived = false;
 			xmlTag = "BdryRate";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BoundaryRate";
 			definition = "Percentage rate of the range limit.";
 			maxOccurs = 1;
@@ -138,7 +140,7 @@ public class PercentageRangeBoundary1 {
 			componentContext_lazy = () -> PercentageRangeBoundary1.mmObject();
 			isDerived = false;
 			xmlTag = "Incl";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Included";
 			definition = "Indicates whether the boundary percentage rate is included in the range of percentage rates. ";
 			maxOccurs = 1;
@@ -150,9 +152,9 @@ public class PercentageRangeBoundary1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PercentageRangeBoundary1.mmBoundaryRate, com.tools20022.repository.msg.PercentageRangeBoundary1.mmIncluded);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(PercentageRangeBoundary1.mmBoundaryRate, PercentageRangeBoundary1.mmIncluded);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "PercentageRangeBoundary1";
 				definition = "Limit for a percentage rate range.";
 			}

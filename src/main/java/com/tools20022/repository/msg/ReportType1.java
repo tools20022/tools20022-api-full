@@ -19,7 +19,12 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.tsmt.FullPushThroughReportV03;
+import com.tools20022.repository.area.tsmt.FullPushThroughReportV04;
+import com.tools20022.repository.area.tsmt.FullPushThroughReportV05;
 import com.tools20022.repository.codeset.ReportType1Code;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -105,7 +110,7 @@ public class ReportType1 {
 			componentContext_lazy = () -> ReportType1.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Specifies whether the pushed through baseline is a new one or an amendment or a resubmission.";
 			maxOccurs = 1;
@@ -117,11 +122,10 @@ public class ReportType1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReportType1.mmType);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.FullPushThroughReportV03.mmReportPurpose, com.tools20022.repository.area.tsmt.FullPushThroughReportV04.mmReportPurpose,
-						com.tools20022.repository.area.tsmt.FullPushThroughReportV05.mmReportPurpose);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(ReportType1.mmType);
+				messageBuildingBlock_lazy = () -> Arrays.asList(FullPushThroughReportV03.mmReportPurpose, FullPushThroughReportV04.mmReportPurpose, FullPushThroughReportV05.mmReportPurpose);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ReportType1";
 				definition = "Specifies the type of report.";
 			}

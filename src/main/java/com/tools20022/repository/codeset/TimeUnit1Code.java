@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.TimeUnitCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -91,7 +93,7 @@ public class TimeUnit1Code extends TimeUnitCode {
 	 */
 	public static final MMCode mmCalendarDay = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CalendarDay";
 			owner_lazy = () -> TimeUnit1Code.mmObject();
 		}
@@ -114,7 +116,7 @@ public class TimeUnit1Code extends TimeUnitCode {
 	 */
 	public static final MMCode mmHour = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Hour";
 			owner_lazy = () -> TimeUnit1Code.mmObject();
 		}
@@ -137,7 +139,7 @@ public class TimeUnit1Code extends TimeUnitCode {
 	 */
 	public static final MMCode mmMinute = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Minute";
 			owner_lazy = () -> TimeUnit1Code.mmObject();
 		}
@@ -160,7 +162,7 @@ public class TimeUnit1Code extends TimeUnitCode {
 	 */
 	public static final MMCode mmMonth = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Month";
 			owner_lazy = () -> TimeUnit1Code.mmObject();
 		}
@@ -183,7 +185,7 @@ public class TimeUnit1Code extends TimeUnitCode {
 	 */
 	public static final MMCode mmSecond = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Second";
 			owner_lazy = () -> TimeUnit1Code.mmObject();
 		}
@@ -206,7 +208,7 @@ public class TimeUnit1Code extends TimeUnitCode {
 	 */
 	public static final MMCode mmWeek = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Week";
 			owner_lazy = () -> TimeUnit1Code.mmObject();
 		}
@@ -229,7 +231,7 @@ public class TimeUnit1Code extends TimeUnitCode {
 	 */
 	public static final MMCode mmYear = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Year";
 			owner_lazy = () -> TimeUnit1Code.mmObject();
 		}
@@ -238,14 +240,12 @@ public class TimeUnit1Code extends TimeUnitCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("DAYC");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TimeUnit1Code";
 				definition = "Unit of time associated with the contract.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TimeUnit1Code.mmCalendarDay, com.tools20022.repository.codeset.TimeUnit1Code.mmHour, com.tools20022.repository.codeset.TimeUnit1Code.mmMinute,
-						com.tools20022.repository.codeset.TimeUnit1Code.mmMonth, com.tools20022.repository.codeset.TimeUnit1Code.mmSecond, com.tools20022.repository.codeset.TimeUnit1Code.mmWeek,
-						com.tools20022.repository.codeset.TimeUnit1Code.mmYear);
+				code_lazy = () -> Arrays.asList(TimeUnit1Code.mmCalendarDay, TimeUnit1Code.mmHour, TimeUnit1Code.mmMinute, TimeUnit1Code.mmMonth, TimeUnit1Code.mmSecond, TimeUnit1Code.mmWeek, TimeUnit1Code.mmYear);
 				trace_lazy = () -> TimeUnitCode.mmObject();
 			}
 		});

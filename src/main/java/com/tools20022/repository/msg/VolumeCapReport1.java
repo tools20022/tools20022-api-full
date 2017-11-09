@@ -20,8 +20,12 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.auth.FinancialInstrumentReportingTradingVolumeCapDataReportV01;
 import com.tools20022.repository.choice.Period4Choice;
 import com.tools20022.repository.datatype.MICIdentifier;
+import com.tools20022.repository.entity.Security;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -105,7 +109,7 @@ public class VolumeCapReport1 {
 			componentContext_lazy = () -> VolumeCapReport1.mmObject();
 			isDerived = false;
 			xmlTag = "RptgPrd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportingPeriod";
 			definition = "Date or date range the report relates to.";
 			maxOccurs = 1;
@@ -153,11 +157,11 @@ public class VolumeCapReport1 {
 	 */
 	public static final MMMessageAttribute mmTradingVenue = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmPlaceOfListing;
+			businessElementTrace_lazy = () -> Security.mmPlaceOfListing;
 			componentContext_lazy = () -> VolumeCapReport1.mmObject();
 			isDerived = false;
 			xmlTag = "TradgVn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradingVenue";
 			definition = "The venue this report is in relation to specified as {MIC} (segment MIC, where available, otherwise operational MIC).";
 			maxOccurs = 1;
@@ -197,7 +201,7 @@ public class VolumeCapReport1 {
 			componentContext_lazy = () -> VolumeCapReport1.mmObject();
 			isDerived = false;
 			xmlTag = "InstrmRpt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstrumentReport";
 			definition = "Volume cap data specific to a reporting period.";
 			minOccurs = 1;
@@ -209,11 +213,10 @@ public class VolumeCapReport1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.VolumeCapReport1.mmReportingPeriod, com.tools20022.repository.msg.VolumeCapReport1.mmTradingVenue,
-						com.tools20022.repository.msg.VolumeCapReport1.mmInstrumentReport);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.auth.FinancialInstrumentReportingTradingVolumeCapDataReportV01.mmVolumeCapData);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(VolumeCapReport1.mmReportingPeriod, VolumeCapReport1.mmTradingVenue, VolumeCapReport1.mmInstrumentReport);
+				messageBuildingBlock_lazy = () -> Arrays.asList(FinancialInstrumentReportingTradingVolumeCapDataReportV01.mmVolumeCapData);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "VolumeCapReport1";
 				definition = "Double volume cap report.";
 			}

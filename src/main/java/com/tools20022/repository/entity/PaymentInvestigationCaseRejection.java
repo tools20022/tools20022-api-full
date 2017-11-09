@@ -17,18 +17,16 @@
 
 package com.tools20022.repository.entity;
 
-import com.tools20022.metamodel.MMBusinessAssociationEnd;
-import com.tools20022.metamodel.MMBusinessAttribute;
-import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.*;
+import com.tools20022.repository.choice.*;
 import com.tools20022.repository.codeset.CaseAssignmentRejectionCode;
 import com.tools20022.repository.codeset.InvestigationRejectionCode;
 import com.tools20022.repository.codeset.PaymentCancellationRejectionCode;
 import com.tools20022.repository.codeset.PaymentModificationRejectionV2Code;
 import com.tools20022.repository.datatype.Max140Text;
 import com.tools20022.repository.datatype.YesNoIndicator;
-import com.tools20022.repository.msg.CaseAssignmentRejectionJustification;
-import com.tools20022.repository.msg.CaseAssignmentRejectionJustification2;
-import com.tools20022.repository.msg.InvestigationRejectionJustification1;
+import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -44,6 +42,30 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CaseAssignmentRejectionJustification
+ * CaseAssignmentRejectionJustification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CaseAssignmentRejectionJustification2
+ * CaseAssignmentRejectionJustification2}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.InvestigationRejectionJustification1
+ * InvestigationRejectionJustification1}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PaymentInvestigationCaseResolution#mmInvestigationCaseRejection
+ * PaymentInvestigationCaseResolution.mmInvestigationCaseRejection}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -68,30 +90,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.entity.PaymentInvestigationCaseRejection#mmInvestigationRejection
  * PaymentInvestigationCaseRejection.mmInvestigationRejection}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.PaymentInvestigationCaseResolution#mmInvestigationCaseRejection
- * PaymentInvestigationCaseResolution.mmInvestigationCaseRejection}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msg.CaseAssignmentRejectionJustification
- * CaseAssignmentRejectionJustification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.CaseAssignmentRejectionJustification2
- * CaseAssignmentRejectionJustification2}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.InvestigationRejectionJustification1
- * InvestigationRejectionJustification1}</li>
  * </ul>
  * </li>
  * <li>
@@ -160,11 +158,11 @@ public class PaymentInvestigationCaseRejection {
 	 */
 	public static final MMBusinessAttribute mmRejectedModification = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.InvestigationStatusChoice.mmRejectedModification, com.tools20022.repository.msg.InvestigationStatus.mmRejectedModification,
-					com.tools20022.repository.choice.InvestigationStatus2Choice.mmRejectedModification, com.tools20022.repository.choice.InvestigationStatus3Choice.mmRejectedModification);
+			derivation_lazy = () -> Arrays.asList(InvestigationStatusChoice.mmRejectedModification, InvestigationStatus.mmRejectedModification, InvestigationStatus2Choice.mmRejectedModification,
+					InvestigationStatus3Choice.mmRejectedModification);
 			elementContext_lazy = () -> PaymentInvestigationCaseRejection.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RejectedModification";
 			definition = "Reason for the rejection of a modification request.";
 			maxOccurs = 1;
@@ -230,13 +228,11 @@ public class PaymentInvestigationCaseRejection {
 	 */
 	public static final MMBusinessAttribute mmRejectedCancellation = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RejectedCancellationJustification.mmReasonCode, com.tools20022.repository.choice.InvestigationStatusChoice.mmRejectedCancellation,
-					com.tools20022.repository.choice.CancellationStatusReason1Choice.mmCode, com.tools20022.repository.choice.CancellationStatusReason1Choice.mmProprietary,
-					com.tools20022.repository.msg.CancellationStatusReasonInformation1.mmReason, com.tools20022.repository.msg.OriginalGroupInformation24.mmCancellationStatusReasonInformation,
-					com.tools20022.repository.choice.CancellationStatusReason2Choice.mmCode, com.tools20022.repository.choice.CancellationStatusReason2Choice.mmProprietary);
+			derivation_lazy = () -> Arrays.asList(RejectedCancellationJustification.mmReasonCode, InvestigationStatusChoice.mmRejectedCancellation, CancellationStatusReason1Choice.mmCode, CancellationStatusReason1Choice.mmProprietary,
+					CancellationStatusReasonInformation1.mmReason, OriginalGroupInformation24.mmCancellationStatusReasonInformation, CancellationStatusReason2Choice.mmCode, CancellationStatusReason2Choice.mmProprietary);
 			elementContext_lazy = () -> PaymentInvestigationCaseRejection.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RejectedCancellation";
 			definition = "Justification for the rejection of the cancellation.";
 			maxOccurs = 1;
@@ -280,10 +276,10 @@ public class PaymentInvestigationCaseRejection {
 	 */
 	public static final MMBusinessAttribute mmRejectedCancellationReason = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RejectedCancellationJustification.mmReason);
+			derivation_lazy = () -> Arrays.asList(RejectedCancellationJustification.mmReason);
 			elementContext_lazy = () -> PaymentInvestigationCaseRejection.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RejectedCancellationReason";
 			definition = "Free text justification for rejecting a cancellation.";
 			maxOccurs = 1;
@@ -341,11 +337,11 @@ public class PaymentInvestigationCaseRejection {
 	 */
 	public static final MMBusinessAttribute mmAssignmentCancellationConfirmation = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.InvestigationStatusChoice.mmAssignmentCancellationConfirmation, com.tools20022.repository.msg.InvestigationStatus.mmAssignmentCancellationConfirmation,
-					com.tools20022.repository.choice.InvestigationStatus2Choice.mmAssignmentCancellationConfirmation, com.tools20022.repository.choice.InvestigationStatus3Choice.mmAssignmentCancellationConfirmation);
+			derivation_lazy = () -> Arrays.asList(InvestigationStatusChoice.mmAssignmentCancellationConfirmation, InvestigationStatus.mmAssignmentCancellationConfirmation, InvestigationStatus2Choice.mmAssignmentCancellationConfirmation,
+					InvestigationStatus3Choice.mmAssignmentCancellationConfirmation);
 			elementContext_lazy = () -> PaymentInvestigationCaseRejection.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AssignmentCancellationConfirmation";
 			definition = "If yes, it means the cancellation of the assignment is confirmed.\nIf no, it means the cancellation of the assignment is rejected and the investigation process will continue.";
 			maxOccurs = 1;
@@ -394,10 +390,10 @@ public class PaymentInvestigationCaseRejection {
 	 */
 	public static final MMBusinessAttribute mmRejectionReason = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CaseAssignmentRejectionJustification.mmRejectionReason, com.tools20022.repository.msg.CaseAssignmentRejectionJustification2.mmRejectionReason);
+			derivation_lazy = () -> Arrays.asList(CaseAssignmentRejectionJustification.mmRejectionReason, CaseAssignmentRejectionJustification2.mmRejectionReason);
 			elementContext_lazy = () -> PaymentInvestigationCaseRejection.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RejectionReason";
 			definition = "Reason for the rejection of a case assignment, in a coded form.";
 			maxOccurs = 1;
@@ -444,13 +440,13 @@ public class PaymentInvestigationCaseRejection {
 		{
 			elementContext_lazy = () -> PaymentInvestigationCaseRejection.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedInvestigationCaseResolution";
 			definition = "Resolution which consists in rejecting the case.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.PaymentInvestigationCaseResolution.mmInvestigationCaseRejection;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.PaymentInvestigationCaseResolution.mmObject();
 		}
 	};
@@ -491,10 +487,10 @@ public class PaymentInvestigationCaseRejection {
 	 */
 	public static final MMBusinessAttribute mmInvestigationRejection = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestigationRejectionJustification1.mmRejectionReason);
+			derivation_lazy = () -> Arrays.asList(InvestigationRejectionJustification1.mmRejectionReason);
 			elementContext_lazy = () -> PaymentInvestigationCaseRejection.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InvestigationRejection";
 			definition = "Reason for the rejection of a case assignment.";
 			maxOccurs = 1;
@@ -506,15 +502,14 @@ public class PaymentInvestigationCaseRejection {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PaymentInvestigationCaseRejection";
 				definition = "Specifies the rejection of an activity linked to a payment. The rejected activity may be the assignment of an investigation case, the cancellation or  the modification of a payment.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.PaymentInvestigationCaseResolution.mmInvestigationCaseRejection);
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.PaymentInvestigationCaseRejection.mmRejectedModification, com.tools20022.repository.entity.PaymentInvestigationCaseRejection.mmRejectedCancellation,
-						com.tools20022.repository.entity.PaymentInvestigationCaseRejection.mmRejectedCancellationReason, com.tools20022.repository.entity.PaymentInvestigationCaseRejection.mmAssignmentCancellationConfirmation,
-						com.tools20022.repository.entity.PaymentInvestigationCaseRejection.mmRejectionReason, com.tools20022.repository.entity.PaymentInvestigationCaseRejection.mmRelatedInvestigationCaseResolution,
-						com.tools20022.repository.entity.PaymentInvestigationCaseRejection.mmInvestigationRejection);
+				element_lazy = () -> Arrays.asList(PaymentInvestigationCaseRejection.mmRejectedModification, PaymentInvestigationCaseRejection.mmRejectedCancellation, PaymentInvestigationCaseRejection.mmRejectedCancellationReason,
+						PaymentInvestigationCaseRejection.mmAssignmentCancellationConfirmation, PaymentInvestigationCaseRejection.mmRejectionReason, PaymentInvestigationCaseRejection.mmRelatedInvestigationCaseResolution,
+						PaymentInvestigationCaseRejection.mmInvestigationRejection);
 				derivationComponent_lazy = () -> Arrays.asList(CaseAssignmentRejectionJustification.mmObject(), CaseAssignmentRejectionJustification2.mmObject(), InvestigationRejectionJustification1.mmObject());
 			}
 		});

@@ -20,11 +20,16 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.DateAndDateTimeChoice;
 import com.tools20022.repository.codeset.CreditDebitCode;
 import com.tools20022.repository.codeset.EntryStatus4Code;
 import com.tools20022.repository.datatype.*;
+import com.tools20022.repository.entity.AccountStatus;
 import com.tools20022.repository.entity.CashEntry;
+import com.tools20022.repository.entity.Entry;
+import com.tools20022.repository.entity.Interest;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -141,11 +146,11 @@ public class NotificationEntry1 {
 	 */
 	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashEntry.mmAmount;
+			businessElementTrace_lazy = () -> CashEntry.mmAmount;
 			componentContext_lazy = () -> NotificationEntry1.mmObject();
 			isDerived = false;
 			xmlTag = "Amt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Amount of money in the cash entry.";
 			maxOccurs = 1;
@@ -189,11 +194,11 @@ public class NotificationEntry1 {
 	 */
 	public static final MMMessageAttribute mmCreditDebitIndicator = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Entry.mmCreditDebitIndicator;
+			businessElementTrace_lazy = () -> Entry.mmCreditDebitIndicator;
 			componentContext_lazy = () -> NotificationEntry1.mmObject();
 			isDerived = false;
 			xmlTag = "CdtDbtInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditDebitIndicator";
 			definition = "Specifies if an entry is a credit or a debit.";
 			maxOccurs = 1;
@@ -245,11 +250,11 @@ public class NotificationEntry1 {
 	 */
 	public static final MMMessageAttribute mmReversalIndicator = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Entry.mmReversalIndicator;
+			businessElementTrace_lazy = () -> Entry.mmReversalIndicator;
 			componentContext_lazy = () -> NotificationEntry1.mmObject();
 			isDerived = false;
 			xmlTag = "RvslInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReversalIndicator";
 			definition = "Indicates whether the entry is the result of a reversal operation.\n\nUsage : this element should only be present if the entry is the result of a reversal operation.\nIf the CreditDebitIndicator is CRDT and ReversalIndicator is Yes, the original operation was a debit entry.\nIf the CreditDebitIndicator is DBIT and ReversalIndicator is Yes, the original operation was a credit entry.";
 			maxOccurs = 1;
@@ -293,11 +298,11 @@ public class NotificationEntry1 {
 	 */
 	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AccountStatus.mmEntryStatus;
+			businessElementTrace_lazy = () -> AccountStatus.mmEntryStatus;
 			componentContext_lazy = () -> NotificationEntry1.mmObject();
 			isDerived = false;
 			xmlTag = "Sts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Status";
 			definition = "Status of an entry on the books of the account servicer.";
 			maxOccurs = 1;
@@ -345,11 +350,11 @@ public class NotificationEntry1 {
 	 */
 	public static final MMMessageAssociationEnd mmBookingDate = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Entry.mmEntryDate;
+			businessElementTrace_lazy = () -> Entry.mmEntryDate;
 			componentContext_lazy = () -> NotificationEntry1.mmObject();
 			isDerived = false;
 			xmlTag = "BookgDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BookingDate";
 			definition = "Date and time when an entry is posted to an account on the account servicer's books.\n\nUsage : Booking date is only present if Status is booked.";
 			maxOccurs = 1;
@@ -402,11 +407,11 @@ public class NotificationEntry1 {
 	 */
 	public static final MMMessageAssociationEnd mmValueDate = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Entry.mmValueDate;
+			businessElementTrace_lazy = () -> Entry.mmValueDate;
 			componentContext_lazy = () -> NotificationEntry1.mmObject();
 			isDerived = false;
 			xmlTag = "ValDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValueDate";
 			definition = "Date and time assets become available to the account owner (in a credit entry), or cease to be available to the account owner (in a debit entry).\n\nUsage : When entry status is pending , and value date is present, value date refers to an expected/requested value date.\nFor entries which are subject to availability/float (and for which availability information is present), value date must  not be used, as the availability component identifies the number of availability days.";
 			maxOccurs = 1;
@@ -450,11 +455,11 @@ public class NotificationEntry1 {
 	 */
 	public static final MMMessageAttribute mmAccountServicerReference = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Entry.mmAccountServicerTransactionIdentification;
+			businessElementTrace_lazy = () -> Entry.mmAccountServicerTransactionIdentification;
 			componentContext_lazy = () -> NotificationEntry1.mmObject();
 			isDerived = false;
 			xmlTag = "AcctSvcrRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountServicerReference";
 			definition = "Account servicing institution's reference for the entry.";
 			maxOccurs = 1;
@@ -506,11 +511,11 @@ public class NotificationEntry1 {
 	 */
 	public static final MMMessageAssociationEnd mmAvailability = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashEntry.mmAvailability;
+			businessElementTrace_lazy = () -> CashEntry.mmAvailability;
 			componentContext_lazy = () -> NotificationEntry1.mmObject();
 			isDerived = false;
 			xmlTag = "Avlbty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Availability";
 			definition = "Set of elements used to indicate when the booked amount of money will become available, ie can be accessed and start generating interest. \n\nUsage : this type of info is eg used in US, and is linked to particular instruments, such as cheques.\nExample : When a cheque is deposited, it will be booked on the deposit day, but the funds will only be accessible as of the indicated availability day (according to national banking regulations).";
 			minOccurs = 0;
@@ -556,11 +561,11 @@ public class NotificationEntry1 {
 	 */
 	public static final MMMessageAssociationEnd mmBankTransactionCode = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Entry.mmBankTransactionCode;
+			businessElementTrace_lazy = () -> Entry.mmBankTransactionCode;
 			componentContext_lazy = () -> NotificationEntry1.mmObject();
 			isDerived = false;
 			xmlTag = "BkTxCd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BankTransactionCode";
 			definition = "Set of elements to fully identify the type of underlying transaction resulting in the entry.";
 			maxOccurs = 1;
@@ -606,11 +611,11 @@ public class NotificationEntry1 {
 	 */
 	public static final MMMessageAttribute mmCommissionWaiverIndicator = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Entry.mmCommissionWaiverIndicator;
+			businessElementTrace_lazy = () -> Entry.mmCommissionWaiverIndicator;
 			componentContext_lazy = () -> NotificationEntry1.mmObject();
 			isDerived = false;
 			xmlTag = "ComssnWvrInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommissionWaiverIndicator";
 			definition = "Indicates whether the transaction is exempt from commission.";
 			maxOccurs = 1;
@@ -653,7 +658,7 @@ public class NotificationEntry1 {
 			componentContext_lazy = () -> NotificationEntry1.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlInfInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInformationIndicator";
 			definition = "Indicates whether the underlying transaction details are provided through a separate message, eg in case of aggregate bookings.";
 			maxOccurs = 1;
@@ -700,7 +705,7 @@ public class NotificationEntry1 {
 			componentContext_lazy = () -> NotificationEntry1.mmObject();
 			isDerived = false;
 			xmlTag = "Btch";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Batch";
 			definition = "Set of elements providing details on batched transactions.\n\nUsage : this element can be repeated in case more than one batch is included in the entry, eg, in lockbox scenarios, to specify the ID and number of transactions included in each of the batches.";
 			minOccurs = 0;
@@ -753,7 +758,7 @@ public class NotificationEntry1 {
 			componentContext_lazy = () -> NotificationEntry1.mmObject();
 			isDerived = false;
 			xmlTag = "AmtDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmountDetails";
 			definition = "Set of elements providing information on the original amount.\n\nUsage : This component (on entry level) should be used when a total original batch or aggregate amount has to be provided. (If required, the individual original amounts can be included in the same component on transaction details level).";
 			maxOccurs = 1;
@@ -801,11 +806,11 @@ public class NotificationEntry1 {
 	 */
 	public static final MMMessageAssociationEnd mmCharges = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashEntry.mmCharges;
+			businessElementTrace_lazy = () -> CashEntry.mmCharges;
 			componentContext_lazy = () -> NotificationEntry1.mmObject();
 			isDerived = false;
 			xmlTag = "Chrgs";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Charges";
 			definition = "Provides information on the charges included in the entry amount.\n\nUsage : this component is used on entry level in case of batch or aggregate bookings.";
 			minOccurs = 0;
@@ -853,11 +858,11 @@ public class NotificationEntry1 {
 	 */
 	public static final MMMessageAssociationEnd mmInterest = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Interest.mmInterestCalculation;
+			businessElementTrace_lazy = () -> Interest.mmInterestCalculation;
 			componentContext_lazy = () -> NotificationEntry1.mmObject();
 			isDerived = false;
 			xmlTag = "Intrst";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Interest";
 			definition = "Set of elements providing details on the interest amount included in the entry amount.\n\nUsage : This component is used on entry level in case of batch or aggregate bookings.";
 			minOccurs = 0;
@@ -904,7 +909,7 @@ public class NotificationEntry1 {
 			componentContext_lazy = () -> NotificationEntry1.mmObject();
 			isDerived = false;
 			xmlTag = "TxDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionDetails";
 			definition = "Set of elements providing information on the underlying transaction (s).";
 			minOccurs = 0;
@@ -945,7 +950,7 @@ public class NotificationEntry1 {
 			componentContext_lazy = () -> NotificationEntry1.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlNtryInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalEntryInformation";
 			definition = "Further details on the entry details.";
 			maxOccurs = 1;
@@ -957,16 +962,13 @@ public class NotificationEntry1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.NotificationEntry1.mmAmount, com.tools20022.repository.msg.NotificationEntry1.mmCreditDebitIndicator,
-						com.tools20022.repository.msg.NotificationEntry1.mmReversalIndicator, com.tools20022.repository.msg.NotificationEntry1.mmStatus, com.tools20022.repository.msg.NotificationEntry1.mmBookingDate,
-						com.tools20022.repository.msg.NotificationEntry1.mmValueDate, com.tools20022.repository.msg.NotificationEntry1.mmAccountServicerReference, com.tools20022.repository.msg.NotificationEntry1.mmAvailability,
-						com.tools20022.repository.msg.NotificationEntry1.mmBankTransactionCode, com.tools20022.repository.msg.NotificationEntry1.mmCommissionWaiverIndicator,
-						com.tools20022.repository.msg.NotificationEntry1.mmAdditionalInformationIndicator, com.tools20022.repository.msg.NotificationEntry1.mmBatch, com.tools20022.repository.msg.NotificationEntry1.mmAmountDetails,
-						com.tools20022.repository.msg.NotificationEntry1.mmCharges, com.tools20022.repository.msg.NotificationEntry1.mmInterest, com.tools20022.repository.msg.NotificationEntry1.mmTransactionDetails,
-						com.tools20022.repository.msg.NotificationEntry1.mmAdditionalEntryInformation);
+				messageElement_lazy = () -> Arrays.asList(NotificationEntry1.mmAmount, NotificationEntry1.mmCreditDebitIndicator, NotificationEntry1.mmReversalIndicator, NotificationEntry1.mmStatus, NotificationEntry1.mmBookingDate,
+						NotificationEntry1.mmValueDate, NotificationEntry1.mmAccountServicerReference, NotificationEntry1.mmAvailability, NotificationEntry1.mmBankTransactionCode, NotificationEntry1.mmCommissionWaiverIndicator,
+						NotificationEntry1.mmAdditionalInformationIndicator, NotificationEntry1.mmBatch, NotificationEntry1.mmAmountDetails, NotificationEntry1.mmCharges, NotificationEntry1.mmInterest,
+						NotificationEntry1.mmTransactionDetails, NotificationEntry1.mmAdditionalEntryInformation);
 				trace_lazy = () -> CashEntry.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "NotificationEntry1";
 				definition = "Specifies the elements of an entry in the report.";
 			}

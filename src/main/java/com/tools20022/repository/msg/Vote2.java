@@ -19,10 +19,14 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.datatype.YesNoIndicator;
+import com.tools20022.repository.entity.Resolution;
+import com.tools20022.repository.entity.Vote;
 import com.tools20022.repository.entity.VoteResult;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -103,11 +107,11 @@ public class Vote2 {
 	 */
 	public static final MMMessageAttribute mmIssuerLabel = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Resolution.mmIssuerLabel;
+			businessElementTrace_lazy = () -> Resolution.mmIssuerLabel;
 			componentContext_lazy = () -> Vote2.mmObject();
 			isDerived = false;
 			xmlTag = "IssrLabl";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssuerLabel";
 			definition = "Numbering of the resolution as specified by the issuer or its agent.";
 			maxOccurs = 1;
@@ -150,11 +154,11 @@ public class Vote2 {
 	 */
 	public static final MMMessageAttribute mmAccepted = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.VoteResult.mmAccepted;
+			businessElementTrace_lazy = () -> VoteResult.mmAccepted;
 			componentContext_lazy = () -> Vote2.mmObject();
 			isDerived = false;
 			xmlTag = "Accptd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Accepted";
 			definition = "Specifies whether a resolution is accepted or not.";
 			maxOccurs = 1;
@@ -195,11 +199,11 @@ public class Vote2 {
 	 */
 	public static final MMMessageAttribute mmFor = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Vote.mmFor;
+			businessElementTrace_lazy = () -> Vote.mmFor;
 			componentContext_lazy = () -> Vote2.mmObject();
 			isDerived = false;
 			xmlTag = "For";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "For";
 			definition = "Number of votes in favour of one resolution";
 			maxOccurs = 1;
@@ -241,11 +245,11 @@ public class Vote2 {
 	 */
 	public static final MMMessageAttribute mmAgainst = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Vote.mmAgainst;
+			businessElementTrace_lazy = () -> Vote.mmAgainst;
 			componentContext_lazy = () -> Vote2.mmObject();
 			isDerived = false;
 			xmlTag = "Agnst";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Against";
 			definition = "Number of votes against one resolution";
 			maxOccurs = 1;
@@ -287,11 +291,11 @@ public class Vote2 {
 	 */
 	public static final MMMessageAttribute mmAbstain = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Vote.mmAbstain;
+			businessElementTrace_lazy = () -> Vote.mmAbstain;
 			componentContext_lazy = () -> Vote2.mmObject();
 			isDerived = false;
 			xmlTag = "Abstn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Abstain";
 			definition = "Number of votes expressed as abstain.";
 			maxOccurs = 1;
@@ -336,11 +340,11 @@ public class Vote2 {
 	 */
 	public static final MMMessageAttribute mmWithhold = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Vote.mmWithhold;
+			businessElementTrace_lazy = () -> Vote.mmWithhold;
 			componentContext_lazy = () -> Vote2.mmObject();
 			isDerived = false;
 			xmlTag = "Wthhld";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Withhold";
 			definition = "Total votes withheld, eg in the case where a shareholder wishes not to endorse the election of a board member.";
 			maxOccurs = 1;
@@ -352,11 +356,10 @@ public class Vote2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Vote2.mmIssuerLabel, com.tools20022.repository.msg.Vote2.mmAccepted, com.tools20022.repository.msg.Vote2.mmFor,
-						com.tools20022.repository.msg.Vote2.mmAgainst, com.tools20022.repository.msg.Vote2.mmAbstain, com.tools20022.repository.msg.Vote2.mmWithhold);
+				messageElement_lazy = () -> Arrays.asList(Vote2.mmIssuerLabel, Vote2.mmAccepted, Vote2.mmFor, Vote2.mmAgainst, Vote2.mmAbstain, Vote2.mmWithhold);
 				trace_lazy = () -> VoteResult.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Vote2";
 				definition = "Indicates the number of voting rights cast to a resolution.";
 			}

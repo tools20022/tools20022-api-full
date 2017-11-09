@@ -19,7 +19,9 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.Reservation;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.ErrorHandling4;
 import com.tools20022.repository.msg.Reservation1;
 import java.util.Arrays;
@@ -110,10 +112,10 @@ public class ReservationOrError5Choice {
 			componentContext_lazy = () -> ReservationOrError5Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Rsvatn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reservation";
 			definition = "Requested information on the limit.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.ReservationOrError3Choice.mmReservation;
+			previousVersion_lazy = () -> ReservationOrError3Choice.mmReservation;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -157,10 +159,10 @@ public class ReservationOrError5Choice {
 			componentContext_lazy = () -> ReservationOrError5Choice.mmObject();
 			isDerived = false;
 			xmlTag = "BizErr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BusinessError";
 			definition = "Reason the requested business information is not given.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.ReservationOrError3Choice.mmBusinessError;
+			previousVersion_lazy = () -> ReservationOrError3Choice.mmBusinessError;
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ErrorHandling4.mmObject();
@@ -170,10 +172,10 @@ public class ReservationOrError5Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ReservationOrError5Choice.mmReservation, com.tools20022.repository.choice.ReservationOrError5Choice.mmBusinessError);
+				messageElement_lazy = () -> Arrays.asList(ReservationOrError5Choice.mmReservation, ReservationOrError5Choice.mmBusinessError);
 				trace_lazy = () -> Reservation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ReservationOrError5Choice";
 				definition = "Reports either on the reservation or on a business error.";
 				previousVersion_lazy = () -> ReservationOrError3Choice.mmObject();

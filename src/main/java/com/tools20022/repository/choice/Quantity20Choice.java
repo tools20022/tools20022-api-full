@@ -20,8 +20,10 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.Quantity1Code;
 import com.tools20022.repository.entity.SecuritiesQuantity;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.OriginalAndCurrentQuantities1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -111,14 +113,14 @@ public class Quantity20Choice {
 	 */
 	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmCode;
+			businessElementTrace_lazy = () -> SecuritiesQuantity.mmCode;
 			componentContext_lazy = () -> Quantity20Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Cd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Standard code to specify quantity of a financial instrument.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.Quantity5Choice.mmCode;
+			previousVersion_lazy = () -> Quantity5Choice.mmCode;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Quantity1Code.mmObject();
@@ -168,10 +170,10 @@ public class Quantity20Choice {
 			componentContext_lazy = () -> Quantity20Choice.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlAndCurFaceAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalAndCurrentFaceAmount";
 			definition = "Face amount and amortised value of security.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.Quantity5Choice.mmOriginalAndCurrentFaceAmount;
+			previousVersion_lazy = () -> Quantity5Choice.mmOriginalAndCurrentFaceAmount;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -225,10 +227,10 @@ public class Quantity20Choice {
 			componentContext_lazy = () -> Quantity20Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Qty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Quantity";
 			definition = "Quantity of financial instrument in units, original face amount or current face amount.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.Quantity5Choice.mmQuantity;
+			previousVersion_lazy = () -> Quantity5Choice.mmQuantity;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -239,11 +241,10 @@ public class Quantity20Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Quantity20Choice.mmCode, com.tools20022.repository.choice.Quantity20Choice.mmOriginalAndCurrentFaceAmount,
-						com.tools20022.repository.choice.Quantity20Choice.mmQuantity);
+				messageElement_lazy = () -> Arrays.asList(Quantity20Choice.mmCode, Quantity20Choice.mmOriginalAndCurrentFaceAmount, Quantity20Choice.mmQuantity);
 				trace_lazy = () -> SecuritiesQuantity.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Quantity20Choice";
 				definition = "Choice between different formats of securities quantity.";
 				previousVersion_lazy = () -> Quantity5Choice.mmObject();

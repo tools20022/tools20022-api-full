@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ConfirmationRequestCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -80,7 +82,7 @@ public class ConfirmationRequest1Code extends ConfirmationRequestCode {
 	 */
 	public static final MMCode mmConfirmation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Confirmation";
 			owner_lazy = () -> ConfirmationRequest1Code.mmObject();
 		}
@@ -103,7 +105,7 @@ public class ConfirmationRequest1Code extends ConfirmationRequestCode {
 	 */
 	public static final MMCode mmConfirmationRequestRejected = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConfirmationRequestRejected";
 			owner_lazy = () -> ConfirmationRequest1Code.mmObject();
 		}
@@ -126,7 +128,7 @@ public class ConfirmationRequest1Code extends ConfirmationRequestCode {
 	 */
 	public static final MMCode mmStatus = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Status";
 			owner_lazy = () -> ConfirmationRequest1Code.mmObject();
 		}
@@ -135,12 +137,11 @@ public class ConfirmationRequest1Code extends ConfirmationRequestCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ConfirmationRequest1Code";
 				definition = "Identifies the type of confirmation message being sent.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ConfirmationRequest1Code.mmConfirmation, com.tools20022.repository.codeset.ConfirmationRequest1Code.mmConfirmationRequestRejected,
-						com.tools20022.repository.codeset.ConfirmationRequest1Code.mmStatus);
+				code_lazy = () -> Arrays.asList(ConfirmationRequest1Code.mmConfirmation, ConfirmationRequest1Code.mmConfirmationRequestRejected, ConfirmationRequest1Code.mmStatus);
 				trace_lazy = () -> ConfirmationRequestCode.mmObject();
 			}
 		});

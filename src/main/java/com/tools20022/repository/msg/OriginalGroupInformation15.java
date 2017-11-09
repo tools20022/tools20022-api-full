@@ -17,16 +17,14 @@
 
 package com.tools20022.repository.msg;
 
-import com.tools20022.metamodel.MMMessageAssociationEnd;
-import com.tools20022.metamodel.MMMessageAttribute;
-import com.tools20022.metamodel.MMMessageComponent;
-import com.tools20022.metamodel.MMXor;
+import com.tools20022.metamodel.*;
 import com.tools20022.repository.codeset.TransactionGroupStatus2Code;
 import com.tools20022.repository.datatype.DecimalNumber;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Max15NumericText;
 import com.tools20022.repository.datatype.Max35Text;
-import com.tools20022.repository.entity.Payment;
+import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -145,11 +143,11 @@ public class OriginalGroupInformation15 {
 	 */
 	public static final MMMessageAttribute mmOriginalMessageIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentIdentification.mmExecutionIdentification;
+			businessElementTrace_lazy = () -> PaymentIdentification.mmExecutionIdentification;
 			componentContext_lazy = () -> OriginalGroupInformation15.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlMsgId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalMessageIdentification";
 			definition = "Point to point reference assigned by the original instructing party to unambiguously identify the original group of individual transactions.";
 			maxOccurs = 1;
@@ -193,7 +191,7 @@ public class OriginalGroupInformation15 {
 			componentContext_lazy = () -> OriginalGroupInformation15.mmObject();
 			isDerived = false;
 			xmlTag = "NtwkFileNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetworkFileName";
 			definition = "Name assigned by the sending party to unambiguously identify the file transmitted on the network.";
 			maxOccurs = 1;
@@ -237,7 +235,7 @@ public class OriginalGroupInformation15 {
 			componentContext_lazy = () -> OriginalGroupInformation15.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlMsgNmId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalMessageNameIdentification";
 			definition = "Specifies the original message name identifier to which the message refers, eg, pacs.003.001.01 or MT103.";
 			maxOccurs = 1;
@@ -280,11 +278,11 @@ public class OriginalGroupInformation15 {
 	 */
 	public static final MMMessageAttribute mmOriginalCreationDateTime = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentExecution.mmCreationDate;
+			businessElementTrace_lazy = () -> PaymentExecution.mmCreationDate;
 			componentContext_lazy = () -> OriginalGroupInformation15.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlCreDtTm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalCreationDateTime";
 			definition = "Date and time at which the original message was created.";
 			maxOccurs = 1;
@@ -330,7 +328,7 @@ public class OriginalGroupInformation15 {
 			componentContext_lazy = () -> OriginalGroupInformation15.mmObject();
 			isDerived = false;
 			xmlTag = "FileOrgtr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FileOriginator";
 			definition = "Party that sent the file for which the status has been generated.\n\nUsage: this field will only be used when the content of the message could not be decoded at the receiving side.";
 			maxOccurs = 1;
@@ -373,7 +371,7 @@ public class OriginalGroupInformation15 {
 			componentContext_lazy = () -> OriginalGroupInformation15.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlNbOfTxs";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalNumberOfTransactions";
 			definition = "Number of individual transactions contained in the original message.";
 			maxOccurs = 1;
@@ -418,7 +416,7 @@ public class OriginalGroupInformation15 {
 			componentContext_lazy = () -> OriginalGroupInformation15.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlCtrlSum";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalControlSum";
 			definition = "Total of all individual amounts included in the original message, irrespective of currencies.";
 			maxOccurs = 1;
@@ -462,11 +460,11 @@ public class OriginalGroupInformation15 {
 	 */
 	public static final MMMessageAttribute mmGroupStatus = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentStatus.mmStatus;
+			businessElementTrace_lazy = () -> PaymentStatus.mmStatus;
 			componentContext_lazy = () -> OriginalGroupInformation15.mmObject();
 			isDerived = false;
 			xmlTag = "GrpSts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GroupStatus";
 			definition = "Specifies the status of a group of transactions.";
 			maxOccurs = 1;
@@ -509,11 +507,11 @@ public class OriginalGroupInformation15 {
 	 */
 	public static final MMMessageAssociationEnd mmStatusReasonInformation = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.mmStatusReason;
+			businessElementTrace_lazy = () -> Status.mmStatusReason;
 			componentContext_lazy = () -> OriginalGroupInformation15.mmObject();
 			isDerived = false;
 			xmlTag = "StsRsnInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusReasonInformation";
 			definition = "Detailed information on the status reason.";
 			minOccurs = 0;
@@ -557,7 +555,7 @@ public class OriginalGroupInformation15 {
 			componentContext_lazy = () -> OriginalGroupInformation15.mmObject();
 			isDerived = false;
 			xmlTag = "NbOfTxsPerSts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NumberOfTransactionsPerStatus";
 			definition = "Detailed information on the number of transactions for each identical individual transaction status.";
 			minOccurs = 0;
@@ -572,6 +570,10 @@ public class OriginalGroupInformation15 {
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
+	 * messageComponent} =
+	 * {@linkplain com.tools20022.repository.msg.OriginalGroupInformation15
+	 * OriginalGroupInformation15}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getImpactedElements
 	 * impactedElements} =
 	 * <ul>
@@ -583,10 +585,6 @@ public class OriginalGroupInformation15 {
 	 * OriginalGroupInformation15.mmNetworkFileName}</li>
 	 * </ul>
 	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
-	 * messageComponent} =
-	 * {@linkplain com.tools20022.repository.msg.OriginalGroupInformation15
-	 * OriginalGroupInformation15}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -602,25 +600,23 @@ public class OriginalGroupInformation15 {
 	 */
 	public static final MMXor mmOriginalMessageIdentificationOrNetworkFileNameRule = new MMXor() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalMessageIdentificationOrNetworkFileNameRule";
 			definition = "If OriginalMessageIdentification is present, then NetworkFileName is not allowed.\nIf NetworkFileName is present, then OriginalMessageIdentification is not allowed.";
 			messageComponent_lazy = () -> OriginalGroupInformation15.mmObject();
-			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OriginalGroupInformation15.mmOriginalMessageIdentification, com.tools20022.repository.msg.OriginalGroupInformation15.mmNetworkFileName);
+			impactedElements_lazy = () -> Arrays.asList(OriginalGroupInformation15.mmOriginalMessageIdentification, OriginalGroupInformation15.mmNetworkFileName);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OriginalGroupInformation15.mmOriginalMessageIdentification, com.tools20022.repository.msg.OriginalGroupInformation15.mmNetworkFileName,
-						com.tools20022.repository.msg.OriginalGroupInformation15.mmOriginalMessageNameIdentification, com.tools20022.repository.msg.OriginalGroupInformation15.mmOriginalCreationDateTime,
-						com.tools20022.repository.msg.OriginalGroupInformation15.mmFileOriginator, com.tools20022.repository.msg.OriginalGroupInformation15.mmOriginalNumberOfTransactions,
-						com.tools20022.repository.msg.OriginalGroupInformation15.mmOriginalControlSum, com.tools20022.repository.msg.OriginalGroupInformation15.mmGroupStatus,
-						com.tools20022.repository.msg.OriginalGroupInformation15.mmStatusReasonInformation, com.tools20022.repository.msg.OriginalGroupInformation15.mmNumberOfTransactionsPerStatus);
+				messageElement_lazy = () -> Arrays.asList(OriginalGroupInformation15.mmOriginalMessageIdentification, OriginalGroupInformation15.mmNetworkFileName, OriginalGroupInformation15.mmOriginalMessageNameIdentification,
+						OriginalGroupInformation15.mmOriginalCreationDateTime, OriginalGroupInformation15.mmFileOriginator, OriginalGroupInformation15.mmOriginalNumberOfTransactions, OriginalGroupInformation15.mmOriginalControlSum,
+						OriginalGroupInformation15.mmGroupStatus, OriginalGroupInformation15.mmStatusReasonInformation, OriginalGroupInformation15.mmNumberOfTransactionsPerStatus);
 				trace_lazy = () -> Payment.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
 						return DateFormat.getDateInstance(java.text.DateFormat.LONG).parse("September 9, 2016");
@@ -630,7 +626,7 @@ public class OriginalGroupInformation15 {
 				})).get();
 				name = "OriginalGroupInformation15";
 				definition = "Unique and unambiguous identifier of the group of transactions as assigned by the original instructing party.";
-				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OriginalGroupInformation15.mmOriginalMessageIdentificationOrNetworkFileNameRule);
+				xors_lazy = () -> Arrays.asList(OriginalGroupInformation15.mmOriginalMessageIdentificationOrNetworkFileNameRule);
 			}
 		});
 		return mmObject_lazy.get();

@@ -18,7 +18,14 @@
 package com.tools20022.repository.entity;
 
 import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.choice.*;
 import com.tools20022.repository.entity.InvestmentAccountPartyRole;
+import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.AccountParties2;
+import com.tools20022.repository.msg.AccountParties3;
+import com.tools20022.repository.msg.AccountParties4;
+import com.tools20022.repository.msg.AccountParties5;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -108,16 +115,13 @@ public class Nominee extends InvestmentAccountPartyRole {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Nominee";
 				definition = "Entity (the registered owner) named by the beneficial owner to act on its behalf, often to facilitate dealing, or to conceal the identity of the beneficiary. Securities and other assets are recorded in the nominee's name.";
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountParties2.mmNominee, com.tools20022.repository.msg.AccountParties5.mmNominee,
-						com.tools20022.repository.choice.AccountParties1Choice.mmNominee, com.tools20022.repository.msg.AccountParties3.mmNominee, com.tools20022.repository.msg.AccountParties4.mmNominee,
-						com.tools20022.repository.choice.AccountParties2Choice.mmNominee, com.tools20022.repository.choice.AccountParties3Choice.mmNominee, com.tools20022.repository.choice.AccountParties4Choice.mmNominee,
-						com.tools20022.repository.choice.AccountParties7Choice.mmNominee, com.tools20022.repository.choice.AccountParties6Choice.mmNominee, com.tools20022.repository.choice.AccountParties5Choice.mmNominee,
-						com.tools20022.repository.choice.AccountParties9Choice.mmNominee, com.tools20022.repository.choice.AccountParties8Choice.mmNominee, com.tools20022.repository.choice.AccountParties11Choice.mmNominee,
-						com.tools20022.repository.choice.AccountParties10Choice.mmNominee);
+				derivationElement_lazy = () -> Arrays.asList(AccountParties2.mmNominee, AccountParties5.mmNominee, AccountParties1Choice.mmNominee, AccountParties3.mmNominee, AccountParties4.mmNominee, AccountParties2Choice.mmNominee,
+						AccountParties3Choice.mmNominee, AccountParties4Choice.mmNominee, AccountParties7Choice.mmNominee, AccountParties6Choice.mmNominee, AccountParties5Choice.mmNominee, AccountParties9Choice.mmNominee,
+						AccountParties8Choice.mmNominee, AccountParties11Choice.mmNominee, AccountParties10Choice.mmNominee);
 				superType_lazy = () -> InvestmentAccountPartyRole.mmObject();
 			}
 		});

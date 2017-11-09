@@ -20,9 +20,12 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.CancellationReason14Choice;
 import com.tools20022.repository.datatype.Max105Text;
+import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.entity.PaymentStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -118,14 +121,14 @@ public class PaymentCancellationReason2 {
 	 */
 	public static final MMMessageAssociationEnd mmOriginator = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> PaymentCancellationReason2.mmObject();
 			isDerived = false;
 			xmlTag = "Orgtr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Originator";
 			definition = "Party that issues the cancellation request.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentCancellationReason3.mmOriginator);
+			nextVersions_lazy = () -> Arrays.asList(PaymentCancellationReason3.mmOriginator);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -175,14 +178,14 @@ public class PaymentCancellationReason2 {
 	 */
 	public static final MMMessageAssociationEnd mmReason = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentStatus.mmCancellationReason;
+			businessElementTrace_lazy = () -> PaymentStatus.mmCancellationReason;
 			componentContext_lazy = () -> PaymentCancellationReason2.mmObject();
 			isDerived = false;
 			xmlTag = "Rsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reason";
 			definition = "Specifies the reason for the cancellation.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentCancellationReason3.mmReason);
+			nextVersions_lazy = () -> Arrays.asList(PaymentCancellationReason3.mmReason);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -230,10 +233,10 @@ public class PaymentCancellationReason2 {
 			componentContext_lazy = () -> PaymentCancellationReason2.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInformation";
 			definition = "Further details on the cancellation request reason.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentCancellationReason3.mmAdditionalInformation);
+			nextVersions_lazy = () -> Arrays.asList(PaymentCancellationReason3.mmAdditionalInformation);
 			minOccurs = 0;
 			simpleType_lazy = () -> Max105Text.mmObject();
 		}
@@ -242,11 +245,10 @@ public class PaymentCancellationReason2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentCancellationReason2.mmOriginator, com.tools20022.repository.msg.PaymentCancellationReason2.mmReason,
-						com.tools20022.repository.msg.PaymentCancellationReason2.mmAdditionalInformation);
+				messageElement_lazy = () -> Arrays.asList(PaymentCancellationReason2.mmOriginator, PaymentCancellationReason2.mmReason, PaymentCancellationReason2.mmAdditionalInformation);
 				trace_lazy = () -> PaymentStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PaymentCancellationReason2";
 				definition = "Provides further details on the reason of the cancellation request.";
 				nextVersions_lazy = () -> Arrays.asList(PaymentCancellationReason3.mmObject());

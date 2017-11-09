@@ -17,13 +17,12 @@
 
 package com.tools20022.repository.msg;
 
-import com.tools20022.metamodel.MMMessageAssociationEnd;
-import com.tools20022.metamodel.MMMessageAttribute;
-import com.tools20022.metamodel.MMMessageComponent;
-import com.tools20022.metamodel.MMXor;
+import com.tools20022.metamodel.*;
 import com.tools20022.repository.choice.PartyOrganisation1Choice;
 import com.tools20022.repository.datatype.Max70Text;
 import com.tools20022.repository.entity.PartyIdentificationInformation;
+import com.tools20022.repository.entity.PartyName;
+import com.tools20022.repository.GeneratedRepository;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -117,11 +116,11 @@ public class PartyIdentification14 {
 	 */
 	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyName.mmName;
+			businessElementTrace_lazy = () -> PartyName.mmName;
 			componentContext_lazy = () -> PartyIdentification14.mmObject();
 			isDerived = false;
 			xmlTag = "Nm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Name";
 			definition = "Name by which a party is known and which is usually used to identify that party.";
 			maxOccurs = 1;
@@ -171,7 +170,7 @@ public class PartyIdentification14 {
 			componentContext_lazy = () -> PartyIdentification14.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Unique and unambiguous way of identifying an organisation or an individual person.";
 			maxOccurs = 1;
@@ -186,6 +185,10 @@ public class PartyIdentification14 {
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
+	 * messageComponent} =
+	 * {@linkplain com.tools20022.repository.msg.PartyIdentification14
+	 * PartyIdentification14}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getImpactedElements
 	 * impactedElements} =
 	 * <ul>
@@ -197,10 +200,6 @@ public class PartyIdentification14 {
 	 * PartyIdentification14.mmIdentification}</li>
 	 * </ul>
 	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
-	 * messageComponent} =
-	 * {@linkplain com.tools20022.repository.msg.PartyIdentification14
-	 * PartyIdentification14}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -216,21 +215,21 @@ public class PartyIdentification14 {
 	 */
 	public static final MMXor mmIdentificationOrNameRule = new MMXor() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IdentificationOrNameRule";
 			definition = "If PostalAddress is present then Identification is not allowed.\nIf Identification is present then PostalAddress is not allowed.";
 			messageComponent_lazy = () -> PartyIdentification14.mmObject();
-			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyIdentification14.mmName, com.tools20022.repository.msg.PartyIdentification14.mmIdentification);
+			impactedElements_lazy = () -> Arrays.asList(PartyIdentification14.mmName, PartyIdentification14.mmIdentification);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyIdentification14.mmName, com.tools20022.repository.msg.PartyIdentification14.mmIdentification);
+				messageElement_lazy = () -> Arrays.asList(PartyIdentification14.mmName, PartyIdentification14.mmIdentification);
 				trace_lazy = () -> PartyIdentificationInformation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
 						return DateFormat.getDateInstance(java.text.DateFormat.LONG).parse("September 9, 2016");
@@ -240,7 +239,7 @@ public class PartyIdentification14 {
 				})).get();
 				name = "PartyIdentification14";
 				definition = "Identification of a person, a financial institution or a non-financial institution.";
-				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyIdentification14.mmIdentificationOrNameRule);
+				xors_lazy = () -> Arrays.asList(PartyIdentification14.mmIdentificationOrNameRule);
 			}
 		});
 		return mmObject_lazy.get();

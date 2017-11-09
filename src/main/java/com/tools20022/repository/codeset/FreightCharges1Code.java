@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.FreightChargesCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -83,7 +85,7 @@ public class FreightCharges1Code extends FreightChargesCode {
 	 */
 	public static final MMCode mmCollect = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Collect";
 			owner_lazy = () -> FreightCharges1Code.mmObject();
 		}
@@ -106,7 +108,7 @@ public class FreightCharges1Code extends FreightChargesCode {
 	 */
 	public static final MMCode mmPrepaid = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Prepaid";
 			owner_lazy = () -> FreightCharges1Code.mmObject();
 		}
@@ -115,12 +117,12 @@ public class FreightCharges1Code extends FreightChargesCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CLCT");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FreightCharges1Code";
 				definition = "Indicates the arrangement as to the freight charges.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.FreightCharges1Code.mmCollect, com.tools20022.repository.codeset.FreightCharges1Code.mmPrepaid);
+				code_lazy = () -> Arrays.asList(FreightCharges1Code.mmCollect, FreightCharges1Code.mmPrepaid);
 				trace_lazy = () -> FreightChargesCode.mmObject();
 			}
 		});

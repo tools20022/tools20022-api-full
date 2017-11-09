@@ -20,6 +20,7 @@ package com.tools20022.repository.area.tsmt;
 import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.TradeServicesManagementLatestVersion;
 import com.tools20022.repository.datatype.Max15NumericText;
 import com.tools20022.repository.msg.BusinessLetter1;
@@ -45,6 +46,9 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code tsmt.055.001.01}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.TradeServicesManagementLatestVersion
@@ -79,9 +83,6 @@ import java.util.List;
  * PartyEventAdviceV01.mmAttachedMessage}</li>
  * </ul>
  * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code tsmt.055.001.01}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -126,7 +127,7 @@ public class PartyEventAdviceV01 {
 	public static final MMMessageBuildingBlock mmHeader = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Hdr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Header";
 			definition = "Set of characteristics that unambiguously identify the event, common parameters, documents and identifications.";
 			maxOccurs = 1;
@@ -161,7 +162,7 @@ public class PartyEventAdviceV01 {
 	public static final MMMessageBuildingBlock mmEventNotice = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "EvtNtce";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventNotice";
 			definition = "Description of the event.";
 			minOccurs = 1;
@@ -195,7 +196,7 @@ public class PartyEventAdviceV01 {
 	public static final MMMessageBuildingBlock mmEventCount = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "EvtCnt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventCount";
 			definition = "Number of events as control value.";
 			maxOccurs = 1;
@@ -230,7 +231,7 @@ public class PartyEventAdviceV01 {
 	public static final MMMessageBuildingBlock mmAttachedMessage = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "AttchdMsg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AttachedMessage";
 			definition = "Referenced or related business message.";
 			minOccurs = 0;
@@ -241,15 +242,14 @@ public class PartyEventAdviceV01 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PartyEventAdviceV01";
 				definition = "The PartyEventAdvice message can be sent by any party to any other party. It is used for business letters containing information for which treatment is not formally defined in order to keep partners informed and to maintain business traces, for example confirmations of information exchanged out-of band such as announcing a postal letter, confirming a telephone call or the exchange of contractual information. It can also be sent to verify the technical interoperability of the communicating IT-systems.\r\nThe message can reference other message and include data from referenced messages.\r\nThe message can report several events.\r\nThe message can carry digital signatures if required by context.";
 				messageSet_lazy = () -> Arrays.asList(FactoringServicesISOLatestversion.mmObject());
 				rootElement = "Document";
 				xmlTag = "PtyEvtAdvc";
 				businessArea_lazy = () -> TradeServicesManagementLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.PartyEventAdviceV01.mmHeader, com.tools20022.repository.area.tsmt.PartyEventAdviceV01.mmEventNotice,
-						com.tools20022.repository.area.tsmt.PartyEventAdviceV01.mmEventCount, com.tools20022.repository.area.tsmt.PartyEventAdviceV01.mmAttachedMessage);
+				messageBuildingBlock_lazy = () -> Arrays.asList(PartyEventAdviceV01.mmHeader, PartyEventAdviceV01.mmEventNotice, PartyEventAdviceV01.mmEventCount, PartyEventAdviceV01.mmAttachedMessage);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "tsmt";

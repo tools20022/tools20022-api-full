@@ -19,8 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max70Text;
 import com.tools20022.repository.entity.Product;
+import com.tools20022.repository.entity.ProductIdentification;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -102,14 +105,14 @@ public class Product4 {
 	 */
 	public static final MMMessageAttribute mmProductCode = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ProductIdentification.mmIdentifier;
+			businessElementTrace_lazy = () -> ProductIdentification.mmIdentifier;
 			componentContext_lazy = () -> Product4.mmObject();
 			isDerived = false;
 			xmlTag = "PdctCd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProductCode";
 			definition = "Product code.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Product3.mmProductCode;
+			previousVersion_lazy = () -> Product3.mmProductCode;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max70Text.mmObject();
@@ -152,10 +155,10 @@ public class Product4 {
 			componentContext_lazy = () -> Product4.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlPdctCd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalProductCode";
 			definition = "Additional product code related to the product.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Product3.mmAdditionalProductCode;
+			previousVersion_lazy = () -> Product3.mmAdditionalProductCode;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max70Text.mmObject();
@@ -165,10 +168,10 @@ public class Product4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Product4.mmProductCode, com.tools20022.repository.msg.Product4.mmAdditionalProductCode);
+				messageElement_lazy = () -> Arrays.asList(Product4.mmProductCode, Product4.mmAdditionalProductCode);
 				trace_lazy = () -> Product.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Product4";
 				definition = "Product to purchase.";
 				previousVersion_lazy = () -> Product3.mmObject();

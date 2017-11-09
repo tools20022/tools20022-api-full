@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.AccountManagementStatusCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -89,7 +91,7 @@ public class AccountManagementStatus1Code extends AccountManagementStatusCode {
 	 */
 	public static final MMCode mmReceived = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Received";
 			owner_lazy = () -> AccountManagementStatus1Code.mmObject();
 		}
@@ -112,7 +114,7 @@ public class AccountManagementStatus1Code extends AccountManagementStatusCode {
 	 */
 	public static final MMCode mmAccepted = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Accepted";
 			owner_lazy = () -> AccountManagementStatus1Code.mmObject();
 		}
@@ -135,7 +137,7 @@ public class AccountManagementStatus1Code extends AccountManagementStatusCode {
 	 */
 	public static final MMCode mmProcessingOngoing = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProcessingOngoing";
 			owner_lazy = () -> AccountManagementStatus1Code.mmObject();
 		}
@@ -158,7 +160,7 @@ public class AccountManagementStatus1Code extends AccountManagementStatusCode {
 	 */
 	public static final MMCode mmSentToNextParty = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SentToNextParty";
 			owner_lazy = () -> AccountManagementStatus1Code.mmObject();
 		}
@@ -167,13 +169,12 @@ public class AccountManagementStatus1Code extends AccountManagementStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("RECE");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AccountManagementStatus1Code";
 				definition = "Specifies the status of an account management instruction.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AccountManagementStatus1Code.mmReceived, com.tools20022.repository.codeset.AccountManagementStatus1Code.mmAccepted,
-						com.tools20022.repository.codeset.AccountManagementStatus1Code.mmProcessingOngoing, com.tools20022.repository.codeset.AccountManagementStatus1Code.mmSentToNextParty);
+				code_lazy = () -> Arrays.asList(AccountManagementStatus1Code.mmReceived, AccountManagementStatus1Code.mmAccepted, AccountManagementStatus1Code.mmProcessingOngoing, AccountManagementStatus1Code.mmSentToNextParty);
 				trace_lazy = () -> AccountManagementStatusCode.mmObject();
 			}
 		});

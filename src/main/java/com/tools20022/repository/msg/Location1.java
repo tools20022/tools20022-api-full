@@ -19,10 +19,14 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.CountrySubdivision1Choice;
 import com.tools20022.repository.codeset.CountryCode;
 import com.tools20022.repository.datatype.Max2000Text;
+import com.tools20022.repository.entity.Country;
 import com.tools20022.repository.entity.Location;
+import com.tools20022.repository.entity.PostalAddress;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -111,14 +115,14 @@ public class Location1 {
 	 */
 	public static final MMMessageAttribute mmCountry = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Country.mmCode;
+			businessElementTrace_lazy = () -> Country.mmCode;
 			componentContext_lazy = () -> Location1.mmObject();
 			isDerived = false;
 			xmlTag = "Ctry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Country";
 			definition = "Country of jurisdiction.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Location2.mmCountry);
+			nextVersions_lazy = () -> Arrays.asList(Location2.mmCountry);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CountryCode.mmObject();
@@ -169,14 +173,14 @@ public class Location1 {
 	 */
 	public static final MMMessageAttribute mmCountrySubDivision = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PostalAddress.mmCountyIdentification;
+			businessElementTrace_lazy = () -> PostalAddress.mmCountyIdentification;
 			componentContext_lazy = () -> Location1.mmObject();
 			isDerived = false;
 			xmlTag = "CtrySubDvsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CountrySubDivision";
 			definition = "Codified representation of the jurisdiction as published in ISO 3166-2.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Location2.mmCountrySubDivision);
+			nextVersions_lazy = () -> Arrays.asList(Location2.mmCountrySubDivision);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> CountrySubdivision1Choice.mmObject();
@@ -221,10 +225,10 @@ public class Location1 {
 			componentContext_lazy = () -> Location1.mmObject();
 			isDerived = false;
 			xmlTag = "Txt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Text";
 			definition = "Name of jurisdiction, for example, Frankfurt.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Location2.mmText);
+			nextVersions_lazy = () -> Arrays.asList(Location2.mmText);
 			maxOccurs = 5;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max2000Text.mmObject();
@@ -234,10 +238,10 @@ public class Location1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Location1.mmCountry, com.tools20022.repository.msg.Location1.mmCountrySubDivision, com.tools20022.repository.msg.Location1.mmText);
+				messageElement_lazy = () -> Arrays.asList(Location1.mmCountry, Location1.mmCountrySubDivision, Location1.mmText);
 				trace_lazy = () -> Location.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Location1";
 				definition = "Location information.";
 				nextVersions_lazy = () -> Arrays.asList(Location2.mmObject());

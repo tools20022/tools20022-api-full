@@ -20,10 +20,14 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max256Text;
 import com.tools20022.repository.datatype.PhoneNumber;
 import com.tools20022.repository.entity.ContactPoint;
+import com.tools20022.repository.entity.ElectronicAddress;
+import com.tools20022.repository.entity.PhoneAddress;
 import com.tools20022.repository.entity.PostalAddress;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -117,7 +121,7 @@ public class CommunicationAddress5 {
 			componentContext_lazy = () -> CommunicationAddress5.mmObject();
 			isDerived = false;
 			xmlTag = "PstlAdr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PostalAddress";
 			definition = "Postal address of the entity.";
 			maxOccurs = 1;
@@ -166,14 +170,14 @@ public class CommunicationAddress5 {
 	 */
 	public static final MMMessageAttribute mmEmail = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ElectronicAddress.mmEmailAddress;
+			businessElementTrace_lazy = () -> ElectronicAddress.mmEmailAddress;
 			componentContext_lazy = () -> CommunicationAddress5.mmObject();
 			isDerived = false;
 			xmlTag = "Email";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Email";
 			definition = "Address for electronic mail (e-mail).";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CommunicationAddress3.mmEmail;
+			previousVersion_lazy = () -> CommunicationAddress3.mmEmail;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max256Text.mmObject();
@@ -222,14 +226,14 @@ public class CommunicationAddress5 {
 	 */
 	public static final MMMessageAttribute mmURLAddress = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ElectronicAddress.mmURLAddress;
+			businessElementTrace_lazy = () -> ElectronicAddress.mmURLAddress;
 			componentContext_lazy = () -> CommunicationAddress5.mmObject();
 			isDerived = false;
 			xmlTag = "URLAdr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "URLAddress";
 			definition = "Address for the Universal Resource Locator (URL), for example used over the www (HTTP) service.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CommunicationAddress3.mmURLAddress;
+			previousVersion_lazy = () -> CommunicationAddress3.mmURLAddress;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max256Text.mmObject();
@@ -278,14 +282,14 @@ public class CommunicationAddress5 {
 	 */
 	public static final MMMessageAttribute mmPhone = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PhoneAddress.mmPhoneNumber;
+			businessElementTrace_lazy = () -> PhoneAddress.mmPhoneNumber;
 			componentContext_lazy = () -> CommunicationAddress5.mmObject();
 			isDerived = false;
 			xmlTag = "Phne";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Phone";
 			definition = "Collection of information that identifies a phone number, as defined by telecom services.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CommunicationAddress3.mmPhone;
+			previousVersion_lazy = () -> CommunicationAddress3.mmPhone;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PhoneNumber.mmObject();
@@ -326,11 +330,11 @@ public class CommunicationAddress5 {
 	 */
 	public static final MMMessageAttribute mmCustomerService = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PhoneAddress.mmPhoneNumber;
+			businessElementTrace_lazy = () -> PhoneAddress.mmPhoneNumber;
 			componentContext_lazy = () -> CommunicationAddress5.mmObject();
 			isDerived = false;
 			xmlTag = "CstmrSvc";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CustomerService";
 			definition = "Phone number of the customer service.";
 			maxOccurs = 1;
@@ -374,7 +378,7 @@ public class CommunicationAddress5 {
 			componentContext_lazy = () -> CommunicationAddress5.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlCtctInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalContactInformation";
 			definition = "Additional information used to facilitate contact with the card acceptor, for instance sales agent name, dispute manager name.";
 			maxOccurs = 1;
@@ -386,12 +390,11 @@ public class CommunicationAddress5 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CommunicationAddress5.mmPostalAddress, com.tools20022.repository.msg.CommunicationAddress5.mmEmail,
-						com.tools20022.repository.msg.CommunicationAddress5.mmURLAddress, com.tools20022.repository.msg.CommunicationAddress5.mmPhone, com.tools20022.repository.msg.CommunicationAddress5.mmCustomerService,
-						com.tools20022.repository.msg.CommunicationAddress5.mmAdditionalContactInformation);
+				messageElement_lazy = () -> Arrays.asList(CommunicationAddress5.mmPostalAddress, CommunicationAddress5.mmEmail, CommunicationAddress5.mmURLAddress, CommunicationAddress5.mmPhone, CommunicationAddress5.mmCustomerService,
+						CommunicationAddress5.mmAdditionalContactInformation);
 				trace_lazy = () -> ContactPoint.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CommunicationAddress5";
 				definition = "Communication information.";
 				previousVersion_lazy = () -> CommunicationAddress3.mmObject();

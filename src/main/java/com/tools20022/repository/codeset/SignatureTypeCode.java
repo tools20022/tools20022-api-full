@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.SignatureType1Code
+ * SignatureType1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -40,13 +49,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * SignatureTypeCode.mmElectronic}</li>
  * <li>{@linkplain com.tools20022.repository.codeset.SignatureTypeCode#mmNone
  * SignatureTypeCode.mmNone}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.SignatureType1Code
- * SignatureType1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -99,7 +101,7 @@ public class SignatureTypeCode {
 	 */
 	public static final MMCode mmOriginal = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Original";
 			definition = "The investor's written signature is required. Can also be known as physical or wet signature.";
 			owner_lazy = () -> SignatureTypeCode.mmObject();
@@ -132,7 +134,7 @@ public class SignatureTypeCode {
 	 */
 	public static final MMCode mmDigital = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Digital";
 			definition = "A technical signature that includes algorithms and private key and public key information. Used to sign and verify the contents of a message.";
 			owner_lazy = () -> SignatureTypeCode.mmObject();
@@ -163,7 +165,7 @@ public class SignatureTypeCode {
 	 */
 	public static final MMCode mmElectronic = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Electronic";
 			definition = "A copy of a physical or orignal signature in an electronic format.";
 			owner_lazy = () -> SignatureTypeCode.mmObject();
@@ -193,7 +195,7 @@ public class SignatureTypeCode {
 	 */
 	public static final MMCode mmNone = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "None";
 			definition = "There is no signature required in any form.";
 			owner_lazy = () -> SignatureTypeCode.mmObject();
@@ -204,13 +206,12 @@ public class SignatureTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ORIG");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SignatureTypeCode";
 				definition = "Type of signature form.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SignatureTypeCode.mmOriginal, com.tools20022.repository.codeset.SignatureTypeCode.mmDigital,
-						com.tools20022.repository.codeset.SignatureTypeCode.mmElectronic, com.tools20022.repository.codeset.SignatureTypeCode.mmNone);
+				code_lazy = () -> Arrays.asList(SignatureTypeCode.mmOriginal, SignatureTypeCode.mmDigital, SignatureTypeCode.mmElectronic, SignatureTypeCode.mmNone);
 				derivation_lazy = () -> Arrays.asList(SignatureType1Code.mmObject());
 			}
 		});

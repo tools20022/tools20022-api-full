@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.LinkageTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -83,7 +85,7 @@ public class LinkageType1Code extends LinkageTypeCode {
 	 */
 	public static final MMCode mmLink = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Link";
 			owner_lazy = () -> LinkageType1Code.mmObject();
 		}
@@ -106,7 +108,7 @@ public class LinkageType1Code extends LinkageTypeCode {
 	 */
 	public static final MMCode mmUnlink = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unlink";
 			owner_lazy = () -> LinkageType1Code.mmObject();
 		}
@@ -129,7 +131,7 @@ public class LinkageType1Code extends LinkageTypeCode {
 	 */
 	public static final MMCode mmSoft = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Soft";
 			owner_lazy = () -> LinkageType1Code.mmObject();
 		}
@@ -138,12 +140,12 @@ public class LinkageType1Code extends LinkageTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("LINK");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "LinkageType1Code";
 				definition = "Type of linkage requested.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.LinkageType1Code.mmLink, com.tools20022.repository.codeset.LinkageType1Code.mmUnlink, com.tools20022.repository.codeset.LinkageType1Code.mmSoft);
+				code_lazy = () -> Arrays.asList(LinkageType1Code.mmLink, LinkageType1Code.mmUnlink, LinkageType1Code.mmSoft);
 				trace_lazy = () -> LinkageTypeCode.mmObject();
 			}
 		});

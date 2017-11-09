@@ -20,8 +20,10 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.Tax;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -98,11 +100,11 @@ public class TaxDetails {
 	 */
 	public static final MMMessageAttribute mmCertificateIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.mmCertificateIdentification;
+			businessElementTrace_lazy = () -> Tax.mmCertificateIdentification;
 			componentContext_lazy = () -> TaxDetails.mmObject();
 			isDerived = false;
 			xmlTag = "CertId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CertificateIdentification";
 			definition = "Document issued by first agent on behalf of debtor to report withholding tax to taxing authority.";
 			maxOccurs = 1;
@@ -145,7 +147,7 @@ public class TaxDetails {
 			componentContext_lazy = () -> TaxDetails.mmObject();
 			isDerived = false;
 			xmlTag = "TaxTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxType";
 			definition = "Information on the type of tax.";
 			maxOccurs = 1;
@@ -158,10 +160,10 @@ public class TaxDetails {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TaxDetails.mmCertificateIdentification, com.tools20022.repository.msg.TaxDetails.mmTaxType);
+				messageElement_lazy = () -> Arrays.asList(TaxDetails.mmCertificateIdentification, TaxDetails.mmTaxType);
 				trace_lazy = () -> Tax.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TaxDetails";
 				definition = "Set of characteristics defining the type of tax.";
 			}

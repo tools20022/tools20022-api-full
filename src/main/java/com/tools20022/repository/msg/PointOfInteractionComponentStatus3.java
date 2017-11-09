@@ -19,10 +19,13 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.POIComponentStatus1Code;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.Max256Text;
+import com.tools20022.repository.entity.SystemIdentification;
 import com.tools20022.repository.entity.SystemStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -113,14 +116,14 @@ public class PointOfInteractionComponentStatus3 {
 	 */
 	public static final MMMessageAttribute mmVersionNumber = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SystemIdentification.mmSystemVersion;
+			businessElementTrace_lazy = () -> SystemIdentification.mmSystemVersion;
 			componentContext_lazy = () -> PointOfInteractionComponentStatus3.mmObject();
 			isDerived = false;
 			xmlTag = "VrsnNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VersionNumber";
 			definition = "Current version of the component that might include the release number.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PointOfInteractionComponentStatus2.mmVersionNumber;
+			previousVersion_lazy = () -> PointOfInteractionComponentStatus2.mmVersionNumber;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max256Text.mmObject();
@@ -167,14 +170,14 @@ public class PointOfInteractionComponentStatus3 {
 	 */
 	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SystemStatus.mmStatus;
+			businessElementTrace_lazy = () -> SystemStatus.mmStatus;
 			componentContext_lazy = () -> PointOfInteractionComponentStatus3.mmObject();
 			isDerived = false;
 			xmlTag = "Sts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Status";
 			definition = "Current status of the component.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PointOfInteractionComponentStatus2.mmStatus;
+			previousVersion_lazy = () -> PointOfInteractionComponentStatus2.mmStatus;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> POIComponentStatus1Code.mmObject();
@@ -213,7 +216,7 @@ public class PointOfInteractionComponentStatus3 {
 			componentContext_lazy = () -> PointOfInteractionComponentStatus3.mmObject();
 			isDerived = false;
 			xmlTag = "XpryDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExpiryDate";
 			definition = "Expiration date of the component.";
 			maxOccurs = 1;
@@ -225,11 +228,10 @@ public class PointOfInteractionComponentStatus3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PointOfInteractionComponentStatus3.mmVersionNumber, com.tools20022.repository.msg.PointOfInteractionComponentStatus3.mmStatus,
-						com.tools20022.repository.msg.PointOfInteractionComponentStatus3.mmExpiryDate);
+				messageElement_lazy = () -> Arrays.asList(PointOfInteractionComponentStatus3.mmVersionNumber, PointOfInteractionComponentStatus3.mmStatus, PointOfInteractionComponentStatus3.mmExpiryDate);
 				trace_lazy = () -> SystemStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PointOfInteractionComponentStatus3";
 				definition = "Status of a POI component (Point of Interaction).";
 				previousVersion_lazy = () -> PointOfInteractionComponentStatus2.mmObject();

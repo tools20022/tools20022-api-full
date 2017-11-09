@@ -20,11 +20,14 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.RemittanceLocationMethod2Code;
 import com.tools20022.repository.datatype.Max2048Text;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.ContactPoint;
+import com.tools20022.repository.entity.PaymentObligation;
 import com.tools20022.repository.entity.PostalAddress;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -127,10 +130,10 @@ public class RemittanceLocation2 {
 			componentContext_lazy = () -> RemittanceLocation2.mmObject();
 			isDerived = false;
 			xmlTag = "RmtId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RemittanceIdentification";
 			definition = "Unique identification, as assigned by the initiating party, to unambiguously identify the remittance information sent separately from the payment instruction, such as a remittance advice.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RemittanceLocation3.mmRemittanceIdentification);
+			nextVersions_lazy = () -> Arrays.asList(RemittanceLocation3.mmRemittanceIdentification);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -181,14 +184,14 @@ public class RemittanceLocation2 {
 	 */
 	public static final MMMessageAttribute mmRemittanceLocationMethod = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentObligation.mmRemittanceDeliveryMethod;
+			businessElementTrace_lazy = () -> PaymentObligation.mmRemittanceDeliveryMethod;
 			componentContext_lazy = () -> RemittanceLocation2.mmObject();
 			isDerived = false;
 			xmlTag = "RmtLctnMtd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RemittanceLocationMethod";
 			definition = "Method used to deliver the remittance advice information.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RemittanceLocationDetails1.mmMethod);
+			nextVersions_lazy = () -> Arrays.asList(RemittanceLocationDetails1.mmMethod);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RemittanceLocationMethod2Code.mmObject();
@@ -243,10 +246,10 @@ public class RemittanceLocation2 {
 			componentContext_lazy = () -> RemittanceLocation2.mmObject();
 			isDerived = false;
 			xmlTag = "RmtLctnElctrncAdr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RemittanceLocationElectronicAddress";
 			definition = "Electronic address to which an agent is to send the remittance information.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RemittanceLocationDetails1.mmElectronicAddress);
+			nextVersions_lazy = () -> Arrays.asList(RemittanceLocationDetails1.mmElectronicAddress);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max2048Text.mmObject();
@@ -300,10 +303,10 @@ public class RemittanceLocation2 {
 			componentContext_lazy = () -> RemittanceLocation2.mmObject();
 			isDerived = false;
 			xmlTag = "RmtLctnPstlAdr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RemittanceLocationPostalAddress";
 			definition = "Postal address to which an agent is to send the remittance information.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RemittanceLocationDetails1.mmPostalAddress);
+			nextVersions_lazy = () -> Arrays.asList(RemittanceLocationDetails1.mmPostalAddress);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -314,11 +317,11 @@ public class RemittanceLocation2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RemittanceLocation2.mmRemittanceIdentification, com.tools20022.repository.msg.RemittanceLocation2.mmRemittanceLocationMethod,
-						com.tools20022.repository.msg.RemittanceLocation2.mmRemittanceLocationElectronicAddress, com.tools20022.repository.msg.RemittanceLocation2.mmRemittanceLocationPostalAddress);
+				messageElement_lazy = () -> Arrays.asList(RemittanceLocation2.mmRemittanceIdentification, RemittanceLocation2.mmRemittanceLocationMethod, RemittanceLocation2.mmRemittanceLocationElectronicAddress,
+						RemittanceLocation2.mmRemittanceLocationPostalAddress);
 				trace_lazy = () -> ContactPoint.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RemittanceLocation2";
 				definition = "Set of elements used to provide information on the remittance advice.";
 				nextVersions_lazy = () -> Arrays.asList(RemittanceLocation3.mmObject(), RemittanceLocation4.mmObject());

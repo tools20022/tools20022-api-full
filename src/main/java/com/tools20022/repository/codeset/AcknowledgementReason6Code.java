@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.AcknowledgementReasonCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -93,7 +95,7 @@ public class AcknowledgementReason6Code extends AcknowledgementReasonCode {
 	 */
 	public static final MMCode mmAccountServicerDeadlineMissed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountServicerDeadlineMissed";
 			owner_lazy = () -> AcknowledgementReason6Code.mmObject();
 		}
@@ -116,7 +118,7 @@ public class AcknowledgementReason6Code extends AcknowledgementReasonCode {
 	 */
 	public static final MMCode mmMarketPracticeRuleDiscrepency = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketPracticeRuleDiscrepency";
 			owner_lazy = () -> AcknowledgementReason6Code.mmObject();
 		}
@@ -139,7 +141,7 @@ public class AcknowledgementReason6Code extends AcknowledgementReasonCode {
 	 */
 	public static final MMCode mmOther = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
 			owner_lazy = () -> AcknowledgementReason6Code.mmObject();
 		}
@@ -162,7 +164,7 @@ public class AcknowledgementReason6Code extends AcknowledgementReasonCode {
 	 */
 	public static final MMCode mmNotStraightThroughProcessing = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotStraightThroughProcessing";
 			owner_lazy = () -> AcknowledgementReason6Code.mmObject();
 		}
@@ -185,7 +187,7 @@ public class AcknowledgementReason6Code extends AcknowledgementReasonCode {
 	 */
 	public static final MMCode mmMarketDeadlineMissed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketDeadlineMissed";
 			owner_lazy = () -> AcknowledgementReason6Code.mmObject();
 		}
@@ -194,14 +196,13 @@ public class AcknowledgementReason6Code extends AcknowledgementReasonCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ADEA");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AcknowledgementReason6Code";
 				definition = "Specifies additional information about the processed instruction.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AcknowledgementReason6Code.mmAccountServicerDeadlineMissed, com.tools20022.repository.codeset.AcknowledgementReason6Code.mmMarketPracticeRuleDiscrepency,
-						com.tools20022.repository.codeset.AcknowledgementReason6Code.mmOther, com.tools20022.repository.codeset.AcknowledgementReason6Code.mmNotStraightThroughProcessing,
-						com.tools20022.repository.codeset.AcknowledgementReason6Code.mmMarketDeadlineMissed);
+				code_lazy = () -> Arrays.asList(AcknowledgementReason6Code.mmAccountServicerDeadlineMissed, AcknowledgementReason6Code.mmMarketPracticeRuleDiscrepency, AcknowledgementReason6Code.mmOther,
+						AcknowledgementReason6Code.mmNotStraightThroughProcessing, AcknowledgementReason6Code.mmMarketDeadlineMissed);
 				trace_lazy = () -> AcknowledgementReasonCode.mmObject();
 			}
 		});

@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -79,7 +81,7 @@ public class CategoryPurpose1Code {
 	 */
 	public static final MMCode mmIntraCompanyPayment = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IntraCompanyPayment";
 			owner_lazy = () -> CategoryPurpose1Code.mmObject();
 		}
@@ -102,7 +104,7 @@ public class CategoryPurpose1Code {
 	 */
 	public static final MMCode mmTradeSettlementPayment = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeSettlementPayment";
 			owner_lazy = () -> CategoryPurpose1Code.mmObject();
 		}
@@ -111,11 +113,11 @@ public class CategoryPurpose1Code {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CategoryPurpose1Code";
 				definition = "Specifies the high level purpose of the instruction based on a set of pre-defined categories.\r\nUsage: This is used by the initiating party to provide information concerning the processing of the payment. It is likely to trigger special processing by any of the agents involved in the payment chain.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CategoryPurpose1Code.mmIntraCompanyPayment, com.tools20022.repository.codeset.CategoryPurpose1Code.mmTradeSettlementPayment);
+				code_lazy = () -> Arrays.asList(CategoryPurpose1Code.mmIntraCompanyPayment, CategoryPurpose1Code.mmTradeSettlementPayment);
 			}
 		});
 		return mmObject_lazy.get();

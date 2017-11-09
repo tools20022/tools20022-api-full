@@ -19,9 +19,14 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.seev.AgentCANotificationAdviceV01;
 import com.tools20022.repository.choice.DateFormat4Choice;
 import com.tools20022.repository.choice.ProcessingStatus1FormatChoice;
+import com.tools20022.repository.entity.CorporateActionEvent;
+import com.tools20022.repository.entity.CorporateActionEventRegistration;
 import com.tools20022.repository.entity.CorporateActionNotification;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -118,11 +123,11 @@ public class CorporateActionNotification1 {
 	 */
 	public static final MMMessageAttribute mmAnnouncementDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmAnnouncementDate;
+			businessElementTrace_lazy = () -> CorporateActionEvent.mmAnnouncementDate;
 			componentContext_lazy = () -> CorporateActionNotification1.mmObject();
 			isDerived = false;
 			xmlTag = "AnncmntDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AnnouncementDate";
 			definition = "Date/time at which the issuer announced that a corporate action event will occur.";
 			maxOccurs = 1;
@@ -169,11 +174,11 @@ public class CorporateActionNotification1 {
 	 */
 	public static final MMMessageAttribute mmFurtherDetailedAnnouncementDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmFurtherDetailsAnnouncementDate;
+			businessElementTrace_lazy = () -> CorporateActionEvent.mmFurtherDetailsAnnouncementDate;
 			componentContext_lazy = () -> CorporateActionNotification1.mmObject();
 			isDerived = false;
 			xmlTag = "FrthrDtldAnncmntDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FurtherDetailedAnnouncementDate";
 			definition = "Date/time at which additional information on the event will be announced, eg, exchange ratio announcement date.";
 			maxOccurs = 1;
@@ -220,11 +225,11 @@ public class CorporateActionNotification1 {
 	 */
 	public static final MMMessageAttribute mmOfficialAnnouncementPublicationDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEventRegistration.mmOfficialAnnouncementPublicationDate;
+			businessElementTrace_lazy = () -> CorporateActionEventRegistration.mmOfficialAnnouncementPublicationDate;
 			componentContext_lazy = () -> CorporateActionNotification1.mmObject();
 			isDerived = false;
 			xmlTag = "OffclAnncmntPblctnDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OfficialAnnouncementPublicationDate";
 			definition = "Date/time at which the corporate action is legally announced by an official body, eg, publication by a governmental administration.";
 			maxOccurs = 1;
@@ -268,11 +273,11 @@ public class CorporateActionNotification1 {
 	 */
 	public static final MMMessageAttribute mmProcessingStatus = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmCorporateActionStatus;
+			businessElementTrace_lazy = () -> CorporateActionEvent.mmCorporateActionStatus;
 			componentContext_lazy = () -> CorporateActionNotification1.mmObject();
 			isDerived = false;
 			xmlTag = "PrcgSts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProcessingStatus";
 			definition = "Specifies the status of the details of the event.";
 			maxOccurs = 1;
@@ -284,12 +289,12 @@ public class CorporateActionNotification1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionNotification1.mmAnnouncementDate, com.tools20022.repository.msg.CorporateActionNotification1.mmFurtherDetailedAnnouncementDate,
-						com.tools20022.repository.msg.CorporateActionNotification1.mmOfficialAnnouncementPublicationDate, com.tools20022.repository.msg.CorporateActionNotification1.mmProcessingStatus);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.AgentCANotificationAdviceV01.mmNotificationGeneralInformation);
+				messageElement_lazy = () -> Arrays.asList(CorporateActionNotification1.mmAnnouncementDate, CorporateActionNotification1.mmFurtherDetailedAnnouncementDate, CorporateActionNotification1.mmOfficialAnnouncementPublicationDate,
+						CorporateActionNotification1.mmProcessingStatus);
+				messageBuildingBlock_lazy = () -> Arrays.asList(AgentCANotificationAdviceV01.mmNotificationGeneralInformation);
 				trace_lazy = () -> CorporateActionNotification.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionNotification1";
 				definition = "Provides information about the notification advice.";
 			}

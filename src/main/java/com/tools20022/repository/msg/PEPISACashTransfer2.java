@@ -17,17 +17,17 @@
 
 package com.tools20022.repository.msg;
 
-import com.tools20022.metamodel.MMMessageAssociationEnd;
-import com.tools20022.metamodel.MMMessageAttribute;
-import com.tools20022.metamodel.MMMessageComponent;
-import com.tools20022.metamodel.MMXor;
+import com.tools20022.metamodel.*;
 import com.tools20022.repository.choice.PEPOrISAChoice;
 import com.tools20022.repository.codeset.PEPISA1Code;
 import com.tools20022.repository.datatype.ImpliedCurrencyAndAmount;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.PercentageRate;
+import com.tools20022.repository.entity.InvestmentFundTransaction;
+import com.tools20022.repository.entity.PaymentObligation;
 import com.tools20022.repository.entity.PortfolioTransfer;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -135,7 +135,7 @@ public class PEPISACashTransfer2 {
 			componentContext_lazy = () -> PEPISACashTransfer2.mmObject();
 			isDerived = false;
 			xmlTag = "TrfConfId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransferConfirmationIdentification";
 			definition = "Identification assigned by the old plan manager to the transfer (Sale of assets).";
 			maxOccurs = 1;
@@ -179,7 +179,7 @@ public class PEPISACashTransfer2 {
 			componentContext_lazy = () -> PEPISACashTransfer2.mmObject();
 			isDerived = false;
 			xmlTag = "TrfInstrRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransferInstructionReference";
 			definition = "Identification received by the old plan manager and assigned by the new plan manager to the transfer (sale of assets).";
 			maxOccurs = 1;
@@ -220,7 +220,7 @@ public class PEPISACashTransfer2 {
 			componentContext_lazy = () -> PEPISACashTransfer2.mmObject();
 			isDerived = false;
 			xmlTag = "TradDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeDate";
 			definition = "Date when the transfer instruction was received.";
 			maxOccurs = 1;
@@ -263,11 +263,11 @@ public class PEPISACashTransfer2 {
 	 */
 	public static final MMMessageAttribute mmSettlementDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PortfolioTransfer.mmTransferDate;
+			businessElementTrace_lazy = () -> PortfolioTransfer.mmTransferDate;
 			componentContext_lazy = () -> PEPISACashTransfer2.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementDate";
 			definition = "Date when the transfer instruction was executed.";
 			maxOccurs = 1;
@@ -311,11 +311,11 @@ public class PEPISACashTransfer2 {
 	 */
 	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PortfolioTransfer.mmPEPOrISAPlan;
+			businessElementTrace_lazy = () -> PortfolioTransfer.mmPEPOrISAPlan;
 			componentContext_lazy = () -> PEPISACashTransfer2.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Indicates the type of product that was transferred. PEP or ISA. ";
 			maxOccurs = 1;
@@ -363,11 +363,11 @@ public class PEPISACashTransfer2 {
 	 */
 	public static final MMMessageAttribute mmPercentageToBeTransferred = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PortfolioTransfer.mmTransferredPercentage;
+			businessElementTrace_lazy = () -> PortfolioTransfer.mmTransferredPercentage;
 			componentContext_lazy = () -> PEPISACashTransfer2.mmObject();
 			isDerived = false;
 			xmlTag = "PctgToBeTrfd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PercentageToBeTransferred";
 			definition = "Quantity expressed as a percentage rate, eg,  in the investment fund business, a quantity of a financial instrument may be expressed as percentage of the investor's total holding.";
 			maxOccurs = 1;
@@ -415,11 +415,11 @@ public class PEPISACashTransfer2 {
 	 */
 	public static final MMMessageAttribute mmAmountToBeTransferred = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentObligation.mmAmount;
+			businessElementTrace_lazy = () -> PaymentObligation.mmAmount;
 			componentContext_lazy = () -> PEPISACashTransfer2.mmObject();
 			isDerived = false;
 			xmlTag = "AmtToBeTrfd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmountToBeTransferred";
 			definition = "Quantity expressed as an amount, eg,  in the investment fund business, a quantity of a financial instrument may be expressed as an amount of money.";
 			maxOccurs = 1;
@@ -462,11 +462,11 @@ public class PEPISACashTransfer2 {
 	 */
 	public static final MMMessageAssociationEnd mmYear = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PortfolioTransfer.mmTransferredYear;
+			businessElementTrace_lazy = () -> PortfolioTransfer.mmTransferredYear;
 			componentContext_lazy = () -> PEPISACashTransfer2.mmObject();
 			isDerived = false;
 			xmlTag = "Yr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Year";
 			definition = "Specifies the year during which the investment plan was issued.";
 			maxOccurs = 1;
@@ -512,11 +512,11 @@ public class PEPISACashTransfer2 {
 	 */
 	public static final MMMessageAssociationEnd mmAssets = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundTransaction.mmInvestmentFundOrderExecution;
+			businessElementTrace_lazy = () -> InvestmentFundTransaction.mmInvestmentFundOrderExecution;
 			componentContext_lazy = () -> PEPISACashTransfer2.mmObject();
 			isDerived = false;
 			xmlTag = "Assts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Assets";
 			definition = "Specifies the type and the number of underlying assets for the PEP or ISA.";
 			minOccurs = 1;
@@ -530,6 +530,10 @@ public class PEPISACashTransfer2 {
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
+	 * messageComponent} =
+	 * {@linkplain com.tools20022.repository.msg.PEPISACashTransfer2
+	 * PEPISACashTransfer2}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getImpactedElements
 	 * impactedElements} =
 	 * <ul>
@@ -543,10 +547,6 @@ public class PEPISACashTransfer2 {
 	 * PEPISACashTransfer2.mmYear}</li>
 	 * </ul>
 	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
-	 * messageComponent} =
-	 * {@linkplain com.tools20022.repository.msg.PEPISACashTransfer2
-	 * PEPISACashTransfer2}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -562,28 +562,25 @@ public class PEPISACashTransfer2 {
 	 */
 	public static final MMXor mmPercentageOrAmountOrYearRule = new MMXor() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PercentageOrAmountOrYearRule";
 			definition = "One and only one message element in the list (PercentageToBeTransferred, AmountToBeTransferred, Year) must be present.";
 			messageComponent_lazy = () -> PEPISACashTransfer2.mmObject();
-			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PEPISACashTransfer2.mmPercentageToBeTransferred, com.tools20022.repository.msg.PEPISACashTransfer2.mmAmountToBeTransferred,
-					com.tools20022.repository.msg.PEPISACashTransfer2.mmYear);
+			impactedElements_lazy = () -> Arrays.asList(PEPISACashTransfer2.mmPercentageToBeTransferred, PEPISACashTransfer2.mmAmountToBeTransferred, PEPISACashTransfer2.mmYear);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PEPISACashTransfer2.mmTransferConfirmationIdentification, com.tools20022.repository.msg.PEPISACashTransfer2.mmTransferInstructionReference,
-						com.tools20022.repository.msg.PEPISACashTransfer2.mmTradeDate, com.tools20022.repository.msg.PEPISACashTransfer2.mmSettlementDate, com.tools20022.repository.msg.PEPISACashTransfer2.mmType,
-						com.tools20022.repository.msg.PEPISACashTransfer2.mmPercentageToBeTransferred, com.tools20022.repository.msg.PEPISACashTransfer2.mmAmountToBeTransferred, com.tools20022.repository.msg.PEPISACashTransfer2.mmYear,
-						com.tools20022.repository.msg.PEPISACashTransfer2.mmAssets);
+				messageElement_lazy = () -> Arrays.asList(PEPISACashTransfer2.mmTransferConfirmationIdentification, PEPISACashTransfer2.mmTransferInstructionReference, PEPISACashTransfer2.mmTradeDate, PEPISACashTransfer2.mmSettlementDate,
+						PEPISACashTransfer2.mmType, PEPISACashTransfer2.mmPercentageToBeTransferred, PEPISACashTransfer2.mmAmountToBeTransferred, PEPISACashTransfer2.mmYear, PEPISACashTransfer2.mmAssets);
 				trace_lazy = () -> PortfolioTransfer.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "PEPISACashTransfer2";
 				definition = "Completion of a securities settlement instruction, wherein securities are sold from a securities account and cash credited to the designated cash account.";
-				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PEPISACashTransfer2.mmPercentageOrAmountOrYearRule);
+				xors_lazy = () -> Arrays.asList(PEPISACashTransfer2.mmPercentageOrAmountOrYearRule);
 			}
 		});
 		return mmObject_lazy.get();

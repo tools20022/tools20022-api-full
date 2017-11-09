@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.ATMMediaType1Code
+ * ATMMediaType1Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ATMMediaType3Code
+ * ATMMediaType3Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ATMMediaType2Code
+ * ATMMediaType2Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>{@linkplain com.tools20022.repository.codeset.ATMMediaTypeCode#mmCards
@@ -62,17 +75,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.ATMMediaTypeCode#mmUnrecognised
  * ATMMediaTypeCode.mmUnrecognised}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.ATMMediaType1Code
- * ATMMediaType1Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ATMMediaType3Code
- * ATMMediaType3Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ATMMediaType2Code
- * ATMMediaType2Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -116,7 +118,7 @@ public class ATMMediaTypeCode {
 	 */
 	public static final MMCode mmCards = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cards";
 			definition = "Card media.";
 			owner_lazy = () -> ATMMediaTypeCode.mmObject();
@@ -146,7 +148,7 @@ public class ATMMediaTypeCode {
 	 */
 	public static final MMCode mmCoins = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Coins";
 			definition = "Coin media.";
 			owner_lazy = () -> ATMMediaTypeCode.mmObject();
@@ -176,7 +178,7 @@ public class ATMMediaTypeCode {
 	 */
 	public static final MMCode mmCommodity = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Commodity";
 			definition = "Non fixed value of the media, for instance gold, silver.";
 			owner_lazy = () -> ATMMediaTypeCode.mmObject();
@@ -206,7 +208,7 @@ public class ATMMediaTypeCode {
 	 */
 	public static final MMCode mmCoupons = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Coupons";
 			definition = "Coupon media.";
 			owner_lazy = () -> ATMMediaTypeCode.mmObject();
@@ -236,7 +238,7 @@ public class ATMMediaTypeCode {
 	 */
 	public static final MMCode mmNotes = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Notes";
 			definition = "Bank note media.";
 			owner_lazy = () -> ATMMediaTypeCode.mmObject();
@@ -266,7 +268,7 @@ public class ATMMediaTypeCode {
 	 */
 	public static final MMCode mmStamps = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Stamps";
 			definition = "Stamp media.";
 			owner_lazy = () -> ATMMediaTypeCode.mmObject();
@@ -296,7 +298,7 @@ public class ATMMediaTypeCode {
 	 */
 	public static final MMCode mmUndetermined = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Undetermined";
 			definition = "Undetermined medias.";
 			owner_lazy = () -> ATMMediaTypeCode.mmObject();
@@ -326,7 +328,7 @@ public class ATMMediaTypeCode {
 	 */
 	public static final MMCode mmCheck = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Check";
 			definition = "Check media.";
 			owner_lazy = () -> ATMMediaTypeCode.mmObject();
@@ -356,7 +358,7 @@ public class ATMMediaTypeCode {
 	 */
 	public static final MMCode mmCounterfeit = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Counterfeit";
 			definition = "Detected counterfeit media.";
 			owner_lazy = () -> ATMMediaTypeCode.mmObject();
@@ -386,7 +388,7 @@ public class ATMMediaTypeCode {
 	 */
 	public static final MMCode mmFit = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Fit";
 			definition = "Fit media.";
 			owner_lazy = () -> ATMMediaTypeCode.mmObject();
@@ -416,7 +418,7 @@ public class ATMMediaTypeCode {
 	 */
 	public static final MMCode mmFitAndUnfit = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FitAndUnfit";
 			definition = "Fit or unfit media, if fitness cannot be determined.";
 			owner_lazy = () -> ATMMediaTypeCode.mmObject();
@@ -446,7 +448,7 @@ public class ATMMediaTypeCode {
 	 */
 	public static final MMCode mmSuspect = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Suspect";
 			definition = "Suspect media.";
 			owner_lazy = () -> ATMMediaTypeCode.mmObject();
@@ -476,7 +478,7 @@ public class ATMMediaTypeCode {
 	 */
 	public static final MMCode mmUnfit = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unfit";
 			definition = "Unfit media (unacceptable quality).";
 			owner_lazy = () -> ATMMediaTypeCode.mmObject();
@@ -506,7 +508,7 @@ public class ATMMediaTypeCode {
 	 */
 	public static final MMCode mmUnrecognised = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unrecognised";
 			definition = "Unrecognised media.";
 			owner_lazy = () -> ATMMediaTypeCode.mmObject();
@@ -517,15 +519,13 @@ public class ATMMediaTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ATMMediaTypeCode";
 				definition = "Type or category of media inside an ATM cassette.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ATMMediaTypeCode.mmCards, com.tools20022.repository.codeset.ATMMediaTypeCode.mmCoins, com.tools20022.repository.codeset.ATMMediaTypeCode.mmCommodity,
-						com.tools20022.repository.codeset.ATMMediaTypeCode.mmCoupons, com.tools20022.repository.codeset.ATMMediaTypeCode.mmNotes, com.tools20022.repository.codeset.ATMMediaTypeCode.mmStamps,
-						com.tools20022.repository.codeset.ATMMediaTypeCode.mmUndetermined, com.tools20022.repository.codeset.ATMMediaTypeCode.mmCheck, com.tools20022.repository.codeset.ATMMediaTypeCode.mmCounterfeit,
-						com.tools20022.repository.codeset.ATMMediaTypeCode.mmFit, com.tools20022.repository.codeset.ATMMediaTypeCode.mmFitAndUnfit, com.tools20022.repository.codeset.ATMMediaTypeCode.mmSuspect,
-						com.tools20022.repository.codeset.ATMMediaTypeCode.mmUnfit, com.tools20022.repository.codeset.ATMMediaTypeCode.mmUnrecognised);
+				code_lazy = () -> Arrays.asList(ATMMediaTypeCode.mmCards, ATMMediaTypeCode.mmCoins, ATMMediaTypeCode.mmCommodity, ATMMediaTypeCode.mmCoupons, ATMMediaTypeCode.mmNotes, ATMMediaTypeCode.mmStamps,
+						ATMMediaTypeCode.mmUndetermined, ATMMediaTypeCode.mmCheck, ATMMediaTypeCode.mmCounterfeit, ATMMediaTypeCode.mmFit, ATMMediaTypeCode.mmFitAndUnfit, ATMMediaTypeCode.mmSuspect, ATMMediaTypeCode.mmUnfit,
+						ATMMediaTypeCode.mmUnrecognised);
 				derivation_lazy = () -> Arrays.asList(ATMMediaType1Code.mmObject(), ATMMediaType3Code.mmObject(), ATMMediaType2Code.mmObject());
 			}
 		});

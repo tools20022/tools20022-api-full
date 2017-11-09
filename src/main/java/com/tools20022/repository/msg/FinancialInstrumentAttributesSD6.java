@@ -19,12 +19,14 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.AssetClass1Code;
 import com.tools20022.repository.codeset.CountryCode;
 import com.tools20022.repository.codeset.DTCAssetType1Code;
 import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.YesNoIndicator;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -131,10 +133,10 @@ public class FinancialInstrumentAttributesSD6 {
 			componentContext_lazy = () -> FinancialInstrumentAttributesSD6.mmObject();
 			isDerived = false;
 			xmlTag = "PlcAndNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "xPath to the element that is being extended.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrumentAttributesSD8.mmPlaceAndName);
+			nextVersions_lazy = () -> Arrays.asList(FinancialInstrumentAttributesSD8.mmPlaceAndName);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
@@ -181,10 +183,10 @@ public class FinancialInstrumentAttributesSD6 {
 			componentContext_lazy = () -> FinancialInstrumentAttributesSD6.mmObject();
 			isDerived = false;
 			xmlTag = "CtryOfListg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CountryOfListing";
 			definition = "Country in which the security was issued.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrumentAttributesSD8.mmCountryOfListing);
+			nextVersions_lazy = () -> Arrays.asList(FinancialInstrumentAttributesSD8.mmCountryOfListing);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CountryCode.mmObject();
@@ -231,10 +233,10 @@ public class FinancialInstrumentAttributesSD6 {
 			componentContext_lazy = () -> FinancialInstrumentAttributesSD6.mmObject();
 			isDerived = false;
 			xmlTag = "IncmSrcCtry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncomeSourceCountry";
 			definition = "Country of source income for the security.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrumentAttributesSD8.mmIncomeSourceCountry);
+			nextVersions_lazy = () -> Arrays.asList(FinancialInstrumentAttributesSD8.mmIncomeSourceCountry);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CountryCode.mmObject();
@@ -285,10 +287,10 @@ public class FinancialInstrumentAttributesSD6 {
 			componentContext_lazy = () -> FinancialInstrumentAttributesSD6.mmObject();
 			isDerived = false;
 			xmlTag = "DTCAsstClss";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCAssetClass";
 			definition = "Classification of instruments into asset classes at DTC (The Depository Trust Corporation).";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrumentAttributesSD8.mmDTCAssetClass);
+			nextVersions_lazy = () -> Arrays.asList(FinancialInstrumentAttributesSD8.mmDTCAssetClass);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> AssetClass1Code.mmObject();
@@ -339,10 +341,10 @@ public class FinancialInstrumentAttributesSD6 {
 			componentContext_lazy = () -> FinancialInstrumentAttributesSD6.mmObject();
 			isDerived = false;
 			xmlTag = "DTCAsstTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCAssetType";
 			definition = "Further classification of instruments into (issue) asset types at DTC (The Depository Trust Corporation).";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrumentAttributesSD8.mmDTCAssetType);
+			nextVersions_lazy = () -> Arrays.asList(FinancialInstrumentAttributesSD8.mmDTCAssetType);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> DTCAssetType1Code.mmObject();
@@ -391,10 +393,10 @@ public class FinancialInstrumentAttributesSD6 {
 			componentContext_lazy = () -> FinancialInstrumentAttributesSD6.mmObject();
 			isDerived = false;
 			xmlTag = "SctyElgbltyInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityEligibilityIndicator";
 			definition = "Indicates whether the security is eligible for holding at DTC.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrumentAttributesSD8.mmSecurityEligibilityIndicator);
+			nextVersions_lazy = () -> Arrays.asList(FinancialInstrumentAttributesSD8.mmSecurityEligibilityIndicator);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
@@ -442,10 +444,10 @@ public class FinancialInstrumentAttributesSD6 {
 			componentContext_lazy = () -> FinancialInstrumentAttributesSD6.mmObject();
 			isDerived = false;
 			xmlTag = "TckrSymb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TickerSymbol";
 			definition = "Ticket symbol for the event security (underlying security). ";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrumentAttributesSD8.mmTickerSymbol);
+			nextVersions_lazy = () -> Arrays.asList(FinancialInstrumentAttributesSD8.mmTickerSymbol);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -498,10 +500,10 @@ public class FinancialInstrumentAttributesSD6 {
 			componentContext_lazy = () -> FinancialInstrumentAttributesSD6.mmObject();
 			isDerived = false;
 			xmlTag = "LkdScty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LinkedSecurity";
 			definition = "Security whose characteristics mirror the event security for purposes of FCP eligibility and tax relief. Certain derivative securities like HOLDR may have certain events where the source of payments are from an underlying security. ";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrumentAttributesSD8.mmLinkedSecurity);
+			nextVersions_lazy = () -> Arrays.asList(FinancialInstrumentAttributesSD8.mmLinkedSecurity);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.SecurityIdentification15.mmObject();
@@ -511,12 +513,11 @@ public class FinancialInstrumentAttributesSD6 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrumentAttributesSD6.mmPlaceAndName, com.tools20022.repository.msg.FinancialInstrumentAttributesSD6.mmCountryOfListing,
-						com.tools20022.repository.msg.FinancialInstrumentAttributesSD6.mmIncomeSourceCountry, com.tools20022.repository.msg.FinancialInstrumentAttributesSD6.mmDTCAssetClass,
-						com.tools20022.repository.msg.FinancialInstrumentAttributesSD6.mmDTCAssetType, com.tools20022.repository.msg.FinancialInstrumentAttributesSD6.mmSecurityEligibilityIndicator,
-						com.tools20022.repository.msg.FinancialInstrumentAttributesSD6.mmTickerSymbol, com.tools20022.repository.msg.FinancialInstrumentAttributesSD6.mmLinkedSecurity);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(FinancialInstrumentAttributesSD6.mmPlaceAndName, FinancialInstrumentAttributesSD6.mmCountryOfListing, FinancialInstrumentAttributesSD6.mmIncomeSourceCountry,
+						FinancialInstrumentAttributesSD6.mmDTCAssetClass, FinancialInstrumentAttributesSD6.mmDTCAssetType, FinancialInstrumentAttributesSD6.mmSecurityEligibilityIndicator, FinancialInstrumentAttributesSD6.mmTickerSymbol,
+						FinancialInstrumentAttributesSD6.mmLinkedSecurity);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "FinancialInstrumentAttributesSD6";
 				definition = "Provides additional information regarding underlying security details.";
 				nextVersions_lazy = () -> Arrays.asList(FinancialInstrumentAttributesSD8.mmObject());

@@ -19,8 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.tsmt.BaselineMatchReportV03;
 import com.tools20022.repository.datatype.Max3NumericText;
 import com.tools20022.repository.entity.Limit;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -108,7 +111,7 @@ public class Limit1 {
 			componentContext_lazy = () -> Limit1.mmObject();
 			isDerived = false;
 			xmlTag = "Cur";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Current";
 			definition = "Number of occurrences of a particular event.";
 			maxOccurs = 1;
@@ -155,7 +158,7 @@ public class Limit1 {
 			componentContext_lazy = () -> Limit1.mmObject();
 			isDerived = false;
 			xmlTag = "Lmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Limit";
 			definition = "Specifies the maximum number of times an event may occur.";
 			maxOccurs = 1;
@@ -167,11 +170,11 @@ public class Limit1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Limit1.mmCurrent, com.tools20022.repository.msg.Limit1.mmLimit);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.BaselineMatchReportV03.mmBaselineEstablishmentTrials);
+				messageElement_lazy = () -> Arrays.asList(Limit1.mmCurrent, Limit1.mmLimit);
+				messageBuildingBlock_lazy = () -> Arrays.asList(BaselineMatchReportV03.mmBaselineEstablishmentTrials);
 				trace_lazy = () -> Limit.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Limit1";
 				definition = "Specifies the number of occurrences of a particular event and the maximum number of times this event may occur.";
 			}

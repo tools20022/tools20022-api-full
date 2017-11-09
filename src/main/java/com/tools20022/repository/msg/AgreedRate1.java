@@ -19,9 +19,16 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.other.ForeignExchangeTradeInstructionAmendmentV02;
+import com.tools20022.repository.area.other.ForeignExchangeTradeInstructionCancellationV02;
+import com.tools20022.repository.area.other.ForeignExchangeTradeInstructionV02;
+import com.tools20022.repository.area.other.ForeignExchangeTradeStatusAndDetailsNotificationV02;
+import com.tools20022.repository.area.trea.*;
 import com.tools20022.repository.codeset.CurrencyCode;
 import com.tools20022.repository.datatype.BaseOneRate;
 import com.tools20022.repository.entity.CurrencyExchange;
+import com.tools20022.repository.GeneratedRepository;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -155,14 +162,14 @@ public class AgreedRate1 {
 	 */
 	public static final MMMessageAttribute mmExchangeRate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmExchangeRate;
+			businessElementTrace_lazy = () -> CurrencyExchange.mmExchangeRate;
 			componentContext_lazy = () -> AgreedRate1.mmObject();
 			isDerived = false;
 			xmlTag = "XchgRate";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExchangeRate";
 			definition = "The value of one currency expressed in relation to another currency. ExchangeRate expresses the ratio between UnitCurrency and QuotedCurrency (ExchangeRate = UnitCurrency/QuotedCurrency).";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AgreedRate3.mmExchangeRate);
+			nextVersions_lazy = () -> Arrays.asList(AgreedRate3.mmExchangeRate);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> BaseOneRate.mmObject();
@@ -212,14 +219,14 @@ public class AgreedRate1 {
 	 */
 	public static final MMMessageAttribute mmUnitCurrency = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmUnitCurrency;
+			businessElementTrace_lazy = () -> CurrencyExchange.mmUnitCurrency;
 			componentContext_lazy = () -> AgreedRate1.mmObject();
 			isDerived = false;
 			xmlTag = "UnitCcy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnitCurrency";
 			definition = "Currency in which the rate of exchange is expressed in a currency exchange. In the example 1GBP = xxxCUR, the unit currency is GBP.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AgreedRate3.mmUnitCurrency);
+			nextVersions_lazy = () -> Arrays.asList(AgreedRate3.mmUnitCurrency);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CurrencyCode.mmObject();
@@ -270,14 +277,14 @@ public class AgreedRate1 {
 	 */
 	public static final MMMessageAttribute mmQuotedCurrency = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmQuotedCurrency;
+			businessElementTrace_lazy = () -> CurrencyExchange.mmQuotedCurrency;
 			componentContext_lazy = () -> AgreedRate1.mmObject();
 			isDerived = false;
 			xmlTag = "QtdCcy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuotedCurrency";
 			definition = "Currency into which the base currency is converted, in a currency exchange.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AgreedRate3.mmQuotedCurrency);
+			nextVersions_lazy = () -> Arrays.asList(AgreedRate3.mmQuotedCurrency);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CurrencyCode.mmObject();
@@ -287,16 +294,14 @@ public class AgreedRate1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AgreedRate1.mmExchangeRate, com.tools20022.repository.msg.AgreedRate1.mmUnitCurrency, com.tools20022.repository.msg.AgreedRate1.mmQuotedCurrency);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.other.ForeignExchangeTradeInstructionAmendmentV02.mmAgreedRate,
-						com.tools20022.repository.area.other.ForeignExchangeTradeInstructionCancellationV02.mmAgreedRate, com.tools20022.repository.area.other.ForeignExchangeTradeInstructionV02.mmAgreedRate,
-						com.tools20022.repository.area.other.ForeignExchangeTradeStatusAndDetailsNotificationV02.mmAgreedRate, com.tools20022.repository.area.trea.CreateNonDeliverableForwardOpeningV02.mmAgreedRate,
-						com.tools20022.repository.area.trea.AmendNonDeliverableForwardOpeningV02.mmAgreedRate, com.tools20022.repository.area.trea.CancelNonDeliverableForwardOpeningV02.mmAgreedRate,
-						com.tools20022.repository.area.trea.CreateNonDeliverableForwardValuationV02.mmValuationRate, com.tools20022.repository.area.trea.AmendNonDeliverableForwardValuationV02.mmValuationRate,
-						com.tools20022.repository.area.trea.CancelNonDeliverableForwardValuationV02.mmValuationRate);
+				messageElement_lazy = () -> Arrays.asList(AgreedRate1.mmExchangeRate, AgreedRate1.mmUnitCurrency, AgreedRate1.mmQuotedCurrency);
+				messageBuildingBlock_lazy = () -> Arrays.asList(ForeignExchangeTradeInstructionAmendmentV02.mmAgreedRate, ForeignExchangeTradeInstructionCancellationV02.mmAgreedRate, ForeignExchangeTradeInstructionV02.mmAgreedRate,
+						ForeignExchangeTradeStatusAndDetailsNotificationV02.mmAgreedRate, CreateNonDeliverableForwardOpeningV02.mmAgreedRate, AmendNonDeliverableForwardOpeningV02.mmAgreedRate,
+						CancelNonDeliverableForwardOpeningV02.mmAgreedRate, CreateNonDeliverableForwardValuationV02.mmValuationRate, AmendNonDeliverableForwardValuationV02.mmValuationRate,
+						CancelNonDeliverableForwardValuationV02.mmValuationRate);
 				trace_lazy = () -> CurrencyExchange.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
 						return DateFormat.getDateInstance(java.text.DateFormat.LONG).parse("September 9, 2016");

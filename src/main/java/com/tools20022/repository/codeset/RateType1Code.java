@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.InterestRateTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -84,7 +86,7 @@ public class RateType1Code extends InterestRateTypeCode {
 	 */
 	public static final MMCode mmFixed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Fixed";
 			owner_lazy = () -> RateType1Code.mmObject();
 		}
@@ -107,7 +109,7 @@ public class RateType1Code extends InterestRateTypeCode {
 	 */
 	public static final MMCode mmForfeit = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Forfeit";
 			owner_lazy = () -> RateType1Code.mmObject();
 		}
@@ -130,7 +132,7 @@ public class RateType1Code extends InterestRateTypeCode {
 	 */
 	public static final MMCode mmVariable = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Variable";
 			owner_lazy = () -> RateType1Code.mmObject();
 		}
@@ -139,12 +141,12 @@ public class RateType1Code extends InterestRateTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("FIXE");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RateType1Code";
 				definition = "Specifies whether the rate is fixed or variable or a forfeit.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RateType1Code.mmFixed, com.tools20022.repository.codeset.RateType1Code.mmForfeit, com.tools20022.repository.codeset.RateType1Code.mmVariable);
+				code_lazy = () -> Arrays.asList(RateType1Code.mmFixed, RateType1Code.mmForfeit, RateType1Code.mmVariable);
 				trace_lazy = () -> InterestRateTypeCode.mmObject();
 			}
 		});

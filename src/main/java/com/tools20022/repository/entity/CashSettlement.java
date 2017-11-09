@@ -17,15 +17,16 @@
 
 package com.tools20022.repository.entity;
 
-import com.tools20022.metamodel.MMBusinessAssociationEnd;
-import com.tools20022.metamodel.MMBusinessAttribute;
-import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.*;
 import com.tools20022.repository.choice.PaymentSchemeChoice;
+import com.tools20022.repository.choice.PaymentStatusCode5Choice;
+import com.tools20022.repository.choice.PaymentStatusCode6Choice;
 import com.tools20022.repository.codeset.SettlementMethodCode;
 import com.tools20022.repository.datatype.CurrencyAndAmount;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Max4AlphaNumericText;
 import com.tools20022.repository.entity.Settlement;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -41,95 +42,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CashSettlement#mmInterbankSettlementAmount
- * CashSettlement.mmInterbankSettlementAmount}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CashSettlement#mmInterbankSettlementDate
- * CashSettlement.mmInterbankSettlementDate}</li>
- * <li>{@linkplain com.tools20022.repository.entity.CashSettlement#mmRTGS
- * CashSettlement.mmRTGS}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CashSettlement#mmCreditDateTime
- * CashSettlement.mmCreditDateTime}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CashSettlement#mmRelatedPaymentInstruction
- * CashSettlement.mmRelatedPaymentInstruction}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CashSettlement#mmSettlementMethod
- * CashSettlement.mmSettlementMethod}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CashSettlement#mmSettlementAccount
- * CashSettlement.mmSettlementAccount}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CashSettlement#mmDebitDateTime
- * CashSettlement.mmDebitDateTime}</li>
- * <li>{@linkplain com.tools20022.repository.entity.CashSettlement#mmPartyRole
- * CashSettlement.mmPartyRole}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CashSettlement#mmRelatedTransactionAdministrator
- * CashSettlement.mmRelatedTransactionAdministrator}</li>
- * <li>{@linkplain com.tools20022.repository.entity.CashSettlement#mmBookEntry
- * CashSettlement.mmBookEntry}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CashSettlement#mmRelatedInvestigationCase
- * CashSettlement.mmRelatedInvestigationCase}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CashSettlement#mmReservation
- * CashSettlement.mmReservation}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CashAccount#mmRelatedSettlementInstruction
- * CashAccount.mmRelatedSettlementInstruction}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.PaymentInstruction#mmSettlementInstruction
- * PaymentInstruction.mmSettlementInstruction}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.TransactionAdministrator#mmSettlementInstruction
- * TransactionAdministrator.mmSettlementInstruction}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Reservation#mmSettlementInstruction
- * Reservation.mmSettlementInstruction}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.BookEntry#mmRelatedSettlementInstruction
- * BookEntry.mmRelatedSettlementInstruction}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CashSettlementInstructionPartyRole#mmSettlementInstruction
- * CashSettlementInstructionPartyRole.mmSettlementInstruction}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.PaymentInvestigationCaseResolution#mmCoverCorrection
- * PaymentInvestigationCaseResolution.mmCoverCorrection}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
- * derivationElement} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msg.RequestedModification3#mmSettlementInformation
- * RequestedModification3.mmSettlementInformation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.RequestedModification4#mmSettlementInformation
- * RequestedModification4.mmSettlementInformation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.RequestedModification5#mmSettlementInformation
- * RequestedModification5.mmSettlementInformation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.RequestedModification6#mmSettlementInformation
- * RequestedModification6.mmSettlementInformation}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.Settlement
- * Settlement}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -182,6 +94,95 @@ import java.util.List;
  * SettlementInformation9}</li>
  * <li>{@linkplain com.tools20022.repository.msg.SettlementTerms3
  * SettlementTerms3}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CashAccount#mmRelatedSettlementInstruction
+ * CashAccount.mmRelatedSettlementInstruction}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PaymentInstruction#mmSettlementInstruction
+ * PaymentInstruction.mmSettlementInstruction}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.TransactionAdministrator#mmSettlementInstruction
+ * TransactionAdministrator.mmSettlementInstruction}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Reservation#mmSettlementInstruction
+ * Reservation.mmSettlementInstruction}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.BookEntry#mmRelatedSettlementInstruction
+ * BookEntry.mmRelatedSettlementInstruction}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CashSettlementInstructionPartyRole#mmSettlementInstruction
+ * CashSettlementInstructionPartyRole.mmSettlementInstruction}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PaymentInvestigationCaseResolution#mmCoverCorrection
+ * PaymentInvestigationCaseResolution.mmCoverCorrection}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
+ * derivationElement} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.RequestedModification3#mmSettlementInformation
+ * RequestedModification3.mmSettlementInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.RequestedModification4#mmSettlementInformation
+ * RequestedModification4.mmSettlementInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.RequestedModification5#mmSettlementInformation
+ * RequestedModification5.mmSettlementInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.RequestedModification6#mmSettlementInformation
+ * RequestedModification6.mmSettlementInformation}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.Settlement
+ * Settlement}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CashSettlement#mmInterbankSettlementAmount
+ * CashSettlement.mmInterbankSettlementAmount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CashSettlement#mmInterbankSettlementDate
+ * CashSettlement.mmInterbankSettlementDate}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.CashSettlement#mmRTGS
+ * CashSettlement.mmRTGS}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CashSettlement#mmCreditDateTime
+ * CashSettlement.mmCreditDateTime}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CashSettlement#mmRelatedPaymentInstruction
+ * CashSettlement.mmRelatedPaymentInstruction}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CashSettlement#mmSettlementMethod
+ * CashSettlement.mmSettlementMethod}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CashSettlement#mmSettlementAccount
+ * CashSettlement.mmSettlementAccount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CashSettlement#mmDebitDateTime
+ * CashSettlement.mmDebitDateTime}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.CashSettlement#mmPartyRole
+ * CashSettlement.mmPartyRole}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CashSettlement#mmRelatedTransactionAdministrator
+ * CashSettlement.mmRelatedTransactionAdministrator}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.CashSettlement#mmBookEntry
+ * CashSettlement.mmBookEntry}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CashSettlement#mmRelatedInvestigationCase
+ * CashSettlement.mmRelatedInvestigationCase}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CashSettlement#mmReservation
+ * CashSettlement.mmReservation}</li>
  * </ul>
  * </li>
  * <li>
@@ -736,92 +737,62 @@ public class CashSettlement extends Settlement {
 	 */
 	public static final MMBusinessAttribute mmInterbankSettlementAmount = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentInstructionReference1Details.mmInterbankSettlementAmount, com.tools20022.repository.msg.PaymentInstructionReference2Details.mmInterbankSettlementAmount,
-					com.tools20022.repository.msg.PaymentInstructionReferenceDetails3.mmInterbankSettlementAmount, com.tools20022.repository.msg.PaymentInstructionReferenceDetails4.mmInterbankSettlementAmount,
-					com.tools20022.repository.msg.LongPaymentIdentification1.mmInterBankSettlementAmount, com.tools20022.repository.msg.PaymentSearch2.mmInterbankSettlementAmount,
-					com.tools20022.repository.msg.PaymentSearch3.mmInterbankSettlementAmount, com.tools20022.repository.msg.PaymentSearch4.mmInterbankSettlementAmount,
-					com.tools20022.repository.msg.PaymentDetails5.mmInterbankSettlementAmount, com.tools20022.repository.msg.PaymentDetails6.mmInterbankSettlementAmount,
-					com.tools20022.repository.msg.PaymentDetails7.mmInterbankSettlementAmount, com.tools20022.repository.msg.PaymentInstruction1.mmInterbankSettlementAmount,
-					com.tools20022.repository.msg.OriginalTransactionReference1.mmInterbankSettlementAmount, com.tools20022.repository.msg.PaymentTransactionInformation3.mmOriginalInterbankSettlementAmount,
-					com.tools20022.repository.msg.OriginalTransactionReference13.mmInterbankSettlementAmount, com.tools20022.repository.msg.OriginalTransactionReference16.mmInterbankSettlementAmount,
-					com.tools20022.repository.msg.GroupHeader2.mmTotalInterbankSettlementAmount, com.tools20022.repository.msg.CreditTransferTransactionInformation2.mmInterbankSettlementAmount,
-					com.tools20022.repository.msg.GroupHeader33.mmTotalInterbankSettlementAmount, com.tools20022.repository.msg.CreditTransferTransactionInformation11.mmInterbankSettlementAmount,
-					com.tools20022.repository.msg.GroupHeader49.mmTotalInterbankSettlementAmount, com.tools20022.repository.msg.CreditTransferTransaction2.mmInterbankSettlementAmount,
-					com.tools20022.repository.msg.CreditTransferTransaction7.mmInterbankSettlementAmount, com.tools20022.repository.msg.GroupHeader3.mmTotalInterbankSettlementAmount,
-					com.tools20022.repository.msg.DirectDebitTransactionInformation2.mmInterbankSettlementAmount, com.tools20022.repository.msg.GroupHeader34.mmTotalInterbankSettlementAmount,
-					com.tools20022.repository.msg.DirectDebitTransactionInformation10.mmInterbankSettlementAmount, com.tools20022.repository.msg.GroupHeader50.mmTotalInterbankSettlementAmount,
-					com.tools20022.repository.msg.DirectDebitTransactionInformation12.mmInterbankSettlementAmount, com.tools20022.repository.msg.DirectDebitTransactionInformation14.mmInterbankSettlementAmount,
-					com.tools20022.repository.msg.PaymentTransactionInformation31.mmOriginalInterbankSettlementAmount, com.tools20022.repository.msg.PaymentTransaction38.mmOriginalInterbankSettlementAmount,
-					com.tools20022.repository.msg.PaymentTransaction48.mmOriginalInterbankSettlementAmount, com.tools20022.repository.msg.GroupHeader9.mmTotalReversedInterbankSettlementAmount,
-					com.tools20022.repository.msg.PaymentTransactionInformation5.mmOriginalInterbankSettlementAmount, com.tools20022.repository.msg.PaymentTransactionInformation5.mmReversedInterbankSettlementAmount,
-					com.tools20022.repository.msg.GroupHeader41.mmTotalReversedInterbankSettlementAmount, com.tools20022.repository.msg.PaymentTransactionInformation29.mmOriginalInterbankSettlementAmount,
-					com.tools20022.repository.msg.PaymentTransactionInformation29.mmReversedInterbankSettlementAmount, com.tools20022.repository.msg.GroupHeader57.mmTotalReversedInterbankSettlementAmount,
-					com.tools20022.repository.msg.PaymentTransaction36.mmOriginalInterbankSettlementAmount, com.tools20022.repository.msg.PaymentTransaction36.mmReversedInterbankSettlementAmount,
-					com.tools20022.repository.msg.PaymentTransaction45.mmOriginalInterbankSettlementAmount, com.tools20022.repository.msg.PaymentTransaction45.mmReversedInterbankSettlementAmount,
-					com.tools20022.repository.msg.GroupHeader4.mmTotalInterbankSettlementAmount, com.tools20022.repository.msg.CreditTransferTransactionInformation3.mmInterbankSettlementAmount,
-					com.tools20022.repository.msg.GroupHeader35.mmTotalInterbankSettlementAmount, com.tools20022.repository.msg.CreditTransferTransactionInformation13.mmInterbankSettlementAmount,
-					com.tools20022.repository.msg.GroupHeader51.mmTotalInterbankSettlementAmount, com.tools20022.repository.msg.CreditTransferTransaction4.mmInterbankSettlementAmount,
-					com.tools20022.repository.msg.CreditTransferTransaction8.mmInterbankSettlementAmount, com.tools20022.repository.msg.GroupHeader6.mmTotalReturnedInterbankSettlementAmount,
-					com.tools20022.repository.msg.PaymentTransactionInformation2.mmOriginalInterbankSettlementAmount, com.tools20022.repository.msg.PaymentTransactionInformation2.mmReturnedInterbankSettlementAmount,
-					com.tools20022.repository.msg.GroupHeader38.mmTotalReturnedInterbankSettlementAmount, com.tools20022.repository.msg.PaymentTransactionInformation27.mmOriginalInterbankSettlementAmount,
-					com.tools20022.repository.msg.PaymentTransactionInformation27.mmReturnedInterbankSettlementAmount, com.tools20022.repository.msg.GroupHeader54.mmTotalReturnedInterbankSettlementAmount,
-					com.tools20022.repository.msg.PaymentTransaction34.mmOriginalInterbankSettlementAmount, com.tools20022.repository.msg.PaymentTransaction34.mmReturnedInterbankSettlementAmount,
-					com.tools20022.repository.msg.PaymentTransaction44.mmOriginalInterbankSettlementAmount, com.tools20022.repository.msg.PaymentTransaction44.mmReturnedInterbankSettlementAmount,
-					com.tools20022.repository.msg.OriginalTransactionReference15.mmInterbankSettlementAmount, com.tools20022.repository.msg.OriginalTransactionReference17.mmInterbankSettlementAmount,
-					com.tools20022.repository.msg.RequestedModification.mmInterbankSettledAmount, com.tools20022.repository.msg.PaymentInstructionExtract2.mmInterbankSettlementAmount,
-					com.tools20022.repository.msg.ReturnInformation1.mmReturnedInterbankSettlementAmount, com.tools20022.repository.msg.CorrectivePaymentInstructionExtract.mmInterbankSettlementAmount,
-					com.tools20022.repository.msg.UnderlyingPaymentTransaction1.mmOriginalInterbankSettlementAmount, com.tools20022.repository.msg.RequestedModification2.mmInterbankSettlementAmount,
-					com.tools20022.repository.msg.PaymentComplementaryInformation2.mmInterbankSettlementAmount, com.tools20022.repository.msg.ResolutionInformation1.mmInterbankSettlementAmount,
-					com.tools20022.repository.msg.PaymentTransactionInformation33.mmOriginalInterbankSettlementAmount, com.tools20022.repository.msg.CorrectiveInterbankTransaction1.mmInterbankSettlementAmount,
-					com.tools20022.repository.msg.UnderlyingPaymentTransaction2.mmOriginalInterbankSettlementAmount, com.tools20022.repository.msg.PaymentComplementaryInformation3.mmInterbankSettlementAmount,
-					com.tools20022.repository.msg.PaymentTransaction40.mmOriginalInterbankSettlementAmount, com.tools20022.repository.msg.RequestedModification3.mmInterbankSettlementAmount,
-					com.tools20022.repository.msg.DirectDebitTransactionInformation15.mmInterbankSettlementAmount, com.tools20022.repository.msg.CreditTransferTransaction9.mmTotalInterbankSettlementAmount,
-					com.tools20022.repository.msg.PaymentTransactionInformation13.mmOriginalInterbankSettlementAmount, com.tools20022.repository.msg.PaymentTransactionInformation13.mmReturnedInterbankSettlementAmount,
-					com.tools20022.repository.msg.PaymentTransactionInformation18.mmOriginalInterbankSettlementAmount, com.tools20022.repository.msg.PaymentTransactionInformation18.mmReturnedInterbankSettlementAmount,
-					com.tools20022.repository.msg.OriginalTransactionReference9.mmInterbankSettlementAmount, com.tools20022.repository.msg.OriginalTransactionReference12.mmInterbankSettlementAmount,
-					com.tools20022.repository.msg.OriginalTransactionReference8.mmInterbankSettlementAmount, com.tools20022.repository.msg.OriginalTransactionReference11.mmInterbankSettlementAmount,
-					com.tools20022.repository.msg.PaymentTransactionInformation14.mmOriginalInterbankSettlementAmount, com.tools20022.repository.msg.PaymentTransactionInformation14.mmReversedInterbankSettlementAmount,
-					com.tools20022.repository.msg.PaymentTransactionInformation20.mmOriginalInterbankSettlementAmount, com.tools20022.repository.msg.PaymentTransactionInformation20.mmReversedInterbankSettlementAmount,
-					com.tools20022.repository.msg.PaymentTransactionInformation16.mmOriginalInterbankSettlementAmount, com.tools20022.repository.msg.PaymentTransactionInformation16.mmReturnedInterbankSettlementAmount,
-					com.tools20022.repository.msg.PaymentTransactionInformation23.mmOriginalInterbankSettlementAmount, com.tools20022.repository.msg.PaymentTransactionInformation23.mmReturnedInterbankSettlementAmount,
-					com.tools20022.repository.msg.PaymentTransactionInformation17.mmOriginalInterbankSettlementAmount, com.tools20022.repository.msg.PaymentTransactionInformation17.mmReversedInterbankSettlementAmount,
-					com.tools20022.repository.msg.PaymentTransactionInformation24.mmOriginalInterbankSettlementAmount, com.tools20022.repository.msg.PaymentTransactionInformation24.mmReversedInterbankSettlementAmount,
-					com.tools20022.repository.msg.PaymentTransactionInformation21.mmOriginalInterbankSettlementAmount, com.tools20022.repository.msg.PaymentTransactionInformation21.mmReturnedInterbankSettlementAmount,
-					com.tools20022.repository.msg.CreditTransferTransactionInformation6.mmInterbankSettlementAmount, com.tools20022.repository.msg.CreditTransferTransactionInformation8.mmInterbankSettlementAmount,
-					com.tools20022.repository.msg.CreditTransferTransactionInformation7.mmInterbankSettlementAmount, com.tools20022.repository.msg.CreditTransferTransactionInformation9.mmInterbankSettlementAmount,
-					com.tools20022.repository.msg.GroupHeader19.mmTotalInterbankSettlementAmount, com.tools20022.repository.msg.GroupHeader24.mmTotalInterbankSettlementAmount,
-					com.tools20022.repository.msg.GroupHeader20.mmTotalInterbankSettlementAmount, com.tools20022.repository.msg.GroupHeader25.mmTotalInterbankSettlementAmount,
-					com.tools20022.repository.msg.GroupHeader15.mmTotalInterbankSettlementAmount, com.tools20022.repository.msg.GroupHeader26.mmTotalInterbankSettlementAmount,
-					com.tools20022.repository.msg.GroupHeader17.mmTotalReturnedInterbankSettlementAmount, com.tools20022.repository.msg.GroupHeader27.mmTotalReturnedInterbankSettlementAmount,
-					com.tools20022.repository.msg.GroupHeader22.mmTotalReversedInterbankSettlementAmount, com.tools20022.repository.msg.GroupHeader28.mmTotalReversedInterbankSettlementAmount,
-					com.tools20022.repository.msg.GroupHeader16.mmTotalInterbankSettlementAmount, com.tools20022.repository.msg.GroupHeader29.mmTotalInterbankSettlementAmount,
-					com.tools20022.repository.msg.GroupHeader18.mmTotalReversedInterbankSettlementAmount, com.tools20022.repository.msg.GroupHeader30.mmTotalReversedInterbankSettlementAmount,
-					com.tools20022.repository.msg.DirectDebitTransactionInformation5.mmInterbankSettlementAmount, com.tools20022.repository.msg.DirectDebitTransactionInformation7.mmInterbankSettlementAmount,
-					com.tools20022.repository.msg.DirectDebitTransactionInformation6.mmInterbankSettlementAmount, com.tools20022.repository.msg.DirectDebitTransactionInformation8.mmInterbankSettlementAmount,
-					com.tools20022.repository.msg.GroupHeader21.mmTotalReturnedInterbankSettlementAmount, com.tools20022.repository.msg.PaymentSearch5.mmInterbankSettlementAmount,
-					com.tools20022.repository.msg.PaymentInstruction14.mmInterbankSettlementAmount, com.tools20022.repository.msg.PaymentComplementaryInformation4.mmInterbankSettlementAmount,
-					com.tools20022.repository.msg.PaymentTransaction50.mmOriginalInterbankSettlementAmount, com.tools20022.repository.msg.PaymentTransaction50.mmReturnedInterbankSettlementAmount,
-					com.tools20022.repository.msg.CreditTransferTransaction17.mmInterbankSettlementAmount, com.tools20022.repository.msg.CreditTransferTransaction19.mmInterbankSettlementAmount,
-					com.tools20022.repository.msg.DirectDebitTransactionInformation17.mmInterbankSettlementAmount, com.tools20022.repository.msg.PaymentTransaction51.mmOriginalInterbankSettlementAmount,
-					com.tools20022.repository.msg.PaymentTransaction51.mmReversedInterbankSettlementAmount, com.tools20022.repository.msg.RequestedModification4.mmInterbankSettlementAmount,
-					com.tools20022.repository.msg.PaymentTransaction53.mmOriginalInterbankSettlementAmount, com.tools20022.repository.msg.OriginalTransactionReference20.mmInterbankSettlementAmount,
-					com.tools20022.repository.msg.PaymentTransaction55.mmOriginalInterbankSettlementAmount, com.tools20022.repository.msg.SecuritiesTransaction1.mmUpFrontPayment,
-					com.tools20022.repository.msg.CreditTransferTransaction23.mmInterbankSettlementAmount, com.tools20022.repository.msg.GroupHeader70.mmTotalInterbankSettlementAmount,
-					com.tools20022.repository.msg.RequestedModification5.mmInterbankSettlementAmount, com.tools20022.repository.msg.CreditTransferTransaction25.mmInterbankSettlementAmount,
-					com.tools20022.repository.msg.GroupHeader72.mmTotalReturnedInterbankSettlementAmount, com.tools20022.repository.msg.PaymentTransaction65.mmOriginalInterbankSettlementAmount,
-					com.tools20022.repository.msg.PaymentTransaction65.mmReturnedInterbankSettlementAmount, com.tools20022.repository.msg.PaymentComplementaryInformation5.mmInterbankSettlementAmount,
-					com.tools20022.repository.msg.DirectDebitTransactionInformation20.mmInterbankSettlementAmount, com.tools20022.repository.msg.PaymentTransaction60.mmOriginalInterbankSettlementAmount,
-					com.tools20022.repository.msg.PaymentTransaction60.mmReversedInterbankSettlementAmount, com.tools20022.repository.msg.GroupHeader71.mmTotalReversedInterbankSettlementAmount,
-					com.tools20022.repository.msg.OriginalTransactionReference22.mmInterbankSettlementAmount, com.tools20022.repository.msg.PaymentTransaction67.mmOriginalInterbankSettlementAmount,
-					com.tools20022.repository.msg.PaymentTransaction62.mmOriginalInterbankSettlementAmount, com.tools20022.repository.msg.DirectDebitTransactionInformation21.mmInterbankSettlementAmount,
-					com.tools20022.repository.msg.PaymentTransaction81.mmOriginalInterbankSettlementAmount, com.tools20022.repository.msg.PaymentTransaction81.mmReversedInterbankSettlementAmount,
-					com.tools20022.repository.msg.RequestedModification6.mmInterbankSettlementAmount, com.tools20022.repository.msg.PaymentTransaction76.mmOriginalInterbankSettlementAmount,
-					com.tools20022.repository.msg.PaymentTransaction76.mmReturnedInterbankSettlementAmount, com.tools20022.repository.msg.OriginalTransactionReference24.mmInterbankSettlementAmount,
-					com.tools20022.repository.msg.PaymentTransaction75.mmOriginalInterbankSettlementAmount, com.tools20022.repository.msg.PaymentTransaction79.mmOriginalInterbankSettlementAmount,
-					com.tools20022.repository.msg.PaymentComplementaryInformation6.mmInterbankSettlementAmount);
+			derivation_lazy = () -> Arrays.asList(PaymentInstructionReference1Details.mmInterbankSettlementAmount, PaymentInstructionReference2Details.mmInterbankSettlementAmount,
+					PaymentInstructionReferenceDetails3.mmInterbankSettlementAmount, PaymentInstructionReferenceDetails4.mmInterbankSettlementAmount, LongPaymentIdentification1.mmInterBankSettlementAmount,
+					PaymentSearch2.mmInterbankSettlementAmount, PaymentSearch3.mmInterbankSettlementAmount, PaymentSearch4.mmInterbankSettlementAmount, PaymentDetails5.mmInterbankSettlementAmount,
+					PaymentDetails6.mmInterbankSettlementAmount, PaymentDetails7.mmInterbankSettlementAmount, PaymentInstruction1.mmInterbankSettlementAmount, OriginalTransactionReference1.mmInterbankSettlementAmount,
+					PaymentTransactionInformation3.mmOriginalInterbankSettlementAmount, OriginalTransactionReference13.mmInterbankSettlementAmount, OriginalTransactionReference16.mmInterbankSettlementAmount,
+					GroupHeader2.mmTotalInterbankSettlementAmount, CreditTransferTransactionInformation2.mmInterbankSettlementAmount, GroupHeader33.mmTotalInterbankSettlementAmount,
+					CreditTransferTransactionInformation11.mmInterbankSettlementAmount, GroupHeader49.mmTotalInterbankSettlementAmount, CreditTransferTransaction2.mmInterbankSettlementAmount,
+					CreditTransferTransaction7.mmInterbankSettlementAmount, GroupHeader3.mmTotalInterbankSettlementAmount, DirectDebitTransactionInformation2.mmInterbankSettlementAmount, GroupHeader34.mmTotalInterbankSettlementAmount,
+					DirectDebitTransactionInformation10.mmInterbankSettlementAmount, GroupHeader50.mmTotalInterbankSettlementAmount, DirectDebitTransactionInformation12.mmInterbankSettlementAmount,
+					DirectDebitTransactionInformation14.mmInterbankSettlementAmount, PaymentTransactionInformation31.mmOriginalInterbankSettlementAmount, PaymentTransaction38.mmOriginalInterbankSettlementAmount,
+					PaymentTransaction48.mmOriginalInterbankSettlementAmount, GroupHeader9.mmTotalReversedInterbankSettlementAmount, PaymentTransactionInformation5.mmOriginalInterbankSettlementAmount,
+					PaymentTransactionInformation5.mmReversedInterbankSettlementAmount, GroupHeader41.mmTotalReversedInterbankSettlementAmount, PaymentTransactionInformation29.mmOriginalInterbankSettlementAmount,
+					PaymentTransactionInformation29.mmReversedInterbankSettlementAmount, GroupHeader57.mmTotalReversedInterbankSettlementAmount, PaymentTransaction36.mmOriginalInterbankSettlementAmount,
+					PaymentTransaction36.mmReversedInterbankSettlementAmount, PaymentTransaction45.mmOriginalInterbankSettlementAmount, PaymentTransaction45.mmReversedInterbankSettlementAmount,
+					GroupHeader4.mmTotalInterbankSettlementAmount, CreditTransferTransactionInformation3.mmInterbankSettlementAmount, GroupHeader35.mmTotalInterbankSettlementAmount,
+					CreditTransferTransactionInformation13.mmInterbankSettlementAmount, GroupHeader51.mmTotalInterbankSettlementAmount, CreditTransferTransaction4.mmInterbankSettlementAmount,
+					CreditTransferTransaction8.mmInterbankSettlementAmount, GroupHeader6.mmTotalReturnedInterbankSettlementAmount, PaymentTransactionInformation2.mmOriginalInterbankSettlementAmount,
+					PaymentTransactionInformation2.mmReturnedInterbankSettlementAmount, GroupHeader38.mmTotalReturnedInterbankSettlementAmount, PaymentTransactionInformation27.mmOriginalInterbankSettlementAmount,
+					PaymentTransactionInformation27.mmReturnedInterbankSettlementAmount, GroupHeader54.mmTotalReturnedInterbankSettlementAmount, PaymentTransaction34.mmOriginalInterbankSettlementAmount,
+					PaymentTransaction34.mmReturnedInterbankSettlementAmount, PaymentTransaction44.mmOriginalInterbankSettlementAmount, PaymentTransaction44.mmReturnedInterbankSettlementAmount,
+					OriginalTransactionReference15.mmInterbankSettlementAmount, OriginalTransactionReference17.mmInterbankSettlementAmount, RequestedModification.mmInterbankSettledAmount,
+					PaymentInstructionExtract2.mmInterbankSettlementAmount, ReturnInformation1.mmReturnedInterbankSettlementAmount, CorrectivePaymentInstructionExtract.mmInterbankSettlementAmount,
+					UnderlyingPaymentTransaction1.mmOriginalInterbankSettlementAmount, RequestedModification2.mmInterbankSettlementAmount, PaymentComplementaryInformation2.mmInterbankSettlementAmount,
+					ResolutionInformation1.mmInterbankSettlementAmount, PaymentTransactionInformation33.mmOriginalInterbankSettlementAmount, CorrectiveInterbankTransaction1.mmInterbankSettlementAmount,
+					UnderlyingPaymentTransaction2.mmOriginalInterbankSettlementAmount, PaymentComplementaryInformation3.mmInterbankSettlementAmount, PaymentTransaction40.mmOriginalInterbankSettlementAmount,
+					RequestedModification3.mmInterbankSettlementAmount, DirectDebitTransactionInformation15.mmInterbankSettlementAmount, CreditTransferTransaction9.mmTotalInterbankSettlementAmount,
+					PaymentTransactionInformation13.mmOriginalInterbankSettlementAmount, PaymentTransactionInformation13.mmReturnedInterbankSettlementAmount, PaymentTransactionInformation18.mmOriginalInterbankSettlementAmount,
+					PaymentTransactionInformation18.mmReturnedInterbankSettlementAmount, OriginalTransactionReference9.mmInterbankSettlementAmount, OriginalTransactionReference12.mmInterbankSettlementAmount,
+					OriginalTransactionReference8.mmInterbankSettlementAmount, OriginalTransactionReference11.mmInterbankSettlementAmount, PaymentTransactionInformation14.mmOriginalInterbankSettlementAmount,
+					PaymentTransactionInformation14.mmReversedInterbankSettlementAmount, PaymentTransactionInformation20.mmOriginalInterbankSettlementAmount, PaymentTransactionInformation20.mmReversedInterbankSettlementAmount,
+					PaymentTransactionInformation16.mmOriginalInterbankSettlementAmount, PaymentTransactionInformation16.mmReturnedInterbankSettlementAmount, PaymentTransactionInformation23.mmOriginalInterbankSettlementAmount,
+					PaymentTransactionInformation23.mmReturnedInterbankSettlementAmount, PaymentTransactionInformation17.mmOriginalInterbankSettlementAmount, PaymentTransactionInformation17.mmReversedInterbankSettlementAmount,
+					PaymentTransactionInformation24.mmOriginalInterbankSettlementAmount, PaymentTransactionInformation24.mmReversedInterbankSettlementAmount, PaymentTransactionInformation21.mmOriginalInterbankSettlementAmount,
+					PaymentTransactionInformation21.mmReturnedInterbankSettlementAmount, CreditTransferTransactionInformation6.mmInterbankSettlementAmount, CreditTransferTransactionInformation8.mmInterbankSettlementAmount,
+					CreditTransferTransactionInformation7.mmInterbankSettlementAmount, CreditTransferTransactionInformation9.mmInterbankSettlementAmount, GroupHeader19.mmTotalInterbankSettlementAmount,
+					GroupHeader24.mmTotalInterbankSettlementAmount, GroupHeader20.mmTotalInterbankSettlementAmount, GroupHeader25.mmTotalInterbankSettlementAmount, GroupHeader15.mmTotalInterbankSettlementAmount,
+					GroupHeader26.mmTotalInterbankSettlementAmount, GroupHeader17.mmTotalReturnedInterbankSettlementAmount, GroupHeader27.mmTotalReturnedInterbankSettlementAmount, GroupHeader22.mmTotalReversedInterbankSettlementAmount,
+					GroupHeader28.mmTotalReversedInterbankSettlementAmount, GroupHeader16.mmTotalInterbankSettlementAmount, GroupHeader29.mmTotalInterbankSettlementAmount, GroupHeader18.mmTotalReversedInterbankSettlementAmount,
+					GroupHeader30.mmTotalReversedInterbankSettlementAmount, DirectDebitTransactionInformation5.mmInterbankSettlementAmount, DirectDebitTransactionInformation7.mmInterbankSettlementAmount,
+					DirectDebitTransactionInformation6.mmInterbankSettlementAmount, DirectDebitTransactionInformation8.mmInterbankSettlementAmount, GroupHeader21.mmTotalReturnedInterbankSettlementAmount,
+					PaymentSearch5.mmInterbankSettlementAmount, PaymentInstruction14.mmInterbankSettlementAmount, PaymentComplementaryInformation4.mmInterbankSettlementAmount, PaymentTransaction50.mmOriginalInterbankSettlementAmount,
+					PaymentTransaction50.mmReturnedInterbankSettlementAmount, CreditTransferTransaction17.mmInterbankSettlementAmount, CreditTransferTransaction19.mmInterbankSettlementAmount,
+					DirectDebitTransactionInformation17.mmInterbankSettlementAmount, PaymentTransaction51.mmOriginalInterbankSettlementAmount, PaymentTransaction51.mmReversedInterbankSettlementAmount,
+					RequestedModification4.mmInterbankSettlementAmount, PaymentTransaction53.mmOriginalInterbankSettlementAmount, OriginalTransactionReference20.mmInterbankSettlementAmount,
+					PaymentTransaction55.mmOriginalInterbankSettlementAmount, SecuritiesTransaction1.mmUpFrontPayment, CreditTransferTransaction23.mmInterbankSettlementAmount, GroupHeader70.mmTotalInterbankSettlementAmount,
+					RequestedModification5.mmInterbankSettlementAmount, CreditTransferTransaction25.mmInterbankSettlementAmount, GroupHeader72.mmTotalReturnedInterbankSettlementAmount,
+					PaymentTransaction65.mmOriginalInterbankSettlementAmount, PaymentTransaction65.mmReturnedInterbankSettlementAmount, PaymentComplementaryInformation5.mmInterbankSettlementAmount,
+					DirectDebitTransactionInformation20.mmInterbankSettlementAmount, PaymentTransaction60.mmOriginalInterbankSettlementAmount, PaymentTransaction60.mmReversedInterbankSettlementAmount,
+					GroupHeader71.mmTotalReversedInterbankSettlementAmount, OriginalTransactionReference22.mmInterbankSettlementAmount, PaymentTransaction67.mmOriginalInterbankSettlementAmount,
+					PaymentTransaction62.mmOriginalInterbankSettlementAmount, DirectDebitTransactionInformation21.mmInterbankSettlementAmount, PaymentTransaction81.mmOriginalInterbankSettlementAmount,
+					PaymentTransaction81.mmReversedInterbankSettlementAmount, RequestedModification6.mmInterbankSettlementAmount, PaymentTransaction76.mmOriginalInterbankSettlementAmount,
+					PaymentTransaction76.mmReturnedInterbankSettlementAmount, OriginalTransactionReference24.mmInterbankSettlementAmount, PaymentTransaction75.mmOriginalInterbankSettlementAmount,
+					PaymentTransaction79.mmOriginalInterbankSettlementAmount, PaymentComplementaryInformation6.mmInterbankSettlementAmount);
 			elementContext_lazy = () -> CashSettlement.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InterbankSettlementAmount";
 			definition = "Amount of money moved between the instructing agent and the instructed agent.";
 			maxOccurs = 1;
@@ -1298,75 +1269,47 @@ public class CashSettlement extends Settlement {
 	 */
 	public static final MMBusinessAttribute mmInterbankSettlementDate = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentInstructionReference1Details.mmInterbankValueDate, com.tools20022.repository.msg.PaymentInstructionReference2Details.mmInterbankValueDate,
-					com.tools20022.repository.msg.PaymentInstructionReferenceDetails3.mmInterbankValueDate, com.tools20022.repository.msg.PaymentInstructionReferenceDetails4.mmInterbankValueDate,
-					com.tools20022.repository.msg.LongPaymentIdentification1.mmInterBankSettlementDate, com.tools20022.repository.msg.ShortPaymentIdentification1.mmInterBankSettlementDate,
-					com.tools20022.repository.msg.PaymentSearch4.mmInterbankSettlementDate, com.tools20022.repository.msg.PaymentDetails5.mmInterbankValueDate, com.tools20022.repository.msg.PaymentDetails6.mmInterbankValueDate,
-					com.tools20022.repository.msg.PaymentDetails7.mmInterbankValueDate, com.tools20022.repository.msg.PaymentInstruction1.mmInterbankSettlementDate, com.tools20022.repository.msg.TransactionDates1.mmInterbankSettlementDate,
-					com.tools20022.repository.msg.TransactionDates2.mmInterbankSettlementDate, com.tools20022.repository.msg.OriginalTransactionReference1.mmInterbankSettlementDate,
-					com.tools20022.repository.msg.OriginalTransactionReference13.mmInterbankSettlementDate, com.tools20022.repository.msg.OriginalTransactionReference16.mmInterbankSettlementDate,
-					com.tools20022.repository.msg.GroupHeader2.mmInterbankSettlementDate, com.tools20022.repository.msg.CreditTransferTransactionInformation2.mmInterbankSettlementDate,
-					com.tools20022.repository.msg.GroupHeader33.mmInterbankSettlementDate, com.tools20022.repository.msg.CreditTransferTransactionInformation11.mmInterbankSettlementDate,
-					com.tools20022.repository.msg.GroupHeader49.mmInterbankSettlementDate, com.tools20022.repository.msg.CreditTransferTransaction2.mmInterbankSettlementDate,
-					com.tools20022.repository.msg.CreditTransferTransaction7.mmInterbankSettlementDate, com.tools20022.repository.msg.GroupHeader3.mmInterbankSettlementDate,
-					com.tools20022.repository.msg.DirectDebitTransactionInformation2.mmInterbankSettlementDate, com.tools20022.repository.msg.GroupHeader34.mmInterbankSettlementDate,
-					com.tools20022.repository.msg.DirectDebitTransactionInformation10.mmInterbankSettlementDate, com.tools20022.repository.msg.GroupHeader50.mmInterbankSettlementDate,
-					com.tools20022.repository.msg.DirectDebitTransactionInformation12.mmInterbankSettlementDate, com.tools20022.repository.msg.DirectDebitTransactionInformation14.mmInterbankSettlementDate,
-					com.tools20022.repository.msg.PaymentTransaction38.mmOriginalInterbankSettlementDate, com.tools20022.repository.msg.PaymentTransaction48.mmOriginalInterbankSettlementDate,
-					com.tools20022.repository.msg.GroupHeader9.mmInterbankSettlementDate, com.tools20022.repository.msg.PaymentTransactionInformation5.mmInterbankSettlementDate,
-					com.tools20022.repository.msg.GroupHeader41.mmInterbankSettlementDate, com.tools20022.repository.msg.PaymentTransactionInformation29.mmInterbankSettlementDate,
-					com.tools20022.repository.msg.GroupHeader57.mmInterbankSettlementDate, com.tools20022.repository.msg.PaymentTransaction36.mmInterbankSettlementDate,
-					com.tools20022.repository.msg.PaymentTransaction45.mmInterbankSettlementDate, com.tools20022.repository.msg.GroupHeader4.mmInterbankSettlementDate,
-					com.tools20022.repository.msg.CreditTransferTransactionInformation3.mmInterbankSettlementDate, com.tools20022.repository.msg.GroupHeader35.mmInterbankSettlementDate,
-					com.tools20022.repository.msg.CreditTransferTransactionInformation13.mmInterbankSettlementDate, com.tools20022.repository.msg.GroupHeader51.mmInterbankSettlementDate,
-					com.tools20022.repository.msg.CreditTransferTransaction4.mmInterbankSettlementDate, com.tools20022.repository.msg.CreditTransferTransaction8.mmInterbankSettlementDate,
-					com.tools20022.repository.msg.GroupHeader6.mmInterbankSettlementDate, com.tools20022.repository.msg.PaymentTransactionInformation2.mmInterbankSettlementDate,
-					com.tools20022.repository.msg.GroupHeader38.mmInterbankSettlementDate, com.tools20022.repository.msg.PaymentTransactionInformation27.mmInterbankSettlementDate,
-					com.tools20022.repository.msg.GroupHeader54.mmInterbankSettlementDate, com.tools20022.repository.msg.PaymentTransaction34.mmInterbankSettlementDate,
-					com.tools20022.repository.msg.PaymentTransaction44.mmInterbankSettlementDate, com.tools20022.repository.msg.OriginalTransactionReference15.mmInterbankSettlementDate,
-					com.tools20022.repository.msg.OriginalTransactionReference17.mmInterbankSettlementDate, com.tools20022.repository.msg.CashInForecast2.mmSettlementDate, com.tools20022.repository.msg.CashOutForecast2.mmSettlementDate,
-					com.tools20022.repository.msg.CashInForecast4.mmCashSettlementDate, com.tools20022.repository.msg.CashOutForecast4.mmCashSettlementDate, com.tools20022.repository.msg.CashInForecast1.mmSettlementDate,
-					com.tools20022.repository.msg.CashOutForecast1.mmSettlementDate, com.tools20022.repository.msg.CashInForecast3.mmCashSettlementDate, com.tools20022.repository.msg.CashOutForecast3.mmCashSettlementDate,
-					com.tools20022.repository.msg.PaymentInstructionExtract2.mmInterbankSettlementDate, com.tools20022.repository.msg.ReturnInformation1.mmInterbankSettlementDate,
-					com.tools20022.repository.msg.CorrectivePaymentInstructionExtract.mmInterbankSettlementDate, com.tools20022.repository.msg.UnderlyingPaymentTransaction1.mmOriginalInterbankSettlementDate,
-					com.tools20022.repository.msg.RequestedModification2.mmInterbankSettlementDate, com.tools20022.repository.msg.PaymentComplementaryInformation2.mmInterbankSettlementDate,
-					com.tools20022.repository.msg.ResolutionInformation1.mmInterbankSettlementDate, com.tools20022.repository.msg.PaymentTransactionInformation33.mmOriginalInterbankSettlementDate,
-					com.tools20022.repository.msg.CorrectiveInterbankTransaction1.mmInterbankSettlementDate, com.tools20022.repository.msg.UnderlyingPaymentTransaction2.mmOriginalInterbankSettlementDate,
-					com.tools20022.repository.msg.PaymentComplementaryInformation3.mmInterbankSettlementDate, com.tools20022.repository.msg.PaymentTransaction40.mmOriginalInterbankSettlementDate,
-					com.tools20022.repository.msg.RequestedModification3.mmInterbankSettlementDate, com.tools20022.repository.msg.DirectDebitTransactionInformation15.mmInterbankSettlementDate,
-					com.tools20022.repository.msg.CreditTransferTransaction9.mmInterbankSettlementDate, com.tools20022.repository.msg.OriginalTransactionReference7.mmInterbankSettlementDate,
-					com.tools20022.repository.msg.OriginalTransactionReference10.mmInterbankSettlementDate, com.tools20022.repository.msg.OriginalTransactionReference9.mmInterbankSettlementDate,
-					com.tools20022.repository.msg.OriginalTransactionReference12.mmInterbankSettlementDate, com.tools20022.repository.msg.OriginalTransactionReference8.mmInterbankSettlementDate,
-					com.tools20022.repository.msg.OriginalTransactionReference11.mmInterbankSettlementDate, com.tools20022.repository.msg.PaymentTransactionInformation16.mmInterbankSettlementDate,
-					com.tools20022.repository.msg.PaymentTransactionInformation17.mmInterbankSettlementDate, com.tools20022.repository.msg.PaymentTransactionInformation21.mmInterbankSettlementDate,
-					com.tools20022.repository.msg.CreditTransferTransactionInformation7.mmInterbankSettlementDate, com.tools20022.repository.msg.GroupHeader19.mmInterbankSettlementDate,
-					com.tools20022.repository.msg.GroupHeader24.mmInterbankSettlementDate, com.tools20022.repository.msg.GroupHeader20.mmInterbankSettlementDate, com.tools20022.repository.msg.GroupHeader25.mmInterbankSettlementDate,
-					com.tools20022.repository.msg.GroupHeader15.mmInterbankSettlementDate, com.tools20022.repository.msg.GroupHeader26.mmInterbankSettlementDate, com.tools20022.repository.msg.GroupHeader17.mmInterbankSettlementDate,
-					com.tools20022.repository.msg.GroupHeader27.mmInterbankSettlementDate, com.tools20022.repository.msg.GroupHeader22.mmInterbankSettlementDate, com.tools20022.repository.msg.GroupHeader28.mmInterbankSettlementDate,
-					com.tools20022.repository.msg.GroupHeader16.mmInterbankSettlementDate, com.tools20022.repository.msg.GroupHeader29.mmInterbankSettlementDate, com.tools20022.repository.msg.GroupHeader18.mmInterbankSettlementDate,
-					com.tools20022.repository.msg.GroupHeader30.mmInterbankSettlementDate, com.tools20022.repository.msg.DirectDebitTransactionInformation6.mmInterbankSettlementDate,
-					com.tools20022.repository.msg.GroupHeader21.mmInterbankSettlementDate, com.tools20022.repository.msg.IntraBalance2.mmSettlementDate, com.tools20022.repository.msg.IntraBalance1.mmSettlementDate,
-					com.tools20022.repository.msg.PaymentSearch5.mmInterbankSettlementDate, com.tools20022.repository.msg.PaymentInstruction14.mmInterbankSettlementDate, com.tools20022.repository.msg.CashOutForecast5.mmCashSettlementDate,
-					com.tools20022.repository.msg.CashInForecast5.mmCashSettlementDate, com.tools20022.repository.msg.CashOutForecast6.mmCashSettlementDate, com.tools20022.repository.msg.CashInForecast6.mmCashSettlementDate,
-					com.tools20022.repository.msg.PaymentComplementaryInformation4.mmInterbankSettlementDate, com.tools20022.repository.msg.PaymentTransaction50.mmInterbankSettlementDate,
-					com.tools20022.repository.msg.CreditTransferTransaction17.mmInterbankSettlementDate, com.tools20022.repository.msg.CreditTransferTransaction19.mmInterbankSettlementDate,
-					com.tools20022.repository.msg.DirectDebitTransactionInformation17.mmInterbankSettlementDate, com.tools20022.repository.msg.PaymentTransaction51.mmInterbankSettlementDate,
-					com.tools20022.repository.msg.RequestedModification4.mmInterbankSettlementDate, com.tools20022.repository.msg.PaymentTransaction53.mmOriginalInterbankSettlementDate,
-					com.tools20022.repository.msg.OriginalTransactionReference20.mmInterbankSettlementDate, com.tools20022.repository.msg.PaymentTransaction55.mmOriginalInterbankSettlementDate,
-					com.tools20022.repository.msg.CashInOutForecast7.mmCashSettlementDate, com.tools20022.repository.msg.CreditTransferTransaction23.mmInterbankSettlementDate,
-					com.tools20022.repository.msg.GroupHeader70.mmInterbankSettlementDate, com.tools20022.repository.msg.RequestedModification5.mmInterbankSettlementDate,
-					com.tools20022.repository.msg.CreditTransferTransaction25.mmInterbankSettlementDate, com.tools20022.repository.msg.GroupHeader72.mmInterbankSettlementDate,
-					com.tools20022.repository.msg.PaymentTransaction65.mmInterbankSettlementDate, com.tools20022.repository.msg.PaymentComplementaryInformation5.mmInterbankSettlementDate,
-					com.tools20022.repository.msg.DirectDebitTransactionInformation20.mmInterbankSettlementDate, com.tools20022.repository.msg.PaymentTransaction60.mmInterbankSettlementDate,
-					com.tools20022.repository.msg.GroupHeader71.mmInterbankSettlementDate, com.tools20022.repository.msg.OriginalTransactionReference22.mmInterbankSettlementDate,
-					com.tools20022.repository.msg.PaymentTransaction67.mmOriginalInterbankSettlementDate, com.tools20022.repository.msg.PaymentTransaction62.mmOriginalInterbankSettlementDate,
-					com.tools20022.repository.msg.DirectDebitTransactionInformation21.mmInterbankSettlementDate, com.tools20022.repository.msg.PaymentTransaction81.mmInterbankSettlementDate,
-					com.tools20022.repository.msg.RequestedModification6.mmInterbankSettlementDate, com.tools20022.repository.msg.PaymentTransaction76.mmInterbankSettlementDate,
-					com.tools20022.repository.msg.OriginalTransactionReference24.mmInterbankSettlementDate, com.tools20022.repository.msg.PaymentTransaction75.mmOriginalInterbankSettlementDate,
-					com.tools20022.repository.msg.PaymentTransaction79.mmOriginalInterbankSettlementDate, com.tools20022.repository.msg.PaymentComplementaryInformation6.mmInterbankSettlementDate);
+			derivation_lazy = () -> Arrays.asList(PaymentInstructionReference1Details.mmInterbankValueDate, PaymentInstructionReference2Details.mmInterbankValueDate, PaymentInstructionReferenceDetails3.mmInterbankValueDate,
+					PaymentInstructionReferenceDetails4.mmInterbankValueDate, LongPaymentIdentification1.mmInterBankSettlementDate, ShortPaymentIdentification1.mmInterBankSettlementDate, PaymentSearch4.mmInterbankSettlementDate,
+					PaymentDetails5.mmInterbankValueDate, PaymentDetails6.mmInterbankValueDate, PaymentDetails7.mmInterbankValueDate, PaymentInstruction1.mmInterbankSettlementDate, TransactionDates1.mmInterbankSettlementDate,
+					TransactionDates2.mmInterbankSettlementDate, OriginalTransactionReference1.mmInterbankSettlementDate, OriginalTransactionReference13.mmInterbankSettlementDate, OriginalTransactionReference16.mmInterbankSettlementDate,
+					GroupHeader2.mmInterbankSettlementDate, CreditTransferTransactionInformation2.mmInterbankSettlementDate, GroupHeader33.mmInterbankSettlementDate, CreditTransferTransactionInformation11.mmInterbankSettlementDate,
+					GroupHeader49.mmInterbankSettlementDate, CreditTransferTransaction2.mmInterbankSettlementDate, CreditTransferTransaction7.mmInterbankSettlementDate, GroupHeader3.mmInterbankSettlementDate,
+					DirectDebitTransactionInformation2.mmInterbankSettlementDate, GroupHeader34.mmInterbankSettlementDate, DirectDebitTransactionInformation10.mmInterbankSettlementDate, GroupHeader50.mmInterbankSettlementDate,
+					DirectDebitTransactionInformation12.mmInterbankSettlementDate, DirectDebitTransactionInformation14.mmInterbankSettlementDate, PaymentTransaction38.mmOriginalInterbankSettlementDate,
+					PaymentTransaction48.mmOriginalInterbankSettlementDate, GroupHeader9.mmInterbankSettlementDate, PaymentTransactionInformation5.mmInterbankSettlementDate, GroupHeader41.mmInterbankSettlementDate,
+					PaymentTransactionInformation29.mmInterbankSettlementDate, GroupHeader57.mmInterbankSettlementDate, PaymentTransaction36.mmInterbankSettlementDate, PaymentTransaction45.mmInterbankSettlementDate,
+					GroupHeader4.mmInterbankSettlementDate, CreditTransferTransactionInformation3.mmInterbankSettlementDate, GroupHeader35.mmInterbankSettlementDate, CreditTransferTransactionInformation13.mmInterbankSettlementDate,
+					GroupHeader51.mmInterbankSettlementDate, CreditTransferTransaction4.mmInterbankSettlementDate, CreditTransferTransaction8.mmInterbankSettlementDate, GroupHeader6.mmInterbankSettlementDate,
+					PaymentTransactionInformation2.mmInterbankSettlementDate, GroupHeader38.mmInterbankSettlementDate, PaymentTransactionInformation27.mmInterbankSettlementDate, GroupHeader54.mmInterbankSettlementDate,
+					PaymentTransaction34.mmInterbankSettlementDate, PaymentTransaction44.mmInterbankSettlementDate, OriginalTransactionReference15.mmInterbankSettlementDate, OriginalTransactionReference17.mmInterbankSettlementDate,
+					CashInForecast2.mmSettlementDate, CashOutForecast2.mmSettlementDate, CashInForecast4.mmCashSettlementDate, CashOutForecast4.mmCashSettlementDate, CashInForecast1.mmSettlementDate, CashOutForecast1.mmSettlementDate,
+					CashInForecast3.mmCashSettlementDate, CashOutForecast3.mmCashSettlementDate, PaymentInstructionExtract2.mmInterbankSettlementDate, ReturnInformation1.mmInterbankSettlementDate,
+					CorrectivePaymentInstructionExtract.mmInterbankSettlementDate, UnderlyingPaymentTransaction1.mmOriginalInterbankSettlementDate, RequestedModification2.mmInterbankSettlementDate,
+					PaymentComplementaryInformation2.mmInterbankSettlementDate, ResolutionInformation1.mmInterbankSettlementDate, PaymentTransactionInformation33.mmOriginalInterbankSettlementDate,
+					CorrectiveInterbankTransaction1.mmInterbankSettlementDate, UnderlyingPaymentTransaction2.mmOriginalInterbankSettlementDate, PaymentComplementaryInformation3.mmInterbankSettlementDate,
+					PaymentTransaction40.mmOriginalInterbankSettlementDate, RequestedModification3.mmInterbankSettlementDate, DirectDebitTransactionInformation15.mmInterbankSettlementDate,
+					CreditTransferTransaction9.mmInterbankSettlementDate, OriginalTransactionReference7.mmInterbankSettlementDate, OriginalTransactionReference10.mmInterbankSettlementDate,
+					OriginalTransactionReference9.mmInterbankSettlementDate, OriginalTransactionReference12.mmInterbankSettlementDate, OriginalTransactionReference8.mmInterbankSettlementDate,
+					OriginalTransactionReference11.mmInterbankSettlementDate, PaymentTransactionInformation16.mmInterbankSettlementDate, PaymentTransactionInformation17.mmInterbankSettlementDate,
+					PaymentTransactionInformation21.mmInterbankSettlementDate, CreditTransferTransactionInformation7.mmInterbankSettlementDate, GroupHeader19.mmInterbankSettlementDate, GroupHeader24.mmInterbankSettlementDate,
+					GroupHeader20.mmInterbankSettlementDate, GroupHeader25.mmInterbankSettlementDate, GroupHeader15.mmInterbankSettlementDate, GroupHeader26.mmInterbankSettlementDate, GroupHeader17.mmInterbankSettlementDate,
+					GroupHeader27.mmInterbankSettlementDate, GroupHeader22.mmInterbankSettlementDate, GroupHeader28.mmInterbankSettlementDate, GroupHeader16.mmInterbankSettlementDate, GroupHeader29.mmInterbankSettlementDate,
+					GroupHeader18.mmInterbankSettlementDate, GroupHeader30.mmInterbankSettlementDate, DirectDebitTransactionInformation6.mmInterbankSettlementDate, GroupHeader21.mmInterbankSettlementDate, IntraBalance2.mmSettlementDate,
+					IntraBalance1.mmSettlementDate, PaymentSearch5.mmInterbankSettlementDate, PaymentInstruction14.mmInterbankSettlementDate, CashOutForecast5.mmCashSettlementDate, CashInForecast5.mmCashSettlementDate,
+					CashOutForecast6.mmCashSettlementDate, CashInForecast6.mmCashSettlementDate, PaymentComplementaryInformation4.mmInterbankSettlementDate, PaymentTransaction50.mmInterbankSettlementDate,
+					CreditTransferTransaction17.mmInterbankSettlementDate, CreditTransferTransaction19.mmInterbankSettlementDate, DirectDebitTransactionInformation17.mmInterbankSettlementDate,
+					PaymentTransaction51.mmInterbankSettlementDate, RequestedModification4.mmInterbankSettlementDate, PaymentTransaction53.mmOriginalInterbankSettlementDate, OriginalTransactionReference20.mmInterbankSettlementDate,
+					PaymentTransaction55.mmOriginalInterbankSettlementDate, CashInOutForecast7.mmCashSettlementDate, CreditTransferTransaction23.mmInterbankSettlementDate, GroupHeader70.mmInterbankSettlementDate,
+					RequestedModification5.mmInterbankSettlementDate, CreditTransferTransaction25.mmInterbankSettlementDate, GroupHeader72.mmInterbankSettlementDate, PaymentTransaction65.mmInterbankSettlementDate,
+					PaymentComplementaryInformation5.mmInterbankSettlementDate, DirectDebitTransactionInformation20.mmInterbankSettlementDate, PaymentTransaction60.mmInterbankSettlementDate, GroupHeader71.mmInterbankSettlementDate,
+					OriginalTransactionReference22.mmInterbankSettlementDate, PaymentTransaction67.mmOriginalInterbankSettlementDate, PaymentTransaction62.mmOriginalInterbankSettlementDate,
+					DirectDebitTransactionInformation21.mmInterbankSettlementDate, PaymentTransaction81.mmInterbankSettlementDate, RequestedModification6.mmInterbankSettlementDate, PaymentTransaction76.mmInterbankSettlementDate,
+					OriginalTransactionReference24.mmInterbankSettlementDate, PaymentTransaction75.mmOriginalInterbankSettlementDate, PaymentTransaction79.mmOriginalInterbankSettlementDate,
+					PaymentComplementaryInformation6.mmInterbankSettlementDate);
 			elementContext_lazy = () -> CashSettlement.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InterbankSettlementDate";
 			definition = "Date on which the amount of money ceases to be available to the agent that owes it and when the amount of money becomes available to the agent to which it is due.";
 			maxOccurs = 1;
@@ -1414,10 +1357,10 @@ public class CashSettlement extends Settlement {
 	 */
 	public static final MMBusinessAttribute mmRTGS = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PaymentStatusCode5Choice.mmRTGS, com.tools20022.repository.choice.PaymentStatusCode6Choice.mmRTGS);
+			derivation_lazy = () -> Arrays.asList(PaymentStatusCode5Choice.mmRTGS, PaymentStatusCode6Choice.mmRTGS);
 			elementContext_lazy = () -> CashSettlement.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RTGS";
 			definition = "Qualifies the RTGS status.";
 			maxOccurs = 1;
@@ -1467,10 +1410,10 @@ public class CashSettlement extends Settlement {
 	 */
 	public static final MMBusinessAttribute mmCreditDateTime = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SettlementDateTimeIndication1.mmCreditDateTime, com.tools20022.repository.msg.PaymentTransactionInformation31.mmOriginalInterbankSettlementDate);
+			derivation_lazy = () -> Arrays.asList(SettlementDateTimeIndication1.mmCreditDateTime, PaymentTransactionInformation31.mmOriginalInterbankSettlementDate);
 			elementContext_lazy = () -> CashSettlement.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CreditDateTime";
 			definition = "Information on the occurred settlement time(s) of the payment transaction for the credit side.";
 			maxOccurs = 1;
@@ -1517,13 +1460,13 @@ public class CashSettlement extends Settlement {
 		{
 			elementContext_lazy = () -> CashSettlement.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedPaymentInstruction";
 			definition = "PaymentInstruction which is the source of the settlement instruction.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.PaymentInstruction.mmSettlementInstruction;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.PaymentInstruction.mmObject();
 		}
 	};
@@ -1607,15 +1550,13 @@ public class CashSettlement extends Settlement {
 	 */
 	public static final MMBusinessAttribute mmSettlementMethod = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SettlementInformation3.mmSettlementMethod, com.tools20022.repository.msg.SettlementInformation1.mmSettlementMethod,
-					com.tools20022.repository.msg.SettlementInformation13.mmSettlementMethod, com.tools20022.repository.msg.SettlementInstruction4.mmSettlementMethod, com.tools20022.repository.msg.SettlementInstruction1.mmSettlementMethod,
-					com.tools20022.repository.msg.SettlementInformation2.mmSettlementMethod, com.tools20022.repository.msg.SettlementInformation14.mmSettlementMethod, com.tools20022.repository.msg.SettlementInstruction2.mmSettlementMethod,
-					com.tools20022.repository.msg.SettlementInformation16.mmSettlementMethod, com.tools20022.repository.msg.SettlementInformation10.mmSettlementMethod,
-					com.tools20022.repository.msg.SettlementInformation6.mmSettlementMethod, com.tools20022.repository.msg.SettlementInformation11.mmSettlementMethod,
-					com.tools20022.repository.msg.SettlementInformation12.mmSettlementMethod, com.tools20022.repository.msg.SettlementInformation8.mmSettlementMethod, com.tools20022.repository.msg.SettlementInformation9.mmSettlementMethod);
+			derivation_lazy = () -> Arrays.asList(SettlementInformation3.mmSettlementMethod, SettlementInformation1.mmSettlementMethod, SettlementInformation13.mmSettlementMethod, SettlementInstruction4.mmSettlementMethod,
+					SettlementInstruction1.mmSettlementMethod, SettlementInformation2.mmSettlementMethod, SettlementInformation14.mmSettlementMethod, SettlementInstruction2.mmSettlementMethod, SettlementInformation16.mmSettlementMethod,
+					SettlementInformation10.mmSettlementMethod, SettlementInformation6.mmSettlementMethod, SettlementInformation11.mmSettlementMethod, SettlementInformation12.mmSettlementMethod, SettlementInformation8.mmSettlementMethod,
+					SettlementInformation9.mmSettlementMethod);
 			elementContext_lazy = () -> CashSettlement.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SettlementMethod";
 			definition = "Method used to settle the (batch of) payment instructions.";
 			maxOccurs = 1;
@@ -1724,24 +1665,20 @@ public class CashSettlement extends Settlement {
 	 */
 	public static final MMBusinessAssociationEnd mmSettlementAccount = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LocalMarketAnnex2.mmSettlementDetails, com.tools20022.repository.msg.SettlementInformation3.mmSettlementAccount,
-					com.tools20022.repository.msg.SettlementInformation1.mmSettlementAccount, com.tools20022.repository.msg.SettlementInformation13.mmSettlementAccount,
-					com.tools20022.repository.msg.SettlementInstruction4.mmSettlementAccount, com.tools20022.repository.msg.SettlementInstruction1.mmSettlementAccount,
-					com.tools20022.repository.msg.SettlementInformation2.mmSettlementAccount, com.tools20022.repository.msg.SettlementInformation14.mmSettlementAccount,
-					com.tools20022.repository.msg.SettlementInstruction2.mmSettlementAccount, com.tools20022.repository.msg.Demand1.mmSettlementAccount, com.tools20022.repository.msg.SettlementInformation16.mmSettlementAccount,
-					com.tools20022.repository.msg.PaymentComplementaryInformation.mmNostroVostroAccount, com.tools20022.repository.msg.PaymentInformation15.mmPaymentAccount,
-					com.tools20022.repository.msg.SettlementInformation10.mmSettlementAccount, com.tools20022.repository.msg.SettlementInformation6.mmSettlementAccount,
-					com.tools20022.repository.msg.SettlementInformation11.mmSettlementAccount, com.tools20022.repository.msg.SettlementInformation12.mmSettlementAccount,
-					com.tools20022.repository.msg.SettlementInformation8.mmSettlementAccount, com.tools20022.repository.msg.SettlementInformation9.mmSettlementAccount);
+			derivation_lazy = () -> Arrays.asList(LocalMarketAnnex2.mmSettlementDetails, SettlementInformation3.mmSettlementAccount, SettlementInformation1.mmSettlementAccount, SettlementInformation13.mmSettlementAccount,
+					SettlementInstruction4.mmSettlementAccount, SettlementInstruction1.mmSettlementAccount, SettlementInformation2.mmSettlementAccount, SettlementInformation14.mmSettlementAccount,
+					SettlementInstruction2.mmSettlementAccount, Demand1.mmSettlementAccount, SettlementInformation16.mmSettlementAccount, PaymentComplementaryInformation.mmNostroVostroAccount, PaymentInformation15.mmPaymentAccount,
+					SettlementInformation10.mmSettlementAccount, SettlementInformation6.mmSettlementAccount, SettlementInformation11.mmSettlementAccount, SettlementInformation12.mmSettlementAccount,
+					SettlementInformation8.mmSettlementAccount, SettlementInformation9.mmSettlementAccount);
 			elementContext_lazy = () -> CashSettlement.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SettlementAccount";
 			definition = "A specific purpose account used to post debit and credit entries as a result of the transaction.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.CashAccount.mmRelatedSettlementInstruction;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.CashAccount.mmObject();
 		}
 	};
@@ -1784,10 +1721,10 @@ public class CashSettlement extends Settlement {
 	 */
 	public static final MMBusinessAttribute mmDebitDateTime = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SettlementDateTimeIndication1.mmDebitDateTime);
+			derivation_lazy = () -> Arrays.asList(SettlementDateTimeIndication1.mmDebitDateTime);
 			elementContext_lazy = () -> CashSettlement.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DebitDateTime";
 			definition = "Information on the occurred settlement time(s) of the payment transaction for the debit side.";
 			maxOccurs = 1;
@@ -1845,15 +1782,15 @@ public class CashSettlement extends Settlement {
 	 */
 	public static final MMBusinessAssociationEnd mmPartyRole = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BillingReport1.mmCSDOrNCB, com.tools20022.repository.msg.BillingSearchCriteria1.mmCSDOrNCB);
+			derivation_lazy = () -> Arrays.asList(BillingReport1.mmCSDOrNCB, BillingSearchCriteria1.mmCSDOrNCB);
 			elementContext_lazy = () -> CashSettlement.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PartyRole";
 			definition = "Specifies each role linked to the settlement of a payment and played by a party at that step in a payment flow.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.CashSettlementInstructionPartyRole.mmSettlementInstruction;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.CashSettlementInstructionPartyRole.mmObject();
 		}
 	};
@@ -1899,12 +1836,12 @@ public class CashSettlement extends Settlement {
 		{
 			elementContext_lazy = () -> CashSettlement.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedTransactionAdministrator";
 			definition = "Transaction administrator which manages the related settlement instructions.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.TransactionAdministrator.mmSettlementInstruction;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.TransactionAdministrator.mmObject();
 		}
 	};
@@ -1949,13 +1886,13 @@ public class CashSettlement extends Settlement {
 		{
 			elementContext_lazy = () -> CashSettlement.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BookEntry";
 			definition = "Movement of cash between two accounts in the same financial institution, resulting from the settlement of an instruction.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.BookEntry.mmRelatedSettlementInstruction;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.BookEntry.mmObject();
 		}
 	};
@@ -2001,13 +1938,13 @@ public class CashSettlement extends Settlement {
 		{
 			elementContext_lazy = () -> CashSettlement.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedInvestigationCase";
 			definition = "Case resolution which is the source of the correction of a settlement instruction.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.PaymentInvestigationCaseResolution.mmCoverCorrection;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.PaymentInvestigationCaseResolution.mmObject();
 		}
 	};
@@ -2049,13 +1986,13 @@ public class CashSettlement extends Settlement {
 		{
 			elementContext_lazy = () -> CashSettlement.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Reservation";
 			definition = "Liquidity set aside by the payer for specific purposes.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.Reservation.mmSettlementInstruction;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Reservation.mmObject();
 		}
 	};
@@ -2063,22 +2000,20 @@ public class CashSettlement extends Settlement {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CashSettlement";
 				definition = "Instruction between two financial institutions stipulating the cash transfer characteristics between the two parties.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CashAccount.mmRelatedSettlementInstruction, com.tools20022.repository.entity.PaymentInstruction.mmSettlementInstruction,
 						com.tools20022.repository.entity.TransactionAdministrator.mmSettlementInstruction, com.tools20022.repository.entity.Reservation.mmSettlementInstruction,
 						com.tools20022.repository.entity.BookEntry.mmRelatedSettlementInstruction, com.tools20022.repository.entity.CashSettlementInstructionPartyRole.mmSettlementInstruction,
 						com.tools20022.repository.entity.PaymentInvestigationCaseResolution.mmCoverCorrection);
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RequestedModification3.mmSettlementInformation, com.tools20022.repository.msg.RequestedModification4.mmSettlementInformation,
-						com.tools20022.repository.msg.RequestedModification5.mmSettlementInformation, com.tools20022.repository.msg.RequestedModification6.mmSettlementInformation);
+				derivationElement_lazy = () -> Arrays.asList(RequestedModification3.mmSettlementInformation, RequestedModification4.mmSettlementInformation, RequestedModification5.mmSettlementInformation,
+						RequestedModification6.mmSettlementInformation);
 				superType_lazy = () -> Settlement.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CashSettlement.mmInterbankSettlementAmount, com.tools20022.repository.entity.CashSettlement.mmInterbankSettlementDate,
-						com.tools20022.repository.entity.CashSettlement.mmRTGS, com.tools20022.repository.entity.CashSettlement.mmCreditDateTime, com.tools20022.repository.entity.CashSettlement.mmRelatedPaymentInstruction,
-						com.tools20022.repository.entity.CashSettlement.mmSettlementMethod, com.tools20022.repository.entity.CashSettlement.mmSettlementAccount, com.tools20022.repository.entity.CashSettlement.mmDebitDateTime,
-						com.tools20022.repository.entity.CashSettlement.mmPartyRole, com.tools20022.repository.entity.CashSettlement.mmRelatedTransactionAdministrator, com.tools20022.repository.entity.CashSettlement.mmBookEntry,
-						com.tools20022.repository.entity.CashSettlement.mmRelatedInvestigationCase, com.tools20022.repository.entity.CashSettlement.mmReservation);
+				element_lazy = () -> Arrays.asList(CashSettlement.mmInterbankSettlementAmount, CashSettlement.mmInterbankSettlementDate, CashSettlement.mmRTGS, CashSettlement.mmCreditDateTime, CashSettlement.mmRelatedPaymentInstruction,
+						CashSettlement.mmSettlementMethod, CashSettlement.mmSettlementAccount, CashSettlement.mmDebitDateTime, CashSettlement.mmPartyRole, CashSettlement.mmRelatedTransactionAdministrator, CashSettlement.mmBookEntry,
+						CashSettlement.mmRelatedInvestigationCase, CashSettlement.mmReservation);
 				derivationComponent_lazy = () -> Arrays.asList(SettlementInformation3.mmObject(), SettlementInformation1.mmObject(), SettlementInformation13.mmObject(), SettlementInstruction4.mmObject(),
 						SettlementDateTimeIndication1.mmObject(), SettlementInstruction1.mmObject(), SettlementInformation2.mmObject(), SettlementInformation14.mmObject(), SettlementInstruction2.mmObject(),
 						SettlementInformation16.mmObject(), PaymentSchemeChoice.mmObject(), ReturnInformation1.mmObject(), SettlementInformation15.mmObject(), ResolutionInformation1.mmObject(), SettlementTerms1.mmObject(),

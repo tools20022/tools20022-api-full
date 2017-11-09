@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CorporateActionFrequencyTypeV2Code;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -74,7 +76,7 @@ public class CorporateActionFrequencyType4Code extends CorporateActionFrequencyT
 	 */
 	public static final MMCode mmSpecialDividendWithReinvestment = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SpecialDividendWithReinvestment";
 			owner_lazy = () -> CorporateActionFrequencyType4Code.mmObject();
 		}
@@ -83,11 +85,11 @@ public class CorporateActionFrequencyType4Code extends CorporateActionFrequencyT
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionFrequencyType4Code";
 				definition = "Specifies the frequency type of a corporate action event. ";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CorporateActionFrequencyType4Code.mmSpecialDividendWithReinvestment);
+				code_lazy = () -> Arrays.asList(CorporateActionFrequencyType4Code.mmSpecialDividendWithReinvestment);
 				trace_lazy = () -> CorporateActionFrequencyTypeV2Code.mmObject();
 			}
 		});

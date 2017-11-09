@@ -19,8 +19,10 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max140Text;
 import com.tools20022.repository.datatype.Number;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.other.SignatureEnvelope;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -105,7 +107,7 @@ public class ApplicationSpecifics1 {
 			componentContext_lazy = () -> ApplicationSpecifics1.mmObject();
 			isDerived = false;
 			xmlTag = "SysUsr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SystemUser";
 			definition = "A system user is a user account defined in the static data. It represents an individual or an application that interacts with the system administrator (e. g. T2S), triggering the available functions. The set of functions available to each system user stems from the set of privileges for which the system user is grantee. System administrator does not provide any attribute for distinguishing between individuals and applications. \r\n";
 			maxOccurs = 1;
@@ -150,7 +152,7 @@ public class ApplicationSpecifics1 {
 			componentContext_lazy = () -> ApplicationSpecifics1.mmObject();
 			isDerived = false;
 			xmlTag = "Sgntr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Signature";
 			definition = "Contains the digital signature of the Business Entity authorised to sign this Business File.";
 			maxOccurs = 1;
@@ -192,7 +194,7 @@ public class ApplicationSpecifics1 {
 			componentContext_lazy = () -> ApplicationSpecifics1.mmObject();
 			isDerived = false;
 			xmlTag = "TtlNbOfDocs";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalNumberOfDocuments";
 			definition = "Gives the total number of instances (messages) within the file.";
 			maxOccurs = 1;
@@ -204,10 +206,9 @@ public class ApplicationSpecifics1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ApplicationSpecifics1.mmSystemUser, com.tools20022.repository.msg.ApplicationSpecifics1.mmSignature,
-						com.tools20022.repository.msg.ApplicationSpecifics1.mmTotalNumberOfDocuments);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(ApplicationSpecifics1.mmSystemUser, ApplicationSpecifics1.mmSignature, ApplicationSpecifics1.mmTotalNumberOfDocuments);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ApplicationSpecifics1";
 				definition = "Application specific information defined by the service provider.";
 			}

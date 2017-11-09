@@ -19,7 +19,11 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV01;
+import com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV02;
 import com.tools20022.repository.entity.SecuritiesTradeStatus;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.ProprietaryReason1;
 import com.tools20022.repository.msg.ProprietaryStatusAndReason1;
 import java.util.Arrays;
@@ -112,11 +116,11 @@ public class AffirmationStatus6Choice {
 	 */
 	public static final MMMessageAssociationEnd mmAffirmed = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeStatus.mmAffirmationStatus;
+			businessElementTrace_lazy = () -> SecuritiesTradeStatus.mmAffirmationStatus;
 			componentContext_lazy = () -> AffirmationStatus6Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Affrmd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Affirmed";
 			definition = "Status of affirmation of a trade.";
 			maxOccurs = 1;
@@ -160,11 +164,11 @@ public class AffirmationStatus6Choice {
 	 */
 	public static final MMMessageAssociationEnd mmUnaffirmed = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeStatus.mmAffirmationStatus;
+			businessElementTrace_lazy = () -> SecuritiesTradeStatus.mmAffirmationStatus;
 			componentContext_lazy = () -> AffirmationStatus6Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Uaffrmd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unaffirmed";
 			definition = "Trade has been unaffirmed.";
 			maxOccurs = 1;
@@ -211,11 +215,11 @@ public class AffirmationStatus6Choice {
 	 */
 	public static final MMMessageAssociationEnd mmProprietaryStatus = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeStatus.mmAffirmationStatus;
+			businessElementTrace_lazy = () -> SecuritiesTradeStatus.mmAffirmationStatus;
 			componentContext_lazy = () -> AffirmationStatus6Choice.mmObject();
 			isDerived = false;
 			xmlTag = "PrtrySts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProprietaryStatus";
 			definition = "Provides a proprietary status and a proprietary reason of the affirmation of the trade.";
 			maxOccurs = 1;
@@ -228,13 +232,11 @@ public class AffirmationStatus6Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AffirmationStatus6Choice.mmAffirmed, com.tools20022.repository.choice.AffirmationStatus6Choice.mmUnaffirmed,
-						com.tools20022.repository.choice.AffirmationStatus6Choice.mmProprietaryStatus);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV01.mmAffirmationStatus,
-						com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV02.mmAffirmationStatus);
+				messageElement_lazy = () -> Arrays.asList(AffirmationStatus6Choice.mmAffirmed, AffirmationStatus6Choice.mmUnaffirmed, AffirmationStatus6Choice.mmProprietaryStatus);
+				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesTradeConfirmationStatusAdviceV01.mmAffirmationStatus, SecuritiesTradeConfirmationStatusAdviceV02.mmAffirmationStatus);
 				trace_lazy = () -> SecuritiesTradeStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AffirmationStatus6Choice";
 				definition = "Choice of status for the affirmation.";
 			}

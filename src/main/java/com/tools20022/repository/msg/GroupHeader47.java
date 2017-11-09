@@ -20,10 +20,13 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.pain.*;
 import com.tools20022.repository.choice.Authorisation1Choice;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Max35Text;
-import com.tools20022.repository.entity.Payment;
+import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -178,11 +181,11 @@ public class GroupHeader47 {
 	 */
 	public static final MMMessageAttribute mmMessageIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentIdentification.mmExecutionIdentification;
+			businessElementTrace_lazy = () -> PaymentIdentification.mmExecutionIdentification;
 			componentContext_lazy = () -> GroupHeader47.mmObject();
 			isDerived = false;
 			xmlTag = "MsgId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageIdentification";
 			definition = "Point to point reference, as assigned by the instructing party, and sent to the instructed party, to unambiguously identify the message.\nUsage: The instructing party has to make sure that MessageIdentification is unique per instructed party for a pre-agreed period.";
 			maxOccurs = 1;
@@ -224,11 +227,11 @@ public class GroupHeader47 {
 	 */
 	public static final MMMessageAttribute mmCreationDateTime = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentExecution.mmCreationDate;
+			businessElementTrace_lazy = () -> PaymentExecution.mmCreationDate;
 			componentContext_lazy = () -> GroupHeader47.mmObject();
 			isDerived = false;
 			xmlTag = "CreDtTm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreationDateTime";
 			definition = "Date and time at which the message was created.";
 			maxOccurs = 1;
@@ -278,7 +281,7 @@ public class GroupHeader47 {
 			componentContext_lazy = () -> GroupHeader47.mmObject();
 			isDerived = false;
 			xmlTag = "Authstn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Authorisation";
 			definition = "User identification or any user key to be used to check the authority of the initiating party.\n\nUsage: The content is not of a technical nature, but reflects the organisational structure at the initiating side. The authorisation element can typically be used in relay scenarios, payment initiations, payment returns or payment reversals that are initiated on behalf of a party different from the initiating party.";
 			maxOccurs = 2;
@@ -319,11 +322,11 @@ public class GroupHeader47 {
 	 */
 	public static final MMMessageAssociationEnd mmInitiatingParty = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> GroupHeader47.mmObject();
 			isDerived = false;
 			xmlTag = "InitgPty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InitiatingParty";
 			definition = "Party that initiates the mandate message.";
 			maxOccurs = 1;
@@ -376,11 +379,11 @@ public class GroupHeader47 {
 	 */
 	public static final MMMessageAssociationEnd mmInstructingAgent = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Organisation.mmOrganisationIdentification;
+			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> GroupHeader47.mmObject();
 			isDerived = false;
 			xmlTag = "InstgAgt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructingAgent";
 			definition = "Agent that instructs the next party in the chain to carry out an instruction.\n\nUsage Rule:\nIn case of amendment and cancellation request messages, the instructing agent is the party sending the amendment and cancellation request message and not the party that sent the original mandate initiation request message.\nIn case of acceptance report message, the instructing agent is the party sending the acceptance report message and not the party that sent the original mandate request message.";
 			maxOccurs = 1;
@@ -433,11 +436,11 @@ public class GroupHeader47 {
 	 */
 	public static final MMMessageAssociationEnd mmInstructedAgent = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Organisation.mmOrganisationIdentification;
+			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> GroupHeader47.mmObject();
 			isDerived = false;
 			xmlTag = "InstdAgt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructedAgent";
 			definition = "Agent that is instructed by the previous party in the chain to carry out an instruction.\n\nUsage Rule:\nIn case of amendment and cancellation request messages, the instructed agent is the party receiving the amendment and cancellation request message and not the party that received the original mandate initiation request message.\nIn case of acceptance report message, the instructed agent is the party receiving the acceptance report message and not the party that received the original mandate request message.";
 			maxOccurs = 1;
@@ -450,21 +453,15 @@ public class GroupHeader47 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GroupHeader47.mmMessageIdentification, com.tools20022.repository.msg.GroupHeader47.mmCreationDateTime,
-						com.tools20022.repository.msg.GroupHeader47.mmAuthorisation, com.tools20022.repository.msg.GroupHeader47.mmInitiatingParty, com.tools20022.repository.msg.GroupHeader47.mmInstructingAgent,
-						com.tools20022.repository.msg.GroupHeader47.mmInstructedAgent);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.pain.MandateAcceptanceReportV02.mmGroupHeader, com.tools20022.repository.area.pain.MandateAcceptanceReportV03.mmGroupHeader,
-						com.tools20022.repository.area.pain.MandateAmendmentRequestV02.mmGroupHeader, com.tools20022.repository.area.pain.MandateAmendmentRequestV03.mmGroupHeader,
-						com.tools20022.repository.area.pain.MandateCancellationRequestV02.mmGroupHeader, com.tools20022.repository.area.pain.MandateCancellationRequestV03.mmGroupHeader,
-						com.tools20022.repository.area.pain.MandateInitiationRequestV02.mmGroupHeader, com.tools20022.repository.area.pain.MandateInitiationRequestV03.mmGroupHeader,
-						com.tools20022.repository.area.pain.MandateAmendmentRequestV04.mmGroupHeader, com.tools20022.repository.area.pain.MandateCancellationRequestV04.mmGroupHeader,
-						com.tools20022.repository.area.pain.MandateAcceptanceReportV04.mmGroupHeader, com.tools20022.repository.area.pain.MandateInitiationRequestV04.mmGroupHeader,
-						com.tools20022.repository.area.pain.MandateAcceptanceReportV05.mmGroupHeader, com.tools20022.repository.area.pain.MandateAmendmentRequestV05.mmGroupHeader,
-						com.tools20022.repository.area.pain.MandateInitiationRequestV05.mmGroupHeader, com.tools20022.repository.area.pain.MandateCancellationRequestV05.mmGroupHeader,
-						com.tools20022.repository.area.pain.MandateSuspensionRequestV01.mmGroupHeader, com.tools20022.repository.area.pain.MandateCopyRequestV01.mmGroupHeader);
+				messageElement_lazy = () -> Arrays.asList(GroupHeader47.mmMessageIdentification, GroupHeader47.mmCreationDateTime, GroupHeader47.mmAuthorisation, GroupHeader47.mmInitiatingParty, GroupHeader47.mmInstructingAgent,
+						GroupHeader47.mmInstructedAgent);
+				messageBuildingBlock_lazy = () -> Arrays.asList(MandateAcceptanceReportV02.mmGroupHeader, MandateAcceptanceReportV03.mmGroupHeader, MandateAmendmentRequestV02.mmGroupHeader, MandateAmendmentRequestV03.mmGroupHeader,
+						MandateCancellationRequestV02.mmGroupHeader, MandateCancellationRequestV03.mmGroupHeader, MandateInitiationRequestV02.mmGroupHeader, MandateInitiationRequestV03.mmGroupHeader,
+						MandateAmendmentRequestV04.mmGroupHeader, MandateCancellationRequestV04.mmGroupHeader, MandateAcceptanceReportV04.mmGroupHeader, MandateInitiationRequestV04.mmGroupHeader, MandateAcceptanceReportV05.mmGroupHeader,
+						MandateAmendmentRequestV05.mmGroupHeader, MandateInitiationRequestV05.mmGroupHeader, MandateCancellationRequestV05.mmGroupHeader, MandateSuspensionRequestV01.mmGroupHeader, MandateCopyRequestV01.mmGroupHeader);
 				trace_lazy = () -> Payment.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "GroupHeader47";
 				definition = "Set of characteristics shared by all individual transactions included in the message.";
 			}

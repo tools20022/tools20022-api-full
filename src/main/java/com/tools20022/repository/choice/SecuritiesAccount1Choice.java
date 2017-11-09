@@ -19,7 +19,9 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.SecuritiesAccount;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.SecuritiesAccount13;
 import com.tools20022.repository.msg.SecuritiesAccountRange1;
 import java.util.Arrays;
@@ -97,7 +99,7 @@ public class SecuritiesAccount1Choice {
 			componentContext_lazy = () -> SecuritiesAccount1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Rg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Range";
 			definition = "Range of identifications of the securities accounts.";
 			maxOccurs = 1;
@@ -144,7 +146,7 @@ public class SecuritiesAccount1Choice {
 			componentContext_lazy = () -> SecuritiesAccount1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Acct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Account";
 			definition = "Unique identification of the securities account.";
 			minOccurs = 1;
@@ -156,10 +158,10 @@ public class SecuritiesAccount1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SecuritiesAccount1Choice.mmRange, com.tools20022.repository.choice.SecuritiesAccount1Choice.mmAccount);
+				messageElement_lazy = () -> Arrays.asList(SecuritiesAccount1Choice.mmRange, SecuritiesAccount1Choice.mmAccount);
 				trace_lazy = () -> SecuritiesAccount.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SecuritiesAccount1Choice";
 				definition = "Specifies one or a range of securities accounts.";
 			}

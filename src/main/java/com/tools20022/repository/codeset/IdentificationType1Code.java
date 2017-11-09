@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.IdentificationTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -80,7 +82,7 @@ public class IdentificationType1Code extends IdentificationTypeCode {
 	 */
 	public static final MMCode mmBankSortCode = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BankSortCode";
 			owner_lazy = () -> IdentificationType1Code.mmObject();
 		}
@@ -103,7 +105,7 @@ public class IdentificationType1Code extends IdentificationTypeCode {
 	 */
 	public static final MMCode mmBIC = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BIC";
 			owner_lazy = () -> IdentificationType1Code.mmObject();
 		}
@@ -126,7 +128,7 @@ public class IdentificationType1Code extends IdentificationTypeCode {
 	 */
 	public static final MMCode mmCFETS = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CFETS";
 			owner_lazy = () -> IdentificationType1Code.mmObject();
 		}
@@ -135,12 +137,11 @@ public class IdentificationType1Code extends IdentificationTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "IdentificationType1Code";
 				definition = "Indicates the source of the party identification.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.IdentificationType1Code.mmBankSortCode, com.tools20022.repository.codeset.IdentificationType1Code.mmBIC,
-						com.tools20022.repository.codeset.IdentificationType1Code.mmCFETS);
+				code_lazy = () -> Arrays.asList(IdentificationType1Code.mmBankSortCode, IdentificationType1Code.mmBIC, IdentificationType1Code.mmCFETS);
 				trace_lazy = () -> IdentificationTypeCode.mmObject();
 			}
 		});

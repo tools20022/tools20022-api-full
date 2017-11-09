@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CollateralSubstitutionTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -86,7 +88,7 @@ public class CollateralSubstitutionType1Code extends CollateralSubstitutionTypeC
 	 */
 	public static final MMCode mmAgainstVariationMargin = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AgainstVariationMargin";
 			owner_lazy = () -> CollateralSubstitutionType1Code.mmObject();
 		}
@@ -109,7 +111,7 @@ public class CollateralSubstitutionType1Code extends CollateralSubstitutionTypeC
 	 */
 	public static final MMCode mmAgainstSegregatedIndependentAmount = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AgainstSegregatedIndependentAmount";
 			owner_lazy = () -> CollateralSubstitutionType1Code.mmObject();
 		}
@@ -118,13 +120,12 @@ public class CollateralSubstitutionType1Code extends CollateralSubstitutionTypeC
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("AVMG");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CollateralSubstitutionType1Code";
 				definition = "Specifies if the collateral that is substituted was posted against the variation margin or the independent amount.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CollateralSubstitutionType1Code.mmAgainstVariationMargin,
-						com.tools20022.repository.codeset.CollateralSubstitutionType1Code.mmAgainstSegregatedIndependentAmount);
+				code_lazy = () -> Arrays.asList(CollateralSubstitutionType1Code.mmAgainstVariationMargin, CollateralSubstitutionType1Code.mmAgainstSegregatedIndependentAmount);
 				trace_lazy = () -> CollateralSubstitutionTypeCode.mmObject();
 			}
 		});

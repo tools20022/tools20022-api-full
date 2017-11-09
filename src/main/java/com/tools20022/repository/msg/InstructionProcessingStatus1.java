@@ -19,9 +19,12 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.Status3Code;
 import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.entity.MeetingStatus;
+import com.tools20022.repository.entity.Status;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -113,14 +116,14 @@ public class InstructionProcessingStatus1 {
 	 */
 	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.mmInstructionProcessingStatus;
+			businessElementTrace_lazy = () -> Status.mmInstructionProcessingStatus;
 			componentContext_lazy = () -> InstructionProcessingStatus1.mmObject();
 			isDerived = false;
 			xmlTag = "Sts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Status";
 			definition = "Status on the processing of the instructions.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InstructionProcessingStatus3.mmStatus);
+			nextVersions_lazy = () -> Arrays.asList(InstructionProcessingStatus3.mmStatus);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Status3Code.mmObject();
@@ -167,10 +170,10 @@ public class InstructionProcessingStatus1 {
 			componentContext_lazy = () -> InstructionProcessingStatus1.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInformation";
 			definition = "Additional information about the status.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InstructionProcessingStatus3.mmAdditionalInformation);
+			nextVersions_lazy = () -> Arrays.asList(InstructionProcessingStatus3.mmAdditionalInformation);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
@@ -180,10 +183,10 @@ public class InstructionProcessingStatus1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InstructionProcessingStatus1.mmStatus, com.tools20022.repository.msg.InstructionProcessingStatus1.mmAdditionalInformation);
+				messageElement_lazy = () -> Arrays.asList(InstructionProcessingStatus1.mmStatus, InstructionProcessingStatus1.mmAdditionalInformation);
 				trace_lazy = () -> MeetingStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InstructionProcessingStatus1";
 				definition = "Status advising on the processing of the instruction.";
 				nextVersions_lazy = () -> Arrays.asList(InstructionProcessingStatus3.mmObject());

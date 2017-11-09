@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ValidationCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -77,7 +79,7 @@ public class Validation2Code extends ValidationCode {
 	 */
 	public static final MMCode mmValidationSuccessful = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValidationSuccessful";
 			owner_lazy = () -> Validation2Code.mmObject();
 		}
@@ -100,7 +102,7 @@ public class Validation2Code extends ValidationCode {
 	 */
 	public static final MMCode mmValidationFailed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValidationFailed";
 			owner_lazy = () -> Validation2Code.mmObject();
 		}
@@ -109,11 +111,11 @@ public class Validation2Code extends ValidationCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Validation2Code";
 				definition = "Specifies the validation of a signature used to sign the file.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Validation2Code.mmValidationSuccessful, com.tools20022.repository.codeset.Validation2Code.mmValidationFailed);
+				code_lazy = () -> Arrays.asList(Validation2Code.mmValidationSuccessful, Validation2Code.mmValidationFailed);
 				trace_lazy = () -> ValidationCode.mmObject();
 			}
 		});

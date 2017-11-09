@@ -20,9 +20,12 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.EUCapitalGain2Code;
 import com.tools20022.repository.datatype.PercentageRate;
 import com.tools20022.repository.entity.InvestmentFundTax;
+import com.tools20022.repository.entity.SecuritiesTax;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -106,11 +109,11 @@ public class TotalTaxes5 {
 	 */
 	public static final MMMessageAttribute mmEUCapitalGain = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTax.mmEUCapitalGain;
+			businessElementTrace_lazy = () -> SecuritiesTax.mmEUCapitalGain;
 			componentContext_lazy = () -> TotalTaxes5.mmObject();
 			isDerived = false;
 			xmlTag = "EUCptlGn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EUCapitalGain";
 			definition = "Specifies whether capital gain is in the scope of the European directive on taxation of savings income in the form of interest payments (Council Directive 2003/48/EC 3 June), or an income realised upon sale, a refund or redemption of shares and units, etc.";
 			maxOccurs = 1;
@@ -158,11 +161,11 @@ public class TotalTaxes5 {
 	 */
 	public static final MMMessageAttribute mmPercentageOfDebtClaim = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundTax.mmPercentageOfDebtClaim;
+			businessElementTrace_lazy = () -> InvestmentFundTax.mmPercentageOfDebtClaim;
 			componentContext_lazy = () -> TotalTaxes5.mmObject();
 			isDerived = false;
 			xmlTag = "PctgOfDebtClm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PercentageOfDebtClaim";
 			definition = "Percentage of the underlying assets of the funds that represents a debt and is in the scope of the European directive on taxation of savings income in the form of interest payments (Council Directive 2003/48/EC 3 June).";
 			maxOccurs = 1;
@@ -206,7 +209,7 @@ public class TotalTaxes5 {
 			componentContext_lazy = () -> TotalTaxes5.mmObject();
 			isDerived = false;
 			xmlTag = "TaxDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxDetails";
 			definition = "Information related to a specific tax.";
 			maxOccurs = 7;
@@ -219,10 +222,10 @@ public class TotalTaxes5 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TotalTaxes5.mmEUCapitalGain, com.tools20022.repository.msg.TotalTaxes5.mmPercentageOfDebtClaim, com.tools20022.repository.msg.TotalTaxes5.mmTaxDetails);
+				messageElement_lazy = () -> Arrays.asList(TotalTaxes5.mmEUCapitalGain, TotalTaxes5.mmPercentageOfDebtClaim, TotalTaxes5.mmTaxDetails);
 				trace_lazy = () -> InvestmentFundTax.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TotalTaxes5";
 				definition = "Information regarding the total amount of taxes.";
 			}

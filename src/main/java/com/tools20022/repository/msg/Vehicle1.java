@@ -20,11 +20,13 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CardDataReading5Code;
 import com.tools20022.repository.datatype.DecimalNumber;
 import com.tools20022.repository.datatype.Max35NumericText;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.TrueFalseIndicator;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -125,7 +127,7 @@ public class Vehicle1 {
 			componentContext_lazy = () -> Vehicle1.mmObject();
 			isDerived = false;
 			xmlTag = "VhclNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VehicleNumber";
 			definition = "Number assigned to the vehicle for identification.";
 			maxOccurs = 1;
@@ -167,7 +169,7 @@ public class Vehicle1 {
 			componentContext_lazy = () -> Vehicle1.mmObject();
 			isDerived = false;
 			xmlTag = "TrlrNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TrailerNumber";
 			definition = "Number assigned to the vehicle trailer for identification.";
 			maxOccurs = 1;
@@ -207,7 +209,7 @@ public class Vehicle1 {
 			componentContext_lazy = () -> Vehicle1.mmObject();
 			isDerived = false;
 			xmlTag = "VhclTag";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VehicleTag";
 			definition = "Registration tag of the vehicle.";
 			maxOccurs = 1;
@@ -255,7 +257,7 @@ public class Vehicle1 {
 			componentContext_lazy = () -> Vehicle1.mmObject();
 			isDerived = false;
 			xmlTag = "VhclTagNtryMd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VehicleTagEntryMode";
 			definition = "Entry mode of the registration tag.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Vehicle2.mmEntryMode);
@@ -297,7 +299,7 @@ public class Vehicle1 {
 			componentContext_lazy = () -> Vehicle1.mmObject();
 			isDerived = false;
 			xmlTag = "UnitNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnitNumber";
 			definition = "Identification of the vehicle in the fleet.";
 			maxOccurs = 1;
@@ -338,7 +340,7 @@ public class Vehicle1 {
 			componentContext_lazy = () -> Vehicle1.mmObject();
 			isDerived = false;
 			xmlTag = "RplcmntCar";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReplacementCar";
 			definition = "True if the car is a replacement car.";
 			maxOccurs = 1;
@@ -381,7 +383,7 @@ public class Vehicle1 {
 			componentContext_lazy = () -> Vehicle1.mmObject();
 			isDerived = false;
 			xmlTag = "Odmtr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Odometer";
 			definition = "Odometer reading value indicating the distance travelled by the vehicle.";
 			maxOccurs = 1;
@@ -424,7 +426,7 @@ public class Vehicle1 {
 			componentContext_lazy = () -> Vehicle1.mmObject();
 			isDerived = false;
 			xmlTag = "Hbmtr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Hubometer";
 			definition = "Hubometer reading value indicating the distance travelled by the trailer.";
 			maxOccurs = 1;
@@ -464,7 +466,7 @@ public class Vehicle1 {
 			componentContext_lazy = () -> Vehicle1.mmObject();
 			isDerived = false;
 			xmlTag = "TrlrHrs";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TrailerHours";
 			definition = "Number of hours the trailer has been in operation.";
 			maxOccurs = 1;
@@ -504,7 +506,7 @@ public class Vehicle1 {
 			componentContext_lazy = () -> Vehicle1.mmObject();
 			isDerived = false;
 			xmlTag = "RefrHrs";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReferHours";
 			definition = "Number of hours the refer unit has been in operation.";
 			maxOccurs = 1;
@@ -545,7 +547,7 @@ public class Vehicle1 {
 			componentContext_lazy = () -> Vehicle1.mmObject();
 			isDerived = false;
 			xmlTag = "MntncId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaintenanceIdentification";
 			definition = "Identification assigned to the vehicle related to maintenance.";
 			maxOccurs = 1;
@@ -584,7 +586,7 @@ public class Vehicle1 {
 			componentContext_lazy = () -> Vehicle1.mmObject();
 			isDerived = false;
 			xmlTag = "DrvrOrVhclCard";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DriverOrVehicleCard";
 			definition = "Second card presented for the payment transaction.";
 			maxOccurs = 1;
@@ -630,7 +632,7 @@ public class Vehicle1 {
 			componentContext_lazy = () -> Vehicle1.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlVhclData";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalVehicleData";
 			definition = "Additional information related to the vehicle.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Vehicle2.mmData);
@@ -643,12 +645,10 @@ public class Vehicle1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Vehicle1.mmVehicleNumber, com.tools20022.repository.msg.Vehicle1.mmTrailerNumber, com.tools20022.repository.msg.Vehicle1.mmVehicleTag,
-						com.tools20022.repository.msg.Vehicle1.mmVehicleTagEntryMode, com.tools20022.repository.msg.Vehicle1.mmUnitNumber, com.tools20022.repository.msg.Vehicle1.mmReplacementCar,
-						com.tools20022.repository.msg.Vehicle1.mmOdometer, com.tools20022.repository.msg.Vehicle1.mmHubometer, com.tools20022.repository.msg.Vehicle1.mmTrailerHours, com.tools20022.repository.msg.Vehicle1.mmReferHours,
-						com.tools20022.repository.msg.Vehicle1.mmMaintenanceIdentification, com.tools20022.repository.msg.Vehicle1.mmDriverOrVehicleCard, com.tools20022.repository.msg.Vehicle1.mmAdditionalVehicleData);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(Vehicle1.mmVehicleNumber, Vehicle1.mmTrailerNumber, Vehicle1.mmVehicleTag, Vehicle1.mmVehicleTagEntryMode, Vehicle1.mmUnitNumber, Vehicle1.mmReplacementCar, Vehicle1.mmOdometer,
+						Vehicle1.mmHubometer, Vehicle1.mmTrailerHours, Vehicle1.mmReferHours, Vehicle1.mmMaintenanceIdentification, Vehicle1.mmDriverOrVehicleCard, Vehicle1.mmAdditionalVehicleData);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Vehicle1";
 				definition = "Information related to a vehicle used during a transaction.";
 				nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Vehicle2.mmObject());

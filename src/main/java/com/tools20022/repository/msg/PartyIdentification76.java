@@ -20,9 +20,12 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.PersonOrOrganisation1Choice;
 import com.tools20022.repository.codeset.CountryCode;
 import com.tools20022.repository.entity.PartyIdentificationInformation;
+import com.tools20022.repository.entity.PostalAddress;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -125,10 +128,10 @@ public class PartyIdentification76 {
 			componentContext_lazy = () -> PartyIdentification76.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Identifies the owner of the investment account which is used to acquire or sell financial instruments.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PersonIdentification12.mmOther);
+			nextVersions_lazy = () -> Arrays.asList(PersonIdentification12.mmOther);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -182,14 +185,14 @@ public class PartyIdentification76 {
 	 */
 	public static final MMMessageAttribute mmCountryOfBranch = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PostalAddress.mmCountry;
+			businessElementTrace_lazy = () -> PostalAddress.mmCountry;
 			componentContext_lazy = () -> PartyIdentification76.mmObject();
 			isDerived = false;
 			xmlTag = "CtryOfBrnch";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CountryOfBranch";
 			definition = "Country of the branch that received the order from the client or made an investment decision for a client in accordance with a discretionary mandate given to it by the client.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PersonIdentification12.mmCountryOfBranch);
+			nextVersions_lazy = () -> Arrays.asList(PersonIdentification12.mmCountryOfBranch);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CountryCode.mmObject();
@@ -199,10 +202,10 @@ public class PartyIdentification76 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyIdentification76.mmIdentification, com.tools20022.repository.msg.PartyIdentification76.mmCountryOfBranch);
+				messageElement_lazy = () -> Arrays.asList(PartyIdentification76.mmIdentification, PartyIdentification76.mmCountryOfBranch);
 				trace_lazy = () -> PartyIdentificationInformation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PartyIdentification76";
 				definition = "Set of elements used to identify a person or an organisation.";
 				nextVersions_lazy = () -> Arrays.asList(PartyIdentification79.mmObject(), PersonIdentification12.mmObject());

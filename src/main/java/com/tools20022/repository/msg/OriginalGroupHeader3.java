@@ -20,9 +20,15 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.pacs.*;
+import com.tools20022.repository.area.pain.*;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.entity.Payment;
 import com.tools20022.repository.entity.PaymentExecution;
+import com.tools20022.repository.entity.PaymentIdentification;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -146,11 +152,11 @@ public class OriginalGroupHeader3 {
 	 */
 	public static final MMMessageAttribute mmOriginalMessageIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentIdentification.mmExecutionIdentification;
+			businessElementTrace_lazy = () -> PaymentIdentification.mmExecutionIdentification;
 			componentContext_lazy = () -> OriginalGroupHeader3.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlMsgId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalMessageIdentification";
 			definition = "Point to point reference, as assigned by the original instructing party, to unambiguously identify the original message.";
 			maxOccurs = 1;
@@ -194,7 +200,7 @@ public class OriginalGroupHeader3 {
 			componentContext_lazy = () -> OriginalGroupHeader3.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlMsgNmId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalMessageNameIdentification";
 			definition = "Specifies the original message name identifier to which the message refers.";
 			maxOccurs = 1;
@@ -237,11 +243,11 @@ public class OriginalGroupHeader3 {
 	 */
 	public static final MMMessageAttribute mmOriginalCreationDateTime = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentExecution.mmCreationDate;
+			businessElementTrace_lazy = () -> PaymentExecution.mmCreationDate;
 			componentContext_lazy = () -> OriginalGroupHeader3.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlCreDtTm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalCreationDateTime";
 			definition = "Date and time at which the original message was created.";
 			maxOccurs = 1;
@@ -283,11 +289,11 @@ public class OriginalGroupHeader3 {
 	 */
 	public static final MMMessageAssociationEnd mmReversalReasonInformation = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.mmPaymentStatus;
+			businessElementTrace_lazy = () -> Payment.mmPaymentStatus;
 			componentContext_lazy = () -> OriginalGroupHeader3.mmObject();
 			isDerived = false;
 			xmlTag = "RvslRsnInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReversalReasonInformation";
 			definition = "Provides detailed information on the reversal reason.";
 			minOccurs = 0;
@@ -299,17 +305,14 @@ public class OriginalGroupHeader3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OriginalGroupHeader3.mmOriginalMessageIdentification, com.tools20022.repository.msg.OriginalGroupHeader3.mmOriginalMessageNameIdentification,
-						com.tools20022.repository.msg.OriginalGroupHeader3.mmOriginalCreationDateTime, com.tools20022.repository.msg.OriginalGroupHeader3.mmReversalReasonInformation);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.pain.CustomerPaymentReversalV03.mmOriginalGroupInformation,
-						com.tools20022.repository.area.pain.CustomerPaymentReversalV04.mmOriginalGroupInformation, com.tools20022.repository.area.pacs.FIToFIPaymentReversalV03.mmOriginalGroupInformation,
-						com.tools20022.repository.area.pacs.FIToFIPaymentReversalV04.mmOriginalGroupInformation, com.tools20022.repository.area.pain.CustomerPaymentReversalV05.mmOriginalGroupInformation,
-						com.tools20022.repository.area.pacs.FIToFIPaymentReversalV05.mmOriginalGroupInformation, com.tools20022.repository.area.pacs.FIToFIPaymentReversalV06.mmOriginalGroupInformation,
-						com.tools20022.repository.area.pain.CustomerPaymentReversalV06.mmOriginalGroupInformation, com.tools20022.repository.area.pacs.FIToFIPaymentReversalV07.mmOriginalGroupInformation,
-						com.tools20022.repository.area.pain.CustomerPaymentReversalV07.mmOriginalGroupInformation);
+				messageElement_lazy = () -> Arrays.asList(OriginalGroupHeader3.mmOriginalMessageIdentification, OriginalGroupHeader3.mmOriginalMessageNameIdentification, OriginalGroupHeader3.mmOriginalCreationDateTime,
+						OriginalGroupHeader3.mmReversalReasonInformation);
+				messageBuildingBlock_lazy = () -> Arrays.asList(CustomerPaymentReversalV03.mmOriginalGroupInformation, CustomerPaymentReversalV04.mmOriginalGroupInformation, FIToFIPaymentReversalV03.mmOriginalGroupInformation,
+						FIToFIPaymentReversalV04.mmOriginalGroupInformation, CustomerPaymentReversalV05.mmOriginalGroupInformation, FIToFIPaymentReversalV05.mmOriginalGroupInformation, FIToFIPaymentReversalV06.mmOriginalGroupInformation,
+						CustomerPaymentReversalV06.mmOriginalGroupInformation, FIToFIPaymentReversalV07.mmOriginalGroupInformation, CustomerPaymentReversalV07.mmOriginalGroupInformation);
 				trace_lazy = () -> PaymentExecution.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OriginalGroupHeader3";
 				definition = "Provides details on the original group, to which the message refers.";
 			}

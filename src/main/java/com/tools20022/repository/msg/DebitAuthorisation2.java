@@ -20,10 +20,15 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.camt.DebitAuthorisationRequestV05;
 import com.tools20022.repository.choice.CancellationReason33Choice;
 import com.tools20022.repository.datatype.ActiveOrHistoricCurrencyAndAmount;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.Max105Text;
+import com.tools20022.repository.entity.DebitAuthorisation;
+import com.tools20022.repository.entity.PaymentStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -125,14 +130,14 @@ public class DebitAuthorisation2 {
 	 */
 	public static final MMMessageAssociationEnd mmCancellationReason = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentStatus.mmCancellationReason;
+			businessElementTrace_lazy = () -> PaymentStatus.mmCancellationReason;
 			componentContext_lazy = () -> DebitAuthorisation2.mmObject();
 			isDerived = false;
 			xmlTag = "CxlRsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationReason";
 			definition = "Specifies the reason for the cancellation request.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.DebitAuthorisation1.mmCancellationReason;
+			previousVersion_lazy = () -> DebitAuthorisation1.mmCancellationReason;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -180,14 +185,14 @@ public class DebitAuthorisation2 {
 	 */
 	public static final MMMessageAttribute mmAmountToDebit = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.DebitAuthorisation.mmAmountToDebit;
+			businessElementTrace_lazy = () -> DebitAuthorisation.mmAmountToDebit;
 			componentContext_lazy = () -> DebitAuthorisation2.mmObject();
 			isDerived = false;
 			xmlTag = "AmtToDbt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmountToDebit";
 			definition = "Amount of money requested for debit authorisation.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.DebitAuthorisation1.mmAmountToDebit;
+			previousVersion_lazy = () -> DebitAuthorisation1.mmAmountToDebit;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
@@ -233,14 +238,14 @@ public class DebitAuthorisation2 {
 	 */
 	public static final MMMessageAttribute mmValueDateToDebit = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.DebitAuthorisation.mmValueDateToDebit;
+			businessElementTrace_lazy = () -> DebitAuthorisation.mmValueDateToDebit;
 			componentContext_lazy = () -> DebitAuthorisation2.mmObject();
 			isDerived = false;
 			xmlTag = "ValDtToDbt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValueDateToDebit";
 			definition = "Value date for debiting the amount.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.DebitAuthorisation1.mmValueDateToDebit;
+			previousVersion_lazy = () -> DebitAuthorisation1.mmValueDateToDebit;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
@@ -284,10 +289,10 @@ public class DebitAuthorisation2 {
 			componentContext_lazy = () -> DebitAuthorisation2.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlCxlRsnInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalCancellationReasonInformation";
 			definition = "Further details on the cancellation request reason.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.DebitAuthorisation1.mmAdditionalCancellationReasonInformation;
+			previousVersion_lazy = () -> DebitAuthorisation1.mmAdditionalCancellationReasonInformation;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max105Text.mmObject();
 		}
@@ -296,11 +301,10 @@ public class DebitAuthorisation2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DebitAuthorisation2.mmCancellationReason, com.tools20022.repository.msg.DebitAuthorisation2.mmAmountToDebit,
-						com.tools20022.repository.msg.DebitAuthorisation2.mmValueDateToDebit, com.tools20022.repository.msg.DebitAuthorisation2.mmAdditionalCancellationReasonInformation);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.DebitAuthorisationRequestV05.mmDetail);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(DebitAuthorisation2.mmCancellationReason, DebitAuthorisation2.mmAmountToDebit, DebitAuthorisation2.mmValueDateToDebit, DebitAuthorisation2.mmAdditionalCancellationReasonInformation);
+				messageBuildingBlock_lazy = () -> Arrays.asList(DebitAuthorisationRequestV05.mmDetail);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DebitAuthorisation2";
 				definition = "Provides the reason for requesting a debit authorisation as well as the amount of the requested debit.";
 				previousVersion_lazy = () -> DebitAuthorisation1.mmObject();

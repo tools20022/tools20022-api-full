@@ -19,6 +19,9 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.catp.ATMDepositRequestV01;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -101,7 +104,7 @@ public class ATMDepositRequest1 {
 			componentContext_lazy = () -> ATMDepositRequest1.mmObject();
 			isDerived = false;
 			xmlTag = "Envt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Environment";
 			definition = "Environment in which the transaction is performed.";
 			maxOccurs = 1;
@@ -142,7 +145,7 @@ public class ATMDepositRequest1 {
 			componentContext_lazy = () -> ATMDepositRequest1.mmObject();
 			isDerived = false;
 			xmlTag = "Cntxt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Context";
 			definition = "Context in which the deposit transaction is performed.";
 			maxOccurs = 1;
@@ -183,7 +186,7 @@ public class ATMDepositRequest1 {
 			componentContext_lazy = () -> ATMDepositRequest1.mmObject();
 			isDerived = false;
 			xmlTag = "Tx";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Transaction";
 			definition = "Deposit transaction for which the service is requested.";
 			maxOccurs = 1;
@@ -196,11 +199,10 @@ public class ATMDepositRequest1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMDepositRequest1.mmEnvironment, com.tools20022.repository.msg.ATMDepositRequest1.mmContext,
-						com.tools20022.repository.msg.ATMDepositRequest1.mmTransaction);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.catp.ATMDepositRequestV01.mmATMDepositRequest);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(ATMDepositRequest1.mmEnvironment, ATMDepositRequest1.mmContext, ATMDepositRequest1.mmTransaction);
+				messageBuildingBlock_lazy = () -> Arrays.asList(ATMDepositRequestV01.mmATMDepositRequest);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ATMDepositRequest1";
 				definition = "Information related to the request of a deposit transaction from an ATM.";
 			}

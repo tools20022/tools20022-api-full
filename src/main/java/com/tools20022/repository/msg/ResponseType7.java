@@ -19,10 +19,12 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.Response4Code;
 import com.tools20022.repository.codeset.ResultDetail4Code;
 import com.tools20022.repository.datatype.Max140Text;
 import com.tools20022.repository.entity.Response;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -97,7 +99,7 @@ public class ResponseType7 {
 			componentContext_lazy = () -> ResponseType7.mmObject();
 			isDerived = false;
 			xmlTag = "Rspn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Response";
 			definition = "Result of the requested transaction.";
 			maxOccurs = 1;
@@ -138,7 +140,7 @@ public class ResponseType7 {
 			componentContext_lazy = () -> ResponseType7.mmObject();
 			isDerived = false;
 			xmlTag = "RspnRsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ResponseReason";
 			definition = "Detail of the response.";
 			maxOccurs = 1;
@@ -179,7 +181,7 @@ public class ResponseType7 {
 			componentContext_lazy = () -> ResponseType7.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlRspnInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalResponseInformation";
 			definition = "Additional information to be logged for further examination.";
 			maxOccurs = 1;
@@ -191,11 +193,10 @@ public class ResponseType7 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ResponseType7.mmResponse, com.tools20022.repository.msg.ResponseType7.mmResponseReason,
-						com.tools20022.repository.msg.ResponseType7.mmAdditionalResponseInformation);
+				messageElement_lazy = () -> Arrays.asList(ResponseType7.mmResponse, ResponseType7.mmResponseReason, ResponseType7.mmAdditionalResponseInformation);
 				trace_lazy = () -> Response.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ResponseType7";
 				definition = "Response of a requested service.";
 			}

@@ -19,9 +19,13 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ISO3NumericCountryCode;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.AcquirerRole;
+import com.tools20022.repository.entity.Party;
+import com.tools20022.repository.entity.PostalAddress;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -117,14 +121,14 @@ public class Acquirer6 {
 	 */
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> Acquirer6.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Identification of the acquirer. \r\nIt correspond to the ISO 8583 field number 32.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Acquirer7.mmAcquiringInstitution);
+			nextVersions_lazy = () -> Arrays.asList(Acquirer7.mmAcquiringInstitution);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -170,10 +174,10 @@ public class Acquirer6 {
 			componentContext_lazy = () -> Acquirer6.mmObject();
 			isDerived = false;
 			xmlTag = "Issr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Issuer";
 			definition = "Identification of the entity assigning the acquirer identification.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Acquirer7.mmBranch);
+			nextVersions_lazy = () -> Arrays.asList(Acquirer7.mmBranch);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -217,11 +221,11 @@ public class Acquirer6 {
 	 */
 	public static final MMMessageAttribute mmCountryCode = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PostalAddress.mmCountry;
+			businessElementTrace_lazy = () -> PostalAddress.mmCountry;
 			componentContext_lazy = () -> Acquirer6.mmObject();
 			isDerived = false;
 			xmlTag = "CtryCd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CountryCode";
 			definition = "Country of the acquirer. \r\nIt correspond to the ISO 8583 field number 19.";
 			maxOccurs = 1;
@@ -233,10 +237,10 @@ public class Acquirer6 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Acquirer6.mmIdentification, com.tools20022.repository.msg.Acquirer6.mmIssuer, com.tools20022.repository.msg.Acquirer6.mmCountryCode);
+				messageElement_lazy = () -> Arrays.asList(Acquirer6.mmIdentification, Acquirer6.mmIssuer, Acquirer6.mmCountryCode);
 				trace_lazy = () -> AcquirerRole.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Acquirer6";
 				definition = "Acquirer of the card transaction.";
 				nextVersions_lazy = () -> Arrays.asList(Acquirer7.mmObject());

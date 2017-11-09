@@ -17,10 +17,13 @@
 
 package com.tools20022.repository.entity;
 
-import com.tools20022.metamodel.MMBusinessAssociationEnd;
-import com.tools20022.metamodel.MMBusinessAttribute;
-import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.*;
+import com.tools20022.repository.choice.NameOrSector1Choice;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.NameAndLocation1;
+import com.tools20022.repository.msg.ReportedPartyIdentification1;
+import com.tools20022.repository.msg.SectorAndLocation1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -34,6 +37,20 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.Security#mmSector
+ * Security.mmSector}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Organisation#mmSector
+ * Organisation.mmSector}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Scheme#mmSector
+ * Scheme.mmSector}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.SectorStrategy#mmSector
+ * SectorStrategy.mmSector}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -47,20 +64,6 @@ import java.util.List;
  * Sector.mmIdentification}</li>
  * <li>{@linkplain com.tools20022.repository.entity.Sector#mmStrategy
  * Sector.mmStrategy}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Security#mmSector
- * Security.mmSector}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Organisation#mmSector
- * Organisation.mmSector}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Scheme#mmSector
- * Scheme.mmSector}</li>
- * <li>{@linkplain com.tools20022.repository.entity.SectorStrategy#mmSector
- * SectorStrategy.mmSector}</li>
  * </ul>
  * </li>
  * <li>
@@ -118,13 +121,13 @@ public class Sector {
 		{
 			elementContext_lazy = () -> Sector.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Security";
 			definition = "Security for which a sector is specified.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.Security.mmSector;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 		}
 	};
@@ -164,13 +167,13 @@ public class Sector {
 		{
 			elementContext_lazy = () -> Sector.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Scheme";
 			definition = "Information regarding the entity that assigns the sector code.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.Scheme.mmSector;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Scheme.mmObject();
 		}
 	};
@@ -211,13 +214,13 @@ public class Sector {
 		{
 			elementContext_lazy = () -> Sector.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Organisation";
 			definition = "Organisation which belongs to a specific sector.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.Organisation.mmSector;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Organisation.mmObject();
 		}
 	};
@@ -268,11 +271,10 @@ public class Sector {
 	 */
 	public static final MMBusinessAttribute mmIdentification = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SectorAndLocation1.mmSector, com.tools20022.repository.choice.NameOrSector1Choice.mmName, com.tools20022.repository.choice.NameOrSector1Choice.mmSector,
-					com.tools20022.repository.msg.ReportedPartyIdentification1.mmNameOrSector, com.tools20022.repository.msg.NameAndLocation1.mmName);
+			derivation_lazy = () -> Arrays.asList(SectorAndLocation1.mmSector, NameOrSector1Choice.mmName, NameOrSector1Choice.mmSector, ReportedPartyIdentification1.mmNameOrSector, NameAndLocation1.mmName);
 			elementContext_lazy = () -> Sector.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Identification";
 			definition = "Type of business of the organisation, for example, pharmaceutical.";
 			maxOccurs = 1;
@@ -317,12 +319,12 @@ public class Sector {
 		{
 			elementContext_lazy = () -> Sector.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Strategy";
 			definition = "Strategy based on sector.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.SectorStrategy.mmSector;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SectorStrategy.mmObject();
 		}
 	};
@@ -330,14 +332,13 @@ public class Sector {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Sector";
 				definition = "Type of business of the organisation, for example, pharmaceutical.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Security.mmSector, com.tools20022.repository.entity.Organisation.mmSector, com.tools20022.repository.entity.Scheme.mmSector,
 						com.tools20022.repository.entity.SectorStrategy.mmSector);
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Sector.mmSecurity, com.tools20022.repository.entity.Sector.mmScheme, com.tools20022.repository.entity.Sector.mmOrganisation,
-						com.tools20022.repository.entity.Sector.mmIdentification, com.tools20022.repository.entity.Sector.mmStrategy);
+				element_lazy = () -> Arrays.asList(Sector.mmSecurity, Sector.mmScheme, Sector.mmOrganisation, Sector.mmIdentification, Sector.mmStrategy);
 			}
 		});
 		return mmObject_lazy.get();

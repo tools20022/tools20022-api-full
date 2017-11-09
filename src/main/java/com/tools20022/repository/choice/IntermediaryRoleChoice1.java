@@ -19,8 +19,10 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.InvestmentFundRole4Code;
 import com.tools20022.repository.entity.InvestmentFundPartyRole;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification13;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -104,7 +106,7 @@ public class IntermediaryRoleChoice1 {
 			componentContext_lazy = () -> IntermediaryRoleChoice1.mmObject();
 			isDerived = false;
 			xmlTag = "Role";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Role";
 			definition = "Role of the party in the activity.";
 			maxOccurs = 1;
@@ -152,7 +154,7 @@ public class IntermediaryRoleChoice1 {
 			componentContext_lazy = () -> IntermediaryRoleChoice1.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Role of the party in the activity.";
 			maxOccurs = 1;
@@ -164,10 +166,10 @@ public class IntermediaryRoleChoice1 {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.IntermediaryRoleChoice1.mmRole, com.tools20022.repository.choice.IntermediaryRoleChoice1.mmProprietary);
+				messageElement_lazy = () -> Arrays.asList(IntermediaryRoleChoice1.mmRole, IntermediaryRoleChoice1.mmProprietary);
 				trace_lazy = () -> InvestmentFundPartyRole.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "IntermediaryRoleChoice1";
 				definition = "Choice of intermediary role.";
 			}

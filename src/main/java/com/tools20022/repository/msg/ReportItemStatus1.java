@@ -20,10 +20,13 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.RejectionOrRepairStatus14Choice;
 import com.tools20022.repository.choice.ReportItemRejectionReason1Choice;
 import com.tools20022.repository.datatype.Max210Text;
 import com.tools20022.repository.entity.SecuritiesTradeStatusReason;
+import com.tools20022.repository.entity.StatusReason;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -111,7 +114,7 @@ public class ReportItemStatus1 {
 			componentContext_lazy = () -> ReportItemStatus1.mmObject();
 			isDerived = false;
 			xmlTag = "Xcptn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Exception";
 			definition = "Reason for the exception status.";
 			maxOccurs = 1;
@@ -158,11 +161,11 @@ public class ReportItemStatus1 {
 	 */
 	public static final MMMessageAttribute mmAdditionalReasonInformation = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmReason;
+			businessElementTrace_lazy = () -> StatusReason.mmReason;
 			componentContext_lazy = () -> ReportItemStatus1.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlRsnInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalReasonInformation";
 			definition = "Additional  information about the reason for the status that cannot be provided in a structured field.";
 			maxOccurs = 1;
@@ -202,7 +205,7 @@ public class ReportItemStatus1 {
 			componentContext_lazy = () -> ReportItemStatus1.mmObject();
 			isDerived = false;
 			xmlTag = "RptItm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportItem";
 			definition = "Details of the report item.";
 			minOccurs = 0;
@@ -214,11 +217,10 @@ public class ReportItemStatus1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReportItemStatus1.mmException, com.tools20022.repository.msg.ReportItemStatus1.mmAdditionalReasonInformation,
-						com.tools20022.repository.msg.ReportItemStatus1.mmReportItem);
+				messageElement_lazy = () -> Arrays.asList(ReportItemStatus1.mmException, ReportItemStatus1.mmAdditionalReasonInformation, ReportItemStatus1.mmReportItem);
 				trace_lazy = () -> SecuritiesTradeStatusReason.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ReportItemStatus1";
 				definition = "Status information of the report item.";
 				previousVersion_lazy = () -> RejectionOrRepairStatus14Choice.mmObject();

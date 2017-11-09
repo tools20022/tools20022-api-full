@@ -19,8 +19,10 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max140Text;
 import com.tools20022.repository.datatype.Max35Binary;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -112,10 +114,10 @@ public class KEKIdentifier3 {
 			componentContext_lazy = () -> KEKIdentifier3.mmObject();
 			isDerived = false;
 			xmlTag = "Nm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Name";
 			definition = "Name or label of the key.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.KEKIdentifier4.mmName);
+			nextVersions_lazy = () -> Arrays.asList(KEKIdentifier4.mmName);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
@@ -166,11 +168,11 @@ public class KEKIdentifier3 {
 			componentContext_lazy = () -> KEKIdentifier3.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Identification of the cryptographic key.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.KEKIdentifier4.mmKeyIdentification);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.KEKIdentifier2.mmKeyIdentification;
+			nextVersions_lazy = () -> Arrays.asList(KEKIdentifier4.mmKeyIdentification);
+			previousVersion_lazy = () -> KEKIdentifier2.mmKeyIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max140Text.mmObject();
@@ -221,11 +223,11 @@ public class KEKIdentifier3 {
 			componentContext_lazy = () -> KEKIdentifier3.mmObject();
 			isDerived = false;
 			xmlTag = "Vrsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Version";
 			definition = "Version of the cryptographic key.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.KEKIdentifier4.mmKeyVersion);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.KEKIdentifier2.mmKeyVersion;
+			nextVersions_lazy = () -> Arrays.asList(KEKIdentifier4.mmKeyVersion);
+			previousVersion_lazy = () -> KEKIdentifier2.mmKeyVersion;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
@@ -266,7 +268,7 @@ public class KEKIdentifier3 {
 			componentContext_lazy = () -> KEKIdentifier3.mmObject();
 			isDerived = false;
 			xmlTag = "KeyChckVal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "KeyCheckValue";
 			definition = "Value to check the key, for instance, result of the encryption of the null binary string.";
 			maxOccurs = 1;
@@ -278,10 +280,9 @@ public class KEKIdentifier3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.KEKIdentifier3.mmName, com.tools20022.repository.msg.KEKIdentifier3.mmIdentification, com.tools20022.repository.msg.KEKIdentifier3.mmVersion,
-						com.tools20022.repository.msg.KEKIdentifier3.mmKeyCheckValue);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(KEKIdentifier3.mmName, KEKIdentifier3.mmIdentification, KEKIdentifier3.mmVersion, KEKIdentifier3.mmKeyCheckValue);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "KEKIdentifier3";
 				definition = "Key that must be created and sent in the response, or that must be verified..";
 				nextVersions_lazy = () -> Arrays.asList(KEKIdentifier4.mmObject());

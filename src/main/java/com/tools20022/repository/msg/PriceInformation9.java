@@ -19,9 +19,12 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.DateAndDateTime1Choice;
 import com.tools20022.repository.choice.DateTimePeriodChoice;
 import com.tools20022.repository.entity.SecuritiesPricing;
+import com.tools20022.repository.entity.SourceOfPrice;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -122,10 +125,10 @@ public class PriceInformation9 {
 			componentContext_lazy = () -> PriceInformation9.mmObject();
 			isDerived = false;
 			xmlTag = "Val";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Value";
 			definition = "Value of the price, for instance, as a currency and value.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PriceInformation11.mmValue);
+			nextVersions_lazy = () -> Arrays.asList(PriceInformation11.mmValue);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> com.tools20022.repository.msg.Price4.mmObject();
@@ -178,14 +181,14 @@ public class PriceInformation9 {
 	 */
 	public static final MMMessageAttribute mmQuotationDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmQuotationDate;
+			businessElementTrace_lazy = () -> SecuritiesPricing.mmQuotationDate;
 			componentContext_lazy = () -> PriceInformation9.mmObject();
 			isDerived = false;
 			xmlTag = "QtnDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuotationDate";
 			definition = "Date on which the price is obtained. With an investment fund, this is as stated in the prospectus.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PriceInformation11.mmQuotationDate);
+			nextVersions_lazy = () -> Arrays.asList(PriceInformation11.mmQuotationDate);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTime1Choice.mmObject();
@@ -238,14 +241,14 @@ public class PriceInformation9 {
 	 */
 	public static final MMMessageAttribute mmPriceCalculationPeriod = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmPriceCalculationPeriod;
+			businessElementTrace_lazy = () -> SecuritiesPricing.mmPriceCalculationPeriod;
 			componentContext_lazy = () -> PriceInformation9.mmObject();
 			isDerived = false;
 			xmlTag = "PricClctnPrd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PriceCalculationPeriod";
 			definition = "Period during which the price of a security is determined (For  outturn securities).";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PriceInformation11.mmPriceCalculationPeriod);
+			nextVersions_lazy = () -> Arrays.asList(PriceInformation11.mmPriceCalculationPeriod);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateTimePeriodChoice.mmObject();
@@ -295,14 +298,14 @@ public class PriceInformation9 {
 	 */
 	public static final MMMessageAttribute mmSourceOfPrice = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SourceOfPrice.mmMarketIdentification;
+			businessElementTrace_lazy = () -> SourceOfPrice.mmMarketIdentification;
 			componentContext_lazy = () -> PriceInformation9.mmObject();
 			isDerived = false;
 			xmlTag = "SrcOfPric";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SourceOfPrice";
 			definition = "Place from which the price was obtained.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PriceInformation11.mmSourceOfPrice);
+			nextVersions_lazy = () -> Arrays.asList(PriceInformation11.mmSourceOfPrice);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.MarketIdentification77.mmObject();
@@ -312,11 +315,10 @@ public class PriceInformation9 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PriceInformation9.mmValue, com.tools20022.repository.msg.PriceInformation9.mmQuotationDate,
-						com.tools20022.repository.msg.PriceInformation9.mmPriceCalculationPeriod, com.tools20022.repository.msg.PriceInformation9.mmSourceOfPrice);
+				messageElement_lazy = () -> Arrays.asList(PriceInformation9.mmValue, PriceInformation9.mmQuotationDate, PriceInformation9.mmPriceCalculationPeriod, PriceInformation9.mmSourceOfPrice);
 				trace_lazy = () -> SecuritiesPricing.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PriceInformation9";
 				definition = "Amount of money for which goods or services are offered, sold, or bought.";
 				nextVersions_lazy = () -> Arrays.asList(PriceInformation11.mmObject());

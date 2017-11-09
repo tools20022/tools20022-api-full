@@ -19,7 +19,13 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.acmt.*;
+import com.tools20022.repository.area.tsin.UndertakingApplicationV01;
+import com.tools20022.repository.area.tsrv.*;
 import com.tools20022.repository.entity.ElectronicSignature;
+import com.tools20022.repository.entity.Party;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -204,11 +210,11 @@ public class PartyAndSignature2 {
 	 */
 	public static final MMMessageAssociationEnd mmParty = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> PartyAndSignature2.mmObject();
 			isDerived = false;
 			xmlTag = "Pty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Party";
 			definition = "Entity involved in an activity.";
 			maxOccurs = 1;
@@ -255,7 +261,7 @@ public class PartyAndSignature2 {
 			componentContext_lazy = () -> PartyAndSignature2.mmObject();
 			isDerived = false;
 			xmlTag = "Sgntr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Signature";
 			definition = "Signature of a party.";
 			maxOccurs = 1;
@@ -268,28 +274,21 @@ public class PartyAndSignature2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyAndSignature2.mmParty, com.tools20022.repository.msg.PartyAndSignature2.mmSignature);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountAdditionalInformationRequestV02.mmDigitalSignature,
-						com.tools20022.repository.area.acmt.AccountClosingAdditionalInformationRequestV02.mmDigitalSignature, com.tools20022.repository.area.acmt.AccountClosingAmendmentRequestV02.mmDigitalSignature,
-						com.tools20022.repository.area.acmt.AccountClosingRequestV02.mmDigitalSignature, com.tools20022.repository.area.acmt.AccountExcludedMandateMaintenanceAmendmentRequestV02.mmDigitalSignature,
-						com.tools20022.repository.area.acmt.AccountExcludedMandateMaintenanceRequestV02.mmDigitalSignature, com.tools20022.repository.area.acmt.AccountMandateMaintenanceAmendmentRequestV02.mmDigitalSignature,
-						com.tools20022.repository.area.acmt.AccountMandateMaintenanceRequestV02.mmDigitalSignature, com.tools20022.repository.area.acmt.AccountOpeningAdditionalInformationRequestV02.mmDigitalSignature,
-						com.tools20022.repository.area.acmt.AccountOpeningAmendmentRequestV02.mmDigitalSignature, com.tools20022.repository.area.acmt.AccountOpeningRequestV02.mmDigitalSignature,
-						com.tools20022.repository.area.acmt.AccountReportRequestV02.mmDigitalSignature, com.tools20022.repository.area.acmt.AccountReportV02.mmDigitalSignature,
-						com.tools20022.repository.area.acmt.AccountRequestAcknowledgementV02.mmDigitalSignature, com.tools20022.repository.area.acmt.AccountRequestRejectionV02.mmDigitalSignature,
-						com.tools20022.repository.area.tsrv.DemandRefusalNotificationV01.mmDigitalSignature, com.tools20022.repository.area.tsrv.DemandWithdrawalNotificationV01.mmDigitalSignature,
-						com.tools20022.repository.area.tsrv.ExtendOrPayRequestV01.mmDigitalSignature, com.tools20022.repository.area.tsrv.ExtendOrPayResponseV01.mmDigitalSignature,
-						com.tools20022.repository.area.tsrv.TradeStatusReportV01.mmDigitalSignature, com.tools20022.repository.area.tsrv.UndertakingAmendmentAdviceV01.mmDigitalSignature,
-						com.tools20022.repository.area.tsrv.UndertakingAmendmentNotificationV01.mmDigitalSignature, com.tools20022.repository.area.tsrv.UndertakingAmendmentRequestV01.mmDigitalSignature,
-						com.tools20022.repository.area.tsrv.UndertakingAmendmentResponseNotificationV01.mmDigitalSignature, com.tools20022.repository.area.tsrv.UndertakingAmendmentResponseV01.mmDigitalSignature,
-						com.tools20022.repository.area.tsrv.UndertakingAmendmentV01.mmDigitalSignature, com.tools20022.repository.area.tsin.UndertakingApplicationV01.mmDigitalSignature,
-						com.tools20022.repository.area.tsrv.UndertakingDemandV01.mmDigitalSignature, com.tools20022.repository.area.tsrv.UndertakingIssuanceAdviceV01.mmDigitalSignature,
-						com.tools20022.repository.area.tsrv.UndertakingIssuanceNotificationV01.mmDigitalSignature, com.tools20022.repository.area.tsrv.UndertakingIssuanceV01.mmDigitalSignature,
-						com.tools20022.repository.area.tsrv.UndertakingNonExtensionNotificationV01.mmDigitalSignature, com.tools20022.repository.area.tsrv.UndertakingNonExtensionRequestV01.mmDigitalSignature,
-						com.tools20022.repository.area.tsrv.UndertakingStatusReportV01.mmDigitalSignature, com.tools20022.repository.area.tsrv.UndertakingTerminationNotificationV01.mmDigitalSignature);
+				messageElement_lazy = () -> Arrays.asList(PartyAndSignature2.mmParty, PartyAndSignature2.mmSignature);
+				messageBuildingBlock_lazy = () -> Arrays.asList(AccountAdditionalInformationRequestV02.mmDigitalSignature, AccountClosingAdditionalInformationRequestV02.mmDigitalSignature,
+						AccountClosingAmendmentRequestV02.mmDigitalSignature, AccountClosingRequestV02.mmDigitalSignature, AccountExcludedMandateMaintenanceAmendmentRequestV02.mmDigitalSignature,
+						AccountExcludedMandateMaintenanceRequestV02.mmDigitalSignature, AccountMandateMaintenanceAmendmentRequestV02.mmDigitalSignature, AccountMandateMaintenanceRequestV02.mmDigitalSignature,
+						AccountOpeningAdditionalInformationRequestV02.mmDigitalSignature, AccountOpeningAmendmentRequestV02.mmDigitalSignature, AccountOpeningRequestV02.mmDigitalSignature, AccountReportRequestV02.mmDigitalSignature,
+						AccountReportV02.mmDigitalSignature, AccountRequestAcknowledgementV02.mmDigitalSignature, AccountRequestRejectionV02.mmDigitalSignature, DemandRefusalNotificationV01.mmDigitalSignature,
+						DemandWithdrawalNotificationV01.mmDigitalSignature, ExtendOrPayRequestV01.mmDigitalSignature, ExtendOrPayResponseV01.mmDigitalSignature, TradeStatusReportV01.mmDigitalSignature,
+						UndertakingAmendmentAdviceV01.mmDigitalSignature, UndertakingAmendmentNotificationV01.mmDigitalSignature, UndertakingAmendmentRequestV01.mmDigitalSignature,
+						UndertakingAmendmentResponseNotificationV01.mmDigitalSignature, UndertakingAmendmentResponseV01.mmDigitalSignature, UndertakingAmendmentV01.mmDigitalSignature, UndertakingApplicationV01.mmDigitalSignature,
+						UndertakingDemandV01.mmDigitalSignature, UndertakingIssuanceAdviceV01.mmDigitalSignature, UndertakingIssuanceNotificationV01.mmDigitalSignature, UndertakingIssuanceV01.mmDigitalSignature,
+						UndertakingNonExtensionNotificationV01.mmDigitalSignature, UndertakingNonExtensionRequestV01.mmDigitalSignature, UndertakingStatusReportV01.mmDigitalSignature,
+						UndertakingTerminationNotificationV01.mmDigitalSignature);
 				trace_lazy = () -> ElectronicSignature.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PartyAndSignature2";
 				definition = "Entity involved in an activity.";
 			}

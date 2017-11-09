@@ -20,9 +20,13 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.acmt.IdentificationModificationAdviceV01;
 import com.tools20022.repository.datatype.Max140Text;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.Account;
+import com.tools20022.repository.entity.GenericIdentification;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -120,11 +124,11 @@ public class IdentificationModification1 {
 	 */
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmIdentification;
+			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> IdentificationModification1.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Unique identification, as assigned by a sending party, to unambigiously identify the party and account identification information group within the message.";
 			maxOccurs = 1;
@@ -173,7 +177,7 @@ public class IdentificationModification1 {
 			componentContext_lazy = () -> IdentificationModification1.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlPtyAndAcctId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalPartyAndAccountIdentification";
 			definition = "Provides party and/or account identification information as given in the original message.";
 			maxOccurs = 1;
@@ -221,7 +225,7 @@ public class IdentificationModification1 {
 			componentContext_lazy = () -> IdentificationModification1.mmObject();
 			isDerived = false;
 			xmlTag = "UpdtdPtyAndAcctId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UpdatedPartyAndAccountIdentification";
 			definition = "Provides updated party and/or account identification information.";
 			maxOccurs = 1;
@@ -266,7 +270,7 @@ public class IdentificationModification1 {
 			componentContext_lazy = () -> IdentificationModification1.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInformation";
 			definition = "Additional information, in free text form, to complement the modification information.";
 			maxOccurs = 1;
@@ -278,12 +282,12 @@ public class IdentificationModification1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IdentificationModification1.mmIdentification, com.tools20022.repository.msg.IdentificationModification1.mmOriginalPartyAndAccountIdentification,
-						com.tools20022.repository.msg.IdentificationModification1.mmUpdatedPartyAndAccountIdentification, com.tools20022.repository.msg.IdentificationModification1.mmAdditionalInformation);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.IdentificationModificationAdviceV01.mmModification);
+				messageElement_lazy = () -> Arrays.asList(IdentificationModification1.mmIdentification, IdentificationModification1.mmOriginalPartyAndAccountIdentification,
+						IdentificationModification1.mmUpdatedPartyAndAccountIdentification, IdentificationModification1.mmAdditionalInformation);
+				messageBuildingBlock_lazy = () -> Arrays.asList(IdentificationModificationAdviceV01.mmModification);
 				trace_lazy = () -> Account.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "IdentificationModification1";
 				definition = "Set of elements used to provide information concerning the identification data that is advised to be modified.";
 			}

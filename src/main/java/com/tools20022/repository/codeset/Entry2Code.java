@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.EntryCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -81,7 +83,7 @@ public class Entry2Code extends EntryCode {
 	 */
 	public static final MMCode mmTrial = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Trial";
 			owner_lazy = () -> Entry2Code.mmObject();
 		}
@@ -103,7 +105,7 @@ public class Entry2Code extends EntryCode {
 	 */
 	public static final MMCode mmOfficial = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Official";
 			owner_lazy = () -> Entry2Code.mmObject();
 		}
@@ -125,7 +127,7 @@ public class Entry2Code extends EntryCode {
 	 */
 	public static final MMCode mmRequested = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Requested";
 			owner_lazy = () -> Entry2Code.mmObject();
 		}
@@ -134,12 +136,12 @@ public class Entry2Code extends EntryCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("TRIA");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Entry2Code";
 				definition = "Specifies the type of an entry in a report.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Entry2Code.mmTrial, com.tools20022.repository.codeset.Entry2Code.mmOfficial, com.tools20022.repository.codeset.Entry2Code.mmRequested);
+				code_lazy = () -> Arrays.asList(Entry2Code.mmTrial, Entry2Code.mmOfficial, Entry2Code.mmRequested);
 				trace_lazy = () -> EntryCode.mmObject();
 			}
 		});

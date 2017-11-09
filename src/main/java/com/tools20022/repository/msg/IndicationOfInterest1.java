@@ -20,6 +20,7 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.Quantity1Choice;
 import com.tools20022.repository.codeset.IOISideTypeCode;
 import com.tools20022.repository.codeset.Qualifier1Code;
@@ -28,9 +29,8 @@ import com.tools20022.repository.datatype.DecimalNumber;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Max256Text;
 import com.tools20022.repository.datatype.TrueFalseIndicator;
-import com.tools20022.repository.entity.BuyOrSellIndicationOfInterest;
-import com.tools20022.repository.entity.DeliveringSettlementParty;
-import com.tools20022.repository.entity.ReceivingSettlementParty;
+import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -177,11 +177,11 @@ public class IndicationOfInterest1 {
 	 */
 	public static final MMMessageAttribute mmSide = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmSide;
+			businessElementTrace_lazy = () -> SecuritiesOrder.mmSide;
 			componentContext_lazy = () -> IndicationOfInterest1.mmObject();
 			isDerived = false;
 			xmlTag = "Sd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Side";
 			definition = "Side of the indication of interest.";
 			maxOccurs = 1;
@@ -226,11 +226,11 @@ public class IndicationOfInterest1 {
 	 */
 	public static final MMMessageAttribute mmIOIQuantity = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Quote.mmQuantity;
+			businessElementTrace_lazy = () -> Quote.mmQuantity;
 			componentContext_lazy = () -> IndicationOfInterest1.mmObject();
 			isDerived = false;
 			xmlTag = "IOIQty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IOIQuantity";
 			definition = "Quantity of financial instrument to which the indication applies.";
 			maxOccurs = 1;
@@ -275,11 +275,11 @@ public class IndicationOfInterest1 {
 	 */
 	public static final MMMessageAttribute mmPrice = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BuyOrSellIndicationOfInterest.mmPrice;
+			businessElementTrace_lazy = () -> BuyOrSellIndicationOfInterest.mmPrice;
 			componentContext_lazy = () -> IndicationOfInterest1.mmObject();
 			isDerived = false;
 			xmlTag = "Pric";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Price";
 			definition = "Indicates the price of the instrument, applicable to the indication of interest.";
 			maxOccurs = 1;
@@ -325,11 +325,11 @@ public class IndicationOfInterest1 {
 	 */
 	public static final MMMessageAttribute mmValidUntilDateTime = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Quote.mmValidUntilDateTime;
+			businessElementTrace_lazy = () -> Quote.mmValidUntilDateTime;
 			componentContext_lazy = () -> IndicationOfInterest1.mmObject();
 			isDerived = false;
 			xmlTag = "VldUntilDtTm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValidUntilDateTime";
 			definition = "Specifies the date and time at which the indication of interest expires and is no longer valid.";
 			maxOccurs = 1;
@@ -374,11 +374,11 @@ public class IndicationOfInterest1 {
 	 */
 	public static final MMMessageAttribute mmQualityIndication = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BuyOrSellIndicationOfInterest.mmQualityIndication;
+			businessElementTrace_lazy = () -> BuyOrSellIndicationOfInterest.mmQualityIndication;
 			componentContext_lazy = () -> IndicationOfInterest1.mmObject();
 			isDerived = false;
 			xmlTag = "QltyIndctn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QualityIndication";
 			definition = "Indicates the relative quality of the indication of interest.";
 			maxOccurs = 1;
@@ -426,11 +426,11 @@ public class IndicationOfInterest1 {
 	 */
 	public static final MMMessageAttribute mmNaturalIndicator = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BuyOrSellIndicationOfInterest.mmNaturalIndicator;
+			businessElementTrace_lazy = () -> BuyOrSellIndicationOfInterest.mmNaturalIndicator;
 			componentContext_lazy = () -> IndicationOfInterest1.mmObject();
 			isDerived = false;
 			xmlTag = "NtrlInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NaturalIndicator";
 			definition = "Indicates whether or not the indication of interest is the result of an existing agency order or a facilitation position resulting from an agency order, not from principal trading or order solicitation activity.";
 			maxOccurs = 1;
@@ -474,11 +474,11 @@ public class IndicationOfInterest1 {
 	 */
 	public static final MMMessageAttribute mmQualifier = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BuyOrSellIndicationOfInterest.mmQualifier;
+			businessElementTrace_lazy = () -> BuyOrSellIndicationOfInterest.mmQualifier;
 			componentContext_lazy = () -> IndicationOfInterest1.mmObject();
 			isDerived = false;
 			xmlTag = "Qlfr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Qualifier";
 			definition = "Qualifies the use of the indication of interest.";
 			minOccurs = 0;
@@ -521,7 +521,7 @@ public class IndicationOfInterest1 {
 			componentContext_lazy = () -> IndicationOfInterest1.mmObject();
 			isDerived = false;
 			xmlTag = "LkdURLAdr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LinkedURLAddress";
 			definition = "Address for the Universal Resource Locator (URL), eg, used over the www (HTTP) service.";
 			maxOccurs = 1;
@@ -568,11 +568,11 @@ public class IndicationOfInterest1 {
 	 */
 	public static final MMMessageAttribute mmNumberOfLegs = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BuyOrSellIndicationOfInterest.mmNumberOfLegs;
+			businessElementTrace_lazy = () -> BuyOrSellIndicationOfInterest.mmNumberOfLegs;
 			componentContext_lazy = () -> IndicationOfInterest1.mmObject();
 			isDerived = false;
 			xmlTag = "NbOfLegs";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NumberOfLegs";
 			definition = "Number of InstrumentLeg repeating group instances. Required for multilegs IOIs.";
 			maxOccurs = 1;
@@ -616,11 +616,11 @@ public class IndicationOfInterest1 {
 	 */
 	public static final MMMessageAssociationEnd mmFinancialInstrumentDetails = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmIdentification;
+			businessElementTrace_lazy = () -> Security.mmIdentification;
 			componentContext_lazy = () -> IndicationOfInterest1.mmObject();
 			isDerived = false;
 			xmlTag = "FinInstrmDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentDetails";
 			definition = "Financial instrument to which an indication of interest is related.";
 			maxOccurs = 1;
@@ -667,11 +667,11 @@ public class IndicationOfInterest1 {
 	 */
 	public static final MMMessageAssociationEnd mmFinancialInstrumentAttributes = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmOrderedSecurity;
+			businessElementTrace_lazy = () -> SecuritiesOrder.mmOrderedSecurity;
 			componentContext_lazy = () -> IndicationOfInterest1.mmObject();
 			isDerived = false;
 			xmlTag = "FinInstrmAttrbts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentAttributes";
 			definition = "Financial instrument attributes to which an indication of interest is related.";
 			maxOccurs = 1;
@@ -718,11 +718,11 @@ public class IndicationOfInterest1 {
 	 */
 	public static final MMMessageAssociationEnd mmStipulations = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmOrderedSecurity;
+			businessElementTrace_lazy = () -> SecuritiesOrder.mmOrderedSecurity;
 			componentContext_lazy = () -> IndicationOfInterest1.mmObject();
 			isDerived = false;
 			xmlTag = "Stiptns";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Stipulations";
 			definition = "Financial instrument stipulations to which an indication of interest is related.";
 			maxOccurs = 1;
@@ -769,11 +769,11 @@ public class IndicationOfInterest1 {
 	 */
 	public static final MMMessageAssociationEnd mmUnderlyingFinancialInstrumentDetails = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmOrderedSecurity;
+			businessElementTrace_lazy = () -> SecuritiesOrder.mmOrderedSecurity;
 			componentContext_lazy = () -> IndicationOfInterest1.mmObject();
 			isDerived = false;
 			xmlTag = "UndrlygFinInstrmDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnderlyingFinancialInstrumentDetails";
 			definition = "Underlying financial instrument to which an indication of interest is related.";
 			minOccurs = 0;
@@ -819,11 +819,11 @@ public class IndicationOfInterest1 {
 	 */
 	public static final MMMessageAssociationEnd mmUnderlyingFinancialInstrumentAttributes = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmOrderedSecurity;
+			businessElementTrace_lazy = () -> SecuritiesOrder.mmOrderedSecurity;
 			componentContext_lazy = () -> IndicationOfInterest1.mmObject();
 			isDerived = false;
 			xmlTag = "UndrlygFinInstrmAttrbts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnderlyingFinancialInstrumentAttributes";
 			definition = "Underlying financial instrument attributes to which an indication of interest is related.";
 			minOccurs = 0;
@@ -869,11 +869,11 @@ public class IndicationOfInterest1 {
 	 */
 	public static final MMMessageAssociationEnd mmUnderlyingStipulations = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmOrderedSecurity;
+			businessElementTrace_lazy = () -> SecuritiesOrder.mmOrderedSecurity;
 			componentContext_lazy = () -> IndicationOfInterest1.mmObject();
 			isDerived = false;
 			xmlTag = "UndrlygStiptns";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnderlyingStipulations";
 			definition = "Underlying financial instrument stipulations to which an indication of interest is related.";
 			minOccurs = 0;
@@ -916,11 +916,11 @@ public class IndicationOfInterest1 {
 	 */
 	public static final MMMessageAssociationEnd mmInstrumentLegGroupDetails = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Asset.mmLegAdditionalInformation;
+			businessElementTrace_lazy = () -> Asset.mmLegAdditionalInformation;
 			componentContext_lazy = () -> IndicationOfInterest1.mmObject();
 			isDerived = false;
 			xmlTag = "InstrmLegGrpDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstrumentLegGroupDetails";
 			definition = "Provides details about each leg of the multileg instrument.";
 			minOccurs = 0;
@@ -963,11 +963,11 @@ public class IndicationOfInterest1 {
 	 */
 	public static final MMMessageAssociationEnd mmYieldDetails = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmYieldCalculation;
+			businessElementTrace_lazy = () -> SecuritiesPricing.mmYieldCalculation;
 			componentContext_lazy = () -> IndicationOfInterest1.mmObject();
 			isDerived = false;
 			xmlTag = "YldDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "YieldDetails";
 			definition = "Details about the return provided by a financial instrument.";
 			maxOccurs = 1;
@@ -1013,11 +1013,11 @@ public class IndicationOfInterest1 {
 	 */
 	public static final MMMessageAssociationEnd mmOrderQuantity = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmOrderedQuantity;
+			businessElementTrace_lazy = () -> SecuritiesOrder.mmOrderedQuantity;
 			componentContext_lazy = () -> IndicationOfInterest1.mmObject();
 			isDerived = false;
 			xmlTag = "OrdrQty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrderQuantity";
 			definition = "Details about the order quantity to which an indication of interest is related.";
 			maxOccurs = 1;
@@ -1063,11 +1063,11 @@ public class IndicationOfInterest1 {
 	 */
 	public static final MMMessageAssociationEnd mmSpreadAndBenchmarkCurveDetails = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BuyOrSellIndicationOfInterest.mmSpreadToBenchmark;
+			businessElementTrace_lazy = () -> BuyOrSellIndicationOfInterest.mmSpreadToBenchmark;
 			componentContext_lazy = () -> IndicationOfInterest1.mmObject();
 			isDerived = false;
 			xmlTag = "SprdAndBchmkCrvDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SpreadAndBenchmarkCurveDetails";
 			definition = "Indicates the difference in value between a financial instrument and a benchmark for an indication of interest.";
 			maxOccurs = 1;
@@ -1114,11 +1114,11 @@ public class IndicationOfInterest1 {
 	 */
 	public static final MMMessageAssociationEnd mmTwoLegTransactionDetails = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BuyOrSellIndicationOfInterest.mmTwoLegTransaction;
+			businessElementTrace_lazy = () -> BuyOrSellIndicationOfInterest.mmTwoLegTransaction;
 			componentContext_lazy = () -> IndicationOfInterest1.mmObject();
 			isDerived = false;
 			xmlTag = "TwoLegTxDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TwoLegTransactionDetails";
 			definition = "Securities Financing is the process of lending or borrowing cash or securities against securities or cash collateral. It aims at optimising liquidity, support a trading strategy, or increase settlement efficiency.";
 			maxOccurs = 1;
@@ -1161,11 +1161,11 @@ public class IndicationOfInterest1 {
 	 */
 	public static final MMMessageAssociationEnd mmTradingParties = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Trade.mmTradePartyRole;
+			businessElementTrace_lazy = () -> Trade.mmTradePartyRole;
 			componentContext_lazy = () -> IndicationOfInterest1.mmObject();
 			isDerived = false;
 			xmlTag = "TradgPties";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradingParties";
 			definition = "Parties involved in the specific transaction.";
 			minOccurs = 0;
@@ -1207,11 +1207,11 @@ public class IndicationOfInterest1 {
 	 */
 	public static final MMMessageAssociationEnd mmCashParties = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.mmPartyRole;
+			businessElementTrace_lazy = () -> Payment.mmPartyRole;
 			componentContext_lazy = () -> IndicationOfInterest1.mmObject();
 			isDerived = false;
 			xmlTag = "CshPties";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashParties";
 			definition = "Cash parties involved in the transaction.";
 			maxOccurs = 1;
@@ -1258,7 +1258,7 @@ public class IndicationOfInterest1 {
 			componentContext_lazy = () -> IndicationOfInterest1.mmObject();
 			isDerived = false;
 			xmlTag = "RcvgSttlmPties";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceivingSettlementParties";
 			definition = "Receiving parties involved in the transaction.";
 			maxOccurs = 1;
@@ -1310,7 +1310,7 @@ public class IndicationOfInterest1 {
 			componentContext_lazy = () -> IndicationOfInterest1.mmObject();
 			isDerived = false;
 			xmlTag = "DlvrgSttlmPties";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeliveringSettlementParties";
 			definition = "Chain of parties involved in the settlement of a transaction, including receipts and deliveries, book transfers, treasury deals, or other activities, resulting in the movement of a security or amount of money from one account to another.";
 			maxOccurs = 1;
@@ -1351,7 +1351,7 @@ public class IndicationOfInterest1 {
 			componentContext_lazy = () -> IndicationOfInterest1.mmObject();
 			isDerived = false;
 			xmlTag = "OthrBizPties";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherBusinessParties";
 			definition = "Other parties involved in the transaction.";
 			maxOccurs = 1;
@@ -1364,21 +1364,15 @@ public class IndicationOfInterest1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IndicationOfInterest1.mmSide, com.tools20022.repository.msg.IndicationOfInterest1.mmIOIQuantity,
-						com.tools20022.repository.msg.IndicationOfInterest1.mmPrice, com.tools20022.repository.msg.IndicationOfInterest1.mmValidUntilDateTime, com.tools20022.repository.msg.IndicationOfInterest1.mmQualityIndication,
-						com.tools20022.repository.msg.IndicationOfInterest1.mmNaturalIndicator, com.tools20022.repository.msg.IndicationOfInterest1.mmQualifier, com.tools20022.repository.msg.IndicationOfInterest1.mmLinkedURLAddress,
-						com.tools20022.repository.msg.IndicationOfInterest1.mmNumberOfLegs, com.tools20022.repository.msg.IndicationOfInterest1.mmFinancialInstrumentDetails,
-						com.tools20022.repository.msg.IndicationOfInterest1.mmFinancialInstrumentAttributes, com.tools20022.repository.msg.IndicationOfInterest1.mmStipulations,
-						com.tools20022.repository.msg.IndicationOfInterest1.mmUnderlyingFinancialInstrumentDetails, com.tools20022.repository.msg.IndicationOfInterest1.mmUnderlyingFinancialInstrumentAttributes,
-						com.tools20022.repository.msg.IndicationOfInterest1.mmUnderlyingStipulations, com.tools20022.repository.msg.IndicationOfInterest1.mmInstrumentLegGroupDetails,
-						com.tools20022.repository.msg.IndicationOfInterest1.mmYieldDetails, com.tools20022.repository.msg.IndicationOfInterest1.mmOrderQuantity,
-						com.tools20022.repository.msg.IndicationOfInterest1.mmSpreadAndBenchmarkCurveDetails, com.tools20022.repository.msg.IndicationOfInterest1.mmTwoLegTransactionDetails,
-						com.tools20022.repository.msg.IndicationOfInterest1.mmTradingParties, com.tools20022.repository.msg.IndicationOfInterest1.mmCashParties,
-						com.tools20022.repository.msg.IndicationOfInterest1.mmReceivingSettlementParties, com.tools20022.repository.msg.IndicationOfInterest1.mmDeliveringSettlementParties,
-						com.tools20022.repository.msg.IndicationOfInterest1.mmOtherBusinessParties);
+				messageElement_lazy = () -> Arrays.asList(IndicationOfInterest1.mmSide, IndicationOfInterest1.mmIOIQuantity, IndicationOfInterest1.mmPrice, IndicationOfInterest1.mmValidUntilDateTime,
+						IndicationOfInterest1.mmQualityIndication, IndicationOfInterest1.mmNaturalIndicator, IndicationOfInterest1.mmQualifier, IndicationOfInterest1.mmLinkedURLAddress, IndicationOfInterest1.mmNumberOfLegs,
+						IndicationOfInterest1.mmFinancialInstrumentDetails, IndicationOfInterest1.mmFinancialInstrumentAttributes, IndicationOfInterest1.mmStipulations, IndicationOfInterest1.mmUnderlyingFinancialInstrumentDetails,
+						IndicationOfInterest1.mmUnderlyingFinancialInstrumentAttributes, IndicationOfInterest1.mmUnderlyingStipulations, IndicationOfInterest1.mmInstrumentLegGroupDetails, IndicationOfInterest1.mmYieldDetails,
+						IndicationOfInterest1.mmOrderQuantity, IndicationOfInterest1.mmSpreadAndBenchmarkCurveDetails, IndicationOfInterest1.mmTwoLegTransactionDetails, IndicationOfInterest1.mmTradingParties,
+						IndicationOfInterest1.mmCashParties, IndicationOfInterest1.mmReceivingSettlementParties, IndicationOfInterest1.mmDeliveringSettlementParties, IndicationOfInterest1.mmOtherBusinessParties);
 				trace_lazy = () -> BuyOrSellIndicationOfInterest.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "IndicationOfInterest1";
 				definition = "Intention to buy or sell a financial Instrument.";
 			}

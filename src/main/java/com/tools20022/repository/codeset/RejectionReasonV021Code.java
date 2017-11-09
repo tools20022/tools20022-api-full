@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.RejectionReasonV2Code;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -104,7 +106,7 @@ public class RejectionReasonV021Code extends RejectionReasonV2Code {
 	 */
 	public static final MMCode mmInvalidSecurity = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvalidSecurity";
 			owner_lazy = () -> RejectionReasonV021Code.mmObject();
 		}
@@ -127,7 +129,7 @@ public class RejectionReasonV021Code extends RejectionReasonV2Code {
 	 */
 	public static final MMCode mmUnrecognisedIdentification = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnrecognisedIdentification";
 			owner_lazy = () -> RejectionReasonV021Code.mmObject();
 		}
@@ -150,7 +152,7 @@ public class RejectionReasonV021Code extends RejectionReasonV2Code {
 	 */
 	public static final MMCode mmUnknownSymbol = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnknownSymbol";
 			owner_lazy = () -> RejectionReasonV021Code.mmObject();
 		}
@@ -173,7 +175,7 @@ public class RejectionReasonV021Code extends RejectionReasonV2Code {
 	 */
 	public static final MMCode mmInsufficientCollateral = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InsufficientCollateral";
 			owner_lazy = () -> RejectionReasonV021Code.mmObject();
 		}
@@ -196,7 +198,7 @@ public class RejectionReasonV021Code extends RejectionReasonV2Code {
 	 */
 	public static final MMCode mmConcentrationLimitExceeded = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConcentrationLimitExceeded";
 			owner_lazy = () -> RejectionReasonV021Code.mmObject();
 		}
@@ -219,7 +221,7 @@ public class RejectionReasonV021Code extends RejectionReasonV2Code {
 	 */
 	public static final MMCode mmNonEligibleSecurity = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonEligibleSecurity";
 			owner_lazy = () -> RejectionReasonV021Code.mmObject();
 		}
@@ -242,7 +244,7 @@ public class RejectionReasonV021Code extends RejectionReasonV2Code {
 	 */
 	public static final MMCode mmInvalidIdentification = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvalidIdentification";
 			owner_lazy = () -> RejectionReasonV021Code.mmObject();
 		}
@@ -265,7 +267,7 @@ public class RejectionReasonV021Code extends RejectionReasonV2Code {
 	 */
 	public static final MMCode mmOther = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
 			owner_lazy = () -> RejectionReasonV021Code.mmObject();
 		}
@@ -274,15 +276,13 @@ public class RejectionReasonV021Code extends RejectionReasonV2Code {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("DSEC");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RejectionReasonV021Code";
 				definition = "Specifies the reason why the instruction/cancellation request has a rejected status.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RejectionReasonV021Code.mmInvalidSecurity, com.tools20022.repository.codeset.RejectionReasonV021Code.mmUnrecognisedIdentification,
-						com.tools20022.repository.codeset.RejectionReasonV021Code.mmUnknownSymbol, com.tools20022.repository.codeset.RejectionReasonV021Code.mmInsufficientCollateral,
-						com.tools20022.repository.codeset.RejectionReasonV021Code.mmConcentrationLimitExceeded, com.tools20022.repository.codeset.RejectionReasonV021Code.mmNonEligibleSecurity,
-						com.tools20022.repository.codeset.RejectionReasonV021Code.mmInvalidIdentification, com.tools20022.repository.codeset.RejectionReasonV021Code.mmOther);
+				code_lazy = () -> Arrays.asList(RejectionReasonV021Code.mmInvalidSecurity, RejectionReasonV021Code.mmUnrecognisedIdentification, RejectionReasonV021Code.mmUnknownSymbol, RejectionReasonV021Code.mmInsufficientCollateral,
+						RejectionReasonV021Code.mmConcentrationLimitExceeded, RejectionReasonV021Code.mmNonEligibleSecurity, RejectionReasonV021Code.mmInvalidIdentification, RejectionReasonV021Code.mmOther);
 				trace_lazy = () -> RejectionReasonV2Code.mmObject();
 			}
 		});

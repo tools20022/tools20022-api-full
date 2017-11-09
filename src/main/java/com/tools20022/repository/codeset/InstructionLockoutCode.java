@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.InstructionLockout1Code
+ * InstructionLockout1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -38,13 +47,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.InstructionLockoutCode#mmNotLocked
  * InstructionLockoutCode.mmNotLocked}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.InstructionLockout1Code
- * InstructionLockout1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -95,7 +97,7 @@ public class InstructionLockoutCode {
 	 */
 	public static final MMCode mmSystemicLocked = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SystemicLocked";
 			definition = "System suspended elections processing based on business rules.";
 			owner_lazy = () -> InstructionLockoutCode.mmObject();
@@ -128,7 +130,7 @@ public class InstructionLockoutCode {
 	 */
 	public static final MMCode mmManualLocked = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ManualLocked";
 			definition = "DTC (the Depository Trust Company) personnel suspended elections processing.";
 			owner_lazy = () -> InstructionLockoutCode.mmObject();
@@ -158,7 +160,7 @@ public class InstructionLockoutCode {
 	 */
 	public static final MMCode mmNotLocked = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotLocked";
 			definition = "Eligible for elections processing.";
 			owner_lazy = () -> InstructionLockoutCode.mmObject();
@@ -169,13 +171,12 @@ public class InstructionLockoutCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("SYLK");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InstructionLockoutCode";
 				definition = "Specifies status of the instruction lock (for elections).";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.InstructionLockoutCode.mmSystemicLocked, com.tools20022.repository.codeset.InstructionLockoutCode.mmManualLocked,
-						com.tools20022.repository.codeset.InstructionLockoutCode.mmNotLocked);
+				code_lazy = () -> Arrays.asList(InstructionLockoutCode.mmSystemicLocked, InstructionLockoutCode.mmManualLocked, InstructionLockoutCode.mmNotLocked);
 				derivation_lazy = () -> Arrays.asList(InstructionLockout1Code.mmObject());
 			}
 		});

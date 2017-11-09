@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.SecuritiesBalanceTypeV2Code;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -117,7 +119,7 @@ public class SecuritiesBalanceType13Code extends SecuritiesBalanceTypeV2Code {
 	 */
 	public static final MMCode mmBlocked = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Blocked";
 			owner_lazy = () -> SecuritiesBalanceType13Code.mmObject();
 		}
@@ -140,7 +142,7 @@ public class SecuritiesBalanceType13Code extends SecuritiesBalanceTypeV2Code {
 	 */
 	public static final MMCode mmAvailableWithNoAdditionalStatus = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AvailableWithNoAdditionalStatus";
 			owner_lazy = () -> SecuritiesBalanceType13Code.mmObject();
 		}
@@ -163,7 +165,7 @@ public class SecuritiesBalanceType13Code extends SecuritiesBalanceTypeV2Code {
 	 */
 	public static final MMCode mmAvailable = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Available";
 			owner_lazy = () -> SecuritiesBalanceType13Code.mmObject();
 		}
@@ -186,7 +188,7 @@ public class SecuritiesBalanceType13Code extends SecuritiesBalanceTypeV2Code {
 	 */
 	public static final MMCode mmRegistered = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Registered";
 			owner_lazy = () -> SecuritiesBalanceType13Code.mmObject();
 		}
@@ -209,7 +211,7 @@ public class SecuritiesBalanceType13Code extends SecuritiesBalanceTypeV2Code {
 	 */
 	public static final MMCode mmPledged = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Pledged";
 			owner_lazy = () -> SecuritiesBalanceType13Code.mmObject();
 		}
@@ -232,7 +234,7 @@ public class SecuritiesBalanceType13Code extends SecuritiesBalanceTypeV2Code {
 	 */
 	public static final MMCode mmOutForRegistration = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OutForRegistration";
 			owner_lazy = () -> SecuritiesBalanceType13Code.mmObject();
 		}
@@ -255,7 +257,7 @@ public class SecuritiesBalanceType13Code extends SecuritiesBalanceTypeV2Code {
 	 */
 	public static final MMCode mmRestricted = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Restricted";
 			owner_lazy = () -> SecuritiesBalanceType13Code.mmObject();
 		}
@@ -278,7 +280,7 @@ public class SecuritiesBalanceType13Code extends SecuritiesBalanceTypeV2Code {
 	 */
 	public static final MMCode mmUnclassified = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unclassified";
 			owner_lazy = () -> SecuritiesBalanceType13Code.mmObject();
 		}
@@ -301,7 +303,7 @@ public class SecuritiesBalanceType13Code extends SecuritiesBalanceTypeV2Code {
 	 */
 	public static final MMCode mmStreetPosition = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StreetPosition";
 			owner_lazy = () -> SecuritiesBalanceType13Code.mmObject();
 		}
@@ -324,7 +326,7 @@ public class SecuritiesBalanceType13Code extends SecuritiesBalanceTypeV2Code {
 	 */
 	public static final MMCode mmUnregistered = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unregistered";
 			owner_lazy = () -> SecuritiesBalanceType13Code.mmObject();
 		}
@@ -347,7 +349,7 @@ public class SecuritiesBalanceType13Code extends SecuritiesBalanceTypeV2Code {
 	 */
 	public static final MMCode mmIssued = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Issued";
 			owner_lazy = () -> SecuritiesBalanceType13Code.mmObject();
 		}
@@ -370,7 +372,7 @@ public class SecuritiesBalanceType13Code extends SecuritiesBalanceTypeV2Code {
 	 */
 	public static final MMCode mmQuasiIssued = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuasiIssued";
 			owner_lazy = () -> SecuritiesBalanceType13Code.mmObject();
 		}
@@ -393,7 +395,7 @@ public class SecuritiesBalanceType13Code extends SecuritiesBalanceTypeV2Code {
 	 */
 	public static final MMCode mmEligibleForCollateralPurposes = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EligibleForCollateralPurposes";
 			owner_lazy = () -> SecuritiesBalanceType13Code.mmObject();
 		}
@@ -402,18 +404,15 @@ public class SecuritiesBalanceType13Code extends SecuritiesBalanceTypeV2Code {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("BLOK");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesBalanceType13Code";
 				definition = "Specifies the nature of the securities or investment fund balance.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SecuritiesBalanceType13Code.mmBlocked, com.tools20022.repository.codeset.SecuritiesBalanceType13Code.mmAvailableWithNoAdditionalStatus,
-						com.tools20022.repository.codeset.SecuritiesBalanceType13Code.mmAvailable, com.tools20022.repository.codeset.SecuritiesBalanceType13Code.mmRegistered,
-						com.tools20022.repository.codeset.SecuritiesBalanceType13Code.mmPledged, com.tools20022.repository.codeset.SecuritiesBalanceType13Code.mmOutForRegistration,
-						com.tools20022.repository.codeset.SecuritiesBalanceType13Code.mmRestricted, com.tools20022.repository.codeset.SecuritiesBalanceType13Code.mmUnclassified,
-						com.tools20022.repository.codeset.SecuritiesBalanceType13Code.mmStreetPosition, com.tools20022.repository.codeset.SecuritiesBalanceType13Code.mmUnregistered,
-						com.tools20022.repository.codeset.SecuritiesBalanceType13Code.mmIssued, com.tools20022.repository.codeset.SecuritiesBalanceType13Code.mmQuasiIssued,
-						com.tools20022.repository.codeset.SecuritiesBalanceType13Code.mmEligibleForCollateralPurposes);
+				code_lazy = () -> Arrays.asList(SecuritiesBalanceType13Code.mmBlocked, SecuritiesBalanceType13Code.mmAvailableWithNoAdditionalStatus, SecuritiesBalanceType13Code.mmAvailable, SecuritiesBalanceType13Code.mmRegistered,
+						SecuritiesBalanceType13Code.mmPledged, SecuritiesBalanceType13Code.mmOutForRegistration, SecuritiesBalanceType13Code.mmRestricted, SecuritiesBalanceType13Code.mmUnclassified,
+						SecuritiesBalanceType13Code.mmStreetPosition, SecuritiesBalanceType13Code.mmUnregistered, SecuritiesBalanceType13Code.mmIssued, SecuritiesBalanceType13Code.mmQuasiIssued,
+						SecuritiesBalanceType13Code.mmEligibleForCollateralPurposes);
 				trace_lazy = () -> SecuritiesBalanceTypeV2Code.mmObject();
 			}
 		});

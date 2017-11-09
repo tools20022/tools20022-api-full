@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.PartyTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -93,7 +95,7 @@ public class PartyType7Code extends PartyTypeCode {
 	 */
 	public static final MMCode mmAcquirer = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Acquirer";
 			owner_lazy = () -> PartyType7Code.mmObject();
 		}
@@ -116,7 +118,7 @@ public class PartyType7Code extends PartyTypeCode {
 	 */
 	public static final MMCode mmIntermediaryAgent = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IntermediaryAgent";
 			owner_lazy = () -> PartyType7Code.mmObject();
 		}
@@ -139,7 +141,7 @@ public class PartyType7Code extends PartyTypeCode {
 	 */
 	public static final MMCode mmPOIComponent = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "POIComponent";
 			owner_lazy = () -> PartyType7Code.mmObject();
 		}
@@ -162,7 +164,7 @@ public class PartyType7Code extends PartyTypeCode {
 	 */
 	public static final MMCode mmTerminalManager = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TerminalManager";
 			owner_lazy = () -> PartyType7Code.mmObject();
 		}
@@ -185,7 +187,7 @@ public class PartyType7Code extends PartyTypeCode {
 	 */
 	public static final MMCode mmSaleSystem = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SaleSystem";
 			owner_lazy = () -> PartyType7Code.mmObject();
 		}
@@ -194,13 +196,12 @@ public class PartyType7Code extends PartyTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ACQR");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PartyType7Code";
 				definition = "Party that communicate with a POI component (Point of Interaction), using a communication device.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PartyType7Code.mmAcquirer, com.tools20022.repository.codeset.PartyType7Code.mmIntermediaryAgent,
-						com.tools20022.repository.codeset.PartyType7Code.mmPOIComponent, com.tools20022.repository.codeset.PartyType7Code.mmTerminalManager, com.tools20022.repository.codeset.PartyType7Code.mmSaleSystem);
+				code_lazy = () -> Arrays.asList(PartyType7Code.mmAcquirer, PartyType7Code.mmIntermediaryAgent, PartyType7Code.mmPOIComponent, PartyType7Code.mmTerminalManager, PartyType7Code.mmSaleSystem);
 				trace_lazy = () -> PartyTypeCode.mmObject();
 			}
 		});

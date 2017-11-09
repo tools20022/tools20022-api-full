@@ -17,14 +17,14 @@
 
 package com.tools20022.repository.msg;
 
-import com.tools20022.metamodel.MMMessageAssociationEnd;
-import com.tools20022.metamodel.MMMessageAttribute;
-import com.tools20022.metamodel.MMMessageComponent;
-import com.tools20022.metamodel.MMXor;
+import com.tools20022.metamodel.*;
 import com.tools20022.repository.codeset.InvestigationExecutionConfirmation2Code;
 import com.tools20022.repository.codeset.PaymentModificationRejection1Code;
 import com.tools20022.repository.datatype.YesNoIndicator;
+import com.tools20022.repository.entity.InvestigationResolution;
+import com.tools20022.repository.entity.PaymentInvestigationCaseRejection;
 import com.tools20022.repository.entity.PaymentInvestigationCaseResolution;
+import com.tools20022.repository.GeneratedRepository;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -127,11 +127,11 @@ public class InvestigationStatus {
 	 */
 	public static final MMMessageAttribute mmConfirmation = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentInvestigationCaseResolution.mmInvestigationStatus;
+			businessElementTrace_lazy = () -> PaymentInvestigationCaseResolution.mmInvestigationStatus;
 			componentContext_lazy = () -> InvestigationStatus.mmObject();
 			isDerived = false;
 			xmlTag = "Conf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Confirmation";
 			definition = "Indicates the status of an investigation.";
 			maxOccurs = 1;
@@ -176,11 +176,11 @@ public class InvestigationStatus {
 	 */
 	public static final MMMessageAttribute mmRejectedModification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentInvestigationCaseRejection.mmRejectedModification;
+			businessElementTrace_lazy = () -> PaymentInvestigationCaseRejection.mmRejectedModification;
 			componentContext_lazy = () -> InvestigationStatus.mmObject();
 			isDerived = false;
 			xmlTag = "RjctdMod";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RejectedModification";
 			definition = "Reason for the rejection of a modification request, in a coded form.";
 			maxOccurs = 14;
@@ -222,7 +222,7 @@ public class InvestigationStatus {
 			componentContext_lazy = () -> InvestigationStatus.mmObject();
 			isDerived = false;
 			xmlTag = "RjctdCxl";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RejectedCancellation";
 			definition = "Explains the reason for rejecting a payment cancellation request.";
 			maxOccurs = 1;
@@ -268,11 +268,11 @@ public class InvestigationStatus {
 	 */
 	public static final MMMessageAssociationEnd mmDuplicateOf = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestigationResolution.mmInvestigationCase;
+			businessElementTrace_lazy = () -> InvestigationResolution.mmInvestigationCase;
 			componentContext_lazy = () -> InvestigationStatus.mmObject();
 			isDerived = false;
 			xmlTag = "DplctOf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DuplicateOf";
 			definition = "Identifies a duplicated case. When present, the case identified in the message must be closed. The case identified as duplicated (in this component) will be pursued.";
 			maxOccurs = 1;
@@ -321,11 +321,11 @@ public class InvestigationStatus {
 	 */
 	public static final MMMessageAttribute mmAssignmentCancellationConfirmation = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentInvestigationCaseRejection.mmAssignmentCancellationConfirmation;
+			businessElementTrace_lazy = () -> PaymentInvestigationCaseRejection.mmAssignmentCancellationConfirmation;
 			componentContext_lazy = () -> InvestigationStatus.mmObject();
 			isDerived = false;
 			xmlTag = "AssgnmtCxlConf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AssignmentCancellationConfirmation";
 			definition = "If yes, it means the cancellation of the assignment is confirmed.\nIf no, it means the cancellation of the assignment is rejected and the investigation process will continue.";
 			maxOccurs = 1;
@@ -370,11 +370,11 @@ public class InvestigationStatus {
 	 */
 	public static final MMMessageAssociationEnd mmReturnInformation = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentInvestigationCaseResolution.mmPaymentCorrection;
+			businessElementTrace_lazy = () -> PaymentInvestigationCaseResolution.mmPaymentCorrection;
 			componentContext_lazy = () -> InvestigationStatus.mmObject();
 			isDerived = false;
 			xmlTag = "RtrInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReturnInformation";
 			definition = "Details on the returns expected by the debtor side after cancellation or modification.";
 			maxOccurs = 1;
@@ -388,6 +388,10 @@ public class InvestigationStatus {
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
+	 * messageComponent} =
+	 * {@linkplain com.tools20022.repository.msg.InvestigationStatus
+	 * InvestigationStatus}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getImpactedElements
 	 * impactedElements} =
 	 * <ul>
@@ -408,10 +412,6 @@ public class InvestigationStatus {
 	 * InvestigationStatus.mmDuplicateOf}</li>
 	 * </ul>
 	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
-	 * messageComponent} =
-	 * {@linkplain com.tools20022.repository.msg.InvestigationStatus
-	 * InvestigationStatus}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -422,23 +422,22 @@ public class InvestigationStatus {
 	 */
 	public static final MMXor mmInvestigationStatusXorChoiceRule = new MMXor() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestigationStatusXorChoiceRule";
 			messageComponent_lazy = () -> InvestigationStatus.mmObject();
-			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestigationStatus.mmConfirmation, com.tools20022.repository.msg.InvestigationStatus.mmAssignmentCancellationConfirmation,
-					com.tools20022.repository.msg.InvestigationStatus.mmRejectedModification, com.tools20022.repository.msg.InvestigationStatus.mmRejectedCancellation, com.tools20022.repository.msg.InvestigationStatus.mmDuplicateOf);
+			impactedElements_lazy = () -> Arrays.asList(InvestigationStatus.mmConfirmation, InvestigationStatus.mmAssignmentCancellationConfirmation, InvestigationStatus.mmRejectedModification, InvestigationStatus.mmRejectedCancellation,
+					InvestigationStatus.mmDuplicateOf);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestigationStatus.mmConfirmation, com.tools20022.repository.msg.InvestigationStatus.mmRejectedModification,
-						com.tools20022.repository.msg.InvestigationStatus.mmRejectedCancellation, com.tools20022.repository.msg.InvestigationStatus.mmDuplicateOf,
-						com.tools20022.repository.msg.InvestigationStatus.mmAssignmentCancellationConfirmation, com.tools20022.repository.msg.InvestigationStatus.mmReturnInformation);
+				messageElement_lazy = () -> Arrays.asList(InvestigationStatus.mmConfirmation, InvestigationStatus.mmRejectedModification, InvestigationStatus.mmRejectedCancellation, InvestigationStatus.mmDuplicateOf,
+						InvestigationStatus.mmAssignmentCancellationConfirmation, InvestigationStatus.mmReturnInformation);
 				trace_lazy = () -> PaymentInvestigationCaseResolution.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
 						return DateFormat.getDateInstance(java.text.DateFormat.LONG).parse("September 9, 2016");
@@ -448,7 +447,7 @@ public class InvestigationStatus {
 				})).get();
 				name = "InvestigationStatus";
 				definition = "Choice between different statuses of an investigation case.";
-				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestigationStatus.mmInvestigationStatusXorChoiceRule);
+				xors_lazy = () -> Arrays.asList(InvestigationStatus.mmInvestigationStatusXorChoiceRule);
 			}
 		});
 		return mmObject_lazy.get();

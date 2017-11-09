@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.InvestigationStatusCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -89,7 +91,7 @@ public class InvestigationStatus1Code extends InvestigationStatusCode {
 	 */
 	public static final MMCode mmDataFound = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DataFound";
 			owner_lazy = () -> InvestigationStatus1Code.mmObject();
 		}
@@ -112,7 +114,7 @@ public class InvestigationStatus1Code extends InvestigationStatusCode {
 	 */
 	public static final MMCode mmDataNotFound = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DataNotFound";
 			owner_lazy = () -> InvestigationStatus1Code.mmObject();
 		}
@@ -135,7 +137,7 @@ public class InvestigationStatus1Code extends InvestigationStatusCode {
 	 */
 	public static final MMCode mmNotApplicable = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotApplicable";
 			owner_lazy = () -> InvestigationStatus1Code.mmObject();
 		}
@@ -144,13 +146,12 @@ public class InvestigationStatus1Code extends InvestigationStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("FOUN");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InvestigationStatus1Code";
 				definition = "Provides the status of the investigation response related to a previously sent request.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.InvestigationStatus1Code.mmDataFound, com.tools20022.repository.codeset.InvestigationStatus1Code.mmDataNotFound,
-						com.tools20022.repository.codeset.InvestigationStatus1Code.mmNotApplicable);
+				code_lazy = () -> Arrays.asList(InvestigationStatus1Code.mmDataFound, InvestigationStatus1Code.mmDataNotFound, InvestigationStatus1Code.mmNotApplicable);
 				trace_lazy = () -> InvestigationStatusCode.mmObject();
 			}
 		});

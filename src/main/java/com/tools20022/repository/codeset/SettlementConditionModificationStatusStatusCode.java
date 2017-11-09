@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -28,6 +30,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementConditionModificationStatus1Code
+ * SettlementConditionModificationStatus1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -45,14 +55,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.SettlementConditionModificationStatusStatusCode#mmPending
  * SettlementConditionModificationStatusStatusCode.mmPending}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementConditionModificationStatus1Code
- * SettlementConditionModificationStatus1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -105,7 +107,7 @@ public class SettlementConditionModificationStatusStatusCode {
 	 */
 	public static final MMCode mmAcknowledgedAccepted = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcknowledgedAccepted";
 			definition = "Instruction has been acknowledged/accepted by the account servicer.";
 			owner_lazy = () -> SettlementConditionModificationStatusStatusCode.mmObject();
@@ -135,7 +137,7 @@ public class SettlementConditionModificationStatusStatusCode {
 	 */
 	public static final MMCode mmRejected = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rejected";
 			definition = "Instruction has been rejected for further processing.";
 			owner_lazy = () -> SettlementConditionModificationStatusStatusCode.mmObject();
@@ -165,7 +167,7 @@ public class SettlementConditionModificationStatusStatusCode {
 	 */
 	public static final MMCode mmDenied = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Denied";
 			definition = "Modification Request will not be executed.";
 			owner_lazy = () -> SettlementConditionModificationStatusStatusCode.mmObject();
@@ -195,7 +197,7 @@ public class SettlementConditionModificationStatusStatusCode {
 	 */
 	public static final MMCode mmCompleted = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Completed";
 			definition = "Modification has been completed.";
 			owner_lazy = () -> SettlementConditionModificationStatusStatusCode.mmObject();
@@ -228,7 +230,7 @@ public class SettlementConditionModificationStatusStatusCode {
 	 */
 	public static final MMCode mmPending = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Pending";
 			definition = "Modification is pending. At this time, it is unknown whether the modification can be affected.";
 			owner_lazy = () -> SettlementConditionModificationStatusStatusCode.mmObject();
@@ -239,14 +241,13 @@ public class SettlementConditionModificationStatusStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("PACK");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SettlementConditionModificationStatusStatusCode";
 				definition = "Specifies the status of a securities settlement condition modification request.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SettlementConditionModificationStatusStatusCode.mmAcknowledgedAccepted,
-						com.tools20022.repository.codeset.SettlementConditionModificationStatusStatusCode.mmRejected, com.tools20022.repository.codeset.SettlementConditionModificationStatusStatusCode.mmDenied,
-						com.tools20022.repository.codeset.SettlementConditionModificationStatusStatusCode.mmCompleted, com.tools20022.repository.codeset.SettlementConditionModificationStatusStatusCode.mmPending);
+				code_lazy = () -> Arrays.asList(SettlementConditionModificationStatusStatusCode.mmAcknowledgedAccepted, SettlementConditionModificationStatusStatusCode.mmRejected, SettlementConditionModificationStatusStatusCode.mmDenied,
+						SettlementConditionModificationStatusStatusCode.mmCompleted, SettlementConditionModificationStatusStatusCode.mmPending);
 				derivation_lazy = () -> Arrays.asList(SettlementConditionModificationStatus1Code.mmObject());
 			}
 		});

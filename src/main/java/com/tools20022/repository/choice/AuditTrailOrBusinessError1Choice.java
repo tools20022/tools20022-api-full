@@ -19,6 +19,8 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.AuditTrail1;
 import com.tools20022.repository.msg.ErrorHandling3;
 import java.util.Arrays;
@@ -96,7 +98,7 @@ public class AuditTrailOrBusinessError1Choice {
 			componentContext_lazy = () -> AuditTrailOrBusinessError1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "AudtTrl";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AuditTrail";
 			definition = "Choice between data concerning static data audit trail retrieved or business error.";
 			minOccurs = 1;
@@ -136,7 +138,7 @@ public class AuditTrailOrBusinessError1Choice {
 			componentContext_lazy = () -> AuditTrailOrBusinessError1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "BizErr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BusinessError";
 			definition = "Business error resulting from a rejection.";
 			minOccurs = 1;
@@ -148,9 +150,9 @@ public class AuditTrailOrBusinessError1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AuditTrailOrBusinessError1Choice.mmAuditTrail, com.tools20022.repository.choice.AuditTrailOrBusinessError1Choice.mmBusinessError);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(AuditTrailOrBusinessError1Choice.mmAuditTrail, AuditTrailOrBusinessError1Choice.mmBusinessError);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "AuditTrailOrBusinessError1Choice";
 				definition = "Report between the static data audit trail or a business error.";
 			}

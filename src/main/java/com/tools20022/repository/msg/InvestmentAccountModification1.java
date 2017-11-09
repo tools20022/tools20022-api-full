@@ -19,8 +19,13 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.acmt.AccountModificationInstructionV05;
 import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.entity.InvestmentFundTransaction;
+import com.tools20022.repository.entity.TradeIdentification;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -137,11 +142,11 @@ public class InvestmentAccountModification1 {
 			componentContext_lazy = () -> InvestmentAccountModification1.mmObject();
 			isDerived = false;
 			xmlTag = "ModRsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ModificationReason";
 			definition = "Reason for the modification brought to the investment account information.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentAccountModification2.mmModificationReason);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.InvestmentAccountModificationDetails.mmModificationReason;
+			nextVersions_lazy = () -> Arrays.asList(InvestmentAccountModification2.mmModificationReason);
+			previousVersion_lazy = () -> InvestmentAccountModificationDetails.mmModificationReason;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
@@ -194,11 +199,11 @@ public class InvestmentAccountModification1 {
 			componentContext_lazy = () -> InvestmentAccountModification1.mmObject();
 			isDerived = false;
 			xmlTag = "AcctApplId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountApplicationIdentification";
 			definition = "Unique and unambiguous identifier of the account modification request.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentAccountModification2.mmAccountApplicationIdentification);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.InvestmentAccountModificationDetails.mmAccountApplicationIdentification;
+			nextVersions_lazy = () -> Arrays.asList(InvestmentAccountModification2.mmAccountApplicationIdentification);
+			previousVersion_lazy = () -> InvestmentAccountModificationDetails.mmAccountApplicationIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -248,14 +253,14 @@ public class InvestmentAccountModification1 {
 	 */
 	public static final MMMessageAttribute mmClientReference = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundTransaction.mmClientReference;
+			businessElementTrace_lazy = () -> InvestmentFundTransaction.mmClientReference;
 			componentContext_lazy = () -> InvestmentAccountModification1.mmObject();
 			isDerived = false;
 			xmlTag = "ClntRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClientReference";
 			definition = "Unique and unambiguous investor's identification of a transfer.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentAccountModification2.mmClientReference);
+			nextVersions_lazy = () -> Arrays.asList(InvestmentAccountModification2.mmClientReference);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -308,14 +313,14 @@ public class InvestmentAccountModification1 {
 	 */
 	public static final MMMessageAttribute mmCounterpartyReference = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradeIdentification.mmCounterpartyReference;
+			businessElementTrace_lazy = () -> TradeIdentification.mmCounterpartyReference;
 			componentContext_lazy = () -> InvestmentAccountModification1.mmObject();
 			isDerived = false;
 			xmlTag = "CtrPtyRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CounterpartyReference";
 			definition = "Unambiguous identification of the transfer as allocated by the counterparty.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentAccountModification2.mmCounterpartyReference);
+			nextVersions_lazy = () -> Arrays.asList(InvestmentAccountModification2.mmCounterpartyReference);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.AdditionalReference2.mmObject();
@@ -325,11 +330,11 @@ public class InvestmentAccountModification1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentAccountModification1.mmModificationReason, com.tools20022.repository.msg.InvestmentAccountModification1.mmAccountApplicationIdentification,
-						com.tools20022.repository.msg.InvestmentAccountModification1.mmClientReference, com.tools20022.repository.msg.InvestmentAccountModification1.mmCounterpartyReference);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountModificationInstructionV05.mmInstructionDetails);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(InvestmentAccountModification1.mmModificationReason, InvestmentAccountModification1.mmAccountApplicationIdentification, InvestmentAccountModification1.mmClientReference,
+						InvestmentAccountModification1.mmCounterpartyReference);
+				messageBuildingBlock_lazy = () -> Arrays.asList(AccountModificationInstructionV05.mmInstructionDetails);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "InvestmentAccountModification1";
 				definition = "Provide information about the reason for the modification and about the application request which triggered this modification.";
 				nextVersions_lazy = () -> Arrays.asList(InvestmentAccountModification2.mmObject());

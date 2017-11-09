@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.PaymentMethodCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -89,7 +91,7 @@ public class PaymentMethod3Code extends PaymentMethodCode {
 	 */
 	public static final MMCode mmCheque = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cheque";
 			owner_lazy = () -> PaymentMethod3Code.mmObject();
 		}
@@ -112,7 +114,7 @@ public class PaymentMethod3Code extends PaymentMethodCode {
 	 */
 	public static final MMCode mmCreditTransfer = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditTransfer";
 			owner_lazy = () -> PaymentMethod3Code.mmObject();
 		}
@@ -135,7 +137,7 @@ public class PaymentMethod3Code extends PaymentMethodCode {
 	 */
 	public static final MMCode mmTransferAdvice = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransferAdvice";
 			owner_lazy = () -> PaymentMethod3Code.mmObject();
 		}
@@ -144,13 +146,12 @@ public class PaymentMethod3Code extends PaymentMethodCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CHK");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PaymentMethod3Code";
 				definition = "Specifies the transfer method that will be used  to transfer an amount of money.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PaymentMethod3Code.mmCheque, com.tools20022.repository.codeset.PaymentMethod3Code.mmCreditTransfer,
-						com.tools20022.repository.codeset.PaymentMethod3Code.mmTransferAdvice);
+				code_lazy = () -> Arrays.asList(PaymentMethod3Code.mmCheque, PaymentMethod3Code.mmCreditTransfer, PaymentMethod3Code.mmTransferAdvice);
 				trace_lazy = () -> PaymentMethodCode.mmObject();
 			}
 		});

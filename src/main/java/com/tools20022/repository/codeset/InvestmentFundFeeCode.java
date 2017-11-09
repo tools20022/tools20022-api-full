@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.InvestmentFundFee1Code
+ * InvestmentFundFee1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -100,13 +109,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * InvestmentFundFeeCode.mmPenalty}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.InvestmentFundFee1Code
- * InvestmentFundFee1Code}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -149,7 +151,7 @@ public class InvestmentFundFeeCode {
 	 */
 	public static final MMCode mmAccountingFee = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountingFee";
 			definition = "Fee paid for accounting services rendered.";
 			owner_lazy = () -> InvestmentFundFeeCode.mmObject();
@@ -182,7 +184,7 @@ public class InvestmentFundFeeCode {
 	 */
 	public static final MMCode mmBackEndLoad = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BackEndLoad";
 			definition = "Fee paid by the investor to the fund or fund management company when redeeming.";
 			owner_lazy = () -> InvestmentFundFeeCode.mmObject();
@@ -212,7 +214,7 @@ public class InvestmentFundFeeCode {
 	 */
 	public static final MMCode mmBrokerageFee = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BrokerageFee";
 			definition = "Fee paid to a broker for services provided.";
 			owner_lazy = () -> InvestmentFundFeeCode.mmObject();
@@ -242,7 +244,7 @@ public class InvestmentFundFeeCode {
 	 */
 	public static final MMCode mmContingentDeferredSalesCharge = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ContingentDeferredSalesCharge";
 			definition = "Deferred sales charge.";
 			owner_lazy = () -> InvestmentFundFeeCode.mmObject();
@@ -275,7 +277,7 @@ public class InvestmentFundFeeCode {
 	 */
 	public static final MMCode mmCorrespondentBankCharge = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorrespondentBankCharge";
 			definition = "In investment funds, the charge of the correspondent bank for transferring money.";
 			owner_lazy = () -> InvestmentFundFeeCode.mmObject();
@@ -306,7 +308,7 @@ public class InvestmentFundFeeCode {
 	 */
 	public static final MMCode mmCustodyFee = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CustodyFee";
 			definition = "Fee paid to a custodian in respect of custodial services.";
 			owner_lazy = () -> InvestmentFundFeeCode.mmObject();
@@ -340,7 +342,7 @@ public class InvestmentFundFeeCode {
 	 */
 	public static final MMCode mmDilutionLevy = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DilutionLevy";
 			definition = "In investment funds, a charge payable by the investor covering bid-offer spreads and dealing charges for the underlying investments. The dilution levy is paid to the fund for the benefit of other unit holders.";
 			owner_lazy = () -> InvestmentFundFeeCode.mmObject();
@@ -370,7 +372,7 @@ public class InvestmentFundFeeCode {
 	 */
 	public static final MMCode mmDiscount = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Discount";
 			definition = "Charge that has been reduced by a fund.";
 			owner_lazy = () -> InvestmentFundFeeCode.mmObject();
@@ -403,7 +405,7 @@ public class InvestmentFundFeeCode {
 	 */
 	public static final MMCode mmEqualisation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Equalisation";
 			definition = "The part of an investor's subscription amount that is held by the fund in order to pay incentive or performance fees at the end of the fiscal year.";
 			owner_lazy = () -> InvestmentFundFeeCode.mmObject();
@@ -436,7 +438,7 @@ public class InvestmentFundFeeCode {
 	 */
 	public static final MMCode mmFrontEndLoad = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FrontEndLoad";
 			definition = "Fee paid by the investor to the fund or fund management company when subscribing.";
 			owner_lazy = () -> InvestmentFundFeeCode.mmObject();
@@ -466,7 +468,7 @@ public class InvestmentFundFeeCode {
 	 */
 	public static final MMCode mmInitialCharge = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InitialCharge";
 			definition = "Charge paid at the time of the first subscription.";
 			owner_lazy = () -> InvestmentFundFeeCode.mmObject();
@@ -499,7 +501,7 @@ public class InvestmentFundFeeCode {
 	 */
 	public static final MMCode mmPremium = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Premium";
 			definition = "In investment funds, pre-arranged addition to the trade amount based on the published net asset value.";
 			owner_lazy = () -> InvestmentFundFeeCode.mmObject();
@@ -532,7 +534,7 @@ public class InvestmentFundFeeCode {
 	 */
 	public static final MMCode mmServiceProvisionFee = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ServiceProvisionFee";
 			definition = "Fee paid by the investor to a distributor/intermediary or other service provider for the provision of financial services.";
 			owner_lazy = () -> InvestmentFundFeeCode.mmObject();
@@ -563,7 +565,7 @@ public class InvestmentFundFeeCode {
 	 */
 	public static final MMCode mmSwitch = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Switch";
 			definition = "In investment funds, charge related to a switch transaction.";
 			owner_lazy = () -> InvestmentFundFeeCode.mmObject();
@@ -596,7 +598,7 @@ public class InvestmentFundFeeCode {
 	 */
 	public static final MMCode mmTransferFee = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransferFee";
 			definition = "In investment funds, a fee charged for the transfer of ownership of an investment fund.";
 			owner_lazy = () -> InvestmentFundFeeCode.mmObject();
@@ -629,7 +631,7 @@ public class InvestmentFundFeeCode {
 	 */
 	public static final MMCode mmUCITSCommission = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UCITSCommission";
 			definition = "Charges paid by the investor to the fund company for subscription and redemption orders. ";
 			owner_lazy = () -> InvestmentFundFeeCode.mmObject();
@@ -659,7 +661,7 @@ public class InvestmentFundFeeCode {
 	 */
 	public static final MMCode mmCommission = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Commission";
 			definition = "Amount paid out by the fund to a third party.";
 			owner_lazy = () -> InvestmentFundFeeCode.mmObject();
@@ -690,7 +692,7 @@ public class InvestmentFundFeeCode {
 	 */
 	public static final MMCode mmShippingCharge = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ShippingCharge";
 			definition = "Charge for shipping, including the insurance of securities.";
 			owner_lazy = () -> InvestmentFundFeeCode.mmObject();
@@ -720,7 +722,7 @@ public class InvestmentFundFeeCode {
 	 */
 	public static final MMCode mmPostageCharge = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PostageCharge";
 			definition = "Charge paid for the postage.";
 			owner_lazy = () -> InvestmentFundFeeCode.mmObject();
@@ -753,7 +755,7 @@ public class InvestmentFundFeeCode {
 	 */
 	public static final MMCode mmCommissionDePlacement = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommissionDePlacement";
 			definition = "Amount of cash due to an intermediary for selling a product, or services, to a third party.";
 			owner_lazy = () -> InvestmentFundFeeCode.mmObject();
@@ -783,7 +785,7 @@ public class InvestmentFundFeeCode {
 	 */
 	public static final MMCode mmAdditionalFee = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalFee";
 			definition = "Additional fee not covered by another fee type.";
 			owner_lazy = () -> InvestmentFundFeeCode.mmObject();
@@ -816,7 +818,7 @@ public class InvestmentFundFeeCode {
 	 */
 	public static final MMCode mmRegulatoryFee = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RegulatoryFee";
 			definition = "Fee charged by a regulatory authority, for example, securities and exchange fees. ";
 			owner_lazy = () -> InvestmentFundFeeCode.mmObject();
@@ -847,7 +849,7 @@ public class InvestmentFundFeeCode {
 	 */
 	public static final MMCode mmPenalty = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Penalty";
 			definition = "Fee charged to the investor for early redemption of the fund.";
 			owner_lazy = () -> InvestmentFundFeeCode.mmObject();
@@ -858,20 +860,15 @@ public class InvestmentFundFeeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InvestmentFundFeeCode";
 				definition = "Specifies the type of service for which a fee is asked or paid.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.InvestmentFundFeeCode.mmAccountingFee, com.tools20022.repository.codeset.InvestmentFundFeeCode.mmBackEndLoad,
-						com.tools20022.repository.codeset.InvestmentFundFeeCode.mmBrokerageFee, com.tools20022.repository.codeset.InvestmentFundFeeCode.mmContingentDeferredSalesCharge,
-						com.tools20022.repository.codeset.InvestmentFundFeeCode.mmCorrespondentBankCharge, com.tools20022.repository.codeset.InvestmentFundFeeCode.mmCustodyFee,
-						com.tools20022.repository.codeset.InvestmentFundFeeCode.mmDilutionLevy, com.tools20022.repository.codeset.InvestmentFundFeeCode.mmDiscount, com.tools20022.repository.codeset.InvestmentFundFeeCode.mmEqualisation,
-						com.tools20022.repository.codeset.InvestmentFundFeeCode.mmFrontEndLoad, com.tools20022.repository.codeset.InvestmentFundFeeCode.mmInitialCharge, com.tools20022.repository.codeset.InvestmentFundFeeCode.mmPremium,
-						com.tools20022.repository.codeset.InvestmentFundFeeCode.mmServiceProvisionFee, com.tools20022.repository.codeset.InvestmentFundFeeCode.mmSwitch, com.tools20022.repository.codeset.InvestmentFundFeeCode.mmTransferFee,
-						com.tools20022.repository.codeset.InvestmentFundFeeCode.mmUCITSCommission, com.tools20022.repository.codeset.InvestmentFundFeeCode.mmCommission,
-						com.tools20022.repository.codeset.InvestmentFundFeeCode.mmShippingCharge, com.tools20022.repository.codeset.InvestmentFundFeeCode.mmPostageCharge,
-						com.tools20022.repository.codeset.InvestmentFundFeeCode.mmCommissionDePlacement, com.tools20022.repository.codeset.InvestmentFundFeeCode.mmAdditionalFee,
-						com.tools20022.repository.codeset.InvestmentFundFeeCode.mmRegulatoryFee, com.tools20022.repository.codeset.InvestmentFundFeeCode.mmPenalty);
+				code_lazy = () -> Arrays.asList(InvestmentFundFeeCode.mmAccountingFee, InvestmentFundFeeCode.mmBackEndLoad, InvestmentFundFeeCode.mmBrokerageFee, InvestmentFundFeeCode.mmContingentDeferredSalesCharge,
+						InvestmentFundFeeCode.mmCorrespondentBankCharge, InvestmentFundFeeCode.mmCustodyFee, InvestmentFundFeeCode.mmDilutionLevy, InvestmentFundFeeCode.mmDiscount, InvestmentFundFeeCode.mmEqualisation,
+						InvestmentFundFeeCode.mmFrontEndLoad, InvestmentFundFeeCode.mmInitialCharge, InvestmentFundFeeCode.mmPremium, InvestmentFundFeeCode.mmServiceProvisionFee, InvestmentFundFeeCode.mmSwitch,
+						InvestmentFundFeeCode.mmTransferFee, InvestmentFundFeeCode.mmUCITSCommission, InvestmentFundFeeCode.mmCommission, InvestmentFundFeeCode.mmShippingCharge, InvestmentFundFeeCode.mmPostageCharge,
+						InvestmentFundFeeCode.mmCommissionDePlacement, InvestmentFundFeeCode.mmAdditionalFee, InvestmentFundFeeCode.mmRegulatoryFee, InvestmentFundFeeCode.mmPenalty);
 				derivation_lazy = () -> Arrays.asList(InvestmentFundFee1Code.mmObject());
 			}
 		});

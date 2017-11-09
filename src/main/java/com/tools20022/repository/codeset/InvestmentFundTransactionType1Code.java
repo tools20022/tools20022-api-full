@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.InvestmentFundTransactionTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -137,7 +139,7 @@ public class InvestmentFundTransactionType1Code extends InvestmentFundTransactio
 	 */
 	public static final MMCode mmAll = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "All";
 			owner_lazy = () -> InvestmentFundTransactionType1Code.mmObject();
 		}
@@ -160,7 +162,7 @@ public class InvestmentFundTransactionType1Code extends InvestmentFundTransactio
 	 */
 	public static final MMCode mmSecuritiesSale = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesSale";
 			owner_lazy = () -> InvestmentFundTransactionType1Code.mmObject();
 		}
@@ -183,7 +185,7 @@ public class InvestmentFundTransactionType1Code extends InvestmentFundTransactio
 	 */
 	public static final MMCode mmSecuritiesPurchase = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesPurchase";
 			owner_lazy = () -> InvestmentFundTransactionType1Code.mmObject();
 		}
@@ -206,7 +208,7 @@ public class InvestmentFundTransactionType1Code extends InvestmentFundTransactio
 	 */
 	public static final MMCode mmSwitchOut = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SwitchOut";
 			owner_lazy = () -> InvestmentFundTransactionType1Code.mmObject();
 		}
@@ -229,7 +231,7 @@ public class InvestmentFundTransactionType1Code extends InvestmentFundTransactio
 	 */
 	public static final MMCode mmTransferIn = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransferIn";
 			owner_lazy = () -> InvestmentFundTransactionType1Code.mmObject();
 		}
@@ -252,7 +254,7 @@ public class InvestmentFundTransactionType1Code extends InvestmentFundTransactio
 	 */
 	public static final MMCode mmTransferOut = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransferOut";
 			owner_lazy = () -> InvestmentFundTransactionType1Code.mmObject();
 		}
@@ -275,7 +277,7 @@ public class InvestmentFundTransactionType1Code extends InvestmentFundTransactio
 	 */
 	public static final MMCode mmSubscription = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Subscription";
 			owner_lazy = () -> InvestmentFundTransactionType1Code.mmObject();
 		}
@@ -298,7 +300,7 @@ public class InvestmentFundTransactionType1Code extends InvestmentFundTransactio
 	 */
 	public static final MMCode mmRedemption = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Redemption";
 			owner_lazy = () -> InvestmentFundTransactionType1Code.mmObject();
 		}
@@ -321,7 +323,7 @@ public class InvestmentFundTransactionType1Code extends InvestmentFundTransactio
 	 */
 	public static final MMCode mmCashDeposit = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashDeposit";
 			owner_lazy = () -> InvestmentFundTransactionType1Code.mmObject();
 		}
@@ -344,7 +346,7 @@ public class InvestmentFundTransactionType1Code extends InvestmentFundTransactio
 	 */
 	public static final MMCode mmCashWithdrawal = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashWithdrawal";
 			owner_lazy = () -> InvestmentFundTransactionType1Code.mmObject();
 		}
@@ -367,7 +369,7 @@ public class InvestmentFundTransactionType1Code extends InvestmentFundTransactio
 	 */
 	public static final MMCode mmDividendPayment = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DividendPayment";
 			owner_lazy = () -> InvestmentFundTransactionType1Code.mmObject();
 		}
@@ -390,7 +392,7 @@ public class InvestmentFundTransactionType1Code extends InvestmentFundTransactio
 	 */
 	public static final MMCode mmCorporationActionEvent = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorporationActionEvent";
 			owner_lazy = () -> InvestmentFundTransactionType1Code.mmObject();
 		}
@@ -413,7 +415,7 @@ public class InvestmentFundTransactionType1Code extends InvestmentFundTransactio
 	 */
 	public static final MMCode mmCrossIn = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CrossIn";
 			owner_lazy = () -> InvestmentFundTransactionType1Code.mmObject();
 		}
@@ -436,7 +438,7 @@ public class InvestmentFundTransactionType1Code extends InvestmentFundTransactio
 	 */
 	public static final MMCode mmCrossOut = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CrossOut";
 			owner_lazy = () -> InvestmentFundTransactionType1Code.mmObject();
 		}
@@ -459,7 +461,7 @@ public class InvestmentFundTransactionType1Code extends InvestmentFundTransactio
 	 */
 	public static final MMCode mmDividend = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Dividend";
 			owner_lazy = () -> InvestmentFundTransactionType1Code.mmObject();
 		}
@@ -482,7 +484,7 @@ public class InvestmentFundTransactionType1Code extends InvestmentFundTransactio
 	 */
 	public static final MMCode mmInSpecie = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InSpecie";
 			owner_lazy = () -> InvestmentFundTransactionType1Code.mmObject();
 		}
@@ -505,7 +507,7 @@ public class InvestmentFundTransactionType1Code extends InvestmentFundTransactio
 	 */
 	public static final MMCode mmOther = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
 			owner_lazy = () -> InvestmentFundTransactionType1Code.mmObject();
 		}
@@ -528,7 +530,7 @@ public class InvestmentFundTransactionType1Code extends InvestmentFundTransactio
 	 */
 	public static final MMCode mmRedemptionAssetAllocation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RedemptionAssetAllocation";
 			owner_lazy = () -> InvestmentFundTransactionType1Code.mmObject();
 		}
@@ -551,7 +553,7 @@ public class InvestmentFundTransactionType1Code extends InvestmentFundTransactio
 	 */
 	public static final MMCode mmRedemptionWithdrawingPlan = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RedemptionWithdrawingPlan";
 			owner_lazy = () -> InvestmentFundTransactionType1Code.mmObject();
 		}
@@ -574,7 +576,7 @@ public class InvestmentFundTransactionType1Code extends InvestmentFundTransactio
 	 */
 	public static final MMCode mmReinvestmentOfDividend = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReinvestmentOfDividend";
 			owner_lazy = () -> InvestmentFundTransactionType1Code.mmObject();
 		}
@@ -597,7 +599,7 @@ public class InvestmentFundTransactionType1Code extends InvestmentFundTransactio
 	 */
 	public static final MMCode mmSubscriptionSavingsPlan = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubscriptionSavingsPlan";
 			owner_lazy = () -> InvestmentFundTransactionType1Code.mmObject();
 		}
@@ -620,7 +622,7 @@ public class InvestmentFundTransactionType1Code extends InvestmentFundTransactio
 	 */
 	public static final MMCode mmSubscriptionAssetAllocation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubscriptionAssetAllocation";
 			owner_lazy = () -> InvestmentFundTransactionType1Code.mmObject();
 		}
@@ -629,21 +631,17 @@ public class InvestmentFundTransactionType1Code extends InvestmentFundTransactio
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InvestmentFundTransactionType1Code";
 				definition = "Specifies the type of transaction.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.InvestmentFundTransactionType1Code.mmAll, com.tools20022.repository.codeset.InvestmentFundTransactionType1Code.mmSecuritiesSale,
-						com.tools20022.repository.codeset.InvestmentFundTransactionType1Code.mmSecuritiesPurchase, com.tools20022.repository.codeset.InvestmentFundTransactionType1Code.mmSwitchOut,
-						com.tools20022.repository.codeset.InvestmentFundTransactionType1Code.mmTransferIn, com.tools20022.repository.codeset.InvestmentFundTransactionType1Code.mmTransferOut,
-						com.tools20022.repository.codeset.InvestmentFundTransactionType1Code.mmSubscription, com.tools20022.repository.codeset.InvestmentFundTransactionType1Code.mmRedemption,
-						com.tools20022.repository.codeset.InvestmentFundTransactionType1Code.mmCashDeposit, com.tools20022.repository.codeset.InvestmentFundTransactionType1Code.mmCashWithdrawal,
-						com.tools20022.repository.codeset.InvestmentFundTransactionType1Code.mmDividendPayment, com.tools20022.repository.codeset.InvestmentFundTransactionType1Code.mmCorporationActionEvent,
-						com.tools20022.repository.codeset.InvestmentFundTransactionType1Code.mmCrossIn, com.tools20022.repository.codeset.InvestmentFundTransactionType1Code.mmCrossOut,
-						com.tools20022.repository.codeset.InvestmentFundTransactionType1Code.mmDividend, com.tools20022.repository.codeset.InvestmentFundTransactionType1Code.mmInSpecie,
-						com.tools20022.repository.codeset.InvestmentFundTransactionType1Code.mmOther, com.tools20022.repository.codeset.InvestmentFundTransactionType1Code.mmRedemptionAssetAllocation,
-						com.tools20022.repository.codeset.InvestmentFundTransactionType1Code.mmRedemptionWithdrawingPlan, com.tools20022.repository.codeset.InvestmentFundTransactionType1Code.mmReinvestmentOfDividend,
-						com.tools20022.repository.codeset.InvestmentFundTransactionType1Code.mmSubscriptionSavingsPlan, com.tools20022.repository.codeset.InvestmentFundTransactionType1Code.mmSubscriptionAssetAllocation);
+				code_lazy = () -> Arrays.asList(InvestmentFundTransactionType1Code.mmAll, InvestmentFundTransactionType1Code.mmSecuritiesSale, InvestmentFundTransactionType1Code.mmSecuritiesPurchase,
+						InvestmentFundTransactionType1Code.mmSwitchOut, InvestmentFundTransactionType1Code.mmTransferIn, InvestmentFundTransactionType1Code.mmTransferOut, InvestmentFundTransactionType1Code.mmSubscription,
+						InvestmentFundTransactionType1Code.mmRedemption, InvestmentFundTransactionType1Code.mmCashDeposit, InvestmentFundTransactionType1Code.mmCashWithdrawal, InvestmentFundTransactionType1Code.mmDividendPayment,
+						InvestmentFundTransactionType1Code.mmCorporationActionEvent, InvestmentFundTransactionType1Code.mmCrossIn, InvestmentFundTransactionType1Code.mmCrossOut, InvestmentFundTransactionType1Code.mmDividend,
+						InvestmentFundTransactionType1Code.mmInSpecie, InvestmentFundTransactionType1Code.mmOther, InvestmentFundTransactionType1Code.mmRedemptionAssetAllocation,
+						InvestmentFundTransactionType1Code.mmRedemptionWithdrawingPlan, InvestmentFundTransactionType1Code.mmReinvestmentOfDividend, InvestmentFundTransactionType1Code.mmSubscriptionSavingsPlan,
+						InvestmentFundTransactionType1Code.mmSubscriptionAssetAllocation);
 				trace_lazy = () -> InvestmentFundTransactionTypeCode.mmObject();
 			}
 		});

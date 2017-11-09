@@ -19,8 +19,10 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.PercentageRate;
 import com.tools20022.repository.entity.CommissionWaiver;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -99,11 +101,11 @@ public class CommissionWaiver2 {
 	 */
 	public static final MMMessageAttribute mmInstructionBasis = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CommissionWaiver.mmInstructionBasis;
+			businessElementTrace_lazy = () -> CommissionWaiver.mmInstructionBasis;
 			componentContext_lazy = () -> CommissionWaiver2.mmObject();
 			isDerived = false;
 			xmlTag = "InstrBsis";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructionBasis";
 			definition = "Form of the rebate, eg, cash.";
 			maxOccurs = 1;
@@ -150,11 +152,11 @@ public class CommissionWaiver2 {
 	 */
 	public static final MMMessageAttribute mmWaivedRate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CommissionWaiver.mmWaivedRate;
+			businessElementTrace_lazy = () -> CommissionWaiver.mmWaivedRate;
 			componentContext_lazy = () -> CommissionWaiver2.mmObject();
 			isDerived = false;
 			xmlTag = "WvdRate";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WaivedRate";
 			definition = "Proportion of the commission that is waived, ie, if  the commission is 5% and half is waived, 2.5% should be stated in this field.";
 			maxOccurs = 1;
@@ -166,10 +168,10 @@ public class CommissionWaiver2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CommissionWaiver2.mmInstructionBasis, com.tools20022.repository.msg.CommissionWaiver2.mmWaivedRate);
+				messageElement_lazy = () -> Arrays.asList(CommissionWaiver2.mmInstructionBasis, CommissionWaiver2.mmWaivedRate);
 				trace_lazy = () -> CommissionWaiver.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CommissionWaiver2";
 				definition = "Non-enforcement of the right to all or part of a commission by the party entitled to the commission.";
 			}

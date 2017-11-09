@@ -20,8 +20,10 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.FATCAStatus1Code;
 import com.tools20022.repository.entity.FATCAStatus;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification29;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -117,14 +119,14 @@ public class FATCAStatus1Choice {
 	 */
 	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.FATCAStatus.mmFATCAStatus;
+			businessElementTrace_lazy = () -> FATCAStatus.mmFATCAStatus;
 			componentContext_lazy = () -> FATCAStatus1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Cd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Foreign Account Tax Compliance Act (FATCA) status expressed as a code.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.FATCAStatus2Choice.mmCode);
+			nextVersions_lazy = () -> Arrays.asList(FATCAStatus2Choice.mmCode);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> FATCAStatus1Code.mmObject();
@@ -174,10 +176,10 @@ public class FATCAStatus1Choice {
 			componentContext_lazy = () -> FATCAStatus1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Foreign Account Tax Compliance Act (FATCA) status expressed as a proprietary code.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.FATCAStatus2Choice.mmProprietary);
+			nextVersions_lazy = () -> Arrays.asList(FATCAStatus2Choice.mmProprietary);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -188,10 +190,10 @@ public class FATCAStatus1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.FATCAStatus1Choice.mmCode, com.tools20022.repository.choice.FATCAStatus1Choice.mmProprietary);
+				messageElement_lazy = () -> Arrays.asList(FATCAStatus1Choice.mmCode, FATCAStatus1Choice.mmProprietary);
 				trace_lazy = () -> FATCAStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "FATCAStatus1Choice";
 				definition = "Choice of formats for the Foreign Account Tax Compliance Act (FATCA) status.";
 				nextVersions_lazy = () -> Arrays.asList(FATCAStatus2Choice.mmObject());

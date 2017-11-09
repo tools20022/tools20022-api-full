@@ -19,10 +19,12 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.metamodel.MMXor;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -105,7 +107,7 @@ public class ProprietaryDate1 {
 			componentContext_lazy = () -> ProprietaryDate1.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Identifies the type of date reported.";
 			maxOccurs = 1;
@@ -146,7 +148,7 @@ public class ProprietaryDate1 {
 			componentContext_lazy = () -> ProprietaryDate1.mmObject();
 			isDerived = false;
 			xmlTag = "Dt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Date";
 			definition = "Date in ISO format.";
 			maxOccurs = 1;
@@ -187,7 +189,7 @@ public class ProprietaryDate1 {
 			componentContext_lazy = () -> ProprietaryDate1.mmObject();
 			isDerived = false;
 			xmlTag = "DtTm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DateTime";
 			definition = "Date and time in ISO format.";
 			maxOccurs = 1;
@@ -201,6 +203,10 @@ public class ProprietaryDate1 {
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
+	 * messageComponent} =
+	 * {@linkplain com.tools20022.repository.msg.ProprietaryDate1
+	 * ProprietaryDate1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getImpactedElements
 	 * impactedElements} =
 	 * <ul>
@@ -211,10 +217,6 @@ public class ProprietaryDate1 {
 	 * ProprietaryDate1.mmDateTime}</li>
 	 * </ul>
 	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
-	 * messageComponent} =
-	 * {@linkplain com.tools20022.repository.msg.ProprietaryDate1
-	 * ProprietaryDate1}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -230,20 +232,20 @@ public class ProprietaryDate1 {
 	 */
 	public static final MMXor mmDateOrDateTime = new MMXor() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DateOrDateTime";
 			definition = "If Date is present, then DateTime is not allowed.\nIf DateTime is present, then Date is not allowed.";
 			messageComponent_lazy = () -> ProprietaryDate1.mmObject();
-			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ProprietaryDate1.mmDate, com.tools20022.repository.msg.ProprietaryDate1.mmDateTime);
+			impactedElements_lazy = () -> Arrays.asList(ProprietaryDate1.mmDate, ProprietaryDate1.mmDateTime);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ProprietaryDate1.mmType, com.tools20022.repository.msg.ProprietaryDate1.mmDate, com.tools20022.repository.msg.ProprietaryDate1.mmDateTime);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+				messageElement_lazy = () -> Arrays.asList(ProprietaryDate1.mmType, ProprietaryDate1.mmDate, ProprietaryDate1.mmDateTime);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
 						return DateFormat.getDateInstance(java.text.DateFormat.LONG).parse("September 9, 2016");
@@ -253,7 +255,7 @@ public class ProprietaryDate1 {
 				})).get();
 				name = "ProprietaryDate1";
 				definition = "Proprietary date information.";
-				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ProprietaryDate1.mmDateOrDateTime);
+				xors_lazy = () -> Arrays.asList(ProprietaryDate1.mmDateOrDateTime);
 			}
 		});
 		return mmObject_lazy.get();

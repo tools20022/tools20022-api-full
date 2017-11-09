@@ -20,7 +20,9 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -94,7 +96,7 @@ public class NettingIdentification1Choice {
 			componentContext_lazy = () -> NettingIdentification1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "TradPty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeParty";
 			definition = "Describes the individual trading party.";
 			maxOccurs = 1;
@@ -136,7 +138,7 @@ public class NettingIdentification1Choice {
 			componentContext_lazy = () -> NettingIdentification1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "NetgGrpId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NettingGroupIdentification";
 			definition = "Describes the netting group.";
 			maxOccurs = 1;
@@ -148,9 +150,9 @@ public class NettingIdentification1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.NettingIdentification1Choice.mmTradeParty, com.tools20022.repository.choice.NettingIdentification1Choice.mmNettingGroupIdentification);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(NettingIdentification1Choice.mmTradeParty, NettingIdentification1Choice.mmNettingGroupIdentification);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "NettingIdentification1Choice";
 				definition = "Choice between netting group identification of an individual trading party.";
 			}

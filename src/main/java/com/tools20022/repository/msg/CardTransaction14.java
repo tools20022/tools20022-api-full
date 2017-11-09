@@ -20,8 +20,10 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CardServiceType3Code;
 import com.tools20022.repository.datatype.ISODateTime;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -107,7 +109,7 @@ public class CardTransaction14 {
 			componentContext_lazy = () -> CardTransaction14.mmObject();
 			isDerived = false;
 			xmlTag = "KeyXchgTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "KeyExchangeType";
 			definition = "Type of key exchange.";
 			maxOccurs = 1;
@@ -148,7 +150,7 @@ public class CardTransaction14 {
 			componentContext_lazy = () -> CardTransaction14.mmObject();
 			isDerived = false;
 			xmlTag = "InitrDtTm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InitiatorDateTime";
 			definition = "Date and time of the transaction.";
 			maxOccurs = 1;
@@ -188,7 +190,7 @@ public class CardTransaction14 {
 			componentContext_lazy = () -> CardTransaction14.mmObject();
 			isDerived = false;
 			xmlTag = "KeyVrfctn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "KeyVerification";
 			definition = "Key that has been verified.";
 			minOccurs = 0;
@@ -233,10 +235,10 @@ public class CardTransaction14 {
 			componentContext_lazy = () -> CardTransaction14.mmObject();
 			isDerived = false;
 			xmlTag = "Key";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Key";
 			definition = "Created key to be stored.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CardTransaction13.mmKey;
+			previousVersion_lazy = () -> CardTransaction13.mmKey;
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.CryptographicKey6.mmObject();
@@ -274,7 +276,7 @@ public class CardTransaction14 {
 			componentContext_lazy = () -> CardTransaction14.mmObject();
 			isDerived = false;
 			xmlTag = "TxRspn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionResponse";
 			definition = "Response to the key exchange request.";
 			maxOccurs = 1;
@@ -287,10 +289,9 @@ public class CardTransaction14 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardTransaction14.mmKeyExchangeType, com.tools20022.repository.msg.CardTransaction14.mmInitiatorDateTime,
-						com.tools20022.repository.msg.CardTransaction14.mmKeyVerification, com.tools20022.repository.msg.CardTransaction14.mmKey, com.tools20022.repository.msg.CardTransaction14.mmTransactionResponse);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(CardTransaction14.mmKeyExchangeType, CardTransaction14.mmInitiatorDateTime, CardTransaction14.mmKeyVerification, CardTransaction14.mmKey, CardTransaction14.mmTransactionResponse);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CardTransaction14";
 				definition = "Key exchange transaction.";
 				previousVersion_lazy = () -> CardTransaction13.mmObject();

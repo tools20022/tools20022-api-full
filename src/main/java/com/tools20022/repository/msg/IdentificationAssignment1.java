@@ -20,9 +20,14 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.acmt.IdentificationModificationAdviceV01;
+import com.tools20022.repository.area.acmt.IdentificationVerificationReportV01;
+import com.tools20022.repository.area.acmt.IdentificationVerificationRequestV01;
 import com.tools20022.repository.choice.Party7Choice;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -124,7 +129,7 @@ public class IdentificationAssignment1 {
 			componentContext_lazy = () -> IdentificationAssignment1.mmObject();
 			isDerived = false;
 			xmlTag = "MsgId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageIdentification";
 			definition = "Point to point reference, as assigned by the assigner, and sent to the next party in the chain to unambiguously identify the message.\r\n\r\nUsage: The assigner has to make sure that MessageIdentification is unique per assignee for a pre-agreed period.";
 			maxOccurs = 1;
@@ -166,7 +171,7 @@ public class IdentificationAssignment1 {
 			componentContext_lazy = () -> IdentificationAssignment1.mmObject();
 			isDerived = false;
 			xmlTag = "CreDtTm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreationDateTime";
 			definition = "Date and time at which the identification assignment was created.";
 			maxOccurs = 1;
@@ -206,7 +211,7 @@ public class IdentificationAssignment1 {
 			componentContext_lazy = () -> IdentificationAssignment1.mmObject();
 			isDerived = false;
 			xmlTag = "Cretr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Creator";
 			definition = "Party that created the identification assignment.";
 			maxOccurs = 1;
@@ -250,7 +255,7 @@ public class IdentificationAssignment1 {
 			componentContext_lazy = () -> IdentificationAssignment1.mmObject();
 			isDerived = false;
 			xmlTag = "Assgnr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Assigner";
 			definition = "Party that assigns the identification assignment to another party. This is also the sender of the message.";
 			maxOccurs = 1;
@@ -294,7 +299,7 @@ public class IdentificationAssignment1 {
 			componentContext_lazy = () -> IdentificationAssignment1.mmObject();
 			isDerived = false;
 			xmlTag = "Assgne";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Assignee";
 			definition = "Party that the identification assignment is assigned to. This is also the receiver of the message.";
 			maxOccurs = 1;
@@ -307,12 +312,11 @@ public class IdentificationAssignment1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IdentificationAssignment1.mmMessageIdentification, com.tools20022.repository.msg.IdentificationAssignment1.mmCreationDateTime,
-						com.tools20022.repository.msg.IdentificationAssignment1.mmCreator, com.tools20022.repository.msg.IdentificationAssignment1.mmAssigner, com.tools20022.repository.msg.IdentificationAssignment1.mmAssignee);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.IdentificationModificationAdviceV01.mmAssignment, com.tools20022.repository.area.acmt.IdentificationVerificationRequestV01.mmAssignment,
-						com.tools20022.repository.area.acmt.IdentificationVerificationReportV01.mmAssignment);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(IdentificationAssignment1.mmMessageIdentification, IdentificationAssignment1.mmCreationDateTime, IdentificationAssignment1.mmCreator, IdentificationAssignment1.mmAssigner,
+						IdentificationAssignment1.mmAssignee);
+				messageBuildingBlock_lazy = () -> Arrays.asList(IdentificationModificationAdviceV01.mmAssignment, IdentificationVerificationRequestV01.mmAssignment, IdentificationVerificationReportV01.mmAssignment);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "IdentificationAssignment1";
 				definition = "Set of elements that identify the identification assignment.";
 			}

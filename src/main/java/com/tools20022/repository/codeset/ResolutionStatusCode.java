@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.ResolutionStatus1Code
+ * ResolutionStatus1Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ResolutionStatus2Code
+ * ResolutionStatus2Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -41,15 +52,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.ResolutionStatusCode#mmAccepted
  * ResolutionStatusCode.mmAccepted}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.ResolutionStatus1Code
- * ResolutionStatus1Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ResolutionStatus2Code
- * ResolutionStatus2Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -102,7 +104,7 @@ public class ResolutionStatusCode {
 	 */
 	public static final MMCode mmActive = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Active";
 			definition = "Meeting resolution has to be voted for by the participants to a general meeting.";
 			owner_lazy = () -> ResolutionStatusCode.mmObject();
@@ -132,7 +134,7 @@ public class ResolutionStatusCode {
 	 */
 	public static final MMCode mmWithdrawn = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Withdrawn";
 			definition = "Meeting resolution has been withdrawn.";
 			owner_lazy = () -> ResolutionStatusCode.mmObject();
@@ -162,7 +164,7 @@ public class ResolutionStatusCode {
 	 */
 	public static final MMCode mmRejected = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rejected";
 			definition = "Meeting resolution has been rejected.";
 			owner_lazy = () -> ResolutionStatusCode.mmObject();
@@ -192,7 +194,7 @@ public class ResolutionStatusCode {
 	 */
 	public static final MMCode mmAccepted = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Accepted";
 			definition = "Meeting resolution has been accepted.";
 			owner_lazy = () -> ResolutionStatusCode.mmObject();
@@ -203,13 +205,12 @@ public class ResolutionStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ACTV");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ResolutionStatusCode";
 				definition = "Specifies the status of a resolution in a meeting agenda.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ResolutionStatusCode.mmActive, com.tools20022.repository.codeset.ResolutionStatusCode.mmWithdrawn,
-						com.tools20022.repository.codeset.ResolutionStatusCode.mmRejected, com.tools20022.repository.codeset.ResolutionStatusCode.mmAccepted);
+				code_lazy = () -> Arrays.asList(ResolutionStatusCode.mmActive, ResolutionStatusCode.mmWithdrawn, ResolutionStatusCode.mmRejected, ResolutionStatusCode.mmAccepted);
 				derivation_lazy = () -> Arrays.asList(ResolutionStatus1Code.mmObject(), ResolutionStatus2Code.mmObject());
 			}
 		});

@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.AllegementStatus1Code
+ * AllegementStatus1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -38,13 +47,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.AllegementStatusCode#mmPending
  * AllegementStatusCode.mmPending}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.AllegementStatus1Code
- * AllegementStatus1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -98,7 +100,7 @@ public class AllegementStatusCode {
 	 */
 	public static final MMCode mmCancelled = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cancelled";
 			definition = "Allegement has been cancelled since the previous delta statement. The allegement was cancelled because of a mistake by the sender or because the alleging party cancelled its instruction.";
 			owner_lazy = () -> AllegementStatusCode.mmObject();
@@ -131,7 +133,7 @@ public class AllegementStatusCode {
 	 */
 	public static final MMCode mmRemoved = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Removed";
 			definition = "Allegement has been removed since the previous delta statement. The allegement was removed because the alleged party sent its instruction.";
 			owner_lazy = () -> AllegementStatusCode.mmObject();
@@ -161,7 +163,7 @@ public class AllegementStatusCode {
 	 */
 	public static final MMCode mmPending = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Pending";
 			definition = "Allegement is pending.";
 			owner_lazy = () -> AllegementStatusCode.mmObject();
@@ -172,13 +174,12 @@ public class AllegementStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CANC");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AllegementStatusCode";
 				definition = "Specifies the status of an allegement.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AllegementStatusCode.mmCancelled, com.tools20022.repository.codeset.AllegementStatusCode.mmRemoved,
-						com.tools20022.repository.codeset.AllegementStatusCode.mmPending);
+				code_lazy = () -> Arrays.asList(AllegementStatusCode.mmCancelled, AllegementStatusCode.mmRemoved, AllegementStatusCode.mmPending);
 				derivation_lazy = () -> Arrays.asList(AllegementStatus1Code.mmObject());
 			}
 		});

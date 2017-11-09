@@ -20,10 +20,12 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.RateValueType7Code;
 import com.tools20022.repository.datatype.ActiveCurrencyAnd13DecimalAmount;
 import com.tools20022.repository.datatype.PercentageRate;
 import com.tools20022.repository.entity.RateAndAmount;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.RateTypeAndAmountAndStatus5;
 import java.text.DateFormat;
 import java.util.Arrays;
@@ -127,14 +129,14 @@ public class TaxCreditRateFormat5Choice {
 	 */
 	public static final MMMessageAttribute mmRate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.RateAndAmount.mmRate;
+			businessElementTrace_lazy = () -> RateAndAmount.mmRate;
 			componentContext_lazy = () -> TaxCreditRateFormat5Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Rate";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rate";
 			definition = "Value is expressed as a rate.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.TaxCreditRateFormat8Choice.mmRate);
+			nextVersions_lazy = () -> Arrays.asList(TaxCreditRateFormat8Choice.mmRate);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
@@ -184,14 +186,14 @@ public class TaxCreditRateFormat5Choice {
 	 */
 	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.RateAndAmount.mmAmount;
+			businessElementTrace_lazy = () -> RateAndAmount.mmAmount;
 			componentContext_lazy = () -> TaxCreditRateFormat5Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Amt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Number of monetary units specified in a currency.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.TaxCreditRateFormat8Choice.mmAmount);
+			nextVersions_lazy = () -> Arrays.asList(TaxCreditRateFormat8Choice.mmAmount);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAnd13DecimalAmount.mmObject();
@@ -238,10 +240,10 @@ public class TaxCreditRateFormat5Choice {
 			componentContext_lazy = () -> TaxCreditRateFormat5Choice.mmObject();
 			isDerived = false;
 			xmlTag = "RateTpAndAmtAndRateSts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RateTypeAndAmountAndRateStatus";
 			definition = "Specifies different formats for the tax credit rate.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.TaxCreditRateFormat8Choice.mmRateTypeAndAmountAndRateStatus);
+			nextVersions_lazy = () -> Arrays.asList(TaxCreditRateFormat8Choice.mmRateTypeAndAmountAndRateStatus);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -290,10 +292,10 @@ public class TaxCreditRateFormat5Choice {
 			componentContext_lazy = () -> TaxCreditRateFormat5Choice.mmObject();
 			isDerived = false;
 			xmlTag = "NotSpcfdRate";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotSpecifiedRate";
 			definition = "Value of the rate not specified.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.TaxCreditRateFormat8Choice.mmNotSpecifiedRate);
+			nextVersions_lazy = () -> Arrays.asList(TaxCreditRateFormat8Choice.mmNotSpecifiedRate);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RateValueType7Code.mmObject();
@@ -303,11 +305,10 @@ public class TaxCreditRateFormat5Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.TaxCreditRateFormat5Choice.mmRate, com.tools20022.repository.choice.TaxCreditRateFormat5Choice.mmAmount,
-						com.tools20022.repository.choice.TaxCreditRateFormat5Choice.mmRateTypeAndAmountAndRateStatus, com.tools20022.repository.choice.TaxCreditRateFormat5Choice.mmNotSpecifiedRate);
+				messageElement_lazy = () -> Arrays.asList(TaxCreditRateFormat5Choice.mmRate, TaxCreditRateFormat5Choice.mmAmount, TaxCreditRateFormat5Choice.mmRateTypeAndAmountAndRateStatus, TaxCreditRateFormat5Choice.mmNotSpecifiedRate);
 				trace_lazy = () -> RateAndAmount.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
 						return DateFormat.getDateInstance(java.text.DateFormat.LONG).parse("May 5, 2016");

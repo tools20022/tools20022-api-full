@@ -19,7 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.sese.*;
+import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.entity.SecuritiesSettlementPartyRole;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -176,11 +180,11 @@ public class SettlementParties5 {
 	 */
 	public static final MMMessageAttribute mmDepository = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> SettlementParties5.mmObject();
 			isDerived = false;
 			xmlTag = "Dpstry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Depository";
 			definition = "First party in the settlement chain. In a plain vanilla settlement, it is the Central Securities Depository where the counterparty requests to receive the financial instrument or from where the counterparty delivers the financial instruments.";
 			maxOccurs = 1;
@@ -225,11 +229,11 @@ public class SettlementParties5 {
 	 */
 	public static final MMMessageAttribute mmParty1 = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> SettlementParties5.mmObject();
 			isDerived = false;
 			xmlTag = "Pty1";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Party1";
 			definition = "Party that, in a settlement chain interacts with the depository.";
 			maxOccurs = 1;
@@ -274,11 +278,11 @@ public class SettlementParties5 {
 	 */
 	public static final MMMessageAttribute mmParty2 = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> SettlementParties5.mmObject();
 			isDerived = false;
 			xmlTag = "Pty2";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Party2";
 			definition = "Party that, in a settlement chain interacts with the party 1.";
 			maxOccurs = 1;
@@ -323,11 +327,11 @@ public class SettlementParties5 {
 	 */
 	public static final MMMessageAttribute mmParty3 = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> SettlementParties5.mmObject();
 			isDerived = false;
 			xmlTag = "Pty3";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Party3";
 			definition = "Party that, in a settlement chain interacts with the party 2.";
 			maxOccurs = 1;
@@ -372,11 +376,11 @@ public class SettlementParties5 {
 	 */
 	public static final MMMessageAttribute mmParty4 = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> SettlementParties5.mmObject();
 			isDerived = false;
 			xmlTag = "Pty4";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Party4";
 			definition = "Party that, in a settlement chain interacts with the party 3.";
 			maxOccurs = 1;
@@ -421,11 +425,11 @@ public class SettlementParties5 {
 	 */
 	public static final MMMessageAttribute mmParty5 = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> SettlementParties5.mmObject();
 			isDerived = false;
 			xmlTag = "Pty5";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Party5";
 			definition = "Party that, in a settlement chain interacts with the party 4.";
 			maxOccurs = 1;
@@ -437,25 +441,18 @@ public class SettlementParties5 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SettlementParties5.mmDepository, com.tools20022.repository.msg.SettlementParties5.mmParty1, com.tools20022.repository.msg.SettlementParties5.mmParty2,
-						com.tools20022.repository.msg.SettlementParties5.mmParty3, com.tools20022.repository.msg.SettlementParties5.mmParty4, com.tools20022.repository.msg.SettlementParties5.mmParty5);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV01.mmDeliveringSettlementParties,
-						com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV01.mmReceivingSettlementParties, com.tools20022.repository.area.sese.SecuritiesFinancingInstructionV01.mmDeliveringSettlementParties,
-						com.tools20022.repository.area.sese.SecuritiesFinancingInstructionV01.mmReceivingSettlementParties, com.tools20022.repository.area.sese.SecuritiesSettlementTransactionConfirmationV01.mmDeliveringSettlementParties,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionConfirmationV01.mmReceivingSettlementParties,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV01.mmDeliveringSettlementParties,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV01.mmReceivingSettlementParties,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionInstructionV01.mmDeliveringSettlementParties,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionInstructionV01.mmReceivingSettlementParties,
-						com.tools20022.repository.area.sese.SecuritiesFinancingModificationInstructionV01.mmDeliveringSettlementParties,
-						com.tools20022.repository.area.sese.SecuritiesFinancingModificationInstructionV01.mmReceivingSettlementParties,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotificationV01.mmDeliveringSettlementParties,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotificationV01.mmReceivingSettlementParties,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdviceV01.mmDeliveringSettlementParties,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdviceV01.mmReceivingSettlementParties);
+				messageElement_lazy = () -> Arrays.asList(SettlementParties5.mmDepository, SettlementParties5.mmParty1, SettlementParties5.mmParty2, SettlementParties5.mmParty3, SettlementParties5.mmParty4, SettlementParties5.mmParty5);
+				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesFinancingConfirmationV01.mmDeliveringSettlementParties, SecuritiesFinancingConfirmationV01.mmReceivingSettlementParties,
+						SecuritiesFinancingInstructionV01.mmDeliveringSettlementParties, SecuritiesFinancingInstructionV01.mmReceivingSettlementParties, SecuritiesSettlementTransactionConfirmationV01.mmDeliveringSettlementParties,
+						SecuritiesSettlementTransactionConfirmationV01.mmReceivingSettlementParties, SecuritiesSettlementTransactionGenerationNotificationV01.mmDeliveringSettlementParties,
+						SecuritiesSettlementTransactionGenerationNotificationV01.mmReceivingSettlementParties, SecuritiesSettlementTransactionInstructionV01.mmDeliveringSettlementParties,
+						SecuritiesSettlementTransactionInstructionV01.mmReceivingSettlementParties, SecuritiesFinancingModificationInstructionV01.mmDeliveringSettlementParties,
+						SecuritiesFinancingModificationInstructionV01.mmReceivingSettlementParties, SecuritiesSettlementTransactionAllegementNotificationV01.mmDeliveringSettlementParties,
+						SecuritiesSettlementTransactionAllegementNotificationV01.mmReceivingSettlementParties, SecuritiesSettlementTransactionReversalAdviceV01.mmDeliveringSettlementParties,
+						SecuritiesSettlementTransactionReversalAdviceV01.mmReceivingSettlementParties);
 				trace_lazy = () -> SecuritiesSettlementPartyRole.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SettlementParties5";
 				definition = "Chain of parties involved in the settlement of a transaction, including receipts and deliveries, book transfers, treasury deals, or other activities, resulting in the movement of a security or amount of money from one account to another.";
 			}

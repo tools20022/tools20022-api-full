@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CancellationStatusCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -89,7 +91,7 @@ public class CancellationStatus3Code extends CancellationStatusCode {
 	 */
 	public static final MMCode mmAccepted = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Accepted";
 			owner_lazy = () -> CancellationStatus3Code.mmObject();
 		}
@@ -112,7 +114,7 @@ public class CancellationStatus3Code extends CancellationStatusCode {
 	 */
 	public static final MMCode mmPending = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Pending";
 			owner_lazy = () -> CancellationStatus3Code.mmObject();
 		}
@@ -135,7 +137,7 @@ public class CancellationStatus3Code extends CancellationStatusCode {
 	 */
 	public static final MMCode mmComplete = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Complete";
 			owner_lazy = () -> CancellationStatus3Code.mmObject();
 		}
@@ -158,7 +160,7 @@ public class CancellationStatus3Code extends CancellationStatusCode {
 	 */
 	public static final MMCode mmReceivedByIssuerOrRegistrar = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceivedByIssuerOrRegistrar";
 			owner_lazy = () -> CancellationStatus3Code.mmObject();
 		}
@@ -167,13 +169,12 @@ public class CancellationStatus3Code extends CancellationStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("PACK");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CancellationStatus3Code";
 				definition = "Specifies the cancellation status.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CancellationStatus3Code.mmAccepted, com.tools20022.repository.codeset.CancellationStatus3Code.mmPending,
-						com.tools20022.repository.codeset.CancellationStatus3Code.mmComplete, com.tools20022.repository.codeset.CancellationStatus3Code.mmReceivedByIssuerOrRegistrar);
+				code_lazy = () -> Arrays.asList(CancellationStatus3Code.mmAccepted, CancellationStatus3Code.mmPending, CancellationStatus3Code.mmComplete, CancellationStatus3Code.mmReceivedByIssuerOrRegistrar);
 				trace_lazy = () -> CancellationStatusCode.mmObject();
 			}
 		});

@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -96,7 +98,7 @@ public class NoticePeriodTypeCode {
 	 */
 	public static final MMCode mmBankWorkingDay = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BankWorkingDay";
 			definition = "The notice period is expressed in banking working days.";
 			owner_lazy = () -> NoticePeriodTypeCode.mmObject();
@@ -126,7 +128,7 @@ public class NoticePeriodTypeCode {
 	 */
 	public static final MMCode mmCalendarDay = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CalendarDay";
 			definition = "The notice period is expressed in calendar days.";
 			owner_lazy = () -> NoticePeriodTypeCode.mmObject();
@@ -156,7 +158,7 @@ public class NoticePeriodTypeCode {
 	 */
 	public static final MMCode mmMonth = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Month";
 			definition = "The notice period is expressed in months.";
 			owner_lazy = () -> NoticePeriodTypeCode.mmObject();
@@ -186,7 +188,7 @@ public class NoticePeriodTypeCode {
 	 */
 	public static final MMCode mmWeek = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Week";
 			definition = "The notice period is expressed in weeks.";
 			owner_lazy = () -> NoticePeriodTypeCode.mmObject();
@@ -216,7 +218,7 @@ public class NoticePeriodTypeCode {
 	 */
 	public static final MMCode mmWorkingDay = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "WorkingDay";
 			definition = "The notice period is expressed in working days.";
 			owner_lazy = () -> NoticePeriodTypeCode.mmObject();
@@ -246,7 +248,7 @@ public class NoticePeriodTypeCode {
 	 */
 	public static final MMCode mmYear = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Year";
 			definition = "The notice period is expressed in years.";
 			owner_lazy = () -> NoticePeriodTypeCode.mmObject();
@@ -257,14 +259,13 @@ public class NoticePeriodTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("BKWD");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "NoticePeriodTypeCode";
 				definition = "Specifies the type of notice period.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.NoticePeriodTypeCode.mmBankWorkingDay, com.tools20022.repository.codeset.NoticePeriodTypeCode.mmCalendarDay,
-						com.tools20022.repository.codeset.NoticePeriodTypeCode.mmMonth, com.tools20022.repository.codeset.NoticePeriodTypeCode.mmWeek, com.tools20022.repository.codeset.NoticePeriodTypeCode.mmWorkingDay,
-						com.tools20022.repository.codeset.NoticePeriodTypeCode.mmYear);
+				code_lazy = () -> Arrays.asList(NoticePeriodTypeCode.mmBankWorkingDay, NoticePeriodTypeCode.mmCalendarDay, NoticePeriodTypeCode.mmMonth, NoticePeriodTypeCode.mmWeek, NoticePeriodTypeCode.mmWorkingDay,
+						NoticePeriodTypeCode.mmYear);
 			}
 		});
 		return mmObject_lazy.get();

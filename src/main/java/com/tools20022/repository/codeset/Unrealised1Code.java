@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.UnrealisedCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -80,7 +82,7 @@ public class Unrealised1Code extends UnrealisedCode {
 	 */
 	public static final MMCode mmGain = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Gain";
 			owner_lazy = () -> Unrealised1Code.mmObject();
 		}
@@ -103,7 +105,7 @@ public class Unrealised1Code extends UnrealisedCode {
 	 */
 	public static final MMCode mmLoss = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Loss";
 			owner_lazy = () -> Unrealised1Code.mmObject();
 		}
@@ -112,12 +114,12 @@ public class Unrealised1Code extends UnrealisedCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("GAIN");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Unrealised1Code";
 				definition = "Specifies unrealised gain and loss.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Unrealised1Code.mmGain, com.tools20022.repository.codeset.Unrealised1Code.mmLoss);
+				code_lazy = () -> Arrays.asList(Unrealised1Code.mmGain, Unrealised1Code.mmLoss);
 				trace_lazy = () -> UnrealisedCode.mmObject();
 			}
 		});

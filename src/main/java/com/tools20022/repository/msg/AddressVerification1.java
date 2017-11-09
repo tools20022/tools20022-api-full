@@ -19,7 +19,9 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max5NumericText;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -96,7 +98,7 @@ public class AddressVerification1 {
 			componentContext_lazy = () -> AddressVerification1.mmObject();
 			isDerived = false;
 			xmlTag = "AdrDgts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AddressDigits";
 			definition = "Numeric characters from the cardholder's address excluding the postal code (that is street number).";
 			maxOccurs = 1;
@@ -138,7 +140,7 @@ public class AddressVerification1 {
 			componentContext_lazy = () -> AddressVerification1.mmObject();
 			isDerived = false;
 			xmlTag = "PstlCdDgts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PostalCodeDigits";
 			definition = "Numeric characters from the cardholder's postal code.";
 			maxOccurs = 1;
@@ -150,9 +152,9 @@ public class AddressVerification1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AddressVerification1.mmAddressDigits, com.tools20022.repository.msg.AddressVerification1.mmPostalCodeDigits);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(AddressVerification1.mmAddressDigits, AddressVerification1.mmPostalCodeDigits);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AddressVerification1";
 				definition = "Numeric characters of the cardholder's address for verification.";
 			}

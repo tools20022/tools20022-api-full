@@ -19,8 +19,10 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ActiveOrHistoricCurrencyAndAmount;
 import com.tools20022.repository.datatype.ImpliedCurrencyAndAmount;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -96,7 +98,7 @@ public class Amount3Choice {
 			componentContext_lazy = () -> Amount3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "AmtWthCcy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmountWithCurrency";
 			definition = "Number of monetary units specified in a currency where the unit of currency is explicit.";
 			maxOccurs = 1;
@@ -141,7 +143,7 @@ public class Amount3Choice {
 			componentContext_lazy = () -> Amount3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "AmtWthtCcy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmountWithoutCurrency";
 			definition = "Number of monetary units specified in a currency where the unit of currency is implied by the context.";
 			maxOccurs = 1;
@@ -153,9 +155,9 @@ public class Amount3Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Amount3Choice.mmAmountWithCurrency, com.tools20022.repository.choice.Amount3Choice.mmAmountWithoutCurrency);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(Amount3Choice.mmAmountWithCurrency, Amount3Choice.mmAmountWithoutCurrency);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Amount3Choice";
 				definition = "Choice between an amount with or without the currency. ";
 			}

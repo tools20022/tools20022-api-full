@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.RequestTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -95,7 +97,7 @@ public class RequestType2Code extends RequestTypeCode {
 	 */
 	public static final MMCode mmBankPositionEnquiry = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BankPositionEnquiry";
 			owner_lazy = () -> RequestType2Code.mmObject();
 		}
@@ -118,7 +120,7 @@ public class RequestType2Code extends RequestTypeCode {
 	 */
 	public static final MMCode mmSpecificTransactionEnquiry = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SpecificTransactionEnquiry";
 			owner_lazy = () -> RequestType2Code.mmObject();
 		}
@@ -141,7 +143,7 @@ public class RequestType2Code extends RequestTypeCode {
 	 */
 	public static final MMCode mmQueuedTransactionEnquiry = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QueuedTransactionEnquiry";
 			owner_lazy = () -> RequestType2Code.mmObject();
 		}
@@ -164,7 +166,7 @@ public class RequestType2Code extends RequestTypeCode {
 	 */
 	public static final MMCode mmSuspiciousTransactionEnquiry = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SuspiciousTransactionEnquiry";
 			owner_lazy = () -> RequestType2Code.mmObject();
 		}
@@ -187,7 +189,7 @@ public class RequestType2Code extends RequestTypeCode {
 	 */
 	public static final MMCode mmPendingInwardCreditsEnquiry = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingInwardCreditsEnquiry";
 			owner_lazy = () -> RequestType2Code.mmObject();
 		}
@@ -196,14 +198,13 @@ public class RequestType2Code extends RequestTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("RT11");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RequestType2Code";
 				definition = "Specifies the request used to further detail the type of information that will be queried.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RequestType2Code.mmBankPositionEnquiry, com.tools20022.repository.codeset.RequestType2Code.mmSpecificTransactionEnquiry,
-						com.tools20022.repository.codeset.RequestType2Code.mmQueuedTransactionEnquiry, com.tools20022.repository.codeset.RequestType2Code.mmSuspiciousTransactionEnquiry,
-						com.tools20022.repository.codeset.RequestType2Code.mmPendingInwardCreditsEnquiry);
+				code_lazy = () -> Arrays.asList(RequestType2Code.mmBankPositionEnquiry, RequestType2Code.mmSpecificTransactionEnquiry, RequestType2Code.mmQueuedTransactionEnquiry, RequestType2Code.mmSuspiciousTransactionEnquiry,
+						RequestType2Code.mmPendingInwardCreditsEnquiry);
 				trace_lazy = () -> RequestTypeCode.mmObject();
 			}
 		});

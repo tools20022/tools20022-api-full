@@ -20,10 +20,13 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.FinancialInstrumentQuantity18Choice;
 import com.tools20022.repository.codeset.CountryCode;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.PercentageRate;
+import com.tools20022.repository.entity.GenericIdentification;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -111,7 +114,7 @@ public class MarketClaimDetailsSD1 {
 			componentContext_lazy = () -> MarketClaimDetailsSD1.mmObject();
 			isDerived = false;
 			xmlTag = "FsclDmcl";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FiscalDomicile";
 			definition = "Country in which the account owner has one's fiscal domicile.";
 			maxOccurs = 1;
@@ -155,11 +158,11 @@ public class MarketClaimDetailsSD1 {
 	 */
 	public static final MMMessageAttribute mmAccountServicerIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmIdentification;
+			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> MarketClaimDetailsSD1.mmObject();
 			isDerived = false;
 			xmlTag = "AcctSvcrId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountServicerIdentification";
 			definition = "Identification of the document assigned by the account servicer.";
 			maxOccurs = 1;
@@ -203,11 +206,11 @@ public class MarketClaimDetailsSD1 {
 	 */
 	public static final MMMessageAttribute mmAccountOwnerIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmIdentification;
+			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> MarketClaimDetailsSD1.mmObject();
 			isDerived = false;
 			xmlTag = "AcctOwnrId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountOwnerIdentification";
 			definition = "Identification of the document assigned by the account owner.";
 			maxOccurs = 1;
@@ -253,7 +256,7 @@ public class MarketClaimDetailsSD1 {
 			componentContext_lazy = () -> MarketClaimDetailsSD1.mmObject();
 			isDerived = false;
 			xmlTag = "TaxRate";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxRate";
 			definition = "Percentage of a cash distribution that will be withheld by the tax authorities of the jurisdiction of the issuer, for which a relief at source and/or reclaim may be possible.";
 			maxOccurs = 1;
@@ -297,7 +300,7 @@ public class MarketClaimDetailsSD1 {
 			componentContext_lazy = () -> MarketClaimDetailsSD1.mmObject();
 			isDerived = false;
 			xmlTag = "CshCompstn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashCompensation";
 			definition = "Quantity of securities that do not impact the taxable record date entitlement.";
 			maxOccurs = 1;
@@ -341,7 +344,7 @@ public class MarketClaimDetailsSD1 {
 			componentContext_lazy = () -> MarketClaimDetailsSD1.mmObject();
 			isDerived = false;
 			xmlTag = "DvddCrrctn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DividendCorrection";
 			definition = "Quantity of securities that impact the taxable record date entitlement.";
 			maxOccurs = 1;
@@ -354,11 +357,10 @@ public class MarketClaimDetailsSD1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MarketClaimDetailsSD1.mmFiscalDomicile, com.tools20022.repository.msg.MarketClaimDetailsSD1.mmAccountServicerIdentification,
-						com.tools20022.repository.msg.MarketClaimDetailsSD1.mmAccountOwnerIdentification, com.tools20022.repository.msg.MarketClaimDetailsSD1.mmTaxRate,
-						com.tools20022.repository.msg.MarketClaimDetailsSD1.mmCashCompensation, com.tools20022.repository.msg.MarketClaimDetailsSD1.mmDividendCorrection);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(MarketClaimDetailsSD1.mmFiscalDomicile, MarketClaimDetailsSD1.mmAccountServicerIdentification, MarketClaimDetailsSD1.mmAccountOwnerIdentification, MarketClaimDetailsSD1.mmTaxRate,
+						MarketClaimDetailsSD1.mmCashCompensation, MarketClaimDetailsSD1.mmDividendCorrection);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "MarketClaimDetailsSD1";
 				definition = "Identification information expressed as a country of fiscal domicile and a reference.";
 			}

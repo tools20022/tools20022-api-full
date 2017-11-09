@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ActionTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -104,7 +106,7 @@ public class ActionType6Code extends ActionTypeCode {
 	 */
 	public static final MMCode mmAcceptCurrencyConversion = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcceptCurrencyConversion";
 			owner_lazy = () -> ActionType6Code.mmObject();
 		}
@@ -127,7 +129,7 @@ public class ActionType6Code extends ActionTypeCode {
 	 */
 	public static final MMCode mmAcceptFees = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcceptFees";
 			owner_lazy = () -> ActionType6Code.mmObject();
 		}
@@ -150,7 +152,7 @@ public class ActionType6Code extends ActionTypeCode {
 	 */
 	public static final MMCode mmAcceptHigherAmount = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcceptHigherAmount";
 			owner_lazy = () -> ActionType6Code.mmObject();
 		}
@@ -173,7 +175,7 @@ public class ActionType6Code extends ActionTypeCode {
 	 */
 	public static final MMCode mmAcceptLowerAmount = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcceptLowerAmount";
 			owner_lazy = () -> ActionType6Code.mmObject();
 		}
@@ -196,7 +198,7 @@ public class ActionType6Code extends ActionTypeCode {
 	 */
 	public static final MMCode mmBusy = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Busy";
 			owner_lazy = () -> ActionType6Code.mmObject();
 		}
@@ -219,7 +221,7 @@ public class ActionType6Code extends ActionTypeCode {
 	 */
 	public static final MMCode mmCaptureCard = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CaptureCard";
 			owner_lazy = () -> ActionType6Code.mmObject();
 		}
@@ -242,7 +244,7 @@ public class ActionType6Code extends ActionTypeCode {
 	 */
 	public static final MMCode mmDisplayMessage = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DisplayMessage";
 			owner_lazy = () -> ActionType6Code.mmObject();
 		}
@@ -265,7 +267,7 @@ public class ActionType6Code extends ActionTypeCode {
 	 */
 	public static final MMCode mmDistributeCoupon = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DistributeCoupon";
 			owner_lazy = () -> ActionType6Code.mmObject();
 		}
@@ -288,7 +290,7 @@ public class ActionType6Code extends ActionTypeCode {
 	 */
 	public static final MMCode mmPerformRequest = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PerformRequest";
 			owner_lazy = () -> ActionType6Code.mmObject();
 		}
@@ -311,7 +313,7 @@ public class ActionType6Code extends ActionTypeCode {
 	 */
 	public static final MMCode mmPINLastTry = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PINLastTry";
 			owner_lazy = () -> ActionType6Code.mmObject();
 		}
@@ -334,7 +336,7 @@ public class ActionType6Code extends ActionTypeCode {
 	 */
 	public static final MMCode mmPINRetry = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PINRetry";
 			owner_lazy = () -> ActionType6Code.mmObject();
 		}
@@ -357,7 +359,7 @@ public class ActionType6Code extends ActionTypeCode {
 	 */
 	public static final MMCode mmUpdateTrack = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UpdateTrack";
 			owner_lazy = () -> ActionType6Code.mmObject();
 		}
@@ -366,15 +368,13 @@ public class ActionType6Code extends ActionTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ActionType6Code";
 				definition = "Type of action to be performed.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ActionType6Code.mmAcceptCurrencyConversion, com.tools20022.repository.codeset.ActionType6Code.mmAcceptFees,
-						com.tools20022.repository.codeset.ActionType6Code.mmAcceptHigherAmount, com.tools20022.repository.codeset.ActionType6Code.mmAcceptLowerAmount, com.tools20022.repository.codeset.ActionType6Code.mmBusy,
-						com.tools20022.repository.codeset.ActionType6Code.mmCaptureCard, com.tools20022.repository.codeset.ActionType6Code.mmDisplayMessage, com.tools20022.repository.codeset.ActionType6Code.mmDistributeCoupon,
-						com.tools20022.repository.codeset.ActionType6Code.mmPerformRequest, com.tools20022.repository.codeset.ActionType6Code.mmPINLastTry, com.tools20022.repository.codeset.ActionType6Code.mmPINRetry,
-						com.tools20022.repository.codeset.ActionType6Code.mmUpdateTrack);
+				code_lazy = () -> Arrays.asList(ActionType6Code.mmAcceptCurrencyConversion, ActionType6Code.mmAcceptFees, ActionType6Code.mmAcceptHigherAmount, ActionType6Code.mmAcceptLowerAmount, ActionType6Code.mmBusy,
+						ActionType6Code.mmCaptureCard, ActionType6Code.mmDisplayMessage, ActionType6Code.mmDistributeCoupon, ActionType6Code.mmPerformRequest, ActionType6Code.mmPINLastTry, ActionType6Code.mmPINRetry,
+						ActionType6Code.mmUpdateTrack);
 				trace_lazy = () -> ActionTypeCode.mmObject();
 			}
 		});

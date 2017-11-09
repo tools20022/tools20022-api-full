@@ -19,7 +19,10 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.entity.PairOff;
 import com.tools20022.repository.entity.SecuritiesSettlement;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -103,11 +106,11 @@ public class PairedOrTurnedQuantity4Choice {
 	 */
 	public static final MMMessageAttribute mmPairedOffQuantity = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PairOff.mmPairedOffQuantity;
+			businessElementTrace_lazy = () -> PairOff.mmPairedOffQuantity;
 			componentContext_lazy = () -> PairedOrTurnedQuantity4Choice.mmObject();
 			isDerived = false;
 			xmlTag = "PairdOffQty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PairedOffQuantity";
 			definition = "Quantity of financial instruments of the linked transaction to be paired-off.";
 			maxOccurs = 1;
@@ -153,11 +156,11 @@ public class PairedOrTurnedQuantity4Choice {
 	 */
 	public static final MMMessageAttribute mmTurnedQuantity = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmTurnedQuantity;
+			businessElementTrace_lazy = () -> SecuritiesSettlement.mmTurnedQuantity;
 			componentContext_lazy = () -> PairedOrTurnedQuantity4Choice.mmObject();
 			isDerived = false;
 			xmlTag = "TrndQty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TurnedQuantity";
 			definition = "Quantity of financial instruments of the linked transaction to be turned.";
 			maxOccurs = 1;
@@ -169,10 +172,10 @@ public class PairedOrTurnedQuantity4Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PairedOrTurnedQuantity4Choice.mmPairedOffQuantity, com.tools20022.repository.choice.PairedOrTurnedQuantity4Choice.mmTurnedQuantity);
+				messageElement_lazy = () -> Arrays.asList(PairedOrTurnedQuantity4Choice.mmPairedOffQuantity, PairedOrTurnedQuantity4Choice.mmTurnedQuantity);
 				trace_lazy = () -> SecuritiesSettlement.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PairedOrTurnedQuantity4Choice";
 				definition = "Choice between a turnaround and pair-off quantity for instructing a one to many and many to many (partial) pair-off or turnaround.";
 			}

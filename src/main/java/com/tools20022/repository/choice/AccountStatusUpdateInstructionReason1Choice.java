@@ -20,7 +20,9 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.NoReasonCode;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.AccountStatusUpdateInstructionReason1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -109,10 +111,10 @@ public class AccountStatusUpdateInstructionReason1Choice {
 			componentContext_lazy = () -> AccountStatusUpdateInstructionReason1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "NoSpcfdRsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoSpecifiedReason";
 			definition = "There is no reason available or to report for the instruction to change the account status.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.EnabledStatusReason1Choice.mmNoSpecifiedReason;
+			previousVersion_lazy = () -> EnabledStatusReason1Choice.mmNoSpecifiedReason;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> NoReasonCode.mmObject();
@@ -156,10 +158,10 @@ public class AccountStatusUpdateInstructionReason1Choice {
 			componentContext_lazy = () -> AccountStatusUpdateInstructionReason1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Rsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reason";
 			definition = "Reason for the instruction to change the account status.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.EnabledStatusReason1Choice.mmReason;
+			previousVersion_lazy = () -> EnabledStatusReason1Choice.mmReason;
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> AccountStatusUpdateInstructionReason1.mmObject();
@@ -169,10 +171,9 @@ public class AccountStatusUpdateInstructionReason1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AccountStatusUpdateInstructionReason1Choice.mmNoSpecifiedReason,
-						com.tools20022.repository.choice.AccountStatusUpdateInstructionReason1Choice.mmReason);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(AccountStatusUpdateInstructionReason1Choice.mmNoSpecifiedReason, AccountStatusUpdateInstructionReason1Choice.mmReason);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AccountStatusUpdateInstructionReason1Choice";
 				definition = "Choice of formats for a reason for an instruction to change the status of an account.";
 				previousVersion_lazy = () -> EnabledStatusReason1Choice.mmObject();

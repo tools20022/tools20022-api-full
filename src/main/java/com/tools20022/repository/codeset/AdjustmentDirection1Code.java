@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.AdjustmentDirectionCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -85,7 +87,7 @@ public class AdjustmentDirection1Code extends AdjustmentDirectionCode {
 	 */
 	public static final MMCode mmAdded = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Added";
 			owner_lazy = () -> AdjustmentDirection1Code.mmObject();
 		}
@@ -108,7 +110,7 @@ public class AdjustmentDirection1Code extends AdjustmentDirectionCode {
 	 */
 	public static final MMCode mmSubstracted = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Substracted";
 			owner_lazy = () -> AdjustmentDirection1Code.mmObject();
 		}
@@ -117,12 +119,12 @@ public class AdjustmentDirection1Code extends AdjustmentDirectionCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ADDD");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AdjustmentDirection1Code";
 				definition = "Specifies whether the adjustment is added or subtracted to the total amount.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AdjustmentDirection1Code.mmAdded, com.tools20022.repository.codeset.AdjustmentDirection1Code.mmSubstracted);
+				code_lazy = () -> Arrays.asList(AdjustmentDirection1Code.mmAdded, AdjustmentDirection1Code.mmSubstracted);
 				trace_lazy = () -> AdjustmentDirectionCode.mmObject();
 			}
 		});

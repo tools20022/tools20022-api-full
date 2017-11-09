@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.EventTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -91,7 +93,7 @@ public class EventType1Code extends EventTypeCode {
 	 */
 	public static final MMCode mmPut = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Put";
 			owner_lazy = () -> EventType1Code.mmObject();
 		}
@@ -114,7 +116,7 @@ public class EventType1Code extends EventTypeCode {
 	 */
 	public static final MMCode mmCall = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Call";
 			owner_lazy = () -> EventType1Code.mmObject();
 		}
@@ -137,7 +139,7 @@ public class EventType1Code extends EventTypeCode {
 	 */
 	public static final MMCode mmTender = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Tender";
 			owner_lazy = () -> EventType1Code.mmObject();
 		}
@@ -160,7 +162,7 @@ public class EventType1Code extends EventTypeCode {
 	 */
 	public static final MMCode mmActivation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Activation";
 			owner_lazy = () -> EventType1Code.mmObject();
 		}
@@ -183,7 +185,7 @@ public class EventType1Code extends EventTypeCode {
 	 */
 	public static final MMCode mmInactivation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Inactivation";
 			owner_lazy = () -> EventType1Code.mmObject();
 		}
@@ -206,7 +208,7 @@ public class EventType1Code extends EventTypeCode {
 	 */
 	public static final MMCode mmSinkingFundCall = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SinkingFundCall";
 			owner_lazy = () -> EventType1Code.mmObject();
 		}
@@ -215,13 +217,12 @@ public class EventType1Code extends EventTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("PUT1");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "EventType1Code";
 				definition = "Identifies the type of event.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.EventType1Code.mmPut, com.tools20022.repository.codeset.EventType1Code.mmCall, com.tools20022.repository.codeset.EventType1Code.mmTender,
-						com.tools20022.repository.codeset.EventType1Code.mmActivation, com.tools20022.repository.codeset.EventType1Code.mmInactivation, com.tools20022.repository.codeset.EventType1Code.mmSinkingFundCall);
+				code_lazy = () -> Arrays.asList(EventType1Code.mmPut, EventType1Code.mmCall, EventType1Code.mmTender, EventType1Code.mmActivation, EventType1Code.mmInactivation, EventType1Code.mmSinkingFundCall);
 				trace_lazy = () -> EventTypeCode.mmObject();
 			}
 		});

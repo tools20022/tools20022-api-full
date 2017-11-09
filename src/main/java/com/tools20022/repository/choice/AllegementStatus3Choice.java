@@ -19,8 +19,10 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.AllegementStatus1Code;
 import com.tools20022.repository.entity.SecuritiesTradeStatus;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification30;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -108,14 +110,14 @@ public class AllegementStatus3Choice {
 	 */
 	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeStatus.mmAllegedStatus;
+			businessElementTrace_lazy = () -> SecuritiesTradeStatus.mmAllegedStatus;
 			componentContext_lazy = () -> AllegementStatus3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Cd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Status of the allegement reported.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.AllegementStatus1Choice.mmCode;
+			previousVersion_lazy = () -> AllegementStatus1Choice.mmCode;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AllegementStatus1Code.mmObject();
@@ -162,14 +164,14 @@ public class AllegementStatus3Choice {
 	 */
 	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeStatus.mmAllegedStatus;
+			businessElementTrace_lazy = () -> SecuritiesTradeStatus.mmAllegedStatus;
 			componentContext_lazy = () -> AllegementStatus3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Status of the allegement reported.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.AllegementStatus1Choice.mmProprietary;
+			previousVersion_lazy = () -> AllegementStatus1Choice.mmProprietary;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification30.mmObject();
@@ -179,10 +181,10 @@ public class AllegementStatus3Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AllegementStatus3Choice.mmCode, com.tools20022.repository.choice.AllegementStatus3Choice.mmProprietary);
+				messageElement_lazy = () -> Arrays.asList(AllegementStatus3Choice.mmCode, AllegementStatus3Choice.mmProprietary);
 				trace_lazy = () -> SecuritiesTradeStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AllegementStatus3Choice";
 				definition = "Choice of format for the allegement status.";
 				previousVersion_lazy = () -> AllegementStatus1Choice.mmObject();

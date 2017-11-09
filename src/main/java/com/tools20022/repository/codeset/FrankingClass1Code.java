@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.FrankingClassCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -89,7 +91,7 @@ public class FrankingClass1Code extends FrankingClassCode {
 	 */
 	public static final MMCode mmCashDividend = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashDividend";
 			owner_lazy = () -> FrankingClass1Code.mmObject();
 		}
@@ -112,7 +114,7 @@ public class FrankingClass1Code extends FrankingClassCode {
 	 */
 	public static final MMCode mmInterest = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Interest";
 			owner_lazy = () -> FrankingClass1Code.mmObject();
 		}
@@ -135,7 +137,7 @@ public class FrankingClass1Code extends FrankingClassCode {
 	 */
 	public static final MMCode mmNZDDeclared = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NZDDeclared";
 			owner_lazy = () -> FrankingClass1Code.mmObject();
 		}
@@ -158,7 +160,7 @@ public class FrankingClass1Code extends FrankingClassCode {
 	 */
 	public static final MMCode mmScripDividend = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ScripDividend";
 			owner_lazy = () -> FrankingClass1Code.mmObject();
 		}
@@ -181,7 +183,7 @@ public class FrankingClass1Code extends FrankingClassCode {
 	 */
 	public static final MMCode mmSpecialDividend = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SpecialDividend";
 			owner_lazy = () -> FrankingClass1Code.mmObject();
 		}
@@ -190,12 +192,11 @@ public class FrankingClass1Code extends FrankingClassCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FrankingClass1Code";
 				definition = "Code defining the dvidend / distribution class where this franking information applies to.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.FrankingClass1Code.mmCashDividend, com.tools20022.repository.codeset.FrankingClass1Code.mmInterest,
-						com.tools20022.repository.codeset.FrankingClass1Code.mmNZDDeclared, com.tools20022.repository.codeset.FrankingClass1Code.mmScripDividend, com.tools20022.repository.codeset.FrankingClass1Code.mmSpecialDividend);
+				code_lazy = () -> Arrays.asList(FrankingClass1Code.mmCashDividend, FrankingClass1Code.mmInterest, FrankingClass1Code.mmNZDDeclared, FrankingClass1Code.mmScripDividend, FrankingClass1Code.mmSpecialDividend);
 				trace_lazy = () -> FrankingClassCode.mmObject();
 			}
 		});

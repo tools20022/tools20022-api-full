@@ -20,13 +20,18 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.AccountIdentificationSearchCriteria2Choice;
 import com.tools20022.repository.choice.ActiveOrHistoricAmountRange1Choice;
 import com.tools20022.repository.choice.DateAndDateTimeSearchChoice;
 import com.tools20022.repository.codeset.ActiveOrHistoricCurrencyCode;
 import com.tools20022.repository.codeset.CreditDebitCode;
 import com.tools20022.repository.codeset.EntryStatus1Code;
+import com.tools20022.repository.entity.AccountStatus;
 import com.tools20022.repository.entity.CashEntry;
+import com.tools20022.repository.entity.Entry;
+import com.tools20022.repository.entity.Organisation;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -133,14 +138,14 @@ public class CashAccountEntrySearch4 {
 	 */
 	public static final MMMessageAssociationEnd mmAccountIdentification = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashEntry.mmCashAccount;
+			businessElementTrace_lazy = () -> CashEntry.mmCashAccount;
 			componentContext_lazy = () -> CashAccountEntrySearch4.mmObject();
 			isDerived = false;
 			xmlTag = "AcctId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountIdentification";
 			definition = "Unique and unambiguous identification for the account between the account owner and the account servicer.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CashAccountEntrySearch3.mmAccountIdentification;
+			previousVersion_lazy = () -> CashAccountEntrySearch3.mmAccountIdentification;
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> AccountIdentificationSearchCriteria2Choice.mmObject();
@@ -188,14 +193,14 @@ public class CashAccountEntrySearch4 {
 	 */
 	public static final MMMessageAttribute mmEntryAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashEntry.mmAmount;
+			businessElementTrace_lazy = () -> CashEntry.mmAmount;
 			componentContext_lazy = () -> CashAccountEntrySearch4.mmObject();
 			isDerived = false;
 			xmlTag = "NtryAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EntryAmount";
 			definition = "Specifies the entry amount(s) on which the query is performed.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CashAccountEntrySearch3.mmEntryAmount;
+			previousVersion_lazy = () -> CashAccountEntrySearch3.mmEntryAmount;
 			minOccurs = 0;
 			complexType_lazy = () -> ActiveOrHistoricAmountRange1Choice.mmObject();
 		}
@@ -239,10 +244,10 @@ public class CashAccountEntrySearch4 {
 			componentContext_lazy = () -> CashAccountEntrySearch4.mmObject();
 			isDerived = false;
 			xmlTag = "NtryAmtCcy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EntryAmountCurrency";
 			definition = "Currency of the entry amount.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CashAccountEntrySearch3.mmEntryAmountCurrency;
+			previousVersion_lazy = () -> CashAccountEntrySearch3.mmEntryAmountCurrency;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyCode.mmObject();
 		}
@@ -288,14 +293,14 @@ public class CashAccountEntrySearch4 {
 	 */
 	public static final MMMessageAttribute mmCreditDebitIndicator = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Entry.mmCreditDebitIndicator;
+			businessElementTrace_lazy = () -> Entry.mmCreditDebitIndicator;
 			componentContext_lazy = () -> CashAccountEntrySearch4.mmObject();
 			isDerived = false;
 			xmlTag = "CdtDbtInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditDebitIndicator";
 			definition = "Indicates whether an entry is a credit or a debit.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CashAccountEntrySearch3.mmCreditDebitIndicator;
+			previousVersion_lazy = () -> CashAccountEntrySearch3.mmCreditDebitIndicator;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CreditDebitCode.mmObject();
@@ -342,14 +347,14 @@ public class CashAccountEntrySearch4 {
 	 */
 	public static final MMMessageAttribute mmEntryStatus = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AccountStatus.mmEntryStatus;
+			businessElementTrace_lazy = () -> AccountStatus.mmEntryStatus;
 			componentContext_lazy = () -> CashAccountEntrySearch4.mmObject();
 			isDerived = false;
 			xmlTag = "NtrySts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EntryStatus";
 			definition = "Status of an entry on the books of the account servicer.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CashAccountEntrySearch3.mmEntryStatus;
+			previousVersion_lazy = () -> CashAccountEntrySearch3.mmEntryStatus;
 			minOccurs = 0;
 			simpleType_lazy = () -> EntryStatus1Code.mmObject();
 		}
@@ -398,14 +403,14 @@ public class CashAccountEntrySearch4 {
 	 */
 	public static final MMMessageAttribute mmEntryDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Entry.mmEntryDate;
+			businessElementTrace_lazy = () -> Entry.mmEntryDate;
 			componentContext_lazy = () -> CashAccountEntrySearch4.mmObject();
 			isDerived = false;
 			xmlTag = "NtryDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EntryDate";
 			definition = "Date and time at which an entry is posted to an account on the account servicer's books.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CashAccountEntrySearch3.mmEntryDate;
+			previousVersion_lazy = () -> CashAccountEntrySearch3.mmEntryDate;
 			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTimeSearchChoice.mmObject();
 		}
@@ -449,14 +454,14 @@ public class CashAccountEntrySearch4 {
 	 */
 	public static final MMMessageAssociationEnd mmAccountOwner = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Organisation.mmOrganisationIdentification;
+			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> CashAccountEntrySearch4.mmObject();
 			isDerived = false;
 			xmlTag = "AcctOwnr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountOwner";
 			definition = "Party that legally owns the account.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CashAccountEntrySearch3.mmAccountOwner;
+			previousVersion_lazy = () -> CashAccountEntrySearch3.mmAccountOwner;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -508,14 +513,14 @@ public class CashAccountEntrySearch4 {
 	 */
 	public static final MMMessageAssociationEnd mmAccountServicer = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Organisation.mmOrganisationIdentification;
+			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> CashAccountEntrySearch4.mmObject();
 			isDerived = false;
 			xmlTag = "AcctSvcr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountServicer";
 			definition = "Party that manages the account on behalf of the account owner, that is manages the registration and booking of entries on the account, calculates balances on the account and provides information about the account.\n";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CashAccountEntrySearch3.mmAccountServicer;
+			previousVersion_lazy = () -> CashAccountEntrySearch3.mmAccountServicer;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -526,13 +531,11 @@ public class CashAccountEntrySearch4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashAccountEntrySearch4.mmAccountIdentification, com.tools20022.repository.msg.CashAccountEntrySearch4.mmEntryAmount,
-						com.tools20022.repository.msg.CashAccountEntrySearch4.mmEntryAmountCurrency, com.tools20022.repository.msg.CashAccountEntrySearch4.mmCreditDebitIndicator,
-						com.tools20022.repository.msg.CashAccountEntrySearch4.mmEntryStatus, com.tools20022.repository.msg.CashAccountEntrySearch4.mmEntryDate, com.tools20022.repository.msg.CashAccountEntrySearch4.mmAccountOwner,
-						com.tools20022.repository.msg.CashAccountEntrySearch4.mmAccountServicer);
+				messageElement_lazy = () -> Arrays.asList(CashAccountEntrySearch4.mmAccountIdentification, CashAccountEntrySearch4.mmEntryAmount, CashAccountEntrySearch4.mmEntryAmountCurrency,
+						CashAccountEntrySearch4.mmCreditDebitIndicator, CashAccountEntrySearch4.mmEntryStatus, CashAccountEntrySearch4.mmEntryDate, CashAccountEntrySearch4.mmAccountOwner, CashAccountEntrySearch4.mmAccountServicer);
 				trace_lazy = () -> CashEntry.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CashAccountEntrySearch4";
 				definition = "Defines the criteria used to search for a cash entry.";
 				previousVersion_lazy = () -> CashAccountEntrySearch3.mmObject();

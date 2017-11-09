@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.BatchTransactionTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -89,7 +91,7 @@ public class BatchTransactionType1Code extends BatchTransactionTypeCode {
 	 */
 	public static final MMCode mmDebitCredit = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DebitCredit";
 			owner_lazy = () -> BatchTransactionType1Code.mmObject();
 		}
@@ -112,7 +114,7 @@ public class BatchTransactionType1Code extends BatchTransactionTypeCode {
 	 */
 	public static final MMCode mmCancellation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cancellation";
 			owner_lazy = () -> BatchTransactionType1Code.mmObject();
 		}
@@ -135,7 +137,7 @@ public class BatchTransactionType1Code extends BatchTransactionTypeCode {
 	 */
 	public static final MMCode mmFailed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Failed";
 			owner_lazy = () -> BatchTransactionType1Code.mmObject();
 		}
@@ -158,7 +160,7 @@ public class BatchTransactionType1Code extends BatchTransactionTypeCode {
 	 */
 	public static final MMCode mmDeclined = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Declined";
 			owner_lazy = () -> BatchTransactionType1Code.mmObject();
 		}
@@ -167,13 +169,12 @@ public class BatchTransactionType1Code extends BatchTransactionTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("DTCT");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "BatchTransactionType1Code";
 				definition = "Type of transactions to include in a batch transfer.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.BatchTransactionType1Code.mmDebitCredit, com.tools20022.repository.codeset.BatchTransactionType1Code.mmCancellation,
-						com.tools20022.repository.codeset.BatchTransactionType1Code.mmFailed, com.tools20022.repository.codeset.BatchTransactionType1Code.mmDeclined);
+				code_lazy = () -> Arrays.asList(BatchTransactionType1Code.mmDebitCredit, BatchTransactionType1Code.mmCancellation, BatchTransactionType1Code.mmFailed, BatchTransactionType1Code.mmDeclined);
 				trace_lazy = () -> BatchTransactionTypeCode.mmObject();
 			}
 		});

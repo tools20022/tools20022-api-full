@@ -20,8 +20,10 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max9NumericText;
 import com.tools20022.repository.entity.CardPayment;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -116,10 +118,10 @@ public class CardPaymentDataSetTransaction20 {
 			componentContext_lazy = () -> CardPaymentDataSetTransaction20.mmObject();
 			isDerived = false;
 			xmlTag = "TxSeqCntr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionSequenceCounter";
 			definition = "Sequential counter of the transaction.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CardPaymentDataSetTransaction16.mmTransactionSequenceCounter;
+			previousVersion_lazy = () -> CardPaymentDataSetTransaction16.mmTransactionSequenceCounter;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max9NumericText.mmObject();
@@ -165,10 +167,10 @@ public class CardPaymentDataSetTransaction20 {
 			componentContext_lazy = () -> CardPaymentDataSetTransaction20.mmObject();
 			isDerived = false;
 			xmlTag = "Tracblt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Traceability";
 			definition = "Identification of partners involved in the exchange from the merchant to the issuer, with the corresponding timestamp of their exchanges.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CardPaymentDataSetTransaction16.mmTraceability;
+			previousVersion_lazy = () -> CardPaymentDataSetTransaction16.mmTraceability;
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.Traceability5.mmObject();
@@ -220,10 +222,10 @@ public class CardPaymentDataSetTransaction20 {
 			componentContext_lazy = () -> CardPaymentDataSetTransaction20.mmObject();
 			isDerived = false;
 			xmlTag = "Envt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Environment";
 			definition = "Data related to the environment of the card payment transaction to authorise.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CardPaymentDataSetTransaction16.mmEnvironment;
+			previousVersion_lazy = () -> CardPaymentDataSetTransaction16.mmEnvironment;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -272,14 +274,14 @@ public class CardPaymentDataSetTransaction20 {
 	 */
 	public static final MMMessageAttribute mmContext = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPayment.mmCardPaymentAcquiring;
+			businessElementTrace_lazy = () -> CardPayment.mmCardPaymentAcquiring;
 			componentContext_lazy = () -> CardPaymentDataSetTransaction20.mmObject();
 			isDerived = false;
 			xmlTag = "Cntxt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Context";
 			definition = "Context in which the transaction is performed (payment and sale).";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CardPaymentDataSetTransaction16.mmContext;
+			previousVersion_lazy = () -> CardPaymentDataSetTransaction16.mmContext;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.CardPaymentContext24.mmObject();
@@ -328,10 +330,10 @@ public class CardPaymentDataSetTransaction20 {
 			componentContext_lazy = () -> CardPaymentDataSetTransaction20.mmObject();
 			isDerived = false;
 			xmlTag = "Tx";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Transaction";
 			definition = "Card payment transaction to authorise.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CardPaymentDataSetTransaction16.mmTransaction;
+			previousVersion_lazy = () -> CardPaymentDataSetTransaction16.mmTransaction;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -342,12 +344,11 @@ public class CardPaymentDataSetTransaction20 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardPaymentDataSetTransaction20.mmTransactionSequenceCounter, com.tools20022.repository.msg.CardPaymentDataSetTransaction20.mmTraceability,
-						com.tools20022.repository.msg.CardPaymentDataSetTransaction20.mmEnvironment, com.tools20022.repository.msg.CardPaymentDataSetTransaction20.mmContext,
-						com.tools20022.repository.msg.CardPaymentDataSetTransaction20.mmTransaction);
+				messageElement_lazy = () -> Arrays.asList(CardPaymentDataSetTransaction20.mmTransactionSequenceCounter, CardPaymentDataSetTransaction20.mmTraceability, CardPaymentDataSetTransaction20.mmEnvironment,
+						CardPaymentDataSetTransaction20.mmContext, CardPaymentDataSetTransaction20.mmTransaction);
 				trace_lazy = () -> CardPayment.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CardPaymentDataSetTransaction20";
 				definition = "Card payment transaction to be authorised in a batch.";
 				previousVersion_lazy = () -> CardPaymentDataSetTransaction16.mmObject();

@@ -17,11 +17,11 @@
 
 package com.tools20022.repository.entity;
 
-import com.tools20022.metamodel.MMBusinessAssociationEnd;
-import com.tools20022.metamodel.MMBusinessAttribute;
-import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.*;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.SecuritiesPartyRole;
+import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -34,17 +34,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.RegistrarRole#mmRegistrarAccount
- * RegistrarRole.mmRegistrarAccount}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.RegistrarRole#mmRegisterName
- * RegistrarRole.mmRegisterName}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
  * associationDomain} =
@@ -67,6 +56,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * superType} =
  * {@linkplain com.tools20022.repository.entity.SecuritiesPartyRole
  * SecuritiesPartyRole}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.RegistrarRole#mmRegistrarAccount
+ * RegistrarRole.mmRegistrarAccount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.RegistrarRole#mmRegisterName
+ * RegistrarRole.mmRegisterName}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -140,17 +140,16 @@ public class RegistrarRole extends SecuritiesPartyRole {
 	 */
 	public static final MMBusinessAssociationEnd mmRegistrarAccount = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RegistrationParameters1.mmRegistrarAccount, com.tools20022.repository.msg.RegistrationParameters2.mmRegistrarAccount,
-					com.tools20022.repository.msg.RegistrationParameters4.mmRegistrarAccount, com.tools20022.repository.msg.RegistrationParameters5.mmRegistrarAccount);
+			derivation_lazy = () -> Arrays.asList(RegistrationParameters1.mmRegistrarAccount, RegistrationParameters2.mmRegistrarAccount, RegistrationParameters4.mmRegistrarAccount, RegistrationParameters5.mmRegistrarAccount);
 			elementContext_lazy = () -> RegistrarRole.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RegistrarAccount";
 			definition = "Account at the registrar where financial instruments are registered.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesAccount.mmRelatedRegistrar;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SecuritiesAccount.mmObject();
 		}
 	};
@@ -191,10 +190,10 @@ public class RegistrarRole extends SecuritiesPartyRole {
 	 */
 	public static final MMBusinessAttribute mmRegisterName = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OrganisationIdentification5.mmRegisterName);
+			derivation_lazy = () -> Arrays.asList(OrganisationIdentification5.mmRegisterName);
 			elementContext_lazy = () -> RegistrarRole.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RegisterName";
 			definition = "Name of the register managed by a registration authority.";
 			maxOccurs = 1;
@@ -206,14 +205,14 @@ public class RegistrarRole extends SecuritiesPartyRole {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RegistrarRole";
 				definition = "Party responsible for keeping track of the owners of securities.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesAccount.mmRelatedRegistrar);
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CreditDefaultSwapSingleName2.mmReferenceParty);
+				derivationElement_lazy = () -> Arrays.asList(CreditDefaultSwapSingleName2.mmReferenceParty);
 				superType_lazy = () -> SecuritiesPartyRole.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.RegistrarRole.mmRegistrarAccount, com.tools20022.repository.entity.RegistrarRole.mmRegisterName);
+				element_lazy = () -> Arrays.asList(RegistrarRole.mmRegistrarAccount, RegistrarRole.mmRegisterName);
 			}
 		});
 		return mmObject_lazy.get();

@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.SecurityStatus1Code
+ * SecurityStatus1Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.SecurityStatus2Code
+ * SecurityStatus2Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -53,15 +64,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.SecurityStatusCode#mmWorthless
  * SecurityStatusCode.mmWorthless}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.SecurityStatus1Code
- * SecurityStatus1Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.SecurityStatus2Code
- * SecurityStatus2Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -111,7 +113,7 @@ public class SecurityStatusCode {
 	 */
 	public static final MMCode mmActive = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Active";
 			definition = "The status is active.";
 			owner_lazy = () -> SecurityStatusCode.mmObject();
@@ -141,7 +143,7 @@ public class SecurityStatusCode {
 	 */
 	public static final MMCode mmInactive = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Inactive";
 			definition = "The status is inactive.";
 			owner_lazy = () -> SecurityStatusCode.mmObject();
@@ -171,7 +173,7 @@ public class SecurityStatusCode {
 	 */
 	public static final MMCode mmWhenIssued = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "WhenIssued";
 			definition = "The status is when issued.";
 			owner_lazy = () -> SecurityStatusCode.mmObject();
@@ -201,7 +203,7 @@ public class SecurityStatusCode {
 	 */
 	public static final MMCode mmWhenDistributed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "WhenDistributed";
 			definition = "The status is when distributed.";
 			owner_lazy = () -> SecurityStatusCode.mmObject();
@@ -231,7 +233,7 @@ public class SecurityStatusCode {
 	 */
 	public static final MMCode mmIssued = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Issued";
 			definition = "The status is issued.";
 			owner_lazy = () -> SecurityStatusCode.mmObject();
@@ -261,7 +263,7 @@ public class SecurityStatusCode {
 	 */
 	public static final MMCode mmSuspended = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Suspended";
 			definition = "The status is suspended.";
 			owner_lazy = () -> SecurityStatusCode.mmObject();
@@ -291,7 +293,7 @@ public class SecurityStatusCode {
 	 */
 	public static final MMCode mmInDefault = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InDefault";
 			definition = "The status is in default.";
 			owner_lazy = () -> SecurityStatusCode.mmObject();
@@ -322,7 +324,7 @@ public class SecurityStatusCode {
 	 */
 	public static final MMCode mmWorthless = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Worthless";
 			definition = "Annoucement by the regulator that the security has become worthless.";
 			owner_lazy = () -> SecurityStatusCode.mmObject();
@@ -333,14 +335,13 @@ public class SecurityStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ACTV");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecurityStatusCode";
 				definition = "Specifies the status of the security.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SecurityStatusCode.mmActive, com.tools20022.repository.codeset.SecurityStatusCode.mmInactive,
-						com.tools20022.repository.codeset.SecurityStatusCode.mmWhenIssued, com.tools20022.repository.codeset.SecurityStatusCode.mmWhenDistributed, com.tools20022.repository.codeset.SecurityStatusCode.mmIssued,
-						com.tools20022.repository.codeset.SecurityStatusCode.mmSuspended, com.tools20022.repository.codeset.SecurityStatusCode.mmInDefault, com.tools20022.repository.codeset.SecurityStatusCode.mmWorthless);
+				code_lazy = () -> Arrays.asList(SecurityStatusCode.mmActive, SecurityStatusCode.mmInactive, SecurityStatusCode.mmWhenIssued, SecurityStatusCode.mmWhenDistributed, SecurityStatusCode.mmIssued, SecurityStatusCode.mmSuspended,
+						SecurityStatusCode.mmInDefault, SecurityStatusCode.mmWorthless);
 				derivation_lazy = () -> Arrays.asList(SecurityStatus1Code.mmObject(), SecurityStatus2Code.mmObject());
 			}
 		});

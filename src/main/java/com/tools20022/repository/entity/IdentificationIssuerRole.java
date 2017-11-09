@@ -19,10 +19,13 @@ package com.tools20022.repository.entity;
 
 import com.tools20022.metamodel.MMBusinessAttribute;
 import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.*;
 import com.tools20022.repository.codeset.CountryCode;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.InformationPartyRole;
+import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -36,18 +39,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
  * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.IdentificationIssuerRole#mmCountry
- * IdentificationIssuerRole.mmCountry}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.IdentificationIssuerRole#mmEntityName
- * IdentificationIssuerRole.mmEntityName}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.IdentificationIssuerRole#mmOwnerCode
- * IdentificationIssuerRole.mmOwnerCode}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.IdentificationSource1Choice
+ * IdentificationSource1Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.IdentificationSource3Choice
+ * IdentificationSource3Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.IdentificationSource4Choice
+ * IdentificationSource4Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.IdentificationSource2Choice
+ * IdentificationSource2Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.IdentificationSource5Choice
+ * IdentificationSource5Choice}</li>
  * </ul>
  * </li>
  * <li>
@@ -298,20 +303,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * superType} =
  * {@linkplain com.tools20022.repository.entity.InformationPartyRole
  * InformationPartyRole}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.choice.IdentificationSource1Choice
- * IdentificationSource1Choice}</li>
- * <li>{@linkplain com.tools20022.repository.choice.IdentificationSource3Choice
- * IdentificationSource3Choice}</li>
- * <li>{@linkplain com.tools20022.repository.choice.IdentificationSource4Choice
- * IdentificationSource4Choice}</li>
- * <li>{@linkplain com.tools20022.repository.choice.IdentificationSource2Choice
- * IdentificationSource2Choice}</li>
- * <li>{@linkplain com.tools20022.repository.choice.IdentificationSource5Choice
- * IdentificationSource5Choice}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.IdentificationIssuerRole#mmCountry
+ * IdentificationIssuerRole.mmCountry}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.IdentificationIssuerRole#mmEntityName
+ * IdentificationIssuerRole.mmEntityName}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.IdentificationIssuerRole#mmOwnerCode
+ * IdentificationIssuerRole.mmOwnerCode}</li>
  * </ul>
  * </li>
  * <li>
@@ -384,12 +387,11 @@ public class IdentificationIssuerRole extends InformationPartyRole {
 	 */
 	public static final MMBusinessAttribute mmCountry = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AlternateSecurityIdentification3.mmDomesticIdentificationSource, com.tools20022.repository.msg.AlternateSecurityIdentification1.mmDomesticIdentificationSource,
-					com.tools20022.repository.choice.IdentificationSource1Choice.mmDomestic, com.tools20022.repository.choice.IdentificationSource2Choice.mmDomestic,
-					com.tools20022.repository.msg.AlternateFinancialInstrumentIdentification1.mmDomesticIdentificationSource, com.tools20022.repository.msg.AlternateSecurityIdentification4.mmDomesticIdentificationSource);
+			derivation_lazy = () -> Arrays.asList(AlternateSecurityIdentification3.mmDomesticIdentificationSource, AlternateSecurityIdentification1.mmDomesticIdentificationSource, IdentificationSource1Choice.mmDomestic,
+					IdentificationSource2Choice.mmDomestic, AlternateFinancialInstrumentIdentification1.mmDomesticIdentificationSource, AlternateSecurityIdentification4.mmDomesticIdentificationSource);
 			elementContext_lazy = () -> IdentificationIssuerRole.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Country";
 			definition = "Country of the proprietary identification scheme.";
 			maxOccurs = 1;
@@ -458,14 +460,12 @@ public class IdentificationIssuerRole extends InformationPartyRole {
 	 */
 	public static final MMBusinessAttribute mmEntityName = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AlternateSecurityIdentification3.mmProprietaryIdentificationSource,
-					com.tools20022.repository.msg.AlternateSecurityIdentification1.mmProprietaryIdentificationSource, com.tools20022.repository.msg.SecuritiesCertificate1.mmIssuer,
-					com.tools20022.repository.msg.SecuritiesCertificate2.mmIssuer, com.tools20022.repository.msg.SecuritiesCertificate3.mmIssuer,
-					com.tools20022.repository.msg.AlternateFinancialInstrumentIdentification1.mmProprietaryIdentificationSource, com.tools20022.repository.msg.AlternateSecurityIdentification4.mmProprietaryIdentificationSource,
-					com.tools20022.repository.msg.SecuritiesCertificate4.mmIssuer, com.tools20022.repository.msg.SecuritiesCertificate5.mmIssuer);
+			derivation_lazy = () -> Arrays.asList(AlternateSecurityIdentification3.mmProprietaryIdentificationSource, AlternateSecurityIdentification1.mmProprietaryIdentificationSource, SecuritiesCertificate1.mmIssuer,
+					SecuritiesCertificate2.mmIssuer, SecuritiesCertificate3.mmIssuer, AlternateFinancialInstrumentIdentification1.mmProprietaryIdentificationSource, AlternateSecurityIdentification4.mmProprietaryIdentificationSource,
+					SecuritiesCertificate4.mmIssuer, SecuritiesCertificate5.mmIssuer);
 			elementContext_lazy = () -> IdentificationIssuerRole.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "EntityName";
 			definition = "Entity that issues the proprietary identification.";
 			maxOccurs = 1;
@@ -506,7 +506,7 @@ public class IdentificationIssuerRole extends InformationPartyRole {
 		{
 			elementContext_lazy = () -> IdentificationIssuerRole.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "OwnerCode";
 			definition = "Code representing the organisation that owns and is responsible of an enumerated code list, for example ISO.";
 			maxOccurs = 1;
@@ -518,40 +518,26 @@ public class IdentificationIssuerRole extends InformationPartyRole {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "IdentificationIssuerRole";
 				definition = "Entity that assigns the identification.";
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GenericIdentification1.mmIssuer, com.tools20022.repository.msg.GenericIdentification7.mmIssuer,
-						com.tools20022.repository.msg.GenericIdentification8.mmIssuer, com.tools20022.repository.msg.GenericIdentification9.mmIssuer, com.tools20022.repository.msg.GenericIdentification13.mmIssuer,
-						com.tools20022.repository.msg.GenericIdentification20.mmIssuer, com.tools20022.repository.msg.GenericIdentification25.mmIssuer, com.tools20022.repository.msg.GenericIdentification47.mmIssuer,
-						com.tools20022.repository.msg.GenericIdentification44.mmIssuer, com.tools20022.repository.msg.GenericIdentification41.mmIssuer, com.tools20022.repository.msg.GenericIdentification3.mmIssuer,
-						com.tools20022.repository.msg.GenericFinancialIdentification1.mmIssuer, com.tools20022.repository.msg.GenericAccountIdentification1.mmIssuer, com.tools20022.repository.msg.PersonIdentification3.mmIssuer,
-						com.tools20022.repository.msg.GenericOrganisationIdentification1.mmIssuer, com.tools20022.repository.msg.GenericPersonIdentification1.mmIssuer, com.tools20022.repository.msg.GenericIdentification19.mmIssuer,
-						com.tools20022.repository.msg.GenericIdentification24.mmIssuer, com.tools20022.repository.msg.GenericOrganisationIdentification2.mmIssuer, com.tools20022.repository.msg.GenericIdentification37.mmIssuer,
-						com.tools20022.repository.msg.GenericIdentification23.mmIssuer, com.tools20022.repository.msg.GenericIdentification18.mmIssuer, com.tools20022.repository.msg.GenericIdentification39.mmIssuer,
-						com.tools20022.repository.msg.GenericIdentification27.mmIssuer, com.tools20022.repository.msg.GenericIdentification22.mmIssuer, com.tools20022.repository.msg.GenericIdentification28.mmIssuer,
-						com.tools20022.repository.msg.GenericIdentification6.mmIssuer, com.tools20022.repository.msg.GenericIdentification5.mmIssuer, com.tools20022.repository.msg.GenericIdentification34.mmIssuer,
-						com.tools20022.repository.msg.GenericIdentification38.mmIssuer, com.tools20022.repository.msg.GenericIdentification29.mmIssuer, com.tools20022.repository.msg.GenericIdentification36.mmIssuer,
-						com.tools20022.repository.msg.ProprietaryBankTransactionCodeStructure1.mmIssuer, com.tools20022.repository.msg.GenericIdentification32.mmIssuer, com.tools20022.repository.msg.GenericIdentification35.mmIssuer,
-						com.tools20022.repository.msg.GenericIdentification48.mmIssuer, com.tools20022.repository.msg.GenericIdentification31.mmIssuer, com.tools20022.repository.msg.GenericIdentification33.mmIssuer,
-						com.tools20022.repository.msg.GenericIdentification2.mmIssuer, com.tools20022.repository.msg.GenericIdentification11.mmIssuer, com.tools20022.repository.msg.PersonIdentification2.mmIssuer,
-						com.tools20022.repository.msg.GenericIdentification16.mmIssuer, com.tools20022.repository.msg.GenericIdentification30.mmIssuer, com.tools20022.repository.msg.BillingServiceCommonIdentification1.mmIssuer,
-						com.tools20022.repository.msg.GenericIdentification12.mmIssuer, com.tools20022.repository.msg.GenericIdentification17.mmIssuer, com.tools20022.repository.msg.GenericIdentification40.mmIssuer,
-						com.tools20022.repository.msg.GenericIdentification15.mmIssuer, com.tools20022.repository.msg.GenericIdentification42.mmIssuer, com.tools20022.repository.msg.GenericIdentification51.mmIssuer,
-						com.tools20022.repository.msg.GenericIdentification55.mmIssuer, com.tools20022.repository.msg.GenericIdentification56.mmIssuer, com.tools20022.repository.msg.GenericIdentification65.mmIssuer,
-						com.tools20022.repository.msg.GenericIdentification63.mmIssuer, com.tools20022.repository.msg.GenericIdentification66.mmIssuer, com.tools20022.repository.msg.GenericIdentification62.mmIssuer,
-						com.tools20022.repository.msg.GenericIdentification60.mmIssuer, com.tools20022.repository.msg.GenericIdentification64.mmIssuer, com.tools20022.repository.msg.GenericIdentification67.mmIssuer,
-						com.tools20022.repository.msg.GenericIdentification53.mmIssuer, com.tools20022.repository.msg.GenericIdentification71.mmIssuer, com.tools20022.repository.msg.GenericIdentification73.mmIssuer,
-						com.tools20022.repository.msg.GenericIdentification74.mmIssuer, com.tools20022.repository.msg.GenericIdentification72.mmIssuer, com.tools20022.repository.msg.GenericIdentification70.mmIssuer,
-						com.tools20022.repository.msg.GenericIdentification75.mmIssuer, com.tools20022.repository.msg.GenericIdentification76.mmIssuer, com.tools20022.repository.msg.GenericIdentification77.mmIssuer,
-						com.tools20022.repository.msg.AlternateIdentification4.mmIssuer, com.tools20022.repository.msg.GenericIdentification82.mmIssuer, com.tools20022.repository.msg.GenericIdentification84.mmIssuer,
-						com.tools20022.repository.msg.GenericIdentification86.mmIssuer, com.tools20022.repository.msg.GenericIdentification144.mmIssuer, com.tools20022.repository.msg.GenericIdentification163.mmIssuer,
-						com.tools20022.repository.msg.GenericIdentification79.mmIssuer, com.tools20022.repository.msg.GenericIdentification94.mmIssuer, com.tools20022.repository.msg.GenericIdentification90.mmIssuer,
-						com.tools20022.repository.msg.GenericIdentification93.mmIssuer, com.tools20022.repository.msg.GenericIdentification92.mmIssuer, com.tools20022.repository.msg.GenericIdentification164.mmIssuer);
+				derivationElement_lazy = () -> Arrays.asList(GenericIdentification1.mmIssuer, GenericIdentification7.mmIssuer, GenericIdentification8.mmIssuer, GenericIdentification9.mmIssuer, GenericIdentification13.mmIssuer,
+						GenericIdentification20.mmIssuer, GenericIdentification25.mmIssuer, GenericIdentification47.mmIssuer, GenericIdentification44.mmIssuer, GenericIdentification41.mmIssuer, GenericIdentification3.mmIssuer,
+						GenericFinancialIdentification1.mmIssuer, GenericAccountIdentification1.mmIssuer, PersonIdentification3.mmIssuer, GenericOrganisationIdentification1.mmIssuer, GenericPersonIdentification1.mmIssuer,
+						GenericIdentification19.mmIssuer, GenericIdentification24.mmIssuer, GenericOrganisationIdentification2.mmIssuer, GenericIdentification37.mmIssuer, GenericIdentification23.mmIssuer, GenericIdentification18.mmIssuer,
+						GenericIdentification39.mmIssuer, GenericIdentification27.mmIssuer, GenericIdentification22.mmIssuer, GenericIdentification28.mmIssuer, GenericIdentification6.mmIssuer, GenericIdentification5.mmIssuer,
+						GenericIdentification34.mmIssuer, GenericIdentification38.mmIssuer, GenericIdentification29.mmIssuer, GenericIdentification36.mmIssuer, ProprietaryBankTransactionCodeStructure1.mmIssuer,
+						GenericIdentification32.mmIssuer, GenericIdentification35.mmIssuer, GenericIdentification48.mmIssuer, GenericIdentification31.mmIssuer, GenericIdentification33.mmIssuer, GenericIdentification2.mmIssuer,
+						GenericIdentification11.mmIssuer, PersonIdentification2.mmIssuer, GenericIdentification16.mmIssuer, GenericIdentification30.mmIssuer, BillingServiceCommonIdentification1.mmIssuer, GenericIdentification12.mmIssuer,
+						GenericIdentification17.mmIssuer, GenericIdentification40.mmIssuer, GenericIdentification15.mmIssuer, GenericIdentification42.mmIssuer, GenericIdentification51.mmIssuer, GenericIdentification55.mmIssuer,
+						GenericIdentification56.mmIssuer, GenericIdentification65.mmIssuer, GenericIdentification63.mmIssuer, GenericIdentification66.mmIssuer, GenericIdentification62.mmIssuer, GenericIdentification60.mmIssuer,
+						GenericIdentification64.mmIssuer, GenericIdentification67.mmIssuer, GenericIdentification53.mmIssuer, GenericIdentification71.mmIssuer, GenericIdentification73.mmIssuer, GenericIdentification74.mmIssuer,
+						GenericIdentification72.mmIssuer, GenericIdentification70.mmIssuer, GenericIdentification75.mmIssuer, GenericIdentification76.mmIssuer, GenericIdentification77.mmIssuer, AlternateIdentification4.mmIssuer,
+						GenericIdentification82.mmIssuer, GenericIdentification84.mmIssuer, GenericIdentification86.mmIssuer, GenericIdentification144.mmIssuer, GenericIdentification163.mmIssuer, GenericIdentification79.mmIssuer,
+						GenericIdentification94.mmIssuer, GenericIdentification90.mmIssuer, GenericIdentification93.mmIssuer, GenericIdentification92.mmIssuer, GenericIdentification164.mmIssuer);
 				superType_lazy = () -> InformationPartyRole.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.IdentificationIssuerRole.mmCountry, com.tools20022.repository.entity.IdentificationIssuerRole.mmEntityName,
-						com.tools20022.repository.entity.IdentificationIssuerRole.mmOwnerCode);
+				element_lazy = () -> Arrays.asList(IdentificationIssuerRole.mmCountry, IdentificationIssuerRole.mmEntityName, IdentificationIssuerRole.mmOwnerCode);
 				derivationComponent_lazy = () -> Arrays.asList(IdentificationSource1Choice.mmObject(), IdentificationSource3Choice.mmObject(), IdentificationSource4Choice.mmObject(), IdentificationSource2Choice.mmObject(),
 						IdentificationSource5Choice.mmObject());
 			}

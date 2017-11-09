@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.AdditionalBusinessProcessCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -104,9 +106,9 @@ public class AdditionalBusinessProcess2Code extends AdditionalBusinessProcessCod
 	 */
 	public static final MMCode mmClaimOrCompensation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClaimOrCompensation";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AdditionalBusinessProcess6Code.mmClaimOrCompensation);
+			nextVersions_lazy = () -> Arrays.asList(AdditionalBusinessProcess6Code.mmClaimOrCompensation);
 			owner_lazy = () -> AdditionalBusinessProcess2Code.mmObject();
 		}
 	};
@@ -136,9 +138,9 @@ public class AdditionalBusinessProcess2Code extends AdditionalBusinessProcessCod
 	 */
 	public static final MMCode mmNotificationOfReversal = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotificationOfReversal";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AdditionalBusinessProcess6Code.mmNotificationOfReversal);
+			nextVersions_lazy = () -> Arrays.asList(AdditionalBusinessProcess6Code.mmNotificationOfReversal);
 			owner_lazy = () -> AdditionalBusinessProcess2Code.mmObject();
 		}
 	};
@@ -168,9 +170,9 @@ public class AdditionalBusinessProcess2Code extends AdditionalBusinessProcessCod
 	 */
 	public static final MMCode mmTaxRefund = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxRefund";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AdditionalBusinessProcess6Code.mmTaxRefund);
+			nextVersions_lazy = () -> Arrays.asList(AdditionalBusinessProcess6Code.mmTaxRefund);
 			owner_lazy = () -> AdditionalBusinessProcess2Code.mmObject();
 		}
 	};
@@ -178,14 +180,13 @@ public class AdditionalBusinessProcess2Code extends AdditionalBusinessProcessCod
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CLAI");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AdditionalBusinessProcess2Code";
 				definition = "Specifies the additional business process linked to a corporate action event.";
 				nextVersions_lazy = () -> Arrays.asList(AdditionalBusinessProcess6Code.mmObject());
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AdditionalBusinessProcess2Code.mmClaimOrCompensation, com.tools20022.repository.codeset.AdditionalBusinessProcess2Code.mmNotificationOfReversal,
-						com.tools20022.repository.codeset.AdditionalBusinessProcess2Code.mmTaxRefund);
+				code_lazy = () -> Arrays.asList(AdditionalBusinessProcess2Code.mmClaimOrCompensation, AdditionalBusinessProcess2Code.mmNotificationOfReversal, AdditionalBusinessProcess2Code.mmTaxRefund);
 				trace_lazy = () -> AdditionalBusinessProcessCode.mmObject();
 			}
 		});

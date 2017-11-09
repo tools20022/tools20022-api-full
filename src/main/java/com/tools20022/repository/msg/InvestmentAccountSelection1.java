@@ -17,11 +17,10 @@
 
 package com.tools20022.repository.msg;
 
-import com.tools20022.metamodel.MMMessageAssociationEnd;
-import com.tools20022.metamodel.MMMessageAttribute;
-import com.tools20022.metamodel.MMMessageComponent;
-import com.tools20022.metamodel.MMXor;
+import com.tools20022.metamodel.*;
+import com.tools20022.repository.entity.Account;
 import com.tools20022.repository.entity.InvestmentAccount;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -112,11 +111,11 @@ public class InvestmentAccountSelection1 {
 	 */
 	public static final MMMessageAttribute mmAccountIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.mmIdentification;
+			businessElementTrace_lazy = () -> Account.mmIdentification;
 			componentContext_lazy = () -> InvestmentAccountSelection1.mmObject();
 			isDerived = false;
 			xmlTag = "AcctId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountIdentification";
 			definition = "Unique and unambiguous identification for the account between the account owner and the account servicer.";
 			maxOccurs = 1;
@@ -164,7 +163,7 @@ public class InvestmentAccountSelection1 {
 			componentContext_lazy = () -> InvestmentAccountSelection1.mmObject();
 			isDerived = false;
 			xmlTag = "OthrAcctSelctnData";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherAccountSelectionData";
 			definition = "Various investment account information used to select a specific account.";
 			maxOccurs = 1;
@@ -179,6 +178,10 @@ public class InvestmentAccountSelection1 {
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
+	 * messageComponent} =
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccountSelection1
+	 * InvestmentAccountSelection1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getImpactedElements
 	 * impactedElements} =
 	 * <ul>
@@ -190,10 +193,6 @@ public class InvestmentAccountSelection1 {
 	 * InvestmentAccountSelection1.mmOtherAccountSelectionData}</li>
 	 * </ul>
 	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
-	 * messageComponent} =
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccountSelection1
-	 * InvestmentAccountSelection1}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -209,24 +208,24 @@ public class InvestmentAccountSelection1 {
 	 */
 	public static final MMXor mmAccountSelectionRule = new MMXor() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountSelectionRule";
 			definition = "Either AccountIdentification or OtherAccountSelectionCriteria must be present, but not both.";
 			messageComponent_lazy = () -> InvestmentAccountSelection1.mmObject();
-			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentAccountSelection1.mmAccountIdentification, com.tools20022.repository.msg.InvestmentAccountSelection1.mmOtherAccountSelectionData);
+			impactedElements_lazy = () -> Arrays.asList(InvestmentAccountSelection1.mmAccountIdentification, InvestmentAccountSelection1.mmOtherAccountSelectionData);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentAccountSelection1.mmAccountIdentification, com.tools20022.repository.msg.InvestmentAccountSelection1.mmOtherAccountSelectionData);
+				messageElement_lazy = () -> Arrays.asList(InvestmentAccountSelection1.mmAccountIdentification, InvestmentAccountSelection1.mmOtherAccountSelectionData);
 				trace_lazy = () -> InvestmentAccount.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "InvestmentAccountSelection1";
 				definition = "Choice between a unique account identification and a set of account selection criteria.";
-				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentAccountSelection1.mmAccountSelectionRule);
+				xors_lazy = () -> Arrays.asList(InvestmentAccountSelection1.mmAccountSelectionRule);
 			}
 		});
 		return mmObject_lazy.get();

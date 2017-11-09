@@ -19,9 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.Charges;
 import com.tools20022.repository.entity.Commission;
 import com.tools20022.repository.entity.SecuritiesOrderStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -107,7 +109,7 @@ public class RepairedConditions3 {
 			componentContext_lazy = () -> RepairedConditions3.mmObject();
 			isDerived = false;
 			xmlTag = "RprdChrg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RepairedCharge";
 			definition = "Modified value of the charge applied on the order (the charge in the original individual order that has been repaired so that the order can be accepted).";
 			maxOccurs = 10;
@@ -157,7 +159,7 @@ public class RepairedConditions3 {
 			componentContext_lazy = () -> RepairedConditions3.mmObject();
 			isDerived = false;
 			xmlTag = "RprdComssn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RepairedCommission";
 			definition = "Modified value of the commission applied on the order (the commission in the original individual order that has been repaired so that the order can be accepted).";
 			maxOccurs = 10;
@@ -170,10 +172,10 @@ public class RepairedConditions3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RepairedConditions3.mmRepairedCharge, com.tools20022.repository.msg.RepairedConditions3.mmRepairedCommission);
+				messageElement_lazy = () -> Arrays.asList(RepairedConditions3.mmRepairedCharge, RepairedConditions3.mmRepairedCommission);
 				trace_lazy = () -> SecuritiesOrderStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RepairedConditions3";
 				definition = "Charge or commission of the original individual order details that have been repaired so that the order can be accepted.";
 			}

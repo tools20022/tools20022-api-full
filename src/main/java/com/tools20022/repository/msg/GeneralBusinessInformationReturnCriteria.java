@@ -19,7 +19,9 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.RequestedIndicator;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -95,7 +97,7 @@ public class GeneralBusinessInformationReturnCriteria {
 			componentContext_lazy = () -> GeneralBusinessInformationReturnCriteria.mmObject();
 			isDerived = false;
 			xmlTag = "QlfrInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QualifierIndicator";
 			definition = "Indicates whether the qualifier is requested.";
 			maxOccurs = 1;
@@ -137,7 +139,7 @@ public class GeneralBusinessInformationReturnCriteria {
 			componentContext_lazy = () -> GeneralBusinessInformationReturnCriteria.mmObject();
 			isDerived = false;
 			xmlTag = "SbjtInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubjectIndicator";
 			definition = "Indicates whether the subject is requested.";
 			maxOccurs = 1;
@@ -179,7 +181,7 @@ public class GeneralBusinessInformationReturnCriteria {
 			componentContext_lazy = () -> GeneralBusinessInformationReturnCriteria.mmObject();
 			isDerived = false;
 			xmlTag = "SbjtDtlsInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubjectDetailsIndicator";
 			definition = "Indicates whether the subject details are requested.";
 			maxOccurs = 1;
@@ -191,10 +193,10 @@ public class GeneralBusinessInformationReturnCriteria {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GeneralBusinessInformationReturnCriteria.mmQualifierIndicator,
-						com.tools20022.repository.msg.GeneralBusinessInformationReturnCriteria.mmSubjectIndicator, com.tools20022.repository.msg.GeneralBusinessInformationReturnCriteria.mmSubjectDetailsIndicator);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(GeneralBusinessInformationReturnCriteria.mmQualifierIndicator, GeneralBusinessInformationReturnCriteria.mmSubjectIndicator,
+						GeneralBusinessInformationReturnCriteria.mmSubjectDetailsIndicator);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "GeneralBusinessInformationReturnCriteria";
 				definition = "Defines the criteria used to report on business information.";
 			}

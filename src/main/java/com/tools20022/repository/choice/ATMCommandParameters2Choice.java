@@ -20,9 +20,11 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ATMSecurityScheme2Code;
 import com.tools20022.repository.codeset.ATMStatus1Code;
 import com.tools20022.repository.codeset.MessageFunction8Code;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.ATMCommandParameters1;
 import com.tools20022.repository.msg.ATMConfigurationParameter1;
 import com.tools20022.repository.msg.ATMConfigurationParameter2;
@@ -120,10 +122,10 @@ public class ATMCommandParameters2Choice {
 			componentContext_lazy = () -> ATMCommandParameters2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "ATMReqrdGblSts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ATMRequiredGlobalStatus";
 			definition = "Required status of the ATM, parameters of the status update command.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.ATMCommandParameters1Choice.mmATMRequiredGlobalStatus;
+			previousVersion_lazy = () -> ATMCommandParameters1Choice.mmATMRequiredGlobalStatus;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ATMStatus1Code.mmObject();
@@ -168,10 +170,10 @@ public class ATMCommandParameters2Choice {
 			componentContext_lazy = () -> ATMCommandParameters2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "XpctdMsgFctn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExpectedMessageFunction";
 			definition = "Message to send for the send message command.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.ATMCommandParameters1Choice.mmExpectedMessageFunction;
+			previousVersion_lazy = () -> ATMCommandParameters1Choice.mmExpectedMessageFunction;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> MessageFunction8Code.mmObject();
@@ -216,10 +218,10 @@ public class ATMCommandParameters2Choice {
 			componentContext_lazy = () -> ATMCommandParameters2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "ReqrdCfgtnParam";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequiredConfigurationParameter";
 			definition = "Parameters to be used by the configuration update command.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.ATMCommandParameters1Choice.mmRequiredConfigurationParameter;
+			previousVersion_lazy = () -> ATMCommandParameters1Choice.mmRequiredConfigurationParameter;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -261,7 +263,7 @@ public class ATMCommandParameters2Choice {
 			componentContext_lazy = () -> ATMCommandParameters2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "ReqrdSctySchme";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequiredSecurityScheme";
 			definition = "Parameters to be used by the security scheme update command.";
 			maxOccurs = 1;
@@ -304,7 +306,7 @@ public class ATMCommandParameters2Choice {
 			componentContext_lazy = () -> ATMCommandParameters2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "SctyDvc";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityDevice";
 			definition = "Parameters to be used to update the configuration or the status security device.";
 			maxOccurs = 1;
@@ -347,7 +349,7 @@ public class ATMCommandParameters2Choice {
 			componentContext_lazy = () -> ATMCommandParameters2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Key";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Key";
 			definition = "Parameters to be used by the various cryptographic key commands.";
 			maxOccurs = 1;
@@ -360,11 +362,10 @@ public class ATMCommandParameters2Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ATMCommandParameters2Choice.mmATMRequiredGlobalStatus, com.tools20022.repository.choice.ATMCommandParameters2Choice.mmExpectedMessageFunction,
-						com.tools20022.repository.choice.ATMCommandParameters2Choice.mmRequiredConfigurationParameter, com.tools20022.repository.choice.ATMCommandParameters2Choice.mmRequiredSecurityScheme,
-						com.tools20022.repository.choice.ATMCommandParameters2Choice.mmSecurityDevice, com.tools20022.repository.choice.ATMCommandParameters2Choice.mmKey);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(ATMCommandParameters2Choice.mmATMRequiredGlobalStatus, ATMCommandParameters2Choice.mmExpectedMessageFunction, ATMCommandParameters2Choice.mmRequiredConfigurationParameter,
+						ATMCommandParameters2Choice.mmRequiredSecurityScheme, ATMCommandParameters2Choice.mmSecurityDevice, ATMCommandParameters2Choice.mmKey);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ATMCommandParameters2Choice";
 				definition = "Specific parameters attached to an ATM command.";
 				previousVersion_lazy = () -> ATMCommandParameters1Choice.mmObject();

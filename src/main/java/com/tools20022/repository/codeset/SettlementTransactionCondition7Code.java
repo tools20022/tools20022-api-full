@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.SettlementTransactionConditionV2Code;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -120,7 +122,7 @@ public class SettlementTransactionCondition7Code extends SettlementTransactionCo
 	 */
 	public static final MMCode mmAssignment = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Assignment";
 			owner_lazy = () -> SettlementTransactionCondition7Code.mmObject();
 		}
@@ -143,7 +145,7 @@ public class SettlementTransactionCondition7Code extends SettlementTransactionCo
 	 */
 	public static final MMCode mmClean = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Clean";
 			owner_lazy = () -> SettlementTransactionCondition7Code.mmObject();
 		}
@@ -166,7 +168,7 @@ public class SettlementTransactionCondition7Code extends SettlementTransactionCo
 	 */
 	public static final MMCode mmDirty = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Dirty";
 			owner_lazy = () -> SettlementTransactionCondition7Code.mmObject();
 		}
@@ -189,7 +191,7 @@ public class SettlementTransactionCondition7Code extends SettlementTransactionCo
 	 */
 	public static final MMCode mmDeliveryWithoutMatching = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeliveryWithoutMatching";
 			owner_lazy = () -> SettlementTransactionCondition7Code.mmObject();
 		}
@@ -212,7 +214,7 @@ public class SettlementTransactionCondition7Code extends SettlementTransactionCo
 	 */
 	public static final MMCode mmDrawn = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Drawn";
 			owner_lazy = () -> SettlementTransactionCondition7Code.mmObject();
 		}
@@ -235,7 +237,7 @@ public class SettlementTransactionCondition7Code extends SettlementTransactionCo
 	 */
 	public static final MMCode mmExercised = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Exercised";
 			owner_lazy = () -> SettlementTransactionCondition7Code.mmObject();
 		}
@@ -258,7 +260,7 @@ public class SettlementTransactionCondition7Code extends SettlementTransactionCo
 	 */
 	public static final MMCode mmFreeCleanSettlement = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FreeCleanSettlement";
 			owner_lazy = () -> SettlementTransactionCondition7Code.mmObject();
 		}
@@ -281,7 +283,7 @@ public class SettlementTransactionCondition7Code extends SettlementTransactionCo
 	 */
 	public static final MMCode mmKnockedOut = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "KnockedOut";
 			owner_lazy = () -> SettlementTransactionCondition7Code.mmObject();
 		}
@@ -304,7 +306,7 @@ public class SettlementTransactionCondition7Code extends SettlementTransactionCo
 	 */
 	public static final MMCode mmPhysical = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Physical";
 			owner_lazy = () -> SettlementTransactionCondition7Code.mmObject();
 		}
@@ -327,7 +329,7 @@ public class SettlementTransactionCondition7Code extends SettlementTransactionCo
 	 */
 	public static final MMCode mmCSDPaymentOnly = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CSDPaymentOnly";
 			owner_lazy = () -> SettlementTransactionCondition7Code.mmObject();
 		}
@@ -350,7 +352,7 @@ public class SettlementTransactionCondition7Code extends SettlementTransactionCo
 	 */
 	public static final MMCode mmSplitCurrencySettlement = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SplitCurrencySettlement";
 			owner_lazy = () -> SettlementTransactionCondition7Code.mmObject();
 		}
@@ -373,7 +375,7 @@ public class SettlementTransactionCondition7Code extends SettlementTransactionCo
 	 */
 	public static final MMCode mmSpecialDelivery = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SpecialDelivery";
 			owner_lazy = () -> SettlementTransactionCondition7Code.mmObject();
 		}
@@ -396,7 +398,7 @@ public class SettlementTransactionCondition7Code extends SettlementTransactionCo
 	 */
 	public static final MMCode mmSplitSettlement = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SplitSettlement";
 			owner_lazy = () -> SettlementTransactionCondition7Code.mmObject();
 		}
@@ -419,7 +421,7 @@ public class SettlementTransactionCondition7Code extends SettlementTransactionCo
 	 */
 	public static final MMCode mmUnexposed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unexposed";
 			owner_lazy = () -> SettlementTransactionCondition7Code.mmObject();
 		}
@@ -428,18 +430,15 @@ public class SettlementTransactionCondition7Code extends SettlementTransactionCo
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ASGN");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SettlementTransactionCondition7Code";
 				definition = "Specifies the conditions under which the order/trade is to be settled.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SettlementTransactionCondition7Code.mmAssignment, com.tools20022.repository.codeset.SettlementTransactionCondition7Code.mmClean,
-						com.tools20022.repository.codeset.SettlementTransactionCondition7Code.mmDirty, com.tools20022.repository.codeset.SettlementTransactionCondition7Code.mmDeliveryWithoutMatching,
-						com.tools20022.repository.codeset.SettlementTransactionCondition7Code.mmDrawn, com.tools20022.repository.codeset.SettlementTransactionCondition7Code.mmExercised,
-						com.tools20022.repository.codeset.SettlementTransactionCondition7Code.mmFreeCleanSettlement, com.tools20022.repository.codeset.SettlementTransactionCondition7Code.mmKnockedOut,
-						com.tools20022.repository.codeset.SettlementTransactionCondition7Code.mmPhysical, com.tools20022.repository.codeset.SettlementTransactionCondition7Code.mmCSDPaymentOnly,
-						com.tools20022.repository.codeset.SettlementTransactionCondition7Code.mmSplitCurrencySettlement, com.tools20022.repository.codeset.SettlementTransactionCondition7Code.mmSpecialDelivery,
-						com.tools20022.repository.codeset.SettlementTransactionCondition7Code.mmSplitSettlement, com.tools20022.repository.codeset.SettlementTransactionCondition7Code.mmUnexposed);
+				code_lazy = () -> Arrays.asList(SettlementTransactionCondition7Code.mmAssignment, SettlementTransactionCondition7Code.mmClean, SettlementTransactionCondition7Code.mmDirty,
+						SettlementTransactionCondition7Code.mmDeliveryWithoutMatching, SettlementTransactionCondition7Code.mmDrawn, SettlementTransactionCondition7Code.mmExercised, SettlementTransactionCondition7Code.mmFreeCleanSettlement,
+						SettlementTransactionCondition7Code.mmKnockedOut, SettlementTransactionCondition7Code.mmPhysical, SettlementTransactionCondition7Code.mmCSDPaymentOnly, SettlementTransactionCondition7Code.mmSplitCurrencySettlement,
+						SettlementTransactionCondition7Code.mmSpecialDelivery, SettlementTransactionCondition7Code.mmSplitSettlement, SettlementTransactionCondition7Code.mmUnexposed);
 				trace_lazy = () -> SettlementTransactionConditionV2Code.mmObject();
 			}
 		});

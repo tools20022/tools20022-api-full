@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.RemittanceLocationMethodCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -93,7 +95,7 @@ public class RemittanceLocationMethod1Code extends RemittanceLocationMethodCode 
 	 */
 	public static final MMCode mmFax = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Fax";
 			owner_lazy = () -> RemittanceLocationMethod1Code.mmObject();
 		}
@@ -116,7 +118,7 @@ public class RemittanceLocationMethod1Code extends RemittanceLocationMethodCode 
 	 */
 	public static final MMCode mmElectronicDataInterchange = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ElectronicDataInterchange";
 			owner_lazy = () -> RemittanceLocationMethod1Code.mmObject();
 		}
@@ -139,7 +141,7 @@ public class RemittanceLocationMethod1Code extends RemittanceLocationMethodCode 
 	 */
 	public static final MMCode mmUniformResourceIdentifier = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UniformResourceIdentifier";
 			owner_lazy = () -> RemittanceLocationMethod1Code.mmObject();
 		}
@@ -162,7 +164,7 @@ public class RemittanceLocationMethod1Code extends RemittanceLocationMethodCode 
 	 */
 	public static final MMCode mmEMail = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EMail";
 			owner_lazy = () -> RemittanceLocationMethod1Code.mmObject();
 		}
@@ -185,7 +187,7 @@ public class RemittanceLocationMethod1Code extends RemittanceLocationMethodCode 
 	 */
 	public static final MMCode mmPost = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Post";
 			owner_lazy = () -> RemittanceLocationMethod1Code.mmObject();
 		}
@@ -194,14 +196,13 @@ public class RemittanceLocationMethod1Code extends RemittanceLocationMethodCode 
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("FAXI");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RemittanceLocationMethod1Code";
 				definition = "Specifies the method used to deliver the remittance advice information.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RemittanceLocationMethod1Code.mmFax, com.tools20022.repository.codeset.RemittanceLocationMethod1Code.mmElectronicDataInterchange,
-						com.tools20022.repository.codeset.RemittanceLocationMethod1Code.mmUniformResourceIdentifier, com.tools20022.repository.codeset.RemittanceLocationMethod1Code.mmEMail,
-						com.tools20022.repository.codeset.RemittanceLocationMethod1Code.mmPost);
+				code_lazy = () -> Arrays.asList(RemittanceLocationMethod1Code.mmFax, RemittanceLocationMethod1Code.mmElectronicDataInterchange, RemittanceLocationMethod1Code.mmUniformResourceIdentifier,
+						RemittanceLocationMethod1Code.mmEMail, RemittanceLocationMethod1Code.mmPost);
 				trace_lazy = () -> RemittanceLocationMethodCode.mmObject();
 			}
 		});

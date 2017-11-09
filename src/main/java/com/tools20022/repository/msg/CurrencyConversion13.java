@@ -20,8 +20,10 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.TrueFalseIndicator;
 import com.tools20022.repository.entity.CurrencyExchange;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -112,10 +114,10 @@ public class CurrencyConversion13 {
 			componentContext_lazy = () -> CurrencyConversion13.mmObject();
 			isDerived = false;
 			xmlTag = "AccptdByCrdhldr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcceptedByCardholder";
 			definition = "True if the cardholder has accepted the currency conversion that the acquirer has proposed.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CurrencyConversion8.mmAcceptedByCardholder;
+			previousVersion_lazy = () -> CurrencyConversion8.mmAcceptedByCardholder;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
@@ -161,10 +163,10 @@ public class CurrencyConversion13 {
 			componentContext_lazy = () -> CurrencyConversion13.mmObject();
 			isDerived = false;
 			xmlTag = "Convs";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Conversion";
 			definition = "Conversion between the currency of a card acceptor and the currency of a cardholder, provided by a dedicated service provider.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CurrencyConversion8.mmConversion;
+			previousVersion_lazy = () -> CurrencyConversion8.mmConversion;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -175,10 +177,10 @@ public class CurrencyConversion13 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CurrencyConversion13.mmAcceptedByCardholder, com.tools20022.repository.msg.CurrencyConversion13.mmConversion);
+				messageElement_lazy = () -> Arrays.asList(CurrencyConversion13.mmAcceptedByCardholder, CurrencyConversion13.mmConversion);
 				trace_lazy = () -> CurrencyExchange.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CurrencyConversion13";
 				definition = "Conversion between the currency of a card acceptor and the currency of a card issuer, provided by a dedicated service provider.";
 				previousVersion_lazy = () -> CurrencyConversion8.mmObject();

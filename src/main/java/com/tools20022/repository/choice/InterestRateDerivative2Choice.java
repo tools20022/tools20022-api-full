@@ -19,8 +19,10 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.SwapType1Code;
 import com.tools20022.repository.codeset.UnderlyingInterestRateType3Code;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -99,7 +101,7 @@ public class InterestRateDerivative2Choice {
 			componentContext_lazy = () -> InterestRateDerivative2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "SwpRltd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SwapRelated";
 			definition = "Underlying interest rate type is a swap, swaption, a future on a swap or a forward on a swap with regard to the underlying swap.";
 			maxOccurs = 1;
@@ -144,7 +146,7 @@ public class InterestRateDerivative2Choice {
 			componentContext_lazy = () -> InterestRateDerivative2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Othr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
 			definition = "Where contract type is different from swaps, swaptions, futures on swaps and forwards on a swap, this field is used.";
 			maxOccurs = 1;
@@ -156,9 +158,9 @@ public class InterestRateDerivative2Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.InterestRateDerivative2Choice.mmSwapRelated, com.tools20022.repository.choice.InterestRateDerivative2Choice.mmOther);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(InterestRateDerivative2Choice.mmSwapRelated, InterestRateDerivative2Choice.mmOther);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InterestRateDerivative2Choice";
 				definition = "Choice element specifying the underlying types of an interest rate derivative. ";
 			}

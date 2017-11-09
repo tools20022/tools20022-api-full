@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CardServiceTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -80,7 +82,7 @@ public class CardServiceType1Code extends CardServiceTypeCode {
 	 */
 	public static final MMCode mmCheckPoint = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CheckPoint";
 			owner_lazy = () -> CardServiceType1Code.mmObject();
 		}
@@ -103,7 +105,7 @@ public class CardServiceType1Code extends CardServiceTypeCode {
 	 */
 	public static final MMCode mmFinal = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Final";
 			owner_lazy = () -> CardServiceType1Code.mmObject();
 		}
@@ -126,7 +128,7 @@ public class CardServiceType1Code extends CardServiceTypeCode {
 	 */
 	public static final MMCode mmTotalInquiry = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalInquiry";
 			owner_lazy = () -> CardServiceType1Code.mmObject();
 		}
@@ -135,12 +137,11 @@ public class CardServiceType1Code extends CardServiceTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CardServiceType1Code";
 				definition = "Type of reconciliation.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CardServiceType1Code.mmCheckPoint, com.tools20022.repository.codeset.CardServiceType1Code.mmFinal,
-						com.tools20022.repository.codeset.CardServiceType1Code.mmTotalInquiry);
+				code_lazy = () -> Arrays.asList(CardServiceType1Code.mmCheckPoint, CardServiceType1Code.mmFinal, CardServiceType1Code.mmTotalInquiry);
 				trace_lazy = () -> CardServiceTypeCode.mmObject();
 			}
 		});

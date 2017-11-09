@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.ReinvestmentPlan1Code
+ * ReinvestmentPlan1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -38,13 +47,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.ReinvestmentPlanCode#mmSubjectToShareholderApproval
  * ReinvestmentPlanCode.mmSubjectToShareholderApproval}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.ReinvestmentPlan1Code
- * ReinvestmentPlan1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -88,7 +90,7 @@ public class ReinvestmentPlanCode {
 	 */
 	public static final MMCode mmForRetailInvestorsOnly = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForRetailInvestorsOnly";
 			definition = "Reinvestment plan is for retail investors only.";
 			owner_lazy = () -> ReinvestmentPlanCode.mmObject();
@@ -118,7 +120,7 @@ public class ReinvestmentPlanCode {
 	 */
 	public static final MMCode mmFullReinvestmentPlanOffered = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FullReinvestmentPlanOffered";
 			definition = "Full reinvestment plan offered.";
 			owner_lazy = () -> ReinvestmentPlanCode.mmObject();
@@ -148,7 +150,7 @@ public class ReinvestmentPlanCode {
 	 */
 	public static final MMCode mmSubjectToShareholderApproval = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubjectToShareholderApproval";
 			definition = "Reinvestment plan is subject to shareholder approval.";
 			owner_lazy = () -> ReinvestmentPlanCode.mmObject();
@@ -159,12 +161,11 @@ public class ReinvestmentPlanCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ReinvestmentPlanCode";
 				definition = "Indicates the specific reinvestment plan type.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ReinvestmentPlanCode.mmForRetailInvestorsOnly, com.tools20022.repository.codeset.ReinvestmentPlanCode.mmFullReinvestmentPlanOffered,
-						com.tools20022.repository.codeset.ReinvestmentPlanCode.mmSubjectToShareholderApproval);
+				code_lazy = () -> Arrays.asList(ReinvestmentPlanCode.mmForRetailInvestorsOnly, ReinvestmentPlanCode.mmFullReinvestmentPlanOffered, ReinvestmentPlanCode.mmSubjectToShareholderApproval);
 				derivation_lazy = () -> Arrays.asList(ReinvestmentPlan1Code.mmObject());
 			}
 		});

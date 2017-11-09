@@ -20,8 +20,10 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max140Text;
 import com.tools20022.repository.datatype.Number;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -101,7 +103,7 @@ public class NamedKeyEncryptedData2 {
 			componentContext_lazy = () -> NamedKeyEncryptedData2.mmObject();
 			isDerived = false;
 			xmlTag = "Vrsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Version";
 			definition = "Version of the data structure.";
 			maxOccurs = 1;
@@ -142,7 +144,7 @@ public class NamedKeyEncryptedData2 {
 			componentContext_lazy = () -> NamedKeyEncryptedData2.mmObject();
 			isDerived = false;
 			xmlTag = "KeyNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "KeyName";
 			definition = "Name of the key encryption key (KEK).";
 			maxOccurs = 1;
@@ -182,7 +184,7 @@ public class NamedKeyEncryptedData2 {
 			componentContext_lazy = () -> NamedKeyEncryptedData2.mmObject();
 			isDerived = false;
 			xmlTag = "NcrptdCntt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EncryptedContent";
 			definition = "Encrypted data with an encryption key.";
 			maxOccurs = 1;
@@ -195,10 +197,9 @@ public class NamedKeyEncryptedData2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.NamedKeyEncryptedData2.mmVersion, com.tools20022.repository.msg.NamedKeyEncryptedData2.mmKeyName,
-						com.tools20022.repository.msg.NamedKeyEncryptedData2.mmEncryptedContent);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(NamedKeyEncryptedData2.mmVersion, NamedKeyEncryptedData2.mmKeyName, NamedKeyEncryptedData2.mmEncryptedContent);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "NamedKeyEncryptedData2";
 				definition = "Encrypted data with an encryption key identified with a name.";
 				previousVersion_lazy = () -> NamedKeyEncryptedData1.mmObject();

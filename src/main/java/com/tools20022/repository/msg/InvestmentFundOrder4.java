@@ -19,8 +19,13 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.acmt.*;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.InvestmentFundOrder;
+import com.tools20022.repository.entity.Order;
+import com.tools20022.repository.entity.SecuritiesOrder;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -142,11 +147,11 @@ public class InvestmentFundOrder4 {
 	 */
 	public static final MMMessageAttribute mmOrderReference = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmIdentification;
+			businessElementTrace_lazy = () -> SecuritiesOrder.mmIdentification;
 			componentContext_lazy = () -> InvestmentFundOrder4.mmObject();
 			isDerived = false;
 			xmlTag = "OrdrRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrderReference";
 			definition = "Unique and unambiguous identifier for an order, as assigned by the instructing party.";
 			maxOccurs = 1;
@@ -193,11 +198,11 @@ public class InvestmentFundOrder4 {
 	 */
 	public static final MMMessageAttribute mmMasterReference = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Order.mmMasterIdentification;
+			businessElementTrace_lazy = () -> Order.mmMasterIdentification;
 			componentContext_lazy = () -> InvestmentFundOrder4.mmObject();
 			isDerived = false;
 			xmlTag = "MstrRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MasterReference";
 			definition = "Unique and unambiguous identifier for a group of individual orders, as assigned by the instructing party. This identifier links the individual orders together.";
 			maxOccurs = 1;
@@ -209,16 +214,14 @@ public class InvestmentFundOrder4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentFundOrder4.mmOrderReference, com.tools20022.repository.msg.InvestmentFundOrder4.mmMasterReference);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountDetailsConfirmationV02.mmOrderReference, com.tools20022.repository.area.acmt.AccountDetailsConfirmationV03.mmOrderReference,
-						com.tools20022.repository.area.acmt.AccountOpeningInstructionV02.mmOrderReference, com.tools20022.repository.area.acmt.AccountOpeningInstructionV03.mmOrderReference,
-						com.tools20022.repository.area.acmt.AccountDetailsConfirmationV04.mmOrderReference, com.tools20022.repository.area.acmt.AccountOpeningInstructionV04.mmOrderReference,
-						com.tools20022.repository.area.acmt.AccountOpeningInstructionV05.mmOrderReference, com.tools20022.repository.area.acmt.AccountDetailsConfirmationV05.mmOrderReference,
-						com.tools20022.repository.area.acmt.AccountOpeningInstructionV06.mmOrderReference, com.tools20022.repository.area.acmt.AccountDetailsConfirmationV06.mmOrderReference,
-						com.tools20022.repository.area.acmt.AccountDetailsConfirmationV07.mmOrderReference, com.tools20022.repository.area.acmt.AccountOpeningInstructionV07.mmOrderReference);
+				messageElement_lazy = () -> Arrays.asList(InvestmentFundOrder4.mmOrderReference, InvestmentFundOrder4.mmMasterReference);
+				messageBuildingBlock_lazy = () -> Arrays.asList(AccountDetailsConfirmationV02.mmOrderReference, AccountDetailsConfirmationV03.mmOrderReference, AccountOpeningInstructionV02.mmOrderReference,
+						AccountOpeningInstructionV03.mmOrderReference, AccountDetailsConfirmationV04.mmOrderReference, AccountOpeningInstructionV04.mmOrderReference, AccountOpeningInstructionV05.mmOrderReference,
+						AccountDetailsConfirmationV05.mmOrderReference, AccountOpeningInstructionV06.mmOrderReference, AccountDetailsConfirmationV06.mmOrderReference, AccountDetailsConfirmationV07.mmOrderReference,
+						AccountOpeningInstructionV07.mmOrderReference);
 				trace_lazy = () -> InvestmentFundOrder.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InvestmentFundOrder4";
 				definition = "Identifies an order linked to an account opening.";
 			}

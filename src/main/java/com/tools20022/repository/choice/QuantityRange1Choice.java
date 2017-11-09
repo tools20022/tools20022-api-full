@@ -20,7 +20,9 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.DecimalNumber;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.FromToQuantityRange1;
 import com.tools20022.repository.msg.QuantityRangeBoundary1;
 import java.util.Arrays;
@@ -105,7 +107,7 @@ public class QuantityRange1Choice {
 			componentContext_lazy = () -> QuantityRange1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "FrQty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FromQuantity";
 			definition = "Lower boundary of a range of quantity values.";
 			maxOccurs = 1;
@@ -146,7 +148,7 @@ public class QuantityRange1Choice {
 			componentContext_lazy = () -> QuantityRange1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "ToQty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ToQuantity";
 			definition = "Upper boundary of a range of quantity values.";
 			maxOccurs = 1;
@@ -189,7 +191,7 @@ public class QuantityRange1Choice {
 			componentContext_lazy = () -> QuantityRange1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "FrToQty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FromToQuantity";
 			definition = "Range of valid quantity values.";
 			maxOccurs = 1;
@@ -232,7 +234,7 @@ public class QuantityRange1Choice {
 			componentContext_lazy = () -> QuantityRange1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "EQQty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EqualQuantity";
 			definition = "Exact value a quantity must match to be considered valid.";
 			maxOccurs = 1;
@@ -275,7 +277,7 @@ public class QuantityRange1Choice {
 			componentContext_lazy = () -> QuantityRange1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "NEQQty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotEqualQuantity";
 			definition = "Value that a quantity must not match to be considered valid.";
 			maxOccurs = 1;
@@ -287,12 +289,10 @@ public class QuantityRange1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays
-						.asList(com.tools20022.repository.choice.QuantityRange1Choice.mmFromQuantity, com.tools20022.repository.choice.QuantityRange1Choice.mmToQuantity,
-								com.tools20022.repository.choice.QuantityRange1Choice.mmFromToQuantity, com.tools20022.repository.choice.QuantityRange1Choice.mmEqualQuantity,
-								com.tools20022.repository.choice.QuantityRange1Choice.mmNotEqualQuantity);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(QuantityRange1Choice.mmFromQuantity, QuantityRange1Choice.mmToQuantity, QuantityRange1Choice.mmFromToQuantity, QuantityRange1Choice.mmEqualQuantity,
+						QuantityRange1Choice.mmNotEqualQuantity);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "QuantityRange1Choice";
 				definition = "Choice between ranges of values in which a quantity is considered valid or a specified quantity value which has to be matched or unmatched to be valid.";
 			}

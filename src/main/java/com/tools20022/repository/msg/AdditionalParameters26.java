@@ -19,10 +19,17 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.sese.SecuritiesFinancingConfirmation002V06;
+import com.tools20022.repository.area.sese.SecuritiesFinancingConfirmation002V07;
 import com.tools20022.repository.codeset.PartialSettlement2Code;
 import com.tools20022.repository.codeset.PreConfirmation1Code;
 import com.tools20022.repository.datatype.RestrictedFINXMax16Text;
+import com.tools20022.repository.entity.SecuritiesSettlement;
 import com.tools20022.repository.entity.SecuritiesTrade;
+import com.tools20022.repository.entity.SecuritiesTransfer;
+import com.tools20022.repository.entity.TradeIdentification;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -116,11 +123,11 @@ public class AdditionalParameters26 {
 	 */
 	public static final MMMessageAttribute mmPreConfirmation = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmPreConfirmation;
+			businessElementTrace_lazy = () -> SecuritiesSettlement.mmPreConfirmation;
 			componentContext_lazy = () -> AdditionalParameters26.mmObject();
 			isDerived = false;
 			xmlTag = "PreConf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreConfirmation";
 			definition = "Specifies whether there exists a pre-confirmation.";
 			maxOccurs = 1;
@@ -164,11 +171,11 @@ public class AdditionalParameters26 {
 	 */
 	public static final MMMessageAttribute mmPartialSettlement = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTransfer.mmPartialSettlementType;
+			businessElementTrace_lazy = () -> SecuritiesTransfer.mmPartialSettlementType;
 			componentContext_lazy = () -> AdditionalParameters26.mmObject();
 			isDerived = false;
 			xmlTag = "PrtlSttlm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartialSettlement";
 			definition = "Specifies partial settlement information.";
 			maxOccurs = 1;
@@ -215,11 +222,11 @@ public class AdditionalParameters26 {
 	 */
 	public static final MMMessageAttribute mmPreviousPartialConfirmationIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradeIdentification.mmIdentification;
+			businessElementTrace_lazy = () -> TradeIdentification.mmIdentification;
 			componentContext_lazy = () -> AdditionalParameters26.mmObject();
 			isDerived = false;
 			xmlTag = "PrvsPrtlConfId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousPartialConfirmationIdentification";
 			definition = "Identification of the confirmation previously sent to confirm the partial settlement of a transaction.";
 			maxOccurs = 1;
@@ -231,13 +238,11 @@ public class AdditionalParameters26 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AdditionalParameters26.mmPreConfirmation, com.tools20022.repository.msg.AdditionalParameters26.mmPartialSettlement,
-						com.tools20022.repository.msg.AdditionalParameters26.mmPreviousPartialConfirmationIdentification);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesFinancingConfirmation002V06.mmAdditionalParameters,
-						com.tools20022.repository.area.sese.SecuritiesFinancingConfirmation002V07.mmAdditionalParameters);
+				messageElement_lazy = () -> Arrays.asList(AdditionalParameters26.mmPreConfirmation, AdditionalParameters26.mmPartialSettlement, AdditionalParameters26.mmPreviousPartialConfirmationIdentification);
+				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesFinancingConfirmation002V06.mmAdditionalParameters, SecuritiesFinancingConfirmation002V07.mmAdditionalParameters);
 				trace_lazy = () -> SecuritiesTrade.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AdditionalParameters26";
 				definition = "Specifies additional parameters to the message or transaction.";
 			}

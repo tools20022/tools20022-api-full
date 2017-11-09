@@ -19,6 +19,8 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.DateCodeAndTimeFormat2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -96,7 +98,7 @@ public class DateFormat23Choice {
 			componentContext_lazy = () -> DateFormat23Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Dt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Date";
 			definition = "Date expressed as a calendar date.";
 			maxOccurs = 1;
@@ -137,7 +139,7 @@ public class DateFormat23Choice {
 			componentContext_lazy = () -> DateFormat23Choice.mmObject();
 			isDerived = false;
 			xmlTag = "DtCdAndTm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DateCodeAndTime";
 			definition = "Specifies  a date code and a time.";
 			maxOccurs = 1;
@@ -178,7 +180,7 @@ public class DateFormat23Choice {
 			componentContext_lazy = () -> DateFormat23Choice.mmObject();
 			isDerived = false;
 			xmlTag = "DtCd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DateCode";
 			definition = "Specifies the type of date.";
 			maxOccurs = 1;
@@ -191,10 +193,9 @@ public class DateFormat23Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.DateFormat23Choice.mmDate, com.tools20022.repository.choice.DateFormat23Choice.mmDateCodeAndTime,
-						com.tools20022.repository.choice.DateFormat23Choice.mmDateCode);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(DateFormat23Choice.mmDate, DateFormat23Choice.mmDateCodeAndTime, DateFormat23Choice.mmDateCode);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DateFormat23Choice";
 				definition = "Choice between an ISODate or ISODateTime format or a date code or a date code and a time.";
 			}

@@ -20,11 +20,16 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.tsmt.PartyEventAdviceV01;
 import com.tools20022.repository.codeset.LanguageCode;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Max2000Text;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.Document;
+import com.tools20022.repository.entity.Jurisdiction;
+import com.tools20022.repository.entity.Party;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -139,7 +144,7 @@ public class EventDescription1 {
 			componentContext_lazy = () -> EventDescription1.mmObject();
 			isDerived = false;
 			xmlTag = "Idr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identifier";
 			definition = "Identification of the event.";
 			maxOccurs = 1;
@@ -182,11 +187,11 @@ public class EventDescription1 {
 	 */
 	public static final MMMessageAttribute mmDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Document.mmIssueDate;
+			businessElementTrace_lazy = () -> Document.mmIssueDate;
 			componentContext_lazy = () -> EventDescription1.mmObject();
 			isDerived = false;
 			xmlTag = "Dt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Date";
 			definition = "Date when event occurred.";
 			maxOccurs = 1;
@@ -229,11 +234,11 @@ public class EventDescription1 {
 	 */
 	public static final MMMessageAssociationEnd mmRecipient = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> EventDescription1.mmObject();
 			isDerived = false;
 			xmlTag = "Rcpt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Recipient";
 			definition = "Party to be advised.";
 			maxOccurs = 1;
@@ -277,11 +282,11 @@ public class EventDescription1 {
 	 */
 	public static final MMMessageAssociationEnd mmAdvisor = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> EventDescription1.mmObject();
 			isDerived = false;
 			xmlTag = "Advsr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Advisor";
 			definition = "Advising party.";
 			maxOccurs = 1;
@@ -325,11 +330,11 @@ public class EventDescription1 {
 	 */
 	public static final MMMessageAssociationEnd mmOtherParty = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> EventDescription1.mmObject();
 			isDerived = false;
 			xmlTag = "OthrPty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherParty";
 			definition = "Parties involved in the event.";
 			minOccurs = 0;
@@ -372,11 +377,11 @@ public class EventDescription1 {
 	 */
 	public static final MMMessageAttribute mmLanguageCode = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Document.mmLanguage;
+			businessElementTrace_lazy = () -> Document.mmLanguage;
 			componentContext_lazy = () -> EventDescription1.mmObject();
 			isDerived = false;
 			xmlTag = "LangCd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LanguageCode";
 			definition = "Identifier for a language used for the description.";
 			maxOccurs = 1;
@@ -417,7 +422,7 @@ public class EventDescription1 {
 			componentContext_lazy = () -> EventDescription1.mmObject();
 			isDerived = false;
 			xmlTag = "Desc";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Description";
 			definition = "Free form description of event.";
 			maxOccurs = 1;
@@ -463,7 +468,7 @@ public class EventDescription1 {
 			componentContext_lazy = () -> EventDescription1.mmObject();
 			isDerived = false;
 			xmlTag = "RltdDoc";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedDocument";
 			definition = "Reference to related document.";
 			minOccurs = 0;
@@ -509,7 +514,7 @@ public class EventDescription1 {
 			componentContext_lazy = () -> EventDescription1.mmObject();
 			isDerived = false;
 			xmlTag = "RltdLttr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedLetter";
 			definition = "Identifier of related letter.";
 			minOccurs = 0;
@@ -555,7 +560,7 @@ public class EventDescription1 {
 			componentContext_lazy = () -> EventDescription1.mmObject();
 			isDerived = false;
 			xmlTag = "RltdMsg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedMessage";
 			definition = "Identifier of related message.";
 			minOccurs = 0;
@@ -601,7 +606,7 @@ public class EventDescription1 {
 			componentContext_lazy = () -> EventDescription1.mmObject();
 			isDerived = false;
 			xmlTag = "AssoctdDoc";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AssociatedDocument";
 			definition = "Associated free form document.";
 			minOccurs = 0;
@@ -644,11 +649,11 @@ public class EventDescription1 {
 	 */
 	public static final MMMessageAssociationEnd mmGoverningContract = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Document.mmAgreement;
+			businessElementTrace_lazy = () -> Document.mmAgreement;
 			componentContext_lazy = () -> EventDescription1.mmObject();
 			isDerived = false;
 			xmlTag = "GovngCtrct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GoverningContract";
 			definition = "Reference to the contractual context.";
 			minOccurs = 0;
@@ -690,11 +695,11 @@ public class EventDescription1 {
 	 */
 	public static final MMMessageAssociationEnd mmLegalContext = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Jurisdiction.mmGovernanceRules;
+			businessElementTrace_lazy = () -> Jurisdiction.mmGovernanceRules;
 			componentContext_lazy = () -> EventDescription1.mmObject();
 			isDerived = false;
 			xmlTag = "LglCntxt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LegalContext";
 			definition = "Rules and laws governing the event.";
 			maxOccurs = 1;
@@ -707,15 +712,13 @@ public class EventDescription1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.EventDescription1.mmIdentifier, com.tools20022.repository.msg.EventDescription1.mmDate, com.tools20022.repository.msg.EventDescription1.mmRecipient,
-						com.tools20022.repository.msg.EventDescription1.mmAdvisor, com.tools20022.repository.msg.EventDescription1.mmOtherParty, com.tools20022.repository.msg.EventDescription1.mmLanguageCode,
-						com.tools20022.repository.msg.EventDescription1.mmDescription, com.tools20022.repository.msg.EventDescription1.mmRelatedDocument, com.tools20022.repository.msg.EventDescription1.mmRelatedLetter,
-						com.tools20022.repository.msg.EventDescription1.mmRelatedMessage, com.tools20022.repository.msg.EventDescription1.mmAssociatedDocument, com.tools20022.repository.msg.EventDescription1.mmGoverningContract,
-						com.tools20022.repository.msg.EventDescription1.mmLegalContext);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.PartyEventAdviceV01.mmEventNotice);
+				messageElement_lazy = () -> Arrays.asList(EventDescription1.mmIdentifier, EventDescription1.mmDate, EventDescription1.mmRecipient, EventDescription1.mmAdvisor, EventDescription1.mmOtherParty,
+						EventDescription1.mmLanguageCode, EventDescription1.mmDescription, EventDescription1.mmRelatedDocument, EventDescription1.mmRelatedLetter, EventDescription1.mmRelatedMessage, EventDescription1.mmAssociatedDocument,
+						EventDescription1.mmGoverningContract, EventDescription1.mmLegalContext);
+				messageBuildingBlock_lazy = () -> Arrays.asList(PartyEventAdviceV01.mmEventNotice);
 				trace_lazy = () -> Document.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "EventDescription1";
 				definition = "Describes an event not covered by other formal messages, for example a trace after a telephone call.";
 			}

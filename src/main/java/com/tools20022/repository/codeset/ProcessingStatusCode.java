@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.ProcessingStatus1Code
+ * ProcessingStatus1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -41,13 +50,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.ProcessingStatusCode#mmForInformationOnly
  * ProcessingStatusCode.mmForInformationOnly}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.ProcessingStatus1Code
- * ProcessingStatus1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -102,7 +104,7 @@ public class ProcessingStatusCode {
 	 */
 	public static final MMCode mmComplete = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Complete";
 			definition = "Message contains complete details of the corporate action event at the time the event is communicated and the occurrence of the event has been confirmed by the account servicer's chosen official source. Further updates to the event are still possible.";
 			owner_lazy = () -> ProcessingStatusCode.mmObject();
@@ -135,7 +137,7 @@ public class ProcessingStatusCode {
 	 */
 	public static final MMCode mmPreliminaryConfirmed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PreliminaryConfirmed";
 			definition = "Message may not contain complete details of the corporate action event,\nhowever, the occurrence of the event is confirmed.";
 			owner_lazy = () -> ProcessingStatusCode.mmObject();
@@ -168,7 +170,7 @@ public class ProcessingStatusCode {
 	 */
 	public static final MMCode mmPreliminaryUnconfirmed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PreliminaryUnconfirmed";
 			definition = "Message may not contain complete details of the corporate action event and\nthe occurrence of the event is not yet confirmed.";
 			owner_lazy = () -> ProcessingStatusCode.mmObject();
@@ -198,7 +200,7 @@ public class ProcessingStatusCode {
 	 */
 	public static final MMCode mmForInformationOnly = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ForInformationOnly";
 			definition = "The message is for information only.";
 			owner_lazy = () -> ProcessingStatusCode.mmObject();
@@ -209,13 +211,12 @@ public class ProcessingStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("COMP");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ProcessingStatusCode";
 				definition = "Specifies the processing status.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ProcessingStatusCode.mmComplete, com.tools20022.repository.codeset.ProcessingStatusCode.mmPreliminaryConfirmed,
-						com.tools20022.repository.codeset.ProcessingStatusCode.mmPreliminaryUnconfirmed, com.tools20022.repository.codeset.ProcessingStatusCode.mmForInformationOnly);
+				code_lazy = () -> Arrays.asList(ProcessingStatusCode.mmComplete, ProcessingStatusCode.mmPreliminaryConfirmed, ProcessingStatusCode.mmPreliminaryUnconfirmed, ProcessingStatusCode.mmForInformationOnly);
 				derivation_lazy = () -> Arrays.asList(ProcessingStatus1Code.mmObject());
 			}
 		});

@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CorporateSectorIdentifierCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -98,7 +100,7 @@ public class CorporateSectorIdentifier1Code extends CorporateSectorIdentifierCod
 	 */
 	public static final MMCode mmAlternativeInvestmentFund = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AlternativeInvestmentFund";
 			owner_lazy = () -> CorporateSectorIdentifier1Code.mmObject();
 		}
@@ -121,7 +123,7 @@ public class CorporateSectorIdentifier1Code extends CorporateSectorIdentifierCod
 	 */
 	public static final MMCode mmAssurance = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Assurance";
 			owner_lazy = () -> CorporateSectorIdentifier1Code.mmObject();
 		}
@@ -144,7 +146,7 @@ public class CorporateSectorIdentifier1Code extends CorporateSectorIdentifierCod
 	 */
 	public static final MMCode mmCreditInstitution = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditInstitution";
 			owner_lazy = () -> CorporateSectorIdentifier1Code.mmObject();
 		}
@@ -167,7 +169,7 @@ public class CorporateSectorIdentifier1Code extends CorporateSectorIdentifierCod
 	 */
 	public static final MMCode mmInsurance = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Insurance";
 			owner_lazy = () -> CorporateSectorIdentifier1Code.mmObject();
 		}
@@ -190,7 +192,7 @@ public class CorporateSectorIdentifier1Code extends CorporateSectorIdentifierCod
 	 */
 	public static final MMCode mmInvestmentFirm = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestmentFirm";
 			owner_lazy = () -> CorporateSectorIdentifier1Code.mmObject();
 		}
@@ -213,7 +215,7 @@ public class CorporateSectorIdentifier1Code extends CorporateSectorIdentifierCod
 	 */
 	public static final MMCode mmOccupationalRetirementProvision = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OccupationalRetirementProvision";
 			owner_lazy = () -> CorporateSectorIdentifier1Code.mmObject();
 		}
@@ -236,7 +238,7 @@ public class CorporateSectorIdentifier1Code extends CorporateSectorIdentifierCod
 	 */
 	public static final MMCode mmReinsurance = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reinsurance";
 			owner_lazy = () -> CorporateSectorIdentifier1Code.mmObject();
 		}
@@ -259,7 +261,7 @@ public class CorporateSectorIdentifier1Code extends CorporateSectorIdentifierCod
 	 */
 	public static final MMCode mmUCITS = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UCITS";
 			owner_lazy = () -> CorporateSectorIdentifier1Code.mmObject();
 		}
@@ -268,14 +270,13 @@ public class CorporateSectorIdentifier1Code extends CorporateSectorIdentifierCod
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateSectorIdentifier1Code";
 				definition = "Identifies the corporate sector of the counterparty for reporting to trade repositories.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CorporateSectorIdentifier1Code.mmAlternativeInvestmentFund, com.tools20022.repository.codeset.CorporateSectorIdentifier1Code.mmAssurance,
-						com.tools20022.repository.codeset.CorporateSectorIdentifier1Code.mmCreditInstitution, com.tools20022.repository.codeset.CorporateSectorIdentifier1Code.mmInsurance,
-						com.tools20022.repository.codeset.CorporateSectorIdentifier1Code.mmInvestmentFirm, com.tools20022.repository.codeset.CorporateSectorIdentifier1Code.mmOccupationalRetirementProvision,
-						com.tools20022.repository.codeset.CorporateSectorIdentifier1Code.mmReinsurance, com.tools20022.repository.codeset.CorporateSectorIdentifier1Code.mmUCITS);
+				code_lazy = () -> Arrays.asList(CorporateSectorIdentifier1Code.mmAlternativeInvestmentFund, CorporateSectorIdentifier1Code.mmAssurance, CorporateSectorIdentifier1Code.mmCreditInstitution,
+						CorporateSectorIdentifier1Code.mmInsurance, CorporateSectorIdentifier1Code.mmInvestmentFirm, CorporateSectorIdentifier1Code.mmOccupationalRetirementProvision, CorporateSectorIdentifier1Code.mmReinsurance,
+						CorporateSectorIdentifier1Code.mmUCITS);
 				trace_lazy = () -> CorporateSectorIdentifierCode.mmObject();
 			}
 		});

@@ -20,7 +20,13 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.reda.StandingSettlementInstructionCancellationV01;
+import com.tools20022.repository.area.reda.StandingSettlementInstructionDeletionV01;
+import com.tools20022.repository.area.reda.StandingSettlementInstructionStatusAdviceV01;
+import com.tools20022.repository.area.reda.StandingSettlementInstructionV01;
 import com.tools20022.repository.codeset.ExternalMarketArea1Code;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.MarketIdentification87;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -116,7 +122,7 @@ public class MarketIdentificationOrCashPurpose1Choice {
 			componentContext_lazy = () -> MarketIdentificationOrCashPurpose1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmInstrMktId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementInstructionMarketIdentification";
 			definition = "Identifies the market for the settlement. This consists of the country code and the asset class. For example, if the SSI is for equities in the DTCC, the country code is ‘US’ and the classification type is ‘equity’.";
 			maxOccurs = 1;
@@ -161,7 +167,7 @@ public class MarketIdentificationOrCashPurpose1Choice {
 			componentContext_lazy = () -> MarketIdentificationOrCashPurpose1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "CshSSIPurp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashSSIPurpose";
 			definition = "Underlying reason for the payment SSI instruction, expressed as a code.";
 			minOccurs = 1;
@@ -172,13 +178,11 @@ public class MarketIdentificationOrCashPurpose1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.MarketIdentificationOrCashPurpose1Choice.mmSettlementInstructionMarketIdentification,
-						com.tools20022.repository.choice.MarketIdentificationOrCashPurpose1Choice.mmCashSSIPurpose);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.reda.StandingSettlementInstructionV01.mmMarketIdentification,
-						com.tools20022.repository.area.reda.StandingSettlementInstructionCancellationV01.mmMarketIdentification, com.tools20022.repository.area.reda.StandingSettlementInstructionStatusAdviceV01.mmMarketIdentification,
-						com.tools20022.repository.area.reda.StandingSettlementInstructionDeletionV01.mmMarketIdentification);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(MarketIdentificationOrCashPurpose1Choice.mmSettlementInstructionMarketIdentification, MarketIdentificationOrCashPurpose1Choice.mmCashSSIPurpose);
+				messageBuildingBlock_lazy = () -> Arrays.asList(StandingSettlementInstructionV01.mmMarketIdentification, StandingSettlementInstructionCancellationV01.mmMarketIdentification,
+						StandingSettlementInstructionStatusAdviceV01.mmMarketIdentification, StandingSettlementInstructionDeletionV01.mmMarketIdentification);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MarketIdentificationOrCashPurpose1Choice";
 				definition = "Choice of cash purpose or a securities market identifier.";
 			}

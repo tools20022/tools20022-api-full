@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -29,6 +31,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.QueryType2Code
+ * QueryType2Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.QueryType3Code
+ * QueryType3Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>{@linkplain com.tools20022.repository.codeset.QueryTypeCode#mmAll
@@ -39,15 +50,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * QueryTypeCode.mmModified}</li>
  * <li>{@linkplain com.tools20022.repository.codeset.QueryTypeCode#mmDeleted
  * QueryTypeCode.mmDeleted}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.QueryType2Code
- * QueryType2Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.QueryType3Code
- * QueryType3Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -100,7 +102,7 @@ public class QueryTypeCode {
 	 */
 	public static final MMCode mmAll = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "All";
 			definition = "Specifies that the query requests that all matching items be returned.";
 			owner_lazy = () -> QueryTypeCode.mmObject();
@@ -133,7 +135,7 @@ public class QueryTypeCode {
 	 */
 	public static final MMCode mmChanged = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Changed";
 			definition = "Specifies that the query requests that only new matching items since the last similar query be returned.";
 			owner_lazy = () -> QueryTypeCode.mmObject();
@@ -166,7 +168,7 @@ public class QueryTypeCode {
 	 */
 	public static final MMCode mmModified = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Modified";
 			definition = "Specifies that the query requests that only items that have changed since the last query be returned.";
 			owner_lazy = () -> QueryTypeCode.mmObject();
@@ -199,7 +201,7 @@ public class QueryTypeCode {
 	 */
 	public static final MMCode mmDeleted = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Deleted";
 			definition = "Specifies that the query requests that items that have been deleted since the last query be returned.";
 			owner_lazy = () -> QueryTypeCode.mmObject();
@@ -210,13 +212,12 @@ public class QueryTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ALLL");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "QueryTypeCode";
 				definition = "Specifyies the nature of the query, i.e. whether the query requests that all matching items be returned or only new matching items since the last similar query be returned.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.QueryTypeCode.mmAll, com.tools20022.repository.codeset.QueryTypeCode.mmChanged, com.tools20022.repository.codeset.QueryTypeCode.mmModified,
-						com.tools20022.repository.codeset.QueryTypeCode.mmDeleted);
+				code_lazy = () -> Arrays.asList(QueryTypeCode.mmAll, QueryTypeCode.mmChanged, QueryTypeCode.mmModified, QueryTypeCode.mmDeleted);
 				derivation_lazy = () -> Arrays.asList(QueryType2Code.mmObject(), QueryType3Code.mmObject());
 			}
 		});

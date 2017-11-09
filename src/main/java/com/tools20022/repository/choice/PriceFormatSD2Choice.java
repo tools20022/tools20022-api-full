@@ -20,7 +20,9 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.PriceValueType10Code;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.AmountPricePerFinancialInstrumentQuantity4;
 import java.text.DateFormat;
 import java.util.Arrays;
@@ -111,10 +113,10 @@ public class PriceFormatSD2Choice {
 			componentContext_lazy = () -> PriceFormatSD2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "NotSpcfdPric";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotSpecifiedPrice";
 			definition = "Value of the price not specified.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.PriceFormatSD1Choice.mmNotSpecifiedPrice;
+			previousVersion_lazy = () -> PriceFormatSD1Choice.mmNotSpecifiedPrice;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PriceValueType10Code.mmObject();
@@ -161,10 +163,10 @@ public class PriceFormatSD2Choice {
 			componentContext_lazy = () -> PriceFormatSD2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "AmtPricPerFinInstrmQty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmountPricePerFinancialInstrumentQuantity";
 			definition = "Price expressed as a ratio: amount price per financial instrument quantity.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.PriceFormatSD1Choice.mmAmountPricePerFinancialInstrumentQuantity;
+			previousVersion_lazy = () -> PriceFormatSD1Choice.mmAmountPricePerFinancialInstrumentQuantity;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -175,9 +177,9 @@ public class PriceFormatSD2Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PriceFormatSD2Choice.mmNotSpecifiedPrice, com.tools20022.repository.choice.PriceFormatSD2Choice.mmAmountPricePerFinancialInstrumentQuantity);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+				messageElement_lazy = () -> Arrays.asList(PriceFormatSD2Choice.mmNotSpecifiedPrice, PriceFormatSD2Choice.mmAmountPricePerFinancialInstrumentQuantity);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
 						return DateFormat.getDateInstance(java.text.DateFormat.LONG).parse("May 5, 2016");

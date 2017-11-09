@@ -20,8 +20,10 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.Max4NumericText;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -105,7 +107,7 @@ public class Reconciliation1 {
 			componentContext_lazy = () -> Reconciliation1.mmObject();
 			isDerived = false;
 			xmlTag = "RptId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportIdentification";
 			definition = "Unique Identifier of partitions aggregate.";
 			maxOccurs = 1;
@@ -148,7 +150,7 @@ public class Reconciliation1 {
 			componentContext_lazy = () -> Reconciliation1.mmObject();
 			isDerived = false;
 			xmlTag = "RptPgntn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportPagination";
 			definition = "Page number of the message and continuation indicator to indicate that the multi-parts notification is to continue or that the message is the last page of the multi-parts notification.";
 			maxOccurs = 1;
@@ -197,7 +199,7 @@ public class Reconciliation1 {
 			componentContext_lazy = () -> Reconciliation1.mmObject();
 			isDerived = false;
 			xmlTag = "BkToCstmrAcctRptCpy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BankToCustomerAccountReportCopy";
 			definition = "The BankToCustomerAccountReport message is sent by the account servicer to an account owner or to a party authorised by the account owner to receive the message. It can be used to inform the account owner, or authorised party, of the entries reported to the account, and/or to provide the owner with balance information on the account at a given point in time.";
 			maxOccurs = 1;
@@ -239,7 +241,7 @@ public class Reconciliation1 {
 			componentContext_lazy = () -> Reconciliation1.mmObject();
 			isDerived = false;
 			xmlTag = "InitlMsgId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InitialMessageIdentification";
 			definition = "Business identification of the initial message.";
 			maxOccurs = 1;
@@ -281,7 +283,7 @@ public class Reconciliation1 {
 			componentContext_lazy = () -> Reconciliation1.mmObject();
 			isDerived = false;
 			xmlTag = "CtrlCd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ControlCode";
 			definition = "Electronic message control code.";
 			minOccurs = 0;
@@ -292,11 +294,10 @@ public class Reconciliation1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Reconciliation1.mmReportIdentification, com.tools20022.repository.msg.Reconciliation1.mmReportPagination,
-						com.tools20022.repository.msg.Reconciliation1.mmBankToCustomerAccountReportCopy, com.tools20022.repository.msg.Reconciliation1.mmInitialMessageIdentification,
-						com.tools20022.repository.msg.Reconciliation1.mmControlCode);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(Reconciliation1.mmReportIdentification, Reconciliation1.mmReportPagination, Reconciliation1.mmBankToCustomerAccountReportCopy, Reconciliation1.mmInitialMessageIdentification,
+						Reconciliation1.mmControlCode);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Reconciliation1";
 				definition = "Report on account transactions to reconcile documents of the day of participants.";
 			}

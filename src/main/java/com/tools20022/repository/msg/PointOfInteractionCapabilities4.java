@@ -20,6 +20,7 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CardDataReading2Code;
 import com.tools20022.repository.codeset.CardDataReading3Code;
 import com.tools20022.repository.codeset.CardholderVerificationCapability2Code;
@@ -27,6 +28,7 @@ import com.tools20022.repository.codeset.OnLineCapability1Code;
 import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.datatype.TrueFalseIndicator;
 import com.tools20022.repository.entity.PointOfInteraction;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -139,14 +141,14 @@ public class PointOfInteractionCapabilities4 {
 	 */
 	public static final MMMessageAttribute mmCardReadingCapabilities = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PointOfInteraction.mmCardReadingCapabilities;
+			businessElementTrace_lazy = () -> PointOfInteraction.mmCardReadingCapabilities;
 			componentContext_lazy = () -> PointOfInteractionCapabilities4.mmObject();
 			isDerived = false;
 			xmlTag = "CardRdngCpblties";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CardReadingCapabilities";
 			definition = "Card reading capabilities of the terminal performing the transaction. \r\nIt correspond to the ISO 8583 field number 22-2 for the version 93, and field number 27-1 for the version 2003.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PointOfInteractionCapabilities3.mmCardReadingCapabilities;
+			previousVersion_lazy = () -> PointOfInteractionCapabilities3.mmCardReadingCapabilities;
 			minOccurs = 1;
 			simpleType_lazy = () -> CardDataReading2Code.mmObject();
 		}
@@ -191,11 +193,11 @@ public class PointOfInteractionCapabilities4 {
 	 */
 	public static final MMMessageAttribute mmCardWrittingCapabilities = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PointOfInteraction.mmCardReadingCapabilities;
+			businessElementTrace_lazy = () -> PointOfInteraction.mmCardReadingCapabilities;
 			componentContext_lazy = () -> PointOfInteractionCapabilities4.mmObject();
 			isDerived = false;
 			xmlTag = "CardWrttgCpblties";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CardWrittingCapabilities";
 			definition = "Card writting capabilities of the terminal performing the transaction. \r\nIt correspond to the ISO 8583 field number 22-10 for the version 93, and field number 27-8_9 for the version 2003.";
 			minOccurs = 0;
@@ -247,14 +249,14 @@ public class PointOfInteractionCapabilities4 {
 	 */
 	public static final MMMessageAttribute mmCardholderVerificationCapabilities = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PointOfInteraction.mmCardholderVerificationCapabilities;
+			businessElementTrace_lazy = () -> PointOfInteraction.mmCardholderVerificationCapabilities;
 			componentContext_lazy = () -> PointOfInteractionCapabilities4.mmObject();
 			isDerived = false;
 			xmlTag = "CrdhldrVrfctnCpblties";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CardholderVerificationCapabilities";
 			definition = "Cardholder verification capabilities by the terminal. \r\nIt correspond to the ISO 8583 field number 22-2 for the versions 87 and 93, and field number 27-2 for the version 2003.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PointOfInteractionCapabilities3.mmCardholderVerificationCapabilities;
+			previousVersion_lazy = () -> PointOfInteractionCapabilities3.mmCardholderVerificationCapabilities;
 			minOccurs = 0;
 			simpleType_lazy = () -> CardholderVerificationCapability2Code.mmObject();
 		}
@@ -302,10 +304,10 @@ public class PointOfInteractionCapabilities4 {
 			componentContext_lazy = () -> PointOfInteractionCapabilities4.mmObject();
 			isDerived = false;
 			xmlTag = "PINLngthCpblties";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PINLengthCapabilities";
 			definition = "Maximum number of digits the POI is able to accept when the cardholder enters its PIN. \r\nIt correspond to the ISO 8583, field number 25 for the version 87, 22-12 for the version 93, and field number 27-11 for the version 2003.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PointOfInteractionCapabilities3.mmPINLengthCapabilities;
+			previousVersion_lazy = () -> PointOfInteractionCapabilities3.mmPINLengthCapabilities;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
@@ -352,10 +354,10 @@ public class PointOfInteractionCapabilities4 {
 			componentContext_lazy = () -> PointOfInteractionCapabilities4.mmObject();
 			isDerived = false;
 			xmlTag = "ApprvlCdLngth";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ApprovalCodeLength";
 			definition = "Maximum number of characters of the approval code the POI is able to manage.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PointOfInteractionCapabilities3.mmApprovalCodeLength;
+			previousVersion_lazy = () -> PointOfInteractionCapabilities3.mmApprovalCodeLength;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
@@ -397,7 +399,7 @@ public class PointOfInteractionCapabilities4 {
 			componentContext_lazy = () -> PointOfInteractionCapabilities4.mmObject();
 			isDerived = false;
 			xmlTag = "MxScrptLngth";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaxScriptLength";
 			definition = "Maximum data length in bytes that a card issuer can return to the ICC at the terminal.";
 			maxOccurs = 1;
@@ -444,10 +446,10 @@ public class PointOfInteractionCapabilities4 {
 			componentContext_lazy = () -> PointOfInteractionCapabilities4.mmObject();
 			isDerived = false;
 			xmlTag = "CardCaptrCpbl";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CardCaptureCapable";
 			definition = "True if the POI is able to capture card.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PointOfInteractionCapabilities3.mmCardCaptureCapable;
+			previousVersion_lazy = () -> PointOfInteractionCapabilities3.mmCardCaptureCapable;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
@@ -495,14 +497,14 @@ public class PointOfInteractionCapabilities4 {
 	 */
 	public static final MMMessageAttribute mmOnLineCapabilities = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PointOfInteraction.mmOnLineCapabilities;
+			businessElementTrace_lazy = () -> PointOfInteraction.mmOnLineCapabilities;
 			componentContext_lazy = () -> PointOfInteractionCapabilities4.mmObject();
 			isDerived = false;
 			xmlTag = "OnLineCpblties";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OnLineCapabilities";
 			definition = "On-line and off-line capabilities of the POI (Point Of Interaction).";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PointOfInteractionCapabilities3.mmOnLineCapabilities;
+			previousVersion_lazy = () -> PointOfInteractionCapabilities3.mmOnLineCapabilities;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> OnLineCapability1Code.mmObject();
@@ -545,7 +547,7 @@ public class PointOfInteractionCapabilities4 {
 			componentContext_lazy = () -> PointOfInteractionCapabilities4.mmObject();
 			isDerived = false;
 			xmlTag = "MsgCpblties";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageCapabilities";
 			definition = "Capabilities of the terminal to display or print message to the cardholder and the merchant. \r\nIt correspond to the ISO 8583 field number 22-11 for the version 93, and field number 27-6 for the version 2003.";
 			minOccurs = 0;
@@ -557,14 +559,12 @@ public class PointOfInteractionCapabilities4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PointOfInteractionCapabilities4.mmCardReadingCapabilities, com.tools20022.repository.msg.PointOfInteractionCapabilities4.mmCardWrittingCapabilities,
-						com.tools20022.repository.msg.PointOfInteractionCapabilities4.mmCardholderVerificationCapabilities, com.tools20022.repository.msg.PointOfInteractionCapabilities4.mmPINLengthCapabilities,
-						com.tools20022.repository.msg.PointOfInteractionCapabilities4.mmApprovalCodeLength, com.tools20022.repository.msg.PointOfInteractionCapabilities4.mmMaxScriptLength,
-						com.tools20022.repository.msg.PointOfInteractionCapabilities4.mmCardCaptureCapable, com.tools20022.repository.msg.PointOfInteractionCapabilities4.mmOnLineCapabilities,
-						com.tools20022.repository.msg.PointOfInteractionCapabilities4.mmMessageCapabilities);
+				messageElement_lazy = () -> Arrays.asList(PointOfInteractionCapabilities4.mmCardReadingCapabilities, PointOfInteractionCapabilities4.mmCardWrittingCapabilities,
+						PointOfInteractionCapabilities4.mmCardholderVerificationCapabilities, PointOfInteractionCapabilities4.mmPINLengthCapabilities, PointOfInteractionCapabilities4.mmApprovalCodeLength,
+						PointOfInteractionCapabilities4.mmMaxScriptLength, PointOfInteractionCapabilities4.mmCardCaptureCapable, PointOfInteractionCapabilities4.mmOnLineCapabilities, PointOfInteractionCapabilities4.mmMessageCapabilities);
 				trace_lazy = () -> PointOfInteraction.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PointOfInteractionCapabilities4";
 				definition = "Capabilities of the terminal performing the transaction.";
 				previousVersion_lazy = () -> PointOfInteractionCapabilities3.mmObject();

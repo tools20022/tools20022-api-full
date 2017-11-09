@@ -20,9 +20,11 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.Document;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -107,14 +109,14 @@ public class DocumentLineIdentification1 {
 	 */
 	public static final MMMessageAssociationEnd mmType = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Document.mmType;
+			businessElementTrace_lazy = () -> Document.mmType;
 			componentContext_lazy = () -> DocumentLineIdentification1.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Specifies the type of referred document line identification.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ReferredDocumentInformation3.mmType;
+			previousVersion_lazy = () -> ReferredDocumentInformation3.mmType;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -160,10 +162,10 @@ public class DocumentLineIdentification1 {
 			componentContext_lazy = () -> DocumentLineIdentification1.mmObject();
 			isDerived = false;
 			xmlTag = "Nb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Number";
 			definition = "Identification of the type specified for the referred document line. ";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ReferredDocumentInformation3.mmNumber;
+			previousVersion_lazy = () -> ReferredDocumentInformation3.mmNumber;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -209,14 +211,14 @@ public class DocumentLineIdentification1 {
 	 */
 	public static final MMMessageAttribute mmRelatedDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Document.mmIssueDate;
+			businessElementTrace_lazy = () -> Document.mmIssueDate;
 			componentContext_lazy = () -> DocumentLineIdentification1.mmObject();
 			isDerived = false;
 			xmlTag = "RltdDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedDate";
 			definition = "Date associated with the referred document line.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ReferredDocumentInformation3.mmRelatedDate;
+			previousVersion_lazy = () -> ReferredDocumentInformation3.mmRelatedDate;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
@@ -226,11 +228,10 @@ public class DocumentLineIdentification1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DocumentLineIdentification1.mmType, com.tools20022.repository.msg.DocumentLineIdentification1.mmNumber,
-						com.tools20022.repository.msg.DocumentLineIdentification1.mmRelatedDate);
+				messageElement_lazy = () -> Arrays.asList(DocumentLineIdentification1.mmType, DocumentLineIdentification1.mmNumber, DocumentLineIdentification1.mmRelatedDate);
 				trace_lazy = () -> Document.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DocumentLineIdentification1";
 				definition = "Identifies the documents referred to in the remittance information.";
 			}

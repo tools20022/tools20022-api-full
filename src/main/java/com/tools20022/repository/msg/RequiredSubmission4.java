@@ -20,11 +20,15 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.TradeCertificateType1Code;
 import com.tools20022.repository.datatype.Max70Text;
 import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.FinancialInstitution;
+import com.tools20022.repository.entity.LineItem;
+import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.entity.TradeCertificate;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -131,7 +135,7 @@ public class RequiredSubmission4 {
 			componentContext_lazy = () -> RequiredSubmission4.mmObject();
 			isDerived = false;
 			xmlTag = "Submitr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Submitter";
 			definition = "Specifies with party(ies) is authorised to submit the data set as part of the transaction.";
 			minOccurs = 1;
@@ -175,11 +179,11 @@ public class RequiredSubmission4 {
 	 */
 	public static final MMMessageAttribute mmCertificateType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradeCertificate.mmCertificateType;
+			businessElementTrace_lazy = () -> TradeCertificate.mmCertificateType;
 			componentContext_lazy = () -> RequiredSubmission4.mmObject();
 			isDerived = false;
 			xmlTag = "CertTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CertificateType";
 			definition = "Specifies the type of the certificate.";
 			maxOccurs = 1;
@@ -224,11 +228,11 @@ public class RequiredSubmission4 {
 	 */
 	public static final MMMessageAssociationEnd mmMatchIssuer = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> RequiredSubmission4.mmObject();
 			isDerived = false;
 			xmlTag = "MtchIssr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MatchIssuer";
 			definition = "Specifies if the issuer must be matched as part of the validation of the data set.";
 			maxOccurs = 1;
@@ -274,7 +278,7 @@ public class RequiredSubmission4 {
 			componentContext_lazy = () -> RequiredSubmission4.mmObject();
 			isDerived = false;
 			xmlTag = "MtchIsseDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MatchIssueDate";
 			definition = "Specifies if the issue date must be matched as part of the validation of the data set.";
 			maxOccurs = 1;
@@ -319,7 +323,7 @@ public class RequiredSubmission4 {
 			componentContext_lazy = () -> RequiredSubmission4.mmObject();
 			isDerived = false;
 			xmlTag = "MtchInspctnDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MatchInspectionDate";
 			definition = "Specifies if the inspection date must be matched as part of the validation of the data set.";
 			maxOccurs = 1;
@@ -364,7 +368,7 @@ public class RequiredSubmission4 {
 			componentContext_lazy = () -> RequiredSubmission4.mmObject();
 			isDerived = false;
 			xmlTag = "AuthrsdInspctrInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AuthorisedInspectorIndicator";
 			definition = "Specifies if the indication of an authorised inspector must be present as part of the validation of the data set.";
 			maxOccurs = 1;
@@ -409,7 +413,7 @@ public class RequiredSubmission4 {
 			componentContext_lazy = () -> RequiredSubmission4.mmObject();
 			isDerived = false;
 			xmlTag = "MtchConsgn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MatchConsignee";
 			definition = "Specifies if the consignee must be matched as part of the validation of the data set.";
 			maxOccurs = 1;
@@ -454,11 +458,11 @@ public class RequiredSubmission4 {
 	 */
 	public static final MMMessageAssociationEnd mmMatchManufacturer = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> RequiredSubmission4.mmObject();
 			isDerived = false;
 			xmlTag = "MtchManfctr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MatchManufacturer";
 			definition = "Specifies if the manufacturer must be matched as part of the validation of the data set.";
 			maxOccurs = 1;
@@ -505,11 +509,11 @@ public class RequiredSubmission4 {
 	 */
 	public static final MMMessageAttribute mmLineItemIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.LineItem.mmIdentification;
+			businessElementTrace_lazy = () -> LineItem.mmIdentification;
 			componentContext_lazy = () -> RequiredSubmission4.mmObject();
 			isDerived = false;
 			xmlTag = "LineItmId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LineItemIdentification";
 			definition = "Specifies if the certificate data set is required in relation to specific line items, and which line items.";
 			minOccurs = 0;
@@ -520,13 +524,12 @@ public class RequiredSubmission4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RequiredSubmission4.mmSubmitter, com.tools20022.repository.msg.RequiredSubmission4.mmCertificateType,
-						com.tools20022.repository.msg.RequiredSubmission4.mmMatchIssuer, com.tools20022.repository.msg.RequiredSubmission4.mmMatchIssueDate, com.tools20022.repository.msg.RequiredSubmission4.mmMatchInspectionDate,
-						com.tools20022.repository.msg.RequiredSubmission4.mmAuthorisedInspectorIndicator, com.tools20022.repository.msg.RequiredSubmission4.mmMatchConsignee,
-						com.tools20022.repository.msg.RequiredSubmission4.mmMatchManufacturer, com.tools20022.repository.msg.RequiredSubmission4.mmLineItemIdentification);
+				messageElement_lazy = () -> Arrays.asList(RequiredSubmission4.mmSubmitter, RequiredSubmission4.mmCertificateType, RequiredSubmission4.mmMatchIssuer, RequiredSubmission4.mmMatchIssueDate,
+						RequiredSubmission4.mmMatchInspectionDate, RequiredSubmission4.mmAuthorisedInspectorIndicator, RequiredSubmission4.mmMatchConsignee, RequiredSubmission4.mmMatchManufacturer,
+						RequiredSubmission4.mmLineItemIdentification);
 				trace_lazy = () -> TradeCertificate.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RequiredSubmission4";
 				definition = "Specifies the details relative to the submission of the certificate data set.";
 			}

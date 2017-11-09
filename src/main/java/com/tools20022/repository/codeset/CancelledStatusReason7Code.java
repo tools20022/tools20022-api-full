@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CancelledStatusReasonV2Code;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -86,7 +88,7 @@ public class CancelledStatusReason7Code extends CancelledStatusReasonV2Code {
 	 */
 	public static final MMCode mmCancelledByYourself = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancelledByYourself";
 			owner_lazy = () -> CancelledStatusReason7Code.mmObject();
 		}
@@ -109,7 +111,7 @@ public class CancelledStatusReason7Code extends CancelledStatusReasonV2Code {
 	 */
 	public static final MMCode mmCancelledBySystem = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancelledBySystem";
 			owner_lazy = () -> CancelledStatusReason7Code.mmObject();
 		}
@@ -118,12 +120,12 @@ public class CancelledStatusReason7Code extends CancelledStatusReasonV2Code {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CANI");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CancelledStatusReason7Code";
 				definition = "Specifies the underlying reason for the cancellation of the associated transaction.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CancelledStatusReason7Code.mmCancelledByYourself, com.tools20022.repository.codeset.CancelledStatusReason7Code.mmCancelledBySystem);
+				code_lazy = () -> Arrays.asList(CancelledStatusReason7Code.mmCancelledByYourself, CancelledStatusReason7Code.mmCancelledBySystem);
 				trace_lazy = () -> CancelledStatusReasonV2Code.mmObject();
 			}
 		});

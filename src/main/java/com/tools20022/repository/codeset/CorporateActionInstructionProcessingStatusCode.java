@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionInstructionProcessingStatus1Code
+ * CorporateActionInstructionProcessingStatus1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -47,14 +57,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.CorporateActionInstructionProcessingStatusCode#mmStandingInstruction
  * CorporateActionInstructionProcessingStatusCode.mmStandingInstruction}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionInstructionProcessingStatus1Code
- * CorporateActionInstructionProcessingStatus1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -104,7 +106,7 @@ public class CorporateActionInstructionProcessingStatusCode {
 	 */
 	public static final MMCode mmCancelled = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Cancelled";
 			definition = "Instruction has been cancelled.";
 			owner_lazy = () -> CorporateActionInstructionProcessingStatusCode.mmObject();
@@ -134,7 +136,7 @@ public class CorporateActionInstructionProcessingStatusCode {
 	 */
 	public static final MMCode mmDefaultAction = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DefaultAction";
 			definition = "Default action is taken.";
 			owner_lazy = () -> CorporateActionInstructionProcessingStatusCode.mmObject();
@@ -168,7 +170,7 @@ public class CorporateActionInstructionProcessingStatusCode {
 	 */
 	public static final MMCode mmAccepted = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Accepted";
 			definition = "Instruction has been acknowledged/accepted for further processing. In other words, this means that the instruction has been received, is processable and has been validated for further processing.";
 			owner_lazy = () -> CorporateActionInstructionProcessingStatusCode.mmObject();
@@ -198,7 +200,7 @@ public class CorporateActionInstructionProcessingStatusCode {
 	 */
 	public static final MMCode mmPending = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Pending";
 			definition = "Instruction's processing is pending.";
 			owner_lazy = () -> CorporateActionInstructionProcessingStatusCode.mmObject();
@@ -231,7 +233,7 @@ public class CorporateActionInstructionProcessingStatusCode {
 	 */
 	public static final MMCode mmRejected = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Rejected";
 			definition = "Instruction has been rejected for further processing due to system reasons.";
 			owner_lazy = () -> CorporateActionInstructionProcessingStatusCode.mmObject();
@@ -261,7 +263,7 @@ public class CorporateActionInstructionProcessingStatusCode {
 	 */
 	public static final MMCode mmStandingInstruction = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "StandingInstruction";
 			definition = "Standing instruction is applied.";
 			owner_lazy = () -> CorporateActionInstructionProcessingStatusCode.mmObject();
@@ -272,14 +274,13 @@ public class CorporateActionInstructionProcessingStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CAND");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionInstructionProcessingStatusCode";
 				definition = "Specifies the status of a corporate action instruction.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CorporateActionInstructionProcessingStatusCode.mmCancelled, com.tools20022.repository.codeset.CorporateActionInstructionProcessingStatusCode.mmDefaultAction,
-						com.tools20022.repository.codeset.CorporateActionInstructionProcessingStatusCode.mmAccepted, com.tools20022.repository.codeset.CorporateActionInstructionProcessingStatusCode.mmPending,
-						com.tools20022.repository.codeset.CorporateActionInstructionProcessingStatusCode.mmRejected, com.tools20022.repository.codeset.CorporateActionInstructionProcessingStatusCode.mmStandingInstruction);
+				code_lazy = () -> Arrays.asList(CorporateActionInstructionProcessingStatusCode.mmCancelled, CorporateActionInstructionProcessingStatusCode.mmDefaultAction, CorporateActionInstructionProcessingStatusCode.mmAccepted,
+						CorporateActionInstructionProcessingStatusCode.mmPending, CorporateActionInstructionProcessingStatusCode.mmRejected, CorporateActionInstructionProcessingStatusCode.mmStandingInstruction);
 				derivation_lazy = () -> Arrays.asList(CorporateActionInstructionProcessingStatus1Code.mmObject());
 			}
 		});

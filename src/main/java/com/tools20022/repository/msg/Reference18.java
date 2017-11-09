@@ -19,7 +19,9 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -94,7 +96,7 @@ public class Reference18 {
 			componentContext_lazy = () -> Reference18.mmObject();
 			isDerived = false;
 			xmlTag = "TradLegId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeLegIdentification";
 			definition = "Allocated by the central counterparty - central counterparty trade leg reference identification that uniquely identifies the trade.";
 			maxOccurs = 1;
@@ -137,7 +139,7 @@ public class Reference18 {
 			componentContext_lazy = () -> Reference18.mmObject();
 			isDerived = false;
 			xmlTag = "PrvsMsgId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousMessageIdentification";
 			definition = "Identification of the message previously sent by the central counterparty.";
 			maxOccurs = 1;
@@ -149,9 +151,9 @@ public class Reference18 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Reference18.mmTradeLegIdentification, com.tools20022.repository.msg.Reference18.mmPreviousMessageIdentification);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(Reference18.mmTradeLegIdentification, Reference18.mmPreviousMessageIdentification);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Reference18";
 				definition = "References linked to the trade leg notification cancellation message.";
 			}

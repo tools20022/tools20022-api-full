@@ -19,8 +19,10 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.Reversible1Code;
 import com.tools20022.repository.entity.SecuritiesLending;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification38;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -102,11 +104,11 @@ public class Reversible1Choice {
 	 */
 	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesLending.mmReversible;
+			businessElementTrace_lazy = () -> SecuritiesLending.mmReversible;
 			componentContext_lazy = () -> Reversible1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Cd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Closing of the securities lending contract is identified using a code.";
 			maxOccurs = 1;
@@ -153,11 +155,11 @@ public class Reversible1Choice {
 	 */
 	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesLending.mmReversible;
+			businessElementTrace_lazy = () -> SecuritiesLending.mmReversible;
 			componentContext_lazy = () -> Reversible1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Closing of the securities lending contract expressed as a proprietary code.";
 			maxOccurs = 1;
@@ -169,10 +171,10 @@ public class Reversible1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Reversible1Choice.mmCode, com.tools20022.repository.choice.Reversible1Choice.mmProprietary);
+				messageElement_lazy = () -> Arrays.asList(Reversible1Choice.mmCode, Reversible1Choice.mmProprietary);
 				trace_lazy = () -> SecuritiesLending.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Reversible1Choice";
 				definition = "Choice between a code or a data source scheme to determine the closing of the securities lending contract.";
 			}

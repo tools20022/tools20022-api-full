@@ -19,11 +19,13 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ActiveCurrencyCode;
 import com.tools20022.repository.codeset.CountryCode;
 import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.datatype.Max35Text;
-import com.tools20022.repository.entity.SecuritiesIdentification;
+import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -124,7 +126,7 @@ public class SecurityIdentification1 {
 			componentContext_lazy = () -> SecurityIdentification1.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Identification of a security by an ISIN.";
 			maxOccurs = 1;
@@ -167,11 +169,11 @@ public class SecurityIdentification1 {
 	 */
 	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.LocalName.mmFullName;
+			businessElementTrace_lazy = () -> LocalName.mmFullName;
 			componentContext_lazy = () -> SecurityIdentification1.mmObject();
 			isDerived = false;
 			xmlTag = "Nm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Name";
 			definition = "Name of the financial instrument in free format text.";
 			maxOccurs = 1;
@@ -220,11 +222,11 @@ public class SecurityIdentification1 {
 	 */
 	public static final MMMessageAttribute mmClassType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmClassType;
+			businessElementTrace_lazy = () -> InvestmentFundClass.mmClassType;
 			componentContext_lazy = () -> SecurityIdentification1.mmObject();
 			isDerived = false;
 			xmlTag = "ClssTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClassType";
 			definition = "Features of units offered by a fund. For example, a unit may have a specific load structure, eg, front end or back end, an income policy, eg, pay out or accumulate, or a trailer policy, eg, with or without. Fund classes are typically denoted by a single character, eg, 'Class A', 'Class 2'.";
 			maxOccurs = 1;
@@ -268,11 +270,11 @@ public class SecurityIdentification1 {
 	 */
 	public static final MMMessageAttribute mmUmbrellaName = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.UmbrellaFund.mmName;
+			businessElementTrace_lazy = () -> UmbrellaFund.mmName;
 			componentContext_lazy = () -> SecurityIdentification1.mmObject();
 			isDerived = false;
 			xmlTag = "UmbrllNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UmbrellaName";
 			definition = "Name of the umbrella fund in which financial instrument is contained.";
 			maxOccurs = 1;
@@ -316,11 +318,11 @@ public class SecurityIdentification1 {
 	 */
 	public static final MMMessageAttribute mmBaseCurrency = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmTradingCurrency;
+			businessElementTrace_lazy = () -> InvestmentFundClass.mmTradingCurrency;
 			componentContext_lazy = () -> SecurityIdentification1.mmObject();
 			isDerived = false;
 			xmlTag = "BaseCcy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BaseCurrency";
 			definition = "Currency of the investment fund class.";
 			maxOccurs = 1;
@@ -366,11 +368,11 @@ public class SecurityIdentification1 {
 	 */
 	public static final MMMessageAttribute mmCountryOfDomicile = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFund.mmDomicileCountry;
+			businessElementTrace_lazy = () -> InvestmentFund.mmDomicileCountry;
 			componentContext_lazy = () -> SecurityIdentification1.mmObject();
 			isDerived = false;
 			xmlTag = "CtryOfDmcl";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CountryOfDomicile";
 			definition = "Country where the fund has legal domicile as reflected in the ISIN classification.";
 			maxOccurs = 1;
@@ -413,11 +415,11 @@ public class SecurityIdentification1 {
 	 */
 	public static final MMMessageAttribute mmRegisteredDistributionCountry = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmRegisteredDistributionCountry;
+			businessElementTrace_lazy = () -> Security.mmRegisteredDistributionCountry;
 			componentContext_lazy = () -> SecurityIdentification1.mmObject();
 			isDerived = false;
 			xmlTag = "RegdDstrbtnCtry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RegisteredDistributionCountry";
 			definition = "Countries where the fund is registered for distribution.";
 			minOccurs = 1;
@@ -428,12 +430,11 @@ public class SecurityIdentification1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecurityIdentification1.mmIdentification, com.tools20022.repository.msg.SecurityIdentification1.mmName,
-						com.tools20022.repository.msg.SecurityIdentification1.mmClassType, com.tools20022.repository.msg.SecurityIdentification1.mmUmbrellaName, com.tools20022.repository.msg.SecurityIdentification1.mmBaseCurrency,
-						com.tools20022.repository.msg.SecurityIdentification1.mmCountryOfDomicile, com.tools20022.repository.msg.SecurityIdentification1.mmRegisteredDistributionCountry);
+				messageElement_lazy = () -> Arrays.asList(SecurityIdentification1.mmIdentification, SecurityIdentification1.mmName, SecurityIdentification1.mmClassType, SecurityIdentification1.mmUmbrellaName,
+						SecurityIdentification1.mmBaseCurrency, SecurityIdentification1.mmCountryOfDomicile, SecurityIdentification1.mmRegisteredDistributionCountry);
 				trace_lazy = () -> SecuritiesIdentification.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecurityIdentification1";
 				definition = "Security that is a sub-set of an investment fund, and is governed by the same investment fund policy, eg, dividend option or valuation currency.";
 			}

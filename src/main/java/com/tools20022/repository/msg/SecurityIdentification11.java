@@ -20,9 +20,15 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.seev.*;
+import com.tools20022.repository.area.semt.IntraPositionMovementConfirmationV01;
+import com.tools20022.repository.area.semt.IntraPositionMovementInstructionV01;
+import com.tools20022.repository.area.sese.*;
 import com.tools20022.repository.choice.SecurityIdentification11Choice;
 import com.tools20022.repository.datatype.Max140Text;
 import com.tools20022.repository.entity.SecuritiesIdentification;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -170,7 +176,7 @@ public class SecurityIdentification11 {
 			componentContext_lazy = () -> SecurityIdentification11.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Identification of a security.";
 			maxOccurs = 1;
@@ -218,7 +224,7 @@ public class SecurityIdentification11 {
 			componentContext_lazy = () -> SecurityIdentification11.mmObject();
 			isDerived = false;
 			xmlTag = "Desc";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Description";
 			definition = "Textual description of a security instrument.";
 			maxOccurs = 1;
@@ -230,22 +236,18 @@ public class SecurityIdentification11 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecurityIdentification11.mmIdentification, com.tools20022.repository.msg.SecurityIdentification11.mmDescription);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.IntraPositionMovementConfirmationV01.mmFinancialInstrumentIdentification,
-						com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV01.mmFinancialInstrumentIdentification, com.tools20022.repository.area.sese.SecuritiesFinancingInstructionV01.mmFinancialInstrumentIdentification,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionConfirmationV01.mmFinancialInstrumentIdentification,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV01.mmFinancialInstrumentIdentification,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionInstructionV01.mmFinancialInstrumentIdentification, com.tools20022.repository.area.seev.MeetingInstructionV03.mmSecurityIdentification,
-						com.tools20022.repository.area.seev.MeetingInstructionV04.mmSecurityIdentification, com.tools20022.repository.area.seev.MeetingInstructionCancellationRequestV03.mmSecurityIdentification,
-						com.tools20022.repository.area.seev.MeetingInstructionCancellationRequestV04.mmSecurityIdentification, com.tools20022.repository.area.seev.MeetingInstructionStatusV03.mmSecurityIdentification,
-						com.tools20022.repository.area.seev.MeetingInstructionStatusV04.mmSecurityIdentification, com.tools20022.repository.area.seev.MeetingVoteExecutionConfirmationV03.mmSecurityIdentification,
-						com.tools20022.repository.area.seev.MeetingVoteExecutionConfirmationV04.mmSecurityIdentification, com.tools20022.repository.area.semt.IntraPositionMovementInstructionV01.mmFinancialInstrumentIdentification,
-						com.tools20022.repository.area.sese.SecuritiesFinancingModificationInstructionV01.mmFinancialInstrumentIdentification,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotificationV01.mmFinancialInstrumentIdentification,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdviceV01.mmFinancialInstrumentIdentification);
+				messageElement_lazy = () -> Arrays.asList(SecurityIdentification11.mmIdentification, SecurityIdentification11.mmDescription);
+				messageBuildingBlock_lazy = () -> Arrays.asList(IntraPositionMovementConfirmationV01.mmFinancialInstrumentIdentification, SecuritiesFinancingConfirmationV01.mmFinancialInstrumentIdentification,
+						SecuritiesFinancingInstructionV01.mmFinancialInstrumentIdentification, SecuritiesSettlementTransactionConfirmationV01.mmFinancialInstrumentIdentification,
+						SecuritiesSettlementTransactionGenerationNotificationV01.mmFinancialInstrumentIdentification, SecuritiesSettlementTransactionInstructionV01.mmFinancialInstrumentIdentification,
+						MeetingInstructionV03.mmSecurityIdentification, MeetingInstructionV04.mmSecurityIdentification, MeetingInstructionCancellationRequestV03.mmSecurityIdentification,
+						MeetingInstructionCancellationRequestV04.mmSecurityIdentification, MeetingInstructionStatusV03.mmSecurityIdentification, MeetingInstructionStatusV04.mmSecurityIdentification,
+						MeetingVoteExecutionConfirmationV03.mmSecurityIdentification, MeetingVoteExecutionConfirmationV04.mmSecurityIdentification, IntraPositionMovementInstructionV01.mmFinancialInstrumentIdentification,
+						SecuritiesFinancingModificationInstructionV01.mmFinancialInstrumentIdentification, SecuritiesSettlementTransactionAllegementNotificationV01.mmFinancialInstrumentIdentification,
+						SecuritiesSettlementTransactionReversalAdviceV01.mmFinancialInstrumentIdentification);
 				trace_lazy = () -> SecuritiesIdentification.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecurityIdentification11";
 				definition = "Identification of a security.";
 			}

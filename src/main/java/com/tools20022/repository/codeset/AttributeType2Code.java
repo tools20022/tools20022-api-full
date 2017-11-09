@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.AttributeTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -77,7 +79,7 @@ public class AttributeType2Code extends AttributeTypeCode {
 	 */
 	public static final MMCode mmEmailAddress = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EmailAddress";
 			owner_lazy = () -> AttributeType2Code.mmObject();
 		}
@@ -100,7 +102,7 @@ public class AttributeType2Code extends AttributeTypeCode {
 	 */
 	public static final MMCode mmChallengePassword = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChallengePassword";
 			owner_lazy = () -> AttributeType2Code.mmObject();
 		}
@@ -109,11 +111,11 @@ public class AttributeType2Code extends AttributeTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AttributeType2Code";
 				definition = "Attributes of certificate extensions.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AttributeType2Code.mmEmailAddress, com.tools20022.repository.codeset.AttributeType2Code.mmChallengePassword);
+				code_lazy = () -> Arrays.asList(AttributeType2Code.mmEmailAddress, AttributeType2Code.mmChallengePassword);
 				trace_lazy = () -> AttributeTypeCode.mmObject();
 			}
 		});

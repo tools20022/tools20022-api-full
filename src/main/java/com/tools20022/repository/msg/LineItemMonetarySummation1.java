@@ -19,8 +19,13 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.CurrencyAndAmount;
+import com.tools20022.repository.entity.Adjustment;
+import com.tools20022.repository.entity.Allowance;
 import com.tools20022.repository.entity.LineItem;
+import com.tools20022.repository.entity.Tax;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -114,7 +119,7 @@ public class LineItemMonetarySummation1 {
 			componentContext_lazy = () -> LineItemMonetarySummation1.mmObject();
 			isDerived = false;
 			xmlTag = "LineTtlAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LineTotalAmount";
 			definition = "Monetary value of the line amount total being reported in this trade settlement monetary summation.";
 			minOccurs = 0;
@@ -160,11 +165,11 @@ public class LineItemMonetarySummation1 {
 	 */
 	public static final MMMessageAttribute mmAllowanceTotalAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Allowance.mmTotalAllowance;
+			businessElementTrace_lazy = () -> Allowance.mmTotalAllowance;
 			componentContext_lazy = () -> LineItemMonetarySummation1.mmObject();
 			isDerived = false;
 			xmlTag = "AllwncTtlAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AllowanceTotalAmount";
 			definition = "Monetary value of the total of all allowance amounts being reported in this line item monetary summation.";
 			minOccurs = 0;
@@ -210,11 +215,11 @@ public class LineItemMonetarySummation1 {
 	 */
 	public static final MMMessageAttribute mmChargeTotalAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Adjustment.mmAmount;
+			businessElementTrace_lazy = () -> Adjustment.mmAmount;
 			componentContext_lazy = () -> LineItemMonetarySummation1.mmObject();
 			isDerived = false;
 			xmlTag = "ChrgTtlAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChargeTotalAmount";
 			definition = "Monetary value of the total of all charge amounts being reported in this line item monetary summation.";
 			minOccurs = 0;
@@ -259,11 +264,11 @@ public class LineItemMonetarySummation1 {
 	 */
 	public static final MMMessageAttribute mmTaxTotalAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.mmAmount;
+			businessElementTrace_lazy = () -> Tax.mmAmount;
 			componentContext_lazy = () -> LineItemMonetarySummation1.mmObject();
 			isDerived = false;
 			xmlTag = "TaxTtlAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxTotalAmount";
 			definition = "Monetary value of the total of all tax amounts being reported in this line item monetary summation.";
 			minOccurs = 0;
@@ -309,11 +314,11 @@ public class LineItemMonetarySummation1 {
 	 */
 	public static final MMMessageAttribute mmTaxBasisTotalAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.mmTaxableBaseAmount;
+			businessElementTrace_lazy = () -> Tax.mmTaxableBaseAmount;
 			componentContext_lazy = () -> LineItemMonetarySummation1.mmObject();
 			isDerived = false;
 			xmlTag = "TaxBsisTtlAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxBasisTotalAmount";
 			definition = "Monetary value of the total of all tax basis amounts being reported in this line item monetary summation.";
 			minOccurs = 0;
@@ -357,7 +362,7 @@ public class LineItemMonetarySummation1 {
 			componentContext_lazy = () -> LineItemMonetarySummation1.mmObject();
 			isDerived = false;
 			xmlTag = "InfAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InformationAmount";
 			definition = "Monetary value of an amount being reported for information in this line item monetary summation.";
 			minOccurs = 0;
@@ -368,12 +373,11 @@ public class LineItemMonetarySummation1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LineItemMonetarySummation1.mmLineTotalAmount, com.tools20022.repository.msg.LineItemMonetarySummation1.mmAllowanceTotalAmount,
-						com.tools20022.repository.msg.LineItemMonetarySummation1.mmChargeTotalAmount, com.tools20022.repository.msg.LineItemMonetarySummation1.mmTaxTotalAmount,
-						com.tools20022.repository.msg.LineItemMonetarySummation1.mmTaxBasisTotalAmount, com.tools20022.repository.msg.LineItemMonetarySummation1.mmInformationAmount);
+				messageElement_lazy = () -> Arrays.asList(LineItemMonetarySummation1.mmLineTotalAmount, LineItemMonetarySummation1.mmAllowanceTotalAmount, LineItemMonetarySummation1.mmChargeTotalAmount,
+						LineItemMonetarySummation1.mmTaxTotalAmount, LineItemMonetarySummation1.mmTaxBasisTotalAmount, LineItemMonetarySummation1.mmInformationAmount);
 				trace_lazy = () -> LineItem.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "LineItemMonetarySummation1";
 				definition = "Trade settlement monetary summation specified for this supply chain trade settlement.";
 			}

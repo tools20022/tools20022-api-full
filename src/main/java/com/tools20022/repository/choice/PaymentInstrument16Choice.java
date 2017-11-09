@@ -19,8 +19,11 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.entity.CashEntry;
 import com.tools20022.repository.entity.ChequeIssue;
 import com.tools20022.repository.entity.Payment;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.CashAccount26;
 import com.tools20022.repository.msg.Cheque4;
 import java.util.Arrays;
@@ -115,11 +118,11 @@ public class PaymentInstrument16Choice {
 	 */
 	public static final MMMessageAssociationEnd mmCashAccountDetails = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashEntry.mmCashAccount;
+			businessElementTrace_lazy = () -> CashEntry.mmCashAccount;
 			componentContext_lazy = () -> PaymentInstrument16Choice.mmObject();
 			isDerived = false;
 			xmlTag = "CshAcctDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashAccountDetails";
 			definition = "Cash account to credit for the payment of the dividends or of the redeemed investments funds or of interest.";
 			maxOccurs = 3;
@@ -172,10 +175,10 @@ public class PaymentInstrument16Choice {
 			componentContext_lazy = () -> PaymentInstrument16Choice.mmObject();
 			isDerived = false;
 			xmlTag = "ChqDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChequeDetails";
 			definition = "Settlement instructions for a payment by cheque.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PaymentInstrument19Choice.mmChequeDetails);
+			nextVersions_lazy = () -> Arrays.asList(PaymentInstrument19Choice.mmChequeDetails);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -226,10 +229,10 @@ public class PaymentInstrument16Choice {
 			componentContext_lazy = () -> PaymentInstrument16Choice.mmObject();
 			isDerived = false;
 			xmlTag = "BkrsDrftDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BankersDraftDetails";
 			definition = "Settlement instructions for a payment by draft.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PaymentInstrument19Choice.mmBankersDraftDetails);
+			nextVersions_lazy = () -> Arrays.asList(PaymentInstrument19Choice.mmBankersDraftDetails);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -240,11 +243,10 @@ public class PaymentInstrument16Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PaymentInstrument16Choice.mmCashAccountDetails, com.tools20022.repository.choice.PaymentInstrument16Choice.mmChequeDetails,
-						com.tools20022.repository.choice.PaymentInstrument16Choice.mmBankersDraftDetails);
+				messageElement_lazy = () -> Arrays.asList(PaymentInstrument16Choice.mmCashAccountDetails, PaymentInstrument16Choice.mmChequeDetails, PaymentInstrument16Choice.mmBankersDraftDetails);
 				trace_lazy = () -> Payment.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PaymentInstrument16Choice";
 				definition = "Choice of payment instruments.";
 				nextVersions_lazy = () -> Arrays.asList(PaymentInstrument19Choice.mmObject());

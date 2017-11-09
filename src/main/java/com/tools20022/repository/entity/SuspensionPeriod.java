@@ -17,8 +17,12 @@
 
 package com.tools20022.repository.entity;
 
+import com.tools20022.metamodel.MMAggregation;
 import com.tools20022.metamodel.MMBusinessAssociationEnd;
 import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -33,47 +37,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SuspensionPeriod#mmPrivilegeSuspensionPeriod
- * SuspensionPeriod.mmPrivilegeSuspensionPeriod}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SuspensionPeriod#mmDepositorySuspensionPeriodForWithdrawal
- * SuspensionPeriod.mmDepositorySuspensionPeriodForWithdrawal}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SuspensionPeriod#mmDepositorySuspensionPeriodForBookEntryTransfer
- * SuspensionPeriod.mmDepositorySuspensionPeriodForBookEntryTransfer}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SuspensionPeriod#mmDepositorySuspensionPeriodForDepositAtAgent
- * SuspensionPeriod.mmDepositorySuspensionPeriodForDepositAtAgent}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SuspensionPeriod#mmDepositorySuspensionPeriodForDeposit
- * SuspensionPeriod.mmDepositorySuspensionPeriodForDeposit}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SuspensionPeriod#mmDepositorySuspensionPeriodForPledge
- * SuspensionPeriod.mmDepositorySuspensionPeriodForPledge}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SuspensionPeriod#mmDepositorySuspensionPeriodForSegregation
- * SuspensionPeriod.mmDepositorySuspensionPeriodForSegregation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SuspensionPeriod#mmDepositorySuspensionPeriodForWithdrawalAtAgent
- * SuspensionPeriod.mmDepositorySuspensionPeriodForWithdrawalAtAgent}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SuspensionPeriod#mmDepositorySuspensionPeriodForWithdrawalInNomineeName
- * SuspensionPeriod.mmDepositorySuspensionPeriodForWithdrawalInNomineeName}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SuspensionPeriod#mmDepositorySuspensionPeriodForWithdrawalInStreetName
- * SuspensionPeriod.mmDepositorySuspensionPeriodForWithdrawalInStreetName}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SuspensionPeriod#mmCoDepositoriesSuspensionPeriod
- * SuspensionPeriod.mmCoDepositoriesSuspensionPeriod}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SuspensionPeriod#mmCorporateActionEvent
- * SuspensionPeriod.mmCorporateActionEvent}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
  * associationDomain} =
@@ -114,6 +77,47 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmSuspensionPeriod
  * CorporateActionEvent.mmSuspensionPeriod}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SuspensionPeriod#mmPrivilegeSuspensionPeriod
+ * SuspensionPeriod.mmPrivilegeSuspensionPeriod}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SuspensionPeriod#mmDepositorySuspensionPeriodForWithdrawal
+ * SuspensionPeriod.mmDepositorySuspensionPeriodForWithdrawal}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SuspensionPeriod#mmDepositorySuspensionPeriodForBookEntryTransfer
+ * SuspensionPeriod.mmDepositorySuspensionPeriodForBookEntryTransfer}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SuspensionPeriod#mmDepositorySuspensionPeriodForDepositAtAgent
+ * SuspensionPeriod.mmDepositorySuspensionPeriodForDepositAtAgent}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SuspensionPeriod#mmDepositorySuspensionPeriodForDeposit
+ * SuspensionPeriod.mmDepositorySuspensionPeriodForDeposit}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SuspensionPeriod#mmDepositorySuspensionPeriodForPledge
+ * SuspensionPeriod.mmDepositorySuspensionPeriodForPledge}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SuspensionPeriod#mmDepositorySuspensionPeriodForSegregation
+ * SuspensionPeriod.mmDepositorySuspensionPeriodForSegregation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SuspensionPeriod#mmDepositorySuspensionPeriodForWithdrawalAtAgent
+ * SuspensionPeriod.mmDepositorySuspensionPeriodForWithdrawalAtAgent}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SuspensionPeriod#mmDepositorySuspensionPeriodForWithdrawalInNomineeName
+ * SuspensionPeriod.mmDepositorySuspensionPeriodForWithdrawalInNomineeName}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SuspensionPeriod#mmDepositorySuspensionPeriodForWithdrawalInStreetName
+ * SuspensionPeriod.mmDepositorySuspensionPeriodForWithdrawalInStreetName}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SuspensionPeriod#mmCoDepositoriesSuspensionPeriod
+ * SuspensionPeriod.mmCoDepositoriesSuspensionPeriod}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SuspensionPeriod#mmCorporateActionEvent
+ * SuspensionPeriod.mmCorporateActionEvent}</li>
  * </ul>
  * </li>
  * <li>
@@ -189,17 +193,16 @@ public class SuspensionPeriod {
 	 */
 	public static final MMBusinessAssociationEnd mmPrivilegeSuspensionPeriod = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionPeriod5.mmPrivilegeSuspensionPeriod, com.tools20022.repository.msg.CorporateActionPeriod7.mmPrivilegeSuspensionPeriod,
-					com.tools20022.repository.msg.CorporateActionPeriod2.mmPrivilegeSuspensionPeriod);
+			derivation_lazy = () -> Arrays.asList(CorporateActionPeriod5.mmPrivilegeSuspensionPeriod, CorporateActionPeriod7.mmPrivilegeSuspensionPeriod, CorporateActionPeriod2.mmPrivilegeSuspensionPeriod);
 			elementContext_lazy = () -> SuspensionPeriod.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PrivilegeSuspensionPeriod";
 			definition = "Period during which the privilege is not available, eg, this can happen whenever a meeting takes place or whenever a coupon payment is due.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmPrivilegeSuspensionCorporateAction;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmObject();
 		}
 	};
@@ -255,17 +258,16 @@ public class SuspensionPeriod {
 	 */
 	public static final MMBusinessAssociationEnd mmDepositorySuspensionPeriodForWithdrawal = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionPeriod5.mmDepositorySuspensionPeriodForWithdrawal,
-					com.tools20022.repository.msg.CorporateActionPeriod7.mmDepositorySuspensionPeriodForWithdrawal);
+			derivation_lazy = () -> Arrays.asList(CorporateActionPeriod5.mmDepositorySuspensionPeriodForWithdrawal, CorporateActionPeriod7.mmDepositorySuspensionPeriodForWithdrawal);
 			elementContext_lazy = () -> SuspensionPeriod.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DepositorySuspensionPeriodForWithdrawal";
 			definition = "Period defining the last date on which withdrawal in street name requests on the outturn security will be accepted and the date on which the suspension will be released and withdrawal by transfer processing on the outturn security will resume.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmWithdrawalSuspensionRelatedEvent;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmObject();
 		}
 	};
@@ -327,18 +329,17 @@ public class SuspensionPeriod {
 	 */
 	public static final MMBusinessAssociationEnd mmDepositorySuspensionPeriodForBookEntryTransfer = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionPeriod3.mmDepositorySuspensionPeriodForBookEntryTransfer,
-					com.tools20022.repository.msg.CorporateActionPeriod6.mmDepositorySuspensionPeriodForBookEntryTransfer, com.tools20022.repository.msg.CorporateActionPeriod8.mmDepositorySuspensionPeriodForBookEntryTransfer,
-					com.tools20022.repository.msg.CorporateActionPeriod10.mmDepositorySuspensionPeriodForBookEntryTransfer);
+			derivation_lazy = () -> Arrays.asList(CorporateActionPeriod3.mmDepositorySuspensionPeriodForBookEntryTransfer, CorporateActionPeriod6.mmDepositorySuspensionPeriodForBookEntryTransfer,
+					CorporateActionPeriod8.mmDepositorySuspensionPeriodForBookEntryTransfer, CorporateActionPeriod10.mmDepositorySuspensionPeriodForBookEntryTransfer);
 			elementContext_lazy = () -> SuspensionPeriod.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DepositorySuspensionPeriodForBookEntryTransfer";
 			definition = "Period defining the last date for which book entry transfers will be accepted and the date on which the suspension will be released and book entry transfer processing will resume.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmBookEntryTransferSuspensionRelatedEvent;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmObject();
 		}
 	};
@@ -399,18 +400,17 @@ public class SuspensionPeriod {
 	 */
 	public static final MMBusinessAssociationEnd mmDepositorySuspensionPeriodForDepositAtAgent = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionPeriod3.mmDepositorySuspensionPeriodForDepositAtAgent,
-					com.tools20022.repository.msg.CorporateActionPeriod6.mmDepositorySuspensionPeriodForDepositAtAgent, com.tools20022.repository.msg.CorporateActionPeriod8.mmDepositorySuspensionPeriodForDepositAtAgent,
-					com.tools20022.repository.msg.CorporateActionPeriod10.mmDepositorySuspensionPeriodForDepositAtAgent);
+			derivation_lazy = () -> Arrays.asList(CorporateActionPeriod3.mmDepositorySuspensionPeriodForDepositAtAgent, CorporateActionPeriod6.mmDepositorySuspensionPeriodForDepositAtAgent,
+					CorporateActionPeriod8.mmDepositorySuspensionPeriodForDepositAtAgent, CorporateActionPeriod10.mmDepositorySuspensionPeriodForDepositAtAgent);
 			elementContext_lazy = () -> SuspensionPeriod.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DepositorySuspensionPeriodForDepositAtAgent";
 			definition = "Period defining the last date for which deposits, into nominee name, at the agent will be accepted and the date on which the suspension will be released and deposits at agent will resume.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmDepositAtAgentSuspensionRelatedEvent;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmObject();
 		}
 	};
@@ -470,17 +470,17 @@ public class SuspensionPeriod {
 	 */
 	public static final MMBusinessAssociationEnd mmDepositorySuspensionPeriodForDeposit = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionPeriod3.mmDepositorySuspensionPeriodForDeposit, com.tools20022.repository.msg.CorporateActionPeriod6.mmDepositorySuspensionPeriodForDeposit,
-					com.tools20022.repository.msg.CorporateActionPeriod8.mmDepositorySuspensionPeriodForDeposit, com.tools20022.repository.msg.CorporateActionPeriod10.mmDepositorySuspensionPeriodForDeposit);
+			derivation_lazy = () -> Arrays.asList(CorporateActionPeriod3.mmDepositorySuspensionPeriodForDeposit, CorporateActionPeriod6.mmDepositorySuspensionPeriodForDeposit, CorporateActionPeriod8.mmDepositorySuspensionPeriodForDeposit,
+					CorporateActionPeriod10.mmDepositorySuspensionPeriodForDeposit);
 			elementContext_lazy = () -> SuspensionPeriod.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DepositorySuspensionPeriodForDeposit";
 			definition = "Period defining the last date for which deposits will be accepted and the date on which the suspension will be released and deposits will resume.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmDepositSuspensionRelatedEvent;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmObject();
 		}
 	};
@@ -541,17 +541,17 @@ public class SuspensionPeriod {
 	 */
 	public static final MMBusinessAssociationEnd mmDepositorySuspensionPeriodForPledge = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionPeriod3.mmDepositorySuspensionPeriodForPledge, com.tools20022.repository.msg.CorporateActionPeriod6.mmDepositorySuspensionPeriodForPledge,
-					com.tools20022.repository.msg.CorporateActionPeriod8.mmDepositorySuspensionPeriodForPledge, com.tools20022.repository.msg.CorporateActionPeriod10.mmDepositorySuspensionPeriodForPledge);
+			derivation_lazy = () -> Arrays.asList(CorporateActionPeriod3.mmDepositorySuspensionPeriodForPledge, CorporateActionPeriod6.mmDepositorySuspensionPeriodForPledge, CorporateActionPeriod8.mmDepositorySuspensionPeriodForPledge,
+					CorporateActionPeriod10.mmDepositorySuspensionPeriodForPledge);
 			elementContext_lazy = () -> SuspensionPeriod.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DepositorySuspensionPeriodForPledge";
 			definition = "Period defining the last date for which pledges will be accepted and the date on which the suspension will be released and pledge processing will resume.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmPledgeSuspensionRelatedEvent;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmObject();
 		}
 	};
@@ -612,18 +612,17 @@ public class SuspensionPeriod {
 	 */
 	public static final MMBusinessAssociationEnd mmDepositorySuspensionPeriodForSegregation = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionPeriod3.mmDepositorySuspensionPeriodForSegregation,
-					com.tools20022.repository.msg.CorporateActionPeriod6.mmDepositorySuspensionPeriodForSegregation, com.tools20022.repository.msg.CorporateActionPeriod8.mmDepositorySuspensionPeriodForSegregation,
-					com.tools20022.repository.msg.CorporateActionPeriod10.mmDepositorySuspensionPeriodForSegregation);
+			derivation_lazy = () -> Arrays.asList(CorporateActionPeriod3.mmDepositorySuspensionPeriodForSegregation, CorporateActionPeriod6.mmDepositorySuspensionPeriodForSegregation,
+					CorporateActionPeriod8.mmDepositorySuspensionPeriodForSegregation, CorporateActionPeriod10.mmDepositorySuspensionPeriodForSegregation);
 			elementContext_lazy = () -> SuspensionPeriod.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DepositorySuspensionPeriodForSegregation";
 			definition = "Period defining the last date for which intra-position balances can be segregated and the date on which the suspension will be released and the ability to segregate intra-position balances will resume.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmSegregationPeriodRelatedEvent;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmObject();
 		}
 	};
@@ -685,18 +684,17 @@ public class SuspensionPeriod {
 	 */
 	public static final MMBusinessAssociationEnd mmDepositorySuspensionPeriodForWithdrawalAtAgent = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionPeriod3.mmDepositorySuspensionPeriodForWithdrawalAtAgent,
-					com.tools20022.repository.msg.CorporateActionPeriod6.mmDepositorySuspensionPeriodForWithdrawalAtAgent, com.tools20022.repository.msg.CorporateActionPeriod8.mmDepositorySuspensionPeriodForWithdrawalAtAgent,
-					com.tools20022.repository.msg.CorporateActionPeriod10.mmDepositorySuspensionPeriodForWithdrawalAtAgent);
+			derivation_lazy = () -> Arrays.asList(CorporateActionPeriod3.mmDepositorySuspensionPeriodForWithdrawalAtAgent, CorporateActionPeriod6.mmDepositorySuspensionPeriodForWithdrawalAtAgent,
+					CorporateActionPeriod8.mmDepositorySuspensionPeriodForWithdrawalAtAgent, CorporateActionPeriod10.mmDepositorySuspensionPeriodForWithdrawalAtAgent);
 			elementContext_lazy = () -> SuspensionPeriod.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DepositorySuspensionPeriodForWithdrawalAtAgent";
 			definition = "Period defining the last date for which withdrawals, from nominee name at the agent will be accepted and the date on which the suspension will be released and withdrawals at agent processing will resume.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmWithdrawalAtAgentSuspensionRelatedEvent;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmObject();
 		}
 	};
@@ -761,18 +759,17 @@ public class SuspensionPeriod {
 	 */
 	public static final MMBusinessAssociationEnd mmDepositorySuspensionPeriodForWithdrawalInNomineeName = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionPeriod3.mmDepositorySuspensionPeriodForWithdrawalInNomineeName,
-					com.tools20022.repository.msg.CorporateActionPeriod6.mmDepositorySuspensionPeriodForWithdrawalInNomineeName, com.tools20022.repository.msg.CorporateActionPeriod8.mmDepositorySuspensionPeriodForWithdrawalInNomineeName,
-					com.tools20022.repository.msg.CorporateActionPeriod10.mmDepositorySuspensionPeriodForWithdrawalInNomineeName);
+			derivation_lazy = () -> Arrays.asList(CorporateActionPeriod3.mmDepositorySuspensionPeriodForWithdrawalInNomineeName, CorporateActionPeriod6.mmDepositorySuspensionPeriodForWithdrawalInNomineeName,
+					CorporateActionPeriod8.mmDepositorySuspensionPeriodForWithdrawalInNomineeName, CorporateActionPeriod10.mmDepositorySuspensionPeriodForWithdrawalInNomineeName);
 			elementContext_lazy = () -> SuspensionPeriod.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DepositorySuspensionPeriodForWithdrawalInNomineeName";
 			definition = "Period defining the last date for which physical withdrawals in the nominee's name will be accepted and the date on which the suspension will be released and physical withdrawals in the nominee's name will resume.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmWithdrawalInNomineeNameSuspensionRelatedEvent;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmObject();
 		}
 	};
@@ -838,18 +835,17 @@ public class SuspensionPeriod {
 	 */
 	public static final MMBusinessAssociationEnd mmDepositorySuspensionPeriodForWithdrawalInStreetName = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionPeriod3.mmDepositorySuspensionPeriodForWithdrawalInStreetName,
-					com.tools20022.repository.msg.CorporateActionPeriod6.mmDepositorySuspensionPeriodForWithdrawalInStreetName, com.tools20022.repository.msg.CorporateActionPeriod8.mmDepositorySuspensionPeriodForWithdrawalInStreetName,
-					com.tools20022.repository.msg.CorporateActionPeriod10.mmDepositorySuspensionPeriodForWithdrawalInStreetName);
+			derivation_lazy = () -> Arrays.asList(CorporateActionPeriod3.mmDepositorySuspensionPeriodForWithdrawalInStreetName, CorporateActionPeriod6.mmDepositorySuspensionPeriodForWithdrawalInStreetName,
+					CorporateActionPeriod8.mmDepositorySuspensionPeriodForWithdrawalInStreetName, CorporateActionPeriod10.mmDepositorySuspensionPeriodForWithdrawalInStreetName);
 			elementContext_lazy = () -> SuspensionPeriod.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DepositorySuspensionPeriodForWithdrawalInStreetName";
 			definition = "Period defining the last date on which withdrawal requests in street name's will be accepted on the event security and the date on which the suspension will be released and withdrawal in street name's processing on the event security will resume.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmWithdrawalInStreetNameSuspensionRelatedEvent;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmObject();
 		}
 	};
@@ -903,16 +899,16 @@ public class SuspensionPeriod {
 	 */
 	public static final MMBusinessAssociationEnd mmCoDepositoriesSuspensionPeriod = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionPeriod8.mmCoDepositoriesSuspensionPeriod, com.tools20022.repository.msg.CorporateActionPeriod10.mmCoDepositoriesSuspensionPeriod);
+			derivation_lazy = () -> Arrays.asList(CorporateActionPeriod8.mmCoDepositoriesSuspensionPeriod, CorporateActionPeriod10.mmCoDepositoriesSuspensionPeriod);
 			elementContext_lazy = () -> SuspensionPeriod.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CoDepositoriesSuspensionPeriod";
 			definition = "Period during which the settlement activities at the co-depositories are suspended in order to stabilise the holdings at the CSD.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmCoDepositoriesSuspensionRelatedEvent;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmObject();
 		}
 	};
@@ -958,13 +954,13 @@ public class SuspensionPeriod {
 		{
 			elementContext_lazy = () -> SuspensionPeriod.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CorporateActionEvent";
 			definition = "Corporate action event for which a depository suspension period is specified.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmSuspensionPeriod;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmObject();
 		}
 	};
@@ -972,8 +968,8 @@ public class SuspensionPeriod {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SuspensionPeriod";
 				definition = "Period defining the last date for which an action will be accepted and the date on which the suspension will be released and normal processing will resume.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.DateTimePeriod.mmPrivilegeSuspensionCorporateAction, com.tools20022.repository.entity.DateTimePeriod.mmWithdrawalSuspensionRelatedEvent,
@@ -982,12 +978,10 @@ public class SuspensionPeriod {
 						com.tools20022.repository.entity.DateTimePeriod.mmSegregationPeriodRelatedEvent, com.tools20022.repository.entity.DateTimePeriod.mmWithdrawalAtAgentSuspensionRelatedEvent,
 						com.tools20022.repository.entity.DateTimePeriod.mmWithdrawalInNomineeNameSuspensionRelatedEvent, com.tools20022.repository.entity.DateTimePeriod.mmWithdrawalInStreetNameSuspensionRelatedEvent,
 						com.tools20022.repository.entity.DateTimePeriod.mmCoDepositoriesSuspensionRelatedEvent, com.tools20022.repository.entity.CorporateActionEvent.mmSuspensionPeriod);
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SuspensionPeriod.mmPrivilegeSuspensionPeriod, com.tools20022.repository.entity.SuspensionPeriod.mmDepositorySuspensionPeriodForWithdrawal,
-						com.tools20022.repository.entity.SuspensionPeriod.mmDepositorySuspensionPeriodForBookEntryTransfer, com.tools20022.repository.entity.SuspensionPeriod.mmDepositorySuspensionPeriodForDepositAtAgent,
-						com.tools20022.repository.entity.SuspensionPeriod.mmDepositorySuspensionPeriodForDeposit, com.tools20022.repository.entity.SuspensionPeriod.mmDepositorySuspensionPeriodForPledge,
-						com.tools20022.repository.entity.SuspensionPeriod.mmDepositorySuspensionPeriodForSegregation, com.tools20022.repository.entity.SuspensionPeriod.mmDepositorySuspensionPeriodForWithdrawalAtAgent,
-						com.tools20022.repository.entity.SuspensionPeriod.mmDepositorySuspensionPeriodForWithdrawalInNomineeName, com.tools20022.repository.entity.SuspensionPeriod.mmDepositorySuspensionPeriodForWithdrawalInStreetName,
-						com.tools20022.repository.entity.SuspensionPeriod.mmCoDepositoriesSuspensionPeriod, com.tools20022.repository.entity.SuspensionPeriod.mmCorporateActionEvent);
+				element_lazy = () -> Arrays.asList(SuspensionPeriod.mmPrivilegeSuspensionPeriod, SuspensionPeriod.mmDepositorySuspensionPeriodForWithdrawal, SuspensionPeriod.mmDepositorySuspensionPeriodForBookEntryTransfer,
+						SuspensionPeriod.mmDepositorySuspensionPeriodForDepositAtAgent, SuspensionPeriod.mmDepositorySuspensionPeriodForDeposit, SuspensionPeriod.mmDepositorySuspensionPeriodForPledge,
+						SuspensionPeriod.mmDepositorySuspensionPeriodForSegregation, SuspensionPeriod.mmDepositorySuspensionPeriodForWithdrawalAtAgent, SuspensionPeriod.mmDepositorySuspensionPeriodForWithdrawalInNomineeName,
+						SuspensionPeriod.mmDepositorySuspensionPeriodForWithdrawalInStreetName, SuspensionPeriod.mmCoDepositoriesSuspensionPeriod, SuspensionPeriod.mmCorporateActionEvent);
 			}
 		});
 		return mmObject_lazy.get();

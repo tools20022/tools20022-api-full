@@ -19,8 +19,10 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.QuoteStatus2Code;
 import com.tools20022.repository.entity.QuoteStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -95,11 +97,11 @@ public class CancellationType {
 	 */
 	public static final MMMessageAttribute mmCancellationType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.QuoteStatus.mmStatus;
+			businessElementTrace_lazy = () -> QuoteStatus.mmStatus;
 			componentContext_lazy = () -> CancellationType.mmObject();
 			isDerived = false;
 			xmlTag = "CxlTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationType";
 			definition = "Reason for the cancellation.";
 			maxOccurs = 1;
@@ -111,10 +113,10 @@ public class CancellationType {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CancellationType.mmCancellationType);
+				messageElement_lazy = () -> Arrays.asList(CancellationType.mmCancellationType);
 				trace_lazy = () -> QuoteStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CancellationType";
 				definition = "Reason for the cancellation.";
 			}

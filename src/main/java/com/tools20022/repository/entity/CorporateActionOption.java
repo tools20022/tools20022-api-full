@@ -17,13 +17,12 @@
 
 package com.tools20022.repository.entity;
 
-import com.tools20022.metamodel.MMBusinessAssociationEnd;
-import com.tools20022.metamodel.MMBusinessAttribute;
-import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.*;
 import com.tools20022.repository.choice.*;
 import com.tools20022.repository.codeset.*;
 import com.tools20022.repository.datatype.Exact3NumericText;
 import com.tools20022.repository.datatype.YesNoIndicator;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -41,82 +40,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionOption#mmOptionNumber
- * CorporateActionOption.mmOptionNumber}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionOption#mmOptionType
- * CorporateActionOption.mmOptionType}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionOption#mmFractionDisposition
- * CorporateActionOption.mmFractionDisposition}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionOption#mmCurrencyOption
- * CorporateActionOption.mmCurrencyOption}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionOption#mmRelatedChoiceCorporateAction
- * CorporateActionOption.mmRelatedChoiceCorporateAction}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionOption#mmCorporateActionElection
- * CorporateActionOption.mmCorporateActionElection}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionOption#mmOptionFeatures
- * CorporateActionOption.mmOptionFeatures}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionOption#mmActionPeriod
- * CorporateActionOption.mmActionPeriod}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionOption#mmOfferType
- * CorporateActionOption.mmOfferType}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionOption#mmChargesAppliedIndicator
- * CorporateActionOption.mmChargesAppliedIndicator}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionOption#mmWithdrawalAllowedIndicator
- * CorporateActionOption.mmWithdrawalAllowedIndicator}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionOption#mmChangeAllowedIndicator
- * CorporateActionOption.mmChangeAllowedIndicator}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionOption#mmCorporateActionOptionServicing
- * CorporateActionOption.mmCorporateActionOptionServicing}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionOption#mmProceedsDefinition
- * CorporateActionOption.mmProceedsDefinition}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionOption#mmDistribution
- * CorporateActionOption.mmDistribution}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionOption#mmDefault
- * CorporateActionOption.mmDefault}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.DateTimePeriod#mmCorporateActionOption
- * DateTimePeriod.mmCorporateActionOption}</li>
- * <li>{@linkplain com.tools20022.repository.entity.ProceedsDefinition#mmOption
- * ProceedsDefinition.mmOption}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionElection#mmOption
- * CorporateActionElection.mmOption}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ChoiceCorporateAction#mmCorporateActionOptionDefinition
- * ChoiceCorporateAction.mmCorporateActionOptionDefinition}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionDistribution#mmOption
- * CorporateActionDistribution.mmOption}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionOptionServicing#mmRelatedOption
- * CorporateActionOptionServicing.mmRelatedOption}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -676,6 +599,82 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.DateTimePeriod#mmCorporateActionOption
+ * DateTimePeriod.mmCorporateActionOption}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.ProceedsDefinition#mmOption
+ * ProceedsDefinition.mmOption}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionElection#mmOption
+ * CorporateActionElection.mmOption}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ChoiceCorporateAction#mmCorporateActionOptionDefinition
+ * ChoiceCorporateAction.mmCorporateActionOptionDefinition}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionDistribution#mmOption
+ * CorporateActionDistribution.mmOption}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionOptionServicing#mmRelatedOption
+ * CorporateActionOptionServicing.mmRelatedOption}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionOption#mmOptionNumber
+ * CorporateActionOption.mmOptionNumber}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionOption#mmOptionType
+ * CorporateActionOption.mmOptionType}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionOption#mmFractionDisposition
+ * CorporateActionOption.mmFractionDisposition}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionOption#mmCurrencyOption
+ * CorporateActionOption.mmCurrencyOption}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionOption#mmRelatedChoiceCorporateAction
+ * CorporateActionOption.mmRelatedChoiceCorporateAction}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionOption#mmCorporateActionElection
+ * CorporateActionOption.mmCorporateActionElection}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionOption#mmOptionFeatures
+ * CorporateActionOption.mmOptionFeatures}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionOption#mmActionPeriod
+ * CorporateActionOption.mmActionPeriod}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionOption#mmOfferType
+ * CorporateActionOption.mmOfferType}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionOption#mmChargesAppliedIndicator
+ * CorporateActionOption.mmChargesAppliedIndicator}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionOption#mmWithdrawalAllowedIndicator
+ * CorporateActionOption.mmWithdrawalAllowedIndicator}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionOption#mmChangeAllowedIndicator
+ * CorporateActionOption.mmChangeAllowedIndicator}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionOption#mmCorporateActionOptionServicing
+ * CorporateActionOption.mmCorporateActionOptionServicing}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionOption#mmProceedsDefinition
+ * CorporateActionOption.mmProceedsDefinition}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionOption#mmDistribution
+ * CorporateActionOption.mmDistribution}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionOption#mmDefault
+ * CorporateActionOption.mmDefault}</li>
+ * </ul>
+ * </li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
@@ -1047,47 +1046,31 @@ public class CorporateActionOption {
 	 */
 	public static final MMBusinessAttribute mmOptionNumber = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionOption5.mmOptionNumber, com.tools20022.repository.msg.CorporateActionOption13.mmOptionNumber,
-					com.tools20022.repository.msg.CorporateActionOption25.mmOptionNumber, com.tools20022.repository.msg.CorporateActionOption30.mmOptionNumber, com.tools20022.repository.msg.CorporateActionOption38.mmOptionNumber,
-					com.tools20022.repository.msg.CorporateActionOption47.mmOptionNumber, com.tools20022.repository.msg.CorporateActionOption57.mmOptionNumber, com.tools20022.repository.msg.CorporateActionOption58.mmOptionNumber,
-					com.tools20022.repository.msg.CorporateActionOption6.mmOptionNumber, com.tools20022.repository.msg.CorporateActionOption21.mmOptionNumber, com.tools20022.repository.msg.CorporateActionOption42.mmOptionNumber,
-					com.tools20022.repository.msg.CorporateActionOption28.mmOptionNumber, com.tools20022.repository.msg.CorporateActionOption43.mmOptionNumber, com.tools20022.repository.msg.CorporateActionOption9.mmOptionNumber,
-					com.tools20022.repository.msg.CorporateActionOption18.mmOptionNumber, com.tools20022.repository.msg.CorporateActionOption22.mmOptionNumber, com.tools20022.repository.msg.CorporateActionOption27.mmOptionNumber,
-					com.tools20022.repository.msg.CorporateActionOption26.mmOptionNumber, com.tools20022.repository.msg.CorporateActionOption41.mmOptionNumber, com.tools20022.repository.msg.CorporateActionOption50.mmOptionNumber,
-					com.tools20022.repository.msg.InstructedCorporateActionOption1.mmOptionNumber, com.tools20022.repository.msg.InstructedCorporateActionOption2.mmOptionNumber,
-					com.tools20022.repository.msg.InstructedCorporateActionOption4.mmOptionNumber, com.tools20022.repository.msg.InstructedCorporateActionOption5.mmOptionNumber,
-					com.tools20022.repository.msg.CorporateActionOption29.mmOptionNumber, com.tools20022.repository.msg.CorporateActionOption4.mmOptionNumber, com.tools20022.repository.msg.CorporateActionOption14.mmOptionNumber,
-					com.tools20022.repository.msg.CorporateActionOption23.mmOptionNumber, com.tools20022.repository.msg.CorporateActionOption31.mmOptionNumber, com.tools20022.repository.msg.CorporateActionOption37.mmOptionNumber,
-					com.tools20022.repository.msg.CorporateActionOption46.mmOptionNumber, com.tools20022.repository.msg.CorporateActionOption53.mmOptionNumber, com.tools20022.repository.msg.CorporateActionOption54.mmOptionNumber,
-					com.tools20022.repository.msg.CorporateActionOption10.mmOptionNumber, com.tools20022.repository.msg.CorporateActionOption15.mmOptionNumber, com.tools20022.repository.msg.CorporateActionOption20.mmOptionNumber,
-					com.tools20022.repository.msg.CorporateActionOption32.mmOptionNumber, com.tools20022.repository.msg.CorporateActionOption35.mmOptionNumber, com.tools20022.repository.msg.CorporateActionOption44.mmOptionNumber,
-					com.tools20022.repository.msg.CorporateActionOption52.mmOptionNumber, com.tools20022.repository.msg.CorporateActionOption55.mmOptionNumber, com.tools20022.repository.msg.CorporateActionOption12.mmOptionNumber,
-					com.tools20022.repository.msg.CorporateActionOption16.mmOptionNumber, com.tools20022.repository.msg.CorporateActionOption24.mmOptionNumber, com.tools20022.repository.msg.CorporateActionOption33.mmOptionNumber,
-					com.tools20022.repository.msg.CorporateActionOption39.mmOptionNumber, com.tools20022.repository.msg.CorporateActionOption48.mmOptionNumber, com.tools20022.repository.msg.CorporateActionOption3.mmOptionNumber,
-					com.tools20022.repository.msg.CorporateActionOption17.mmOptionNumber, com.tools20022.repository.msg.CorporateActionOption19.mmOptionNumber, com.tools20022.repository.msg.CorporateActionOption34.mmOptionNumber,
-					com.tools20022.repository.msg.CorporateActionOption36.mmOptionNumber, com.tools20022.repository.msg.CorporateActionOption45.mmOptionNumber, com.tools20022.repository.msg.CorporateActionOption51.mmOptionNumber,
-					com.tools20022.repository.msg.CorporateActionOption56.mmOptionNumber, com.tools20022.repository.msg.CorporateActionOption1.mmOptionNumber, com.tools20022.repository.msg.SecuritiesAccount9.mmOptionNumber,
-					com.tools20022.repository.msg.CorporateActionElection3.mmOptionNumber, com.tools20022.repository.msg.CorporateActionElection1.mmOptionNumber, com.tools20022.repository.msg.CorporateActionElection2.mmOptionNumber,
-					com.tools20022.repository.msg.EntitlementAdvice1.mmOptionNumber, com.tools20022.repository.msg.GlobalDistributionRequest1.mmOptionNumber, com.tools20022.repository.msg.CorporateActionMovement1.mmOptionNumber,
-					com.tools20022.repository.msg.SecuritiesAccount8.mmOptionNumber, com.tools20022.repository.msg.CorporateActionOption2.mmOptionNumber,
-					com.tools20022.repository.msg.CorporateActionDeactivationInstructionStatus1.mmOptionNumber, com.tools20022.repository.msg.CorporateActionOption7.mmOptionNumber,
-					com.tools20022.repository.msg.CorporateActionOption99.mmOptionNumber, com.tools20022.repository.msg.CorporateActionOption11.mmOptionNumber, com.tools20022.repository.msg.CorporateActionOption103.mmOptionNumber,
-					com.tools20022.repository.msg.CorporateActionOption100.mmOptionNumber, com.tools20022.repository.msg.CorporateActionOption101.mmOptionNumber, com.tools20022.repository.msg.CorporateActionOption102.mmOptionNumber,
-					com.tools20022.repository.msg.CorporateActionOption110.mmOptionNumber, com.tools20022.repository.msg.CorporateActionOption108.mmOptionNumber, com.tools20022.repository.msg.CorporateActionOption107.mmOptionNumber,
-					com.tools20022.repository.msg.CorporateActionOption106.mmOptionNumber, com.tools20022.repository.msg.CorporateActionOption111.mmOptionNumber, com.tools20022.repository.msg.CorporateActionOption113.mmOptionNumber,
-					com.tools20022.repository.msg.CorporateActionOption117.mmOptionNumber, com.tools20022.repository.msg.CorporateActionOption118.mmOptionNumber, com.tools20022.repository.msg.CorporateActionOption119.mmOptionNumber,
-					com.tools20022.repository.msg.CorporateActionOption115.mmOptionNumber, com.tools20022.repository.msg.CorporateActionOption116.mmOptionNumber, com.tools20022.repository.msg.CorporateActionOption114.mmOptionNumber,
-					com.tools20022.repository.msg.CorporateActionOption120.mmOptionNumber, com.tools20022.repository.msg.InstructedCorporateActionOption6.mmOptionNumber,
-					com.tools20022.repository.msg.CorporateActionOption121.mmOptionNumber, com.tools20022.repository.msg.CorporateActionOption126.mmOptionNumber, com.tools20022.repository.msg.CorporateActionOption124.mmOptionNumber,
-					com.tools20022.repository.msg.CorporateActionOption125.mmOptionNumber, com.tools20022.repository.msg.CorporateActionOption123.mmOptionNumber, com.tools20022.repository.msg.CorporateActionOption127.mmOptionNumber,
-					com.tools20022.repository.msg.InstructedCorporateActionOption7.mmOptionNumber, com.tools20022.repository.msg.CorporateActionOption128.mmOptionNumber,
-					com.tools20022.repository.msg.CorporateActionOption132.mmOptionNumber, com.tools20022.repository.msg.CorporateActionOption130.mmOptionNumber, com.tools20022.repository.msg.CorporateActionOption131.mmOptionNumber,
-					com.tools20022.repository.msg.CorporateActionOption129.mmOptionNumber, com.tools20022.repository.msg.CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD1.mmOptionNumber,
-					com.tools20022.repository.msg.CorporateActionInstructedBalanceOptionInstructionDetailsSD1.mmOptionNumber, com.tools20022.repository.msg.CorporateActionOption134.mmOptionNumber,
-					com.tools20022.repository.msg.CorporateActionOption136.mmOptionNumber, com.tools20022.repository.msg.CorporateActionOption135.mmOptionNumber, com.tools20022.repository.msg.CorporateActionOption133.mmOptionNumber);
+			derivation_lazy = () -> Arrays.asList(CorporateActionOption5.mmOptionNumber, CorporateActionOption13.mmOptionNumber, CorporateActionOption25.mmOptionNumber, CorporateActionOption30.mmOptionNumber,
+					CorporateActionOption38.mmOptionNumber, CorporateActionOption47.mmOptionNumber, CorporateActionOption57.mmOptionNumber, CorporateActionOption58.mmOptionNumber, CorporateActionOption6.mmOptionNumber,
+					CorporateActionOption21.mmOptionNumber, CorporateActionOption42.mmOptionNumber, CorporateActionOption28.mmOptionNumber, CorporateActionOption43.mmOptionNumber, CorporateActionOption9.mmOptionNumber,
+					CorporateActionOption18.mmOptionNumber, CorporateActionOption22.mmOptionNumber, CorporateActionOption27.mmOptionNumber, CorporateActionOption26.mmOptionNumber, CorporateActionOption41.mmOptionNumber,
+					CorporateActionOption50.mmOptionNumber, InstructedCorporateActionOption1.mmOptionNumber, InstructedCorporateActionOption2.mmOptionNumber, InstructedCorporateActionOption4.mmOptionNumber,
+					InstructedCorporateActionOption5.mmOptionNumber, CorporateActionOption29.mmOptionNumber, CorporateActionOption4.mmOptionNumber, CorporateActionOption14.mmOptionNumber, CorporateActionOption23.mmOptionNumber,
+					CorporateActionOption31.mmOptionNumber, CorporateActionOption37.mmOptionNumber, CorporateActionOption46.mmOptionNumber, CorporateActionOption53.mmOptionNumber, CorporateActionOption54.mmOptionNumber,
+					CorporateActionOption10.mmOptionNumber, CorporateActionOption15.mmOptionNumber, CorporateActionOption20.mmOptionNumber, CorporateActionOption32.mmOptionNumber, CorporateActionOption35.mmOptionNumber,
+					CorporateActionOption44.mmOptionNumber, CorporateActionOption52.mmOptionNumber, CorporateActionOption55.mmOptionNumber, CorporateActionOption12.mmOptionNumber, CorporateActionOption16.mmOptionNumber,
+					CorporateActionOption24.mmOptionNumber, CorporateActionOption33.mmOptionNumber, CorporateActionOption39.mmOptionNumber, CorporateActionOption48.mmOptionNumber, CorporateActionOption3.mmOptionNumber,
+					CorporateActionOption17.mmOptionNumber, CorporateActionOption19.mmOptionNumber, CorporateActionOption34.mmOptionNumber, CorporateActionOption36.mmOptionNumber, CorporateActionOption45.mmOptionNumber,
+					CorporateActionOption51.mmOptionNumber, CorporateActionOption56.mmOptionNumber, CorporateActionOption1.mmOptionNumber, SecuritiesAccount9.mmOptionNumber, CorporateActionElection3.mmOptionNumber,
+					CorporateActionElection1.mmOptionNumber, CorporateActionElection2.mmOptionNumber, EntitlementAdvice1.mmOptionNumber, GlobalDistributionRequest1.mmOptionNumber, CorporateActionMovement1.mmOptionNumber,
+					SecuritiesAccount8.mmOptionNumber, CorporateActionOption2.mmOptionNumber, CorporateActionDeactivationInstructionStatus1.mmOptionNumber, CorporateActionOption7.mmOptionNumber, CorporateActionOption99.mmOptionNumber,
+					CorporateActionOption11.mmOptionNumber, CorporateActionOption103.mmOptionNumber, CorporateActionOption100.mmOptionNumber, CorporateActionOption101.mmOptionNumber, CorporateActionOption102.mmOptionNumber,
+					CorporateActionOption110.mmOptionNumber, CorporateActionOption108.mmOptionNumber, CorporateActionOption107.mmOptionNumber, CorporateActionOption106.mmOptionNumber, CorporateActionOption111.mmOptionNumber,
+					CorporateActionOption113.mmOptionNumber, CorporateActionOption117.mmOptionNumber, CorporateActionOption118.mmOptionNumber, CorporateActionOption119.mmOptionNumber, CorporateActionOption115.mmOptionNumber,
+					CorporateActionOption116.mmOptionNumber, CorporateActionOption114.mmOptionNumber, CorporateActionOption120.mmOptionNumber, InstructedCorporateActionOption6.mmOptionNumber, CorporateActionOption121.mmOptionNumber,
+					CorporateActionOption126.mmOptionNumber, CorporateActionOption124.mmOptionNumber, CorporateActionOption125.mmOptionNumber, CorporateActionOption123.mmOptionNumber, CorporateActionOption127.mmOptionNumber,
+					InstructedCorporateActionOption7.mmOptionNumber, CorporateActionOption128.mmOptionNumber, CorporateActionOption132.mmOptionNumber, CorporateActionOption130.mmOptionNumber, CorporateActionOption131.mmOptionNumber,
+					CorporateActionOption129.mmOptionNumber, CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD1.mmOptionNumber, CorporateActionInstructedBalanceOptionInstructionDetailsSD1.mmOptionNumber,
+					CorporateActionOption134.mmOptionNumber, CorporateActionOption136.mmOptionNumber, CorporateActionOption135.mmOptionNumber, CorporateActionOption133.mmOptionNumber);
 			elementContext_lazy = () -> CorporateActionOption.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "OptionNumber";
 			definition = "Number identifying the available corporate action options.";
 			maxOccurs = 1;
@@ -1676,81 +1659,49 @@ public class CorporateActionOption {
 	 */
 	public static final MMBusinessAttribute mmOptionType = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CorporateActionOption4Choice.mmCode, com.tools20022.repository.choice.CorporateActionOption4Choice.mmProprietary,
-					com.tools20022.repository.msg.CorporateActionOption5.mmOptionType, com.tools20022.repository.choice.CorporateActionOption6Choice.mmCode, com.tools20022.repository.choice.CorporateActionOption6Choice.mmProprietary,
-					com.tools20022.repository.msg.CorporateActionOption13.mmOptionType, com.tools20022.repository.msg.CorporateActionOption25.mmOptionType, com.tools20022.repository.msg.CorporateActionOption30.mmOptionType,
-					com.tools20022.repository.choice.CorporateActionOption12Choice.mmCode, com.tools20022.repository.choice.CorporateActionOption12Choice.mmProprietary, com.tools20022.repository.msg.CorporateActionOption38.mmOptionType,
-					com.tools20022.repository.choice.CorporateActionOption15Choice.mmCode, com.tools20022.repository.choice.CorporateActionOption15Choice.mmProprietary, com.tools20022.repository.msg.CorporateActionOption47.mmOptionType,
-					com.tools20022.repository.msg.CorporateActionOption57.mmOptionType, com.tools20022.repository.msg.CorporateActionOption58.mmOptionType, com.tools20022.repository.msg.CorporateActionOption6.mmOptionType,
-					com.tools20022.repository.msg.CorporateActionOption21.mmOptionType, com.tools20022.repository.msg.CorporateActionOption42.mmOptionType, com.tools20022.repository.msg.CorporateActionOption28.mmOptionType,
-					com.tools20022.repository.msg.CorporateActionOption43.mmOptionType, com.tools20022.repository.choice.CorporateActionOption5Choice.mmCode, com.tools20022.repository.choice.CorporateActionOption5Choice.mmProprietary,
-					com.tools20022.repository.msg.CorporateActionOption9.mmOptionType, com.tools20022.repository.choice.CorporateActionOption7Choice.mmCode, com.tools20022.repository.choice.CorporateActionOption7Choice.mmProprietary,
-					com.tools20022.repository.msg.CorporateActionOption18.mmOptionType, com.tools20022.repository.msg.CorporateActionOption22.mmOptionType, com.tools20022.repository.msg.CorporateActionOption27.mmOptionType,
-					com.tools20022.repository.msg.CorporateActionOption26.mmOptionType, com.tools20022.repository.choice.CorporateActionOption13Choice.mmCode, com.tools20022.repository.choice.CorporateActionOption13Choice.mmProprietary,
-					com.tools20022.repository.msg.CorporateActionOption41.mmOptionType, com.tools20022.repository.choice.CorporateActionOption16Choice.mmCode, com.tools20022.repository.choice.CorporateActionOption16Choice.mmProprietary,
-					com.tools20022.repository.msg.CorporateActionOption50.mmOptionType, com.tools20022.repository.choice.CorporateActionOption2Choice.mmCode, com.tools20022.repository.choice.CorporateActionOption2Choice.mmProprietary,
-					com.tools20022.repository.msg.InstructedCorporateActionOption1.mmOptionType, com.tools20022.repository.choice.CorporateActionOption9Choice.mmCode,
-					com.tools20022.repository.choice.CorporateActionOption9Choice.mmProprietary, com.tools20022.repository.msg.InstructedCorporateActionOption2.mmOptionType,
-					com.tools20022.repository.choice.CorporateActionOption10Choice.mmCode, com.tools20022.repository.choice.CorporateActionOption10Choice.mmProprietary,
-					com.tools20022.repository.msg.InstructedCorporateActionOption4.mmOptionType, com.tools20022.repository.choice.CorporateActionOption17Choice.mmCode,
-					com.tools20022.repository.choice.CorporateActionOption17Choice.mmProprietary, com.tools20022.repository.msg.InstructedCorporateActionOption5.mmOptionType,
-					com.tools20022.repository.msg.CorporateActionOption29.mmOptionType, com.tools20022.repository.choice.CorporateActionOption3Choice.mmCode, com.tools20022.repository.choice.CorporateActionOption3Choice.mmProprietary,
-					com.tools20022.repository.msg.CorporateActionOption4.mmOptionType, com.tools20022.repository.choice.CorporateActionOption8Choice.mmCode, com.tools20022.repository.choice.CorporateActionOption8Choice.mmProprietary,
-					com.tools20022.repository.msg.CorporateActionOption14.mmOptionType, com.tools20022.repository.msg.CorporateActionOption23.mmOptionType, com.tools20022.repository.msg.CorporateActionOption31.mmOptionType,
-					com.tools20022.repository.choice.CorporateActionOption11Choice.mmCode, com.tools20022.repository.choice.CorporateActionOption11Choice.mmProprietary, com.tools20022.repository.msg.CorporateActionOption37.mmOptionType,
-					com.tools20022.repository.choice.CorporateActionOption14Choice.mmCode, com.tools20022.repository.choice.CorporateActionOption14Choice.mmProprietary, com.tools20022.repository.msg.CorporateActionOption46.mmOptionType,
-					com.tools20022.repository.msg.CorporateActionOption53.mmOptionType, com.tools20022.repository.msg.CorporateActionOption54.mmOptionType, com.tools20022.repository.msg.CorporateActionOption10.mmOptionType,
-					com.tools20022.repository.msg.CorporateActionOption15.mmOptionType, com.tools20022.repository.msg.CorporateActionOption20.mmOptionType, com.tools20022.repository.msg.CorporateActionOption32.mmOptionType,
-					com.tools20022.repository.msg.CorporateActionOption35.mmOptionType, com.tools20022.repository.msg.CorporateActionOption44.mmOptionType, com.tools20022.repository.msg.CorporateActionOption52.mmOptionType,
-					com.tools20022.repository.msg.CorporateActionOption55.mmOptionType, com.tools20022.repository.msg.CorporateActionOption12.mmOptionType, com.tools20022.repository.msg.CorporateActionOption16.mmOptionType,
-					com.tools20022.repository.msg.CorporateActionOption24.mmOptionType, com.tools20022.repository.msg.CorporateActionOption33.mmOptionType, com.tools20022.repository.msg.CorporateActionOption39.mmOptionType,
-					com.tools20022.repository.msg.CorporateActionOption48.mmOptionType, com.tools20022.repository.msg.CorporateActionOption3.mmOptionType, com.tools20022.repository.msg.CorporateActionOption17.mmOptionType,
-					com.tools20022.repository.msg.CorporateActionOption19.mmOptionType, com.tools20022.repository.msg.CorporateActionOption34.mmOptionType, com.tools20022.repository.msg.CorporateActionOption36.mmOptionType,
-					com.tools20022.repository.msg.CorporateActionOption45.mmOptionType, com.tools20022.repository.msg.CorporateActionOption51.mmOptionType, com.tools20022.repository.msg.CorporateActionOption56.mmOptionType,
-					com.tools20022.repository.msg.AggregateBalanceInformation8.mmCorporateActionOptionType, com.tools20022.repository.msg.AggregateBalanceInformation11.mmCorporateActionOptionType,
-					com.tools20022.repository.msg.AggregateBalanceInformation13.mmCorporateActionOptionType, com.tools20022.repository.msg.AggregateBalanceInformation15.mmCorporateActionOptionType,
-					com.tools20022.repository.msg.AggregateBalanceInformation17.mmCorporateActionOptionType, com.tools20022.repository.msg.AggregateBalanceInformation19.mmCorporateActionOptionType,
-					com.tools20022.repository.msg.AggregateBalanceInformation22.mmCorporateActionOptionType, com.tools20022.repository.msg.AggregateBalanceInformation23.mmCorporateActionOptionType,
-					com.tools20022.repository.msg.AggregateBalanceInformation9.mmCorporateActionOptionType, com.tools20022.repository.msg.AggregateBalanceInformation10.mmCorporateActionOptionType,
-					com.tools20022.repository.msg.AggregateBalanceInformation12.mmCorporateActionOptionType, com.tools20022.repository.msg.AggregateBalanceInformation14.mmCorporateActionOptionType,
-					com.tools20022.repository.msg.AggregateBalanceInformation16.mmCorporateActionOptionType, com.tools20022.repository.msg.AggregateBalanceInformation18.mmCorporateActionOptionType,
-					com.tools20022.repository.msg.AggregateBalanceInformation21.mmCorporateActionOptionType, com.tools20022.repository.msg.AggregateBalanceInformation24.mmCorporateActionOptionType,
-					com.tools20022.repository.choice.CorporateActionOption1FormatChoice.mmCode, com.tools20022.repository.choice.CorporateActionOption1FormatChoice.mmProprietary,
-					com.tools20022.repository.msg.CorporateAction2.mmDefaultOptionType, com.tools20022.repository.msg.CorporateActionOption1.mmOptionType, com.tools20022.repository.msg.SecuritiesAccount9.mmOptionType,
-					com.tools20022.repository.msg.CorporateActionElection3.mmOptionType, com.tools20022.repository.msg.CorporateActionElection1.mmOptionType, com.tools20022.repository.msg.CorporateActionElection2.mmOptionType,
-					com.tools20022.repository.msg.EntitlementAdvice1.mmOptionType, com.tools20022.repository.msg.GlobalDistributionRequest1.mmOptionType, com.tools20022.repository.msg.CorporateActionMovement1.mmOptionType,
-					com.tools20022.repository.msg.SecuritiesAccount8.mmOptionType, com.tools20022.repository.msg.CorporateActionOption2.mmOptionType, com.tools20022.repository.msg.CorporateActionDeactivationInstructionStatus1.mmOptionType,
-					com.tools20022.repository.msg.CorporateActionOption7.mmOptionType, com.tools20022.repository.msg.AggregateBalanceInformation20.mmCorporateActionOptionType,
-					com.tools20022.repository.msg.CorporateActionOption11.mmOptionType, com.tools20022.repository.msg.AggregateBalanceInformation6.mmCorporateActionOptionType,
-					com.tools20022.repository.msg.AggregateBalanceInformation7.mmCorporateActionOptionType, com.tools20022.repository.msg.CorporateActionOption103.mmOptionType,
-					com.tools20022.repository.msg.CorporateActionOption100.mmOptionType, com.tools20022.repository.msg.CorporateActionOption101.mmOptionType, com.tools20022.repository.msg.CorporateActionOption102.mmOptionType,
-					com.tools20022.repository.msg.CorporateActionOption110.mmOptionType, com.tools20022.repository.msg.CorporateActionOption108.mmOptionType, com.tools20022.repository.msg.CorporateActionOption107.mmOptionType,
-					com.tools20022.repository.msg.CorporateActionOption106.mmOptionType, com.tools20022.repository.msg.AggregateBalanceInformation26.mmCorporateActionOptionType,
-					com.tools20022.repository.msg.AggregateBalanceInformation25.mmCorporateActionOptionType, com.tools20022.repository.msg.CorporateActionOption111.mmOptionType,
-					com.tools20022.repository.msg.CorporateActionOption113.mmOptionType, com.tools20022.repository.msg.AggregateBalanceInformation28.mmCorporateActionOptionType,
-					com.tools20022.repository.msg.AggregateBalanceInformation27.mmCorporateActionOptionType, com.tools20022.repository.msg.AggregateBalanceInformation30.mmCorporateActionOptionType,
-					com.tools20022.repository.msg.AggregateBalanceInformation31.mmCorporateActionOptionType, com.tools20022.repository.msg.CorporateActionOption117.mmOptionType,
-					com.tools20022.repository.msg.CorporateActionOption118.mmOptionType, com.tools20022.repository.msg.CorporateActionOption119.mmOptionType, com.tools20022.repository.msg.CorporateActionOption115.mmOptionType,
-					com.tools20022.repository.msg.CorporateActionOption116.mmOptionType, com.tools20022.repository.msg.CorporateActionOption114.mmOptionType, com.tools20022.repository.msg.CorporateActionOption120.mmOptionType,
-					com.tools20022.repository.choice.CorporateActionOption19Choice.mmCode, com.tools20022.repository.choice.CorporateActionOption19Choice.mmProprietary,
-					com.tools20022.repository.msg.InstructedCorporateActionOption6.mmOptionType, com.tools20022.repository.choice.CorporateActionOption18Choice.mmCode,
-					com.tools20022.repository.choice.CorporateActionOption18Choice.mmProprietary, com.tools20022.repository.choice.CorporateActionOption21Choice.mmCode,
-					com.tools20022.repository.choice.CorporateActionOption21Choice.mmProprietary, com.tools20022.repository.choice.CorporateActionOption20Choice.mmCode,
-					com.tools20022.repository.choice.CorporateActionOption20Choice.mmProprietary, com.tools20022.repository.msg.CorporateActionOption121.mmOptionType, com.tools20022.repository.msg.CorporateActionOption126.mmOptionType,
-					com.tools20022.repository.msg.CorporateActionOption124.mmOptionType, com.tools20022.repository.msg.CorporateActionOption125.mmOptionType, com.tools20022.repository.msg.CorporateActionOption123.mmOptionType,
-					com.tools20022.repository.msg.CorporateActionOption127.mmOptionType, com.tools20022.repository.choice.CorporateActionOption26Choice.mmCode, com.tools20022.repository.choice.CorporateActionOption26Choice.mmProprietary,
-					com.tools20022.repository.msg.InstructedCorporateActionOption7.mmOptionType, com.tools20022.repository.choice.CorporateActionOption23Choice.mmCode,
-					com.tools20022.repository.choice.CorporateActionOption23Choice.mmProprietary, com.tools20022.repository.choice.CorporateActionOption22Choice.mmCode,
-					com.tools20022.repository.choice.CorporateActionOption22Choice.mmProprietary, com.tools20022.repository.choice.CorporateActionOption25Choice.mmCode,
-					com.tools20022.repository.choice.CorporateActionOption25Choice.mmProprietary, com.tools20022.repository.msg.AggregateBalanceInformation32.mmCorporateActionOptionType,
-					com.tools20022.repository.msg.AggregateBalanceInformation33.mmCorporateActionOptionType, com.tools20022.repository.msg.CorporateActionOption128.mmOptionType,
-					com.tools20022.repository.choice.CorporateActionOption29Choice.mmCode, com.tools20022.repository.choice.CorporateActionOption29Choice.mmProprietary, com.tools20022.repository.msg.CorporateActionOption132.mmOptionType,
-					com.tools20022.repository.msg.CorporateActionOption130.mmOptionType, com.tools20022.repository.msg.CorporateActionOption131.mmOptionType, com.tools20022.repository.msg.CorporateActionOption129.mmOptionType,
-					com.tools20022.repository.msg.CorporateActionOption134.mmOptionType, com.tools20022.repository.msg.CorporateActionOption136.mmOptionType, com.tools20022.repository.msg.CorporateActionOption135.mmOptionType,
-					com.tools20022.repository.msg.CorporateActionOption133.mmOptionType);
+			derivation_lazy = () -> Arrays.asList(CorporateActionOption4Choice.mmCode, CorporateActionOption4Choice.mmProprietary, CorporateActionOption5.mmOptionType, CorporateActionOption6Choice.mmCode,
+					CorporateActionOption6Choice.mmProprietary, CorporateActionOption13.mmOptionType, CorporateActionOption25.mmOptionType, CorporateActionOption30.mmOptionType, CorporateActionOption12Choice.mmCode,
+					CorporateActionOption12Choice.mmProprietary, CorporateActionOption38.mmOptionType, CorporateActionOption15Choice.mmCode, CorporateActionOption15Choice.mmProprietary, CorporateActionOption47.mmOptionType,
+					CorporateActionOption57.mmOptionType, CorporateActionOption58.mmOptionType, CorporateActionOption6.mmOptionType, CorporateActionOption21.mmOptionType, CorporateActionOption42.mmOptionType,
+					CorporateActionOption28.mmOptionType, CorporateActionOption43.mmOptionType, CorporateActionOption5Choice.mmCode, CorporateActionOption5Choice.mmProprietary, CorporateActionOption9.mmOptionType,
+					CorporateActionOption7Choice.mmCode, CorporateActionOption7Choice.mmProprietary, CorporateActionOption18.mmOptionType, CorporateActionOption22.mmOptionType, CorporateActionOption27.mmOptionType,
+					CorporateActionOption26.mmOptionType, CorporateActionOption13Choice.mmCode, CorporateActionOption13Choice.mmProprietary, CorporateActionOption41.mmOptionType, CorporateActionOption16Choice.mmCode,
+					CorporateActionOption16Choice.mmProprietary, CorporateActionOption50.mmOptionType, CorporateActionOption2Choice.mmCode, CorporateActionOption2Choice.mmProprietary, InstructedCorporateActionOption1.mmOptionType,
+					CorporateActionOption9Choice.mmCode, CorporateActionOption9Choice.mmProprietary, InstructedCorporateActionOption2.mmOptionType, CorporateActionOption10Choice.mmCode, CorporateActionOption10Choice.mmProprietary,
+					InstructedCorporateActionOption4.mmOptionType, CorporateActionOption17Choice.mmCode, CorporateActionOption17Choice.mmProprietary, InstructedCorporateActionOption5.mmOptionType, CorporateActionOption29.mmOptionType,
+					CorporateActionOption3Choice.mmCode, CorporateActionOption3Choice.mmProprietary, CorporateActionOption4.mmOptionType, CorporateActionOption8Choice.mmCode, CorporateActionOption8Choice.mmProprietary,
+					CorporateActionOption14.mmOptionType, CorporateActionOption23.mmOptionType, CorporateActionOption31.mmOptionType, CorporateActionOption11Choice.mmCode, CorporateActionOption11Choice.mmProprietary,
+					CorporateActionOption37.mmOptionType, CorporateActionOption14Choice.mmCode, CorporateActionOption14Choice.mmProprietary, CorporateActionOption46.mmOptionType, CorporateActionOption53.mmOptionType,
+					CorporateActionOption54.mmOptionType, CorporateActionOption10.mmOptionType, CorporateActionOption15.mmOptionType, CorporateActionOption20.mmOptionType, CorporateActionOption32.mmOptionType,
+					CorporateActionOption35.mmOptionType, CorporateActionOption44.mmOptionType, CorporateActionOption52.mmOptionType, CorporateActionOption55.mmOptionType, CorporateActionOption12.mmOptionType,
+					CorporateActionOption16.mmOptionType, CorporateActionOption24.mmOptionType, CorporateActionOption33.mmOptionType, CorporateActionOption39.mmOptionType, CorporateActionOption48.mmOptionType,
+					CorporateActionOption3.mmOptionType, CorporateActionOption17.mmOptionType, CorporateActionOption19.mmOptionType, CorporateActionOption34.mmOptionType, CorporateActionOption36.mmOptionType,
+					CorporateActionOption45.mmOptionType, CorporateActionOption51.mmOptionType, CorporateActionOption56.mmOptionType, AggregateBalanceInformation8.mmCorporateActionOptionType,
+					AggregateBalanceInformation11.mmCorporateActionOptionType, AggregateBalanceInformation13.mmCorporateActionOptionType, AggregateBalanceInformation15.mmCorporateActionOptionType,
+					AggregateBalanceInformation17.mmCorporateActionOptionType, AggregateBalanceInformation19.mmCorporateActionOptionType, AggregateBalanceInformation22.mmCorporateActionOptionType,
+					AggregateBalanceInformation23.mmCorporateActionOptionType, AggregateBalanceInformation9.mmCorporateActionOptionType, AggregateBalanceInformation10.mmCorporateActionOptionType,
+					AggregateBalanceInformation12.mmCorporateActionOptionType, AggregateBalanceInformation14.mmCorporateActionOptionType, AggregateBalanceInformation16.mmCorporateActionOptionType,
+					AggregateBalanceInformation18.mmCorporateActionOptionType, AggregateBalanceInformation21.mmCorporateActionOptionType, AggregateBalanceInformation24.mmCorporateActionOptionType, CorporateActionOption1FormatChoice.mmCode,
+					CorporateActionOption1FormatChoice.mmProprietary, CorporateAction2.mmDefaultOptionType, CorporateActionOption1.mmOptionType, SecuritiesAccount9.mmOptionType, CorporateActionElection3.mmOptionType,
+					CorporateActionElection1.mmOptionType, CorporateActionElection2.mmOptionType, EntitlementAdvice1.mmOptionType, GlobalDistributionRequest1.mmOptionType, CorporateActionMovement1.mmOptionType,
+					SecuritiesAccount8.mmOptionType, CorporateActionOption2.mmOptionType, CorporateActionDeactivationInstructionStatus1.mmOptionType, CorporateActionOption7.mmOptionType,
+					AggregateBalanceInformation20.mmCorporateActionOptionType, CorporateActionOption11.mmOptionType, AggregateBalanceInformation6.mmCorporateActionOptionType, AggregateBalanceInformation7.mmCorporateActionOptionType,
+					CorporateActionOption103.mmOptionType, CorporateActionOption100.mmOptionType, CorporateActionOption101.mmOptionType, CorporateActionOption102.mmOptionType, CorporateActionOption110.mmOptionType,
+					CorporateActionOption108.mmOptionType, CorporateActionOption107.mmOptionType, CorporateActionOption106.mmOptionType, AggregateBalanceInformation26.mmCorporateActionOptionType,
+					AggregateBalanceInformation25.mmCorporateActionOptionType, CorporateActionOption111.mmOptionType, CorporateActionOption113.mmOptionType, AggregateBalanceInformation28.mmCorporateActionOptionType,
+					AggregateBalanceInformation27.mmCorporateActionOptionType, AggregateBalanceInformation30.mmCorporateActionOptionType, AggregateBalanceInformation31.mmCorporateActionOptionType, CorporateActionOption117.mmOptionType,
+					CorporateActionOption118.mmOptionType, CorporateActionOption119.mmOptionType, CorporateActionOption115.mmOptionType, CorporateActionOption116.mmOptionType, CorporateActionOption114.mmOptionType,
+					CorporateActionOption120.mmOptionType, CorporateActionOption19Choice.mmCode, CorporateActionOption19Choice.mmProprietary, InstructedCorporateActionOption6.mmOptionType, CorporateActionOption18Choice.mmCode,
+					CorporateActionOption18Choice.mmProprietary, CorporateActionOption21Choice.mmCode, CorporateActionOption21Choice.mmProprietary, CorporateActionOption20Choice.mmCode, CorporateActionOption20Choice.mmProprietary,
+					CorporateActionOption121.mmOptionType, CorporateActionOption126.mmOptionType, CorporateActionOption124.mmOptionType, CorporateActionOption125.mmOptionType, CorporateActionOption123.mmOptionType,
+					CorporateActionOption127.mmOptionType, CorporateActionOption26Choice.mmCode, CorporateActionOption26Choice.mmProprietary, InstructedCorporateActionOption7.mmOptionType, CorporateActionOption23Choice.mmCode,
+					CorporateActionOption23Choice.mmProprietary, CorporateActionOption22Choice.mmCode, CorporateActionOption22Choice.mmProprietary, CorporateActionOption25Choice.mmCode, CorporateActionOption25Choice.mmProprietary,
+					AggregateBalanceInformation32.mmCorporateActionOptionType, AggregateBalanceInformation33.mmCorporateActionOptionType, CorporateActionOption128.mmOptionType, CorporateActionOption29Choice.mmCode,
+					CorporateActionOption29Choice.mmProprietary, CorporateActionOption132.mmOptionType, CorporateActionOption130.mmOptionType, CorporateActionOption131.mmOptionType, CorporateActionOption129.mmOptionType,
+					CorporateActionOption134.mmOptionType, CorporateActionOption136.mmOptionType, CorporateActionOption135.mmOptionType, CorporateActionOption133.mmOptionType);
 			elementContext_lazy = () -> CorporateActionOption.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "OptionType";
 			definition = "Type of corporate action options available to the account owner.";
 			maxOccurs = 1;
@@ -2294,91 +2245,49 @@ public class CorporateActionOption {
 	 */
 	public static final MMBusinessAttribute mmFractionDisposition = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.FractionDispositionType2Choice.mmCode, com.tools20022.repository.choice.FractionDispositionType2Choice.mmProprietary,
-					com.tools20022.repository.msg.CorporateActionOption5.mmFractionDisposition, com.tools20022.repository.choice.FractionDispositionType8Choice.mmCode,
-					com.tools20022.repository.choice.FractionDispositionType8Choice.mmProprietary, com.tools20022.repository.msg.CorporateActionOption13.mmFractionDisposition,
-					com.tools20022.repository.choice.FractionDispositionType10Choice.mmCode, com.tools20022.repository.choice.FractionDispositionType10Choice.mmProprietary,
-					com.tools20022.repository.msg.CorporateActionOption25.mmFractionDisposition, com.tools20022.repository.choice.FractionDispositionType11Choice.mmCode,
-					com.tools20022.repository.choice.FractionDispositionType11Choice.mmProprietary, com.tools20022.repository.msg.CorporateActionOption30.mmFractionDisposition,
-					com.tools20022.repository.msg.CorporateActionOption38.mmFractionDisposition, com.tools20022.repository.msg.CorporateActionOption47.mmFractionDisposition,
-					com.tools20022.repository.choice.FractionDispositionType17Choice.mmCode, com.tools20022.repository.choice.FractionDispositionType17Choice.mmProprietary,
-					com.tools20022.repository.msg.CorporateActionOption57.mmFractionDisposition, com.tools20022.repository.choice.FractionDispositionType18Choice.mmCode,
-					com.tools20022.repository.choice.FractionDispositionType18Choice.mmProprietary, com.tools20022.repository.msg.CorporateActionOption58.mmFractionDisposition,
-					com.tools20022.repository.choice.FractionDispositionType1Choice.mmCode, com.tools20022.repository.choice.FractionDispositionType1Choice.mmProprietary,
-					com.tools20022.repository.choice.FractionDispositionType4Choice.mmCode, com.tools20022.repository.choice.FractionDispositionType4Choice.mmProprietary,
-					com.tools20022.repository.msg.SecuritiesOption3.mmFractionDisposition, com.tools20022.repository.msg.CorporateActionOption4.mmFractionDisposition, com.tools20022.repository.choice.FractionDispositionType6Choice.mmCode,
-					com.tools20022.repository.choice.FractionDispositionType6Choice.mmProprietary, com.tools20022.repository.choice.FractionDispositionType7Choice.mmCode,
-					com.tools20022.repository.choice.FractionDispositionType7Choice.mmProprietary, com.tools20022.repository.msg.SecuritiesOption8.mmFractionDisposition,
-					com.tools20022.repository.msg.CorporateActionOption14.mmFractionDisposition, com.tools20022.repository.choice.FractionDispositionType12Choice.mmCode,
-					com.tools20022.repository.choice.FractionDispositionType12Choice.mmProprietary, com.tools20022.repository.msg.SecuritiesOption18.mmFractionDisposition,
-					com.tools20022.repository.msg.CorporateActionOption23.mmFractionDisposition, com.tools20022.repository.choice.FractionDispositionType13Choice.mmCode,
-					com.tools20022.repository.choice.FractionDispositionType13Choice.mmProprietary, com.tools20022.repository.msg.SecuritiesOption20.mmFractionDisposition,
-					com.tools20022.repository.msg.CorporateActionOption31.mmFractionDisposition, com.tools20022.repository.msg.SecuritiesOption26.mmFractionDisposition,
-					com.tools20022.repository.msg.CorporateActionOption37.mmFractionDisposition, com.tools20022.repository.msg.SecuritiesOption31.mmFractionDisposition,
-					com.tools20022.repository.msg.CorporateActionOption46.mmFractionDisposition, com.tools20022.repository.choice.FractionDispositionType23Choice.mmCode,
-					com.tools20022.repository.choice.FractionDispositionType23Choice.mmProprietary, com.tools20022.repository.msg.SecuritiesOption35.mmFractionDisposition,
-					com.tools20022.repository.msg.CorporateActionOption53.mmFractionDisposition, com.tools20022.repository.choice.FractionDispositionType24Choice.mmCode,
-					com.tools20022.repository.choice.FractionDispositionType24Choice.mmProprietary, com.tools20022.repository.msg.SecuritiesOption36.mmFractionDisposition,
-					com.tools20022.repository.msg.CorporateActionOption54.mmFractionDisposition, com.tools20022.repository.msg.SecuritiesOption4.mmFractionDisposition,
-					com.tools20022.repository.msg.CorporateActionOption10.mmFractionDisposition, com.tools20022.repository.msg.SecuritiesOption10.mmFractionDisposition,
-					com.tools20022.repository.msg.CorporateActionOption15.mmFractionDisposition, com.tools20022.repository.msg.SecuritiesOption13.mmFractionDisposition,
-					com.tools20022.repository.msg.CorporateActionOption20.mmFractionDisposition, com.tools20022.repository.msg.SecuritiesOption17.mmFractionDisposition,
-					com.tools20022.repository.msg.CorporateActionOption32.mmFractionDisposition, com.tools20022.repository.msg.SecuritiesOption24.mmFractionDisposition,
-					com.tools20022.repository.msg.CorporateActionOption35.mmFractionDisposition, com.tools20022.repository.msg.SecuritiesOption29.mmFractionDisposition,
-					com.tools20022.repository.msg.CorporateActionOption44.mmFractionDisposition, com.tools20022.repository.choice.FractionDispositionType19Choice.mmCode,
-					com.tools20022.repository.choice.FractionDispositionType19Choice.mmProprietary, com.tools20022.repository.msg.SecuritiesOption33.mmFractionDisposition,
-					com.tools20022.repository.msg.SecuritiesOption38.mmFractionDisposition, com.tools20022.repository.msg.CorporateActionOption52.mmFractionDisposition,
-					com.tools20022.repository.choice.FractionDispositionType20Choice.mmCode, com.tools20022.repository.choice.FractionDispositionType20Choice.mmProprietary,
-					com.tools20022.repository.msg.SecuritiesOption37.mmFractionDisposition, com.tools20022.repository.msg.SecuritiesOption39.mmFractionDisposition,
-					com.tools20022.repository.msg.CorporateActionOption55.mmFractionDisposition, com.tools20022.repository.choice.FractionDispositionType3Choice.mmCode,
-					com.tools20022.repository.choice.FractionDispositionType3Choice.mmProprietary, com.tools20022.repository.msg.FinancialInstrumentAttributes3.mmFractionDisposition,
-					com.tools20022.repository.msg.SecuritiesOption6.mmFractionDisposition, com.tools20022.repository.msg.CorporateActionOption3.mmFractionDisposition, com.tools20022.repository.choice.FractionDispositionType5Choice.mmCode,
-					com.tools20022.repository.choice.FractionDispositionType5Choice.mmProprietary, com.tools20022.repository.msg.FinancialInstrumentAttributes12.mmFractionDisposition,
-					com.tools20022.repository.msg.SecuritiesOption12.mmFractionDisposition, com.tools20022.repository.msg.CorporateActionOption17.mmFractionDisposition,
-					com.tools20022.repository.choice.FractionDispositionType9Choice.mmCode, com.tools20022.repository.choice.FractionDispositionType9Choice.mmProprietary,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes17.mmFractionDisposition, com.tools20022.repository.msg.SecuritiesOption14.mmFractionDisposition,
-					com.tools20022.repository.msg.CorporateActionOption19.mmFractionDisposition, com.tools20022.repository.choice.FractionDispositionType14Choice.mmCode,
-					com.tools20022.repository.choice.FractionDispositionType14Choice.mmProprietary, com.tools20022.repository.msg.FinancialInstrumentAttributes25.mmFractionDisposition,
-					com.tools20022.repository.msg.SecuritiesOption22.mmFractionDisposition, com.tools20022.repository.msg.CorporateActionOption34.mmFractionDisposition,
-					com.tools20022.repository.msg.SecuritiesOption25.mmFractionDisposition, com.tools20022.repository.msg.CorporateActionOption36.mmFractionDisposition,
-					com.tools20022.repository.msg.SecuritiesOption30.mmFractionDisposition, com.tools20022.repository.msg.CorporateActionOption45.mmFractionDisposition,
-					com.tools20022.repository.choice.FractionDispositionType15Choice.mmCode, com.tools20022.repository.choice.FractionDispositionType15Choice.mmProprietary,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes46.mmFractionDisposition, com.tools20022.repository.msg.CorporateActionOption51.mmFractionDisposition,
-					com.tools20022.repository.choice.FractionDispositionType16Choice.mmCode, com.tools20022.repository.choice.FractionDispositionType16Choice.mmProprietary,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes47.mmFractionDisposition, com.tools20022.repository.msg.CorporateActionOption56.mmFractionDisposition,
-					com.tools20022.repository.choice.FractionDispositionType1FormatChoice.mmCode, com.tools20022.repository.choice.FractionDispositionType1FormatChoice.mmProprietary,
-					com.tools20022.repository.msg.SecurityOption1.mmFractionDisposition, com.tools20022.repository.msg.CorporateActionOption1.mmFractionDisposition,
-					com.tools20022.repository.msg.CorporateActionOption103.mmFractionDisposition, com.tools20022.repository.msg.CorporateActionOption100.mmFractionDisposition,
-					com.tools20022.repository.msg.CorporateActionOption101.mmFractionDisposition, com.tools20022.repository.msg.CorporateActionOption102.mmFractionDisposition,
-					com.tools20022.repository.msg.SecuritiesOption42.mmFractionDisposition, com.tools20022.repository.msg.SecuritiesOption40.mmFractionDisposition,
-					com.tools20022.repository.msg.CorporateActionOption110.mmFractionDisposition, com.tools20022.repository.msg.CorporateActionOption108.mmFractionDisposition,
-					com.tools20022.repository.msg.CorporateActionOption107.mmFractionDisposition, com.tools20022.repository.msg.CorporateActionOption106.mmFractionDisposition,
-					com.tools20022.repository.msg.SecuritiesOption48.mmFractionDisposition, com.tools20022.repository.msg.SecuritiesOption45.mmFractionDisposition,
-					com.tools20022.repository.msg.CorporateActionOption111.mmFractionDisposition, com.tools20022.repository.msg.CorporateActionOption113.mmFractionDisposition,
-					com.tools20022.repository.msg.CorporateActionOption117.mmFractionDisposition, com.tools20022.repository.msg.CorporateActionOption118.mmFractionDisposition,
-					com.tools20022.repository.msg.CorporateActionOption115.mmFractionDisposition, com.tools20022.repository.msg.CorporateActionOption114.mmFractionDisposition,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes68.mmFractionDisposition, com.tools20022.repository.choice.FractionDispositionType25Choice.mmCode,
-					com.tools20022.repository.choice.FractionDispositionType25Choice.mmProprietary, com.tools20022.repository.choice.FractionDispositionType27Choice.mmCode,
-					com.tools20022.repository.choice.FractionDispositionType27Choice.mmProprietary, com.tools20022.repository.msg.SecuritiesOption49.mmFractionDisposition,
-					com.tools20022.repository.choice.FractionDispositionType26Choice.mmCode, com.tools20022.repository.choice.FractionDispositionType26Choice.mmProprietary,
-					com.tools20022.repository.choice.FractionDispositionType28Choice.mmCode, com.tools20022.repository.choice.FractionDispositionType28Choice.mmProprietary,
-					com.tools20022.repository.msg.SecuritiesOption50.mmFractionDisposition, com.tools20022.repository.msg.CorporateActionOption124.mmFractionDisposition,
-					com.tools20022.repository.msg.CorporateActionOption125.mmFractionDisposition, com.tools20022.repository.msg.CorporateActionOption123.mmFractionDisposition,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes73.mmFractionDisposition, com.tools20022.repository.msg.CorporateActionOption127.mmFractionDisposition,
-					com.tools20022.repository.choice.FractionDispositionType30Choice.mmCode, com.tools20022.repository.choice.FractionDispositionType30Choice.mmProprietary,
-					com.tools20022.repository.msg.SecuritiesOption55.mmFractionDisposition, com.tools20022.repository.choice.FractionDispositionType29Choice.mmCode,
-					com.tools20022.repository.choice.FractionDispositionType29Choice.mmProprietary, com.tools20022.repository.msg.SecuritiesOption57.mmFractionDisposition,
-					com.tools20022.repository.choice.FractionDispositionType31Choice.mmCode, com.tools20022.repository.choice.FractionDispositionType31Choice.mmProprietary,
-					com.tools20022.repository.choice.FractionDispositionType32Choice.mmCode, com.tools20022.repository.choice.FractionDispositionType32Choice.mmProprietary,
-					com.tools20022.repository.msg.CorporateActionOption132.mmFractionDisposition, com.tools20022.repository.msg.CorporateActionOption130.mmFractionDisposition,
-					com.tools20022.repository.msg.CorporateActionOption131.mmFractionDisposition, com.tools20022.repository.msg.CorporateActionOption129.mmFractionDisposition,
-					com.tools20022.repository.msg.SecuritiesOption60.mmFractionDisposition, com.tools20022.repository.msg.SecuritiesOption59.mmFractionDisposition,
-					com.tools20022.repository.msg.CorporateActionOption134.mmFractionDisposition, com.tools20022.repository.msg.CorporateActionOption136.mmFractionDisposition,
-					com.tools20022.repository.msg.CorporateActionOption135.mmFractionDisposition, com.tools20022.repository.msg.CorporateActionOption133.mmFractionDisposition,
-					com.tools20022.repository.msg.SecuritiesOption61.mmFractionDisposition, com.tools20022.repository.msg.SecuritiesOption63.mmFractionDisposition);
+			derivation_lazy = () -> Arrays.asList(FractionDispositionType2Choice.mmCode, FractionDispositionType2Choice.mmProprietary, CorporateActionOption5.mmFractionDisposition, FractionDispositionType8Choice.mmCode,
+					FractionDispositionType8Choice.mmProprietary, CorporateActionOption13.mmFractionDisposition, FractionDispositionType10Choice.mmCode, FractionDispositionType10Choice.mmProprietary,
+					CorporateActionOption25.mmFractionDisposition, FractionDispositionType11Choice.mmCode, FractionDispositionType11Choice.mmProprietary, CorporateActionOption30.mmFractionDisposition,
+					CorporateActionOption38.mmFractionDisposition, CorporateActionOption47.mmFractionDisposition, FractionDispositionType17Choice.mmCode, FractionDispositionType17Choice.mmProprietary,
+					CorporateActionOption57.mmFractionDisposition, FractionDispositionType18Choice.mmCode, FractionDispositionType18Choice.mmProprietary, CorporateActionOption58.mmFractionDisposition, FractionDispositionType1Choice.mmCode,
+					FractionDispositionType1Choice.mmProprietary, FractionDispositionType4Choice.mmCode, FractionDispositionType4Choice.mmProprietary, SecuritiesOption3.mmFractionDisposition, CorporateActionOption4.mmFractionDisposition,
+					FractionDispositionType6Choice.mmCode, FractionDispositionType6Choice.mmProprietary, FractionDispositionType7Choice.mmCode, FractionDispositionType7Choice.mmProprietary, SecuritiesOption8.mmFractionDisposition,
+					CorporateActionOption14.mmFractionDisposition, FractionDispositionType12Choice.mmCode, FractionDispositionType12Choice.mmProprietary, SecuritiesOption18.mmFractionDisposition,
+					CorporateActionOption23.mmFractionDisposition, FractionDispositionType13Choice.mmCode, FractionDispositionType13Choice.mmProprietary, SecuritiesOption20.mmFractionDisposition,
+					CorporateActionOption31.mmFractionDisposition, SecuritiesOption26.mmFractionDisposition, CorporateActionOption37.mmFractionDisposition, SecuritiesOption31.mmFractionDisposition,
+					CorporateActionOption46.mmFractionDisposition, FractionDispositionType23Choice.mmCode, FractionDispositionType23Choice.mmProprietary, SecuritiesOption35.mmFractionDisposition,
+					CorporateActionOption53.mmFractionDisposition, FractionDispositionType24Choice.mmCode, FractionDispositionType24Choice.mmProprietary, SecuritiesOption36.mmFractionDisposition,
+					CorporateActionOption54.mmFractionDisposition, SecuritiesOption4.mmFractionDisposition, CorporateActionOption10.mmFractionDisposition, SecuritiesOption10.mmFractionDisposition,
+					CorporateActionOption15.mmFractionDisposition, SecuritiesOption13.mmFractionDisposition, CorporateActionOption20.mmFractionDisposition, SecuritiesOption17.mmFractionDisposition,
+					CorporateActionOption32.mmFractionDisposition, SecuritiesOption24.mmFractionDisposition, CorporateActionOption35.mmFractionDisposition, SecuritiesOption29.mmFractionDisposition,
+					CorporateActionOption44.mmFractionDisposition, FractionDispositionType19Choice.mmCode, FractionDispositionType19Choice.mmProprietary, SecuritiesOption33.mmFractionDisposition, SecuritiesOption38.mmFractionDisposition,
+					CorporateActionOption52.mmFractionDisposition, FractionDispositionType20Choice.mmCode, FractionDispositionType20Choice.mmProprietary, SecuritiesOption37.mmFractionDisposition, SecuritiesOption39.mmFractionDisposition,
+					CorporateActionOption55.mmFractionDisposition, FractionDispositionType3Choice.mmCode, FractionDispositionType3Choice.mmProprietary, FinancialInstrumentAttributes3.mmFractionDisposition,
+					SecuritiesOption6.mmFractionDisposition, CorporateActionOption3.mmFractionDisposition, FractionDispositionType5Choice.mmCode, FractionDispositionType5Choice.mmProprietary,
+					FinancialInstrumentAttributes12.mmFractionDisposition, SecuritiesOption12.mmFractionDisposition, CorporateActionOption17.mmFractionDisposition, FractionDispositionType9Choice.mmCode,
+					FractionDispositionType9Choice.mmProprietary, FinancialInstrumentAttributes17.mmFractionDisposition, SecuritiesOption14.mmFractionDisposition, CorporateActionOption19.mmFractionDisposition,
+					FractionDispositionType14Choice.mmCode, FractionDispositionType14Choice.mmProprietary, FinancialInstrumentAttributes25.mmFractionDisposition, SecuritiesOption22.mmFractionDisposition,
+					CorporateActionOption34.mmFractionDisposition, SecuritiesOption25.mmFractionDisposition, CorporateActionOption36.mmFractionDisposition, SecuritiesOption30.mmFractionDisposition,
+					CorporateActionOption45.mmFractionDisposition, FractionDispositionType15Choice.mmCode, FractionDispositionType15Choice.mmProprietary, FinancialInstrumentAttributes46.mmFractionDisposition,
+					CorporateActionOption51.mmFractionDisposition, FractionDispositionType16Choice.mmCode, FractionDispositionType16Choice.mmProprietary, FinancialInstrumentAttributes47.mmFractionDisposition,
+					CorporateActionOption56.mmFractionDisposition, FractionDispositionType1FormatChoice.mmCode, FractionDispositionType1FormatChoice.mmProprietary, SecurityOption1.mmFractionDisposition,
+					CorporateActionOption1.mmFractionDisposition, CorporateActionOption103.mmFractionDisposition, CorporateActionOption100.mmFractionDisposition, CorporateActionOption101.mmFractionDisposition,
+					CorporateActionOption102.mmFractionDisposition, SecuritiesOption42.mmFractionDisposition, SecuritiesOption40.mmFractionDisposition, CorporateActionOption110.mmFractionDisposition,
+					CorporateActionOption108.mmFractionDisposition, CorporateActionOption107.mmFractionDisposition, CorporateActionOption106.mmFractionDisposition, SecuritiesOption48.mmFractionDisposition,
+					SecuritiesOption45.mmFractionDisposition, CorporateActionOption111.mmFractionDisposition, CorporateActionOption113.mmFractionDisposition, CorporateActionOption117.mmFractionDisposition,
+					CorporateActionOption118.mmFractionDisposition, CorporateActionOption115.mmFractionDisposition, CorporateActionOption114.mmFractionDisposition, FinancialInstrumentAttributes68.mmFractionDisposition,
+					FractionDispositionType25Choice.mmCode, FractionDispositionType25Choice.mmProprietary, FractionDispositionType27Choice.mmCode, FractionDispositionType27Choice.mmProprietary, SecuritiesOption49.mmFractionDisposition,
+					FractionDispositionType26Choice.mmCode, FractionDispositionType26Choice.mmProprietary, FractionDispositionType28Choice.mmCode, FractionDispositionType28Choice.mmProprietary, SecuritiesOption50.mmFractionDisposition,
+					CorporateActionOption124.mmFractionDisposition, CorporateActionOption125.mmFractionDisposition, CorporateActionOption123.mmFractionDisposition, FinancialInstrumentAttributes73.mmFractionDisposition,
+					CorporateActionOption127.mmFractionDisposition, FractionDispositionType30Choice.mmCode, FractionDispositionType30Choice.mmProprietary, SecuritiesOption55.mmFractionDisposition, FractionDispositionType29Choice.mmCode,
+					FractionDispositionType29Choice.mmProprietary, SecuritiesOption57.mmFractionDisposition, FractionDispositionType31Choice.mmCode, FractionDispositionType31Choice.mmProprietary, FractionDispositionType32Choice.mmCode,
+					FractionDispositionType32Choice.mmProprietary, CorporateActionOption132.mmFractionDisposition, CorporateActionOption130.mmFractionDisposition, CorporateActionOption131.mmFractionDisposition,
+					CorporateActionOption129.mmFractionDisposition, SecuritiesOption60.mmFractionDisposition, SecuritiesOption59.mmFractionDisposition, CorporateActionOption134.mmFractionDisposition,
+					CorporateActionOption136.mmFractionDisposition, CorporateActionOption135.mmFractionDisposition, CorporateActionOption133.mmFractionDisposition, SecuritiesOption61.mmFractionDisposition,
+					SecuritiesOption63.mmFractionDisposition);
 			elementContext_lazy = () -> CorporateActionOption.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "FractionDisposition";
 			definition = "Treatment of the fractions resulting from derived securities will be processed or how prorated decisions will be rounding, if provided with a pro ration rate.";
 			maxOccurs = 1;
@@ -2703,41 +2612,29 @@ public class CorporateActionOption {
 	 */
 	public static final MMBusinessAttribute mmCurrencyOption = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionOption5.mmCurrencyOption, com.tools20022.repository.msg.CorporateActionOption13.mmCurrencyOption,
-					com.tools20022.repository.msg.CorporateActionOption25.mmCurrencyOption, com.tools20022.repository.msg.CorporateActionOption30.mmCurrencyOption, com.tools20022.repository.msg.CorporateActionOption38.mmCurrencyOption,
-					com.tools20022.repository.msg.CorporateActionOption47.mmCurrencyOption, com.tools20022.repository.msg.CorporateActionOption57.mmCurrencyOption, com.tools20022.repository.msg.CorporateActionOption58.mmCurrencyOption,
-					com.tools20022.repository.msg.SecuritiesOption3.mmCurrencyOption, com.tools20022.repository.msg.CorporateActionOption4.mmCurrencyOption, com.tools20022.repository.msg.SecuritiesOption8.mmCurrencyOption,
-					com.tools20022.repository.msg.CorporateActionOption14.mmCurrencyOption, com.tools20022.repository.msg.SecuritiesOption18.mmCurrencyOption, com.tools20022.repository.msg.CorporateActionOption23.mmCurrencyOption,
-					com.tools20022.repository.msg.SecuritiesOption20.mmCurrencyOption, com.tools20022.repository.msg.CorporateActionOption31.mmCurrencyOption, com.tools20022.repository.msg.SecuritiesOption26.mmCurrencyOption,
-					com.tools20022.repository.msg.CorporateActionOption37.mmCurrencyOption, com.tools20022.repository.msg.SecuritiesOption31.mmCurrencyOption, com.tools20022.repository.msg.CorporateActionOption46.mmCurrencyOption,
-					com.tools20022.repository.msg.SecuritiesOption35.mmCurrencyOption, com.tools20022.repository.msg.CorporateActionOption53.mmCurrencyOption, com.tools20022.repository.msg.SecuritiesOption36.mmCurrencyOption,
-					com.tools20022.repository.msg.CorporateActionOption54.mmCurrencyOption, com.tools20022.repository.msg.SecuritiesOption4.mmCurrencyOption, com.tools20022.repository.msg.CorporateActionOption10.mmCurrencyOption,
-					com.tools20022.repository.msg.SecuritiesOption10.mmCurrencyOption, com.tools20022.repository.msg.CorporateActionOption15.mmCurrencyOption, com.tools20022.repository.msg.SecuritiesOption13.mmCurrencyOption,
-					com.tools20022.repository.msg.CorporateActionOption20.mmCurrencyOption, com.tools20022.repository.msg.SecuritiesOption17.mmCurrencyOption, com.tools20022.repository.msg.CorporateActionOption32.mmCurrencyOption,
-					com.tools20022.repository.msg.SecuritiesOption24.mmCurrencyOption, com.tools20022.repository.msg.CorporateActionOption35.mmCurrencyOption, com.tools20022.repository.msg.SecuritiesOption29.mmCurrencyOption,
-					com.tools20022.repository.msg.CorporateActionOption44.mmCurrencyOption, com.tools20022.repository.msg.SecuritiesOption33.mmCurrencyOption, com.tools20022.repository.msg.SecuritiesOption38.mmCurrencyOption,
-					com.tools20022.repository.msg.CorporateActionOption52.mmCurrencyOption, com.tools20022.repository.msg.SecuritiesOption37.mmCurrencyOption, com.tools20022.repository.msg.SecuritiesOption39.mmCurrencyOption,
-					com.tools20022.repository.msg.CorporateActionOption55.mmCurrencyOption, com.tools20022.repository.msg.SecuritiesOption6.mmCurrencyOption, com.tools20022.repository.msg.CorporateActionOption3.mmCurrencyOption,
-					com.tools20022.repository.msg.SecuritiesOption12.mmCurrencyOption, com.tools20022.repository.msg.CorporateActionOption17.mmCurrencyOption, com.tools20022.repository.msg.SecuritiesOption14.mmCurrencyOption,
-					com.tools20022.repository.msg.CorporateActionOption19.mmCurrencyOption, com.tools20022.repository.msg.SecuritiesOption22.mmCurrencyOption, com.tools20022.repository.msg.CorporateActionOption34.mmCurrencyOption,
-					com.tools20022.repository.msg.SecuritiesOption25.mmCurrencyOption, com.tools20022.repository.msg.CorporateActionOption36.mmCurrencyOption, com.tools20022.repository.msg.SecuritiesOption30.mmCurrencyOption,
-					com.tools20022.repository.msg.CorporateActionOption45.mmCurrencyOption, com.tools20022.repository.msg.CorporateActionOption51.mmCurrencyOption, com.tools20022.repository.msg.CorporateActionOption56.mmCurrencyOption,
-					com.tools20022.repository.msg.CashOption1.mmCurrency, com.tools20022.repository.msg.CorporateActionOption103.mmCurrencyOption, com.tools20022.repository.msg.CorporateActionOption100.mmCurrencyOption,
-					com.tools20022.repository.msg.CorporateActionOption101.mmCurrencyOption, com.tools20022.repository.msg.CorporateActionOption102.mmCurrencyOption, com.tools20022.repository.msg.SecuritiesOption42.mmCurrencyOption,
-					com.tools20022.repository.msg.SecuritiesOption40.mmCurrencyOption, com.tools20022.repository.msg.CorporateActionOption110.mmCurrencyOption, com.tools20022.repository.msg.CorporateActionOption108.mmCurrencyOption,
-					com.tools20022.repository.msg.CorporateActionOption107.mmCurrencyOption, com.tools20022.repository.msg.CorporateActionOption106.mmCurrencyOption, com.tools20022.repository.msg.SecuritiesOption48.mmCurrencyOption,
-					com.tools20022.repository.msg.SecuritiesOption45.mmCurrencyOption, com.tools20022.repository.msg.CorporateActionOption111.mmCurrencyOption, com.tools20022.repository.msg.CorporateActionOption113.mmCurrencyOption,
-					com.tools20022.repository.msg.CorporateActionOption117.mmCurrencyOption, com.tools20022.repository.msg.CorporateActionOption118.mmCurrencyOption, com.tools20022.repository.msg.CorporateActionOption115.mmCurrencyOption,
-					com.tools20022.repository.msg.CorporateActionOption114.mmCurrencyOption, com.tools20022.repository.msg.SecuritiesOption49.mmCurrencyOption, com.tools20022.repository.msg.SecuritiesOption50.mmCurrencyOption,
-					com.tools20022.repository.msg.CorporateActionOption124.mmCurrencyOption, com.tools20022.repository.msg.CorporateActionOption125.mmCurrencyOption, com.tools20022.repository.msg.CorporateActionOption123.mmCurrencyOption,
-					com.tools20022.repository.msg.CorporateActionOption127.mmCurrencyOption, com.tools20022.repository.msg.SecuritiesOption55.mmCurrencyOption, com.tools20022.repository.msg.SecuritiesOption57.mmCurrencyOption,
-					com.tools20022.repository.msg.CorporateActionOption132.mmCurrencyOption, com.tools20022.repository.msg.CorporateActionOption130.mmCurrencyOption, com.tools20022.repository.msg.CorporateActionOption131.mmCurrencyOption,
-					com.tools20022.repository.msg.CorporateActionOption129.mmCurrencyOption, com.tools20022.repository.msg.SecuritiesOption60.mmCurrencyOption, com.tools20022.repository.msg.SecuritiesOption59.mmCurrencyOption,
-					com.tools20022.repository.msg.CorporateActionOption134.mmCurrencyOption, com.tools20022.repository.msg.CorporateActionOption136.mmCurrencyOption, com.tools20022.repository.msg.CorporateActionOption135.mmCurrencyOption,
-					com.tools20022.repository.msg.CorporateActionOption133.mmCurrencyOption, com.tools20022.repository.msg.SecuritiesOption61.mmCurrencyOption, com.tools20022.repository.msg.SecuritiesOption63.mmCurrencyOption);
+			derivation_lazy = () -> Arrays.asList(CorporateActionOption5.mmCurrencyOption, CorporateActionOption13.mmCurrencyOption, CorporateActionOption25.mmCurrencyOption, CorporateActionOption30.mmCurrencyOption,
+					CorporateActionOption38.mmCurrencyOption, CorporateActionOption47.mmCurrencyOption, CorporateActionOption57.mmCurrencyOption, CorporateActionOption58.mmCurrencyOption, SecuritiesOption3.mmCurrencyOption,
+					CorporateActionOption4.mmCurrencyOption, SecuritiesOption8.mmCurrencyOption, CorporateActionOption14.mmCurrencyOption, SecuritiesOption18.mmCurrencyOption, CorporateActionOption23.mmCurrencyOption,
+					SecuritiesOption20.mmCurrencyOption, CorporateActionOption31.mmCurrencyOption, SecuritiesOption26.mmCurrencyOption, CorporateActionOption37.mmCurrencyOption, SecuritiesOption31.mmCurrencyOption,
+					CorporateActionOption46.mmCurrencyOption, SecuritiesOption35.mmCurrencyOption, CorporateActionOption53.mmCurrencyOption, SecuritiesOption36.mmCurrencyOption, CorporateActionOption54.mmCurrencyOption,
+					SecuritiesOption4.mmCurrencyOption, CorporateActionOption10.mmCurrencyOption, SecuritiesOption10.mmCurrencyOption, CorporateActionOption15.mmCurrencyOption, SecuritiesOption13.mmCurrencyOption,
+					CorporateActionOption20.mmCurrencyOption, SecuritiesOption17.mmCurrencyOption, CorporateActionOption32.mmCurrencyOption, SecuritiesOption24.mmCurrencyOption, CorporateActionOption35.mmCurrencyOption,
+					SecuritiesOption29.mmCurrencyOption, CorporateActionOption44.mmCurrencyOption, SecuritiesOption33.mmCurrencyOption, SecuritiesOption38.mmCurrencyOption, CorporateActionOption52.mmCurrencyOption,
+					SecuritiesOption37.mmCurrencyOption, SecuritiesOption39.mmCurrencyOption, CorporateActionOption55.mmCurrencyOption, SecuritiesOption6.mmCurrencyOption, CorporateActionOption3.mmCurrencyOption,
+					SecuritiesOption12.mmCurrencyOption, CorporateActionOption17.mmCurrencyOption, SecuritiesOption14.mmCurrencyOption, CorporateActionOption19.mmCurrencyOption, SecuritiesOption22.mmCurrencyOption,
+					CorporateActionOption34.mmCurrencyOption, SecuritiesOption25.mmCurrencyOption, CorporateActionOption36.mmCurrencyOption, SecuritiesOption30.mmCurrencyOption, CorporateActionOption45.mmCurrencyOption,
+					CorporateActionOption51.mmCurrencyOption, CorporateActionOption56.mmCurrencyOption, CashOption1.mmCurrency, CorporateActionOption103.mmCurrencyOption, CorporateActionOption100.mmCurrencyOption,
+					CorporateActionOption101.mmCurrencyOption, CorporateActionOption102.mmCurrencyOption, SecuritiesOption42.mmCurrencyOption, SecuritiesOption40.mmCurrencyOption, CorporateActionOption110.mmCurrencyOption,
+					CorporateActionOption108.mmCurrencyOption, CorporateActionOption107.mmCurrencyOption, CorporateActionOption106.mmCurrencyOption, SecuritiesOption48.mmCurrencyOption, SecuritiesOption45.mmCurrencyOption,
+					CorporateActionOption111.mmCurrencyOption, CorporateActionOption113.mmCurrencyOption, CorporateActionOption117.mmCurrencyOption, CorporateActionOption118.mmCurrencyOption, CorporateActionOption115.mmCurrencyOption,
+					CorporateActionOption114.mmCurrencyOption, SecuritiesOption49.mmCurrencyOption, SecuritiesOption50.mmCurrencyOption, CorporateActionOption124.mmCurrencyOption, CorporateActionOption125.mmCurrencyOption,
+					CorporateActionOption123.mmCurrencyOption, CorporateActionOption127.mmCurrencyOption, SecuritiesOption55.mmCurrencyOption, SecuritiesOption57.mmCurrencyOption, CorporateActionOption132.mmCurrencyOption,
+					CorporateActionOption130.mmCurrencyOption, CorporateActionOption131.mmCurrencyOption, CorporateActionOption129.mmCurrencyOption, SecuritiesOption60.mmCurrencyOption, SecuritiesOption59.mmCurrencyOption,
+					CorporateActionOption134.mmCurrencyOption, CorporateActionOption136.mmCurrencyOption, CorporateActionOption135.mmCurrencyOption, CorporateActionOption133.mmCurrencyOption, SecuritiesOption61.mmCurrencyOption,
+					SecuritiesOption63.mmCurrencyOption);
 			elementContext_lazy = () -> CorporateActionOption.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CurrencyOption";
 			definition = "Currency choice given to the investor.";
 			maxOccurs = 1;
@@ -3574,116 +3471,70 @@ public class CorporateActionOption {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedChoiceCorporateAction = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionOption5.mmRateAndAmountDetails, com.tools20022.repository.msg.CorporateActionOption13.mmRateAndAmountDetails,
-					com.tools20022.repository.msg.CorporateActionOption25.mmRateAndAmountDetails, com.tools20022.repository.msg.CorporateActionOption30.mmRateAndAmountDetails,
-					com.tools20022.repository.msg.CorporateActionOption38.mmRateAndAmountDetails, com.tools20022.repository.msg.CorporateActionOption47.mmRateAndAmountDetails,
-					com.tools20022.repository.msg.CorporateActionOption57.mmRateAndAmountDetails, com.tools20022.repository.msg.CorporateActionOption58.mmRateAndAmountDetails, com.tools20022.repository.msg.CashOption2.mmAmountDetails,
-					com.tools20022.repository.msg.CashOption2.mmDateDetails, com.tools20022.repository.msg.CorporateActionOption4.mmDateDetails, com.tools20022.repository.msg.CorporateActionOption4.mmPeriodDetails,
-					com.tools20022.repository.msg.CorporateActionOption4.mmRateAndAmountDetails, com.tools20022.repository.msg.CashOption9.mmAmountDetails, com.tools20022.repository.msg.CashOption9.mmDateDetails,
-					com.tools20022.repository.msg.CorporateActionOption14.mmDateDetails, com.tools20022.repository.msg.CorporateActionOption14.mmPeriodDetails, com.tools20022.repository.msg.CorporateActionOption14.mmRateAndAmountDetails,
-					com.tools20022.repository.msg.CashOption12.mmAmountDetails, com.tools20022.repository.msg.CashOption12.mmDateDetails, com.tools20022.repository.msg.CashOption12.mmRateAndAmountDetails,
-					com.tools20022.repository.msg.CorporateActionOption23.mmDateDetails, com.tools20022.repository.msg.CorporateActionOption23.mmPeriodDetails, com.tools20022.repository.msg.CorporateActionOption23.mmRateAndAmountDetails,
-					com.tools20022.repository.msg.CashOption13.mmAmountDetails, com.tools20022.repository.msg.CashOption13.mmDateDetails, com.tools20022.repository.msg.CashOption13.mmRateAndAmountDetails,
-					com.tools20022.repository.msg.CorporateActionOption31.mmDateDetails, com.tools20022.repository.msg.CorporateActionOption31.mmPeriodDetails, com.tools20022.repository.msg.CorporateActionOption31.mmRateAndAmountDetails,
-					com.tools20022.repository.msg.CashOption18.mmAmountDetails, com.tools20022.repository.msg.CashOption18.mmDateDetails, com.tools20022.repository.msg.CashOption18.mmRateAndAmountDetails,
-					com.tools20022.repository.msg.CorporateActionOption37.mmDateDetails, com.tools20022.repository.msg.CorporateActionOption37.mmPeriodDetails, com.tools20022.repository.msg.CorporateActionOption37.mmRateAndAmountDetails,
-					com.tools20022.repository.msg.CashOption22.mmAmountDetails, com.tools20022.repository.msg.CashOption22.mmDateDetails, com.tools20022.repository.msg.CashOption22.mmRateAndAmountDetails,
-					com.tools20022.repository.msg.CorporateActionOption46.mmDateDetails, com.tools20022.repository.msg.CorporateActionOption46.mmPeriodDetails, com.tools20022.repository.msg.CorporateActionOption46.mmRateAndAmountDetails,
-					com.tools20022.repository.msg.CashOption26.mmAmountDetails, com.tools20022.repository.msg.CashOption26.mmDateDetails, com.tools20022.repository.msg.CashOption26.mmRateAndAmountDetails,
-					com.tools20022.repository.msg.CorporateActionOption53.mmDateDetails, com.tools20022.repository.msg.CorporateActionOption53.mmPeriodDetails, com.tools20022.repository.msg.CorporateActionOption53.mmRateAndAmountDetails,
-					com.tools20022.repository.msg.CashOption27.mmAmountDetails, com.tools20022.repository.msg.CashOption27.mmDateDetails, com.tools20022.repository.msg.CashOption27.mmRateAndAmountDetails,
-					com.tools20022.repository.msg.CorporateActionOption54.mmDateDetails, com.tools20022.repository.msg.CorporateActionOption54.mmPeriodDetails, com.tools20022.repository.msg.CorporateActionOption54.mmRateAndAmountDetails,
-					com.tools20022.repository.msg.CashOption3.mmAmountDetails, com.tools20022.repository.msg.CashOption3.mmDateDetails, com.tools20022.repository.msg.CorporateActionOption10.mmDateDetails,
-					com.tools20022.repository.msg.CorporateActionOption10.mmPeriodDetails, com.tools20022.repository.msg.CorporateActionOption10.mmRateAndAmountDetails, com.tools20022.repository.msg.CashOption6.mmAmountDetails,
-					com.tools20022.repository.msg.CashOption6.mmDateDetails, com.tools20022.repository.msg.CorporateActionOption15.mmDateDetails, com.tools20022.repository.msg.CorporateActionOption15.mmPeriodDetails,
-					com.tools20022.repository.msg.CorporateActionOption15.mmRateAndAmountDetails, com.tools20022.repository.msg.CashOption11.mmAmountDetails, com.tools20022.repository.msg.CashOption11.mmDateDetails,
-					com.tools20022.repository.msg.CashOption11.mmRateAndAmountDetails, com.tools20022.repository.msg.CorporateActionOption20.mmDateDetails, com.tools20022.repository.msg.CorporateActionOption20.mmPeriodDetails,
-					com.tools20022.repository.msg.CorporateActionOption20.mmRateAndAmountDetails, com.tools20022.repository.msg.CashOption14.mmAmountDetails, com.tools20022.repository.msg.CashOption14.mmDateDetails,
-					com.tools20022.repository.msg.CashOption14.mmRateAndAmountDetails, com.tools20022.repository.msg.CorporateActionOption32.mmDateDetails, com.tools20022.repository.msg.CorporateActionOption32.mmPeriodDetails,
-					com.tools20022.repository.msg.CorporateActionOption32.mmRateAndAmountDetails, com.tools20022.repository.msg.CashOption16.mmAmountDetails, com.tools20022.repository.msg.CashOption16.mmDateDetails,
-					com.tools20022.repository.msg.CashOption16.mmRateAndAmountDetails, com.tools20022.repository.msg.CorporateActionOption35.mmDateDetails, com.tools20022.repository.msg.CorporateActionOption35.mmPeriodDetails,
-					com.tools20022.repository.msg.CorporateActionOption35.mmRateAndAmountDetails, com.tools20022.repository.msg.CashOption20.mmAmountDetails, com.tools20022.repository.msg.CashOption20.mmDateDetails,
-					com.tools20022.repository.msg.CashOption20.mmRateAndAmountDetails, com.tools20022.repository.msg.CorporateActionOption44.mmDateDetails, com.tools20022.repository.msg.CorporateActionOption44.mmPeriodDetails,
-					com.tools20022.repository.msg.CorporateActionOption44.mmRateAndAmountDetails, com.tools20022.repository.msg.CashOption25.mmAmountDetails, com.tools20022.repository.msg.CashOption25.mmDateDetails,
-					com.tools20022.repository.msg.CashOption25.mmRateAndAmountDetails, com.tools20022.repository.msg.CorporateActionOption52.mmDateDetails, com.tools20022.repository.msg.CorporateActionOption52.mmPeriodDetails,
-					com.tools20022.repository.msg.CorporateActionOption52.mmRateAndAmountDetails, com.tools20022.repository.msg.CashOption28.mmAmountDetails, com.tools20022.repository.msg.CashOption28.mmDateDetails,
-					com.tools20022.repository.msg.CashOption28.mmRateAndAmountDetails, com.tools20022.repository.msg.CorporateActionOption55.mmDateDetails, com.tools20022.repository.msg.CorporateActionOption55.mmPeriodDetails,
-					com.tools20022.repository.msg.CorporateActionOption55.mmRateAndAmountDetails, com.tools20022.repository.msg.CashOption4.mmAmountDetails, com.tools20022.repository.msg.CashOption4.mmDateDetails,
-					com.tools20022.repository.msg.CorporateActionOption3.mmDateDetails, com.tools20022.repository.msg.CorporateActionOption3.mmPeriodDetails, com.tools20022.repository.msg.CorporateActionOption3.mmRateAndAmountDetails,
-					com.tools20022.repository.msg.CashOption8.mmAmountDetails, com.tools20022.repository.msg.CashOption8.mmDateDetails, com.tools20022.repository.msg.CorporateActionOption17.mmDateDetails,
-					com.tools20022.repository.msg.CorporateActionOption17.mmPeriodDetails, com.tools20022.repository.msg.CorporateActionOption17.mmRateAndAmountDetails, com.tools20022.repository.msg.CashOption10.mmAmountDetails,
-					com.tools20022.repository.msg.CashOption10.mmDateDetails, com.tools20022.repository.msg.CashOption10.mmRateAndAmountDetails, com.tools20022.repository.msg.CorporateActionOption19.mmDateDetails,
-					com.tools20022.repository.msg.CorporateActionOption19.mmPeriodDetails, com.tools20022.repository.msg.CorporateActionOption19.mmRateAndAmountDetails, com.tools20022.repository.msg.CashOption15.mmAmountDetails,
-					com.tools20022.repository.msg.CashOption15.mmDateDetails, com.tools20022.repository.msg.CashOption15.mmRateAndAmountDetails, com.tools20022.repository.msg.CorporateActionOption34.mmDateDetails,
-					com.tools20022.repository.msg.CorporateActionOption34.mmPeriodDetails, com.tools20022.repository.msg.CorporateActionOption34.mmRateAndAmountDetails, com.tools20022.repository.msg.CashOption17.mmAmountDetails,
-					com.tools20022.repository.msg.CashOption17.mmDateDetails, com.tools20022.repository.msg.CashOption17.mmRateAndAmountDetails, com.tools20022.repository.msg.CorporateActionOption36.mmDateDetails,
-					com.tools20022.repository.msg.CorporateActionOption36.mmPeriodDetails, com.tools20022.repository.msg.CorporateActionOption36.mmRateAndAmountDetails, com.tools20022.repository.msg.CashOption21.mmAmountDetails,
-					com.tools20022.repository.msg.CashOption21.mmDateDetails, com.tools20022.repository.msg.CashOption21.mmRateAndAmountDetails, com.tools20022.repository.msg.CorporateActionOption45.mmDateDetails,
-					com.tools20022.repository.msg.CorporateActionOption45.mmPeriodDetails, com.tools20022.repository.msg.CorporateActionOption45.mmRateAndAmountDetails, com.tools20022.repository.msg.CashOption24.mmAmountDetails,
-					com.tools20022.repository.msg.CashOption24.mmDateDetails, com.tools20022.repository.msg.CashOption24.mmRateAndAmountDetails, com.tools20022.repository.msg.CorporateActionOption51.mmDateDetails,
-					com.tools20022.repository.msg.CorporateActionOption51.mmPeriodDetails, com.tools20022.repository.msg.CorporateActionOption51.mmRateAndAmountDetails, com.tools20022.repository.msg.CashOption29.mmAmountDetails,
-					com.tools20022.repository.msg.CashOption29.mmDateDetails, com.tools20022.repository.msg.CashOption29.mmRateAndAmountDetails, com.tools20022.repository.msg.CorporateActionOption56.mmDateDetails,
-					com.tools20022.repository.msg.CorporateActionOption56.mmPeriodDetails, com.tools20022.repository.msg.CorporateActionOption56.mmRateAndAmountDetails, com.tools20022.repository.msg.CashOption1.mmDateDetails,
-					com.tools20022.repository.msg.CashOption1.mmAmountDetails, com.tools20022.repository.msg.CorporateActionOption1.mmDateDetails, com.tools20022.repository.msg.CorporateActionOption1.mmRateAndAmountDetails,
-					com.tools20022.repository.msg.CorporateActionOption1.mmPeriodDetails, com.tools20022.repository.msg.CorporateActionOption103.mmRateAndAmountDetails, com.tools20022.repository.msg.CorporateActionOption100.mmDateDetails,
-					com.tools20022.repository.msg.CorporateActionOption100.mmPeriodDetails, com.tools20022.repository.msg.CorporateActionOption100.mmRateAndAmountDetails,
-					com.tools20022.repository.msg.CorporateActionOption101.mmDateDetails, com.tools20022.repository.msg.CorporateActionOption101.mmPeriodDetails,
-					com.tools20022.repository.msg.CorporateActionOption101.mmRateAndAmountDetails, com.tools20022.repository.msg.CorporateActionOption102.mmDateDetails,
-					com.tools20022.repository.msg.CorporateActionOption102.mmPeriodDetails, com.tools20022.repository.msg.CorporateActionOption102.mmRateAndAmountDetails, com.tools20022.repository.msg.CashOption30.mmAmountDetails,
-					com.tools20022.repository.msg.CashOption30.mmDateDetails, com.tools20022.repository.msg.CashOption30.mmRateAndAmountDetails, com.tools20022.repository.msg.CashOption31.mmAmountDetails,
-					com.tools20022.repository.msg.CashOption31.mmDateDetails, com.tools20022.repository.msg.CashOption31.mmRateAndAmountDetails, com.tools20022.repository.msg.CashOption32.mmAmountDetails,
-					com.tools20022.repository.msg.CashOption32.mmDateDetails, com.tools20022.repository.msg.CashOption32.mmRateAndAmountDetails, com.tools20022.repository.msg.CorporateActionOption110.mmDateDetails,
-					com.tools20022.repository.msg.CorporateActionOption110.mmPeriodDetails, com.tools20022.repository.msg.CorporateActionOption110.mmRateAndAmountDetails,
-					com.tools20022.repository.msg.CorporateActionOption108.mmDateDetails, com.tools20022.repository.msg.CorporateActionOption108.mmPeriodDetails,
-					com.tools20022.repository.msg.CorporateActionOption108.mmRateAndAmountDetails, com.tools20022.repository.msg.CorporateActionOption107.mmRateAndAmountDetails,
-					com.tools20022.repository.msg.CorporateActionOption106.mmDateDetails, com.tools20022.repository.msg.CorporateActionOption106.mmPeriodDetails,
-					com.tools20022.repository.msg.CorporateActionOption106.mmRateAndAmountDetails, com.tools20022.repository.msg.CashOption36.mmAmountDetails, com.tools20022.repository.msg.CashOption36.mmDateDetails,
-					com.tools20022.repository.msg.CashOption36.mmRateAndAmountDetails, com.tools20022.repository.msg.CashOption35.mmAmountDetails, com.tools20022.repository.msg.CashOption35.mmDateDetails,
-					com.tools20022.repository.msg.CashOption35.mmRateAndAmountDetails, com.tools20022.repository.msg.CashOption38.mmAmountDetails, com.tools20022.repository.msg.CashOption38.mmDateDetails,
-					com.tools20022.repository.msg.CashOption38.mmRateAndAmountDetails, com.tools20022.repository.msg.CorporateActionOption111.mmDateDetails, com.tools20022.repository.msg.CorporateActionOption111.mmPeriodDetails,
-					com.tools20022.repository.msg.CorporateActionOption111.mmRateAndAmountDetails, com.tools20022.repository.msg.CashOption39.mmAmountDetails, com.tools20022.repository.msg.CashOption39.mmDateDetails,
-					com.tools20022.repository.msg.CashOption39.mmRateAndAmountDetails, com.tools20022.repository.msg.CorporateActionOption113.mmDateDetails, com.tools20022.repository.msg.CorporateActionOption113.mmPeriodDetails,
-					com.tools20022.repository.msg.CorporateActionOption113.mmRateAndAmountDetails, com.tools20022.repository.msg.CashOption41.mmAmountDetails, com.tools20022.repository.msg.CashOption41.mmDateDetails,
-					com.tools20022.repository.msg.CashOption41.mmRateAndAmountDetails, com.tools20022.repository.msg.CorporateActionOption117.mmDateDetails, com.tools20022.repository.msg.CorporateActionOption117.mmPeriodDetails,
-					com.tools20022.repository.msg.CorporateActionOption117.mmRateAndAmountDetails, com.tools20022.repository.msg.CorporateActionOption118.mmRateAndAmountDetails,
-					com.tools20022.repository.msg.CorporateActionOption115.mmDateDetails, com.tools20022.repository.msg.CorporateActionOption115.mmPeriodDetails,
-					com.tools20022.repository.msg.CorporateActionOption115.mmRateAndAmountDetails, com.tools20022.repository.msg.CorporateActionOption114.mmDateDetails,
-					com.tools20022.repository.msg.CorporateActionOption114.mmPeriodDetails, com.tools20022.repository.msg.CorporateActionOption114.mmRateAndAmountDetails, com.tools20022.repository.msg.CashOption44.mmAmountDetails,
-					com.tools20022.repository.msg.CashOption44.mmDateDetails, com.tools20022.repository.msg.CashOption44.mmRateAndAmountDetails, com.tools20022.repository.msg.CashOption42.mmAmountDetails,
-					com.tools20022.repository.msg.CashOption42.mmDateDetails, com.tools20022.repository.msg.CashOption42.mmRateAndAmountDetails, com.tools20022.repository.msg.CashOption43.mmAmountDetails,
-					com.tools20022.repository.msg.CashOption43.mmDateDetails, com.tools20022.repository.msg.CashOption43.mmRateAndAmountDetails, com.tools20022.repository.msg.CorporateActionOption124.mmDateDetails,
-					com.tools20022.repository.msg.CorporateActionOption124.mmPeriodDetails, com.tools20022.repository.msg.CorporateActionOption124.mmRateAndAmountDetails,
-					com.tools20022.repository.msg.CorporateActionOption125.mmDateDetails, com.tools20022.repository.msg.CorporateActionOption125.mmPeriodDetails,
-					com.tools20022.repository.msg.CorporateActionOption125.mmRateAndAmountDetails, com.tools20022.repository.msg.CorporateActionOption123.mmRateAndAmountDetails,
-					com.tools20022.repository.msg.CorporateActionOption127.mmDateDetails, com.tools20022.repository.msg.CorporateActionOption127.mmPeriodDetails,
-					com.tools20022.repository.msg.CorporateActionOption127.mmRateAndAmountDetails, com.tools20022.repository.msg.CashOption46.mmAmountDetails, com.tools20022.repository.msg.CashOption46.mmDateDetails,
-					com.tools20022.repository.msg.CashOption46.mmRateAndAmountDetails, com.tools20022.repository.msg.CashOption49.mmAmountDetails, com.tools20022.repository.msg.CashOption49.mmDateDetails,
-					com.tools20022.repository.msg.CashOption49.mmRateAndAmountDetails, com.tools20022.repository.msg.CashOption47.mmAmountDetails, com.tools20022.repository.msg.CashOption47.mmDateDetails,
-					com.tools20022.repository.msg.CashOption47.mmRateAndAmountDetails, com.tools20022.repository.msg.CorporateActionOption132.mmDateDetails, com.tools20022.repository.msg.CorporateActionOption132.mmPeriodDetails,
-					com.tools20022.repository.msg.CorporateActionOption132.mmRateAndAmountDetails, com.tools20022.repository.msg.CorporateActionOption130.mmDateDetails,
-					com.tools20022.repository.msg.CorporateActionOption130.mmPeriodDetails, com.tools20022.repository.msg.CorporateActionOption130.mmRateAndAmountDetails,
-					com.tools20022.repository.msg.CorporateActionOption131.mmRateAndAmountDetails, com.tools20022.repository.msg.CorporateActionOption129.mmDateDetails,
-					com.tools20022.repository.msg.CorporateActionOption129.mmPeriodDetails, com.tools20022.repository.msg.CorporateActionOption129.mmRateAndAmountDetails, com.tools20022.repository.msg.CashOption52.mmAmountDetails,
-					com.tools20022.repository.msg.CashOption52.mmDateDetails, com.tools20022.repository.msg.CashOption52.mmRateAndAmountDetails, com.tools20022.repository.msg.CashOption51.mmAmountDetails,
-					com.tools20022.repository.msg.CashOption51.mmDateDetails, com.tools20022.repository.msg.CashOption51.mmRateAndAmountDetails, com.tools20022.repository.msg.CashOption50.mmAmountDetails,
-					com.tools20022.repository.msg.CashOption50.mmDateDetails, com.tools20022.repository.msg.CashOption50.mmRateAndAmountDetails, com.tools20022.repository.msg.CorporateActionOption134.mmRateAndAmountDetails,
-					com.tools20022.repository.msg.CorporateActionOption136.mmDateDetails, com.tools20022.repository.msg.CorporateActionOption136.mmPeriodDetails,
-					com.tools20022.repository.msg.CorporateActionOption136.mmRateAndAmountDetails, com.tools20022.repository.msg.CorporateActionOption135.mmDateDetails,
-					com.tools20022.repository.msg.CorporateActionOption135.mmPeriodDetails, com.tools20022.repository.msg.CorporateActionOption135.mmRateAndAmountDetails,
-					com.tools20022.repository.msg.CorporateActionOption133.mmDateDetails, com.tools20022.repository.msg.CorporateActionOption133.mmPeriodDetails,
-					com.tools20022.repository.msg.CorporateActionOption133.mmRateAndAmountDetails, com.tools20022.repository.msg.CashOption53.mmAmountDetails, com.tools20022.repository.msg.CashOption53.mmDateDetails,
-					com.tools20022.repository.msg.CashOption53.mmRateAndAmountDetails, com.tools20022.repository.msg.CashOption54.mmAmountDetails, com.tools20022.repository.msg.CashOption54.mmDateDetails,
-					com.tools20022.repository.msg.CashOption54.mmRateAndAmountDetails, com.tools20022.repository.msg.CashOption55.mmAmountDetails, com.tools20022.repository.msg.CashOption55.mmDateDetails,
-					com.tools20022.repository.msg.CashOption55.mmRateAndAmountDetails);
+			derivation_lazy = () -> Arrays.asList(CorporateActionOption5.mmRateAndAmountDetails, CorporateActionOption13.mmRateAndAmountDetails, CorporateActionOption25.mmRateAndAmountDetails,
+					CorporateActionOption30.mmRateAndAmountDetails, CorporateActionOption38.mmRateAndAmountDetails, CorporateActionOption47.mmRateAndAmountDetails, CorporateActionOption57.mmRateAndAmountDetails,
+					CorporateActionOption58.mmRateAndAmountDetails, CashOption2.mmAmountDetails, CashOption2.mmDateDetails, CorporateActionOption4.mmDateDetails, CorporateActionOption4.mmPeriodDetails,
+					CorporateActionOption4.mmRateAndAmountDetails, CashOption9.mmAmountDetails, CashOption9.mmDateDetails, CorporateActionOption14.mmDateDetails, CorporateActionOption14.mmPeriodDetails,
+					CorporateActionOption14.mmRateAndAmountDetails, CashOption12.mmAmountDetails, CashOption12.mmDateDetails, CashOption12.mmRateAndAmountDetails, CorporateActionOption23.mmDateDetails,
+					CorporateActionOption23.mmPeriodDetails, CorporateActionOption23.mmRateAndAmountDetails, CashOption13.mmAmountDetails, CashOption13.mmDateDetails, CashOption13.mmRateAndAmountDetails,
+					CorporateActionOption31.mmDateDetails, CorporateActionOption31.mmPeriodDetails, CorporateActionOption31.mmRateAndAmountDetails, CashOption18.mmAmountDetails, CashOption18.mmDateDetails,
+					CashOption18.mmRateAndAmountDetails, CorporateActionOption37.mmDateDetails, CorporateActionOption37.mmPeriodDetails, CorporateActionOption37.mmRateAndAmountDetails, CashOption22.mmAmountDetails,
+					CashOption22.mmDateDetails, CashOption22.mmRateAndAmountDetails, CorporateActionOption46.mmDateDetails, CorporateActionOption46.mmPeriodDetails, CorporateActionOption46.mmRateAndAmountDetails,
+					CashOption26.mmAmountDetails, CashOption26.mmDateDetails, CashOption26.mmRateAndAmountDetails, CorporateActionOption53.mmDateDetails, CorporateActionOption53.mmPeriodDetails,
+					CorporateActionOption53.mmRateAndAmountDetails, CashOption27.mmAmountDetails, CashOption27.mmDateDetails, CashOption27.mmRateAndAmountDetails, CorporateActionOption54.mmDateDetails,
+					CorporateActionOption54.mmPeriodDetails, CorporateActionOption54.mmRateAndAmountDetails, CashOption3.mmAmountDetails, CashOption3.mmDateDetails, CorporateActionOption10.mmDateDetails,
+					CorporateActionOption10.mmPeriodDetails, CorporateActionOption10.mmRateAndAmountDetails, CashOption6.mmAmountDetails, CashOption6.mmDateDetails, CorporateActionOption15.mmDateDetails,
+					CorporateActionOption15.mmPeriodDetails, CorporateActionOption15.mmRateAndAmountDetails, CashOption11.mmAmountDetails, CashOption11.mmDateDetails, CashOption11.mmRateAndAmountDetails,
+					CorporateActionOption20.mmDateDetails, CorporateActionOption20.mmPeriodDetails, CorporateActionOption20.mmRateAndAmountDetails, CashOption14.mmAmountDetails, CashOption14.mmDateDetails,
+					CashOption14.mmRateAndAmountDetails, CorporateActionOption32.mmDateDetails, CorporateActionOption32.mmPeriodDetails, CorporateActionOption32.mmRateAndAmountDetails, CashOption16.mmAmountDetails,
+					CashOption16.mmDateDetails, CashOption16.mmRateAndAmountDetails, CorporateActionOption35.mmDateDetails, CorporateActionOption35.mmPeriodDetails, CorporateActionOption35.mmRateAndAmountDetails,
+					CashOption20.mmAmountDetails, CashOption20.mmDateDetails, CashOption20.mmRateAndAmountDetails, CorporateActionOption44.mmDateDetails, CorporateActionOption44.mmPeriodDetails,
+					CorporateActionOption44.mmRateAndAmountDetails, CashOption25.mmAmountDetails, CashOption25.mmDateDetails, CashOption25.mmRateAndAmountDetails, CorporateActionOption52.mmDateDetails,
+					CorporateActionOption52.mmPeriodDetails, CorporateActionOption52.mmRateAndAmountDetails, CashOption28.mmAmountDetails, CashOption28.mmDateDetails, CashOption28.mmRateAndAmountDetails,
+					CorporateActionOption55.mmDateDetails, CorporateActionOption55.mmPeriodDetails, CorporateActionOption55.mmRateAndAmountDetails, CashOption4.mmAmountDetails, CashOption4.mmDateDetails,
+					CorporateActionOption3.mmDateDetails, CorporateActionOption3.mmPeriodDetails, CorporateActionOption3.mmRateAndAmountDetails, CashOption8.mmAmountDetails, CashOption8.mmDateDetails, CorporateActionOption17.mmDateDetails,
+					CorporateActionOption17.mmPeriodDetails, CorporateActionOption17.mmRateAndAmountDetails, CashOption10.mmAmountDetails, CashOption10.mmDateDetails, CashOption10.mmRateAndAmountDetails,
+					CorporateActionOption19.mmDateDetails, CorporateActionOption19.mmPeriodDetails, CorporateActionOption19.mmRateAndAmountDetails, CashOption15.mmAmountDetails, CashOption15.mmDateDetails,
+					CashOption15.mmRateAndAmountDetails, CorporateActionOption34.mmDateDetails, CorporateActionOption34.mmPeriodDetails, CorporateActionOption34.mmRateAndAmountDetails, CashOption17.mmAmountDetails,
+					CashOption17.mmDateDetails, CashOption17.mmRateAndAmountDetails, CorporateActionOption36.mmDateDetails, CorporateActionOption36.mmPeriodDetails, CorporateActionOption36.mmRateAndAmountDetails,
+					CashOption21.mmAmountDetails, CashOption21.mmDateDetails, CashOption21.mmRateAndAmountDetails, CorporateActionOption45.mmDateDetails, CorporateActionOption45.mmPeriodDetails,
+					CorporateActionOption45.mmRateAndAmountDetails, CashOption24.mmAmountDetails, CashOption24.mmDateDetails, CashOption24.mmRateAndAmountDetails, CorporateActionOption51.mmDateDetails,
+					CorporateActionOption51.mmPeriodDetails, CorporateActionOption51.mmRateAndAmountDetails, CashOption29.mmAmountDetails, CashOption29.mmDateDetails, CashOption29.mmRateAndAmountDetails,
+					CorporateActionOption56.mmDateDetails, CorporateActionOption56.mmPeriodDetails, CorporateActionOption56.mmRateAndAmountDetails, CashOption1.mmDateDetails, CashOption1.mmAmountDetails,
+					CorporateActionOption1.mmDateDetails, CorporateActionOption1.mmRateAndAmountDetails, CorporateActionOption1.mmPeriodDetails, CorporateActionOption103.mmRateAndAmountDetails, CorporateActionOption100.mmDateDetails,
+					CorporateActionOption100.mmPeriodDetails, CorporateActionOption100.mmRateAndAmountDetails, CorporateActionOption101.mmDateDetails, CorporateActionOption101.mmPeriodDetails,
+					CorporateActionOption101.mmRateAndAmountDetails, CorporateActionOption102.mmDateDetails, CorporateActionOption102.mmPeriodDetails, CorporateActionOption102.mmRateAndAmountDetails, CashOption30.mmAmountDetails,
+					CashOption30.mmDateDetails, CashOption30.mmRateAndAmountDetails, CashOption31.mmAmountDetails, CashOption31.mmDateDetails, CashOption31.mmRateAndAmountDetails, CashOption32.mmAmountDetails, CashOption32.mmDateDetails,
+					CashOption32.mmRateAndAmountDetails, CorporateActionOption110.mmDateDetails, CorporateActionOption110.mmPeriodDetails, CorporateActionOption110.mmRateAndAmountDetails, CorporateActionOption108.mmDateDetails,
+					CorporateActionOption108.mmPeriodDetails, CorporateActionOption108.mmRateAndAmountDetails, CorporateActionOption107.mmRateAndAmountDetails, CorporateActionOption106.mmDateDetails,
+					CorporateActionOption106.mmPeriodDetails, CorporateActionOption106.mmRateAndAmountDetails, CashOption36.mmAmountDetails, CashOption36.mmDateDetails, CashOption36.mmRateAndAmountDetails, CashOption35.mmAmountDetails,
+					CashOption35.mmDateDetails, CashOption35.mmRateAndAmountDetails, CashOption38.mmAmountDetails, CashOption38.mmDateDetails, CashOption38.mmRateAndAmountDetails, CorporateActionOption111.mmDateDetails,
+					CorporateActionOption111.mmPeriodDetails, CorporateActionOption111.mmRateAndAmountDetails, CashOption39.mmAmountDetails, CashOption39.mmDateDetails, CashOption39.mmRateAndAmountDetails,
+					CorporateActionOption113.mmDateDetails, CorporateActionOption113.mmPeriodDetails, CorporateActionOption113.mmRateAndAmountDetails, CashOption41.mmAmountDetails, CashOption41.mmDateDetails,
+					CashOption41.mmRateAndAmountDetails, CorporateActionOption117.mmDateDetails, CorporateActionOption117.mmPeriodDetails, CorporateActionOption117.mmRateAndAmountDetails, CorporateActionOption118.mmRateAndAmountDetails,
+					CorporateActionOption115.mmDateDetails, CorporateActionOption115.mmPeriodDetails, CorporateActionOption115.mmRateAndAmountDetails, CorporateActionOption114.mmDateDetails, CorporateActionOption114.mmPeriodDetails,
+					CorporateActionOption114.mmRateAndAmountDetails, CashOption44.mmAmountDetails, CashOption44.mmDateDetails, CashOption44.mmRateAndAmountDetails, CashOption42.mmAmountDetails, CashOption42.mmDateDetails,
+					CashOption42.mmRateAndAmountDetails, CashOption43.mmAmountDetails, CashOption43.mmDateDetails, CashOption43.mmRateAndAmountDetails, CorporateActionOption124.mmDateDetails, CorporateActionOption124.mmPeriodDetails,
+					CorporateActionOption124.mmRateAndAmountDetails, CorporateActionOption125.mmDateDetails, CorporateActionOption125.mmPeriodDetails, CorporateActionOption125.mmRateAndAmountDetails,
+					CorporateActionOption123.mmRateAndAmountDetails, CorporateActionOption127.mmDateDetails, CorporateActionOption127.mmPeriodDetails, CorporateActionOption127.mmRateAndAmountDetails, CashOption46.mmAmountDetails,
+					CashOption46.mmDateDetails, CashOption46.mmRateAndAmountDetails, CashOption49.mmAmountDetails, CashOption49.mmDateDetails, CashOption49.mmRateAndAmountDetails, CashOption47.mmAmountDetails, CashOption47.mmDateDetails,
+					CashOption47.mmRateAndAmountDetails, CorporateActionOption132.mmDateDetails, CorporateActionOption132.mmPeriodDetails, CorporateActionOption132.mmRateAndAmountDetails, CorporateActionOption130.mmDateDetails,
+					CorporateActionOption130.mmPeriodDetails, CorporateActionOption130.mmRateAndAmountDetails, CorporateActionOption131.mmRateAndAmountDetails, CorporateActionOption129.mmDateDetails,
+					CorporateActionOption129.mmPeriodDetails, CorporateActionOption129.mmRateAndAmountDetails, CashOption52.mmAmountDetails, CashOption52.mmDateDetails, CashOption52.mmRateAndAmountDetails, CashOption51.mmAmountDetails,
+					CashOption51.mmDateDetails, CashOption51.mmRateAndAmountDetails, CashOption50.mmAmountDetails, CashOption50.mmDateDetails, CashOption50.mmRateAndAmountDetails, CorporateActionOption134.mmRateAndAmountDetails,
+					CorporateActionOption136.mmDateDetails, CorporateActionOption136.mmPeriodDetails, CorporateActionOption136.mmRateAndAmountDetails, CorporateActionOption135.mmDateDetails, CorporateActionOption135.mmPeriodDetails,
+					CorporateActionOption135.mmRateAndAmountDetails, CorporateActionOption133.mmDateDetails, CorporateActionOption133.mmPeriodDetails, CorporateActionOption133.mmRateAndAmountDetails, CashOption53.mmAmountDetails,
+					CashOption53.mmDateDetails, CashOption53.mmRateAndAmountDetails, CashOption54.mmAmountDetails, CashOption54.mmDateDetails, CashOption54.mmRateAndAmountDetails, CashOption55.mmAmountDetails, CashOption55.mmDateDetails,
+					CashOption55.mmRateAndAmountDetails);
 			elementContext_lazy = () -> CorporateActionOption.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedChoiceCorporateAction";
 			definition = "Corporate action for which one or more options are provided.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.ChoiceCorporateAction.mmCorporateActionOptionDefinition;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.ChoiceCorporateAction.mmObject();
 		}
 	};
@@ -3726,13 +3577,13 @@ public class CorporateActionOption {
 		{
 			elementContext_lazy = () -> CorporateActionOption.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CorporateActionElection";
 			definition = "Election process which selected a specific option.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.CorporateActionElection.mmOption;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.CorporateActionElection.mmObject();
 		}
 	};
@@ -4031,41 +3882,27 @@ public class CorporateActionOption {
 	 */
 	public static final MMBusinessAttribute mmOptionFeatures = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.OptionFeaturesFormat1Choice.mmCode, com.tools20022.repository.choice.OptionFeaturesFormat1Choice.mmProprietary,
-					com.tools20022.repository.msg.CorporateActionOption4.mmOptionFeatures, com.tools20022.repository.choice.OptionFeaturesFormat3Choice.mmCode, com.tools20022.repository.choice.OptionFeaturesFormat3Choice.mmProprietary,
-					com.tools20022.repository.msg.CorporateActionOption14.mmOptionFeatures, com.tools20022.repository.msg.CorporateActionOption23.mmOptionFeatures, com.tools20022.repository.msg.CorporateActionOption31.mmOptionFeatures,
-					com.tools20022.repository.msg.CorporateActionOption37.mmOptionFeatures, com.tools20022.repository.msg.CorporateActionOption46.mmOptionFeatures, com.tools20022.repository.msg.CorporateActionOption53.mmOptionFeatures,
-					com.tools20022.repository.msg.CorporateActionOption54.mmOptionFeatures, com.tools20022.repository.choice.OptionFeaturesFormat2Choice.mmCode, com.tools20022.repository.choice.OptionFeaturesFormat2Choice.mmProprietary,
-					com.tools20022.repository.msg.CorporateActionOption10.mmOptionFeatures, com.tools20022.repository.choice.OptionFeaturesFormat4Choice.mmCode, com.tools20022.repository.choice.OptionFeaturesFormat4Choice.mmProprietary,
-					com.tools20022.repository.msg.CorporateActionOption15.mmOptionFeatures, com.tools20022.repository.choice.OptionFeaturesFormat6Choice.mmCode, com.tools20022.repository.choice.OptionFeaturesFormat6Choice.mmProprietary,
-					com.tools20022.repository.msg.CorporateActionOption20.mmOptionFeatures, com.tools20022.repository.choice.OptionFeaturesFormat7Choice.mmCode, com.tools20022.repository.choice.OptionFeaturesFormat7Choice.mmProprietary,
-					com.tools20022.repository.msg.CorporateActionOption32.mmOptionFeatures, com.tools20022.repository.choice.OptionFeaturesFormat5Choice.mmCode, com.tools20022.repository.choice.OptionFeaturesFormat5Choice.mmProprietary,
-					com.tools20022.repository.choice.OptionFeaturesFormat9Choice.mmCode, com.tools20022.repository.choice.OptionFeaturesFormat9Choice.mmProprietary, com.tools20022.repository.msg.CorporateActionOption35.mmOptionFeatures,
-					com.tools20022.repository.choice.OptionFeaturesFormat11Choice.mmCode, com.tools20022.repository.choice.OptionFeaturesFormat11Choice.mmProprietary, com.tools20022.repository.msg.CorporateActionOption44.mmOptionFeatures,
-					com.tools20022.repository.msg.CorporateActionOption52.mmOptionFeatures, com.tools20022.repository.msg.CorporateActionOption55.mmOptionFeatures, com.tools20022.repository.msg.CorporateActionOption3.mmOptionFeatures,
-					com.tools20022.repository.msg.CorporateActionOption17.mmOptionFeatures, com.tools20022.repository.msg.CorporateActionOption19.mmOptionFeatures, com.tools20022.repository.choice.OptionFeaturesFormat8Choice.mmCode,
-					com.tools20022.repository.choice.OptionFeaturesFormat8Choice.mmProprietary, com.tools20022.repository.msg.CorporateActionOption34.mmOptionFeatures, com.tools20022.repository.msg.CorporateActionOption36.mmOptionFeatures,
-					com.tools20022.repository.msg.CorporateActionOption45.mmOptionFeatures, com.tools20022.repository.msg.CorporateActionOption51.mmOptionFeatures, com.tools20022.repository.msg.CorporateActionOption56.mmOptionFeatures,
-					com.tools20022.repository.choice.OptionFeatures1FormatChoice.mmCode, com.tools20022.repository.choice.OptionFeatures1FormatChoice.mmProprietary, com.tools20022.repository.msg.CorporateActionOption1.mmOptionFeatures,
-					com.tools20022.repository.msg.CorporateActionOption100.mmOptionFeatures, com.tools20022.repository.msg.CorporateActionOption101.mmOptionFeatures, com.tools20022.repository.msg.CorporateActionOption102.mmOptionFeatures,
-					com.tools20022.repository.choice.OptionFeaturesFormat12Choice.mmCode, com.tools20022.repository.choice.OptionFeaturesFormat12Choice.mmProprietary, com.tools20022.repository.msg.CorporateActionOption110.mmOptionFeatures,
-					com.tools20022.repository.msg.CorporateActionOption108.mmOptionFeatures, com.tools20022.repository.msg.CorporateActionOption106.mmOptionFeatures, com.tools20022.repository.choice.OptionFeaturesFormat15Choice.mmCode,
-					com.tools20022.repository.choice.OptionFeaturesFormat15Choice.mmProprietary, com.tools20022.repository.msg.CorporateActionOption111.mmOptionFeatures,
-					com.tools20022.repository.msg.CorporateActionOption113.mmOptionFeatures, com.tools20022.repository.msg.CorporateActionOption117.mmOptionFeatures, com.tools20022.repository.msg.CorporateActionOption115.mmOptionFeatures,
-					com.tools20022.repository.msg.CorporateActionOption114.mmOptionFeatures, com.tools20022.repository.choice.OptionFeaturesFormat17Choice.mmCode, com.tools20022.repository.choice.OptionFeaturesFormat17Choice.mmProprietary,
-					com.tools20022.repository.choice.OptionFeaturesFormat18Choice.mmCode, com.tools20022.repository.choice.OptionFeaturesFormat18Choice.mmProprietary, com.tools20022.repository.choice.OptionFeaturesFormat16Choice.mmCode,
-					com.tools20022.repository.choice.OptionFeaturesFormat16Choice.mmProprietary, com.tools20022.repository.msg.CorporateActionOption124.mmOptionFeatures,
-					com.tools20022.repository.msg.CorporateActionOption125.mmOptionFeatures, com.tools20022.repository.msg.CorporateActionOption127.mmOptionFeatures, com.tools20022.repository.choice.OptionFeaturesFormat19Choice.mmCode,
-					com.tools20022.repository.choice.OptionFeaturesFormat19Choice.mmProprietary, com.tools20022.repository.choice.OptionFeaturesFormat21Choice.mmCode,
-					com.tools20022.repository.choice.OptionFeaturesFormat21Choice.mmProprietary, com.tools20022.repository.choice.OptionFeaturesFormat20Choice.mmCode,
-					com.tools20022.repository.choice.OptionFeaturesFormat20Choice.mmProprietary, com.tools20022.repository.msg.CorporateActionOption132.mmOptionFeatures,
-					com.tools20022.repository.msg.CorporateActionOption130.mmOptionFeatures, com.tools20022.repository.msg.CorporateActionOption129.mmOptionFeatures, com.tools20022.repository.choice.OptionFeaturesFormat22Choice.mmCode,
-					com.tools20022.repository.choice.OptionFeaturesFormat22Choice.mmProprietary, com.tools20022.repository.msg.CorporateActionOption136.mmOptionFeatures,
-					com.tools20022.repository.msg.CorporateActionOption135.mmOptionFeatures, com.tools20022.repository.msg.CorporateActionOption133.mmOptionFeatures, com.tools20022.repository.choice.OptionFeaturesFormat23Choice.mmCode,
-					com.tools20022.repository.choice.OptionFeaturesFormat23Choice.mmProprietary);
+			derivation_lazy = () -> Arrays.asList(OptionFeaturesFormat1Choice.mmCode, OptionFeaturesFormat1Choice.mmProprietary, CorporateActionOption4.mmOptionFeatures, OptionFeaturesFormat3Choice.mmCode,
+					OptionFeaturesFormat3Choice.mmProprietary, CorporateActionOption14.mmOptionFeatures, CorporateActionOption23.mmOptionFeatures, CorporateActionOption31.mmOptionFeatures, CorporateActionOption37.mmOptionFeatures,
+					CorporateActionOption46.mmOptionFeatures, CorporateActionOption53.mmOptionFeatures, CorporateActionOption54.mmOptionFeatures, OptionFeaturesFormat2Choice.mmCode, OptionFeaturesFormat2Choice.mmProprietary,
+					CorporateActionOption10.mmOptionFeatures, OptionFeaturesFormat4Choice.mmCode, OptionFeaturesFormat4Choice.mmProprietary, CorporateActionOption15.mmOptionFeatures, OptionFeaturesFormat6Choice.mmCode,
+					OptionFeaturesFormat6Choice.mmProprietary, CorporateActionOption20.mmOptionFeatures, OptionFeaturesFormat7Choice.mmCode, OptionFeaturesFormat7Choice.mmProprietary, CorporateActionOption32.mmOptionFeatures,
+					OptionFeaturesFormat5Choice.mmCode, OptionFeaturesFormat5Choice.mmProprietary, OptionFeaturesFormat9Choice.mmCode, OptionFeaturesFormat9Choice.mmProprietary, CorporateActionOption35.mmOptionFeatures,
+					OptionFeaturesFormat11Choice.mmCode, OptionFeaturesFormat11Choice.mmProprietary, CorporateActionOption44.mmOptionFeatures, CorporateActionOption52.mmOptionFeatures, CorporateActionOption55.mmOptionFeatures,
+					CorporateActionOption3.mmOptionFeatures, CorporateActionOption17.mmOptionFeatures, CorporateActionOption19.mmOptionFeatures, OptionFeaturesFormat8Choice.mmCode, OptionFeaturesFormat8Choice.mmProprietary,
+					CorporateActionOption34.mmOptionFeatures, CorporateActionOption36.mmOptionFeatures, CorporateActionOption45.mmOptionFeatures, CorporateActionOption51.mmOptionFeatures, CorporateActionOption56.mmOptionFeatures,
+					OptionFeatures1FormatChoice.mmCode, OptionFeatures1FormatChoice.mmProprietary, CorporateActionOption1.mmOptionFeatures, CorporateActionOption100.mmOptionFeatures, CorporateActionOption101.mmOptionFeatures,
+					CorporateActionOption102.mmOptionFeatures, OptionFeaturesFormat12Choice.mmCode, OptionFeaturesFormat12Choice.mmProprietary, CorporateActionOption110.mmOptionFeatures, CorporateActionOption108.mmOptionFeatures,
+					CorporateActionOption106.mmOptionFeatures, OptionFeaturesFormat15Choice.mmCode, OptionFeaturesFormat15Choice.mmProprietary, CorporateActionOption111.mmOptionFeatures, CorporateActionOption113.mmOptionFeatures,
+					CorporateActionOption117.mmOptionFeatures, CorporateActionOption115.mmOptionFeatures, CorporateActionOption114.mmOptionFeatures, OptionFeaturesFormat17Choice.mmCode, OptionFeaturesFormat17Choice.mmProprietary,
+					OptionFeaturesFormat18Choice.mmCode, OptionFeaturesFormat18Choice.mmProprietary, OptionFeaturesFormat16Choice.mmCode, OptionFeaturesFormat16Choice.mmProprietary, CorporateActionOption124.mmOptionFeatures,
+					CorporateActionOption125.mmOptionFeatures, CorporateActionOption127.mmOptionFeatures, OptionFeaturesFormat19Choice.mmCode, OptionFeaturesFormat19Choice.mmProprietary, OptionFeaturesFormat21Choice.mmCode,
+					OptionFeaturesFormat21Choice.mmProprietary, OptionFeaturesFormat20Choice.mmCode, OptionFeaturesFormat20Choice.mmProprietary, CorporateActionOption132.mmOptionFeatures, CorporateActionOption130.mmOptionFeatures,
+					CorporateActionOption129.mmOptionFeatures, OptionFeaturesFormat22Choice.mmCode, OptionFeaturesFormat22Choice.mmProprietary, CorporateActionOption136.mmOptionFeatures, CorporateActionOption135.mmOptionFeatures,
+					CorporateActionOption133.mmOptionFeatures, OptionFeaturesFormat23Choice.mmCode, OptionFeaturesFormat23Choice.mmProprietary);
 			elementContext_lazy = () -> CorporateActionOption.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "OptionFeatures";
 			definition = "Features that may apply to a corporate action option.";
 			maxOccurs = 1;
@@ -4137,18 +3974,17 @@ public class CorporateActionOption {
 	 */
 	public static final MMBusinessAssociationEnd mmActionPeriod = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionPeriod4.mmActionPeriod, com.tools20022.repository.msg.CorporateActionPeriod9.mmActionPeriod,
-					com.tools20022.repository.msg.CorporateActionPeriod5.mmActionPeriod, com.tools20022.repository.msg.CorporateActionPeriod7.mmActionPeriod, com.tools20022.repository.msg.CorporateActionPeriod1.mmActionPeriod,
-					com.tools20022.repository.msg.CorporateActionPeriod2.mmActionPeriod, com.tools20022.repository.msg.CorporateActionPeriod11.mmActionPeriod);
+			derivation_lazy = () -> Arrays.asList(CorporateActionPeriod4.mmActionPeriod, CorporateActionPeriod9.mmActionPeriod, CorporateActionPeriod5.mmActionPeriod, CorporateActionPeriod7.mmActionPeriod,
+					CorporateActionPeriod1.mmActionPeriod, CorporateActionPeriod2.mmActionPeriod, CorporateActionPeriod11.mmActionPeriod);
 			elementContext_lazy = () -> CorporateActionOption.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ActionPeriod";
 			definition = "Period during which the specified option remains valid, eg, offer period.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmCorporateActionOption;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmObject();
 		}
 	};
@@ -4366,30 +4202,20 @@ public class CorporateActionOption {
 	 */
 	public static final MMBusinessAttribute mmOfferType = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.OfferTypeFormat1Choice.mmCode, com.tools20022.repository.choice.OfferTypeFormat1Choice.mmProprietary,
-					com.tools20022.repository.msg.CorporateActionOption10.mmOfferType, com.tools20022.repository.choice.OfferTypeFormat2Choice.mmCode, com.tools20022.repository.choice.OfferTypeFormat2Choice.mmProprietary,
-					com.tools20022.repository.msg.CorporateActionOption15.mmOfferType, com.tools20022.repository.msg.CorporateActionOption20.mmOfferType, com.tools20022.repository.msg.CorporateActionOption32.mmOfferType,
-					com.tools20022.repository.msg.CorporateActionOption35.mmOfferType, com.tools20022.repository.msg.CorporateActionOption44.mmOfferType, com.tools20022.repository.choice.OfferTypeFormat3Choice.mmCode,
-					com.tools20022.repository.choice.OfferTypeFormat3Choice.mmProprietary, com.tools20022.repository.msg.CorporateActionOption52.mmOfferType, com.tools20022.repository.choice.OfferTypeFormat4Choice.mmCode,
-					com.tools20022.repository.choice.OfferTypeFormat4Choice.mmProprietary, com.tools20022.repository.msg.CorporateActionOption55.mmOfferType, com.tools20022.repository.msg.CorporateAction3.mmOfferType,
-					com.tools20022.repository.msg.CorporateActionOption3.mmOfferType, com.tools20022.repository.msg.CorporateAction4.mmOfferType, com.tools20022.repository.msg.CorporateActionOption17.mmOfferType,
-					com.tools20022.repository.msg.CorporateAction5.mmOfferType, com.tools20022.repository.msg.CorporateActionOption19.mmOfferType, com.tools20022.repository.msg.CorporateAction6.mmOfferType,
-					com.tools20022.repository.msg.CorporateActionOption34.mmOfferType, com.tools20022.repository.msg.CorporateAction7.mmOfferType, com.tools20022.repository.msg.CorporateActionOption36.mmOfferType,
-					com.tools20022.repository.msg.CorporateAction8.mmOfferType, com.tools20022.repository.msg.CorporateActionOption45.mmOfferType, com.tools20022.repository.msg.CorporateAction10.mmOfferType,
-					com.tools20022.repository.msg.CorporateActionOption51.mmOfferType, com.tools20022.repository.msg.CorporateAction11.mmOfferType, com.tools20022.repository.msg.CorporateActionOption56.mmOfferType,
-					com.tools20022.repository.choice.OfferType1FormatChoice.mmCode, com.tools20022.repository.choice.OfferType1FormatChoice.mmProprietary, com.tools20022.repository.msg.CorporateAction2.mmOfferType,
-					com.tools20022.repository.msg.CorporateActionOption1.mmOfferType, com.tools20022.repository.msg.CorporateActionOption100.mmOfferType, com.tools20022.repository.msg.CorporateActionOption101.mmOfferType,
-					com.tools20022.repository.msg.CorporateAction12.mmOfferType, com.tools20022.repository.choice.OfferTypeFormat5Choice.mmCode, com.tools20022.repository.choice.OfferTypeFormat5Choice.mmProprietary,
-					com.tools20022.repository.msg.CorporateActionOption108.mmOfferType, com.tools20022.repository.msg.CorporateActionOption106.mmOfferType, com.tools20022.repository.msg.CorporateAction17.mmOfferType,
-					com.tools20022.repository.choice.OfferTypeFormat8Choice.mmCode, com.tools20022.repository.choice.OfferTypeFormat8Choice.mmProprietary, com.tools20022.repository.msg.CorporateActionOption115.mmOfferType,
-					com.tools20022.repository.msg.CorporateActionOption114.mmOfferType, com.tools20022.repository.msg.CorporateAction31.mmOfferType, com.tools20022.repository.choice.OfferTypeFormat10Choice.mmCode,
-					com.tools20022.repository.choice.OfferTypeFormat10Choice.mmProprietary, com.tools20022.repository.msg.CorporateActionOption125.mmOfferType, com.tools20022.repository.msg.CorporateActionOption127.mmOfferType,
-					com.tools20022.repository.msg.CorporateAction40.mmOfferType, com.tools20022.repository.choice.OfferTypeFormat11Choice.mmCode, com.tools20022.repository.choice.OfferTypeFormat11Choice.mmProprietary,
-					com.tools20022.repository.msg.CorporateActionOption130.mmOfferType, com.tools20022.repository.msg.CorporateActionOption129.mmOfferType, com.tools20022.repository.msg.CorporateActionOption135.mmOfferType,
-					com.tools20022.repository.msg.CorporateActionOption133.mmOfferType);
+			derivation_lazy = () -> Arrays.asList(OfferTypeFormat1Choice.mmCode, OfferTypeFormat1Choice.mmProprietary, CorporateActionOption10.mmOfferType, OfferTypeFormat2Choice.mmCode, OfferTypeFormat2Choice.mmProprietary,
+					CorporateActionOption15.mmOfferType, CorporateActionOption20.mmOfferType, CorporateActionOption32.mmOfferType, CorporateActionOption35.mmOfferType, CorporateActionOption44.mmOfferType, OfferTypeFormat3Choice.mmCode,
+					OfferTypeFormat3Choice.mmProprietary, CorporateActionOption52.mmOfferType, OfferTypeFormat4Choice.mmCode, OfferTypeFormat4Choice.mmProprietary, CorporateActionOption55.mmOfferType, CorporateAction3.mmOfferType,
+					CorporateActionOption3.mmOfferType, CorporateAction4.mmOfferType, CorporateActionOption17.mmOfferType, CorporateAction5.mmOfferType, CorporateActionOption19.mmOfferType, CorporateAction6.mmOfferType,
+					CorporateActionOption34.mmOfferType, CorporateAction7.mmOfferType, CorporateActionOption36.mmOfferType, CorporateAction8.mmOfferType, CorporateActionOption45.mmOfferType, CorporateAction10.mmOfferType,
+					CorporateActionOption51.mmOfferType, CorporateAction11.mmOfferType, CorporateActionOption56.mmOfferType, OfferType1FormatChoice.mmCode, OfferType1FormatChoice.mmProprietary, CorporateAction2.mmOfferType,
+					CorporateActionOption1.mmOfferType, CorporateActionOption100.mmOfferType, CorporateActionOption101.mmOfferType, CorporateAction12.mmOfferType, OfferTypeFormat5Choice.mmCode, OfferTypeFormat5Choice.mmProprietary,
+					CorporateActionOption108.mmOfferType, CorporateActionOption106.mmOfferType, CorporateAction17.mmOfferType, OfferTypeFormat8Choice.mmCode, OfferTypeFormat8Choice.mmProprietary, CorporateActionOption115.mmOfferType,
+					CorporateActionOption114.mmOfferType, CorporateAction31.mmOfferType, OfferTypeFormat10Choice.mmCode, OfferTypeFormat10Choice.mmProprietary, CorporateActionOption125.mmOfferType, CorporateActionOption127.mmOfferType,
+					CorporateAction40.mmOfferType, OfferTypeFormat11Choice.mmCode, OfferTypeFormat11Choice.mmProprietary, CorporateActionOption130.mmOfferType, CorporateActionOption129.mmOfferType, CorporateActionOption135.mmOfferType,
+					CorporateActionOption133.mmOfferType);
 			elementContext_lazy = () -> CorporateActionOption.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "OfferType";
 			definition = "Conditions that apply to the offer.";
 			maxOccurs = 1;
@@ -4560,30 +4386,20 @@ public class CorporateActionOption {
 	 */
 	public static final MMBusinessAttribute mmChargesAppliedIndicator = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionOption10.mmChargesAppliedIndicator, com.tools20022.repository.msg.CorporateActionOption15.mmChargesAppliedIndicator,
-					com.tools20022.repository.msg.CorporateActionOption20.mmChargesAppliedIndicator, com.tools20022.repository.msg.CorporateActionOption32.mmChargesAppliedIndicator,
-					com.tools20022.repository.msg.CorporateActionOption35.mmChargesAppliedIndicator, com.tools20022.repository.msg.CorporateActionOption44.mmChargesAppliedIndicator,
-					com.tools20022.repository.msg.CorporateActionOption52.mmChargesAppliedIndicator, com.tools20022.repository.msg.CorporateActionOption55.mmChargesAppliedIndicator,
-					com.tools20022.repository.msg.CorporateAction3.mmChargesAppliedIndicator, com.tools20022.repository.msg.CorporateActionOption3.mmChargesAppliedIndicator,
-					com.tools20022.repository.msg.CorporateAction4.mmChargesAppliedIndicator, com.tools20022.repository.msg.CorporateActionOption17.mmChargesAppliedIndicator,
-					com.tools20022.repository.msg.CorporateAction5.mmChargesAppliedIndicator, com.tools20022.repository.msg.CorporateActionOption19.mmChargesAppliedIndicator,
-					com.tools20022.repository.msg.CorporateAction6.mmChargesAppliedIndicator, com.tools20022.repository.msg.CorporateActionOption34.mmChargesAppliedIndicator,
-					com.tools20022.repository.msg.CorporateAction7.mmChargesAppliedIndicator, com.tools20022.repository.msg.CorporateActionOption36.mmChargesAppliedIndicator,
-					com.tools20022.repository.msg.CorporateAction8.mmChargesAppliedIndicator, com.tools20022.repository.msg.CorporateActionOption45.mmChargesAppliedIndicator,
-					com.tools20022.repository.msg.CorporateAction10.mmChargesAppliedIndicator, com.tools20022.repository.msg.CorporateActionOption51.mmChargesAppliedIndicator,
-					com.tools20022.repository.msg.CorporateAction11.mmChargesAppliedIndicator, com.tools20022.repository.msg.CorporateActionOption56.mmChargesAppliedIndicator,
-					com.tools20022.repository.msg.CorporateAction2.mmRedemptionChargesAppliedIndicator, com.tools20022.repository.msg.CorporateActionOption1.mmRedemptionChargesAppliedIndicator,
-					com.tools20022.repository.msg.CorporateActionOption100.mmChargesAppliedIndicator, com.tools20022.repository.msg.CorporateActionOption101.mmChargesAppliedIndicator,
-					com.tools20022.repository.msg.CorporateAction12.mmChargesAppliedIndicator, com.tools20022.repository.msg.CorporateActionOption108.mmChargesAppliedIndicator,
-					com.tools20022.repository.msg.CorporateActionOption106.mmChargesAppliedIndicator, com.tools20022.repository.msg.CorporateAction17.mmChargesAppliedIndicator,
-					com.tools20022.repository.msg.CorporateActionOption115.mmChargesAppliedIndicator, com.tools20022.repository.msg.CorporateActionOption114.mmChargesAppliedIndicator,
-					com.tools20022.repository.msg.CorporateAction31.mmChargesAppliedIndicator, com.tools20022.repository.msg.CorporateActionOption125.mmChargesAppliedIndicator,
-					com.tools20022.repository.msg.CorporateActionOption127.mmChargesAppliedIndicator, com.tools20022.repository.msg.CorporateAction40.mmChargesAppliedIndicator,
-					com.tools20022.repository.msg.CorporateActionOption130.mmChargesAppliedIndicator, com.tools20022.repository.msg.CorporateActionOption129.mmChargesAppliedIndicator,
-					com.tools20022.repository.msg.CorporateActionOption135.mmChargesAppliedIndicator, com.tools20022.repository.msg.CorporateActionOption133.mmChargesAppliedIndicator);
+			derivation_lazy = () -> Arrays.asList(CorporateActionOption10.mmChargesAppliedIndicator, CorporateActionOption15.mmChargesAppliedIndicator, CorporateActionOption20.mmChargesAppliedIndicator,
+					CorporateActionOption32.mmChargesAppliedIndicator, CorporateActionOption35.mmChargesAppliedIndicator, CorporateActionOption44.mmChargesAppliedIndicator, CorporateActionOption52.mmChargesAppliedIndicator,
+					CorporateActionOption55.mmChargesAppliedIndicator, CorporateAction3.mmChargesAppliedIndicator, CorporateActionOption3.mmChargesAppliedIndicator, CorporateAction4.mmChargesAppliedIndicator,
+					CorporateActionOption17.mmChargesAppliedIndicator, CorporateAction5.mmChargesAppliedIndicator, CorporateActionOption19.mmChargesAppliedIndicator, CorporateAction6.mmChargesAppliedIndicator,
+					CorporateActionOption34.mmChargesAppliedIndicator, CorporateAction7.mmChargesAppliedIndicator, CorporateActionOption36.mmChargesAppliedIndicator, CorporateAction8.mmChargesAppliedIndicator,
+					CorporateActionOption45.mmChargesAppliedIndicator, CorporateAction10.mmChargesAppliedIndicator, CorporateActionOption51.mmChargesAppliedIndicator, CorporateAction11.mmChargesAppliedIndicator,
+					CorporateActionOption56.mmChargesAppliedIndicator, CorporateAction2.mmRedemptionChargesAppliedIndicator, CorporateActionOption1.mmRedemptionChargesAppliedIndicator, CorporateActionOption100.mmChargesAppliedIndicator,
+					CorporateActionOption101.mmChargesAppliedIndicator, CorporateAction12.mmChargesAppliedIndicator, CorporateActionOption108.mmChargesAppliedIndicator, CorporateActionOption106.mmChargesAppliedIndicator,
+					CorporateAction17.mmChargesAppliedIndicator, CorporateActionOption115.mmChargesAppliedIndicator, CorporateActionOption114.mmChargesAppliedIndicator, CorporateAction31.mmChargesAppliedIndicator,
+					CorporateActionOption125.mmChargesAppliedIndicator, CorporateActionOption127.mmChargesAppliedIndicator, CorporateAction40.mmChargesAppliedIndicator, CorporateActionOption130.mmChargesAppliedIndicator,
+					CorporateActionOption129.mmChargesAppliedIndicator, CorporateActionOption135.mmChargesAppliedIndicator, CorporateActionOption133.mmChargesAppliedIndicator);
 			elementContext_lazy = () -> CorporateActionOption.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ChargesAppliedIndicator";
 			definition = "Indicates whether charges apply to the holder, for instance redemption charges.";
 			maxOccurs = 1;
@@ -4712,24 +4528,17 @@ public class CorporateActionOption {
 	 */
 	public static final MMBusinessAttribute mmWithdrawalAllowedIndicator = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionOption10.mmWithdrawalAllowedIndicator, com.tools20022.repository.msg.CorporateActionOption15.mmWithdrawalAllowedIndicator,
-					com.tools20022.repository.msg.CorporateActionOption20.mmWithdrawalAllowedIndicator, com.tools20022.repository.msg.CorporateActionOption32.mmWithdrawalAllowedIndicator,
-					com.tools20022.repository.msg.CorporateActionOption35.mmWithdrawalAllowedIndicator, com.tools20022.repository.msg.CorporateActionOption44.mmWithdrawalAllowedIndicator,
-					com.tools20022.repository.msg.CorporateActionOption52.mmWithdrawalAllowedIndicator, com.tools20022.repository.msg.CorporateActionOption55.mmWithdrawalAllowedIndicator,
-					com.tools20022.repository.msg.CorporateActionOption3.mmWithdrawalAllowedIndicator, com.tools20022.repository.msg.CorporateActionOption17.mmWithdrawalAllowedIndicator,
-					com.tools20022.repository.msg.CorporateActionOption19.mmWithdrawalAllowedIndicator, com.tools20022.repository.msg.CorporateActionOption34.mmWithdrawalAllowedIndicator,
-					com.tools20022.repository.msg.CorporateActionOption36.mmWithdrawalAllowedIndicator, com.tools20022.repository.msg.CorporateActionOption45.mmWithdrawalAllowedIndicator,
-					com.tools20022.repository.msg.CorporateActionOption51.mmWithdrawalAllowedIndicator, com.tools20022.repository.msg.CorporateActionOption56.mmWithdrawalAllowedIndicator,
-					com.tools20022.repository.msg.CorporateActionOption1.mmWithdrawalAllowedIndicator, com.tools20022.repository.msg.CorporateActionOption100.mmWithdrawalAllowedIndicator,
-					com.tools20022.repository.msg.CorporateActionOption101.mmWithdrawalAllowedIndicator, com.tools20022.repository.msg.CorporateActionOption108.mmWithdrawalAllowedIndicator,
-					com.tools20022.repository.msg.CorporateActionOption106.mmWithdrawalAllowedIndicator, com.tools20022.repository.msg.CorporateActionOption115.mmWithdrawalAllowedIndicator,
-					com.tools20022.repository.msg.CorporateActionOption114.mmWithdrawalAllowedIndicator, com.tools20022.repository.msg.CorporateActionOption125.mmWithdrawalAllowedIndicator,
-					com.tools20022.repository.msg.CorporateActionOption127.mmWithdrawalAllowedIndicator, com.tools20022.repository.msg.CorporateActionOption130.mmWithdrawalAllowedIndicator,
-					com.tools20022.repository.msg.CorporateActionOption129.mmWithdrawalAllowedIndicator, com.tools20022.repository.msg.CorporateActionOption135.mmWithdrawalAllowedIndicator,
-					com.tools20022.repository.msg.CorporateActionOption133.mmWithdrawalAllowedIndicator);
+			derivation_lazy = () -> Arrays.asList(CorporateActionOption10.mmWithdrawalAllowedIndicator, CorporateActionOption15.mmWithdrawalAllowedIndicator, CorporateActionOption20.mmWithdrawalAllowedIndicator,
+					CorporateActionOption32.mmWithdrawalAllowedIndicator, CorporateActionOption35.mmWithdrawalAllowedIndicator, CorporateActionOption44.mmWithdrawalAllowedIndicator, CorporateActionOption52.mmWithdrawalAllowedIndicator,
+					CorporateActionOption55.mmWithdrawalAllowedIndicator, CorporateActionOption3.mmWithdrawalAllowedIndicator, CorporateActionOption17.mmWithdrawalAllowedIndicator, CorporateActionOption19.mmWithdrawalAllowedIndicator,
+					CorporateActionOption34.mmWithdrawalAllowedIndicator, CorporateActionOption36.mmWithdrawalAllowedIndicator, CorporateActionOption45.mmWithdrawalAllowedIndicator, CorporateActionOption51.mmWithdrawalAllowedIndicator,
+					CorporateActionOption56.mmWithdrawalAllowedIndicator, CorporateActionOption1.mmWithdrawalAllowedIndicator, CorporateActionOption100.mmWithdrawalAllowedIndicator, CorporateActionOption101.mmWithdrawalAllowedIndicator,
+					CorporateActionOption108.mmWithdrawalAllowedIndicator, CorporateActionOption106.mmWithdrawalAllowedIndicator, CorporateActionOption115.mmWithdrawalAllowedIndicator, CorporateActionOption114.mmWithdrawalAllowedIndicator,
+					CorporateActionOption125.mmWithdrawalAllowedIndicator, CorporateActionOption127.mmWithdrawalAllowedIndicator, CorporateActionOption130.mmWithdrawalAllowedIndicator, CorporateActionOption129.mmWithdrawalAllowedIndicator,
+					CorporateActionOption135.mmWithdrawalAllowedIndicator, CorporateActionOption133.mmWithdrawalAllowedIndicator);
 			elementContext_lazy = () -> CorporateActionOption.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "WithdrawalAllowedIndicator";
 			definition = "Indicates whether withdrawal of instruction is allowed.";
 			maxOccurs = 1;
@@ -4858,24 +4667,17 @@ public class CorporateActionOption {
 	 */
 	public static final MMBusinessAttribute mmChangeAllowedIndicator = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionOption10.mmChangeAllowedIndicator, com.tools20022.repository.msg.CorporateActionOption15.mmChangeAllowedIndicator,
-					com.tools20022.repository.msg.CorporateActionOption20.mmChangeAllowedIndicator, com.tools20022.repository.msg.CorporateActionOption32.mmChangeAllowedIndicator,
-					com.tools20022.repository.msg.CorporateActionOption35.mmChangeAllowedIndicator, com.tools20022.repository.msg.CorporateActionOption44.mmChangeAllowedIndicator,
-					com.tools20022.repository.msg.CorporateActionOption52.mmChangeAllowedIndicator, com.tools20022.repository.msg.CorporateActionOption55.mmChangeAllowedIndicator,
-					com.tools20022.repository.msg.CorporateActionOption3.mmChangeAllowedIndicator, com.tools20022.repository.msg.CorporateActionOption17.mmChangeAllowedIndicator,
-					com.tools20022.repository.msg.CorporateActionOption19.mmChangeAllowedIndicator, com.tools20022.repository.msg.CorporateActionOption34.mmChangeAllowedIndicator,
-					com.tools20022.repository.msg.CorporateActionOption36.mmChangeAllowedIndicator, com.tools20022.repository.msg.CorporateActionOption45.mmChangeAllowedIndicator,
-					com.tools20022.repository.msg.CorporateActionOption51.mmChangeAllowedIndicator, com.tools20022.repository.msg.CorporateActionOption56.mmChangeAllowedIndicator,
-					com.tools20022.repository.msg.CorporateActionOption1.mmChangeAllowedIndicator, com.tools20022.repository.msg.CorporateActionOption100.mmChangeAllowedIndicator,
-					com.tools20022.repository.msg.CorporateActionOption101.mmChangeAllowedIndicator, com.tools20022.repository.msg.CorporateActionOption108.mmChangeAllowedIndicator,
-					com.tools20022.repository.msg.CorporateActionOption106.mmChangeAllowedIndicator, com.tools20022.repository.msg.CorporateActionOption115.mmChangeAllowedIndicator,
-					com.tools20022.repository.msg.CorporateActionOption114.mmChangeAllowedIndicator, com.tools20022.repository.msg.CorporateActionOption125.mmChangeAllowedIndicator,
-					com.tools20022.repository.msg.CorporateActionOption127.mmChangeAllowedIndicator, com.tools20022.repository.msg.CorporateActionOption130.mmChangeAllowedIndicator,
-					com.tools20022.repository.msg.CorporateActionOption129.mmChangeAllowedIndicator, com.tools20022.repository.msg.CorporateActionOption135.mmChangeAllowedIndicator,
-					com.tools20022.repository.msg.CorporateActionOption133.mmChangeAllowedIndicator);
+			derivation_lazy = () -> Arrays.asList(CorporateActionOption10.mmChangeAllowedIndicator, CorporateActionOption15.mmChangeAllowedIndicator, CorporateActionOption20.mmChangeAllowedIndicator,
+					CorporateActionOption32.mmChangeAllowedIndicator, CorporateActionOption35.mmChangeAllowedIndicator, CorporateActionOption44.mmChangeAllowedIndicator, CorporateActionOption52.mmChangeAllowedIndicator,
+					CorporateActionOption55.mmChangeAllowedIndicator, CorporateActionOption3.mmChangeAllowedIndicator, CorporateActionOption17.mmChangeAllowedIndicator, CorporateActionOption19.mmChangeAllowedIndicator,
+					CorporateActionOption34.mmChangeAllowedIndicator, CorporateActionOption36.mmChangeAllowedIndicator, CorporateActionOption45.mmChangeAllowedIndicator, CorporateActionOption51.mmChangeAllowedIndicator,
+					CorporateActionOption56.mmChangeAllowedIndicator, CorporateActionOption1.mmChangeAllowedIndicator, CorporateActionOption100.mmChangeAllowedIndicator, CorporateActionOption101.mmChangeAllowedIndicator,
+					CorporateActionOption108.mmChangeAllowedIndicator, CorporateActionOption106.mmChangeAllowedIndicator, CorporateActionOption115.mmChangeAllowedIndicator, CorporateActionOption114.mmChangeAllowedIndicator,
+					CorporateActionOption125.mmChangeAllowedIndicator, CorporateActionOption127.mmChangeAllowedIndicator, CorporateActionOption130.mmChangeAllowedIndicator, CorporateActionOption129.mmChangeAllowedIndicator,
+					CorporateActionOption135.mmChangeAllowedIndicator, CorporateActionOption133.mmChangeAllowedIndicator);
 			elementContext_lazy = () -> CorporateActionOption.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ChangeAllowedIndicator";
 			definition = "Indicates whether change of instruction is allowed.";
 			maxOccurs = 1;
@@ -4923,12 +4725,12 @@ public class CorporateActionOption {
 		{
 			elementContext_lazy = () -> CorporateActionOption.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CorporateActionOptionServicing";
 			definition = "Calculation of the entitlement on the basis of the proposed option.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.CorporateActionOptionServicing.mmRelatedOption;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.CorporateActionOptionServicing.mmObject();
 		}
 	};
@@ -4973,12 +4775,12 @@ public class CorporateActionOption {
 		{
 			elementContext_lazy = () -> CorporateActionOption.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ProceedsDefinition";
 			definition = "Definition of exchanges of cash and / or securities available in the processing of corporate actions.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.ProceedsDefinition.mmOption;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.ProceedsDefinition.mmObject();
 		}
 	};
@@ -5021,12 +4823,12 @@ public class CorporateActionOption {
 		{
 			elementContext_lazy = () -> CorporateActionOption.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Distribution";
 			definition = "Distribution process for which an option is selected.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.CorporateActionDistribution.mmOption;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.CorporateActionDistribution.mmObject();
 		}
 	};
@@ -5062,7 +4864,7 @@ public class CorporateActionOption {
 		{
 			elementContext_lazy = () -> CorporateActionOption.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Default";
 			definition = "Specifies whether the option is the default option or not.";
 			maxOccurs = 1;
@@ -5074,20 +4876,17 @@ public class CorporateActionOption {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionOption";
 				definition = "Provides information about the alternatives available to an account owner when participating to a corporate action event. This is defined at a general level without looking at the specificities of the securities balances.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.DateTimePeriod.mmCorporateActionOption, com.tools20022.repository.entity.ProceedsDefinition.mmOption,
 						com.tools20022.repository.entity.CorporateActionElection.mmOption, com.tools20022.repository.entity.ChoiceCorporateAction.mmCorporateActionOptionDefinition,
 						com.tools20022.repository.entity.CorporateActionDistribution.mmOption, com.tools20022.repository.entity.CorporateActionOptionServicing.mmRelatedOption);
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CorporateActionOption.mmOptionNumber, com.tools20022.repository.entity.CorporateActionOption.mmOptionType,
-						com.tools20022.repository.entity.CorporateActionOption.mmFractionDisposition, com.tools20022.repository.entity.CorporateActionOption.mmCurrencyOption,
-						com.tools20022.repository.entity.CorporateActionOption.mmRelatedChoiceCorporateAction, com.tools20022.repository.entity.CorporateActionOption.mmCorporateActionElection,
-						com.tools20022.repository.entity.CorporateActionOption.mmOptionFeatures, com.tools20022.repository.entity.CorporateActionOption.mmActionPeriod, com.tools20022.repository.entity.CorporateActionOption.mmOfferType,
-						com.tools20022.repository.entity.CorporateActionOption.mmChargesAppliedIndicator, com.tools20022.repository.entity.CorporateActionOption.mmWithdrawalAllowedIndicator,
-						com.tools20022.repository.entity.CorporateActionOption.mmChangeAllowedIndicator, com.tools20022.repository.entity.CorporateActionOption.mmCorporateActionOptionServicing,
-						com.tools20022.repository.entity.CorporateActionOption.mmProceedsDefinition, com.tools20022.repository.entity.CorporateActionOption.mmDistribution, com.tools20022.repository.entity.CorporateActionOption.mmDefault);
+				element_lazy = () -> Arrays.asList(CorporateActionOption.mmOptionNumber, CorporateActionOption.mmOptionType, CorporateActionOption.mmFractionDisposition, CorporateActionOption.mmCurrencyOption,
+						CorporateActionOption.mmRelatedChoiceCorporateAction, CorporateActionOption.mmCorporateActionElection, CorporateActionOption.mmOptionFeatures, CorporateActionOption.mmActionPeriod, CorporateActionOption.mmOfferType,
+						CorporateActionOption.mmChargesAppliedIndicator, CorporateActionOption.mmWithdrawalAllowedIndicator, CorporateActionOption.mmChangeAllowedIndicator, CorporateActionOption.mmCorporateActionOptionServicing,
+						CorporateActionOption.mmProceedsDefinition, CorporateActionOption.mmDistribution, CorporateActionOption.mmDefault);
 				derivationComponent_lazy = () -> Arrays.asList(CorporateActionOption4Choice.mmObject(), FractionDispositionType2Choice.mmObject(), SecuritiesOption2.mmObject(), CorporateActionOption5.mmObject(),
 						CorporateActionOption6Choice.mmObject(), FractionDispositionType8Choice.mmObject(), SecuritiesOption7.mmObject(), CorporateActionOption13.mmObject(), FractionDispositionType10Choice.mmObject(),
 						CorporateActionOption25.mmObject(), FractionDispositionType11Choice.mmObject(), CorporateActionOption30.mmObject(), CorporateActionOption12Choice.mmObject(), CorporateActionOption38.mmObject(),

@@ -18,7 +18,10 @@
 package com.tools20022.repository.entity;
 
 import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.InvestmentFundPartyRole;
+import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -90,15 +93,12 @@ public class Settlor extends InvestmentFundPartyRole {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Settlor";
 				definition = "Entity that creates a trust or contributes assets to the trust.";
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountParties5.mmSettler, com.tools20022.repository.msg.AccountParties6.mmSettler, com.tools20022.repository.msg.AccountParties4.mmSettler,
-						com.tools20022.repository.msg.AccountParties7.mmSettler, com.tools20022.repository.msg.AccountParties9.mmSettler, com.tools20022.repository.msg.AccountParties8.mmSettler,
-						com.tools20022.repository.msg.AccountParties11.mmSettlor, com.tools20022.repository.msg.AccountParties10.mmSettlor, com.tools20022.repository.msg.AccountParties12.mmSettlor,
-						com.tools20022.repository.msg.AccountParties13.mmSettlor, com.tools20022.repository.msg.AccountParties14.mmSettlor, com.tools20022.repository.msg.AccountParties15.mmSettlor,
-						com.tools20022.repository.msg.AccountParties16.mmSettlor);
+				derivationElement_lazy = () -> Arrays.asList(AccountParties5.mmSettler, AccountParties6.mmSettler, AccountParties4.mmSettler, AccountParties7.mmSettler, AccountParties9.mmSettler, AccountParties8.mmSettler,
+						AccountParties11.mmSettlor, AccountParties10.mmSettlor, AccountParties12.mmSettlor, AccountParties13.mmSettlor, AccountParties14.mmSettlor, AccountParties15.mmSettlor, AccountParties16.mmSettlor);
 				superType_lazy = () -> InvestmentFundPartyRole.mmObject();
 			}
 		});

@@ -19,9 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.MatchingStatus8Choice;
 import com.tools20022.repository.choice.ProcessingStatus30Choice;
 import com.tools20022.repository.choice.SettlementStatus1Choice;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -104,7 +106,7 @@ public class SettlementTransactionStatusType1 {
 			componentContext_lazy = () -> SettlementTransactionStatusType1.mmObject();
 			isDerived = false;
 			xmlTag = "PrcgSts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProcessingStatus";
 			definition = "Provides details on the processing status of the transaction.";
 			minOccurs = 0;
@@ -149,7 +151,7 @@ public class SettlementTransactionStatusType1 {
 			componentContext_lazy = () -> SettlementTransactionStatusType1.mmObject();
 			isDerived = false;
 			xmlTag = "IfrrdMtchgSts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InferredMatchingStatus";
 			definition = "Provides the matching status of an instruction as known by the account servicer based on an allegement. At this time no matching took place on the market (at the CSD/ICSD).";
 			minOccurs = 0;
@@ -190,7 +192,7 @@ public class SettlementTransactionStatusType1 {
 			componentContext_lazy = () -> SettlementTransactionStatusType1.mmObject();
 			isDerived = false;
 			xmlTag = "MtchgSts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MatchingStatus";
 			definition = "Provides the matching status of the instruction.";
 			minOccurs = 0;
@@ -231,7 +233,7 @@ public class SettlementTransactionStatusType1 {
 			componentContext_lazy = () -> SettlementTransactionStatusType1.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmSts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementStatus";
 			definition = "Provides the settlement status of a transaction.";
 			minOccurs = 0;
@@ -271,7 +273,7 @@ public class SettlementTransactionStatusType1 {
 			componentContext_lazy = () -> SettlementTransactionStatusType1.mmObject();
 			isDerived = false;
 			xmlTag = "Sttld";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Settled";
 			definition = "Defines that the transaction has been settled.";
 			maxOccurs = 1;
@@ -284,11 +286,10 @@ public class SettlementTransactionStatusType1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SettlementTransactionStatusType1.mmProcessingStatus, com.tools20022.repository.msg.SettlementTransactionStatusType1.mmInferredMatchingStatus,
-						com.tools20022.repository.msg.SettlementTransactionStatusType1.mmMatchingStatus, com.tools20022.repository.msg.SettlementTransactionStatusType1.mmSettlementStatus,
-						com.tools20022.repository.msg.SettlementTransactionStatusType1.mmSettled);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(SettlementTransactionStatusType1.mmProcessingStatus, SettlementTransactionStatusType1.mmInferredMatchingStatus, SettlementTransactionStatusType1.mmMatchingStatus,
+						SettlementTransactionStatusType1.mmSettlementStatus, SettlementTransactionStatusType1.mmSettled);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SettlementTransactionStatusType1";
 				definition = "Choice of the securities settlement instruction status type.";
 			}

@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CorporateActionCancellationReasonCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -84,7 +86,7 @@ public class CorporateActionCancellationReason1Code extends CorporateActionCance
 	 */
 	public static final MMCode mmWithrawal = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Withrawal";
 			owner_lazy = () -> CorporateActionCancellationReason1Code.mmObject();
 		}
@@ -107,7 +109,7 @@ public class CorporateActionCancellationReason1Code extends CorporateActionCance
 	 */
 	public static final MMCode mmProcessing = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Processing";
 			owner_lazy = () -> CorporateActionCancellationReason1Code.mmObject();
 		}
@@ -116,12 +118,12 @@ public class CorporateActionCancellationReason1Code extends CorporateActionCance
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("WITH");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionCancellationReason1Code";
 				definition = "Specifies reasons for cancellation of a corporate action event.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CorporateActionCancellationReason1Code.mmWithrawal, com.tools20022.repository.codeset.CorporateActionCancellationReason1Code.mmProcessing);
+				code_lazy = () -> Arrays.asList(CorporateActionCancellationReason1Code.mmWithrawal, CorporateActionCancellationReason1Code.mmProcessing);
 				trace_lazy = () -> CorporateActionCancellationReasonCode.mmObject();
 			}
 		});

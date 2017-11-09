@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReasonCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -600,7 +602,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 */
 	public static final MMCode mmReorganizationRelatedAdjustment = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReorganizationRelatedAdjustment";
 			owner_lazy = () -> DTCAdjustmentPaymentSubReason1Code.mmObject();
 		}
@@ -623,7 +625,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 */
 	public static final MMCode mmRepPaymentCharge = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RepPaymentCharge";
 			owner_lazy = () -> DTCAdjustmentPaymentSubReason1Code.mmObject();
 		}
@@ -646,7 +648,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 */
 	public static final MMCode mmReversalOfACODWithdrawal = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReversalOfACODWithdrawal";
 			owner_lazy = () -> DTCAdjustmentPaymentSubReason1Code.mmObject();
 		}
@@ -669,7 +671,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 */
 	public static final MMCode mmReversalOfADeposit = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReversalOfADeposit";
 			owner_lazy = () -> DTCAdjustmentPaymentSubReason1Code.mmObject();
 		}
@@ -692,7 +694,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 */
 	public static final MMCode mmReversalOfAnAccrualClaimPayment = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReversalOfAnAccrualClaimPayment";
 			owner_lazy = () -> DTCAdjustmentPaymentSubReason1Code.mmObject();
 		}
@@ -715,7 +717,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 */
 	public static final MMCode mmReversalOfaWithdrawalByTransfer = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReversalOfaWithdrawalByTransfer";
 			owner_lazy = () -> DTCAdjustmentPaymentSubReason1Code.mmObject();
 		}
@@ -738,7 +740,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 */
 	public static final MMCode mmReverseOfEscheatedAmountOfClaim = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReverseOfEscheatedAmountOfClaim";
 			owner_lazy = () -> DTCAdjustmentPaymentSubReason1Code.mmObject();
 		}
@@ -761,7 +763,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 */
 	public static final MMCode mmReverseOfTheSharesEscheatedToNYStateInError = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReverseOfTheSharesEscheatedToNYStateInError";
 			owner_lazy = () -> DTCAdjustmentPaymentSubReason1Code.mmObject();
 		}
@@ -784,7 +786,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 */
 	public static final MMCode mmRevisionOfChargeForWithholdingTax = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RevisionOfChargeForWithholdingTax";
 			owner_lazy = () -> DTCAdjustmentPaymentSubReason1Code.mmObject();
 		}
@@ -807,7 +809,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 */
 	public static final MMCode mmScriptSharesExited = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ScriptSharesExited";
 			owner_lazy = () -> DTCAdjustmentPaymentSubReason1Code.mmObject();
 		}
@@ -831,7 +833,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 */
 	public static final MMCode mmShareAdjustmentFromABuyTransactionInOurDTCCDividendTradingAccount = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ShareAdjustmentFromABuyTransactionInOurDTCCDividendTradingAccount";
 			owner_lazy = () -> DTCAdjustmentPaymentSubReason1Code.mmObject();
 		}
@@ -856,7 +858,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 */
 	public static final MMCode mmShareAdjustmentResultingFromASellTransactionAffectedInOurDTCCDividendTradingAccount = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ShareAdjustmentResultingFromASellTransactionAffectedInOurDTCCDividendTradingAccount";
 			owner_lazy = () -> DTCAdjustmentPaymentSubReason1Code.mmObject();
 		}
@@ -879,7 +881,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 */
 	public static final MMCode mmSpinOffAllocation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SpinOffAllocation";
 			owner_lazy = () -> DTCAdjustmentPaymentSubReason1Code.mmObject();
 		}
@@ -902,7 +904,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 */
 	public static final MMCode mmStockLoanAdjustment = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StockLoanAdjustment";
 			owner_lazy = () -> DTCAdjustmentPaymentSubReason1Code.mmObject();
 		}
@@ -925,7 +927,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 */
 	public static final MMCode mmStockLoanOrRepoPaymentOrder = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StockLoanOrRepoPaymentOrder";
 			owner_lazy = () -> DTCAdjustmentPaymentSubReason1Code.mmObject();
 		}
@@ -948,7 +950,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 */
 	public static final MMCode mmSupplementalInterimActivity = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementalInterimActivity";
 			owner_lazy = () -> DTCAdjustmentPaymentSubReason1Code.mmObject();
 		}
@@ -971,7 +973,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 */
 	public static final MMCode mmSupplementalInterimActivityFromMidwest = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementalInterimActivityFromMidwest";
 			owner_lazy = () -> DTCAdjustmentPaymentSubReason1Code.mmObject();
 		}
@@ -994,7 +996,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 */
 	public static final MMCode mmSupplementalInterimActivityFromPhiladelphia = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementalInterimActivityFromPhiladelphia";
 			owner_lazy = () -> DTCAdjustmentPaymentSubReason1Code.mmObject();
 		}
@@ -1017,7 +1019,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 */
 	public static final MMCode mmSupplementaryInterimOn = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryInterimOn";
 			owner_lazy = () -> DTCAdjustmentPaymentSubReason1Code.mmObject();
 		}
@@ -1040,7 +1042,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 */
 	public static final MMCode mmAccrualClaimPayment = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccrualClaimPayment";
 			owner_lazy = () -> DTCAdjustmentPaymentSubReason1Code.mmObject();
 		}
@@ -1063,7 +1065,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 */
 	public static final MMCode mmAccruedInterestNotPaid = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccruedInterestNotPaid";
 			owner_lazy = () -> DTCAdjustmentPaymentSubReason1Code.mmObject();
 		}
@@ -1086,7 +1088,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 */
 	public static final MMCode mmAccruedInterestWrongRate = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccruedInterestWrongRate";
 			owner_lazy = () -> DTCAdjustmentPaymentSubReason1Code.mmObject();
 		}
@@ -1109,7 +1111,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 */
 	public static final MMCode mmAdditionalRightsForBeneficialOwner = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalRightsForBeneficialOwner";
 			owner_lazy = () -> DTCAdjustmentPaymentSubReason1Code.mmObject();
 		}
@@ -1133,7 +1135,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 */
 	public static final MMCode mmAdjustmentForAWithdrawalByTransferNotTransferredIntoYourClientsName = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdjustmentForAWithdrawalByTransferNotTransferredIntoYourClientsName";
 			owner_lazy = () -> DTCAdjustmentPaymentSubReason1Code.mmObject();
 		}
@@ -1156,7 +1158,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 */
 	public static final MMCode mmAdjustmentForCashInLieuOfFractionalShares = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdjustmentForCashInLieuOfFractionalShares";
 			owner_lazy = () -> DTCAdjustmentPaymentSubReason1Code.mmObject();
 		}
@@ -1179,7 +1181,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 */
 	public static final MMCode mmAdjustmentForCashOnIncreasedShares = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdjustmentForCashOnIncreasedShares";
 			owner_lazy = () -> DTCAdjustmentPaymentSubReason1Code.mmObject();
 		}
@@ -1202,7 +1204,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 */
 	public static final MMCode mmAdjustmentForWrittenInquiry = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdjustmentForWrittenInquiry";
 			owner_lazy = () -> DTCAdjustmentPaymentSubReason1Code.mmObject();
 		}
@@ -1225,7 +1227,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 */
 	public static final MMCode mmAdjustmentIsInResponseToYourInquiry = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdjustmentIsInResponseToYourInquiry";
 			owner_lazy = () -> DTCAdjustmentPaymentSubReason1Code.mmObject();
 		}
@@ -1250,7 +1252,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 */
 	public static final MMCode mmAdjustmentMadeForAWithdrawalByTransferSetUpAfterTheCutOffDateMadeTransferIntoYourClientsName = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdjustmentMadeForAWithdrawalByTransferSetUpAfterTheCutOffDateMadeTransferIntoYourClientsName";
 			owner_lazy = () -> DTCAdjustmentPaymentSubReason1Code.mmObject();
 		}
@@ -1273,7 +1275,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 */
 	public static final MMCode mmAdjustmentToAvoidFiscalPayment = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdjustmentToAvoidFiscalPayment";
 			owner_lazy = () -> DTCAdjustmentPaymentSubReason1Code.mmObject();
 		}
@@ -1296,7 +1298,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 */
 	public static final MMCode mmAdjustmentToYourDividendReinvestmentPosition = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdjustmentToYourDividendReinvestmentPosition";
 			owner_lazy = () -> DTCAdjustmentPaymentSubReason1Code.mmObject();
 		}
@@ -1319,7 +1321,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 */
 	public static final MMCode mmAgentPaidBasedOnCombinedFractions = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AgentPaidBasedOnCombinedFractions";
 			owner_lazy = () -> DTCAdjustmentPaymentSubReason1Code.mmObject();
 		}
@@ -1342,7 +1344,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 */
 	public static final MMCode mmAllocationAdjustment = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AllocationAdjustment";
 			owner_lazy = () -> DTCAdjustmentPaymentSubReason1Code.mmObject();
 		}
@@ -1365,7 +1367,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 */
 	public static final MMCode mmAllocationAdjustmentDueToFractionsRoundedUpByTheAgent = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AllocationAdjustmentDueToFractionsRoundedUpByTheAgent";
 			owner_lazy = () -> DTCAdjustmentPaymentSubReason1Code.mmObject();
 		}
@@ -1388,7 +1390,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 */
 	public static final MMCode mmAllocationOfBabyBondsAmountToBeExited = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AllocationOfBabyBondsAmountToBeExited";
 			owner_lazy = () -> DTCAdjustmentPaymentSubReason1Code.mmObject();
 		}
@@ -1411,7 +1413,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 */
 	public static final MMCode mmAllocationOfDRPTEDSInstruction = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AllocationOfDRPTEDSInstruction";
 			owner_lazy = () -> DTCAdjustmentPaymentSubReason1Code.mmObject();
 		}
@@ -1434,7 +1436,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 */
 	public static final MMCode mmAnnouncementDeletedOrFailTracking = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AnnouncementDeletedOrFailTracking";
 			owner_lazy = () -> DTCAdjustmentPaymentSubReason1Code.mmObject();
 		}
@@ -1457,7 +1459,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 */
 	public static final MMCode mmAssumedByYourGoodselves = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AssumedByYourGoodselves";
 			owner_lazy = () -> DTCAdjustmentPaymentSubReason1Code.mmObject();
 		}
@@ -1480,7 +1482,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 */
 	public static final MMCode mmBabyBondPayment = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BabyBondPayment";
 			owner_lazy = () -> DTCAdjustmentPaymentSubReason1Code.mmObject();
 		}
@@ -1503,7 +1505,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 */
 	public static final MMCode mmCalledCertificatesAccruedErroneousInterestChargeBack = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CalledCertificatesAccruedErroneousInterestChargeBack";
 			owner_lazy = () -> DTCAdjustmentPaymentSubReason1Code.mmObject();
 		}
@@ -1526,7 +1528,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 */
 	public static final MMCode mmCalledCertificatesCheckInParticipantsNameChargeBack = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CalledCertificatesCheckInParticipantsNameChargeBack";
 			owner_lazy = () -> DTCAdjustmentPaymentSubReason1Code.mmObject();
 		}
@@ -1549,7 +1551,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 */
 	public static final MMCode mmCashDueOnAnAccruedStockPayment = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashDueOnAnAccruedStockPayment";
 			owner_lazy = () -> DTCAdjustmentPaymentSubReason1Code.mmObject();
 		}
@@ -1572,7 +1574,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 */
 	public static final MMCode mmChargeForFrenchAvoidFiscalTaxCredit = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChargeForFrenchAvoidFiscalTaxCredit";
 			owner_lazy = () -> DTCAdjustmentPaymentSubReason1Code.mmObject();
 		}
@@ -1595,7 +1597,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 */
 	public static final MMCode mmChargeInLieuOfReceiptOfDividendReinvestment = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChargeInLieuOfReceiptOfDividendReinvestment";
 			owner_lazy = () -> DTCAdjustmentPaymentSubReason1Code.mmObject();
 		}
@@ -1618,7 +1620,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 */
 	public static final MMCode mmCODWithdrawal = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CODWithdrawal";
 			owner_lazy = () -> DTCAdjustmentPaymentSubReason1Code.mmObject();
 		}
@@ -1641,7 +1643,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 */
 	public static final MMCode mmCompanyInDefault = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CompanyInDefault";
 			owner_lazy = () -> DTCAdjustmentPaymentSubReason1Code.mmObject();
 		}
@@ -1664,7 +1666,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 */
 	public static final MMCode mmCompanyDidNotDeclareDividend = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CompanyDidNotDeclareDividend";
 			owner_lazy = () -> DTCAdjustmentPaymentSubReason1Code.mmObject();
 		}
@@ -1688,7 +1690,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 */
 	public static final MMCode mmCODWithdrawalNotDeliveredAndCertificatesIssuedInTheNameOfYourNominee = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CODWithdrawalNotDeliveredAndCertificatesIssuedInTheNameOfYourNominee";
 			owner_lazy = () -> DTCAdjustmentPaymentSubReason1Code.mmObject();
 		}
@@ -1711,7 +1713,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 */
 	public static final MMCode mmCODBuyBackWithdrawal = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CODBuyBackWithdrawal";
 			owner_lazy = () -> DTCAdjustmentPaymentSubReason1Code.mmObject();
 		}
@@ -1734,7 +1736,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 */
 	public static final MMCode mmChargeAtWithholdingRate = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChargeAtWithholdingRate";
 			owner_lazy = () -> DTCAdjustmentPaymentSubReason1Code.mmObject();
 		}
@@ -1757,7 +1759,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 */
 	public static final MMCode mmCashDueOnDRPShareAllocation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashDueOnDRPShareAllocation";
 			owner_lazy = () -> DTCAdjustmentPaymentSubReason1Code.mmObject();
 		}
@@ -1780,7 +1782,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 */
 	public static final MMCode mmCashDueOnStockDividend = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashDueOnStockDividend";
 			owner_lazy = () -> DTCAdjustmentPaymentSubReason1Code.mmObject();
 		}
@@ -1803,7 +1805,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 */
 	public static final MMCode mmChangeInTheRecordDate = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChangeInTheRecordDate";
 			owner_lazy = () -> DTCAdjustmentPaymentSubReason1Code.mmObject();
 		}
@@ -1827,7 +1829,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 */
 	public static final MMCode mmCODWithdrawalNotDeliveredAndCertificatesInTheNameOfYourGoodselves = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CODWithdrawalNotDeliveredAndCertificatesInTheNameOfYourGoodselves";
 			owner_lazy = () -> DTCAdjustmentPaymentSubReason1Code.mmObject();
 		}
@@ -1850,7 +1852,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 */
 	public static final MMCode mmCouponCollectionService = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CouponCollectionService";
 			owner_lazy = () -> DTCAdjustmentPaymentSubReason1Code.mmObject();
 		}
@@ -1874,7 +1876,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 */
 	public static final MMCode mmCTFSHeldOverRecordDateOnWhichWeGuaranteeToHoldYouFreeAndHarmless = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CTFSHeldOverRecordDateOnWhichWeGuaranteeToHoldYouFreeAndHarmless";
 			owner_lazy = () -> DTCAdjustmentPaymentSubReason1Code.mmObject();
 		}
@@ -1897,7 +1899,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 */
 	public static final MMCode mmCustodyPayment = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CustodyPayment";
 			owner_lazy = () -> DTCAdjustmentPaymentSubReason1Code.mmObject();
 		}
@@ -1920,7 +1922,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 */
 	public static final MMCode mmDateRevision = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DateRevision";
 			owner_lazy = () -> DTCAdjustmentPaymentSubReason1Code.mmObject();
 		}
@@ -1943,7 +1945,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 */
 	public static final MMCode mmDelete = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Delete";
 			owner_lazy = () -> DTCAdjustmentPaymentSubReason1Code.mmObject();
 		}
@@ -1966,7 +1968,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 */
 	public static final MMCode mmDeliverOrder = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeliverOrder";
 			owner_lazy = () -> DTCAdjustmentPaymentSubReason1Code.mmObject();
 		}
@@ -1989,7 +1991,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 */
 	public static final MMCode mmDeliverOrderActivity = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeliverOrderActivity";
 			owner_lazy = () -> DTCAdjustmentPaymentSubReason1Code.mmObject();
 		}
@@ -2012,7 +2014,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 */
 	public static final MMCode mmDepositAdjustment = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DepositAdjustment";
 			owner_lazy = () -> DTCAdjustmentPaymentSubReason1Code.mmObject();
 		}
@@ -2036,7 +2038,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 */
 	public static final MMCode mmDepositLostCertificateOverTheRecordDateWasRegisteredInTheNameOfYour = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DepositLostCertificateOverTheRecordDateWasRegisteredInTheNameOfYour";
 			owner_lazy = () -> DTCAdjustmentPaymentSubReason1Code.mmObject();
 		}
@@ -2059,7 +2061,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 */
 	public static final MMCode mmDepositTransferredIntoTheNameOfTheCEDEAndCo = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DepositTransferredIntoTheNameOfTheCEDEAndCo";
 			owner_lazy = () -> DTCAdjustmentPaymentSubReason1Code.mmObject();
 		}
@@ -2082,7 +2084,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 */
 	public static final MMCode mmDividendReinvestmentAllocation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DividendReinvestmentAllocation";
 			owner_lazy = () -> DTCAdjustmentPaymentSubReason1Code.mmObject();
 		}
@@ -2107,7 +2109,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 */
 	public static final MMCode mmDividendReinvestmentAllocationAdjustmentDueToYourSubAccountingInstructionsToTheAgent = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DividendReinvestmentAllocationAdjustmentDueToYourSubAccountingInstructionsToTheAgent";
 			owner_lazy = () -> DTCAdjustmentPaymentSubReason1Code.mmObject();
 		}
@@ -2130,7 +2132,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 */
 	public static final MMCode mmDividendReinvestmentAllocationOfCashInLieuOfFractions = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DividendReinvestmentAllocationOfCashInLieuOfFractions";
 			owner_lazy = () -> DTCAdjustmentPaymentSubReason1Code.mmObject();
 		}
@@ -2153,7 +2155,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 */
 	public static final MMCode mmDTCCClaimAgainstRegisteredHolderInTheNameOfYourCustomer = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCCClaimAgainstRegisteredHolderInTheNameOfYourCustomer";
 			owner_lazy = () -> DTCAdjustmentPaymentSubReason1Code.mmObject();
 		}
@@ -2177,7 +2179,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 */
 	public static final MMCode mmDTCCClaimAgainstRegisteredHolderInTheNameOfYourCustomerLateTransfer = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCCClaimAgainstRegisteredHolderInTheNameOfYourCustomerLateTransfer";
 			owner_lazy = () -> DTCAdjustmentPaymentSubReason1Code.mmObject();
 		}
@@ -2200,7 +2202,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 */
 	public static final MMCode mmDTCCClaimAgainstRegisteredHolderInTheNameOfYourGoodselves = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCCClaimAgainstRegisteredHolderInTheNameOfYourGoodselves";
 			owner_lazy = () -> DTCAdjustmentPaymentSubReason1Code.mmObject();
 		}
@@ -2224,7 +2226,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 */
 	public static final MMCode mmDTCCClaimAgainstRegisteredHolderInTheNameOfYourGoodselvesLateTransfer = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCCClaimAgainstRegisteredHolderInTheNameOfYourGoodselvesLateTransfer";
 			owner_lazy = () -> DTCAdjustmentPaymentSubReason1Code.mmObject();
 		}
@@ -2247,7 +2249,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 */
 	public static final MMCode mmDTCCClaimAgainstRegisteredHolderInTheNameOfYourNominee = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCCClaimAgainstRegisteredHolderInTheNameOfYourNominee";
 			owner_lazy = () -> DTCAdjustmentPaymentSubReason1Code.mmObject();
 		}
@@ -2271,7 +2273,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 */
 	public static final MMCode mmDTCCClaimAgainstRegisteredHolderInTheNameOfYourNomineeLateTransfer = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCCClaimAgainstRegisteredHolderInTheNameOfYourNomineeLateTransfer";
 			owner_lazy = () -> DTCAdjustmentPaymentSubReason1Code.mmObject();
 		}
@@ -2294,7 +2296,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 */
 	public static final MMCode mmDTCCClaimOnRegisteredHolderInTheNameOfYourCustomer = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCCClaimOnRegisteredHolderInTheNameOfYourCustomer";
 			owner_lazy = () -> DTCAdjustmentPaymentSubReason1Code.mmObject();
 		}
@@ -2317,7 +2319,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 */
 	public static final MMCode mmDTCCClaimOnRegisteredHolderInTheNameOfYourGoodselves = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCCClaimOnRegisteredHolderInTheNameOfYourGoodselves";
 			owner_lazy = () -> DTCAdjustmentPaymentSubReason1Code.mmObject();
 		}
@@ -2340,7 +2342,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 */
 	public static final MMCode mmDueBill = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DueBill";
 			owner_lazy = () -> DTCAdjustmentPaymentSubReason1Code.mmObject();
 		}
@@ -2363,7 +2365,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 */
 	public static final MMCode mmDueBillFailTracking = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DueBillFailTracking";
 			owner_lazy = () -> DTCAdjustmentPaymentSubReason1Code.mmObject();
 		}
@@ -2386,7 +2388,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 */
 	public static final MMCode mmDueBillReversal = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DueBillReversal";
 			owner_lazy = () -> DTCAdjustmentPaymentSubReason1Code.mmObject();
 		}
@@ -2409,7 +2411,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 */
 	public static final MMCode mmDWACAdjustment = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DWACAdjustment";
 			owner_lazy = () -> DTCAdjustmentPaymentSubReason1Code.mmObject();
 		}
@@ -2432,7 +2434,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 */
 	public static final MMCode mmDWACBuyBackWithdrawal = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DWACBuyBackWithdrawal";
 			owner_lazy = () -> DTCAdjustmentPaymentSubReason1Code.mmObject();
 		}
@@ -2455,7 +2457,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 */
 	public static final MMCode mmForeignCashDividendsOrBondInterestAllocationAtExemptRate = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForeignCashDividendsOrBondInterestAllocationAtExemptRate";
 			owner_lazy = () -> DTCAdjustmentPaymentSubReason1Code.mmObject();
 		}
@@ -2478,7 +2480,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 */
 	public static final MMCode mmForeignCashDividendsOrBondInterestAllocationAtUnfavorableRate = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForeignCashDividendsOrBondInterestAllocationAtUnfavorableRate";
 			owner_lazy = () -> DTCAdjustmentPaymentSubReason1Code.mmObject();
 		}
@@ -2501,7 +2503,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 */
 	public static final MMCode mmForeignCashDividendsOrBondsInterestAllocationAtFavorableRate = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForeignCashDividendsOrBondsInterestAllocationAtFavorableRate";
 			owner_lazy = () -> DTCAdjustmentPaymentSubReason1Code.mmObject();
 		}
@@ -2524,7 +2526,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 */
 	public static final MMCode mmForeignCashDividendUnfavorableRate = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForeignCashDividendUnfavorableRate";
 			owner_lazy = () -> DTCAdjustmentPaymentSubReason1Code.mmObject();
 		}
@@ -2547,7 +2549,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 */
 	public static final MMCode mmFractionalRights = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FractionalRights";
 			owner_lazy = () -> DTCAdjustmentPaymentSubReason1Code.mmObject();
 		}
@@ -2570,7 +2572,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 */
 	public static final MMCode mmFrenchWithholdingTax10Percent = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FrenchWithholdingTax10Percent";
 			owner_lazy = () -> DTCAdjustmentPaymentSubReason1Code.mmObject();
 		}
@@ -2593,7 +2595,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 */
 	public static final MMCode mmFrenchWithholdingTax15Percent = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FrenchWithholdingTax15Percent";
 			owner_lazy = () -> DTCAdjustmentPaymentSubReason1Code.mmObject();
 		}
@@ -2616,7 +2618,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 */
 	public static final MMCode mmFrenchWithholdingTax25Percent = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FrenchWithholdingTax25Percent";
 			owner_lazy = () -> DTCAdjustmentPaymentSubReason1Code.mmObject();
 		}
@@ -2639,7 +2641,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 */
 	public static final MMCode mmFrozenLetterMovement = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FrozenLetterMovement";
 			owner_lazy = () -> DTCAdjustmentPaymentSubReason1Code.mmObject();
 		}
@@ -2662,7 +2664,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 */
 	public static final MMCode mmGracePeriod = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GracePeriod";
 			owner_lazy = () -> DTCAdjustmentPaymentSubReason1Code.mmObject();
 		}
@@ -2685,7 +2687,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 */
 	public static final MMCode mmInLieuOfReorgDepositActivity = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InLieuOfReorgDepositActivity";
 			owner_lazy = () -> DTCAdjustmentPaymentSubReason1Code.mmObject();
 		}
@@ -2708,7 +2710,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 */
 	public static final MMCode mmInSettlementOfATradeDTCCReorgAccount = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InSettlementOfATradeDTCCReorgAccount";
 			owner_lazy = () -> DTCAdjustmentPaymentSubReason1Code.mmObject();
 		}
@@ -2731,7 +2733,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 */
 	public static final MMCode mmInterestAdjustedDueToEarlyWithdrawal = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterestAdjustedDueToEarlyWithdrawal";
 			owner_lazy = () -> DTCAdjustmentPaymentSubReason1Code.mmObject();
 		}
@@ -2754,7 +2756,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 */
 	public static final MMCode mmInterestAllocatedInError = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterestAllocatedInError";
 			owner_lazy = () -> DTCAdjustmentPaymentSubReason1Code.mmObject();
 		}
@@ -2777,7 +2779,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 */
 	public static final MMCode mmInterestDueWasErroneouslyPaidToYouByTheIssuer = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterestDueWasErroneouslyPaidToYouByTheIssuer";
 			owner_lazy = () -> DTCAdjustmentPaymentSubReason1Code.mmObject();
 		}
@@ -2800,7 +2802,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 */
 	public static final MMCode mmInterestorDividendDueOnConversion = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterestorDividendDueOnConversion";
 			owner_lazy = () -> DTCAdjustmentPaymentSubReason1Code.mmObject();
 		}
@@ -2823,7 +2825,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 */
 	public static final MMCode mmInterestOrDividendDueOnMerger = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterestOrDividendDueOnMerger";
 			owner_lazy = () -> DTCAdjustmentPaymentSubReason1Code.mmObject();
 		}
@@ -2846,7 +2848,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 */
 	public static final MMCode mmInterestOrDividendDueOnRedemption = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterestOrDividendDueOnRedemption";
 			owner_lazy = () -> DTCAdjustmentPaymentSubReason1Code.mmObject();
 		}
@@ -2869,7 +2871,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 */
 	public static final MMCode mmInterestOrDividendDueOnRepaymentOption = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterestOrDividendDueOnRepaymentOption";
 			owner_lazy = () -> DTCAdjustmentPaymentSubReason1Code.mmObject();
 		}
@@ -2892,7 +2894,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 */
 	public static final MMCode mmInterestOrDividendDueOnTender = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterestOrDividendDueOnTender";
 			owner_lazy = () -> DTCAdjustmentPaymentSubReason1Code.mmObject();
 		}
@@ -2915,7 +2917,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 */
 	public static final MMCode mmInterestPaysAtMaturity = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterestPaysAtMaturity";
 			owner_lazy = () -> DTCAdjustmentPaymentSubReason1Code.mmObject();
 		}
@@ -2938,7 +2940,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 */
 	public static final MMCode mmInterimPositionAdjustedForDeliverOrderActivity = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterimPositionAdjustedForDeliverOrderActivity";
 			owner_lazy = () -> DTCAdjustmentPaymentSubReason1Code.mmObject();
 		}
@@ -2961,7 +2963,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 */
 	public static final MMCode mmInvestmentIdAdjustment = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestmentIdAdjustment";
 			owner_lazy = () -> DTCAdjustmentPaymentSubReason1Code.mmObject();
 		}
@@ -2984,7 +2986,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 */
 	public static final MMCode mmIssueInDefault = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssueInDefault";
 			owner_lazy = () -> DTCAdjustmentPaymentSubReason1Code.mmObject();
 		}
@@ -3007,7 +3009,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 */
 	public static final MMCode mmLateAnnouncement = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LateAnnouncement";
 			owner_lazy = () -> DTCAdjustmentPaymentSubReason1Code.mmObject();
 		}
@@ -3030,7 +3032,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 */
 	public static final MMCode mmLateAnnouncementActivityDueBillActivity = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LateAnnouncementActivityDueBillActivity";
 			owner_lazy = () -> DTCAdjustmentPaymentSubReason1Code.mmObject();
 		}
@@ -3053,7 +3055,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 */
 	public static final MMCode mmLostCertificateRegisteredInTheNameOfYourGoodselves = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LostCertificateRegisteredInTheNameOfYourGoodselves";
 			owner_lazy = () -> DTCAdjustmentPaymentSubReason1Code.mmObject();
 		}
@@ -3076,7 +3078,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 */
 	public static final MMCode mmLostCertificateWasRegisteredInTheNameOfYourCustomer = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LostCertificateWasRegisteredInTheNameOfYourCustomer";
 			owner_lazy = () -> DTCAdjustmentPaymentSubReason1Code.mmObject();
 		}
@@ -3099,7 +3101,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 */
 	public static final MMCode mmLostCertificateWasRegisteredInTheNameOfYourNominee = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LostCertificateWasRegisteredInTheNameOfYourNominee";
 			owner_lazy = () -> DTCAdjustmentPaymentSubReason1Code.mmObject();
 		}
@@ -3122,7 +3124,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 */
 	public static final MMCode mmMidwestDepository = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MidwestDepository";
 			owner_lazy = () -> DTCAdjustmentPaymentSubReason1Code.mmObject();
 		}
@@ -3145,7 +3147,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 */
 	public static final MMCode mmMuniBearerBond = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MuniBearerBond";
 			owner_lazy = () -> DTCAdjustmentPaymentSubReason1Code.mmObject();
 		}
@@ -3168,7 +3170,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 */
 	public static final MMCode mmMuniBearerBondCoupon = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MuniBearerBondCoupon";
 			owner_lazy = () -> DTCAdjustmentPaymentSubReason1Code.mmObject();
 		}
@@ -3191,7 +3193,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 */
 	public static final MMCode mmMuniBearerBondCouponAdjustmentExcessCouponsDepositedOn = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MuniBearerBondCouponAdjustmentExcessCouponsDepositedOn";
 			owner_lazy = () -> DTCAdjustmentPaymentSubReason1Code.mmObject();
 		}
@@ -3214,7 +3216,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 */
 	public static final MMCode mmMuniBearerBondCouponAdjustmentExcessCouponsWithdrawnOn = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MuniBearerBondCouponAdjustmentExcessCouponsWithdrawnOn";
 			owner_lazy = () -> DTCAdjustmentPaymentSubReason1Code.mmObject();
 		}
@@ -3237,7 +3239,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 */
 	public static final MMCode mmMuniBearerBondCouponAdjustmentForCouponsMissingFromaDeposit = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MuniBearerBondCouponAdjustmentForCouponsMissingFromaDeposit";
 			owner_lazy = () -> DTCAdjustmentPaymentSubReason1Code.mmObject();
 		}
@@ -3260,7 +3262,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 */
 	public static final MMCode mmMuniBearerBondCouponAdjustmentForCouponsMissingFromaWithdrawal = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MuniBearerBondCouponAdjustmentForCouponsMissingFromaWithdrawal";
 			owner_lazy = () -> DTCAdjustmentPaymentSubReason1Code.mmObject();
 		}
@@ -3283,7 +3285,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 */
 	public static final MMCode mmMuniBearerBondCouponPositionAdjustedForDepositActivity = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MuniBearerBondCouponPositionAdjustedForDepositActivity";
 			owner_lazy = () -> DTCAdjustmentPaymentSubReason1Code.mmObject();
 		}
@@ -3306,7 +3308,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 */
 	public static final MMCode mmNonAllocation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonAllocation";
 			owner_lazy = () -> DTCAdjustmentPaymentSubReason1Code.mmObject();
 		}
@@ -3329,7 +3331,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 */
 	public static final MMCode mmOptionalDividendAllocationAdjustment = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionalDividendAllocationAdjustment";
 			owner_lazy = () -> DTCAdjustmentPaymentSubReason1Code.mmObject();
 		}
@@ -3352,7 +3354,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 */
 	public static final MMCode mmOther = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
 			owner_lazy = () -> DTCAdjustmentPaymentSubReason1Code.mmObject();
 		}
@@ -3375,7 +3377,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 */
 	public static final MMCode mmPacificDepository = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PacificDepository";
 			owner_lazy = () -> DTCAdjustmentPaymentSubReason1Code.mmObject();
 		}
@@ -3398,7 +3400,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 */
 	public static final MMCode mmPartClaimPayment = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartClaimPayment";
 			owner_lazy = () -> DTCAdjustmentPaymentSubReason1Code.mmObject();
 		}
@@ -3421,7 +3423,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 */
 	public static final MMCode mmPartClaimReversal = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartClaimReversal";
 			owner_lazy = () -> DTCAdjustmentPaymentSubReason1Code.mmObject();
 		}
@@ -3444,7 +3446,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 */
 	public static final MMCode mmPaymentOfFullAvoidFiscalTaxRefund = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentOfFullAvoidFiscalTaxRefund";
 			owner_lazy = () -> DTCAdjustmentPaymentSubReason1Code.mmObject();
 		}
@@ -3467,7 +3469,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 */
 	public static final MMCode mmPaymentOfPartialAvoidFiscalTaxRefund = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentOfPartialAvoidFiscalTaxRefund";
 			owner_lazy = () -> DTCAdjustmentPaymentSubReason1Code.mmObject();
 		}
@@ -3490,7 +3492,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 */
 	public static final MMCode mmPaynInKindDistribution = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaynInKindDistribution";
 			owner_lazy = () -> DTCAdjustmentPaymentSubReason1Code.mmObject();
 		}
@@ -3513,7 +3515,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 */
 	public static final MMCode mmPhiladelphiaDepository = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PhiladelphiaDepository";
 			owner_lazy = () -> DTCAdjustmentPaymentSubReason1Code.mmObject();
 		}
@@ -3536,7 +3538,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 */
 	public static final MMCode mmPledgeAdjustment = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PledgeAdjustment";
 			owner_lazy = () -> DTCAdjustmentPaymentSubReason1Code.mmObject();
 		}
@@ -3559,7 +3561,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 */
 	public static final MMCode mmPledgeReleaseAdjustment = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PledgeReleaseAdjustment";
 			owner_lazy = () -> DTCAdjustmentPaymentSubReason1Code.mmObject();
 		}
@@ -3582,7 +3584,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 */
 	public static final MMCode mmPositionAdjustedForDepositActivity = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PositionAdjustedForDepositActivity";
 			owner_lazy = () -> DTCAdjustmentPaymentSubReason1Code.mmObject();
 		}
@@ -3607,7 +3609,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 */
 	public static final MMCode mmPositionReinstatedCertificatesIssuedAndOutstandingInTheNameOfYourCustomers = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PositionReinstatedCertificatesIssuedAndOutstandingInTheNameOfYourCustomers";
 			owner_lazy = () -> DTCAdjustmentPaymentSubReason1Code.mmObject();
 		}
@@ -3630,7 +3632,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 */
 	public static final MMCode mmPostDateChangeForFailTracking = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PostDateChangeForFailTracking";
 			owner_lazy = () -> DTCAdjustmentPaymentSubReason1Code.mmObject();
 		}
@@ -3653,7 +3655,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 */
 	public static final MMCode mmPreviouslyCalledCertificatesFundsDelivery = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviouslyCalledCertificatesFundsDelivery";
 			owner_lazy = () -> DTCAdjustmentPaymentSubReason1Code.mmObject();
 		}
@@ -3676,7 +3678,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 */
 	public static final MMCode mmPriceCorrectionDividendReinvestment = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PriceCorrectionDividendReinvestment";
 			owner_lazy = () -> DTCAdjustmentPaymentSubReason1Code.mmObject();
 		}
@@ -3699,7 +3701,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 */
 	public static final MMCode mmProceedsFromBuyTransactionInOurDTCCDividendTradingAccount = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProceedsFromBuyTransactionInOurDTCCDividendTradingAccount";
 			owner_lazy = () -> DTCAdjustmentPaymentSubReason1Code.mmObject();
 		}
@@ -3722,7 +3724,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 */
 	public static final MMCode mmProceedsFromSaleOf = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProceedsFromSaleOf";
 			owner_lazy = () -> DTCAdjustmentPaymentSubReason1Code.mmObject();
 		}
@@ -3747,7 +3749,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 */
 	public static final MMCode mmProceedsResultingFromaASellTransactionAffectedInOurDTCCDividendTradingAccount = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProceedsResultingFromaASellTransactionAffectedInOurDTCCDividendTradingAccount";
 			owner_lazy = () -> DTCAdjustmentPaymentSubReason1Code.mmObject();
 		}
@@ -3770,7 +3772,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 */
 	public static final MMCode mmRateChange = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RateChange";
 			owner_lazy = () -> DTCAdjustmentPaymentSubReason1Code.mmObject();
 		}
@@ -3793,7 +3795,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 */
 	public static final MMCode mmRateRevision = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RateRevision";
 			owner_lazy = () -> DTCAdjustmentPaymentSubReason1Code.mmObject();
 		}
@@ -3816,7 +3818,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 */
 	public static final MMCode mmRateUnknown = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RateUnknown";
 			owner_lazy = () -> DTCAdjustmentPaymentSubReason1Code.mmObject();
 		}
@@ -3839,7 +3841,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 */
 	public static final MMCode mmRecordDatePositionAdjustedForaWithdrawalByTransfer = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RecordDatePositionAdjustedForaWithdrawalByTransfer";
 			owner_lazy = () -> DTCAdjustmentPaymentSubReason1Code.mmObject();
 		}
@@ -3862,7 +3864,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 */
 	public static final MMCode mmRedemptionAdjustment = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RedemptionAdjustment";
 			owner_lazy = () -> DTCAdjustmentPaymentSubReason1Code.mmObject();
 		}
@@ -3885,7 +3887,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 */
 	public static final MMCode mmRedemptionCash = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RedemptionCash";
 			owner_lazy = () -> DTCAdjustmentPaymentSubReason1Code.mmObject();
 		}
@@ -3908,7 +3910,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 */
 	public static final MMCode mmRedemptionPaymentDueToPledgeRelease = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RedemptionPaymentDueToPledgeRelease";
 			owner_lazy = () -> DTCAdjustmentPaymentSubReason1Code.mmObject();
 		}
@@ -3931,7 +3933,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 */
 	public static final MMCode mmRefundedTaxRate = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RefundedTaxRate";
 			owner_lazy = () -> DTCAdjustmentPaymentSubReason1Code.mmObject();
 		}
@@ -3954,7 +3956,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 */
 	public static final MMCode mmRefundOfFrenchTaxJuly = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RefundOfFrenchTaxJuly";
 			owner_lazy = () -> DTCAdjustmentPaymentSubReason1Code.mmObject();
 		}
@@ -3977,7 +3979,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 */
 	public static final MMCode mmRefundOfFrenchTaxJune = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RefundOfFrenchTaxJune";
 			owner_lazy = () -> DTCAdjustmentPaymentSubReason1Code.mmObject();
 		}
@@ -4000,7 +4002,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 */
 	public static final MMCode mmReinstate = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reinstate";
 			owner_lazy = () -> DTCAdjustmentPaymentSubReason1Code.mmObject();
 		}
@@ -4023,7 +4025,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 */
 	public static final MMCode mmReorganizationAdjustment = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReorganizationAdjustment";
 			owner_lazy = () -> DTCAdjustmentPaymentSubReason1Code.mmObject();
 		}
@@ -4046,7 +4048,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 */
 	public static final MMCode mmTaxExemptInstructions = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxExemptInstructions";
 			owner_lazy = () -> DTCAdjustmentPaymentSubReason1Code.mmObject();
 		}
@@ -4069,7 +4071,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 */
 	public static final MMCode mmTenderFeeDeduction = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TenderFeeDeduction";
 			owner_lazy = () -> DTCAdjustmentPaymentSubReason1Code.mmObject();
 		}
@@ -4092,7 +4094,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 */
 	public static final MMCode mmUnfavorableRateMerger = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnfavorableRateMerger";
 			owner_lazy = () -> DTCAdjustmentPaymentSubReason1Code.mmObject();
 		}
@@ -4115,7 +4117,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 */
 	public static final MMCode mmUninsuredInterestWithheld = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UninsuredInterestWithheld";
 			owner_lazy = () -> DTCAdjustmentPaymentSubReason1Code.mmObject();
 		}
@@ -4138,7 +4140,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 */
 	public static final MMCode mmVodaphoneADR = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VodaphoneADR";
 			owner_lazy = () -> DTCAdjustmentPaymentSubReason1Code.mmObject();
 		}
@@ -4161,7 +4163,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 */
 	public static final MMCode mmWithdrawalTransferAdjustment = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WithdrawalTransferAdjustment";
 			owner_lazy = () -> DTCAdjustmentPaymentSubReason1Code.mmObject();
 		}
@@ -4184,7 +4186,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 */
 	public static final MMCode mmWithdrawalTransferBuyBackWithdrawal = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WithdrawalTransferBuyBackWithdrawal";
 			owner_lazy = () -> DTCAdjustmentPaymentSubReason1Code.mmObject();
 		}
@@ -4207,7 +4209,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 */
 	public static final MMCode mmWithholdingTaxAdjustmentInUserDefinedCountry = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WithholdingTaxAdjustmentInUserDefinedCountry";
 			owner_lazy = () -> DTCAdjustmentPaymentSubReason1Code.mmObject();
 		}
@@ -4230,7 +4232,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 */
 	public static final MMCode mmWriteOffReorganization = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WriteOffReorganization";
 			owner_lazy = () -> DTCAdjustmentPaymentSubReason1Code.mmObject();
 		}
@@ -4253,7 +4255,7 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	 */
 	public static final MMCode mmWrongRatePrincipal = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WrongRatePrincipal";
 			owner_lazy = () -> DTCAdjustmentPaymentSubReason1Code.mmObject();
 		}
@@ -4262,114 +4264,76 @@ public class DTCAdjustmentPaymentSubReason1Code extends DTCAdjustmentPaymentSubR
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DTCAdjustmentPaymentSubReason1Code";
 				definition = "Specifies the subtype of the payment adjustment.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmReorganizationRelatedAdjustment,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmRepPaymentCharge, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmReversalOfACODWithdrawal,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmReversalOfADeposit, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmReversalOfAnAccrualClaimPayment,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmReversalOfaWithdrawalByTransfer, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmReverseOfEscheatedAmountOfClaim,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmReverseOfTheSharesEscheatedToNYStateInError,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmRevisionOfChargeForWithholdingTax, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmScriptSharesExited,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmShareAdjustmentFromABuyTransactionInOurDTCCDividendTradingAccount,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmShareAdjustmentResultingFromASellTransactionAffectedInOurDTCCDividendTradingAccount,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmSpinOffAllocation, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmStockLoanAdjustment,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmStockLoanOrRepoPaymentOrder, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmSupplementalInterimActivity,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmSupplementalInterimActivityFromMidwest,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmSupplementalInterimActivityFromPhiladelphia, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmSupplementaryInterimOn,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmAccrualClaimPayment, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmAccruedInterestNotPaid,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmAccruedInterestWrongRate, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmAdditionalRightsForBeneficialOwner,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmAdjustmentForAWithdrawalByTransferNotTransferredIntoYourClientsName,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmAdjustmentForCashInLieuOfFractionalShares,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmAdjustmentForCashOnIncreasedShares, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmAdjustmentForWrittenInquiry,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmAdjustmentIsInResponseToYourInquiry,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmAdjustmentMadeForAWithdrawalByTransferSetUpAfterTheCutOffDateMadeTransferIntoYourClientsName,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmAdjustmentToAvoidFiscalPayment,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmAdjustmentToYourDividendReinvestmentPosition,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmAgentPaidBasedOnCombinedFractions, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmAllocationAdjustment,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmAllocationAdjustmentDueToFractionsRoundedUpByTheAgent,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmAllocationOfBabyBondsAmountToBeExited, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmAllocationOfDRPTEDSInstruction,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmAnnouncementDeletedOrFailTracking, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmAssumedByYourGoodselves,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmBabyBondPayment, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmCalledCertificatesAccruedErroneousInterestChargeBack,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmCalledCertificatesCheckInParticipantsNameChargeBack,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmCashDueOnAnAccruedStockPayment, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmChargeForFrenchAvoidFiscalTaxCredit,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmChargeInLieuOfReceiptOfDividendReinvestment, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmCODWithdrawal,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmCompanyInDefault, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmCompanyDidNotDeclareDividend,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmCODWithdrawalNotDeliveredAndCertificatesIssuedInTheNameOfYourNominee,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmCODBuyBackWithdrawal, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmChargeAtWithholdingRate,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmCashDueOnDRPShareAllocation, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmCashDueOnStockDividend,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmChangeInTheRecordDate,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmCODWithdrawalNotDeliveredAndCertificatesInTheNameOfYourGoodselves,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmCouponCollectionService,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmCTFSHeldOverRecordDateOnWhichWeGuaranteeToHoldYouFreeAndHarmless,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmCustodyPayment, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmDateRevision,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmDelete, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmDeliverOrder,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmDeliverOrderActivity, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmDepositAdjustment,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmDepositLostCertificateOverTheRecordDateWasRegisteredInTheNameOfYour,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmDepositTransferredIntoTheNameOfTheCEDEAndCo,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmDividendReinvestmentAllocation,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmDividendReinvestmentAllocationAdjustmentDueToYourSubAccountingInstructionsToTheAgent,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmDividendReinvestmentAllocationOfCashInLieuOfFractions,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmDTCCClaimAgainstRegisteredHolderInTheNameOfYourCustomer,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmDTCCClaimAgainstRegisteredHolderInTheNameOfYourCustomerLateTransfer,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmDTCCClaimAgainstRegisteredHolderInTheNameOfYourGoodselves,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmDTCCClaimAgainstRegisteredHolderInTheNameOfYourGoodselvesLateTransfer,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmDTCCClaimAgainstRegisteredHolderInTheNameOfYourNominee,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmDTCCClaimAgainstRegisteredHolderInTheNameOfYourNomineeLateTransfer,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmDTCCClaimOnRegisteredHolderInTheNameOfYourCustomer,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmDTCCClaimOnRegisteredHolderInTheNameOfYourGoodselves, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmDueBill,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmDueBillFailTracking, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmDueBillReversal,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmDWACAdjustment, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmDWACBuyBackWithdrawal,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmForeignCashDividendsOrBondInterestAllocationAtExemptRate,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmForeignCashDividendsOrBondInterestAllocationAtUnfavorableRate,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmForeignCashDividendsOrBondsInterestAllocationAtFavorableRate,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmForeignCashDividendUnfavorableRate, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmFractionalRights,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmFrenchWithholdingTax10Percent, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmFrenchWithholdingTax15Percent,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmFrenchWithholdingTax25Percent, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmFrozenLetterMovement,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmGracePeriod, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmInLieuOfReorgDepositActivity,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmInSettlementOfATradeDTCCReorgAccount,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmInterestAdjustedDueToEarlyWithdrawal, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmInterestAllocatedInError,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmInterestDueWasErroneouslyPaidToYouByTheIssuer,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmInterestorDividendDueOnConversion, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmInterestOrDividendDueOnMerger,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmInterestOrDividendDueOnRedemption,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmInterestOrDividendDueOnRepaymentOption, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmInterestOrDividendDueOnTender,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmInterestPaysAtMaturity, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmInterimPositionAdjustedForDeliverOrderActivity,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmInvestmentIdAdjustment, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmIssueInDefault,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmLateAnnouncement, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmLateAnnouncementActivityDueBillActivity,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmLostCertificateRegisteredInTheNameOfYourGoodselves,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmLostCertificateWasRegisteredInTheNameOfYourCustomer,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmLostCertificateWasRegisteredInTheNameOfYourNominee, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmMidwestDepository,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmMuniBearerBond, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmMuniBearerBondCoupon,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmMuniBearerBondCouponAdjustmentExcessCouponsDepositedOn,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmMuniBearerBondCouponAdjustmentExcessCouponsWithdrawnOn,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmMuniBearerBondCouponAdjustmentForCouponsMissingFromaDeposit,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmMuniBearerBondCouponAdjustmentForCouponsMissingFromaWithdrawal,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmMuniBearerBondCouponPositionAdjustedForDepositActivity, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmNonAllocation,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmOptionalDividendAllocationAdjustment, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmOther,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmPacificDepository, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmPartClaimPayment,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmPartClaimReversal, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmPaymentOfFullAvoidFiscalTaxRefund,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmPaymentOfPartialAvoidFiscalTaxRefund, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmPaynInKindDistribution,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmPhiladelphiaDepository, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmPledgeAdjustment,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmPledgeReleaseAdjustment, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmPositionAdjustedForDepositActivity,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmPositionReinstatedCertificatesIssuedAndOutstandingInTheNameOfYourCustomers,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmPostDateChangeForFailTracking, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmPreviouslyCalledCertificatesFundsDelivery,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmPriceCorrectionDividendReinvestment,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmProceedsFromBuyTransactionInOurDTCCDividendTradingAccount,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmProceedsFromSaleOf,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmProceedsResultingFromaASellTransactionAffectedInOurDTCCDividendTradingAccount,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmRateChange, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmRateRevision,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmRateUnknown, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmRecordDatePositionAdjustedForaWithdrawalByTransfer,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmRedemptionAdjustment, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmRedemptionCash,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmRedemptionPaymentDueToPledgeRelease, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmRefundedTaxRate,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmRefundOfFrenchTaxJuly, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmRefundOfFrenchTaxJune,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmReinstate, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmReorganizationAdjustment,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmTaxExemptInstructions, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmTenderFeeDeduction,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmUnfavorableRateMerger, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmUninsuredInterestWithheld,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmVodaphoneADR, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmWithdrawalTransferAdjustment,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmWithdrawalTransferBuyBackWithdrawal,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmWithholdingTaxAdjustmentInUserDefinedCountry, com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmWriteOffReorganization,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReason1Code.mmWrongRatePrincipal);
+				code_lazy = () -> Arrays.asList(DTCAdjustmentPaymentSubReason1Code.mmReorganizationRelatedAdjustment, DTCAdjustmentPaymentSubReason1Code.mmRepPaymentCharge, DTCAdjustmentPaymentSubReason1Code.mmReversalOfACODWithdrawal,
+						DTCAdjustmentPaymentSubReason1Code.mmReversalOfADeposit, DTCAdjustmentPaymentSubReason1Code.mmReversalOfAnAccrualClaimPayment, DTCAdjustmentPaymentSubReason1Code.mmReversalOfaWithdrawalByTransfer,
+						DTCAdjustmentPaymentSubReason1Code.mmReverseOfEscheatedAmountOfClaim, DTCAdjustmentPaymentSubReason1Code.mmReverseOfTheSharesEscheatedToNYStateInError,
+						DTCAdjustmentPaymentSubReason1Code.mmRevisionOfChargeForWithholdingTax, DTCAdjustmentPaymentSubReason1Code.mmScriptSharesExited,
+						DTCAdjustmentPaymentSubReason1Code.mmShareAdjustmentFromABuyTransactionInOurDTCCDividendTradingAccount,
+						DTCAdjustmentPaymentSubReason1Code.mmShareAdjustmentResultingFromASellTransactionAffectedInOurDTCCDividendTradingAccount, DTCAdjustmentPaymentSubReason1Code.mmSpinOffAllocation,
+						DTCAdjustmentPaymentSubReason1Code.mmStockLoanAdjustment, DTCAdjustmentPaymentSubReason1Code.mmStockLoanOrRepoPaymentOrder, DTCAdjustmentPaymentSubReason1Code.mmSupplementalInterimActivity,
+						DTCAdjustmentPaymentSubReason1Code.mmSupplementalInterimActivityFromMidwest, DTCAdjustmentPaymentSubReason1Code.mmSupplementalInterimActivityFromPhiladelphia,
+						DTCAdjustmentPaymentSubReason1Code.mmSupplementaryInterimOn, DTCAdjustmentPaymentSubReason1Code.mmAccrualClaimPayment, DTCAdjustmentPaymentSubReason1Code.mmAccruedInterestNotPaid,
+						DTCAdjustmentPaymentSubReason1Code.mmAccruedInterestWrongRate, DTCAdjustmentPaymentSubReason1Code.mmAdditionalRightsForBeneficialOwner,
+						DTCAdjustmentPaymentSubReason1Code.mmAdjustmentForAWithdrawalByTransferNotTransferredIntoYourClientsName, DTCAdjustmentPaymentSubReason1Code.mmAdjustmentForCashInLieuOfFractionalShares,
+						DTCAdjustmentPaymentSubReason1Code.mmAdjustmentForCashOnIncreasedShares, DTCAdjustmentPaymentSubReason1Code.mmAdjustmentForWrittenInquiry, DTCAdjustmentPaymentSubReason1Code.mmAdjustmentIsInResponseToYourInquiry,
+						DTCAdjustmentPaymentSubReason1Code.mmAdjustmentMadeForAWithdrawalByTransferSetUpAfterTheCutOffDateMadeTransferIntoYourClientsName, DTCAdjustmentPaymentSubReason1Code.mmAdjustmentToAvoidFiscalPayment,
+						DTCAdjustmentPaymentSubReason1Code.mmAdjustmentToYourDividendReinvestmentPosition, DTCAdjustmentPaymentSubReason1Code.mmAgentPaidBasedOnCombinedFractions, DTCAdjustmentPaymentSubReason1Code.mmAllocationAdjustment,
+						DTCAdjustmentPaymentSubReason1Code.mmAllocationAdjustmentDueToFractionsRoundedUpByTheAgent, DTCAdjustmentPaymentSubReason1Code.mmAllocationOfBabyBondsAmountToBeExited,
+						DTCAdjustmentPaymentSubReason1Code.mmAllocationOfDRPTEDSInstruction, DTCAdjustmentPaymentSubReason1Code.mmAnnouncementDeletedOrFailTracking, DTCAdjustmentPaymentSubReason1Code.mmAssumedByYourGoodselves,
+						DTCAdjustmentPaymentSubReason1Code.mmBabyBondPayment, DTCAdjustmentPaymentSubReason1Code.mmCalledCertificatesAccruedErroneousInterestChargeBack,
+						DTCAdjustmentPaymentSubReason1Code.mmCalledCertificatesCheckInParticipantsNameChargeBack, DTCAdjustmentPaymentSubReason1Code.mmCashDueOnAnAccruedStockPayment,
+						DTCAdjustmentPaymentSubReason1Code.mmChargeForFrenchAvoidFiscalTaxCredit, DTCAdjustmentPaymentSubReason1Code.mmChargeInLieuOfReceiptOfDividendReinvestment, DTCAdjustmentPaymentSubReason1Code.mmCODWithdrawal,
+						DTCAdjustmentPaymentSubReason1Code.mmCompanyInDefault, DTCAdjustmentPaymentSubReason1Code.mmCompanyDidNotDeclareDividend,
+						DTCAdjustmentPaymentSubReason1Code.mmCODWithdrawalNotDeliveredAndCertificatesIssuedInTheNameOfYourNominee, DTCAdjustmentPaymentSubReason1Code.mmCODBuyBackWithdrawal,
+						DTCAdjustmentPaymentSubReason1Code.mmChargeAtWithholdingRate, DTCAdjustmentPaymentSubReason1Code.mmCashDueOnDRPShareAllocation, DTCAdjustmentPaymentSubReason1Code.mmCashDueOnStockDividend,
+						DTCAdjustmentPaymentSubReason1Code.mmChangeInTheRecordDate, DTCAdjustmentPaymentSubReason1Code.mmCODWithdrawalNotDeliveredAndCertificatesInTheNameOfYourGoodselves,
+						DTCAdjustmentPaymentSubReason1Code.mmCouponCollectionService, DTCAdjustmentPaymentSubReason1Code.mmCTFSHeldOverRecordDateOnWhichWeGuaranteeToHoldYouFreeAndHarmless,
+						DTCAdjustmentPaymentSubReason1Code.mmCustodyPayment, DTCAdjustmentPaymentSubReason1Code.mmDateRevision, DTCAdjustmentPaymentSubReason1Code.mmDelete, DTCAdjustmentPaymentSubReason1Code.mmDeliverOrder,
+						DTCAdjustmentPaymentSubReason1Code.mmDeliverOrderActivity, DTCAdjustmentPaymentSubReason1Code.mmDepositAdjustment,
+						DTCAdjustmentPaymentSubReason1Code.mmDepositLostCertificateOverTheRecordDateWasRegisteredInTheNameOfYour, DTCAdjustmentPaymentSubReason1Code.mmDepositTransferredIntoTheNameOfTheCEDEAndCo,
+						DTCAdjustmentPaymentSubReason1Code.mmDividendReinvestmentAllocation, DTCAdjustmentPaymentSubReason1Code.mmDividendReinvestmentAllocationAdjustmentDueToYourSubAccountingInstructionsToTheAgent,
+						DTCAdjustmentPaymentSubReason1Code.mmDividendReinvestmentAllocationOfCashInLieuOfFractions, DTCAdjustmentPaymentSubReason1Code.mmDTCCClaimAgainstRegisteredHolderInTheNameOfYourCustomer,
+						DTCAdjustmentPaymentSubReason1Code.mmDTCCClaimAgainstRegisteredHolderInTheNameOfYourCustomerLateTransfer, DTCAdjustmentPaymentSubReason1Code.mmDTCCClaimAgainstRegisteredHolderInTheNameOfYourGoodselves,
+						DTCAdjustmentPaymentSubReason1Code.mmDTCCClaimAgainstRegisteredHolderInTheNameOfYourGoodselvesLateTransfer, DTCAdjustmentPaymentSubReason1Code.mmDTCCClaimAgainstRegisteredHolderInTheNameOfYourNominee,
+						DTCAdjustmentPaymentSubReason1Code.mmDTCCClaimAgainstRegisteredHolderInTheNameOfYourNomineeLateTransfer, DTCAdjustmentPaymentSubReason1Code.mmDTCCClaimOnRegisteredHolderInTheNameOfYourCustomer,
+						DTCAdjustmentPaymentSubReason1Code.mmDTCCClaimOnRegisteredHolderInTheNameOfYourGoodselves, DTCAdjustmentPaymentSubReason1Code.mmDueBill, DTCAdjustmentPaymentSubReason1Code.mmDueBillFailTracking,
+						DTCAdjustmentPaymentSubReason1Code.mmDueBillReversal, DTCAdjustmentPaymentSubReason1Code.mmDWACAdjustment, DTCAdjustmentPaymentSubReason1Code.mmDWACBuyBackWithdrawal,
+						DTCAdjustmentPaymentSubReason1Code.mmForeignCashDividendsOrBondInterestAllocationAtExemptRate, DTCAdjustmentPaymentSubReason1Code.mmForeignCashDividendsOrBondInterestAllocationAtUnfavorableRate,
+						DTCAdjustmentPaymentSubReason1Code.mmForeignCashDividendsOrBondsInterestAllocationAtFavorableRate, DTCAdjustmentPaymentSubReason1Code.mmForeignCashDividendUnfavorableRate,
+						DTCAdjustmentPaymentSubReason1Code.mmFractionalRights, DTCAdjustmentPaymentSubReason1Code.mmFrenchWithholdingTax10Percent, DTCAdjustmentPaymentSubReason1Code.mmFrenchWithholdingTax15Percent,
+						DTCAdjustmentPaymentSubReason1Code.mmFrenchWithholdingTax25Percent, DTCAdjustmentPaymentSubReason1Code.mmFrozenLetterMovement, DTCAdjustmentPaymentSubReason1Code.mmGracePeriod,
+						DTCAdjustmentPaymentSubReason1Code.mmInLieuOfReorgDepositActivity, DTCAdjustmentPaymentSubReason1Code.mmInSettlementOfATradeDTCCReorgAccount,
+						DTCAdjustmentPaymentSubReason1Code.mmInterestAdjustedDueToEarlyWithdrawal, DTCAdjustmentPaymentSubReason1Code.mmInterestAllocatedInError,
+						DTCAdjustmentPaymentSubReason1Code.mmInterestDueWasErroneouslyPaidToYouByTheIssuer, DTCAdjustmentPaymentSubReason1Code.mmInterestorDividendDueOnConversion,
+						DTCAdjustmentPaymentSubReason1Code.mmInterestOrDividendDueOnMerger, DTCAdjustmentPaymentSubReason1Code.mmInterestOrDividendDueOnRedemption,
+						DTCAdjustmentPaymentSubReason1Code.mmInterestOrDividendDueOnRepaymentOption, DTCAdjustmentPaymentSubReason1Code.mmInterestOrDividendDueOnTender, DTCAdjustmentPaymentSubReason1Code.mmInterestPaysAtMaturity,
+						DTCAdjustmentPaymentSubReason1Code.mmInterimPositionAdjustedForDeliverOrderActivity, DTCAdjustmentPaymentSubReason1Code.mmInvestmentIdAdjustment, DTCAdjustmentPaymentSubReason1Code.mmIssueInDefault,
+						DTCAdjustmentPaymentSubReason1Code.mmLateAnnouncement, DTCAdjustmentPaymentSubReason1Code.mmLateAnnouncementActivityDueBillActivity,
+						DTCAdjustmentPaymentSubReason1Code.mmLostCertificateRegisteredInTheNameOfYourGoodselves, DTCAdjustmentPaymentSubReason1Code.mmLostCertificateWasRegisteredInTheNameOfYourCustomer,
+						DTCAdjustmentPaymentSubReason1Code.mmLostCertificateWasRegisteredInTheNameOfYourNominee, DTCAdjustmentPaymentSubReason1Code.mmMidwestDepository, DTCAdjustmentPaymentSubReason1Code.mmMuniBearerBond,
+						DTCAdjustmentPaymentSubReason1Code.mmMuniBearerBondCoupon, DTCAdjustmentPaymentSubReason1Code.mmMuniBearerBondCouponAdjustmentExcessCouponsDepositedOn,
+						DTCAdjustmentPaymentSubReason1Code.mmMuniBearerBondCouponAdjustmentExcessCouponsWithdrawnOn, DTCAdjustmentPaymentSubReason1Code.mmMuniBearerBondCouponAdjustmentForCouponsMissingFromaDeposit,
+						DTCAdjustmentPaymentSubReason1Code.mmMuniBearerBondCouponAdjustmentForCouponsMissingFromaWithdrawal, DTCAdjustmentPaymentSubReason1Code.mmMuniBearerBondCouponPositionAdjustedForDepositActivity,
+						DTCAdjustmentPaymentSubReason1Code.mmNonAllocation, DTCAdjustmentPaymentSubReason1Code.mmOptionalDividendAllocationAdjustment, DTCAdjustmentPaymentSubReason1Code.mmOther,
+						DTCAdjustmentPaymentSubReason1Code.mmPacificDepository, DTCAdjustmentPaymentSubReason1Code.mmPartClaimPayment, DTCAdjustmentPaymentSubReason1Code.mmPartClaimReversal,
+						DTCAdjustmentPaymentSubReason1Code.mmPaymentOfFullAvoidFiscalTaxRefund, DTCAdjustmentPaymentSubReason1Code.mmPaymentOfPartialAvoidFiscalTaxRefund, DTCAdjustmentPaymentSubReason1Code.mmPaynInKindDistribution,
+						DTCAdjustmentPaymentSubReason1Code.mmPhiladelphiaDepository, DTCAdjustmentPaymentSubReason1Code.mmPledgeAdjustment, DTCAdjustmentPaymentSubReason1Code.mmPledgeReleaseAdjustment,
+						DTCAdjustmentPaymentSubReason1Code.mmPositionAdjustedForDepositActivity, DTCAdjustmentPaymentSubReason1Code.mmPositionReinstatedCertificatesIssuedAndOutstandingInTheNameOfYourCustomers,
+						DTCAdjustmentPaymentSubReason1Code.mmPostDateChangeForFailTracking, DTCAdjustmentPaymentSubReason1Code.mmPreviouslyCalledCertificatesFundsDelivery,
+						DTCAdjustmentPaymentSubReason1Code.mmPriceCorrectionDividendReinvestment, DTCAdjustmentPaymentSubReason1Code.mmProceedsFromBuyTransactionInOurDTCCDividendTradingAccount,
+						DTCAdjustmentPaymentSubReason1Code.mmProceedsFromSaleOf, DTCAdjustmentPaymentSubReason1Code.mmProceedsResultingFromaASellTransactionAffectedInOurDTCCDividendTradingAccount,
+						DTCAdjustmentPaymentSubReason1Code.mmRateChange, DTCAdjustmentPaymentSubReason1Code.mmRateRevision, DTCAdjustmentPaymentSubReason1Code.mmRateUnknown,
+						DTCAdjustmentPaymentSubReason1Code.mmRecordDatePositionAdjustedForaWithdrawalByTransfer, DTCAdjustmentPaymentSubReason1Code.mmRedemptionAdjustment, DTCAdjustmentPaymentSubReason1Code.mmRedemptionCash,
+						DTCAdjustmentPaymentSubReason1Code.mmRedemptionPaymentDueToPledgeRelease, DTCAdjustmentPaymentSubReason1Code.mmRefundedTaxRate, DTCAdjustmentPaymentSubReason1Code.mmRefundOfFrenchTaxJuly,
+						DTCAdjustmentPaymentSubReason1Code.mmRefundOfFrenchTaxJune, DTCAdjustmentPaymentSubReason1Code.mmReinstate, DTCAdjustmentPaymentSubReason1Code.mmReorganizationAdjustment,
+						DTCAdjustmentPaymentSubReason1Code.mmTaxExemptInstructions, DTCAdjustmentPaymentSubReason1Code.mmTenderFeeDeduction, DTCAdjustmentPaymentSubReason1Code.mmUnfavorableRateMerger,
+						DTCAdjustmentPaymentSubReason1Code.mmUninsuredInterestWithheld, DTCAdjustmentPaymentSubReason1Code.mmVodaphoneADR, DTCAdjustmentPaymentSubReason1Code.mmWithdrawalTransferAdjustment,
+						DTCAdjustmentPaymentSubReason1Code.mmWithdrawalTransferBuyBackWithdrawal, DTCAdjustmentPaymentSubReason1Code.mmWithholdingTaxAdjustmentInUserDefinedCountry,
+						DTCAdjustmentPaymentSubReason1Code.mmWriteOffReorganization, DTCAdjustmentPaymentSubReason1Code.mmWrongRatePrincipal);
 				trace_lazy = () -> DTCAdjustmentPaymentSubReasonCode.mmObject();
 			}
 		});

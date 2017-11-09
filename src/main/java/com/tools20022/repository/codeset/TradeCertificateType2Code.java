@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.TradeCertificateTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -89,7 +91,7 @@ public class TradeCertificateType2Code extends TradeCertificateTypeCode {
 	 */
 	public static final MMCode mmBeneficiary = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Beneficiary";
 			owner_lazy = () -> TradeCertificateType2Code.mmObject();
 		}
@@ -112,7 +114,7 @@ public class TradeCertificateType2Code extends TradeCertificateTypeCode {
 	 */
 	public static final MMCode mmShippingLine = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ShippingLine";
 			owner_lazy = () -> TradeCertificateType2Code.mmObject();
 		}
@@ -135,7 +137,7 @@ public class TradeCertificateType2Code extends TradeCertificateTypeCode {
 	 */
 	public static final MMCode mmUndefined1 = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Undefined1";
 			owner_lazy = () -> TradeCertificateType2Code.mmObject();
 		}
@@ -158,7 +160,7 @@ public class TradeCertificateType2Code extends TradeCertificateTypeCode {
 	 */
 	public static final MMCode mmUndefined2 = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Undefined2";
 			owner_lazy = () -> TradeCertificateType2Code.mmObject();
 		}
@@ -167,13 +169,12 @@ public class TradeCertificateType2Code extends TradeCertificateTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("BENE");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TradeCertificateType2Code";
 				definition = "Specifies the type of trade certificate.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TradeCertificateType2Code.mmBeneficiary, com.tools20022.repository.codeset.TradeCertificateType2Code.mmShippingLine,
-						com.tools20022.repository.codeset.TradeCertificateType2Code.mmUndefined1, com.tools20022.repository.codeset.TradeCertificateType2Code.mmUndefined2);
+				code_lazy = () -> Arrays.asList(TradeCertificateType2Code.mmBeneficiary, TradeCertificateType2Code.mmShippingLine, TradeCertificateType2Code.mmUndefined1, TradeCertificateType2Code.mmUndefined2);
 				trace_lazy = () -> TradeCertificateTypeCode.mmObject();
 			}
 		});

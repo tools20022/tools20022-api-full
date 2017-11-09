@@ -19,11 +19,13 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ActiveCurrencyCode;
 import com.tools20022.repository.datatype.BaseOneRate;
 import com.tools20022.repository.datatype.Exact3NumericText;
 import com.tools20022.repository.datatype.ImpliedCurrencyAndAmount;
 import com.tools20022.repository.entity.CurrencyExchange;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -128,14 +130,14 @@ public class CurrencyConversion5 {
 	 */
 	public static final MMMessageAttribute mmSourceCurrency = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmSourceCurrency;
+			businessElementTrace_lazy = () -> CurrencyExchange.mmSourceCurrency;
 			componentContext_lazy = () -> CurrencyConversion5.mmObject();
 			isDerived = false;
 			xmlTag = "SrcCcy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SourceCurrency";
 			definition = "Currency from which the amount is converted (ISO 4217, 3 alphanumeric characters).";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CurrencyConversion1.mmSourceCurrency;
+			previousVersion_lazy = () -> CurrencyConversion1.mmSourceCurrency;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyCode.mmObject();
@@ -183,10 +185,10 @@ public class CurrencyConversion5 {
 			componentContext_lazy = () -> CurrencyConversion5.mmObject();
 			isDerived = false;
 			xmlTag = "SrcCcyNmrc";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SourceCurrencyNumeric";
 			definition = "Currency from which the amount is converted (ISO 4217, 3 numeric characters).";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CurrencyConversion1.mmSourceCurrencyNumeric;
+			previousVersion_lazy = () -> CurrencyConversion1.mmSourceCurrencyNumeric;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyCode.mmObject();
@@ -236,14 +238,14 @@ public class CurrencyConversion5 {
 	 */
 	public static final MMMessageAttribute mmTargetCurrency = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmTargetCurrency;
+			businessElementTrace_lazy = () -> CurrencyExchange.mmTargetCurrency;
 			componentContext_lazy = () -> CurrencyConversion5.mmObject();
 			isDerived = false;
 			xmlTag = "TrgtCcy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TargetCurrency";
 			definition = "Currency into which the amount is converted (ISO 4217, 3 alphanumeric characters).";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CurrencyConversion1.mmTargetCurrency;
+			previousVersion_lazy = () -> CurrencyConversion1.mmTargetCurrency;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyCode.mmObject();
@@ -291,10 +293,10 @@ public class CurrencyConversion5 {
 			componentContext_lazy = () -> CurrencyConversion5.mmObject();
 			isDerived = false;
 			xmlTag = "TrgtCcyNmrc";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TargetCurrencyNumeric";
 			definition = "Currency into which the amount is converted (ISO 4217, 3 numeric characters).";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CurrencyConversion1.mmTargetCurrencyNumeric;
+			previousVersion_lazy = () -> CurrencyConversion1.mmTargetCurrencyNumeric;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Exact3NumericText.mmObject();
@@ -340,14 +342,14 @@ public class CurrencyConversion5 {
 	 */
 	public static final MMMessageAttribute mmRate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmExchangeRate;
+			businessElementTrace_lazy = () -> CurrencyExchange.mmExchangeRate;
 			componentContext_lazy = () -> CurrencyConversion5.mmObject();
 			isDerived = false;
 			xmlTag = "Rate";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rate";
 			definition = "Currency exchange rate.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CurrencyConversion1.mmExchangeRate;
+			previousVersion_lazy = () -> CurrencyConversion1.mmExchangeRate;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> BaseOneRate.mmObject();
@@ -394,14 +396,14 @@ public class CurrencyConversion5 {
 	 */
 	public static final MMMessageAttribute mmCalculatedAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmResultingAmount;
+			businessElementTrace_lazy = () -> CurrencyExchange.mmResultingAmount;
 			componentContext_lazy = () -> CurrencyConversion5.mmObject();
 			isDerived = false;
 			xmlTag = "ClctdAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CalculatedAmount";
 			definition = "Resulting calculated amount is in target currency.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CurrencyConversion1.mmResultingAmount;
+			previousVersion_lazy = () -> CurrencyConversion1.mmResultingAmount;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
@@ -411,12 +413,11 @@ public class CurrencyConversion5 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CurrencyConversion5.mmSourceCurrency, com.tools20022.repository.msg.CurrencyConversion5.mmSourceCurrencyNumeric,
-						com.tools20022.repository.msg.CurrencyConversion5.mmTargetCurrency, com.tools20022.repository.msg.CurrencyConversion5.mmTargetCurrencyNumeric, com.tools20022.repository.msg.CurrencyConversion5.mmRate,
-						com.tools20022.repository.msg.CurrencyConversion5.mmCalculatedAmount);
+				messageElement_lazy = () -> Arrays.asList(CurrencyConversion5.mmSourceCurrency, CurrencyConversion5.mmSourceCurrencyNumeric, CurrencyConversion5.mmTargetCurrency, CurrencyConversion5.mmTargetCurrencyNumeric,
+						CurrencyConversion5.mmRate, CurrencyConversion5.mmCalculatedAmount);
 				trace_lazy = () -> CurrencyExchange.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CurrencyConversion5";
 				definition = "Exchange rate and calculated amount to be presented to the customer when the dispense currency or the deposit currency (target currency) is different to account currency (source currency).";
 				previousVersion_lazy = () -> CurrencyConversion1.mmObject();

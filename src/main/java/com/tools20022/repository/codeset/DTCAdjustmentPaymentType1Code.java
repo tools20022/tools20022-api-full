@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -89,7 +91,7 @@ public class DTCAdjustmentPaymentType1Code extends DTCAdjustmentPaymentTypeCode 
 	 */
 	public static final MMCode mmStockLoanPayment = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StockLoanPayment";
 			owner_lazy = () -> DTCAdjustmentPaymentType1Code.mmObject();
 		}
@@ -112,7 +114,7 @@ public class DTCAdjustmentPaymentType1Code extends DTCAdjustmentPaymentTypeCode 
 	 */
 	public static final MMCode mmRepoPayment = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RepoPayment";
 			owner_lazy = () -> DTCAdjustmentPaymentType1Code.mmObject();
 		}
@@ -135,7 +137,7 @@ public class DTCAdjustmentPaymentType1Code extends DTCAdjustmentPaymentTypeCode 
 	 */
 	public static final MMCode mmFailPayment = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FailPayment";
 			owner_lazy = () -> DTCAdjustmentPaymentType1Code.mmObject();
 		}
@@ -158,7 +160,7 @@ public class DTCAdjustmentPaymentType1Code extends DTCAdjustmentPaymentTypeCode 
 	 */
 	public static final MMCode mmMiscellaneousPayment = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MiscellaneousPayment";
 			owner_lazy = () -> DTCAdjustmentPaymentType1Code.mmObject();
 		}
@@ -167,13 +169,13 @@ public class DTCAdjustmentPaymentType1Code extends DTCAdjustmentPaymentTypeCode 
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("STOK");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DTCAdjustmentPaymentType1Code";
 				definition = "Specified the type of the payment adjustment.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DTCAdjustmentPaymentType1Code.mmStockLoanPayment, com.tools20022.repository.codeset.DTCAdjustmentPaymentType1Code.mmRepoPayment,
-						com.tools20022.repository.codeset.DTCAdjustmentPaymentType1Code.mmFailPayment, com.tools20022.repository.codeset.DTCAdjustmentPaymentType1Code.mmMiscellaneousPayment);
+				code_lazy = () -> Arrays.asList(DTCAdjustmentPaymentType1Code.mmStockLoanPayment, DTCAdjustmentPaymentType1Code.mmRepoPayment, DTCAdjustmentPaymentType1Code.mmFailPayment,
+						DTCAdjustmentPaymentType1Code.mmMiscellaneousPayment);
 				trace_lazy = () -> DTCAdjustmentPaymentTypeCode.mmObject();
 			}
 		});

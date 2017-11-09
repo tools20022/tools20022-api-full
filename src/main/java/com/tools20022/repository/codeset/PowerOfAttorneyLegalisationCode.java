@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.PowerOfAttorneyLegalisation1Code
+ * PowerOfAttorneyLegalisation1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -41,14 +51,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.PowerOfAttorneyLegalisationCode#mmConsularized
  * PowerOfAttorneyLegalisationCode.mmConsularized}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.PowerOfAttorneyLegalisation1Code
- * PowerOfAttorneyLegalisation1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -99,7 +101,7 @@ public class PowerOfAttorneyLegalisationCode {
 	 */
 	public static final MMCode mmNotary = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Notary";
 			definition = "Indicates that the power of attorney must be legalised by a notary.";
 			owner_lazy = () -> PowerOfAttorneyLegalisationCode.mmObject();
@@ -132,7 +134,7 @@ public class PowerOfAttorneyLegalisationCode {
 	 */
 	public static final MMCode mmLocalAuthority = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "LocalAuthority";
 			definition = "Indicates that the power of attorney must be legalised by a local authority.";
 			owner_lazy = () -> PowerOfAttorneyLegalisationCode.mmObject();
@@ -165,7 +167,7 @@ public class PowerOfAttorneyLegalisationCode {
 	 */
 	public static final MMCode mmApostilled = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Apostilled";
 			definition = "Indicates that the power of attorney must be legalised by a legal officer.";
 			owner_lazy = () -> PowerOfAttorneyLegalisationCode.mmObject();
@@ -198,7 +200,7 @@ public class PowerOfAttorneyLegalisationCode {
 	 */
 	public static final MMCode mmConsularized = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Consularized";
 			definition = "Indicates that the power of attorney must be legalised by a consular officer.";
 			owner_lazy = () -> PowerOfAttorneyLegalisationCode.mmObject();
@@ -209,13 +211,12 @@ public class PowerOfAttorneyLegalisationCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("NOTA");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PowerOfAttorneyLegalisationCode";
 				definition = "Indicates the legal constraint on the power of attorney.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PowerOfAttorneyLegalisationCode.mmNotary, com.tools20022.repository.codeset.PowerOfAttorneyLegalisationCode.mmLocalAuthority,
-						com.tools20022.repository.codeset.PowerOfAttorneyLegalisationCode.mmApostilled, com.tools20022.repository.codeset.PowerOfAttorneyLegalisationCode.mmConsularized);
+				code_lazy = () -> Arrays.asList(PowerOfAttorneyLegalisationCode.mmNotary, PowerOfAttorneyLegalisationCode.mmLocalAuthority, PowerOfAttorneyLegalisationCode.mmApostilled, PowerOfAttorneyLegalisationCode.mmConsularized);
 				derivation_lazy = () -> Arrays.asList(PowerOfAttorneyLegalisation1Code.mmObject());
 			}
 		});

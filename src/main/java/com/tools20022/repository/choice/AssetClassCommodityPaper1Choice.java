@@ -19,7 +19,9 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.Commodity;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.PaperCommodityContainerBoard1;
 import com.tools20022.repository.msg.PaperCommodityNewsprint1;
 import com.tools20022.repository.msg.PaperCommodityPulp1;
@@ -106,11 +108,11 @@ public class AssetClassCommodityPaper1Choice {
 	 */
 	public static final MMMessageAssociationEnd mmContainerBoard = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Commodity.mmSubProduct;
+			businessElementTrace_lazy = () -> Commodity.mmSubProduct;
 			componentContext_lazy = () -> AssetClassCommodityPaper1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "CntnrBrd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ContainerBoard";
 			definition = "Container board commodity derivative.";
 			maxOccurs = 1;
@@ -154,11 +156,11 @@ public class AssetClassCommodityPaper1Choice {
 	 */
 	public static final MMMessageAssociationEnd mmNewsprint = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Commodity.mmSubProduct;
+			businessElementTrace_lazy = () -> Commodity.mmSubProduct;
 			componentContext_lazy = () -> AssetClassCommodityPaper1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Nwsprnt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Newsprint";
 			definition = "Newsprint commodity derivative.";
 			maxOccurs = 1;
@@ -201,11 +203,11 @@ public class AssetClassCommodityPaper1Choice {
 	 */
 	public static final MMMessageAssociationEnd mmPulp = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Commodity.mmSubProduct;
+			businessElementTrace_lazy = () -> Commodity.mmSubProduct;
 			componentContext_lazy = () -> AssetClassCommodityPaper1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Pulp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Pulp";
 			definition = "Pulp commodity derivative.";
 			maxOccurs = 1;
@@ -249,11 +251,11 @@ public class AssetClassCommodityPaper1Choice {
 	 */
 	public static final MMMessageAssociationEnd mmRecoveredPaper = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Commodity.mmSubProduct;
+			businessElementTrace_lazy = () -> Commodity.mmSubProduct;
 			componentContext_lazy = () -> AssetClassCommodityPaper1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "RcvrdPpr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RecoveredPaper";
 			definition = "Recovered paper commodity derivative.";
 			maxOccurs = 1;
@@ -266,11 +268,11 @@ public class AssetClassCommodityPaper1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AssetClassCommodityPaper1Choice.mmContainerBoard, com.tools20022.repository.choice.AssetClassCommodityPaper1Choice.mmNewsprint,
-						com.tools20022.repository.choice.AssetClassCommodityPaper1Choice.mmPulp, com.tools20022.repository.choice.AssetClassCommodityPaper1Choice.mmRecoveredPaper);
+				messageElement_lazy = () -> Arrays.asList(AssetClassCommodityPaper1Choice.mmContainerBoard, AssetClassCommodityPaper1Choice.mmNewsprint, AssetClassCommodityPaper1Choice.mmPulp,
+						AssetClassCommodityPaper1Choice.mmRecoveredPaper);
 				trace_lazy = () -> Commodity.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AssetClassCommodityPaper1Choice";
 				definition = "Defines commodity attributes of a derivative where the type is paper.";
 			}

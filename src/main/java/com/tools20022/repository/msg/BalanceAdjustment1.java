@@ -20,11 +20,16 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.BalanceAdjustmentType1Code;
 import com.tools20022.repository.datatype.DecimalNumber;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.Max105Text;
+import com.tools20022.repository.entity.Balance;
 import com.tools20022.repository.entity.CashBalance;
+import com.tools20022.repository.entity.DateTimePeriod;
+import com.tools20022.repository.entity.Entry;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -117,11 +122,11 @@ public class BalanceAdjustment1 {
 	 */
 	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashBalance.mmBalanceAdjustmentCode;
+			businessElementTrace_lazy = () -> CashBalance.mmBalanceAdjustmentCode;
 			componentContext_lazy = () -> BalanceAdjustment1.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Identifies the type of adjustment.";
 			maxOccurs = 1;
@@ -163,7 +168,7 @@ public class BalanceAdjustment1 {
 			componentContext_lazy = () -> BalanceAdjustment1.mmObject();
 			isDerived = false;
 			xmlTag = "Desc";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Description";
 			definition = "Free-form description and clarification of the adjustment.";
 			maxOccurs = 1;
@@ -209,11 +214,11 @@ public class BalanceAdjustment1 {
 	 */
 	public static final MMMessageAssociationEnd mmBalanceAmount = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashBalance.mmAmount;
+			businessElementTrace_lazy = () -> CashBalance.mmAmount;
 			componentContext_lazy = () -> BalanceAdjustment1.mmObject();
 			isDerived = false;
 			xmlTag = "BalAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BalanceAmount";
 			definition = "Amount of the adjustment. If the amount would reduce the underlying balance then the amount should be negatively signed. Expressed in the Account currency.";
 			maxOccurs = 1;
@@ -259,11 +264,11 @@ public class BalanceAdjustment1 {
 	 */
 	public static final MMMessageAssociationEnd mmAverageAmount = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashBalance.mmAmount;
+			businessElementTrace_lazy = () -> CashBalance.mmAmount;
 			componentContext_lazy = () -> BalanceAdjustment1.mmObject();
 			isDerived = false;
 			xmlTag = "AvrgAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AverageAmount";
 			definition = "Day-weighted net amount of the adjustment to the average collected balance over the statement period.";
 			maxOccurs = 1;
@@ -306,7 +311,7 @@ public class BalanceAdjustment1 {
 			componentContext_lazy = () -> BalanceAdjustment1.mmObject();
 			isDerived = false;
 			xmlTag = "ErrDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ErrorDate";
 			definition = "Date on which the error occurred in the underlying cash account.";
 			maxOccurs = 1;
@@ -353,11 +358,11 @@ public class BalanceAdjustment1 {
 	 */
 	public static final MMMessageAttribute mmPostingDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Entry.mmEntryDate;
+			businessElementTrace_lazy = () -> Entry.mmEntryDate;
 			componentContext_lazy = () -> BalanceAdjustment1.mmObject();
 			isDerived = false;
 			xmlTag = "PstngDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PostingDate";
 			definition = "Date on which the error was corrected in the cash account. If the date is not know then use the last day of the month in which the error was corrected.";
 			maxOccurs = 1;
@@ -402,11 +407,11 @@ public class BalanceAdjustment1 {
 	 */
 	public static final MMMessageAttribute mmDays = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmNumberOfDays;
+			businessElementTrace_lazy = () -> DateTimePeriod.mmNumberOfDays;
 			componentContext_lazy = () -> BalanceAdjustment1.mmObject();
 			isDerived = false;
 			xmlTag = "Days";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Days";
 			definition = "Number of days within the period to which the adjustment applies.";
 			maxOccurs = 1;
@@ -452,11 +457,11 @@ public class BalanceAdjustment1 {
 	 */
 	public static final MMMessageAssociationEnd mmEarningsAdjustmentAmount = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Balance.mmAdjustment;
+			businessElementTrace_lazy = () -> Balance.mmAdjustment;
 			componentContext_lazy = () -> BalanceAdjustment1.mmObject();
 			isDerived = false;
 			xmlTag = "EarngsAdjstmntAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EarningsAdjustmentAmount";
 			definition = "Earnings credit adjustment, debit or credit, resulting from this adjustment’s effect on the average collected balance. If the amount would reduce the credit due then the amount should be negatively signed.";
 			maxOccurs = 1;
@@ -469,12 +474,11 @@ public class BalanceAdjustment1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BalanceAdjustment1.mmType, com.tools20022.repository.msg.BalanceAdjustment1.mmDescription,
-						com.tools20022.repository.msg.BalanceAdjustment1.mmBalanceAmount, com.tools20022.repository.msg.BalanceAdjustment1.mmAverageAmount, com.tools20022.repository.msg.BalanceAdjustment1.mmErrorDate,
-						com.tools20022.repository.msg.BalanceAdjustment1.mmPostingDate, com.tools20022.repository.msg.BalanceAdjustment1.mmDays, com.tools20022.repository.msg.BalanceAdjustment1.mmEarningsAdjustmentAmount);
+				messageElement_lazy = () -> Arrays.asList(BalanceAdjustment1.mmType, BalanceAdjustment1.mmDescription, BalanceAdjustment1.mmBalanceAmount, BalanceAdjustment1.mmAverageAmount, BalanceAdjustment1.mmErrorDate,
+						BalanceAdjustment1.mmPostingDate, BalanceAdjustment1.mmDays, BalanceAdjustment1.mmEarningsAdjustmentAmount);
 				trace_lazy = () -> CashBalance.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "BalanceAdjustment1";
 				definition = "Specifies the balance adjustments for a specific service.";
 			}

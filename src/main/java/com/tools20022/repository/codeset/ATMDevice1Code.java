@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ATMDeviceCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -87,7 +89,7 @@ public class ATMDevice1Code extends ATMDeviceCode {
 	 */
 	public static final MMCode mmCustomerConsole = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CustomerConsole";
 			owner_lazy = () -> ATMDevice1Code.mmObject();
 		}
@@ -110,7 +112,7 @@ public class ATMDevice1Code extends ATMDeviceCode {
 	 */
 	public static final MMCode mmDocumentPrinter = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DocumentPrinter";
 			owner_lazy = () -> ATMDevice1Code.mmObject();
 		}
@@ -133,7 +135,7 @@ public class ATMDevice1Code extends ATMDeviceCode {
 	 */
 	public static final MMCode mmJournal = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Journal";
 			owner_lazy = () -> ATMDevice1Code.mmObject();
 		}
@@ -156,7 +158,7 @@ public class ATMDevice1Code extends ATMDeviceCode {
 	 */
 	public static final MMCode mmJournalPrinter = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "JournalPrinter";
 			owner_lazy = () -> ATMDevice1Code.mmObject();
 		}
@@ -179,7 +181,7 @@ public class ATMDevice1Code extends ATMDeviceCode {
 	 */
 	public static final MMCode mmReceiptPrinter = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceiptPrinter";
 			owner_lazy = () -> ATMDevice1Code.mmObject();
 		}
@@ -202,7 +204,7 @@ public class ATMDevice1Code extends ATMDeviceCode {
 	 */
 	public static final MMCode mmWithdrawalReceipt = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WithdrawalReceipt";
 			owner_lazy = () -> ATMDevice1Code.mmObject();
 		}
@@ -211,13 +213,12 @@ public class ATMDevice1Code extends ATMDeviceCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ATMDevice1Code";
 				definition = "ATM device to output message.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ATMDevice1Code.mmCustomerConsole, com.tools20022.repository.codeset.ATMDevice1Code.mmDocumentPrinter,
-						com.tools20022.repository.codeset.ATMDevice1Code.mmJournal, com.tools20022.repository.codeset.ATMDevice1Code.mmJournalPrinter, com.tools20022.repository.codeset.ATMDevice1Code.mmReceiptPrinter,
-						com.tools20022.repository.codeset.ATMDevice1Code.mmWithdrawalReceipt);
+				code_lazy = () -> Arrays.asList(ATMDevice1Code.mmCustomerConsole, ATMDevice1Code.mmDocumentPrinter, ATMDevice1Code.mmJournal, ATMDevice1Code.mmJournalPrinter, ATMDevice1Code.mmReceiptPrinter,
+						ATMDevice1Code.mmWithdrawalReceipt);
 				trace_lazy = () -> ATMDeviceCode.mmObject();
 			}
 		});

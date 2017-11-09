@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -216,7 +218,7 @@ public class CreditTransferTypeCode {
 	 */
 	public static final MMCode mmIntraCompanyPayment = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+			registrationStatus = MMRegistrationStatus.OBSOLETE;
 			name = "IntraCompanyPayment";
 			definition = "Transaction is an intra-company payment, ie, a payment between two companies belonging to the same group.";
 			owner_lazy = () -> CreditTransferTypeCode.mmObject();
@@ -249,7 +251,7 @@ public class CreditTransferTypeCode {
 	 */
 	public static final MMCode mmTradeSettlementPayment = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+			registrationStatus = MMRegistrationStatus.OBSOLETE;
 			name = "TradeSettlementPayment";
 			definition = "Transaction is related to settlement of a trade, eg a foreign exchange deal or a securities transaction.";
 			owner_lazy = () -> CreditTransferTypeCode.mmObject();
@@ -279,7 +281,7 @@ public class CreditTransferTypeCode {
 	 */
 	public static final MMCode mmSalaryPayment = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+			registrationStatus = MMRegistrationStatus.OBSOLETE;
 			name = "SalaryPayment";
 			definition = "Transaction is the payment of salaries.";
 			owner_lazy = () -> CreditTransferTypeCode.mmObject();
@@ -309,7 +311,7 @@ public class CreditTransferTypeCode {
 	 */
 	public static final MMCode mmTreasuryPayment = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+			registrationStatus = MMRegistrationStatus.OBSOLETE;
 			name = "TreasuryPayment";
 			definition = "Transaction is related to treasury operations.";
 			owner_lazy = () -> CreditTransferTypeCode.mmObject();
@@ -342,7 +344,7 @@ public class CreditTransferTypeCode {
 	 */
 	public static final MMCode mmSweepAccount = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+			registrationStatus = MMRegistrationStatus.OBSOLETE;
 			name = "SweepAccount";
 			definition = "Transaction is a cash management instruction, requesting to sweep the account of the debtor.";
 			owner_lazy = () -> CreditTransferTypeCode.mmObject();
@@ -376,7 +378,7 @@ public class CreditTransferTypeCode {
 	 */
 	public static final MMCode mmTopAccount = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+			registrationStatus = MMRegistrationStatus.OBSOLETE;
 			name = "TopAccount";
 			definition = "Transaction is a cash management instruction, requesting to top the account of the debtor above a certain floor amount. The floor amount, if not pre-agreed by the parties involved, may be specified.";
 			owner_lazy = () -> CreditTransferTypeCode.mmObject();
@@ -409,7 +411,7 @@ public class CreditTransferTypeCode {
 	 */
 	public static final MMCode mmZeroBalanceAccount = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+			registrationStatus = MMRegistrationStatus.OBSOLETE;
 			name = "ZeroBalanceAccount";
 			definition = "Transaction is a cash management instruction, requesting to zero balance the account of the debtor.";
 			owner_lazy = () -> CreditTransferTypeCode.mmObject();
@@ -439,7 +441,7 @@ public class CreditTransferTypeCode {
 	 */
 	public static final MMCode mmAdvancePayment = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+			registrationStatus = MMRegistrationStatus.OBSOLETE;
 			name = "AdvancePayment";
 			definition = "Transaction is an advance payment.";
 			owner_lazy = () -> CreditTransferTypeCode.mmObject();
@@ -469,7 +471,7 @@ public class CreditTransferTypeCode {
 	 */
 	public static final MMCode mmAgriculturalTransfer = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+			registrationStatus = MMRegistrationStatus.OBSOLETE;
 			name = "AgriculturalTransfer";
 			definition = "Transaction is related to the agricultural domain.";
 			owner_lazy = () -> CreditTransferTypeCode.mmObject();
@@ -499,7 +501,7 @@ public class CreditTransferTypeCode {
 	 */
 	public static final MMCode mmAlimonyPayment = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+			registrationStatus = MMRegistrationStatus.OBSOLETE;
 			name = "AlimonyPayment";
 			definition = "Transaction is the payment of alimony.";
 			owner_lazy = () -> CreditTransferTypeCode.mmObject();
@@ -532,7 +534,7 @@ public class CreditTransferTypeCode {
 	 */
 	public static final MMCode mmChildBenefit = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+			registrationStatus = MMRegistrationStatus.OBSOLETE;
 			name = "ChildBenefit";
 			definition = "Transaction is related to a payment made to assist parent/guardian to maintain child.";
 			owner_lazy = () -> CreditTransferTypeCode.mmObject();
@@ -563,7 +565,7 @@ public class CreditTransferTypeCode {
 	 */
 	public static final MMCode mmUnemploymentDisabilityBenefit = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+			registrationStatus = MMRegistrationStatus.OBSOLETE;
 			name = "UnemploymentDisabilityBenefit";
 			definition = "Transaction is related to a payment to person unemployed/disabled.";
 			owner_lazy = () -> CreditTransferTypeCode.mmObject();
@@ -593,7 +595,7 @@ public class CreditTransferTypeCode {
 	 */
 	public static final MMCode mmBonusPayment = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+			registrationStatus = MMRegistrationStatus.OBSOLETE;
 			name = "BonusPayment";
 			definition = "Transaction is related to payment of a bonus.";
 			owner_lazy = () -> CreditTransferTypeCode.mmObject();
@@ -623,7 +625,7 @@ public class CreditTransferTypeCode {
 	 */
 	public static final MMCode mmCashManagementTransfer = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+			registrationStatus = MMRegistrationStatus.OBSOLETE;
 			name = "CashManagementTransfer";
 			definition = "Transaction is a general cash management instruction.";
 			owner_lazy = () -> CreditTransferTypeCode.mmObject();
@@ -656,7 +658,7 @@ public class CreditTransferTypeCode {
 	 */
 	public static final MMCode mmCapitalBuilding = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+			registrationStatus = MMRegistrationStatus.OBSOLETE;
 			name = "CapitalBuilding";
 			definition = "Transaction is related to capital building fringe fortune. Capital building for retirement.";
 			owner_lazy = () -> CreditTransferTypeCode.mmObject();
@@ -686,7 +688,7 @@ public class CreditTransferTypeCode {
 	 */
 	public static final MMCode mmCharityPayment = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+			registrationStatus = MMRegistrationStatus.OBSOLETE;
 			name = "CharityPayment";
 			definition = "Transaction is a payment for charity reasons.";
 			owner_lazy = () -> CreditTransferTypeCode.mmObject();
@@ -716,7 +718,7 @@ public class CreditTransferTypeCode {
 	 */
 	public static final MMCode mmCommodityTransfer = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+			registrationStatus = MMRegistrationStatus.OBSOLETE;
 			name = "CommodityTransfer";
 			definition = "Transaction is payment of commodities.";
 			owner_lazy = () -> CreditTransferTypeCode.mmObject();
@@ -746,7 +748,7 @@ public class CreditTransferTypeCode {
 	 */
 	public static final MMCode mmCommercialCredit = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+			registrationStatus = MMRegistrationStatus.OBSOLETE;
 			name = "CommercialCredit";
 			definition = "Transaction is payment of commercial credit.";
 			owner_lazy = () -> CreditTransferTypeCode.mmObject();
@@ -776,7 +778,7 @@ public class CreditTransferTypeCode {
 	 */
 	public static final MMCode mmCommission = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+			registrationStatus = MMRegistrationStatus.OBSOLETE;
 			name = "Commission";
 			definition = "Transaction is payment of commission.";
 			owner_lazy = () -> CreditTransferTypeCode.mmObject();
@@ -806,7 +808,7 @@ public class CreditTransferTypeCode {
 	 */
 	public static final MMCode mmCosts = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+			registrationStatus = MMRegistrationStatus.OBSOLETE;
 			name = "Costs";
 			definition = "Transaction is related to payment of costs.";
 			owner_lazy = () -> CreditTransferTypeCode.mmObject();
@@ -836,7 +838,7 @@ public class CreditTransferTypeCode {
 	 */
 	public static final MMCode mmCopyright = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+			registrationStatus = MMRegistrationStatus.OBSOLETE;
 			name = "Copyright";
 			definition = "Transaction is payment of copyright.";
 			owner_lazy = () -> CreditTransferTypeCode.mmObject();
@@ -866,7 +868,7 @@ public class CreditTransferTypeCode {
 	 */
 	public static final MMCode mmDividend = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+			registrationStatus = MMRegistrationStatus.OBSOLETE;
 			name = "Dividend";
 			definition = "Transaction is the payment of dividends.";
 			owner_lazy = () -> CreditTransferTypeCode.mmObject();
@@ -896,7 +898,7 @@ public class CreditTransferTypeCode {
 	 */
 	public static final MMCode mmForeignExchange = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+			registrationStatus = MMRegistrationStatus.OBSOLETE;
 			name = "ForeignExchange";
 			definition = "Transaction is related to a foreign exchange operation.";
 			owner_lazy = () -> CreditTransferTypeCode.mmObject();
@@ -926,7 +928,7 @@ public class CreditTransferTypeCode {
 	 */
 	public static final MMCode mmPurchaseSaleOfGoods = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+			registrationStatus = MMRegistrationStatus.OBSOLETE;
 			name = "PurchaseSaleOfGoods";
 			definition = "Transaction is related to purchase and sale of goods.";
 			owner_lazy = () -> CreditTransferTypeCode.mmObject();
@@ -957,7 +959,7 @@ public class CreditTransferTypeCode {
 	 */
 	public static final MMCode mmGovernmentPayment = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+			registrationStatus = MMRegistrationStatus.OBSOLETE;
 			name = "GovernmentPayment";
 			definition = "Transaction is a payment to or from a government department.";
 			owner_lazy = () -> CreditTransferTypeCode.mmObject();
@@ -988,7 +990,7 @@ public class CreditTransferTypeCode {
 	 */
 	public static final MMCode mmInstalmentHirePurchaseAgreement = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+			registrationStatus = MMRegistrationStatus.OBSOLETE;
 			name = "InstalmentHirePurchaseAgreement";
 			definition = "Transaction is payment for Instalment/hire-purchase agreement.";
 			owner_lazy = () -> CreditTransferTypeCode.mmObject();
@@ -1018,7 +1020,7 @@ public class CreditTransferTypeCode {
 	 */
 	public static final MMCode mmInsurancePremium = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+			registrationStatus = MMRegistrationStatus.OBSOLETE;
 			name = "InsurancePremium";
 			definition = "Transaction is payment of an insurance premium.";
 			owner_lazy = () -> CreditTransferTypeCode.mmObject();
@@ -1048,7 +1050,7 @@ public class CreditTransferTypeCode {
 	 */
 	public static final MMCode mmInterest = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+			registrationStatus = MMRegistrationStatus.OBSOLETE;
 			name = "Interest";
 			definition = "Transaction is the payment of interest.";
 			owner_lazy = () -> CreditTransferTypeCode.mmObject();
@@ -1078,7 +1080,7 @@ public class CreditTransferTypeCode {
 	 */
 	public static final MMCode mmLicenseFee = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+			registrationStatus = MMRegistrationStatus.OBSOLETE;
 			name = "LicenseFee";
 			definition = "Transaction is payment of a license fee.";
 			owner_lazy = () -> CreditTransferTypeCode.mmObject();
@@ -1109,7 +1111,7 @@ public class CreditTransferTypeCode {
 	 */
 	public static final MMCode mmLoan = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+			registrationStatus = MMRegistrationStatus.OBSOLETE;
 			name = "Loan";
 			definition = "Transaction is related to the transfer of a loan to a borrower.";
 			owner_lazy = () -> CreditTransferTypeCode.mmObject();
@@ -1139,7 +1141,7 @@ public class CreditTransferTypeCode {
 	 */
 	public static final MMCode mmLoanRepayment = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+			registrationStatus = MMRegistrationStatus.OBSOLETE;
 			name = "LoanRepayment";
 			definition = "Transaction is related to repayment of loan to lender.";
 			owner_lazy = () -> CreditTransferTypeCode.mmObject();
@@ -1169,7 +1171,7 @@ public class CreditTransferTypeCode {
 	 */
 	public static final MMCode mmNetting = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+			registrationStatus = MMRegistrationStatus.OBSOLETE;
 			name = "Netting";
 			definition = "Transaction is related to a netting operation.";
 			owner_lazy = () -> CreditTransferTypeCode.mmObject();
@@ -1199,7 +1201,7 @@ public class CreditTransferTypeCode {
 	 */
 	public static final MMCode mmPensionPayment = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+			registrationStatus = MMRegistrationStatus.OBSOLETE;
 			name = "PensionPayment";
 			definition = "Transaction is the payment of pension.";
 			owner_lazy = () -> CreditTransferTypeCode.mmObject();
@@ -1229,7 +1231,7 @@ public class CreditTransferTypeCode {
 	 */
 	public static final MMCode mmRefund = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+			registrationStatus = MMRegistrationStatus.OBSOLETE;
 			name = "Refund";
 			definition = "Transaction is the payment of a refund.";
 			owner_lazy = () -> CreditTransferTypeCode.mmObject();
@@ -1259,7 +1261,7 @@ public class CreditTransferTypeCode {
 	 */
 	public static final MMCode mmRent = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+			registrationStatus = MMRegistrationStatus.OBSOLETE;
 			name = "Rent";
 			definition = "Transaction is the payment of rent.";
 			owner_lazy = () -> CreditTransferTypeCode.mmObject();
@@ -1289,7 +1291,7 @@ public class CreditTransferTypeCode {
 	 */
 	public static final MMCode mmRoyalties = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+			registrationStatus = MMRegistrationStatus.OBSOLETE;
 			name = "Royalties";
 			definition = "Transaction is the payment of royalties.";
 			owner_lazy = () -> CreditTransferTypeCode.mmObject();
@@ -1319,7 +1321,7 @@ public class CreditTransferTypeCode {
 	 */
 	public static final MMCode mmPurchaseSaleOfServices = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+			registrationStatus = MMRegistrationStatus.OBSOLETE;
 			name = "PurchaseSaleOfServices";
 			definition = "Transaction is related to purchase and sale of services.";
 			owner_lazy = () -> CreditTransferTypeCode.mmObject();
@@ -1349,7 +1351,7 @@ public class CreditTransferTypeCode {
 	 */
 	public static final MMCode mmSecurities = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+			registrationStatus = MMRegistrationStatus.OBSOLETE;
 			name = "Securities";
 			definition = "Transaction is the payment of securities.";
 			owner_lazy = () -> CreditTransferTypeCode.mmObject();
@@ -1382,7 +1384,7 @@ public class CreditTransferTypeCode {
 	 */
 	public static final MMCode mmSocialSecurityBenefit = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+			registrationStatus = MMRegistrationStatus.OBSOLETE;
 			name = "SocialSecurityBenefit";
 			definition = "Transaction is a social security benefit, ie payment made by a government to support individuals.";
 			owner_lazy = () -> CreditTransferTypeCode.mmObject();
@@ -1412,7 +1414,7 @@ public class CreditTransferTypeCode {
 	 */
 	public static final MMCode mmSubscription = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+			registrationStatus = MMRegistrationStatus.OBSOLETE;
 			name = "Subscription";
 			definition = "Transaction is payment of a subscription.";
 			owner_lazy = () -> CreditTransferTypeCode.mmObject();
@@ -1442,7 +1444,7 @@ public class CreditTransferTypeCode {
 	 */
 	public static final MMCode mmTaxPayment = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+			registrationStatus = MMRegistrationStatus.OBSOLETE;
 			name = "TaxPayment";
 			definition = "Transaction is the payment of taxes.";
 			owner_lazy = () -> CreditTransferTypeCode.mmObject();
@@ -1472,7 +1474,7 @@ public class CreditTransferTypeCode {
 	 */
 	public static final MMCode mmValueAddedTaxPayment = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+			registrationStatus = MMRegistrationStatus.OBSOLETE;
 			name = "ValueAddedTaxPayment";
 			definition = "Transaction is the payment of value added tax.";
 			owner_lazy = () -> CreditTransferTypeCode.mmObject();
@@ -1502,7 +1504,7 @@ public class CreditTransferTypeCode {
 	 */
 	public static final MMCode mmSupplierPayment = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+			registrationStatus = MMRegistrationStatus.OBSOLETE;
 			name = "SupplierPayment";
 			definition = "Transaction is related to a payment to a supplier.";
 			owner_lazy = () -> CreditTransferTypeCode.mmObject();
@@ -1533,7 +1535,7 @@ public class CreditTransferTypeCode {
 	 */
 	public static final MMCode mmHedging = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+			registrationStatus = MMRegistrationStatus.OBSOLETE;
 			name = "Hedging";
 			definition = "Transaction is related to the payment of a hedging operation.";
 			owner_lazy = () -> CreditTransferTypeCode.mmObject();
@@ -1564,7 +1566,7 @@ public class CreditTransferTypeCode {
 	 */
 	public static final MMCode mmTrade = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+			registrationStatus = MMRegistrationStatus.OBSOLETE;
 			name = "Trade";
 			definition = "Transaction is related to the payment of a trade transaction.";
 			owner_lazy = () -> CreditTransferTypeCode.mmObject();
@@ -1575,32 +1577,21 @@ public class CreditTransferTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("INTC");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				name = "CreditTransferTypeCode";
 				definition = "Specifies the type of transaction that resulted in the payment.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CreditTransferTypeCode.mmIntraCompanyPayment, com.tools20022.repository.codeset.CreditTransferTypeCode.mmTradeSettlementPayment,
-						com.tools20022.repository.codeset.CreditTransferTypeCode.mmSalaryPayment, com.tools20022.repository.codeset.CreditTransferTypeCode.mmTreasuryPayment,
-						com.tools20022.repository.codeset.CreditTransferTypeCode.mmSweepAccount, com.tools20022.repository.codeset.CreditTransferTypeCode.mmTopAccount,
-						com.tools20022.repository.codeset.CreditTransferTypeCode.mmZeroBalanceAccount, com.tools20022.repository.codeset.CreditTransferTypeCode.mmAdvancePayment,
-						com.tools20022.repository.codeset.CreditTransferTypeCode.mmAgriculturalTransfer, com.tools20022.repository.codeset.CreditTransferTypeCode.mmAlimonyPayment,
-						com.tools20022.repository.codeset.CreditTransferTypeCode.mmChildBenefit, com.tools20022.repository.codeset.CreditTransferTypeCode.mmUnemploymentDisabilityBenefit,
-						com.tools20022.repository.codeset.CreditTransferTypeCode.mmBonusPayment, com.tools20022.repository.codeset.CreditTransferTypeCode.mmCashManagementTransfer,
-						com.tools20022.repository.codeset.CreditTransferTypeCode.mmCapitalBuilding, com.tools20022.repository.codeset.CreditTransferTypeCode.mmCharityPayment,
-						com.tools20022.repository.codeset.CreditTransferTypeCode.mmCommodityTransfer, com.tools20022.repository.codeset.CreditTransferTypeCode.mmCommercialCredit,
-						com.tools20022.repository.codeset.CreditTransferTypeCode.mmCommission, com.tools20022.repository.codeset.CreditTransferTypeCode.mmCosts, com.tools20022.repository.codeset.CreditTransferTypeCode.mmCopyright,
-						com.tools20022.repository.codeset.CreditTransferTypeCode.mmDividend, com.tools20022.repository.codeset.CreditTransferTypeCode.mmForeignExchange,
-						com.tools20022.repository.codeset.CreditTransferTypeCode.mmPurchaseSaleOfGoods, com.tools20022.repository.codeset.CreditTransferTypeCode.mmGovernmentPayment,
-						com.tools20022.repository.codeset.CreditTransferTypeCode.mmInstalmentHirePurchaseAgreement, com.tools20022.repository.codeset.CreditTransferTypeCode.mmInsurancePremium,
-						com.tools20022.repository.codeset.CreditTransferTypeCode.mmInterest, com.tools20022.repository.codeset.CreditTransferTypeCode.mmLicenseFee, com.tools20022.repository.codeset.CreditTransferTypeCode.mmLoan,
-						com.tools20022.repository.codeset.CreditTransferTypeCode.mmLoanRepayment, com.tools20022.repository.codeset.CreditTransferTypeCode.mmNetting,
-						com.tools20022.repository.codeset.CreditTransferTypeCode.mmPensionPayment, com.tools20022.repository.codeset.CreditTransferTypeCode.mmRefund, com.tools20022.repository.codeset.CreditTransferTypeCode.mmRent,
-						com.tools20022.repository.codeset.CreditTransferTypeCode.mmRoyalties, com.tools20022.repository.codeset.CreditTransferTypeCode.mmPurchaseSaleOfServices,
-						com.tools20022.repository.codeset.CreditTransferTypeCode.mmSecurities, com.tools20022.repository.codeset.CreditTransferTypeCode.mmSocialSecurityBenefit,
-						com.tools20022.repository.codeset.CreditTransferTypeCode.mmSubscription, com.tools20022.repository.codeset.CreditTransferTypeCode.mmTaxPayment,
-						com.tools20022.repository.codeset.CreditTransferTypeCode.mmValueAddedTaxPayment, com.tools20022.repository.codeset.CreditTransferTypeCode.mmSupplierPayment,
-						com.tools20022.repository.codeset.CreditTransferTypeCode.mmHedging, com.tools20022.repository.codeset.CreditTransferTypeCode.mmTrade);
+				code_lazy = () -> Arrays.asList(CreditTransferTypeCode.mmIntraCompanyPayment, CreditTransferTypeCode.mmTradeSettlementPayment, CreditTransferTypeCode.mmSalaryPayment, CreditTransferTypeCode.mmTreasuryPayment,
+						CreditTransferTypeCode.mmSweepAccount, CreditTransferTypeCode.mmTopAccount, CreditTransferTypeCode.mmZeroBalanceAccount, CreditTransferTypeCode.mmAdvancePayment, CreditTransferTypeCode.mmAgriculturalTransfer,
+						CreditTransferTypeCode.mmAlimonyPayment, CreditTransferTypeCode.mmChildBenefit, CreditTransferTypeCode.mmUnemploymentDisabilityBenefit, CreditTransferTypeCode.mmBonusPayment,
+						CreditTransferTypeCode.mmCashManagementTransfer, CreditTransferTypeCode.mmCapitalBuilding, CreditTransferTypeCode.mmCharityPayment, CreditTransferTypeCode.mmCommodityTransfer,
+						CreditTransferTypeCode.mmCommercialCredit, CreditTransferTypeCode.mmCommission, CreditTransferTypeCode.mmCosts, CreditTransferTypeCode.mmCopyright, CreditTransferTypeCode.mmDividend,
+						CreditTransferTypeCode.mmForeignExchange, CreditTransferTypeCode.mmPurchaseSaleOfGoods, CreditTransferTypeCode.mmGovernmentPayment, CreditTransferTypeCode.mmInstalmentHirePurchaseAgreement,
+						CreditTransferTypeCode.mmInsurancePremium, CreditTransferTypeCode.mmInterest, CreditTransferTypeCode.mmLicenseFee, CreditTransferTypeCode.mmLoan, CreditTransferTypeCode.mmLoanRepayment,
+						CreditTransferTypeCode.mmNetting, CreditTransferTypeCode.mmPensionPayment, CreditTransferTypeCode.mmRefund, CreditTransferTypeCode.mmRent, CreditTransferTypeCode.mmRoyalties,
+						CreditTransferTypeCode.mmPurchaseSaleOfServices, CreditTransferTypeCode.mmSecurities, CreditTransferTypeCode.mmSocialSecurityBenefit, CreditTransferTypeCode.mmSubscription, CreditTransferTypeCode.mmTaxPayment,
+						CreditTransferTypeCode.mmValueAddedTaxPayment, CreditTransferTypeCode.mmSupplierPayment, CreditTransferTypeCode.mmHedging, CreditTransferTypeCode.mmTrade);
 			}
 		});
 		return mmObject_lazy.get();

@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.NetworkTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -77,7 +79,7 @@ public class NetworkType2Code extends NetworkTypeCode {
 	 */
 	public static final MMCode mmSock5 = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Sock5";
 			owner_lazy = () -> NetworkType2Code.mmObject();
 		}
@@ -100,7 +102,7 @@ public class NetworkType2Code extends NetworkTypeCode {
 	 */
 	public static final MMCode mmSock4 = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Sock4";
 			owner_lazy = () -> NetworkType2Code.mmObject();
 		}
@@ -123,7 +125,7 @@ public class NetworkType2Code extends NetworkTypeCode {
 	 */
 	public static final MMCode mmHTTP = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HTTP";
 			owner_lazy = () -> NetworkType2Code.mmObject();
 		}
@@ -132,11 +134,11 @@ public class NetworkType2Code extends NetworkTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "NetworkType2Code";
 				definition = "Type of proxy.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.NetworkType2Code.mmSock5, com.tools20022.repository.codeset.NetworkType2Code.mmSock4, com.tools20022.repository.codeset.NetworkType2Code.mmHTTP);
+				code_lazy = () -> Arrays.asList(NetworkType2Code.mmSock5, NetworkType2Code.mmSock4, NetworkType2Code.mmHTTP);
 				trace_lazy = () -> NetworkTypeCode.mmObject();
 			}
 		});

@@ -19,8 +19,10 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.EUCapitalGain2Code;
 import com.tools20022.repository.entity.SecuritiesTax;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification38;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -119,14 +121,14 @@ public class EUCapitalGainType2Choice {
 	 */
 	public static final MMMessageAttribute mmEUCapitalGain = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTax.mmEUCapitalGain;
+			businessElementTrace_lazy = () -> SecuritiesTax.mmEUCapitalGain;
 			componentContext_lazy = () -> EUCapitalGainType2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "EUCptlGn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EUCapitalGain";
 			definition = "Specifies whether capital gain is in the scope of the European directive on taxation of savings income in the form of interest payments (Council Directive 2003/48/EC 3 June), or an income realised upon sale, a refund or redemption of shares and units, etc.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.EUCapitalGain3Choice.mmCode);
+			nextVersions_lazy = () -> Arrays.asList(EUCapitalGain3Choice.mmCode);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> EUCapitalGain2Code.mmObject();
@@ -181,14 +183,14 @@ public class EUCapitalGainType2Choice {
 	 */
 	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTax.mmEUCapitalGain;
+			businessElementTrace_lazy = () -> SecuritiesTax.mmEUCapitalGain;
 			componentContext_lazy = () -> EUCapitalGainType2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Specifies whether capital gain is in the scope of the European directive on taxation of savings income in the form of interest payments (Council Directive 2003/48/EC 3 June), or an income realised upon sale, a refund or redemption of shares and units, etc.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.EUCapitalGain3Choice.mmProprietary);
+			nextVersions_lazy = () -> Arrays.asList(EUCapitalGain3Choice.mmProprietary);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification38.mmObject();
@@ -198,10 +200,10 @@ public class EUCapitalGainType2Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.EUCapitalGainType2Choice.mmEUCapitalGain, com.tools20022.repository.choice.EUCapitalGainType2Choice.mmProprietary);
+				messageElement_lazy = () -> Arrays.asList(EUCapitalGainType2Choice.mmEUCapitalGain, EUCapitalGainType2Choice.mmProprietary);
 				trace_lazy = () -> SecuritiesTax.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "EUCapitalGainType2Choice";
 				definition = "Choice of an EU capital gain type.";
 				nextVersions_lazy = () -> Arrays.asList(EUCapitalGain3Choice.mmObject());

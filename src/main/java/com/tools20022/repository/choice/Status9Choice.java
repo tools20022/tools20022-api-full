@@ -19,7 +19,10 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.entity.SecuritiesTradeStatus;
 import com.tools20022.repository.entity.Status;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.ProprietaryStatusAndReason1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -122,10 +125,10 @@ public class Status9Choice {
 			componentContext_lazy = () -> Status9Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Proprietary status.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Status15Choice.mmProprietary);
+			nextVersions_lazy = () -> Arrays.asList(Status15Choice.mmProprietary);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -175,14 +178,14 @@ public class Status9Choice {
 	 */
 	public static final MMMessageAssociationEnd mmMatchingStatus = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeStatus.mmMatchingStatus;
+			businessElementTrace_lazy = () -> SecuritiesTradeStatus.mmMatchingStatus;
 			componentContext_lazy = () -> Status9Choice.mmObject();
 			isDerived = false;
 			xmlTag = "MtchgSts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MatchingStatus";
 			definition = "Provides the matching status of the instruction.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Status15Choice.mmMatchingStatus);
+			nextVersions_lazy = () -> Arrays.asList(Status15Choice.mmMatchingStatus);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -236,14 +239,14 @@ public class Status9Choice {
 	 */
 	public static final MMMessageAssociationEnd mmInferredMatchingStatus = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeStatus.mmMatchingStatus;
+			businessElementTrace_lazy = () -> SecuritiesTradeStatus.mmMatchingStatus;
 			componentContext_lazy = () -> Status9Choice.mmObject();
 			isDerived = false;
 			xmlTag = "IfrrdMtchgSts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InferredMatchingStatus";
 			definition = "Provides the matching status of an instruction as known by the account servicer based on an allegement. At this time no matching took place on the market (at the CSD/ICSD).";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Status15Choice.mmInferredMatchingStatus);
+			nextVersions_lazy = () -> Arrays.asList(Status15Choice.mmInferredMatchingStatus);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -293,14 +296,14 @@ public class Status9Choice {
 	 */
 	public static final MMMessageAssociationEnd mmSettlementStatus = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.mmSettlementStatus;
+			businessElementTrace_lazy = () -> Status.mmSettlementStatus;
 			componentContext_lazy = () -> Status9Choice.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmSts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementStatus";
 			definition = "Provides the status of settlement of a transaction.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Status15Choice.mmSettlementStatus);
+			nextVersions_lazy = () -> Arrays.asList(Status15Choice.mmSettlementStatus);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -350,14 +353,14 @@ public class Status9Choice {
 	 */
 	public static final MMMessageAssociationEnd mmInstructionProcessingStatus = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.mmTransactionProcessingStatus;
+			businessElementTrace_lazy = () -> Status.mmTransactionProcessingStatus;
 			componentContext_lazy = () -> Status9Choice.mmObject();
 			isDerived = false;
 			xmlTag = "InstrPrcgSts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructionProcessingStatus";
 			definition = "Provides the status of an instruction.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Status15Choice.mmInstructionProcessingStatus);
+			nextVersions_lazy = () -> Arrays.asList(Status15Choice.mmInstructionProcessingStatus);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -368,12 +371,10 @@ public class Status9Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Status9Choice.mmProprietary, com.tools20022.repository.choice.Status9Choice.mmMatchingStatus,
-						com.tools20022.repository.choice.Status9Choice.mmInferredMatchingStatus, com.tools20022.repository.choice.Status9Choice.mmSettlementStatus,
-						com.tools20022.repository.choice.Status9Choice.mmInstructionProcessingStatus);
+				messageElement_lazy = () -> Arrays.asList(Status9Choice.mmProprietary, Status9Choice.mmMatchingStatus, Status9Choice.mmInferredMatchingStatus, Status9Choice.mmSettlementStatus, Status9Choice.mmInstructionProcessingStatus);
 				trace_lazy = () -> Status.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Status9Choice";
 				definition = "Choice of status.";
 				nextVersions_lazy = () -> Arrays.asList(Status15Choice.mmObject());

@@ -20,7 +20,9 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -120,10 +122,10 @@ public class CardTransactionEnvironment4 {
 			componentContext_lazy = () -> CardTransactionEnvironment4.mmObject();
 			isDerived = false;
 			xmlTag = "AcqrrId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcquirerIdentification";
 			definition = "Acquirer identification of the card transaction.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CardTransactionEnvironment2.mmAcquirerIdentification;
+			previousVersion_lazy = () -> CardTransactionEnvironment2.mmAcquirerIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -165,7 +167,7 @@ public class CardTransactionEnvironment4 {
 			componentContext_lazy = () -> CardTransactionEnvironment4.mmObject();
 			isDerived = false;
 			xmlTag = "CardSchmeId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CardSchemeIdentification";
 			definition = "Identification of the interconnected card scheme from which the request is coming.";
 			maxOccurs = 1;
@@ -212,10 +214,10 @@ public class CardTransactionEnvironment4 {
 			componentContext_lazy = () -> CardTransactionEnvironment4.mmObject();
 			isDerived = false;
 			xmlTag = "AccptrId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcceptorIdentification";
 			definition = "Identification of the card acceptor performing the transaction.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CardTransactionEnvironment2.mmAcceptorIdentification;
+			previousVersion_lazy = () -> CardTransactionEnvironment2.mmAcceptorIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -260,10 +262,10 @@ public class CardTransactionEnvironment4 {
 			componentContext_lazy = () -> CardTransactionEnvironment4.mmObject();
 			isDerived = false;
 			xmlTag = "TermnlId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TerminalIdentification";
 			definition = "Identification of the card terminal performing the transaction.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CardTransactionEnvironment2.mmTerminalIdentification;
+			previousVersion_lazy = () -> CardTransactionEnvironment2.mmTerminalIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -306,10 +308,10 @@ public class CardTransactionEnvironment4 {
 			componentContext_lazy = () -> CardTransactionEnvironment4.mmObject();
 			isDerived = false;
 			xmlTag = "Card";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Card";
 			definition = "Card performing the transaction.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CardTransactionEnvironment2.mmCard;
+			previousVersion_lazy = () -> CardTransactionEnvironment2.mmCard;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -353,10 +355,10 @@ public class CardTransactionEnvironment4 {
 			componentContext_lazy = () -> CardTransactionEnvironment4.mmObject();
 			isDerived = false;
 			xmlTag = "PmtTkn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentToken";
 			definition = "Payment token information.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CardTransactionEnvironment2.mmPaymentToken;
+			previousVersion_lazy = () -> CardTransactionEnvironment2.mmPaymentToken;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -367,11 +369,10 @@ public class CardTransactionEnvironment4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardTransactionEnvironment4.mmAcquirerIdentification, com.tools20022.repository.msg.CardTransactionEnvironment4.mmCardSchemeIdentification,
-						com.tools20022.repository.msg.CardTransactionEnvironment4.mmAcceptorIdentification, com.tools20022.repository.msg.CardTransactionEnvironment4.mmTerminalIdentification,
-						com.tools20022.repository.msg.CardTransactionEnvironment4.mmCard, com.tools20022.repository.msg.CardTransactionEnvironment4.mmPaymentToken);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(CardTransactionEnvironment4.mmAcquirerIdentification, CardTransactionEnvironment4.mmCardSchemeIdentification, CardTransactionEnvironment4.mmAcceptorIdentification,
+						CardTransactionEnvironment4.mmTerminalIdentification, CardTransactionEnvironment4.mmCard, CardTransactionEnvironment4.mmPaymentToken);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CardTransactionEnvironment4";
 				definition = "Environment of the transaction.";
 				nextVersions_lazy = () -> Arrays.asList(CardTransactionEnvironment5.mmObject());

@@ -17,10 +17,9 @@
 
 package com.tools20022.repository.entity;
 
-import com.tools20022.metamodel.MMBusinessAssociationEnd;
-import com.tools20022.metamodel.MMBusinessAttribute;
-import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.*;
 import com.tools20022.repository.datatype.PercentageRate;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.PercentageTolerance1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -34,20 +33,12 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.Tolerance#mmRelatedUndertakingAmount
- * Tolerance.mmRelatedUndertakingAmount}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Tolerance#mmQuantity
- * Tolerance.mmQuantity}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Tolerance#mmPlusPercent
- * Tolerance.mmPlusPercent}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Tolerance#mmMinusPercent
- * Tolerance.mmMinusPercent}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Tolerance#mmPrice
- * Tolerance.mmPrice}</li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.PercentageTolerance1
+ * PercentageTolerance1}</li>
  * </ul>
  * </li>
  * <li>
@@ -64,12 +55,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * UndertakingAmount.mmTolerance}</li>
  * </ul>
  * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.PercentageTolerance1
- * PercentageTolerance1}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Tolerance#mmRelatedUndertakingAmount
+ * Tolerance.mmRelatedUndertakingAmount}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Tolerance#mmQuantity
+ * Tolerance.mmQuantity}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Tolerance#mmPlusPercent
+ * Tolerance.mmPlusPercent}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Tolerance#mmMinusPercent
+ * Tolerance.mmMinusPercent}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Tolerance#mmPrice
+ * Tolerance.mmPrice}</li>
  * </ul>
  * </li>
  * <li>
@@ -127,13 +126,13 @@ public class Tolerance {
 		{
 			elementContext_lazy = () -> Tolerance.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedUndertakingAmount";
 			definition = "Undertaking amount for which a tolerance is provided.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.UndertakingAmount.mmTolerance;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.UndertakingAmount.mmObject();
 		}
 	};
@@ -174,13 +173,13 @@ public class Tolerance {
 		{
 			elementContext_lazy = () -> Tolerance.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Quantity";
 			definition = "Quantity of product on which a tolerance is allowed.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.ProductQuantity.mmQuantityTolerance;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.ProductQuantity.mmObject();
 		}
 	};
@@ -223,10 +222,10 @@ public class Tolerance {
 	 */
 	public static final MMBusinessAttribute mmPlusPercent = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PercentageTolerance1.mmPlusPercent);
+			derivation_lazy = () -> Arrays.asList(PercentageTolerance1.mmPlusPercent);
 			elementContext_lazy = () -> Tolerance.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PlusPercent";
 			definition = "Variance in percentage allowed over the agreed dimension. For example, plus 10 percent.";
 			maxOccurs = 1;
@@ -273,10 +272,10 @@ public class Tolerance {
 	 */
 	public static final MMBusinessAttribute mmMinusPercent = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PercentageTolerance1.mmMinusPercent);
+			derivation_lazy = () -> Arrays.asList(PercentageTolerance1.mmMinusPercent);
 			elementContext_lazy = () -> Tolerance.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MinusPercent";
 			definition = "Variance in percentage allowed below the agreed dimension. For example, minus 10 percent.";
 			maxOccurs = 1;
@@ -320,13 +319,13 @@ public class Tolerance {
 		{
 			elementContext_lazy = () -> Tolerance.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Price";
 			definition = "Price on which a tolerance is allowed.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.Price.mmPriceTolerance;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Price.mmObject();
 		}
 	};
@@ -334,14 +333,13 @@ public class Tolerance {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Tolerance";
 				definition = "Variance allowed on a quantity or on a price.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Price.mmPriceTolerance, com.tools20022.repository.entity.ProductQuantity.mmQuantityTolerance,
 						com.tools20022.repository.entity.UndertakingAmount.mmTolerance);
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Tolerance.mmRelatedUndertakingAmount, com.tools20022.repository.entity.Tolerance.mmQuantity, com.tools20022.repository.entity.Tolerance.mmPlusPercent,
-						com.tools20022.repository.entity.Tolerance.mmMinusPercent, com.tools20022.repository.entity.Tolerance.mmPrice);
+				element_lazy = () -> Arrays.asList(Tolerance.mmRelatedUndertakingAmount, Tolerance.mmQuantity, Tolerance.mmPlusPercent, Tolerance.mmMinusPercent, Tolerance.mmPrice);
 				derivationComponent_lazy = () -> Arrays.asList(PercentageTolerance1.mmObject());
 			}
 		});

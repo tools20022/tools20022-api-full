@@ -19,9 +19,12 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.tsmt.ActivityReportSetUpRequestV02;
 import com.tools20022.repository.datatype.ISOTime;
 import com.tools20022.repository.datatype.PlusOrMinusIndicator;
 import com.tools20022.repository.entity.UTCOffset;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -106,11 +109,11 @@ public class UTCOffset1 {
 	 */
 	public static final MMMessageAttribute mmSign = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.UTCOffset.mmSign;
+			businessElementTrace_lazy = () -> UTCOffset.mmSign;
 			componentContext_lazy = () -> UTCOffset1.mmObject();
 			isDerived = false;
 			xmlTag = "Sgn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Sign";
 			definition = "Indicates whether the offset is before or after 00:00 hour UTC.";
 			maxOccurs = 1;
@@ -154,11 +157,11 @@ public class UTCOffset1 {
 	 */
 	public static final MMMessageAttribute mmNumberOfHours = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.UTCOffset.mmNumberOfHours;
+			businessElementTrace_lazy = () -> UTCOffset.mmNumberOfHours;
 			componentContext_lazy = () -> UTCOffset1.mmObject();
 			isDerived = false;
 			xmlTag = "NbOfHrs";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NumberOfHours";
 			definition = "Offset of the reporting time, in hours,  before or after 00:00 hour UTC.";
 			maxOccurs = 1;
@@ -170,11 +173,11 @@ public class UTCOffset1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UTCOffset1.mmSign, com.tools20022.repository.msg.UTCOffset1.mmNumberOfHours);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.ActivityReportSetUpRequestV02.mmUTCOffset);
+				messageElement_lazy = () -> Arrays.asList(UTCOffset1.mmSign, UTCOffset1.mmNumberOfHours);
+				messageBuildingBlock_lazy = () -> Arrays.asList(ActivityReportSetUpRequestV02.mmUTCOffset);
 				trace_lazy = () -> UTCOffset.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "UTCOffset1";
 				definition = "Specifies the parameters to calculate the local reporting time.";
 			}

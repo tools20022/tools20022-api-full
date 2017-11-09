@@ -20,6 +20,7 @@ package com.tools20022.repository.area.camt;
 import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.CashManagementArchive;
 import com.tools20022.repository.msg.Case;
 import com.tools20022.repository.msg.CaseAssignment;
@@ -47,6 +48,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code camt.027.001.01}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.CashManagementArchive
@@ -80,9 +84,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * ClaimNonReceipt.mmMissingCover}</li>
  * </ul>
  * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code camt.027.001.01}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -124,7 +125,7 @@ public class ClaimNonReceipt {
 	public static final MMMessageBuildingBlock mmAssignment = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Assgnmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Assignment";
 			definition = "Identifies an assignment.";
 			maxOccurs = 1;
@@ -157,7 +158,7 @@ public class ClaimNonReceipt {
 	public static final MMMessageBuildingBlock mmCase = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Case";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Case";
 			definition = "Identifies a case.";
 			maxOccurs = 1;
@@ -199,7 +200,7 @@ public class ClaimNonReceipt {
 	public static final MMMessageBuildingBlock mmUnderlying = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Undrlyg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Underlying";
 			definition = "Identifies the payment instruction for which the Creditor has not received the funds.\nNote: \nIn case of a missing cover, it must be the Field 20 of the received MT103.\nIn case of a claim non receipt initiated by the Debtor, it must be the identification of the instruction (Field 20 of MT103, Instruction Identification of the Payment Initiation or the Bulk Credit Transfer).";
 			maxOccurs = 1;
@@ -236,7 +237,7 @@ public class ClaimNonReceipt {
 	public static final MMMessageBuildingBlock mmMissingCover = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "MssngCover";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MissingCover";
 			definition = "Indicates if the claim non receipt is a missing cover. The absence of the component means that the message is not for a missing cover. ";
 			maxOccurs = 1;
@@ -248,7 +249,7 @@ public class ClaimNonReceipt {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ClaimNonReceipt";
 				definition = "Scope\nThe Claim Non Receipt message is sent by a case creator/case assigner to a case assignee.\nThis message allows to initiate an investigation in case the beneficiary of a payment has not received an expected payment.\nUsage\nNote 1: Although there are cases where a creditor would contact the creditor's bank when claiming non-receipt, the activity only retained the scenario where the beneficiary claims non-receipt with its debtor, the debtor in its turn contacting the first agent. Therefore the investigation follows the same route as the original instruction.\nNote 2: This message is also used to report a missing cover. The rationale behind this is that the beneficiary of the cover (receiver of the payment instruction) missing the cover would be in the very same position as a beneficiary expecting a credit to its account and would therefore trigger the same processes.\nIn case of a Missing cover, the case will be assigned to the sender of the payment instruction, before following the route of the payment instruction.";
 				messageSet_lazy = () -> Arrays.asList(ISOArchive.mmObject());
@@ -256,8 +257,7 @@ public class ClaimNonReceipt {
 				xmlTag = "camt.027.001.01";
 				businessArea_lazy = () -> CashManagementArchive.mmObject();
 				xmlName = "camt.027.001.01";
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.ClaimNonReceipt.mmAssignment, com.tools20022.repository.area.camt.ClaimNonReceipt.mmCase,
-						com.tools20022.repository.area.camt.ClaimNonReceipt.mmUnderlying, com.tools20022.repository.area.camt.ClaimNonReceipt.mmMissingCover);
+				messageBuildingBlock_lazy = () -> Arrays.asList(ClaimNonReceipt.mmAssignment, ClaimNonReceipt.mmCase, ClaimNonReceipt.mmUnderlying, ClaimNonReceipt.mmMissingCover);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "camt";

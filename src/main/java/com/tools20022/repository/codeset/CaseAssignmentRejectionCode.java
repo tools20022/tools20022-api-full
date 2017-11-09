@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.CaseAssignmentRejection1Code
+ * CaseAssignmentRejection1Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.CaseAssignmentRejection2Code
+ * CaseAssignmentRejection2Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -47,17 +60,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.CaseAssignmentRejectionCode#mmPaymentPreviouslyCancelledOrRejected
  * CaseAssignmentRejectionCode.mmPaymentPreviouslyCancelledOrRejected}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.CaseAssignmentRejection1Code
- * CaseAssignmentRejection1Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.CaseAssignmentRejection2Code
- * CaseAssignmentRejection2Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -107,7 +109,7 @@ public class CaseAssignmentRejectionCode {
 	 */
 	public static final MMCode mmUnderlyingPaymentNotFound = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "UnderlyingPaymentNotFound";
 			definition = "Underlying instruction can not be found.";
 			owner_lazy = () -> CaseAssignmentRejectionCode.mmObject();
@@ -140,7 +142,7 @@ public class CaseAssignmentRejectionCode {
 	 */
 	public static final MMCode mmNotAuthorisedToInvestigate = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NotAuthorisedToInvestigate";
 			definition = "Case Assignee is not allowed to investigate on this instruction (eg. Case Assignee is not the next party in the payment chain).";
 			owner_lazy = () -> CaseAssignmentRejectionCode.mmObject();
@@ -170,7 +172,7 @@ public class CaseAssignmentRejectionCode {
 	 */
 	public static final MMCode mmUnknownCase = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "UnknownCase";
 			definition = "Case has never been assigned before.";
 			owner_lazy = () -> CaseAssignmentRejectionCode.mmObject();
@@ -200,7 +202,7 @@ public class CaseAssignmentRejectionCode {
 	 */
 	public static final MMCode mmPaymentRejected = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PaymentRejected";
 			definition = "Used when the payment instruction has been rejected.";
 			owner_lazy = () -> CaseAssignmentRejectionCode.mmObject();
@@ -230,7 +232,7 @@ public class CaseAssignmentRejectionCode {
 	 */
 	public static final MMCode mmPaymentCancelled = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PaymentCancelled";
 			definition = "Used when the payment instruction has been cancelled.";
 			owner_lazy = () -> CaseAssignmentRejectionCode.mmObject();
@@ -263,7 +265,7 @@ public class CaseAssignmentRejectionCode {
 	 */
 	public static final MMCode mmPaymentPreviouslyCancelledOrRejected = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PaymentPreviouslyCancelledOrRejected";
 			definition = "Used when the payment instruction has previously been cancelled or rejected.";
 			owner_lazy = () -> CaseAssignmentRejectionCode.mmObject();
@@ -274,14 +276,13 @@ public class CaseAssignmentRejectionCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("NFND");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CaseAssignmentRejectionCode";
 				definition = "Specifies the reason for not accepting a Case.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CaseAssignmentRejectionCode.mmUnderlyingPaymentNotFound, com.tools20022.repository.codeset.CaseAssignmentRejectionCode.mmNotAuthorisedToInvestigate,
-						com.tools20022.repository.codeset.CaseAssignmentRejectionCode.mmUnknownCase, com.tools20022.repository.codeset.CaseAssignmentRejectionCode.mmPaymentRejected,
-						com.tools20022.repository.codeset.CaseAssignmentRejectionCode.mmPaymentCancelled, com.tools20022.repository.codeset.CaseAssignmentRejectionCode.mmPaymentPreviouslyCancelledOrRejected);
+				code_lazy = () -> Arrays.asList(CaseAssignmentRejectionCode.mmUnderlyingPaymentNotFound, CaseAssignmentRejectionCode.mmNotAuthorisedToInvestigate, CaseAssignmentRejectionCode.mmUnknownCase,
+						CaseAssignmentRejectionCode.mmPaymentRejected, CaseAssignmentRejectionCode.mmPaymentCancelled, CaseAssignmentRejectionCode.mmPaymentPreviouslyCancelledOrRejected);
 				derivation_lazy = () -> Arrays.asList(CaseAssignmentRejection1Code.mmObject(), CaseAssignmentRejection2Code.mmObject());
 			}
 		});

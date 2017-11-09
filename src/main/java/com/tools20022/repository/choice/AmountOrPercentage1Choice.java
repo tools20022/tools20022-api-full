@@ -19,7 +19,9 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.UndertakingAmount;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.Percentage1;
 import com.tools20022.repository.msg.UndertakingAmount4;
 import java.util.Arrays;
@@ -101,7 +103,7 @@ public class AmountOrPercentage1Choice {
 			componentContext_lazy = () -> AmountOrPercentage1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "DfndAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DefinedAmount";
 			definition = "Details related to a defined monetary amount.";
 			maxOccurs = 1;
@@ -148,7 +150,7 @@ public class AmountOrPercentage1Choice {
 			componentContext_lazy = () -> AmountOrPercentage1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "PctgAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PercentageAmount";
 			definition = "Details related to an amount percentage.";
 			maxOccurs = 1;
@@ -161,10 +163,10 @@ public class AmountOrPercentage1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AmountOrPercentage1Choice.mmDefinedAmount, com.tools20022.repository.choice.AmountOrPercentage1Choice.mmPercentageAmount);
+				messageElement_lazy = () -> Arrays.asList(AmountOrPercentage1Choice.mmDefinedAmount, AmountOrPercentage1Choice.mmPercentageAmount);
 				trace_lazy = () -> UndertakingAmount.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AmountOrPercentage1Choice";
 				definition = "Choice between an amount and percentage.";
 			}

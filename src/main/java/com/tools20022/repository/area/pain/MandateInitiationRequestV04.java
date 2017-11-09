@@ -20,6 +20,7 @@ package com.tools20022.repository.area.pain;
 import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.PaymentsInitiationPreviousVersion;
 import com.tools20022.repository.msg.GroupHeader47;
 import com.tools20022.repository.msg.Mandate7;
@@ -50,6 +51,9 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code pain.009.001.04}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.PaymentsInitiationPreviousVersion
@@ -81,9 +85,6 @@ import java.util.List;
  * MandateInitiationRequestV04.mmSupplementaryData}</li>
  * </ul>
  * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code pain.009.001.04}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -153,11 +154,11 @@ public class MandateInitiationRequestV04 {
 	public static final MMMessageBuildingBlock mmGroupHeader = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "GrpHdr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GroupHeader";
 			definition = "Set of characteristics to identify the message and parties playing a role in the mandate initiation, but which are not part of the mandate.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.pain.MandateInitiationRequestV05.mmGroupHeader);
-			previousVersion_lazy = () -> com.tools20022.repository.area.pain.MandateInitiationRequestV03.mmGroupHeader;
+			nextVersions_lazy = () -> Arrays.asList(MandateInitiationRequestV05.mmGroupHeader);
+			previousVersion_lazy = () -> MandateInitiationRequestV03.mmGroupHeader;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GroupHeader47.mmObject();
@@ -205,11 +206,11 @@ public class MandateInitiationRequestV04 {
 	public static final MMMessageBuildingBlock mmMandate = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Mndt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Mandate";
 			definition = "Set of elements used to provide the details of the mandate signed between the (ultimate) creditor and the (ultimate) debtor.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.pain.MandateInitiationRequestV05.mmMandate);
-			previousVersion_lazy = () -> com.tools20022.repository.area.pain.MandateInitiationRequestV03.mmMandate;
+			nextVersions_lazy = () -> Arrays.asList(MandateInitiationRequestV05.mmMandate);
+			previousVersion_lazy = () -> MandateInitiationRequestV03.mmMandate;
 			minOccurs = 1;
 			complexType_lazy = () -> Mandate7.mmObject();
 		}
@@ -257,11 +258,11 @@ public class MandateInitiationRequestV04 {
 	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SplmtryData";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryData";
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.pain.MandateInitiationRequestV05.mmSupplementaryData);
-			previousVersion_lazy = () -> com.tools20022.repository.area.pain.MandateInitiationRequestV03.mmSupplementaryData;
+			nextVersions_lazy = () -> Arrays.asList(MandateInitiationRequestV05.mmSupplementaryData);
+			previousVersion_lazy = () -> MandateInitiationRequestV03.mmSupplementaryData;
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
@@ -270,7 +271,7 @@ public class MandateInitiationRequestV04 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MandateInitiationRequestV04";
 				definition = "Scope\r\nThe MandateInitiationRequest message is sent by the initiator of the request to his agent. The initiator can either be the debtor or the creditor.\r\nThe MandateInitiationRequest message is forwarded by the agent of the initiator to the agent of the counterparty.\r\nThe MandateInitiationRequest message is used to setup the instruction that allows the debtor agent to accept instructions from the creditor, through the creditor agent, to debit the account of the debtor.\r\nUsage\r\nThe MandateInitiationRequest message can contain one or more request(s) to setup a specific mandate.\r\nThe messages can be exchanged between creditor and creditor agent or debtor and debtor agent and between creditor agent and debtor agent.\r\nThe message can also be used by an initiating party that has authority to send the message on behalf of the creditor or debtor.\r\nThe MandateInitiationRequest message can be used in domestic and cross-border scenarios.";
 				nextVersions_lazy = () -> Arrays.asList(MandateInitiationRequestV05.mmObject());
@@ -279,8 +280,7 @@ public class MandateInitiationRequestV04 {
 				rootElement = "Document";
 				xmlTag = "MndtInitnReq";
 				businessArea_lazy = () -> PaymentsInitiationPreviousVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.pain.MandateInitiationRequestV04.mmGroupHeader, com.tools20022.repository.area.pain.MandateInitiationRequestV04.mmMandate,
-						com.tools20022.repository.area.pain.MandateInitiationRequestV04.mmSupplementaryData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(MandateInitiationRequestV04.mmGroupHeader, MandateInitiationRequestV04.mmMandate, MandateInitiationRequestV04.mmSupplementaryData);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "pain";

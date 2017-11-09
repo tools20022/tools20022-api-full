@@ -20,9 +20,12 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ActiveOrHistoricCurrencyCode;
 import com.tools20022.repository.entity.CashAccountService;
+import com.tools20022.repository.entity.Service;
 import com.tools20022.repository.entity.Tax;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -112,11 +115,11 @@ public class TaxCalculation1 {
 	 */
 	public static final MMMessageAttribute mmHostCurrency = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.mmCurrency;
+			businessElementTrace_lazy = () -> Tax.mmCurrency;
 			componentContext_lazy = () -> TaxCalculation1.mmObject();
 			isDerived = false;
 			xmlTag = "HstCcy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HostCurrency";
 			definition = "Currency that all totals for taxable services must be converted to for calculating taxes owed for this tax region.  This also is the currency in which the payment of tax obligations is usually submitted to the taxing authority.";
 			maxOccurs = 1;
@@ -169,7 +172,7 @@ public class TaxCalculation1 {
 			componentContext_lazy = () -> TaxCalculation1.mmObject();
 			isDerived = false;
 			xmlTag = "TaxblSvcChrgConvs";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxableServiceChargeConversion";
 			definition = "Taxable service charge amount conversions to host currency. \n\nUsage: One occurrence must be present for each different service pricing currency in the statement.";
 			minOccurs = 1;
@@ -217,11 +220,11 @@ public class TaxCalculation1 {
 	 */
 	public static final MMMessageAssociationEnd mmTotalTaxableServiceChargeHostAmount = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Service.mmAmount;
+			businessElementTrace_lazy = () -> Service.mmAmount;
 			componentContext_lazy = () -> TaxCalculation1.mmObject();
 			isDerived = false;
 			xmlTag = "TtlTaxblSvcChrgHstAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalTaxableServiceChargeHostAmount";
 			definition = "Total of all services subject to tax for a specific tax region.  \n\nUsage:\nThis field will equal the sum of all the separate host tax charge for service equivalent totals for each individual currency.  It is expressed in the tax region’s Host currency. This total is used to determine the tax due by calculating using each tax identifications rate.";
 			maxOccurs = 1;
@@ -271,11 +274,11 @@ public class TaxCalculation1 {
 	 */
 	public static final MMMessageAttribute mmTaxIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.mmRecord;
+			businessElementTrace_lazy = () -> Tax.mmRecord;
 			componentContext_lazy = () -> TaxCalculation1.mmObject();
 			isDerived = false;
 			xmlTag = "TaxId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxIdentification";
 			definition = "Provides for the specific tax identification within the same tax region. \n\nUsage: A maximum of three specific tax identifications may be provided. These elements use the total host currency taxable amount as the basis of the calculation. \nThis element is only valid for method C.";
 			maxOccurs = 3;
@@ -320,11 +323,11 @@ public class TaxCalculation1 {
 	 */
 	public static final MMMessageAssociationEnd mmTotalTax = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.mmAmount;
+			businessElementTrace_lazy = () -> Tax.mmAmount;
 			componentContext_lazy = () -> TaxCalculation1.mmObject();
 			isDerived = false;
 			xmlTag = "TtlTax";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalTax";
 			definition = "Total amount of all taxes for a specific customer within the tax region.  This is a sum of all individual total tax amounts for tax identification ’s expressed in the tax region’s host currency.";
 			maxOccurs = 1;
@@ -337,11 +340,11 @@ public class TaxCalculation1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TaxCalculation1.mmHostCurrency, com.tools20022.repository.msg.TaxCalculation1.mmTaxableServiceChargeConversion,
-						com.tools20022.repository.msg.TaxCalculation1.mmTotalTaxableServiceChargeHostAmount, com.tools20022.repository.msg.TaxCalculation1.mmTaxIdentification, com.tools20022.repository.msg.TaxCalculation1.mmTotalTax);
+				messageElement_lazy = () -> Arrays.asList(TaxCalculation1.mmHostCurrency, TaxCalculation1.mmTaxableServiceChargeConversion, TaxCalculation1.mmTotalTaxableServiceChargeHostAmount, TaxCalculation1.mmTaxIdentification,
+						TaxCalculation1.mmTotalTax);
 				trace_lazy = () -> Tax.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TaxCalculation1";
 				definition = "Specifies the details for the tax calculation.";
 			}

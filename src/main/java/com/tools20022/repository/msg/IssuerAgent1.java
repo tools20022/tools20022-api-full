@@ -20,9 +20,15 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.seev.MeetingNotificationV02;
+import com.tools20022.repository.area.seev.MeetingNotificationV03;
+import com.tools20022.repository.area.seev.MeetingNotificationV04;
 import com.tools20022.repository.choice.PartyIdentification9Choice;
 import com.tools20022.repository.codeset.AgentRole1Code;
 import com.tools20022.repository.entity.CorporateActionAgent;
+import com.tools20022.repository.entity.Party;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -125,14 +131,14 @@ public class IssuerAgent1 {
 	 */
 	public static final MMMessageAssociationEnd mmIdentification = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> IssuerAgent1.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Identifies Issuer Agent.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IssuerAgent2.mmIdentification);
+			nextVersions_lazy = () -> Arrays.asList(IssuerAgent2.mmIdentification);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -181,14 +187,14 @@ public class IssuerAgent1 {
 	 */
 	public static final MMMessageAttribute mmRole = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionAgent.mmAgentRole;
+			businessElementTrace_lazy = () -> CorporateActionAgent.mmAgentRole;
 			componentContext_lazy = () -> IssuerAgent1.mmObject();
 			isDerived = false;
 			xmlTag = "Role";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Role";
 			definition = "Specifies the role of the Issuer agent.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IssuerAgent2.mmRole);
+			nextVersions_lazy = () -> Arrays.asList(IssuerAgent2.mmRole);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> AgentRole1Code.mmObject();
@@ -198,12 +204,11 @@ public class IssuerAgent1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IssuerAgent1.mmIdentification, com.tools20022.repository.msg.IssuerAgent1.mmRole);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.MeetingNotificationV02.mmIssuerAgent, com.tools20022.repository.area.seev.MeetingNotificationV03.mmIssuerAgent,
-						com.tools20022.repository.area.seev.MeetingNotificationV04.mmIssuerAgent);
+				messageElement_lazy = () -> Arrays.asList(IssuerAgent1.mmIdentification, IssuerAgent1.mmRole);
+				messageBuildingBlock_lazy = () -> Arrays.asList(MeetingNotificationV02.mmIssuerAgent, MeetingNotificationV03.mmIssuerAgent, MeetingNotificationV04.mmIssuerAgent);
 				trace_lazy = () -> CorporateActionAgent.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "IssuerAgent1";
 				definition = "Specifies the role of the Issuer agent.";
 				nextVersions_lazy = () -> Arrays.asList(IssuerAgent2.mmObject());

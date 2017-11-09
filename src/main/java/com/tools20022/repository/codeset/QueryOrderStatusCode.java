@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.QueryOrderStatus1Code
+ * QueryOrderStatus1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -44,13 +53,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.QueryOrderStatusCode#mmQueryOrdersForTheParty
  * QueryOrderStatusCode.mmQueryOrdersForTheParty}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.QueryOrderStatus1Code
- * QueryOrderStatus1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -94,7 +96,7 @@ public class QueryOrderStatusCode {
 	 */
 	public static final MMCode mmQueryUnconfirmedOrder = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QueryUnconfirmedOrder";
 			definition = "Query for orders which are not confirmed by a party.";
 			owner_lazy = () -> QueryOrderStatusCode.mmObject();
@@ -124,7 +126,7 @@ public class QueryOrderStatusCode {
 	 */
 	public static final MMCode mmQueryAllOrders = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QueryAllOrders";
 			definition = "Query for all orders.\r\n";
 			owner_lazy = () -> QueryOrderStatusCode.mmObject();
@@ -154,7 +156,7 @@ public class QueryOrderStatusCode {
 	 */
 	public static final MMCode mmQueryPartiallyExecutedOrder = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QueryPartiallyExecutedOrder";
 			definition = "Query for orders have been partially executed.  ";
 			owner_lazy = () -> QueryOrderStatusCode.mmObject();
@@ -184,7 +186,7 @@ public class QueryOrderStatusCode {
 	 */
 	public static final MMCode mmQueryFullyExecutedOrder = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QueryFullyExecutedOrder";
 			definition = "Query for orders have been completely executed.  ";
 			owner_lazy = () -> QueryOrderStatusCode.mmObject();
@@ -214,7 +216,7 @@ public class QueryOrderStatusCode {
 	 */
 	public static final MMCode mmQueryOrdersForTheParty = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QueryOrdersForTheParty";
 			definition = "Query for all orders for a party.";
 			owner_lazy = () -> QueryOrderStatusCode.mmObject();
@@ -225,13 +227,12 @@ public class QueryOrderStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "QueryOrderStatusCode";
 				definition = "Specifies the inquiry status of order.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.QueryOrderStatusCode.mmQueryUnconfirmedOrder, com.tools20022.repository.codeset.QueryOrderStatusCode.mmQueryAllOrders,
-						com.tools20022.repository.codeset.QueryOrderStatusCode.mmQueryPartiallyExecutedOrder, com.tools20022.repository.codeset.QueryOrderStatusCode.mmQueryFullyExecutedOrder,
-						com.tools20022.repository.codeset.QueryOrderStatusCode.mmQueryOrdersForTheParty);
+				code_lazy = () -> Arrays.asList(QueryOrderStatusCode.mmQueryUnconfirmedOrder, QueryOrderStatusCode.mmQueryAllOrders, QueryOrderStatusCode.mmQueryPartiallyExecutedOrder, QueryOrderStatusCode.mmQueryFullyExecutedOrder,
+						QueryOrderStatusCode.mmQueryOrdersForTheParty);
 				derivation_lazy = () -> Arrays.asList(QueryOrderStatus1Code.mmObject());
 			}
 		});

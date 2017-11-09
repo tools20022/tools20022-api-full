@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,12 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.BidType1Code BidType1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>{@linkplain com.tools20022.repository.codeset.BidTypeCode#mmNonDisclosed
@@ -35,12 +43,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * BidTypeCode.mmDisclosed}</li>
  * <li>{@linkplain com.tools20022.repository.codeset.BidTypeCode#mmNoBid
  * BidTypeCode.mmNoBid}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.BidType1Code BidType1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -89,7 +91,7 @@ public class BidTypeCode {
 	 */
 	public static final MMCode mmNonDisclosed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonDisclosed";
 			definition = "Bid type is non disclosed.";
 			owner_lazy = () -> BidTypeCode.mmObject();
@@ -118,7 +120,7 @@ public class BidTypeCode {
 	 */
 	public static final MMCode mmDisclosed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Disclosed";
 			definition = "Bid type is disclosed.";
 			owner_lazy = () -> BidTypeCode.mmObject();
@@ -147,7 +149,7 @@ public class BidTypeCode {
 	 */
 	public static final MMCode mmNoBid = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoBid";
 			definition = "List order is not related to a bid.";
 			owner_lazy = () -> BidTypeCode.mmObject();
@@ -158,12 +160,12 @@ public class BidTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("NDIS");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "BidTypeCode";
 				definition = "Code to identify the type of bid request.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.BidTypeCode.mmNonDisclosed, com.tools20022.repository.codeset.BidTypeCode.mmDisclosed, com.tools20022.repository.codeset.BidTypeCode.mmNoBid);
+				code_lazy = () -> Arrays.asList(BidTypeCode.mmNonDisclosed, BidTypeCode.mmDisclosed, BidTypeCode.mmNoBid);
 				derivation_lazy = () -> Arrays.asList(BidType1Code.mmObject());
 			}
 		});

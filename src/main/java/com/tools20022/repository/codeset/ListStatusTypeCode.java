@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.ListStatusType1Code
+ * ListStatusType1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -45,13 +54,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * ListStatusTypeCode.mmExecutionStarted}</li>
  * <li>{@linkplain com.tools20022.repository.codeset.ListStatusTypeCode#mmTimed
  * ListStatusTypeCode.mmTimed}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.ListStatusType1Code
- * ListStatusType1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -101,7 +103,7 @@ public class ListStatusTypeCode {
 	 */
 	public static final MMCode mmAcknowledgement = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Acknowledgement";
 			definition = "Status is an acknowledgement of the ListOrder.";
 			owner_lazy = () -> ListStatusTypeCode.mmObject();
@@ -131,7 +133,7 @@ public class ListStatusTypeCode {
 	 */
 	public static final MMCode mmResponse = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Response";
 			definition = "Status is a response to a previously sent StatusRequest.";
 			owner_lazy = () -> ListStatusTypeCode.mmObject();
@@ -161,7 +163,7 @@ public class ListStatusTypeCode {
 	 */
 	public static final MMCode mmAllDone = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AllDone";
 			definition = "Status indicates that the ListOrder has been executed.";
 			owner_lazy = () -> ListStatusTypeCode.mmObject();
@@ -194,7 +196,7 @@ public class ListStatusTypeCode {
 	 */
 	public static final MMCode mmAlert = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Alert";
 			definition = "Status indicates that any of the individual orders of the ListOrder have a status that requires something to be done.";
 			owner_lazy = () -> ListStatusTypeCode.mmObject();
@@ -224,7 +226,7 @@ public class ListStatusTypeCode {
 	 */
 	public static final MMCode mmExecutionStarted = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExecutionStarted";
 			definition = "Status indicates that the Execution has started.";
 			owner_lazy = () -> ListStatusTypeCode.mmObject();
@@ -255,7 +257,7 @@ public class ListStatusTypeCode {
 	 */
 	public static final MMCode mmTimed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Timed";
 			definition = "Status indicated that time limit for the order has expired.";
 			owner_lazy = () -> ListStatusTypeCode.mmObject();
@@ -266,14 +268,13 @@ public class ListStatusTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ACKN");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ListStatusTypeCode";
 				definition = "Identifies the type of status.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ListStatusTypeCode.mmAcknowledgement, com.tools20022.repository.codeset.ListStatusTypeCode.mmResponse,
-						com.tools20022.repository.codeset.ListStatusTypeCode.mmAllDone, com.tools20022.repository.codeset.ListStatusTypeCode.mmAlert, com.tools20022.repository.codeset.ListStatusTypeCode.mmExecutionStarted,
-						com.tools20022.repository.codeset.ListStatusTypeCode.mmTimed);
+				code_lazy = () -> Arrays.asList(ListStatusTypeCode.mmAcknowledgement, ListStatusTypeCode.mmResponse, ListStatusTypeCode.mmAllDone, ListStatusTypeCode.mmAlert, ListStatusTypeCode.mmExecutionStarted,
+						ListStatusTypeCode.mmTimed);
 				derivation_lazy = () -> Arrays.asList(ListStatusType1Code.mmObject());
 			}
 		});

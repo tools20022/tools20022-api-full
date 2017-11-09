@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.CertificateType1Code
+ * CertificateType1Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.CertificateType2Code
+ * CertificateType2Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -59,15 +70,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.CertificateTypeCode#mmPublicKeyInfrastructureCertificate
  * CertificateTypeCode.mmPublicKeyInfrastructureCertificate}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.CertificateType1Code
- * CertificateType1Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.CertificateType2Code
- * CertificateType2Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -117,7 +119,7 @@ public class CertificateTypeCode {
 	 */
 	public static final MMCode mmDueFormationAndOrganisation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DueFormationAndOrganisation";
 			definition = "Certification of due formation and organisation.";
 			owner_lazy = () -> CertificateTypeCode.mmObject();
@@ -147,7 +149,7 @@ public class CertificateTypeCode {
 	 */
 	public static final MMCode mmGoodStanding = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "GoodStanding";
 			definition = "Certificate of good standing.";
 			owner_lazy = () -> CertificateTypeCode.mmObject();
@@ -177,7 +179,7 @@ public class CertificateTypeCode {
 	 */
 	public static final MMCode mmLetterOfReference = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "LetterOfReference";
 			definition = "Letter of reference.";
 			owner_lazy = () -> CertificateTypeCode.mmObject();
@@ -207,7 +209,7 @@ public class CertificateTypeCode {
 	 */
 	public static final MMCode mmAntiMoneyLaundering = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AntiMoneyLaundering";
 			definition = "Anti-money laundering certification form.";
 			owner_lazy = () -> CertificateTypeCode.mmObject();
@@ -237,7 +239,7 @@ public class CertificateTypeCode {
 	 */
 	public static final MMCode mmIncumbency = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Incumbency";
 			definition = "Certification of incumbency.";
 			owner_lazy = () -> CertificateTypeCode.mmObject();
@@ -268,7 +270,7 @@ public class CertificateTypeCode {
 	 */
 	public static final MMCode mmPassport = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Passport";
 			definition = "Government issued form of picture identification - passport.";
 			owner_lazy = () -> CertificateTypeCode.mmObject();
@@ -299,7 +301,7 @@ public class CertificateTypeCode {
 	 */
 	public static final MMCode mmDrivingLicense = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DrivingLicense";
 			definition = "Government issued form of picture identification - driving license.";
 			owner_lazy = () -> CertificateTypeCode.mmObject();
@@ -330,7 +332,7 @@ public class CertificateTypeCode {
 	 */
 	public static final MMCode mmIdentityCard = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "IdentityCard";
 			definition = "Government issued form of picture identification - identity card.";
 			owner_lazy = () -> CertificateTypeCode.mmObject();
@@ -360,7 +362,7 @@ public class CertificateTypeCode {
 	 */
 	public static final MMCode mmProofOfAddress = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ProofOfAddress";
 			definition = "Proof of the address, such as a utility bill.";
 			owner_lazy = () -> CertificateTypeCode.mmObject();
@@ -390,7 +392,7 @@ public class CertificateTypeCode {
 	 */
 	public static final MMCode mmPublicKeyInfrastructureCertificate = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PublicKeyInfrastructureCertificate";
 			definition = "Public key infrastructure certificate.";
 			owner_lazy = () -> CertificateTypeCode.mmObject();
@@ -401,16 +403,14 @@ public class CertificateTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("DFOR");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CertificateTypeCode";
 				definition = "Identifies the type of certificate.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CertificateTypeCode.mmDueFormationAndOrganisation, com.tools20022.repository.codeset.CertificateTypeCode.mmGoodStanding,
-						com.tools20022.repository.codeset.CertificateTypeCode.mmLetterOfReference, com.tools20022.repository.codeset.CertificateTypeCode.mmAntiMoneyLaundering,
-						com.tools20022.repository.codeset.CertificateTypeCode.mmIncumbency, com.tools20022.repository.codeset.CertificateTypeCode.mmPassport, com.tools20022.repository.codeset.CertificateTypeCode.mmDrivingLicense,
-						com.tools20022.repository.codeset.CertificateTypeCode.mmIdentityCard, com.tools20022.repository.codeset.CertificateTypeCode.mmProofOfAddress,
-						com.tools20022.repository.codeset.CertificateTypeCode.mmPublicKeyInfrastructureCertificate);
+				code_lazy = () -> Arrays.asList(CertificateTypeCode.mmDueFormationAndOrganisation, CertificateTypeCode.mmGoodStanding, CertificateTypeCode.mmLetterOfReference, CertificateTypeCode.mmAntiMoneyLaundering,
+						CertificateTypeCode.mmIncumbency, CertificateTypeCode.mmPassport, CertificateTypeCode.mmDrivingLicense, CertificateTypeCode.mmIdentityCard, CertificateTypeCode.mmProofOfAddress,
+						CertificateTypeCode.mmPublicKeyInfrastructureCertificate);
 				derivation_lazy = () -> Arrays.asList(CertificateType1Code.mmObject(), CertificateType2Code.mmObject());
 			}
 		});

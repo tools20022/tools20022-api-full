@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -83,7 +85,7 @@ public class AnnualChargePaymentTypeCode {
 	 */
 	public static final MMCode mmCapital = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+			registrationStatus = MMRegistrationStatus.OBSOLETE;
 			name = "Capital";
 			definition = "Annual charge is deducted from the fund capital.";
 			owner_lazy = () -> AnnualChargePaymentTypeCode.mmObject();
@@ -113,7 +115,7 @@ public class AnnualChargePaymentTypeCode {
 	 */
 	public static final MMCode mmIncome = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+			registrationStatus = MMRegistrationStatus.OBSOLETE;
 			name = "Income";
 			definition = "Annual charge is deducted from the fund income.";
 			owner_lazy = () -> AnnualChargePaymentTypeCode.mmObject();
@@ -124,12 +126,12 @@ public class AnnualChargePaymentTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CAPL");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				name = "AnnualChargePaymentTypeCode";
 				definition = "Specifies how the charge is to be deducted.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AnnualChargePaymentTypeCode.mmCapital, com.tools20022.repository.codeset.AnnualChargePaymentTypeCode.mmIncome);
+				code_lazy = () -> Arrays.asList(AnnualChargePaymentTypeCode.mmCapital, AnnualChargePaymentTypeCode.mmIncome);
 			}
 		});
 		return mmObject_lazy.get();

@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.AccountManagementTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -90,7 +92,7 @@ public class AccountManagementType2Code extends AccountManagementTypeCode {
 	 */
 	public static final MMCode mmAccountOpening = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountOpening";
 			owner_lazy = () -> AccountManagementType2Code.mmObject();
 		}
@@ -113,7 +115,7 @@ public class AccountManagementType2Code extends AccountManagementTypeCode {
 	 */
 	public static final MMCode mmAccountModification = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountModification";
 			owner_lazy = () -> AccountManagementType2Code.mmObject();
 		}
@@ -136,7 +138,7 @@ public class AccountManagementType2Code extends AccountManagementTypeCode {
 	 */
 	public static final MMCode mmGetAccountDetails = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GetAccountDetails";
 			owner_lazy = () -> AccountManagementType2Code.mmObject();
 		}
@@ -145,13 +147,12 @@ public class AccountManagementType2Code extends AccountManagementTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ACCO");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AccountManagementType2Code";
 				definition = "Refer to an account management instruction ie, either an account opening instruction or an account modification instruction or a get account details message.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AccountManagementType2Code.mmAccountOpening, com.tools20022.repository.codeset.AccountManagementType2Code.mmAccountModification,
-						com.tools20022.repository.codeset.AccountManagementType2Code.mmGetAccountDetails);
+				code_lazy = () -> Arrays.asList(AccountManagementType2Code.mmAccountOpening, AccountManagementType2Code.mmAccountModification, AccountManagementType2Code.mmGetAccountDetails);
 				trace_lazy = () -> AccountManagementTypeCode.mmObject();
 			}
 		});

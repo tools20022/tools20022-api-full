@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType1Code
+ * CorporateActionEventType1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -139,14 +149,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * CorporateActionEventTypeCode.mmOddLotSalePurchase}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType1Code
- * CorporateActionEventType1Code}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -197,7 +199,7 @@ public class CorporateActionEventTypeCode {
 	 */
 	public static final MMCode mmDividendReinvestment = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DividendReinvestment";
 			definition = "Event is a dividend payment type where cash dividend is rolled over into additional shares in the issuing company.";
 			owner_lazy = () -> CorporateActionEventTypeCode.mmObject();
@@ -232,7 +234,7 @@ public class CorporateActionEventTypeCode {
 	 */
 	public static final MMCode mmCapitalGainsDistribution = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CapitalGainsDistribution";
 			definition = "Event is the distribution of profits resulting from the sale of securities. Shareholders of mutual funds, unit trusts, or Sicavs are recipients of capital gains distributions and are often reinvested in additional shares of the fund.";
 			owner_lazy = () -> CorporateActionEventTypeCode.mmObject();
@@ -267,7 +269,7 @@ public class CorporateActionEventTypeCode {
 	 */
 	public static final MMCode mmCashDividend = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CashDividend";
 			definition = "Event is a distribution of cash to shareholders, in proportion to their equity holding. Ordinary dividends are recurring and regular. The shareholder must take cash and is not offered a choice in the form of distribution.";
 			owner_lazy = () -> CorporateActionEventTypeCode.mmObject();
@@ -301,7 +303,7 @@ public class CorporateActionEventTypeCode {
 	 */
 	public static final MMCode mmDividendOption = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DividendOption";
 			definition = "Event is a distribution of a dividend to shareholders with the choice of payment method. The shareholder must choose the form of payment - stock, cash, or both.";
 			owner_lazy = () -> CorporateActionEventTypeCode.mmObject();
@@ -335,7 +337,7 @@ public class CorporateActionEventTypeCode {
 	 */
 	public static final MMCode mmStockDividend = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "StockDividend";
 			definition = "Event is a dividend paid to shareholders in the form of shares of stock in the issuing company or in another company. The shareholder must take stock and is not offered a choice in the form of distribution.";
 			owner_lazy = () -> CorporateActionEventTypeCode.mmObject();
@@ -371,7 +373,7 @@ public class CorporateActionEventTypeCode {
 	 */
 	public static final MMCode mmLiquidation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Liquidation";
 			definition = "Event is a liquidating dividend or liquidation that consists of a distribution of cash, assets, or both. Debt may be paid in order of priority based on preferred claims to assets specified by the security. The security holder may be able to choose the form of liquidation distribution.";
 			owner_lazy = () -> CorporateActionEventTypeCode.mmObject();
@@ -405,7 +407,7 @@ public class CorporateActionEventTypeCode {
 	 */
 	public static final MMCode mmMerger = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Merger";
 			definition = "Event is a mandatory or voluntary exchange of outstanding securities as the result of two or more companies combining assets. Cash payments may accompany share exchange.";
 			owner_lazy = () -> CorporateActionEventTypeCode.mmObject();
@@ -439,7 +441,7 @@ public class CorporateActionEventTypeCode {
 	 */
 	public static final MMCode mmNameChange = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NameChange";
 			definition = "Event is a name change. The issuing company changes its name. The event shows the change from old name to new name and may involve surrendering physical shares with the old name to the registrar.";
 			owner_lazy = () -> CorporateActionEventTypeCode.mmObject();
@@ -475,7 +477,7 @@ public class CorporateActionEventTypeCode {
 	 */
 	public static final MMCode mmSpinOff = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SpinOff";
 			definition = "Event is a demerger or distribution or an unbundling. It is a distribution of subsidiary stock to the shareholders of the parent company without a surrender of shares. A spin-off represents a form of divestiture resulting in an independent company. Normally this is without cost to the parent issue shareholder.";
 			owner_lazy = () -> CorporateActionEventTypeCode.mmObject();
@@ -510,7 +512,7 @@ public class CorporateActionEventTypeCode {
 	 */
 	public static final MMCode mmStockSplit = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "StockSplit";
 			definition = "Event is a change in nominal value, a subdivision. It is an increase in a corporation's number of outstanding shares of stock without any change in the shareholder's equity or the aggregate market value at the time of the split. Stock price and nominal value are reduced accordingly.";
 			owner_lazy = () -> CorporateActionEventTypeCode.mmObject();
@@ -545,7 +547,7 @@ public class CorporateActionEventTypeCode {
 	 */
 	public static final MMCode mmReverseStockSplit = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ReverseStockSplit";
 			definition = "Event is a change in nominal value, a consolidation. It is a decrease in number of outstanding shares of stock without any change in the shareholder's equity or the aggregate market value at the time of the split. Stock price and nominal value are reduced accordingly.";
 			owner_lazy = () -> CorporateActionEventTypeCode.mmObject();
@@ -581,7 +583,7 @@ public class CorporateActionEventTypeCode {
 	 */
 	public static final MMCode mmTender = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Tender";
 			definition = "Event is an acquisition or take-over or offre publique de retrait (FR) or purchase offer or buy-back. It is an offer made to shareholders requesting them to sell (tender) their shares for a specified price usually at a premium over prevailing market price. Generally, the objective of a tender offer is to take control of the target company.";
 			owner_lazy = () -> CorporateActionEventTypeCode.mmObject();
@@ -617,7 +619,7 @@ public class CorporateActionEventTypeCode {
 	 */
 	public static final MMCode mmBonusIssue = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BonusIssue";
 			definition = "Event is a bonus issue or scrip issue or capitalisation issue. Security holders are awarded additional assets free of payment from the issuer in proportion to their holding. A bonus issue is typically represented by shares, rights or warrants. Nominal value doesn't change. Holder may be offered choice of form.";
 			owner_lazy = () -> CorporateActionEventTypeCode.mmObject();
@@ -650,7 +652,7 @@ public class CorporateActionEventTypeCode {
 	 */
 	public static final MMCode mmRightsDistribution = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RightsDistribution";
 			definition = "Event is the distribution of rights to shareholders, in proportion to their equity holding.";
 			owner_lazy = () -> CorporateActionEventTypeCode.mmObject();
@@ -685,7 +687,7 @@ public class CorporateActionEventTypeCode {
 	 */
 	public static final MMCode mmCallOnRights = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CallOnRights";
 			definition = "Event is a call or exercise on nil-paid securities or rights resulting from a rights distribution (RHDI). This is to be used for the second event in those cases where the rights issue is dealt with in two events, the first event being the rights distribution (RHDI).";
 			owner_lazy = () -> CorporateActionEventTypeCode.mmObject();
@@ -719,7 +721,7 @@ public class CorporateActionEventTypeCode {
 	 */
 	public static final MMCode mmChange = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Change";
 			definition = "Event is a generic change. For example,  a change in the terms of an issue, a change in the identification of a security, change of a board lot, a change from global to definitive.";
 			owner_lazy = () -> CorporateActionEventTypeCode.mmObject();
@@ -753,7 +755,7 @@ public class CorporateActionEventTypeCode {
 	 */
 	public static final MMCode mmRedenomination = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Redenomination";
 			definition = "Event by which the unit (currency and/or nominal) of a financial instrument is restated, eg, the debt in a national currency is restated in euro.";
 			owner_lazy = () -> CorporateActionEventTypeCode.mmObject();
@@ -788,7 +790,7 @@ public class CorporateActionEventTypeCode {
 	 */
 	public static final MMCode mmExchangeOption = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ExchangeOption";
 			definition = "Event is an option for the shareholders to exchange their securities for other securities and/or cash. Exchange options are mentioned in the terms and conditions of a security and are valid during the whole lifetime of a security.";
 			owner_lazy = () -> CorporateActionEventTypeCode.mmObject();
@@ -823,7 +825,7 @@ public class CorporateActionEventTypeCode {
 	 */
 	public static final MMCode mmExchangeOffer = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ExchangeOffer";
 			definition = "Event is an exchange offer or capital reorganisation.\nIt is an offer to shareholders to exchange their holdings for other securities and/or cash. Exchange offers are usually voluntary involving the exchange of outstanding security for a different security or securities and/or cash.";
 			owner_lazy = () -> CorporateActionEventTypeCode.mmObject();
@@ -857,7 +859,7 @@ public class CorporateActionEventTypeCode {
 	 */
 	public static final MMCode mmDecreaseInValue = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DecreaseInValue";
 			definition = "Event is a reduction of the share capital and face value of a single share. The number of the circulating shares remains unchanged. It may include a capital pay-out to shareholder.";
 			owner_lazy = () -> CorporateActionEventTypeCode.mmObject();
@@ -895,7 +897,7 @@ public class CorporateActionEventTypeCode {
 	 */
 	public static final MMCode mmEarlyRedemption = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "EarlyRedemption";
 			definition = "This includes drawing, partial and full call, put.\nRedemption in part or full before the scheduled final maturity date of a security, subject to the terms and conditions of the issue. \nDrawing - Securities are redeemed in part by lottery.\nPartial Call - Securities are redeemed in part by reducing proportionally the outstanding amount of securities.\nPut - Early redemption of a bond at the election of the bondholder.\nFull Call - The entire outstanding of a security is redeemed by the issuer.";
 			owner_lazy = () -> CorporateActionEventTypeCode.mmObject();
@@ -928,7 +930,7 @@ public class CorporateActionEventTypeCode {
 	 */
 	public static final MMCode mmFinalMaturity = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "FinalMaturity";
 			definition = "Redemption of an entire issue outstanding of securities by the issuer at final maturity.";
 			owner_lazy = () -> CorporateActionEventTypeCode.mmObject();
@@ -959,7 +961,7 @@ public class CorporateActionEventTypeCode {
 	 */
 	public static final MMCode mmInterestPayment = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InterestPayment";
 			definition = "Interest payment distributed to holders of an interest bearing asset.";
 			owner_lazy = () -> CorporateActionEventTypeCode.mmObject();
@@ -993,7 +995,7 @@ public class CorporateActionEventTypeCode {
 	 */
 	public static final MMCode mmPrefunding = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Prefunding";
 			definition = "Also called partial defeasance. Issuer has money set aside to redeem a portion of an issue and the indenture states that the securities could be called earlier than the stated maturity.";
 			owner_lazy = () -> CorporateActionEventTypeCode.mmObject();
@@ -1026,7 +1028,7 @@ public class CorporateActionEventTypeCode {
 	 */
 	public static final MMCode mmPrincipalAndInterestPaydown = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PrincipalAndInterestPaydown";
 			definition = "A payment of a portion of the principal of an interest bearing asset, in addition to the interest payment.";
 			owner_lazy = () -> CorporateActionEventTypeCode.mmObject();
@@ -1059,7 +1061,7 @@ public class CorporateActionEventTypeCode {
 	 */
 	public static final MMCode mmRemarketing = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Remarketing";
 			definition = "Purchase and sale of remarketed preferred equities/bonds through the negotiation of interest rate between the issuers and the holders.";
 			owner_lazy = () -> CorporateActionEventTypeCode.mmObject();
@@ -1092,7 +1094,7 @@ public class CorporateActionEventTypeCode {
 	 */
 	public static final MMCode mmSubscription = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Subscription";
 			definition = "The ability for security holders to purchase (additional or new) securities at a certain price, in proportion to their holding.";
 			owner_lazy = () -> CorporateActionEventTypeCode.mmObject();
@@ -1127,7 +1129,7 @@ public class CorporateActionEventTypeCode {
 	 */
 	public static final MMCode mmAttachment = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Attachment";
 			definition = "The combination of different security types to create a unit. Units are usually comprised of warrants and bond or warrants and equity. Securities may be combined at the request of the security holder or based on market convention.";
 			owner_lazy = () -> CorporateActionEventTypeCode.mmObject();
@@ -1161,7 +1163,7 @@ public class CorporateActionEventTypeCode {
 	 */
 	public static final MMCode mmConversion = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Conversion";
 			definition = "Conversion of securities (generally convertible bonds or preferred shares) into another form of securities (usually common shares) at a pre-stated price.";
 			owner_lazy = () -> CorporateActionEventTypeCode.mmObject();
@@ -1195,7 +1197,7 @@ public class CorporateActionEventTypeCode {
 	 */
 	public static final MMCode mmDetachment = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Detachment";
 			definition = "Separation of components that comprise a security usually units comprised of warrants and bond or warrants and equity. Units may be broken up at the request of the security holder or based on market convention.";
 			owner_lazy = () -> CorporateActionEventTypeCode.mmObject();
@@ -1225,7 +1227,7 @@ public class CorporateActionEventTypeCode {
 	 */
 	public static final MMCode mmScripDividend = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ScripDividend";
 			definition = "Dividend or interest paid in the form of scrip.";
 			owner_lazy = () -> CorporateActionEventTypeCode.mmObject();
@@ -1261,7 +1263,7 @@ public class CorporateActionEventTypeCode {
 	 */
 	public static final MMCode mmPariPassu = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PariPassu";
 			definition = "Also called Assimilation or Enfranchisement. Occurs when securities with different characteristics, for example, equities with different entitlements to dividend or voting rights, are assimilated, ie, become identical in all respects. The event may be scheduled in advance or be the result of an outside event.";
 			owner_lazy = () -> CorporateActionEventTypeCode.mmObject();
@@ -1295,7 +1297,7 @@ public class CorporateActionEventTypeCode {
 	 */
 	public static final MMCode mmPriorityIssue = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PriorityIssue";
 			definition = "Form of open or public offer where priority is given to existing shareholders due to limited amount of securities available in the offer. Shareholders can buy a type of security during a short period of time.";
 			owner_lazy = () -> CorporateActionEventTypeCode.mmObject();
@@ -1330,7 +1332,7 @@ public class CorporateActionEventTypeCode {
 	 */
 	public static final MMCode mmBidRepurchaseOffer = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BidRepurchaseOffer";
 			definition = "Also called Issuer Bid or Reverse Rights.\nOffer to existing shareholders by the issuing company to repurchase equity or other securities convertible into equity. The objective of the offer is to reduce the number of outstanding equities.";
 			owner_lazy = () -> CorporateActionEventTypeCode.mmObject();
@@ -1365,7 +1367,7 @@ public class CorporateActionEventTypeCode {
 	 */
 	public static final MMCode mmCallOnWarrants = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CallOnWarrants";
 			definition = "Warrant conversion. Option offered to security holders to buy (call warrant) or to sell (put warrant) a specific amount of stock, cash, or commodity, at a predetermined price, during a predetermined period of time (which usually corresponds to the life of the issue).";
 			owner_lazy = () -> CorporateActionEventTypeCode.mmObject();
@@ -1399,7 +1401,7 @@ public class CorporateActionEventTypeCode {
 	 */
 	public static final MMCode mmOddLotSalePurchase = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "OddLotSalePurchase";
 			definition = "Sale to or purchase of odd-lots from the issuing company, initiated either by the holder of the security or through an offer made by the issuer.";
 			owner_lazy = () -> CorporateActionEventTypeCode.mmObject();
@@ -1410,29 +1412,20 @@ public class CorporateActionEventTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("DRIP");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionEventTypeCode";
 				definition = "Specifies the type of corporate action event.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CorporateActionEventTypeCode.mmDividendReinvestment, com.tools20022.repository.codeset.CorporateActionEventTypeCode.mmCapitalGainsDistribution,
-						com.tools20022.repository.codeset.CorporateActionEventTypeCode.mmCashDividend, com.tools20022.repository.codeset.CorporateActionEventTypeCode.mmDividendOption,
-						com.tools20022.repository.codeset.CorporateActionEventTypeCode.mmStockDividend, com.tools20022.repository.codeset.CorporateActionEventTypeCode.mmLiquidation,
-						com.tools20022.repository.codeset.CorporateActionEventTypeCode.mmMerger, com.tools20022.repository.codeset.CorporateActionEventTypeCode.mmNameChange,
-						com.tools20022.repository.codeset.CorporateActionEventTypeCode.mmSpinOff, com.tools20022.repository.codeset.CorporateActionEventTypeCode.mmStockSplit,
-						com.tools20022.repository.codeset.CorporateActionEventTypeCode.mmReverseStockSplit, com.tools20022.repository.codeset.CorporateActionEventTypeCode.mmTender,
-						com.tools20022.repository.codeset.CorporateActionEventTypeCode.mmBonusIssue, com.tools20022.repository.codeset.CorporateActionEventTypeCode.mmRightsDistribution,
-						com.tools20022.repository.codeset.CorporateActionEventTypeCode.mmCallOnRights, com.tools20022.repository.codeset.CorporateActionEventTypeCode.mmChange,
-						com.tools20022.repository.codeset.CorporateActionEventTypeCode.mmRedenomination, com.tools20022.repository.codeset.CorporateActionEventTypeCode.mmExchangeOption,
-						com.tools20022.repository.codeset.CorporateActionEventTypeCode.mmExchangeOffer, com.tools20022.repository.codeset.CorporateActionEventTypeCode.mmDecreaseInValue,
-						com.tools20022.repository.codeset.CorporateActionEventTypeCode.mmEarlyRedemption, com.tools20022.repository.codeset.CorporateActionEventTypeCode.mmFinalMaturity,
-						com.tools20022.repository.codeset.CorporateActionEventTypeCode.mmInterestPayment, com.tools20022.repository.codeset.CorporateActionEventTypeCode.mmPrefunding,
-						com.tools20022.repository.codeset.CorporateActionEventTypeCode.mmPrincipalAndInterestPaydown, com.tools20022.repository.codeset.CorporateActionEventTypeCode.mmRemarketing,
-						com.tools20022.repository.codeset.CorporateActionEventTypeCode.mmSubscription, com.tools20022.repository.codeset.CorporateActionEventTypeCode.mmAttachment,
-						com.tools20022.repository.codeset.CorporateActionEventTypeCode.mmConversion, com.tools20022.repository.codeset.CorporateActionEventTypeCode.mmDetachment,
-						com.tools20022.repository.codeset.CorporateActionEventTypeCode.mmScripDividend, com.tools20022.repository.codeset.CorporateActionEventTypeCode.mmPariPassu,
-						com.tools20022.repository.codeset.CorporateActionEventTypeCode.mmPriorityIssue, com.tools20022.repository.codeset.CorporateActionEventTypeCode.mmBidRepurchaseOffer,
-						com.tools20022.repository.codeset.CorporateActionEventTypeCode.mmCallOnWarrants, com.tools20022.repository.codeset.CorporateActionEventTypeCode.mmOddLotSalePurchase);
+				code_lazy = () -> Arrays.asList(CorporateActionEventTypeCode.mmDividendReinvestment, CorporateActionEventTypeCode.mmCapitalGainsDistribution, CorporateActionEventTypeCode.mmCashDividend,
+						CorporateActionEventTypeCode.mmDividendOption, CorporateActionEventTypeCode.mmStockDividend, CorporateActionEventTypeCode.mmLiquidation, CorporateActionEventTypeCode.mmMerger,
+						CorporateActionEventTypeCode.mmNameChange, CorporateActionEventTypeCode.mmSpinOff, CorporateActionEventTypeCode.mmStockSplit, CorporateActionEventTypeCode.mmReverseStockSplit, CorporateActionEventTypeCode.mmTender,
+						CorporateActionEventTypeCode.mmBonusIssue, CorporateActionEventTypeCode.mmRightsDistribution, CorporateActionEventTypeCode.mmCallOnRights, CorporateActionEventTypeCode.mmChange,
+						CorporateActionEventTypeCode.mmRedenomination, CorporateActionEventTypeCode.mmExchangeOption, CorporateActionEventTypeCode.mmExchangeOffer, CorporateActionEventTypeCode.mmDecreaseInValue,
+						CorporateActionEventTypeCode.mmEarlyRedemption, CorporateActionEventTypeCode.mmFinalMaturity, CorporateActionEventTypeCode.mmInterestPayment, CorporateActionEventTypeCode.mmPrefunding,
+						CorporateActionEventTypeCode.mmPrincipalAndInterestPaydown, CorporateActionEventTypeCode.mmRemarketing, CorporateActionEventTypeCode.mmSubscription, CorporateActionEventTypeCode.mmAttachment,
+						CorporateActionEventTypeCode.mmConversion, CorporateActionEventTypeCode.mmDetachment, CorporateActionEventTypeCode.mmScripDividend, CorporateActionEventTypeCode.mmPariPassu,
+						CorporateActionEventTypeCode.mmPriorityIssue, CorporateActionEventTypeCode.mmBidRepurchaseOffer, CorporateActionEventTypeCode.mmCallOnWarrants, CorporateActionEventTypeCode.mmOddLotSalePurchase);
 				derivation_lazy = () -> Arrays.asList(CorporateActionEventType1Code.mmObject());
 			}
 		});

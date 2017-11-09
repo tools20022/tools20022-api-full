@@ -19,8 +19,10 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Exact3NumericText;
 import com.tools20022.repository.datatype.ISO20022MessageIdentificationText;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification19;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -115,10 +117,10 @@ public class DocumentNumber1Choice {
 			componentContext_lazy = () -> DocumentNumber1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "ShrtNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ShortNumber";
 			definition = "Message type number of the document referenced.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.DocumentNumber5Choice.mmShortNumber);
+			nextVersions_lazy = () -> Arrays.asList(DocumentNumber5Choice.mmShortNumber);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Exact3NumericText.mmObject();
@@ -166,10 +168,10 @@ public class DocumentNumber1Choice {
 			componentContext_lazy = () -> DocumentNumber1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "LngNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LongNumber";
 			definition = "MX Message identifier of the referenced document.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.DocumentNumber5Choice.mmLongNumber);
+			nextVersions_lazy = () -> Arrays.asList(DocumentNumber5Choice.mmLongNumber);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISO20022MessageIdentificationText.mmObject();
@@ -217,10 +219,10 @@ public class DocumentNumber1Choice {
 			componentContext_lazy = () -> DocumentNumber1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "PrtryNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProprietaryNumber";
 			definition = "Proprietary document identification.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.DocumentNumber5Choice.mmProprietaryNumber);
+			nextVersions_lazy = () -> Arrays.asList(DocumentNumber5Choice.mmProprietaryNumber);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification19.mmObject();
@@ -230,10 +232,9 @@ public class DocumentNumber1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.DocumentNumber1Choice.mmShortNumber, com.tools20022.repository.choice.DocumentNumber1Choice.mmLongNumber,
-						com.tools20022.repository.choice.DocumentNumber1Choice.mmProprietaryNumber);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(DocumentNumber1Choice.mmShortNumber, DocumentNumber1Choice.mmLongNumber, DocumentNumber1Choice.mmProprietaryNumber);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DocumentNumber1Choice";
 				definition = "Choice between a short document number, a long document number or a proprietary document number.";
 				nextVersions_lazy = () -> Arrays.asList(DocumentNumber5Choice.mmObject());

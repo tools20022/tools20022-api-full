@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.FinancialAssetTypeCategoryCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -95,7 +97,7 @@ public class FinancialAssetTypeCategory1Code extends FinancialAssetTypeCategoryC
 	 */
 	public static final MMCode mmEquities = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Equities";
 			owner_lazy = () -> FinancialAssetTypeCategory1Code.mmObject();
 		}
@@ -118,7 +120,7 @@ public class FinancialAssetTypeCategory1Code extends FinancialAssetTypeCategoryC
 	 */
 	public static final MMCode mmDebtInstruments = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DebtInstruments";
 			owner_lazy = () -> FinancialAssetTypeCategory1Code.mmObject();
 		}
@@ -141,7 +143,7 @@ public class FinancialAssetTypeCategory1Code extends FinancialAssetTypeCategoryC
 	 */
 	public static final MMCode mmEntitlements = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Entitlements";
 			owner_lazy = () -> FinancialAssetTypeCategory1Code.mmObject();
 		}
@@ -164,7 +166,7 @@ public class FinancialAssetTypeCategory1Code extends FinancialAssetTypeCategoryC
 	 */
 	public static final MMCode mmDerivatives = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Derivatives";
 			owner_lazy = () -> FinancialAssetTypeCategory1Code.mmObject();
 		}
@@ -187,7 +189,7 @@ public class FinancialAssetTypeCategory1Code extends FinancialAssetTypeCategoryC
 	 */
 	public static final MMCode mmMoneyMarket = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MoneyMarket";
 			owner_lazy = () -> FinancialAssetTypeCategory1Code.mmObject();
 		}
@@ -210,7 +212,7 @@ public class FinancialAssetTypeCategory1Code extends FinancialAssetTypeCategoryC
 	 */
 	public static final MMCode mmOthers = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Others";
 			owner_lazy = () -> FinancialAssetTypeCategory1Code.mmObject();
 		}
@@ -219,14 +221,13 @@ public class FinancialAssetTypeCategory1Code extends FinancialAssetTypeCategoryC
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("EQTY");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FinancialAssetTypeCategory1Code";
 				definition = "Categorization of financial asset type.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.FinancialAssetTypeCategory1Code.mmEquities, com.tools20022.repository.codeset.FinancialAssetTypeCategory1Code.mmDebtInstruments,
-						com.tools20022.repository.codeset.FinancialAssetTypeCategory1Code.mmEntitlements, com.tools20022.repository.codeset.FinancialAssetTypeCategory1Code.mmDerivatives,
-						com.tools20022.repository.codeset.FinancialAssetTypeCategory1Code.mmMoneyMarket, com.tools20022.repository.codeset.FinancialAssetTypeCategory1Code.mmOthers);
+				code_lazy = () -> Arrays.asList(FinancialAssetTypeCategory1Code.mmEquities, FinancialAssetTypeCategory1Code.mmDebtInstruments, FinancialAssetTypeCategory1Code.mmEntitlements, FinancialAssetTypeCategory1Code.mmDerivatives,
+						FinancialAssetTypeCategory1Code.mmMoneyMarket, FinancialAssetTypeCategory1Code.mmOthers);
 				trace_lazy = () -> FinancialAssetTypeCategoryCode.mmObject();
 			}
 		});

@@ -19,7 +19,9 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.DecimalNumber;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -101,10 +103,10 @@ public class FromToQuantityRange2 {
 			componentContext_lazy = () -> FromToQuantityRange2.mmObject();
 			isDerived = false;
 			xmlTag = "FrQty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FromQuantity";
 			definition = "Lower boundary of a range of quantity values.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.FromToQuantityRange1.mmFromQuantity;
+			previousVersion_lazy = () -> FromToQuantityRange1.mmFromQuantity;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
@@ -149,10 +151,10 @@ public class FromToQuantityRange2 {
 			componentContext_lazy = () -> FromToQuantityRange2.mmObject();
 			isDerived = false;
 			xmlTag = "ToQty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ToQuantity";
 			definition = "Upper boundary of a range of quantity values.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.FromToQuantityRange1.mmToQuantity;
+			previousVersion_lazy = () -> FromToQuantityRange1.mmToQuantity;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
@@ -162,9 +164,9 @@ public class FromToQuantityRange2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FromToQuantityRange2.mmFromQuantity, com.tools20022.repository.msg.FromToQuantityRange2.mmToQuantity);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(FromToQuantityRange2.mmFromQuantity, FromToQuantityRange2.mmToQuantity);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FromToQuantityRange2";
 				definition = "Range of quantities.";
 				previousVersion_lazy = () -> FromToQuantityRange1.mmObject();

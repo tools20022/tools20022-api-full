@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.DisplayMethodCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -85,7 +87,7 @@ public class DisplayMethod1Code extends DisplayMethodCode {
 	 */
 	public static final MMCode mmInitial = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Initial";
 			owner_lazy = () -> DisplayMethod1Code.mmObject();
 		}
@@ -108,7 +110,7 @@ public class DisplayMethod1Code extends DisplayMethodCode {
 	 */
 	public static final MMCode mmNew = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "New";
 			owner_lazy = () -> DisplayMethod1Code.mmObject();
 		}
@@ -131,7 +133,7 @@ public class DisplayMethod1Code extends DisplayMethodCode {
 	 */
 	public static final MMCode mmRandom = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Random";
 			owner_lazy = () -> DisplayMethod1Code.mmObject();
 		}
@@ -140,12 +142,12 @@ public class DisplayMethod1Code extends DisplayMethodCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("INIT");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DisplayMethod1Code";
 				definition = "Instructions for the use of display quantity.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DisplayMethod1Code.mmInitial, com.tools20022.repository.codeset.DisplayMethod1Code.mmNew, com.tools20022.repository.codeset.DisplayMethod1Code.mmRandom);
+				code_lazy = () -> Arrays.asList(DisplayMethod1Code.mmInitial, DisplayMethod1Code.mmNew, DisplayMethod1Code.mmRandom);
 				trace_lazy = () -> DisplayMethodCode.mmObject();
 			}
 		});

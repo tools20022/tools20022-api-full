@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.UndertakingNameCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -83,7 +85,7 @@ public class UndertakingName1Code extends UndertakingNameCode {
 	 */
 	public static final MMCode mmStandbyLetterOfCredit = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StandbyLetterOfCredit";
 			owner_lazy = () -> UndertakingName1Code.mmObject();
 		}
@@ -106,7 +108,7 @@ public class UndertakingName1Code extends UndertakingNameCode {
 	 */
 	public static final MMCode mmDemandGuarantee = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DemandGuarantee";
 			owner_lazy = () -> UndertakingName1Code.mmObject();
 		}
@@ -115,12 +117,12 @@ public class UndertakingName1Code extends UndertakingNameCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("STBY");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "UndertakingName1Code";
 				definition = "Specifies the named type of the undertaking.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UndertakingName1Code.mmStandbyLetterOfCredit, com.tools20022.repository.codeset.UndertakingName1Code.mmDemandGuarantee);
+				code_lazy = () -> Arrays.asList(UndertakingName1Code.mmStandbyLetterOfCredit, UndertakingName1Code.mmDemandGuarantee);
 				trace_lazy = () -> UndertakingNameCode.mmObject();
 			}
 		});

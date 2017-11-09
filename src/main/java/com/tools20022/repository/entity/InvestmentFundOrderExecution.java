@@ -17,14 +17,16 @@
 
 package com.tools20022.repository.entity;
 
-import com.tools20022.metamodel.MMBusinessAssociationEnd;
-import com.tools20022.metamodel.MMBusinessAttribute;
-import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.*;
+import com.tools20022.repository.choice.ProfitAndLoss1Choice;
+import com.tools20022.repository.choice.ProfitAndLoss2Choice;
+import com.tools20022.repository.choice.SidePocketUnitsOrAmountOrRate1Choice;
 import com.tools20022.repository.codeset.BestExecutionCode;
 import com.tools20022.repository.codeset.LateReportCode;
 import com.tools20022.repository.codeset.SourceOfCashCode;
 import com.tools20022.repository.datatype.*;
 import com.tools20022.repository.entity.SecuritiesTradeExecution;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -41,6 +43,78 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.ExpectedExecutionDetails1
+ * ExpectedExecutionDetails1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ExpectedExecutionDetails2
+ * ExpectedExecutionDetails2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.InvestmentFundOrderExecution2
+ * InvestmentFundOrderExecution2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.InvestmentFundOrderExecution1
+ * InvestmentFundOrderExecution1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ExpectedExecutionDetails3
+ * ExpectedExecutionDetails3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.InvestmentFundOrderExecution3
+ * InvestmentFundOrderExecution3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.UnitsAndCash UnitsAndCash}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ExpectedExecutionDetails4
+ * ExpectedExecutionDetails4}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmFundOrderRelatedToExecutedPrice
+ * SecuritiesPricing.mmFundOrderRelatedToExecutedPrice}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmFundOrderRelatedToInformativePrice
+ * SecuritiesPricing.mmFundOrderRelatedToInformativePrice}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InvestmentFundOrder#mmInvestmentFundOrderExecution
+ * InvestmentFundOrder.mmInvestmentFundOrderExecution}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmRelatedOrderExecution
+ * SecuritiesQuantity.mmRelatedOrderExecution}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InvestmentFundTransaction#mmInvestmentFundOrderExecution
+ * InvestmentFundTransaction.mmInvestmentFundOrderExecution}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.FundsCashFlow#mmRelatedOrder
+ * FundsCashFlow.mmRelatedOrder}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
+ * derivationElement} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentFundTransactionsByFund2#mmTransactionDetails
+ * InvestmentFundTransactionsByFund2.mmTransactionDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentFundTransactionsByFund3#mmTransactionDetails
+ * InvestmentFundTransactionsByFund3.mmTransactionDetails}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} =
+ * {@linkplain com.tools20022.repository.entity.SecuritiesTradeExecution
+ * SecuritiesTradeExecution}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
+ * subType} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.SubscriptionExecution
+ * SubscriptionExecution}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.RedemptionExecution
+ * RedemptionExecution}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.SwitchExecution
+ * SwitchExecution}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -98,78 +172,6 @@ import java.util.List;
  * <li>
  * {@linkplain com.tools20022.repository.entity.InvestmentFundOrderExecution#mmSourceOfCash
  * InvestmentFundOrderExecution.mmSourceOfCash}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
- * subType} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.SubscriptionExecution
- * SubscriptionExecution}</li>
- * <li>{@linkplain com.tools20022.repository.entity.RedemptionExecution
- * RedemptionExecution}</li>
- * <li>{@linkplain com.tools20022.repository.entity.SwitchExecution
- * SwitchExecution}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmFundOrderRelatedToExecutedPrice
- * SecuritiesPricing.mmFundOrderRelatedToExecutedPrice}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmFundOrderRelatedToInformativePrice
- * SecuritiesPricing.mmFundOrderRelatedToInformativePrice}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InvestmentFundOrder#mmInvestmentFundOrderExecution
- * InvestmentFundOrder.mmInvestmentFundOrderExecution}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmRelatedOrderExecution
- * SecuritiesQuantity.mmRelatedOrderExecution}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InvestmentFundTransaction#mmInvestmentFundOrderExecution
- * InvestmentFundTransaction.mmInvestmentFundOrderExecution}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.FundsCashFlow#mmRelatedOrder
- * FundsCashFlow.mmRelatedOrder}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
- * derivationElement} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msg.InvestmentFundTransactionsByFund2#mmTransactionDetails
- * InvestmentFundTransactionsByFund2.mmTransactionDetails}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.InvestmentFundTransactionsByFund3#mmTransactionDetails
- * InvestmentFundTransactionsByFund3.mmTransactionDetails}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} =
- * {@linkplain com.tools20022.repository.entity.SecuritiesTradeExecution
- * SecuritiesTradeExecution}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.ExpectedExecutionDetails1
- * ExpectedExecutionDetails1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ExpectedExecutionDetails2
- * ExpectedExecutionDetails2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.InvestmentFundOrderExecution2
- * InvestmentFundOrderExecution2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.InvestmentFundOrderExecution1
- * InvestmentFundOrderExecution1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ExpectedExecutionDetails3
- * ExpectedExecutionDetails3}</li>
- * <li>{@linkplain com.tools20022.repository.msg.InvestmentFundOrderExecution3
- * InvestmentFundOrderExecution3}</li>
- * <li>{@linkplain com.tools20022.repository.msg.UnitsAndCash UnitsAndCash}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ExpectedExecutionDetails4
- * ExpectedExecutionDetails4}</li>
  * </ul>
  * </li>
  * <li>
@@ -381,34 +383,26 @@ public class InvestmentFundOrderExecution extends SecuritiesTradeExecution {
 	 */
 	public static final MMBusinessAssociationEnd mmUnitsNumber = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.EstimatedFundCashForecast2.mmEstimatedTotalUnitsNumber, com.tools20022.repository.msg.EstimatedFundCashForecast2.mmPreviousEstimatedTotalUnitsNumber,
-					com.tools20022.repository.msg.EstimatedFundCashForecast4.mmEstimatedTotalUnitsNumber, com.tools20022.repository.msg.EstimatedFundCashForecast4.mmPreviousTotalUnitsNumber,
-					com.tools20022.repository.msg.EstimatedFundCashForecast1.mmEstimatedTotalUnitsNumber, com.tools20022.repository.msg.EstimatedFundCashForecast1.mmPreviousEstimatedTotalUnitsNumber,
-					com.tools20022.repository.msg.EstimatedFundCashForecast3.mmEstimatedTotalUnitsNumber, com.tools20022.repository.msg.EstimatedFundCashForecast3.mmPreviousTotalUnitsNumber,
-					com.tools20022.repository.msg.RedemptionExecution3.mmUnitsNumber, com.tools20022.repository.msg.RedemptionExecution5.mmUnitsNumber, com.tools20022.repository.msg.RedemptionExecution4.mmUnitsNumber,
-					com.tools20022.repository.msg.RedemptionExecution6.mmUnitsNumber, com.tools20022.repository.msg.InvestmentFundTransaction2.mmUnitsQuantity, com.tools20022.repository.msg.InvestmentFundTransaction3.mmUnitsQuantity,
-					com.tools20022.repository.msg.SubscriptionExecution3.mmUnitsNumber, com.tools20022.repository.msg.SubscriptionExecution5.mmUnitsNumber, com.tools20022.repository.msg.SubscriptionExecution4.mmUnitsNumber,
-					com.tools20022.repository.msg.SubscriptionExecution6.mmUnitsNumber, com.tools20022.repository.msg.SwitchRedemptionLegExecution2.mmUnitsNumber, com.tools20022.repository.msg.SwitchSubscriptionLegExecution2.mmUnitsNumber,
-					com.tools20022.repository.msg.SwitchRedemptionLegExecution3.mmUnitsNumber, com.tools20022.repository.msg.SwitchSubscriptionLegExecution3.mmUnitsNumber, com.tools20022.repository.msg.RedemptionExecution10.mmUnitsNumber,
-					com.tools20022.repository.choice.SidePocketUnitsOrAmountOrRate1Choice.mmUnitsNumber, com.tools20022.repository.msg.SubscriptionExecution7.mmUnitsNumber, com.tools20022.repository.msg.RedemptionExecution12.mmUnitsNumber,
-					com.tools20022.repository.msg.SubscriptionExecution9.mmUnitsNumber, com.tools20022.repository.msg.UnitsAndCash.mmGroup1Number, com.tools20022.repository.msg.UnitsAndCash.mmGroup2Number,
-					com.tools20022.repository.msg.Fund2.mmTotalUnitsNumber, com.tools20022.repository.msg.Fund2.mmPreviousTotalUnitsNumber, com.tools20022.repository.msg.EstimatedFundCashForecast6.mmEstimatedTotalUnitsNumber,
-					com.tools20022.repository.msg.EstimatedFundCashForecast6.mmPreviousTotalUnitsNumber, com.tools20022.repository.msg.Fund1.mmEstimatedTotalUnitsNumber, com.tools20022.repository.msg.Fund1.mmPreviousTotalUnitsNumber,
-					com.tools20022.repository.msg.EstimatedFundCashForecast5.mmEstimatedTotalUnitsNumber, com.tools20022.repository.msg.EstimatedFundCashForecast5.mmPreviousTotalUnitsNumber,
-					com.tools20022.repository.msg.FundBalance1.mmTotalUnitsFromUnitOrders, com.tools20022.repository.msg.FundBalance1.mmTotalUnitsFromCashOrders, com.tools20022.repository.msg.InvestmentFundTransaction4.mmUnitsQuantity,
-					com.tools20022.repository.msg.Fund3.mmEstimatedTotalUnitsNumber, com.tools20022.repository.msg.Fund3.mmPreviousTotalUnitsNumber, com.tools20022.repository.msg.Fund4.mmTotalUnitsNumber,
-					com.tools20022.repository.msg.Fund4.mmPreviousTotalUnitsNumber, com.tools20022.repository.msg.SubscriptionExecution13.mmUnitsNumber, com.tools20022.repository.msg.SubscriptionExecution12.mmUnitsNumber,
-					com.tools20022.repository.msg.RedemptionExecution16.mmUnitsNumber, com.tools20022.repository.msg.SwitchSubscriptionLegExecution4.mmUnitsNumber, com.tools20022.repository.msg.RedemptionExecution15.mmUnitsNumber,
-					com.tools20022.repository.msg.SwitchRedemptionLegExecution4.mmUnitsNumber);
+			derivation_lazy = () -> Arrays.asList(EstimatedFundCashForecast2.mmEstimatedTotalUnitsNumber, EstimatedFundCashForecast2.mmPreviousEstimatedTotalUnitsNumber, EstimatedFundCashForecast4.mmEstimatedTotalUnitsNumber,
+					EstimatedFundCashForecast4.mmPreviousTotalUnitsNumber, EstimatedFundCashForecast1.mmEstimatedTotalUnitsNumber, EstimatedFundCashForecast1.mmPreviousEstimatedTotalUnitsNumber,
+					EstimatedFundCashForecast3.mmEstimatedTotalUnitsNumber, EstimatedFundCashForecast3.mmPreviousTotalUnitsNumber, RedemptionExecution3.mmUnitsNumber, RedemptionExecution5.mmUnitsNumber, RedemptionExecution4.mmUnitsNumber,
+					RedemptionExecution6.mmUnitsNumber, InvestmentFundTransaction2.mmUnitsQuantity, InvestmentFundTransaction3.mmUnitsQuantity, SubscriptionExecution3.mmUnitsNumber, SubscriptionExecution5.mmUnitsNumber,
+					SubscriptionExecution4.mmUnitsNumber, SubscriptionExecution6.mmUnitsNumber, SwitchRedemptionLegExecution2.mmUnitsNumber, SwitchSubscriptionLegExecution2.mmUnitsNumber, SwitchRedemptionLegExecution3.mmUnitsNumber,
+					SwitchSubscriptionLegExecution3.mmUnitsNumber, RedemptionExecution10.mmUnitsNumber, SidePocketUnitsOrAmountOrRate1Choice.mmUnitsNumber, SubscriptionExecution7.mmUnitsNumber, RedemptionExecution12.mmUnitsNumber,
+					SubscriptionExecution9.mmUnitsNumber, UnitsAndCash.mmGroup1Number, UnitsAndCash.mmGroup2Number, Fund2.mmTotalUnitsNumber, Fund2.mmPreviousTotalUnitsNumber, EstimatedFundCashForecast6.mmEstimatedTotalUnitsNumber,
+					EstimatedFundCashForecast6.mmPreviousTotalUnitsNumber, Fund1.mmEstimatedTotalUnitsNumber, Fund1.mmPreviousTotalUnitsNumber, EstimatedFundCashForecast5.mmEstimatedTotalUnitsNumber,
+					EstimatedFundCashForecast5.mmPreviousTotalUnitsNumber, FundBalance1.mmTotalUnitsFromUnitOrders, FundBalance1.mmTotalUnitsFromCashOrders, InvestmentFundTransaction4.mmUnitsQuantity, Fund3.mmEstimatedTotalUnitsNumber,
+					Fund3.mmPreviousTotalUnitsNumber, Fund4.mmTotalUnitsNumber, Fund4.mmPreviousTotalUnitsNumber, SubscriptionExecution13.mmUnitsNumber, SubscriptionExecution12.mmUnitsNumber, RedemptionExecution16.mmUnitsNumber,
+					SwitchSubscriptionLegExecution4.mmUnitsNumber, RedemptionExecution15.mmUnitsNumber, SwitchRedemptionLegExecution4.mmUnitsNumber);
 			elementContext_lazy = () -> InvestmentFundOrderExecution.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "UnitsNumber";
 			definition = "Number of investment fund units subscribed or redeemed.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmRelatedOrderExecution;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmObject();
 		}
 	};
@@ -619,38 +613,25 @@ public class InvestmentFundOrderExecution extends SecuritiesTradeExecution {
 	 */
 	public static final MMBusinessAttribute mmNonStandardSettlementInformation = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Transfer7.mmNonStandardSettlementInformation, com.tools20022.repository.msg.Transfer17.mmNonStandardSettlementInformation,
-					com.tools20022.repository.msg.Transfer10.mmNonStandardSettlementInformation, com.tools20022.repository.msg.Transfer14.mmNonStandardSettlementInformation,
-					com.tools20022.repository.msg.Transfer24.mmNonStandardSettlementInformation, com.tools20022.repository.msg.Transfer25.mmNonStandardSettlementInformation,
-					com.tools20022.repository.msg.Transfer6.mmNonStandardSettlementInformation, com.tools20022.repository.msg.Transfer16.mmNonStandardSettlementInformation,
-					com.tools20022.repository.msg.Transfer9.mmNonStandardSettlementInformation, com.tools20022.repository.msg.Transfer12.mmNonStandardSettlementInformation,
-					com.tools20022.repository.msg.Transfer20.mmNonStandardSettlementInformation, com.tools20022.repository.msg.Transfer22.mmNonStandardSettlementInformation,
-					com.tools20022.repository.msg.Transfer18.mmNonStandardSettlementInformation, com.tools20022.repository.msg.Transfer26.mmNonStandardSettlementInformation,
-					com.tools20022.repository.msg.Transfer5.mmNonStandardSettlementInformation, com.tools20022.repository.msg.Transfer15.mmNonStandardSettlementInformation,
-					com.tools20022.repository.msg.Transfer21.mmNonStandardSettlementInformation, com.tools20022.repository.msg.Transfer13.mmNonStandardSettlementInformation,
-					com.tools20022.repository.msg.Transfer23.mmNonStandardSettlementInformation, com.tools20022.repository.msg.Transfer8.mmNonStandardSettlementInformation,
-					com.tools20022.repository.msg.Transfer11.mmNonStandardSettlementInformation, com.tools20022.repository.msg.Transfer19.mmNonStandardSettlementInformation,
-					com.tools20022.repository.msg.RedemptionOrder5.mmNonStandardSettlementInformation, com.tools20022.repository.msg.RedemptionExecution5.mmNonStandardSettlementInformation,
-					com.tools20022.repository.msg.RedemptionOrder7.mmNonStandardSettlementInformation, com.tools20022.repository.msg.RedemptionOrder6.mmNonStandardSettlementInformation,
-					com.tools20022.repository.msg.RedemptionExecution6.mmNonStandardSettlementInformation, com.tools20022.repository.msg.RedemptionOrder8.mmNonStandardSettlementInformation,
-					com.tools20022.repository.msg.SubscriptionOrder5.mmNonStandardSettlementInformation, com.tools20022.repository.msg.SubscriptionExecution5.mmNonStandardSettlementInformation,
-					com.tools20022.repository.msg.SubscriptionOrder7.mmNonStandardSettlementInformation, com.tools20022.repository.msg.SubscriptionOrder6.mmNonStandardSettlementInformation,
-					com.tools20022.repository.msg.SubscriptionExecution6.mmNonStandardSettlementInformation, com.tools20022.repository.msg.SubscriptionOrder8.mmNonStandardSettlementInformation,
-					com.tools20022.repository.msg.SwitchRedemptionLegOrder3.mmNonStandardSettlementInformation, com.tools20022.repository.msg.SwitchSubscriptionLegOrder3.mmNonStandardSettlementInformation,
-					com.tools20022.repository.msg.SwitchRedemptionLegExecution3.mmNonStandardSettlementInformation, com.tools20022.repository.msg.SwitchSubscriptionLegExecution3.mmNonStandardSettlementInformation,
-					com.tools20022.repository.msg.Transfer27.mmNonStandardSettlementInformation, com.tools20022.repository.msg.Transfer28.mmNonStandardSettlementInformation,
-					com.tools20022.repository.msg.Transfer29.mmNonStandardSettlementInformation, com.tools20022.repository.msg.Transfer31.mmNonStandardSettlementInformation,
-					com.tools20022.repository.msg.Transfer30.mmNonStandardSettlementInformation, com.tools20022.repository.msg.Transfer32.mmNonStandardSettlementInformation,
-					com.tools20022.repository.msg.Transfer33.mmNonStandardSettlementInformation, com.tools20022.repository.msg.RedemptionOrder14.mmNonStandardSettlementInformation,
-					com.tools20022.repository.msg.SwitchSubscriptionLegOrder6.mmNonStandardSettlementInformation, com.tools20022.repository.msg.SubscriptionExecution13.mmNonStandardSettlementInformation,
-					com.tools20022.repository.msg.SubscriptionExecution12.mmNonStandardSettlementInformation, com.tools20022.repository.msg.SubscriptionOrder15.mmNonStandardSettlementInformation,
-					com.tools20022.repository.msg.SwitchRedemptionLegOrder6.mmNonStandardSettlementInformation, com.tools20022.repository.msg.RedemptionOrder15.mmNonStandardSettlementInformation,
-					com.tools20022.repository.msg.RedemptionExecution16.mmNonStandardSettlementInformation, com.tools20022.repository.msg.SubscriptionOrder14.mmNonStandardSettlementInformation,
-					com.tools20022.repository.msg.SwitchSubscriptionLegExecution4.mmNonStandardSettlementInformation, com.tools20022.repository.msg.RedemptionExecution15.mmNonStandardSettlementInformation,
-					com.tools20022.repository.msg.SwitchRedemptionLegExecution4.mmNonStandardSettlementInformation);
+			derivation_lazy = () -> Arrays.asList(Transfer7.mmNonStandardSettlementInformation, Transfer17.mmNonStandardSettlementInformation, Transfer10.mmNonStandardSettlementInformation, Transfer14.mmNonStandardSettlementInformation,
+					Transfer24.mmNonStandardSettlementInformation, Transfer25.mmNonStandardSettlementInformation, Transfer6.mmNonStandardSettlementInformation, Transfer16.mmNonStandardSettlementInformation,
+					Transfer9.mmNonStandardSettlementInformation, Transfer12.mmNonStandardSettlementInformation, Transfer20.mmNonStandardSettlementInformation, Transfer22.mmNonStandardSettlementInformation,
+					Transfer18.mmNonStandardSettlementInformation, Transfer26.mmNonStandardSettlementInformation, Transfer5.mmNonStandardSettlementInformation, Transfer15.mmNonStandardSettlementInformation,
+					Transfer21.mmNonStandardSettlementInformation, Transfer13.mmNonStandardSettlementInformation, Transfer23.mmNonStandardSettlementInformation, Transfer8.mmNonStandardSettlementInformation,
+					Transfer11.mmNonStandardSettlementInformation, Transfer19.mmNonStandardSettlementInformation, RedemptionOrder5.mmNonStandardSettlementInformation, RedemptionExecution5.mmNonStandardSettlementInformation,
+					RedemptionOrder7.mmNonStandardSettlementInformation, RedemptionOrder6.mmNonStandardSettlementInformation, RedemptionExecution6.mmNonStandardSettlementInformation, RedemptionOrder8.mmNonStandardSettlementInformation,
+					SubscriptionOrder5.mmNonStandardSettlementInformation, SubscriptionExecution5.mmNonStandardSettlementInformation, SubscriptionOrder7.mmNonStandardSettlementInformation,
+					SubscriptionOrder6.mmNonStandardSettlementInformation, SubscriptionExecution6.mmNonStandardSettlementInformation, SubscriptionOrder8.mmNonStandardSettlementInformation,
+					SwitchRedemptionLegOrder3.mmNonStandardSettlementInformation, SwitchSubscriptionLegOrder3.mmNonStandardSettlementInformation, SwitchRedemptionLegExecution3.mmNonStandardSettlementInformation,
+					SwitchSubscriptionLegExecution3.mmNonStandardSettlementInformation, Transfer27.mmNonStandardSettlementInformation, Transfer28.mmNonStandardSettlementInformation, Transfer29.mmNonStandardSettlementInformation,
+					Transfer31.mmNonStandardSettlementInformation, Transfer30.mmNonStandardSettlementInformation, Transfer32.mmNonStandardSettlementInformation, Transfer33.mmNonStandardSettlementInformation,
+					RedemptionOrder14.mmNonStandardSettlementInformation, SwitchSubscriptionLegOrder6.mmNonStandardSettlementInformation, SubscriptionExecution13.mmNonStandardSettlementInformation,
+					SubscriptionExecution12.mmNonStandardSettlementInformation, SubscriptionOrder15.mmNonStandardSettlementInformation, SwitchRedemptionLegOrder6.mmNonStandardSettlementInformation,
+					RedemptionOrder15.mmNonStandardSettlementInformation, RedemptionExecution16.mmNonStandardSettlementInformation, SubscriptionOrder14.mmNonStandardSettlementInformation,
+					SwitchSubscriptionLegExecution4.mmNonStandardSettlementInformation, RedemptionExecution15.mmNonStandardSettlementInformation, SwitchRedemptionLegExecution4.mmNonStandardSettlementInformation);
 			elementContext_lazy = () -> InvestmentFundOrderExecution.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NonStandardSettlementInformation";
 			definition = "Additional specific settlement information for non-regulated traded funds.";
 			maxOccurs = 1;
@@ -717,18 +698,17 @@ public class InvestmentFundOrderExecution extends SecuritiesTradeExecution {
 	 */
 	public static final MMBusinessAssociationEnd mmOrder = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FundCashForecast1.mmTotalUnitsNumber, com.tools20022.repository.msg.FundCashForecast3.mmTotalUnitsNumber,
-					com.tools20022.repository.msg.FundCashForecast2.mmTotalUnitsNumber, com.tools20022.repository.msg.FundCashForecast4.mmTotalUnitsNumber, com.tools20022.repository.msg.FundCashForecast7.mmTotalUnitsNumber,
-					com.tools20022.repository.msg.FundCashForecast6.mmTotalUnitsNumber);
+			derivation_lazy = () -> Arrays.asList(FundCashForecast1.mmTotalUnitsNumber, FundCashForecast3.mmTotalUnitsNumber, FundCashForecast2.mmTotalUnitsNumber, FundCashForecast4.mmTotalUnitsNumber, FundCashForecast7.mmTotalUnitsNumber,
+					FundCashForecast6.mmTotalUnitsNumber);
 			elementContext_lazy = () -> InvestmentFundOrderExecution.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Order";
 			definition = "Order which is executed.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrder.mmInvestmentFundOrderExecution;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrder.mmObject();
 		}
 	};
@@ -861,20 +841,16 @@ public class InvestmentFundOrderExecution extends SecuritiesTradeExecution {
 	 */
 	public static final MMBusinessAttribute mmDealIdentification = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SwitchOrderStatusAndReason1.mmDealReference, com.tools20022.repository.msg.RedemptionExecution3.mmDealReference,
-					com.tools20022.repository.msg.RedemptionExecution5.mmDealReference, com.tools20022.repository.msg.InvestmentFundOrderExecution2.mmDealReference, com.tools20022.repository.msg.RedemptionExecution4.mmDealReference,
-					com.tools20022.repository.msg.RedemptionExecution6.mmDealReference, com.tools20022.repository.msg.InvestmentFundOrder3.mmDealReference, com.tools20022.repository.msg.InvestmentFundOrder2.mmDealReference,
-					com.tools20022.repository.msg.InvestmentFundTransaction2.mmDealReference, com.tools20022.repository.msg.InvestmentFundTransaction3.mmDealReference, com.tools20022.repository.msg.SubscriptionExecution3.mmDealReference,
-					com.tools20022.repository.msg.SubscriptionExecution5.mmDealReference, com.tools20022.repository.msg.SubscriptionExecution4.mmDealReference, com.tools20022.repository.msg.SubscriptionExecution6.mmDealReference,
-					com.tools20022.repository.msg.SwitchExecution3.mmDealReference, com.tools20022.repository.msg.SwitchExecution4.mmDealReference, com.tools20022.repository.msg.LotDetails1.mmDealReference,
-					com.tools20022.repository.msg.RedemptionExecution10.mmDealReference, com.tools20022.repository.msg.SubscriptionExecution7.mmDealReference, com.tools20022.repository.msg.InvestmentFundOrderExecution3.mmDealReference,
-					com.tools20022.repository.msg.RedemptionExecution12.mmDealReference, com.tools20022.repository.msg.SubscriptionExecution9.mmDealReference, com.tools20022.repository.msg.InvestmentFundTransaction4.mmDealReference,
-					com.tools20022.repository.msg.InvestmentFundOrder11.mmDealReference, com.tools20022.repository.msg.SwitchExecution7.mmDealReference, com.tools20022.repository.msg.SwitchOrderStatusAndReason2.mmDealReference,
-					com.tools20022.repository.msg.SubscriptionExecution13.mmDealReference, com.tools20022.repository.msg.SubscriptionExecution12.mmDealReference, com.tools20022.repository.msg.RedemptionExecution16.mmDealReference,
-					com.tools20022.repository.msg.InvestmentFundOrder8.mmDealReference, com.tools20022.repository.msg.RedemptionExecution15.mmDealReference);
+			derivation_lazy = () -> Arrays.asList(SwitchOrderStatusAndReason1.mmDealReference, RedemptionExecution3.mmDealReference, RedemptionExecution5.mmDealReference, InvestmentFundOrderExecution2.mmDealReference,
+					RedemptionExecution4.mmDealReference, RedemptionExecution6.mmDealReference, InvestmentFundOrder3.mmDealReference, InvestmentFundOrder2.mmDealReference, InvestmentFundTransaction2.mmDealReference,
+					InvestmentFundTransaction3.mmDealReference, SubscriptionExecution3.mmDealReference, SubscriptionExecution5.mmDealReference, SubscriptionExecution4.mmDealReference, SubscriptionExecution6.mmDealReference,
+					SwitchExecution3.mmDealReference, SwitchExecution4.mmDealReference, LotDetails1.mmDealReference, RedemptionExecution10.mmDealReference, SubscriptionExecution7.mmDealReference,
+					InvestmentFundOrderExecution3.mmDealReference, RedemptionExecution12.mmDealReference, SubscriptionExecution9.mmDealReference, InvestmentFundTransaction4.mmDealReference, InvestmentFundOrder11.mmDealReference,
+					SwitchExecution7.mmDealReference, SwitchOrderStatusAndReason2.mmDealReference, SubscriptionExecution13.mmDealReference, SubscriptionExecution12.mmDealReference, RedemptionExecution16.mmDealReference,
+					InvestmentFundOrder8.mmDealReference, RedemptionExecution15.mmDealReference);
 			elementContext_lazy = () -> InvestmentFundOrderExecution.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DealIdentification";
 			definition = "Unique and unambiguous identifier for an order execution, as assigned by a confirming party.";
 			maxOccurs = 1;
@@ -1008,28 +984,22 @@ public class InvestmentFundOrderExecution extends SecuritiesTradeExecution {
 	 */
 	public static final MMBusinessAssociationEnd mmExecutedTradePrice = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RedemptionExecution3.mmPriceDetails, com.tools20022.repository.msg.RedemptionExecution5.mmDealingPriceDetails,
-					com.tools20022.repository.msg.RedemptionExecution4.mmPriceDetails, com.tools20022.repository.msg.RedemptionExecution6.mmDealingPriceDetails, com.tools20022.repository.msg.InvestmentFundTransaction2.mmPriceDetails,
-					com.tools20022.repository.msg.InvestmentFundTransaction3.mmPriceDetails, com.tools20022.repository.msg.SubscriptionExecution3.mmPriceDetails, com.tools20022.repository.msg.SubscriptionExecution5.mmDealingPriceDetails,
-					com.tools20022.repository.msg.SubscriptionExecution4.mmPriceDetails, com.tools20022.repository.msg.SubscriptionExecution6.mmDealingPriceDetails,
-					com.tools20022.repository.msg.SwitchRedemptionLegExecution2.mmPriceDetails, com.tools20022.repository.msg.SwitchSubscriptionLegExecution2.mmPriceDetails,
-					com.tools20022.repository.msg.SwitchRedemptionLegExecution3.mmPriceDetails, com.tools20022.repository.msg.SwitchSubscriptionLegExecution3.mmPriceDetails,
-					com.tools20022.repository.msg.RedemptionExecution10.mmDealingPriceDetails, com.tools20022.repository.msg.SubscriptionExecution7.mmDealingPriceDetails,
-					com.tools20022.repository.msg.RedemptionExecution12.mmDealingPriceDetails, com.tools20022.repository.msg.SubscriptionExecution9.mmDealingPriceDetails, com.tools20022.repository.msg.FundCashForecast7.mmPrice,
-					com.tools20022.repository.msg.EstimatedFundCashForecast6.mmPrice, com.tools20022.repository.msg.FundCashForecast6.mmPrice, com.tools20022.repository.msg.EstimatedFundCashForecast5.mmPrice,
-					com.tools20022.repository.msg.InvestmentFundTransaction4.mmPriceDetails, com.tools20022.repository.msg.SubscriptionExecution13.mmDealingPriceDetails,
-					com.tools20022.repository.msg.SubscriptionExecution12.mmDealingPriceDetails, com.tools20022.repository.msg.RedemptionExecution16.mmDealingPriceDetails,
-					com.tools20022.repository.msg.SwitchSubscriptionLegExecution4.mmPriceDetails, com.tools20022.repository.msg.RedemptionExecution15.mmDealingPriceDetails,
-					com.tools20022.repository.msg.SwitchRedemptionLegExecution4.mmPriceDetails);
+			derivation_lazy = () -> Arrays.asList(RedemptionExecution3.mmPriceDetails, RedemptionExecution5.mmDealingPriceDetails, RedemptionExecution4.mmPriceDetails, RedemptionExecution6.mmDealingPriceDetails,
+					InvestmentFundTransaction2.mmPriceDetails, InvestmentFundTransaction3.mmPriceDetails, SubscriptionExecution3.mmPriceDetails, SubscriptionExecution5.mmDealingPriceDetails, SubscriptionExecution4.mmPriceDetails,
+					SubscriptionExecution6.mmDealingPriceDetails, SwitchRedemptionLegExecution2.mmPriceDetails, SwitchSubscriptionLegExecution2.mmPriceDetails, SwitchRedemptionLegExecution3.mmPriceDetails,
+					SwitchSubscriptionLegExecution3.mmPriceDetails, RedemptionExecution10.mmDealingPriceDetails, SubscriptionExecution7.mmDealingPriceDetails, RedemptionExecution12.mmDealingPriceDetails,
+					SubscriptionExecution9.mmDealingPriceDetails, FundCashForecast7.mmPrice, EstimatedFundCashForecast6.mmPrice, FundCashForecast6.mmPrice, EstimatedFundCashForecast5.mmPrice, InvestmentFundTransaction4.mmPriceDetails,
+					SubscriptionExecution13.mmDealingPriceDetails, SubscriptionExecution12.mmDealingPriceDetails, RedemptionExecution16.mmDealingPriceDetails, SwitchSubscriptionLegExecution4.mmPriceDetails,
+					RedemptionExecution15.mmDealingPriceDetails, SwitchRedemptionLegExecution4.mmPriceDetails);
 			elementContext_lazy = () -> InvestmentFundOrderExecution.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ExecutedTradePrice";
 			definition = "Price at which the order was executed.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmFundOrderRelatedToExecutedPrice;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 		}
 	};
@@ -1128,19 +1098,14 @@ public class InvestmentFundOrderExecution extends SecuritiesTradeExecution {
 	 */
 	public static final MMBusinessAttribute mmPartiallyExecutedIndicator = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RedemptionExecution3.mmPartiallyExecutedIndicator, com.tools20022.repository.msg.RedemptionExecution5.mmPartiallyExecutedIndicator,
-					com.tools20022.repository.msg.RedemptionExecution4.mmPartiallyExecutedIndicator, com.tools20022.repository.msg.RedemptionExecution6.mmPartiallyExecutedIndicator,
-					com.tools20022.repository.msg.InvestmentFundTransaction2.mmPartiallyExecutedIndicator, com.tools20022.repository.msg.InvestmentFundTransaction3.mmPartiallyExecutedIndicator,
-					com.tools20022.repository.msg.SubscriptionExecution3.mmPartiallyExecutedIndicator, com.tools20022.repository.msg.SubscriptionExecution5.mmPartiallyExecutedIndicator,
-					com.tools20022.repository.msg.SubscriptionExecution4.mmPartiallyExecutedIndicator, com.tools20022.repository.msg.SubscriptionExecution6.mmPartiallyExecutedIndicator,
-					com.tools20022.repository.msg.RedemptionExecution10.mmPartiallyExecutedIndicator, com.tools20022.repository.msg.SubscriptionExecution7.mmPartiallyExecutedIndicator,
-					com.tools20022.repository.msg.RedemptionExecution12.mmPartiallyExecutedIndicator, com.tools20022.repository.msg.SubscriptionExecution9.mmPartiallyExecutedIndicator,
-					com.tools20022.repository.msg.InvestmentFundTransaction4.mmPartiallyExecutedIndicator, com.tools20022.repository.msg.SubscriptionExecution13.mmPartiallyExecutedIndicator,
-					com.tools20022.repository.msg.SubscriptionExecution12.mmPartiallyExecutedIndicator, com.tools20022.repository.msg.RedemptionExecution16.mmPartiallyExecutedIndicator,
-					com.tools20022.repository.msg.RedemptionExecution15.mmPartiallyExecutedIndicator);
+			derivation_lazy = () -> Arrays.asList(RedemptionExecution3.mmPartiallyExecutedIndicator, RedemptionExecution5.mmPartiallyExecutedIndicator, RedemptionExecution4.mmPartiallyExecutedIndicator,
+					RedemptionExecution6.mmPartiallyExecutedIndicator, InvestmentFundTransaction2.mmPartiallyExecutedIndicator, InvestmentFundTransaction3.mmPartiallyExecutedIndicator, SubscriptionExecution3.mmPartiallyExecutedIndicator,
+					SubscriptionExecution5.mmPartiallyExecutedIndicator, SubscriptionExecution4.mmPartiallyExecutedIndicator, SubscriptionExecution6.mmPartiallyExecutedIndicator, RedemptionExecution10.mmPartiallyExecutedIndicator,
+					SubscriptionExecution7.mmPartiallyExecutedIndicator, RedemptionExecution12.mmPartiallyExecutedIndicator, SubscriptionExecution9.mmPartiallyExecutedIndicator, InvestmentFundTransaction4.mmPartiallyExecutedIndicator,
+					SubscriptionExecution13.mmPartiallyExecutedIndicator, SubscriptionExecution12.mmPartiallyExecutedIndicator, RedemptionExecution16.mmPartiallyExecutedIndicator, RedemptionExecution15.mmPartiallyExecutedIndicator);
 			elementContext_lazy = () -> InvestmentFundOrderExecution.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PartiallyExecutedIndicator";
 			definition = "Indicates whether the order has been partially executed, ie, the confirmed quantity does not match the ordered quantity for a given financial instrument.";
 			maxOccurs = 1;
@@ -1257,21 +1222,15 @@ public class InvestmentFundOrderExecution extends SecuritiesTradeExecution {
 	 */
 	public static final MMBusinessAttribute mmInterimProfitAmount = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ProfitAndLoss1Choice.mmProfit, com.tools20022.repository.choice.ProfitAndLoss1Choice.mmLoss,
-					com.tools20022.repository.msg.RedemptionExecution3.mmInterimProfitAmount, com.tools20022.repository.msg.RedemptionExecution5.mmInterimProfitAmount,
-					com.tools20022.repository.msg.RedemptionExecution4.mmInterimProfitAmount, com.tools20022.repository.msg.RedemptionExecution6.mmInterimProfitAmount,
-					com.tools20022.repository.msg.SubscriptionExecution3.mmInterimProfitAmount, com.tools20022.repository.msg.SubscriptionExecution5.mmInterimProfitAmount,
-					com.tools20022.repository.msg.SubscriptionExecution4.mmInterimProfitAmount, com.tools20022.repository.msg.SubscriptionExecution6.mmInterimProfitAmount,
-					com.tools20022.repository.msg.SwitchRedemptionLegExecution2.mmInterimProfitAmount, com.tools20022.repository.msg.SwitchSubscriptionLegExecution2.mmInterimProfitAmount,
-					com.tools20022.repository.msg.SwitchRedemptionLegExecution3.mmInterimProfitAmount, com.tools20022.repository.msg.SwitchSubscriptionLegExecution3.mmInterimProfitAmount,
-					com.tools20022.repository.msg.RedemptionExecution10.mmInterimProfitAmount, com.tools20022.repository.msg.SubscriptionExecution7.mmInterimProfitAmount,
-					com.tools20022.repository.msg.SubscriptionExecution13.mmInterimProfitAmount, com.tools20022.repository.choice.ProfitAndLoss2Choice.mmProfit, com.tools20022.repository.choice.ProfitAndLoss2Choice.mmLoss,
-					com.tools20022.repository.msg.SubscriptionExecution12.mmInterimProfitAmount, com.tools20022.repository.msg.RedemptionExecution16.mmInterimProfitAmount,
-					com.tools20022.repository.msg.SwitchSubscriptionLegExecution4.mmInterimProfitAmount, com.tools20022.repository.msg.RedemptionExecution15.mmInterimProfitAmount,
-					com.tools20022.repository.msg.SwitchRedemptionLegExecution4.mmInterimProfitAmount);
+			derivation_lazy = () -> Arrays.asList(ProfitAndLoss1Choice.mmProfit, ProfitAndLoss1Choice.mmLoss, RedemptionExecution3.mmInterimProfitAmount, RedemptionExecution5.mmInterimProfitAmount,
+					RedemptionExecution4.mmInterimProfitAmount, RedemptionExecution6.mmInterimProfitAmount, SubscriptionExecution3.mmInterimProfitAmount, SubscriptionExecution5.mmInterimProfitAmount,
+					SubscriptionExecution4.mmInterimProfitAmount, SubscriptionExecution6.mmInterimProfitAmount, SwitchRedemptionLegExecution2.mmInterimProfitAmount, SwitchSubscriptionLegExecution2.mmInterimProfitAmount,
+					SwitchRedemptionLegExecution3.mmInterimProfitAmount, SwitchSubscriptionLegExecution3.mmInterimProfitAmount, RedemptionExecution10.mmInterimProfitAmount, SubscriptionExecution7.mmInterimProfitAmount,
+					SubscriptionExecution13.mmInterimProfitAmount, ProfitAndLoss2Choice.mmProfit, ProfitAndLoss2Choice.mmLoss, SubscriptionExecution12.mmInterimProfitAmount, RedemptionExecution16.mmInterimProfitAmount,
+					SwitchSubscriptionLegExecution4.mmInterimProfitAmount, RedemptionExecution15.mmInterimProfitAmount, SwitchRedemptionLegExecution4.mmInterimProfitAmount);
 			elementContext_lazy = () -> InvestmentFundOrderExecution.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InterimProfitAmount";
 			definition = "Part of the price deemed as accrued income or profit rather than capital. The interim profit amount is used for tax purposes.";
 			maxOccurs = 1;
@@ -1357,21 +1316,19 @@ public class InvestmentFundOrderExecution extends SecuritiesTradeExecution {
 	 */
 	public static final MMBusinessAssociationEnd mmInformativePrice = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RedemptionExecution5.mmInformativePriceDetails, com.tools20022.repository.msg.RedemptionExecution6.mmInformativePriceDetails,
-					com.tools20022.repository.msg.SubscriptionExecution5.mmInformativePriceDetails, com.tools20022.repository.msg.SubscriptionExecution6.mmInformativePriceDetails,
-					com.tools20022.repository.msg.RedemptionExecution10.mmInformativePriceDetails, com.tools20022.repository.msg.SubscriptionExecution7.mmInformativePriceDetails,
-					com.tools20022.repository.msg.SubscriptionExecution13.mmInformativePriceDetails, com.tools20022.repository.msg.SubscriptionExecution12.mmInformativePriceDetails,
-					com.tools20022.repository.msg.RedemptionExecution16.mmInformativePriceDetails, com.tools20022.repository.msg.SwitchSubscriptionLegExecution4.mmInformativePriceDetails,
-					com.tools20022.repository.msg.RedemptionExecution15.mmInformativePriceDetails, com.tools20022.repository.msg.SwitchRedemptionLegExecution4.mmInformativePriceDetails);
+			derivation_lazy = () -> Arrays.asList(RedemptionExecution5.mmInformativePriceDetails, RedemptionExecution6.mmInformativePriceDetails, SubscriptionExecution5.mmInformativePriceDetails,
+					SubscriptionExecution6.mmInformativePriceDetails, RedemptionExecution10.mmInformativePriceDetails, SubscriptionExecution7.mmInformativePriceDetails, SubscriptionExecution13.mmInformativePriceDetails,
+					SubscriptionExecution12.mmInformativePriceDetails, RedemptionExecution16.mmInformativePriceDetails, SwitchSubscriptionLegExecution4.mmInformativePriceDetails, RedemptionExecution15.mmInformativePriceDetails,
+					SwitchRedemptionLegExecution4.mmInformativePriceDetails);
 			elementContext_lazy = () -> InvestmentFundOrderExecution.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InformativePrice";
 			definition = "Other quoted price than the one at which the order was executed.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmFundOrderRelatedToInformativePrice;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 		}
 	};
@@ -1442,13 +1399,11 @@ public class InvestmentFundOrderExecution extends SecuritiesTradeExecution {
 	 */
 	public static final MMBusinessAttribute mmBestExecution = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RedemptionExecution5.mmBestExecution, com.tools20022.repository.msg.RedemptionExecution6.mmBestExecution,
-					com.tools20022.repository.msg.SubscriptionExecution5.mmBestExecution, com.tools20022.repository.msg.SubscriptionExecution6.mmBestExecution, com.tools20022.repository.msg.SwitchExecution4.mmBestExecution,
-					com.tools20022.repository.msg.SwitchExecution7.mmBestExecution, com.tools20022.repository.msg.SubscriptionExecution13.mmBestExecution, com.tools20022.repository.msg.SubscriptionExecution12.mmBestExecution,
-					com.tools20022.repository.msg.RedemptionExecution16.mmBestExecution, com.tools20022.repository.msg.RedemptionExecution15.mmBestExecution);
+			derivation_lazy = () -> Arrays.asList(RedemptionExecution5.mmBestExecution, RedemptionExecution6.mmBestExecution, SubscriptionExecution5.mmBestExecution, SubscriptionExecution6.mmBestExecution, SwitchExecution4.mmBestExecution,
+					SwitchExecution7.mmBestExecution, SubscriptionExecution13.mmBestExecution, SubscriptionExecution12.mmBestExecution, RedemptionExecution16.mmBestExecution, RedemptionExecution15.mmBestExecution);
 			elementContext_lazy = () -> InvestmentFundOrderExecution.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BestExecution";
 			definition = "Specifies that the execution was subject to best execution rules as defined by MiFID.";
 			maxOccurs = 1;
@@ -1520,14 +1475,12 @@ public class InvestmentFundOrderExecution extends SecuritiesTradeExecution {
 	 */
 	public static final MMBusinessAttribute mmPartialSettlementOfUnits = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RedemptionExecution5.mmPartialSettlementOfUnits, com.tools20022.repository.msg.RedemptionExecution6.mmPartialSettlementOfUnits,
-					com.tools20022.repository.msg.SubscriptionExecution5.mmPartialSettlementOfUnits, com.tools20022.repository.msg.SubscriptionExecution6.mmPartialSettlementOfUnits,
-					com.tools20022.repository.msg.RedemptionExecution10.mmPartialSettlementOfUnits, com.tools20022.repository.msg.SubscriptionExecution7.mmPartialSettlementOfUnits,
-					com.tools20022.repository.msg.SubscriptionExecution13.mmPartialSettlementOfUnits, com.tools20022.repository.msg.SubscriptionExecution12.mmPartialSettlementOfUnits,
-					com.tools20022.repository.msg.RedemptionExecution16.mmPartialSettlementOfUnits, com.tools20022.repository.msg.RedemptionExecution15.mmPartialSettlementOfUnits);
+			derivation_lazy = () -> Arrays.asList(RedemptionExecution5.mmPartialSettlementOfUnits, RedemptionExecution6.mmPartialSettlementOfUnits, SubscriptionExecution5.mmPartialSettlementOfUnits,
+					SubscriptionExecution6.mmPartialSettlementOfUnits, RedemptionExecution10.mmPartialSettlementOfUnits, SubscriptionExecution7.mmPartialSettlementOfUnits, SubscriptionExecution13.mmPartialSettlementOfUnits,
+					SubscriptionExecution12.mmPartialSettlementOfUnits, RedemptionExecution16.mmPartialSettlementOfUnits, RedemptionExecution15.mmPartialSettlementOfUnits);
 			elementContext_lazy = () -> InvestmentFundOrderExecution.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PartialSettlementOfUnits";
 			definition = "Percentage of units partially settled.";
 			maxOccurs = 1;
@@ -1599,14 +1552,12 @@ public class InvestmentFundOrderExecution extends SecuritiesTradeExecution {
 	 */
 	public static final MMBusinessAttribute mmPartialSettlementOfCash = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RedemptionExecution5.mmPartialSettlementOfCash, com.tools20022.repository.msg.RedemptionExecution6.mmPartialSettlementOfCash,
-					com.tools20022.repository.msg.SubscriptionExecution5.mmPartialSettlementOfCash, com.tools20022.repository.msg.SubscriptionExecution6.mmPartialSettlementOfCash,
-					com.tools20022.repository.msg.RedemptionExecution10.mmPartialSettlementOfCash, com.tools20022.repository.msg.SubscriptionExecution7.mmPartialSettlementOfCash,
-					com.tools20022.repository.msg.SubscriptionExecution13.mmPartialSettlementOfCash, com.tools20022.repository.msg.SubscriptionExecution12.mmPartialSettlementOfCash,
-					com.tools20022.repository.msg.RedemptionExecution16.mmPartialSettlementOfCash, com.tools20022.repository.msg.RedemptionExecution15.mmPartialSettlementOfCash);
+			derivation_lazy = () -> Arrays.asList(RedemptionExecution5.mmPartialSettlementOfCash, RedemptionExecution6.mmPartialSettlementOfCash, SubscriptionExecution5.mmPartialSettlementOfCash,
+					SubscriptionExecution6.mmPartialSettlementOfCash, RedemptionExecution10.mmPartialSettlementOfCash, SubscriptionExecution7.mmPartialSettlementOfCash, SubscriptionExecution13.mmPartialSettlementOfCash,
+					SubscriptionExecution12.mmPartialSettlementOfCash, RedemptionExecution16.mmPartialSettlementOfCash, RedemptionExecution15.mmPartialSettlementOfCash);
 			elementContext_lazy = () -> InvestmentFundOrderExecution.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PartialSettlementOfCash";
 			definition = "Percentage of cash partially settled.";
 			maxOccurs = 1;
@@ -1679,13 +1630,11 @@ public class InvestmentFundOrderExecution extends SecuritiesTradeExecution {
 	 */
 	public static final MMBusinessAttribute mmLateReport = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RedemptionExecution5.mmLateReport, com.tools20022.repository.msg.RedemptionExecution6.mmLateReport,
-					com.tools20022.repository.msg.SubscriptionExecution5.mmLateReport, com.tools20022.repository.msg.SubscriptionExecution6.mmLateReport, com.tools20022.repository.msg.SwitchExecution4.mmLateReport,
-					com.tools20022.repository.msg.SwitchExecution7.mmLateReport, com.tools20022.repository.msg.SubscriptionExecution13.mmLateReport, com.tools20022.repository.msg.SubscriptionExecution12.mmLateReport,
-					com.tools20022.repository.msg.RedemptionExecution16.mmLateReport, com.tools20022.repository.msg.RedemptionExecution15.mmLateReport);
+			derivation_lazy = () -> Arrays.asList(RedemptionExecution5.mmLateReport, RedemptionExecution6.mmLateReport, SubscriptionExecution5.mmLateReport, SubscriptionExecution6.mmLateReport, SwitchExecution4.mmLateReport,
+					SwitchExecution7.mmLateReport, SubscriptionExecution13.mmLateReport, SubscriptionExecution12.mmLateReport, RedemptionExecution16.mmLateReport, RedemptionExecution15.mmLateReport);
 			elementContext_lazy = () -> InvestmentFundOrderExecution.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "LateReport";
 			definition = "Specifies whether the order execution confirmation is late.";
 			maxOccurs = 1;
@@ -1739,11 +1688,10 @@ public class InvestmentFundOrderExecution extends SecuritiesTradeExecution {
 	 */
 	public static final MMBusinessAttribute mmSettledIndicator = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentFundTransaction2.mmSettledTransactionIndicator, com.tools20022.repository.msg.InvestmentFundTransaction3.mmSettledTransactionIndicator,
-					com.tools20022.repository.msg.InvestmentFundTransaction4.mmSettledTransactionIndicator);
+			derivation_lazy = () -> Arrays.asList(InvestmentFundTransaction2.mmSettledTransactionIndicator, InvestmentFundTransaction3.mmSettledTransactionIndicator, InvestmentFundTransaction4.mmSettledTransactionIndicator);
 			elementContext_lazy = () -> InvestmentFundOrderExecution.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SettledIndicator";
 			definition = "Indicates whether the cash payment with respect to the executed order is settled.";
 			maxOccurs = 1;
@@ -1797,11 +1745,10 @@ public class InvestmentFundOrderExecution extends SecuritiesTradeExecution {
 	 */
 	public static final MMBusinessAttribute mmRegisteredIndicator = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentFundTransaction2.mmRegisteredTransactionIndicator, com.tools20022.repository.msg.InvestmentFundTransaction3.mmRegisteredTransactionIndicator,
-					com.tools20022.repository.msg.InvestmentFundTransaction4.mmRegisteredTransactionIndicator);
+			derivation_lazy = () -> Arrays.asList(InvestmentFundTransaction2.mmRegisteredTransactionIndicator, InvestmentFundTransaction3.mmRegisteredTransactionIndicator, InvestmentFundTransaction4.mmRegisteredTransactionIndicator);
 			elementContext_lazy = () -> InvestmentFundOrderExecution.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RegisteredIndicator";
 			definition = "Indicates whether the executed order has a registered status on the books of the transfer agent.";
 			maxOccurs = 1;
@@ -1864,12 +1811,11 @@ public class InvestmentFundOrderExecution extends SecuritiesTradeExecution {
 	 */
 	public static final MMBusinessAttribute mmExecutedAmount = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RedemptionExecution10.mmExecutedAmount, com.tools20022.repository.msg.SubscriptionExecution7.mmExecutedAmount,
-					com.tools20022.repository.msg.FinancialInstrumentQuantity2.mmExecutedAmount, com.tools20022.repository.msg.FinancialInstrumentQuantity3.mmExecutedAmount,
-					com.tools20022.repository.msg.FundBalance1.mmTotalCashFromUnitOrders, com.tools20022.repository.msg.FundBalance1.mmTotalCashFromCashOrders);
+			derivation_lazy = () -> Arrays.asList(RedemptionExecution10.mmExecutedAmount, SubscriptionExecution7.mmExecutedAmount, FinancialInstrumentQuantity2.mmExecutedAmount, FinancialInstrumentQuantity3.mmExecutedAmount,
+					FundBalance1.mmTotalCashFromUnitOrders, FundBalance1.mmTotalCashFromCashOrders);
 			elementContext_lazy = () -> InvestmentFundOrderExecution.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ExecutedAmount";
 			definition = "Amount of money invested or redeemed as a result of an investment fund order.";
 			maxOccurs = 1;
@@ -1931,17 +1877,17 @@ public class InvestmentFundOrderExecution extends SecuritiesTradeExecution {
 	 */
 	public static final MMBusinessAssociationEnd mmInvestmentFundTransaction = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SwitchRedemptionLegExecution2.mmFinancialInstrumentDetails, com.tools20022.repository.msg.SwitchRedemptionLegExecution3.mmFinancialInstrumentDetails,
-					com.tools20022.repository.msg.InvestmentFundOrderExecution3.mmOrderExecutionDetails, com.tools20022.repository.msg.SwitchRedemptionLegExecution4.mmFinancialInstrumentDetails);
+			derivation_lazy = () -> Arrays.asList(SwitchRedemptionLegExecution2.mmFinancialInstrumentDetails, SwitchRedemptionLegExecution3.mmFinancialInstrumentDetails, InvestmentFundOrderExecution3.mmOrderExecutionDetails,
+					SwitchRedemptionLegExecution4.mmFinancialInstrumentDetails);
 			elementContext_lazy = () -> InvestmentFundOrderExecution.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InvestmentFundTransaction";
 			definition = "Transaction which is executed.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.InvestmentFundTransaction.mmInvestmentFundOrderExecution;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.InvestmentFundTransaction.mmObject();
 		}
 	};
@@ -1984,12 +1930,12 @@ public class InvestmentFundOrderExecution extends SecuritiesTradeExecution {
 		{
 			elementContext_lazy = () -> InvestmentFundOrderExecution.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CashFlow";
 			definition = "Specifies the cash flow resulting from the execution of an order.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.FundsCashFlow.mmRelatedOrder;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.FundsCashFlow.mmObject();
 		}
 	};
@@ -2039,11 +1985,10 @@ public class InvestmentFundOrderExecution extends SecuritiesTradeExecution {
 	 */
 	public static final MMBusinessAttribute mmSourceOfCash = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SubscriptionExecution13.mmSourceOfCash, com.tools20022.repository.msg.SubscriptionExecution12.mmSourceOfCash,
-					com.tools20022.repository.msg.SubscriptionOrder15.mmSourceOfCash, com.tools20022.repository.msg.SubscriptionOrder14.mmSourceOfCash);
+			derivation_lazy = () -> Arrays.asList(SubscriptionExecution13.mmSourceOfCash, SubscriptionExecution12.mmSourceOfCash, SubscriptionOrder15.mmSourceOfCash, SubscriptionOrder14.mmSourceOfCash);
 			elementContext_lazy = () -> InvestmentFundOrderExecution.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SourceOfCash";
 			definition = "Source of cash used for the settlement of the execution.";
 			maxOccurs = 1;
@@ -2055,25 +2000,21 @@ public class InvestmentFundOrderExecution extends SecuritiesTradeExecution {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InvestmentFundOrderExecution";
 				definition = "Creation/cancellation of investment units on the books of the fund or its designated agent, as a result of executing an investment fund order.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesPricing.mmFundOrderRelatedToExecutedPrice, com.tools20022.repository.entity.SecuritiesPricing.mmFundOrderRelatedToInformativePrice,
 						com.tools20022.repository.entity.InvestmentFundOrder.mmInvestmentFundOrderExecution, com.tools20022.repository.entity.SecuritiesQuantity.mmRelatedOrderExecution,
 						com.tools20022.repository.entity.InvestmentFundTransaction.mmInvestmentFundOrderExecution, com.tools20022.repository.entity.FundsCashFlow.mmRelatedOrder);
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentFundTransactionsByFund2.mmTransactionDetails, com.tools20022.repository.msg.InvestmentFundTransactionsByFund3.mmTransactionDetails);
+				derivationElement_lazy = () -> Arrays.asList(InvestmentFundTransactionsByFund2.mmTransactionDetails, InvestmentFundTransactionsByFund3.mmTransactionDetails);
 				subType_lazy = () -> Arrays.asList(SubscriptionExecution.mmObject(), RedemptionExecution.mmObject(), SwitchExecution.mmObject());
 				superType_lazy = () -> SecuritiesTradeExecution.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.InvestmentFundOrderExecution.mmUnitsNumber, com.tools20022.repository.entity.InvestmentFundOrderExecution.mmNonStandardSettlementInformation,
-						com.tools20022.repository.entity.InvestmentFundOrderExecution.mmOrder, com.tools20022.repository.entity.InvestmentFundOrderExecution.mmDealIdentification,
-						com.tools20022.repository.entity.InvestmentFundOrderExecution.mmExecutedTradePrice, com.tools20022.repository.entity.InvestmentFundOrderExecution.mmPartiallyExecutedIndicator,
-						com.tools20022.repository.entity.InvestmentFundOrderExecution.mmInterimProfitAmount, com.tools20022.repository.entity.InvestmentFundOrderExecution.mmInformativePrice,
-						com.tools20022.repository.entity.InvestmentFundOrderExecution.mmBestExecution, com.tools20022.repository.entity.InvestmentFundOrderExecution.mmPartialSettlementOfUnits,
-						com.tools20022.repository.entity.InvestmentFundOrderExecution.mmPartialSettlementOfCash, com.tools20022.repository.entity.InvestmentFundOrderExecution.mmLateReport,
-						com.tools20022.repository.entity.InvestmentFundOrderExecution.mmSettledIndicator, com.tools20022.repository.entity.InvestmentFundOrderExecution.mmRegisteredIndicator,
-						com.tools20022.repository.entity.InvestmentFundOrderExecution.mmExecutedAmount, com.tools20022.repository.entity.InvestmentFundOrderExecution.mmInvestmentFundTransaction,
-						com.tools20022.repository.entity.InvestmentFundOrderExecution.mmCashFlow, com.tools20022.repository.entity.InvestmentFundOrderExecution.mmSourceOfCash);
+				element_lazy = () -> Arrays.asList(InvestmentFundOrderExecution.mmUnitsNumber, InvestmentFundOrderExecution.mmNonStandardSettlementInformation, InvestmentFundOrderExecution.mmOrder,
+						InvestmentFundOrderExecution.mmDealIdentification, InvestmentFundOrderExecution.mmExecutedTradePrice, InvestmentFundOrderExecution.mmPartiallyExecutedIndicator, InvestmentFundOrderExecution.mmInterimProfitAmount,
+						InvestmentFundOrderExecution.mmInformativePrice, InvestmentFundOrderExecution.mmBestExecution, InvestmentFundOrderExecution.mmPartialSettlementOfUnits, InvestmentFundOrderExecution.mmPartialSettlementOfCash,
+						InvestmentFundOrderExecution.mmLateReport, InvestmentFundOrderExecution.mmSettledIndicator, InvestmentFundOrderExecution.mmRegisteredIndicator, InvestmentFundOrderExecution.mmExecutedAmount,
+						InvestmentFundOrderExecution.mmInvestmentFundTransaction, InvestmentFundOrderExecution.mmCashFlow, InvestmentFundOrderExecution.mmSourceOfCash);
 				derivationComponent_lazy = () -> Arrays.asList(ExpectedExecutionDetails1.mmObject(), ExpectedExecutionDetails2.mmObject(), InvestmentFundOrderExecution2.mmObject(), InvestmentFundOrderExecution1.mmObject(),
 						ExpectedExecutionDetails3.mmObject(), InvestmentFundOrderExecution3.mmObject(), UnitsAndCash.mmObject(), ExpectedExecutionDetails4.mmObject());
 			}

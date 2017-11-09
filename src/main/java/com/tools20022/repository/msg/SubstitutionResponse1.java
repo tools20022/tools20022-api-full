@@ -20,8 +20,13 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.colr.CollateralSubstitutionResponseV03;
+import com.tools20022.repository.area.colr.CollateralSubstitutionResponseV04;
 import com.tools20022.repository.codeset.Status4Code;
 import com.tools20022.repository.entity.CollateralSubstitution;
+import com.tools20022.repository.entity.Status;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -114,11 +119,11 @@ public class SubstitutionResponse1 {
 	 */
 	public static final MMMessageAttribute mmResponseType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.mmInstructionProcessingStatus;
+			businessElementTrace_lazy = () -> Status.mmInstructionProcessingStatus;
 			componentContext_lazy = () -> SubstitutionResponse1.mmObject();
 			isDerived = false;
 			xmlTag = "RspnTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ResponseType";
 			definition = "Indicates if the substitution request was accepted or rejected.";
 			maxOccurs = 1;
@@ -166,7 +171,7 @@ public class SubstitutionResponse1 {
 			componentContext_lazy = () -> SubstitutionResponse1.mmObject();
 			isDerived = false;
 			xmlTag = "CollSbstitnAccptncDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralSubstitutionAcceptanceDetails";
 			definition = "Provides details about the accepted collateral substitution.";
 			maxOccurs = 1;
@@ -215,7 +220,7 @@ public class SubstitutionResponse1 {
 			componentContext_lazy = () -> SubstitutionResponse1.mmObject();
 			isDerived = false;
 			xmlTag = "CollSbstitnRjctnDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralSubstitutionRejectionDetails";
 			definition = "Provides details about the rejected collateral substitution.";
 			maxOccurs = 1;
@@ -228,13 +233,11 @@ public class SubstitutionResponse1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SubstitutionResponse1.mmResponseType, com.tools20022.repository.msg.SubstitutionResponse1.mmCollateralSubstitutionAcceptanceDetails,
-						com.tools20022.repository.msg.SubstitutionResponse1.mmCollateralSubstitutionRejectionDetails);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.colr.CollateralSubstitutionResponseV03.mmSubstitutionResponse,
-						com.tools20022.repository.area.colr.CollateralSubstitutionResponseV04.mmSubstitutionResponse);
+				messageElement_lazy = () -> Arrays.asList(SubstitutionResponse1.mmResponseType, SubstitutionResponse1.mmCollateralSubstitutionAcceptanceDetails, SubstitutionResponse1.mmCollateralSubstitutionRejectionDetails);
+				messageBuildingBlock_lazy = () -> Arrays.asList(CollateralSubstitutionResponseV03.mmSubstitutionResponse, CollateralSubstitutionResponseV04.mmSubstitutionResponse);
 				trace_lazy = () -> CollateralSubstitution.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SubstitutionResponse1";
 				definition = "Provides details about the collateral substitution response.";
 			}

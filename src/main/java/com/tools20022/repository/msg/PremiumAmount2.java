@@ -20,11 +20,15 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.PartyIdentification8Choice;
 import com.tools20022.repository.choice.PremiumQuote1Choice;
 import com.tools20022.repository.datatype.ActiveOrHistoricCurrencyAndAmount;
 import com.tools20022.repository.datatype.ISODate;
+import com.tools20022.repository.entity.Party;
+import com.tools20022.repository.entity.PaymentObligation;
 import com.tools20022.repository.entity.PremiumCalculation;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -125,10 +129,10 @@ public class PremiumAmount2 {
 			componentContext_lazy = () -> PremiumAmount2.mmObject();
 			isDerived = false;
 			xmlTag = "PrmQt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PremiumQuote";
 			definition = "Specifies the calculation method of the premium amount.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PremiumAmount3.mmPremiumQuote);
+			nextVersions_lazy = () -> Arrays.asList(PremiumAmount3.mmPremiumQuote);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -181,14 +185,14 @@ public class PremiumAmount2 {
 	 */
 	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentObligation.mmAmount;
+			businessElementTrace_lazy = () -> PaymentObligation.mmAmount;
 			componentContext_lazy = () -> PremiumAmount2.mmObject();
 			isDerived = false;
 			xmlTag = "Amt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Result of the calculation of the premium amount on the basis of the premium quote and one of the amounts of the underlying foreign exchange trade.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PremiumAmount3.mmAmount);
+			nextVersions_lazy = () -> Arrays.asList(PremiumAmount3.mmAmount);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
@@ -228,11 +232,11 @@ public class PremiumAmount2 {
 	 */
 	public static final MMMessageAttribute mmSettlementDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentObligation.mmPaymentDueDate;
+			businessElementTrace_lazy = () -> PaymentObligation.mmPaymentDueDate;
 			componentContext_lazy = () -> PremiumAmount2.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementDate";
 			definition = "Date on which the premium must be settled.";
 			maxOccurs = 1;
@@ -277,11 +281,11 @@ public class PremiumAmount2 {
 	 */
 	public static final MMMessageAssociationEnd mmSettlementParty = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> PremiumAmount2.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmPty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementParty";
 			definition = "Party that settles the premium amount on behalf of the paying party.  It may contain the BIC of a central settlement system, eg. CLSBUS33.";
 			maxOccurs = 1;
@@ -294,11 +298,10 @@ public class PremiumAmount2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PremiumAmount2.mmPremiumQuote, com.tools20022.repository.msg.PremiumAmount2.mmAmount, com.tools20022.repository.msg.PremiumAmount2.mmSettlementDate,
-						com.tools20022.repository.msg.PremiumAmount2.mmSettlementParty);
+				messageElement_lazy = () -> Arrays.asList(PremiumAmount2.mmPremiumQuote, PremiumAmount2.mmAmount, PremiumAmount2.mmSettlementDate, PremiumAmount2.mmSettlementParty);
 				trace_lazy = () -> PremiumCalculation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PremiumAmount2";
 				definition = "Commercial agreement in which the buyer agrees to pay the seller an amount of cash. Some aspects of the payment may be defined in the agreement, eg, the method of the payment";
 				nextVersions_lazy = () -> Arrays.asList(PremiumAmount3.mmObject());

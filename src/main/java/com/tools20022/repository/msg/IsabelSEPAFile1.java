@@ -19,9 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.Max6Text;
 import com.tools20022.repository.datatype.TrueFalseIndicator;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -103,7 +105,7 @@ public class IsabelSEPAFile1 {
 			componentContext_lazy = () -> IsabelSEPAFile1.mmObject();
 			isDerived = false;
 			xmlTag = "SEPAInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SEPAIndicator";
 			definition = "Specifies whether the SEPA formatted file is compliant to the SEPA rulebook.";
 			maxOccurs = 1;
@@ -147,7 +149,7 @@ public class IsabelSEPAFile1 {
 			componentContext_lazy = () -> IsabelSEPAFile1.mmObject();
 			isDerived = false;
 			xmlTag = "CtgyPurp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CategoryPurpose";
 			definition = "High level category purpose of the payment initiation messages in the file, based on the SEPA rulebook.";
 			maxOccurs = 1;
@@ -188,7 +190,7 @@ public class IsabelSEPAFile1 {
 			componentContext_lazy = () -> IsabelSEPAFile1.mmObject();
 			isDerived = false;
 			xmlTag = "MktPrctcs";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketPractices";
 			definition = "Local market practices applicable to the SEPA file.";
 			maxOccurs = 10;
@@ -200,10 +202,9 @@ public class IsabelSEPAFile1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IsabelSEPAFile1.mmSEPAIndicator, com.tools20022.repository.msg.IsabelSEPAFile1.mmCategoryPurpose,
-						com.tools20022.repository.msg.IsabelSEPAFile1.mmMarketPractices);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(IsabelSEPAFile1.mmSEPAIndicator, IsabelSEPAFile1.mmCategoryPurpose, IsabelSEPAFile1.mmMarketPractices);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "IsabelSEPAFile1";
 				definition = "Specifies the characteristics for a SEPA formatted payment initiation file.";
 			}

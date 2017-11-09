@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.PartyRoleCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -86,7 +88,7 @@ public class InvestmentFundRole5Code extends PartyRoleCode {
 	 */
 	public static final MMCode mmTransferAgent = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransferAgent";
 			owner_lazy = () -> InvestmentFundRole5Code.mmObject();
 		}
@@ -109,7 +111,7 @@ public class InvestmentFundRole5Code extends PartyRoleCode {
 	 */
 	public static final MMCode mmIntermediary = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Intermediary";
 			owner_lazy = () -> InvestmentFundRole5Code.mmObject();
 		}
@@ -132,7 +134,7 @@ public class InvestmentFundRole5Code extends PartyRoleCode {
 	 */
 	public static final MMCode mmDistributor = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Distributor";
 			owner_lazy = () -> InvestmentFundRole5Code.mmObject();
 		}
@@ -141,13 +143,12 @@ public class InvestmentFundRole5Code extends PartyRoleCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("TRAG");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InvestmentFundRole5Code";
 				definition = "Specifies the role played by an actor in an investment fund transaction.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.InvestmentFundRole5Code.mmTransferAgent, com.tools20022.repository.codeset.InvestmentFundRole5Code.mmIntermediary,
-						com.tools20022.repository.codeset.InvestmentFundRole5Code.mmDistributor);
+				code_lazy = () -> Arrays.asList(InvestmentFundRole5Code.mmTransferAgent, InvestmentFundRole5Code.mmIntermediary, InvestmentFundRole5Code.mmDistributor);
 				trace_lazy = () -> PartyRoleCode.mmObject();
 			}
 		});

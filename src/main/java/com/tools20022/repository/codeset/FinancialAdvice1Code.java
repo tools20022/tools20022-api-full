@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.FinancialAdviceCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -88,7 +90,7 @@ public class FinancialAdvice1Code extends FinancialAdviceCode {
 	 */
 	public static final MMCode mmReceived = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Received";
 			owner_lazy = () -> FinancialAdvice1Code.mmObject();
 		}
@@ -111,7 +113,7 @@ public class FinancialAdvice1Code extends FinancialAdviceCode {
 	 */
 	public static final MMCode mmNotReceived = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotReceived";
 			owner_lazy = () -> FinancialAdvice1Code.mmObject();
 		}
@@ -134,7 +136,7 @@ public class FinancialAdvice1Code extends FinancialAdviceCode {
 	 */
 	public static final MMCode mmUnknown = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unknown";
 			owner_lazy = () -> FinancialAdvice1Code.mmObject();
 		}
@@ -143,13 +145,12 @@ public class FinancialAdvice1Code extends FinancialAdviceCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("RECE");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FinancialAdvice1Code";
 				definition = "Specifies if advice has been received from an independent financial advisor.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.FinancialAdvice1Code.mmReceived, com.tools20022.repository.codeset.FinancialAdvice1Code.mmNotReceived,
-						com.tools20022.repository.codeset.FinancialAdvice1Code.mmUnknown);
+				code_lazy = () -> Arrays.asList(FinancialAdvice1Code.mmReceived, FinancialAdvice1Code.mmNotReceived, FinancialAdvice1Code.mmUnknown);
 				trace_lazy = () -> FinancialAdviceCode.mmObject();
 			}
 		});

@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.RelativeSize1Code
+ * RelativeSize1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>{@linkplain com.tools20022.repository.codeset.RelativeSizeCode#mmSmall
@@ -38,13 +47,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.RelativeSizeCode#mmUndisclosed
  * RelativeSizeCode.mmUndisclosed}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.RelativeSize1Code
- * RelativeSize1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -95,7 +97,7 @@ public class RelativeSizeCode {
 	 */
 	public static final MMCode mmSmall = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Small";
 			definition = "Indicates that the relative size is small.";
 			owner_lazy = () -> RelativeSizeCode.mmObject();
@@ -125,7 +127,7 @@ public class RelativeSizeCode {
 	 */
 	public static final MMCode mmMedium = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Medium";
 			definition = "Indicates that the relative size is medium.";
 			owner_lazy = () -> RelativeSizeCode.mmObject();
@@ -155,7 +157,7 @@ public class RelativeSizeCode {
 	 */
 	public static final MMCode mmLarge = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Large";
 			definition = "Indicates that the relative size is large.";
 			owner_lazy = () -> RelativeSizeCode.mmObject();
@@ -185,7 +187,7 @@ public class RelativeSizeCode {
 	 */
 	public static final MMCode mmUndisclosed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Undisclosed";
 			definition = "Indicates that the quantity is undisclosed.";
 			owner_lazy = () -> RelativeSizeCode.mmObject();
@@ -196,13 +198,12 @@ public class RelativeSizeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("SMAL");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RelativeSizeCode";
 				definition = "A type of quantity of financial instrument expressed in a relative size.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RelativeSizeCode.mmSmall, com.tools20022.repository.codeset.RelativeSizeCode.mmMedium, com.tools20022.repository.codeset.RelativeSizeCode.mmLarge,
-						com.tools20022.repository.codeset.RelativeSizeCode.mmUndisclosed);
+				code_lazy = () -> Arrays.asList(RelativeSizeCode.mmSmall, RelativeSizeCode.mmMedium, RelativeSizeCode.mmLarge, RelativeSizeCode.mmUndisclosed);
 				derivation_lazy = () -> Arrays.asList(RelativeSize1Code.mmObject());
 			}
 		});

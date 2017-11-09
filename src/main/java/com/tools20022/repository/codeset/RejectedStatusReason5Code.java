@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.RejectedStatusReasonCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -176,7 +178,7 @@ public class RejectedStatusReason5Code extends RejectedStatusReasonCode {
 	 */
 	public static final MMCode mmDifferentValuationPoints = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DifferentValuationPoints";
 			owner_lazy = () -> RejectedStatusReason5Code.mmObject();
 		}
@@ -199,7 +201,7 @@ public class RejectedStatusReason5Code extends RejectedStatusReasonCode {
 	 */
 	public static final MMCode mmDeliveringAgent = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeliveringAgent";
 			owner_lazy = () -> RejectedStatusReason5Code.mmObject();
 		}
@@ -222,7 +224,7 @@ public class RejectedStatusReason5Code extends RejectedStatusReasonCode {
 	 */
 	public static final MMCode mmDirectDebit = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DirectDebit";
 			owner_lazy = () -> RejectedStatusReason5Code.mmObject();
 		}
@@ -245,7 +247,7 @@ public class RejectedStatusReason5Code extends RejectedStatusReasonCode {
 	 */
 	public static final MMCode mmIntermediary = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Intermediary";
 			owner_lazy = () -> RejectedStatusReason5Code.mmObject();
 		}
@@ -268,7 +270,7 @@ public class RejectedStatusReason5Code extends RejectedStatusReasonCode {
 	 */
 	public static final MMCode mmInvestmentAccount = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestmentAccount";
 			owner_lazy = () -> RejectedStatusReason5Code.mmObject();
 		}
@@ -291,7 +293,7 @@ public class RejectedStatusReason5Code extends RejectedStatusReasonCode {
 	 */
 	public static final MMCode mmPaymentCard = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentCard";
 			owner_lazy = () -> RejectedStatusReason5Code.mmObject();
 		}
@@ -314,7 +316,7 @@ public class RejectedStatusReason5Code extends RejectedStatusReasonCode {
 	 */
 	public static final MMCode mmInvalidCreditTransfer = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvalidCreditTransfer";
 			owner_lazy = () -> RejectedStatusReason5Code.mmObject();
 		}
@@ -337,7 +339,7 @@ public class RejectedStatusReason5Code extends RejectedStatusReasonCode {
 	 */
 	public static final MMCode mmSettlementPlace = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementPlace";
 			owner_lazy = () -> RejectedStatusReason5Code.mmObject();
 		}
@@ -360,7 +362,7 @@ public class RejectedStatusReason5Code extends RejectedStatusReasonCode {
 	 */
 	public static final MMCode mmReceivingAgent = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceivingAgent";
 			owner_lazy = () -> RejectedStatusReason5Code.mmObject();
 		}
@@ -383,7 +385,7 @@ public class RejectedStatusReason5Code extends RejectedStatusReasonCode {
 	 */
 	public static final MMCode mmSafekeepingPlace = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlace";
 			owner_lazy = () -> RejectedStatusReason5Code.mmObject();
 		}
@@ -406,7 +408,7 @@ public class RejectedStatusReason5Code extends RejectedStatusReasonCode {
 	 */
 	public static final MMCode mmInvalidSecurityForm = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvalidSecurityForm";
 			owner_lazy = () -> RejectedStatusReason5Code.mmObject();
 		}
@@ -429,7 +431,7 @@ public class RejectedStatusReason5Code extends RejectedStatusReasonCode {
 	 */
 	public static final MMCode mmFinancialInstrumentIdentification = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentIdentification";
 			owner_lazy = () -> RejectedStatusReason5Code.mmObject();
 		}
@@ -452,7 +454,7 @@ public class RejectedStatusReason5Code extends RejectedStatusReasonCode {
 	 */
 	public static final MMCode mmAccountBlockedForCorporateAction = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountBlockedForCorporateAction";
 			owner_lazy = () -> RejectedStatusReason5Code.mmObject();
 		}
@@ -475,7 +477,7 @@ public class RejectedStatusReason5Code extends RejectedStatusReasonCode {
 	 */
 	public static final MMCode mmAccountBlockedForTransfer = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountBlockedForTransfer";
 			owner_lazy = () -> RejectedStatusReason5Code.mmObject();
 		}
@@ -498,7 +500,7 @@ public class RejectedStatusReason5Code extends RejectedStatusReasonCode {
 	 */
 	public static final MMCode mmAccountBlockedMissingDocuments = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountBlockedMissingDocuments";
 			owner_lazy = () -> RejectedStatusReason5Code.mmObject();
 		}
@@ -521,7 +523,7 @@ public class RejectedStatusReason5Code extends RejectedStatusReasonCode {
 	 */
 	public static final MMCode mmNotEnoughCash = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotEnoughCash";
 			owner_lazy = () -> RejectedStatusReason5Code.mmObject();
 		}
@@ -544,7 +546,7 @@ public class RejectedStatusReason5Code extends RejectedStatusReasonCode {
 	 */
 	public static final MMCode mmNotEnoughFinancialInstrument = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotEnoughFinancialInstrument";
 			owner_lazy = () -> RejectedStatusReason5Code.mmObject();
 		}
@@ -567,7 +569,7 @@ public class RejectedStatusReason5Code extends RejectedStatusReasonCode {
 	 */
 	public static final MMCode mmFinancialInstrumentIdentificationAndName = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentIdentificationAndName";
 			owner_lazy = () -> RejectedStatusReason5Code.mmObject();
 		}
@@ -590,7 +592,7 @@ public class RejectedStatusReason5Code extends RejectedStatusReasonCode {
 	 */
 	public static final MMCode mmUnacceptedCommissionWaiving = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnacceptedCommissionWaiving";
 			owner_lazy = () -> RejectedStatusReason5Code.mmObject();
 		}
@@ -613,7 +615,7 @@ public class RejectedStatusReason5Code extends RejectedStatusReasonCode {
 	 */
 	public static final MMCode mmUnacceptedDealCurrency = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnacceptedDealCurrency";
 			owner_lazy = () -> RejectedStatusReason5Code.mmObject();
 		}
@@ -636,7 +638,7 @@ public class RejectedStatusReason5Code extends RejectedStatusReasonCode {
 	 */
 	public static final MMCode mmUnacceptedNAVCurrency = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnacceptedNAVCurrency";
 			owner_lazy = () -> RejectedStatusReason5Code.mmObject();
 		}
@@ -659,7 +661,7 @@ public class RejectedStatusReason5Code extends RejectedStatusReasonCode {
 	 */
 	public static final MMCode mmUnacceptedPaymentMethod = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnacceptedPaymentMethod";
 			owner_lazy = () -> RejectedStatusReason5Code.mmObject();
 		}
@@ -682,7 +684,7 @@ public class RejectedStatusReason5Code extends RejectedStatusReasonCode {
 	 */
 	public static final MMCode mmUnacceptedRequestedSettlementCurrency = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnacceptedRequestedSettlementCurrency";
 			owner_lazy = () -> RejectedStatusReason5Code.mmObject();
 		}
@@ -705,7 +707,7 @@ public class RejectedStatusReason5Code extends RejectedStatusReasonCode {
 	 */
 	public static final MMCode mmTooHighUnitsOrAmountToSubscribe = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TooHighUnitsOrAmountToSubscribe";
 			owner_lazy = () -> RejectedStatusReason5Code.mmObject();
 		}
@@ -728,7 +730,7 @@ public class RejectedStatusReason5Code extends RejectedStatusReasonCode {
 	 */
 	public static final MMCode mmTooLowUnitsOrAmountToSubscribe = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TooLowUnitsOrAmountToSubscribe";
 			owner_lazy = () -> RejectedStatusReason5Code.mmObject();
 		}
@@ -751,7 +753,7 @@ public class RejectedStatusReason5Code extends RejectedStatusReasonCode {
 	 */
 	public static final MMCode mmUnknownLinkagesReference = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnknownLinkagesReference";
 			owner_lazy = () -> RejectedStatusReason5Code.mmObject();
 		}
@@ -774,7 +776,7 @@ public class RejectedStatusReason5Code extends RejectedStatusReasonCode {
 	 */
 	public static final MMCode mmPhysicalDeliveryImpossible = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PhysicalDeliveryImpossible";
 			owner_lazy = () -> RejectedStatusReason5Code.mmObject();
 		}
@@ -797,7 +799,7 @@ public class RejectedStatusReason5Code extends RejectedStatusReasonCode {
 	 */
 	public static final MMCode mmDuplicateOrderReference = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DuplicateOrderReference";
 			owner_lazy = () -> RejectedStatusReason5Code.mmObject();
 		}
@@ -820,7 +822,7 @@ public class RejectedStatusReason5Code extends RejectedStatusReasonCode {
 	 */
 	public static final MMCode mmInstructingPartyNotAllowedForAccount = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructingPartyNotAllowedForAccount";
 			owner_lazy = () -> RejectedStatusReason5Code.mmObject();
 		}
@@ -843,7 +845,7 @@ public class RejectedStatusReason5Code extends RejectedStatusReasonCode {
 	 */
 	public static final MMCode mmInvalidOrderType = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvalidOrderType";
 			owner_lazy = () -> RejectedStatusReason5Code.mmObject();
 		}
@@ -866,7 +868,7 @@ public class RejectedStatusReason5Code extends RejectedStatusReasonCode {
 	 */
 	public static final MMCode mmNotCompliantWithSLA = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotCompliantWithSLA";
 			owner_lazy = () -> RejectedStatusReason5Code.mmObject();
 		}
@@ -889,7 +891,7 @@ public class RejectedStatusReason5Code extends RejectedStatusReasonCode {
 	 */
 	public static final MMCode mmCutOffTime = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CutOffTime";
 			owner_lazy = () -> RejectedStatusReason5Code.mmObject();
 		}
@@ -912,7 +914,7 @@ public class RejectedStatusReason5Code extends RejectedStatusReasonCode {
 	 */
 	public static final MMCode mmOther = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
 			owner_lazy = () -> RejectedStatusReason5Code.mmObject();
 		}
@@ -921,28 +923,21 @@ public class RejectedStatusReason5Code extends RejectedStatusReasonCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CUTO");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RejectedStatusReason5Code";
 				definition = "Specifies the reason for a rejected status.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RejectedStatusReason5Code.mmDifferentValuationPoints, com.tools20022.repository.codeset.RejectedStatusReason5Code.mmDeliveringAgent,
-						com.tools20022.repository.codeset.RejectedStatusReason5Code.mmDirectDebit, com.tools20022.repository.codeset.RejectedStatusReason5Code.mmIntermediary,
-						com.tools20022.repository.codeset.RejectedStatusReason5Code.mmInvestmentAccount, com.tools20022.repository.codeset.RejectedStatusReason5Code.mmPaymentCard,
-						com.tools20022.repository.codeset.RejectedStatusReason5Code.mmInvalidCreditTransfer, com.tools20022.repository.codeset.RejectedStatusReason5Code.mmSettlementPlace,
-						com.tools20022.repository.codeset.RejectedStatusReason5Code.mmReceivingAgent, com.tools20022.repository.codeset.RejectedStatusReason5Code.mmSafekeepingPlace,
-						com.tools20022.repository.codeset.RejectedStatusReason5Code.mmInvalidSecurityForm, com.tools20022.repository.codeset.RejectedStatusReason5Code.mmFinancialInstrumentIdentification,
-						com.tools20022.repository.codeset.RejectedStatusReason5Code.mmAccountBlockedForCorporateAction, com.tools20022.repository.codeset.RejectedStatusReason5Code.mmAccountBlockedForTransfer,
-						com.tools20022.repository.codeset.RejectedStatusReason5Code.mmAccountBlockedMissingDocuments, com.tools20022.repository.codeset.RejectedStatusReason5Code.mmNotEnoughCash,
-						com.tools20022.repository.codeset.RejectedStatusReason5Code.mmNotEnoughFinancialInstrument, com.tools20022.repository.codeset.RejectedStatusReason5Code.mmFinancialInstrumentIdentificationAndName,
-						com.tools20022.repository.codeset.RejectedStatusReason5Code.mmUnacceptedCommissionWaiving, com.tools20022.repository.codeset.RejectedStatusReason5Code.mmUnacceptedDealCurrency,
-						com.tools20022.repository.codeset.RejectedStatusReason5Code.mmUnacceptedNAVCurrency, com.tools20022.repository.codeset.RejectedStatusReason5Code.mmUnacceptedPaymentMethod,
-						com.tools20022.repository.codeset.RejectedStatusReason5Code.mmUnacceptedRequestedSettlementCurrency, com.tools20022.repository.codeset.RejectedStatusReason5Code.mmTooHighUnitsOrAmountToSubscribe,
-						com.tools20022.repository.codeset.RejectedStatusReason5Code.mmTooLowUnitsOrAmountToSubscribe, com.tools20022.repository.codeset.RejectedStatusReason5Code.mmUnknownLinkagesReference,
-						com.tools20022.repository.codeset.RejectedStatusReason5Code.mmPhysicalDeliveryImpossible, com.tools20022.repository.codeset.RejectedStatusReason5Code.mmDuplicateOrderReference,
-						com.tools20022.repository.codeset.RejectedStatusReason5Code.mmInstructingPartyNotAllowedForAccount, com.tools20022.repository.codeset.RejectedStatusReason5Code.mmInvalidOrderType,
-						com.tools20022.repository.codeset.RejectedStatusReason5Code.mmNotCompliantWithSLA, com.tools20022.repository.codeset.RejectedStatusReason5Code.mmCutOffTime,
-						com.tools20022.repository.codeset.RejectedStatusReason5Code.mmOther);
+				code_lazy = () -> Arrays.asList(RejectedStatusReason5Code.mmDifferentValuationPoints, RejectedStatusReason5Code.mmDeliveringAgent, RejectedStatusReason5Code.mmDirectDebit, RejectedStatusReason5Code.mmIntermediary,
+						RejectedStatusReason5Code.mmInvestmentAccount, RejectedStatusReason5Code.mmPaymentCard, RejectedStatusReason5Code.mmInvalidCreditTransfer, RejectedStatusReason5Code.mmSettlementPlace,
+						RejectedStatusReason5Code.mmReceivingAgent, RejectedStatusReason5Code.mmSafekeepingPlace, RejectedStatusReason5Code.mmInvalidSecurityForm, RejectedStatusReason5Code.mmFinancialInstrumentIdentification,
+						RejectedStatusReason5Code.mmAccountBlockedForCorporateAction, RejectedStatusReason5Code.mmAccountBlockedForTransfer, RejectedStatusReason5Code.mmAccountBlockedMissingDocuments,
+						RejectedStatusReason5Code.mmNotEnoughCash, RejectedStatusReason5Code.mmNotEnoughFinancialInstrument, RejectedStatusReason5Code.mmFinancialInstrumentIdentificationAndName,
+						RejectedStatusReason5Code.mmUnacceptedCommissionWaiving, RejectedStatusReason5Code.mmUnacceptedDealCurrency, RejectedStatusReason5Code.mmUnacceptedNAVCurrency, RejectedStatusReason5Code.mmUnacceptedPaymentMethod,
+						RejectedStatusReason5Code.mmUnacceptedRequestedSettlementCurrency, RejectedStatusReason5Code.mmTooHighUnitsOrAmountToSubscribe, RejectedStatusReason5Code.mmTooLowUnitsOrAmountToSubscribe,
+						RejectedStatusReason5Code.mmUnknownLinkagesReference, RejectedStatusReason5Code.mmPhysicalDeliveryImpossible, RejectedStatusReason5Code.mmDuplicateOrderReference,
+						RejectedStatusReason5Code.mmInstructingPartyNotAllowedForAccount, RejectedStatusReason5Code.mmInvalidOrderType, RejectedStatusReason5Code.mmNotCompliantWithSLA, RejectedStatusReason5Code.mmCutOffTime,
+						RejectedStatusReason5Code.mmOther);
 				trace_lazy = () -> RejectedStatusReasonCode.mmObject();
 			}
 		});

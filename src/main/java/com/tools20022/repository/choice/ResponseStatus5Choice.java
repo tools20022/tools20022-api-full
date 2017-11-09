@@ -19,8 +19,12 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ResponseStatus1Code;
+import com.tools20022.repository.entity.CollateralStatus;
+import com.tools20022.repository.entity.CorporateActionStatus;
 import com.tools20022.repository.entity.Status;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification30;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -111,14 +115,14 @@ public class ResponseStatus5Choice {
 	 */
 	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CollateralStatus.mmResponseStatus;
+			businessElementTrace_lazy = () -> CollateralStatus.mmResponseStatus;
 			componentContext_lazy = () -> ResponseStatus5Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Cd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Provides the status of the received collateral message (collateral claim, a collateral proposal or a proposal/request for collateral substitution) from a collateral management perspective.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.ResponseStatus1Choice.mmCode;
+			previousVersion_lazy = () -> ResponseStatus1Choice.mmCode;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ResponseStatus1Code.mmObject();
@@ -169,14 +173,14 @@ public class ResponseStatus5Choice {
 	 */
 	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionStatus.mmAgentStandingInstructionStatus;
+			businessElementTrace_lazy = () -> CorporateActionStatus.mmAgentStandingInstructionStatus;
 			componentContext_lazy = () -> ResponseStatus5Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Provides the status of the received collateral message (collateral claim, a collateral proposal or a proposal/request for collateral substitution) from a collateral management perspective.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.ResponseStatus1Choice.mmProprietary;
+			previousVersion_lazy = () -> ResponseStatus1Choice.mmProprietary;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification30.mmObject();
@@ -186,10 +190,10 @@ public class ResponseStatus5Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ResponseStatus5Choice.mmCode, com.tools20022.repository.choice.ResponseStatus5Choice.mmProprietary);
+				messageElement_lazy = () -> Arrays.asList(ResponseStatus5Choice.mmCode, ResponseStatus5Choice.mmProprietary);
 				trace_lazy = () -> Status.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ResponseStatus5Choice";
 				definition = "Choice of format for the response status.";
 				previousVersion_lazy = () -> ResponseStatus1Choice.mmObject();

@@ -17,15 +17,12 @@
 
 package com.tools20022.repository.entity;
 
-import com.tools20022.metamodel.MMBusinessAssociationEnd;
-import com.tools20022.metamodel.MMBusinessAttribute;
-import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.*;
 import com.tools20022.repository.codeset.EventFrequencyCode;
 import com.tools20022.repository.codeset.ValuationTimingCode;
 import com.tools20022.repository.datatype.*;
-import com.tools20022.repository.msg.PriceValuation2;
-import com.tools20022.repository.msg.PriceValuation3;
-import com.tools20022.repository.msg.PriceValuation4;
+import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -40,6 +37,63 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.PriceValuation2
+ * PriceValuation2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PriceValuation3
+ * PriceValuation3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PriceValuation4
+ * PriceValuation4}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InvestmentFundClass#mmNetAssetValueCalculation
+ * InvestmentFundClass.mmNetAssetValueCalculation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmNetAssetValueCalculation
+ * SecuritiesPricing.mmNetAssetValueCalculation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Tax#mmTaxLiabilityValueCalculation
+ * Tax.mmTaxLiabilityValueCalculation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Tax#mmTaxRefundValueCalculation
+ * Tax.mmTaxRefundValueCalculation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmNetAssetValueCalculation
+ * SecuritiesQuantity.mmNetAssetValueCalculation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ValuationStatistics#mmNetAssetValueCalculation
+ * ValuationStatistics.mmNetAssetValueCalculation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PerformanceFactors#mmNetAssetValueCalculation
+ * PerformanceFactors.mmNetAssetValueCalculation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Interest#mmRelatedNetAssetValueCalculation
+ * Interest.mmRelatedNetAssetValueCalculation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.FundsCashFlow#mmNetAssetValueCalculation
+ * FundsCashFlow.mmNetAssetValueCalculation}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
+ * derivationElement} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PriceReport2#mmPriceValuationDetails
+ * PriceReport2.mmPriceValuationDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PriceReport3#mmPriceValuationDetails
+ * PriceReport3.mmPriceValuationDetails}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -109,63 +163,6 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InvestmentFundClass#mmNetAssetValueCalculation
- * InvestmentFundClass.mmNetAssetValueCalculation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmNetAssetValueCalculation
- * SecuritiesPricing.mmNetAssetValueCalculation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Tax#mmTaxLiabilityValueCalculation
- * Tax.mmTaxLiabilityValueCalculation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Tax#mmTaxRefundValueCalculation
- * Tax.mmTaxRefundValueCalculation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmNetAssetValueCalculation
- * SecuritiesQuantity.mmNetAssetValueCalculation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ValuationStatistics#mmNetAssetValueCalculation
- * ValuationStatistics.mmNetAssetValueCalculation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.PerformanceFactors#mmNetAssetValueCalculation
- * PerformanceFactors.mmNetAssetValueCalculation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Interest#mmRelatedNetAssetValueCalculation
- * Interest.mmRelatedNetAssetValueCalculation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.FundsCashFlow#mmNetAssetValueCalculation
- * FundsCashFlow.mmNetAssetValueCalculation}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
- * derivationElement} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PriceReport2#mmPriceValuationDetails
- * PriceReport2.mmPriceValuationDetails}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PriceReport3#mmPriceValuationDetails
- * PriceReport3.mmPriceValuationDetails}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.PriceValuation2
- * PriceValuation2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PriceValuation3
- * PriceValuation3}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PriceValuation4
- * PriceValuation4}</li>
- * </ul>
- * </li>
- * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
@@ -230,11 +227,11 @@ public class NetAssetValueCalculation {
 	 */
 	public static final MMBusinessAttribute mmValuationFrequency = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ValuationDealingProcessingCharacteristics.mmValuationFrequency, com.tools20022.repository.msg.ValuationDealingProcessingCharacteristics2.mmValuationFrequency,
-					com.tools20022.repository.msg.PriceValuation3.mmValuationFrequency, com.tools20022.repository.msg.PriceValuation4.mmValuationFrequency);
+			derivation_lazy = () -> Arrays.asList(ValuationDealingProcessingCharacteristics.mmValuationFrequency, ValuationDealingProcessingCharacteristics2.mmValuationFrequency, PriceValuation3.mmValuationFrequency,
+					PriceValuation4.mmValuationFrequency);
 			elementContext_lazy = () -> NetAssetValueCalculation.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ValuationFrequency";
 			definition = "Frequency of the valuation.";
 			maxOccurs = 1;
@@ -327,16 +324,13 @@ public class NetAssetValueCalculation {
 	 */
 	public static final MMBusinessAttribute mmValuationDateTime = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FundParameters3.mmValuationDateTime, com.tools20022.repository.msg.PriceValuation2.mmValuationDateTime,
-					com.tools20022.repository.msg.PriceValuation2.mmNextValuationDateTime, com.tools20022.repository.msg.PriceValuation2.mmPreviousValuationDateTime, com.tools20022.repository.msg.PriceValuation3.mmValuationDateTime,
-					com.tools20022.repository.msg.PriceValuation3.mmNAVDateTime, com.tools20022.repository.msg.PriceValuation3.mmNextValuationDateTime, com.tools20022.repository.msg.PriceValuation3.mmPreviousValuationDateTime,
-					com.tools20022.repository.msg.PriceValuation4.mmValuationDateTime, com.tools20022.repository.msg.PriceValuation4.mmNAVDateTime, com.tools20022.repository.msg.PriceValuation4.mmNextValuationDateTime,
-					com.tools20022.repository.msg.PriceValuation4.mmPreviousValuationDateTime, com.tools20022.repository.msg.Order16.mmNAVDate, com.tools20022.repository.msg.Order14.mmNAVDate,
-					com.tools20022.repository.msg.RedemptionExecution10.mmNAVDate, com.tools20022.repository.msg.SubscriptionExecution7.mmNAVDate, com.tools20022.repository.msg.Order17.mmNAVDate,
-					com.tools20022.repository.msg.Order18.mmNAVDate);
+			derivation_lazy = () -> Arrays.asList(FundParameters3.mmValuationDateTime, PriceValuation2.mmValuationDateTime, PriceValuation2.mmNextValuationDateTime, PriceValuation2.mmPreviousValuationDateTime,
+					PriceValuation3.mmValuationDateTime, PriceValuation3.mmNAVDateTime, PriceValuation3.mmNextValuationDateTime, PriceValuation3.mmPreviousValuationDateTime, PriceValuation4.mmValuationDateTime,
+					PriceValuation4.mmNAVDateTime, PriceValuation4.mmNextValuationDateTime, PriceValuation4.mmPreviousValuationDateTime, Order16.mmNAVDate, Order14.mmNAVDate, RedemptionExecution10.mmNAVDate,
+					SubscriptionExecution7.mmNAVDate, Order17.mmNAVDate, Order18.mmNAVDate);
 			elementContext_lazy = () -> NetAssetValueCalculation.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ValuationDateTime";
 			definition = "Date and time of the price valuation for the investment fund/fund class.";
 			maxOccurs = 1;
@@ -478,22 +472,16 @@ public class NetAssetValueCalculation {
 	 */
 	public static final MMBusinessAttribute mmNetAssetValue = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PriceValuation2.mmTotalNAV, com.tools20022.repository.msg.PriceValuation3.mmTotalNAV, com.tools20022.repository.msg.PriceValuation4.mmTotalNAV,
-					com.tools20022.repository.msg.FundCashForecast1.mmTotalNAV, com.tools20022.repository.msg.FundCashForecast1.mmPreviousTotalNAV, com.tools20022.repository.msg.FundCashForecast3.mmTotalNAV,
-					com.tools20022.repository.msg.FundCashForecast3.mmPreviousTotalNAV, com.tools20022.repository.msg.FundCashForecast2.mmTotalNAV, com.tools20022.repository.msg.FundCashForecast2.mmPreviousTotalNAV,
-					com.tools20022.repository.msg.FundCashForecast4.mmTotalNAV, com.tools20022.repository.msg.FundCashForecast4.mmPreviousTotalNAV, com.tools20022.repository.msg.EstimatedFundCashForecast2.mmEstimatedTotalNAV,
-					com.tools20022.repository.msg.EstimatedFundCashForecast2.mmPreviousEstimatedTotalNAV, com.tools20022.repository.msg.EstimatedFundCashForecast4.mmEstimatedTotalNAV,
-					com.tools20022.repository.msg.EstimatedFundCashForecast4.mmPreviousTotalNAV, com.tools20022.repository.msg.EstimatedFundCashForecast1.mmEstimatedTotalNAV,
-					com.tools20022.repository.msg.EstimatedFundCashForecast1.mmPreviousEstimatedTotalNAV, com.tools20022.repository.msg.EstimatedFundCashForecast3.mmEstimatedTotalNAV,
-					com.tools20022.repository.msg.EstimatedFundCashForecast3.mmPreviousTotalNAV, com.tools20022.repository.msg.InvestmentFund1.mmTotalValue, com.tools20022.repository.msg.FundCashForecast7.mmTotalNAV,
-					com.tools20022.repository.msg.FundCashForecast7.mmPreviousTotalNAV, com.tools20022.repository.msg.Fund2.mmTotalNAV, com.tools20022.repository.msg.Fund2.mmPreviousTotalNAV,
-					com.tools20022.repository.msg.EstimatedFundCashForecast6.mmEstimatedTotalNAV, com.tools20022.repository.msg.EstimatedFundCashForecast6.mmPreviousTotalNAV, com.tools20022.repository.msg.Fund1.mmEstimatedTotalNAV,
-					com.tools20022.repository.msg.Fund1.mmPreviousTotalNAV, com.tools20022.repository.msg.FundCashForecast6.mmTotalNAV, com.tools20022.repository.msg.FundCashForecast6.mmPreviousTotalNAV,
-					com.tools20022.repository.msg.EstimatedFundCashForecast5.mmEstimatedTotalNAV, com.tools20022.repository.msg.EstimatedFundCashForecast5.mmPreviousTotalNAV, com.tools20022.repository.msg.Fund3.mmEstimatedTotalNAV,
-					com.tools20022.repository.msg.Fund3.mmPreviousTotalNAV, com.tools20022.repository.msg.Fund4.mmTotalNAV, com.tools20022.repository.msg.Fund4.mmPreviousTotalNAV);
+			derivation_lazy = () -> Arrays.asList(PriceValuation2.mmTotalNAV, PriceValuation3.mmTotalNAV, PriceValuation4.mmTotalNAV, FundCashForecast1.mmTotalNAV, FundCashForecast1.mmPreviousTotalNAV, FundCashForecast3.mmTotalNAV,
+					FundCashForecast3.mmPreviousTotalNAV, FundCashForecast2.mmTotalNAV, FundCashForecast2.mmPreviousTotalNAV, FundCashForecast4.mmTotalNAV, FundCashForecast4.mmPreviousTotalNAV,
+					EstimatedFundCashForecast2.mmEstimatedTotalNAV, EstimatedFundCashForecast2.mmPreviousEstimatedTotalNAV, EstimatedFundCashForecast4.mmEstimatedTotalNAV, EstimatedFundCashForecast4.mmPreviousTotalNAV,
+					EstimatedFundCashForecast1.mmEstimatedTotalNAV, EstimatedFundCashForecast1.mmPreviousEstimatedTotalNAV, EstimatedFundCashForecast3.mmEstimatedTotalNAV, EstimatedFundCashForecast3.mmPreviousTotalNAV,
+					InvestmentFund1.mmTotalValue, FundCashForecast7.mmTotalNAV, FundCashForecast7.mmPreviousTotalNAV, Fund2.mmTotalNAV, Fund2.mmPreviousTotalNAV, EstimatedFundCashForecast6.mmEstimatedTotalNAV,
+					EstimatedFundCashForecast6.mmPreviousTotalNAV, Fund1.mmEstimatedTotalNAV, Fund1.mmPreviousTotalNAV, FundCashForecast6.mmTotalNAV, FundCashForecast6.mmPreviousTotalNAV, EstimatedFundCashForecast5.mmEstimatedTotalNAV,
+					EstimatedFundCashForecast5.mmPreviousTotalNAV, Fund3.mmEstimatedTotalNAV, Fund3.mmPreviousTotalNAV, Fund4.mmTotalNAV, Fund4.mmPreviousTotalNAV);
 			elementContext_lazy = () -> NetAssetValueCalculation.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NetAssetValue";
 			definition = "Value of all the holdings, less the fund's liabilities, attributable to a specific investment fund class.";
 			maxOccurs = 1;
@@ -570,20 +558,18 @@ public class NetAssetValueCalculation {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedFund = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PriceValuation2.mmTotalUnitsNumber, com.tools20022.repository.msg.PriceValuation3.mmTotalUnitsNumber,
-					com.tools20022.repository.msg.PriceValuation4.mmFinancialInstrumentDetails, com.tools20022.repository.msg.FundCashForecast1.mmPreviousTotalUnitsNumber,
-					com.tools20022.repository.msg.FundCashForecast3.mmPreviousTotalUnitsNumber, com.tools20022.repository.msg.FundCashForecast2.mmPreviousTotalUnitsNumber,
-					com.tools20022.repository.msg.FundCashForecast4.mmPreviousTotalUnitsNumber, com.tools20022.repository.msg.FundCashForecast7.mmPreviousTotalUnitsNumber,
-					com.tools20022.repository.msg.FundCashForecast6.mmPreviousTotalUnitsNumber);
+			derivation_lazy = () -> Arrays.asList(PriceValuation2.mmTotalUnitsNumber, PriceValuation3.mmTotalUnitsNumber, PriceValuation4.mmFinancialInstrumentDetails, FundCashForecast1.mmPreviousTotalUnitsNumber,
+					FundCashForecast3.mmPreviousTotalUnitsNumber, FundCashForecast2.mmPreviousTotalUnitsNumber, FundCashForecast4.mmPreviousTotalUnitsNumber, FundCashForecast7.mmPreviousTotalUnitsNumber,
+					FundCashForecast6.mmPreviousTotalUnitsNumber);
 			elementContext_lazy = () -> NetAssetValueCalculation.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedFund";
 			definition = "Specifies the fund for which the NAV is calculated (per fund unit).";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmNetAssetValueCalculation;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmObject();
 		}
 	};
@@ -633,10 +619,10 @@ public class NetAssetValueCalculation {
 	 */
 	public static final MMBusinessAttribute mmValuationType = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PriceValuation2.mmValuationCycle, com.tools20022.repository.msg.PriceValuation3.mmValuationType, com.tools20022.repository.msg.PriceValuation4.mmValuationType);
+			derivation_lazy = () -> Arrays.asList(PriceValuation2.mmValuationCycle, PriceValuation3.mmValuationType, PriceValuation4.mmValuationType);
 			elementContext_lazy = () -> NetAssetValueCalculation.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ValuationType";
 			definition = "Specifies how the valuation is done, based on the schedule stated in the prospectus.";
 			maxOccurs = 1;
@@ -690,11 +676,10 @@ public class NetAssetValueCalculation {
 	 */
 	public static final MMBusinessAttribute mmSuspendedIndicator = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PriceValuation2.mmSuspendedIndicator, com.tools20022.repository.msg.PriceValuation3.mmSuspendedIndicator,
-					com.tools20022.repository.msg.PriceValuation4.mmSuspendedIndicator);
+			derivation_lazy = () -> Arrays.asList(PriceValuation2.mmSuspendedIndicator, PriceValuation3.mmSuspendedIndicator, PriceValuation4.mmSuspendedIndicator);
 			elementContext_lazy = () -> NetAssetValueCalculation.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SuspendedIndicator";
 			definition = "Indicates whether the valuation of the investment fund class is suspended.";
 			maxOccurs = 1;
@@ -745,10 +730,10 @@ public class NetAssetValueCalculation {
 	 */
 	public static final MMBusinessAttribute mmForExecutionIndicator = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UnitPrice6.mmForExecutionIndicator, com.tools20022.repository.msg.UnitPrice15.mmForExecutionIndicator);
+			derivation_lazy = () -> Arrays.asList(UnitPrice6.mmForExecutionIndicator, UnitPrice15.mmForExecutionIndicator);
 			elementContext_lazy = () -> NetAssetValueCalculation.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ForExecutionIndicator";
 			definition = "Indicates whether the price information can be used for the execution of a transaction.";
 			maxOccurs = 1;
@@ -802,16 +787,16 @@ public class NetAssetValueCalculation {
 	 */
 	public static final MMBusinessAssociationEnd mmTaxLiability = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UnitPrice6.mmTaxLiabilityDetails, com.tools20022.repository.msg.UnitPrice15.mmTaxLiabilityDetails);
+			derivation_lazy = () -> Arrays.asList(UnitPrice6.mmTaxLiabilityDetails, UnitPrice15.mmTaxLiabilityDetails);
 			elementContext_lazy = () -> NetAssetValueCalculation.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TaxLiability";
 			definition = "Information related to taxes that are due.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.Tax.mmTaxLiabilityValueCalculation;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Tax.mmObject();
 		}
 	};
@@ -861,16 +846,16 @@ public class NetAssetValueCalculation {
 	 */
 	public static final MMBusinessAssociationEnd mmTaxRefund = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UnitPrice6.mmTaxRefundDetails, com.tools20022.repository.msg.UnitPrice15.mmTaxRefundDetails);
+			derivation_lazy = () -> Arrays.asList(UnitPrice6.mmTaxRefundDetails, UnitPrice15.mmTaxRefundDetails);
 			elementContext_lazy = () -> NetAssetValueCalculation.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TaxRefund";
 			definition = "Information related to taxes that are paid back.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.Tax.mmTaxRefundValueCalculation;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Tax.mmObject();
 		}
 	};
@@ -915,10 +900,10 @@ public class NetAssetValueCalculation {
 	 */
 	public static final MMBusinessAttribute mmOfficialValuationIndicator = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PriceValuation3.mmOfficialValuationIndicator, com.tools20022.repository.msg.PriceValuation4.mmOfficialValuationIndicator);
+			derivation_lazy = () -> Arrays.asList(PriceValuation3.mmOfficialValuationIndicator, PriceValuation4.mmOfficialValuationIndicator);
 			elementContext_lazy = () -> NetAssetValueCalculation.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "OfficialValuationIndicator";
 			definition = "Indicates whether the valuation is an official valuation.";
 			maxOccurs = 1;
@@ -963,10 +948,10 @@ public class NetAssetValueCalculation {
 	 */
 	public static final MMBusinessAttribute mmEstimatedPriceIndicator = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UnitPrice15.mmEstimatedPriceIndicator);
+			derivation_lazy = () -> Arrays.asList(UnitPrice15.mmEstimatedPriceIndicator);
 			elementContext_lazy = () -> NetAssetValueCalculation.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "EstimatedPriceIndicator";
 			definition = "Indicates whether the price is an estimated price.";
 			maxOccurs = 1;
@@ -1023,15 +1008,15 @@ public class NetAssetValueCalculation {
 	 */
 	public static final MMBusinessAssociationEnd mmValuationStatistics = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PriceValuation3.mmValuationStatistics, com.tools20022.repository.msg.PriceValuation4.mmValuationStatistics);
+			derivation_lazy = () -> Arrays.asList(PriceValuation3.mmValuationStatistics, PriceValuation4.mmValuationStatistics);
 			elementContext_lazy = () -> NetAssetValueCalculation.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ValuationStatistics";
 			definition = "Information related to the price variations of an investment fund class.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.ValuationStatistics.mmNetAssetValueCalculation;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.ValuationStatistics.mmObject();
 		}
 	};
@@ -1083,16 +1068,16 @@ public class NetAssetValueCalculation {
 	 */
 	public static final MMBusinessAssociationEnd mmInvestmentFundPerformanceFactors = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PriceValuation3.mmPerformanceDetails, com.tools20022.repository.msg.PriceValuation4.mmPerformanceDetails);
+			derivation_lazy = () -> Arrays.asList(PriceValuation3.mmPerformanceDetails, PriceValuation4.mmPerformanceDetails);
 			elementContext_lazy = () -> NetAssetValueCalculation.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InvestmentFundPerformanceFactors";
 			definition = "Factors that give indications about the performance of a fund.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.PerformanceFactors.mmNetAssetValueCalculation;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.PerformanceFactors.mmObject();
 		}
 	};
@@ -1140,16 +1125,16 @@ public class NetAssetValueCalculation {
 	 */
 	public static final MMBusinessAssociationEnd mmPrice = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PriceValuation4.mmPriceDetails);
+			derivation_lazy = () -> Arrays.asList(PriceValuation4.mmPriceDetails);
 			elementContext_lazy = () -> NetAssetValueCalculation.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Price";
 			definition = "Price derived from the net asset value.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmNetAssetValueCalculation;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 		}
 	};
@@ -1197,15 +1182,15 @@ public class NetAssetValueCalculation {
 	 */
 	public static final MMBusinessAssociationEnd mmSecuritiesQuantity = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PriceValuation4.mmTotalUnitsNumber);
+			derivation_lazy = () -> Arrays.asList(PriceValuation4.mmTotalUnitsNumber);
 			elementContext_lazy = () -> NetAssetValueCalculation.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SecuritiesQuantity";
 			definition = "Quantity on which the NAV is calculated.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmNetAssetValueCalculation;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmObject();
 		}
 	};
@@ -1249,12 +1234,12 @@ public class NetAssetValueCalculation {
 		{
 			elementContext_lazy = () -> NetAssetValueCalculation.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Interest";
 			definition = "Interest that has accumulated between the most recent payment of interest and the sale of the financial instrument.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.Interest.mmRelatedNetAssetValueCalculation;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Interest.mmObject();
 		}
 	};
@@ -1297,13 +1282,13 @@ public class NetAssetValueCalculation {
 		{
 			elementContext_lazy = () -> NetAssetValueCalculation.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "FundsCashFlow";
 			definition = "Net cash flow for a valuation date, which is incorporated in the NAV.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.FundsCashFlow.mmNetAssetValueCalculation;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.FundsCashFlow.mmObject();
 		}
 	};
@@ -1338,7 +1323,7 @@ public class NetAssetValueCalculation {
 		{
 			elementContext_lazy = () -> NetAssetValueCalculation.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DeclarationChannel";
 			definition = "Means of the net asset value publication, for example, a newspaper.";
 			maxOccurs = 1;
@@ -1376,7 +1361,7 @@ public class NetAssetValueCalculation {
 		{
 			elementContext_lazy = () -> NetAssetValueCalculation.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DeclarationDate";
 			definition = "Date/time of the net asset value publication.";
 			maxOccurs = 1;
@@ -1415,7 +1400,7 @@ public class NetAssetValueCalculation {
 		{
 			elementContext_lazy = () -> NetAssetValueCalculation.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "FirstValuationDate";
 			definition = "Date on which the investment fund class was first priced.";
 			maxOccurs = 1;
@@ -1454,7 +1439,7 @@ public class NetAssetValueCalculation {
 		{
 			elementContext_lazy = () -> NetAssetValueCalculation.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "HistoricPricingIndicator";
 			definition = "Indicates whether the price is historic or forward.";
 			maxOccurs = 1;
@@ -1466,26 +1451,21 @@ public class NetAssetValueCalculation {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "NetAssetValueCalculation";
 				definition = "Calculation of the net asset value for an investment fund/fund class.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.InvestmentFundClass.mmNetAssetValueCalculation, com.tools20022.repository.entity.SecuritiesPricing.mmNetAssetValueCalculation,
 						com.tools20022.repository.entity.Tax.mmTaxLiabilityValueCalculation, com.tools20022.repository.entity.Tax.mmTaxRefundValueCalculation, com.tools20022.repository.entity.SecuritiesQuantity.mmNetAssetValueCalculation,
 						com.tools20022.repository.entity.ValuationStatistics.mmNetAssetValueCalculation, com.tools20022.repository.entity.PerformanceFactors.mmNetAssetValueCalculation,
 						com.tools20022.repository.entity.Interest.mmRelatedNetAssetValueCalculation, com.tools20022.repository.entity.FundsCashFlow.mmNetAssetValueCalculation);
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PriceReport2.mmPriceValuationDetails, com.tools20022.repository.msg.PriceReport3.mmPriceValuationDetails);
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.NetAssetValueCalculation.mmValuationFrequency, com.tools20022.repository.entity.NetAssetValueCalculation.mmValuationDateTime,
-						com.tools20022.repository.entity.NetAssetValueCalculation.mmNetAssetValue, com.tools20022.repository.entity.NetAssetValueCalculation.mmRelatedFund,
-						com.tools20022.repository.entity.NetAssetValueCalculation.mmValuationType, com.tools20022.repository.entity.NetAssetValueCalculation.mmSuspendedIndicator,
-						com.tools20022.repository.entity.NetAssetValueCalculation.mmForExecutionIndicator, com.tools20022.repository.entity.NetAssetValueCalculation.mmTaxLiability,
-						com.tools20022.repository.entity.NetAssetValueCalculation.mmTaxRefund, com.tools20022.repository.entity.NetAssetValueCalculation.mmOfficialValuationIndicator,
-						com.tools20022.repository.entity.NetAssetValueCalculation.mmEstimatedPriceIndicator, com.tools20022.repository.entity.NetAssetValueCalculation.mmValuationStatistics,
-						com.tools20022.repository.entity.NetAssetValueCalculation.mmInvestmentFundPerformanceFactors, com.tools20022.repository.entity.NetAssetValueCalculation.mmPrice,
-						com.tools20022.repository.entity.NetAssetValueCalculation.mmSecuritiesQuantity, com.tools20022.repository.entity.NetAssetValueCalculation.mmInterest,
-						com.tools20022.repository.entity.NetAssetValueCalculation.mmFundsCashFlow, com.tools20022.repository.entity.NetAssetValueCalculation.mmDeclarationChannel,
-						com.tools20022.repository.entity.NetAssetValueCalculation.mmDeclarationDate, com.tools20022.repository.entity.NetAssetValueCalculation.mmFirstValuationDate,
-						com.tools20022.repository.entity.NetAssetValueCalculation.mmHistoricPricingIndicator);
+				derivationElement_lazy = () -> Arrays.asList(PriceReport2.mmPriceValuationDetails, PriceReport3.mmPriceValuationDetails);
+				element_lazy = () -> Arrays.asList(NetAssetValueCalculation.mmValuationFrequency, NetAssetValueCalculation.mmValuationDateTime, NetAssetValueCalculation.mmNetAssetValue, NetAssetValueCalculation.mmRelatedFund,
+						NetAssetValueCalculation.mmValuationType, NetAssetValueCalculation.mmSuspendedIndicator, NetAssetValueCalculation.mmForExecutionIndicator, NetAssetValueCalculation.mmTaxLiability,
+						NetAssetValueCalculation.mmTaxRefund, NetAssetValueCalculation.mmOfficialValuationIndicator, NetAssetValueCalculation.mmEstimatedPriceIndicator, NetAssetValueCalculation.mmValuationStatistics,
+						NetAssetValueCalculation.mmInvestmentFundPerformanceFactors, NetAssetValueCalculation.mmPrice, NetAssetValueCalculation.mmSecuritiesQuantity, NetAssetValueCalculation.mmInterest,
+						NetAssetValueCalculation.mmFundsCashFlow, NetAssetValueCalculation.mmDeclarationChannel, NetAssetValueCalculation.mmDeclarationDate, NetAssetValueCalculation.mmFirstValuationDate,
+						NetAssetValueCalculation.mmHistoricPricingIndicator);
 				derivationComponent_lazy = () -> Arrays.asList(PriceValuation2.mmObject(), PriceValuation3.mmObject(), PriceValuation4.mmObject());
 			}
 		});

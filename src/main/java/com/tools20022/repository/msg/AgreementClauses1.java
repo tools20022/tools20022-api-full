@@ -19,9 +19,12 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max256Text;
 import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.entity.Document;
+import com.tools20022.repository.entity.ElectronicAddress;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -97,7 +100,7 @@ public class AgreementClauses1 {
 			componentContext_lazy = () -> AgreementClauses1.mmObject();
 			isDerived = false;
 			xmlTag = "Desc";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Description";
 			definition = "Description of agreement clauses, given in a textual form.";
 			maxOccurs = 1;
@@ -143,11 +146,11 @@ public class AgreementClauses1 {
 	 */
 	public static final MMMessageAttribute mmDocumentURL = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ElectronicAddress.mmURLAddress;
+			businessElementTrace_lazy = () -> ElectronicAddress.mmURLAddress;
 			componentContext_lazy = () -> AgreementClauses1.mmObject();
 			isDerived = false;
 			xmlTag = "DocURL";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DocumentURL";
 			definition = "External reference to the document, containing agreement clauses, where it is stored.";
 			maxOccurs = 1;
@@ -159,10 +162,10 @@ public class AgreementClauses1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AgreementClauses1.mmDescription, com.tools20022.repository.msg.AgreementClauses1.mmDocumentURL);
+				messageElement_lazy = () -> Arrays.asList(AgreementClauses1.mmDescription, AgreementClauses1.mmDocumentURL);
 				trace_lazy = () -> Document.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AgreementClauses1";
 				definition = "Specifies possible agreement clauses related to invoice financing.";
 			}

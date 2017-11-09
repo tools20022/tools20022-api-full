@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.TypeOfPriceCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -116,7 +118,7 @@ public class TypeOfPrice13Code extends TypeOfPriceCode {
 	 */
 	public static final MMCode mmBid = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Bid";
 			owner_lazy = () -> TypeOfPrice13Code.mmObject();
 		}
@@ -139,7 +141,7 @@ public class TypeOfPrice13Code extends TypeOfPriceCode {
 	 */
 	public static final MMCode mmOffer = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Offer";
 			owner_lazy = () -> TypeOfPrice13Code.mmObject();
 		}
@@ -162,7 +164,7 @@ public class TypeOfPrice13Code extends TypeOfPriceCode {
 	 */
 	public static final MMCode mmNetAssetValue = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetAssetValue";
 			owner_lazy = () -> TypeOfPrice13Code.mmObject();
 		}
@@ -185,7 +187,7 @@ public class TypeOfPrice13Code extends TypeOfPriceCode {
 	 */
 	public static final MMCode mmCreation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Creation";
 			owner_lazy = () -> TypeOfPrice13Code.mmObject();
 		}
@@ -208,7 +210,7 @@ public class TypeOfPrice13Code extends TypeOfPriceCode {
 	 */
 	public static final MMCode mmCancellation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cancellation";
 			owner_lazy = () -> TypeOfPrice13Code.mmObject();
 		}
@@ -231,7 +233,7 @@ public class TypeOfPrice13Code extends TypeOfPriceCode {
 	 */
 	public static final MMCode mmInterim = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Interim";
 			owner_lazy = () -> TypeOfPrice13Code.mmObject();
 		}
@@ -254,7 +256,7 @@ public class TypeOfPrice13Code extends TypeOfPriceCode {
 	 */
 	public static final MMCode mmSwing = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Swing";
 			owner_lazy = () -> TypeOfPrice13Code.mmObject();
 		}
@@ -277,7 +279,7 @@ public class TypeOfPrice13Code extends TypeOfPriceCode {
 	 */
 	public static final MMCode mmMid = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Mid";
 			owner_lazy = () -> TypeOfPrice13Code.mmObject();
 		}
@@ -300,7 +302,7 @@ public class TypeOfPrice13Code extends TypeOfPriceCode {
 	 */
 	public static final MMCode mmReinvestment = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reinvestment";
 			owner_lazy = () -> TypeOfPrice13Code.mmObject();
 		}
@@ -323,7 +325,7 @@ public class TypeOfPrice13Code extends TypeOfPriceCode {
 	 */
 	public static final MMCode mmSidePocketNAV = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SidePocketNAV";
 			owner_lazy = () -> TypeOfPrice13Code.mmObject();
 		}
@@ -346,7 +348,7 @@ public class TypeOfPrice13Code extends TypeOfPriceCode {
 	 */
 	public static final MMCode mmSwitch = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Switch";
 			owner_lazy = () -> TypeOfPrice13Code.mmObject();
 		}
@@ -369,7 +371,7 @@ public class TypeOfPrice13Code extends TypeOfPriceCode {
 	 */
 	public static final MMCode mmGrossAssetValue = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GrossAssetValue";
 			owner_lazy = () -> TypeOfPrice13Code.mmObject();
 		}
@@ -392,7 +394,7 @@ public class TypeOfPrice13Code extends TypeOfPriceCode {
 	 */
 	public static final MMCode mmDailyDividendRate = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DailyDividendRate";
 			owner_lazy = () -> TypeOfPrice13Code.mmObject();
 		}
@@ -415,7 +417,7 @@ public class TypeOfPrice13Code extends TypeOfPriceCode {
 	 */
 	public static final MMCode mmActual = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Actual";
 			owner_lazy = () -> TypeOfPrice13Code.mmObject();
 		}
@@ -438,7 +440,7 @@ public class TypeOfPrice13Code extends TypeOfPriceCode {
 	 */
 	public static final MMCode mmEstimatedGAV = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EstimatedGAV";
 			owner_lazy = () -> TypeOfPrice13Code.mmObject();
 		}
@@ -447,16 +449,14 @@ public class TypeOfPrice13Code extends TypeOfPriceCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("BIDE");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TypeOfPrice13Code";
 				definition = "Specifies the type of price and information about the price.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TypeOfPrice13Code.mmBid, com.tools20022.repository.codeset.TypeOfPrice13Code.mmOffer, com.tools20022.repository.codeset.TypeOfPrice13Code.mmNetAssetValue,
-						com.tools20022.repository.codeset.TypeOfPrice13Code.mmCreation, com.tools20022.repository.codeset.TypeOfPrice13Code.mmCancellation, com.tools20022.repository.codeset.TypeOfPrice13Code.mmInterim,
-						com.tools20022.repository.codeset.TypeOfPrice13Code.mmSwing, com.tools20022.repository.codeset.TypeOfPrice13Code.mmMid, com.tools20022.repository.codeset.TypeOfPrice13Code.mmReinvestment,
-						com.tools20022.repository.codeset.TypeOfPrice13Code.mmSidePocketNAV, com.tools20022.repository.codeset.TypeOfPrice13Code.mmSwitch, com.tools20022.repository.codeset.TypeOfPrice13Code.mmGrossAssetValue,
-						com.tools20022.repository.codeset.TypeOfPrice13Code.mmDailyDividendRate, com.tools20022.repository.codeset.TypeOfPrice13Code.mmActual, com.tools20022.repository.codeset.TypeOfPrice13Code.mmEstimatedGAV);
+				code_lazy = () -> Arrays.asList(TypeOfPrice13Code.mmBid, TypeOfPrice13Code.mmOffer, TypeOfPrice13Code.mmNetAssetValue, TypeOfPrice13Code.mmCreation, TypeOfPrice13Code.mmCancellation, TypeOfPrice13Code.mmInterim,
+						TypeOfPrice13Code.mmSwing, TypeOfPrice13Code.mmMid, TypeOfPrice13Code.mmReinvestment, TypeOfPrice13Code.mmSidePocketNAV, TypeOfPrice13Code.mmSwitch, TypeOfPrice13Code.mmGrossAssetValue,
+						TypeOfPrice13Code.mmDailyDividendRate, TypeOfPrice13Code.mmActual, TypeOfPrice13Code.mmEstimatedGAV);
 				trace_lazy = () -> TypeOfPriceCode.mmObject();
 			}
 		});

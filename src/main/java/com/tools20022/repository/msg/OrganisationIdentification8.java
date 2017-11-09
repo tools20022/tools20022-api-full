@@ -20,8 +20,12 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.acmt.*;
 import com.tools20022.repository.datatype.AnyBICIdentifier;
 import com.tools20022.repository.entity.OrganisationIdentification;
+import com.tools20022.repository.entity.PartyIdentificationInformation;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -180,11 +184,11 @@ public class OrganisationIdentification8 {
 	 */
 	public static final MMMessageAttribute mmAnyBIC = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.mmAnyBIC;
+			businessElementTrace_lazy = () -> OrganisationIdentification.mmAnyBIC;
 			componentContext_lazy = () -> OrganisationIdentification8.mmObject();
 			isDerived = false;
 			xmlTag = "AnyBIC";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AnyBIC";
 			definition = "Code allocated to a financial institution or non financial institution by the ISO 9362 Registration Authority as described in ISO 9362 \"Banking - Banking telecommunication messages - Business identifier code (BIC)\".";
 			maxOccurs = 1;
@@ -230,11 +234,11 @@ public class OrganisationIdentification8 {
 	 */
 	public static final MMMessageAssociationEnd mmOther = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.mmOtherIdentification;
+			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmOtherIdentification;
 			componentContext_lazy = () -> OrganisationIdentification8.mmObject();
 			isDerived = false;
 			xmlTag = "Othr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
 			definition = "Unique identification of an organisation, as assigned by an institution, using an identification scheme.";
 			minOccurs = 0;
@@ -246,22 +250,17 @@ public class OrganisationIdentification8 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OrganisationIdentification8.mmAnyBIC, com.tools20022.repository.msg.OrganisationIdentification8.mmOther);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountAdditionalInformationRequestV02.mmFrom,
-						com.tools20022.repository.area.acmt.AccountAdditionalInformationRequestV02.mmOrganisationIdentification, com.tools20022.repository.area.acmt.AccountClosingAdditionalInformationRequestV02.mmFrom,
-						com.tools20022.repository.area.acmt.AccountClosingAdditionalInformationRequestV02.mmOrganisationIdentification, com.tools20022.repository.area.acmt.AccountClosingAmendmentRequestV02.mmFrom,
-						com.tools20022.repository.area.acmt.AccountClosingAmendmentRequestV02.mmOrganisationIdentification, com.tools20022.repository.area.acmt.AccountClosingRequestV02.mmFrom,
-						com.tools20022.repository.area.acmt.AccountExcludedMandateMaintenanceAmendmentRequestV02.mmFrom, com.tools20022.repository.area.acmt.AccountExcludedMandateMaintenanceRequestV02.mmFrom,
-						com.tools20022.repository.area.acmt.AccountMandateMaintenanceAmendmentRequestV02.mmFrom, com.tools20022.repository.area.acmt.AccountMandateMaintenanceAmendmentRequestV02.mmOrganisationIdentification,
-						com.tools20022.repository.area.acmt.AccountMandateMaintenanceRequestV02.mmFrom, com.tools20022.repository.area.acmt.AccountOpeningAdditionalInformationRequestV02.mmFrom,
-						com.tools20022.repository.area.acmt.AccountOpeningAdditionalInformationRequestV02.mmOrganisationIdentification, com.tools20022.repository.area.acmt.AccountOpeningAmendmentRequestV02.mmFrom,
-						com.tools20022.repository.area.acmt.AccountOpeningRequestV02.mmFrom, com.tools20022.repository.area.acmt.AccountReportRequestV02.mmFrom,
-						com.tools20022.repository.area.acmt.AccountReportRequestV02.mmOrganisationIdentification, com.tools20022.repository.area.acmt.AccountReportV02.mmFrom,
-						com.tools20022.repository.area.acmt.AccountRequestAcknowledgementV02.mmFrom, com.tools20022.repository.area.acmt.AccountRequestAcknowledgementV02.mmOrganisationIdentification,
-						com.tools20022.repository.area.acmt.AccountRequestRejectionV02.mmFrom, com.tools20022.repository.area.acmt.AccountRequestRejectionV02.mmOrganisationIdentification);
+				messageElement_lazy = () -> Arrays.asList(OrganisationIdentification8.mmAnyBIC, OrganisationIdentification8.mmOther);
+				messageBuildingBlock_lazy = () -> Arrays.asList(AccountAdditionalInformationRequestV02.mmFrom, AccountAdditionalInformationRequestV02.mmOrganisationIdentification, AccountClosingAdditionalInformationRequestV02.mmFrom,
+						AccountClosingAdditionalInformationRequestV02.mmOrganisationIdentification, AccountClosingAmendmentRequestV02.mmFrom, AccountClosingAmendmentRequestV02.mmOrganisationIdentification, AccountClosingRequestV02.mmFrom,
+						AccountExcludedMandateMaintenanceAmendmentRequestV02.mmFrom, AccountExcludedMandateMaintenanceRequestV02.mmFrom, AccountMandateMaintenanceAmendmentRequestV02.mmFrom,
+						AccountMandateMaintenanceAmendmentRequestV02.mmOrganisationIdentification, AccountMandateMaintenanceRequestV02.mmFrom, AccountOpeningAdditionalInformationRequestV02.mmFrom,
+						AccountOpeningAdditionalInformationRequestV02.mmOrganisationIdentification, AccountOpeningAmendmentRequestV02.mmFrom, AccountOpeningRequestV02.mmFrom, AccountReportRequestV02.mmFrom,
+						AccountReportRequestV02.mmOrganisationIdentification, AccountReportV02.mmFrom, AccountRequestAcknowledgementV02.mmFrom, AccountRequestAcknowledgementV02.mmOrganisationIdentification,
+						AccountRequestRejectionV02.mmFrom, AccountRequestRejectionV02.mmOrganisationIdentification);
 				trace_lazy = () -> OrganisationIdentification.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OrganisationIdentification8";
 				definition = "Unique and unambiguous way to identify an organisation.";
 			}

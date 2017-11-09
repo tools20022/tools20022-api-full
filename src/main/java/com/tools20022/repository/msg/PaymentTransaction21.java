@@ -19,8 +19,10 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.PaymentInstrument11Choice;
 import com.tools20022.repository.entity.Payment;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -116,10 +118,10 @@ public class PaymentTransaction21 {
 			componentContext_lazy = () -> PaymentTransaction21.mmObject();
 			isDerived = false;
 			xmlTag = "PmtInstrm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentInstrument";
 			definition = "Choice between types of payment instrument, ie, cheque, credit transfer or investment account.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentTransaction72.mmPaymentInstrument);
+			nextVersions_lazy = () -> Arrays.asList(PaymentTransaction72.mmPaymentInstrument);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -130,10 +132,10 @@ public class PaymentTransaction21 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentTransaction21.mmPaymentInstrument);
+				messageElement_lazy = () -> Arrays.asList(PaymentTransaction21.mmPaymentInstrument);
 				trace_lazy = () -> Payment.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PaymentTransaction21";
 				definition = "Payment processes required to transfer cash from the debtor to the creditor.";
 				nextVersions_lazy = () -> Arrays.asList(PaymentTransaction72.mmObject());

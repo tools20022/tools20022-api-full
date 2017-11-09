@@ -19,7 +19,9 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max350Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -94,7 +96,7 @@ public class FinancialInstrumentAttributesSD5 {
 			componentContext_lazy = () -> FinancialInstrumentAttributesSD5.mmObject();
 			isDerived = false;
 			xmlTag = "PlcAndNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "xPath to the element that is being extended.";
 			maxOccurs = 1;
@@ -140,7 +142,7 @@ public class FinancialInstrumentAttributesSD5 {
 			componentContext_lazy = () -> FinancialInstrumentAttributesSD5.mmObject();
 			isDerived = false;
 			xmlTag = "SctyOfIntrstMtchgScty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityOfInterestMatchingSecurity";
 			definition = "Matching security identifier for  the disbursed security that is used to match the customer's SOI (Security of Interest) to the GCA VS Security Cross Reference.";
 			maxOccurs = 1;
@@ -152,9 +154,9 @@ public class FinancialInstrumentAttributesSD5 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrumentAttributesSD5.mmPlaceAndName, com.tools20022.repository.msg.FinancialInstrumentAttributesSD5.mmSecurityOfInterestMatchingSecurity);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(FinancialInstrumentAttributesSD5.mmPlaceAndName, FinancialInstrumentAttributesSD5.mmSecurityOfInterestMatchingSecurity);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "FinancialInstrumentAttributesSD5";
 				definition = "Provides additional information regarding corporate action option securities movement security details.";
 			}

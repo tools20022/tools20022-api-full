@@ -19,8 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.PaymentCancellationRejection1Code;
 import com.tools20022.repository.datatype.Max140Text;
+import com.tools20022.repository.entity.PaymentInvestigationCaseRejection;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -95,11 +98,11 @@ public class RejectedCancellationJustification {
 	 */
 	public static final MMMessageAttribute mmReasonCode = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentInvestigationCaseRejection.mmRejectedCancellation;
+			businessElementTrace_lazy = () -> PaymentInvestigationCaseRejection.mmRejectedCancellation;
 			componentContext_lazy = () -> RejectedCancellationJustification.mmObject();
 			isDerived = false;
 			xmlTag = "RsnCd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReasonCode";
 			definition = "Justification for the rejection of the cancellation.";
 			maxOccurs = 1;
@@ -142,11 +145,11 @@ public class RejectedCancellationJustification {
 	 */
 	public static final MMMessageAttribute mmReason = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentInvestigationCaseRejection.mmRejectedCancellationReason;
+			businessElementTrace_lazy = () -> PaymentInvestigationCaseRejection.mmRejectedCancellationReason;
 			componentContext_lazy = () -> RejectedCancellationJustification.mmObject();
 			isDerived = false;
 			xmlTag = "Rsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reason";
 			definition = "Free text justification for rejecting a cancellation.";
 			maxOccurs = 1;
@@ -158,9 +161,9 @@ public class RejectedCancellationJustification {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RejectedCancellationJustification.mmReasonCode, com.tools20022.repository.msg.RejectedCancellationJustification.mmReason);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(RejectedCancellationJustification.mmReasonCode, RejectedCancellationJustification.mmReason);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RejectedCancellationJustification";
 				definition = "Provides the reason for rejecting a RequestToCancelPayment.";
 			}

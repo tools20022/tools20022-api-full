@@ -20,7 +20,9 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ISOTime;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -92,7 +94,7 @@ public class ExecutionType1Choice {
 			componentContext_lazy = () -> ExecutionType1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Tm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Time";
 			definition = "Execution type is executed based on an time trigger.";
 			maxOccurs = 1;
@@ -133,7 +135,7 @@ public class ExecutionType1Choice {
 			componentContext_lazy = () -> ExecutionType1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Evt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Event";
 			definition = "Execution type is executed based on an event driven trigger.";
 			maxOccurs = 1;
@@ -146,9 +148,9 @@ public class ExecutionType1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ExecutionType1Choice.mmTime, com.tools20022.repository.choice.ExecutionType1Choice.mmEvent);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(ExecutionType1Choice.mmTime, ExecutionType1Choice.mmEvent);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ExecutionType1Choice";
 				definition = "Defines the type of execution to be performed in the request.";
 			}

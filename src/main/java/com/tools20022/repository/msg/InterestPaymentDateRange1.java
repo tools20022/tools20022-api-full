@@ -19,9 +19,12 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.entity.GenericIdentification;
 import com.tools20022.repository.entity.Interest;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -103,11 +106,11 @@ public class InterestPaymentDateRange1 {
 	 */
 	public static final MMMessageAttribute mmInterestScheduleIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmIdentification;
+			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> InterestPaymentDateRange1.mmObject();
 			isDerived = false;
 			xmlTag = "IntrstSchdlId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterestScheduleIdentification";
 			definition = "Unique and unambiguous identification of the interest payment schedule.";
 			maxOccurs = 1;
@@ -150,11 +153,11 @@ public class InterestPaymentDateRange1 {
 	 */
 	public static final MMMessageAttribute mmExpectedDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Interest.mmPaymentDate;
+			businessElementTrace_lazy = () -> Interest.mmPaymentDate;
 			componentContext_lazy = () -> InterestPaymentDateRange1.mmObject();
 			isDerived = false;
 			xmlTag = "XpctdDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExpectedDate";
 			definition = "Expected interest payment date.";
 			maxOccurs = 1;
@@ -197,11 +200,11 @@ public class InterestPaymentDateRange1 {
 	 */
 	public static final MMMessageAttribute mmDueDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Interest.mmPaymentDate;
+			businessElementTrace_lazy = () -> Interest.mmPaymentDate;
 			componentContext_lazy = () -> InterestPaymentDateRange1.mmObject();
 			isDerived = false;
 			xmlTag = "DueDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DueDate";
 			definition = "Latest date whereby the interest must be paid.";
 			maxOccurs = 1;
@@ -213,11 +216,10 @@ public class InterestPaymentDateRange1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InterestPaymentDateRange1.mmInterestScheduleIdentification, com.tools20022.repository.msg.InterestPaymentDateRange1.mmExpectedDate,
-						com.tools20022.repository.msg.InterestPaymentDateRange1.mmDueDate);
+				messageElement_lazy = () -> Arrays.asList(InterestPaymentDateRange1.mmInterestScheduleIdentification, InterestPaymentDateRange1.mmExpectedDate, InterestPaymentDateRange1.mmDueDate);
 				trace_lazy = () -> Interest.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InterestPaymentDateRange1";
 				definition = "Specifies an expected date and a due date for the interest payment.";
 			}

@@ -19,7 +19,10 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.sese.SecuritiesStatusOrStatementQueryStatusAdviceV03;
 import com.tools20022.repository.entity.Status;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.DocumentNumber1;
 import com.tools20022.repository.msg.DocumentNumber9;
 import java.text.DateFormat;
@@ -134,10 +137,10 @@ public class StatusOrStatement5Choice {
 			componentContext_lazy = () -> StatusOrStatement5Choice.mmObject();
 			isDerived = false;
 			xmlTag = "StsAdvc";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusAdvice";
 			definition = "Identify the status advice and the transaction for which the status advice was requested.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.StatusOrStatement7Choice.mmStatusAdvice);
+			nextVersions_lazy = () -> Arrays.asList(StatusOrStatement7Choice.mmStatusAdvice);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -184,10 +187,10 @@ public class StatusOrStatement5Choice {
 			componentContext_lazy = () -> StatusOrStatement5Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Stmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Statement";
 			definition = "Identify the statement/report that was requested.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.StatusOrStatement7Choice.mmStatement);
+			nextVersions_lazy = () -> Arrays.asList(StatusOrStatement7Choice.mmStatement);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -198,10 +201,10 @@ public class StatusOrStatement5Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.StatusOrStatement5Choice.mmStatusAdvice, com.tools20022.repository.choice.StatusOrStatement5Choice.mmStatement);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesStatusOrStatementQueryStatusAdviceV03.mmStatusOrStatementRequested);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+				messageElement_lazy = () -> Arrays.asList(StatusOrStatement5Choice.mmStatusAdvice, StatusOrStatement5Choice.mmStatement);
+				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesStatusOrStatementQueryStatusAdviceV03.mmStatusOrStatementRequested);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
 						return DateFormat.getDateInstance(java.text.DateFormat.LONG).parse("September 9, 2016");

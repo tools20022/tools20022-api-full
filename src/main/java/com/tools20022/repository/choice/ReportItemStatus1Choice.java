@@ -20,8 +20,12 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.semt.SecuritiesBalanceTransparencyReportStatusAdviceV01;
 import com.tools20022.repository.codeset.NoReasonCode;
 import com.tools20022.repository.entity.Status;
+import com.tools20022.repository.entity.StatusReason;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.ReportItemStatus1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -120,14 +124,14 @@ public class ReportItemStatus1Choice {
 	 */
 	public static final MMMessageAttribute mmAccepted = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmAcknowledgedAcceptedReason;
+			businessElementTrace_lazy = () -> StatusReason.mmAcknowledgedAcceptedReason;
 			componentContext_lazy = () -> ReportItemStatus1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Accptd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Accepted";
 			definition = "Statement is accepted.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.ProcessingStatus18Choice.mmAcknowledgedAccepted;
+			previousVersion_lazy = () -> ProcessingStatus18Choice.mmAcknowledgedAccepted;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> NoReasonCode.mmObject();
@@ -167,11 +171,11 @@ public class ReportItemStatus1Choice {
 	 */
 	public static final MMMessageAssociationEnd mmAcceptedWithException = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.mmStatusReason;
+			businessElementTrace_lazy = () -> Status.mmStatusReason;
 			componentContext_lazy = () -> ReportItemStatus1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "AccptdWthXcptn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcceptedWithException";
 			definition = "Statement is accepted  with an exception/s.";
 			minOccurs = 1;
@@ -218,14 +222,14 @@ public class ReportItemStatus1Choice {
 	 */
 	public static final MMMessageAssociationEnd mmRejected = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.mmTransactionProcessingStatus;
+			businessElementTrace_lazy = () -> Status.mmTransactionProcessingStatus;
 			componentContext_lazy = () -> ReportItemStatus1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Rjctd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rejected";
 			definition = "Statement is rejected.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.ProcessingStatus18Choice.mmRejected;
+			previousVersion_lazy = () -> ProcessingStatus18Choice.mmRejected;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -236,12 +240,11 @@ public class ReportItemStatus1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ReportItemStatus1Choice.mmAccepted, com.tools20022.repository.choice.ReportItemStatus1Choice.mmAcceptedWithException,
-						com.tools20022.repository.choice.ReportItemStatus1Choice.mmRejected);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.SecuritiesBalanceTransparencyReportStatusAdviceV01.mmStatus);
+				messageElement_lazy = () -> Arrays.asList(ReportItemStatus1Choice.mmAccepted, ReportItemStatus1Choice.mmAcceptedWithException, ReportItemStatus1Choice.mmRejected);
+				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesBalanceTransparencyReportStatusAdviceV01.mmStatus);
 				trace_lazy = () -> Status.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ReportItemStatus1Choice";
 				definition = "Provides acceptance status of the holding item.";
 				previousVersion_lazy = () -> ProcessingStatus18Choice.mmObject();

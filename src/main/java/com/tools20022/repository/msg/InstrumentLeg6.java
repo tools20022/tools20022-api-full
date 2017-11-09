@@ -20,11 +20,13 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CurrencyCode;
 import com.tools20022.repository.codeset.SettlementDateCode;
 import com.tools20022.repository.codeset.Side1Code;
 import com.tools20022.repository.datatype.*;
-import com.tools20022.repository.entity.Leg;
+import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -132,11 +134,11 @@ public class InstrumentLeg6 {
 	 */
 	public static final MMMessageAttribute mmLegSide = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmSide;
+			businessElementTrace_lazy = () -> SecuritiesOrder.mmSide;
 			componentContext_lazy = () -> InstrumentLeg6.mmObject();
 			isDerived = false;
 			xmlTag = "LegSd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LegSide";
 			definition = "Coded list to specify the side of the trade leg.";
 			maxOccurs = 1;
@@ -177,7 +179,7 @@ public class InstrumentLeg6 {
 			componentContext_lazy = () -> InstrumentLeg6.mmObject();
 			isDerived = false;
 			xmlTag = "LegSttlmTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LegSettlementType";
 			definition = "Specifies the date of settlement, in coded form.";
 			maxOccurs = 1;
@@ -220,11 +222,11 @@ public class InstrumentLeg6 {
 	 */
 	public static final MMMessageAttribute mmLegSettlementDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmSettlementDate;
+			businessElementTrace_lazy = () -> SecuritiesSettlement.mmSettlementDate;
 			componentContext_lazy = () -> InstrumentLeg6.mmObject();
 			isDerived = false;
 			xmlTag = "LegSttlmDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LegSettlementDate";
 			definition = "Specifies the date and time on which the trade will be settled.";
 			maxOccurs = 1;
@@ -265,7 +267,7 @@ public class InstrumentLeg6 {
 			componentContext_lazy = () -> InstrumentLeg6.mmObject();
 			isDerived = false;
 			xmlTag = "LegLastPric";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LegLastPrice";
 			definition = "Execution price of trade leg. ";
 			maxOccurs = 1;
@@ -308,11 +310,11 @@ public class InstrumentLeg6 {
 	 */
 	public static final MMMessageAttribute mmLegSettlementCurrency = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmSettlementCurrency;
+			businessElementTrace_lazy = () -> SecuritiesOrder.mmSettlementCurrency;
 			componentContext_lazy = () -> InstrumentLeg6.mmObject();
 			isDerived = false;
 			xmlTag = "LegSttlmCcy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LegSettlementCurrency";
 			definition = "Settlement currency of trade leg, agreed by both sides of the trade.";
 			maxOccurs = 1;
@@ -355,11 +357,11 @@ public class InstrumentLeg6 {
 	 */
 	public static final MMMessageAttribute mmLegOrderQuantity = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmSecuritiesQuantity;
+			businessElementTrace_lazy = () -> Security.mmSecuritiesQuantity;
 			componentContext_lazy = () -> InstrumentLeg6.mmObject();
 			isDerived = false;
 			xmlTag = "LegOrdrQty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LegOrderQuantity";
 			definition = "Amount of trade leg in trading currency.";
 			maxOccurs = 1;
@@ -403,7 +405,7 @@ public class InstrumentLeg6 {
 			componentContext_lazy = () -> InstrumentLeg6.mmObject();
 			isDerived = false;
 			xmlTag = "LegFwdPts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LegForwardPoints";
 			definition = "Forward points added to last spot rate . May be a negative value. Expressed in decimal form.";
 			maxOccurs = 1;
@@ -447,7 +449,7 @@ public class InstrumentLeg6 {
 			componentContext_lazy = () -> InstrumentLeg6.mmObject();
 			isDerived = false;
 			xmlTag = "LegClctdCtrPtyCcyLastQty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LegCalculatedCounterpartyCurrencyLastQuantity";
 			definition = "Used for the calculated quantity of the other side of the currency trade. Can be derived from leg order quantity and leg last price.";
 			maxOccurs = 1;
@@ -491,7 +493,7 @@ public class InstrumentLeg6 {
 			componentContext_lazy = () -> InstrumentLeg6.mmObject();
 			isDerived = false;
 			xmlTag = "LegRskAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LegRiskAmount";
 			definition = "Measurement of the leg trade values in terms of a currency (for example,the amount of trade in US dollars)";
 			maxOccurs = 1;
@@ -532,11 +534,11 @@ public class InstrumentLeg6 {
 	 */
 	public static final MMMessageAssociationEnd mmLegValuationRate = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmRate;
+			businessElementTrace_lazy = () -> SecuritiesPricing.mmRate;
 			componentContext_lazy = () -> InstrumentLeg6.mmObject();
 			isDerived = false;
 			xmlTag = "LegValtnRate";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LegValuationRate";
 			definition = "Specifies the valuation rate used for the trade leg.";
 			maxOccurs = 1;
@@ -577,7 +579,7 @@ public class InstrumentLeg6 {
 			componentContext_lazy = () -> InstrumentLeg6.mmObject();
 			isDerived = false;
 			xmlTag = "LegValDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LegValueDate";
 			definition = "Specifies the value date of leg spot transaction.";
 			maxOccurs = 1;
@@ -619,11 +621,11 @@ public class InstrumentLeg6 {
 	 */
 	public static final MMMessageAttribute mmLegCurrency = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Leg.mmCurrency;
+			businessElementTrace_lazy = () -> Leg.mmCurrency;
 			componentContext_lazy = () -> InstrumentLeg6.mmObject();
 			isDerived = false;
 			xmlTag = "LegCcy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LegCurrency";
 			definition = "Currency trade is conducted.";
 			maxOccurs = 1;
@@ -663,7 +665,7 @@ public class InstrumentLeg6 {
 			componentContext_lazy = () -> InstrumentLeg6.mmObject();
 			isDerived = false;
 			xmlTag = "LegSymb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LegSymbol";
 			definition = "Symbol of the leg trade.";
 			maxOccurs = 1;
@@ -703,7 +705,7 @@ public class InstrumentLeg6 {
 			componentContext_lazy = () -> InstrumentLeg6.mmObject();
 			isDerived = false;
 			xmlTag = "LegSctyId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LegSecurityIdentification";
 			definition = "Security identification of the leg trade.";
 			maxOccurs = 1;
@@ -716,15 +718,12 @@ public class InstrumentLeg6 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InstrumentLeg6.mmLegSide, com.tools20022.repository.msg.InstrumentLeg6.mmLegSettlementType,
-						com.tools20022.repository.msg.InstrumentLeg6.mmLegSettlementDate, com.tools20022.repository.msg.InstrumentLeg6.mmLegLastPrice, com.tools20022.repository.msg.InstrumentLeg6.mmLegSettlementCurrency,
-						com.tools20022.repository.msg.InstrumentLeg6.mmLegOrderQuantity, com.tools20022.repository.msg.InstrumentLeg6.mmLegForwardPoints,
-						com.tools20022.repository.msg.InstrumentLeg6.mmLegCalculatedCounterpartyCurrencyLastQuantity, com.tools20022.repository.msg.InstrumentLeg6.mmLegRiskAmount,
-						com.tools20022.repository.msg.InstrumentLeg6.mmLegValuationRate, com.tools20022.repository.msg.InstrumentLeg6.mmLegValueDate, com.tools20022.repository.msg.InstrumentLeg6.mmLegCurrency,
-						com.tools20022.repository.msg.InstrumentLeg6.mmLegSymbol, com.tools20022.repository.msg.InstrumentLeg6.mmLegSecurityIdentification);
+				messageElement_lazy = () -> Arrays.asList(InstrumentLeg6.mmLegSide, InstrumentLeg6.mmLegSettlementType, InstrumentLeg6.mmLegSettlementDate, InstrumentLeg6.mmLegLastPrice, InstrumentLeg6.mmLegSettlementCurrency,
+						InstrumentLeg6.mmLegOrderQuantity, InstrumentLeg6.mmLegForwardPoints, InstrumentLeg6.mmLegCalculatedCounterpartyCurrencyLastQuantity, InstrumentLeg6.mmLegRiskAmount, InstrumentLeg6.mmLegValuationRate,
+						InstrumentLeg6.mmLegValueDate, InstrumentLeg6.mmLegCurrency, InstrumentLeg6.mmLegSymbol, InstrumentLeg6.mmLegSecurityIdentification);
 				trace_lazy = () -> Leg.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InstrumentLeg6";
 				definition = "Additionnal details related to the leg.";
 				previousVersion_lazy = () -> InstrumentLeg1.mmObject();

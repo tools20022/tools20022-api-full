@@ -20,8 +20,12 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.CurrencyAndAmount;
+import com.tools20022.repository.entity.LineItem;
+import com.tools20022.repository.entity.Price;
 import com.tools20022.repository.entity.PurchaseOrder;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -110,10 +114,10 @@ public class ReportLine6 {
 			componentContext_lazy = () -> ReportLine6.mmObject();
 			isDerived = false;
 			xmlTag = "ComrclDocRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommercialDocumentReference";
 			definition = "Reference to the identification of the underlying commercial document.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ReportLine4.mmCommercialDocumentReference;
+			previousVersion_lazy = () -> ReportLine4.mmCommercialDocumentReference;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> com.tools20022.repository.msg.InvoiceIdentification1.mmObject();
@@ -158,14 +162,14 @@ public class ReportLine6 {
 	 */
 	public static final MMMessageAssociationEnd mmAdjustment = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Price.mmPriceAdjustment;
+			businessElementTrace_lazy = () -> Price.mmPriceAdjustment;
 			componentContext_lazy = () -> ReportLine6.mmObject();
 			isDerived = false;
 			xmlTag = "Adjstmnt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Adjustment";
 			definition = "Specifies the adjustments applied to obtain the net amount.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ReportLine4.mmAdjustment;
+			previousVersion_lazy = () -> ReportLine4.mmAdjustment;
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.Adjustment6.mmObject();
@@ -211,14 +215,14 @@ public class ReportLine6 {
 	 */
 	public static final MMMessageAttribute mmNetAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.LineItem.mmNetAmount;
+			businessElementTrace_lazy = () -> LineItem.mmNetAmount;
 			componentContext_lazy = () -> ReportLine6.mmObject();
 			isDerived = false;
 			xmlTag = "NetAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetAmount";
 			definition = "Net amount, after adjustments, intended to be paid.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ReportLine4.mmNetAmount;
+			previousVersion_lazy = () -> ReportLine4.mmNetAmount;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
@@ -264,10 +268,10 @@ public class ReportLine6 {
 			componentContext_lazy = () -> ReportLine6.mmObject();
 			isDerived = false;
 			xmlTag = "BrkdwnByPurchsOrdr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BreakdownByPurchaseOrder";
 			definition = "Specifies how the net amount to be paid is related to different purchase orders.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ReportLine4.mmBreakdownByPurchaseOrder;
+			previousVersion_lazy = () -> ReportLine4.mmBreakdownByPurchaseOrder;
 			minOccurs = 1;
 			complexType_lazy = () -> com.tools20022.repository.msg.ReportLine7.mmObject();
 		}
@@ -276,11 +280,10 @@ public class ReportLine6 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReportLine6.mmCommercialDocumentReference, com.tools20022.repository.msg.ReportLine6.mmAdjustment,
-						com.tools20022.repository.msg.ReportLine6.mmNetAmount, com.tools20022.repository.msg.ReportLine6.mmBreakdownByPurchaseOrder);
+				messageElement_lazy = () -> Arrays.asList(ReportLine6.mmCommercialDocumentReference, ReportLine6.mmAdjustment, ReportLine6.mmNetAmount, ReportLine6.mmBreakdownByPurchaseOrder);
 				trace_lazy = () -> PurchaseOrder.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ReportLine6";
 				definition = "Information about a payment against a commercial invoice.";
 				previousVersion_lazy = () -> ReportLine4.mmObject();

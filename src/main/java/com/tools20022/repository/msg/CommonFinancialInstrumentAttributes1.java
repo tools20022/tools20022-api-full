@@ -20,12 +20,14 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.*;
 import com.tools20022.repository.codeset.ActiveCurrencyCode;
 import com.tools20022.repository.codeset.CurrencyCode;
 import com.tools20022.repository.datatype.*;
 import com.tools20022.repository.datatype.Number;
-import com.tools20022.repository.entity.Security;
+import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -258,11 +260,11 @@ public class CommonFinancialInstrumentAttributes1 {
 	 */
 	public static final MMMessageAttribute mmSecurityStatus = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmSecurityStatus;
+			businessElementTrace_lazy = () -> Security.mmSecurityStatus;
 			componentContext_lazy = () -> CommonFinancialInstrumentAttributes1.mmObject();
 			isDerived = false;
 			xmlTag = "SctySts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityStatus";
 			definition = "Specifies the status of the security within its lifecycle.";
 			maxOccurs = 1;
@@ -305,11 +307,11 @@ public class CommonFinancialInstrumentAttributes1 {
 	 */
 	public static final MMMessageAttribute mmISOSecurityLongName = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.LocalName.mmFullName;
+			businessElementTrace_lazy = () -> LocalName.mmFullName;
 			componentContext_lazy = () -> CommonFinancialInstrumentAttributes1.mmObject();
 			isDerived = false;
 			xmlTag = "ISOSctyLngNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ISOSecurityLongName";
 			definition = "Name of the security.";
 			maxOccurs = 1;
@@ -352,11 +354,11 @@ public class CommonFinancialInstrumentAttributes1 {
 	 */
 	public static final MMMessageAttribute mmISOSecurityShortName = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.LocalName.mmShortName;
+			businessElementTrace_lazy = () -> LocalName.mmShortName;
 			componentContext_lazy = () -> CommonFinancialInstrumentAttributes1.mmObject();
 			isDerived = false;
 			xmlTag = "ISOSctyShrtNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ISOSecurityShortName";
 			definition = "Short name of the security expressed as ISO 18773/18774.";
 			maxOccurs = 1;
@@ -401,11 +403,11 @@ public class CommonFinancialInstrumentAttributes1 {
 	 */
 	public static final MMMessageAttribute mmNameValidFrom = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmFromDateTime;
+			businessElementTrace_lazy = () -> DateTimePeriod.mmFromDateTime;
 			componentContext_lazy = () -> CommonFinancialInstrumentAttributes1.mmObject();
 			isDerived = false;
 			xmlTag = "NmVldFr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NameValidFrom";
 			definition = "Defines the date since when the name of the security is valid.";
 			maxOccurs = 1;
@@ -448,11 +450,11 @@ public class CommonFinancialInstrumentAttributes1 {
 	 */
 	public static final MMMessageAttribute mmDenominationCurrency = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmDenominationCurrency;
+			businessElementTrace_lazy = () -> Security.mmDenominationCurrency;
 			componentContext_lazy = () -> CommonFinancialInstrumentAttributes1.mmObject();
 			isDerived = false;
 			xmlTag = "DnmtnCcy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DenominationCurrency";
 			definition = "Currency in which a security is issued or redenominated.";
 			maxOccurs = 1;
@@ -498,11 +500,11 @@ public class CommonFinancialInstrumentAttributes1 {
 	 */
 	public static final MMMessageAttribute mmCertificateNumber = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesCertificate.mmNumber;
+			businessElementTrace_lazy = () -> SecuritiesCertificate.mmNumber;
 			componentContext_lazy = () -> CommonFinancialInstrumentAttributes1.mmObject();
 			isDerived = false;
 			xmlTag = "CertNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CertificateNumber";
 			definition = "Unique and unambiguous identifier of a certificate assigned by the issuer.";
 			maxOccurs = 1;
@@ -544,7 +546,7 @@ public class CommonFinancialInstrumentAttributes1 {
 			componentContext_lazy = () -> CommonFinancialInstrumentAttributes1.mmObject();
 			isDerived = false;
 			xmlTag = "CtrctVrsnNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ContractVersionNumber";
 			definition = "Version number assigned to the contract associated with the security.";
 			maxOccurs = 1;
@@ -588,11 +590,11 @@ public class CommonFinancialInstrumentAttributes1 {
 	 */
 	public static final MMMessageAttribute mmCouponAttachedNumber = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CouponAttached.mmNumber;
+			businessElementTrace_lazy = () -> CouponAttached.mmNumber;
 			componentContext_lazy = () -> CommonFinancialInstrumentAttributes1.mmObject();
 			isDerived = false;
 			xmlTag = "CpnAttchdNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CouponAttachedNumber";
 			definition = "Number of the coupon attached to the physical security.";
 			maxOccurs = 1;
@@ -639,11 +641,11 @@ public class CommonFinancialInstrumentAttributes1 {
 	 */
 	public static final MMMessageAttribute mmTaxLotNumber = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.LotBreakdown.mmLotNumber;
+			businessElementTrace_lazy = () -> LotBreakdown.mmLotNumber;
 			componentContext_lazy = () -> CommonFinancialInstrumentAttributes1.mmObject();
 			isDerived = false;
 			xmlTag = "TaxLotNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxLotNumber";
 			definition = "Identification, for tax purposes, of a lot of identical securities that are bought at a certain date and at a certain price.";
 			maxOccurs = 1;
@@ -690,11 +692,11 @@ public class CommonFinancialInstrumentAttributes1 {
 	 */
 	public static final MMMessageAttribute mmPoolNumber = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Debt.mmPoolNumber;
+			businessElementTrace_lazy = () -> Debt.mmPoolNumber;
 			componentContext_lazy = () -> CommonFinancialInstrumentAttributes1.mmObject();
 			isDerived = false;
 			xmlTag = "PoolNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PoolNumber";
 			definition = "Number identifying a group of underlying assets assigned by the issuer of a factored security.";
 			maxOccurs = 1;
@@ -741,11 +743,11 @@ public class CommonFinancialInstrumentAttributes1 {
 	 */
 	public static final MMMessageAttribute mmCoveredIndicator = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Entitlement.mmCoveredIndicator;
+			businessElementTrace_lazy = () -> Entitlement.mmCoveredIndicator;
 			componentContext_lazy = () -> CommonFinancialInstrumentAttributes1.mmObject();
 			isDerived = false;
 			xmlTag = "CvrdInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoveredIndicator";
 			definition = "Indicates whether the derivative product is covered or not by an underlying financial instrument position.";
 			maxOccurs = 1;
@@ -790,11 +792,11 @@ public class CommonFinancialInstrumentAttributes1 {
 	 */
 	public static final MMMessageAttribute mmLegalRestrictions = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmRestriction;
+			businessElementTrace_lazy = () -> Security.mmRestriction;
 			componentContext_lazy = () -> CommonFinancialInstrumentAttributes1.mmObject();
 			isDerived = false;
 			xmlTag = "LglRstrctns";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LegalRestrictions";
 			definition = "Specifies the regulatory restrictions applicable to a security.";
 			maxOccurs = 1;
@@ -845,11 +847,11 @@ public class CommonFinancialInstrumentAttributes1 {
 	 */
 	public static final MMMessageAttribute mmPositionLimit = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmSecuritiesQuantity;
+			businessElementTrace_lazy = () -> Security.mmSecuritiesQuantity;
 			componentContext_lazy = () -> CommonFinancialInstrumentAttributes1.mmObject();
 			isDerived = false;
 			xmlTag = "PosLmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PositionLimit";
 			definition = "Position limits are created for the purpose of maintaining stable and fair markets. Contracts held by one individual investor with different brokers may be combined in order to gauge accurately the level of control held by one party. \n\nEach option and futures contract will have varying position limits.";
 			maxOccurs = 1;
@@ -893,11 +895,11 @@ public class CommonFinancialInstrumentAttributes1 {
 	 */
 	public static final MMMessageAttribute mmNearTermPositionLimit = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmNearTermPositionLimit;
+			businessElementTrace_lazy = () -> Security.mmNearTermPositionLimit;
 			componentContext_lazy = () -> CommonFinancialInstrumentAttributes1.mmObject();
 			isDerived = false;
 			xmlTag = "NearTermPosLmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NearTermPositionLimit";
 			definition = "Near-term position limit for the instrument.";
 			maxOccurs = 1;
@@ -943,11 +945,11 @@ public class CommonFinancialInstrumentAttributes1 {
 	 */
 	public static final MMMessageAttribute mmListingDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradingMarket.mmListingDate;
+			businessElementTrace_lazy = () -> TradingMarket.mmListingDate;
 			componentContext_lazy = () -> CommonFinancialInstrumentAttributes1.mmObject();
 			isDerived = false;
 			xmlTag = "ListgDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ListingDate";
 			definition = "Original Date/time at which the security is listed at the specific exchange or trading venue..";
 			maxOccurs = 1;
@@ -994,11 +996,11 @@ public class CommonFinancialInstrumentAttributes1 {
 	 */
 	public static final MMMessageAttribute mmRecordDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionDeadline.mmRecordDate;
+			businessElementTrace_lazy = () -> CorporateActionDeadline.mmRecordDate;
 			componentContext_lazy = () -> CommonFinancialInstrumentAttributes1.mmObject();
 			isDerived = false;
 			xmlTag = "RcrdDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RecordDate";
 			definition = "Date/time at which positions are struck to note which parties are entitled to receive the entitlement to a corporate event or vote at a meeting.";
 			maxOccurs = 1;
@@ -1041,11 +1043,11 @@ public class CommonFinancialInstrumentAttributes1 {
 	 */
 	public static final MMMessageAttribute mmExpiryDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Asset.mmExpiryDate;
+			businessElementTrace_lazy = () -> Asset.mmExpiryDate;
 			componentContext_lazy = () -> CommonFinancialInstrumentAttributes1.mmObject();
 			isDerived = false;
 			xmlTag = "XpryDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExpiryDate";
 			definition = "Date on which a privilege expires.";
 			maxOccurs = 1;
@@ -1089,11 +1091,11 @@ public class CommonFinancialInstrumentAttributes1 {
 	 */
 	public static final MMMessageAttribute mmPurpose = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Issuance.mmPurpose;
+			businessElementTrace_lazy = () -> Issuance.mmPurpose;
 			componentContext_lazy = () -> CommonFinancialInstrumentAttributes1.mmObject();
 			isDerived = false;
 			xmlTag = "Purp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Purpose";
 			definition = "Reason for which money is raised through the issuance of a security.";
 			maxOccurs = 1;
@@ -1141,11 +1143,11 @@ public class CommonFinancialInstrumentAttributes1 {
 	 */
 	public static final MMMessageAttribute mmClassificationType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Asset.mmAssetClassification;
+			businessElementTrace_lazy = () -> Asset.mmAssetClassification;
 			componentContext_lazy = () -> CommonFinancialInstrumentAttributes1.mmObject();
 			isDerived = false;
 			xmlTag = "ClssfctnTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClassificationType";
 			definition = "Information allowing the classification of a financial instrument, for example, with its ISO CFI (Classification of Financial Instrument) or product type.";
 			maxOccurs = 1;
@@ -1186,11 +1188,11 @@ public class CommonFinancialInstrumentAttributes1 {
 	 */
 	public static final MMMessageAssociationEnd mmIssuance = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Asset.mmIssuance;
+			businessElementTrace_lazy = () -> Asset.mmIssuance;
 			componentContext_lazy = () -> CommonFinancialInstrumentAttributes1.mmObject();
 			isDerived = false;
 			xmlTag = "Issnc";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Issuance";
 			definition = "Details regarding the issuance of an asset.";
 			maxOccurs = 1;
@@ -1233,11 +1235,11 @@ public class CommonFinancialInstrumentAttributes1 {
 	 */
 	public static final MMMessageAssociationEnd mmTradingMarket = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmTradingMarket;
+			businessElementTrace_lazy = () -> Security.mmTradingMarket;
 			componentContext_lazy = () -> CommonFinancialInstrumentAttributes1.mmObject();
 			isDerived = false;
 			xmlTag = "TradgMkt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradingMarket";
 			definition = "Market(s) on which the security is traded.";
 			minOccurs = 0;
@@ -1279,7 +1281,7 @@ public class CommonFinancialInstrumentAttributes1 {
 			componentContext_lazy = () -> CommonFinancialInstrumentAttributes1.mmObject();
 			isDerived = false;
 			xmlTag = "SprdAndBchmkCrv";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SpreadAndBenchmarkCurve";
 			definition = "Indicates the spread to benchmark details of an indication of interest.";
 			minOccurs = 0;
@@ -1321,7 +1323,7 @@ public class CommonFinancialInstrumentAttributes1 {
 			componentContext_lazy = () -> CommonFinancialInstrumentAttributes1.mmObject();
 			isDerived = false;
 			xmlTag = "PutTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PutType";
 			definition = "Represents the type of put.";
 			maxOccurs = 1;
@@ -1363,7 +1365,7 @@ public class CommonFinancialInstrumentAttributes1 {
 			componentContext_lazy = () -> CommonFinancialInstrumentAttributes1.mmObject();
 			isDerived = false;
 			xmlTag = "CallTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CallType";
 			definition = "Represents the type of call.";
 			maxOccurs = 1;
@@ -1408,7 +1410,7 @@ public class CommonFinancialInstrumentAttributes1 {
 			componentContext_lazy = () -> CommonFinancialInstrumentAttributes1.mmObject();
 			isDerived = false;
 			xmlTag = "FngbInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FungibleIndicator";
 			definition = "Indicates whether a security is interchangeable, ie, the security is allowed to be replaced by another security, without loss of value.";
 			maxOccurs = 1;
@@ -1453,7 +1455,7 @@ public class CommonFinancialInstrumentAttributes1 {
 			componentContext_lazy = () -> CommonFinancialInstrumentAttributes1.mmObject();
 			isDerived = false;
 			xmlTag = "Cnfdtl";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Confidential";
 			definition = "Indicates wheter the details of the security are to be made available to the market, or kept private between ICSDs and agency network.";
 			maxOccurs = 1;
@@ -1500,7 +1502,7 @@ public class CommonFinancialInstrumentAttributes1 {
 			componentContext_lazy = () -> CommonFinancialInstrumentAttributes1.mmObject();
 			isDerived = false;
 			xmlTag = "PrvtPlcmnt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PrivatePlacement";
 			definition = "The sale of securities directly to private persons, institutional investors, or both outside a public offering. Such non-public deals (often without a publicly available prospectus) closing through the ICSDs are placed directly with investors.";
 			maxOccurs = 1;
@@ -1543,7 +1545,7 @@ public class CommonFinancialInstrumentAttributes1 {
 			componentContext_lazy = () -> CommonFinancialInstrumentAttributes1.mmObject();
 			isDerived = false;
 			xmlTag = "ConvtblInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConvertibleIndicator";
 			definition = "Indicates whether the investor or the issuer has a conversion option.";
 			maxOccurs = 1;
@@ -1588,7 +1590,7 @@ public class CommonFinancialInstrumentAttributes1 {
 			componentContext_lazy = () -> CommonFinancialInstrumentAttributes1.mmObject();
 			isDerived = false;
 			xmlTag = "ConvsPrd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConversionPeriod";
 			definition = "Period during which a convertible security may be converted according to the terms of the issue.";
 			maxOccurs = 1;
@@ -1630,7 +1632,7 @@ public class CommonFinancialInstrumentAttributes1 {
 			componentContext_lazy = () -> CommonFinancialInstrumentAttributes1.mmObject();
 			isDerived = false;
 			xmlTag = "ConvsRatioNmrtr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConversionRatioNumerator";
 			definition = "Number of target securities for the conversion.";
 			maxOccurs = 1;
@@ -1672,7 +1674,7 @@ public class CommonFinancialInstrumentAttributes1 {
 			componentContext_lazy = () -> CommonFinancialInstrumentAttributes1.mmObject();
 			isDerived = false;
 			xmlTag = "ConvsRatioDnmtr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConversionRatioDenominator";
 			definition = "Number of held securities for the conversion.";
 			maxOccurs = 1;
@@ -1713,7 +1715,7 @@ public class CommonFinancialInstrumentAttributes1 {
 			componentContext_lazy = () -> CommonFinancialInstrumentAttributes1.mmObject();
 			isDerived = false;
 			xmlTag = "PmryPlcOfDpst";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PrimaryPlaceOfDeposit";
 			definition = "Primary place of deposit.";
 			maxOccurs = 1;
@@ -1759,7 +1761,7 @@ public class CommonFinancialInstrumentAttributes1 {
 			componentContext_lazy = () -> CommonFinancialInstrumentAttributes1.mmObject();
 			isDerived = false;
 			xmlTag = "TradgMtd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradingMethod";
 			definition = "Indicates whether the notional amount value is to be traded in either an amount or in units.";
 			maxOccurs = 1;
@@ -1802,7 +1804,7 @@ public class CommonFinancialInstrumentAttributes1 {
 			componentContext_lazy = () -> CommonFinancialInstrumentAttributes1.mmObject();
 			isDerived = false;
 			xmlTag = "TEFRARule";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TEFRARule";
 			definition = "Indicates the TEFRA rule under which the security is issued.";
 			maxOccurs = 1;
@@ -1843,7 +1845,7 @@ public class CommonFinancialInstrumentAttributes1 {
 			componentContext_lazy = () -> CommonFinancialInstrumentAttributes1.mmObject();
 			isDerived = false;
 			xmlTag = "SrNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SerieNumber";
 			definition = "Identifies the series number.";
 			maxOccurs = 1;
@@ -1884,7 +1886,7 @@ public class CommonFinancialInstrumentAttributes1 {
 			componentContext_lazy = () -> CommonFinancialInstrumentAttributes1.mmObject();
 			isDerived = false;
 			xmlTag = "Clss";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Class";
 			definition = "Identifier that links multiple security classes.";
 			maxOccurs = 1;
@@ -1928,7 +1930,7 @@ public class CommonFinancialInstrumentAttributes1 {
 			componentContext_lazy = () -> CommonFinancialInstrumentAttributes1.mmObject();
 			isDerived = false;
 			xmlTag = "WhldgTaxRgm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WithholdingTaxRegime";
 			definition = "Amount or percentage of a cash distribution that will be withheld by a tax authority.";
 			minOccurs = 0;
@@ -1970,7 +1972,7 @@ public class CommonFinancialInstrumentAttributes1 {
 			componentContext_lazy = () -> CommonFinancialInstrumentAttributes1.mmObject();
 			isDerived = false;
 			xmlTag = "PmtSts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentStatus";
 			definition = "Status of payment of a security at a particular time.";
 			maxOccurs = 1;
@@ -2013,7 +2015,7 @@ public class CommonFinancialInstrumentAttributes1 {
 			componentContext_lazy = () -> CommonFinancialInstrumentAttributes1.mmObject();
 			isDerived = false;
 			xmlTag = "InitlPhysForm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InitialPhysicalForm";
 			definition = "Indicates the physical form of the securities on the closing date.";
 			maxOccurs = 1;
@@ -2058,7 +2060,7 @@ public class CommonFinancialInstrumentAttributes1 {
 			componentContext_lazy = () -> CommonFinancialInstrumentAttributes1.mmObject();
 			isDerived = false;
 			xmlTag = "AftrXchgPhysForm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AfterExchangePhysicalForm";
 			definition = "Indicates the physical form of the securities after the exchange of the initial certificate issued on the closing date.";
 			maxOccurs = 1;
@@ -2103,7 +2105,7 @@ public class CommonFinancialInstrumentAttributes1 {
 			componentContext_lazy = () -> CommonFinancialInstrumentAttributes1.mmObject();
 			isDerived = false;
 			xmlTag = "CmonSfkpr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommonSafekeeper";
 			definition = "Entity appointed by the ICSDs to provide safekeeping for securities in new global note (NGN) form.";
 			maxOccurs = 1;
@@ -2145,7 +2147,7 @@ public class CommonFinancialInstrumentAttributes1 {
 			componentContext_lazy = () -> CommonFinancialInstrumentAttributes1.mmObject();
 			isDerived = false;
 			xmlTag = "RedTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RedemptionType";
 			definition = "Indicates the type of redemption at maturity.";
 			maxOccurs = 1;
@@ -2187,7 +2189,7 @@ public class CommonFinancialInstrumentAttributes1 {
 			componentContext_lazy = () -> CommonFinancialInstrumentAttributes1.mmObject();
 			isDerived = false;
 			xmlTag = "RedPmtCcy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RedemptionPaymentCurrency";
 			definition = "ISO currency for the payment of the cash proceeds.";
 			maxOccurs = 1;
@@ -2227,7 +2229,7 @@ public class CommonFinancialInstrumentAttributes1 {
 			componentContext_lazy = () -> CommonFinancialInstrumentAttributes1.mmObject();
 			isDerived = false;
 			xmlTag = "Rstrctn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Restriction";
 			definition = "Regulatory restriction(s) linked to the security.";
 			minOccurs = 0;
@@ -2271,7 +2273,7 @@ public class CommonFinancialInstrumentAttributes1 {
 			componentContext_lazy = () -> CommonFinancialInstrumentAttributes1.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementInformation";
 			definition = "Settlement of the securities in a securities transaction, that is, the instruction to deliver or receive securities, involving the payment of an amount of money or not.";
 			minOccurs = 0;
@@ -2312,7 +2314,7 @@ public class CommonFinancialInstrumentAttributes1 {
 			componentContext_lazy = () -> CommonFinancialInstrumentAttributes1.mmObject();
 			isDerived = false;
 			xmlTag = "FinInstrmForm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentForm";
 			definition = "Indicates the form of the financial Instrument";
 			maxOccurs = 1;
@@ -2357,7 +2359,7 @@ public class CommonFinancialInstrumentAttributes1 {
 			componentContext_lazy = () -> CommonFinancialInstrumentAttributes1.mmObject();
 			isDerived = false;
 			xmlTag = "CtctNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ContactName";
 			definition = "Details (name, e-mail address and/or telephone number) of the person requesting the allocation of the ISIN used as a point of reference in case further clarifications are required.";
 			maxOccurs = 1;
@@ -2401,7 +2403,7 @@ public class CommonFinancialInstrumentAttributes1 {
 			componentContext_lazy = () -> CommonFinancialInstrumentAttributes1.mmObject();
 			isDerived = false;
 			xmlTag = "LeadMgr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LeadManager";
 			definition = "Entity appointed by the issuer to structure and lead the placement of a syndicated issue.";
 			maxOccurs = 1;
@@ -2445,7 +2447,7 @@ public class CommonFinancialInstrumentAttributes1 {
 			componentContext_lazy = () -> CommonFinancialInstrumentAttributes1.mmObject();
 			isDerived = false;
 			xmlTag = "PrncplPngAgt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PrincipalPayingAgent";
 			definition = "Main party appointed to distribute payment or securities on behalf of the issuer.";
 			maxOccurs = 1;
@@ -2489,7 +2491,7 @@ public class CommonFinancialInstrumentAttributes1 {
 			componentContext_lazy = () -> CommonFinancialInstrumentAttributes1.mmObject();
 			isDerived = false;
 			xmlTag = "PngAgt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PayingAgent";
 			definition = "Additional party appointed to distribute payment or securities on behalf of the issuer.";
 			maxOccurs = 1;
@@ -2534,7 +2536,7 @@ public class CommonFinancialInstrumentAttributes1 {
 			componentContext_lazy = () -> CommonFinancialInstrumentAttributes1.mmObject();
 			isDerived = false;
 			xmlTag = "Dpstry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Depository";
 			definition = "Entity appointed by the relevant clearing system as a depository for instruments issued in global or definitive form. The depository keeps the securities for safekeeping purposes on behalf of the clearing system(s).";
 			maxOccurs = 1;
@@ -2578,7 +2580,7 @@ public class CommonFinancialInstrumentAttributes1 {
 			componentContext_lazy = () -> CommonFinancialInstrumentAttributes1.mmObject();
 			isDerived = false;
 			xmlTag = "UndrlygRsk";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnderlyingRisk";
 			definition = "Entity(ies), asset(s) or security(ies) on which the credit responsibility lies as identified in the documentation.";
 			maxOccurs = 1;
@@ -2591,35 +2593,26 @@ public class CommonFinancialInstrumentAttributes1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.mmSecurityStatus, com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.mmISOSecurityLongName,
-						com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.mmISOSecurityShortName, com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.mmNameValidFrom,
-						com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.mmDenominationCurrency, com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.mmCertificateNumber,
-						com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.mmContractVersionNumber, com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.mmCouponAttachedNumber,
-						com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.mmTaxLotNumber, com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.mmPoolNumber,
-						com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.mmCoveredIndicator, com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.mmLegalRestrictions,
-						com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.mmPositionLimit, com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.mmNearTermPositionLimit,
-						com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.mmListingDate, com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.mmRecordDate,
-						com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.mmExpiryDate, com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.mmPurpose,
-						com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.mmClassificationType, com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.mmIssuance,
-						com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.mmTradingMarket, com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.mmSpreadAndBenchmarkCurve,
-						com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.mmPutType, com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.mmCallType,
-						com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.mmFungibleIndicator, com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.mmConfidential,
-						com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.mmPrivatePlacement, com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.mmConvertibleIndicator,
-						com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.mmConversionPeriod, com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.mmConversionRatioNumerator,
-						com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.mmConversionRatioDenominator, com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.mmPrimaryPlaceOfDeposit,
-						com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.mmTradingMethod, com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.mmTEFRARule,
-						com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.mmSerieNumber, com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.mmClass_,
-						com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.mmWithholdingTaxRegime, com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.mmPaymentStatus,
-						com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.mmInitialPhysicalForm, com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.mmAfterExchangePhysicalForm,
-						com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.mmCommonSafekeeper, com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.mmRedemptionType,
-						com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.mmRedemptionPaymentCurrency, com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.mmRestriction,
-						com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.mmSettlementInformation, com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.mmFinancialInstrumentForm,
-						com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.mmContactName, com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.mmLeadManager,
-						com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.mmPrincipalPayingAgent, com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.mmPayingAgent,
-						com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.mmDepository, com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.mmUnderlyingRisk);
+				messageElement_lazy = () -> Arrays.asList(CommonFinancialInstrumentAttributes1.mmSecurityStatus, CommonFinancialInstrumentAttributes1.mmISOSecurityLongName, CommonFinancialInstrumentAttributes1.mmISOSecurityShortName,
+						CommonFinancialInstrumentAttributes1.mmNameValidFrom, CommonFinancialInstrumentAttributes1.mmDenominationCurrency, CommonFinancialInstrumentAttributes1.mmCertificateNumber,
+						CommonFinancialInstrumentAttributes1.mmContractVersionNumber, CommonFinancialInstrumentAttributes1.mmCouponAttachedNumber, CommonFinancialInstrumentAttributes1.mmTaxLotNumber,
+						CommonFinancialInstrumentAttributes1.mmPoolNumber, CommonFinancialInstrumentAttributes1.mmCoveredIndicator, CommonFinancialInstrumentAttributes1.mmLegalRestrictions,
+						CommonFinancialInstrumentAttributes1.mmPositionLimit, CommonFinancialInstrumentAttributes1.mmNearTermPositionLimit, CommonFinancialInstrumentAttributes1.mmListingDate,
+						CommonFinancialInstrumentAttributes1.mmRecordDate, CommonFinancialInstrumentAttributes1.mmExpiryDate, CommonFinancialInstrumentAttributes1.mmPurpose, CommonFinancialInstrumentAttributes1.mmClassificationType,
+						CommonFinancialInstrumentAttributes1.mmIssuance, CommonFinancialInstrumentAttributes1.mmTradingMarket, CommonFinancialInstrumentAttributes1.mmSpreadAndBenchmarkCurve, CommonFinancialInstrumentAttributes1.mmPutType,
+						CommonFinancialInstrumentAttributes1.mmCallType, CommonFinancialInstrumentAttributes1.mmFungibleIndicator, CommonFinancialInstrumentAttributes1.mmConfidential,
+						CommonFinancialInstrumentAttributes1.mmPrivatePlacement, CommonFinancialInstrumentAttributes1.mmConvertibleIndicator, CommonFinancialInstrumentAttributes1.mmConversionPeriod,
+						CommonFinancialInstrumentAttributes1.mmConversionRatioNumerator, CommonFinancialInstrumentAttributes1.mmConversionRatioDenominator, CommonFinancialInstrumentAttributes1.mmPrimaryPlaceOfDeposit,
+						CommonFinancialInstrumentAttributes1.mmTradingMethod, CommonFinancialInstrumentAttributes1.mmTEFRARule, CommonFinancialInstrumentAttributes1.mmSerieNumber, CommonFinancialInstrumentAttributes1.mmClass_,
+						CommonFinancialInstrumentAttributes1.mmWithholdingTaxRegime, CommonFinancialInstrumentAttributes1.mmPaymentStatus, CommonFinancialInstrumentAttributes1.mmInitialPhysicalForm,
+						CommonFinancialInstrumentAttributes1.mmAfterExchangePhysicalForm, CommonFinancialInstrumentAttributes1.mmCommonSafekeeper, CommonFinancialInstrumentAttributes1.mmRedemptionType,
+						CommonFinancialInstrumentAttributes1.mmRedemptionPaymentCurrency, CommonFinancialInstrumentAttributes1.mmRestriction, CommonFinancialInstrumentAttributes1.mmSettlementInformation,
+						CommonFinancialInstrumentAttributes1.mmFinancialInstrumentForm, CommonFinancialInstrumentAttributes1.mmContactName, CommonFinancialInstrumentAttributes1.mmLeadManager,
+						CommonFinancialInstrumentAttributes1.mmPrincipalPayingAgent, CommonFinancialInstrumentAttributes1.mmPayingAgent, CommonFinancialInstrumentAttributes1.mmDepository,
+						CommonFinancialInstrumentAttributes1.mmUnderlyingRisk);
 				trace_lazy = () -> Security.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
 						return DateFormat.getDateInstance(java.text.DateFormat.LONG).parse("September 9, 2016");

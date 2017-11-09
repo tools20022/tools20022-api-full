@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.InstructionQueryTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -86,7 +88,7 @@ public class InstructionQueryType1Code extends InstructionQueryTypeCode {
 	 */
 	public static final MMCode mmSettlementInstruction = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementInstruction";
 			owner_lazy = () -> InstructionQueryType1Code.mmObject();
 		}
@@ -109,7 +111,7 @@ public class InstructionQueryType1Code extends InstructionQueryTypeCode {
 	 */
 	public static final MMCode mmIntraPositionMovement = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IntraPositionMovement";
 			owner_lazy = () -> InstructionQueryType1Code.mmObject();
 		}
@@ -132,7 +134,7 @@ public class InstructionQueryType1Code extends InstructionQueryTypeCode {
 	 */
 	public static final MMCode mmSettlementAndIntraPosition = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementAndIntraPosition";
 			owner_lazy = () -> InstructionQueryType1Code.mmObject();
 		}
@@ -141,13 +143,12 @@ public class InstructionQueryType1Code extends InstructionQueryTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("SETT");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InstructionQueryType1Code";
 				definition = "Specifies the type of instruction queried.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.InstructionQueryType1Code.mmSettlementInstruction, com.tools20022.repository.codeset.InstructionQueryType1Code.mmIntraPositionMovement,
-						com.tools20022.repository.codeset.InstructionQueryType1Code.mmSettlementAndIntraPosition);
+				code_lazy = () -> Arrays.asList(InstructionQueryType1Code.mmSettlementInstruction, InstructionQueryType1Code.mmIntraPositionMovement, InstructionQueryType1Code.mmSettlementAndIntraPosition);
 				trace_lazy = () -> InstructionQueryTypeCode.mmObject();
 			}
 		});

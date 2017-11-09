@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.MessageProtectionCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -83,7 +85,7 @@ public class MessageProtection1Code extends MessageProtectionCode {
 	 */
 	public static final MMCode mmEnvelopedMessage = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EnvelopedMessage";
 			owner_lazy = () -> MessageProtection1Code.mmObject();
 		}
@@ -106,7 +108,7 @@ public class MessageProtection1Code extends MessageProtectionCode {
 	 */
 	public static final MMCode mmMACBody = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MACBody";
 			owner_lazy = () -> MessageProtection1Code.mmObject();
 		}
@@ -129,7 +131,7 @@ public class MessageProtection1Code extends MessageProtectionCode {
 	 */
 	public static final MMCode mmMACMessage = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MACMessage";
 			owner_lazy = () -> MessageProtection1Code.mmObject();
 		}
@@ -152,7 +154,7 @@ public class MessageProtection1Code extends MessageProtectionCode {
 	 */
 	public static final MMCode mmNoProtection = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoProtection";
 			owner_lazy = () -> MessageProtection1Code.mmObject();
 		}
@@ -161,12 +163,11 @@ public class MessageProtection1Code extends MessageProtectionCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MessageProtection1Code";
 				definition = "Mechanism used to protect the message of the ATM protocol.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MessageProtection1Code.mmEnvelopedMessage, com.tools20022.repository.codeset.MessageProtection1Code.mmMACBody,
-						com.tools20022.repository.codeset.MessageProtection1Code.mmMACMessage, com.tools20022.repository.codeset.MessageProtection1Code.mmNoProtection);
+				code_lazy = () -> Arrays.asList(MessageProtection1Code.mmEnvelopedMessage, MessageProtection1Code.mmMACBody, MessageProtection1Code.mmMACMessage, MessageProtection1Code.mmNoProtection);
 				trace_lazy = () -> MessageProtectionCode.mmObject();
 			}
 		});

@@ -20,10 +20,17 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.camt.ResolutionOfInvestigationV04;
+import com.tools20022.repository.area.camt.ResolutionOfInvestigationV05;
+import com.tools20022.repository.area.camt.ResolutionOfInvestigationV06;
+import com.tools20022.repository.area.camt.ResolutionOfInvestigationV07;
 import com.tools20022.repository.codeset.InvestigationExecutionConfirmation3Code;
 import com.tools20022.repository.codeset.ModificationRejection2Code;
 import com.tools20022.repository.datatype.YesNoIndicator;
+import com.tools20022.repository.entity.PaymentInvestigationCaseRejection;
 import com.tools20022.repository.entity.PaymentInvestigationCaseResolution;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.Case3;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -129,11 +136,11 @@ public class InvestigationStatus3Choice {
 	 */
 	public static final MMMessageAttribute mmConfirmation = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentInvestigationCaseResolution.mmInvestigationStatus;
+			businessElementTrace_lazy = () -> PaymentInvestigationCaseResolution.mmInvestigationStatus;
 			componentContext_lazy = () -> InvestigationStatus3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Conf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Confirmation";
 			definition = "Specifies the status of the investigation, in a coded form.";
 			maxOccurs = 1;
@@ -178,11 +185,11 @@ public class InvestigationStatus3Choice {
 	 */
 	public static final MMMessageAttribute mmRejectedModification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentInvestigationCaseRejection.mmRejectedModification;
+			businessElementTrace_lazy = () -> PaymentInvestigationCaseRejection.mmRejectedModification;
 			componentContext_lazy = () -> InvestigationStatus3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "RjctdMod";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RejectedModification";
 			definition = "Reason for the rejection of a modification request, in a coded form.";
 			minOccurs = 1;
@@ -226,11 +233,11 @@ public class InvestigationStatus3Choice {
 	 */
 	public static final MMMessageAssociationEnd mmDuplicateOf = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentInvestigationCaseResolution.mmDuplicateCase;
+			businessElementTrace_lazy = () -> PaymentInvestigationCaseResolution.mmDuplicateCase;
 			componentContext_lazy = () -> InvestigationStatus3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "DplctOf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DuplicateOf";
 			definition = "Indicates a duplicated case. \nUsage: When present, the case identified in the message must be closed. The case identified as duplicated (in this component) will be pursued.";
 			maxOccurs = 1;
@@ -280,11 +287,11 @@ public class InvestigationStatus3Choice {
 	 */
 	public static final MMMessageAttribute mmAssignmentCancellationConfirmation = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentInvestigationCaseRejection.mmAssignmentCancellationConfirmation;
+			businessElementTrace_lazy = () -> PaymentInvestigationCaseRejection.mmAssignmentCancellationConfirmation;
 			componentContext_lazy = () -> InvestigationStatus3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "AssgnmtCxlConf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AssignmentCancellationConfirmation";
 			definition = "Indicates whether the cancellation of the assignment is confirmed or rejected.\nUsage: If yes, the cancellation of the assignment is confirmed.\nIf no, the cancellation of the assignment is rejected and the investigation process will continue.";
 			maxOccurs = 1;
@@ -296,13 +303,12 @@ public class InvestigationStatus3Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.InvestigationStatus3Choice.mmConfirmation, com.tools20022.repository.choice.InvestigationStatus3Choice.mmRejectedModification,
-						com.tools20022.repository.choice.InvestigationStatus3Choice.mmDuplicateOf, com.tools20022.repository.choice.InvestigationStatus3Choice.mmAssignmentCancellationConfirmation);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.ResolutionOfInvestigationV04.mmStatus, com.tools20022.repository.area.camt.ResolutionOfInvestigationV05.mmStatus,
-						com.tools20022.repository.area.camt.ResolutionOfInvestigationV06.mmStatus, com.tools20022.repository.area.camt.ResolutionOfInvestigationV07.mmStatus);
+				messageElement_lazy = () -> Arrays.asList(InvestigationStatus3Choice.mmConfirmation, InvestigationStatus3Choice.mmRejectedModification, InvestigationStatus3Choice.mmDuplicateOf,
+						InvestigationStatus3Choice.mmAssignmentCancellationConfirmation);
+				messageBuildingBlock_lazy = () -> Arrays.asList(ResolutionOfInvestigationV04.mmStatus, ResolutionOfInvestigationV05.mmStatus, ResolutionOfInvestigationV06.mmStatus, ResolutionOfInvestigationV07.mmStatus);
 				trace_lazy = () -> PaymentInvestigationCaseResolution.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InvestigationStatus3Choice";
 				definition = "Specifies the status of an investigation case.";
 			}

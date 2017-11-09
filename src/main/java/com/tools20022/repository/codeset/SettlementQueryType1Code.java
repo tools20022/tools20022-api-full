@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.SettlementQueryTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -87,7 +89,7 @@ public class SettlementQueryType1Code extends SettlementQueryTypeCode {
 	 */
 	public static final MMCode mmInstruction = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Instruction";
 			owner_lazy = () -> SettlementQueryType1Code.mmObject();
 		}
@@ -110,7 +112,7 @@ public class SettlementQueryType1Code extends SettlementQueryTypeCode {
 	 */
 	public static final MMCode mmStatus = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Status";
 			owner_lazy = () -> SettlementQueryType1Code.mmObject();
 		}
@@ -133,7 +135,7 @@ public class SettlementQueryType1Code extends SettlementQueryTypeCode {
 	 */
 	public static final MMCode mmStatusPeriod = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusPeriod";
 			owner_lazy = () -> SettlementQueryType1Code.mmObject();
 		}
@@ -142,13 +144,12 @@ public class SettlementQueryType1Code extends SettlementQueryTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("INST");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SettlementQueryType1Code";
 				definition = "Specifies the type of settlement instruction query to be executed.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SettlementQueryType1Code.mmInstruction, com.tools20022.repository.codeset.SettlementQueryType1Code.mmStatus,
-						com.tools20022.repository.codeset.SettlementQueryType1Code.mmStatusPeriod);
+				code_lazy = () -> Arrays.asList(SettlementQueryType1Code.mmInstruction, SettlementQueryType1Code.mmStatus, SettlementQueryType1Code.mmStatusPeriod);
 				trace_lazy = () -> SettlementQueryTypeCode.mmObject();
 			}
 		});

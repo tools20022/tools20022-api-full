@@ -20,13 +20,13 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.*;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.YesNoIndicator;
-import com.tools20022.repository.entity.DeliveringSettlementParty;
-import com.tools20022.repository.entity.ReceivingSettlementParty;
-import com.tools20022.repository.entity.SecuritiesOrder;
+import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -174,11 +174,11 @@ public class Order9 {
 	 */
 	public static final MMMessageAttribute mmClientOrderIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmClientOrderIdentification;
+			businessElementTrace_lazy = () -> SecuritiesOrder.mmClientOrderIdentification;
 			componentContext_lazy = () -> Order9.mmObject();
 			isDerived = false;
 			xmlTag = "ClntOrdrId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClientOrderIdentification";
 			definition = "Unique identifier for an order, as assigned by the sell-side. The identifier must be unique within a single trading day.";
 			maxOccurs = 1;
@@ -219,7 +219,7 @@ public class Order9 {
 			componentContext_lazy = () -> Order9.mmObject();
 			isDerived = false;
 			xmlTag = "ClntOrdrLkId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClientOrderLinkIdentification";
 			definition = "Unique and unambiguous identification of the client order link.";
 			maxOccurs = 1;
@@ -264,11 +264,11 @@ public class Order9 {
 	 */
 	public static final MMMessageAttribute mmSecondaryClientOrderIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmClientOrderIdentification;
+			businessElementTrace_lazy = () -> SecuritiesOrder.mmClientOrderIdentification;
 			componentContext_lazy = () -> Order9.mmObject();
 			isDerived = false;
 			xmlTag = "ScndryClntOrdrId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecondaryClientOrderIdentification";
 			definition = "The unique identifier for an order, as assigned by the buy-side. The identifier must be unique within a single trading day.";
 			maxOccurs = 1;
@@ -318,11 +318,11 @@ public class Order9 {
 	 */
 	public static final MMMessageAttribute mmCashMargin = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmCashMargin;
+			businessElementTrace_lazy = () -> SecuritiesOrder.mmCashMargin;
 			componentContext_lazy = () -> Order9.mmObject();
 			isDerived = false;
 			xmlTag = "CshMrgn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashMargin";
 			definition = "Identifies whether an order is a margin order or a non-margin order. This is primarily used when sending orders to Japanese exchanges to indicate sell margin or buy to cover. The same tag could be assigned also by buy-side to indicate the intent to sell or buy margin and the sell-side to accept or reject (base on some validation criteria) the margin request.";
 			maxOccurs = 1;
@@ -368,11 +368,11 @@ public class Order9 {
 	 */
 	public static final MMMessageAttribute mmTradeOriginationDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTrade.mmTradeOriginationDate;
+			businessElementTrace_lazy = () -> SecuritiesTrade.mmTradeOriginationDate;
 			componentContext_lazy = () -> Order9.mmObject();
 			isDerived = false;
 			xmlTag = "TradOrgtnDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeOriginationDate";
 			definition = "Indicates the date and time of the agreement in principal between counter-parties prior to actual trade date.\nUsed with fixed income for municipal new issue markets.";
 			maxOccurs = 1;
@@ -415,11 +415,11 @@ public class Order9 {
 	 */
 	public static final MMMessageAttribute mmTradingCapacity = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradePartyRole.mmTradingPartyCapacity;
+			businessElementTrace_lazy = () -> TradePartyRole.mmTradingPartyCapacity;
 			componentContext_lazy = () -> Order9.mmObject();
 			isDerived = false;
 			xmlTag = "TradgCpcty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradingCapacity";
 			definition = "Designates the capacity of the firm placing the order.";
 			maxOccurs = 1;
@@ -466,11 +466,11 @@ public class Order9 {
 	 */
 	public static final MMMessageAttribute mmPositionEffect = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmPositionEffect;
+			businessElementTrace_lazy = () -> SecuritiesOrder.mmPositionEffect;
 			componentContext_lazy = () -> Order9.mmObject();
 			isDerived = false;
 			xmlTag = "PosFct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PositionEffect";
 			definition = "Indicates whether the resulting position after a  trade should be an opening position or closing position. Used for omnibus accounting - where accounts are held on a gross basis instead of being netted together.";
 			maxOccurs = 1;
@@ -516,11 +516,11 @@ public class Order9 {
 	 */
 	public static final MMMessageAttribute mmDerivativeCovered = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Derivative.mmDerivativeCovered;
+			businessElementTrace_lazy = () -> Derivative.mmDerivativeCovered;
 			componentContext_lazy = () -> Order9.mmObject();
 			isDerived = false;
 			xmlTag = "DerivCvrd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DerivativeCovered";
 			definition = "Indicates whether the derivative product is covered or not by an underlying financial instrument position.";
 			maxOccurs = 1;
@@ -566,11 +566,11 @@ public class Order9 {
 	 */
 	public static final MMMessageAttribute mmSolicitedOrder = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmSolicitedOrder;
+			businessElementTrace_lazy = () -> SecuritiesOrder.mmSolicitedOrder;
 			componentContext_lazy = () -> Order9.mmObject();
 			isDerived = false;
 			xmlTag = "SlctdOrdr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SolicitedOrder";
 			definition = "Indicates that an order has been generated in response to an advertisement or an indication of interest.";
 			maxOccurs = 1;
@@ -613,7 +613,7 @@ public class Order9 {
 			componentContext_lazy = () -> Order9.mmObject();
 			isDerived = false;
 			xmlTag = "CmplcId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ComplianceIdentification";
 			definition = "Identification used to represent this transaction for compliance purposes.";
 			maxOccurs = 1;
@@ -659,11 +659,11 @@ public class Order9 {
 	 */
 	public static final MMMessageAttribute mmOrderRestrictions = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesRegulatoryDetails.mmOrderRestrictions;
+			businessElementTrace_lazy = () -> SecuritiesRegulatoryDetails.mmOrderRestrictions;
 			componentContext_lazy = () -> Order9.mmObject();
 			isDerived = false;
 			xmlTag = "OrdrRstrctns";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrderRestrictions";
 			definition = "Classification and restrictions linked to an order (for regulatory purpose).";
 			maxOccurs = 10;
@@ -705,11 +705,11 @@ public class Order9 {
 	 */
 	public static final MMMessageAttribute mmTradeDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Trade.mmTradeDateTime;
+			businessElementTrace_lazy = () -> Trade.mmTradeDateTime;
 			componentContext_lazy = () -> Order9.mmObject();
 			isDerived = false;
 			xmlTag = "TradDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeDate";
 			definition = "Specifies the date/time on which the trade was executed.";
 			maxOccurs = 1;
@@ -755,11 +755,11 @@ public class Order9 {
 	 */
 	public static final MMMessageAttribute mmClearingFeeType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTrade.mmClearingFeeType;
+			businessElementTrace_lazy = () -> SecuritiesTrade.mmClearingFeeType;
 			componentContext_lazy = () -> Order9.mmObject();
 			isDerived = false;
 			xmlTag = "ClrFeeTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClearingFeeType";
 			definition = "Indicates the type of fee being assessed of the customer for trade executions at an exchange.";
 			maxOccurs = 1;
@@ -808,11 +808,11 @@ public class Order9 {
 	 */
 	public static final MMMessageAttribute mmSideTimeInForce = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrderParameters.mmExecutionTimeLimit;
+			businessElementTrace_lazy = () -> SecuritiesOrderParameters.mmExecutionTimeLimit;
 			componentContext_lazy = () -> Order9.mmObject();
 			isDerived = false;
 			xmlTag = "SdTmInForce";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SideTimeInForce";
 			definition = "Indicates how long the order as specified in the side stays in effect. SideTimeInForce allows a two-sided cross order to specify order behavior separately for each side. Absence of this field indicates that TimeInForce should be referenced. SideTimeInForce will override TimeInForce if both are provided.";
 			maxOccurs = 1;
@@ -855,11 +855,11 @@ public class Order9 {
 	 */
 	public static final MMMessageAttribute mmCustomerCapacity = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmCustomerCapacity;
+			businessElementTrace_lazy = () -> SecuritiesOrder.mmCustomerCapacity;
 			componentContext_lazy = () -> Order9.mmObject();
 			isDerived = false;
 			xmlTag = "CstmrCpcty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CustomerCapacity";
 			definition = "Capacity of customer placing the order.";
 			maxOccurs = 1;
@@ -905,11 +905,11 @@ public class Order9 {
 	 */
 	public static final MMMessageAttribute mmForeignExchangeExecutionRequested = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmForeignExchangeExecutionRequested;
+			businessElementTrace_lazy = () -> SecuritiesOrder.mmForeignExchangeExecutionRequested;
 			componentContext_lazy = () -> Order9.mmObject();
 			isDerived = false;
 			xmlTag = "FrgnXchgExctnReqd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForeignExchangeExecutionRequested";
 			definition = "Indicates a request for a foreign exchange accommodation trade to be executed along with security transaction.";
 			maxOccurs = 1;
@@ -951,11 +951,11 @@ public class Order9 {
 	 */
 	public static final MMMessageAttribute mmSettlementCurrency = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmSettlementCurrency;
+			businessElementTrace_lazy = () -> SecuritiesOrder.mmSettlementCurrency;
 			componentContext_lazy = () -> Order9.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmCcy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementCurrency";
 			definition = "Required if ForeignExchangeExecutionRequested=Yes.";
 			maxOccurs = 1;
@@ -1002,11 +1002,11 @@ public class Order9 {
 	 */
 	public static final MMMessageAttribute mmOrderOriginatorEligibility = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmOrderOriginatorEligibility;
+			businessElementTrace_lazy = () -> SecuritiesOrder.mmOrderOriginatorEligibility;
 			componentContext_lazy = () -> Order9.mmObject();
 			isDerived = false;
 			xmlTag = "OrdrOrgtrElgblty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrderOriginatorEligibility";
 			definition = "Counterparties eligibility as defined by article 24 of the EU MiFID Directive applicable to transactions executed by investment firms for eligible counterparties.";
 			maxOccurs = 1;
@@ -1047,11 +1047,11 @@ public class Order9 {
 	 */
 	public static final MMMessageAssociationEnd mmPlaceOfExecution = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmPlaceOfTrade;
+			businessElementTrace_lazy = () -> SecuritiesOrder.mmPlaceOfTrade;
 			componentContext_lazy = () -> Order9.mmObject();
 			isDerived = false;
 			xmlTag = "PlcOfExctn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceOfExecution";
 			definition = "Unique and unambiguous way to identify an organisation.";
 			maxOccurs = 1;
@@ -1093,11 +1093,11 @@ public class Order9 {
 	 */
 	public static final MMMessageAssociationEnd mmSideOrderQuantityDetails = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmOrderedQuantity;
+			businessElementTrace_lazy = () -> SecuritiesOrder.mmOrderedQuantity;
 			componentContext_lazy = () -> Order9.mmObject();
 			isDerived = false;
 			xmlTag = "SdOrdrQtyDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SideOrderQuantityDetails";
 			definition = "Order details for a specific side.";
 			maxOccurs = 1;
@@ -1139,11 +1139,11 @@ public class Order9 {
 	 */
 	public static final MMMessageAssociationEnd mmPreAllocationDetails = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmSecuritiesOrderAllocation;
+			businessElementTrace_lazy = () -> SecuritiesOrder.mmSecuritiesOrderAllocation;
 			componentContext_lazy = () -> Order9.mmObject();
 			isDerived = false;
 			xmlTag = "PreAllcnDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreAllocationDetails";
 			definition = "Provides PreAllocation details.";
 			minOccurs = 0;
@@ -1184,11 +1184,11 @@ public class Order9 {
 	 */
 	public static final MMMessageAssociationEnd mmCommissionDetails = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Trade.mmTradeCommission;
+			businessElementTrace_lazy = () -> Trade.mmTradeCommission;
 			componentContext_lazy = () -> Order9.mmObject();
 			isDerived = false;
 			xmlTag = "ComssnDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommissionDetails";
 			definition = "Commission details related that may apply to the order.";
 			minOccurs = 0;
@@ -1231,11 +1231,11 @@ public class Order9 {
 	 */
 	public static final MMMessageAssociationEnd mmBookingDetails = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmBookingInstructions;
+			businessElementTrace_lazy = () -> SecuritiesOrder.mmBookingInstructions;
 			componentContext_lazy = () -> Order9.mmObject();
 			isDerived = false;
 			xmlTag = "BookgDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BookingDetails";
 			definition = "Provides details about the information used to book the executions of a trade.";
 			maxOccurs = 1;
@@ -1280,11 +1280,11 @@ public class Order9 {
 	 */
 	public static final MMMessageAssociationEnd mmTradingParties = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Trade.mmTradePartyRole;
+			businessElementTrace_lazy = () -> Trade.mmTradePartyRole;
 			componentContext_lazy = () -> Order9.mmObject();
 			isDerived = false;
 			xmlTag = "TradgPties";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradingParties";
 			definition = "Parties used for acting parties that applies to individual sides of the order.";
 			minOccurs = 0;
@@ -1326,11 +1326,11 @@ public class Order9 {
 	 */
 	public static final MMMessageAssociationEnd mmSettlementDetails = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeExecution.mmSecuritiesSettlement;
+			businessElementTrace_lazy = () -> SecuritiesTradeExecution.mmSecuritiesSettlement;
 			componentContext_lazy = () -> Order9.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementDetails";
 			definition = "Parameters applied to the settlement of a security transfer.";
 			maxOccurs = 1;
@@ -1375,11 +1375,11 @@ public class Order9 {
 	 */
 	public static final MMMessageAssociationEnd mmCashParties = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.mmPartyRole;
+			businessElementTrace_lazy = () -> Payment.mmPartyRole;
 			componentContext_lazy = () -> Order9.mmObject();
 			isDerived = false;
 			xmlTag = "CshPties";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashParties";
 			definition = "Payment processes required to transfer cash from the debtor to the creditor.";
 			maxOccurs = 1;
@@ -1421,11 +1421,11 @@ public class Order9 {
 	 */
 	public static final MMMessageAssociationEnd mmOtherBusinessParties = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmSecuritiesOrderPartyRole;
+			businessElementTrace_lazy = () -> SecuritiesOrder.mmSecuritiesOrderPartyRole;
 			componentContext_lazy = () -> Order9.mmObject();
 			isDerived = false;
 			xmlTag = "OthrBizPties";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherBusinessParties";
 			definition = "Other business parties involved in the transaction.";
 			maxOccurs = 1;
@@ -1476,7 +1476,7 @@ public class Order9 {
 			componentContext_lazy = () -> Order9.mmObject();
 			isDerived = false;
 			xmlTag = "RcvgSttlmPties";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceivingSettlementParties";
 			definition = "Chain of parties involved in the settlement of a transaction, including receipts and deliveries, book transfers, treasury deals, or other activities, resulting in the movement of a security or amount of money from one account to another.";
 			maxOccurs = 1;
@@ -1527,7 +1527,7 @@ public class Order9 {
 			componentContext_lazy = () -> Order9.mmObject();
 			isDerived = false;
 			xmlTag = "DlvrgSttlmPties";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeliveringSettlementParties";
 			definition = "Chain of parties involved in the settlement of a transaction, including receipts and deliveries, book transfers, treasury deals, or other activities, resulting in the movement of a security or amount of money from one account to another.";
 			maxOccurs = 1;
@@ -1571,11 +1571,11 @@ public class Order9 {
 	 */
 	public static final MMMessageAssociationEnd mmAmountsDetails = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmOrderExecution;
+			businessElementTrace_lazy = () -> SecuritiesOrder.mmOrderExecution;
 			componentContext_lazy = () -> Order9.mmObject();
 			isDerived = false;
 			xmlTag = "AmtsDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmountsDetails";
 			definition = "Amount of money debited and credited on the books of an account servicer.";
 			minOccurs = 0;
@@ -1587,20 +1587,14 @@ public class Order9 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Order9.mmClientOrderIdentification, com.tools20022.repository.msg.Order9.mmClientOrderLinkIdentification,
-						com.tools20022.repository.msg.Order9.mmSecondaryClientOrderIdentification, com.tools20022.repository.msg.Order9.mmCashMargin, com.tools20022.repository.msg.Order9.mmTradeOriginationDate,
-						com.tools20022.repository.msg.Order9.mmTradingCapacity, com.tools20022.repository.msg.Order9.mmPositionEffect, com.tools20022.repository.msg.Order9.mmDerivativeCovered,
-						com.tools20022.repository.msg.Order9.mmSolicitedOrder, com.tools20022.repository.msg.Order9.mmComplianceIdentification, com.tools20022.repository.msg.Order9.mmOrderRestrictions,
-						com.tools20022.repository.msg.Order9.mmTradeDate, com.tools20022.repository.msg.Order9.mmClearingFeeType, com.tools20022.repository.msg.Order9.mmSideTimeInForce,
-						com.tools20022.repository.msg.Order9.mmCustomerCapacity, com.tools20022.repository.msg.Order9.mmForeignExchangeExecutionRequested, com.tools20022.repository.msg.Order9.mmSettlementCurrency,
-						com.tools20022.repository.msg.Order9.mmOrderOriginatorEligibility, com.tools20022.repository.msg.Order9.mmPlaceOfExecution, com.tools20022.repository.msg.Order9.mmSideOrderQuantityDetails,
-						com.tools20022.repository.msg.Order9.mmPreAllocationDetails, com.tools20022.repository.msg.Order9.mmCommissionDetails, com.tools20022.repository.msg.Order9.mmBookingDetails,
-						com.tools20022.repository.msg.Order9.mmTradingParties, com.tools20022.repository.msg.Order9.mmSettlementDetails, com.tools20022.repository.msg.Order9.mmCashParties,
-						com.tools20022.repository.msg.Order9.mmOtherBusinessParties, com.tools20022.repository.msg.Order9.mmReceivingSettlementParties, com.tools20022.repository.msg.Order9.mmDeliveringSettlementParties,
-						com.tools20022.repository.msg.Order9.mmAmountsDetails);
+				messageElement_lazy = () -> Arrays.asList(Order9.mmClientOrderIdentification, Order9.mmClientOrderLinkIdentification, Order9.mmSecondaryClientOrderIdentification, Order9.mmCashMargin, Order9.mmTradeOriginationDate,
+						Order9.mmTradingCapacity, Order9.mmPositionEffect, Order9.mmDerivativeCovered, Order9.mmSolicitedOrder, Order9.mmComplianceIdentification, Order9.mmOrderRestrictions, Order9.mmTradeDate, Order9.mmClearingFeeType,
+						Order9.mmSideTimeInForce, Order9.mmCustomerCapacity, Order9.mmForeignExchangeExecutionRequested, Order9.mmSettlementCurrency, Order9.mmOrderOriginatorEligibility, Order9.mmPlaceOfExecution,
+						Order9.mmSideOrderQuantityDetails, Order9.mmPreAllocationDetails, Order9.mmCommissionDetails, Order9.mmBookingDetails, Order9.mmTradingParties, Order9.mmSettlementDetails, Order9.mmCashParties,
+						Order9.mmOtherBusinessParties, Order9.mmReceivingSettlementParties, Order9.mmDeliveringSettlementParties, Order9.mmAmountsDetails);
 				trace_lazy = () -> SecuritiesOrder.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
 						return DateFormat.getDateInstance(java.text.DateFormat.LONG).parse("September 9, 2016");

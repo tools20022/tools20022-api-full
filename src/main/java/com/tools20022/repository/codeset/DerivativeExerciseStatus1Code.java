@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.DerivativeExerciseStatusCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -80,7 +82,7 @@ public class DerivativeExerciseStatus1Code extends DerivativeExerciseStatusCode 
 	 */
 	public static final MMCode mmExercised = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Exercised";
 			owner_lazy = () -> DerivativeExerciseStatus1Code.mmObject();
 		}
@@ -103,7 +105,7 @@ public class DerivativeExerciseStatus1Code extends DerivativeExerciseStatusCode 
 	 */
 	public static final MMCode mmExpired = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Expired";
 			owner_lazy = () -> DerivativeExerciseStatus1Code.mmObject();
 		}
@@ -126,7 +128,7 @@ public class DerivativeExerciseStatus1Code extends DerivativeExerciseStatusCode 
 	 */
 	public static final MMCode mmValid = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Valid";
 			owner_lazy = () -> DerivativeExerciseStatus1Code.mmObject();
 		}
@@ -135,12 +137,11 @@ public class DerivativeExerciseStatus1Code extends DerivativeExerciseStatusCode 
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DerivativeExerciseStatus1Code";
 				definition = "Specifies the exercise status of the derivative products.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DerivativeExerciseStatus1Code.mmExercised, com.tools20022.repository.codeset.DerivativeExerciseStatus1Code.mmExpired,
-						com.tools20022.repository.codeset.DerivativeExerciseStatus1Code.mmValid);
+				code_lazy = () -> Arrays.asList(DerivativeExerciseStatus1Code.mmExercised, DerivativeExerciseStatus1Code.mmExpired, DerivativeExerciseStatus1Code.mmValid);
 				trace_lazy = () -> DerivativeExerciseStatusCode.mmObject();
 			}
 		});

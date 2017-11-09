@@ -19,7 +19,9 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.RequestedIndicator;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -138,7 +140,7 @@ public class StandingOrderReturnCriteria1 {
 			componentContext_lazy = () -> StandingOrderReturnCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "StgOrdrIdInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StandingOrderIdentificationIndicator";
 			definition = "Defines the criteria used to report on a multilateral balance.";
 			maxOccurs = 1;
@@ -180,7 +182,7 @@ public class StandingOrderReturnCriteria1 {
 			componentContext_lazy = () -> StandingOrderReturnCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "TpInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TypeIndicator";
 			definition = "Indicates whether the standing order type is requested.";
 			maxOccurs = 1;
@@ -223,7 +225,7 @@ public class StandingOrderReturnCriteria1 {
 			componentContext_lazy = () -> StandingOrderReturnCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "SysMmbInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SystemMemberIndicator";
 			definition = "Indicates whether the system member identification is requested.";
 			maxOccurs = 1;
@@ -266,7 +268,7 @@ public class StandingOrderReturnCriteria1 {
 			componentContext_lazy = () -> StandingOrderReturnCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "RspnsblPtyInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ResponsiblePartyIndicator";
 			definition = "Indicates whether the responsible party identification is requested.";
 			maxOccurs = 1;
@@ -308,7 +310,7 @@ public class StandingOrderReturnCriteria1 {
 			componentContext_lazy = () -> StandingOrderReturnCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "CcyInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrencyIndicator";
 			definition = "Indicates whether the account currency is requested.";
 			maxOccurs = 1;
@@ -350,7 +352,7 @@ public class StandingOrderReturnCriteria1 {
 			componentContext_lazy = () -> StandingOrderReturnCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "DbtrAcctInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DebtorAccountIndicator";
 			definition = "Indicates whether the account type is requested.";
 			maxOccurs = 1;
@@ -392,7 +394,7 @@ public class StandingOrderReturnCriteria1 {
 			componentContext_lazy = () -> StandingOrderReturnCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "CdtrAcctInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditorAccountIndicator";
 			definition = "Indicates whether the multilateral limit is requested.";
 			maxOccurs = 1;
@@ -435,7 +437,7 @@ public class StandingOrderReturnCriteria1 {
 			componentContext_lazy = () -> StandingOrderReturnCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "AssoctdPoolAcct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AssociatedPoolAccount";
 			definition = "Indicates whether the associated pool account is requested.";
 			maxOccurs = 1;
@@ -477,7 +479,7 @@ public class StandingOrderReturnCriteria1 {
 			componentContext_lazy = () -> StandingOrderReturnCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "FrqcyInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FrequencyIndicator";
 			definition = "Indicates whether the frequency is requested.";
 			maxOccurs = 1;
@@ -519,7 +521,7 @@ public class StandingOrderReturnCriteria1 {
 			componentContext_lazy = () -> StandingOrderReturnCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "ExctnTpInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExecutionTypeIndicator";
 			definition = "Indicates whether the execution type is requested.";
 			maxOccurs = 1;
@@ -562,7 +564,7 @@ public class StandingOrderReturnCriteria1 {
 			componentContext_lazy = () -> StandingOrderReturnCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "VldtyFrInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValidityFromIndicator";
 			definition = "Indicates whether the account standing order is requested.";
 			maxOccurs = 1;
@@ -605,7 +607,7 @@ public class StandingOrderReturnCriteria1 {
 			componentContext_lazy = () -> StandingOrderReturnCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "VldToInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValidToIndicator";
 			definition = "Indicates whether the account owner information is requested.";
 			maxOccurs = 1;
@@ -648,7 +650,7 @@ public class StandingOrderReturnCriteria1 {
 			componentContext_lazy = () -> StandingOrderReturnCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "LkSetIdInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LinkSetIdentificationIndicator";
 			definition = "Indicates whether the link set identification is requested.";
 			maxOccurs = 1;
@@ -693,7 +695,7 @@ public class StandingOrderReturnCriteria1 {
 			componentContext_lazy = () -> StandingOrderReturnCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "LkSetOrdrIdInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LinkSetOrderIdentificationIndicator";
 			definition = "Indicates whether the identification of a standing order within a link set is requested.";
 			maxOccurs = 1;
@@ -738,7 +740,7 @@ public class StandingOrderReturnCriteria1 {
 			componentContext_lazy = () -> StandingOrderReturnCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "LkSetOrdrSeqInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LinkSetOrderSequenceIndicator";
 			definition = "Indicates whether the sequence of a standing order within a link set is requested.";
 			maxOccurs = 1;
@@ -782,7 +784,7 @@ public class StandingOrderReturnCriteria1 {
 			componentContext_lazy = () -> StandingOrderReturnCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "TtlAmtInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalAmountIndicator";
 			definition = "Indicates whether the total amount per standing order type is requested.";
 			maxOccurs = 1;
@@ -825,7 +827,7 @@ public class StandingOrderReturnCriteria1 {
 			componentContext_lazy = () -> StandingOrderReturnCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "ZeroSweepInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ZeroSweepIndicator";
 			definition = "Indicates whether the zero sweeping indicator is requested.";
 			maxOccurs = 1;
@@ -837,17 +839,14 @@ public class StandingOrderReturnCriteria1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StandingOrderReturnCriteria1.mmStandingOrderIdentificationIndicator, com.tools20022.repository.msg.StandingOrderReturnCriteria1.mmTypeIndicator,
-						com.tools20022.repository.msg.StandingOrderReturnCriteria1.mmSystemMemberIndicator, com.tools20022.repository.msg.StandingOrderReturnCriteria1.mmResponsiblePartyIndicator,
-						com.tools20022.repository.msg.StandingOrderReturnCriteria1.mmCurrencyIndicator, com.tools20022.repository.msg.StandingOrderReturnCriteria1.mmDebtorAccountIndicator,
-						com.tools20022.repository.msg.StandingOrderReturnCriteria1.mmCreditorAccountIndicator, com.tools20022.repository.msg.StandingOrderReturnCriteria1.mmAssociatedPoolAccount,
-						com.tools20022.repository.msg.StandingOrderReturnCriteria1.mmFrequencyIndicator, com.tools20022.repository.msg.StandingOrderReturnCriteria1.mmExecutionTypeIndicator,
-						com.tools20022.repository.msg.StandingOrderReturnCriteria1.mmValidityFromIndicator, com.tools20022.repository.msg.StandingOrderReturnCriteria1.mmValidToIndicator,
-						com.tools20022.repository.msg.StandingOrderReturnCriteria1.mmLinkSetIdentificationIndicator, com.tools20022.repository.msg.StandingOrderReturnCriteria1.mmLinkSetOrderIdentificationIndicator,
-						com.tools20022.repository.msg.StandingOrderReturnCriteria1.mmLinkSetOrderSequenceIndicator, com.tools20022.repository.msg.StandingOrderReturnCriteria1.mmTotalAmountIndicator,
-						com.tools20022.repository.msg.StandingOrderReturnCriteria1.mmZeroSweepIndicator);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(StandingOrderReturnCriteria1.mmStandingOrderIdentificationIndicator, StandingOrderReturnCriteria1.mmTypeIndicator, StandingOrderReturnCriteria1.mmSystemMemberIndicator,
+						StandingOrderReturnCriteria1.mmResponsiblePartyIndicator, StandingOrderReturnCriteria1.mmCurrencyIndicator, StandingOrderReturnCriteria1.mmDebtorAccountIndicator,
+						StandingOrderReturnCriteria1.mmCreditorAccountIndicator, StandingOrderReturnCriteria1.mmAssociatedPoolAccount, StandingOrderReturnCriteria1.mmFrequencyIndicator,
+						StandingOrderReturnCriteria1.mmExecutionTypeIndicator, StandingOrderReturnCriteria1.mmValidityFromIndicator, StandingOrderReturnCriteria1.mmValidToIndicator,
+						StandingOrderReturnCriteria1.mmLinkSetIdentificationIndicator, StandingOrderReturnCriteria1.mmLinkSetOrderIdentificationIndicator, StandingOrderReturnCriteria1.mmLinkSetOrderSequenceIndicator,
+						StandingOrderReturnCriteria1.mmTotalAmountIndicator, StandingOrderReturnCriteria1.mmZeroSweepIndicator);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "StandingOrderReturnCriteria1";
 				definition = "Defines the criteria used to report on standing orders.";
 			}

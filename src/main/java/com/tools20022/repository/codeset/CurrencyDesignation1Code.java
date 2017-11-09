@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CurrencyDesignationCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -77,7 +79,7 @@ public class CurrencyDesignation1Code extends CurrencyDesignationCode {
 	 */
 	public static final MMCode mmOnshore = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Onshore";
 			owner_lazy = () -> CurrencyDesignation1Code.mmObject();
 		}
@@ -100,7 +102,7 @@ public class CurrencyDesignation1Code extends CurrencyDesignationCode {
 	 */
 	public static final MMCode mmOffshore = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Offshore";
 			owner_lazy = () -> CurrencyDesignation1Code.mmObject();
 		}
@@ -109,11 +111,11 @@ public class CurrencyDesignation1Code extends CurrencyDesignationCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CurrencyDesignation1Code";
 				definition = "Specifies whether a currency is settled offshore or onshore.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CurrencyDesignation1Code.mmOnshore, com.tools20022.repository.codeset.CurrencyDesignation1Code.mmOffshore);
+				code_lazy = () -> Arrays.asList(CurrencyDesignation1Code.mmOnshore, CurrencyDesignation1Code.mmOffshore);
 				trace_lazy = () -> CurrencyDesignationCode.mmObject();
 			}
 		});

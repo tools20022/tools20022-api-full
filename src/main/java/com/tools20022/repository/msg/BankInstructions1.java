@@ -19,8 +19,10 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.Max2000Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -92,7 +94,7 @@ public class BankInstructions1 {
 			componentContext_lazy = () -> BankInstructions1.mmObject();
 			isDerived = false;
 			xmlTag = "Txt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Text";
 			definition = "Instructions from the bank.";
 			maxOccurs = 5;
@@ -133,7 +135,7 @@ public class BankInstructions1 {
 			componentContext_lazy = () -> BankInstructions1.mmObject();
 			isDerived = false;
 			xmlTag = "LastDtForRspn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LastDateForResponse";
 			definition = "Last date for a response to the bank instructions.";
 			maxOccurs = 1;
@@ -145,9 +147,9 @@ public class BankInstructions1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BankInstructions1.mmText, com.tools20022.repository.msg.BankInstructions1.mmLastDateForResponse);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(BankInstructions1.mmText, BankInstructions1.mmLastDateForResponse);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "BankInstructions1";
 				definition = "Details of the instructions from the bank.";
 			}

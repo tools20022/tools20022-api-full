@@ -19,7 +19,9 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.SecuritiesPricing;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -93,7 +95,7 @@ public class IndicativeOrMarketPrice6Choice {
 			componentContext_lazy = () -> IndicativeOrMarketPrice6Choice.mmObject();
 			isDerived = false;
 			xmlTag = "IndctvPric";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IndicativePrice";
 			definition = "Estimated price, for example, for valuation purposes.";
 			maxOccurs = 1;
@@ -135,7 +137,7 @@ public class IndicativeOrMarketPrice6Choice {
 			componentContext_lazy = () -> IndicativeOrMarketPrice6Choice.mmObject();
 			isDerived = false;
 			xmlTag = "MktPric";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketPrice";
 			definition = "Last reported/known price of a financial instrument in a market.";
 			maxOccurs = 1;
@@ -148,10 +150,10 @@ public class IndicativeOrMarketPrice6Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.IndicativeOrMarketPrice6Choice.mmIndicativePrice, com.tools20022.repository.choice.IndicativeOrMarketPrice6Choice.mmMarketPrice);
+				messageElement_lazy = () -> Arrays.asList(IndicativeOrMarketPrice6Choice.mmIndicativePrice, IndicativeOrMarketPrice6Choice.mmMarketPrice);
 				trace_lazy = () -> SecuritiesPricing.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "IndicativeOrMarketPrice6Choice";
 				definition = "Choice between an indicative price or a market price.";
 			}

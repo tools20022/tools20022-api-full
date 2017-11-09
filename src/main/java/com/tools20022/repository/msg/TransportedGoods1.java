@@ -20,8 +20,12 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max70Text;
 import com.tools20022.repository.entity.Goods;
+import com.tools20022.repository.entity.Product;
+import com.tools20022.repository.entity.PurchaseOrder;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -106,11 +110,11 @@ public class TransportedGoods1 {
 	 */
 	public static final MMMessageAssociationEnd mmPurchaseOrderReference = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PurchaseOrder.mmIdentification;
+			businessElementTrace_lazy = () -> PurchaseOrder.mmIdentification;
 			componentContext_lazy = () -> TransportedGoods1.mmObject();
 			isDerived = false;
 			xmlTag = "PurchsOrdrRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PurchaseOrderReference";
 			definition = "Reference to the purchase order of the underlying transaction.";
 			maxOccurs = 1;
@@ -155,11 +159,11 @@ public class TransportedGoods1 {
 	 */
 	public static final MMMessageAttribute mmGoodsDescription = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Product.mmDescription;
+			businessElementTrace_lazy = () -> Product.mmDescription;
 			componentContext_lazy = () -> TransportedGoods1.mmObject();
 			isDerived = false;
 			xmlTag = "GoodsDesc";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GoodsDescription";
 			definition = "Information about the goods and/or services of a trade transaction.";
 			maxOccurs = 1;
@@ -204,7 +208,7 @@ public class TransportedGoods1 {
 			componentContext_lazy = () -> TransportedGoods1.mmObject();
 			isDerived = false;
 			xmlTag = "BuyrDfndInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BuyerDefinedInformation";
 			definition = "Information important for the users of the message/service, which cannot be captured in any other message component/element. For example: Warehouse number.";
 			minOccurs = 0;
@@ -249,7 +253,7 @@ public class TransportedGoods1 {
 			componentContext_lazy = () -> TransportedGoods1.mmObject();
 			isDerived = false;
 			xmlTag = "SellrDfndInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SellerDefinedInformation";
 			definition = "Information important for the users of the message/service, which cannot be captured in any other message component/element. For example: Warehouse number.";
 			minOccurs = 0;
@@ -261,11 +265,10 @@ public class TransportedGoods1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransportedGoods1.mmPurchaseOrderReference, com.tools20022.repository.msg.TransportedGoods1.mmGoodsDescription,
-						com.tools20022.repository.msg.TransportedGoods1.mmBuyerDefinedInformation, com.tools20022.repository.msg.TransportedGoods1.mmSellerDefinedInformation);
+				messageElement_lazy = () -> Arrays.asList(TransportedGoods1.mmPurchaseOrderReference, TransportedGoods1.mmGoodsDescription, TransportedGoods1.mmBuyerDefinedInformation, TransportedGoods1.mmSellerDefinedInformation);
 				trace_lazy = () -> Goods.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TransportedGoods1";
 				definition = "Goods or services that are part of a commercial trade agreement.";
 			}

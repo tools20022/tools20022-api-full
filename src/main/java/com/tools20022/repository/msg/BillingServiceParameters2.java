@@ -20,8 +20,13 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.DecimalNumber;
+import com.tools20022.repository.entity.AccountService;
 import com.tools20022.repository.entity.CashAccountService;
+import com.tools20022.repository.entity.Product;
+import com.tools20022.repository.entity.ProductQuantity;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -110,7 +115,7 @@ public class BillingServiceParameters2 {
 			componentContext_lazy = () -> BillingServiceParameters2.mmObject();
 			isDerived = false;
 			xmlTag = "BkSvc";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BankService";
 			definition = "Specifies the details to fully identify the bank service.";
 			maxOccurs = 1;
@@ -155,11 +160,11 @@ public class BillingServiceParameters2 {
 	 */
 	public static final MMMessageAttribute mmVolume = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ProductQuantity.mmValue;
+			businessElementTrace_lazy = () -> ProductQuantity.mmValue;
 			componentContext_lazy = () -> BillingServiceParameters2.mmObject();
 			isDerived = false;
 			xmlTag = "Vol";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Volume";
 			definition = "Count or number of items (volume) involved in the charge.";
 			maxOccurs = 1;
@@ -204,11 +209,11 @@ public class BillingServiceParameters2 {
 	 */
 	public static final MMMessageAssociationEnd mmUnitPrice = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Product.mmUnitPrice;
+			businessElementTrace_lazy = () -> Product.mmUnitPrice;
 			componentContext_lazy = () -> BillingServiceParameters2.mmObject();
 			isDerived = false;
 			xmlTag = "UnitPric";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnitPrice";
 			definition = "Price per item or unit used to calculate the charge expressed in the pricing currency.";
 			maxOccurs = 1;
@@ -254,11 +259,11 @@ public class BillingServiceParameters2 {
 	 */
 	public static final MMMessageAssociationEnd mmServiceChargeAmount = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AccountService.mmAccountAdministrationCharge;
+			businessElementTrace_lazy = () -> AccountService.mmAccountAdministrationCharge;
 			componentContext_lazy = () -> BillingServiceParameters2.mmObject();
 			isDerived = false;
 			xmlTag = "SvcChrgAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ServiceChargeAmount";
 			definition = "Amount of the calculated charge expressed in the pricing currency, exclusive of any tax.";
 			maxOccurs = 1;
@@ -271,11 +276,10 @@ public class BillingServiceParameters2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BillingServiceParameters2.mmBankService, com.tools20022.repository.msg.BillingServiceParameters2.mmVolume,
-						com.tools20022.repository.msg.BillingServiceParameters2.mmUnitPrice, com.tools20022.repository.msg.BillingServiceParameters2.mmServiceChargeAmount);
+				messageElement_lazy = () -> Arrays.asList(BillingServiceParameters2.mmBankService, BillingServiceParameters2.mmVolume, BillingServiceParameters2.mmUnitPrice, BillingServiceParameters2.mmServiceChargeAmount);
 				trace_lazy = () -> CashAccountService.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "BillingServiceParameters2";
 				definition = "Specifies the detailed parameters a service to be billed.";
 			}

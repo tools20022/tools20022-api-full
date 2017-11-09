@@ -20,6 +20,7 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.InterestPaymentSchedule1Choice;
 import com.tools20022.repository.choice.InterestRate2Choice;
 import com.tools20022.repository.choice.PaymentSchedule1Choice;
@@ -28,9 +29,8 @@ import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
 import com.tools20022.repository.datatype.Exact1NumericText;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.TrueFalseIndicator;
-import com.tools20022.repository.entity.BuyerRole;
-import com.tools20022.repository.entity.Loan;
-import com.tools20022.repository.entity.SellerRole;
+import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -147,11 +147,11 @@ public class LoanContract1 {
 	 */
 	public static final MMMessageAttribute mmContractDocumentIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmIdentification;
+			businessElementTrace_lazy = () -> Security.mmIdentification;
 			componentContext_lazy = () -> LoanContract1.mmObject();
 			isDerived = false;
 			xmlTag = "CtrctDocId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ContractDocumentIdentification";
 			definition = "Contract document referenced from this loan agreement.";
 			maxOccurs = 1;
@@ -196,7 +196,7 @@ public class LoanContract1 {
 			componentContext_lazy = () -> LoanContract1.mmObject();
 			isDerived = false;
 			xmlTag = "Buyr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Buyer";
 			definition = "Party that is specified as the buyer for this loan agreement.";
 			minOccurs = 1;
@@ -241,7 +241,7 @@ public class LoanContract1 {
 			componentContext_lazy = () -> LoanContract1.mmObject();
 			isDerived = false;
 			xmlTag = "Sellr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Seller";
 			definition = "Party that is specified as the seller for this loan agreement.";
 			minOccurs = 1;
@@ -284,11 +284,11 @@ public class LoanContract1 {
 	 */
 	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Loan.mmPrincipalAmount;
+			businessElementTrace_lazy = () -> Loan.mmPrincipalAmount;
 			componentContext_lazy = () -> LoanContract1.mmObject();
 			isDerived = false;
 			xmlTag = "Amt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Loan amount as defined in the contract.";
 			maxOccurs = 1;
@@ -330,11 +330,11 @@ public class LoanContract1 {
 	 */
 	public static final MMMessageAttribute mmMaturityDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Asset.mmMaturityDate;
+			businessElementTrace_lazy = () -> Asset.mmMaturityDate;
 			componentContext_lazy = () -> LoanContract1.mmObject();
 			isDerived = false;
 			xmlTag = "MtrtyDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaturityDate";
 			definition = "Planned final repayment date at the time of issuance.";
 			maxOccurs = 1;
@@ -376,7 +376,7 @@ public class LoanContract1 {
 			componentContext_lazy = () -> LoanContract1.mmObject();
 			isDerived = false;
 			xmlTag = "PrlngtnFlg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProlongationFlag";
 			definition = "Indicates whether the contract duration is extended or not.";
 			maxOccurs = 1;
@@ -418,11 +418,11 @@ public class LoanContract1 {
 	 */
 	public static final MMMessageAttribute mmStartDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Issuance.mmIssueDate;
+			businessElementTrace_lazy = () -> Issuance.mmIssueDate;
 			componentContext_lazy = () -> LoanContract1.mmObject();
 			isDerived = false;
 			xmlTag = "StartDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StartDate";
 			definition = "Start date of the loan contract.";
 			maxOccurs = 1;
@@ -465,11 +465,11 @@ public class LoanContract1 {
 	 */
 	public static final MMMessageAttribute mmSettlementCurrency = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesConversion.mmConversionQuotedCurrency;
+			businessElementTrace_lazy = () -> SecuritiesConversion.mmConversionQuotedCurrency;
 			componentContext_lazy = () -> LoanContract1.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmCcy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementCurrency";
 			definition = "Currency in which the loan is being settled.";
 			maxOccurs = 1;
@@ -511,7 +511,7 @@ public class LoanContract1 {
 			componentContext_lazy = () -> LoanContract1.mmObject();
 			isDerived = false;
 			xmlTag = "SpclConds";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SpecialConditions";
 			definition = "When the amount is credited outside of the country, special conditions are applicable.";
 			maxOccurs = 1;
@@ -553,7 +553,7 @@ public class LoanContract1 {
 			componentContext_lazy = () -> LoanContract1.mmObject();
 			isDerived = false;
 			xmlTag = "DrtnCd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DurationCode";
 			definition = "Loan duration in a coded form.";
 			maxOccurs = 1;
@@ -594,11 +594,11 @@ public class LoanContract1 {
 	 */
 	public static final MMMessageAssociationEnd mmInterestRate = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentTerms.mmPercentage;
+			businessElementTrace_lazy = () -> PaymentTerms.mmPercentage;
 			componentContext_lazy = () -> LoanContract1.mmObject();
 			isDerived = false;
 			xmlTag = "IntrstRate";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterestRate";
 			definition = "Interest rate for the loan.";
 			maxOccurs = 1;
@@ -641,11 +641,11 @@ public class LoanContract1 {
 	 */
 	public static final MMMessageAssociationEnd mmTranche = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Asset.mmTranche;
+			businessElementTrace_lazy = () -> Asset.mmTranche;
 			componentContext_lazy = () -> LoanContract1.mmObject();
 			isDerived = false;
 			xmlTag = "Trch";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Tranche";
 			definition = "One part or division of the loan, used to define the repayment.";
 			minOccurs = 0;
@@ -687,11 +687,11 @@ public class LoanContract1 {
 	 */
 	public static final MMMessageAssociationEnd mmPaymentSchedule = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentObligation.mmPaymentTerms;
+			businessElementTrace_lazy = () -> PaymentObligation.mmPaymentTerms;
 			componentContext_lazy = () -> LoanContract1.mmObject();
 			isDerived = false;
 			xmlTag = "PmtSchdl";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentSchedule";
 			definition = "Schedule of the payments defined for the loan contract.";
 			maxOccurs = 1;
@@ -735,11 +735,11 @@ public class LoanContract1 {
 	 */
 	public static final MMMessageAssociationEnd mmInterestSchedule = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Loan.mmInterestPaymentsSchedule;
+			businessElementTrace_lazy = () -> Loan.mmInterestPaymentsSchedule;
 			componentContext_lazy = () -> LoanContract1.mmObject();
 			isDerived = false;
 			xmlTag = "IntrstSchdl";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterestSchedule";
 			definition = "Schedule of the interest payments defined for the loan contract.";
 			maxOccurs = 1;
@@ -783,11 +783,11 @@ public class LoanContract1 {
 	 */
 	public static final MMMessageAttribute mmIntraCompanyLoan = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Loan.mmIntraCompanyLoanIndicator;
+			businessElementTrace_lazy = () -> Loan.mmIntraCompanyLoanIndicator;
 			componentContext_lazy = () -> LoanContract1.mmObject();
 			isDerived = false;
 			xmlTag = "IntraCpnyLn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IntraCompanyLoan";
 			definition = "Loan is an intra company loan.";
 			maxOccurs = 1;
@@ -828,11 +828,11 @@ public class LoanContract1 {
 	 */
 	public static final MMMessageAssociationEnd mmCollateral = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CollateralAgreement.mmCollateral;
+			businessElementTrace_lazy = () -> CollateralAgreement.mmCollateral;
 			componentContext_lazy = () -> LoanContract1.mmObject();
 			isDerived = false;
 			xmlTag = "Coll";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Collateral";
 			definition = "Details of the collateral for the loan.";
 			maxOccurs = 1;
@@ -880,7 +880,7 @@ public class LoanContract1 {
 			componentContext_lazy = () -> LoanContract1.mmObject();
 			isDerived = false;
 			xmlTag = "SndctdLn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SyndicatedLoan";
 			definition = "Loan offered by a group of lenders (called a syndicate) who work together to provide funds for a single borrower. ";
 			minOccurs = 0;
@@ -922,11 +922,11 @@ public class LoanContract1 {
 	 */
 	public static final MMMessageAssociationEnd mmAttachment = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.RegisteredContract.mmAttachment;
+			businessElementTrace_lazy = () -> RegisteredContract.mmAttachment;
 			componentContext_lazy = () -> LoanContract1.mmObject();
 			isDerived = false;
 			xmlTag = "Attchmnt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Attachment";
 			definition = "Documents provided as attachments to the loan contract.";
 			minOccurs = 0;
@@ -938,16 +938,12 @@ public class LoanContract1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LoanContract1.mmContractDocumentIdentification, com.tools20022.repository.msg.LoanContract1.mmBuyer,
-						com.tools20022.repository.msg.LoanContract1.mmSeller, com.tools20022.repository.msg.LoanContract1.mmAmount, com.tools20022.repository.msg.LoanContract1.mmMaturityDate,
-						com.tools20022.repository.msg.LoanContract1.mmProlongationFlag, com.tools20022.repository.msg.LoanContract1.mmStartDate, com.tools20022.repository.msg.LoanContract1.mmSettlementCurrency,
-						com.tools20022.repository.msg.LoanContract1.mmSpecialConditions, com.tools20022.repository.msg.LoanContract1.mmDurationCode, com.tools20022.repository.msg.LoanContract1.mmInterestRate,
-						com.tools20022.repository.msg.LoanContract1.mmTranche, com.tools20022.repository.msg.LoanContract1.mmPaymentSchedule, com.tools20022.repository.msg.LoanContract1.mmInterestSchedule,
-						com.tools20022.repository.msg.LoanContract1.mmIntraCompanyLoan, com.tools20022.repository.msg.LoanContract1.mmCollateral, com.tools20022.repository.msg.LoanContract1.mmSyndicatedLoan,
-						com.tools20022.repository.msg.LoanContract1.mmAttachment);
+				messageElement_lazy = () -> Arrays.asList(LoanContract1.mmContractDocumentIdentification, LoanContract1.mmBuyer, LoanContract1.mmSeller, LoanContract1.mmAmount, LoanContract1.mmMaturityDate,
+						LoanContract1.mmProlongationFlag, LoanContract1.mmStartDate, LoanContract1.mmSettlementCurrency, LoanContract1.mmSpecialConditions, LoanContract1.mmDurationCode, LoanContract1.mmInterestRate,
+						LoanContract1.mmTranche, LoanContract1.mmPaymentSchedule, LoanContract1.mmInterestSchedule, LoanContract1.mmIntraCompanyLoan, LoanContract1.mmCollateral, LoanContract1.mmSyndicatedLoan, LoanContract1.mmAttachment);
 				trace_lazy = () -> Loan.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "LoanContract1";
 				definition = "Contract by which an amount of money in exchange for future repayment of the principal amount along with interest or other finance charges.";
 			}

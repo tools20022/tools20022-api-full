@@ -20,9 +20,12 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ActiveCurrencyCode;
 import com.tools20022.repository.datatype.PercentageRate;
+import com.tools20022.repository.entity.InvestmentFundClass;
 import com.tools20022.repository.entity.Reinvestment;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -122,15 +125,15 @@ public class Reinvestment2 {
 	 */
 	public static final MMMessageAssociationEnd mmFinancialInstrumentDetails = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Reinvestment.mmInvestmentFundClass;
+			businessElementTrace_lazy = () -> Reinvestment.mmInvestmentFundClass;
 			componentContext_lazy = () -> Reinvestment2.mmObject();
 			isDerived = false;
 			xmlTag = "FinInstrmDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentDetails";
 			definition = "Investment fund for the reinvestment.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Reinvestment3.mmFinancialInstrumentDetails);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Reinvestment1.mmFundDetails;
+			nextVersions_lazy = () -> Arrays.asList(Reinvestment3.mmFinancialInstrumentDetails);
+			previousVersion_lazy = () -> Reinvestment1.mmFundDetails;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -189,15 +192,15 @@ public class Reinvestment2 {
 	 */
 	public static final MMMessageAttribute mmRequestedNAVCurrency = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmRequestedNAVCurrency;
+			businessElementTrace_lazy = () -> InvestmentFundClass.mmRequestedNAVCurrency;
 			componentContext_lazy = () -> Reinvestment2.mmObject();
 			isDerived = false;
 			xmlTag = "ReqdNAVCcy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestedNAVCurrency";
 			definition = "Currency to be used for pricing the fund. This currency must be among the set of currencies in which the price may be expressed, as stated in the prospectus.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Reinvestment3.mmRequestedNAVCurrency);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Reinvestment1.mmRequestedNAVCurrency;
+			nextVersions_lazy = () -> Arrays.asList(Reinvestment3.mmRequestedNAVCurrency);
+			previousVersion_lazy = () -> Reinvestment1.mmRequestedNAVCurrency;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyCode.mmObject();
@@ -251,15 +254,15 @@ public class Reinvestment2 {
 	 */
 	public static final MMMessageAttribute mmReinvestmentPercentage = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Reinvestment.mmPercentage;
+			businessElementTrace_lazy = () -> Reinvestment.mmPercentage;
 			componentContext_lazy = () -> Reinvestment2.mmObject();
 			isDerived = false;
 			xmlTag = "RinvstmtPctg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReinvestmentPercentage";
 			definition = "Percentage of the reinvestment.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Reinvestment3.mmReinvestmentPercentage);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Reinvestment1.mmReinvestmentPercentage;
+			nextVersions_lazy = () -> Arrays.asList(Reinvestment3.mmReinvestmentPercentage);
+			previousVersion_lazy = () -> Reinvestment1.mmReinvestmentPercentage;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
@@ -269,11 +272,10 @@ public class Reinvestment2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Reinvestment2.mmFinancialInstrumentDetails, com.tools20022.repository.msg.Reinvestment2.mmRequestedNAVCurrency,
-						com.tools20022.repository.msg.Reinvestment2.mmReinvestmentPercentage);
+				messageElement_lazy = () -> Arrays.asList(Reinvestment2.mmFinancialInstrumentDetails, Reinvestment2.mmRequestedNAVCurrency, Reinvestment2.mmReinvestmentPercentage);
 				trace_lazy = () -> Reinvestment.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Reinvestment2";
 				definition = "Reinvestment information.";
 				nextVersions_lazy = () -> Arrays.asList(Reinvestment3.mmObject());

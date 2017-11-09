@@ -17,18 +17,14 @@
 
 package com.tools20022.repository.entity;
 
-import com.tools20022.metamodel.MMBusinessAssociationEnd;
-import com.tools20022.metamodel.MMBusinessAttribute;
-import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.*;
 import com.tools20022.repository.choice.CashAvailabilityDate1Choice;
 import com.tools20022.repository.codeset.DebitCreditCode;
 import com.tools20022.repository.datatype.CurrencyAndAmount;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.Max15NumericText;
-import com.tools20022.repository.msg.CashAvailability1;
-import com.tools20022.repository.msg.CashBalanceAvailability1;
-import com.tools20022.repository.msg.CashBalanceAvailability2;
-import com.tools20022.repository.msg.CashBalanceAvailabilityDate1;
+import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -42,25 +38,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
  * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CashAvailability#mmCashBalance
- * CashAvailability.mmCashBalance}</li>
- * <li>{@linkplain com.tools20022.repository.entity.CashAvailability#mmDate
- * CashAvailability.mmDate}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CashAvailability#mmNumberOfDays
- * CashAvailability.mmNumberOfDays}</li>
- * <li>{@linkplain com.tools20022.repository.entity.CashAvailability#mmAmount
- * CashAvailability.mmAmount}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CashAvailability#mmCashEntry
- * CashAvailability.mmCashEntry}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CashAvailability#mmCreditDebitIndicator
- * CashAvailability.mmCreditDebitIndicator}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashBalanceAvailabilityDate1
+ * CashBalanceAvailabilityDate1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashBalanceAvailability1
+ * CashBalanceAvailability1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashBalanceAvailability2
+ * CashBalanceAvailability2}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.CashAvailabilityDate1Choice
+ * CashAvailabilityDate1Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashAvailability1
+ * CashAvailability1}</li>
  * </ul>
  * </li>
  * <li>
@@ -82,20 +73,25 @@ import java.util.concurrent.atomic.AtomicReference;
  * TotalsPerBankTransactionCode2.mmAvailability}</li>
  * </ul>
  * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.CashBalanceAvailabilityDate1
- * CashBalanceAvailabilityDate1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashBalanceAvailability1
- * CashBalanceAvailability1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashBalanceAvailability2
- * CashBalanceAvailability2}</li>
- * <li>{@linkplain com.tools20022.repository.choice.CashAvailabilityDate1Choice
- * CashAvailabilityDate1Choice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashAvailability1
- * CashAvailability1}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CashAvailability#mmCashBalance
+ * CashAvailability.mmCashBalance}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.CashAvailability#mmDate
+ * CashAvailability.mmDate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CashAvailability#mmNumberOfDays
+ * CashAvailability.mmNumberOfDays}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.CashAvailability#mmAmount
+ * CashAvailability.mmAmount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CashAvailability#mmCashEntry
+ * CashAvailability.mmCashEntry}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CashAvailability#mmCreditDebitIndicator
+ * CashAvailability.mmCreditDebitIndicator}</li>
  * </ul>
  * </li>
  * <li>
@@ -156,13 +152,13 @@ public class CashAvailability {
 		{
 			elementContext_lazy = () -> CashAvailability.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CashBalance";
 			definition = "Cash balance for which the availability is provided.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.CashBalance.mmAvailability;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.CashBalance.mmObject();
 		}
 	};
@@ -215,12 +211,11 @@ public class CashAvailability {
 	 */
 	public static final MMBusinessAttribute mmDate = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashBalanceAvailabilityDate1.mmActualDate, com.tools20022.repository.msg.CashBalanceAvailability1.mmDate,
-					com.tools20022.repository.msg.CashBalanceAvailability2.mmDate, com.tools20022.repository.msg.PaymentTerms6.mmDueDate, com.tools20022.repository.choice.CashAvailabilityDate1Choice.mmActualDate,
-					com.tools20022.repository.msg.CashAvailability1.mmDate);
+			derivation_lazy = () -> Arrays.asList(CashBalanceAvailabilityDate1.mmActualDate, CashBalanceAvailability1.mmDate, CashBalanceAvailability2.mmDate, PaymentTerms6.mmDueDate, CashAvailabilityDate1Choice.mmActualDate,
+					CashAvailability1.mmDate);
 			elementContext_lazy = () -> CashAvailability.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Date";
 			definition = "Identifies the availability date.";
 			maxOccurs = 1;
@@ -269,10 +264,10 @@ public class CashAvailability {
 	 */
 	public static final MMBusinessAttribute mmNumberOfDays = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashBalanceAvailabilityDate1.mmNumberOfDays, com.tools20022.repository.choice.CashAvailabilityDate1Choice.mmNumberOfDays);
+			derivation_lazy = () -> Arrays.asList(CashBalanceAvailabilityDate1.mmNumberOfDays, CashAvailabilityDate1Choice.mmNumberOfDays);
 			elementContext_lazy = () -> CashAvailability.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NumberOfDays";
 			definition = "Indicates the number of float days attached to the balance.";
 			maxOccurs = 1;
@@ -322,10 +317,10 @@ public class CashAvailability {
 	 */
 	public static final MMBusinessAttribute mmAmount = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashBalanceAvailability1.mmAmount, com.tools20022.repository.msg.CashBalanceAvailability2.mmAmount, com.tools20022.repository.msg.CashAvailability1.mmAmount);
+			derivation_lazy = () -> Arrays.asList(CashBalanceAvailability1.mmAmount, CashBalanceAvailability2.mmAmount, CashAvailability1.mmAmount);
 			elementContext_lazy = () -> CashAvailability.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Amount";
 			definition = "Available amount.";
 			maxOccurs = 1;
@@ -374,13 +369,13 @@ public class CashAvailability {
 		{
 			elementContext_lazy = () -> CashAvailability.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CashEntry";
 			definition = "Specifies the cash entry for which the availability information is provided.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.CashEntry.mmAvailability;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.CashEntry.mmObject();
 		}
 	};
@@ -418,7 +413,7 @@ public class CashAvailability {
 		{
 			elementContext_lazy = () -> CashAvailability.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CreditDebitIndicator";
 			definition = "Indicates whether the availability balance is a credit or a debit balance. A zero balance is considered to be a credit balance.";
 			maxOccurs = 1;
@@ -430,14 +425,13 @@ public class CashAvailability {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CashAvailability";
 				definition = "Indicates when the amount of money will become available, ie can be accessed and start generating interest.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CashEntry.mmAvailability, com.tools20022.repository.entity.CashBalance.mmAvailability);
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TotalsPerBankTransactionCode2.mmAvailability);
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CashAvailability.mmCashBalance, com.tools20022.repository.entity.CashAvailability.mmDate, com.tools20022.repository.entity.CashAvailability.mmNumberOfDays,
-						com.tools20022.repository.entity.CashAvailability.mmAmount, com.tools20022.repository.entity.CashAvailability.mmCashEntry, com.tools20022.repository.entity.CashAvailability.mmCreditDebitIndicator);
+				derivationElement_lazy = () -> Arrays.asList(TotalsPerBankTransactionCode2.mmAvailability);
+				element_lazy = () -> Arrays.asList(CashAvailability.mmCashBalance, CashAvailability.mmDate, CashAvailability.mmNumberOfDays, CashAvailability.mmAmount, CashAvailability.mmCashEntry, CashAvailability.mmCreditDebitIndicator);
 				derivationComponent_lazy = () -> Arrays.asList(CashBalanceAvailabilityDate1.mmObject(), CashBalanceAvailability1.mmObject(), CashBalanceAvailability2.mmObject(), CashAvailabilityDate1Choice.mmObject(),
 						CashAvailability1.mmObject());
 			}

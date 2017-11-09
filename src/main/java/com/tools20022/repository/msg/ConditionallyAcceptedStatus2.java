@@ -17,13 +17,12 @@
 
 package com.tools20022.repository.msg;
 
-import com.tools20022.metamodel.MMMessageAssociationEnd;
-import com.tools20022.metamodel.MMMessageAttribute;
-import com.tools20022.metamodel.MMMessageComponent;
-import com.tools20022.metamodel.MMXor;
+import com.tools20022.metamodel.*;
 import com.tools20022.repository.choice.ConditionallyAcceptedStatus3Choice;
 import com.tools20022.repository.codeset.NoReasonCode;
 import com.tools20022.repository.entity.SecuritiesOrderStatus;
+import com.tools20022.repository.entity.StatusReason;
+import com.tools20022.repository.GeneratedRepository;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -129,14 +128,14 @@ public class ConditionallyAcceptedStatus2 {
 	 */
 	public static final MMMessageAttribute mmNoSpecifiedReason = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmNoSpecifiedReason;
+			businessElementTrace_lazy = () -> StatusReason.mmNoSpecifiedReason;
 			componentContext_lazy = () -> ConditionallyAcceptedStatus2.mmObject();
 			isDerived = false;
 			xmlTag = "NoSpcfdRsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoSpecifiedReason";
 			definition = "Indicates that there is no reason available or to report.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ConditionallyAcceptedStatus3Choice.mmNoSpecifiedReason);
+			nextVersions_lazy = () -> Arrays.asList(ConditionallyAcceptedStatus3Choice.mmNoSpecifiedReason);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> NoReasonCode.mmObject();
@@ -185,14 +184,14 @@ public class ConditionallyAcceptedStatus2 {
 	 */
 	public static final MMMessageAssociationEnd mmReasonDetails = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrderStatus.mmConditionallyAcceptedStatus;
+			businessElementTrace_lazy = () -> SecuritiesOrderStatus.mmConditionallyAcceptedStatus;
 			componentContext_lazy = () -> ConditionallyAcceptedStatus2.mmObject();
 			isDerived = false;
 			xmlTag = "RsnDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReasonDetails";
 			definition = "Reason for the conditionally accepted status.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ConditionallyAcceptedStatus3Choice.mmReasonDetails);
+			nextVersions_lazy = () -> Arrays.asList(ConditionallyAcceptedStatus3Choice.mmReasonDetails);
 			maxOccurs = 5;
 			minOccurs = 1;
 			isComposite = true;
@@ -204,6 +203,10 @@ public class ConditionallyAcceptedStatus2 {
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
+	 * messageComponent} =
+	 * {@linkplain com.tools20022.repository.msg.ConditionallyAcceptedStatus2
+	 * ConditionallyAcceptedStatus2}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getImpactedElements
 	 * impactedElements} =
 	 * <ul>
@@ -215,10 +218,6 @@ public class ConditionallyAcceptedStatus2 {
 	 * ConditionallyAcceptedStatus2.mmReasonDetails}</li>
 	 * </ul>
 	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
-	 * messageComponent} =
-	 * {@linkplain com.tools20022.repository.msg.ConditionallyAcceptedStatus2
-	 * ConditionallyAcceptedStatus2}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -234,21 +233,21 @@ public class ConditionallyAcceptedStatus2 {
 	 */
 	public static final MMXor mmNoSpecifiedReasonOrReasonDetailsRule = new MMXor() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoSpecifiedReasonOrReasonDetailsRule";
 			definition = "Either NoSpecifiedReason or ReasonDetails must be present, but not both.";
 			messageComponent_lazy = () -> ConditionallyAcceptedStatus2.mmObject();
-			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ConditionallyAcceptedStatus2.mmNoSpecifiedReason, com.tools20022.repository.msg.ConditionallyAcceptedStatus2.mmReasonDetails);
+			impactedElements_lazy = () -> Arrays.asList(ConditionallyAcceptedStatus2.mmNoSpecifiedReason, ConditionallyAcceptedStatus2.mmReasonDetails);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ConditionallyAcceptedStatus2.mmNoSpecifiedReason, com.tools20022.repository.msg.ConditionallyAcceptedStatus2.mmReasonDetails);
+				messageElement_lazy = () -> Arrays.asList(ConditionallyAcceptedStatus2.mmNoSpecifiedReason, ConditionallyAcceptedStatus2.mmReasonDetails);
 				trace_lazy = () -> SecuritiesOrderStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
 						return DateFormat.getDateInstance(java.text.DateFormat.LONG).parse("September 9, 2016");
@@ -259,7 +258,7 @@ public class ConditionallyAcceptedStatus2 {
 				name = "ConditionallyAcceptedStatus2";
 				definition = "Status is accepted under certain conditions.";
 				nextVersions_lazy = () -> Arrays.asList(ConditionallyAcceptedStatus3Choice.mmObject());
-				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ConditionallyAcceptedStatus2.mmNoSpecifiedReasonOrReasonDetailsRule);
+				xors_lazy = () -> Arrays.asList(ConditionallyAcceptedStatus2.mmNoSpecifiedReasonOrReasonDetailsRule);
 			}
 		});
 		return mmObject_lazy.get();

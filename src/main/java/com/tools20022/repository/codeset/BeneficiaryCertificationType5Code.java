@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.BeneficiaryCertificationTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -90,7 +92,7 @@ public class BeneficiaryCertificationType5Code extends BeneficiaryCertificationT
 	 */
 	public static final MMCode mmAccreditedInvestor = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccreditedInvestor";
 			owner_lazy = () -> BeneficiaryCertificationType5Code.mmObject();
 		}
@@ -113,7 +115,7 @@ public class BeneficiaryCertificationType5Code extends BeneficiaryCertificationT
 	 */
 	public static final MMCode mmNonCompany = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonCompany";
 			owner_lazy = () -> BeneficiaryCertificationType5Code.mmObject();
 		}
@@ -136,7 +138,7 @@ public class BeneficiaryCertificationType5Code extends BeneficiaryCertificationT
 	 */
 	public static final MMCode mmQIBCertification = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QIBCertification";
 			owner_lazy = () -> BeneficiaryCertificationType5Code.mmObject();
 		}
@@ -145,14 +147,13 @@ public class BeneficiaryCertificationType5Code extends BeneficiaryCertificationT
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ACCI");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "BeneficiaryCertificationType5Code";
 				definition = "Specifies the type of certification required.";
 				previousVersion_lazy = () -> BeneficiaryCertificationType3Code.mmObject();
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.BeneficiaryCertificationType5Code.mmAccreditedInvestor, com.tools20022.repository.codeset.BeneficiaryCertificationType5Code.mmNonCompany,
-						com.tools20022.repository.codeset.BeneficiaryCertificationType5Code.mmQIBCertification);
+				code_lazy = () -> Arrays.asList(BeneficiaryCertificationType5Code.mmAccreditedInvestor, BeneficiaryCertificationType5Code.mmNonCompany, BeneficiaryCertificationType5Code.mmQIBCertification);
 				trace_lazy = () -> BeneficiaryCertificationTypeCode.mmObject();
 			}
 		});

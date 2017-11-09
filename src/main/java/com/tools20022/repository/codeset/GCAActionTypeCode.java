@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -28,6 +30,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.GCAActionType1Code
+ * GCAActionType1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -51,13 +60,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.GCAActionTypeCode#mmInvalid
  * GCAActionTypeCode.mmInvalid}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.GCAActionType1Code
- * GCAActionType1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -109,7 +111,7 @@ public class GCAActionTypeCode {
 	 */
 	public static final MMCode mmContactCustodian = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ContactCustodian";
 			definition = "Custodian needs to be contacted.";
 			owner_lazy = () -> GCAActionTypeCode.mmObject();
@@ -139,7 +141,7 @@ public class GCAActionTypeCode {
 	 */
 	public static final MMCode mmResearchRequired = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ResearchRequired";
 			definition = "Further research is required.";
 			owner_lazy = () -> GCAActionTypeCode.mmObject();
@@ -169,7 +171,7 @@ public class GCAActionTypeCode {
 	 */
 	public static final MMCode mmCustodianContacted = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CustodianContacted";
 			definition = "Custodian has been contacted.";
 			owner_lazy = () -> GCAActionTypeCode.mmObject();
@@ -199,7 +201,7 @@ public class GCAActionTypeCode {
 	 */
 	public static final MMCode mmDoNotContactCustodian = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DoNotContactCustodian";
 			definition = "Custodian does not need to be contacted.";
 			owner_lazy = () -> GCAActionTypeCode.mmObject();
@@ -229,7 +231,7 @@ public class GCAActionTypeCode {
 	 */
 	public static final MMCode mmNoFurtherActionRequired = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoFurtherActionRequired";
 			definition = "No further action is required.";
 			owner_lazy = () -> GCAActionTypeCode.mmObject();
@@ -262,7 +264,7 @@ public class GCAActionTypeCode {
 	 */
 	public static final MMCode mmNotSupportedByGCA = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotSupportedByGCA";
 			definition = "Not supported by the GCA VA (Global Corporate Actions Validation service).";
 			owner_lazy = () -> GCAActionTypeCode.mmObject();
@@ -292,7 +294,7 @@ public class GCAActionTypeCode {
 	 */
 	public static final MMCode mmInvalid = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Invalid";
 			definition = "Invalid.";
 			owner_lazy = () -> GCAActionTypeCode.mmObject();
@@ -303,14 +305,13 @@ public class GCAActionTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("RCON");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "GCAActionTypeCode";
 				definition = "Specifies what action needs to be taken by the validation service for this particular record.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.GCAActionTypeCode.mmContactCustodian, com.tools20022.repository.codeset.GCAActionTypeCode.mmResearchRequired,
-						com.tools20022.repository.codeset.GCAActionTypeCode.mmCustodianContacted, com.tools20022.repository.codeset.GCAActionTypeCode.mmDoNotContactCustodian,
-						com.tools20022.repository.codeset.GCAActionTypeCode.mmNoFurtherActionRequired, com.tools20022.repository.codeset.GCAActionTypeCode.mmNotSupportedByGCA, com.tools20022.repository.codeset.GCAActionTypeCode.mmInvalid);
+				code_lazy = () -> Arrays.asList(GCAActionTypeCode.mmContactCustodian, GCAActionTypeCode.mmResearchRequired, GCAActionTypeCode.mmCustodianContacted, GCAActionTypeCode.mmDoNotContactCustodian,
+						GCAActionTypeCode.mmNoFurtherActionRequired, GCAActionTypeCode.mmNotSupportedByGCA, GCAActionTypeCode.mmInvalid);
 				derivation_lazy = () -> Arrays.asList(GCAActionType1Code.mmObject());
 			}
 		});

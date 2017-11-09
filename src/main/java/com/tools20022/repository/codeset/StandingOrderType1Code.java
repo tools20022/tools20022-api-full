@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.StandingOrderTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -86,7 +88,7 @@ public class StandingOrderType1Code extends StandingOrderTypeCode {
 	 */
 	public static final MMCode mmUserDefinedStandingOrder = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UserDefinedStandingOrder";
 			owner_lazy = () -> StandingOrderType1Code.mmObject();
 		}
@@ -109,7 +111,7 @@ public class StandingOrderType1Code extends StandingOrderTypeCode {
 	 */
 	public static final MMCode mmPredefinedStandingOrder = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PredefinedStandingOrder";
 			owner_lazy = () -> StandingOrderType1Code.mmObject();
 		}
@@ -118,12 +120,12 @@ public class StandingOrderType1Code extends StandingOrderTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("USTO");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "StandingOrderType1Code";
 				definition = "Specifies the type of standing order, such as a user defined standing order or a predefined liquidity transfer.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.StandingOrderType1Code.mmUserDefinedStandingOrder, com.tools20022.repository.codeset.StandingOrderType1Code.mmPredefinedStandingOrder);
+				code_lazy = () -> Arrays.asList(StandingOrderType1Code.mmUserDefinedStandingOrder, StandingOrderType1Code.mmPredefinedStandingOrder);
 				trace_lazy = () -> StandingOrderTypeCode.mmObject();
 			}
 		});

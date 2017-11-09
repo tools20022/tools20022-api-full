@@ -17,14 +17,13 @@
 
 package com.tools20022.repository.entity;
 
-import com.tools20022.metamodel.MMBusinessAssociationEnd;
-import com.tools20022.metamodel.MMBusinessAttribute;
-import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.*;
 import com.tools20022.repository.codeset.VoteInstructionCode;
 import com.tools20022.repository.datatype.CurrencyAndAmount;
 import com.tools20022.repository.datatype.DecimalNumber;
 import com.tools20022.repository.datatype.PercentageRate;
 import com.tools20022.repository.datatype.YesNoIndicator;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -39,6 +38,34 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.VoteMethods VoteMethods}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.VoteParameters VoteParameters}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.VoteParameters1
+ * VoteParameters1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.VoteParameters2
+ * VoteParameters2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.VoteMethods2 VoteMethods2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.VoteParameters3
+ * VoteParameters3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.VoteParameters4
+ * VoteParameters4}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ContactPoint#mmContactPointForVote
+ * ContactPoint.mmContactPointForVote}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Meeting#mmVotingCondition
+ * Meeting.mmVotingCondition}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -77,34 +104,6 @@ import java.util.List;
  * <li>
  * {@linkplain com.tools20022.repository.entity.VotingCondition#mmPreviousInstructionInvalidity
  * VotingCondition.mmPreviousInstructionInvalidity}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ContactPoint#mmContactPointForVote
- * ContactPoint.mmContactPointForVote}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Meeting#mmVotingCondition
- * Meeting.mmVotingCondition}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.VoteMethods VoteMethods}</li>
- * <li>{@linkplain com.tools20022.repository.msg.VoteParameters VoteParameters}</li>
- * <li>{@linkplain com.tools20022.repository.msg.VoteParameters1
- * VoteParameters1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.VoteParameters2
- * VoteParameters2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.VoteMethods2 VoteMethods2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.VoteParameters3
- * VoteParameters3}</li>
- * <li>{@linkplain com.tools20022.repository.msg.VoteParameters4
- * VoteParameters4}</li>
  * </ul>
  * </li>
  * <li>
@@ -174,12 +173,11 @@ public class VotingCondition {
 	 */
 	public static final MMBusinessAttribute mmSecuritiesQuantityRequiredToVote = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.VoteParameters.mmSecuritiesQuantityRequiredToVote, com.tools20022.repository.msg.VoteParameters1.mmSecuritiesQuantityRequiredToVote,
-					com.tools20022.repository.msg.VoteParameters2.mmSecuritiesQuantityRequiredToVote, com.tools20022.repository.msg.VoteParameters3.mmSecuritiesQuantityRequiredToVote,
-					com.tools20022.repository.msg.VoteParameters4.mmSecuritiesQuantityRequiredToVote);
+			derivation_lazy = () -> Arrays.asList(VoteParameters.mmSecuritiesQuantityRequiredToVote, VoteParameters1.mmSecuritiesQuantityRequiredToVote, VoteParameters2.mmSecuritiesQuantityRequiredToVote,
+					VoteParameters3.mmSecuritiesQuantityRequiredToVote, VoteParameters4.mmSecuritiesQuantityRequiredToVote);
 			elementContext_lazy = () -> VotingCondition.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SecuritiesQuantityRequiredToVote";
 			definition = "Number of holdings required for a vote.";
 			maxOccurs = 1;
@@ -239,11 +237,10 @@ public class VotingCondition {
 	 */
 	public static final MMBusinessAttribute mmPartialVoteAllowed = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.VoteParameters.mmPartialVoteAllowed, com.tools20022.repository.msg.VoteParameters1.mmPartialVoteAllowed,
-					com.tools20022.repository.msg.VoteParameters2.mmPartialVoteAllowed, com.tools20022.repository.msg.VoteParameters3.mmPartialVoteAllowed, com.tools20022.repository.msg.VoteParameters4.mmPartialVoteAllowed);
+			derivation_lazy = () -> Arrays.asList(VoteParameters.mmPartialVoteAllowed, VoteParameters1.mmPartialVoteAllowed, VoteParameters2.mmPartialVoteAllowed, VoteParameters3.mmPartialVoteAllowed, VoteParameters4.mmPartialVoteAllowed);
 			elementContext_lazy = () -> VotingCondition.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PartialVoteAllowed";
 			definition = "Specifies whether it is allowed to only vote on a part of the entire entitled holding, leaving part of the position un-voted.";
 			maxOccurs = 1;
@@ -303,11 +300,10 @@ public class VotingCondition {
 	 */
 	public static final MMBusinessAttribute mmSplitVoteAllowed = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.VoteParameters.mmSplitVoteAllowed, com.tools20022.repository.msg.VoteParameters1.mmSplitVoteAllowed,
-					com.tools20022.repository.msg.VoteParameters2.mmSplitVoteAllowed, com.tools20022.repository.msg.VoteParameters3.mmSplitVoteAllowed, com.tools20022.repository.msg.VoteParameters4.mmSplitVoteAllowed);
+			derivation_lazy = () -> Arrays.asList(VoteParameters.mmSplitVoteAllowed, VoteParameters1.mmSplitVoteAllowed, VoteParameters2.mmSplitVoteAllowed, VoteParameters3.mmSplitVoteAllowed, VoteParameters4.mmSplitVoteAllowed);
 			elementContext_lazy = () -> VotingCondition.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SplitVoteAllowed";
 			definition = "Indicates that the option to give a split instruction, for example, a split voting instruction on a meeting, is allowed.";
 			maxOccurs = 1;
@@ -380,17 +376,16 @@ public class VotingCondition {
 	 */
 	public static final MMBusinessAssociationEnd mmVoteLocation = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.VoteMethods.mmVoteThroughNetwork, com.tools20022.repository.msg.VoteParameters.mmVoteMethods, com.tools20022.repository.msg.VoteParameters1.mmVoteMethods,
-					com.tools20022.repository.msg.VoteParameters2.mmVoteMethods, com.tools20022.repository.msg.VoteMethods2.mmVoteThroughNetwork, com.tools20022.repository.msg.VoteParameters3.mmVoteMethods,
-					com.tools20022.repository.msg.VoteParameters4.mmVoteMethods);
+			derivation_lazy = () -> Arrays.asList(VoteMethods.mmVoteThroughNetwork, VoteParameters.mmVoteMethods, VoteParameters1.mmVoteMethods, VoteParameters2.mmVoteMethods, VoteMethods2.mmVoteThroughNetwork,
+					VoteParameters3.mmVoteMethods, VoteParameters4.mmVoteMethods);
 			elementContext_lazy = () -> VotingCondition.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "VoteLocation";
 			definition = "Electronic address, e-mail or website where a voting ballot can be obtained and/or where a security holder can vote.";
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.ContactPoint.mmContactPointForVote;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.ContactPoint.mmObject();
 		}
 	};
@@ -446,12 +441,11 @@ public class VotingCondition {
 	 */
 	public static final MMBusinessAttribute mmBeneficialOwnerDisclosure = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.VoteParameters.mmBeneficialOwnerDisclosure, com.tools20022.repository.msg.VoteParameters1.mmBeneficialOwnerDisclosure,
-					com.tools20022.repository.msg.VoteParameters2.mmBeneficialOwnerDisclosure, com.tools20022.repository.msg.VoteParameters3.mmBeneficialOwnerDisclosure,
-					com.tools20022.repository.msg.VoteParameters4.mmBeneficialOwnerDisclosure);
+			derivation_lazy = () -> Arrays.asList(VoteParameters.mmBeneficialOwnerDisclosure, VoteParameters1.mmBeneficialOwnerDisclosure, VoteParameters2.mmBeneficialOwnerDisclosure, VoteParameters3.mmBeneficialOwnerDisclosure,
+					VoteParameters4.mmBeneficialOwnerDisclosure);
 			elementContext_lazy = () -> VotingCondition.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BeneficialOwnerDisclosure";
 			definition = "Indicates whether beneficiary details (eg name and address) must be supplied in order to take part to a meeting.";
 			maxOccurs = 1;
@@ -514,12 +508,11 @@ public class VotingCondition {
 	 */
 	public static final MMBusinessAttribute mmIncentivePremium = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.VoteParameters.mmIncentivePremium, com.tools20022.repository.msg.VoteParameters1.mmIncentivePremium,
-					com.tools20022.repository.msg.VoteParameters2.mmIncentivePremium, com.tools20022.repository.msg.VoteParameters3.mmIncentivePremium, com.tools20022.repository.msg.VoteParameters4.mmEarlyIncentivePremium,
-					com.tools20022.repository.msg.VoteParameters4.mmIncentivePremium);
+			derivation_lazy = () -> Arrays.asList(VoteParameters.mmIncentivePremium, VoteParameters1.mmIncentivePremium, VoteParameters2.mmIncentivePremium, VoteParameters3.mmIncentivePremium, VoteParameters4.mmEarlyIncentivePremium,
+					VoteParameters4.mmIncentivePremium);
 			elementContext_lazy = () -> VotingCondition.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "IncentivePremium";
 			definition = "Cash premium made available if the securities holder consents or participates to an event.";
 			maxOccurs = 1;
@@ -576,11 +569,11 @@ public class VotingCondition {
 	 */
 	public static final MMBusinessAttribute mmVoteInstructionType = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.VoteParameters.mmVoteInstructionType, com.tools20022.repository.msg.VoteParameters1.mmVoteInstructionType,
-					com.tools20022.repository.msg.VoteParameters2.mmVoteInstructionType, com.tools20022.repository.msg.VoteParameters3.mmVoteInstructionType, com.tools20022.repository.msg.VoteParameters4.mmVoteInstructionType);
+			derivation_lazy = () -> Arrays.asList(VoteParameters.mmVoteInstructionType, VoteParameters1.mmVoteInstructionType, VoteParameters2.mmVoteInstructionType, VoteParameters3.mmVoteInstructionType,
+					VoteParameters4.mmVoteInstructionType);
 			elementContext_lazy = () -> VotingCondition.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "VoteInstructionType";
 			definition = "Identifies the possible types of voting instructions.";
 			maxOccurs = 1;
@@ -632,10 +625,10 @@ public class VotingCondition {
 	 */
 	public static final MMBusinessAttribute mmStandingVotingInstruction = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.VoteInstruction1.mmStandingInstruction, com.tools20022.repository.msg.DetailedInstructionStatus2.mmStandingInstruction);
+			derivation_lazy = () -> Arrays.asList(VoteInstruction1.mmStandingInstruction, DetailedInstructionStatus2.mmStandingInstruction);
 			elementContext_lazy = () -> VotingCondition.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "StandingVotingInstruction";
 			definition = "Indicates whether standing instructions have been defined or not. In this case, the intermediary should cast the votes according to these instructions.";
 			maxOccurs = 1;
@@ -677,7 +670,7 @@ public class VotingCondition {
 		{
 			elementContext_lazy = () -> VotingCondition.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "VotingPremiumAmount";
 			definition = "Amount of additional weight applied to the votes of long term shareholders.";
 			maxOccurs = 1;
@@ -718,7 +711,7 @@ public class VotingCondition {
 		{
 			elementContext_lazy = () -> VotingCondition.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "VotingPremiumRate";
 			definition = "Rate of additional weight applied to the votes of long term shareholders.";
 			maxOccurs = 1;
@@ -763,13 +756,13 @@ public class VotingCondition {
 		{
 			elementContext_lazy = () -> VotingCondition.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Meeting";
 			definition = "Meeting for which voting conditions are specified.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.Meeting.mmVotingCondition;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Meeting.mmObject();
 		}
 	};
@@ -813,10 +806,10 @@ public class VotingCondition {
 	 */
 	public static final MMBusinessAttribute mmPreviousInstructionInvalidity = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.VoteParameters4.mmPreviousInstructionInvalidityIndicator);
+			derivation_lazy = () -> Arrays.asList(VoteParameters4.mmPreviousInstructionInvalidityIndicator);
 			elementContext_lazy = () -> VotingCondition.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PreviousInstructionInvalidity";
 			definition = "Indicates whether the previously sent instructions becomes invalid after a market deadline extension.";
 			maxOccurs = 1;
@@ -828,16 +821,14 @@ public class VotingCondition {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "VotingCondition";
 				definition = "Specifies the different voting types, channels and premium.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.ContactPoint.mmContactPointForVote, com.tools20022.repository.entity.Meeting.mmVotingCondition);
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.VotingCondition.mmSecuritiesQuantityRequiredToVote, com.tools20022.repository.entity.VotingCondition.mmPartialVoteAllowed,
-						com.tools20022.repository.entity.VotingCondition.mmSplitVoteAllowed, com.tools20022.repository.entity.VotingCondition.mmVoteLocation, com.tools20022.repository.entity.VotingCondition.mmBeneficialOwnerDisclosure,
-						com.tools20022.repository.entity.VotingCondition.mmIncentivePremium, com.tools20022.repository.entity.VotingCondition.mmVoteInstructionType,
-						com.tools20022.repository.entity.VotingCondition.mmStandingVotingInstruction, com.tools20022.repository.entity.VotingCondition.mmVotingPremiumAmount,
-						com.tools20022.repository.entity.VotingCondition.mmVotingPremiumRate, com.tools20022.repository.entity.VotingCondition.mmMeeting, com.tools20022.repository.entity.VotingCondition.mmPreviousInstructionInvalidity);
+				element_lazy = () -> Arrays.asList(VotingCondition.mmSecuritiesQuantityRequiredToVote, VotingCondition.mmPartialVoteAllowed, VotingCondition.mmSplitVoteAllowed, VotingCondition.mmVoteLocation,
+						VotingCondition.mmBeneficialOwnerDisclosure, VotingCondition.mmIncentivePremium, VotingCondition.mmVoteInstructionType, VotingCondition.mmStandingVotingInstruction, VotingCondition.mmVotingPremiumAmount,
+						VotingCondition.mmVotingPremiumRate, VotingCondition.mmMeeting, VotingCondition.mmPreviousInstructionInvalidity);
 				derivationComponent_lazy = () -> Arrays.asList(VoteMethods.mmObject(), VoteParameters.mmObject(), VoteParameters1.mmObject(), VoteParameters2.mmObject(), VoteMethods2.mmObject(), VoteParameters3.mmObject(),
 						VoteParameters4.mmObject());
 			}

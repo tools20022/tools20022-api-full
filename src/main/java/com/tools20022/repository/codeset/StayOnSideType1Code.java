@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.StayOnSideTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -88,7 +90,7 @@ public class StayOnSideType1Code extends StayOnSideTypeCode {
 	 */
 	public static final MMCode mmOffer = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Offer";
 			owner_lazy = () -> StayOnSideType1Code.mmObject();
 		}
@@ -111,7 +113,7 @@ public class StayOnSideType1Code extends StayOnSideTypeCode {
 	 */
 	public static final MMCode mmBid = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Bid";
 			owner_lazy = () -> StayOnSideType1Code.mmObject();
 		}
@@ -134,7 +136,7 @@ public class StayOnSideType1Code extends StayOnSideTypeCode {
 	 */
 	public static final MMCode mmDontCare = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DontCare";
 			owner_lazy = () -> StayOnSideType1Code.mmObject();
 		}
@@ -143,12 +145,12 @@ public class StayOnSideType1Code extends StayOnSideTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("OFFR");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "StayOnSideType1Code";
 				definition = "Indicates that an order is pegged against the offer/bid at the time of the order submission.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.StayOnSideType1Code.mmOffer, com.tools20022.repository.codeset.StayOnSideType1Code.mmBid, com.tools20022.repository.codeset.StayOnSideType1Code.mmDontCare);
+				code_lazy = () -> Arrays.asList(StayOnSideType1Code.mmOffer, StayOnSideType1Code.mmBid, StayOnSideType1Code.mmDontCare);
 				trace_lazy = () -> StayOnSideTypeCode.mmObject();
 			}
 		});

@@ -19,11 +19,16 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CollateralPool1Code;
 import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
 import com.tools20022.repository.datatype.CFIIdentifier;
 import com.tools20022.repository.datatype.SNA2008SectorIdentifier;
+import com.tools20022.repository.entity.AssetClassification;
+import com.tools20022.repository.entity.Collateral;
 import com.tools20022.repository.entity.CollateralValuation;
+import com.tools20022.repository.entity.Organisation;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -122,10 +127,10 @@ public class CollateralValuation4 {
 			componentContext_lazy = () -> CollateralValuation4.mmObject();
 			isDerived = false;
 			xmlTag = "PoolSts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PoolStatus";
 			definition = "Specifies whether the collateral is a pool collateral or not.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CollateralValuation7.mmPoolStatus);
+			nextVersions_lazy = () -> Arrays.asList(CollateralValuation7.mmPoolStatus);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CollateralPool1Code.mmObject();
@@ -178,14 +183,14 @@ public class CollateralValuation4 {
 	 */
 	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AssetClassification.mmClassificationType;
+			businessElementTrace_lazy = () -> AssetClassification.mmClassificationType;
 			componentContext_lazy = () -> CollateralValuation4.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Identifies the asset class pledged as collateral, expressed as an ISO 10962 Classification of Financial Instrument (CFI).";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CollateralValuation7.mmType);
+			nextVersions_lazy = () -> Arrays.asList(CollateralValuation7.mmType);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CFIIdentifier.mmObject();
@@ -238,14 +243,14 @@ public class CollateralValuation4 {
 	 */
 	public static final MMMessageAttribute mmSector = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Organisation.mmSector;
+			businessElementTrace_lazy = () -> Organisation.mmSector;
 			componentContext_lazy = () -> CollateralValuation4.mmObject();
 			isDerived = false;
 			xmlTag = "Sctr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Sector";
 			definition = "Provides the institutional sector, such as central government, central bank, etc. of the issuer of collateral.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CollateralValuation7.mmSector);
+			nextVersions_lazy = () -> Arrays.asList(CollateralValuation7.mmSector);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> SNA2008SectorIdentifier.mmObject();
@@ -298,14 +303,14 @@ public class CollateralValuation4 {
 	 */
 	public static final MMMessageAttribute mmNominalAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Collateral.mmCollateralAmount;
+			businessElementTrace_lazy = () -> Collateral.mmCollateralAmount;
 			componentContext_lazy = () -> CollateralValuation4.mmObject();
 			isDerived = false;
 			xmlTag = "NmnlAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NominalAmount";
 			definition = "Nominal amount of money of the security pledged as collateral, when the collateral cannot be identified through an individual or basket ISIN.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CollateralValuation7.mmNominalAmount);
+			nextVersions_lazy = () -> Arrays.asList(CollateralValuation7.mmNominalAmount);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
@@ -315,11 +320,10 @@ public class CollateralValuation4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CollateralValuation4.mmPoolStatus, com.tools20022.repository.msg.CollateralValuation4.mmType,
-						com.tools20022.repository.msg.CollateralValuation4.mmSector, com.tools20022.repository.msg.CollateralValuation4.mmNominalAmount);
+				messageElement_lazy = () -> Arrays.asList(CollateralValuation4.mmPoolStatus, CollateralValuation4.mmType, CollateralValuation4.mmSector, CollateralValuation4.mmNominalAmount);
 				trace_lazy = () -> CollateralValuation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CollateralValuation4";
 				definition = "Provides the specification of the valuation of a collateral, based on the sector and the asset classification.";
 				nextVersions_lazy = () -> Arrays.asList(CollateralValuation7.mmObject());

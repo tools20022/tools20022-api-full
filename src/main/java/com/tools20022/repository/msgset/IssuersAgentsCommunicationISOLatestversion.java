@@ -18,7 +18,9 @@
 package com.tools20022.repository.msgset;
 
 import com.tools20022.metamodel.MMMessageSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.seev.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -124,8 +126,8 @@ public class IssuersAgentsCommunicationISOLatestversion {
 	final static public MMMessageSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageSet() {
 			{
-				businessProcessCatalogue_lazy = () -> com.tools20022.repository.GeneratedRepository.mmcatalogue;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				businessProcessCatalogue_lazy = () -> GeneratedRepository.mmcatalogue;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Issuers' Agents Communication - ISO - Latest version";
 				definition = "Set of messages exchanged between the issuer or its agent and the CSD involved in a corporate action to cover the announcement of the corporate action, the instruction, the resource movement, the deactivation and standing instruction.\r\n";
 				messageDefinition_lazy = () -> Arrays.asList(AgentCANotificationAdviceV01.mmObject(), AgentCANotificationCancellationRequestV01.mmObject(), AgentCANotificationStatusAdviceV01.mmObject(), AgentCAElectionAdviceV01.mmObject(),

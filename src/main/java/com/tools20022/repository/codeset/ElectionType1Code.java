@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ElectionTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -83,7 +85,7 @@ public class ElectionType1Code extends ElectionTypeCode {
 	 */
 	public static final MMCode mmNewElection = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewElection";
 			owner_lazy = () -> ElectionType1Code.mmObject();
 		}
@@ -106,7 +108,7 @@ public class ElectionType1Code extends ElectionTypeCode {
 	 */
 	public static final MMCode mmOptionChange = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionChange";
 			owner_lazy = () -> ElectionType1Code.mmObject();
 		}
@@ -115,12 +117,12 @@ public class ElectionType1Code extends ElectionTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("NEWM");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ElectionType1Code";
 				definition = "Specifies the type of election.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ElectionType1Code.mmNewElection, com.tools20022.repository.codeset.ElectionType1Code.mmOptionChange);
+				code_lazy = () -> Arrays.asList(ElectionType1Code.mmNewElection, ElectionType1Code.mmOptionChange);
 				trace_lazy = () -> ElectionTypeCode.mmObject();
 			}
 		});

@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.MultilegReportType1Code
+ * MultilegReportType1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -38,13 +47,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.MultilegReportTypeCode#mmByInstrumentLeg
  * MultilegReportTypeCode.mmByInstrumentLeg}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.MultilegReportType1Code
- * MultilegReportType1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -96,7 +98,7 @@ public class MultilegReportTypeCode {
 	 */
 	public static final MMCode mmBySecurity = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BySecurity";
 			definition = "Report by multileg security only (do not report legs).";
 			owner_lazy = () -> MultilegReportTypeCode.mmObject();
@@ -129,7 +131,7 @@ public class MultilegReportTypeCode {
 	 */
 	public static final MMCode mmBySecurityAndLeg = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BySecurityAndLeg";
 			definition = "Report by multileg security and by instrument legs belonging to the multileg security.";
 			owner_lazy = () -> MultilegReportTypeCode.mmObject();
@@ -162,7 +164,7 @@ public class MultilegReportTypeCode {
 	 */
 	public static final MMCode mmByInstrumentLeg = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ByInstrumentLeg";
 			definition = "Report by instrument legs belonging to the multileg security only (do not report status of multileg security).";
 			owner_lazy = () -> MultilegReportTypeCode.mmObject();
@@ -173,13 +175,12 @@ public class MultilegReportTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("BYSE");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MultilegReportTypeCode";
 				definition = "Indicates the method of execution reporting requested by issuer of the order.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MultilegReportTypeCode.mmBySecurity, com.tools20022.repository.codeset.MultilegReportTypeCode.mmBySecurityAndLeg,
-						com.tools20022.repository.codeset.MultilegReportTypeCode.mmByInstrumentLeg);
+				code_lazy = () -> Arrays.asList(MultilegReportTypeCode.mmBySecurity, MultilegReportTypeCode.mmBySecurityAndLeg, MultilegReportTypeCode.mmByInstrumentLeg);
 				derivation_lazy = () -> Arrays.asList(MultilegReportType1Code.mmObject());
 			}
 		});

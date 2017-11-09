@@ -18,7 +18,12 @@
 package com.tools20022.repository.entity;
 
 import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.CardPaymentPartyRole;
+import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CardPaymentTransactionResult1;
+import com.tools20022.repository.msg.CardPaymentTransactionResult2;
+import com.tools20022.repository.msg.CardPaymentTransactionResult3;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -72,12 +77,11 @@ public class AuthorisationEntity extends CardPaymentPartyRole {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AuthorisationEntity";
 				definition = "Party which has delivered or declined the authorisation.";
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardPaymentTransactionResult1.mmAuthorisationEntity, com.tools20022.repository.msg.CardPaymentTransactionResult2.mmAuthorisationEntity,
-						com.tools20022.repository.msg.CardPaymentTransactionResult3.mmAuthorisationEntity);
+				derivationElement_lazy = () -> Arrays.asList(CardPaymentTransactionResult1.mmAuthorisationEntity, CardPaymentTransactionResult2.mmAuthorisationEntity, CardPaymentTransactionResult3.mmAuthorisationEntity);
 				superType_lazy = () -> CardPaymentPartyRole.mmObject();
 			}
 		});

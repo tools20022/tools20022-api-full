@@ -20,8 +20,11 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max256Text;
 import com.tools20022.repository.entity.AcquirerRole;
+import com.tools20022.repository.entity.PartyIdentificationInformation;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -106,14 +109,14 @@ public class Acquirer4 {
 	 */
 	public static final MMMessageAssociationEnd mmIdentification = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.mmOtherIdentification;
+			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmOtherIdentification;
 			componentContext_lazy = () -> Acquirer4.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Identification of the acquirer (for example the bank identification number BIN).";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Acquirer2.mmIdentification;
+			previousVersion_lazy = () -> Acquirer2.mmIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -157,10 +160,10 @@ public class Acquirer4 {
 			componentContext_lazy = () -> Acquirer4.mmObject();
 			isDerived = false;
 			xmlTag = "ParamsVrsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ParametersVersion";
 			definition = "Version of the payment acquirer parameters of the POI.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Acquirer2.mmParametersVersion;
+			previousVersion_lazy = () -> Acquirer2.mmParametersVersion;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max256Text.mmObject();
@@ -170,10 +173,10 @@ public class Acquirer4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Acquirer4.mmIdentification, com.tools20022.repository.msg.Acquirer4.mmParametersVersion);
+				messageElement_lazy = () -> Arrays.asList(Acquirer4.mmIdentification, Acquirer4.mmParametersVersion);
 				trace_lazy = () -> AcquirerRole.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Acquirer4";
 				definition = "Acquirer involved in the card payment.";
 				previousVersion_lazy = () -> Acquirer2.mmObject();

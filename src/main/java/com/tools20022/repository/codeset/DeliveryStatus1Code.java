@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.DeliveryStatusCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -80,7 +82,7 @@ public class DeliveryStatus1Code extends DeliveryStatusCode {
 	 */
 	public static final MMCode mmFailure = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Failure";
 			owner_lazy = () -> DeliveryStatus1Code.mmObject();
 		}
@@ -103,7 +105,7 @@ public class DeliveryStatus1Code extends DeliveryStatusCode {
 	 */
 	public static final MMCode mmSuccess = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Success";
 			owner_lazy = () -> DeliveryStatus1Code.mmObject();
 		}
@@ -112,11 +114,11 @@ public class DeliveryStatus1Code extends DeliveryStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "DeliveryStatus1Code";
 				definition = "Provides an explicit indication whether the delivery attempt resulted in success or failure. ";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DeliveryStatus1Code.mmFailure, com.tools20022.repository.codeset.DeliveryStatus1Code.mmSuccess);
+				code_lazy = () -> Arrays.asList(DeliveryStatus1Code.mmFailure, DeliveryStatus1Code.mmSuccess);
 				trace_lazy = () -> DeliveryStatusCode.mmObject();
 			}
 		});

@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.AgentTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -84,7 +86,7 @@ public class AgentType1Code extends AgentTypeCode {
 	 */
 	public static final MMCode mmDropAgentBearer = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DropAgentBearer";
 			owner_lazy = () -> AgentType1Code.mmObject();
 		}
@@ -107,7 +109,7 @@ public class AgentType1Code extends AgentTypeCode {
 	 */
 	public static final MMCode mmOther = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
 			owner_lazy = () -> AgentType1Code.mmObject();
 		}
@@ -116,12 +118,12 @@ public class AgentType1Code extends AgentTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("DAGB");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AgentType1Code";
 				definition = "Specifies the function the agent is performing (for example, event agent, information agent).";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AgentType1Code.mmDropAgentBearer, com.tools20022.repository.codeset.AgentType1Code.mmOther);
+				code_lazy = () -> Arrays.asList(AgentType1Code.mmDropAgentBearer, AgentType1Code.mmOther);
 				trace_lazy = () -> AgentTypeCode.mmObject();
 			}
 		});

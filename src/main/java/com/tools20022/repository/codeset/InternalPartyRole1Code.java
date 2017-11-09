@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.PartyRoleCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -73,7 +75,7 @@ public class InternalPartyRole1Code extends PartyRoleCode {
 	 */
 	public static final MMCode mmInternal = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Internal";
 			owner_lazy = () -> InternalPartyRole1Code.mmObject();
 		}
@@ -82,11 +84,11 @@ public class InternalPartyRole1Code extends PartyRoleCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InternalPartyRole1Code";
 				definition = "Specifies the role as an internal party in the transaction.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.InternalPartyRole1Code.mmInternal);
+				code_lazy = () -> Arrays.asList(InternalPartyRole1Code.mmInternal);
 				trace_lazy = () -> PartyRoleCode.mmObject();
 			}
 		});

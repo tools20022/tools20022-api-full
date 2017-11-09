@@ -20,6 +20,7 @@ package com.tools20022.repository.area.catp;
 import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.ATMCardTransactionLatestVersion;
 import com.tools20022.repository.msg.ATMInquiryResponse1;
 import com.tools20022.repository.msg.ContentInformationType10;
@@ -36,6 +37,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code catp.007.001.01}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.ATMCardTransactionLatestVersion
@@ -70,9 +74,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * ATMInquiryResponseV01.mmSecurityTrailer}</li>
  * </ul>
  * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code catp.007.001.01}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -124,7 +125,7 @@ public class ATMInquiryResponseV01 {
 	public static final MMMessageBuildingBlock mmHeader = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Hdr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Header";
 			definition = "Information related to the protocol management on a segment of the path from the ATM to the acquirer.";
 			maxOccurs = 1;
@@ -159,7 +160,7 @@ public class ATMInquiryResponseV01 {
 	public static final MMMessageBuildingBlock mmProtectedATMInquiryResponse = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "PrtctdATMNqryRspn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProtectedATMInquiryResponse";
 			definition = "Encrypted body of the message.";
 			maxOccurs = 1;
@@ -197,7 +198,7 @@ public class ATMInquiryResponseV01 {
 	public static final MMMessageBuildingBlock mmATMInquiryResponse = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "ATMNqryRspn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ATMInquiryResponse";
 			definition = "Information related to the response of an ATM inquiry from an ATM manager.";
 			maxOccurs = 1;
@@ -232,7 +233,7 @@ public class ATMInquiryResponseV01 {
 	public static final MMMessageBuildingBlock mmSecurityTrailer = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SctyTrlr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityTrailer";
 			definition = "Trailer of the message containing a MAC.";
 			maxOccurs = 1;
@@ -244,7 +245,7 @@ public class ATMInquiryResponseV01 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ATMInquiryResponseV01";
 				definition = "The ATMInquiryResponse message is sent by an ATM manager or its agent to the ATM to provide the information and the outcome of the verifications requested in the ATMInquiryRequest.";
 				nextVersions_lazy = () -> Arrays.asList(ATMInquiryResponseV02.mmObject());
@@ -252,8 +253,7 @@ public class ATMInquiryResponseV01 {
 				rootElement = "Document";
 				xmlTag = "ATMNqryRspn";
 				businessArea_lazy = () -> ATMCardTransactionLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.catp.ATMInquiryResponseV01.mmHeader, com.tools20022.repository.area.catp.ATMInquiryResponseV01.mmProtectedATMInquiryResponse,
-						com.tools20022.repository.area.catp.ATMInquiryResponseV01.mmATMInquiryResponse, com.tools20022.repository.area.catp.ATMInquiryResponseV01.mmSecurityTrailer);
+				messageBuildingBlock_lazy = () -> Arrays.asList(ATMInquiryResponseV01.mmHeader, ATMInquiryResponseV01.mmProtectedATMInquiryResponse, ATMInquiryResponseV01.mmATMInquiryResponse, ATMInquiryResponseV01.mmSecurityTrailer);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "catp";

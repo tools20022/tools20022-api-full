@@ -20,7 +20,13 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.caaa.*;
+import com.tools20022.repository.area.cain.KeyExchangeInitiation;
+import com.tools20022.repository.area.cain.KeyExchangeResponse;
+import com.tools20022.repository.area.catm.*;
 import com.tools20022.repository.codeset.ContentType2Code;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -204,11 +210,11 @@ public class ContentInformationType12 {
 			componentContext_lazy = () -> ContentInformationType12.mmObject();
 			isDerived = false;
 			xmlTag = "CnttTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ContentType";
 			definition = "Type of data protection.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ContentInformationType13.mmContentType, com.tools20022.repository.msg.ContentInformationType14.mmContentType);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ContentInformationType9.mmContentType;
+			nextVersions_lazy = () -> Arrays.asList(ContentInformationType13.mmContentType, ContentInformationType14.mmContentType);
+			previousVersion_lazy = () -> ContentInformationType9.mmContentType;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ContentType2Code.mmObject();
@@ -251,10 +257,10 @@ public class ContentInformationType12 {
 			componentContext_lazy = () -> ContentInformationType12.mmObject();
 			isDerived = false;
 			xmlTag = "EnvlpdData";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EnvelopedData";
 			definition = "Data protection by encryption, with a session key.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ContentInformationType9.mmEnvelopedData;
+			previousVersion_lazy = () -> ContentInformationType9.mmEnvelopedData;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -306,11 +312,11 @@ public class ContentInformationType12 {
 			componentContext_lazy = () -> ContentInformationType12.mmObject();
 			isDerived = false;
 			xmlTag = "AuthntcdData";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AuthenticatedData";
 			definition = "Data protection by a message authentication code (MAC).";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ContentInformationType13.mmAuthenticatedData);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ContentInformationType9.mmAuthenticatedData;
+			nextVersions_lazy = () -> Arrays.asList(ContentInformationType13.mmAuthenticatedData);
+			previousVersion_lazy = () -> ContentInformationType9.mmAuthenticatedData;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -365,11 +371,11 @@ public class ContentInformationType12 {
 			componentContext_lazy = () -> ContentInformationType12.mmObject();
 			isDerived = false;
 			xmlTag = "SgndData";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SignedData";
 			definition = "Data protected by a digital signatures.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ContentInformationType13.mmSignedData, com.tools20022.repository.msg.ContentInformationType14.mmSignedData);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ContentInformationType9.mmSignedData;
+			nextVersions_lazy = () -> Arrays.asList(ContentInformationType13.mmSignedData, ContentInformationType14.mmSignedData);
+			previousVersion_lazy = () -> ContentInformationType9.mmSignedData;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -413,10 +419,10 @@ public class ContentInformationType12 {
 			componentContext_lazy = () -> ContentInformationType12.mmObject();
 			isDerived = false;
 			xmlTag = "DgstdData";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DigestedData";
 			definition = "Data protected by a digest.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ContentInformationType9.mmDigestedData;
+			previousVersion_lazy = () -> ContentInformationType9.mmDigestedData;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -427,21 +433,16 @@ public class ContentInformationType12 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ContentInformationType12.mmContentType, com.tools20022.repository.msg.ContentInformationType12.mmEnvelopedData,
-						com.tools20022.repository.msg.ContentInformationType12.mmAuthenticatedData, com.tools20022.repository.msg.ContentInformationType12.mmSignedData, com.tools20022.repository.msg.ContentInformationType12.mmDigestedData);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.catm.AcceptorConfigurationUpdateV04.mmSecurityTrailer, com.tools20022.repository.area.catm.ManagementPlanReplacementV04.mmSecurityTrailer,
-						com.tools20022.repository.area.catm.StatusReportV04.mmSecurityTrailer, com.tools20022.repository.area.catm.MaintenanceDelegationResponseV01.mmSecurityTrailer,
-						com.tools20022.repository.area.catm.MaintenanceDelegationRequestV01.mmSecurityTrailer, com.tools20022.repository.area.caaa.AcceptorBatchTransferResponseV04.mmSecurityTrailer,
-						com.tools20022.repository.area.caaa.AcceptorBatchTransferV04.mmSecurityTrailer, com.tools20022.repository.area.cain.KeyExchangeResponse.mmSecurityTrailer,
-						com.tools20022.repository.area.cain.KeyExchangeInitiation.mmSecurityTrailer, com.tools20022.repository.area.caaa.AcceptorBatchTransferResponseV05.mmSecurityTrailer,
-						com.tools20022.repository.area.caaa.AcceptorBatchTransferV05.mmSecurityTrailer, com.tools20022.repository.area.catm.MaintenanceDelegationResponseV02.mmSecurityTrailer,
-						com.tools20022.repository.area.catm.MaintenanceDelegationRequestV02.mmSecurityTrailer, com.tools20022.repository.area.catm.AcceptorConfigurationUpdateV05.mmSecurityTrailer,
-						com.tools20022.repository.area.catm.StatusReportV05.mmSecurityTrailer, com.tools20022.repository.area.catm.ManagementPlanReplacementV05.mmSecurityTrailer,
-						com.tools20022.repository.area.catm.StatusReportV06.mmSecurityTrailer, com.tools20022.repository.area.catm.AcceptorConfigurationUpdateV06.mmSecurityTrailer,
-						com.tools20022.repository.area.catm.MaintenanceDelegationRequestV03.mmSecurityTrailer, com.tools20022.repository.area.catm.ManagementPlanReplacementV06.mmSecurityTrailer,
-						com.tools20022.repository.area.caaa.AcceptorBatchTransferResponseV06.mmSecurityTrailer, com.tools20022.repository.area.caaa.AcceptorBatchTransferV06.mmSecurityTrailer);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(ContentInformationType12.mmContentType, ContentInformationType12.mmEnvelopedData, ContentInformationType12.mmAuthenticatedData, ContentInformationType12.mmSignedData,
+						ContentInformationType12.mmDigestedData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(AcceptorConfigurationUpdateV04.mmSecurityTrailer, ManagementPlanReplacementV04.mmSecurityTrailer, StatusReportV04.mmSecurityTrailer,
+						MaintenanceDelegationResponseV01.mmSecurityTrailer, MaintenanceDelegationRequestV01.mmSecurityTrailer, AcceptorBatchTransferResponseV04.mmSecurityTrailer, AcceptorBatchTransferV04.mmSecurityTrailer,
+						KeyExchangeResponse.mmSecurityTrailer, KeyExchangeInitiation.mmSecurityTrailer, AcceptorBatchTransferResponseV05.mmSecurityTrailer, AcceptorBatchTransferV05.mmSecurityTrailer,
+						MaintenanceDelegationResponseV02.mmSecurityTrailer, MaintenanceDelegationRequestV02.mmSecurityTrailer, AcceptorConfigurationUpdateV05.mmSecurityTrailer, StatusReportV05.mmSecurityTrailer,
+						ManagementPlanReplacementV05.mmSecurityTrailer, StatusReportV06.mmSecurityTrailer, AcceptorConfigurationUpdateV06.mmSecurityTrailer, MaintenanceDelegationRequestV03.mmSecurityTrailer,
+						ManagementPlanReplacementV06.mmSecurityTrailer, AcceptorBatchTransferResponseV06.mmSecurityTrailer, AcceptorBatchTransferV06.mmSecurityTrailer);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ContentInformationType12";
 				definition = "General cryptographic message syntax (CMS) containing protected data.";
 				nextVersions_lazy = () -> Arrays.asList(ContentInformationType13.mmObject(), ContentInformationType14.mmObject());

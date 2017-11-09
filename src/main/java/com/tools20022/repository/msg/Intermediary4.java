@@ -19,9 +19,13 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.setr.*;
 import com.tools20022.repository.choice.PartyIdentification2Choice;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.entity.TradePartyRole;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -135,11 +139,11 @@ public class Intermediary4 {
 	 */
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> Intermediary4.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Unique and unambiguous identifier of the intermediary.";
 			maxOccurs = 1;
@@ -184,11 +188,11 @@ public class Intermediary4 {
 	 */
 	public static final MMMessageAttribute mmAccount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradePartyRole.mmAccount;
+			businessElementTrace_lazy = () -> TradePartyRole.mmAccount;
 			componentContext_lazy = () -> Intermediary4.mmObject();
 			isDerived = false;
 			xmlTag = "Acct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Account";
 			definition = "Business relationship between two entities; one entity is the account owner, the other entity is the account servicer.";
 			maxOccurs = 1;
@@ -234,7 +238,7 @@ public class Intermediary4 {
 			componentContext_lazy = () -> Intermediary4.mmObject();
 			isDerived = false;
 			xmlTag = "Role";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Role";
 			definition = "Function performed by the intermediary.";
 			maxOccurs = 1;
@@ -246,15 +250,13 @@ public class Intermediary4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Intermediary4.mmIdentification, com.tools20022.repository.msg.Intermediary4.mmAccount, com.tools20022.repository.msg.Intermediary4.mmRole);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.RedemptionBulkOrderConfirmationV02.mmIntermediaryDetails, com.tools20022.repository.area.setr.RedemptionBulkOrderV02.mmIntermediaryDetails,
-						com.tools20022.repository.area.setr.RedemptionMultipleOrderConfirmationV02.mmIntermediaryDetails, com.tools20022.repository.area.setr.RedemptionMultipleOrderV02.mmIntermediaryDetails,
-						com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationV02.mmIntermediaryDetails, com.tools20022.repository.area.setr.SubscriptionBulkOrderV02.mmIntermediaryDetails,
-						com.tools20022.repository.area.setr.SubscriptionMultipleOrderConfirmationV02.mmIntermediaryDetails, com.tools20022.repository.area.setr.SubscriptionMultipleOrderV02.mmIntermediaryDetails,
-						com.tools20022.repository.area.setr.SwitchOrderConfirmationV02.mmIntermediaryDetails, com.tools20022.repository.area.setr.SwitchOrderV02.mmIntermediaryDetails);
+				messageElement_lazy = () -> Arrays.asList(Intermediary4.mmIdentification, Intermediary4.mmAccount, Intermediary4.mmRole);
+				messageBuildingBlock_lazy = () -> Arrays.asList(RedemptionBulkOrderConfirmationV02.mmIntermediaryDetails, RedemptionBulkOrderV02.mmIntermediaryDetails, RedemptionMultipleOrderConfirmationV02.mmIntermediaryDetails,
+						RedemptionMultipleOrderV02.mmIntermediaryDetails, SubscriptionBulkOrderConfirmationV02.mmIntermediaryDetails, SubscriptionBulkOrderV02.mmIntermediaryDetails,
+						SubscriptionMultipleOrderConfirmationV02.mmIntermediaryDetails, SubscriptionMultipleOrderV02.mmIntermediaryDetails, SwitchOrderConfirmationV02.mmIntermediaryDetails, SwitchOrderV02.mmIntermediaryDetails);
 				trace_lazy = () -> TradePartyRole.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Intermediary4";
 				definition = "Party that provides services to investors relating to financial products.";
 			}

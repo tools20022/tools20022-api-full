@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.BillingCurrencyType1Code
+ * BillingCurrencyType1Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.BillingCurrencyType2Code
+ * BillingCurrencyType2Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -41,15 +52,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.BillingCurrencyTypeCode#mmHost
  * BillingCurrencyTypeCode.mmHost}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.BillingCurrencyType1Code
- * BillingCurrencyType1Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.BillingCurrencyType2Code
- * BillingCurrencyType2Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -100,7 +102,7 @@ public class BillingCurrencyTypeCode {
 	 */
 	public static final MMCode mmAccount = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Account";
 			definition = "Currency type used for the billing is the account currency.";
 			owner_lazy = () -> BillingCurrencyTypeCode.mmObject();
@@ -131,7 +133,7 @@ public class BillingCurrencyTypeCode {
 	 */
 	public static final MMCode mmSettlement = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Settlement";
 			definition = "Currency type used for the billing is the settlement currency.";
 			owner_lazy = () -> BillingCurrencyTypeCode.mmObject();
@@ -162,7 +164,7 @@ public class BillingCurrencyTypeCode {
 	 */
 	public static final MMCode mmPricing = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Pricing";
 			definition = "Currency type used for the billing is the pricing currency.";
 			owner_lazy = () -> BillingCurrencyTypeCode.mmObject();
@@ -192,7 +194,7 @@ public class BillingCurrencyTypeCode {
 	 */
 	public static final MMCode mmHost = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Host";
 			definition = "Currency type used for the billing is the host currency.";
 			owner_lazy = () -> BillingCurrencyTypeCode.mmObject();
@@ -203,13 +205,12 @@ public class BillingCurrencyTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ACCT");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "BillingCurrencyTypeCode";
 				definition = "Defines the currency type to be used in the billing balance.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.BillingCurrencyTypeCode.mmAccount, com.tools20022.repository.codeset.BillingCurrencyTypeCode.mmSettlement,
-						com.tools20022.repository.codeset.BillingCurrencyTypeCode.mmPricing, com.tools20022.repository.codeset.BillingCurrencyTypeCode.mmHost);
+				code_lazy = () -> Arrays.asList(BillingCurrencyTypeCode.mmAccount, BillingCurrencyTypeCode.mmSettlement, BillingCurrencyTypeCode.mmPricing, BillingCurrencyTypeCode.mmHost);
 				derivation_lazy = () -> Arrays.asList(BillingCurrencyType1Code.mmObject(), BillingCurrencyType2Code.mmObject());
 			}
 		});

@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.PledgeeTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -77,7 +79,7 @@ public class PledgeeType1Code extends PledgeeTypeCode {
 	 */
 	public static final MMCode mmCounterparty = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Counterparty";
 			owner_lazy = () -> PledgeeType1Code.mmObject();
 		}
@@ -100,7 +102,7 @@ public class PledgeeType1Code extends PledgeeTypeCode {
 	 */
 	public static final MMCode mmRegulatoryBody = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RegulatoryBody";
 			owner_lazy = () -> PledgeeType1Code.mmObject();
 		}
@@ -109,11 +111,11 @@ public class PledgeeType1Code extends PledgeeTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PledgeeType1Code";
 				definition = "Specifies the type of pledgee.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PledgeeType1Code.mmCounterparty, com.tools20022.repository.codeset.PledgeeType1Code.mmRegulatoryBody);
+				code_lazy = () -> Arrays.asList(PledgeeType1Code.mmCounterparty, PledgeeType1Code.mmRegulatoryBody);
 				trace_lazy = () -> PledgeeTypeCode.mmObject();
 			}
 		});

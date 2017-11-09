@@ -19,9 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Exact1NumericText;
 import com.tools20022.repository.datatype.Max140Text;
 import com.tools20022.repository.entity.PaymentCard;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -94,7 +96,7 @@ public class TrackData1 {
 			componentContext_lazy = () -> TrackData1.mmObject();
 			isDerived = false;
 			xmlTag = "TrckNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TrackNumber";
 			definition = "Track number of the card.";
 			maxOccurs = 1;
@@ -136,11 +138,11 @@ public class TrackData1 {
 	 */
 	public static final MMMessageAttribute mmTrackValue = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentCard.mmTrackValue;
+			businessElementTrace_lazy = () -> PaymentCard.mmTrackValue;
 			componentContext_lazy = () -> TrackData1.mmObject();
 			isDerived = false;
 			xmlTag = "TrckVal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TrackValue";
 			definition = "Card track content or equivalent.";
 			maxOccurs = 1;
@@ -152,10 +154,10 @@ public class TrackData1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TrackData1.mmTrackNumber, com.tools20022.repository.msg.TrackData1.mmTrackValue);
+				messageElement_lazy = () -> Arrays.asList(TrackData1.mmTrackNumber, TrackData1.mmTrackValue);
 				trace_lazy = () -> PaymentCard.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TrackData1";
 				definition = "Magnetic track or equivalent payment card data.";
 			}

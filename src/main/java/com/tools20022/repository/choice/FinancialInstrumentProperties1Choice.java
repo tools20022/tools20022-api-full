@@ -19,7 +19,9 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -117,7 +119,7 @@ public class FinancialInstrumentProperties1Choice {
 			componentContext_lazy = () -> FinancialInstrumentProperties1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Eqty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Equity";
 			definition = "Financial instrument which represents a title of ownership  in a company, ie,  the shareholder is entitled to a part of the company's profit - usually by payment of a dividend - and to voting rights, if any. Each company issues generally different classes of shares, eg, ordinary or common shares, which have no guaranteed amount of dividend but carry voting rights, or preferred shares, which receive dividends before ordinary shares but have no voting right.";
 			maxOccurs = 1;
@@ -167,7 +169,7 @@ public class FinancialInstrumentProperties1Choice {
 			componentContext_lazy = () -> FinancialInstrumentProperties1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Debt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Debt";
 			definition = "Any interest-bearing or discounted government or corporate security that obligates the issuer to pay the bondholder a specified sum of money, usually at specific intervals, and to repay the principal amount of the loan at the maturity.";
 			maxOccurs = 1;
@@ -216,7 +218,7 @@ public class FinancialInstrumentProperties1Choice {
 			componentContext_lazy = () -> FinancialInstrumentProperties1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Optn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Option";
 			definition = "Right to buy (call) or sell (put) an underlying asset (securities, index, commodities, etc) at the predetermined price within a specified period of time";
 			maxOccurs = 1;
@@ -264,7 +266,7 @@ public class FinancialInstrumentProperties1Choice {
 			componentContext_lazy = () -> FinancialInstrumentProperties1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Warrt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Warrant";
 			definition = "Financial instrument that gives the holder the right to purchase shares or bonds at a given price within a specified time.";
 			maxOccurs = 1;
@@ -312,7 +314,7 @@ public class FinancialInstrumentProperties1Choice {
 			componentContext_lazy = () -> FinancialInstrumentProperties1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Futr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Future";
 			definition = "Agreement to buy or sell a specific amount of a commodity or financial instrument at a particular price on a stipulated future date.";
 			maxOccurs = 1;
@@ -325,12 +327,11 @@ public class FinancialInstrumentProperties1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.FinancialInstrumentProperties1Choice.mmEquity, com.tools20022.repository.choice.FinancialInstrumentProperties1Choice.mmDebt,
-						com.tools20022.repository.choice.FinancialInstrumentProperties1Choice.mmOption, com.tools20022.repository.choice.FinancialInstrumentProperties1Choice.mmWarrant,
-						com.tools20022.repository.choice.FinancialInstrumentProperties1Choice.mmFuture);
+				messageElement_lazy = () -> Arrays.asList(FinancialInstrumentProperties1Choice.mmEquity, FinancialInstrumentProperties1Choice.mmDebt, FinancialInstrumentProperties1Choice.mmOption,
+						FinancialInstrumentProperties1Choice.mmWarrant, FinancialInstrumentProperties1Choice.mmFuture);
 				trace_lazy = () -> Asset.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "FinancialInstrumentProperties1Choice";
 				definition = "Alternative identification of a financial instrument other than an identifier.";
 			}

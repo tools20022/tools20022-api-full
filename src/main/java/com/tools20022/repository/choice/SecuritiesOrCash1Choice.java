@@ -19,6 +19,9 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.reda.StandingSettlementInstructionV01;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.CashParties24;
 import com.tools20022.repository.msg.SettlementParties35;
 import java.util.Arrays;
@@ -101,7 +104,7 @@ public class SecuritiesOrCash1Choice {
 			componentContext_lazy = () -> SecuritiesOrCash1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "SctiesDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesDetails";
 			definition = "Securities settlement chain parties, accounts and other details.";
 			maxOccurs = 1;
@@ -142,7 +145,7 @@ public class SecuritiesOrCash1Choice {
 			componentContext_lazy = () -> SecuritiesOrCash1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "CshPtiesDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashPartiesDetails";
 			definition = "Cash settlement chain parties and accounts.";
 			maxOccurs = 1;
@@ -155,10 +158,10 @@ public class SecuritiesOrCash1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SecuritiesOrCash1Choice.mmSecuritiesDetails, com.tools20022.repository.choice.SecuritiesOrCash1Choice.mmCashPartiesDetails);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.reda.StandingSettlementInstructionV01.mmSettlementDetails);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(SecuritiesOrCash1Choice.mmSecuritiesDetails, SecuritiesOrCash1Choice.mmCashPartiesDetails);
+				messageBuildingBlock_lazy = () -> Arrays.asList(StandingSettlementInstructionV01.mmSettlementDetails);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesOrCash1Choice";
 				definition = "Choice of securities or cash parties.";
 			}

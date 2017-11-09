@@ -20,6 +20,7 @@ package com.tools20022.repository.area.catm;
 import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.TerminalManagementLatestVersion;
 import com.tools20022.repository.msg.ContentInformationType12;
 import com.tools20022.repository.msg.Header27;
@@ -33,6 +34,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code catm.002.001.06}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.TerminalManagementLatestVersion
@@ -64,9 +68,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * ManagementPlanReplacementV06.mmSecurityTrailer}</li>
  * </ul>
  * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code catm.002.001.06}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -118,10 +119,10 @@ public class ManagementPlanReplacementV06 {
 	public static final MMMessageBuildingBlock mmHeader = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Hdr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Header";
 			definition = "Set of characteristics related to the transfer of the management plan.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.catm.ManagementPlanReplacementV05.mmHeader;
+			previousVersion_lazy = () -> ManagementPlanReplacementV05.mmHeader;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> Header27.mmObject();
@@ -161,10 +162,10 @@ public class ManagementPlanReplacementV06 {
 	public static final MMMessageBuildingBlock mmManagementPlan = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "MgmtPlan";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ManagementPlan";
 			definition = "Sequence of terminal maintenance actions to be performed by a point of interaction (POI).";
-			previousVersion_lazy = () -> com.tools20022.repository.area.catm.ManagementPlanReplacementV05.mmManagementPlan;
+			previousVersion_lazy = () -> ManagementPlanReplacementV05.mmManagementPlan;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> ManagementPlan6.mmObject();
@@ -203,10 +204,10 @@ public class ManagementPlanReplacementV06 {
 	public static final MMMessageBuildingBlock mmSecurityTrailer = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SctyTrlr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityTrailer";
 			definition = "Trailer of the message containing a MAC or a digital signature.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.catm.ManagementPlanReplacementV05.mmSecurityTrailer;
+			previousVersion_lazy = () -> ManagementPlanReplacementV05.mmSecurityTrailer;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> ContentInformationType12.mmObject();
@@ -216,7 +217,7 @@ public class ManagementPlanReplacementV06 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ManagementPlanReplacementV06";
 				definition = "Terminal maintenance actions to be performed by a point of interaction (POI).";
 				previousVersion_lazy = () -> ManagementPlanReplacementV05.mmObject();
@@ -224,8 +225,7 @@ public class ManagementPlanReplacementV06 {
 				rootElement = "Document";
 				xmlTag = "MgmtPlanRplcmnt";
 				businessArea_lazy = () -> TerminalManagementLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.catm.ManagementPlanReplacementV06.mmHeader, com.tools20022.repository.area.catm.ManagementPlanReplacementV06.mmManagementPlan,
-						com.tools20022.repository.area.catm.ManagementPlanReplacementV06.mmSecurityTrailer);
+				messageBuildingBlock_lazy = () -> Arrays.asList(ManagementPlanReplacementV06.mmHeader, ManagementPlanReplacementV06.mmManagementPlan, ManagementPlanReplacementV06.mmSecurityTrailer);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "catm";

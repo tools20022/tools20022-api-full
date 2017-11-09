@@ -19,7 +19,9 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.CashAccount;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.CashAccount23;
 import com.tools20022.repository.msg.ErrorHandling3;
 import java.util.Arrays;
@@ -120,10 +122,10 @@ public class AccountOrBusinessError1Choice {
 			componentContext_lazy = () -> AccountOrBusinessError1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Acct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Account";
 			definition = "Requested information on the account.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AccountOrBusinessError2Choice.mmAccount);
+			nextVersions_lazy = () -> Arrays.asList(AccountOrBusinessError2Choice.mmAccount);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -170,10 +172,10 @@ public class AccountOrBusinessError1Choice {
 			componentContext_lazy = () -> AccountOrBusinessError1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "BizErr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BusinessError";
 			definition = "Reason the requested business information is not given.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AccountOrBusinessError2Choice.mmBusinessError);
+			nextVersions_lazy = () -> Arrays.asList(AccountOrBusinessError2Choice.mmBusinessError);
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ErrorHandling3.mmObject();
@@ -183,10 +185,10 @@ public class AccountOrBusinessError1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AccountOrBusinessError1Choice.mmAccount, com.tools20022.repository.choice.AccountOrBusinessError1Choice.mmBusinessError);
+				messageElement_lazy = () -> Arrays.asList(AccountOrBusinessError1Choice.mmAccount, AccountOrBusinessError1Choice.mmBusinessError);
 				trace_lazy = () -> CashAccount.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "AccountOrBusinessError1Choice";
 				definition = "Choice between account details or a business error when the requested data cannot be retrieved.";
 				nextVersions_lazy = () -> Arrays.asList(AccountOrBusinessError2Choice.mmObject());

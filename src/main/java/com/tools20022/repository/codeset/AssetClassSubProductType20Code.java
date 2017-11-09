@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.AssetClassSubProductTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -86,7 +88,7 @@ public class AssetClassSubProductType20Code extends AssetClassSubProductTypeCode
 	 */
 	public static final MMCode mmDairy = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Dairy";
 			owner_lazy = () -> AssetClassSubProductType20Code.mmObject();
 		}
@@ -95,13 +97,13 @@ public class AssetClassSubProductType20Code extends AssetClassSubProductTypeCode
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AssetClassSubProductType20Code";
 				definition = "Defines the sub-product of type Dairy.";
 				nextVersions_lazy = () -> Arrays.asList(AssetClassSubProductType21Code.mmObject());
 				previousVersion_lazy = () -> AssetClassSubProductType5Code.mmObject();
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AssetClassSubProductType20Code.mmDairy);
+				code_lazy = () -> Arrays.asList(AssetClassSubProductType20Code.mmDairy);
 				trace_lazy = () -> AssetClassSubProductTypeCode.mmObject();
 			}
 		});

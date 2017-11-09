@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.DistributionAccountCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -86,7 +88,7 @@ public class DistributionAccount1Code extends DistributionAccountCode {
 	 */
 	public static final MMCode mmGeneralFree = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GeneralFree";
 			owner_lazy = () -> DistributionAccount1Code.mmObject();
 		}
@@ -109,7 +111,7 @@ public class DistributionAccount1Code extends DistributionAccountCode {
 	 */
 	public static final MMCode mmRRGAccount = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RRGAccount";
 			owner_lazy = () -> DistributionAccount1Code.mmObject();
 		}
@@ -118,12 +120,12 @@ public class DistributionAccount1Code extends DistributionAccountCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("GENF");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DistributionAccount1Code";
 				definition = "Code specifying the type of account where the disbursed CUSIP will be allocated.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DistributionAccount1Code.mmGeneralFree, com.tools20022.repository.codeset.DistributionAccount1Code.mmRRGAccount);
+				code_lazy = () -> Arrays.asList(DistributionAccount1Code.mmGeneralFree, DistributionAccount1Code.mmRRGAccount);
 				trace_lazy = () -> DistributionAccountCode.mmObject();
 			}
 		});

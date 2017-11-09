@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CryptographicKeyTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -92,7 +94,7 @@ public class CryptographicKeyType4Code extends CryptographicKeyTypeCode {
 	 */
 	public static final MMCode mmApplication = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Application";
 			owner_lazy = () -> CryptographicKeyType4Code.mmObject();
 		}
@@ -115,7 +117,7 @@ public class CryptographicKeyType4Code extends CryptographicKeyTypeCode {
 	 */
 	public static final MMCode mmData = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Data";
 			owner_lazy = () -> CryptographicKeyType4Code.mmObject();
 		}
@@ -138,7 +140,7 @@ public class CryptographicKeyType4Code extends CryptographicKeyTypeCode {
 	 */
 	public static final MMCode mmDynamic = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Dynamic";
 			owner_lazy = () -> CryptographicKeyType4Code.mmObject();
 		}
@@ -161,7 +163,7 @@ public class CryptographicKeyType4Code extends CryptographicKeyTypeCode {
 	 */
 	public static final MMCode mmKeyEncryption = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "KeyEncryption";
 			owner_lazy = () -> CryptographicKeyType4Code.mmObject();
 		}
@@ -184,7 +186,7 @@ public class CryptographicKeyType4Code extends CryptographicKeyTypeCode {
 	 */
 	public static final MMCode mmMAC = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MAC";
 			owner_lazy = () -> CryptographicKeyType4Code.mmObject();
 		}
@@ -207,7 +209,7 @@ public class CryptographicKeyType4Code extends CryptographicKeyTypeCode {
 	 */
 	public static final MMCode mmPIN = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PIN";
 			owner_lazy = () -> CryptographicKeyType4Code.mmObject();
 		}
@@ -230,7 +232,7 @@ public class CryptographicKeyType4Code extends CryptographicKeyTypeCode {
 	 */
 	public static final MMCode mmWorking = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Working";
 			owner_lazy = () -> CryptographicKeyType4Code.mmObject();
 		}
@@ -239,13 +241,12 @@ public class CryptographicKeyType4Code extends CryptographicKeyTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CryptographicKeyType4Code";
 				definition = "Category of the cryptographic key.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CryptographicKeyType4Code.mmApplication, com.tools20022.repository.codeset.CryptographicKeyType4Code.mmData,
-						com.tools20022.repository.codeset.CryptographicKeyType4Code.mmDynamic, com.tools20022.repository.codeset.CryptographicKeyType4Code.mmKeyEncryption, com.tools20022.repository.codeset.CryptographicKeyType4Code.mmMAC,
-						com.tools20022.repository.codeset.CryptographicKeyType4Code.mmPIN, com.tools20022.repository.codeset.CryptographicKeyType4Code.mmWorking);
+				code_lazy = () -> Arrays.asList(CryptographicKeyType4Code.mmApplication, CryptographicKeyType4Code.mmData, CryptographicKeyType4Code.mmDynamic, CryptographicKeyType4Code.mmKeyEncryption, CryptographicKeyType4Code.mmMAC,
+						CryptographicKeyType4Code.mmPIN, CryptographicKeyType4Code.mmWorking);
 				trace_lazy = () -> CryptographicKeyTypeCode.mmObject();
 			}
 		});

@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ATMServiceTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -96,7 +98,7 @@ public class ATMServiceType3Code extends ATMServiceTypeCode {
 	 */
 	public static final MMCode mmAccountStatements = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountStatements";
 			owner_lazy = () -> ATMServiceType3Code.mmObject();
 		}
@@ -119,7 +121,7 @@ public class ATMServiceType3Code extends ATMServiceTypeCode {
 	 */
 	public static final MMCode mmCardVerification = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CardVerification";
 			owner_lazy = () -> ATMServiceType3Code.mmObject();
 		}
@@ -142,7 +144,7 @@ public class ATMServiceType3Code extends ATMServiceTypeCode {
 	 */
 	public static final MMCode mmDynamicCurrencyConversion = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DynamicCurrencyConversion";
 			owner_lazy = () -> ATMServiceType3Code.mmObject();
 		}
@@ -165,7 +167,7 @@ public class ATMServiceType3Code extends ATMServiceTypeCode {
 	 */
 	public static final MMCode mmExchangeRateDeposit = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExchangeRateDeposit";
 			owner_lazy = () -> ATMServiceType3Code.mmObject();
 		}
@@ -188,7 +190,7 @@ public class ATMServiceType3Code extends ATMServiceTypeCode {
 	 */
 	public static final MMCode mmExchangeRateWithdrawal = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExchangeRateWithdrawal";
 			owner_lazy = () -> ATMServiceType3Code.mmObject();
 		}
@@ -211,7 +213,7 @@ public class ATMServiceType3Code extends ATMServiceTypeCode {
 	 */
 	public static final MMCode mmSelectEMVApplication = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SelectEMVApplication";
 			owner_lazy = () -> ATMServiceType3Code.mmObject();
 		}
@@ -234,7 +236,7 @@ public class ATMServiceType3Code extends ATMServiceTypeCode {
 	 */
 	public static final MMCode mmCustomerProfile = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CustomerProfile";
 			owner_lazy = () -> ATMServiceType3Code.mmObject();
 		}
@@ -257,7 +259,7 @@ public class ATMServiceType3Code extends ATMServiceTypeCode {
 	 */
 	public static final MMCode mmBalanceInquiry = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BalanceInquiry";
 			owner_lazy = () -> ATMServiceType3Code.mmObject();
 		}
@@ -266,14 +268,12 @@ public class ATMServiceType3Code extends ATMServiceTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ATMServiceType3Code";
 				definition = "Describes the type of inquiry selected by the customer or the ATM.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ATMServiceType3Code.mmAccountStatements, com.tools20022.repository.codeset.ATMServiceType3Code.mmCardVerification,
-						com.tools20022.repository.codeset.ATMServiceType3Code.mmDynamicCurrencyConversion, com.tools20022.repository.codeset.ATMServiceType3Code.mmExchangeRateDeposit,
-						com.tools20022.repository.codeset.ATMServiceType3Code.mmExchangeRateWithdrawal, com.tools20022.repository.codeset.ATMServiceType3Code.mmSelectEMVApplication,
-						com.tools20022.repository.codeset.ATMServiceType3Code.mmCustomerProfile, com.tools20022.repository.codeset.ATMServiceType3Code.mmBalanceInquiry);
+				code_lazy = () -> Arrays.asList(ATMServiceType3Code.mmAccountStatements, ATMServiceType3Code.mmCardVerification, ATMServiceType3Code.mmDynamicCurrencyConversion, ATMServiceType3Code.mmExchangeRateDeposit,
+						ATMServiceType3Code.mmExchangeRateWithdrawal, ATMServiceType3Code.mmSelectEMVApplication, ATMServiceType3Code.mmCustomerProfile, ATMServiceType3Code.mmBalanceInquiry);
 				trace_lazy = () -> ATMServiceTypeCode.mmObject();
 			}
 		});

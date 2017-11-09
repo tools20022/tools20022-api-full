@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.FractionDispositionTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -93,7 +95,7 @@ public class FractionDispositionType6Code extends FractionDispositionTypeCode {
 	 */
 	public static final MMCode mmBuyUp = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BuyUp";
 			owner_lazy = () -> FractionDispositionType6Code.mmObject();
 		}
@@ -116,7 +118,7 @@ public class FractionDispositionType6Code extends FractionDispositionTypeCode {
 	 */
 	public static final MMCode mmCashInLieuOfFraction = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashInLieuOfFraction";
 			owner_lazy = () -> FractionDispositionType6Code.mmObject();
 		}
@@ -139,7 +141,7 @@ public class FractionDispositionType6Code extends FractionDispositionTypeCode {
 	 */
 	public static final MMCode mmIssueFraction = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssueFraction";
 			owner_lazy = () -> FractionDispositionType6Code.mmObject();
 		}
@@ -162,7 +164,7 @@ public class FractionDispositionType6Code extends FractionDispositionTypeCode {
 	 */
 	public static final MMCode mmExpire = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Expire";
 			owner_lazy = () -> FractionDispositionType6Code.mmObject();
 		}
@@ -171,13 +173,12 @@ public class FractionDispositionType6Code extends FractionDispositionTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("BUYU");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FractionDispositionType6Code";
 				definition = "Specifies how fractions resulting from derived securities will be processed or how prorated decisions will be rounding, if provided with a pro ration rate.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.FractionDispositionType6Code.mmBuyUp, com.tools20022.repository.codeset.FractionDispositionType6Code.mmCashInLieuOfFraction,
-						com.tools20022.repository.codeset.FractionDispositionType6Code.mmIssueFraction, com.tools20022.repository.codeset.FractionDispositionType6Code.mmExpire);
+				code_lazy = () -> Arrays.asList(FractionDispositionType6Code.mmBuyUp, FractionDispositionType6Code.mmCashInLieuOfFraction, FractionDispositionType6Code.mmIssueFraction, FractionDispositionType6Code.mmExpire);
 				trace_lazy = () -> FractionDispositionTypeCode.mmObject();
 			}
 		});

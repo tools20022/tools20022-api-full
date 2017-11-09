@@ -19,7 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.setr.RedemptionOrderCancellationRequestV03;
 import com.tools20022.repository.entity.RedemptionOrder;
+import com.tools20022.repository.entity.Trade;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -113,7 +117,7 @@ public class RedemptionMultipleOrderInstruction2 {
 			componentContext_lazy = () -> RedemptionMultipleOrderInstruction2.mmObject();
 			isDerived = false;
 			xmlTag = "MltplOrdrDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MultipleOrderDetails";
 			definition = "General information related to the order.";
 			maxOccurs = 1;
@@ -156,11 +160,11 @@ public class RedemptionMultipleOrderInstruction2 {
 	 */
 	public static final MMMessageAssociationEnd mmRelatedPartyDetails = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Trade.mmTradePartyRole;
+			businessElementTrace_lazy = () -> Trade.mmTradePartyRole;
 			componentContext_lazy = () -> RedemptionMultipleOrderInstruction2.mmObject();
 			isDerived = false;
 			xmlTag = "RltdPtyDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedPartyDetails";
 			definition = "Information about parties related to the transaction.";
 			maxOccurs = 10;
@@ -203,7 +207,7 @@ public class RedemptionMultipleOrderInstruction2 {
 			componentContext_lazy = () -> RedemptionMultipleOrderInstruction2.mmObject();
 			isDerived = false;
 			xmlTag = "Xtnsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Extension";
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
 			minOccurs = 0;
@@ -215,12 +219,11 @@ public class RedemptionMultipleOrderInstruction2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RedemptionMultipleOrderInstruction2.mmMultipleOrderDetails, com.tools20022.repository.msg.RedemptionMultipleOrderInstruction2.mmRelatedPartyDetails,
-						com.tools20022.repository.msg.RedemptionMultipleOrderInstruction2.mmExtension);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.RedemptionOrderCancellationRequestV03.mmCancellationByOrderDetails);
+				messageElement_lazy = () -> Arrays.asList(RedemptionMultipleOrderInstruction2.mmMultipleOrderDetails, RedemptionMultipleOrderInstruction2.mmRelatedPartyDetails, RedemptionMultipleOrderInstruction2.mmExtension);
+				messageBuildingBlock_lazy = () -> Arrays.asList(RedemptionOrderCancellationRequestV03.mmCancellationByOrderDetails);
 				trace_lazy = () -> RedemptionOrder.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RedemptionMultipleOrderInstruction2";
 				definition = "Information about a redemption multiple order.";
 			}

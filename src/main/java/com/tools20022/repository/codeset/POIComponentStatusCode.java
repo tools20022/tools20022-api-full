@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.POIComponentStatus1Code
+ * POIComponentStatus1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -41,13 +50,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.POIComponentStatusCode#mmDeactivated
  * POIComponentStatusCode.mmDeactivated}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.POIComponentStatus1Code
- * POIComponentStatus1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -98,7 +100,7 @@ public class POIComponentStatusCode {
 	 */
 	public static final MMCode mmWaitingActivation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "WaitingActivation";
 			definition = "Component not yet activated.";
 			owner_lazy = () -> POIComponentStatusCode.mmObject();
@@ -128,7 +130,7 @@ public class POIComponentStatusCode {
 	 */
 	public static final MMCode mmInOperation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InOperation";
 			definition = "Component activated and in operation.";
 			owner_lazy = () -> POIComponentStatusCode.mmObject();
@@ -158,7 +160,7 @@ public class POIComponentStatusCode {
 	 */
 	public static final MMCode mmOutOfOrder = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "OutOfOrder";
 			definition = "Component not working properly.";
 			owner_lazy = () -> POIComponentStatusCode.mmObject();
@@ -188,7 +190,7 @@ public class POIComponentStatusCode {
 	 */
 	public static final MMCode mmDeactivated = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Deactivated";
 			definition = "Component has been deactivated.";
 			owner_lazy = () -> POIComponentStatusCode.mmObject();
@@ -199,13 +201,12 @@ public class POIComponentStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("WAIT");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "POIComponentStatusCode";
 				definition = "Status of a component belonging to a POI Terminal (Point of Interaction).";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.POIComponentStatusCode.mmWaitingActivation, com.tools20022.repository.codeset.POIComponentStatusCode.mmInOperation,
-						com.tools20022.repository.codeset.POIComponentStatusCode.mmOutOfOrder, com.tools20022.repository.codeset.POIComponentStatusCode.mmDeactivated);
+				code_lazy = () -> Arrays.asList(POIComponentStatusCode.mmWaitingActivation, POIComponentStatusCode.mmInOperation, POIComponentStatusCode.mmOutOfOrder, POIComponentStatusCode.mmDeactivated);
 				derivation_lazy = () -> Arrays.asList(POIComponentStatus1Code.mmObject());
 			}
 		});

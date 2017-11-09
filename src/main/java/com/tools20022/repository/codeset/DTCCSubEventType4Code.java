@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.DTCCSubEventTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -209,9 +211,9 @@ public class DTCCSubEventType4Code extends DTCCSubEventTypeCode {
 	 */
 	public static final MMCode mmOptOut = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptOut";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DTCCSubEventType5Code.mmOptOut);
+			nextVersions_lazy = () -> Arrays.asList(DTCCSubEventType5Code.mmOptOut);
 			owner_lazy = () -> DTCCSubEventType4Code.mmObject();
 		}
 	};
@@ -241,9 +243,9 @@ public class DTCCSubEventType4Code extends DTCCSubEventTypeCode {
 	 */
 	public static final MMCode mmDividendReinvestmentByDTC = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DividendReinvestmentByDTC";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DTCCSubEventType5Code.mmDividendReinvestmentByDTC);
+			nextVersions_lazy = () -> Arrays.asList(DTCCSubEventType5Code.mmDividendReinvestmentByDTC);
 			owner_lazy = () -> DTCCSubEventType4Code.mmObject();
 		}
 	};
@@ -273,9 +275,9 @@ public class DTCCSubEventType4Code extends DTCCSubEventTypeCode {
 	 */
 	public static final MMCode mmPlaceOfListing = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceOfListing";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DTCCSubEventType5Code.mmPlaceOfListing);
+			nextVersions_lazy = () -> Arrays.asList(DTCCSubEventType5Code.mmPlaceOfListing);
 			owner_lazy = () -> DTCCSubEventType4Code.mmObject();
 		}
 	};
@@ -305,9 +307,9 @@ public class DTCCSubEventType4Code extends DTCCSubEventTypeCode {
 	 */
 	public static final MMCode mmBoardLot = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BoardLot";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DTCCSubEventType5Code.mmBoardLot);
+			nextVersions_lazy = () -> Arrays.asList(DTCCSubEventType5Code.mmBoardLot);
 			owner_lazy = () -> DTCCSubEventType4Code.mmObject();
 		}
 	};
@@ -337,9 +339,9 @@ public class DTCCSubEventType4Code extends DTCCSubEventTypeCode {
 	 */
 	public static final MMCode mmRemarketing = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Remarketing";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DTCCSubEventType5Code.mmRemarketing);
+			nextVersions_lazy = () -> Arrays.asList(DTCCSubEventType5Code.mmRemarketing);
 			owner_lazy = () -> DTCCSubEventType4Code.mmObject();
 		}
 	};
@@ -369,9 +371,9 @@ public class DTCCSubEventType4Code extends DTCCSubEventTypeCode {
 	 */
 	public static final MMCode mmUnwind = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unwind";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DTCCSubEventType5Code.mmUnwind);
+			nextVersions_lazy = () -> Arrays.asList(DTCCSubEventType5Code.mmUnwind);
 			owner_lazy = () -> DTCCSubEventType4Code.mmObject();
 		}
 	};
@@ -401,9 +403,9 @@ public class DTCCSubEventType4Code extends DTCCSubEventTypeCode {
 	 */
 	public static final MMCode mmShareExchange = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ShareExchange";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DTCCSubEventType5Code.mmShareExchange);
+			nextVersions_lazy = () -> Arrays.asList(DTCCSubEventType5Code.mmShareExchange);
 			owner_lazy = () -> DTCCSubEventType4Code.mmObject();
 		}
 	};
@@ -433,9 +435,9 @@ public class DTCCSubEventType4Code extends DTCCSubEventTypeCode {
 	 */
 	public static final MMCode mmStandard = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Standard";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DTCCSubEventType5Code.mmStandard);
+			nextVersions_lazy = () -> Arrays.asList(DTCCSubEventType5Code.mmStandard);
 			owner_lazy = () -> DTCCSubEventType4Code.mmObject();
 		}
 	};
@@ -465,9 +467,9 @@ public class DTCCSubEventType4Code extends DTCCSubEventTypeCode {
 	 */
 	public static final MMCode mmTransfer = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Transfer";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DTCCSubEventType5Code.mmTransfer);
+			nextVersions_lazy = () -> Arrays.asList(DTCCSubEventType5Code.mmTransfer);
 			owner_lazy = () -> DTCCSubEventType4Code.mmObject();
 		}
 	};
@@ -497,9 +499,9 @@ public class DTCCSubEventType4Code extends DTCCSubEventTypeCode {
 	 */
 	public static final MMCode mmSurvivorOptions = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SurvivorOptions";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DTCCSubEventType5Code.mmSurvivorOptions);
+			nextVersions_lazy = () -> Arrays.asList(DTCCSubEventType5Code.mmSurvivorOptions);
 			owner_lazy = () -> DTCCSubEventType4Code.mmObject();
 		}
 	};
@@ -529,9 +531,9 @@ public class DTCCSubEventType4Code extends DTCCSubEventTypeCode {
 	 */
 	public static final MMCode mmMortgageBacked = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MortgageBacked";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DTCCSubEventType5Code.mmMortgageBacked);
+			nextVersions_lazy = () -> Arrays.asList(DTCCSubEventType5Code.mmMortgageBacked);
 			owner_lazy = () -> DTCCSubEventType4Code.mmObject();
 		}
 	};
@@ -561,9 +563,9 @@ public class DTCCSubEventType4Code extends DTCCSubEventTypeCode {
 	 */
 	public static final MMCode mmSaleOfAssets = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SaleOfAssets";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DTCCSubEventType5Code.mmSaleOfAssets);
+			nextVersions_lazy = () -> Arrays.asList(DTCCSubEventType5Code.mmSaleOfAssets);
 			owner_lazy = () -> DTCCSubEventType4Code.mmObject();
 		}
 	};
@@ -593,9 +595,9 @@ public class DTCCSubEventType4Code extends DTCCSubEventTypeCode {
 	 */
 	public static final MMCode mmPhysicalRightsNotIssued = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PhysicalRightsNotIssued";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DTCCSubEventType5Code.mmPhysicalRightsNotIssued);
+			nextVersions_lazy = () -> Arrays.asList(DTCCSubEventType5Code.mmPhysicalRightsNotIssued);
 			owner_lazy = () -> DTCCSubEventType4Code.mmObject();
 		}
 	};
@@ -625,9 +627,9 @@ public class DTCCSubEventType4Code extends DTCCSubEventTypeCode {
 	 */
 	public static final MMCode mmPoisonPill = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PoisonPill";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DTCCSubEventType5Code.mmPoisonPill);
+			nextVersions_lazy = () -> Arrays.asList(DTCCSubEventType5Code.mmPoisonPill);
 			owner_lazy = () -> DTCCSubEventType4Code.mmObject();
 		}
 	};
@@ -657,9 +659,9 @@ public class DTCCSubEventType4Code extends DTCCSubEventTypeCode {
 	 */
 	public static final MMCode mmDividendReinvestmentByIssuer = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DividendReinvestmentByIssuer";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DTCCSubEventType5Code.mmDividendReinvestmentByIssuer);
+			nextVersions_lazy = () -> Arrays.asList(DTCCSubEventType5Code.mmDividendReinvestmentByIssuer);
 			owner_lazy = () -> DTCCSubEventType4Code.mmObject();
 		}
 	};
@@ -689,9 +691,9 @@ public class DTCCSubEventType4Code extends DTCCSubEventTypeCode {
 	 */
 	public static final MMCode mmMandatoryRedemptionOfShares = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MandatoryRedemptionOfShares";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DTCCSubEventType5Code.mmMandatoryRedemptionOfShares);
+			nextVersions_lazy = () -> Arrays.asList(DTCCSubEventType5Code.mmMandatoryRedemptionOfShares);
 			owner_lazy = () -> DTCCSubEventType4Code.mmObject();
 		}
 	};
@@ -721,9 +723,9 @@ public class DTCCSubEventType4Code extends DTCCSubEventTypeCode {
 	 */
 	public static final MMCode mmSharePurchasePlan = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SharePurchasePlan";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DTCCSubEventType5Code.mmSharePurchasePlan);
+			nextVersions_lazy = () -> Arrays.asList(DTCCSubEventType5Code.mmSharePurchasePlan);
 			owner_lazy = () -> DTCCSubEventType4Code.mmObject();
 		}
 	};
@@ -753,9 +755,9 @@ public class DTCCSubEventType4Code extends DTCCSubEventTypeCode {
 	 */
 	public static final MMCode mmOpenOffer = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OpenOffer";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DTCCSubEventType5Code.mmOpenOffer);
+			nextVersions_lazy = () -> Arrays.asList(DTCCSubEventType5Code.mmOpenOffer);
 			owner_lazy = () -> DTCCSubEventType4Code.mmObject();
 		}
 	};
@@ -785,9 +787,9 @@ public class DTCCSubEventType4Code extends DTCCSubEventTypeCode {
 	 */
 	public static final MMCode mmTenderWithRights = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TenderWithRights";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DTCCSubEventType5Code.mmTenderWithRights);
+			nextVersions_lazy = () -> Arrays.asList(DTCCSubEventType5Code.mmTenderWithRights);
 			owner_lazy = () -> DTCCSubEventType4Code.mmObject();
 		}
 	};
@@ -817,9 +819,9 @@ public class DTCCSubEventType4Code extends DTCCSubEventTypeCode {
 	 */
 	public static final MMCode mmCashinLieu = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashinLieu";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DTCCSubEventType5Code.mmCashinLieu);
+			nextVersions_lazy = () -> Arrays.asList(DTCCSubEventType5Code.mmCashinLieu);
 			owner_lazy = () -> DTCCSubEventType4Code.mmObject();
 		}
 	};
@@ -849,9 +851,9 @@ public class DTCCSubEventType4Code extends DTCCSubEventTypeCode {
 	 */
 	public static final MMCode mmBidTenderSealedTender = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BidTenderSealedTender";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DTCCSubEventType5Code.mmBidTenderSealedTender);
+			nextVersions_lazy = () -> Arrays.asList(DTCCSubEventType5Code.mmBidTenderSealedTender);
 			owner_lazy = () -> DTCCSubEventType4Code.mmObject();
 		}
 	};
@@ -881,9 +883,9 @@ public class DTCCSubEventType4Code extends DTCCSubEventTypeCode {
 	 */
 	public static final MMCode mmOfferToPurchase = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OfferToPurchase";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DTCCSubEventType5Code.mmOfferToPurchase);
+			nextVersions_lazy = () -> Arrays.asList(DTCCSubEventType5Code.mmOfferToPurchase);
 			owner_lazy = () -> DTCCSubEventType4Code.mmObject();
 		}
 	};
@@ -913,9 +915,9 @@ public class DTCCSubEventType4Code extends DTCCSubEventTypeCode {
 	 */
 	public static final MMCode mmADR = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ADR";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DTCCSubEventType5Code.mmADR);
+			nextVersions_lazy = () -> Arrays.asList(DTCCSubEventType5Code.mmADR);
 			owner_lazy = () -> DTCCSubEventType4Code.mmObject();
 		}
 	};
@@ -945,9 +947,9 @@ public class DTCCSubEventType4Code extends DTCCSubEventTypeCode {
 	 */
 	public static final MMCode mmWithPayout = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WithPayout";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DTCCSubEventType5Code.mmWithPayout);
+			nextVersions_lazy = () -> Arrays.asList(DTCCSubEventType5Code.mmWithPayout);
 			owner_lazy = () -> DTCCSubEventType4Code.mmObject();
 		}
 	};
@@ -977,9 +979,9 @@ public class DTCCSubEventType4Code extends DTCCSubEventTypeCode {
 	 */
 	public static final MMCode mmWithoutPayout = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WithoutPayout";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DTCCSubEventType5Code.mmWithoutPayout);
+			nextVersions_lazy = () -> Arrays.asList(DTCCSubEventType5Code.mmWithoutPayout);
 			owner_lazy = () -> DTCCSubEventType4Code.mmObject();
 		}
 	};
@@ -1009,9 +1011,9 @@ public class DTCCSubEventType4Code extends DTCCSubEventTypeCode {
 	 */
 	public static final MMCode mmTaxCredit = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxCredit";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DTCCSubEventType5Code.mmTaxCredit);
+			nextVersions_lazy = () -> Arrays.asList(DTCCSubEventType5Code.mmTaxCredit);
 			owner_lazy = () -> DTCCSubEventType4Code.mmObject();
 		}
 	};
@@ -1041,9 +1043,9 @@ public class DTCCSubEventType4Code extends DTCCSubEventTypeCode {
 	 */
 	public static final MMCode mmUSLegal144A = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "USLegal144A";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DTCCSubEventType5Code.mmUSLegal144A);
+			nextVersions_lazy = () -> Arrays.asList(DTCCSubEventType5Code.mmUSLegal144A);
 			owner_lazy = () -> DTCCSubEventType4Code.mmObject();
 		}
 	};
@@ -1073,9 +1075,9 @@ public class DTCCSubEventType4Code extends DTCCSubEventTypeCode {
 	 */
 	public static final MMCode mmCashAndSecurities = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashAndSecurities";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DTCCSubEventType5Code.mmCashAndSecurities);
+			nextVersions_lazy = () -> Arrays.asList(DTCCSubEventType5Code.mmCashAndSecurities);
 			owner_lazy = () -> DTCCSubEventType4Code.mmObject();
 		}
 	};
@@ -1105,9 +1107,9 @@ public class DTCCSubEventType4Code extends DTCCSubEventTypeCode {
 	 */
 	public static final MMCode mmRegulationS = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RegulationS";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DTCCSubEventType5Code.mmRegulationS);
+			nextVersions_lazy = () -> Arrays.asList(DTCCSubEventType5Code.mmRegulationS);
 			owner_lazy = () -> DTCCSubEventType4Code.mmObject();
 		}
 	};
@@ -1137,9 +1139,9 @@ public class DTCCSubEventType4Code extends DTCCSubEventTypeCode {
 	 */
 	public static final MMCode mmImportantNotice = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ImportantNotice";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DTCCSubEventType5Code.mmImportantNotice);
+			nextVersions_lazy = () -> Arrays.asList(DTCCSubEventType5Code.mmImportantNotice);
 			owner_lazy = () -> DTCCSubEventType4Code.mmObject();
 		}
 	};
@@ -1169,9 +1171,9 @@ public class DTCCSubEventType4Code extends DTCCSubEventTypeCode {
 	 */
 	public static final MMCode mmBasedOnRecordDateHoldings = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BasedOnRecordDateHoldings";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DTCCSubEventType5Code.mmBasedOnRecordDateHoldings);
+			nextVersions_lazy = () -> Arrays.asList(DTCCSubEventType5Code.mmBasedOnRecordDateHoldings);
 			owner_lazy = () -> DTCCSubEventType4Code.mmObject();
 		}
 	};
@@ -1201,9 +1203,9 @@ public class DTCCSubEventType4Code extends DTCCSubEventTypeCode {
 	 */
 	public static final MMCode mmCash = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cash";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DTCCSubEventType5Code.mmCash);
+			nextVersions_lazy = () -> Arrays.asList(DTCCSubEventType5Code.mmCash);
 			owner_lazy = () -> DTCCSubEventType4Code.mmObject();
 		}
 	};
@@ -1233,9 +1235,9 @@ public class DTCCSubEventType4Code extends DTCCSubEventTypeCode {
 	 */
 	public static final MMCode mmPresentationRequired = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PresentationRequired";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DTCCSubEventType5Code.mmPresentationRequired);
+			nextVersions_lazy = () -> Arrays.asList(DTCCSubEventType5Code.mmPresentationRequired);
 			owner_lazy = () -> DTCCSubEventType4Code.mmObject();
 		}
 	};
@@ -1265,9 +1267,9 @@ public class DTCCSubEventType4Code extends DTCCSubEventTypeCode {
 	 */
 	public static final MMCode mmSecurities = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Securities";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DTCCSubEventType5Code.mmSecurities);
+			nextVersions_lazy = () -> Arrays.asList(DTCCSubEventType5Code.mmSecurities);
 			owner_lazy = () -> DTCCSubEventType4Code.mmObject();
 		}
 	};
@@ -1297,9 +1299,9 @@ public class DTCCSubEventType4Code extends DTCCSubEventTypeCode {
 	 */
 	public static final MMCode mmConvertAndTender = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConvertAndTender";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DTCCSubEventType5Code.mmConvertAndTender);
+			nextVersions_lazy = () -> Arrays.asList(DTCCSubEventType5Code.mmConvertAndTender);
 			owner_lazy = () -> DTCCSubEventType4Code.mmObject();
 		}
 	};
@@ -1329,9 +1331,9 @@ public class DTCCSubEventType4Code extends DTCCSubEventTypeCode {
 	 */
 	public static final MMCode mmMiniTender = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MiniTender";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DTCCSubEventType5Code.mmMiniTender);
+			nextVersions_lazy = () -> Arrays.asList(DTCCSubEventType5Code.mmMiniTender);
 			owner_lazy = () -> DTCCSubEventType4Code.mmObject();
 		}
 	};
@@ -1361,9 +1363,9 @@ public class DTCCSubEventType4Code extends DTCCSubEventTypeCode {
 	 */
 	public static final MMCode mmSelfTender = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SelfTender";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DTCCSubEventType5Code.mmSelfTender);
+			nextVersions_lazy = () -> Arrays.asList(DTCCSubEventType5Code.mmSelfTender);
 			owner_lazy = () -> DTCCSubEventType4Code.mmObject();
 		}
 	};
@@ -1393,9 +1395,9 @@ public class DTCCSubEventType4Code extends DTCCSubEventTypeCode {
 	 */
 	public static final MMCode mmGDR = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GDR";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DTCCSubEventType5Code.mmGDR);
+			nextVersions_lazy = () -> Arrays.asList(DTCCSubEventType5Code.mmGDR);
 			owner_lazy = () -> DTCCSubEventType4Code.mmObject();
 		}
 	};
@@ -1403,29 +1405,20 @@ public class DTCCSubEventType4Code extends DTCCSubEventTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("OPTO");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DTCCSubEventType4Code";
 				definition = "Specifies DTCC (The Depository Trust and Clearing Corporation) defined sub event types.";
 				nextVersions_lazy = () -> Arrays.asList(DTCCSubEventType5Code.mmObject());
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DTCCSubEventType4Code.mmOptOut, com.tools20022.repository.codeset.DTCCSubEventType4Code.mmDividendReinvestmentByDTC,
-						com.tools20022.repository.codeset.DTCCSubEventType4Code.mmPlaceOfListing, com.tools20022.repository.codeset.DTCCSubEventType4Code.mmBoardLot, com.tools20022.repository.codeset.DTCCSubEventType4Code.mmRemarketing,
-						com.tools20022.repository.codeset.DTCCSubEventType4Code.mmUnwind, com.tools20022.repository.codeset.DTCCSubEventType4Code.mmShareExchange, com.tools20022.repository.codeset.DTCCSubEventType4Code.mmStandard,
-						com.tools20022.repository.codeset.DTCCSubEventType4Code.mmTransfer, com.tools20022.repository.codeset.DTCCSubEventType4Code.mmSurvivorOptions,
-						com.tools20022.repository.codeset.DTCCSubEventType4Code.mmMortgageBacked, com.tools20022.repository.codeset.DTCCSubEventType4Code.mmSaleOfAssets,
-						com.tools20022.repository.codeset.DTCCSubEventType4Code.mmPhysicalRightsNotIssued, com.tools20022.repository.codeset.DTCCSubEventType4Code.mmPoisonPill,
-						com.tools20022.repository.codeset.DTCCSubEventType4Code.mmDividendReinvestmentByIssuer, com.tools20022.repository.codeset.DTCCSubEventType4Code.mmMandatoryRedemptionOfShares,
-						com.tools20022.repository.codeset.DTCCSubEventType4Code.mmSharePurchasePlan, com.tools20022.repository.codeset.DTCCSubEventType4Code.mmOpenOffer,
-						com.tools20022.repository.codeset.DTCCSubEventType4Code.mmTenderWithRights, com.tools20022.repository.codeset.DTCCSubEventType4Code.mmCashinLieu,
-						com.tools20022.repository.codeset.DTCCSubEventType4Code.mmBidTenderSealedTender, com.tools20022.repository.codeset.DTCCSubEventType4Code.mmOfferToPurchase,
-						com.tools20022.repository.codeset.DTCCSubEventType4Code.mmADR, com.tools20022.repository.codeset.DTCCSubEventType4Code.mmWithPayout, com.tools20022.repository.codeset.DTCCSubEventType4Code.mmWithoutPayout,
-						com.tools20022.repository.codeset.DTCCSubEventType4Code.mmTaxCredit, com.tools20022.repository.codeset.DTCCSubEventType4Code.mmUSLegal144A,
-						com.tools20022.repository.codeset.DTCCSubEventType4Code.mmCashAndSecurities, com.tools20022.repository.codeset.DTCCSubEventType4Code.mmRegulationS,
-						com.tools20022.repository.codeset.DTCCSubEventType4Code.mmImportantNotice, com.tools20022.repository.codeset.DTCCSubEventType4Code.mmBasedOnRecordDateHoldings,
-						com.tools20022.repository.codeset.DTCCSubEventType4Code.mmCash, com.tools20022.repository.codeset.DTCCSubEventType4Code.mmPresentationRequired, com.tools20022.repository.codeset.DTCCSubEventType4Code.mmSecurities,
-						com.tools20022.repository.codeset.DTCCSubEventType4Code.mmConvertAndTender, com.tools20022.repository.codeset.DTCCSubEventType4Code.mmMiniTender, com.tools20022.repository.codeset.DTCCSubEventType4Code.mmSelfTender,
-						com.tools20022.repository.codeset.DTCCSubEventType4Code.mmGDR);
+				code_lazy = () -> Arrays.asList(DTCCSubEventType4Code.mmOptOut, DTCCSubEventType4Code.mmDividendReinvestmentByDTC, DTCCSubEventType4Code.mmPlaceOfListing, DTCCSubEventType4Code.mmBoardLot,
+						DTCCSubEventType4Code.mmRemarketing, DTCCSubEventType4Code.mmUnwind, DTCCSubEventType4Code.mmShareExchange, DTCCSubEventType4Code.mmStandard, DTCCSubEventType4Code.mmTransfer,
+						DTCCSubEventType4Code.mmSurvivorOptions, DTCCSubEventType4Code.mmMortgageBacked, DTCCSubEventType4Code.mmSaleOfAssets, DTCCSubEventType4Code.mmPhysicalRightsNotIssued, DTCCSubEventType4Code.mmPoisonPill,
+						DTCCSubEventType4Code.mmDividendReinvestmentByIssuer, DTCCSubEventType4Code.mmMandatoryRedemptionOfShares, DTCCSubEventType4Code.mmSharePurchasePlan, DTCCSubEventType4Code.mmOpenOffer,
+						DTCCSubEventType4Code.mmTenderWithRights, DTCCSubEventType4Code.mmCashinLieu, DTCCSubEventType4Code.mmBidTenderSealedTender, DTCCSubEventType4Code.mmOfferToPurchase, DTCCSubEventType4Code.mmADR,
+						DTCCSubEventType4Code.mmWithPayout, DTCCSubEventType4Code.mmWithoutPayout, DTCCSubEventType4Code.mmTaxCredit, DTCCSubEventType4Code.mmUSLegal144A, DTCCSubEventType4Code.mmCashAndSecurities,
+						DTCCSubEventType4Code.mmRegulationS, DTCCSubEventType4Code.mmImportantNotice, DTCCSubEventType4Code.mmBasedOnRecordDateHoldings, DTCCSubEventType4Code.mmCash, DTCCSubEventType4Code.mmPresentationRequired,
+						DTCCSubEventType4Code.mmSecurities, DTCCSubEventType4Code.mmConvertAndTender, DTCCSubEventType4Code.mmMiniTender, DTCCSubEventType4Code.mmSelfTender, DTCCSubEventType4Code.mmGDR);
 				trace_lazy = () -> DTCCSubEventTypeCode.mmObject();
 			}
 		});

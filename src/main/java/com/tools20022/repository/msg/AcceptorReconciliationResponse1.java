@@ -19,7 +19,12 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.caaa.AcceptorReconciliationResponseV01;
+import com.tools20022.repository.entity.CardPayment;
 import com.tools20022.repository.entity.CardPaymentStatus;
+import com.tools20022.repository.entity.CardPaymentValidation;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -116,11 +121,11 @@ public class AcceptorReconciliationResponse1 {
 	 */
 	public static final MMMessageAssociationEnd mmEnvironment = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPaymentStatus.mmCardPayment;
+			businessElementTrace_lazy = () -> CardPaymentStatus.mmCardPayment;
 			componentContext_lazy = () -> AcceptorReconciliationResponse1.mmObject();
 			isDerived = false;
 			xmlTag = "Envt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Environment";
 			definition = "Environment of the transaction.";
 			maxOccurs = 1;
@@ -164,11 +169,11 @@ public class AcceptorReconciliationResponse1 {
 	 */
 	public static final MMMessageAssociationEnd mmTransactionResponse = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPaymentValidation.mmResponse;
+			businessElementTrace_lazy = () -> CardPaymentValidation.mmResponse;
 			componentContext_lazy = () -> AcceptorReconciliationResponse1.mmObject();
 			isDerived = false;
 			xmlTag = "TxRspn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionResponse";
 			definition = "Response from the acquirer to the reconciliation transaction.";
 			maxOccurs = 1;
@@ -213,11 +218,11 @@ public class AcceptorReconciliationResponse1 {
 	 */
 	public static final MMMessageAssociationEnd mmTransaction = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPayment.mmReconciliation;
+			businessElementTrace_lazy = () -> CardPayment.mmReconciliation;
 			componentContext_lazy = () -> AcceptorReconciliationResponse1.mmObject();
 			isDerived = false;
 			xmlTag = "Tx";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Transaction";
 			definition = "Reconciliation transaction between an acceptor an acquirer.";
 			maxOccurs = 1;
@@ -230,12 +235,11 @@ public class AcceptorReconciliationResponse1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcceptorReconciliationResponse1.mmEnvironment, com.tools20022.repository.msg.AcceptorReconciliationResponse1.mmTransactionResponse,
-						com.tools20022.repository.msg.AcceptorReconciliationResponse1.mmTransaction);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.caaa.AcceptorReconciliationResponseV01.mmReconciliationResponse);
+				messageElement_lazy = () -> Arrays.asList(AcceptorReconciliationResponse1.mmEnvironment, AcceptorReconciliationResponse1.mmTransactionResponse, AcceptorReconciliationResponse1.mmTransaction);
+				messageBuildingBlock_lazy = () -> Arrays.asList(AcceptorReconciliationResponseV01.mmReconciliationResponse);
 				trace_lazy = () -> CardPaymentStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AcceptorReconciliationResponse1";
 				definition = "Reconciliation response from the acquirer.";
 				nextVersions_lazy = () -> Arrays.asList(AcceptorReconciliationResponse2.mmObject());

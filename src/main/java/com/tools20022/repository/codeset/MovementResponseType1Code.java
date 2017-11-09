@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.MovementResponseTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -83,7 +85,7 @@ public class MovementResponseType1Code extends MovementResponseTypeCode {
 	 */
 	public static final MMCode mmFull = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Full";
 			owner_lazy = () -> MovementResponseType1Code.mmObject();
 		}
@@ -106,7 +108,7 @@ public class MovementResponseType1Code extends MovementResponseTypeCode {
 	 */
 	public static final MMCode mmStatus = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Status";
 			owner_lazy = () -> MovementResponseType1Code.mmObject();
 		}
@@ -115,12 +117,12 @@ public class MovementResponseType1Code extends MovementResponseTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("FULL");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MovementResponseType1Code";
 				definition = "Specifies the type of movement response to be returned.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MovementResponseType1Code.mmFull, com.tools20022.repository.codeset.MovementResponseType1Code.mmStatus);
+				code_lazy = () -> Arrays.asList(MovementResponseType1Code.mmFull, MovementResponseType1Code.mmStatus);
 				trace_lazy = () -> MovementResponseTypeCode.mmObject();
 			}
 		});

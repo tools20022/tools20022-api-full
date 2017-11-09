@@ -19,8 +19,11 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.entity.PartyIdentificationInformation;
 import com.tools20022.repository.entity.PersonIdentification;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification4;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -116,11 +119,11 @@ public class PersonIdentificationType1Choice {
 	 */
 	public static final MMMessageAttribute mmPassportNumber = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PersonIdentification.mmPassportNumber;
+			businessElementTrace_lazy = () -> PersonIdentification.mmPassportNumber;
 			componentContext_lazy = () -> PersonIdentificationType1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "PsptNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PassportNumber";
 			definition = "Number assigned by a passport authority to a passport.";
 			maxOccurs = 1;
@@ -163,11 +166,11 @@ public class PersonIdentificationType1Choice {
 	 */
 	public static final MMMessageAttribute mmTaxIdentificationNumber = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.mmTaxIdentificationNumber;
+			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmTaxIdentificationNumber;
 			componentContext_lazy = () -> PersonIdentificationType1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "TaxIdNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxIdentificationNumber";
 			definition = "Number assigned by a tax authority to an entity.";
 			maxOccurs = 1;
@@ -210,11 +213,11 @@ public class PersonIdentificationType1Choice {
 	 */
 	public static final MMMessageAttribute mmSocialSecurityNumber = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PersonIdentification.mmSocialSecurityNumber;
+			businessElementTrace_lazy = () -> PersonIdentification.mmSocialSecurityNumber;
 			componentContext_lazy = () -> PersonIdentificationType1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "SclSctyNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SocialSecurityNumber";
 			definition = "Number assigned by a social security agency.";
 			maxOccurs = 1;
@@ -258,11 +261,11 @@ public class PersonIdentificationType1Choice {
 	 */
 	public static final MMMessageAttribute mmEmployerIdentificationNumber = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PersonIdentification.mmEmployerIdentificationNumber;
+			businessElementTrace_lazy = () -> PersonIdentification.mmEmployerIdentificationNumber;
 			componentContext_lazy = () -> PersonIdentificationType1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "MplyrIdNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EmployerIdentificationNumber";
 			definition = "Number assigned to an employer by a registration authority.";
 			maxOccurs = 1;
@@ -306,11 +309,11 @@ public class PersonIdentificationType1Choice {
 	 */
 	public static final MMMessageAttribute mmDriversLicenseNumber = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PersonIdentification.mmDriversLicenseNumber;
+			businessElementTrace_lazy = () -> PersonIdentification.mmDriversLicenseNumber;
 			componentContext_lazy = () -> PersonIdentificationType1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "DrvrsLicNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DriversLicenseNumber";
 			definition = "Number assigned by a license authority to a driver's license.";
 			maxOccurs = 1;
@@ -354,11 +357,11 @@ public class PersonIdentificationType1Choice {
 	 */
 	public static final MMMessageAttribute mmAlienRegistrationNumber = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PersonIdentification.mmAlienRegistrationNumber;
+			businessElementTrace_lazy = () -> PersonIdentification.mmAlienRegistrationNumber;
 			componentContext_lazy = () -> PersonIdentificationType1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "AlnRegnNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AlienRegistrationNumber";
 			definition = "Number assigned by a government agency to identify foreign nationals.";
 			maxOccurs = 1;
@@ -402,11 +405,11 @@ public class PersonIdentificationType1Choice {
 	 */
 	public static final MMMessageAttribute mmIdentityCardNumber = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PersonIdentification.mmIdentityCardNumber;
+			businessElementTrace_lazy = () -> PersonIdentification.mmIdentityCardNumber;
 			componentContext_lazy = () -> PersonIdentificationType1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "IdntyCardNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IdentityCardNumber";
 			definition = "Number assigned by a national authority to an identity card.";
 			maxOccurs = 1;
@@ -453,11 +456,11 @@ public class PersonIdentificationType1Choice {
 	 */
 	public static final MMMessageAttribute mmOtherIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.mmOtherIdentification;
+			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmOtherIdentification;
 			componentContext_lazy = () -> PersonIdentificationType1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "OthrId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherIdentification";
 			definition = "Identifier issued to a person for which no specific identifier has been defined.";
 			maxOccurs = 1;
@@ -469,13 +472,12 @@ public class PersonIdentificationType1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PersonIdentificationType1Choice.mmPassportNumber, com.tools20022.repository.choice.PersonIdentificationType1Choice.mmTaxIdentificationNumber,
-						com.tools20022.repository.choice.PersonIdentificationType1Choice.mmSocialSecurityNumber, com.tools20022.repository.choice.PersonIdentificationType1Choice.mmEmployerIdentificationNumber,
-						com.tools20022.repository.choice.PersonIdentificationType1Choice.mmDriversLicenseNumber, com.tools20022.repository.choice.PersonIdentificationType1Choice.mmAlienRegistrationNumber,
-						com.tools20022.repository.choice.PersonIdentificationType1Choice.mmIdentityCardNumber, com.tools20022.repository.choice.PersonIdentificationType1Choice.mmOtherIdentification);
+				messageElement_lazy = () -> Arrays.asList(PersonIdentificationType1Choice.mmPassportNumber, PersonIdentificationType1Choice.mmTaxIdentificationNumber, PersonIdentificationType1Choice.mmSocialSecurityNumber,
+						PersonIdentificationType1Choice.mmEmployerIdentificationNumber, PersonIdentificationType1Choice.mmDriversLicenseNumber, PersonIdentificationType1Choice.mmAlienRegistrationNumber,
+						PersonIdentificationType1Choice.mmIdentityCardNumber, PersonIdentificationType1Choice.mmOtherIdentification);
 				trace_lazy = () -> PersonIdentification.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PersonIdentificationType1Choice";
 				definition = "Choice of personal identification type.";
 			}

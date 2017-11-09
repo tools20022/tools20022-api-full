@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.BalanceTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -132,7 +134,7 @@ public class BalanceType5Code extends BalanceTypeCode {
 	 */
 	public static final MMCode mmOpening = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Opening";
 			owner_lazy = () -> BalanceType5Code.mmObject();
 		}
@@ -155,7 +157,7 @@ public class BalanceType5Code extends BalanceTypeCode {
 	 */
 	public static final MMCode mmInterim = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Interim";
 			owner_lazy = () -> BalanceType5Code.mmObject();
 		}
@@ -178,7 +180,7 @@ public class BalanceType5Code extends BalanceTypeCode {
 	 */
 	public static final MMCode mmClosing = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Closing";
 			owner_lazy = () -> BalanceType5Code.mmObject();
 		}
@@ -201,7 +203,7 @@ public class BalanceType5Code extends BalanceTypeCode {
 	 */
 	public static final MMCode mmBook = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Book";
 			owner_lazy = () -> BalanceType5Code.mmObject();
 		}
@@ -224,7 +226,7 @@ public class BalanceType5Code extends BalanceTypeCode {
 	 */
 	public static final MMCode mmCurrent = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Current";
 			owner_lazy = () -> BalanceType5Code.mmObject();
 		}
@@ -247,7 +249,7 @@ public class BalanceType5Code extends BalanceTypeCode {
 	 */
 	public static final MMCode mmPending = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Pending";
 			owner_lazy = () -> BalanceType5Code.mmObject();
 		}
@@ -270,7 +272,7 @@ public class BalanceType5Code extends BalanceTypeCode {
 	 */
 	public static final MMCode mmLimitRelated = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LimitRelated";
 			owner_lazy = () -> BalanceType5Code.mmObject();
 		}
@@ -293,7 +295,7 @@ public class BalanceType5Code extends BalanceTypeCode {
 	 */
 	public static final MMCode mmAvailable = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Available";
 			owner_lazy = () -> BalanceType5Code.mmObject();
 		}
@@ -316,7 +318,7 @@ public class BalanceType5Code extends BalanceTypeCode {
 	 */
 	public static final MMCode mmLiquidityTransfer = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LiquidityTransfer";
 			owner_lazy = () -> BalanceType5Code.mmObject();
 		}
@@ -339,7 +341,7 @@ public class BalanceType5Code extends BalanceTypeCode {
 	 */
 	public static final MMCode mmCredit = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Credit";
 			owner_lazy = () -> BalanceType5Code.mmObject();
 		}
@@ -362,7 +364,7 @@ public class BalanceType5Code extends BalanceTypeCode {
 	 */
 	public static final MMCode mmEligibleAssets = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EligibleAssets";
 			owner_lazy = () -> BalanceType5Code.mmObject();
 		}
@@ -385,7 +387,7 @@ public class BalanceType5Code extends BalanceTypeCode {
 	 */
 	public static final MMCode mmPayment = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Payment";
 			owner_lazy = () -> BalanceType5Code.mmObject();
 		}
@@ -408,7 +410,7 @@ public class BalanceType5Code extends BalanceTypeCode {
 	 */
 	public static final MMCode mmBlocked = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Blocked";
 			owner_lazy = () -> BalanceType5Code.mmObject();
 		}
@@ -431,7 +433,7 @@ public class BalanceType5Code extends BalanceTypeCode {
 	 */
 	public static final MMCode mmExpected = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Expected";
 			owner_lazy = () -> BalanceType5Code.mmObject();
 		}
@@ -454,7 +456,7 @@ public class BalanceType5Code extends BalanceTypeCode {
 	 */
 	public static final MMCode mmDaylightOverdraft = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DaylightOverdraft";
 			owner_lazy = () -> BalanceType5Code.mmObject();
 		}
@@ -477,7 +479,7 @@ public class BalanceType5Code extends BalanceTypeCode {
 	 */
 	public static final MMCode mmExpectedCredit = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExpectedCredit";
 			owner_lazy = () -> BalanceType5Code.mmObject();
 		}
@@ -500,7 +502,7 @@ public class BalanceType5Code extends BalanceTypeCode {
 	 */
 	public static final MMCode mmExpectedDebit = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExpectedDebit";
 			owner_lazy = () -> BalanceType5Code.mmObject();
 		}
@@ -523,7 +525,7 @@ public class BalanceType5Code extends BalanceTypeCode {
 	 */
 	public static final MMCode mmAdjustment = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Adjustment";
 			owner_lazy = () -> BalanceType5Code.mmObject();
 		}
@@ -546,7 +548,7 @@ public class BalanceType5Code extends BalanceTypeCode {
 	 */
 	public static final MMCode mmProgressiveAverage = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProgressiveAverage";
 			owner_lazy = () -> BalanceType5Code.mmObject();
 		}
@@ -569,7 +571,7 @@ public class BalanceType5Code extends BalanceTypeCode {
 	 */
 	public static final MMCode mmDebit = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Debit";
 			owner_lazy = () -> BalanceType5Code.mmObject();
 		}
@@ -592,7 +594,7 @@ public class BalanceType5Code extends BalanceTypeCode {
 	 */
 	public static final MMCode mmThreshold = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Threshold";
 			owner_lazy = () -> BalanceType5Code.mmObject();
 		}
@@ -615,7 +617,7 @@ public class BalanceType5Code extends BalanceTypeCode {
 	 */
 	public static final MMCode mmNoted = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Noted";
 			owner_lazy = () -> BalanceType5Code.mmObject();
 		}
@@ -624,19 +626,15 @@ public class BalanceType5Code extends BalanceTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("OPNG");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "BalanceType5Code";
 				definition = "Specifies the nature of the balance, eg, opening balance.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.BalanceType5Code.mmOpening, com.tools20022.repository.codeset.BalanceType5Code.mmInterim, com.tools20022.repository.codeset.BalanceType5Code.mmClosing,
-						com.tools20022.repository.codeset.BalanceType5Code.mmBook, com.tools20022.repository.codeset.BalanceType5Code.mmCurrent, com.tools20022.repository.codeset.BalanceType5Code.mmPending,
-						com.tools20022.repository.codeset.BalanceType5Code.mmLimitRelated, com.tools20022.repository.codeset.BalanceType5Code.mmAvailable, com.tools20022.repository.codeset.BalanceType5Code.mmLiquidityTransfer,
-						com.tools20022.repository.codeset.BalanceType5Code.mmCredit, com.tools20022.repository.codeset.BalanceType5Code.mmEligibleAssets, com.tools20022.repository.codeset.BalanceType5Code.mmPayment,
-						com.tools20022.repository.codeset.BalanceType5Code.mmBlocked, com.tools20022.repository.codeset.BalanceType5Code.mmExpected, com.tools20022.repository.codeset.BalanceType5Code.mmDaylightOverdraft,
-						com.tools20022.repository.codeset.BalanceType5Code.mmExpectedCredit, com.tools20022.repository.codeset.BalanceType5Code.mmExpectedDebit, com.tools20022.repository.codeset.BalanceType5Code.mmAdjustment,
-						com.tools20022.repository.codeset.BalanceType5Code.mmProgressiveAverage, com.tools20022.repository.codeset.BalanceType5Code.mmDebit, com.tools20022.repository.codeset.BalanceType5Code.mmThreshold,
-						com.tools20022.repository.codeset.BalanceType5Code.mmNoted);
+				code_lazy = () -> Arrays.asList(BalanceType5Code.mmOpening, BalanceType5Code.mmInterim, BalanceType5Code.mmClosing, BalanceType5Code.mmBook, BalanceType5Code.mmCurrent, BalanceType5Code.mmPending,
+						BalanceType5Code.mmLimitRelated, BalanceType5Code.mmAvailable, BalanceType5Code.mmLiquidityTransfer, BalanceType5Code.mmCredit, BalanceType5Code.mmEligibleAssets, BalanceType5Code.mmPayment,
+						BalanceType5Code.mmBlocked, BalanceType5Code.mmExpected, BalanceType5Code.mmDaylightOverdraft, BalanceType5Code.mmExpectedCredit, BalanceType5Code.mmExpectedDebit, BalanceType5Code.mmAdjustment,
+						BalanceType5Code.mmProgressiveAverage, BalanceType5Code.mmDebit, BalanceType5Code.mmThreshold, BalanceType5Code.mmNoted);
 				trace_lazy = () -> BalanceTypeCode.mmObject();
 			}
 		});

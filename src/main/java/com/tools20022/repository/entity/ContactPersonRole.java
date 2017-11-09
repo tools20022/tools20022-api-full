@@ -17,10 +17,13 @@
 
 package com.tools20022.repository.entity;
 
+import com.tools20022.metamodel.MMAggregation;
 import com.tools20022.metamodel.MMBusinessAssociationEnd;
 import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.BankContactPerson1Choice;
 import com.tools20022.repository.entity.Role;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -37,15 +40,21 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.ContactPersonRole#mmRole
- * ContactPersonRole.mmRole}</li>
- * <li>{@linkplain com.tools20022.repository.entity.ContactPersonRole#mmMeeting
- * ContactPersonRole.mmMeeting}</li>
- * <li>{@linkplain com.tools20022.repository.entity.ContactPersonRole#mmPerson
- * ContactPersonRole.mmPerson}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ContactIdentification2
+ * ContactIdentification2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ContactIdentification1
+ * ContactIdentification1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ContactIdentification4
+ * ContactIdentification4}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ContactPerson1 ContactPerson1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ContactIdentification3
+ * ContactIdentification3}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.BankContactPerson1Choice
+ * BankContactPerson1Choice}</li>
  * </ul>
  * </li>
  * <li>
@@ -100,21 +109,15 @@ import java.util.List;
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
  * superType} = {@linkplain com.tools20022.repository.entity.Role Role}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.ContactIdentification2
- * ContactIdentification2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ContactIdentification1
- * ContactIdentification1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ContactIdentification4
- * ContactIdentification4}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ContactPerson1 ContactPerson1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ContactIdentification3
- * ContactIdentification3}</li>
- * <li>{@linkplain com.tools20022.repository.choice.BankContactPerson1Choice
- * BankContactPerson1Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.ContactPersonRole#mmRole
+ * ContactPersonRole.mmRole}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.ContactPersonRole#mmMeeting
+ * ContactPersonRole.mmMeeting}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.ContactPersonRole#mmPerson
+ * ContactPersonRole.mmPerson}</li>
  * </ul>
  * </li>
  * <li>
@@ -180,15 +183,15 @@ public class ContactPersonRole extends Role {
 	 */
 	public static final MMBusinessAssociationEnd mmRole = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ContactIdentification1.mmRole);
+			derivation_lazy = () -> Arrays.asList(ContactIdentification1.mmRole);
 			elementContext_lazy = () -> com.tools20022.repository.entity.ContactPersonRole.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Role";
 			definition = "Role for which a contact person is specified.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.Role.mmContactPersonRole;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Role.mmObject();
 		}
 	};
@@ -229,12 +232,12 @@ public class ContactPersonRole extends Role {
 		{
 			elementContext_lazy = () -> com.tools20022.repository.entity.ContactPersonRole.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Meeting";
 			definition = "Meeting for which a person is the contact.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.Meeting.mmPerson;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Meeting.mmObject();
 		}
 	};
@@ -275,13 +278,13 @@ public class ContactPersonRole extends Role {
 		{
 			elementContext_lazy = () -> com.tools20022.repository.entity.ContactPersonRole.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Person";
 			definition = "Identifies the person which plays the role of contact.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.Person.mmContactPersonRole;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Person.mmObject();
 		}
 	};
@@ -289,16 +292,14 @@ public class ContactPersonRole extends Role {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ContactPersonRole";
 				definition = "Person to be contacted in a given organisation. In the corporate action domain (including meeting notifications) , it is the contact person at the party organising the meeting, at the issuer or at an intermediary.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Role.mmContactPersonRole, com.tools20022.repository.entity.Person.mmContactPersonRole, com.tools20022.repository.entity.Meeting.mmPerson);
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyIdentificationAndAccount4.mmContactPerson, com.tools20022.repository.msg.PartyIdentification21.mmContactPerson,
-						com.tools20022.repository.msg.DeliveryParameters4.mmContactPerson, com.tools20022.repository.msg.ContactPerson1.mmContactPerson, com.tools20022.repository.msg.PartyIdentificationAndAccount32.mmContactPerson,
-						com.tools20022.repository.choice.BankContactPerson1Choice.mmBuyerBankContactPerson, com.tools20022.repository.choice.BankContactPerson1Choice.mmSellerBankContactPerson,
-						com.tools20022.repository.msg.PartyIdentificationAndAccount102.mmContactPerson, com.tools20022.repository.msg.PartyIdentification97.mmContactPerson,
-						com.tools20022.repository.msg.PartyIdentificationAndAccount123.mmContactPerson, com.tools20022.repository.msg.PartyIdentificationAndAccount126.mmContactPerson);
+				derivationElement_lazy = () -> Arrays.asList(PartyIdentificationAndAccount4.mmContactPerson, PartyIdentification21.mmContactPerson, DeliveryParameters4.mmContactPerson, ContactPerson1.mmContactPerson,
+						PartyIdentificationAndAccount32.mmContactPerson, BankContactPerson1Choice.mmBuyerBankContactPerson, BankContactPerson1Choice.mmSellerBankContactPerson, PartyIdentificationAndAccount102.mmContactPerson,
+						PartyIdentification97.mmContactPerson, PartyIdentificationAndAccount123.mmContactPerson, PartyIdentificationAndAccount126.mmContactPerson);
 				superType_lazy = () -> com.tools20022.repository.entity.Role.mmObject();
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.ContactPersonRole.mmRole, com.tools20022.repository.entity.ContactPersonRole.mmMeeting, com.tools20022.repository.entity.ContactPersonRole.mmPerson);
 				derivationComponent_lazy = () -> Arrays.asList(ContactIdentification2.mmObject(), ContactIdentification1.mmObject(), ContactIdentification4.mmObject(), ContactPerson1.mmObject(), ContactIdentification3.mmObject(),

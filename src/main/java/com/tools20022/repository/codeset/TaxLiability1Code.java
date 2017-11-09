@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.TaxLiabilityCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -83,7 +85,7 @@ public class TaxLiability1Code extends TaxLiabilityCode {
 	 */
 	public static final MMCode mmTaxPrincipal = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxPrincipal";
 			owner_lazy = () -> TaxLiability1Code.mmObject();
 		}
@@ -106,7 +108,7 @@ public class TaxLiability1Code extends TaxLiabilityCode {
 	 */
 	public static final MMCode mmTaxAgent = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxAgent";
 			owner_lazy = () -> TaxLiability1Code.mmObject();
 		}
@@ -115,12 +117,12 @@ public class TaxLiability1Code extends TaxLiabilityCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("PRIN");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TaxLiability1Code";
 				definition = "Specifies the tax role capacity of the instructing party.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TaxLiability1Code.mmTaxPrincipal, com.tools20022.repository.codeset.TaxLiability1Code.mmTaxAgent);
+				code_lazy = () -> Arrays.asList(TaxLiability1Code.mmTaxPrincipal, TaxLiability1Code.mmTaxAgent);
 				trace_lazy = () -> TaxLiabilityCode.mmObject();
 			}
 		});

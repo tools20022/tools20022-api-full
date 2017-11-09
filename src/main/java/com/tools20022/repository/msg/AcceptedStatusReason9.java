@@ -20,9 +20,12 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.AcceptedReason10Choice;
 import com.tools20022.repository.datatype.Max210Text;
 import com.tools20022.repository.entity.CorporateActionStatusReason;
+import com.tools20022.repository.entity.StatusReason;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -112,14 +115,14 @@ public class AcceptedStatusReason9 {
 	 */
 	public static final MMMessageAssociationEnd mmReasonCode = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionStatusReason.mmAcceptedReason;
+			businessElementTrace_lazy = () -> CorporateActionStatusReason.mmAcceptedReason;
 			componentContext_lazy = () -> AcceptedStatusReason9.mmObject();
 			isDerived = false;
 			xmlTag = "RsnCd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReasonCode";
 			definition = "Specifies the reason why the instruction or instruction cancellation has been accepted.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AcceptedStatusReason3.mmReasonCode;
+			previousVersion_lazy = () -> AcceptedStatusReason3.mmReasonCode;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -167,14 +170,14 @@ public class AcceptedStatusReason9 {
 	 */
 	public static final MMMessageAttribute mmAdditionalReasonInformation = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmReason;
+			businessElementTrace_lazy = () -> StatusReason.mmReason;
 			componentContext_lazy = () -> AcceptedStatusReason9.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlRsnInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalReasonInformation";
 			definition = "Provides additional information about the processed instruction.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AcceptedStatusReason3.mmAdditionalReasonInformation;
+			previousVersion_lazy = () -> AcceptedStatusReason3.mmAdditionalReasonInformation;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max210Text.mmObject();
@@ -184,10 +187,10 @@ public class AcceptedStatusReason9 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcceptedStatusReason9.mmReasonCode, com.tools20022.repository.msg.AcceptedStatusReason9.mmAdditionalReasonInformation);
+				messageElement_lazy = () -> Arrays.asList(AcceptedStatusReason9.mmReasonCode, AcceptedStatusReason9.mmAdditionalReasonInformation);
 				trace_lazy = () -> CorporateActionStatusReason.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AcceptedStatusReason9";
 				definition = "Specifies reasons for the accepted status.";
 				previousVersion_lazy = () -> AcceptedStatusReason3.mmObject();

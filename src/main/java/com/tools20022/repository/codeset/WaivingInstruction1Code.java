@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.WaivingInstructionCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -83,7 +85,7 @@ public class WaivingInstruction1Code extends WaivingInstructionCode {
 	 */
 	public static final MMCode mmWaiveInCash = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WaiveInCash";
 			owner_lazy = () -> WaivingInstruction1Code.mmObject();
 		}
@@ -106,7 +108,7 @@ public class WaivingInstruction1Code extends WaivingInstructionCode {
 	 */
 	public static final MMCode mmWaiveInUnits = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WaiveInUnits";
 			owner_lazy = () -> WaivingInstruction1Code.mmObject();
 		}
@@ -115,12 +117,12 @@ public class WaivingInstruction1Code extends WaivingInstructionCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("WICA");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "WaivingInstruction1Code";
 				definition = "Specifies the form of the rebate when commission is waived.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.WaivingInstruction1Code.mmWaiveInCash, com.tools20022.repository.codeset.WaivingInstruction1Code.mmWaiveInUnits);
+				code_lazy = () -> Arrays.asList(WaivingInstruction1Code.mmWaiveInCash, WaivingInstruction1Code.mmWaiveInUnits);
 				trace_lazy = () -> WaivingInstructionCode.mmObject();
 			}
 		});

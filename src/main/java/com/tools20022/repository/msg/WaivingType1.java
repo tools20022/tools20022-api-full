@@ -19,9 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.WaivingInstruction2Code;
 import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.entity.CommissionWaiver;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -97,11 +99,11 @@ public class WaivingType1 {
 	 */
 	public static final MMMessageAttribute mmStructured = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CommissionWaiver.mmInstructionBasis;
+			businessElementTrace_lazy = () -> CommissionWaiver.mmInstructionBasis;
 			componentContext_lazy = () -> WaivingType1.mmObject();
 			isDerived = false;
 			xmlTag = "Strd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Structured";
 			definition = "Structured format.";
 			maxOccurs = 1;
@@ -141,7 +143,7 @@ public class WaivingType1 {
 			componentContext_lazy = () -> WaivingType1.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInformation";
 			definition = "Additional information about the type of waiving.";
 			maxOccurs = 1;
@@ -153,10 +155,10 @@ public class WaivingType1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.WaivingType1.mmStructured, com.tools20022.repository.msg.WaivingType1.mmAdditionalInformation);
+				messageElement_lazy = () -> Arrays.asList(WaivingType1.mmStructured, WaivingType1.mmAdditionalInformation);
 				trace_lazy = () -> CommissionWaiver.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "WaivingType1";
 				definition = "Specification of the waiving type.";
 			}

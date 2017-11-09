@@ -20,11 +20,17 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.seev.MeetingInstructionV03;
+import com.tools20022.repository.area.seev.MeetingInstructionV04;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.YesNoIndicator;
+import com.tools20022.repository.entity.CorporateActionServicing;
 import com.tools20022.repository.entity.InstructionForMeeting;
 import com.tools20022.repository.entity.Person;
+import com.tools20022.repository.entity.VoteInstructionRequest;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -139,10 +145,10 @@ public class Instruction2 {
 			componentContext_lazy = () -> Instruction2.mmObject();
 			isDerived = false;
 			xmlTag = "InstrId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructionIdentification";
 			definition = "Identifies the detailed instruction.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Instruction3.mmInstructionIdentification);
+			nextVersions_lazy = () -> Arrays.asList(Instruction3.mmInstructionIdentification);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -190,14 +196,14 @@ public class Instruction2 {
 	 */
 	public static final MMMessageAttribute mmRequestedExecutionDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InstructionForMeeting.mmRequestedExecutionDate;
+			businessElementTrace_lazy = () -> InstructionForMeeting.mmRequestedExecutionDate;
 			componentContext_lazy = () -> Instruction2.mmObject();
 			isDerived = false;
 			xmlTag = "ReqdExctnDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestedExecutionDate";
 			definition = "Date at which the instruction must be executed.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Instruction3.mmRequestedExecutionDate);
+			nextVersions_lazy = () -> Arrays.asList(Instruction3.mmRequestedExecutionDate);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
@@ -247,14 +253,14 @@ public class Instruction2 {
 	 */
 	public static final MMMessageAttribute mmVoteExecutionConfirmation = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.VoteInstructionRequest.mmVoteExecutionConfirmation;
+			businessElementTrace_lazy = () -> VoteInstructionRequest.mmVoteExecutionConfirmation;
 			componentContext_lazy = () -> Instruction2.mmObject();
 			isDerived = false;
 			xmlTag = "VoteExctnConf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VoteExecutionConfirmation";
 			definition = "Indicates that a Vote execution confirmation is requested.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Instruction3.mmVoteExecutionConfirmation);
+			nextVersions_lazy = () -> Arrays.asList(Instruction3.mmVoteExecutionConfirmation);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
@@ -301,14 +307,14 @@ public class Instruction2 {
 	 */
 	public static final MMMessageAssociationEnd mmAccountDetails = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionServicing.mmSecuritiesAccount;
+			businessElementTrace_lazy = () -> CorporateActionServicing.mmSecuritiesAccount;
 			componentContext_lazy = () -> Instruction2.mmObject();
 			isDerived = false;
 			xmlTag = "AcctDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountDetails";
 			definition = "Identification of the securities account.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Instruction3.mmAccountDetails);
+			nextVersions_lazy = () -> Arrays.asList(Instruction3.mmAccountDetails);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -356,14 +362,14 @@ public class Instruction2 {
 	 */
 	public static final MMMessageAssociationEnd mmProxy = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InstructionForMeeting.mmProxyAppointment;
+			businessElementTrace_lazy = () -> InstructionForMeeting.mmProxyAppointment;
 			componentContext_lazy = () -> Instruction2.mmObject();
 			isDerived = false;
 			xmlTag = "Prxy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proxy";
 			definition = "Identification of the person appointed by the security holder as proxy.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Instruction3.mmProxy);
+			nextVersions_lazy = () -> Arrays.asList(Instruction3.mmProxy);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -410,14 +416,14 @@ public class Instruction2 {
 	 */
 	public static final MMMessageAssociationEnd mmVoteDetails = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InstructionForMeeting.mmVoteInstruction;
+			businessElementTrace_lazy = () -> InstructionForMeeting.mmVoteInstruction;
 			componentContext_lazy = () -> Instruction2.mmObject();
 			isDerived = false;
 			xmlTag = "VoteDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VoteDetails";
 			definition = "Specifies detailed voting instructions.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Instruction3.mmVoteDetails);
+			nextVersions_lazy = () -> Arrays.asList(Instruction3.mmVoteDetails);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -472,10 +478,10 @@ public class Instruction2 {
 			componentContext_lazy = () -> Instruction2.mmObject();
 			isDerived = false;
 			xmlTag = "MtgAttndee";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MeetingAttendee";
 			definition = "Identification of the security holder who will attend and vote at the meeting in person and/or a person assigned by the security holder to attend the meeting without having any voting rights or taking any action.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Instruction3.mmMeetingAttendee);
+			nextVersions_lazy = () -> Arrays.asList(Instruction3.mmMeetingAttendee);
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.IndividualPerson17.mmObject();
@@ -530,10 +536,10 @@ public class Instruction2 {
 			componentContext_lazy = () -> Instruction2.mmObject();
 			isDerived = false;
 			xmlTag = "SpcfcInstrReq";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SpecificInstructionRequest";
 			definition = "Request to execute specific instructions, such as participation registration, securities registration or blocking of securities.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Instruction3.mmSpecificInstructionRequest);
+			nextVersions_lazy = () -> Arrays.asList(Instruction3.mmSpecificInstructionRequest);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -544,13 +550,12 @@ public class Instruction2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Instruction2.mmInstructionIdentification, com.tools20022.repository.msg.Instruction2.mmRequestedExecutionDate,
-						com.tools20022.repository.msg.Instruction2.mmVoteExecutionConfirmation, com.tools20022.repository.msg.Instruction2.mmAccountDetails, com.tools20022.repository.msg.Instruction2.mmProxy,
-						com.tools20022.repository.msg.Instruction2.mmVoteDetails, com.tools20022.repository.msg.Instruction2.mmMeetingAttendee, com.tools20022.repository.msg.Instruction2.mmSpecificInstructionRequest);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.MeetingInstructionV03.mmInstruction, com.tools20022.repository.area.seev.MeetingInstructionV04.mmInstruction);
+				messageElement_lazy = () -> Arrays.asList(Instruction2.mmInstructionIdentification, Instruction2.mmRequestedExecutionDate, Instruction2.mmVoteExecutionConfirmation, Instruction2.mmAccountDetails, Instruction2.mmProxy,
+						Instruction2.mmVoteDetails, Instruction2.mmMeetingAttendee, Instruction2.mmSpecificInstructionRequest);
+				messageBuildingBlock_lazy = () -> Arrays.asList(MeetingInstructionV03.mmInstruction, MeetingInstructionV04.mmInstruction);
 				trace_lazy = () -> InstructionForMeeting.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Instruction2";
 				definition = "Provides information on the instruction.";
 				nextVersions_lazy = () -> Arrays.asList(Instruction3.mmObject());

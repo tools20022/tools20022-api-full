@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.SystemBalanceType1Code
+ * SystemBalanceType1Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.SystemBalanceType2Code
+ * SystemBalanceType2Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -349,15 +360,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * SystemBalanceTypeCode.mmInformation}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.SystemBalanceType1Code
- * SystemBalanceType1Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.SystemBalanceType2Code
- * SystemBalanceType2Code}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -411,7 +413,7 @@ public class SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmOpening = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Opening";
 			definition = "Book balance of the account at the beginning of the account servicer's business day. It always equals the closing book balance from the previous business day. \nNote: the available balance at the beginning of the account servicer's business day may be different from the closing book balance from the previous business day.";
 			owner_lazy = () -> SystemBalanceTypeCode.mmObject();
@@ -446,7 +448,7 @@ public class SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmInterim = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Interim";
 			definition = "Balance calculated in the course of the account servicer's business day, at the time specified, and subject to further changes during the business day. The interim balance is calculated on the basis of booked credit and debit items during the calculation time/period specified.";
 			owner_lazy = () -> SystemBalanceTypeCode.mmObject();
@@ -480,7 +482,7 @@ public class SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmClosing = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Closing";
 			definition = "Balance of the account at the end of the account servicer's business day. It is the sum of the opening balance at the beginning of the day and all entries booked to the account during the account servicer's business day.";
 			owner_lazy = () -> SystemBalanceTypeCode.mmObject();
@@ -511,7 +513,7 @@ public class SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmBook = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Book";
 			definition = "Balance that is registered in the books of the account servicer.";
 			owner_lazy = () -> SystemBalanceTypeCode.mmObject();
@@ -541,7 +543,7 @@ public class SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmCurrent = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Current";
 			definition = "Balance of the account at a precise moment in time.";
 			owner_lazy = () -> SystemBalanceTypeCode.mmObject();
@@ -575,7 +577,7 @@ public class SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmPending = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Pending";
 			definition = "Balance of securities pending delivery, such as the orders to sell securities have been executed but settlement of the open transactions has not been confirmed.";
 			owner_lazy = () -> SystemBalanceTypeCode.mmObject();
@@ -608,7 +610,7 @@ public class SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmLimitRelated = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "LimitRelated";
 			definition = "Balance of a specific limit value, such as a bilateral balance is calculated in relation to a given bilateral limit.";
 			owner_lazy = () -> SystemBalanceTypeCode.mmObject();
@@ -641,7 +643,7 @@ public class SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmAvailable = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Available";
 			definition = "Balance of money or securities that is at the disposal of the account owner on the date specified.";
 			owner_lazy = () -> SystemBalanceTypeCode.mmObject();
@@ -674,7 +676,7 @@ public class SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmLiquidityTransfer = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "LiquidityTransfer";
 			definition = "Balance composed of the sum of all liquidity transfers made to or from an account.";
 			owner_lazy = () -> SystemBalanceTypeCode.mmObject();
@@ -706,7 +708,7 @@ public class SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmCredit = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Credit";
 			definition = "Balance representing the sum of all credit entries booked to an account.";
 			owner_lazy = () -> SystemBalanceTypeCode.mmObject();
@@ -740,7 +742,7 @@ public class SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmEligibleAssets = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "EligibleAssets";
 			definition = "Balance representing the potential loan a Central Bank would make in cash if the collateral is pledged, such as securities available and eligible as collateral with the central bank.";
 			owner_lazy = () -> SystemBalanceTypeCode.mmObject();
@@ -775,7 +777,7 @@ public class SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmPayment = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Payment";
 			definition = "Balance representing the sum of entries as a result of payments processing.  Entries relating to fees,  interest, or other movements not a result of payments sent or received by the account owner are not included.";
 			owner_lazy = () -> SystemBalanceTypeCode.mmObject();
@@ -811,7 +813,7 @@ public class SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmBlocked = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Blocked";
 			definition = "Balance representing the regulatory reserve that a financial institution must have with the account servicing institution, such as the minimum credit balance a financial institution is to keep with its Central Bank for mandatory reserve purposes.  In some countries, a blocked balance is known as a 'reserve' balance.";
 			owner_lazy = () -> SystemBalanceTypeCode.mmObject();
@@ -845,7 +847,7 @@ public class SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmExpected = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Expected";
 			definition = "Balance, composed of booked entries and pending items known at the time of calculation , which projects the end of day balance if everything is booked on the account and no other entry is posted.";
 			owner_lazy = () -> SystemBalanceTypeCode.mmObject();
@@ -879,7 +881,7 @@ public class SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmDaylightOverdraft = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DaylightOverdraft";
 			definition = "Balance representing the intra day overdraft granted by the central bank to financial institutions participating in a RTGS system. This balance may vary over time and shall be offset at the end of the day.";
 			owner_lazy = () -> SystemBalanceTypeCode.mmObject();
@@ -913,7 +915,7 @@ public class SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmExpectedCredit = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ExpectedCredit";
 			definition = "Balance, composed of booked entries and pending items known at the time of calculation, which projects the end of day credit balance if everything books to the account and no other credit entry is posted.";
 			owner_lazy = () -> SystemBalanceTypeCode.mmObject();
@@ -947,7 +949,7 @@ public class SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmExpectedDebit = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ExpectedDebit";
 			definition = "Balance, composed of booked entries and pending items known at the time of calculation, which projects the end of day debit balance if everything books to the account and no other debit entry is posted.";
 			owner_lazy = () -> SystemBalanceTypeCode.mmObject();
@@ -981,7 +983,7 @@ public class SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmAdjustment = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Adjustment";
 			definition = "Average balance to be held in the settlement account at the end of each day in order to fulfil the reserve due.\nThe approximation will be always made rounding up.";
 			owner_lazy = () -> SystemBalanceTypeCode.mmObject();
@@ -1014,7 +1016,7 @@ public class SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmProgressiveAverage = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ProgressiveAverage";
 			definition = "Average of the daily balances on the account used to fulfil the reserve requirements calculated from the beginning of the maintenance period.";
 			owner_lazy = () -> SystemBalanceTypeCode.mmObject();
@@ -1046,7 +1048,7 @@ public class SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmDebit = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Debit";
 			definition = "Balance representing the sum of all debit entries booked to an account.";
 			owner_lazy = () -> SystemBalanceTypeCode.mmObject();
@@ -1079,7 +1081,7 @@ public class SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmThreshold = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Threshold";
 			definition = "Balance representing the amount that will be destined for investment. Difference between available balance and threshold for investment limit.";
 			owner_lazy = () -> SystemBalanceTypeCode.mmObject();
@@ -1112,7 +1114,7 @@ public class SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmNoted = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Noted";
 			definition = "Balance representing the amount that a financial institution has set aside for a specific reason and which is therefore not available.";
 			owner_lazy = () -> SystemBalanceTypeCode.mmObject();
@@ -1143,7 +1145,7 @@ public class SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmSelf = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Self";
 			definition = "Balance of the account identified (as opposed to Master Balance)";
 			owner_lazy = () -> SystemBalanceTypeCode.mmObject();
@@ -1176,7 +1178,7 @@ public class SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmMaster = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Master";
 			definition = "Balance of the identified account plus the balance of all of its subaccounts.";
 			owner_lazy = () -> SystemBalanceTypeCode.mmObject();
@@ -1210,7 +1212,7 @@ public class SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmForecastSettlement = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ForecastSettlement";
 			definition = "Balance representing the forecast of total of all cash legs for trades that are ready to settle via a a central securities depository. Amounts shown are still subject to processing of the securities settlement. ";
 			owner_lazy = () -> SystemBalanceTypeCode.mmObject();
@@ -1253,7 +1255,7 @@ public class SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmBlockedTrades = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BlockedTrades";
 			definition = "Balance representing the projected total of all cash legs for trades settling via a central securities depository that have been matched but blocked in order to not settle. These blocked trades are included in the calculation for settlement (for example to avoid overdrafts).\nUsage rule: Blocking can be done by account owner or its counterparties. Usually this is done to chain transactions or to prioritise other trades. Blocked trades have an indicator that prevents the transactions from settling. Once matched, they can settle whenever the freeze is lifted. In this case they will move to FSET. Lifting the freeze can happen anytime during the day and the transaction will be settling in the next settlement cycle which can be the same day if the (international) central securities depository's operates several settlements cycles per day.";
 			owner_lazy = () -> SystemBalanceTypeCode.mmObject();
@@ -1288,7 +1290,7 @@ public class SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmOtherBlockedTrades = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "OtherBlockedTrades";
 			definition = "Balance representing the projected total of all cash legs for trades settling via a central securities depository that have been matched but blocked in order to not settle. These blocked transactions are not included in the calculation for settlement.";
 			owner_lazy = () -> SystemBalanceTypeCode.mmObject();
@@ -1322,7 +1324,7 @@ public class SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmCustody = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Custody";
 			definition = "Balance representing the projected total of all asset servicing transactions such as dividends, income corporate actions equivalents, tax returns, etc.";
 			owner_lazy = () -> SystemBalanceTypeCode.mmObject();
@@ -1355,7 +1357,7 @@ public class SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmCashForecast = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CashForecast";
 			definition = "Balance representing the total of all balance types representing transactions to settle, blocked items and custody transactions.";
 			owner_lazy = () -> SystemBalanceTypeCode.mmObject();
@@ -1389,7 +1391,7 @@ public class SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmDividendsCollection = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DividendsCollection";
 			definition = "Balance representing the projected total amount of all payment obligations to the participant (bank), based on their role as main paying agent.";
 			owner_lazy = () -> SystemBalanceTypeCode.mmObject();
@@ -1422,7 +1424,7 @@ public class SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmNetFunding = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NetFunding";
 			definition = "Balance representing the net amount to be funded resulting from all transactions which have an impact on the funding requirement.";
 			owner_lazy = () -> SystemBalanceTypeCode.mmObject();
@@ -1459,7 +1461,7 @@ public class SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmPayInPayOut = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PayInPayOut";
 			definition = "Balance representing the fictive forecast of automated direct debits or payment based on standing arrangements between the a central securities depository and the user.\n\nUsage: Pay-Ins and Pay-Outs can be different based on individual payment instructions or available funds.";
 			owner_lazy = () -> SystemBalanceTypeCode.mmObject();
@@ -1492,7 +1494,7 @@ public class SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmExchangeForecast = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ExchangeForecast";
 			definition = "Balance representing the forecast of the total of all cash legs of transactions traded in exchanges.";
 			owner_lazy = () -> SystemBalanceTypeCode.mmObject();
@@ -1526,7 +1528,7 @@ public class SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmCentralCounterparty = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CentralCounterparty";
 			definition = "Balance representing the forecast of the total of all cash legs of transactions traded in exchanges that operate a central counterparty functionality.";
 			owner_lazy = () -> SystemBalanceTypeCode.mmObject();
@@ -1559,7 +1561,7 @@ public class SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmTotalOnHold = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TotalOnHold";
 			definition = "Balance representing the total of the payments that were put on hold because the limits have been exceeded.";
 			owner_lazy = () -> SystemBalanceTypeCode.mmObject();
@@ -1592,7 +1594,7 @@ public class SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmCreditOnHold = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CreditOnHold";
 			definition = "Balance representing the total incoming payments that were put on hold because the credit limit has been exceeded.";
 			owner_lazy = () -> SystemBalanceTypeCode.mmObject();
@@ -1625,7 +1627,7 @@ public class SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmDebitOnHold = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DebitOnHold";
 			definition = "Balance representing the total outgoing payments that were put on hold because the debit limit has been exceeded.";
 			owner_lazy = () -> SystemBalanceTypeCode.mmObject();
@@ -1658,7 +1660,7 @@ public class SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmTotalProcessed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TotalProcessed";
 			definition = "Balance representing the total of the payments that have been processed and are waiting for settlement during the day.";
 			owner_lazy = () -> SystemBalanceTypeCode.mmObject();
@@ -1691,7 +1693,7 @@ public class SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmCreditProcessed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CreditProcessed";
 			definition = "Balance representing the total incoming payments that have been processed and are waiting for settlement.";
 			owner_lazy = () -> SystemBalanceTypeCode.mmObject();
@@ -1724,7 +1726,7 @@ public class SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmDebitProcessed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DebitProcessed";
 			definition = "Balance representing the total outgoing payments that have been processed and are waiting for settlement.";
 			owner_lazy = () -> SystemBalanceTypeCode.mmObject();
@@ -1757,7 +1759,7 @@ public class SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmTotalFuture = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TotalFuture";
 			definition = "Balance representing the total of the payments with a processing date in the future.";
 			owner_lazy = () -> SystemBalanceTypeCode.mmObject();
@@ -1789,7 +1791,7 @@ public class SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmTotalRejected = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TotalRejected";
 			definition = "Balance representing the total of the payments that have been rejected.";
 			owner_lazy = () -> SystemBalanceTypeCode.mmObject();
@@ -1822,7 +1824,7 @@ public class SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmOpeningAvailable = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "OpeningAvailable";
 			definition = "Opening balance of amount of money that is at the disposal of the account owner on the date specified.";
 			owner_lazy = () -> SystemBalanceTypeCode.mmObject();
@@ -1858,7 +1860,7 @@ public class SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmInterimAvailable = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InterimAvailable";
 			definition = "Available balance calculated in the course of the account servicer's business day, at the time specified, and subject to further changes during the business day. The interim balance is calculated on the basis of booked credit and debit items during the calculation time/period specified.";
 			owner_lazy = () -> SystemBalanceTypeCode.mmObject();
@@ -1891,7 +1893,7 @@ public class SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmClosingAvailable = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ClosingAvailable";
 			definition = "Closing balance of amount of money that is at the disposal of the account owner on the date specified.";
 			owner_lazy = () -> SystemBalanceTypeCode.mmObject();
@@ -1924,7 +1926,7 @@ public class SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmForwardAvailable = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ForwardAvailable";
 			definition = "Forward available balance of money that is at the disposal of the account owner on the date specified.";
 			owner_lazy = () -> SystemBalanceTypeCode.mmObject();
@@ -1959,7 +1961,7 @@ public class SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmClosingBooked = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ClosingBooked";
 			definition = "Balance of the account at the end of the pre-agreed account reporting period. It is the sum of the opening booked balance at the beginning of the period and all entries booked to the account during the pre-agreed account reporting period.";
 			owner_lazy = () -> SystemBalanceTypeCode.mmObject();
@@ -1994,7 +1996,7 @@ public class SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmInterimBooked = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InterimBooked";
 			definition = "Balance calculated in the course of the account servicer's business day, at the time specified, and subject to further changes during the business day. The interim balance is calculated on the basis of booked credit and debit items during the calculation time/period specified.";
 			owner_lazy = () -> SystemBalanceTypeCode.mmObject();
@@ -2028,7 +2030,7 @@ public class SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmOpeningBooked = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "OpeningBooked";
 			definition = "Book balance of the account at the beginning of the account reporting period.  It always equals the closing book balance from the previous report.";
 			owner_lazy = () -> SystemBalanceTypeCode.mmObject();
@@ -2066,7 +2068,7 @@ public class SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmPreviouslyClosedBooked = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PreviouslyClosedBooked";
 			definition = "Balance of the account at the previously closed account reporting period. The opening booked balance for the new period has to be equal to this balance. \n\nUsage: the previously booked closing balance should equal (inclusive date) the booked closing balance of the date it references and equal the actual booked opening balance of the current date.";
 			owner_lazy = () -> SystemBalanceTypeCode.mmObject();
@@ -2099,7 +2101,7 @@ public class SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmInvestmentOpeningAvailable = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InvestmentOpeningAvailable";
 			definition = "Investment opening balance of amount of money that is at the disposal of the account owner on the date specified. ";
 			owner_lazy = () -> SystemBalanceTypeCode.mmObject();
@@ -2135,7 +2137,7 @@ public class SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmInvestmentInterimAvailable = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InvestmentInterimAvailable";
 			definition = "Investment available balance for calculated in the course of the account servicer's business day, at the time specified, and subject to further changes during the business day. The interim balance is calculated on the basis of booked credit and debit items during the calculation time/period specified.";
 			owner_lazy = () -> SystemBalanceTypeCode.mmObject();
@@ -2168,7 +2170,7 @@ public class SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmInvestmentClosingAvailable = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InvestmentClosingAvailable";
 			definition = "Investment closing balance of an amount of money that is at the disposal of the account owner on the date specified.";
 			owner_lazy = () -> SystemBalanceTypeCode.mmObject();
@@ -2201,7 +2203,7 @@ public class SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmInvestmentForwardAvailable = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InvestmentForwardAvailable";
 			definition = "Investment forward available balance of money that is at the disposal of the account owner on the date specified.";
 			owner_lazy = () -> SystemBalanceTypeCode.mmObject();
@@ -2236,7 +2238,7 @@ public class SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmInvestmentClosingBooked = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InvestmentClosingBooked";
 			definition = "Investment (mutual funds) balance of the account at the end of the pre-agreed account reporting period. It is the sum of the opening booked balance at the beginning of the period and all entries booked to the account during the pre-agreed account reporting period.";
 			owner_lazy = () -> SystemBalanceTypeCode.mmObject();
@@ -2272,7 +2274,7 @@ public class SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmInvestmentInterimBooked = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InvestmentInterimBooked";
 			definition = "Investment balance calculated in the course of the account servicer's business day, at the time specified, and subject to further changes during the business day. The interim balance is calculated on the basis of booked credit and debit items during the calculation time/period specified.";
 			owner_lazy = () -> SystemBalanceTypeCode.mmObject();
@@ -2306,7 +2308,7 @@ public class SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmInvestmentOpeningBooked = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InvestmentOpeningBooked";
 			definition = "Investment book balance of the account at the beginning of the account reporting period.  It always equals the closing book balance from the previous report.    \n\n";
 			owner_lazy = () -> SystemBalanceTypeCode.mmObject();
@@ -2340,7 +2342,7 @@ public class SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmInvestmentExpected = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InvestmentExpected";
 			definition = "Investment balance, composed of booked entries and pending items known at the time of calculation , which projects the end of day balance if everything is booked on the account and no other entry is posted.";
 			owner_lazy = () -> SystemBalanceTypeCode.mmObject();
@@ -2373,7 +2375,7 @@ public class SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmDisbursementOpeningAvailable = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DisbursementOpeningAvailable";
 			definition = "Disbursement opening balance of amount of money that is at the disposal of the account owner on the date specified.";
 			owner_lazy = () -> SystemBalanceTypeCode.mmObject();
@@ -2409,7 +2411,7 @@ public class SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmDisbursementInterimAvailable = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DisbursementInterimAvailable";
 			definition = "Disbursement available balance calculated in the course of the account servicer's business day, at the time specified, and subject to further changes during the business day. The interim balance is calculated on the basis of booked credit and debit items during the calculation time/period specified.";
 			owner_lazy = () -> SystemBalanceTypeCode.mmObject();
@@ -2442,7 +2444,7 @@ public class SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmDisbursementClosingAvailable = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DisbursementClosingAvailable";
 			definition = "Disbursement closing balance of amount of money that is at the disposal of the account owner on the date specified.";
 			owner_lazy = () -> SystemBalanceTypeCode.mmObject();
@@ -2475,7 +2477,7 @@ public class SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmDisbursementForwardAvailable = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DisbursementForwardAvailable";
 			definition = "Disbursement forward available balance of money that is at the disposal of the account owner on the date specified.";
 			owner_lazy = () -> SystemBalanceTypeCode.mmObject();
@@ -2510,7 +2512,7 @@ public class SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmDisbursementClosingBooked = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DisbursementClosingBooked";
 			definition = "Disbursement balance of the account at the end of the pre-agreed account reporting period. It is the sum of the opening booked balance at the beginning of the period and all entries booked to the account during the pre-agreed account reporting period.";
 			owner_lazy = () -> SystemBalanceTypeCode.mmObject();
@@ -2546,7 +2548,7 @@ public class SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmDisbursementInterimBooked = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DisbursementInterimBooked";
 			definition = "Disbursement balance calculated in the course of the account servicer's business day, at the time specified, and subject to further changes during the business day. The interim balance is calculated on the basis of booked credit and debit items during the calculation time/period specified.";
 			owner_lazy = () -> SystemBalanceTypeCode.mmObject();
@@ -2580,7 +2582,7 @@ public class SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmDisbursementOpeningBooked = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DisbursementOpeningBooked";
 			definition = "Disbursement book balance of the account at the beginning of the account reporting period.  It always equals the closing book balance from the previous report.";
 			owner_lazy = () -> SystemBalanceTypeCode.mmObject();
@@ -2614,7 +2616,7 @@ public class SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmDisbursementExpected = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DisbursementExpected";
 			definition = "Disbursement balance, composed of booked entries and pending items known at the time of calculation , which projects the end of day balance if everything is booked on the account and no other entry is posted.";
 			owner_lazy = () -> SystemBalanceTypeCode.mmObject();
@@ -2647,7 +2649,7 @@ public class SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmCollectionOpeningAvailable = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CollectionOpeningAvailable";
 			definition = "Collection opening balance of amount of money that is at the disposal of the account owner on the date specified.";
 			owner_lazy = () -> SystemBalanceTypeCode.mmObject();
@@ -2683,7 +2685,7 @@ public class SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmCollectionInterimAvailable = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CollectionInterimAvailable";
 			definition = "Collection available balance calculated in the course of the account servicer's business day, at the time specified, and subject to further changes during the business day. The interim balance is calculated on the basis of booked credit and debit items during the calculation time/period specified.";
 			owner_lazy = () -> SystemBalanceTypeCode.mmObject();
@@ -2716,7 +2718,7 @@ public class SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmCollectionClosingAvailable = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CollectionClosingAvailable";
 			definition = "Collection closing balance of amount of money that is at the disposal of the account owner on the date specified.";
 			owner_lazy = () -> SystemBalanceTypeCode.mmObject();
@@ -2749,7 +2751,7 @@ public class SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmCollectionForwardAvailable = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CollectionForwardAvailable";
 			definition = "Collection forward available balance of money that is at the disposal of the account owner on the date specified.";
 			owner_lazy = () -> SystemBalanceTypeCode.mmObject();
@@ -2784,7 +2786,7 @@ public class SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmCollectionClosingBooked = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CollectionClosingBooked";
 			definition = "Collection balance of the account at the end of the pre-agreed account reporting period. It is the sum of the opening booked balance at the beginning of the period and all entries booked to the account during the pre-agreed account reporting period.";
 			owner_lazy = () -> SystemBalanceTypeCode.mmObject();
@@ -2820,7 +2822,7 @@ public class SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmCollectionInterimBooked = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CollectionInterimBooked";
 			definition = "Collection balance calculated in the course of the account servicer's business day, at the time specified, and subject to further changes during the business day. The interim balance is calculated on the basis of booked credit and debit items during the calculation time/period specified.";
 			owner_lazy = () -> SystemBalanceTypeCode.mmObject();
@@ -2854,7 +2856,7 @@ public class SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmCollectionOpeningBooked = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CollectionOpeningBooked";
 			definition = "Collection book balance of the account at the beginning of the account reporting period.  It always equals the closing book balance from the previous report.";
 			owner_lazy = () -> SystemBalanceTypeCode.mmObject();
@@ -2888,7 +2890,7 @@ public class SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmCollectionExpected = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CollectionExpected";
 			definition = "Collection balance, composed of booked entries and pending items known at the time of calculation , which projects the end of day balance if everything is booked on the account and no other entry is posted.";
 			owner_lazy = () -> SystemBalanceTypeCode.mmObject();
@@ -2922,7 +2924,7 @@ public class SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmFirmCollateralisation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "FirmCollateralisation";
 			definition = "Balance representing the forecast of the cash-equivalent resulting from evaluation of existing holdings at central securities depositary that are qualified to serve as collateral.";
 			owner_lazy = () -> SystemBalanceTypeCode.mmObject();
@@ -2956,7 +2958,7 @@ public class SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmUsedAmountsFirmCollateralisation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "UsedAmountsFirmCollateralisation";
 			definition = "Balance representing the cash equivalent resulting from evaluation of existing holdings at CSD that are qualified to serve as collateral and have been used as collateral.";
 			owner_lazy = () -> SystemBalanceTypeCode.mmObject();
@@ -2990,7 +2992,7 @@ public class SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmSelfCollateralisation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SelfCollateralisation";
 			definition = "Balance representing the forecast of the cash-equivalent resulting from evaluation of the net incoming balance of securities qualified to serve as collateral for which settlement instructions are held at.";
 			owner_lazy = () -> SystemBalanceTypeCode.mmObject();
@@ -3024,7 +3026,7 @@ public class SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmUsedAmountsSelfCollateralisation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "UsedAmountsSelfCollateralisation";
 			definition = "Balance representing the cash-equivalent resulting from evaluation of incoming securities, qualified to serve as collateral and actually used as collateral, which have been settled during the settlement process. ";
 			owner_lazy = () -> SystemBalanceTypeCode.mmObject();
@@ -3058,7 +3060,7 @@ public class SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmCustodyActual = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CustodyActual";
 			definition = "Balance representing the actual total of all asset servicing transactions such as dividends, income corporate actions equivalents, tax returns, redemptions, etc. ";
 			owner_lazy = () -> SystemBalanceTypeCode.mmObject();
@@ -3091,7 +3093,7 @@ public class SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmCCPGuaranteedForecasting = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CCPGuaranteedForecasting";
 			definition = "Balance representing the forecast of the total of all cash legs of transactions in exchanges, going through CCP functions.";
 			owner_lazy = () -> SystemBalanceTypeCode.mmObject();
@@ -3125,7 +3127,7 @@ public class SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmNonCCPGuaranteedForecasting = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NonCCPGuaranteedForecasting";
 			definition = "Balance representing the forecast of the total of all cash legs of transactions traded in exchanges not going through central counter party (CCP) functions.";
 			owner_lazy = () -> SystemBalanceTypeCode.mmObject();
@@ -3158,7 +3160,7 @@ public class SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmDefinitiveSettledSecurities = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DefinitiveSettledSecurities";
 			definition = "Balance representing the cash equivalent of all settled securities transactions";
 			owner_lazy = () -> SystemBalanceTypeCode.mmObject();
@@ -3191,7 +3193,7 @@ public class SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmLackOfHoldingsTransactions = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "LackOfHoldingsTransactions";
 			definition = "Balance representing the cash equivalent of transactions with a lack of holdings. ";
 			owner_lazy = () -> SystemBalanceTypeCode.mmObject();
@@ -3224,7 +3226,7 @@ public class SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmNonSettledSecurities = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NonSettledSecurities";
 			definition = "Balance representing the cash equivalent of all non-settled securities transactions.";
 			owner_lazy = () -> SystemBalanceTypeCode.mmObject();
@@ -3258,7 +3260,7 @@ public class SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmCCPGuaranteedOTCTransactions = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CCPGuaranteedOTCTransactions";
 			definition = "Balance representing the Forecast of the total of all cash-legs of transactions 'over the counter' (OTC), going through central counter party (CCP) functions.";
 			owner_lazy = () -> SystemBalanceTypeCode.mmObject();
@@ -3291,7 +3293,7 @@ public class SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmForecastOTCTransactions = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ForecastOTCTransactions";
 			definition = "Balance representing the forecast of the total of all cash legs of transactions traded 'over the counter' (OTC).";
 			owner_lazy = () -> SystemBalanceTypeCode.mmObject();
@@ -3325,7 +3327,7 @@ public class SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmNonCCPGuaranteedOTCTransactions = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NonCCPGuaranteedOTCTransactions";
 			definition = "Balance representing the forecast of the total of all cash legs of transactions traded 'over the counter' (OTC) not going through central counter party (CCP) functions.";
 			owner_lazy = () -> SystemBalanceTypeCode.mmObject();
@@ -3357,7 +3359,7 @@ public class SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmSAPDirectDebitAmount = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SAPDirectDebitAmount";
 			definition = "Balance represents the settlement account processor direct debit amount.";
 			owner_lazy = () -> SystemBalanceTypeCode.mmObject();
@@ -3389,7 +3391,7 @@ public class SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmSAPDirectCreditAmount = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SAPDirectCreditAmount";
 			definition = "Balance represents the settlement account processor direct credit amount.";
 			owner_lazy = () -> SystemBalanceTypeCode.mmObject();
@@ -3422,7 +3424,7 @@ public class SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmCMUPRepoDebit = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CMUPRepoDebit";
 			definition = "Balance represents the total of the central moneymarkets unit processor repo debits.";
 			owner_lazy = () -> SystemBalanceTypeCode.mmObject();
@@ -3455,7 +3457,7 @@ public class SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmCMUPRepoCredit = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CMUPRepoCredit";
 			definition = "Balance represents the total of the central moneymarkets unit processor repo credits.";
 			owner_lazy = () -> SystemBalanceTypeCode.mmObject();
@@ -3488,7 +3490,7 @@ public class SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmBulkSettlementCMUPDebit = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BulkSettlementCMUPDebit";
 			definition = "Balance represents the total of the bulk settlement and central moneymarkets unit processor debit.";
 			owner_lazy = () -> SystemBalanceTypeCode.mmObject();
@@ -3521,7 +3523,7 @@ public class SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmBulkSettlementCMUPCredit = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BulkSettlementCMUPCredit";
 			definition = "Balance represents the total of the bulk settlement and central moneymarkets unit processor credit.";
 			owner_lazy = () -> SystemBalanceTypeCode.mmObject();
@@ -3552,7 +3554,7 @@ public class SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmSAPQueueAmount = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SAPQueueAmount";
 			definition = "Balance represents the settlement account processor queue amount ";
 			owner_lazy = () -> SystemBalanceTypeCode.mmObject();
@@ -3582,7 +3584,7 @@ public class SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmIntradayRepoLimit = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "IntradayRepoLimit";
 			definition = "Balance represents the intraday repo limit.";
 			owner_lazy = () -> SystemBalanceTypeCode.mmObject();
@@ -3612,7 +3614,7 @@ public class SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmIntradayRepoDrawings = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "IntradayRepoDrawings";
 			definition = "Balance represents the intraday repo drawings.";
 			owner_lazy = () -> SystemBalanceTypeCode.mmObject();
@@ -3642,7 +3644,7 @@ public class SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmDiscountWindowRepoDrawings = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DiscountWindowRepoDrawings";
 			definition = "Balance represents the discount window repo drawings.";
 			owner_lazy = () -> SystemBalanceTypeCode.mmObject();
@@ -3675,7 +3677,7 @@ public class SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmAvailableDMVForDiscountWindowRepo = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AvailableDMVForDiscountWindowRepo";
 			definition = "Balance represents the available discounted market value for discount window repo.";
 			owner_lazy = () -> SystemBalanceTypeCode.mmObject();
@@ -3708,7 +3710,7 @@ public class SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmAvailableDMVForIntradayRepo = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AvailableDMVForIntradayRepo";
 			definition = "Balance represents the available discounted market value for intraday repo.";
 			owner_lazy = () -> SystemBalanceTypeCode.mmObject();
@@ -3738,7 +3740,7 @@ public class SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmElected = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Elected";
 			definition = "Balance of instructed position.";
 			owner_lazy = () -> SystemBalanceTypeCode.mmObject();
@@ -3771,7 +3773,7 @@ public class SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmReservedForDistribution = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ReservedForDistribution";
 			definition = "Balance of financial instruments that are reserved for the distribution of the proceeds.";
 			owner_lazy = () -> SystemBalanceTypeCode.mmObject();
@@ -3804,7 +3806,7 @@ public class SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmReservedForRemoval = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ReservedForRemoval";
 			definition = "Balance of securities which are reserved  temporarily in the SPA account before they will effectively be exchanged.";
 			owner_lazy = () -> SystemBalanceTypeCode.mmObject();
@@ -3842,7 +3844,7 @@ public class SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmRestricted = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Restricted";
 			definition = "Balance of cash that may only be used under certain conditions.\n\nBalance type is used to block securities/cash in the client account for example, when related to specific corporate actions, the holding is under the direct control of the system paying agent, who is the only one who can transfer securities out of this balance type.\nAlso known as the \"escrow balance\" or \"sequestered balance\".";
 			owner_lazy = () -> SystemBalanceTypeCode.mmObject();
@@ -3875,7 +3877,7 @@ public class SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmTotalEntitled = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TotalEntitled";
 			definition = "Total quantity of financial instruments  entitled to the account owner based on the terms of the corporate action event.\n";
 			owner_lazy = () -> SystemBalanceTypeCode.mmObject();
@@ -3905,7 +3907,7 @@ public class SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmUnelected = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Unelected";
 			definition = "Balance of uninstructed position.";
 			owner_lazy = () -> SystemBalanceTypeCode.mmObject();
@@ -3935,7 +3937,7 @@ public class SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmInformation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Information";
 			definition = "Balance for informational purposes.";
 			owner_lazy = () -> SystemBalanceTypeCode.mmObject();
@@ -3946,61 +3948,35 @@ public class SystemBalanceTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("OPNG");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SystemBalanceTypeCode";
 				definition = "Specifies the nature of the system balance.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SystemBalanceTypeCode.mmOpening, com.tools20022.repository.codeset.SystemBalanceTypeCode.mmInterim,
-						com.tools20022.repository.codeset.SystemBalanceTypeCode.mmClosing, com.tools20022.repository.codeset.SystemBalanceTypeCode.mmBook, com.tools20022.repository.codeset.SystemBalanceTypeCode.mmCurrent,
-						com.tools20022.repository.codeset.SystemBalanceTypeCode.mmPending, com.tools20022.repository.codeset.SystemBalanceTypeCode.mmLimitRelated, com.tools20022.repository.codeset.SystemBalanceTypeCode.mmAvailable,
-						com.tools20022.repository.codeset.SystemBalanceTypeCode.mmLiquidityTransfer, com.tools20022.repository.codeset.SystemBalanceTypeCode.mmCredit,
-						com.tools20022.repository.codeset.SystemBalanceTypeCode.mmEligibleAssets, com.tools20022.repository.codeset.SystemBalanceTypeCode.mmPayment, com.tools20022.repository.codeset.SystemBalanceTypeCode.mmBlocked,
-						com.tools20022.repository.codeset.SystemBalanceTypeCode.mmExpected, com.tools20022.repository.codeset.SystemBalanceTypeCode.mmDaylightOverdraft,
-						com.tools20022.repository.codeset.SystemBalanceTypeCode.mmExpectedCredit, com.tools20022.repository.codeset.SystemBalanceTypeCode.mmExpectedDebit,
-						com.tools20022.repository.codeset.SystemBalanceTypeCode.mmAdjustment, com.tools20022.repository.codeset.SystemBalanceTypeCode.mmProgressiveAverage, com.tools20022.repository.codeset.SystemBalanceTypeCode.mmDebit,
-						com.tools20022.repository.codeset.SystemBalanceTypeCode.mmThreshold, com.tools20022.repository.codeset.SystemBalanceTypeCode.mmNoted, com.tools20022.repository.codeset.SystemBalanceTypeCode.mmSelf,
-						com.tools20022.repository.codeset.SystemBalanceTypeCode.mmMaster, com.tools20022.repository.codeset.SystemBalanceTypeCode.mmForecastSettlement,
-						com.tools20022.repository.codeset.SystemBalanceTypeCode.mmBlockedTrades, com.tools20022.repository.codeset.SystemBalanceTypeCode.mmOtherBlockedTrades,
-						com.tools20022.repository.codeset.SystemBalanceTypeCode.mmCustody, com.tools20022.repository.codeset.SystemBalanceTypeCode.mmCashForecast,
-						com.tools20022.repository.codeset.SystemBalanceTypeCode.mmDividendsCollection, com.tools20022.repository.codeset.SystemBalanceTypeCode.mmNetFunding,
-						com.tools20022.repository.codeset.SystemBalanceTypeCode.mmPayInPayOut, com.tools20022.repository.codeset.SystemBalanceTypeCode.mmExchangeForecast,
-						com.tools20022.repository.codeset.SystemBalanceTypeCode.mmCentralCounterparty, com.tools20022.repository.codeset.SystemBalanceTypeCode.mmTotalOnHold,
-						com.tools20022.repository.codeset.SystemBalanceTypeCode.mmCreditOnHold, com.tools20022.repository.codeset.SystemBalanceTypeCode.mmDebitOnHold,
-						com.tools20022.repository.codeset.SystemBalanceTypeCode.mmTotalProcessed, com.tools20022.repository.codeset.SystemBalanceTypeCode.mmCreditProcessed,
-						com.tools20022.repository.codeset.SystemBalanceTypeCode.mmDebitProcessed, com.tools20022.repository.codeset.SystemBalanceTypeCode.mmTotalFuture,
-						com.tools20022.repository.codeset.SystemBalanceTypeCode.mmTotalRejected, com.tools20022.repository.codeset.SystemBalanceTypeCode.mmOpeningAvailable,
-						com.tools20022.repository.codeset.SystemBalanceTypeCode.mmInterimAvailable, com.tools20022.repository.codeset.SystemBalanceTypeCode.mmClosingAvailable,
-						com.tools20022.repository.codeset.SystemBalanceTypeCode.mmForwardAvailable, com.tools20022.repository.codeset.SystemBalanceTypeCode.mmClosingBooked,
-						com.tools20022.repository.codeset.SystemBalanceTypeCode.mmInterimBooked, com.tools20022.repository.codeset.SystemBalanceTypeCode.mmOpeningBooked,
-						com.tools20022.repository.codeset.SystemBalanceTypeCode.mmPreviouslyClosedBooked, com.tools20022.repository.codeset.SystemBalanceTypeCode.mmInvestmentOpeningAvailable,
-						com.tools20022.repository.codeset.SystemBalanceTypeCode.mmInvestmentInterimAvailable, com.tools20022.repository.codeset.SystemBalanceTypeCode.mmInvestmentClosingAvailable,
-						com.tools20022.repository.codeset.SystemBalanceTypeCode.mmInvestmentForwardAvailable, com.tools20022.repository.codeset.SystemBalanceTypeCode.mmInvestmentClosingBooked,
-						com.tools20022.repository.codeset.SystemBalanceTypeCode.mmInvestmentInterimBooked, com.tools20022.repository.codeset.SystemBalanceTypeCode.mmInvestmentOpeningBooked,
-						com.tools20022.repository.codeset.SystemBalanceTypeCode.mmInvestmentExpected, com.tools20022.repository.codeset.SystemBalanceTypeCode.mmDisbursementOpeningAvailable,
-						com.tools20022.repository.codeset.SystemBalanceTypeCode.mmDisbursementInterimAvailable, com.tools20022.repository.codeset.SystemBalanceTypeCode.mmDisbursementClosingAvailable,
-						com.tools20022.repository.codeset.SystemBalanceTypeCode.mmDisbursementForwardAvailable, com.tools20022.repository.codeset.SystemBalanceTypeCode.mmDisbursementClosingBooked,
-						com.tools20022.repository.codeset.SystemBalanceTypeCode.mmDisbursementInterimBooked, com.tools20022.repository.codeset.SystemBalanceTypeCode.mmDisbursementOpeningBooked,
-						com.tools20022.repository.codeset.SystemBalanceTypeCode.mmDisbursementExpected, com.tools20022.repository.codeset.SystemBalanceTypeCode.mmCollectionOpeningAvailable,
-						com.tools20022.repository.codeset.SystemBalanceTypeCode.mmCollectionInterimAvailable, com.tools20022.repository.codeset.SystemBalanceTypeCode.mmCollectionClosingAvailable,
-						com.tools20022.repository.codeset.SystemBalanceTypeCode.mmCollectionForwardAvailable, com.tools20022.repository.codeset.SystemBalanceTypeCode.mmCollectionClosingBooked,
-						com.tools20022.repository.codeset.SystemBalanceTypeCode.mmCollectionInterimBooked, com.tools20022.repository.codeset.SystemBalanceTypeCode.mmCollectionOpeningBooked,
-						com.tools20022.repository.codeset.SystemBalanceTypeCode.mmCollectionExpected, com.tools20022.repository.codeset.SystemBalanceTypeCode.mmFirmCollateralisation,
-						com.tools20022.repository.codeset.SystemBalanceTypeCode.mmUsedAmountsFirmCollateralisation, com.tools20022.repository.codeset.SystemBalanceTypeCode.mmSelfCollateralisation,
-						com.tools20022.repository.codeset.SystemBalanceTypeCode.mmUsedAmountsSelfCollateralisation, com.tools20022.repository.codeset.SystemBalanceTypeCode.mmCustodyActual,
-						com.tools20022.repository.codeset.SystemBalanceTypeCode.mmCCPGuaranteedForecasting, com.tools20022.repository.codeset.SystemBalanceTypeCode.mmNonCCPGuaranteedForecasting,
-						com.tools20022.repository.codeset.SystemBalanceTypeCode.mmDefinitiveSettledSecurities, com.tools20022.repository.codeset.SystemBalanceTypeCode.mmLackOfHoldingsTransactions,
-						com.tools20022.repository.codeset.SystemBalanceTypeCode.mmNonSettledSecurities, com.tools20022.repository.codeset.SystemBalanceTypeCode.mmCCPGuaranteedOTCTransactions,
-						com.tools20022.repository.codeset.SystemBalanceTypeCode.mmForecastOTCTransactions, com.tools20022.repository.codeset.SystemBalanceTypeCode.mmNonCCPGuaranteedOTCTransactions,
-						com.tools20022.repository.codeset.SystemBalanceTypeCode.mmSAPDirectDebitAmount, com.tools20022.repository.codeset.SystemBalanceTypeCode.mmSAPDirectCreditAmount,
-						com.tools20022.repository.codeset.SystemBalanceTypeCode.mmCMUPRepoDebit, com.tools20022.repository.codeset.SystemBalanceTypeCode.mmCMUPRepoCredit,
-						com.tools20022.repository.codeset.SystemBalanceTypeCode.mmBulkSettlementCMUPDebit, com.tools20022.repository.codeset.SystemBalanceTypeCode.mmBulkSettlementCMUPCredit,
-						com.tools20022.repository.codeset.SystemBalanceTypeCode.mmSAPQueueAmount, com.tools20022.repository.codeset.SystemBalanceTypeCode.mmIntradayRepoLimit,
-						com.tools20022.repository.codeset.SystemBalanceTypeCode.mmIntradayRepoDrawings, com.tools20022.repository.codeset.SystemBalanceTypeCode.mmDiscountWindowRepoDrawings,
-						com.tools20022.repository.codeset.SystemBalanceTypeCode.mmAvailableDMVForDiscountWindowRepo, com.tools20022.repository.codeset.SystemBalanceTypeCode.mmAvailableDMVForIntradayRepo,
-						com.tools20022.repository.codeset.SystemBalanceTypeCode.mmElected, com.tools20022.repository.codeset.SystemBalanceTypeCode.mmReservedForDistribution,
-						com.tools20022.repository.codeset.SystemBalanceTypeCode.mmReservedForRemoval, com.tools20022.repository.codeset.SystemBalanceTypeCode.mmRestricted,
-						com.tools20022.repository.codeset.SystemBalanceTypeCode.mmTotalEntitled, com.tools20022.repository.codeset.SystemBalanceTypeCode.mmUnelected, com.tools20022.repository.codeset.SystemBalanceTypeCode.mmInformation);
+				code_lazy = () -> Arrays.asList(SystemBalanceTypeCode.mmOpening, SystemBalanceTypeCode.mmInterim, SystemBalanceTypeCode.mmClosing, SystemBalanceTypeCode.mmBook, SystemBalanceTypeCode.mmCurrent,
+						SystemBalanceTypeCode.mmPending, SystemBalanceTypeCode.mmLimitRelated, SystemBalanceTypeCode.mmAvailable, SystemBalanceTypeCode.mmLiquidityTransfer, SystemBalanceTypeCode.mmCredit,
+						SystemBalanceTypeCode.mmEligibleAssets, SystemBalanceTypeCode.mmPayment, SystemBalanceTypeCode.mmBlocked, SystemBalanceTypeCode.mmExpected, SystemBalanceTypeCode.mmDaylightOverdraft,
+						SystemBalanceTypeCode.mmExpectedCredit, SystemBalanceTypeCode.mmExpectedDebit, SystemBalanceTypeCode.mmAdjustment, SystemBalanceTypeCode.mmProgressiveAverage, SystemBalanceTypeCode.mmDebit,
+						SystemBalanceTypeCode.mmThreshold, SystemBalanceTypeCode.mmNoted, SystemBalanceTypeCode.mmSelf, SystemBalanceTypeCode.mmMaster, SystemBalanceTypeCode.mmForecastSettlement, SystemBalanceTypeCode.mmBlockedTrades,
+						SystemBalanceTypeCode.mmOtherBlockedTrades, SystemBalanceTypeCode.mmCustody, SystemBalanceTypeCode.mmCashForecast, SystemBalanceTypeCode.mmDividendsCollection, SystemBalanceTypeCode.mmNetFunding,
+						SystemBalanceTypeCode.mmPayInPayOut, SystemBalanceTypeCode.mmExchangeForecast, SystemBalanceTypeCode.mmCentralCounterparty, SystemBalanceTypeCode.mmTotalOnHold, SystemBalanceTypeCode.mmCreditOnHold,
+						SystemBalanceTypeCode.mmDebitOnHold, SystemBalanceTypeCode.mmTotalProcessed, SystemBalanceTypeCode.mmCreditProcessed, SystemBalanceTypeCode.mmDebitProcessed, SystemBalanceTypeCode.mmTotalFuture,
+						SystemBalanceTypeCode.mmTotalRejected, SystemBalanceTypeCode.mmOpeningAvailable, SystemBalanceTypeCode.mmInterimAvailable, SystemBalanceTypeCode.mmClosingAvailable, SystemBalanceTypeCode.mmForwardAvailable,
+						SystemBalanceTypeCode.mmClosingBooked, SystemBalanceTypeCode.mmInterimBooked, SystemBalanceTypeCode.mmOpeningBooked, SystemBalanceTypeCode.mmPreviouslyClosedBooked,
+						SystemBalanceTypeCode.mmInvestmentOpeningAvailable, SystemBalanceTypeCode.mmInvestmentInterimAvailable, SystemBalanceTypeCode.mmInvestmentClosingAvailable, SystemBalanceTypeCode.mmInvestmentForwardAvailable,
+						SystemBalanceTypeCode.mmInvestmentClosingBooked, SystemBalanceTypeCode.mmInvestmentInterimBooked, SystemBalanceTypeCode.mmInvestmentOpeningBooked, SystemBalanceTypeCode.mmInvestmentExpected,
+						SystemBalanceTypeCode.mmDisbursementOpeningAvailable, SystemBalanceTypeCode.mmDisbursementInterimAvailable, SystemBalanceTypeCode.mmDisbursementClosingAvailable, SystemBalanceTypeCode.mmDisbursementForwardAvailable,
+						SystemBalanceTypeCode.mmDisbursementClosingBooked, SystemBalanceTypeCode.mmDisbursementInterimBooked, SystemBalanceTypeCode.mmDisbursementOpeningBooked, SystemBalanceTypeCode.mmDisbursementExpected,
+						SystemBalanceTypeCode.mmCollectionOpeningAvailable, SystemBalanceTypeCode.mmCollectionInterimAvailable, SystemBalanceTypeCode.mmCollectionClosingAvailable, SystemBalanceTypeCode.mmCollectionForwardAvailable,
+						SystemBalanceTypeCode.mmCollectionClosingBooked, SystemBalanceTypeCode.mmCollectionInterimBooked, SystemBalanceTypeCode.mmCollectionOpeningBooked, SystemBalanceTypeCode.mmCollectionExpected,
+						SystemBalanceTypeCode.mmFirmCollateralisation, SystemBalanceTypeCode.mmUsedAmountsFirmCollateralisation, SystemBalanceTypeCode.mmSelfCollateralisation, SystemBalanceTypeCode.mmUsedAmountsSelfCollateralisation,
+						SystemBalanceTypeCode.mmCustodyActual, SystemBalanceTypeCode.mmCCPGuaranteedForecasting, SystemBalanceTypeCode.mmNonCCPGuaranteedForecasting, SystemBalanceTypeCode.mmDefinitiveSettledSecurities,
+						SystemBalanceTypeCode.mmLackOfHoldingsTransactions, SystemBalanceTypeCode.mmNonSettledSecurities, SystemBalanceTypeCode.mmCCPGuaranteedOTCTransactions, SystemBalanceTypeCode.mmForecastOTCTransactions,
+						SystemBalanceTypeCode.mmNonCCPGuaranteedOTCTransactions, SystemBalanceTypeCode.mmSAPDirectDebitAmount, SystemBalanceTypeCode.mmSAPDirectCreditAmount, SystemBalanceTypeCode.mmCMUPRepoDebit,
+						SystemBalanceTypeCode.mmCMUPRepoCredit, SystemBalanceTypeCode.mmBulkSettlementCMUPDebit, SystemBalanceTypeCode.mmBulkSettlementCMUPCredit, SystemBalanceTypeCode.mmSAPQueueAmount,
+						SystemBalanceTypeCode.mmIntradayRepoLimit, SystemBalanceTypeCode.mmIntradayRepoDrawings, SystemBalanceTypeCode.mmDiscountWindowRepoDrawings, SystemBalanceTypeCode.mmAvailableDMVForDiscountWindowRepo,
+						SystemBalanceTypeCode.mmAvailableDMVForIntradayRepo, SystemBalanceTypeCode.mmElected, SystemBalanceTypeCode.mmReservedForDistribution, SystemBalanceTypeCode.mmReservedForRemoval, SystemBalanceTypeCode.mmRestricted,
+						SystemBalanceTypeCode.mmTotalEntitled, SystemBalanceTypeCode.mmUnelected, SystemBalanceTypeCode.mmInformation);
 				derivation_lazy = () -> Arrays.asList(SystemBalanceType1Code.mmObject(), SystemBalanceType2Code.mmObject());
 			}
 		});

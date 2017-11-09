@@ -19,7 +19,9 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.VoteInstructionRequest;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.Vote1;
 import com.tools20022.repository.msg.Vote3;
 import java.util.Arrays;
@@ -101,11 +103,11 @@ public class VoteChoice {
 	 */
 	public static final MMMessageAssociationEnd mmVoteInstruction = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.VoteInstructionRequest.mmVotePerResolution;
+			businessElementTrace_lazy = () -> VoteInstructionRequest.mmVotePerResolution;
 			componentContext_lazy = () -> VoteChoice.mmObject();
 			isDerived = false;
 			xmlTag = "VoteInstr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VoteInstruction";
 			definition = "Instruction specifying the instructed quantity of voting rights per resolution. Split votes can be indicated. If only one type of decision is indicated, the number of votes cast must not be adjusted if the position of the voting party increases.";
 			maxOccurs = 200;
@@ -149,11 +151,11 @@ public class VoteChoice {
 	 */
 	public static final MMMessageAssociationEnd mmGlobalVoteInstruction = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.VoteInstructionRequest.mmGlobalVoteInstruction;
+			businessElementTrace_lazy = () -> VoteInstructionRequest.mmGlobalVoteInstruction;
 			componentContext_lazy = () -> VoteChoice.mmObject();
 			isDerived = false;
 			xmlTag = "GblVoteInstr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GlobalVoteInstruction";
 			definition = "Instruction specifiying a vote instruction per resolution for the entire entitlement. ";
 			maxOccurs = 200;
@@ -166,10 +168,10 @@ public class VoteChoice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.VoteChoice.mmVoteInstruction, com.tools20022.repository.choice.VoteChoice.mmGlobalVoteInstruction);
+				messageElement_lazy = () -> Arrays.asList(VoteChoice.mmVoteInstruction, VoteChoice.mmGlobalVoteInstruction);
 				trace_lazy = () -> VoteInstructionRequest.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "VoteChoice";
 				definition = "Determines how the voting instructions are specified.";
 			}

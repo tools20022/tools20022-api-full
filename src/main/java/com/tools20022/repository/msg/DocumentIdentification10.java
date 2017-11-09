@@ -20,11 +20,15 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.tsmt.DataSetMatchReportV03;
 import com.tools20022.repository.codeset.DataSetType2Code;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.Max3NumericText;
 import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.entity.Document;
+import com.tools20022.repository.entity.GenericIdentification;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -122,11 +126,11 @@ public class DocumentIdentification10 {
 	 */
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmIdentification;
+			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> DocumentIdentification10.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Identification of a set of data.";
 			maxOccurs = 1;
@@ -172,11 +176,11 @@ public class DocumentIdentification10 {
 	 */
 	public static final MMMessageAttribute mmVersion = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Document.mmDocumentVersion;
+			businessElementTrace_lazy = () -> Document.mmDocumentVersion;
 			componentContext_lazy = () -> DocumentIdentification10.mmObject();
 			isDerived = false;
 			xmlTag = "Vrsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Version";
 			definition = "Unambiguous identification of the version of a set of data. Example: Version 1.";
 			maxOccurs = 1;
@@ -220,11 +224,11 @@ public class DocumentIdentification10 {
 	 */
 	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Document.mmType;
+			businessElementTrace_lazy = () -> Document.mmType;
 			componentContext_lazy = () -> DocumentIdentification10.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Identifies the type of data set.";
 			maxOccurs = 1;
@@ -267,7 +271,7 @@ public class DocumentIdentification10 {
 			componentContext_lazy = () -> DocumentIdentification10.mmObject();
 			isDerived = false;
 			xmlTag = "Submitr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Submitter";
 			definition = "Uniquely identifies the financial institution which has submitted the set of data by using a BIC.";
 			maxOccurs = 1;
@@ -311,7 +315,7 @@ public class DocumentIdentification10 {
 			componentContext_lazy = () -> DocumentIdentification10.mmObject();
 			isDerived = false;
 			xmlTag = "DocIndx";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DocumentIndex";
 			definition = "Index assigned to the document, to allow easy referencing.";
 			maxOccurs = 1;
@@ -323,12 +327,12 @@ public class DocumentIdentification10 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DocumentIdentification10.mmIdentification, com.tools20022.repository.msg.DocumentIdentification10.mmVersion,
-						com.tools20022.repository.msg.DocumentIdentification10.mmType, com.tools20022.repository.msg.DocumentIdentification10.mmSubmitter, com.tools20022.repository.msg.DocumentIdentification10.mmDocumentIndex);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.DataSetMatchReportV03.mmComparedDocumentReference);
+				messageElement_lazy = () -> Arrays.asList(DocumentIdentification10.mmIdentification, DocumentIdentification10.mmVersion, DocumentIdentification10.mmType, DocumentIdentification10.mmSubmitter,
+						DocumentIdentification10.mmDocumentIndex);
+				messageBuildingBlock_lazy = () -> Arrays.asList(DataSetMatchReportV03.mmComparedDocumentReference);
 				trace_lazy = () -> Document.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DocumentIdentification10";
 				definition = "Identifies a document by a unique identification and a version together with the submitter of the document.\nAlso specifies the type of document and an index for easy referencing.";
 			}

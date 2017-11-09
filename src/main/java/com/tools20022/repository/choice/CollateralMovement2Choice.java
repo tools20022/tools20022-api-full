@@ -19,7 +19,9 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.CollateralProposal;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.Collateral4;
 import com.tools20022.repository.msg.CollateralMovement3;
 import java.util.Arrays;
@@ -118,14 +120,14 @@ public class CollateralMovement2Choice {
 	 */
 	public static final MMMessageAssociationEnd mmCollateralMovementDetails = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CollateralProposal.mmProposedCollateralMovement;
+			businessElementTrace_lazy = () -> CollateralProposal.mmProposedCollateralMovement;
 			componentContext_lazy = () -> CollateralMovement2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "CollMvmntDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralMovementDetails";
 			definition = "Provides the collateral movement direction that is a delivery and optionaly a return.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CollateralMovement3Choice.mmCollateralMovementDirection);
+			nextVersions_lazy = () -> Arrays.asList(CollateralMovement3Choice.mmCollateralMovementDirection);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -175,14 +177,14 @@ public class CollateralMovement2Choice {
 	 */
 	public static final MMMessageAssociationEnd mmReturn = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CollateralProposal.mmProposedCollateralMovement;
+			businessElementTrace_lazy = () -> CollateralProposal.mmProposedCollateralMovement;
 			componentContext_lazy = () -> CollateralMovement2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Rtr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Return";
 			definition = "Provides the collateral movement direction that is a return only.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CollateralMovement3Choice.mmReturn);
+			nextVersions_lazy = () -> Arrays.asList(CollateralMovement3Choice.mmReturn);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -193,10 +195,10 @@ public class CollateralMovement2Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CollateralMovement2Choice.mmCollateralMovementDetails, com.tools20022.repository.choice.CollateralMovement2Choice.mmReturn);
+				messageElement_lazy = () -> Arrays.asList(CollateralMovement2Choice.mmCollateralMovementDetails, CollateralMovement2Choice.mmReturn);
 				trace_lazy = () -> CollateralProposal.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CollateralMovement2Choice";
 				definition = "Provides the collateral movement direction that is a delivery and optionaly a return, or a return only.";
 				nextVersions_lazy = () -> Arrays.asList(CollateralMovement3Choice.mmObject());

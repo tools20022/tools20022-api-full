@@ -17,10 +17,13 @@
 
 package com.tools20022.repository.entity;
 
-import com.tools20022.metamodel.MMBusinessAssociationEnd;
-import com.tools20022.metamodel.MMBusinessAttribute;
-import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.*;
 import com.tools20022.repository.datatype.Max350Text;
+import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.FinancialInstrument16;
+import com.tools20022.repository.msg.FinancialInstrument21;
+import com.tools20022.repository.msg.FinancialInstrument22;
+import com.tools20022.repository.msg.SecurityIdentification1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -40,15 +43,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.UmbrellaFund#mmName
- * UmbrellaFund.mmName}</li>
- * <li>{@linkplain com.tools20022.repository.entity.UmbrellaFund#mmSubFund
- * UmbrellaFund.mmSubFund}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
  * associationDomain} =
@@ -56,6 +50,15 @@ import java.util.List;
  * <li>
  * {@linkplain com.tools20022.repository.entity.InvestmentFund#mmUmbrellaFund
  * InvestmentFund.mmUmbrellaFund}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.UmbrellaFund#mmName
+ * UmbrellaFund.mmName}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.UmbrellaFund#mmSubFund
+ * UmbrellaFund.mmSubFund}</li>
  * </ul>
  * </li>
  * <li>
@@ -122,11 +125,10 @@ public class UmbrellaFund {
 	 */
 	public static final MMBusinessAttribute mmName = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrument16.mmUmbrellaName, com.tools20022.repository.msg.SecurityIdentification1.mmUmbrellaName,
-					com.tools20022.repository.msg.FinancialInstrument21.mmUmbrellaName, com.tools20022.repository.msg.FinancialInstrument22.mmUmbrellaName);
+			derivation_lazy = () -> Arrays.asList(FinancialInstrument16.mmUmbrellaName, SecurityIdentification1.mmUmbrellaName, FinancialInstrument21.mmUmbrellaName, FinancialInstrument22.mmUmbrellaName);
 			elementContext_lazy = () -> UmbrellaFund.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Name";
 			definition = "Name of the fund.";
 			maxOccurs = 1;
@@ -171,12 +173,12 @@ public class UmbrellaFund {
 		{
 			elementContext_lazy = () -> UmbrellaFund.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SubFund";
 			definition = "Compartment of an umbrellla fund.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.InvestmentFund.mmUmbrellaFund;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.InvestmentFund.mmObject();
 		}
 	};
@@ -184,12 +186,12 @@ public class UmbrellaFund {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "UmbrellaFund";
 				definition = "In securities, a collective investment scheme that has a contractual or a corporate form. When it has a contractual form, a fund is constituted under either the law of contract or under the trust law and thus it is not a legal entity. In its corporate form, a fund is a legal entity and is structured as a company.\r\nIt has several distinct sub-funds which in effect are traded as individual investment funds.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.InvestmentFund.mmUmbrellaFund);
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.UmbrellaFund.mmName, com.tools20022.repository.entity.UmbrellaFund.mmSubFund);
+				element_lazy = () -> Arrays.asList(UmbrellaFund.mmName, UmbrellaFund.mmSubFund);
 			}
 		});
 		return mmObject_lazy.get();

@@ -19,6 +19,9 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.reda.PriceReportCorrectionV02;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -105,7 +108,7 @@ public class PriceCorrection2 {
 			componentContext_lazy = () -> PriceCorrection2.mmObject();
 			isDerived = false;
 			xmlTag = "PrevslySntPricDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviouslySentPriceDetails";
 			definition = "Information related to the price valuation of a financial instrument sent in a previous price report.";
 			maxOccurs = 1;
@@ -149,7 +152,7 @@ public class PriceCorrection2 {
 			componentContext_lazy = () -> PriceCorrection2.mmObject();
 			isDerived = false;
 			xmlTag = "CrrctdPricDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorrectedPriceDetails";
 			definition = "Information related to the new price valuation of a financial instrument, which overrides previously sent information.";
 			maxOccurs = 1;
@@ -192,7 +195,7 @@ public class PriceCorrection2 {
 			componentContext_lazy = () -> PriceCorrection2.mmObject();
 			isDerived = false;
 			xmlTag = "Xtnsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Extension";
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
 			minOccurs = 0;
@@ -204,11 +207,10 @@ public class PriceCorrection2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PriceCorrection2.mmPreviouslySentPriceDetails, com.tools20022.repository.msg.PriceCorrection2.mmCorrectedPriceDetails,
-						com.tools20022.repository.msg.PriceCorrection2.mmExtension);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.reda.PriceReportCorrectionV02.mmPriceCorrectionDetails);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(PriceCorrection2.mmPreviouslySentPriceDetails, PriceCorrection2.mmCorrectedPriceDetails, PriceCorrection2.mmExtension);
+				messageBuildingBlock_lazy = () -> Arrays.asList(PriceReportCorrectionV02.mmPriceCorrectionDetails);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PriceCorrection2";
 				definition = "Original and corrected price information of an investment fund.";
 			}

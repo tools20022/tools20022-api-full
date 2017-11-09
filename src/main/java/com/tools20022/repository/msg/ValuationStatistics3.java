@@ -20,9 +20,11 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ActiveOrHistoricCurrencyCode;
 import com.tools20022.repository.datatype.PercentageRate;
 import com.tools20022.repository.entity.ValuationStatistics;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -112,11 +114,11 @@ public class ValuationStatistics3 {
 	 */
 	public static final MMMessageAttribute mmCurrency = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ValuationStatistics.mmCurrency;
+			businessElementTrace_lazy = () -> ValuationStatistics.mmCurrency;
 			componentContext_lazy = () -> ValuationStatistics3.mmObject();
 			isDerived = false;
 			xmlTag = "Ccy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Currency";
 			definition = "Currency of the valuation statistics.";
 			maxOccurs = 1;
@@ -162,11 +164,11 @@ public class ValuationStatistics3 {
 	 */
 	public static final MMMessageAttribute mmPriceTypeChangeBasis = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ValuationStatistics.mmPriceTypeChangeBasis;
+			businessElementTrace_lazy = () -> ValuationStatistics.mmPriceTypeChangeBasis;
 			componentContext_lazy = () -> ValuationStatistics3.mmObject();
 			isDerived = false;
 			xmlTag = "PricTpChngBsis";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PriceTypeChangeBasis";
 			definition = "Type of price from which the change is calculated, eg, bid, offer, or single.";
 			maxOccurs = 1;
@@ -210,11 +212,11 @@ public class ValuationStatistics3 {
 	 */
 	public static final MMMessageAttribute mmPriceChange = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ValuationStatistics.mmPriceChange;
+			businessElementTrace_lazy = () -> ValuationStatistics.mmPriceChange;
 			componentContext_lazy = () -> ValuationStatistics3.mmObject();
 			isDerived = false;
 			xmlTag = "PricChng";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PriceChange";
 			definition = "Change in price since the previous valuation date.";
 			maxOccurs = 1;
@@ -262,11 +264,11 @@ public class ValuationStatistics3 {
 	 */
 	public static final MMMessageAttribute mmYield = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ValuationStatistics.mmYield;
+			businessElementTrace_lazy = () -> ValuationStatistics.mmYield;
 			componentContext_lazy = () -> ValuationStatistics3.mmObject();
 			isDerived = false;
 			xmlTag = "Yld";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Yield";
 			definition = "Rate of income from the financial instrument, usually calculated as total dividends or coupon interest available to investors in the last year,divided by the current price.";
 			maxOccurs = 1;
@@ -310,7 +312,7 @@ public class ValuationStatistics3 {
 			componentContext_lazy = () -> ValuationStatistics3.mmObject();
 			isDerived = false;
 			xmlTag = "ByPrdfndTmPrds";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ByPredefinedTimePeriods";
 			definition = "Information related to price variations, expressed using pre-defined periods.";
 			maxOccurs = 1;
@@ -355,7 +357,7 @@ public class ValuationStatistics3 {
 			componentContext_lazy = () -> ValuationStatistics3.mmObject();
 			isDerived = false;
 			xmlTag = "ByUsrDfndTmPrd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ByUserDefinedTimePeriod";
 			definition = "Information related to price variations, expressed using user-defined periods.";
 			minOccurs = 0;
@@ -367,12 +369,11 @@ public class ValuationStatistics3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ValuationStatistics3.mmCurrency, com.tools20022.repository.msg.ValuationStatistics3.mmPriceTypeChangeBasis,
-						com.tools20022.repository.msg.ValuationStatistics3.mmPriceChange, com.tools20022.repository.msg.ValuationStatistics3.mmYield, com.tools20022.repository.msg.ValuationStatistics3.mmByPredefinedTimePeriods,
-						com.tools20022.repository.msg.ValuationStatistics3.mmByUserDefinedTimePeriod);
+				messageElement_lazy = () -> Arrays.asList(ValuationStatistics3.mmCurrency, ValuationStatistics3.mmPriceTypeChangeBasis, ValuationStatistics3.mmPriceChange, ValuationStatistics3.mmYield,
+						ValuationStatistics3.mmByPredefinedTimePeriods, ValuationStatistics3.mmByUserDefinedTimePeriod);
 				trace_lazy = () -> ValuationStatistics.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ValuationStatistics3";
 				definition = "Statistical data related to the price change of a security.";
 			}

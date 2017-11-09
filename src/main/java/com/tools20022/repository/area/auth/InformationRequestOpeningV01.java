@@ -20,6 +20,7 @@ package com.tools20022.repository.area.auth;
 import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.AuthoritiesLatestVersion;
 import com.tools20022.repository.choice.DateOrDateTimePeriodChoice;
 import com.tools20022.repository.choice.SearchCriteria1Choice;
@@ -44,6 +45,9 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code auth.001.001.01}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.AuthoritiesLatestVersion
@@ -88,9 +92,6 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code auth.001.001.01}</li>
- * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -134,7 +135,7 @@ public class InformationRequestOpeningV01 {
 	public static final MMMessageBuildingBlock mmInvestigationIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "InvstgtnId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestigationIdentification";
 			definition = "Unique identification for the specific investigation as known by the requesting party.";
 			maxOccurs = 1;
@@ -168,7 +169,7 @@ public class InformationRequestOpeningV01 {
 	public static final MMMessageBuildingBlock mmLegalMandateBasis = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "LglMndtBsis";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LegalMandateBasis";
 			definition = "Provides details on the legal basis of the request.";
 			maxOccurs = 1;
@@ -204,7 +205,7 @@ public class InformationRequestOpeningV01 {
 	public static final MMMessageBuildingBlock mmConfidentialityStatus = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CnfdtltySts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConfidentialityStatus";
 			definition = "Specifies the confidentiality status of the investigation.";
 			maxOccurs = 1;
@@ -241,7 +242,7 @@ public class InformationRequestOpeningV01 {
 	public static final MMMessageBuildingBlock mmDueDate = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "DueDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DueDate";
 			definition = "Specifies the date by when the financial institutiion needs to provide a response.";
 			maxOccurs = 1;
@@ -279,7 +280,7 @@ public class InformationRequestOpeningV01 {
 	public static final MMMessageBuildingBlock mmInvestigationPeriod = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "InvstgtnPrd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestigationPeriod";
 			definition = "Specifies the dates between which period the authority requests that the financial institution provides a response to the information request.";
 			maxOccurs = 1;
@@ -318,7 +319,7 @@ public class InformationRequestOpeningV01 {
 	public static final MMMessageBuildingBlock mmSearchCriteria = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SchCrit";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SearchCriteria";
 			definition = "Specifies the the search criteria for the financial institution to perform the search on. The search criteria can be an account, a customer identification or a payment instrument type.";
 			maxOccurs = 1;
@@ -356,7 +357,7 @@ public class InformationRequestOpeningV01 {
 	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SplmtryData";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryData";
 			definition = "Additional information that can not be captured in the structured fields and/or any other specific block.";
 			minOccurs = 0;
@@ -367,17 +368,15 @@ public class InformationRequestOpeningV01 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InformationRequestOpeningV01";
 				definition = "This message is sent by the authorities (police, customs, tax authorities, enforcement authorities) to a financial institution to request account and other banking and financial information. Requested information can relate to accounts, their signatories and beneficiaries and co-owners as well as movements plus positions on these accounts.\r\n\r\nRequests are underpinned by specific legal texts. ";
 				messageSet_lazy = () -> Arrays.asList(AuthoritiesFinancialInvestigationsISOLatestversion.mmObject());
 				rootElement = "Document";
 				xmlTag = "InfReqOpng";
 				businessArea_lazy = () -> AuthoritiesLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.auth.InformationRequestOpeningV01.mmInvestigationIdentification,
-						com.tools20022.repository.area.auth.InformationRequestOpeningV01.mmLegalMandateBasis, com.tools20022.repository.area.auth.InformationRequestOpeningV01.mmConfidentialityStatus,
-						com.tools20022.repository.area.auth.InformationRequestOpeningV01.mmDueDate, com.tools20022.repository.area.auth.InformationRequestOpeningV01.mmInvestigationPeriod,
-						com.tools20022.repository.area.auth.InformationRequestOpeningV01.mmSearchCriteria, com.tools20022.repository.area.auth.InformationRequestOpeningV01.mmSupplementaryData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(InformationRequestOpeningV01.mmInvestigationIdentification, InformationRequestOpeningV01.mmLegalMandateBasis, InformationRequestOpeningV01.mmConfidentialityStatus,
+						InformationRequestOpeningV01.mmDueDate, InformationRequestOpeningV01.mmInvestigationPeriod, InformationRequestOpeningV01.mmSearchCriteria, InformationRequestOpeningV01.mmSupplementaryData);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "auth";

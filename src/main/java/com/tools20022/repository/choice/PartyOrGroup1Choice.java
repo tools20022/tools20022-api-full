@@ -19,7 +19,9 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max4AlphaNumericText;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.PartyAndCertificate2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -92,7 +94,7 @@ public class PartyOrGroup1Choice {
 			componentContext_lazy = () -> PartyOrGroup1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "GrpId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GroupIdentification";
 			definition = "Specifies the identification of a group of parties.";
 			maxOccurs = 1;
@@ -134,7 +136,7 @@ public class PartyOrGroup1Choice {
 			componentContext_lazy = () -> PartyOrGroup1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Pty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Party";
 			definition = "Specifies a party.";
 			maxOccurs = 1;
@@ -146,9 +148,9 @@ public class PartyOrGroup1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PartyOrGroup1Choice.mmGroupIdentification, com.tools20022.repository.choice.PartyOrGroup1Choice.mmParty);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(PartyOrGroup1Choice.mmGroupIdentification, PartyOrGroup1Choice.mmParty);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PartyOrGroup1Choice";
 				definition = "Specifies a choice between one party or a group of parties.";
 			}

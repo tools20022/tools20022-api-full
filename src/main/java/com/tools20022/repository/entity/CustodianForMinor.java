@@ -18,7 +18,11 @@
 package com.tools20022.repository.entity;
 
 import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.choice.*;
 import com.tools20022.repository.entity.InvestmentAccountPartyRole;
+import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -112,17 +116,14 @@ public class CustodianForMinor extends InvestmentAccountPartyRole {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CustodianForMinor";
 				definition = "Entity that holds shares/units on behalf of a legal minor. Although the account is registered under the name of the minor, the custodian retains control of the account.";
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountParties2.mmCustodianForMinor, com.tools20022.repository.msg.AccountParties5.mmCustodianForMinor,
-						com.tools20022.repository.choice.AccountParties1Choice.mmCustodianForMinor, com.tools20022.repository.msg.AccountParties3.mmCustodianForMinor, com.tools20022.repository.msg.AccountParties4.mmCustodianForMinor,
-						com.tools20022.repository.choice.AccountParties2Choice.mmCustodianForMinor, com.tools20022.repository.choice.AccountParties3Choice.mmCustodianForMinor,
-						com.tools20022.repository.choice.AccountParties4Choice.mmCustodianForMinor, com.tools20022.repository.choice.AccountParties7Choice.mmCustodianForMinor,
-						com.tools20022.repository.choice.AccountParties6Choice.mmCustodianForMinor, com.tools20022.repository.choice.AccountParties5Choice.mmCustodianForMinor,
-						com.tools20022.repository.msg.AccountParties13.mmCustodianForMinor, com.tools20022.repository.msg.AccountParties14.mmCustodianForMinor, com.tools20022.repository.msg.AccountParties15.mmCustodianForMinor,
-						com.tools20022.repository.msg.AccountParties16.mmCustodianForMinor);
+				derivationElement_lazy = () -> Arrays.asList(AccountParties2.mmCustodianForMinor, AccountParties5.mmCustodianForMinor, AccountParties1Choice.mmCustodianForMinor, AccountParties3.mmCustodianForMinor,
+						AccountParties4.mmCustodianForMinor, AccountParties2Choice.mmCustodianForMinor, AccountParties3Choice.mmCustodianForMinor, AccountParties4Choice.mmCustodianForMinor, AccountParties7Choice.mmCustodianForMinor,
+						AccountParties6Choice.mmCustodianForMinor, AccountParties5Choice.mmCustodianForMinor, AccountParties13.mmCustodianForMinor, AccountParties14.mmCustodianForMinor, AccountParties15.mmCustodianForMinor,
+						AccountParties16.mmCustodianForMinor);
 				superType_lazy = () -> InvestmentAccountPartyRole.mmObject();
 			}
 		});

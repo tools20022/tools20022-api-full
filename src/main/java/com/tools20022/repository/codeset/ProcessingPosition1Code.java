@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -93,7 +95,7 @@ public class ProcessingPosition1Code {
 	 */
 	public static final MMCode mmAfter = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "After";
 			definition = "Indicates that the instruction is to be executed after the linked instruction.";
 			owner_lazy = () -> ProcessingPosition1Code.mmObject();
@@ -126,7 +128,7 @@ public class ProcessingPosition1Code {
 	 */
 	public static final MMCode mmWith = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "With";
 			definition = "Indicates that the instruction is to be executed with the linked instruction.";
 			owner_lazy = () -> ProcessingPosition1Code.mmObject();
@@ -159,7 +161,7 @@ public class ProcessingPosition1Code {
 	 */
 	public static final MMCode mmBefore = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Before";
 			definition = "Indicates that the instruction is to be executed before the linked instruction.";
 			owner_lazy = () -> ProcessingPosition1Code.mmObject();
@@ -170,13 +172,12 @@ public class ProcessingPosition1Code {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("AFTR");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ProcessingPosition1Code";
 				definition = "Indicates when an instruction is to be executed relative to a linked instruction.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ProcessingPosition1Code.mmAfter, com.tools20022.repository.codeset.ProcessingPosition1Code.mmWith,
-						com.tools20022.repository.codeset.ProcessingPosition1Code.mmBefore);
+				code_lazy = () -> Arrays.asList(ProcessingPosition1Code.mmAfter, ProcessingPosition1Code.mmWith, ProcessingPosition1Code.mmBefore);
 			}
 		});
 		return mmObject_lazy.get();

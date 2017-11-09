@@ -20,9 +20,12 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ActiveCurrencyCode;
 import com.tools20022.repository.datatype.ImpliedCurrencyAndAmount;
 import com.tools20022.repository.entity.CardPayment;
+import com.tools20022.repository.entity.Payment;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -115,14 +118,14 @@ public class DetailedAmount17 {
 	 */
 	public static final MMMessageAttribute mmAmountToTransfer = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.mmAmount;
+			businessElementTrace_lazy = () -> Payment.mmAmount;
 			componentContext_lazy = () -> DetailedAmount17.mmObject();
 			isDerived = false;
 			xmlTag = "AmtToTrf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmountToTransfer";
 			definition = "Amount to be transferred from the source account to the destination account.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.DetailedAmount16.mmAmountToDeposit;
+			previousVersion_lazy = () -> DetailedAmount16.mmAmountToDeposit;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
@@ -169,14 +172,14 @@ public class DetailedAmount17 {
 	 */
 	public static final MMMessageAttribute mmCurrency = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.mmCurrencyExchange;
+			businessElementTrace_lazy = () -> Payment.mmCurrencyExchange;
 			componentContext_lazy = () -> DetailedAmount17.mmObject();
 			isDerived = false;
 			xmlTag = "Ccy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Currency";
 			definition = "Currency of the amount to be transferred.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.DetailedAmount16.mmCurrency;
+			previousVersion_lazy = () -> DetailedAmount16.mmCurrency;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyCode.mmObject();
@@ -224,10 +227,10 @@ public class DetailedAmount17 {
 			componentContext_lazy = () -> DetailedAmount17.mmObject();
 			isDerived = false;
 			xmlTag = "Fees";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Fees";
 			definition = "Transfer fees, accepted by the customer.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.DetailedAmount16.mmFees;
+			previousVersion_lazy = () -> DetailedAmount16.mmFees;
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.DetailedAmount18.mmObject();
@@ -275,10 +278,10 @@ public class DetailedAmount17 {
 			componentContext_lazy = () -> DetailedAmount17.mmObject();
 			isDerived = false;
 			xmlTag = "Dontn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Donation";
 			definition = "Amount of the donation.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.DetailedAmount16.mmDonation;
+			previousVersion_lazy = () -> DetailedAmount16.mmDonation;
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.DetailedAmount18.mmObject();
@@ -288,11 +291,10 @@ public class DetailedAmount17 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DetailedAmount17.mmAmountToTransfer, com.tools20022.repository.msg.DetailedAmount17.mmCurrency, com.tools20022.repository.msg.DetailedAmount17.mmFees,
-						com.tools20022.repository.msg.DetailedAmount17.mmDonation);
+				messageElement_lazy = () -> Arrays.asList(DetailedAmount17.mmAmountToTransfer, DetailedAmount17.mmCurrency, DetailedAmount17.mmFees, DetailedAmount17.mmDonation);
 				trace_lazy = () -> CardPayment.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DetailedAmount17";
 				definition = "Details of the transfer transaction amounts.";
 				previousVersion_lazy = () -> DetailedAmount16.mmObject();

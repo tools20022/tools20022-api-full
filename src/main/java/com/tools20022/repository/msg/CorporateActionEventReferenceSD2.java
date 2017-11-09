@@ -19,9 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.DTCCLinkType1Code;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.Max350Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -99,7 +101,7 @@ public class CorporateActionEventReferenceSD2 {
 			componentContext_lazy = () -> CorporateActionEventReferenceSD2.mmObject();
 			isDerived = false;
 			xmlTag = "PlcAndNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "xPath to the element that is being extended.";
 			maxOccurs = 1;
@@ -141,7 +143,7 @@ public class CorporateActionEventReferenceSD2 {
 			componentContext_lazy = () -> CorporateActionEventReferenceSD2.mmObject();
 			isDerived = false;
 			xmlTag = "LkgTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LinkageType";
 			definition = "Indicates the reason why two or more events are related.";
 			maxOccurs = 1;
@@ -185,7 +187,7 @@ public class CorporateActionEventReferenceSD2 {
 			componentContext_lazy = () -> CorporateActionEventReferenceSD2.mmObject();
 			isDerived = false;
 			xmlTag = "LkAddedDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LinkAddedDate";
 			definition = "Events can be linked together. This date represents the date on which the link was established.";
 			maxOccurs = 1;
@@ -229,7 +231,7 @@ public class CorporateActionEventReferenceSD2 {
 			componentContext_lazy = () -> CorporateActionEventReferenceSD2.mmObject();
 			isDerived = false;
 			xmlTag = "LkModfdDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LinkModifiedDate";
 			definition = "Events can be linked together. This date represents the date on which the link was modified.";
 			maxOccurs = 1;
@@ -241,10 +243,10 @@ public class CorporateActionEventReferenceSD2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionEventReferenceSD2.mmPlaceAndName, com.tools20022.repository.msg.CorporateActionEventReferenceSD2.mmLinkageType,
-						com.tools20022.repository.msg.CorporateActionEventReferenceSD2.mmLinkAddedDate, com.tools20022.repository.msg.CorporateActionEventReferenceSD2.mmLinkModifiedDate);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(CorporateActionEventReferenceSD2.mmPlaceAndName, CorporateActionEventReferenceSD2.mmLinkageType, CorporateActionEventReferenceSD2.mmLinkAddedDate,
+						CorporateActionEventReferenceSD2.mmLinkModifiedDate);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CorporateActionEventReferenceSD2";
 				definition = "Provides additional information regarding linkage details. ";
 			}

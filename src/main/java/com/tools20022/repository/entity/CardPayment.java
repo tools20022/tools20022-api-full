@@ -17,11 +17,8 @@
 
 package com.tools20022.repository.entity;
 
-import com.tools20022.metamodel.MMBusinessAssociationEnd;
-import com.tools20022.metamodel.MMBusinessAttribute;
-import com.tools20022.metamodel.MMBusinessComponent;
-import com.tools20022.repository.choice.CardTransaction1Choice;
-import com.tools20022.repository.choice.CardTransaction2Choice;
+import com.tools20022.metamodel.*;
+import com.tools20022.repository.choice.*;
 import com.tools20022.repository.codeset.DebitCreditCode;
 import com.tools20022.repository.codeset.ExternalCardTransactionCategoryCode;
 import com.tools20022.repository.codeset.TypeOfAmountCode;
@@ -29,6 +26,7 @@ import com.tools20022.repository.datatype.CurrencyAndAmount;
 import com.tools20022.repository.datatype.ImpliedCurrencyAndAmount;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.IndividualPayment;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -43,47 +41,766 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.CardPayment#mmPaymentCard
- * CardPayment.mmPaymentCard}</li>
- * <li>{@linkplain com.tools20022.repository.entity.CardPayment#mmProduct
- * CardPayment.mmProduct}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardAggregated1
+ * CardAggregated1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardEntry1 CardEntry1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardIndividualTransaction1
+ * CardIndividualTransaction1}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.CardTransaction1Choice
+ * CardTransaction1Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardTransaction1
+ * CardTransaction1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardAmountAndCurrencyExchange1
+ * CardAmountAndCurrencyExchange1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails8
+ * CardPaymentTransactionDetails8}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentEnvironment8
+ * CardPaymentEnvironment8}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AcceptorDiagnosticResponse1
+ * AcceptorDiagnosticResponse1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentEnvironment17
+ * CardPaymentEnvironment17}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AcceptorDiagnosticResponse2
+ * AcceptorDiagnosticResponse2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentEnvironment5
+ * CardPaymentEnvironment5}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CommonData1 CommonData1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentEnvironment6
+ * CardPaymentEnvironment6}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransactionResult1
+ * CardPaymentTransactionResult1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransaction8
+ * CardPaymentTransaction8}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.DetailedAmount1
+ * DetailedAmount1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails4
+ * CardPaymentTransactionDetails4}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransaction4
+ * CardPaymentTransaction4}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentDataSetTransaction1
+ * CardPaymentDataSetTransaction1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentEnvironment13
+ * CardPaymentEnvironment13}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CommonData2 CommonData2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentEnvironment14
+ * CardPaymentEnvironment14}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransaction17
+ * CardPaymentTransaction17}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransaction14
+ * CardPaymentTransaction14}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentDataSetTransaction2
+ * CardPaymentDataSetTransaction2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails7
+ * CardPaymentTransactionDetails7}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransaction7
+ * CardPaymentTransaction7}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransaction16
+ * CardPaymentTransaction16}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails9
+ * CardPaymentTransactionDetails9}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransaction20
+ * CardPaymentTransaction20}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentDataSetTransaction3
+ * CardPaymentDataSetTransaction3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails1
+ * CardPaymentTransactionDetails1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransaction1
+ * CardPaymentTransaction1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransaction11
+ * CardPaymentTransaction11}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CardPayment#mmDetailedAmount
- * CardPayment.mmDetailedAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails10
+ * CardPaymentTransactionDetails10}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransaction19
+ * CardPaymentTransaction19}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentDataSetTransaction4
+ * CardPaymentDataSetTransaction4}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentEnvironment3
+ * CardPaymentEnvironment3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentEnvironment11
+ * CardPaymentEnvironment11}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentEnvironment16
+ * CardPaymentEnvironment16}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.DetailedAmount2
+ * DetailedAmount2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails2
+ * CardPaymentTransactionDetails2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransaction2
+ * CardPaymentTransaction2}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CardPayment#mmAmountQualifier
- * CardPayment.mmAmountQualifier}</li>
+ * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails11
+ * CardPaymentTransactionDetails11}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransaction12
+ * CardPaymentTransaction12}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransaction9
+ * CardPaymentTransaction9}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransaction18
+ * CardPaymentTransaction18}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentDataSetTransaction5
+ * CardPaymentDataSetTransaction5}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CardPayment#mmCardPaymentAcquiring
- * CardPayment.mmCardPaymentAcquiring}</li>
+ * {@linkplain com.tools20022.repository.msg.AcceptorCancellationAdviceResponse1
+ * AcceptorCancellationAdviceResponse1}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CardPayment#mmPaymentCardPartyRole
- * CardPayment.mmPaymentCardPartyRole}</li>
+ * {@linkplain com.tools20022.repository.msg.AcceptorCancellationAdviceResponse2
+ * AcceptorCancellationAdviceResponse2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentEnvironment1
+ * CardPaymentEnvironment1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AcceptorAuthorisationRequest1
+ * AcceptorAuthorisationRequest1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentEnvironment9
+ * CardPaymentEnvironment9}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AcceptorAuthorisationRequest2
+ * AcceptorAuthorisationRequest2}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CardPayment#mmCardPaymentStatus
- * CardPayment.mmCardPaymentStatus}</li>
+ * {@linkplain com.tools20022.repository.msg.AcceptorCompletionAdviceResponse1
+ * AcceptorCompletionAdviceResponse1}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CardPayment#mmDetailedAmountLabel
- * CardPayment.mmDetailedAmountLabel}</li>
+ * {@linkplain com.tools20022.repository.msg.AcceptorCompletionAdviceResponse2
+ * AcceptorCompletionAdviceResponse2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentEnvironment7
+ * CardPaymentEnvironment7}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentEnvironment15
+ * CardPaymentEnvironment15}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentEnvironment19
+ * CardPaymentEnvironment19}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentEnvironment4
+ * CardPaymentEnvironment4}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails5
+ * CardPaymentTransactionDetails5}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransaction5
+ * CardPaymentTransaction5}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AcceptorCancellationRequest1
+ * AcceptorCancellationRequest1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentEnvironment12
+ * CardPaymentEnvironment12}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransaction15
+ * CardPaymentTransaction15}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AcceptorCancellationRequest2
+ * AcceptorCancellationRequest2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails6
+ * CardPaymentTransactionDetails6}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransaction6
+ * CardPaymentTransaction6}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransaction10
+ * CardPaymentTransaction10}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AcceptorCancellationResponse1
+ * AcceptorCancellationResponse1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AcceptorCancellationResponse2
+ * AcceptorCancellationResponse2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AcceptorDiagnosticRequest1
+ * AcceptorDiagnosticRequest1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AcceptorDiagnosticRequest2
+ * AcceptorDiagnosticRequest2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentEnvironment2
+ * CardPaymentEnvironment2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails3
+ * CardPaymentTransactionDetails3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransaction3
+ * CardPaymentTransaction3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AcceptorCompletionAdvice1
+ * AcceptorCompletionAdvice1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentEnvironment10
+ * CardPaymentEnvironment10}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransaction13
+ * CardPaymentTransaction13}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AcceptorCompletionAdvice2
+ * AcceptorCompletionAdvice2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AcceptorCancellationAdvice1
+ * AcceptorCancellationAdvice1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentEnvironment18
+ * CardPaymentEnvironment18}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AcceptorCancellationAdvice2
+ * AcceptorCancellationAdvice2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AcceptorAuthorisationResponse1
+ * AcceptorAuthorisationResponse1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AcceptorAuthorisationResponse2
+ * AcceptorAuthorisationResponse2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AcceptorDiagnosticResponse3
+ * AcceptorDiagnosticResponse3}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CardPayment#mmReconciliation
- * CardPayment.mmReconciliation}</li>
+ * {@linkplain com.tools20022.repository.msg.AcceptorCurrencyConversionRequest1
+ * AcceptorCurrencyConversionRequest1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AcceptorCancellationRequest3
+ * AcceptorCancellationRequest3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AcceptorAuthorisationResponse3
+ * AcceptorAuthorisationResponse3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AcceptorDiagnosticRequest3
+ * AcceptorDiagnosticRequest3}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CardPayment#mmTransactionCategory
- * CardPayment.mmTransactionCategory}</li>
+ * {@linkplain com.tools20022.repository.msg.AcceptorCurrencyConversionResponse1
+ * AcceptorCurrencyConversionResponse1}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CardPayment#mmCashBackAmount
- * CardPayment.mmCashBackAmount}</li>
- * <li>{@linkplain com.tools20022.repository.entity.CardPayment#mmGratuity
- * CardPayment.mmGratuity}</li>
+ * {@linkplain com.tools20022.repository.msg.AcceptorCancellationAdviceResponse3
+ * AcceptorCancellationAdviceResponse3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AcceptorCompletionAdvice3
+ * AcceptorCompletionAdvice3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AcceptorAuthorisationRequest3
+ * AcceptorAuthorisationRequest3}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CardPayment#mmDebitCreditDirection
- * CardPayment.mmDebitCreditDirection}</li>
- * <li>{@linkplain com.tools20022.repository.entity.CardPayment#mmATMTotal
- * CardPayment.mmATMTotal}</li>
+ * {@linkplain com.tools20022.repository.msg.AcceptorCompletionAdviceResponse3
+ * AcceptorCompletionAdviceResponse3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AcceptorCancellationResponse3
+ * AcceptorCancellationResponse3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AcceptorCancellationAdvice3
+ * AcceptorCancellationAdvice3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.DetailedAmount6
+ * DetailedAmount6}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransaction28
+ * CardPaymentTransaction28}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransaction21
+ * CardPaymentTransaction21}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransaction22
+ * CardPaymentTransaction22}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails12
+ * CardPaymentTransactionDetails12}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransaction34
+ * CardPaymentTransaction34}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentEnvironment31
+ * CardPaymentEnvironment31}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentEnvironment29
+ * CardPaymentEnvironment29}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentEnvironment24
+ * CardPaymentEnvironment24}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentEnvironment25
+ * CardPaymentEnvironment25}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransaction27
+ * CardPaymentTransaction27}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails13
+ * CardPaymentTransactionDetails13}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails18
+ * CardPaymentTransactionDetails18}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.DetailedAmount5
+ * DetailedAmount5}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentEnvironment20
+ * CardPaymentEnvironment20}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentEnvironment30
+ * CardPaymentEnvironment30}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentEnvironment27
+ * CardPaymentEnvironment27}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentDataSetTransaction9
+ * CardPaymentDataSetTransaction9}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransaction24
+ * CardPaymentTransaction24}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentEnvironment28
+ * CardPaymentEnvironment28}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransaction32
+ * CardPaymentTransaction32}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentEnvironment21
+ * CardPaymentEnvironment21}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransaction31
+ * CardPaymentTransaction31}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails16
+ * CardPaymentTransactionDetails16}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails14
+ * CardPaymentTransactionDetails14}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransaction35
+ * CardPaymentTransaction35}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CommonData3 CommonData3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.DetailedAmount4
+ * DetailedAmount4}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransaction33
+ * CardPaymentTransaction33}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails15
+ * CardPaymentTransactionDetails15}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails17
+ * CardPaymentTransactionDetails17}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransaction23
+ * CardPaymentTransaction23}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentDataSetTransaction6
+ * CardPaymentDataSetTransaction6}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentDataSetTransaction7
+ * CardPaymentDataSetTransaction7}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentDataSetTransaction8
+ * CardPaymentDataSetTransaction8}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransaction29
+ * CardPaymentTransaction29}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentEnvironment26
+ * CardPaymentEnvironment26}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentEnvironment23
+ * CardPaymentEnvironment23}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransaction25
+ * CardPaymentTransaction25}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransaction30
+ * CardPaymentTransaction30}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransaction26
+ * CardPaymentTransaction26}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentEnvironment22
+ * CardPaymentEnvironment22}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AmountAndDirection41
+ * AmountAndDirection41}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardTransaction2
+ * CardTransaction2}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.CardTransaction2Choice
+ * CardTransaction2Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardIndividualTransaction2
+ * CardIndividualTransaction2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardEntry2 CardEntry2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AcceptorCancellationRequest4
+ * AcceptorCancellationRequest4}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AcceptorDiagnosticResponse4
+ * AcceptorDiagnosticResponse4}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AcceptorAuthorisationRequest4
+ * AcceptorAuthorisationRequest4}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AcceptorCurrencyConversionResponse2
+ * AcceptorCurrencyConversionResponse2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AcceptorAuthorisationResponse4
+ * AcceptorAuthorisationResponse4}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AcceptorCancellationAdvice4
+ * AcceptorCancellationAdvice4}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AcceptorCancellationResponse4
+ * AcceptorCancellationResponse4}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AcceptorCurrencyConversionRequest2
+ * AcceptorCurrencyConversionRequest2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AcceptorDiagnosticRequest4
+ * AcceptorDiagnosticRequest4}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AcceptorCompletionAdvice4
+ * AcceptorCompletionAdvice4}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AcceptorCancellationAdviceResponse4
+ * AcceptorCancellationAdviceResponse4}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AcceptorCompletionAdviceResponse4
+ * AcceptorCompletionAdviceResponse4}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentEnvironment37
+ * CardPaymentEnvironment37}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransaction39
+ * CardPaymentTransaction39}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransaction38
+ * CardPaymentTransaction38}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentEnvironment33
+ * CardPaymentEnvironment33}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails20
+ * CardPaymentTransactionDetails20}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransaction48
+ * CardPaymentTransaction48}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails25
+ * CardPaymentTransactionDetails25}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransaction50
+ * CardPaymentTransaction50}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransaction43
+ * CardPaymentTransaction43}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransaction42
+ * CardPaymentTransaction42}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransaction36
+ * CardPaymentTransaction36}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentEnvironment32
+ * CardPaymentEnvironment32}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransaction44
+ * CardPaymentTransaction44}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentEnvironment36
+ * CardPaymentEnvironment36}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentEnvironment43
+ * CardPaymentEnvironment43}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransaction45
+ * CardPaymentTransaction45}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails23
+ * CardPaymentTransactionDetails23}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransaction37
+ * CardPaymentTransaction37}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentEnvironment41
+ * CardPaymentEnvironment41}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails21
+ * CardPaymentTransactionDetails21}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.DetailedAmount7
+ * DetailedAmount7}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentEnvironment42
+ * CardPaymentEnvironment42}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransaction49
+ * CardPaymentTransaction49}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails26
+ * CardPaymentTransactionDetails26}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentEnvironment40
+ * CardPaymentEnvironment40}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CardPaymentDataSetTransaction12
+ * CardPaymentDataSetTransaction12}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransaction47
+ * CardPaymentTransaction47}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails19
+ * CardPaymentTransactionDetails19}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransactionResult2
+ * CardPaymentTransactionResult2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentEnvironment44
+ * CardPaymentEnvironment44}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentEnvironment34
+ * CardPaymentEnvironment34}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CardPaymentDataSetTransaction13
+ * CardPaymentDataSetTransaction13}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentEnvironment35
+ * CardPaymentEnvironment35}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransaction41
+ * CardPaymentTransaction41}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails24
+ * CardPaymentTransactionDetails24}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentEnvironment38
+ * CardPaymentEnvironment38}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CommonData4 CommonData4}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentEnvironment39
+ * CardPaymentEnvironment39}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CardPaymentDataSetTransaction11
+ * CardPaymentDataSetTransaction11}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransaction46
+ * CardPaymentTransaction46}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails22
+ * CardPaymentTransactionDetails22}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CardPaymentDataSetTransaction10
+ * CardPaymentDataSetTransaction10}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransaction40
+ * CardPaymentTransaction40}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ATMTransaction1
+ * ATMTransaction1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AmountAndCurrency1
+ * AmountAndCurrency1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.DetailedAmount12
+ * DetailedAmount12}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ATMTransaction5
+ * ATMTransaction5}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ATMTransaction4
+ * ATMTransaction4}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ATMTransaction2
+ * ATMTransaction2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ATMTransaction7
+ * ATMTransaction7}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ATMTransaction8
+ * ATMTransaction8}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ATMTransaction3
+ * ATMTransaction3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.DetailedAmount13
+ * DetailedAmount13}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ATMTransaction6
+ * ATMTransaction6}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.DetailedAmount11
+ * DetailedAmount11}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.DetailedAmount10
+ * DetailedAmount10}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.DetailedAmount9
+ * DetailedAmount9}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardTransaction4
+ * CardTransaction4}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardTransactionAmount2
+ * CardTransactionAmount2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.DetailedAmount8
+ * DetailedAmount8}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardTransactionAmount1
+ * CardTransactionAmount1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardTransaction8
+ * CardTransaction8}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardTransaction5
+ * CardTransaction5}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardTransaction15
+ * CardTransaction15}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardTransaction7
+ * CardTransaction7}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardTransactionDetail5
+ * CardTransactionDetail5}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardTransactionDetail2
+ * CardTransactionDetail2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardTransactionDetail1
+ * CardTransactionDetail1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardTransaction6
+ * CardTransaction6}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardTransactionDetail4
+ * CardTransactionDetail4}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardTransactionDetail6
+ * CardTransactionDetail6}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardTransactionAmount5
+ * CardTransactionAmount5}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardTransactionAmount3
+ * CardTransactionAmount3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardTransactionAmount4
+ * CardTransactionAmount4}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardTransactionDetail3
+ * CardTransactionDetail3}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AcceptorCancellationAdviceResponse5
+ * AcceptorCancellationAdviceResponse5}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AcceptorDiagnosticRequest5
+ * AcceptorDiagnosticRequest5}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AcceptorCurrencyConversionResponse3
+ * AcceptorCurrencyConversionResponse3}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AcceptorCurrencyConversionRequest3
+ * AcceptorCurrencyConversionRequest3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AcceptorAuthorisationResponse5
+ * AcceptorAuthorisationResponse5}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AcceptorCancellationResponse5
+ * AcceptorCancellationResponse5}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AcceptorCancellationAdvice5
+ * AcceptorCancellationAdvice5}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AcceptorCompletionAdviceResponse5
+ * AcceptorCompletionAdviceResponse5}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AcceptorAuthorisationRequest5
+ * AcceptorAuthorisationRequest5}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AcceptorCancellationRequest5
+ * AcceptorCancellationRequest5}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AcceptorCompletionAdvice5
+ * AcceptorCompletionAdvice5}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentEnvironment46
+ * CardPaymentEnvironment46}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentEnvironment50
+ * CardPaymentEnvironment50}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails32
+ * CardPaymentTransactionDetails32}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.DetailedAmount15
+ * DetailedAmount15}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails33
+ * CardPaymentTransactionDetails33}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransaction52
+ * CardPaymentTransaction52}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransactionResult3
+ * CardPaymentTransactionResult3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransaction63
+ * CardPaymentTransaction63}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CardPaymentDataSetTransaction14
+ * CardPaymentDataSetTransaction14}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransaction60
+ * CardPaymentTransaction60}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentEnvironment52
+ * CardPaymentEnvironment52}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails28
+ * CardPaymentTransactionDetails28}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransaction57
+ * CardPaymentTransaction57}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransaction61
+ * CardPaymentTransaction61}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransaction64
+ * CardPaymentTransaction64}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransaction65
+ * CardPaymentTransaction65}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransaction53
+ * CardPaymentTransaction53}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentEnvironment49
+ * CardPaymentEnvironment49}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransaction59
+ * CardPaymentTransaction59}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransaction56
+ * CardPaymentTransaction56}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentEnvironment51
+ * CardPaymentEnvironment51}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CardPaymentDataSetTransaction15
+ * CardPaymentDataSetTransaction15}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails29
+ * CardPaymentTransactionDetails29}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails30
+ * CardPaymentTransactionDetails30}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentEnvironment48
+ * CardPaymentEnvironment48}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentEnvironment56
+ * CardPaymentEnvironment56}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransaction51
+ * CardPaymentTransaction51}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentEnvironment45
+ * CardPaymentEnvironment45}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CardPaymentDataSetTransaction16
+ * CardPaymentDataSetTransaction16}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CardPaymentDataSetTransaction17
+ * CardPaymentDataSetTransaction17}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails27
+ * CardPaymentTransactionDetails27}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails31
+ * CardPaymentTransactionDetails31}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentEnvironment55
+ * CardPaymentEnvironment55}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CommonData5 CommonData5}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentEnvironment54
+ * CardPaymentEnvironment54}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentEnvironment53
+ * CardPaymentEnvironment53}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransaction54
+ * CardPaymentTransaction54}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.DetailedAmount14
+ * DetailedAmount14}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentEnvironment47
+ * CardPaymentEnvironment47}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransaction55
+ * CardPaymentTransaction55}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransaction58
+ * CardPaymentTransaction58}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransaction62
+ * CardPaymentTransaction62}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails35
+ * CardPaymentTransactionDetails35}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails34
+ * CardPaymentTransactionDetails34}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ATMTransaction18
+ * ATMTransaction18}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ATMTransaction14
+ * ATMTransaction14}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ATMTransaction17
+ * ATMTransaction17}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ATMTransaction20
+ * ATMTransaction20}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.DetailedAmount18
+ * DetailedAmount18}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ATMTransaction13
+ * ATMTransaction13}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ATMTransaction16
+ * ATMTransaction16}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ATMTransaction19
+ * ATMTransaction19}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.DetailedAmount16
+ * DetailedAmount16}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ATMTransaction15
+ * ATMTransaction15}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ATMTransaction21
+ * ATMTransaction21}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ATMTransaction24
+ * ATMTransaction24}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.DetailedAmount17
+ * DetailedAmount17}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ATMTransaction23
+ * ATMTransaction23}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ATMTransaction29
+ * ATMTransaction29}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AcceptorCurrencyConversionResponse4
+ * AcceptorCurrencyConversionResponse4}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AcceptorCancellationRequest6
+ * AcceptorCancellationRequest6}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AcceptorDiagnosticRequest6
+ * AcceptorDiagnosticRequest6}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AcceptorCancellationAdviceResponse6
+ * AcceptorCancellationAdviceResponse6}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AcceptorCurrencyConversionRequest4
+ * AcceptorCurrencyConversionRequest4}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AcceptorCancellationResponse6
+ * AcceptorCancellationResponse6}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AcceptorAuthorisationRequest6
+ * AcceptorAuthorisationRequest6}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AcceptorCancellationAdvice6
+ * AcceptorCancellationAdvice6}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AcceptorCompletionAdvice6
+ * AcceptorCompletionAdvice6}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AcceptorCompletionAdviceResponse6
+ * AcceptorCompletionAdviceResponse6}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AcceptorAuthorisationResponse6
+ * AcceptorAuthorisationResponse6}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransaction71
+ * CardPaymentTransaction71}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails39
+ * CardPaymentTransactionDetails39}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CardPaymentDataSetTransaction19
+ * CardPaymentDataSetTransaction19}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransaction75
+ * CardPaymentTransaction75}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentEnvironment61
+ * CardPaymentEnvironment61}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails38
+ * CardPaymentTransactionDetails38}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentEnvironment64
+ * CardPaymentEnvironment64}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentEnvironment60
+ * CardPaymentEnvironment60}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentEnvironment65
+ * CardPaymentEnvironment65}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails41
+ * CardPaymentTransactionDetails41}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentEnvironment67
+ * CardPaymentEnvironment67}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentEnvironment66
+ * CardPaymentEnvironment66}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransaction74
+ * CardPaymentTransaction74}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CardPaymentDataSetTransaction21
+ * CardPaymentDataSetTransaction21}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransaction67
+ * CardPaymentTransaction67}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransaction70
+ * CardPaymentTransaction70}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransaction73
+ * CardPaymentTransaction73}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CardPaymentDataSetTransaction20
+ * CardPaymentDataSetTransaction20}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentEnvironment62
+ * CardPaymentEnvironment62}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentEnvironment63
+ * CardPaymentEnvironment63}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransaction72
+ * CardPaymentTransaction72}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransaction76
+ * CardPaymentTransaction76}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransaction68
+ * CardPaymentTransaction68}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CardPaymentDataSetTransaction18
+ * CardPaymentDataSetTransaction18}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentEnvironment58
+ * CardPaymentEnvironment58}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentEnvironment59
+ * CardPaymentEnvironment59}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails37
+ * CardPaymentTransactionDetails37}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CommonData6 CommonData6}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentEnvironment57
+ * CardPaymentEnvironment57}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransaction69
+ * CardPaymentTransaction69}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails40
+ * CardPaymentTransactionDetails40}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails42
+ * CardPaymentTransactionDetails42}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails43
+ * CardPaymentTransactionDetails43}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AcceptorCurrencyConversionAdvice1
+ * AcceptorCurrencyConversionAdvice1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransaction77
+ * CardPaymentTransaction77}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransaction78
+ * CardPaymentTransaction78}</li>
  * </ul>
  * </li>
  * <li>
@@ -1075,766 +1792,47 @@ import java.util.List;
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
  * superType} = {@linkplain com.tools20022.repository.entity.IndividualPayment
  * IndividualPayment}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.CardAggregated1
- * CardAggregated1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardEntry1 CardEntry1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardIndividualTransaction1
- * CardIndividualTransaction1}</li>
- * <li>{@linkplain com.tools20022.repository.choice.CardTransaction1Choice
- * CardTransaction1Choice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardTransaction1
- * CardTransaction1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardAmountAndCurrencyExchange1
- * CardAmountAndCurrencyExchange1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails8
- * CardPaymentTransactionDetails8}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentEnvironment8
- * CardPaymentEnvironment8}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AcceptorDiagnosticResponse1
- * AcceptorDiagnosticResponse1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentEnvironment17
- * CardPaymentEnvironment17}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AcceptorDiagnosticResponse2
- * AcceptorDiagnosticResponse2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentEnvironment5
- * CardPaymentEnvironment5}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CommonData1 CommonData1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentEnvironment6
- * CardPaymentEnvironment6}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransactionResult1
- * CardPaymentTransactionResult1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransaction8
- * CardPaymentTransaction8}</li>
- * <li>{@linkplain com.tools20022.repository.msg.DetailedAmount1
- * DetailedAmount1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails4
- * CardPaymentTransactionDetails4}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransaction4
- * CardPaymentTransaction4}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentDataSetTransaction1
- * CardPaymentDataSetTransaction1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentEnvironment13
- * CardPaymentEnvironment13}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CommonData2 CommonData2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentEnvironment14
- * CardPaymentEnvironment14}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransaction17
- * CardPaymentTransaction17}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransaction14
- * CardPaymentTransaction14}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentDataSetTransaction2
- * CardPaymentDataSetTransaction2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails7
- * CardPaymentTransactionDetails7}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransaction7
- * CardPaymentTransaction7}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransaction16
- * CardPaymentTransaction16}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails9
- * CardPaymentTransactionDetails9}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransaction20
- * CardPaymentTransaction20}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentDataSetTransaction3
- * CardPaymentDataSetTransaction3}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails1
- * CardPaymentTransactionDetails1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransaction1
- * CardPaymentTransaction1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransaction11
- * CardPaymentTransaction11}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.CardPayment#mmPaymentCard
+ * CardPayment.mmPaymentCard}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.CardPayment#mmProduct
+ * CardPayment.mmProduct}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails10
- * CardPaymentTransactionDetails10}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransaction19
- * CardPaymentTransaction19}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentDataSetTransaction4
- * CardPaymentDataSetTransaction4}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentEnvironment3
- * CardPaymentEnvironment3}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentEnvironment11
- * CardPaymentEnvironment11}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentEnvironment16
- * CardPaymentEnvironment16}</li>
- * <li>{@linkplain com.tools20022.repository.msg.DetailedAmount2
- * DetailedAmount2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails2
- * CardPaymentTransactionDetails2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransaction2
- * CardPaymentTransaction2}</li>
+ * {@linkplain com.tools20022.repository.entity.CardPayment#mmDetailedAmount
+ * CardPayment.mmDetailedAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails11
- * CardPaymentTransactionDetails11}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransaction12
- * CardPaymentTransaction12}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransaction9
- * CardPaymentTransaction9}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransaction18
- * CardPaymentTransaction18}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentDataSetTransaction5
- * CardPaymentDataSetTransaction5}</li>
+ * {@linkplain com.tools20022.repository.entity.CardPayment#mmAmountQualifier
+ * CardPayment.mmAmountQualifier}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AcceptorCancellationAdviceResponse1
- * AcceptorCancellationAdviceResponse1}</li>
+ * {@linkplain com.tools20022.repository.entity.CardPayment#mmCardPaymentAcquiring
+ * CardPayment.mmCardPaymentAcquiring}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AcceptorCancellationAdviceResponse2
- * AcceptorCancellationAdviceResponse2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentEnvironment1
- * CardPaymentEnvironment1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AcceptorAuthorisationRequest1
- * AcceptorAuthorisationRequest1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentEnvironment9
- * CardPaymentEnvironment9}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AcceptorAuthorisationRequest2
- * AcceptorAuthorisationRequest2}</li>
+ * {@linkplain com.tools20022.repository.entity.CardPayment#mmPaymentCardPartyRole
+ * CardPayment.mmPaymentCardPartyRole}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AcceptorCompletionAdviceResponse1
- * AcceptorCompletionAdviceResponse1}</li>
+ * {@linkplain com.tools20022.repository.entity.CardPayment#mmCardPaymentStatus
+ * CardPayment.mmCardPaymentStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AcceptorCompletionAdviceResponse2
- * AcceptorCompletionAdviceResponse2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentEnvironment7
- * CardPaymentEnvironment7}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentEnvironment15
- * CardPaymentEnvironment15}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentEnvironment19
- * CardPaymentEnvironment19}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentEnvironment4
- * CardPaymentEnvironment4}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails5
- * CardPaymentTransactionDetails5}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransaction5
- * CardPaymentTransaction5}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AcceptorCancellationRequest1
- * AcceptorCancellationRequest1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentEnvironment12
- * CardPaymentEnvironment12}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransaction15
- * CardPaymentTransaction15}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AcceptorCancellationRequest2
- * AcceptorCancellationRequest2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails6
- * CardPaymentTransactionDetails6}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransaction6
- * CardPaymentTransaction6}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransaction10
- * CardPaymentTransaction10}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AcceptorCancellationResponse1
- * AcceptorCancellationResponse1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AcceptorCancellationResponse2
- * AcceptorCancellationResponse2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AcceptorDiagnosticRequest1
- * AcceptorDiagnosticRequest1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AcceptorDiagnosticRequest2
- * AcceptorDiagnosticRequest2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentEnvironment2
- * CardPaymentEnvironment2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails3
- * CardPaymentTransactionDetails3}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransaction3
- * CardPaymentTransaction3}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AcceptorCompletionAdvice1
- * AcceptorCompletionAdvice1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentEnvironment10
- * CardPaymentEnvironment10}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransaction13
- * CardPaymentTransaction13}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AcceptorCompletionAdvice2
- * AcceptorCompletionAdvice2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AcceptorCancellationAdvice1
- * AcceptorCancellationAdvice1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentEnvironment18
- * CardPaymentEnvironment18}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AcceptorCancellationAdvice2
- * AcceptorCancellationAdvice2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AcceptorAuthorisationResponse1
- * AcceptorAuthorisationResponse1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AcceptorAuthorisationResponse2
- * AcceptorAuthorisationResponse2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AcceptorDiagnosticResponse3
- * AcceptorDiagnosticResponse3}</li>
+ * {@linkplain com.tools20022.repository.entity.CardPayment#mmDetailedAmountLabel
+ * CardPayment.mmDetailedAmountLabel}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AcceptorCurrencyConversionRequest1
- * AcceptorCurrencyConversionRequest1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AcceptorCancellationRequest3
- * AcceptorCancellationRequest3}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AcceptorAuthorisationResponse3
- * AcceptorAuthorisationResponse3}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AcceptorDiagnosticRequest3
- * AcceptorDiagnosticRequest3}</li>
+ * {@linkplain com.tools20022.repository.entity.CardPayment#mmReconciliation
+ * CardPayment.mmReconciliation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AcceptorCurrencyConversionResponse1
- * AcceptorCurrencyConversionResponse1}</li>
+ * {@linkplain com.tools20022.repository.entity.CardPayment#mmTransactionCategory
+ * CardPayment.mmTransactionCategory}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AcceptorCancellationAdviceResponse3
- * AcceptorCancellationAdviceResponse3}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AcceptorCompletionAdvice3
- * AcceptorCompletionAdvice3}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AcceptorAuthorisationRequest3
- * AcceptorAuthorisationRequest3}</li>
+ * {@linkplain com.tools20022.repository.entity.CardPayment#mmCashBackAmount
+ * CardPayment.mmCashBackAmount}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.CardPayment#mmGratuity
+ * CardPayment.mmGratuity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AcceptorCompletionAdviceResponse3
- * AcceptorCompletionAdviceResponse3}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AcceptorCancellationResponse3
- * AcceptorCancellationResponse3}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AcceptorCancellationAdvice3
- * AcceptorCancellationAdvice3}</li>
- * <li>{@linkplain com.tools20022.repository.msg.DetailedAmount6
- * DetailedAmount6}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransaction28
- * CardPaymentTransaction28}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransaction21
- * CardPaymentTransaction21}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransaction22
- * CardPaymentTransaction22}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails12
- * CardPaymentTransactionDetails12}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransaction34
- * CardPaymentTransaction34}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentEnvironment31
- * CardPaymentEnvironment31}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentEnvironment29
- * CardPaymentEnvironment29}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentEnvironment24
- * CardPaymentEnvironment24}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentEnvironment25
- * CardPaymentEnvironment25}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransaction27
- * CardPaymentTransaction27}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails13
- * CardPaymentTransactionDetails13}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails18
- * CardPaymentTransactionDetails18}</li>
- * <li>{@linkplain com.tools20022.repository.msg.DetailedAmount5
- * DetailedAmount5}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentEnvironment20
- * CardPaymentEnvironment20}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentEnvironment30
- * CardPaymentEnvironment30}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentEnvironment27
- * CardPaymentEnvironment27}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentDataSetTransaction9
- * CardPaymentDataSetTransaction9}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransaction24
- * CardPaymentTransaction24}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentEnvironment28
- * CardPaymentEnvironment28}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransaction32
- * CardPaymentTransaction32}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentEnvironment21
- * CardPaymentEnvironment21}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransaction31
- * CardPaymentTransaction31}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails16
- * CardPaymentTransactionDetails16}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails14
- * CardPaymentTransactionDetails14}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransaction35
- * CardPaymentTransaction35}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CommonData3 CommonData3}</li>
- * <li>{@linkplain com.tools20022.repository.msg.DetailedAmount4
- * DetailedAmount4}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransaction33
- * CardPaymentTransaction33}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails15
- * CardPaymentTransactionDetails15}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails17
- * CardPaymentTransactionDetails17}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransaction23
- * CardPaymentTransaction23}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentDataSetTransaction6
- * CardPaymentDataSetTransaction6}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentDataSetTransaction7
- * CardPaymentDataSetTransaction7}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentDataSetTransaction8
- * CardPaymentDataSetTransaction8}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransaction29
- * CardPaymentTransaction29}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentEnvironment26
- * CardPaymentEnvironment26}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentEnvironment23
- * CardPaymentEnvironment23}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransaction25
- * CardPaymentTransaction25}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransaction30
- * CardPaymentTransaction30}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransaction26
- * CardPaymentTransaction26}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentEnvironment22
- * CardPaymentEnvironment22}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AmountAndDirection41
- * AmountAndDirection41}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardTransaction2
- * CardTransaction2}</li>
- * <li>{@linkplain com.tools20022.repository.choice.CardTransaction2Choice
- * CardTransaction2Choice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardIndividualTransaction2
- * CardIndividualTransaction2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardEntry2 CardEntry2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AcceptorCancellationRequest4
- * AcceptorCancellationRequest4}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AcceptorDiagnosticResponse4
- * AcceptorDiagnosticResponse4}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AcceptorAuthorisationRequest4
- * AcceptorAuthorisationRequest4}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.AcceptorCurrencyConversionResponse2
- * AcceptorCurrencyConversionResponse2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AcceptorAuthorisationResponse4
- * AcceptorAuthorisationResponse4}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AcceptorCancellationAdvice4
- * AcceptorCancellationAdvice4}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AcceptorCancellationResponse4
- * AcceptorCancellationResponse4}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.AcceptorCurrencyConversionRequest2
- * AcceptorCurrencyConversionRequest2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AcceptorDiagnosticRequest4
- * AcceptorDiagnosticRequest4}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AcceptorCompletionAdvice4
- * AcceptorCompletionAdvice4}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.AcceptorCancellationAdviceResponse4
- * AcceptorCancellationAdviceResponse4}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.AcceptorCompletionAdviceResponse4
- * AcceptorCompletionAdviceResponse4}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentEnvironment37
- * CardPaymentEnvironment37}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransaction39
- * CardPaymentTransaction39}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransaction38
- * CardPaymentTransaction38}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentEnvironment33
- * CardPaymentEnvironment33}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails20
- * CardPaymentTransactionDetails20}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransaction48
- * CardPaymentTransaction48}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails25
- * CardPaymentTransactionDetails25}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransaction50
- * CardPaymentTransaction50}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransaction43
- * CardPaymentTransaction43}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransaction42
- * CardPaymentTransaction42}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransaction36
- * CardPaymentTransaction36}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentEnvironment32
- * CardPaymentEnvironment32}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransaction44
- * CardPaymentTransaction44}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentEnvironment36
- * CardPaymentEnvironment36}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentEnvironment43
- * CardPaymentEnvironment43}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransaction45
- * CardPaymentTransaction45}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails23
- * CardPaymentTransactionDetails23}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransaction37
- * CardPaymentTransaction37}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentEnvironment41
- * CardPaymentEnvironment41}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails21
- * CardPaymentTransactionDetails21}</li>
- * <li>{@linkplain com.tools20022.repository.msg.DetailedAmount7
- * DetailedAmount7}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentEnvironment42
- * CardPaymentEnvironment42}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransaction49
- * CardPaymentTransaction49}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails26
- * CardPaymentTransactionDetails26}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentEnvironment40
- * CardPaymentEnvironment40}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.CardPaymentDataSetTransaction12
- * CardPaymentDataSetTransaction12}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransaction47
- * CardPaymentTransaction47}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails19
- * CardPaymentTransactionDetails19}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransactionResult2
- * CardPaymentTransactionResult2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentEnvironment44
- * CardPaymentEnvironment44}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentEnvironment34
- * CardPaymentEnvironment34}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.CardPaymentDataSetTransaction13
- * CardPaymentDataSetTransaction13}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentEnvironment35
- * CardPaymentEnvironment35}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransaction41
- * CardPaymentTransaction41}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails24
- * CardPaymentTransactionDetails24}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentEnvironment38
- * CardPaymentEnvironment38}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CommonData4 CommonData4}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentEnvironment39
- * CardPaymentEnvironment39}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.CardPaymentDataSetTransaction11
- * CardPaymentDataSetTransaction11}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransaction46
- * CardPaymentTransaction46}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails22
- * CardPaymentTransactionDetails22}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.CardPaymentDataSetTransaction10
- * CardPaymentDataSetTransaction10}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransaction40
- * CardPaymentTransaction40}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ATMTransaction1
- * ATMTransaction1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AmountAndCurrency1
- * AmountAndCurrency1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.DetailedAmount12
- * DetailedAmount12}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ATMTransaction5
- * ATMTransaction5}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ATMTransaction4
- * ATMTransaction4}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ATMTransaction2
- * ATMTransaction2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ATMTransaction7
- * ATMTransaction7}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ATMTransaction8
- * ATMTransaction8}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ATMTransaction3
- * ATMTransaction3}</li>
- * <li>{@linkplain com.tools20022.repository.msg.DetailedAmount13
- * DetailedAmount13}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ATMTransaction6
- * ATMTransaction6}</li>
- * <li>{@linkplain com.tools20022.repository.msg.DetailedAmount11
- * DetailedAmount11}</li>
- * <li>{@linkplain com.tools20022.repository.msg.DetailedAmount10
- * DetailedAmount10}</li>
- * <li>{@linkplain com.tools20022.repository.msg.DetailedAmount9
- * DetailedAmount9}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardTransaction4
- * CardTransaction4}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardTransactionAmount2
- * CardTransactionAmount2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.DetailedAmount8
- * DetailedAmount8}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardTransactionAmount1
- * CardTransactionAmount1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardTransaction8
- * CardTransaction8}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardTransaction5
- * CardTransaction5}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardTransaction15
- * CardTransaction15}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardTransaction7
- * CardTransaction7}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardTransactionDetail5
- * CardTransactionDetail5}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardTransactionDetail2
- * CardTransactionDetail2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardTransactionDetail1
- * CardTransactionDetail1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardTransaction6
- * CardTransaction6}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardTransactionDetail4
- * CardTransactionDetail4}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardTransactionDetail6
- * CardTransactionDetail6}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardTransactionAmount5
- * CardTransactionAmount5}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardTransactionAmount3
- * CardTransactionAmount3}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardTransactionAmount4
- * CardTransactionAmount4}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardTransactionDetail3
- * CardTransactionDetail3}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.AcceptorCancellationAdviceResponse5
- * AcceptorCancellationAdviceResponse5}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AcceptorDiagnosticRequest5
- * AcceptorDiagnosticRequest5}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.AcceptorCurrencyConversionResponse3
- * AcceptorCurrencyConversionResponse3}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.AcceptorCurrencyConversionRequest3
- * AcceptorCurrencyConversionRequest3}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AcceptorAuthorisationResponse5
- * AcceptorAuthorisationResponse5}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AcceptorCancellationResponse5
- * AcceptorCancellationResponse5}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AcceptorCancellationAdvice5
- * AcceptorCancellationAdvice5}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.AcceptorCompletionAdviceResponse5
- * AcceptorCompletionAdviceResponse5}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AcceptorAuthorisationRequest5
- * AcceptorAuthorisationRequest5}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AcceptorCancellationRequest5
- * AcceptorCancellationRequest5}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AcceptorCompletionAdvice5
- * AcceptorCompletionAdvice5}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentEnvironment46
- * CardPaymentEnvironment46}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentEnvironment50
- * CardPaymentEnvironment50}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails32
- * CardPaymentTransactionDetails32}</li>
- * <li>{@linkplain com.tools20022.repository.msg.DetailedAmount15
- * DetailedAmount15}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails33
- * CardPaymentTransactionDetails33}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransaction52
- * CardPaymentTransaction52}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransactionResult3
- * CardPaymentTransactionResult3}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransaction63
- * CardPaymentTransaction63}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.CardPaymentDataSetTransaction14
- * CardPaymentDataSetTransaction14}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransaction60
- * CardPaymentTransaction60}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentEnvironment52
- * CardPaymentEnvironment52}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails28
- * CardPaymentTransactionDetails28}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransaction57
- * CardPaymentTransaction57}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransaction61
- * CardPaymentTransaction61}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransaction64
- * CardPaymentTransaction64}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransaction65
- * CardPaymentTransaction65}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransaction53
- * CardPaymentTransaction53}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentEnvironment49
- * CardPaymentEnvironment49}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransaction59
- * CardPaymentTransaction59}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransaction56
- * CardPaymentTransaction56}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentEnvironment51
- * CardPaymentEnvironment51}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.CardPaymentDataSetTransaction15
- * CardPaymentDataSetTransaction15}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails29
- * CardPaymentTransactionDetails29}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails30
- * CardPaymentTransactionDetails30}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentEnvironment48
- * CardPaymentEnvironment48}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentEnvironment56
- * CardPaymentEnvironment56}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransaction51
- * CardPaymentTransaction51}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentEnvironment45
- * CardPaymentEnvironment45}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.CardPaymentDataSetTransaction16
- * CardPaymentDataSetTransaction16}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.CardPaymentDataSetTransaction17
- * CardPaymentDataSetTransaction17}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails27
- * CardPaymentTransactionDetails27}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails31
- * CardPaymentTransactionDetails31}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentEnvironment55
- * CardPaymentEnvironment55}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CommonData5 CommonData5}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentEnvironment54
- * CardPaymentEnvironment54}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentEnvironment53
- * CardPaymentEnvironment53}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransaction54
- * CardPaymentTransaction54}</li>
- * <li>{@linkplain com.tools20022.repository.msg.DetailedAmount14
- * DetailedAmount14}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentEnvironment47
- * CardPaymentEnvironment47}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransaction55
- * CardPaymentTransaction55}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransaction58
- * CardPaymentTransaction58}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransaction62
- * CardPaymentTransaction62}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails35
- * CardPaymentTransactionDetails35}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails34
- * CardPaymentTransactionDetails34}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ATMTransaction18
- * ATMTransaction18}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ATMTransaction14
- * ATMTransaction14}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ATMTransaction17
- * ATMTransaction17}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ATMTransaction20
- * ATMTransaction20}</li>
- * <li>{@linkplain com.tools20022.repository.msg.DetailedAmount18
- * DetailedAmount18}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ATMTransaction13
- * ATMTransaction13}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ATMTransaction16
- * ATMTransaction16}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ATMTransaction19
- * ATMTransaction19}</li>
- * <li>{@linkplain com.tools20022.repository.msg.DetailedAmount16
- * DetailedAmount16}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ATMTransaction15
- * ATMTransaction15}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ATMTransaction21
- * ATMTransaction21}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ATMTransaction24
- * ATMTransaction24}</li>
- * <li>{@linkplain com.tools20022.repository.msg.DetailedAmount17
- * DetailedAmount17}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ATMTransaction23
- * ATMTransaction23}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ATMTransaction29
- * ATMTransaction29}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.AcceptorCurrencyConversionResponse4
- * AcceptorCurrencyConversionResponse4}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AcceptorCancellationRequest6
- * AcceptorCancellationRequest6}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AcceptorDiagnosticRequest6
- * AcceptorDiagnosticRequest6}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.AcceptorCancellationAdviceResponse6
- * AcceptorCancellationAdviceResponse6}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.AcceptorCurrencyConversionRequest4
- * AcceptorCurrencyConversionRequest4}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AcceptorCancellationResponse6
- * AcceptorCancellationResponse6}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AcceptorAuthorisationRequest6
- * AcceptorAuthorisationRequest6}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AcceptorCancellationAdvice6
- * AcceptorCancellationAdvice6}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AcceptorCompletionAdvice6
- * AcceptorCompletionAdvice6}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.AcceptorCompletionAdviceResponse6
- * AcceptorCompletionAdviceResponse6}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AcceptorAuthorisationResponse6
- * AcceptorAuthorisationResponse6}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransaction71
- * CardPaymentTransaction71}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails39
- * CardPaymentTransactionDetails39}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.CardPaymentDataSetTransaction19
- * CardPaymentDataSetTransaction19}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransaction75
- * CardPaymentTransaction75}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentEnvironment61
- * CardPaymentEnvironment61}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails38
- * CardPaymentTransactionDetails38}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentEnvironment64
- * CardPaymentEnvironment64}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentEnvironment60
- * CardPaymentEnvironment60}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentEnvironment65
- * CardPaymentEnvironment65}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails41
- * CardPaymentTransactionDetails41}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentEnvironment67
- * CardPaymentEnvironment67}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentEnvironment66
- * CardPaymentEnvironment66}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransaction74
- * CardPaymentTransaction74}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.CardPaymentDataSetTransaction21
- * CardPaymentDataSetTransaction21}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransaction67
- * CardPaymentTransaction67}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransaction70
- * CardPaymentTransaction70}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransaction73
- * CardPaymentTransaction73}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.CardPaymentDataSetTransaction20
- * CardPaymentDataSetTransaction20}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentEnvironment62
- * CardPaymentEnvironment62}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentEnvironment63
- * CardPaymentEnvironment63}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransaction72
- * CardPaymentTransaction72}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransaction76
- * CardPaymentTransaction76}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransaction68
- * CardPaymentTransaction68}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.CardPaymentDataSetTransaction18
- * CardPaymentDataSetTransaction18}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentEnvironment58
- * CardPaymentEnvironment58}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentEnvironment59
- * CardPaymentEnvironment59}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails37
- * CardPaymentTransactionDetails37}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CommonData6 CommonData6}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentEnvironment57
- * CardPaymentEnvironment57}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransaction69
- * CardPaymentTransaction69}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails40
- * CardPaymentTransactionDetails40}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails42
- * CardPaymentTransactionDetails42}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails43
- * CardPaymentTransactionDetails43}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.AcceptorCurrencyConversionAdvice1
- * AcceptorCurrencyConversionAdvice1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransaction77
- * CardPaymentTransaction77}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransaction78
- * CardPaymentTransaction78}</li>
+ * {@linkplain com.tools20022.repository.entity.CardPayment#mmDebitCreditDirection
+ * CardPayment.mmDebitCreditDirection}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.CardPayment#mmATMTotal
+ * CardPayment.mmATMTotal}</li>
  * </ul>
  * </li>
  * <li>
@@ -2059,35 +2057,25 @@ public class CardPayment extends IndividualPayment {
 	 */
 	public static final MMBusinessAssociationEnd mmPaymentCard = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentInstrument7.mmPaymentCard, com.tools20022.repository.msg.PaymentInstrument8.mmPaymentCardDetails,
-					com.tools20022.repository.choice.PaymentInstrument17Choice.mmPaymentCardDetails, com.tools20022.repository.msg.CardEntry1.mmCard, com.tools20022.repository.msg.CardTransaction1.mmCard,
-					com.tools20022.repository.msg.CardPaymentEnvironment6.mmCard, com.tools20022.repository.msg.CardPaymentEnvironment14.mmCard, com.tools20022.repository.msg.CardPaymentEnvironment3.mmPlainCardData,
-					com.tools20022.repository.msg.CardPaymentEnvironment11.mmPlainCardData, com.tools20022.repository.msg.CardPaymentEnvironment16.mmPlainCardData, com.tools20022.repository.msg.CardPaymentEnvironment1.mmCard,
-					com.tools20022.repository.msg.CardPaymentEnvironment9.mmCard, com.tools20022.repository.msg.CardPaymentEnvironment4.mmCard, com.tools20022.repository.msg.CardPaymentEnvironment12.mmCard,
-					com.tools20022.repository.msg.CardPaymentEnvironment2.mmCard, com.tools20022.repository.msg.CardPaymentEnvironment10.mmCard, com.tools20022.repository.msg.CardPaymentEnvironment18.mmCard,
-					com.tools20022.repository.choice.PaymentInstrument9Choice.mmPaymentCardDetails, com.tools20022.repository.choice.PaymentInstrument10Choice.mmPaymentCardDetails,
-					com.tools20022.repository.choice.PaymentInstrument6Choice.mmPaymentCardDetails, com.tools20022.repository.choice.PaymentInstrument8Choice.mmPaymentCardDetails,
-					com.tools20022.repository.choice.PaymentInstrument12Choice.mmPaymentCardDetails, com.tools20022.repository.msg.TradeSettlement1.mmFinancialCard, com.tools20022.repository.msg.CardPaymentEnvironment24.mmCard,
-					com.tools20022.repository.msg.CardPaymentEnvironment20.mmCard, com.tools20022.repository.msg.CardPaymentEnvironment30.mmCard, com.tools20022.repository.msg.CardPaymentEnvironment27.mmCard,
-					com.tools20022.repository.msg.CardPaymentEnvironment28.mmPlainCardData, com.tools20022.repository.msg.CardPaymentEnvironment21.mmPlainCardData, com.tools20022.repository.msg.CardPaymentEnvironment23.mmCard,
-					com.tools20022.repository.msg.CardPaymentEnvironment22.mmCard, com.tools20022.repository.msg.CardTransaction2.mmCard, com.tools20022.repository.msg.CardEntry2.mmCard,
-					com.tools20022.repository.msg.CardPaymentEnvironment32.mmCard, com.tools20022.repository.msg.CardPaymentEnvironment36.mmCard, com.tools20022.repository.msg.CardPaymentEnvironment40.mmCard,
-					com.tools20022.repository.msg.CardPaymentEnvironment44.mmCard, com.tools20022.repository.msg.CardPaymentEnvironment34.mmCard, com.tools20022.repository.msg.CardPaymentEnvironment35.mmCard,
-					com.tools20022.repository.choice.PaymentInstrument18Choice.mmPaymentCardDetails, com.tools20022.repository.msg.CardPaymentEnvironment52.mmCard, com.tools20022.repository.msg.CardPaymentEnvironment49.mmCard,
-					com.tools20022.repository.msg.CardPaymentEnvironment48.mmCard, com.tools20022.repository.msg.CardPaymentEnvironment56.mmCard, com.tools20022.repository.msg.CardPaymentEnvironment45.mmCard,
-					com.tools20022.repository.msg.CardPaymentEnvironment54.mmCard, com.tools20022.repository.msg.CardPaymentEnvironment53.mmCard, com.tools20022.repository.msg.CardPaymentEnvironment47.mmCard,
-					com.tools20022.repository.choice.PaymentInstrument20Choice.mmPaymentCardDetails, com.tools20022.repository.msg.CardPaymentEnvironment61.mmCard, com.tools20022.repository.msg.CardPaymentEnvironment60.mmCard,
-					com.tools20022.repository.msg.CardPaymentEnvironment66.mmCard, com.tools20022.repository.msg.CardPaymentEnvironment62.mmCard, com.tools20022.repository.msg.CardPaymentEnvironment63.mmCard,
-					com.tools20022.repository.msg.CardPaymentEnvironment59.mmCard, com.tools20022.repository.msg.CardPaymentEnvironment57.mmCard);
+			derivation_lazy = () -> Arrays.asList(PaymentInstrument7.mmPaymentCard, PaymentInstrument8.mmPaymentCardDetails, PaymentInstrument17Choice.mmPaymentCardDetails, CardEntry1.mmCard, CardTransaction1.mmCard,
+					CardPaymentEnvironment6.mmCard, CardPaymentEnvironment14.mmCard, CardPaymentEnvironment3.mmPlainCardData, CardPaymentEnvironment11.mmPlainCardData, CardPaymentEnvironment16.mmPlainCardData,
+					CardPaymentEnvironment1.mmCard, CardPaymentEnvironment9.mmCard, CardPaymentEnvironment4.mmCard, CardPaymentEnvironment12.mmCard, CardPaymentEnvironment2.mmCard, CardPaymentEnvironment10.mmCard,
+					CardPaymentEnvironment18.mmCard, PaymentInstrument9Choice.mmPaymentCardDetails, PaymentInstrument10Choice.mmPaymentCardDetails, PaymentInstrument6Choice.mmPaymentCardDetails,
+					PaymentInstrument8Choice.mmPaymentCardDetails, PaymentInstrument12Choice.mmPaymentCardDetails, TradeSettlement1.mmFinancialCard, CardPaymentEnvironment24.mmCard, CardPaymentEnvironment20.mmCard,
+					CardPaymentEnvironment30.mmCard, CardPaymentEnvironment27.mmCard, CardPaymentEnvironment28.mmPlainCardData, CardPaymentEnvironment21.mmPlainCardData, CardPaymentEnvironment23.mmCard, CardPaymentEnvironment22.mmCard,
+					CardTransaction2.mmCard, CardEntry2.mmCard, CardPaymentEnvironment32.mmCard, CardPaymentEnvironment36.mmCard, CardPaymentEnvironment40.mmCard, CardPaymentEnvironment44.mmCard, CardPaymentEnvironment34.mmCard,
+					CardPaymentEnvironment35.mmCard, PaymentInstrument18Choice.mmPaymentCardDetails, CardPaymentEnvironment52.mmCard, CardPaymentEnvironment49.mmCard, CardPaymentEnvironment48.mmCard, CardPaymentEnvironment56.mmCard,
+					CardPaymentEnvironment45.mmCard, CardPaymentEnvironment54.mmCard, CardPaymentEnvironment53.mmCard, CardPaymentEnvironment47.mmCard, PaymentInstrument20Choice.mmPaymentCardDetails, CardPaymentEnvironment61.mmCard,
+					CardPaymentEnvironment60.mmCard, CardPaymentEnvironment66.mmCard, CardPaymentEnvironment62.mmCard, CardPaymentEnvironment63.mmCard, CardPaymentEnvironment59.mmCard, CardPaymentEnvironment57.mmCard);
 			elementContext_lazy = () -> CardPayment.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PaymentCard";
 			definition = "Specifies the card which is used in a payment by card.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.PaymentCard.mmPayment;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.PaymentCard.mmObject();
 		}
 	};
@@ -2196,23 +2184,19 @@ public class CardPayment extends IndividualPayment {
 	 */
 	public static final MMBusinessAssociationEnd mmProduct = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardIndividualTransaction1.mmProduct, com.tools20022.repository.msg.CardPaymentTransactionDetails4.mmProduct,
-					com.tools20022.repository.msg.CardPaymentTransactionDetails1.mmProduct, com.tools20022.repository.msg.CardPaymentTransactionDetails10.mmProduct, com.tools20022.repository.msg.CardPaymentTransactionDetails3.mmProduct,
-					com.tools20022.repository.msg.CardPaymentTransactionDetails12.mmProduct, com.tools20022.repository.msg.CardPaymentTransactionDetails16.mmProduct, com.tools20022.repository.msg.CardPaymentTransactionDetails14.mmProduct,
-					com.tools20022.repository.msg.CardPaymentTransactionDetails15.mmProduct, com.tools20022.repository.msg.CardIndividualTransaction2.mmProduct, com.tools20022.repository.msg.CardPaymentTransactionDetails23.mmProduct,
-					com.tools20022.repository.msg.CardPaymentTransactionDetails21.mmProduct, com.tools20022.repository.msg.CardPaymentTransactionDetails19.mmProduct, com.tools20022.repository.msg.CardPaymentTransactionDetails24.mmProduct,
-					com.tools20022.repository.msg.CardPaymentTransactionDetails29.mmSaleItem, com.tools20022.repository.msg.CardPaymentTransactionDetails30.mmSaleItem,
-					com.tools20022.repository.msg.CardPaymentTransactionDetails27.mmSaleItem, com.tools20022.repository.msg.CardPaymentTransactionDetails31.mmSaleItem,
-					com.tools20022.repository.msg.CardPaymentTransactionDetails39.mmSaleItem, com.tools20022.repository.msg.CardPaymentTransactionDetails38.mmSaleItem,
-					com.tools20022.repository.msg.CardPaymentTransactionDetails41.mmSaleItem, com.tools20022.repository.msg.CardPaymentTransactionDetails37.mmSaleItem);
+			derivation_lazy = () -> Arrays.asList(CardIndividualTransaction1.mmProduct, CardPaymentTransactionDetails4.mmProduct, CardPaymentTransactionDetails1.mmProduct, CardPaymentTransactionDetails10.mmProduct,
+					CardPaymentTransactionDetails3.mmProduct, CardPaymentTransactionDetails12.mmProduct, CardPaymentTransactionDetails16.mmProduct, CardPaymentTransactionDetails14.mmProduct, CardPaymentTransactionDetails15.mmProduct,
+					CardIndividualTransaction2.mmProduct, CardPaymentTransactionDetails23.mmProduct, CardPaymentTransactionDetails21.mmProduct, CardPaymentTransactionDetails19.mmProduct, CardPaymentTransactionDetails24.mmProduct,
+					CardPaymentTransactionDetails29.mmSaleItem, CardPaymentTransactionDetails30.mmSaleItem, CardPaymentTransactionDetails27.mmSaleItem, CardPaymentTransactionDetails31.mmSaleItem, CardPaymentTransactionDetails39.mmSaleItem,
+					CardPaymentTransactionDetails38.mmSaleItem, CardPaymentTransactionDetails41.mmSaleItem, CardPaymentTransactionDetails37.mmSaleItem);
 			elementContext_lazy = () -> CardPayment.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Product";
 			definition = "Product purchased with the transaction.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.Product.mmCardPayment;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Product.mmObject();
 		}
 	};
@@ -2414,35 +2398,23 @@ public class CardPayment extends IndividualPayment {
 	 */
 	public static final MMBusinessAttribute mmDetailedAmount = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardPaymentTransactionDetails8.mmAmount, com.tools20022.repository.msg.DetailedAmount1.mmValue,
-					com.tools20022.repository.msg.CardPaymentTransactionDetails4.mmDetailedAmount, com.tools20022.repository.msg.CardPaymentTransactionDetails1.mmDetailedAmount,
-					com.tools20022.repository.msg.CardPaymentTransactionDetails10.mmDetailedAmount, com.tools20022.repository.msg.DetailedAmount2.mmValue, com.tools20022.repository.msg.CardPaymentTransactionDetails2.mmDetailedAmount,
-					com.tools20022.repository.msg.CardPaymentTransactionDetails11.mmDetailedAmount, com.tools20022.repository.msg.CardPaymentTransactionDetails3.mmDetailedAmount, com.tools20022.repository.msg.DetailedAmount3.mmValue,
-					com.tools20022.repository.msg.CardPaymentTransactionDetails12.mmDetailedAmount, com.tools20022.repository.msg.CardPaymentTransactionDetails13.mmDetailedAmount,
-					com.tools20022.repository.msg.CardPaymentTransactionDetails18.mmDetailedAmount, com.tools20022.repository.msg.CardPaymentTransactionDetails16.mmDetailedAmount,
-					com.tools20022.repository.msg.CardPaymentTransactionDetails14.mmDetailedAmount, com.tools20022.repository.msg.CardPaymentTransactionDetails15.mmDetailedAmount,
-					com.tools20022.repository.msg.CardPaymentTransactionDetails17.mmDetailedAmount, com.tools20022.repository.msg.CardPaymentTransactionDetails20.mmDetailedAmount,
-					com.tools20022.repository.msg.CardPaymentTransactionDetails25.mmDetailedAmount, com.tools20022.repository.msg.CardPaymentTransactionDetails23.mmDetailedAmount,
-					com.tools20022.repository.msg.CardPaymentTransactionDetails21.mmDetailedAmount, com.tools20022.repository.msg.CardPaymentTransactionDetails26.mmDetailedAmount,
-					com.tools20022.repository.msg.CardPaymentTransactionDetails19.mmDetailedAmount, com.tools20022.repository.msg.CardPaymentTransactionDetails24.mmDetailedAmount,
-					com.tools20022.repository.msg.CardTransactionAmount2.mmDetailedAmount, com.tools20022.repository.msg.CardTransactionAmount1.mmCardholderBillingTransactionAmount,
-					com.tools20022.repository.msg.CardTransactionAmount1.mmDetailedAmount, com.tools20022.repository.msg.CardTransactionDetail5.mmAdditionalAmounts, com.tools20022.repository.msg.CardTransactionDetail2.mmAdditionalAmounts,
-					com.tools20022.repository.msg.CardTransactionDetail1.mmAdditionalAmounts, com.tools20022.repository.msg.CardTransactionDetail4.mmTransactionFees, com.tools20022.repository.msg.CardTransactionDetail4.mmAdditionalAmounts,
-					com.tools20022.repository.msg.CardTransactionDetail6.mmAdditionalAmounts, com.tools20022.repository.msg.CardTransactionAmount5.mmCardholderBillingTransactionAmount,
-					com.tools20022.repository.msg.CardTransactionAmount5.mmReconciliationTransactionAmount, com.tools20022.repository.msg.CardTransactionAmount3.mmCardholderBillingTransactionAmount,
-					com.tools20022.repository.msg.CardTransactionAmount3.mmReconciliationTransactionAmount, com.tools20022.repository.msg.CardTransactionAmount3.mmDetailedAmount,
-					com.tools20022.repository.msg.CardTransactionAmount4.mmCardholderBillingTransactionAmount, com.tools20022.repository.msg.CardTransactionAmount4.mmReconciliationTransactionAmount,
-					com.tools20022.repository.msg.CardTransactionAmount4.mmDetailedAmount, com.tools20022.repository.msg.CardTransactionDetail3.mmAdditionalAmounts,
-					com.tools20022.repository.msg.CardPaymentTransactionDetails32.mmDetailedAmount, com.tools20022.repository.msg.CardPaymentTransactionDetails33.mmDetailedAmount,
-					com.tools20022.repository.msg.CardPaymentTransactionDetails28.mmDetailedAmount, com.tools20022.repository.msg.CardPaymentTransactionDetails29.mmDetailedAmount,
-					com.tools20022.repository.msg.CardPaymentTransactionDetails30.mmDetailedAmount, com.tools20022.repository.msg.CardPaymentTransactionDetails27.mmDetailedAmount,
-					com.tools20022.repository.msg.CardPaymentTransactionDetails31.mmDetailedAmount, com.tools20022.repository.msg.CardPaymentTransactionDetails39.mmDetailedAmount,
-					com.tools20022.repository.msg.CardPaymentTransactionDetails38.mmDetailedAmount, com.tools20022.repository.msg.CardPaymentTransactionDetails41.mmDetailedAmount,
-					com.tools20022.repository.msg.CardPaymentTransactionDetails37.mmDetailedAmount, com.tools20022.repository.msg.CardPaymentTransactionDetails40.mmDetailedAmount,
-					com.tools20022.repository.msg.CardPaymentTransactionDetails42.mmDetailedAmount, com.tools20022.repository.msg.CardPaymentTransactionDetails43.mmDetailedAmount);
+			derivation_lazy = () -> Arrays.asList(CardPaymentTransactionDetails8.mmAmount, DetailedAmount1.mmValue, CardPaymentTransactionDetails4.mmDetailedAmount, CardPaymentTransactionDetails1.mmDetailedAmount,
+					CardPaymentTransactionDetails10.mmDetailedAmount, DetailedAmount2.mmValue, CardPaymentTransactionDetails2.mmDetailedAmount, CardPaymentTransactionDetails11.mmDetailedAmount,
+					CardPaymentTransactionDetails3.mmDetailedAmount, DetailedAmount3.mmValue, CardPaymentTransactionDetails12.mmDetailedAmount, CardPaymentTransactionDetails13.mmDetailedAmount,
+					CardPaymentTransactionDetails18.mmDetailedAmount, CardPaymentTransactionDetails16.mmDetailedAmount, CardPaymentTransactionDetails14.mmDetailedAmount, CardPaymentTransactionDetails15.mmDetailedAmount,
+					CardPaymentTransactionDetails17.mmDetailedAmount, CardPaymentTransactionDetails20.mmDetailedAmount, CardPaymentTransactionDetails25.mmDetailedAmount, CardPaymentTransactionDetails23.mmDetailedAmount,
+					CardPaymentTransactionDetails21.mmDetailedAmount, CardPaymentTransactionDetails26.mmDetailedAmount, CardPaymentTransactionDetails19.mmDetailedAmount, CardPaymentTransactionDetails24.mmDetailedAmount,
+					CardTransactionAmount2.mmDetailedAmount, CardTransactionAmount1.mmCardholderBillingTransactionAmount, CardTransactionAmount1.mmDetailedAmount, CardTransactionDetail5.mmAdditionalAmounts,
+					CardTransactionDetail2.mmAdditionalAmounts, CardTransactionDetail1.mmAdditionalAmounts, CardTransactionDetail4.mmTransactionFees, CardTransactionDetail4.mmAdditionalAmounts, CardTransactionDetail6.mmAdditionalAmounts,
+					CardTransactionAmount5.mmCardholderBillingTransactionAmount, CardTransactionAmount5.mmReconciliationTransactionAmount, CardTransactionAmount3.mmCardholderBillingTransactionAmount,
+					CardTransactionAmount3.mmReconciliationTransactionAmount, CardTransactionAmount3.mmDetailedAmount, CardTransactionAmount4.mmCardholderBillingTransactionAmount, CardTransactionAmount4.mmReconciliationTransactionAmount,
+					CardTransactionAmount4.mmDetailedAmount, CardTransactionDetail3.mmAdditionalAmounts, CardPaymentTransactionDetails32.mmDetailedAmount, CardPaymentTransactionDetails33.mmDetailedAmount,
+					CardPaymentTransactionDetails28.mmDetailedAmount, CardPaymentTransactionDetails29.mmDetailedAmount, CardPaymentTransactionDetails30.mmDetailedAmount, CardPaymentTransactionDetails27.mmDetailedAmount,
+					CardPaymentTransactionDetails31.mmDetailedAmount, CardPaymentTransactionDetails39.mmDetailedAmount, CardPaymentTransactionDetails38.mmDetailedAmount, CardPaymentTransactionDetails41.mmDetailedAmount,
+					CardPaymentTransactionDetails37.mmDetailedAmount, CardPaymentTransactionDetails40.mmDetailedAmount, CardPaymentTransactionDetails42.mmDetailedAmount, CardPaymentTransactionDetails43.mmDetailedAmount);
 			elementContext_lazy = () -> CardPayment.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DetailedAmount";
 			definition = "Detailed amount value.";
 			maxOccurs = 1;
@@ -2579,24 +2551,17 @@ public class CardPayment extends IndividualPayment {
 	 */
 	public static final MMBusinessAttribute mmAmountQualifier = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardAmountAndCurrencyExchange1.mmType, com.tools20022.repository.msg.DetailedAmount1.mmType,
-					com.tools20022.repository.msg.CardPaymentTransactionDetails4.mmAmountQualifier, com.tools20022.repository.msg.CardPaymentTransactionDetails1.mmAmountQualifier,
-					com.tools20022.repository.msg.CardPaymentTransactionDetails10.mmAmountQualifier, com.tools20022.repository.msg.DetailedAmount2.mmType, com.tools20022.repository.msg.CardPaymentTransactionDetails3.mmAmountQualifier,
-					com.tools20022.repository.msg.DetailedAmount3.mmType, com.tools20022.repository.msg.CardPaymentTransactionDetails12.mmAmountQualifier, com.tools20022.repository.msg.CardPaymentTransactionDetails18.mmAmountQualifier,
-					com.tools20022.repository.msg.CardPaymentTransactionDetails16.mmAmountQualifier, com.tools20022.repository.msg.CardPaymentTransactionDetails14.mmAmountQualifier,
-					com.tools20022.repository.msg.CardPaymentTransactionDetails15.mmAmountQualifier, com.tools20022.repository.msg.CardPaymentTransactionDetails23.mmAmountQualifier,
-					com.tools20022.repository.msg.CardPaymentTransactionDetails21.mmAmountQualifier, com.tools20022.repository.msg.CardPaymentTransactionDetails26.mmAmountQualifier,
-					com.tools20022.repository.msg.CardPaymentTransactionDetails19.mmAmountQualifier, com.tools20022.repository.msg.CardPaymentTransactionDetails24.mmAmountQualifier, com.tools20022.repository.msg.DetailedAmount11.mmType,
-					com.tools20022.repository.msg.DetailedAmount11.mmAdditionalType, com.tools20022.repository.msg.DetailedAmount10.mmType, com.tools20022.repository.msg.DetailedAmount9.mmType,
-					com.tools20022.repository.msg.CardTransactionAmount1.mmAmountQualifier, com.tools20022.repository.msg.CardTransactionAmount3.mmAmountQualifier,
-					com.tools20022.repository.msg.CardPaymentTransactionDetails33.mmAmountQualifier, com.tools20022.repository.msg.CardPaymentTransactionDetails29.mmAmountQualifier,
-					com.tools20022.repository.msg.CardPaymentTransactionDetails30.mmAmountQualifier, com.tools20022.repository.msg.CardPaymentTransactionDetails27.mmAmountQualifier,
-					com.tools20022.repository.msg.CardPaymentTransactionDetails31.mmAmountQualifier, com.tools20022.repository.msg.CardPaymentTransactionDetails39.mmAmountQualifier,
-					com.tools20022.repository.msg.CardPaymentTransactionDetails38.mmAmountQualifier, com.tools20022.repository.msg.CardPaymentTransactionDetails41.mmAmountQualifier,
-					com.tools20022.repository.msg.CardPaymentTransactionDetails37.mmAmountQualifier, com.tools20022.repository.msg.CardPaymentTransactionDetails40.mmAmountQualifier);
+			derivation_lazy = () -> Arrays.asList(CardAmountAndCurrencyExchange1.mmType, DetailedAmount1.mmType, CardPaymentTransactionDetails4.mmAmountQualifier, CardPaymentTransactionDetails1.mmAmountQualifier,
+					CardPaymentTransactionDetails10.mmAmountQualifier, DetailedAmount2.mmType, CardPaymentTransactionDetails3.mmAmountQualifier, DetailedAmount3.mmType, CardPaymentTransactionDetails12.mmAmountQualifier,
+					CardPaymentTransactionDetails18.mmAmountQualifier, CardPaymentTransactionDetails16.mmAmountQualifier, CardPaymentTransactionDetails14.mmAmountQualifier, CardPaymentTransactionDetails15.mmAmountQualifier,
+					CardPaymentTransactionDetails23.mmAmountQualifier, CardPaymentTransactionDetails21.mmAmountQualifier, CardPaymentTransactionDetails26.mmAmountQualifier, CardPaymentTransactionDetails19.mmAmountQualifier,
+					CardPaymentTransactionDetails24.mmAmountQualifier, DetailedAmount11.mmType, DetailedAmount11.mmAdditionalType, DetailedAmount10.mmType, DetailedAmount9.mmType, CardTransactionAmount1.mmAmountQualifier,
+					CardTransactionAmount3.mmAmountQualifier, CardPaymentTransactionDetails33.mmAmountQualifier, CardPaymentTransactionDetails29.mmAmountQualifier, CardPaymentTransactionDetails30.mmAmountQualifier,
+					CardPaymentTransactionDetails27.mmAmountQualifier, CardPaymentTransactionDetails31.mmAmountQualifier, CardPaymentTransactionDetails39.mmAmountQualifier, CardPaymentTransactionDetails38.mmAmountQualifier,
+					CardPaymentTransactionDetails41.mmAmountQualifier, CardPaymentTransactionDetails37.mmAmountQualifier, CardPaymentTransactionDetails40.mmAmountQualifier);
 			elementContext_lazy = () -> CardPayment.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AmountQualifier";
 			definition = "Identification of the type of amount.";
 			maxOccurs = 1;
@@ -2861,42 +2826,30 @@ public class CardPayment extends IndividualPayment {
 	 */
 	public static final MMBusinessAssociationEnd mmCardPaymentAcquiring = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardPaymentTransactionDetails8.mmPaymentContext, com.tools20022.repository.msg.CommonData1.mmContext,
-					com.tools20022.repository.msg.CardPaymentDataSetTransaction1.mmContext, com.tools20022.repository.msg.CommonData2.mmContext, com.tools20022.repository.msg.CardPaymentDataSetTransaction2.mmContext,
-					com.tools20022.repository.msg.CardPaymentDataSetTransaction3.mmContext, com.tools20022.repository.msg.CardPaymentDataSetTransaction4.mmContext, com.tools20022.repository.msg.CardPaymentTransaction9.mmAction,
-					com.tools20022.repository.msg.CardPaymentTransaction18.mmAction, com.tools20022.repository.msg.AcceptorAuthorisationRequest1.mmContext, com.tools20022.repository.msg.AcceptorAuthorisationRequest2.mmContext,
-					com.tools20022.repository.msg.TransactionReconciliation2.mmReconciliationTransactionIdentification, com.tools20022.repository.msg.AcceptorCancellationRequest1.mmContext,
-					com.tools20022.repository.msg.AcceptorCancellationRequest2.mmContext, com.tools20022.repository.msg.CardPaymentTransaction10.mmAction, com.tools20022.repository.msg.AcceptorCompletionAdvice1.mmContext,
-					com.tools20022.repository.msg.AcceptorCompletionAdvice2.mmContext, com.tools20022.repository.msg.AcceptorCancellationAdvice1.mmContext, com.tools20022.repository.msg.AcceptorCancellationAdvice2.mmContext,
-					com.tools20022.repository.msg.AcceptorCancellationRequest3.mmContext, com.tools20022.repository.msg.AcceptorCompletionAdvice3.mmContext, com.tools20022.repository.msg.AcceptorAuthorisationRequest3.mmContext,
-					com.tools20022.repository.msg.AcceptorCancellationAdvice3.mmContext, com.tools20022.repository.msg.CommonData3.mmContext, com.tools20022.repository.msg.CardPaymentDataSetTransaction6.mmContext,
-					com.tools20022.repository.msg.CardPaymentDataSetTransaction7.mmContext, com.tools20022.repository.msg.CardPaymentDataSetTransaction8.mmContext, com.tools20022.repository.msg.CardIndividualTransaction2.mmPaymentContext,
-					com.tools20022.repository.msg.AcceptorCancellationRequest4.mmContext, com.tools20022.repository.msg.AcceptorAuthorisationRequest4.mmContext, com.tools20022.repository.msg.AcceptorCancellationAdvice4.mmContext,
-					com.tools20022.repository.msg.AcceptorCompletionAdvice4.mmContext, com.tools20022.repository.msg.CardPaymentDataSetTransaction12.mmContext,
-					com.tools20022.repository.msg.TransactionReconciliation3.mmReconciliationTransactionIdentification, com.tools20022.repository.msg.CommonData4.mmContext,
-					com.tools20022.repository.msg.CardPaymentDataSetTransaction11.mmContext, com.tools20022.repository.msg.CardPaymentDataSetTransaction10.mmContext,
-					com.tools20022.repository.msg.ATMTransaction5.mmTransactionIdentification, com.tools20022.repository.msg.ATMTransaction4.mmTransactionIdentification,
-					com.tools20022.repository.msg.ATMTransaction2.mmTransactionIdentification, com.tools20022.repository.msg.ATMTransaction7.mmTransactionIdentification,
-					com.tools20022.repository.msg.ATMTransaction3.mmTransactionIdentification, com.tools20022.repository.msg.ATMTransaction6.mmTransactionIdentification, com.tools20022.repository.msg.CardTransaction10.mmReconciliation,
-					com.tools20022.repository.msg.CardTransaction4.mmReconciliation, com.tools20022.repository.msg.CardTransaction9.mmReconciliation, com.tools20022.repository.msg.CardTransaction5.mmReconciliation,
-					com.tools20022.repository.msg.CardTransaction5.mmOriginalTransaction, com.tools20022.repository.msg.CardTransaction15.mmReconciliation, com.tools20022.repository.msg.CardTransaction15.mmOriginalTransaction,
-					com.tools20022.repository.msg.CardTransaction7.mmOriginalTransaction, com.tools20022.repository.msg.AcceptorCancellationAdvice5.mmContext, com.tools20022.repository.msg.AcceptorAuthorisationRequest5.mmContext,
-					com.tools20022.repository.msg.AcceptorCancellationRequest5.mmContext, com.tools20022.repository.msg.AcceptorCompletionAdvice5.mmContext, com.tools20022.repository.msg.CardPaymentDataSetTransaction14.mmContext,
-					com.tools20022.repository.msg.CardPaymentDataSetTransaction15.mmContext, com.tools20022.repository.msg.CardPaymentDataSetTransaction16.mmContext, com.tools20022.repository.msg.CommonData5.mmContext,
-					com.tools20022.repository.msg.TransactionReconciliation4.mmReconciliationTransactionIdentification, com.tools20022.repository.msg.ATMTransaction18.mmTransactionIdentification,
-					com.tools20022.repository.msg.ATMTransaction14.mmTransactionIdentification, com.tools20022.repository.msg.ATMTransaction17.mmTransactionIdentification,
-					com.tools20022.repository.msg.ATMTransaction20.mmTransactionIdentification, com.tools20022.repository.msg.ATMTransaction21.mmTransactionIdentification,
-					com.tools20022.repository.msg.ATMTransaction29.mmTransactionIdentification, com.tools20022.repository.msg.AcceptorCancellationRequest6.mmContext, com.tools20022.repository.msg.AcceptorAuthorisationRequest6.mmContext,
-					com.tools20022.repository.msg.AcceptorCancellationAdvice6.mmContext, com.tools20022.repository.msg.AcceptorCompletionAdvice6.mmContext, com.tools20022.repository.msg.CardPaymentDataSetTransaction19.mmContext,
-					com.tools20022.repository.msg.CardPaymentDataSetTransaction20.mmContext, com.tools20022.repository.msg.CardPaymentDataSetTransaction18.mmContext, com.tools20022.repository.msg.CommonData6.mmContext);
+			derivation_lazy = () -> Arrays.asList(CardPaymentTransactionDetails8.mmPaymentContext, CommonData1.mmContext, CardPaymentDataSetTransaction1.mmContext, CommonData2.mmContext, CardPaymentDataSetTransaction2.mmContext,
+					CardPaymentDataSetTransaction3.mmContext, CardPaymentDataSetTransaction4.mmContext, CardPaymentTransaction9.mmAction, CardPaymentTransaction18.mmAction, AcceptorAuthorisationRequest1.mmContext,
+					AcceptorAuthorisationRequest2.mmContext, TransactionReconciliation2.mmReconciliationTransactionIdentification, AcceptorCancellationRequest1.mmContext, AcceptorCancellationRequest2.mmContext,
+					CardPaymentTransaction10.mmAction, AcceptorCompletionAdvice1.mmContext, AcceptorCompletionAdvice2.mmContext, AcceptorCancellationAdvice1.mmContext, AcceptorCancellationAdvice2.mmContext,
+					AcceptorCancellationRequest3.mmContext, AcceptorCompletionAdvice3.mmContext, AcceptorAuthorisationRequest3.mmContext, AcceptorCancellationAdvice3.mmContext, CommonData3.mmContext,
+					CardPaymentDataSetTransaction6.mmContext, CardPaymentDataSetTransaction7.mmContext, CardPaymentDataSetTransaction8.mmContext, CardIndividualTransaction2.mmPaymentContext, AcceptorCancellationRequest4.mmContext,
+					AcceptorAuthorisationRequest4.mmContext, AcceptorCancellationAdvice4.mmContext, AcceptorCompletionAdvice4.mmContext, CardPaymentDataSetTransaction12.mmContext,
+					TransactionReconciliation3.mmReconciliationTransactionIdentification, CommonData4.mmContext, CardPaymentDataSetTransaction11.mmContext, CardPaymentDataSetTransaction10.mmContext,
+					ATMTransaction5.mmTransactionIdentification, ATMTransaction4.mmTransactionIdentification, ATMTransaction2.mmTransactionIdentification, ATMTransaction7.mmTransactionIdentification,
+					ATMTransaction3.mmTransactionIdentification, ATMTransaction6.mmTransactionIdentification, CardTransaction10.mmReconciliation, CardTransaction4.mmReconciliation, CardTransaction9.mmReconciliation,
+					CardTransaction5.mmReconciliation, CardTransaction5.mmOriginalTransaction, CardTransaction15.mmReconciliation, CardTransaction15.mmOriginalTransaction, CardTransaction7.mmOriginalTransaction,
+					AcceptorCancellationAdvice5.mmContext, AcceptorAuthorisationRequest5.mmContext, AcceptorCancellationRequest5.mmContext, AcceptorCompletionAdvice5.mmContext, CardPaymentDataSetTransaction14.mmContext,
+					CardPaymentDataSetTransaction15.mmContext, CardPaymentDataSetTransaction16.mmContext, CommonData5.mmContext, TransactionReconciliation4.mmReconciliationTransactionIdentification,
+					ATMTransaction18.mmTransactionIdentification, ATMTransaction14.mmTransactionIdentification, ATMTransaction17.mmTransactionIdentification, ATMTransaction20.mmTransactionIdentification,
+					ATMTransaction21.mmTransactionIdentification, ATMTransaction29.mmTransactionIdentification, AcceptorCancellationRequest6.mmContext, AcceptorAuthorisationRequest6.mmContext, AcceptorCancellationAdvice6.mmContext,
+					AcceptorCompletionAdvice6.mmContext, CardPaymentDataSetTransaction19.mmContext, CardPaymentDataSetTransaction20.mmContext, CardPaymentDataSetTransaction18.mmContext, CommonData6.mmContext);
 			elementContext_lazy = () -> CardPayment.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CardPaymentAcquiring";
 			definition = "Parameters of the process of acquiring a card payment.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.mmRelatedCardPayment;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.mmObject();
 		}
 	};
@@ -2941,12 +2894,12 @@ public class CardPayment extends IndividualPayment {
 		{
 			elementContext_lazy = () -> CardPayment.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PaymentCardPartyRole";
 			definition = "Specifies each role played by a party in the process of a payment by card.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.CardPaymentPartyRole.mmCardPayment;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.CardPaymentPartyRole.mmObject();
 		}
 	};
@@ -3002,16 +2955,15 @@ public class CardPayment extends IndividualPayment {
 	 */
 	public static final MMBusinessAssociationEnd mmCardPaymentStatus = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMTransaction5.mmTransactionStatus, com.tools20022.repository.msg.ATMTransaction3.mmTransactionStatus,
-					com.tools20022.repository.msg.ATMTransaction17.mmTransactionStatus, com.tools20022.repository.msg.ATMTransaction20.mmTransactionStatus);
+			derivation_lazy = () -> Arrays.asList(ATMTransaction5.mmTransactionStatus, ATMTransaction3.mmTransactionStatus, ATMTransaction17.mmTransactionStatus, ATMTransaction20.mmTransactionStatus);
 			elementContext_lazy = () -> CardPayment.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CardPaymentStatus";
 			definition = "Status of the payment by card.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.CardPaymentStatus.mmCardPayment;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.CardPaymentStatus.mmObject();
 		}
 	};
@@ -3044,7 +2996,7 @@ public class CardPayment extends IndividualPayment {
 		{
 			elementContext_lazy = () -> CardPayment.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DetailedAmountLabel";
 			definition = "Short description of the amount.";
 			maxOccurs = 1;
@@ -3111,18 +3063,17 @@ public class CardPayment extends IndividualPayment {
 	 */
 	public static final MMBusinessAssociationEnd mmReconciliation = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcceptorReconciliationResponse1.mmTransaction, com.tools20022.repository.msg.AcceptorReconciliationResponse2.mmTransaction,
-					com.tools20022.repository.msg.AcceptorReconciliationResponse3.mmTransaction, com.tools20022.repository.msg.CardTransaction8.mmReconciliation, com.tools20022.repository.msg.CardTransaction7.mmReconciliation,
-					com.tools20022.repository.msg.AcceptorReconciliationResponse4.mmTransaction);
+			derivation_lazy = () -> Arrays.asList(AcceptorReconciliationResponse1.mmTransaction, AcceptorReconciliationResponse2.mmTransaction, AcceptorReconciliationResponse3.mmTransaction, CardTransaction8.mmReconciliation,
+					CardTransaction7.mmReconciliation, AcceptorReconciliationResponse4.mmTransaction);
 			elementContext_lazy = () -> CardPayment.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Reconciliation";
 			definition = "Total of a certain type of transaction.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.ReconciliationTransaction.mmCardPaymentTotal;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.ReconciliationTransaction.mmObject();
 		}
 	};
@@ -3157,7 +3108,7 @@ public class CardPayment extends IndividualPayment {
 		{
 			elementContext_lazy = () -> CardPayment.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TransactionCategory";
 			definition = "Specifies the category to which the card transaction belongs.";
 			maxOccurs = 1;
@@ -3198,7 +3149,7 @@ public class CardPayment extends IndividualPayment {
 		{
 			elementContext_lazy = () -> CardPayment.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CashBackAmount";
 			definition = "Amount added to the total price of the transaction and received in cash by the customer.";
 			maxOccurs = 1;
@@ -3236,7 +3187,7 @@ public class CardPayment extends IndividualPayment {
 		{
 			elementContext_lazy = () -> CardPayment.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Gratuity";
 			definition = "Amount tendered for a service performed.";
 			maxOccurs = 1;
@@ -3274,7 +3225,7 @@ public class CardPayment extends IndividualPayment {
 		{
 			elementContext_lazy = () -> CardPayment.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DebitCreditDirection";
 			definition = "Specifies the direction of a payment.";
 			maxOccurs = 1;
@@ -3327,15 +3278,15 @@ public class CardPayment extends IndividualPayment {
 	 */
 	public static final MMBusinessAssociationEnd mmATMTotal = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMTransaction3.mmATMTotals, com.tools20022.repository.msg.ATMTransaction17.mmATMTotals);
+			derivation_lazy = () -> Arrays.asList(ATMTransaction3.mmATMTotals, ATMTransaction17.mmATMTotals);
 			elementContext_lazy = () -> CardPayment.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ATMTotal";
 			definition = "Current totals of the ATM.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.ATMTotal.mmRelatedCardPayment;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.ATMTotal.mmObject();
 		}
 	};
@@ -3343,171 +3294,94 @@ public class CardPayment extends IndividualPayment {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CardPayment";
 				definition = "Payment through an electronic money product.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Product.mmCardPayment, com.tools20022.repository.entity.PaymentCard.mmPayment,
 						com.tools20022.repository.entity.CardPaymentPartyRole.mmCardPayment, com.tools20022.repository.entity.CardPaymentAcquiring.mmRelatedCardPayment,
 						com.tools20022.repository.entity.ReconciliationTransaction.mmCardPaymentTotal, com.tools20022.repository.entity.CardPaymentStatus.mmCardPayment, com.tools20022.repository.entity.ATMTotal.mmRelatedCardPayment);
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardEntry1.mmAggregatedEntry, com.tools20022.repository.choice.CardTransaction1Choice.mmAggregated,
-						com.tools20022.repository.choice.CardTransaction1Choice.mmIndividual, com.tools20022.repository.msg.CardTransaction1.mmTransaction, com.tools20022.repository.msg.EntryTransaction3.mmCardTransaction,
-						com.tools20022.repository.msg.ReportEntry3.mmCardTransaction, com.tools20022.repository.msg.EntryTransaction4.mmCardTransaction, com.tools20022.repository.msg.ReportEntry4.mmCardTransaction,
-						com.tools20022.repository.msg.TransactionData1.mmTransactionDetails, com.tools20022.repository.msg.AcceptorDiagnosticResponse1.mmEnvironment, com.tools20022.repository.msg.AcceptorDiagnosticResponse2.mmEnvironment,
-						com.tools20022.repository.msg.CommonData1.mmEnvironment, com.tools20022.repository.msg.CardPaymentTransaction8.mmTransactionResult, com.tools20022.repository.msg.CardPaymentTransaction4.mmOriginalTransaction,
-						com.tools20022.repository.msg.CardPaymentTransaction4.mmTransactionDetails, com.tools20022.repository.msg.CardPaymentDataSetTransaction1.mmEnvironment,
-						com.tools20022.repository.msg.CardPaymentDataSetTransaction1.mmTransaction, com.tools20022.repository.msg.CommonData2.mmEnvironment, com.tools20022.repository.msg.CardPaymentTransaction17.mmTransactionResult,
-						com.tools20022.repository.msg.CardPaymentTransaction14.mmOriginalTransaction, com.tools20022.repository.msg.CardPaymentTransaction14.mmTransactionDetails,
-						com.tools20022.repository.msg.CardPaymentDataSetTransaction2.mmEnvironment, com.tools20022.repository.msg.CardPaymentDataSetTransaction2.mmTransaction,
-						com.tools20022.repository.msg.CardPaymentTransaction7.mmOriginalTransaction, com.tools20022.repository.msg.CardPaymentTransaction7.mmTransactionDetails,
-						com.tools20022.repository.msg.CardPaymentTransaction16.mmOriginalTransaction, com.tools20022.repository.msg.CardPaymentTransaction16.mmTransactionDetails,
-						com.tools20022.repository.msg.CardPaymentTransaction20.mmOriginalTransaction, com.tools20022.repository.msg.CardPaymentTransaction20.mmTransactionDetails,
-						com.tools20022.repository.msg.CardPaymentDataSetTransaction3.mmEnvironment, com.tools20022.repository.msg.CardPaymentDataSetTransaction3.mmTransaction,
-						com.tools20022.repository.msg.CardPaymentTransaction1.mmOriginalTransaction, com.tools20022.repository.msg.CardPaymentTransaction1.mmTransactionDetails,
-						com.tools20022.repository.msg.CardPaymentTransaction11.mmOriginalTransaction, com.tools20022.repository.msg.CardPaymentTransaction11.mmTransactionDetails,
-						com.tools20022.repository.msg.CardPaymentTransaction19.mmOriginalTransaction, com.tools20022.repository.msg.CardPaymentTransaction19.mmTransactionDetails,
-						com.tools20022.repository.msg.CardPaymentDataSetTransaction4.mmEnvironment, com.tools20022.repository.msg.CardPaymentDataSetTransaction4.mmTransaction,
-						com.tools20022.repository.msg.CardPaymentTransaction2.mmTransactionDetails, com.tools20022.repository.msg.CardPaymentTransaction12.mmTransactionDetails,
-						com.tools20022.repository.msg.CardPaymentDataSetTransaction5.mmEnvironment, com.tools20022.repository.msg.CardPaymentDataSetTransaction5.mmTransaction,
-						com.tools20022.repository.msg.CardPaymentDataSetTransaction5.mmTransactionResponse, com.tools20022.repository.msg.AcceptorCancellationAdviceResponse1.mmEnvironment,
-						com.tools20022.repository.msg.AcceptorCancellationAdviceResponse2.mmEnvironment, com.tools20022.repository.msg.AcceptorAuthorisationRequest1.mmEnvironment,
-						com.tools20022.repository.msg.AcceptorAuthorisationRequest1.mmTransaction, com.tools20022.repository.msg.AcceptorAuthorisationRequest2.mmEnvironment,
-						com.tools20022.repository.msg.AcceptorAuthorisationRequest2.mmTransaction, com.tools20022.repository.msg.AcceptorCompletionAdviceResponse1.mmEnvironment,
-						com.tools20022.repository.msg.AcceptorCompletionAdviceResponse2.mmEnvironment, com.tools20022.repository.msg.CardPaymentTransaction5.mmOriginalTransaction,
-						com.tools20022.repository.msg.CardPaymentTransaction5.mmTransactionDetails, com.tools20022.repository.msg.AcceptorCancellationRequest1.mmEnvironment,
-						com.tools20022.repository.msg.AcceptorCancellationRequest1.mmTransaction, com.tools20022.repository.msg.CardPaymentTransaction15.mmOriginalTransaction,
-						com.tools20022.repository.msg.CardPaymentTransaction15.mmTransactionDetails, com.tools20022.repository.msg.AcceptorCancellationRequest2.mmEnvironment,
-						com.tools20022.repository.msg.AcceptorCancellationRequest2.mmTransaction, com.tools20022.repository.msg.CardPaymentTransaction6.mmTransactionDetails,
-						com.tools20022.repository.msg.AcceptorCancellationResponse1.mmEnvironment, com.tools20022.repository.msg.AcceptorCancellationResponse1.mmTransaction,
-						com.tools20022.repository.msg.AcceptorCancellationResponse1.mmTransactionResponse, com.tools20022.repository.msg.AcceptorCancellationResponse2.mmEnvironment,
-						com.tools20022.repository.msg.AcceptorCancellationResponse2.mmTransaction, com.tools20022.repository.msg.AcceptorCancellationResponse2.mmTransactionResponse,
-						com.tools20022.repository.msg.AcceptorDiagnosticRequest1.mmEnvironment, com.tools20022.repository.msg.AcceptorDiagnosticRequest2.mmEnvironment,
-						com.tools20022.repository.msg.CardPaymentTransaction3.mmOriginalTransaction, com.tools20022.repository.msg.CardPaymentTransaction3.mmTransactionDetails,
-						com.tools20022.repository.msg.AcceptorCompletionAdvice1.mmEnvironment, com.tools20022.repository.msg.AcceptorCompletionAdvice1.mmTransaction,
-						com.tools20022.repository.msg.CardPaymentTransaction13.mmOriginalTransaction, com.tools20022.repository.msg.CardPaymentTransaction13.mmTransactionDetails,
-						com.tools20022.repository.msg.AcceptorCompletionAdvice2.mmEnvironment, com.tools20022.repository.msg.AcceptorCompletionAdvice2.mmTransaction, com.tools20022.repository.msg.AcceptorCancellationAdvice1.mmEnvironment,
-						com.tools20022.repository.msg.AcceptorCancellationAdvice1.mmTransaction, com.tools20022.repository.msg.AcceptorCancellationAdvice2.mmEnvironment,
-						com.tools20022.repository.msg.AcceptorCancellationAdvice2.mmTransaction, com.tools20022.repository.msg.AcceptorAuthorisationResponse1.mmEnvironment,
-						com.tools20022.repository.msg.AcceptorAuthorisationResponse1.mmTransaction, com.tools20022.repository.msg.AcceptorAuthorisationResponse1.mmTransactionResponse,
-						com.tools20022.repository.msg.AcceptorAuthorisationResponse2.mmEnvironment, com.tools20022.repository.msg.AcceptorAuthorisationResponse2.mmTransaction,
-						com.tools20022.repository.msg.AcceptorAuthorisationResponse2.mmTransactionResponse, com.tools20022.repository.msg.AcceptorDiagnosticResponse3.mmEnvironment,
-						com.tools20022.repository.msg.AcceptorCurrencyConversionRequest1.mmEnvironment, com.tools20022.repository.msg.AcceptorCurrencyConversionRequest1.mmTransaction,
-						com.tools20022.repository.msg.AcceptorCancellationRequest3.mmEnvironment, com.tools20022.repository.msg.AcceptorCancellationRequest3.mmTransaction,
-						com.tools20022.repository.msg.AcceptorAuthorisationResponse3.mmEnvironment, com.tools20022.repository.msg.AcceptorAuthorisationResponse3.mmTransaction,
-						com.tools20022.repository.msg.AcceptorAuthorisationResponse3.mmTransactionResponse, com.tools20022.repository.msg.AcceptorDiagnosticRequest3.mmEnvironment,
-						com.tools20022.repository.msg.AcceptorCurrencyConversionResponse1.mmEnvironment, com.tools20022.repository.msg.AcceptorCurrencyConversionResponse1.mmTransaction,
-						com.tools20022.repository.msg.AcceptorCurrencyConversionResponse1.mmTransactionResponse, com.tools20022.repository.msg.AcceptorCancellationAdviceResponse3.mmEnvironment,
-						com.tools20022.repository.msg.AcceptorCompletionAdvice3.mmEnvironment, com.tools20022.repository.msg.AcceptorCompletionAdvice3.mmTransaction,
-						com.tools20022.repository.msg.AcceptorAuthorisationRequest3.mmEnvironment, com.tools20022.repository.msg.AcceptorAuthorisationRequest3.mmTransaction,
-						com.tools20022.repository.msg.AcceptorCompletionAdviceResponse3.mmEnvironment, com.tools20022.repository.msg.AcceptorCancellationResponse3.mmEnvironment,
-						com.tools20022.repository.msg.AcceptorCancellationResponse3.mmTransaction, com.tools20022.repository.msg.AcceptorCancellationResponse3.mmTransactionResponse,
-						com.tools20022.repository.msg.AcceptorCancellationAdvice3.mmEnvironment, com.tools20022.repository.msg.AcceptorCancellationAdvice3.mmTransaction,
-						com.tools20022.repository.msg.AggregationTransaction1.mmIndividualPayment, com.tools20022.repository.msg.CardPaymentTransaction28.mmOriginalTransaction,
-						com.tools20022.repository.msg.CardPaymentTransaction28.mmTransactionDetails, com.tools20022.repository.msg.CardPaymentTransaction22.mmOriginalTransaction,
-						com.tools20022.repository.msg.CardPaymentTransaction22.mmTransactionDetails, com.tools20022.repository.msg.CardPaymentTransaction34.mmOriginalTransaction,
-						com.tools20022.repository.msg.CardPaymentTransaction34.mmTransactionDetails, com.tools20022.repository.msg.DetailedAmount5.mmCashBack, com.tools20022.repository.msg.DetailedAmount5.mmGratuity,
-						com.tools20022.repository.msg.DetailedAmount5.mmFees, com.tools20022.repository.msg.DetailedAmount5.mmRebate, com.tools20022.repository.msg.DetailedAmount5.mmValueAddedTax,
-						com.tools20022.repository.msg.CardPaymentDataSetTransaction9.mmEnvironment, com.tools20022.repository.msg.CardPaymentDataSetTransaction9.mmTransaction,
-						com.tools20022.repository.msg.CardPaymentDataSetTransaction9.mmTransactionResponse, com.tools20022.repository.msg.CardPaymentTransaction32.mmTransactionDetails,
-						com.tools20022.repository.msg.CardPaymentTransaction31.mmOriginalTransaction, com.tools20022.repository.msg.CardPaymentTransaction31.mmTransactionDetails,
-						com.tools20022.repository.msg.CardPaymentTransaction35.mmTransactionDetails, com.tools20022.repository.msg.CommonData3.mmEnvironment, com.tools20022.repository.msg.CardPaymentTransaction23.mmTransactionDetails,
-						com.tools20022.repository.msg.CardPaymentDataSetTransaction6.mmEnvironment, com.tools20022.repository.msg.CardPaymentDataSetTransaction6.mmTransaction,
-						com.tools20022.repository.msg.CardPaymentDataSetTransaction7.mmEnvironment, com.tools20022.repository.msg.CardPaymentDataSetTransaction7.mmTransaction,
-						com.tools20022.repository.msg.CardPaymentDataSetTransaction8.mmEnvironment, com.tools20022.repository.msg.CardPaymentDataSetTransaction8.mmTransaction,
-						com.tools20022.repository.msg.CardPaymentTransaction29.mmOriginalTransaction, com.tools20022.repository.msg.CardPaymentTransaction29.mmTransactionDetails,
-						com.tools20022.repository.msg.CardPaymentTransaction25.mmOriginalTransaction, com.tools20022.repository.msg.CardPaymentTransaction25.mmTransactionDetails,
-						com.tools20022.repository.msg.CardPaymentTransaction30.mmOriginalTransaction, com.tools20022.repository.msg.CardPaymentTransaction30.mmTransactionDetails,
-						com.tools20022.repository.msg.CardPaymentTransaction26.mmOriginalTransaction, com.tools20022.repository.msg.CardPaymentTransaction26.mmTransactionDetails,
-						com.tools20022.repository.msg.ReportEntry7.mmCardTransaction, com.tools20022.repository.msg.EntryTransaction7.mmCardTransaction, com.tools20022.repository.msg.CardTransaction2.mmTransaction,
-						com.tools20022.repository.choice.CardTransaction2Choice.mmAggregated, com.tools20022.repository.choice.CardTransaction2Choice.mmIndividual, com.tools20022.repository.msg.CardEntry2.mmAggregatedEntry,
-						com.tools20022.repository.msg.AcceptorCancellationRequest4.mmEnvironment, com.tools20022.repository.msg.AcceptorCancellationRequest4.mmTransaction,
-						com.tools20022.repository.msg.AcceptorDiagnosticResponse4.mmEnvironment, com.tools20022.repository.msg.AcceptorAuthorisationRequest4.mmEnvironment,
-						com.tools20022.repository.msg.AcceptorAuthorisationRequest4.mmTransaction, com.tools20022.repository.msg.AcceptorCurrencyConversionResponse2.mmEnvironment,
-						com.tools20022.repository.msg.AcceptorCurrencyConversionResponse2.mmTransaction, com.tools20022.repository.msg.AcceptorAuthorisationResponse4.mmEnvironment,
-						com.tools20022.repository.msg.AcceptorAuthorisationResponse4.mmTransaction, com.tools20022.repository.msg.AcceptorAuthorisationResponse4.mmTransactionResponse,
-						com.tools20022.repository.msg.AcceptorCancellationAdvice4.mmEnvironment, com.tools20022.repository.msg.AcceptorCancellationAdvice4.mmTransaction,
-						com.tools20022.repository.msg.AcceptorCancellationResponse4.mmEnvironment, com.tools20022.repository.msg.AcceptorCancellationResponse4.mmTransaction,
-						com.tools20022.repository.msg.AcceptorCancellationResponse4.mmTransactionResponse, com.tools20022.repository.msg.AcceptorCurrencyConversionRequest2.mmEnvironment,
-						com.tools20022.repository.msg.AcceptorCurrencyConversionRequest2.mmTransaction, com.tools20022.repository.msg.AcceptorDiagnosticRequest4.mmEnvironment,
-						com.tools20022.repository.msg.AcceptorCompletionAdvice4.mmEnvironment, com.tools20022.repository.msg.AcceptorCompletionAdvice4.mmTransaction,
-						com.tools20022.repository.msg.AcceptorCancellationAdviceResponse4.mmEnvironment, com.tools20022.repository.msg.AcceptorCompletionAdviceResponse4.mmEnvironment,
-						com.tools20022.repository.msg.CardPaymentTransaction38.mmTransactionDetails, com.tools20022.repository.msg.CardPaymentTransaction48.mmTransactionDetails,
-						com.tools20022.repository.msg.CardPaymentTransaction42.mmTransactionDetails, com.tools20022.repository.msg.CardPaymentTransaction36.mmOriginalTransaction,
-						com.tools20022.repository.msg.CardPaymentTransaction36.mmTransactionDetails, com.tools20022.repository.msg.CardPaymentTransaction44.mmOriginalTransaction,
-						com.tools20022.repository.msg.CardPaymentTransaction44.mmTransactionDetails, com.tools20022.repository.msg.CardPaymentTransaction45.mmOriginalTransaction,
-						com.tools20022.repository.msg.CardPaymentTransaction45.mmTransactionDetails, com.tools20022.repository.msg.DetailedAmount7.mmCashBack, com.tools20022.repository.msg.DetailedAmount7.mmGratuity,
-						com.tools20022.repository.msg.DetailedAmount7.mmFees, com.tools20022.repository.msg.DetailedAmount7.mmRebate, com.tools20022.repository.msg.DetailedAmount7.mmValueAddedTax,
-						com.tools20022.repository.msg.CardPaymentTransaction49.mmOriginalTransaction, com.tools20022.repository.msg.CardPaymentTransaction49.mmTransactionDetails,
-						com.tools20022.repository.msg.CardPaymentDataSetTransaction12.mmEnvironment, com.tools20022.repository.msg.CardPaymentDataSetTransaction12.mmTransaction,
-						com.tools20022.repository.msg.CardPaymentTransaction47.mmOriginalTransaction, com.tools20022.repository.msg.CardPaymentTransaction47.mmTransactionDetails,
-						com.tools20022.repository.msg.CardPaymentDataSetTransaction13.mmEnvironment, com.tools20022.repository.msg.CardPaymentDataSetTransaction13.mmTransaction,
-						com.tools20022.repository.msg.CardPaymentDataSetTransaction13.mmTransactionResponse, com.tools20022.repository.msg.CardPaymentTransaction41.mmOriginalTransaction,
-						com.tools20022.repository.msg.CardPaymentTransaction41.mmTransactionDetails, com.tools20022.repository.msg.CommonData4.mmEnvironment, com.tools20022.repository.msg.CardPaymentDataSetTransaction11.mmEnvironment,
-						com.tools20022.repository.msg.CardPaymentDataSetTransaction11.mmTransaction, com.tools20022.repository.msg.CardPaymentTransaction46.mmOriginalTransaction,
-						com.tools20022.repository.msg.CardPaymentTransaction46.mmTransactionDetails, com.tools20022.repository.msg.CardPaymentDataSetTransaction10.mmEnvironment,
-						com.tools20022.repository.msg.CardPaymentDataSetTransaction10.mmTransaction, com.tools20022.repository.msg.CardPaymentTransaction40.mmOriginalTransaction,
-						com.tools20022.repository.msg.CardPaymentTransaction40.mmTransactionDetails, com.tools20022.repository.msg.DetailedAmount12.mmFees, com.tools20022.repository.msg.DetailedAmount12.mmDonation,
-						com.tools20022.repository.msg.ATMTransactionAmounts2.mmDailyBalance, com.tools20022.repository.msg.ATMTransactionAmounts2.mmWeeklyBalance, com.tools20022.repository.msg.ATMTransactionAmounts2.mmMonthlyBalance,
-						com.tools20022.repository.msg.CardTransaction4.mmTransactionDetails, com.tools20022.repository.msg.CardTransaction8.mmTransactionDetails, com.tools20022.repository.msg.CardTransaction5.mmTransactionDetails,
-						com.tools20022.repository.msg.CardTransaction15.mmTransactionDetails, com.tools20022.repository.msg.CardTransaction7.mmTransactionDetails, com.tools20022.repository.msg.CardTransaction6.mmTransactionDetails,
-						com.tools20022.repository.msg.ReportEntry8.mmCardTransaction, com.tools20022.repository.msg.EntryTransaction8.mmCardTransaction, com.tools20022.repository.msg.AcceptorCancellationAdviceResponse5.mmEnvironment,
-						com.tools20022.repository.msg.AcceptorDiagnosticRequest5.mmEnvironment, com.tools20022.repository.msg.AcceptorCurrencyConversionResponse3.mmEnvironment,
-						com.tools20022.repository.msg.AcceptorCurrencyConversionResponse3.mmTransaction, com.tools20022.repository.msg.AcceptorCurrencyConversionRequest3.mmEnvironment,
-						com.tools20022.repository.msg.AcceptorCurrencyConversionRequest3.mmTransaction, com.tools20022.repository.msg.AcceptorAuthorisationResponse5.mmEnvironment,
-						com.tools20022.repository.msg.AcceptorAuthorisationResponse5.mmTransaction, com.tools20022.repository.msg.AcceptorAuthorisationResponse5.mmTransactionResponse,
-						com.tools20022.repository.msg.AcceptorCancellationResponse5.mmEnvironment, com.tools20022.repository.msg.AcceptorCancellationResponse5.mmTransaction,
-						com.tools20022.repository.msg.AcceptorCancellationResponse5.mmTransactionResponse, com.tools20022.repository.msg.AcceptorCancellationAdvice5.mmEnvironment,
-						com.tools20022.repository.msg.AcceptorCancellationAdvice5.mmTransaction, com.tools20022.repository.msg.AcceptorCompletionAdviceResponse5.mmEnvironment,
-						com.tools20022.repository.msg.AcceptorAuthorisationRequest5.mmEnvironment, com.tools20022.repository.msg.AcceptorAuthorisationRequest5.mmTransaction,
-						com.tools20022.repository.msg.AcceptorCancellationRequest5.mmEnvironment, com.tools20022.repository.msg.AcceptorCancellationRequest5.mmTransaction,
-						com.tools20022.repository.msg.AcceptorCompletionAdvice5.mmEnvironment, com.tools20022.repository.msg.AcceptorCompletionAdvice5.mmTransaction, com.tools20022.repository.msg.DetailedAmount15.mmCashBack,
-						com.tools20022.repository.msg.DetailedAmount15.mmGratuity, com.tools20022.repository.msg.DetailedAmount15.mmFees, com.tools20022.repository.msg.DetailedAmount15.mmRebate,
-						com.tools20022.repository.msg.DetailedAmount15.mmValueAddedTax, com.tools20022.repository.msg.CardPaymentTransaction63.mmTransactionDetails,
-						com.tools20022.repository.msg.CardPaymentDataSetTransaction14.mmEnvironment, com.tools20022.repository.msg.CardPaymentDataSetTransaction14.mmTransaction,
-						com.tools20022.repository.msg.CardPaymentTransaction60.mmOriginalTransaction, com.tools20022.repository.msg.CardPaymentTransaction60.mmTransactionDetails,
-						com.tools20022.repository.msg.CardPaymentTransaction57.mmTransactionDetails, com.tools20022.repository.msg.CardPaymentTransaction61.mmOriginalTransaction,
-						com.tools20022.repository.msg.CardPaymentTransaction61.mmTransactionDetails, com.tools20022.repository.msg.CardPaymentTransaction64.mmOriginalTransaction,
-						com.tools20022.repository.msg.CardPaymentTransaction64.mmTransactionDetails, com.tools20022.repository.msg.CardPaymentTransaction53.mmTransactionDetails,
-						com.tools20022.repository.msg.CardPaymentTransaction59.mmOriginalTransaction, com.tools20022.repository.msg.CardPaymentTransaction59.mmTransactionDetails,
-						com.tools20022.repository.msg.CardPaymentTransaction56.mmOriginalTransaction, com.tools20022.repository.msg.CardPaymentTransaction56.mmTransactionDetails,
-						com.tools20022.repository.msg.CardPaymentDataSetTransaction15.mmEnvironment, com.tools20022.repository.msg.CardPaymentDataSetTransaction15.mmTransaction,
-						com.tools20022.repository.msg.AggregationTransaction2.mmIndividualPayment, com.tools20022.repository.msg.CardPaymentTransaction51.mmOriginalTransaction,
-						com.tools20022.repository.msg.CardPaymentTransaction51.mmTransactionDetails, com.tools20022.repository.msg.CardPaymentDataSetTransaction16.mmEnvironment,
-						com.tools20022.repository.msg.CardPaymentDataSetTransaction16.mmTransaction, com.tools20022.repository.msg.CardPaymentDataSetTransaction17.mmEnvironment,
-						com.tools20022.repository.msg.CardPaymentDataSetTransaction17.mmTransaction, com.tools20022.repository.msg.CardPaymentDataSetTransaction17.mmTransactionResponse,
-						com.tools20022.repository.msg.CommonData5.mmEnvironment, com.tools20022.repository.msg.CardPaymentTransaction55.mmOriginalTransaction, com.tools20022.repository.msg.CardPaymentTransaction55.mmTransactionDetails,
-						com.tools20022.repository.msg.CardPaymentTransaction62.mmOriginalTransaction, com.tools20022.repository.msg.CardPaymentTransaction62.mmTransactionDetails, com.tools20022.repository.msg.DetailedAmount16.mmFees,
-						com.tools20022.repository.msg.DetailedAmount16.mmDonation, com.tools20022.repository.msg.DetailedAmount17.mmFees, com.tools20022.repository.msg.DetailedAmount17.mmDonation,
-						com.tools20022.repository.msg.AcceptorCurrencyConversionResponse4.mmEnvironment, com.tools20022.repository.msg.AcceptorCurrencyConversionResponse4.mmTransaction,
-						com.tools20022.repository.msg.AcceptorCancellationRequest6.mmEnvironment, com.tools20022.repository.msg.AcceptorCancellationRequest6.mmTransaction,
-						com.tools20022.repository.msg.AcceptorDiagnosticRequest6.mmEnvironment, com.tools20022.repository.msg.AcceptorCancellationAdviceResponse6.mmEnvironment,
-						com.tools20022.repository.msg.AcceptorCurrencyConversionRequest4.mmEnvironment, com.tools20022.repository.msg.AcceptorCurrencyConversionRequest4.mmTransaction,
-						com.tools20022.repository.msg.AcceptorCancellationResponse6.mmEnvironment, com.tools20022.repository.msg.AcceptorCancellationResponse6.mmTransaction,
-						com.tools20022.repository.msg.AcceptorCancellationResponse6.mmTransactionResponse, com.tools20022.repository.msg.AcceptorAuthorisationRequest6.mmEnvironment,
-						com.tools20022.repository.msg.AcceptorAuthorisationRequest6.mmTransaction, com.tools20022.repository.msg.AcceptorCancellationAdvice6.mmEnvironment,
-						com.tools20022.repository.msg.AcceptorCancellationAdvice6.mmTransaction, com.tools20022.repository.msg.AcceptorCompletionAdvice6.mmEnvironment, com.tools20022.repository.msg.AcceptorCompletionAdvice6.mmTransaction,
-						com.tools20022.repository.msg.AcceptorCompletionAdviceResponse6.mmEnvironment, com.tools20022.repository.msg.AcceptorAuthorisationResponse6.mmEnvironment,
-						com.tools20022.repository.msg.AcceptorAuthorisationResponse6.mmTransaction, com.tools20022.repository.msg.AcceptorAuthorisationResponse6.mmTransactionResponse,
-						com.tools20022.repository.msg.CardPaymentTransaction71.mmOriginalTransaction, com.tools20022.repository.msg.CardPaymentTransaction71.mmTransactionDetails,
-						com.tools20022.repository.msg.CardPaymentDataSetTransaction19.mmEnvironment, com.tools20022.repository.msg.CardPaymentDataSetTransaction19.mmTransaction,
-						com.tools20022.repository.msg.CardPaymentTransaction75.mmOriginalTransaction, com.tools20022.repository.msg.CardPaymentTransaction75.mmTransactionDetails,
-						com.tools20022.repository.msg.CardPaymentTransaction74.mmOriginalTransaction, com.tools20022.repository.msg.CardPaymentTransaction74.mmTransactionDetails,
-						com.tools20022.repository.msg.CardPaymentDataSetTransaction21.mmEnvironment, com.tools20022.repository.msg.CardPaymentDataSetTransaction21.mmTransaction,
-						com.tools20022.repository.msg.CardPaymentDataSetTransaction21.mmTransactionResponse, com.tools20022.repository.msg.CardPaymentTransaction70.mmOriginalTransaction,
-						com.tools20022.repository.msg.CardPaymentTransaction70.mmTransactionDetails, com.tools20022.repository.msg.CardPaymentDataSetTransaction20.mmEnvironment,
-						com.tools20022.repository.msg.CardPaymentDataSetTransaction20.mmTransaction, com.tools20022.repository.msg.CardPaymentTransaction72.mmOriginalTransaction,
-						com.tools20022.repository.msg.CardPaymentTransaction72.mmTransactionDetails, com.tools20022.repository.msg.CardPaymentTransaction76.mmOriginalTransaction,
-						com.tools20022.repository.msg.CardPaymentTransaction76.mmTransactionDetails, com.tools20022.repository.msg.CardPaymentDataSetTransaction18.mmEnvironment,
-						com.tools20022.repository.msg.CardPaymentDataSetTransaction18.mmTransaction, com.tools20022.repository.msg.CommonData6.mmEnvironment, com.tools20022.repository.msg.CardPaymentTransaction69.mmOriginalTransaction,
-						com.tools20022.repository.msg.CardPaymentTransaction69.mmTransactionDetails, com.tools20022.repository.msg.AcceptorCurrencyConversionAdvice1.mmEnvironment,
-						com.tools20022.repository.msg.AcceptorCurrencyConversionAdvice1.mmTransaction, com.tools20022.repository.msg.CardPaymentTransaction77.mmTransactionDetails,
-						com.tools20022.repository.msg.CardPaymentTransaction78.mmTransactionDetails);
+				derivationElement_lazy = () -> Arrays.asList(CardEntry1.mmAggregatedEntry, CardTransaction1Choice.mmAggregated, CardTransaction1Choice.mmIndividual, CardTransaction1.mmTransaction, EntryTransaction3.mmCardTransaction,
+						ReportEntry3.mmCardTransaction, EntryTransaction4.mmCardTransaction, ReportEntry4.mmCardTransaction, TransactionData1.mmTransactionDetails, AcceptorDiagnosticResponse1.mmEnvironment,
+						AcceptorDiagnosticResponse2.mmEnvironment, CommonData1.mmEnvironment, CardPaymentTransaction8.mmTransactionResult, CardPaymentTransaction4.mmOriginalTransaction, CardPaymentTransaction4.mmTransactionDetails,
+						CardPaymentDataSetTransaction1.mmEnvironment, CardPaymentDataSetTransaction1.mmTransaction, CommonData2.mmEnvironment, CardPaymentTransaction17.mmTransactionResult, CardPaymentTransaction14.mmOriginalTransaction,
+						CardPaymentTransaction14.mmTransactionDetails, CardPaymentDataSetTransaction2.mmEnvironment, CardPaymentDataSetTransaction2.mmTransaction, CardPaymentTransaction7.mmOriginalTransaction,
+						CardPaymentTransaction7.mmTransactionDetails, CardPaymentTransaction16.mmOriginalTransaction, CardPaymentTransaction16.mmTransactionDetails, CardPaymentTransaction20.mmOriginalTransaction,
+						CardPaymentTransaction20.mmTransactionDetails, CardPaymentDataSetTransaction3.mmEnvironment, CardPaymentDataSetTransaction3.mmTransaction, CardPaymentTransaction1.mmOriginalTransaction,
+						CardPaymentTransaction1.mmTransactionDetails, CardPaymentTransaction11.mmOriginalTransaction, CardPaymentTransaction11.mmTransactionDetails, CardPaymentTransaction19.mmOriginalTransaction,
+						CardPaymentTransaction19.mmTransactionDetails, CardPaymentDataSetTransaction4.mmEnvironment, CardPaymentDataSetTransaction4.mmTransaction, CardPaymentTransaction2.mmTransactionDetails,
+						CardPaymentTransaction12.mmTransactionDetails, CardPaymentDataSetTransaction5.mmEnvironment, CardPaymentDataSetTransaction5.mmTransaction, CardPaymentDataSetTransaction5.mmTransactionResponse,
+						AcceptorCancellationAdviceResponse1.mmEnvironment, AcceptorCancellationAdviceResponse2.mmEnvironment, AcceptorAuthorisationRequest1.mmEnvironment, AcceptorAuthorisationRequest1.mmTransaction,
+						AcceptorAuthorisationRequest2.mmEnvironment, AcceptorAuthorisationRequest2.mmTransaction, AcceptorCompletionAdviceResponse1.mmEnvironment, AcceptorCompletionAdviceResponse2.mmEnvironment,
+						CardPaymentTransaction5.mmOriginalTransaction, CardPaymentTransaction5.mmTransactionDetails, AcceptorCancellationRequest1.mmEnvironment, AcceptorCancellationRequest1.mmTransaction,
+						CardPaymentTransaction15.mmOriginalTransaction, CardPaymentTransaction15.mmTransactionDetails, AcceptorCancellationRequest2.mmEnvironment, AcceptorCancellationRequest2.mmTransaction,
+						CardPaymentTransaction6.mmTransactionDetails, AcceptorCancellationResponse1.mmEnvironment, AcceptorCancellationResponse1.mmTransaction, AcceptorCancellationResponse1.mmTransactionResponse,
+						AcceptorCancellationResponse2.mmEnvironment, AcceptorCancellationResponse2.mmTransaction, AcceptorCancellationResponse2.mmTransactionResponse, AcceptorDiagnosticRequest1.mmEnvironment,
+						AcceptorDiagnosticRequest2.mmEnvironment, CardPaymentTransaction3.mmOriginalTransaction, CardPaymentTransaction3.mmTransactionDetails, AcceptorCompletionAdvice1.mmEnvironment,
+						AcceptorCompletionAdvice1.mmTransaction, CardPaymentTransaction13.mmOriginalTransaction, CardPaymentTransaction13.mmTransactionDetails, AcceptorCompletionAdvice2.mmEnvironment,
+						AcceptorCompletionAdvice2.mmTransaction, AcceptorCancellationAdvice1.mmEnvironment, AcceptorCancellationAdvice1.mmTransaction, AcceptorCancellationAdvice2.mmEnvironment, AcceptorCancellationAdvice2.mmTransaction,
+						AcceptorAuthorisationResponse1.mmEnvironment, AcceptorAuthorisationResponse1.mmTransaction, AcceptorAuthorisationResponse1.mmTransactionResponse, AcceptorAuthorisationResponse2.mmEnvironment,
+						AcceptorAuthorisationResponse2.mmTransaction, AcceptorAuthorisationResponse2.mmTransactionResponse, AcceptorDiagnosticResponse3.mmEnvironment, AcceptorCurrencyConversionRequest1.mmEnvironment,
+						AcceptorCurrencyConversionRequest1.mmTransaction, AcceptorCancellationRequest3.mmEnvironment, AcceptorCancellationRequest3.mmTransaction, AcceptorAuthorisationResponse3.mmEnvironment,
+						AcceptorAuthorisationResponse3.mmTransaction, AcceptorAuthorisationResponse3.mmTransactionResponse, AcceptorDiagnosticRequest3.mmEnvironment, AcceptorCurrencyConversionResponse1.mmEnvironment,
+						AcceptorCurrencyConversionResponse1.mmTransaction, AcceptorCurrencyConversionResponse1.mmTransactionResponse, AcceptorCancellationAdviceResponse3.mmEnvironment, AcceptorCompletionAdvice3.mmEnvironment,
+						AcceptorCompletionAdvice3.mmTransaction, AcceptorAuthorisationRequest3.mmEnvironment, AcceptorAuthorisationRequest3.mmTransaction, AcceptorCompletionAdviceResponse3.mmEnvironment,
+						AcceptorCancellationResponse3.mmEnvironment, AcceptorCancellationResponse3.mmTransaction, AcceptorCancellationResponse3.mmTransactionResponse, AcceptorCancellationAdvice3.mmEnvironment,
+						AcceptorCancellationAdvice3.mmTransaction, AggregationTransaction1.mmIndividualPayment, CardPaymentTransaction28.mmOriginalTransaction, CardPaymentTransaction28.mmTransactionDetails,
+						CardPaymentTransaction22.mmOriginalTransaction, CardPaymentTransaction22.mmTransactionDetails, CardPaymentTransaction34.mmOriginalTransaction, CardPaymentTransaction34.mmTransactionDetails,
+						DetailedAmount5.mmCashBack, DetailedAmount5.mmGratuity, DetailedAmount5.mmFees, DetailedAmount5.mmRebate, DetailedAmount5.mmValueAddedTax, CardPaymentDataSetTransaction9.mmEnvironment,
+						CardPaymentDataSetTransaction9.mmTransaction, CardPaymentDataSetTransaction9.mmTransactionResponse, CardPaymentTransaction32.mmTransactionDetails, CardPaymentTransaction31.mmOriginalTransaction,
+						CardPaymentTransaction31.mmTransactionDetails, CardPaymentTransaction35.mmTransactionDetails, CommonData3.mmEnvironment, CardPaymentTransaction23.mmTransactionDetails, CardPaymentDataSetTransaction6.mmEnvironment,
+						CardPaymentDataSetTransaction6.mmTransaction, CardPaymentDataSetTransaction7.mmEnvironment, CardPaymentDataSetTransaction7.mmTransaction, CardPaymentDataSetTransaction8.mmEnvironment,
+						CardPaymentDataSetTransaction8.mmTransaction, CardPaymentTransaction29.mmOriginalTransaction, CardPaymentTransaction29.mmTransactionDetails, CardPaymentTransaction25.mmOriginalTransaction,
+						CardPaymentTransaction25.mmTransactionDetails, CardPaymentTransaction30.mmOriginalTransaction, CardPaymentTransaction30.mmTransactionDetails, CardPaymentTransaction26.mmOriginalTransaction,
+						CardPaymentTransaction26.mmTransactionDetails, ReportEntry7.mmCardTransaction, EntryTransaction7.mmCardTransaction, CardTransaction2.mmTransaction, CardTransaction2Choice.mmAggregated,
+						CardTransaction2Choice.mmIndividual, CardEntry2.mmAggregatedEntry, AcceptorCancellationRequest4.mmEnvironment, AcceptorCancellationRequest4.mmTransaction, AcceptorDiagnosticResponse4.mmEnvironment,
+						AcceptorAuthorisationRequest4.mmEnvironment, AcceptorAuthorisationRequest4.mmTransaction, AcceptorCurrencyConversionResponse2.mmEnvironment, AcceptorCurrencyConversionResponse2.mmTransaction,
+						AcceptorAuthorisationResponse4.mmEnvironment, AcceptorAuthorisationResponse4.mmTransaction, AcceptorAuthorisationResponse4.mmTransactionResponse, AcceptorCancellationAdvice4.mmEnvironment,
+						AcceptorCancellationAdvice4.mmTransaction, AcceptorCancellationResponse4.mmEnvironment, AcceptorCancellationResponse4.mmTransaction, AcceptorCancellationResponse4.mmTransactionResponse,
+						AcceptorCurrencyConversionRequest2.mmEnvironment, AcceptorCurrencyConversionRequest2.mmTransaction, AcceptorDiagnosticRequest4.mmEnvironment, AcceptorCompletionAdvice4.mmEnvironment,
+						AcceptorCompletionAdvice4.mmTransaction, AcceptorCancellationAdviceResponse4.mmEnvironment, AcceptorCompletionAdviceResponse4.mmEnvironment, CardPaymentTransaction38.mmTransactionDetails,
+						CardPaymentTransaction48.mmTransactionDetails, CardPaymentTransaction42.mmTransactionDetails, CardPaymentTransaction36.mmOriginalTransaction, CardPaymentTransaction36.mmTransactionDetails,
+						CardPaymentTransaction44.mmOriginalTransaction, CardPaymentTransaction44.mmTransactionDetails, CardPaymentTransaction45.mmOriginalTransaction, CardPaymentTransaction45.mmTransactionDetails,
+						DetailedAmount7.mmCashBack, DetailedAmount7.mmGratuity, DetailedAmount7.mmFees, DetailedAmount7.mmRebate, DetailedAmount7.mmValueAddedTax, CardPaymentTransaction49.mmOriginalTransaction,
+						CardPaymentTransaction49.mmTransactionDetails, CardPaymentDataSetTransaction12.mmEnvironment, CardPaymentDataSetTransaction12.mmTransaction, CardPaymentTransaction47.mmOriginalTransaction,
+						CardPaymentTransaction47.mmTransactionDetails, CardPaymentDataSetTransaction13.mmEnvironment, CardPaymentDataSetTransaction13.mmTransaction, CardPaymentDataSetTransaction13.mmTransactionResponse,
+						CardPaymentTransaction41.mmOriginalTransaction, CardPaymentTransaction41.mmTransactionDetails, CommonData4.mmEnvironment, CardPaymentDataSetTransaction11.mmEnvironment, CardPaymentDataSetTransaction11.mmTransaction,
+						CardPaymentTransaction46.mmOriginalTransaction, CardPaymentTransaction46.mmTransactionDetails, CardPaymentDataSetTransaction10.mmEnvironment, CardPaymentDataSetTransaction10.mmTransaction,
+						CardPaymentTransaction40.mmOriginalTransaction, CardPaymentTransaction40.mmTransactionDetails, DetailedAmount12.mmFees, DetailedAmount12.mmDonation, ATMTransactionAmounts2.mmDailyBalance,
+						ATMTransactionAmounts2.mmWeeklyBalance, ATMTransactionAmounts2.mmMonthlyBalance, CardTransaction4.mmTransactionDetails, CardTransaction8.mmTransactionDetails, CardTransaction5.mmTransactionDetails,
+						CardTransaction15.mmTransactionDetails, CardTransaction7.mmTransactionDetails, CardTransaction6.mmTransactionDetails, ReportEntry8.mmCardTransaction, EntryTransaction8.mmCardTransaction,
+						AcceptorCancellationAdviceResponse5.mmEnvironment, AcceptorDiagnosticRequest5.mmEnvironment, AcceptorCurrencyConversionResponse3.mmEnvironment, AcceptorCurrencyConversionResponse3.mmTransaction,
+						AcceptorCurrencyConversionRequest3.mmEnvironment, AcceptorCurrencyConversionRequest3.mmTransaction, AcceptorAuthorisationResponse5.mmEnvironment, AcceptorAuthorisationResponse5.mmTransaction,
+						AcceptorAuthorisationResponse5.mmTransactionResponse, AcceptorCancellationResponse5.mmEnvironment, AcceptorCancellationResponse5.mmTransaction, AcceptorCancellationResponse5.mmTransactionResponse,
+						AcceptorCancellationAdvice5.mmEnvironment, AcceptorCancellationAdvice5.mmTransaction, AcceptorCompletionAdviceResponse5.mmEnvironment, AcceptorAuthorisationRequest5.mmEnvironment,
+						AcceptorAuthorisationRequest5.mmTransaction, AcceptorCancellationRequest5.mmEnvironment, AcceptorCancellationRequest5.mmTransaction, AcceptorCompletionAdvice5.mmEnvironment, AcceptorCompletionAdvice5.mmTransaction,
+						DetailedAmount15.mmCashBack, DetailedAmount15.mmGratuity, DetailedAmount15.mmFees, DetailedAmount15.mmRebate, DetailedAmount15.mmValueAddedTax, CardPaymentTransaction63.mmTransactionDetails,
+						CardPaymentDataSetTransaction14.mmEnvironment, CardPaymentDataSetTransaction14.mmTransaction, CardPaymentTransaction60.mmOriginalTransaction, CardPaymentTransaction60.mmTransactionDetails,
+						CardPaymentTransaction57.mmTransactionDetails, CardPaymentTransaction61.mmOriginalTransaction, CardPaymentTransaction61.mmTransactionDetails, CardPaymentTransaction64.mmOriginalTransaction,
+						CardPaymentTransaction64.mmTransactionDetails, CardPaymentTransaction53.mmTransactionDetails, CardPaymentTransaction59.mmOriginalTransaction, CardPaymentTransaction59.mmTransactionDetails,
+						CardPaymentTransaction56.mmOriginalTransaction, CardPaymentTransaction56.mmTransactionDetails, CardPaymentDataSetTransaction15.mmEnvironment, CardPaymentDataSetTransaction15.mmTransaction,
+						AggregationTransaction2.mmIndividualPayment, CardPaymentTransaction51.mmOriginalTransaction, CardPaymentTransaction51.mmTransactionDetails, CardPaymentDataSetTransaction16.mmEnvironment,
+						CardPaymentDataSetTransaction16.mmTransaction, CardPaymentDataSetTransaction17.mmEnvironment, CardPaymentDataSetTransaction17.mmTransaction, CardPaymentDataSetTransaction17.mmTransactionResponse,
+						CommonData5.mmEnvironment, CardPaymentTransaction55.mmOriginalTransaction, CardPaymentTransaction55.mmTransactionDetails, CardPaymentTransaction62.mmOriginalTransaction,
+						CardPaymentTransaction62.mmTransactionDetails, DetailedAmount16.mmFees, DetailedAmount16.mmDonation, DetailedAmount17.mmFees, DetailedAmount17.mmDonation, AcceptorCurrencyConversionResponse4.mmEnvironment,
+						AcceptorCurrencyConversionResponse4.mmTransaction, AcceptorCancellationRequest6.mmEnvironment, AcceptorCancellationRequest6.mmTransaction, AcceptorDiagnosticRequest6.mmEnvironment,
+						AcceptorCancellationAdviceResponse6.mmEnvironment, AcceptorCurrencyConversionRequest4.mmEnvironment, AcceptorCurrencyConversionRequest4.mmTransaction, AcceptorCancellationResponse6.mmEnvironment,
+						AcceptorCancellationResponse6.mmTransaction, AcceptorCancellationResponse6.mmTransactionResponse, AcceptorAuthorisationRequest6.mmEnvironment, AcceptorAuthorisationRequest6.mmTransaction,
+						AcceptorCancellationAdvice6.mmEnvironment, AcceptorCancellationAdvice6.mmTransaction, AcceptorCompletionAdvice6.mmEnvironment, AcceptorCompletionAdvice6.mmTransaction,
+						AcceptorCompletionAdviceResponse6.mmEnvironment, AcceptorAuthorisationResponse6.mmEnvironment, AcceptorAuthorisationResponse6.mmTransaction, AcceptorAuthorisationResponse6.mmTransactionResponse,
+						CardPaymentTransaction71.mmOriginalTransaction, CardPaymentTransaction71.mmTransactionDetails, CardPaymentDataSetTransaction19.mmEnvironment, CardPaymentDataSetTransaction19.mmTransaction,
+						CardPaymentTransaction75.mmOriginalTransaction, CardPaymentTransaction75.mmTransactionDetails, CardPaymentTransaction74.mmOriginalTransaction, CardPaymentTransaction74.mmTransactionDetails,
+						CardPaymentDataSetTransaction21.mmEnvironment, CardPaymentDataSetTransaction21.mmTransaction, CardPaymentDataSetTransaction21.mmTransactionResponse, CardPaymentTransaction70.mmOriginalTransaction,
+						CardPaymentTransaction70.mmTransactionDetails, CardPaymentDataSetTransaction20.mmEnvironment, CardPaymentDataSetTransaction20.mmTransaction, CardPaymentTransaction72.mmOriginalTransaction,
+						CardPaymentTransaction72.mmTransactionDetails, CardPaymentTransaction76.mmOriginalTransaction, CardPaymentTransaction76.mmTransactionDetails, CardPaymentDataSetTransaction18.mmEnvironment,
+						CardPaymentDataSetTransaction18.mmTransaction, CommonData6.mmEnvironment, CardPaymentTransaction69.mmOriginalTransaction, CardPaymentTransaction69.mmTransactionDetails,
+						AcceptorCurrencyConversionAdvice1.mmEnvironment, AcceptorCurrencyConversionAdvice1.mmTransaction, CardPaymentTransaction77.mmTransactionDetails, CardPaymentTransaction78.mmTransactionDetails);
 				superType_lazy = () -> IndividualPayment.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CardPayment.mmPaymentCard, com.tools20022.repository.entity.CardPayment.mmProduct, com.tools20022.repository.entity.CardPayment.mmDetailedAmount,
-						com.tools20022.repository.entity.CardPayment.mmAmountQualifier, com.tools20022.repository.entity.CardPayment.mmCardPaymentAcquiring, com.tools20022.repository.entity.CardPayment.mmPaymentCardPartyRole,
-						com.tools20022.repository.entity.CardPayment.mmCardPaymentStatus, com.tools20022.repository.entity.CardPayment.mmDetailedAmountLabel, com.tools20022.repository.entity.CardPayment.mmReconciliation,
-						com.tools20022.repository.entity.CardPayment.mmTransactionCategory, com.tools20022.repository.entity.CardPayment.mmCashBackAmount, com.tools20022.repository.entity.CardPayment.mmGratuity,
-						com.tools20022.repository.entity.CardPayment.mmDebitCreditDirection, com.tools20022.repository.entity.CardPayment.mmATMTotal);
+				element_lazy = () -> Arrays.asList(CardPayment.mmPaymentCard, CardPayment.mmProduct, CardPayment.mmDetailedAmount, CardPayment.mmAmountQualifier, CardPayment.mmCardPaymentAcquiring, CardPayment.mmPaymentCardPartyRole,
+						CardPayment.mmCardPaymentStatus, CardPayment.mmDetailedAmountLabel, CardPayment.mmReconciliation, CardPayment.mmTransactionCategory, CardPayment.mmCashBackAmount, CardPayment.mmGratuity,
+						CardPayment.mmDebitCreditDirection, CardPayment.mmATMTotal);
 				derivationComponent_lazy = () -> Arrays.asList(CardAggregated1.mmObject(), CardEntry1.mmObject(), CardIndividualTransaction1.mmObject(), CardTransaction1Choice.mmObject(), CardTransaction1.mmObject(),
 						CardAmountAndCurrencyExchange1.mmObject(), CardPaymentTransactionDetails8.mmObject(), CardPaymentEnvironment8.mmObject(), AcceptorDiagnosticResponse1.mmObject(), CardPaymentEnvironment17.mmObject(),
 						AcceptorDiagnosticResponse2.mmObject(), CardPaymentEnvironment5.mmObject(), CommonData1.mmObject(), CardPaymentEnvironment6.mmObject(), CardPaymentTransactionResult1.mmObject(), CardPaymentTransaction8.mmObject(),

@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.ProcessingType1Code
+ * ProcessingType1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -56,13 +65,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.ProcessingTypeCode#mmCoSDBlocking
  * ProcessingTypeCode.mmCoSDBlocking}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.ProcessingType1Code
- * ProcessingType1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -117,7 +119,7 @@ public class ProcessingTypeCode {
 	 */
 	public static final MMCode mmRejection = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rejection";
 			definition = "Restriction is the rejection during the settlement instruction validation.";
 			owner_lazy = () -> ProcessingTypeCode.mmObject();
@@ -150,7 +152,7 @@ public class ProcessingTypeCode {
 	 */
 	public static final MMCode mmCSDValidationHold = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CSDValidationHold";
 			definition = "Restriction is setting the CSD validation automatically to hold when accepting a settlement instruction.";
 			owner_lazy = () -> ProcessingTypeCode.mmObject();
@@ -183,7 +185,7 @@ public class ProcessingTypeCode {
 	 */
 	public static final MMCode mmReservation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reservation";
 			definition = "Restriction is the creation of a reservation of a cash balance or a securities position for a specific purpose.";
 			owner_lazy = () -> ProcessingTypeCode.mmObject();
@@ -217,7 +219,7 @@ public class ProcessingTypeCode {
 	 */
 	public static final MMCode mmBlocking = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Blocking";
 			definition = "Restriction is the blocking of a party, securities account, security or cash account from settlement, blocking of securities position or cash balance for a specific purpose";
 			owner_lazy = () -> ProcessingTypeCode.mmObject();
@@ -250,7 +252,7 @@ public class ProcessingTypeCode {
 	 */
 	public static final MMCode mmEarmarking = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Earmarking";
 			definition = "Restriction of linked to the balance type that defines and manages position types for securities positions.";
 			owner_lazy = () -> ProcessingTypeCode.mmObject();
@@ -283,7 +285,7 @@ public class ProcessingTypeCode {
 	 */
 	public static final MMCode mmEarmarkingForAutoCollateralisation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EarmarkingForAutoCollateralisation";
 			definition = "Restriction of linked to the balance type that defines and manages position types for securities positions for auto-collateralisation.";
 			owner_lazy = () -> ProcessingTypeCode.mmObject();
@@ -313,7 +315,7 @@ public class ProcessingTypeCode {
 	 */
 	public static final MMCode mmDeliverable = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Deliverable";
 			definition = "No restriction has been defined.";
 			owner_lazy = () -> ProcessingTypeCode.mmObject();
@@ -344,7 +346,7 @@ public class ProcessingTypeCode {
 	 */
 	public static final MMCode mmCollateralised = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Collateralised";
 			definition = "Restriction is linked to a sub-pledged collateral transaction.";
 			owner_lazy = () -> ProcessingTypeCode.mmObject();
@@ -374,7 +376,7 @@ public class ProcessingTypeCode {
 	 */
 	public static final MMCode mmCoSDBlocking = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoSDBlocking";
 			definition = "Restriction does not support any partial execution.";
 			owner_lazy = () -> ProcessingTypeCode.mmObject();
@@ -385,15 +387,13 @@ public class ProcessingTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("RJCT");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ProcessingTypeCode";
 				definition = "Specifies the type of processing restrictions the central system must apply.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ProcessingTypeCode.mmRejection, com.tools20022.repository.codeset.ProcessingTypeCode.mmCSDValidationHold,
-						com.tools20022.repository.codeset.ProcessingTypeCode.mmReservation, com.tools20022.repository.codeset.ProcessingTypeCode.mmBlocking, com.tools20022.repository.codeset.ProcessingTypeCode.mmEarmarking,
-						com.tools20022.repository.codeset.ProcessingTypeCode.mmEarmarkingForAutoCollateralisation, com.tools20022.repository.codeset.ProcessingTypeCode.mmDeliverable,
-						com.tools20022.repository.codeset.ProcessingTypeCode.mmCollateralised, com.tools20022.repository.codeset.ProcessingTypeCode.mmCoSDBlocking);
+				code_lazy = () -> Arrays.asList(ProcessingTypeCode.mmRejection, ProcessingTypeCode.mmCSDValidationHold, ProcessingTypeCode.mmReservation, ProcessingTypeCode.mmBlocking, ProcessingTypeCode.mmEarmarking,
+						ProcessingTypeCode.mmEarmarkingForAutoCollateralisation, ProcessingTypeCode.mmDeliverable, ProcessingTypeCode.mmCollateralised, ProcessingTypeCode.mmCoSDBlocking);
 				derivation_lazy = () -> Arrays.asList(ProcessingType1Code.mmObject());
 			}
 		});

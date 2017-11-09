@@ -20,9 +20,11 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CryptographicKeyType4Code;
 import com.tools20022.repository.datatype.Max140Binary;
 import com.tools20022.repository.datatype.Max5000Binary;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -107,7 +109,7 @@ public class ATMConfigurationParameter2 {
 			componentContext_lazy = () -> ATMConfigurationParameter2.mmObject();
 			isDerived = false;
 			xmlTag = "KeyCtgy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "KeyCategory";
 			definition = "Category of the cryptographic key.";
 			maxOccurs = 1;
@@ -150,7 +152,7 @@ public class ATMConfigurationParameter2 {
 			componentContext_lazy = () -> ATMConfigurationParameter2.mmObject();
 			isDerived = false;
 			xmlTag = "HstChllng";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HostChallenge";
 			definition = "Random value from the host provided during a previous exchange.";
 			maxOccurs = 1;
@@ -195,7 +197,7 @@ public class ATMConfigurationParameter2 {
 			componentContext_lazy = () -> ATMConfigurationParameter2.mmObject();
 			isDerived = false;
 			xmlTag = "Cert";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Certificate";
 			definition = "Ordered certificate chain of the asymmetric key encryption key, starting with the host certificate.";
 			minOccurs = 0;
@@ -234,7 +236,7 @@ public class ATMConfigurationParameter2 {
 			componentContext_lazy = () -> ATMConfigurationParameter2.mmObject();
 			isDerived = false;
 			xmlTag = "KeyProps";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "KeyProperties";
 			definition = "Cryptographic key involved in the security command.";
 			minOccurs = 0;
@@ -246,10 +248,9 @@ public class ATMConfigurationParameter2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMConfigurationParameter2.mmKeyCategory, com.tools20022.repository.msg.ATMConfigurationParameter2.mmHostChallenge,
-						com.tools20022.repository.msg.ATMConfigurationParameter2.mmCertificate, com.tools20022.repository.msg.ATMConfigurationParameter2.mmKeyProperties);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(ATMConfigurationParameter2.mmKeyCategory, ATMConfigurationParameter2.mmHostChallenge, ATMConfigurationParameter2.mmCertificate, ATMConfigurationParameter2.mmKeyProperties);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ATMConfigurationParameter2";
 				definition = "Parameters to be used by the various cryptographic key commands.";
 				previousVersion_lazy = () -> ATMConfigurationParameter1.mmObject();

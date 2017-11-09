@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.UserInterfaceCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -79,7 +81,7 @@ public class UserInterface3Code extends UserInterfaceCode {
 	 */
 	public static final MMCode mmAcquirer = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Acquirer";
 			owner_lazy = () -> UserInterface3Code.mmObject();
 		}
@@ -102,7 +104,7 @@ public class UserInterface3Code extends UserInterfaceCode {
 	 */
 	public static final MMCode mmAgent = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Agent";
 			owner_lazy = () -> UserInterface3Code.mmObject();
 		}
@@ -125,7 +127,7 @@ public class UserInterface3Code extends UserInterfaceCode {
 	 */
 	public static final MMCode mmIssuer = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Issuer";
 			owner_lazy = () -> UserInterface3Code.mmObject();
 		}
@@ -134,11 +136,11 @@ public class UserInterface3Code extends UserInterfaceCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "UserInterface3Code";
 				definition = "Destination of the message.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UserInterface3Code.mmAcquirer, com.tools20022.repository.codeset.UserInterface3Code.mmAgent, com.tools20022.repository.codeset.UserInterface3Code.mmIssuer);
+				code_lazy = () -> Arrays.asList(UserInterface3Code.mmAcquirer, UserInterface3Code.mmAgent, UserInterface3Code.mmIssuer);
 				trace_lazy = () -> UserInterfaceCode.mmObject();
 			}
 		});

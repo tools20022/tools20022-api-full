@@ -19,10 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.sese.PEPOrISAOrPortfolioTransferCancellationRequestV02;
 import com.tools20022.repository.choice.PartyIdentification2Choice;
-import com.tools20022.repository.entity.Organisation;
-import com.tools20022.repository.entity.Person;
-import com.tools20022.repository.entity.PortfolioTransfer;
+import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -150,7 +151,7 @@ public class PEPISATransfer7 {
 			componentContext_lazy = () -> PEPISATransfer7.mmObject();
 			isDerived = false;
 			xmlTag = "PmryIndvInvstr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PrimaryIndividualInvestor";
 			definition = "Information identifying the primary individual investor, eg, name, address, social security number and date of birth.";
 			maxOccurs = 1;
@@ -199,7 +200,7 @@ public class PEPISATransfer7 {
 			componentContext_lazy = () -> PEPISATransfer7.mmObject();
 			isDerived = false;
 			xmlTag = "ScndryIndvInvstr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecondaryIndividualInvestor";
 			definition = "Information identifying the secondary individual investor, eg, name, address, social security number and date of birth.";
 			maxOccurs = 1;
@@ -248,7 +249,7 @@ public class PEPISATransfer7 {
 			componentContext_lazy = () -> PEPISATransfer7.mmObject();
 			isDerived = false;
 			xmlTag = "OthrIndvInvstr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherIndividualInvestor";
 			definition = "Information identifying the other individual investors, eg, name, address, social security number and date of birth.";
 			minOccurs = 0;
@@ -296,7 +297,7 @@ public class PEPISATransfer7 {
 			componentContext_lazy = () -> PEPISATransfer7.mmObject();
 			isDerived = false;
 			xmlTag = "PmryCorpInvstr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PrimaryCorporateInvestor";
 			definition = "Information identifying the primary corporate investor, eg, name and address.";
 			maxOccurs = 1;
@@ -345,7 +346,7 @@ public class PEPISATransfer7 {
 			componentContext_lazy = () -> PEPISATransfer7.mmObject();
 			isDerived = false;
 			xmlTag = "ScndryCorpInvstr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecondaryCorporateInvestor";
 			definition = "Information identifying the secondary corporate investor, eg, name and address.";
 			maxOccurs = 1;
@@ -394,7 +395,7 @@ public class PEPISATransfer7 {
 			componentContext_lazy = () -> PEPISATransfer7.mmObject();
 			isDerived = false;
 			xmlTag = "OthrCorpInvstr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherCorporateInvestor";
 			definition = "Information identifying the other corporate investors, eg, name and address.";
 			minOccurs = 0;
@@ -438,11 +439,11 @@ public class PEPISATransfer7 {
 	 */
 	public static final MMMessageAssociationEnd mmClientAccount = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PortfolioTransfer.mmAccountFrom;
+			businessElementTrace_lazy = () -> PortfolioTransfer.mmAccountFrom;
 			componentContext_lazy = () -> PEPISATransfer7.mmObject();
 			isDerived = false;
 			xmlTag = "ClntAcct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClientAccount";
 			definition = "Identification of an account owned by the investor at the old plan manager (account servicer).";
 			maxOccurs = 1;
@@ -487,11 +488,11 @@ public class PEPISATransfer7 {
 	 */
 	public static final MMMessageAssociationEnd mmNomineeAccount = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PortfolioTransfer.mmNomineeAccount;
+			businessElementTrace_lazy = () -> PortfolioTransfer.mmNomineeAccount;
 			componentContext_lazy = () -> PEPISATransfer7.mmObject();
 			isDerived = false;
 			xmlTag = "NmneeAcct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NomineeAccount";
 			definition = "Account held in the name of a party that is not the name of the beneficial owner of the shares.";
 			maxOccurs = 1;
@@ -538,11 +539,11 @@ public class PEPISATransfer7 {
 	 */
 	public static final MMMessageAssociationEnd mmNewPlanManager = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> PEPISATransfer7.mmObject();
 			isDerived = false;
 			xmlTag = "NewPlanMgr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewPlanManager";
 			definition = "Information related to the institution to which the financial instrument is to be transferred.";
 			maxOccurs = 1;
@@ -588,11 +589,11 @@ public class PEPISATransfer7 {
 	 */
 	public static final MMMessageAssociationEnd mmCashAccount = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentAccount.mmCashAccount;
+			businessElementTrace_lazy = () -> InvestmentAccount.mmCashAccount;
 			componentContext_lazy = () -> PEPISATransfer7.mmObject();
 			isDerived = false;
 			xmlTag = "CshAcct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashAccount";
 			definition = "Identification of an account owned by the investor to which a cash entry is made based on the transfer of asset(s).";
 			maxOccurs = 1;
@@ -640,7 +641,7 @@ public class PEPISATransfer7 {
 			componentContext_lazy = () -> PEPISATransfer7.mmObject();
 			isDerived = false;
 			xmlTag = "PdctTrf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProductTransfer";
 			definition = "Provides information related to the asset(s) transferred.";
 			minOccurs = 1;
@@ -682,7 +683,7 @@ public class PEPISATransfer7 {
 			componentContext_lazy = () -> PEPISATransfer7.mmObject();
 			isDerived = false;
 			xmlTag = "Xtnsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Extension";
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
 			minOccurs = 0;
@@ -694,15 +695,13 @@ public class PEPISATransfer7 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PEPISATransfer7.mmPrimaryIndividualInvestor, com.tools20022.repository.msg.PEPISATransfer7.mmSecondaryIndividualInvestor,
-						com.tools20022.repository.msg.PEPISATransfer7.mmOtherIndividualInvestor, com.tools20022.repository.msg.PEPISATransfer7.mmPrimaryCorporateInvestor,
-						com.tools20022.repository.msg.PEPISATransfer7.mmSecondaryCorporateInvestor, com.tools20022.repository.msg.PEPISATransfer7.mmOtherCorporateInvestor, com.tools20022.repository.msg.PEPISATransfer7.mmClientAccount,
-						com.tools20022.repository.msg.PEPISATransfer7.mmNomineeAccount, com.tools20022.repository.msg.PEPISATransfer7.mmNewPlanManager, com.tools20022.repository.msg.PEPISATransfer7.mmCashAccount,
-						com.tools20022.repository.msg.PEPISATransfer7.mmProductTransfer, com.tools20022.repository.msg.PEPISATransfer7.mmExtension);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.PEPOrISAOrPortfolioTransferCancellationRequestV02.mmCancellationByTransferInstructionDetails);
+				messageElement_lazy = () -> Arrays.asList(PEPISATransfer7.mmPrimaryIndividualInvestor, PEPISATransfer7.mmSecondaryIndividualInvestor, PEPISATransfer7.mmOtherIndividualInvestor, PEPISATransfer7.mmPrimaryCorporateInvestor,
+						PEPISATransfer7.mmSecondaryCorporateInvestor, PEPISATransfer7.mmOtherCorporateInvestor, PEPISATransfer7.mmClientAccount, PEPISATransfer7.mmNomineeAccount, PEPISATransfer7.mmNewPlanManager,
+						PEPISATransfer7.mmCashAccount, PEPISATransfer7.mmProductTransfer, PEPISATransfer7.mmExtension);
+				messageBuildingBlock_lazy = () -> Arrays.asList(PEPOrISAOrPortfolioTransferCancellationRequestV02.mmCancellationByTransferInstructionDetails);
 				trace_lazy = () -> PortfolioTransfer.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PEPISATransfer7";
 				definition = "Information about a transfer instruction.";
 				nextVersions_lazy = () -> Arrays.asList(PEPISATransfer11.mmObject());

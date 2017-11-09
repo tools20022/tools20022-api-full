@@ -19,12 +19,16 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.DocumentType4Code;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.Max140Text;
 import com.tools20022.repository.datatype.Max256Text;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.Document;
+import com.tools20022.repository.entity.ElectronicAddress;
+import com.tools20022.repository.entity.GenericIdentification;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -114,11 +118,11 @@ public class DocumentGeneralInformation1 {
 	 */
 	public static final MMMessageAttribute mmDocumentType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Document.mmType;
+			businessElementTrace_lazy = () -> Document.mmType;
 			componentContext_lazy = () -> DocumentGeneralInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "DocTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DocumentType";
 			definition = "Specifies the type of the document, for example commercial invoice.";
 			maxOccurs = 1;
@@ -161,11 +165,11 @@ public class DocumentGeneralInformation1 {
 	 */
 	public static final MMMessageAttribute mmDocumentNumber = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmIdentification;
+			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> DocumentGeneralInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "DocNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DocumentNumber";
 			definition = "Unique identifier of the document.";
 			maxOccurs = 1;
@@ -209,7 +213,7 @@ public class DocumentGeneralInformation1 {
 			componentContext_lazy = () -> DocumentGeneralInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "SndrRcvrSeqId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SenderReceiverSequenceIdentification";
 			definition = "Specifies the identification sequence number for a specific couple sender/receiver.";
 			maxOccurs = 1;
@@ -252,11 +256,11 @@ public class DocumentGeneralInformation1 {
 	 */
 	public static final MMMessageAttribute mmIssueDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Document.mmIssueDate;
+			businessElementTrace_lazy = () -> Document.mmIssueDate;
 			componentContext_lazy = () -> DocumentGeneralInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "IsseDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssueDate";
 			definition = "Issue date of the document.";
 			maxOccurs = 1;
@@ -299,11 +303,11 @@ public class DocumentGeneralInformation1 {
 	 */
 	public static final MMMessageAttribute mmURL = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ElectronicAddress.mmURLAddress;
+			businessElementTrace_lazy = () -> ElectronicAddress.mmURLAddress;
 			componentContext_lazy = () -> DocumentGeneralInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "URL";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "URL";
 			definition = "URL (Uniform Resource Locator) related to the document.";
 			maxOccurs = 1;
@@ -315,12 +319,11 @@ public class DocumentGeneralInformation1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DocumentGeneralInformation1.mmDocumentType, com.tools20022.repository.msg.DocumentGeneralInformation1.mmDocumentNumber,
-						com.tools20022.repository.msg.DocumentGeneralInformation1.mmSenderReceiverSequenceIdentification, com.tools20022.repository.msg.DocumentGeneralInformation1.mmIssueDate,
-						com.tools20022.repository.msg.DocumentGeneralInformation1.mmURL);
+				messageElement_lazy = () -> Arrays.asList(DocumentGeneralInformation1.mmDocumentType, DocumentGeneralInformation1.mmDocumentNumber, DocumentGeneralInformation1.mmSenderReceiverSequenceIdentification,
+						DocumentGeneralInformation1.mmIssueDate, DocumentGeneralInformation1.mmURL);
 				trace_lazy = () -> Document.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DocumentGeneralInformation1";
 				definition = "General information that unambiguously identifies a document, such as identification number and issue date time.";
 			}

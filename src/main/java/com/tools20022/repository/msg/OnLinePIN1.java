@@ -20,9 +20,11 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.PINFormat1Code;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.Authentication;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -103,7 +105,7 @@ public class OnLinePIN1 {
 			componentContext_lazy = () -> OnLinePIN1.mmObject();
 			isDerived = false;
 			xmlTag = "NcrptdPINBlck";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EncryptedPINBlock";
 			definition = "Encrypted PIN (Personal Identification Number).";
 			maxOccurs = 1;
@@ -147,11 +149,11 @@ public class OnLinePIN1 {
 	 */
 	public static final MMMessageAttribute mmPINFormat = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Authentication.mmPINFormat;
+			businessElementTrace_lazy = () -> Authentication.mmPINFormat;
 			componentContext_lazy = () -> OnLinePIN1.mmObject();
 			isDerived = false;
 			xmlTag = "PINFrmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PINFormat";
 			definition = "PIN format before encryption.";
 			maxOccurs = 1;
@@ -191,7 +193,7 @@ public class OnLinePIN1 {
 			componentContext_lazy = () -> OnLinePIN1.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlInpt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInput";
 			definition = "Additional information required to verify the PIN.";
 			maxOccurs = 1;
@@ -203,10 +205,10 @@ public class OnLinePIN1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OnLinePIN1.mmEncryptedPINBlock, com.tools20022.repository.msg.OnLinePIN1.mmPINFormat, com.tools20022.repository.msg.OnLinePIN1.mmAdditionalInput);
+				messageElement_lazy = () -> Arrays.asList(OnLinePIN1.mmEncryptedPINBlock, OnLinePIN1.mmPINFormat, OnLinePIN1.mmAdditionalInput);
 				trace_lazy = () -> Authentication.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OnLinePIN1";
 				definition = "Encrypted personal identification number (PIN) and related information.";
 				nextVersions_lazy = () -> Arrays.asList(OnLinePIN2.mmObject());

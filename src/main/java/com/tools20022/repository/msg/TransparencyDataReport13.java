@@ -20,8 +20,13 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.auth.FinancialInstrumentReportingEquityTradingActivityReportV01;
 import com.tools20022.repository.datatype.*;
+import com.tools20022.repository.entity.SecuritiesIdentification;
 import com.tools20022.repository.entity.Security;
+import com.tools20022.repository.entity.Trade;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -133,7 +138,7 @@ public class TransparencyDataReport13 {
 			componentContext_lazy = () -> TransparencyDataReport13.mmObject();
 			isDerived = false;
 			xmlTag = "TechRcrdId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TechnicalRecordIdentification";
 			definition = "Unique identifier of a record in a message used as part of error management and status advice messages.\r\n\r\nUsage:\r\nThis identification will be used in the status advice report sent back.";
 			maxOccurs = 1;
@@ -177,11 +182,11 @@ public class TransparencyDataReport13 {
 	 */
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesIdentification.mmSecurityIdentification;
+			businessElementTrace_lazy = () -> SecuritiesIdentification.mmSecurityIdentification;
 			componentContext_lazy = () -> TransparencyDataReport13.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Identifies the financial instrument using an ISIN.";
 			maxOccurs = 1;
@@ -224,11 +229,11 @@ public class TransparencyDataReport13 {
 	 */
 	public static final MMMessageAttribute mmReportingDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Trade.mmTradeDateTime;
+			businessElementTrace_lazy = () -> Trade.mmTradeDateTime;
 			componentContext_lazy = () -> TransparencyDataReport13.mmObject();
 			isDerived = false;
 			xmlTag = "RptgDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportingDate";
 			definition = "Date to which the quantitative data fields below relate.";
 			maxOccurs = 1;
@@ -275,11 +280,11 @@ public class TransparencyDataReport13 {
 	 */
 	public static final MMMessageAttribute mmTradingVenue = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmPlaceOfListing;
+			businessElementTrace_lazy = () -> Security.mmPlaceOfListing;
 			componentContext_lazy = () -> TransparencyDataReport13.mmObject();
 			isDerived = false;
 			xmlTag = "TradgVn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradingVenue";
 			definition = "Segment MIC for the trading venue where applicable, otherwise the operational MIC.";
 			maxOccurs = 1;
@@ -324,7 +329,7 @@ public class TransparencyDataReport13 {
 			componentContext_lazy = () -> TransparencyDataReport13.mmObject();
 			isDerived = false;
 			xmlTag = "Sspnsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Suspension";
 			definition = "Indicates whether the instrument was suspended for trading on that Trading Venue for the whole day on the given reporting day.";
 			maxOccurs = 1;
@@ -366,7 +371,7 @@ public class TransparencyDataReport13 {
 			componentContext_lazy = () -> TransparencyDataReport13.mmObject();
 			isDerived = false;
 			xmlTag = "TxsExctd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionsExecuted";
 			definition = "Total number of transactions executed on the reporting day.\r\n\r\n";
 			maxOccurs = 1;
@@ -410,7 +415,7 @@ public class TransparencyDataReport13 {
 			componentContext_lazy = () -> TransparencyDataReport13.mmObject();
 			isDerived = false;
 			xmlTag = "TxsExctdExclgPreTradWvr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionsExecutedExcludingPreTradeWaiver";
 			definition = "Details all transactions that have been performed under a pre-trade Waiver.";
 			maxOccurs = 1;
@@ -454,7 +459,7 @@ public class TransparencyDataReport13 {
 			componentContext_lazy = () -> TransparencyDataReport13.mmObject();
 			isDerived = false;
 			xmlTag = "TxsExctdExclgPstTradLrgInScaleWvr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionsExecutedExcludingPostTradeLargeInScaleWaiver";
 			definition = "Details all transactions that have been performed under a post-trade large in scale waivers.";
 			maxOccurs = 1;
@@ -467,14 +472,13 @@ public class TransparencyDataReport13 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransparencyDataReport13.mmTechnicalRecordIdentification, com.tools20022.repository.msg.TransparencyDataReport13.mmIdentification,
-						com.tools20022.repository.msg.TransparencyDataReport13.mmReportingDate, com.tools20022.repository.msg.TransparencyDataReport13.mmTradingVenue, com.tools20022.repository.msg.TransparencyDataReport13.mmSuspension,
-						com.tools20022.repository.msg.TransparencyDataReport13.mmTransactionsExecuted, com.tools20022.repository.msg.TransparencyDataReport13.mmTransactionsExecutedExcludingPreTradeWaiver,
-						com.tools20022.repository.msg.TransparencyDataReport13.mmTransactionsExecutedExcludingPostTradeLargeInScaleWaiver);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.auth.FinancialInstrumentReportingEquityTradingActivityReportV01.mmEquityTransparencyData);
+				messageElement_lazy = () -> Arrays.asList(TransparencyDataReport13.mmTechnicalRecordIdentification, TransparencyDataReport13.mmIdentification, TransparencyDataReport13.mmReportingDate,
+						TransparencyDataReport13.mmTradingVenue, TransparencyDataReport13.mmSuspension, TransparencyDataReport13.mmTransactionsExecuted, TransparencyDataReport13.mmTransactionsExecutedExcludingPreTradeWaiver,
+						TransparencyDataReport13.mmTransactionsExecutedExcludingPostTradeLargeInScaleWaiver);
+				messageBuildingBlock_lazy = () -> Arrays.asList(FinancialInstrumentReportingEquityTradingActivityReportV01.mmEquityTransparencyData);
 				trace_lazy = () -> Security.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TransparencyDataReport13";
 				definition = "Provides for reporting quantitative details of equity instruments as part of transparency calculations.";
 			}

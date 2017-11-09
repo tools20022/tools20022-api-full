@@ -18,7 +18,10 @@
 package com.tools20022.repository.entity;
 
 import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.UndertakingPartyRole;
+import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CommunicationChannel1;
 import com.tools20022.repository.msg.PlaceOfPresentation1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -35,6 +38,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * <strong>Constant fields:</strong>
  * <ul>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.PlaceOfPresentation1
+ * PlaceOfPresentation1}</li>
+ * </ul>
+ * </li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
  * derivationElement} =
  * <ul>
@@ -47,14 +58,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * superType} =
  * {@linkplain com.tools20022.repository.entity.UndertakingPartyRole
  * UndertakingPartyRole}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.PlaceOfPresentation1
- * PlaceOfPresentation1}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -79,11 +82,11 @@ public class UndertakingDeliveryToParty extends UndertakingPartyRole {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "UndertakingDeliveryToParty";
 				definition = "Party to which the original undertaking or amendment is intended to be delivered.";
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CommunicationChannel1.mmDeliverToPartyType);
+				derivationElement_lazy = () -> Arrays.asList(CommunicationChannel1.mmDeliverToPartyType);
 				superType_lazy = () -> UndertakingPartyRole.mmObject();
 				derivationComponent_lazy = () -> Arrays.asList(PlaceOfPresentation1.mmObject());
 			}

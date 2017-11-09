@@ -17,15 +17,16 @@
 
 package com.tools20022.repository.entity;
 
-import com.tools20022.metamodel.MMBusinessAssociationEnd;
-import com.tools20022.metamodel.MMBusinessAttribute;
-import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.*;
+import com.tools20022.repository.choice.StandingOrderType1Choice;
 import com.tools20022.repository.codeset.FrequencyCode;
 import com.tools20022.repository.codeset.StandingOrderTypeCode;
 import com.tools20022.repository.datatype.CurrencyAndAmount;
 import com.tools20022.repository.datatype.Max140Text;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.Number;
+import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -39,6 +40,36 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CashAccount#mmRelatedCreditStandingOrder
+ * CashAccount.mmRelatedCreditStandingOrder}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CashAccount#mmRelatedDebitStandingOrder
+ * CashAccount.mmRelatedDebitStandingOrder}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.DateTimePeriod#mmRelatedStandingOrder
+ * DateTimePeriod.mmRelatedStandingOrder}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PaymentInstruction#mmStandingOrder
+ * PaymentInstruction.mmStandingOrder}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.StandingOrder#mmIncludedStandingOrder
+ * StandingOrder.mmIncludedStandingOrder}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.StandingOrder#mmLinkSet
+ * StandingOrder.mmLinkSet}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
+ * subType} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.CashStandingOrder
+ * CashStandingOrder}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -77,36 +108,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.entity.StandingOrder#mmPaymentInstructionTrigger
  * StandingOrder.mmPaymentInstructionTrigger}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.StandingOrder#mmIncludedStandingOrder
- * StandingOrder.mmIncludedStandingOrder}</li>
- * <li>{@linkplain com.tools20022.repository.entity.StandingOrder#mmLinkSet
- * StandingOrder.mmLinkSet}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
- * subType} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.CashStandingOrder
- * CashStandingOrder}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CashAccount#mmRelatedCreditStandingOrder
- * CashAccount.mmRelatedCreditStandingOrder}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CashAccount#mmRelatedDebitStandingOrder
- * CashAccount.mmRelatedDebitStandingOrder}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.DateTimePeriod#mmRelatedStandingOrder
- * DateTimePeriod.mmRelatedStandingOrder}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.PaymentInstruction#mmStandingOrder
- * PaymentInstruction.mmStandingOrder}</li>
  * <li>
  * {@linkplain com.tools20022.repository.entity.StandingOrder#mmIncludedStandingOrder
  * StandingOrder.mmIncludedStandingOrder}</li>
@@ -196,13 +197,12 @@ public class StandingOrder {
 	 */
 	public static final MMBusinessAttribute mmIdentification = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StandingOrderSearchCriteria1.mmStandingOrderIdentification, com.tools20022.repository.msg.StandingOrderSearchCriteria1.mmLinkSetOrderIdentification,
-					com.tools20022.repository.msg.StandingOrderIdentification1.mmStandingOrderReference, com.tools20022.repository.msg.StandingOrderIdentification2.mmIdentification,
-					com.tools20022.repository.msg.StandingOrderDetails3.mmReference, com.tools20022.repository.msg.StandingOrder2.mmReference, com.tools20022.repository.msg.StandingOrder2.mmLinkSetOrderIdentification,
-					com.tools20022.repository.msg.StandingOrder3.mmStandingOrderIdentification, com.tools20022.repository.msg.StandingOrder4.mmStandingOrderIdentification);
+			derivation_lazy = () -> Arrays.asList(StandingOrderSearchCriteria1.mmStandingOrderIdentification, StandingOrderSearchCriteria1.mmLinkSetOrderIdentification, StandingOrderIdentification1.mmStandingOrderReference,
+					StandingOrderIdentification2.mmIdentification, StandingOrderDetails3.mmReference, StandingOrder2.mmReference, StandingOrder2.mmLinkSetOrderIdentification, StandingOrder3.mmStandingOrderIdentification,
+					StandingOrder4.mmStandingOrderIdentification);
 			elementContext_lazy = () -> com.tools20022.repository.entity.StandingOrder.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Identification";
 			definition = "Unique and unambiguous identification for a standing order, as assigned by the account servicer or the account owner.";
 			maxOccurs = 1;
@@ -261,12 +261,11 @@ public class StandingOrder {
 	 */
 	public static final MMBusinessAttribute mmType = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.StandingOrderType1Choice.mmCode, com.tools20022.repository.choice.StandingOrderType1Choice.mmProprietary,
-					com.tools20022.repository.msg.StandingOrderSearchCriteria1.mmType, com.tools20022.repository.msg.StandingOrder1.mmExecutionType, com.tools20022.repository.msg.StandingOrder2.mmType,
-					com.tools20022.repository.msg.StandingOrder2.mmExecutionType);
+			derivation_lazy = () -> Arrays.asList(StandingOrderType1Choice.mmCode, StandingOrderType1Choice.mmProprietary, StandingOrderSearchCriteria1.mmType, StandingOrder1.mmExecutionType, StandingOrder2.mmType,
+					StandingOrder2.mmExecutionType);
 			elementContext_lazy = () -> com.tools20022.repository.entity.StandingOrder.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Type";
 			definition = "Type of the standing order.";
 			maxOccurs = 1;
@@ -330,17 +329,17 @@ public class StandingOrder {
 	 */
 	public static final MMBusinessAssociationEnd mmValidityPeriod = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StandingOrderSearchCriteria1.mmValidityPeriod, com.tools20022.repository.msg.StandingOrderDetails1.mmValidityPeriod,
-					com.tools20022.repository.msg.StandingOrder1.mmValidityPeriod, com.tools20022.repository.msg.StandingOrderDetails3.mmValidityPeriod, com.tools20022.repository.msg.StandingOrder2.mmValidityPeriod);
+			derivation_lazy = () -> Arrays.asList(StandingOrderSearchCriteria1.mmValidityPeriod, StandingOrderDetails1.mmValidityPeriod, StandingOrder1.mmValidityPeriod, StandingOrderDetails3.mmValidityPeriod,
+					StandingOrder2.mmValidityPeriod);
 			elementContext_lazy = () -> com.tools20022.repository.entity.StandingOrder.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ValidityPeriod";
 			definition = "Dates during which the standing order is in effect.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmRelatedStandingOrder;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmObject();
 		}
 	};
@@ -386,10 +385,10 @@ public class StandingOrder {
 	 */
 	public static final MMBusinessAttribute mmLinkSetIdentification = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StandingOrderSearchCriteria1.mmLinkSetIdentification, com.tools20022.repository.msg.StandingOrder2.mmLinkSetIdentification);
+			derivation_lazy = () -> Arrays.asList(StandingOrderSearchCriteria1.mmLinkSetIdentification, StandingOrder2.mmLinkSetIdentification);
 			elementContext_lazy = () -> com.tools20022.repository.entity.StandingOrder.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "LinkSetIdentification";
 			definition = "Unique identification to unambiguously identiy the link set in which the standing order is defined.";
 			maxOccurs = 1;
@@ -440,10 +439,10 @@ public class StandingOrder {
 	 */
 	public static final MMBusinessAttribute mmStandingOrderSequence = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StandingOrderSearchCriteria1.mmLinkSetOrderSequence, com.tools20022.repository.msg.StandingOrder2.mmLinkSetOrderSequence);
+			derivation_lazy = () -> Arrays.asList(StandingOrderSearchCriteria1.mmLinkSetOrderSequence, StandingOrder2.mmLinkSetOrderSequence);
 			elementContext_lazy = () -> com.tools20022.repository.entity.StandingOrder.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "StandingOrderSequence";
 			definition = "Specifies the sequence in which the system will execute the liquidity transfers standing order within the link set when additional liquidity is required.";
 			maxOccurs = 1;
@@ -499,11 +498,10 @@ public class StandingOrder {
 	 */
 	public static final MMBusinessAttribute mmAmount = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StandingOrderDetails1.mmAmount, com.tools20022.repository.msg.StandingOrder1.mmAmount, com.tools20022.repository.msg.StandingOrderDetails3.mmAmount,
-					com.tools20022.repository.msg.StandingOrder2.mmAmount);
+			derivation_lazy = () -> Arrays.asList(StandingOrderDetails1.mmAmount, StandingOrder1.mmAmount, StandingOrderDetails3.mmAmount, StandingOrder2.mmAmount);
 			elementContext_lazy = () -> com.tools20022.repository.entity.StandingOrder.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Amount";
 			definition = "Currency and amount of the periodical payments. When the standing order is related to a fund investment plan, this is the cash part of the invested amount.";
 			maxOccurs = 1;
@@ -555,16 +553,16 @@ public class StandingOrder {
 	 */
 	public static final MMBusinessAssociationEnd mmCreditAccount = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StandingOrderDetails1.mmCreditAccount);
+			derivation_lazy = () -> Arrays.asList(StandingOrderDetails1.mmCreditAccount);
 			elementContext_lazy = () -> com.tools20022.repository.entity.StandingOrder.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditAccount";
 			definition = "Cash account credited from a  standing order mechanism.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.CashAccount.mmRelatedCreditStandingOrder;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.CashAccount.mmObject();
 		}
 	};
@@ -615,16 +613,16 @@ public class StandingOrder {
 	 */
 	public static final MMBusinessAssociationEnd mmDebitAccount = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StandingOrderDetails1.mmDebitAccount, com.tools20022.repository.msg.StandingOrder2.mmDebtorAccount);
+			derivation_lazy = () -> Arrays.asList(StandingOrderDetails1.mmDebitAccount, StandingOrder2.mmDebtorAccount);
 			elementContext_lazy = () -> com.tools20022.repository.entity.StandingOrder.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DebitAccount";
 			definition = "Cash account debited from a standing order mechanism.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.CashAccount.mmRelatedDebitStandingOrder;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.CashAccount.mmObject();
 		}
 	};
@@ -674,11 +672,10 @@ public class StandingOrder {
 	 */
 	public static final MMBusinessAttribute mmFrequency = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StandingOrderDetails1.mmFrequency, com.tools20022.repository.msg.StandingOrder1.mmFrequency, com.tools20022.repository.msg.StandingOrderDetails3.mmFrequency,
-					com.tools20022.repository.msg.StandingOrder2.mmFrequency);
+			derivation_lazy = () -> Arrays.asList(StandingOrderDetails1.mmFrequency, StandingOrder1.mmFrequency, StandingOrderDetails3.mmFrequency, StandingOrder2.mmFrequency);
 			elementContext_lazy = () -> com.tools20022.repository.entity.StandingOrder.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Frequency";
 			definition = "Frequency of the investment or divestment, eg, daily, weekly, or monthly.";
 			maxOccurs = 1;
@@ -719,7 +716,7 @@ public class StandingOrder {
 		{
 			elementContext_lazy = () -> com.tools20022.repository.entity.StandingOrder.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "EventDescription";
 			definition = "Describes the event which triggers the exercise of a standing order for instance the reception of a report or the closing of an account.";
 			maxOccurs = 1;
@@ -757,7 +754,7 @@ public class StandingOrder {
 		{
 			elementContext_lazy = () -> com.tools20022.repository.entity.StandingOrder.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Day";
 			definition = "Specifies the date in a month for instance the 30th.";
 			maxOccurs = 1;
@@ -796,7 +793,7 @@ public class StandingOrder {
 		{
 			elementContext_lazy = () -> com.tools20022.repository.entity.StandingOrder.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TimeSpecification";
 			definition = "Specifies the period for the time event, for instance end of day.";
 			maxOccurs = 1;
@@ -845,13 +842,13 @@ public class StandingOrder {
 		{
 			elementContext_lazy = () -> com.tools20022.repository.entity.StandingOrder.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentInstructionTrigger";
 			definition = "Standing order causes a payment instruction at regular intervals, eg, as specified by its frequency. ";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.PaymentInstruction.mmStandingOrder;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.PaymentInstruction.mmObject();
 		}
 	};
@@ -893,13 +890,13 @@ public class StandingOrder {
 		{
 			elementContext_lazy = () -> com.tools20022.repository.entity.StandingOrder.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncludedStandingOrder";
 			definition = "Specifies the standing order included in the linkset.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.StandingOrder.mmLinkSet;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.StandingOrder.mmObject();
 		}
 	};
@@ -942,13 +939,13 @@ public class StandingOrder {
 		{
 			elementContext_lazy = () -> com.tools20022.repository.entity.StandingOrder.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LinkSet";
 			definition = "Collection of standing orders defined in a specific sequence.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.StandingOrder.mmIncludedStandingOrder;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.StandingOrder.mmObject();
 		}
 	};
@@ -956,8 +953,8 @@ public class StandingOrder {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "StandingOrder";
 				definition = "Instruction given by an account holder to an account servicer to make regular transfers on given dates to the same beneficiary.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CashAccount.mmRelatedCreditStandingOrder, com.tools20022.repository.entity.CashAccount.mmRelatedDebitStandingOrder,

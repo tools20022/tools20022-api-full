@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CrossTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -85,7 +87,7 @@ public class CrossType1Code extends CrossTypeCode {
 	 */
 	public static final MMCode mmAllOrNone = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AllOrNone";
 			owner_lazy = () -> CrossType1Code.mmObject();
 		}
@@ -108,7 +110,7 @@ public class CrossType1Code extends CrossTypeCode {
 	 */
 	public static final MMCode mmImmediateOrCancel = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ImmediateOrCancel";
 			owner_lazy = () -> CrossType1Code.mmObject();
 		}
@@ -131,7 +133,7 @@ public class CrossType1Code extends CrossTypeCode {
 	 */
 	public static final MMCode mmOneSide = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OneSide";
 			owner_lazy = () -> CrossType1Code.mmObject();
 		}
@@ -154,7 +156,7 @@ public class CrossType1Code extends CrossTypeCode {
 	 */
 	public static final MMCode mmSamePrice = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SamePrice";
 			owner_lazy = () -> CrossType1Code.mmObject();
 		}
@@ -163,13 +165,12 @@ public class CrossType1Code extends CrossTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ALON");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CrossType1Code";
 				definition = "Type of cross being submitted to a market.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CrossType1Code.mmAllOrNone, com.tools20022.repository.codeset.CrossType1Code.mmImmediateOrCancel, com.tools20022.repository.codeset.CrossType1Code.mmOneSide,
-						com.tools20022.repository.codeset.CrossType1Code.mmSamePrice);
+				code_lazy = () -> Arrays.asList(CrossType1Code.mmAllOrNone, CrossType1Code.mmImmediateOrCancel, CrossType1Code.mmOneSide, CrossType1Code.mmSamePrice);
 				trace_lazy = () -> CrossTypeCode.mmObject();
 			}
 		});

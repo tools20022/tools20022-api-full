@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CancelledStatusReasonV2Code;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -114,7 +116,7 @@ public class CancelledStatusReason13Code extends CancelledStatusReasonV2Code {
 	 */
 	public static final MMCode mmCancelledByYourself = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancelledByYourself";
 			owner_lazy = () -> CancelledStatusReason13Code.mmObject();
 		}
@@ -137,7 +139,7 @@ public class CancelledStatusReason13Code extends CancelledStatusReasonV2Code {
 	 */
 	public static final MMCode mmCancelledBySystem = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancelledBySystem";
 			owner_lazy = () -> CancelledStatusReason13Code.mmObject();
 		}
@@ -160,7 +162,7 @@ public class CancelledStatusReason13Code extends CancelledStatusReasonV2Code {
 	 */
 	public static final MMCode mmCancelledByAgent = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancelledByAgent";
 			owner_lazy = () -> CancelledStatusReason13Code.mmObject();
 		}
@@ -183,7 +185,7 @@ public class CancelledStatusReason13Code extends CancelledStatusReasonV2Code {
 	 */
 	public static final MMCode mmEndOfLife = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EndOfLife";
 			owner_lazy = () -> CancelledStatusReason13Code.mmObject();
 		}
@@ -206,7 +208,7 @@ public class CancelledStatusReason13Code extends CancelledStatusReasonV2Code {
 	 */
 	public static final MMCode mmCancelledDueToTransformation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancelledDueToTransformation";
 			owner_lazy = () -> CancelledStatusReason13Code.mmObject();
 		}
@@ -229,7 +231,7 @@ public class CancelledStatusReason13Code extends CancelledStatusReasonV2Code {
 	 */
 	public static final MMCode mmCancelledSplitPartialSettlement = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancelledSplitPartialSettlement";
 			owner_lazy = () -> CancelledStatusReason13Code.mmObject();
 		}
@@ -252,7 +254,7 @@ public class CancelledStatusReason13Code extends CancelledStatusReasonV2Code {
 	 */
 	public static final MMCode mmCancelledDueToCorporateAction = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancelledDueToCorporateAction";
 			owner_lazy = () -> CancelledStatusReason13Code.mmObject();
 		}
@@ -275,7 +277,7 @@ public class CancelledStatusReason13Code extends CancelledStatusReasonV2Code {
 	 */
 	public static final MMCode mmSecuritiesNoLongerEligible = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesNoLongerEligible";
 			owner_lazy = () -> CancelledStatusReason13Code.mmObject();
 		}
@@ -298,7 +300,7 @@ public class CancelledStatusReason13Code extends CancelledStatusReasonV2Code {
 	 */
 	public static final MMCode mmOther = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
 			owner_lazy = () -> CancelledStatusReason13Code.mmObject();
 		}
@@ -321,7 +323,7 @@ public class CancelledStatusReason13Code extends CancelledStatusReasonV2Code {
 	 */
 	public static final MMCode mmCancelledByThirdParty = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancelledByThirdParty";
 			owner_lazy = () -> CancelledStatusReason13Code.mmObject();
 		}
@@ -330,17 +332,15 @@ public class CancelledStatusReason13Code extends CancelledStatusReasonV2Code {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CANI");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CancelledStatusReason13Code";
 				definition = "Specifies the underlying reason for the cancellation of the associated transaction.";
 				previousVersion_lazy = () -> CancelledStatusReason9Code.mmObject();
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CancelledStatusReason13Code.mmCancelledByYourself, com.tools20022.repository.codeset.CancelledStatusReason13Code.mmCancelledBySystem,
-						com.tools20022.repository.codeset.CancelledStatusReason13Code.mmCancelledByAgent, com.tools20022.repository.codeset.CancelledStatusReason13Code.mmEndOfLife,
-						com.tools20022.repository.codeset.CancelledStatusReason13Code.mmCancelledDueToTransformation, com.tools20022.repository.codeset.CancelledStatusReason13Code.mmCancelledSplitPartialSettlement,
-						com.tools20022.repository.codeset.CancelledStatusReason13Code.mmCancelledDueToCorporateAction, com.tools20022.repository.codeset.CancelledStatusReason13Code.mmSecuritiesNoLongerEligible,
-						com.tools20022.repository.codeset.CancelledStatusReason13Code.mmOther, com.tools20022.repository.codeset.CancelledStatusReason13Code.mmCancelledByThirdParty);
+				code_lazy = () -> Arrays.asList(CancelledStatusReason13Code.mmCancelledByYourself, CancelledStatusReason13Code.mmCancelledBySystem, CancelledStatusReason13Code.mmCancelledByAgent, CancelledStatusReason13Code.mmEndOfLife,
+						CancelledStatusReason13Code.mmCancelledDueToTransformation, CancelledStatusReason13Code.mmCancelledSplitPartialSettlement, CancelledStatusReason13Code.mmCancelledDueToCorporateAction,
+						CancelledStatusReason13Code.mmSecuritiesNoLongerEligible, CancelledStatusReason13Code.mmOther, CancelledStatusReason13Code.mmCancelledByThirdParty);
 				trace_lazy = () -> CancelledStatusReasonV2Code.mmObject();
 			}
 		});

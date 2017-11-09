@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.TradingSession1Code
+ * TradingSession1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -35,13 +44,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.TradingSessionCode#mmContinuous
  * TradingSessionCode.mmContinuous}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.TradingSession1Code
- * TradingSession1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -96,7 +98,7 @@ public class TradingSessionCode {
 	 */
 	public static final MMCode mmAuction = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Auction";
 			definition = "Orders that are traded in regularly occuring auctions: orders are accumulated and executed on basis of defined algorithms.";
 			owner_lazy = () -> TradingSessionCode.mmObject();
@@ -129,7 +131,7 @@ public class TradingSessionCode {
 	 */
 	public static final MMCode mmContinuous = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Continuous";
 			definition = "Trading process where orders are executed directly against each others as they hit the marketplace.";
 			owner_lazy = () -> TradingSessionCode.mmObject();
@@ -140,12 +142,12 @@ public class TradingSessionCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("AUCT");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TradingSessionCode";
 				definition = "Indicates the factors that are/were applied in the event of pre-allocation.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TradingSessionCode.mmAuction, com.tools20022.repository.codeset.TradingSessionCode.mmContinuous);
+				code_lazy = () -> Arrays.asList(TradingSessionCode.mmAuction, TradingSessionCode.mmContinuous);
 				derivation_lazy = () -> Arrays.asList(TradingSession1Code.mmObject());
 			}
 		});

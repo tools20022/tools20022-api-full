@@ -19,9 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.TaxTypeFormat1Choice;
 import com.tools20022.repository.datatype.*;
 import com.tools20022.repository.entity.Tax;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -108,11 +110,11 @@ public class LineItemTax1 {
 	 */
 	public static final MMMessageAttribute mmCalculatedAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.mmAmount;
+			businessElementTrace_lazy = () -> Tax.mmAmount;
 			componentContext_lazy = () -> LineItemTax1.mmObject();
 			isDerived = false;
 			xmlTag = "ClctdAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CalculatedAmount";
 			definition = "Amount of money resulting from the calculation of the tax.";
 			minOccurs = 0;
@@ -153,11 +155,11 @@ public class LineItemTax1 {
 	 */
 	public static final MMMessageAttribute mmTypeCode = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.mmType;
+			businessElementTrace_lazy = () -> Tax.mmType;
 			componentContext_lazy = () -> LineItemTax1.mmObject();
 			isDerived = false;
 			xmlTag = "TpCd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TypeCode";
 			definition = "Type of tax applied.";
 			maxOccurs = 1;
@@ -202,11 +204,11 @@ public class LineItemTax1 {
 	 */
 	public static final MMMessageAttribute mmTaxPointDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.mmTaxDate;
+			businessElementTrace_lazy = () -> Tax.mmTaxDate;
 			componentContext_lazy = () -> LineItemTax1.mmObject();
 			isDerived = false;
 			xmlTag = "TaxPtDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxPointDate";
 			definition = "Date of the tax point  date when this tax, levy or duty becomes applicable.";
 			maxOccurs = 1;
@@ -249,11 +251,11 @@ public class LineItemTax1 {
 	 */
 	public static final MMMessageAttribute mmCalculatedRate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.mmRate;
+			businessElementTrace_lazy = () -> Tax.mmRate;
 			componentContext_lazy = () -> LineItemTax1.mmObject();
 			isDerived = false;
 			xmlTag = "ClctdRate";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CalculatedRate";
 			definition = "Rate used to calculate the amount of this tax, levy or duty.";
 			maxOccurs = 1;
@@ -297,7 +299,7 @@ public class LineItemTax1 {
 			componentContext_lazy = () -> LineItemTax1.mmObject();
 			isDerived = false;
 			xmlTag = "CtgyCd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CategoryCode";
 			definition = "Code specifying the category to which this tax, levy or duty applies, such as codes for 'exempt from tax', 'standard rate', \"free export item - tax not charged'.";
 			maxOccurs = 1;
@@ -338,7 +340,7 @@ public class LineItemTax1 {
 			componentContext_lazy = () -> LineItemTax1.mmObject();
 			isDerived = false;
 			xmlTag = "CtgyNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CategoryName";
 			definition = "Category name, expressed as text, of the tax, levy or duty.";
 			minOccurs = 0;
@@ -349,11 +351,10 @@ public class LineItemTax1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LineItemTax1.mmCalculatedAmount, com.tools20022.repository.msg.LineItemTax1.mmTypeCode, com.tools20022.repository.msg.LineItemTax1.mmTaxPointDate,
-						com.tools20022.repository.msg.LineItemTax1.mmCalculatedRate, com.tools20022.repository.msg.LineItemTax1.mmCategoryCode, com.tools20022.repository.msg.LineItemTax1.mmCategoryName);
+				messageElement_lazy = () -> Arrays.asList(LineItemTax1.mmCalculatedAmount, LineItemTax1.mmTypeCode, LineItemTax1.mmTaxPointDate, LineItemTax1.mmCalculatedRate, LineItemTax1.mmCategoryCode, LineItemTax1.mmCategoryName);
 				trace_lazy = () -> Tax.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "LineItemTax1";
 				definition = "Amount of money due to the government or tax authority, according to various pre-defined parameters such as thresholds or income.";
 			}

@@ -19,10 +19,12 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.ImpliedCurrencyAmountRangeChoice;
 import com.tools20022.repository.codeset.ActiveOrHistoricCurrencyCode;
 import com.tools20022.repository.codeset.CreditDebitCode;
 import com.tools20022.repository.entity.AmountRange;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -106,7 +108,7 @@ public class ActiveOrHistoricCurrencyAndAmountRange1 {
 			componentContext_lazy = () -> ActiveOrHistoricCurrencyAndAmountRange1.mmObject();
 			isDerived = false;
 			xmlTag = "Amt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Specified amount or amount range.";
 			maxOccurs = 1;
@@ -151,11 +153,11 @@ public class ActiveOrHistoricCurrencyAndAmountRange1 {
 	 */
 	public static final MMMessageAttribute mmCreditDebitIndicator = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AmountRange.mmCreditDebitIndicator;
+			businessElementTrace_lazy = () -> AmountRange.mmCreditDebitIndicator;
 			componentContext_lazy = () -> ActiveOrHistoricCurrencyAndAmountRange1.mmObject();
 			isDerived = false;
 			xmlTag = "CdtDbtInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditDebitIndicator";
 			definition = "Indicates whether the amount is a credited or debited amount.";
 			maxOccurs = 1;
@@ -199,11 +201,11 @@ public class ActiveOrHistoricCurrencyAndAmountRange1 {
 	 */
 	public static final MMMessageAttribute mmCurrency = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AmountRange.mmCurrency;
+			businessElementTrace_lazy = () -> AmountRange.mmCurrency;
 			componentContext_lazy = () -> ActiveOrHistoricCurrencyAndAmountRange1.mmObject();
 			isDerived = false;
 			xmlTag = "Ccy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Currency";
 			definition = "Medium of exchange of value, used to qualify an amount.";
 			maxOccurs = 1;
@@ -215,11 +217,10 @@ public class ActiveOrHistoricCurrencyAndAmountRange1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ActiveOrHistoricCurrencyAndAmountRange1.mmAmount, com.tools20022.repository.msg.ActiveOrHistoricCurrencyAndAmountRange1.mmCreditDebitIndicator,
-						com.tools20022.repository.msg.ActiveOrHistoricCurrencyAndAmountRange1.mmCurrency);
+				messageElement_lazy = () -> Arrays.asList(ActiveOrHistoricCurrencyAndAmountRange1.mmAmount, ActiveOrHistoricCurrencyAndAmountRange1.mmCreditDebitIndicator, ActiveOrHistoricCurrencyAndAmountRange1.mmCurrency);
 				trace_lazy = () -> AmountRange.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ActiveOrHistoricCurrencyAndAmountRange1";
 				definition = "Range of amount values.";
 			}

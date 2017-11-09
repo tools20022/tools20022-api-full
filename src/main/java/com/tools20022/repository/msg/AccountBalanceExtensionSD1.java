@@ -19,11 +19,13 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.AdjustedBalanceTypeSD1Choice;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.datatype.Max8Text;
 import com.tools20022.repository.datatype.RestrictedFINXMax35Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -121,7 +123,7 @@ public class AccountBalanceExtensionSD1 {
 			componentContext_lazy = () -> AccountBalanceExtensionSD1.mmObject();
 			isDerived = false;
 			xmlTag = "PlcAndNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "xPath to the element that is being extended.";
 			maxOccurs = 1;
@@ -163,7 +165,7 @@ public class AccountBalanceExtensionSD1 {
 			componentContext_lazy = () -> AccountBalanceExtensionSD1.mmObject();
 			isDerived = false;
 			xmlTag = "TxPos";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionPosition";
 			definition = "Position that is concerned in transaction.";
 			maxOccurs = 1;
@@ -205,7 +207,7 @@ public class AccountBalanceExtensionSD1 {
 			componentContext_lazy = () -> AccountBalanceExtensionSD1.mmObject();
 			isDerived = false;
 			xmlTag = "AsOfDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AsOfDate";
 			definition = "Effective date of the transaction. Applicable to Fail transactions.";
 			maxOccurs = 1;
@@ -246,7 +248,7 @@ public class AccountBalanceExtensionSD1 {
 			componentContext_lazy = () -> AccountBalanceExtensionSD1.mmObject();
 			isDerived = false;
 			xmlTag = "DlvryDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeliveryDate";
 			definition = "Date of the delivery. Applicable to Fail transactions.";
 			maxOccurs = 1;
@@ -290,7 +292,7 @@ public class AccountBalanceExtensionSD1 {
 			componentContext_lazy = () -> AccountBalanceExtensionSD1.mmObject();
 			isDerived = false;
 			xmlTag = "ContraPtcptNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ContraParticipantNumber";
 			definition = "Transaction contra participant identification for stock loans, repurchase agreements (REPOs), securities undelivered (FAILs).";
 			maxOccurs = 1;
@@ -333,7 +335,7 @@ public class AccountBalanceExtensionSD1 {
 			componentContext_lazy = () -> AccountBalanceExtensionSD1.mmObject();
 			isDerived = false;
 			xmlTag = "RcvrAcctNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceiverAccountNumber";
 			definition = "Account number at receiver’s side. Applicable to Fail transactions.";
 			maxOccurs = 1;
@@ -376,7 +378,7 @@ public class AccountBalanceExtensionSD1 {
 			componentContext_lazy = () -> AccountBalanceExtensionSD1.mmObject();
 			isDerived = false;
 			xmlTag = "DlvrrAcctNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DelivererAccountNumber";
 			definition = "Account number at deliverer’s side. Applicable to Fail transactions.";
 			maxOccurs = 1;
@@ -388,12 +390,10 @@ public class AccountBalanceExtensionSD1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountBalanceExtensionSD1.mmPlaceAndName, com.tools20022.repository.msg.AccountBalanceExtensionSD1.mmTransactionPosition,
-						com.tools20022.repository.msg.AccountBalanceExtensionSD1.mmAsOfDate, com.tools20022.repository.msg.AccountBalanceExtensionSD1.mmDeliveryDate,
-						com.tools20022.repository.msg.AccountBalanceExtensionSD1.mmContraParticipantNumber, com.tools20022.repository.msg.AccountBalanceExtensionSD1.mmReceiverAccountNumber,
-						com.tools20022.repository.msg.AccountBalanceExtensionSD1.mmDelivererAccountNumber);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(AccountBalanceExtensionSD1.mmPlaceAndName, AccountBalanceExtensionSD1.mmTransactionPosition, AccountBalanceExtensionSD1.mmAsOfDate, AccountBalanceExtensionSD1.mmDeliveryDate,
+						AccountBalanceExtensionSD1.mmContraParticipantNumber, AccountBalanceExtensionSD1.mmReceiverAccountNumber, AccountBalanceExtensionSD1.mmDelivererAccountNumber);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "AccountBalanceExtensionSD1";
 				definition = "Provides additional information regarding account balance. Contains transaction details of the stock loans, repurchase agreements (REPOs) and undelivered trades (FAILs).  ";
 				nextVersions_lazy = () -> Arrays.asList(AccountBalanceExtensionSD2.mmObject());

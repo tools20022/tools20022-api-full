@@ -17,11 +17,11 @@
 
 package com.tools20022.repository.entity;
 
-import com.tools20022.metamodel.MMBusinessAssociationEnd;
-import com.tools20022.metamodel.MMBusinessAttribute;
-import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.*;
 import com.tools20022.repository.choice.CodeOrProprietary1Choice;
+import com.tools20022.repository.choice.ProcessingType1Choice;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.BalanceRestrictionType1;
 import com.tools20022.repository.msg.Restriction1;
 import com.tools20022.repository.msg.RestrictionModification1;
@@ -38,18 +38,17 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
  * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.AccountRestriction#mmAccount
- * AccountRestriction.mmAccount}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.AccountRestriction#mmRestrictionType
- * AccountRestriction.mmRestrictionType}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.AccountRestriction#mmValidityPeriod
- * AccountRestriction.mmValidityPeriod}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.BalanceRestrictionType1
+ * BalanceRestrictionType1}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.CodeOrProprietary1Choice
+ * CodeOrProprietary1Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Restriction1 Restriction1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.RestrictionModification1
+ * RestrictionModification1}</li>
  * </ul>
  * </li>
  * <li>
@@ -75,17 +74,18 @@ import java.util.List;
  * RestrictionModification1.mmRestriction}</li>
  * </ul>
  * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.BalanceRestrictionType1
- * BalanceRestrictionType1}</li>
- * <li>{@linkplain com.tools20022.repository.choice.CodeOrProprietary1Choice
- * CodeOrProprietary1Choice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Restriction1 Restriction1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.RestrictionModification1
- * RestrictionModification1}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.AccountRestriction#mmAccount
+ * AccountRestriction.mmAccount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.AccountRestriction#mmRestrictionType
+ * AccountRestriction.mmRestrictionType}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.AccountRestriction#mmValidityPeriod
+ * AccountRestriction.mmValidityPeriod}</li>
  * </ul>
  * </li>
  * <li>
@@ -143,13 +143,13 @@ public class AccountRestriction {
 		{
 			elementContext_lazy = () -> AccountRestriction.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Account";
 			definition = "Account on which restrictions are specified.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.Account.mmAccountRestriction;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Account.mmObject();
 		}
 	};
@@ -204,12 +204,11 @@ public class AccountRestriction {
 	 */
 	public static final MMBusinessAttribute mmRestrictionType = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ProcessingType1Choice.mmCode, com.tools20022.repository.choice.ProcessingType1Choice.mmProprietary,
-					com.tools20022.repository.msg.BalanceRestrictionType1.mmType, com.tools20022.repository.msg.BalanceRestrictionType1.mmProcessingType, com.tools20022.repository.choice.CodeOrProprietary1Choice.mmCode,
-					com.tools20022.repository.choice.CodeOrProprietary1Choice.mmProprietary);
+			derivation_lazy = () -> Arrays.asList(ProcessingType1Choice.mmCode, ProcessingType1Choice.mmProprietary, BalanceRestrictionType1.mmType, BalanceRestrictionType1.mmProcessingType, CodeOrProprietary1Choice.mmCode,
+					CodeOrProprietary1Choice.mmProprietary);
 			elementContext_lazy = () -> AccountRestriction.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RestrictionType";
 			definition = "Type of the restriction.";
 			maxOccurs = 1;
@@ -255,12 +254,12 @@ public class AccountRestriction {
 		{
 			elementContext_lazy = () -> AccountRestriction.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ValidityPeriod";
 			definition = "Period during which the restriction is effective.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmAccountRestriction;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmObject();
 		}
 	};
@@ -268,14 +267,13 @@ public class AccountRestriction {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AccountRestriction";
 				definition = "Restriction on capability or operations allowed.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Account.mmAccountRestriction, com.tools20022.repository.entity.DateTimePeriod.mmAccountRestriction);
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Restriction1.mmRestrictionType, com.tools20022.repository.msg.RestrictionModification1.mmRestriction);
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.AccountRestriction.mmAccount, com.tools20022.repository.entity.AccountRestriction.mmRestrictionType,
-						com.tools20022.repository.entity.AccountRestriction.mmValidityPeriod);
+				derivationElement_lazy = () -> Arrays.asList(Restriction1.mmRestrictionType, RestrictionModification1.mmRestriction);
+				element_lazy = () -> Arrays.asList(AccountRestriction.mmAccount, AccountRestriction.mmRestrictionType, AccountRestriction.mmValidityPeriod);
 				derivationComponent_lazy = () -> Arrays.asList(BalanceRestrictionType1.mmObject(), CodeOrProprietary1Choice.mmObject(), Restriction1.mmObject(), RestrictionModification1.mmObject());
 			}
 		});

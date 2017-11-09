@@ -20,10 +20,13 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.DecimalNumber;
 import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.InvestmentFundClass;
 import com.tools20022.repository.entity.SecuritiesQuantity;
+import com.tools20022.repository.entity.SecuritiesTransfer;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -107,7 +110,7 @@ public class Unit2 {
 			componentContext_lazy = () -> Unit2.mmObject();
 			isDerived = false;
 			xmlTag = "Instrm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Instrument";
 			definition = "Specifies the type of underlying assets for the PEP or ISA.";
 			maxOccurs = 1;
@@ -151,11 +154,11 @@ public class Unit2 {
 	 */
 	public static final MMMessageAttribute mmTotalNumber = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTransfer.mmTransferredQuantity;
+			businessElementTrace_lazy = () -> SecuritiesTransfer.mmTransferredQuantity;
 			componentContext_lazy = () -> Unit2.mmObject();
 			isDerived = false;
 			xmlTag = "TtlNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalNumber";
 			definition = "Total number of the type of asset that are transferred.";
 			maxOccurs = 1;
@@ -198,11 +201,11 @@ public class Unit2 {
 	 */
 	public static final MMMessageAttribute mmGroup1Number = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmUnit;
+			businessElementTrace_lazy = () -> SecuritiesQuantity.mmUnit;
 			componentContext_lazy = () -> Unit2.mmObject();
 			isDerived = false;
 			xmlTag = "Grp1Nb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Group1Number";
 			definition = "Quantity expressed as a number, eg, a number of shares.";
 			maxOccurs = 1;
@@ -245,11 +248,11 @@ public class Unit2 {
 	 */
 	public static final MMMessageAttribute mmGroup2Number = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmUnit;
+			businessElementTrace_lazy = () -> SecuritiesQuantity.mmUnit;
 			componentContext_lazy = () -> Unit2.mmObject();
 			isDerived = false;
 			xmlTag = "Grp2Nb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Group2Number";
 			definition = "Quantity expressed as a number, eg, a number of shares.";
 			maxOccurs = 1;
@@ -293,7 +296,7 @@ public class Unit2 {
 			componentContext_lazy = () -> Unit2.mmObject();
 			isDerived = false;
 			xmlTag = "Cmplt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Complete";
 			definition = "Specifies whether the transfer of the asset is final or not, eg whether dividends or units are still to be delivered.";
 			maxOccurs = 1;
@@ -305,11 +308,10 @@ public class Unit2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Unit2.mmInstrument, com.tools20022.repository.msg.Unit2.mmTotalNumber, com.tools20022.repository.msg.Unit2.mmGroup1Number,
-						com.tools20022.repository.msg.Unit2.mmGroup2Number, com.tools20022.repository.msg.Unit2.mmComplete);
+				messageElement_lazy = () -> Arrays.asList(Unit2.mmInstrument, Unit2.mmTotalNumber, Unit2.mmGroup1Number, Unit2.mmGroup2Number, Unit2.mmComplete);
 				trace_lazy = () -> SecuritiesQuantity.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Unit2";
 				definition = "Quantity of a security.";
 			}

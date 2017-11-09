@@ -20,10 +20,13 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.seev.MeetingNotificationV05;
 import com.tools20022.repository.choice.DateFormat29Choice;
 import com.tools20022.repository.codeset.PowerOfAttorneyLegalisation1Code;
 import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.entity.PowerOfAttorneyRequirements;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -129,14 +132,14 @@ public class PowerOfAttorneyRequirements3 {
 	 */
 	public static final MMMessageAttribute mmLegalRequirement = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PowerOfAttorneyRequirements.mmLegalRequirement;
+			businessElementTrace_lazy = () -> PowerOfAttorneyRequirements.mmLegalRequirement;
 			componentContext_lazy = () -> PowerOfAttorneyRequirements3.mmObject();
 			isDerived = false;
 			xmlTag = "LglRqrmnt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LegalRequirement";
 			definition = "Specifies whether the power of attorney needs to be validated by some authority.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PowerOfAttorneyRequirements2.mmLegalRequirement;
+			previousVersion_lazy = () -> PowerOfAttorneyRequirements2.mmLegalRequirement;
 			maxOccurs = 4;
 			minOccurs = 0;
 			simpleType_lazy = () -> PowerOfAttorneyLegalisation1Code.mmObject();
@@ -183,14 +186,14 @@ public class PowerOfAttorneyRequirements3 {
 	 */
 	public static final MMMessageAttribute mmOtherDocumentation = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PowerOfAttorneyRequirements.mmOtherDocumentation;
+			businessElementTrace_lazy = () -> PowerOfAttorneyRequirements.mmOtherDocumentation;
 			componentContext_lazy = () -> PowerOfAttorneyRequirements3.mmObject();
 			isDerived = false;
 			xmlTag = "OthrDcmnttn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherDocumentation";
 			definition = "Specifies the documents needed to obtain a valid power of attorney.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PowerOfAttorneyRequirements2.mmOtherDocumentation;
+			previousVersion_lazy = () -> PowerOfAttorneyRequirements2.mmOtherDocumentation;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
@@ -228,7 +231,7 @@ public class PowerOfAttorneyRequirements3 {
 			componentContext_lazy = () -> PowerOfAttorneyRequirements3.mmObject();
 			isDerived = false;
 			xmlTag = "DocSubmissnDdln";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DocumentSubmissionDeadline";
 			definition = "Date by which the requested documents must be provided.";
 			maxOccurs = 1;
@@ -241,12 +244,11 @@ public class PowerOfAttorneyRequirements3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PowerOfAttorneyRequirements3.mmLegalRequirement, com.tools20022.repository.msg.PowerOfAttorneyRequirements3.mmOtherDocumentation,
-						com.tools20022.repository.msg.PowerOfAttorneyRequirements3.mmDocumentSubmissionDeadline);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.MeetingNotificationV05.mmPowerOfAttorneyRequirements);
+				messageElement_lazy = () -> Arrays.asList(PowerOfAttorneyRequirements3.mmLegalRequirement, PowerOfAttorneyRequirements3.mmOtherDocumentation, PowerOfAttorneyRequirements3.mmDocumentSubmissionDeadline);
+				messageBuildingBlock_lazy = () -> Arrays.asList(MeetingNotificationV05.mmPowerOfAttorneyRequirements);
 				trace_lazy = () -> PowerOfAttorneyRequirements.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PowerOfAttorneyRequirements3";
 				definition = "Specifies the conditions to be filled in to obtain a valid power of attorney.";
 				previousVersion_lazy = () -> PowerOfAttorneyRequirements2.mmObject();

@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ExposureTypeV2Code;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -169,7 +171,7 @@ public class ExposureType3Code extends ExposureTypeV2Code {
 	 */
 	public static final MMCode mmCrossCurrencyIRS = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CrossCurrencyIRS";
 			owner_lazy = () -> ExposureType3Code.mmObject();
 		}
@@ -192,7 +194,7 @@ public class ExposureType3Code extends ExposureTypeV2Code {
 	 */
 	public static final MMCode mmCommodities = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Commodities";
 			owner_lazy = () -> ExposureType3Code.mmObject();
 		}
@@ -215,7 +217,7 @@ public class ExposureType3Code extends ExposureTypeV2Code {
 	 */
 	public static final MMCode mmCreditDefaultSwap = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditDefaultSwap";
 			owner_lazy = () -> ExposureType3Code.mmObject();
 		}
@@ -238,7 +240,7 @@ public class ExposureType3Code extends ExposureTypeV2Code {
 	 */
 	public static final MMCode mmCrossProduct = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CrossProduct";
 			owner_lazy = () -> ExposureType3Code.mmObject();
 		}
@@ -261,7 +263,7 @@ public class ExposureType3Code extends ExposureTypeV2Code {
 	 */
 	public static final MMCode mmCreditSupport = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditSupport";
 			owner_lazy = () -> ExposureType3Code.mmObject();
 		}
@@ -284,7 +286,7 @@ public class ExposureType3Code extends ExposureTypeV2Code {
 	 */
 	public static final MMCode mmCreditLine = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditLine";
 			owner_lazy = () -> ExposureType3Code.mmObject();
 		}
@@ -307,7 +309,7 @@ public class ExposureType3Code extends ExposureTypeV2Code {
 	 */
 	public static final MMCode mmEquityOption = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EquityOption";
 			owner_lazy = () -> ExposureType3Code.mmObject();
 		}
@@ -330,7 +332,7 @@ public class ExposureType3Code extends ExposureTypeV2Code {
 	 */
 	public static final MMCode mmEquitySwap = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EquitySwap";
 			owner_lazy = () -> ExposureType3Code.mmObject();
 		}
@@ -353,7 +355,7 @@ public class ExposureType3Code extends ExposureTypeV2Code {
 	 */
 	public static final MMCode mmExoticOption = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExoticOption";
 			owner_lazy = () -> ExposureType3Code.mmObject();
 		}
@@ -376,7 +378,7 @@ public class ExposureType3Code extends ExposureTypeV2Code {
 	 */
 	public static final MMCode mmExchangeTradedDerivatives = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExchangeTradedDerivatives";
 			owner_lazy = () -> ExposureType3Code.mmObject();
 		}
@@ -399,7 +401,7 @@ public class ExposureType3Code extends ExposureTypeV2Code {
 	 */
 	public static final MMCode mmFixedIncome = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FixedIncome";
 			owner_lazy = () -> ExposureType3Code.mmObject();
 		}
@@ -422,7 +424,7 @@ public class ExposureType3Code extends ExposureTypeV2Code {
 	 */
 	public static final MMCode mmForwardForeignExchange = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForwardForeignExchange";
 			owner_lazy = () -> ExposureType3Code.mmObject();
 		}
@@ -445,7 +447,7 @@ public class ExposureType3Code extends ExposureTypeV2Code {
 	 */
 	public static final MMCode mmForeignExchange = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForeignExchange";
 			owner_lazy = () -> ExposureType3Code.mmObject();
 		}
@@ -468,7 +470,7 @@ public class ExposureType3Code extends ExposureTypeV2Code {
 	 */
 	public static final MMCode mmFutures = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Futures";
 			owner_lazy = () -> ExposureType3Code.mmObject();
 		}
@@ -491,7 +493,7 @@ public class ExposureType3Code extends ExposureTypeV2Code {
 	 */
 	public static final MMCode mmLiquidity = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Liquidity";
 			owner_lazy = () -> ExposureType3Code.mmObject();
 		}
@@ -514,7 +516,7 @@ public class ExposureType3Code extends ExposureTypeV2Code {
 	 */
 	public static final MMCode mmFXOption = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FXOption";
 			owner_lazy = () -> ExposureType3Code.mmObject();
 		}
@@ -537,7 +539,7 @@ public class ExposureType3Code extends ExposureTypeV2Code {
 	 */
 	public static final MMCode mmOTCDerivatives = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OTCDerivatives";
 			owner_lazy = () -> ExposureType3Code.mmObject();
 		}
@@ -560,7 +562,7 @@ public class ExposureType3Code extends ExposureTypeV2Code {
 	 */
 	public static final MMCode mmCashSettlement = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashSettlement";
 			owner_lazy = () -> ExposureType3Code.mmObject();
 		}
@@ -583,7 +585,7 @@ public class ExposureType3Code extends ExposureTypeV2Code {
 	 */
 	public static final MMCode mmRepo = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Repo";
 			owner_lazy = () -> ExposureType3Code.mmObject();
 		}
@@ -606,7 +608,7 @@ public class ExposureType3Code extends ExposureTypeV2Code {
 	 */
 	public static final MMCode mmSecuritiesBuySellSellBuyBack = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesBuySellSellBuyBack";
 			owner_lazy = () -> ExposureType3Code.mmObject();
 		}
@@ -629,7 +631,7 @@ public class ExposureType3Code extends ExposureTypeV2Code {
 	 */
 	public static final MMCode mmSingleCurrencyIRSExotic = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SingleCurrencyIRSExotic";
 			owner_lazy = () -> ExposureType3Code.mmObject();
 		}
@@ -652,7 +654,7 @@ public class ExposureType3Code extends ExposureTypeV2Code {
 	 */
 	public static final MMCode mmSingleCurrencyIRS = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SingleCurrencyIRS";
 			owner_lazy = () -> ExposureType3Code.mmObject();
 		}
@@ -675,7 +677,7 @@ public class ExposureType3Code extends ExposureTypeV2Code {
 	 */
 	public static final MMCode mmSecuritiesCrossProducts = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesCrossProducts";
 			owner_lazy = () -> ExposureType3Code.mmObject();
 		}
@@ -698,7 +700,7 @@ public class ExposureType3Code extends ExposureTypeV2Code {
 	 */
 	public static final MMCode mmSecuritiesLendingAndBorrowing = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesLendingAndBorrowing";
 			owner_lazy = () -> ExposureType3Code.mmObject();
 		}
@@ -721,7 +723,7 @@ public class ExposureType3Code extends ExposureTypeV2Code {
 	 */
 	public static final MMCode mmSecuredLoan = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuredLoan";
 			owner_lazy = () -> ExposureType3Code.mmObject();
 		}
@@ -744,7 +746,7 @@ public class ExposureType3Code extends ExposureTypeV2Code {
 	 */
 	public static final MMCode mmSwaption = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Swaption";
 			owner_lazy = () -> ExposureType3Code.mmObject();
 		}
@@ -767,7 +769,7 @@ public class ExposureType3Code extends ExposureTypeV2Code {
 	 */
 	public static final MMCode mmTreasuryCrossProduct = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TreasuryCrossProduct";
 			owner_lazy = () -> ExposureType3Code.mmObject();
 		}
@@ -790,7 +792,7 @@ public class ExposureType3Code extends ExposureTypeV2Code {
 	 */
 	public static final MMCode mmBondForward = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BondForward";
 			owner_lazy = () -> ExposureType3Code.mmObject();
 		}
@@ -813,7 +815,7 @@ public class ExposureType3Code extends ExposureTypeV2Code {
 	 */
 	public static final MMCode mmReverseRepurchaseAgreement = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReverseRepurchaseAgreement";
 			owner_lazy = () -> ExposureType3Code.mmObject();
 		}
@@ -836,7 +838,7 @@ public class ExposureType3Code extends ExposureTypeV2Code {
 	 */
 	public static final MMCode mmToBeAnnounced = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ToBeAnnounced";
 			owner_lazy = () -> ExposureType3Code.mmObject();
 		}
@@ -845,23 +847,17 @@ public class ExposureType3Code extends ExposureTypeV2Code {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CCIR");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ExposureType3Code";
 				definition = "Specifies the underlying business area/type of trade causing the collateral movement.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ExposureType3Code.mmCrossCurrencyIRS, com.tools20022.repository.codeset.ExposureType3Code.mmCommodities,
-						com.tools20022.repository.codeset.ExposureType3Code.mmCreditDefaultSwap, com.tools20022.repository.codeset.ExposureType3Code.mmCrossProduct, com.tools20022.repository.codeset.ExposureType3Code.mmCreditSupport,
-						com.tools20022.repository.codeset.ExposureType3Code.mmCreditLine, com.tools20022.repository.codeset.ExposureType3Code.mmEquityOption, com.tools20022.repository.codeset.ExposureType3Code.mmEquitySwap,
-						com.tools20022.repository.codeset.ExposureType3Code.mmExoticOption, com.tools20022.repository.codeset.ExposureType3Code.mmExchangeTradedDerivatives, com.tools20022.repository.codeset.ExposureType3Code.mmFixedIncome,
-						com.tools20022.repository.codeset.ExposureType3Code.mmForwardForeignExchange, com.tools20022.repository.codeset.ExposureType3Code.mmForeignExchange, com.tools20022.repository.codeset.ExposureType3Code.mmFutures,
-						com.tools20022.repository.codeset.ExposureType3Code.mmLiquidity, com.tools20022.repository.codeset.ExposureType3Code.mmFXOption, com.tools20022.repository.codeset.ExposureType3Code.mmOTCDerivatives,
-						com.tools20022.repository.codeset.ExposureType3Code.mmCashSettlement, com.tools20022.repository.codeset.ExposureType3Code.mmRepo, com.tools20022.repository.codeset.ExposureType3Code.mmSecuritiesBuySellSellBuyBack,
-						com.tools20022.repository.codeset.ExposureType3Code.mmSingleCurrencyIRSExotic, com.tools20022.repository.codeset.ExposureType3Code.mmSingleCurrencyIRS,
-						com.tools20022.repository.codeset.ExposureType3Code.mmSecuritiesCrossProducts, com.tools20022.repository.codeset.ExposureType3Code.mmSecuritiesLendingAndBorrowing,
-						com.tools20022.repository.codeset.ExposureType3Code.mmSecuredLoan, com.tools20022.repository.codeset.ExposureType3Code.mmSwaption, com.tools20022.repository.codeset.ExposureType3Code.mmTreasuryCrossProduct,
-						com.tools20022.repository.codeset.ExposureType3Code.mmBondForward, com.tools20022.repository.codeset.ExposureType3Code.mmReverseRepurchaseAgreement,
-						com.tools20022.repository.codeset.ExposureType3Code.mmToBeAnnounced);
+				code_lazy = () -> Arrays.asList(ExposureType3Code.mmCrossCurrencyIRS, ExposureType3Code.mmCommodities, ExposureType3Code.mmCreditDefaultSwap, ExposureType3Code.mmCrossProduct, ExposureType3Code.mmCreditSupport,
+						ExposureType3Code.mmCreditLine, ExposureType3Code.mmEquityOption, ExposureType3Code.mmEquitySwap, ExposureType3Code.mmExoticOption, ExposureType3Code.mmExchangeTradedDerivatives, ExposureType3Code.mmFixedIncome,
+						ExposureType3Code.mmForwardForeignExchange, ExposureType3Code.mmForeignExchange, ExposureType3Code.mmFutures, ExposureType3Code.mmLiquidity, ExposureType3Code.mmFXOption, ExposureType3Code.mmOTCDerivatives,
+						ExposureType3Code.mmCashSettlement, ExposureType3Code.mmRepo, ExposureType3Code.mmSecuritiesBuySellSellBuyBack, ExposureType3Code.mmSingleCurrencyIRSExotic, ExposureType3Code.mmSingleCurrencyIRS,
+						ExposureType3Code.mmSecuritiesCrossProducts, ExposureType3Code.mmSecuritiesLendingAndBorrowing, ExposureType3Code.mmSecuredLoan, ExposureType3Code.mmSwaption, ExposureType3Code.mmTreasuryCrossProduct,
+						ExposureType3Code.mmBondForward, ExposureType3Code.mmReverseRepurchaseAgreement, ExposureType3Code.mmToBeAnnounced);
 				trace_lazy = () -> ExposureTypeV2Code.mmObject();
 			}
 		});

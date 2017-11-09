@@ -19,11 +19,12 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.Quantity6Choice;
 import com.tools20022.repository.choice.QuantityOrAmount1Choice;
 import com.tools20022.repository.choice.TradeDate4Choice;
-import com.tools20022.repository.entity.SecuritiesOrder;
-import com.tools20022.repository.entity.TradingMarket;
+import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -130,14 +131,14 @@ public class PartialFill1 {
 	 */
 	public static final MMMessageAttribute mmConfirmationQuantity = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmOrderedQuantity;
+			businessElementTrace_lazy = () -> SecuritiesOrder.mmOrderedQuantity;
 			componentContext_lazy = () -> PartialFill1.mmObject();
 			isDerived = false;
 			xmlTag = "ConfQty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConfirmationQuantity";
 			definition = "Quantity of financial instrument to be ordered.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartialFill2.mmConfirmationQuantity);
+			nextVersions_lazy = () -> Arrays.asList(PartialFill2.mmConfirmationQuantity);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> Quantity6Choice.mmObject();
@@ -185,14 +186,14 @@ public class PartialFill1 {
 	 */
 	public static final MMMessageAttribute mmDealPrice = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmOrderPrice;
+			businessElementTrace_lazy = () -> SecuritiesOrder.mmOrderPrice;
 			componentContext_lazy = () -> PartialFill1.mmObject();
 			isDerived = false;
 			xmlTag = "DealPric";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DealPrice";
 			definition = "Amount of money for which goods or services are offered, sold, or bought.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartialFill2.mmDealPrice);
+			nextVersions_lazy = () -> Arrays.asList(PartialFill2.mmDealPrice);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> com.tools20022.repository.msg.Price4.mmObject();
@@ -240,14 +241,14 @@ public class PartialFill1 {
 	 */
 	public static final MMMessageAttribute mmTradeDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Trade.mmTradeDateTime;
+			businessElementTrace_lazy = () -> Trade.mmTradeDateTime;
 			componentContext_lazy = () -> PartialFill1.mmObject();
 			isDerived = false;
 			xmlTag = "TradDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeDate";
 			definition = "Specifies the date/time on which the trade was executed.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartialFill2.mmTradeDate);
+			nextVersions_lazy = () -> Arrays.asList(PartialFill2.mmTradeDate);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> TradeDate4Choice.mmObject();
@@ -301,10 +302,10 @@ public class PartialFill1 {
 			componentContext_lazy = () -> PartialFill1.mmObject();
 			isDerived = false;
 			xmlTag = "PlcOfTrad";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceOfTrade";
 			definition = "Market in which a trade transaction is to be or has been executed.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartialFill2.mmPlaceOfTrade);
+			nextVersions_lazy = () -> Arrays.asList(PartialFill2.mmPlaceOfTrade);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.MarketIdentification13.mmObject();
@@ -353,14 +354,14 @@ public class PartialFill1 {
 	 */
 	public static final MMMessageAttribute mmOriginalOrderedQuantity = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmOrderedQuantity;
+			businessElementTrace_lazy = () -> SecuritiesOrder.mmOrderedQuantity;
 			componentContext_lazy = () -> PartialFill1.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlOrdrdQty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalOrderedQuantity";
 			definition = "Quantity of financial instrument ordered.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartialFill2.mmOriginalOrderedQuantity);
+			nextVersions_lazy = () -> Arrays.asList(PartialFill2.mmOriginalOrderedQuantity);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> QuantityOrAmount1Choice.mmObject();
@@ -410,14 +411,14 @@ public class PartialFill1 {
 	 */
 	public static final MMMessageAttribute mmPreviouslyExecutedQuantity = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmOrderedQuantity;
+			businessElementTrace_lazy = () -> SecuritiesOrder.mmOrderedQuantity;
 			componentContext_lazy = () -> PartialFill1.mmObject();
 			isDerived = false;
 			xmlTag = "PrevslyExctdQty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviouslyExecutedQuantity";
 			definition = "Quantity of financial instrument that has been previously executed.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartialFill2.mmPreviouslyExecutedQuantity);
+			nextVersions_lazy = () -> Arrays.asList(PartialFill2.mmPreviouslyExecutedQuantity);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> QuantityOrAmount1Choice.mmObject();
@@ -467,14 +468,14 @@ public class PartialFill1 {
 	 */
 	public static final MMMessageAttribute mmRemainingQuantity = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrderStatus.mmRemainingQuantity;
+			businessElementTrace_lazy = () -> SecuritiesOrderStatus.mmRemainingQuantity;
 			componentContext_lazy = () -> PartialFill1.mmObject();
 			isDerived = false;
 			xmlTag = "RmngQty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RemainingQuantity";
 			definition = "Quantity of financial instrument that is remaining in order.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartialFill2.mmRemainingQuantity);
+			nextVersions_lazy = () -> Arrays.asList(PartialFill2.mmRemainingQuantity);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> QuantityOrAmount1Choice.mmObject();
@@ -527,14 +528,14 @@ public class PartialFill1 {
 	 */
 	public static final MMMessageAttribute mmMatchIncrementQuantity = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrderParameters.mmMatchIncrement;
+			businessElementTrace_lazy = () -> SecuritiesOrderParameters.mmMatchIncrement;
 			componentContext_lazy = () -> PartialFill1.mmObject();
 			isDerived = false;
 			xmlTag = "MtchIncrmtQty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MatchIncrementQuantity";
 			definition = "Minimum quantity that applies to every execution. The order may still fill against smaller orders, but the cumulative quantity of the execution must be in multiples of the Match Increment.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartialFill2.mmMatchIncrementQuantity);
+			nextVersions_lazy = () -> Arrays.asList(PartialFill2.mmMatchIncrementQuantity);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> QuantityOrAmount1Choice.mmObject();
@@ -544,12 +545,11 @@ public class PartialFill1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartialFill1.mmConfirmationQuantity, com.tools20022.repository.msg.PartialFill1.mmDealPrice, com.tools20022.repository.msg.PartialFill1.mmTradeDate,
-						com.tools20022.repository.msg.PartialFill1.mmPlaceOfTrade, com.tools20022.repository.msg.PartialFill1.mmOriginalOrderedQuantity, com.tools20022.repository.msg.PartialFill1.mmPreviouslyExecutedQuantity,
-						com.tools20022.repository.msg.PartialFill1.mmRemainingQuantity, com.tools20022.repository.msg.PartialFill1.mmMatchIncrementQuantity);
+				messageElement_lazy = () -> Arrays.asList(PartialFill1.mmConfirmationQuantity, PartialFill1.mmDealPrice, PartialFill1.mmTradeDate, PartialFill1.mmPlaceOfTrade, PartialFill1.mmOriginalOrderedQuantity,
+						PartialFill1.mmPreviouslyExecutedQuantity, PartialFill1.mmRemainingQuantity, PartialFill1.mmMatchIncrementQuantity);
 				trace_lazy = () -> SecuritiesOrder.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PartialFill1";
 				definition = "Intention to transfer an ownership of a financial instrument.";
 				nextVersions_lazy = () -> Arrays.asList(PartialFill2.mmObject());

@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CryptographicKeyTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -89,7 +91,7 @@ public class CryptographicKeyType1Code extends CryptographicKeyTypeCode {
 	 */
 	public static final MMCode mmDES = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DES";
 			owner_lazy = () -> CryptographicKeyType1Code.mmObject();
 		}
@@ -112,7 +114,7 @@ public class CryptographicKeyType1Code extends CryptographicKeyTypeCode {
 	 */
 	public static final MMCode mmAES = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AES";
 			owner_lazy = () -> CryptographicKeyType1Code.mmObject();
 		}
@@ -135,7 +137,7 @@ public class CryptographicKeyType1Code extends CryptographicKeyTypeCode {
 	 */
 	public static final MMCode mmRSA = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RSA";
 			owner_lazy = () -> CryptographicKeyType1Code.mmObject();
 		}
@@ -158,7 +160,7 @@ public class CryptographicKeyType1Code extends CryptographicKeyTypeCode {
 	 */
 	public static final MMCode mmECC = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ECC";
 			owner_lazy = () -> CryptographicKeyType1Code.mmObject();
 		}
@@ -167,13 +169,12 @@ public class CryptographicKeyType1Code extends CryptographicKeyTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("DESC");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CryptographicKeyType1Code";
 				definition = "Type of algorithm used by the cryptographic key.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CryptographicKeyType1Code.mmDES, com.tools20022.repository.codeset.CryptographicKeyType1Code.mmAES,
-						com.tools20022.repository.codeset.CryptographicKeyType1Code.mmRSA, com.tools20022.repository.codeset.CryptographicKeyType1Code.mmECC);
+				code_lazy = () -> Arrays.asList(CryptographicKeyType1Code.mmDES, CryptographicKeyType1Code.mmAES, CryptographicKeyType1Code.mmRSA, CryptographicKeyType1Code.mmECC);
 				trace_lazy = () -> CryptographicKeyTypeCode.mmObject();
 			}
 		});

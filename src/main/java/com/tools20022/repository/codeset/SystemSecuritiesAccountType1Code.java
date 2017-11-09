@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.SystemSecuritiesAccountTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -96,7 +98,7 @@ public class SystemSecuritiesAccountType1Code extends SystemSecuritiesAccountTyp
 	 */
 	public static final MMCode mmCSDParticipantAccount = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CSDParticipantAccount";
 			owner_lazy = () -> SystemSecuritiesAccountType1Code.mmObject();
 		}
@@ -119,7 +121,7 @@ public class SystemSecuritiesAccountType1Code extends SystemSecuritiesAccountTyp
 	 */
 	public static final MMCode mmCSDMirrorAccount = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CSDMirrorAccount";
 			owner_lazy = () -> SystemSecuritiesAccountType1Code.mmObject();
 		}
@@ -142,7 +144,7 @@ public class SystemSecuritiesAccountType1Code extends SystemSecuritiesAccountTyp
 	 */
 	public static final MMCode mmInterCSDAccount = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterCSDAccount";
 			owner_lazy = () -> SystemSecuritiesAccountType1Code.mmObject();
 		}
@@ -165,7 +167,7 @@ public class SystemSecuritiesAccountType1Code extends SystemSecuritiesAccountTyp
 	 */
 	public static final MMCode mmTechnicalOffsetAccount = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TechnicalOffsetAccount";
 			owner_lazy = () -> SystemSecuritiesAccountType1Code.mmObject();
 		}
@@ -188,7 +190,7 @@ public class SystemSecuritiesAccountType1Code extends SystemSecuritiesAccountTyp
 	 */
 	public static final MMCode mmCSDOmnibusAccount = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CSDOmnibusAccount";
 			owner_lazy = () -> SystemSecuritiesAccountType1Code.mmObject();
 		}
@@ -211,7 +213,7 @@ public class SystemSecuritiesAccountType1Code extends SystemSecuritiesAccountTyp
 	 */
 	public static final MMCode mmIssuanceAccount = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssuanceAccount";
 			owner_lazy = () -> SystemSecuritiesAccountType1Code.mmObject();
 		}
@@ -220,14 +222,13 @@ public class SystemSecuritiesAccountType1Code extends SystemSecuritiesAccountTyp
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CSDP");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SystemSecuritiesAccountType1Code";
 				definition = "Lists the type of the securities account specific for a system.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SystemSecuritiesAccountType1Code.mmCSDParticipantAccount, com.tools20022.repository.codeset.SystemSecuritiesAccountType1Code.mmCSDMirrorAccount,
-						com.tools20022.repository.codeset.SystemSecuritiesAccountType1Code.mmInterCSDAccount, com.tools20022.repository.codeset.SystemSecuritiesAccountType1Code.mmTechnicalOffsetAccount,
-						com.tools20022.repository.codeset.SystemSecuritiesAccountType1Code.mmCSDOmnibusAccount, com.tools20022.repository.codeset.SystemSecuritiesAccountType1Code.mmIssuanceAccount);
+				code_lazy = () -> Arrays.asList(SystemSecuritiesAccountType1Code.mmCSDParticipantAccount, SystemSecuritiesAccountType1Code.mmCSDMirrorAccount, SystemSecuritiesAccountType1Code.mmInterCSDAccount,
+						SystemSecuritiesAccountType1Code.mmTechnicalOffsetAccount, SystemSecuritiesAccountType1Code.mmCSDOmnibusAccount, SystemSecuritiesAccountType1Code.mmIssuanceAccount);
 				trace_lazy = () -> SystemSecuritiesAccountTypeCode.mmObject();
 			}
 		});

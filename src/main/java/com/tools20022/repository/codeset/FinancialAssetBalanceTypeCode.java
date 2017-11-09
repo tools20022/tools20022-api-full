@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code
+ * FinancialAssetBalanceType1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -217,14 +227,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * FinancialAssetBalanceTypeCode.mmFXLoss}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code
- * FinancialAssetBalanceType1Code}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -272,7 +274,7 @@ public class FinancialAssetBalanceTypeCode {
 	 */
 	public static final MMCode mmOtherFinancialInstruments = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherFinancialInstruments";
 			definition = "Balance attributed to other financial instruments.";
 			owner_lazy = () -> FinancialAssetBalanceTypeCode.mmObject();
@@ -302,7 +304,7 @@ public class FinancialAssetBalanceTypeCode {
 	 */
 	public static final MMCode mmSettledCash = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettledCash";
 			definition = "Balance attributed to settled cash.";
 			owner_lazy = () -> FinancialAssetBalanceTypeCode.mmObject();
@@ -332,7 +334,7 @@ public class FinancialAssetBalanceTypeCode {
 	 */
 	public static final MMCode mmAccruedIncome = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccruedIncome";
 			definition = "Balance attributed to accrued income.";
 			owner_lazy = () -> FinancialAssetBalanceTypeCode.mmObject();
@@ -362,7 +364,7 @@ public class FinancialAssetBalanceTypeCode {
 	 */
 	public static final MMCode mmFXTransaction = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FXTransaction";
 			definition = "Balance attributed to foreign exchange profit or loss.";
 			owner_lazy = () -> FinancialAssetBalanceTypeCode.mmObject();
@@ -392,7 +394,7 @@ public class FinancialAssetBalanceTypeCode {
 	 */
 	public static final MMCode mmCash = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Cash";
 			definition = "Balance attributed to cash.";
 			owner_lazy = () -> FinancialAssetBalanceTypeCode.mmObject();
@@ -423,7 +425,7 @@ public class FinancialAssetBalanceTypeCode {
 	 */
 	public static final MMCode mmTreasuryInflatedProtectedSecurity = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TreasuryInflatedProtectedSecurity";
 			definition = "Balance attributed to treasury inflated protected securities.";
 			owner_lazy = () -> FinancialAssetBalanceTypeCode.mmObject();
@@ -453,7 +455,7 @@ public class FinancialAssetBalanceTypeCode {
 	 */
 	public static final MMCode mmEquity = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Equity";
 			definition = "Balance attributed to equities.";
 			owner_lazy = () -> FinancialAssetBalanceTypeCode.mmObject();
@@ -483,7 +485,7 @@ public class FinancialAssetBalanceTypeCode {
 	 */
 	public static final MMCode mmCommonStock = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommonStock";
 			definition = "Balance attributed to common stock.";
 			owner_lazy = () -> FinancialAssetBalanceTypeCode.mmObject();
@@ -513,7 +515,7 @@ public class FinancialAssetBalanceTypeCode {
 	 */
 	public static final MMCode mmPreferredStock = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreferredStock";
 			definition = "Balance attributed to preferred stock.";
 			owner_lazy = () -> FinancialAssetBalanceTypeCode.mmObject();
@@ -543,7 +545,7 @@ public class FinancialAssetBalanceTypeCode {
 	 */
 	public static final MMCode mmMutualFund = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MutualFund";
 			definition = "Balance attributed to mutual funds.";
 			owner_lazy = () -> FinancialAssetBalanceTypeCode.mmObject();
@@ -573,7 +575,7 @@ public class FinancialAssetBalanceTypeCode {
 	 */
 	public static final MMCode mmExchangeTradedFund = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExchangeTradedFund";
 			definition = "Balance attributed to exchange traded funds.";
 			owner_lazy = () -> FinancialAssetBalanceTypeCode.mmObject();
@@ -603,7 +605,7 @@ public class FinancialAssetBalanceTypeCode {
 	 */
 	public static final MMCode mmRights = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rights";
 			definition = "Balance attributed to rights.";
 			owner_lazy = () -> FinancialAssetBalanceTypeCode.mmObject();
@@ -633,7 +635,7 @@ public class FinancialAssetBalanceTypeCode {
 	 */
 	public static final MMCode mmWarrant = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Warrant";
 			definition = "Balance attributed to warrants.";
 			owner_lazy = () -> FinancialAssetBalanceTypeCode.mmObject();
@@ -663,7 +665,7 @@ public class FinancialAssetBalanceTypeCode {
 	 */
 	public static final MMCode mmBond = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Bond";
 			definition = "Balance attributed to bonds.";
 			owner_lazy = () -> FinancialAssetBalanceTypeCode.mmObject();
@@ -693,7 +695,7 @@ public class FinancialAssetBalanceTypeCode {
 	 */
 	public static final MMCode mmConvertibleBond = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConvertibleBond";
 			definition = "Balance attributed to convertible bonds.";
 			owner_lazy = () -> FinancialAssetBalanceTypeCode.mmObject();
@@ -723,7 +725,7 @@ public class FinancialAssetBalanceTypeCode {
 	 */
 	public static final MMCode mmCorporateBond = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorporateBond";
 			definition = "Balance attributed to corporate bonds.";
 			owner_lazy = () -> FinancialAssetBalanceTypeCode.mmObject();
@@ -753,7 +755,7 @@ public class FinancialAssetBalanceTypeCode {
 	 */
 	public static final MMCode mmGovernmentBond = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GovernmentBond";
 			definition = "Balance attributed to government bonds.";
 			owner_lazy = () -> FinancialAssetBalanceTypeCode.mmObject();
@@ -783,7 +785,7 @@ public class FinancialAssetBalanceTypeCode {
 	 */
 	public static final MMCode mmFuture = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Future";
 			definition = "Balance attributed to futures.";
 			owner_lazy = () -> FinancialAssetBalanceTypeCode.mmObject();
@@ -813,7 +815,7 @@ public class FinancialAssetBalanceTypeCode {
 	 */
 	public static final MMCode mmOption = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Option";
 			definition = "Balance attributed to options.";
 			owner_lazy = () -> FinancialAssetBalanceTypeCode.mmObject();
@@ -843,7 +845,7 @@ public class FinancialAssetBalanceTypeCode {
 	 */
 	public static final MMCode mmSwap = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Swap";
 			definition = "Balance attributed to swaps.";
 			owner_lazy = () -> FinancialAssetBalanceTypeCode.mmObject();
@@ -873,7 +875,7 @@ public class FinancialAssetBalanceTypeCode {
 	 */
 	public static final MMCode mmCurrencyExchange = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrencyExchange";
 			definition = "Balance attributed to currency exchange contracts.";
 			owner_lazy = () -> FinancialAssetBalanceTypeCode.mmObject();
@@ -903,7 +905,7 @@ public class FinancialAssetBalanceTypeCode {
 	 */
 	public static final MMCode mmForeignInvestment = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForeignInvestment";
 			definition = "Balance attributed to foreign investments.";
 			owner_lazy = () -> FinancialAssetBalanceTypeCode.mmObject();
@@ -933,7 +935,7 @@ public class FinancialAssetBalanceTypeCode {
 	 */
 	public static final MMCode mmGold = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Gold";
 			definition = "Balance attributed to gold.";
 			owner_lazy = () -> FinancialAssetBalanceTypeCode.mmObject();
@@ -963,7 +965,7 @@ public class FinancialAssetBalanceTypeCode {
 	 */
 	public static final MMCode mmProperty = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Property";
 			definition = "Balance attributed to property.";
 			owner_lazy = () -> FinancialAssetBalanceTypeCode.mmObject();
@@ -993,7 +995,7 @@ public class FinancialAssetBalanceTypeCode {
 	 */
 	public static final MMCode mmBankersAcceptance = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BankersAcceptance";
 			definition = "Balance attributed to bankers acceptances.";
 			owner_lazy = () -> FinancialAssetBalanceTypeCode.mmObject();
@@ -1023,7 +1025,7 @@ public class FinancialAssetBalanceTypeCode {
 	 */
 	public static final MMCode mmSyndicatedBankLoan = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SyndicatedBankLoan";
 			definition = "Balance attributed to syndicated bank loans";
 			owner_lazy = () -> FinancialAssetBalanceTypeCode.mmObject();
@@ -1053,7 +1055,7 @@ public class FinancialAssetBalanceTypeCode {
 	 */
 	public static final MMCode mmCollateralisedBondObligation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralisedBondObligation";
 			definition = "Balance attributed to collateralised bond obligations.";
 			owner_lazy = () -> FinancialAssetBalanceTypeCode.mmObject();
@@ -1083,7 +1085,7 @@ public class FinancialAssetBalanceTypeCode {
 	 */
 	public static final MMCode mmCertificateOfDeposit = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CertificateOfDeposit";
 			definition = "Balance attributed to certificates of deposits.";
 			owner_lazy = () -> FinancialAssetBalanceTypeCode.mmObject();
@@ -1113,7 +1115,7 @@ public class FinancialAssetBalanceTypeCode {
 	 */
 	public static final MMCode mmCollateralisedDebtObligation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralisedDebtObligation";
 			definition = "Balance attributed to collateralised debt obligations.";
 			owner_lazy = () -> FinancialAssetBalanceTypeCode.mmObject();
@@ -1143,7 +1145,7 @@ public class FinancialAssetBalanceTypeCode {
 	 */
 	public static final MMCode mmCollateralisedLoanObligation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralisedLoanObligation";
 			definition = "Balance attributed to collateralised loan obligations.";
 			owner_lazy = () -> FinancialAssetBalanceTypeCode.mmObject();
@@ -1174,7 +1176,7 @@ public class FinancialAssetBalanceTypeCode {
 	 */
 	public static final MMCode mmCollateralisedMortgageObligation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralisedMortgageObligation";
 			definition = "Balance attributed to collateralised mortgage obligations";
 			owner_lazy = () -> FinancialAssetBalanceTypeCode.mmObject();
@@ -1204,7 +1206,7 @@ public class FinancialAssetBalanceTypeCode {
 	 */
 	public static final MMCode mmCommericalPaper = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommericalPaper";
 			definition = "Balance attributed to commercial paper.";
 			owner_lazy = () -> FinancialAssetBalanceTypeCode.mmObject();
@@ -1234,7 +1236,7 @@ public class FinancialAssetBalanceTypeCode {
 	 */
 	public static final MMCode mmCorporatePrivatePlacement = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorporatePrivatePlacement";
 			definition = "Balance attributed to corporate private placements.";
 			owner_lazy = () -> FinancialAssetBalanceTypeCode.mmObject();
@@ -1264,7 +1266,7 @@ public class FinancialAssetBalanceTypeCode {
 	 */
 	public static final MMCode mmDiscountNote = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DiscountNote";
 			definition = "Balance attributed to discount notes.";
 			owner_lazy = () -> FinancialAssetBalanceTypeCode.mmObject();
@@ -1294,7 +1296,7 @@ public class FinancialAssetBalanceTypeCode {
 	 */
 	public static final MMCode mmFederalAgencyDiscountNote = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FederalAgencyDiscountNote";
 			definition = "Balance attributed to federal agency discount notes.";
 			owner_lazy = () -> FinancialAssetBalanceTypeCode.mmObject();
@@ -1324,7 +1326,7 @@ public class FinancialAssetBalanceTypeCode {
 	 */
 	public static final MMCode mmFederalHousingAuthority = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FederalHousingAuthority";
 			definition = "Balance attributed to federal housing authorities.";
 			owner_lazy = () -> FinancialAssetBalanceTypeCode.mmObject();
@@ -1354,7 +1356,7 @@ public class FinancialAssetBalanceTypeCode {
 	 */
 	public static final MMCode mmFederalHomeLoan = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FederalHomeLoan";
 			definition = "Balance attributed to federal home loans.";
 			owner_lazy = () -> FinancialAssetBalanceTypeCode.mmObject();
@@ -1385,7 +1387,7 @@ public class FinancialAssetBalanceTypeCode {
 	 */
 	public static final MMCode mmFederalNationalMortgageAssociation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FederalNationalMortgageAssociation";
 			definition = "Balance attributed to federal national mortgage associations.";
 			owner_lazy = () -> FinancialAssetBalanceTypeCode.mmObject();
@@ -1415,7 +1417,7 @@ public class FinancialAssetBalanceTypeCode {
 	 */
 	public static final MMCode mmFloatingRateNote = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FloatingRateNote";
 			definition = "Balance attributed to floating rate notes.";
 			owner_lazy = () -> FinancialAssetBalanceTypeCode.mmObject();
@@ -1446,7 +1448,7 @@ public class FinancialAssetBalanceTypeCode {
 	 */
 	public static final MMCode mmGovernmentNationalMortgageAssociation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GovernmentNationalMortgageAssociation";
 			definition = "Balance attributed to the government national mortgage association.";
 			owner_lazy = () -> FinancialAssetBalanceTypeCode.mmObject();
@@ -1476,7 +1478,7 @@ public class FinancialAssetBalanceTypeCode {
 	 */
 	public static final MMCode mmTreasuriesAndAgenciesDebentures = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TreasuriesAndAgenciesDebentures";
 			definition = "Balance attributed to treasuries and agencies debentures";
 			owner_lazy = () -> FinancialAssetBalanceTypeCode.mmObject();
@@ -1506,7 +1508,7 @@ public class FinancialAssetBalanceTypeCode {
 	 */
 	public static final MMCode mmIOETTEMortgage = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IOETTEMortgage";
 			definition = "Balance attributed to IOETTE mortgages.";
 			owner_lazy = () -> FinancialAssetBalanceTypeCode.mmObject();
@@ -1536,7 +1538,7 @@ public class FinancialAssetBalanceTypeCode {
 	 */
 	public static final MMCode mmMortgagePrivatePlacement = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MortgagePrivatePlacement";
 			definition = "Balance attributed to mortgage private placements.";
 			owner_lazy = () -> FinancialAssetBalanceTypeCode.mmObject();
@@ -1566,7 +1568,7 @@ public class FinancialAssetBalanceTypeCode {
 	 */
 	public static final MMCode mmMunicipalBond = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MunicipalBond";
 			definition = "Balance attributed to municipal bonds.";
 			owner_lazy = () -> FinancialAssetBalanceTypeCode.mmObject();
@@ -1597,7 +1599,7 @@ public class FinancialAssetBalanceTypeCode {
 	 */
 	public static final MMCode mmStudentLoanMarketingAssociation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StudentLoanMarketingAssociation";
 			definition = "Balance attributed to student loan marketing associations.";
 			owner_lazy = () -> FinancialAssetBalanceTypeCode.mmObject();
@@ -1627,7 +1629,7 @@ public class FinancialAssetBalanceTypeCode {
 	 */
 	public static final MMCode mmShortTermInvestmentFund = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ShortTermInvestmentFund";
 			definition = "Balance attributed to short term investment funds.";
 			owner_lazy = () -> FinancialAssetBalanceTypeCode.mmObject();
@@ -1657,7 +1659,7 @@ public class FinancialAssetBalanceTypeCode {
 	 */
 	public static final MMCode mmTreasuryStrips = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TreasuryStrips";
 			definition = "Balance attributed to treasury strips.";
 			owner_lazy = () -> FinancialAssetBalanceTypeCode.mmObject();
@@ -1687,7 +1689,7 @@ public class FinancialAssetBalanceTypeCode {
 	 */
 	public static final MMCode mmTimeDeposit = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TimeDeposit";
 			definition = "Balance attributed to time deposits.";
 			owner_lazy = () -> FinancialAssetBalanceTypeCode.mmObject();
@@ -1717,7 +1719,7 @@ public class FinancialAssetBalanceTypeCode {
 	 */
 	public static final MMCode mmUnitizedBondsAndWarrants = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnitizedBondsAndWarrants";
 			definition = "Balance attributed to unitized bonds and warrants.";
 			owner_lazy = () -> FinancialAssetBalanceTypeCode.mmObject();
@@ -1747,7 +1749,7 @@ public class FinancialAssetBalanceTypeCode {
 	 */
 	public static final MMCode mmUnitizedBonds = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnitizedBonds";
 			definition = "Balance attributed to unitized bonds.";
 			owner_lazy = () -> FinancialAssetBalanceTypeCode.mmObject();
@@ -1777,7 +1779,7 @@ public class FinancialAssetBalanceTypeCode {
 	 */
 	public static final MMCode mmVariableRateDiscountNote = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VariableRateDiscountNote";
 			definition = "Balance attributed to variable rate discount notes.";
 			owner_lazy = () -> FinancialAssetBalanceTypeCode.mmObject();
@@ -1807,7 +1809,7 @@ public class FinancialAssetBalanceTypeCode {
 	 */
 	public static final MMCode mmCatsTigersLions = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CatsTigersLions";
 			definition = "Balance attributed to cats, lions and tigers.";
 			owner_lazy = () -> FinancialAssetBalanceTypeCode.mmObject();
@@ -1837,7 +1839,7 @@ public class FinancialAssetBalanceTypeCode {
 	 */
 	public static final MMCode mmForwardBonds = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForwardBonds";
 			definition = "Balance attributed to forwards - bonds.";
 			owner_lazy = () -> FinancialAssetBalanceTypeCode.mmObject();
@@ -1867,7 +1869,7 @@ public class FinancialAssetBalanceTypeCode {
 	 */
 	public static final MMCode mmForwardRateAgreement = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForwardRateAgreement";
 			definition = "Balance attributed to forward rate agreements.";
 			owner_lazy = () -> FinancialAssetBalanceTypeCode.mmObject();
@@ -1897,7 +1899,7 @@ public class FinancialAssetBalanceTypeCode {
 	 */
 	public static final MMCode mmRepurchaseAgreement = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RepurchaseAgreement";
 			definition = "Balance attributed to repurchase agreements.";
 			owner_lazy = () -> FinancialAssetBalanceTypeCode.mmObject();
@@ -1927,7 +1929,7 @@ public class FinancialAssetBalanceTypeCode {
 	 */
 	public static final MMCode mmReverseRepurchaseAgreement = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReverseRepurchaseAgreement";
 			definition = "Balance attributed to reverse repurchase agreements.";
 			owner_lazy = () -> FinancialAssetBalanceTypeCode.mmObject();
@@ -1957,7 +1959,7 @@ public class FinancialAssetBalanceTypeCode {
 	 */
 	public static final MMCode mmTripartyRepurchaseAgreement = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TripartyRepurchaseAgreement";
 			definition = "Balance attributed to triparty repurchase agreements.";
 			owner_lazy = () -> FinancialAssetBalanceTypeCode.mmObject();
@@ -1988,7 +1990,7 @@ public class FinancialAssetBalanceTypeCode {
 	 */
 	public static final MMCode mmTripartyReverseRepurchaseAgreement = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TripartyReverseRepurchaseAgreement";
 			definition = "Balance attributed to triparty reverse repurchase agreements.";
 			owner_lazy = () -> FinancialAssetBalanceTypeCode.mmObject();
@@ -2018,7 +2020,7 @@ public class FinancialAssetBalanceTypeCode {
 	 */
 	public static final MMCode mmFXForward = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FXForward";
 			definition = "Balance attributed to foreign exchange forwards.";
 			owner_lazy = () -> FinancialAssetBalanceTypeCode.mmObject();
@@ -2048,7 +2050,7 @@ public class FinancialAssetBalanceTypeCode {
 	 */
 	public static final MMCode mmFXSpot = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FXSpot";
 			definition = "Balance attributed to foreign exchange spots.";
 			owner_lazy = () -> FinancialAssetBalanceTypeCode.mmObject();
@@ -2078,7 +2080,7 @@ public class FinancialAssetBalanceTypeCode {
 	 */
 	public static final MMCode mmFXProfit = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FXProfit";
 			definition = "Balance attributed to foreign exchange profit.";
 			owner_lazy = () -> FinancialAssetBalanceTypeCode.mmObject();
@@ -2108,7 +2110,7 @@ public class FinancialAssetBalanceTypeCode {
 	 */
 	public static final MMCode mmFXLoss = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FXLoss";
 			definition = "Balance attributed to foreign exchange loss.";
 			owner_lazy = () -> FinancialAssetBalanceTypeCode.mmObject();
@@ -2119,42 +2121,28 @@ public class FinancialAssetBalanceTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("OINT");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FinancialAssetBalanceTypeCode";
 				definition = "Specifies balances of assets and other balances.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.FinancialAssetBalanceTypeCode.mmOtherFinancialInstruments, com.tools20022.repository.codeset.FinancialAssetBalanceTypeCode.mmSettledCash,
-						com.tools20022.repository.codeset.FinancialAssetBalanceTypeCode.mmAccruedIncome, com.tools20022.repository.codeset.FinancialAssetBalanceTypeCode.mmFXTransaction,
-						com.tools20022.repository.codeset.FinancialAssetBalanceTypeCode.mmCash, com.tools20022.repository.codeset.FinancialAssetBalanceTypeCode.mmTreasuryInflatedProtectedSecurity,
-						com.tools20022.repository.codeset.FinancialAssetBalanceTypeCode.mmEquity, com.tools20022.repository.codeset.FinancialAssetBalanceTypeCode.mmCommonStock,
-						com.tools20022.repository.codeset.FinancialAssetBalanceTypeCode.mmPreferredStock, com.tools20022.repository.codeset.FinancialAssetBalanceTypeCode.mmMutualFund,
-						com.tools20022.repository.codeset.FinancialAssetBalanceTypeCode.mmExchangeTradedFund, com.tools20022.repository.codeset.FinancialAssetBalanceTypeCode.mmRights,
-						com.tools20022.repository.codeset.FinancialAssetBalanceTypeCode.mmWarrant, com.tools20022.repository.codeset.FinancialAssetBalanceTypeCode.mmBond,
-						com.tools20022.repository.codeset.FinancialAssetBalanceTypeCode.mmConvertibleBond, com.tools20022.repository.codeset.FinancialAssetBalanceTypeCode.mmCorporateBond,
-						com.tools20022.repository.codeset.FinancialAssetBalanceTypeCode.mmGovernmentBond, com.tools20022.repository.codeset.FinancialAssetBalanceTypeCode.mmFuture,
-						com.tools20022.repository.codeset.FinancialAssetBalanceTypeCode.mmOption, com.tools20022.repository.codeset.FinancialAssetBalanceTypeCode.mmSwap,
-						com.tools20022.repository.codeset.FinancialAssetBalanceTypeCode.mmCurrencyExchange, com.tools20022.repository.codeset.FinancialAssetBalanceTypeCode.mmForeignInvestment,
-						com.tools20022.repository.codeset.FinancialAssetBalanceTypeCode.mmGold, com.tools20022.repository.codeset.FinancialAssetBalanceTypeCode.mmProperty,
-						com.tools20022.repository.codeset.FinancialAssetBalanceTypeCode.mmBankersAcceptance, com.tools20022.repository.codeset.FinancialAssetBalanceTypeCode.mmSyndicatedBankLoan,
-						com.tools20022.repository.codeset.FinancialAssetBalanceTypeCode.mmCollateralisedBondObligation, com.tools20022.repository.codeset.FinancialAssetBalanceTypeCode.mmCertificateOfDeposit,
-						com.tools20022.repository.codeset.FinancialAssetBalanceTypeCode.mmCollateralisedDebtObligation, com.tools20022.repository.codeset.FinancialAssetBalanceTypeCode.mmCollateralisedLoanObligation,
-						com.tools20022.repository.codeset.FinancialAssetBalanceTypeCode.mmCollateralisedMortgageObligation, com.tools20022.repository.codeset.FinancialAssetBalanceTypeCode.mmCommericalPaper,
-						com.tools20022.repository.codeset.FinancialAssetBalanceTypeCode.mmCorporatePrivatePlacement, com.tools20022.repository.codeset.FinancialAssetBalanceTypeCode.mmDiscountNote,
-						com.tools20022.repository.codeset.FinancialAssetBalanceTypeCode.mmFederalAgencyDiscountNote, com.tools20022.repository.codeset.FinancialAssetBalanceTypeCode.mmFederalHousingAuthority,
-						com.tools20022.repository.codeset.FinancialAssetBalanceTypeCode.mmFederalHomeLoan, com.tools20022.repository.codeset.FinancialAssetBalanceTypeCode.mmFederalNationalMortgageAssociation,
-						com.tools20022.repository.codeset.FinancialAssetBalanceTypeCode.mmFloatingRateNote, com.tools20022.repository.codeset.FinancialAssetBalanceTypeCode.mmGovernmentNationalMortgageAssociation,
-						com.tools20022.repository.codeset.FinancialAssetBalanceTypeCode.mmTreasuriesAndAgenciesDebentures, com.tools20022.repository.codeset.FinancialAssetBalanceTypeCode.mmIOETTEMortgage,
-						com.tools20022.repository.codeset.FinancialAssetBalanceTypeCode.mmMortgagePrivatePlacement, com.tools20022.repository.codeset.FinancialAssetBalanceTypeCode.mmMunicipalBond,
-						com.tools20022.repository.codeset.FinancialAssetBalanceTypeCode.mmStudentLoanMarketingAssociation, com.tools20022.repository.codeset.FinancialAssetBalanceTypeCode.mmShortTermInvestmentFund,
-						com.tools20022.repository.codeset.FinancialAssetBalanceTypeCode.mmTreasuryStrips, com.tools20022.repository.codeset.FinancialAssetBalanceTypeCode.mmTimeDeposit,
-						com.tools20022.repository.codeset.FinancialAssetBalanceTypeCode.mmUnitizedBondsAndWarrants, com.tools20022.repository.codeset.FinancialAssetBalanceTypeCode.mmUnitizedBonds,
-						com.tools20022.repository.codeset.FinancialAssetBalanceTypeCode.mmVariableRateDiscountNote, com.tools20022.repository.codeset.FinancialAssetBalanceTypeCode.mmCatsTigersLions,
-						com.tools20022.repository.codeset.FinancialAssetBalanceTypeCode.mmForwardBonds, com.tools20022.repository.codeset.FinancialAssetBalanceTypeCode.mmForwardRateAgreement,
-						com.tools20022.repository.codeset.FinancialAssetBalanceTypeCode.mmRepurchaseAgreement, com.tools20022.repository.codeset.FinancialAssetBalanceTypeCode.mmReverseRepurchaseAgreement,
-						com.tools20022.repository.codeset.FinancialAssetBalanceTypeCode.mmTripartyRepurchaseAgreement, com.tools20022.repository.codeset.FinancialAssetBalanceTypeCode.mmTripartyReverseRepurchaseAgreement,
-						com.tools20022.repository.codeset.FinancialAssetBalanceTypeCode.mmFXForward, com.tools20022.repository.codeset.FinancialAssetBalanceTypeCode.mmFXSpot,
-						com.tools20022.repository.codeset.FinancialAssetBalanceTypeCode.mmFXProfit, com.tools20022.repository.codeset.FinancialAssetBalanceTypeCode.mmFXLoss);
+				code_lazy = () -> Arrays.asList(FinancialAssetBalanceTypeCode.mmOtherFinancialInstruments, FinancialAssetBalanceTypeCode.mmSettledCash, FinancialAssetBalanceTypeCode.mmAccruedIncome,
+						FinancialAssetBalanceTypeCode.mmFXTransaction, FinancialAssetBalanceTypeCode.mmCash, FinancialAssetBalanceTypeCode.mmTreasuryInflatedProtectedSecurity, FinancialAssetBalanceTypeCode.mmEquity,
+						FinancialAssetBalanceTypeCode.mmCommonStock, FinancialAssetBalanceTypeCode.mmPreferredStock, FinancialAssetBalanceTypeCode.mmMutualFund, FinancialAssetBalanceTypeCode.mmExchangeTradedFund,
+						FinancialAssetBalanceTypeCode.mmRights, FinancialAssetBalanceTypeCode.mmWarrant, FinancialAssetBalanceTypeCode.mmBond, FinancialAssetBalanceTypeCode.mmConvertibleBond, FinancialAssetBalanceTypeCode.mmCorporateBond,
+						FinancialAssetBalanceTypeCode.mmGovernmentBond, FinancialAssetBalanceTypeCode.mmFuture, FinancialAssetBalanceTypeCode.mmOption, FinancialAssetBalanceTypeCode.mmSwap, FinancialAssetBalanceTypeCode.mmCurrencyExchange,
+						FinancialAssetBalanceTypeCode.mmForeignInvestment, FinancialAssetBalanceTypeCode.mmGold, FinancialAssetBalanceTypeCode.mmProperty, FinancialAssetBalanceTypeCode.mmBankersAcceptance,
+						FinancialAssetBalanceTypeCode.mmSyndicatedBankLoan, FinancialAssetBalanceTypeCode.mmCollateralisedBondObligation, FinancialAssetBalanceTypeCode.mmCertificateOfDeposit,
+						FinancialAssetBalanceTypeCode.mmCollateralisedDebtObligation, FinancialAssetBalanceTypeCode.mmCollateralisedLoanObligation, FinancialAssetBalanceTypeCode.mmCollateralisedMortgageObligation,
+						FinancialAssetBalanceTypeCode.mmCommericalPaper, FinancialAssetBalanceTypeCode.mmCorporatePrivatePlacement, FinancialAssetBalanceTypeCode.mmDiscountNote, FinancialAssetBalanceTypeCode.mmFederalAgencyDiscountNote,
+						FinancialAssetBalanceTypeCode.mmFederalHousingAuthority, FinancialAssetBalanceTypeCode.mmFederalHomeLoan, FinancialAssetBalanceTypeCode.mmFederalNationalMortgageAssociation,
+						FinancialAssetBalanceTypeCode.mmFloatingRateNote, FinancialAssetBalanceTypeCode.mmGovernmentNationalMortgageAssociation, FinancialAssetBalanceTypeCode.mmTreasuriesAndAgenciesDebentures,
+						FinancialAssetBalanceTypeCode.mmIOETTEMortgage, FinancialAssetBalanceTypeCode.mmMortgagePrivatePlacement, FinancialAssetBalanceTypeCode.mmMunicipalBond,
+						FinancialAssetBalanceTypeCode.mmStudentLoanMarketingAssociation, FinancialAssetBalanceTypeCode.mmShortTermInvestmentFund, FinancialAssetBalanceTypeCode.mmTreasuryStrips, FinancialAssetBalanceTypeCode.mmTimeDeposit,
+						FinancialAssetBalanceTypeCode.mmUnitizedBondsAndWarrants, FinancialAssetBalanceTypeCode.mmUnitizedBonds, FinancialAssetBalanceTypeCode.mmVariableRateDiscountNote, FinancialAssetBalanceTypeCode.mmCatsTigersLions,
+						FinancialAssetBalanceTypeCode.mmForwardBonds, FinancialAssetBalanceTypeCode.mmForwardRateAgreement, FinancialAssetBalanceTypeCode.mmRepurchaseAgreement, FinancialAssetBalanceTypeCode.mmReverseRepurchaseAgreement,
+						FinancialAssetBalanceTypeCode.mmTripartyRepurchaseAgreement, FinancialAssetBalanceTypeCode.mmTripartyReverseRepurchaseAgreement, FinancialAssetBalanceTypeCode.mmFXForward, FinancialAssetBalanceTypeCode.mmFXSpot,
+						FinancialAssetBalanceTypeCode.mmFXProfit, FinancialAssetBalanceTypeCode.mmFXLoss);
 				derivation_lazy = () -> Arrays.asList(FinancialAssetBalanceType1Code.mmObject());
 			}
 		});

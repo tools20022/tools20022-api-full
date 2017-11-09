@@ -20,8 +20,11 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.Party;
+import com.tools20022.repository.entity.RolePlayer;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -110,11 +113,11 @@ public class SingleQualifiedPartyIdentification1 {
 	 */
 	public static final MMMessageAssociationEnd mmBaseParty = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.RolePlayer.mmRole;
+			businessElementTrace_lazy = () -> RolePlayer.mmRole;
 			componentContext_lazy = () -> SingleQualifiedPartyIdentification1.mmObject();
 			isDerived = false;
 			xmlTag = "BasePty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BaseParty";
 			definition = "Party identification recognisable by parties in the trade.";
 			maxOccurs = 1;
@@ -160,7 +163,7 @@ public class SingleQualifiedPartyIdentification1 {
 			componentContext_lazy = () -> SingleQualifiedPartyIdentification1.mmObject();
 			isDerived = false;
 			xmlTag = "RltvIdr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelativeIdentifier";
 			definition = "Identifies a party, each identifier is recursively defined relative to the party identified by the base party and the preceding part of the list.";
 			maxOccurs = 5;
@@ -172,10 +175,10 @@ public class SingleQualifiedPartyIdentification1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SingleQualifiedPartyIdentification1.mmBaseParty, com.tools20022.repository.msg.SingleQualifiedPartyIdentification1.mmRelativeIdentifier);
+				messageElement_lazy = () -> Arrays.asList(SingleQualifiedPartyIdentification1.mmBaseParty, SingleQualifiedPartyIdentification1.mmRelativeIdentifier);
 				trace_lazy = () -> Party.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SingleQualifiedPartyIdentification1";
 				definition = "Defines an identifier for a party relative to another party using an identifier of another party followed by a local identifier issued by the other party.\r\nIt is assumed that customers of an identifiable party can be referenced by an identifier relative to that party. The identification of the party together with the relative identifier identifies the customer.\r\nSuch references can occur in sequence. The last occurrence of RelativeIdentifier is the local identifier at the party recursively defined by the PrefixParty and all preceding occurrences of RelativeIdentifier.\r\nTechnical note: The sequence of relative identifiers is used to avoid a recursive definition in the catalogue.";
 			}

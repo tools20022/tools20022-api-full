@@ -20,10 +20,12 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CurrencyCode;
 import com.tools20022.repository.codeset.Qualifier1Code;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -166,11 +168,11 @@ public class SingleQuote1 {
 	 */
 	public static final MMMessageAttribute mmQualifier = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesQuoteVariable.mmQualifier;
+			businessElementTrace_lazy = () -> SecuritiesQuoteVariable.mmQualifier;
 			componentContext_lazy = () -> SingleQuote1.mmObject();
 			isDerived = false;
 			xmlTag = "Qlfr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Qualifier";
 			definition = "Qualifies the use of the quote.";
 			minOccurs = 0;
@@ -213,7 +215,7 @@ public class SingleQuote1 {
 			componentContext_lazy = () -> SingleQuote1.mmObject();
 			isDerived = false;
 			xmlTag = "Ccy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Currency";
 			definition = "Can be used to specify the desired currency of the quoted price that may differ from the normal trading currency of the instrument being quote requested.";
 			maxOccurs = 1;
@@ -255,11 +257,11 @@ public class SingleQuote1 {
 	 */
 	public static final MMMessageAttribute mmValidUntilDateTime = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Quote.mmValidUntilDateTime;
+			businessElementTrace_lazy = () -> Quote.mmValidUntilDateTime;
 			componentContext_lazy = () -> SingleQuote1.mmObject();
 			isDerived = false;
 			xmlTag = "VldUntilDtTm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValidUntilDateTime";
 			definition = "Expresses the validity date and time of the Quote.";
 			maxOccurs = 1;
@@ -302,11 +304,11 @@ public class SingleQuote1 {
 	 */
 	public static final MMMessageAssociationEnd mmBidSide = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesQuoteVariable.mmBidSide;
+			businessElementTrace_lazy = () -> SecuritiesQuoteVariable.mmBidSide;
 			componentContext_lazy = () -> SingleQuote1.mmObject();
 			isDerived = false;
 			xmlTag = "BidSd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BidSide";
 			definition = "Indicates that the quote details are indicated as a bid of a security, commodity, currency.";
 			minOccurs = 0;
@@ -349,11 +351,11 @@ public class SingleQuote1 {
 	 */
 	public static final MMMessageAssociationEnd mmMidSide = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesQuoteVariable.mmMidSide;
+			businessElementTrace_lazy = () -> SecuritiesQuoteVariable.mmMidSide;
 			componentContext_lazy = () -> SingleQuote1.mmObject();
 			isDerived = false;
 			xmlTag = "MidSd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MidSide";
 			definition = "Indicates that the quote details are indicated as a mid of a security, commodity, currency (an average of the offer and the bid).";
 			minOccurs = 0;
@@ -396,11 +398,11 @@ public class SingleQuote1 {
 	 */
 	public static final MMMessageAssociationEnd mmOfferSide = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesQuoteVariable.mmOfferSide;
+			businessElementTrace_lazy = () -> SecuritiesQuoteVariable.mmOfferSide;
 			componentContext_lazy = () -> SingleQuote1.mmObject();
 			isDerived = false;
 			xmlTag = "OfferSd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OfferSide";
 			definition = "Indicates that the quote details are indicated as an offer of a security, commodity, currency.";
 			minOccurs = 0;
@@ -447,7 +449,7 @@ public class SingleQuote1 {
 			componentContext_lazy = () -> SingleQuote1.mmObject();
 			isDerived = false;
 			xmlTag = "SprdAndBchmkCrvDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SpreadAndBenchmarkCurveDetails";
 			definition = "Provides details about the benchmark against which the financial instrument is measured.";
 			maxOccurs = 1;
@@ -493,7 +495,7 @@ public class SingleQuote1 {
 			componentContext_lazy = () -> SingleQuote1.mmObject();
 			isDerived = false;
 			xmlTag = "FinInstrmDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentDetails";
 			definition = "Provides details about the financial instrument.";
 			maxOccurs = 1;
@@ -540,7 +542,7 @@ public class SingleQuote1 {
 			componentContext_lazy = () -> SingleQuote1.mmObject();
 			isDerived = false;
 			xmlTag = "UndrlygFinInstrmDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnderlyingFinancialInstrumentDetails";
 			definition = "Provides details about the underlying financial instrument.";
 			minOccurs = 0;
@@ -586,7 +588,7 @@ public class SingleQuote1 {
 			componentContext_lazy = () -> SingleQuote1.mmObject();
 			isDerived = false;
 			xmlTag = "FinInstrmAttrbts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentAttributes";
 			definition = "Provides details about the financial instrument attributes.";
 			maxOccurs = 1;
@@ -633,7 +635,7 @@ public class SingleQuote1 {
 			componentContext_lazy = () -> SingleQuote1.mmObject();
 			isDerived = false;
 			xmlTag = "Stiptns";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Stipulations";
 			definition = "Provides details about the financial instrument stipulations.";
 			maxOccurs = 1;
@@ -680,7 +682,7 @@ public class SingleQuote1 {
 			componentContext_lazy = () -> SingleQuote1.mmObject();
 			isDerived = false;
 			xmlTag = "UndrlygFinInstrmAttrbts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnderlyingFinancialInstrumentAttributes";
 			definition = "Provides details about the underlying financial instrument attributes.";
 			minOccurs = 0;
@@ -727,7 +729,7 @@ public class SingleQuote1 {
 			componentContext_lazy = () -> SingleQuote1.mmObject();
 			isDerived = false;
 			xmlTag = "UndrlygStiptns";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnderlyingStipulations";
 			definition = "Provides details about the underlying financial instrument stipulations.";
 			minOccurs = 0;
@@ -771,7 +773,7 @@ public class SingleQuote1 {
 			componentContext_lazy = () -> SingleQuote1.mmObject();
 			isDerived = false;
 			xmlTag = "InstrmLegGrpDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstrumentLegGroupDetails";
 			definition = "Additionnal details related to the leg.";
 			minOccurs = 0;
@@ -817,7 +819,7 @@ public class SingleQuote1 {
 			componentContext_lazy = () -> SingleQuote1.mmObject();
 			isDerived = false;
 			xmlTag = "MidYld";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MidYield";
 			definition = "Details about the return provided by a financial instrument.";
 			maxOccurs = 1;
@@ -863,7 +865,7 @@ public class SingleQuote1 {
 			componentContext_lazy = () -> SingleQuote1.mmObject();
 			isDerived = false;
 			xmlTag = "BidYld";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BidYield";
 			definition = "Characteristics related to the yield.";
 			maxOccurs = 1;
@@ -909,7 +911,7 @@ public class SingleQuote1 {
 			componentContext_lazy = () -> SingleQuote1.mmObject();
 			isDerived = false;
 			xmlTag = "OfferYld";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OfferYield";
 			definition = "Characteristics related to the yield.";
 			maxOccurs = 1;
@@ -955,7 +957,7 @@ public class SingleQuote1 {
 			componentContext_lazy = () -> SingleQuote1.mmObject();
 			isDerived = false;
 			xmlTag = "TradgSsnDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradingSessionDetails";
 			definition = "Provides details about the trading session.";
 			maxOccurs = 1;
@@ -1003,7 +1005,7 @@ public class SingleQuote1 {
 			componentContext_lazy = () -> SingleQuote1.mmObject();
 			isDerived = false;
 			xmlTag = "RltdPties";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedParties";
 			definition = "Parties used for acting parties that applies either to the whole message or to individual sides.";
 			minOccurs = 0;
@@ -1048,7 +1050,7 @@ public class SingleQuote1 {
 			componentContext_lazy = () -> SingleQuote1.mmObject();
 			isDerived = false;
 			xmlTag = "TwoLegTxDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TwoLegTransactionDetails";
 			definition = "Provides details about the trading session.";
 			maxOccurs = 1;
@@ -1094,7 +1096,7 @@ public class SingleQuote1 {
 			componentContext_lazy = () -> SingleQuote1.mmObject();
 			isDerived = false;
 			xmlTag = "OrdrDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrderDetails";
 			definition = "The intention to transfer an ownership of a financial instrument.";
 			maxOccurs = 1;
@@ -1137,7 +1139,7 @@ public class SingleQuote1 {
 			componentContext_lazy = () -> SingleQuote1.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementDetails";
 			definition = "The parameters required in order to settle the transfer of a financial instrument.";
 			maxOccurs = 1;
@@ -1186,7 +1188,7 @@ public class SingleQuote1 {
 			componentContext_lazy = () -> SingleQuote1.mmObject();
 			isDerived = false;
 			xmlTag = "CshPties";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashParties";
 			definition = "Payment processes required to transfer cash from the debtor to the creditor.";
 			maxOccurs = 1;
@@ -1237,7 +1239,7 @@ public class SingleQuote1 {
 			componentContext_lazy = () -> SingleQuote1.mmObject();
 			isDerived = false;
 			xmlTag = "RcvgSttlmPties";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceivingSettlementParties";
 			definition = "Chain of parties involved in the settlement of a transaction, including receipts and deliveries, book transfers, treasury deals, or other activities, resulting in the movement of a security or amount of money from one account to another.";
 			maxOccurs = 1;
@@ -1288,7 +1290,7 @@ public class SingleQuote1 {
 			componentContext_lazy = () -> SingleQuote1.mmObject();
 			isDerived = false;
 			xmlTag = "DlvrgSttlmPties";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeliveringSettlementParties";
 			definition = "Chain of parties involved in the settlement of a transaction, including receipts and deliveries, book transfers, treasury deals, or other activities, resulting in the movement of a security or amount of money from one account to another.";
 			maxOccurs = 1;
@@ -1333,7 +1335,7 @@ public class SingleQuote1 {
 			componentContext_lazy = () -> SingleQuote1.mmObject();
 			isDerived = false;
 			xmlTag = "OthrBizPties";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherBusinessParties";
 			definition = "Chain of parties involved in the settlement of a transaction, including receipts and deliveries, book transfers, treasury deals, or other activities, resulting in the movement of a security or amount of money from one account to another.";
 			maxOccurs = 1;
@@ -1346,19 +1348,14 @@ public class SingleQuote1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SingleQuote1.mmQualifier, com.tools20022.repository.msg.SingleQuote1.mmCurrency, com.tools20022.repository.msg.SingleQuote1.mmValidUntilDateTime,
-						com.tools20022.repository.msg.SingleQuote1.mmBidSide, com.tools20022.repository.msg.SingleQuote1.mmMidSide, com.tools20022.repository.msg.SingleQuote1.mmOfferSide,
-						com.tools20022.repository.msg.SingleQuote1.mmSpreadAndBenchmarkCurveDetails, com.tools20022.repository.msg.SingleQuote1.mmFinancialInstrumentDetails,
-						com.tools20022.repository.msg.SingleQuote1.mmUnderlyingFinancialInstrumentDetails, com.tools20022.repository.msg.SingleQuote1.mmFinancialInstrumentAttributes,
-						com.tools20022.repository.msg.SingleQuote1.mmStipulations, com.tools20022.repository.msg.SingleQuote1.mmUnderlyingFinancialInstrumentAttributes, com.tools20022.repository.msg.SingleQuote1.mmUnderlyingStipulations,
-						com.tools20022.repository.msg.SingleQuote1.mmInstrumentLegGroupDetails, com.tools20022.repository.msg.SingleQuote1.mmMidYield, com.tools20022.repository.msg.SingleQuote1.mmBidYield,
-						com.tools20022.repository.msg.SingleQuote1.mmOfferYield, com.tools20022.repository.msg.SingleQuote1.mmTradingSessionDetails, com.tools20022.repository.msg.SingleQuote1.mmRelatedParties,
-						com.tools20022.repository.msg.SingleQuote1.mmTwoLegTransactionDetails, com.tools20022.repository.msg.SingleQuote1.mmOrderDetails, com.tools20022.repository.msg.SingleQuote1.mmSettlementDetails,
-						com.tools20022.repository.msg.SingleQuote1.mmCashParties, com.tools20022.repository.msg.SingleQuote1.mmReceivingSettlementParties, com.tools20022.repository.msg.SingleQuote1.mmDeliveringSettlementParties,
-						com.tools20022.repository.msg.SingleQuote1.mmOtherBusinessParties);
+				messageElement_lazy = () -> Arrays.asList(SingleQuote1.mmQualifier, SingleQuote1.mmCurrency, SingleQuote1.mmValidUntilDateTime, SingleQuote1.mmBidSide, SingleQuote1.mmMidSide, SingleQuote1.mmOfferSide,
+						SingleQuote1.mmSpreadAndBenchmarkCurveDetails, SingleQuote1.mmFinancialInstrumentDetails, SingleQuote1.mmUnderlyingFinancialInstrumentDetails, SingleQuote1.mmFinancialInstrumentAttributes,
+						SingleQuote1.mmStipulations, SingleQuote1.mmUnderlyingFinancialInstrumentAttributes, SingleQuote1.mmUnderlyingStipulations, SingleQuote1.mmInstrumentLegGroupDetails, SingleQuote1.mmMidYield, SingleQuote1.mmBidYield,
+						SingleQuote1.mmOfferYield, SingleQuote1.mmTradingSessionDetails, SingleQuote1.mmRelatedParties, SingleQuote1.mmTwoLegTransactionDetails, SingleQuote1.mmOrderDetails, SingleQuote1.mmSettlementDetails,
+						SingleQuote1.mmCashParties, SingleQuote1.mmReceivingSettlementParties, SingleQuote1.mmDeliveringSettlementParties, SingleQuote1.mmOtherBusinessParties);
 				trace_lazy = () -> SecuritiesQuoteVariable.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
 						return DateFormat.getDateInstance(java.text.DateFormat.LONG).parse("September 9, 2016");

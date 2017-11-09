@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -28,6 +30,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.Authorisation1Code
+ * Authorisation1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -42,13 +51,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.AuthorisationCode#mmInstructionLevelAuthorisation
  * AuthorisationCode.mmInstructionLevelAuthorisation}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.Authorisation1Code
- * Authorisation1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -103,7 +105,7 @@ public class AuthorisationCode {
 	 */
 	public static final MMCode mmPreAuthorisedFile = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreAuthorisedFile";
 			definition = "Indicates a file has been pre authorised or approved within the originating customer environment and no further approval is required.";
 			owner_lazy = () -> AuthorisationCode.mmObject();
@@ -137,7 +139,7 @@ public class AuthorisationCode {
 	 */
 	public static final MMCode mmFileLevelAuthorisationDetails = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FileLevelAuthorisationDetails";
 			definition = "Indicates that a file requires additional file level approval, with the ability to view both the payment information block and supporting customer credit transaction detail.";
 			owner_lazy = () -> AuthorisationCode.mmObject();
@@ -170,7 +172,7 @@ public class AuthorisationCode {
 	 */
 	public static final MMCode mmFileLevelAuthorisationSummary = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FileLevelAuthorisationSummary";
 			definition = "Indicates that a file requires additional file level approval, with the ability to view only the payment information block level information.";
 			owner_lazy = () -> AuthorisationCode.mmObject();
@@ -203,7 +205,7 @@ public class AuthorisationCode {
 	 */
 	public static final MMCode mmInstructionLevelAuthorisation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructionLevelAuthorisation";
 			definition = "Indicates that a file requires all customer transactions to be authorised or approved.";
 			owner_lazy = () -> AuthorisationCode.mmObject();
@@ -214,13 +216,12 @@ public class AuthorisationCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("AUTH");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AuthorisationCode";
 				definition = "Specifies the level of approval depending on a number of factors, including payment type, threshold amount or local country or operations practice.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AuthorisationCode.mmPreAuthorisedFile, com.tools20022.repository.codeset.AuthorisationCode.mmFileLevelAuthorisationDetails,
-						com.tools20022.repository.codeset.AuthorisationCode.mmFileLevelAuthorisationSummary, com.tools20022.repository.codeset.AuthorisationCode.mmInstructionLevelAuthorisation);
+				code_lazy = () -> Arrays.asList(AuthorisationCode.mmPreAuthorisedFile, AuthorisationCode.mmFileLevelAuthorisationDetails, AuthorisationCode.mmFileLevelAuthorisationSummary, AuthorisationCode.mmInstructionLevelAuthorisation);
 				derivation_lazy = () -> Arrays.asList(Authorisation1Code.mmObject());
 			}
 		});

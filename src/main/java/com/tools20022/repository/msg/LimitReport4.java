@@ -19,8 +19,10 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.LimitOrError1Choice;
 import com.tools20022.repository.entity.RiskManagementLimit;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -114,10 +116,10 @@ public class LimitReport4 {
 			componentContext_lazy = () -> LimitReport4.mmObject();
 			isDerived = false;
 			xmlTag = "LmtId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LimitIdentification";
 			definition = "Identification of the limit on which information is requested.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LimitReport5.mmLimitIdentification);
+			nextVersions_lazy = () -> Arrays.asList(LimitReport5.mmLimitIdentification);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -166,10 +168,10 @@ public class LimitReport4 {
 			componentContext_lazy = () -> LimitReport4.mmObject();
 			isDerived = false;
 			xmlTag = "LmtOrErr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LimitOrError";
 			definition = "Requested information on the limit or business error report when information has not been found.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LimitReport5.mmLimitOrError);
+			nextVersions_lazy = () -> Arrays.asList(LimitReport5.mmLimitOrError);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -180,10 +182,10 @@ public class LimitReport4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LimitReport4.mmLimitIdentification, com.tools20022.repository.msg.LimitReport4.mmLimitOrError);
+				messageElement_lazy = () -> Arrays.asList(LimitReport4.mmLimitIdentification, LimitReport4.mmLimitOrError);
 				trace_lazy = () -> RiskManagementLimit.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "LimitReport4";
 				definition = "Reports either on the risk management limit or on a business error.";
 				nextVersions_lazy = () -> Arrays.asList(LimitReport5.mmObject());

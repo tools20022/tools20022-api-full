@@ -20,9 +20,11 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.Quantity2Choice;
 import com.tools20022.repository.codeset.ShortLong1Code;
 import com.tools20022.repository.entity.SecuritiesBalance;
+import com.tools20022.repository.GeneratedRepository;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -119,14 +121,14 @@ public class SignedQuantityFormat1 {
 	 */
 	public static final MMMessageAttribute mmShortLongPosition = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesBalance.mmShortLong;
+			businessElementTrace_lazy = () -> SecuritiesBalance.mmShortLong;
 			componentContext_lazy = () -> SignedQuantityFormat1.mmObject();
 			isDerived = false;
 			xmlTag = "ShrtLngPos";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ShortLongPosition";
 			definition = "Sign of the quantity of security.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SignedQuantityFormat7.mmShortLongPosition);
+			nextVersions_lazy = () -> Arrays.asList(SignedQuantityFormat7.mmShortLongPosition);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ShortLong1Code.mmObject();
@@ -174,14 +176,14 @@ public class SignedQuantityFormat1 {
 	 */
 	public static final MMMessageAssociationEnd mmQuantityChoice = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesBalance.mmAggregateQuantity;
+			businessElementTrace_lazy = () -> SecuritiesBalance.mmAggregateQuantity;
 			componentContext_lazy = () -> SignedQuantityFormat1.mmObject();
 			isDerived = false;
 			xmlTag = "QtyChc";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuantityChoice";
 			definition = "Choice between different quantity of security formats.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SignedQuantityFormat7.mmQuantityChoice);
+			nextVersions_lazy = () -> Arrays.asList(SignedQuantityFormat7.mmQuantityChoice);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -192,10 +194,10 @@ public class SignedQuantityFormat1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SignedQuantityFormat1.mmShortLongPosition, com.tools20022.repository.msg.SignedQuantityFormat1.mmQuantityChoice);
+				messageElement_lazy = () -> Arrays.asList(SignedQuantityFormat1.mmShortLongPosition, SignedQuantityFormat1.mmQuantityChoice);
 				trace_lazy = () -> SecuritiesBalance.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
 						return DateFormat.getDateInstance(java.text.DateFormat.LONG).parse("May 5, 2016");

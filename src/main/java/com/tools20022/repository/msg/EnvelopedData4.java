@@ -20,8 +20,10 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.Recipient4Choice;
 import com.tools20022.repository.datatype.Number;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -102,10 +104,10 @@ public class EnvelopedData4 {
 			componentContext_lazy = () -> EnvelopedData4.mmObject();
 			isDerived = false;
 			xmlTag = "Vrsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Version";
 			definition = "Version of the data structure.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.EnvelopedData3.mmVersion;
+			previousVersion_lazy = () -> EnvelopedData3.mmVersion;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
@@ -150,10 +152,10 @@ public class EnvelopedData4 {
 			componentContext_lazy = () -> EnvelopedData4.mmObject();
 			isDerived = false;
 			xmlTag = "Rcpt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Recipient";
 			definition = "Session key or identification of the protection key used by the recipient.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.EnvelopedData3.mmRecipient;
+			previousVersion_lazy = () -> EnvelopedData3.mmRecipient;
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> Recipient4Choice.mmObject();
@@ -197,10 +199,10 @@ public class EnvelopedData4 {
 			componentContext_lazy = () -> EnvelopedData4.mmObject();
 			isDerived = false;
 			xmlTag = "NcrptdCntt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EncryptedContent";
 			definition = "Data protection by encryption (digital envelope), with an encryption key.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.EnvelopedData3.mmEncryptedContent;
+			previousVersion_lazy = () -> EnvelopedData3.mmEncryptedContent;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -211,9 +213,9 @@ public class EnvelopedData4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.EnvelopedData4.mmVersion, com.tools20022.repository.msg.EnvelopedData4.mmRecipient, com.tools20022.repository.msg.EnvelopedData4.mmEncryptedContent);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(EnvelopedData4.mmVersion, EnvelopedData4.mmRecipient, EnvelopedData4.mmEncryptedContent);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "EnvelopedData4";
 				definition = "Encrypted data with encryption key.";
 				previousVersion_lazy = () -> EnvelopedData3.mmObject();

@@ -20,10 +20,13 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.DateAndDateTimeChoice;
 import com.tools20022.repository.choice.PaymentStatusCode6Choice;
 import com.tools20022.repository.choice.PaymentStatusReasonCode6Choice;
 import com.tools20022.repository.entity.PaymentStatus;
+import com.tools20022.repository.entity.Status;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -115,10 +118,10 @@ public class PaymentStatus2 {
 			componentContext_lazy = () -> PaymentStatus2.mmObject();
 			isDerived = false;
 			xmlTag = "Cd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Status of a transfer, in coded form, as  assigned by the transaction administrator.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PaymentStatus1.mmCode;
+			previousVersion_lazy = () -> PaymentStatus1.mmCode;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -166,14 +169,14 @@ public class PaymentStatus2 {
 	 */
 	public static final MMMessageAttribute mmDateTime = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.mmStatusDateTime;
+			businessElementTrace_lazy = () -> Status.mmStatusDateTime;
 			componentContext_lazy = () -> PaymentStatus2.mmObject();
 			isDerived = false;
 			xmlTag = "DtTm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DateTime";
 			definition = "Date and time at which the status was assigned to the transfer.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PaymentStatus1.mmDateTime;
+			previousVersion_lazy = () -> PaymentStatus1.mmDateTime;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
@@ -218,14 +221,14 @@ public class PaymentStatus2 {
 	 */
 	public static final MMMessageAssociationEnd mmReason = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.mmStatusReason;
+			businessElementTrace_lazy = () -> Status.mmStatusReason;
 			componentContext_lazy = () -> PaymentStatus2.mmObject();
 			isDerived = false;
 			xmlTag = "Rsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reason";
 			definition = "Reason provided for the status of a transfer.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PaymentStatus1.mmReason;
+			previousVersion_lazy = () -> PaymentStatus1.mmReason;
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> PaymentStatusReasonCode6Choice.mmObject();
@@ -235,10 +238,10 @@ public class PaymentStatus2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentStatus2.mmCode, com.tools20022.repository.msg.PaymentStatus2.mmDateTime, com.tools20022.repository.msg.PaymentStatus2.mmReason);
+				messageElement_lazy = () -> Arrays.asList(PaymentStatus2.mmCode, PaymentStatus2.mmDateTime, PaymentStatus2.mmReason);
 				trace_lazy = () -> PaymentStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PaymentStatus2";
 				definition = "Payment status details.";
 				previousVersion_lazy = () -> PaymentStatus1.mmObject();

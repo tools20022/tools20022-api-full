@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.FailureReasonCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -77,7 +79,7 @@ public class FailureReason5Code extends FailureReasonCode {
 	 */
 	public static final MMCode mmSecurity = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Security";
 			owner_lazy = () -> FailureReason5Code.mmObject();
 		}
@@ -100,7 +102,7 @@ public class FailureReason5Code extends FailureReasonCode {
 	 */
 	public static final MMCode mmHardware = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Hardware";
 			owner_lazy = () -> FailureReason5Code.mmObject();
 		}
@@ -109,11 +111,11 @@ public class FailureReason5Code extends FailureReasonCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FailureReason5Code";
 				definition = "Incident occurring on a device.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.FailureReason5Code.mmSecurity, com.tools20022.repository.codeset.FailureReason5Code.mmHardware);
+				code_lazy = () -> Arrays.asList(FailureReason5Code.mmSecurity, FailureReason5Code.mmHardware);
 				trace_lazy = () -> FailureReasonCode.mmObject();
 			}
 		});

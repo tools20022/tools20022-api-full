@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CorporateActionInformationTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -74,7 +76,7 @@ public class CorporateActionInformationType1Code extends CorporateActionInformat
 	 */
 	public static final MMCode mmConferenceCall = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConferenceCall";
 			owner_lazy = () -> CorporateActionInformationType1Code.mmObject();
 		}
@@ -83,11 +85,11 @@ public class CorporateActionInformationType1Code extends CorporateActionInformat
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionInformationType1Code";
 				definition = "Specifies the type of information event.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CorporateActionInformationType1Code.mmConferenceCall);
+				code_lazy = () -> Arrays.asList(CorporateActionInformationType1Code.mmConferenceCall);
 				trace_lazy = () -> CorporateActionInformationTypeCode.mmObject();
 			}
 		});

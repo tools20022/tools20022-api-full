@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionNarrative1Code
+ * CorporateActionNarrative1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -47,14 +57,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.CorporateActionNarrativeCode#mmConfirmationOfHoldingTransfer
  * CorporateActionNarrativeCode.mmConfirmationOfHoldingTransfer}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionNarrative1Code
- * CorporateActionNarrative1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -108,7 +110,7 @@ public class CorporateActionNarrativeCode {
 	 */
 	public static final MMCode mmTaxationConditions = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TaxationConditions";
 			definition = "Provides taxation conditions that cannot be included within the structured fields of this message.";
 			owner_lazy = () -> CorporateActionNarrativeCode.mmObject();
@@ -138,7 +140,7 @@ public class CorporateActionNarrativeCode {
 	 */
 	public static final MMCode mmRegistrationDetails = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RegistrationDetails";
 			definition = "Provides information required for the registration.";
 			owner_lazy = () -> CorporateActionNarrativeCode.mmObject();
@@ -171,7 +173,7 @@ public class CorporateActionNarrativeCode {
 	 */
 	public static final MMCode mmWithholdingTaxReliefCertification = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "WithholdingTaxReliefCertification";
 			definition = "Certification process for withholding tax reduction or exemption based on the tax status of the holder.";
 			owner_lazy = () -> CorporateActionNarrativeCode.mmObject();
@@ -205,7 +207,7 @@ public class CorporateActionNarrativeCode {
 	 */
 	public static final MMCode mmICSDRefusalOfMarkUpDownConfirmation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ICSDRefusalOfMarkUpDownConfirmation";
 			definition = "In the context of  a corporate action, an International Central Securities Depository (ICSD)  refuses a mark-up/mark-down confirmation sent by the account servicer.";
 			owner_lazy = () -> CorporateActionNarrativeCode.mmObject();
@@ -239,7 +241,7 @@ public class CorporateActionNarrativeCode {
 	 */
 	public static final MMCode mmChasingOfPriorAuthorization = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ChasingOfPriorAuthorization";
 			definition = "International Central Securities Depository (ICSD) chases the authorisation from the account servicer in order to process the exchange from global temporary to global permanent.";
 			owner_lazy = () -> CorporateActionNarrativeCode.mmObject();
@@ -272,7 +274,7 @@ public class CorporateActionNarrativeCode {
 	 */
 	public static final MMCode mmConfirmationOfHoldingTransfer = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ConfirmationOfHoldingTransfer";
 			definition = "Confirmation of transfer of interests between International Central Securities Depositories (ICSDs) following a corporate actions.";
 			owner_lazy = () -> CorporateActionNarrativeCode.mmObject();
@@ -283,14 +285,13 @@ public class CorporateActionNarrativeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("TAXE");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionNarrativeCode";
 				definition = "Standard code to specify the narrative type of a corporate action.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CorporateActionNarrativeCode.mmTaxationConditions, com.tools20022.repository.codeset.CorporateActionNarrativeCode.mmRegistrationDetails,
-						com.tools20022.repository.codeset.CorporateActionNarrativeCode.mmWithholdingTaxReliefCertification, com.tools20022.repository.codeset.CorporateActionNarrativeCode.mmICSDRefusalOfMarkUpDownConfirmation,
-						com.tools20022.repository.codeset.CorporateActionNarrativeCode.mmChasingOfPriorAuthorization, com.tools20022.repository.codeset.CorporateActionNarrativeCode.mmConfirmationOfHoldingTransfer);
+				code_lazy = () -> Arrays.asList(CorporateActionNarrativeCode.mmTaxationConditions, CorporateActionNarrativeCode.mmRegistrationDetails, CorporateActionNarrativeCode.mmWithholdingTaxReliefCertification,
+						CorporateActionNarrativeCode.mmICSDRefusalOfMarkUpDownConfirmation, CorporateActionNarrativeCode.mmChasingOfPriorAuthorization, CorporateActionNarrativeCode.mmConfirmationOfHoldingTransfer);
 				derivation_lazy = () -> Arrays.asList(CorporateActionNarrative1Code.mmObject());
 			}
 		});

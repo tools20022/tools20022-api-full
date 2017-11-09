@@ -19,8 +19,10 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.QuoteStatus1Code;
 import com.tools20022.repository.codeset.RejectionReason3Code;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -91,7 +93,7 @@ public class QuoteStatus1 {
 			componentContext_lazy = () -> QuoteStatus1.mmObject();
 			isDerived = false;
 			xmlTag = "QtSts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuoteStatus";
 			definition = "Provides information related to the status of a quote.";
 			maxOccurs = 1;
@@ -133,7 +135,7 @@ public class QuoteStatus1 {
 			componentContext_lazy = () -> QuoteStatus1.mmObject();
 			isDerived = false;
 			xmlTag = "RjctnRsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RejectionReason";
 			definition = "Provides information related to the rejection of the quote.";
 			maxOccurs = 1;
@@ -145,9 +147,9 @@ public class QuoteStatus1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.QuoteStatus1.mmQuoteStatus, com.tools20022.repository.msg.QuoteStatus1.mmRejectionReason);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(QuoteStatus1.mmQuoteStatus, QuoteStatus1.mmRejectionReason);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "QuoteStatus1";
 				definition = "Identifies the status of a quote and the rejection reason if required.";
 			}

@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.InvestorType1Code
+ * InvestorType1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>{@linkplain com.tools20022.repository.codeset.InvestorTypeCode#mmRetail
@@ -51,13 +60,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.InvestorTypeCode#mmQualified
  * InvestorTypeCode.mmQualified}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.InvestorType1Code
- * InvestorType1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -107,7 +109,7 @@ public class InvestorTypeCode {
 	 */
 	public static final MMCode mmRetail = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Retail";
 			definition = "Investor is a retail investor.";
 			owner_lazy = () -> InvestorTypeCode.mmObject();
@@ -137,7 +139,7 @@ public class InvestorTypeCode {
 	 */
 	public static final MMCode mmProfessional = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Professional";
 			definition = "Investor is a professional or institutional investor.";
 			owner_lazy = () -> InvestorTypeCode.mmObject();
@@ -167,7 +169,7 @@ public class InvestorTypeCode {
 	 */
 	public static final MMCode mmStaff = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Staff";
 			definition = "Investor is an employee.";
 			owner_lazy = () -> InvestorTypeCode.mmObject();
@@ -197,7 +199,7 @@ public class InvestorTypeCode {
 	 */
 	public static final MMCode mmPhysicalPerson = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PhysicalPerson";
 			definition = "Investor is a physical person.";
 			owner_lazy = () -> InvestorTypeCode.mmObject();
@@ -227,7 +229,7 @@ public class InvestorTypeCode {
 	 */
 	public static final MMCode mmInstitutional = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Institutional";
 			definition = "Investor is an institutional investor.";
 			owner_lazy = () -> InvestorTypeCode.mmObject();
@@ -258,7 +260,7 @@ public class InvestorTypeCode {
 	 */
 	public static final MMCode mmRetailAndInstitutional = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RetailAndInstitutional";
 			definition = "Investor is both an institutional and an individual investor.";
 			owner_lazy = () -> InvestorTypeCode.mmObject();
@@ -289,7 +291,7 @@ public class InvestorTypeCode {
 	 */
 	public static final MMCode mmGrossDistribution = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "GrossDistribution";
 			definition = "Investor is eligible to receive income gross, eg, a pension scheme.";
 			owner_lazy = () -> InvestorTypeCode.mmObject();
@@ -319,7 +321,7 @@ public class InvestorTypeCode {
 	 */
 	public static final MMCode mmQualified = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Qualified";
 			definition = "Investor meets the fund entry policy restriction.";
 			owner_lazy = () -> InvestorTypeCode.mmObject();
@@ -330,14 +332,13 @@ public class InvestorTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("RETL");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InvestorTypeCode";
 				definition = "Specifies the  type of investor.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.InvestorTypeCode.mmRetail, com.tools20022.repository.codeset.InvestorTypeCode.mmProfessional, com.tools20022.repository.codeset.InvestorTypeCode.mmStaff,
-						com.tools20022.repository.codeset.InvestorTypeCode.mmPhysicalPerson, com.tools20022.repository.codeset.InvestorTypeCode.mmInstitutional, com.tools20022.repository.codeset.InvestorTypeCode.mmRetailAndInstitutional,
-						com.tools20022.repository.codeset.InvestorTypeCode.mmGrossDistribution, com.tools20022.repository.codeset.InvestorTypeCode.mmQualified);
+				code_lazy = () -> Arrays.asList(InvestorTypeCode.mmRetail, InvestorTypeCode.mmProfessional, InvestorTypeCode.mmStaff, InvestorTypeCode.mmPhysicalPerson, InvestorTypeCode.mmInstitutional,
+						InvestorTypeCode.mmRetailAndInstitutional, InvestorTypeCode.mmGrossDistribution, InvestorTypeCode.mmQualified);
 				derivation_lazy = () -> Arrays.asList(InvestorType1Code.mmObject());
 			}
 		});

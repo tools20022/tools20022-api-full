@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CalculationBasisCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -89,7 +91,7 @@ public class CalculationBasis2Code extends CalculationBasisCode {
 	 */
 	public static final MMCode mmAverage = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Average";
 			owner_lazy = () -> CalculationBasis2Code.mmObject();
 		}
@@ -112,7 +114,7 @@ public class CalculationBasis2Code extends CalculationBasisCode {
 	 */
 	public static final MMCode mmDaily = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Daily";
 			owner_lazy = () -> CalculationBasis2Code.mmObject();
 		}
@@ -135,7 +137,7 @@ public class CalculationBasis2Code extends CalculationBasisCode {
 	 */
 	public static final MMCode mmMonthly = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Monthly";
 			owner_lazy = () -> CalculationBasis2Code.mmObject();
 		}
@@ -158,7 +160,7 @@ public class CalculationBasis2Code extends CalculationBasisCode {
 	 */
 	public static final MMCode mmAnnual = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Annual";
 			owner_lazy = () -> CalculationBasis2Code.mmObject();
 		}
@@ -167,13 +169,12 @@ public class CalculationBasis2Code extends CalculationBasisCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("AVER");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CalculationBasis2Code";
 				definition = "Specifies the calculation basis.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CalculationBasis2Code.mmAverage, com.tools20022.repository.codeset.CalculationBasis2Code.mmDaily,
-						com.tools20022.repository.codeset.CalculationBasis2Code.mmMonthly, com.tools20022.repository.codeset.CalculationBasis2Code.mmAnnual);
+				code_lazy = () -> Arrays.asList(CalculationBasis2Code.mmAverage, CalculationBasis2Code.mmDaily, CalculationBasis2Code.mmMonthly, CalculationBasis2Code.mmAnnual);
 				trace_lazy = () -> CalculationBasisCode.mmObject();
 			}
 		});

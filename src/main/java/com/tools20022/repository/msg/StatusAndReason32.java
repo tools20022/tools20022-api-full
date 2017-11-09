@@ -19,8 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.semt.SecuritiesTransactionPendingReportV08;
 import com.tools20022.repository.choice.Status18Choice;
 import com.tools20022.repository.entity.Status;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -117,10 +120,10 @@ public class StatusAndReason32 {
 			componentContext_lazy = () -> StatusAndReason32.mmObject();
 			isDerived = false;
 			xmlTag = "StsAndRsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusAndReason";
 			definition = "Status and reason for the transaction.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.StatusAndReason27.mmStatusAndReason;
+			previousVersion_lazy = () -> StatusAndReason27.mmStatusAndReason;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -164,10 +167,10 @@ public class StatusAndReason32 {
 			componentContext_lazy = () -> StatusAndReason32.mmObject();
 			isDerived = false;
 			xmlTag = "Tx";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Transaction";
 			definition = "Details of the transactions reported.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.StatusAndReason27.mmTransaction;
+			previousVersion_lazy = () -> StatusAndReason27.mmTransaction;
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.Transaction54.mmObject();
@@ -177,11 +180,11 @@ public class StatusAndReason32 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StatusAndReason32.mmStatusAndReason, com.tools20022.repository.msg.StatusAndReason32.mmTransaction);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.SecuritiesTransactionPendingReportV08.mmStatus);
+				messageElement_lazy = () -> Arrays.asList(StatusAndReason32.mmStatusAndReason, StatusAndReason32.mmTransaction);
+				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesTransactionPendingReportV08.mmStatus);
 				trace_lazy = () -> Status.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "StatusAndReason32";
 				definition = "Status and reason of an instructed order.";
 				previousVersion_lazy = () -> StatusAndReason27.mmObject();

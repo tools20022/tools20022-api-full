@@ -20,8 +20,10 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.datatype.RestrictedFINXMax35Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -128,11 +130,11 @@ public class CorporateActionGeneralInformationSD16 {
 			componentContext_lazy = () -> CorporateActionGeneralInformationSD16.mmObject();
 			isDerived = false;
 			xmlTag = "PlcAndNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "xPath to the element that is being extended.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionGeneralInformationSD17.mmPlaceAndName);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionGeneralInformationSD3.mmPlaceAndName;
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionGeneralInformationSD17.mmPlaceAndName);
+			previousVersion_lazy = () -> CorporateActionGeneralInformationSD3.mmPlaceAndName;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
@@ -185,11 +187,11 @@ public class CorporateActionGeneralInformationSD16 {
 			componentContext_lazy = () -> CorporateActionGeneralInformationSD16.mmObject();
 			isDerived = false;
 			xmlTag = "SctyId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityIdentification";
 			definition = "Identifies the financial instrument.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionGeneralInformationSD17.mmSecurityIdentification);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionGeneralInformationSD3.mmSecurityIdentification;
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionGeneralInformationSD17.mmSecurityIdentification);
+			previousVersion_lazy = () -> CorporateActionGeneralInformationSD3.mmSecurityIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> com.tools20022.repository.msg.SecurityIdentification15.mmObject();
@@ -242,11 +244,11 @@ public class CorporateActionGeneralInformationSD16 {
 			componentContext_lazy = () -> CorporateActionGeneralInformationSD16.mmObject();
 			isDerived = false;
 			xmlTag = "SfkpgAcct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingAccount";
 			definition = "Account where financial instruments are maintained.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionGeneralInformationSD17.mmSafekeepingAccount);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionUnallocatedDetailsSD1.mmSafekeepingAccount;
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionGeneralInformationSD17.mmSafekeepingAccount);
+			previousVersion_lazy = () -> CorporateActionUnallocatedDetailsSD1.mmSafekeepingAccount;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RestrictedFINXMax35Text.mmObject();
@@ -298,11 +300,11 @@ public class CorporateActionGeneralInformationSD16 {
 			componentContext_lazy = () -> CorporateActionGeneralInformationSD16.mmObject();
 			isDerived = false;
 			xmlTag = "UallctdDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnallocatedDetails";
 			definition = "Additional information about the corporate action event.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionGeneralInformationSD17.mmUnallocatedDetails);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionGeneralInformationSD3.mmUnallocatedDetails;
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionGeneralInformationSD17.mmUnallocatedDetails);
+			previousVersion_lazy = () -> CorporateActionGeneralInformationSD3.mmUnallocatedDetails;
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.CorporateActionUnallocatedDetailsSD2.mmObject();
@@ -312,10 +314,10 @@ public class CorporateActionGeneralInformationSD16 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionGeneralInformationSD16.mmPlaceAndName, com.tools20022.repository.msg.CorporateActionGeneralInformationSD16.mmSecurityIdentification,
-						com.tools20022.repository.msg.CorporateActionGeneralInformationSD16.mmSafekeepingAccount, com.tools20022.repository.msg.CorporateActionGeneralInformationSD16.mmUnallocatedDetails);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(CorporateActionGeneralInformationSD16.mmPlaceAndName, CorporateActionGeneralInformationSD16.mmSecurityIdentification, CorporateActionGeneralInformationSD16.mmSafekeepingAccount,
+						CorporateActionGeneralInformationSD16.mmUnallocatedDetails);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionGeneralInformationSD16";
 				definition = "Provides additional information regarding corporate action general information.";
 				nextVersions_lazy = () -> Arrays.asList(CorporateActionGeneralInformationSD17.mmObject());

@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.InformationDistributionCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -80,7 +82,7 @@ public class InformationDistribution2Code extends InformationDistributionCode {
 	 */
 	public static final MMCode mmElectronic = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Electronic";
 			owner_lazy = () -> InformationDistribution2Code.mmObject();
 		}
@@ -103,7 +105,7 @@ public class InformationDistribution2Code extends InformationDistributionCode {
 	 */
 	public static final MMCode mmNoDistribution = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoDistribution";
 			owner_lazy = () -> InformationDistribution2Code.mmObject();
 		}
@@ -126,7 +128,7 @@ public class InformationDistribution2Code extends InformationDistributionCode {
 	 */
 	public static final MMCode mmPaper = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Paper";
 			owner_lazy = () -> InformationDistribution2Code.mmObject();
 		}
@@ -135,12 +137,11 @@ public class InformationDistribution2Code extends InformationDistributionCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InformationDistribution2Code";
 				definition = "Specifies how information is to be distributed.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.InformationDistribution2Code.mmElectronic, com.tools20022.repository.codeset.InformationDistribution2Code.mmNoDistribution,
-						com.tools20022.repository.codeset.InformationDistribution2Code.mmPaper);
+				code_lazy = () -> Arrays.asList(InformationDistribution2Code.mmElectronic, InformationDistribution2Code.mmNoDistribution, InformationDistribution2Code.mmPaper);
 				trace_lazy = () -> InformationDistributionCode.mmObject();
 			}
 		});

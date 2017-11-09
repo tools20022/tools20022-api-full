@@ -19,7 +19,9 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.SystemMemberRole;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.ErrorHandling3;
 import com.tools20022.repository.msg.MemberReport3;
 import java.util.Arrays;
@@ -105,7 +107,7 @@ public class MemberReportOrError1Choice {
 			componentContext_lazy = () -> MemberReportOrError1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Rpt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Report";
 			definition = "Provides the details on the requested member.";
 			minOccurs = 1;
@@ -148,7 +150,7 @@ public class MemberReportOrError1Choice {
 			componentContext_lazy = () -> MemberReportOrError1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "OprlErr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OperationalError";
 			definition = "Indicates that an operational error has been issued during the processing of the related request.";
 			minOccurs = 1;
@@ -160,10 +162,10 @@ public class MemberReportOrError1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.MemberReportOrError1Choice.mmReport, com.tools20022.repository.choice.MemberReportOrError1Choice.mmOperationalError);
+				messageElement_lazy = () -> Arrays.asList(MemberReportOrError1Choice.mmReport, MemberReportOrError1Choice.mmOperationalError);
 				trace_lazy = () -> SystemMemberRole.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "MemberReportOrError1Choice";
 				definition = "It is used to provide information on transactions and booked entries held at the transaction administrator.";
 			}

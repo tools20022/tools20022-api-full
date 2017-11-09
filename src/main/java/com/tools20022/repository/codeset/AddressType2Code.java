@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.AddressTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -92,7 +94,7 @@ public class AddressType2Code extends AddressTypeCode {
 	 */
 	public static final MMCode mmPostal = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Postal";
 			owner_lazy = () -> AddressType2Code.mmObject();
 		}
@@ -115,7 +117,7 @@ public class AddressType2Code extends AddressTypeCode {
 	 */
 	public static final MMCode mmPOBox = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "POBox";
 			owner_lazy = () -> AddressType2Code.mmObject();
 		}
@@ -138,7 +140,7 @@ public class AddressType2Code extends AddressTypeCode {
 	 */
 	public static final MMCode mmResidential = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Residential";
 			owner_lazy = () -> AddressType2Code.mmObject();
 		}
@@ -161,7 +163,7 @@ public class AddressType2Code extends AddressTypeCode {
 	 */
 	public static final MMCode mmBusiness = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Business";
 			owner_lazy = () -> AddressType2Code.mmObject();
 		}
@@ -184,7 +186,7 @@ public class AddressType2Code extends AddressTypeCode {
 	 */
 	public static final MMCode mmMailTo = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MailTo";
 			owner_lazy = () -> AddressType2Code.mmObject();
 		}
@@ -207,7 +209,7 @@ public class AddressType2Code extends AddressTypeCode {
 	 */
 	public static final MMCode mmDeliveryTo = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeliveryTo";
 			owner_lazy = () -> AddressType2Code.mmObject();
 		}
@@ -216,13 +218,12 @@ public class AddressType2Code extends AddressTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ADDR");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AddressType2Code";
 				definition = "Specifies the type of address.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AddressType2Code.mmPostal, com.tools20022.repository.codeset.AddressType2Code.mmPOBox, com.tools20022.repository.codeset.AddressType2Code.mmResidential,
-						com.tools20022.repository.codeset.AddressType2Code.mmBusiness, com.tools20022.repository.codeset.AddressType2Code.mmMailTo, com.tools20022.repository.codeset.AddressType2Code.mmDeliveryTo);
+				code_lazy = () -> Arrays.asList(AddressType2Code.mmPostal, AddressType2Code.mmPOBox, AddressType2Code.mmResidential, AddressType2Code.mmBusiness, AddressType2Code.mmMailTo, AddressType2Code.mmDeliveryTo);
 				trace_lazy = () -> AddressTypeCode.mmObject();
 			}
 		});

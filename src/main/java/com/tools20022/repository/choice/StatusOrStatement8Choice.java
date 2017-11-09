@@ -19,7 +19,10 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.sese.SecuritiesStatusOrStatementQueryStatusAdvice002V04;
 import com.tools20022.repository.entity.Status;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.DocumentNumber14;
 import com.tools20022.repository.msg.DocumentNumber15;
 import java.util.Arrays;
@@ -110,7 +113,7 @@ public class StatusOrStatement8Choice {
 			componentContext_lazy = () -> StatusOrStatement8Choice.mmObject();
 			isDerived = false;
 			xmlTag = "StsAdvc";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusAdvice";
 			definition = "Identify the status advice and the transaction for which the status advice was requested.";
 			maxOccurs = 1;
@@ -151,7 +154,7 @@ public class StatusOrStatement8Choice {
 			componentContext_lazy = () -> StatusOrStatement8Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Stmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Statement";
 			definition = "Identify the statement/report that was requested.";
 			maxOccurs = 1;
@@ -164,10 +167,10 @@ public class StatusOrStatement8Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.StatusOrStatement8Choice.mmStatusAdvice, com.tools20022.repository.choice.StatusOrStatement8Choice.mmStatement);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesStatusOrStatementQueryStatusAdvice002V04.mmStatusOrStatementRequested);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(StatusOrStatement8Choice.mmStatusAdvice, StatusOrStatement8Choice.mmStatement);
+				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesStatusOrStatementQueryStatusAdvice002V04.mmStatusOrStatementRequested);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "StatusOrStatement8Choice";
 				definition = "Specifies the status or statement that is requested.";
 			}

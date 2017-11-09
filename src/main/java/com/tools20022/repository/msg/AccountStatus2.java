@@ -19,8 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.*;
 import com.tools20022.repository.entity.AccountStatus;
+import com.tools20022.repository.entity.Status;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -113,11 +116,11 @@ public class AccountStatus2 {
 	 */
 	public static final MMMessageAssociationEnd mmEnabled = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.mmStatusReason;
+			businessElementTrace_lazy = () -> Status.mmStatusReason;
 			componentContext_lazy = () -> AccountStatus2.mmObject();
 			isDerived = false;
 			xmlTag = "Nbld";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Enabled";
 			definition = "Account can be used for its intended purpose. ";
 			maxOccurs = 1;
@@ -161,11 +164,11 @@ public class AccountStatus2 {
 	 */
 	public static final MMMessageAssociationEnd mmDisabled = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.mmStatusReason;
+			businessElementTrace_lazy = () -> Status.mmStatusReason;
 			componentContext_lazy = () -> AccountStatus2.mmObject();
 			isDerived = false;
 			xmlTag = "Dsbld";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Disabled";
 			definition = "Account cannot temporarily be used for its intended purpose.";
 			maxOccurs = 1;
@@ -208,11 +211,11 @@ public class AccountStatus2 {
 	 */
 	public static final MMMessageAssociationEnd mmPending = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.mmStatusReason;
+			businessElementTrace_lazy = () -> Status.mmStatusReason;
 			componentContext_lazy = () -> AccountStatus2.mmObject();
 			isDerived = false;
 			xmlTag = "Pdg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Pending";
 			definition = "Account change is pending approval.";
 			maxOccurs = 1;
@@ -255,11 +258,11 @@ public class AccountStatus2 {
 	 */
 	public static final MMMessageAssociationEnd mmPendingOpening = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.mmStatusReason;
+			businessElementTrace_lazy = () -> Status.mmStatusReason;
 			componentContext_lazy = () -> AccountStatus2.mmObject();
 			isDerived = false;
 			xmlTag = "PdgOpng";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingOpening";
 			definition = "Account opening is pending.";
 			maxOccurs = 1;
@@ -306,11 +309,11 @@ public class AccountStatus2 {
 	 */
 	public static final MMMessageAssociationEnd mmProforma = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.mmStatusReason;
+			businessElementTrace_lazy = () -> Status.mmStatusReason;
 			componentContext_lazy = () -> AccountStatus2.mmObject();
 			isDerived = false;
 			xmlTag = "Profrm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proforma";
 			definition = "Account is temporary and can be partially used for its intended purpose. The account will be fully available for use when the account servicer has received all relevant documents.";
 			maxOccurs = 1;
@@ -353,11 +356,11 @@ public class AccountStatus2 {
 	 */
 	public static final MMMessageAssociationEnd mmClosed = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.mmStatusReason;
+			businessElementTrace_lazy = () -> Status.mmStatusReason;
 			componentContext_lazy = () -> AccountStatus2.mmObject();
 			isDerived = false;
 			xmlTag = "Clsd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Closed";
 			definition = "Account is closed.";
 			maxOccurs = 1;
@@ -400,11 +403,11 @@ public class AccountStatus2 {
 	 */
 	public static final MMMessageAssociationEnd mmClosurePending = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.mmStatusReason;
+			businessElementTrace_lazy = () -> Status.mmStatusReason;
 			componentContext_lazy = () -> AccountStatus2.mmObject();
 			isDerived = false;
 			xmlTag = "ClsrPdg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClosurePending";
 			definition = "Account closure is pending.";
 			maxOccurs = 1;
@@ -450,7 +453,7 @@ public class AccountStatus2 {
 			componentContext_lazy = () -> AccountStatus2.mmObject();
 			isDerived = false;
 			xmlTag = "Othr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
 			definition = "Status is a bilaterally agreed status.";
 			minOccurs = 0;
@@ -462,12 +465,11 @@ public class AccountStatus2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountStatus2.mmEnabled, com.tools20022.repository.msg.AccountStatus2.mmDisabled, com.tools20022.repository.msg.AccountStatus2.mmPending,
-						com.tools20022.repository.msg.AccountStatus2.mmPendingOpening, com.tools20022.repository.msg.AccountStatus2.mmProforma, com.tools20022.repository.msg.AccountStatus2.mmClosed,
-						com.tools20022.repository.msg.AccountStatus2.mmClosurePending, com.tools20022.repository.msg.AccountStatus2.mmOther);
+				messageElement_lazy = () -> Arrays.asList(AccountStatus2.mmEnabled, AccountStatus2.mmDisabled, AccountStatus2.mmPending, AccountStatus2.mmPendingOpening, AccountStatus2.mmProforma, AccountStatus2.mmClosed,
+						AccountStatus2.mmClosurePending, AccountStatus2.mmOther);
 				trace_lazy = () -> AccountStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AccountStatus2";
 				definition = "Status of an account.";
 				previousVersion_lazy = () -> AccountStatus1Choice.mmObject();

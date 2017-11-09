@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CancelledStatusReasonV2Code;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -85,7 +87,7 @@ public class CancelledStatusReason14Code extends CancelledStatusReasonV2Code {
 	 */
 	public static final MMCode mmNarrativeReason = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NarrativeReason";
 			owner_lazy = () -> CancelledStatusReason14Code.mmObject();
 		}
@@ -94,12 +96,12 @@ public class CancelledStatusReason14Code extends CancelledStatusReasonV2Code {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CancelledStatusReason14Code";
 				definition = "Specifies the underlying reason for the cancellation of the associated transaction.";
 				nextVersions_lazy = () -> Arrays.asList(CancelledStatusReason15Code.mmObject());
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CancelledStatusReason14Code.mmNarrativeReason);
+				code_lazy = () -> Arrays.asList(CancelledStatusReason14Code.mmNarrativeReason);
 				trace_lazy = () -> CancelledStatusReasonV2Code.mmObject();
 			}
 		});

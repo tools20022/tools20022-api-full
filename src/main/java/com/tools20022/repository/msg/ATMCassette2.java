@@ -20,10 +20,12 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ATMCassetteType1Code;
 import com.tools20022.repository.codeset.ATMMediaType1Code;
 import com.tools20022.repository.codeset.ATMNoteType1Code;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -105,7 +107,7 @@ public class ATMCassette2 {
 			componentContext_lazy = () -> ATMCassette2.mmObject();
 			isDerived = false;
 			xmlTag = "PhysId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PhysicalIdentification";
 			definition = "Physical identification of the cassette for the ATM.";
 			maxOccurs = 1;
@@ -145,7 +147,7 @@ public class ATMCassette2 {
 			componentContext_lazy = () -> ATMCassette2.mmObject();
 			isDerived = false;
 			xmlTag = "LogclId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LogicalIdentification";
 			definition = "Logical identification of the cassette for the ATM.";
 			maxOccurs = 1;
@@ -186,7 +188,7 @@ public class ATMCassette2 {
 			componentContext_lazy = () -> ATMCassette2.mmObject();
 			isDerived = false;
 			xmlTag = "SrlNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SerialNumber";
 			definition = "Serial number or unique identification of the cassette hardware.";
 			maxOccurs = 1;
@@ -227,7 +229,7 @@ public class ATMCassette2 {
 			componentContext_lazy = () -> ATMCassette2.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Type of cassette.";
 			maxOccurs = 1;
@@ -268,7 +270,7 @@ public class ATMCassette2 {
 			componentContext_lazy = () -> ATMCassette2.mmObject();
 			isDerived = false;
 			xmlTag = "SubTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubType";
 			definition = "Type of items the cash-in takes";
 			minOccurs = 0;
@@ -308,7 +310,7 @@ public class ATMCassette2 {
 			componentContext_lazy = () -> ATMCassette2.mmObject();
 			isDerived = false;
 			xmlTag = "MdiaTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MediaType";
 			definition = "Type of media inside the cassette.";
 			maxOccurs = 1;
@@ -347,7 +349,7 @@ public class ATMCassette2 {
 			componentContext_lazy = () -> ATMCassette2.mmObject();
 			isDerived = false;
 			xmlTag = "MdiaCntrs";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MediaCounters";
 			definition = "Counter per unit value or globally.";
 			minOccurs = 0;
@@ -359,11 +361,10 @@ public class ATMCassette2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMCassette2.mmPhysicalIdentification, com.tools20022.repository.msg.ATMCassette2.mmLogicalIdentification,
-						com.tools20022.repository.msg.ATMCassette2.mmSerialNumber, com.tools20022.repository.msg.ATMCassette2.mmType, com.tools20022.repository.msg.ATMCassette2.mmSubType,
-						com.tools20022.repository.msg.ATMCassette2.mmMediaType, com.tools20022.repository.msg.ATMCassette2.mmMediaCounters);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(ATMCassette2.mmPhysicalIdentification, ATMCassette2.mmLogicalIdentification, ATMCassette2.mmSerialNumber, ATMCassette2.mmType, ATMCassette2.mmSubType, ATMCassette2.mmMediaType,
+						ATMCassette2.mmMediaCounters);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ATMCassette2";
 				definition = "Information on the cassette of an ATM.";
 			}

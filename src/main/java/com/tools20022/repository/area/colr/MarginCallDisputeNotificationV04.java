@@ -20,6 +20,7 @@ package com.tools20022.repository.area.colr;
 import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.CollateralManagementLatestVersion;
 import com.tools20022.repository.choice.DisputeNotification1Choice;
 import com.tools20022.repository.datatype.Max35Text;
@@ -49,6 +50,9 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code colr.009.001.04}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.CollateralManagementLatestVersion
@@ -86,9 +90,6 @@ import java.util.List;
  * MarginCallDisputeNotificationV04.mmSupplementaryData}</li>
  * </ul>
  * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code colr.009.001.04}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -142,10 +143,10 @@ public class MarginCallDisputeNotificationV04 {
 	public static final MMMessageBuildingBlock mmTransactionIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "TxId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionIdentification";
 			definition = "Unambiguous identification of the transaction as know by the instructing party.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.colr.MarginCallDisputeNotificationV03.mmTransactionIdentification;
+			previousVersion_lazy = () -> MarginCallDisputeNotificationV03.mmTransactionIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -186,10 +187,10 @@ public class MarginCallDisputeNotificationV04 {
 	public static final MMMessageBuildingBlock mmObligation = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Oblgtn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Obligation";
 			definition = "Provides information like the identification of the party or parties associated with the collateral agreement, the exposure type and the valuation date.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.colr.MarginCallDisputeNotificationV03.mmObligation;
+			previousVersion_lazy = () -> MarginCallDisputeNotificationV03.mmObligation;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> Obligation4.mmObject();
@@ -227,10 +228,10 @@ public class MarginCallDisputeNotificationV04 {
 	public static final MMMessageBuildingBlock mmDisputeNotification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "DsptNtfctn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DisputeNotification";
 			definition = "Details of the dispute notification.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.colr.MarginCallDisputeNotificationV03.mmDisputeNotification;
+			previousVersion_lazy = () -> MarginCallDisputeNotificationV03.mmDisputeNotification;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> DisputeNotification1Choice.mmObject();
@@ -271,10 +272,10 @@ public class MarginCallDisputeNotificationV04 {
 	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SplmtryData";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryData";
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.colr.MarginCallDisputeNotificationV03.mmSupplementaryData;
+			previousVersion_lazy = () -> MarginCallDisputeNotificationV03.mmSupplementaryData;
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
@@ -283,7 +284,7 @@ public class MarginCallDisputeNotificationV04 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MarginCallDisputeNotificationV04";
 				definition = "Scope\r\nThe MarginCallDisputeNotification message is sent by the collateral taker or its collateral manager to the collateral giver or its collateral manager to acknowledge the notification of the dispute (either full or partial dispute) of the MarginCallRequest. The message will detail the amount of the dispute and the reason.\r\n\r\nThe message definition is intended for use with the ISO20022 Business Application Header.\r\n\r\nUsage\r\nWhen there is a dispute by the collateral giver to the collateral taker a MarginCallDisputeNotification message is sent with the disputed amount (full or partial) stating the reason why the margin call is being disputed.";
 				previousVersion_lazy = () -> MarginCallDisputeNotificationV03.mmObject();
@@ -291,9 +292,8 @@ public class MarginCallDisputeNotificationV04 {
 				rootElement = "Document";
 				xmlTag = "MrgnCallDsptNtfctn";
 				businessArea_lazy = () -> CollateralManagementLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.colr.MarginCallDisputeNotificationV04.mmTransactionIdentification,
-						com.tools20022.repository.area.colr.MarginCallDisputeNotificationV04.mmObligation, com.tools20022.repository.area.colr.MarginCallDisputeNotificationV04.mmDisputeNotification,
-						com.tools20022.repository.area.colr.MarginCallDisputeNotificationV04.mmSupplementaryData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(MarginCallDisputeNotificationV04.mmTransactionIdentification, MarginCallDisputeNotificationV04.mmObligation, MarginCallDisputeNotificationV04.mmDisputeNotification,
+						MarginCallDisputeNotificationV04.mmSupplementaryData);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "colr";

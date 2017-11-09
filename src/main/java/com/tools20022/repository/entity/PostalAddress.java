@@ -17,17 +17,14 @@
 
 package com.tools20022.repository.entity;
 
-import com.tools20022.metamodel.MMBusinessAssociationEnd;
-import com.tools20022.metamodel.MMBusinessAttribute;
-import com.tools20022.metamodel.MMBusinessComponent;
-import com.tools20022.repository.choice.CountrySubdivision1Choice;
-import com.tools20022.repository.choice.LongPostalAddress1Choice;
-import com.tools20022.repository.choice.LongPostalAddress2Choice;
+import com.tools20022.metamodel.*;
+import com.tools20022.repository.choice.*;
 import com.tools20022.repository.codeset.AddressTypeCode;
 import com.tools20022.repository.datatype.Max16Text;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.Max70Text;
 import com.tools20022.repository.entity.ContactPoint;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -42,78 +39,47 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.PostalAddress#mmAddressType
- * PostalAddress.mmAddressType}</li>
- * <li>{@linkplain com.tools20022.repository.entity.PostalAddress#mmStreetName
- * PostalAddress.mmStreetName}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.PostalAddress#mmStreetBuildingIdentification
- * PostalAddress.mmStreetBuildingIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.PostalAddress#mmPostCodeIdentification
- * PostalAddress.mmPostCodeIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.entity.PostalAddress#mmTownName
- * PostalAddress.mmTownName}</li>
- * <li>{@linkplain com.tools20022.repository.entity.PostalAddress#mmState
- * PostalAddress.mmState}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.PostalAddress#mmBuildingName
- * PostalAddress.mmBuildingName}</li>
- * <li>{@linkplain com.tools20022.repository.entity.PostalAddress#mmFloor
- * PostalAddress.mmFloor}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.PostalAddress#mmDistrictName
- * PostalAddress.mmDistrictName}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.PostalAddress#mmRegionIdentification
- * PostalAddress.mmRegionIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.PostalAddress#mmCountyIdentification
- * PostalAddress.mmCountyIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.PostalAddress#mmPostOfficeBox
- * PostalAddress.mmPostOfficeBox}</li>
- * <li>{@linkplain com.tools20022.repository.entity.PostalAddress#mmProvince
- * PostalAddress.mmProvince}</li>
- * <li>{@linkplain com.tools20022.repository.entity.PostalAddress#mmDepartment
- * PostalAddress.mmDepartment}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.PostalAddress#mmSubDepartment
- * PostalAddress.mmSubDepartment}</li>
- * <li>{@linkplain com.tools20022.repository.entity.PostalAddress#mmLocation
- * PostalAddress.mmLocation}</li>
- * <li>{@linkplain com.tools20022.repository.entity.PostalAddress#mmChequeIssue
- * PostalAddress.mmChequeIssue}</li>
- * <li>{@linkplain com.tools20022.repository.entity.PostalAddress#mmCountry
- * PostalAddress.mmCountry}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.PostalAddress#mmValidityPeriod
- * PostalAddress.mmValidityPeriod}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.PostalAddress#mmSuiteIdentification
- * PostalAddress.mmSuiteIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.PostalAddress#mmBuildingIdentification
- * PostalAddress.mmBuildingIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.PostalAddress#mmMailDeliverySubLocation
- * PostalAddress.mmMailDeliverySubLocation}</li>
- * <li>{@linkplain com.tools20022.repository.entity.PostalAddress#mmBlock
- * PostalAddress.mmBlock}</li>
- * <li>{@linkplain com.tools20022.repository.entity.PostalAddress#mmLot
- * PostalAddress.mmLot}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.PostalAddress#mmDistrictSubDivisionIdentification
- * PostalAddress.mmDistrictSubDivisionIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.PostalAddress#mmMailingInstructions
- * PostalAddress.mmMailingInstructions}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.PostalAddress#mmPhysicalDelivery
- * PostalAddress.mmPhysicalDelivery}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PostalAddress1 PostalAddress1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.StructuredLongPostalAddress1
+ * StructuredLongPostalAddress1}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.LongPostalAddress1Choice
+ * LongPostalAddress1Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PostalAddress3 PostalAddress3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PostalAddress6 PostalAddress6}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PostalAddress8 PostalAddress8}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AddressModification1
+ * AddressModification1}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.CountrySubdivision1Choice
+ * CountrySubdivision1Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PostalAddress12
+ * PostalAddress12}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.LongPostalAddress2Choice
+ * LongPostalAddress2Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PostalAddress2 PostalAddress2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PostalAddress5 PostalAddress5}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PostalAddress11
+ * PostalAddress11}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PostalAddress4 PostalAddress4}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PostalAddress7 PostalAddress7}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PostalAddress10
+ * PostalAddress10}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PostalAddress9 PostalAddress9}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PostalAddress13
+ * PostalAddress13}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PostalAddress17
+ * PostalAddress17}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PostalAddress19
+ * PostalAddress19}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PostalAddress18
+ * PostalAddress18}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PostalAddress21
+ * PostalAddress21}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ModificationScope34
+ * ModificationScope34}</li>
  * </ul>
  * </li>
  * <li>
@@ -491,47 +457,78 @@ import java.util.List;
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
  * superType} = {@linkplain com.tools20022.repository.entity.ContactPoint
  * ContactPoint}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.PostalAddress1 PostalAddress1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.StructuredLongPostalAddress1
- * StructuredLongPostalAddress1}</li>
- * <li>{@linkplain com.tools20022.repository.choice.LongPostalAddress1Choice
- * LongPostalAddress1Choice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PostalAddress3 PostalAddress3}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PostalAddress6 PostalAddress6}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PostalAddress8 PostalAddress8}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AddressModification1
- * AddressModification1}</li>
- * <li>{@linkplain com.tools20022.repository.choice.CountrySubdivision1Choice
- * CountrySubdivision1Choice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PostalAddress12
- * PostalAddress12}</li>
- * <li>{@linkplain com.tools20022.repository.choice.LongPostalAddress2Choice
- * LongPostalAddress2Choice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PostalAddress2 PostalAddress2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PostalAddress5 PostalAddress5}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PostalAddress11
- * PostalAddress11}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PostalAddress4 PostalAddress4}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PostalAddress7 PostalAddress7}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PostalAddress10
- * PostalAddress10}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PostalAddress9 PostalAddress9}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PostalAddress13
- * PostalAddress13}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PostalAddress17
- * PostalAddress17}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PostalAddress19
- * PostalAddress19}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PostalAddress18
- * PostalAddress18}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PostalAddress21
- * PostalAddress21}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ModificationScope34
- * ModificationScope34}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.PostalAddress#mmAddressType
+ * PostalAddress.mmAddressType}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.PostalAddress#mmStreetName
+ * PostalAddress.mmStreetName}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PostalAddress#mmStreetBuildingIdentification
+ * PostalAddress.mmStreetBuildingIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PostalAddress#mmPostCodeIdentification
+ * PostalAddress.mmPostCodeIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.PostalAddress#mmTownName
+ * PostalAddress.mmTownName}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.PostalAddress#mmState
+ * PostalAddress.mmState}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PostalAddress#mmBuildingName
+ * PostalAddress.mmBuildingName}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.PostalAddress#mmFloor
+ * PostalAddress.mmFloor}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PostalAddress#mmDistrictName
+ * PostalAddress.mmDistrictName}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PostalAddress#mmRegionIdentification
+ * PostalAddress.mmRegionIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PostalAddress#mmCountyIdentification
+ * PostalAddress.mmCountyIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PostalAddress#mmPostOfficeBox
+ * PostalAddress.mmPostOfficeBox}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.PostalAddress#mmProvince
+ * PostalAddress.mmProvince}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.PostalAddress#mmDepartment
+ * PostalAddress.mmDepartment}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PostalAddress#mmSubDepartment
+ * PostalAddress.mmSubDepartment}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.PostalAddress#mmLocation
+ * PostalAddress.mmLocation}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.PostalAddress#mmChequeIssue
+ * PostalAddress.mmChequeIssue}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.PostalAddress#mmCountry
+ * PostalAddress.mmCountry}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PostalAddress#mmValidityPeriod
+ * PostalAddress.mmValidityPeriod}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PostalAddress#mmSuiteIdentification
+ * PostalAddress.mmSuiteIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PostalAddress#mmBuildingIdentification
+ * PostalAddress.mmBuildingIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PostalAddress#mmMailDeliverySubLocation
+ * PostalAddress.mmMailDeliverySubLocation}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.PostalAddress#mmBlock
+ * PostalAddress.mmBlock}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.PostalAddress#mmLot
+ * PostalAddress.mmLot}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PostalAddress#mmDistrictSubDivisionIdentification
+ * PostalAddress.mmDistrictSubDivisionIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PostalAddress#mmMailingInstructions
+ * PostalAddress.mmMailingInstructions}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PostalAddress#mmPhysicalDelivery
+ * PostalAddress.mmPhysicalDelivery}</li>
  * </ul>
  * </li>
  * <li>
@@ -610,12 +607,11 @@ public class PostalAddress extends ContactPoint {
 	 */
 	public static final MMBusinessAttribute mmAddressType = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PostalAddress1.mmAddressType, com.tools20022.repository.msg.PostalAddress3.mmAddressType, com.tools20022.repository.msg.PostalAddress6.mmAddressType,
-					com.tools20022.repository.msg.PostalAddress8.mmAddressType, com.tools20022.repository.msg.PostalAddress11.mmAddressType, com.tools20022.repository.msg.PostalAddress19.mmAddressType,
-					com.tools20022.repository.msg.PostalAddress21.mmAddressType, com.tools20022.repository.msg.CommunicationAddress6.mmAddressType);
+			derivation_lazy = () -> Arrays.asList(PostalAddress1.mmAddressType, PostalAddress3.mmAddressType, PostalAddress6.mmAddressType, PostalAddress8.mmAddressType, PostalAddress11.mmAddressType, PostalAddress19.mmAddressType,
+					PostalAddress21.mmAddressType, CommunicationAddress6.mmAddressType);
 			elementContext_lazy = () -> PostalAddress.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AddressType";
 			definition = "Specifies the type of address.";
 			maxOccurs = 1;
@@ -698,14 +694,12 @@ public class PostalAddress extends ContactPoint {
 	 */
 	public static final MMBusinessAttribute mmStreetName = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PostalAddress1.mmStreetName, com.tools20022.repository.msg.StructuredLongPostalAddress1.mmStreetName,
-					com.tools20022.repository.msg.PostalAddress6.mmStreetName, com.tools20022.repository.msg.PostalAddress8.mmStreetName, com.tools20022.repository.msg.PostalAddress2.mmStreetName,
-					com.tools20022.repository.msg.PostalAddress5.mmStreetName, com.tools20022.repository.msg.PostalAddress11.mmStreetName, com.tools20022.repository.msg.PostalAddress10.mmStreetName,
-					com.tools20022.repository.msg.PostalAddress9.mmStreetName, com.tools20022.repository.msg.PostalAddress13.mmStreetName, com.tools20022.repository.msg.PostalAddress17.mmStreetName,
-					com.tools20022.repository.msg.PostalAddress19.mmStreetName, com.tools20022.repository.msg.PostalAddress18.mmStreetName, com.tools20022.repository.msg.PostalAddress21.mmStreetName);
+			derivation_lazy = () -> Arrays.asList(PostalAddress1.mmStreetName, StructuredLongPostalAddress1.mmStreetName, PostalAddress6.mmStreetName, PostalAddress8.mmStreetName, PostalAddress2.mmStreetName, PostalAddress5.mmStreetName,
+					PostalAddress11.mmStreetName, PostalAddress10.mmStreetName, PostalAddress9.mmStreetName, PostalAddress13.mmStreetName, PostalAddress17.mmStreetName, PostalAddress19.mmStreetName, PostalAddress18.mmStreetName,
+					PostalAddress21.mmStreetName);
 			elementContext_lazy = () -> PostalAddress.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "StreetName";
 			definition = "Name of a street or thoroughfare.";
 			maxOccurs = 1;
@@ -783,14 +777,12 @@ public class PostalAddress extends ContactPoint {
 	 */
 	public static final MMBusinessAttribute mmStreetBuildingIdentification = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PostalAddress1.mmBuildingNumber, com.tools20022.repository.msg.StructuredLongPostalAddress1.mmStreetBuildingIdentification,
-					com.tools20022.repository.msg.PostalAddress6.mmBuildingNumber, com.tools20022.repository.msg.PostalAddress8.mmBuildingNumber, com.tools20022.repository.msg.PostalAddress11.mmBuildingNumber,
-					com.tools20022.repository.msg.PostalAddress10.mmBuildingNumber, com.tools20022.repository.msg.PostalAddress9.mmBuildingNumber, com.tools20022.repository.msg.PostalAddress13.mmBuildingNumber,
-					com.tools20022.repository.msg.PostalAddress17.mmBuildingNumber, com.tools20022.repository.msg.PostalAddress19.mmBuildingNumber, com.tools20022.repository.msg.PostalAddress18.mmBuildingNumber,
-					com.tools20022.repository.msg.PostalAddress21.mmBuildingNumber);
+			derivation_lazy = () -> Arrays.asList(PostalAddress1.mmBuildingNumber, StructuredLongPostalAddress1.mmStreetBuildingIdentification, PostalAddress6.mmBuildingNumber, PostalAddress8.mmBuildingNumber,
+					PostalAddress11.mmBuildingNumber, PostalAddress10.mmBuildingNumber, PostalAddress9.mmBuildingNumber, PostalAddress13.mmBuildingNumber, PostalAddress17.mmBuildingNumber, PostalAddress19.mmBuildingNumber,
+					PostalAddress18.mmBuildingNumber, PostalAddress21.mmBuildingNumber);
 			elementContext_lazy = () -> PostalAddress.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "StreetBuildingIdentification";
 			definition = "Number that identifies the position of a building on a street.";
 			maxOccurs = 1;
@@ -867,15 +859,12 @@ public class PostalAddress extends ContactPoint {
 	 */
 	public static final MMBusinessAttribute mmPostCodeIdentification = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PostalAddress1.mmPostCode, com.tools20022.repository.msg.StructuredLongPostalAddress1.mmPostCodeIdentification,
-					com.tools20022.repository.msg.PostalAddress6.mmPostCode, com.tools20022.repository.msg.PostalAddress8.mmPostCode, com.tools20022.repository.msg.PostalAddress2.mmPostCodeIdentification,
-					com.tools20022.repository.msg.PostalAddress5.mmPostCodeIdentification, com.tools20022.repository.msg.PostalAddress11.mmPostCode, com.tools20022.repository.msg.PostalAddress7.mmPostCode,
-					com.tools20022.repository.msg.PostalAddress10.mmPostCode, com.tools20022.repository.msg.PostalAddress9.mmPostCode, com.tools20022.repository.msg.PostalAddress13.mmPostCode,
-					com.tools20022.repository.msg.PostalAddress17.mmPostCode, com.tools20022.repository.msg.PostalAddress19.mmPostCode, com.tools20022.repository.msg.PostalAddress18.mmPostCode,
-					com.tools20022.repository.msg.PostalAddress21.mmPostCode);
+			derivation_lazy = () -> Arrays.asList(PostalAddress1.mmPostCode, StructuredLongPostalAddress1.mmPostCodeIdentification, PostalAddress6.mmPostCode, PostalAddress8.mmPostCode, PostalAddress2.mmPostCodeIdentification,
+					PostalAddress5.mmPostCodeIdentification, PostalAddress11.mmPostCode, PostalAddress7.mmPostCode, PostalAddress10.mmPostCode, PostalAddress9.mmPostCode, PostalAddress13.mmPostCode, PostalAddress17.mmPostCode,
+					PostalAddress19.mmPostCode, PostalAddress18.mmPostCode, PostalAddress21.mmPostCode);
 			elementContext_lazy = () -> PostalAddress.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PostCodeIdentification";
 			definition = "Identifier consisting of a group of letters and/or numbers that is added to a postal address to assist the sorting of mail.";
 			maxOccurs = 1;
@@ -967,17 +956,13 @@ public class PostalAddress extends ContactPoint {
 	 */
 	public static final MMBusinessAttribute mmTownName = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PostalAddress1.mmTownName, com.tools20022.repository.msg.StructuredLongPostalAddress1.mmTownName,
-					com.tools20022.repository.msg.IndividualPerson10.mmCityOfBirth, com.tools20022.repository.msg.IndividualPerson11.mmCityOfBirth, com.tools20022.repository.msg.PostalAddress6.mmTownName,
-					com.tools20022.repository.msg.DateAndPlaceOfBirth.mmCityOfBirth, com.tools20022.repository.msg.PostalAddress8.mmTownName, com.tools20022.repository.msg.PostalAddress12.mmTownName,
-					com.tools20022.repository.msg.PostalAddress2.mmTownName, com.tools20022.repository.msg.AirportDescription1.mmTown, com.tools20022.repository.msg.PostalAddress5.mmTownName,
-					com.tools20022.repository.msg.PostalAddress11.mmTownName, com.tools20022.repository.msg.PostalAddress7.mmTownName, com.tools20022.repository.msg.PostalAddress10.mmTownName,
-					com.tools20022.repository.msg.PostalAddress9.mmTownName, com.tools20022.repository.msg.PostalAddress13.mmTownName, com.tools20022.repository.msg.PostalAddress17.mmTownName,
-					com.tools20022.repository.msg.PostalAddress19.mmTownName, com.tools20022.repository.msg.PostalAddress18.mmTownName, com.tools20022.repository.msg.PostalAddress21.mmVillage,
-					com.tools20022.repository.msg.PostalAddress21.mmTownName, com.tools20022.repository.msg.MarketIdentification92.mmCity);
+			derivation_lazy = () -> Arrays.asList(PostalAddress1.mmTownName, StructuredLongPostalAddress1.mmTownName, IndividualPerson10.mmCityOfBirth, IndividualPerson11.mmCityOfBirth, PostalAddress6.mmTownName,
+					DateAndPlaceOfBirth.mmCityOfBirth, PostalAddress8.mmTownName, PostalAddress12.mmTownName, PostalAddress2.mmTownName, AirportDescription1.mmTown, PostalAddress5.mmTownName, PostalAddress11.mmTownName,
+					PostalAddress7.mmTownName, PostalAddress10.mmTownName, PostalAddress9.mmTownName, PostalAddress13.mmTownName, PostalAddress17.mmTownName, PostalAddress19.mmTownName, PostalAddress18.mmTownName,
+					PostalAddress21.mmVillage, PostalAddress21.mmTownName, MarketIdentification92.mmCity);
 			elementContext_lazy = () -> PostalAddress.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TownName";
 			definition = "Name of a built-up area, with defined boundaries, and a local government.";
 			maxOccurs = 1;
@@ -1069,15 +1054,13 @@ public class PostalAddress extends ContactPoint {
 	 */
 	public static final MMBusinessAttribute mmState = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PostalAddress1.mmCountrySubDivision, com.tools20022.repository.msg.StructuredLongPostalAddress1.mmState,
-					com.tools20022.repository.msg.PostalAddress6.mmCountrySubDivision, com.tools20022.repository.msg.PostalAddress8.mmCountrySubDivision, com.tools20022.repository.msg.PostalAddress12.mmCountrySubDivision,
-					com.tools20022.repository.msg.PostalAddress2.mmCountrySubDivision, com.tools20022.repository.msg.PostalAddress5.mmCountrySubDivision, com.tools20022.repository.msg.PostalAddress11.mmCountrySubDivision,
-					com.tools20022.repository.msg.PostalAddress10.mmCountrySubDivision, com.tools20022.repository.msg.PostalAddress9.mmCountrySubDivision, com.tools20022.repository.msg.PostalAddress13.mmCountrySubDivision,
-					com.tools20022.repository.msg.PostalAddress17.mmCountrySubDivision, com.tools20022.repository.msg.PostalAddress19.mmCountrySubDivision, com.tools20022.repository.msg.PostalAddress18.mmCountrySubDivision,
-					com.tools20022.repository.choice.DerivativePartyIdentification1Choice.mmCountrySubDivision, com.tools20022.repository.msg.PostalAddress21.mmState, com.tools20022.repository.msg.GenericIdentification82.mmState);
+			derivation_lazy = () -> Arrays.asList(PostalAddress1.mmCountrySubDivision, StructuredLongPostalAddress1.mmState, PostalAddress6.mmCountrySubDivision, PostalAddress8.mmCountrySubDivision, PostalAddress12.mmCountrySubDivision,
+					PostalAddress2.mmCountrySubDivision, PostalAddress5.mmCountrySubDivision, PostalAddress11.mmCountrySubDivision, PostalAddress10.mmCountrySubDivision, PostalAddress9.mmCountrySubDivision,
+					PostalAddress13.mmCountrySubDivision, PostalAddress17.mmCountrySubDivision, PostalAddress19.mmCountrySubDivision, PostalAddress18.mmCountrySubDivision, DerivativePartyIdentification1Choice.mmCountrySubDivision,
+					PostalAddress21.mmState, GenericIdentification82.mmState);
 			elementContext_lazy = () -> PostalAddress.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "State";
 			definition = "Organised political community or area forming a part of a federation.";
 			maxOccurs = 1;
@@ -1127,11 +1110,10 @@ public class PostalAddress extends ContactPoint {
 	 */
 	public static final MMBusinessAttribute mmBuildingName = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StructuredLongPostalAddress1.mmBuildingName, com.tools20022.repository.msg.PostalAddress11.mmBuildingName,
-					com.tools20022.repository.msg.PostalAddress21.mmBuildingName);
+			derivation_lazy = () -> Arrays.asList(StructuredLongPostalAddress1.mmBuildingName, PostalAddress11.mmBuildingName, PostalAddress21.mmBuildingName);
 			elementContext_lazy = () -> PostalAddress.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BuildingName";
 			definition = "Name of the building or house.";
 			maxOccurs = 1;
@@ -1179,10 +1161,10 @@ public class PostalAddress extends ContactPoint {
 	 */
 	public static final MMBusinessAttribute mmFloor = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StructuredLongPostalAddress1.mmFloor, com.tools20022.repository.msg.PostalAddress11.mmFloor, com.tools20022.repository.msg.PostalAddress21.mmFloor);
+			derivation_lazy = () -> Arrays.asList(StructuredLongPostalAddress1.mmFloor, PostalAddress11.mmFloor, PostalAddress21.mmFloor);
 			elementContext_lazy = () -> PostalAddress.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Floor";
 			definition = "Floor or storey within a building.";
 			maxOccurs = 1;
@@ -1232,11 +1214,10 @@ public class PostalAddress extends ContactPoint {
 	 */
 	public static final MMBusinessAttribute mmDistrictName = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StructuredLongPostalAddress1.mmDistrictName, com.tools20022.repository.msg.PostalAddress19.mmDistrictName,
-					com.tools20022.repository.msg.PostalAddress21.mmDistrictName);
+			derivation_lazy = () -> Arrays.asList(StructuredLongPostalAddress1.mmDistrictName, PostalAddress19.mmDistrictName, PostalAddress21.mmDistrictName);
 			elementContext_lazy = () -> PostalAddress.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DistrictName";
 			definition = "Name of a district, ie, a part of a town or region.";
 			maxOccurs = 1;
@@ -1286,10 +1267,10 @@ public class PostalAddress extends ContactPoint {
 	 */
 	public static final MMBusinessAttribute mmRegionIdentification = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StructuredLongPostalAddress1.mmRegionIdentification, com.tools20022.repository.choice.ResidenceLocation1Choice.mmArea);
+			derivation_lazy = () -> Arrays.asList(StructuredLongPostalAddress1.mmRegionIdentification, ResidenceLocation1Choice.mmArea);
 			elementContext_lazy = () -> PostalAddress.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RegionIdentification";
 			definition = "Identification of an administrative division of a country, state, or territory.";
 			maxOccurs = 1;
@@ -1348,12 +1329,11 @@ public class PostalAddress extends ContactPoint {
 	 */
 	public static final MMBusinessAttribute mmCountyIdentification = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StructuredLongPostalAddress1.mmCountyIdentification, com.tools20022.repository.choice.CountrySubdivision1Choice.mmCode,
-					com.tools20022.repository.choice.CountrySubdivision1Choice.mmProprietary, com.tools20022.repository.msg.Location1.mmCountrySubDivision, com.tools20022.repository.msg.Location2.mmCountrySubDivision,
-					com.tools20022.repository.msg.PostalAddress19.mmTownLocationName);
+			derivation_lazy = () -> Arrays.asList(StructuredLongPostalAddress1.mmCountyIdentification, CountrySubdivision1Choice.mmCode, CountrySubdivision1Choice.mmProprietary, Location1.mmCountrySubDivision,
+					Location2.mmCountrySubDivision, PostalAddress19.mmTownLocationName);
 			elementContext_lazy = () -> PostalAddress.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CountyIdentification";
 			definition = "Identifier of a county.";
 			maxOccurs = 1;
@@ -1404,10 +1384,10 @@ public class PostalAddress extends ContactPoint {
 	 */
 	public static final MMBusinessAttribute mmPostOfficeBox = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StructuredLongPostalAddress1.mmPostOfficeBox, com.tools20022.repository.msg.PostalAddress11.mmPostBox, com.tools20022.repository.msg.PostalAddress21.mmPostBox);
+			derivation_lazy = () -> Arrays.asList(StructuredLongPostalAddress1.mmPostOfficeBox, PostalAddress11.mmPostBox, PostalAddress21.mmPostBox);
 			elementContext_lazy = () -> PostalAddress.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PostOfficeBox";
 			definition = "Numbered box in a post office, assigned to a person or organisation, where letters are kept until called for.";
 			maxOccurs = 1;
@@ -1465,11 +1445,10 @@ public class PostalAddress extends ContactPoint {
 	 */
 	public static final MMBusinessAttribute mmProvince = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IndividualPerson5.mmProvinceOfBirth, com.tools20022.repository.msg.IndividualPerson10.mmProvinceOfBirth,
-					com.tools20022.repository.msg.IndividualPerson6.mmProvinceOfBirth, com.tools20022.repository.msg.IndividualPerson11.mmProvinceOfBirth, com.tools20022.repository.msg.DateAndPlaceOfBirth.mmProvinceOfBirth);
+			derivation_lazy = () -> Arrays.asList(IndividualPerson5.mmProvinceOfBirth, IndividualPerson10.mmProvinceOfBirth, IndividualPerson6.mmProvinceOfBirth, IndividualPerson11.mmProvinceOfBirth, DateAndPlaceOfBirth.mmProvinceOfBirth);
 			elementContext_lazy = () -> PostalAddress.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Province";
 			definition = "A territory governed as an administrative or political unit of a country.";
 			maxOccurs = 1;
@@ -1522,11 +1501,10 @@ public class PostalAddress extends ContactPoint {
 	 */
 	public static final MMBusinessAttribute mmDepartment = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PostalAddress6.mmDepartment, com.tools20022.repository.msg.Contacts3.mmDepartment, com.tools20022.repository.msg.PostalAddress11.mmDepartment,
-					com.tools20022.repository.msg.PostalAddress19.mmDepartment);
+			derivation_lazy = () -> Arrays.asList(PostalAddress6.mmDepartment, Contacts3.mmDepartment, PostalAddress11.mmDepartment, PostalAddress19.mmDepartment);
 			elementContext_lazy = () -> PostalAddress.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Department";
 			definition = "Identification of a division of a large organisation or building.";
 			maxOccurs = 1;
@@ -1577,10 +1555,10 @@ public class PostalAddress extends ContactPoint {
 	 */
 	public static final MMBusinessAttribute mmSubDepartment = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PostalAddress6.mmSubDepartment, com.tools20022.repository.msg.PostalAddress11.mmSubDepartment, com.tools20022.repository.msg.PostalAddress19.mmSubDepartment);
+			derivation_lazy = () -> Arrays.asList(PostalAddress6.mmSubDepartment, PostalAddress11.mmSubDepartment, PostalAddress19.mmSubDepartment);
 			elementContext_lazy = () -> PostalAddress.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SubDepartment";
 			definition = "Identification of a sub-division of a large organisation or building.";
 			maxOccurs = 1;
@@ -1625,13 +1603,13 @@ public class PostalAddress extends ContactPoint {
 		{
 			elementContext_lazy = () -> PostalAddress.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Location";
 			definition = "Specifies a place.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.Location.mmAddress;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Location.mmObject();
 		}
 	};
@@ -1674,13 +1652,13 @@ public class PostalAddress extends ContactPoint {
 		{
 			elementContext_lazy = () -> PostalAddress.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ChequeIssue";
 			definition = "Cheque issue information for which a delivery address is specified.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.ChequeIssue.mmDeliverTo;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.ChequeIssue.mmObject();
 		}
 	};
@@ -1837,33 +1815,25 @@ public class PostalAddress extends ContactPoint {
 	 */
 	public static final MMBusinessAssociationEnd mmCountry = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionOption10.mmValidDomicileCountry, com.tools20022.repository.msg.CorporateActionOption15.mmValidDomicileCountry,
-					com.tools20022.repository.msg.CorporateActionOption20.mmValidDomicileCountry, com.tools20022.repository.msg.CorporateActionOption32.mmValidDomicileCountry,
-					com.tools20022.repository.msg.CorporateActionOption35.mmValidDomicileCountry, com.tools20022.repository.msg.CorporateActionOption44.mmValidDomicileCountry,
-					com.tools20022.repository.msg.CorporateActionOption52.mmValidDomicileCountry, com.tools20022.repository.msg.CorporateActionOption55.mmValidDomicileCountry,
-					com.tools20022.repository.msg.CorporateActionOption3.mmValidDomicileCountry, com.tools20022.repository.msg.CorporateActionOption17.mmValidDomicileCountry,
-					com.tools20022.repository.msg.CorporateActionOption19.mmValidDomicileCountry, com.tools20022.repository.msg.CorporateActionOption34.mmValidDomicileCountry,
-					com.tools20022.repository.msg.CorporateActionOption36.mmValidDomicileCountry, com.tools20022.repository.msg.CorporateActionOption45.mmValidDomicileCountry,
-					com.tools20022.repository.msg.CorporateActionOption51.mmValidDomicileCountry, com.tools20022.repository.msg.CorporateActionOption56.mmValidDomicileCountry,
-					com.tools20022.repository.msg.CorporateActionOption100.mmValidDomicileCountry, com.tools20022.repository.msg.CorporateActionOption101.mmValidDomicileCountry,
-					com.tools20022.repository.msg.CorporateActionOption108.mmValidDomicileCountry, com.tools20022.repository.msg.CorporateActionOption106.mmValidDomicileCountry, com.tools20022.repository.msg.Acquirer6.mmCountryCode,
-					com.tools20022.repository.msg.SectorAndLocation1.mmLocation, com.tools20022.repository.msg.SecuritiesTransaction1.mmCountryOfBranch,
-					com.tools20022.repository.choice.TradingVenueIdentification1Choice.mmNationalCompetentAuthority, com.tools20022.repository.msg.PartyIdentification76.mmCountryOfBranch,
-					com.tools20022.repository.msg.TransactionCertificate1.mmBankAccountDomiciliationCountry, com.tools20022.repository.msg.ShipmentAttribute1.mmCountryOfCounterParty,
-					com.tools20022.repository.msg.CorporateActionOption115.mmValidDomicileCountry, com.tools20022.repository.msg.CorporateActionOption114.mmValidDomicileCountry,
-					com.tools20022.repository.choice.DerivativePartyIdentification1Choice.mmCountry, com.tools20022.repository.msg.CorporateActionOption125.mmValidDomicileCountry,
-					com.tools20022.repository.msg.CorporateActionOption127.mmValidDomicileCountry, com.tools20022.repository.msg.ReportedPartyIdentification1.mmLocation,
-					com.tools20022.repository.msg.CorporateActionOption130.mmValidDomicileCountry, com.tools20022.repository.msg.CorporateActionOption129.mmValidDomicileCountry,
-					com.tools20022.repository.msg.CorporateActionOption135.mmValidDomicileCountry, com.tools20022.repository.msg.CorporateActionOption133.mmValidDomicileCountry, com.tools20022.repository.msg.NameAndLocation1.mmLocation);
+			derivation_lazy = () -> Arrays.asList(CorporateActionOption10.mmValidDomicileCountry, CorporateActionOption15.mmValidDomicileCountry, CorporateActionOption20.mmValidDomicileCountry,
+					CorporateActionOption32.mmValidDomicileCountry, CorporateActionOption35.mmValidDomicileCountry, CorporateActionOption44.mmValidDomicileCountry, CorporateActionOption52.mmValidDomicileCountry,
+					CorporateActionOption55.mmValidDomicileCountry, CorporateActionOption3.mmValidDomicileCountry, CorporateActionOption17.mmValidDomicileCountry, CorporateActionOption19.mmValidDomicileCountry,
+					CorporateActionOption34.mmValidDomicileCountry, CorporateActionOption36.mmValidDomicileCountry, CorporateActionOption45.mmValidDomicileCountry, CorporateActionOption51.mmValidDomicileCountry,
+					CorporateActionOption56.mmValidDomicileCountry, CorporateActionOption100.mmValidDomicileCountry, CorporateActionOption101.mmValidDomicileCountry, CorporateActionOption108.mmValidDomicileCountry,
+					CorporateActionOption106.mmValidDomicileCountry, Acquirer6.mmCountryCode, SectorAndLocation1.mmLocation, SecuritiesTransaction1.mmCountryOfBranch, TradingVenueIdentification1Choice.mmNationalCompetentAuthority,
+					PartyIdentification76.mmCountryOfBranch, TransactionCertificate1.mmBankAccountDomiciliationCountry, ShipmentAttribute1.mmCountryOfCounterParty, CorporateActionOption115.mmValidDomicileCountry,
+					CorporateActionOption114.mmValidDomicileCountry, DerivativePartyIdentification1Choice.mmCountry, CorporateActionOption125.mmValidDomicileCountry, CorporateActionOption127.mmValidDomicileCountry,
+					ReportedPartyIdentification1.mmLocation, CorporateActionOption130.mmValidDomicileCountry, CorporateActionOption129.mmValidDomicileCountry, CorporateActionOption135.mmValidDomicileCountry,
+					CorporateActionOption133.mmValidDomicileCountry, NameAndLocation1.mmLocation);
 			elementContext_lazy = () -> PostalAddress.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Country";
 			definition = "Country of the address.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.Country.mmPostalAddressSpecification;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Country.mmObject();
 		}
 	};
@@ -1906,12 +1876,12 @@ public class PostalAddress extends ContactPoint {
 		{
 			elementContext_lazy = () -> PostalAddress.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ValidityPeriod";
 			definition = "Specifies the period during which a postal address is valid.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmRelatedPostalAddress;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmObject();
 		}
 	};
@@ -1951,10 +1921,10 @@ public class PostalAddress extends ContactPoint {
 	 */
 	public static final MMBusinessAttribute mmSuiteIdentification = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PostalAddress21.mmSuiteIdentification);
+			derivation_lazy = () -> Arrays.asList(PostalAddress21.mmSuiteIdentification);
 			elementContext_lazy = () -> PostalAddress.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SuiteIdentification";
 			definition = "Identification of a suite or apartment.";
 			maxOccurs = 1;
@@ -2001,10 +1971,10 @@ public class PostalAddress extends ContactPoint {
 	 */
 	public static final MMBusinessAttribute mmBuildingIdentification = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PostalAddress21.mmSideInBuilding);
+			derivation_lazy = () -> Arrays.asList(PostalAddress21.mmSideInBuilding);
 			elementContext_lazy = () -> PostalAddress.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BuildingIdentification";
 			definition = "Identification of a building, within a group of buildings, that have the same street number identifier.";
 			maxOccurs = 1;
@@ -2043,7 +2013,7 @@ public class PostalAddress extends ContactPoint {
 		{
 			elementContext_lazy = () -> PostalAddress.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MailDeliverySubLocation";
 			definition = "Specific place to deliver mail within a pre-defined postal address.";
 			maxOccurs = 1;
@@ -2081,7 +2051,7 @@ public class PostalAddress extends ContactPoint {
 		{
 			elementContext_lazy = () -> PostalAddress.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Block";
 			definition = "Area of land bounded by streets.";
 			maxOccurs = 1;
@@ -2119,7 +2089,7 @@ public class PostalAddress extends ContactPoint {
 		{
 			elementContext_lazy = () -> PostalAddress.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Lot";
 			definition = "Identification of an allotment of land.";
 			maxOccurs = 1;
@@ -2157,7 +2127,7 @@ public class PostalAddress extends ContactPoint {
 		{
 			elementContext_lazy = () -> PostalAddress.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DistrictSubDivisionIdentification";
 			definition = "Identification of a sub-division of a district.";
 			maxOccurs = 1;
@@ -2203,12 +2173,12 @@ public class PostalAddress extends ContactPoint {
 		{
 			elementContext_lazy = () -> PostalAddress.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MailingInstructions";
 			definition = "Specifies the characteristics of an address.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.MailingInstructions.mmRelatedPostalAddress;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.MailingInstructions.mmObject();
 		}
 	};
@@ -2250,13 +2220,13 @@ public class PostalAddress extends ContactPoint {
 		{
 			elementContext_lazy = () -> PostalAddress.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PhysicalDelivery";
 			definition = "Physical delivery information related to an address.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.PhysicalDelivery.mmAddress;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.PhysicalDelivery.mmObject();
 		}
 	};
@@ -2264,70 +2234,44 @@ public class PostalAddress extends ContactPoint {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PostalAddress";
 				definition = "Information that locates and identifies a specific address.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Country.mmPostalAddressSpecification, com.tools20022.repository.entity.Location.mmAddress,
 						com.tools20022.repository.entity.DateTimePeriod.mmRelatedPostalAddress, com.tools20022.repository.entity.MailingInstructions.mmRelatedPostalAddress, com.tools20022.repository.entity.ChequeIssue.mmDeliverTo,
 						com.tools20022.repository.entity.PhysicalDelivery.mmAddress);
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ContactDetails1.mmFundManagerPostalAddress, com.tools20022.repository.msg.OrderDeskContactDetails.mmPostalAddress,
-						com.tools20022.repository.msg.ContactAttributes1.mmPostalAddress, com.tools20022.repository.choice.LongPostalAddress1Choice.mmUnstructured, com.tools20022.repository.choice.LongPostalAddress1Choice.mmStructured,
-						com.tools20022.repository.msg.NameAndAddress2.mmAddress, com.tools20022.repository.msg.NameAndAddress5.mmAddress, com.tools20022.repository.msg.NameAndAddress1.mmAddress,
-						com.tools20022.repository.msg.NameAndAddress4.mmAddress, com.tools20022.repository.msg.Organisation2.mmPostalAddress, com.tools20022.repository.msg.IndividualPerson5.mmPostalAddress,
-						com.tools20022.repository.msg.IndividualPerson10.mmPostalAddress, com.tools20022.repository.msg.BranchData.mmPostalAddress, com.tools20022.repository.msg.Organisation13.mmPostalAddress,
-						com.tools20022.repository.msg.IndividualPerson20.mmPostalAddress, com.tools20022.repository.msg.IndividualPerson8.mmIndividualInvestorAddress, com.tools20022.repository.msg.Organisation4.mmCorporateInvestorAddress,
-						com.tools20022.repository.msg.Organisation3.mmModifiedPostalAddress, com.tools20022.repository.msg.IndividualPerson6.mmModifiedPostalAddress, com.tools20022.repository.msg.IndividualPerson11.mmModifiedPostalAddress,
-						com.tools20022.repository.msg.FinancialInstitutionIdentification8.mmPostalAddress, com.tools20022.repository.msg.BranchData2.mmPostalAddress, com.tools20022.repository.msg.PartyIdentification8.mmPostalAddress,
-						com.tools20022.repository.msg.PartyIdentification32.mmPostalAddress, com.tools20022.repository.msg.PartyIdentification43.mmPostalAddress, com.tools20022.repository.msg.TransferOut3.mmInvestorAddress,
-						com.tools20022.repository.msg.NameAndAddress7.mmPostalAddress, com.tools20022.repository.msg.FinancialInstitutionIdentification3.mmPostalAddress,
-						com.tools20022.repository.msg.FinancialInstitutionIdentification7.mmPostalAddress, com.tools20022.repository.msg.NameAndAddress13.mmAddress, com.tools20022.repository.msg.PartyIdentification6Choice.mmPostalAddress,
-						com.tools20022.repository.msg.PartyIdentification41.mmPostalAddress, com.tools20022.repository.msg.PartyIdentification40.mmPostalAddress, com.tools20022.repository.msg.Organisation6.mmOperationalAddress,
-						com.tools20022.repository.msg.Organisation6.mmBusinessAddress, com.tools20022.repository.msg.Organisation6.mmLegalAddress, com.tools20022.repository.msg.Organisation12.mmBusinessAddress,
-						com.tools20022.repository.msg.Organisation12.mmLegalAddress, com.tools20022.repository.msg.Organisation12.mmBillingAddress, com.tools20022.repository.msg.AddressModification1.mmAddress,
-						com.tools20022.repository.msg.OrganisationModification1.mmBusinessAddress, com.tools20022.repository.msg.OrganisationModification1.mmLegalAddress,
-						com.tools20022.repository.msg.OrganisationModification1.mmBillingAddress, com.tools20022.repository.msg.Organisation7.mmOperationalAddress, com.tools20022.repository.msg.Organisation7.mmBusinessAddress,
-						com.tools20022.repository.msg.Organisation7.mmLegalAddress, com.tools20022.repository.msg.NameAndAddress3.mmAddress, com.tools20022.repository.msg.RemittanceLocation1.mmRemittanceLocationPostalAddress,
-						com.tools20022.repository.msg.NameAndAddress10.mmAddress, com.tools20022.repository.msg.RemittanceLocation2.mmRemittanceLocationPostalAddress, com.tools20022.repository.msg.PartyIdentification42.mmPostalAddress,
-						com.tools20022.repository.msg.NonExtension1.mmNotificationRecipientAddress, com.tools20022.repository.msg.CommunicationChannel1.mmDeliverToAddress,
-						com.tools20022.repository.choice.AddressOrParty1Choice.mmNewAddress, com.tools20022.repository.msg.NameAndAddress8.mmAddress, com.tools20022.repository.msg.PartyIdentification59.mmAddress,
-						com.tools20022.repository.msg.Organisation5.mmAddress, com.tools20022.repository.msg.Organisation8.mmAddress, com.tools20022.repository.msg.Organisation9.mmAddress,
-						com.tools20022.repository.msg.PartyIdentification1.mmPostalAddress, com.tools20022.repository.msg.FinancialInstitutionIdentification1.mmPostalAddress, com.tools20022.repository.msg.IndividualPerson7.mmAddress,
-						com.tools20022.repository.msg.MeetingNotice1.mmProxyAppointmentNotificationAddress, com.tools20022.repository.msg.VoteMethods.mmVoteByMail, com.tools20022.repository.msg.VoteParameters.mmVotingBallotRequestAddress,
-						com.tools20022.repository.msg.IndividualPerson14.mmAddress, com.tools20022.repository.msg.MeetingNotice2.mmProxyAppointmentNotificationAddress, com.tools20022.repository.choice.LocationFormat1Choice.mmAddress,
-						com.tools20022.repository.msg.VoteParameters1.mmVotingBallotRequestAddress, com.tools20022.repository.choice.LongPostalAddress2Choice.mmUnstructured,
-						com.tools20022.repository.choice.LongPostalAddress2Choice.mmStructured, com.tools20022.repository.msg.IndividualPerson16.mmAddress, com.tools20022.repository.msg.MeetingNotice3.mmProxyAppointmentNotificationAddress,
-						com.tools20022.repository.msg.VoteParameters2.mmVotingBallotRequestAddress, com.tools20022.repository.msg.VoteMethods2.mmVoteByMail, com.tools20022.repository.msg.VoteParameters3.mmVotingBallotRequestAddress,
-						com.tools20022.repository.msg.MeetingReference1.mmLocation, com.tools20022.repository.msg.MeetingReference2.mmLocation, com.tools20022.repository.msg.MeetingReference5.mmLocation,
-						com.tools20022.repository.msg.MeetingReference3.mmLocation, com.tools20022.repository.msg.MeetingReference4.mmLocation, com.tools20022.repository.msg.NameAndAddress9.mmAddress,
-						com.tools20022.repository.msg.IndividualPerson13.mmAddress, com.tools20022.repository.msg.IndividualPerson17.mmAddress, com.tools20022.repository.msg.PartyIdentification45.mmPostalAddress,
-						com.tools20022.repository.msg.PartyIdentification9.mmPostalAddress, com.tools20022.repository.msg.NameAndAddress6.mmAddress, com.tools20022.repository.msg.PartyIdentification26.mmPostalAddress,
-						com.tools20022.repository.msg.CommunicationAddressDetails.mmPostalAddress, com.tools20022.repository.msg.PartyIdentification58.mmPostalAddress, com.tools20022.repository.msg.PartyIdentification19.mmPostalAddress,
-						com.tools20022.repository.msg.PartyIdentification18.mmPostalAddress, com.tools20022.repository.msg.PartyIdentification20.mmPostalAddress, com.tools20022.repository.msg.PartyIdentification31.mmPostalAddress,
-						com.tools20022.repository.msg.PartyIdentification13.mmPostalAddress, com.tools20022.repository.msg.PartyIdentification16.mmPostalAddress, com.tools20022.repository.msg.NameAndAddress11.mmAddress,
-						com.tools20022.repository.msg.PartyIdentification5.mmPostalAddress, com.tools20022.repository.msg.PartyIdentification24.mmPostalAddress, com.tools20022.repository.msg.TransferOut4.mmInvestorAddress,
-						com.tools20022.repository.msg.IndividualPerson21.mmModifiedPostalAddress, com.tools20022.repository.msg.IndividualPerson22.mmPostalAddress, com.tools20022.repository.msg.Organisation15.mmModifiedPostalAddress,
-						com.tools20022.repository.msg.RemittanceLocationDetails1.mmPostalAddress, com.tools20022.repository.msg.Organisation16.mmPostalAddress, com.tools20022.repository.msg.Organisation17.mmModifiedPostalAddress,
-						com.tools20022.repository.msg.IndividualPerson23.mmPostalAddress, com.tools20022.repository.msg.IndividualPerson24.mmModifiedPostalAddress, com.tools20022.repository.msg.MeetingReference7.mmLocation,
-						com.tools20022.repository.msg.MeetingReference6.mmLocation, com.tools20022.repository.msg.VoteParameters4.mmVotingBallotRequestAddress,
-						com.tools20022.repository.msg.MeetingNotice4.mmProxyAppointmentNotificationAddress, com.tools20022.repository.msg.IndividualPerson25.mmAddress, com.tools20022.repository.msg.IndividualPerson26.mmAddress,
-						com.tools20022.repository.msg.Organisation18.mmLocation, com.tools20022.repository.msg.CommunicationAddress5.mmPostalAddress, com.tools20022.repository.msg.PartyIdentification77.mmPostalAddress,
-						com.tools20022.repository.msg.Organisation21.mmCorporateInvestorAddress, com.tools20022.repository.msg.Organisation22.mmModifiedPostalAddress, com.tools20022.repository.msg.Organisation23.mmPostalAddress,
-						com.tools20022.repository.msg.Organisation24.mmPostalAddress, com.tools20022.repository.msg.IndividualPerson27.mmPostalAddress, com.tools20022.repository.msg.ModificationScope34.mmPostalAddress,
-						com.tools20022.repository.msg.IndividualPerson29.mmPostalAddress, com.tools20022.repository.msg.NameAndAddress15.mmPostalAddress, com.tools20022.repository.msg.PartyIdentification112.mmPostalAddress,
-						com.tools20022.repository.msg.TaxOrganisationIdentification1.mmPostalAddress, com.tools20022.repository.msg.Organisation30.mmPostalAddress, com.tools20022.repository.msg.Organisation29.mmModifiedPostalAddress,
-						com.tools20022.repository.msg.IndividualPerson34.mmPostalAddress);
+				derivationElement_lazy = () -> Arrays.asList(ContactDetails1.mmFundManagerPostalAddress, OrderDeskContactDetails.mmPostalAddress, ContactAttributes1.mmPostalAddress, LongPostalAddress1Choice.mmUnstructured,
+						LongPostalAddress1Choice.mmStructured, NameAndAddress2.mmAddress, NameAndAddress5.mmAddress, NameAndAddress1.mmAddress, NameAndAddress4.mmAddress, Organisation2.mmPostalAddress, IndividualPerson5.mmPostalAddress,
+						IndividualPerson10.mmPostalAddress, BranchData.mmPostalAddress, Organisation13.mmPostalAddress, IndividualPerson20.mmPostalAddress, IndividualPerson8.mmIndividualInvestorAddress,
+						Organisation4.mmCorporateInvestorAddress, Organisation3.mmModifiedPostalAddress, IndividualPerson6.mmModifiedPostalAddress, IndividualPerson11.mmModifiedPostalAddress,
+						FinancialInstitutionIdentification8.mmPostalAddress, BranchData2.mmPostalAddress, PartyIdentification8.mmPostalAddress, PartyIdentification32.mmPostalAddress, PartyIdentification43.mmPostalAddress,
+						TransferOut3.mmInvestorAddress, NameAndAddress7.mmPostalAddress, FinancialInstitutionIdentification3.mmPostalAddress, FinancialInstitutionIdentification7.mmPostalAddress, NameAndAddress13.mmAddress,
+						PartyIdentification6Choice.mmPostalAddress, PartyIdentification41.mmPostalAddress, PartyIdentification40.mmPostalAddress, Organisation6.mmOperationalAddress, Organisation6.mmBusinessAddress,
+						Organisation6.mmLegalAddress, Organisation12.mmBusinessAddress, Organisation12.mmLegalAddress, Organisation12.mmBillingAddress, AddressModification1.mmAddress, OrganisationModification1.mmBusinessAddress,
+						OrganisationModification1.mmLegalAddress, OrganisationModification1.mmBillingAddress, Organisation7.mmOperationalAddress, Organisation7.mmBusinessAddress, Organisation7.mmLegalAddress, NameAndAddress3.mmAddress,
+						RemittanceLocation1.mmRemittanceLocationPostalAddress, NameAndAddress10.mmAddress, RemittanceLocation2.mmRemittanceLocationPostalAddress, PartyIdentification42.mmPostalAddress,
+						NonExtension1.mmNotificationRecipientAddress, CommunicationChannel1.mmDeliverToAddress, AddressOrParty1Choice.mmNewAddress, NameAndAddress8.mmAddress, PartyIdentification59.mmAddress, Organisation5.mmAddress,
+						Organisation8.mmAddress, Organisation9.mmAddress, PartyIdentification1.mmPostalAddress, FinancialInstitutionIdentification1.mmPostalAddress, IndividualPerson7.mmAddress,
+						MeetingNotice1.mmProxyAppointmentNotificationAddress, VoteMethods.mmVoteByMail, VoteParameters.mmVotingBallotRequestAddress, IndividualPerson14.mmAddress, MeetingNotice2.mmProxyAppointmentNotificationAddress,
+						LocationFormat1Choice.mmAddress, VoteParameters1.mmVotingBallotRequestAddress, LongPostalAddress2Choice.mmUnstructured, LongPostalAddress2Choice.mmStructured, IndividualPerson16.mmAddress,
+						MeetingNotice3.mmProxyAppointmentNotificationAddress, VoteParameters2.mmVotingBallotRequestAddress, VoteMethods2.mmVoteByMail, VoteParameters3.mmVotingBallotRequestAddress, MeetingReference1.mmLocation,
+						MeetingReference2.mmLocation, MeetingReference5.mmLocation, MeetingReference3.mmLocation, MeetingReference4.mmLocation, NameAndAddress9.mmAddress, IndividualPerson13.mmAddress, IndividualPerson17.mmAddress,
+						PartyIdentification45.mmPostalAddress, PartyIdentification9.mmPostalAddress, NameAndAddress6.mmAddress, PartyIdentification26.mmPostalAddress, CommunicationAddressDetails.mmPostalAddress,
+						PartyIdentification58.mmPostalAddress, PartyIdentification19.mmPostalAddress, PartyIdentification18.mmPostalAddress, PartyIdentification20.mmPostalAddress, PartyIdentification31.mmPostalAddress,
+						PartyIdentification13.mmPostalAddress, PartyIdentification16.mmPostalAddress, NameAndAddress11.mmAddress, PartyIdentification5.mmPostalAddress, PartyIdentification24.mmPostalAddress, TransferOut4.mmInvestorAddress,
+						IndividualPerson21.mmModifiedPostalAddress, IndividualPerson22.mmPostalAddress, Organisation15.mmModifiedPostalAddress, RemittanceLocationDetails1.mmPostalAddress, Organisation16.mmPostalAddress,
+						Organisation17.mmModifiedPostalAddress, IndividualPerson23.mmPostalAddress, IndividualPerson24.mmModifiedPostalAddress, MeetingReference7.mmLocation, MeetingReference6.mmLocation,
+						VoteParameters4.mmVotingBallotRequestAddress, MeetingNotice4.mmProxyAppointmentNotificationAddress, IndividualPerson25.mmAddress, IndividualPerson26.mmAddress, Organisation18.mmLocation,
+						CommunicationAddress5.mmPostalAddress, PartyIdentification77.mmPostalAddress, Organisation21.mmCorporateInvestorAddress, Organisation22.mmModifiedPostalAddress, Organisation23.mmPostalAddress,
+						Organisation24.mmPostalAddress, IndividualPerson27.mmPostalAddress, ModificationScope34.mmPostalAddress, IndividualPerson29.mmPostalAddress, NameAndAddress15.mmPostalAddress, PartyIdentification112.mmPostalAddress,
+						TaxOrganisationIdentification1.mmPostalAddress, Organisation30.mmPostalAddress, Organisation29.mmModifiedPostalAddress, IndividualPerson34.mmPostalAddress);
 				superType_lazy = () -> ContactPoint.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.PostalAddress.mmAddressType, com.tools20022.repository.entity.PostalAddress.mmStreetName,
-						com.tools20022.repository.entity.PostalAddress.mmStreetBuildingIdentification, com.tools20022.repository.entity.PostalAddress.mmPostCodeIdentification, com.tools20022.repository.entity.PostalAddress.mmTownName,
-						com.tools20022.repository.entity.PostalAddress.mmState, com.tools20022.repository.entity.PostalAddress.mmBuildingName, com.tools20022.repository.entity.PostalAddress.mmFloor,
-						com.tools20022.repository.entity.PostalAddress.mmDistrictName, com.tools20022.repository.entity.PostalAddress.mmRegionIdentification, com.tools20022.repository.entity.PostalAddress.mmCountyIdentification,
-						com.tools20022.repository.entity.PostalAddress.mmPostOfficeBox, com.tools20022.repository.entity.PostalAddress.mmProvince, com.tools20022.repository.entity.PostalAddress.mmDepartment,
-						com.tools20022.repository.entity.PostalAddress.mmSubDepartment, com.tools20022.repository.entity.PostalAddress.mmLocation, com.tools20022.repository.entity.PostalAddress.mmChequeIssue,
-						com.tools20022.repository.entity.PostalAddress.mmCountry, com.tools20022.repository.entity.PostalAddress.mmValidityPeriod, com.tools20022.repository.entity.PostalAddress.mmSuiteIdentification,
-						com.tools20022.repository.entity.PostalAddress.mmBuildingIdentification, com.tools20022.repository.entity.PostalAddress.mmMailDeliverySubLocation, com.tools20022.repository.entity.PostalAddress.mmBlock,
-						com.tools20022.repository.entity.PostalAddress.mmLot, com.tools20022.repository.entity.PostalAddress.mmDistrictSubDivisionIdentification, com.tools20022.repository.entity.PostalAddress.mmMailingInstructions,
-						com.tools20022.repository.entity.PostalAddress.mmPhysicalDelivery);
+				element_lazy = () -> Arrays.asList(PostalAddress.mmAddressType, PostalAddress.mmStreetName, PostalAddress.mmStreetBuildingIdentification, PostalAddress.mmPostCodeIdentification, PostalAddress.mmTownName,
+						PostalAddress.mmState, PostalAddress.mmBuildingName, PostalAddress.mmFloor, PostalAddress.mmDistrictName, PostalAddress.mmRegionIdentification, PostalAddress.mmCountyIdentification, PostalAddress.mmPostOfficeBox,
+						PostalAddress.mmProvince, PostalAddress.mmDepartment, PostalAddress.mmSubDepartment, PostalAddress.mmLocation, PostalAddress.mmChequeIssue, PostalAddress.mmCountry, PostalAddress.mmValidityPeriod,
+						PostalAddress.mmSuiteIdentification, PostalAddress.mmBuildingIdentification, PostalAddress.mmMailDeliverySubLocation, PostalAddress.mmBlock, PostalAddress.mmLot, PostalAddress.mmDistrictSubDivisionIdentification,
+						PostalAddress.mmMailingInstructions, PostalAddress.mmPhysicalDelivery);
 				derivationComponent_lazy = () -> Arrays.asList(PostalAddress1.mmObject(), StructuredLongPostalAddress1.mmObject(), LongPostalAddress1Choice.mmObject(), PostalAddress3.mmObject(), PostalAddress6.mmObject(),
 						PostalAddress8.mmObject(), AddressModification1.mmObject(), CountrySubdivision1Choice.mmObject(), PostalAddress12.mmObject(), LongPostalAddress2Choice.mmObject(), PostalAddress2.mmObject(),
 						PostalAddress5.mmObject(), PostalAddress11.mmObject(), PostalAddress4.mmObject(), PostalAddress7.mmObject(), PostalAddress10.mmObject(), PostalAddress9.mmObject(), PostalAddress13.mmObject(),

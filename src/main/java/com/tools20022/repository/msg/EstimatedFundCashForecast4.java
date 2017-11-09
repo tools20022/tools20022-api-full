@@ -20,13 +20,16 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.camt.FundDetailedEstimatedCashForecastReportV03;
 import com.tools20022.repository.choice.DateAndDateTimeChoice;
 import com.tools20022.repository.codeset.ActiveOrHistoricCurrencyCode;
 import com.tools20022.repository.datatype.ActiveOrHistoricCurrencyAndAmount;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.PercentageRate;
 import com.tools20022.repository.datatype.YesNoIndicator;
-import com.tools20022.repository.entity.FundsCashFlow;
+import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -176,10 +179,10 @@ public class EstimatedFundCashForecast4 {
 			componentContext_lazy = () -> EstimatedFundCashForecast4.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Unique technical identifier for an instance of a fund cash forecast within a fund cash forecast report as assigned by the issuer of the report.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.EstimatedFundCashForecast5.mmIdentification);
+			nextVersions_lazy = () -> Arrays.asList(EstimatedFundCashForecast5.mmIdentification);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -230,14 +233,14 @@ public class EstimatedFundCashForecast4 {
 	 */
 	public static final MMMessageAttribute mmTradeDateTime = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Trade.mmTradeDateTime;
+			businessElementTrace_lazy = () -> Trade.mmTradeDateTime;
 			componentContext_lazy = () -> EstimatedFundCashForecast4.mmObject();
 			isDerived = false;
 			xmlTag = "TradDtTm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeDateTime";
 			definition = "Date and, if required, the time, at which the price has been applied.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.EstimatedFundCashForecast5.mmTradeDateTime);
+			nextVersions_lazy = () -> Arrays.asList(EstimatedFundCashForecast5.mmTradeDateTime);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
@@ -287,14 +290,14 @@ public class EstimatedFundCashForecast4 {
 	 */
 	public static final MMMessageAttribute mmPreviousTradeDateTime = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Trade.mmTradeDateTime;
+			businessElementTrace_lazy = () -> Trade.mmTradeDateTime;
 			componentContext_lazy = () -> EstimatedFundCashForecast4.mmObject();
 			isDerived = false;
 			xmlTag = "PrvsTradDtTm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousTradeDateTime";
 			definition = "Previous date and time at which a price was applied.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.EstimatedFundCashForecast5.mmPreviousTradeDateTime);
+			nextVersions_lazy = () -> Arrays.asList(EstimatedFundCashForecast5.mmPreviousTradeDateTime);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
@@ -342,14 +345,14 @@ public class EstimatedFundCashForecast4 {
 	 */
 	public static final MMMessageAssociationEnd mmFinancialInstrumentDetails = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmInvestmentFund;
+			businessElementTrace_lazy = () -> InvestmentFundClass.mmInvestmentFund;
 			componentContext_lazy = () -> EstimatedFundCashForecast4.mmObject();
 			isDerived = false;
 			xmlTag = "FinInstrmDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentDetails";
 			definition = "Investment fund class to which the cash flow is related.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.EstimatedFundCashForecast5.mmFinancialInstrumentDetails);
+			nextVersions_lazy = () -> Arrays.asList(EstimatedFundCashForecast5.mmFinancialInstrumentDetails);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -403,14 +406,14 @@ public class EstimatedFundCashForecast4 {
 	 */
 	public static final MMMessageAttribute mmEstimatedTotalNAV = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.NetAssetValueCalculation.mmNetAssetValue;
+			businessElementTrace_lazy = () -> NetAssetValueCalculation.mmNetAssetValue;
 			componentContext_lazy = () -> EstimatedFundCashForecast4.mmObject();
 			isDerived = false;
 			xmlTag = "EstmtdTtlNAV";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EstimatedTotalNAV";
 			definition = "Estimated total value of all the holdings, less the fund's liabilities, attributable to a specific investment fund class.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.EstimatedFundCashForecast5.mmEstimatedTotalNAV);
+			nextVersions_lazy = () -> Arrays.asList(EstimatedFundCashForecast5.mmEstimatedTotalNAV);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
@@ -463,14 +466,14 @@ public class EstimatedFundCashForecast4 {
 	 */
 	public static final MMMessageAttribute mmPreviousTotalNAV = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.NetAssetValueCalculation.mmNetAssetValue;
+			businessElementTrace_lazy = () -> NetAssetValueCalculation.mmNetAssetValue;
 			componentContext_lazy = () -> EstimatedFundCashForecast4.mmObject();
 			isDerived = false;
 			xmlTag = "PrvsTtlNAV";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousTotalNAV";
 			definition = "Previous value of all the holdings, less the fund's liabilities, attributable to a specific investment fund class.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.EstimatedFundCashForecast5.mmPreviousTotalNAV);
+			nextVersions_lazy = () -> Arrays.asList(EstimatedFundCashForecast5.mmPreviousTotalNAV);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
@@ -523,14 +526,14 @@ public class EstimatedFundCashForecast4 {
 	 */
 	public static final MMMessageAttribute mmEstimatedTotalUnitsNumber = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrderExecution.mmUnitsNumber;
+			businessElementTrace_lazy = () -> InvestmentFundOrderExecution.mmUnitsNumber;
 			componentContext_lazy = () -> EstimatedFundCashForecast4.mmObject();
 			isDerived = false;
 			xmlTag = "EstmtdTtlUnitsNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EstimatedTotalUnitsNumber";
 			definition = "Estimated total number of investment fund class units that have been issued.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.EstimatedFundCashForecast5.mmEstimatedTotalUnitsNumber);
+			nextVersions_lazy = () -> Arrays.asList(EstimatedFundCashForecast5.mmEstimatedTotalUnitsNumber);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentQuantity1.mmObject();
@@ -583,14 +586,14 @@ public class EstimatedFundCashForecast4 {
 	 */
 	public static final MMMessageAttribute mmPreviousTotalUnitsNumber = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrderExecution.mmUnitsNumber;
+			businessElementTrace_lazy = () -> InvestmentFundOrderExecution.mmUnitsNumber;
 			componentContext_lazy = () -> EstimatedFundCashForecast4.mmObject();
 			isDerived = false;
 			xmlTag = "PrvsTtlUnitsNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousTotalUnitsNumber";
 			definition = "Previous value of all the holdings, less the fund's liabilities, attributable to a specific investment fund class.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.EstimatedFundCashForecast5.mmPreviousTotalUnitsNumber);
+			nextVersions_lazy = () -> Arrays.asList(EstimatedFundCashForecast5.mmPreviousTotalUnitsNumber);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentQuantity1.mmObject();
@@ -636,10 +639,10 @@ public class EstimatedFundCashForecast4 {
 			componentContext_lazy = () -> EstimatedFundCashForecast4.mmObject();
 			isDerived = false;
 			xmlTag = "BrkdwnByPty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BreakdownByParty";
 			definition = "Estimated cash flow by party.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.EstimatedFundCashForecast5.mmBreakdownByParty);
+			nextVersions_lazy = () -> Arrays.asList(EstimatedFundCashForecast5.mmBreakdownByParty);
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.BreakdownByParty1.mmObject();
@@ -685,10 +688,10 @@ public class EstimatedFundCashForecast4 {
 			componentContext_lazy = () -> EstimatedFundCashForecast4.mmObject();
 			isDerived = false;
 			xmlTag = "BrkdwnByCtry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BreakdownByCountry";
 			definition = "Estimated cash flow by country.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.EstimatedFundCashForecast5.mmBreakdownByCountry);
+			nextVersions_lazy = () -> Arrays.asList(EstimatedFundCashForecast5.mmBreakdownByCountry);
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.BreakdownByCountry1.mmObject();
@@ -734,10 +737,10 @@ public class EstimatedFundCashForecast4 {
 			componentContext_lazy = () -> EstimatedFundCashForecast4.mmObject();
 			isDerived = false;
 			xmlTag = "BrkdwnByCcy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BreakdownByCurrency";
 			definition = "Estimated cash flow by currency.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.EstimatedFundCashForecast5.mmBreakdownByCurrency);
+			nextVersions_lazy = () -> Arrays.asList(EstimatedFundCashForecast5.mmBreakdownByCurrency);
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.BreakdownByCurrency1.mmObject();
@@ -784,10 +787,10 @@ public class EstimatedFundCashForecast4 {
 			componentContext_lazy = () -> EstimatedFundCashForecast4.mmObject();
 			isDerived = false;
 			xmlTag = "BrkdwnByUsrDfndParam";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BreakdownByUserDefinedParameter";
 			definition = "Estimated cash flow by a user defined parameter/s.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.EstimatedFundCashForecast5.mmBreakdownByUserDefinedParameter);
+			nextVersions_lazy = () -> Arrays.asList(EstimatedFundCashForecast5.mmBreakdownByUserDefinedParameter);
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.BreakdownByUserDefinedParameter1.mmObject();
@@ -837,14 +840,14 @@ public class EstimatedFundCashForecast4 {
 	 */
 	public static final MMMessageAttribute mmEstimatedTotalNAVChangeRate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ValuationStatistics.mmNetAssetValueChangeRate;
+			businessElementTrace_lazy = () -> ValuationStatistics.mmNetAssetValueChangeRate;
 			componentContext_lazy = () -> EstimatedFundCashForecast4.mmObject();
 			isDerived = false;
 			xmlTag = "EstmtdTtlNAVChngRate";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EstimatedTotalNAVChangeRate";
 			definition = "Rate of change of the net asset value.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.EstimatedFundCashForecast5.mmEstimatedTotalNAVChangeRate);
+			nextVersions_lazy = () -> Arrays.asList(EstimatedFundCashForecast5.mmEstimatedTotalNAVChangeRate);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
@@ -894,14 +897,14 @@ public class EstimatedFundCashForecast4 {
 	 */
 	public static final MMMessageAttribute mmInvestmentCurrency = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmTradingCurrency;
+			businessElementTrace_lazy = () -> InvestmentFundClass.mmTradingCurrency;
 			componentContext_lazy = () -> EstimatedFundCashForecast4.mmObject();
 			isDerived = false;
 			xmlTag = "InvstmtCcy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestmentCurrency";
 			definition = "Currency of the investment fund class.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.EstimatedFundCashForecast5.mmInvestmentCurrency);
+			nextVersions_lazy = () -> Arrays.asList(EstimatedFundCashForecast5.mmInvestmentCurrency);
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyCode.mmObject();
 		}
@@ -951,14 +954,14 @@ public class EstimatedFundCashForecast4 {
 	 */
 	public static final MMMessageAttribute mmExceptionalNetCashFlowIndicator = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.FundsCashFlow.mmExceptionalCashFlowIndicator;
+			businessElementTrace_lazy = () -> FundsCashFlow.mmExceptionalCashFlowIndicator;
 			componentContext_lazy = () -> EstimatedFundCashForecast4.mmObject();
 			isDerived = false;
 			xmlTag = "XcptnlNetCshFlowInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExceptionalNetCashFlowIndicator";
 			definition = "Indicates whether the estimated net cash flow is exceptional.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.EstimatedFundCashForecast5.mmExceptionalNetCashFlowIndicator);
+			nextVersions_lazy = () -> Arrays.asList(EstimatedFundCashForecast5.mmExceptionalNetCashFlowIndicator);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
@@ -1010,10 +1013,10 @@ public class EstimatedFundCashForecast4 {
 			componentContext_lazy = () -> EstimatedFundCashForecast4.mmObject();
 			isDerived = false;
 			xmlTag = "EstmtdNetCshFcstDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EstimatedNetCashForecastDetails";
 			definition = "Estimated net cash movements per financial instrument.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.EstimatedFundCashForecast5.mmEstimatedNetCashForecastDetails);
+			nextVersions_lazy = () -> Arrays.asList(EstimatedFundCashForecast5.mmEstimatedNetCashForecastDetails);
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.NetCashForecast2.mmObject();
@@ -1023,18 +1026,15 @@ public class EstimatedFundCashForecast4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.EstimatedFundCashForecast4.mmIdentification, com.tools20022.repository.msg.EstimatedFundCashForecast4.mmTradeDateTime,
-						com.tools20022.repository.msg.EstimatedFundCashForecast4.mmPreviousTradeDateTime, com.tools20022.repository.msg.EstimatedFundCashForecast4.mmFinancialInstrumentDetails,
-						com.tools20022.repository.msg.EstimatedFundCashForecast4.mmEstimatedTotalNAV, com.tools20022.repository.msg.EstimatedFundCashForecast4.mmPreviousTotalNAV,
-						com.tools20022.repository.msg.EstimatedFundCashForecast4.mmEstimatedTotalUnitsNumber, com.tools20022.repository.msg.EstimatedFundCashForecast4.mmPreviousTotalUnitsNumber,
-						com.tools20022.repository.msg.EstimatedFundCashForecast4.mmBreakdownByParty, com.tools20022.repository.msg.EstimatedFundCashForecast4.mmBreakdownByCountry,
-						com.tools20022.repository.msg.EstimatedFundCashForecast4.mmBreakdownByCurrency, com.tools20022.repository.msg.EstimatedFundCashForecast4.mmBreakdownByUserDefinedParameter,
-						com.tools20022.repository.msg.EstimatedFundCashForecast4.mmEstimatedTotalNAVChangeRate, com.tools20022.repository.msg.EstimatedFundCashForecast4.mmInvestmentCurrency,
-						com.tools20022.repository.msg.EstimatedFundCashForecast4.mmExceptionalNetCashFlowIndicator, com.tools20022.repository.msg.EstimatedFundCashForecast4.mmEstimatedNetCashForecastDetails);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.FundDetailedEstimatedCashForecastReportV03.mmEstimatedFundCashForecastDetails);
+				messageElement_lazy = () -> Arrays.asList(EstimatedFundCashForecast4.mmIdentification, EstimatedFundCashForecast4.mmTradeDateTime, EstimatedFundCashForecast4.mmPreviousTradeDateTime,
+						EstimatedFundCashForecast4.mmFinancialInstrumentDetails, EstimatedFundCashForecast4.mmEstimatedTotalNAV, EstimatedFundCashForecast4.mmPreviousTotalNAV, EstimatedFundCashForecast4.mmEstimatedTotalUnitsNumber,
+						EstimatedFundCashForecast4.mmPreviousTotalUnitsNumber, EstimatedFundCashForecast4.mmBreakdownByParty, EstimatedFundCashForecast4.mmBreakdownByCountry, EstimatedFundCashForecast4.mmBreakdownByCurrency,
+						EstimatedFundCashForecast4.mmBreakdownByUserDefinedParameter, EstimatedFundCashForecast4.mmEstimatedTotalNAVChangeRate, EstimatedFundCashForecast4.mmInvestmentCurrency,
+						EstimatedFundCashForecast4.mmExceptionalNetCashFlowIndicator, EstimatedFundCashForecast4.mmEstimatedNetCashForecastDetails);
+				messageBuildingBlock_lazy = () -> Arrays.asList(FundDetailedEstimatedCashForecastReportV03.mmEstimatedFundCashForecastDetails);
 				trace_lazy = () -> FundsCashFlow.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "EstimatedFundCashForecast4";
 				definition = "Cash movements from or to a fund as a result of investment funds transactions, eg, subscriptions or redemptions.";
 				nextVersions_lazy = () -> Arrays.asList(EstimatedFundCashForecast5.mmObject());

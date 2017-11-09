@@ -19,7 +19,10 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.setr.*;
 import com.tools20022.repository.datatype.YesNoIndicator;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -132,7 +135,7 @@ public class CopyInformation1 {
 			componentContext_lazy = () -> CopyInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "CpyInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CopyIndicator";
 			definition = "Indicates whether the message is a copy.";
 			maxOccurs = 1;
@@ -175,7 +178,7 @@ public class CopyInformation1 {
 			componentContext_lazy = () -> CopyInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlRcvr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalReceiver";
 			definition = "Original receiver of the message, if this message is a copy.";
 			maxOccurs = 1;
@@ -187,15 +190,12 @@ public class CopyInformation1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CopyInformation1.mmCopyIndicator, com.tools20022.repository.msg.CopyInformation1.mmOriginalReceiver);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.RedemptionBulkOrderConfirmationV02.mmCopyDetails, com.tools20022.repository.area.setr.RedemptionBulkOrderV02.mmCopyDetails,
-						com.tools20022.repository.area.setr.RedemptionMultipleOrderConfirmationV02.mmCopyDetails, com.tools20022.repository.area.setr.RedemptionMultipleOrderV02.mmCopyDetails,
-						com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationV02.mmCopyDetails, com.tools20022.repository.area.setr.SubscriptionBulkOrderV02.mmCopyDetails,
-						com.tools20022.repository.area.setr.SubscriptionOrderConfirmationCancellationInstructionV01.mmCopyDetails, com.tools20022.repository.area.setr.SubscriptionMultipleOrderConfirmationV02.mmCopyDetails,
-						com.tools20022.repository.area.setr.SubscriptionMultipleOrderV02.mmCopyDetails, com.tools20022.repository.area.setr.SwitchOrderConfirmationV02.mmCopyDetails,
-						com.tools20022.repository.area.setr.SwitchOrderV02.mmCopyDetails);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(CopyInformation1.mmCopyIndicator, CopyInformation1.mmOriginalReceiver);
+				messageBuildingBlock_lazy = () -> Arrays.asList(RedemptionBulkOrderConfirmationV02.mmCopyDetails, RedemptionBulkOrderV02.mmCopyDetails, RedemptionMultipleOrderConfirmationV02.mmCopyDetails,
+						RedemptionMultipleOrderV02.mmCopyDetails, SubscriptionBulkOrderConfirmationV02.mmCopyDetails, SubscriptionBulkOrderV02.mmCopyDetails, SubscriptionOrderConfirmationCancellationInstructionV01.mmCopyDetails,
+						SubscriptionMultipleOrderConfirmationV02.mmCopyDetails, SubscriptionMultipleOrderV02.mmCopyDetails, SwitchOrderConfirmationV02.mmCopyDetails, SwitchOrderV02.mmCopyDetails);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CopyInformation1";
 				definition = "Information provided when the message is a copy of a previous message.";
 			}

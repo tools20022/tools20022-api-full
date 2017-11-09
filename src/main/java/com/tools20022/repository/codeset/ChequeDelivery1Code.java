@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ChequeDeliveryCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -114,7 +116,7 @@ public class ChequeDelivery1Code extends ChequeDeliveryCode {
 	 */
 	public static final MMCode mmMailToDebtor = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MailToDebtor";
 			owner_lazy = () -> ChequeDelivery1Code.mmObject();
 		}
@@ -137,7 +139,7 @@ public class ChequeDelivery1Code extends ChequeDeliveryCode {
 	 */
 	public static final MMCode mmMailToCreditor = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MailToCreditor";
 			owner_lazy = () -> ChequeDelivery1Code.mmObject();
 		}
@@ -160,7 +162,7 @@ public class ChequeDelivery1Code extends ChequeDeliveryCode {
 	 */
 	public static final MMCode mmMailToFinalAgent = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MailToFinalAgent";
 			owner_lazy = () -> ChequeDelivery1Code.mmObject();
 		}
@@ -183,7 +185,7 @@ public class ChequeDelivery1Code extends ChequeDeliveryCode {
 	 */
 	public static final MMCode mmCourierToDebtor = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CourierToDebtor";
 			owner_lazy = () -> ChequeDelivery1Code.mmObject();
 		}
@@ -206,7 +208,7 @@ public class ChequeDelivery1Code extends ChequeDeliveryCode {
 	 */
 	public static final MMCode mmCourierToCreditor = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CourierToCreditor";
 			owner_lazy = () -> ChequeDelivery1Code.mmObject();
 		}
@@ -229,7 +231,7 @@ public class ChequeDelivery1Code extends ChequeDeliveryCode {
 	 */
 	public static final MMCode mmCourierToFinalAgent = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CourierToFinalAgent";
 			owner_lazy = () -> ChequeDelivery1Code.mmObject();
 		}
@@ -252,7 +254,7 @@ public class ChequeDelivery1Code extends ChequeDeliveryCode {
 	 */
 	public static final MMCode mmPickUpByDebtor = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PickUpByDebtor";
 			owner_lazy = () -> ChequeDelivery1Code.mmObject();
 		}
@@ -275,7 +277,7 @@ public class ChequeDelivery1Code extends ChequeDeliveryCode {
 	 */
 	public static final MMCode mmPickUpByCreditor = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PickUpByCreditor";
 			owner_lazy = () -> ChequeDelivery1Code.mmObject();
 		}
@@ -298,7 +300,7 @@ public class ChequeDelivery1Code extends ChequeDeliveryCode {
 	 */
 	public static final MMCode mmPickUpByFinalAgent = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PickUpByFinalAgent";
 			owner_lazy = () -> ChequeDelivery1Code.mmObject();
 		}
@@ -321,7 +323,7 @@ public class ChequeDelivery1Code extends ChequeDeliveryCode {
 	 */
 	public static final MMCode mmRegisteredMailToDebtor = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RegisteredMailToDebtor";
 			owner_lazy = () -> ChequeDelivery1Code.mmObject();
 		}
@@ -344,7 +346,7 @@ public class ChequeDelivery1Code extends ChequeDeliveryCode {
 	 */
 	public static final MMCode mmRegisteredMailToCreditor = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RegisteredMailToCreditor";
 			owner_lazy = () -> ChequeDelivery1Code.mmObject();
 		}
@@ -367,7 +369,7 @@ public class ChequeDelivery1Code extends ChequeDeliveryCode {
 	 */
 	public static final MMCode mmRegisteredMailToFinalAgent = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RegisteredMailToFinalAgent";
 			owner_lazy = () -> ChequeDelivery1Code.mmObject();
 		}
@@ -376,17 +378,14 @@ public class ChequeDelivery1Code extends ChequeDeliveryCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("MLDB");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ChequeDelivery1Code";
 				definition = "Specifies the method to be used in delivering a cheque to a party.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ChequeDelivery1Code.mmMailToDebtor, com.tools20022.repository.codeset.ChequeDelivery1Code.mmMailToCreditor,
-						com.tools20022.repository.codeset.ChequeDelivery1Code.mmMailToFinalAgent, com.tools20022.repository.codeset.ChequeDelivery1Code.mmCourierToDebtor,
-						com.tools20022.repository.codeset.ChequeDelivery1Code.mmCourierToCreditor, com.tools20022.repository.codeset.ChequeDelivery1Code.mmCourierToFinalAgent,
-						com.tools20022.repository.codeset.ChequeDelivery1Code.mmPickUpByDebtor, com.tools20022.repository.codeset.ChequeDelivery1Code.mmPickUpByCreditor,
-						com.tools20022.repository.codeset.ChequeDelivery1Code.mmPickUpByFinalAgent, com.tools20022.repository.codeset.ChequeDelivery1Code.mmRegisteredMailToDebtor,
-						com.tools20022.repository.codeset.ChequeDelivery1Code.mmRegisteredMailToCreditor, com.tools20022.repository.codeset.ChequeDelivery1Code.mmRegisteredMailToFinalAgent);
+				code_lazy = () -> Arrays.asList(ChequeDelivery1Code.mmMailToDebtor, ChequeDelivery1Code.mmMailToCreditor, ChequeDelivery1Code.mmMailToFinalAgent, ChequeDelivery1Code.mmCourierToDebtor,
+						ChequeDelivery1Code.mmCourierToCreditor, ChequeDelivery1Code.mmCourierToFinalAgent, ChequeDelivery1Code.mmPickUpByDebtor, ChequeDelivery1Code.mmPickUpByCreditor, ChequeDelivery1Code.mmPickUpByFinalAgent,
+						ChequeDelivery1Code.mmRegisteredMailToDebtor, ChequeDelivery1Code.mmRegisteredMailToCreditor, ChequeDelivery1Code.mmRegisteredMailToFinalAgent);
 				trace_lazy = () -> ChequeDeliveryCode.mmObject();
 			}
 		});

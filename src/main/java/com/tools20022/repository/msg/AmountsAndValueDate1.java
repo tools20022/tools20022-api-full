@@ -19,9 +19,21 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.fxtr.ForeignExchangeTradeInstructionAmendmentV04;
+import com.tools20022.repository.area.fxtr.ForeignExchangeTradeInstructionCancellationV04;
+import com.tools20022.repository.area.fxtr.ForeignExchangeTradeInstructionV04;
+import com.tools20022.repository.area.fxtr.ForeignExchangeTradeStatusAndDetailsNotificationV04;
+import com.tools20022.repository.area.other.ForeignExchangeTradeInstructionAmendmentV02;
+import com.tools20022.repository.area.other.ForeignExchangeTradeInstructionCancellationV02;
+import com.tools20022.repository.area.other.ForeignExchangeTradeInstructionV02;
+import com.tools20022.repository.area.other.ForeignExchangeTradeStatusAndDetailsNotificationV02;
+import com.tools20022.repository.area.trea.*;
 import com.tools20022.repository.datatype.ActiveOrHistoricCurrencyAndAmount;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.entity.ForeignExchangeTrade;
+import com.tools20022.repository.entity.Trade;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -153,11 +165,11 @@ public class AmountsAndValueDate1 {
 	 */
 	public static final MMMessageAttribute mmTradingSideBuyAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ForeignExchangeTrade.mmBuyAmount;
+			businessElementTrace_lazy = () -> ForeignExchangeTrade.mmBuyAmount;
 			componentContext_lazy = () -> AmountsAndValueDate1.mmObject();
 			isDerived = false;
 			xmlTag = "TradgSdBuyAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradingSideBuyAmount";
 			definition = "Currency and amount bought in a foreign exchange trade.";
 			maxOccurs = 1;
@@ -201,11 +213,11 @@ public class AmountsAndValueDate1 {
 	 */
 	public static final MMMessageAttribute mmTradingSideSellAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ForeignExchangeTrade.mmSellAmount;
+			businessElementTrace_lazy = () -> ForeignExchangeTrade.mmSellAmount;
 			componentContext_lazy = () -> AmountsAndValueDate1.mmObject();
 			isDerived = false;
 			xmlTag = "TradgSdSellAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradingSideSellAmount";
 			definition = "Currency and amount sold in a foreign exchange trade.";
 			maxOccurs = 1;
@@ -249,11 +261,11 @@ public class AmountsAndValueDate1 {
 	 */
 	public static final MMMessageAttribute mmSettlementDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Trade.mmValueDate;
+			businessElementTrace_lazy = () -> Trade.mmValueDate;
 			componentContext_lazy = () -> AmountsAndValueDate1.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementDate";
 			definition = "Date on which the trade is settled, ie, the amounts are due.";
 			maxOccurs = 1;
@@ -265,19 +277,15 @@ public class AmountsAndValueDate1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AmountsAndValueDate1.mmTradingSideBuyAmount, com.tools20022.repository.msg.AmountsAndValueDate1.mmTradingSideSellAmount,
-						com.tools20022.repository.msg.AmountsAndValueDate1.mmSettlementDate);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.other.ForeignExchangeTradeInstructionAmendmentV02.mmTradeAmounts,
-						com.tools20022.repository.area.other.ForeignExchangeTradeInstructionCancellationV02.mmTradeAmounts, com.tools20022.repository.area.other.ForeignExchangeTradeInstructionV02.mmTradeAmounts,
-						com.tools20022.repository.area.other.ForeignExchangeTradeStatusAndDetailsNotificationV02.mmTradeAmounts, com.tools20022.repository.area.trea.CreateNonDeliverableForwardOpeningV02.mmTradeAmounts,
-						com.tools20022.repository.area.trea.AmendNonDeliverableForwardOpeningV02.mmTradeAmounts, com.tools20022.repository.area.trea.CancelNonDeliverableForwardOpeningV02.mmTradeAmounts,
-						com.tools20022.repository.area.trea.CreateNonDeliverableForwardValuationV02.mmTradeAmounts, com.tools20022.repository.area.trea.AmendNonDeliverableForwardValuationV02.mmTradeAmounts,
-						com.tools20022.repository.area.trea.CancelNonDeliverableForwardValuationV02.mmTradeAmounts, com.tools20022.repository.area.fxtr.ForeignExchangeTradeInstructionV04.mmTradeAmounts,
-						com.tools20022.repository.area.fxtr.ForeignExchangeTradeInstructionCancellationV04.mmTradeAmounts, com.tools20022.repository.area.fxtr.ForeignExchangeTradeInstructionAmendmentV04.mmTradeAmounts,
-						com.tools20022.repository.area.fxtr.ForeignExchangeTradeStatusAndDetailsNotificationV04.mmTradeAmounts);
+				messageElement_lazy = () -> Arrays.asList(AmountsAndValueDate1.mmTradingSideBuyAmount, AmountsAndValueDate1.mmTradingSideSellAmount, AmountsAndValueDate1.mmSettlementDate);
+				messageBuildingBlock_lazy = () -> Arrays.asList(ForeignExchangeTradeInstructionAmendmentV02.mmTradeAmounts, ForeignExchangeTradeInstructionCancellationV02.mmTradeAmounts, ForeignExchangeTradeInstructionV02.mmTradeAmounts,
+						ForeignExchangeTradeStatusAndDetailsNotificationV02.mmTradeAmounts, CreateNonDeliverableForwardOpeningV02.mmTradeAmounts, AmendNonDeliverableForwardOpeningV02.mmTradeAmounts,
+						CancelNonDeliverableForwardOpeningV02.mmTradeAmounts, CreateNonDeliverableForwardValuationV02.mmTradeAmounts, AmendNonDeliverableForwardValuationV02.mmTradeAmounts,
+						CancelNonDeliverableForwardValuationV02.mmTradeAmounts, ForeignExchangeTradeInstructionV04.mmTradeAmounts, ForeignExchangeTradeInstructionCancellationV04.mmTradeAmounts,
+						ForeignExchangeTradeInstructionAmendmentV04.mmTradeAmounts, ForeignExchangeTradeStatusAndDetailsNotificationV04.mmTradeAmounts);
 				trace_lazy = () -> ForeignExchangeTrade.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AmountsAndValueDate1";
 				definition = "Specifies the value date and the amounts traded in a foreign exchange transaction.";
 			}

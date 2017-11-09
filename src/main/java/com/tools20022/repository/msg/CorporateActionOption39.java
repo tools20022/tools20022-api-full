@@ -19,10 +19,17 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.seev.CorporateActionMovementReversalAdviceV03;
+import com.tools20022.repository.area.seev.CorporateActionMovementReversalAdviceV04;
+import com.tools20022.repository.area.seev.CorporateActionMovementReversalAdviceV05;
+import com.tools20022.repository.area.seev.CorporateActionMovementReversalAdviceV06;
 import com.tools20022.repository.choice.CorporateActionOption11Choice;
 import com.tools20022.repository.choice.OptionNumber1Choice;
 import com.tools20022.repository.entity.CashProceedsDefinition;
 import com.tools20022.repository.entity.CorporateActionOption;
+import com.tools20022.repository.entity.CorporateActionProceedsDeliveryInstruction;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -147,14 +154,14 @@ public class CorporateActionOption39 {
 	 */
 	public static final MMMessageAssociationEnd mmOptionNumber = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionOption.mmOptionNumber;
+			businessElementTrace_lazy = () -> CorporateActionOption.mmOptionNumber;
 			componentContext_lazy = () -> CorporateActionOption39.mmObject();
 			isDerived = false;
 			xmlTag = "OptnNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionNumber";
 			definition = "Number identifying the available corporate action options.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionOption119.mmOptionNumber);
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionOption119.mmOptionNumber);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -205,14 +212,14 @@ public class CorporateActionOption39 {
 	 */
 	public static final MMMessageAssociationEnd mmOptionType = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionOption.mmOptionType;
+			businessElementTrace_lazy = () -> CorporateActionOption.mmOptionType;
 			componentContext_lazy = () -> CorporateActionOption39.mmObject();
 			isDerived = false;
 			xmlTag = "OptnTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionType";
 			definition = "Specifies the corporate action options available to the account owner.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionOption119.mmOptionType);
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionOption119.mmOptionType);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -264,14 +271,14 @@ public class CorporateActionOption39 {
 	 */
 	public static final MMMessageAssociationEnd mmSecuritiesMovementDetails = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionProceedsDeliveryInstruction.mmSecuritiesProceedsMovement;
+			businessElementTrace_lazy = () -> CorporateActionProceedsDeliveryInstruction.mmSecuritiesProceedsMovement;
 			componentContext_lazy = () -> CorporateActionOption39.mmObject();
 			isDerived = false;
 			xmlTag = "SctiesMvmntDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesMovementDetails";
 			definition = "Provides information about the securities movement linked to the corporate action option.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionOption119.mmSecuritiesMovementDetails);
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionOption119.mmSecuritiesMovementDetails);
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.SecuritiesOption27.mmObject();
@@ -326,10 +333,10 @@ public class CorporateActionOption39 {
 			componentContext_lazy = () -> CorporateActionOption39.mmObject();
 			isDerived = false;
 			xmlTag = "CshMvmntDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashMovementDetails";
 			definition = "Provides information about the cash movement related to a corporate action option.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionOption119.mmCashMovementDetails);
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionOption119.mmCashMovementDetails);
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.CashOption19.mmObject();
@@ -339,15 +346,12 @@ public class CorporateActionOption39 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionOption39.mmOptionNumber, com.tools20022.repository.msg.CorporateActionOption39.mmOptionType,
-						com.tools20022.repository.msg.CorporateActionOption39.mmSecuritiesMovementDetails, com.tools20022.repository.msg.CorporateActionOption39.mmCashMovementDetails);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.CorporateActionMovementReversalAdviceV03.mmCorporateActionConfirmationDetails,
-						com.tools20022.repository.area.seev.CorporateActionMovementReversalAdviceV04.mmCorporateActionConfirmationDetails,
-						com.tools20022.repository.area.seev.CorporateActionMovementReversalAdviceV05.mmCorporateActionConfirmationDetails,
-						com.tools20022.repository.area.seev.CorporateActionMovementReversalAdviceV06.mmCorporateActionConfirmationDetails);
+				messageElement_lazy = () -> Arrays.asList(CorporateActionOption39.mmOptionNumber, CorporateActionOption39.mmOptionType, CorporateActionOption39.mmSecuritiesMovementDetails, CorporateActionOption39.mmCashMovementDetails);
+				messageBuildingBlock_lazy = () -> Arrays.asList(CorporateActionMovementReversalAdviceV03.mmCorporateActionConfirmationDetails, CorporateActionMovementReversalAdviceV04.mmCorporateActionConfirmationDetails,
+						CorporateActionMovementReversalAdviceV05.mmCorporateActionConfirmationDetails, CorporateActionMovementReversalAdviceV06.mmCorporateActionConfirmationDetails);
 				trace_lazy = () -> CorporateActionOption.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionOption39";
 				definition = "Provides information about the corporate action option.";
 				nextVersions_lazy = () -> Arrays.asList(CorporateActionOption119.mmObject());

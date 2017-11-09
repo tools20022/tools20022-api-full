@@ -17,12 +17,11 @@
 
 package com.tools20022.repository.entity;
 
-import com.tools20022.metamodel.MMBusinessAssociationEnd;
-import com.tools20022.metamodel.MMBusinessAttribute;
-import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.*;
 import com.tools20022.repository.codeset.POIComponentAssessmentCode;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.entity.Document;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.PointOfInteractionComponentAssessment1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -37,17 +36,13 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Assessment#mmAssessmentType
- * Assessment.mmAssessmentType}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Assessment#mmSystem
- * Assessment.mmSystem}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Assessment#mmExpiryDate
- * Assessment.mmExpiryDate}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Assessment#mmDeliveryDate
- * Assessment.mmDeliveryDate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PointOfInteractionComponentAssessment1
+ * PointOfInteractionComponentAssessment1}</li>
  * </ul>
  * </li>
  * <li>
@@ -60,13 +55,17 @@ import java.util.List;
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
  * superType} = {@linkplain com.tools20022.repository.entity.Document Document}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
  * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PointOfInteractionComponentAssessment1
- * PointOfInteractionComponentAssessment1}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Assessment#mmAssessmentType
+ * Assessment.mmAssessmentType}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Assessment#mmSystem
+ * Assessment.mmSystem}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Assessment#mmExpiryDate
+ * Assessment.mmExpiryDate}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Assessment#mmDeliveryDate
+ * Assessment.mmDeliveryDate}</li>
  * </ul>
  * </li>
  * <li>
@@ -123,10 +122,10 @@ public class Assessment extends Document {
 	 */
 	public static final MMBusinessAttribute mmAssessmentType = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PointOfInteractionComponentAssessment1.mmType);
+			derivation_lazy = () -> Arrays.asList(PointOfInteractionComponentAssessment1.mmType);
 			elementContext_lazy = () -> Assessment.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AssessmentType";
 			definition = "Type of assessment.";
 			maxOccurs = 1;
@@ -170,12 +169,12 @@ public class Assessment extends Document {
 		{
 			elementContext_lazy = () -> Assessment.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "System";
 			definition = "System for which an assessment is produced.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.System.mmAssessment;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.System.mmObject();
 		}
 	};
@@ -214,10 +213,10 @@ public class Assessment extends Document {
 	 */
 	public static final MMBusinessAttribute mmExpiryDate = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PointOfInteractionComponentAssessment1.mmExpirationDate);
+			derivation_lazy = () -> Arrays.asList(PointOfInteractionComponentAssessment1.mmExpirationDate);
 			elementContext_lazy = () -> Assessment.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ExpiryDate";
 			definition = "Date when the assessment expires.";
 			maxOccurs = 1;
@@ -260,10 +259,10 @@ public class Assessment extends Document {
 	 */
 	public static final MMBusinessAttribute mmDeliveryDate = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PointOfInteractionComponentAssessment1.mmDeliveryDate);
+			derivation_lazy = () -> Arrays.asList(PointOfInteractionComponentAssessment1.mmDeliveryDate);
 			elementContext_lazy = () -> Assessment.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DeliveryDate";
 			definition = "Date when the assessment document was delivered.";
 			maxOccurs = 1;
@@ -275,14 +274,13 @@ public class Assessment extends Document {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Assessment";
 				definition = "Assessment for the components of a system.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.System.mmAssessment);
 				superType_lazy = () -> Document.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Assessment.mmAssessmentType, com.tools20022.repository.entity.Assessment.mmSystem, com.tools20022.repository.entity.Assessment.mmExpiryDate,
-						com.tools20022.repository.entity.Assessment.mmDeliveryDate);
+				element_lazy = () -> Arrays.asList(Assessment.mmAssessmentType, Assessment.mmSystem, Assessment.mmExpiryDate, Assessment.mmDeliveryDate);
 				derivationComponent_lazy = () -> Arrays.asList(PointOfInteractionComponentAssessment1.mmObject());
 			}
 		});

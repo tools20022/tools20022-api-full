@@ -19,8 +19,14 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.acmt.AccountDetailsConfirmationV06;
+import com.tools20022.repository.area.acmt.AccountDetailsConfirmationV07;
+import com.tools20022.repository.area.acmt.AccountOpeningInstructionV06;
+import com.tools20022.repository.area.acmt.AccountOpeningInstructionV07;
 import com.tools20022.repository.entity.CashAccount;
 import com.tools20022.repository.entity.Payment;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -133,7 +139,7 @@ public class CashSettlement1 {
 			componentContext_lazy = () -> CashSettlement1.mmObject();
 			isDerived = false;
 			xmlTag = "CshAcctDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashAccountDetails";
 			definition = "Account to credit or debit. When this is an account to debit, this is for the payment of a subscription to an investment fund, a savings plan payment, the purchase of securities or the payment of charges. When this is an account to credit,  this is for the payment of an amount as a result of a redemption of investment fund units, the sale of securities, interest and dividend payments. A single account may be specified for all cash movements on the account or cash accounts may be specified for specific types of transactions on the account.";
 			minOccurs = 0;
@@ -178,7 +184,7 @@ public class CashSettlement1 {
 			componentContext_lazy = () -> CashSettlement1.mmObject();
 			isDerived = false;
 			xmlTag = "OthrCshSttlmDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherCashSettlementDetails";
 			definition = "Method of payment other than a cash account.";
 			minOccurs = 0;
@@ -190,12 +196,12 @@ public class CashSettlement1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashSettlement1.mmCashAccountDetails, com.tools20022.repository.msg.CashSettlement1.mmOtherCashSettlementDetails);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountOpeningInstructionV06.mmCashSettlement, com.tools20022.repository.area.acmt.AccountDetailsConfirmationV06.mmCashSettlement,
-						com.tools20022.repository.area.acmt.AccountDetailsConfirmationV07.mmCashSettlement, com.tools20022.repository.area.acmt.AccountOpeningInstructionV07.mmCashSettlement);
+				messageElement_lazy = () -> Arrays.asList(CashSettlement1.mmCashAccountDetails, CashSettlement1.mmOtherCashSettlementDetails);
+				messageBuildingBlock_lazy = () -> Arrays.asList(AccountOpeningInstructionV06.mmCashSettlement, AccountDetailsConfirmationV06.mmCashSettlement, AccountDetailsConfirmationV07.mmCashSettlement,
+						AccountOpeningInstructionV07.mmCashSettlement);
 				trace_lazy = () -> Payment.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CashSettlement1";
 				definition = "Cash settlement parties and accounts.";
 				nextVersions_lazy = () -> Arrays.asList(CashSettlement2.mmObject());

@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.DerivativeExerciseStatus1Code
+ * DerivativeExerciseStatus1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -38,14 +48,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.DerivativeExerciseStatusCode#mmValid
  * DerivativeExerciseStatusCode.mmValid}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.DerivativeExerciseStatus1Code
- * DerivativeExerciseStatus1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -89,7 +91,7 @@ public class DerivativeExerciseStatusCode {
 	 */
 	public static final MMCode mmExercised = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Exercised";
 			definition = "Derivative is exercised.";
 			owner_lazy = () -> DerivativeExerciseStatusCode.mmObject();
@@ -119,7 +121,7 @@ public class DerivativeExerciseStatusCode {
 	 */
 	public static final MMCode mmExpired = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Expired";
 			definition = "Derivative is expired and will not be exercised.";
 			owner_lazy = () -> DerivativeExerciseStatusCode.mmObject();
@@ -149,7 +151,7 @@ public class DerivativeExerciseStatusCode {
 	 */
 	public static final MMCode mmValid = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Valid";
 			definition = "Derivative is not exercised.";
 			owner_lazy = () -> DerivativeExerciseStatusCode.mmObject();
@@ -160,12 +162,11 @@ public class DerivativeExerciseStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DerivativeExerciseStatusCode";
 				definition = "Specifies the exercise status of the derivative products.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DerivativeExerciseStatusCode.mmExercised, com.tools20022.repository.codeset.DerivativeExerciseStatusCode.mmExpired,
-						com.tools20022.repository.codeset.DerivativeExerciseStatusCode.mmValid);
+				code_lazy = () -> Arrays.asList(DerivativeExerciseStatusCode.mmExercised, DerivativeExerciseStatusCode.mmExpired, DerivativeExerciseStatusCode.mmValid);
 				derivation_lazy = () -> Arrays.asList(DerivativeExerciseStatus1Code.mmObject());
 			}
 		});

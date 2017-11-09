@@ -20,13 +20,16 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.PartyIdentification24Choice;
 import com.tools20022.repository.choice.SingleOrMassQuote1Choice;
 import com.tools20022.repository.codeset.Eligibility1Code;
 import com.tools20022.repository.codeset.OriginatorRole1Code;
 import com.tools20022.repository.codeset.QuoteType1Code;
 import com.tools20022.repository.codeset.ResponseLevel1Code;
+import com.tools20022.repository.entity.QuoteRequestor;
 import com.tools20022.repository.entity.SecuritiesQuoteVariable;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -112,11 +115,11 @@ public class Quote2 {
 	 */
 	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesQuoteVariable.mmType;
+			businessElementTrace_lazy = () -> SecuritiesQuoteVariable.mmType;
 			componentContext_lazy = () -> Quote2.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Indicates the scenario in which the quote is (requested to be) used (ie, indicative, firm, restricted tradeable or counter).";
 			maxOccurs = 1;
@@ -157,7 +160,7 @@ public class Quote2 {
 			componentContext_lazy = () -> Quote2.mmObject();
 			isDerived = false;
 			xmlTag = "QtOrgtr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuoteOriginator";
 			definition = "Originator of the quote.";
 			maxOccurs = 1;
@@ -198,7 +201,7 @@ public class Quote2 {
 			componentContext_lazy = () -> Quote2.mmObject();
 			isDerived = false;
 			xmlTag = "QtOrgtrRole";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuoteOriginatorRole";
 			definition = "Originator of the quote.";
 			maxOccurs = 1;
@@ -242,11 +245,11 @@ public class Quote2 {
 	 */
 	public static final MMMessageAttribute mmRequestorEligibility = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.QuoteRequestor.mmRequestorEligibility;
+			businessElementTrace_lazy = () -> QuoteRequestor.mmRequestorEligibility;
 			componentContext_lazy = () -> Quote2.mmObject();
 			isDerived = false;
 			xmlTag = "RqstrElgblty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestorEligibility";
 			definition = "Identifies if the requestor of the quote is an elligible counterparty.";
 			maxOccurs = 1;
@@ -290,7 +293,7 @@ public class Quote2 {
 			componentContext_lazy = () -> Quote2.mmObject();
 			isDerived = false;
 			xmlTag = "RspnLvl";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ResponseLevel";
 			definition = "Indicates the level of response requested from the Receiver of the message.";
 			maxOccurs = 1;
@@ -333,7 +336,7 @@ public class Quote2 {
 			componentContext_lazy = () -> Quote2.mmObject();
 			isDerived = false;
 			xmlTag = "QtChc";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuoteChoice";
 			definition = "Identifies which type of quote (single or mass) the message is to be used for.";
 			maxOccurs = 1;
@@ -346,11 +349,10 @@ public class Quote2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Quote2.mmType, com.tools20022.repository.msg.Quote2.mmQuoteOriginator, com.tools20022.repository.msg.Quote2.mmQuoteOriginatorRole,
-						com.tools20022.repository.msg.Quote2.mmRequestorEligibility, com.tools20022.repository.msg.Quote2.mmResponseLevel, com.tools20022.repository.msg.Quote2.mmQuoteChoice);
+				messageElement_lazy = () -> Arrays.asList(Quote2.mmType, Quote2.mmQuoteOriginator, Quote2.mmQuoteOriginatorRole, Quote2.mmRequestorEligibility, Quote2.mmResponseLevel, Quote2.mmQuoteChoice);
 				trace_lazy = () -> SecuritiesQuoteVariable.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Quote2";
 				definition = "Proposition of price for a financial instrument.";
 			}

@@ -19,7 +19,9 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.SecuritiesTradeStatusReason;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.NoSpecifiedReason1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -101,7 +103,7 @@ public class PendingStatus20Choice {
 			componentContext_lazy = () -> PendingStatus20Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Fwdd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Forwarded";
 			definition = "Allegement is forwarded.";
 			maxOccurs = 1;
@@ -148,7 +150,7 @@ public class PendingStatus20Choice {
 			componentContext_lazy = () -> PendingStatus20Choice.mmObject();
 			isDerived = false;
 			xmlTag = "UdrInvstgtn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnderInvestigation";
 			definition = "Allegement is under investigation.";
 			maxOccurs = 1;
@@ -161,10 +163,10 @@ public class PendingStatus20Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PendingStatus20Choice.mmForwarded, com.tools20022.repository.choice.PendingStatus20Choice.mmUnderInvestigation);
+				messageElement_lazy = () -> Arrays.asList(PendingStatus20Choice.mmForwarded, PendingStatus20Choice.mmUnderInvestigation);
 				trace_lazy = () -> SecuritiesTradeStatusReason.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PendingStatus20Choice";
 				definition = "Choice of format for the matching status.";
 			}

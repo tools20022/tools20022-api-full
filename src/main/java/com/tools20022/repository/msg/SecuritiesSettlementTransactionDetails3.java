@@ -19,9 +19,9 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
-import com.tools20022.repository.entity.DeliveringSettlementParty;
-import com.tools20022.repository.entity.ReceivingSettlementParty;
-import com.tools20022.repository.entity.SecuritiesSettlement;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -154,7 +154,7 @@ public class SecuritiesSettlementTransactionDetails3 {
 			componentContext_lazy = () -> SecuritiesSettlementTransactionDetails3.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmTpAndAddtlParams";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementTypeAndAdditionalParameters";
 			definition = "Provides settlement type and identification information.";
 			maxOccurs = 1;
@@ -197,7 +197,7 @@ public class SecuritiesSettlementTransactionDetails3 {
 			componentContext_lazy = () -> SecuritiesSettlementTransactionDetails3.mmObject();
 			isDerived = false;
 			xmlTag = "Lnkgs";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Linkages";
 			definition = "Link to another transaction that must be processed after, before or at the same time.";
 			minOccurs = 0;
@@ -240,11 +240,11 @@ public class SecuritiesSettlementTransactionDetails3 {
 	 */
 	public static final MMMessageAssociationEnd mmTradeDetails = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeExecution.mmRelatedTrade;
+			businessElementTrace_lazy = () -> SecuritiesTradeExecution.mmRelatedTrade;
 			componentContext_lazy = () -> SecuritiesSettlementTransactionDetails3.mmObject();
 			isDerived = false;
 			xmlTag = "TradDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeDetails";
 			definition = "Details of the trade.";
 			maxOccurs = 1;
@@ -288,11 +288,11 @@ public class SecuritiesSettlementTransactionDetails3 {
 	 */
 	public static final MMMessageAssociationEnd mmFinancialInstrumentAttributes = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmSecurity;
+			businessElementTrace_lazy = () -> SecuritiesSettlement.mmSecurity;
 			componentContext_lazy = () -> SecuritiesSettlementTransactionDetails3.mmObject();
 			isDerived = false;
 			xmlTag = "FinInstrmAttrbts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentAttributes";
 			definition = "Attributes defining a financial instrument.";
 			maxOccurs = 1;
@@ -341,7 +341,7 @@ public class SecuritiesSettlementTransactionDetails3 {
 			componentContext_lazy = () -> SecuritiesSettlementTransactionDetails3.mmObject();
 			isDerived = false;
 			xmlTag = "QtyAndAcctDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuantityAndAccountDetails";
 			definition = "Details related to the account and quantity involved in the transaction.";
 			maxOccurs = 1;
@@ -393,7 +393,7 @@ public class SecuritiesSettlementTransactionDetails3 {
 			componentContext_lazy = () -> SecuritiesSettlementTransactionDetails3.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmParams";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementParameters";
 			definition = "Parameters which explicitly state the conditions that must be fulfilled before a particular  transaction of a financial instrument can be settled.  These parameters are defined by the instructing party in compliance with settlement rules in the market the transaction will settle in.";
 			maxOccurs = 1;
@@ -440,11 +440,11 @@ public class SecuritiesSettlementTransactionDetails3 {
 	 */
 	public static final MMMessageAssociationEnd mmStandingSettlementInstructionDetails = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Settlement.mmStandingSettlementInstruction;
+			businessElementTrace_lazy = () -> Settlement.mmStandingSettlementInstruction;
 			componentContext_lazy = () -> SecuritiesSettlementTransactionDetails3.mmObject();
 			isDerived = false;
 			xmlTag = "StgSttlmInstrDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StandingSettlementInstructionDetails";
 			definition = "Specifies what settlement standing instruction database is to be used to derive the settlement parties involved in the transaction.";
 			maxOccurs = 1;
@@ -491,7 +491,7 @@ public class SecuritiesSettlementTransactionDetails3 {
 			componentContext_lazy = () -> SecuritiesSettlementTransactionDetails3.mmObject();
 			isDerived = false;
 			xmlTag = "DlvrgSttlmPties";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeliveringSettlementParties";
 			definition = "Identifies the chain of delivering settlement parties.";
 			maxOccurs = 1;
@@ -538,7 +538,7 @@ public class SecuritiesSettlementTransactionDetails3 {
 			componentContext_lazy = () -> SecuritiesSettlementTransactionDetails3.mmObject();
 			isDerived = false;
 			xmlTag = "RcvgSttlmPties";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceivingSettlementParties";
 			definition = "Identifies the chain of receiving settlement parties.";
 			maxOccurs = 1;
@@ -584,11 +584,11 @@ public class SecuritiesSettlementTransactionDetails3 {
 	 */
 	public static final MMMessageAssociationEnd mmCashParties = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.mmPartyRole;
+			businessElementTrace_lazy = () -> Payment.mmPartyRole;
 			componentContext_lazy = () -> SecuritiesSettlementTransactionDetails3.mmObject();
 			isDerived = false;
 			xmlTag = "CshPties";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashParties";
 			definition = "Cash parties involved in the transaction if different for the securities settlement parties.";
 			maxOccurs = 1;
@@ -634,11 +634,11 @@ public class SecuritiesSettlementTransactionDetails3 {
 	 */
 	public static final MMMessageAssociationEnd mmSettlementAmount = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmSettlementAmount;
+			businessElementTrace_lazy = () -> SecuritiesSettlement.mmSettlementAmount;
 			componentContext_lazy = () -> SecuritiesSettlementTransactionDetails3.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementAmount";
 			definition = "Total amount of money to be paid or received in exchange for the securities.";
 			maxOccurs = 1;
@@ -679,7 +679,7 @@ public class SecuritiesSettlementTransactionDetails3 {
 			componentContext_lazy = () -> SecuritiesSettlementTransactionDetails3.mmObject();
 			isDerived = false;
 			xmlTag = "OthrAmts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherAmounts";
 			definition = "Other amounts than the settlement amount.";
 			maxOccurs = 1;
@@ -720,7 +720,7 @@ public class SecuritiesSettlementTransactionDetails3 {
 			componentContext_lazy = () -> SecuritiesSettlementTransactionDetails3.mmObject();
 			isDerived = false;
 			xmlTag = "OthrBizPties";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherBusinessParties";
 			definition = "Other business parties relevant to the transaction.";
 			maxOccurs = 1;
@@ -767,11 +767,11 @@ public class SecuritiesSettlementTransactionDetails3 {
 	 */
 	public static final MMMessageAssociationEnd mmAdditionalPhysicalOrRegistrationDetails = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmRegistration;
+			businessElementTrace_lazy = () -> Security.mmRegistration;
 			componentContext_lazy = () -> SecuritiesSettlementTransactionDetails3.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlPhysOrRegnDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalPhysicalOrRegistrationDetails";
 			definition = "Provides information required for the registration or physical settlement.";
 			maxOccurs = 1;
@@ -815,7 +815,7 @@ public class SecuritiesSettlementTransactionDetails3 {
 			componentContext_lazy = () -> SecuritiesSettlementTransactionDetails3.mmObject();
 			isDerived = false;
 			xmlTag = "SplmtryData";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryData";
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
 			minOccurs = 0;
@@ -827,17 +827,15 @@ public class SecuritiesSettlementTransactionDetails3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails3.mmSettlementTypeAndAdditionalParameters,
-						com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails3.mmLinkages, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails3.mmTradeDetails,
-						com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails3.mmFinancialInstrumentAttributes, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails3.mmQuantityAndAccountDetails,
-						com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails3.mmSettlementParameters, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails3.mmStandingSettlementInstructionDetails,
-						com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails3.mmDeliveringSettlementParties, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails3.mmReceivingSettlementParties,
-						com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails3.mmCashParties, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails3.mmSettlementAmount,
-						com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails3.mmOtherAmounts, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails3.mmOtherBusinessParties,
-						com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails3.mmAdditionalPhysicalOrRegistrationDetails, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails3.mmSupplementaryData);
+				messageElement_lazy = () -> Arrays.asList(SecuritiesSettlementTransactionDetails3.mmSettlementTypeAndAdditionalParameters, SecuritiesSettlementTransactionDetails3.mmLinkages,
+						SecuritiesSettlementTransactionDetails3.mmTradeDetails, SecuritiesSettlementTransactionDetails3.mmFinancialInstrumentAttributes, SecuritiesSettlementTransactionDetails3.mmQuantityAndAccountDetails,
+						SecuritiesSettlementTransactionDetails3.mmSettlementParameters, SecuritiesSettlementTransactionDetails3.mmStandingSettlementInstructionDetails, SecuritiesSettlementTransactionDetails3.mmDeliveringSettlementParties,
+						SecuritiesSettlementTransactionDetails3.mmReceivingSettlementParties, SecuritiesSettlementTransactionDetails3.mmCashParties, SecuritiesSettlementTransactionDetails3.mmSettlementAmount,
+						SecuritiesSettlementTransactionDetails3.mmOtherAmounts, SecuritiesSettlementTransactionDetails3.mmOtherBusinessParties, SecuritiesSettlementTransactionDetails3.mmAdditionalPhysicalOrRegistrationDetails,
+						SecuritiesSettlementTransactionDetails3.mmSupplementaryData);
 				trace_lazy = () -> SecuritiesSettlement.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesSettlementTransactionDetails3";
 				definition = "Provides the details of the update(s) for the settlement transaction.";
 				nextVersions_lazy = () -> Arrays.asList(SecuritiesSettlementTransactionDetails8.mmObject());

@@ -19,7 +19,9 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.CardPayment;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.CardAggregated1;
 import com.tools20022.repository.msg.CardIndividualTransaction2;
 import java.util.Arrays;
@@ -115,10 +117,10 @@ public class CardTransaction2Choice {
 			componentContext_lazy = () -> CardTransaction2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Aggtd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Aggregated";
 			definition = "Card transaction details, based on card transaction aggregated data performed by the card acquirer.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.CardTransaction1Choice.mmAggregated;
+			previousVersion_lazy = () -> CardTransaction1Choice.mmAggregated;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -171,10 +173,10 @@ public class CardTransaction2Choice {
 			componentContext_lazy = () -> CardTransaction2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Indv";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Individual";
 			definition = "Card transaction details for the individual transaction, as recorded at the POI (point of interaction).";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.CardTransaction1Choice.mmIndividual;
+			previousVersion_lazy = () -> CardTransaction1Choice.mmIndividual;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -185,10 +187,10 @@ public class CardTransaction2Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CardTransaction2Choice.mmAggregated, com.tools20022.repository.choice.CardTransaction2Choice.mmIndividual);
+				messageElement_lazy = () -> Arrays.asList(CardTransaction2Choice.mmAggregated, CardTransaction2Choice.mmIndividual);
 				trace_lazy = () -> CardPayment.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CardTransaction2Choice";
 				definition = "Choice between a acquirer globalised card transaction or an individual card transaction.";
 				previousVersion_lazy = () -> CardTransaction1Choice.mmObject();

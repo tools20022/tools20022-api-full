@@ -20,6 +20,7 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.FinancialInstrumentQuantity1Choice;
 import com.tools20022.repository.choice.ObligationType1Choice;
 import com.tools20022.repository.codeset.CurrencyCode;
@@ -27,7 +28,8 @@ import com.tools20022.repository.codeset.DeliveryReceiptType2Code;
 import com.tools20022.repository.codeset.ReceiveDelivery1Code;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.Max35Text;
-import com.tools20022.repository.entity.SecuritiesSettlement;
+import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -139,7 +141,7 @@ public class SettlementObligation5 {
 			componentContext_lazy = () -> SettlementObligation5.mmObject();
 			isDerived = false;
 			xmlTag = "RltdSttlmOblgtnId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedSettlementObligationIdentification";
 			definition = "Provides the identification of an existing obligation that is linked to the new obligation.";
 			maxOccurs = 1;
@@ -183,11 +185,11 @@ public class SettlementObligation5 {
 	 */
 	public static final MMMessageAttribute mmObligationType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmSettlementReason;
+			businessElementTrace_lazy = () -> SecuritiesSettlement.mmSettlementReason;
 			componentContext_lazy = () -> SettlementObligation5.mmObject();
 			isDerived = false;
 			xmlTag = "OblgtnTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ObligationType";
 			definition = "Indicates the type of the obligation.";
 			maxOccurs = 1;
@@ -229,7 +231,7 @@ public class SettlementObligation5 {
 			componentContext_lazy = () -> SettlementObligation5.mmObject();
 			isDerived = false;
 			xmlTag = "Desc";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Description";
 			definition = "Provides additional information related to the linked obligation.";
 			maxOccurs = 1;
@@ -272,11 +274,11 @@ public class SettlementObligation5 {
 	 */
 	public static final MMMessageAttribute mmTradeDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Trade.mmTradeDateTime;
+			businessElementTrace_lazy = () -> Trade.mmTradeDateTime;
 			componentContext_lazy = () -> SettlementObligation5.mmObject();
 			isDerived = false;
 			xmlTag = "TradDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeDate";
 			definition = "Provides the original trade date.";
 			maxOccurs = 1;
@@ -320,11 +322,11 @@ public class SettlementObligation5 {
 	 */
 	public static final MMMessageAssociationEnd mmQuantity = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTransfer.mmTransferredQuantity;
+			businessElementTrace_lazy = () -> SecuritiesTransfer.mmTransferredQuantity;
 			componentContext_lazy = () -> SettlementObligation5.mmObject();
 			isDerived = false;
 			xmlTag = "Qty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Quantity";
 			definition = "Specifies the quantity related to the settlement obligation.";
 			maxOccurs = 1;
@@ -366,11 +368,11 @@ public class SettlementObligation5 {
 	 */
 	public static final MMMessageAssociationEnd mmNetPositionPrice = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Position.mmPrice;
+			businessElementTrace_lazy = () -> Position.mmPrice;
 			componentContext_lazy = () -> SettlementObligation5.mmObject();
 			isDerived = false;
 			xmlTag = "NetPosPric";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetPositionPrice";
 			definition = "Provides the price applied to that net position.";
 			maxOccurs = 1;
@@ -414,11 +416,11 @@ public class SettlementObligation5 {
 	 */
 	public static final MMMessageAttribute mmTradingCurrency = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradingMarket.mmTradingCurrency;
+			businessElementTrace_lazy = () -> TradingMarket.mmTradingCurrency;
 			componentContext_lazy = () -> SettlementObligation5.mmObject();
 			isDerived = false;
 			xmlTag = "TradgCcy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradingCurrency";
 			definition = "Specifies the ISO code of the trade currency.";
 			maxOccurs = 1;
@@ -460,11 +462,11 @@ public class SettlementObligation5 {
 	 */
 	public static final MMMessageAssociationEnd mmSettlementAmount = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmSettlementAmount;
+			businessElementTrace_lazy = () -> SecuritiesSettlement.mmSettlementAmount;
 			componentContext_lazy = () -> SettlementObligation5.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementAmount";
 			definition = "Provides the total amount to be settled.";
 			maxOccurs = 1;
@@ -508,11 +510,11 @@ public class SettlementObligation5 {
 	 */
 	public static final MMMessageAttribute mmSettlementDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmSettlementDate;
+			businessElementTrace_lazy = () -> SecuritiesSettlement.mmSettlementDate;
 			componentContext_lazy = () -> SettlementObligation5.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementDate";
 			definition = "Provides the contractual settlement date.";
 			maxOccurs = 1;
@@ -559,11 +561,11 @@ public class SettlementObligation5 {
 	 */
 	public static final MMMessageAttribute mmSecuritiesMovementType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmSecuritiesMovementType;
+			businessElementTrace_lazy = () -> SecuritiesSettlement.mmSecuritiesMovementType;
 			componentContext_lazy = () -> SettlementObligation5.mmObject();
 			isDerived = false;
 			xmlTag = "SctiesMvmntTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesMovementType";
 			definition = "Indicates if the obligation will result in a receive or a delivery of securities.";
 			maxOccurs = 1;
@@ -607,11 +609,11 @@ public class SettlementObligation5 {
 	 */
 	public static final MMMessageAttribute mmPayment = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmSettlementType;
+			businessElementTrace_lazy = () -> SecuritiesSettlement.mmSettlementType;
 			componentContext_lazy = () -> SettlementObligation5.mmObject();
 			isDerived = false;
 			xmlTag = "Pmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Payment";
 			definition = "Specifies how the transaction is to be settled.";
 			maxOccurs = 1;
@@ -654,7 +656,7 @@ public class SettlementObligation5 {
 			componentContext_lazy = () -> SettlementObligation5.mmObject();
 			isDerived = false;
 			xmlTag = "Refs";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "References";
 			definition = "Provides the references of the underlying trade leg(s) and/or the reference to the related net position message.";
 			maxOccurs = 1;
@@ -667,14 +669,12 @@ public class SettlementObligation5 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SettlementObligation5.mmRelatedSettlementObligationIdentification, com.tools20022.repository.msg.SettlementObligation5.mmObligationType,
-						com.tools20022.repository.msg.SettlementObligation5.mmDescription, com.tools20022.repository.msg.SettlementObligation5.mmTradeDate, com.tools20022.repository.msg.SettlementObligation5.mmQuantity,
-						com.tools20022.repository.msg.SettlementObligation5.mmNetPositionPrice, com.tools20022.repository.msg.SettlementObligation5.mmTradingCurrency, com.tools20022.repository.msg.SettlementObligation5.mmSettlementAmount,
-						com.tools20022.repository.msg.SettlementObligation5.mmSettlementDate, com.tools20022.repository.msg.SettlementObligation5.mmSecuritiesMovementType, com.tools20022.repository.msg.SettlementObligation5.mmPayment,
-						com.tools20022.repository.msg.SettlementObligation5.mmReferences);
+				messageElement_lazy = () -> Arrays.asList(SettlementObligation5.mmRelatedSettlementObligationIdentification, SettlementObligation5.mmObligationType, SettlementObligation5.mmDescription, SettlementObligation5.mmTradeDate,
+						SettlementObligation5.mmQuantity, SettlementObligation5.mmNetPositionPrice, SettlementObligation5.mmTradingCurrency, SettlementObligation5.mmSettlementAmount, SettlementObligation5.mmSettlementDate,
+						SettlementObligation5.mmSecuritiesMovementType, SettlementObligation5.mmPayment, SettlementObligation5.mmReferences);
 				trace_lazy = () -> SecuritiesSettlement.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
 						return DateFormat.getDateInstance(java.text.DateFormat.LONG).parse("September 9, 2016");

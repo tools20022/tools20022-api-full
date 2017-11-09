@@ -19,9 +19,13 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
 import com.tools20022.repository.datatype.ISINIdentifier;
+import com.tools20022.repository.entity.Collateral;
 import com.tools20022.repository.entity.CollateralValuation;
+import com.tools20022.repository.entity.SecuritiesIdentification;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -118,14 +122,14 @@ public class CollateralValuation3 {
 	 */
 	public static final MMMessageAttribute mmNominalAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Collateral.mmCollateralAmount;
+			businessElementTrace_lazy = () -> Collateral.mmCollateralAmount;
 			componentContext_lazy = () -> CollateralValuation3.mmObject();
 			isDerived = false;
 			xmlTag = "NmnlAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NominalAmount";
 			definition = "Nominal amount of the security pledged as collateral. Except for tri-party repos and any other transaction in which the security pledged is not identified via a single ISIN.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CollateralValuation6.mmNominalAmount);
+			nextVersions_lazy = () -> Arrays.asList(CollateralValuation6.mmNominalAmount);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
@@ -183,14 +187,14 @@ public class CollateralValuation3 {
 	 */
 	public static final MMMessageAttribute mmISIN = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesIdentification.mmSecurityIdentification;
+			businessElementTrace_lazy = () -> SecuritiesIdentification.mmSecurityIdentification;
 			componentContext_lazy = () -> CollateralValuation3.mmObject();
 			isDerived = false;
 			xmlTag = "ISIN";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ISIN";
 			definition = "International Securities Identification Number (ISIN).  A numbering system designed by the United Nation's International Organisation for Standardisation (ISO). The ISIN is composed of a 2-character prefix representing the country of issue, followed by the national security number (if one exists), and a check digit. Each country has a national numbering agency that assigns ISIN numbers for securities in that country.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CollateralValuation6.mmISIN);
+			nextVersions_lazy = () -> Arrays.asList(CollateralValuation6.mmISIN);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISINIdentifier.mmObject();
@@ -200,10 +204,10 @@ public class CollateralValuation3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CollateralValuation3.mmNominalAmount, com.tools20022.repository.msg.CollateralValuation3.mmISIN);
+				messageElement_lazy = () -> Arrays.asList(CollateralValuation3.mmNominalAmount, CollateralValuation3.mmISIN);
 				trace_lazy = () -> CollateralValuation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CollateralValuation3";
 				definition = "Provides the valuation of a collateral, identified through an ISIN.";
 				nextVersions_lazy = () -> Arrays.asList(CollateralValuation6.mmObject());

@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.DTCBaseDisbursedCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -86,7 +88,7 @@ public class DTCBaseDisbursed1Code extends DTCBaseDisbursedCode {
 	 */
 	public static final MMCode mmBase = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Base";
 			owner_lazy = () -> DTCBaseDisbursed1Code.mmObject();
 		}
@@ -109,7 +111,7 @@ public class DTCBaseDisbursed1Code extends DTCBaseDisbursedCode {
 	 */
 	public static final MMCode mmDisbursed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Disbursed";
 			owner_lazy = () -> DTCBaseDisbursed1Code.mmObject();
 		}
@@ -118,12 +120,12 @@ public class DTCBaseDisbursed1Code extends DTCBaseDisbursedCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("BASE");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DTCBaseDisbursed1Code";
 				definition = "Code qualifying whether the calculation basis is on base (original) or disbursed (distributed) security.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DTCBaseDisbursed1Code.mmBase, com.tools20022.repository.codeset.DTCBaseDisbursed1Code.mmDisbursed);
+				code_lazy = () -> Arrays.asList(DTCBaseDisbursed1Code.mmBase, DTCBaseDisbursed1Code.mmDisbursed);
 				trace_lazy = () -> DTCBaseDisbursedCode.mmObject();
 			}
 		});

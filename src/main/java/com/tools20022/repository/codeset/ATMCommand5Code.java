@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ATMCommandCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -79,7 +81,7 @@ public class ATMCommand5Code extends ATMCommandCode {
 	 */
 	public static final MMCode mmATMBalance = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ATMBalance";
 			owner_lazy = () -> ATMCommand5Code.mmObject();
 		}
@@ -102,7 +104,7 @@ public class ATMCommand5Code extends ATMCommandCode {
 	 */
 	public static final MMCode mmCountersInquiry = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CountersInquiry";
 			owner_lazy = () -> ATMCommand5Code.mmObject();
 		}
@@ -125,7 +127,7 @@ public class ATMCommand5Code extends ATMCommandCode {
 	 */
 	public static final MMCode mmCountersReport = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CountersReport";
 			owner_lazy = () -> ATMCommand5Code.mmObject();
 		}
@@ -134,12 +136,11 @@ public class ATMCommand5Code extends ATMCommandCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ATMCommand5Code";
 				definition = "Type of command performed by the ATM.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ATMCommand5Code.mmATMBalance, com.tools20022.repository.codeset.ATMCommand5Code.mmCountersInquiry,
-						com.tools20022.repository.codeset.ATMCommand5Code.mmCountersReport);
+				code_lazy = () -> Arrays.asList(ATMCommand5Code.mmATMBalance, ATMCommand5Code.mmCountersInquiry, ATMCommand5Code.mmCountersReport);
 				trace_lazy = () -> ATMCommandCode.mmObject();
 			}
 		});

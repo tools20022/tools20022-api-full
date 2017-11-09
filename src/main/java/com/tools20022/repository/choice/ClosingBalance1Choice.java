@@ -19,7 +19,9 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.SecuritiesBalance;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -115,14 +117,14 @@ public class ClosingBalance1Choice {
 	 */
 	public static final MMMessageAttribute mmFinal = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesBalance.mmAggregateQuantity;
+			businessElementTrace_lazy = () -> SecuritiesBalance.mmAggregateQuantity;
 			componentContext_lazy = () -> ClosingBalance1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Fnl";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Final";
 			definition = "Sum of the opening balance and all entries booked to the account at the close of the statement period.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ClosingBalance4Choice.mmFinal);
+			nextVersions_lazy = () -> Arrays.asList(ClosingBalance4Choice.mmFinal);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> com.tools20022.repository.choice.BalanceQuantity5Choice.mmObject();
@@ -175,14 +177,14 @@ public class ClosingBalance1Choice {
 	 */
 	public static final MMMessageAttribute mmIntermediary = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesBalance.mmAggregateQuantity;
+			businessElementTrace_lazy = () -> SecuritiesBalance.mmAggregateQuantity;
 			componentContext_lazy = () -> ClosingBalance1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Intrmy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Intermediary";
 			definition = "Closing balance of this page only. This balance must be the intermediary opening balance of the next page of the same statement.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ClosingBalance4Choice.mmIntermediary);
+			nextVersions_lazy = () -> Arrays.asList(ClosingBalance4Choice.mmIntermediary);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> com.tools20022.repository.choice.BalanceQuantity5Choice.mmObject();
@@ -192,10 +194,10 @@ public class ClosingBalance1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ClosingBalance1Choice.mmFinal, com.tools20022.repository.choice.ClosingBalance1Choice.mmIntermediary);
+				messageElement_lazy = () -> Arrays.asList(ClosingBalance1Choice.mmFinal, ClosingBalance1Choice.mmIntermediary);
 				trace_lazy = () -> SecuritiesBalance.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ClosingBalance1Choice";
 				definition = "Choice of closing balance.";
 				nextVersions_lazy = () -> Arrays.asList(ClosingBalance4Choice.mmObject());

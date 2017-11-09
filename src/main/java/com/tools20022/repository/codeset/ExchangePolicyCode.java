@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.ExchangePolicy1Code
+ * ExchangePolicy1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -52,13 +61,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * ExchangePolicyCode.mmCyclic}</li>
  * <li>{@linkplain com.tools20022.repository.codeset.ExchangePolicyCode#mmNone
  * ExchangePolicyCode.mmNone}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.ExchangePolicy1Code
- * ExchangePolicy1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -111,7 +113,7 @@ public class ExchangePolicyCode {
 	 */
 	public static final MMCode mmOnDemand = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "OnDemand";
 			definition = "Exchange is performed if requested by the acquirer in a previous exchange, or at any time by the acceptor.";
 			owner_lazy = () -> ExchangePolicyCode.mmObject();
@@ -142,7 +144,7 @@ public class ExchangePolicyCode {
 	 */
 	public static final MMCode mmImmediately = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Immediately";
 			definition = "Exchange is performed just after the transaction completion.";
 			owner_lazy = () -> ExchangePolicyCode.mmObject();
@@ -175,7 +177,7 @@ public class ExchangePolicyCode {
 	 */
 	public static final MMCode mmAsSoonAsPossible = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AsSoonAsPossible";
 			definition = "As soon as the acquirer is contacted, for example with the next on-line transaction.";
 			owner_lazy = () -> ExchangePolicyCode.mmObject();
@@ -208,7 +210,7 @@ public class ExchangePolicyCode {
 	 */
 	public static final MMCode mmAsGroup = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AsGroup";
 			definition = "Exchanges are performed after reaching a maximum number of transaction or time period.";
 			owner_lazy = () -> ExchangePolicyCode.mmObject();
@@ -241,7 +243,7 @@ public class ExchangePolicyCode {
 	 */
 	public static final MMCode mmNumberLimit = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NumberLimit";
 			definition = "Exchange is performed after reaching a number of transactions without exchanges with the acquirer.";
 			owner_lazy = () -> ExchangePolicyCode.mmObject();
@@ -274,7 +276,7 @@ public class ExchangePolicyCode {
 	 */
 	public static final MMCode mmTotalLimit = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TotalLimit";
 			definition = "Exchange is performed after reaching a cumulative amount of transactions without exchanges with the acquirer.";
 			owner_lazy = () -> ExchangePolicyCode.mmObject();
@@ -304,7 +306,7 @@ public class ExchangePolicyCode {
 	 */
 	public static final MMCode mmCyclic = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Cyclic";
 			definition = "Cyclic exchanges based on the related time conditions.";
 			owner_lazy = () -> ExchangePolicyCode.mmObject();
@@ -334,7 +336,7 @@ public class ExchangePolicyCode {
 	 */
 	public static final MMCode mmNone = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "None";
 			definition = "No exchange.";
 			owner_lazy = () -> ExchangePolicyCode.mmObject();
@@ -345,14 +347,13 @@ public class ExchangePolicyCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ONDM");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ExchangePolicyCode";
 				definition = "Exchange policy between parties.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ExchangePolicyCode.mmOnDemand, com.tools20022.repository.codeset.ExchangePolicyCode.mmImmediately,
-						com.tools20022.repository.codeset.ExchangePolicyCode.mmAsSoonAsPossible, com.tools20022.repository.codeset.ExchangePolicyCode.mmAsGroup, com.tools20022.repository.codeset.ExchangePolicyCode.mmNumberLimit,
-						com.tools20022.repository.codeset.ExchangePolicyCode.mmTotalLimit, com.tools20022.repository.codeset.ExchangePolicyCode.mmCyclic, com.tools20022.repository.codeset.ExchangePolicyCode.mmNone);
+				code_lazy = () -> Arrays.asList(ExchangePolicyCode.mmOnDemand, ExchangePolicyCode.mmImmediately, ExchangePolicyCode.mmAsSoonAsPossible, ExchangePolicyCode.mmAsGroup, ExchangePolicyCode.mmNumberLimit,
+						ExchangePolicyCode.mmTotalLimit, ExchangePolicyCode.mmCyclic, ExchangePolicyCode.mmNone);
 				derivation_lazy = () -> Arrays.asList(ExchangePolicy1Code.mmObject());
 			}
 		});

@@ -20,9 +20,11 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.RequestType2Choice;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -110,7 +112,7 @@ public class MessageHeader5 {
 			componentContext_lazy = () -> MessageHeader5.mmObject();
 			isDerived = false;
 			xmlTag = "MsgId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageIdentification";
 			definition = "Point to point reference, as assigned by the sender, to unambiguously identify the message.\nUsage: The sender has to make sure that MessageIdentification is unique for a pre-agreed period.";
 			maxOccurs = 1;
@@ -150,7 +152,7 @@ public class MessageHeader5 {
 			componentContext_lazy = () -> MessageHeader5.mmObject();
 			isDerived = false;
 			xmlTag = "CreDtTm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreationDateTime";
 			definition = "Date and time at which the message was created.";
 			maxOccurs = 1;
@@ -193,7 +195,7 @@ public class MessageHeader5 {
 			componentContext_lazy = () -> MessageHeader5.mmObject();
 			isDerived = false;
 			xmlTag = "MsgPgntn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessagePagination";
 			definition = "Pagination of the message.\nUsage: the pagination of the message is only allowed when agreed between the parties.";
 			maxOccurs = 1;
@@ -232,7 +234,7 @@ public class MessageHeader5 {
 			componentContext_lazy = () -> MessageHeader5.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlBizQry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalBusinessQuery";
 			definition = "Unique identification of the original query message.";
 			maxOccurs = 1;
@@ -274,7 +276,7 @@ public class MessageHeader5 {
 			componentContext_lazy = () -> MessageHeader5.mmObject();
 			isDerived = false;
 			xmlTag = "ReqTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestType";
 			definition = "Specific actions to be executed through the request.";
 			maxOccurs = 1;
@@ -317,7 +319,7 @@ public class MessageHeader5 {
 			componentContext_lazy = () -> MessageHeader5.mmObject();
 			isDerived = false;
 			xmlTag = "QryNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QueryName";
 			definition = "Recalls the criteria (search and return criteria) defined in a preceding query.";
 			maxOccurs = 1;
@@ -329,11 +331,10 @@ public class MessageHeader5 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MessageHeader5.mmMessageIdentification, com.tools20022.repository.msg.MessageHeader5.mmCreationDateTime,
-						com.tools20022.repository.msg.MessageHeader5.mmMessagePagination, com.tools20022.repository.msg.MessageHeader5.mmOriginalBusinessQuery, com.tools20022.repository.msg.MessageHeader5.mmRequestType,
-						com.tools20022.repository.msg.MessageHeader5.mmQueryName);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(MessageHeader5.mmMessageIdentification, MessageHeader5.mmCreationDateTime, MessageHeader5.mmMessagePagination, MessageHeader5.mmOriginalBusinessQuery, MessageHeader5.mmRequestType,
+						MessageHeader5.mmQueryName);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MessageHeader5";
 				definition = "Set of characteristics, such as the identification or the creation date and time, specific to the message.";
 			}

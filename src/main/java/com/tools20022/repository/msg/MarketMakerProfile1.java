@@ -20,8 +20,10 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.PercentageRate;
 import com.tools20022.repository.datatype.YesNoIndicator;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -97,7 +99,7 @@ public class MarketMakerProfile1 {
 			componentContext_lazy = () -> MarketMakerProfile1.mmObject();
 			isDerived = false;
 			xmlTag = "CtrctPrd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ContractPeriod";
 			definition = "Period of the contract.";
 			maxOccurs = 1;
@@ -144,7 +146,7 @@ public class MarketMakerProfile1 {
 			componentContext_lazy = () -> MarketMakerProfile1.mmObject();
 			isDerived = false;
 			xmlTag = "Cmplc";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Compliance";
 			definition = "Indicates whether the market maker is obligated to comply with the requirements of the contract it holds with the  exchange or is exempt from these obligations.";
 			maxOccurs = 1;
@@ -189,7 +191,7 @@ public class MarketMakerProfile1 {
 			componentContext_lazy = () -> MarketMakerProfile1.mmObject();
 			isDerived = false;
 			xmlTag = "MaxSprd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaximumSpread";
 			definition = "Percentage of the variation between the maximum accepted minimum and maximum value of an action.";
 			maxOccurs = 1;
@@ -231,7 +233,7 @@ public class MarketMakerProfile1 {
 			componentContext_lazy = () -> MarketMakerProfile1.mmObject();
 			isDerived = false;
 			xmlTag = "Dscnt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Discount";
 			definition = "Rate of discount.";
 			maxOccurs = 1;
@@ -243,10 +245,9 @@ public class MarketMakerProfile1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MarketMakerProfile1.mmContractPeriod, com.tools20022.repository.msg.MarketMakerProfile1.mmCompliance,
-						com.tools20022.repository.msg.MarketMakerProfile1.mmMaximumSpread, com.tools20022.repository.msg.MarketMakerProfile1.mmDiscount);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(MarketMakerProfile1.mmContractPeriod, MarketMakerProfile1.mmCompliance, MarketMakerProfile1.mmMaximumSpread, MarketMakerProfile1.mmDiscount);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MarketMakerProfile1";
 				definition = "Market maker profile.";
 			}

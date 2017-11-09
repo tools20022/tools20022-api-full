@@ -17,10 +17,13 @@
 
 package com.tools20022.repository.entity;
 
+import com.tools20022.metamodel.MMAggregation;
 import com.tools20022.metamodel.MMBusinessAssociationEnd;
 import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.*;
 import com.tools20022.repository.entity.Role;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -36,35 +39,18 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.InvestmentFundPartyRole#mmAccount
- * InvestmentFundPartyRole.mmAccount}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InvestmentFundPartyRole#mmInvestmentFund
- * InvestmentFundPartyRole.mmInvestmentFund}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
- * subType} =
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Grantor Grantor}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Settlor Settlor}</li>
- * <li>{@linkplain com.tools20022.repository.entity.FundManagerRole
- * FundManagerRole}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Auditor Auditor}</li>
- * <li>{@linkplain com.tools20022.repository.entity.FundAccountantRole
- * FundAccountantRole}</li>
- * <li>{@linkplain com.tools20022.repository.entity.FundAdministratorRole
- * FundAdministratorRole}</li>
- * <li>{@linkplain com.tools20022.repository.entity.FundOrderDesk FundOrderDesk}
- * </li>
- * <li>{@linkplain com.tools20022.repository.entity.PlacementAgent
- * PlacementAgent}</li>
- * <li>{@linkplain com.tools20022.repository.entity.TransferAgentRole
- * TransferAgentRole}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.Role2Choice Role2Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.Role3Choice Role3Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.IntermediaryRoleChoice1
+ * IntermediaryRoleChoice1}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.Role1Choice Role1Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.Role5Choice Role5Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.Role6Choice Role6Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.Role7Choice Role7Choice}</li>
  * </ul>
  * </li>
  * <li>
@@ -92,18 +78,35 @@ import java.util.List;
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
  * superType} = {@linkplain com.tools20022.repository.entity.Role Role}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
+ * subType} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.choice.Role2Choice Role2Choice}</li>
- * <li>{@linkplain com.tools20022.repository.choice.Role3Choice Role3Choice}</li>
- * <li>{@linkplain com.tools20022.repository.choice.IntermediaryRoleChoice1
- * IntermediaryRoleChoice1}</li>
- * <li>{@linkplain com.tools20022.repository.choice.Role1Choice Role1Choice}</li>
- * <li>{@linkplain com.tools20022.repository.choice.Role5Choice Role5Choice}</li>
- * <li>{@linkplain com.tools20022.repository.choice.Role6Choice Role6Choice}</li>
- * <li>{@linkplain com.tools20022.repository.choice.Role7Choice Role7Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Grantor Grantor}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Settlor Settlor}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.FundManagerRole
+ * FundManagerRole}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Auditor Auditor}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.FundAccountantRole
+ * FundAccountantRole}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.FundAdministratorRole
+ * FundAdministratorRole}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.FundOrderDesk FundOrderDesk}
+ * </li>
+ * <li>{@linkplain com.tools20022.repository.entity.PlacementAgent
+ * PlacementAgent}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.TransferAgentRole
+ * TransferAgentRole}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InvestmentFundPartyRole#mmAccount
+ * InvestmentFundPartyRole.mmAccount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InvestmentFundPartyRole#mmInvestmentFund
+ * InvestmentFundPartyRole.mmInvestmentFund}</li>
  * </ul>
  * </li>
  * <li>
@@ -167,12 +170,12 @@ public class InvestmentFundPartyRole extends Role {
 		{
 			elementContext_lazy = () -> InvestmentFundPartyRole.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Account";
 			definition = "Unambiguous identification of the account used in the context of the investment fund party role such as intermediary's account, beneficiary's account...";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.Account.mmInvestmentFundPartyRole;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Account.mmObject();
 		}
 	};
@@ -214,12 +217,12 @@ public class InvestmentFundPartyRole extends Role {
 		{
 			elementContext_lazy = () -> InvestmentFundPartyRole.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InvestmentFund";
 			definition = "Specifies the fund for which the party plays a role.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.InvestmentFund.mmPartyRole;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.InvestmentFund.mmObject();
 		}
 	};
@@ -227,16 +230,16 @@ public class InvestmentFundPartyRole extends Role {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InvestmentFundPartyRole";
 				definition = "Specifies roles played by a party that are linked to the handling of investment funds but not related to a specific process.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.InvestmentFund.mmPartyRole, com.tools20022.repository.entity.Account.mmInvestmentFundPartyRole);
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.IntermediaryRoleChoice1.mmRole, com.tools20022.repository.choice.IntermediaryRoleChoice1.mmProprietary);
+				derivationElement_lazy = () -> Arrays.asList(IntermediaryRoleChoice1.mmRole, IntermediaryRoleChoice1.mmProprietary);
 				subType_lazy = () -> Arrays.asList(Grantor.mmObject(), Settlor.mmObject(), FundManagerRole.mmObject(), Auditor.mmObject(), FundAccountantRole.mmObject(), FundAdministratorRole.mmObject(), FundOrderDesk.mmObject(),
 						PlacementAgent.mmObject(), TransferAgentRole.mmObject());
 				superType_lazy = () -> Role.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.InvestmentFundPartyRole.mmAccount, com.tools20022.repository.entity.InvestmentFundPartyRole.mmInvestmentFund);
+				element_lazy = () -> Arrays.asList(InvestmentFundPartyRole.mmAccount, InvestmentFundPartyRole.mmInvestmentFund);
 				derivationComponent_lazy = () -> Arrays.asList(Role2Choice.mmObject(), Role3Choice.mmObject(), IntermediaryRoleChoice1.mmObject(), Role1Choice.mmObject(), Role5Choice.mmObject(), Role6Choice.mmObject(),
 						Role7Choice.mmObject());
 			}

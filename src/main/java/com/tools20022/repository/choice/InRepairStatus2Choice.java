@@ -20,7 +20,9 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.NoReasonCode;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification1;
 import com.tools20022.repository.msg.InRepairStatusReason2;
 import java.util.Arrays;
@@ -96,7 +98,7 @@ public class InRepairStatus2Choice {
 			componentContext_lazy = () -> InRepairStatus2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Rsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reason";
 			definition = "Reason for an in repair status in the report.";
 			maxOccurs = 1;
@@ -140,7 +142,7 @@ public class InRepairStatus2Choice {
 			componentContext_lazy = () -> InRepairStatus2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "DataSrcSchme";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DataSourceScheme";
 			definition = "Proprietary identification for a reason of a specific status in the report.";
 			maxOccurs = 1;
@@ -183,7 +185,7 @@ public class InRepairStatus2Choice {
 			componentContext_lazy = () -> InRepairStatus2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "NoRsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoReason";
 			definition = "Indicates that there is no reason available or to report.";
 			maxOccurs = 1;
@@ -195,10 +197,9 @@ public class InRepairStatus2Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.InRepairStatus2Choice.mmReason, com.tools20022.repository.choice.InRepairStatus2Choice.mmDataSourceScheme,
-						com.tools20022.repository.choice.InRepairStatus2Choice.mmNoReason);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(InRepairStatus2Choice.mmReason, InRepairStatus2Choice.mmDataSourceScheme, InRepairStatus2Choice.mmNoReason);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InRepairStatus2Choice";
 				definition = "Status is in repair status.";
 			}

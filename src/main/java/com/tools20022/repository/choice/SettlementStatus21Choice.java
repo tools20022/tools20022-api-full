@@ -19,7 +19,11 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.sese.SecuritiesFinancingStatusAdvice002V06;
+import com.tools20022.repository.area.sese.SecuritiesFinancingStatusAdvice002V07;
 import com.tools20022.repository.entity.SecuritiesTradeStatus;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.ProprietaryStatusAndReason7;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -119,7 +123,7 @@ public class SettlementStatus21Choice {
 			componentContext_lazy = () -> SettlementStatus21Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Pdg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Pending";
 			definition = "Instruction is pending. Settlement at the instructed settlement date is still possible.";
 			maxOccurs = 1;
@@ -170,7 +174,7 @@ public class SettlementStatus21Choice {
 			componentContext_lazy = () -> SettlementStatus21Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Flng";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Failing";
 			definition = "Instruction is failing. Settlement at the instructed settlement date is no longer possible.";
 			maxOccurs = 1;
@@ -218,7 +222,7 @@ public class SettlementStatus21Choice {
 			componentContext_lazy = () -> SettlementStatus21Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Proprietary status.";
 			maxOccurs = 1;
@@ -231,13 +235,11 @@ public class SettlementStatus21Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SettlementStatus21Choice.mmPending, com.tools20022.repository.choice.SettlementStatus21Choice.mmFailing,
-						com.tools20022.repository.choice.SettlementStatus21Choice.mmProprietary);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesFinancingStatusAdvice002V06.mmSettlementStatus,
-						com.tools20022.repository.area.sese.SecuritiesFinancingStatusAdvice002V07.mmSettlementStatus);
+				messageElement_lazy = () -> Arrays.asList(SettlementStatus21Choice.mmPending, SettlementStatus21Choice.mmFailing, SettlementStatus21Choice.mmProprietary);
+				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesFinancingStatusAdvice002V06.mmSettlementStatus, SecuritiesFinancingStatusAdvice002V07.mmSettlementStatus);
 				trace_lazy = () -> SecuritiesTradeStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SettlementStatus21Choice";
 				definition = "Choice of format for the settlement status.";
 			}

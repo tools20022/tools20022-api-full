@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,23 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.InvestigationExecutionConfirmation1Code
+ * InvestigationExecutionConfirmation1Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.InvestigationExecutionConfirmation2Code
+ * InvestigationExecutionConfirmation2Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.InvestigationExecutionConfirmation3Code
+ * InvestigationExecutionConfirmation3Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.InvestigationExecutionConfirmation4Code
+ * InvestigationExecutionConfirmation4Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -92,23 +111,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * InvestigationExecutionConfirmationCode.mmInstructionIsDuplicate}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.InvestigationExecutionConfirmation1Code
- * InvestigationExecutionConfirmation1Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.InvestigationExecutionConfirmation2Code
- * InvestigationExecutionConfirmation2Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.InvestigationExecutionConfirmation3Code
- * InvestigationExecutionConfirmation3Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.InvestigationExecutionConfirmation4Code
- * InvestigationExecutionConfirmation4Code}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -156,7 +158,7 @@ public class InvestigationExecutionConfirmationCode {
 	 */
 	public static final MMCode mmCancelledAsPerRequest = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancelledAsPerRequest";
 			definition = "Used when a requested cancellation is successful.";
 			owner_lazy = () -> InvestigationExecutionConfirmationCode.mmObject();
@@ -186,7 +188,7 @@ public class InvestigationExecutionConfirmationCode {
 	 */
 	public static final MMCode mmModifiedAsPerRequest = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ModifiedAsPerRequest";
 			definition = "Used when a requested modification is successful.";
 			owner_lazy = () -> InvestigationExecutionConfirmationCode.mmObject();
@@ -216,7 +218,7 @@ public class InvestigationExecutionConfirmationCode {
 	 */
 	public static final MMCode mmAcceptedDebitAuthorisation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcceptedDebitAuthorisation";
 			definition = "Used when a creditor accepts the debit authorisation.";
 			owner_lazy = () -> InvestigationExecutionConfirmationCode.mmObject();
@@ -249,7 +251,7 @@ public class InvestigationExecutionConfirmationCode {
 	 */
 	public static final MMCode mmPaymentInitiated = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentInitiated";
 			definition = "Used when the result of an investigation is, or will be, the initiation of a payment instruction.";
 			owner_lazy = () -> InvestigationExecutionConfirmationCode.mmObject();
@@ -282,7 +284,7 @@ public class InvestigationExecutionConfirmationCode {
 	 */
 	public static final MMCode mmCoverInitiated = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoverInitiated";
 			definition = "Used when a transfer of funds has been initiated (a cover payment) to resolve a case.";
 			owner_lazy = () -> InvestigationExecutionConfirmationCode.mmObject();
@@ -315,7 +317,7 @@ public class InvestigationExecutionConfirmationCode {
 	 */
 	public static final MMCode mmCoverModified = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoverModified";
 			definition = "Used when a transfer of funds has been modified (a cover payment) to resolve a case.";
 			owner_lazy = () -> InvestigationExecutionConfirmationCode.mmObject();
@@ -348,7 +350,7 @@ public class InvestigationExecutionConfirmationCode {
 	 */
 	public static final MMCode mmPaymentInstructionInitiated = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentInstructionInitiated";
 			definition = "Used when a payment instruction (eg. MT103) has been initiated to resolve a case.";
 			owner_lazy = () -> InvestigationExecutionConfirmationCode.mmObject();
@@ -381,7 +383,7 @@ public class InvestigationExecutionConfirmationCode {
 	 */
 	public static final MMCode mmAdditionalInformationSent = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInformationSent";
 			definition = "Used when additional information has been sent to the beneficiary of a payment.";
 			owner_lazy = () -> InvestigationExecutionConfirmationCode.mmObject();
@@ -414,7 +416,7 @@ public class InvestigationExecutionConfirmationCode {
 	 */
 	public static final MMCode mmConfirmationOfPayment = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConfirmationOfPayment";
 			definition = "Used when a payment has been checked and was correctly executed without any intervention.";
 			owner_lazy = () -> InvestigationExecutionConfirmationCode.mmObject();
@@ -445,7 +447,7 @@ public class InvestigationExecutionConfirmationCode {
 	 */
 	public static final MMCode mmCancellationWillFollow = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationWillFollow";
 			definition = "Used when a payment will be cancelled to solve an investigation case.";
 			owner_lazy = () -> InvestigationExecutionConfirmationCode.mmObject();
@@ -476,7 +478,7 @@ public class InvestigationExecutionConfirmationCode {
 	 */
 	public static final MMCode mmModificationWillFollow = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ModificationWillFollow";
 			definition = "Used when the payment will be modified to solve an investigation case.";
 			owner_lazy = () -> InvestigationExecutionConfirmationCode.mmObject();
@@ -509,7 +511,7 @@ public class InvestigationExecutionConfirmationCode {
 	 */
 	public static final MMCode mmUnableToApplyWillFollow = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnableToApplyWillFollow";
 			definition = "Used when sender wants to respond to an assignment with an Unable To Apply workflow.";
 			owner_lazy = () -> InvestigationExecutionConfirmationCode.mmObject();
@@ -540,7 +542,7 @@ public class InvestigationExecutionConfirmationCode {
 	 */
 	public static final MMCode mmPartiallyExecutedCancellationRequest = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartiallyExecutedCancellationRequest";
 			definition = "Used when a requested cancellation has been partially executed.";
 			owner_lazy = () -> InvestigationExecutionConfirmationCode.mmObject();
@@ -570,7 +572,7 @@ public class InvestigationExecutionConfirmationCode {
 	 */
 	public static final MMCode mmRejectedCancellationRequest = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RejectedCancellationRequest";
 			definition = "Used when a requested cancellation has been rejected.";
 			owner_lazy = () -> InvestigationExecutionConfirmationCode.mmObject();
@@ -600,7 +602,7 @@ public class InvestigationExecutionConfirmationCode {
 	 */
 	public static final MMCode mmPendingCancellationRequest = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingCancellationRequest";
 			definition = "Used when a requested cancellation is pending.";
 			owner_lazy = () -> InvestigationExecutionConfirmationCode.mmObject();
@@ -630,7 +632,7 @@ public class InvestigationExecutionConfirmationCode {
 	 */
 	public static final MMCode mmStatementEntryCorrect = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatementEntryCorrect";
 			definition = "Used when the entry in the statement is correct.";
 			owner_lazy = () -> InvestigationExecutionConfirmationCode.mmObject();
@@ -663,7 +665,7 @@ public class InvestigationExecutionConfirmationCode {
 	 */
 	public static final MMCode mmStatementEntryIncorrect = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatementEntryIncorrect";
 			definition = "Used when the entry in the statement is incorrect and further information is provided with the resolution.";
 			owner_lazy = () -> InvestigationExecutionConfirmationCode.mmObject();
@@ -694,7 +696,7 @@ public class InvestigationExecutionConfirmationCode {
 	 */
 	public static final MMCode mmChargesDetailsProvided = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChargesDetailsProvided";
 			definition = "Further charges details are provided to resolve the case.";
 			owner_lazy = () -> InvestigationExecutionConfirmationCode.mmObject();
@@ -725,7 +727,7 @@ public class InvestigationExecutionConfirmationCode {
 	 */
 	public static final MMCode mmPurposeDetailsProvided = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PurposeDetailsProvided";
 			definition = "Further purpose details are provided to resolve the case.";
 			owner_lazy = () -> InvestigationExecutionConfirmationCode.mmObject();
@@ -758,7 +760,7 @@ public class InvestigationExecutionConfirmationCode {
 	 */
 	public static final MMCode mmInstructionIsDuplicate = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructionIsDuplicate";
 			definition = "Used when the requested check for a possible duplicate instruction is confirmed.";
 			owner_lazy = () -> InvestigationExecutionConfirmationCode.mmObject();
@@ -769,22 +771,18 @@ public class InvestigationExecutionConfirmationCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CNCL");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InvestigationExecutionConfirmationCode";
 				definition = "Indicates the result of an investigation.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.InvestigationExecutionConfirmationCode.mmCancelledAsPerRequest,
-						com.tools20022.repository.codeset.InvestigationExecutionConfirmationCode.mmModifiedAsPerRequest, com.tools20022.repository.codeset.InvestigationExecutionConfirmationCode.mmAcceptedDebitAuthorisation,
-						com.tools20022.repository.codeset.InvestigationExecutionConfirmationCode.mmPaymentInitiated, com.tools20022.repository.codeset.InvestigationExecutionConfirmationCode.mmCoverInitiated,
-						com.tools20022.repository.codeset.InvestigationExecutionConfirmationCode.mmCoverModified, com.tools20022.repository.codeset.InvestigationExecutionConfirmationCode.mmPaymentInstructionInitiated,
-						com.tools20022.repository.codeset.InvestigationExecutionConfirmationCode.mmAdditionalInformationSent, com.tools20022.repository.codeset.InvestigationExecutionConfirmationCode.mmConfirmationOfPayment,
-						com.tools20022.repository.codeset.InvestigationExecutionConfirmationCode.mmCancellationWillFollow, com.tools20022.repository.codeset.InvestigationExecutionConfirmationCode.mmModificationWillFollow,
-						com.tools20022.repository.codeset.InvestigationExecutionConfirmationCode.mmUnableToApplyWillFollow, com.tools20022.repository.codeset.InvestigationExecutionConfirmationCode.mmPartiallyExecutedCancellationRequest,
-						com.tools20022.repository.codeset.InvestigationExecutionConfirmationCode.mmRejectedCancellationRequest, com.tools20022.repository.codeset.InvestigationExecutionConfirmationCode.mmPendingCancellationRequest,
-						com.tools20022.repository.codeset.InvestigationExecutionConfirmationCode.mmStatementEntryCorrect, com.tools20022.repository.codeset.InvestigationExecutionConfirmationCode.mmStatementEntryIncorrect,
-						com.tools20022.repository.codeset.InvestigationExecutionConfirmationCode.mmChargesDetailsProvided, com.tools20022.repository.codeset.InvestigationExecutionConfirmationCode.mmPurposeDetailsProvided,
-						com.tools20022.repository.codeset.InvestigationExecutionConfirmationCode.mmInstructionIsDuplicate);
+				code_lazy = () -> Arrays.asList(InvestigationExecutionConfirmationCode.mmCancelledAsPerRequest, InvestigationExecutionConfirmationCode.mmModifiedAsPerRequest,
+						InvestigationExecutionConfirmationCode.mmAcceptedDebitAuthorisation, InvestigationExecutionConfirmationCode.mmPaymentInitiated, InvestigationExecutionConfirmationCode.mmCoverInitiated,
+						InvestigationExecutionConfirmationCode.mmCoverModified, InvestigationExecutionConfirmationCode.mmPaymentInstructionInitiated, InvestigationExecutionConfirmationCode.mmAdditionalInformationSent,
+						InvestigationExecutionConfirmationCode.mmConfirmationOfPayment, InvestigationExecutionConfirmationCode.mmCancellationWillFollow, InvestigationExecutionConfirmationCode.mmModificationWillFollow,
+						InvestigationExecutionConfirmationCode.mmUnableToApplyWillFollow, InvestigationExecutionConfirmationCode.mmPartiallyExecutedCancellationRequest, InvestigationExecutionConfirmationCode.mmRejectedCancellationRequest,
+						InvestigationExecutionConfirmationCode.mmPendingCancellationRequest, InvestigationExecutionConfirmationCode.mmStatementEntryCorrect, InvestigationExecutionConfirmationCode.mmStatementEntryIncorrect,
+						InvestigationExecutionConfirmationCode.mmChargesDetailsProvided, InvestigationExecutionConfirmationCode.mmPurposeDetailsProvided, InvestigationExecutionConfirmationCode.mmInstructionIsDuplicate);
 				derivation_lazy = () -> Arrays.asList(InvestigationExecutionConfirmation1Code.mmObject(), InvestigationExecutionConfirmation2Code.mmObject(), InvestigationExecutionConfirmation3Code.mmObject(),
 						InvestigationExecutionConfirmation4Code.mmObject());
 			}

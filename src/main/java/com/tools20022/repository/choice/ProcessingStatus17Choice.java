@@ -19,7 +19,12 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV01;
+import com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV02;
 import com.tools20022.repository.entity.SecuritiesTradeStatusReason;
+import com.tools20022.repository.entity.StatusReason;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.ProprietaryReason1;
 import com.tools20022.repository.msg.ProprietaryStatusAndReason1;
 import java.util.Arrays;
@@ -161,11 +166,11 @@ public class ProcessingStatus17Choice {
 	 */
 	public static final MMMessageAssociationEnd mmAcknowledgedAccepted = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmAcknowledgedAcceptedReason;
+			businessElementTrace_lazy = () -> StatusReason.mmAcknowledgedAcceptedReason;
 			componentContext_lazy = () -> ProcessingStatus17Choice.mmObject();
 			isDerived = false;
 			xmlTag = "AckdAccptd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcknowledgedAccepted";
 			definition = "Trade is AcknowledgedAccepted.";
 			maxOccurs = 1;
@@ -212,7 +217,7 @@ public class ProcessingStatus17Choice {
 			componentContext_lazy = () -> ProcessingStatus17Choice.mmObject();
 			isDerived = false;
 			xmlTag = "AlrdyMtchdAndAffrmd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AlreadyMatchedAndAffirmed";
 			definition = "Trade is AlreadyMatchedAndAffirmed.";
 			maxOccurs = 1;
@@ -259,7 +264,7 @@ public class ProcessingStatus17Choice {
 			componentContext_lazy = () -> ProcessingStatus17Choice.mmObject();
 			isDerived = false;
 			xmlTag = "DfltActn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DefaultAction";
 			definition = "Trade is DefaultAction.";
 			maxOccurs = 1;
@@ -306,7 +311,7 @@ public class ProcessingStatus17Choice {
 			componentContext_lazy = () -> ProcessingStatus17Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Done";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Done";
 			definition = "Trade is Done.";
 			maxOccurs = 1;
@@ -353,7 +358,7 @@ public class ProcessingStatus17Choice {
 			componentContext_lazy = () -> ProcessingStatus17Choice.mmObject();
 			isDerived = false;
 			xmlTag = "ForcdRjctn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForcedRejection";
 			definition = "Trade is in forced rejection.";
 			maxOccurs = 1;
@@ -401,7 +406,7 @@ public class ProcessingStatus17Choice {
 			componentContext_lazy = () -> ProcessingStatus17Choice.mmObject();
 			isDerived = false;
 			xmlTag = "FullyExctdConfSnt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FullyExecutedConfirmationSent";
 			definition = "The trade is fully executed and the confirmation is sent.";
 			maxOccurs = 1;
@@ -448,7 +453,7 @@ public class ProcessingStatus17Choice {
 			componentContext_lazy = () -> ProcessingStatus17Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Futr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Future";
 			definition = "Trade is future.";
 			maxOccurs = 1;
@@ -495,7 +500,7 @@ public class ProcessingStatus17Choice {
 			componentContext_lazy = () -> ProcessingStatus17Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Gnrtd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Generated";
 			definition = "Trade is generated.";
 			maxOccurs = 1;
@@ -539,11 +544,11 @@ public class ProcessingStatus17Choice {
 	 */
 	public static final MMMessageAssociationEnd mmInRepair = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeStatusReason.mmRepairReason;
+			businessElementTrace_lazy = () -> SecuritiesTradeStatusReason.mmRepairReason;
 			componentContext_lazy = () -> ProcessingStatus17Choice.mmObject();
 			isDerived = false;
 			xmlTag = "InRpr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InRepair";
 			definition = "Trade is InRepair.";
 			maxOccurs = 1;
@@ -590,7 +595,7 @@ public class ProcessingStatus17Choice {
 			componentContext_lazy = () -> ProcessingStatus17Choice.mmObject();
 			isDerived = false;
 			xmlTag = "NoInstr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoInstruction";
 			definition = "Trade is in no instruction.";
 			maxOccurs = 1;
@@ -637,7 +642,7 @@ public class ProcessingStatus17Choice {
 			componentContext_lazy = () -> ProcessingStatus17Choice.mmObject();
 			isDerived = false;
 			xmlTag = "OpnOrdr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OpenOrder";
 			definition = "Trade is in OpenOrder";
 			maxOccurs = 1;
@@ -681,11 +686,11 @@ public class ProcessingStatus17Choice {
 	 */
 	public static final MMMessageAssociationEnd mmPendingProcessing = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmPendingReason;
+			businessElementTrace_lazy = () -> StatusReason.mmPendingReason;
 			componentContext_lazy = () -> ProcessingStatus17Choice.mmObject();
 			isDerived = false;
 			xmlTag = "PdgPrcg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingProcessing";
 			definition = "Processing of the trade is pending .";
 			maxOccurs = 1;
@@ -732,7 +737,7 @@ public class ProcessingStatus17Choice {
 			componentContext_lazy = () -> ProcessingStatus17Choice.mmObject();
 			isDerived = false;
 			xmlTag = "RcvdAtIntrmy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceivedAtIntermediary";
 			definition = "Trade is ReceivedAtIntermediary.";
 			maxOccurs = 1;
@@ -776,11 +781,11 @@ public class ProcessingStatus17Choice {
 	 */
 	public static final MMMessageAssociationEnd mmRejected = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmRejectionReason;
+			businessElementTrace_lazy = () -> StatusReason.mmRejectionReason;
 			componentContext_lazy = () -> ProcessingStatus17Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Rjctd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rejected";
 			definition = "Trade has been rejected.";
 			maxOccurs = 1;
@@ -827,7 +832,7 @@ public class ProcessingStatus17Choice {
 			componentContext_lazy = () -> ProcessingStatus17Choice.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmInstrSnt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementInstructionSent";
 			definition = "Settlement Instruction for the trade is sent.";
 			maxOccurs = 1;
@@ -874,7 +879,7 @@ public class ProcessingStatus17Choice {
 			componentContext_lazy = () -> ProcessingStatus17Choice.mmObject();
 			isDerived = false;
 			xmlTag = "StgInstr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StandingInstruction";
 			definition = "Trade is standing instruction.";
 			maxOccurs = 1;
@@ -921,7 +926,7 @@ public class ProcessingStatus17Choice {
 			componentContext_lazy = () -> ProcessingStatus17Choice.mmObject();
 			isDerived = false;
 			xmlTag = "TradgSspdByStockXchg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradingSuspendedByStockExchange";
 			definition = "Trading is suspended by the stock exchange.";
 			maxOccurs = 1;
@@ -968,7 +973,7 @@ public class ProcessingStatus17Choice {
 			componentContext_lazy = () -> ProcessingStatus17Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Trtd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Treated";
 			definition = "Trade is treated.";
 			maxOccurs = 1;
@@ -1019,7 +1024,7 @@ public class ProcessingStatus17Choice {
 			componentContext_lazy = () -> ProcessingStatus17Choice.mmObject();
 			isDerived = false;
 			xmlTag = "PrtrySts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProprietaryStatus";
 			definition = "Provides a proprietary status and a proprietary reason of the processing status of the trade.";
 			maxOccurs = 1;
@@ -1032,20 +1037,15 @@ public class ProcessingStatus17Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ProcessingStatus17Choice.mmAcknowledgedAccepted, com.tools20022.repository.choice.ProcessingStatus17Choice.mmAlreadyMatchedAndAffirmed,
-						com.tools20022.repository.choice.ProcessingStatus17Choice.mmDefaultAction, com.tools20022.repository.choice.ProcessingStatus17Choice.mmDone,
-						com.tools20022.repository.choice.ProcessingStatus17Choice.mmForcedRejection, com.tools20022.repository.choice.ProcessingStatus17Choice.mmFullyExecutedConfirmationSent,
-						com.tools20022.repository.choice.ProcessingStatus17Choice.mmFuture, com.tools20022.repository.choice.ProcessingStatus17Choice.mmGenerated, com.tools20022.repository.choice.ProcessingStatus17Choice.mmInRepair,
-						com.tools20022.repository.choice.ProcessingStatus17Choice.mmNoInstruction, com.tools20022.repository.choice.ProcessingStatus17Choice.mmOpenOrder,
-						com.tools20022.repository.choice.ProcessingStatus17Choice.mmPendingProcessing, com.tools20022.repository.choice.ProcessingStatus17Choice.mmReceivedAtIntermediary,
-						com.tools20022.repository.choice.ProcessingStatus17Choice.mmRejected, com.tools20022.repository.choice.ProcessingStatus17Choice.mmSettlementInstructionSent,
-						com.tools20022.repository.choice.ProcessingStatus17Choice.mmStandingInstruction, com.tools20022.repository.choice.ProcessingStatus17Choice.mmTradingSuspendedByStockExchange,
-						com.tools20022.repository.choice.ProcessingStatus17Choice.mmTreated, com.tools20022.repository.choice.ProcessingStatus17Choice.mmProprietaryStatus);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV01.mmProcessingStatus,
-						com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV02.mmProcessingStatus);
+				messageElement_lazy = () -> Arrays.asList(ProcessingStatus17Choice.mmAcknowledgedAccepted, ProcessingStatus17Choice.mmAlreadyMatchedAndAffirmed, ProcessingStatus17Choice.mmDefaultAction, ProcessingStatus17Choice.mmDone,
+						ProcessingStatus17Choice.mmForcedRejection, ProcessingStatus17Choice.mmFullyExecutedConfirmationSent, ProcessingStatus17Choice.mmFuture, ProcessingStatus17Choice.mmGenerated, ProcessingStatus17Choice.mmInRepair,
+						ProcessingStatus17Choice.mmNoInstruction, ProcessingStatus17Choice.mmOpenOrder, ProcessingStatus17Choice.mmPendingProcessing, ProcessingStatus17Choice.mmReceivedAtIntermediary, ProcessingStatus17Choice.mmRejected,
+						ProcessingStatus17Choice.mmSettlementInstructionSent, ProcessingStatus17Choice.mmStandingInstruction, ProcessingStatus17Choice.mmTradingSuspendedByStockExchange, ProcessingStatus17Choice.mmTreated,
+						ProcessingStatus17Choice.mmProprietaryStatus);
+				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesTradeConfirmationStatusAdviceV01.mmProcessingStatus, SecuritiesTradeConfirmationStatusAdviceV02.mmProcessingStatus);
 				trace_lazy = () -> SecuritiesTradeStatusReason.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ProcessingStatus17Choice";
 				definition = "Choice of status for the processing.";
 			}

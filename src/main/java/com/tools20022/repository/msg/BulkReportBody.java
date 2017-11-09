@@ -19,6 +19,8 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -89,7 +91,7 @@ public class BulkReportBody {
 			componentContext_lazy = () -> BulkReportBody.mmObject();
 			isDerived = false;
 			xmlTag = "RptHdr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportHeader";
 			definition = "General properties of the report.";
 			maxOccurs = 1;
@@ -132,7 +134,7 @@ public class BulkReportBody {
 			componentContext_lazy = () -> BulkReportBody.mmObject();
 			isDerived = false;
 			xmlTag = "RptData";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportData";
 			definition = "Full report data or reporting data of a single tranche of the full report.";
 			maxOccurs = 1;
@@ -145,9 +147,9 @@ public class BulkReportBody {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BulkReportBody.mmReportHeader, com.tools20022.repository.msg.BulkReportBody.mmReportData);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(BulkReportBody.mmReportHeader, BulkReportBody.mmReportData);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "BulkReportBody";
 				definition = "Contains general properties of the report and the reporting data (either one tranche or the full report).";
 			}

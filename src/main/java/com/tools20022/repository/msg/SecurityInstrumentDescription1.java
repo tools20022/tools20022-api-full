@@ -19,10 +19,12 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.PriceRateOrAmountChoice;
 import com.tools20022.repository.codeset.OptionType1Code;
 import com.tools20022.repository.datatype.*;
-import com.tools20022.repository.entity.Security;
+import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -116,7 +118,7 @@ public class SecurityInstrumentDescription1 {
 			componentContext_lazy = () -> SecurityInstrumentDescription1.mmObject();
 			isDerived = false;
 			xmlTag = "Desc";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Description";
 			definition = "Description of the security.";
 			maxOccurs = 1;
@@ -163,11 +165,11 @@ public class SecurityInstrumentDescription1 {
 	 */
 	public static final MMMessageAttribute mmClassificationType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AssetClassification.mmClassificationType;
+			businessElementTrace_lazy = () -> AssetClassification.mmClassificationType;
 			componentContext_lazy = () -> SecurityInstrumentDescription1.mmObject();
 			isDerived = false;
 			xmlTag = "ClssfctnTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClassificationType";
 			definition = "Classification type of the financial instrument, as per the ISO Classification of Financial Instrument (CFI) codification, eg, common share with voting rights, fully paid, or registered.";
 			maxOccurs = 1;
@@ -212,11 +214,11 @@ public class SecurityInstrumentDescription1 {
 	 */
 	public static final MMMessageAttribute mmPlaceOfListing = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.mmMIC;
+			businessElementTrace_lazy = () -> OrganisationIdentification.mmMIC;
 			componentContext_lazy = () -> SecurityInstrumentDescription1.mmObject();
 			isDerived = false;
 			xmlTag = "PlcOfListg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceOfListing";
 			definition = "Provides the place of listing using a market identifier code (MIC).";
 			maxOccurs = 1;
@@ -259,11 +261,11 @@ public class SecurityInstrumentDescription1 {
 	 */
 	public static final MMMessageAttribute mmExerciseDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Derivative.mmExerciseDate;
+			businessElementTrace_lazy = () -> Derivative.mmExerciseDate;
 			componentContext_lazy = () -> SecurityInstrumentDescription1.mmObject();
 			isDerived = false;
 			xmlTag = "ExrcDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExerciseDate";
 			definition = "Exercise date/time of a derivative contract.";
 			maxOccurs = 1;
@@ -307,11 +309,11 @@ public class SecurityInstrumentDescription1 {
 	 */
 	public static final MMMessageAttribute mmMaturityDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Asset.mmMaturityDate;
+			businessElementTrace_lazy = () -> Asset.mmMaturityDate;
 			componentContext_lazy = () -> SecurityInstrumentDescription1.mmObject();
 			isDerived = false;
 			xmlTag = "MtrtyDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaturityDate";
 			definition = "Maturity date/time at which an interest bearing security becomes due.";
 			maxOccurs = 1;
@@ -359,11 +361,11 @@ public class SecurityInstrumentDescription1 {
 	 */
 	public static final MMMessageAttribute mmOptionType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Option.mmOptionType;
+			businessElementTrace_lazy = () -> Option.mmOptionType;
 			componentContext_lazy = () -> SecurityInstrumentDescription1.mmObject();
 			isDerived = false;
 			xmlTag = "OptnTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionType";
 			definition = "Specifies whether it is a call option (right to purchase a specific underlying asset) or a put option (right to sell a specific underlying asset).\n";
 			maxOccurs = 1;
@@ -410,11 +412,11 @@ public class SecurityInstrumentDescription1 {
 	 */
 	public static final MMMessageAttribute mmStrikePrice = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmPricing;
+			businessElementTrace_lazy = () -> Security.mmPricing;
 			componentContext_lazy = () -> SecurityInstrumentDescription1.mmObject();
 			isDerived = false;
 			xmlTag = "StrkPric";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StrikePrice";
 			definition = "Predetermined price at which the holder will have to buy or sell the underlying instrument.\n";
 			maxOccurs = 1;
@@ -459,7 +461,7 @@ public class SecurityInstrumentDescription1 {
 			componentContext_lazy = () -> SecurityInstrumentDescription1.mmObject();
 			isDerived = false;
 			xmlTag = "Mltplr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Multiplier";
 			definition = "Indicates the ratio or multiplying factor used to convert one contract into a quantity. In the case of an equity or a bond, the price multiplier is 1.";
 			maxOccurs = 1;
@@ -471,13 +473,12 @@ public class SecurityInstrumentDescription1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecurityInstrumentDescription1.mmDescription, com.tools20022.repository.msg.SecurityInstrumentDescription1.mmClassificationType,
-						com.tools20022.repository.msg.SecurityInstrumentDescription1.mmPlaceOfListing, com.tools20022.repository.msg.SecurityInstrumentDescription1.mmExerciseDate,
-						com.tools20022.repository.msg.SecurityInstrumentDescription1.mmMaturityDate, com.tools20022.repository.msg.SecurityInstrumentDescription1.mmOptionType,
-						com.tools20022.repository.msg.SecurityInstrumentDescription1.mmStrikePrice, com.tools20022.repository.msg.SecurityInstrumentDescription1.mmMultiplier);
+				messageElement_lazy = () -> Arrays.asList(SecurityInstrumentDescription1.mmDescription, SecurityInstrumentDescription1.mmClassificationType, SecurityInstrumentDescription1.mmPlaceOfListing,
+						SecurityInstrumentDescription1.mmExerciseDate, SecurityInstrumentDescription1.mmMaturityDate, SecurityInstrumentDescription1.mmOptionType, SecurityInstrumentDescription1.mmStrikePrice,
+						SecurityInstrumentDescription1.mmMultiplier);
 				trace_lazy = () -> Security.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SecurityInstrumentDescription1";
 				definition = "Identifies the security instrument by its name and typical characteristics.";
 			}

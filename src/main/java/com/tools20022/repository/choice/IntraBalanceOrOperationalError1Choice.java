@@ -19,7 +19,9 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.BookEntry;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.ErrorHandling3;
 import com.tools20022.repository.msg.IntraBalanceMovements1;
 import java.util.Arrays;
@@ -100,7 +102,7 @@ public class IntraBalanceOrOperationalError1Choice {
 			componentContext_lazy = () -> IntraBalanceOrOperationalError1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Mvmnts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Movements";
 			definition = "Identifies the transactions.";
 			minOccurs = 1;
@@ -140,7 +142,7 @@ public class IntraBalanceOrOperationalError1Choice {
 			componentContext_lazy = () -> IntraBalanceOrOperationalError1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "OprlErr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OperationalError";
 			definition = "Operational error resulting from a rejection.";
 			minOccurs = 1;
@@ -152,10 +154,10 @@ public class IntraBalanceOrOperationalError1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.IntraBalanceOrOperationalError1Choice.mmMovements, com.tools20022.repository.choice.IntraBalanceOrOperationalError1Choice.mmOperationalError);
+				messageElement_lazy = () -> Arrays.asList(IntraBalanceOrOperationalError1Choice.mmMovements, IntraBalanceOrOperationalError1Choice.mmOperationalError);
 				trace_lazy = () -> BookEntry.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "IntraBalanceOrOperationalError1Choice";
 				definition = "Choice between the report data or an operational error.";
 			}

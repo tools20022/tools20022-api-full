@@ -19,10 +19,13 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.DateAndDateTimeChoice;
 import com.tools20022.repository.choice.PartyIdentification1Choice;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.entity.Account;
 import com.tools20022.repository.entity.PartyIdentificationInformation;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -111,7 +114,7 @@ public class PartyIdentificationAndAccount2 {
 			componentContext_lazy = () -> PartyIdentificationAndAccount2.mmObject();
 			isDerived = false;
 			xmlTag = "PtyId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartyIdentification";
 			definition = "Party that legally owns the account.";
 			maxOccurs = 1;
@@ -155,11 +158,11 @@ public class PartyIdentificationAndAccount2 {
 	 */
 	public static final MMMessageAttribute mmAccountIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.mmIdentification;
+			businessElementTrace_lazy = () -> Account.mmIdentification;
 			componentContext_lazy = () -> PartyIdentificationAndAccount2.mmObject();
 			isDerived = false;
 			xmlTag = "AcctId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountIdentification";
 			definition = "Identification of the account owned by the party.";
 			maxOccurs = 1;
@@ -203,7 +206,7 @@ public class PartyIdentificationAndAccount2 {
 			componentContext_lazy = () -> PartyIdentificationAndAccount2.mmObject();
 			isDerived = false;
 			xmlTag = "PrcgRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProcessingReference";
 			definition = "Specifies the reference of the transaction at the party identified in the sequence.";
 			maxOccurs = 1;
@@ -248,7 +251,7 @@ public class PartyIdentificationAndAccount2 {
 			componentContext_lazy = () -> PartyIdentificationAndAccount2.mmObject();
 			isDerived = false;
 			xmlTag = "PrcgDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProcessingDate";
 			definition = "Date and optionally the time, at which this transaction was processed by the party identified in this sequence.";
 			maxOccurs = 1;
@@ -260,11 +263,11 @@ public class PartyIdentificationAndAccount2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyIdentificationAndAccount2.mmPartyIdentification, com.tools20022.repository.msg.PartyIdentificationAndAccount2.mmAccountIdentification,
-						com.tools20022.repository.msg.PartyIdentificationAndAccount2.mmProcessingReference, com.tools20022.repository.msg.PartyIdentificationAndAccount2.mmProcessingDate);
+				messageElement_lazy = () -> Arrays.asList(PartyIdentificationAndAccount2.mmPartyIdentification, PartyIdentificationAndAccount2.mmAccountIdentification, PartyIdentificationAndAccount2.mmProcessingReference,
+						PartyIdentificationAndAccount2.mmProcessingDate);
 				trace_lazy = () -> PartyIdentificationInformation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PartyIdentificationAndAccount2";
 				definition = "Party involved in the settlement chain.";
 			}

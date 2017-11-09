@@ -19,10 +19,13 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.trea.*;
 import com.tools20022.repository.choice.PartyIdentification8Choice;
 import com.tools20022.repository.entity.SubmittingPartyRole;
 import com.tools20022.repository.entity.TradePartyRole;
 import com.tools20022.repository.entity.TreasuryTradingParty;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -150,11 +153,11 @@ public class TradePartyIdentification3 {
 	 */
 	public static final MMMessageAssociationEnd mmFundInformation = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TreasuryTradingParty.mmInvestmentFund;
+			businessElementTrace_lazy = () -> TreasuryTradingParty.mmInvestmentFund;
 			componentContext_lazy = () -> TradePartyIdentification3.mmObject();
 			isDerived = false;
 			xmlTag = "FndInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FundInformation";
 			definition = "Identifies the fund which is one of the parties in a treasury trade.";
 			maxOccurs = 1;
@@ -205,7 +208,7 @@ public class TradePartyIdentification3 {
 			componentContext_lazy = () -> TradePartyIdentification3.mmObject();
 			isDerived = false;
 			xmlTag = "SubmitgPty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubmittingParty";
 			definition = "Specifies the party which submits a treasury trade to a matching system or to a settlement system or to a counterparty.";
 			maxOccurs = 1;
@@ -256,7 +259,7 @@ public class TradePartyIdentification3 {
 			componentContext_lazy = () -> TradePartyIdentification3.mmObject();
 			isDerived = false;
 			xmlTag = "TradPty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeParty";
 			definition = "Specifies the party which originated a treasury trade. This party may be the same as the submitting party.";
 			maxOccurs = 1;
@@ -269,19 +272,15 @@ public class TradePartyIdentification3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TradePartyIdentification3.mmFundInformation, com.tools20022.repository.msg.TradePartyIdentification3.mmSubmittingParty,
-						com.tools20022.repository.msg.TradePartyIdentification3.mmTradeParty);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.trea.CreateNonDeliverableForwardOpeningV02.mmTradingSideIdentification,
-						com.tools20022.repository.area.trea.CreateNonDeliverableForwardOpeningV02.mmCounterpartySideIdentification, com.tools20022.repository.area.trea.AmendNonDeliverableForwardOpeningV02.mmTradingSideIdentification,
-						com.tools20022.repository.area.trea.AmendNonDeliverableForwardOpeningV02.mmCounterpartySideIdentification, com.tools20022.repository.area.trea.CancelNonDeliverableForwardOpeningV02.mmTradingSideIdentification,
-						com.tools20022.repository.area.trea.CancelNonDeliverableForwardOpeningV02.mmCounterpartySideIdentification, com.tools20022.repository.area.trea.CreateNonDeliverableForwardValuationV02.mmTradingSideIdentification,
-						com.tools20022.repository.area.trea.CreateNonDeliverableForwardValuationV02.mmCounterpartySideIdentification, com.tools20022.repository.area.trea.AmendNonDeliverableForwardValuationV02.mmTradingSideIdentification,
-						com.tools20022.repository.area.trea.AmendNonDeliverableForwardValuationV02.mmCounterpartySideIdentification, com.tools20022.repository.area.trea.CancelNonDeliverableForwardValuationV02.mmTradingSideIdentification,
-						com.tools20022.repository.area.trea.CancelNonDeliverableForwardValuationV02.mmCounterpartySideIdentification, com.tools20022.repository.area.trea.NonDeliverableForwardNotificationV02.mmTradingSideIdentification,
-						com.tools20022.repository.area.trea.NonDeliverableForwardNotificationV02.mmCounterpartySideIdentification);
+				messageElement_lazy = () -> Arrays.asList(TradePartyIdentification3.mmFundInformation, TradePartyIdentification3.mmSubmittingParty, TradePartyIdentification3.mmTradeParty);
+				messageBuildingBlock_lazy = () -> Arrays.asList(CreateNonDeliverableForwardOpeningV02.mmTradingSideIdentification, CreateNonDeliverableForwardOpeningV02.mmCounterpartySideIdentification,
+						AmendNonDeliverableForwardOpeningV02.mmTradingSideIdentification, AmendNonDeliverableForwardOpeningV02.mmCounterpartySideIdentification, CancelNonDeliverableForwardOpeningV02.mmTradingSideIdentification,
+						CancelNonDeliverableForwardOpeningV02.mmCounterpartySideIdentification, CreateNonDeliverableForwardValuationV02.mmTradingSideIdentification, CreateNonDeliverableForwardValuationV02.mmCounterpartySideIdentification,
+						AmendNonDeliverableForwardValuationV02.mmTradingSideIdentification, AmendNonDeliverableForwardValuationV02.mmCounterpartySideIdentification, CancelNonDeliverableForwardValuationV02.mmTradingSideIdentification,
+						CancelNonDeliverableForwardValuationV02.mmCounterpartySideIdentification, NonDeliverableForwardNotificationV02.mmTradingSideIdentification, NonDeliverableForwardNotificationV02.mmCounterpartySideIdentification);
 				trace_lazy = () -> TradePartyRole.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TradePartyIdentification3";
 				definition = "Entity involved in an activity.";
 			}

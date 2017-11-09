@@ -19,9 +19,11 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.PercentageRate;
 import com.tools20022.repository.entity.Quorum;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -98,11 +100,11 @@ public class QuorumQuantity1Choice {
 	 */
 	public static final MMMessageAttribute mmQuorumQuantity = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Quorum.mmQuantity;
+			businessElementTrace_lazy = () -> Quorum.mmQuantity;
 			componentContext_lazy = () -> QuorumQuantity1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "QrmQty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuorumQuantity";
 			definition = "Minimum quantity of securities required to hold a meeting.";
 			maxOccurs = 1;
@@ -149,11 +151,11 @@ public class QuorumQuantity1Choice {
 	 */
 	public static final MMMessageAttribute mmQuorumQuantityPercentage = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Quorum.mmPercentage;
+			businessElementTrace_lazy = () -> Quorum.mmPercentage;
 			componentContext_lazy = () -> QuorumQuantity1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "QrmQtyPctg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuorumQuantityPercentage";
 			definition = "Minimum quantity of securities, expressed as a percentage, required to hold a meeting.";
 			maxOccurs = 1;
@@ -165,10 +167,10 @@ public class QuorumQuantity1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.QuorumQuantity1Choice.mmQuorumQuantity, com.tools20022.repository.choice.QuorumQuantity1Choice.mmQuorumQuantityPercentage);
+				messageElement_lazy = () -> Arrays.asList(QuorumQuantity1Choice.mmQuorumQuantity, QuorumQuantity1Choice.mmQuorumQuantityPercentage);
 				trace_lazy = () -> Quorum.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "QuorumQuantity1Choice";
 				definition = "Choice of quorum quantity.";
 			}

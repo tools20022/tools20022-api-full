@@ -19,11 +19,13 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.PartyIdentification2Choice;
 import com.tools20022.repository.entity.CashAccount;
 import com.tools20022.repository.entity.Person;
 import com.tools20022.repository.entity.PostalAddress;
 import com.tools20022.repository.entity.SecuritiesTransfer;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -113,7 +115,7 @@ public class TransferOut4 {
 			componentContext_lazy = () -> TransferOut4.mmObject();
 			isDerived = false;
 			xmlTag = "Invstr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Investor";
 			definition = "Information identifying the investor, eg name, address, social security number and date of birth..";
 			maxOccurs = 1;
@@ -159,7 +161,7 @@ public class TransferOut4 {
 			componentContext_lazy = () -> TransferOut4.mmObject();
 			isDerived = false;
 			xmlTag = "InvstrAdr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestorAddress";
 			definition = "Information that locates the investor.";
 			maxOccurs = 1;
@@ -203,11 +205,11 @@ public class TransferOut4 {
 	 */
 	public static final MMMessageAssociationEnd mmClientAccount = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTransfer.mmAccount;
+			businessElementTrace_lazy = () -> SecuritiesTransfer.mmAccount;
 			componentContext_lazy = () -> TransferOut4.mmObject();
 			isDerived = false;
 			xmlTag = "ClntAcct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClientAccount";
 			definition = "Identification of an account owned by the investor at the old plan manager (account servicer).";
 			maxOccurs = 1;
@@ -256,7 +258,7 @@ public class TransferOut4 {
 			componentContext_lazy = () -> TransferOut4.mmObject();
 			isDerived = false;
 			xmlTag = "CshAcct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashAccount";
 			definition = "Identification of an account owned by the investor and held by the new plan manager to which a cash entry is made based on the transfer (sale) of asset(s).";
 			maxOccurs = 1;
@@ -300,7 +302,7 @@ public class TransferOut4 {
 			componentContext_lazy = () -> TransferOut4.mmObject();
 			isDerived = false;
 			xmlTag = "NewPlanMgr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewPlanManager";
 			definition = "Information related to the institution to which the proceeds of the sale of the financial instrument is to be deposited.";
 			maxOccurs = 1;
@@ -343,11 +345,11 @@ public class TransferOut4 {
 	 */
 	public static final MMMessageAssociationEnd mmProductTransfer = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTransfer.mmTransferredQuantity;
+			businessElementTrace_lazy = () -> SecuritiesTransfer.mmTransferredQuantity;
 			componentContext_lazy = () -> TransferOut4.mmObject();
 			isDerived = false;
 			xmlTag = "PdctTrf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProductTransfer";
 			definition = "Provides information related to the asset(s) transferred.";
 			minOccurs = 0;
@@ -388,7 +390,7 @@ public class TransferOut4 {
 			componentContext_lazy = () -> TransferOut4.mmObject();
 			isDerived = false;
 			xmlTag = "Xtnsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Extension";
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
 			minOccurs = 0;
@@ -400,12 +402,11 @@ public class TransferOut4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransferOut4.mmInvestor, com.tools20022.repository.msg.TransferOut4.mmInvestorAddress, com.tools20022.repository.msg.TransferOut4.mmClientAccount,
-						com.tools20022.repository.msg.TransferOut4.mmCashAccount, com.tools20022.repository.msg.TransferOut4.mmNewPlanManager, com.tools20022.repository.msg.TransferOut4.mmProductTransfer,
-						com.tools20022.repository.msg.TransferOut4.mmExtension);
+				messageElement_lazy = () -> Arrays.asList(TransferOut4.mmInvestor, TransferOut4.mmInvestorAddress, TransferOut4.mmClientAccount, TransferOut4.mmCashAccount, TransferOut4.mmNewPlanManager, TransferOut4.mmProductTransfer,
+						TransferOut4.mmExtension);
 				trace_lazy = () -> SecuritiesTransfer.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "TransferOut4";
 				definition = "Information about the transfer to be cancelled.";
 			}

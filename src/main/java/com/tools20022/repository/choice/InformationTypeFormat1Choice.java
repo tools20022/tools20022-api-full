@@ -20,7 +20,9 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CorporateActionInformationType1Code;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification20;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -113,10 +115,10 @@ public class InformationTypeFormat1Choice {
 			componentContext_lazy = () -> InformationTypeFormat1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Cd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Standard code to specify the information type required.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.InformationTypeFormat4Choice.mmCode);
+			nextVersions_lazy = () -> Arrays.asList(InformationTypeFormat4Choice.mmCode);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CorporateActionInformationType1Code.mmObject();
@@ -163,10 +165,10 @@ public class InformationTypeFormat1Choice {
 			componentContext_lazy = () -> InformationTypeFormat1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Proprietary identification of the information type.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.InformationTypeFormat4Choice.mmProprietary);
+			nextVersions_lazy = () -> Arrays.asList(InformationTypeFormat4Choice.mmProprietary);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -177,9 +179,9 @@ public class InformationTypeFormat1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.InformationTypeFormat1Choice.mmCode, com.tools20022.repository.choice.InformationTypeFormat1Choice.mmProprietary);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(InformationTypeFormat1Choice.mmCode, InformationTypeFormat1Choice.mmProprietary);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InformationTypeFormat1Choice";
 				definition = "Choice between a standard code or proprietary code to specify the information type format required.";
 				nextVersions_lazy = () -> Arrays.asList(InformationTypeFormat4Choice.mmObject());

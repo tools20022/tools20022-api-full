@@ -19,11 +19,13 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ActiveCurrencyCode;
 import com.tools20022.repository.codeset.ATMMediaType1Code;
 import com.tools20022.repository.datatype.ImpliedCurrencyAndAmount;
 import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.entity.ATMTotal;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -103,7 +105,7 @@ public class ATMTotals1 {
 			componentContext_lazy = () -> ATMTotals1.mmObject();
 			isDerived = false;
 			xmlTag = "MdiaTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MediaType";
 			definition = "Type of media inside the cassette.";
 			maxOccurs = 1;
@@ -146,11 +148,11 @@ public class ATMTotals1 {
 	 */
 	public static final MMMessageAttribute mmCurrency = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ATMTotal.mmCurrency;
+			businessElementTrace_lazy = () -> ATMTotal.mmCurrency;
 			componentContext_lazy = () -> ATMTotals1.mmObject();
 			isDerived = false;
 			xmlTag = "Ccy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Currency";
 			definition = "Currency of the totals.";
 			maxOccurs = 1;
@@ -196,11 +198,11 @@ public class ATMTotals1 {
 	 */
 	public static final MMMessageAttribute mmATMBalance = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ATMTotal.mmATMBalance;
+			businessElementTrace_lazy = () -> ATMTotal.mmATMBalance;
 			componentContext_lazy = () -> ATMTotals1.mmObject();
 			isDerived = false;
 			xmlTag = "ATMBal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ATMBalance";
 			definition = "Total balance of the ATM including reject cassette, but excluding the retract cassette.";
 			maxOccurs = 1;
@@ -243,11 +245,11 @@ public class ATMTotals1 {
 	 */
 	public static final MMMessageAttribute mmATMCurrent = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ATMTotal.mmATMCurrent;
+			businessElementTrace_lazy = () -> ATMTotal.mmATMCurrent;
 			componentContext_lazy = () -> ATMTotals1.mmObject();
 			isDerived = false;
 			xmlTag = "ATMCur";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ATMCurrent";
 			definition = "Available amount for dispense in the ATM.";
 			maxOccurs = 1;
@@ -290,11 +292,11 @@ public class ATMTotals1 {
 	 */
 	public static final MMMessageAttribute mmATMBalanceNumber = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ATMTotal.mmATMBalanceNumber;
+			businessElementTrace_lazy = () -> ATMTotal.mmATMBalanceNumber;
 			componentContext_lazy = () -> ATMTotals1.mmObject();
 			isDerived = false;
 			xmlTag = "ATMBalNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ATMBalanceNumber";
 			definition = "Total number of units for non-valued media, including reject cassette.";
 			maxOccurs = 1;
@@ -337,11 +339,11 @@ public class ATMTotals1 {
 	 */
 	public static final MMMessageAttribute mmATMCurrentNumber = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ATMTotal.mmATMCurrentNumber;
+			businessElementTrace_lazy = () -> ATMTotal.mmATMCurrentNumber;
 			componentContext_lazy = () -> ATMTotals1.mmObject();
 			isDerived = false;
 			xmlTag = "ATMCurNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ATMCurrentNumber";
 			definition = "Total number of units for non-valued media, excluding reject cassette.";
 			maxOccurs = 1;
@@ -353,11 +355,10 @@ public class ATMTotals1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMTotals1.mmMediaType, com.tools20022.repository.msg.ATMTotals1.mmCurrency, com.tools20022.repository.msg.ATMTotals1.mmATMBalance,
-						com.tools20022.repository.msg.ATMTotals1.mmATMCurrent, com.tools20022.repository.msg.ATMTotals1.mmATMBalanceNumber, com.tools20022.repository.msg.ATMTotals1.mmATMCurrentNumber);
+				messageElement_lazy = () -> Arrays.asList(ATMTotals1.mmMediaType, ATMTotals1.mmCurrency, ATMTotals1.mmATMBalance, ATMTotals1.mmATMCurrent, ATMTotals1.mmATMBalanceNumber, ATMTotals1.mmATMCurrentNumber);
 				trace_lazy = () -> ATMTotal.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ATMTotals1";
 				definition = "Current totals of the ATM.";
 			}

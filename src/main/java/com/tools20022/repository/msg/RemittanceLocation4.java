@@ -20,8 +20,10 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.ContactPoint;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -106,7 +108,7 @@ public class RemittanceLocation4 {
 			componentContext_lazy = () -> RemittanceLocation4.mmObject();
 			isDerived = false;
 			xmlTag = "RmtId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RemittanceIdentification";
 			definition = "Unique identification, as assigned by the initiating party, to unambiguously identify the remittance information sent separately from the payment instruction, such as a remittance advice.";
 			maxOccurs = 1;
@@ -155,7 +157,7 @@ public class RemittanceLocation4 {
 			componentContext_lazy = () -> RemittanceLocation4.mmObject();
 			isDerived = false;
 			xmlTag = "RmtLctnDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RemittanceLocationDetails";
 			definition = "Set of elements used to provide information on the location and/or delivery of the remittance information.";
 			minOccurs = 0;
@@ -167,10 +169,10 @@ public class RemittanceLocation4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RemittanceLocation4.mmRemittanceIdentification, com.tools20022.repository.msg.RemittanceLocation4.mmRemittanceLocationDetails);
+				messageElement_lazy = () -> Arrays.asList(RemittanceLocation4.mmRemittanceIdentification, RemittanceLocation4.mmRemittanceLocationDetails);
 				trace_lazy = () -> ContactPoint.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RemittanceLocation4";
 				definition = "Set of elements used to provide information on the remittance advice.";
 				previousVersion_lazy = () -> RemittanceLocation2.mmObject();

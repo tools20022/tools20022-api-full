@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.DTCCorporateActionInstructionTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -89,7 +91,7 @@ public class DTCCorporateActionInstructionType1Code extends DTCCorporateActionIn
 	 */
 	public static final MMCode mmElectionInstruction = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ElectionInstruction";
 			owner_lazy = () -> DTCCorporateActionInstructionType1Code.mmObject();
 		}
@@ -112,7 +114,7 @@ public class DTCCorporateActionInstructionType1Code extends DTCCorporateActionIn
 	 */
 	public static final MMCode mmProtectInstruction = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProtectInstruction";
 			owner_lazy = () -> DTCCorporateActionInstructionType1Code.mmObject();
 		}
@@ -135,7 +137,7 @@ public class DTCCorporateActionInstructionType1Code extends DTCCorporateActionIn
 	 */
 	public static final MMCode mmCoverProtectSystem = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoverProtectSystem";
 			owner_lazy = () -> DTCCorporateActionInstructionType1Code.mmObject();
 		}
@@ -158,7 +160,7 @@ public class DTCCorporateActionInstructionType1Code extends DTCCorporateActionIn
 	 */
 	public static final MMCode mmCoverProtectAgent = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoverProtectAgent";
 			owner_lazy = () -> DTCCorporateActionInstructionType1Code.mmObject();
 		}
@@ -167,13 +169,13 @@ public class DTCCorporateActionInstructionType1Code extends DTCCorporateActionIn
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ELCT");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DTCCorporateActionInstructionType1Code";
 				definition = "Specifies the type of the corporate action instruction.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DTCCorporateActionInstructionType1Code.mmElectionInstruction, com.tools20022.repository.codeset.DTCCorporateActionInstructionType1Code.mmProtectInstruction,
-						com.tools20022.repository.codeset.DTCCorporateActionInstructionType1Code.mmCoverProtectSystem, com.tools20022.repository.codeset.DTCCorporateActionInstructionType1Code.mmCoverProtectAgent);
+				code_lazy = () -> Arrays.asList(DTCCorporateActionInstructionType1Code.mmElectionInstruction, DTCCorporateActionInstructionType1Code.mmProtectInstruction, DTCCorporateActionInstructionType1Code.mmCoverProtectSystem,
+						DTCCorporateActionInstructionType1Code.mmCoverProtectAgent);
 				trace_lazy = () -> DTCCorporateActionInstructionTypeCode.mmObject();
 			}
 		});

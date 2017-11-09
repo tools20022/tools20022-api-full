@@ -19,7 +19,9 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Number;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -110,7 +112,7 @@ public class ATMSecurityConfiguration2 {
 			componentContext_lazy = () -> ATMSecurityConfiguration2.mmObject();
 			isDerived = false;
 			xmlTag = "MaxSmmtrcKey";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaximumSymmetricKey";
 			definition = "Maximum number of symmetric keys the security module is able to manage.";
 			maxOccurs = 1;
@@ -153,7 +155,7 @@ public class ATMSecurityConfiguration2 {
 			componentContext_lazy = () -> ATMSecurityConfiguration2.mmObject();
 			isDerived = false;
 			xmlTag = "MaxAsmmtrcKey";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaximumAsymmetricKey";
 			definition = "Maximum number of asymmetric keys the security module is able to manage.";
 			maxOccurs = 1;
@@ -197,7 +199,7 @@ public class ATMSecurityConfiguration2 {
 			componentContext_lazy = () -> ATMSecurityConfiguration2.mmObject();
 			isDerived = false;
 			xmlTag = "MaxRSAKeyLngth";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaximumRSAKeyLength";
 			definition = "Maximum RSA key length (in number of bytes), the security module is able to manage.";
 			maxOccurs = 1;
@@ -241,7 +243,7 @@ public class ATMSecurityConfiguration2 {
 			componentContext_lazy = () -> ATMSecurityConfiguration2.mmObject();
 			isDerived = false;
 			xmlTag = "MaxRootKeyLngth";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaximumRootKeyLength";
 			definition = "Maximum RSA root key length (in number of bytes), the security module is able to manage, if different from the maximum RSA key length.";
 			maxOccurs = 1;
@@ -253,10 +255,10 @@ public class ATMSecurityConfiguration2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMSecurityConfiguration2.mmMaximumSymmetricKey, com.tools20022.repository.msg.ATMSecurityConfiguration2.mmMaximumAsymmetricKey,
-						com.tools20022.repository.msg.ATMSecurityConfiguration2.mmMaximumRSAKeyLength, com.tools20022.repository.msg.ATMSecurityConfiguration2.mmMaximumRootKeyLength);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(ATMSecurityConfiguration2.mmMaximumSymmetricKey, ATMSecurityConfiguration2.mmMaximumAsymmetricKey, ATMSecurityConfiguration2.mmMaximumRSAKeyLength,
+						ATMSecurityConfiguration2.mmMaximumRootKeyLength);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ATMSecurityConfiguration2";
 				definition = "Configuration of the cryptographic keys.";
 				nextVersions_lazy = () -> Arrays.asList(ATMSecurityConfiguration3.mmObject());

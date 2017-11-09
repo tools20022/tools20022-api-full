@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CallInCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -84,7 +86,7 @@ public class CallIn1Code extends CallInCode {
 	 */
 	public static final MMCode mmCallForAccountValue = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CallForAccountValue";
 			owner_lazy = () -> CallIn1Code.mmObject();
 		}
@@ -106,7 +108,7 @@ public class CallIn1Code extends CallInCode {
 	 */
 	public static final MMCode mmCallForSettlement = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CallForSettlement";
 			owner_lazy = () -> CallIn1Code.mmObject();
 		}
@@ -128,7 +130,7 @@ public class CallIn1Code extends CallInCode {
 	 */
 	public static final MMCode mmCallForCurrencyClose = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CallForCurrencyClose";
 			owner_lazy = () -> CallIn1Code.mmObject();
 		}
@@ -137,13 +139,12 @@ public class CallIn1Code extends CallInCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CFAV");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CallIn1Code";
 				definition = "Specifies the type of pay-in call report.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CallIn1Code.mmCallForAccountValue, com.tools20022.repository.codeset.CallIn1Code.mmCallForSettlement,
-						com.tools20022.repository.codeset.CallIn1Code.mmCallForCurrencyClose);
+				code_lazy = () -> Arrays.asList(CallIn1Code.mmCallForAccountValue, CallIn1Code.mmCallForSettlement, CallIn1Code.mmCallForCurrencyClose);
 				trace_lazy = () -> CallInCode.mmObject();
 			}
 		});

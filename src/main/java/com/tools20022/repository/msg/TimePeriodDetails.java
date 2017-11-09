@@ -19,8 +19,10 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ISOTime;
 import com.tools20022.repository.entity.TimePeriod;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -97,11 +99,11 @@ public class TimePeriodDetails {
 	 */
 	public static final MMMessageAttribute mmFromTime = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TimePeriod.mmFromTime;
+			businessElementTrace_lazy = () -> TimePeriod.mmFromTime;
 			componentContext_lazy = () -> TimePeriodDetails.mmObject();
 			isDerived = false;
 			xmlTag = "FrTm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FromTime";
 			definition = "Time at which the time span starts.";
 			maxOccurs = 1;
@@ -144,11 +146,11 @@ public class TimePeriodDetails {
 	 */
 	public static final MMMessageAttribute mmToTime = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TimePeriod.mmToTime;
+			businessElementTrace_lazy = () -> TimePeriod.mmToTime;
 			componentContext_lazy = () -> TimePeriodDetails.mmObject();
 			isDerived = false;
 			xmlTag = "ToTm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ToTime";
 			definition = "Time at which the time span ends.";
 			maxOccurs = 1;
@@ -160,10 +162,10 @@ public class TimePeriodDetails {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TimePeriodDetails.mmFromTime, com.tools20022.repository.msg.TimePeriodDetails.mmToTime);
+				messageElement_lazy = () -> Arrays.asList(TimePeriodDetails.mmFromTime, TimePeriodDetails.mmToTime);
 				trace_lazy = () -> TimePeriod.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TimePeriodDetails";
 				definition = "Particular time span specified between a start time and an end time. The time period cannot exceed 24 hours.";
 			}

@@ -19,7 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.colr.CollateralManagementCancellationStatusV03;
+import com.tools20022.repository.area.colr.CollateralManagementCancellationStatusV04;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -102,7 +106,7 @@ public class Reference16 {
 			componentContext_lazy = () -> Reference16.mmObject();
 			isDerived = false;
 			xmlTag = "CollMsgCxlReqId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralMessageCancellationRequestIdentification";
 			definition = "Identification of the collateral message cancellation request.";
 			maxOccurs = 1;
@@ -114,11 +118,10 @@ public class Reference16 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Reference16.mmCollateralMessageCancellationRequestIdentification);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.colr.CollateralManagementCancellationStatusV03.mmReference,
-						com.tools20022.repository.area.colr.CollateralManagementCancellationStatusV04.mmReference);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(Reference16.mmCollateralMessageCancellationRequestIdentification);
+				messageBuildingBlock_lazy = () -> Arrays.asList(CollateralManagementCancellationStatusV03.mmReference, CollateralManagementCancellationStatusV04.mmReference);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Reference16";
 				definition = "Provides the identification of the collateral message cancellation request.";
 			}

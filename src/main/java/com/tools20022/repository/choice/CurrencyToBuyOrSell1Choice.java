@@ -19,8 +19,10 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ActiveCurrencyCode;
 import com.tools20022.repository.entity.SecuritiesSettlement;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -101,11 +103,11 @@ public class CurrencyToBuyOrSell1Choice {
 	 */
 	public static final MMMessageAttribute mmCurrencyToBuy = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmCurrencyToBuy;
+			businessElementTrace_lazy = () -> SecuritiesSettlement.mmCurrencyToBuy;
 			componentContext_lazy = () -> CurrencyToBuyOrSell1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "CcyToBuy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrencyToBuy";
 			definition = "Account servicer is instructed to buy the indicated currency after the receipt of cash proceeds.";
 			maxOccurs = 1;
@@ -152,11 +154,11 @@ public class CurrencyToBuyOrSell1Choice {
 	 */
 	public static final MMMessageAttribute mmCurrencyToSell = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmCurrencyToSell;
+			businessElementTrace_lazy = () -> SecuritiesSettlement.mmCurrencyToSell;
 			componentContext_lazy = () -> CurrencyToBuyOrSell1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "CcyToSell";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrencyToSell";
 			definition = "Account servicer is instructed to sell the indicated currency in order to obtain the necessary currency to fund the transaction.";
 			maxOccurs = 1;
@@ -168,10 +170,10 @@ public class CurrencyToBuyOrSell1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CurrencyToBuyOrSell1Choice.mmCurrencyToBuy, com.tools20022.repository.choice.CurrencyToBuyOrSell1Choice.mmCurrencyToSell);
+				messageElement_lazy = () -> Arrays.asList(CurrencyToBuyOrSell1Choice.mmCurrencyToBuy, CurrencyToBuyOrSell1Choice.mmCurrencyToSell);
 				trace_lazy = () -> SecuritiesSettlement.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CurrencyToBuyOrSell1Choice";
 				definition = "Choice of counterparty type.";
 			}

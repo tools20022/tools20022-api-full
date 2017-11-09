@@ -20,10 +20,12 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.DataFormat2Choice;
 import com.tools20022.repository.choice.PartyIdentification2Choice;
 import com.tools20022.repository.codeset.ActiveOrHistoricCurrencyCode;
 import com.tools20022.repository.codeset.CountryCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -129,10 +131,10 @@ public class BreakdownByUserDefinedParameter1 {
 			componentContext_lazy = () -> BreakdownByUserDefinedParameter1.mmObject();
 			isDerived = false;
 			xmlTag = "Pty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Party";
 			definition = "Party for which the cash flow is being reported.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BreakdownByUserDefinedParameter3.mmParty);
+			nextVersions_lazy = () -> Arrays.asList(BreakdownByUserDefinedParameter3.mmParty);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification2Choice.mmObject();
@@ -179,10 +181,10 @@ public class BreakdownByUserDefinedParameter1 {
 			componentContext_lazy = () -> BreakdownByUserDefinedParameter1.mmObject();
 			isDerived = false;
 			xmlTag = "Ctry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Country";
 			definition = "Country for which the cash flow is being reported.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BreakdownByUserDefinedParameter3.mmCountry);
+			nextVersions_lazy = () -> Arrays.asList(BreakdownByUserDefinedParameter3.mmCountry);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CountryCode.mmObject();
@@ -230,10 +232,10 @@ public class BreakdownByUserDefinedParameter1 {
 			componentContext_lazy = () -> BreakdownByUserDefinedParameter1.mmObject();
 			isDerived = false;
 			xmlTag = "Ccy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Currency";
 			definition = "Currency for which the cash flow is being reported.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BreakdownByUserDefinedParameter3.mmCurrency);
+			nextVersions_lazy = () -> Arrays.asList(BreakdownByUserDefinedParameter3.mmCurrency);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyCode.mmObject();
@@ -281,10 +283,10 @@ public class BreakdownByUserDefinedParameter1 {
 			componentContext_lazy = () -> BreakdownByUserDefinedParameter1.mmObject();
 			isDerived = false;
 			xmlTag = "UsrDfnd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UserDefined";
 			definition = "Parameter for which the cash flow is being reported.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BreakdownByUserDefinedParameter3.mmUserDefined);
+			nextVersions_lazy = () -> Arrays.asList(BreakdownByUserDefinedParameter3.mmUserDefined);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DataFormat2Choice.mmObject();
@@ -333,10 +335,10 @@ public class BreakdownByUserDefinedParameter1 {
 			componentContext_lazy = () -> BreakdownByUserDefinedParameter1.mmObject();
 			isDerived = false;
 			xmlTag = "CshInFcst";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashInForecast";
 			definition = "Cash movement into the fund as a result of investment funds transactions, eg, subscriptions or switch-in.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BreakdownByUserDefinedParameter3.mmCashInForecast);
+			nextVersions_lazy = () -> Arrays.asList(BreakdownByUserDefinedParameter3.mmCashInForecast);
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.CashInForecast3.mmObject();
@@ -385,10 +387,10 @@ public class BreakdownByUserDefinedParameter1 {
 			componentContext_lazy = () -> BreakdownByUserDefinedParameter1.mmObject();
 			isDerived = false;
 			xmlTag = "CshOutFcst";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashOutForecast";
 			definition = "Cash movement out of the fund as a result of investment funds transactions, eg, redemptions or switch-out.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BreakdownByUserDefinedParameter3.mmCashOutForecast);
+			nextVersions_lazy = () -> Arrays.asList(BreakdownByUserDefinedParameter3.mmCashOutForecast);
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.CashOutForecast3.mmObject();
@@ -437,10 +439,10 @@ public class BreakdownByUserDefinedParameter1 {
 			componentContext_lazy = () -> BreakdownByUserDefinedParameter1.mmObject();
 			isDerived = false;
 			xmlTag = "NetCshFcst";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetCashForecast";
 			definition = "Net cash as a result of the cash-in and cash-out flows specified for the user defined parameter.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BreakdownByUserDefinedParameter3.mmNetCashForecast);
+			nextVersions_lazy = () -> Arrays.asList(BreakdownByUserDefinedParameter3.mmNetCashForecast);
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.NetCashForecast2.mmObject();
@@ -450,12 +452,10 @@ public class BreakdownByUserDefinedParameter1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BreakdownByUserDefinedParameter1.mmParty, com.tools20022.repository.msg.BreakdownByUserDefinedParameter1.mmCountry,
-						com.tools20022.repository.msg.BreakdownByUserDefinedParameter1.mmCurrency, com.tools20022.repository.msg.BreakdownByUserDefinedParameter1.mmUserDefined,
-						com.tools20022.repository.msg.BreakdownByUserDefinedParameter1.mmCashInForecast, com.tools20022.repository.msg.BreakdownByUserDefinedParameter1.mmCashOutForecast,
-						com.tools20022.repository.msg.BreakdownByUserDefinedParameter1.mmNetCashForecast);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(BreakdownByUserDefinedParameter1.mmParty, BreakdownByUserDefinedParameter1.mmCountry, BreakdownByUserDefinedParameter1.mmCurrency, BreakdownByUserDefinedParameter1.mmUserDefined,
+						BreakdownByUserDefinedParameter1.mmCashInForecast, BreakdownByUserDefinedParameter1.mmCashOutForecast, BreakdownByUserDefinedParameter1.mmNetCashForecast);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "BreakdownByUserDefinedParameter1";
 				definition = "Specifies the cash-in and cash-out flows by a user defined parameter/s.";
 				nextVersions_lazy = () -> Arrays.asList(BreakdownByUserDefinedParameter3.mmObject());

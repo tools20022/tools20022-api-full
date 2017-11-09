@@ -20,7 +20,9 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.Response2Code;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -101,10 +103,10 @@ public class ATMTransaction28 {
 			componentContext_lazy = () -> ATMTransaction28.mmObject();
 			isDerived = false;
 			xmlTag = "TxId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionIdentification";
 			definition = "Identification of the transaction assigned by the ATM.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMTransaction22.mmTransactionIdentification;
+			previousVersion_lazy = () -> ATMTransaction22.mmTransactionIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -150,10 +152,10 @@ public class ATMTransaction28 {
 			componentContext_lazy = () -> ATMTransaction28.mmObject();
 			isDerived = false;
 			xmlTag = "Rspn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Response";
 			definition = "Response to the advice.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMTransaction22.mmTransactionResponse;
+			previousVersion_lazy = () -> ATMTransaction22.mmTransactionResponse;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Response2Code.mmObject();
@@ -196,10 +198,10 @@ public class ATMTransaction28 {
 			componentContext_lazy = () -> ATMTransaction28.mmObject();
 			isDerived = false;
 			xmlTag = "Cmd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Command";
 			definition = "Maintenance command to perform on the ATM.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMTransaction22.mmCommand;
+			previousVersion_lazy = () -> ATMTransaction22.mmCommand;
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.ATMCommand7.mmObject();
@@ -209,10 +211,9 @@ public class ATMTransaction28 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMTransaction28.mmTransactionIdentification, com.tools20022.repository.msg.ATMTransaction28.mmResponse,
-						com.tools20022.repository.msg.ATMTransaction28.mmCommand);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(ATMTransaction28.mmTransactionIdentification, ATMTransaction28.mmResponse, ATMTransaction28.mmCommand);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ATMTransaction28";
 				definition = "Acknowledgement of the exception advice.";
 				previousVersion_lazy = () -> ATMTransaction22.mmObject();

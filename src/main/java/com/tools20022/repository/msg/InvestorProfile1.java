@@ -19,8 +19,10 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.InvestorProfileStatus1Choice;
 import com.tools20022.repository.choice.ProfileType1Choice;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -96,7 +98,7 @@ public class InvestorProfile1 {
 			componentContext_lazy = () -> InvestorProfile1.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Type of profile.";
 			maxOccurs = 1;
@@ -138,7 +140,7 @@ public class InvestorProfile1 {
 			componentContext_lazy = () -> InvestorProfile1.mmObject();
 			isDerived = false;
 			xmlTag = "Sts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Status";
 			definition = "Status of the profile. ";
 			maxOccurs = 1;
@@ -179,7 +181,7 @@ public class InvestorProfile1 {
 			componentContext_lazy = () -> InvestorProfile1.mmObject();
 			isDerived = false;
 			xmlTag = "Trsr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Treasury";
 			definition = "Information about the profile for treasury trading. ";
 			maxOccurs = 1;
@@ -222,7 +224,7 @@ public class InvestorProfile1 {
 			componentContext_lazy = () -> InvestorProfile1.mmObject();
 			isDerived = false;
 			xmlTag = "HghFrqcyTradg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HighFrequencyTrading";
 			definition = "Information about the profile for high frequency trading. ";
 			maxOccurs = 1;
@@ -263,7 +265,7 @@ public class InvestorProfile1 {
 			componentContext_lazy = () -> InvestorProfile1.mmObject();
 			isDerived = false;
 			xmlTag = "MktMakr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketMaker";
 			definition = "Information about the profile for a market marker. ";
 			maxOccurs = 1;
@@ -276,10 +278,9 @@ public class InvestorProfile1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestorProfile1.mmType, com.tools20022.repository.msg.InvestorProfile1.mmStatus, com.tools20022.repository.msg.InvestorProfile1.mmTreasury,
-						com.tools20022.repository.msg.InvestorProfile1.mmHighFrequencyTrading, com.tools20022.repository.msg.InvestorProfile1.mmMarketMaker);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(InvestorProfile1.mmType, InvestorProfile1.mmStatus, InvestorProfile1.mmTreasury, InvestorProfile1.mmHighFrequencyTrading, InvestorProfile1.mmMarketMaker);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InvestorProfile1";
 				definition = "Information about actions that may be taken on an account.";
 			}

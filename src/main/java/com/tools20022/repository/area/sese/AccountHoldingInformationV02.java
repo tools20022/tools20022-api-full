@@ -20,6 +20,7 @@ package com.tools20022.repository.area.sese;
 import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.SecuritiesSettlementArchive;
 import com.tools20022.repository.choice.PartyIdentification2Choice;
 import com.tools20022.repository.codeset.BusinessFlowDirectionType1Code;
@@ -41,6 +42,9 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code sese.018.001.02}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.SecuritiesSettlementArchive
@@ -110,9 +114,6 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code sese.018.001.02}</li>
- * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -166,7 +167,7 @@ public class AccountHoldingInformationV02 {
 	public static final MMMessageBuildingBlock mmMessageReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "MsgRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageReference";
 			definition = "Identifies the message.";
 			maxOccurs = 1;
@@ -201,7 +202,7 @@ public class AccountHoldingInformationV02 {
 	public static final MMMessageBuildingBlock mmPoolReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "PoolRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PoolReference";
 			definition = "Collective reference identifying a set of messages.";
 			maxOccurs = 1;
@@ -236,7 +237,7 @@ public class AccountHoldingInformationV02 {
 	public static final MMMessageBuildingBlock mmPreviousReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "PrvsRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousReference";
 			definition = "Reference to a linked message that was previously sent.";
 			maxOccurs = 1;
@@ -272,7 +273,7 @@ public class AccountHoldingInformationV02 {
 	public static final MMMessageBuildingBlock mmRelatedReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "RltdRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedReference";
 			definition = "Reference to a linked message that was previously received.";
 			maxOccurs = 1;
@@ -310,7 +311,7 @@ public class AccountHoldingInformationV02 {
 	public static final MMMessageBuildingBlock mmBusinessFlowDirectionType = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "BizFlowDrctnTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BusinessFlowDirectionType";
 			definition = "Identifies the business flow direction type (assets to be delivered or received).";
 			maxOccurs = 1;
@@ -348,7 +349,7 @@ public class AccountHoldingInformationV02 {
 	public static final MMMessageBuildingBlock mmPrimaryIndividualInvestor = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "PmryIndvInvstr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PrimaryIndividualInvestor";
 			definition = "Information identifying the primary individual investor, eg, name, address, social security number and date of birth.";
 			maxOccurs = 1;
@@ -386,7 +387,7 @@ public class AccountHoldingInformationV02 {
 	public static final MMMessageBuildingBlock mmSecondaryIndividualInvestor = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "ScndryIndvInvstr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecondaryIndividualInvestor";
 			definition = "Information identifying the secondary individual investor, eg, name, address, social security number and date of birth.";
 			maxOccurs = 1;
@@ -424,7 +425,7 @@ public class AccountHoldingInformationV02 {
 	public static final MMMessageBuildingBlock mmOtherIndividualInvestor = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "OthrIndvInvstr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherIndividualInvestor";
 			definition = "Information identifying other individual investors, eg, name, address, social security number and date of birth.";
 			minOccurs = 0;
@@ -460,7 +461,7 @@ public class AccountHoldingInformationV02 {
 	public static final MMMessageBuildingBlock mmPrimaryCorporateInvestor = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "PmryCorpInvstr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PrimaryCorporateInvestor";
 			definition = "Information identifying the primary corporate investor, eg, name and address.";
 			maxOccurs = 1;
@@ -497,7 +498,7 @@ public class AccountHoldingInformationV02 {
 	public static final MMMessageBuildingBlock mmSecondaryCorporateInvestor = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "ScndryCorpInvstr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecondaryCorporateInvestor";
 			definition = "Information identifying the secondary corporate investor, eg, name and address.";
 			maxOccurs = 1;
@@ -534,7 +535,7 @@ public class AccountHoldingInformationV02 {
 	public static final MMMessageBuildingBlock mmOtherCorporateInvestor = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "OthrCorpInvstr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherCorporateInvestor";
 			definition = "Information identifying the other corporate investors, eg, name and address.";
 			minOccurs = 0;
@@ -570,7 +571,7 @@ public class AccountHoldingInformationV02 {
 	public static final MMMessageBuildingBlock mmTransferorAccount = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "TrfrAcct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransferorAccount";
 			definition = "Identification of an account owned by the investor at the old plan manager (account servicer).";
 			maxOccurs = 1;
@@ -607,7 +608,7 @@ public class AccountHoldingInformationV02 {
 	public static final MMMessageBuildingBlock mmNomineeAccount = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "NmneeAcct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NomineeAccount";
 			definition = "Account held in the name of a party that is not the name of the beneficial owner of the shares.";
 			maxOccurs = 1;
@@ -645,7 +646,7 @@ public class AccountHoldingInformationV02 {
 	public static final MMMessageBuildingBlock mmTransferee = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Trfee";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Transferee";
 			definition = "Information related to the institution to which the financial instrument is to be transferred.";
 			maxOccurs = 1;
@@ -680,7 +681,7 @@ public class AccountHoldingInformationV02 {
 	public static final MMMessageBuildingBlock mmProductTransfer = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "PdctTrf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProductTransfer";
 			definition = "Provides information related to the asset(s) transferred.";
 			minOccurs = 1;
@@ -716,7 +717,7 @@ public class AccountHoldingInformationV02 {
 	public static final MMMessageBuildingBlock mmExtension = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Xtnsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Extension";
 			definition = "Additional information that can not be captured in the structured fields and/or any other specific block. ";
 			minOccurs = 0;
@@ -727,7 +728,7 @@ public class AccountHoldingInformationV02 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AccountHoldingInformationV02";
 				definition = "Scope\r\nAn executing party, eg, a (old) plan manager (Transferor), sends the AccountHoldingInformation message to the instructing party, eg, a (new) plan manager (Transferee), to provide information about financial instruments held on behalf of a client.\r\nUsage\r\nThe AccountHoldingInformation message is used to provide information about one or more ISA or portfolio products held in a client's account.";
 				nextVersions_lazy = () -> Arrays.asList(AccountHoldingInformationV03.mmObject());
@@ -736,14 +737,11 @@ public class AccountHoldingInformationV02 {
 				rootElement = "Document";
 				xmlTag = "AcctHldgInf";
 				businessArea_lazy = () -> SecuritiesSettlementArchive.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.AccountHoldingInformationV02.mmMessageReference, com.tools20022.repository.area.sese.AccountHoldingInformationV02.mmPoolReference,
-						com.tools20022.repository.area.sese.AccountHoldingInformationV02.mmPreviousReference, com.tools20022.repository.area.sese.AccountHoldingInformationV02.mmRelatedReference,
-						com.tools20022.repository.area.sese.AccountHoldingInformationV02.mmBusinessFlowDirectionType, com.tools20022.repository.area.sese.AccountHoldingInformationV02.mmPrimaryIndividualInvestor,
-						com.tools20022.repository.area.sese.AccountHoldingInformationV02.mmSecondaryIndividualInvestor, com.tools20022.repository.area.sese.AccountHoldingInformationV02.mmOtherIndividualInvestor,
-						com.tools20022.repository.area.sese.AccountHoldingInformationV02.mmPrimaryCorporateInvestor, com.tools20022.repository.area.sese.AccountHoldingInformationV02.mmSecondaryCorporateInvestor,
-						com.tools20022.repository.area.sese.AccountHoldingInformationV02.mmOtherCorporateInvestor, com.tools20022.repository.area.sese.AccountHoldingInformationV02.mmTransferorAccount,
-						com.tools20022.repository.area.sese.AccountHoldingInformationV02.mmNomineeAccount, com.tools20022.repository.area.sese.AccountHoldingInformationV02.mmTransferee,
-						com.tools20022.repository.area.sese.AccountHoldingInformationV02.mmProductTransfer, com.tools20022.repository.area.sese.AccountHoldingInformationV02.mmExtension);
+				messageBuildingBlock_lazy = () -> Arrays.asList(AccountHoldingInformationV02.mmMessageReference, AccountHoldingInformationV02.mmPoolReference, AccountHoldingInformationV02.mmPreviousReference,
+						AccountHoldingInformationV02.mmRelatedReference, AccountHoldingInformationV02.mmBusinessFlowDirectionType, AccountHoldingInformationV02.mmPrimaryIndividualInvestor,
+						AccountHoldingInformationV02.mmSecondaryIndividualInvestor, AccountHoldingInformationV02.mmOtherIndividualInvestor, AccountHoldingInformationV02.mmPrimaryCorporateInvestor,
+						AccountHoldingInformationV02.mmSecondaryCorporateInvestor, AccountHoldingInformationV02.mmOtherCorporateInvestor, AccountHoldingInformationV02.mmTransferorAccount, AccountHoldingInformationV02.mmNomineeAccount,
+						AccountHoldingInformationV02.mmTransferee, AccountHoldingInformationV02.mmProductTransfer, AccountHoldingInformationV02.mmExtension);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "sese";

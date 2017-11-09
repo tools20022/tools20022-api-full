@@ -20,10 +20,13 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.catm.*;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Max6Text;
 import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.datatype.TrueFalseIndicator;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -134,10 +137,10 @@ public class Header27 {
 			componentContext_lazy = () -> Header27.mmObject();
 			isDerived = false;
 			xmlTag = "DwnldTrf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DownloadTransfer";
 			definition = "Indicates if the file transfer is a download or an upload.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Header14.mmDownloadTransfer;
+			previousVersion_lazy = () -> Header14.mmDownloadTransfer;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
@@ -180,10 +183,10 @@ public class Header27 {
 			componentContext_lazy = () -> Header27.mmObject();
 			isDerived = false;
 			xmlTag = "FrmtVrsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FormatVersion";
 			definition = "Version of file format.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Header14.mmFormatVersion;
+			previousVersion_lazy = () -> Header14.mmFormatVersion;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max6Text.mmObject();
@@ -226,10 +229,10 @@ public class Header27 {
 			componentContext_lazy = () -> Header27.mmObject();
 			isDerived = false;
 			xmlTag = "XchgId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExchangeIdentification";
 			definition = "Unique identification of an exchange occurrence.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Header14.mmExchangeIdentification;
+			previousVersion_lazy = () -> Header14.mmExchangeIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
@@ -272,10 +275,10 @@ public class Header27 {
 			componentContext_lazy = () -> Header27.mmObject();
 			isDerived = false;
 			xmlTag = "CreDtTm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreationDateTime";
 			definition = "Date and time at which the file or message was created.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Header14.mmCreationDateTime;
+			previousVersion_lazy = () -> Header14.mmCreationDateTime;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
@@ -319,10 +322,10 @@ public class Header27 {
 			componentContext_lazy = () -> Header27.mmObject();
 			isDerived = false;
 			xmlTag = "InitgPty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InitiatingParty";
 			definition = "Unique identification of the partner that has initiated the exchange.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Header14.mmInitiatingParty;
+			previousVersion_lazy = () -> Header14.mmInitiatingParty;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -369,10 +372,10 @@ public class Header27 {
 			componentContext_lazy = () -> Header27.mmObject();
 			isDerived = false;
 			xmlTag = "RcptPty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RecipientParty";
 			definition = "Unique identification of the partner that is the recipient of the exchange.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Header14.mmRecipientParty;
+			previousVersion_lazy = () -> Header14.mmRecipientParty;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -383,13 +386,11 @@ public class Header27 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Header27.mmDownloadTransfer, com.tools20022.repository.msg.Header27.mmFormatVersion, com.tools20022.repository.msg.Header27.mmExchangeIdentification,
-						com.tools20022.repository.msg.Header27.mmCreationDateTime, com.tools20022.repository.msg.Header27.mmInitiatingParty, com.tools20022.repository.msg.Header27.mmRecipientParty);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.catm.AcceptorConfigurationUpdateV05.mmHeader, com.tools20022.repository.area.catm.StatusReportV05.mmHeader,
-						com.tools20022.repository.area.catm.ManagementPlanReplacementV05.mmHeader, com.tools20022.repository.area.catm.StatusReportV06.mmHeader, com.tools20022.repository.area.catm.AcceptorConfigurationUpdateV06.mmHeader,
-						com.tools20022.repository.area.catm.ManagementPlanReplacementV06.mmHeader);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(Header27.mmDownloadTransfer, Header27.mmFormatVersion, Header27.mmExchangeIdentification, Header27.mmCreationDateTime, Header27.mmInitiatingParty, Header27.mmRecipientParty);
+				messageBuildingBlock_lazy = () -> Arrays.asList(AcceptorConfigurationUpdateV05.mmHeader, StatusReportV05.mmHeader, ManagementPlanReplacementV05.mmHeader, StatusReportV06.mmHeader, AcceptorConfigurationUpdateV06.mmHeader,
+						ManagementPlanReplacementV06.mmHeader);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Header27";
 				definition = "Set of characteristics related to the transfer of transactions.";
 				previousVersion_lazy = () -> Header14.mmObject();

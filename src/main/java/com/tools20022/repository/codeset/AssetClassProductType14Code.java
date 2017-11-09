@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.AssetClassProductTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -76,7 +78,7 @@ public class AssetClassProductType14Code extends AssetClassProductTypeCode {
 	 */
 	public static final MMCode mmOfficialEconomicStatistic = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OfficialEconomicStatistic";
 			owner_lazy = () -> AssetClassProductType14Code.mmObject();
 		}
@@ -85,11 +87,11 @@ public class AssetClassProductType14Code extends AssetClassProductTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AssetClassProductType14Code";
 				definition = "Commodity derivative base product code list for Official Economic Statistics.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AssetClassProductType14Code.mmOfficialEconomicStatistic);
+				code_lazy = () -> Arrays.asList(AssetClassProductType14Code.mmOfficialEconomicStatistic);
 				trace_lazy = () -> AssetClassProductTypeCode.mmObject();
 			}
 		});

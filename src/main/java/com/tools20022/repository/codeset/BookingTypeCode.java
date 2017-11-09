@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -29,6 +31,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.BookingType1Code
+ * BookingType1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>{@linkplain com.tools20022.repository.codeset.BookingTypeCode#mmRegular
@@ -39,13 +48,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.BookingTypeCode#mmTotalReturnSwap
  * BookingTypeCode.mmTotalReturnSwap}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.BookingType1Code
- * BookingType1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -97,7 +99,7 @@ public class BookingTypeCode {
 	 */
 	public static final MMCode mmRegular = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Regular";
 			definition = "Booking type is regular.";
 			owner_lazy = () -> BookingTypeCode.mmObject();
@@ -127,7 +129,7 @@ public class BookingTypeCode {
 	 */
 	public static final MMCode mmContractForDifference = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ContractForDifference";
 			definition = "Order is to be booked out as a CFD.";
 			owner_lazy = () -> BookingTypeCode.mmObject();
@@ -158,7 +160,7 @@ public class BookingTypeCode {
 	 */
 	public static final MMCode mmTotalReturnSwap = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalReturnSwap";
 			definition = "Order is to be booked out as an OTC derivative (for example, Swap).";
 			owner_lazy = () -> BookingTypeCode.mmObject();
@@ -169,13 +171,12 @@ public class BookingTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("REGU");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "BookingTypeCode";
 				definition = "Method for booking out an order. Used when notifying a broker that an order to be settled by that broker is to be booked out as an OTC derivative (e.g. CFD or similar).";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.BookingTypeCode.mmRegular, com.tools20022.repository.codeset.BookingTypeCode.mmContractForDifference,
-						com.tools20022.repository.codeset.BookingTypeCode.mmTotalReturnSwap);
+				code_lazy = () -> Arrays.asList(BookingTypeCode.mmRegular, BookingTypeCode.mmContractForDifference, BookingTypeCode.mmTotalReturnSwap);
 				derivation_lazy = () -> Arrays.asList(BookingType1Code.mmObject());
 			}
 		});

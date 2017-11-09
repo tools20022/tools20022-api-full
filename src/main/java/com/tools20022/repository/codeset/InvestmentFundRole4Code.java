@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.PartyRoleCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -122,7 +124,7 @@ public class InvestmentFundRole4Code extends PartyRoleCode {
 	 */
 	public static final MMCode mmFundManagementCompany = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FundManagementCompany";
 			owner_lazy = () -> InvestmentFundRole4Code.mmObject();
 		}
@@ -145,7 +147,7 @@ public class InvestmentFundRole4Code extends PartyRoleCode {
 	 */
 	public static final MMCode mmRegistrar = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Registrar";
 			owner_lazy = () -> InvestmentFundRole4Code.mmObject();
 		}
@@ -168,7 +170,7 @@ public class InvestmentFundRole4Code extends PartyRoleCode {
 	 */
 	public static final MMCode mmTransferAgent = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransferAgent";
 			owner_lazy = () -> InvestmentFundRole4Code.mmObject();
 		}
@@ -191,7 +193,7 @@ public class InvestmentFundRole4Code extends PartyRoleCode {
 	 */
 	public static final MMCode mmIntermediary = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Intermediary";
 			owner_lazy = () -> InvestmentFundRole4Code.mmObject();
 		}
@@ -214,7 +216,7 @@ public class InvestmentFundRole4Code extends PartyRoleCode {
 	 */
 	public static final MMCode mmDistributor = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Distributor";
 			owner_lazy = () -> InvestmentFundRole4Code.mmObject();
 		}
@@ -237,7 +239,7 @@ public class InvestmentFundRole4Code extends PartyRoleCode {
 	 */
 	public static final MMCode mmConcentrator = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Concentrator";
 			owner_lazy = () -> InvestmentFundRole4Code.mmObject();
 		}
@@ -260,7 +262,7 @@ public class InvestmentFundRole4Code extends PartyRoleCode {
 	 */
 	public static final MMCode mmUnderlyingClient1 = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnderlyingClient1";
 			owner_lazy = () -> InvestmentFundRole4Code.mmObject();
 		}
@@ -283,7 +285,7 @@ public class InvestmentFundRole4Code extends PartyRoleCode {
 	 */
 	public static final MMCode mmUnderlyingClient2 = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnderlyingClient2";
 			owner_lazy = () -> InvestmentFundRole4Code.mmObject();
 		}
@@ -306,7 +308,7 @@ public class InvestmentFundRole4Code extends PartyRoleCode {
 	 */
 	public static final MMCode mmTransmittingAgent = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransmittingAgent";
 			owner_lazy = () -> InvestmentFundRole4Code.mmObject();
 		}
@@ -329,7 +331,7 @@ public class InvestmentFundRole4Code extends PartyRoleCode {
 	 */
 	public static final MMCode mmContactPersonAtInstructingPartyInstitution = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ContactPersonAtInstructingPartyInstitution";
 			owner_lazy = () -> InvestmentFundRole4Code.mmObject();
 		}
@@ -352,7 +354,7 @@ public class InvestmentFundRole4Code extends PartyRoleCode {
 	 */
 	public static final MMCode mmContactPersonAtExecutingPartyInstitution = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ContactPersonAtExecutingPartyInstitution";
 			owner_lazy = () -> InvestmentFundRole4Code.mmObject();
 		}
@@ -375,7 +377,7 @@ public class InvestmentFundRole4Code extends PartyRoleCode {
 	 */
 	public static final MMCode mmNameOfAgentToOrder = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NameOfAgentToOrder";
 			owner_lazy = () -> InvestmentFundRole4Code.mmObject();
 		}
@@ -398,7 +400,7 @@ public class InvestmentFundRole4Code extends PartyRoleCode {
 	 */
 	public static final MMCode mmCustodian = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Custodian";
 			owner_lazy = () -> InvestmentFundRole4Code.mmObject();
 		}
@@ -421,7 +423,7 @@ public class InvestmentFundRole4Code extends PartyRoleCode {
 	 */
 	public static final MMCode mmFundBroker = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FundBroker";
 			owner_lazy = () -> InvestmentFundRole4Code.mmObject();
 		}
@@ -444,7 +446,7 @@ public class InvestmentFundRole4Code extends PartyRoleCode {
 	 */
 	public static final MMCode mmPrimeBroker = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PrimeBroker";
 			owner_lazy = () -> InvestmentFundRole4Code.mmObject();
 		}
@@ -453,18 +455,15 @@ public class InvestmentFundRole4Code extends PartyRoleCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("FMCO");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InvestmentFundRole4Code";
 				definition = "Specifies the role played by an actor in an investment fund transaction.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.InvestmentFundRole4Code.mmFundManagementCompany, com.tools20022.repository.codeset.InvestmentFundRole4Code.mmRegistrar,
-						com.tools20022.repository.codeset.InvestmentFundRole4Code.mmTransferAgent, com.tools20022.repository.codeset.InvestmentFundRole4Code.mmIntermediary,
-						com.tools20022.repository.codeset.InvestmentFundRole4Code.mmDistributor, com.tools20022.repository.codeset.InvestmentFundRole4Code.mmConcentrator,
-						com.tools20022.repository.codeset.InvestmentFundRole4Code.mmUnderlyingClient1, com.tools20022.repository.codeset.InvestmentFundRole4Code.mmUnderlyingClient2,
-						com.tools20022.repository.codeset.InvestmentFundRole4Code.mmTransmittingAgent, com.tools20022.repository.codeset.InvestmentFundRole4Code.mmContactPersonAtInstructingPartyInstitution,
-						com.tools20022.repository.codeset.InvestmentFundRole4Code.mmContactPersonAtExecutingPartyInstitution, com.tools20022.repository.codeset.InvestmentFundRole4Code.mmNameOfAgentToOrder,
-						com.tools20022.repository.codeset.InvestmentFundRole4Code.mmCustodian, com.tools20022.repository.codeset.InvestmentFundRole4Code.mmFundBroker, com.tools20022.repository.codeset.InvestmentFundRole4Code.mmPrimeBroker);
+				code_lazy = () -> Arrays.asList(InvestmentFundRole4Code.mmFundManagementCompany, InvestmentFundRole4Code.mmRegistrar, InvestmentFundRole4Code.mmTransferAgent, InvestmentFundRole4Code.mmIntermediary,
+						InvestmentFundRole4Code.mmDistributor, InvestmentFundRole4Code.mmConcentrator, InvestmentFundRole4Code.mmUnderlyingClient1, InvestmentFundRole4Code.mmUnderlyingClient2, InvestmentFundRole4Code.mmTransmittingAgent,
+						InvestmentFundRole4Code.mmContactPersonAtInstructingPartyInstitution, InvestmentFundRole4Code.mmContactPersonAtExecutingPartyInstitution, InvestmentFundRole4Code.mmNameOfAgentToOrder,
+						InvestmentFundRole4Code.mmCustodian, InvestmentFundRole4Code.mmFundBroker, InvestmentFundRole4Code.mmPrimeBroker);
 				trace_lazy = () -> PartyRoleCode.mmObject();
 			}
 		});

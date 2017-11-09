@@ -17,9 +17,12 @@
 
 package com.tools20022.repository.entity;
 
+import com.tools20022.metamodel.MMAggregation;
 import com.tools20022.metamodel.MMBusinessAssociationEnd;
 import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.FinancialProduct;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -33,17 +36,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ManagedAccountProduct#mmAccount
- * ManagedAccountProduct.mmAccount}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ManagedAccountProduct#mmInvestmentAccountContract
- * ManagedAccountProduct.mmInvestmentAccountContract}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
  * associationDomain} =
@@ -59,6 +51,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
  * superType} = {@linkplain com.tools20022.repository.entity.FinancialProduct
  * FinancialProduct}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ManagedAccountProduct#mmAccount
+ * ManagedAccountProduct.mmAccount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ManagedAccountProduct#mmInvestmentAccountContract
+ * ManagedAccountProduct.mmInvestmentAccountContract}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -116,13 +119,13 @@ public class ManagedAccountProduct extends FinancialProduct {
 		{
 			elementContext_lazy = () -> ManagedAccountProduct.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Account";
 			definition = "Account which is the object of the managed account product.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.Account.mmManagedAccountProduct;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Account.mmObject();
 		}
 	};
@@ -168,13 +171,13 @@ public class ManagedAccountProduct extends FinancialProduct {
 		{
 			elementContext_lazy = () -> ManagedAccountProduct.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InvestmentAccountContract";
 			definition = "Contract which manages the investment account that is related to the products offered.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.InvestmentAccountContract.mmModeledAccount;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.InvestmentAccountContract.mmObject();
 		}
 	};
@@ -182,13 +185,13 @@ public class ManagedAccountProduct extends FinancialProduct {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ManagedAccountProduct";
 				definition = "Product which provides guidance to investors to manage their portfolios.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Account.mmManagedAccountProduct, com.tools20022.repository.entity.InvestmentAccountContract.mmModeledAccount);
 				superType_lazy = () -> FinancialProduct.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.ManagedAccountProduct.mmAccount, com.tools20022.repository.entity.ManagedAccountProduct.mmInvestmentAccountContract);
+				element_lazy = () -> Arrays.asList(ManagedAccountProduct.mmAccount, ManagedAccountProduct.mmInvestmentAccountContract);
 			}
 		});
 		return mmObject_lazy.get();

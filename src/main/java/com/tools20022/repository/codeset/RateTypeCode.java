@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,33 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.RateType3Code
+ * RateType3Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.RateValueType6Code
+ * RateValueType6Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.RateValueType7Code
+ * RateValueType7Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.RateType5Code
+ * RateType5Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.RateType12Code
+ * RateType12Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.RateType13Code
+ * RateType13Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.RateType9Code
+ * RateType9Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.RateType10Code
+ * RateType10Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.RateValueType2Code
+ * RateValueType2Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.RateType2Code
+ * RateType2Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.RateType8Code
+ * RateType8Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>{@linkplain com.tools20022.repository.codeset.RateTypeCode#mmFixed
@@ -98,33 +127,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * RateTypeCode.mmAnyAndAll}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.RateType3Code
- * RateType3Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.RateValueType6Code
- * RateValueType6Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.RateValueType7Code
- * RateValueType7Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.RateType5Code
- * RateType5Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.RateType12Code
- * RateType12Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.RateType13Code
- * RateType13Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.RateType9Code
- * RateType9Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.RateType10Code
- * RateType10Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.RateValueType2Code
- * RateValueType2Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.RateType2Code
- * RateType2Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.RateType8Code
- * RateType8Code}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -171,7 +173,7 @@ public class RateTypeCode {
 	 */
 	public static final MMCode mmFixed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Fixed";
 			definition = "Rate is fixed.";
 			owner_lazy = () -> RateTypeCode.mmObject();
@@ -203,7 +205,7 @@ public class RateTypeCode {
 	 */
 	public static final MMCode mmForfeit = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Forfeit";
 			definition = "No specific repurchase rate applies to the transaction Repo, only a forfeit.";
 			owner_lazy = () -> RateTypeCode.mmObject();
@@ -232,7 +234,7 @@ public class RateTypeCode {
 	 */
 	public static final MMCode mmVariable = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Variable";
 			definition = "Rate is variable.";
 			owner_lazy = () -> RateTypeCode.mmObject();
@@ -261,7 +263,7 @@ public class RateTypeCode {
 	 */
 	public static final MMCode mmOpen = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Open";
 			definition = "Rate has not been established.";
 			owner_lazy = () -> RateTypeCode.mmObject();
@@ -291,7 +293,7 @@ public class RateTypeCode {
 	 */
 	public static final MMCode mmUnknown = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Unknown";
 			definition = "Rate is unknown by the sender or has not been established.";
 			owner_lazy = () -> RateTypeCode.mmObject();
@@ -320,7 +322,7 @@ public class RateTypeCode {
 	 */
 	public static final MMCode mmNilPayment = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NilPayment";
 			definition = "Rate will not be paid.";
 			owner_lazy = () -> RateTypeCode.mmObject();
@@ -349,7 +351,7 @@ public class RateTypeCode {
 	 */
 	public static final MMCode mmAdditionalTax = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AdditionalTax";
 			definition = "Rate used for additional tax that cannot be categorised.";
 			owner_lazy = () -> RateTypeCode.mmObject();
@@ -381,7 +383,7 @@ public class RateTypeCode {
 	 */
 	public static final MMCode mmCharges = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Charges";
 			definition = "Rate used to calculate the amount of the charges/fees that cannot be categorised.";
 			owner_lazy = () -> RateTypeCode.mmObject();
@@ -413,7 +415,7 @@ public class RateTypeCode {
 	 */
 	public static final MMCode mmCashInLieuOfSecurities = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CashInLieuOfSecurities";
 			definition = "Rate used to calculate the cash disbursement in lieu of a fractional quantity of, for example, equity.";
 			owner_lazy = () -> RateTypeCode.mmObject();
@@ -444,7 +446,7 @@ public class RateTypeCode {
 	 */
 	public static final MMCode mmGross = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Gross";
 			definition = "Cash dividend per equity before deductions or allowances have been made.";
 			owner_lazy = () -> RateTypeCode.mmObject();
@@ -476,7 +478,7 @@ public class RateTypeCode {
 	 */
 	public static final MMCode mmCashIncentive = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CashIncentive";
 			definition = "Rate of the cash premium made available if the securities holder consents or participates to an event, for example, consent fees.";
 			owner_lazy = () -> RateTypeCode.mmObject();
@@ -505,7 +507,7 @@ public class RateTypeCode {
 	 */
 	public static final MMCode mmNet = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Net";
 			definition = "Relates to the netting of settlement instructions.";
 			owner_lazy = () -> RateTypeCode.mmObject();
@@ -537,7 +539,7 @@ public class RateTypeCode {
 	 */
 	public static final MMCode mmSollication = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Sollication";
 			definition = "Cash rate made available in an offer in order to encourage participation in the offer.";
 			owner_lazy = () -> RateTypeCode.mmObject();
@@ -567,7 +569,7 @@ public class RateTypeCode {
 	 */
 	public static final MMCode mmStampDuty = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "StampDuty";
 			definition = "Financial instrument has not been stamped and/or duly signed.";
 			owner_lazy = () -> RateTypeCode.mmObject();
@@ -596,7 +598,7 @@ public class RateTypeCode {
 	 */
 	public static final MMCode mmStockExchangeTax = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "StockExchangeTax";
 			definition = "Rate of stock exchange tax.";
 			owner_lazy = () -> RateTypeCode.mmObject();
@@ -628,7 +630,7 @@ public class RateTypeCode {
 	 */
 	public static final MMCode mmWithholdingTax = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "WithholdingTax";
 			definition = "Relates to a tax refund from the authorities on the associated corporate action event.";
 			owner_lazy = () -> RateTypeCode.mmObject();
@@ -660,7 +662,7 @@ public class RateTypeCode {
 	 */
 	public static final MMCode mmTransferTax = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TransferTax";
 			definition = "Transaction has been generated due to transformation following a corporate action.";
 			owner_lazy = () -> RateTypeCode.mmObject();
@@ -689,7 +691,7 @@ public class RateTypeCode {
 	 */
 	public static final MMCode mmTransactionTax = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TransactionTax";
 			definition = "Rate used to calculate the amount of transaction tax.";
 			owner_lazy = () -> RateTypeCode.mmObject();
@@ -719,7 +721,7 @@ public class RateTypeCode {
 	 */
 	public static final MMCode mmTaxDeferred = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TaxDeferred";
 			definition = "Rate relating to the underlying security for which tax is deferred.";
 			owner_lazy = () -> RateTypeCode.mmObject();
@@ -749,7 +751,7 @@ public class RateTypeCode {
 	 */
 	public static final MMCode mmTaxFeeAmount = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TaxFeeAmount";
 			definition = "Rate relating to the underlying security which is not taxable";
 			owner_lazy = () -> RateTypeCode.mmObject();
@@ -782,7 +784,7 @@ public class RateTypeCode {
 	 */
 	public static final MMCode mmWithholdingOfForeignTax = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "WithholdingOfForeignTax";
 			definition = "Rate at which the income will be withheld by the jurisdiction in which the income was originally paid, for which relief at source and/or reclaim may be possible.";
 			owner_lazy = () -> RateTypeCode.mmObject();
@@ -815,7 +817,7 @@ public class RateTypeCode {
 	 */
 	public static final MMCode mmWithholdingOfLocalTax = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "WithholdingOfLocalTax";
 			definition = "Rate at which the income will be withheld by the jurisdiction in which the account owner is located, for which relief at source and/or reclaim may be possible.";
 			owner_lazy = () -> RateTypeCode.mmObject();
@@ -844,7 +846,7 @@ public class RateTypeCode {
 	 */
 	public static final MMCode mmImputed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Imputed";
 			definition = "Imputed tax.";
 			owner_lazy = () -> RateTypeCode.mmObject();
@@ -873,7 +875,7 @@ public class RateTypeCode {
 	 */
 	public static final MMCode mmPrecompte = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Precompte";
 			definition = "Rate is a precompte.";
 			owner_lazy = () -> RateTypeCode.mmObject();
@@ -902,7 +904,7 @@ public class RateTypeCode {
 	 */
 	public static final MMCode mmOneTierTax = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "OneTierTax";
 			definition = "Rate is a one tier tax.";
 			owner_lazy = () -> RateTypeCode.mmObject();
@@ -935,7 +937,7 @@ public class RateTypeCode {
 	 */
 	public static final MMCode mmLocalTax = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "LocalTax";
 			definition = "Interest liable for interest down payment tax (proportion of gross interest per unit/interim profits that is not covered by the credit in the interest pool).";
 			owner_lazy = () -> RateTypeCode.mmObject();
@@ -964,7 +966,7 @@ public class RateTypeCode {
 	 */
 	public static final MMCode mmScheduled = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Scheduled";
 			definition = "Rate of the scheduled payment.";
 			owner_lazy = () -> RateTypeCode.mmObject();
@@ -993,7 +995,7 @@ public class RateTypeCode {
 	 */
 	public static final MMCode mmUnscheduled = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Unscheduled";
 			definition = "Rate of the unscheduled payment.";
 			owner_lazy = () -> RateTypeCode.mmObject();
@@ -1022,7 +1024,7 @@ public class RateTypeCode {
 	 */
 	public static final MMCode mmAnyAndAll = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AnyAndAll";
 			definition = "Any and all rate is sought.";
 			owner_lazy = () -> RateTypeCode.mmObject();
@@ -1033,21 +1035,16 @@ public class RateTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("FIXE");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RateTypeCode";
 				definition = "Any and all rate is sought.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RateTypeCode.mmFixed, com.tools20022.repository.codeset.RateTypeCode.mmForfeit, com.tools20022.repository.codeset.RateTypeCode.mmVariable,
-						com.tools20022.repository.codeset.RateTypeCode.mmOpen, com.tools20022.repository.codeset.RateTypeCode.mmUnknown, com.tools20022.repository.codeset.RateTypeCode.mmNilPayment,
-						com.tools20022.repository.codeset.RateTypeCode.mmAdditionalTax, com.tools20022.repository.codeset.RateTypeCode.mmCharges, com.tools20022.repository.codeset.RateTypeCode.mmCashInLieuOfSecurities,
-						com.tools20022.repository.codeset.RateTypeCode.mmGross, com.tools20022.repository.codeset.RateTypeCode.mmCashIncentive, com.tools20022.repository.codeset.RateTypeCode.mmNet,
-						com.tools20022.repository.codeset.RateTypeCode.mmSollication, com.tools20022.repository.codeset.RateTypeCode.mmStampDuty, com.tools20022.repository.codeset.RateTypeCode.mmStockExchangeTax,
-						com.tools20022.repository.codeset.RateTypeCode.mmWithholdingTax, com.tools20022.repository.codeset.RateTypeCode.mmTransferTax, com.tools20022.repository.codeset.RateTypeCode.mmTransactionTax,
-						com.tools20022.repository.codeset.RateTypeCode.mmTaxDeferred, com.tools20022.repository.codeset.RateTypeCode.mmTaxFeeAmount, com.tools20022.repository.codeset.RateTypeCode.mmWithholdingOfForeignTax,
-						com.tools20022.repository.codeset.RateTypeCode.mmWithholdingOfLocalTax, com.tools20022.repository.codeset.RateTypeCode.mmImputed, com.tools20022.repository.codeset.RateTypeCode.mmPrecompte,
-						com.tools20022.repository.codeset.RateTypeCode.mmOneTierTax, com.tools20022.repository.codeset.RateTypeCode.mmLocalTax, com.tools20022.repository.codeset.RateTypeCode.mmScheduled,
-						com.tools20022.repository.codeset.RateTypeCode.mmUnscheduled, com.tools20022.repository.codeset.RateTypeCode.mmAnyAndAll);
+				code_lazy = () -> Arrays.asList(RateTypeCode.mmFixed, RateTypeCode.mmForfeit, RateTypeCode.mmVariable, RateTypeCode.mmOpen, RateTypeCode.mmUnknown, RateTypeCode.mmNilPayment, RateTypeCode.mmAdditionalTax,
+						RateTypeCode.mmCharges, RateTypeCode.mmCashInLieuOfSecurities, RateTypeCode.mmGross, RateTypeCode.mmCashIncentive, RateTypeCode.mmNet, RateTypeCode.mmSollication, RateTypeCode.mmStampDuty,
+						RateTypeCode.mmStockExchangeTax, RateTypeCode.mmWithholdingTax, RateTypeCode.mmTransferTax, RateTypeCode.mmTransactionTax, RateTypeCode.mmTaxDeferred, RateTypeCode.mmTaxFeeAmount,
+						RateTypeCode.mmWithholdingOfForeignTax, RateTypeCode.mmWithholdingOfLocalTax, RateTypeCode.mmImputed, RateTypeCode.mmPrecompte, RateTypeCode.mmOneTierTax, RateTypeCode.mmLocalTax, RateTypeCode.mmScheduled,
+						RateTypeCode.mmUnscheduled, RateTypeCode.mmAnyAndAll);
 				derivation_lazy = () -> Arrays.asList(RateType3Code.mmObject(), RateValueType6Code.mmObject(), RateValueType7Code.mmObject(), RateType5Code.mmObject(), RateType12Code.mmObject(), RateType13Code.mmObject(),
 						RateType9Code.mmObject(), RateType10Code.mmObject(), RateValueType2Code.mmObject(), RateType2Code.mmObject(), RateType8Code.mmObject());
 			}

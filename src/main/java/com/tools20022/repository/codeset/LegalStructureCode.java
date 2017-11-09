@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -107,7 +109,7 @@ public class LegalStructureCode {
 	 */
 	public static final MMCode mmCorporation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Corporation";
 			definition = "Legal structure is a corporation.";
 			owner_lazy = () -> LegalStructureCode.mmObject();
@@ -137,7 +139,7 @@ public class LegalStructureCode {
 	 */
 	public static final MMCode mmIndividual = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Individual";
 			definition = "Legal structure is an individual.";
 			owner_lazy = () -> LegalStructureCode.mmObject();
@@ -167,7 +169,7 @@ public class LegalStructureCode {
 	 */
 	public static final MMCode mmSupranational = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Supranational";
 			definition = "Legal structure is a supranational.";
 			owner_lazy = () -> LegalStructureCode.mmObject();
@@ -197,7 +199,7 @@ public class LegalStructureCode {
 	 */
 	public static final MMCode mmSovereign = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Sovereign";
 			definition = "Legal structure is a sovereign.";
 			owner_lazy = () -> LegalStructureCode.mmObject();
@@ -227,7 +229,7 @@ public class LegalStructureCode {
 	 */
 	public static final MMCode mmMunicipal = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Municipal";
 			definition = "Legal structure is a municipal.";
 			owner_lazy = () -> LegalStructureCode.mmObject();
@@ -257,7 +259,7 @@ public class LegalStructureCode {
 	 */
 	public static final MMCode mmProvince = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Province";
 			definition = "Legal structure is a province.";
 			owner_lazy = () -> LegalStructureCode.mmObject();
@@ -287,7 +289,7 @@ public class LegalStructureCode {
 	 */
 	public static final MMCode mmState = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "State";
 			definition = "Legal structure is a state.";
 			owner_lazy = () -> LegalStructureCode.mmObject();
@@ -317,7 +319,7 @@ public class LegalStructureCode {
 	 */
 	public static final MMCode mmCounty = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "County";
 			definition = "Legal structure is a county.";
 			owner_lazy = () -> LegalStructureCode.mmObject();
@@ -347,7 +349,7 @@ public class LegalStructureCode {
 	 */
 	public static final MMCode mmPartnership = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Partnership";
 			definition = "Legal structure is a partnership.";
 			owner_lazy = () -> LegalStructureCode.mmObject();
@@ -377,7 +379,7 @@ public class LegalStructureCode {
 	 */
 	public static final MMCode mmFinancialInstitution = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "FinancialInstitution";
 			definition = "Legal structure is a financial institution.";
 			owner_lazy = () -> LegalStructureCode.mmObject();
@@ -388,15 +390,13 @@ public class LegalStructureCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CORR");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "LegalStructureCode";
 				definition = "Specifies the legal standing of the organisation.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.LegalStructureCode.mmCorporation, com.tools20022.repository.codeset.LegalStructureCode.mmIndividual,
-						com.tools20022.repository.codeset.LegalStructureCode.mmSupranational, com.tools20022.repository.codeset.LegalStructureCode.mmSovereign, com.tools20022.repository.codeset.LegalStructureCode.mmMunicipal,
-						com.tools20022.repository.codeset.LegalStructureCode.mmProvince, com.tools20022.repository.codeset.LegalStructureCode.mmState, com.tools20022.repository.codeset.LegalStructureCode.mmCounty,
-						com.tools20022.repository.codeset.LegalStructureCode.mmPartnership, com.tools20022.repository.codeset.LegalStructureCode.mmFinancialInstitution);
+				code_lazy = () -> Arrays.asList(LegalStructureCode.mmCorporation, LegalStructureCode.mmIndividual, LegalStructureCode.mmSupranational, LegalStructureCode.mmSovereign, LegalStructureCode.mmMunicipal,
+						LegalStructureCode.mmProvince, LegalStructureCode.mmState, LegalStructureCode.mmCounty, LegalStructureCode.mmPartnership, LegalStructureCode.mmFinancialInstitution);
 			}
 		});
 		return mmObject_lazy.get();

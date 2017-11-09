@@ -20,11 +20,15 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.BenchmarkCurveName1Code;
 import com.tools20022.repository.codeset.CurrencyCode;
 import com.tools20022.repository.datatype.DecimalNumber;
 import com.tools20022.repository.datatype.Max256Text;
 import com.tools20022.repository.entity.Curve;
+import com.tools20022.repository.entity.SecuritiesIdentification;
+import com.tools20022.repository.entity.Spread;
+import com.tools20022.repository.GeneratedRepository;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -124,11 +128,11 @@ public class BenchmarkCurve1 {
 	 */
 	public static final MMMessageAttribute mmSpread = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Curve.mmSpread;
+			businessElementTrace_lazy = () -> Curve.mmSpread;
 			componentContext_lazy = () -> BenchmarkCurve1.mmObject();
 			isDerived = false;
 			xmlTag = "Sprd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Spread";
 			definition = "Either a swap spread or spread to benchmark depending upon order type.  In case of a spread to benchmark, the price offset is expressed in terms of basis points relative to a benchmark - this can be a positive or a negative spread. In case of a swap spread, the price offset is a target spread for a swap.";
 			maxOccurs = 1;
@@ -171,11 +175,11 @@ public class BenchmarkCurve1 {
 	 */
 	public static final MMMessageAssociationEnd mmBenchmarkIdentification = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesIdentification.mmSecurityIdentification;
+			businessElementTrace_lazy = () -> SecuritiesIdentification.mmSecurityIdentification;
 			componentContext_lazy = () -> BenchmarkCurve1.mmObject();
 			isDerived = false;
 			xmlTag = "BchmkId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BenchmarkIdentification";
 			definition = "Identification of a security by an ISIN.";
 			maxOccurs = 1;
@@ -218,11 +222,11 @@ public class BenchmarkCurve1 {
 	 */
 	public static final MMMessageAttribute mmBenchmarkPrice = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Spread.mmBenchmarkPrice;
+			businessElementTrace_lazy = () -> Spread.mmBenchmarkPrice;
 			componentContext_lazy = () -> BenchmarkCurve1.mmObject();
 			isDerived = false;
 			xmlTag = "BchmkPric";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BenchmarkPrice";
 			definition = "Identifies the price of the benchmark security.";
 			maxOccurs = 1;
@@ -265,11 +269,11 @@ public class BenchmarkCurve1 {
 	 */
 	public static final MMMessageAttribute mmBenchmarkCurveCurrency = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Curve.mmCurrency;
+			businessElementTrace_lazy = () -> Curve.mmCurrency;
 			componentContext_lazy = () -> BenchmarkCurve1.mmObject();
 			isDerived = false;
 			xmlTag = "BchmkCrvCcy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BenchmarkCurveCurrency";
 			definition = "Identifies the currency used for the benchmark curve.";
 			maxOccurs = 1;
@@ -312,11 +316,11 @@ public class BenchmarkCurve1 {
 	 */
 	public static final MMMessageAttribute mmBenchmarkCurveName = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Curve.mmName;
+			businessElementTrace_lazy = () -> Curve.mmName;
 			componentContext_lazy = () -> BenchmarkCurve1.mmObject();
 			isDerived = false;
 			xmlTag = "BchmkCrvNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BenchmarkCurveName";
 			definition = "Identifies the name of the benchmark curve.";
 			maxOccurs = 1;
@@ -362,11 +366,11 @@ public class BenchmarkCurve1 {
 	 */
 	public static final MMMessageAttribute mmBenchmarkCurvePoint = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Curve.mmPoint;
+			businessElementTrace_lazy = () -> Curve.mmPoint;
 			componentContext_lazy = () -> BenchmarkCurve1.mmObject();
 			isDerived = false;
 			xmlTag = "BchmkCrvPt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BenchmarkCurvePoint";
 			definition = "Identifies a point on a benchmark curve. The point can be stated via a combination of maturity month/year and coupon.";
 			maxOccurs = 1;
@@ -378,12 +382,11 @@ public class BenchmarkCurve1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BenchmarkCurve1.mmSpread, com.tools20022.repository.msg.BenchmarkCurve1.mmBenchmarkIdentification,
-						com.tools20022.repository.msg.BenchmarkCurve1.mmBenchmarkPrice, com.tools20022.repository.msg.BenchmarkCurve1.mmBenchmarkCurveCurrency, com.tools20022.repository.msg.BenchmarkCurve1.mmBenchmarkCurveName,
-						com.tools20022.repository.msg.BenchmarkCurve1.mmBenchmarkCurvePoint);
+				messageElement_lazy = () -> Arrays.asList(BenchmarkCurve1.mmSpread, BenchmarkCurve1.mmBenchmarkIdentification, BenchmarkCurve1.mmBenchmarkPrice, BenchmarkCurve1.mmBenchmarkCurveCurrency,
+						BenchmarkCurve1.mmBenchmarkCurveName, BenchmarkCurve1.mmBenchmarkCurvePoint);
 				trace_lazy = () -> Curve.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
 						return DateFormat.getDateInstance(java.text.DateFormat.LONG).parse("September 9, 2016");

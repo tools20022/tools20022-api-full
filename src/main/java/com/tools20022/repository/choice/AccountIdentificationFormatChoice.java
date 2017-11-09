@@ -19,7 +19,9 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.AccountIdentification;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.AccountIdentification1;
 import com.tools20022.repository.msg.AccountIdentification3;
 import com.tools20022.repository.msg.AccountIdentificationAndPurpose;
@@ -110,7 +112,7 @@ public class AccountIdentificationFormatChoice {
 			componentContext_lazy = () -> AccountIdentificationFormatChoice.mmObject();
 			isDerived = false;
 			xmlTag = "SmplId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SimpleIdentification";
 			definition = "Unique and unambiguous identification for the account between the account owner and the account servicer.";
 			maxOccurs = 1;
@@ -161,7 +163,7 @@ public class AccountIdentificationFormatChoice {
 			componentContext_lazy = () -> AccountIdentificationFormatChoice.mmObject();
 			isDerived = false;
 			xmlTag = "IdAndPurp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IdentificationAndPurpose";
 			definition = "Identification of the account expressed with an account number and a code.";
 			maxOccurs = 1;
@@ -212,7 +214,7 @@ public class AccountIdentificationFormatChoice {
 			componentContext_lazy = () -> AccountIdentificationFormatChoice.mmObject();
 			isDerived = false;
 			xmlTag = "IdAsDSS";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IdentificationAsDSS";
 			definition = "Identification of the account expressed with a data source scheme, a code used within the data source scheme and the account identification.";
 			maxOccurs = 1;
@@ -224,11 +226,10 @@ public class AccountIdentificationFormatChoice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AccountIdentificationFormatChoice.mmSimpleIdentification,
-						com.tools20022.repository.choice.AccountIdentificationFormatChoice.mmIdentificationAndPurpose, com.tools20022.repository.choice.AccountIdentificationFormatChoice.mmIdentificationAsDSS);
+				messageElement_lazy = () -> Arrays.asList(AccountIdentificationFormatChoice.mmSimpleIdentification, AccountIdentificationFormatChoice.mmIdentificationAndPurpose, AccountIdentificationFormatChoice.mmIdentificationAsDSS);
 				trace_lazy = () -> AccountIdentification.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AccountIdentificationFormatChoice";
 				definition = "Choice between formats for account identification.";
 			}

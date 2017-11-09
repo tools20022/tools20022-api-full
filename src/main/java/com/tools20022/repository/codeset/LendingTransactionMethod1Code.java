@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.LendingTransactionMethodCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -83,7 +85,7 @@ public class LendingTransactionMethod1Code extends LendingTransactionMethodCode 
 	 */
 	public static final MMCode mmOnDemandTrade = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OnDemandTrade";
 			owner_lazy = () -> LendingTransactionMethod1Code.mmObject();
 		}
@@ -106,7 +108,7 @@ public class LendingTransactionMethod1Code extends LendingTransactionMethodCode 
 	 */
 	public static final MMCode mmExclusiveTrade = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExclusiveTrade";
 			owner_lazy = () -> LendingTransactionMethod1Code.mmObject();
 		}
@@ -115,12 +117,12 @@ public class LendingTransactionMethod1Code extends LendingTransactionMethodCode 
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ODTR");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "LendingTransactionMethod1Code";
 				definition = "Lending method applied to the securities financing contract.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.LendingTransactionMethod1Code.mmOnDemandTrade, com.tools20022.repository.codeset.LendingTransactionMethod1Code.mmExclusiveTrade);
+				code_lazy = () -> Arrays.asList(LendingTransactionMethod1Code.mmOnDemandTrade, LendingTransactionMethod1Code.mmExclusiveTrade);
 				trace_lazy = () -> LendingTransactionMethodCode.mmObject();
 			}
 		});

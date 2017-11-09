@@ -20,8 +20,10 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.ClearingScheme1Choice;
 import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -118,7 +120,7 @@ public class ClearingRegisterHeaderDetails1 {
 			componentContext_lazy = () -> ClearingRegisterHeaderDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "PrcgPrd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProcessingPeriod";
 			definition = "Processing period.";
 			maxOccurs = 1;
@@ -164,7 +166,7 @@ public class ClearingRegisterHeaderDetails1 {
 			componentContext_lazy = () -> ClearingRegisterHeaderDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "TtlIntrBkSttlmCdtAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalInterbankSettlementCreditAmount";
 			definition = "Amount of money moved between the instructing agent and the instructed agent.";
 			maxOccurs = 1;
@@ -209,7 +211,7 @@ public class ClearingRegisterHeaderDetails1 {
 			componentContext_lazy = () -> ClearingRegisterHeaderDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "TtlIntrBkSttlmDbtAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalInterbankSettlementDebitAmount";
 			definition = "Amount of money debited between the instructing agent and the instructed agent.";
 			maxOccurs = 1;
@@ -250,7 +252,7 @@ public class ClearingRegisterHeaderDetails1 {
 			componentContext_lazy = () -> ClearingRegisterHeaderDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "ClrAgt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClearingAgent";
 			definition = "Agent of the clearing account.";
 			maxOccurs = 1;
@@ -294,7 +296,7 @@ public class ClearingRegisterHeaderDetails1 {
 			componentContext_lazy = () -> ClearingRegisterHeaderDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "ClrAgtAcct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClearingAgentAccount";
 			definition = "Clearing Account which is used while execution of clearing positions registry.";
 			maxOccurs = 1;
@@ -337,7 +339,7 @@ public class ClearingRegisterHeaderDetails1 {
 			componentContext_lazy = () -> ClearingRegisterHeaderDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "GrntFndAgt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GuaranteeFundAgent";
 			definition = "Account number of guarantee fund which is used during RCP execution.";
 			maxOccurs = 1;
@@ -378,7 +380,7 @@ public class ClearingRegisterHeaderDetails1 {
 			componentContext_lazy = () -> ClearingRegisterHeaderDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "GrntFndAgtAcct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GuaranteeFundAgentAccount";
 			definition = "Agent of the guarantee fund.";
 			maxOccurs = 1;
@@ -421,7 +423,7 @@ public class ClearingRegisterHeaderDetails1 {
 			componentContext_lazy = () -> ClearingRegisterHeaderDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "ClrCrct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClearingCircuit";
 			definition = "Clearing scheme related to Registry of the Clearing Positions (RCP).";
 			maxOccurs = 1;
@@ -465,7 +467,7 @@ public class ClearingRegisterHeaderDetails1 {
 			componentContext_lazy = () -> ClearingRegisterHeaderDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmTmReq";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementTimeRequest";
 			definition = "Provides information on the requested settlement time(s) of the payment instruction.";
 			maxOccurs = 1;
@@ -510,7 +512,7 @@ public class ClearingRegisterHeaderDetails1 {
 			componentContext_lazy = () -> ClearingRegisterHeaderDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmTmIndctn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementTimeIndication";
 			definition = "Provides information on the occurred settlement time(s) of the payment transaction.";
 			maxOccurs = 1;
@@ -551,7 +553,7 @@ public class ClearingRegisterHeaderDetails1 {
 			componentContext_lazy = () -> ClearingRegisterHeaderDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "PmtId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentIdentification";
 			definition = "Set of elements used to reference a payment register.";
 			maxOccurs = 1;
@@ -564,14 +566,12 @@ public class ClearingRegisterHeaderDetails1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ClearingRegisterHeaderDetails1.mmProcessingPeriod, com.tools20022.repository.msg.ClearingRegisterHeaderDetails1.mmTotalInterbankSettlementCreditAmount,
-						com.tools20022.repository.msg.ClearingRegisterHeaderDetails1.mmTotalInterbankSettlementDebitAmount, com.tools20022.repository.msg.ClearingRegisterHeaderDetails1.mmClearingAgent,
-						com.tools20022.repository.msg.ClearingRegisterHeaderDetails1.mmClearingAgentAccount, com.tools20022.repository.msg.ClearingRegisterHeaderDetails1.mmGuaranteeFundAgent,
-						com.tools20022.repository.msg.ClearingRegisterHeaderDetails1.mmGuaranteeFundAgentAccount, com.tools20022.repository.msg.ClearingRegisterHeaderDetails1.mmClearingCircuit,
-						com.tools20022.repository.msg.ClearingRegisterHeaderDetails1.mmSettlementTimeRequest, com.tools20022.repository.msg.ClearingRegisterHeaderDetails1.mmSettlementTimeIndication,
-						com.tools20022.repository.msg.ClearingRegisterHeaderDetails1.mmPaymentIdentification);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(ClearingRegisterHeaderDetails1.mmProcessingPeriod, ClearingRegisterHeaderDetails1.mmTotalInterbankSettlementCreditAmount,
+						ClearingRegisterHeaderDetails1.mmTotalInterbankSettlementDebitAmount, ClearingRegisterHeaderDetails1.mmClearingAgent, ClearingRegisterHeaderDetails1.mmClearingAgentAccount,
+						ClearingRegisterHeaderDetails1.mmGuaranteeFundAgent, ClearingRegisterHeaderDetails1.mmGuaranteeFundAgentAccount, ClearingRegisterHeaderDetails1.mmClearingCircuit,
+						ClearingRegisterHeaderDetails1.mmSettlementTimeRequest, ClearingRegisterHeaderDetails1.mmSettlementTimeIndication, ClearingRegisterHeaderDetails1.mmPaymentIdentification);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ClearingRegisterHeaderDetails1";
 				definition = "Information about clearing register.";
 			}

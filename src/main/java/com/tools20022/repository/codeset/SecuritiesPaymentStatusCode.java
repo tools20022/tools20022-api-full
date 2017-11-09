@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesPaymentStatus1Code
+ * SecuritiesPaymentStatus1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -38,14 +48,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.SecuritiesPaymentStatusCode#mmPartiallyPaid
  * SecuritiesPaymentStatusCode.mmPartiallyPaid}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesPaymentStatus1Code
- * SecuritiesPaymentStatus1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -96,7 +98,7 @@ public class SecuritiesPaymentStatusCode {
 	 */
 	public static final MMCode mmFullyPaid = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "FullyPaid";
 			definition = "Security is fully paid.";
 			owner_lazy = () -> SecuritiesPaymentStatusCode.mmObject();
@@ -126,7 +128,7 @@ public class SecuritiesPaymentStatusCode {
 	 */
 	public static final MMCode mmNillPaid = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NillPaid";
 			definition = "Security is nill paid.";
 			owner_lazy = () -> SecuritiesPaymentStatusCode.mmObject();
@@ -156,7 +158,7 @@ public class SecuritiesPaymentStatusCode {
 	 */
 	public static final MMCode mmPartiallyPaid = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PartiallyPaid";
 			definition = "Security is partially paid.";
 			owner_lazy = () -> SecuritiesPaymentStatusCode.mmObject();
@@ -167,13 +169,12 @@ public class SecuritiesPaymentStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("FULL");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesPaymentStatusCode";
 				definition = "Specifies the state of payment of a security at a particular time.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SecuritiesPaymentStatusCode.mmFullyPaid, com.tools20022.repository.codeset.SecuritiesPaymentStatusCode.mmNillPaid,
-						com.tools20022.repository.codeset.SecuritiesPaymentStatusCode.mmPartiallyPaid);
+				code_lazy = () -> Arrays.asList(SecuritiesPaymentStatusCode.mmFullyPaid, SecuritiesPaymentStatusCode.mmNillPaid, SecuritiesPaymentStatusCode.mmPartiallyPaid);
 				derivation_lazy = () -> Arrays.asList(SecuritiesPaymentStatus1Code.mmObject());
 			}
 		});

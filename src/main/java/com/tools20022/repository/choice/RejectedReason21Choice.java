@@ -19,7 +19,9 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.RejectedStatusReason8Code;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -102,10 +104,10 @@ public class RejectedReason21Choice {
 			componentContext_lazy = () -> RejectedReason21Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Cd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Rejected reason expressed as a code.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.RejectedReason20Choice.mmCode;
+			previousVersion_lazy = () -> RejectedReason20Choice.mmCode;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RejectedStatusReason8Code.mmObject();
@@ -150,10 +152,10 @@ public class RejectedReason21Choice {
 			componentContext_lazy = () -> RejectedReason21Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Rejected reason expressed as a proprietary code.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.RejectedReason20Choice.mmProprietary;
+			previousVersion_lazy = () -> RejectedReason20Choice.mmProprietary;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification1.mmObject();
@@ -163,9 +165,9 @@ public class RejectedReason21Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.RejectedReason21Choice.mmCode, com.tools20022.repository.choice.RejectedReason21Choice.mmProprietary);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(RejectedReason21Choice.mmCode, RejectedReason21Choice.mmProprietary);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RejectedReason21Choice";
 				definition = "Choice between formats for a rejected reason.";
 				previousVersion_lazy = () -> RejectedReason20Choice.mmObject();

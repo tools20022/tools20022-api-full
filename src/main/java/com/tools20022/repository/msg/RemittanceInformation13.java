@@ -20,10 +20,14 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.remt.RemittanceAdviceV03;
 import com.tools20022.repository.datatype.Max140Text;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.Document;
+import com.tools20022.repository.entity.GenericIdentification;
 import com.tools20022.repository.entity.PaymentInstruction;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -131,14 +135,14 @@ public class RemittanceInformation13 {
 	 */
 	public static final MMMessageAttribute mmRemittanceIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmIdentification;
+			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> RemittanceInformation13.mmObject();
 			isDerived = false;
 			xmlTag = "RmtId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RemittanceIdentification";
 			definition = "Unique identification, assigned by the originator, to unambiguously identify the remittance information within the message.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.RemittanceInformation12.mmRemittanceIdentification;
+			previousVersion_lazy = () -> RemittanceInformation12.mmRemittanceIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -186,10 +190,10 @@ public class RemittanceInformation13 {
 			componentContext_lazy = () -> RemittanceInformation13.mmObject();
 			isDerived = false;
 			xmlTag = "Ustrd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unstructured";
 			definition = "Information supplied to enable the matching/reconciliation of an entry with the items that the payment is intended to settle, such as commercial invoices in an accounts' receivable system, in an unstructured form.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.RemittanceInformation12.mmUnstructured;
+			previousVersion_lazy = () -> RemittanceInformation12.mmUnstructured;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
 		}
@@ -241,10 +245,10 @@ public class RemittanceInformation13 {
 			componentContext_lazy = () -> RemittanceInformation13.mmObject();
 			isDerived = false;
 			xmlTag = "Strd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Structured";
 			definition = "Information supplied to enable the matching/reconciliation of an entry with the items that the payment is intended to settle, such as commercial invoices in an accounts' receivable system, in a structured form.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.RemittanceInformation12.mmStructured;
+			previousVersion_lazy = () -> RemittanceInformation12.mmStructured;
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.StructuredRemittanceInformation13.mmObject();
@@ -297,10 +301,10 @@ public class RemittanceInformation13 {
 			componentContext_lazy = () -> RemittanceInformation13.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlPmtInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalPaymentInformation";
 			definition = "Set of elements used to provide information on the original transactions, to which the remittance message refers.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.RemittanceInformation12.mmOriginalPaymentInformation;
+			previousVersion_lazy = () -> RemittanceInformation12.mmOriginalPaymentInformation;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -311,12 +315,12 @@ public class RemittanceInformation13 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RemittanceInformation13.mmRemittanceIdentification, com.tools20022.repository.msg.RemittanceInformation13.mmUnstructured,
-						com.tools20022.repository.msg.RemittanceInformation13.mmStructured, com.tools20022.repository.msg.RemittanceInformation13.mmOriginalPaymentInformation);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.remt.RemittanceAdviceV03.mmRemittanceInformation);
+				messageElement_lazy = () -> Arrays.asList(RemittanceInformation13.mmRemittanceIdentification, RemittanceInformation13.mmUnstructured, RemittanceInformation13.mmStructured,
+						RemittanceInformation13.mmOriginalPaymentInformation);
+				messageBuildingBlock_lazy = () -> Arrays.asList(RemittanceAdviceV03.mmRemittanceInformation);
 				trace_lazy = () -> Document.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RemittanceInformation13";
 				definition = "Information supplied to enable the matching/reconciliation of an entry with the items that the payment is intended to settle, such as commercial invoices in an accounts' receivable system.";
 				previousVersion_lazy = () -> RemittanceInformation12.mmObject();

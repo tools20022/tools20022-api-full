@@ -17,10 +17,10 @@
 
 package com.tools20022.repository.entity;
 
-import com.tools20022.metamodel.MMBusinessAssociationEnd;
-import com.tools20022.metamodel.MMBusinessAttribute;
-import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.*;
 import com.tools20022.repository.datatype.ISODateTime;
+import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -34,37 +34,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Deadline#mmRelatedCorporateActionEvent
- * Deadline.mmRelatedCorporateActionEvent}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Deadline#mmMarketDeadline
- * Deadline.mmMarketDeadline}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Deadline#mmIntermediaryDeadline
- * Deadline.mmIntermediaryDeadline}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Deadline#mmSTPDeadline
- * Deadline.mmSTPDeadline}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Deadline#mmRelatedMeeting
- * Deadline.mmRelatedMeeting}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
- * subType} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.SecuritiesBlockingDeadline
- * SecuritiesBlockingDeadline}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesRegistrationDeadline
- * SecuritiesRegistrationDeadline}</li>
- * <li>{@linkplain com.tools20022.repository.entity.MeetingDeadline
- * MeetingDeadline}</li>
- * <li>{@linkplain com.tools20022.repository.entity.CorporateActionDeadline
- * CorporateActionDeadline}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
  * associationDomain} =
@@ -86,6 +55,37 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.msg.CorporateActionDate55#mmBorrowerStockLendingDeadline
  * CorporateActionDate55.mmBorrowerStockLendingDeadline}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
+ * subType} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.SecuritiesBlockingDeadline
+ * SecuritiesBlockingDeadline}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesRegistrationDeadline
+ * SecuritiesRegistrationDeadline}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.MeetingDeadline
+ * MeetingDeadline}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.CorporateActionDeadline
+ * CorporateActionDeadline}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Deadline#mmRelatedCorporateActionEvent
+ * Deadline.mmRelatedCorporateActionEvent}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Deadline#mmMarketDeadline
+ * Deadline.mmMarketDeadline}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Deadline#mmIntermediaryDeadline
+ * Deadline.mmIntermediaryDeadline}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Deadline#mmSTPDeadline
+ * Deadline.mmSTPDeadline}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Deadline#mmRelatedMeeting
+ * Deadline.mmRelatedMeeting}</li>
  * </ul>
  * </li>
  * <li>
@@ -146,13 +146,13 @@ public class Deadline {
 		{
 			elementContext_lazy = () -> Deadline.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedCorporateActionEvent";
 			definition = "Related corporate action event.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmDeadline;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmObject();
 		}
 	};
@@ -350,34 +350,23 @@ public class Deadline {
 	 */
 	public static final MMBusinessAttribute mmMarketDeadline = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionDate6.mmMarketDeadline, com.tools20022.repository.msg.CorporateActionDate10.mmMarketDeadline,
-					com.tools20022.repository.msg.CorporateActionDate18.mmMarketDeadline, com.tools20022.repository.msg.CorporateActionDate19.mmMarketDeadline, com.tools20022.repository.msg.CorporateActionDate8.mmMarketDeadline,
-					com.tools20022.repository.msg.CorporateActionDate11.mmMarketDeadline, com.tools20022.repository.msg.CorporateActionDate15.mmMarketDeadline, com.tools20022.repository.msg.CorporateActionDate16.mmMarketDeadline,
-					com.tools20022.repository.msg.ProxyParameters.mmProxyAppointmentMarketDeadline, com.tools20022.repository.msg.MeetingNotice1.mmAttendanceConfirmationMarketDeadline,
-					com.tools20022.repository.msg.MeetingNotice1.mmResolutionProposalMarketDeadline, com.tools20022.repository.msg.VoteParameters.mmVoteMarketDeadline,
-					com.tools20022.repository.msg.VoteParameters.mmVoteWithPremiumMarketDeadline, com.tools20022.repository.msg.EntitlementAssessment.mmSecuritiesBlockingMarketDeadline,
-					com.tools20022.repository.msg.EntitlementAssessment.mmSecuritiesReregistrationMarketDeadline, com.tools20022.repository.msg.ProxyAppointmentInformation1.mmMarketDeadline,
-					com.tools20022.repository.msg.MeetingNotice2.mmAttendanceConfirmationMarketDeadline, com.tools20022.repository.msg.MeetingNotice2.mmResolutionProposalMarketDeadline,
-					com.tools20022.repository.msg.VoteParameters1.mmVoteMarketDeadline, com.tools20022.repository.msg.VoteParameters1.mmRevocabilityMarketDeadline,
-					com.tools20022.repository.msg.VoteParameters1.mmVoteWithPremiumMarketDeadline, com.tools20022.repository.msg.EntitlementAssessment1.mmSecuritiesBlockingMarketDeadline,
-					com.tools20022.repository.msg.EntitlementAssessment1.mmRegistrationSecuritiesMarketDeadline, com.tools20022.repository.msg.EntitlementAssessment1.mmRegistrationParticipationMarketDeadline,
-					com.tools20022.repository.msg.AdditionalRights1.mmAdditionalRightMarketDeadline, com.tools20022.repository.msg.ProxyAppointmentInformation2.mmMarketDeadline,
-					com.tools20022.repository.msg.MeetingNotice3.mmAttendanceConfirmationMarketDeadline, com.tools20022.repository.msg.VoteParameters2.mmVoteMarketDeadline,
-					com.tools20022.repository.msg.VoteParameters2.mmRevocabilityMarketDeadline, com.tools20022.repository.msg.VoteParameters2.mmVoteWithPremiumMarketDeadline,
-					com.tools20022.repository.msg.EntitlementAssessment2.mmSecuritiesBlockingMarketDeadline, com.tools20022.repository.msg.EntitlementAssessment2.mmRegistrationSecuritiesMarketDeadline,
-					com.tools20022.repository.msg.EntitlementAssessment2.mmRegistrationParticipationMarketDeadline, com.tools20022.repository.msg.VoteParameters3.mmVoteMarketDeadline,
-					com.tools20022.repository.msg.VoteParameters3.mmRevocabilityMarketDeadline, com.tools20022.repository.msg.VoteParameters3.mmVoteWithPremiumMarketDeadline,
-					com.tools20022.repository.msg.CorporateActionDate4.mmMarketDeadline, com.tools20022.repository.msg.CorporateActionOption11.mmMarketDeadline, com.tools20022.repository.msg.CorporateActionDate29.mmMarketDeadline,
-					com.tools20022.repository.msg.CorporateActionDate33.mmMarketDeadline, com.tools20022.repository.msg.EntitlementAssessment3.mmSecuritiesBlockingMarketDeadline,
-					com.tools20022.repository.msg.EntitlementAssessment3.mmRegistrationSecuritiesMarketDeadline, com.tools20022.repository.msg.EntitlementAssessment3.mmRegistrationParticipationMarketDeadline,
-					com.tools20022.repository.msg.VoteParameters4.mmVoteMarketDeadline, com.tools20022.repository.msg.VoteParameters4.mmRevocabilityMarketDeadline,
-					com.tools20022.repository.msg.VoteParameters4.mmVoteWithPremiumMarketDeadline, com.tools20022.repository.msg.MeetingNotice4.mmAttendanceConfirmationMarketDeadline,
-					com.tools20022.repository.msg.ProxyAppointmentInformation3.mmMarketDeadline, com.tools20022.repository.msg.AdditionalRights2.mmAdditionalRightMarketDeadline,
-					com.tools20022.repository.msg.CorporateActionDate46.mmMarketDeadline, com.tools20022.repository.msg.CorporateActionDate48.mmMarketDeadline, com.tools20022.repository.msg.CorporateActionDate52.mmMarketDeadline,
-					com.tools20022.repository.msg.CorporateActionDate55.mmMarketDeadline);
+			derivation_lazy = () -> Arrays.asList(CorporateActionDate6.mmMarketDeadline, CorporateActionDate10.mmMarketDeadline, CorporateActionDate18.mmMarketDeadline, CorporateActionDate19.mmMarketDeadline,
+					CorporateActionDate8.mmMarketDeadline, CorporateActionDate11.mmMarketDeadline, CorporateActionDate15.mmMarketDeadline, CorporateActionDate16.mmMarketDeadline, ProxyParameters.mmProxyAppointmentMarketDeadline,
+					MeetingNotice1.mmAttendanceConfirmationMarketDeadline, MeetingNotice1.mmResolutionProposalMarketDeadline, VoteParameters.mmVoteMarketDeadline, VoteParameters.mmVoteWithPremiumMarketDeadline,
+					EntitlementAssessment.mmSecuritiesBlockingMarketDeadline, EntitlementAssessment.mmSecuritiesReregistrationMarketDeadline, ProxyAppointmentInformation1.mmMarketDeadline,
+					MeetingNotice2.mmAttendanceConfirmationMarketDeadline, MeetingNotice2.mmResolutionProposalMarketDeadline, VoteParameters1.mmVoteMarketDeadline, VoteParameters1.mmRevocabilityMarketDeadline,
+					VoteParameters1.mmVoteWithPremiumMarketDeadline, EntitlementAssessment1.mmSecuritiesBlockingMarketDeadline, EntitlementAssessment1.mmRegistrationSecuritiesMarketDeadline,
+					EntitlementAssessment1.mmRegistrationParticipationMarketDeadline, AdditionalRights1.mmAdditionalRightMarketDeadline, ProxyAppointmentInformation2.mmMarketDeadline, MeetingNotice3.mmAttendanceConfirmationMarketDeadline,
+					VoteParameters2.mmVoteMarketDeadline, VoteParameters2.mmRevocabilityMarketDeadline, VoteParameters2.mmVoteWithPremiumMarketDeadline, EntitlementAssessment2.mmSecuritiesBlockingMarketDeadline,
+					EntitlementAssessment2.mmRegistrationSecuritiesMarketDeadline, EntitlementAssessment2.mmRegistrationParticipationMarketDeadline, VoteParameters3.mmVoteMarketDeadline, VoteParameters3.mmRevocabilityMarketDeadline,
+					VoteParameters3.mmVoteWithPremiumMarketDeadline, CorporateActionDate4.mmMarketDeadline, CorporateActionOption11.mmMarketDeadline, CorporateActionDate29.mmMarketDeadline, CorporateActionDate33.mmMarketDeadline,
+					EntitlementAssessment3.mmSecuritiesBlockingMarketDeadline, EntitlementAssessment3.mmRegistrationSecuritiesMarketDeadline, EntitlementAssessment3.mmRegistrationParticipationMarketDeadline,
+					VoteParameters4.mmVoteMarketDeadline, VoteParameters4.mmRevocabilityMarketDeadline, VoteParameters4.mmVoteWithPremiumMarketDeadline, MeetingNotice4.mmAttendanceConfirmationMarketDeadline,
+					ProxyAppointmentInformation3.mmMarketDeadline, AdditionalRights2.mmAdditionalRightMarketDeadline, CorporateActionDate46.mmMarketDeadline, CorporateActionDate48.mmMarketDeadline, CorporateActionDate52.mmMarketDeadline,
+					CorporateActionDate55.mmMarketDeadline);
 			elementContext_lazy = () -> Deadline.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MarketDeadline";
 			definition = "Date by which the action should have been completed.  This deadline is set by the issuer.";
 			maxOccurs = 1;
@@ -519,24 +508,17 @@ public class Deadline {
 	 */
 	public static final MMBusinessAttribute mmIntermediaryDeadline = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ProxyParameters.mmProxyAppointmentDeadline, com.tools20022.repository.msg.MeetingNotice1.mmAttendanceConfirmationDeadline,
-					com.tools20022.repository.msg.MeetingNotice1.mmResolutionProposalDeadline, com.tools20022.repository.msg.VoteParameters.mmVoteDeadline, com.tools20022.repository.msg.VoteParameters.mmVoteWithPremiumDeadline,
-					com.tools20022.repository.msg.EntitlementAssessment.mmSecuritiesBlockingDeadline, com.tools20022.repository.msg.EntitlementAssessment.mmSecuritiesReregistrationDeadline,
-					com.tools20022.repository.msg.MeetingNotice2.mmAttendanceConfirmationDeadline, com.tools20022.repository.msg.MeetingNotice2.mmResolutionProposalDeadline, com.tools20022.repository.msg.VoteParameters1.mmVoteDeadline,
-					com.tools20022.repository.msg.VoteParameters1.mmRevocabilityDeadline, com.tools20022.repository.msg.VoteParameters1.mmVoteWithPremiumDeadline,
-					com.tools20022.repository.msg.EntitlementAssessment1.mmSecuritiesBlockingDeadline, com.tools20022.repository.msg.EntitlementAssessment1.mmRegistrationSecuritiesDeadline,
-					com.tools20022.repository.msg.EntitlementAssessment1.mmRegistrationParticipationDeadline, com.tools20022.repository.msg.MeetingNotice3.mmAttendanceConfirmationDeadline,
-					com.tools20022.repository.msg.VoteParameters2.mmVoteDeadline, com.tools20022.repository.msg.VoteParameters2.mmRevocabilityDeadline, com.tools20022.repository.msg.VoteParameters2.mmVoteWithPremiumDeadline,
-					com.tools20022.repository.msg.EntitlementAssessment2.mmSecuritiesBlockingDeadline, com.tools20022.repository.msg.EntitlementAssessment2.mmRegistrationSecuritiesDeadline,
-					com.tools20022.repository.msg.EntitlementAssessment2.mmRegistrationParticipationDeadline, com.tools20022.repository.msg.VoteParameters3.mmVoteDeadline,
-					com.tools20022.repository.msg.VoteParameters3.mmRevocabilityDeadline, com.tools20022.repository.msg.VoteParameters3.mmVoteWithPremiumDeadline,
-					com.tools20022.repository.msg.EntitlementAssessment3.mmSecuritiesBlockingDeadline, com.tools20022.repository.msg.EntitlementAssessment3.mmRegistrationSecuritiesDeadline,
-					com.tools20022.repository.msg.EntitlementAssessment3.mmRegistrationParticipationDeadline, com.tools20022.repository.msg.VoteParameters4.mmVoteDeadline,
-					com.tools20022.repository.msg.VoteParameters4.mmRevocabilityDeadline, com.tools20022.repository.msg.VoteParameters4.mmEarlyVoteWithPremiumDeadline,
-					com.tools20022.repository.msg.VoteParameters4.mmVoteWithPremiumDeadline, com.tools20022.repository.msg.MeetingNotice4.mmAttendanceConfirmationDeadline);
+			derivation_lazy = () -> Arrays.asList(ProxyParameters.mmProxyAppointmentDeadline, MeetingNotice1.mmAttendanceConfirmationDeadline, MeetingNotice1.mmResolutionProposalDeadline, VoteParameters.mmVoteDeadline,
+					VoteParameters.mmVoteWithPremiumDeadline, EntitlementAssessment.mmSecuritiesBlockingDeadline, EntitlementAssessment.mmSecuritiesReregistrationDeadline, MeetingNotice2.mmAttendanceConfirmationDeadline,
+					MeetingNotice2.mmResolutionProposalDeadline, VoteParameters1.mmVoteDeadline, VoteParameters1.mmRevocabilityDeadline, VoteParameters1.mmVoteWithPremiumDeadline, EntitlementAssessment1.mmSecuritiesBlockingDeadline,
+					EntitlementAssessment1.mmRegistrationSecuritiesDeadline, EntitlementAssessment1.mmRegistrationParticipationDeadline, MeetingNotice3.mmAttendanceConfirmationDeadline, VoteParameters2.mmVoteDeadline,
+					VoteParameters2.mmRevocabilityDeadline, VoteParameters2.mmVoteWithPremiumDeadline, EntitlementAssessment2.mmSecuritiesBlockingDeadline, EntitlementAssessment2.mmRegistrationSecuritiesDeadline,
+					EntitlementAssessment2.mmRegistrationParticipationDeadline, VoteParameters3.mmVoteDeadline, VoteParameters3.mmRevocabilityDeadline, VoteParameters3.mmVoteWithPremiumDeadline,
+					EntitlementAssessment3.mmSecuritiesBlockingDeadline, EntitlementAssessment3.mmRegistrationSecuritiesDeadline, EntitlementAssessment3.mmRegistrationParticipationDeadline, VoteParameters4.mmVoteDeadline,
+					VoteParameters4.mmRevocabilityDeadline, VoteParameters4.mmEarlyVoteWithPremiumDeadline, VoteParameters4.mmVoteWithPremiumDeadline, MeetingNotice4.mmAttendanceConfirmationDeadline);
 			elementContext_lazy = () -> Deadline.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "IntermediaryDeadline";
 			definition = "Date by which the action should have been completed. This deadline is set by an intermediary.";
 			maxOccurs = 1;
@@ -663,22 +645,17 @@ public class Deadline {
 	 */
 	public static final MMBusinessAttribute mmSTPDeadline = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ProxyParameters.mmProxyAppointmentElectronicDeadline, com.tools20022.repository.msg.MeetingNotice1.mmAttendanceConfirmationElectronicDeadline,
-					com.tools20022.repository.msg.VoteParameters.mmVoteElectronicDeadline, com.tools20022.repository.msg.VoteParameters.mmVoteWithPremiumElectronicDeadline,
-					com.tools20022.repository.msg.MeetingNotice2.mmAttendanceConfirmationSTPDeadline, com.tools20022.repository.msg.VoteParameters1.mmVoteSTPDeadline, com.tools20022.repository.msg.VoteParameters1.mmRevocabilitySTPDeadline,
-					com.tools20022.repository.msg.VoteParameters1.mmVoteWithPremiumSTPDeadline, com.tools20022.repository.msg.EntitlementAssessment1.mmSecuritiesBlockingSTPDeadline,
-					com.tools20022.repository.msg.EntitlementAssessment1.mmRegistrationSecuritiesSTPDeadline, com.tools20022.repository.msg.EntitlementAssessment1.mmRegistrationParticipationSTPDeadline,
-					com.tools20022.repository.msg.MeetingNotice3.mmAttendanceConfirmationSTPDeadline, com.tools20022.repository.msg.VoteParameters2.mmVoteSTPDeadline, com.tools20022.repository.msg.VoteParameters2.mmRevocabilitySTPDeadline,
-					com.tools20022.repository.msg.VoteParameters2.mmVoteWithPremiumSTPDeadline, com.tools20022.repository.msg.EntitlementAssessment2.mmSecuritiesBlockingSTPDeadline,
-					com.tools20022.repository.msg.EntitlementAssessment2.mmRegistrationSecuritiesSTPDeadline, com.tools20022.repository.msg.EntitlementAssessment2.mmRegistrationParticipationSTPDeadline,
-					com.tools20022.repository.msg.VoteParameters3.mmVoteSTPDeadline, com.tools20022.repository.msg.VoteParameters3.mmRevocabilitySTPDeadline, com.tools20022.repository.msg.VoteParameters3.mmVoteWithPremiumSTPDeadline,
-					com.tools20022.repository.msg.EntitlementAssessment3.mmSecuritiesBlockingSTPDeadline, com.tools20022.repository.msg.EntitlementAssessment3.mmRegistrationSecuritiesSTPDeadline,
-					com.tools20022.repository.msg.EntitlementAssessment3.mmRegistrationParticipationSTPDeadline, com.tools20022.repository.msg.VoteParameters4.mmVoteSTPDeadline,
-					com.tools20022.repository.msg.VoteParameters4.mmRevocabilitySTPDeadline, com.tools20022.repository.msg.VoteParameters4.mmVoteWithPremiumSTPDeadline,
-					com.tools20022.repository.msg.MeetingNotice4.mmAttendanceConfirmationSTPDeadline);
+			derivation_lazy = () -> Arrays.asList(ProxyParameters.mmProxyAppointmentElectronicDeadline, MeetingNotice1.mmAttendanceConfirmationElectronicDeadline, VoteParameters.mmVoteElectronicDeadline,
+					VoteParameters.mmVoteWithPremiumElectronicDeadline, MeetingNotice2.mmAttendanceConfirmationSTPDeadline, VoteParameters1.mmVoteSTPDeadline, VoteParameters1.mmRevocabilitySTPDeadline,
+					VoteParameters1.mmVoteWithPremiumSTPDeadline, EntitlementAssessment1.mmSecuritiesBlockingSTPDeadline, EntitlementAssessment1.mmRegistrationSecuritiesSTPDeadline,
+					EntitlementAssessment1.mmRegistrationParticipationSTPDeadline, MeetingNotice3.mmAttendanceConfirmationSTPDeadline, VoteParameters2.mmVoteSTPDeadline, VoteParameters2.mmRevocabilitySTPDeadline,
+					VoteParameters2.mmVoteWithPremiumSTPDeadline, EntitlementAssessment2.mmSecuritiesBlockingSTPDeadline, EntitlementAssessment2.mmRegistrationSecuritiesSTPDeadline,
+					EntitlementAssessment2.mmRegistrationParticipationSTPDeadline, VoteParameters3.mmVoteSTPDeadline, VoteParameters3.mmRevocabilitySTPDeadline, VoteParameters3.mmVoteWithPremiumSTPDeadline,
+					EntitlementAssessment3.mmSecuritiesBlockingSTPDeadline, EntitlementAssessment3.mmRegistrationSecuritiesSTPDeadline, EntitlementAssessment3.mmRegistrationParticipationSTPDeadline, VoteParameters4.mmVoteSTPDeadline,
+					VoteParameters4.mmRevocabilitySTPDeadline, VoteParameters4.mmVoteWithPremiumSTPDeadline, MeetingNotice4.mmAttendanceConfirmationSTPDeadline);
 			elementContext_lazy = () -> Deadline.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "STPDeadline";
 			definition = "Date by which the action should have been completed. This deadline is set by the issuer. (STP or Electronic mode)";
 			maxOccurs = 1;
@@ -722,13 +699,13 @@ public class Deadline {
 		{
 			elementContext_lazy = () -> Deadline.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedMeeting";
 			definition = "Meeting for which deadlines are specified.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.Meeting.mmDeadline;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Meeting.mmObject();
 		}
 	};
@@ -736,15 +713,14 @@ public class Deadline {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Deadline";
 				definition = "Specifies the different deadlines available for the different processes related to corporate action processes.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CorporateActionEvent.mmDeadline, com.tools20022.repository.entity.Meeting.mmDeadline);
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionDate48.mmBorrowerStockLendingDeadline, com.tools20022.repository.msg.CorporateActionDate55.mmBorrowerStockLendingDeadline);
+				derivationElement_lazy = () -> Arrays.asList(CorporateActionDate48.mmBorrowerStockLendingDeadline, CorporateActionDate55.mmBorrowerStockLendingDeadline);
 				subType_lazy = () -> Arrays.asList(SecuritiesBlockingDeadline.mmObject(), SecuritiesRegistrationDeadline.mmObject(), MeetingDeadline.mmObject(), CorporateActionDeadline.mmObject());
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Deadline.mmRelatedCorporateActionEvent, com.tools20022.repository.entity.Deadline.mmMarketDeadline,
-						com.tools20022.repository.entity.Deadline.mmIntermediaryDeadline, com.tools20022.repository.entity.Deadline.mmSTPDeadline, com.tools20022.repository.entity.Deadline.mmRelatedMeeting);
+				element_lazy = () -> Arrays.asList(Deadline.mmRelatedCorporateActionEvent, Deadline.mmMarketDeadline, Deadline.mmIntermediaryDeadline, Deadline.mmSTPDeadline, Deadline.mmRelatedMeeting);
 			}
 		});
 		return mmObject_lazy.get();

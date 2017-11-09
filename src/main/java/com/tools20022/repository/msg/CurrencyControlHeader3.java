@@ -20,10 +20,15 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.auth.CurrencyControlRequestOrLetterV01;
+import com.tools20022.repository.area.auth.CurrencyControlSupportingDocumentDeliveryV01;
+import com.tools20022.repository.area.auth.PaymentRegulatoryInformationNotificationV01;
 import com.tools20022.repository.choice.Party28Choice;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Max15NumericText;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -127,7 +132,7 @@ public class CurrencyControlHeader3 {
 			componentContext_lazy = () -> CurrencyControlHeader3.mmObject();
 			isDerived = false;
 			xmlTag = "MsgId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageIdentification";
 			definition = "Point to point reference, as assigned by the instructing party, and sent to the next party in the chain to unambiguously identify the message.\nUsage: The instructing party has to make sure that MessageIdentification is unique per instructed party for a pre-agreed period.";
 			maxOccurs = 1;
@@ -168,7 +173,7 @@ public class CurrencyControlHeader3 {
 			componentContext_lazy = () -> CurrencyControlHeader3.mmObject();
 			isDerived = false;
 			xmlTag = "CreDtTm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreationDateTime";
 			definition = "Date and time at which the message was created.";
 			maxOccurs = 1;
@@ -210,7 +215,7 @@ public class CurrencyControlHeader3 {
 			componentContext_lazy = () -> CurrencyControlHeader3.mmObject();
 			isDerived = false;
 			xmlTag = "NbOfItms";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NumberOfItems";
 			definition = "Number of individual items contained in the message.";
 			maxOccurs = 1;
@@ -250,7 +255,7 @@ public class CurrencyControlHeader3 {
 			componentContext_lazy = () -> CurrencyControlHeader3.mmObject();
 			isDerived = false;
 			xmlTag = "InitgPty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InitiatingParty";
 			definition = "Party that initiates the instruction.";
 			maxOccurs = 1;
@@ -292,7 +297,7 @@ public class CurrencyControlHeader3 {
 			componentContext_lazy = () -> CurrencyControlHeader3.mmObject();
 			isDerived = false;
 			xmlTag = "FwdgAgt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForwardingAgent";
 			definition = "Agent which forwards the message.";
 			maxOccurs = 1;
@@ -305,12 +310,11 @@ public class CurrencyControlHeader3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CurrencyControlHeader3.mmMessageIdentification, com.tools20022.repository.msg.CurrencyControlHeader3.mmCreationDateTime,
-						com.tools20022.repository.msg.CurrencyControlHeader3.mmNumberOfItems, com.tools20022.repository.msg.CurrencyControlHeader3.mmInitiatingParty, com.tools20022.repository.msg.CurrencyControlHeader3.mmForwardingAgent);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.auth.CurrencyControlSupportingDocumentDeliveryV01.mmGroupHeader,
-						com.tools20022.repository.area.auth.PaymentRegulatoryInformationNotificationV01.mmGroupHeader, com.tools20022.repository.area.auth.CurrencyControlRequestOrLetterV01.mmGroupHeader);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(CurrencyControlHeader3.mmMessageIdentification, CurrencyControlHeader3.mmCreationDateTime, CurrencyControlHeader3.mmNumberOfItems, CurrencyControlHeader3.mmInitiatingParty,
+						CurrencyControlHeader3.mmForwardingAgent);
+				messageBuildingBlock_lazy = () -> Arrays.asList(CurrencyControlSupportingDocumentDeliveryV01.mmGroupHeader, PaymentRegulatoryInformationNotificationV01.mmGroupHeader, CurrencyControlRequestOrLetterV01.mmGroupHeader);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CurrencyControlHeader3";
 				definition = "Characteristics shared by all individual items included in the currency control message.";
 			}

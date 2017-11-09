@@ -17,14 +17,14 @@
 
 package com.tools20022.repository.entity;
 
-import com.tools20022.metamodel.MMBusinessAssociationEnd;
-import com.tools20022.metamodel.MMBusinessAttribute;
-import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.*;
 import com.tools20022.repository.choice.*;
 import com.tools20022.repository.codeset.RegistrationProcessingStatusCode;
 import com.tools20022.repository.codeset.SecuritiesPaymentStatusCode;
 import com.tools20022.repository.codeset.SecurityStatusCode;
 import com.tools20022.repository.entity.Status;
+import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -37,31 +37,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesStatus#mmPaymentStatus
- * SecuritiesStatus.mmPaymentStatus}</li>
- * <li>{@linkplain com.tools20022.repository.entity.SecuritiesStatus#mmStatus
- * SecuritiesStatus.mmStatus}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesStatus#mmRegistrationStatus
- * SecuritiesStatus.mmRegistrationStatus}</li>
- * <li>{@linkplain com.tools20022.repository.entity.SecuritiesStatus#mmSecurity
- * SecuritiesStatus.mmSecurity}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Security#mmSecurityStatus
- * Security.mmSecurityStatus}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.Status Status}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -86,6 +61,31 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.choice.SecuritiesPaymentStatus6Choice
  * SecuritiesPaymentStatus6Choice}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.Security#mmSecurityStatus
+ * Security.mmSecurityStatus}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.Status Status}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesStatus#mmPaymentStatus
+ * SecuritiesStatus.mmPaymentStatus}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.SecuritiesStatus#mmStatus
+ * SecuritiesStatus.mmStatus}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesStatus#mmRegistrationStatus
+ * SecuritiesStatus.mmRegistrationStatus}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.SecuritiesStatus#mmSecurity
+ * SecuritiesStatus.mmSecurity}</li>
  * </ul>
  * </li>
  * <li>
@@ -241,26 +241,18 @@ public class SecuritiesStatus extends Status {
 	 */
 	public static final MMBusinessAttribute mmPaymentStatus = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SecuritiesPaymentStatus1Choice.mmCode, com.tools20022.repository.choice.SecuritiesPaymentStatus1Choice.mmProprietary,
-					com.tools20022.repository.choice.SecuritiesPaymentStatus2Choice.mmCode, com.tools20022.repository.choice.SecuritiesPaymentStatus2Choice.mmProprietary,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes8.mmPaymentStatus, com.tools20022.repository.msg.FinancialInstrumentAttributes20.mmPaymentStatus,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes35.mmPaymentStatus, com.tools20022.repository.choice.SecuritiesPaymentStatus3Choice.mmCode,
-					com.tools20022.repository.choice.SecuritiesPaymentStatus3Choice.mmProprietary, com.tools20022.repository.msg.FinancialInstrumentAttributes41.mmPaymentStatus,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes4.mmPaymentStatus, com.tools20022.repository.msg.FinancialInstrumentAttributes13.mmPaymentStatus,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes21.mmPaymentStatus, com.tools20022.repository.msg.FinancialInstrumentAttributes26.mmPaymentStatus,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes36.mmPaymentStatus, com.tools20022.repository.msg.FinancialInstrumentAttributes42.mmPaymentStatus,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes27.mmPaymentStatus, com.tools20022.repository.msg.FinancialInstrumentAttributes14.mmPaymentStatus,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes30.mmPaymentStatus, com.tools20022.repository.msg.FinancialInstrumentAttributes28.mmPaymentStatus, com.tools20022.repository.msg.Equity1.mmPaymentStatus,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes15.mmPaymentStatus, com.tools20022.repository.msg.FinancialInstrumentAttributes29.mmPaymentStatus,
-					com.tools20022.repository.choice.SecuritiesPaymentStatus4Choice.mmCode, com.tools20022.repository.choice.SecuritiesPaymentStatus4Choice.mmProprietary,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes2.mmPaymentStatus, com.tools20022.repository.msg.FinancialInstrumentAttributes63.mmPaymentStatus,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes64.mmPaymentStatus, com.tools20022.repository.choice.SecuritiesPaymentStatus5Choice.mmCode,
-					com.tools20022.repository.choice.SecuritiesPaymentStatus5Choice.mmProprietary, com.tools20022.repository.msg.FinancialInstrumentAttributes75.mmPaymentStatus,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes78.mmPaymentStatus, com.tools20022.repository.choice.SecuritiesPaymentStatus6Choice.mmCode,
-					com.tools20022.repository.choice.SecuritiesPaymentStatus6Choice.mmProprietary);
+			derivation_lazy = () -> Arrays.asList(SecuritiesPaymentStatus1Choice.mmCode, SecuritiesPaymentStatus1Choice.mmProprietary, SecuritiesPaymentStatus2Choice.mmCode, SecuritiesPaymentStatus2Choice.mmProprietary,
+					FinancialInstrumentAttributes8.mmPaymentStatus, FinancialInstrumentAttributes20.mmPaymentStatus, FinancialInstrumentAttributes35.mmPaymentStatus, SecuritiesPaymentStatus3Choice.mmCode,
+					SecuritiesPaymentStatus3Choice.mmProprietary, FinancialInstrumentAttributes41.mmPaymentStatus, FinancialInstrumentAttributes4.mmPaymentStatus, FinancialInstrumentAttributes13.mmPaymentStatus,
+					FinancialInstrumentAttributes21.mmPaymentStatus, FinancialInstrumentAttributes26.mmPaymentStatus, FinancialInstrumentAttributes36.mmPaymentStatus, FinancialInstrumentAttributes42.mmPaymentStatus,
+					FinancialInstrumentAttributes27.mmPaymentStatus, FinancialInstrumentAttributes14.mmPaymentStatus, FinancialInstrumentAttributes30.mmPaymentStatus, FinancialInstrumentAttributes28.mmPaymentStatus,
+					Equity1.mmPaymentStatus, FinancialInstrumentAttributes15.mmPaymentStatus, FinancialInstrumentAttributes29.mmPaymentStatus, SecuritiesPaymentStatus4Choice.mmCode, SecuritiesPaymentStatus4Choice.mmProprietary,
+					FinancialInstrumentAttributes2.mmPaymentStatus, FinancialInstrumentAttributes63.mmPaymentStatus, FinancialInstrumentAttributes64.mmPaymentStatus, SecuritiesPaymentStatus5Choice.mmCode,
+					SecuritiesPaymentStatus5Choice.mmProprietary, FinancialInstrumentAttributes75.mmPaymentStatus, FinancialInstrumentAttributes78.mmPaymentStatus, SecuritiesPaymentStatus6Choice.mmCode,
+					SecuritiesPaymentStatus6Choice.mmProprietary);
 			elementContext_lazy = () -> SecuritiesStatus.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PaymentStatus";
 			definition = "Status of payment of a security at a particular time.";
 			maxOccurs = 1;
@@ -306,10 +298,10 @@ public class SecuritiesStatus extends Status {
 	 */
 	public static final MMBusinessAttribute mmStatus = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrumentAttributes1.mmSecurityStatus);
+			derivation_lazy = () -> Arrays.asList(FinancialInstrumentAttributes1.mmSecurityStatus);
 			elementContext_lazy = () -> SecuritiesStatus.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Status";
 			definition = "Specifies the status of the security within its lifecycle.";
 			maxOccurs = 1;
@@ -364,11 +356,10 @@ public class SecuritiesStatus extends Status {
 	 */
 	public static final MMBusinessAttribute mmRegistrationStatus = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.RegistrationProcessingStatus1Choice.mmCode, com.tools20022.repository.choice.RegistrationProcessingStatus2Choice.mmCode,
-					com.tools20022.repository.choice.RegistrationProcessingStatus3Choice.mmCode, com.tools20022.repository.choice.RegistrationProcessingStatus4Choice.mmCode);
+			derivation_lazy = () -> Arrays.asList(RegistrationProcessingStatus1Choice.mmCode, RegistrationProcessingStatus2Choice.mmCode, RegistrationProcessingStatus3Choice.mmCode, RegistrationProcessingStatus4Choice.mmCode);
 			elementContext_lazy = () -> SecuritiesStatus.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RegistrationStatus";
 			definition = "Specifies the status of the registration of the securities.";
 			maxOccurs = 1;
@@ -413,13 +404,13 @@ public class SecuritiesStatus extends Status {
 		{
 			elementContext_lazy = () -> SecuritiesStatus.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Security";
 			definition = "Security for which a status is provided.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.Security.mmSecurityStatus;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 		}
 	};
@@ -427,14 +418,13 @@ public class SecuritiesStatus extends Status {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesStatus";
 				definition = "Specifies the status of the security within its lifecycle.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Security.mmSecurityStatus);
 				superType_lazy = () -> com.tools20022.repository.entity.Status.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesStatus.mmPaymentStatus, com.tools20022.repository.entity.SecuritiesStatus.mmStatus,
-						com.tools20022.repository.entity.SecuritiesStatus.mmRegistrationStatus, com.tools20022.repository.entity.SecuritiesStatus.mmSecurity);
+				element_lazy = () -> Arrays.asList(SecuritiesStatus.mmPaymentStatus, SecuritiesStatus.mmStatus, SecuritiesStatus.mmRegistrationStatus, SecuritiesStatus.mmSecurity);
 				derivationComponent_lazy = () -> Arrays.asList(SecuritiesPaymentStatus1Choice.mmObject(), SecuritiesPaymentStatus2Choice.mmObject(), SecuritiesPaymentStatus3Choice.mmObject(), SecurityStatus2Choice.mmObject(),
 						SecuritiesPaymentStatus4Choice.mmObject(), SecuritiesPaymentStatus5Choice.mmObject(), SecuritiesPaymentStatus6Choice.mmObject());
 			}

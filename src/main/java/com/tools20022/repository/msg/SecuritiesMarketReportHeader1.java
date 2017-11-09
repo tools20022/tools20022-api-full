@@ -20,9 +20,12 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.auth.*;
 import com.tools20022.repository.choice.Period4Choice;
 import com.tools20022.repository.choice.TradingVenueIdentification1Choice;
 import com.tools20022.repository.datatype.ISODateTime;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -140,7 +143,7 @@ public class SecuritiesMarketReportHeader1 {
 			componentContext_lazy = () -> SecuritiesMarketReportHeader1.mmObject();
 			isDerived = false;
 			xmlTag = "RptgNtty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportingEntity";
 			definition = "Identification of the venue which generates the report.";
 			maxOccurs = 1;
@@ -181,7 +184,7 @@ public class SecuritiesMarketReportHeader1 {
 			componentContext_lazy = () -> SecuritiesMarketReportHeader1.mmObject();
 			isDerived = false;
 			xmlTag = "RptgPrd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportingPeriod";
 			definition = "Date or date range the report relates to.";
 			maxOccurs = 1;
@@ -226,7 +229,7 @@ public class SecuritiesMarketReportHeader1 {
 			componentContext_lazy = () -> SecuritiesMarketReportHeader1.mmObject();
 			isDerived = false;
 			xmlTag = "SubmissnDtTm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubmissionDateTime";
 			definition = "Date and time of the report originally submitted by the reporting entity when the file is generated for submission to their reporting authority.";
 			maxOccurs = 1;
@@ -238,19 +241,14 @@ public class SecuritiesMarketReportHeader1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesMarketReportHeader1.mmReportingEntity, com.tools20022.repository.msg.SecuritiesMarketReportHeader1.mmReportingPeriod,
-						com.tools20022.repository.msg.SecuritiesMarketReportHeader1.mmSubmissionDateTime);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.auth.FinancialInstrumentReportingTradingVolumeCapDataReportV01.mmReportHeader,
-						com.tools20022.repository.area.auth.FinancialInstrumentReportingNonEquityTradingActivityResultV01.mmReportHeader,
-						com.tools20022.repository.area.auth.FinancialInstrumentReportingEquityTradingActivityResultV01.mmReportHeader,
-						com.tools20022.repository.area.auth.FinancialInstrumentReportingEquityTransparencyDataReportV01.mmReportHeader, com.tools20022.repository.area.auth.FinancialInstrumentReportingReferenceDataReportV01.mmReportHeader,
-						com.tools20022.repository.area.auth.FinancialInstrumentReportingNonWorkingDayReportV01.mmReportHeader, com.tools20022.repository.area.auth.FinancialInstrumentReportingEquityTradingActivityReportV01.mmReportHeader,
-						com.tools20022.repository.area.auth.FinancialInstrumentReportingReferenceDataIndexReportV01.mmReportHeader,
-						com.tools20022.repository.area.auth.FinancialInstrumentReportingNonEquityTransparencyDataReportV01.mmReportHeader,
-						com.tools20022.repository.area.auth.FinancialInstrumentReportingReferenceDataDeltaReportV01.mmReportHeader,
-						com.tools20022.repository.area.auth.FinancialInstrumentReportingNonEquityTradingActivityReportV01.mmReportHeader);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(SecuritiesMarketReportHeader1.mmReportingEntity, SecuritiesMarketReportHeader1.mmReportingPeriod, SecuritiesMarketReportHeader1.mmSubmissionDateTime);
+				messageBuildingBlock_lazy = () -> Arrays.asList(FinancialInstrumentReportingTradingVolumeCapDataReportV01.mmReportHeader, FinancialInstrumentReportingNonEquityTradingActivityResultV01.mmReportHeader,
+						FinancialInstrumentReportingEquityTradingActivityResultV01.mmReportHeader, FinancialInstrumentReportingEquityTransparencyDataReportV01.mmReportHeader,
+						FinancialInstrumentReportingReferenceDataReportV01.mmReportHeader, FinancialInstrumentReportingNonWorkingDayReportV01.mmReportHeader, FinancialInstrumentReportingEquityTradingActivityReportV01.mmReportHeader,
+						FinancialInstrumentReportingReferenceDataIndexReportV01.mmReportHeader, FinancialInstrumentReportingNonEquityTransparencyDataReportV01.mmReportHeader,
+						FinancialInstrumentReportingReferenceDataDeltaReportV01.mmReportHeader, FinancialInstrumentReportingNonEquityTradingActivityReportV01.mmReportHeader);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesMarketReportHeader1";
 				definition = "Provides the securities market transaction report related header details.";
 			}

@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.RejectionReasonCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -111,7 +113,7 @@ public class RejectionReason3Code extends RejectionReasonCode {
 	 */
 	public static final MMCode mmUnknownSymbol = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnknownSymbol";
 			owner_lazy = () -> RejectionReason3Code.mmObject();
 		}
@@ -134,7 +136,7 @@ public class RejectionReason3Code extends RejectionReasonCode {
 	 */
 	public static final MMCode mmClosedExchange = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClosedExchange";
 			owner_lazy = () -> RejectionReason3Code.mmObject();
 		}
@@ -157,7 +159,7 @@ public class RejectionReason3Code extends RejectionReasonCode {
 	 */
 	public static final MMCode mmExceedsLimit = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExceedsLimit";
 			owner_lazy = () -> RejectionReason3Code.mmObject();
 		}
@@ -180,7 +182,7 @@ public class RejectionReason3Code extends RejectionReasonCode {
 	 */
 	public static final MMCode mmTooLate = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TooLate";
 			owner_lazy = () -> RejectionReason3Code.mmObject();
 		}
@@ -203,7 +205,7 @@ public class RejectionReason3Code extends RejectionReasonCode {
 	 */
 	public static final MMCode mmInvalidPrice = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvalidPrice";
 			owner_lazy = () -> RejectionReason3Code.mmObject();
 		}
@@ -226,7 +228,7 @@ public class RejectionReason3Code extends RejectionReasonCode {
 	 */
 	public static final MMCode mmNotAuthorised = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotAuthorised";
 			owner_lazy = () -> RejectionReason3Code.mmObject();
 		}
@@ -249,7 +251,7 @@ public class RejectionReason3Code extends RejectionReasonCode {
 	 */
 	public static final MMCode mmNoMatchInquiry = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoMatchInquiry";
 			owner_lazy = () -> RejectionReason3Code.mmObject();
 		}
@@ -272,7 +274,7 @@ public class RejectionReason3Code extends RejectionReasonCode {
 	 */
 	public static final MMCode mmNoInstrumentMarket = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoInstrumentMarket";
 			owner_lazy = () -> RejectionReason3Code.mmObject();
 		}
@@ -295,7 +297,7 @@ public class RejectionReason3Code extends RejectionReasonCode {
 	 */
 	public static final MMCode mmNoInventory = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoInventory";
 			owner_lazy = () -> RejectionReason3Code.mmObject();
 		}
@@ -318,7 +320,7 @@ public class RejectionReason3Code extends RejectionReasonCode {
 	 */
 	public static final MMCode mmPass = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Pass";
 			owner_lazy = () -> RejectionReason3Code.mmObject();
 		}
@@ -341,7 +343,7 @@ public class RejectionReason3Code extends RejectionReasonCode {
 	 */
 	public static final MMCode mmInsufficientCredit = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InsufficientCredit";
 			owner_lazy = () -> RejectionReason3Code.mmObject();
 		}
@@ -350,16 +352,14 @@ public class RejectionReason3Code extends RejectionReasonCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("UKWN");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RejectionReason3Code";
 				definition = "Specifies the reason for which a request has not been accepted.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RejectionReason3Code.mmUnknownSymbol, com.tools20022.repository.codeset.RejectionReason3Code.mmClosedExchange,
-						com.tools20022.repository.codeset.RejectionReason3Code.mmExceedsLimit, com.tools20022.repository.codeset.RejectionReason3Code.mmTooLate, com.tools20022.repository.codeset.RejectionReason3Code.mmInvalidPrice,
-						com.tools20022.repository.codeset.RejectionReason3Code.mmNotAuthorised, com.tools20022.repository.codeset.RejectionReason3Code.mmNoMatchInquiry,
-						com.tools20022.repository.codeset.RejectionReason3Code.mmNoInstrumentMarket, com.tools20022.repository.codeset.RejectionReason3Code.mmNoInventory, com.tools20022.repository.codeset.RejectionReason3Code.mmPass,
-						com.tools20022.repository.codeset.RejectionReason3Code.mmInsufficientCredit);
+				code_lazy = () -> Arrays.asList(RejectionReason3Code.mmUnknownSymbol, RejectionReason3Code.mmClosedExchange, RejectionReason3Code.mmExceedsLimit, RejectionReason3Code.mmTooLate, RejectionReason3Code.mmInvalidPrice,
+						RejectionReason3Code.mmNotAuthorised, RejectionReason3Code.mmNoMatchInquiry, RejectionReason3Code.mmNoInstrumentMarket, RejectionReason3Code.mmNoInventory, RejectionReason3Code.mmPass,
+						RejectionReason3Code.mmInsufficientCredit);
 				trace_lazy = () -> RejectionReasonCode.mmObject();
 			}
 		});

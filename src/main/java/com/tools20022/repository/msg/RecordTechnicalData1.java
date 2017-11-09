@@ -19,8 +19,10 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.AuthorityExchangeReason1Code;
 import com.tools20022.repository.datatype.ISODateTime;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -112,10 +114,10 @@ public class RecordTechnicalData1 {
 			componentContext_lazy = () -> RecordTechnicalData1.mmObject();
 			isDerived = false;
 			xmlTag = "RctDtTm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceiptDateTime";
 			definition = "Defines the date and time when the report was originally received by the national competent authority.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RecordTechnicalData2.mmReceiptDateTime);
+			nextVersions_lazy = () -> Arrays.asList(RecordTechnicalData2.mmReceiptDateTime);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
@@ -158,7 +160,7 @@ public class RecordTechnicalData1 {
 			componentContext_lazy = () -> RecordTechnicalData1.mmObject();
 			isDerived = false;
 			xmlTag = "XchgRsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExchangeReason";
 			definition = "Describes the reason for the exchange of the transaction report between the competent authorities.";
 			minOccurs = 1;
@@ -169,9 +171,9 @@ public class RecordTechnicalData1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RecordTechnicalData1.mmReceiptDateTime, com.tools20022.repository.msg.RecordTechnicalData1.mmExchangeReason);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(RecordTechnicalData1.mmReceiptDateTime, RecordTechnicalData1.mmExchangeReason);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RecordTechnicalData1";
 				definition = "Instrument specific technical data to support identification.";
 				nextVersions_lazy = () -> Arrays.asList(RecordTechnicalData2.mmObject());

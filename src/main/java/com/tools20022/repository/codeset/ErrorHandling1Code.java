@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ErrorHandlingCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -89,7 +91,7 @@ public class ErrorHandling1Code extends ErrorHandlingCode {
 	 */
 	public static final MMCode mmDataNotYetAvailable = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DataNotYetAvailable";
 			owner_lazy = () -> ErrorHandling1Code.mmObject();
 		}
@@ -112,7 +114,7 @@ public class ErrorHandling1Code extends ErrorHandlingCode {
 	 */
 	public static final MMCode mmMessageSizeLimitExceeded = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageSizeLimitExceeded";
 			owner_lazy = () -> ErrorHandling1Code.mmObject();
 		}
@@ -135,7 +137,7 @@ public class ErrorHandling1Code extends ErrorHandlingCode {
 	 */
 	public static final MMCode mmDataNotAvailable = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DataNotAvailable";
 			owner_lazy = () -> ErrorHandling1Code.mmObject();
 		}
@@ -144,13 +146,12 @@ public class ErrorHandling1Code extends ErrorHandlingCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("X020");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ErrorHandling1Code";
 				definition = "Error codes generated when the response to a query exceeds the maximum size or the data is not available.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ErrorHandling1Code.mmDataNotYetAvailable, com.tools20022.repository.codeset.ErrorHandling1Code.mmMessageSizeLimitExceeded,
-						com.tools20022.repository.codeset.ErrorHandling1Code.mmDataNotAvailable);
+				code_lazy = () -> Arrays.asList(ErrorHandling1Code.mmDataNotYetAvailable, ErrorHandling1Code.mmMessageSizeLimitExceeded, ErrorHandling1Code.mmDataNotAvailable);
 				trace_lazy = () -> ErrorHandlingCode.mmObject();
 			}
 		});

@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.IssuerTaxabilityCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -82,7 +84,7 @@ public class IssuerTaxability1Code extends IssuerTaxabilityCode {
 	 */
 	public static final MMCode mmTaxable = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Taxable";
 			owner_lazy = () -> IssuerTaxability1Code.mmObject();
 		}
@@ -91,12 +93,12 @@ public class IssuerTaxability1Code extends IssuerTaxabilityCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("TXBL");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "IssuerTaxability1Code";
 				definition = "Specifies whether the corporate action proceeds are taxable at issuer level.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.IssuerTaxability1Code.mmTaxable);
+				code_lazy = () -> Arrays.asList(IssuerTaxability1Code.mmTaxable);
 				trace_lazy = () -> IssuerTaxabilityCode.mmObject();
 			}
 		});

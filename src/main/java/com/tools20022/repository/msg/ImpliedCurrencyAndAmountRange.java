@@ -19,9 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.ImpliedCurrencyAmountRangeChoice;
 import com.tools20022.repository.codeset.CreditDebitCode;
 import com.tools20022.repository.entity.AmountRange;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -105,7 +107,7 @@ public class ImpliedCurrencyAndAmountRange {
 			componentContext_lazy = () -> ImpliedCurrencyAndAmountRange.mmObject();
 			isDerived = false;
 			xmlTag = "Amt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "A specified amount or amount range.";
 			maxOccurs = 1;
@@ -150,11 +152,11 @@ public class ImpliedCurrencyAndAmountRange {
 	 */
 	public static final MMMessageAttribute mmCreditDebitIndicator = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AmountRange.mmCreditDebitIndicator;
+			businessElementTrace_lazy = () -> AmountRange.mmCreditDebitIndicator;
 			componentContext_lazy = () -> ImpliedCurrencyAndAmountRange.mmObject();
 			isDerived = false;
 			xmlTag = "CdtDbtInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditDebitIndicator";
 			definition = "Indicates whether the amount is a credited or debited amount.";
 			maxOccurs = 1;
@@ -166,10 +168,10 @@ public class ImpliedCurrencyAndAmountRange {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ImpliedCurrencyAndAmountRange.mmAmount, com.tools20022.repository.msg.ImpliedCurrencyAndAmountRange.mmCreditDebitIndicator);
+				messageElement_lazy = () -> Arrays.asList(ImpliedCurrencyAndAmountRange.mmAmount, ImpliedCurrencyAndAmountRange.mmCreditDebitIndicator);
 				trace_lazy = () -> AmountRange.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ImpliedCurrencyAndAmountRange";
 				definition = "Expresses an amount or an amount range with an explicit debit/credit indicator and where the currency is implied.";
 			}

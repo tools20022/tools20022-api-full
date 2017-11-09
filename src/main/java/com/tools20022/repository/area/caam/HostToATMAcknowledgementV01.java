@@ -20,6 +20,7 @@ package com.tools20022.repository.area.caam;
 import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.ATMManagementLatestVersion;
 import com.tools20022.repository.msg.ContentInformationType10;
 import com.tools20022.repository.msg.ContentInformationType15;
@@ -36,6 +37,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code caam.008.001.01}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.ATMManagementLatestVersion
@@ -73,9 +77,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * HostToATMAcknowledgementV01.mmSecurityTrailer}</li>
  * </ul>
  * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code caam.008.001.01}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -120,7 +121,7 @@ public class HostToATMAcknowledgementV01 {
 	public static final MMMessageBuildingBlock mmHeader = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Hdr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Header";
 			definition = "Information related to the protocol management on a segment of the path from the ATM to the acquirer.";
 			maxOccurs = 1;
@@ -155,7 +156,7 @@ public class HostToATMAcknowledgementV01 {
 	public static final MMMessageBuildingBlock mmProtectedHostToATMAcknowledgement = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "PrtctdHstToATMAck";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProtectedHostToATMAcknowledgement";
 			definition = "Encrypted body of the message.";
 			maxOccurs = 1;
@@ -193,7 +194,7 @@ public class HostToATMAcknowledgementV01 {
 	public static final MMMessageBuildingBlock mmHostToATMAcknowledgement = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "HstToATMAck";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HostToATMAcknowledgement";
 			definition = "Information related to the acknowledgement from an ATM to contact the ATM manager.";
 			maxOccurs = 1;
@@ -228,7 +229,7 @@ public class HostToATMAcknowledgementV01 {
 	public static final MMMessageBuildingBlock mmSecurityTrailer = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SctyTrlr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityTrailer";
 			definition = "Trailer of the message containing a MAC.";
 			maxOccurs = 1;
@@ -240,15 +241,15 @@ public class HostToATMAcknowledgementV01 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "HostToATMAcknowledgementV01";
 				definition = "The HostToATMAcknowledgement message is sent by an ATM to a host to acknowledge the receipt of a HostToATMRequest message.";
 				messageSet_lazy = () -> Arrays.asList(ATMInterfaceforTransactionProcessingandATMManagementISOPreviousversion.mmObject(), ATMInterfaceforTransactionProcessingandATMManagementISOLatestversion.mmObject());
 				rootElement = "Document";
 				xmlTag = "HstToATMAck";
 				businessArea_lazy = () -> ATMManagementLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.caam.HostToATMAcknowledgementV01.mmHeader, com.tools20022.repository.area.caam.HostToATMAcknowledgementV01.mmProtectedHostToATMAcknowledgement,
-						com.tools20022.repository.area.caam.HostToATMAcknowledgementV01.mmHostToATMAcknowledgement, com.tools20022.repository.area.caam.HostToATMAcknowledgementV01.mmSecurityTrailer);
+				messageBuildingBlock_lazy = () -> Arrays.asList(HostToATMAcknowledgementV01.mmHeader, HostToATMAcknowledgementV01.mmProtectedHostToATMAcknowledgement, HostToATMAcknowledgementV01.mmHostToATMAcknowledgement,
+						HostToATMAcknowledgementV01.mmSecurityTrailer);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "caam";

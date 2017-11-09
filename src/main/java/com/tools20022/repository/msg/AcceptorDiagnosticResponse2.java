@@ -19,7 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.caaa.AcceptorDiagnosticResponseV02;
 import com.tools20022.repository.entity.CardPayment;
+import com.tools20022.repository.entity.CardPaymentAcquiring;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -127,10 +131,10 @@ public class AcceptorDiagnosticResponse2 {
 			componentContext_lazy = () -> AcceptorDiagnosticResponse2.mmObject();
 			isDerived = false;
 			xmlTag = "Envt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Environment";
 			definition = "Environment of the transaction.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcceptorDiagnosticResponse3.mmEnvironment);
+			nextVersions_lazy = () -> Arrays.asList(AcceptorDiagnosticResponse3.mmEnvironment);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -180,14 +184,14 @@ public class AcceptorDiagnosticResponse2 {
 	 */
 	public static final MMMessageAssociationEnd mmTMSTrigger = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.mmTMSTrigger;
+			businessElementTrace_lazy = () -> CardPaymentAcquiring.mmTMSTrigger;
 			componentContext_lazy = () -> AcceptorDiagnosticResponse2.mmObject();
 			isDerived = false;
 			xmlTag = "TMSTrggr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TMSTrigger";
 			definition = "Instructions for contacting the terminal management host.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcceptorDiagnosticResponse3.mmTMSTrigger);
+			nextVersions_lazy = () -> Arrays.asList(AcceptorDiagnosticResponse3.mmTMSTrigger);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -198,11 +202,11 @@ public class AcceptorDiagnosticResponse2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcceptorDiagnosticResponse2.mmEnvironment, com.tools20022.repository.msg.AcceptorDiagnosticResponse2.mmTMSTrigger);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.caaa.AcceptorDiagnosticResponseV02.mmDiagnosticResponse);
+				messageElement_lazy = () -> Arrays.asList(AcceptorDiagnosticResponse2.mmEnvironment, AcceptorDiagnosticResponse2.mmTMSTrigger);
+				messageBuildingBlock_lazy = () -> Arrays.asList(AcceptorDiagnosticResponseV02.mmDiagnosticResponse);
 				trace_lazy = () -> CardPayment.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AcceptorDiagnosticResponse2";
 				definition = "Diagnostic response from the acquirer.";
 				nextVersions_lazy = () -> Arrays.asList(AcceptorDiagnosticResponse3.mmObject());

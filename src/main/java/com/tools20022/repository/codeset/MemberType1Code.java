@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.MemberTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -90,7 +92,7 @@ public class MemberType1Code extends MemberTypeCode {
 	 */
 	public static final MMCode mmDirect = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Direct";
 			owner_lazy = () -> MemberType1Code.mmObject();
 		}
@@ -113,7 +115,7 @@ public class MemberType1Code extends MemberTypeCode {
 	 */
 	public static final MMCode mmIndirect = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Indirect";
 			owner_lazy = () -> MemberType1Code.mmObject();
 		}
@@ -136,7 +138,7 @@ public class MemberType1Code extends MemberTypeCode {
 	 */
 	public static final MMCode mmRemote = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Remote";
 			owner_lazy = () -> MemberType1Code.mmObject();
 		}
@@ -159,7 +161,7 @@ public class MemberType1Code extends MemberTypeCode {
 	 */
 	public static final MMCode mmEURO1 = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EURO1";
 			owner_lazy = () -> MemberType1Code.mmObject();
 		}
@@ -182,7 +184,7 @@ public class MemberType1Code extends MemberTypeCode {
 	 */
 	public static final MMCode mmSTEP1 = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "STEP1";
 			owner_lazy = () -> MemberType1Code.mmObject();
 		}
@@ -191,13 +193,12 @@ public class MemberType1Code extends MemberTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("DRCT");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MemberType1Code";
 				definition = "Specifies the nature of the membership of a party in a system. A system may recognise different types of membership, with different related rights and obligations.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MemberType1Code.mmDirect, com.tools20022.repository.codeset.MemberType1Code.mmIndirect, com.tools20022.repository.codeset.MemberType1Code.mmRemote,
-						com.tools20022.repository.codeset.MemberType1Code.mmEURO1, com.tools20022.repository.codeset.MemberType1Code.mmSTEP1);
+				code_lazy = () -> Arrays.asList(MemberType1Code.mmDirect, MemberType1Code.mmIndirect, MemberType1Code.mmRemote, MemberType1Code.mmEURO1, MemberType1Code.mmSTEP1);
 				trace_lazy = () -> MemberTypeCode.mmObject();
 			}
 		});

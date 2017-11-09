@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ResultDetailCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -77,7 +79,7 @@ public class ResultDetail3Code extends ResultDetailCode {
 	 */
 	public static final MMCode mmUnknownCertificate = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnknownCertificate";
 			owner_lazy = () -> ResultDetail3Code.mmObject();
 		}
@@ -100,7 +102,7 @@ public class ResultDetail3Code extends ResultDetailCode {
 	 */
 	public static final MMCode mmUnsupportedService = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnsupportedService";
 			owner_lazy = () -> ResultDetail3Code.mmObject();
 		}
@@ -109,11 +111,11 @@ public class ResultDetail3Code extends ResultDetailCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ResultDetail3Code";
 				definition = "Detail of the response.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ResultDetail3Code.mmUnknownCertificate, com.tools20022.repository.codeset.ResultDetail3Code.mmUnsupportedService);
+				code_lazy = () -> Arrays.asList(ResultDetail3Code.mmUnknownCertificate, ResultDetail3Code.mmUnsupportedService);
 				trace_lazy = () -> ResultDetailCode.mmObject();
 			}
 		});

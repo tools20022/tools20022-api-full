@@ -19,8 +19,13 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.setr.SecuritiesTradeConfirmationV01;
+import com.tools20022.repository.area.setr.SecuritiesTradeConfirmationV02;
+import com.tools20022.repository.area.setr.SecuritiesTradeConfirmationV03;
 import com.tools20022.repository.datatype.YesNoIndicator;
-import com.tools20022.repository.entity.SecuritiesTrade;
+import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -218,11 +223,11 @@ public class OtherAmounts16 {
 	 */
 	public static final MMMessageAttribute mmChargesFees = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Adjustment.mmAmount;
+			businessElementTrace_lazy = () -> Adjustment.mmAmount;
 			componentContext_lazy = () -> OtherAmounts16.mmObject();
 			isDerived = false;
 			xmlTag = "ChrgsFees";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChargesFees";
 			definition = "Amount of money paid for the provision of financial services that cannot be categorised by another qualifier.";
 			maxOccurs = 1;
@@ -267,11 +272,11 @@ public class OtherAmounts16 {
 	 */
 	public static final MMMessageAttribute mmCountryNationalFederalTax = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.mmAmount;
+			businessElementTrace_lazy = () -> Tax.mmAmount;
 			componentContext_lazy = () -> OtherAmounts16.mmObject();
 			isDerived = false;
 			xmlTag = "CtryNtlFdrlTax";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CountryNationalFederalTax";
 			definition = "Amount of country, national or federal tax charged by the jurisdiction in which the account servicer is located.";
 			maxOccurs = 1;
@@ -315,11 +320,11 @@ public class OtherAmounts16 {
 	 */
 	public static final MMMessageAttribute mmExecutingBrokerAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Adjustment.mmAmount;
+			businessElementTrace_lazy = () -> Adjustment.mmAmount;
 			componentContext_lazy = () -> OtherAmounts16.mmObject();
 			isDerived = false;
 			xmlTag = "ExctgBrkrAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExecutingBrokerAmount";
 			definition = "Amount of money paid to an executing broker as a commission.";
 			maxOccurs = 1;
@@ -365,11 +370,11 @@ public class OtherAmounts16 {
 	 */
 	public static final MMMessageAttribute mmIssueDiscountAllowance = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Issuance.mmIssueDiscountAllowance;
+			businessElementTrace_lazy = () -> Issuance.mmIssueDiscountAllowance;
 			componentContext_lazy = () -> OtherAmounts16.mmObject();
 			isDerived = false;
 			xmlTag = "IsseDscntAllwnc";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssueDiscountAllowance";
 			definition = "Amount of money defined as a discount on a new issue or on a tranche of an existing issue.";
 			maxOccurs = 1;
@@ -411,11 +416,11 @@ public class OtherAmounts16 {
 	 */
 	public static final MMMessageAttribute mmPaymentLevyTax = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.mmAmount;
+			businessElementTrace_lazy = () -> Tax.mmAmount;
 			componentContext_lazy = () -> OtherAmounts16.mmObject();
 			isDerived = false;
 			xmlTag = "PmtLevyTax";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentLevyTax";
 			definition = "Amount of payment levy tax.";
 			maxOccurs = 1;
@@ -460,11 +465,11 @@ public class OtherAmounts16 {
 	 */
 	public static final MMMessageAttribute mmLocalTax = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.mmAmount;
+			businessElementTrace_lazy = () -> Tax.mmAmount;
 			componentContext_lazy = () -> OtherAmounts16.mmObject();
 			isDerived = false;
 			xmlTag = "LclTax";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LocalTax";
 			definition = "Tax charged by the jurisdiction in which the financial instrument settles.";
 			maxOccurs = 1;
@@ -507,11 +512,11 @@ public class OtherAmounts16 {
 	 */
 	public static final MMMessageAttribute mmLocalBrokerCommission = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Adjustment.mmAmount;
+			businessElementTrace_lazy = () -> Adjustment.mmAmount;
 			componentContext_lazy = () -> OtherAmounts16.mmObject();
 			isDerived = false;
 			xmlTag = "LclBrkrComssn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LocalBrokerCommission";
 			definition = "Amount of commission paid to a local broker.";
 			maxOccurs = 1;
@@ -555,11 +560,11 @@ public class OtherAmounts16 {
 	 */
 	public static final MMMessageAttribute mmMargin = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Collateral.mmCollateralAmount;
+			businessElementTrace_lazy = () -> Collateral.mmCollateralAmount;
 			componentContext_lazy = () -> OtherAmounts16.mmObject();
 			isDerived = false;
 			xmlTag = "Mrgn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Margin";
 			definition = "Amount of money deposited by the trading party in a margin account.";
 			maxOccurs = 1;
@@ -601,7 +606,7 @@ public class OtherAmounts16 {
 			componentContext_lazy = () -> OtherAmounts16.mmObject();
 			isDerived = false;
 			xmlTag = "Othr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
 			definition = "An amount that is not indicated by a known business denomination.";
 			maxOccurs = 1;
@@ -647,11 +652,11 @@ public class OtherAmounts16 {
 	 */
 	public static final MMMessageAttribute mmRegulatoryAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesRelatedFees.mmRegulatoryFeesAmount;
+			businessElementTrace_lazy = () -> SecuritiesRelatedFees.mmRegulatoryFeesAmount;
 			componentContext_lazy = () -> OtherAmounts16.mmObject();
 			isDerived = false;
 			xmlTag = "RgltryAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RegulatoryAmount";
 			definition = "Amount of money charged by a regulatory authority, for example, Securities and Exchange fees.";
 			maxOccurs = 1;
@@ -697,11 +702,11 @@ public class OtherAmounts16 {
 	 */
 	public static final MMMessageAttribute mmSpecialConcession = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ProceedsDefinition.mmSpecialConcessionAmount;
+			businessElementTrace_lazy = () -> ProceedsDefinition.mmSpecialConcessionAmount;
 			componentContext_lazy = () -> OtherAmounts16.mmObject();
 			isDerived = false;
 			xmlTag = "SpclCncssn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SpecialConcession";
 			definition = "Amount of drawdown or other reduction from or in addition to the deal price.";
 			maxOccurs = 1;
@@ -743,11 +748,11 @@ public class OtherAmounts16 {
 	 */
 	public static final MMMessageAttribute mmStampDuty = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.mmAmount;
+			businessElementTrace_lazy = () -> Tax.mmAmount;
 			componentContext_lazy = () -> OtherAmounts16.mmObject();
 			isDerived = false;
 			xmlTag = "StmpDty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StampDuty";
 			definition = "Amount of stamp duty.";
 			maxOccurs = 1;
@@ -789,11 +794,11 @@ public class OtherAmounts16 {
 	 */
 	public static final MMMessageAttribute mmStockExchangeTax = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.mmAmount;
+			businessElementTrace_lazy = () -> Tax.mmAmount;
 			componentContext_lazy = () -> OtherAmounts16.mmObject();
 			isDerived = false;
 			xmlTag = "StockXchgTax";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StockExchangeTax";
 			definition = "Amount of stock exchange tax.";
 			maxOccurs = 1;
@@ -838,11 +843,11 @@ public class OtherAmounts16 {
 	 */
 	public static final MMMessageAttribute mmTransferTax = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTransfer.mmTransferTax;
+			businessElementTrace_lazy = () -> SecuritiesTransfer.mmTransferTax;
 			componentContext_lazy = () -> OtherAmounts16.mmObject();
 			isDerived = false;
 			xmlTag = "TrfTax";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransferTax";
 			definition = "Amount of tax levied on a transfer of ownership of financial instrument.";
 			maxOccurs = 1;
@@ -884,11 +889,11 @@ public class OtherAmounts16 {
 	 */
 	public static final MMMessageAttribute mmTransactionTax = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.mmAmount;
+			businessElementTrace_lazy = () -> Tax.mmAmount;
 			componentContext_lazy = () -> OtherAmounts16.mmObject();
 			isDerived = false;
 			xmlTag = "TxTax";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionTax";
 			definition = "Amount of transaction tax.";
 			maxOccurs = 1;
@@ -930,11 +935,11 @@ public class OtherAmounts16 {
 	 */
 	public static final MMMessageAttribute mmValueAddedTax = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.mmAmount;
+			businessElementTrace_lazy = () -> Tax.mmAmount;
 			componentContext_lazy = () -> OtherAmounts16.mmObject();
 			isDerived = false;
 			xmlTag = "ValAddedTax";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValueAddedTax";
 			definition = "Amount of value-added tax.";
 			maxOccurs = 1;
@@ -977,11 +982,11 @@ public class OtherAmounts16 {
 	 */
 	public static final MMMessageAttribute mmWithholdingTax = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.mmAmount;
+			businessElementTrace_lazy = () -> Tax.mmAmount;
 			componentContext_lazy = () -> OtherAmounts16.mmObject();
 			isDerived = false;
 			xmlTag = "WhldgTax";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WithholdingTax";
 			definition = "Amount of money that will be withheld by a tax authority.";
 			maxOccurs = 1;
@@ -1028,11 +1033,11 @@ public class OtherAmounts16 {
 	 */
 	public static final MMMessageAttribute mmNetGainLoss = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesBalance.mmNetGainLoss;
+			businessElementTrace_lazy = () -> SecuritiesBalance.mmNetGainLoss;
 			componentContext_lazy = () -> OtherAmounts16.mmObject();
 			isDerived = false;
 			xmlTag = "NetGnLoss";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetGainLoss";
 			definition = "Amount representing the difference between the cost and the current price of a security. In the context of securities settlement, it is the amount paid or received when the instructions are netted or paired off.";
 			maxOccurs = 1;
@@ -1074,11 +1079,11 @@ public class OtherAmounts16 {
 	 */
 	public static final MMMessageAttribute mmConsumptionTax = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.mmAmount;
+			businessElementTrace_lazy = () -> Tax.mmAmount;
 			componentContext_lazy = () -> OtherAmounts16.mmObject();
 			isDerived = false;
 			xmlTag = "CsmptnTax";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConsumptionTax";
 			definition = "A tax on spending on goods and services.";
 			maxOccurs = 1;
@@ -1122,11 +1127,11 @@ public class OtherAmounts16 {
 	 */
 	public static final MMMessageAttribute mmMatchingConfirmationFee = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmFees;
+			businessElementTrace_lazy = () -> Security.mmFees;
 			componentContext_lazy = () -> OtherAmounts16.mmObject();
 			isDerived = false;
 			xmlTag = "MtchgConfFee";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MatchingConfirmationFee";
 			definition = "Amount of money charged for matching and/or confirmation.";
 			maxOccurs = 1;
@@ -1169,11 +1174,11 @@ public class OtherAmounts16 {
 	 */
 	public static final MMMessageAttribute mmConvertedAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmResultingAmount;
+			businessElementTrace_lazy = () -> CurrencyExchange.mmResultingAmount;
 			componentContext_lazy = () -> OtherAmounts16.mmObject();
 			isDerived = false;
 			xmlTag = "ConvtdAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConvertedAmount";
 			definition = "Amount following a foreign exchange conversion.";
 			maxOccurs = 1;
@@ -1219,11 +1224,11 @@ public class OtherAmounts16 {
 	 */
 	public static final MMMessageAttribute mmOriginalCurrencyAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmOriginalAmount;
+			businessElementTrace_lazy = () -> CurrencyExchange.mmOriginalAmount;
 			componentContext_lazy = () -> OtherAmounts16.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlCcyAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalCurrencyAmount";
 			definition = "Posting/settlement amount in its original currency when conversion from/into another currency has occurred.";
 			maxOccurs = 1;
@@ -1269,11 +1274,11 @@ public class OtherAmounts16 {
 	 */
 	public static final MMMessageAttribute mmBookValue = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmBookValue;
+			businessElementTrace_lazy = () -> AssetHolding.mmBookValue;
 			componentContext_lazy = () -> OtherAmounts16.mmObject();
 			isDerived = false;
 			xmlTag = "BookVal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BookValue";
 			definition = "Cost of the securities. May be requested in some countries for tax purposes.";
 			maxOccurs = 1;
@@ -1320,11 +1325,11 @@ public class OtherAmounts16 {
 	 */
 	public static final MMMessageAttribute mmAccruedCapitalisationAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Debt.mmAccruedCapitalisationAmount;
+			businessElementTrace_lazy = () -> Debt.mmAccruedCapitalisationAmount;
 			componentContext_lazy = () -> OtherAmounts16.mmObject();
 			isDerived = false;
 			xmlTag = "AcrdCptlstnAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccruedCapitalisationAmount";
 			definition = "Amount of unpaid interest (on bonds which have defaulted and have subsequently \nrestructured), which is capitalized and added to the original principal amount of the bond.";
 			maxOccurs = 1;
@@ -1367,11 +1372,11 @@ public class OtherAmounts16 {
 	 */
 	public static final MMMessageAttribute mmLocalTaxCountrySpecific1 = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.mmAmount;
+			businessElementTrace_lazy = () -> Tax.mmAmount;
 			componentContext_lazy = () -> OtherAmounts16.mmObject();
 			isDerived = false;
 			xmlTag = "LclTaxCtrySpcfc1";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LocalTaxCountrySpecific1";
 			definition = "Local tax as defined by the country in its market practice document.";
 			maxOccurs = 1;
@@ -1414,11 +1419,11 @@ public class OtherAmounts16 {
 	 */
 	public static final MMMessageAttribute mmLocalTaxCountrySpecific2 = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.mmAmount;
+			businessElementTrace_lazy = () -> Tax.mmAmount;
 			componentContext_lazy = () -> OtherAmounts16.mmObject();
 			isDerived = false;
 			xmlTag = "LclTaxCtrySpcfc2";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LocalTaxCountrySpecific2";
 			definition = "Local tax as defined by the country in its market practice document.";
 			maxOccurs = 1;
@@ -1461,11 +1466,11 @@ public class OtherAmounts16 {
 	 */
 	public static final MMMessageAttribute mmLocalTaxCountrySpecific3 = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.mmAmount;
+			businessElementTrace_lazy = () -> Tax.mmAmount;
 			componentContext_lazy = () -> OtherAmounts16.mmObject();
 			isDerived = false;
 			xmlTag = "LclTaxCtrySpcfc3";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LocalTaxCountrySpecific3";
 			definition = "Local tax as defined by the country in its market practice document.";
 			maxOccurs = 1;
@@ -1508,11 +1513,11 @@ public class OtherAmounts16 {
 	 */
 	public static final MMMessageAttribute mmLocalTaxCountrySpecific4 = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.mmAmount;
+			businessElementTrace_lazy = () -> Tax.mmAmount;
 			componentContext_lazy = () -> OtherAmounts16.mmObject();
 			isDerived = false;
 			xmlTag = "LclTaxCtrySpcfc4";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LocalTaxCountrySpecific4";
 			definition = "Local tax as defined by the country in its market practice document.";
 			maxOccurs = 1;
@@ -1558,11 +1563,11 @@ public class OtherAmounts16 {
 	 */
 	public static final MMMessageAttribute mmSharedBrokerageAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Adjustment.mmAmount;
+			businessElementTrace_lazy = () -> Adjustment.mmAmount;
 			componentContext_lazy = () -> OtherAmounts16.mmObject();
 			isDerived = false;
 			xmlTag = "ShrdBrkrgAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SharedBrokerageAmount";
 			definition = "Amount paid as result of transactions subject to shared brokerage commissions.";
 			maxOccurs = 1;
@@ -1609,11 +1614,11 @@ public class OtherAmounts16 {
 	 */
 	public static final MMMessageAttribute mmMarketMemberFeeAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmFees;
+			businessElementTrace_lazy = () -> Security.mmFees;
 			componentContext_lazy = () -> OtherAmounts16.mmObject();
 			isDerived = false;
 			xmlTag = "MktMmbFeeAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketMemberFeeAmount";
 			definition = "Indicates the total fees related to the trade, with deduction of rebates (on brokerage, commission or differential) granted by the market member (fee amount with tax excluded).";
 			maxOccurs = 1;
@@ -1655,7 +1660,7 @@ public class OtherAmounts16 {
 			componentContext_lazy = () -> OtherAmounts16.mmObject();
 			isDerived = false;
 			xmlTag = "RmnrtnAmtReq";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RemunerationAmountRequest";
 			definition = "Specifies that this information is available upon request.";
 			maxOccurs = 1;
@@ -1701,11 +1706,11 @@ public class OtherAmounts16 {
 	 */
 	public static final MMMessageAttribute mmRemunerationAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Broker.mmRemunerationAmount;
+			businessElementTrace_lazy = () -> Broker.mmRemunerationAmount;
 			componentContext_lazy = () -> OtherAmounts16.mmObject();
 			isDerived = false;
 			xmlTag = "RmnrtnAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RemunerationAmount";
 			definition = "Specifies the source and amount of any other remuneration received or to be received by the broker in connection with the transaction.";
 			maxOccurs = 1;
@@ -1751,11 +1756,11 @@ public class OtherAmounts16 {
 	 */
 	public static final MMMessageAttribute mmBorrowingInterestAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Interest.mmAmount;
+			businessElementTrace_lazy = () -> Interest.mmAmount;
 			componentContext_lazy = () -> OtherAmounts16.mmObject();
 			isDerived = false;
 			xmlTag = "BrrwgIntrstAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BorrowingInterestAmount";
 			definition = "Amount to be paid by the lender to the borrower calculated based on the interest rate.";
 			maxOccurs = 1;
@@ -1801,11 +1806,11 @@ public class OtherAmounts16 {
 	 */
 	public static final MMMessageAttribute mmBorrowingFee = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesLending.mmBorrowingFee;
+			businessElementTrace_lazy = () -> SecuritiesLending.mmBorrowingFee;
 			componentContext_lazy = () -> OtherAmounts16.mmObject();
 			isDerived = false;
 			xmlTag = "BrrwgFee";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BorrowingFee";
 			definition = "Amount to be paid by the Borrower to the Lender for the securities borrowed calculated based on the bond loan rate.";
 			maxOccurs = 1;
@@ -1851,11 +1856,11 @@ public class OtherAmounts16 {
 	 */
 	public static final MMMessageAttribute mmNetMarketValue = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmMarketValue;
+			businessElementTrace_lazy = () -> AssetHolding.mmMarketValue;
 			componentContext_lazy = () -> OtherAmounts16.mmObject();
 			isDerived = false;
 			xmlTag = "NetMktVal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetMarketValue";
 			definition = "Net market value of the securities lent used to calculate the collateral amount.";
 			maxOccurs = 1;
@@ -1898,11 +1903,11 @@ public class OtherAmounts16 {
 	 */
 	public static final MMMessageAttribute mmRemainingFaceValue = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmAmortisedFaceValue;
+			businessElementTrace_lazy = () -> AssetHolding.mmAmortisedFaceValue;
 			componentContext_lazy = () -> OtherAmounts16.mmObject();
 			isDerived = false;
 			xmlTag = "RmngFaceVal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RemainingFaceValue";
 			definition = "Remaining nominal value of a security.";
 			maxOccurs = 1;
@@ -1946,11 +1951,11 @@ public class OtherAmounts16 {
 	 */
 	public static final MMMessageAttribute mmRemainingBookValue = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmBookValue;
+			businessElementTrace_lazy = () -> AssetHolding.mmBookValue;
 			componentContext_lazy = () -> OtherAmounts16.mmObject();
 			isDerived = false;
 			xmlTag = "RmngBookVal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RemainingBookValue";
 			definition = "Remaining value at which an asset is carried on a balance sheet.";
 			maxOccurs = 1;
@@ -1993,11 +1998,11 @@ public class OtherAmounts16 {
 	 */
 	public static final MMMessageAttribute mmClearingBrokerCommission = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Adjustment.mmAmount;
+			businessElementTrace_lazy = () -> Adjustment.mmAmount;
 			componentContext_lazy = () -> OtherAmounts16.mmObject();
 			isDerived = false;
 			xmlTag = "ClrBrkrComssn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClearingBrokerCommission";
 			definition = "Amount of commission paid to a clearing broker.";
 			maxOccurs = 1;
@@ -2039,7 +2044,7 @@ public class OtherAmounts16 {
 			componentContext_lazy = () -> OtherAmounts16.mmObject();
 			isDerived = false;
 			xmlTag = "DiffInPric";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DifferenceInPrice";
 			definition = "Difference between the deal price and another reference price.";
 			maxOccurs = 1;
@@ -2088,11 +2093,11 @@ public class OtherAmounts16 {
 	 */
 	public static final MMMessageAttribute mmOddLotFee = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmFees;
+			businessElementTrace_lazy = () -> Security.mmFees;
 			componentContext_lazy = () -> OtherAmounts16.mmObject();
 			isDerived = false;
 			xmlTag = "OddLotFee";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OddLotFee";
 			definition = "Specifies that the odd-lot differential or equivalent fee has been paid by such customer in connection with the execution of an order for an odd-lot number of shares or units (or principal amount) of a security and the fact that the amount of any such differential or fee will be furnished upon oral or written request.";
 			maxOccurs = 1;
@@ -2104,26 +2109,18 @@ public class OtherAmounts16 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OtherAmounts16.mmChargesFees, com.tools20022.repository.msg.OtherAmounts16.mmCountryNationalFederalTax,
-						com.tools20022.repository.msg.OtherAmounts16.mmExecutingBrokerAmount, com.tools20022.repository.msg.OtherAmounts16.mmIssueDiscountAllowance, com.tools20022.repository.msg.OtherAmounts16.mmPaymentLevyTax,
-						com.tools20022.repository.msg.OtherAmounts16.mmLocalTax, com.tools20022.repository.msg.OtherAmounts16.mmLocalBrokerCommission, com.tools20022.repository.msg.OtherAmounts16.mmMargin,
-						com.tools20022.repository.msg.OtherAmounts16.mmOther, com.tools20022.repository.msg.OtherAmounts16.mmRegulatoryAmount, com.tools20022.repository.msg.OtherAmounts16.mmSpecialConcession,
-						com.tools20022.repository.msg.OtherAmounts16.mmStampDuty, com.tools20022.repository.msg.OtherAmounts16.mmStockExchangeTax, com.tools20022.repository.msg.OtherAmounts16.mmTransferTax,
-						com.tools20022.repository.msg.OtherAmounts16.mmTransactionTax, com.tools20022.repository.msg.OtherAmounts16.mmValueAddedTax, com.tools20022.repository.msg.OtherAmounts16.mmWithholdingTax,
-						com.tools20022.repository.msg.OtherAmounts16.mmNetGainLoss, com.tools20022.repository.msg.OtherAmounts16.mmConsumptionTax, com.tools20022.repository.msg.OtherAmounts16.mmMatchingConfirmationFee,
-						com.tools20022.repository.msg.OtherAmounts16.mmConvertedAmount, com.tools20022.repository.msg.OtherAmounts16.mmOriginalCurrencyAmount, com.tools20022.repository.msg.OtherAmounts16.mmBookValue,
-						com.tools20022.repository.msg.OtherAmounts16.mmAccruedCapitalisationAmount, com.tools20022.repository.msg.OtherAmounts16.mmLocalTaxCountrySpecific1,
-						com.tools20022.repository.msg.OtherAmounts16.mmLocalTaxCountrySpecific2, com.tools20022.repository.msg.OtherAmounts16.mmLocalTaxCountrySpecific3,
-						com.tools20022.repository.msg.OtherAmounts16.mmLocalTaxCountrySpecific4, com.tools20022.repository.msg.OtherAmounts16.mmSharedBrokerageAmount, com.tools20022.repository.msg.OtherAmounts16.mmMarketMemberFeeAmount,
-						com.tools20022.repository.msg.OtherAmounts16.mmRemunerationAmountRequest, com.tools20022.repository.msg.OtherAmounts16.mmRemunerationAmount, com.tools20022.repository.msg.OtherAmounts16.mmBorrowingInterestAmount,
-						com.tools20022.repository.msg.OtherAmounts16.mmBorrowingFee, com.tools20022.repository.msg.OtherAmounts16.mmNetMarketValue, com.tools20022.repository.msg.OtherAmounts16.mmRemainingFaceValue,
-						com.tools20022.repository.msg.OtherAmounts16.mmRemainingBookValue, com.tools20022.repository.msg.OtherAmounts16.mmClearingBrokerCommission, com.tools20022.repository.msg.OtherAmounts16.mmDifferenceInPrice,
-						com.tools20022.repository.msg.OtherAmounts16.mmOddLotFee);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.SecuritiesTradeConfirmationV01.mmOtherAmounts, com.tools20022.repository.area.setr.SecuritiesTradeConfirmationV02.mmOtherAmounts,
-						com.tools20022.repository.area.setr.SecuritiesTradeConfirmationV03.mmOtherAmounts);
+				messageElement_lazy = () -> Arrays.asList(OtherAmounts16.mmChargesFees, OtherAmounts16.mmCountryNationalFederalTax, OtherAmounts16.mmExecutingBrokerAmount, OtherAmounts16.mmIssueDiscountAllowance,
+						OtherAmounts16.mmPaymentLevyTax, OtherAmounts16.mmLocalTax, OtherAmounts16.mmLocalBrokerCommission, OtherAmounts16.mmMargin, OtherAmounts16.mmOther, OtherAmounts16.mmRegulatoryAmount,
+						OtherAmounts16.mmSpecialConcession, OtherAmounts16.mmStampDuty, OtherAmounts16.mmStockExchangeTax, OtherAmounts16.mmTransferTax, OtherAmounts16.mmTransactionTax, OtherAmounts16.mmValueAddedTax,
+						OtherAmounts16.mmWithholdingTax, OtherAmounts16.mmNetGainLoss, OtherAmounts16.mmConsumptionTax, OtherAmounts16.mmMatchingConfirmationFee, OtherAmounts16.mmConvertedAmount, OtherAmounts16.mmOriginalCurrencyAmount,
+						OtherAmounts16.mmBookValue, OtherAmounts16.mmAccruedCapitalisationAmount, OtherAmounts16.mmLocalTaxCountrySpecific1, OtherAmounts16.mmLocalTaxCountrySpecific2, OtherAmounts16.mmLocalTaxCountrySpecific3,
+						OtherAmounts16.mmLocalTaxCountrySpecific4, OtherAmounts16.mmSharedBrokerageAmount, OtherAmounts16.mmMarketMemberFeeAmount, OtherAmounts16.mmRemunerationAmountRequest, OtherAmounts16.mmRemunerationAmount,
+						OtherAmounts16.mmBorrowingInterestAmount, OtherAmounts16.mmBorrowingFee, OtherAmounts16.mmNetMarketValue, OtherAmounts16.mmRemainingFaceValue, OtherAmounts16.mmRemainingBookValue,
+						OtherAmounts16.mmClearingBrokerCommission, OtherAmounts16.mmDifferenceInPrice, OtherAmounts16.mmOddLotFee);
+				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesTradeConfirmationV01.mmOtherAmounts, SecuritiesTradeConfirmationV02.mmOtherAmounts, SecuritiesTradeConfirmationV03.mmOtherAmounts);
 				trace_lazy = () -> SecuritiesTrade.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OtherAmounts16";
 				definition = "Identifies other amounts pertaining to the transaction.";
 			}

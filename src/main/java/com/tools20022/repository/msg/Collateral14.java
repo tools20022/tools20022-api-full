@@ -20,10 +20,13 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.SecuredCollateral2Choice;
 import com.tools20022.repository.codeset.SpecialCollateral1Code;
 import com.tools20022.repository.datatype.PercentageRate;
+import com.tools20022.repository.entity.AssetHolding;
 import com.tools20022.repository.entity.Collateral;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -121,15 +124,15 @@ public class Collateral14 {
 	 */
 	public static final MMMessageAssociationEnd mmValuation = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Collateral.mmValuation;
+			businessElementTrace_lazy = () -> Collateral.mmValuation;
 			componentContext_lazy = () -> Collateral14.mmObject();
 			isDerived = false;
 			xmlTag = "Valtn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Valuation";
 			definition = "Provides the values of the security pledged as collateral.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Collateral18.mmValuation);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Collateral10.mmValuation;
+			nextVersions_lazy = () -> Arrays.asList(Collateral18.mmValuation);
+			previousVersion_lazy = () -> Collateral10.mmValuation;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -198,15 +201,15 @@ public class Collateral14 {
 	 */
 	public static final MMMessageAttribute mmHaircut = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmHaircut;
+			businessElementTrace_lazy = () -> AssetHolding.mmHaircut;
 			componentContext_lazy = () -> Collateral14.mmObject();
 			isDerived = false;
 			xmlTag = "Hrcut";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Haircut";
 			definition = "Risk control measure applied to underlying collateral whereby the value of that underlying collateral is calculated as the market value of the assets reduced by a certain percentage. \r\n\r\nFor reporting purposes the collateral haircut will be calculated as 100 minus the ratio between the cash lent/borrowed and the market value including accrued interest of the collateral pledged times 100. \r\n\r\nIn the case of multi-collateral repos the haircut will be based on the ratio between the cash borrowed/lent and the market value, including accrued interest of each of the individual collateral pledged.  \r\n\r\nOnly actual values, as opposed to estimated or default values will be reported for this variable.\r\n";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Collateral18.mmHaircut);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Collateral10.mmHaircut;
+			nextVersions_lazy = () -> Arrays.asList(Collateral18.mmHaircut);
+			previousVersion_lazy = () -> Collateral10.mmHaircut;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
@@ -274,15 +277,15 @@ public class Collateral14 {
 	 */
 	public static final MMMessageAttribute mmSpecialCollateralIndicator = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Collateral.mmCollateralType;
+			businessElementTrace_lazy = () -> Collateral.mmCollateralType;
 			componentContext_lazy = () -> Collateral14.mmObject();
 			isDerived = false;
 			xmlTag = "SpclCollInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SpecialCollateralIndicator";
 			definition = "Identifies all repurchase agreements conducted against general collateral and those conducted against special collateral.  \r\n- General Collateral is a repurchase transaction in which the security lender may choose the security to pledge as collateral with the cash provider amongst a relatively wide range of securities meeting predefined criteria; \r\n- Special Collateral is a repurchase transaction in which the cash provider requests a specific security (individual ISIN) to be provided by the cash borrower. \r\n\r\nUsage:\r\nThis field is optional and it should be provided only in case it is feasible for the reporting agent. ";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Collateral18.mmSpecialCollateralIndicator);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Collateral10.mmSpecialCollateralIndicator;
+			nextVersions_lazy = () -> Arrays.asList(Collateral18.mmSpecialCollateralIndicator);
+			previousVersion_lazy = () -> Collateral10.mmSpecialCollateralIndicator;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> SpecialCollateral1Code.mmObject();
@@ -292,11 +295,10 @@ public class Collateral14 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays
-						.asList(com.tools20022.repository.msg.Collateral14.mmValuation, com.tools20022.repository.msg.Collateral14.mmHaircut, com.tools20022.repository.msg.Collateral14.mmSpecialCollateralIndicator);
+				messageElement_lazy = () -> Arrays.asList(Collateral14.mmValuation, Collateral14.mmHaircut, Collateral14.mmSpecialCollateralIndicator);
 				trace_lazy = () -> Collateral.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Collateral14";
 				definition = "Provides the details of the security pledge as collateral.";
 				nextVersions_lazy = () -> Arrays.asList(Collateral18.mmObject());

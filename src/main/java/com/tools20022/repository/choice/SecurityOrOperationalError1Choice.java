@@ -19,6 +19,8 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.ErrorHandling3;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -95,7 +97,7 @@ public class SecurityOrOperationalError1Choice {
 			componentContext_lazy = () -> SecurityOrOperationalError1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "SctyRptOrBizErr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityReportOrBusinessError";
 			definition = "Provides the financial instruments details or the business error.";
 			maxOccurs = 1;
@@ -136,7 +138,7 @@ public class SecurityOrOperationalError1Choice {
 			componentContext_lazy = () -> SecurityOrOperationalError1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "OprlErr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OperationalError";
 			definition = "Provides the operational error details.";
 			minOccurs = 1;
@@ -148,10 +150,9 @@ public class SecurityOrOperationalError1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SecurityOrOperationalError1Choice.mmSecurityReportOrBusinessError,
-						com.tools20022.repository.choice.SecurityOrOperationalError1Choice.mmOperationalError);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(SecurityOrOperationalError1Choice.mmSecurityReportOrBusinessError, SecurityOrOperationalError1Choice.mmOperationalError);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SecurityOrOperationalError1Choice";
 				definition = "Provides the financial instruments details or the operational error details.";
 			}

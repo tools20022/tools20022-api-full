@@ -20,11 +20,15 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.tsmt.TransactionReportRequestV03;
 import com.tools20022.repository.codeset.CountryCode;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.BuyerRole;
 import com.tools20022.repository.entity.Country;
+import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.entity.SellerRole;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -141,7 +145,7 @@ public class ReportSpecification4 {
 			componentContext_lazy = () -> ReportSpecification4.mmObject();
 			isDerived = false;
 			xmlTag = "TxId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionIdentification";
 			definition = "Unique identification assigned by the matching application to a transaction, for which the matching application must generate a report.";
 			minOccurs = 0;
@@ -181,7 +185,7 @@ public class ReportSpecification4 {
 			componentContext_lazy = () -> ReportSpecification4.mmObject();
 			isDerived = false;
 			xmlTag = "TxSts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionStatus";
 			definition = "Identifies the status of the transaction by means of a code.";
 			minOccurs = 0;
@@ -225,7 +229,7 @@ public class ReportSpecification4 {
 			componentContext_lazy = () -> ReportSpecification4.mmObject();
 			isDerived = false;
 			xmlTag = "SubmitrTxRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubmitterTransactionReference";
 			definition = "Reference to the identification of a transaction of a user, for which the matching application must generate a report.";
 			minOccurs = 0;
@@ -267,7 +271,7 @@ public class ReportSpecification4 {
 			componentContext_lazy = () -> ReportSpecification4.mmObject();
 			isDerived = false;
 			xmlTag = "NttiesToBeRptd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EntitiesToBeReported";
 			definition = "Specifies a list of entities for which the matching application must generate a report.";
 			minOccurs = 0;
@@ -309,7 +313,7 @@ public class ReportSpecification4 {
 			componentContext_lazy = () -> ReportSpecification4.mmObject();
 			isDerived = false;
 			xmlTag = "Crspdt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Correspondent";
 			definition = "Financial institution that is the counterparty to the trade transaction.";
 			minOccurs = 0;
@@ -352,7 +356,7 @@ public class ReportSpecification4 {
 			componentContext_lazy = () -> ReportSpecification4.mmObject();
 			isDerived = false;
 			xmlTag = "SubmitgBk";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubmittingBank";
 			definition = "Financial institution that is a data set submitting bank to the transaction.";
 			minOccurs = 0;
@@ -393,7 +397,7 @@ public class ReportSpecification4 {
 			componentContext_lazy = () -> ReportSpecification4.mmObject();
 			isDerived = false;
 			xmlTag = "OblgrBk";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ObligorBank";
 			definition = "Financial institution that is an obligor bank to the transaction.";
 			minOccurs = 0;
@@ -439,7 +443,7 @@ public class ReportSpecification4 {
 			componentContext_lazy = () -> ReportSpecification4.mmObject();
 			isDerived = false;
 			xmlTag = "Buyr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Buyer";
 			definition = "Party that buys goods or services, or a financial instrument.";
 			minOccurs = 0;
@@ -485,7 +489,7 @@ public class ReportSpecification4 {
 			componentContext_lazy = () -> ReportSpecification4.mmObject();
 			isDerived = false;
 			xmlTag = "Sellr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Seller";
 			definition = "Party that sells goods or services, or a financial instrument.";
 			minOccurs = 0;
@@ -528,11 +532,11 @@ public class ReportSpecification4 {
 	 */
 	public static final MMMessageAttribute mmBuyerCountry = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmResidence;
+			businessElementTrace_lazy = () -> Party.mmResidence;
 			componentContext_lazy = () -> ReportSpecification4.mmObject();
 			isDerived = false;
 			xmlTag = "BuyrCtry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BuyerCountry";
 			definition = "Country of the buyer.";
 			minOccurs = 0;
@@ -574,11 +578,11 @@ public class ReportSpecification4 {
 	 */
 	public static final MMMessageAttribute mmSellerCountry = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmResidence;
+			businessElementTrace_lazy = () -> Party.mmResidence;
 			componentContext_lazy = () -> ReportSpecification4.mmObject();
 			isDerived = false;
 			xmlTag = "SellrCtry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SellerCountry";
 			definition = "Country of the seller.";
 			minOccurs = 0;
@@ -626,7 +630,7 @@ public class ReportSpecification4 {
 			componentContext_lazy = () -> ReportSpecification4.mmObject();
 			isDerived = false;
 			xmlTag = "CrspdtCtry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorrespondentCountry";
 			definition = "Country of the financial institution which is the other party to the trade.";
 			minOccurs = 0;
@@ -668,7 +672,7 @@ public class ReportSpecification4 {
 			componentContext_lazy = () -> ReportSpecification4.mmObject();
 			isDerived = false;
 			xmlTag = "PdgReqForActn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingRequestForAction";
 			definition = "Specifies a pending request for action for which the matching application must generate a report.";
 			minOccurs = 0;
@@ -680,15 +684,12 @@ public class ReportSpecification4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReportSpecification4.mmTransactionIdentification, com.tools20022.repository.msg.ReportSpecification4.mmTransactionStatus,
-						com.tools20022.repository.msg.ReportSpecification4.mmSubmitterTransactionReference, com.tools20022.repository.msg.ReportSpecification4.mmEntitiesToBeReported,
-						com.tools20022.repository.msg.ReportSpecification4.mmCorrespondent, com.tools20022.repository.msg.ReportSpecification4.mmSubmittingBank, com.tools20022.repository.msg.ReportSpecification4.mmObligorBank,
-						com.tools20022.repository.msg.ReportSpecification4.mmBuyer, com.tools20022.repository.msg.ReportSpecification4.mmSeller, com.tools20022.repository.msg.ReportSpecification4.mmBuyerCountry,
-						com.tools20022.repository.msg.ReportSpecification4.mmSellerCountry, com.tools20022.repository.msg.ReportSpecification4.mmCorrespondentCountry,
-						com.tools20022.repository.msg.ReportSpecification4.mmPendingRequestForAction);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.TransactionReportRequestV03.mmReportSpecification);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(ReportSpecification4.mmTransactionIdentification, ReportSpecification4.mmTransactionStatus, ReportSpecification4.mmSubmitterTransactionReference,
+						ReportSpecification4.mmEntitiesToBeReported, ReportSpecification4.mmCorrespondent, ReportSpecification4.mmSubmittingBank, ReportSpecification4.mmObligorBank, ReportSpecification4.mmBuyer,
+						ReportSpecification4.mmSeller, ReportSpecification4.mmBuyerCountry, ReportSpecification4.mmSellerCountry, ReportSpecification4.mmCorrespondentCountry, ReportSpecification4.mmPendingRequestForAction);
+				messageBuildingBlock_lazy = () -> Arrays.asList(TransactionReportRequestV03.mmReportSpecification);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ReportSpecification4";
 				definition = "Specifies the parameters for which a transaction report must be generated.";
 			}

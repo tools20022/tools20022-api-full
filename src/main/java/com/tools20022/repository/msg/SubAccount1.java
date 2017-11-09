@@ -19,8 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.Account;
+import com.tools20022.repository.entity.AccountIdentification;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -120,14 +123,14 @@ public class SubAccount1 {
 	 */
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.mmIdentification;
+			businessElementTrace_lazy = () -> Account.mmIdentification;
 			componentContext_lazy = () -> SubAccount1.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Unique and unambiguous identification for the account between the account owner and the account servicer.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SubAccount4.mmIdentification, com.tools20022.repository.msg.SubAccount5.mmIdentification);
+			nextVersions_lazy = () -> Arrays.asList(SubAccount4.mmIdentification, SubAccount5.mmIdentification);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> com.tools20022.repository.msg.AccountIdentification1.mmObject();
@@ -180,14 +183,14 @@ public class SubAccount1 {
 	 */
 	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AccountIdentification.mmName;
+			businessElementTrace_lazy = () -> AccountIdentification.mmName;
 			componentContext_lazy = () -> SubAccount1.mmObject();
 			isDerived = false;
 			xmlTag = "Nm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Name";
 			definition = "Name of the account. It provides an additional means of identification, and is designated by the account servicer in agreement with the account owner.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SubAccount4.mmName, com.tools20022.repository.msg.SubAccount5.mmName);
+			nextVersions_lazy = () -> Arrays.asList(SubAccount4.mmName, SubAccount5.mmName);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -241,10 +244,10 @@ public class SubAccount1 {
 			componentContext_lazy = () -> SubAccount1.mmObject();
 			isDerived = false;
 			xmlTag = "Chrtc";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Characteristic";
 			definition = "Specifies additional properties of the account.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SubAccount4.mmCharacteristic, com.tools20022.repository.msg.SubAccount5.mmCharacteristic);
+			nextVersions_lazy = () -> Arrays.asList(SubAccount4.mmCharacteristic, SubAccount5.mmCharacteristic);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -254,10 +257,10 @@ public class SubAccount1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SubAccount1.mmIdentification, com.tools20022.repository.msg.SubAccount1.mmName, com.tools20022.repository.msg.SubAccount1.mmCharacteristic);
+				messageElement_lazy = () -> Arrays.asList(SubAccount1.mmIdentification, SubAccount1.mmName, SubAccount1.mmCharacteristic);
 				trace_lazy = () -> Account.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SubAccount1";
 				definition = "Business relationship between two entities; one entity is the account owner, the other entity is the account servicer.";
 				nextVersions_lazy = () -> Arrays.asList(SubAccount4.mmObject(), SubAccount5.mmObject());

@@ -19,9 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.PartyType7Code;
 import com.tools20022.repository.codeset.POICommunicationType1Code;
 import com.tools20022.repository.datatype.TrueFalseIndicator;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -115,10 +117,10 @@ public class CommunicationCharacteristics1 {
 			componentContext_lazy = () -> CommunicationCharacteristics1.mmObject();
 			isDerived = false;
 			xmlTag = "ComTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommunicationType";
 			definition = "Type of low level communication.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CommunicationCharacteristics2.mmCommunicationType);
+			nextVersions_lazy = () -> Arrays.asList(CommunicationCharacteristics2.mmCommunicationType);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> POICommunicationType1Code.mmObject();
@@ -169,10 +171,10 @@ public class CommunicationCharacteristics1 {
 			componentContext_lazy = () -> CommunicationCharacteristics1.mmObject();
 			isDerived = false;
 			xmlTag = "RmotPty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RemoteParty";
 			definition = "Entity that communicate with the current component, using this communication device.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CommunicationCharacteristics2.mmRemoteParty);
+			nextVersions_lazy = () -> Arrays.asList(CommunicationCharacteristics2.mmRemoteParty);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PartyType7Code.mmObject();
@@ -220,10 +222,10 @@ public class CommunicationCharacteristics1 {
 			componentContext_lazy = () -> CommunicationCharacteristics1.mmObject();
 			isDerived = false;
 			xmlTag = "Actv";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Active";
 			definition = "Communication hardware is activated.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CommunicationCharacteristics2.mmActive);
+			nextVersions_lazy = () -> Arrays.asList(CommunicationCharacteristics2.mmActive);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
@@ -233,10 +235,9 @@ public class CommunicationCharacteristics1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CommunicationCharacteristics1.mmCommunicationType, com.tools20022.repository.msg.CommunicationCharacteristics1.mmRemoteParty,
-						com.tools20022.repository.msg.CommunicationCharacteristics1.mmActive);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(CommunicationCharacteristics1.mmCommunicationType, CommunicationCharacteristics1.mmRemoteParty, CommunicationCharacteristics1.mmActive);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CommunicationCharacteristics1";
 				definition = "Low level communication of the hardware or software component toward another component or an external entity.";
 				nextVersions_lazy = () -> Arrays.asList(CommunicationCharacteristics2.mmObject());

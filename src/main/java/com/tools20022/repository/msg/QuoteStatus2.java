@@ -20,9 +20,11 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.QuoteStatus1Code;
 import com.tools20022.repository.codeset.RejectionReason3Code;
 import com.tools20022.repository.entity.Organisation;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -100,7 +102,7 @@ public class QuoteStatus2 {
 			componentContext_lazy = () -> QuoteStatus2.mmObject();
 			isDerived = false;
 			xmlTag = "QtSts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuoteStatus";
 			definition = "Provides information related to the status of a quote.";
 			maxOccurs = 1;
@@ -142,7 +144,7 @@ public class QuoteStatus2 {
 			componentContext_lazy = () -> QuoteStatus2.mmObject();
 			isDerived = false;
 			xmlTag = "RjctnRsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RejectionReason";
 			definition = "Provides information related to the rejection of the quote.";
 			maxOccurs = 1;
@@ -180,7 +182,7 @@ public class QuoteStatus2 {
 			componentContext_lazy = () -> QuoteStatus2.mmObject();
 			isDerived = false;
 			xmlTag = "QtSetDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuoteSetDetails";
 			definition = "Provides details about a group of related quotes.";
 			minOccurs = 0;
@@ -227,7 +229,7 @@ public class QuoteStatus2 {
 			componentContext_lazy = () -> QuoteStatus2.mmObject();
 			isDerived = false;
 			xmlTag = "RltdPties";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedParties";
 			definition = "Parties used for acting parties that applies either to the whole message or to individual sides.";
 			minOccurs = 0;
@@ -239,10 +241,9 @@ public class QuoteStatus2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.QuoteStatus2.mmQuoteStatus, com.tools20022.repository.msg.QuoteStatus2.mmRejectionReason, com.tools20022.repository.msg.QuoteStatus2.mmQuoteSetDetails,
-						com.tools20022.repository.msg.QuoteStatus2.mmRelatedParties);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(QuoteStatus2.mmQuoteStatus, QuoteStatus2.mmRejectionReason, QuoteStatus2.mmQuoteSetDetails, QuoteStatus2.mmRelatedParties);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "QuoteStatus2";
 				definition = "Identifies the status of a quote and if required, the rejection reason, and the parties and the details of the quote.";
 			}

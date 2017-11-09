@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -113,7 +115,7 @@ public class CapitalTypeCode {
 	 */
 	public static final MMCode mmApproved = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Approved";
 			definition = "Approved capital.";
 			owner_lazy = () -> CapitalTypeCode.mmObject();
@@ -143,7 +145,7 @@ public class CapitalTypeCode {
 	 */
 	public static final MMCode mmIssuedVotingRights = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "IssuedVotingRights";
 			definition = "Issued voting rights.";
 			owner_lazy = () -> CapitalTypeCode.mmObject();
@@ -173,7 +175,7 @@ public class CapitalTypeCode {
 	 */
 	public static final MMCode mmMaximumIncrease = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MaximumIncrease";
 			definition = "Maximum amount of increase.";
 			owner_lazy = () -> CapitalTypeCode.mmObject();
@@ -203,7 +205,7 @@ public class CapitalTypeCode {
 	 */
 	public static final MMCode mmOutstanding = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Outstanding";
 			definition = "Outstanding capital.";
 			owner_lazy = () -> CapitalTypeCode.mmObject();
@@ -233,7 +235,7 @@ public class CapitalTypeCode {
 	 */
 	public static final MMCode mmRedeemed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Redeemed";
 			definition = "Redeemed capital.";
 			owner_lazy = () -> CapitalTypeCode.mmObject();
@@ -263,7 +265,7 @@ public class CapitalTypeCode {
 	 */
 	public static final MMCode mmStatedCapital = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "StatedCapital";
 			definition = "Stated capital.";
 			owner_lazy = () -> CapitalTypeCode.mmObject();
@@ -293,7 +295,7 @@ public class CapitalTypeCode {
 	 */
 	public static final MMCode mmTreasuryStock = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TreasuryStock";
 			definition = "Issued reserve capital.";
 			owner_lazy = () -> CapitalTypeCode.mmObject();
@@ -323,7 +325,7 @@ public class CapitalTypeCode {
 	 */
 	public static final MMCode mmUnissued = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Unissued";
 			definition = "Contingent capital.";
 			owner_lazy = () -> CapitalTypeCode.mmObject();
@@ -353,7 +355,7 @@ public class CapitalTypeCode {
 	 */
 	public static final MMCode mmWithdrawn = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Withdrawn";
 			definition = "Withdrawn capital.";
 			owner_lazy = () -> CapitalTypeCode.mmObject();
@@ -383,7 +385,7 @@ public class CapitalTypeCode {
 	 */
 	public static final MMCode mmAuthorised = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Authorised";
 			definition = "Authorised capital.";
 			owner_lazy = () -> CapitalTypeCode.mmObject();
@@ -413,7 +415,7 @@ public class CapitalTypeCode {
 	 */
 	public static final MMCode mmInCirculation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InCirculation";
 			definition = "In circulation.";
 			owner_lazy = () -> CapitalTypeCode.mmObject();
@@ -443,7 +445,7 @@ public class CapitalTypeCode {
 	 */
 	public static final MMCode mmIssued = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Issued";
 			definition = "Issued capital.";
 			owner_lazy = () -> CapitalTypeCode.mmObject();
@@ -473,7 +475,7 @@ public class CapitalTypeCode {
 	 */
 	public static final MMCode mmIssuedReserveCapital = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "IssuedReserveCapital";
 			definition = "Issued reserve capital.";
 			owner_lazy = () -> CapitalTypeCode.mmObject();
@@ -484,16 +486,14 @@ public class CapitalTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("APPD");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CapitalTypeCode";
 				definition = "Specifies the type of capital.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CapitalTypeCode.mmApproved, com.tools20022.repository.codeset.CapitalTypeCode.mmIssuedVotingRights,
-						com.tools20022.repository.codeset.CapitalTypeCode.mmMaximumIncrease, com.tools20022.repository.codeset.CapitalTypeCode.mmOutstanding, com.tools20022.repository.codeset.CapitalTypeCode.mmRedeemed,
-						com.tools20022.repository.codeset.CapitalTypeCode.mmStatedCapital, com.tools20022.repository.codeset.CapitalTypeCode.mmTreasuryStock, com.tools20022.repository.codeset.CapitalTypeCode.mmUnissued,
-						com.tools20022.repository.codeset.CapitalTypeCode.mmWithdrawn, com.tools20022.repository.codeset.CapitalTypeCode.mmAuthorised, com.tools20022.repository.codeset.CapitalTypeCode.mmInCirculation,
-						com.tools20022.repository.codeset.CapitalTypeCode.mmIssued, com.tools20022.repository.codeset.CapitalTypeCode.mmIssuedReserveCapital);
+				code_lazy = () -> Arrays.asList(CapitalTypeCode.mmApproved, CapitalTypeCode.mmIssuedVotingRights, CapitalTypeCode.mmMaximumIncrease, CapitalTypeCode.mmOutstanding, CapitalTypeCode.mmRedeemed,
+						CapitalTypeCode.mmStatedCapital, CapitalTypeCode.mmTreasuryStock, CapitalTypeCode.mmUnissued, CapitalTypeCode.mmWithdrawn, CapitalTypeCode.mmAuthorised, CapitalTypeCode.mmInCirculation, CapitalTypeCode.mmIssued,
+						CapitalTypeCode.mmIssuedReserveCapital);
 			}
 		});
 		return mmObject_lazy.get();

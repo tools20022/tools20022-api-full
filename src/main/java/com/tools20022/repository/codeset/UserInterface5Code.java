@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.UserInterfaceCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -89,9 +91,9 @@ public class UserInterface5Code extends UserInterfaceCode {
 	 */
 	public static final MMCode mmCardholderDisplay = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CardholderDisplay";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.UserInterface4Code.mmCardholderDisplay;
+			previousVersion_lazy = () -> UserInterface4Code.mmCardholderDisplay;
 			owner_lazy = () -> UserInterface5Code.mmObject();
 		}
 	};
@@ -118,9 +120,9 @@ public class UserInterface5Code extends UserInterfaceCode {
 	 */
 	public static final MMCode mmCardholderReceipt = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CardholderReceipt";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.UserInterface4Code.mmCardholderReceipt;
+			previousVersion_lazy = () -> UserInterface4Code.mmCardholderReceipt;
 			owner_lazy = () -> UserInterface5Code.mmObject();
 		}
 	};
@@ -147,9 +149,9 @@ public class UserInterface5Code extends UserInterfaceCode {
 	 */
 	public static final MMCode mmOtherCardholderInterface = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherCardholderInterface";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.UserInterface4Code.mmOtherCardholderInterface;
+			previousVersion_lazy = () -> UserInterface4Code.mmOtherCardholderInterface;
 			owner_lazy = () -> UserInterface5Code.mmObject();
 		}
 	};
@@ -157,13 +159,12 @@ public class UserInterface5Code extends UserInterfaceCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "UserInterface5Code";
 				definition = "Destination of the message.";
 				previousVersion_lazy = () -> UserInterface4Code.mmObject();
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UserInterface5Code.mmCardholderDisplay, com.tools20022.repository.codeset.UserInterface5Code.mmCardholderReceipt,
-						com.tools20022.repository.codeset.UserInterface5Code.mmOtherCardholderInterface);
+				code_lazy = () -> Arrays.asList(UserInterface5Code.mmCardholderDisplay, UserInterface5Code.mmCardholderReceipt, UserInterface5Code.mmOtherCardholderInterface);
 				trace_lazy = () -> UserInterfaceCode.mmObject();
 			}
 		});

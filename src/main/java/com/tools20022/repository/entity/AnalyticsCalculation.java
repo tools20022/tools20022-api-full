@@ -17,12 +17,11 @@
 
 package com.tools20022.repository.entity;
 
-import com.tools20022.metamodel.MMBusinessAssociationEnd;
-import com.tools20022.metamodel.MMBusinessAttribute;
-import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.*;
 import com.tools20022.repository.codeset.CalculationTypeCode;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.PercentageRate;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -35,6 +34,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmAnalyticsCalculation
+ * SecuritiesPricing.mmAnalyticsCalculation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.AnalyticsValue#mmAnalyticsCalculation
+ * AnalyticsValue.mmAnalyticsCalculation}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -59,18 +70,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.entity.AnalyticsCalculation#mmVariableRateValueDate
  * AnalyticsCalculation.mmVariableRateValueDate}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmAnalyticsCalculation
- * SecuritiesPricing.mmAnalyticsCalculation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.AnalyticsValue#mmAnalyticsCalculation
- * AnalyticsValue.mmAnalyticsCalculation}</li>
  * </ul>
  * </li>
  * <li>
@@ -129,13 +128,13 @@ public class AnalyticsCalculation {
 		{
 			elementContext_lazy = () -> AnalyticsCalculation.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SecuritiesPricing";
 			definition = "Pricing for which an analytics calculation is specified.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmAnalyticsCalculation;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 		}
 	};
@@ -177,13 +176,13 @@ public class AnalyticsCalculation {
 		{
 			elementContext_lazy = () -> AnalyticsCalculation.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Value";
 			definition = "Result of the defined analytics calculation.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.AnalyticsValue.mmAnalyticsCalculation;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.AnalyticsValue.mmObject();
 		}
 	};
@@ -218,7 +217,7 @@ public class AnalyticsCalculation {
 		{
 			elementContext_lazy = () -> AnalyticsCalculation.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CalculationType";
 			definition = "Specifies the type of calculation.";
 			maxOccurs = 1;
@@ -259,7 +258,7 @@ public class AnalyticsCalculation {
 		{
 			elementContext_lazy = () -> AnalyticsCalculation.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ValueDate";
 			definition = "Date/time on which the calculation is based. For example: valuation on October 1 (price date) based on price of September 19 ( value date).";
 			maxOccurs = 1;
@@ -298,7 +297,7 @@ public class AnalyticsCalculation {
 		{
 			elementContext_lazy = () -> AnalyticsCalculation.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ValuePeriod";
 			definition = "Period on which the calculation is based.";
 			maxOccurs = 1;
@@ -340,7 +339,7 @@ public class AnalyticsCalculation {
 		{
 			elementContext_lazy = () -> AnalyticsCalculation.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "EstimatedInterestRate";
 			definition = "Estimated per annum ratio of interest paid to the principal amount of the financial instrument for a specific period of time.";
 			maxOccurs = 1;
@@ -378,7 +377,7 @@ public class AnalyticsCalculation {
 		{
 			elementContext_lazy = () -> AnalyticsCalculation.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "VariableRateValueDate";
 			definition = "Date/time as of which the variable rate is valid.";
 			maxOccurs = 1;
@@ -390,14 +389,13 @@ public class AnalyticsCalculation {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AnalyticsCalculation";
 				definition = "Characteristics related to the analytics.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesPricing.mmAnalyticsCalculation, com.tools20022.repository.entity.AnalyticsValue.mmAnalyticsCalculation);
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.AnalyticsCalculation.mmSecuritiesPricing, com.tools20022.repository.entity.AnalyticsCalculation.mmValue,
-						com.tools20022.repository.entity.AnalyticsCalculation.mmCalculationType, com.tools20022.repository.entity.AnalyticsCalculation.mmValueDate, com.tools20022.repository.entity.AnalyticsCalculation.mmValuePeriod,
-						com.tools20022.repository.entity.AnalyticsCalculation.mmEstimatedInterestRate, com.tools20022.repository.entity.AnalyticsCalculation.mmVariableRateValueDate);
+				element_lazy = () -> Arrays.asList(AnalyticsCalculation.mmSecuritiesPricing, AnalyticsCalculation.mmValue, AnalyticsCalculation.mmCalculationType, AnalyticsCalculation.mmValueDate, AnalyticsCalculation.mmValuePeriod,
+						AnalyticsCalculation.mmEstimatedInterestRate, AnalyticsCalculation.mmVariableRateValueDate);
 			}
 		});
 		return mmObject_lazy.get();

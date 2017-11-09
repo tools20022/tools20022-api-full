@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.Reporting2Code
+ * Reporting2Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Reporting1Code
+ * Reporting1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -38,15 +49,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.ReportingCode#mmDeferredReport
  * ReportingCode.mmDeferredReport}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.Reporting2Code
- * Reporting2Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.Reporting1Code
- * Reporting1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -96,7 +98,7 @@ public class ReportingCode {
 	 */
 	public static final MMCode mmStockExchange = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "StockExchange";
 			definition = "Trade details are to be reported to a stock exchange";
 			owner_lazy = () -> ReportingCode.mmObject();
@@ -127,7 +129,7 @@ public class ReportingCode {
 	 */
 	public static final MMCode mmRegulatoryOrganisation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RegulatoryOrganisation";
 			definition = "Trade details are to be reported to a regulatory organisation.";
 			owner_lazy = () -> ReportingCode.mmObject();
@@ -160,7 +162,7 @@ public class ReportingCode {
 	 */
 	public static final MMCode mmDeferredReport = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DeferredReport";
 			definition = "Report is deferred, for example, because the order was executed in partial fills.";
 			owner_lazy = () -> ReportingCode.mmObject();
@@ -171,13 +173,12 @@ public class ReportingCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("STEX");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ReportingCode";
 				definition = "Identifies to which institution the reporting must be done.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ReportingCode.mmStockExchange, com.tools20022.repository.codeset.ReportingCode.mmRegulatoryOrganisation,
-						com.tools20022.repository.codeset.ReportingCode.mmDeferredReport);
+				code_lazy = () -> Arrays.asList(ReportingCode.mmStockExchange, ReportingCode.mmRegulatoryOrganisation, ReportingCode.mmDeferredReport);
 				derivation_lazy = () -> Arrays.asList(Reporting2Code.mmObject(), Reporting1Code.mmObject());
 			}
 		});

@@ -20,8 +20,10 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.*;
 import com.tools20022.repository.entity.PaymentCard;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -118,10 +120,10 @@ public class PaymentCard8 {
 			componentContext_lazy = () -> PaymentCard8.mmObject();
 			isDerived = false;
 			xmlTag = "PrtctdCardData";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProtectedCardData";
 			definition = "Replacement of the message element PlainCardData by a digital envelope using a cryptographic key.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PaymentCard6.mmProtectedCardData;
+			previousVersion_lazy = () -> PaymentCard6.mmProtectedCardData;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -170,10 +172,10 @@ public class PaymentCard8 {
 			componentContext_lazy = () -> PaymentCard8.mmObject();
 			isDerived = false;
 			xmlTag = "PlainCardData";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlainCardData";
 			definition = "Sensitive data associated with the card performing the transaction.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PaymentCard6.mmPlainCardData;
+			previousVersion_lazy = () -> PaymentCard6.mmPlainCardData;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -219,14 +221,14 @@ public class PaymentCard8 {
 	 */
 	public static final MMMessageAttribute mmCardCountryCode = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentCard.mmCardCountryCode;
+			businessElementTrace_lazy = () -> PaymentCard.mmCardCountryCode;
 			componentContext_lazy = () -> PaymentCard8.mmObject();
 			isDerived = false;
 			xmlTag = "CardCtryCd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CardCountryCode";
 			definition = "Country code assigned to the card by the card issuer.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PaymentCard6.mmCardCountryCode;
+			previousVersion_lazy = () -> PaymentCard6.mmCardCountryCode;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max3Text.mmObject();
@@ -268,11 +270,11 @@ public class PaymentCard8 {
 	 */
 	public static final MMMessageAttribute mmCardCurrencyCode = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentCard.mmCardCurrencyCode;
+			businessElementTrace_lazy = () -> PaymentCard.mmCardCurrencyCode;
 			componentContext_lazy = () -> PaymentCard8.mmObject();
 			isDerived = false;
 			xmlTag = "CardCcyCd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CardCurrencyCode";
 			definition = "Currency code of the card issuer (ISO 4217 numeric code).";
 			maxOccurs = 1;
@@ -323,14 +325,14 @@ public class PaymentCard8 {
 	 */
 	public static final MMMessageAttribute mmCardProductProfile = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentCard.mmProfileNumber;
+			businessElementTrace_lazy = () -> PaymentCard.mmProfileNumber;
 			componentContext_lazy = () -> PaymentCard8.mmObject();
 			isDerived = false;
 			xmlTag = "CardPdctPrfl";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CardProductProfile";
 			definition = "Defines a category of cards related the acceptance processing rules defined by the acquirer.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PaymentCard6.mmCardProductProfile;
+			previousVersion_lazy = () -> PaymentCard6.mmCardProductProfile;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Exact4NumericText.mmObject();
@@ -375,14 +377,14 @@ public class PaymentCard8 {
 	 */
 	public static final MMMessageAttribute mmCardBrand = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentCard.mmCardBrand;
+			businessElementTrace_lazy = () -> PaymentCard.mmCardBrand;
 			componentContext_lazy = () -> PaymentCard8.mmObject();
 			isDerived = false;
 			xmlTag = "CardBrnd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CardBrand";
 			definition = "Brand name of the card.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PaymentCard6.mmCardBrand;
+			previousVersion_lazy = () -> PaymentCard6.mmCardBrand;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -425,10 +427,10 @@ public class PaymentCard8 {
 			componentContext_lazy = () -> PaymentCard8.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlCardData";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalCardData";
 			definition = "Additional card issuer specific data.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PaymentCard6.mmAdditionalCardData;
+			previousVersion_lazy = () -> PaymentCard6.mmAdditionalCardData;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max70Text.mmObject();
@@ -438,12 +440,11 @@ public class PaymentCard8 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentCard8.mmProtectedCardData, com.tools20022.repository.msg.PaymentCard8.mmPlainCardData,
-						com.tools20022.repository.msg.PaymentCard8.mmCardCountryCode, com.tools20022.repository.msg.PaymentCard8.mmCardCurrencyCode, com.tools20022.repository.msg.PaymentCard8.mmCardProductProfile,
-						com.tools20022.repository.msg.PaymentCard8.mmCardBrand, com.tools20022.repository.msg.PaymentCard8.mmAdditionalCardData);
+				messageElement_lazy = () -> Arrays.asList(PaymentCard8.mmProtectedCardData, PaymentCard8.mmPlainCardData, PaymentCard8.mmCardCountryCode, PaymentCard8.mmCardCurrencyCode, PaymentCard8.mmCardProductProfile,
+						PaymentCard8.mmCardBrand, PaymentCard8.mmAdditionalCardData);
 				trace_lazy = () -> PaymentCard.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PaymentCard8";
 				definition = "Payment card performing the transaction.";
 				previousVersion_lazy = () -> PaymentCard6.mmObject();

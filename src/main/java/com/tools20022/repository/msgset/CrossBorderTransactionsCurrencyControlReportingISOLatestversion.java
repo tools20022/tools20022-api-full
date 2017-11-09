@@ -18,7 +18,9 @@
 package com.tools20022.repository.msgset;
 
 import com.tools20022.metamodel.MMMessageSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.auth.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -90,8 +92,8 @@ public class CrossBorderTransactionsCurrencyControlReportingISOLatestversion {
 	final static public MMMessageSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageSet() {
 			{
-				businessProcessCatalogue_lazy = () -> com.tools20022.repository.GeneratedRepository.mmcatalogue;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				businessProcessCatalogue_lazy = () -> GeneratedRepository.mmcatalogue;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Cross-Border Transactions Currency Control Reporting - ISO - Latest version";
 				definition = "Message set defined for the creation of the Cross-Border Transaction Regulatory Reporting (Local name in Russia is “Currency Control”) ISO 20022 messages as requested through the RU-CMPG (Russian Corporate Market Practice Group) Business Justification, approved on 22 July 2015.";
 				messageDefinition_lazy = () -> Arrays.asList(ContractRegistrationStatementRequestV01.mmObject(), ContractRegistrationAmendmentRequestV01.mmObject(), ContractRegistrationConfirmationV01.mmObject(),

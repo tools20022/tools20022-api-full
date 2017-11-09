@@ -19,6 +19,8 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.DocumentNumber3;
 import com.tools20022.repository.msg.DocumentNumber4;
 import java.util.Arrays;
@@ -95,7 +97,7 @@ public class StatusOrStatement2Choice {
 			componentContext_lazy = () -> StatusOrStatement2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "StsAdvc";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusAdvice";
 			definition = "Identify the status advice and the transaction for which the status advice was requested.";
 			maxOccurs = 1;
@@ -136,7 +138,7 @@ public class StatusOrStatement2Choice {
 			componentContext_lazy = () -> StatusOrStatement2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Stmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Statement";
 			definition = "Identify the statement/report that was requested.";
 			maxOccurs = 1;
@@ -149,9 +151,9 @@ public class StatusOrStatement2Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.StatusOrStatement2Choice.mmStatusAdvice, com.tools20022.repository.choice.StatusOrStatement2Choice.mmStatement);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(StatusOrStatement2Choice.mmStatusAdvice, StatusOrStatement2Choice.mmStatement);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "StatusOrStatement2Choice";
 				definition = "Choice between the identification of a status or statement query.";
 			}

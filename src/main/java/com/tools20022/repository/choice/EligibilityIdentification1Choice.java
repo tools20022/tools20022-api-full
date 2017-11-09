@@ -19,8 +19,10 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CountryCode;
 import com.tools20022.repository.datatype.ISINIdentifier;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -98,7 +100,7 @@ public class EligibilityIdentification1Choice {
 			componentContext_lazy = () -> EligibilityIdentification1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Ctry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Country";
 			definition = "Country code used to identify the issuance country to be defined as eligible.";
 			maxOccurs = 1;
@@ -141,7 +143,7 @@ public class EligibilityIdentification1Choice {
 			componentContext_lazy = () -> EligibilityIdentification1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "FinInstrmId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentIdentification";
 			definition = "ISIN  used to identify the security to be defined as eligible.";
 			maxOccurs = 1;
@@ -186,7 +188,7 @@ public class EligibilityIdentification1Choice {
 			componentContext_lazy = () -> EligibilityIdentification1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "IssrCSDId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssuerCSDIdentification";
 			definition = "Issuer CSD identification used to identify the securities to be defined as eligible.";
 			maxOccurs = 1;
@@ -198,10 +200,9 @@ public class EligibilityIdentification1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.EligibilityIdentification1Choice.mmCountry, com.tools20022.repository.choice.EligibilityIdentification1Choice.mmFinancialInstrumentIdentification,
-						com.tools20022.repository.choice.EligibilityIdentification1Choice.mmIssuerCSDIdentification);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(EligibilityIdentification1Choice.mmCountry, EligibilityIdentification1Choice.mmFinancialInstrumentIdentification, EligibilityIdentification1Choice.mmIssuerCSDIdentification);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "EligibilityIdentification1Choice";
 				definition = "Specifies the eligibility details.";
 			}

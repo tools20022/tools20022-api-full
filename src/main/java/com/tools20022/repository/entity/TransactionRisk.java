@@ -17,10 +17,9 @@
 
 package com.tools20022.repository.entity;
 
-import com.tools20022.metamodel.MMBusinessAssociationEnd;
-import com.tools20022.metamodel.MMBusinessAttribute;
-import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.*;
 import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -36,6 +35,18 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Obligation#mmTransactionRisk
+ * Obligation.mmTransactionRisk}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ExposureCalculation#mmTransactionRisk
+ * ExposureCalculation.mmTransactionRisk}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -48,18 +59,6 @@ import java.util.List;
  * <li>
  * {@linkplain com.tools20022.repository.entity.TransactionRisk#mmExposureCalculation
  * TransactionRisk.mmExposureCalculation}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Obligation#mmTransactionRisk
- * Obligation.mmTransactionRisk}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ExposureCalculation#mmTransactionRisk
- * ExposureCalculation.mmTransactionRisk}</li>
  * </ul>
  * </li>
  * <li>
@@ -125,12 +124,12 @@ public class TransactionRisk {
 		{
 			elementContext_lazy = () -> TransactionRisk.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Obligation";
 			definition = "Specifies the obligations used to calculate the transaction risk.\r\nSpecifies the quantity of securities and/or the cash amounts that have to be taken into account to calculate the exposure of one trading party versus one of its counterparties.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.Obligation.mmTransactionRisk;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Obligation.mmObject();
 		}
 	};
@@ -169,7 +168,7 @@ public class TransactionRisk {
 		{
 			elementContext_lazy = () -> TransactionRisk.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExposedAmount";
 			definition = "The sum of the exposures of all transactions which are in favour of a Party. That is, all transactions which would have an amount payable by the counterparty if they were being terminated.";
 			maxOccurs = 1;
@@ -218,13 +217,13 @@ public class TransactionRisk {
 		{
 			elementContext_lazy = () -> TransactionRisk.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ExposureCalculation";
 			definition = "Specifies the exposure for which the risk is calculated on a transaction basis.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.ExposureCalculation.mmTransactionRisk;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.ExposureCalculation.mmObject();
 		}
 	};
@@ -232,13 +231,12 @@ public class TransactionRisk {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TransactionRisk";
 				definition = "Calculation of the exposure amount that one party has vis-a-vis one counterparty or a central system, based on the transactions that are not yet settled.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Obligation.mmTransactionRisk, com.tools20022.repository.entity.ExposureCalculation.mmTransactionRisk);
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.TransactionRisk.mmObligation, com.tools20022.repository.entity.TransactionRisk.mmExposedAmount,
-						com.tools20022.repository.entity.TransactionRisk.mmExposureCalculation);
+				element_lazy = () -> Arrays.asList(TransactionRisk.mmObligation, TransactionRisk.mmExposedAmount, TransactionRisk.mmExposureCalculation);
 			}
 		});
 		return mmObject_lazy.get();

@@ -19,7 +19,9 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.ProductCategory;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification4;
 import com.tools20022.repository.msg.ProductCategory1;
 import java.util.Arrays;
@@ -104,7 +106,7 @@ public class ProductCategory1Choice {
 			componentContext_lazy = () -> ProductCategory1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "StrdPdctCtgy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StructuredProductCategory";
 			definition = "Specifies the type of product category.";
 			maxOccurs = 1;
@@ -152,7 +154,7 @@ public class ProductCategory1Choice {
 			componentContext_lazy = () -> ProductCategory1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "OthrPdctCtgy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherProductCategory";
 			definition = "Specifies the type of product category not present in the code list.";
 			maxOccurs = 1;
@@ -165,10 +167,10 @@ public class ProductCategory1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ProductCategory1Choice.mmStructuredProductCategory, com.tools20022.repository.choice.ProductCategory1Choice.mmOtherProductCategory);
+				messageElement_lazy = () -> Arrays.asList(ProductCategory1Choice.mmStructuredProductCategory, ProductCategory1Choice.mmOtherProductCategory);
 				trace_lazy = () -> ProductCategory.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ProductCategory1Choice";
 				definition = "Specifies that the category of a product may be indicated by a code or by free text.";
 			}

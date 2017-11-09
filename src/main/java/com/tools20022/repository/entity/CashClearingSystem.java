@@ -17,14 +17,14 @@
 
 package com.tools20022.repository.entity;
 
-import com.tools20022.metamodel.MMBusinessAssociationEnd;
-import com.tools20022.metamodel.MMBusinessAttribute;
-import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.*;
 import com.tools20022.repository.choice.*;
 import com.tools20022.repository.codeset.CashClearingSystemCode;
 import com.tools20022.repository.codeset.CashSettlementSystemCode;
 import com.tools20022.repository.codeset.CashSystemTypeCode;
 import com.tools20022.repository.entity.ClearingSystem;
+import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -38,23 +38,31 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
  * <ul>
+ * <li>{@linkplain com.tools20022.repository.choice.SystemIdentificationChoice
+ * SystemIdentificationChoice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CashClearingSystem#mmIdentification
- * CashClearingSystem.mmIdentification}</li>
+ * {@linkplain com.tools20022.repository.choice.ClearingSystemIdentification1Choice
+ * ClearingSystemIdentification1Choice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CashClearingSystem#mmTransactionAdministrator
- * CashClearingSystem.mmTransactionAdministrator}</li>
+ * {@linkplain com.tools20022.repository.choice.ClearingSystemIdentification3Choice
+ * ClearingSystemIdentification3Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.SystemIdentification2Choice
+ * SystemIdentification2Choice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CashClearingSystem#mmSystemRole
- * CashClearingSystem.mmSystemRole}</li>
- * <li>{@linkplain com.tools20022.repository.entity.CashClearingSystem#mmType
- * CashClearingSystem.mmType}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CashClearingSystem#mmCashSettlementSystem
- * CashClearingSystem.mmCashSettlementSystem}</li>
+ * {@linkplain com.tools20022.repository.choice.ClearingSystemIdentification2Choice
+ * ClearingSystemIdentification2Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.CashSettlementSystem1Choice
+ * CashSettlementSystem1Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.CashSettlementSystem2Choice
+ * CashSettlementSystem2Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.CashSettlementSystem4Choice
+ * CashSettlementSystem4Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.CashSettlementSystem5Choice
+ * CashSettlementSystem5Choice}</li>
  * </ul>
  * </li>
  * <li>
@@ -123,31 +131,23 @@ import java.util.List;
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
  * superType} = {@linkplain com.tools20022.repository.entity.ClearingSystem
  * ClearingSystem}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.choice.SystemIdentificationChoice
- * SystemIdentificationChoice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.ClearingSystemIdentification1Choice
- * ClearingSystemIdentification1Choice}</li>
+ * {@linkplain com.tools20022.repository.entity.CashClearingSystem#mmIdentification
+ * CashClearingSystem.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.ClearingSystemIdentification3Choice
- * ClearingSystemIdentification3Choice}</li>
- * <li>{@linkplain com.tools20022.repository.choice.SystemIdentification2Choice
- * SystemIdentification2Choice}</li>
+ * {@linkplain com.tools20022.repository.entity.CashClearingSystem#mmTransactionAdministrator
+ * CashClearingSystem.mmTransactionAdministrator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.ClearingSystemIdentification2Choice
- * ClearingSystemIdentification2Choice}</li>
- * <li>{@linkplain com.tools20022.repository.choice.CashSettlementSystem1Choice
- * CashSettlementSystem1Choice}</li>
- * <li>{@linkplain com.tools20022.repository.choice.CashSettlementSystem2Choice
- * CashSettlementSystem2Choice}</li>
- * <li>{@linkplain com.tools20022.repository.choice.CashSettlementSystem4Choice
- * CashSettlementSystem4Choice}</li>
- * <li>{@linkplain com.tools20022.repository.choice.CashSettlementSystem5Choice
- * CashSettlementSystem5Choice}</li>
+ * {@linkplain com.tools20022.repository.entity.CashClearingSystem#mmSystemRole
+ * CashClearingSystem.mmSystemRole}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.CashClearingSystem#mmType
+ * CashClearingSystem.mmType}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CashClearingSystem#mmCashSettlementSystem
+ * CashClearingSystem.mmCashSettlementSystem}</li>
  * </ul>
  * </li>
  * <li>
@@ -226,14 +226,12 @@ public class CashClearingSystem extends ClearingSystem {
 	 */
 	public static final MMBusinessAttribute mmIdentification = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SystemIdentificationChoice.mmClearingSystemIdentification,
-					com.tools20022.repository.choice.ClearingSystemIdentification1Choice.mmClearingSystemIdentification, com.tools20022.repository.choice.ClearingSystemIdentification1Choice.mmProprietary,
-					com.tools20022.repository.choice.ClearingSystemIdentification3Choice.mmCode, com.tools20022.repository.choice.ClearingSystemIdentification3Choice.mmProprietary,
-					com.tools20022.repository.choice.ClearingSystemIdentification2Choice.mmCode, com.tools20022.repository.choice.ClearingSystemIdentification2Choice.mmProprietary,
-					com.tools20022.repository.msg.ClearingSystemMemberIdentification2.mmClearingSystemIdentification);
+			derivation_lazy = () -> Arrays.asList(SystemIdentificationChoice.mmClearingSystemIdentification, ClearingSystemIdentification1Choice.mmClearingSystemIdentification, ClearingSystemIdentification1Choice.mmProprietary,
+					ClearingSystemIdentification3Choice.mmCode, ClearingSystemIdentification3Choice.mmProprietary, ClearingSystemIdentification2Choice.mmCode, ClearingSystemIdentification2Choice.mmProprietary,
+					ClearingSystemMemberIdentification2.mmClearingSystemIdentification);
 			elementContext_lazy = () -> CashClearingSystem.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Identification";
 			definition = "Information used to identify a cash clearing system.";
 			maxOccurs = 1;
@@ -283,12 +281,12 @@ public class CashClearingSystem extends ClearingSystem {
 		{
 			elementContext_lazy = () -> CashClearingSystem.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TransactionAdministrator";
 			definition = "Set of integrated applications that provides centralised services such as clearing and settlement.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.TransactionAdministrator.mmCashClearingSystem;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.TransactionAdministrator.mmObject();
 		}
 	};
@@ -331,13 +329,13 @@ public class CashClearingSystem extends ClearingSystem {
 		{
 			elementContext_lazy = () -> CashClearingSystem.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SystemRole";
 			definition = "Specifies the role played by the cash clearing system.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.SettlementInstructionSystemRole.mmSystem;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SettlementInstructionSystemRole.mmObject();
 		}
 	};
@@ -406,15 +404,12 @@ public class CashClearingSystem extends ClearingSystem {
 	 */
 	public static final MMBusinessAttribute mmType = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays
-					.asList(com.tools20022.repository.choice.CashSettlementSystem1Choice.mmCode, com.tools20022.repository.choice.CashSettlementSystem1Choice.mmProprietary,
-							com.tools20022.repository.choice.CashSettlementSystem2Choice.mmCode, com.tools20022.repository.choice.CashSettlementSystem2Choice.mmProprietary,
-							com.tools20022.repository.choice.CashSettlementSystem3Choice.mmCode, com.tools20022.repository.choice.CashSettlementSystem3Choice.mmProprietary,
-							com.tools20022.repository.choice.CashSettlementSystem4Choice.mmCode, com.tools20022.repository.choice.CashSettlementSystem4Choice.mmProprietary,
-							com.tools20022.repository.choice.CashSettlementSystem5Choice.mmCode, com.tools20022.repository.choice.CashSettlementSystem5Choice.mmProprietary);
+			derivation_lazy = () -> Arrays.asList(CashSettlementSystem1Choice.mmCode, CashSettlementSystem1Choice.mmProprietary, CashSettlementSystem2Choice.mmCode, CashSettlementSystem2Choice.mmProprietary,
+					CashSettlementSystem3Choice.mmCode, CashSettlementSystem3Choice.mmProprietary, CashSettlementSystem4Choice.mmCode, CashSettlementSystem4Choice.mmProprietary, CashSettlementSystem5Choice.mmCode,
+					CashSettlementSystem5Choice.mmProprietary);
 			elementContext_lazy = () -> CashClearingSystem.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Type";
 			definition = "Specifies the category of cash clearing system, eg, cheque clearing.";
 			maxOccurs = 1;
@@ -459,10 +454,10 @@ public class CashClearingSystem extends ClearingSystem {
 	 */
 	public static final MMBusinessAttribute mmCashSettlementSystem = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SystemSearch2.mmSystemIdentification);
+			derivation_lazy = () -> Arrays.asList(SystemSearch2.mmSystemIdentification);
 			elementContext_lazy = () -> CashClearingSystem.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CashSettlementSystem";
 			definition = "Specifies the cash settlement system used.";
 			maxOccurs = 1;
@@ -474,20 +469,17 @@ public class CashClearingSystem extends ClearingSystem {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CashClearingSystem";
 				definition = "Clearing system that processes only cash transfers.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.TransactionAdministrator.mmCashClearingSystem, com.tools20022.repository.entity.SettlementInstructionSystemRole.mmSystem);
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SystemIdentification2Choice.mmMarketInfrastructureIdentification, com.tools20022.repository.msg.SystemMember2.mmSystemIdentification,
-						com.tools20022.repository.msg.SettlementInformation3.mmClearingSystem, com.tools20022.repository.msg.SettlementInformation1.mmClearingSystem, com.tools20022.repository.msg.SettlementInformation13.mmClearingSystem,
-						com.tools20022.repository.msg.SettlementInformation2.mmClearingSystem, com.tools20022.repository.msg.SettlementInformation14.mmClearingSystem, com.tools20022.repository.msg.SettlementInformation16.mmClearingSystem,
-						com.tools20022.repository.msg.RequestedModification.mmPaymentScheme, com.tools20022.repository.msg.SettlementInformation10.mmClearingSystem, com.tools20022.repository.msg.SettlementInformation6.mmClearingSystem,
-						com.tools20022.repository.msg.SettlementInformation11.mmClearingSystem, com.tools20022.repository.msg.SettlementInformation12.mmClearingSystem, com.tools20022.repository.msg.SettlementInformation8.mmClearingSystem,
-						com.tools20022.repository.msg.SettlementInformation9.mmClearingSystem);
+				derivationElement_lazy = () -> Arrays.asList(SystemIdentification2Choice.mmMarketInfrastructureIdentification, SystemMember2.mmSystemIdentification, SettlementInformation3.mmClearingSystem,
+						SettlementInformation1.mmClearingSystem, SettlementInformation13.mmClearingSystem, SettlementInformation2.mmClearingSystem, SettlementInformation14.mmClearingSystem, SettlementInformation16.mmClearingSystem,
+						RequestedModification.mmPaymentScheme, SettlementInformation10.mmClearingSystem, SettlementInformation6.mmClearingSystem, SettlementInformation11.mmClearingSystem, SettlementInformation12.mmClearingSystem,
+						SettlementInformation8.mmClearingSystem, SettlementInformation9.mmClearingSystem);
 				superType_lazy = () -> ClearingSystem.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CashClearingSystem.mmIdentification, com.tools20022.repository.entity.CashClearingSystem.mmTransactionAdministrator,
-						com.tools20022.repository.entity.CashClearingSystem.mmSystemRole, com.tools20022.repository.entity.CashClearingSystem.mmType, com.tools20022.repository.entity.CashClearingSystem.mmCashSettlementSystem);
+				element_lazy = () -> Arrays.asList(CashClearingSystem.mmIdentification, CashClearingSystem.mmTransactionAdministrator, CashClearingSystem.mmSystemRole, CashClearingSystem.mmType, CashClearingSystem.mmCashSettlementSystem);
 				derivationComponent_lazy = () -> Arrays.asList(SystemIdentificationChoice.mmObject(), ClearingSystemIdentification1Choice.mmObject(), ClearingSystemIdentification3Choice.mmObject(), SystemIdentification2Choice.mmObject(),
 						ClearingSystemIdentification2Choice.mmObject(), CashSettlementSystem1Choice.mmObject(), CashSettlementSystem2Choice.mmObject(), CashSettlementSystem4Choice.mmObject(), CashSettlementSystem5Choice.mmObject());
 			}

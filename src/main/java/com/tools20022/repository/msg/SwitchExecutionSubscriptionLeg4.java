@@ -20,8 +20,12 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.entity.InvestmentFundOrder;
+import com.tools20022.repository.entity.InvestmentFundTransaction;
 import com.tools20022.repository.entity.SwitchExecutionSubscriptionLeg;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -112,7 +116,7 @@ public class SwitchExecutionSubscriptionLeg4 {
 			componentContext_lazy = () -> SwitchExecutionSubscriptionLeg4.mmObject();
 			isDerived = false;
 			xmlTag = "LegExctnId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LegExecutionIdentification";
 			definition = "Unique identifier for an instance of a leg execution within a switch confirmation.";
 			maxOccurs = 1;
@@ -154,7 +158,7 @@ public class SwitchExecutionSubscriptionLeg4 {
 			componentContext_lazy = () -> SwitchExecutionSubscriptionLeg4.mmObject();
 			isDerived = false;
 			xmlTag = "LegId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LegIdentification";
 			definition = "Unique technical identifier for an instance of a leg within a switch.";
 			maxOccurs = 1;
@@ -199,11 +203,11 @@ public class SwitchExecutionSubscriptionLeg4 {
 	 */
 	public static final MMMessageAssociationEnd mmInvestmentAccountDetails = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundTransaction.mmInvestmentAccount;
+			businessElementTrace_lazy = () -> InvestmentFundTransaction.mmInvestmentAccount;
 			componentContext_lazy = () -> SwitchExecutionSubscriptionLeg4.mmObject();
 			isDerived = false;
 			xmlTag = "InvstmtAcctDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestmentAccountDetails";
 			definition = "Account information of the switch order / switch order confirmation for which the advice is given.";
 			maxOccurs = 1;
@@ -249,11 +253,11 @@ public class SwitchExecutionSubscriptionLeg4 {
 	 */
 	public static final MMMessageAssociationEnd mmFinancialInstrumentDetails = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundTransaction.mmInvestmentFundClass;
+			businessElementTrace_lazy = () -> InvestmentFundTransaction.mmInvestmentFundClass;
 			componentContext_lazy = () -> SwitchExecutionSubscriptionLeg4.mmObject();
 			isDerived = false;
 			xmlTag = "FinInstrmDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentDetails";
 			definition = "Financial instrument information of the subscription leg of the switch order /switch order confirmation for which the advice is given.";
 			maxOccurs = 1;
@@ -297,11 +301,11 @@ public class SwitchExecutionSubscriptionLeg4 {
 	 */
 	public static final MMMessageAssociationEnd mmFinancialInstrumentQuantity = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrder.mmUnitsNumber;
+			businessElementTrace_lazy = () -> InvestmentFundOrder.mmUnitsNumber;
 			componentContext_lazy = () -> SwitchExecutionSubscriptionLeg4.mmObject();
 			isDerived = false;
 			xmlTag = "FinInstrmQty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentQuantity";
 			definition = "Quantity of an order.";
 			maxOccurs = 1;
@@ -314,12 +318,11 @@ public class SwitchExecutionSubscriptionLeg4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SwitchExecutionSubscriptionLeg4.mmLegExecutionIdentification, com.tools20022.repository.msg.SwitchExecutionSubscriptionLeg4.mmLegIdentification,
-						com.tools20022.repository.msg.SwitchExecutionSubscriptionLeg4.mmInvestmentAccountDetails, com.tools20022.repository.msg.SwitchExecutionSubscriptionLeg4.mmFinancialInstrumentDetails,
-						com.tools20022.repository.msg.SwitchExecutionSubscriptionLeg4.mmFinancialInstrumentQuantity);
+				messageElement_lazy = () -> Arrays.asList(SwitchExecutionSubscriptionLeg4.mmLegExecutionIdentification, SwitchExecutionSubscriptionLeg4.mmLegIdentification, SwitchExecutionSubscriptionLeg4.mmInvestmentAccountDetails,
+						SwitchExecutionSubscriptionLeg4.mmFinancialInstrumentDetails, SwitchExecutionSubscriptionLeg4.mmFinancialInstrumentQuantity);
 				trace_lazy = () -> SwitchExecutionSubscriptionLeg.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SwitchExecutionSubscriptionLeg4";
 				definition = "Execution of the subscription part, in a switch between investment funds or investment fund classes.";
 			}

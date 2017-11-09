@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.DistributionAccount1Code
+ * DistributionAccount1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -35,13 +44,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.DistributionAccountCode#mmRRGAccount
  * DistributionAccountCode.mmRRGAccount}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.DistributionAccount1Code
- * DistributionAccount1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -95,7 +97,7 @@ public class DistributionAccountCode {
 	 */
 	public static final MMCode mmGeneralFree = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GeneralFree";
 			definition = "General free account. DTC (The Depository Trust Company) allows immediate use of securities.";
 			owner_lazy = () -> DistributionAccountCode.mmObject();
@@ -128,7 +130,7 @@ public class DistributionAccountCode {
 	 */
 	public static final MMCode mmRRGAccount = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RRGAccount";
 			definition = "RRG account. Sub account. DTC (The Depository Trust Company)  does not allow immediate use of securities.";
 			owner_lazy = () -> DistributionAccountCode.mmObject();
@@ -139,12 +141,12 @@ public class DistributionAccountCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("GENF");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DistributionAccountCode";
 				definition = "Specifies the type of account where the disbursed CUSIP will be allocated.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DistributionAccountCode.mmGeneralFree, com.tools20022.repository.codeset.DistributionAccountCode.mmRRGAccount);
+				code_lazy = () -> Arrays.asList(DistributionAccountCode.mmGeneralFree, DistributionAccountCode.mmRRGAccount);
 				derivation_lazy = () -> Arrays.asList(DistributionAccount1Code.mmObject());
 			}
 		});

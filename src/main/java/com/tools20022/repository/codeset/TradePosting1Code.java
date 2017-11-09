@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.TradePostingCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -84,7 +86,7 @@ public class TradePosting1Code extends TradePostingCode {
 	 */
 	public static final MMCode mmGross = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Gross";
 			owner_lazy = () -> TradePosting1Code.mmObject();
 		}
@@ -107,7 +109,7 @@ public class TradePosting1Code extends TradePostingCode {
 	 */
 	public static final MMCode mmNet = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Net";
 			owner_lazy = () -> TradePosting1Code.mmObject();
 		}
@@ -116,12 +118,12 @@ public class TradePosting1Code extends TradePostingCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("GROS");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TradePosting1Code";
 				definition = "Specifies the trade is maintained as a separate individual position in the clearing account, or not.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TradePosting1Code.mmGross, com.tools20022.repository.codeset.TradePosting1Code.mmNet);
+				code_lazy = () -> Arrays.asList(TradePosting1Code.mmGross, TradePosting1Code.mmNet);
 				trace_lazy = () -> TradePostingCode.mmObject();
 			}
 		});

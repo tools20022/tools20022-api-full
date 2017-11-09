@@ -19,8 +19,10 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.AgreementFramework1Code;
 import com.tools20022.repository.entity.MasterAgreement;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification30;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -102,11 +104,11 @@ public class AgreementFramework1Choice {
 	 */
 	public static final MMMessageAttribute mmAgreementFramework = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.MasterAgreement.mmMasterAgreementType;
+			businessElementTrace_lazy = () -> MasterAgreement.mmMasterAgreementType;
 			componentContext_lazy = () -> AgreementFramework1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "AgrmtFrmwk";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AgreementFramework";
 			definition = "Code to specify the type of collateral agreement.";
 			maxOccurs = 1;
@@ -152,11 +154,11 @@ public class AgreementFramework1Choice {
 	 */
 	public static final MMMessageAttribute mmProprietaryIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.MasterAgreement.mmMasterAgreementType;
+			businessElementTrace_lazy = () -> MasterAgreement.mmMasterAgreementType;
 			componentContext_lazy = () -> AgreementFramework1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "PrtryId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProprietaryIdentification";
 			definition = "Proprietary identification to specify the type of collateral agreement.";
 			maxOccurs = 1;
@@ -168,10 +170,10 @@ public class AgreementFramework1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AgreementFramework1Choice.mmAgreementFramework, com.tools20022.repository.choice.AgreementFramework1Choice.mmProprietaryIdentification);
+				messageElement_lazy = () -> Arrays.asList(AgreementFramework1Choice.mmAgreementFramework, AgreementFramework1Choice.mmProprietaryIdentification);
 				trace_lazy = () -> MasterAgreement.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AgreementFramework1Choice";
 				definition = "Choice between a code or a proprietary code for  the underlying master agreement.";
 			}

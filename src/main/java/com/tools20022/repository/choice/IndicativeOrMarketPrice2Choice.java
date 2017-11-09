@@ -19,7 +19,9 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.SecuritiesPricing;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -111,10 +113,10 @@ public class IndicativeOrMarketPrice2Choice {
 			componentContext_lazy = () -> IndicativeOrMarketPrice2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "IndctvPric";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IndicativePrice";
 			definition = "Estimated price, for example, for valuation purposes.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.IndicativeOrMarketPrice8Choice.mmIndicativePrice);
+			nextVersions_lazy = () -> Arrays.asList(IndicativeOrMarketPrice8Choice.mmIndicativePrice);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> com.tools20022.repository.choice.PriceFormat5Choice.mmObject();
@@ -163,10 +165,10 @@ public class IndicativeOrMarketPrice2Choice {
 			componentContext_lazy = () -> IndicativeOrMarketPrice2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "MktPric";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketPrice";
 			definition = "Last reported/known price of a financial instrument in a market.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.IndicativeOrMarketPrice8Choice.mmMarketPrice);
+			nextVersions_lazy = () -> Arrays.asList(IndicativeOrMarketPrice8Choice.mmMarketPrice);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> com.tools20022.repository.choice.PriceFormat5Choice.mmObject();
@@ -176,10 +178,10 @@ public class IndicativeOrMarketPrice2Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.IndicativeOrMarketPrice2Choice.mmIndicativePrice, com.tools20022.repository.choice.IndicativeOrMarketPrice2Choice.mmMarketPrice);
+				messageElement_lazy = () -> Arrays.asList(IndicativeOrMarketPrice2Choice.mmIndicativePrice, IndicativeOrMarketPrice2Choice.mmMarketPrice);
 				trace_lazy = () -> SecuritiesPricing.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "IndicativeOrMarketPrice2Choice";
 				definition = "Choice between an indicative price or a market price.";
 				nextVersions_lazy = () -> Arrays.asList(IndicativeOrMarketPrice8Choice.mmObject());

@@ -19,8 +19,11 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.CreditTransfer;
+import com.tools20022.repository.entity.InvestmentAccount;
 import com.tools20022.repository.entity.Payment;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.CreditTransfer7;
 import com.tools20022.repository.msg.InvestmentAccount32;
 import java.util.Arrays;
@@ -107,7 +110,7 @@ public class PaymentInstrument13Choice {
 			componentContext_lazy = () -> PaymentInstrument13Choice.mmObject();
 			isDerived = false;
 			xmlTag = "CdtTrfDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditTransferDetails";
 			definition = "Payment instrument between a debtor and a creditor, which flows through one or more financial institutions or systems.";
 			maxOccurs = 1;
@@ -151,11 +154,11 @@ public class PaymentInstrument13Choice {
 	 */
 	public static final MMMessageAssociationEnd mmCashAccountDetails = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentAccount.mmCashAccount;
+			businessElementTrace_lazy = () -> InvestmentAccount.mmCashAccount;
 			componentContext_lazy = () -> PaymentInstrument13Choice.mmObject();
 			isDerived = false;
 			xmlTag = "CshAcctDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashAccountDetails";
 			definition = "Part of the investment account to or from which cash entries are made.";
 			maxOccurs = 1;
@@ -168,10 +171,10 @@ public class PaymentInstrument13Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PaymentInstrument13Choice.mmCreditTransferDetails, com.tools20022.repository.choice.PaymentInstrument13Choice.mmCashAccountDetails);
+				messageElement_lazy = () -> Arrays.asList(PaymentInstrument13Choice.mmCreditTransferDetails, PaymentInstrument13Choice.mmCashAccountDetails);
 				trace_lazy = () -> Payment.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PaymentInstrument13Choice";
 				definition = "Choice between types of payment instrument, for example, credit transfer or investment account.";
 			}

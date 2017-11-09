@@ -17,10 +17,7 @@
 
 package com.tools20022.repository.area.seev;
 
-import com.tools20022.metamodel.MMMessageBuildingBlock;
-import com.tools20022.metamodel.MMMessageDefinition;
-import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
-import com.tools20022.metamodel.MMXor;
+import com.tools20022.metamodel.*;
 import com.tools20022.repository.area.SecuritiesEventsLatestVersion;
 import com.tools20022.repository.msg.CorporateActionInformation1;
 import com.tools20022.repository.msg.DocumentIdentification8;
@@ -51,6 +48,9 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code seev.018.001.01}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.SecuritiesEventsLatestVersion
@@ -98,9 +98,6 @@ import java.util.List;
  * AgentCAGlobalDistributionStatusAdviceV01.mmIndividualMovementStatus}</li>
  * </ul>
  * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code seev.018.001.01}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -152,12 +149,11 @@ public class AgentCAGlobalDistributionStatusAdviceV01 {
 	 */
 	public static final MMXor mmGlobalMovementStatusOrIndividualMovementStatusRule = new MMXor() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GlobalMovementStatusOrIndividualMovementStatusRule";
 			definition = "Either GlobalMovementStatus or IndividualMovementStatus must be present.";
 			messageDefinition_lazy = () -> AgentCAGlobalDistributionStatusAdviceV01.mmObject();
-			impactedMessageBuildingBlocks_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.AgentCAGlobalDistributionStatusAdviceV01.mmGlobalMovementStatus,
-					com.tools20022.repository.area.seev.AgentCAGlobalDistributionStatusAdviceV01.mmIndividualMovementStatus);
+			impactedMessageBuildingBlocks_lazy = () -> Arrays.asList(AgentCAGlobalDistributionStatusAdviceV01.mmGlobalMovementStatus, AgentCAGlobalDistributionStatusAdviceV01.mmIndividualMovementStatus);
 		}
 	};
 	protected DocumentIdentification8 identification;
@@ -190,7 +186,7 @@ public class AgentCAGlobalDistributionStatusAdviceV01 {
 	public static final MMMessageBuildingBlock mmIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Identification assigned by the Sender to unambiguously identify the status advice.";
 			maxOccurs = 1;
@@ -228,7 +224,7 @@ public class AgentCAGlobalDistributionStatusAdviceV01 {
 	public static final MMMessageBuildingBlock mmAgentCAGlobalDistributionAuthorisationRequestIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "AgtCAGblDstrbtnAuthstnReqId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AgentCAGlobalDistributionAuthorisationRequestIdentification";
 			definition = "Identification of the linked Agent CA Global Distribution Authorisation Request for which a status is given.";
 			maxOccurs = 1;
@@ -263,7 +259,7 @@ public class AgentCAGlobalDistributionStatusAdviceV01 {
 	public static final MMMessageBuildingBlock mmCorporateActionGeneralInformation = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CorpActnGnlInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorporateActionGeneralInformation";
 			definition = "General information about the corporate action event.";
 			maxOccurs = 1;
@@ -299,7 +295,7 @@ public class AgentCAGlobalDistributionStatusAdviceV01 {
 	public static final MMMessageBuildingBlock mmGlobalMovementStatus = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "GblMvmntSts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GlobalMovementStatus";
 			definition = "Provides information about the status of the global movement.";
 			maxOccurs = 1;
@@ -335,7 +331,7 @@ public class AgentCAGlobalDistributionStatusAdviceV01 {
 	public static final MMMessageBuildingBlock mmIndividualMovementStatus = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "IndvMvmntSts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IndividualMovementStatus";
 			definition = "Provides information about the status of an individual movement.";
 			minOccurs = 1;
@@ -346,18 +342,16 @@ public class AgentCAGlobalDistributionStatusAdviceV01 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AgentCAGlobalDistributionStatusAdviceV01";
 				definition = "Scope\r\nThis message is sent by an issuer (or its agent) to the CSD to authorise/prohibit the CSD to process the entitlement movements.\r\nUsage\r\nThis message is used to authorise/prohibit the CSD to process the movements requested in the Global Distribution Authorisation Request message.\r\nOnce the amendment request has been accepted by the issuer (or its agent), the CSD will process any resource movement and send an Agent Corporate Action Election Advice message with the function, option change, to confirm that the amendment has been booked at the CSD.\r\nThe issuer (or its agent) can provide the status in 2 different ways:\r\n- Provide a global status, in which case the building block Global Movement Status must be present; or\r\n- Provide a status by individual movements, in which case, the building block Individual Movement Status must be present. An individual movement cannot be rejected.";
 				messageSet_lazy = () -> Arrays.asList(IssuersAgentsCommunicationISOLatestversion.mmObject());
-				xors_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.AgentCAGlobalDistributionStatusAdviceV01.mmGlobalMovementStatusOrIndividualMovementStatusRule);
+				xors_lazy = () -> Arrays.asList(AgentCAGlobalDistributionStatusAdviceV01.mmGlobalMovementStatusOrIndividualMovementStatusRule);
 				rootElement = "Document";
 				xmlTag = "AgtCAGblDstrbtnStsAdvc";
 				businessArea_lazy = () -> SecuritiesEventsLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.AgentCAGlobalDistributionStatusAdviceV01.mmIdentification,
-						com.tools20022.repository.area.seev.AgentCAGlobalDistributionStatusAdviceV01.mmAgentCAGlobalDistributionAuthorisationRequestIdentification,
-						com.tools20022.repository.area.seev.AgentCAGlobalDistributionStatusAdviceV01.mmCorporateActionGeneralInformation, com.tools20022.repository.area.seev.AgentCAGlobalDistributionStatusAdviceV01.mmGlobalMovementStatus,
-						com.tools20022.repository.area.seev.AgentCAGlobalDistributionStatusAdviceV01.mmIndividualMovementStatus);
+				messageBuildingBlock_lazy = () -> Arrays.asList(AgentCAGlobalDistributionStatusAdviceV01.mmIdentification, AgentCAGlobalDistributionStatusAdviceV01.mmAgentCAGlobalDistributionAuthorisationRequestIdentification,
+						AgentCAGlobalDistributionStatusAdviceV01.mmCorporateActionGeneralInformation, AgentCAGlobalDistributionStatusAdviceV01.mmGlobalMovementStatus, AgentCAGlobalDistributionStatusAdviceV01.mmIndividualMovementStatus);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "seev";

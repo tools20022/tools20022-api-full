@@ -19,8 +19,10 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CashSettlementSystem2Code;
 import com.tools20022.repository.entity.CashClearingSystem;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification47;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -99,11 +101,11 @@ public class CashSettlementSystem5Choice {
 	 */
 	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashClearingSystem.mmType;
+			businessElementTrace_lazy = () -> CashClearingSystem.mmType;
 			componentContext_lazy = () -> CashSettlementSystem5Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Cd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Cash settlement system expressed as an ISO 20022 code.";
 			maxOccurs = 1;
@@ -147,11 +149,11 @@ public class CashSettlementSystem5Choice {
 	 */
 	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashClearingSystem.mmType;
+			businessElementTrace_lazy = () -> CashClearingSystem.mmType;
 			componentContext_lazy = () -> CashSettlementSystem5Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Cash settlement system expressed as a proprietary code.";
 			maxOccurs = 1;
@@ -163,10 +165,10 @@ public class CashSettlementSystem5Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CashSettlementSystem5Choice.mmCode, com.tools20022.repository.choice.CashSettlementSystem5Choice.mmProprietary);
+				messageElement_lazy = () -> Arrays.asList(CashSettlementSystem5Choice.mmCode, CashSettlementSystem5Choice.mmProprietary);
 				trace_lazy = () -> CashClearingSystem.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CashSettlementSystem5Choice";
 				definition = "Choice of format for the cash settlement system.";
 			}

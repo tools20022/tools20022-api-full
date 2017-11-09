@@ -19,6 +19,8 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -102,7 +104,7 @@ public class IsabelHeader2Choice {
 			componentContext_lazy = () -> IsabelHeader2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Pmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Payment";
 			definition = "File provided in the payload contains payment initiation requests.";
 			maxOccurs = 1;
@@ -143,7 +145,7 @@ public class IsabelHeader2Choice {
 			componentContext_lazy = () -> IsabelHeader2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Rpt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Report";
 			definition = "File provided in the payload contains reporting data.";
 			maxOccurs = 1;
@@ -187,7 +189,7 @@ public class IsabelHeader2Choice {
 			componentContext_lazy = () -> IsabelHeader2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Qry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Query";
 			definition = "File provided in the payload contains query data, as part of the RequestForReponse data flow.";
 			maxOccurs = 1;
@@ -232,7 +234,7 @@ public class IsabelHeader2Choice {
 			componentContext_lazy = () -> IsabelHeader2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "QryRspn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QueryResponse";
 			definition = "File provided in the payload contains in response to an original query, as part of the RequestForReponse\r\ndata flow.";
 			maxOccurs = 1;
@@ -274,7 +276,7 @@ public class IsabelHeader2Choice {
 			componentContext_lazy = () -> IsabelHeader2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Ntfctn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Notification";
 			definition = "File provided in the payload contains ISANot instances.";
 			maxOccurs = 1;
@@ -316,7 +318,7 @@ public class IsabelHeader2Choice {
 			componentContext_lazy = () -> IsabelHeader2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Admstn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Administration";
 			definition = "File provided in the payload contains administrative instances.";
 			maxOccurs = 1;
@@ -329,11 +331,10 @@ public class IsabelHeader2Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.IsabelHeader2Choice.mmPayment, com.tools20022.repository.choice.IsabelHeader2Choice.mmReport,
-						com.tools20022.repository.choice.IsabelHeader2Choice.mmQuery, com.tools20022.repository.choice.IsabelHeader2Choice.mmQueryResponse, com.tools20022.repository.choice.IsabelHeader2Choice.mmNotification,
-						com.tools20022.repository.choice.IsabelHeader2Choice.mmAdministration);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(IsabelHeader2Choice.mmPayment, IsabelHeader2Choice.mmReport, IsabelHeader2Choice.mmQuery, IsabelHeader2Choice.mmQueryResponse, IsabelHeader2Choice.mmNotification,
+						IsabelHeader2Choice.mmAdministration);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "IsabelHeader2Choice";
 				definition = "Specifies the type of file provided in the payload.";
 			}

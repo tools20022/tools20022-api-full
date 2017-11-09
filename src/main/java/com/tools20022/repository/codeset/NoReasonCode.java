@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -79,7 +81,7 @@ public class NoReasonCode {
 	 */
 	public static final MMCode mmNoReason = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NoReason";
 			definition = "No reason to report or no reason available to report.";
 			owner_lazy = () -> NoReasonCode.mmObject();
@@ -90,12 +92,12 @@ public class NoReasonCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("NORE");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "NoReasonCode";
 				definition = "Specifies that there is no reason available.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.NoReasonCode.mmNoReason);
+				code_lazy = () -> Arrays.asList(NoReasonCode.mmNoReason);
 			}
 		});
 		return mmObject_lazy.get();

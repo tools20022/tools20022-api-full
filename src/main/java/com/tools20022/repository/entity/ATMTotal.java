@@ -17,12 +17,11 @@
 
 package com.tools20022.repository.entity;
 
-import com.tools20022.metamodel.MMBusinessAssociationEnd;
-import com.tools20022.metamodel.MMBusinessAttribute;
-import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.*;
 import com.tools20022.repository.codeset.CurrencyCode;
 import com.tools20022.repository.datatype.ImpliedCurrencyAndAmount;
 import com.tools20022.repository.datatype.Number;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.ATMTotals1;
 import com.tools20022.repository.msg.ATMTotals3;
 import java.util.Arrays;
@@ -38,22 +37,12 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.ATMTotal#mmATMBalance
- * ATMTotal.mmATMBalance}</li>
- * <li>{@linkplain com.tools20022.repository.entity.ATMTotal#mmCurrency
- * ATMTotal.mmCurrency}</li>
- * <li>{@linkplain com.tools20022.repository.entity.ATMTotal#mmATMCurrentNumber
- * ATMTotal.mmATMCurrentNumber}</li>
- * <li>{@linkplain com.tools20022.repository.entity.ATMTotal#mmATMBalanceNumber
- * ATMTotal.mmATMBalanceNumber}</li>
- * <li>{@linkplain com.tools20022.repository.entity.ATMTotal#mmATMCurrent
- * ATMTotal.mmATMCurrent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.ATMTotal#mmRelatedCardPayment
- * ATMTotal.mmRelatedCardPayment}</li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.ATMTotals1 ATMTotals1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ATMTotals3 ATMTotals3}</li>
  * </ul>
  * </li>
  * <li>
@@ -72,12 +61,22 @@ import java.util.List;
  * ATMTotals3.mmPeriod}</li>
  * </ul>
  * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.ATMTotals1 ATMTotals1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ATMTotals3 ATMTotals3}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.ATMTotal#mmATMBalance
+ * ATMTotal.mmATMBalance}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.ATMTotal#mmCurrency
+ * ATMTotal.mmCurrency}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.ATMTotal#mmATMCurrentNumber
+ * ATMTotal.mmATMCurrentNumber}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.ATMTotal#mmATMBalanceNumber
+ * ATMTotal.mmATMBalanceNumber}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.ATMTotal#mmATMCurrent
+ * ATMTotal.mmATMCurrent}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ATMTotal#mmRelatedCardPayment
+ * ATMTotal.mmRelatedCardPayment}</li>
  * </ul>
  * </li>
  * <li>
@@ -136,10 +135,10 @@ public class ATMTotal {
 	 */
 	public static final MMBusinessAttribute mmATMBalance = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMTotals1.mmATMBalance);
+			derivation_lazy = () -> Arrays.asList(ATMTotals1.mmATMBalance);
 			elementContext_lazy = () -> ATMTotal.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ATMBalance";
 			definition = "Total balance of the ATM including reject cassette, but excluding the retract cassette.";
 			maxOccurs = 1;
@@ -183,10 +182,10 @@ public class ATMTotal {
 	 */
 	public static final MMBusinessAttribute mmCurrency = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMTotals1.mmCurrency, com.tools20022.repository.msg.ATMTotals3.mmCurrency);
+			derivation_lazy = () -> Arrays.asList(ATMTotals1.mmCurrency, ATMTotals3.mmCurrency);
 			elementContext_lazy = () -> ATMTotal.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Currency";
 			definition = "Currency of the totals.";
 			maxOccurs = 1;
@@ -232,10 +231,10 @@ public class ATMTotal {
 	 */
 	public static final MMBusinessAttribute mmATMCurrentNumber = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMTotals1.mmATMCurrentNumber, com.tools20022.repository.msg.ATMTotals3.mmCount);
+			derivation_lazy = () -> Arrays.asList(ATMTotals1.mmATMCurrentNumber, ATMTotals3.mmCount);
 			elementContext_lazy = () -> ATMTotal.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ATMCurrentNumber";
 			definition = "Total number of units for non-valued media, excluding reject cassette.";
 			maxOccurs = 1;
@@ -279,10 +278,10 @@ public class ATMTotal {
 	 */
 	public static final MMBusinessAttribute mmATMBalanceNumber = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMTotals1.mmATMBalanceNumber);
+			derivation_lazy = () -> Arrays.asList(ATMTotals1.mmATMBalanceNumber);
 			elementContext_lazy = () -> ATMTotal.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ATMBalanceNumber";
 			definition = "Total number of units for non-valued media, including reject cassette.";
 			maxOccurs = 1;
@@ -327,10 +326,10 @@ public class ATMTotal {
 	 */
 	public static final MMBusinessAttribute mmATMCurrent = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMTotals1.mmATMCurrent, com.tools20022.repository.msg.ATMTotals3.mmAmount);
+			derivation_lazy = () -> Arrays.asList(ATMTotals1.mmATMCurrent, ATMTotals3.mmAmount);
 			elementContext_lazy = () -> ATMTotal.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ATMCurrent";
 			definition = "Available amount for dispense in the ATM.";
 			maxOccurs = 1;
@@ -376,12 +375,12 @@ public class ATMTotal {
 		{
 			elementContext_lazy = () -> ATMTotal.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedCardPayment";
 			definition = "Related payments representing the current totals of the ATM.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.CardPayment.mmATMTotal;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.CardPayment.mmObject();
 		}
 	};
@@ -389,14 +388,13 @@ public class ATMTotal {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ATMTotal";
 				definition = "Current totals of the ATM.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CardPayment.mmATMTotal);
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMTotals3.mmPeriod);
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.ATMTotal.mmATMBalance, com.tools20022.repository.entity.ATMTotal.mmCurrency, com.tools20022.repository.entity.ATMTotal.mmATMCurrentNumber,
-						com.tools20022.repository.entity.ATMTotal.mmATMBalanceNumber, com.tools20022.repository.entity.ATMTotal.mmATMCurrent, com.tools20022.repository.entity.ATMTotal.mmRelatedCardPayment);
+				derivationElement_lazy = () -> Arrays.asList(ATMTotals3.mmPeriod);
+				element_lazy = () -> Arrays.asList(ATMTotal.mmATMBalance, ATMTotal.mmCurrency, ATMTotal.mmATMCurrentNumber, ATMTotal.mmATMBalanceNumber, ATMTotal.mmATMCurrent, ATMTotal.mmRelatedCardPayment);
 				derivationComponent_lazy = () -> Arrays.asList(ATMTotals1.mmObject(), ATMTotals3.mmObject());
 			}
 		});

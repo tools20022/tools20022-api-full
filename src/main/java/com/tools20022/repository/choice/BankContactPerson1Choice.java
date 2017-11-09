@@ -19,7 +19,13 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.tsmt.BaselineReSubmissionV04;
+import com.tools20022.repository.area.tsmt.BaselineReSubmissionV05;
+import com.tools20022.repository.area.tsmt.InitialBaselineSubmissionV04;
+import com.tools20022.repository.area.tsmt.InitialBaselineSubmissionV05;
 import com.tools20022.repository.entity.ContactPersonRole;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.ContactIdentification1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -119,7 +125,7 @@ public class BankContactPerson1Choice {
 			componentContext_lazy = () -> BankContactPerson1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "BuyrBkCtctPrsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BuyerBankContactPerson";
 			definition = "Person to be contacted in the buyer's bank.";
 			minOccurs = 1;
@@ -165,7 +171,7 @@ public class BankContactPerson1Choice {
 			componentContext_lazy = () -> BankContactPerson1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "SellrBkCtctPrsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SellerBankContactPerson";
 			definition = "Person to be contacted in the seller's bank. ";
 			minOccurs = 1;
@@ -177,12 +183,12 @@ public class BankContactPerson1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.BankContactPerson1Choice.mmBuyerBankContactPerson, com.tools20022.repository.choice.BankContactPerson1Choice.mmSellerBankContactPerson);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.BaselineReSubmissionV04.mmBankContactPerson, com.tools20022.repository.area.tsmt.InitialBaselineSubmissionV04.mmBankContactPerson,
-						com.tools20022.repository.area.tsmt.InitialBaselineSubmissionV05.mmBankContactPerson, com.tools20022.repository.area.tsmt.BaselineReSubmissionV05.mmBankContactPerson);
+				messageElement_lazy = () -> Arrays.asList(BankContactPerson1Choice.mmBuyerBankContactPerson, BankContactPerson1Choice.mmSellerBankContactPerson);
+				messageBuildingBlock_lazy = () -> Arrays.asList(BaselineReSubmissionV04.mmBankContactPerson, InitialBaselineSubmissionV04.mmBankContactPerson, InitialBaselineSubmissionV05.mmBankContactPerson,
+						BaselineReSubmissionV05.mmBankContactPerson);
 				trace_lazy = () -> ContactPersonRole.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "BankContactPerson1Choice";
 				definition = "Contact person details in a bank.";
 			}

@@ -17,11 +17,14 @@
 
 package com.tools20022.repository.entity;
 
-import com.tools20022.metamodel.MMBusinessAssociationEnd;
-import com.tools20022.metamodel.MMBusinessAttribute;
-import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.*;
 import com.tools20022.repository.codeset.NovationStatusCode;
 import com.tools20022.repository.entity.ObligationFulfilment;
+import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.ForeignExchangeSwapTransaction3;
+import com.tools20022.repository.msg.OvernightIndexSwapTransaction4;
+import com.tools20022.repository.msg.SecuredMarketTransaction4;
+import com.tools20022.repository.msg.UnsecuredMarketTransaction4;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -35,16 +38,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Novation#mmSecuritiesClearing
- * Novation.mmSecuritiesClearing}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Novation#mmNovationStatus
- * Novation.mmNovationStatus}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
  * associationDomain} =
@@ -58,6 +51,16 @@ import java.util.concurrent.atomic.AtomicReference;
  * superType} =
  * {@linkplain com.tools20022.repository.entity.ObligationFulfilment
  * ObligationFulfilment}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Novation#mmSecuritiesClearing
+ * Novation.mmSecuritiesClearing}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Novation#mmNovationStatus
+ * Novation.mmNovationStatus}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -115,13 +118,13 @@ public class Novation extends ObligationFulfilment {
 		{
 			elementContext_lazy = () -> Novation.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SecuritiesClearing";
 			definition = "Clearing process to which the novation is related.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesClearing.mmNovation;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SecuritiesClearing.mmObject();
 		}
 	};
@@ -170,11 +173,10 @@ public class Novation extends ObligationFulfilment {
 	 */
 	public static final MMBusinessAttribute mmNovationStatus = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuredMarketTransaction4.mmNovationStatus, com.tools20022.repository.msg.ForeignExchangeSwapTransaction3.mmNovationStatus,
-					com.tools20022.repository.msg.OvernightIndexSwapTransaction4.mmNovationStatus, com.tools20022.repository.msg.UnsecuredMarketTransaction4.mmNovationStatus);
+			derivation_lazy = () -> Arrays.asList(SecuredMarketTransaction4.mmNovationStatus, ForeignExchangeSwapTransaction3.mmNovationStatus, OvernightIndexSwapTransaction4.mmNovationStatus, UnsecuredMarketTransaction4.mmNovationStatus);
 			elementContext_lazy = () -> Novation.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NovationStatus";
 			definition = "Provides the novation status for the transaction.";
 			maxOccurs = 1;
@@ -186,13 +188,13 @@ public class Novation extends ObligationFulfilment {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Novation";
 				definition = "Act of either replacing an obligation to perform with a new obligation, or replacing a party to an agreement with a new party.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesClearing.mmNovation);
 				superType_lazy = () -> ObligationFulfilment.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Novation.mmSecuritiesClearing, com.tools20022.repository.entity.Novation.mmNovationStatus);
+				element_lazy = () -> Arrays.asList(Novation.mmSecuritiesClearing, Novation.mmNovationStatus);
 			}
 		});
 		return mmObject_lazy.get();

@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.DTCCorporateActionInstructionTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -83,7 +85,7 @@ public class DTCCorporateActionInstructionType2Code extends DTCCorporateActionIn
 	 */
 	public static final MMCode mmInstructionWithdrawal = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructionWithdrawal";
 			owner_lazy = () -> DTCCorporateActionInstructionType2Code.mmObject();
 		}
@@ -106,7 +108,7 @@ public class DTCCorporateActionInstructionType2Code extends DTCCorporateActionIn
 	 */
 	public static final MMCode mmProtectWithdrawal = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProtectWithdrawal";
 			owner_lazy = () -> DTCCorporateActionInstructionType2Code.mmObject();
 		}
@@ -115,12 +117,12 @@ public class DTCCorporateActionInstructionType2Code extends DTCCorporateActionIn
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("WIIN");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DTCCorporateActionInstructionType2Code";
 				definition = "Specifies the type of the corporate action instruction.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DTCCorporateActionInstructionType2Code.mmInstructionWithdrawal, com.tools20022.repository.codeset.DTCCorporateActionInstructionType2Code.mmProtectWithdrawal);
+				code_lazy = () -> Arrays.asList(DTCCorporateActionInstructionType2Code.mmInstructionWithdrawal, DTCCorporateActionInstructionType2Code.mmProtectWithdrawal);
 				trace_lazy = () -> DTCCorporateActionInstructionTypeCode.mmObject();
 			}
 		});

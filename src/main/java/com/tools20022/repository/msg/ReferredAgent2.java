@@ -20,8 +20,14 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.acmt.AccountDetailsConfirmationV06;
+import com.tools20022.repository.area.acmt.AccountDetailsConfirmationV07;
+import com.tools20022.repository.area.acmt.AccountOpeningInstructionV06;
+import com.tools20022.repository.area.acmt.AccountOpeningInstructionV07;
 import com.tools20022.repository.choice.PartyIdentification70Choice;
 import com.tools20022.repository.codeset.Referred1Code;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -122,10 +128,10 @@ public class ReferredAgent2 {
 			componentContext_lazy = () -> ReferredAgent2.mmObject();
 			isDerived = false;
 			xmlTag = "Rfrd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Referred";
 			definition = "Indicates if the investor was referred by a placement agent.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ReferredAgent1.mmReferred;
+			previousVersion_lazy = () -> ReferredAgent1.mmReferred;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Referred1Code.mmObject();
@@ -168,10 +174,10 @@ public class ReferredAgent2 {
 			componentContext_lazy = () -> ReferredAgent2.mmObject();
 			isDerived = false;
 			xmlTag = "RfrdPlcmntAgt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReferredPlacementAgent";
 			definition = "Placement agent that referred the investor.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ReferredAgent1.mmReferredPlacementAgent;
+			previousVersion_lazy = () -> ReferredAgent1.mmReferredPlacementAgent;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -182,11 +188,10 @@ public class ReferredAgent2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReferredAgent2.mmReferred, com.tools20022.repository.msg.ReferredAgent2.mmReferredPlacementAgent);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountOpeningInstructionV06.mmPlacement, com.tools20022.repository.area.acmt.AccountDetailsConfirmationV06.mmPlacement,
-						com.tools20022.repository.area.acmt.AccountDetailsConfirmationV07.mmPlacement, com.tools20022.repository.area.acmt.AccountOpeningInstructionV07.mmPlacement);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(ReferredAgent2.mmReferred, ReferredAgent2.mmReferredPlacementAgent);
+				messageBuildingBlock_lazy = () -> Arrays.asList(AccountOpeningInstructionV06.mmPlacement, AccountDetailsConfirmationV06.mmPlacement, AccountDetailsConfirmationV07.mmPlacement, AccountOpeningInstructionV07.mmPlacement);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ReferredAgent2";
 				definition = "Provides the placement agent identification for a hedge fund if the investor was referred by one.";
 				previousVersion_lazy = () -> ReferredAgent1.mmObject();

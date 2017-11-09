@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ClearingMethodCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -81,7 +83,7 @@ public class ClearingMethod1Code extends ClearingMethodCode {
 	 */
 	public static final MMCode mmGrossNegotiation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GrossNegotiation";
 			owner_lazy = () -> ClearingMethod1Code.mmObject();
 		}
@@ -104,7 +106,7 @@ public class ClearingMethod1Code extends ClearingMethodCode {
 	 */
 	public static final MMCode mmNetMatch = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetMatch";
 			owner_lazy = () -> ClearingMethod1Code.mmObject();
 		}
@@ -127,7 +129,7 @@ public class ClearingMethod1Code extends ClearingMethodCode {
 	 */
 	public static final MMCode mmNetNegotiation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetNegotiation";
 			owner_lazy = () -> ClearingMethod1Code.mmObject();
 		}
@@ -136,12 +138,11 @@ public class ClearingMethod1Code extends ClearingMethodCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ClearingMethod1Code";
 				definition = "Specifies whether the value is net (inclusive of tax) or gross";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ClearingMethod1Code.mmGrossNegotiation, com.tools20022.repository.codeset.ClearingMethod1Code.mmNetMatch,
-						com.tools20022.repository.codeset.ClearingMethod1Code.mmNetNegotiation);
+				code_lazy = () -> Arrays.asList(ClearingMethod1Code.mmGrossNegotiation, ClearingMethod1Code.mmNetMatch, ClearingMethod1Code.mmNetNegotiation);
 				trace_lazy = () -> ClearingMethodCode.mmObject();
 			}
 		});

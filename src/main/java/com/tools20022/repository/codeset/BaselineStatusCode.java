@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.BaselineStatus1Code
+ * BaselineStatus1Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.BaselineStatus3Code
+ * BaselineStatus3Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.BaselineStatus2Code
+ * BaselineStatus2Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -65,17 +78,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.BaselineStatusCode#mmDataSetAcceptanceRequested
  * BaselineStatusCode.mmDataSetAcceptanceRequested}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.BaselineStatus1Code
- * BaselineStatus1Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.BaselineStatus3Code
- * BaselineStatus3Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.BaselineStatus2Code
- * BaselineStatus2Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -125,7 +127,7 @@ public class BaselineStatusCode {
 	 */
 	public static final MMCode mmProposed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proposed";
 			definition = "Initial state of a baseline in the push-through model.";
 			owner_lazy = () -> BaselineStatusCode.mmObject();
@@ -156,7 +158,7 @@ public class BaselineStatusCode {
 	 */
 	public static final MMCode mmClosed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Closed";
 			definition = "Final state of a baseline, in which only reporting is allowed.";
 			owner_lazy = () -> BaselineStatusCode.mmObject();
@@ -189,7 +191,7 @@ public class BaselineStatusCode {
 	 */
 	public static final MMCode mmPartiallyMatched = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartiallyMatched";
 			definition = "State of the baseline when an initial and at least one twin baselines have been  submitted but it has not yet been agreed by all parties.";
 			owner_lazy = () -> BaselineStatusCode.mmObject();
@@ -220,7 +222,7 @@ public class BaselineStatusCode {
 	 */
 	public static final MMCode mmEstablished = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Established";
 			definition = "State of the baseline when it has been agreed by all parties.";
 			owner_lazy = () -> BaselineStatusCode.mmObject();
@@ -253,7 +255,7 @@ public class BaselineStatusCode {
 	 */
 	public static final MMCode mmActive = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Active";
 			definition = "State of a baseline, after establishment, when one or more instructions (eg, amendment request, data set submission) have been processed.";
 			owner_lazy = () -> BaselineStatusCode.mmObject();
@@ -286,7 +288,7 @@ public class BaselineStatusCode {
 	 */
 	public static final MMCode mmComplete = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Complete";
 			definition = "State of a baseline, after establishment, when all match instructions have been processed, and no such instruction is allowed anymore.";
 			owner_lazy = () -> BaselineStatusCode.mmObject();
@@ -320,7 +322,7 @@ public class BaselineStatusCode {
 	 */
 	public static final MMCode mmAmendmentRequested = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmendmentRequested";
 			definition = "State of a baseline, after establishment, when an amendment has been requested by one party and has not yet been accepted or rejected by the counterparty(ies).";
 			owner_lazy = () -> BaselineStatusCode.mmObject();
@@ -354,7 +356,7 @@ public class BaselineStatusCode {
 	 */
 	public static final MMCode mmReActivateRequested = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReActivateRequested";
 			definition = "State of a baseline, after establishment, when an reactivation has been requested by one party and has not yet been accepted or rejected by the counterparty(ies).";
 			owner_lazy = () -> BaselineStatusCode.mmObject();
@@ -388,7 +390,7 @@ public class BaselineStatusCode {
 	 */
 	public static final MMCode mmCloseRequested = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CloseRequested";
 			definition = "State of a baseline, after establishment, when a closure has been requested by one party and has not yet been accepted or rejected by the counterparty(ies).";
 			owner_lazy = () -> BaselineStatusCode.mmObject();
@@ -422,7 +424,7 @@ public class BaselineStatusCode {
 	 */
 	public static final MMCode mmCompleteRequested = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CompleteRequested";
 			definition = "State of a baseline, after establishment, when a completion has been requested by one party and has not yet been accepted or rejected by the counterparty(ies).";
 			owner_lazy = () -> BaselineStatusCode.mmObject();
@@ -455,7 +457,7 @@ public class BaselineStatusCode {
 	 */
 	public static final MMCode mmStatusExtensionRequested = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusExtensionRequested";
 			definition = "State of a baseline when a status extension has been requested by one party and has not yet been accepted or rejected by the counterparty(ies).";
 			owner_lazy = () -> BaselineStatusCode.mmObject();
@@ -489,7 +491,7 @@ public class BaselineStatusCode {
 	 */
 	public static final MMCode mmDataSetAcceptanceRequested = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DataSetAcceptanceRequested";
 			definition = "State of a baseline, after establishment, when data set acceptance has been requested by the matching engine and not all responses have been received from the relevant party(ies).";
 			owner_lazy = () -> BaselineStatusCode.mmObject();
@@ -500,16 +502,14 @@ public class BaselineStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("PROP");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "BaselineStatusCode";
 				definition = "Indicates the status of a baseline.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.BaselineStatusCode.mmProposed, com.tools20022.repository.codeset.BaselineStatusCode.mmClosed,
-						com.tools20022.repository.codeset.BaselineStatusCode.mmPartiallyMatched, com.tools20022.repository.codeset.BaselineStatusCode.mmEstablished, com.tools20022.repository.codeset.BaselineStatusCode.mmActive,
-						com.tools20022.repository.codeset.BaselineStatusCode.mmComplete, com.tools20022.repository.codeset.BaselineStatusCode.mmAmendmentRequested, com.tools20022.repository.codeset.BaselineStatusCode.mmReActivateRequested,
-						com.tools20022.repository.codeset.BaselineStatusCode.mmCloseRequested, com.tools20022.repository.codeset.BaselineStatusCode.mmCompleteRequested,
-						com.tools20022.repository.codeset.BaselineStatusCode.mmStatusExtensionRequested, com.tools20022.repository.codeset.BaselineStatusCode.mmDataSetAcceptanceRequested);
+				code_lazy = () -> Arrays.asList(BaselineStatusCode.mmProposed, BaselineStatusCode.mmClosed, BaselineStatusCode.mmPartiallyMatched, BaselineStatusCode.mmEstablished, BaselineStatusCode.mmActive,
+						BaselineStatusCode.mmComplete, BaselineStatusCode.mmAmendmentRequested, BaselineStatusCode.mmReActivateRequested, BaselineStatusCode.mmCloseRequested, BaselineStatusCode.mmCompleteRequested,
+						BaselineStatusCode.mmStatusExtensionRequested, BaselineStatusCode.mmDataSetAcceptanceRequested);
 				derivation_lazy = () -> Arrays.asList(BaselineStatus1Code.mmObject(), BaselineStatus3Code.mmObject(), BaselineStatus2Code.mmObject());
 			}
 		});

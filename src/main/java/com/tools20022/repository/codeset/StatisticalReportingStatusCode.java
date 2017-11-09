@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -28,6 +30,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.StatisticalReportingStatus2Code
+ * StatisticalReportingStatus2Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.StatisticalReportingStatus1Code
+ * StatisticalReportingStatus1Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TaxReportingStatus2Code
+ * TaxReportingStatus2Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TaxReportingStatus1Code
+ * TaxReportingStatus1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -66,21 +83,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.StatisticalReportingStatusCode#mmRejectedAfterPending
  * StatisticalReportingStatusCode.mmRejectedAfterPending}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.StatisticalReportingStatus2Code
- * StatisticalReportingStatus2Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.StatisticalReportingStatus1Code
- * StatisticalReportingStatus1Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TaxReportingStatus2Code
- * TaxReportingStatus2Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TaxReportingStatus1Code
- * TaxReportingStatus1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -134,7 +136,7 @@ public class StatisticalReportingStatusCode {
 	 */
 	public static final MMCode mmAcceptedTechnicalValidation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcceptedTechnicalValidation";
 			definition = "Transaction or report has passed syntactical and semantical validation.";
 			owner_lazy = () -> StatisticalReportingStatusCode.mmObject();
@@ -164,7 +166,7 @@ public class StatisticalReportingStatusCode {
 	 */
 	public static final MMCode mmReceived = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Received";
 			definition = "Report has been received.";
 			owner_lazy = () -> StatisticalReportingStatusCode.mmObject();
@@ -198,7 +200,7 @@ public class StatisticalReportingStatusCode {
 	 */
 	public static final MMCode mmPartiallyAccepted = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartiallyAccepted";
 			definition = "Report has been partially accepted. A number of transactions have been accepted, whereas another number of transactions have not yet been accepted.";
 			owner_lazy = () -> StatisticalReportingStatusCode.mmObject();
@@ -228,7 +230,7 @@ public class StatisticalReportingStatusCode {
 	 */
 	public static final MMCode mmRejected = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rejected";
 			definition = "Transaction or report has been rejected.";
 			owner_lazy = () -> StatisticalReportingStatusCode.mmObject();
@@ -258,7 +260,7 @@ public class StatisticalReportingStatusCode {
 	 */
 	public static final MMCode mmPending = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Pending";
 			definition = "Processing of transaction or report is pending.";
 			owner_lazy = () -> StatisticalReportingStatusCode.mmObject();
@@ -288,7 +290,7 @@ public class StatisticalReportingStatusCode {
 	 */
 	public static final MMCode mmAccepted = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Accepted";
 			definition = "Transaction or report has been accepted.";
 			owner_lazy = () -> StatisticalReportingStatusCode.mmObject();
@@ -318,7 +320,7 @@ public class StatisticalReportingStatusCode {
 	 */
 	public static final MMCode mmWarning = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Warning";
 			definition = "Transaction has been accepted with warnings.";
 			owner_lazy = () -> StatisticalReportingStatusCode.mmObject();
@@ -348,7 +350,7 @@ public class StatisticalReportingStatusCode {
 	 */
 	public static final MMCode mmReminder = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reminder";
 			definition = "Reminder of a non received report.";
 			owner_lazy = () -> StatisticalReportingStatusCode.mmObject();
@@ -378,7 +380,7 @@ public class StatisticalReportingStatusCode {
 	 */
 	public static final MMCode mmCorruptedFile = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorruptedFile";
 			definition = "File containing the report is corrupted.";
 			owner_lazy = () -> StatisticalReportingStatusCode.mmObject();
@@ -408,7 +410,7 @@ public class StatisticalReportingStatusCode {
 	 */
 	public static final MMCode mmIncorrectFilename = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncorrectFilename";
 			definition = "File containing the report has an incorrect filename.";
 			owner_lazy = () -> StatisticalReportingStatusCode.mmObject();
@@ -439,7 +441,7 @@ public class StatisticalReportingStatusCode {
 	 */
 	public static final MMCode mmAcceptedAfterPending = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcceptedAfterPending";
 			definition = "Transaction or report has been accepted, following a pending status.";
 			owner_lazy = () -> StatisticalReportingStatusCode.mmObject();
@@ -470,7 +472,7 @@ public class StatisticalReportingStatusCode {
 	 */
 	public static final MMCode mmRejectedAfterPending = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RejectedAfterPending";
 			definition = "Transaction or report has been rejected, following a pending status.";
 			owner_lazy = () -> StatisticalReportingStatusCode.mmObject();
@@ -481,17 +483,14 @@ public class StatisticalReportingStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ACTC");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "StatisticalReportingStatusCode";
 				definition = "Specifies the status of a single statistical reporting transaction or of a group of statistical reporting transactions.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.StatisticalReportingStatusCode.mmAcceptedTechnicalValidation, com.tools20022.repository.codeset.StatisticalReportingStatusCode.mmReceived,
-						com.tools20022.repository.codeset.StatisticalReportingStatusCode.mmPartiallyAccepted, com.tools20022.repository.codeset.StatisticalReportingStatusCode.mmRejected,
-						com.tools20022.repository.codeset.StatisticalReportingStatusCode.mmPending, com.tools20022.repository.codeset.StatisticalReportingStatusCode.mmAccepted,
-						com.tools20022.repository.codeset.StatisticalReportingStatusCode.mmWarning, com.tools20022.repository.codeset.StatisticalReportingStatusCode.mmReminder,
-						com.tools20022.repository.codeset.StatisticalReportingStatusCode.mmCorruptedFile, com.tools20022.repository.codeset.StatisticalReportingStatusCode.mmIncorrectFilename,
-						com.tools20022.repository.codeset.StatisticalReportingStatusCode.mmAcceptedAfterPending, com.tools20022.repository.codeset.StatisticalReportingStatusCode.mmRejectedAfterPending);
+				code_lazy = () -> Arrays.asList(StatisticalReportingStatusCode.mmAcceptedTechnicalValidation, StatisticalReportingStatusCode.mmReceived, StatisticalReportingStatusCode.mmPartiallyAccepted,
+						StatisticalReportingStatusCode.mmRejected, StatisticalReportingStatusCode.mmPending, StatisticalReportingStatusCode.mmAccepted, StatisticalReportingStatusCode.mmWarning, StatisticalReportingStatusCode.mmReminder,
+						StatisticalReportingStatusCode.mmCorruptedFile, StatisticalReportingStatusCode.mmIncorrectFilename, StatisticalReportingStatusCode.mmAcceptedAfterPending, StatisticalReportingStatusCode.mmRejectedAfterPending);
 				derivation_lazy = () -> Arrays.asList(StatisticalReportingStatus2Code.mmObject(), StatisticalReportingStatus1Code.mmObject(), TaxReportingStatus2Code.mmObject(), TaxReportingStatus1Code.mmObject());
 			}
 		});

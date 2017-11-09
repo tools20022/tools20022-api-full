@@ -17,9 +17,7 @@
 
 package com.tools20022.repository.entity;
 
-import com.tools20022.metamodel.MMBusinessAssociationEnd;
-import com.tools20022.metamodel.MMBusinessAttribute;
-import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.*;
 import com.tools20022.repository.choice.BasisPriceType1Choice;
 import com.tools20022.repository.codeset.BasisPriceTypeCode;
 import com.tools20022.repository.codeset.BidTypeCode;
@@ -27,6 +25,7 @@ import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Max140Text;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.YesNoIndicator;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -47,6 +46,53 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.choice.BasisPriceType1Choice
+ * BasisPriceType1Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.List1 List1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.List2 List2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ListStrikePriceDetails1
+ * ListStrikePriceDetails1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.List3 List3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ListExecution1 ListExecution1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ListIdentification1
+ * ListIdentification1}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#mmListTrading
+ * SecuritiesOrder.mmListTrading}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.TradingSession#mmListTrading
+ * TradingSession.mmListTrading}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Liquidity#mmListTrading
+ * Liquidity.mmListTrading}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
+ * derivationElement} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.List3#mmStrikePriceDetails
+ * List3.mmStrikePriceDetails}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
+ * subType} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.DisclosedListTrading
+ * DisclosedListTrading}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.NonDisclosedListTrading
+ * NonDisclosedListTrading}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -79,53 +125,6 @@ import java.util.List;
  * ListTrading.mmLiquidity}</li>
  * <li>{@linkplain com.tools20022.repository.entity.ListTrading#mmBidType
  * ListTrading.mmBidType}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
- * subType} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.DisclosedListTrading
- * DisclosedListTrading}</li>
- * <li>{@linkplain com.tools20022.repository.entity.NonDisclosedListTrading
- * NonDisclosedListTrading}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#mmListTrading
- * SecuritiesOrder.mmListTrading}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.TradingSession#mmListTrading
- * TradingSession.mmListTrading}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Liquidity#mmListTrading
- * Liquidity.mmListTrading}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
- * derivationElement} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.List3#mmStrikePriceDetails
- * List3.mmStrikePriceDetails}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.choice.BasisPriceType1Choice
- * BasisPriceType1Choice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.List1 List1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.List2 List2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ListStrikePriceDetails1
- * ListStrikePriceDetails1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.List3 List3}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ListExecution1 ListExecution1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ListIdentification1
- * ListIdentification1}</li>
  * </ul>
  * </li>
  * <li>
@@ -248,17 +247,13 @@ public class ListTrading {
 	 */
 	public static final MMBusinessAttribute mmListIdentification = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Identification2.mmListIdentification, com.tools20022.repository.msg.Order16.mmListIdentification, com.tools20022.repository.msg.Order14.mmListIdentification,
-					com.tools20022.repository.msg.Identification7.mmListIdentification, com.tools20022.repository.msg.Identification6.mmListIdentification, com.tools20022.repository.msg.Identification5.mmListIdentification,
-					com.tools20022.repository.msg.Identification8.mmListIdentification, com.tools20022.repository.msg.Identification11.mmListIdentification, com.tools20022.repository.msg.Identification13.mmListIdentification,
-					com.tools20022.repository.msg.Identification9.mmListIdentification, com.tools20022.repository.msg.OrderStatus2.mmListIdentification, com.tools20022.repository.msg.DisclosedBid1.mmListIdentification,
-					com.tools20022.repository.msg.Bid2.mmListIdentification, com.tools20022.repository.msg.List1.mmListIdentification, com.tools20022.repository.msg.List2.mmListIdentification,
-					com.tools20022.repository.msg.List3.mmListIdentification, com.tools20022.repository.msg.ListExecution1.mmListIdentification, com.tools20022.repository.msg.ListIdentification1.mmListIdentification,
-					com.tools20022.repository.msg.Identification3.mmListIdentification, com.tools20022.repository.msg.Order17.mmListIdentification, com.tools20022.repository.msg.Order18.mmListIdentification,
-					com.tools20022.repository.msg.Identification15.mmListIdentification, com.tools20022.repository.msg.Identification24.mmListIdentification);
+			derivation_lazy = () -> Arrays.asList(Identification2.mmListIdentification, Order16.mmListIdentification, Order14.mmListIdentification, Identification7.mmListIdentification, Identification6.mmListIdentification,
+					Identification5.mmListIdentification, Identification8.mmListIdentification, Identification11.mmListIdentification, Identification13.mmListIdentification, Identification9.mmListIdentification,
+					OrderStatus2.mmListIdentification, DisclosedBid1.mmListIdentification, Bid2.mmListIdentification, List1.mmListIdentification, List2.mmListIdentification, List3.mmListIdentification, ListExecution1.mmListIdentification,
+					ListIdentification1.mmListIdentification, Identification3.mmListIdentification, Order17.mmListIdentification, Order18.mmListIdentification, Identification15.mmListIdentification, Identification24.mmListIdentification);
 			elementContext_lazy = () -> ListTrading.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ListIdentification";
 			definition = "Unique identifier for a list, as assigned by the trading party. The identifier must be unique within a single trading day.";
 			maxOccurs = 1;
@@ -311,15 +306,15 @@ public class ListTrading {
 	 */
 	public static final MMBusinessAssociationEnd mmSecuritiesListOrder = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.List1.mmOrderDetails);
+			derivation_lazy = () -> Arrays.asList(List1.mmOrderDetails);
 			elementContext_lazy = () -> ListTrading.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SecuritiesListOrder";
 			definition = "Order list containing the details of the individual orders within the program.";
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmListTrading;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmObject();
 		}
 	};
@@ -373,16 +368,16 @@ public class ListTrading {
 	 */
 	public static final MMBusinessAssociationEnd mmListTradingSession = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Order3.mmTradingSessionDetails, com.tools20022.repository.msg.DisclosedBid1.mmTradingSession, com.tools20022.repository.msg.Order6.mmTradingSessionDetails);
+			derivation_lazy = () -> Arrays.asList(Order3.mmTradingSessionDetails, DisclosedBid1.mmTradingSession, Order6.mmTradingSessionDetails);
 			elementContext_lazy = () -> ListTrading.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ListTradingSession";
 			definition = "Details of a specific trading session for a list trading.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.TradingSession.mmListTrading;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.TradingSession.mmObject();
 		}
 	};
@@ -420,10 +415,10 @@ public class ListTrading {
 	 */
 	public static final MMBusinessAttribute mmListName = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Bid1.mmListName);
+			derivation_lazy = () -> Arrays.asList(Bid1.mmListName);
 			elementContext_lazy = () -> ListTrading.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ListName";
 			definition = "Provides the name of the order list.";
 			maxOccurs = 1;
@@ -473,10 +468,10 @@ public class ListTrading {
 	 */
 	public static final MMBusinessAttribute mmBasisPriceType = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.BasisPriceType1Choice.mmCode, com.tools20022.repository.choice.BasisPriceType1Choice.mmProprietary, com.tools20022.repository.msg.Bid1.mmBasisPriceType);
+			derivation_lazy = () -> Arrays.asList(BasisPriceType1Choice.mmCode, BasisPriceType1Choice.mmProprietary, Bid1.mmBasisPriceType);
 			elementContext_lazy = () -> ListTrading.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BasisPriceType";
 			definition = "Represents the basis price type in a bid order (list trading).";
 			maxOccurs = 1;
@@ -521,10 +516,10 @@ public class ListTrading {
 	 */
 	public static final MMBusinessAttribute mmStrikeTime = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Bid1.mmStrikeTime);
+			derivation_lazy = () -> Arrays.asList(Bid1.mmStrikeTime);
 			elementContext_lazy = () -> ListTrading.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "StrikeTime";
 			definition = "Time at which current market prices are used to determine the value of a basket.";
 			maxOccurs = 1;
@@ -580,11 +575,10 @@ public class ListTrading {
 	 */
 	public static final MMBusinessAttribute mmGrossAmountIndicator = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LiquidityAndStatistics1.mmGrossIndicator, com.tools20022.repository.msg.DisclosedBid1.mmGrossIndicator,
-					com.tools20022.repository.msg.BidResponsePrice1.mmGrossIndicator, com.tools20022.repository.msg.BidResponsePrice2.mmGrossIndicator);
+			derivation_lazy = () -> Arrays.asList(LiquidityAndStatistics1.mmGrossIndicator, DisclosedBid1.mmGrossIndicator, BidResponsePrice1.mmGrossIndicator, BidResponsePrice2.mmGrossIndicator);
 			elementContext_lazy = () -> ListTrading.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "GrossAmountIndicator";
 			definition = "Indicates whether an amount is a gross amount (including all charges, commissions and tax), or a net amount.";
 			maxOccurs = 1;
@@ -625,7 +619,7 @@ public class ListTrading {
 		{
 			elementContext_lazy = () -> ListTrading.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SellSideIdentification";
 			definition = "Unique identifier for a bid, as assigned by the the sell-side (broker, exchange, electronic communication network (ECN)). The identifier must be unique within a single trading day.";
 			maxOccurs = 1;
@@ -665,7 +659,7 @@ public class ListTrading {
 		{
 			elementContext_lazy = () -> ListTrading.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BuySideIdentification";
 			definition = "Unique identifier for a bid, as assigned by the buy-side institution. The identifier must be unique within a single trading day.";
 			maxOccurs = 1;
@@ -719,15 +713,15 @@ public class ListTrading {
 	 */
 	public static final MMBusinessAssociationEnd mmLiquidity = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Bid1.mmLiquidityAndStatistics, com.tools20022.repository.msg.NonDisclosedBid1.mmLiquidity);
+			derivation_lazy = () -> Arrays.asList(Bid1.mmLiquidityAndStatistics, NonDisclosedBid1.mmLiquidity);
 			elementContext_lazy = () -> ListTrading.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Liquidity";
 			definition = "Information on the liquidity of a financial instrument.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.Liquidity.mmListTrading;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Liquidity.mmObject();
 		}
 	};
@@ -765,10 +759,10 @@ public class ListTrading {
 	 */
 	public static final MMBusinessAttribute mmBidType = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.List1.mmBidType);
+			derivation_lazy = () -> Arrays.asList(List1.mmBidType);
 			elementContext_lazy = () -> ListTrading.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BidType";
 			definition = "Indicates the type of bid for a list order.";
 			maxOccurs = 1;
@@ -780,18 +774,16 @@ public class ListTrading {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ListTrading";
 				definition = "Provides the details for negotiating and trading a large number of securities contained in or comprising a portfolio. One example is index arbitrage, which consists in the purchase or sale of a basket of stocks in conjunction with the sale or purchase of a derivative product (for example index futures) to profit from price differences between the basket and the derivative product. Other examples include liquidation of EFP (Exchange for Physical) stock positions, portfolio realignment and portfolio liquidation.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesOrder.mmListTrading, com.tools20022.repository.entity.TradingSession.mmListTrading,
 						com.tools20022.repository.entity.Liquidity.mmListTrading);
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.List3.mmStrikePriceDetails);
+				derivationElement_lazy = () -> Arrays.asList(List3.mmStrikePriceDetails);
 				subType_lazy = () -> Arrays.asList(DisclosedListTrading.mmObject(), NonDisclosedListTrading.mmObject());
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.ListTrading.mmListIdentification, com.tools20022.repository.entity.ListTrading.mmSecuritiesListOrder,
-						com.tools20022.repository.entity.ListTrading.mmListTradingSession, com.tools20022.repository.entity.ListTrading.mmListName, com.tools20022.repository.entity.ListTrading.mmBasisPriceType,
-						com.tools20022.repository.entity.ListTrading.mmStrikeTime, com.tools20022.repository.entity.ListTrading.mmGrossAmountIndicator, com.tools20022.repository.entity.ListTrading.mmSellSideIdentification,
-						com.tools20022.repository.entity.ListTrading.mmBuySideIdentification, com.tools20022.repository.entity.ListTrading.mmLiquidity, com.tools20022.repository.entity.ListTrading.mmBidType);
+				element_lazy = () -> Arrays.asList(ListTrading.mmListIdentification, ListTrading.mmSecuritiesListOrder, ListTrading.mmListTradingSession, ListTrading.mmListName, ListTrading.mmBasisPriceType, ListTrading.mmStrikeTime,
+						ListTrading.mmGrossAmountIndicator, ListTrading.mmSellSideIdentification, ListTrading.mmBuySideIdentification, ListTrading.mmLiquidity, ListTrading.mmBidType);
 				derivationComponent_lazy = () -> Arrays.asList(BasisPriceType1Choice.mmObject(), List1.mmObject(), List2.mmObject(), ListStrikePriceDetails1.mmObject(), List3.mmObject(), ListExecution1.mmObject(),
 						ListIdentification1.mmObject());
 			}

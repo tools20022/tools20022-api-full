@@ -20,9 +20,11 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.AccountIdentification4Choice;
 import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
 import com.tools20022.repository.datatype.Number;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -99,7 +101,7 @@ public class QueueTransaction1 {
 			componentContext_lazy = () -> QueueTransaction1.mmObject();
 			isDerived = false;
 			xmlTag = "AcctOwnr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountOwner";
 			definition = "Account owner identification such as BIC. ";
 			maxOccurs = 1;
@@ -142,7 +144,7 @@ public class QueueTransaction1 {
 			componentContext_lazy = () -> QueueTransaction1.mmObject();
 			isDerived = false;
 			xmlTag = "Acct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Account";
 			definition = "Identification of the account such as IBAN or local identifier.";
 			maxOccurs = 1;
@@ -184,7 +186,7 @@ public class QueueTransaction1 {
 			componentContext_lazy = () -> QueueTransaction1.mmObject();
 			isDerived = false;
 			xmlTag = "NbOfTxs";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NumberOfTransactions";
 			definition = "Number of transaction per counterparty.";
 			maxOccurs = 1;
@@ -226,7 +228,7 @@ public class QueueTransaction1 {
 			componentContext_lazy = () -> QueueTransaction1.mmObject();
 			isDerived = false;
 			xmlTag = "TtlAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalAmount";
 			definition = "Aggregated amount of the transactions per counterparty.";
 			maxOccurs = 1;
@@ -238,10 +240,9 @@ public class QueueTransaction1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.QueueTransaction1.mmAccountOwner, com.tools20022.repository.msg.QueueTransaction1.mmAccount,
-						com.tools20022.repository.msg.QueueTransaction1.mmNumberOfTransactions, com.tools20022.repository.msg.QueueTransaction1.mmTotalAmount);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(QueueTransaction1.mmAccountOwner, QueueTransaction1.mmAccount, QueueTransaction1.mmNumberOfTransactions, QueueTransaction1.mmTotalAmount);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "QueueTransaction1";
 				definition = "Transaction summmary details.";
 			}

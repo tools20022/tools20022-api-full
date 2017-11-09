@@ -17,16 +17,12 @@
 
 package com.tools20022.repository.entity;
 
-import com.tools20022.metamodel.MMBusinessAssociationEnd;
-import com.tools20022.metamodel.MMBusinessAttribute;
-import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.*;
 import com.tools20022.repository.datatype.CurrencyAndAmount;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.Number;
-import com.tools20022.repository.msg.Participation1;
-import com.tools20022.repository.msg.Participation2;
-import com.tools20022.repository.msg.Participation3;
-import com.tools20022.repository.msg.Participation4;
+import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -39,6 +35,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.Participation1 Participation1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Participation2 Participation2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Participation3 Participation3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Participation4 Participation4}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.Meeting#mmParticipation
+ * Meeting.mmParticipation}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -57,24 +71,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.entity.MeetingParticipation#mmMeeting
  * MeetingParticipation.mmMeeting}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Meeting#mmParticipation
- * Meeting.mmParticipation}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Participation1 Participation1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Participation2 Participation2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Participation3 Participation3}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Participation4 Participation4}</li>
  * </ul>
  * </li>
  * <li>
@@ -157,13 +153,12 @@ public class MeetingParticipation {
 	 */
 	public static final MMBusinessAttribute mmTotalNumberOfSecuritiesOutstanding = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MeetingNotice1.mmTotalNumberOfSecuritiesOutstanding, com.tools20022.repository.msg.MeetingNotice2.mmTotalNumberOfSecuritiesOutstanding,
-					com.tools20022.repository.msg.MeetingNotice3.mmTotalNumberOfSecuritiesOutstanding, com.tools20022.repository.msg.Participation1.mmTotalNumberOfSecuritiesOutstanding,
-					com.tools20022.repository.msg.Participation2.mmTotalNumberOfSecuritiesOutstanding, com.tools20022.repository.msg.Participation3.mmTotalNumberOfSecuritiesOutstanding,
-					com.tools20022.repository.msg.Participation4.mmTotalNumberOfSecuritiesOutstanding, com.tools20022.repository.msg.MeetingNotice4.mmTotalNumberOfSecuritiesOutstanding);
+			derivation_lazy = () -> Arrays.asList(MeetingNotice1.mmTotalNumberOfSecuritiesOutstanding, MeetingNotice2.mmTotalNumberOfSecuritiesOutstanding, MeetingNotice3.mmTotalNumberOfSecuritiesOutstanding,
+					Participation1.mmTotalNumberOfSecuritiesOutstanding, Participation2.mmTotalNumberOfSecuritiesOutstanding, Participation3.mmTotalNumberOfSecuritiesOutstanding, Participation4.mmTotalNumberOfSecuritiesOutstanding,
+					MeetingNotice4.mmTotalNumberOfSecuritiesOutstanding);
 			elementContext_lazy = () -> MeetingParticipation.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TotalNumberOfSecuritiesOutstanding";
 			definition = "Number of securities admitted to the vote, expressed as an amount and a currency.";
 			maxOccurs = 1;
@@ -228,13 +223,11 @@ public class MeetingParticipation {
 	 */
 	public static final MMBusinessAttribute mmTotalNumberOfVotingRights = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MeetingNotice1.mmTotalNumberOfVotingRights, com.tools20022.repository.msg.MeetingNotice2.mmTotalNumberOfVotingRights,
-					com.tools20022.repository.msg.MeetingNotice3.mmTotalNumberOfVotingRights, com.tools20022.repository.msg.Participation1.mmTotalNumberOfVotingRights,
-					com.tools20022.repository.msg.Participation2.mmTotalNumberOfVotingRights, com.tools20022.repository.msg.Participation3.mmTotalNumberOfVotingRights,
-					com.tools20022.repository.msg.Participation4.mmTotalNumberOfVotingRights, com.tools20022.repository.msg.MeetingNotice4.mmTotalNumberOfVotingRights);
+			derivation_lazy = () -> Arrays.asList(MeetingNotice1.mmTotalNumberOfVotingRights, MeetingNotice2.mmTotalNumberOfVotingRights, MeetingNotice3.mmTotalNumberOfVotingRights, Participation1.mmTotalNumberOfVotingRights,
+					Participation2.mmTotalNumberOfVotingRights, Participation3.mmTotalNumberOfVotingRights, Participation4.mmTotalNumberOfVotingRights, MeetingNotice4.mmTotalNumberOfVotingRights);
 			elementContext_lazy = () -> MeetingParticipation.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TotalNumberOfVotingRights";
 			definition = "Number of rights admitted to the vote.";
 			maxOccurs = 1;
@@ -288,11 +281,10 @@ public class MeetingParticipation {
 	 */
 	public static final MMBusinessAttribute mmCalculationDate = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Participation1.mmCalculationDate, com.tools20022.repository.msg.Participation2.mmCalculationDate,
-					com.tools20022.repository.msg.Participation3.mmCalculationDate, com.tools20022.repository.msg.Participation4.mmCalculationDate);
+			derivation_lazy = () -> Arrays.asList(Participation1.mmCalculationDate, Participation2.mmCalculationDate, Participation3.mmCalculationDate, Participation4.mmCalculationDate);
 			elementContext_lazy = () -> MeetingParticipation.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CalculationDate";
 			definition = "Date of calculation of the total number of oustanding securities.";
 			maxOccurs = 1;
@@ -333,7 +325,7 @@ public class MeetingParticipation {
 		{
 			elementContext_lazy = () -> MeetingParticipation.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TotalNumberOfSecurities";
 			definition = "Number of securities admitted to the vote, expressed as a number of securities.";
 			maxOccurs = 1;
@@ -379,13 +371,13 @@ public class MeetingParticipation {
 		{
 			elementContext_lazy = () -> MeetingParticipation.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Meeting";
 			definition = "Meeting for which participation conditions are specified.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.Meeting.mmParticipation;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Meeting.mmObject();
 		}
 	};
@@ -393,14 +385,13 @@ public class MeetingParticipation {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MeetingParticipation";
 				definition = "Specifies the number of voting rights and of outstanding securities.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Meeting.mmParticipation);
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.MeetingParticipation.mmTotalNumberOfSecuritiesOutstanding, com.tools20022.repository.entity.MeetingParticipation.mmTotalNumberOfVotingRights,
-						com.tools20022.repository.entity.MeetingParticipation.mmCalculationDate, com.tools20022.repository.entity.MeetingParticipation.mmTotalNumberOfSecurities,
-						com.tools20022.repository.entity.MeetingParticipation.mmMeeting);
+				element_lazy = () -> Arrays.asList(MeetingParticipation.mmTotalNumberOfSecuritiesOutstanding, MeetingParticipation.mmTotalNumberOfVotingRights, MeetingParticipation.mmCalculationDate,
+						MeetingParticipation.mmTotalNumberOfSecurities, MeetingParticipation.mmMeeting);
 				derivationComponent_lazy = () -> Arrays.asList(Participation1.mmObject(), Participation2.mmObject(), Participation3.mmObject(), Participation4.mmObject());
 			}
 		});

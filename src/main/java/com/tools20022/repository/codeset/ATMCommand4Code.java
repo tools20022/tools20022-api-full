@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ATMCommandCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -91,7 +93,7 @@ public class ATMCommand4Code extends ATMCommandCode {
 	 */
 	public static final MMCode mmATMBalance = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ATMBalance";
 			owner_lazy = () -> ATMCommand4Code.mmObject();
 		}
@@ -114,7 +116,7 @@ public class ATMCommand4Code extends ATMCommandCode {
 	 */
 	public static final MMCode mmATMStatusUpdate = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ATMStatusUpdate";
 			owner_lazy = () -> ATMCommand4Code.mmObject();
 		}
@@ -137,7 +139,7 @@ public class ATMCommand4Code extends ATMCommandCode {
 	 */
 	public static final MMCode mmConfigurationUpdate = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConfigurationUpdate";
 			owner_lazy = () -> ATMCommand4Code.mmObject();
 		}
@@ -160,7 +162,7 @@ public class ATMCommand4Code extends ATMCommandCode {
 	 */
 	public static final MMCode mmCountersInquiry = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CountersInquiry";
 			owner_lazy = () -> ATMCommand4Code.mmObject();
 		}
@@ -183,7 +185,7 @@ public class ATMCommand4Code extends ATMCommandCode {
 	 */
 	public static final MMCode mmDisconnect = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Disconnect";
 			owner_lazy = () -> ATMCommand4Code.mmObject();
 		}
@@ -206,7 +208,7 @@ public class ATMCommand4Code extends ATMCommandCode {
 	 */
 	public static final MMCode mmSendMessage = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SendMessage";
 			owner_lazy = () -> ATMCommand4Code.mmObject();
 		}
@@ -229,7 +231,7 @@ public class ATMCommand4Code extends ATMCommandCode {
 	 */
 	public static final MMCode mmCountersReport = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CountersReport";
 			owner_lazy = () -> ATMCommand4Code.mmObject();
 		}
@@ -238,13 +240,12 @@ public class ATMCommand4Code extends ATMCommandCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ATMCommand4Code";
 				definition = "Type of command to be performed by an ATM.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ATMCommand4Code.mmATMBalance, com.tools20022.repository.codeset.ATMCommand4Code.mmATMStatusUpdate,
-						com.tools20022.repository.codeset.ATMCommand4Code.mmConfigurationUpdate, com.tools20022.repository.codeset.ATMCommand4Code.mmCountersInquiry, com.tools20022.repository.codeset.ATMCommand4Code.mmDisconnect,
-						com.tools20022.repository.codeset.ATMCommand4Code.mmSendMessage, com.tools20022.repository.codeset.ATMCommand4Code.mmCountersReport);
+				code_lazy = () -> Arrays.asList(ATMCommand4Code.mmATMBalance, ATMCommand4Code.mmATMStatusUpdate, ATMCommand4Code.mmConfigurationUpdate, ATMCommand4Code.mmCountersInquiry, ATMCommand4Code.mmDisconnect,
+						ATMCommand4Code.mmSendMessage, ATMCommand4Code.mmCountersReport);
 				trace_lazy = () -> ATMCommandCode.mmObject();
 			}
 		});

@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.TransactionEnvironmentCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -77,7 +79,7 @@ public class TransactionEnvironment2Code extends TransactionEnvironmentCode {
 	 */
 	public static final MMCode mmPrivate = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Private";
 			owner_lazy = () -> TransactionEnvironment2Code.mmObject();
 		}
@@ -100,7 +102,7 @@ public class TransactionEnvironment2Code extends TransactionEnvironmentCode {
 	 */
 	public static final MMCode mmPublic = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Public";
 			owner_lazy = () -> TransactionEnvironment2Code.mmObject();
 		}
@@ -109,11 +111,11 @@ public class TransactionEnvironment2Code extends TransactionEnvironmentCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TransactionEnvironment2Code";
 				definition = "Indicates the environment of the transaction location.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TransactionEnvironment2Code.mmPrivate, com.tools20022.repository.codeset.TransactionEnvironment2Code.mmPublic);
+				code_lazy = () -> Arrays.asList(TransactionEnvironment2Code.mmPrivate, TransactionEnvironment2Code.mmPublic);
 				trace_lazy = () -> TransactionEnvironmentCode.mmObject();
 			}
 		});

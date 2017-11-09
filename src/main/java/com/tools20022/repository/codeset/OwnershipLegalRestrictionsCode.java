@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.OwnershipLegalRestrictions1Code
+ * OwnershipLegalRestrictions1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -38,14 +48,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.OwnershipLegalRestrictionsCode#mmRestrictions
  * OwnershipLegalRestrictionsCode.mmRestrictions}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.OwnershipLegalRestrictions1Code
- * OwnershipLegalRestrictions1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -100,7 +102,7 @@ public class OwnershipLegalRestrictionsCode {
 	 */
 	public static final MMCode mmUSLegal144A = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "USLegal144A";
 			definition = "Ownership or transfer of an unregistered security issued, pursuant to US legal restrictions 144A.";
 			owner_lazy = () -> OwnershipLegalRestrictionsCode.mmObject();
@@ -132,7 +134,7 @@ public class OwnershipLegalRestrictionsCode {
 	 */
 	public static final MMCode mmNoRestrictions = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoRestrictions";
 			definition = "Ownership or transfer of a security that is not subject to restrictions.";
 			owner_lazy = () -> OwnershipLegalRestrictionsCode.mmObject();
@@ -165,7 +167,7 @@ public class OwnershipLegalRestrictionsCode {
 	 */
 	public static final MMCode mmRestrictions = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Restrictions";
 			definition = "Ownership or transfer of a security that is subject to restrictions, and not pursuant to 144A.";
 			owner_lazy = () -> OwnershipLegalRestrictionsCode.mmObject();
@@ -176,13 +178,12 @@ public class OwnershipLegalRestrictionsCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("A144");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OwnershipLegalRestrictionsCode";
 				definition = "Specifies the regulatory restrictions applicable to a financial instrument.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OwnershipLegalRestrictionsCode.mmUSLegal144A, com.tools20022.repository.codeset.OwnershipLegalRestrictionsCode.mmNoRestrictions,
-						com.tools20022.repository.codeset.OwnershipLegalRestrictionsCode.mmRestrictions);
+				code_lazy = () -> Arrays.asList(OwnershipLegalRestrictionsCode.mmUSLegal144A, OwnershipLegalRestrictionsCode.mmNoRestrictions, OwnershipLegalRestrictionsCode.mmRestrictions);
 				derivation_lazy = () -> Arrays.asList(OwnershipLegalRestrictions1Code.mmObject());
 			}
 		});

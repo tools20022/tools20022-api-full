@@ -20,7 +20,9 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ATMServiceType8Code;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -110,10 +112,10 @@ public class ATMService17 {
 			componentContext_lazy = () -> ATMService17.mmObject();
 			isDerived = false;
 			xmlTag = "SvcTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ServiceType";
 			definition = "Describes the type of inquiry selected by the customer or the ATM.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMService19.mmServiceType);
+			nextVersions_lazy = () -> Arrays.asList(ATMService19.mmServiceType);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ATMServiceType8Code.mmObject();
@@ -158,10 +160,10 @@ public class ATMService17 {
 			componentContext_lazy = () -> ATMService17.mmObject();
 			isDerived = false;
 			xmlTag = "SvcVarnt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ServiceVariant";
 			definition = "Variant of the service.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMService19.mmServiceVariant);
+			nextVersions_lazy = () -> Arrays.asList(ATMService19.mmServiceVariant);
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.ATMService18.mmObject();
@@ -205,10 +207,10 @@ public class ATMService17 {
 			componentContext_lazy = () -> ATMService17.mmObject();
 			isDerived = false;
 			xmlTag = "Lmts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Limits";
 			definition = "Limits of amounts.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMService19.mmLimits);
+			nextVersions_lazy = () -> Arrays.asList(ATMService19.mmLimits);
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.ATMTransactionAmounts6.mmObject();
@@ -245,7 +247,7 @@ public class ATMService17 {
 			componentContext_lazy = () -> ATMService17.mmObject();
 			isDerived = false;
 			xmlTag = "PrefrdWdrwl";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreferredWithdrawal";
 			definition = "Preferred withdrawal transaction chosen by the customer.";
 			maxOccurs = 1;
@@ -258,10 +260,9 @@ public class ATMService17 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMService17.mmServiceType, com.tools20022.repository.msg.ATMService17.mmServiceVariant, com.tools20022.repository.msg.ATMService17.mmLimits,
-						com.tools20022.repository.msg.ATMService17.mmPreferredWithdrawal);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(ATMService17.mmServiceType, ATMService17.mmServiceVariant, ATMService17.mmLimits, ATMService17.mmPreferredWithdrawal);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ATMService17";
 				definition = "Services allowed for the customer's profile.";
 				nextVersions_lazy = () -> Arrays.asList(ATMService19.mmObject());

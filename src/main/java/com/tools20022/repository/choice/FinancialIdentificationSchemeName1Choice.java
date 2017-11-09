@@ -19,9 +19,11 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ExternalFinancialInstitutionIdentification1Code;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.Scheme;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -104,11 +106,11 @@ public class FinancialIdentificationSchemeName1Choice {
 	 */
 	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Scheme.mmCode;
+			businessElementTrace_lazy = () -> Scheme.mmCode;
 			componentContext_lazy = () -> FinancialIdentificationSchemeName1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Cd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Name of the identification scheme, in a coded form as published in an external list.";
 			maxOccurs = 1;
@@ -151,11 +153,11 @@ public class FinancialIdentificationSchemeName1Choice {
 	 */
 	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Scheme.mmCode;
+			businessElementTrace_lazy = () -> Scheme.mmCode;
 			componentContext_lazy = () -> FinancialIdentificationSchemeName1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Name of the identification scheme, in a free text form.";
 			maxOccurs = 1;
@@ -167,10 +169,10 @@ public class FinancialIdentificationSchemeName1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.FinancialIdentificationSchemeName1Choice.mmCode, com.tools20022.repository.choice.FinancialIdentificationSchemeName1Choice.mmProprietary);
+				messageElement_lazy = () -> Arrays.asList(FinancialIdentificationSchemeName1Choice.mmCode, FinancialIdentificationSchemeName1Choice.mmProprietary);
 				trace_lazy = () -> Scheme.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FinancialIdentificationSchemeName1Choice";
 				definition = "Sets of elements to identify a name of the organisation identification scheme.";
 			}

@@ -19,10 +19,12 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.metamodel.MMXor;
 import com.tools20022.repository.codeset.Incoterms1Code;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.Incoterms;
+import com.tools20022.repository.GeneratedRepository;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -108,11 +110,11 @@ public class Incoterms1 {
 	 */
 	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Incoterms.mmCode;
+			businessElementTrace_lazy = () -> Incoterms.mmCode;
 			componentContext_lazy = () -> Incoterms1.mmObject();
 			isDerived = false;
 			xmlTag = "Cd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Specifies the applicable Incoterm by means of a code.";
 			maxOccurs = 1;
@@ -154,11 +156,11 @@ public class Incoterms1 {
 	 */
 	public static final MMMessageAttribute mmOther = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Incoterms.mmCode;
+			businessElementTrace_lazy = () -> Incoterms.mmCode;
 			componentContext_lazy = () -> Incoterms1.mmObject();
 			isDerived = false;
 			xmlTag = "Othr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
 			definition = "Specifies Incoterm not present in code list.";
 			maxOccurs = 1;
@@ -200,11 +202,11 @@ public class Incoterms1 {
 	 */
 	public static final MMMessageAttribute mmLocation = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Incoterms.mmLocation;
+			businessElementTrace_lazy = () -> Incoterms.mmLocation;
 			componentContext_lazy = () -> Incoterms1.mmObject();
 			isDerived = false;
 			xmlTag = "Lctn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Location";
 			definition = "Location where the Incoterms are actioned.";
 			maxOccurs = 1;
@@ -218,6 +220,9 @@ public class Incoterms1 {
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
+	 * messageComponent} = {@linkplain com.tools20022.repository.msg.Incoterms1
+	 * Incoterms1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getImpactedElements
 	 * impactedElements} =
 	 * <ul>
@@ -227,9 +232,6 @@ public class Incoterms1 {
 	 * Incoterms1.mmOther}</li>
 	 * </ul>
 	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
-	 * messageComponent} = {@linkplain com.tools20022.repository.msg.Incoterms1
-	 * Incoterms1}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -245,21 +247,21 @@ public class Incoterms1 {
 	 */
 	public static final MMXor mmCodeOrOtherRule = new MMXor() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CodeOrOtherRule";
 			definition = "If Code is present, then Other is not allowed. If Code is not present, then Other is mandatory.";
 			messageComponent_lazy = () -> Incoterms1.mmObject();
-			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Incoterms1.mmCode, com.tools20022.repository.msg.Incoterms1.mmOther);
+			impactedElements_lazy = () -> Arrays.asList(Incoterms1.mmCode, Incoterms1.mmOther);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Incoterms1.mmCode, com.tools20022.repository.msg.Incoterms1.mmOther, com.tools20022.repository.msg.Incoterms1.mmLocation);
+				messageElement_lazy = () -> Arrays.asList(Incoterms1.mmCode, Incoterms1.mmOther, Incoterms1.mmLocation);
 				trace_lazy = () -> Incoterms.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
 						return DateFormat.getDateInstance(java.text.DateFormat.LONG).parse("September 9, 2016");
@@ -269,7 +271,7 @@ public class Incoterms1 {
 				})).get();
 				name = "Incoterms1";
 				definition = "Specifies the applicable Incoterm and associated location.";
-				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Incoterms1.mmCodeOrOtherRule);
+				xors_lazy = () -> Arrays.asList(Incoterms1.mmCodeOrOtherRule);
 			}
 		});
 		return mmObject_lazy.get();

@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -82,7 +84,7 @@ public class ChoiceCode {
 	 */
 	public static final MMCode mmOptional = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Optional";
 			definition = "Separation is optional.";
 			owner_lazy = () -> ChoiceCode.mmObject();
@@ -111,7 +113,7 @@ public class ChoiceCode {
 	 */
 	public static final MMCode mmMandatory = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Mandatory";
 			definition = "Separation is mandatory.";
 			owner_lazy = () -> ChoiceCode.mmObject();
@@ -122,12 +124,12 @@ public class ChoiceCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("OPTI");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ChoiceCode";
 				definition = "Specifies if the separation of the security is optional or mandatory.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ChoiceCode.mmOptional, com.tools20022.repository.codeset.ChoiceCode.mmMandatory);
+				code_lazy = () -> Arrays.asList(ChoiceCode.mmOptional, ChoiceCode.mmMandatory);
 			}
 		});
 		return mmObject_lazy.get();

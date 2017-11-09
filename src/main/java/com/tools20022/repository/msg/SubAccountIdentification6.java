@@ -20,9 +20,13 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsV02;
 import com.tools20022.repository.choice.AccountIdentificationFormatChoice;
 import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.AccountIdentification;
+import com.tools20022.repository.entity.InvestmentAccount;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -135,10 +139,10 @@ public class SubAccountIdentification6 {
 			componentContext_lazy = () -> SubAccountIdentification6.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Unique and unambiguous identification for the account between the account owner and the account servicer.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SubAccountIdentification36.mmIdentification);
+			nextVersions_lazy = () -> Arrays.asList(SubAccountIdentification36.mmIdentification);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> AccountIdentificationFormatChoice.mmObject();
@@ -187,10 +191,10 @@ public class SubAccountIdentification6 {
 			componentContext_lazy = () -> SubAccountIdentification6.mmObject();
 			isDerived = false;
 			xmlTag = "ActvtyInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ActivityIndicator";
 			definition = "Indicates whether there is activity reported in the statement.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SubAccountIdentification36.mmActivityIndicator);
+			nextVersions_lazy = () -> Arrays.asList(SubAccountIdentification36.mmActivityIndicator);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
@@ -242,14 +246,14 @@ public class SubAccountIdentification6 {
 	 */
 	public static final MMMessageAssociationEnd mmTransactionOnSubAccount = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentAccount.mmInvestmentFundTransaction;
+			businessElementTrace_lazy = () -> InvestmentAccount.mmInvestmentFundTransaction;
 			componentContext_lazy = () -> SubAccountIdentification6.mmObject();
 			isDerived = false;
 			xmlTag = "TxOnSubAcct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionOnSubAccount";
 			definition = "Creation/cancellation of investment units on the books of the fund or its designated agent, as a result of executing an investment fund order.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SubAccountIdentification36.mmTransactionOnSubAccount);
+			nextVersions_lazy = () -> Arrays.asList(SubAccountIdentification36.mmTransactionOnSubAccount);
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.InvestmentFundTransactionsByFund2.mmObject();
@@ -259,12 +263,11 @@ public class SubAccountIdentification6 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SubAccountIdentification6.mmIdentification, com.tools20022.repository.msg.SubAccountIdentification6.mmActivityIndicator,
-						com.tools20022.repository.msg.SubAccountIdentification6.mmTransactionOnSubAccount);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsV02.mmSubAccountDetails);
+				messageElement_lazy = () -> Arrays.asList(SubAccountIdentification6.mmIdentification, SubAccountIdentification6.mmActivityIndicator, SubAccountIdentification6.mmTransactionOnSubAccount);
+				messageBuildingBlock_lazy = () -> Arrays.asList(StatementOfInvestmentFundTransactionsV02.mmSubAccountDetails);
 				trace_lazy = () -> AccountIdentification.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SubAccountIdentification6";
 				definition = "Account to or from which a securities entry is made.";
 				nextVersions_lazy = () -> Arrays.asList(SubAccountIdentification36.mmObject());

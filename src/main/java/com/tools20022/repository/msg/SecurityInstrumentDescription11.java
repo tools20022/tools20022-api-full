@@ -19,11 +19,16 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ActiveOrHistoricCurrencyCode;
 import com.tools20022.repository.datatype.CFIOct2015Identifier;
 import com.tools20022.repository.datatype.ISINOct2015Identifier;
 import com.tools20022.repository.datatype.Max350Text;
+import com.tools20022.repository.entity.AssetClassification;
+import com.tools20022.repository.entity.Derivative;
+import com.tools20022.repository.entity.LocalName;
 import com.tools20022.repository.entity.Security;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -117,14 +122,14 @@ public class SecurityInstrumentDescription11 {
 	 */
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmIdentification;
+			businessElementTrace_lazy = () -> Security.mmIdentification;
 			componentContext_lazy = () -> SecurityInstrumentDescription11.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Identifies the financial instrument using an ISIN.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SecurityInstrumentDescription9.mmIdentification;
+			previousVersion_lazy = () -> SecurityInstrumentDescription9.mmIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISINOct2015Identifier.mmObject();
@@ -170,14 +175,14 @@ public class SecurityInstrumentDescription11 {
 	 */
 	public static final MMMessageAttribute mmFullName = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.LocalName.mmFullName;
+			businessElementTrace_lazy = () -> LocalName.mmFullName;
 			componentContext_lazy = () -> SecurityInstrumentDescription11.mmObject();
 			isDerived = false;
 			xmlTag = "FullNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FullName";
 			definition = "Full name or description of the financial instrument.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SecurityInstrumentDescription9.mmFullName;
+			previousVersion_lazy = () -> SecurityInstrumentDescription9.mmFullName;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
@@ -228,14 +233,14 @@ public class SecurityInstrumentDescription11 {
 	 */
 	public static final MMMessageAttribute mmClassificationType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AssetClassification.mmClassificationType;
+			businessElementTrace_lazy = () -> AssetClassification.mmClassificationType;
 			componentContext_lazy = () -> SecurityInstrumentDescription11.mmObject();
 			isDerived = false;
 			xmlTag = "ClssfctnTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClassificationType";
 			definition = "Classification type of the financial instrument, as per the ISO classification of financial instrument (CFI) codification, that is common share with voting rights, fully paid, or registered.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SecurityInstrumentDescription9.mmClassificationType;
+			previousVersion_lazy = () -> SecurityInstrumentDescription9.mmClassificationType;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CFIOct2015Identifier.mmObject();
@@ -282,14 +287,14 @@ public class SecurityInstrumentDescription11 {
 	 */
 	public static final MMMessageAttribute mmNotionalCurrency = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Derivative.mmNotionalCurrency;
+			businessElementTrace_lazy = () -> Derivative.mmNotionalCurrency;
 			componentContext_lazy = () -> SecurityInstrumentDescription11.mmObject();
 			isDerived = false;
 			xmlTag = "NtnlCcy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotionalCurrency";
 			definition = "Currency in which the notional is denominated.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SecurityInstrumentDescription9.mmNotionalCurrency;
+			previousVersion_lazy = () -> SecurityInstrumentDescription9.mmNotionalCurrency;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyCode.mmObject();
@@ -299,11 +304,11 @@ public class SecurityInstrumentDescription11 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecurityInstrumentDescription11.mmIdentification, com.tools20022.repository.msg.SecurityInstrumentDescription11.mmFullName,
-						com.tools20022.repository.msg.SecurityInstrumentDescription11.mmClassificationType, com.tools20022.repository.msg.SecurityInstrumentDescription11.mmNotionalCurrency);
+				messageElement_lazy = () -> Arrays.asList(SecurityInstrumentDescription11.mmIdentification, SecurityInstrumentDescription11.mmFullName, SecurityInstrumentDescription11.mmClassificationType,
+						SecurityInstrumentDescription11.mmNotionalCurrency);
 				trace_lazy = () -> Security.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecurityInstrumentDescription11";
 				definition = "Identifies the security instrument by its name and typical characteristics.";
 				previousVersion_lazy = () -> SecurityInstrumentDescription9.mmObject();

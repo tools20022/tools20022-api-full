@@ -19,6 +19,10 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.entity.Organisation;
+import com.tools20022.repository.entity.Person;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -107,14 +111,14 @@ public class OwnerIdentification1Choice {
 	 */
 	public static final MMMessageAssociationEnd mmIndividualOwnerIdentification = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Person.mmPersonIdentification;
+			businessElementTrace_lazy = () -> Person.mmPersonIdentification;
 			componentContext_lazy = () -> OwnerIdentification1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "IndvOwnrId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IndividualOwnerIdentification";
 			definition = "Identification of an individual person.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.OwnerIdentification2Choice.mmIndividualOwnerIdentification);
+			nextVersions_lazy = () -> Arrays.asList(OwnerIdentification2Choice.mmIndividualOwnerIdentification);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -164,14 +168,14 @@ public class OwnerIdentification1Choice {
 	 */
 	public static final MMMessageAssociationEnd mmOrganisationOwnerIdentification = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Organisation.mmOrganisationIdentification;
+			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> OwnerIdentification1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "OrgOwnrId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrganisationOwnerIdentification";
 			definition = "Identification of an organisation.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.OwnerIdentification2Choice.mmOrganisationOwnerIdentification);
+			nextVersions_lazy = () -> Arrays.asList(OwnerIdentification2Choice.mmOrganisationOwnerIdentification);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -182,10 +186,9 @@ public class OwnerIdentification1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.OwnerIdentification1Choice.mmIndividualOwnerIdentification,
-						com.tools20022.repository.choice.OwnerIdentification1Choice.mmOrganisationOwnerIdentification);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(OwnerIdentification1Choice.mmIndividualOwnerIdentification, OwnerIdentification1Choice.mmOrganisationOwnerIdentification);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "OwnerIdentification1Choice";
 				definition = "Choice of individual or organisation details.";
 				nextVersions_lazy = () -> Arrays.asList(OwnerIdentification2Choice.mmObject());

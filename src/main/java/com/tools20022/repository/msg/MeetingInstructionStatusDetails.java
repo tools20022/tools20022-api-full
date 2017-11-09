@@ -19,11 +19,15 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.metamodel.MMXor;
 import com.tools20022.repository.codeset.MeetingInstructionRejection1Code;
 import com.tools20022.repository.codeset.Status1Code;
 import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.entity.MeetingStatus;
+import com.tools20022.repository.entity.Status;
+import com.tools20022.repository.entity.StatusReason;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -110,11 +114,11 @@ public class MeetingInstructionStatusDetails {
 	 */
 	public static final MMMessageAttribute mmProcessingStatus = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.mmInstructionProcessingStatus;
+			businessElementTrace_lazy = () -> Status.mmInstructionProcessingStatus;
 			componentContext_lazy = () -> MeetingInstructionStatusDetails.mmObject();
 			isDerived = false;
 			xmlTag = "PrcgSts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProcessingStatus";
 			definition = "Information on the processing of one instruction.";
 			maxOccurs = 1;
@@ -156,7 +160,7 @@ public class MeetingInstructionStatusDetails {
 			componentContext_lazy = () -> MeetingInstructionStatusDetails.mmObject();
 			isDerived = false;
 			xmlTag = "RjctnSts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RejectionStatus";
 			definition = "Information on the rejection of one instruction.";
 			maxOccurs = 1;
@@ -199,11 +203,11 @@ public class MeetingInstructionStatusDetails {
 	 */
 	public static final MMMessageAttribute mmStatusReason = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmReason;
+			businessElementTrace_lazy = () -> StatusReason.mmReason;
 			componentContext_lazy = () -> MeetingInstructionStatusDetails.mmObject();
 			isDerived = false;
 			xmlTag = "StsRsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusReason";
 			definition = "Detailed information about the status.";
 			maxOccurs = 1;
@@ -216,6 +220,10 @@ public class MeetingInstructionStatusDetails {
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
+	 * messageComponent} =
+	 * {@linkplain com.tools20022.repository.msg.MeetingInstructionStatusDetails
+	 * MeetingInstructionStatusDetails}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getImpactedElements
 	 * impactedElements} =
 	 * <ul>
@@ -227,10 +235,6 @@ public class MeetingInstructionStatusDetails {
 	 * MeetingInstructionStatusDetails.mmRejectionStatus}</li>
 	 * </ul>
 	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
-	 * messageComponent} =
-	 * {@linkplain com.tools20022.repository.msg.MeetingInstructionStatusDetails
-	 * MeetingInstructionStatusDetails}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -241,24 +245,23 @@ public class MeetingInstructionStatusDetails {
 	 */
 	public static final MMXor mmProcessingOrRejection = new MMXor() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProcessingOrRejection";
 			messageComponent_lazy = () -> MeetingInstructionStatusDetails.mmObject();
-			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MeetingInstructionStatusDetails.mmProcessingStatus, com.tools20022.repository.msg.MeetingInstructionStatusDetails.mmRejectionStatus);
+			impactedElements_lazy = () -> Arrays.asList(MeetingInstructionStatusDetails.mmProcessingStatus, MeetingInstructionStatusDetails.mmRejectionStatus);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MeetingInstructionStatusDetails.mmProcessingStatus, com.tools20022.repository.msg.MeetingInstructionStatusDetails.mmRejectionStatus,
-						com.tools20022.repository.msg.MeetingInstructionStatusDetails.mmStatusReason);
+				messageElement_lazy = () -> Arrays.asList(MeetingInstructionStatusDetails.mmProcessingStatus, MeetingInstructionStatusDetails.mmRejectionStatus, MeetingInstructionStatusDetails.mmStatusReason);
 				trace_lazy = () -> MeetingStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "MeetingInstructionStatusDetails";
 				definition = "Information about the status of an instruction.";
-				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MeetingInstructionStatusDetails.mmProcessingOrRejection);
+				xors_lazy = () -> Arrays.asList(MeetingInstructionStatusDetails.mmProcessingOrRejection);
 			}
 		});
 		return mmObject_lazy.get();

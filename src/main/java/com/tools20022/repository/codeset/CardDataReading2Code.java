@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CardDataReadingCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -103,7 +105,7 @@ public class CardDataReading2Code extends CardDataReadingCode {
 	 */
 	public static final MMCode mmAccountData = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountData";
 			owner_lazy = () -> CardDataReading2Code.mmObject();
 		}
@@ -126,7 +128,7 @@ public class CardDataReading2Code extends CardDataReadingCode {
 	 */
 	public static final MMCode mmBarCode = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BarCode";
 			owner_lazy = () -> CardDataReading2Code.mmObject();
 		}
@@ -149,7 +151,7 @@ public class CardDataReading2Code extends CardDataReadingCode {
 	 */
 	public static final MMCode mmCardOnFile = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CardOnFile";
 			owner_lazy = () -> CardDataReading2Code.mmObject();
 		}
@@ -172,7 +174,7 @@ public class CardDataReading2Code extends CardDataReadingCode {
 	 */
 	public static final MMCode mmEMVProximityReader = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EMVProximityReader";
 			owner_lazy = () -> CardDataReading2Code.mmObject();
 		}
@@ -195,7 +197,7 @@ public class CardDataReading2Code extends CardDataReadingCode {
 	 */
 	public static final MMCode mmICC = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ICC";
 			owner_lazy = () -> CardDataReading2Code.mmObject();
 		}
@@ -218,7 +220,7 @@ public class CardDataReading2Code extends CardDataReadingCode {
 	 */
 	public static final MMCode mmMagneticStripe = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MagneticStripe";
 			owner_lazy = () -> CardDataReading2Code.mmObject();
 		}
@@ -241,7 +243,7 @@ public class CardDataReading2Code extends CardDataReadingCode {
 	 */
 	public static final MMCode mmPhysical = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Physical";
 			owner_lazy = () -> CardDataReading2Code.mmObject();
 		}
@@ -264,7 +266,7 @@ public class CardDataReading2Code extends CardDataReadingCode {
 	 */
 	public static final MMCode mmProximityReader = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProximityReader";
 			owner_lazy = () -> CardDataReading2Code.mmObject();
 		}
@@ -287,7 +289,7 @@ public class CardDataReading2Code extends CardDataReadingCode {
 	 */
 	public static final MMCode mmTag = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Tag";
 			owner_lazy = () -> CardDataReading2Code.mmObject();
 		}
@@ -310,7 +312,7 @@ public class CardDataReading2Code extends CardDataReadingCode {
 	 */
 	public static final MMCode mmUnknown = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unknown";
 			owner_lazy = () -> CardDataReading2Code.mmObject();
 		}
@@ -319,14 +321,12 @@ public class CardDataReading2Code extends CardDataReadingCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CardDataReading2Code";
 				definition = "Card reading capabilities of the terminal performing the transaction.\r\nIt correspond to the ISO 8583, field number 22-2 for the version 93, and 27-1 for the version 2003.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CardDataReading2Code.mmAccountData, com.tools20022.repository.codeset.CardDataReading2Code.mmBarCode,
-						com.tools20022.repository.codeset.CardDataReading2Code.mmCardOnFile, com.tools20022.repository.codeset.CardDataReading2Code.mmEMVProximityReader, com.tools20022.repository.codeset.CardDataReading2Code.mmICC,
-						com.tools20022.repository.codeset.CardDataReading2Code.mmMagneticStripe, com.tools20022.repository.codeset.CardDataReading2Code.mmPhysical, com.tools20022.repository.codeset.CardDataReading2Code.mmProximityReader,
-						com.tools20022.repository.codeset.CardDataReading2Code.mmTag, com.tools20022.repository.codeset.CardDataReading2Code.mmUnknown);
+				code_lazy = () -> Arrays.asList(CardDataReading2Code.mmAccountData, CardDataReading2Code.mmBarCode, CardDataReading2Code.mmCardOnFile, CardDataReading2Code.mmEMVProximityReader, CardDataReading2Code.mmICC,
+						CardDataReading2Code.mmMagneticStripe, CardDataReading2Code.mmPhysical, CardDataReading2Code.mmProximityReader, CardDataReading2Code.mmTag, CardDataReading2Code.mmUnknown);
 				trace_lazy = () -> CardDataReadingCode.mmObject();
 			}
 		});

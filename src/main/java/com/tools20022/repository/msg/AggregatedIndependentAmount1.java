@@ -19,7 +19,9 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.IndependentAmount;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -111,11 +113,11 @@ public class AggregatedIndependentAmount1 {
 	 */
 	public static final MMMessageAttribute mmTrade = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.IndependentAmount.mmIndependentAmountPerTrade;
+			businessElementTrace_lazy = () -> IndependentAmount.mmIndependentAmountPerTrade;
 			componentContext_lazy = () -> AggregatedIndependentAmount1.mmObject();
 			isDerived = false;
 			xmlTag = "Trad";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Trade";
 			definition = "Total independent amount defined in the confirmations of individual trades.";
 			maxOccurs = 1;
@@ -163,11 +165,11 @@ public class AggregatedIndependentAmount1 {
 	 */
 	public static final MMMessageAttribute mmValueAtRisk = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.IndependentAmount.mmIndependentAmountValueAtRisk;
+			businessElementTrace_lazy = () -> IndependentAmount.mmIndependentAmountValueAtRisk;
 			componentContext_lazy = () -> AggregatedIndependentAmount1.mmObject();
 			isDerived = false;
 			xmlTag = "ValAtRsk";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValueAtRisk";
 			definition = "Portfolio level independent amount that reflects portfolio change over a short time period using statistical techniques such as volatility and risk factor correlations.";
 			maxOccurs = 1;
@@ -217,11 +219,11 @@ public class AggregatedIndependentAmount1 {
 	 */
 	public static final MMMessageAttribute mmNetOpenPosition = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.IndependentAmount.mmIndependentAmountNetOpenPosition;
+			businessElementTrace_lazy = () -> IndependentAmount.mmIndependentAmountNetOpenPosition;
 			componentContext_lazy = () -> AggregatedIndependentAmount1.mmObject();
 			isDerived = false;
 			xmlTag = "NetOpnPos";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetOpenPosition";
 			definition = "Portfolio level independent amount related to parties net open position. Net open position means the total of the net long FX and the net options in respect of each currency where: net long FX for any currency shall be the net amount (if any) of that currency which the party “A” is long as against party “B” in respect of all FX transactions.";
 			maxOccurs = 1;
@@ -272,7 +274,7 @@ public class AggregatedIndependentAmount1 {
 			componentContext_lazy = () -> AggregatedIndependentAmount1.mmObject();
 			isDerived = false;
 			xmlTag = "OthrAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherAmount";
 			definition = "Any other amount that should be considered to calculate the independent amount.";
 			minOccurs = 0;
@@ -283,11 +285,10 @@ public class AggregatedIndependentAmount1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AggregatedIndependentAmount1.mmTrade, com.tools20022.repository.msg.AggregatedIndependentAmount1.mmValueAtRisk,
-						com.tools20022.repository.msg.AggregatedIndependentAmount1.mmNetOpenPosition, com.tools20022.repository.msg.AggregatedIndependentAmount1.mmOtherAmount);
+				messageElement_lazy = () -> Arrays.asList(AggregatedIndependentAmount1.mmTrade, AggregatedIndependentAmount1.mmValueAtRisk, AggregatedIndependentAmount1.mmNetOpenPosition, AggregatedIndependentAmount1.mmOtherAmount);
 				trace_lazy = () -> IndependentAmount.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AggregatedIndependentAmount1";
 				definition = "Independent amount could be defined at a trade level or portfolio level.  It is assumed that their treatment will be based on the exposure convention that is whether netted together or treated on a gross basis.";
 			}

@@ -20,9 +20,13 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.tsmt.*;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.Document;
 import com.tools20022.repository.entity.FinancialInstitution;
+import com.tools20022.repository.entity.GenericIdentification;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -186,11 +190,11 @@ public class DocumentIdentification5 {
 	 */
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmIdentification;
+			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> DocumentIdentification5.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Identification of a set of data.";
 			maxOccurs = 1;
@@ -239,7 +243,7 @@ public class DocumentIdentification5 {
 			componentContext_lazy = () -> DocumentIdentification5.mmObject();
 			isDerived = false;
 			xmlTag = "IdIssr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IdentificationIssuer";
 			definition = "Uniquely identifies the financial institution which has issued the identification of the set of data by using a BIC.";
 			maxOccurs = 1;
@@ -252,24 +256,19 @@ public class DocumentIdentification5 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DocumentIdentification5.mmIdentification, com.tools20022.repository.msg.DocumentIdentification5.mmIdentificationIssuer);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.AcknowledgementV03.mmUserTransactionReference,
-						com.tools20022.repository.area.tsmt.AmendmentAcceptanceNotificationV03.mmUserTransactionReference, com.tools20022.repository.area.tsmt.AmendmentRejectionNotificationV03.mmUserTransactionReference,
-						com.tools20022.repository.area.tsmt.BaselineMatchReportV03.mmUserTransactionReference, com.tools20022.repository.area.tsmt.BaselineReportV03.mmUserTransactionReference,
-						com.tools20022.repository.area.tsmt.DataSetMatchReportV03.mmUserTransactionReference, com.tools20022.repository.area.tsmt.DeltaReportV03.mmUserTransactionReference,
-						com.tools20022.repository.area.tsmt.ErrorReportV03.mmUserTransactionReference, com.tools20022.repository.area.tsmt.FullPushThroughReportV03.mmUserTransactionReference,
-						com.tools20022.repository.area.tsmt.MisMatchAcceptanceNotificationV03.mmUserTransactionReference, com.tools20022.repository.area.tsmt.MisMatchRejectionNotificationV03.mmUserTransactionReference,
-						com.tools20022.repository.area.tsmt.ActionReminderV03.mmUserTransactionReference, com.tools20022.repository.area.tsmt.StatusChangeNotificationV03.mmUserTransactionReference,
-						com.tools20022.repository.area.tsmt.StatusChangeRequestNotificationV03.mmUserTransactionReference, com.tools20022.repository.area.tsmt.StatusChangeRequestRejectionNotificationV03.mmUserTransactionReference,
-						com.tools20022.repository.area.tsmt.StatusExtensionNotificationV03.mmUserTransactionReference, com.tools20022.repository.area.tsmt.StatusExtensionRejectionNotificationV03.mmUserTransactionReference,
-						com.tools20022.repository.area.tsmt.StatusExtensionRequestNotificationV03.mmUserTransactionReference, com.tools20022.repository.area.tsmt.TimeOutNotificationV03.mmUserTransactionReference,
-						com.tools20022.repository.area.tsmt.ForwardIntentToPayNotificationV01.mmUserTransactionReference, com.tools20022.repository.area.tsmt.SpecialNotificationV01.mmUserTransactionReference,
-						com.tools20022.repository.area.tsmt.RoleAndBaselineAcceptanceNotificationV01.mmUserTransactionReference, com.tools20022.repository.area.tsmt.RoleAndBaselineRejectionNotificationV01.mmUserTransactionReference,
-						com.tools20022.repository.area.tsmt.FullPushThroughReportV04.mmUserTransactionReference, com.tools20022.repository.area.tsmt.ForwardIntentToPayNotificationV02.mmUserTransactionReference,
-						com.tools20022.repository.area.tsmt.BaselineReportV04.mmUserTransactionReference, com.tools20022.repository.area.tsmt.FullPushThroughReportV05.mmUserTransactionReference);
+				messageElement_lazy = () -> Arrays.asList(DocumentIdentification5.mmIdentification, DocumentIdentification5.mmIdentificationIssuer);
+				messageBuildingBlock_lazy = () -> Arrays.asList(AcknowledgementV03.mmUserTransactionReference, AmendmentAcceptanceNotificationV03.mmUserTransactionReference, AmendmentRejectionNotificationV03.mmUserTransactionReference,
+						BaselineMatchReportV03.mmUserTransactionReference, BaselineReportV03.mmUserTransactionReference, DataSetMatchReportV03.mmUserTransactionReference, DeltaReportV03.mmUserTransactionReference,
+						ErrorReportV03.mmUserTransactionReference, FullPushThroughReportV03.mmUserTransactionReference, MisMatchAcceptanceNotificationV03.mmUserTransactionReference,
+						MisMatchRejectionNotificationV03.mmUserTransactionReference, ActionReminderV03.mmUserTransactionReference, StatusChangeNotificationV03.mmUserTransactionReference,
+						StatusChangeRequestNotificationV03.mmUserTransactionReference, StatusChangeRequestRejectionNotificationV03.mmUserTransactionReference, StatusExtensionNotificationV03.mmUserTransactionReference,
+						StatusExtensionRejectionNotificationV03.mmUserTransactionReference, StatusExtensionRequestNotificationV03.mmUserTransactionReference, TimeOutNotificationV03.mmUserTransactionReference,
+						ForwardIntentToPayNotificationV01.mmUserTransactionReference, SpecialNotificationV01.mmUserTransactionReference, RoleAndBaselineAcceptanceNotificationV01.mmUserTransactionReference,
+						RoleAndBaselineRejectionNotificationV01.mmUserTransactionReference, FullPushThroughReportV04.mmUserTransactionReference, ForwardIntentToPayNotificationV02.mmUserTransactionReference,
+						BaselineReportV04.mmUserTransactionReference, FullPushThroughReportV05.mmUserTransactionReference);
 				trace_lazy = () -> Document.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DocumentIdentification5";
 				definition = "Identifies a document by a unique identification and its issuer.";
 			}

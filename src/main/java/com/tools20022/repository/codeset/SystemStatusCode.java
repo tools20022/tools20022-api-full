@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.SystemStatus2Code
+ * SystemStatus2Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -38,13 +47,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * SystemStatusCode.mmClosed}</li>
  * <li>{@linkplain com.tools20022.repository.codeset.SystemStatusCode#mmClosing
  * SystemStatusCode.mmClosing}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.SystemStatus2Code
- * SystemStatus2Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -94,7 +96,7 @@ public class SystemStatusCode {
 	 */
 	public static final MMCode mmSuspended = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Suspended";
 			definition = "System is suspended, ie, not operational.";
 			owner_lazy = () -> SystemStatusCode.mmObject();
@@ -124,7 +126,7 @@ public class SystemStatusCode {
 	 */
 	public static final MMCode mmActive = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Active";
 			definition = "System is functioning normally, ie, operational.";
 			owner_lazy = () -> SystemStatusCode.mmObject();
@@ -154,7 +156,7 @@ public class SystemStatusCode {
 	 */
 	public static final MMCode mmClosed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Closed";
 			definition = "System is closed (eg. normal closure of an RTGS)";
 			owner_lazy = () -> SystemStatusCode.mmObject();
@@ -187,7 +189,7 @@ public class SystemStatusCode {
 	 */
 	public static final MMCode mmClosing = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Closing";
 			definition = "System needs to wait for completion of intermediate internal activities before going to a status Closed.";
 			owner_lazy = () -> SystemStatusCode.mmObject();
@@ -198,13 +200,12 @@ public class SystemStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("SUSP");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SystemStatusCode";
 				definition = "Specifies the status of a system.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SystemStatusCode.mmSuspended, com.tools20022.repository.codeset.SystemStatusCode.mmActive, com.tools20022.repository.codeset.SystemStatusCode.mmClosed,
-						com.tools20022.repository.codeset.SystemStatusCode.mmClosing);
+				code_lazy = () -> Arrays.asList(SystemStatusCode.mmSuspended, SystemStatusCode.mmActive, SystemStatusCode.mmClosed, SystemStatusCode.mmClosing);
 				derivation_lazy = () -> Arrays.asList(SystemStatus2Code.mmObject());
 			}
 		});

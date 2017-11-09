@@ -18,8 +18,10 @@
 package com.tools20022.repository.entity;
 
 import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.TradePartyRole;
-import com.tools20022.repository.msg.PartyIdentification116;
+import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -32,6 +34,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.PartyIdentification116
+ * PartyIdentification116}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
  * derivationElement} =
@@ -63,14 +73,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * superType} = {@linkplain com.tools20022.repository.entity.TradePartyRole
  * TradePartyRole}</li>
  * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.PartyIdentification116
- * PartyIdentification116}</li>
- * </ul>
- * </li>
- * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
@@ -92,14 +94,12 @@ public class SellerRole extends TradePartyRole {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SellerRole";
 				definition = "Party that sells assets, goods or services.";
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ConfirmationParties3.mmSeller, com.tools20022.repository.msg.ConfirmationParties4.mmSeller,
-						com.tools20022.repository.msg.ConfirmationParties2.mmSeller, com.tools20022.repository.msg.TradeAgreement6.mmSeller, com.tools20022.repository.msg.TradeSettlement1.mmPayer,
-						com.tools20022.repository.msg.ReportSpecification4.mmSeller, com.tools20022.repository.msg.TradeContract1.mmSeller, com.tools20022.repository.msg.LoanContract1.mmSeller,
-						com.tools20022.repository.msg.TradeAgreement13.mmSeller, com.tools20022.repository.msg.SecuritiesTransactionReport4.mmSeller);
+				derivationElement_lazy = () -> Arrays.asList(ConfirmationParties3.mmSeller, ConfirmationParties4.mmSeller, ConfirmationParties2.mmSeller, TradeAgreement6.mmSeller, TradeSettlement1.mmPayer, ReportSpecification4.mmSeller,
+						TradeContract1.mmSeller, LoanContract1.mmSeller, TradeAgreement13.mmSeller, SecuritiesTransactionReport4.mmSeller);
 				superType_lazy = () -> TradePartyRole.mmObject();
 				derivationComponent_lazy = () -> Arrays.asList(PartyIdentification116.mmObject());
 			}

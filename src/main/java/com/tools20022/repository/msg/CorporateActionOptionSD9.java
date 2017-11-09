@@ -19,10 +19,12 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ExtendedOptionFeature1Code;
 import com.tools20022.repository.datatype.Exact32AlphaNumericText;
 import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.datatype.YesNoIndicator;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -104,7 +106,7 @@ public class CorporateActionOptionSD9 {
 			componentContext_lazy = () -> CorporateActionOptionSD9.mmObject();
 			isDerived = false;
 			xmlTag = "PlcAndNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "xPath to the element that is being extended.";
 			maxOccurs = 1;
@@ -149,7 +151,7 @@ public class CorporateActionOptionSD9 {
 			componentContext_lazy = () -> CorporateActionOptionSD9.mmObject();
 			isDerived = false;
 			xmlTag = "XtndedOptnFeatrs";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExtendedOptionFeatures";
 			definition = "Used for options that have particular proprietary feature that cannot be represented in standard ISO message.";
 			maxOccurs = 1;
@@ -194,7 +196,7 @@ public class CorporateActionOptionSD9 {
 			componentContext_lazy = () -> CorporateActionOptionSD9.mmObject();
 			isDerived = false;
 			xmlTag = "DTCDfltOptnFlg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCDefaultOptionFlag";
 			definition = "Identifies whether the option will be processed as default by DTC (The Depository Trust Corporation) when no election is made.";
 			maxOccurs = 1;
@@ -239,7 +241,7 @@ public class CorporateActionOptionSD9 {
 			componentContext_lazy = () -> CorporateActionOptionSD9.mmObject();
 			isDerived = false;
 			xmlTag = "OptnlDvddSplmtryDataReqrdFlg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionalDividendSupplementaryDataRequiredFlag";
 			definition = "Indicates whether optional dividend supplementary data are required in the ISO 20022 CAIN instructions for this event.";
 			maxOccurs = 1;
@@ -290,7 +292,7 @@ public class CorporateActionOptionSD9 {
 			componentContext_lazy = () -> CorporateActionOptionSD9.mmObject();
 			isDerived = false;
 			xmlTag = "RDPRefNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RDPReferenceNumber";
 			definition = "Unique DTCC legacy reference used for matching and reconciling legacy records. The number algorhithm is as follows: Department ID (1:1), Activity Type (2:3), Cusip Country Code (5:2), Cusip (7:9), Record Date (15:8), Payable Date (22:8), Sequence Number (29:3), RDP Issue Type (31:1). \r\nUSAGE RULE: this sequence can be populated /extended to event details, option details or a movement, depending on sequence number coordinality to an event.";
 			maxOccurs = 1;
@@ -302,11 +304,10 @@ public class CorporateActionOptionSD9 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionOptionSD9.mmPlaceAndName, com.tools20022.repository.msg.CorporateActionOptionSD9.mmExtendedOptionFeatures,
-						com.tools20022.repository.msg.CorporateActionOptionSD9.mmDTCDefaultOptionFlag, com.tools20022.repository.msg.CorporateActionOptionSD9.mmOptionalDividendSupplementaryDataRequiredFlag,
-						com.tools20022.repository.msg.CorporateActionOptionSD9.mmRDPReferenceNumber);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(CorporateActionOptionSD9.mmPlaceAndName, CorporateActionOptionSD9.mmExtendedOptionFeatures, CorporateActionOptionSD9.mmDTCDefaultOptionFlag,
+						CorporateActionOptionSD9.mmOptionalDividendSupplementaryDataRequiredFlag, CorporateActionOptionSD9.mmRDPReferenceNumber);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionOptionSD9";
 				definition = "Provides additional information regarding corporate action option details.";
 			}

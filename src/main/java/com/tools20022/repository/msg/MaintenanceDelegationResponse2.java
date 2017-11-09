@@ -19,6 +19,9 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.catm.MaintenanceDelegationResponseV02;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -113,10 +116,10 @@ public class MaintenanceDelegationResponse2 {
 			componentContext_lazy = () -> MaintenanceDelegationResponse2.mmObject();
 			isDerived = false;
 			xmlTag = "TMId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TMIdentification";
 			definition = "Terminal manager identification.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.MaintenanceDelegationResponse1.mmTMIdentification;
+			previousVersion_lazy = () -> MaintenanceDelegationResponse1.mmTMIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -161,10 +164,10 @@ public class MaintenanceDelegationResponse2 {
 			componentContext_lazy = () -> MaintenanceDelegationResponse2.mmObject();
 			isDerived = false;
 			xmlTag = "MstrTMId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MasterTMIdentification";
 			definition = "Master terminal manager identification.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.MaintenanceDelegationResponse1.mmMasterTMIdentification;
+			previousVersion_lazy = () -> MaintenanceDelegationResponse1.mmMasterTMIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -208,10 +211,10 @@ public class MaintenanceDelegationResponse2 {
 			componentContext_lazy = () -> MaintenanceDelegationResponse2.mmObject();
 			isDerived = false;
 			xmlTag = "DlgtnRspn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DelegationResponse";
 			definition = "Information on the delegation of a maintenance action.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.MaintenanceDelegationResponse1.mmDelegationResponse;
+			previousVersion_lazy = () -> MaintenanceDelegationResponse1.mmDelegationResponse;
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.MaintenanceDelegation4.mmObject();
@@ -221,11 +224,10 @@ public class MaintenanceDelegationResponse2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MaintenanceDelegationResponse2.mmTMIdentification, com.tools20022.repository.msg.MaintenanceDelegationResponse2.mmMasterTMIdentification,
-						com.tools20022.repository.msg.MaintenanceDelegationResponse2.mmDelegationResponse);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.catm.MaintenanceDelegationResponseV02.mmMaintenanceDelegationResponse);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(MaintenanceDelegationResponse2.mmTMIdentification, MaintenanceDelegationResponse2.mmMasterTMIdentification, MaintenanceDelegationResponse2.mmDelegationResponse);
+				messageBuildingBlock_lazy = () -> Arrays.asList(MaintenanceDelegationResponseV02.mmMaintenanceDelegationResponse);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MaintenanceDelegationResponse2";
 				definition = "Information related to the request of maintenance delegations.";
 				previousVersion_lazy = () -> MaintenanceDelegationResponse1.mmObject();

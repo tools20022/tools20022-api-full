@@ -19,6 +19,10 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.entity.CorporateActionEvent;
+import com.tools20022.repository.entity.SecuritiesTrade;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -115,14 +119,14 @@ public class SettlementOrCorporateActionEvent9Choice {
 	 */
 	public static final MMMessageAttribute mmSecuritiesTransactionType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTrade.mmSecuritiesTransactionType;
+			businessElementTrace_lazy = () -> SecuritiesTrade.mmSecuritiesTransactionType;
 			componentContext_lazy = () -> SettlementOrCorporateActionEvent9Choice.mmObject();
 			isDerived = false;
 			xmlTag = "SctiesTxTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesTransactionType";
 			definition = "Identifies the type of securities transaction.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SettlementOrCorporateActionEvent13Choice.mmSecuritiesTransactionType);
+			nextVersions_lazy = () -> Arrays.asList(SettlementOrCorporateActionEvent13Choice.mmSecuritiesTransactionType);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> com.tools20022.repository.choice.SecuritiesTransactionType10Choice.mmObject();
@@ -172,14 +176,14 @@ public class SettlementOrCorporateActionEvent9Choice {
 	 */
 	public static final MMMessageAttribute mmCorporateActionEventType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmType;
+			businessElementTrace_lazy = () -> CorporateActionEvent.mmType;
 			componentContext_lazy = () -> SettlementOrCorporateActionEvent9Choice.mmObject();
 			isDerived = false;
 			xmlTag = "CorpActnEvtTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorporateActionEventType";
 			definition = "Specifies the type of corporate event.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SettlementOrCorporateActionEvent13Choice.mmCorporateActionEventType);
+			nextVersions_lazy = () -> Arrays.asList(SettlementOrCorporateActionEvent13Choice.mmCorporateActionEventType);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> com.tools20022.repository.choice.CorporateActionEventType15Choice.mmObject();
@@ -189,10 +193,9 @@ public class SettlementOrCorporateActionEvent9Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SettlementOrCorporateActionEvent9Choice.mmSecuritiesTransactionType,
-						com.tools20022.repository.choice.SettlementOrCorporateActionEvent9Choice.mmCorporateActionEventType);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(SettlementOrCorporateActionEvent9Choice.mmSecuritiesTransactionType, SettlementOrCorporateActionEvent9Choice.mmCorporateActionEventType);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SettlementOrCorporateActionEvent9Choice";
 				definition = "Choice of transaction type, corporate action event or settlement transaction.";
 				nextVersions_lazy = () -> Arrays.asList(SettlementOrCorporateActionEvent13Choice.mmObject());

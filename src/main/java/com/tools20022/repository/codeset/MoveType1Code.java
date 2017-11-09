@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.MoveTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -81,7 +83,7 @@ public class MoveType1Code extends MoveTypeCode {
 	 */
 	public static final MMCode mmStatic = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Static";
 			owner_lazy = () -> MoveType1Code.mmObject();
 		}
@@ -104,7 +106,7 @@ public class MoveType1Code extends MoveTypeCode {
 	 */
 	public static final MMCode mmFloat = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Float";
 			owner_lazy = () -> MoveType1Code.mmObject();
 		}
@@ -113,12 +115,12 @@ public class MoveType1Code extends MoveTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("STAT");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MoveType1Code";
 				definition = "Describes whether peg or discretion price is static/fixed or floats.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MoveType1Code.mmStatic, com.tools20022.repository.codeset.MoveType1Code.mmFloat);
+				code_lazy = () -> Arrays.asList(MoveType1Code.mmStatic, MoveType1Code.mmFloat);
 				trace_lazy = () -> MoveTypeCode.mmObject();
 			}
 		});

@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,18 +29,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.NoCriteriaCode#mmNoCriteria
- * NoCriteriaCode.mmNoCriteria}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
  * =
  * <ul>
  * <li>{@linkplain com.tools20022.repository.codeset.NoCriteria1Code
  * NoCriteria1Code}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.NoCriteriaCode#mmNoCriteria
+ * NoCriteriaCode.mmNoCriteria}</li>
  * </ul>
  * </li>
  * <li>
@@ -88,7 +90,7 @@ public class NoCriteriaCode {
 	 */
 	public static final MMCode mmNoCriteria = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoCriteria";
 			definition = "No criteria.";
 			owner_lazy = () -> NoCriteriaCode.mmObject();
@@ -99,12 +101,12 @@ public class NoCriteriaCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("NOCR");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "NoCriteriaCode";
 				definition = "Specifies that there is no criteria.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.NoCriteriaCode.mmNoCriteria);
+				code_lazy = () -> Arrays.asList(NoCriteriaCode.mmNoCriteria);
 				derivation_lazy = () -> Arrays.asList(NoCriteria1Code.mmObject());
 			}
 		});

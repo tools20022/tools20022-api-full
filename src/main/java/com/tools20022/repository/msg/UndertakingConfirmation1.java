@@ -20,10 +20,13 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.DateAndDateTimeChoice;
 import com.tools20022.repository.datatype.Max2000Text;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.entity.Undertaking;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -109,11 +112,11 @@ public class UndertakingConfirmation1 {
 	 */
 	public static final MMMessageAssociationEnd mmConfirmer = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> UndertakingConfirmation1.mmObject();
 			isDerived = false;
 			xmlTag = "Cnfrmr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Confirmer";
 			definition = "Party that adds its undertaking to honour the undertaking or amendment of the undertaking.";
 			maxOccurs = 1;
@@ -158,7 +161,7 @@ public class UndertakingConfirmation1 {
 			componentContext_lazy = () -> UndertakingConfirmation1.mmObject();
 			isDerived = false;
 			xmlTag = "RefNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReferenceNumber";
 			definition = "Unique and unambiguous identifier assigned by the confirmer to the undertaking.";
 			maxOccurs = 1;
@@ -205,11 +208,11 @@ public class UndertakingConfirmation1 {
 	 */
 	public static final MMMessageAttribute mmDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Undertaking.mmDateOfAdvice;
+			businessElementTrace_lazy = () -> Undertaking.mmDateOfAdvice;
 			componentContext_lazy = () -> UndertakingConfirmation1.mmObject();
 			isDerived = false;
 			xmlTag = "Dt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Date";
 			definition = "Date and time when the undertaking or amendment of the undertaking was confirmed.";
 			maxOccurs = 1;
@@ -253,7 +256,7 @@ public class UndertakingConfirmation1 {
 			componentContext_lazy = () -> UndertakingConfirmation1.mmObject();
 			isDerived = false;
 			xmlTag = "Conf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Confirmation";
 			definition = "Confirmation of the undertaking or amendment of the confirmed undertaking.";
 			maxOccurs = 5;
@@ -265,11 +268,10 @@ public class UndertakingConfirmation1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UndertakingConfirmation1.mmConfirmer, com.tools20022.repository.msg.UndertakingConfirmation1.mmReferenceNumber,
-						com.tools20022.repository.msg.UndertakingConfirmation1.mmDate, com.tools20022.repository.msg.UndertakingConfirmation1.mmConfirmation);
+				messageElement_lazy = () -> Arrays.asList(UndertakingConfirmation1.mmConfirmer, UndertakingConfirmation1.mmReferenceNumber, UndertakingConfirmation1.mmDate, UndertakingConfirmation1.mmConfirmation);
 				trace_lazy = () -> Undertaking.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "UndertakingConfirmation1";
 				definition = "Confirmation information for the issued undertaking.";
 			}

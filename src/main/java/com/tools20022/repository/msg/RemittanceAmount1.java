@@ -20,8 +20,10 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ActiveOrHistoricCurrencyAndAmount;
-import com.tools20022.repository.entity.Document;
+import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -115,11 +117,11 @@ public class RemittanceAmount1 {
 	 */
 	public static final MMMessageAttribute mmDuePayableAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentObligation.mmAmount;
+			businessElementTrace_lazy = () -> PaymentObligation.mmAmount;
 			componentContext_lazy = () -> RemittanceAmount1.mmObject();
 			isDerived = false;
 			xmlTag = "DuePyblAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DuePayableAmount";
 			definition = "Amount specified is the exact amount due and payable to the creditor.";
 			maxOccurs = 1;
@@ -166,11 +168,11 @@ public class RemittanceAmount1 {
 	 */
 	public static final MMMessageAttribute mmDiscountAppliedAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Discount.mmDiscountAppliedAmount;
+			businessElementTrace_lazy = () -> Discount.mmDiscountAppliedAmount;
 			componentContext_lazy = () -> RemittanceAmount1.mmObject();
 			isDerived = false;
 			xmlTag = "DscntApldAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DiscountAppliedAmount";
 			definition = "Amount of money that results from the application of an agreed discount to the amount due and payable to the creditor.";
 			maxOccurs = 1;
@@ -217,11 +219,11 @@ public class RemittanceAmount1 {
 	 */
 	public static final MMMessageAttribute mmCreditNoteAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Invoice.mmCreditDebitNoteAmount;
+			businessElementTrace_lazy = () -> Invoice.mmCreditDebitNoteAmount;
 			componentContext_lazy = () -> RemittanceAmount1.mmObject();
 			isDerived = false;
 			xmlTag = "CdtNoteAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditNoteAmount";
 			definition = "Amount specified for the referred document is the amount of a credit note.";
 			maxOccurs = 1;
@@ -266,11 +268,11 @@ public class RemittanceAmount1 {
 	 */
 	public static final MMMessageAttribute mmTaxAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Invoice.mmTotalTaxAmount;
+			businessElementTrace_lazy = () -> Invoice.mmTotalTaxAmount;
 			componentContext_lazy = () -> RemittanceAmount1.mmObject();
 			isDerived = false;
 			xmlTag = "TaxAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxAmount";
 			definition = "Quantity of cash resulting from the calculation of the tax.";
 			maxOccurs = 1;
@@ -315,11 +317,11 @@ public class RemittanceAmount1 {
 	 */
 	public static final MMMessageAssociationEnd mmAdjustmentAmountAndReason = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.mmAdjustments;
+			businessElementTrace_lazy = () -> Payment.mmAdjustments;
 			componentContext_lazy = () -> RemittanceAmount1.mmObject();
 			isDerived = false;
 			xmlTag = "AdjstmntAmtAndRsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdjustmentAmountAndReason";
 			definition = "Set of elements used to provide information on the amount and reason of the document adjustment.";
 			minOccurs = 0;
@@ -363,11 +365,11 @@ public class RemittanceAmount1 {
 	 */
 	public static final MMMessageAttribute mmRemittedAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Document.mmRemittedAmount;
+			businessElementTrace_lazy = () -> Document.mmRemittedAmount;
 			componentContext_lazy = () -> RemittanceAmount1.mmObject();
 			isDerived = false;
 			xmlTag = "RmtdAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RemittedAmount";
 			definition = "Amount of money remitted for the referred document.";
 			maxOccurs = 1;
@@ -379,12 +381,11 @@ public class RemittanceAmount1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RemittanceAmount1.mmDuePayableAmount, com.tools20022.repository.msg.RemittanceAmount1.mmDiscountAppliedAmount,
-						com.tools20022.repository.msg.RemittanceAmount1.mmCreditNoteAmount, com.tools20022.repository.msg.RemittanceAmount1.mmTaxAmount, com.tools20022.repository.msg.RemittanceAmount1.mmAdjustmentAmountAndReason,
-						com.tools20022.repository.msg.RemittanceAmount1.mmRemittedAmount);
+				messageElement_lazy = () -> Arrays.asList(RemittanceAmount1.mmDuePayableAmount, RemittanceAmount1.mmDiscountAppliedAmount, RemittanceAmount1.mmCreditNoteAmount, RemittanceAmount1.mmTaxAmount,
+						RemittanceAmount1.mmAdjustmentAmountAndReason, RemittanceAmount1.mmRemittedAmount);
 				trace_lazy = () -> Document.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RemittanceAmount1";
 				definition = "Nature of the amount and currency on a document referred to in the remittance section, typically either the original amount due/payable or the amount actually remitted for the referenced document.";
 			}

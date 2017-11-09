@@ -19,7 +19,9 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max5000Binary;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -95,7 +97,7 @@ public class PublicRSAKey1 {
 			componentContext_lazy = () -> PublicRSAKey1.mmObject();
 			isDerived = false;
 			xmlTag = "Mdlus";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Modulus";
 			definition = "Modulus of the RSA key.";
 			maxOccurs = 1;
@@ -136,7 +138,7 @@ public class PublicRSAKey1 {
 			componentContext_lazy = () -> PublicRSAKey1.mmObject();
 			isDerived = false;
 			xmlTag = "Expnt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Exponent";
 			definition = "Public exponent of the RSA key.";
 			maxOccurs = 1;
@@ -148,9 +150,9 @@ public class PublicRSAKey1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PublicRSAKey1.mmModulus, com.tools20022.repository.msg.PublicRSAKey1.mmExponent);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(PublicRSAKey1.mmModulus, PublicRSAKey1.mmExponent);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PublicRSAKey1";
 				definition = "Value of the public component of a RSA key.";
 				nextVersions_lazy = () -> Arrays.asList(PublicRSAKey2.mmObject());

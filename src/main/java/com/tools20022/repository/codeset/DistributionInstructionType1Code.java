@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.DistributionInstructionTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -92,7 +94,7 @@ public class DistributionInstructionType1Code extends DistributionInstructionTyp
 	 */
 	public static final MMCode mmGlobalDebitOrder = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GlobalDebitOrder";
 			owner_lazy = () -> DistributionInstructionType1Code.mmObject();
 		}
@@ -115,7 +117,7 @@ public class DistributionInstructionType1Code extends DistributionInstructionTyp
 	 */
 	public static final MMCode mmIndividualOrder = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IndividualOrder";
 			owner_lazy = () -> DistributionInstructionType1Code.mmObject();
 		}
@@ -138,7 +140,7 @@ public class DistributionInstructionType1Code extends DistributionInstructionTyp
 	 */
 	public static final MMCode mmGlobalReturnOrder = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GlobalReturnOrder";
 			owner_lazy = () -> DistributionInstructionType1Code.mmObject();
 		}
@@ -161,7 +163,7 @@ public class DistributionInstructionType1Code extends DistributionInstructionTyp
 	 */
 	public static final MMCode mmOptionChangeOrder = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionChangeOrder";
 			owner_lazy = () -> DistributionInstructionType1Code.mmObject();
 		}
@@ -184,7 +186,7 @@ public class DistributionInstructionType1Code extends DistributionInstructionTyp
 	 */
 	public static final MMCode mmIndividualReturnOrder = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IndividualReturnOrder";
 			owner_lazy = () -> DistributionInstructionType1Code.mmObject();
 		}
@@ -193,14 +195,13 @@ public class DistributionInstructionType1Code extends DistributionInstructionTyp
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("GDEB");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DistributionInstructionType1Code";
 				definition = "Specifies the type of distribution instruction.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DistributionInstructionType1Code.mmGlobalDebitOrder, com.tools20022.repository.codeset.DistributionInstructionType1Code.mmIndividualOrder,
-						com.tools20022.repository.codeset.DistributionInstructionType1Code.mmGlobalReturnOrder, com.tools20022.repository.codeset.DistributionInstructionType1Code.mmOptionChangeOrder,
-						com.tools20022.repository.codeset.DistributionInstructionType1Code.mmIndividualReturnOrder);
+				code_lazy = () -> Arrays.asList(DistributionInstructionType1Code.mmGlobalDebitOrder, DistributionInstructionType1Code.mmIndividualOrder, DistributionInstructionType1Code.mmGlobalReturnOrder,
+						DistributionInstructionType1Code.mmOptionChangeOrder, DistributionInstructionType1Code.mmIndividualReturnOrder);
 				trace_lazy = () -> DistributionInstructionTypeCode.mmObject();
 			}
 		});

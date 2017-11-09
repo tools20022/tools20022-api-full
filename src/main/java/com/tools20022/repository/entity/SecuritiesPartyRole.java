@@ -17,9 +17,13 @@
 
 package com.tools20022.repository.entity;
 
+import com.tools20022.metamodel.MMAggregation;
 import com.tools20022.metamodel.MMBusinessAssociationEnd;
 import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.AssetPartyRole;
+import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.RegistrationParameters3;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -34,20 +38,23 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
  * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.Security#mmPartyRole
+ * Security.mmPartyRole}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesPartyRole#mmSecuritiesAccount
- * SecuritiesPartyRole.mmSecuritiesAccount}</li>
+ * {@linkplain com.tools20022.repository.entity.CashAccount#mmSecuritiesPartyRole
+ * CashAccount.mmSecuritiesPartyRole}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesPartyRole#mmCashAccount
- * SecuritiesPartyRole.mmCashAccount}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesPartyRole#mmSecurity
- * SecuritiesPartyRole.mmSecurity}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesAccount#mmSecuritiesPartyRole
+ * SecuritiesAccount.mmSecuritiesPartyRole}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.AssetPartyRole
+ * AssetPartyRole}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
  * subType} =
  * <ul>
@@ -85,23 +92,20 @@ import java.util.List;
  * <li>{@linkplain com.tools20022.repository.entity.Pledgee Pledgee}</li>
  * </ul>
  * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Security#mmPartyRole
- * Security.mmPartyRole}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CashAccount#mmSecuritiesPartyRole
- * CashAccount.mmSecuritiesPartyRole}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesPartyRole#mmSecuritiesAccount
+ * SecuritiesPartyRole.mmSecuritiesAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesAccount#mmSecuritiesPartyRole
- * SecuritiesAccount.mmSecuritiesPartyRole}</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesPartyRole#mmCashAccount
+ * SecuritiesPartyRole.mmCashAccount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesPartyRole#mmSecurity
+ * SecuritiesPartyRole.mmSecurity}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.AssetPartyRole
- * AssetPartyRole}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -170,15 +174,15 @@ public class SecuritiesPartyRole extends AssetPartyRole {
 	 */
 	public static final MMBusinessAssociationEnd mmSecuritiesAccount = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RegistrationParameters3.mmRegistrarAccount);
+			derivation_lazy = () -> Arrays.asList(RegistrationParameters3.mmRegistrarAccount);
 			elementContext_lazy = () -> SecuritiesPartyRole.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SecuritiesAccount";
 			definition = "Unambiguous identification of the securities account used in the context of the securities party role (such as investor securities account used for a corporate action securities distribution)";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesAccount.mmSecuritiesPartyRole;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SecuritiesAccount.mmObject();
 		}
 	};
@@ -224,12 +228,12 @@ public class SecuritiesPartyRole extends AssetPartyRole {
 		{
 			elementContext_lazy = () -> SecuritiesPartyRole.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CashAccount";
 			definition = "Unambiguous identification of the cash account used in the context of the securities party role (such as investor cash account used for a corporate action cash distribution)";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.CashAccount.mmSecuritiesPartyRole;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.CashAccount.mmObject();
 		}
 	};
@@ -270,12 +274,12 @@ public class SecuritiesPartyRole extends AssetPartyRole {
 		{
 			elementContext_lazy = () -> SecuritiesPartyRole.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Security";
 			definition = "Specifies the security for which the party plays a role.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.Security.mmPartyRole;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 		}
 	};
@@ -283,8 +287,8 @@ public class SecuritiesPartyRole extends AssetPartyRole {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesPartyRole";
 				definition = "Specifies roles played by a party that are linked to the handling of securities but not related to a specific process.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Security.mmPartyRole, com.tools20022.repository.entity.CashAccount.mmSecuritiesPartyRole,
@@ -293,8 +297,7 @@ public class SecuritiesPartyRole extends AssetPartyRole {
 						DeterminationAgent.mmObject(), LeadUnderwriter.mmObject(), LegalAdvisor.mmObject(), PlaceOfRegistry.mmObject(), PrimaryPlaceOfDeposit.mmObject(), PrincipalCollectionAgent.mmObject(), PrincipalPayingAgent.mmObject(),
 						RemarketingAgent.mmObject(), UnderwriterRole.mmObject(), DepositoryRole.mmObject(), Pledgee.mmObject());
 				superType_lazy = () -> AssetPartyRole.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesPartyRole.mmSecuritiesAccount, com.tools20022.repository.entity.SecuritiesPartyRole.mmCashAccount,
-						com.tools20022.repository.entity.SecuritiesPartyRole.mmSecurity);
+				element_lazy = () -> Arrays.asList(SecuritiesPartyRole.mmSecuritiesAccount, SecuritiesPartyRole.mmCashAccount, SecuritiesPartyRole.mmSecurity);
 			}
 		});
 		return mmObject_lazy.get();

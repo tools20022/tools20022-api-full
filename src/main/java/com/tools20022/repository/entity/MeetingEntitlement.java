@@ -17,15 +17,12 @@
 
 package com.tools20022.repository.entity;
 
-import com.tools20022.metamodel.MMBusinessAssociationEnd;
-import com.tools20022.metamodel.MMBusinessAttribute;
-import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.*;
+import com.tools20022.repository.choice.Entitlement1Choice;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.Number;
-import com.tools20022.repository.msg.EntitlementAssessment;
-import com.tools20022.repository.msg.EntitlementAssessment1;
-import com.tools20022.repository.msg.EntitlementAssessment2;
-import com.tools20022.repository.msg.EntitlementAssessment3;
+import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -40,24 +37,18 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
  * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.MeetingEntitlement#mmEntitlementFixingDate
- * MeetingEntitlement.mmEntitlementFixingDate}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.MeetingEntitlement#mmEntitlementRatio
- * MeetingEntitlement.mmEntitlementRatio}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.MeetingEntitlement#mmEligiblePosition
- * MeetingEntitlement.mmEligiblePosition}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.MeetingEntitlement#mmRelatedServicing
- * MeetingEntitlement.mmRelatedServicing}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.MeetingEntitlement#mmEntitlementCalculationDate
- * MeetingEntitlement.mmEntitlementCalculationDate}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.EntitlementAssessment
+ * EntitlementAssessment}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.EntitlementAssessment1
+ * EntitlementAssessment1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.EntitlementAssessment2
+ * EntitlementAssessment2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.EntitlementAssessment3
+ * EntitlementAssessment3}</li>
  * </ul>
  * </li>
  * <li>
@@ -89,18 +80,24 @@ import java.util.List;
  * Resolution3.mmEntitlement}</li>
  * </ul>
  * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.EntitlementAssessment
- * EntitlementAssessment}</li>
- * <li>{@linkplain com.tools20022.repository.msg.EntitlementAssessment1
- * EntitlementAssessment1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.EntitlementAssessment2
- * EntitlementAssessment2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.EntitlementAssessment3
- * EntitlementAssessment3}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.MeetingEntitlement#mmEntitlementFixingDate
+ * MeetingEntitlement.mmEntitlementFixingDate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.MeetingEntitlement#mmEntitlementRatio
+ * MeetingEntitlement.mmEntitlementRatio}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.MeetingEntitlement#mmEligiblePosition
+ * MeetingEntitlement.mmEligiblePosition}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.MeetingEntitlement#mmRelatedServicing
+ * MeetingEntitlement.mmRelatedServicing}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.MeetingEntitlement#mmEntitlementCalculationDate
+ * MeetingEntitlement.mmEntitlementCalculationDate}</li>
  * </ul>
  * </li>
  * <li>
@@ -179,12 +176,11 @@ public class MeetingEntitlement {
 	 */
 	public static final MMBusinessAttribute mmEntitlementFixingDate = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.HoldingBalance2.mmDate, com.tools20022.repository.msg.HoldingBalance3.mmDate, com.tools20022.repository.msg.EntitlementAssessment1.mmEntitlementFixingDate,
-					com.tools20022.repository.msg.HoldingBalance6.mmDate, com.tools20022.repository.msg.EntitlementAssessment2.mmEntitlementFixingDate, com.tools20022.repository.msg.EligibilityDates1.mmEntitlementFixingDate,
-					com.tools20022.repository.msg.EntitlementAssessment3.mmEntitlementFixingDate, com.tools20022.repository.msg.HoldingBalance7.mmDate);
+			derivation_lazy = () -> Arrays.asList(HoldingBalance2.mmDate, HoldingBalance3.mmDate, EntitlementAssessment1.mmEntitlementFixingDate, HoldingBalance6.mmDate, EntitlementAssessment2.mmEntitlementFixingDate,
+					EligibilityDates1.mmEntitlementFixingDate, EntitlementAssessment3.mmEntitlementFixingDate, HoldingBalance7.mmDate);
 			elementContext_lazy = () -> MeetingEntitlement.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "EntitlementFixingDate";
 			definition = "Date at which the positions are struck to note which parties will receive the entitlement, e.g. record date, book close date...";
 			maxOccurs = 1;
@@ -234,11 +230,10 @@ public class MeetingEntitlement {
 	 */
 	public static final MMBusinessAttribute mmEntitlementRatio = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.EntitlementAssessment.mmEntitlementRatio, com.tools20022.repository.msg.EntitlementAssessment1.mmEntitlementRatio,
-					com.tools20022.repository.choice.Entitlement1Choice.mmEntitlementRatio);
+			derivation_lazy = () -> Arrays.asList(EntitlementAssessment.mmEntitlementRatio, EntitlementAssessment1.mmEntitlementRatio, Entitlement1Choice.mmEntitlementRatio);
 			elementContext_lazy = () -> MeetingEntitlement.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "EntitlementRatio";
 			definition = "Number of votes assigned to one security.";
 			maxOccurs = 1;
@@ -284,12 +279,12 @@ public class MeetingEntitlement {
 		{
 			elementContext_lazy = () -> MeetingEntitlement.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "EligiblePosition";
 			definition = "Amount of securities that are eligible for the vote.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesBalance.mmRelatedMeetingEntitlement;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SecuritiesBalance.mmObject();
 		}
 	};
@@ -331,13 +326,13 @@ public class MeetingEntitlement {
 		{
 			elementContext_lazy = () -> MeetingEntitlement.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedServicing";
 			definition = "Services which include the entitlement calculation.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.MeetingServicing.mmMeetingEntitlement;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.MeetingServicing.mmObject();
 		}
 	};
@@ -371,7 +366,7 @@ public class MeetingEntitlement {
 		{
 			elementContext_lazy = () -> MeetingEntitlement.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "EntitlementCalculationDate";
 			definition = "Date at which the positions are calculated.";
 			maxOccurs = 1;
@@ -383,16 +378,14 @@ public class MeetingEntitlement {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MeetingEntitlement";
 				definition = "Notification of the entitlement that one party has in relation with a specific meeting.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesBalance.mmRelatedMeetingEntitlement, com.tools20022.repository.entity.MeetingServicing.mmMeetingEntitlement);
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Entitlement1Choice.mmEntitlementDescription, com.tools20022.repository.msg.EntitlementAssessment2.mmEntitlement,
-						com.tools20022.repository.msg.EntitlementAssessment3.mmEntitlement, com.tools20022.repository.msg.Resolution3.mmEntitlement);
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.MeetingEntitlement.mmEntitlementFixingDate, com.tools20022.repository.entity.MeetingEntitlement.mmEntitlementRatio,
-						com.tools20022.repository.entity.MeetingEntitlement.mmEligiblePosition, com.tools20022.repository.entity.MeetingEntitlement.mmRelatedServicing,
-						com.tools20022.repository.entity.MeetingEntitlement.mmEntitlementCalculationDate);
+				derivationElement_lazy = () -> Arrays.asList(Entitlement1Choice.mmEntitlementDescription, EntitlementAssessment2.mmEntitlement, EntitlementAssessment3.mmEntitlement, Resolution3.mmEntitlement);
+				element_lazy = () -> Arrays.asList(MeetingEntitlement.mmEntitlementFixingDate, MeetingEntitlement.mmEntitlementRatio, MeetingEntitlement.mmEligiblePosition, MeetingEntitlement.mmRelatedServicing,
+						MeetingEntitlement.mmEntitlementCalculationDate);
 				derivationComponent_lazy = () -> Arrays.asList(EntitlementAssessment.mmObject(), EntitlementAssessment1.mmObject(), EntitlementAssessment2.mmObject(), EntitlementAssessment3.mmObject());
 			}
 		});

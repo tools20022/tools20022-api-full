@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.RankCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -75,7 +77,7 @@ public class Rank1Code extends RankCode {
 	 */
 	public static final MMCode mmPrimary = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Primary";
 			owner_lazy = () -> Rank1Code.mmObject();
 		}
@@ -97,7 +99,7 @@ public class Rank1Code extends RankCode {
 	 */
 	public static final MMCode mmSecondary = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Secondary";
 			owner_lazy = () -> Rank1Code.mmObject();
 		}
@@ -106,11 +108,11 @@ public class Rank1Code extends RankCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Rank1Code";
 				definition = "Specifies the rank of an element (party, market) in a specific environment.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Rank1Code.mmPrimary, com.tools20022.repository.codeset.Rank1Code.mmSecondary);
+				code_lazy = () -> Arrays.asList(Rank1Code.mmPrimary, Rank1Code.mmSecondary);
 				trace_lazy = () -> RankCode.mmObject();
 			}
 		});

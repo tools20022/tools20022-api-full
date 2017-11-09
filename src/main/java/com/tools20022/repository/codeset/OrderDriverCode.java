@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.SideCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -80,7 +82,7 @@ public class OrderDriverCode extends SideCode {
 	 */
 	public static final MMCode mmBuy = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Buy";
 			owner_lazy = () -> OrderDriverCode.mmObject();
 		}
@@ -103,7 +105,7 @@ public class OrderDriverCode extends SideCode {
 	 */
 	public static final MMCode mmSell = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Sell";
 			owner_lazy = () -> OrderDriverCode.mmObject();
 		}
@@ -112,12 +114,12 @@ public class OrderDriverCode extends SideCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("BUYI");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OrderDriverCode";
 				definition = "Specifies if the order is sell or buy driven.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OrderDriverCode.mmBuy, com.tools20022.repository.codeset.OrderDriverCode.mmSell);
+				code_lazy = () -> Arrays.asList(OrderDriverCode.mmBuy, OrderDriverCode.mmSell);
 				trace_lazy = () -> SideCode.mmObject();
 			}
 		});

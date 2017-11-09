@@ -19,6 +19,8 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.AdditionalReference3;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -108,10 +110,10 @@ public class LinkedMessage1Choice {
 			componentContext_lazy = () -> LinkedMessage1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "PrvsRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousReference";
 			definition = "Linked previous reference.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.LinkedMessage2Choice.mmPreviousReference);
+			nextVersions_lazy = () -> Arrays.asList(LinkedMessage2Choice.mmPreviousReference);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -158,10 +160,10 @@ public class LinkedMessage1Choice {
 			componentContext_lazy = () -> LinkedMessage1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "OthrRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherReference";
 			definition = "Linked other reference.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.LinkedMessage2Choice.mmOtherReference);
+			nextVersions_lazy = () -> Arrays.asList(LinkedMessage2Choice.mmOtherReference);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -200,7 +202,7 @@ public class LinkedMessage1Choice {
 			componentContext_lazy = () -> LinkedMessage1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "RltdRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedReference";
 			definition = "Linked related reference.";
 			maxOccurs = 1;
@@ -213,10 +215,9 @@ public class LinkedMessage1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.LinkedMessage1Choice.mmPreviousReference, com.tools20022.repository.choice.LinkedMessage1Choice.mmOtherReference,
-						com.tools20022.repository.choice.LinkedMessage1Choice.mmRelatedReference);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(LinkedMessage1Choice.mmPreviousReference, LinkedMessage1Choice.mmOtherReference, LinkedMessage1Choice.mmRelatedReference);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "LinkedMessage1Choice";
 				definition = "Reference to a message.";
 				nextVersions_lazy = () -> Arrays.asList(LinkedMessage2Choice.mmObject());

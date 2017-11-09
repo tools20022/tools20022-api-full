@@ -19,7 +19,13 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.semt.AccountingStatementOfHoldings;
+import com.tools20022.repository.area.semt.AccountingStatementOfHoldingsV02;
+import com.tools20022.repository.area.semt.CustodyStatementOfHoldings;
+import com.tools20022.repository.area.semt.CustodyStatementOfHoldingsV02;
 import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -110,7 +116,7 @@ public class TotalValueInPageAndStatement {
 			componentContext_lazy = () -> TotalValueInPageAndStatement.mmObject();
 			isDerived = false;
 			xmlTag = "TtlHldgsValOfPg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalHoldingsValueOfPage";
 			definition = "Total value of positions reported in this message.";
 			maxOccurs = 1;
@@ -155,7 +161,7 @@ public class TotalValueInPageAndStatement {
 			componentContext_lazy = () -> TotalValueInPageAndStatement.mmObject();
 			isDerived = false;
 			xmlTag = "TtlHldgsValOfStmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalHoldingsValueOfStatement";
 			definition = "Total value of positions reported in this statement (a statement may comprise one or more messages).";
 			maxOccurs = 1;
@@ -167,11 +173,11 @@ public class TotalValueInPageAndStatement {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TotalValueInPageAndStatement.mmTotalHoldingsValueOfPage, com.tools20022.repository.msg.TotalValueInPageAndStatement.mmTotalHoldingsValueOfStatement);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.AccountingStatementOfHoldings.mmTotalValues, com.tools20022.repository.area.semt.AccountingStatementOfHoldingsV02.mmTotalValues,
-						com.tools20022.repository.area.semt.CustodyStatementOfHoldings.mmTotalValues, com.tools20022.repository.area.semt.CustodyStatementOfHoldingsV02.mmTotalValues);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(TotalValueInPageAndStatement.mmTotalHoldingsValueOfPage, TotalValueInPageAndStatement.mmTotalHoldingsValueOfStatement);
+				messageBuildingBlock_lazy = () -> Arrays.asList(AccountingStatementOfHoldings.mmTotalValues, AccountingStatementOfHoldingsV02.mmTotalValues, CustodyStatementOfHoldings.mmTotalValues,
+						CustodyStatementOfHoldingsV02.mmTotalValues);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TotalValueInPageAndStatement";
 				definition = "Value of total holdings reported.";
 			}

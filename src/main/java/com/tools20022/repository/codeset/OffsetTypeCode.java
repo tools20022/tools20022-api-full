@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -28,6 +30,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.OffsetType1Code
+ * OffsetType1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>{@linkplain com.tools20022.repository.codeset.OffsetTypeCode#mmPrice
@@ -40,13 +49,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.OffsetTypeCode#mmPriceTierLevel
  * OffsetTypeCode.mmPriceTierLevel}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.OffsetType1Code
- * OffsetType1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -100,7 +102,7 @@ public class OffsetTypeCode {
 	 */
 	public static final MMCode mmPrice = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Price";
 			definition = "Indicates that range of peg order or discretion offset value is a price.";
 			owner_lazy = () -> OffsetTypeCode.mmObject();
@@ -133,7 +135,7 @@ public class OffsetTypeCode {
 	 */
 	public static final MMCode mmBasisPoint = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BasisPoint";
 			definition = "The range of peg order or discretion offset value is measured in basis points.";
 			owner_lazy = () -> OffsetTypeCode.mmObject();
@@ -164,7 +166,7 @@ public class OffsetTypeCode {
 	 */
 	public static final MMCode mmTick = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Tick";
 			definition = "The range of peg order or discretion offset value is a tick.";
 			owner_lazy = () -> OffsetTypeCode.mmObject();
@@ -195,7 +197,7 @@ public class OffsetTypeCode {
 	 */
 	public static final MMCode mmPriceTierLevel = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PriceTierLevel";
 			definition = "The range of peg order or discretion offset is a price level.";
 			owner_lazy = () -> OffsetTypeCode.mmObject();
@@ -206,13 +208,12 @@ public class OffsetTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("PRIC");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OffsetTypeCode";
 				definition = "Type of peg offset or type of discretion offset (e.g. price offset, tick offset etc).";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OffsetTypeCode.mmPrice, com.tools20022.repository.codeset.OffsetTypeCode.mmBasisPoint, com.tools20022.repository.codeset.OffsetTypeCode.mmTick,
-						com.tools20022.repository.codeset.OffsetTypeCode.mmPriceTierLevel);
+				code_lazy = () -> Arrays.asList(OffsetTypeCode.mmPrice, OffsetTypeCode.mmBasisPoint, OffsetTypeCode.mmTick, OffsetTypeCode.mmPriceTierLevel);
 				derivation_lazy = () -> Arrays.asList(OffsetType1Code.mmObject());
 			}
 		});

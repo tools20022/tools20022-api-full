@@ -17,8 +17,11 @@
 
 package com.tools20022.repository.entity;
 
+import com.tools20022.metamodel.MMAggregation;
 import com.tools20022.metamodel.MMBusinessAssociationEnd;
 import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -32,33 +35,132 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
  * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionPrice#mmCorporateActionEvent
- * CorporateActionPrice.mmCorporateActionEvent}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionPrice#mmCorporateActionExercisePrice
- * CorporateActionPrice.mmCorporateActionExercisePrice}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionPrice#mmGenericCashPriceReceivedPerProduct
- * CorporateActionPrice.mmGenericCashPriceReceivedPerProduct}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionPrice#mmGenericCashPricePaidPerProduct
- * CorporateActionPrice.mmGenericCashPricePaidPerProduct}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionPrice#mmCashInLieuOfSharePrice
- * CorporateActionPrice.mmCashInLieuOfSharePrice}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionPrice#mmOverSubscriptionDepositPrice
- * CorporateActionPrice.mmOverSubscriptionDepositPrice}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionPrice#mmCashValueForTax
- * CorporateActionPrice.mmCashValueForTax}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionPrice#mmPricingCalculation
- * CorporateActionPrice.mmPricingCalculation}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice8
+ * CorporateActionPrice8}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice11
+ * CorporateActionPrice11}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice19
+ * CorporateActionPrice19}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice20
+ * CorporateActionPrice20}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice29
+ * CorporateActionPrice29}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice35
+ * CorporateActionPrice35}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice5
+ * CorporateActionPrice5}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice9
+ * CorporateActionPrice9}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice7
+ * CorporateActionPrice7}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice12
+ * CorporateActionPrice12}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice21
+ * CorporateActionPrice21}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice22
+ * CorporateActionPrice22}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice30
+ * CorporateActionPrice30}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice27
+ * CorporateActionPrice27}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice36
+ * CorporateActionPrice36}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice33
+ * CorporateActionPrice33}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice39
+ * CorporateActionPrice39}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice40
+ * CorporateActionPrice40}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice6
+ * CorporateActionPrice6}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice10
+ * CorporateActionPrice10}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice14
+ * CorporateActionPrice14}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice13
+ * CorporateActionPrice13}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice16
+ * CorporateActionPrice16}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice18
+ * CorporateActionPrice18}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice23
+ * CorporateActionPrice23}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice24
+ * CorporateActionPrice24}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice28
+ * CorporateActionPrice28}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice26
+ * CorporateActionPrice26}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice34
+ * CorporateActionPrice34}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice32
+ * CorporateActionPrice32}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice38
+ * CorporateActionPrice38}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice41
+ * CorporateActionPrice41}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice3
+ * CorporateActionPrice3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice15
+ * CorporateActionPrice15}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice17
+ * CorporateActionPrice17}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice25
+ * CorporateActionPrice25}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice31
+ * CorporateActionPrice31}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice37
+ * CorporateActionPrice37}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice2
+ * CorporateActionPrice2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice1
+ * CorporateActionPrice1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice4
+ * CorporateActionPrice4}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice42
+ * CorporateActionPrice42}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice43
+ * CorporateActionPrice43}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice44
+ * CorporateActionPrice44}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice45
+ * CorporateActionPrice45}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice50
+ * CorporateActionPrice50}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice52
+ * CorporateActionPrice52}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice55
+ * CorporateActionPrice55}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice51
+ * CorporateActionPrice51}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice59
+ * CorporateActionPrice59}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice56
+ * CorporateActionPrice56}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice60
+ * CorporateActionPrice60}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice58
+ * CorporateActionPrice58}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice61
+ * CorporateActionPrice61}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice57
+ * CorporateActionPrice57}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice63
+ * CorporateActionPrice63}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice65
+ * CorporateActionPrice65}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice62
+ * CorporateActionPrice62}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice66
+ * CorporateActionPrice66}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice67
+ * CorporateActionPrice67}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice64
+ * CorporateActionPrice64}</li>
  * </ul>
  * </li>
  * <li>
@@ -205,132 +307,33 @@ import java.util.concurrent.atomic.AtomicReference;
  * CorporateActionPrice64.mmIndicativeOrMarketPrice}</li>
  * </ul>
  * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice8
- * CorporateActionPrice8}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice11
- * CorporateActionPrice11}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice19
- * CorporateActionPrice19}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice20
- * CorporateActionPrice20}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice29
- * CorporateActionPrice29}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice35
- * CorporateActionPrice35}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice5
- * CorporateActionPrice5}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice9
- * CorporateActionPrice9}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice7
- * CorporateActionPrice7}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice12
- * CorporateActionPrice12}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice21
- * CorporateActionPrice21}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice22
- * CorporateActionPrice22}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice30
- * CorporateActionPrice30}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice27
- * CorporateActionPrice27}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice36
- * CorporateActionPrice36}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice33
- * CorporateActionPrice33}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice39
- * CorporateActionPrice39}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice40
- * CorporateActionPrice40}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice6
- * CorporateActionPrice6}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice10
- * CorporateActionPrice10}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice14
- * CorporateActionPrice14}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice13
- * CorporateActionPrice13}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice16
- * CorporateActionPrice16}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice18
- * CorporateActionPrice18}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice23
- * CorporateActionPrice23}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice24
- * CorporateActionPrice24}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice28
- * CorporateActionPrice28}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice26
- * CorporateActionPrice26}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice34
- * CorporateActionPrice34}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice32
- * CorporateActionPrice32}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice38
- * CorporateActionPrice38}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice41
- * CorporateActionPrice41}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice3
- * CorporateActionPrice3}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice15
- * CorporateActionPrice15}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice17
- * CorporateActionPrice17}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice25
- * CorporateActionPrice25}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice31
- * CorporateActionPrice31}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice37
- * CorporateActionPrice37}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice2
- * CorporateActionPrice2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice1
- * CorporateActionPrice1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice4
- * CorporateActionPrice4}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice42
- * CorporateActionPrice42}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice43
- * CorporateActionPrice43}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice44
- * CorporateActionPrice44}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice45
- * CorporateActionPrice45}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice50
- * CorporateActionPrice50}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice52
- * CorporateActionPrice52}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice55
- * CorporateActionPrice55}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice51
- * CorporateActionPrice51}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice59
- * CorporateActionPrice59}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice56
- * CorporateActionPrice56}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice60
- * CorporateActionPrice60}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice58
- * CorporateActionPrice58}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice61
- * CorporateActionPrice61}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice57
- * CorporateActionPrice57}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice63
- * CorporateActionPrice63}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice65
- * CorporateActionPrice65}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice62
- * CorporateActionPrice62}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice66
- * CorporateActionPrice66}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice67
- * CorporateActionPrice67}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice64
- * CorporateActionPrice64}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionPrice#mmCorporateActionEvent
+ * CorporateActionPrice.mmCorporateActionEvent}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionPrice#mmCorporateActionExercisePrice
+ * CorporateActionPrice.mmCorporateActionExercisePrice}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionPrice#mmGenericCashPriceReceivedPerProduct
+ * CorporateActionPrice.mmGenericCashPriceReceivedPerProduct}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionPrice#mmGenericCashPricePaidPerProduct
+ * CorporateActionPrice.mmGenericCashPricePaidPerProduct}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionPrice#mmCashInLieuOfSharePrice
+ * CorporateActionPrice.mmCashInLieuOfSharePrice}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionPrice#mmOverSubscriptionDepositPrice
+ * CorporateActionPrice.mmOverSubscriptionDepositPrice}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionPrice#mmCashValueForTax
+ * CorporateActionPrice.mmCashValueForTax}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionPrice#mmPricingCalculation
+ * CorporateActionPrice.mmPricingCalculation}</li>
  * </ul>
  * </li>
  * <li>
@@ -390,13 +393,13 @@ public class CorporateActionPrice {
 		{
 			elementContext_lazy = () -> CorporateActionPrice.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CorporateActionEvent";
 			definition = "Corporate event for which a price is specified.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmCorporateActionPrice;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmObject();
 		}
 	};
@@ -475,19 +478,17 @@ public class CorporateActionPrice {
 	 */
 	public static final MMBusinessAssociationEnd mmCorporateActionExercisePrice = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionPrice8.mmExercisePrice, com.tools20022.repository.msg.CorporateActionPrice11.mmExercisePrice,
-					com.tools20022.repository.msg.CorporateActionPrice19.mmExercisePrice, com.tools20022.repository.msg.CorporateActionPrice20.mmExercisePrice, com.tools20022.repository.msg.CorporateActionPrice5.mmExercisePrice,
-					com.tools20022.repository.msg.CorporateActionPrice7.mmExercisePrice, com.tools20022.repository.msg.CorporateActionPrice6.mmExercisePrice, com.tools20022.repository.msg.CorporateActionPrice14.mmExercisePrice,
-					com.tools20022.repository.msg.CorporateActionPrice1.mmExercisePrice);
+			derivation_lazy = () -> Arrays.asList(CorporateActionPrice8.mmExercisePrice, CorporateActionPrice11.mmExercisePrice, CorporateActionPrice19.mmExercisePrice, CorporateActionPrice20.mmExercisePrice,
+					CorporateActionPrice5.mmExercisePrice, CorporateActionPrice7.mmExercisePrice, CorporateActionPrice6.mmExercisePrice, CorporateActionPrice14.mmExercisePrice, CorporateActionPrice1.mmExercisePrice);
 			elementContext_lazy = () -> CorporateActionPrice.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CorporateActionExercisePrice";
 			definition = "1. Price at which security will be purchased/sold if warrant is exercised, either as an actual amount or a percentage.\r\n2. Price at which a bond is converted to underlying security either as an actual amount or a percentage.\r\n3. Strike price of an option, represented either as an actual amount or a percentage.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmExercisePriceRelatedEvent;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 		}
 	};
@@ -724,47 +725,35 @@ public class CorporateActionPrice {
 	 */
 	public static final MMBusinessAssociationEnd mmGenericCashPriceReceivedPerProduct = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionPrice8.mmGenericCashPriceReceivedPerProduct, com.tools20022.repository.msg.CorporateActionPrice11.mmGenericCashPriceReceivedPerProduct,
-					com.tools20022.repository.msg.CorporateActionPrice19.mmGenericCashPriceReceivedPerProduct, com.tools20022.repository.msg.CorporateActionPrice20.mmGenericCashPriceReceivedPerProduct,
-					com.tools20022.repository.msg.CorporateActionPrice29.mmGenericCashPriceReceivedPerProduct, com.tools20022.repository.msg.CorporateActionPrice35.mmGenericCashPriceReceivedPerProduct,
-					com.tools20022.repository.msg.CorporateActionPrice5.mmGenericCashPriceReceivedPerProduct, com.tools20022.repository.msg.CashOption2.mmGenericCashPriceReceivedPerProduct,
-					com.tools20022.repository.msg.CorporateActionPrice7.mmGenericCashPriceReceivedPerProduct, com.tools20022.repository.msg.CashOption9.mmGenericCashPriceReceivedPerProduct,
-					com.tools20022.repository.msg.CorporateActionPrice21.mmGenericCashPriceReceivedPerProduct, com.tools20022.repository.msg.PriceDetails2.mmGenericCashPriceReceivedPerProduct,
-					com.tools20022.repository.msg.CorporateActionPrice22.mmGenericCashPriceReceivedPerProduct, com.tools20022.repository.msg.PriceDetails4.mmGenericCashPriceReceivedPerProduct,
-					com.tools20022.repository.msg.CorporateActionPrice27.mmGenericCashPriceReceivedPerProduct, com.tools20022.repository.msg.PriceDetails7.mmGenericCashPriceReceivedPerProduct,
-					com.tools20022.repository.msg.CorporateActionPrice33.mmGenericCashPriceReceivedPerProduct, com.tools20022.repository.msg.PriceDetails9.mmGenericCashPriceReceivedPerProduct,
-					com.tools20022.repository.msg.CorporateActionPrice39.mmGenericCashPriceReceivedPerProduct, com.tools20022.repository.msg.PriceDetails11.mmGenericCashPriceReceivedPerProduct,
-					com.tools20022.repository.msg.CorporateActionPrice40.mmGenericCashPriceReceivedPerProduct, com.tools20022.repository.msg.PriceDetails12.mmGenericCashPriceReceivedPerProduct,
-					com.tools20022.repository.msg.CorporateActionPrice6.mmGenericCashPriceReceivedPerProduct, com.tools20022.repository.msg.CashOption3.mmGenericCashPriceReceivedPerProduct,
-					com.tools20022.repository.msg.CorporateActionPrice14.mmGenericCashPriceReceivedPerProduct, com.tools20022.repository.msg.CashOption6.mmGenericCashPriceReceivedPerProduct,
-					com.tools20022.repository.msg.CorporateActionPrice16.mmGenericCashPriceReceivedPerProduct, com.tools20022.repository.msg.PriceDetails3.mmGenericCashPriceReceivedPerProduct,
-					com.tools20022.repository.msg.CorporateActionPrice23.mmGenericCashPriceReceivedPerProduct, com.tools20022.repository.msg.PriceDetails5.mmGenericCashPriceReceivedPerProduct,
-					com.tools20022.repository.msg.CorporateActionPrice26.mmGenericCashPriceReceivedPerProduct, com.tools20022.repository.msg.PriceDetails6.mmGenericCashPriceReceivedPerProduct,
-					com.tools20022.repository.msg.CorporateActionPrice32.mmGenericCashPriceReceivedPerProduct, com.tools20022.repository.msg.PriceDetails8.mmGenericCashPriceReceivedPerProduct,
-					com.tools20022.repository.msg.CorporateActionPrice38.mmGenericCashPriceReceivedPerProduct, com.tools20022.repository.msg.PriceDetails10.mmGenericCashPriceReceivedPerProduct,
-					com.tools20022.repository.msg.CorporateActionPrice41.mmGenericCashPriceReceivedPerProduct, com.tools20022.repository.msg.PriceDetails13.mmGenericCashPriceReceivedPerProduct,
-					com.tools20022.repository.msg.CashOption4.mmGenericCashPriceReceivedPerProduct, com.tools20022.repository.msg.CashOption8.mmGenericCashPriceReceivedPerProduct,
-					com.tools20022.repository.msg.CorporateActionPrice31.mmGenericCashPriceReceivedPerProduct, com.tools20022.repository.msg.CorporateActionPrice37.mmGenericCashPriceReceivedPerProduct,
-					com.tools20022.repository.msg.CorporateActionPrice1.mmGenericCashPriceReceivedPerProduct, com.tools20022.repository.msg.PriceDetails14.mmGenericCashPriceReceivedPerProduct,
-					com.tools20022.repository.msg.CorporateActionPrice43.mmGenericCashPriceReceivedPerProduct, com.tools20022.repository.msg.CorporateActionPrice44.mmGenericCashPriceReceivedPerProduct,
-					com.tools20022.repository.msg.CorporateActionPrice45.mmGenericCashPriceReceivedPerProduct, com.tools20022.repository.msg.PriceDetails15.mmGenericCashPriceReceivedPerProduct,
-					com.tools20022.repository.msg.PriceDetails18.mmGenericCashPriceReceivedPerProduct, com.tools20022.repository.msg.PriceDetails21.mmGenericCashPriceReceivedPerProduct,
-					com.tools20022.repository.msg.CorporateActionPrice52.mmGenericCashPriceReceivedPerProduct, com.tools20022.repository.msg.CorporateActionPrice55.mmGenericCashPriceReceivedPerProduct,
-					com.tools20022.repository.msg.CorporateActionPrice51.mmGenericCashPriceReceivedPerProduct, com.tools20022.repository.msg.CorporateActionPrice59.mmGenericCashPriceReceivedPerProduct,
-					com.tools20022.repository.msg.PriceDetails23.mmGenericCashPriceReceivedPerProduct, com.tools20022.repository.msg.CorporateActionPrice56.mmGenericCashPriceReceivedPerProduct,
-					com.tools20022.repository.msg.CorporateActionPrice60.mmGenericCashPriceReceivedPerProduct, com.tools20022.repository.msg.PriceDetails22.mmGenericCashPriceReceivedPerProduct,
-					com.tools20022.repository.msg.PriceDetails24.mmGenericCashPriceReceivedPerProduct, com.tools20022.repository.msg.PriceDetails25.mmGenericCashPriceReceivedPerProduct,
-					com.tools20022.repository.msg.CorporateActionPrice62.mmGenericCashPriceReceivedPerProduct, com.tools20022.repository.msg.CorporateActionPrice66.mmGenericCashPriceReceivedPerProduct,
-					com.tools20022.repository.msg.CorporateActionPrice64.mmGenericCashPriceReceivedPerProduct);
+			derivation_lazy = () -> Arrays.asList(CorporateActionPrice8.mmGenericCashPriceReceivedPerProduct, CorporateActionPrice11.mmGenericCashPriceReceivedPerProduct, CorporateActionPrice19.mmGenericCashPriceReceivedPerProduct,
+					CorporateActionPrice20.mmGenericCashPriceReceivedPerProduct, CorporateActionPrice29.mmGenericCashPriceReceivedPerProduct, CorporateActionPrice35.mmGenericCashPriceReceivedPerProduct,
+					CorporateActionPrice5.mmGenericCashPriceReceivedPerProduct, CashOption2.mmGenericCashPriceReceivedPerProduct, CorporateActionPrice7.mmGenericCashPriceReceivedPerProduct, CashOption9.mmGenericCashPriceReceivedPerProduct,
+					CorporateActionPrice21.mmGenericCashPriceReceivedPerProduct, PriceDetails2.mmGenericCashPriceReceivedPerProduct, CorporateActionPrice22.mmGenericCashPriceReceivedPerProduct,
+					PriceDetails4.mmGenericCashPriceReceivedPerProduct, CorporateActionPrice27.mmGenericCashPriceReceivedPerProduct, PriceDetails7.mmGenericCashPriceReceivedPerProduct,
+					CorporateActionPrice33.mmGenericCashPriceReceivedPerProduct, PriceDetails9.mmGenericCashPriceReceivedPerProduct, CorporateActionPrice39.mmGenericCashPriceReceivedPerProduct,
+					PriceDetails11.mmGenericCashPriceReceivedPerProduct, CorporateActionPrice40.mmGenericCashPriceReceivedPerProduct, PriceDetails12.mmGenericCashPriceReceivedPerProduct,
+					CorporateActionPrice6.mmGenericCashPriceReceivedPerProduct, CashOption3.mmGenericCashPriceReceivedPerProduct, CorporateActionPrice14.mmGenericCashPriceReceivedPerProduct,
+					CashOption6.mmGenericCashPriceReceivedPerProduct, CorporateActionPrice16.mmGenericCashPriceReceivedPerProduct, PriceDetails3.mmGenericCashPriceReceivedPerProduct,
+					CorporateActionPrice23.mmGenericCashPriceReceivedPerProduct, PriceDetails5.mmGenericCashPriceReceivedPerProduct, CorporateActionPrice26.mmGenericCashPriceReceivedPerProduct,
+					PriceDetails6.mmGenericCashPriceReceivedPerProduct, CorporateActionPrice32.mmGenericCashPriceReceivedPerProduct, PriceDetails8.mmGenericCashPriceReceivedPerProduct,
+					CorporateActionPrice38.mmGenericCashPriceReceivedPerProduct, PriceDetails10.mmGenericCashPriceReceivedPerProduct, CorporateActionPrice41.mmGenericCashPriceReceivedPerProduct,
+					PriceDetails13.mmGenericCashPriceReceivedPerProduct, CashOption4.mmGenericCashPriceReceivedPerProduct, CashOption8.mmGenericCashPriceReceivedPerProduct, CorporateActionPrice31.mmGenericCashPriceReceivedPerProduct,
+					CorporateActionPrice37.mmGenericCashPriceReceivedPerProduct, CorporateActionPrice1.mmGenericCashPriceReceivedPerProduct, PriceDetails14.mmGenericCashPriceReceivedPerProduct,
+					CorporateActionPrice43.mmGenericCashPriceReceivedPerProduct, CorporateActionPrice44.mmGenericCashPriceReceivedPerProduct, CorporateActionPrice45.mmGenericCashPriceReceivedPerProduct,
+					PriceDetails15.mmGenericCashPriceReceivedPerProduct, PriceDetails18.mmGenericCashPriceReceivedPerProduct, PriceDetails21.mmGenericCashPriceReceivedPerProduct, CorporateActionPrice52.mmGenericCashPriceReceivedPerProduct,
+					CorporateActionPrice55.mmGenericCashPriceReceivedPerProduct, CorporateActionPrice51.mmGenericCashPriceReceivedPerProduct, CorporateActionPrice59.mmGenericCashPriceReceivedPerProduct,
+					PriceDetails23.mmGenericCashPriceReceivedPerProduct, CorporateActionPrice56.mmGenericCashPriceReceivedPerProduct, CorporateActionPrice60.mmGenericCashPriceReceivedPerProduct,
+					PriceDetails22.mmGenericCashPriceReceivedPerProduct, PriceDetails24.mmGenericCashPriceReceivedPerProduct, PriceDetails25.mmGenericCashPriceReceivedPerProduct, CorporateActionPrice62.mmGenericCashPriceReceivedPerProduct,
+					CorporateActionPrice66.mmGenericCashPriceReceivedPerProduct, CorporateActionPrice64.mmGenericCashPriceReceivedPerProduct);
 			elementContext_lazy = () -> CorporateActionPrice.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "GenericCashPriceReceivedPerProduct";
 			definition = "Generic cash price received per product by the underlying security holder either as a percentage or an amount, eg, redemption price.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmGenericCashPriceReceivedPerProductRelatedEvent;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 		}
 	};
@@ -972,42 +961,29 @@ public class CorporateActionPrice {
 	 */
 	public static final MMBusinessAssociationEnd mmGenericCashPricePaidPerProduct = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionPrice8.mmGenericCashPricePaidPerProduct, com.tools20022.repository.msg.CorporateActionPrice11.mmGenericCashPricePaidPerProduct,
-					com.tools20022.repository.msg.CorporateActionPrice19.mmGenericCashPricePaidPerProduct, com.tools20022.repository.msg.CorporateActionPrice20.mmGenericCashPricePaidPerProduct,
-					com.tools20022.repository.msg.CorporateActionPrice29.mmGenericCashPricePaidPerProduct, com.tools20022.repository.msg.CorporateActionPrice35.mmGenericCashPricePaidPerProduct,
-					com.tools20022.repository.msg.CorporateActionPrice5.mmGenericCashPricePaidPerProduct, com.tools20022.repository.msg.CorporateActionPrice7.mmGenericCashPricePaidPerProduct,
-					com.tools20022.repository.msg.PriceDetails2.mmGenericCashPricePaidPerProduct, com.tools20022.repository.msg.PriceDetails4.mmGenericCashPricePaidPerProduct,
-					com.tools20022.repository.msg.CorporateActionPrice27.mmGenericCashPricePaidPerProduct, com.tools20022.repository.msg.PriceDetails7.mmGenericCashPricePaidPerProduct,
-					com.tools20022.repository.msg.CorporateActionPrice33.mmGenericCashPricePaidPerProduct, com.tools20022.repository.msg.PriceDetails9.mmGenericCashPricePaidPerProduct,
-					com.tools20022.repository.msg.CorporateActionPrice39.mmGenericCashPricePaidPerProduct, com.tools20022.repository.msg.PriceDetails11.mmGenericCashPricePaidPerProduct,
-					com.tools20022.repository.msg.CorporateActionPrice40.mmGenericCashPricePaidPerProduct, com.tools20022.repository.msg.PriceDetails12.mmGenericCashPricePaidPerProduct,
-					com.tools20022.repository.msg.CorporateActionPrice6.mmGenericCashPricePaidPerProduct, com.tools20022.repository.msg.CorporateActionPrice14.mmGenericCashPricePaidPerProduct,
-					com.tools20022.repository.msg.PriceDetails3.mmGenericCashPricePaidPerProduct, com.tools20022.repository.msg.PriceDetails5.mmGenericCashPricePaidPerProduct,
-					com.tools20022.repository.msg.CorporateActionPrice26.mmGenericCashPricePaidPerProduct, com.tools20022.repository.msg.PriceDetails6.mmGenericCashPricePaidPerProduct,
-					com.tools20022.repository.msg.CorporateActionPrice32.mmGenericCashPricePaidPerProduct, com.tools20022.repository.msg.PriceDetails8.mmGenericCashPricePaidPerProduct,
-					com.tools20022.repository.msg.CorporateActionPrice38.mmGenericCashPricePaidPerProduct, com.tools20022.repository.msg.PriceDetails10.mmGenericCashPricePaidPerProduct,
-					com.tools20022.repository.msg.CorporateActionPrice41.mmGenericCashPricePaidPerProduct, com.tools20022.repository.msg.PriceDetails13.mmGenericCashPricePaidPerProduct,
-					com.tools20022.repository.msg.CorporateActionPrice31.mmGenericCashPricePaidPerProduct, com.tools20022.repository.msg.CorporateActionPrice37.mmGenericCashPricePaidPerProduct,
-					com.tools20022.repository.msg.CorporateActionPrice1.mmGenericCashPricePaidPerProduct, com.tools20022.repository.msg.PriceDetails14.mmGenericCashPricePaidPerProduct,
-					com.tools20022.repository.msg.CorporateActionPrice43.mmGenericCashPricePaidPerProduct, com.tools20022.repository.msg.CorporateActionPrice44.mmGenericCashPricePaidPerProduct,
-					com.tools20022.repository.msg.CorporateActionPrice45.mmGenericCashPricePaidPerProduct, com.tools20022.repository.msg.PriceDetails15.mmGenericCashPricePaidPerProduct,
-					com.tools20022.repository.msg.PriceDetails18.mmGenericCashPricePaidPerProduct, com.tools20022.repository.msg.PriceDetails21.mmGenericCashPricePaidPerProduct,
-					com.tools20022.repository.msg.CorporateActionPrice52.mmGenericCashPricePaidPerProduct, com.tools20022.repository.msg.CorporateActionPrice55.mmGenericCashPricePaidPerProduct,
-					com.tools20022.repository.msg.CorporateActionPrice51.mmGenericCashPricePaidPerProduct, com.tools20022.repository.msg.CorporateActionPrice59.mmGenericCashPricePaidPerProduct,
-					com.tools20022.repository.msg.PriceDetails23.mmGenericCashPricePaidPerProduct, com.tools20022.repository.msg.CorporateActionPrice56.mmGenericCashPricePaidPerProduct,
-					com.tools20022.repository.msg.CorporateActionPrice60.mmGenericCashPricePaidPerProduct, com.tools20022.repository.msg.PriceDetails22.mmGenericCashPricePaidPerProduct,
-					com.tools20022.repository.msg.PriceDetails24.mmGenericCashPricePaidPerProduct, com.tools20022.repository.msg.PriceDetails25.mmGenericCashPricePaidPerProduct,
-					com.tools20022.repository.msg.CorporateActionPrice62.mmGenericCashPricePaidPerProduct, com.tools20022.repository.msg.CorporateActionPrice66.mmGenericCashPricePaidPerProduct,
-					com.tools20022.repository.msg.CorporateActionPrice64.mmGenericCashPricePaidPerProduct);
+			derivation_lazy = () -> Arrays.asList(CorporateActionPrice8.mmGenericCashPricePaidPerProduct, CorporateActionPrice11.mmGenericCashPricePaidPerProduct, CorporateActionPrice19.mmGenericCashPricePaidPerProduct,
+					CorporateActionPrice20.mmGenericCashPricePaidPerProduct, CorporateActionPrice29.mmGenericCashPricePaidPerProduct, CorporateActionPrice35.mmGenericCashPricePaidPerProduct,
+					CorporateActionPrice5.mmGenericCashPricePaidPerProduct, CorporateActionPrice7.mmGenericCashPricePaidPerProduct, PriceDetails2.mmGenericCashPricePaidPerProduct, PriceDetails4.mmGenericCashPricePaidPerProduct,
+					CorporateActionPrice27.mmGenericCashPricePaidPerProduct, PriceDetails7.mmGenericCashPricePaidPerProduct, CorporateActionPrice33.mmGenericCashPricePaidPerProduct, PriceDetails9.mmGenericCashPricePaidPerProduct,
+					CorporateActionPrice39.mmGenericCashPricePaidPerProduct, PriceDetails11.mmGenericCashPricePaidPerProduct, CorporateActionPrice40.mmGenericCashPricePaidPerProduct, PriceDetails12.mmGenericCashPricePaidPerProduct,
+					CorporateActionPrice6.mmGenericCashPricePaidPerProduct, CorporateActionPrice14.mmGenericCashPricePaidPerProduct, PriceDetails3.mmGenericCashPricePaidPerProduct, PriceDetails5.mmGenericCashPricePaidPerProduct,
+					CorporateActionPrice26.mmGenericCashPricePaidPerProduct, PriceDetails6.mmGenericCashPricePaidPerProduct, CorporateActionPrice32.mmGenericCashPricePaidPerProduct, PriceDetails8.mmGenericCashPricePaidPerProduct,
+					CorporateActionPrice38.mmGenericCashPricePaidPerProduct, PriceDetails10.mmGenericCashPricePaidPerProduct, CorporateActionPrice41.mmGenericCashPricePaidPerProduct, PriceDetails13.mmGenericCashPricePaidPerProduct,
+					CorporateActionPrice31.mmGenericCashPricePaidPerProduct, CorporateActionPrice37.mmGenericCashPricePaidPerProduct, CorporateActionPrice1.mmGenericCashPricePaidPerProduct, PriceDetails14.mmGenericCashPricePaidPerProduct,
+					CorporateActionPrice43.mmGenericCashPricePaidPerProduct, CorporateActionPrice44.mmGenericCashPricePaidPerProduct, CorporateActionPrice45.mmGenericCashPricePaidPerProduct, PriceDetails15.mmGenericCashPricePaidPerProduct,
+					PriceDetails18.mmGenericCashPricePaidPerProduct, PriceDetails21.mmGenericCashPricePaidPerProduct, CorporateActionPrice52.mmGenericCashPricePaidPerProduct, CorporateActionPrice55.mmGenericCashPricePaidPerProduct,
+					CorporateActionPrice51.mmGenericCashPricePaidPerProduct, CorporateActionPrice59.mmGenericCashPricePaidPerProduct, PriceDetails23.mmGenericCashPricePaidPerProduct, CorporateActionPrice56.mmGenericCashPricePaidPerProduct,
+					CorporateActionPrice60.mmGenericCashPricePaidPerProduct, PriceDetails22.mmGenericCashPricePaidPerProduct, PriceDetails24.mmGenericCashPricePaidPerProduct, PriceDetails25.mmGenericCashPricePaidPerProduct,
+					CorporateActionPrice62.mmGenericCashPricePaidPerProduct, CorporateActionPrice66.mmGenericCashPricePaidPerProduct, CorporateActionPrice64.mmGenericCashPricePaidPerProduct);
 			elementContext_lazy = () -> CorporateActionPrice.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "GenericCashPricePaidPerProduct";
 			definition = "Amount included in the dividend/NAV that is identified as gains directly or indirectly derived from interest payments within the scope of the EU Savings directive.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmGenericCashPricePaidPerProductRelatedEvent;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 		}
 	};
@@ -1178,36 +1154,26 @@ public class CorporateActionPrice {
 	 */
 	public static final MMBusinessAssociationEnd mmCashInLieuOfSharePrice = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionPrice5.mmCashInLieuOfSharePrice, com.tools20022.repository.msg.CorporateActionPrice9.mmCashInLieuOfSharePrice,
-					com.tools20022.repository.msg.CorporateActionPrice7.mmCashInLieuOfSharePrice, com.tools20022.repository.msg.CorporateActionPrice12.mmCashInLieuOfSharePrice,
-					com.tools20022.repository.msg.CorporateActionPrice21.mmCashInLieuOfSharePrice, com.tools20022.repository.msg.CorporateActionPrice22.mmCashInLieuOfSharePrice,
-					com.tools20022.repository.msg.CorporateActionPrice30.mmCashInLieuOfSharePrice, com.tools20022.repository.msg.CorporateActionPrice27.mmCashInLieuOfSharePrice,
-					com.tools20022.repository.msg.CorporateActionPrice36.mmCashInLieuOfSharePrice, com.tools20022.repository.msg.CorporateActionPrice33.mmCashInLieuOfSharePrice,
-					com.tools20022.repository.msg.CorporateActionPrice39.mmCashInLieuOfSharePrice, com.tools20022.repository.msg.CorporateActionPrice40.mmCashInLieuOfSharePrice,
-					com.tools20022.repository.msg.CorporateActionPrice6.mmCashInLieuOfSharePrice, com.tools20022.repository.msg.CorporateActionPrice10.mmCashInLieuOfSharePrice,
-					com.tools20022.repository.msg.CorporateActionPrice14.mmCashInLieuOfSharePrice, com.tools20022.repository.msg.CorporateActionPrice13.mmCashInLieuOfSharePrice,
-					com.tools20022.repository.msg.CorporateActionPrice16.mmCashInLieuOfSharePrice, com.tools20022.repository.msg.CorporateActionPrice18.mmCashInLieuOfSharePrice,
-					com.tools20022.repository.msg.CorporateActionPrice23.mmCashInLieuOfSharePrice, com.tools20022.repository.msg.CorporateActionPrice24.mmCashInLieuOfSharePrice,
-					com.tools20022.repository.msg.CorporateActionPrice28.mmCashInLieuOfSharePrice, com.tools20022.repository.msg.CorporateActionPrice26.mmCashInLieuOfSharePrice,
-					com.tools20022.repository.msg.CorporateActionPrice34.mmCashInLieuOfSharePrice, com.tools20022.repository.msg.CorporateActionPrice32.mmCashInLieuOfSharePrice,
-					com.tools20022.repository.msg.CorporateActionPrice38.mmCashInLieuOfSharePrice, com.tools20022.repository.msg.CorporateActionPrice41.mmCashInLieuOfSharePrice,
-					com.tools20022.repository.msg.CorporateActionPrice31.mmCashInLieuOfSharePrice, com.tools20022.repository.msg.CorporateActionPrice37.mmCashInLieuOfSharePrice,
-					com.tools20022.repository.msg.CorporateActionPrice1.mmCashInLieuOfSharePrice, com.tools20022.repository.msg.CorporateActionPrice43.mmCashInLieuOfSharePrice,
-					com.tools20022.repository.msg.CorporateActionPrice45.mmCashInLieuOfSharePrice, com.tools20022.repository.msg.CorporateActionPrice55.mmCashInLieuOfSharePrice,
-					com.tools20022.repository.msg.CorporateActionPrice51.mmCashInLieuOfSharePrice, com.tools20022.repository.msg.CorporateActionPrice59.mmCashInLieuOfSharePrice,
-					com.tools20022.repository.msg.CorporateActionPrice56.mmCashInLieuOfSharePrice, com.tools20022.repository.msg.CorporateActionPrice58.mmCashInLieuOfSharePrice,
-					com.tools20022.repository.msg.CorporateActionPrice61.mmCashInLieuOfSharePrice, com.tools20022.repository.msg.CorporateActionPrice63.mmCashInLieuOfSharePrice,
-					com.tools20022.repository.msg.CorporateActionPrice65.mmCashInLieuOfSharePrice, com.tools20022.repository.msg.CorporateActionPrice66.mmCashInLieuOfSharePrice,
-					com.tools20022.repository.msg.CorporateActionPrice64.mmCashInLieuOfSharePrice);
+			derivation_lazy = () -> Arrays.asList(CorporateActionPrice5.mmCashInLieuOfSharePrice, CorporateActionPrice9.mmCashInLieuOfSharePrice, CorporateActionPrice7.mmCashInLieuOfSharePrice,
+					CorporateActionPrice12.mmCashInLieuOfSharePrice, CorporateActionPrice21.mmCashInLieuOfSharePrice, CorporateActionPrice22.mmCashInLieuOfSharePrice, CorporateActionPrice30.mmCashInLieuOfSharePrice,
+					CorporateActionPrice27.mmCashInLieuOfSharePrice, CorporateActionPrice36.mmCashInLieuOfSharePrice, CorporateActionPrice33.mmCashInLieuOfSharePrice, CorporateActionPrice39.mmCashInLieuOfSharePrice,
+					CorporateActionPrice40.mmCashInLieuOfSharePrice, CorporateActionPrice6.mmCashInLieuOfSharePrice, CorporateActionPrice10.mmCashInLieuOfSharePrice, CorporateActionPrice14.mmCashInLieuOfSharePrice,
+					CorporateActionPrice13.mmCashInLieuOfSharePrice, CorporateActionPrice16.mmCashInLieuOfSharePrice, CorporateActionPrice18.mmCashInLieuOfSharePrice, CorporateActionPrice23.mmCashInLieuOfSharePrice,
+					CorporateActionPrice24.mmCashInLieuOfSharePrice, CorporateActionPrice28.mmCashInLieuOfSharePrice, CorporateActionPrice26.mmCashInLieuOfSharePrice, CorporateActionPrice34.mmCashInLieuOfSharePrice,
+					CorporateActionPrice32.mmCashInLieuOfSharePrice, CorporateActionPrice38.mmCashInLieuOfSharePrice, CorporateActionPrice41.mmCashInLieuOfSharePrice, CorporateActionPrice31.mmCashInLieuOfSharePrice,
+					CorporateActionPrice37.mmCashInLieuOfSharePrice, CorporateActionPrice1.mmCashInLieuOfSharePrice, CorporateActionPrice43.mmCashInLieuOfSharePrice, CorporateActionPrice45.mmCashInLieuOfSharePrice,
+					CorporateActionPrice55.mmCashInLieuOfSharePrice, CorporateActionPrice51.mmCashInLieuOfSharePrice, CorporateActionPrice59.mmCashInLieuOfSharePrice, CorporateActionPrice56.mmCashInLieuOfSharePrice,
+					CorporateActionPrice58.mmCashInLieuOfSharePrice, CorporateActionPrice61.mmCashInLieuOfSharePrice, CorporateActionPrice63.mmCashInLieuOfSharePrice, CorporateActionPrice65.mmCashInLieuOfSharePrice,
+					CorporateActionPrice66.mmCashInLieuOfSharePrice, CorporateActionPrice64.mmCashInLieuOfSharePrice);
 			elementContext_lazy = () -> CorporateActionPrice.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CashInLieuOfSharePrice";
 			definition = "Cash disbursement in lieu of equities; usually in lieu of fractional quantity.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmCashInLieuOfSharePriceRelatedEvent;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 		}
 	};
@@ -1306,24 +1272,20 @@ public class CorporateActionPrice {
 	 */
 	public static final MMBusinessAssociationEnd mmOverSubscriptionDepositPrice = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionPrice5.mmOverSubscriptionDepositPrice, com.tools20022.repository.msg.CorporateActionPrice7.mmOverSubscriptionDepositPrice,
-					com.tools20022.repository.msg.CorporateActionPrice21.mmOverSubscriptionDepositPrice, com.tools20022.repository.msg.CorporateActionPrice22.mmOverSubscriptionDepositPrice,
-					com.tools20022.repository.msg.CorporateActionPrice30.mmOverSubscriptionDepositPrice, com.tools20022.repository.msg.CorporateActionPrice36.mmOverSubscriptionDepositPrice,
-					com.tools20022.repository.msg.CorporateActionPrice6.mmOverSubscriptionDepositPrice, com.tools20022.repository.msg.CorporateActionPrice14.mmOverSubscriptionDepositPrice,
-					com.tools20022.repository.msg.CorporateActionPrice16.mmOverSubscriptionDepositPrice, com.tools20022.repository.msg.CorporateActionPrice23.mmOverSubscriptionDepositPrice,
-					com.tools20022.repository.msg.CorporateActionPrice28.mmOverSubscriptionDepositPrice, com.tools20022.repository.msg.CorporateActionPrice34.mmOverSubscriptionDepositPrice,
-					com.tools20022.repository.msg.CorporateActionPrice1.mmOverSubscriptionDepositPrice, com.tools20022.repository.msg.CorporateActionPrice58.mmOverSubscriptionDepositPrice,
-					com.tools20022.repository.msg.CorporateActionPrice61.mmOverSubscriptionDepositPrice, com.tools20022.repository.msg.CorporateActionPrice63.mmOverSubscriptionDepositPrice,
-					com.tools20022.repository.msg.CorporateActionPrice65.mmOverSubscriptionDepositPrice);
+			derivation_lazy = () -> Arrays.asList(CorporateActionPrice5.mmOverSubscriptionDepositPrice, CorporateActionPrice7.mmOverSubscriptionDepositPrice, CorporateActionPrice21.mmOverSubscriptionDepositPrice,
+					CorporateActionPrice22.mmOverSubscriptionDepositPrice, CorporateActionPrice30.mmOverSubscriptionDepositPrice, CorporateActionPrice36.mmOverSubscriptionDepositPrice, CorporateActionPrice6.mmOverSubscriptionDepositPrice,
+					CorporateActionPrice14.mmOverSubscriptionDepositPrice, CorporateActionPrice16.mmOverSubscriptionDepositPrice, CorporateActionPrice23.mmOverSubscriptionDepositPrice, CorporateActionPrice28.mmOverSubscriptionDepositPrice,
+					CorporateActionPrice34.mmOverSubscriptionDepositPrice, CorporateActionPrice1.mmOverSubscriptionDepositPrice, CorporateActionPrice58.mmOverSubscriptionDepositPrice, CorporateActionPrice61.mmOverSubscriptionDepositPrice,
+					CorporateActionPrice63.mmOverSubscriptionDepositPrice, CorporateActionPrice65.mmOverSubscriptionDepositPrice);
 			elementContext_lazy = () -> CorporateActionPrice.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "OverSubscriptionDepositPrice";
 			definition = "Amount of money required per over-subscribed equity as defined by the issuer.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmOverSubscriptionDepositPriceRelatedEvent;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 		}
 	};
@@ -1425,22 +1387,19 @@ public class CorporateActionPrice {
 	 */
 	public static final MMBusinessAssociationEnd mmCashValueForTax = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionPrice27.mmCashValueForTax, com.tools20022.repository.msg.CorporateActionPrice33.mmCashValueForTax,
-					com.tools20022.repository.msg.CorporateActionPrice39.mmCashValueForTax, com.tools20022.repository.msg.CorporateActionPrice40.mmCashValueForTax, com.tools20022.repository.msg.CorporateActionPrice26.mmCashValueForTax,
-					com.tools20022.repository.msg.CorporateActionPrice32.mmCashValueForTax, com.tools20022.repository.msg.CorporateActionPrice38.mmCashValueForTax, com.tools20022.repository.msg.CorporateActionPrice41.mmCashValueForTax,
-					com.tools20022.repository.msg.CorporateActionPrice31.mmCashValueForTax, com.tools20022.repository.msg.CorporateActionPrice37.mmCashValueForTax, com.tools20022.repository.msg.CorporateActionPrice43.mmCashValueForTax,
-					com.tools20022.repository.msg.CorporateActionPrice45.mmCashValueForTax, com.tools20022.repository.msg.CorporateActionPrice55.mmCashValueForTax, com.tools20022.repository.msg.CorporateActionPrice51.mmCashValueForTax,
-					com.tools20022.repository.msg.CorporateActionPrice59.mmCashValueForTax, com.tools20022.repository.msg.CorporateActionPrice56.mmCashValueForTax, com.tools20022.repository.msg.CorporateActionPrice66.mmCashValueForTax,
-					com.tools20022.repository.msg.CorporateActionPrice64.mmCashValueForTax);
+			derivation_lazy = () -> Arrays.asList(CorporateActionPrice27.mmCashValueForTax, CorporateActionPrice33.mmCashValueForTax, CorporateActionPrice39.mmCashValueForTax, CorporateActionPrice40.mmCashValueForTax,
+					CorporateActionPrice26.mmCashValueForTax, CorporateActionPrice32.mmCashValueForTax, CorporateActionPrice38.mmCashValueForTax, CorporateActionPrice41.mmCashValueForTax, CorporateActionPrice31.mmCashValueForTax,
+					CorporateActionPrice37.mmCashValueForTax, CorporateActionPrice43.mmCashValueForTax, CorporateActionPrice45.mmCashValueForTax, CorporateActionPrice55.mmCashValueForTax, CorporateActionPrice51.mmCashValueForTax,
+					CorporateActionPrice59.mmCashValueForTax, CorporateActionPrice56.mmCashValueForTax, CorporateActionPrice66.mmCashValueForTax, CorporateActionPrice64.mmCashValueForTax);
 			elementContext_lazy = () -> CorporateActionPrice.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CashValueForTax";
 			definition = "Cash value of resulting securities proceeds for tax calculation and/or reporting.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmCashValueForTaxRelatedEvent;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 		}
 	};
@@ -1483,13 +1442,13 @@ public class CorporateActionPrice {
 		{
 			elementContext_lazy = () -> CorporateActionPrice.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PricingCalculation";
 			definition = "Specifies the parameters taken into account to calculate the price.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmRelatedCorporateActionPrice;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 		}
 	};
@@ -1497,8 +1456,8 @@ public class CorporateActionPrice {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionPrice";
 				definition = "Prices related to a corporate action.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesPricing.mmExercisePriceRelatedEvent,
@@ -1506,28 +1465,19 @@ public class CorporateActionPrice {
 						com.tools20022.repository.entity.SecuritiesPricing.mmCashInLieuOfSharePriceRelatedEvent, com.tools20022.repository.entity.SecuritiesPricing.mmOverSubscriptionDepositPriceRelatedEvent,
 						com.tools20022.repository.entity.SecuritiesPricing.mmCashValueForTaxRelatedEvent, com.tools20022.repository.entity.SecuritiesPricing.mmRelatedCorporateActionPrice,
 						com.tools20022.repository.entity.CorporateActionEvent.mmCorporateActionPrice);
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionPrice8.mmIndicativeOrMarketPrice, com.tools20022.repository.msg.CorporateActionPrice11.mmIndicativeOrMarketPrice,
-						com.tools20022.repository.msg.CorporateActionPrice19.mmIndicativeOrMarketPrice, com.tools20022.repository.msg.CorporateActionPrice20.mmIndicativeOrMarketPrice,
-						com.tools20022.repository.msg.CorporateActionPrice29.mmIndicativeOrMarketPrice, com.tools20022.repository.msg.CorporateActionPrice35.mmIndicativeOrMarketPrice,
-						com.tools20022.repository.msg.CorporateActionPrice9.mmIndicativeOrMarketPrice, com.tools20022.repository.msg.CorporateActionPrice12.mmIndicativeOrMarketPrice,
-						com.tools20022.repository.msg.CorporateActionPrice27.mmIndicativeOrMarketPrice, com.tools20022.repository.msg.CorporateActionPrice33.mmIndicativeOrMarketPrice,
-						com.tools20022.repository.msg.CorporateActionPrice39.mmIndicativeOrMarketPrice, com.tools20022.repository.msg.CorporateActionPrice40.mmIndicativeOrMarketPrice,
-						com.tools20022.repository.msg.CorporateActionPrice10.mmIndicativeOrMarketPrice, com.tools20022.repository.msg.CorporateActionPrice13.mmIndicativeOrMarketPrice,
-						com.tools20022.repository.msg.CorporateActionPrice18.mmIndicativeOrMarketPrice, com.tools20022.repository.msg.CorporateActionPrice24.mmIndicativeOrMarketPrice,
-						com.tools20022.repository.msg.CorporateActionPrice26.mmIndicativeOrMarketPrice, com.tools20022.repository.msg.CorporateActionPrice32.mmIndicativeOrMarketPrice,
-						com.tools20022.repository.msg.CorporateActionPrice38.mmIndicativeOrMarketPrice, com.tools20022.repository.msg.CorporateActionPrice41.mmIndicativeOrMarketPrice,
-						com.tools20022.repository.msg.CorporateActionPrice31.mmIndicativeOrMarketPrice, com.tools20022.repository.msg.CorporateActionPrice37.mmIndicativeOrMarketPrice,
-						com.tools20022.repository.msg.CorporateActionPrice4.mmIndicativePrice, com.tools20022.repository.msg.CorporateActionPrice4.mmMarketPrice,
-						com.tools20022.repository.msg.CorporateActionPrice43.mmIndicativeOrMarketPrice, com.tools20022.repository.msg.CorporateActionPrice44.mmIndicativeOrMarketPrice,
-						com.tools20022.repository.msg.CorporateActionPrice45.mmIndicativeOrMarketPrice, com.tools20022.repository.msg.CorporateActionPrice52.mmIndicativeOrMarketPrice,
-						com.tools20022.repository.msg.CorporateActionPrice55.mmIndicativeOrMarketPrice, com.tools20022.repository.msg.CorporateActionPrice51.mmIndicativeOrMarketPrice,
-						com.tools20022.repository.msg.CorporateActionPrice59.mmIndicativeOrMarketPrice, com.tools20022.repository.msg.CorporateActionPrice56.mmIndicativeOrMarketPrice,
-						com.tools20022.repository.msg.CorporateActionPrice60.mmIndicativeOrMarketPrice, com.tools20022.repository.msg.CorporateActionPrice62.mmIndicativeOrMarketPrice,
-						com.tools20022.repository.msg.CorporateActionPrice66.mmIndicativeOrMarketPrice, com.tools20022.repository.msg.CorporateActionPrice64.mmIndicativeOrMarketPrice);
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CorporateActionPrice.mmCorporateActionEvent, com.tools20022.repository.entity.CorporateActionPrice.mmCorporateActionExercisePrice,
-						com.tools20022.repository.entity.CorporateActionPrice.mmGenericCashPriceReceivedPerProduct, com.tools20022.repository.entity.CorporateActionPrice.mmGenericCashPricePaidPerProduct,
-						com.tools20022.repository.entity.CorporateActionPrice.mmCashInLieuOfSharePrice, com.tools20022.repository.entity.CorporateActionPrice.mmOverSubscriptionDepositPrice,
-						com.tools20022.repository.entity.CorporateActionPrice.mmCashValueForTax, com.tools20022.repository.entity.CorporateActionPrice.mmPricingCalculation);
+				derivationElement_lazy = () -> Arrays.asList(CorporateActionPrice8.mmIndicativeOrMarketPrice, CorporateActionPrice11.mmIndicativeOrMarketPrice, CorporateActionPrice19.mmIndicativeOrMarketPrice,
+						CorporateActionPrice20.mmIndicativeOrMarketPrice, CorporateActionPrice29.mmIndicativeOrMarketPrice, CorporateActionPrice35.mmIndicativeOrMarketPrice, CorporateActionPrice9.mmIndicativeOrMarketPrice,
+						CorporateActionPrice12.mmIndicativeOrMarketPrice, CorporateActionPrice27.mmIndicativeOrMarketPrice, CorporateActionPrice33.mmIndicativeOrMarketPrice, CorporateActionPrice39.mmIndicativeOrMarketPrice,
+						CorporateActionPrice40.mmIndicativeOrMarketPrice, CorporateActionPrice10.mmIndicativeOrMarketPrice, CorporateActionPrice13.mmIndicativeOrMarketPrice, CorporateActionPrice18.mmIndicativeOrMarketPrice,
+						CorporateActionPrice24.mmIndicativeOrMarketPrice, CorporateActionPrice26.mmIndicativeOrMarketPrice, CorporateActionPrice32.mmIndicativeOrMarketPrice, CorporateActionPrice38.mmIndicativeOrMarketPrice,
+						CorporateActionPrice41.mmIndicativeOrMarketPrice, CorporateActionPrice31.mmIndicativeOrMarketPrice, CorporateActionPrice37.mmIndicativeOrMarketPrice, CorporateActionPrice4.mmIndicativePrice,
+						CorporateActionPrice4.mmMarketPrice, CorporateActionPrice43.mmIndicativeOrMarketPrice, CorporateActionPrice44.mmIndicativeOrMarketPrice, CorporateActionPrice45.mmIndicativeOrMarketPrice,
+						CorporateActionPrice52.mmIndicativeOrMarketPrice, CorporateActionPrice55.mmIndicativeOrMarketPrice, CorporateActionPrice51.mmIndicativeOrMarketPrice, CorporateActionPrice59.mmIndicativeOrMarketPrice,
+						CorporateActionPrice56.mmIndicativeOrMarketPrice, CorporateActionPrice60.mmIndicativeOrMarketPrice, CorporateActionPrice62.mmIndicativeOrMarketPrice, CorporateActionPrice66.mmIndicativeOrMarketPrice,
+						CorporateActionPrice64.mmIndicativeOrMarketPrice);
+				element_lazy = () -> Arrays.asList(CorporateActionPrice.mmCorporateActionEvent, CorporateActionPrice.mmCorporateActionExercisePrice, CorporateActionPrice.mmGenericCashPriceReceivedPerProduct,
+						CorporateActionPrice.mmGenericCashPricePaidPerProduct, CorporateActionPrice.mmCashInLieuOfSharePrice, CorporateActionPrice.mmOverSubscriptionDepositPrice, CorporateActionPrice.mmCashValueForTax,
+						CorporateActionPrice.mmPricingCalculation);
 				derivationComponent_lazy = () -> Arrays.asList(CorporateActionPrice8.mmObject(), CorporateActionPrice11.mmObject(), CorporateActionPrice19.mmObject(), CorporateActionPrice20.mmObject(), CorporateActionPrice29.mmObject(),
 						CorporateActionPrice35.mmObject(), CorporateActionPrice5.mmObject(), CorporateActionPrice9.mmObject(), CorporateActionPrice7.mmObject(), CorporateActionPrice12.mmObject(), CorporateActionPrice21.mmObject(),
 						CorporateActionPrice22.mmObject(), CorporateActionPrice30.mmObject(), CorporateActionPrice27.mmObject(), CorporateActionPrice36.mmObject(), CorporateActionPrice33.mmObject(), CorporateActionPrice39.mmObject(),

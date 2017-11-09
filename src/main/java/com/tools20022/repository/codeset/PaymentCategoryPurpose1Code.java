@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.PaymentCategoryPurposeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -132,7 +134,7 @@ public class PaymentCategoryPurpose1Code extends PaymentCategoryPurposeCode {
 	 */
 	public static final MMCode mmTradeSettlementPayment = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeSettlementPayment";
 			owner_lazy = () -> PaymentCategoryPurpose1Code.mmObject();
 		}
@@ -155,7 +157,7 @@ public class PaymentCategoryPurpose1Code extends PaymentCategoryPurposeCode {
 	 */
 	public static final MMCode mmSalaryPayment = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SalaryPayment";
 			owner_lazy = () -> PaymentCategoryPurpose1Code.mmObject();
 		}
@@ -178,7 +180,7 @@ public class PaymentCategoryPurpose1Code extends PaymentCategoryPurposeCode {
 	 */
 	public static final MMCode mmTreasuryPayment = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TreasuryPayment";
 			owner_lazy = () -> PaymentCategoryPurpose1Code.mmObject();
 		}
@@ -201,7 +203,7 @@ public class PaymentCategoryPurpose1Code extends PaymentCategoryPurposeCode {
 	 */
 	public static final MMCode mmCashManagementTransfer = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashManagementTransfer";
 			owner_lazy = () -> PaymentCategoryPurpose1Code.mmObject();
 		}
@@ -224,7 +226,7 @@ public class PaymentCategoryPurpose1Code extends PaymentCategoryPurposeCode {
 	 */
 	public static final MMCode mmDividend = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Dividend";
 			owner_lazy = () -> PaymentCategoryPurpose1Code.mmObject();
 		}
@@ -247,7 +249,7 @@ public class PaymentCategoryPurpose1Code extends PaymentCategoryPurposeCode {
 	 */
 	public static final MMCode mmGovernmentPayment = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GovernmentPayment";
 			owner_lazy = () -> PaymentCategoryPurpose1Code.mmObject();
 		}
@@ -270,7 +272,7 @@ public class PaymentCategoryPurpose1Code extends PaymentCategoryPurposeCode {
 	 */
 	public static final MMCode mmInterest = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Interest";
 			owner_lazy = () -> PaymentCategoryPurpose1Code.mmObject();
 		}
@@ -293,7 +295,7 @@ public class PaymentCategoryPurpose1Code extends PaymentCategoryPurposeCode {
 	 */
 	public static final MMCode mmLoan = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Loan";
 			owner_lazy = () -> PaymentCategoryPurpose1Code.mmObject();
 		}
@@ -316,7 +318,7 @@ public class PaymentCategoryPurpose1Code extends PaymentCategoryPurposeCode {
 	 */
 	public static final MMCode mmPensionPayment = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PensionPayment";
 			owner_lazy = () -> PaymentCategoryPurpose1Code.mmObject();
 		}
@@ -339,7 +341,7 @@ public class PaymentCategoryPurpose1Code extends PaymentCategoryPurposeCode {
 	 */
 	public static final MMCode mmSecurities = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Securities";
 			owner_lazy = () -> PaymentCategoryPurpose1Code.mmObject();
 		}
@@ -362,7 +364,7 @@ public class PaymentCategoryPurpose1Code extends PaymentCategoryPurposeCode {
 	 */
 	public static final MMCode mmSocialSecurityBenefit = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SocialSecurityBenefit";
 			owner_lazy = () -> PaymentCategoryPurpose1Code.mmObject();
 		}
@@ -385,7 +387,7 @@ public class PaymentCategoryPurpose1Code extends PaymentCategoryPurposeCode {
 	 */
 	public static final MMCode mmSupplierPayment = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplierPayment";
 			owner_lazy = () -> PaymentCategoryPurpose1Code.mmObject();
 		}
@@ -408,7 +410,7 @@ public class PaymentCategoryPurpose1Code extends PaymentCategoryPurposeCode {
 	 */
 	public static final MMCode mmTaxPayment = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxPayment";
 			owner_lazy = () -> PaymentCategoryPurpose1Code.mmObject();
 		}
@@ -431,7 +433,7 @@ public class PaymentCategoryPurpose1Code extends PaymentCategoryPurposeCode {
 	 */
 	public static final MMCode mmTrade = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Trade";
 			owner_lazy = () -> PaymentCategoryPurpose1Code.mmObject();
 		}
@@ -454,7 +456,7 @@ public class PaymentCategoryPurpose1Code extends PaymentCategoryPurposeCode {
 	 */
 	public static final MMCode mmValueAddedTaxPayment = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValueAddedTaxPayment";
 			owner_lazy = () -> PaymentCategoryPurpose1Code.mmObject();
 		}
@@ -477,7 +479,7 @@ public class PaymentCategoryPurpose1Code extends PaymentCategoryPurposeCode {
 	 */
 	public static final MMCode mmHedging = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Hedging";
 			owner_lazy = () -> PaymentCategoryPurpose1Code.mmObject();
 		}
@@ -500,7 +502,7 @@ public class PaymentCategoryPurpose1Code extends PaymentCategoryPurposeCode {
 	 */
 	public static final MMCode mmIntraCompanyPayment = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IntraCompanyPayment";
 			owner_lazy = () -> PaymentCategoryPurpose1Code.mmObject();
 		}
@@ -523,7 +525,7 @@ public class PaymentCategoryPurpose1Code extends PaymentCategoryPurposeCode {
 	 */
 	public static final MMCode mmWithHolding = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WithHolding";
 			owner_lazy = () -> PaymentCategoryPurpose1Code.mmObject();
 		}
@@ -532,20 +534,16 @@ public class PaymentCategoryPurpose1Code extends PaymentCategoryPurposeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CORT");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PaymentCategoryPurpose1Code";
 				definition = "Specifies the type of transaction that resulted in the payment.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PaymentCategoryPurpose1Code.mmTradeSettlementPayment, com.tools20022.repository.codeset.PaymentCategoryPurpose1Code.mmSalaryPayment,
-						com.tools20022.repository.codeset.PaymentCategoryPurpose1Code.mmTreasuryPayment, com.tools20022.repository.codeset.PaymentCategoryPurpose1Code.mmCashManagementTransfer,
-						com.tools20022.repository.codeset.PaymentCategoryPurpose1Code.mmDividend, com.tools20022.repository.codeset.PaymentCategoryPurpose1Code.mmGovernmentPayment,
-						com.tools20022.repository.codeset.PaymentCategoryPurpose1Code.mmInterest, com.tools20022.repository.codeset.PaymentCategoryPurpose1Code.mmLoan,
-						com.tools20022.repository.codeset.PaymentCategoryPurpose1Code.mmPensionPayment, com.tools20022.repository.codeset.PaymentCategoryPurpose1Code.mmSecurities,
-						com.tools20022.repository.codeset.PaymentCategoryPurpose1Code.mmSocialSecurityBenefit, com.tools20022.repository.codeset.PaymentCategoryPurpose1Code.mmSupplierPayment,
-						com.tools20022.repository.codeset.PaymentCategoryPurpose1Code.mmTaxPayment, com.tools20022.repository.codeset.PaymentCategoryPurpose1Code.mmTrade,
-						com.tools20022.repository.codeset.PaymentCategoryPurpose1Code.mmValueAddedTaxPayment, com.tools20022.repository.codeset.PaymentCategoryPurpose1Code.mmHedging,
-						com.tools20022.repository.codeset.PaymentCategoryPurpose1Code.mmIntraCompanyPayment, com.tools20022.repository.codeset.PaymentCategoryPurpose1Code.mmWithHolding);
+				code_lazy = () -> Arrays.asList(PaymentCategoryPurpose1Code.mmTradeSettlementPayment, PaymentCategoryPurpose1Code.mmSalaryPayment, PaymentCategoryPurpose1Code.mmTreasuryPayment,
+						PaymentCategoryPurpose1Code.mmCashManagementTransfer, PaymentCategoryPurpose1Code.mmDividend, PaymentCategoryPurpose1Code.mmGovernmentPayment, PaymentCategoryPurpose1Code.mmInterest,
+						PaymentCategoryPurpose1Code.mmLoan, PaymentCategoryPurpose1Code.mmPensionPayment, PaymentCategoryPurpose1Code.mmSecurities, PaymentCategoryPurpose1Code.mmSocialSecurityBenefit,
+						PaymentCategoryPurpose1Code.mmSupplierPayment, PaymentCategoryPurpose1Code.mmTaxPayment, PaymentCategoryPurpose1Code.mmTrade, PaymentCategoryPurpose1Code.mmValueAddedTaxPayment,
+						PaymentCategoryPurpose1Code.mmHedging, PaymentCategoryPurpose1Code.mmIntraCompanyPayment, PaymentCategoryPurpose1Code.mmWithHolding);
 				trace_lazy = () -> PaymentCategoryPurposeCode.mmObject();
 			}
 		});

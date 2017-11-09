@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.MultilegReportTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -88,7 +90,7 @@ public class MultilegReportType1Code extends MultilegReportTypeCode {
 	 */
 	public static final MMCode mmBySecurity = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BySecurity";
 			owner_lazy = () -> MultilegReportType1Code.mmObject();
 		}
@@ -111,7 +113,7 @@ public class MultilegReportType1Code extends MultilegReportTypeCode {
 	 */
 	public static final MMCode mmBySecurityAndLeg = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BySecurityAndLeg";
 			owner_lazy = () -> MultilegReportType1Code.mmObject();
 		}
@@ -134,7 +136,7 @@ public class MultilegReportType1Code extends MultilegReportTypeCode {
 	 */
 	public static final MMCode mmByInstrumentLeg = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ByInstrumentLeg";
 			owner_lazy = () -> MultilegReportType1Code.mmObject();
 		}
@@ -143,13 +145,12 @@ public class MultilegReportType1Code extends MultilegReportTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("BYSE");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MultilegReportType1Code";
 				definition = "Indicates the method of execution reporting requested by issuer of the order.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MultilegReportType1Code.mmBySecurity, com.tools20022.repository.codeset.MultilegReportType1Code.mmBySecurityAndLeg,
-						com.tools20022.repository.codeset.MultilegReportType1Code.mmByInstrumentLeg);
+				code_lazy = () -> Arrays.asList(MultilegReportType1Code.mmBySecurity, MultilegReportType1Code.mmBySecurityAndLeg, MultilegReportType1Code.mmByInstrumentLeg);
 				trace_lazy = () -> MultilegReportTypeCode.mmObject();
 			}
 		});

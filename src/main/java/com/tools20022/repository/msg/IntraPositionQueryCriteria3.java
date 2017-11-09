@@ -20,10 +20,12 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.DateAndDateTimeSearch2Choice;
 import com.tools20022.repository.choice.ModificationProcessingStatus1Choice;
 import com.tools20022.repository.codeset.InstructionQueryType1Code;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -111,7 +113,7 @@ public class IntraPositionQueryCriteria3 {
 			componentContext_lazy = () -> IntraPositionQueryCriteria3.mmObject();
 			isDerived = false;
 			xmlTag = "ModReqId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ModificationRequestIdentification";
 			definition = "Collective reference identifying a set of messages.";
 			minOccurs = 0;
@@ -155,7 +157,7 @@ public class IntraPositionQueryCriteria3 {
 			componentContext_lazy = () -> IntraPositionQueryCriteria3.mmObject();
 			isDerived = false;
 			xmlTag = "InstrQryTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructionQueryType";
 			definition = "Type of underlying transaction to be modified, such as an settlement instruction or an intra-position movement.";
 			maxOccurs = 1;
@@ -196,7 +198,7 @@ public class IntraPositionQueryCriteria3 {
 			componentContext_lazy = () -> IntraPositionQueryCriteria3.mmObject();
 			isDerived = false;
 			xmlTag = "PrcgSts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProcessingStatus";
 			definition = "Provides the status of settlement of a transaction.";
 			minOccurs = 0;
@@ -236,7 +238,7 @@ public class IntraPositionQueryCriteria3 {
 			componentContext_lazy = () -> IntraPositionQueryCriteria3.mmObject();
 			isDerived = false;
 			xmlTag = "SfkpgAcct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingAccount";
 			definition = "Account to or from which a securities entry is made.";
 			minOccurs = 0;
@@ -277,7 +279,7 @@ public class IntraPositionQueryCriteria3 {
 			componentContext_lazy = () -> IntraPositionQueryCriteria3.mmObject();
 			isDerived = false;
 			xmlTag = "AcctOwnr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountOwner";
 			definition = "Party that owns the account.";
 			minOccurs = 0;
@@ -319,7 +321,7 @@ public class IntraPositionQueryCriteria3 {
 			componentContext_lazy = () -> IntraPositionQueryCriteria3.mmObject();
 			isDerived = false;
 			xmlTag = "MsgOrgtr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageOriginator";
 			definition = "Party that originated the message, if other than the sender.";
 			minOccurs = 0;
@@ -362,7 +364,7 @@ public class IntraPositionQueryCriteria3 {
 			componentContext_lazy = () -> IntraPositionQueryCriteria3.mmObject();
 			isDerived = false;
 			xmlTag = "CreDtTm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreationDateTime";
 			definition = "Specifies the creation date/time of the intra-position movement.";
 			maxOccurs = 1;
@@ -374,12 +376,10 @@ public class IntraPositionQueryCriteria3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IntraPositionQueryCriteria3.mmModificationRequestIdentification, com.tools20022.repository.msg.IntraPositionQueryCriteria3.mmInstructionQueryType,
-						com.tools20022.repository.msg.IntraPositionQueryCriteria3.mmProcessingStatus, com.tools20022.repository.msg.IntraPositionQueryCriteria3.mmSafekeepingAccount,
-						com.tools20022.repository.msg.IntraPositionQueryCriteria3.mmAccountOwner, com.tools20022.repository.msg.IntraPositionQueryCriteria3.mmMessageOriginator,
-						com.tools20022.repository.msg.IntraPositionQueryCriteria3.mmCreationDateTime);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(IntraPositionQueryCriteria3.mmModificationRequestIdentification, IntraPositionQueryCriteria3.mmInstructionQueryType, IntraPositionQueryCriteria3.mmProcessingStatus,
+						IntraPositionQueryCriteria3.mmSafekeepingAccount, IntraPositionQueryCriteria3.mmAccountOwner, IntraPositionQueryCriteria3.mmMessageOriginator, IntraPositionQueryCriteria3.mmCreationDateTime);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "IntraPositionQueryCriteria3";
 				definition = "Defines the criteria based on which information is included.";
 			}

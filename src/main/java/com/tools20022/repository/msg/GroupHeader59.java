@@ -20,10 +20,15 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.camt.*;
 import com.tools20022.repository.choice.Party12Choice;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.Payment;
+import com.tools20022.repository.entity.PaymentExecution;
+import com.tools20022.repository.entity.PaymentIdentification;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -133,11 +138,11 @@ public class GroupHeader59 {
 	 */
 	public static final MMMessageAttribute mmMessageIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentIdentification.mmExecutionIdentification;
+			businessElementTrace_lazy = () -> PaymentIdentification.mmExecutionIdentification;
 			componentContext_lazy = () -> GroupHeader59.mmObject();
 			isDerived = false;
 			xmlTag = "MsgId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageIdentification";
 			definition = "Point to point reference, as assigned by the account owner or the party authorised to send the message, and sent to the account servicing institution, to unambiguously identify the message.\nUsage: The sender has to make sure that 'MessageIdentification' is unique per account servicing institution for a pre-agreed period.";
 			maxOccurs = 1;
@@ -179,11 +184,11 @@ public class GroupHeader59 {
 	 */
 	public static final MMMessageAttribute mmCreationDateTime = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentExecution.mmCreationDate;
+			businessElementTrace_lazy = () -> PaymentExecution.mmCreationDate;
 			componentContext_lazy = () -> GroupHeader59.mmObject();
 			isDerived = false;
 			xmlTag = "CreDtTm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreationDateTime";
 			definition = "Date and time at which the message was created.";
 			maxOccurs = 1;
@@ -225,7 +230,7 @@ public class GroupHeader59 {
 			componentContext_lazy = () -> GroupHeader59.mmObject();
 			isDerived = false;
 			xmlTag = "MsgSndr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageSender";
 			definition = "Identification of the party that is sending the message, when different from the account owner.";
 			maxOccurs = 1;
@@ -238,15 +243,12 @@ public class GroupHeader59 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GroupHeader59.mmMessageIdentification, com.tools20022.repository.msg.GroupHeader59.mmCreationDateTime,
-						com.tools20022.repository.msg.GroupHeader59.mmMessageSender);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.AccountReportingRequestV03.mmGroupHeader, com.tools20022.repository.area.camt.NotificationToReceiveV03.mmGroupHeader,
-						com.tools20022.repository.area.camt.NotificationToReceiveCancellationAdviceV03.mmGroupHeader, com.tools20022.repository.area.camt.NotificationToReceiveCancellationAdviceV04.mmGroupHeader,
-						com.tools20022.repository.area.camt.NotificationToReceiveV04.mmGroupHeader, com.tools20022.repository.area.camt.NotificationToReceiveCancellationAdviceV05.mmGroupHeader,
-						com.tools20022.repository.area.camt.NotificationToReceiveV05.mmGroupHeader);
+				messageElement_lazy = () -> Arrays.asList(GroupHeader59.mmMessageIdentification, GroupHeader59.mmCreationDateTime, GroupHeader59.mmMessageSender);
+				messageBuildingBlock_lazy = () -> Arrays.asList(AccountReportingRequestV03.mmGroupHeader, NotificationToReceiveV03.mmGroupHeader, NotificationToReceiveCancellationAdviceV03.mmGroupHeader,
+						NotificationToReceiveCancellationAdviceV04.mmGroupHeader, NotificationToReceiveV04.mmGroupHeader, NotificationToReceiveCancellationAdviceV05.mmGroupHeader, NotificationToReceiveV05.mmGroupHeader);
 				trace_lazy = () -> Payment.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "GroupHeader59";
 				definition = "Provides further details on the message.";
 			}

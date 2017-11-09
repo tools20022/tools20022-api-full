@@ -20,8 +20,12 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.*;
 import com.tools20022.repository.entity.NonFinancialInstitution;
+import com.tools20022.repository.entity.OrganisationIdentification;
+import com.tools20022.repository.entity.PartyIdentificationInformation;
+import com.tools20022.repository.GeneratedRepository;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -125,11 +129,11 @@ public class NonFinancialInstitutionIdentification1 {
 	 */
 	public static final MMMessageAttribute mmBEI = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.mmBICNonFI;
+			businessElementTrace_lazy = () -> OrganisationIdentification.mmBICNonFI;
 			componentContext_lazy = () -> NonFinancialInstitutionIdentification1.mmObject();
 			isDerived = false;
 			xmlTag = "BEI";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BEI";
 			definition = "Code allocated to a non-financial institution by the ISO 9362 Registration Authority as described in ISO 9362 \"Banking - Banking telecommunication messages - Business identifier code (BIC)\".";
 			maxOccurs = 1;
@@ -179,11 +183,11 @@ public class NonFinancialInstitutionIdentification1 {
 	 */
 	public static final MMMessageAttribute mmEANGLN = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.mmEANGLN;
+			businessElementTrace_lazy = () -> OrganisationIdentification.mmEANGLN;
 			componentContext_lazy = () -> NonFinancialInstitutionIdentification1.mmObject();
 			isDerived = false;
 			xmlTag = "EANGLN";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EANGLN";
 			definition = "Global Location Number.  A non-significant reference number used to identify legal entities, functional entities or physical entities according to the European Association for Numbering (EAN) numbering scheme rules. The number is used to retrieve detailed information linked to it.";
 			maxOccurs = 1;
@@ -232,11 +236,11 @@ public class NonFinancialInstitutionIdentification1 {
 	 */
 	public static final MMMessageAttribute mmCHIPSUniversalIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.mmCHIPSUniversalIdentifier;
+			businessElementTrace_lazy = () -> OrganisationIdentification.mmCHIPSUniversalIdentifier;
 			componentContext_lazy = () -> NonFinancialInstitutionIdentification1.mmObject();
 			isDerived = false;
 			xmlTag = "USCHU";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CHIPSUniversalIdentification";
 			definition = "(United States) Clearing House Interbank Payments System (CHIPS) Universal Identification (UID) - identifies entities that own accounts at CHIPS participating financial institutions, through which CHIPS payments are effected. The CHIPS UID is assigned by the New York Clearing House.";
 			maxOccurs = 1;
@@ -283,11 +287,11 @@ public class NonFinancialInstitutionIdentification1 {
 	 */
 	public static final MMMessageAttribute mmDUNS = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.mmDUNS;
+			businessElementTrace_lazy = () -> OrganisationIdentification.mmDUNS;
 			componentContext_lazy = () -> NonFinancialInstitutionIdentification1.mmObject();
 			isDerived = false;
 			xmlTag = "DUNS";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DUNS";
 			definition = "Data Universal Numbering System. A unique identification number provided by Dun & Bradstreet to identify an organization.";
 			maxOccurs = 1;
@@ -333,11 +337,11 @@ public class NonFinancialInstitutionIdentification1 {
 	 */
 	public static final MMMessageAttribute mmBankPartyIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.mmBankPartyIdentification;
+			businessElementTrace_lazy = () -> OrganisationIdentification.mmBankPartyIdentification;
 			componentContext_lazy = () -> NonFinancialInstitutionIdentification1.mmObject();
 			isDerived = false;
 			xmlTag = "BkPtyId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BankPartyIdentification";
 			definition = "Unique and unambiguous assignment made by a specific bank to identify a relationship as defined between the bank and its client.";
 			maxOccurs = 1;
@@ -380,11 +384,11 @@ public class NonFinancialInstitutionIdentification1 {
 	 */
 	public static final MMMessageAttribute mmTaxIdentificationNumber = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.mmTaxIdentificationNumber;
+			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmTaxIdentificationNumber;
 			componentContext_lazy = () -> NonFinancialInstitutionIdentification1.mmObject();
 			isDerived = false;
 			xmlTag = "TaxIdNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxIdentificationNumber";
 			definition = "Number assigned by a tax authority to an entity.";
 			maxOccurs = 1;
@@ -429,11 +433,11 @@ public class NonFinancialInstitutionIdentification1 {
 	 */
 	public static final MMMessageAssociationEnd mmProprietaryIdentification = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.mmOtherIdentification;
+			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmOtherIdentification;
 			componentContext_lazy = () -> NonFinancialInstitutionIdentification1.mmObject();
 			isDerived = false;
 			xmlTag = "PrtryId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProprietaryIdentification";
 			definition = "Unique and unambiguous identifier for an organisation that is allocated by an institution.";
 			maxOccurs = 1;
@@ -446,13 +450,12 @@ public class NonFinancialInstitutionIdentification1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.NonFinancialInstitutionIdentification1.mmBEI, com.tools20022.repository.msg.NonFinancialInstitutionIdentification1.mmEANGLN,
-						com.tools20022.repository.msg.NonFinancialInstitutionIdentification1.mmCHIPSUniversalIdentification, com.tools20022.repository.msg.NonFinancialInstitutionIdentification1.mmDUNS,
-						com.tools20022.repository.msg.NonFinancialInstitutionIdentification1.mmBankPartyIdentification, com.tools20022.repository.msg.NonFinancialInstitutionIdentification1.mmTaxIdentificationNumber,
-						com.tools20022.repository.msg.NonFinancialInstitutionIdentification1.mmProprietaryIdentification);
+				messageElement_lazy = () -> Arrays.asList(NonFinancialInstitutionIdentification1.mmBEI, NonFinancialInstitutionIdentification1.mmEANGLN, NonFinancialInstitutionIdentification1.mmCHIPSUniversalIdentification,
+						NonFinancialInstitutionIdentification1.mmDUNS, NonFinancialInstitutionIdentification1.mmBankPartyIdentification, NonFinancialInstitutionIdentification1.mmTaxIdentificationNumber,
+						NonFinancialInstitutionIdentification1.mmProprietaryIdentification);
 				trace_lazy = () -> NonFinancialInstitution.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
 						return DateFormat.getDateInstance(java.text.DateFormat.LONG).parse("September 9, 2016");

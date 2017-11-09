@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.AdjustmentType2Code
+ * AdjustmentType2Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -41,13 +50,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.AdjustmentTypeCode#mmSurcharge
  * AdjustmentTypeCode.mmSurcharge}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.AdjustmentType2Code
- * AdjustmentType2Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -97,7 +99,7 @@ public class AdjustmentTypeCode {
 	 */
 	public static final MMCode mmRebate = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Rebate";
 			definition = "Adjustment is a rebate.";
 			owner_lazy = () -> AdjustmentTypeCode.mmObject();
@@ -127,7 +129,7 @@ public class AdjustmentTypeCode {
 	 */
 	public static final MMCode mmDiscount = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Discount";
 			definition = "Adjustment is a discount.";
 			owner_lazy = () -> AdjustmentTypeCode.mmObject();
@@ -157,7 +159,7 @@ public class AdjustmentTypeCode {
 	 */
 	public static final MMCode mmCreditNote = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CreditNote";
 			definition = "Adjustment is a credit note.";
 			owner_lazy = () -> AdjustmentTypeCode.mmObject();
@@ -187,7 +189,7 @@ public class AdjustmentTypeCode {
 	 */
 	public static final MMCode mmSurcharge = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Surcharge";
 			definition = "Adjustment is a surcharge.";
 			owner_lazy = () -> AdjustmentTypeCode.mmObject();
@@ -198,13 +200,12 @@ public class AdjustmentTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("REBA");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AdjustmentTypeCode";
 				definition = "Specifies the type of adjustment.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AdjustmentTypeCode.mmRebate, com.tools20022.repository.codeset.AdjustmentTypeCode.mmDiscount,
-						com.tools20022.repository.codeset.AdjustmentTypeCode.mmCreditNote, com.tools20022.repository.codeset.AdjustmentTypeCode.mmSurcharge);
+				code_lazy = () -> Arrays.asList(AdjustmentTypeCode.mmRebate, AdjustmentTypeCode.mmDiscount, AdjustmentTypeCode.mmCreditNote, AdjustmentTypeCode.mmSurcharge);
 				derivation_lazy = () -> Arrays.asList(AdjustmentType2Code.mmObject());
 			}
 		});

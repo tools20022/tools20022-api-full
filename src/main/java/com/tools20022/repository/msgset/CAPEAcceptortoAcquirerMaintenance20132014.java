@@ -18,7 +18,9 @@
 package com.tools20022.repository.msgset;
 
 import com.tools20022.metamodel.MMMessageSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.caaa.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -106,8 +108,8 @@ public class CAPEAcceptortoAcquirerMaintenance20132014 {
 	final static public MMMessageSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageSet() {
 			{
-				businessProcessCatalogue_lazy = () -> com.tools20022.repository.GeneratedRepository.mmcatalogue;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				businessProcessCatalogue_lazy = () -> GeneratedRepository.mmcatalogue;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CAPE - Acceptor to Acquirer - Maintenance 2013 - 2014";
 				definition = "Message set defined for the implementation of the CRs related the SR2014 Card Payments Exchanges";
 				messageDefinition_lazy = () -> Arrays.asList(AcceptorCancellationAdviceResponseV03.mmObject(), AcceptorDiagnosticResponseV03.mmObject(), AcceptorCurrencyConversionResponseV01.mmObject(),

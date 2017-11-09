@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.AssetPriceType1Code
+ * AssetPriceType1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -49,13 +58,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * AssetPriceTypeCode.mmPlatts}</li>
  * <li>{@linkplain com.tools20022.repository.codeset.AssetPriceTypeCode#mmOther
  * AssetPriceTypeCode.mmOther}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.AssetPriceType1Code
- * AssetPriceType1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -99,7 +101,7 @@ public class AssetPriceTypeCode {
 	 */
 	public static final MMCode mmArgusMcCloskey = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ArgusMcCloskey";
 			definition = "Argus / Mc Closkey price.";
 			owner_lazy = () -> AssetPriceTypeCode.mmObject();
@@ -129,7 +131,7 @@ public class AssetPriceTypeCode {
 	 */
 	public static final MMCode mmBaltic = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Baltic";
 			definition = "Baltic price.";
 			owner_lazy = () -> AssetPriceTypeCode.mmObject();
@@ -159,7 +161,7 @@ public class AssetPriceTypeCode {
 	 */
 	public static final MMCode mmExchange = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Exchange";
 			definition = "Exchange price.";
 			owner_lazy = () -> AssetPriceTypeCode.mmObject();
@@ -189,7 +191,7 @@ public class AssetPriceTypeCode {
 	 */
 	public static final MMCode mmGlobalCoal = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GlobalCoal";
 			definition = "Global coal price.";
 			owner_lazy = () -> AssetPriceTypeCode.mmObject();
@@ -219,7 +221,7 @@ public class AssetPriceTypeCode {
 	 */
 	public static final MMCode mmIHSMcCloskey = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IHSMcCloskey";
 			definition = "IHS Mc Closkey price.";
 			owner_lazy = () -> AssetPriceTypeCode.mmObject();
@@ -249,7 +251,7 @@ public class AssetPriceTypeCode {
 	 */
 	public static final MMCode mmPlatts = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Platts";
 			definition = "Platts price.";
 			owner_lazy = () -> AssetPriceTypeCode.mmObject();
@@ -279,7 +281,7 @@ public class AssetPriceTypeCode {
 	 */
 	public static final MMCode mmOther = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
 			definition = "Other price.";
 			owner_lazy = () -> AssetPriceTypeCode.mmObject();
@@ -290,13 +292,12 @@ public class AssetPriceTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AssetPriceTypeCode";
 				definition = "Specifies the type of price for an asset.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AssetPriceTypeCode.mmArgusMcCloskey, com.tools20022.repository.codeset.AssetPriceTypeCode.mmBaltic,
-						com.tools20022.repository.codeset.AssetPriceTypeCode.mmExchange, com.tools20022.repository.codeset.AssetPriceTypeCode.mmGlobalCoal, com.tools20022.repository.codeset.AssetPriceTypeCode.mmIHSMcCloskey,
-						com.tools20022.repository.codeset.AssetPriceTypeCode.mmPlatts, com.tools20022.repository.codeset.AssetPriceTypeCode.mmOther);
+				code_lazy = () -> Arrays.asList(AssetPriceTypeCode.mmArgusMcCloskey, AssetPriceTypeCode.mmBaltic, AssetPriceTypeCode.mmExchange, AssetPriceTypeCode.mmGlobalCoal, AssetPriceTypeCode.mmIHSMcCloskey,
+						AssetPriceTypeCode.mmPlatts, AssetPriceTypeCode.mmOther);
 				derivation_lazy = () -> Arrays.asList(AssetPriceType1Code.mmObject());
 			}
 		});

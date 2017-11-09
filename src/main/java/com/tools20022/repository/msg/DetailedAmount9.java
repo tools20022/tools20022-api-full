@@ -19,11 +19,14 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.TypeOfAmount5Code;
 import com.tools20022.repository.datatype.ImpliedCurrencyAndAmount;
 import com.tools20022.repository.datatype.Max140Text;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.CardPayment;
+import com.tools20022.repository.entity.Payment;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -127,15 +130,15 @@ public class DetailedAmount9 {
 	 */
 	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPayment.mmAmountQualifier;
+			businessElementTrace_lazy = () -> CardPayment.mmAmountQualifier;
 			componentContext_lazy = () -> DetailedAmount9.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Type or class of amount.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DetailedAmount10.mmType);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.DetailedAmount2.mmType;
+			nextVersions_lazy = () -> Arrays.asList(DetailedAmount10.mmType);
+			previousVersion_lazy = () -> DetailedAmount2.mmType;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TypeOfAmount5Code.mmObject();
@@ -182,10 +185,10 @@ public class DetailedAmount9 {
 			componentContext_lazy = () -> DetailedAmount9.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalType";
 			definition = "Additional information to specify the type of amount.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DetailedAmount10.mmAdditionalType);
+			nextVersions_lazy = () -> Arrays.asList(DetailedAmount10.mmAdditionalType);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -234,14 +237,14 @@ public class DetailedAmount9 {
 	 */
 	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.mmAmount;
+			businessElementTrace_lazy = () -> Payment.mmAmount;
 			componentContext_lazy = () -> DetailedAmount9.mmObject();
 			isDerived = false;
 			xmlTag = "Amt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Amount value.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DetailedAmount10.mmAmount);
+			nextVersions_lazy = () -> Arrays.asList(DetailedAmount10.mmAmount);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
@@ -293,11 +296,11 @@ public class DetailedAmount9 {
 			componentContext_lazy = () -> DetailedAmount9.mmObject();
 			isDerived = false;
 			xmlTag = "Labl";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Label";
 			definition = "Short description of the amount to provide to the cardholder.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DetailedAmount10.mmLabel);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.DetailedAmount2.mmLabel;
+			nextVersions_lazy = () -> Arrays.asList(DetailedAmount10.mmLabel);
+			previousVersion_lazy = () -> DetailedAmount2.mmLabel;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
@@ -307,11 +310,10 @@ public class DetailedAmount9 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DetailedAmount9.mmType, com.tools20022.repository.msg.DetailedAmount9.mmAdditionalType, com.tools20022.repository.msg.DetailedAmount9.mmAmount,
-						com.tools20022.repository.msg.DetailedAmount9.mmLabel);
+				messageElement_lazy = () -> Arrays.asList(DetailedAmount9.mmType, DetailedAmount9.mmAdditionalType, DetailedAmount9.mmAmount, DetailedAmount9.mmLabel);
 				trace_lazy = () -> CardPayment.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DetailedAmount9";
 				definition = "Detailed amounts associated with the total amount of transaction.";
 				nextVersions_lazy = () -> Arrays.asList(DetailedAmount10.mmObject());

@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.OversubscriptionTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -86,7 +88,7 @@ public class OversubscriptionType1Code extends OversubscriptionTypeCode {
 	 */
 	public static final MMCode mmUnlimited = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unlimited";
 			owner_lazy = () -> OversubscriptionType1Code.mmObject();
 		}
@@ -109,7 +111,7 @@ public class OversubscriptionType1Code extends OversubscriptionTypeCode {
 	 */
 	public static final MMCode mmLimitedByQuantityOrPercentage = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LimitedByQuantityOrPercentage";
 			owner_lazy = () -> OversubscriptionType1Code.mmObject();
 		}
@@ -132,7 +134,7 @@ public class OversubscriptionType1Code extends OversubscriptionTypeCode {
 	 */
 	public static final MMCode mmNoOversubscription = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoOversubscription";
 			owner_lazy = () -> OversubscriptionType1Code.mmObject();
 		}
@@ -141,13 +143,12 @@ public class OversubscriptionType1Code extends OversubscriptionTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("UNLD");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OversubscriptionType1Code";
 				definition = "Specifies the oversubscription type.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OversubscriptionType1Code.mmUnlimited, com.tools20022.repository.codeset.OversubscriptionType1Code.mmLimitedByQuantityOrPercentage,
-						com.tools20022.repository.codeset.OversubscriptionType1Code.mmNoOversubscription);
+				code_lazy = () -> Arrays.asList(OversubscriptionType1Code.mmUnlimited, OversubscriptionType1Code.mmLimitedByQuantityOrPercentage, OversubscriptionType1Code.mmNoOversubscription);
 				trace_lazy = () -> OversubscriptionTypeCode.mmObject();
 			}
 		});

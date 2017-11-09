@@ -20,8 +20,11 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.*;
 import com.tools20022.repository.entity.CardPaymentAcquiring;
+import com.tools20022.repository.entity.GenericIdentification;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -133,10 +136,10 @@ public class SaleContext2 {
 			componentContext_lazy = () -> SaleContext2.mmObject();
 			isDerived = false;
 			xmlTag = "SaleId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SaleIdentification";
 			definition = "Identification of the sale terminal (electronic cash register or point of sale terminal) or the sale system.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SaleContext1.mmSaleIdentification;
+			previousVersion_lazy = () -> SaleContext1.mmSaleIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -179,10 +182,10 @@ public class SaleContext2 {
 			componentContext_lazy = () -> SaleContext2.mmObject();
 			isDerived = false;
 			xmlTag = "SaleRefNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SaleReferenceNumber";
 			definition = "Identify a sale transaction assigned by the sale system.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SaleContext1.mmSaleReferenceNumber;
+			previousVersion_lazy = () -> SaleContext1.mmSaleReferenceNumber;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -228,10 +231,10 @@ public class SaleContext2 {
 			componentContext_lazy = () -> SaleContext2.mmObject();
 			isDerived = false;
 			xmlTag = "SaleRcncltnId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SaleReconciliationIdentification";
 			definition = "Identifier of the reconciliation between the Sale system and the POI system.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SaleContext1.mmSaleReconciliationIdentification;
+			previousVersion_lazy = () -> SaleContext1.mmSaleReconciliationIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -277,14 +280,14 @@ public class SaleContext2 {
 	 */
 	public static final MMMessageAttribute mmCashierIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmIdentification;
+			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> SaleContext2.mmObject();
 			isDerived = false;
 			xmlTag = "CshrId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashierIdentification";
 			definition = "Identification of the cashier who carried out the transaction.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SaleContext1.mmCashierIdentification;
+			previousVersion_lazy = () -> SaleContext1.mmCashierIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -328,10 +331,10 @@ public class SaleContext2 {
 			componentContext_lazy = () -> SaleContext2.mmObject();
 			isDerived = false;
 			xmlTag = "ShftNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ShiftNumber";
 			definition = "Identifies the shift of the cashier.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SaleContext1.mmShiftNumber;
+			previousVersion_lazy = () -> SaleContext1.mmShiftNumber;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max2NumericText.mmObject();
@@ -369,7 +372,7 @@ public class SaleContext2 {
 			componentContext_lazy = () -> SaleContext2.mmObject();
 			isDerived = false;
 			xmlTag = "PurchsOrdrNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PurchaseOrderNumber";
 			definition = "Identification of the purchase order.";
 			maxOccurs = 1;
@@ -409,7 +412,7 @@ public class SaleContext2 {
 			componentContext_lazy = () -> SaleContext2.mmObject();
 			isDerived = false;
 			xmlTag = "InvcNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvoiceNumber";
 			definition = "Identification of the invoice.";
 			maxOccurs = 1;
@@ -450,7 +453,7 @@ public class SaleContext2 {
 			componentContext_lazy = () -> SaleContext2.mmObject();
 			isDerived = false;
 			xmlTag = "DlvryNoteNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeliveryNoteNumber";
 			definition = "Identification allocated by the sale system and given to the customer.";
 			maxOccurs = 1;
@@ -492,7 +495,7 @@ public class SaleContext2 {
 			componentContext_lazy = () -> SaleContext2.mmObject();
 			isDerived = false;
 			xmlTag = "SpnsrdMrchnt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SponsoredMerchant";
 			definition = "Merchant using the payment services of a payment facilitator, acting as a card acceptor.";
 			minOccurs = 0;
@@ -536,7 +539,7 @@ public class SaleContext2 {
 			componentContext_lazy = () -> SaleContext2.mmObject();
 			isDerived = false;
 			xmlTag = "SpltPmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SplitPayment";
 			definition = "True if the payment transaction is a partial payment of the sale transaction.";
 			maxOccurs = 1;
@@ -580,7 +583,7 @@ public class SaleContext2 {
 			componentContext_lazy = () -> SaleContext2.mmObject();
 			isDerived = false;
 			xmlTag = "RmngAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RemainingAmount";
 			definition = "Remaining amount to complete the sale transaction, if a partial payment has been completed for the sale transaction.";
 			maxOccurs = 1;
@@ -626,10 +629,10 @@ public class SaleContext2 {
 			componentContext_lazy = () -> SaleContext2.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlSaleData";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalSaleData";
 			definition = "Additional information associated with the sale transaction.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SaleContext1.mmAdditionalSaleData;
+			previousVersion_lazy = () -> SaleContext1.mmAdditionalSaleData;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max70Text.mmObject();
@@ -639,14 +642,12 @@ public class SaleContext2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SaleContext2.mmSaleIdentification, com.tools20022.repository.msg.SaleContext2.mmSaleReferenceNumber,
-						com.tools20022.repository.msg.SaleContext2.mmSaleReconciliationIdentification, com.tools20022.repository.msg.SaleContext2.mmCashierIdentification, com.tools20022.repository.msg.SaleContext2.mmShiftNumber,
-						com.tools20022.repository.msg.SaleContext2.mmPurchaseOrderNumber, com.tools20022.repository.msg.SaleContext2.mmInvoiceNumber, com.tools20022.repository.msg.SaleContext2.mmDeliveryNoteNumber,
-						com.tools20022.repository.msg.SaleContext2.mmSponsoredMerchant, com.tools20022.repository.msg.SaleContext2.mmSplitPayment, com.tools20022.repository.msg.SaleContext2.mmRemainingAmount,
-						com.tools20022.repository.msg.SaleContext2.mmAdditionalSaleData);
+				messageElement_lazy = () -> Arrays.asList(SaleContext2.mmSaleIdentification, SaleContext2.mmSaleReferenceNumber, SaleContext2.mmSaleReconciliationIdentification, SaleContext2.mmCashierIdentification,
+						SaleContext2.mmShiftNumber, SaleContext2.mmPurchaseOrderNumber, SaleContext2.mmInvoiceNumber, SaleContext2.mmDeliveryNoteNumber, SaleContext2.mmSponsoredMerchant, SaleContext2.mmSplitPayment,
+						SaleContext2.mmRemainingAmount, SaleContext2.mmAdditionalSaleData);
 				trace_lazy = () -> CardPaymentAcquiring.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SaleContext2";
 				definition = "Sale context in which the transaction is performed.";
 				previousVersion_lazy = () -> SaleContext1.mmObject();

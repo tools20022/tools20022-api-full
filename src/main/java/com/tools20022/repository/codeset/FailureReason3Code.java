@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.FailureReasonCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -123,9 +125,9 @@ public class FailureReason3Code extends FailureReasonCode {
 	 */
 	public static final MMCode mmCardDeclined = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CardDeclined";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.FailureReason2Code.mmCardDeclined;
+			previousVersion_lazy = () -> FailureReason2Code.mmCardDeclined;
 			owner_lazy = () -> FailureReason3Code.mmObject();
 		}
 	};
@@ -152,9 +154,9 @@ public class FailureReason3Code extends FailureReasonCode {
 	 */
 	public static final MMCode mmCustomerCancel = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CustomerCancel";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.FailureReason2Code.mmCustomerCancel;
+			previousVersion_lazy = () -> FailureReason2Code.mmCustomerCancel;
 			owner_lazy = () -> FailureReason3Code.mmObject();
 		}
 	};
@@ -181,9 +183,9 @@ public class FailureReason3Code extends FailureReasonCode {
 	 */
 	public static final MMCode mmMalfunction = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Malfunction";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.FailureReason2Code.mmMalfunction;
+			previousVersion_lazy = () -> FailureReason2Code.mmMalfunction;
 			owner_lazy = () -> FailureReason3Code.mmObject();
 		}
 	};
@@ -210,9 +212,9 @@ public class FailureReason3Code extends FailureReasonCode {
 	 */
 	public static final MMCode mmOfflineDeclined = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OfflineDeclined";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.FailureReason2Code.mmOfflineDeclined;
+			previousVersion_lazy = () -> FailureReason2Code.mmOfflineDeclined;
 			owner_lazy = () -> FailureReason3Code.mmObject();
 		}
 	};
@@ -239,9 +241,9 @@ public class FailureReason3Code extends FailureReasonCode {
 	 */
 	public static final MMCode mmOnLineDeclined = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OnLineDeclined";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.FailureReason2Code.mmOnLineDeclined;
+			previousVersion_lazy = () -> FailureReason2Code.mmOnLineDeclined;
 			owner_lazy = () -> FailureReason3Code.mmObject();
 		}
 	};
@@ -268,9 +270,9 @@ public class FailureReason3Code extends FailureReasonCode {
 	 */
 	public static final MMCode mmPartial = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Partial";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.FailureReason2Code.mmPartial;
+			previousVersion_lazy = () -> FailureReason2Code.mmPartial;
 			owner_lazy = () -> FailureReason3Code.mmObject();
 		}
 	};
@@ -297,9 +299,9 @@ public class FailureReason3Code extends FailureReasonCode {
 	 */
 	public static final MMCode mmSuspectedFraud = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SuspectedFraud";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.FailureReason2Code.mmSuspectedFraud;
+			previousVersion_lazy = () -> FailureReason2Code.mmSuspectedFraud;
 			owner_lazy = () -> FailureReason3Code.mmObject();
 		}
 	};
@@ -326,9 +328,9 @@ public class FailureReason3Code extends FailureReasonCode {
 	 */
 	public static final MMCode mmTimeOut = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TimeOut";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.FailureReason2Code.mmTimeOut;
+			previousVersion_lazy = () -> FailureReason2Code.mmTimeOut;
 			owner_lazy = () -> FailureReason3Code.mmObject();
 		}
 	};
@@ -355,9 +357,9 @@ public class FailureReason3Code extends FailureReasonCode {
 	 */
 	public static final MMCode mmTooLateResponse = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TooLateResponse";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.FailureReason2Code.mmTooLateResponse;
+			previousVersion_lazy = () -> FailureReason2Code.mmTooLateResponse;
 			owner_lazy = () -> FailureReason3Code.mmObject();
 		}
 	};
@@ -384,9 +386,9 @@ public class FailureReason3Code extends FailureReasonCode {
 	 */
 	public static final MMCode mmUnableToComplete = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnableToComplete";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.FailureReason2Code.mmUnableToComplete;
+			previousVersion_lazy = () -> FailureReason2Code.mmUnableToComplete;
 			owner_lazy = () -> FailureReason3Code.mmObject();
 		}
 	};
@@ -413,9 +415,9 @@ public class FailureReason3Code extends FailureReasonCode {
 	 */
 	public static final MMCode mmUnableToSend = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnableToSend";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.FailureReason2Code.mmUnableToSend;
+			previousVersion_lazy = () -> FailureReason2Code.mmUnableToSend;
 			owner_lazy = () -> FailureReason3Code.mmObject();
 		}
 	};
@@ -437,7 +439,7 @@ public class FailureReason3Code extends FailureReasonCode {
 	 */
 	public static final MMCode mmSecurityError = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityError";
 			owner_lazy = () -> FailureReason3Code.mmObject();
 		}
@@ -446,17 +448,15 @@ public class FailureReason3Code extends FailureReasonCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CDCL");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FailureReason3Code";
 				definition = "List of incidents happening at the acceptor during the transaction.";
 				previousVersion_lazy = () -> FailureReason2Code.mmObject();
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.FailureReason3Code.mmCardDeclined, com.tools20022.repository.codeset.FailureReason3Code.mmCustomerCancel,
-						com.tools20022.repository.codeset.FailureReason3Code.mmMalfunction, com.tools20022.repository.codeset.FailureReason3Code.mmOfflineDeclined, com.tools20022.repository.codeset.FailureReason3Code.mmOnLineDeclined,
-						com.tools20022.repository.codeset.FailureReason3Code.mmPartial, com.tools20022.repository.codeset.FailureReason3Code.mmSuspectedFraud, com.tools20022.repository.codeset.FailureReason3Code.mmTimeOut,
-						com.tools20022.repository.codeset.FailureReason3Code.mmTooLateResponse, com.tools20022.repository.codeset.FailureReason3Code.mmUnableToComplete, com.tools20022.repository.codeset.FailureReason3Code.mmUnableToSend,
-						com.tools20022.repository.codeset.FailureReason3Code.mmSecurityError);
+				code_lazy = () -> Arrays.asList(FailureReason3Code.mmCardDeclined, FailureReason3Code.mmCustomerCancel, FailureReason3Code.mmMalfunction, FailureReason3Code.mmOfflineDeclined, FailureReason3Code.mmOnLineDeclined,
+						FailureReason3Code.mmPartial, FailureReason3Code.mmSuspectedFraud, FailureReason3Code.mmTimeOut, FailureReason3Code.mmTooLateResponse, FailureReason3Code.mmUnableToComplete, FailureReason3Code.mmUnableToSend,
+						FailureReason3Code.mmSecurityError);
 				trace_lazy = () -> FailureReasonCode.mmObject();
 			}
 		});

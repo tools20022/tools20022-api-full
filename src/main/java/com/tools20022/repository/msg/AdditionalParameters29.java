@@ -19,10 +19,13 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.sese.SecuritiesSettlementTransactionConfirmationV07;
 import com.tools20022.repository.codeset.PartialSettlement2Code;
 import com.tools20022.repository.codeset.PreConfirmation1Code;
 import com.tools20022.repository.datatype.Max35Text;
-import com.tools20022.repository.entity.SecuritiesTrade;
+import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -136,14 +139,14 @@ public class AdditionalParameters29 {
 	 */
 	public static final MMMessageAttribute mmPreConfirmation = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmPreConfirmation;
+			businessElementTrace_lazy = () -> SecuritiesSettlement.mmPreConfirmation;
 			componentContext_lazy = () -> AdditionalParameters29.mmObject();
 			isDerived = false;
 			xmlTag = "PreConf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreConfirmation";
 			definition = "Specifies whether there exists a pre-confirmation.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AdditionalParameters22.mmPreConfirmation;
+			previousVersion_lazy = () -> AdditionalParameters22.mmPreConfirmation;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PreConfirmation1Code.mmObject();
@@ -190,14 +193,14 @@ public class AdditionalParameters29 {
 	 */
 	public static final MMMessageAttribute mmPartialSettlement = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTransfer.mmPartialSettlementType;
+			businessElementTrace_lazy = () -> SecuritiesTransfer.mmPartialSettlementType;
 			componentContext_lazy = () -> AdditionalParameters29.mmObject();
 			isDerived = false;
 			xmlTag = "PrtlSttlm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartialSettlement";
 			definition = "Specifies partial settlement information.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AdditionalParameters22.mmPartialSettlement;
+			previousVersion_lazy = () -> AdditionalParameters22.mmPartialSettlement;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PartialSettlement2Code.mmObject();
@@ -246,14 +249,14 @@ public class AdditionalParameters29 {
 	 */
 	public static final MMMessageAttribute mmPreviousPartialConfirmationIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradeIdentification.mmIdentification;
+			businessElementTrace_lazy = () -> TradeIdentification.mmIdentification;
 			componentContext_lazy = () -> AdditionalParameters29.mmObject();
 			isDerived = false;
 			xmlTag = "PrvsPrtlConfId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousPartialConfirmationIdentification";
 			definition = "Identification of the confirmation previously sent to confirm the partial settlement of a transaction.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AdditionalParameters22.mmPreviousPartialConfirmationIdentification;
+			previousVersion_lazy = () -> AdditionalParameters22.mmPreviousPartialConfirmationIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -305,14 +308,14 @@ public class AdditionalParameters29 {
 	 */
 	public static final MMMessageAttribute mmTripartyAgentServiceProviderCollateralTransactionIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeIdentification.mmTripartyAgentCollateralTransactionIdentification;
+			businessElementTrace_lazy = () -> SecuritiesTradeIdentification.mmTripartyAgentCollateralTransactionIdentification;
 			componentContext_lazy = () -> AdditionalParameters29.mmObject();
 			isDerived = false;
 			xmlTag = "TrptyAgtSvcPrvdrCollTxId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TripartyAgentServiceProviderCollateralTransactionIdentification";
 			definition = "Unique identification identifying the triparty collateral management transaction from the triparty-agent's/service-provider's point of view.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AdditionalParameters22.mmTripartyAgentCollateralTransactionIdentification;
+			previousVersion_lazy = () -> AdditionalParameters22.mmTripartyAgentCollateralTransactionIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -363,14 +366,14 @@ public class AdditionalParameters29 {
 	 */
 	public static final MMMessageAttribute mmClientTripartyCollateralTransactionIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeIdentification.mmClientTripartyCollateralTransactionIdentification;
+			businessElementTrace_lazy = () -> SecuritiesTradeIdentification.mmClientTripartyCollateralTransactionIdentification;
 			componentContext_lazy = () -> AdditionalParameters29.mmObject();
 			isDerived = false;
 			xmlTag = "ClntTrptyCollTxId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClientTripartyCollateralTransactionIdentification";
 			definition = "Unique reference identifying the triparty collateral management transaction from the client's point of view.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AdditionalParameters22.mmClientTripartyCollateralTransactionIdentification;
+			previousVersion_lazy = () -> AdditionalParameters22.mmClientTripartyCollateralTransactionIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -418,14 +421,14 @@ public class AdditionalParameters29 {
 	 */
 	public static final MMMessageAttribute mmClientCollateralInstructionIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeIdentification.mmClientTripartyCollateralTransactionIdentification;
+			businessElementTrace_lazy = () -> SecuritiesTradeIdentification.mmClientTripartyCollateralTransactionIdentification;
 			componentContext_lazy = () -> AdditionalParameters29.mmObject();
 			isDerived = false;
 			xmlTag = "ClntCollInstrId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClientCollateralInstructionIdentification";
 			definition = "Unique identification assigned to the instruction by the client.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AdditionalParameters22.mmClientCollateralInstructionIdentification;
+			previousVersion_lazy = () -> AdditionalParameters22.mmClientCollateralInstructionIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -476,14 +479,14 @@ public class AdditionalParameters29 {
 	 */
 	public static final MMMessageAttribute mmTripartyAgentServiceProviderCollateralInstructionIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeIdentification.mmTripartyAgentCollateralTransactionIdentification;
+			businessElementTrace_lazy = () -> SecuritiesTradeIdentification.mmTripartyAgentCollateralTransactionIdentification;
 			componentContext_lazy = () -> AdditionalParameters29.mmObject();
 			isDerived = false;
 			xmlTag = "TrptyAgtSvcPrvdrCollInstrId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TripartyAgentServiceProviderCollateralInstructionIdentification";
 			definition = "Unique identification assigned to the instruction by the triparty-agent/service-provider.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AdditionalParameters22.mmTripartyCollateralInstructionIdentification;
+			previousVersion_lazy = () -> AdditionalParameters22.mmTripartyCollateralInstructionIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -493,15 +496,13 @@ public class AdditionalParameters29 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AdditionalParameters29.mmPreConfirmation, com.tools20022.repository.msg.AdditionalParameters29.mmPartialSettlement,
-						com.tools20022.repository.msg.AdditionalParameters29.mmPreviousPartialConfirmationIdentification,
-						com.tools20022.repository.msg.AdditionalParameters29.mmTripartyAgentServiceProviderCollateralTransactionIdentification,
-						com.tools20022.repository.msg.AdditionalParameters29.mmClientTripartyCollateralTransactionIdentification, com.tools20022.repository.msg.AdditionalParameters29.mmClientCollateralInstructionIdentification,
-						com.tools20022.repository.msg.AdditionalParameters29.mmTripartyAgentServiceProviderCollateralInstructionIdentification);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesSettlementTransactionConfirmationV07.mmAdditionalParameters);
+				messageElement_lazy = () -> Arrays.asList(AdditionalParameters29.mmPreConfirmation, AdditionalParameters29.mmPartialSettlement, AdditionalParameters29.mmPreviousPartialConfirmationIdentification,
+						AdditionalParameters29.mmTripartyAgentServiceProviderCollateralTransactionIdentification, AdditionalParameters29.mmClientTripartyCollateralTransactionIdentification,
+						AdditionalParameters29.mmClientCollateralInstructionIdentification, AdditionalParameters29.mmTripartyAgentServiceProviderCollateralInstructionIdentification);
+				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesSettlementTransactionConfirmationV07.mmAdditionalParameters);
 				trace_lazy = () -> SecuritiesTrade.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AdditionalParameters29";
 				definition = "Specifies additional parameters to the message or transaction.";
 				previousVersion_lazy = () -> AdditionalParameters22.mmObject();

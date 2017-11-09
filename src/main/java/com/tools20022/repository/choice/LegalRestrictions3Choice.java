@@ -20,8 +20,10 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.LegalRestrictions1Code;
 import com.tools20022.repository.entity.SecuritiesRestriction;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification40;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -100,11 +102,11 @@ public class LegalRestrictions3Choice {
 	 */
 	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesRestriction.mmLegalRestrictionType;
+			businessElementTrace_lazy = () -> SecuritiesRestriction.mmLegalRestrictionType;
 			componentContext_lazy = () -> LegalRestrictions3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Cd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Legal restrictions expressed as an ISO 20022 code.";
 			maxOccurs = 1;
@@ -147,11 +149,11 @@ public class LegalRestrictions3Choice {
 	 */
 	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesRestriction.mmLegalRestrictionType;
+			businessElementTrace_lazy = () -> SecuritiesRestriction.mmLegalRestrictionType;
 			componentContext_lazy = () -> LegalRestrictions3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Legal restrictions expressed as a proprietary code.";
 			maxOccurs = 1;
@@ -164,10 +166,10 @@ public class LegalRestrictions3Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.LegalRestrictions3Choice.mmCode, com.tools20022.repository.choice.LegalRestrictions3Choice.mmProprietary);
+				messageElement_lazy = () -> Arrays.asList(LegalRestrictions3Choice.mmCode, LegalRestrictions3Choice.mmProprietary);
 				trace_lazy = () -> SecuritiesRestriction.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "LegalRestrictions3Choice";
 				definition = "Choice of format for legal restrictions.";
 			}

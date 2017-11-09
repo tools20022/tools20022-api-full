@@ -20,8 +20,10 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.*;
 import com.tools20022.repository.datatype.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -173,10 +175,10 @@ public class CorporateActionSD11 {
 			componentContext_lazy = () -> CorporateActionSD11.mmObject();
 			isDerived = false;
 			xmlTag = "PlcAndNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "xPath to the element that is being extended.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionSD13.mmPlaceAndName);
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionSD13.mmPlaceAndName);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
@@ -227,10 +229,10 @@ public class CorporateActionSD11 {
 			componentContext_lazy = () -> CorporateActionSD11.mmObject();
 			isDerived = false;
 			xmlTag = "NtceTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoticeType";
 			definition = "Indicates whether the notice received was universal or specific to securities registered in DTC's nominee name.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionSD13.mmNoticeType);
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionSD13.mmNoticeType);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> NoticeType1Code.mmObject();
@@ -282,10 +284,10 @@ public class CorporateActionSD11 {
 			componentContext_lazy = () -> CorporateActionSD11.mmObject();
 			isDerived = false;
 			xmlTag = "EvtCshVal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventCashValue";
 			definition = "Amount of cash set aside by the offeror. This is the maximum amount that the offeror is willing to pay out to the holders who elect to take part in the offer. ";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionSD13.mmEventCashValue);
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionSD13.mmEventCashValue);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINActiveCurrencyAnd13DecimalAmount.mmObject();
@@ -334,10 +336,10 @@ public class CorporateActionSD11 {
 			componentContext_lazy = () -> CorporateActionSD11.mmObject();
 			isDerived = false;
 			xmlTag = "NbOfShrsToBeIssd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NumberOfSharesToBeIssued";
 			definition = "Number of shares the issuer is creating as part of the event.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionSD13.mmNumberOfSharesToBeIssued);
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionSD13.mmNumberOfSharesToBeIssued);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
@@ -388,10 +390,10 @@ public class CorporateActionSD11 {
 			componentContext_lazy = () -> CorporateActionSD11.mmObject();
 			isDerived = false;
 			xmlTag = "TtlNbOfShrsOfferd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalNumberOfSharesOffered";
 			definition = "Total number of shares that are part of the offer for example subscription offer.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionSD13.mmTotalNumberOfSharesOffered);
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionSD13.mmTotalNumberOfSharesOffered);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
@@ -443,10 +445,10 @@ public class CorporateActionSD11 {
 			componentContext_lazy = () -> CorporateActionSD11.mmObject();
 			isDerived = false;
 			xmlTag = "CutOffDays";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CutOffDays";
 			definition = "Number of additional days used to establish a DTC processing cut-off date. For example, DTC typically adds a cut-off off day (making it one business day prior) to the record date for issues with agents outside NYC. This allows time for DTC to deliver the securities.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionSD13.mmCutOffDays);
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionSD13.mmCutOffDays);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max3Number.mmObject();
@@ -502,10 +504,10 @@ public class CorporateActionSD11 {
 			componentContext_lazy = () -> CorporateActionSD11.mmObject();
 			isDerived = false;
 			xmlTag = "DTCAutomtdOfferPrgm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCAutomatedOfferProgram";
 			definition = "Indicator that identifies the type of interface an event agent has with DTC (The Depository Trust Corporation). It defines how time sensitive instruction and withdrawal process is. Offline (non automated) agent will have earlier deadlines which will be reflected in response deadlines but importantly withdrawal procedures for manual agent require hard copy sign off from the agent that has to be delivered to DTC to proceed with withdrawal.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionSD13.mmDTCAutomatedOfferProgram);
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionSD13.mmDTCAutomatedOfferProgram);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> DTCAutoOfferProgram1Code.mmObject();
@@ -555,10 +557,10 @@ public class CorporateActionSD11 {
 			componentContext_lazy = () -> CorporateActionSD11.mmObject();
 			isDerived = false;
 			xmlTag = "DTCRcyclCutOffInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCRecycleCutOffIndicator";
 			definition = "Indicates whether the recycling of instructions for eligible positions is set to end early or late at DTC (The Depository Trust Corporation).";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionSD13.mmDTCRecycleCutOffIndicator);
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionSD13.mmDTCRecycleCutOffIndicator);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CutOff1Code.mmObject();
@@ -609,10 +611,10 @@ public class CorporateActionSD11 {
 			componentContext_lazy = () -> CorporateActionSD11.mmObject();
 			isDerived = false;
 			xmlTag = "LngShrtPmtInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LongShortPaymentIndicator";
 			definition = "Denotes whether the first accrual period for debt instruments is either long or short, compared to the normal accrual period of the security.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionSD13.mmLongShortPaymentIndicator);
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionSD13.mmLongShortPaymentIndicator);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> AccrualPeriodType1Code.mmObject();
@@ -660,10 +662,10 @@ public class CorporateActionSD11 {
 			componentContext_lazy = () -> CorporateActionSD11.mmObject();
 			isDerived = false;
 			xmlTag = "OvrsbcptTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OversubscriptionType";
 			definition = "Type of oversubscription on the event.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionSD13.mmOversubscriptionType);
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionSD13.mmOversubscriptionType);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> OversubscriptionType1Code.mmObject();
@@ -714,10 +716,10 @@ public class CorporateActionSD11 {
 			componentContext_lazy = () -> CorporateActionSD11.mmObject();
 			isDerived = false;
 			xmlTag = "CondlPmtAplblFlg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConditionalPaymentApplicableFlag";
 			definition = "Indicates whether the payment made by the issuer is based on a stated condition.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionSD13.mmConditionalPaymentApplicableFlag);
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionSD13.mmConditionalPaymentApplicableFlag);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
@@ -768,10 +770,10 @@ public class CorporateActionSD11 {
 			componentContext_lazy = () -> CorporateActionSD11.mmObject();
 			isDerived = false;
 			xmlTag = "SlctnDealrFeeFlg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SolicitationDealerFeeFlag";
 			definition = "Indicates whether there is a solicitation fee on the event. This fee is paid by the soliciting dealer.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionSD13.mmSolicitationDealerFeeFlag);
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionSD13.mmSolicitationDealerFeeFlag);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
@@ -822,10 +824,10 @@ public class CorporateActionSD11 {
 			componentContext_lazy = () -> CorporateActionSD11.mmObject();
 			isDerived = false;
 			xmlTag = "DTCCtdyElgblFlg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCCustodyEligibleFlag";
 			definition = "Indicates whether positions held in Custody program are eligible for instruction processing at DTC (The Depository Trust Corporation).";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionSD13.mmDTCCustodyEligibleFlag);
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionSD13.mmDTCCustodyEligibleFlag);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
@@ -876,10 +878,10 @@ public class CorporateActionSD11 {
 			componentContext_lazy = () -> CorporateActionSD11.mmObject();
 			isDerived = false;
 			xmlTag = "DTCReorgCtdyElgblFlg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCReorganisationCustodyEligibleFlag";
 			definition = "Indicates whether the event is eligible for Custody Reorganisation service at DTC (The Depository Trust Corporation).";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionSD13.mmDTCReorganisationCustodyEligibleFlag);
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionSD13.mmDTCReorganisationCustodyEligibleFlag);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
@@ -930,10 +932,10 @@ public class CorporateActionSD11 {
 			componentContext_lazy = () -> CorporateActionSD11.mmObject();
 			isDerived = false;
 			xmlTag = "DTCReorgDpstElgblFlg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCReorganisationDepositEligibleFlag";
 			definition = "Indicates whether the event is eligible for Reorganisation Deposit Service at DTC (The Depository Trust Corporation).";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionSD13.mmDTCReorganisationDepositEligibleFlag);
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionSD13.mmDTCReorganisationDepositEligibleFlag);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
@@ -984,10 +986,10 @@ public class CorporateActionSD11 {
 			componentContext_lazy = () -> CorporateActionSD11.mmObject();
 			isDerived = false;
 			xmlTag = "SrrndrShrsToAgtFlg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SurrenderSharesToAgentFlag";
 			definition = "Indicates whether shares outside of DTC need to be delivered to the agent in order to receive entitlement. ";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionSD13.mmSurrenderSharesToAgentFlag);
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionSD13.mmSurrenderSharesToAgentFlag);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
@@ -1040,10 +1042,10 @@ public class CorporateActionSD11 {
 			componentContext_lazy = () -> CorporateActionSD11.mmObject();
 			isDerived = false;
 			xmlTag = "StepUpPrvlgFlg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StepUpPrivilegeFlag";
 			definition = "Indicates that the holder has the privilege to buy additional rights. Upon exercising this privilege, the holder may subscribe to one additional share of the new security in lieu of fractional shares to which the holder might otherwise be entitled.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionSD13.mmStepUpPrivilegeFlag);
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionSD13.mmStepUpPrivilegeFlag);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
@@ -1095,10 +1097,10 @@ public class CorporateActionSD11 {
 			componentContext_lazy = () -> CorporateActionSD11.mmObject();
 			isDerived = false;
 			xmlTag = "RghtsOvrsbcptFlg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RightsOversubscriptionFlag";
 			definition = "Indicates whether holders of rights will be afforded the opportunity to subscribe to purchase extra shares that are not picked up by the remaining holders.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionSD13.mmRightsOversubscriptionFlag);
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionSD13.mmRightsOversubscriptionFlag);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
@@ -1149,10 +1151,10 @@ public class CorporateActionSD11 {
 			componentContext_lazy = () -> CorporateActionSD11.mmObject();
 			isDerived = false;
 			xmlTag = "RghtsRndUpPrvlgFlg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RightsRoundUpPrivilegeFlag";
 			definition = "Indicates whether the shareholder will be able to round up his/her subscription in the event his/her rights are less than the requirement.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionSD13.mmRightsRoundUpPrivilegeFlag);
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionSD13.mmRightsRoundUpPrivilegeFlag);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
@@ -1200,10 +1202,10 @@ public class CorporateActionSD11 {
 			componentContext_lazy = () -> CorporateActionSD11.mmObject();
 			isDerived = false;
 			xmlTag = "RghtsTrfblFlg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RightsTransferableFlag";
 			definition = "Indicates whether rights can be transferred.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionSD13.mmRightsTransferableFlag);
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionSD13.mmRightsTransferableFlag);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
@@ -1251,10 +1253,10 @@ public class CorporateActionSD11 {
 			componentContext_lazy = () -> CorporateActionSD11.mmObject();
 			isDerived = false;
 			xmlTag = "CertDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CertificateDetails";
 			definition = "Provides details of certificates that have been  called  for redemption.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionSD13.mmCertificateDetails);
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionSD13.mmCertificateDetails);
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.CorporateActionSD5.mmObject();
@@ -1305,10 +1307,10 @@ public class CorporateActionSD11 {
 			componentContext_lazy = () -> CorporateActionSD11.mmObject();
 			isDerived = false;
 			xmlTag = "EDSMsggCtryCd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EDSMessagingCountryCode";
 			definition = "Country of Issue used to determine whether the electable option requires Tax Exempt or Wire information when sending EDS elections via the CAIN message type.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionSD13.mmEDSMessagingCountryCode);
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionSD13.mmEDSMessagingCountryCode);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CountryCode.mmObject();
@@ -1365,10 +1367,10 @@ public class CorporateActionSD11 {
 			componentContext_lazy = () -> CorporateActionSD11.mmObject();
 			isDerived = false;
 			xmlTag = "RDPRefNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RDPReferenceNumber";
 			definition = "Unique DTCC legacy reference used for matching and reconciling legacy records. The number algorhithm is as follows: Department ID (1:1), Activity Type (2:3), Cusip Country Code (5:2), Cusip (7:9), Record Date (15:8), Payable Date (22:8), Sequence Number (29:3), RDP Issue Type (31:1). \r\nUSAGE RULE: this sequence can be populated /extended to event details, option details or a movement, depending on sequence number coordinality to an event.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionSD13.mmRDPReferenceNumber);
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionSD13.mmRDPReferenceNumber);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Exact32AlphaNumericText.mmObject();
@@ -1378,20 +1380,14 @@ public class CorporateActionSD11 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionSD11.mmPlaceAndName, com.tools20022.repository.msg.CorporateActionSD11.mmNoticeType,
-						com.tools20022.repository.msg.CorporateActionSD11.mmEventCashValue, com.tools20022.repository.msg.CorporateActionSD11.mmNumberOfSharesToBeIssued,
-						com.tools20022.repository.msg.CorporateActionSD11.mmTotalNumberOfSharesOffered, com.tools20022.repository.msg.CorporateActionSD11.mmCutOffDays,
-						com.tools20022.repository.msg.CorporateActionSD11.mmDTCAutomatedOfferProgram, com.tools20022.repository.msg.CorporateActionSD11.mmDTCRecycleCutOffIndicator,
-						com.tools20022.repository.msg.CorporateActionSD11.mmLongShortPaymentIndicator, com.tools20022.repository.msg.CorporateActionSD11.mmOversubscriptionType,
-						com.tools20022.repository.msg.CorporateActionSD11.mmConditionalPaymentApplicableFlag, com.tools20022.repository.msg.CorporateActionSD11.mmSolicitationDealerFeeFlag,
-						com.tools20022.repository.msg.CorporateActionSD11.mmDTCCustodyEligibleFlag, com.tools20022.repository.msg.CorporateActionSD11.mmDTCReorganisationCustodyEligibleFlag,
-						com.tools20022.repository.msg.CorporateActionSD11.mmDTCReorganisationDepositEligibleFlag, com.tools20022.repository.msg.CorporateActionSD11.mmSurrenderSharesToAgentFlag,
-						com.tools20022.repository.msg.CorporateActionSD11.mmStepUpPrivilegeFlag, com.tools20022.repository.msg.CorporateActionSD11.mmRightsOversubscriptionFlag,
-						com.tools20022.repository.msg.CorporateActionSD11.mmRightsRoundUpPrivilegeFlag, com.tools20022.repository.msg.CorporateActionSD11.mmRightsTransferableFlag,
-						com.tools20022.repository.msg.CorporateActionSD11.mmCertificateDetails, com.tools20022.repository.msg.CorporateActionSD11.mmEDSMessagingCountryCode,
-						com.tools20022.repository.msg.CorporateActionSD11.mmRDPReferenceNumber);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(CorporateActionSD11.mmPlaceAndName, CorporateActionSD11.mmNoticeType, CorporateActionSD11.mmEventCashValue, CorporateActionSD11.mmNumberOfSharesToBeIssued,
+						CorporateActionSD11.mmTotalNumberOfSharesOffered, CorporateActionSD11.mmCutOffDays, CorporateActionSD11.mmDTCAutomatedOfferProgram, CorporateActionSD11.mmDTCRecycleCutOffIndicator,
+						CorporateActionSD11.mmLongShortPaymentIndicator, CorporateActionSD11.mmOversubscriptionType, CorporateActionSD11.mmConditionalPaymentApplicableFlag, CorporateActionSD11.mmSolicitationDealerFeeFlag,
+						CorporateActionSD11.mmDTCCustodyEligibleFlag, CorporateActionSD11.mmDTCReorganisationCustodyEligibleFlag, CorporateActionSD11.mmDTCReorganisationDepositEligibleFlag, CorporateActionSD11.mmSurrenderSharesToAgentFlag,
+						CorporateActionSD11.mmStepUpPrivilegeFlag, CorporateActionSD11.mmRightsOversubscriptionFlag, CorporateActionSD11.mmRightsRoundUpPrivilegeFlag, CorporateActionSD11.mmRightsTransferableFlag,
+						CorporateActionSD11.mmCertificateDetails, CorporateActionSD11.mmEDSMessagingCountryCode, CorporateActionSD11.mmRDPReferenceNumber);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionSD11";
 				definition = "Provides additional information regarding corporate action details.";
 				nextVersions_lazy = () -> Arrays.asList(CorporateActionSD13.mmObject());

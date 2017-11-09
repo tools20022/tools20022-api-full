@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.RefreshTime1Code
+ * RefreshTime1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -34,13 +43,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * RefreshTimeCode.mmImmediate}</li>
  * <li>{@linkplain com.tools20022.repository.codeset.RefreshTimeCode#mmExhaust
  * RefreshTimeCode.mmExhaust}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.RefreshTime1Code
- * RefreshTime1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -90,7 +92,7 @@ public class RefreshTimeCode {
 	 */
 	public static final MMCode mmImmediate = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Immediate";
 			definition = "After each fill.";
 			owner_lazy = () -> RefreshTimeCode.mmObject();
@@ -120,7 +122,7 @@ public class RefreshTimeCode {
 	 */
 	public static final MMCode mmExhaust = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Exhaust";
 			definition = "When quantity to be displayed equals 0.";
 			owner_lazy = () -> RefreshTimeCode.mmObject();
@@ -131,12 +133,12 @@ public class RefreshTimeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("IMME");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RefreshTimeCode";
 				definition = "Defines when to refresh.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RefreshTimeCode.mmImmediate, com.tools20022.repository.codeset.RefreshTimeCode.mmExhaust);
+				code_lazy = () -> Arrays.asList(RefreshTimeCode.mmImmediate, RefreshTimeCode.mmExhaust);
 				derivation_lazy = () -> Arrays.asList(RefreshTime1Code.mmObject());
 			}
 		});

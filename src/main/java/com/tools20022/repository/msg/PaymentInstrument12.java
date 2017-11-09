@@ -19,10 +19,13 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.PaymentInstrument16Choice;
 import com.tools20022.repository.codeset.ActiveCurrencyCode;
 import com.tools20022.repository.datatype.PercentageBoundedRate;
+import com.tools20022.repository.entity.Dividend;
 import com.tools20022.repository.entity.Payment;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -114,14 +117,14 @@ public class PaymentInstrument12 {
 	 */
 	public static final MMMessageAttribute mmSettlementCurrency = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.mmCurrencyOfTransfer;
+			businessElementTrace_lazy = () -> Payment.mmCurrencyOfTransfer;
 			componentContext_lazy = () -> PaymentInstrument12.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmCcy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementCurrency";
 			definition = "Currency associated with the payment instrument.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PaymentInstrument10.mmSettlementCurrency;
+			previousVersion_lazy = () -> PaymentInstrument10.mmSettlementCurrency;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyCode.mmObject();
@@ -168,14 +171,14 @@ public class PaymentInstrument12 {
 	 */
 	public static final MMMessageAttribute mmPaymentInstrument = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.mmCreditMethod;
+			businessElementTrace_lazy = () -> Payment.mmCreditMethod;
 			componentContext_lazy = () -> PaymentInstrument12.mmObject();
 			isDerived = false;
 			xmlTag = "PmtInstrm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentInstrument";
 			definition = "Choice of payment instruments.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PaymentInstrument10.mmPaymentInstrument;
+			previousVersion_lazy = () -> PaymentInstrument10.mmPaymentInstrument;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> PaymentInstrument16Choice.mmObject();
@@ -225,14 +228,14 @@ public class PaymentInstrument12 {
 	 */
 	public static final MMMessageAttribute mmDividendPercentage = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Dividend.mmAnnualTotalDividendRate;
+			businessElementTrace_lazy = () -> Dividend.mmAnnualTotalDividendRate;
 			componentContext_lazy = () -> PaymentInstrument12.mmObject();
 			isDerived = false;
 			xmlTag = "DvddPctg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DividendPercentage";
 			definition = "Percentage of the dividend payment not to be reinvested, that is, to be paid in cash.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PaymentInstrument10.mmDividendPercentage;
+			previousVersion_lazy = () -> PaymentInstrument10.mmDividendPercentage;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PercentageBoundedRate.mmObject();
@@ -242,11 +245,10 @@ public class PaymentInstrument12 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentInstrument12.mmSettlementCurrency, com.tools20022.repository.msg.PaymentInstrument12.mmPaymentInstrument,
-						com.tools20022.repository.msg.PaymentInstrument12.mmDividendPercentage);
+				messageElement_lazy = () -> Arrays.asList(PaymentInstrument12.mmSettlementCurrency, PaymentInstrument12.mmPaymentInstrument, PaymentInstrument12.mmDividendPercentage);
 				trace_lazy = () -> Payment.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PaymentInstrument12";
 				definition = "Instrument that has or represents monetary value and is used to process a payment instruction.";
 				previousVersion_lazy = () -> PaymentInstrument10.mmObject();

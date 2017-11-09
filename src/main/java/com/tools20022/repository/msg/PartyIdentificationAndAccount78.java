@@ -20,10 +20,13 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.PartyIdentification32Choice;
 import com.tools20022.repository.codeset.ClearingSide1Code;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.entity.ClearingMemberRole;
 import com.tools20022.repository.entity.PartyIdentificationInformation;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -118,7 +121,7 @@ public class PartyIdentificationAndAccount78 {
 			componentContext_lazy = () -> PartyIdentificationAndAccount78.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Identification of the party.";
 			maxOccurs = 1;
@@ -165,7 +168,7 @@ public class PartyIdentificationAndAccount78 {
 			componentContext_lazy = () -> PartyIdentificationAndAccount78.mmObject();
 			isDerived = false;
 			xmlTag = "AltrnId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AlternateIdentification";
 			definition = "Alternate identification for a party.";
 			maxOccurs = 1;
@@ -210,11 +213,11 @@ public class PartyIdentificationAndAccount78 {
 	 */
 	public static final MMMessageAttribute mmSide = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ClearingMemberRole.mmSide;
+			businessElementTrace_lazy = () -> ClearingMemberRole.mmSide;
 			componentContext_lazy = () -> PartyIdentificationAndAccount78.mmObject();
 			isDerived = false;
 			xmlTag = "Sd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Side";
 			definition = "Coded list to specify the side of the order.";
 			maxOccurs = 1;
@@ -261,11 +264,11 @@ public class PartyIdentificationAndAccount78 {
 	 */
 	public static final MMMessageAttribute mmClearingAccount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ClearingMemberRole.mmClearingAccount;
+			businessElementTrace_lazy = () -> ClearingMemberRole.mmClearingAccount;
 			componentContext_lazy = () -> PartyIdentificationAndAccount78.mmObject();
 			isDerived = false;
 			xmlTag = "ClrAcct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClearingAccount";
 			definition = "Identifies the clearing member account at the CCP through which the trade must be cleared (sometimes called position account).";
 			maxOccurs = 1;
@@ -308,7 +311,7 @@ public class PartyIdentificationAndAccount78 {
 			componentContext_lazy = () -> PartyIdentificationAndAccount78.mmObject();
 			isDerived = false;
 			xmlTag = "PrcgId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProcessingIdentification";
 			definition = "Unambiguous identification of the transaction for the party identified.";
 			maxOccurs = 1;
@@ -354,7 +357,7 @@ public class PartyIdentificationAndAccount78 {
 			componentContext_lazy = () -> PartyIdentificationAndAccount78.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInformation";
 			definition = "Provides additional information regarding the party,";
 			maxOccurs = 1;
@@ -367,12 +370,11 @@ public class PartyIdentificationAndAccount78 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyIdentificationAndAccount78.mmIdentification, com.tools20022.repository.msg.PartyIdentificationAndAccount78.mmAlternateIdentification,
-						com.tools20022.repository.msg.PartyIdentificationAndAccount78.mmSide, com.tools20022.repository.msg.PartyIdentificationAndAccount78.mmClearingAccount,
-						com.tools20022.repository.msg.PartyIdentificationAndAccount78.mmProcessingIdentification, com.tools20022.repository.msg.PartyIdentificationAndAccount78.mmAdditionalInformation);
+				messageElement_lazy = () -> Arrays.asList(PartyIdentificationAndAccount78.mmIdentification, PartyIdentificationAndAccount78.mmAlternateIdentification, PartyIdentificationAndAccount78.mmSide,
+						PartyIdentificationAndAccount78.mmClearingAccount, PartyIdentificationAndAccount78.mmProcessingIdentification, PartyIdentificationAndAccount78.mmAdditionalInformation);
 				trace_lazy = () -> PartyIdentificationInformation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PartyIdentificationAndAccount78";
 				definition = "Party and account details.";
 			}

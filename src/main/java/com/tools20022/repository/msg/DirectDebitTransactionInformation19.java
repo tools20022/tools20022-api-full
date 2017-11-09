@@ -20,11 +20,13 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.Purpose2Choice;
 import com.tools20022.repository.codeset.ChargeBearerType1Code;
 import com.tools20022.repository.datatype.ActiveOrHistoricCurrencyAndAmount;
 import com.tools20022.repository.datatype.Max140Text;
-import com.tools20022.repository.entity.DirectDebit;
+import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -177,15 +179,15 @@ public class DirectDebitTransactionInformation19 {
 	 */
 	public static final MMMessageAssociationEnd mmPaymentIdentification = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.mmPaymentRelatedIdentifications;
+			businessElementTrace_lazy = () -> Payment.mmPaymentRelatedIdentifications;
 			componentContext_lazy = () -> DirectDebitTransactionInformation19.mmObject();
 			isDerived = false;
 			xmlTag = "PmtId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentIdentification";
 			definition = "Set of elements used to reference a payment instruction.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DirectDebitTransactionInformation22.mmPaymentIdentification);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.DirectDebitTransactionInformation18.mmPaymentIdentification;
+			nextVersions_lazy = () -> Arrays.asList(DirectDebitTransactionInformation22.mmPaymentIdentification);
+			previousVersion_lazy = () -> DirectDebitTransactionInformation18.mmPaymentIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -241,15 +243,15 @@ public class DirectDebitTransactionInformation19 {
 	 */
 	public static final MMMessageAssociationEnd mmPaymentTypeInformation = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.mmPaymentExecution;
+			businessElementTrace_lazy = () -> Payment.mmPaymentExecution;
 			componentContext_lazy = () -> DirectDebitTransactionInformation19.mmObject();
 			isDerived = false;
 			xmlTag = "PmtTpInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentTypeInformation";
 			definition = "Set of elements used to further specify the type of transaction.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DirectDebitTransactionInformation22.mmPaymentTypeInformation);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.DirectDebitTransactionInformation18.mmPaymentTypeInformation;
+			nextVersions_lazy = () -> Arrays.asList(DirectDebitTransactionInformation22.mmPaymentTypeInformation);
+			previousVersion_lazy = () -> DirectDebitTransactionInformation18.mmPaymentTypeInformation;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -311,15 +313,15 @@ public class DirectDebitTransactionInformation19 {
 	 */
 	public static final MMMessageAttribute mmInstructedAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.mmInstructedAmount;
+			businessElementTrace_lazy = () -> Payment.mmInstructedAmount;
 			componentContext_lazy = () -> DirectDebitTransactionInformation19.mmObject();
 			isDerived = false;
 			xmlTag = "InstdAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructedAmount";
 			definition = "Amount of money to be moved between the debtor and creditor, before deduction of charges, expressed in the currency as ordered by the initiating party.\r\nUsage: This amount has to be transported unchanged through the transaction chain.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DirectDebitTransactionInformation22.mmInstructedAmount);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.DirectDebitTransactionInformation18.mmInstructedAmount;
+			nextVersions_lazy = () -> Arrays.asList(DirectDebitTransactionInformation22.mmInstructedAmount);
+			previousVersion_lazy = () -> DirectDebitTransactionInformation18.mmInstructedAmount;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
@@ -377,15 +379,15 @@ public class DirectDebitTransactionInformation19 {
 	 */
 	public static final MMMessageAttribute mmChargeBearer = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Charges.mmBearerType;
+			businessElementTrace_lazy = () -> Charges.mmBearerType;
 			componentContext_lazy = () -> DirectDebitTransactionInformation19.mmObject();
 			isDerived = false;
 			xmlTag = "ChrgBr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChargeBearer";
 			definition = "Specifies which party/parties will bear the charges associated with the processing of the payment transaction.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DirectDebitTransactionInformation22.mmChargeBearer);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.DirectDebitTransactionInformation18.mmChargeBearer;
+			nextVersions_lazy = () -> Arrays.asList(DirectDebitTransactionInformation22.mmChargeBearer);
+			previousVersion_lazy = () -> DirectDebitTransactionInformation18.mmChargeBearer;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ChargeBearerType1Code.mmObject();
@@ -443,11 +445,11 @@ public class DirectDebitTransactionInformation19 {
 			componentContext_lazy = () -> DirectDebitTransactionInformation19.mmObject();
 			isDerived = false;
 			xmlTag = "DrctDbtTx";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DirectDebitTransaction";
 			definition = "Provides information specific to the direct debit mandate.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DirectDebitTransactionInformation22.mmDirectDebitTransaction);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.DirectDebitTransactionInformation18.mmDirectDebitTransaction;
+			nextVersions_lazy = () -> Arrays.asList(DirectDebitTransactionInformation22.mmDirectDebitTransaction);
+			previousVersion_lazy = () -> DirectDebitTransactionInformation18.mmDirectDebitTransaction;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -501,15 +503,15 @@ public class DirectDebitTransactionInformation19 {
 	 */
 	public static final MMMessageAssociationEnd mmUltimateCreditor = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> DirectDebitTransactionInformation19.mmObject();
 			isDerived = false;
 			xmlTag = "UltmtCdtr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UltimateCreditor";
 			definition = "Ultimate party to which an amount of money is due.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DirectDebitTransactionInformation22.mmUltimateCreditor);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.DirectDebitTransactionInformation18.mmUltimateCreditor;
+			nextVersions_lazy = () -> Arrays.asList(DirectDebitTransactionInformation22.mmUltimateCreditor);
+			previousVersion_lazy = () -> DirectDebitTransactionInformation18.mmUltimateCreditor;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -565,15 +567,15 @@ public class DirectDebitTransactionInformation19 {
 	 */
 	public static final MMMessageAssociationEnd mmDebtorAgent = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Organisation.mmOrganisationIdentification;
+			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> DirectDebitTransactionInformation19.mmObject();
 			isDerived = false;
 			xmlTag = "DbtrAgt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DebtorAgent";
 			definition = "Financial institution servicing an account for the debtor.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DirectDebitTransactionInformation22.mmDebtorAgent);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.DirectDebitTransactionInformation18.mmDebtorAgent;
+			nextVersions_lazy = () -> Arrays.asList(DirectDebitTransactionInformation22.mmDebtorAgent);
+			previousVersion_lazy = () -> DirectDebitTransactionInformation18.mmDebtorAgent;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -630,15 +632,15 @@ public class DirectDebitTransactionInformation19 {
 	 */
 	public static final MMMessageAssociationEnd mmDebtorAgentAccount = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentPartyRole.mmCashAccount;
+			businessElementTrace_lazy = () -> PaymentPartyRole.mmCashAccount;
 			componentContext_lazy = () -> DirectDebitTransactionInformation19.mmObject();
 			isDerived = false;
 			xmlTag = "DbtrAgtAcct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DebtorAgentAccount";
 			definition = "Unambiguous identification of the account of the debtor agent at its servicing agent in the payment chain.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DirectDebitTransactionInformation22.mmDebtorAgentAccount);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.DirectDebitTransactionInformation18.mmDebtorAgentAccount;
+			nextVersions_lazy = () -> Arrays.asList(DirectDebitTransactionInformation22.mmDebtorAgentAccount);
+			previousVersion_lazy = () -> DirectDebitTransactionInformation18.mmDebtorAgentAccount;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -693,15 +695,15 @@ public class DirectDebitTransactionInformation19 {
 	 */
 	public static final MMMessageAssociationEnd mmDebtor = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> DirectDebitTransactionInformation19.mmObject();
 			isDerived = false;
 			xmlTag = "Dbtr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Debtor";
 			definition = "Party that owes an amount of money to the (ultimate) creditor.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DirectDebitTransactionInformation22.mmDebtor);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.DirectDebitTransactionInformation18.mmDebtor;
+			nextVersions_lazy = () -> Arrays.asList(DirectDebitTransactionInformation22.mmDebtor);
+			previousVersion_lazy = () -> DirectDebitTransactionInformation18.mmDebtor;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -758,15 +760,15 @@ public class DirectDebitTransactionInformation19 {
 	 */
 	public static final MMMessageAssociationEnd mmDebtorAccount = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentPartyRole.mmCashAccount;
+			businessElementTrace_lazy = () -> PaymentPartyRole.mmCashAccount;
 			componentContext_lazy = () -> DirectDebitTransactionInformation19.mmObject();
 			isDerived = false;
 			xmlTag = "DbtrAcct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DebtorAccount";
 			definition = "Unambiguous identification of the account of the debtor to which a debit entry will be made as a result of the transaction.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DirectDebitTransactionInformation22.mmDebtorAccount);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.DirectDebitTransactionInformation18.mmDebtorAccount;
+			nextVersions_lazy = () -> Arrays.asList(DirectDebitTransactionInformation22.mmDebtorAccount);
+			previousVersion_lazy = () -> DirectDebitTransactionInformation18.mmDebtorAccount;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -822,15 +824,15 @@ public class DirectDebitTransactionInformation19 {
 	 */
 	public static final MMMessageAssociationEnd mmUltimateDebtor = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> DirectDebitTransactionInformation19.mmObject();
 			isDerived = false;
 			xmlTag = "UltmtDbtr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UltimateDebtor";
 			definition = "Ultimate party that owes an amount of money to the (ultimate) creditor.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DirectDebitTransactionInformation22.mmUltimateDebtor);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.DirectDebitTransactionInformation18.mmUltimateDebtor;
+			nextVersions_lazy = () -> Arrays.asList(DirectDebitTransactionInformation22.mmUltimateDebtor);
+			previousVersion_lazy = () -> DirectDebitTransactionInformation18.mmUltimateDebtor;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -889,15 +891,15 @@ public class DirectDebitTransactionInformation19 {
 	 */
 	public static final MMMessageAttribute mmInstructionForCreditorAgent = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.mmInstructionForCreditorAgent;
+			businessElementTrace_lazy = () -> Payment.mmInstructionForCreditorAgent;
 			componentContext_lazy = () -> DirectDebitTransactionInformation19.mmObject();
 			isDerived = false;
 			xmlTag = "InstrForCdtrAgt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructionForCreditorAgent";
 			definition = "Further information, related to the processing of the payment instruction, that may need to be acted upon by the creditor agent, depending on agreement between creditor and the creditor agent.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DirectDebitTransactionInformation22.mmInstructionForCreditorAgent);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.DirectDebitTransactionInformation18.mmInstructionForCreditorAgent;
+			nextVersions_lazy = () -> Arrays.asList(DirectDebitTransactionInformation22.mmInstructionForCreditorAgent);
+			previousVersion_lazy = () -> DirectDebitTransactionInformation18.mmInstructionForCreditorAgent;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
@@ -956,15 +958,15 @@ public class DirectDebitTransactionInformation19 {
 	 */
 	public static final MMMessageAssociationEnd mmPurpose = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentProcessing.mmCategoryPurpose;
+			businessElementTrace_lazy = () -> PaymentProcessing.mmCategoryPurpose;
 			componentContext_lazy = () -> DirectDebitTransactionInformation19.mmObject();
 			isDerived = false;
 			xmlTag = "Purp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Purpose";
 			definition = "Underlying reason for the payment transaction.\nUsage: Purpose is used by the end-customers, that is initiating party, (ultimate) debtor, (ultimate) creditor to provide information concerning the nature of the payment. Purpose is a content element, which is not used for processing by any of the agents involved in the payment chain.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DirectDebitTransactionInformation22.mmPurpose);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.DirectDebitTransactionInformation18.mmPurpose;
+			nextVersions_lazy = () -> Arrays.asList(DirectDebitTransactionInformation22.mmPurpose);
+			previousVersion_lazy = () -> DirectDebitTransactionInformation18.mmPurpose;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -1019,15 +1021,15 @@ public class DirectDebitTransactionInformation19 {
 	 */
 	public static final MMMessageAssociationEnd mmRegulatoryReporting = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.FinancialTransaction.mmRegulatoryReport;
+			businessElementTrace_lazy = () -> FinancialTransaction.mmRegulatoryReport;
 			componentContext_lazy = () -> DirectDebitTransactionInformation19.mmObject();
 			isDerived = false;
 			xmlTag = "RgltryRptg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RegulatoryReporting";
 			definition = "Information needed due to regulatory and statutory requirements.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DirectDebitTransactionInformation22.mmRegulatoryReporting);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.DirectDebitTransactionInformation18.mmRegulatoryReporting;
+			nextVersions_lazy = () -> Arrays.asList(DirectDebitTransactionInformation22.mmRegulatoryReporting);
+			previousVersion_lazy = () -> DirectDebitTransactionInformation18.mmRegulatoryReporting;
 			maxOccurs = 10;
 			minOccurs = 0;
 			isComposite = true;
@@ -1081,15 +1083,15 @@ public class DirectDebitTransactionInformation19 {
 	 */
 	public static final MMMessageAssociationEnd mmTax = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.mmTaxOnPayment;
+			businessElementTrace_lazy = () -> Payment.mmTaxOnPayment;
 			componentContext_lazy = () -> DirectDebitTransactionInformation19.mmObject();
 			isDerived = false;
 			xmlTag = "Tax";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Tax";
 			definition = "Provides details on the tax.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DirectDebitTransactionInformation22.mmTax);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.DirectDebitTransactionInformation18.mmTax;
+			nextVersions_lazy = () -> Arrays.asList(DirectDebitTransactionInformation22.mmTax);
+			previousVersion_lazy = () -> DirectDebitTransactionInformation18.mmTax;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -1146,15 +1148,15 @@ public class DirectDebitTransactionInformation19 {
 	 */
 	public static final MMMessageAssociationEnd mmRelatedRemittanceInformation = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Document.mmPlaceOfStorage;
+			businessElementTrace_lazy = () -> Document.mmPlaceOfStorage;
 			componentContext_lazy = () -> DirectDebitTransactionInformation19.mmObject();
 			isDerived = false;
 			xmlTag = "RltdRmtInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedRemittanceInformation";
 			definition = "Provides information related to the handling of the remittance information by any of the agents in the transaction processing chain.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DirectDebitTransactionInformation22.mmRelatedRemittanceInformation);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.DirectDebitTransactionInformation18.mmRelatedRemittanceInformation;
+			nextVersions_lazy = () -> Arrays.asList(DirectDebitTransactionInformation22.mmRelatedRemittanceInformation);
+			previousVersion_lazy = () -> DirectDebitTransactionInformation18.mmRelatedRemittanceInformation;
 			maxOccurs = 10;
 			minOccurs = 0;
 			isComposite = true;
@@ -1213,15 +1215,15 @@ public class DirectDebitTransactionInformation19 {
 	 */
 	public static final MMMessageAssociationEnd mmRemittanceInformation = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentObligation.mmAssociatedDocument;
+			businessElementTrace_lazy = () -> PaymentObligation.mmAssociatedDocument;
 			componentContext_lazy = () -> DirectDebitTransactionInformation19.mmObject();
 			isDerived = false;
 			xmlTag = "RmtInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RemittanceInformation";
 			definition = "Information supplied to enable the matching of an entry with the items that the transfer is intended to settle, such as commercial invoices in an accounts' receivable system.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DirectDebitTransactionInformation22.mmRemittanceInformation);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.DirectDebitTransactionInformation18.mmRemittanceInformation;
+			nextVersions_lazy = () -> Arrays.asList(DirectDebitTransactionInformation22.mmRemittanceInformation);
+			previousVersion_lazy = () -> DirectDebitTransactionInformation18.mmRemittanceInformation;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -1278,11 +1280,11 @@ public class DirectDebitTransactionInformation19 {
 			componentContext_lazy = () -> DirectDebitTransactionInformation19.mmObject();
 			isDerived = false;
 			xmlTag = "SplmtryData";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryData";
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DirectDebitTransactionInformation22.mmSupplementaryData);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.DirectDebitTransactionInformation18.mmSupplementaryData;
+			nextVersions_lazy = () -> Arrays.asList(DirectDebitTransactionInformation22.mmSupplementaryData);
+			previousVersion_lazy = () -> DirectDebitTransactionInformation18.mmSupplementaryData;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.SupplementaryData1.mmObject();
 		}
@@ -1291,19 +1293,15 @@ public class DirectDebitTransactionInformation19 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DirectDebitTransactionInformation19.mmPaymentIdentification,
-						com.tools20022.repository.msg.DirectDebitTransactionInformation19.mmPaymentTypeInformation, com.tools20022.repository.msg.DirectDebitTransactionInformation19.mmInstructedAmount,
-						com.tools20022.repository.msg.DirectDebitTransactionInformation19.mmChargeBearer, com.tools20022.repository.msg.DirectDebitTransactionInformation19.mmDirectDebitTransaction,
-						com.tools20022.repository.msg.DirectDebitTransactionInformation19.mmUltimateCreditor, com.tools20022.repository.msg.DirectDebitTransactionInformation19.mmDebtorAgent,
-						com.tools20022.repository.msg.DirectDebitTransactionInformation19.mmDebtorAgentAccount, com.tools20022.repository.msg.DirectDebitTransactionInformation19.mmDebtor,
-						com.tools20022.repository.msg.DirectDebitTransactionInformation19.mmDebtorAccount, com.tools20022.repository.msg.DirectDebitTransactionInformation19.mmUltimateDebtor,
-						com.tools20022.repository.msg.DirectDebitTransactionInformation19.mmInstructionForCreditorAgent, com.tools20022.repository.msg.DirectDebitTransactionInformation19.mmPurpose,
-						com.tools20022.repository.msg.DirectDebitTransactionInformation19.mmRegulatoryReporting, com.tools20022.repository.msg.DirectDebitTransactionInformation19.mmTax,
-						com.tools20022.repository.msg.DirectDebitTransactionInformation19.mmRelatedRemittanceInformation, com.tools20022.repository.msg.DirectDebitTransactionInformation19.mmRemittanceInformation,
-						com.tools20022.repository.msg.DirectDebitTransactionInformation19.mmSupplementaryData);
+				messageElement_lazy = () -> Arrays.asList(DirectDebitTransactionInformation19.mmPaymentIdentification, DirectDebitTransactionInformation19.mmPaymentTypeInformation, DirectDebitTransactionInformation19.mmInstructedAmount,
+						DirectDebitTransactionInformation19.mmChargeBearer, DirectDebitTransactionInformation19.mmDirectDebitTransaction, DirectDebitTransactionInformation19.mmUltimateCreditor,
+						DirectDebitTransactionInformation19.mmDebtorAgent, DirectDebitTransactionInformation19.mmDebtorAgentAccount, DirectDebitTransactionInformation19.mmDebtor, DirectDebitTransactionInformation19.mmDebtorAccount,
+						DirectDebitTransactionInformation19.mmUltimateDebtor, DirectDebitTransactionInformation19.mmInstructionForCreditorAgent, DirectDebitTransactionInformation19.mmPurpose,
+						DirectDebitTransactionInformation19.mmRegulatoryReporting, DirectDebitTransactionInformation19.mmTax, DirectDebitTransactionInformation19.mmRelatedRemittanceInformation,
+						DirectDebitTransactionInformation19.mmRemittanceInformation, DirectDebitTransactionInformation19.mmSupplementaryData);
 				trace_lazy = () -> DirectDebit.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DirectDebitTransactionInformation19";
 				definition = "Provides further details specific to the individual direct debit transaction(s) included in the message.";
 				nextVersions_lazy = () -> Arrays.asList(DirectDebitTransactionInformation22.mmObject());

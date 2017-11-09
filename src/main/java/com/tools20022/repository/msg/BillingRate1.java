@@ -20,9 +20,11 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.BillingRateIdentification1Choice;
 import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.datatype.PercentageRate;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -95,7 +97,7 @@ public class BillingRate1 {
 			componentContext_lazy = () -> BillingRate1.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Defines the type of rate or factor.";
 			maxOccurs = 1;
@@ -138,7 +140,7 @@ public class BillingRate1 {
 			componentContext_lazy = () -> BillingRate1.mmObject();
 			isDerived = false;
 			xmlTag = "Val";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Value";
 			definition = "Value of the rate or factor identified in the rate identification.";
 			maxOccurs = 1;
@@ -183,7 +185,7 @@ public class BillingRate1 {
 			componentContext_lazy = () -> BillingRate1.mmObject();
 			isDerived = false;
 			xmlTag = "DaysInPrd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DaysInPeriod";
 			definition = "Number of days in the statement period. \n\nUsage: Used along with DaysInYear for time dependent per annum rate value.";
 			maxOccurs = 1;
@@ -228,7 +230,7 @@ public class BillingRate1 {
 			componentContext_lazy = () -> BillingRate1.mmObject();
 			isDerived = false;
 			xmlTag = "DaysInYr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DaysInYear";
 			definition = "Number of days in the year.\n\nUsage: Used along with DaysInPeriod for time dependent per annum rate value.";
 			maxOccurs = 1;
@@ -240,10 +242,9 @@ public class BillingRate1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BillingRate1.mmIdentification, com.tools20022.repository.msg.BillingRate1.mmValue, com.tools20022.repository.msg.BillingRate1.mmDaysInPeriod,
-						com.tools20022.repository.msg.BillingRate1.mmDaysInYear);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(BillingRate1.mmIdentification, BillingRate1.mmValue, BillingRate1.mmDaysInPeriod, BillingRate1.mmDaysInYear);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "BillingRate1";
 				definition = "Specifies the billing rate.";
 			}

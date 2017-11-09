@@ -20,9 +20,11 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.*;
 import com.tools20022.repository.datatype.TrueFalseIndicator;
 import com.tools20022.repository.entity.CardPaymentAcquiring;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -142,11 +144,11 @@ public class CardTransactionContext2 {
 	 */
 	public static final MMMessageAttribute mmCardPresent = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.mmCardPresent;
+			businessElementTrace_lazy = () -> CardPaymentAcquiring.mmCardPresent;
 			componentContext_lazy = () -> CardTransactionContext2.mmObject();
 			isDerived = false;
 			xmlTag = "CardPres";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CardPresent";
 			definition = "Indicates whether the transaction has been initiated by a card physically present or not. \r\nIt correspond to the ISO 8583:1993 field number 22-6.";
 			maxOccurs = 1;
@@ -194,11 +196,11 @@ public class CardTransactionContext2 {
 	 */
 	public static final MMMessageAttribute mmCardholderPresent = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.mmCardholderPresent;
+			businessElementTrace_lazy = () -> CardPaymentAcquiring.mmCardholderPresent;
 			componentContext_lazy = () -> CardTransactionContext2.mmObject();
 			isDerived = false;
 			xmlTag = "CrdhldrPres";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CardholderPresent";
 			definition = "Indicates whether the transaction has been initiated in presence of the cardholder or not. \r\nIt correspond to the ISO 8583:1993 field number 22-5.";
 			maxOccurs = 1;
@@ -246,11 +248,11 @@ public class CardTransactionContext2 {
 	 */
 	public static final MMMessageAttribute mmLocationCategory = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.mmLocation;
+			businessElementTrace_lazy = () -> CardPaymentAcquiring.mmLocation;
 			componentContext_lazy = () -> CardTransactionContext2.mmObject();
 			isDerived = false;
 			xmlTag = "LctnCtgy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LocationCategory";
 			definition = "Location category of the place where the transaction is actually performed. \r\nIt correspond partially to the ISO 8583:1993 field number 22-4.";
 			maxOccurs = 1;
@@ -297,11 +299,11 @@ public class CardTransactionContext2 {
 	 */
 	public static final MMMessageAttribute mmAttendanceContext = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.mmAttendanceContext;
+			businessElementTrace_lazy = () -> CardPaymentAcquiring.mmAttendanceContext;
 			componentContext_lazy = () -> CardTransactionContext2.mmObject();
 			isDerived = false;
 			xmlTag = "AttndncCntxt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AttendanceContext";
 			definition = "Human attendance at the terminal location during the transaction. \r\nIt correspond partially to the ISO 8583:1993 field number 22-4.";
 			maxOccurs = 1;
@@ -345,11 +347,11 @@ public class CardTransactionContext2 {
 	 */
 	public static final MMMessageAttribute mmTransactionEnvironment = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.mmTransactionEnvironment;
+			businessElementTrace_lazy = () -> CardPaymentAcquiring.mmTransactionEnvironment;
 			componentContext_lazy = () -> CardTransactionContext2.mmObject();
 			isDerived = false;
 			xmlTag = "TxEnvt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionEnvironment";
 			definition = "Indicates the environment of the transaction.";
 			maxOccurs = 1;
@@ -394,7 +396,7 @@ public class CardTransactionContext2 {
 			componentContext_lazy = () -> CardTransactionContext2.mmObject();
 			isDerived = false;
 			xmlTag = "HstgCtgy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HostingCategory";
 			definition = "Indicates the entity hosting the terminal performing the transaction. \r\nIt correspond partially to the ISO 8583:1993 field number 22-4.";
 			maxOccurs = 1;
@@ -442,11 +444,11 @@ public class CardTransactionContext2 {
 	 */
 	public static final MMMessageAttribute mmTransactionChannel = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.mmTransactionChannel;
+			businessElementTrace_lazy = () -> CardPaymentAcquiring.mmTransactionChannel;
 			componentContext_lazy = () -> CardTransactionContext2.mmObject();
 			isDerived = false;
 			xmlTag = "TxChanl";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionChannel";
 			definition = "Identifies the type of the communication channels used by the cardholder to the acceptor system. \r\nIt correspond to the ISO 8583:1993 field number 22-5.";
 			maxOccurs = 1;
@@ -495,11 +497,11 @@ public class CardTransactionContext2 {
 	 */
 	public static final MMMessageAttribute mmCardDataEntryMode = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.mmCardDataEntryMode;
+			businessElementTrace_lazy = () -> CardPaymentAcquiring.mmCardDataEntryMode;
 			componentContext_lazy = () -> CardTransactionContext2.mmObject();
 			isDerived = false;
 			xmlTag = "CardDataNtryMd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CardDataEntryMode";
 			definition = "Entry mode of the card data. \r\nIt correspond to the ISO 8583 field number 25 for the version 87 (partially), field number 22-7 for the version 93, and field number 22-1 for the version 2003.";
 			maxOccurs = 1;
@@ -544,7 +546,7 @@ public class CardTransactionContext2 {
 			componentContext_lazy = () -> CardTransactionContext2.mmObject();
 			isDerived = false;
 			xmlTag = "FllbckInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FallbackIndicator";
 			definition = "Indicator of a card entry mode fall-back. It correspond to the ISO 8583:2003 field number 22-1.";
 			maxOccurs = 1;
@@ -586,7 +588,7 @@ public class CardTransactionContext2 {
 			componentContext_lazy = () -> CardTransactionContext2.mmObject();
 			isDerived = false;
 			xmlTag = "SpprtdOptn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupportedOption";
 			definition = "Payment options the card acceptor can support.";
 			minOccurs = 0;
@@ -637,10 +639,10 @@ public class CardTransactionContext2 {
 			componentContext_lazy = () -> CardTransactionContext2.mmObject();
 			isDerived = false;
 			xmlTag = "SpclConds";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SpecialConditions";
 			definition = "Data used to assign specific condition such as liability shift or preferential interchange fees.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardTransactionContext4.mmSpecialConditions);
+			nextVersions_lazy = () -> Arrays.asList(CardTransactionContext4.mmSpecialConditions);
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.CardTransactionCondition1.mmObject();
@@ -680,7 +682,7 @@ public class CardTransactionContext2 {
 			componentContext_lazy = () -> CardTransactionContext2.mmObject();
 			isDerived = false;
 			xmlTag = "RskInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RiskIndicator";
 			definition = "Indicates to the issuer the level of risk of the transaction.";
 			minOccurs = 0;
@@ -692,15 +694,12 @@ public class CardTransactionContext2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardTransactionContext2.mmCardPresent, com.tools20022.repository.msg.CardTransactionContext2.mmCardholderPresent,
-						com.tools20022.repository.msg.CardTransactionContext2.mmLocationCategory, com.tools20022.repository.msg.CardTransactionContext2.mmAttendanceContext,
-						com.tools20022.repository.msg.CardTransactionContext2.mmTransactionEnvironment, com.tools20022.repository.msg.CardTransactionContext2.mmHostingCategory,
-						com.tools20022.repository.msg.CardTransactionContext2.mmTransactionChannel, com.tools20022.repository.msg.CardTransactionContext2.mmCardDataEntryMode,
-						com.tools20022.repository.msg.CardTransactionContext2.mmFallbackIndicator, com.tools20022.repository.msg.CardTransactionContext2.mmSupportedOption,
-						com.tools20022.repository.msg.CardTransactionContext2.mmSpecialConditions, com.tools20022.repository.msg.CardTransactionContext2.mmRiskIndicator);
+				messageElement_lazy = () -> Arrays.asList(CardTransactionContext2.mmCardPresent, CardTransactionContext2.mmCardholderPresent, CardTransactionContext2.mmLocationCategory, CardTransactionContext2.mmAttendanceContext,
+						CardTransactionContext2.mmTransactionEnvironment, CardTransactionContext2.mmHostingCategory, CardTransactionContext2.mmTransactionChannel, CardTransactionContext2.mmCardDataEntryMode,
+						CardTransactionContext2.mmFallbackIndicator, CardTransactionContext2.mmSupportedOption, CardTransactionContext2.mmSpecialConditions, CardTransactionContext2.mmRiskIndicator);
 				trace_lazy = () -> CardPaymentAcquiring.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CardTransactionContext2";
 				definition = "Context of the card transaction.";
 				nextVersions_lazy = () -> Arrays.asList(CardTransactionContext4.mmObject());

@@ -17,16 +17,12 @@
 
 package com.tools20022.repository.entity;
 
-import com.tools20022.metamodel.MMBusinessAssociationEnd;
-import com.tools20022.metamodel.MMBusinessAttribute;
-import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.*;
 import com.tools20022.repository.choice.ExpectedCollateral1Choice;
 import com.tools20022.repository.choice.ExpectedCollateral2Choice;
 import com.tools20022.repository.codeset.CollateralTypeCode;
-import com.tools20022.repository.msg.ExpectedCollateral1;
-import com.tools20022.repository.msg.ExpectedCollateral2;
-import com.tools20022.repository.msg.ExpectedCollateralMovement1;
-import com.tools20022.repository.msg.ExpectedCollateralMovement2;
+import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -40,21 +36,22 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
  * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ExpectedCollateralType#mmVariationMarginRelatedCall
- * ExpectedCollateralType.mmVariationMarginRelatedCall}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ExpectedCollateralType#mmDelivery
- * ExpectedCollateralType.mmDelivery}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ExpectedCollateralType#mmReturn
- * ExpectedCollateralType.mmReturn}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ExpectedCollateralType#mmSegregatedIndependentAmountRelatedCall
- * ExpectedCollateralType.mmSegregatedIndependentAmountRelatedCall}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ExpectedCollateralMovement1
+ * ExpectedCollateralMovement1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ExpectedCollateral1
+ * ExpectedCollateral1}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.ExpectedCollateral1Choice
+ * ExpectedCollateral1Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.ExpectedCollateral2Choice
+ * ExpectedCollateral2Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ExpectedCollateral2
+ * ExpectedCollateral2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ExpectedCollateralMovement2
+ * ExpectedCollateralMovement2}</li>
  * </ul>
  * </li>
  * <li>
@@ -105,22 +102,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * ExpectedCollateral2.mmSegregatedIndependentAmount}</li>
  * </ul>
  * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.ExpectedCollateralMovement1
- * ExpectedCollateralMovement1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ExpectedCollateral1
- * ExpectedCollateral1}</li>
- * <li>{@linkplain com.tools20022.repository.choice.ExpectedCollateral1Choice
- * ExpectedCollateral1Choice}</li>
- * <li>{@linkplain com.tools20022.repository.choice.ExpectedCollateral2Choice
- * ExpectedCollateral2Choice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ExpectedCollateral2
- * ExpectedCollateral2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ExpectedCollateralMovement2
- * ExpectedCollateralMovement2}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ExpectedCollateralType#mmVariationMarginRelatedCall
+ * ExpectedCollateralType.mmVariationMarginRelatedCall}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ExpectedCollateralType#mmDelivery
+ * ExpectedCollateralType.mmDelivery}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ExpectedCollateralType#mmReturn
+ * ExpectedCollateralType.mmReturn}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ExpectedCollateralType#mmSegregatedIndependentAmountRelatedCall
+ * ExpectedCollateralType.mmSegregatedIndependentAmountRelatedCall}</li>
  * </ul>
  * </li>
  * <li>
@@ -179,13 +175,13 @@ public class ExpectedCollateralType {
 		{
 			elementContext_lazy = () -> ExpectedCollateralType.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VariationMarginRelatedCall";
 			definition = "Call for which a variation margin type is specified.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.MarginCall.mmExpectedVariationMarginType;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.MarginCall.mmObject();
 		}
 	};
@@ -229,10 +225,10 @@ public class ExpectedCollateralType {
 	 */
 	public static final MMBusinessAttribute mmDelivery = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ExpectedCollateralMovement1.mmDelivery, com.tools20022.repository.msg.ExpectedCollateralMovement2.mmDelivery);
+			derivation_lazy = () -> Arrays.asList(ExpectedCollateralMovement1.mmDelivery, ExpectedCollateralMovement2.mmDelivery);
 			elementContext_lazy = () -> ExpectedCollateralType.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Delivery";
 			definition = "Type of collateral that will be delivered.";
 			maxOccurs = 1;
@@ -280,10 +276,10 @@ public class ExpectedCollateralType {
 	 */
 	public static final MMBusinessAttribute mmReturn = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ExpectedCollateralMovement1.mmReturn, com.tools20022.repository.msg.ExpectedCollateralMovement2.mmReturn);
+			derivation_lazy = () -> Arrays.asList(ExpectedCollateralMovement1.mmReturn, ExpectedCollateralMovement2.mmReturn);
 			elementContext_lazy = () -> ExpectedCollateralType.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Return";
 			definition = "Type of collateral that will be returned.";
 			maxOccurs = 1;
@@ -330,13 +326,13 @@ public class ExpectedCollateralType {
 		{
 			elementContext_lazy = () -> ExpectedCollateralType.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SegregatedIndependentAmountRelatedCall";
 			definition = "Call for which a segregated independent amount type is specified.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.MarginCall.mmExpectedSegregatedIndependentAmountType;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.MarginCall.mmObject();
 		}
 	};
@@ -344,18 +340,15 @@ public class ExpectedCollateralType {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ExpectedCollateralType";
 				definition = "Expected collateral type.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.MarginCall.mmExpectedVariationMarginType, com.tools20022.repository.entity.MarginCall.mmExpectedSegregatedIndependentAmountType);
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ExpectedCollateral1.mmVariationMargin, com.tools20022.repository.msg.ExpectedCollateral1.mmSegregatedIndependentAmount,
-						com.tools20022.repository.choice.ExpectedCollateral1Choice.mmExpectedCollateralDetails, com.tools20022.repository.choice.ExpectedCollateral1Choice.mmSegregatedIndependentAmount,
-						com.tools20022.repository.choice.ExpectedCollateral2Choice.mmExpectedCollateralDetails, com.tools20022.repository.choice.ExpectedCollateral2Choice.mmSegregatedIndependentAmount,
-						com.tools20022.repository.msg.MarginCall2.mmExpectedCollateralDueToA, com.tools20022.repository.msg.MarginCall2.mmExpectedCollateralDueToB, com.tools20022.repository.msg.ExpectedCollateral2.mmVariationMargin,
-						com.tools20022.repository.msg.ExpectedCollateral2.mmSegregatedIndependentAmount);
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.ExpectedCollateralType.mmVariationMarginRelatedCall, com.tools20022.repository.entity.ExpectedCollateralType.mmDelivery,
-						com.tools20022.repository.entity.ExpectedCollateralType.mmReturn, com.tools20022.repository.entity.ExpectedCollateralType.mmSegregatedIndependentAmountRelatedCall);
+				derivationElement_lazy = () -> Arrays.asList(ExpectedCollateral1.mmVariationMargin, ExpectedCollateral1.mmSegregatedIndependentAmount, ExpectedCollateral1Choice.mmExpectedCollateralDetails,
+						ExpectedCollateral1Choice.mmSegregatedIndependentAmount, ExpectedCollateral2Choice.mmExpectedCollateralDetails, ExpectedCollateral2Choice.mmSegregatedIndependentAmount, MarginCall2.mmExpectedCollateralDueToA,
+						MarginCall2.mmExpectedCollateralDueToB, ExpectedCollateral2.mmVariationMargin, ExpectedCollateral2.mmSegregatedIndependentAmount);
+				element_lazy = () -> Arrays.asList(ExpectedCollateralType.mmVariationMarginRelatedCall, ExpectedCollateralType.mmDelivery, ExpectedCollateralType.mmReturn, ExpectedCollateralType.mmSegregatedIndependentAmountRelatedCall);
 				derivationComponent_lazy = () -> Arrays.asList(ExpectedCollateralMovement1.mmObject(), ExpectedCollateral1.mmObject(), ExpectedCollateral1Choice.mmObject(), ExpectedCollateral2Choice.mmObject(),
 						ExpectedCollateral2.mmObject(), ExpectedCollateralMovement2.mmObject());
 			}

@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.UseCasesCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -85,7 +87,7 @@ public class UseCases1Code extends UseCasesCode {
 	 */
 	public static final MMCode mmOpening = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Opening";
 			owner_lazy = () -> UseCases1Code.mmObject();
 		}
@@ -108,7 +110,7 @@ public class UseCases1Code extends UseCasesCode {
 	 */
 	public static final MMCode mmMaintenance = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Maintenance";
 			owner_lazy = () -> UseCases1Code.mmObject();
 		}
@@ -131,7 +133,7 @@ public class UseCases1Code extends UseCasesCode {
 	 */
 	public static final MMCode mmClosing = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Closing";
 			owner_lazy = () -> UseCases1Code.mmObject();
 		}
@@ -154,7 +156,7 @@ public class UseCases1Code extends UseCasesCode {
 	 */
 	public static final MMCode mmView = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "View";
 			owner_lazy = () -> UseCases1Code.mmObject();
 		}
@@ -163,13 +165,12 @@ public class UseCases1Code extends UseCasesCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("OPEN");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "UseCases1Code";
 				definition = "Specifies the action on the cash account.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UseCases1Code.mmOpening, com.tools20022.repository.codeset.UseCases1Code.mmMaintenance, com.tools20022.repository.codeset.UseCases1Code.mmClosing,
-						com.tools20022.repository.codeset.UseCases1Code.mmView);
+				code_lazy = () -> Arrays.asList(UseCases1Code.mmOpening, UseCases1Code.mmMaintenance, UseCases1Code.mmClosing, UseCases1Code.mmView);
 				trace_lazy = () -> UseCasesCode.mmObject();
 			}
 		});

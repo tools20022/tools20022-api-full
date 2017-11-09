@@ -19,9 +19,11 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ServiceLevel1Code;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.ServiceLevel;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -101,11 +103,11 @@ public class ServiceLevel2Choice {
 	 */
 	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ServiceLevel.mmCode;
+			businessElementTrace_lazy = () -> ServiceLevel.mmCode;
 			componentContext_lazy = () -> ServiceLevel2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Cd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Identification of a pre-agreed level of service between the parties in a coded form.";
 			maxOccurs = 1;
@@ -154,7 +156,7 @@ public class ServiceLevel2Choice {
 			componentContext_lazy = () -> ServiceLevel2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Proprietary identification of a pre-agreed level of service between the parties.";
 			maxOccurs = 1;
@@ -166,10 +168,10 @@ public class ServiceLevel2Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ServiceLevel2Choice.mmCode, com.tools20022.repository.choice.ServiceLevel2Choice.mmProprietary);
+				messageElement_lazy = () -> Arrays.asList(ServiceLevel2Choice.mmCode, ServiceLevel2Choice.mmProprietary);
 				trace_lazy = () -> ServiceLevel.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ServiceLevel2Choice";
 				definition = "Specifies the service level of the transaction.";
 			}

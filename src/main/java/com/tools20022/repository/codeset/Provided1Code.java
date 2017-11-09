@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ProvidedCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -81,7 +83,7 @@ public class Provided1Code extends ProvidedCode {
 	 */
 	public static final MMCode mmNotProvided = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotProvided";
 			owner_lazy = () -> Provided1Code.mmObject();
 		}
@@ -104,7 +106,7 @@ public class Provided1Code extends ProvidedCode {
 	 */
 	public static final MMCode mmProvided = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Provided";
 			owner_lazy = () -> Provided1Code.mmObject();
 		}
@@ -113,12 +115,12 @@ public class Provided1Code extends ProvidedCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("NPRO");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Provided1Code";
 				definition = "Specifies whether items have been provided.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Provided1Code.mmNotProvided, com.tools20022.repository.codeset.Provided1Code.mmProvided);
+				code_lazy = () -> Arrays.asList(Provided1Code.mmNotProvided, Provided1Code.mmProvided);
 				trace_lazy = () -> ProvidedCode.mmObject();
 			}
 		});

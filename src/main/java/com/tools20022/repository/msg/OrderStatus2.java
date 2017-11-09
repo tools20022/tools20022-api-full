@@ -20,12 +20,16 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.RejectionReason3Choice;
 import com.tools20022.repository.codeset.ListStatusType1Code;
 import com.tools20022.repository.codeset.OrderStatus6Code;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.Number;
+import com.tools20022.repository.entity.ListTrading;
 import com.tools20022.repository.entity.SecuritiesOrderStatus;
+import com.tools20022.repository.entity.StatusReason;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -120,11 +124,11 @@ public class OrderStatus2 {
 	 */
 	public static final MMMessageAttribute mmListIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ListTrading.mmListIdentification;
+			businessElementTrace_lazy = () -> ListTrading.mmListIdentification;
 			componentContext_lazy = () -> OrderStatus2.mmObject();
 			isDerived = false;
 			xmlTag = "ListId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ListIdentification";
 			definition = "Unique identifier for a list, as assigned by the trading party. The identifier must be unique within a single trading day.";
 			maxOccurs = 1;
@@ -167,11 +171,11 @@ public class OrderStatus2 {
 	 */
 	public static final MMMessageAttribute mmListStatusType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrderStatus.mmListOrderStatus;
+			businessElementTrace_lazy = () -> SecuritiesOrderStatus.mmListOrderStatus;
 			componentContext_lazy = () -> OrderStatus2.mmObject();
 			isDerived = false;
 			xmlTag = "ListStsTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ListStatusType";
 			definition = "Status of an instructed order.";
 			maxOccurs = 1;
@@ -214,11 +218,11 @@ public class OrderStatus2 {
 	 */
 	public static final MMMessageAttribute mmListOrderStatus = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrderStatus.mmOrderStatus;
+			businessElementTrace_lazy = () -> SecuritiesOrderStatus.mmOrderStatus;
 			componentContext_lazy = () -> OrderStatus2.mmObject();
 			isDerived = false;
 			xmlTag = "ListOrdrSts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ListOrderStatus";
 			definition = "Indicates the status of a list order.";
 			maxOccurs = 1;
@@ -259,7 +263,7 @@ public class OrderStatus2 {
 			componentContext_lazy = () -> OrderStatus2.mmObject();
 			isDerived = false;
 			xmlTag = "TtlNbOfRpts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalNumberOfReports";
 			definition = "Total number of messages required to get a complete status list.";
 			maxOccurs = 1;
@@ -299,7 +303,7 @@ public class OrderStatus2 {
 			componentContext_lazy = () -> OrderStatus2.mmObject();
 			isDerived = false;
 			xmlTag = "RptSeqNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportSequenceNumber";
 			definition = "Sequence number of this report message.";
 			maxOccurs = 1;
@@ -342,7 +346,7 @@ public class OrderStatus2 {
 			componentContext_lazy = () -> OrderStatus2.mmObject();
 			isDerived = false;
 			xmlTag = "TtlNbOfOrdrs";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalNumberOfOrders";
 			definition = "Identifies the total number of orders across all ListOrder messages with the same ListIdentification.";
 			maxOccurs = 1;
@@ -385,11 +389,11 @@ public class OrderStatus2 {
 	 */
 	public static final MMMessageAttribute mmRejectionReason = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmRejectionReason;
+			businessElementTrace_lazy = () -> StatusReason.mmRejectionReason;
 			componentContext_lazy = () -> OrderStatus2.mmObject();
 			isDerived = false;
 			xmlTag = "RjctnRsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RejectionReason";
 			definition = "Reason for which an order is rejected.";
 			maxOccurs = 1;
@@ -434,7 +438,7 @@ public class OrderStatus2 {
 			componentContext_lazy = () -> OrderStatus2.mmObject();
 			isDerived = false;
 			xmlTag = "SnglOrdrDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SingleOrderDetails";
 			definition = "Status details specific to each order.";
 			minOccurs = 0;
@@ -446,12 +450,11 @@ public class OrderStatus2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OrderStatus2.mmListIdentification, com.tools20022.repository.msg.OrderStatus2.mmListStatusType,
-						com.tools20022.repository.msg.OrderStatus2.mmListOrderStatus, com.tools20022.repository.msg.OrderStatus2.mmTotalNumberOfReports, com.tools20022.repository.msg.OrderStatus2.mmReportSequenceNumber,
-						com.tools20022.repository.msg.OrderStatus2.mmTotalNumberOfOrders, com.tools20022.repository.msg.OrderStatus2.mmRejectionReason, com.tools20022.repository.msg.OrderStatus2.mmSingleOrderDetails);
+				messageElement_lazy = () -> Arrays.asList(OrderStatus2.mmListIdentification, OrderStatus2.mmListStatusType, OrderStatus2.mmListOrderStatus, OrderStatus2.mmTotalNumberOfReports, OrderStatus2.mmReportSequenceNumber,
+						OrderStatus2.mmTotalNumberOfOrders, OrderStatus2.mmRejectionReason, OrderStatus2.mmSingleOrderDetails);
 				trace_lazy = () -> SecuritiesOrderStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "OrderStatus2";
 				definition = "Status and reason of an instructed order.";
 			}

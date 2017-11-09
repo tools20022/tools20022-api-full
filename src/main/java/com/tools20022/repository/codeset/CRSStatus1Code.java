@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CRSStatusCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -98,7 +100,7 @@ public class CRSStatus1Code extends CRSStatusCode {
 	 */
 	public static final MMCode mmCRS101 = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CRS101";
 			owner_lazy = () -> CRSStatus1Code.mmObject();
 		}
@@ -121,7 +123,7 @@ public class CRSStatus1Code extends CRSStatusCode {
 	 */
 	public static final MMCode mmCRS102 = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CRS102";
 			owner_lazy = () -> CRSStatus1Code.mmObject();
 		}
@@ -144,7 +146,7 @@ public class CRSStatus1Code extends CRSStatusCode {
 	 */
 	public static final MMCode mmCRS103 = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CRS103";
 			owner_lazy = () -> CRSStatus1Code.mmObject();
 		}
@@ -167,7 +169,7 @@ public class CRSStatus1Code extends CRSStatusCode {
 	 */
 	public static final MMCode mmCRS104 = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CRS104";
 			owner_lazy = () -> CRSStatus1Code.mmObject();
 		}
@@ -190,7 +192,7 @@ public class CRSStatus1Code extends CRSStatusCode {
 	 */
 	public static final MMCode mmCRS105 = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CRS105";
 			owner_lazy = () -> CRSStatus1Code.mmObject();
 		}
@@ -213,7 +215,7 @@ public class CRSStatus1Code extends CRSStatusCode {
 	 */
 	public static final MMCode mmCRS106 = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CRS106";
 			owner_lazy = () -> CRSStatus1Code.mmObject();
 		}
@@ -236,7 +238,7 @@ public class CRSStatus1Code extends CRSStatusCode {
 	 */
 	public static final MMCode mmCRS107 = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CRS107";
 			owner_lazy = () -> CRSStatus1Code.mmObject();
 		}
@@ -259,7 +261,7 @@ public class CRSStatus1Code extends CRSStatusCode {
 	 */
 	public static final MMCode mmCRS108 = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CRS108";
 			owner_lazy = () -> CRSStatus1Code.mmObject();
 		}
@@ -282,7 +284,7 @@ public class CRSStatus1Code extends CRSStatusCode {
 	 */
 	public static final MMCode mmCRS109 = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CRS109";
 			owner_lazy = () -> CRSStatus1Code.mmObject();
 		}
@@ -305,7 +307,7 @@ public class CRSStatus1Code extends CRSStatusCode {
 	 */
 	public static final MMCode mmCRS110 = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CRS110";
 			owner_lazy = () -> CRSStatus1Code.mmObject();
 		}
@@ -328,7 +330,7 @@ public class CRSStatus1Code extends CRSStatusCode {
 	 */
 	public static final MMCode mmCRS111 = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CRS111";
 			owner_lazy = () -> CRSStatus1Code.mmObject();
 		}
@@ -351,7 +353,7 @@ public class CRSStatus1Code extends CRSStatusCode {
 	 */
 	public static final MMCode mmCRS112 = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CRS112";
 			owner_lazy = () -> CRSStatus1Code.mmObject();
 		}
@@ -374,7 +376,7 @@ public class CRSStatus1Code extends CRSStatusCode {
 	 */
 	public static final MMCode mmCRS113 = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CRS113";
 			owner_lazy = () -> CRSStatus1Code.mmObject();
 		}
@@ -397,7 +399,7 @@ public class CRSStatus1Code extends CRSStatusCode {
 	 */
 	public static final MMCode mmCRS114 = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CRS114";
 			owner_lazy = () -> CRSStatus1Code.mmObject();
 		}
@@ -406,15 +408,12 @@ public class CRSStatus1Code extends CRSStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CRSStatus1Code";
 				definition = "Specifies the Common Reporting Status (CRS) status.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CRSStatus1Code.mmCRS101, com.tools20022.repository.codeset.CRSStatus1Code.mmCRS102, com.tools20022.repository.codeset.CRSStatus1Code.mmCRS103,
-						com.tools20022.repository.codeset.CRSStatus1Code.mmCRS104, com.tools20022.repository.codeset.CRSStatus1Code.mmCRS105, com.tools20022.repository.codeset.CRSStatus1Code.mmCRS106,
-						com.tools20022.repository.codeset.CRSStatus1Code.mmCRS107, com.tools20022.repository.codeset.CRSStatus1Code.mmCRS108, com.tools20022.repository.codeset.CRSStatus1Code.mmCRS109,
-						com.tools20022.repository.codeset.CRSStatus1Code.mmCRS110, com.tools20022.repository.codeset.CRSStatus1Code.mmCRS111, com.tools20022.repository.codeset.CRSStatus1Code.mmCRS112,
-						com.tools20022.repository.codeset.CRSStatus1Code.mmCRS113, com.tools20022.repository.codeset.CRSStatus1Code.mmCRS114);
+				code_lazy = () -> Arrays.asList(CRSStatus1Code.mmCRS101, CRSStatus1Code.mmCRS102, CRSStatus1Code.mmCRS103, CRSStatus1Code.mmCRS104, CRSStatus1Code.mmCRS105, CRSStatus1Code.mmCRS106, CRSStatus1Code.mmCRS107,
+						CRSStatus1Code.mmCRS108, CRSStatus1Code.mmCRS109, CRSStatus1Code.mmCRS110, CRSStatus1Code.mmCRS111, CRSStatus1Code.mmCRS112, CRSStatus1Code.mmCRS113, CRSStatus1Code.mmCRS114);
 				trace_lazy = () -> CRSStatusCode.mmObject();
 			}
 		});

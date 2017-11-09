@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CorporateActionEventStageV2Code;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -80,7 +82,7 @@ public class CorporateActionEventStage4Code extends CorporateActionEventStageV2C
 	 */
 	public static final MMCode mmCancellationAndReRun = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationAndReRun";
 			owner_lazy = () -> CorporateActionEventStage4Code.mmObject();
 		}
@@ -103,7 +105,7 @@ public class CorporateActionEventStage4Code extends CorporateActionEventStageV2C
 	 */
 	public static final MMCode mmSupplementalCancellationAndReRun = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementalCancellationAndReRun";
 			owner_lazy = () -> CorporateActionEventStage4Code.mmObject();
 		}
@@ -126,7 +128,7 @@ public class CorporateActionEventStage4Code extends CorporateActionEventStageV2C
 	 */
 	public static final MMCode mmSupplementalCancellation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementalCancellation";
 			owner_lazy = () -> CorporateActionEventStage4Code.mmObject();
 		}
@@ -135,12 +137,11 @@ public class CorporateActionEventStage4Code extends CorporateActionEventStageV2C
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionEventStage4Code";
 				definition = "Specifies the stage of the CA lottery event.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CorporateActionEventStage4Code.mmCancellationAndReRun, com.tools20022.repository.codeset.CorporateActionEventStage4Code.mmSupplementalCancellationAndReRun,
-						com.tools20022.repository.codeset.CorporateActionEventStage4Code.mmSupplementalCancellation);
+				code_lazy = () -> Arrays.asList(CorporateActionEventStage4Code.mmCancellationAndReRun, CorporateActionEventStage4Code.mmSupplementalCancellationAndReRun, CorporateActionEventStage4Code.mmSupplementalCancellation);
 				trace_lazy = () -> CorporateActionEventStageV2Code.mmObject();
 			}
 		});

@@ -17,11 +17,12 @@
 
 package com.tools20022.repository.entity;
 
-import com.tools20022.metamodel.MMBusinessAssociationEnd;
-import com.tools20022.metamodel.MMBusinessAttribute;
-import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.*;
+import com.tools20022.repository.choice.ClearingSystemMemberIdentification2Choice;
+import com.tools20022.repository.choice.ClearingSystemMemberIdentificationChoice;
 import com.tools20022.repository.datatype.ExtensiveBranchNetworkIdentifier;
 import com.tools20022.repository.datatype.SmallNetworkIdentifier;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -37,6 +38,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CashClearingSystemMember#mmAustralianBSBCode
+ * CashClearingSystemMember.mmAustralianBSBCode}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -52,15 +62,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.entity.AustralianBSBIdentification#mmClearingSystemMember
  * AustralianBSBIdentification.mmClearingSystemMember}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CashClearingSystemMember#mmAustralianBSBCode
- * CashClearingSystemMember.mmAustralianBSBCode}</li>
  * </ul>
  * </li>
  * <li>
@@ -130,11 +131,10 @@ public class AustralianBSBIdentification {
 	 */
 	public static final MMBusinessAttribute mmExtensiveBranchNetworkIdentification = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ClearingSystemMemberIdentificationChoice.mmAustralianExtensiveBranchNetworkIdentification,
-					com.tools20022.repository.choice.ClearingSystemMemberIdentification2Choice.mmAustralianExtensiveBranchNetworkIdentification);
+			derivation_lazy = () -> Arrays.asList(ClearingSystemMemberIdentificationChoice.mmAustralianExtensiveBranchNetworkIdentification, ClearingSystemMemberIdentification2Choice.mmAustralianExtensiveBranchNetworkIdentification);
 			elementContext_lazy = () -> AustralianBSBIdentification.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ExtensiveBranchNetworkIdentification";
 			definition = "Extensive branch network list of the Australian Bank State Branch (BSB) Code. The codes are used for identifying Australian financial institutions, as assigned by the Australian Payments Clearing Association (APCA).";
 			maxOccurs = 1;
@@ -188,11 +188,10 @@ public class AustralianBSBIdentification {
 	 */
 	public static final MMBusinessAttribute mmSmallNetworkIdentification = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ClearingSystemMemberIdentificationChoice.mmAustralianSmallNetworkIdentification,
-					com.tools20022.repository.choice.ClearingSystemMemberIdentification2Choice.mmAustralianSmallNetworkIdentification);
+			derivation_lazy = () -> Arrays.asList(ClearingSystemMemberIdentificationChoice.mmAustralianSmallNetworkIdentification, ClearingSystemMemberIdentification2Choice.mmAustralianSmallNetworkIdentification);
 			elementContext_lazy = () -> AustralianBSBIdentification.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SmallNetworkIdentification";
 			definition = "Small network list of the Australian Bank State Branch (BSB) Code. The codes are used for identifying Australian financial institutions , as assigned by the Australian Payments Clearing Association (APCA).";
 			maxOccurs = 1;
@@ -242,13 +241,13 @@ public class AustralianBSBIdentification {
 		{
 			elementContext_lazy = () -> AustralianBSBIdentification.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ClearingSystemMemberIdentificationType";
 			definition = "Clearing system member identification for which an Australian BSB identification is provided.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.CashClearingSystemMember.mmAustralianBSBCode;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.CashClearingSystemMember.mmObject();
 		}
 	};
@@ -284,7 +283,7 @@ public class AustralianBSBIdentification {
 		{
 			elementContext_lazy = () -> AustralianBSBIdentification.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ClearingSystemMember";
 			definition = "Clearing system for which an Australian code is provided.";
 			maxOccurs = 1;
@@ -296,14 +295,13 @@ public class AustralianBSBIdentification {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AustralianBSBIdentification";
 				definition = "Australian Bank State Branch (BSB) Code - identifies Australian financial institutions on the Australian national clearing system. The code is assigned by the Australian Payments Clearing Association (APCA).";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CashClearingSystemMember.mmAustralianBSBCode);
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.AustralianBSBIdentification.mmExtensiveBranchNetworkIdentification,
-						com.tools20022.repository.entity.AustralianBSBIdentification.mmSmallNetworkIdentification, com.tools20022.repository.entity.AustralianBSBIdentification.mmClearingSystemMemberIdentificationType,
-						com.tools20022.repository.entity.AustralianBSBIdentification.mmClearingSystemMember);
+				element_lazy = () -> Arrays.asList(AustralianBSBIdentification.mmExtensiveBranchNetworkIdentification, AustralianBSBIdentification.mmSmallNetworkIdentification,
+						AustralianBSBIdentification.mmClearingSystemMemberIdentificationType, AustralianBSBIdentification.mmClearingSystemMember);
 			}
 		});
 		return mmObject_lazy.get();

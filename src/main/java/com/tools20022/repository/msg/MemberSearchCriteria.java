@@ -19,10 +19,12 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.MemberIdentificationChoice;
 import com.tools20022.repository.codeset.MemberStatus1Code;
 import com.tools20022.repository.codeset.MemberType1Code;
 import com.tools20022.repository.entity.SystemMemberRole;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -109,7 +111,7 @@ public class MemberSearchCriteria {
 			componentContext_lazy = () -> MemberSearchCriteria.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Unique and unambiguous identification of a member within a system, assigned using the member identification scheme of the system.";
 			minOccurs = 0;
@@ -152,11 +154,11 @@ public class MemberSearchCriteria {
 	 */
 	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SystemMemberRole.mmType;
+			businessElementTrace_lazy = () -> SystemMemberRole.mmType;
 			componentContext_lazy = () -> MemberSearchCriteria.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Nature of the relationship a member has with a system.";
 			minOccurs = 0;
@@ -199,11 +201,11 @@ public class MemberSearchCriteria {
 	 */
 	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SystemMemberRole.mmMemberStatus;
+			businessElementTrace_lazy = () -> SystemMemberRole.mmMemberStatus;
 			componentContext_lazy = () -> MemberSearchCriteria.mmObject();
 			isDerived = false;
 			xmlTag = "Sts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Status";
 			definition = "Status of a member in a system, eg, enabled or deleted.";
 			minOccurs = 0;
@@ -214,11 +216,10 @@ public class MemberSearchCriteria {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MemberSearchCriteria.mmIdentification, com.tools20022.repository.msg.MemberSearchCriteria.mmType,
-						com.tools20022.repository.msg.MemberSearchCriteria.mmStatus);
+				messageElement_lazy = () -> Arrays.asList(MemberSearchCriteria.mmIdentification, MemberSearchCriteria.mmType, MemberSearchCriteria.mmStatus);
 				trace_lazy = () -> SystemMemberRole.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "MemberSearchCriteria";
 				definition = "Defines the criteria used to search for a member.";
 			}

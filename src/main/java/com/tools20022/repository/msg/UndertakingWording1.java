@@ -20,8 +20,10 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ISO2ALanguageCode;
 import com.tools20022.repository.entity.ModelForm;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -110,7 +112,7 @@ public class UndertakingWording1 {
 			componentContext_lazy = () -> UndertakingWording1.mmObject();
 			isDerived = false;
 			xmlTag = "MdlForm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ModelForm";
 			definition = "Wording template for the undertaking content made available for use with certain governance rules or made available by particular institutions. ";
 			maxOccurs = 1;
@@ -155,11 +157,11 @@ public class UndertakingWording1 {
 	 */
 	public static final MMMessageAttribute mmRequestedWordingLanguage = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ModelForm.mmRequestedWordingLanguage;
+			businessElementTrace_lazy = () -> ModelForm.mmRequestedWordingLanguage;
 			componentContext_lazy = () -> UndertakingWording1.mmObject();
 			isDerived = false;
 			xmlTag = "ReqdWrdgLang";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestedWordingLanguage";
 			definition = "Language of the standard wording provided by the issuer.";
 			maxOccurs = 1;
@@ -198,7 +200,7 @@ public class UndertakingWording1 {
 			componentContext_lazy = () -> UndertakingWording1.mmObject();
 			isDerived = false;
 			xmlTag = "UdrtkgTermsAndConds";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UndertakingTermsAndConditions";
 			definition = "Terms and conditions of the undertaking.";
 			minOccurs = 0;
@@ -210,11 +212,10 @@ public class UndertakingWording1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UndertakingWording1.mmModelForm, com.tools20022.repository.msg.UndertakingWording1.mmRequestedWordingLanguage,
-						com.tools20022.repository.msg.UndertakingWording1.mmUndertakingTermsAndConditions);
+				messageElement_lazy = () -> Arrays.asList(UndertakingWording1.mmModelForm, UndertakingWording1.mmRequestedWordingLanguage, UndertakingWording1.mmUndertakingTermsAndConditions);
 				trace_lazy = () -> ModelForm.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "UndertakingWording1";
 				definition = "Information about the wording for a demand guarantee, standby letter of credit or other undertaking.";
 			}

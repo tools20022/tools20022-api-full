@@ -19,9 +19,12 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.datatype.Max3NumericText;
+import com.tools20022.repository.entity.Lottery;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -109,10 +112,10 @@ public class CorporateActionSD16 {
 			componentContext_lazy = () -> CorporateActionSD16.mmObject();
 			isDerived = false;
 			xmlTag = "PlcAndNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "xPath to the element that is being extended.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionSD10.mmPlaceAndName;
+			previousVersion_lazy = () -> CorporateActionSD10.mmPlaceAndName;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
@@ -160,10 +163,10 @@ public class CorporateActionSD16 {
 			componentContext_lazy = () -> CorporateActionSD16.mmObject();
 			isDerived = false;
 			xmlTag = "LtrySeqNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LotterySequenceNumber";
 			definition = "DTC generated number to distinguish between the series of lotteries run against a particular redemption.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionSD10.mmLotterySequenceNumber;
+			previousVersion_lazy = () -> CorporateActionSD10.mmLotterySequenceNumber;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max3NumericText.mmObject();
@@ -212,14 +215,14 @@ public class CorporateActionSD16 {
 	 */
 	public static final MMMessageAttribute mmLotteryDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Lottery.mmLotteryDate;
+			businessElementTrace_lazy = () -> Lottery.mmLotteryDate;
 			componentContext_lazy = () -> CorporateActionSD16.mmObject();
 			isDerived = false;
 			xmlTag = "LtryDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LotteryDate";
 			definition = "Date/time on which the lottery is run and applied to the holder's positions. This is also applicable to partial calls.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionSD10.mmLotteryDate;
+			previousVersion_lazy = () -> CorporateActionSD10.mmLotteryDate;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
@@ -261,7 +264,7 @@ public class CorporateActionSD16 {
 			componentContext_lazy = () -> CorporateActionSD16.mmObject();
 			isDerived = false;
 			xmlTag = "PrcToDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProcessToDate";
 			definition = "For Reorganization events, date at which instructions will be accepted by agent for payment.";
 			maxOccurs = 1;
@@ -273,10 +276,9 @@ public class CorporateActionSD16 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionSD16.mmPlaceAndName, com.tools20022.repository.msg.CorporateActionSD16.mmLotterySequenceNumber,
-						com.tools20022.repository.msg.CorporateActionSD16.mmLotteryDate, com.tools20022.repository.msg.CorporateActionSD16.mmProcessToDate);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(CorporateActionSD16.mmPlaceAndName, CorporateActionSD16.mmLotterySequenceNumber, CorporateActionSD16.mmLotteryDate, CorporateActionSD16.mmProcessToDate);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CorporateActionSD16";
 				definition = "Provides additional information regarding corporate action details.";
 				previousVersion_lazy = () -> CorporateActionSD10.mmObject();

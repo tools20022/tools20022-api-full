@@ -19,7 +19,19 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.acmt.*;
+import com.tools20022.repository.area.auth.RegulatoryTransactionReportV02;
+import com.tools20022.repository.area.camt.*;
+import com.tools20022.repository.area.reda.PriceReportCancellationV04;
+import com.tools20022.repository.area.reda.PriceReportV02;
+import com.tools20022.repository.area.reda.PriceReportV03;
+import com.tools20022.repository.area.reda.PriceReportV04;
+import com.tools20022.repository.area.semt.*;
+import com.tools20022.repository.area.sese.*;
+import com.tools20022.repository.area.setr.*;
 import com.tools20022.repository.datatype.Max350Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -553,7 +565,7 @@ public class Extension1 {
 			componentContext_lazy = () -> Extension1.mmObject();
 			isDerived = false;
 			xmlTag = "PlcAndNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "Name qualifying the information provided in the Text field, and place where this information should be inserted.";
 			maxOccurs = 1;
@@ -593,7 +605,7 @@ public class Extension1 {
 			componentContext_lazy = () -> Extension1.mmObject();
 			isDerived = false;
 			xmlTag = "Txt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Text";
 			definition = "Text of the extension.";
 			maxOccurs = 1;
@@ -605,84 +617,44 @@ public class Extension1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Extension1.mmPlaceAndName, com.tools20022.repository.msg.Extension1.mmText);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountDetailsConfirmationV02.mmExtension, com.tools20022.repository.area.acmt.AccountDetailsConfirmationV03.mmExtension,
-						com.tools20022.repository.area.sese.PEPOrISAOrPortfolioInformationV01.mmExtension, com.tools20022.repository.area.sese.AccountHoldingInformationV02.mmExtension,
-						com.tools20022.repository.area.sese.AccountHoldingInformationV03.mmExtension, com.tools20022.repository.area.acmt.AccountModificationInstructionV02.mmExtension,
-						com.tools20022.repository.area.acmt.AccountModificationInstructionV03.mmExtension, com.tools20022.repository.area.acmt.AccountOpeningInstructionV02.mmExtension,
-						com.tools20022.repository.area.acmt.AccountOpeningInstructionV03.mmExtension, com.tools20022.repository.area.sese.PEPOrISAOrPortfolioTransferConfirmationV02.mmExtension,
-						com.tools20022.repository.area.sese.PortfolioTransferConfirmationV03.mmExtension, com.tools20022.repository.area.sese.PortfolioTransferConfirmationV04.mmExtension,
-						com.tools20022.repository.area.sese.PEPOrISAOrPortfolioTransferInstructionV02.mmExtension, com.tools20022.repository.area.sese.PortfolioTransferInstructionV03.mmExtension,
-						com.tools20022.repository.area.sese.PortfolioTransferInstructionV04.mmExtension, com.tools20022.repository.area.reda.PriceReportCancellationV04.mmExtension,
-						com.tools20022.repository.area.reda.PriceReportV02.mmExtension, com.tools20022.repository.area.reda.PriceReportV03.mmExtension, com.tools20022.repository.area.reda.PriceReportV04.mmExtension,
-						com.tools20022.repository.area.sese.TransferInConfirmation.mmExtension, com.tools20022.repository.area.sese.TransferInConfirmationV02.mmExtension,
-						com.tools20022.repository.area.sese.TransferInConfirmationV03.mmExtension, com.tools20022.repository.area.sese.TransferInConfirmationV04.mmExtension,
-						com.tools20022.repository.area.sese.TransferInInstruction.mmExtension, com.tools20022.repository.area.sese.TransferInInstructionV02.mmExtension,
-						com.tools20022.repository.area.sese.TransferInInstructionV03.mmExtension, com.tools20022.repository.area.sese.TransferInInstructionV04.mmExtension,
-						com.tools20022.repository.area.sese.TransferOutConfirmation.mmExtension, com.tools20022.repository.area.sese.TransferOutConfirmationV02.mmExtension,
-						com.tools20022.repository.area.sese.TransferOutConfirmationV03.mmExtension, com.tools20022.repository.area.sese.TransferOutConfirmationV04.mmExtension,
-						com.tools20022.repository.area.sese.TransferOutInstruction.mmExtension, com.tools20022.repository.area.sese.TransferOutInstructionV02.mmExtension,
-						com.tools20022.repository.area.sese.TransferOutInstructionV03.mmExtension, com.tools20022.repository.area.sese.TransferOutInstructionV04.mmExtension,
-						com.tools20022.repository.area.semt.AccountingStatementOfHoldings.mmExtension, com.tools20022.repository.area.semt.AccountingStatementOfHoldingsV02.mmExtension,
-						com.tools20022.repository.area.semt.CustodyStatementOfHoldings.mmExtension, com.tools20022.repository.area.semt.CustodyStatementOfHoldingsV02.mmExtension,
-						com.tools20022.repository.area.camt.FundConfirmedCashForecastReportV02.mmExtension, com.tools20022.repository.area.camt.FundConfirmedCashForecastReportV03.mmExtension,
-						com.tools20022.repository.area.camt.FundDetailedConfirmedCashForecastReportV02.mmExtension, com.tools20022.repository.area.camt.FundDetailedConfirmedCashForecastReportV03.mmExtension,
-						com.tools20022.repository.area.camt.FundDetailedEstimatedCashForecastReportV02.mmExtension, com.tools20022.repository.area.camt.FundDetailedEstimatedCashForecastReportV03.mmExtension,
-						com.tools20022.repository.area.camt.FundEstimatedCashForecastReportV02.mmExtension, com.tools20022.repository.area.camt.FundEstimatedCashForecastReportV03.mmExtension,
-						com.tools20022.repository.area.setr.OrderCancellationStatusReportV03.mmExtension, com.tools20022.repository.area.setr.OrderConfirmationStatusReportV01.mmExtension,
-						com.tools20022.repository.area.setr.OrderInstructionStatusReportV03.mmExtension, com.tools20022.repository.area.setr.RedemptionBulkOrderConfirmationAmendmentV01.mmExtension,
-						com.tools20022.repository.area.setr.RedemptionBulkOrderConfirmationV02.mmExtension, com.tools20022.repository.area.setr.RedemptionBulkOrderConfirmationV03.mmExtension,
-						com.tools20022.repository.area.setr.RedemptionBulkOrderV02.mmExtension, com.tools20022.repository.area.setr.RedemptionBulkOrderV03.mmExtension,
-						com.tools20022.repository.area.setr.RedemptionOrderConfirmationAmendmentV01.mmExtension, com.tools20022.repository.area.setr.RedemptionMultipleOrderConfirmationV02.mmExtension,
-						com.tools20022.repository.area.setr.RedemptionOrderConfirmationV03.mmExtension, com.tools20022.repository.area.setr.RedemptionMultipleOrderV02.mmExtension,
-						com.tools20022.repository.area.setr.RedemptionOrderV03.mmExtension, com.tools20022.repository.area.setr.RequestForOrderConfirmationStatusReportV01.mmExtension,
-						com.tools20022.repository.area.setr.RequestForOrderStatusReportV03.mmExtension, com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactions.mmExtension,
-						com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsV02.mmExtension, com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationAmendmentV01.mmExtension,
-						com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationV02.mmExtension, com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationV03.mmExtension,
-						com.tools20022.repository.area.setr.SubscriptionBulkOrderV02.mmExtension, com.tools20022.repository.area.setr.SubscriptionBulkOrderV03.mmExtension,
-						com.tools20022.repository.area.setr.SubscriptionOrderConfirmationAmendmentV01.mmExtension, com.tools20022.repository.area.setr.SubscriptionMultipleOrderConfirmationV02.mmExtension,
-						com.tools20022.repository.area.setr.SubscriptionOrderConfirmationV03.mmExtension, com.tools20022.repository.area.setr.SubscriptionMultipleOrderV02.mmExtension,
-						com.tools20022.repository.area.setr.SubscriptionOrderV03.mmExtension, com.tools20022.repository.area.setr.SwitchOrderConfirmationAmendmentV01.mmExtension,
-						com.tools20022.repository.area.setr.SwitchOrderConfirmationV02.mmExtension, com.tools20022.repository.area.setr.SwitchOrderConfirmationV03.mmExtension, com.tools20022.repository.area.setr.SwitchOrderV02.mmExtension,
-						com.tools20022.repository.area.setr.SwitchOrderV03.mmExtension, com.tools20022.repository.area.sese.RequestForTransferStatusReportV02.mmExtension,
-						com.tools20022.repository.area.sese.RequestForTransferStatusReportV03.mmExtension, com.tools20022.repository.area.sese.TransferCancellationStatusReportV02.mmExtension,
-						com.tools20022.repository.area.sese.TransferCancellationStatusReportV03.mmExtension, com.tools20022.repository.area.sese.TransferInstructionStatusReportV02.mmExtension,
-						com.tools20022.repository.area.sese.TransferInstructionStatusReportV03.mmExtension, com.tools20022.repository.area.sese.RequestForPEPOrISAOrPortfolioInformationV01.mmExtension,
-						com.tools20022.repository.area.sese.AccountHoldingInformationRequestV02.mmExtension, com.tools20022.repository.area.auth.RegulatoryTransactionReportV02.mmExtension,
-						com.tools20022.repository.area.acmt.AccountDetailsConfirmationV04.mmExtension, com.tools20022.repository.area.acmt.AccountModificationInstructionV04.mmExtension,
-						com.tools20022.repository.area.acmt.AccountOpeningInstructionV04.mmExtension, com.tools20022.repository.area.sese.TransferInConfirmationV05.mmExtension,
-						com.tools20022.repository.area.sese.TransferInstructionStatusReportV04.mmExtension, com.tools20022.repository.area.sese.AccountHoldingInformationRequestV03.mmExtension,
-						com.tools20022.repository.area.sese.TransferOutInstructionV05.mmExtension, com.tools20022.repository.area.sese.AccountHoldingInformationV04.mmExtension,
-						com.tools20022.repository.area.sese.TransferCancellationStatusReportV04.mmExtension, com.tools20022.repository.area.sese.PortfolioTransferInstructionV05.mmExtension,
-						com.tools20022.repository.area.sese.TransferInInstructionV05.mmExtension, com.tools20022.repository.area.sese.PortfolioTransferConfirmationV05.mmExtension,
-						com.tools20022.repository.area.sese.TransferOutConfirmationV05.mmExtension, com.tools20022.repository.area.sese.RequestForTransferStatusReportV04.mmExtension,
-						com.tools20022.repository.area.acmt.AccountManagementStatusReportV04.mmExtension, com.tools20022.repository.area.camt.FundDetailedEstimatedCashForecastReportV04.mmExtension,
-						com.tools20022.repository.area.acmt.AccountOpeningInstructionV05.mmExtension, com.tools20022.repository.area.camt.FundConfirmedCashForecastReportV04.mmExtension,
-						com.tools20022.repository.area.camt.FundEstimatedCashForecastReportV04.mmExtension, com.tools20022.repository.area.acmt.AccountModificationInstructionV05.mmExtension,
-						com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactionsV03.mmExtension, com.tools20022.repository.area.acmt.AccountDetailsConfirmationV05.mmExtension,
-						com.tools20022.repository.area.camt.FundDetailedConfirmedCashForecastReportV04.mmExtension, com.tools20022.repository.area.sese.PortfolioTransferConfirmationV06.mmExtension,
-						com.tools20022.repository.area.sese.PortfolioTransferInstructionV06.mmExtension, com.tools20022.repository.area.sese.TransferInInstructionV06.mmExtension,
-						com.tools20022.repository.area.sese.TransferOutConfirmationV06.mmExtension, com.tools20022.repository.area.sese.TransferOutInstructionV06.mmExtension,
-						com.tools20022.repository.area.sese.TransferInConfirmationV06.mmExtension, com.tools20022.repository.area.sese.PortfolioTransferInstructionV07.mmExtension,
-						com.tools20022.repository.area.sese.AccountHoldingInformationV05.mmExtension, com.tools20022.repository.area.sese.TransferInstructionStatusReportV05.mmExtension,
-						com.tools20022.repository.area.sese.TransferInConfirmationV07.mmExtension, com.tools20022.repository.area.acmt.AccountOpeningInstructionV06.mmExtension,
-						com.tools20022.repository.area.sese.TransferOutConfirmationV07.mmExtension, com.tools20022.repository.area.sese.RequestForTransferStatusReportV05.mmExtension,
-						com.tools20022.repository.area.acmt.AccountDetailsConfirmationV06.mmExtension, com.tools20022.repository.area.sese.PortfolioTransferConfirmationV07.mmExtension,
-						com.tools20022.repository.area.sese.TransferCancellationStatusReportV05.mmExtension, com.tools20022.repository.area.sese.TransferOutInstructionV07.mmExtension,
-						com.tools20022.repository.area.acmt.AccountManagementStatusReportV05.mmExtension, com.tools20022.repository.area.acmt.AccountModificationInstructionV06.mmExtension,
-						com.tools20022.repository.area.sese.TransferInInstructionV07.mmExtension, com.tools20022.repository.area.sese.AccountHoldingInformationRequestV04.mmExtension,
-						com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationV04.mmExtension, com.tools20022.repository.area.setr.RedemptionBulkOrderV04.mmExtension,
-						com.tools20022.repository.area.setr.RedemptionOrderV04.mmExtension, com.tools20022.repository.area.setr.RedemptionBulkOrderConfirmationV04.mmExtension,
-						com.tools20022.repository.area.setr.SwitchOrderConfirmationV04.mmExtension, com.tools20022.repository.area.setr.RequestForOrderStatusReportV04.mmExtension,
-						com.tools20022.repository.area.setr.SubscriptionOrderConfirmationV04.mmExtension, com.tools20022.repository.area.setr.OrderCancellationStatusReportV04.mmExtension,
-						com.tools20022.repository.area.setr.SwitchOrderV04.mmExtension, com.tools20022.repository.area.setr.RedemptionOrderConfirmationV04.mmExtension,
-						com.tools20022.repository.area.setr.OrderInstructionStatusReportV04.mmExtension, com.tools20022.repository.area.setr.RequestForOrderConfirmationStatusReportV02.mmExtension,
-						com.tools20022.repository.area.setr.SubscriptionBulkOrderV04.mmExtension, com.tools20022.repository.area.setr.OrderConfirmationStatusReportV02.mmExtension,
-						com.tools20022.repository.area.setr.SubscriptionOrderV04.mmExtension, com.tools20022.repository.area.acmt.AccountDetailsConfirmationV07.mmExtension,
-						com.tools20022.repository.area.acmt.AccountModificationInstructionV07.mmExtension, com.tools20022.repository.area.acmt.AccountOpeningInstructionV07.mmExtension,
-						com.tools20022.repository.area.acmt.AccountManagementStatusReportV06.mmExtension);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(Extension1.mmPlaceAndName, Extension1.mmText);
+				messageBuildingBlock_lazy = () -> Arrays.asList(AccountDetailsConfirmationV02.mmExtension, AccountDetailsConfirmationV03.mmExtension, PEPOrISAOrPortfolioInformationV01.mmExtension, AccountHoldingInformationV02.mmExtension,
+						AccountHoldingInformationV03.mmExtension, AccountModificationInstructionV02.mmExtension, AccountModificationInstructionV03.mmExtension, AccountOpeningInstructionV02.mmExtension,
+						AccountOpeningInstructionV03.mmExtension, PEPOrISAOrPortfolioTransferConfirmationV02.mmExtension, PortfolioTransferConfirmationV03.mmExtension, PortfolioTransferConfirmationV04.mmExtension,
+						PEPOrISAOrPortfolioTransferInstructionV02.mmExtension, PortfolioTransferInstructionV03.mmExtension, PortfolioTransferInstructionV04.mmExtension, PriceReportCancellationV04.mmExtension, PriceReportV02.mmExtension,
+						PriceReportV03.mmExtension, PriceReportV04.mmExtension, TransferInConfirmation.mmExtension, TransferInConfirmationV02.mmExtension, TransferInConfirmationV03.mmExtension, TransferInConfirmationV04.mmExtension,
+						TransferInInstruction.mmExtension, TransferInInstructionV02.mmExtension, TransferInInstructionV03.mmExtension, TransferInInstructionV04.mmExtension, TransferOutConfirmation.mmExtension,
+						TransferOutConfirmationV02.mmExtension, TransferOutConfirmationV03.mmExtension, TransferOutConfirmationV04.mmExtension, TransferOutInstruction.mmExtension, TransferOutInstructionV02.mmExtension,
+						TransferOutInstructionV03.mmExtension, TransferOutInstructionV04.mmExtension, AccountingStatementOfHoldings.mmExtension, AccountingStatementOfHoldingsV02.mmExtension, CustodyStatementOfHoldings.mmExtension,
+						CustodyStatementOfHoldingsV02.mmExtension, FundConfirmedCashForecastReportV02.mmExtension, FundConfirmedCashForecastReportV03.mmExtension, FundDetailedConfirmedCashForecastReportV02.mmExtension,
+						FundDetailedConfirmedCashForecastReportV03.mmExtension, FundDetailedEstimatedCashForecastReportV02.mmExtension, FundDetailedEstimatedCashForecastReportV03.mmExtension, FundEstimatedCashForecastReportV02.mmExtension,
+						FundEstimatedCashForecastReportV03.mmExtension, OrderCancellationStatusReportV03.mmExtension, OrderConfirmationStatusReportV01.mmExtension, OrderInstructionStatusReportV03.mmExtension,
+						RedemptionBulkOrderConfirmationAmendmentV01.mmExtension, RedemptionBulkOrderConfirmationV02.mmExtension, RedemptionBulkOrderConfirmationV03.mmExtension, RedemptionBulkOrderV02.mmExtension,
+						RedemptionBulkOrderV03.mmExtension, RedemptionOrderConfirmationAmendmentV01.mmExtension, RedemptionMultipleOrderConfirmationV02.mmExtension, RedemptionOrderConfirmationV03.mmExtension,
+						RedemptionMultipleOrderV02.mmExtension, RedemptionOrderV03.mmExtension, RequestForOrderConfirmationStatusReportV01.mmExtension, RequestForOrderStatusReportV03.mmExtension,
+						StatementOfInvestmentFundTransactions.mmExtension, StatementOfInvestmentFundTransactionsV02.mmExtension, SubscriptionBulkOrderConfirmationAmendmentV01.mmExtension, SubscriptionBulkOrderConfirmationV02.mmExtension,
+						SubscriptionBulkOrderConfirmationV03.mmExtension, SubscriptionBulkOrderV02.mmExtension, SubscriptionBulkOrderV03.mmExtension, SubscriptionOrderConfirmationAmendmentV01.mmExtension,
+						SubscriptionMultipleOrderConfirmationV02.mmExtension, SubscriptionOrderConfirmationV03.mmExtension, SubscriptionMultipleOrderV02.mmExtension, SubscriptionOrderV03.mmExtension,
+						SwitchOrderConfirmationAmendmentV01.mmExtension, SwitchOrderConfirmationV02.mmExtension, SwitchOrderConfirmationV03.mmExtension, SwitchOrderV02.mmExtension, SwitchOrderV03.mmExtension,
+						RequestForTransferStatusReportV02.mmExtension, RequestForTransferStatusReportV03.mmExtension, TransferCancellationStatusReportV02.mmExtension, TransferCancellationStatusReportV03.mmExtension,
+						TransferInstructionStatusReportV02.mmExtension, TransferInstructionStatusReportV03.mmExtension, RequestForPEPOrISAOrPortfolioInformationV01.mmExtension, AccountHoldingInformationRequestV02.mmExtension,
+						RegulatoryTransactionReportV02.mmExtension, AccountDetailsConfirmationV04.mmExtension, AccountModificationInstructionV04.mmExtension, AccountOpeningInstructionV04.mmExtension, TransferInConfirmationV05.mmExtension,
+						TransferInstructionStatusReportV04.mmExtension, AccountHoldingInformationRequestV03.mmExtension, TransferOutInstructionV05.mmExtension, AccountHoldingInformationV04.mmExtension,
+						TransferCancellationStatusReportV04.mmExtension, PortfolioTransferInstructionV05.mmExtension, TransferInInstructionV05.mmExtension, PortfolioTransferConfirmationV05.mmExtension,
+						TransferOutConfirmationV05.mmExtension, RequestForTransferStatusReportV04.mmExtension, AccountManagementStatusReportV04.mmExtension, FundDetailedEstimatedCashForecastReportV04.mmExtension,
+						AccountOpeningInstructionV05.mmExtension, FundConfirmedCashForecastReportV04.mmExtension, FundEstimatedCashForecastReportV04.mmExtension, AccountModificationInstructionV05.mmExtension,
+						StatementOfInvestmentFundTransactionsV03.mmExtension, AccountDetailsConfirmationV05.mmExtension, FundDetailedConfirmedCashForecastReportV04.mmExtension, PortfolioTransferConfirmationV06.mmExtension,
+						PortfolioTransferInstructionV06.mmExtension, TransferInInstructionV06.mmExtension, TransferOutConfirmationV06.mmExtension, TransferOutInstructionV06.mmExtension, TransferInConfirmationV06.mmExtension,
+						PortfolioTransferInstructionV07.mmExtension, AccountHoldingInformationV05.mmExtension, TransferInstructionStatusReportV05.mmExtension, TransferInConfirmationV07.mmExtension, AccountOpeningInstructionV06.mmExtension,
+						TransferOutConfirmationV07.mmExtension, RequestForTransferStatusReportV05.mmExtension, AccountDetailsConfirmationV06.mmExtension, PortfolioTransferConfirmationV07.mmExtension,
+						TransferCancellationStatusReportV05.mmExtension, TransferOutInstructionV07.mmExtension, AccountManagementStatusReportV05.mmExtension, AccountModificationInstructionV06.mmExtension,
+						TransferInInstructionV07.mmExtension, AccountHoldingInformationRequestV04.mmExtension, SubscriptionBulkOrderConfirmationV04.mmExtension, RedemptionBulkOrderV04.mmExtension, RedemptionOrderV04.mmExtension,
+						RedemptionBulkOrderConfirmationV04.mmExtension, SwitchOrderConfirmationV04.mmExtension, RequestForOrderStatusReportV04.mmExtension, SubscriptionOrderConfirmationV04.mmExtension,
+						OrderCancellationStatusReportV04.mmExtension, SwitchOrderV04.mmExtension, RedemptionOrderConfirmationV04.mmExtension, OrderInstructionStatusReportV04.mmExtension,
+						RequestForOrderConfirmationStatusReportV02.mmExtension, SubscriptionBulkOrderV04.mmExtension, OrderConfirmationStatusReportV02.mmExtension, SubscriptionOrderV04.mmExtension,
+						AccountDetailsConfirmationV07.mmExtension, AccountModificationInstructionV07.mmExtension, AccountOpeningInstructionV07.mmExtension, AccountManagementStatusReportV06.mmExtension);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Extension1";
 				definition = "Additional information that can not be captured in the structured fields and/or any other specific block.";
 			}

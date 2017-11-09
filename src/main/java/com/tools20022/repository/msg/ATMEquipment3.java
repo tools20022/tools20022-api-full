@@ -20,7 +20,9 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -114,10 +116,10 @@ public class ATMEquipment3 {
 			componentContext_lazy = () -> ATMEquipment3.mmObject();
 			isDerived = false;
 			xmlTag = "Manfctr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Manufacturer";
 			definition = "ATM Manufacturer.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMEquipment2.mmManufacturer;
+			previousVersion_lazy = () -> ATMEquipment2.mmManufacturer;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -160,10 +162,10 @@ public class ATMEquipment3 {
 			componentContext_lazy = () -> ATMEquipment3.mmObject();
 			isDerived = false;
 			xmlTag = "Mdl";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Model";
 			definition = "Model of ATM.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMEquipment2.mmModel;
+			previousVersion_lazy = () -> ATMEquipment2.mmModel;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -206,10 +208,10 @@ public class ATMEquipment3 {
 			componentContext_lazy = () -> ATMEquipment3.mmObject();
 			isDerived = false;
 			xmlTag = "Vrsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Version";
 			definition = "Version of the device model.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMEquipment2.mmVersion;
+			previousVersion_lazy = () -> ATMEquipment2.mmVersion;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -252,10 +254,10 @@ public class ATMEquipment3 {
 			componentContext_lazy = () -> ATMEquipment3.mmObject();
 			isDerived = false;
 			xmlTag = "SrlNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SerialNumber";
 			definition = "Serial number of the ATM.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMEquipment2.mmSerialNumber;
+			previousVersion_lazy = () -> ATMEquipment2.mmSerialNumber;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -296,7 +298,7 @@ public class ATMEquipment3 {
 			componentContext_lazy = () -> ATMEquipment3.mmObject();
 			isDerived = false;
 			xmlTag = "SgndSrlNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SignedSerialNumber";
 			definition = "Signature of the serial number of the device. The signature may contain the serial number with the signature.";
 			maxOccurs = 1;
@@ -342,10 +344,10 @@ public class ATMEquipment3 {
 			componentContext_lazy = () -> ATMEquipment3.mmObject();
 			isDerived = false;
 			xmlTag = "FrmwrPrvdr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FirmwareProvider";
 			definition = "Provider of the firmware.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMEquipment2.mmFirmwareProvider;
+			previousVersion_lazy = () -> ATMEquipment2.mmFirmwareProvider;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -388,10 +390,10 @@ public class ATMEquipment3 {
 			componentContext_lazy = () -> ATMEquipment3.mmObject();
 			isDerived = false;
 			xmlTag = "FrmwrId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FirmwareIdentification";
 			definition = "Identification of the firmware.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMEquipment2.mmFirmwareIdentification;
+			previousVersion_lazy = () -> ATMEquipment2.mmFirmwareIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -434,10 +436,10 @@ public class ATMEquipment3 {
 			componentContext_lazy = () -> ATMEquipment3.mmObject();
 			isDerived = false;
 			xmlTag = "FrmwrVrsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FirmwareVersion";
 			definition = "Version of the firmware.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMEquipment2.mmFirmwareVersion;
+			previousVersion_lazy = () -> ATMEquipment2.mmFirmwareVersion;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -447,11 +449,10 @@ public class ATMEquipment3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMEquipment3.mmManufacturer, com.tools20022.repository.msg.ATMEquipment3.mmModel, com.tools20022.repository.msg.ATMEquipment3.mmVersion,
-						com.tools20022.repository.msg.ATMEquipment3.mmSerialNumber, com.tools20022.repository.msg.ATMEquipment3.mmSignedSerialNumber, com.tools20022.repository.msg.ATMEquipment3.mmFirmwareProvider,
-						com.tools20022.repository.msg.ATMEquipment3.mmFirmwareIdentification, com.tools20022.repository.msg.ATMEquipment3.mmFirmwareVersion);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(ATMEquipment3.mmManufacturer, ATMEquipment3.mmModel, ATMEquipment3.mmVersion, ATMEquipment3.mmSerialNumber, ATMEquipment3.mmSignedSerialNumber, ATMEquipment3.mmFirmwareProvider,
+						ATMEquipment3.mmFirmwareIdentification, ATMEquipment3.mmFirmwareVersion);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ATMEquipment3";
 				definition = "Hardware security module information, so called EPP for Encrypted PIN Pad.";
 				previousVersion_lazy = () -> ATMEquipment2.mmObject();

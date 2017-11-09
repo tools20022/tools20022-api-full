@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ATMStatusCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -76,7 +78,7 @@ public class ATMStatus2Code extends ATMStatusCode {
 	 */
 	public static final MMCode mmInOperation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InOperation";
 			owner_lazy = () -> ATMStatus2Code.mmObject();
 		}
@@ -99,7 +101,7 @@ public class ATMStatus2Code extends ATMStatusCode {
 	 */
 	public static final MMCode mmOutOfService = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OutOfService";
 			owner_lazy = () -> ATMStatus2Code.mmObject();
 		}
@@ -108,11 +110,11 @@ public class ATMStatus2Code extends ATMStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ATMStatus2Code";
 				definition = "Current status of the security device.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ATMStatus2Code.mmInOperation, com.tools20022.repository.codeset.ATMStatus2Code.mmOutOfService);
+				code_lazy = () -> Arrays.asList(ATMStatus2Code.mmInOperation, ATMStatus2Code.mmOutOfService);
 				trace_lazy = () -> ATMStatusCode.mmObject();
 			}
 		});

@@ -19,8 +19,10 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.AmountRatio;
 import com.tools20022.repository.entity.QuantityRatio;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.AmountToAmountRatio1;
 import com.tools20022.repository.msg.QuantityToQuantityRatio1;
 import java.util.Arrays;
@@ -105,7 +107,7 @@ public class RatioFormat1Choice {
 			componentContext_lazy = () -> RatioFormat1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "QtyToQty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuantityToQuantity";
 			definition = "The ratio is expressed as a quantity per another quantity.";
 			maxOccurs = 1;
@@ -152,7 +154,7 @@ public class RatioFormat1Choice {
 			componentContext_lazy = () -> RatioFormat1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "AmtToAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmountToAmount";
 			definition = "The ratio is expressed as an amount per another amount.";
 			maxOccurs = 1;
@@ -194,7 +196,7 @@ public class RatioFormat1Choice {
 			componentContext_lazy = () -> RatioFormat1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "NotSpcfdRate";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotSpecifiedRate";
 			definition = "The value of the ratio is not specified.";
 			maxOccurs = 1;
@@ -206,10 +208,9 @@ public class RatioFormat1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.RatioFormat1Choice.mmQuantityToQuantity, com.tools20022.repository.choice.RatioFormat1Choice.mmAmountToAmount,
-						com.tools20022.repository.choice.RatioFormat1Choice.mmNotSpecifiedRate);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(RatioFormat1Choice.mmQuantityToQuantity, RatioFormat1Choice.mmAmountToAmount, RatioFormat1Choice.mmNotSpecifiedRate);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RatioFormat1Choice";
 				definition = "Choice of format to expressed a ratio.";
 			}

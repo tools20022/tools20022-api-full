@@ -19,10 +19,14 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.metamodel.MMXor;
 import com.tools20022.repository.codeset.CountryCode;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.entity.GenericIdentification;
+import com.tools20022.repository.entity.IdentificationIssuerRole;
 import com.tools20022.repository.entity.SecuritiesIdentification;
+import com.tools20022.repository.GeneratedRepository;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -134,14 +138,14 @@ public class AlternateSecurityIdentification1 {
 	 */
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmIdentification;
+			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> AlternateSecurityIdentification1.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Unique and unambiguous identifier of a security.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AlternateSecurityIdentification7.mmIdentification);
+			nextVersions_lazy = () -> Arrays.asList(AlternateSecurityIdentification7.mmIdentification);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -182,11 +186,11 @@ public class AlternateSecurityIdentification1 {
 	 */
 	public static final MMMessageAttribute mmDomesticIdentificationSource = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.IdentificationIssuerRole.mmCountry;
+			businessElementTrace_lazy = () -> IdentificationIssuerRole.mmCountry;
 			componentContext_lazy = () -> AlternateSecurityIdentification1.mmObject();
 			isDerived = false;
 			xmlTag = "DmstIdSrc";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DomesticIdentificationSource";
 			definition = "Country of the proprietary identification scheme.";
 			maxOccurs = 1;
@@ -229,11 +233,11 @@ public class AlternateSecurityIdentification1 {
 	 */
 	public static final MMMessageAttribute mmProprietaryIdentificationSource = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.IdentificationIssuerRole.mmEntityName;
+			businessElementTrace_lazy = () -> IdentificationIssuerRole.mmEntityName;
 			componentContext_lazy = () -> AlternateSecurityIdentification1.mmObject();
 			isDerived = false;
 			xmlTag = "PrtryIdSrc";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProprietaryIdentificationSource";
 			definition = "Entity that issues the proprietary identification.";
 			maxOccurs = 1;
@@ -247,6 +251,10 @@ public class AlternateSecurityIdentification1 {
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
+	 * messageComponent} =
+	 * {@linkplain com.tools20022.repository.msg.AlternateSecurityIdentification1
+	 * AlternateSecurityIdentification1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getImpactedElements
 	 * impactedElements} =
 	 * <ul>
@@ -258,10 +266,6 @@ public class AlternateSecurityIdentification1 {
 	 * AlternateSecurityIdentification1.mmProprietaryIdentificationSource}</li>
 	 * </ul>
 	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
-	 * messageComponent} =
-	 * {@linkplain com.tools20022.repository.msg.AlternateSecurityIdentification1
-	 * AlternateSecurityIdentification1}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -277,23 +281,22 @@ public class AlternateSecurityIdentification1 {
 	 */
 	public static final MMXor mmDomesticOrProprietaryIdentificationSourceRule = new MMXor() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DomesticOrProprietaryIdentificationSourceRule";
 			definition = "Either DomesticIdentificationSource or ProprietaryIdentificationSource must be present, but not both.";
 			messageComponent_lazy = () -> AlternateSecurityIdentification1.mmObject();
-			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AlternateSecurityIdentification1.mmDomesticIdentificationSource,
-					com.tools20022.repository.msg.AlternateSecurityIdentification1.mmProprietaryIdentificationSource);
+			impactedElements_lazy = () -> Arrays.asList(AlternateSecurityIdentification1.mmDomesticIdentificationSource, AlternateSecurityIdentification1.mmProprietaryIdentificationSource);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AlternateSecurityIdentification1.mmIdentification, com.tools20022.repository.msg.AlternateSecurityIdentification1.mmDomesticIdentificationSource,
-						com.tools20022.repository.msg.AlternateSecurityIdentification1.mmProprietaryIdentificationSource);
+				messageElement_lazy = () -> Arrays.asList(AlternateSecurityIdentification1.mmIdentification, AlternateSecurityIdentification1.mmDomesticIdentificationSource,
+						AlternateSecurityIdentification1.mmProprietaryIdentificationSource);
 				trace_lazy = () -> SecuritiesIdentification.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
 						return DateFormat.getDateInstance(java.text.DateFormat.LONG).parse("September 9, 2016");
@@ -304,7 +307,7 @@ public class AlternateSecurityIdentification1 {
 				name = "AlternateSecurityIdentification1";
 				definition = "Proprietary or domestic identification scheme that uniquely identifies a security.";
 				nextVersions_lazy = () -> Arrays.asList(AlternateSecurityIdentification7.mmObject());
-				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AlternateSecurityIdentification1.mmDomesticOrProprietaryIdentificationSourceRule);
+				xors_lazy = () -> Arrays.asList(AlternateSecurityIdentification1.mmDomesticOrProprietaryIdentificationSourceRule);
 			}
 		});
 		return mmObject_lazy.get();

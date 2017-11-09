@@ -20,6 +20,7 @@ package com.tools20022.repository.area.trea;
 import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.TreasuryArchive;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.ForexNotificationsISOArchive;
@@ -38,6 +39,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code trea.005.001.02}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} = {@linkplain com.tools20022.repository.area.TreasuryArchive
  * TreasuryArchive}</li>
@@ -77,9 +81,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * AmendNonDeliverableForwardValuationV02.mmValuationInformation}</li>
  * </ul>
  * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code trea.005.001.02}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -124,7 +125,7 @@ public class AmendNonDeliverableForwardValuationV02 {
 	public static final MMMessageBuildingBlock mmTradeInformation = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "TradInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeInformation";
 			definition = "Provides references and date of the valuation of the non deliverable trade which is amended.";
 			maxOccurs = 1;
@@ -162,7 +163,7 @@ public class AmendNonDeliverableForwardValuationV02 {
 	public static final MMMessageBuildingBlock mmTradingSideIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "TradgSdId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradingSideIdentification";
 			definition = "Specifies the trading side of the valuation of the non deliverable trade which is amended.";
 			maxOccurs = 1;
@@ -200,7 +201,7 @@ public class AmendNonDeliverableForwardValuationV02 {
 	public static final MMMessageBuildingBlock mmCounterpartySideIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CtrPtySdId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CounterpartySideIdentification";
 			definition = "Specifies the counterparty of the valuation of the non deliverable trade which is amended.";
 			maxOccurs = 1;
@@ -238,7 +239,7 @@ public class AmendNonDeliverableForwardValuationV02 {
 	public static final MMMessageBuildingBlock mmTradeAmounts = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "TradAmts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeAmounts";
 			definition = "Specifies the amounts of the valuation of the non deliverable trade which is amended.";
 			maxOccurs = 1;
@@ -275,7 +276,7 @@ public class AmendNonDeliverableForwardValuationV02 {
 	public static final MMMessageBuildingBlock mmValuationRate = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "ValtnRate";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValuationRate";
 			definition = "Specifies the valuation rate of the valuation of the non deliverable trade which is amended.";
 			maxOccurs = 1;
@@ -312,7 +313,7 @@ public class AmendNonDeliverableForwardValuationV02 {
 	public static final MMMessageBuildingBlock mmValuationInformation = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "ValtnInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValuationInformation";
 			definition = "Specifies the valuation information of the valuation of the non deliverable trade which is amended.";
 			maxOccurs = 1;
@@ -324,17 +325,16 @@ public class AmendNonDeliverableForwardValuationV02 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AmendNonDeliverableForwardValuationV02";
 				definition = "Scope\r\nThe AmendNonDeliverableForwardValuation message is sent by a participant to a central system or to a counterparty to notify the amendment of the valuation of a non deliverable trade previously confirmed by the sender.\r\nUsage\r\nThe message is sent from a participant to a central settlement system to advise of the update of a previously sent notification and it contains a \"Related Reference\" to link it to the previous notification.";
 				messageSet_lazy = () -> Arrays.asList(ForexNotificationsISOArchive.mmObject());
 				rootElement = "Document";
 				xmlTag = "AmdNDFValtnV02";
 				businessArea_lazy = () -> TreasuryArchive.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.trea.AmendNonDeliverableForwardValuationV02.mmTradeInformation,
-						com.tools20022.repository.area.trea.AmendNonDeliverableForwardValuationV02.mmTradingSideIdentification, com.tools20022.repository.area.trea.AmendNonDeliverableForwardValuationV02.mmCounterpartySideIdentification,
-						com.tools20022.repository.area.trea.AmendNonDeliverableForwardValuationV02.mmTradeAmounts, com.tools20022.repository.area.trea.AmendNonDeliverableForwardValuationV02.mmValuationRate,
-						com.tools20022.repository.area.trea.AmendNonDeliverableForwardValuationV02.mmValuationInformation);
+				messageBuildingBlock_lazy = () -> Arrays.asList(AmendNonDeliverableForwardValuationV02.mmTradeInformation, AmendNonDeliverableForwardValuationV02.mmTradingSideIdentification,
+						AmendNonDeliverableForwardValuationV02.mmCounterpartySideIdentification, AmendNonDeliverableForwardValuationV02.mmTradeAmounts, AmendNonDeliverableForwardValuationV02.mmValuationRate,
+						AmendNonDeliverableForwardValuationV02.mmValuationInformation);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "trea";

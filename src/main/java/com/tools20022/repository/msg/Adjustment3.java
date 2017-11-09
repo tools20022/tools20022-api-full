@@ -19,6 +19,7 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.metamodel.MMXor;
 import com.tools20022.repository.codeset.AdjustmentDirection1Code;
 import com.tools20022.repository.codeset.AdjustmentType2Code;
@@ -26,6 +27,7 @@ import com.tools20022.repository.datatype.CurrencyAndAmount;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.PercentageRate;
 import com.tools20022.repository.entity.Adjustment;
+import com.tools20022.repository.GeneratedRepository;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -125,11 +127,11 @@ public class Adjustment3 {
 	 */
 	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Adjustment.mmType;
+			businessElementTrace_lazy = () -> Adjustment.mmType;
 			componentContext_lazy = () -> Adjustment3.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Specifies the type of adjustment applied to the amount of goods/services by means of a code.";
 			maxOccurs = 1;
@@ -172,11 +174,11 @@ public class Adjustment3 {
 	 */
 	public static final MMMessageAttribute mmOtherAdjustmentType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Adjustment.mmType;
+			businessElementTrace_lazy = () -> Adjustment.mmType;
 			componentContext_lazy = () -> Adjustment3.mmObject();
 			isDerived = false;
 			xmlTag = "OthrAdjstmntTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherAdjustmentType";
 			definition = "Specifies a type of adjustment not present in the code list.";
 			maxOccurs = 1;
@@ -219,11 +221,11 @@ public class Adjustment3 {
 	 */
 	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Adjustment.mmAmount;
+			businessElementTrace_lazy = () -> Adjustment.mmAmount;
 			componentContext_lazy = () -> Adjustment3.mmObject();
 			isDerived = false;
 			xmlTag = "Amt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Specifies the monetary amount of the adjustment.";
 			maxOccurs = 1;
@@ -266,11 +268,11 @@ public class Adjustment3 {
 	 */
 	public static final MMMessageAttribute mmRate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Adjustment.mmChargeRate;
+			businessElementTrace_lazy = () -> Adjustment.mmChargeRate;
 			componentContext_lazy = () -> Adjustment3.mmObject();
 			isDerived = false;
 			xmlTag = "Rate";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rate";
 			definition = "Specifies the percentage rate of the adjustment.";
 			maxOccurs = 1;
@@ -316,11 +318,11 @@ public class Adjustment3 {
 	 */
 	public static final MMMessageAttribute mmDirection = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Adjustment.mmDirection;
+			businessElementTrace_lazy = () -> Adjustment.mmDirection;
 			componentContext_lazy = () -> Adjustment3.mmObject();
 			isDerived = false;
 			xmlTag = "Drctn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Direction";
 			definition = "Specifies whether the adjustment must be subtracted or added to the total amount.";
 			maxOccurs = 1;
@@ -334,6 +336,9 @@ public class Adjustment3 {
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
+	 * messageComponent} =
+	 * {@linkplain com.tools20022.repository.msg.Adjustment3 Adjustment3}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getImpactedElements
 	 * impactedElements} =
 	 * <ul>
@@ -343,9 +348,6 @@ public class Adjustment3 {
 	 * Adjustment3.mmRate}</li>
 	 * </ul>
 	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
-	 * messageComponent} =
-	 * {@linkplain com.tools20022.repository.msg.Adjustment3 Adjustment3}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -361,11 +363,11 @@ public class Adjustment3 {
 	 */
 	public static final MMXor mmAmountOrRateRule = new MMXor() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmountOrRateRule";
 			definition = "If Rate is present, then Amount is not allowed. If Rate is not present, then Amount is mandatory.";
 			messageComponent_lazy = () -> Adjustment3.mmObject();
-			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Adjustment3.mmAmount, com.tools20022.repository.msg.Adjustment3.mmRate);
+			impactedElements_lazy = () -> Arrays.asList(Adjustment3.mmAmount, Adjustment3.mmRate);
 		}
 	};
 	/**
@@ -374,6 +376,9 @@ public class Adjustment3 {
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
+	 * messageComponent} =
+	 * {@linkplain com.tools20022.repository.msg.Adjustment3 Adjustment3}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getImpactedElements
 	 * impactedElements} =
 	 * <ul>
@@ -384,9 +389,6 @@ public class Adjustment3 {
 	 * Adjustment3.mmOtherAdjustmentType}</li>
 	 * </ul>
 	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
-	 * messageComponent} =
-	 * {@linkplain com.tools20022.repository.msg.Adjustment3 Adjustment3}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -402,22 +404,21 @@ public class Adjustment3 {
 	 */
 	public static final MMXor mmTypeOrOtherAdjustmentTypeRule = new MMXor() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TypeOrOtherAdjustmentTypeRule";
 			definition = "If Type is present, then OtherAdjustmentType is not allowed. If Type is not present, then OtherAdjustmentType is mandatory.";
 			messageComponent_lazy = () -> Adjustment3.mmObject();
-			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Adjustment3.mmType, com.tools20022.repository.msg.Adjustment3.mmOtherAdjustmentType);
+			impactedElements_lazy = () -> Arrays.asList(Adjustment3.mmType, Adjustment3.mmOtherAdjustmentType);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Adjustment3.mmType, com.tools20022.repository.msg.Adjustment3.mmOtherAdjustmentType, com.tools20022.repository.msg.Adjustment3.mmAmount,
-						com.tools20022.repository.msg.Adjustment3.mmRate, com.tools20022.repository.msg.Adjustment3.mmDirection);
+				messageElement_lazy = () -> Arrays.asList(Adjustment3.mmType, Adjustment3.mmOtherAdjustmentType, Adjustment3.mmAmount, Adjustment3.mmRate, Adjustment3.mmDirection);
 				trace_lazy = () -> Adjustment.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
 						return DateFormat.getDateInstance(java.text.DateFormat.LONG).parse("September 9, 2016");
@@ -427,7 +428,7 @@ public class Adjustment3 {
 				})).get();
 				name = "Adjustment3";
 				definition = "Modification on the value of goods and / or services. For example: rebate, discount, surcharge";
-				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Adjustment3.mmAmountOrRateRule, com.tools20022.repository.msg.Adjustment3.mmTypeOrOtherAdjustmentTypeRule);
+				xors_lazy = () -> Arrays.asList(Adjustment3.mmAmountOrRateRule, Adjustment3.mmTypeOrOtherAdjustmentTypeRule);
 			}
 		});
 		return mmObject_lazy.get();

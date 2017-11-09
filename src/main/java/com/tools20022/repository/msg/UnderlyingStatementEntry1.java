@@ -20,8 +20,10 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.Entry;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -102,7 +104,7 @@ public class UnderlyingStatementEntry1 {
 			componentContext_lazy = () -> UnderlyingStatementEntry1.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlGrpInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalGroupInformation";
 			definition = "Set of elements used to provide information on the original message.";
 			maxOccurs = 1;
@@ -147,7 +149,7 @@ public class UnderlyingStatementEntry1 {
 			componentContext_lazy = () -> UnderlyingStatementEntry1.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlStmtId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalStatementIdentification";
 			definition = "Unique identification, as assigned by the account servicer, to unambiguously identify the original statement.";
 			maxOccurs = 1;
@@ -193,11 +195,11 @@ public class UnderlyingStatementEntry1 {
 	 */
 	public static final MMMessageAttribute mmOriginalEntryIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Entry.mmIdentification;
+			businessElementTrace_lazy = () -> Entry.mmIdentification;
 			componentContext_lazy = () -> UnderlyingStatementEntry1.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlNtryId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalEntryIdentification";
 			definition = "Original unique identification, as assigned by the account servicer, to unambiguously identify the original entry.";
 			maxOccurs = 1;
@@ -209,11 +211,10 @@ public class UnderlyingStatementEntry1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UnderlyingStatementEntry1.mmOriginalGroupInformation, com.tools20022.repository.msg.UnderlyingStatementEntry1.mmOriginalStatementIdentification,
-						com.tools20022.repository.msg.UnderlyingStatementEntry1.mmOriginalEntryIdentification);
+				messageElement_lazy = () -> Arrays.asList(UnderlyingStatementEntry1.mmOriginalGroupInformation, UnderlyingStatementEntry1.mmOriginalStatementIdentification, UnderlyingStatementEntry1.mmOriginalEntryIdentification);
 				trace_lazy = () -> Entry.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "UnderlyingStatementEntry1";
 				definition = "Set of elements used to provide information on the underlying statement entry.";
 			}

@@ -19,8 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.semt.SecuritiesBalanceTransparencyReportStatusAdviceV01;
 import com.tools20022.repository.codeset.ReportItemStatus1Code;
 import com.tools20022.repository.datatype.Max15NumericText;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -117,10 +120,10 @@ public class NumberOfItemsPerStatus1 {
 			componentContext_lazy = () -> NumberOfItemsPerStatus1.mmObject();
 			isDerived = false;
 			xmlTag = "Sts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Status";
 			definition = "Common status of the report items for which the number of report items is specified in NumberOfItems.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.NumberOfTransactionsPerStatus3.mmDetailedStatus;
+			previousVersion_lazy = () -> NumberOfTransactionsPerStatus3.mmDetailedStatus;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ReportItemStatus1Code.mmObject();
@@ -165,10 +168,10 @@ public class NumberOfItemsPerStatus1 {
 			componentContext_lazy = () -> NumberOfItemsPerStatus1.mmObject();
 			isDerived = false;
 			xmlTag = "NbOfItms";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NumberOfItems";
 			definition = "Number of items for the status.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.NumberOfTransactionsPerStatus3.mmDetailedNumberOfTransactions;
+			previousVersion_lazy = () -> NumberOfTransactionsPerStatus3.mmDetailedNumberOfTransactions;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max15NumericText.mmObject();
@@ -178,10 +181,10 @@ public class NumberOfItemsPerStatus1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.NumberOfItemsPerStatus1.mmStatus, com.tools20022.repository.msg.NumberOfItemsPerStatus1.mmNumberOfItems);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.SecuritiesBalanceTransparencyReportStatusAdviceV01.mmNumberOfItemsPerStatus);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(NumberOfItemsPerStatus1.mmStatus, NumberOfItemsPerStatus1.mmNumberOfItems);
+				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesBalanceTransparencyReportStatusAdviceV01.mmNumberOfItemsPerStatus);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "NumberOfItemsPerStatus1";
 				definition = "Provides detailed information on the number of reported items with their respective acceptance status.";
 				previousVersion_lazy = () -> NumberOfTransactionsPerStatus3.mmObject();

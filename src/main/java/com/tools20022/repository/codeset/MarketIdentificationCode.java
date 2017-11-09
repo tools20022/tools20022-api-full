@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.MarketIdentification1Code
+ * MarketIdentification1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -35,13 +44,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.MarketIdentificationCode#mmOperating
  * MarketIdentificationCode.mmOperating}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.MarketIdentification1Code
- * MarketIdentification1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -86,7 +88,7 @@ public class MarketIdentificationCode {
 	 */
 	public static final MMCode mmSegment = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Segment";
 			definition = "Market segment code.";
 			owner_lazy = () -> MarketIdentificationCode.mmObject();
@@ -116,7 +118,7 @@ public class MarketIdentificationCode {
 	 */
 	public static final MMCode mmOperating = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Operating";
 			definition = "Market operating code.";
 			owner_lazy = () -> MarketIdentificationCode.mmObject();
@@ -127,11 +129,11 @@ public class MarketIdentificationCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MarketIdentificationCode";
 				definition = "Specifies the type of market identification code which is being defined.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MarketIdentificationCode.mmSegment, com.tools20022.repository.codeset.MarketIdentificationCode.mmOperating);
+				code_lazy = () -> Arrays.asList(MarketIdentificationCode.mmSegment, MarketIdentificationCode.mmOperating);
 				derivation_lazy = () -> Arrays.asList(MarketIdentification1Code.mmObject());
 			}
 		});

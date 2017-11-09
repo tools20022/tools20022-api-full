@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.PINFormatCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -101,9 +103,9 @@ public class PINFormat2Code extends PINFormatCode {
 	 */
 	public static final MMCode mmISO0 = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ISO0";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PINFormat3Code.mmISO0);
+			nextVersions_lazy = () -> Arrays.asList(PINFormat3Code.mmISO0);
 			owner_lazy = () -> PINFormat2Code.mmObject();
 		}
 	};
@@ -132,9 +134,9 @@ public class PINFormat2Code extends PINFormatCode {
 	 */
 	public static final MMCode mmISO1 = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ISO1";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PINFormat3Code.mmISO1);
+			nextVersions_lazy = () -> Arrays.asList(PINFormat3Code.mmISO1);
 			owner_lazy = () -> PINFormat2Code.mmObject();
 		}
 	};
@@ -163,9 +165,9 @@ public class PINFormat2Code extends PINFormatCode {
 	 */
 	public static final MMCode mmISO2 = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ISO2";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PINFormat3Code.mmISO2);
+			nextVersions_lazy = () -> Arrays.asList(PINFormat3Code.mmISO2);
 			owner_lazy = () -> PINFormat2Code.mmObject();
 		}
 	};
@@ -194,9 +196,9 @@ public class PINFormat2Code extends PINFormatCode {
 	 */
 	public static final MMCode mmISO3 = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ISO3";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PINFormat3Code.mmISO3);
+			nextVersions_lazy = () -> Arrays.asList(PINFormat3Code.mmISO3);
 			owner_lazy = () -> PINFormat2Code.mmObject();
 		}
 	};
@@ -225,9 +227,9 @@ public class PINFormat2Code extends PINFormatCode {
 	 */
 	public static final MMCode mmISO4 = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ISO4";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PINFormat3Code.mmISO4);
+			nextVersions_lazy = () -> Arrays.asList(PINFormat3Code.mmISO4);
 			owner_lazy = () -> PINFormat2Code.mmObject();
 		}
 	};
@@ -235,14 +237,13 @@ public class PINFormat2Code extends PINFormatCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ISO0");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PINFormat2Code";
 				definition = "PIN (Personal Identification Number) format used before encryption.";
 				nextVersions_lazy = () -> Arrays.asList(PINFormat3Code.mmObject());
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PINFormat2Code.mmISO0, com.tools20022.repository.codeset.PINFormat2Code.mmISO1, com.tools20022.repository.codeset.PINFormat2Code.mmISO2,
-						com.tools20022.repository.codeset.PINFormat2Code.mmISO3, com.tools20022.repository.codeset.PINFormat2Code.mmISO4);
+				code_lazy = () -> Arrays.asList(PINFormat2Code.mmISO0, PINFormat2Code.mmISO1, PINFormat2Code.mmISO2, PINFormat2Code.mmISO3, PINFormat2Code.mmISO4);
 				trace_lazy = () -> PINFormatCode.mmObject();
 			}
 		});

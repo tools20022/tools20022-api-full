@@ -17,8 +17,12 @@
 
 package com.tools20022.repository.entity;
 
+import com.tools20022.metamodel.MMAggregation;
 import com.tools20022.metamodel.MMBusinessAssociationEnd;
 import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.TransactionCertificate1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -32,27 +36,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Reconciliation#mmSystem
- * Reconciliation.mmSystem}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Reconciliation#mmDocument
- * Reconciliation.mmDocument}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Reconciliation#mmReconciledTrades
- * Reconciliation.mmReconciledTrades}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Reconciliation#mmAccount
- * Reconciliation.mmAccount}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
- * subType} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.ReconciliationTransaction
- * ReconciliationTransaction}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
  * associationDomain} =
@@ -65,6 +48,27 @@ import java.util.List;
  * Document.mmReconciliation}</li>
  * <li>{@linkplain com.tools20022.repository.entity.System#mmReconciliation
  * System.mmReconciliation}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
+ * subType} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.ReconciliationTransaction
+ * ReconciliationTransaction}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.Reconciliation#mmSystem
+ * Reconciliation.mmSystem}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Reconciliation#mmDocument
+ * Reconciliation.mmDocument}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Reconciliation#mmReconciledTrades
+ * Reconciliation.mmReconciledTrades}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Reconciliation#mmAccount
+ * Reconciliation.mmAccount}</li>
  * </ul>
  * </li>
  * <li>
@@ -123,12 +127,12 @@ public class Reconciliation {
 		{
 			elementContext_lazy = () -> Reconciliation.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "System";
 			definition = "System which provides the reconciliation process.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.System.mmReconciliation;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.System.mmObject();
 		}
 	};
@@ -169,13 +173,13 @@ public class Reconciliation {
 		{
 			elementContext_lazy = () -> Reconciliation.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Document";
 			definition = "Document submitted in a reconciliation process.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.Document.mmReconciliation;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Document.mmObject();
 		}
 	};
@@ -216,13 +220,13 @@ public class Reconciliation {
 		{
 			elementContext_lazy = () -> Reconciliation.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ReconciledTrades";
 			definition = "Trades which are reconciled with entries in an account.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.Trade.mmReconciliation;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Trade.mmObject();
 		}
 	};
@@ -269,16 +273,16 @@ public class Reconciliation {
 	 */
 	public static final MMBusinessAssociationEnd mmAccount = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionCertificate1.mmAccount);
+			derivation_lazy = () -> Arrays.asList(TransactionCertificate1.mmAccount);
 			elementContext_lazy = () -> Reconciliation.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Account";
 			definition = "Account for which a reconciliation process is performed.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.Account.mmReconciliation;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Account.mmObject();
 		}
 	};
@@ -286,15 +290,14 @@ public class Reconciliation {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Reconciliation";
 				definition = "Process of matching different documents submitted by parties to a trade.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Account.mmReconciliation, com.tools20022.repository.entity.Trade.mmReconciliation, com.tools20022.repository.entity.Document.mmReconciliation,
 						com.tools20022.repository.entity.System.mmReconciliation);
 				subType_lazy = () -> Arrays.asList(ReconciliationTransaction.mmObject());
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Reconciliation.mmSystem, com.tools20022.repository.entity.Reconciliation.mmDocument, com.tools20022.repository.entity.Reconciliation.mmReconciledTrades,
-						com.tools20022.repository.entity.Reconciliation.mmAccount);
+				element_lazy = () -> Arrays.asList(Reconciliation.mmSystem, Reconciliation.mmDocument, Reconciliation.mmReconciledTrades, Reconciliation.mmAccount);
 			}
 		});
 		return mmObject_lazy.get();

@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CardPaymentServiceTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -86,7 +88,7 @@ public class CardPaymentServiceType10Code extends CardPaymentServiceTypeCode {
 	 */
 	public static final MMCode mmCreateCertificate = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreateCertificate";
 			owner_lazy = () -> CardPaymentServiceType10Code.mmObject();
 		}
@@ -109,7 +111,7 @@ public class CardPaymentServiceType10Code extends CardPaymentServiceTypeCode {
 	 */
 	public static final MMCode mmRenewCerificate = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RenewCerificate";
 			owner_lazy = () -> CardPaymentServiceType10Code.mmObject();
 		}
@@ -132,7 +134,7 @@ public class CardPaymentServiceType10Code extends CardPaymentServiceTypeCode {
 	 */
 	public static final MMCode mmRevokeCertificate = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RevokeCertificate";
 			owner_lazy = () -> CardPaymentServiceType10Code.mmObject();
 		}
@@ -155,7 +157,7 @@ public class CardPaymentServiceType10Code extends CardPaymentServiceTypeCode {
 	 */
 	public static final MMCode mmRemoveWhiteList = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RemoveWhiteList";
 			owner_lazy = () -> CardPaymentServiceType10Code.mmObject();
 		}
@@ -178,7 +180,7 @@ public class CardPaymentServiceType10Code extends CardPaymentServiceTypeCode {
 	 */
 	public static final MMCode mmAddWhiteList = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AddWhiteList";
 			owner_lazy = () -> CardPaymentServiceType10Code.mmObject();
 		}
@@ -187,13 +189,12 @@ public class CardPaymentServiceType10Code extends CardPaymentServiceTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CardPaymentServiceType10Code";
 				definition = "Requested certificate management service.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CardPaymentServiceType10Code.mmCreateCertificate, com.tools20022.repository.codeset.CardPaymentServiceType10Code.mmRenewCerificate,
-						com.tools20022.repository.codeset.CardPaymentServiceType10Code.mmRevokeCertificate, com.tools20022.repository.codeset.CardPaymentServiceType10Code.mmRemoveWhiteList,
-						com.tools20022.repository.codeset.CardPaymentServiceType10Code.mmAddWhiteList);
+				code_lazy = () -> Arrays.asList(CardPaymentServiceType10Code.mmCreateCertificate, CardPaymentServiceType10Code.mmRenewCerificate, CardPaymentServiceType10Code.mmRevokeCertificate,
+						CardPaymentServiceType10Code.mmRemoveWhiteList, CardPaymentServiceType10Code.mmAddWhiteList);
 				trace_lazy = () -> CardPaymentServiceTypeCode.mmObject();
 			}
 		});

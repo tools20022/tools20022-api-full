@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,19 +29,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.RoutingType1Code
+ * RoutingType1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>{@linkplain com.tools20022.repository.codeset.RoutingTypeCode#mmAllowed
  * RoutingTypeCode.mmAllowed}</li>
  * <li>{@linkplain com.tools20022.repository.codeset.RoutingTypeCode#mmBlocked
  * RoutingTypeCode.mmBlocked}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.RoutingType1Code
- * RoutingType1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -89,7 +91,7 @@ public class RoutingTypeCode {
 	 */
 	public static final MMCode mmAllowed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Allowed";
 			definition = "Indicates that routing is allowed.";
 			owner_lazy = () -> RoutingTypeCode.mmObject();
@@ -119,7 +121,7 @@ public class RoutingTypeCode {
 	 */
 	public static final MMCode mmBlocked = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Blocked";
 			definition = "Indicates that routing is blocked.";
 			owner_lazy = () -> RoutingTypeCode.mmObject();
@@ -130,12 +132,12 @@ public class RoutingTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ALLO");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RoutingTypeCode";
 				definition = "Indicates the type of routing.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RoutingTypeCode.mmAllowed, com.tools20022.repository.codeset.RoutingTypeCode.mmBlocked);
+				code_lazy = () -> Arrays.asList(RoutingTypeCode.mmAllowed, RoutingTypeCode.mmBlocked);
 				derivation_lazy = () -> Arrays.asList(RoutingType1Code.mmObject());
 			}
 		});

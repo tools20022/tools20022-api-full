@@ -19,6 +19,8 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.seev.MeetingNotificationV05;
 import com.tools20022.repository.choice.Entitlement1Choice;
 import com.tools20022.repository.codeset.ResolutionStatus1Code;
 import com.tools20022.repository.codeset.ResolutionType2Code;
@@ -29,7 +31,9 @@ import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.MeetingEntitlement;
+import com.tools20022.repository.entity.MeetingStatus;
 import com.tools20022.repository.entity.Resolution;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -148,14 +152,14 @@ public class Resolution3 {
 	 */
 	public static final MMMessageAttribute mmIssuerLabel = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Resolution.mmIssuerLabel;
+			businessElementTrace_lazy = () -> Resolution.mmIssuerLabel;
 			componentContext_lazy = () -> Resolution3.mmObject();
 			isDerived = false;
 			xmlTag = "IssrLabl";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssuerLabel";
 			definition = "Numbering of the resolution as specified by the issuer or  its agent.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Resolution2.mmIssuerLabel;
+			previousVersion_lazy = () -> Resolution2.mmIssuerLabel;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -200,14 +204,14 @@ public class Resolution3 {
 	 */
 	public static final MMMessageAttribute mmDescription = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Resolution.mmDescription;
+			businessElementTrace_lazy = () -> Resolution.mmDescription;
 			componentContext_lazy = () -> Resolution3.mmObject();
 			isDerived = false;
 			xmlTag = "Desc";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Description";
 			definition = "Free text description of the resolution.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Resolution2.mmDescription;
+			previousVersion_lazy = () -> Resolution2.mmDescription;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max1025Text.mmObject();
@@ -252,14 +256,14 @@ public class Resolution3 {
 	 */
 	public static final MMMessageAttribute mmTitle = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Resolution.mmTitle;
+			businessElementTrace_lazy = () -> Resolution.mmTitle;
 			componentContext_lazy = () -> Resolution3.mmObject();
 			isDerived = false;
 			xmlTag = "Titl";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Title";
 			definition = "Abbreviated description of the resolution.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Resolution2.mmTitle;
+			previousVersion_lazy = () -> Resolution2.mmTitle;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
@@ -305,14 +309,14 @@ public class Resolution3 {
 	 */
 	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Resolution.mmType;
+			businessElementTrace_lazy = () -> Resolution.mmType;
 			componentContext_lazy = () -> Resolution3.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Specifies the type of resolution.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Resolution2.mmType;
+			previousVersion_lazy = () -> Resolution2.mmType;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ResolutionType2Code.mmObject();
@@ -360,14 +364,14 @@ public class Resolution3 {
 	 */
 	public static final MMMessageAttribute mmForInformationOnly = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Resolution.mmForInformationOnly;
+			businessElementTrace_lazy = () -> Resolution.mmForInformationOnly;
 			componentContext_lazy = () -> Resolution3.mmObject();
 			isDerived = false;
 			xmlTag = "ForInfOnly";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForInformationOnly";
 			definition = "Indicates whether the resolution is listed for information or for voting.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Resolution2.mmForInformationOnly;
+			previousVersion_lazy = () -> Resolution2.mmForInformationOnly;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
@@ -413,14 +417,14 @@ public class Resolution3 {
 	 */
 	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.MeetingStatus.mmMeetingResolutionStatus;
+			businessElementTrace_lazy = () -> MeetingStatus.mmMeetingResolutionStatus;
 			componentContext_lazy = () -> Resolution3.mmObject();
 			isDerived = false;
 			xmlTag = "Sts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Status";
 			definition = "Indicates whether the resolution is active or withdrawn.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Resolution2.mmStatus;
+			previousVersion_lazy = () -> Resolution2.mmStatus;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ResolutionStatus1Code.mmObject();
@@ -469,14 +473,14 @@ public class Resolution3 {
 	 */
 	public static final MMMessageAttribute mmSubmittedBySecurityHolder = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Resolution.mmSubmittedBySecurityHolder;
+			businessElementTrace_lazy = () -> Resolution.mmSubmittedBySecurityHolder;
 			componentContext_lazy = () -> Resolution3.mmObject();
 			isDerived = false;
 			xmlTag = "SubmittdBySctyHldr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubmittedBySecurityHolder";
 			definition = "Indicates whether the resolution has been submitted by the security holder.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Resolution2.mmSubmittedBySecurityHolder;
+			previousVersion_lazy = () -> Resolution2.mmSubmittedBySecurityHolder;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
@@ -523,10 +527,10 @@ public class Resolution3 {
 			componentContext_lazy = () -> Resolution3.mmObject();
 			isDerived = false;
 			xmlTag = "VoteInstrTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VoteInstructionType";
 			definition = "Vote options allowed at the resolution level. When specified, it supersedes the vote options given for the meeting.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Resolution2.mmVoteInstructionType;
+			previousVersion_lazy = () -> Resolution2.mmVoteInstructionType;
 			maxOccurs = 8;
 			minOccurs = 0;
 			simpleType_lazy = () -> VoteInstruction2Code.mmObject();
@@ -575,14 +579,14 @@ public class Resolution3 {
 	 */
 	public static final MMMessageAttribute mmManagementRecommendation = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Resolution.mmManagementRecommendation;
+			businessElementTrace_lazy = () -> Resolution.mmManagementRecommendation;
 			componentContext_lazy = () -> Resolution3.mmObject();
 			isDerived = false;
 			xmlTag = "MgmtRcmmndtn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ManagementRecommendation";
 			definition = "Specifies how the management of the issuing company wishes the security holders to vote.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Resolution2.mmManagementRecommendation;
+			previousVersion_lazy = () -> Resolution2.mmManagementRecommendation;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> VoteInstruction1Code.mmObject();
@@ -631,14 +635,14 @@ public class Resolution3 {
 	 */
 	public static final MMMessageAttribute mmNotifyingPartyRecommendation = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Resolution.mmNotifyingPartyRecommendation;
+			businessElementTrace_lazy = () -> Resolution.mmNotifyingPartyRecommendation;
 			componentContext_lazy = () -> Resolution3.mmObject();
 			isDerived = false;
 			xmlTag = "NtifngPtyRcmmndtn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotifyingPartyRecommendation";
 			definition = "Indicates how the notifying party recommends that the security holders vote.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Resolution2.mmNotifyingPartyRecommendation;
+			previousVersion_lazy = () -> Resolution2.mmNotifyingPartyRecommendation;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> VoteInstruction1Code.mmObject();
@@ -683,7 +687,7 @@ public class Resolution3 {
 			componentContext_lazy = () -> Resolution3.mmObject();
 			isDerived = false;
 			xmlTag = "Entitlmnt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Entitlement";
 			definition = "Number of votes assigned per resolution to one security.";
 			maxOccurs = 1;
@@ -695,14 +699,12 @@ public class Resolution3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Resolution3.mmIssuerLabel, com.tools20022.repository.msg.Resolution3.mmDescription, com.tools20022.repository.msg.Resolution3.mmTitle,
-						com.tools20022.repository.msg.Resolution3.mmType, com.tools20022.repository.msg.Resolution3.mmForInformationOnly, com.tools20022.repository.msg.Resolution3.mmStatus,
-						com.tools20022.repository.msg.Resolution3.mmSubmittedBySecurityHolder, com.tools20022.repository.msg.Resolution3.mmVoteInstructionType, com.tools20022.repository.msg.Resolution3.mmManagementRecommendation,
-						com.tools20022.repository.msg.Resolution3.mmNotifyingPartyRecommendation, com.tools20022.repository.msg.Resolution3.mmEntitlement);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.MeetingNotificationV05.mmResolution);
+				messageElement_lazy = () -> Arrays.asList(Resolution3.mmIssuerLabel, Resolution3.mmDescription, Resolution3.mmTitle, Resolution3.mmType, Resolution3.mmForInformationOnly, Resolution3.mmStatus,
+						Resolution3.mmSubmittedBySecurityHolder, Resolution3.mmVoteInstructionType, Resolution3.mmManagementRecommendation, Resolution3.mmNotifyingPartyRecommendation, Resolution3.mmEntitlement);
+				messageBuildingBlock_lazy = () -> Arrays.asList(MeetingNotificationV05.mmResolution);
 				trace_lazy = () -> Resolution.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Resolution3";
 				definition = "Specifies an item in the agenda of the meeting. Some resolutions are submitted to the vote of the security holders, some are presented for information only.";
 				previousVersion_lazy = () -> Resolution2.mmObject();

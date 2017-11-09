@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.AlgorithmCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -97,9 +99,9 @@ public class Algorithm5Code extends AlgorithmCode {
 	 */
 	public static final MMCode mmSHA256 = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SHA256";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Algorithm11Code.mmSHA256);
+			nextVersions_lazy = () -> Arrays.asList(Algorithm11Code.mmSHA256);
 			owner_lazy = () -> Algorithm5Code.mmObject();
 		}
 	};
@@ -129,9 +131,9 @@ public class Algorithm5Code extends AlgorithmCode {
 	 */
 	public static final MMCode mmSHA384 = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SHA384";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Algorithm11Code.mmSHA384);
+			nextVersions_lazy = () -> Arrays.asList(Algorithm11Code.mmSHA384);
 			owner_lazy = () -> Algorithm5Code.mmObject();
 		}
 	};
@@ -161,9 +163,9 @@ public class Algorithm5Code extends AlgorithmCode {
 	 */
 	public static final MMCode mmSHA512 = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SHA512";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Algorithm11Code.mmSHA512);
+			nextVersions_lazy = () -> Arrays.asList(Algorithm11Code.mmSHA512);
 			owner_lazy = () -> Algorithm5Code.mmObject();
 		}
 	};
@@ -171,13 +173,13 @@ public class Algorithm5Code extends AlgorithmCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("HS25");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Algorithm5Code";
 				definition = "Cryptographic algorithms for digests.";
 				nextVersions_lazy = () -> Arrays.asList(Algorithm11Code.mmObject());
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Algorithm5Code.mmSHA256, com.tools20022.repository.codeset.Algorithm5Code.mmSHA384, com.tools20022.repository.codeset.Algorithm5Code.mmSHA512);
+				code_lazy = () -> Arrays.asList(Algorithm5Code.mmSHA256, Algorithm5Code.mmSHA384, Algorithm5Code.mmSHA512);
 				trace_lazy = () -> AlgorithmCode.mmObject();
 			}
 		});

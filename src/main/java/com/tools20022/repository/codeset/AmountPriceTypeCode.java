@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.AmountPriceType1Code
+ * AmountPriceType1Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.AmountPriceType2Code
+ * AmountPriceType2Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -40,15 +51,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.AmountPriceTypeCode#mmPremium
  * AmountPriceTypeCode.mmPremium}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.AmountPriceType1Code
- * AmountPriceType1Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.AmountPriceType2Code
- * AmountPriceType2Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -99,7 +101,7 @@ public class AmountPriceTypeCode {
 	 */
 	public static final MMCode mmActualAmount = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ActualAmount";
 			definition = "Price expressed as a currency and amount per unit or per share.";
 			owner_lazy = () -> AmountPriceTypeCode.mmObject();
@@ -129,7 +131,7 @@ public class AmountPriceTypeCode {
 	 */
 	public static final MMCode mmDiscount = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Discount";
 			definition = "Price expressed as a discount amount.";
 			owner_lazy = () -> AmountPriceTypeCode.mmObject();
@@ -159,7 +161,7 @@ public class AmountPriceTypeCode {
 	 */
 	public static final MMCode mmLot = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Lot";
 			definition = "Price expressed as an amount of money per lot.";
 			owner_lazy = () -> AmountPriceTypeCode.mmObject();
@@ -189,7 +191,7 @@ public class AmountPriceTypeCode {
 	 */
 	public static final MMCode mmPremium = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Premium";
 			definition = "Price expressed as a premium.";
 			owner_lazy = () -> AmountPriceTypeCode.mmObject();
@@ -200,13 +202,12 @@ public class AmountPriceTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ACTU");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AmountPriceTypeCode";
 				definition = "Specifies the amount price type.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AmountPriceTypeCode.mmActualAmount, com.tools20022.repository.codeset.AmountPriceTypeCode.mmDiscount,
-						com.tools20022.repository.codeset.AmountPriceTypeCode.mmLot, com.tools20022.repository.codeset.AmountPriceTypeCode.mmPremium);
+				code_lazy = () -> Arrays.asList(AmountPriceTypeCode.mmActualAmount, AmountPriceTypeCode.mmDiscount, AmountPriceTypeCode.mmLot, AmountPriceTypeCode.mmPremium);
 				derivation_lazy = () -> Arrays.asList(AmountPriceType1Code.mmObject(), AmountPriceType2Code.mmObject());
 			}
 		});

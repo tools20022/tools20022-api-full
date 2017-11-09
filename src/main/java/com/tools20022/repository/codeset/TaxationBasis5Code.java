@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.TaxationBasisCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -85,7 +87,7 @@ public class TaxationBasis5Code extends TaxationBasisCode {
 	 */
 	public static final MMCode mmFlat = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Flat";
 			owner_lazy = () -> TaxationBasis5Code.mmObject();
 		}
@@ -108,7 +110,7 @@ public class TaxationBasis5Code extends TaxationBasisCode {
 	 */
 	public static final MMCode mmGrossAmount = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GrossAmount";
 			owner_lazy = () -> TaxationBasis5Code.mmObject();
 		}
@@ -131,7 +133,7 @@ public class TaxationBasis5Code extends TaxationBasisCode {
 	 */
 	public static final MMCode mmNetAmount = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetAmount";
 			owner_lazy = () -> TaxationBasis5Code.mmObject();
 		}
@@ -154,7 +156,7 @@ public class TaxationBasis5Code extends TaxationBasisCode {
 	 */
 	public static final MMCode mmNetAssetValuePrice = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetAssetValuePrice";
 			owner_lazy = () -> TaxationBasis5Code.mmObject();
 		}
@@ -177,7 +179,7 @@ public class TaxationBasis5Code extends TaxationBasisCode {
 	 */
 	public static final MMCode mmPerUnit = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PerUnit";
 			owner_lazy = () -> TaxationBasis5Code.mmObject();
 		}
@@ -186,12 +188,11 @@ public class TaxationBasis5Code extends TaxationBasisCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TaxationBasis5Code";
 				definition = "Specifies the tax or charge basis.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TaxationBasis5Code.mmFlat, com.tools20022.repository.codeset.TaxationBasis5Code.mmGrossAmount,
-						com.tools20022.repository.codeset.TaxationBasis5Code.mmNetAmount, com.tools20022.repository.codeset.TaxationBasis5Code.mmNetAssetValuePrice, com.tools20022.repository.codeset.TaxationBasis5Code.mmPerUnit);
+				code_lazy = () -> Arrays.asList(TaxationBasis5Code.mmFlat, TaxationBasis5Code.mmGrossAmount, TaxationBasis5Code.mmNetAmount, TaxationBasis5Code.mmNetAssetValuePrice, TaxationBasis5Code.mmPerUnit);
 				trace_lazy = () -> TaxationBasisCode.mmObject();
 			}
 		});

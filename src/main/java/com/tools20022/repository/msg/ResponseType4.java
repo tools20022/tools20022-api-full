@@ -19,8 +19,10 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.Response;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -100,7 +102,7 @@ public class ResponseType4 {
 			componentContext_lazy = () -> ResponseType4.mmObject();
 			isDerived = false;
 			xmlTag = "RspndrId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ResponderIdentification";
 			definition = "Identification of the responder.";
 			maxOccurs = 1;
@@ -141,7 +143,7 @@ public class ResponseType4 {
 			componentContext_lazy = () -> ResponseType4.mmObject();
 			isDerived = false;
 			xmlTag = "Cdfctn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Codification";
 			definition = "Codification of the response (for instance ISO 8583, IFX).";
 			maxOccurs = 1;
@@ -186,7 +188,7 @@ public class ResponseType4 {
 			componentContext_lazy = () -> ResponseType4.mmObject();
 			isDerived = false;
 			xmlTag = "Rspn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Response";
 			definition = "Result of the request withdrawal message.";
 			maxOccurs = 1;
@@ -228,11 +230,11 @@ public class ResponseType4 {
 	 */
 	public static final MMMessageAttribute mmResponseReason = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Response.mmResponseReason;
+			businessElementTrace_lazy = () -> Response.mmResponseReason;
 			componentContext_lazy = () -> ResponseType4.mmObject();
 			isDerived = false;
 			xmlTag = "RspnRsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ResponseReason";
 			definition = "Detail of the response.";
 			maxOccurs = 1;
@@ -273,7 +275,7 @@ public class ResponseType4 {
 			componentContext_lazy = () -> ResponseType4.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlRspnInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalResponseInformation";
 			definition = "Additional information to be logged for further examination.";
 			maxOccurs = 1;
@@ -285,11 +287,10 @@ public class ResponseType4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ResponseType4.mmResponderIdentification, com.tools20022.repository.msg.ResponseType4.mmCodification,
-						com.tools20022.repository.msg.ResponseType4.mmResponse, com.tools20022.repository.msg.ResponseType4.mmResponseReason, com.tools20022.repository.msg.ResponseType4.mmAdditionalResponseInformation);
+				messageElement_lazy = () -> Arrays.asList(ResponseType4.mmResponderIdentification, ResponseType4.mmCodification, ResponseType4.mmResponse, ResponseType4.mmResponseReason, ResponseType4.mmAdditionalResponseInformation);
 				trace_lazy = () -> Response.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ResponseType4";
 				definition = "Trace of response by the entities in the path from the issuer to the ATM.";
 			}

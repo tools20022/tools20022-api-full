@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -28,6 +30,35 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionRejectReason2Code
+ * TransactionRejectReason2Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionReversalReason1Code
+ * TransactionReversalReason1Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionRejectReason4Code
+ * TransactionRejectReason4Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionRejectReason5Code
+ * TransactionRejectReason5Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionReversalReason2Code
+ * TransactionReversalReason2Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionRejectReason7Code
+ * TransactionRejectReason7Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionReturnReason1Code
+ * TransactionReturnReason1Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionRejectReason6Code
+ * TransactionRejectReason6Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -183,35 +214,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * TransactionReasonCode.mmNarrative}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionRejectReason2Code
- * TransactionRejectReason2Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionReversalReason1Code
- * TransactionReversalReason1Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionRejectReason4Code
- * TransactionRejectReason4Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionRejectReason5Code
- * TransactionRejectReason5Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionReversalReason2Code
- * TransactionReversalReason2Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionRejectReason7Code
- * TransactionRejectReason7Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionReturnReason1Code
- * TransactionReturnReason1Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionRejectReason6Code
- * TransactionRejectReason6Code}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -261,7 +263,7 @@ public class TransactionReasonCode {
 	 */
 	public static final MMCode mmIncorrectAccountNumber = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "IncorrectAccountNumber";
 			definition = "Format of the account number specified is not correct.";
 			owner_lazy = () -> TransactionReasonCode.mmObject();
@@ -291,7 +293,7 @@ public class TransactionReasonCode {
 	 */
 	public static final MMCode mmNonNumericAccountNumber = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NonNumericAccountNumber";
 			definition = "Format of the account number specified is non-numeric.";
 			owner_lazy = () -> TransactionReasonCode.mmObject();
@@ -324,7 +326,7 @@ public class TransactionReasonCode {
 	 */
 	public static final MMCode mmInvalidAccountNumberForClearingCode = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InvalidAccountNumberForClearingCode";
 			definition = "Format of the account number specified is not valid for local Sort/National Clearing Code.";
 			owner_lazy = () -> TransactionReasonCode.mmObject();
@@ -355,7 +357,7 @@ public class TransactionReasonCode {
 	 */
 	public static final MMCode mmClosedAccountNumber = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ClosedAccountNumber";
 			definition = "Account number specified has been closed on the Receiver's books.";
 			owner_lazy = () -> TransactionReasonCode.mmObject();
@@ -386,7 +388,7 @@ public class TransactionReasonCode {
 	 */
 	public static final MMCode mmInvalidAccountNumberWithInstitution = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InvalidAccountNumberWithInstitution";
 			definition = "Account number specified is not a valid account at the Final Agent.";
 			owner_lazy = () -> TransactionReasonCode.mmObject();
@@ -419,7 +421,7 @@ public class TransactionReasonCode {
 	 */
 	public static final MMCode mmBlockedAccount = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BlockedAccount";
 			definition = "Account specified is blocked, prohibiting posting of transactions against it.";
 			owner_lazy = () -> TransactionReasonCode.mmObject();
@@ -449,7 +451,7 @@ public class TransactionReasonCode {
 	 */
 	public static final MMCode mmZeroAmount = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ZeroAmount";
 			definition = "Specified message amount is equal to zero.";
 			owner_lazy = () -> TransactionReasonCode.mmObject();
@@ -480,7 +482,7 @@ public class TransactionReasonCode {
 	 */
 	public static final MMCode mmNotAllowedAmount = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NotAllowedAmount";
 			definition = "Specified transaction/message amount is greater than allowed maximum.";
 			owner_lazy = () -> TransactionReasonCode.mmObject();
@@ -513,7 +515,7 @@ public class TransactionReasonCode {
 	 */
 	public static final MMCode mmNotAllowedCurrency = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NotAllowedCurrency";
 			definition = "Specified message amount is in an non processable currency outside of existing agreement.";
 			owner_lazy = () -> TransactionReasonCode.mmObject();
@@ -546,7 +548,7 @@ public class TransactionReasonCode {
 	 */
 	public static final MMCode mmInsufficientFunds = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InsufficientFunds";
 			definition = "Amount of funds available to cover specified message amount is insufficient.";
 			owner_lazy = () -> TransactionReasonCode.mmObject();
@@ -576,7 +578,7 @@ public class TransactionReasonCode {
 	 */
 	public static final MMCode mmDuplication = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Duplication";
 			definition = "This message appears to have been duplicated.";
 			owner_lazy = () -> TransactionReasonCode.mmObject();
@@ -607,7 +609,7 @@ public class TransactionReasonCode {
 	 */
 	public static final MMCode mmTooLowAmount = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TooLowAmount";
 			definition = "Specified transaction amount is less than agreed minimum.";
 			owner_lazy = () -> TransactionReasonCode.mmObject();
@@ -639,7 +641,7 @@ public class TransactionReasonCode {
 	 */
 	public static final MMCode mmBlockedAmount = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BlockedAmount";
 			definition = "Amount specified in message has been blocked by regulatory authorities.";
 			owner_lazy = () -> TransactionReasonCode.mmObject();
@@ -670,7 +672,7 @@ public class TransactionReasonCode {
 	 */
 	public static final MMCode mmChargeDisagreement = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ChargeDisagreement";
 			definition = "Specified charges amount is not as agreed between sender and receiver.";
 			owner_lazy = () -> TransactionReasonCode.mmObject();
@@ -703,7 +705,7 @@ public class TransactionReasonCode {
 	 */
 	public static final MMCode mmInconsistentWithEndCustomer = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InconsistentWithEndCustomer";
 			definition = "Identification of end customer is not consistent with associated account number. (formerly CreditorConsistency)";
 			owner_lazy = () -> TransactionReasonCode.mmObject();
@@ -736,7 +738,7 @@ public class TransactionReasonCode {
 	 */
 	public static final MMCode mmUnknownCreditor = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "UnknownCreditor";
 			definition = "Creditor specified is not known at associated Sort/National Clearing code.";
 			owner_lazy = () -> TransactionReasonCode.mmObject();
@@ -766,7 +768,7 @@ public class TransactionReasonCode {
 	 */
 	public static final MMCode mmNoLongerValidCreditor = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NoLongerValidCreditor";
 			definition = "Creditor specified no longer exists in the books.";
 			owner_lazy = () -> TransactionReasonCode.mmObject();
@@ -799,7 +801,7 @@ public class TransactionReasonCode {
 	 */
 	public static final MMCode mmMissingCreditorAddress = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MissingCreditorAddress";
 			definition = "Specification of creditor's address, which is required for payment, is missing/not correct (formerly IncorrectCreditorAddress).";
 			owner_lazy = () -> TransactionReasonCode.mmObject();
@@ -830,7 +832,7 @@ public class TransactionReasonCode {
 	 */
 	public static final MMCode mmUnrecognisedInitiatingParty = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "UnrecognisedInitiatingParty";
 			definition = "Party who initiated the message is not recognised by the end customer.";
 			owner_lazy = () -> TransactionReasonCode.mmObject();
@@ -861,7 +863,7 @@ public class TransactionReasonCode {
 	 */
 	public static final MMCode mmTransactionForbidden = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TransactionForbidden";
 			definition = "Transaction forbidden on this type of account (formerly NoAgreement).";
 			owner_lazy = () -> TransactionReasonCode.mmObject();
@@ -893,7 +895,7 @@ public class TransactionReasonCode {
 	 */
 	public static final MMCode mmInvalidBankOperationCode = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InvalidBankOperationCode";
 			definition = "Bank Operation code specified in the message is not valid for receiver.";
 			owner_lazy = () -> TransactionReasonCode.mmObject();
@@ -923,7 +925,7 @@ public class TransactionReasonCode {
 	 */
 	public static final MMCode mmInvalidDate = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InvalidDate";
 			definition = "Invalid date (eg, wrong settlement date).";
 			owner_lazy = () -> TransactionReasonCode.mmObject();
@@ -953,7 +955,7 @@ public class TransactionReasonCode {
 	 */
 	public static final MMCode mmNotSpecifiedReason = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NotSpecifiedReason";
 			definition = "Reason has not been specified due to sensitivities.";
 			owner_lazy = () -> TransactionReasonCode.mmObject();
@@ -983,7 +985,7 @@ public class TransactionReasonCode {
 	 */
 	public static final MMCode mmUnknownAccount = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "UnknownAccount";
 			definition = "Unknown account with institution.";
 			owner_lazy = () -> TransactionReasonCode.mmObject();
@@ -1013,7 +1015,7 @@ public class TransactionReasonCode {
 	 */
 	public static final MMCode mmNotUniqueTransactionReference = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NotUniqueTransactionReference";
 			definition = "Transaction reference is not unique within the message.";
 			owner_lazy = () -> TransactionReasonCode.mmObject();
@@ -1046,7 +1048,7 @@ public class TransactionReasonCode {
 	 */
 	public static final MMCode mmBankIdentifierIncorrect = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BankIdentifierIncorrect";
 			definition = "Bank identifier code specified in the message has an incorrect format (formerly IncorrectFormatForRoutingCode).";
 			owner_lazy = () -> TransactionReasonCode.mmObject();
@@ -1077,7 +1079,7 @@ public class TransactionReasonCode {
 	 */
 	public static final MMCode mmNonNumericRoutingCode = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NonNumericRoutingCode";
 			definition = "Routing code specified in the transaction/message is not numeric.";
 			owner_lazy = () -> TransactionReasonCode.mmObject();
@@ -1110,7 +1112,7 @@ public class TransactionReasonCode {
 	 */
 	public static final MMCode mmNotValidRoutingCode = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NotValidRoutingCode";
 			definition = "Routing code specified in the transaction/message is not valid for local clearing.";
 			owner_lazy = () -> TransactionReasonCode.mmObject();
@@ -1143,7 +1145,7 @@ public class TransactionReasonCode {
 	 */
 	public static final MMCode mmClosedBranch = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ClosedBranch";
 			definition = "Routing code specified in the transaction/message refers to a closed branch.";
 			owner_lazy = () -> TransactionReasonCode.mmObject();
@@ -1174,7 +1176,7 @@ public class TransactionReasonCode {
 	 */
 	public static final MMCode mmCutOffTime = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CutOffTime";
 			definition = "Associated message was received after agreed processing cut-off time.";
 			owner_lazy = () -> TransactionReasonCode.mmObject();
@@ -1204,7 +1206,7 @@ public class TransactionReasonCode {
 	 */
 	public static final MMCode mmCorrespondentBankNotPossible = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CorrespondentBankNotPossible";
 			definition = "Correspondent bank not possible.";
 			owner_lazy = () -> TransactionReasonCode.mmObject();
@@ -1234,7 +1236,7 @@ public class TransactionReasonCode {
 	 */
 	public static final MMCode mmTransactionReasonNonReportable = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TransactionReasonNonReportable";
 			definition = "Transaction reason non reportable.";
 			owner_lazy = () -> TransactionReasonCode.mmObject();
@@ -1264,7 +1266,7 @@ public class TransactionReasonCode {
 	 */
 	public static final MMCode mmBalanceInfoRequested = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BalanceInfoRequested";
 			definition = "Balance of payments complementary info is requested.";
 			owner_lazy = () -> TransactionReasonCode.mmObject();
@@ -1294,7 +1296,7 @@ public class TransactionReasonCode {
 	 */
 	public static final MMCode mmChargeDetailsNotCorrect = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ChargeDetailsNotCorrect";
 			definition = "Charge details not correct.";
 			owner_lazy = () -> TransactionReasonCode.mmObject();
@@ -1324,7 +1326,7 @@ public class TransactionReasonCode {
 	 */
 	public static final MMCode mmNotSpecifiedReasonAgentGenerated = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NotSpecifiedReasonAgentGenerated";
 			definition = "Reason has not been specified by agent.";
 			owner_lazy = () -> TransactionReasonCode.mmObject();
@@ -1354,7 +1356,7 @@ public class TransactionReasonCode {
 	 */
 	public static final MMCode mmNotSpecifiedReasonCustomerGenerated = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NotSpecifiedReasonCustomerGenerated";
 			definition = "Reason has not been specified by end customer.";
 			owner_lazy = () -> TransactionReasonCode.mmObject();
@@ -1387,7 +1389,7 @@ public class TransactionReasonCode {
 	 */
 	public static final MMCode mmUnknownEndCustomer = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "UnknownEndCustomer";
 			definition = "End customer specified is not known at associated Sort/National Bank Code or does no longer exist in the books.";
 			owner_lazy = () -> TransactionReasonCode.mmObject();
@@ -1420,7 +1422,7 @@ public class TransactionReasonCode {
 	 */
 	public static final MMCode mmMissingDebtorAddress = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MissingDebtorAddress";
 			definition = "Specification of debtor's address, which is required for payment, is missing/not correct.";
 			owner_lazy = () -> TransactionReasonCode.mmObject();
@@ -1450,7 +1452,7 @@ public class TransactionReasonCode {
 	 */
 	public static final MMCode mmWrongAmount = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "WrongAmount";
 			definition = "Amount received is not the amount agreed or expected.";
 			owner_lazy = () -> TransactionReasonCode.mmObject();
@@ -1481,7 +1483,7 @@ public class TransactionReasonCode {
 	 */
 	public static final MMCode mmInvalidControlSum = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InvalidControlSum";
 			definition = "Sum of instructed amounts does not equal the control sum.";
 			owner_lazy = () -> TransactionReasonCode.mmObject();
@@ -1511,7 +1513,7 @@ public class TransactionReasonCode {
 	 */
 	public static final MMCode mmNoMandate = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NoMandate";
 			definition = "Mandate is cancelled or invalid.";
 			owner_lazy = () -> TransactionReasonCode.mmObject();
@@ -1542,7 +1544,7 @@ public class TransactionReasonCode {
 	 */
 	public static final MMCode mmMissingMandatoryInformationInMandate = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MissingMandatoryInformationInMandate";
 			definition = "Mandate related information data required by the scheme is missing.";
 			owner_lazy = () -> TransactionReasonCode.mmObject();
@@ -1572,7 +1574,7 @@ public class TransactionReasonCode {
 	 */
 	public static final MMCode mmInvalidFileFormatForOtherReasonThanGroupingIndicator = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InvalidFileFormatForOtherReasonThanGroupingIndicator";
 			definition = "File format incomplete or invalid.";
 			owner_lazy = () -> TransactionReasonCode.mmObject();
@@ -1602,7 +1604,7 @@ public class TransactionReasonCode {
 	 */
 	public static final MMCode mmInvalidFileFormatForGroupingIndicator = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InvalidFileFormatForGroupingIndicator";
 			definition = "File format incorrect in terms of grouping indicator.";
 			owner_lazy = () -> TransactionReasonCode.mmObject();
@@ -1632,7 +1634,7 @@ public class TransactionReasonCode {
 	 */
 	public static final MMCode mmRefundRequestByEndCustomer = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RefundRequestByEndCustomer";
 			definition = "Return of funds requested by end customer.";
 			owner_lazy = () -> TransactionReasonCode.mmObject();
@@ -1662,7 +1664,7 @@ public class TransactionReasonCode {
 	 */
 	public static final MMCode mmEndCustomerDeceased = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "EndCustomerDeceased";
 			definition = "End customer is deceased.";
 			owner_lazy = () -> TransactionReasonCode.mmObject();
@@ -1694,7 +1696,7 @@ public class TransactionReasonCode {
 	 */
 	public static final MMCode mmCollectionNotDue = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CollectionNotDue";
 			definition = "Creditor or creditor's agent should not have collected the direct debit.";
 			owner_lazy = () -> TransactionReasonCode.mmObject();
@@ -1724,7 +1726,7 @@ public class TransactionReasonCode {
 	 */
 	public static final MMCode mmInvalidName = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InvalidName";
 			definition = "Name provided is not valid.";
 			owner_lazy = () -> TransactionReasonCode.mmObject();
@@ -1754,7 +1756,7 @@ public class TransactionReasonCode {
 	 */
 	public static final MMCode mmSettlementFailed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SettlementFailed";
 			definition = "Settlement of the transaction has failed.";
 			owner_lazy = () -> TransactionReasonCode.mmObject();
@@ -1787,7 +1789,7 @@ public class TransactionReasonCode {
 	 */
 	public static final MMCode mmNarrative = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Narrative";
 			definition = "Reason is provided as narrative information in the additional reason information.";
 			owner_lazy = () -> TransactionReasonCode.mmObject();
@@ -1798,35 +1800,24 @@ public class TransactionReasonCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("AC01");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TransactionReasonCode";
 				definition = "Specifies the reason for a transaction to be rejected, returned or reversed by an instructed agent or somebody acting on behalf of an instructed agent.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TransactionReasonCode.mmIncorrectAccountNumber, com.tools20022.repository.codeset.TransactionReasonCode.mmNonNumericAccountNumber,
-						com.tools20022.repository.codeset.TransactionReasonCode.mmInvalidAccountNumberForClearingCode, com.tools20022.repository.codeset.TransactionReasonCode.mmClosedAccountNumber,
-						com.tools20022.repository.codeset.TransactionReasonCode.mmInvalidAccountNumberWithInstitution, com.tools20022.repository.codeset.TransactionReasonCode.mmBlockedAccount,
-						com.tools20022.repository.codeset.TransactionReasonCode.mmZeroAmount, com.tools20022.repository.codeset.TransactionReasonCode.mmNotAllowedAmount,
-						com.tools20022.repository.codeset.TransactionReasonCode.mmNotAllowedCurrency, com.tools20022.repository.codeset.TransactionReasonCode.mmInsufficientFunds,
-						com.tools20022.repository.codeset.TransactionReasonCode.mmDuplication, com.tools20022.repository.codeset.TransactionReasonCode.mmTooLowAmount, com.tools20022.repository.codeset.TransactionReasonCode.mmBlockedAmount,
-						com.tools20022.repository.codeset.TransactionReasonCode.mmChargeDisagreement, com.tools20022.repository.codeset.TransactionReasonCode.mmInconsistentWithEndCustomer,
-						com.tools20022.repository.codeset.TransactionReasonCode.mmUnknownCreditor, com.tools20022.repository.codeset.TransactionReasonCode.mmNoLongerValidCreditor,
-						com.tools20022.repository.codeset.TransactionReasonCode.mmMissingCreditorAddress, com.tools20022.repository.codeset.TransactionReasonCode.mmUnrecognisedInitiatingParty,
-						com.tools20022.repository.codeset.TransactionReasonCode.mmTransactionForbidden, com.tools20022.repository.codeset.TransactionReasonCode.mmInvalidBankOperationCode,
-						com.tools20022.repository.codeset.TransactionReasonCode.mmInvalidDate, com.tools20022.repository.codeset.TransactionReasonCode.mmNotSpecifiedReason,
-						com.tools20022.repository.codeset.TransactionReasonCode.mmUnknownAccount, com.tools20022.repository.codeset.TransactionReasonCode.mmNotUniqueTransactionReference,
-						com.tools20022.repository.codeset.TransactionReasonCode.mmBankIdentifierIncorrect, com.tools20022.repository.codeset.TransactionReasonCode.mmNonNumericRoutingCode,
-						com.tools20022.repository.codeset.TransactionReasonCode.mmNotValidRoutingCode, com.tools20022.repository.codeset.TransactionReasonCode.mmClosedBranch,
-						com.tools20022.repository.codeset.TransactionReasonCode.mmCutOffTime, com.tools20022.repository.codeset.TransactionReasonCode.mmCorrespondentBankNotPossible,
-						com.tools20022.repository.codeset.TransactionReasonCode.mmTransactionReasonNonReportable, com.tools20022.repository.codeset.TransactionReasonCode.mmBalanceInfoRequested,
-						com.tools20022.repository.codeset.TransactionReasonCode.mmChargeDetailsNotCorrect, com.tools20022.repository.codeset.TransactionReasonCode.mmNotSpecifiedReasonAgentGenerated,
-						com.tools20022.repository.codeset.TransactionReasonCode.mmNotSpecifiedReasonCustomerGenerated, com.tools20022.repository.codeset.TransactionReasonCode.mmUnknownEndCustomer,
-						com.tools20022.repository.codeset.TransactionReasonCode.mmMissingDebtorAddress, com.tools20022.repository.codeset.TransactionReasonCode.mmWrongAmount,
-						com.tools20022.repository.codeset.TransactionReasonCode.mmInvalidControlSum, com.tools20022.repository.codeset.TransactionReasonCode.mmNoMandate,
-						com.tools20022.repository.codeset.TransactionReasonCode.mmMissingMandatoryInformationInMandate, com.tools20022.repository.codeset.TransactionReasonCode.mmInvalidFileFormatForOtherReasonThanGroupingIndicator,
-						com.tools20022.repository.codeset.TransactionReasonCode.mmInvalidFileFormatForGroupingIndicator, com.tools20022.repository.codeset.TransactionReasonCode.mmRefundRequestByEndCustomer,
-						com.tools20022.repository.codeset.TransactionReasonCode.mmEndCustomerDeceased, com.tools20022.repository.codeset.TransactionReasonCode.mmCollectionNotDue,
-						com.tools20022.repository.codeset.TransactionReasonCode.mmInvalidName, com.tools20022.repository.codeset.TransactionReasonCode.mmSettlementFailed, com.tools20022.repository.codeset.TransactionReasonCode.mmNarrative);
+				code_lazy = () -> Arrays.asList(TransactionReasonCode.mmIncorrectAccountNumber, TransactionReasonCode.mmNonNumericAccountNumber, TransactionReasonCode.mmInvalidAccountNumberForClearingCode,
+						TransactionReasonCode.mmClosedAccountNumber, TransactionReasonCode.mmInvalidAccountNumberWithInstitution, TransactionReasonCode.mmBlockedAccount, TransactionReasonCode.mmZeroAmount,
+						TransactionReasonCode.mmNotAllowedAmount, TransactionReasonCode.mmNotAllowedCurrency, TransactionReasonCode.mmInsufficientFunds, TransactionReasonCode.mmDuplication, TransactionReasonCode.mmTooLowAmount,
+						TransactionReasonCode.mmBlockedAmount, TransactionReasonCode.mmChargeDisagreement, TransactionReasonCode.mmInconsistentWithEndCustomer, TransactionReasonCode.mmUnknownCreditor,
+						TransactionReasonCode.mmNoLongerValidCreditor, TransactionReasonCode.mmMissingCreditorAddress, TransactionReasonCode.mmUnrecognisedInitiatingParty, TransactionReasonCode.mmTransactionForbidden,
+						TransactionReasonCode.mmInvalidBankOperationCode, TransactionReasonCode.mmInvalidDate, TransactionReasonCode.mmNotSpecifiedReason, TransactionReasonCode.mmUnknownAccount,
+						TransactionReasonCode.mmNotUniqueTransactionReference, TransactionReasonCode.mmBankIdentifierIncorrect, TransactionReasonCode.mmNonNumericRoutingCode, TransactionReasonCode.mmNotValidRoutingCode,
+						TransactionReasonCode.mmClosedBranch, TransactionReasonCode.mmCutOffTime, TransactionReasonCode.mmCorrespondentBankNotPossible, TransactionReasonCode.mmTransactionReasonNonReportable,
+						TransactionReasonCode.mmBalanceInfoRequested, TransactionReasonCode.mmChargeDetailsNotCorrect, TransactionReasonCode.mmNotSpecifiedReasonAgentGenerated, TransactionReasonCode.mmNotSpecifiedReasonCustomerGenerated,
+						TransactionReasonCode.mmUnknownEndCustomer, TransactionReasonCode.mmMissingDebtorAddress, TransactionReasonCode.mmWrongAmount, TransactionReasonCode.mmInvalidControlSum, TransactionReasonCode.mmNoMandate,
+						TransactionReasonCode.mmMissingMandatoryInformationInMandate, TransactionReasonCode.mmInvalidFileFormatForOtherReasonThanGroupingIndicator, TransactionReasonCode.mmInvalidFileFormatForGroupingIndicator,
+						TransactionReasonCode.mmRefundRequestByEndCustomer, TransactionReasonCode.mmEndCustomerDeceased, TransactionReasonCode.mmCollectionNotDue, TransactionReasonCode.mmInvalidName,
+						TransactionReasonCode.mmSettlementFailed, TransactionReasonCode.mmNarrative);
 				derivation_lazy = () -> Arrays.asList(TransactionRejectReason2Code.mmObject(), TransactionReversalReason1Code.mmObject(), TransactionRejectReason4Code.mmObject(), TransactionRejectReason5Code.mmObject(),
 						TransactionReversalReason2Code.mmObject(), TransactionRejectReason7Code.mmObject(), TransactionReturnReason1Code.mmObject(), TransactionRejectReason6Code.mmObject());
 			}

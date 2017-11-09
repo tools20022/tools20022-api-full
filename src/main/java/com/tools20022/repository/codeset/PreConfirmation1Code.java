@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.PreConfirmationCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -84,7 +86,7 @@ public class PreConfirmation1Code extends PreConfirmationCode {
 	 */
 	public static final MMCode mmPreConfirmCash = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreConfirmCash";
 			owner_lazy = () -> PreConfirmation1Code.mmObject();
 		}
@@ -107,7 +109,7 @@ public class PreConfirmation1Code extends PreConfirmationCode {
 	 */
 	public static final MMCode mmPreConfirmSecurities = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreConfirmSecurities";
 			owner_lazy = () -> PreConfirmation1Code.mmObject();
 		}
@@ -116,12 +118,12 @@ public class PreConfirmation1Code extends PreConfirmationCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("PRCA");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PreConfirmation1Code";
 				definition = "Specifies if there is a pre-confirmation of cash or securities.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PreConfirmation1Code.mmPreConfirmCash, com.tools20022.repository.codeset.PreConfirmation1Code.mmPreConfirmSecurities);
+				code_lazy = () -> Arrays.asList(PreConfirmation1Code.mmPreConfirmCash, PreConfirmation1Code.mmPreConfirmSecurities);
 				trace_lazy = () -> PreConfirmationCode.mmObject();
 			}
 		});

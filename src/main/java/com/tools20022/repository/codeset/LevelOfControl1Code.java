@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.LevelOfControlCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -76,7 +78,7 @@ public class LevelOfControl1Code extends LevelOfControlCode {
 	 */
 	public static final MMCode mmTransactions = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Transactions";
 			owner_lazy = () -> LevelOfControl1Code.mmObject();
 		}
@@ -99,7 +101,7 @@ public class LevelOfControl1Code extends LevelOfControlCode {
 	 */
 	public static final MMCode mmView = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "View";
 			owner_lazy = () -> LevelOfControl1Code.mmObject();
 		}
@@ -108,11 +110,11 @@ public class LevelOfControl1Code extends LevelOfControlCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "LevelOfControl1Code";
 				definition = "Specifies the level of control.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.LevelOfControl1Code.mmTransactions, com.tools20022.repository.codeset.LevelOfControl1Code.mmView);
+				code_lazy = () -> Arrays.asList(LevelOfControl1Code.mmTransactions, LevelOfControl1Code.mmView);
 				trace_lazy = () -> LevelOfControlCode.mmObject();
 			}
 		});

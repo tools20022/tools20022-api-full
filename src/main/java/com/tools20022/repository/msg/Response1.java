@@ -20,8 +20,12 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.colr.MarginCallResponseV03;
+import com.tools20022.repository.area.colr.MarginCallResponseV04;
 import com.tools20022.repository.choice.ResponseType1Choice;
 import com.tools20022.repository.datatype.Max140Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -106,7 +110,7 @@ public class Response1 {
 			componentContext_lazy = () -> Response1.mmObject();
 			isDerived = false;
 			xmlTag = "RspnTpDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ResponseTypeDetails";
 			definition = "Provides details about the response type.";
 			minOccurs = 1;
@@ -147,7 +151,7 @@ public class Response1 {
 			componentContext_lazy = () -> Response1.mmObject();
 			isDerived = false;
 			xmlTag = "Desc";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Description";
 			definition = "Provides additional details related to the margin call response.";
 			maxOccurs = 1;
@@ -159,10 +163,10 @@ public class Response1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Response1.mmResponseTypeDetails, com.tools20022.repository.msg.Response1.mmDescription);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.colr.MarginCallResponseV03.mmResponseDetails, com.tools20022.repository.area.colr.MarginCallResponseV04.mmResponseDetails);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(Response1.mmResponseTypeDetails, Response1.mmDescription);
+				messageBuildingBlock_lazy = () -> Arrays.asList(MarginCallResponseV03.mmResponseDetails, MarginCallResponseV04.mmResponseDetails);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Response1";
 				definition = "Provides details on the margin call, that is a description and a response type.";
 			}

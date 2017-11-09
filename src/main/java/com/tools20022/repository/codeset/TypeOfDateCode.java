@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,19 +29,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.TypeOfDate1Code
+ * TypeOfDate1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>{@linkplain com.tools20022.repository.codeset.TypeOfDateCode#mmEstimated
  * TypeOfDateCode.mmEstimated}</li>
  * <li>{@linkplain com.tools20022.repository.codeset.TypeOfDateCode#mmActual
  * TypeOfDateCode.mmActual}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.TypeOfDate1Code
- * TypeOfDate1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -83,7 +85,7 @@ public class TypeOfDateCode {
 	 */
 	public static final MMCode mmEstimated = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Estimated";
 			definition = "Date/date and time is estimated.";
 			owner_lazy = () -> TypeOfDateCode.mmObject();
@@ -113,7 +115,7 @@ public class TypeOfDateCode {
 	 */
 	public static final MMCode mmActual = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Actual";
 			definition = "Date / date and time is the actual date / date and time.";
 			owner_lazy = () -> TypeOfDateCode.mmObject();
@@ -124,11 +126,11 @@ public class TypeOfDateCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TypeOfDateCode";
 				definition = "Specifies whether a date is actual or estimated.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TypeOfDateCode.mmEstimated, com.tools20022.repository.codeset.TypeOfDateCode.mmActual);
+				code_lazy = () -> Arrays.asList(TypeOfDateCode.mmEstimated, TypeOfDateCode.mmActual);
 				derivation_lazy = () -> Arrays.asList(TypeOfDate1Code.mmObject());
 			}
 		});

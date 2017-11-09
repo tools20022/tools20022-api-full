@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.OrderStatusCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -86,7 +88,7 @@ public class OrderStatus3Code extends OrderStatusCode {
 	 */
 	public static final MMCode mmSentToNextParty = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SentToNextParty";
 			owner_lazy = () -> OrderStatus3Code.mmObject();
 		}
@@ -109,7 +111,7 @@ public class OrderStatus3Code extends OrderStatusCode {
 	 */
 	public static final MMCode mmPendingCancel = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingCancel";
 			owner_lazy = () -> OrderStatus3Code.mmObject();
 		}
@@ -132,7 +134,7 @@ public class OrderStatus3Code extends OrderStatusCode {
 	 */
 	public static final MMCode mmCompleted = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Completed";
 			owner_lazy = () -> OrderStatus3Code.mmObject();
 		}
@@ -141,13 +143,12 @@ public class OrderStatus3Code extends OrderStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("STNP");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OrderStatus3Code";
 				definition = "Specifies the current status of the order.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OrderStatus3Code.mmSentToNextParty, com.tools20022.repository.codeset.OrderStatus3Code.mmPendingCancel,
-						com.tools20022.repository.codeset.OrderStatus3Code.mmCompleted);
+				code_lazy = () -> Arrays.asList(OrderStatus3Code.mmSentToNextParty, OrderStatus3Code.mmPendingCancel, OrderStatus3Code.mmCompleted);
 				trace_lazy = () -> OrderStatusCode.mmObject();
 			}
 		});

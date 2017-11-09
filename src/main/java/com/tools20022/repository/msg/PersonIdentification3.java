@@ -17,13 +17,12 @@
 
 package com.tools20022.repository.msg;
 
-import com.tools20022.metamodel.MMMessageAssociationEnd;
-import com.tools20022.metamodel.MMMessageAttribute;
-import com.tools20022.metamodel.MMMessageComponent;
-import com.tools20022.metamodel.MMXor;
+import com.tools20022.metamodel.*;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.IdentificationIssuerRole;
+import com.tools20022.repository.entity.PartyIdentificationInformation;
 import com.tools20022.repository.entity.PersonIdentification;
+import com.tools20022.repository.GeneratedRepository;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -138,11 +137,11 @@ public class PersonIdentification3 {
 	 */
 	public static final MMMessageAttribute mmDriversLicenseNumber = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PersonIdentification.mmDriversLicenseNumber;
+			businessElementTrace_lazy = () -> PersonIdentification.mmDriversLicenseNumber;
 			componentContext_lazy = () -> PersonIdentification3.mmObject();
 			isDerived = false;
 			xmlTag = "DrvrsLicNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DriversLicenseNumber";
 			definition = "Number assigned by a license authority to a driver's license.";
 			maxOccurs = 1;
@@ -183,7 +182,7 @@ public class PersonIdentification3 {
 			componentContext_lazy = () -> PersonIdentification3.mmObject();
 			isDerived = false;
 			xmlTag = "CstmrNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CustomerNumber";
 			definition = "Number assigned by an agent  to identify its customer.";
 			maxOccurs = 1;
@@ -226,11 +225,11 @@ public class PersonIdentification3 {
 	 */
 	public static final MMMessageAttribute mmSocialSecurityNumber = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PersonIdentification.mmSocialSecurityNumber;
+			businessElementTrace_lazy = () -> PersonIdentification.mmSocialSecurityNumber;
 			componentContext_lazy = () -> PersonIdentification3.mmObject();
 			isDerived = false;
 			xmlTag = "SclSctyNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SocialSecurityNumber";
 			definition = "Number assigned by a social security agency.";
 			maxOccurs = 1;
@@ -274,11 +273,11 @@ public class PersonIdentification3 {
 	 */
 	public static final MMMessageAttribute mmAlienRegistrationNumber = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PersonIdentification.mmAlienRegistrationNumber;
+			businessElementTrace_lazy = () -> PersonIdentification.mmAlienRegistrationNumber;
 			componentContext_lazy = () -> PersonIdentification3.mmObject();
 			isDerived = false;
 			xmlTag = "AlnRegnNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AlienRegistrationNumber";
 			definition = "Number assigned by a government agency to identify foreign nationals.";
 			maxOccurs = 1;
@@ -321,11 +320,11 @@ public class PersonIdentification3 {
 	 */
 	public static final MMMessageAttribute mmPassportNumber = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PersonIdentification.mmPassportNumber;
+			businessElementTrace_lazy = () -> PersonIdentification.mmPassportNumber;
 			componentContext_lazy = () -> PersonIdentification3.mmObject();
 			isDerived = false;
 			xmlTag = "PsptNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PassportNumber";
 			definition = "Number assigned by a passport authority to a passport.";
 			maxOccurs = 1;
@@ -368,11 +367,11 @@ public class PersonIdentification3 {
 	 */
 	public static final MMMessageAttribute mmTaxIdentificationNumber = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.mmTaxIdentificationNumber;
+			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmTaxIdentificationNumber;
 			componentContext_lazy = () -> PersonIdentification3.mmObject();
 			isDerived = false;
 			xmlTag = "TaxIdNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxIdentificationNumber";
 			definition = "Number assigned by a tax authority to an entity.";
 			maxOccurs = 1;
@@ -416,11 +415,11 @@ public class PersonIdentification3 {
 	 */
 	public static final MMMessageAttribute mmIdentityCardNumber = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PersonIdentification.mmIdentityCardNumber;
+			businessElementTrace_lazy = () -> PersonIdentification.mmIdentityCardNumber;
 			componentContext_lazy = () -> PersonIdentification3.mmObject();
 			isDerived = false;
 			xmlTag = "IdntyCardNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IdentityCardNumber";
 			definition = "Number assigned by a national authority to an identity card.";
 			maxOccurs = 1;
@@ -464,11 +463,11 @@ public class PersonIdentification3 {
 	 */
 	public static final MMMessageAttribute mmEmployerIdentificationNumber = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PersonIdentification.mmEmployerIdentificationNumber;
+			businessElementTrace_lazy = () -> PersonIdentification.mmEmployerIdentificationNumber;
 			componentContext_lazy = () -> PersonIdentification3.mmObject();
 			isDerived = false;
 			xmlTag = "MplyrIdNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EmployerIdentificationNumber";
 			definition = "Number assigned to an employer by a registration authority.";
 			maxOccurs = 1;
@@ -510,11 +509,11 @@ public class PersonIdentification3 {
 	 */
 	public static final MMMessageAssociationEnd mmDateAndPlaceOfBirth = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PersonIdentification.mmPerson;
+			businessElementTrace_lazy = () -> PersonIdentification.mmPerson;
 			componentContext_lazy = () -> PersonIdentification3.mmObject();
 			isDerived = false;
 			xmlTag = "DtAndPlcOfBirth";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DateAndPlaceOfBirth";
 			definition = "Date and place of birth of a person.";
 			maxOccurs = 1;
@@ -560,11 +559,11 @@ public class PersonIdentification3 {
 	 */
 	public static final MMMessageAssociationEnd mmOtherIdentification = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.mmOtherIdentification;
+			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmOtherIdentification;
 			componentContext_lazy = () -> PersonIdentification3.mmObject();
 			isDerived = false;
 			xmlTag = "OthrId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherIdentification";
 			definition = "Identifier issued to a person for which no specific identifier has been defined.";
 			maxOccurs = 1;
@@ -612,7 +611,7 @@ public class PersonIdentification3 {
 			componentContext_lazy = () -> PersonIdentification3.mmObject();
 			isDerived = false;
 			xmlTag = "Issr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Issuer";
 			definition = "Entity that assigns the identifier.";
 			maxOccurs = 1;
@@ -629,6 +628,10 @@ public class PersonIdentification3 {
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
+	 * messageComponent} =
+	 * {@linkplain com.tools20022.repository.msg.PersonIdentification3
+	 * PersonIdentification3}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getImpactedElements
 	 * impactedElements} =
 	 * <ul>
@@ -664,10 +667,6 @@ public class PersonIdentification3 {
 	 * PersonIdentification3.mmOtherIdentification}</li>
 	 * </ul>
 	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
-	 * messageComponent} =
-	 * {@linkplain com.tools20022.repository.msg.PersonIdentification3
-	 * PersonIdentification3}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -683,29 +682,25 @@ public class PersonIdentification3 {
 	 */
 	public static final MMXor mmPersonIdentificationRule = new MMXor() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PersonIdentificationRule";
 			definition = "One and only one Message Element in the list (DateAndPlaceOfBirth, CustomerNumber, DriversLicenseNumber, SocialSecurityNumber, AlienRegistrationNumber, PassportNumber, TaxIdentificationNumber, IdentityCardNumber, EmployerIdentificationNumber, OtherIdentification, DateAndPlaceOfBirth) must be present.";
 			messageComponent_lazy = () -> PersonIdentification3.mmObject();
-			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PersonIdentification3.mmDriversLicenseNumber, com.tools20022.repository.msg.PersonIdentification3.mmCustomerNumber,
-					com.tools20022.repository.msg.PersonIdentification3.mmSocialSecurityNumber, com.tools20022.repository.msg.PersonIdentification3.mmAlienRegistrationNumber,
-					com.tools20022.repository.msg.PersonIdentification3.mmPassportNumber, com.tools20022.repository.msg.PersonIdentification3.mmTaxIdentificationNumber,
-					com.tools20022.repository.msg.PersonIdentification3.mmIdentityCardNumber, com.tools20022.repository.msg.PersonIdentification3.mmEmployerIdentificationNumber,
-					com.tools20022.repository.msg.PersonIdentification3.mmDateAndPlaceOfBirth, com.tools20022.repository.msg.PersonIdentification3.mmOtherIdentification);
+			impactedElements_lazy = () -> Arrays.asList(PersonIdentification3.mmDriversLicenseNumber, PersonIdentification3.mmCustomerNumber, PersonIdentification3.mmSocialSecurityNumber, PersonIdentification3.mmAlienRegistrationNumber,
+					PersonIdentification3.mmPassportNumber, PersonIdentification3.mmTaxIdentificationNumber, PersonIdentification3.mmIdentityCardNumber, PersonIdentification3.mmEmployerIdentificationNumber,
+					PersonIdentification3.mmDateAndPlaceOfBirth, PersonIdentification3.mmOtherIdentification);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PersonIdentification3.mmDriversLicenseNumber, com.tools20022.repository.msg.PersonIdentification3.mmCustomerNumber,
-						com.tools20022.repository.msg.PersonIdentification3.mmSocialSecurityNumber, com.tools20022.repository.msg.PersonIdentification3.mmAlienRegistrationNumber,
-						com.tools20022.repository.msg.PersonIdentification3.mmPassportNumber, com.tools20022.repository.msg.PersonIdentification3.mmTaxIdentificationNumber,
-						com.tools20022.repository.msg.PersonIdentification3.mmIdentityCardNumber, com.tools20022.repository.msg.PersonIdentification3.mmEmployerIdentificationNumber,
-						com.tools20022.repository.msg.PersonIdentification3.mmDateAndPlaceOfBirth, com.tools20022.repository.msg.PersonIdentification3.mmOtherIdentification, com.tools20022.repository.msg.PersonIdentification3.mmIssuer);
+				messageElement_lazy = () -> Arrays.asList(PersonIdentification3.mmDriversLicenseNumber, PersonIdentification3.mmCustomerNumber, PersonIdentification3.mmSocialSecurityNumber, PersonIdentification3.mmAlienRegistrationNumber,
+						PersonIdentification3.mmPassportNumber, PersonIdentification3.mmTaxIdentificationNumber, PersonIdentification3.mmIdentityCardNumber, PersonIdentification3.mmEmployerIdentificationNumber,
+						PersonIdentification3.mmDateAndPlaceOfBirth, PersonIdentification3.mmOtherIdentification, PersonIdentification3.mmIssuer);
 				trace_lazy = () -> PersonIdentification.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
 						return DateFormat.getDateInstance(java.text.DateFormat.LONG).parse("September 9, 2016");
@@ -715,7 +710,7 @@ public class PersonIdentification3 {
 				})).get();
 				name = "PersonIdentification3";
 				definition = "Unique and unambiguous way to identify a person.";
-				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PersonIdentification3.mmPersonIdentificationRule);
+				xors_lazy = () -> Arrays.asList(PersonIdentification3.mmPersonIdentificationRule);
 			}
 		});
 		return mmObject_lazy.get();

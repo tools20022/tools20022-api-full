@@ -20,8 +20,10 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ProxyNotAllowedCode;
 import com.tools20022.repository.entity.ProxyAppointmentCondition;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.ProxyAppointmentInformation2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -115,10 +117,10 @@ public class Proxy1Choice {
 			componentContext_lazy = () -> Proxy1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prxy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proxy";
 			definition = "Specifies the elements required to assign a proxy.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Proxy2Choice.mmProxy);
+			nextVersions_lazy = () -> Arrays.asList(Proxy2Choice.mmProxy);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -166,10 +168,10 @@ public class Proxy1Choice {
 			componentContext_lazy = () -> Proxy1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "PrxyNotAllwd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProxyNotAllowed";
 			definition = "Indicates that no proxy is allowed for a meeting.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Proxy2Choice.mmProxyNotAllowed);
+			nextVersions_lazy = () -> Arrays.asList(Proxy2Choice.mmProxyNotAllowed);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ProxyNotAllowedCode.mmObject();
@@ -179,10 +181,10 @@ public class Proxy1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Proxy1Choice.mmProxy, com.tools20022.repository.choice.Proxy1Choice.mmProxyNotAllowed);
+				messageElement_lazy = () -> Arrays.asList(Proxy1Choice.mmProxy, Proxy1Choice.mmProxyNotAllowed);
 				trace_lazy = () -> ProxyAppointmentCondition.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Proxy1Choice";
 				definition = "Choice of proxy allowance.";
 				nextVersions_lazy = () -> Arrays.asList(Proxy2Choice.mmObject());

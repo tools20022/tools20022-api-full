@@ -18,9 +18,11 @@
 package com.tools20022.repository.msgset;
 
 import com.tools20022.metamodel.MMMessageSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.auth.InformationRequestOpeningV01;
 import com.tools20022.repository.area.auth.InformationRequestResponseV01;
 import com.tools20022.repository.area.auth.InformationRequestStatusChangeNotificationV01;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -73,8 +75,8 @@ public class AuthoritiesFinancialInvestigationsISOLatestversion {
 	final static public MMMessageSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageSet() {
 			{
-				businessProcessCatalogue_lazy = () -> com.tools20022.repository.GeneratedRepository.mmcatalogue;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				businessProcessCatalogue_lazy = () -> GeneratedRepository.mmcatalogue;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Authorities Financial Investigations – ISO – Latest version";
 				definition = "Set of messages that Authorities (like police, customs, tax authorities, enforcement authorities) can use to request account and other banking and financial instrument information from financial institutions to carry out their duties.\r\nRequested information can relate to accounts, their signatories and beneficiaries and co-owners as well as movements plus positions on these accounts. Additionally, this information can pertain to loans and guarantees.";
 				messageDefinition_lazy = () -> Arrays.asList(InformationRequestOpeningV01.mmObject(), InformationRequestResponseV01.mmObject(), InformationRequestStatusChangeNotificationV01.mmObject());

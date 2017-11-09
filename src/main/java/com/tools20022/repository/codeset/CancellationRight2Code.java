@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CancellationRightCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -95,7 +97,7 @@ public class CancellationRight2Code extends CancellationRightCode {
 	 */
 	public static final MMCode mmEntitled = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Entitled";
 			owner_lazy = () -> CancellationRight2Code.mmObject();
 		}
@@ -118,7 +120,7 @@ public class CancellationRight2Code extends CancellationRightCode {
 	 */
 	public static final MMCode mmExecutionOnly = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExecutionOnly";
 			owner_lazy = () -> CancellationRight2Code.mmObject();
 		}
@@ -141,7 +143,7 @@ public class CancellationRight2Code extends CancellationRightCode {
 	 */
 	public static final MMCode mmWaiverAgreement = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WaiverAgreement";
 			owner_lazy = () -> CancellationRight2Code.mmObject();
 		}
@@ -164,7 +166,7 @@ public class CancellationRight2Code extends CancellationRightCode {
 	 */
 	public static final MMCode mmInstitutional = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Institutional";
 			owner_lazy = () -> CancellationRight2Code.mmObject();
 		}
@@ -187,7 +189,7 @@ public class CancellationRight2Code extends CancellationRightCode {
 	 */
 	public static final MMCode mmOther = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
 			owner_lazy = () -> CancellationRight2Code.mmObject();
 		}
@@ -196,13 +198,12 @@ public class CancellationRight2Code extends CancellationRightCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("VALI");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CancellationRight2Code";
 				definition = "Specifies if the investor has the right to cancel an instruction or, if not, the reason the investor cannot cancel.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CancellationRight2Code.mmEntitled, com.tools20022.repository.codeset.CancellationRight2Code.mmExecutionOnly,
-						com.tools20022.repository.codeset.CancellationRight2Code.mmWaiverAgreement, com.tools20022.repository.codeset.CancellationRight2Code.mmInstitutional, com.tools20022.repository.codeset.CancellationRight2Code.mmOther);
+				code_lazy = () -> Arrays.asList(CancellationRight2Code.mmEntitled, CancellationRight2Code.mmExecutionOnly, CancellationRight2Code.mmWaiverAgreement, CancellationRight2Code.mmInstitutional, CancellationRight2Code.mmOther);
 				trace_lazy = () -> CancellationRightCode.mmObject();
 			}
 		});

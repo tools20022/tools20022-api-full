@@ -17,10 +17,7 @@
 
 package com.tools20022.repository.area.auth;
 
-import com.tools20022.metamodel.MMMessageBuildingBlock;
-import com.tools20022.metamodel.MMMessageDefinition;
-import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
-import com.tools20022.metamodel.MMXor;
+import com.tools20022.metamodel.*;
 import com.tools20022.repository.area.AuthoritiesLatestVersion;
 import com.tools20022.repository.choice.PartyIdentification23Choice;
 import com.tools20022.repository.msg.DocumentIdentification8;
@@ -47,6 +44,9 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code auth.010.001.01}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.AuthoritiesLatestVersion
@@ -89,9 +89,6 @@ import java.util.List;
  * RegulatoryTransactionReportStatusV01.mmIndividualTransactionStatus}</li>
  * </ul>
  * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code auth.010.001.01}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -144,12 +141,11 @@ public class RegulatoryTransactionReportStatusV01 {
 	 */
 	public static final MMXor mmReportStatusOrIndividualTransactionStatusRule = new MMXor() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportStatusOrIndividualTransactionStatusRule";
 			definition = "Either ReportStatus or IndividualTransactionStatus must be present, but not both.";
 			messageDefinition_lazy = () -> RegulatoryTransactionReportStatusV01.mmObject();
-			impactedMessageBuildingBlocks_lazy = () -> Arrays.asList(com.tools20022.repository.area.auth.RegulatoryTransactionReportStatusV01.mmReportStatus,
-					com.tools20022.repository.area.auth.RegulatoryTransactionReportStatusV01.mmIndividualTransactionStatus);
+			impactedMessageBuildingBlocks_lazy = () -> Arrays.asList(RegulatoryTransactionReportStatusV01.mmReportStatus, RegulatoryTransactionReportStatusV01.mmIndividualTransactionStatus);
 		}
 	};
 	protected DocumentIdentification8 identification;
@@ -180,7 +176,7 @@ public class RegulatoryTransactionReportStatusV01 {
 	public static final MMMessageBuildingBlock mmIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Identification of the RegulatoryTransactionReportStatus document.";
 			maxOccurs = 1;
@@ -218,7 +214,7 @@ public class RegulatoryTransactionReportStatusV01 {
 	public static final MMMessageBuildingBlock mmReportingInstitution = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "RptgInstn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportingInstitution";
 			definition = "Identification of the firm that is legally responsible for sending the transaction report.";
 			maxOccurs = 1;
@@ -256,7 +252,7 @@ public class RegulatoryTransactionReportStatusV01 {
 	public static final MMMessageBuildingBlock mmReportStatus = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "RptSts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportStatus";
 			definition = "Provides the status of the entire RegulatoryTransactionReport that was previously sent by the reporting institution.";
 			maxOccurs = 1;
@@ -294,7 +290,7 @@ public class RegulatoryTransactionReportStatusV01 {
 	public static final MMMessageBuildingBlock mmIndividualTransactionStatus = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "IndvTxSts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IndividualTransactionStatus";
 			definition = "Provides the status of one or more transactions that were previously sent within a RegulatoryTransactionReport by the reporting institution.";
 			minOccurs = 1;
@@ -305,17 +301,16 @@ public class RegulatoryTransactionReportStatusV01 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RegulatoryTransactionReportStatusV01";
 				definition = "Scope\r\nA regulator or an intermediary sends the RegulatoryTransactionReportStatus to a reporting institution to provide the status of a RegulatoryTransactionReport previously sent by the reporting institution.\r\nUsage\r\nThe message definition may be used to provide a status for the entire report or to provide a status at the level of individual transactions within the report. One of the following statuses can be reported:\r\n- Completed, or,\r\n- Pending, or,\r\n- Rejected.\r\nIf the status is rejected, then reason for the rejection must be specified.";
 				messageSet_lazy = () -> Arrays.asList(TransactionRegulatoryReportingISOArchive.mmObject());
-				xors_lazy = () -> Arrays.asList(com.tools20022.repository.area.auth.RegulatoryTransactionReportStatusV01.mmReportStatusOrIndividualTransactionStatusRule);
+				xors_lazy = () -> Arrays.asList(RegulatoryTransactionReportStatusV01.mmReportStatusOrIndividualTransactionStatusRule);
 				rootElement = "Document";
 				xmlTag = "RgltryTxRptStsV01";
 				businessArea_lazy = () -> AuthoritiesLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.auth.RegulatoryTransactionReportStatusV01.mmIdentification,
-						com.tools20022.repository.area.auth.RegulatoryTransactionReportStatusV01.mmReportingInstitution, com.tools20022.repository.area.auth.RegulatoryTransactionReportStatusV01.mmReportStatus,
-						com.tools20022.repository.area.auth.RegulatoryTransactionReportStatusV01.mmIndividualTransactionStatus);
+				messageBuildingBlock_lazy = () -> Arrays.asList(RegulatoryTransactionReportStatusV01.mmIdentification, RegulatoryTransactionReportStatusV01.mmReportingInstitution, RegulatoryTransactionReportStatusV01.mmReportStatus,
+						RegulatoryTransactionReportStatusV01.mmIndividualTransactionStatus);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "auth";

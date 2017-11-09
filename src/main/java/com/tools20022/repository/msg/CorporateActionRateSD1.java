@@ -20,8 +20,10 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.datatype.PercentageRate;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -105,7 +107,7 @@ public class CorporateActionRateSD1 {
 			componentContext_lazy = () -> CorporateActionRateSD1.mmObject();
 			isDerived = false;
 			xmlTag = "PlcAndNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "xPath to the element that is being extended.";
 			maxOccurs = 1;
@@ -152,7 +154,7 @@ public class CorporateActionRateSD1 {
 			componentContext_lazy = () -> CorporateActionRateSD1.mmObject();
 			isDerived = false;
 			xmlTag = "DfrrdIntrstRate";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeferredInterestRate";
 			definition = "Applicable to structured securities where there is a set schedule of principal and interest payments for the life of the issue. A portion of the scheduled interest payment will not be paid at the time of distribution.  ";
 			maxOccurs = 1;
@@ -199,7 +201,7 @@ public class CorporateActionRateSD1 {
 			componentContext_lazy = () -> CorporateActionRateSD1.mmObject();
 			isDerived = false;
 			xmlTag = "IntrstShrtfllRate";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterestShortfallRate";
 			definition = "Applicable for structured security issues where there is a set schedule of principal and interest payments for the life of the issue. An interest shortfall occurs when scheduled interest is not paid to the investor as scheduled.";
 			maxOccurs = 1;
@@ -246,7 +248,7 @@ public class CorporateActionRateSD1 {
 			componentContext_lazy = () -> CorporateActionRateSD1.mmObject();
 			isDerived = false;
 			xmlTag = "RealsdLossRate";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RealisedLossRate";
 			definition = "Applicable to structured securities where there is a set schedule of principal and interest payments for the life of the issue. This term refers specifically to the principal payment of a mortgage. One or more mortgages within the pool are in default.";
 			maxOccurs = 1;
@@ -287,7 +289,7 @@ public class CorporateActionRateSD1 {
 			componentContext_lazy = () -> CorporateActionRateSD1.mmObject();
 			isDerived = false;
 			xmlTag = "AmrcnOrGblDpstRctRatio";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmericanOrGlobalDepositReceiptRatio";
 			definition = "American or Global Depository Receipt(s) per ordinary share(s) ratio.";
 			maxOccurs = 1;
@@ -300,11 +302,10 @@ public class CorporateActionRateSD1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionRateSD1.mmPlaceAndName, com.tools20022.repository.msg.CorporateActionRateSD1.mmDeferredInterestRate,
-						com.tools20022.repository.msg.CorporateActionRateSD1.mmInterestShortfallRate, com.tools20022.repository.msg.CorporateActionRateSD1.mmRealisedLossRate,
-						com.tools20022.repository.msg.CorporateActionRateSD1.mmAmericanOrGlobalDepositReceiptRatio);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(CorporateActionRateSD1.mmPlaceAndName, CorporateActionRateSD1.mmDeferredInterestRate, CorporateActionRateSD1.mmInterestShortfallRate, CorporateActionRateSD1.mmRealisedLossRate,
+						CorporateActionRateSD1.mmAmericanOrGlobalDepositReceiptRatio);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CorporateActionRateSD1";
 				definition = "Provides additional information regarding corporate action details rates and amounts details.";
 			}

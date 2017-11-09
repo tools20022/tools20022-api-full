@@ -19,7 +19,10 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.seev.AgentCAInformationStatusAdviceV01;
 import com.tools20022.repository.entity.CorporateActionStatus;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.CorporateActionInformationProcessingStatus1;
 import com.tools20022.repository.msg.CorporateActionInformationRejectedStatus1;
 import java.util.Arrays;
@@ -115,7 +118,7 @@ public class CorporateActionInformationStatus1Choice {
 			componentContext_lazy = () -> CorporateActionInformationStatus1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "PrcdSts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProcessedStatus";
 			definition = "Provides information about the processing status of the advice.";
 			maxOccurs = 1;
@@ -163,7 +166,7 @@ public class CorporateActionInformationStatus1Choice {
 			componentContext_lazy = () -> CorporateActionInformationStatus1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "RjctdSts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RejectedStatus";
 			definition = "Provides information about the rejection status.";
 			maxOccurs = 1;
@@ -176,12 +179,11 @@ public class CorporateActionInformationStatus1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays
-						.asList(com.tools20022.repository.choice.CorporateActionInformationStatus1Choice.mmProcessedStatus, com.tools20022.repository.choice.CorporateActionInformationStatus1Choice.mmRejectedStatus);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.AgentCAInformationStatusAdviceV01.mmInformationStatusDetails);
+				messageElement_lazy = () -> Arrays.asList(CorporateActionInformationStatus1Choice.mmProcessedStatus, CorporateActionInformationStatus1Choice.mmRejectedStatus);
+				messageBuildingBlock_lazy = () -> Arrays.asList(AgentCAInformationStatusAdviceV01.mmInformationStatusDetails);
 				trace_lazy = () -> CorporateActionStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionInformationStatus1Choice";
 				definition = "Choice between the different statuses of a corporate action information advice.";
 			}

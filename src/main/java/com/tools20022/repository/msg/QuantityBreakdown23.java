@@ -20,9 +20,12 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.DateAndDateTimeChoice;
 import com.tools20022.repository.choice.TypeOfPrice3Choice;
 import com.tools20022.repository.entity.LotBreakdown;
+import com.tools20022.repository.entity.SecuritiesPricing;
+import com.tools20022.repository.GeneratedRepository;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -134,14 +137,14 @@ public class QuantityBreakdown23 {
 	 */
 	public static final MMMessageAttribute mmLotNumber = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.LotBreakdown.mmLotNumber;
+			businessElementTrace_lazy = () -> LotBreakdown.mmLotNumber;
 			componentContext_lazy = () -> QuantityBreakdown23.mmObject();
 			isDerived = false;
 			xmlTag = "LotNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LotNumber";
 			definition = "Identification, for tax purposes, of a lot of identical securities that are bought at a certain date and at a certain price.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.QuantityBreakdown27.mmLotNumber);
+			nextVersions_lazy = () -> Arrays.asList(QuantityBreakdown27.mmLotNumber);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.GenericIdentification37.mmObject();
@@ -189,14 +192,14 @@ public class QuantityBreakdown23 {
 	 */
 	public static final MMMessageAssociationEnd mmLotQuantity = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.LotBreakdown.mmSecuritiesQuantity;
+			businessElementTrace_lazy = () -> LotBreakdown.mmSecuritiesQuantity;
 			componentContext_lazy = () -> QuantityBreakdown23.mmObject();
 			isDerived = false;
 			xmlTag = "LotQty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LotQuantity";
 			definition = "Quantity of financial instruments that is part of the lot described.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.QuantityBreakdown27.mmLotQuantity);
+			nextVersions_lazy = () -> Arrays.asList(QuantityBreakdown27.mmLotQuantity);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -247,14 +250,14 @@ public class QuantityBreakdown23 {
 	 */
 	public static final MMMessageAttribute mmLotDateTime = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.LotBreakdown.mmLotDateTime;
+			businessElementTrace_lazy = () -> LotBreakdown.mmLotDateTime;
 			componentContext_lazy = () -> QuantityBreakdown23.mmObject();
 			isDerived = false;
 			xmlTag = "LotDtTm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LotDateTime";
 			definition = "Date/time at which the lot was purchased.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.QuantityBreakdown27.mmLotDateTime);
+			nextVersions_lazy = () -> Arrays.asList(QuantityBreakdown27.mmLotDateTime);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
@@ -301,14 +304,14 @@ public class QuantityBreakdown23 {
 	 */
 	public static final MMMessageAssociationEnd mmLotPrice = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.LotBreakdown.mmLotPrice;
+			businessElementTrace_lazy = () -> LotBreakdown.mmLotPrice;
 			componentContext_lazy = () -> QuantityBreakdown23.mmObject();
 			isDerived = false;
 			xmlTag = "LotPric";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LotPrice";
 			definition = "Price at which the lot was purchased.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.QuantityBreakdown27.mmLotPrice);
+			nextVersions_lazy = () -> Arrays.asList(QuantityBreakdown27.mmLotPrice);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -360,14 +363,14 @@ public class QuantityBreakdown23 {
 	 */
 	public static final MMMessageAttribute mmTypeOfPrice = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmPriceType;
+			businessElementTrace_lazy = () -> SecuritiesPricing.mmPriceType;
 			componentContext_lazy = () -> QuantityBreakdown23.mmObject();
 			isDerived = false;
 			xmlTag = "TpOfPric";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TypeOfPrice";
 			definition = "Specifies the type of price and information about the price.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.QuantityBreakdown27.mmTypeOfPrice);
+			nextVersions_lazy = () -> Arrays.asList(QuantityBreakdown27.mmTypeOfPrice);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> TypeOfPrice3Choice.mmObject();
@@ -377,11 +380,10 @@ public class QuantityBreakdown23 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.QuantityBreakdown23.mmLotNumber, com.tools20022.repository.msg.QuantityBreakdown23.mmLotQuantity,
-						com.tools20022.repository.msg.QuantityBreakdown23.mmLotDateTime, com.tools20022.repository.msg.QuantityBreakdown23.mmLotPrice, com.tools20022.repository.msg.QuantityBreakdown23.mmTypeOfPrice);
+				messageElement_lazy = () -> Arrays.asList(QuantityBreakdown23.mmLotNumber, QuantityBreakdown23.mmLotQuantity, QuantityBreakdown23.mmLotDateTime, QuantityBreakdown23.mmLotPrice, QuantityBreakdown23.mmTypeOfPrice);
 				trace_lazy = () -> LotBreakdown.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
 						return DateFormat.getDateInstance(java.text.DateFormat.LONG).parse("May 5, 2016");

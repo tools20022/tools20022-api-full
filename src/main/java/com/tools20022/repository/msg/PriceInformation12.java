@@ -20,11 +20,14 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.DateAndDateTimeChoice;
 import com.tools20022.repository.choice.PriceRateOrAmountOrUnknownChoice;
 import com.tools20022.repository.choice.TypeOfPrice28Choice;
 import com.tools20022.repository.choice.YieldedOrValueType1Choice;
 import com.tools20022.repository.entity.SecuritiesPricing;
+import com.tools20022.repository.entity.SourceOfPrice;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -119,14 +122,14 @@ public class PriceInformation12 {
 	 */
 	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmPriceType;
+			businessElementTrace_lazy = () -> SecuritiesPricing.mmPriceType;
 			componentContext_lazy = () -> PriceInformation12.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Specifies the type of price and information about the price.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PriceInformation5.mmType;
+			previousVersion_lazy = () -> PriceInformation5.mmType;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> TypeOfPrice28Choice.mmObject();
@@ -177,10 +180,10 @@ public class PriceInformation12 {
 			componentContext_lazy = () -> PriceInformation12.mmObject();
 			isDerived = false;
 			xmlTag = "Val";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Value";
 			definition = "Value of the price, eg, as a currency and value.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PriceInformation5.mmValue;
+			previousVersion_lazy = () -> PriceInformation5.mmValue;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> PriceRateOrAmountOrUnknownChoice.mmObject();
@@ -227,14 +230,14 @@ public class PriceInformation12 {
 	 */
 	public static final MMMessageAttribute mmValueType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmTypeOfRate;
+			businessElementTrace_lazy = () -> SecuritiesPricing.mmTypeOfRate;
 			componentContext_lazy = () -> PriceInformation12.mmObject();
 			isDerived = false;
 			xmlTag = "ValTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValueType";
 			definition = "Type of value in which the price is expressed.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PriceInformation5.mmValueType;
+			previousVersion_lazy = () -> PriceInformation5.mmValueType;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> YieldedOrValueType1Choice.mmObject();
@@ -279,14 +282,14 @@ public class PriceInformation12 {
 	 */
 	public static final MMMessageAssociationEnd mmSourceOfPrice = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SourceOfPrice.mmMarketIdentification;
+			businessElementTrace_lazy = () -> SourceOfPrice.mmMarketIdentification;
 			componentContext_lazy = () -> PriceInformation12.mmObject();
 			isDerived = false;
 			xmlTag = "SrcOfPric";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SourceOfPrice";
 			definition = "Place from which the price was obtained.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PriceInformation5.mmSourceOfPrice;
+			previousVersion_lazy = () -> PriceInformation5.mmSourceOfPrice;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -337,14 +340,14 @@ public class PriceInformation12 {
 	 */
 	public static final MMMessageAttribute mmQuotationDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmQuotationDate;
+			businessElementTrace_lazy = () -> SecuritiesPricing.mmQuotationDate;
 			componentContext_lazy = () -> PriceInformation12.mmObject();
 			isDerived = false;
 			xmlTag = "QtnDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuotationDate";
 			definition = "Date on which the price is obtained. With an investment fund, this is as stated in the prospectus.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PriceInformation5.mmQuotationDate;
+			previousVersion_lazy = () -> PriceInformation5.mmQuotationDate;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
@@ -354,11 +357,10 @@ public class PriceInformation12 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PriceInformation12.mmType, com.tools20022.repository.msg.PriceInformation12.mmValue, com.tools20022.repository.msg.PriceInformation12.mmValueType,
-						com.tools20022.repository.msg.PriceInformation12.mmSourceOfPrice, com.tools20022.repository.msg.PriceInformation12.mmQuotationDate);
+				messageElement_lazy = () -> Arrays.asList(PriceInformation12.mmType, PriceInformation12.mmValue, PriceInformation12.mmValueType, PriceInformation12.mmSourceOfPrice, PriceInformation12.mmQuotationDate);
 				trace_lazy = () -> SecuritiesPricing.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PriceInformation12";
 				definition = "Amount of money for which goods or services are offered, sold, or bought.";
 				previousVersion_lazy = () -> PriceInformation5.mmObject();

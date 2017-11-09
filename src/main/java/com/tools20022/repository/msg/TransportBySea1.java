@@ -19,8 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.entity.Transport;
 import com.tools20022.repository.entity.TransportBySea;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -99,11 +102,11 @@ public class TransportBySea1 {
 	 */
 	public static final MMMessageAttribute mmPortOfLoading = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Transport.mmPlaceOfDeparture;
+			businessElementTrace_lazy = () -> Transport.mmPlaceOfDeparture;
 			componentContext_lazy = () -> TransportBySea1.mmObject();
 			isDerived = false;
 			xmlTag = "PortOfLoadng";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PortOfLoading";
 			definition = "Identifies the port where the goods are loaded on board the ship.";
 			minOccurs = 0;
@@ -145,11 +148,11 @@ public class TransportBySea1 {
 	 */
 	public static final MMMessageAttribute mmPortOfDischarge = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Transport.mmPlaceOfDestination;
+			businessElementTrace_lazy = () -> Transport.mmPlaceOfDestination;
 			componentContext_lazy = () -> TransportBySea1.mmObject();
 			isDerived = false;
 			xmlTag = "PortOfDschrge";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PortOfDischarge";
 			definition = "Identifies the port where the goods are discharged.";
 			minOccurs = 1;
@@ -160,10 +163,10 @@ public class TransportBySea1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransportBySea1.mmPortOfLoading, com.tools20022.repository.msg.TransportBySea1.mmPortOfDischarge);
+				messageElement_lazy = () -> Arrays.asList(TransportBySea1.mmPortOfLoading, TransportBySea1.mmPortOfDischarge);
 				trace_lazy = () -> TransportBySea.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "TransportBySea1";
 				definition = "Information related for the transportation of goods by sea.";
 			}

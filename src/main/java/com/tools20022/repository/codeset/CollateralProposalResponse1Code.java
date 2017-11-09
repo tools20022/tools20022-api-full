@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CollateralProposalResponseCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -86,7 +88,7 @@ public class CollateralProposalResponse1Code extends CollateralProposalResponseC
 	 */
 	public static final MMCode mmInitialProposal = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InitialProposal";
 			owner_lazy = () -> CollateralProposalResponse1Code.mmObject();
 		}
@@ -109,7 +111,7 @@ public class CollateralProposalResponse1Code extends CollateralProposalResponseC
 	 */
 	public static final MMCode mmCounterProposal = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CounterProposal";
 			owner_lazy = () -> CollateralProposalResponse1Code.mmObject();
 		}
@@ -118,12 +120,12 @@ public class CollateralProposalResponse1Code extends CollateralProposalResponseC
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("INPR");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CollateralProposalResponse1Code";
 				definition = "Specifies if the collateral proposal response is an initial or a counter proposal.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CollateralProposalResponse1Code.mmInitialProposal, com.tools20022.repository.codeset.CollateralProposalResponse1Code.mmCounterProposal);
+				code_lazy = () -> Arrays.asList(CollateralProposalResponse1Code.mmInitialProposal, CollateralProposalResponse1Code.mmCounterProposal);
 				trace_lazy = () -> CollateralProposalResponseCode.mmObject();
 			}
 		});

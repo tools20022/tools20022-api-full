@@ -19,7 +19,10 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.seev.MeetingInstructionStatusV02;
 import com.tools20022.repository.entity.MeetingStatus;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.CancellationProcessingStatus1;
 import com.tools20022.repository.msg.CancellationRejectionStatus1;
 import java.util.Arrays;
@@ -109,11 +112,11 @@ public class CancellationStatus1Choice {
 	 */
 	public static final MMMessageAssociationEnd mmProcessingStatus = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.MeetingStatus.mmInstructionCancellationStatus;
+			businessElementTrace_lazy = () -> MeetingStatus.mmInstructionCancellationStatus;
 			componentContext_lazy = () -> CancellationStatus1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "PrcgSts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProcessingStatus";
 			definition = "Status advising on the processing of the cancellation request.";
 			maxOccurs = 1;
@@ -158,11 +161,11 @@ public class CancellationStatus1Choice {
 	 */
 	public static final MMMessageAssociationEnd mmRejectionStatus = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.MeetingStatus.mmReason;
+			businessElementTrace_lazy = () -> MeetingStatus.mmReason;
 			componentContext_lazy = () -> CancellationStatus1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "RjctnSts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RejectionStatus";
 			definition = "Status advising on the rejection of the cancellation request.";
 			maxOccurs = 1;
@@ -175,11 +178,11 @@ public class CancellationStatus1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CancellationStatus1Choice.mmProcessingStatus, com.tools20022.repository.choice.CancellationStatus1Choice.mmRejectionStatus);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.MeetingInstructionStatusV02.mmCancellationStatus);
+				messageElement_lazy = () -> Arrays.asList(CancellationStatus1Choice.mmProcessingStatus, CancellationStatus1Choice.mmRejectionStatus);
+				messageBuildingBlock_lazy = () -> Arrays.asList(MeetingInstructionStatusV02.mmCancellationStatus);
 				trace_lazy = () -> MeetingStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CancellationStatus1Choice";
 				definition = "Status applying to the instruction cancellation request received.";
 			}

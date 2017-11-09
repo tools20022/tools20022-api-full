@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.PartialSettlementV2Code;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -83,7 +85,7 @@ public class PartialSettlement2Code extends PartialSettlementV2Code {
 	 */
 	public static final MMCode mmPartialSettlement = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartialSettlement";
 			owner_lazy = () -> PartialSettlement2Code.mmObject();
 		}
@@ -106,7 +108,7 @@ public class PartialSettlement2Code extends PartialSettlementV2Code {
 	 */
 	public static final MMCode mmPartiallyConfirmed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartiallyConfirmed";
 			owner_lazy = () -> PartialSettlement2Code.mmObject();
 		}
@@ -115,12 +117,12 @@ public class PartialSettlement2Code extends PartialSettlementV2Code {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("PAIN");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PartialSettlement2Code";
 				definition = "Information about partial settlement.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PartialSettlement2Code.mmPartialSettlement, com.tools20022.repository.codeset.PartialSettlement2Code.mmPartiallyConfirmed);
+				code_lazy = () -> Arrays.asList(PartialSettlement2Code.mmPartialSettlement, PartialSettlement2Code.mmPartiallyConfirmed);
 				trace_lazy = () -> PartialSettlementV2Code.mmObject();
 			}
 		});

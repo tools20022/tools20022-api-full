@@ -19,8 +19,13 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.semt.*;
+import com.tools20022.repository.area.sese.*;
 import com.tools20022.repository.datatype.AnyBICIdentifier;
+import com.tools20022.repository.entity.OrganisationIdentification;
 import com.tools20022.repository.entity.PartyIdentificationInformation;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification19;
 import java.text.DateFormat;
 import java.util.Arrays;
@@ -157,11 +162,11 @@ public class PartyIdentification13Choice {
 	 */
 	public static final MMMessageAttribute mmBICOrBEI = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.mmAnyBIC;
+			businessElementTrace_lazy = () -> OrganisationIdentification.mmAnyBIC;
 			componentContext_lazy = () -> PartyIdentification13Choice.mmObject();
 			isDerived = false;
 			xmlTag = "BICOrBEI";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BICOrBEI";
 			definition = "Code allocated to a financial or non-financial institution by the ISO 9362 Registration Authority, as described in ISO 9362 \"Banking - Banking telecommunication messages - Business identifier code (BIC)\".";
 			maxOccurs = 1;
@@ -208,11 +213,11 @@ public class PartyIdentification13Choice {
 	 */
 	public static final MMMessageAttribute mmProprietaryIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.mmOtherIdentification;
+			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmOtherIdentification;
 			componentContext_lazy = () -> PartyIdentification13Choice.mmObject();
 			isDerived = false;
 			xmlTag = "PrtryId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProprietaryIdentification";
 			definition = "Unique and unambiguous identifier, as assigned to a financial institution using a proprietary identification scheme.";
 			maxOccurs = 1;
@@ -224,18 +229,15 @@ public class PartyIdentification13Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PartyIdentification13Choice.mmBICOrBEI, com.tools20022.repository.choice.PartyIdentification13Choice.mmProprietaryIdentification);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.IntraPositionMovementConfirmationV01.mmAccountOwner,
-						com.tools20022.repository.area.semt.IntraPositionMovementPostingReportV01.mmAccountOwner, com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV03.mmAccountOwner,
-						com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV03.mmAccountOwner, com.tools20022.repository.area.sese.SecuritiesSettlementConditionModificationStatusAdviceV01.mmAccountOwner,
-						com.tools20022.repository.area.sese.SecuritiesSettlementConditionsModificationRequestV01.mmAccountOwner, com.tools20022.repository.area.semt.SecuritiesTransactionPendingReportV01.mmAccountOwner,
-						com.tools20022.repository.area.semt.SecuritiesTransactionPostingReportV01.mmAccountOwner, com.tools20022.repository.area.semt.IntraPositionMovementInstructionV01.mmAccountOwner,
-						com.tools20022.repository.area.sese.PortfolioTransferNotificationV01.mmAccountOwner, com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAllegementReportV01.mmAccountOwner,
-						com.tools20022.repository.area.semt.SecuritiesStatementQueryV01.mmAccountOwner, com.tools20022.repository.area.sese.SecuritiesStatusOrStatementQueryStatusAdviceV01.mmAccountOwner,
-						com.tools20022.repository.area.sese.SecuritiesTransactionStatusQueryV01.mmAccountOwner);
+				messageElement_lazy = () -> Arrays.asList(PartyIdentification13Choice.mmBICOrBEI, PartyIdentification13Choice.mmProprietaryIdentification);
+				messageBuildingBlock_lazy = () -> Arrays.asList(IntraPositionMovementConfirmationV01.mmAccountOwner, IntraPositionMovementPostingReportV01.mmAccountOwner, SecuritiesBalanceAccountingReportV03.mmAccountOwner,
+						SecuritiesBalanceCustodyReportV03.mmAccountOwner, SecuritiesSettlementConditionModificationStatusAdviceV01.mmAccountOwner, SecuritiesSettlementConditionsModificationRequestV01.mmAccountOwner,
+						SecuritiesTransactionPendingReportV01.mmAccountOwner, SecuritiesTransactionPostingReportV01.mmAccountOwner, IntraPositionMovementInstructionV01.mmAccountOwner, PortfolioTransferNotificationV01.mmAccountOwner,
+						SecuritiesSettlementTransactionAllegementReportV01.mmAccountOwner, SecuritiesStatementQueryV01.mmAccountOwner, SecuritiesStatusOrStatementQueryStatusAdviceV01.mmAccountOwner,
+						SecuritiesTransactionStatusQueryV01.mmAccountOwner);
 				trace_lazy = () -> PartyIdentificationInformation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
 						return DateFormat.getDateInstance(java.text.DateFormat.LONG).parse("May 5, 2016");

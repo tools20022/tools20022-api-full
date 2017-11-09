@@ -17,9 +17,13 @@
 
 package com.tools20022.repository.entity;
 
+import com.tools20022.metamodel.MMAggregation;
 import com.tools20022.metamodel.MMBusinessAssociationEnd;
 import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.Role;
+import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.MarketIdentification92;
 import com.tools20022.repository.msg.RegulatoryAuthority;
 import com.tools20022.repository.msg.RegulatoryAuthority2;
 import java.util.Arrays;
@@ -35,15 +39,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
  * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.RegulatoryAuthorityRole#mmRegulatoryReport
- * RegulatoryAuthorityRole.mmRegulatoryReport}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.RegulatoryAuthorityRole#mmCountry
- * RegulatoryAuthorityRole.mmCountry}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.RegulatoryAuthority
+ * RegulatoryAuthority}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.RegulatoryAuthority2
+ * RegulatoryAuthority2}</li>
  * </ul>
  * </li>
  * <li>
@@ -69,14 +72,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
  * superType} = {@linkplain com.tools20022.repository.entity.Role Role}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.RegulatoryAuthority
- * RegulatoryAuthority}</li>
- * <li>{@linkplain com.tools20022.repository.msg.RegulatoryAuthority2
- * RegulatoryAuthority2}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.RegulatoryAuthorityRole#mmRegulatoryReport
+ * RegulatoryAuthorityRole.mmRegulatoryReport}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.RegulatoryAuthorityRole#mmCountry
+ * RegulatoryAuthorityRole.mmCountry}</li>
  * </ul>
  * </li>
  * <li>
@@ -135,13 +139,13 @@ public class RegulatoryAuthorityRole extends Role {
 		{
 			elementContext_lazy = () -> RegulatoryAuthorityRole.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RegulatoryReport";
 			definition = "Report which was requested by the regulatory authority.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.RegulatoryReport.mmAuthority;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.RegulatoryReport.mmObject();
 		}
 	};
@@ -182,13 +186,13 @@ public class RegulatoryAuthorityRole extends Role {
 		{
 			elementContext_lazy = () -> RegulatoryAuthorityRole.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Country";
 			definition = "Country for which the regulatory authority operates.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.Country.mmNationalRegulatoryAuthority;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Country.mmObject();
 		}
 	};
@@ -196,14 +200,14 @@ public class RegulatoryAuthorityRole extends Role {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RegulatoryAuthorityRole";
 				definition = "Entity requiring the regulatory reporting information.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Country.mmNationalRegulatoryAuthority, com.tools20022.repository.entity.RegulatoryReport.mmAuthority);
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MarketIdentification92.mmAuthorityName);
+				derivationElement_lazy = () -> Arrays.asList(MarketIdentification92.mmAuthorityName);
 				superType_lazy = () -> Role.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.RegulatoryAuthorityRole.mmRegulatoryReport, com.tools20022.repository.entity.RegulatoryAuthorityRole.mmCountry);
+				element_lazy = () -> Arrays.asList(RegulatoryAuthorityRole.mmRegulatoryReport, RegulatoryAuthorityRole.mmCountry);
 				derivationComponent_lazy = () -> Arrays.asList(RegulatoryAuthority.mmObject(), RegulatoryAuthority2.mmObject());
 			}
 		});

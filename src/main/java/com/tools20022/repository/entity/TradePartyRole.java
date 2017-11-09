@@ -17,13 +17,15 @@
 
 package com.tools20022.repository.entity;
 
-import com.tools20022.metamodel.MMBusinessAssociationEnd;
-import com.tools20022.metamodel.MMBusinessAttribute;
-import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.*;
+import com.tools20022.repository.choice.InvestmentFundRole2Choice;
 import com.tools20022.repository.choice.OptionParty1Choice;
+import com.tools20022.repository.choice.TradingPartyCapacity1Choice;
+import com.tools20022.repository.choice.TradingPartyCapacity2Choice;
 import com.tools20022.repository.codeset.OptionPartyCode;
 import com.tools20022.repository.codeset.TradingCapacityCode;
 import com.tools20022.repository.entity.Role;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -39,51 +41,53 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.TradePartyRole#mmAccount
- * TradePartyRole.mmAccount}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.TradePartyRole#mmTradingPartyCapacity
- * TradePartyRole.mmTradingPartyCapacity}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.TradePartyRole#mmBuyerOrSeller
- * TradePartyRole.mmBuyerOrSeller}</li>
- * <li>{@linkplain com.tools20022.repository.entity.TradePartyRole#mmTrade
- * TradePartyRole.mmTrade}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
- * subType} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.InvestorRole InvestorRole}</li>
- * <li>{@linkplain com.tools20022.repository.entity.TradeOriginatorRole
- * TradeOriginatorRole}</li>
- * <li>{@linkplain com.tools20022.repository.entity.SecuritiesTradePartyRole
- * SecuritiesTradePartyRole}</li>
- * <li>{@linkplain com.tools20022.repository.entity.BuyerRole BuyerRole}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Borrower Borrower}</li>
- * <li>{@linkplain com.tools20022.repository.entity.SellerRole SellerRole}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Lender Lender}</li>
- * <li>{@linkplain com.tools20022.repository.entity.TradeRegulator
- * TradeRegulator}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Broker Broker}</li>
- * <li>{@linkplain com.tools20022.repository.entity.TreasuryTradePartyRole
- * TreasuryTradePartyRole}</li>
- * <li>{@linkplain com.tools20022.repository.entity.CommercialTradePartyRole
- * CommercialTradePartyRole}</li>
- * <li>{@linkplain com.tools20022.repository.entity.ClearingExceptionPartyRole
- * ClearingExceptionPartyRole}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.QualifiedForeignIntermediary
- * QualifiedForeignIntermediary}</li>
- * <li>{@linkplain com.tools20022.repository.entity.StockExchange StockExchange}
- * </li>
- * <li>{@linkplain com.tools20022.repository.entity.SellerBank SellerBank}</li>
- * <li>{@linkplain com.tools20022.repository.entity.BuyerBank BuyerBank}</li>
- * <li>{@linkplain com.tools20022.repository.entity.AllocationPartyRole
- * AllocationPartyRole}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Intermediary4 Intermediary4}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Intermediary10 Intermediary10}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ConfirmationPartyDetails4
+ * ConfirmationPartyDetails4}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Intermediary14 Intermediary14}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ConfirmationPartyDetails2
+ * ConfirmationPartyDetails2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ConfirmationPartyDetails3
+ * ConfirmationPartyDetails3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ConfirmationParties3
+ * ConfirmationParties3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ConfirmationPartyDetails1
+ * ConfirmationPartyDetails1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ConfirmationPartyDetails6
+ * ConfirmationPartyDetails6}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ConfirmationParties4
+ * ConfirmationParties4}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ConfirmationPartyDetails5
+ * ConfirmationPartyDetails5}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ConfirmationParties2
+ * ConfirmationParties2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TradePartyIdentification2
+ * TradePartyIdentification2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TradePartyIdentification3
+ * TradePartyIdentification3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TradePartyIdentification5
+ * TradePartyIdentification5}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Intermediary8 Intermediary8}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Intermediary9 Intermediary9}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TradePartyIdentification1
+ * TradePartyIdentification1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TradePartyIdentification4
+ * TradePartyIdentification4}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Intermediary16 Intermediary16}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Intermediary19 Intermediary19}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Intermediary20 Intermediary20}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.OptionParty1Choice
+ * OptionParty1Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Intermediary29 Intermediary29}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TradePartyIdentification7
+ * TradePartyIdentification7}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Intermediary39 Intermediary39}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Intermediary40 Intermediary40}</li>
  * </ul>
  * </li>
  * <li>
@@ -174,53 +178,51 @@ import java.util.List;
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
  * superType} = {@linkplain com.tools20022.repository.entity.Role Role}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
+ * subType} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Intermediary4 Intermediary4}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Intermediary10 Intermediary10}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ConfirmationPartyDetails4
- * ConfirmationPartyDetails4}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Intermediary14 Intermediary14}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ConfirmationPartyDetails2
- * ConfirmationPartyDetails2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ConfirmationPartyDetails3
- * ConfirmationPartyDetails3}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ConfirmationParties3
- * ConfirmationParties3}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ConfirmationPartyDetails1
- * ConfirmationPartyDetails1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ConfirmationPartyDetails6
- * ConfirmationPartyDetails6}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ConfirmationParties4
- * ConfirmationParties4}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ConfirmationPartyDetails5
- * ConfirmationPartyDetails5}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ConfirmationParties2
- * ConfirmationParties2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TradePartyIdentification2
- * TradePartyIdentification2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TradePartyIdentification3
- * TradePartyIdentification3}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TradePartyIdentification5
- * TradePartyIdentification5}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Intermediary8 Intermediary8}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Intermediary9 Intermediary9}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TradePartyIdentification1
- * TradePartyIdentification1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TradePartyIdentification4
- * TradePartyIdentification4}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Intermediary16 Intermediary16}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Intermediary19 Intermediary19}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Intermediary20 Intermediary20}</li>
- * <li>{@linkplain com.tools20022.repository.choice.OptionParty1Choice
- * OptionParty1Choice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Intermediary29 Intermediary29}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TradePartyIdentification7
- * TradePartyIdentification7}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Intermediary39 Intermediary39}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Intermediary40 Intermediary40}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.InvestorRole InvestorRole}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.TradeOriginatorRole
+ * TradeOriginatorRole}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.SecuritiesTradePartyRole
+ * SecuritiesTradePartyRole}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.BuyerRole BuyerRole}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Borrower Borrower}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.SellerRole SellerRole}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Lender Lender}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.TradeRegulator
+ * TradeRegulator}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Broker Broker}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.TreasuryTradePartyRole
+ * TreasuryTradePartyRole}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.CommercialTradePartyRole
+ * CommercialTradePartyRole}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.ClearingExceptionPartyRole
+ * ClearingExceptionPartyRole}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.QualifiedForeignIntermediary
+ * QualifiedForeignIntermediary}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.StockExchange StockExchange}
+ * </li>
+ * <li>{@linkplain com.tools20022.repository.entity.SellerBank SellerBank}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.BuyerBank BuyerBank}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.AllocationPartyRole
+ * AllocationPartyRole}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.TradePartyRole#mmAccount
+ * TradePartyRole.mmAccount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.TradePartyRole#mmTradingPartyCapacity
+ * TradePartyRole.mmTradingPartyCapacity}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.TradePartyRole#mmBuyerOrSeller
+ * TradePartyRole.mmBuyerOrSeller}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.TradePartyRole#mmTrade
+ * TradePartyRole.mmTrade}</li>
  * </ul>
  * </li>
  * <li>
@@ -322,19 +324,17 @@ public class TradePartyRole extends Role {
 	 */
 	public static final MMBusinessAssociationEnd mmAccount = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Intermediary4.mmAccount, com.tools20022.repository.msg.Intermediary10.mmAccount, com.tools20022.repository.msg.Intermediary8.mmAccount,
-					com.tools20022.repository.msg.Intermediary9.mmAccount, com.tools20022.repository.msg.TradeLeg5.mmTradingPartyAccount, com.tools20022.repository.msg.TradeLeg6.mmTradingPartyAccount,
-					com.tools20022.repository.msg.TradeLeg7.mmTradingPartyAccount, com.tools20022.repository.msg.Intermediary16.mmAccount, com.tools20022.repository.msg.Intermediary19.mmAccount,
-					com.tools20022.repository.msg.Intermediary20.mmAccount, com.tools20022.repository.msg.TradeLeg8.mmTradingPartyAccount, com.tools20022.repository.msg.TradeLeg10.mmTradingPartyAccount,
-					com.tools20022.repository.msg.TradeLeg9.mmTradingPartyAccount, com.tools20022.repository.msg.Intermediary39.mmAccount, com.tools20022.repository.msg.Intermediary40.mmAccount);
+			derivation_lazy = () -> Arrays.asList(Intermediary4.mmAccount, Intermediary10.mmAccount, Intermediary8.mmAccount, Intermediary9.mmAccount, TradeLeg5.mmTradingPartyAccount, TradeLeg6.mmTradingPartyAccount,
+					TradeLeg7.mmTradingPartyAccount, Intermediary16.mmAccount, Intermediary19.mmAccount, Intermediary20.mmAccount, TradeLeg8.mmTradingPartyAccount, TradeLeg10.mmTradingPartyAccount, TradeLeg9.mmTradingPartyAccount,
+					Intermediary39.mmAccount, Intermediary40.mmAccount);
 			elementContext_lazy = () -> TradePartyRole.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Account";
 			definition = "Unambiguous identification of the account used in the context of the party role.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.Account.mmTradePartyRole;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Account.mmObject();
 		}
 	};
@@ -452,19 +452,14 @@ public class TradePartyRole extends Role {
 	 */
 	public static final MMBusinessAttribute mmTradingPartyCapacity = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.TradingPartyCapacity1Choice.mmCode, com.tools20022.repository.choice.TradingPartyCapacity1Choice.mmProprietary,
-					com.tools20022.repository.msg.ConfirmationPartyDetails2.mmTradingPartyCapacity, com.tools20022.repository.choice.TradingPartyCapacity2Choice.mmCode,
-					com.tools20022.repository.choice.TradingPartyCapacity2Choice.mmProprietary, com.tools20022.repository.msg.ConfirmationPartyDetails3.mmPartyCapacity,
-					com.tools20022.repository.msg.ConfirmationPartyDetails6.mmPartyCapacity, com.tools20022.repository.msg.Intermediary9.mmTradingPartyCapacity, com.tools20022.repository.msg.TransactionDetails1.mmCapacity,
-					com.tools20022.repository.msg.TransactionDetails3.mmCapacity, com.tools20022.repository.msg.SettlementObligation4.mmTradingCapacity, com.tools20022.repository.msg.TradeLeg2.mmTradingCapacity,
-					com.tools20022.repository.msg.TradeLeg5.mmTradingCapacity, com.tools20022.repository.msg.TradeLeg1.mmTradingCapacity, com.tools20022.repository.msg.TradeLeg3.mmTradingCapacity,
-					com.tools20022.repository.msg.TradeLeg6.mmTradingCapacity, com.tools20022.repository.msg.TradeLeg4.mmTradingCapacity, com.tools20022.repository.msg.TradeLeg7.mmTradingCapacity,
-					com.tools20022.repository.msg.NetPosition2.mmTradingCapacity, com.tools20022.repository.msg.Order9.mmTradingCapacity, com.tools20022.repository.msg.TradeLeg8.mmTradingCapacity,
-					com.tools20022.repository.msg.NetPosition3.mmTradingCapacity, com.tools20022.repository.msg.TradeLeg10.mmTradingCapacity, com.tools20022.repository.msg.TradeLeg9.mmTradingCapacity,
-					com.tools20022.repository.msg.SettlementObligation8.mmTradingCapacity, com.tools20022.repository.msg.SecuritiesTransaction1.mmTradingCapacity, com.tools20022.repository.msg.Intermediary39.mmTradingPartyCapacity);
+			derivation_lazy = () -> Arrays.asList(TradingPartyCapacity1Choice.mmCode, TradingPartyCapacity1Choice.mmProprietary, ConfirmationPartyDetails2.mmTradingPartyCapacity, TradingPartyCapacity2Choice.mmCode,
+					TradingPartyCapacity2Choice.mmProprietary, ConfirmationPartyDetails3.mmPartyCapacity, ConfirmationPartyDetails6.mmPartyCapacity, Intermediary9.mmTradingPartyCapacity, TransactionDetails1.mmCapacity,
+					TransactionDetails3.mmCapacity, SettlementObligation4.mmTradingCapacity, TradeLeg2.mmTradingCapacity, TradeLeg5.mmTradingCapacity, TradeLeg1.mmTradingCapacity, TradeLeg3.mmTradingCapacity, TradeLeg6.mmTradingCapacity,
+					TradeLeg4.mmTradingCapacity, TradeLeg7.mmTradingCapacity, NetPosition2.mmTradingCapacity, Order9.mmTradingCapacity, TradeLeg8.mmTradingCapacity, NetPosition3.mmTradingCapacity, TradeLeg10.mmTradingCapacity,
+					TradeLeg9.mmTradingCapacity, SettlementObligation8.mmTradingCapacity, SecuritiesTransaction1.mmTradingCapacity, Intermediary39.mmTradingPartyCapacity);
 			elementContext_lazy = () -> TradePartyRole.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TradingPartyCapacity";
 			definition = "Specifies the role of a trading party in a transaction.";
 			maxOccurs = 1;
@@ -532,13 +527,12 @@ public class TradePartyRole extends Role {
 	 */
 	public static final MMBusinessAttribute mmBuyerOrSeller = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Option1.mmTradingPartyRole, com.tools20022.repository.msg.TradePartyIdentification2.mmRole,
-					com.tools20022.repository.msg.TradePartyIdentification4.mmBuyerOrSellerIndicator, com.tools20022.repository.choice.OptionParty1Choice.mmCode, com.tools20022.repository.choice.OptionParty1Choice.mmProprietary,
-					com.tools20022.repository.msg.ForeignExchangeSwapTransaction1.mmCounterpartyIdentification, com.tools20022.repository.msg.TradePartyIdentification7.mmBuyerOrSellerIndicator,
-					com.tools20022.repository.msg.ForeignExchangeSwapTransaction2.mmCounterpartyIdentification, com.tools20022.repository.msg.ForeignExchangeSwapTransaction3.mmCounterpartyIdentification);
+			derivation_lazy = () -> Arrays.asList(Option1.mmTradingPartyRole, TradePartyIdentification2.mmRole, TradePartyIdentification4.mmBuyerOrSellerIndicator, OptionParty1Choice.mmCode, OptionParty1Choice.mmProprietary,
+					ForeignExchangeSwapTransaction1.mmCounterpartyIdentification, TradePartyIdentification7.mmBuyerOrSellerIndicator, ForeignExchangeSwapTransaction2.mmCounterpartyIdentification,
+					ForeignExchangeSwapTransaction3.mmCounterpartyIdentification);
 			elementContext_lazy = () -> TradePartyRole.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BuyerOrSeller";
 			definition = "Specifies the party which is the buyer or the seller.";
 			maxOccurs = 1;
@@ -583,12 +577,12 @@ public class TradePartyRole extends Role {
 		{
 			elementContext_lazy = () -> TradePartyRole.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Trade";
 			definition = "Trade in which a party plays a role.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.Trade.mmTradePartyRole;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Trade.mmObject();
 		}
 	};
@@ -596,28 +590,21 @@ public class TradePartyRole extends Role {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TradePartyRole";
 				definition = "Trading party in a commercial, securities, treasury trade. This role may also represent parties which play different intermediary roles in a trade.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Account.mmTradePartyRole, com.tools20022.repository.entity.Trade.mmTradePartyRole);
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Intermediary4.mmRole, com.tools20022.repository.msg.Intermediary10.mmRole, com.tools20022.repository.msg.Intermediary10.mmExtendedRole,
-						com.tools20022.repository.msg.StandingSettlementInstruction1.mmCounterparty, com.tools20022.repository.msg.StandingSettlementInstruction4.mmCounterparty,
-						com.tools20022.repository.msg.StandingSettlementInstruction7.mmCounterparty, com.tools20022.repository.msg.StandingSettlementInstruction2.mmCounterparty,
-						com.tools20022.repository.msg.StandingSettlementInstruction3.mmCounterparty, com.tools20022.repository.msg.StandingSettlementInstruction6.mmCounterparty, com.tools20022.repository.msg.Intermediary8.mmRole,
-						com.tools20022.repository.msg.Intermediary8.mmExtendedRole, com.tools20022.repository.msg.Intermediary9.mmRole, com.tools20022.repository.msg.Intermediary9.mmExtendedRole,
-						com.tools20022.repository.msg.StandingSettlementInstruction5.mmCounterparty, com.tools20022.repository.msg.StandingSettlementInstruction8.mmCounterparty, com.tools20022.repository.msg.Intermediary16.mmRoleType,
-						com.tools20022.repository.msg.Intermediary19.mmRole, com.tools20022.repository.msg.Intermediary19.mmExtendedRole, com.tools20022.repository.msg.Intermediary20.mmRole,
-						com.tools20022.repository.msg.Intermediary20.mmExtendedRole, com.tools20022.repository.msg.Intermediary24.mmRole, com.tools20022.repository.msg.Intermediary29.mmRole,
-						com.tools20022.repository.msg.StandingSettlementInstruction11.mmCounterparty, com.tools20022.repository.msg.Intermediary36.mmRole, com.tools20022.repository.msg.StandingSettlementInstruction12.mmCounterparty,
-						com.tools20022.repository.msg.Intermediary39.mmRole, com.tools20022.repository.msg.Intermediary40.mmRole, com.tools20022.repository.choice.InvestmentFundRole2Choice.mmCode,
-						com.tools20022.repository.choice.InvestmentFundRole2Choice.mmProprietary);
+				derivationElement_lazy = () -> Arrays.asList(Intermediary4.mmRole, Intermediary10.mmRole, Intermediary10.mmExtendedRole, StandingSettlementInstruction1.mmCounterparty, StandingSettlementInstruction4.mmCounterparty,
+						StandingSettlementInstruction7.mmCounterparty, StandingSettlementInstruction2.mmCounterparty, StandingSettlementInstruction3.mmCounterparty, StandingSettlementInstruction6.mmCounterparty, Intermediary8.mmRole,
+						Intermediary8.mmExtendedRole, Intermediary9.mmRole, Intermediary9.mmExtendedRole, StandingSettlementInstruction5.mmCounterparty, StandingSettlementInstruction8.mmCounterparty, Intermediary16.mmRoleType,
+						Intermediary19.mmRole, Intermediary19.mmExtendedRole, Intermediary20.mmRole, Intermediary20.mmExtendedRole, Intermediary24.mmRole, Intermediary29.mmRole, StandingSettlementInstruction11.mmCounterparty,
+						Intermediary36.mmRole, StandingSettlementInstruction12.mmCounterparty, Intermediary39.mmRole, Intermediary40.mmRole, InvestmentFundRole2Choice.mmCode, InvestmentFundRole2Choice.mmProprietary);
 				subType_lazy = () -> Arrays.asList(InvestorRole.mmObject(), TradeOriginatorRole.mmObject(), SecuritiesTradePartyRole.mmObject(), BuyerRole.mmObject(), Borrower.mmObject(), SellerRole.mmObject(), Lender.mmObject(),
 						TradeRegulator.mmObject(), Broker.mmObject(), TreasuryTradePartyRole.mmObject(), CommercialTradePartyRole.mmObject(), ClearingExceptionPartyRole.mmObject(), QualifiedForeignIntermediary.mmObject(),
 						StockExchange.mmObject(), SellerBank.mmObject(), BuyerBank.mmObject(), AllocationPartyRole.mmObject());
 				superType_lazy = () -> Role.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.TradePartyRole.mmAccount, com.tools20022.repository.entity.TradePartyRole.mmTradingPartyCapacity,
-						com.tools20022.repository.entity.TradePartyRole.mmBuyerOrSeller, com.tools20022.repository.entity.TradePartyRole.mmTrade);
+				element_lazy = () -> Arrays.asList(TradePartyRole.mmAccount, TradePartyRole.mmTradingPartyCapacity, TradePartyRole.mmBuyerOrSeller, TradePartyRole.mmTrade);
 				derivationComponent_lazy = () -> Arrays.asList(Intermediary4.mmObject(), Intermediary10.mmObject(), ConfirmationPartyDetails4.mmObject(), Intermediary14.mmObject(), ConfirmationPartyDetails2.mmObject(),
 						ConfirmationPartyDetails3.mmObject(), ConfirmationParties3.mmObject(), ConfirmationPartyDetails1.mmObject(), ConfirmationPartyDetails6.mmObject(), ConfirmationParties4.mmObject(),
 						ConfirmationPartyDetails5.mmObject(), ConfirmationParties2.mmObject(), TradePartyIdentification2.mmObject(), TradePartyIdentification3.mmObject(), TradePartyIdentification5.mmObject(), Intermediary8.mmObject(),

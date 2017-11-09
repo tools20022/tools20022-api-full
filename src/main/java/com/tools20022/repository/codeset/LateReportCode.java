@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.LateReport1Code
+ * LateReport1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>{@linkplain com.tools20022.repository.codeset.LateReportCode#mmLate
@@ -34,13 +43,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.LateReportCode#mmLateBecausePartial
  * LateReportCode.mmLateBecausePartial}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.LateReport1Code
- * LateReport1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -90,7 +92,7 @@ public class LateReportCode {
 	 */
 	public static final MMCode mmLate = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Late";
 			definition = "The confirmation is late.";
 			owner_lazy = () -> LateReportCode.mmObject();
@@ -123,7 +125,7 @@ public class LateReportCode {
 	 */
 	public static final MMCode mmLateBecausePartial = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "LateBecausePartial";
 			definition = "The confirmation is late because the trade was executed as a number of partials.";
 			owner_lazy = () -> LateReportCode.mmObject();
@@ -134,12 +136,12 @@ public class LateReportCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("LAT1");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "LateReportCode";
 				definition = "Specifies whether a transaction report is late.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.LateReportCode.mmLate, com.tools20022.repository.codeset.LateReportCode.mmLateBecausePartial);
+				code_lazy = () -> Arrays.asList(LateReportCode.mmLate, LateReportCode.mmLateBecausePartial);
 				derivation_lazy = () -> Arrays.asList(LateReport1Code.mmObject());
 			}
 		});

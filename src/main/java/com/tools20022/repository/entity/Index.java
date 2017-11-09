@@ -17,16 +17,16 @@
 
 package com.tools20022.repository.entity;
 
-import com.tools20022.metamodel.MMBusinessAssociationEnd;
-import com.tools20022.metamodel.MMBusinessAttribute;
-import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.*;
+import com.tools20022.repository.choice.*;
 import com.tools20022.repository.codeset.CurrencyCode;
 import com.tools20022.repository.codeset.FrequencyCode;
 import com.tools20022.repository.datatype.DecimalNumber;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.PercentageRate;
-import com.tools20022.repository.msg.CreditDefaultSwapDerivative3;
+import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -40,35 +40,12 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Index#mmIndexRateBasis
- * Index.mmIndexRateBasis}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Index#mmIndexFactor
- * Index.mmIndexFactor}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Index#mmIndexPoints
- * Index.mmIndexPoints}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Index#mmIndexFixingDate
- * Index.mmIndexFixingDate}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Index#mmIdentification
- * Index.mmIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Index#mmReferenceSource
- * Index.mmReferenceSource}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Index#mmIndexRateCurrency
- * Index.mmIndexRateCurrency}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Index#mmIndexRateFrequency
- * Index.mmIndexRateFrequency}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Index#mmIndexRateMultiplier
- * Index.mmIndexRateMultiplier}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Index#mmSpread
- * Index.mmSpread}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Index#mmPortfolioBenchmark
- * Index.mmPortfolioBenchmark}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Index#mmVariableInterest
- * Index.mmVariableInterest}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Index#mmSecuritiesPricing
- * Index.mmSecuritiesPricing}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CreditDefaultSwapDerivative3
+ * CreditDefaultSwapDerivative3}</li>
  * </ul>
  * </li>
  * <li>
@@ -98,12 +75,35 @@ import java.util.List;
  * CreditDefaultSwapDerivative3.mmIndex}</li>
  * </ul>
  * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.CreditDefaultSwapDerivative3
- * CreditDefaultSwapDerivative3}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Index#mmIndexRateBasis
+ * Index.mmIndexRateBasis}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Index#mmIndexFactor
+ * Index.mmIndexFactor}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Index#mmIndexPoints
+ * Index.mmIndexPoints}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Index#mmIndexFixingDate
+ * Index.mmIndexFixingDate}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Index#mmIdentification
+ * Index.mmIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Index#mmReferenceSource
+ * Index.mmReferenceSource}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Index#mmIndexRateCurrency
+ * Index.mmIndexRateCurrency}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Index#mmIndexRateFrequency
+ * Index.mmIndexRateFrequency}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Index#mmIndexRateMultiplier
+ * Index.mmIndexRateMultiplier}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Index#mmSpread
+ * Index.mmSpread}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Index#mmPortfolioBenchmark
+ * Index.mmPortfolioBenchmark}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Index#mmVariableInterest
+ * Index.mmVariableInterest}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Index#mmSecuritiesPricing
+ * Index.mmSecuritiesPricing}</li>
  * </ul>
  * </li>
  * <li>
@@ -229,21 +229,16 @@ public class Index {
 	 */
 	public static final MMBusinessAttribute mmIndexRateBasis = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrumentAttributes8.mmIndexRateBasis, com.tools20022.repository.msg.FinancialInstrumentAttributes20.mmIndexRateBasis,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes35.mmIndexRateBasis, com.tools20022.repository.msg.FinancialInstrumentAttributes41.mmIndexRateBasis,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes4.mmIndexRateBasis, com.tools20022.repository.msg.FinancialInstrumentAttributes13.mmIndexRateBasis,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes21.mmIndexRateBasis, com.tools20022.repository.msg.FinancialInstrumentAttributes26.mmIndexRateBasis,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes36.mmIndexRateBasis, com.tools20022.repository.msg.FinancialInstrumentAttributes42.mmIndexRateBasis,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes27.mmIndexRateBasis, com.tools20022.repository.msg.FinancialInstrumentAttributes14.mmIndexRateBasis,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes30.mmIndexRateBasis, com.tools20022.repository.msg.FinancialInstrumentAttributes28.mmIndexRateBasis,
-					com.tools20022.repository.msg.InterestChange1.mmIndexRateBasis, com.tools20022.repository.msg.FinancialInstrumentAttributes31.mmIndexRateBasis,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes44.mmIndexRateBasis, com.tools20022.repository.msg.FinancialInstrumentAttributes15.mmIndexRateBasis,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes29.mmIndexRateBasis, com.tools20022.repository.msg.FinancialInstrumentAttributes2.mmIndexRateBasis,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes63.mmIndexRateBasis, com.tools20022.repository.msg.FinancialInstrumentAttributes64.mmIndexRateBasis,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes75.mmIndexRateBasis, com.tools20022.repository.msg.FinancialInstrumentAttributes78.mmIndexRateBasis);
+			derivation_lazy = () -> Arrays.asList(FinancialInstrumentAttributes8.mmIndexRateBasis, FinancialInstrumentAttributes20.mmIndexRateBasis, FinancialInstrumentAttributes35.mmIndexRateBasis,
+					FinancialInstrumentAttributes41.mmIndexRateBasis, FinancialInstrumentAttributes4.mmIndexRateBasis, FinancialInstrumentAttributes13.mmIndexRateBasis, FinancialInstrumentAttributes21.mmIndexRateBasis,
+					FinancialInstrumentAttributes26.mmIndexRateBasis, FinancialInstrumentAttributes36.mmIndexRateBasis, FinancialInstrumentAttributes42.mmIndexRateBasis, FinancialInstrumentAttributes27.mmIndexRateBasis,
+					FinancialInstrumentAttributes14.mmIndexRateBasis, FinancialInstrumentAttributes30.mmIndexRateBasis, FinancialInstrumentAttributes28.mmIndexRateBasis, InterestChange1.mmIndexRateBasis,
+					FinancialInstrumentAttributes31.mmIndexRateBasis, FinancialInstrumentAttributes44.mmIndexRateBasis, FinancialInstrumentAttributes15.mmIndexRateBasis, FinancialInstrumentAttributes29.mmIndexRateBasis,
+					FinancialInstrumentAttributes2.mmIndexRateBasis, FinancialInstrumentAttributes63.mmIndexRateBasis, FinancialInstrumentAttributes64.mmIndexRateBasis, FinancialInstrumentAttributes75.mmIndexRateBasis,
+					FinancialInstrumentAttributes78.mmIndexRateBasis);
 			elementContext_lazy = () -> Index.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "IndexRateBasis";
 			definition = "Specifies the reference rate.";
 			maxOccurs = 1;
@@ -405,28 +400,23 @@ public class Index {
 	 */
 	public static final MMBusinessAssociationEnd mmIndexFactor = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionRate4.mmIndexFactor, com.tools20022.repository.msg.CorporateActionRate10.mmIndexFactor,
-					com.tools20022.repository.msg.CorporateActionRate20.mmIndexFactor, com.tools20022.repository.msg.CorporateActionRate22.mmIndexFactor, com.tools20022.repository.msg.CorporateActionRate26.mmIndexFactor,
-					com.tools20022.repository.msg.CorporateActionRate31.mmIndexFactor, com.tools20022.repository.msg.CorporateActionRate38.mmIndexFactor, com.tools20022.repository.msg.CorporateActionRate39.mmIndexFactor,
-					com.tools20022.repository.msg.CorporateActionRate5.mmIndexFactor, com.tools20022.repository.msg.CorporateActionRate12.mmIndexFactor, com.tools20022.repository.msg.CorporateActionRate15.mmIndexFactor,
-					com.tools20022.repository.msg.CorporateActionRate18.mmIndexFactor, com.tools20022.repository.msg.CorporateActionRate25.mmIndexFactor, com.tools20022.repository.msg.CorporateActionRate30.mmIndexFactor,
-					com.tools20022.repository.msg.CorporateActionRate37.mmIndexFactor, com.tools20022.repository.msg.CorporateActionRate40.mmIndexFactor, com.tools20022.repository.msg.CorporateActionRate36.mmIndexFactor,
-					com.tools20022.repository.msg.CorporateActionRate42.mmIndexFactor, com.tools20022.repository.msg.CorporateActionRate2.mmIndexFactor, com.tools20022.repository.msg.CorporateActionRate46.mmIndexFactor,
-					com.tools20022.repository.msg.CorporateActionRate45.mmIndexFactor, com.tools20022.repository.msg.CorporateActionRate44.mmIndexFactor, com.tools20022.repository.msg.CorporateActionRate60.mmIndexFactor,
-					com.tools20022.repository.msg.CorporateActionRate64.mmIndexFactor, com.tools20022.repository.msg.CorporateActionRate57.mmIndexFactor, com.tools20022.repository.msg.CorporateActionRate68.mmIndexFactor,
-					com.tools20022.repository.msg.CorporateActionRate70.mmIndexFactor, com.tools20022.repository.msg.CorporateActionRate67.mmIndexFactor, com.tools20022.repository.msg.CorporateActionRate74.mmIndexFactor,
-					com.tools20022.repository.msg.CorporateActionRate79.mmIndexFactor, com.tools20022.repository.msg.CorporateActionRate76.mmIndexFactor, com.tools20022.repository.msg.CorporateActionRate82.mmIndexFactor,
-					com.tools20022.repository.msg.CorporateActionRate80.mmIndexFactor, com.tools20022.repository.msg.CorporateActionRate81.mmIndexFactor, com.tools20022.repository.msg.CorporateActionRate83.mmIndexFactor,
-					com.tools20022.repository.msg.CorporateActionRate84.mmIndexFactor, com.tools20022.repository.msg.CorporateActionRate85.mmIndexFactor);
+			derivation_lazy = () -> Arrays.asList(CorporateActionRate4.mmIndexFactor, CorporateActionRate10.mmIndexFactor, CorporateActionRate20.mmIndexFactor, CorporateActionRate22.mmIndexFactor, CorporateActionRate26.mmIndexFactor,
+					CorporateActionRate31.mmIndexFactor, CorporateActionRate38.mmIndexFactor, CorporateActionRate39.mmIndexFactor, CorporateActionRate5.mmIndexFactor, CorporateActionRate12.mmIndexFactor,
+					CorporateActionRate15.mmIndexFactor, CorporateActionRate18.mmIndexFactor, CorporateActionRate25.mmIndexFactor, CorporateActionRate30.mmIndexFactor, CorporateActionRate37.mmIndexFactor,
+					CorporateActionRate40.mmIndexFactor, CorporateActionRate36.mmIndexFactor, CorporateActionRate42.mmIndexFactor, CorporateActionRate2.mmIndexFactor, CorporateActionRate46.mmIndexFactor,
+					CorporateActionRate45.mmIndexFactor, CorporateActionRate44.mmIndexFactor, CorporateActionRate60.mmIndexFactor, CorporateActionRate64.mmIndexFactor, CorporateActionRate57.mmIndexFactor,
+					CorporateActionRate68.mmIndexFactor, CorporateActionRate70.mmIndexFactor, CorporateActionRate67.mmIndexFactor, CorporateActionRate74.mmIndexFactor, CorporateActionRate79.mmIndexFactor,
+					CorporateActionRate76.mmIndexFactor, CorporateActionRate82.mmIndexFactor, CorporateActionRate80.mmIndexFactor, CorporateActionRate81.mmIndexFactor, CorporateActionRate83.mmIndexFactor,
+					CorporateActionRate84.mmIndexFactor, CorporateActionRate85.mmIndexFactor);
 			elementContext_lazy = () -> Index.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "IndexFactor";
 			definition = "Index rate applied to the amount paid to adjust it for instance to inflation.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.RateAndAmount.mmIndex;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.RateAndAmount.mmObject();
 		}
 	};
@@ -548,19 +538,14 @@ public class Index {
 	 */
 	public static final MMBusinessAttribute mmIndexPoints = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PriceFormat6Choice.mmIndexPoints, com.tools20022.repository.choice.PriceFormat12Choice.mmIndexPoints,
-					com.tools20022.repository.choice.PriceFormat8Choice.mmIndexPoints, com.tools20022.repository.choice.PriceFormat16Choice.mmIndexPoints, com.tools20022.repository.choice.PriceFormat23Choice.mmIndexPoints,
-					com.tools20022.repository.choice.PriceFormat27Choice.mmIndexPoints, com.tools20022.repository.choice.PriceFormat4Choice.mmIndexPoints, com.tools20022.repository.choice.PriceFormat33Choice.mmIndexPoints,
-					com.tools20022.repository.choice.RateAndAmountFormat19Choice.mmIndexPoints, com.tools20022.repository.choice.PriceFormat32Choice.mmIndexPoints, com.tools20022.repository.choice.PriceFormat34Choice.mmIndexPoints,
-					com.tools20022.repository.choice.PriceFormat43Choice.mmIndexPoints, com.tools20022.repository.choice.RateAndAmountFormat28Choice.mmIndexPoints, com.tools20022.repository.choice.PriceFormat40Choice.mmIndexPoints,
-					com.tools20022.repository.choice.PriceFormat39Choice.mmIndexPoints, com.tools20022.repository.choice.SecuritiesTransactionPrice2Choice.mmBasisPoints, com.tools20022.repository.choice.PriceFormat48Choice.mmIndexPoints,
-					com.tools20022.repository.choice.PriceFormat51Choice.mmIndexPoints, com.tools20022.repository.choice.PriceFormat49Choice.mmIndexPoints, com.tools20022.repository.choice.PriceFormat47Choice.mmIndexPoints,
-					com.tools20022.repository.choice.PriceFormat44Choice.mmIndexPoints, com.tools20022.repository.choice.RateAndAmountFormat38Choice.mmIndexPoints, com.tools20022.repository.choice.RateAndAmountFormat50Choice.mmIndexPoints,
-					com.tools20022.repository.choice.PriceFormat56Choice.mmIndexPoints, com.tools20022.repository.choice.PriceFormat59Choice.mmIndexPoints, com.tools20022.repository.choice.PriceFormat55Choice.mmIndexPoints,
-					com.tools20022.repository.choice.PriceFormat53Choice.mmIndexPoints, com.tools20022.repository.choice.PriceFormat60Choice.mmIndexPoints);
+			derivation_lazy = () -> Arrays.asList(PriceFormat6Choice.mmIndexPoints, PriceFormat12Choice.mmIndexPoints, PriceFormat8Choice.mmIndexPoints, PriceFormat16Choice.mmIndexPoints, PriceFormat23Choice.mmIndexPoints,
+					PriceFormat27Choice.mmIndexPoints, PriceFormat4Choice.mmIndexPoints, PriceFormat33Choice.mmIndexPoints, RateAndAmountFormat19Choice.mmIndexPoints, PriceFormat32Choice.mmIndexPoints, PriceFormat34Choice.mmIndexPoints,
+					PriceFormat43Choice.mmIndexPoints, RateAndAmountFormat28Choice.mmIndexPoints, PriceFormat40Choice.mmIndexPoints, PriceFormat39Choice.mmIndexPoints, SecuritiesTransactionPrice2Choice.mmBasisPoints,
+					PriceFormat48Choice.mmIndexPoints, PriceFormat51Choice.mmIndexPoints, PriceFormat49Choice.mmIndexPoints, PriceFormat47Choice.mmIndexPoints, PriceFormat44Choice.mmIndexPoints, RateAndAmountFormat38Choice.mmIndexPoints,
+					RateAndAmountFormat50Choice.mmIndexPoints, PriceFormat56Choice.mmIndexPoints, PriceFormat59Choice.mmIndexPoints, PriceFormat55Choice.mmIndexPoints, PriceFormat53Choice.mmIndexPoints, PriceFormat60Choice.mmIndexPoints);
 			elementContext_lazy = () -> Index.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "IndexPoints";
 			definition = "Number of points above the index used to calculate a price.";
 			maxOccurs = 1;
@@ -615,11 +600,11 @@ public class Index {
 	 */
 	public static final MMBusinessAttribute mmIndexFixingDate = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionDate1.mmIndexFixingDate, com.tools20022.repository.msg.CorporateActionDate13.mmIndexFixingDate,
-					com.tools20022.repository.msg.CorporateActionDate14.mmIndexFixingDate, com.tools20022.repository.msg.CorporateActionDate21.mmIndexFixingDate, com.tools20022.repository.msg.CorporateActionDate2.mmIndexFixingDate);
+			derivation_lazy = () -> Arrays.asList(CorporateActionDate1.mmIndexFixingDate, CorporateActionDate13.mmIndexFixingDate, CorporateActionDate14.mmIndexFixingDate, CorporateActionDate21.mmIndexFixingDate,
+					CorporateActionDate2.mmIndexFixingDate);
 			elementContext_lazy = () -> Index.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "IndexFixingDate";
 			definition = "Date/time at which an index rate will be determined .";
 			maxOccurs = 1;
@@ -719,17 +704,14 @@ public class Index {
 	 */
 	public static final MMBusinessAttribute mmIdentification = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Identification2.mmIndexIdentification, com.tools20022.repository.choice.IdentificationReference8Choice.mmIndexIdentification,
-					com.tools20022.repository.choice.IdentificationReference11Choice.mmIndexIdentification, com.tools20022.repository.msg.Identification7.mmIndexIdentification,
-					com.tools20022.repository.msg.Identification6.mmIndexIdentification, com.tools20022.repository.msg.VariableInterest1Rate.mmIndex, com.tools20022.repository.msg.Identification5.mmIndexIdentification,
-					com.tools20022.repository.msg.Identification8.mmIndexIdentification, com.tools20022.repository.msg.Identification11.mmIndexIdentification, com.tools20022.repository.msg.Identification13.mmIndexIdentification,
-					com.tools20022.repository.msg.Identification9.mmIndexIdentification, com.tools20022.repository.msg.Identification3.mmIndexIdentification, com.tools20022.repository.msg.FloatingRateNote1.mmReferenceRateIndex,
-					com.tools20022.repository.msg.FloatingInterestRate4.mmReferenceRate, com.tools20022.repository.msg.Identification15.mmIndexIdentification, com.tools20022.repository.msg.Identification24.mmIndexIdentification,
-					com.tools20022.repository.msg.FloatingRateNote2.mmReferenceRateIndex, com.tools20022.repository.msg.FloatingInterestRate6.mmReferenceRate, com.tools20022.repository.msg.FloatingInterestRate8.mmReferenceRate,
-					com.tools20022.repository.msg.CreditDefaultSwapDerivative3.mmUnderlyingIndexIdentification);
+			derivation_lazy = () -> Arrays.asList(Identification2.mmIndexIdentification, IdentificationReference8Choice.mmIndexIdentification, IdentificationReference11Choice.mmIndexIdentification, Identification7.mmIndexIdentification,
+					Identification6.mmIndexIdentification, VariableInterest1Rate.mmIndex, Identification5.mmIndexIdentification, Identification8.mmIndexIdentification, Identification11.mmIndexIdentification,
+					Identification13.mmIndexIdentification, Identification9.mmIndexIdentification, Identification3.mmIndexIdentification, FloatingRateNote1.mmReferenceRateIndex, FloatingInterestRate4.mmReferenceRate,
+					Identification15.mmIndexIdentification, Identification24.mmIndexIdentification, FloatingRateNote2.mmReferenceRateIndex, FloatingInterestRate6.mmReferenceRate, FloatingInterestRate8.mmReferenceRate,
+					CreditDefaultSwapDerivative3.mmUnderlyingIndexIdentification);
 			elementContext_lazy = () -> Index.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Identification";
 			definition = "Identifies the index by a name for instance LIBOR.";
 			maxOccurs = 1;
@@ -778,10 +760,10 @@ public class Index {
 	 */
 	public static final MMBusinessAttribute mmReferenceSource = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InterestChange1.mmRateResetSource, com.tools20022.repository.msg.CreditDefaultSwapDerivative3.mmIndexName);
+			derivation_lazy = () -> Arrays.asList(InterestChange1.mmRateResetSource, CreditDefaultSwapDerivative3.mmIndexName);
 			elementContext_lazy = () -> Index.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ReferenceSource";
 			definition = "Identifies the reference source. The source can be the fixing agent or a system.";
 			maxOccurs = 1;
@@ -828,10 +810,10 @@ public class Index {
 	 */
 	public static final MMBusinessAttribute mmIndexRateCurrency = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InterestChange1.mmIndexRateCurrency);
+			derivation_lazy = () -> Arrays.asList(InterestChange1.mmIndexRateCurrency);
 			elementContext_lazy = () -> Index.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "IndexRateCurrency";
 			definition = "Specifies the currency of the reference rate for fixed income instruments where the price of the instrument is indexed to the price of an underlying benchmark.";
 			maxOccurs = 1;
@@ -875,10 +857,10 @@ public class Index {
 	 */
 	public static final MMBusinessAttribute mmIndexRateFrequency = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InterestChange1.mmIndexRateFrequency);
+			derivation_lazy = () -> Arrays.asList(InterestChange1.mmIndexRateFrequency);
 			elementContext_lazy = () -> Index.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "IndexRateFrequency";
 			definition = "Frequency at which the index changes.";
 			maxOccurs = 1;
@@ -928,11 +910,10 @@ public class Index {
 	 */
 	public static final MMBusinessAttribute mmIndexRateMultiplier = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InterestChange1.mmIndexRateMultiplier, com.tools20022.repository.msg.InterestRateContractTerm1.mmValue,
-					com.tools20022.repository.msg.InterestRateContractTerm2.mmValue);
+			derivation_lazy = () -> Arrays.asList(InterestChange1.mmIndexRateMultiplier, InterestRateContractTerm1.mmValue, InterestRateContractTerm2.mmValue);
 			elementContext_lazy = () -> Index.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "IndexRateMultiplier";
 			definition = "Multiplier for the variable rate.";
 			maxOccurs = 1;
@@ -978,13 +959,13 @@ public class Index {
 		{
 			elementContext_lazy = () -> Index.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Spread";
 			definition = "Percentage to be added to or deducted from the index rate to calculate the effective rate.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.Spread.mmIndex;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Spread.mmObject();
 		}
 	};
@@ -1026,12 +1007,12 @@ public class Index {
 		{
 			elementContext_lazy = () -> Index.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PortfolioBenchmark";
 			definition = "Portfolio benchmark which uses an index for decomposition,";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.PortfolioBenchmark.mmIndex;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.PortfolioBenchmark.mmObject();
 		}
 	};
@@ -1072,13 +1053,13 @@ public class Index {
 		{
 			elementContext_lazy = () -> Index.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "VariableInterest";
 			definition = "Variable interest which uises the index.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.VariableInterest.mmIndex;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.VariableInterest.mmObject();
 		}
 	};
@@ -1119,13 +1100,13 @@ public class Index {
 		{
 			elementContext_lazy = () -> Index.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SecuritiesPricing";
 			definition = "Pricing which uses an index.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmIndex;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 		}
 	};
@@ -1133,18 +1114,15 @@ public class Index {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Index";
 				definition = "Identifies the index.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesPricing.mmIndex, com.tools20022.repository.entity.VariableInterest.mmIndex, com.tools20022.repository.entity.RateAndAmount.mmIndex,
 						com.tools20022.repository.entity.Spread.mmIndex, com.tools20022.repository.entity.PortfolioBenchmark.mmIndex);
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FloatingInterestRate4.mmTerm, com.tools20022.repository.msg.CreditDefaultSwapDerivative3.mmIndex);
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Index.mmIndexRateBasis, com.tools20022.repository.entity.Index.mmIndexFactor, com.tools20022.repository.entity.Index.mmIndexPoints,
-						com.tools20022.repository.entity.Index.mmIndexFixingDate, com.tools20022.repository.entity.Index.mmIdentification, com.tools20022.repository.entity.Index.mmReferenceSource,
-						com.tools20022.repository.entity.Index.mmIndexRateCurrency, com.tools20022.repository.entity.Index.mmIndexRateFrequency, com.tools20022.repository.entity.Index.mmIndexRateMultiplier,
-						com.tools20022.repository.entity.Index.mmSpread, com.tools20022.repository.entity.Index.mmPortfolioBenchmark, com.tools20022.repository.entity.Index.mmVariableInterest,
-						com.tools20022.repository.entity.Index.mmSecuritiesPricing);
+				derivationElement_lazy = () -> Arrays.asList(FloatingInterestRate4.mmTerm, CreditDefaultSwapDerivative3.mmIndex);
+				element_lazy = () -> Arrays.asList(Index.mmIndexRateBasis, Index.mmIndexFactor, Index.mmIndexPoints, Index.mmIndexFixingDate, Index.mmIdentification, Index.mmReferenceSource, Index.mmIndexRateCurrency,
+						Index.mmIndexRateFrequency, Index.mmIndexRateMultiplier, Index.mmSpread, Index.mmPortfolioBenchmark, Index.mmVariableInterest, Index.mmSecuritiesPricing);
 				derivationComponent_lazy = () -> Arrays.asList(CreditDefaultSwapDerivative3.mmObject());
 			}
 		});

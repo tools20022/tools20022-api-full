@@ -19,10 +19,12 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.PersonOrOrganisation2Choice;
 import com.tools20022.repository.entity.AccountOwnerRole;
 import com.tools20022.repository.entity.BuyerRole;
 import com.tools20022.repository.entity.RolePlayer;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -112,7 +114,7 @@ public class PartyIdentification79 {
 			componentContext_lazy = () -> PartyIdentification79.mmObject();
 			isDerived = false;
 			xmlTag = "AcctOwnr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountOwner";
 			definition = "Identifies the account which is used to acquire or sell financial instruments.";
 			minOccurs = 1;
@@ -161,7 +163,7 @@ public class PartyIdentification79 {
 			componentContext_lazy = () -> PartyIdentification79.mmObject();
 			isDerived = false;
 			xmlTag = "DcsnMakr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DecisionMaker";
 			definition = "Identifies the person who makes the decision on the financial instrument, acquire in case the of a buyer or to sell in case of the seller.";
 			minOccurs = 0;
@@ -173,10 +175,10 @@ public class PartyIdentification79 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyIdentification79.mmAccountOwner, com.tools20022.repository.msg.PartyIdentification79.mmDecisionMaker);
+				messageElement_lazy = () -> Arrays.asList(PartyIdentification79.mmAccountOwner, PartyIdentification79.mmDecisionMaker);
 				trace_lazy = () -> RolePlayer.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PartyIdentification79";
 				definition = "Set of elements used to identify an account owner and the associated decision maker.";
 				previousVersion_lazy = () -> com.tools20022.repository.msg.PartyIdentification76.mmObject();

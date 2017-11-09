@@ -18,10 +18,12 @@
 package com.tools20022.repository.msgset;
 
 import com.tools20022.metamodel.MMMessageSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.auth.RegulatoryTransactionReportCancellationRequestV02;
 import com.tools20022.repository.area.auth.RegulatoryTransactionReportCancellationStatusV01;
 import com.tools20022.repository.area.auth.RegulatoryTransactionReportStatusV01;
 import com.tools20022.repository.area.auth.RegulatoryTransactionReportV02;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -71,8 +73,8 @@ public class TransactionRegulatoryReportingISOArchive {
 	final static public MMMessageSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageSet() {
 			{
-				businessProcessCatalogue_lazy = () -> com.tools20022.repository.GeneratedRepository.mmcatalogue;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				businessProcessCatalogue_lazy = () -> GeneratedRepository.mmcatalogue;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Transaction Regulatory Reporting - ISO - Archive";
 				definition = "Set of messages used to report securities transactions to regulatory bodies.\r\n";
 				messageDefinition_lazy = () -> Arrays.asList(RegulatoryTransactionReportV02.mmObject(), RegulatoryTransactionReportCancellationRequestV02.mmObject(), RegulatoryTransactionReportStatusV01.mmObject(),

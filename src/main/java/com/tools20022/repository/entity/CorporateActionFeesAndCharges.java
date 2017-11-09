@@ -17,9 +17,13 @@
 
 package com.tools20022.repository.entity;
 
+import com.tools20022.metamodel.MMAggregation;
 import com.tools20022.metamodel.MMBusinessAssociationEnd;
 import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.Charges;
+import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -33,23 +37,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionFeesAndCharges#mmCorporateAction
- * CorporateActionFeesAndCharges.mmCorporateAction}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionFeesAndCharges#mmSolicitationFee
- * CorporateActionFeesAndCharges.mmSolicitationFee}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionFeesAndCharges#mmEarlySolicitationFeeRate
- * CorporateActionFeesAndCharges.mmEarlySolicitationFeeRate}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionFeesAndCharges#mmCommission
- * CorporateActionFeesAndCharges.mmCommission}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
  * associationDomain} =
@@ -70,6 +57,23 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
  * superType} = {@linkplain com.tools20022.repository.entity.Charges Charges}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionFeesAndCharges#mmCorporateAction
+ * CorporateActionFeesAndCharges.mmCorporateAction}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionFeesAndCharges#mmSolicitationFee
+ * CorporateActionFeesAndCharges.mmSolicitationFee}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionFeesAndCharges#mmEarlySolicitationFeeRate
+ * CorporateActionFeesAndCharges.mmEarlySolicitationFeeRate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionFeesAndCharges#mmCommission
+ * CorporateActionFeesAndCharges.mmCommission}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -129,13 +133,13 @@ public class CorporateActionFeesAndCharges extends Charges {
 		{
 			elementContext_lazy = () -> CorporateActionFeesAndCharges.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CorporateAction";
 			definition = "Corporate action for which fees and charges are specified.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmCorporateActionCharge;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmObject();
 		}
 	};
@@ -378,39 +382,28 @@ public class CorporateActionFeesAndCharges extends Charges {
 	 */
 	public static final MMBusinessAssociationEnd mmSolicitationFee = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionRate4.mmSolicitationFeeRate, com.tools20022.repository.msg.CorporateActionAmounts2.mmSolicitationFees,
-					com.tools20022.repository.msg.CorporateActionRate10.mmSolicitationFeeRate, com.tools20022.repository.msg.CorporateActionAmounts5.mmSolicitationFees,
-					com.tools20022.repository.msg.CorporateActionAmounts11.mmSolicitationFees, com.tools20022.repository.msg.RateDetails2.mmSolicitationFeeRate, com.tools20022.repository.msg.CorporateActionAmounts12.mmSolicitationFees,
-					com.tools20022.repository.msg.RateDetails4.mmSolicitationFeeRate, com.tools20022.repository.msg.CorporateActionAmounts17.mmSolicitationFees, com.tools20022.repository.msg.RateDetails7.mmSolicitationFeeRate,
-					com.tools20022.repository.msg.CorporateActionAmounts20.mmSolicitationFees, com.tools20022.repository.msg.RateDetails9.mmSolicitationFeeRate, com.tools20022.repository.msg.CorporateActionAmounts23.mmSolicitationFees,
-					com.tools20022.repository.msg.RateDetails11.mmSolicitationFeeRate, com.tools20022.repository.msg.CorporateActionAmounts24.mmSolicitationFees, com.tools20022.repository.msg.RateDetails12.mmSolicitationFeeRate,
-					com.tools20022.repository.msg.CorporateActionRate5.mmSolicitationFeeRate, com.tools20022.repository.msg.CorporateActionAmounts3.mmSolicitationFees,
-					com.tools20022.repository.msg.CorporateActionRate12.mmSolicitationFeeRate, com.tools20022.repository.msg.CorporateActionAmounts6.mmSolicitationFees,
-					com.tools20022.repository.msg.CorporateActionAmounts9.mmSolicitationFees, com.tools20022.repository.msg.RateDetails3.mmSolicitationFeeRate, com.tools20022.repository.msg.CorporateActionAmounts13.mmSolicitationFees,
-					com.tools20022.repository.msg.RateDetails5.mmSolicitationFeeRate, com.tools20022.repository.msg.CorporateActionAmounts16.mmSolicitationFees, com.tools20022.repository.msg.CorporateActionAmounts19.mmSolicitationFees,
-					com.tools20022.repository.msg.CorporateActionAmounts22.mmSolicitationFees, com.tools20022.repository.msg.RateDetails10.mmSolicitationFeeRate, com.tools20022.repository.msg.CorporateActionAmounts25.mmSolicitationFees,
-					com.tools20022.repository.msg.RateDetails13.mmSolicitationFeeRate, com.tools20022.repository.msg.CorporateActionAmounts4.mmSolicitationFees, com.tools20022.repository.msg.CorporateActionAmounts7.mmSolicitationFees,
-					com.tools20022.repository.msg.CorporateActionAmounts10.mmSolicitationFees, com.tools20022.repository.msg.CorporateActionAmounts14.mmSolicitationFees,
-					com.tools20022.repository.msg.CorporateActionAmounts15.mmSolicitationFees, com.tools20022.repository.msg.CorporateActionAmounts18.mmSolicitationFees,
-					com.tools20022.repository.msg.CorporateActionAmounts21.mmSolicitationFees, com.tools20022.repository.msg.CorporateActionAmounts26.mmSolicitationFees, com.tools20022.repository.msg.CorporateActionRate2.mmSolicitationFee,
-					com.tools20022.repository.msg.CorporateActionAmounts1.mmSolicitationFees, com.tools20022.repository.msg.CorporateActionAmounts29.mmSolicitationFees, com.tools20022.repository.msg.RateDetails15.mmSolicitationFeeRate,
-					com.tools20022.repository.msg.CorporateActionAmounts27.mmSolicitationFees, com.tools20022.repository.msg.CorporateActionAmounts28.mmSolicitationFees, com.tools20022.repository.msg.RateDetails14.mmSolicitationFeeRate,
-					com.tools20022.repository.msg.CorporateActionAmounts33.mmSolicitationFees, com.tools20022.repository.msg.CorporateActionAmounts32.mmSolicitationFees, com.tools20022.repository.msg.RateDetails18.mmSolicitationFeeRate,
-					com.tools20022.repository.msg.RateDetails21.mmSolicitationFeeRate, com.tools20022.repository.msg.CorporateActionAmounts35.mmSolicitationFees, com.tools20022.repository.msg.CorporateActionAmounts37.mmSolicitationFees,
-					com.tools20022.repository.msg.RateDetails23.mmSolicitationFeeRate, com.tools20022.repository.msg.CorporateActionAmounts36.mmSolicitationFees, com.tools20022.repository.msg.RateDetails22.mmSolicitationFeeRate,
-					com.tools20022.repository.msg.CorporateActionAmounts38.mmSolicitationFees, com.tools20022.repository.msg.RateDetails24.mmSolicitationFeeRate, com.tools20022.repository.msg.CorporateActionAmounts39.mmSolicitationFees,
-					com.tools20022.repository.msg.CorporateActionAmounts41.mmSolicitationFees, com.tools20022.repository.msg.RateDetails25.mmSolicitationFeeRate, com.tools20022.repository.msg.CorporateActionAmounts40.mmSolicitationFees,
-					com.tools20022.repository.msg.RateDetails26.mmSolicitationFeeRate, com.tools20022.repository.msg.RateDetails27.mmSolicitationFeeRate, com.tools20022.repository.msg.RateDetails28.mmSolicitationFeeRate,
-					com.tools20022.repository.msg.RateDetails30.mmSolicitationFeeRate);
+			derivation_lazy = () -> Arrays.asList(CorporateActionRate4.mmSolicitationFeeRate, CorporateActionAmounts2.mmSolicitationFees, CorporateActionRate10.mmSolicitationFeeRate, CorporateActionAmounts5.mmSolicitationFees,
+					CorporateActionAmounts11.mmSolicitationFees, RateDetails2.mmSolicitationFeeRate, CorporateActionAmounts12.mmSolicitationFees, RateDetails4.mmSolicitationFeeRate, CorporateActionAmounts17.mmSolicitationFees,
+					RateDetails7.mmSolicitationFeeRate, CorporateActionAmounts20.mmSolicitationFees, RateDetails9.mmSolicitationFeeRate, CorporateActionAmounts23.mmSolicitationFees, RateDetails11.mmSolicitationFeeRate,
+					CorporateActionAmounts24.mmSolicitationFees, RateDetails12.mmSolicitationFeeRate, CorporateActionRate5.mmSolicitationFeeRate, CorporateActionAmounts3.mmSolicitationFees, CorporateActionRate12.mmSolicitationFeeRate,
+					CorporateActionAmounts6.mmSolicitationFees, CorporateActionAmounts9.mmSolicitationFees, RateDetails3.mmSolicitationFeeRate, CorporateActionAmounts13.mmSolicitationFees, RateDetails5.mmSolicitationFeeRate,
+					CorporateActionAmounts16.mmSolicitationFees, CorporateActionAmounts19.mmSolicitationFees, CorporateActionAmounts22.mmSolicitationFees, RateDetails10.mmSolicitationFeeRate, CorporateActionAmounts25.mmSolicitationFees,
+					RateDetails13.mmSolicitationFeeRate, CorporateActionAmounts4.mmSolicitationFees, CorporateActionAmounts7.mmSolicitationFees, CorporateActionAmounts10.mmSolicitationFees, CorporateActionAmounts14.mmSolicitationFees,
+					CorporateActionAmounts15.mmSolicitationFees, CorporateActionAmounts18.mmSolicitationFees, CorporateActionAmounts21.mmSolicitationFees, CorporateActionAmounts26.mmSolicitationFees, CorporateActionRate2.mmSolicitationFee,
+					CorporateActionAmounts1.mmSolicitationFees, CorporateActionAmounts29.mmSolicitationFees, RateDetails15.mmSolicitationFeeRate, CorporateActionAmounts27.mmSolicitationFees, CorporateActionAmounts28.mmSolicitationFees,
+					RateDetails14.mmSolicitationFeeRate, CorporateActionAmounts33.mmSolicitationFees, CorporateActionAmounts32.mmSolicitationFees, RateDetails18.mmSolicitationFeeRate, RateDetails21.mmSolicitationFeeRate,
+					CorporateActionAmounts35.mmSolicitationFees, CorporateActionAmounts37.mmSolicitationFees, RateDetails23.mmSolicitationFeeRate, CorporateActionAmounts36.mmSolicitationFees, RateDetails22.mmSolicitationFeeRate,
+					CorporateActionAmounts38.mmSolicitationFees, RateDetails24.mmSolicitationFeeRate, CorporateActionAmounts39.mmSolicitationFees, CorporateActionAmounts41.mmSolicitationFees, RateDetails25.mmSolicitationFeeRate,
+					CorporateActionAmounts40.mmSolicitationFees, RateDetails26.mmSolicitationFeeRate, RateDetails27.mmSolicitationFeeRate, RateDetails28.mmSolicitationFeeRate, RateDetails30.mmSolicitationFeeRate);
 			elementContext_lazy = () -> CorporateActionFeesAndCharges.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SolicitationFee";
 			definition = "Cash amount made available in a corporate event in order to encourage participation in the event or to vote with management's position. Payment is made to a third party who has solicited an entity to take part in the offer.\r\nAlso called consent fee.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.RateAndAmount.mmSolicitationFeeCorporateActionParameters;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.RateAndAmount.mmObject();
 		}
 	};
@@ -524,24 +517,20 @@ public class CorporateActionFeesAndCharges extends Charges {
 	 */
 	public static final MMBusinessAssociationEnd mmEarlySolicitationFeeRate = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RateDetails7.mmEarlySolicitationFeeRate, com.tools20022.repository.msg.RateDetails9.mmEarlySolicitationFeeRate,
-					com.tools20022.repository.msg.RateDetails11.mmEarlySolicitationFeeRate, com.tools20022.repository.msg.RateDetails12.mmEarlySolicitationFeeRate,
-					com.tools20022.repository.msg.CorporateActionRate5.mmEarlySolicitationFeeRate, com.tools20022.repository.msg.CorporateActionRate12.mmEarlySolicitationFeeRate,
-					com.tools20022.repository.msg.RateDetails3.mmEarlySolicitationFeeRate, com.tools20022.repository.msg.RateDetails5.mmEarlySolicitationFeeRate, com.tools20022.repository.msg.RateDetails10.mmEarlySolicitationFeeRate,
-					com.tools20022.repository.msg.RateDetails13.mmEarlySolicitationFeeRate, com.tools20022.repository.msg.RateDetails15.mmEarlySolicitationFeeRate, com.tools20022.repository.msg.RateDetails14.mmEarlySolicitationFeeRate,
-					com.tools20022.repository.msg.RateDetails18.mmEarlySolicitationFeeRate, com.tools20022.repository.msg.RateDetails21.mmEarlySolicitationFeeRate, com.tools20022.repository.msg.RateDetails23.mmEarlySolicitationFeeRate,
-					com.tools20022.repository.msg.RateDetails22.mmEarlySolicitationFeeRate, com.tools20022.repository.msg.RateDetails24.mmEarlySolicitationFeeRate, com.tools20022.repository.msg.RateDetails25.mmEarlySolicitationFeeRate,
-					com.tools20022.repository.msg.RateDetails26.mmEarlySolicitationFeeRate, com.tools20022.repository.msg.RateDetails27.mmEarlySolicitationFeeRate, com.tools20022.repository.msg.RateDetails28.mmEarlySolicitationFeeRate,
-					com.tools20022.repository.msg.RateDetails30.mmEarlySolicitationFeeRate);
+			derivation_lazy = () -> Arrays.asList(RateDetails7.mmEarlySolicitationFeeRate, RateDetails9.mmEarlySolicitationFeeRate, RateDetails11.mmEarlySolicitationFeeRate, RateDetails12.mmEarlySolicitationFeeRate,
+					CorporateActionRate5.mmEarlySolicitationFeeRate, CorporateActionRate12.mmEarlySolicitationFeeRate, RateDetails3.mmEarlySolicitationFeeRate, RateDetails5.mmEarlySolicitationFeeRate,
+					RateDetails10.mmEarlySolicitationFeeRate, RateDetails13.mmEarlySolicitationFeeRate, RateDetails15.mmEarlySolicitationFeeRate, RateDetails14.mmEarlySolicitationFeeRate, RateDetails18.mmEarlySolicitationFeeRate,
+					RateDetails21.mmEarlySolicitationFeeRate, RateDetails23.mmEarlySolicitationFeeRate, RateDetails22.mmEarlySolicitationFeeRate, RateDetails24.mmEarlySolicitationFeeRate, RateDetails25.mmEarlySolicitationFeeRate,
+					RateDetails26.mmEarlySolicitationFeeRate, RateDetails27.mmEarlySolicitationFeeRate, RateDetails28.mmEarlySolicitationFeeRate, RateDetails30.mmEarlySolicitationFeeRate);
 			elementContext_lazy = () -> CorporateActionFeesAndCharges.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "EarlySolicitationFeeRate";
 			definition = "Cash rate made available, as an incentive, in addition to the solicitation fee, in order to encourage early participation in an offer.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.RateAndAmount.mmEarlySolicitationFeeCorporateActionParameters;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.RateAndAmount.mmObject();
 		}
 	};
@@ -583,13 +572,13 @@ public class CorporateActionFeesAndCharges extends Charges {
 		{
 			elementContext_lazy = () -> CorporateActionFeesAndCharges.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Commission";
 			definition = "Commission associated with a corporate action.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.Commission.mmCorporateActionFeesAndCharges;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Commission.mmObject();
 		}
 	};
@@ -597,15 +586,15 @@ public class CorporateActionFeesAndCharges extends Charges {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionFeesAndCharges";
 				definition = "The definition of all the charges related to a corporate action event.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Commission.mmCorporateActionFeesAndCharges, com.tools20022.repository.entity.CorporateActionEvent.mmCorporateActionCharge,
 						com.tools20022.repository.entity.RateAndAmount.mmSolicitationFeeCorporateActionParameters, com.tools20022.repository.entity.RateAndAmount.mmEarlySolicitationFeeCorporateActionParameters);
 				superType_lazy = () -> Charges.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CorporateActionFeesAndCharges.mmCorporateAction, com.tools20022.repository.entity.CorporateActionFeesAndCharges.mmSolicitationFee,
-						com.tools20022.repository.entity.CorporateActionFeesAndCharges.mmEarlySolicitationFeeRate, com.tools20022.repository.entity.CorporateActionFeesAndCharges.mmCommission);
+				element_lazy = () -> Arrays.asList(CorporateActionFeesAndCharges.mmCorporateAction, CorporateActionFeesAndCharges.mmSolicitationFee, CorporateActionFeesAndCharges.mmEarlySolicitationFeeRate,
+						CorporateActionFeesAndCharges.mmCommission);
 			}
 		});
 		return mmObject_lazy.get();

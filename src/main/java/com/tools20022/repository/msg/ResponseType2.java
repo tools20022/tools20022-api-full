@@ -19,10 +19,12 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.Response3Code;
 import com.tools20022.repository.codeset.ResultDetail1Code;
 import com.tools20022.repository.datatype.Max140Text;
 import com.tools20022.repository.entity.Response;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -118,10 +120,10 @@ public class ResponseType2 {
 			componentContext_lazy = () -> ResponseType2.mmObject();
 			isDerived = false;
 			xmlTag = "Rslt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Result";
 			definition = "Result of the request message or advice message.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ResponseType3.mmResponse);
+			nextVersions_lazy = () -> Arrays.asList(ResponseType3.mmResponse);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Response3Code.mmObject();
@@ -170,14 +172,14 @@ public class ResponseType2 {
 	 */
 	public static final MMMessageAttribute mmResultDetails = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Response.mmResponseReason;
+			businessElementTrace_lazy = () -> Response.mmResponseReason;
 			componentContext_lazy = () -> ResponseType2.mmObject();
 			isDerived = false;
 			xmlTag = "RsltDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ResultDetails";
 			definition = "Detail of the result.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ResponseType3.mmResponseReason);
+			nextVersions_lazy = () -> Arrays.asList(ResponseType3.mmResponseReason);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ResultDetail1Code.mmObject();
@@ -224,10 +226,10 @@ public class ResponseType2 {
 			componentContext_lazy = () -> ResponseType2.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlRsltInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalResultInformation";
 			definition = "Additional information to be logged for further examination.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ResponseType3.mmAdditionalResponseInformation);
+			nextVersions_lazy = () -> Arrays.asList(ResponseType3.mmAdditionalResponseInformation);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
@@ -237,11 +239,10 @@ public class ResponseType2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ResponseType2.mmResult, com.tools20022.repository.msg.ResponseType2.mmResultDetails,
-						com.tools20022.repository.msg.ResponseType2.mmAdditionalResultInformation);
+				messageElement_lazy = () -> Arrays.asList(ResponseType2.mmResult, ResponseType2.mmResultDetails, ResponseType2.mmAdditionalResultInformation);
 				trace_lazy = () -> Response.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ResponseType2";
 				definition = "Response of a requested service.";
 				nextVersions_lazy = () -> Arrays.asList(ResponseType3.mmObject());

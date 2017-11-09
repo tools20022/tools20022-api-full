@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.TransparencyMethodologyCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -83,7 +85,7 @@ public class TransparencyMethodology2Code extends TransparencyMethodologyCode {
 	 */
 	public static final MMCode mmYear = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Year";
 			owner_lazy = () -> TransparencyMethodology2Code.mmObject();
 		}
@@ -106,7 +108,7 @@ public class TransparencyMethodology2Code extends TransparencyMethodologyCode {
 	 */
 	public static final MMCode mmSystematicInternaliser = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SystematicInternaliser";
 			owner_lazy = () -> TransparencyMethodology2Code.mmObject();
 		}
@@ -129,7 +131,7 @@ public class TransparencyMethodology2Code extends TransparencyMethodologyCode {
 	 */
 	public static final MMCode mmFirstFourWeeks = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FirstFourWeeks";
 			owner_lazy = () -> TransparencyMethodology2Code.mmObject();
 		}
@@ -152,7 +154,7 @@ public class TransparencyMethodology2Code extends TransparencyMethodologyCode {
 	 */
 	public static final MMCode mmEstimated = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Estimated";
 			owner_lazy = () -> TransparencyMethodology2Code.mmObject();
 		}
@@ -161,12 +163,11 @@ public class TransparencyMethodology2Code extends TransparencyMethodologyCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TransparencyMethodology2Code";
 				definition = "Specifies the methodology used for a transparency operation.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TransparencyMethodology2Code.mmYear, com.tools20022.repository.codeset.TransparencyMethodology2Code.mmSystematicInternaliser,
-						com.tools20022.repository.codeset.TransparencyMethodology2Code.mmFirstFourWeeks, com.tools20022.repository.codeset.TransparencyMethodology2Code.mmEstimated);
+				code_lazy = () -> Arrays.asList(TransparencyMethodology2Code.mmYear, TransparencyMethodology2Code.mmSystematicInternaliser, TransparencyMethodology2Code.mmFirstFourWeeks, TransparencyMethodology2Code.mmEstimated);
 				trace_lazy = () -> TransparencyMethodologyCode.mmObject();
 			}
 		});

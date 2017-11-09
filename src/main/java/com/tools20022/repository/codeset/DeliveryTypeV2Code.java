@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.DeliveryType2Code
+ * DeliveryType2Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -40,13 +49,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.DeliveryTypeV2Code#mmHoldInCustody
  * DeliveryTypeV2Code.mmHoldInCustody}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.DeliveryType2Code
- * DeliveryType2Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -98,7 +100,7 @@ public class DeliveryTypeV2Code {
 	 */
 	public static final MMCode mmAgainstPayment = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AgainstPayment";
 			definition = "Indicates that the delivery is against payment.";
 			owner_lazy = () -> DeliveryTypeV2Code.mmObject();
@@ -128,7 +130,7 @@ public class DeliveryTypeV2Code {
 	 */
 	public static final MMCode mmFree = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Free";
 			definition = "Indicates the delivery is free of payment.";
 			owner_lazy = () -> DeliveryTypeV2Code.mmObject();
@@ -161,7 +163,7 @@ public class DeliveryTypeV2Code {
 	 */
 	public static final MMCode mmTriparty = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Triparty";
 			definition = "Indicates that a custodian bank or international clearing organization acts as an intermediary between the two parties to the repo.";
 			owner_lazy = () -> DeliveryTypeV2Code.mmObject();
@@ -196,7 +198,7 @@ public class DeliveryTypeV2Code {
 	 */
 	public static final MMCode mmHoldInCustody = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HoldInCustody";
 			definition = "Indicates that the collateral pledged by the (cash) borrower is not actually delivered to the cash lender. Rather, it is placed in an internal account (\"held in custody\") by the borrower, for the lender, throughout the duration of the trade.";
 			owner_lazy = () -> DeliveryTypeV2Code.mmObject();
@@ -207,13 +209,12 @@ public class DeliveryTypeV2Code {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("APMT");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DeliveryTypeV2Code";
 				definition = "Describes the delivery or custody arrangement for the underlying securities.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DeliveryTypeV2Code.mmAgainstPayment, com.tools20022.repository.codeset.DeliveryTypeV2Code.mmFree,
-						com.tools20022.repository.codeset.DeliveryTypeV2Code.mmTriparty, com.tools20022.repository.codeset.DeliveryTypeV2Code.mmHoldInCustody);
+				code_lazy = () -> Arrays.asList(DeliveryTypeV2Code.mmAgainstPayment, DeliveryTypeV2Code.mmFree, DeliveryTypeV2Code.mmTriparty, DeliveryTypeV2Code.mmHoldInCustody);
 				derivation_lazy = () -> Arrays.asList(DeliveryType2Code.mmObject());
 			}
 		});

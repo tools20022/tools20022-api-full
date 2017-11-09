@@ -18,10 +18,12 @@
 package com.tools20022.repository.msgset;
 
 import com.tools20022.metamodel.MMMessageSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.camt.AccountReportingRequestV03;
 import com.tools20022.repository.area.camt.BankToCustomerAccountReportV06;
 import com.tools20022.repository.area.camt.BankToCustomerDebitCreditNotificationV06;
 import com.tools20022.repository.area.camt.BankToCustomerStatementV06;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -73,8 +75,8 @@ public class BanktoCustomerCashManagementISOLatestversion {
 	final static public MMMessageSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageSet() {
 			{
-				businessProcessCatalogue_lazy = () -> com.tools20022.repository.GeneratedRepository.mmcatalogue;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				businessProcessCatalogue_lazy = () -> GeneratedRepository.mmcatalogue;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Bank-to-Customer Cash Management - ISO - Latest version";
 				definition = "Set of messages used to request and provide account information for reconciliation and cash positioning between an account servicer and its customer.";
 				messageDefinition_lazy = () -> Arrays.asList(AccountReportingRequestV03.mmObject(), BankToCustomerAccountReportV06.mmObject(), BankToCustomerStatementV06.mmObject(), BankToCustomerDebitCreditNotificationV06.mmObject());

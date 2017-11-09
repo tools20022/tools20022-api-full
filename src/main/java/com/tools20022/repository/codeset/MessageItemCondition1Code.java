@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.MessageItemConditionCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -98,7 +100,7 @@ public class MessageItemCondition1Code extends MessageItemConditionCode {
 	 */
 	public static final MMCode mmMandatory = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Mandatory";
 			owner_lazy = () -> MessageItemCondition1Code.mmObject();
 		}
@@ -121,7 +123,7 @@ public class MessageItemCondition1Code extends MessageItemConditionCode {
 	 */
 	public static final MMCode mmConfiguredValue = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConfiguredValue";
 			owner_lazy = () -> MessageItemCondition1Code.mmObject();
 		}
@@ -144,7 +146,7 @@ public class MessageItemCondition1Code extends MessageItemConditionCode {
 	 */
 	public static final MMCode mmDefaultValue = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DefaultValue";
 			owner_lazy = () -> MessageItemCondition1Code.mmObject();
 		}
@@ -167,7 +169,7 @@ public class MessageItemCondition1Code extends MessageItemConditionCode {
 	 */
 	public static final MMCode mmAllowedValues = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AllowedValues";
 			owner_lazy = () -> MessageItemCondition1Code.mmObject();
 		}
@@ -190,7 +192,7 @@ public class MessageItemCondition1Code extends MessageItemConditionCode {
 	 */
 	public static final MMCode mmIfAvailable = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IfAvailable";
 			owner_lazy = () -> MessageItemCondition1Code.mmObject();
 		}
@@ -213,7 +215,7 @@ public class MessageItemCondition1Code extends MessageItemConditionCode {
 	 */
 	public static final MMCode mmCopy = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Copy";
 			owner_lazy = () -> MessageItemCondition1Code.mmObject();
 		}
@@ -236,7 +238,7 @@ public class MessageItemCondition1Code extends MessageItemConditionCode {
 	 */
 	public static final MMCode mmNotSupported = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotSupported";
 			owner_lazy = () -> MessageItemCondition1Code.mmObject();
 		}
@@ -245,15 +247,13 @@ public class MessageItemCondition1Code extends MessageItemConditionCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("MNDT");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MessageItemCondition1Code";
 				definition = "Rule to apply for the presence of a message item.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MessageItemCondition1Code.mmMandatory, com.tools20022.repository.codeset.MessageItemCondition1Code.mmConfiguredValue,
-						com.tools20022.repository.codeset.MessageItemCondition1Code.mmDefaultValue, com.tools20022.repository.codeset.MessageItemCondition1Code.mmAllowedValues,
-						com.tools20022.repository.codeset.MessageItemCondition1Code.mmIfAvailable, com.tools20022.repository.codeset.MessageItemCondition1Code.mmCopy,
-						com.tools20022.repository.codeset.MessageItemCondition1Code.mmNotSupported);
+				code_lazy = () -> Arrays.asList(MessageItemCondition1Code.mmMandatory, MessageItemCondition1Code.mmConfiguredValue, MessageItemCondition1Code.mmDefaultValue, MessageItemCondition1Code.mmAllowedValues,
+						MessageItemCondition1Code.mmIfAvailable, MessageItemCondition1Code.mmCopy, MessageItemCondition1Code.mmNotSupported);
 				trace_lazy = () -> MessageItemConditionCode.mmObject();
 			}
 		});

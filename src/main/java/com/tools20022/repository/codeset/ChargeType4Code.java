@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ChargeTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -79,7 +81,7 @@ public class ChargeType4Code extends ChargeTypeCode {
 	 */
 	public static final MMCode mmTransferFee = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransferFee";
 			owner_lazy = () -> ChargeType4Code.mmObject();
 		}
@@ -88,12 +90,12 @@ public class ChargeType4Code extends ChargeTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("TRAN");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ChargeType4Code";
 				definition = "Type of service for which a charge is asked or paid..";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ChargeType4Code.mmTransferFee);
+				code_lazy = () -> Arrays.asList(ChargeType4Code.mmTransferFee);
 				trace_lazy = () -> ChargeTypeCode.mmObject();
 			}
 		});

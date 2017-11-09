@@ -19,7 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.entity.Account;
+import com.tools20022.repository.entity.InstructionForMeeting;
 import com.tools20022.repository.entity.SecuritiesBalance;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -97,11 +101,11 @@ public class SecurityPosition4 {
 	 */
 	public static final MMMessageAssociationEnd mmSubAccount = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.mmSubAccount;
+			businessElementTrace_lazy = () -> Account.mmSubAccount;
 			componentContext_lazy = () -> SecurityPosition4.mmObject();
 			isDerived = false;
 			xmlTag = "SubAcct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubAccount";
 			definition = "Amount of securities that are eligible for the vote.";
 			maxOccurs = 1;
@@ -144,11 +148,11 @@ public class SecurityPosition4 {
 	 */
 	public static final MMMessageAssociationEnd mmVoteInstruction = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InstructionForMeeting.mmVoteInstruction;
+			businessElementTrace_lazy = () -> InstructionForMeeting.mmVoteInstruction;
 			componentContext_lazy = () -> SecurityPosition4.mmObject();
 			isDerived = false;
 			xmlTag = "VoteInstr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VoteInstruction";
 			definition = "Specifies how a party has voted for each agenda item.";
 			maxOccurs = 1;
@@ -161,10 +165,10 @@ public class SecurityPosition4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecurityPosition4.mmSubAccount, com.tools20022.repository.msg.SecurityPosition4.mmVoteInstruction);
+				messageElement_lazy = () -> Arrays.asList(SecurityPosition4.mmSubAccount, SecurityPosition4.mmVoteInstruction);
 				trace_lazy = () -> SecuritiesBalance.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SecurityPosition4";
 				definition = "Net position of a segregated holding, in a single security, within the overall position held in a securities account.";
 			}

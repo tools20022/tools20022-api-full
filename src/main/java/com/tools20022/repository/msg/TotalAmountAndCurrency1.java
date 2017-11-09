@@ -19,9 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ActiveCurrencyCode;
 import com.tools20022.repository.codeset.CreditDebitCode;
 import com.tools20022.repository.datatype.ImpliedCurrencyAndAmount;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -99,7 +101,7 @@ public class TotalAmountAndCurrency1 {
 			componentContext_lazy = () -> TotalAmountAndCurrency1.mmObject();
 			isDerived = false;
 			xmlTag = "TtlAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalAmount";
 			definition = "Total net amount for all operations taken into account in the report.";
 			maxOccurs = 1;
@@ -142,7 +144,7 @@ public class TotalAmountAndCurrency1 {
 			componentContext_lazy = () -> TotalAmountAndCurrency1.mmObject();
 			isDerived = false;
 			xmlTag = "CdtDbtInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditDebitIndicator";
 			definition = "Indicates whether the total amount is a credit or a debit amount.";
 			maxOccurs = 1;
@@ -184,7 +186,7 @@ public class TotalAmountAndCurrency1 {
 			componentContext_lazy = () -> TotalAmountAndCurrency1.mmObject();
 			isDerived = false;
 			xmlTag = "Ccy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Currency";
 			definition = "Currency in which the total amount is expressed.";
 			maxOccurs = 1;
@@ -196,10 +198,9 @@ public class TotalAmountAndCurrency1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TotalAmountAndCurrency1.mmTotalAmount, com.tools20022.repository.msg.TotalAmountAndCurrency1.mmCreditDebitIndicator,
-						com.tools20022.repository.msg.TotalAmountAndCurrency1.mmCurrency);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(TotalAmountAndCurrency1.mmTotalAmount, TotalAmountAndCurrency1.mmCreditDebitIndicator, TotalAmountAndCurrency1.mmCurrency);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TotalAmountAndCurrency1";
 				definition = "Set of elements providing the total amount of all operations.";
 			}

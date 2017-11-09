@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -120,7 +122,7 @@ public class UnableToApplyMissingInfo1Code {
 	 */
 	public static final MMCode mmMissingRemittanceInformation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MissingRemittanceInformation";
 			definition = "RemittanceInformation is missing.";
 			owner_lazy = () -> UnableToApplyMissingInfo1Code.mmObject();
@@ -150,7 +152,7 @@ public class UnableToApplyMissingInfo1Code {
 	 */
 	public static final MMCode mmMissingSenderToReceiverInformation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MissingSenderToReceiverInformation";
 			definition = "SenderToReceiverInformation is missing.";
 			owner_lazy = () -> UnableToApplyMissingInfo1Code.mmObject();
@@ -180,7 +182,7 @@ public class UnableToApplyMissingInfo1Code {
 	 */
 	public static final MMCode mmMissingDebtor = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MissingDebtor";
 			definition = "Debtor is missing.";
 			owner_lazy = () -> UnableToApplyMissingInfo1Code.mmObject();
@@ -210,7 +212,7 @@ public class UnableToApplyMissingInfo1Code {
 	 */
 	public static final MMCode mmMissingDebtorAccount = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MissingDebtorAccount";
 			definition = "DebtorAccount is missing.";
 			owner_lazy = () -> UnableToApplyMissingInfo1Code.mmObject();
@@ -240,7 +242,7 @@ public class UnableToApplyMissingInfo1Code {
 	 */
 	public static final MMCode mmMissingFirstAgent = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MissingFirstAgent";
 			definition = "FirstAgent is missing.";
 			owner_lazy = () -> UnableToApplyMissingInfo1Code.mmObject();
@@ -270,7 +272,7 @@ public class UnableToApplyMissingInfo1Code {
 	 */
 	public static final MMCode mmMissingAmount = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MissingAmount";
 			definition = "Amount is missing.";
 			owner_lazy = () -> UnableToApplyMissingInfo1Code.mmObject();
@@ -300,7 +302,7 @@ public class UnableToApplyMissingInfo1Code {
 	 */
 	public static final MMCode mmMissingNostroVostroAccount = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MissingNostroVostroAccount";
 			definition = "Nostro_VostroAccount is missing.";
 			owner_lazy = () -> UnableToApplyMissingInfo1Code.mmObject();
@@ -330,7 +332,7 @@ public class UnableToApplyMissingInfo1Code {
 	 */
 	public static final MMCode mmMissingIntermediary = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MissingIntermediary";
 			definition = "Intermediary is missing.";
 			owner_lazy = () -> UnableToApplyMissingInfo1Code.mmObject();
@@ -360,7 +362,7 @@ public class UnableToApplyMissingInfo1Code {
 	 */
 	public static final MMCode mmMissingReimbursementAgent1 = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MissingReimbursementAgent1";
 			definition = "ReimbursementAgent (53) is missing.";
 			owner_lazy = () -> UnableToApplyMissingInfo1Code.mmObject();
@@ -390,7 +392,7 @@ public class UnableToApplyMissingInfo1Code {
 	 */
 	public static final MMCode mmMissingReimbursementAgent2 = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MissingReimbursementAgent2";
 			definition = "ReimbursementAgent (54) is missing.";
 			owner_lazy = () -> UnableToApplyMissingInfo1Code.mmObject();
@@ -420,7 +422,7 @@ public class UnableToApplyMissingInfo1Code {
 	 */
 	public static final MMCode mmMissingReimbursementAgent = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MissingReimbursementAgent";
 			definition = "ReimbursementAgent (55) is missing.";
 			owner_lazy = () -> UnableToApplyMissingInfo1Code.mmObject();
@@ -450,7 +452,7 @@ public class UnableToApplyMissingInfo1Code {
 	 */
 	public static final MMCode mmMissingCreditor = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MissingCreditor";
 			definition = "Creditor is missing.";
 			owner_lazy = () -> UnableToApplyMissingInfo1Code.mmObject();
@@ -480,7 +482,7 @@ public class UnableToApplyMissingInfo1Code {
 	 */
 	public static final MMCode mmMissingCreditorAccount = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MissingCreditorAccount";
 			definition = "CreditorAccount is missing.";
 			owner_lazy = () -> UnableToApplyMissingInfo1Code.mmObject();
@@ -510,7 +512,7 @@ public class UnableToApplyMissingInfo1Code {
 	 */
 	public static final MMCode mmMissingInstruction = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MissingInstruction";
 			definition = "Indicates the payment instruction (MT103) is missing.";
 			owner_lazy = () -> UnableToApplyMissingInfo1Code.mmObject();
@@ -521,19 +523,15 @@ public class UnableToApplyMissingInfo1Code {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("MS01");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "UnableToApplyMissingInfo1Code";
 				definition = "Used when the unable to apply is due to missing information.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnableToApplyMissingInfo1Code.mmMissingRemittanceInformation,
-						com.tools20022.repository.codeset.UnableToApplyMissingInfo1Code.mmMissingSenderToReceiverInformation, com.tools20022.repository.codeset.UnableToApplyMissingInfo1Code.mmMissingDebtor,
-						com.tools20022.repository.codeset.UnableToApplyMissingInfo1Code.mmMissingDebtorAccount, com.tools20022.repository.codeset.UnableToApplyMissingInfo1Code.mmMissingFirstAgent,
-						com.tools20022.repository.codeset.UnableToApplyMissingInfo1Code.mmMissingAmount, com.tools20022.repository.codeset.UnableToApplyMissingInfo1Code.mmMissingNostroVostroAccount,
-						com.tools20022.repository.codeset.UnableToApplyMissingInfo1Code.mmMissingIntermediary, com.tools20022.repository.codeset.UnableToApplyMissingInfo1Code.mmMissingReimbursementAgent1,
-						com.tools20022.repository.codeset.UnableToApplyMissingInfo1Code.mmMissingReimbursementAgent2, com.tools20022.repository.codeset.UnableToApplyMissingInfo1Code.mmMissingReimbursementAgent,
-						com.tools20022.repository.codeset.UnableToApplyMissingInfo1Code.mmMissingCreditor, com.tools20022.repository.codeset.UnableToApplyMissingInfo1Code.mmMissingCreditorAccount,
-						com.tools20022.repository.codeset.UnableToApplyMissingInfo1Code.mmMissingInstruction);
+				code_lazy = () -> Arrays.asList(UnableToApplyMissingInfo1Code.mmMissingRemittanceInformation, UnableToApplyMissingInfo1Code.mmMissingSenderToReceiverInformation, UnableToApplyMissingInfo1Code.mmMissingDebtor,
+						UnableToApplyMissingInfo1Code.mmMissingDebtorAccount, UnableToApplyMissingInfo1Code.mmMissingFirstAgent, UnableToApplyMissingInfo1Code.mmMissingAmount, UnableToApplyMissingInfo1Code.mmMissingNostroVostroAccount,
+						UnableToApplyMissingInfo1Code.mmMissingIntermediary, UnableToApplyMissingInfo1Code.mmMissingReimbursementAgent1, UnableToApplyMissingInfo1Code.mmMissingReimbursementAgent2,
+						UnableToApplyMissingInfo1Code.mmMissingReimbursementAgent, UnableToApplyMissingInfo1Code.mmMissingCreditor, UnableToApplyMissingInfo1Code.mmMissingCreditorAccount, UnableToApplyMissingInfo1Code.mmMissingInstruction);
 			}
 		});
 		return mmObject_lazy.get();

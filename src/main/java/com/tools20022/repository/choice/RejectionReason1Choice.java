@@ -19,7 +19,13 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.tsmt.AmendmentRejectionNotificationV03;
+import com.tools20022.repository.area.tsmt.AmendmentRejectionV02;
+import com.tools20022.repository.area.tsmt.MisMatchRejectionNotificationV03;
+import com.tools20022.repository.area.tsmt.MisMatchRejectionV02;
 import com.tools20022.repository.entity.StatusReason;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.Reason2;
 import com.tools20022.repository.msg.RejectedElement1;
 import java.util.Arrays;
@@ -121,7 +127,7 @@ public class RejectionReason1Choice {
 			componentContext_lazy = () -> RejectionReason1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "GblRjctnRsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GlobalRejectionReason";
 			definition = "Rejection reason that applies to the whole report.";
 			maxOccurs = 1;
@@ -163,7 +169,7 @@ public class RejectionReason1Choice {
 			componentContext_lazy = () -> RejectionReason1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "RjctdElmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RejectedElement";
 			definition = "Specifies a rejection reason for each individual element of a report.";
 			minOccurs = 1;
@@ -175,12 +181,12 @@ public class RejectionReason1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.RejectionReason1Choice.mmGlobalRejectionReason, com.tools20022.repository.choice.RejectionReason1Choice.mmRejectedElement);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.AmendmentRejectionV02.mmRejectionReason, com.tools20022.repository.area.tsmt.AmendmentRejectionNotificationV03.mmRejectionReason,
-						com.tools20022.repository.area.tsmt.MisMatchRejectionV02.mmRejectionReason, com.tools20022.repository.area.tsmt.MisMatchRejectionNotificationV03.mmRejectionReason);
+				messageElement_lazy = () -> Arrays.asList(RejectionReason1Choice.mmGlobalRejectionReason, RejectionReason1Choice.mmRejectedElement);
+				messageBuildingBlock_lazy = () -> Arrays.asList(AmendmentRejectionV02.mmRejectionReason, AmendmentRejectionNotificationV03.mmRejectionReason, MisMatchRejectionV02.mmRejectionReason,
+						MisMatchRejectionNotificationV03.mmRejectionReason);
 				trace_lazy = () -> StatusReason.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RejectionReason1Choice";
 				definition = "Allows the sender of the rejection message to indicate only one rejection reason that applies to the entire rejected message.";
 			}

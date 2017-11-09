@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.ClosedStatusReason1Code
+ * ClosedStatusReason1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -35,13 +44,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.ClosedStatusReasonCode#mmAccountServicerInstruction
  * ClosedStatusReasonCode.mmAccountServicerInstruction}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.ClosedStatusReason1Code
- * ClosedStatusReason1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -88,7 +90,7 @@ public class ClosedStatusReasonCode {
 	 */
 	public static final MMCode mmClientInstruction = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClientInstruction";
 			definition = "Account is closed, following an instruction from the client, or an authorised party, to close the account.";
 			owner_lazy = () -> ClosedStatusReasonCode.mmObject();
@@ -121,7 +123,7 @@ public class ClosedStatusReasonCode {
 	 */
 	public static final MMCode mmAccountServicerInstruction = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountServicerInstruction";
 			definition = "Account is closed, following an instruction from the account servicer to close the account.";
 			owner_lazy = () -> ClosedStatusReasonCode.mmObject();
@@ -132,11 +134,11 @@ public class ClosedStatusReasonCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ClosedStatusReasonCode";
 				definition = "Specifies the reason for the closed status.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ClosedStatusReasonCode.mmClientInstruction, com.tools20022.repository.codeset.ClosedStatusReasonCode.mmAccountServicerInstruction);
+				code_lazy = () -> Arrays.asList(ClosedStatusReasonCode.mmClientInstruction, ClosedStatusReasonCode.mmAccountServicerInstruction);
 				derivation_lazy = () -> Arrays.asList(ClosedStatusReason1Code.mmObject());
 			}
 		});

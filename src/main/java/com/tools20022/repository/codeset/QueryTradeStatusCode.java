@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.QueryTradeStatus1Code
+ * QueryTradeStatus1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -47,13 +56,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.QueryTradeStatusCode#mmQueryCancellingTrade
  * QueryTradeStatusCode.mmQueryCancellingTrade}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.QueryTradeStatus1Code
- * QueryTradeStatus1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -97,7 +99,7 @@ public class QueryTradeStatusCode {
 	 */
 	public static final MMCode mmQueryAllStatus = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QueryAllStatus";
 			definition = "Query for all trades.";
 			owner_lazy = () -> QueryTradeStatusCode.mmObject();
@@ -127,7 +129,7 @@ public class QueryTradeStatusCode {
 	 */
 	public static final MMCode mmQueryNewTrade = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QueryNewTrade";
 			definition = "Query for new trades.";
 			owner_lazy = () -> QueryTradeStatusCode.mmObject();
@@ -157,7 +159,7 @@ public class QueryTradeStatusCode {
 	 */
 	public static final MMCode mmQueryCanceledTrade = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QueryCanceledTrade";
 			definition = "Query for trades have been canceled.  ";
 			owner_lazy = () -> QueryTradeStatusCode.mmObject();
@@ -187,7 +189,7 @@ public class QueryTradeStatusCode {
 	 */
 	public static final MMCode mmQueryReplacedTrade = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QueryReplacedTrade";
 			definition = "Query for trades have been replaced.  ";
 			owner_lazy = () -> QueryTradeStatusCode.mmObject();
@@ -217,7 +219,7 @@ public class QueryTradeStatusCode {
 	 */
 	public static final MMCode mmQueryEmergencyTrade = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QueryEmergencyTrade";
 			definition = "Query for emergency trades.";
 			owner_lazy = () -> QueryTradeStatusCode.mmObject();
@@ -247,7 +249,7 @@ public class QueryTradeStatusCode {
 	 */
 	public static final MMCode mmQueryCancellingTrade = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QueryCancellingTrade";
 			definition = "Query for cancelling trades.";
 			owner_lazy = () -> QueryTradeStatusCode.mmObject();
@@ -258,13 +260,12 @@ public class QueryTradeStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "QueryTradeStatusCode";
 				definition = "Specifies the inquiry status of the trade.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.QueryTradeStatusCode.mmQueryAllStatus, com.tools20022.repository.codeset.QueryTradeStatusCode.mmQueryNewTrade,
-						com.tools20022.repository.codeset.QueryTradeStatusCode.mmQueryCanceledTrade, com.tools20022.repository.codeset.QueryTradeStatusCode.mmQueryReplacedTrade,
-						com.tools20022.repository.codeset.QueryTradeStatusCode.mmQueryEmergencyTrade, com.tools20022.repository.codeset.QueryTradeStatusCode.mmQueryCancellingTrade);
+				code_lazy = () -> Arrays.asList(QueryTradeStatusCode.mmQueryAllStatus, QueryTradeStatusCode.mmQueryNewTrade, QueryTradeStatusCode.mmQueryCanceledTrade, QueryTradeStatusCode.mmQueryReplacedTrade,
+						QueryTradeStatusCode.mmQueryEmergencyTrade, QueryTradeStatusCode.mmQueryCancellingTrade);
 				derivation_lazy = () -> Arrays.asList(QueryTradeStatus1Code.mmObject());
 			}
 		});

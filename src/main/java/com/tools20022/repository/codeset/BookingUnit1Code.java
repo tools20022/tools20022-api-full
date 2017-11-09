@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.BookingUnitCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -87,7 +89,7 @@ public class BookingUnit1Code extends BookingUnitCode {
 	 */
 	public static final MMCode mmEachPartial = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EachPartial";
 			owner_lazy = () -> BookingUnit1Code.mmObject();
 		}
@@ -110,7 +112,7 @@ public class BookingUnit1Code extends BookingUnitCode {
 	 */
 	public static final MMCode mmAggregatePartial = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AggregatePartial";
 			owner_lazy = () -> BookingUnit1Code.mmObject();
 		}
@@ -133,7 +135,7 @@ public class BookingUnit1Code extends BookingUnitCode {
 	 */
 	public static final MMCode mmAggregateExecutions = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AggregateExecutions";
 			owner_lazy = () -> BookingUnit1Code.mmObject();
 		}
@@ -142,13 +144,12 @@ public class BookingUnit1Code extends BookingUnitCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("EACP");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "BookingUnit1Code";
 				definition = "Description of the method used to book single or grouped executions.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.BookingUnit1Code.mmEachPartial, com.tools20022.repository.codeset.BookingUnit1Code.mmAggregatePartial,
-						com.tools20022.repository.codeset.BookingUnit1Code.mmAggregateExecutions);
+				code_lazy = () -> Arrays.asList(BookingUnit1Code.mmEachPartial, BookingUnit1Code.mmAggregatePartial, BookingUnit1Code.mmAggregateExecutions);
 				trace_lazy = () -> BookingUnitCode.mmObject();
 			}
 		});

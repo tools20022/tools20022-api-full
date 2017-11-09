@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.InformationDistributionCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -83,7 +85,7 @@ public class InformationDistribution1Code extends InformationDistributionCode {
 	 */
 	public static final MMCode mmElectronic = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Electronic";
 			owner_lazy = () -> InformationDistribution1Code.mmObject();
 		}
@@ -106,7 +108,7 @@ public class InformationDistribution1Code extends InformationDistributionCode {
 	 */
 	public static final MMCode mmPaper = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Paper";
 			owner_lazy = () -> InformationDistribution1Code.mmObject();
 		}
@@ -115,12 +117,12 @@ public class InformationDistribution1Code extends InformationDistributionCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ELEC");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InformationDistribution1Code";
 				definition = "Specifies how information is to be distributed.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.InformationDistribution1Code.mmElectronic, com.tools20022.repository.codeset.InformationDistribution1Code.mmPaper);
+				code_lazy = () -> Arrays.asList(InformationDistribution1Code.mmElectronic, InformationDistribution1Code.mmPaper);
 				trace_lazy = () -> InformationDistributionCode.mmObject();
 			}
 		});

@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.PartiallySettledStatusReasonCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -92,7 +94,7 @@ public class PartiallySettledStatusReason1Code extends PartiallySettledStatusRea
 	 */
 	public static final MMCode mmUnitsPartiallySettled = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnitsPartiallySettled";
 			owner_lazy = () -> PartiallySettledStatusReason1Code.mmObject();
 		}
@@ -115,7 +117,7 @@ public class PartiallySettledStatusReason1Code extends PartiallySettledStatusRea
 	 */
 	public static final MMCode mmCashPartiallySettled = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashPartiallySettled";
 			owner_lazy = () -> PartiallySettledStatusReason1Code.mmObject();
 		}
@@ -138,7 +140,7 @@ public class PartiallySettledStatusReason1Code extends PartiallySettledStatusRea
 	 */
 	public static final MMCode mmUnitsCashPartiallySettled = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnitsCashPartiallySettled";
 			owner_lazy = () -> PartiallySettledStatusReason1Code.mmObject();
 		}
@@ -161,7 +163,7 @@ public class PartiallySettledStatusReason1Code extends PartiallySettledStatusRea
 	 */
 	public static final MMCode mmHoldBackPendingAudit = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HoldBackPendingAudit";
 			owner_lazy = () -> PartiallySettledStatusReason1Code.mmObject();
 		}
@@ -184,7 +186,7 @@ public class PartiallySettledStatusReason1Code extends PartiallySettledStatusRea
 	 */
 	public static final MMCode mmHoldBackLiquidation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HoldBackLiquidation";
 			owner_lazy = () -> PartiallySettledStatusReason1Code.mmObject();
 		}
@@ -193,14 +195,13 @@ public class PartiallySettledStatusReason1Code extends PartiallySettledStatusRea
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("UPST");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PartiallySettledStatusReason1Code";
 				definition = "Specifies the reason for a partially settled status.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PartiallySettledStatusReason1Code.mmUnitsPartiallySettled, com.tools20022.repository.codeset.PartiallySettledStatusReason1Code.mmCashPartiallySettled,
-						com.tools20022.repository.codeset.PartiallySettledStatusReason1Code.mmUnitsCashPartiallySettled, com.tools20022.repository.codeset.PartiallySettledStatusReason1Code.mmHoldBackPendingAudit,
-						com.tools20022.repository.codeset.PartiallySettledStatusReason1Code.mmHoldBackLiquidation);
+				code_lazy = () -> Arrays.asList(PartiallySettledStatusReason1Code.mmUnitsPartiallySettled, PartiallySettledStatusReason1Code.mmCashPartiallySettled, PartiallySettledStatusReason1Code.mmUnitsCashPartiallySettled,
+						PartiallySettledStatusReason1Code.mmHoldBackPendingAudit, PartiallySettledStatusReason1Code.mmHoldBackLiquidation);
 				trace_lazy = () -> PartiallySettledStatusReasonCode.mmObject();
 			}
 		});

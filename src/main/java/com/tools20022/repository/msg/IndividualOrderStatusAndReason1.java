@@ -17,16 +17,14 @@
 
 package com.tools20022.repository.msg;
 
-import com.tools20022.metamodel.MMMessageAssociationEnd;
-import com.tools20022.metamodel.MMMessageAttribute;
-import com.tools20022.metamodel.MMMessageComponent;
-import com.tools20022.metamodel.MMXor;
+import com.tools20022.metamodel.*;
+import com.tools20022.repository.area.setr.OrderInstructionStatusReportV02;
 import com.tools20022.repository.choice.InvestmentAccountOrFinancialInstrument1Choice;
 import com.tools20022.repository.choice.PartyIdentification2Choice;
 import com.tools20022.repository.codeset.OrderStatus2Code;
 import com.tools20022.repository.datatype.Max35Text;
-import com.tools20022.repository.entity.SecuritiesOrderStatus;
-import com.tools20022.repository.entity.SecuritiesTradeStatusReason;
+import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -157,11 +155,11 @@ public class IndividualOrderStatusAndReason1 {
 	 */
 	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrderStatus.mmOrderStatus;
+			businessElementTrace_lazy = () -> SecuritiesOrderStatus.mmOrderStatus;
 			componentContext_lazy = () -> IndividualOrderStatusAndReason1.mmObject();
 			isDerived = false;
 			xmlTag = "Sts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Status";
 			definition = "Status of the order is accepted or already executed or sent to next party or received. There is no reason attached.";
 			maxOccurs = 1;
@@ -203,11 +201,11 @@ public class IndividualOrderStatusAndReason1 {
 	 */
 	public static final MMMessageAssociationEnd mmCancelled = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.mmStatusReason;
+			businessElementTrace_lazy = () -> Status.mmStatusReason;
 			componentContext_lazy = () -> IndividualOrderStatusAndReason1.mmObject();
 			isDerived = false;
 			xmlTag = "Canc";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cancelled";
 			definition = "Status of the individual order details is cancelled.";
 			maxOccurs = 1;
@@ -256,7 +254,7 @@ public class IndividualOrderStatusAndReason1 {
 			componentContext_lazy = () -> IndividualOrderStatusAndReason1.mmObject();
 			isDerived = false;
 			xmlTag = "CondlyAccptd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConditionallyAccepted";
 			definition = "Status of the individual order details is conditionally accepted.";
 			maxOccurs = 1;
@@ -303,7 +301,7 @@ public class IndividualOrderStatusAndReason1 {
 			componentContext_lazy = () -> IndividualOrderStatusAndReason1.mmObject();
 			isDerived = false;
 			xmlTag = "InRpr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InRepair";
 			definition = "Status of the individual order details is in repair.";
 			maxOccurs = 1;
@@ -346,11 +344,11 @@ public class IndividualOrderStatusAndReason1 {
 	 */
 	public static final MMMessageAssociationEnd mmRejected = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmRejectedStatusReason;
+			businessElementTrace_lazy = () -> StatusReason.mmRejectedStatusReason;
 			componentContext_lazy = () -> IndividualOrderStatusAndReason1.mmObject();
 			isDerived = false;
 			xmlTag = "Rjctd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rejected";
 			definition = "Status of the individual order details is rejected.";
 			maxOccurs = 1;
@@ -393,11 +391,11 @@ public class IndividualOrderStatusAndReason1 {
 	 */
 	public static final MMMessageAssociationEnd mmSuspended = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrderStatus.mmSuspendedStatusReason;
+			businessElementTrace_lazy = () -> SecuritiesOrderStatus.mmSuspendedStatusReason;
 			componentContext_lazy = () -> IndividualOrderStatusAndReason1.mmObject();
 			isDerived = false;
 			xmlTag = "Sspd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Suspended";
 			definition = "Status of the individual order details is suspended.";
 			maxOccurs = 1;
@@ -447,7 +445,7 @@ public class IndividualOrderStatusAndReason1 {
 			componentContext_lazy = () -> IndividualOrderStatusAndReason1.mmObject();
 			isDerived = false;
 			xmlTag = "RprdConds";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RepairedConditions";
 			definition = "Elements from the original individual order details that have been repaired so that the order can be accepted.";
 			maxOccurs = 1;
@@ -494,11 +492,11 @@ public class IndividualOrderStatusAndReason1 {
 	 */
 	public static final MMMessageAttribute mmOrderReference = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmIdentification;
+			businessElementTrace_lazy = () -> SecuritiesOrder.mmIdentification;
 			componentContext_lazy = () -> IndividualOrderStatusAndReason1.mmObject();
 			isDerived = false;
 			xmlTag = "OrdrRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrderReference";
 			definition = "Unique and unambiguous identifier for an order, as assigned by the instructing party.";
 			maxOccurs = 1;
@@ -541,11 +539,11 @@ public class IndividualOrderStatusAndReason1 {
 	 */
 	public static final MMMessageAssociationEnd mmStatusInitiator = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> IndividualOrderStatusAndReason1.mmObject();
 			isDerived = false;
 			xmlTag = "StsInitr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusInitiator";
 			definition = "Party that initiates the status of the order.";
 			maxOccurs = 1;
@@ -590,11 +588,11 @@ public class IndividualOrderStatusAndReason1 {
 	 */
 	public static final MMMessageAssociationEnd mmInvestmentAccountOrFinancialInstrument = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrder.mmRelatedTransaction;
+			businessElementTrace_lazy = () -> InvestmentFundOrder.mmRelatedTransaction;
 			componentContext_lazy = () -> IndividualOrderStatusAndReason1.mmObject();
 			isDerived = false;
 			xmlTag = "InvstmtAcctOrFinInstrm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestmentAccountOrFinancialInstrument";
 			definition = "Choice between the investment account and the financial instrument.";
 			maxOccurs = 1;
@@ -638,11 +636,11 @@ public class IndividualOrderStatusAndReason1 {
 	 */
 	public static final MMMessageAssociationEnd mmNewDetails = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrder.mmInvestmentFundOrderExecution;
+			businessElementTrace_lazy = () -> InvestmentFundOrder.mmInvestmentFundOrderExecution;
 			componentContext_lazy = () -> IndividualOrderStatusAndReason1.mmObject();
 			isDerived = false;
 			xmlTag = "NewDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewDetails";
 			definition = "Information that has been added to the original order.";
 			maxOccurs = 1;
@@ -658,6 +656,10 @@ public class IndividualOrderStatusAndReason1 {
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
+	 * messageComponent} =
+	 * {@linkplain com.tools20022.repository.msg.IndividualOrderStatusAndReason1
+	 * IndividualOrderStatusAndReason1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getImpactedElements
 	 * impactedElements} =
 	 * <ul>
@@ -684,10 +686,6 @@ public class IndividualOrderStatusAndReason1 {
 	 * IndividualOrderStatusAndReason1.mmRepairedConditions}</li>
 	 * </ul>
 	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
-	 * messageComponent} =
-	 * {@linkplain com.tools20022.repository.msg.IndividualOrderStatusAndReason1
-	 * IndividualOrderStatusAndReason1}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -703,30 +701,26 @@ public class IndividualOrderStatusAndReason1 {
 	 */
 	public static final MMXor mmTypeOfStatusRule = new MMXor() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TypeOfStatusRule";
 			definition = "One and only one message element in the list (Status, Cancelled, ConditionallyAccepted, InRepair, Rejected, Suspended, RepairedConditions) must be present.";
 			messageComponent_lazy = () -> IndividualOrderStatusAndReason1.mmObject();
-			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IndividualOrderStatusAndReason1.mmStatus, com.tools20022.repository.msg.IndividualOrderStatusAndReason1.mmCancelled,
-					com.tools20022.repository.msg.IndividualOrderStatusAndReason1.mmConditionallyAccepted, com.tools20022.repository.msg.IndividualOrderStatusAndReason1.mmInRepair,
-					com.tools20022.repository.msg.IndividualOrderStatusAndReason1.mmRejected, com.tools20022.repository.msg.IndividualOrderStatusAndReason1.mmSuspended,
-					com.tools20022.repository.msg.IndividualOrderStatusAndReason1.mmRepairedConditions);
+			impactedElements_lazy = () -> Arrays.asList(IndividualOrderStatusAndReason1.mmStatus, IndividualOrderStatusAndReason1.mmCancelled, IndividualOrderStatusAndReason1.mmConditionallyAccepted,
+					IndividualOrderStatusAndReason1.mmInRepair, IndividualOrderStatusAndReason1.mmRejected, IndividualOrderStatusAndReason1.mmSuspended, IndividualOrderStatusAndReason1.mmRepairedConditions);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IndividualOrderStatusAndReason1.mmStatus, com.tools20022.repository.msg.IndividualOrderStatusAndReason1.mmCancelled,
-						com.tools20022.repository.msg.IndividualOrderStatusAndReason1.mmConditionallyAccepted, com.tools20022.repository.msg.IndividualOrderStatusAndReason1.mmInRepair,
-						com.tools20022.repository.msg.IndividualOrderStatusAndReason1.mmRejected, com.tools20022.repository.msg.IndividualOrderStatusAndReason1.mmSuspended,
-						com.tools20022.repository.msg.IndividualOrderStatusAndReason1.mmRepairedConditions, com.tools20022.repository.msg.IndividualOrderStatusAndReason1.mmOrderReference,
-						com.tools20022.repository.msg.IndividualOrderStatusAndReason1.mmStatusInitiator, com.tools20022.repository.msg.IndividualOrderStatusAndReason1.mmInvestmentAccountOrFinancialInstrument,
-						com.tools20022.repository.msg.IndividualOrderStatusAndReason1.mmNewDetails);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.OrderInstructionStatusReportV02.mmIndividualOrderDetailsReport);
+				messageElement_lazy = () -> Arrays.asList(IndividualOrderStatusAndReason1.mmStatus, IndividualOrderStatusAndReason1.mmCancelled, IndividualOrderStatusAndReason1.mmConditionallyAccepted,
+						IndividualOrderStatusAndReason1.mmInRepair, IndividualOrderStatusAndReason1.mmRejected, IndividualOrderStatusAndReason1.mmSuspended, IndividualOrderStatusAndReason1.mmRepairedConditions,
+						IndividualOrderStatusAndReason1.mmOrderReference, IndividualOrderStatusAndReason1.mmStatusInitiator, IndividualOrderStatusAndReason1.mmInvestmentAccountOrFinancialInstrument,
+						IndividualOrderStatusAndReason1.mmNewDetails);
+				messageBuildingBlock_lazy = () -> Arrays.asList(OrderInstructionStatusReportV02.mmIndividualOrderDetailsReport);
 				trace_lazy = () -> SecuritiesOrderStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
 						return DateFormat.getDateInstance(java.text.DateFormat.LONG).parse("September 9, 2016");
@@ -736,7 +730,7 @@ public class IndividualOrderStatusAndReason1 {
 				})).get();
 				name = "IndividualOrderStatusAndReason1";
 				definition = "Status report of the individual orders of a bulk or multiple order that was previously received.";
-				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IndividualOrderStatusAndReason1.mmTypeOfStatusRule);
+				xors_lazy = () -> Arrays.asList(IndividualOrderStatusAndReason1.mmTypeOfStatusRule);
 			}
 		});
 		return mmObject_lazy.get();

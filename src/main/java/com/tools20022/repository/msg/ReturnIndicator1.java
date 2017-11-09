@@ -19,9 +19,12 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.auth.InformationRequestResponseV01;
 import com.tools20022.repository.choice.DateOrDateTimePeriodChoice;
 import com.tools20022.repository.choice.InvestigationResult1Choice;
 import com.tools20022.repository.datatype.Max500Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -111,7 +114,7 @@ public class ReturnIndicator1 {
 			componentContext_lazy = () -> ReturnIndicator1.mmObject();
 			isDerived = false;
 			xmlTag = "RspnPrd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ResponsePeriod";
 			definition = "Specifies the dates between which period the response results relate to.";
 			maxOccurs = 1;
@@ -153,7 +156,7 @@ public class ReturnIndicator1 {
 			componentContext_lazy = () -> ReturnIndicator1.mmObject();
 			isDerived = false;
 			xmlTag = "AuthrtyReqTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AuthorityRequestType";
 			definition = "Identifies the authority request type as a code.";
 			maxOccurs = 1;
@@ -195,7 +198,7 @@ public class ReturnIndicator1 {
 			componentContext_lazy = () -> ReturnIndicator1.mmObject();
 			isDerived = false;
 			xmlTag = "InvstgtnRslt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestigationResult";
 			definition = "Provides the investigation result.";
 			maxOccurs = 1;
@@ -239,7 +242,7 @@ public class ReturnIndicator1 {
 			componentContext_lazy = () -> ReturnIndicator1.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInformation";
 			definition = "Additional information, in free text form, to complement the investigation result.";
 			maxOccurs = 1;
@@ -251,11 +254,10 @@ public class ReturnIndicator1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReturnIndicator1.mmResponsePeriod, com.tools20022.repository.msg.ReturnIndicator1.mmAuthorityRequestType,
-						com.tools20022.repository.msg.ReturnIndicator1.mmInvestigationResult, com.tools20022.repository.msg.ReturnIndicator1.mmAdditionalInformation);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.auth.InformationRequestResponseV01.mmReturnIndicator);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(ReturnIndicator1.mmResponsePeriod, ReturnIndicator1.mmAuthorityRequestType, ReturnIndicator1.mmInvestigationResult, ReturnIndicator1.mmAdditionalInformation);
+				messageBuildingBlock_lazy = () -> Arrays.asList(InformationRequestResponseV01.mmReturnIndicator);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ReturnIndicator1";
 				definition = "Provides the return indicators and the investigation result.";
 			}

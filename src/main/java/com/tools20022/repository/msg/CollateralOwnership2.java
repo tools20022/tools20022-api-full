@@ -20,9 +20,11 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.PartyIdentification100Choice;
 import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.CollateralPartyRole;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -109,10 +111,10 @@ public class CollateralOwnership2 {
 			componentContext_lazy = () -> CollateralOwnership2.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Indicates that the collateral is owned by the clearing member or not.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CollateralOwnership1.mmProprietary;
+			previousVersion_lazy = () -> CollateralOwnership1.mmProprietary;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
@@ -162,10 +164,10 @@ public class CollateralOwnership2 {
 			componentContext_lazy = () -> CollateralOwnership2.mmObject();
 			isDerived = false;
 			xmlTag = "ClntNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClientName";
 			definition = "Indicates that the client owns the collateral.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CollateralOwnership1.mmClientName;
+			previousVersion_lazy = () -> CollateralOwnership1.mmClientName;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -176,10 +178,10 @@ public class CollateralOwnership2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CollateralOwnership2.mmProprietary, com.tools20022.repository.msg.CollateralOwnership2.mmClientName);
+				messageElement_lazy = () -> Arrays.asList(CollateralOwnership2.mmProprietary, CollateralOwnership2.mmClientName);
 				trace_lazy = () -> CollateralPartyRole.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CollateralOwnership2";
 				definition = "Indicates whether the collateral is proprietarily owned or client owned.";
 				previousVersion_lazy = () -> CollateralOwnership1.mmObject();

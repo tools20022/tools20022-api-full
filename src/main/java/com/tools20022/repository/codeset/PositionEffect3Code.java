@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.PositionEffectCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -75,7 +77,7 @@ public class PositionEffect3Code extends PositionEffectCode {
 	 */
 	public static final MMCode mmFifo = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Fifo";
 			owner_lazy = () -> PositionEffect3Code.mmObject();
 		}
@@ -98,7 +100,7 @@ public class PositionEffect3Code extends PositionEffectCode {
 	 */
 	public static final MMCode mmLifo = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Lifo";
 			owner_lazy = () -> PositionEffect3Code.mmObject();
 		}
@@ -107,11 +109,11 @@ public class PositionEffect3Code extends PositionEffectCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PositionEffect3Code";
 				definition = "Specifies the order in which events are processed.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PositionEffect3Code.mmFifo, com.tools20022.repository.codeset.PositionEffect3Code.mmLifo);
+				code_lazy = () -> Arrays.asList(PositionEffect3Code.mmFifo, PositionEffect3Code.mmLifo);
 				trace_lazy = () -> PositionEffectCode.mmObject();
 			}
 		});

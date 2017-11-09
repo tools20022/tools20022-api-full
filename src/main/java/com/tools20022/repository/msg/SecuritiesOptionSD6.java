@@ -19,6 +19,7 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.DTCBaseDisbursed1Code;
 import com.tools20022.repository.codeset.DTCEntitlementCalculationMethod1Code;
 import com.tools20022.repository.codeset.ReinvestmentIncomeClassification2Code;
@@ -27,6 +28,7 @@ import com.tools20022.repository.datatype.Exact32AlphaNumericText;
 import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.datatype.Max3Text;
 import com.tools20022.repository.datatype.YesNoIndicator;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -158,11 +160,11 @@ public class SecuritiesOptionSD6 {
 			componentContext_lazy = () -> SecuritiesOptionSD6.mmObject();
 			isDerived = false;
 			xmlTag = "PlcAndNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "xPath to the element that is being extended.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesOptionSD7.mmPlaceAndName);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SecuritiesOptionSD5.mmPlaceAndName;
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesOptionSD7.mmPlaceAndName);
+			previousVersion_lazy = () -> SecuritiesOptionSD5.mmPlaceAndName;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
@@ -218,11 +220,11 @@ public class SecuritiesOptionSD6 {
 			componentContext_lazy = () -> SecuritiesOptionSD6.mmObject();
 			isDerived = false;
 			xmlTag = "DTCPayMtd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCPayMethod";
 			definition = "Indicates the type of payment. Used in stock dividends processing at DTC(The Depository Trust Corporation). Valid values list will be maintained separately from the schema. ";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesOptionSD7.mmDTCPayMethod);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SecuritiesOptionSD5.mmDTCPayMethod;
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesOptionSD7.mmDTCPayMethod);
+			previousVersion_lazy = () -> SecuritiesOptionSD5.mmDTCPayMethod;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max3Text.mmObject();
@@ -278,11 +280,11 @@ public class SecuritiesOptionSD6 {
 			componentContext_lazy = () -> SecuritiesOptionSD6.mmObject();
 			isDerived = false;
 			xmlTag = "DTCPayOrdr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCPayOrder";
 			definition = "Indicates the payment order. Used in stock dividends processing at DTC (The Depository Trust Corporation).  Valid values list will be maintained separately from the schema.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesOptionSD7.mmDTCPayOrder);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SecuritiesOptionSD5.mmDTCPayOrder;
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesOptionSD7.mmDTCPayOrder);
+			previousVersion_lazy = () -> SecuritiesOptionSD5.mmDTCPayOrder;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max3Text.mmObject();
@@ -336,11 +338,11 @@ public class SecuritiesOptionSD6 {
 			componentContext_lazy = () -> SecuritiesOptionSD6.mmObject();
 			isDerived = false;
 			xmlTag = "RinvstmtIncmClssfctn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReinvestmentIncomeClassification";
 			definition = "Income classification of the cash proceeds for dividend reinvestment .";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesOptionSD7.mmReinvestmentIncomeClassification);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SecuritiesOptionSD5.mmReinvestmentIncomeClassification;
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesOptionSD7.mmReinvestmentIncomeClassification);
+			previousVersion_lazy = () -> SecuritiesOptionSD5.mmReinvestmentIncomeClassification;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ReinvestmentIncomeClassification2Code.mmObject();
@@ -394,11 +396,11 @@ public class SecuritiesOptionSD6 {
 			componentContext_lazy = () -> SecuritiesOptionSD6.mmObject();
 			isDerived = false;
 			xmlTag = "EntitlmntClctnMtd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EntitlementCalculationMethod";
 			definition = "Indicates how the entitlements were calculated optional dividends.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesOptionSD7.mmEntitlementCalculationMethod);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SecuritiesOptionSD5.mmEntitlementCalculationMethod;
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesOptionSD7.mmEntitlementCalculationMethod);
+			previousVersion_lazy = () -> SecuritiesOptionSD5.mmEntitlementCalculationMethod;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> DTCEntitlementCalculationMethod1Code.mmObject();
@@ -451,11 +453,11 @@ public class SecuritiesOptionSD6 {
 			componentContext_lazy = () -> SecuritiesOptionSD6.mmObject();
 			isDerived = false;
 			xmlTag = "PricBsis";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PriceBasis";
 			definition = "Price is based on either base or disbursed security. ";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesOptionSD7.mmPriceBasis);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SecuritiesOptionSD5.mmPriceBasis;
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesOptionSD7.mmPriceBasis);
+			previousVersion_lazy = () -> SecuritiesOptionSD5.mmPriceBasis;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> DTCBaseDisbursed1Code.mmObject();
@@ -511,11 +513,11 @@ public class SecuritiesOptionSD6 {
 			componentContext_lazy = () -> SecuritiesOptionSD6.mmObject();
 			isDerived = false;
 			xmlTag = "DTCExitExpltnInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCExitExplanationIndicator";
 			definition = "Specifies the reason for DTC (The Depository Trust Corporation) to exit the shares. ";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesOptionSD7.mmDTCExitExplanationIndicator);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SecuritiesOptionSD5.mmDTCExitExplanationIndicator;
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesOptionSD7.mmDTCExitExplanationIndicator);
+			previousVersion_lazy = () -> SecuritiesOptionSD5.mmDTCExitExplanationIndicator;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> SecuritiesExitReason1Code.mmObject();
@@ -573,11 +575,11 @@ public class SecuritiesOptionSD6 {
 			componentContext_lazy = () -> SecuritiesOptionSD6.mmObject();
 			isDerived = false;
 			xmlTag = "ChrgFlg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChargeFlag";
 			definition = "Indicates whether a DTC (The Depository Trust Corporation) participant, using one or more payment bonds in connection with a warrant exercise, will be charged (through settlement on exercise date) the value of the upcoming interest payment on the bond(s).";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesOptionSD7.mmChargeFlag);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SecuritiesOptionSD5.mmChargeFlag;
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesOptionSD7.mmChargeFlag);
+			previousVersion_lazy = () -> SecuritiesOptionSD5.mmChargeFlag;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
@@ -637,11 +639,11 @@ public class SecuritiesOptionSD6 {
 			componentContext_lazy = () -> SecuritiesOptionSD6.mmObject();
 			isDerived = false;
 			xmlTag = "PrtctChrgFlg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProtectChargeFlag";
 			definition = "Indicates whether a charge is levied on the protect instructions at the time when the protect is submitted or at the time of the cover. Applies to warrants or rights exercise scenario where the holder must put up money with rights or warrants execution. When this flag is set to yes - charges are due at the time of the protect, when it is set to \"no\" changes are due when protect is covered.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesOptionSD7.mmProtectChargeFlag);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SecuritiesOptionSD5.mmProtectChargeFlag;
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesOptionSD7.mmProtectChargeFlag);
+			previousVersion_lazy = () -> SecuritiesOptionSD5.mmProtectChargeFlag;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
@@ -695,11 +697,11 @@ public class SecuritiesOptionSD6 {
 			componentContext_lazy = () -> SecuritiesOptionSD6.mmObject();
 			isDerived = false;
 			xmlTag = "EstmtdPricFlg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EstimatedPriceFlag";
 			definition = "Indicates whether the price from the offeror is estimated or final. ";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesOptionSD7.mmEstimatedPriceFlag);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SecuritiesOptionSD5.mmEstimatedPriceFlag;
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesOptionSD7.mmEstimatedPriceFlag);
+			previousVersion_lazy = () -> SecuritiesOptionSD5.mmEstimatedPriceFlag;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
@@ -755,11 +757,11 @@ public class SecuritiesOptionSD6 {
 			componentContext_lazy = () -> SecuritiesOptionSD6.mmObject();
 			isDerived = false;
 			xmlTag = "DTCFrctnlShrInstrPrd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCFractionalShareInstructionPeriod";
 			definition = "Time period during which instructions regarding the disposition of fractional entitlements will be accepted at DTC (The Depository Trust Corporation).";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesOptionSD7.mmDTCFractionalShareInstructionPeriod);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SecuritiesOptionSD5.mmDTCFractionalShareInstructionPeriod;
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesOptionSD7.mmDTCFractionalShareInstructionPeriod);
+			previousVersion_lazy = () -> SecuritiesOptionSD5.mmDTCFractionalShareInstructionPeriod;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.Period3.mmObject();
@@ -814,11 +816,11 @@ public class SecuritiesOptionSD6 {
 			componentContext_lazy = () -> SecuritiesOptionSD6.mmObject();
 			isDerived = false;
 			xmlTag = "DTCUSTaxInstrPrd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCUSTaxInstructionPeriod";
 			definition = "Indicates the period during which the instructions for US Tax service will be accepted at DTC (The Depository Trust Corporation).";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesOptionSD7.mmDTCUSTaxInstructionPeriod);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SecuritiesOptionSD5.mmDTCUSTaxInstructionPeriod;
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesOptionSD7.mmDTCUSTaxInstructionPeriod);
+			previousVersion_lazy = () -> SecuritiesOptionSD5.mmDTCUSTaxInstructionPeriod;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.Period3.mmObject();
@@ -875,10 +877,10 @@ public class SecuritiesOptionSD6 {
 			componentContext_lazy = () -> SecuritiesOptionSD6.mmObject();
 			isDerived = false;
 			xmlTag = "RDPRefNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RDPReferenceNumber";
 			definition = "Unique DTCC legacy reference used for matching and reconciling legacy records. The number algorhithm is as follows: Department ID (1:1), Activity Type (2:3), Cusip Country Code (5:2), Cusip (7:9), Record Date (15:8), Payable Date (22:8), Sequence Number (29:3), RDP Issue Type (31:1). \r\nUSAGE RULE: this sequence can be populated /extended to event details, option details or a movement, depending on sequence number coordinality to an event.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesOptionSD7.mmRDPReferenceNumber);
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesOptionSD7.mmRDPReferenceNumber);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Exact32AlphaNumericText.mmObject();
@@ -888,14 +890,11 @@ public class SecuritiesOptionSD6 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesOptionSD6.mmPlaceAndName, com.tools20022.repository.msg.SecuritiesOptionSD6.mmDTCPayMethod,
-						com.tools20022.repository.msg.SecuritiesOptionSD6.mmDTCPayOrder, com.tools20022.repository.msg.SecuritiesOptionSD6.mmReinvestmentIncomeClassification,
-						com.tools20022.repository.msg.SecuritiesOptionSD6.mmEntitlementCalculationMethod, com.tools20022.repository.msg.SecuritiesOptionSD6.mmPriceBasis,
-						com.tools20022.repository.msg.SecuritiesOptionSD6.mmDTCExitExplanationIndicator, com.tools20022.repository.msg.SecuritiesOptionSD6.mmChargeFlag, com.tools20022.repository.msg.SecuritiesOptionSD6.mmProtectChargeFlag,
-						com.tools20022.repository.msg.SecuritiesOptionSD6.mmEstimatedPriceFlag, com.tools20022.repository.msg.SecuritiesOptionSD6.mmDTCFractionalShareInstructionPeriod,
-						com.tools20022.repository.msg.SecuritiesOptionSD6.mmDTCUSTaxInstructionPeriod, com.tools20022.repository.msg.SecuritiesOptionSD6.mmRDPReferenceNumber);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(SecuritiesOptionSD6.mmPlaceAndName, SecuritiesOptionSD6.mmDTCPayMethod, SecuritiesOptionSD6.mmDTCPayOrder, SecuritiesOptionSD6.mmReinvestmentIncomeClassification,
+						SecuritiesOptionSD6.mmEntitlementCalculationMethod, SecuritiesOptionSD6.mmPriceBasis, SecuritiesOptionSD6.mmDTCExitExplanationIndicator, SecuritiesOptionSD6.mmChargeFlag, SecuritiesOptionSD6.mmProtectChargeFlag,
+						SecuritiesOptionSD6.mmEstimatedPriceFlag, SecuritiesOptionSD6.mmDTCFractionalShareInstructionPeriod, SecuritiesOptionSD6.mmDTCUSTaxInstructionPeriod, SecuritiesOptionSD6.mmRDPReferenceNumber);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesOptionSD6";
 				definition = "Provides additional information regarding corporate action option securities movement details.";
 				nextVersions_lazy = () -> Arrays.asList(SecuritiesOptionSD7.mmObject());

@@ -20,8 +20,10 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.Quantity40Choice;
 import com.tools20022.repository.datatype.Max350Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -96,7 +98,7 @@ public class SecuritiesQuantityDetailsSD1 {
 			componentContext_lazy = () -> SecuritiesQuantityDetailsSD1.mmObject();
 			isDerived = false;
 			xmlTag = "PlcAndNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "xPath to the element that is being extended.";
 			maxOccurs = 1;
@@ -139,7 +141,7 @@ public class SecuritiesQuantityDetailsSD1 {
 			componentContext_lazy = () -> SecuritiesQuantityDetailsSD1.mmObject();
 			isDerived = false;
 			xmlTag = "OvrsbcptQty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OversubscriptionQuantity";
 			definition = "For rights subscription events with an oversubscription feature, the quantity of the oversubscription for the given instruction.";
 			maxOccurs = 1;
@@ -152,9 +154,9 @@ public class SecuritiesQuantityDetailsSD1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesQuantityDetailsSD1.mmPlaceAndName, com.tools20022.repository.msg.SecuritiesQuantityDetailsSD1.mmOversubscriptionQuantity);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(SecuritiesQuantityDetailsSD1.mmPlaceAndName, SecuritiesQuantityDetailsSD1.mmOversubscriptionQuantity);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SecuritiesQuantityDetailsSD1";
 				definition = "Provides information about securities quantity linked to a corporate action option.";
 			}

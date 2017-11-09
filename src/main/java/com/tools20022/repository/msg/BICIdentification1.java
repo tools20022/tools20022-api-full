@@ -19,8 +19,12 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.tsmt.*;
 import com.tools20022.repository.datatype.BICIdentifier;
 import com.tools20022.repository.entity.FinancialInstitution;
+import com.tools20022.repository.entity.OrganisationIdentification;
+import com.tools20022.repository.GeneratedRepository;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -238,11 +242,11 @@ public class BICIdentification1 {
 	 */
 	public static final MMMessageAttribute mmBIC = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.mmBICFI;
+			businessElementTrace_lazy = () -> OrganisationIdentification.mmBICFI;
 			componentContext_lazy = () -> BICIdentification1.mmObject();
 			isDerived = false;
 			xmlTag = "BIC";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BIC";
 			definition = "Code allocated to a financial institution by the ISO 9362 Registration Authority as described in ISO 9362 \"Banking - Banking telecommunication messages - Business identifier code (BIC)\".";
 			maxOccurs = 1;
@@ -254,30 +258,20 @@ public class BICIdentification1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BICIdentification1.mmBIC);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.ActivityReportRequestV03.mmEntitiesToBeReported, com.tools20022.repository.area.tsmt.AmendmentAcceptanceNotificationV03.mmInitiator,
-						com.tools20022.repository.area.tsmt.AmendmentRejectionNotificationV03.mmInitiator, com.tools20022.repository.area.tsmt.BaselineMatchReportV03.mmBuyerBank,
-						com.tools20022.repository.area.tsmt.BaselineMatchReportV03.mmSellerBank, com.tools20022.repository.area.tsmt.BaselineReportV03.mmBuyerBank, com.tools20022.repository.area.tsmt.BaselineReportV03.mmSellerBank,
-						com.tools20022.repository.area.tsmt.DataSetMatchReportV03.mmBuyerBank, com.tools20022.repository.area.tsmt.DataSetMatchReportV03.mmSellerBank, com.tools20022.repository.area.tsmt.DataSetSubmissionV03.mmBuyerBank,
-						com.tools20022.repository.area.tsmt.DataSetSubmissionV03.mmSellerBank, com.tools20022.repository.area.tsmt.DeltaReportV03.mmBuyerBank, com.tools20022.repository.area.tsmt.DeltaReportV03.mmSellerBank,
-						com.tools20022.repository.area.tsmt.ForwardDataSetSubmissionReportV03.mmSubmitter, com.tools20022.repository.area.tsmt.ForwardDataSetSubmissionReportV03.mmBuyerBank,
-						com.tools20022.repository.area.tsmt.ForwardDataSetSubmissionReportV03.mmSellerBank, com.tools20022.repository.area.tsmt.StatusChangeRequestNotificationV03.mmInitiator,
-						com.tools20022.repository.area.tsmt.StatusExtensionRequestNotificationV03.mmInitiator, com.tools20022.repository.area.tsmt.StatusReportRequestV03.mmEntitiesToBeReported,
-						com.tools20022.repository.area.tsmt.IntentToPayNotificationV01.mmBuyerBank, com.tools20022.repository.area.tsmt.IntentToPayNotificationV01.mmSellerBank,
-						com.tools20022.repository.area.tsmt.ForwardIntentToPayNotificationV01.mmBuyerBank, com.tools20022.repository.area.tsmt.ForwardIntentToPayNotificationV01.mmSellerBank,
-						com.tools20022.repository.area.tsmt.SpecialNotificationV01.mmInitiator, com.tools20022.repository.area.tsmt.RoleAndBaselineAcceptanceNotificationV01.mmInitiator,
-						com.tools20022.repository.area.tsmt.RoleAndBaselineRejectionNotificationV01.mmInitiator, com.tools20022.repository.area.tsmt.DataSetSubmissionV04.mmBuyerBank,
-						com.tools20022.repository.area.tsmt.DataSetSubmissionV04.mmSellerBank, com.tools20022.repository.area.tsmt.ForwardDataSetSubmissionReportV04.mmSubmitter,
-						com.tools20022.repository.area.tsmt.ForwardDataSetSubmissionReportV04.mmBuyerBank, com.tools20022.repository.area.tsmt.ForwardDataSetSubmissionReportV04.mmSellerBank,
-						com.tools20022.repository.area.tsmt.IntentToPayNotificationV02.mmBuyerBank, com.tools20022.repository.area.tsmt.IntentToPayNotificationV02.mmSellerBank,
-						com.tools20022.repository.area.tsmt.ForwardIntentToPayNotificationV02.mmBuyerBank, com.tools20022.repository.area.tsmt.ForwardIntentToPayNotificationV02.mmSellerBank,
-						com.tools20022.repository.area.tsmt.BaselineReportV04.mmBuyerBank, com.tools20022.repository.area.tsmt.BaselineReportV04.mmSellerBank,
-						com.tools20022.repository.area.tsmt.ForwardDataSetSubmissionReportV05.mmSubmitter, com.tools20022.repository.area.tsmt.ForwardDataSetSubmissionReportV05.mmBuyerBank,
-						com.tools20022.repository.area.tsmt.ForwardDataSetSubmissionReportV05.mmSellerBank, com.tools20022.repository.area.tsmt.DataSetSubmissionV05.mmBuyerBank,
-						com.tools20022.repository.area.tsmt.DataSetSubmissionV05.mmSellerBank);
+				messageElement_lazy = () -> Arrays.asList(BICIdentification1.mmBIC);
+				messageBuildingBlock_lazy = () -> Arrays.asList(ActivityReportRequestV03.mmEntitiesToBeReported, AmendmentAcceptanceNotificationV03.mmInitiator, AmendmentRejectionNotificationV03.mmInitiator,
+						BaselineMatchReportV03.mmBuyerBank, BaselineMatchReportV03.mmSellerBank, BaselineReportV03.mmBuyerBank, BaselineReportV03.mmSellerBank, DataSetMatchReportV03.mmBuyerBank, DataSetMatchReportV03.mmSellerBank,
+						DataSetSubmissionV03.mmBuyerBank, DataSetSubmissionV03.mmSellerBank, DeltaReportV03.mmBuyerBank, DeltaReportV03.mmSellerBank, ForwardDataSetSubmissionReportV03.mmSubmitter,
+						ForwardDataSetSubmissionReportV03.mmBuyerBank, ForwardDataSetSubmissionReportV03.mmSellerBank, StatusChangeRequestNotificationV03.mmInitiator, StatusExtensionRequestNotificationV03.mmInitiator,
+						StatusReportRequestV03.mmEntitiesToBeReported, IntentToPayNotificationV01.mmBuyerBank, IntentToPayNotificationV01.mmSellerBank, ForwardIntentToPayNotificationV01.mmBuyerBank,
+						ForwardIntentToPayNotificationV01.mmSellerBank, SpecialNotificationV01.mmInitiator, RoleAndBaselineAcceptanceNotificationV01.mmInitiator, RoleAndBaselineRejectionNotificationV01.mmInitiator,
+						DataSetSubmissionV04.mmBuyerBank, DataSetSubmissionV04.mmSellerBank, ForwardDataSetSubmissionReportV04.mmSubmitter, ForwardDataSetSubmissionReportV04.mmBuyerBank, ForwardDataSetSubmissionReportV04.mmSellerBank,
+						IntentToPayNotificationV02.mmBuyerBank, IntentToPayNotificationV02.mmSellerBank, ForwardIntentToPayNotificationV02.mmBuyerBank, ForwardIntentToPayNotificationV02.mmSellerBank, BaselineReportV04.mmBuyerBank,
+						BaselineReportV04.mmSellerBank, ForwardDataSetSubmissionReportV05.mmSubmitter, ForwardDataSetSubmissionReportV05.mmBuyerBank, ForwardDataSetSubmissionReportV05.mmSellerBank, DataSetSubmissionV05.mmBuyerBank,
+						DataSetSubmissionV05.mmSellerBank);
 				trace_lazy = () -> FinancialInstitution.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
 						return DateFormat.getDateInstance(java.text.DateFormat.LONG).parse("September 9, 2016");

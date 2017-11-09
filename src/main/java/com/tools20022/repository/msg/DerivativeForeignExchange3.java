@@ -19,9 +19,12 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ActiveOrHistoricCurrencyCode;
 import com.tools20022.repository.codeset.AssetFXSubProductType1Code;
+import com.tools20022.repository.entity.Asset;
 import com.tools20022.repository.entity.Derivative;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -101,11 +104,11 @@ public class DerivativeForeignExchange3 {
 	 */
 	public static final MMMessageAttribute mmFXType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Asset.mmFinancialAssetCategory;
+			businessElementTrace_lazy = () -> Asset.mmFinancialAssetCategory;
 			componentContext_lazy = () -> DerivativeForeignExchange3.mmObject();
 			isDerived = false;
 			xmlTag = "FxTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FXType";
 			definition = "Type of the underlying currency";
 			maxOccurs = 1;
@@ -152,11 +155,11 @@ public class DerivativeForeignExchange3 {
 	 */
 	public static final MMMessageAttribute mmOtherNotionalCurrency = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Derivative.mmNotionalCurrency;
+			businessElementTrace_lazy = () -> Derivative.mmNotionalCurrency;
 			componentContext_lazy = () -> DerivativeForeignExchange3.mmObject();
 			isDerived = false;
 			xmlTag = "OthrNtnlCcy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherNotionalCurrency";
 			definition = "Underlying currency 2 of the currency pair (the currency 1 will be populated in the notional currency).\r\n";
 			maxOccurs = 1;
@@ -168,10 +171,10 @@ public class DerivativeForeignExchange3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DerivativeForeignExchange3.mmFXType, com.tools20022.repository.msg.DerivativeForeignExchange3.mmOtherNotionalCurrency);
+				messageElement_lazy = () -> Arrays.asList(DerivativeForeignExchange3.mmFXType, DerivativeForeignExchange3.mmOtherNotionalCurrency);
 				trace_lazy = () -> Derivative.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DerivativeForeignExchange3";
 				definition = "Attributes of non-financial instrument of type foreign exchange as underlying.";
 			}

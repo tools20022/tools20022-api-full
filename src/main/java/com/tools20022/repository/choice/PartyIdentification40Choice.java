@@ -20,8 +20,14 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.seev.CorporateActionMovementConfirmationV06;
+import com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV06;
+import com.tools20022.repository.area.seev.CorporateActionMovementReversalAdviceV06;
 import com.tools20022.repository.datatype.AnyBICIdentifier;
+import com.tools20022.repository.entity.OrganisationIdentification;
 import com.tools20022.repository.entity.PartyIdentificationInformation;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification19;
 import com.tools20022.repository.msg.NameAndAddress5;
 import java.text.DateFormat;
@@ -165,11 +171,11 @@ public class PartyIdentification40Choice {
 	 */
 	public static final MMMessageAttribute mmAnyBIC = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.mmAnyBIC;
+			businessElementTrace_lazy = () -> OrganisationIdentification.mmAnyBIC;
 			componentContext_lazy = () -> PartyIdentification40Choice.mmObject();
 			isDerived = false;
 			xmlTag = "AnyBIC";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AnyBIC";
 			definition = "Code allocated to a financial or non-financial institution by the ISO 9362 Registration Authority, as described in ISO 9362 \"Banking - Banking telecommunication messages - Business identifier code (BIC)\".";
 			maxOccurs = 1;
@@ -215,11 +221,11 @@ public class PartyIdentification40Choice {
 	 */
 	public static final MMMessageAssociationEnd mmProprietaryIdentification = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.mmOtherIdentification;
+			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmOtherIdentification;
 			componentContext_lazy = () -> PartyIdentification40Choice.mmObject();
 			isDerived = false;
 			xmlTag = "PrtryId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProprietaryIdentification";
 			definition = "Unique and unambiguous identifier, as assigned to a financial institution using a proprietary identification scheme.";
 			maxOccurs = 1;
@@ -266,7 +272,7 @@ public class PartyIdentification40Choice {
 			componentContext_lazy = () -> PartyIdentification40Choice.mmObject();
 			isDerived = false;
 			xmlTag = "NmAndAdr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NameAndAddress";
 			definition = "Name and address of a party.";
 			maxOccurs = 1;
@@ -279,19 +285,15 @@ public class PartyIdentification40Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PartyIdentification40Choice.mmAnyBIC, com.tools20022.repository.choice.PartyIdentification40Choice.mmProprietaryIdentification,
-						com.tools20022.repository.choice.PartyIdentification40Choice.mmNameAndAddress);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.CorporateActionMovementConfirmationV06.mmIssuerAgent,
-						com.tools20022.repository.area.seev.CorporateActionMovementConfirmationV06.mmPayingAgent, com.tools20022.repository.area.seev.CorporateActionMovementConfirmationV06.mmSubPayingAgent,
-						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV06.mmIssuerAgent, com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV06.mmPayingAgent,
-						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV06.mmSubPayingAgent, com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV06.mmRegistrar,
-						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV06.mmResellingAgent, com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV06.mmPhysicalSecuritiesAgent,
-						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV06.mmDropAgent, com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV06.mmSolicitationAgent,
-						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV06.mmInformationAgent, com.tools20022.repository.area.seev.CorporateActionMovementReversalAdviceV06.mmIssuerAgent,
-						com.tools20022.repository.area.seev.CorporateActionMovementReversalAdviceV06.mmPayingAgent, com.tools20022.repository.area.seev.CorporateActionMovementReversalAdviceV06.mmSubPayingAgent);
+				messageElement_lazy = () -> Arrays.asList(PartyIdentification40Choice.mmAnyBIC, PartyIdentification40Choice.mmProprietaryIdentification, PartyIdentification40Choice.mmNameAndAddress);
+				messageBuildingBlock_lazy = () -> Arrays.asList(CorporateActionMovementConfirmationV06.mmIssuerAgent, CorporateActionMovementConfirmationV06.mmPayingAgent, CorporateActionMovementConfirmationV06.mmSubPayingAgent,
+						CorporateActionMovementPreliminaryAdviceV06.mmIssuerAgent, CorporateActionMovementPreliminaryAdviceV06.mmPayingAgent, CorporateActionMovementPreliminaryAdviceV06.mmSubPayingAgent,
+						CorporateActionMovementPreliminaryAdviceV06.mmRegistrar, CorporateActionMovementPreliminaryAdviceV06.mmResellingAgent, CorporateActionMovementPreliminaryAdviceV06.mmPhysicalSecuritiesAgent,
+						CorporateActionMovementPreliminaryAdviceV06.mmDropAgent, CorporateActionMovementPreliminaryAdviceV06.mmSolicitationAgent, CorporateActionMovementPreliminaryAdviceV06.mmInformationAgent,
+						CorporateActionMovementReversalAdviceV06.mmIssuerAgent, CorporateActionMovementReversalAdviceV06.mmPayingAgent, CorporateActionMovementReversalAdviceV06.mmSubPayingAgent);
 				trace_lazy = () -> PartyIdentificationInformation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
 						return DateFormat.getDateInstance(java.text.DateFormat.LONG).parse("May 5, 2016");

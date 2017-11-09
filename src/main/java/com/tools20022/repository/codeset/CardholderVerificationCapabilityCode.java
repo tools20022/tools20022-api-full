@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -28,6 +30,23 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.CardholderVerificationCapability1Code
+ * CardholderVerificationCapability1Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.CardholderVerificationCapability2Code
+ * CardholderVerificationCapability2Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.CardholderVerificationCapability3Code
+ * CardholderVerificationCapability3Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.CardholderVerificationCapability4Code
+ * CardholderVerificationCapability4Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -83,23 +102,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * CardholderVerificationCapabilityCode.mmOther}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.CardholderVerificationCapability1Code
- * CardholderVerificationCapability1Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.CardholderVerificationCapability2Code
- * CardholderVerificationCapability2Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.CardholderVerificationCapability3Code
- * CardholderVerificationCapability3Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.CardholderVerificationCapability4Code
- * CardholderVerificationCapability4Code}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -149,7 +151,7 @@ public class CardholderVerificationCapabilityCode {
 	 */
 	public static final MMCode mmManualSignature = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ManualSignature";
 			definition = "Manual signature verification.";
 			owner_lazy = () -> CardholderVerificationCapabilityCode.mmObject();
@@ -179,7 +181,7 @@ public class CardholderVerificationCapabilityCode {
 	 */
 	public static final MMCode mmOnLinePIN = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "OnLinePIN";
 			definition = "Online PIN (Personal Identification Number).";
 			owner_lazy = () -> CardholderVerificationCapabilityCode.mmObject();
@@ -209,7 +211,7 @@ public class CardholderVerificationCapabilityCode {
 	 */
 	public static final MMCode mmOfflinePINClear = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "OfflinePINClear";
 			definition = "Offline PIN in clear (Personal Identification Number).";
 			owner_lazy = () -> CardholderVerificationCapabilityCode.mmObject();
@@ -239,7 +241,7 @@ public class CardholderVerificationCapabilityCode {
 	 */
 	public static final MMCode mmOfflinePINEncrypted = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "OfflinePINEncrypted";
 			definition = "Offline PIN encrypted (Personal Identification Number).";
 			owner_lazy = () -> CardholderVerificationCapabilityCode.mmObject();
@@ -269,7 +271,7 @@ public class CardholderVerificationCapabilityCode {
 	 */
 	public static final MMCode mmOfflineDigitalSignature = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "OfflineDigitalSignature";
 			definition = "Offline digital signature analysis.";
 			owner_lazy = () -> CardholderVerificationCapabilityCode.mmObject();
@@ -299,7 +301,7 @@ public class CardholderVerificationCapabilityCode {
 	 */
 	public static final MMCode mmOfflineBiometrics = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "OfflineBiometrics";
 			definition = "Offline biometrics.";
 			owner_lazy = () -> CardholderVerificationCapabilityCode.mmObject();
@@ -330,7 +332,7 @@ public class CardholderVerificationCapabilityCode {
 	 */
 	public static final MMCode mmManualVerification = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ManualVerification";
 			definition = "Other manual verification, for example passport or drivers license.";
 			owner_lazy = () -> CardholderVerificationCapabilityCode.mmObject();
@@ -360,7 +362,7 @@ public class CardholderVerificationCapabilityCode {
 	 */
 	public static final MMCode mmOfflineBiographics = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "OfflineBiographics";
 			definition = "Offline biographics.";
 			owner_lazy = () -> CardholderVerificationCapabilityCode.mmObject();
@@ -390,7 +392,7 @@ public class CardholderVerificationCapabilityCode {
 	 */
 	public static final MMCode mmAccountDigitalSignature = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AccountDigitalSignature";
 			definition = "Account based digital signature.";
 			owner_lazy = () -> CardholderVerificationCapabilityCode.mmObject();
@@ -420,7 +422,7 @@ public class CardholderVerificationCapabilityCode {
 	 */
 	public static final MMCode mmPKISignature = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PKISignature";
 			definition = "PKI (Public Key Infrastructure) based digital signature.";
 			owner_lazy = () -> CardholderVerificationCapabilityCode.mmObject();
@@ -450,7 +452,7 @@ public class CardholderVerificationCapabilityCode {
 	 */
 	public static final MMCode mmCardholderData = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CardholderData";
 			definition = "Cardholder authentication data.";
 			owner_lazy = () -> CardholderVerificationCapabilityCode.mmObject();
@@ -483,7 +485,7 @@ public class CardholderVerificationCapabilityCode {
 	 */
 	public static final MMCode mmSecureElectronicCommerce = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SecureElectronicCommerce";
 			definition = "Three domain secure (three domain secure authentication of the cardholder).";
 			owner_lazy = () -> CardholderVerificationCapabilityCode.mmObject();
@@ -513,7 +515,7 @@ public class CardholderVerificationCapabilityCode {
 	 */
 	public static final MMCode mmUnknown = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unknown";
 			definition = "Unknown cardholder verification capability.";
 			owner_lazy = () -> CardholderVerificationCapabilityCode.mmObject();
@@ -543,7 +545,7 @@ public class CardholderVerificationCapabilityCode {
 	 */
 	public static final MMCode mmPersonalCode = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PersonalCode";
 			definition = "Personal code of the customer for banking services.";
 			owner_lazy = () -> CardholderVerificationCapabilityCode.mmObject();
@@ -573,7 +575,7 @@ public class CardholderVerificationCapabilityCode {
 	 */
 	public static final MMCode mmNoCapabilities = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoCapabilities";
 			definition = "No cardholder verification capability.";
 			owner_lazy = () -> CardholderVerificationCapabilityCode.mmObject();
@@ -603,7 +605,7 @@ public class CardholderVerificationCapabilityCode {
 	 */
 	public static final MMCode mmOnLineBiometrics = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OnLineBiometrics";
 			definition = "Online biometrics.";
 			owner_lazy = () -> CardholderVerificationCapabilityCode.mmObject();
@@ -633,7 +635,7 @@ public class CardholderVerificationCapabilityCode {
 	 */
 	public static final MMCode mmOther = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
 			definition = "Other cardholder verification capabilities.";
 			owner_lazy = () -> CardholderVerificationCapabilityCode.mmObject();
@@ -644,20 +646,17 @@ public class CardholderVerificationCapabilityCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("MNSG");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CardholderVerificationCapabilityCode";
 				definition = "Cardholder verification capabilities of the POI (Personal Identification Number) performing the transaction.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CardholderVerificationCapabilityCode.mmManualSignature, com.tools20022.repository.codeset.CardholderVerificationCapabilityCode.mmOnLinePIN,
-						com.tools20022.repository.codeset.CardholderVerificationCapabilityCode.mmOfflinePINClear, com.tools20022.repository.codeset.CardholderVerificationCapabilityCode.mmOfflinePINEncrypted,
-						com.tools20022.repository.codeset.CardholderVerificationCapabilityCode.mmOfflineDigitalSignature, com.tools20022.repository.codeset.CardholderVerificationCapabilityCode.mmOfflineBiometrics,
-						com.tools20022.repository.codeset.CardholderVerificationCapabilityCode.mmManualVerification, com.tools20022.repository.codeset.CardholderVerificationCapabilityCode.mmOfflineBiographics,
-						com.tools20022.repository.codeset.CardholderVerificationCapabilityCode.mmAccountDigitalSignature, com.tools20022.repository.codeset.CardholderVerificationCapabilityCode.mmPKISignature,
-						com.tools20022.repository.codeset.CardholderVerificationCapabilityCode.mmCardholderData, com.tools20022.repository.codeset.CardholderVerificationCapabilityCode.mmSecureElectronicCommerce,
-						com.tools20022.repository.codeset.CardholderVerificationCapabilityCode.mmUnknown, com.tools20022.repository.codeset.CardholderVerificationCapabilityCode.mmPersonalCode,
-						com.tools20022.repository.codeset.CardholderVerificationCapabilityCode.mmNoCapabilities, com.tools20022.repository.codeset.CardholderVerificationCapabilityCode.mmOnLineBiometrics,
-						com.tools20022.repository.codeset.CardholderVerificationCapabilityCode.mmOther);
+				code_lazy = () -> Arrays.asList(CardholderVerificationCapabilityCode.mmManualSignature, CardholderVerificationCapabilityCode.mmOnLinePIN, CardholderVerificationCapabilityCode.mmOfflinePINClear,
+						CardholderVerificationCapabilityCode.mmOfflinePINEncrypted, CardholderVerificationCapabilityCode.mmOfflineDigitalSignature, CardholderVerificationCapabilityCode.mmOfflineBiometrics,
+						CardholderVerificationCapabilityCode.mmManualVerification, CardholderVerificationCapabilityCode.mmOfflineBiographics, CardholderVerificationCapabilityCode.mmAccountDigitalSignature,
+						CardholderVerificationCapabilityCode.mmPKISignature, CardholderVerificationCapabilityCode.mmCardholderData, CardholderVerificationCapabilityCode.mmSecureElectronicCommerce,
+						CardholderVerificationCapabilityCode.mmUnknown, CardholderVerificationCapabilityCode.mmPersonalCode, CardholderVerificationCapabilityCode.mmNoCapabilities, CardholderVerificationCapabilityCode.mmOnLineBiometrics,
+						CardholderVerificationCapabilityCode.mmOther);
 				derivation_lazy = () -> Arrays.asList(CardholderVerificationCapability1Code.mmObject(), CardholderVerificationCapability2Code.mmObject(), CardholderVerificationCapability3Code.mmObject(),
 						CardholderVerificationCapability4Code.mmObject());
 			}

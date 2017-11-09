@@ -19,7 +19,9 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Number;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -113,7 +115,7 @@ public class TransactionTotals6 {
 			componentContext_lazy = () -> TransactionTotals6.mmObject();
 			isDerived = false;
 			xmlTag = "Authstn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Authorisation";
 			definition = "Sum number of all authorisation transactions.";
 			maxOccurs = 1;
@@ -154,7 +156,7 @@ public class TransactionTotals6 {
 			componentContext_lazy = () -> TransactionTotals6.mmObject();
 			isDerived = false;
 			xmlTag = "AuthstnRvsl";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AuthorisationReversal";
 			definition = "Sum number of all reversed authorisation transactions.";
 			maxOccurs = 1;
@@ -195,7 +197,7 @@ public class TransactionTotals6 {
 			componentContext_lazy = () -> TransactionTotals6.mmObject();
 			isDerived = false;
 			xmlTag = "Nqry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Inquiry";
 			definition = "Sum number of all inquiry transactions.";
 			maxOccurs = 1;
@@ -236,7 +238,7 @@ public class TransactionTotals6 {
 			componentContext_lazy = () -> TransactionTotals6.mmObject();
 			isDerived = false;
 			xmlTag = "NqryRvsl";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InquiryReversal";
 			definition = "Sum number of all reversed inquiry transactions.";
 			maxOccurs = 1;
@@ -279,7 +281,7 @@ public class TransactionTotals6 {
 			componentContext_lazy = () -> TransactionTotals6.mmObject();
 			isDerived = false;
 			xmlTag = "Pmts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Payments";
 			definition = "Sum number of all financial presentment payment transactions processed.";
 			maxOccurs = 1;
@@ -323,7 +325,7 @@ public class TransactionTotals6 {
 			componentContext_lazy = () -> TransactionTotals6.mmObject();
 			isDerived = false;
 			xmlTag = "PmtRvsl";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentReversal";
 			definition = "Sum number of all financial presentment payment transactions which have been reversed.";
 			maxOccurs = 1;
@@ -365,7 +367,7 @@ public class TransactionTotals6 {
 			componentContext_lazy = () -> TransactionTotals6.mmObject();
 			isDerived = false;
 			xmlTag = "Trf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Transfer";
 			definition = "Sum number of all financial presentment transactions processed.";
 			maxOccurs = 1;
@@ -406,7 +408,7 @@ public class TransactionTotals6 {
 			componentContext_lazy = () -> TransactionTotals6.mmObject();
 			isDerived = false;
 			xmlTag = "TrfRvsl";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransferReversal";
 			definition = "Sum number of all reversal transactions processed.";
 			maxOccurs = 1;
@@ -447,7 +449,7 @@ public class TransactionTotals6 {
 			componentContext_lazy = () -> TransactionTotals6.mmObject();
 			isDerived = false;
 			xmlTag = "FeeColltn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FeeCollection";
 			definition = "Sum number of all fee collection transactions.";
 			maxOccurs = 1;
@@ -459,12 +461,10 @@ public class TransactionTotals6 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionTotals6.mmAuthorisation, com.tools20022.repository.msg.TransactionTotals6.mmAuthorisationReversal,
-						com.tools20022.repository.msg.TransactionTotals6.mmInquiry, com.tools20022.repository.msg.TransactionTotals6.mmInquiryReversal, com.tools20022.repository.msg.TransactionTotals6.mmPayments,
-						com.tools20022.repository.msg.TransactionTotals6.mmPaymentReversal, com.tools20022.repository.msg.TransactionTotals6.mmTransfer, com.tools20022.repository.msg.TransactionTotals6.mmTransferReversal,
-						com.tools20022.repository.msg.TransactionTotals6.mmFeeCollection);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(TransactionTotals6.mmAuthorisation, TransactionTotals6.mmAuthorisationReversal, TransactionTotals6.mmInquiry, TransactionTotals6.mmInquiryReversal, TransactionTotals6.mmPayments,
+						TransactionTotals6.mmPaymentReversal, TransactionTotals6.mmTransfer, TransactionTotals6.mmTransferReversal, TransactionTotals6.mmFeeCollection);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TransactionTotals6";
 				definition = "Additional count which may be utilised for reconciliation.";
 				previousVersion_lazy = () -> TransactionTotals4.mmObject();

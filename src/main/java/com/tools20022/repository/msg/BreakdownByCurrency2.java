@@ -20,7 +20,9 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ActiveOrHistoricCurrencyCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -109,10 +111,10 @@ public class BreakdownByCurrency2 {
 			componentContext_lazy = () -> BreakdownByCurrency2.mmObject();
 			isDerived = false;
 			xmlTag = "Ccy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Currency";
 			definition = "Currency for which the cash flow is being reported.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.BreakdownByCurrency1.mmCurrency;
+			previousVersion_lazy = () -> BreakdownByCurrency1.mmCurrency;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyCode.mmObject();
@@ -158,10 +160,10 @@ public class BreakdownByCurrency2 {
 			componentContext_lazy = () -> BreakdownByCurrency2.mmObject();
 			isDerived = false;
 			xmlTag = "CshOutFcst";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashOutForecast";
 			definition = "Cash movement out of the fund as a result of transactions in shares in an investment fund, for example, redemptions or switch-outs.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.BreakdownByCurrency1.mmCashOutForecast;
+			previousVersion_lazy = () -> BreakdownByCurrency1.mmCashOutForecast;
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.CashOutForecast5.mmObject();
@@ -207,10 +209,10 @@ public class BreakdownByCurrency2 {
 			componentContext_lazy = () -> BreakdownByCurrency2.mmObject();
 			isDerived = false;
 			xmlTag = "CshInFcst";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashInForecast";
 			definition = "Cash movement into the fund as a result of transactions in shares in an investment fund, for example, subscriptions or switch-ins.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.BreakdownByCurrency1.mmCashInForecast;
+			previousVersion_lazy = () -> BreakdownByCurrency1.mmCashInForecast;
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.CashInForecast5.mmObject();
@@ -256,10 +258,10 @@ public class BreakdownByCurrency2 {
 			componentContext_lazy = () -> BreakdownByCurrency2.mmObject();
 			isDerived = false;
 			xmlTag = "NetCshFcst";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetCashForecast";
 			definition = "Net cash as a result of the cash-in and cash-out flows specified for the currency.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.BreakdownByCurrency1.mmNetCashForecast;
+			previousVersion_lazy = () -> BreakdownByCurrency1.mmNetCashForecast;
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.NetCashForecast4.mmObject();
@@ -269,10 +271,9 @@ public class BreakdownByCurrency2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BreakdownByCurrency2.mmCurrency, com.tools20022.repository.msg.BreakdownByCurrency2.mmCashOutForecast,
-						com.tools20022.repository.msg.BreakdownByCurrency2.mmCashInForecast, com.tools20022.repository.msg.BreakdownByCurrency2.mmNetCashForecast);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(BreakdownByCurrency2.mmCurrency, BreakdownByCurrency2.mmCashOutForecast, BreakdownByCurrency2.mmCashInForecast, BreakdownByCurrency2.mmNetCashForecast);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "BreakdownByCurrency2";
 				definition = "Specifies the cash-in and cash-out flows by currency.";
 				previousVersion_lazy = () -> BreakdownByCurrency1.mmObject();

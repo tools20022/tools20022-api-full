@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.SpecialCollateralCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -83,7 +85,7 @@ public class SpecialCollateral2Code extends SpecialCollateralCode {
 	 */
 	public static final MMCode mmGeneralCollateral = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GeneralCollateral";
 			owner_lazy = () -> SpecialCollateral2Code.mmObject();
 		}
@@ -106,7 +108,7 @@ public class SpecialCollateral2Code extends SpecialCollateralCode {
 	 */
 	public static final MMCode mmSpecialCollateral = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SpecialCollateral";
 			owner_lazy = () -> SpecialCollateral2Code.mmObject();
 		}
@@ -129,7 +131,7 @@ public class SpecialCollateral2Code extends SpecialCollateralCode {
 	 */
 	public static final MMCode mmMatchedAndReverseRepurchaseAgreement = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MatchedAndReverseRepurchaseAgreement";
 			owner_lazy = () -> SpecialCollateral2Code.mmObject();
 		}
@@ -138,12 +140,11 @@ public class SpecialCollateral2Code extends SpecialCollateralCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SpecialCollateral2Code";
 				definition = "Specifies the collateral type against which all repurchase agreements are conducted.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SpecialCollateral2Code.mmGeneralCollateral, com.tools20022.repository.codeset.SpecialCollateral2Code.mmSpecialCollateral,
-						com.tools20022.repository.codeset.SpecialCollateral2Code.mmMatchedAndReverseRepurchaseAgreement);
+				code_lazy = () -> Arrays.asList(SpecialCollateral2Code.mmGeneralCollateral, SpecialCollateral2Code.mmSpecialCollateral, SpecialCollateral2Code.mmMatchedAndReverseRepurchaseAgreement);
 				trace_lazy = () -> SpecialCollateralCode.mmObject();
 			}
 		});

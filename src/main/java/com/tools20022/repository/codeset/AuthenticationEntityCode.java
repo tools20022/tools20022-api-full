@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.AuthenticationEntity1Code
+ * AuthenticationEntity1Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.AuthenticationEntity2Code
+ * AuthenticationEntity2Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -47,15 +58,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.AuthenticationEntityCode#mmTerminal
  * AuthenticationEntityCode.mmTerminal}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.AuthenticationEntity1Code
- * AuthenticationEntity1Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.AuthenticationEntity2Code
- * AuthenticationEntity2Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -109,7 +111,7 @@ public class AuthenticationEntityCode {
 	 */
 	public static final MMCode mmICC = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ICC";
 			definition = "Application in the chip card (Integrated Circuit Card), for instance an offline PIN verification.";
 			owner_lazy = () -> AuthenticationEntityCode.mmObject();
@@ -139,7 +141,7 @@ public class AuthenticationEntityCode {
 	 */
 	public static final MMCode mmAuthorisedAgent = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AuthorisedAgent";
 			definition = "Authorisation agent of the issuer.";
 			owner_lazy = () -> AuthenticationEntityCode.mmObject();
@@ -170,7 +172,7 @@ public class AuthenticationEntityCode {
 	 */
 	public static final MMCode mmMerchant = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Merchant";
 			definition = "Merchant (for example signature verification by the attendant).";
 			owner_lazy = () -> AuthenticationEntityCode.mmObject();
@@ -200,7 +202,7 @@ public class AuthenticationEntityCode {
 	 */
 	public static final MMCode mmAcquirer = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Acquirer";
 			definition = "Acquirer of the transaction.";
 			owner_lazy = () -> AuthenticationEntityCode.mmObject();
@@ -230,7 +232,7 @@ public class AuthenticationEntityCode {
 	 */
 	public static final MMCode mmIssuer = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Issuer";
 			definition = "Card issuer.";
 			owner_lazy = () -> AuthenticationEntityCode.mmObject();
@@ -260,7 +262,7 @@ public class AuthenticationEntityCode {
 	 */
 	public static final MMCode mmTerminal = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Terminal";
 			definition = "Secure application in the terminal.";
 			owner_lazy = () -> AuthenticationEntityCode.mmObject();
@@ -271,14 +273,13 @@ public class AuthenticationEntityCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ICCD");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AuthenticationEntityCode";
 				definition = "Entity or object in charge of verifying the cardholder authenticity.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AuthenticationEntityCode.mmICC, com.tools20022.repository.codeset.AuthenticationEntityCode.mmAuthorisedAgent,
-						com.tools20022.repository.codeset.AuthenticationEntityCode.mmMerchant, com.tools20022.repository.codeset.AuthenticationEntityCode.mmAcquirer, com.tools20022.repository.codeset.AuthenticationEntityCode.mmIssuer,
-						com.tools20022.repository.codeset.AuthenticationEntityCode.mmTerminal);
+				code_lazy = () -> Arrays.asList(AuthenticationEntityCode.mmICC, AuthenticationEntityCode.mmAuthorisedAgent, AuthenticationEntityCode.mmMerchant, AuthenticationEntityCode.mmAcquirer, AuthenticationEntityCode.mmIssuer,
+						AuthenticationEntityCode.mmTerminal);
 				derivation_lazy = () -> Arrays.asList(AuthenticationEntity1Code.mmObject(), AuthenticationEntity2Code.mmObject());
 			}
 		});

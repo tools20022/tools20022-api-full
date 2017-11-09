@@ -19,8 +19,10 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -92,7 +94,7 @@ public class SystemRestriction1 {
 			componentContext_lazy = () -> SystemRestriction1.mmObject();
 			isDerived = false;
 			xmlTag = "VldFr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValidFrom";
 			definition = "Specifies the date from which the restriction is valid.";
 			maxOccurs = 1;
@@ -133,7 +135,7 @@ public class SystemRestriction1 {
 			componentContext_lazy = () -> SystemRestriction1.mmObject();
 			isDerived = false;
 			xmlTag = "VldTo";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValidTo";
 			definition = "Specifies the date until which the restriction is valid.";
 			maxOccurs = 1;
@@ -174,7 +176,7 @@ public class SystemRestriction1 {
 			componentContext_lazy = () -> SystemRestriction1.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Specifies the identification of a restriction.";
 			maxOccurs = 1;
@@ -186,9 +188,9 @@ public class SystemRestriction1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SystemRestriction1.mmValidFrom, com.tools20022.repository.msg.SystemRestriction1.mmValidTo, com.tools20022.repository.msg.SystemRestriction1.mmType);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(SystemRestriction1.mmValidFrom, SystemRestriction1.mmValidTo, SystemRestriction1.mmType);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SystemRestriction1";
 				definition = "Provides information on the system restriction.";
 			}

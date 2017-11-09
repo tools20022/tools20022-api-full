@@ -19,8 +19,10 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ExternalInformationType1Code;
 import com.tools20022.repository.datatype.Max350Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -93,7 +95,7 @@ public class AdditionalInformation6 {
 			componentContext_lazy = () -> AdditionalInformation6.mmObject();
 			isDerived = false;
 			xmlTag = "InfTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InformationType";
 			definition = "Specifies the type of additional information.";
 			maxOccurs = 1;
@@ -134,7 +136,7 @@ public class AdditionalInformation6 {
 			componentContext_lazy = () -> AdditionalInformation6.mmObject();
 			isDerived = false;
 			xmlTag = "InfVal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InformationValue";
 			definition = "Contents of the additional information.";
 			maxOccurs = 1;
@@ -146,9 +148,9 @@ public class AdditionalInformation6 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AdditionalInformation6.mmInformationType, com.tools20022.repository.msg.AdditionalInformation6.mmInformationValue);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(AdditionalInformation6.mmInformationType, AdditionalInformation6.mmInformationValue);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AdditionalInformation6";
 				definition = "Additional information about a request.";
 			}

@@ -17,11 +17,13 @@
 
 package com.tools20022.repository.entity;
 
-import com.tools20022.metamodel.MMBusinessAssociationEnd;
-import com.tools20022.metamodel.MMBusinessAttribute;
-import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.*;
+import com.tools20022.repository.choice.TradeMarket1Choice;
 import com.tools20022.repository.codeset.GeographicalEnvironmentCode;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.MarketIdentification92;
+import com.tools20022.repository.msg.Trade1;
+import com.tools20022.repository.msg.Trade2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -34,27 +36,12 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Market#mmTrade
- * Market.mmTrade}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Market#mmJurisdiction
- * Market.mmJurisdiction}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Market#mmCountry
- * Market.mmCountry}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.Market#mmGeographicalEnvironment
- * Market.mmGeographicalEnvironment}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Market#mmIdentification
- * Market.mmIdentification}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
- * subType} =
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.TradingMarket TradingMarket}
- * </li>
+ * <li>{@linkplain com.tools20022.repository.msg.MarketIdentification92
+ * MarketIdentification92}</li>
  * </ul>
  * </li>
  * <li>
@@ -73,12 +60,27 @@ import java.util.concurrent.atomic.AtomicReference;
  * Jurisdiction.mmRelatedMarket}</li>
  * </ul>
  * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
+ * subType} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.MarketIdentification92
- * MarketIdentification92}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.TradingMarket TradingMarket}
+ * </li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.Market#mmTrade
+ * Market.mmTrade}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Market#mmJurisdiction
+ * Market.mmJurisdiction}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Market#mmCountry
+ * Market.mmCountry}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Market#mmGeographicalEnvironment
+ * Market.mmGeographicalEnvironment}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Market#mmIdentification
+ * Market.mmIdentification}</li>
  * </ul>
  * </li>
  * <li>
@@ -135,13 +137,13 @@ public class Market {
 		{
 			elementContext_lazy = () -> Market.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Trade";
 			definition = "Trade executed in a market.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.Trade.mmMarket;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Trade.mmObject();
 		}
 	};
@@ -185,13 +187,13 @@ public class Market {
 		{
 			elementContext_lazy = () -> Market.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Jurisdiction";
 			definition = "Jurisdiction of the governing law for the trades on this market, for example, City of NY, County of NY, State of NY, regulatory SEC.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.Jurisdiction.mmRelatedMarket;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Jurisdiction.mmObject();
 		}
 	};
@@ -237,16 +239,16 @@ public class Market {
 	 */
 	public static final MMBusinessAssociationEnd mmCountry = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MarketIdentification92.mmCountry);
+			derivation_lazy = () -> Arrays.asList(MarketIdentification92.mmCountry);
 			elementContext_lazy = () -> Market.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Country";
 			definition = "Country in which a market operates.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.Country.mmMarket;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Country.mmObject();
 		}
 	};
@@ -293,10 +295,10 @@ public class Market {
 	 */
 	public static final MMBusinessAttribute mmGeographicalEnvironment = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Trade2.mmPlaceOfConfirmation, com.tools20022.repository.msg.Trade1.mmPlaceOfConfirmation);
+			derivation_lazy = () -> Arrays.asList(Trade2.mmPlaceOfConfirmation, Trade1.mmPlaceOfConfirmation);
 			elementContext_lazy = () -> Market.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "GeographicalEnvironment";
 			definition = "Geographic zone in which the cash transfer is executed, from the perspective of the forwarding or first agent, eg, domestic or international.";
 			maxOccurs = 1;
@@ -357,17 +359,16 @@ public class Market {
 	 */
 	public static final MMBusinessAssociationEnd mmIdentification = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.TradeMarket1Choice.mmCode, com.tools20022.repository.choice.TradeMarket1Choice.mmProprietary,
-					com.tools20022.repository.msg.MarketIdentification92.mmOperating, com.tools20022.repository.msg.MarketIdentification92.mmSegment);
+			derivation_lazy = () -> Arrays.asList(TradeMarket1Choice.mmCode, TradeMarket1Choice.mmProprietary, MarketIdentification92.mmOperating, MarketIdentification92.mmSegment);
 			elementContext_lazy = () -> Market.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Identification";
 			definition = "Identifies the market by name, id and/or code.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.mmIdentifiedMarket;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.mmObject();
 		}
 	};
@@ -375,15 +376,14 @@ public class Market {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Market";
 				definition = "Context or geographic environment in which trading parties execute trades.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Country.mmMarket, com.tools20022.repository.entity.PartyIdentificationInformation.mmIdentifiedMarket,
 						com.tools20022.repository.entity.Trade.mmMarket, com.tools20022.repository.entity.Jurisdiction.mmRelatedMarket);
 				subType_lazy = () -> Arrays.asList(TradingMarket.mmObject());
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Market.mmTrade, com.tools20022.repository.entity.Market.mmJurisdiction, com.tools20022.repository.entity.Market.mmCountry,
-						com.tools20022.repository.entity.Market.mmGeographicalEnvironment, com.tools20022.repository.entity.Market.mmIdentification);
+				element_lazy = () -> Arrays.asList(Market.mmTrade, Market.mmJurisdiction, Market.mmCountry, Market.mmGeographicalEnvironment, Market.mmIdentification);
 				derivationComponent_lazy = () -> Arrays.asList(MarketIdentification92.mmObject());
 			}
 		});

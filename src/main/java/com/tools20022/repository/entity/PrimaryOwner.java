@@ -18,7 +18,14 @@
 package com.tools20022.repository.entity;
 
 import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.choice.*;
 import com.tools20022.repository.entity.InvestmentAccountPartyRole;
+import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.AccountParties2;
+import com.tools20022.repository.msg.AccountParties3;
+import com.tools20022.repository.msg.AccountParties4;
+import com.tools20022.repository.msg.AccountParties5;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -108,16 +115,13 @@ public class PrimaryOwner extends InvestmentAccountPartyRole {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PrimaryOwner";
 				definition = "Single owner of the investment account or, when the ownership is split among several owners, the primary owner is the one giving its address and account details for the registration.";
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountParties2.mmPrimaryOwner, com.tools20022.repository.msg.AccountParties5.mmPrimaryOwner,
-						com.tools20022.repository.choice.AccountParties1Choice.mmPrimaryOwner, com.tools20022.repository.msg.AccountParties3.mmPrimaryOwner, com.tools20022.repository.msg.AccountParties4.mmPrimaryOwner,
-						com.tools20022.repository.choice.AccountParties2Choice.mmPrimaryOwner, com.tools20022.repository.choice.AccountParties3Choice.mmPrimaryOwner, com.tools20022.repository.choice.AccountParties4Choice.mmPrimaryOwner,
-						com.tools20022.repository.choice.AccountParties7Choice.mmPrimaryOwner, com.tools20022.repository.choice.AccountParties6Choice.mmPrimaryOwner, com.tools20022.repository.choice.AccountParties5Choice.mmPrimaryOwner,
-						com.tools20022.repository.choice.AccountParties9Choice.mmPrimaryOwner, com.tools20022.repository.choice.AccountParties8Choice.mmPrimaryOwner, com.tools20022.repository.choice.AccountParties11Choice.mmPrimaryOwner,
-						com.tools20022.repository.choice.AccountParties10Choice.mmPrimaryOwner);
+				derivationElement_lazy = () -> Arrays.asList(AccountParties2.mmPrimaryOwner, AccountParties5.mmPrimaryOwner, AccountParties1Choice.mmPrimaryOwner, AccountParties3.mmPrimaryOwner, AccountParties4.mmPrimaryOwner,
+						AccountParties2Choice.mmPrimaryOwner, AccountParties3Choice.mmPrimaryOwner, AccountParties4Choice.mmPrimaryOwner, AccountParties7Choice.mmPrimaryOwner, AccountParties6Choice.mmPrimaryOwner,
+						AccountParties5Choice.mmPrimaryOwner, AccountParties9Choice.mmPrimaryOwner, AccountParties8Choice.mmPrimaryOwner, AccountParties11Choice.mmPrimaryOwner, AccountParties10Choice.mmPrimaryOwner);
 				superType_lazy = () -> InvestmentAccountPartyRole.mmObject();
 			}
 		});

@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.MandateReasonCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -90,7 +92,7 @@ public class MandateAmendmentReason1Code extends MandateReasonCode {
 	 */
 	public static final MMCode mmIncorrectAgent = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncorrectAgent";
 			owner_lazy = () -> MandateAmendmentReason1Code.mmObject();
 		}
@@ -113,7 +115,7 @@ public class MandateAmendmentReason1Code extends MandateReasonCode {
 	 */
 	public static final MMCode mmIncorrectCurrency = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncorrectCurrency";
 			owner_lazy = () -> MandateAmendmentReason1Code.mmObject();
 		}
@@ -136,7 +138,7 @@ public class MandateAmendmentReason1Code extends MandateReasonCode {
 	 */
 	public static final MMCode mmRequestedByCustomer = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestedByCustomer";
 			owner_lazy = () -> MandateAmendmentReason1Code.mmObject();
 		}
@@ -159,7 +161,7 @@ public class MandateAmendmentReason1Code extends MandateReasonCode {
 	 */
 	public static final MMCode mmIncorrectAccount = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncorrectAccount";
 			owner_lazy = () -> MandateAmendmentReason1Code.mmObject();
 		}
@@ -168,13 +170,13 @@ public class MandateAmendmentReason1Code extends MandateReasonCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("AGNT");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MandateAmendmentReason1Code";
 				definition = "Specifies the reason for requesting the amendment of a mandate.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MandateAmendmentReason1Code.mmIncorrectAgent, com.tools20022.repository.codeset.MandateAmendmentReason1Code.mmIncorrectCurrency,
-						com.tools20022.repository.codeset.MandateAmendmentReason1Code.mmRequestedByCustomer, com.tools20022.repository.codeset.MandateAmendmentReason1Code.mmIncorrectAccount);
+				code_lazy = () -> Arrays.asList(MandateAmendmentReason1Code.mmIncorrectAgent, MandateAmendmentReason1Code.mmIncorrectCurrency, MandateAmendmentReason1Code.mmRequestedByCustomer,
+						MandateAmendmentReason1Code.mmIncorrectAccount);
 				trace_lazy = () -> MandateReasonCode.mmObject();
 			}
 		});

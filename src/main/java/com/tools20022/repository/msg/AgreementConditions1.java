@@ -19,10 +19,13 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Exact4NumericText;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.Max6AlphaText;
+import com.tools20022.repository.entity.Agreement;
 import com.tools20022.repository.entity.MasterAgreement;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -101,11 +104,11 @@ public class AgreementConditions1 {
 	 */
 	public static final MMMessageAttribute mmAgreementCode = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.MasterAgreement.mmMasterAgreementType;
+			businessElementTrace_lazy = () -> MasterAgreement.mmMasterAgreementType;
 			componentContext_lazy = () -> AgreementConditions1.mmObject();
 			isDerived = false;
 			xmlTag = "AgrmtCd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AgreementCode";
 			definition = "Specifies the type of agreement";
 			maxOccurs = 1;
@@ -148,11 +151,11 @@ public class AgreementConditions1 {
 	 */
 	public static final MMMessageAttribute mmDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Agreement.mmDateSigned;
+			businessElementTrace_lazy = () -> Agreement.mmDateSigned;
 			componentContext_lazy = () -> AgreementConditions1.mmObject();
 			isDerived = false;
 			xmlTag = "Dt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Date";
 			definition = "Specifies the date of the agreement.";
 			maxOccurs = 1;
@@ -196,11 +199,11 @@ public class AgreementConditions1 {
 	 */
 	public static final MMMessageAttribute mmVersion = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Agreement.mmVersion;
+			businessElementTrace_lazy = () -> Agreement.mmVersion;
 			componentContext_lazy = () -> AgreementConditions1.mmObject();
 			isDerived = false;
 			xmlTag = "Vrsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Version";
 			definition = "Specifies the version of the agreement.";
 			maxOccurs = 1;
@@ -212,11 +215,10 @@ public class AgreementConditions1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AgreementConditions1.mmAgreementCode, com.tools20022.repository.msg.AgreementConditions1.mmDate,
-						com.tools20022.repository.msg.AgreementConditions1.mmVersion);
+				messageElement_lazy = () -> Arrays.asList(AgreementConditions1.mmAgreementCode, AgreementConditions1.mmDate, AgreementConditions1.mmVersion);
 				trace_lazy = () -> MasterAgreement.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AgreementConditions1";
 				definition = "Specifies the type, date and version of the agreement.";
 			}

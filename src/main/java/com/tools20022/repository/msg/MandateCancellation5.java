@@ -20,7 +20,10 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.pain.MandateCancellationRequestV05;
 import com.tools20022.repository.choice.OriginalMandate4Choice;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -117,10 +120,10 @@ public class MandateCancellation5 {
 			componentContext_lazy = () -> MandateCancellation5.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlMsgInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalMessageInformation";
 			definition = "Provides information on the original message.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.MandateCancellation4.mmOriginalMessageInformation;
+			previousVersion_lazy = () -> MandateCancellation4.mmOriginalMessageInformation;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -166,10 +169,10 @@ public class MandateCancellation5 {
 			componentContext_lazy = () -> MandateCancellation5.mmObject();
 			isDerived = false;
 			xmlTag = "CxlRsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationReason";
 			definition = "Provides detailed information on the cancellation reason.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.MandateCancellation4.mmCancellationReason;
+			previousVersion_lazy = () -> MandateCancellation4.mmCancellationReason;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -214,10 +217,10 @@ public class MandateCancellation5 {
 			componentContext_lazy = () -> MandateCancellation5.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlMndt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalMandate";
 			definition = "Provides the original mandate data.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.MandateCancellation4.mmOriginalMandate;
+			previousVersion_lazy = () -> MandateCancellation4.mmOriginalMandate;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -266,10 +269,10 @@ public class MandateCancellation5 {
 			componentContext_lazy = () -> MandateCancellation5.mmObject();
 			isDerived = false;
 			xmlTag = "SplmtryData";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryData";
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.MandateCancellation4.mmSupplementaryData;
+			previousVersion_lazy = () -> MandateCancellation4.mmSupplementaryData;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.SupplementaryData1.mmObject();
 		}
@@ -278,11 +281,10 @@ public class MandateCancellation5 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MandateCancellation5.mmOriginalMessageInformation, com.tools20022.repository.msg.MandateCancellation5.mmCancellationReason,
-						com.tools20022.repository.msg.MandateCancellation5.mmOriginalMandate, com.tools20022.repository.msg.MandateCancellation5.mmSupplementaryData);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.pain.MandateCancellationRequestV05.mmUnderlyingCancellationDetails);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(MandateCancellation5.mmOriginalMessageInformation, MandateCancellation5.mmCancellationReason, MandateCancellation5.mmOriginalMandate, MandateCancellation5.mmSupplementaryData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(MandateCancellationRequestV05.mmUnderlyingCancellationDetails);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MandateCancellation5";
 				definition = "Identifies the mandate to be cancelled.";
 				previousVersion_lazy = () -> MandateCancellation4.mmObject();

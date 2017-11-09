@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.FractionDispositionTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -78,7 +80,7 @@ public class FractionDispositionType12Code extends FractionDispositionTypeCode {
 	 */
 	public static final MMCode mmRoundDown = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RoundDown";
 			owner_lazy = () -> FractionDispositionType12Code.mmObject();
 		}
@@ -101,7 +103,7 @@ public class FractionDispositionType12Code extends FractionDispositionTypeCode {
 	 */
 	public static final MMCode mmRoundUp = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RoundUp";
 			owner_lazy = () -> FractionDispositionType12Code.mmObject();
 		}
@@ -110,11 +112,11 @@ public class FractionDispositionType12Code extends FractionDispositionTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "FractionDispositionType12Code";
 				definition = "Indicates the processing to apply to fractions of securities.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.FractionDispositionType12Code.mmRoundDown, com.tools20022.repository.codeset.FractionDispositionType12Code.mmRoundUp);
+				code_lazy = () -> Arrays.asList(FractionDispositionType12Code.mmRoundDown, FractionDispositionType12Code.mmRoundUp);
 				trace_lazy = () -> FractionDispositionTypeCode.mmObject();
 			}
 		});

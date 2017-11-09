@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionNotificationType1Code
+ * CorporateActionNotificationType1Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionNotificationType2Code
+ * CorporateActionNotificationType2Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -47,17 +60,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.CorporateActionNotificationTypeCode#mmProcessing
  * CorporateActionNotificationTypeCode.mmProcessing}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionNotificationType1Code
- * CorporateActionNotificationType1Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionNotificationType2Code
- * CorporateActionNotificationType2Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -107,7 +109,7 @@ public class CorporateActionNotificationTypeCode {
 	 */
 	public static final MMCode mmNew = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "New";
 			definition = "New notification.";
 			owner_lazy = () -> CorporateActionNotificationTypeCode.mmObject();
@@ -137,7 +139,7 @@ public class CorporateActionNotificationTypeCode {
 	 */
 	public static final MMCode mmReplacement = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Replacement";
 			definition = "Notification replacing a previously sent notification.";
 			owner_lazy = () -> CorporateActionNotificationTypeCode.mmObject();
@@ -168,7 +170,7 @@ public class CorporateActionNotificationTypeCode {
 	 */
 	public static final MMCode mmReminder = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Reminder";
 			definition = "Notification sent as a reminder of an event taking place.";
 			owner_lazy = () -> CorporateActionNotificationTypeCode.mmObject();
@@ -201,7 +203,7 @@ public class CorporateActionNotificationTypeCode {
 	 */
 	public static final MMCode mmWithrawal = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Withrawal";
 			definition = "Notification sent to void a previously sent notification due to the withdrawal of the event by the issuer.";
 			owner_lazy = () -> CorporateActionNotificationTypeCode.mmObject();
@@ -234,7 +236,7 @@ public class CorporateActionNotificationTypeCode {
 	 */
 	public static final MMCode mmCancellation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Cancellation";
 			definition = "Notification requesting the cancellation of a previously sent notification.";
 			owner_lazy = () -> CorporateActionNotificationTypeCode.mmObject();
@@ -264,7 +266,7 @@ public class CorporateActionNotificationTypeCode {
 	 */
 	public static final MMCode mmProcessing = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Processing";
 			definition = "Cancellation due to a processing error.";
 			owner_lazy = () -> CorporateActionNotificationTypeCode.mmObject();
@@ -275,14 +277,13 @@ public class CorporateActionNotificationTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("NEWM");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionNotificationTypeCode";
 				definition = "Type of notification.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CorporateActionNotificationTypeCode.mmNew, com.tools20022.repository.codeset.CorporateActionNotificationTypeCode.mmReplacement,
-						com.tools20022.repository.codeset.CorporateActionNotificationTypeCode.mmReminder, com.tools20022.repository.codeset.CorporateActionNotificationTypeCode.mmWithrawal,
-						com.tools20022.repository.codeset.CorporateActionNotificationTypeCode.mmCancellation, com.tools20022.repository.codeset.CorporateActionNotificationTypeCode.mmProcessing);
+				code_lazy = () -> Arrays.asList(CorporateActionNotificationTypeCode.mmNew, CorporateActionNotificationTypeCode.mmReplacement, CorporateActionNotificationTypeCode.mmReminder, CorporateActionNotificationTypeCode.mmWithrawal,
+						CorporateActionNotificationTypeCode.mmCancellation, CorporateActionNotificationTypeCode.mmProcessing);
 				derivation_lazy = () -> Arrays.asList(CorporateActionNotificationType1Code.mmObject(), CorporateActionNotificationType2Code.mmObject());
 			}
 		});

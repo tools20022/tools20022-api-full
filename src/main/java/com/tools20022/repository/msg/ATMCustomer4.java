@@ -20,8 +20,10 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.LanguageCode;
 import com.tools20022.repository.entity.CardholderRole;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -100,7 +102,7 @@ public class ATMCustomer4 {
 			componentContext_lazy = () -> ATMCustomer4.mmObject();
 			isDerived = false;
 			xmlTag = "Prfl";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Profile";
 			definition = "Profile of the customer selected to perform the transaction.";
 			maxOccurs = 1;
@@ -144,7 +146,7 @@ public class ATMCustomer4 {
 			componentContext_lazy = () -> ATMCustomer4.mmObject();
 			isDerived = false;
 			xmlTag = "SelctdLang";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SelectedLanguage";
 			definition = "Language selected by the customer at the ATM for the customer session. Reference ISO 639-1 (alpha-2) et ISO 639-2 (alpha-3).";
 			maxOccurs = 1;
@@ -189,11 +191,11 @@ public class ATMCustomer4 {
 	 */
 	public static final MMMessageAssociationEnd mmAuthentication = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardholderRole.mmAuthentication;
+			businessElementTrace_lazy = () -> CardholderRole.mmAuthentication;
 			componentContext_lazy = () -> ATMCustomer4.mmObject();
 			isDerived = false;
 			xmlTag = "Authntcn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Authentication";
 			definition = "Method and data intended to be used for this transaction to authenticate the customer and its card.";
 			minOccurs = 1;
@@ -234,7 +236,7 @@ public class ATMCustomer4 {
 			componentContext_lazy = () -> ATMCustomer4.mmObject();
 			isDerived = false;
 			xmlTag = "AuthntcnRslt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AuthenticationResult";
 			definition = "Result of the customer authentication for this transaction.";
 			minOccurs = 0;
@@ -246,11 +248,10 @@ public class ATMCustomer4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMCustomer4.mmProfile, com.tools20022.repository.msg.ATMCustomer4.mmSelectedLanguage, com.tools20022.repository.msg.ATMCustomer4.mmAuthentication,
-						com.tools20022.repository.msg.ATMCustomer4.mmAuthenticationResult);
+				messageElement_lazy = () -> Arrays.asList(ATMCustomer4.mmProfile, ATMCustomer4.mmSelectedLanguage, ATMCustomer4.mmAuthentication, ATMCustomer4.mmAuthenticationResult);
 				trace_lazy = () -> CardholderRole.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ATMCustomer4";
 				definition = "Customer involved in a withdrawal transaction.";
 			}

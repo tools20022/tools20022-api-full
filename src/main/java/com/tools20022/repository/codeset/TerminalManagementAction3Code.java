@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.TerminalManagementActionCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -80,7 +82,7 @@ public class TerminalManagementAction3Code extends TerminalManagementActionCode 
 	 */
 	public static final MMCode mmCreate = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Create";
 			owner_lazy = () -> TerminalManagementAction3Code.mmObject();
 		}
@@ -103,7 +105,7 @@ public class TerminalManagementAction3Code extends TerminalManagementActionCode 
 	 */
 	public static final MMCode mmDelete = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Delete";
 			owner_lazy = () -> TerminalManagementAction3Code.mmObject();
 		}
@@ -126,7 +128,7 @@ public class TerminalManagementAction3Code extends TerminalManagementActionCode 
 	 */
 	public static final MMCode mmUpdate = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Update";
 			owner_lazy = () -> TerminalManagementAction3Code.mmObject();
 		}
@@ -135,12 +137,11 @@ public class TerminalManagementAction3Code extends TerminalManagementActionCode 
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TerminalManagementAction3Code";
 				definition = "Type of action to perform.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TerminalManagementAction3Code.mmCreate, com.tools20022.repository.codeset.TerminalManagementAction3Code.mmDelete,
-						com.tools20022.repository.codeset.TerminalManagementAction3Code.mmUpdate);
+				code_lazy = () -> Arrays.asList(TerminalManagementAction3Code.mmCreate, TerminalManagementAction3Code.mmDelete, TerminalManagementAction3Code.mmUpdate);
 				trace_lazy = () -> TerminalManagementActionCode.mmObject();
 			}
 		});

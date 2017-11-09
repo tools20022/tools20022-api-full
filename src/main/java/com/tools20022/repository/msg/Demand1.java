@@ -20,12 +20,17 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.tsrv.UndertakingDemandV01;
 import com.tools20022.repository.codeset.DemandType1Code;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.Max2000Text;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.entity.CashSettlement;
 import com.tools20022.repository.entity.Demand;
+import com.tools20022.repository.entity.Expiry;
 import com.tools20022.repository.entity.Undertaking;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -133,7 +138,7 @@ public class Demand1 {
 			componentContext_lazy = () -> Demand1.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Unique and unambiguous identifier assigned by the presenting party to the demand.";
 			maxOccurs = 1;
@@ -176,11 +181,11 @@ public class Demand1 {
 	 */
 	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Demand.mmType;
+			businessElementTrace_lazy = () -> Demand.mmType;
 			componentContext_lazy = () -> Demand1.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Type of demand.";
 			maxOccurs = 1;
@@ -224,7 +229,7 @@ public class Demand1 {
 			componentContext_lazy = () -> Demand1.mmObject();
 			isDerived = false;
 			xmlTag = "UdrtkgId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UndertakingIdentification";
 			definition = "Details related to the undertaking.";
 			maxOccurs = 1;
@@ -266,11 +271,11 @@ public class Demand1 {
 	 */
 	public static final MMMessageAssociationEnd mmDemandAmount = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Demand.mmDemandAmount;
+			businessElementTrace_lazy = () -> Demand.mmDemandAmount;
 			componentContext_lazy = () -> Demand1.mmObject();
 			isDerived = false;
 			xmlTag = "DmndAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DemandAmount";
 			definition = "Details related to the demand amount.";
 			maxOccurs = 1;
@@ -314,7 +319,7 @@ public class Demand1 {
 			componentContext_lazy = () -> Demand1.mmObject();
 			isDerived = false;
 			xmlTag = "AdvsgPtyRefNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdvisingPartyReferenceNumber";
 			definition = "Unique and unambiguous identifier assigned by the advising party to the undertaking.";
 			maxOccurs = 1;
@@ -357,7 +362,7 @@ public class Demand1 {
 			componentContext_lazy = () -> Demand1.mmObject();
 			isDerived = false;
 			xmlTag = "ScndAdvsgPtyRefNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecondAdvisingPartyReferenceNumber";
 			definition = "Unique and unambiguous identifier assigned by the second advising party to the undertaking.";
 			maxOccurs = 1;
@@ -400,7 +405,7 @@ public class Demand1 {
 			componentContext_lazy = () -> Demand1.mmObject();
 			isDerived = false;
 			xmlTag = "CnfrmrRefNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConfirmerReferenceNumber";
 			definition = "Unique and unambiguous identifier assigned by the confirmer to the undertaking.";
 			maxOccurs = 1;
@@ -441,11 +446,11 @@ public class Demand1 {
 	 */
 	public static final MMMessageAssociationEnd mmSettlementAccount = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashSettlement.mmSettlementAccount;
+			businessElementTrace_lazy = () -> CashSettlement.mmSettlementAccount;
 			componentContext_lazy = () -> Demand1.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmAcct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementAccount";
 			definition = "Details related to the settlement account.";
 			minOccurs = 0;
@@ -486,11 +491,11 @@ public class Demand1 {
 	 */
 	public static final MMMessageAssociationEnd mmPresentationDetails = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Undertaking.mmPresentation;
+			businessElementTrace_lazy = () -> Undertaking.mmPresentation;
 			componentContext_lazy = () -> Demand1.mmObject();
 			isDerived = false;
 			xmlTag = "PresntnDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PresentationDetails";
 			definition = "Details of the beneficiary's presentation of documents.";
 			maxOccurs = 1;
@@ -534,11 +539,11 @@ public class Demand1 {
 	 */
 	public static final MMMessageAttribute mmRequestedExpiryDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Expiry.mmExpiryDateTime;
+			businessElementTrace_lazy = () -> Expiry.mmExpiryDateTime;
 			componentContext_lazy = () -> Demand1.mmObject();
 			isDerived = false;
 			xmlTag = "ReqdXpryDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestedExpiryDate";
 			definition = "Requested new expiry date as an alternative to payment of the demand.";
 			maxOccurs = 1;
@@ -577,7 +582,7 @@ public class Demand1 {
 			componentContext_lazy = () -> Demand1.mmObject();
 			isDerived = false;
 			xmlTag = "DmndDcmnttn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DemandDocumentation";
 			definition = "Document(s) presented for examination.";
 			maxOccurs = 1;
@@ -618,7 +623,7 @@ public class Demand1 {
 			componentContext_lazy = () -> Demand1.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInformation";
 			definition = "Additional information related to the demand.";
 			maxOccurs = 5;
@@ -630,14 +635,13 @@ public class Demand1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Demand1.mmIdentification, com.tools20022.repository.msg.Demand1.mmType, com.tools20022.repository.msg.Demand1.mmUndertakingIdentification,
-						com.tools20022.repository.msg.Demand1.mmDemandAmount, com.tools20022.repository.msg.Demand1.mmAdvisingPartyReferenceNumber, com.tools20022.repository.msg.Demand1.mmSecondAdvisingPartyReferenceNumber,
-						com.tools20022.repository.msg.Demand1.mmConfirmerReferenceNumber, com.tools20022.repository.msg.Demand1.mmSettlementAccount, com.tools20022.repository.msg.Demand1.mmPresentationDetails,
-						com.tools20022.repository.msg.Demand1.mmRequestedExpiryDate, com.tools20022.repository.msg.Demand1.mmDemandDocumentation, com.tools20022.repository.msg.Demand1.mmAdditionalInformation);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsrv.UndertakingDemandV01.mmUndertakingDemandDetails);
+				messageElement_lazy = () -> Arrays.asList(Demand1.mmIdentification, Demand1.mmType, Demand1.mmUndertakingIdentification, Demand1.mmDemandAmount, Demand1.mmAdvisingPartyReferenceNumber,
+						Demand1.mmSecondAdvisingPartyReferenceNumber, Demand1.mmConfirmerReferenceNumber, Demand1.mmSettlementAccount, Demand1.mmPresentationDetails, Demand1.mmRequestedExpiryDate, Demand1.mmDemandDocumentation,
+						Demand1.mmAdditionalInformation);
+				messageBuildingBlock_lazy = () -> Arrays.asList(UndertakingDemandV01.mmUndertakingDemandDetails);
 				trace_lazy = () -> Demand.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Demand1";
 				definition = "Details of the demand.";
 			}

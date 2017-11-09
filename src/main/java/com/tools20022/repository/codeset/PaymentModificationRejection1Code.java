@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -146,7 +148,7 @@ public class PaymentModificationRejection1Code {
 	 */
 	public static final MMCode mmUnableToModifyRelatedReference = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnableToModifyRelatedReference";
 			definition = "RelatedReference cannot be modified.";
 			owner_lazy = () -> PaymentModificationRejection1Code.mmObject();
@@ -176,7 +178,7 @@ public class PaymentModificationRejection1Code {
 	 */
 	public static final MMCode mmUnableToModifyBankOperationCode = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnableToModifyBankOperationCode";
 			definition = "BankOperationCode cannot be modified.";
 			owner_lazy = () -> PaymentModificationRejection1Code.mmObject();
@@ -206,7 +208,7 @@ public class PaymentModificationRejection1Code {
 	 */
 	public static final MMCode mmUnableToModifyInstructionCode = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnableToModifyInstructionCode";
 			definition = "InstructionCode  cannot be modified.";
 			owner_lazy = () -> PaymentModificationRejection1Code.mmObject();
@@ -236,7 +238,7 @@ public class PaymentModificationRejection1Code {
 	 */
 	public static final MMCode mmUnableToModifyRequestedExecutionDate = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnableToModifyRequestedExecutionDate";
 			definition = "RequestedExecutionDate  cannot be modified.";
 			owner_lazy = () -> PaymentModificationRejection1Code.mmObject();
@@ -266,7 +268,7 @@ public class PaymentModificationRejection1Code {
 	 */
 	public static final MMCode mmUnableToModifyValueDate = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnableToModifyValueDate";
 			definition = "ValueDate  cannot be modified.";
 			owner_lazy = () -> PaymentModificationRejection1Code.mmObject();
@@ -296,7 +298,7 @@ public class PaymentModificationRejection1Code {
 	 */
 	public static final MMCode mmUnableToModifyInterbankSettlementAccount = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnableToModifyInterbankSettlementAccount";
 			definition = "InterbankSettlementAccount cannot be modified.";
 			owner_lazy = () -> PaymentModificationRejection1Code.mmObject();
@@ -326,7 +328,7 @@ public class PaymentModificationRejection1Code {
 	 */
 	public static final MMCode mmUnableToModifyDebtor = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnableToModifyDebtor";
 			definition = "Debtor cannot be modified.";
 			owner_lazy = () -> PaymentModificationRejection1Code.mmObject();
@@ -356,7 +358,7 @@ public class PaymentModificationRejection1Code {
 	 */
 	public static final MMCode mmUnableToModifyDebtorAccount = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnableToModifyDebtorAccount";
 			definition = "DebtorAccount cannot be modified.";
 			owner_lazy = () -> PaymentModificationRejection1Code.mmObject();
@@ -386,7 +388,7 @@ public class PaymentModificationRejection1Code {
 	 */
 	public static final MMCode mmUnableToModifyReceiverCorrespondent = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnableToModifyReceiverCorrespondent";
 			definition = "ReceiverCorrespondent cannot be modified.";
 			owner_lazy = () -> PaymentModificationRejection1Code.mmObject();
@@ -416,7 +418,7 @@ public class PaymentModificationRejection1Code {
 	 */
 	public static final MMCode mmUnableToModifyThirdReimbursementInstitution = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnableToModifyThirdReimbursementInstitution";
 			definition = "ThirdReimbursementInstitution cannot be modified.";
 			owner_lazy = () -> PaymentModificationRejection1Code.mmObject();
@@ -446,7 +448,7 @@ public class PaymentModificationRejection1Code {
 	 */
 	public static final MMCode mmUnableToModifyPaymentScheme = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnableToModifyPaymentScheme";
 			definition = "PaymentScheme cannot be modified.";
 			owner_lazy = () -> PaymentModificationRejection1Code.mmObject();
@@ -476,7 +478,7 @@ public class PaymentModificationRejection1Code {
 	 */
 	public static final MMCode mmUnableToModifyAccountofBeneficiaryInstitution = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnableToModifyAccountofBeneficiaryInstitution";
 			definition = "AccountOfBeneficiaryInstitution cannot be modified.";
 			owner_lazy = () -> PaymentModificationRejection1Code.mmObject();
@@ -506,7 +508,7 @@ public class PaymentModificationRejection1Code {
 	 */
 	public static final MMCode mmUnableToModifyCreditor = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnableToModifyCreditor";
 			definition = "Creditor cannot be modified.";
 			owner_lazy = () -> PaymentModificationRejection1Code.mmObject();
@@ -536,7 +538,7 @@ public class PaymentModificationRejection1Code {
 	 */
 	public static final MMCode mmUnableToModifyCreditorAccount = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnableToModifyCreditorAccount";
 			definition = "CreditorAccount cannot be modified.";
 			owner_lazy = () -> PaymentModificationRejection1Code.mmObject();
@@ -566,7 +568,7 @@ public class PaymentModificationRejection1Code {
 	 */
 	public static final MMCode mmUnableToModifyRemittanceInformation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnableToModifyRemittanceInformation";
 			definition = "RemittanceInformation cannot be modified.";
 			owner_lazy = () -> PaymentModificationRejection1Code.mmObject();
@@ -596,7 +598,7 @@ public class PaymentModificationRejection1Code {
 	 */
 	public static final MMCode mmUnableToModifyPaymentPurpose = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnableToModifyPaymentPurpose";
 			definition = "PaymentPurpose cannot be modified.";
 			owner_lazy = () -> PaymentModificationRejection1Code.mmObject();
@@ -626,7 +628,7 @@ public class PaymentModificationRejection1Code {
 	 */
 	public static final MMCode mmUnableToModifyDetailsOfCharges = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnableToModifyDetailsOfCharges";
 			definition = "DetailsOfCharges cannot be modified.";
 			owner_lazy = () -> PaymentModificationRejection1Code.mmObject();
@@ -656,7 +658,7 @@ public class PaymentModificationRejection1Code {
 	 */
 	public static final MMCode mmUnableToModifySenderToReceiverInformation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnableToModifySenderToReceiverInformation";
 			definition = "SenderToReceiver cannot be modified.";
 			owner_lazy = () -> PaymentModificationRejection1Code.mmObject();
@@ -686,7 +688,7 @@ public class PaymentModificationRejection1Code {
 	 */
 	public static final MMCode mmUnableToModifyInstructionForFinalAgent = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnableToModifyInstructionForFinalAgent";
 			definition = "InstructionForFinalAgent cannot be modified.";
 			owner_lazy = () -> PaymentModificationRejection1Code.mmObject();
@@ -720,7 +722,7 @@ public class PaymentModificationRejection1Code {
 	 */
 	public static final MMCode mmInstructionCancelledSubmitNewInstruction = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructionCancelledSubmitNewInstruction";
 			definition = "Used to inform of cancellation and request a new payment instruction. This should only be used if an agent does not want to modify a pending payment.";
 			owner_lazy = () -> PaymentModificationRejection1Code.mmObject();
@@ -751,7 +753,7 @@ public class PaymentModificationRejection1Code {
 	 */
 	public static final MMCode mmUnableToModifySubmitCancellation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnableToModifySubmitCancellation";
 			definition = "Modification is not possible and the cancellation is requested.";
 			owner_lazy = () -> PaymentModificationRejection1Code.mmObject();
@@ -762,23 +764,20 @@ public class PaymentModificationRejection1Code {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("UM01");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PaymentModificationRejection1Code";
 				definition = "Indicates the reason for rejecting a modification.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PaymentModificationRejection1Code.mmUnableToModifyRelatedReference,
-						com.tools20022.repository.codeset.PaymentModificationRejection1Code.mmUnableToModifyBankOperationCode, com.tools20022.repository.codeset.PaymentModificationRejection1Code.mmUnableToModifyInstructionCode,
-						com.tools20022.repository.codeset.PaymentModificationRejection1Code.mmUnableToModifyRequestedExecutionDate, com.tools20022.repository.codeset.PaymentModificationRejection1Code.mmUnableToModifyValueDate,
-						com.tools20022.repository.codeset.PaymentModificationRejection1Code.mmUnableToModifyInterbankSettlementAccount, com.tools20022.repository.codeset.PaymentModificationRejection1Code.mmUnableToModifyDebtor,
-						com.tools20022.repository.codeset.PaymentModificationRejection1Code.mmUnableToModifyDebtorAccount, com.tools20022.repository.codeset.PaymentModificationRejection1Code.mmUnableToModifyReceiverCorrespondent,
-						com.tools20022.repository.codeset.PaymentModificationRejection1Code.mmUnableToModifyThirdReimbursementInstitution, com.tools20022.repository.codeset.PaymentModificationRejection1Code.mmUnableToModifyPaymentScheme,
-						com.tools20022.repository.codeset.PaymentModificationRejection1Code.mmUnableToModifyAccountofBeneficiaryInstitution, com.tools20022.repository.codeset.PaymentModificationRejection1Code.mmUnableToModifyCreditor,
-						com.tools20022.repository.codeset.PaymentModificationRejection1Code.mmUnableToModifyCreditorAccount, com.tools20022.repository.codeset.PaymentModificationRejection1Code.mmUnableToModifyRemittanceInformation,
-						com.tools20022.repository.codeset.PaymentModificationRejection1Code.mmUnableToModifyPaymentPurpose, com.tools20022.repository.codeset.PaymentModificationRejection1Code.mmUnableToModifyDetailsOfCharges,
-						com.tools20022.repository.codeset.PaymentModificationRejection1Code.mmUnableToModifySenderToReceiverInformation,
-						com.tools20022.repository.codeset.PaymentModificationRejection1Code.mmUnableToModifyInstructionForFinalAgent,
-						com.tools20022.repository.codeset.PaymentModificationRejection1Code.mmInstructionCancelledSubmitNewInstruction, com.tools20022.repository.codeset.PaymentModificationRejection1Code.mmUnableToModifySubmitCancellation);
+				code_lazy = () -> Arrays.asList(PaymentModificationRejection1Code.mmUnableToModifyRelatedReference, PaymentModificationRejection1Code.mmUnableToModifyBankOperationCode,
+						PaymentModificationRejection1Code.mmUnableToModifyInstructionCode, PaymentModificationRejection1Code.mmUnableToModifyRequestedExecutionDate, PaymentModificationRejection1Code.mmUnableToModifyValueDate,
+						PaymentModificationRejection1Code.mmUnableToModifyInterbankSettlementAccount, PaymentModificationRejection1Code.mmUnableToModifyDebtor, PaymentModificationRejection1Code.mmUnableToModifyDebtorAccount,
+						PaymentModificationRejection1Code.mmUnableToModifyReceiverCorrespondent, PaymentModificationRejection1Code.mmUnableToModifyThirdReimbursementInstitution,
+						PaymentModificationRejection1Code.mmUnableToModifyPaymentScheme, PaymentModificationRejection1Code.mmUnableToModifyAccountofBeneficiaryInstitution, PaymentModificationRejection1Code.mmUnableToModifyCreditor,
+						PaymentModificationRejection1Code.mmUnableToModifyCreditorAccount, PaymentModificationRejection1Code.mmUnableToModifyRemittanceInformation, PaymentModificationRejection1Code.mmUnableToModifyPaymentPurpose,
+						PaymentModificationRejection1Code.mmUnableToModifyDetailsOfCharges, PaymentModificationRejection1Code.mmUnableToModifySenderToReceiverInformation,
+						PaymentModificationRejection1Code.mmUnableToModifyInstructionForFinalAgent, PaymentModificationRejection1Code.mmInstructionCancelledSubmitNewInstruction,
+						PaymentModificationRejection1Code.mmUnableToModifySubmitCancellation);
 			}
 		});
 		return mmObject_lazy.get();

@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.AccountPermissionTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -80,7 +82,7 @@ public class AccountPermissionType1Code extends AccountPermissionTypeCode {
 	 */
 	public static final MMCode mmNoRight = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoRight";
 			owner_lazy = () -> AccountPermissionType1Code.mmObject();
 		}
@@ -103,7 +105,7 @@ public class AccountPermissionType1Code extends AccountPermissionTypeCode {
 	 */
 	public static final MMCode mmRightToUseAlone = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RightToUseAlone";
 			owner_lazy = () -> AccountPermissionType1Code.mmObject();
 		}
@@ -126,7 +128,7 @@ public class AccountPermissionType1Code extends AccountPermissionTypeCode {
 	 */
 	public static final MMCode mmRightToUseWithOther = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RightToUseWithOther";
 			owner_lazy = () -> AccountPermissionType1Code.mmObject();
 		}
@@ -135,12 +137,11 @@ public class AccountPermissionType1Code extends AccountPermissionTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AccountPermissionType1Code";
 				definition = "Specifies the permission to use the account.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AccountPermissionType1Code.mmNoRight, com.tools20022.repository.codeset.AccountPermissionType1Code.mmRightToUseAlone,
-						com.tools20022.repository.codeset.AccountPermissionType1Code.mmRightToUseWithOther);
+				code_lazy = () -> Arrays.asList(AccountPermissionType1Code.mmNoRight, AccountPermissionType1Code.mmRightToUseAlone, AccountPermissionType1Code.mmRightToUseWithOther);
 				trace_lazy = () -> AccountPermissionTypeCode.mmObject();
 			}
 		});

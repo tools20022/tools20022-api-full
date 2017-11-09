@@ -17,10 +17,10 @@
 
 package com.tools20022.repository.entity;
 
-import com.tools20022.metamodel.MMBusinessAssociationEnd;
-import com.tools20022.metamodel.MMBusinessAttribute;
-import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.*;
 import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
+import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -34,6 +34,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.Role#mmCounterpartyRisk
+ * Role.mmCounterpartyRisk}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ExposureCalculation#mmCounterpartyRisk
+ * ExposureCalculation.mmCounterpartyRisk}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -45,17 +56,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.entity.CounterpartyRisk#mmExposureCalculation
  * CounterpartyRisk.mmExposureCalculation}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Role#mmCounterpartyRisk
- * Role.mmCounterpartyRisk}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ExposureCalculation#mmCounterpartyRisk
- * ExposureCalculation.mmCounterpartyRisk}</li>
  * </ul>
  * </li>
  * <li>
@@ -142,19 +142,18 @@ public class CounterpartyRisk {
 	 */
 	public static final MMBusinessAssociationEnd mmParty = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UnsecuredMarketTransaction1.mmCounterpartyIdentification, com.tools20022.repository.msg.OvernightIndexSwapTransaction1.mmCounterpartyIdentification,
-					com.tools20022.repository.msg.UnsecuredMarketTransaction2.mmCounterpartyIdentification, com.tools20022.repository.msg.UnsecuredMarketTransaction3.mmCounterpartyIdentification,
-					com.tools20022.repository.msg.OvernightIndexSwapTransaction3.mmCounterpartyIdentification, com.tools20022.repository.msg.OvernightIndexSwapTransaction4.mmCounterpartyIdentification,
-					com.tools20022.repository.msg.UnsecuredMarketTransaction4.mmCounterpartyIdentification);
+			derivation_lazy = () -> Arrays.asList(UnsecuredMarketTransaction1.mmCounterpartyIdentification, OvernightIndexSwapTransaction1.mmCounterpartyIdentification, UnsecuredMarketTransaction2.mmCounterpartyIdentification,
+					UnsecuredMarketTransaction3.mmCounterpartyIdentification, OvernightIndexSwapTransaction3.mmCounterpartyIdentification, OvernightIndexSwapTransaction4.mmCounterpartyIdentification,
+					UnsecuredMarketTransaction4.mmCounterpartyIdentification);
 			elementContext_lazy = () -> CounterpartyRisk.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Party";
 			definition = "Specifies which role played by a party was taken into consideration for the risk calculation, for instance clearing member role.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.Role.mmCounterpartyRisk;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Role.mmObject();
 		}
 	};
@@ -190,7 +189,7 @@ public class CounterpartyRisk {
 		{
 			elementContext_lazy = () -> CounterpartyRisk.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExposedAmount";
 			definition = "The amount which needs to be covered for the counterparty risk.";
 			maxOccurs = 1;
@@ -239,13 +238,13 @@ public class CounterpartyRisk {
 		{
 			elementContext_lazy = () -> CounterpartyRisk.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExposureCalculation";
 			definition = "Specifies the exposure for which the risk is calculated on a counterparty basis.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.ExposureCalculation.mmCounterpartyRisk;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.ExposureCalculation.mmObject();
 		}
 	};
@@ -253,13 +252,12 @@ public class CounterpartyRisk {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CounterpartyRisk";
 				definition = "Calculation of the exposure amount that one party has vis-a-vis one counterparty or a central system, based on its credit risk.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Role.mmCounterpartyRisk, com.tools20022.repository.entity.ExposureCalculation.mmCounterpartyRisk);
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CounterpartyRisk.mmParty, com.tools20022.repository.entity.CounterpartyRisk.mmExposedAmount,
-						com.tools20022.repository.entity.CounterpartyRisk.mmExposureCalculation);
+				element_lazy = () -> Arrays.asList(CounterpartyRisk.mmParty, CounterpartyRisk.mmExposedAmount, CounterpartyRisk.mmExposureCalculation);
 			}
 		});
 		return mmObject_lazy.get();

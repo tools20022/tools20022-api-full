@@ -17,11 +17,14 @@
 
 package com.tools20022.repository.msg;
 
-import com.tools20022.metamodel.MMMessageAssociationEnd;
-import com.tools20022.metamodel.MMMessageAttribute;
-import com.tools20022.metamodel.MMMessageComponent;
-import com.tools20022.metamodel.MMXor;
+import com.tools20022.metamodel.*;
+import com.tools20022.repository.area.acmt.AccountModificationInstructionV02;
+import com.tools20022.repository.area.acmt.AccountModificationInstructionV03;
+import com.tools20022.repository.area.acmt.AccountModificationInstructionV04;
+import com.tools20022.repository.area.acmt.AccountModificationInstructionV05;
+import com.tools20022.repository.entity.Account;
 import com.tools20022.repository.entity.InvestmentAccount;
+import com.tools20022.repository.GeneratedRepository;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -135,11 +138,11 @@ public class InvestmentAccountSelection2 {
 	 */
 	public static final MMMessageAttribute mmAccountIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.mmIdentification;
+			businessElementTrace_lazy = () -> Account.mmIdentification;
 			componentContext_lazy = () -> InvestmentAccountSelection2.mmObject();
 			isDerived = false;
 			xmlTag = "AcctId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountIdentification";
 			definition = "Unique and unambiguous identification for the account between the account owner and the account servicer.";
 			maxOccurs = 1;
@@ -187,7 +190,7 @@ public class InvestmentAccountSelection2 {
 			componentContext_lazy = () -> InvestmentAccountSelection2.mmObject();
 			isDerived = false;
 			xmlTag = "OthrAcctSelctnData";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherAccountSelectionData";
 			definition = "Various investment account information used to select a specific account.";
 			maxOccurs = 1;
@@ -202,6 +205,10 @@ public class InvestmentAccountSelection2 {
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
+	 * messageComponent} =
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccountSelection2
+	 * InvestmentAccountSelection2}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getImpactedElements
 	 * impactedElements} =
 	 * <ul>
@@ -213,10 +220,6 @@ public class InvestmentAccountSelection2 {
 	 * InvestmentAccountSelection2.mmOtherAccountSelectionData}</li>
 	 * </ul>
 	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
-	 * messageComponent} =
-	 * {@linkplain com.tools20022.repository.msg.InvestmentAccountSelection2
-	 * InvestmentAccountSelection2}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -232,24 +235,23 @@ public class InvestmentAccountSelection2 {
 	 */
 	public static final MMXor mmAccountIdentificationOrOtherAccountSelectionCriteriaRule = new MMXor() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountIdentificationOrOtherAccountSelectionCriteriaRule";
 			definition = "Either AccountIdentification or OtherAccountSelectionCriteria must be present, but not both.";
 			messageComponent_lazy = () -> InvestmentAccountSelection2.mmObject();
-			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentAccountSelection2.mmAccountIdentification, com.tools20022.repository.msg.InvestmentAccountSelection2.mmOtherAccountSelectionData);
+			impactedElements_lazy = () -> Arrays.asList(InvestmentAccountSelection2.mmAccountIdentification, InvestmentAccountSelection2.mmOtherAccountSelectionData);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentAccountSelection2.mmAccountIdentification, com.tools20022.repository.msg.InvestmentAccountSelection2.mmOtherAccountSelectionData);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountModificationInstructionV02.mmInvestmentAccountSelection,
-						com.tools20022.repository.area.acmt.AccountModificationInstructionV03.mmInvestmentAccountSelection, com.tools20022.repository.area.acmt.AccountModificationInstructionV04.mmInvestmentAccountSelection,
-						com.tools20022.repository.area.acmt.AccountModificationInstructionV05.mmInvestmentAccountSelection);
+				messageElement_lazy = () -> Arrays.asList(InvestmentAccountSelection2.mmAccountIdentification, InvestmentAccountSelection2.mmOtherAccountSelectionData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(AccountModificationInstructionV02.mmInvestmentAccountSelection, AccountModificationInstructionV03.mmInvestmentAccountSelection,
+						AccountModificationInstructionV04.mmInvestmentAccountSelection, AccountModificationInstructionV05.mmInvestmentAccountSelection);
 				trace_lazy = () -> InvestmentAccount.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
 						return DateFormat.getDateInstance(java.text.DateFormat.LONG).parse("September 9, 2016");
@@ -259,7 +261,7 @@ public class InvestmentAccountSelection2 {
 				})).get();
 				name = "InvestmentAccountSelection2";
 				definition = "Choice between a unique account identification and a set of account selection criteria.";
-				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentAccountSelection2.mmAccountIdentificationOrOtherAccountSelectionCriteriaRule);
+				xors_lazy = () -> Arrays.asList(InvestmentAccountSelection2.mmAccountIdentificationOrOtherAccountSelectionCriteriaRule);
 			}
 		});
 		return mmObject_lazy.get();

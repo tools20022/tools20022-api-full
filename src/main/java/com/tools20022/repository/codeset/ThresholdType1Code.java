@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ThresholdTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -85,7 +87,7 @@ public class ThresholdType1Code extends ThresholdTypeCode {
 	 */
 	public static final MMCode mmSecured = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Secured";
 			owner_lazy = () -> ThresholdType1Code.mmObject();
 		}
@@ -108,7 +110,7 @@ public class ThresholdType1Code extends ThresholdTypeCode {
 	 */
 	public static final MMCode mmUnsecured = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unsecured";
 			owner_lazy = () -> ThresholdType1Code.mmObject();
 		}
@@ -117,12 +119,12 @@ public class ThresholdType1Code extends ThresholdTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("SECU");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ThresholdType1Code";
 				definition = "Defines whether the threshold was applied on an unsecured or securited basis.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ThresholdType1Code.mmSecured, com.tools20022.repository.codeset.ThresholdType1Code.mmUnsecured);
+				code_lazy = () -> Arrays.asList(ThresholdType1Code.mmSecured, ThresholdType1Code.mmUnsecured);
 				trace_lazy = () -> ThresholdTypeCode.mmObject();
 			}
 		});

@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.OnLineCapabilityCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -87,7 +89,7 @@ public class OnLineCapability1Code extends OnLineCapabilityCode {
 	 */
 	public static final MMCode mmOffLine = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OffLine";
 			owner_lazy = () -> OnLineCapability1Code.mmObject();
 		}
@@ -110,7 +112,7 @@ public class OnLineCapability1Code extends OnLineCapabilityCode {
 	 */
 	public static final MMCode mmOnLine = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OnLine";
 			owner_lazy = () -> OnLineCapability1Code.mmObject();
 		}
@@ -133,7 +135,7 @@ public class OnLineCapability1Code extends OnLineCapabilityCode {
 	 */
 	public static final MMCode mmSemiOffLine = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SemiOffLine";
 			owner_lazy = () -> OnLineCapability1Code.mmObject();
 		}
@@ -142,13 +144,12 @@ public class OnLineCapability1Code extends OnLineCapabilityCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("OFLN");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OnLineCapability1Code";
 				definition = "On-line and off-line capabilities of the POI (Point Of Interaction).";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OnLineCapability1Code.mmOffLine, com.tools20022.repository.codeset.OnLineCapability1Code.mmOnLine,
-						com.tools20022.repository.codeset.OnLineCapability1Code.mmSemiOffLine);
+				code_lazy = () -> Arrays.asList(OnLineCapability1Code.mmOffLine, OnLineCapability1Code.mmOnLine, OnLineCapability1Code.mmSemiOffLine);
 				trace_lazy = () -> OnLineCapabilityCode.mmObject();
 			}
 		});

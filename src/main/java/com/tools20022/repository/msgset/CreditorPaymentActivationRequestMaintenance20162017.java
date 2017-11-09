@@ -18,8 +18,10 @@
 package com.tools20022.repository.msgset;
 
 import com.tools20022.metamodel.MMMessageSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.pain.CreditorPaymentActivationRequestStatusReportV06;
 import com.tools20022.repository.area.pain.CreditorPaymentActivationRequestV06;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -63,8 +65,8 @@ public class CreditorPaymentActivationRequestMaintenance20162017 {
 	final static public MMMessageSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageSet() {
 			{
-				businessProcessCatalogue_lazy = () -> com.tools20022.repository.GeneratedRepository.mmcatalogue;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				businessProcessCatalogue_lazy = () -> GeneratedRepository.mmcatalogue;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Creditor Payment Activation Request - Maintenance 2016 - 2017";
 				definition = "This document describes the Creditor Payment Activation Request message set. ";
 				messageDefinition_lazy = () -> Arrays.asList(CreditorPaymentActivationRequestStatusReportV06.mmObject(), CreditorPaymentActivationRequestV06.mmObject());

@@ -20,11 +20,13 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.TerminalManagementAction3Code;
 import com.tools20022.repository.datatype.Max10000Binary;
 import com.tools20022.repository.datatype.Max256Text;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.Max70Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -123,10 +125,10 @@ public class PaymentTerminalParameters4 {
 			componentContext_lazy = () -> PaymentTerminalParameters4.mmObject();
 			isDerived = false;
 			xmlTag = "ActnTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ActionType";
 			definition = "Type of action for the configuration parameters.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PaymentTerminalParameters3.mmActionType;
+			previousVersion_lazy = () -> PaymentTerminalParameters3.mmActionType;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TerminalManagementAction3Code.mmObject();
@@ -173,10 +175,10 @@ public class PaymentTerminalParameters4 {
 			componentContext_lazy = () -> PaymentTerminalParameters4.mmObject();
 			isDerived = false;
 			xmlTag = "VndrId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VendorIdentification";
 			definition = "Identification of the vendor for the MTM, if the POI manages various subsets of terminal parameters.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PaymentTerminalParameters3.mmVendorIdentification;
+			previousVersion_lazy = () -> PaymentTerminalParameters3.mmVendorIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -220,10 +222,10 @@ public class PaymentTerminalParameters4 {
 			componentContext_lazy = () -> PaymentTerminalParameters4.mmObject();
 			isDerived = false;
 			xmlTag = "Vrsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Version";
 			definition = "Version of the terminal parameters.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PaymentTerminalParameters3.mmVersion;
+			previousVersion_lazy = () -> PaymentTerminalParameters3.mmVersion;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max256Text.mmObject();
@@ -269,10 +271,10 @@ public class PaymentTerminalParameters4 {
 			componentContext_lazy = () -> PaymentTerminalParameters4.mmObject();
 			isDerived = false;
 			xmlTag = "ClckSynctn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClockSynchronisation";
 			definition = "Parameters to synchronise the real time clock of the POI (Point Of Interaction).";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PaymentTerminalParameters3.mmClockSynchronisation;
+			previousVersion_lazy = () -> PaymentTerminalParameters3.mmClockSynchronisation;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -321,10 +323,10 @@ public class PaymentTerminalParameters4 {
 			componentContext_lazy = () -> PaymentTerminalParameters4.mmObject();
 			isDerived = false;
 			xmlTag = "TmZoneLine";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TimeZoneLine";
 			definition = "Time zone line to update in the time zone data base subset stored in the POI (Point Of Interaction). The format of the line is conform to the IANA (Internet Assigned Number Authority) time zone data base.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PaymentTerminalParameters3.mmTimeZoneLine;
+			previousVersion_lazy = () -> PaymentTerminalParameters3.mmTimeZoneLine;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max70Text.mmObject();
 		}
@@ -366,10 +368,10 @@ public class PaymentTerminalParameters4 {
 			componentContext_lazy = () -> PaymentTerminalParameters4.mmObject();
 			isDerived = false;
 			xmlTag = "LclDtTm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LocalDateTime";
 			definition = "Local time offset to UTC (Coordinated Universal Time).";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PaymentTerminalParameters3.mmLocalDateTime;
+			previousVersion_lazy = () -> PaymentTerminalParameters3.mmLocalDateTime;
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.LocalDateTime1.mmObject();
@@ -416,10 +418,10 @@ public class PaymentTerminalParameters4 {
 			componentContext_lazy = () -> PaymentTerminalParameters4.mmObject();
 			isDerived = false;
 			xmlTag = "OthrParams";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherParameters";
 			definition = "Others manufacturer configuration parameters of the point of interaction.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PaymentTerminalParameters3.mmOtherParameters;
+			previousVersion_lazy = () -> PaymentTerminalParameters3.mmOtherParameters;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max10000Binary.mmObject();
@@ -429,12 +431,10 @@ public class PaymentTerminalParameters4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentTerminalParameters4.mmActionType, com.tools20022.repository.msg.PaymentTerminalParameters4.mmVendorIdentification,
-						com.tools20022.repository.msg.PaymentTerminalParameters4.mmVersion, com.tools20022.repository.msg.PaymentTerminalParameters4.mmClockSynchronisation,
-						com.tools20022.repository.msg.PaymentTerminalParameters4.mmTimeZoneLine, com.tools20022.repository.msg.PaymentTerminalParameters4.mmLocalDateTime,
-						com.tools20022.repository.msg.PaymentTerminalParameters4.mmOtherParameters);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(PaymentTerminalParameters4.mmActionType, PaymentTerminalParameters4.mmVendorIdentification, PaymentTerminalParameters4.mmVersion, PaymentTerminalParameters4.mmClockSynchronisation,
+						PaymentTerminalParameters4.mmTimeZoneLine, PaymentTerminalParameters4.mmLocalDateTime, PaymentTerminalParameters4.mmOtherParameters);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PaymentTerminalParameters4";
 				definition = "Manufacturer configuration parameters of the point of interaction (POI).";
 				previousVersion_lazy = () -> PaymentTerminalParameters3.mmObject();

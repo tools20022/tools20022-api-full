@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.CustomerOrderCapacity1Code
+ * CustomerOrderCapacity1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -38,13 +47,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.CustomerOrderCapacityCode#mmMemberOtherMember
  * CustomerOrderCapacityCode.mmMemberOtherMember}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.CustomerOrderCapacity1Code
- * CustomerOrderCapacity1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -94,7 +96,7 @@ public class CustomerOrderCapacityCode {
 	 */
 	public static final MMCode mmMemberOwnAccount = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MemberOwnAccount";
 			definition = "Member trading for their own account.";
 			owner_lazy = () -> CustomerOrderCapacityCode.mmObject();
@@ -124,7 +126,7 @@ public class CustomerOrderCapacityCode {
 	 */
 	public static final MMCode mmClearingProprietary = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ClearingProprietary";
 			definition = "Clearing firm trading for its proprietary account.";
 			owner_lazy = () -> CustomerOrderCapacityCode.mmObject();
@@ -154,7 +156,7 @@ public class CustomerOrderCapacityCode {
 	 */
 	public static final MMCode mmMemberOtherMember = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MemberOtherMember";
 			definition = "Member trading for another member.";
 			owner_lazy = () -> CustomerOrderCapacityCode.mmObject();
@@ -165,13 +167,12 @@ public class CustomerOrderCapacityCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("OWNE");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CustomerOrderCapacityCode";
 				definition = "Designation of the capacity of the firm placing the order.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CustomerOrderCapacityCode.mmMemberOwnAccount, com.tools20022.repository.codeset.CustomerOrderCapacityCode.mmClearingProprietary,
-						com.tools20022.repository.codeset.CustomerOrderCapacityCode.mmMemberOtherMember);
+				code_lazy = () -> Arrays.asList(CustomerOrderCapacityCode.mmMemberOwnAccount, CustomerOrderCapacityCode.mmClearingProprietary, CustomerOrderCapacityCode.mmMemberOtherMember);
 				derivation_lazy = () -> Arrays.asList(CustomerOrderCapacity1Code.mmObject());
 			}
 		});

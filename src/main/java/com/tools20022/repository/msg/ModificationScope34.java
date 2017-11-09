@@ -20,8 +20,10 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.DataModification1Code;
 import com.tools20022.repository.entity.PostalAddress;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -110,10 +112,10 @@ public class ModificationScope34 {
 			componentContext_lazy = () -> ModificationScope34.mmObject();
 			isDerived = false;
 			xmlTag = "ModScpIndctn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ModificationScopeIndication";
 			definition = "Specifies the type of modification to be applied on a set of information.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ModificationScope1.mmModificationScopeIndication;
+			previousVersion_lazy = () -> ModificationScope1.mmModificationScopeIndication;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DataModification1Code.mmObject();
@@ -162,10 +164,10 @@ public class ModificationScope34 {
 			componentContext_lazy = () -> ModificationScope34.mmObject();
 			isDerived = false;
 			xmlTag = "PstlAdr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PostalAddress";
 			definition = "Address of the organisation.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ModificationScope1.mmPostalAddress;
+			previousVersion_lazy = () -> ModificationScope1.mmPostalAddress;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -176,10 +178,10 @@ public class ModificationScope34 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ModificationScope34.mmModificationScopeIndication, com.tools20022.repository.msg.ModificationScope34.mmPostalAddress);
+				messageElement_lazy = () -> Arrays.asList(ModificationScope34.mmModificationScopeIndication, ModificationScope34.mmPostalAddress);
 				trace_lazy = () -> PostalAddress.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ModificationScope34";
 				definition = "Scope of the modification to be applied on an identified set of information.";
 				previousVersion_lazy = () -> ModificationScope1.mmObject();

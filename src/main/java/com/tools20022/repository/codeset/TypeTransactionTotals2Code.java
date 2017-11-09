@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.TypeTransactionTotalsCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -97,7 +99,7 @@ public class TypeTransactionTotals2Code extends TypeTransactionTotalsCode {
 	 */
 	public static final MMCode mmCredit = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Credit";
 			owner_lazy = () -> TypeTransactionTotals2Code.mmObject();
 		}
@@ -120,7 +122,7 @@ public class TypeTransactionTotals2Code extends TypeTransactionTotalsCode {
 	 */
 	public static final MMCode mmCreditReverse = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditReverse";
 			owner_lazy = () -> TypeTransactionTotals2Code.mmObject();
 		}
@@ -143,7 +145,7 @@ public class TypeTransactionTotals2Code extends TypeTransactionTotalsCode {
 	 */
 	public static final MMCode mmDebit = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Debit";
 			owner_lazy = () -> TypeTransactionTotals2Code.mmObject();
 		}
@@ -166,7 +168,7 @@ public class TypeTransactionTotals2Code extends TypeTransactionTotalsCode {
 	 */
 	public static final MMCode mmDebitReverse = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DebitReverse";
 			owner_lazy = () -> TypeTransactionTotals2Code.mmObject();
 		}
@@ -189,7 +191,7 @@ public class TypeTransactionTotals2Code extends TypeTransactionTotalsCode {
 	 */
 	public static final MMCode mmDeclined = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Declined";
 			owner_lazy = () -> TypeTransactionTotals2Code.mmObject();
 		}
@@ -212,7 +214,7 @@ public class TypeTransactionTotals2Code extends TypeTransactionTotalsCode {
 	 */
 	public static final MMCode mmFailed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Failed";
 			owner_lazy = () -> TypeTransactionTotals2Code.mmObject();
 		}
@@ -221,14 +223,13 @@ public class TypeTransactionTotals2Code extends TypeTransactionTotalsCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CRDT");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TypeTransactionTotals2Code";
 				definition = "Identification of the type of transactions which are included in the totals.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TypeTransactionTotals2Code.mmCredit, com.tools20022.repository.codeset.TypeTransactionTotals2Code.mmCreditReverse,
-						com.tools20022.repository.codeset.TypeTransactionTotals2Code.mmDebit, com.tools20022.repository.codeset.TypeTransactionTotals2Code.mmDebitReverse,
-						com.tools20022.repository.codeset.TypeTransactionTotals2Code.mmDeclined, com.tools20022.repository.codeset.TypeTransactionTotals2Code.mmFailed);
+				code_lazy = () -> Arrays.asList(TypeTransactionTotals2Code.mmCredit, TypeTransactionTotals2Code.mmCreditReverse, TypeTransactionTotals2Code.mmDebit, TypeTransactionTotals2Code.mmDebitReverse,
+						TypeTransactionTotals2Code.mmDeclined, TypeTransactionTotals2Code.mmFailed);
 				trace_lazy = () -> TypeTransactionTotalsCode.mmObject();
 			}
 		});

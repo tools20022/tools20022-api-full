@@ -19,6 +19,8 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.InvestmentFundOrderExecution3;
 import com.tools20022.repository.msg.Statement9;
 import java.util.Arrays;
@@ -96,7 +98,7 @@ public class Advice1Choice {
 			componentContext_lazy = () -> Advice1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "OrdrConfAdvcDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrderConfirmationAdviceDetails";
 			definition = "Reference and transaction details of the order confirmation for which the cancellation is given.";
 			minOccurs = 1;
@@ -138,7 +140,7 @@ public class Advice1Choice {
 			componentContext_lazy = () -> Advice1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "StmtAdvcDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatementAdviceDetails";
 			definition = "Reference and transaction details of the statement for which the cancellation is given.";
 			maxOccurs = 1;
@@ -151,9 +153,9 @@ public class Advice1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Advice1Choice.mmOrderConfirmationAdviceDetails, com.tools20022.repository.choice.Advice1Choice.mmStatementAdviceDetails);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(Advice1Choice.mmOrderConfirmationAdviceDetails, Advice1Choice.mmStatementAdviceDetails);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Advice1Choice";
 				definition = "Choice of a cancellation advice.";
 			}

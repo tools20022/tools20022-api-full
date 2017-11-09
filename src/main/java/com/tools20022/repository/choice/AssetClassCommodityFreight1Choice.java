@@ -19,7 +19,9 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.Commodity;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.FreightCommodityContainerShip1;
 import com.tools20022.repository.msg.FreightCommodityDry1;
 import com.tools20022.repository.msg.FreightCommodityWet1;
@@ -101,11 +103,11 @@ public class AssetClassCommodityFreight1Choice {
 	 */
 	public static final MMMessageAssociationEnd mmDry = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Commodity.mmSubProduct;
+			businessElementTrace_lazy = () -> Commodity.mmSubProduct;
 			componentContext_lazy = () -> AssetClassCommodityFreight1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Dry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Dry";
 			definition = "Dry freight commodity derivative.";
 			maxOccurs = 1;
@@ -148,11 +150,11 @@ public class AssetClassCommodityFreight1Choice {
 	 */
 	public static final MMMessageAssociationEnd mmWet = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Commodity.mmSubProduct;
+			businessElementTrace_lazy = () -> Commodity.mmSubProduct;
 			componentContext_lazy = () -> AssetClassCommodityFreight1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Wet";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Wet";
 			definition = "Wet freight commodity derivative.";
 			maxOccurs = 1;
@@ -196,11 +198,11 @@ public class AssetClassCommodityFreight1Choice {
 	 */
 	public static final MMMessageAssociationEnd mmContainerShip = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Commodity.mmSubProduct;
+			businessElementTrace_lazy = () -> Commodity.mmSubProduct;
 			componentContext_lazy = () -> AssetClassCommodityFreight1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "CntnrShip";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ContainerShip";
 			definition = "Container ship freight commodity derivative.";
 			maxOccurs = 1;
@@ -213,11 +215,10 @@ public class AssetClassCommodityFreight1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AssetClassCommodityFreight1Choice.mmDry, com.tools20022.repository.choice.AssetClassCommodityFreight1Choice.mmWet,
-						com.tools20022.repository.choice.AssetClassCommodityFreight1Choice.mmContainerShip);
+				messageElement_lazy = () -> Arrays.asList(AssetClassCommodityFreight1Choice.mmDry, AssetClassCommodityFreight1Choice.mmWet, AssetClassCommodityFreight1Choice.mmContainerShip);
 				trace_lazy = () -> Commodity.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AssetClassCommodityFreight1Choice";
 				definition = "Defines commodity attributes of a derivative where the type is freight.";
 			}

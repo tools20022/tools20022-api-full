@@ -19,7 +19,10 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.entity.AssetHolding;
 import com.tools20022.repository.entity.SecuritiesQuantity;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.OriginalAndCurrentQuantities2;
 import com.tools20022.repository.msg.SignedQuantityFormat2;
 import java.text.DateFormat;
@@ -117,14 +120,14 @@ public class Quantity4Choice {
 	 */
 	public static final MMMessageAssociationEnd mmOriginalAndCurrentFaceAmount = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmFaceAmount;
+			businessElementTrace_lazy = () -> AssetHolding.mmFaceAmount;
 			componentContext_lazy = () -> Quantity4Choice.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlAndCurFaceAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalAndCurrentFaceAmount";
 			definition = "Signed face amount and amortised value of security.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Quantity18Choice.mmOriginalAndCurrentFaceAmount);
+			nextVersions_lazy = () -> Arrays.asList(Quantity18Choice.mmOriginalAndCurrentFaceAmount);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -171,10 +174,10 @@ public class Quantity4Choice {
 			componentContext_lazy = () -> Quantity4Choice.mmObject();
 			isDerived = false;
 			xmlTag = "SgndQty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SignedQuantity";
 			definition = "Signed quantity of security.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Quantity18Choice.mmSignedQuantity);
+			nextVersions_lazy = () -> Arrays.asList(Quantity18Choice.mmSignedQuantity);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -185,10 +188,10 @@ public class Quantity4Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Quantity4Choice.mmOriginalAndCurrentFaceAmount, com.tools20022.repository.choice.Quantity4Choice.mmSignedQuantity);
+				messageElement_lazy = () -> Arrays.asList(Quantity4Choice.mmOriginalAndCurrentFaceAmount, Quantity4Choice.mmSignedQuantity);
 				trace_lazy = () -> SecuritiesQuantity.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
 						return DateFormat.getDateInstance(java.text.DateFormat.LONG).parse("May 5, 2016");

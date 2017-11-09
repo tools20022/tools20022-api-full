@@ -19,8 +19,10 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
 import com.tools20022.repository.entity.CollateralMovement;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -105,7 +107,7 @@ public class MarginResult1Choice {
 			componentContext_lazy = () -> MarginResult1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "XcssAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExcessAmount";
 			definition = "Excess amount that the central counterparty may restitute to the Clearing member.";
 			maxOccurs = 1;
@@ -156,7 +158,7 @@ public class MarginResult1Choice {
 			componentContext_lazy = () -> MarginResult1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "DfcitAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeficitAmount";
 			definition = "Deficit amount that the central counterparty will provide to the clearing member.";
 			maxOccurs = 1;
@@ -168,10 +170,10 @@ public class MarginResult1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.MarginResult1Choice.mmExcessAmount, com.tools20022.repository.choice.MarginResult1Choice.mmDeficitAmount);
+				messageElement_lazy = () -> Arrays.asList(MarginResult1Choice.mmExcessAmount, MarginResult1Choice.mmDeficitAmount);
 				trace_lazy = () -> CollateralMovement.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MarginResult1Choice";
 				definition = "Provides details on the margin result.";
 			}

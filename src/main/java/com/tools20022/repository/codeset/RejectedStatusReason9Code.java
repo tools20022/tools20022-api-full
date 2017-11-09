@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.RejectedStatusReasonCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -102,7 +104,7 @@ public class RejectedStatusReason9Code extends RejectedStatusReasonCode {
 	 */
 	public static final MMCode mmFinancialInstrumentIdentification = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentIdentification";
 			owner_lazy = () -> RejectedStatusReason9Code.mmObject();
 		}
@@ -125,7 +127,7 @@ public class RejectedStatusReason9Code extends RejectedStatusReasonCode {
 	 */
 	public static final MMCode mmFinancialInstrumentIdentificationAndName = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentIdentificationAndName";
 			owner_lazy = () -> RejectedStatusReason9Code.mmObject();
 		}
@@ -148,7 +150,7 @@ public class RejectedStatusReason9Code extends RejectedStatusReasonCode {
 	 */
 	public static final MMCode mmDuplicateOrderReference = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DuplicateOrderReference";
 			owner_lazy = () -> RejectedStatusReason9Code.mmObject();
 		}
@@ -171,7 +173,7 @@ public class RejectedStatusReason9Code extends RejectedStatusReasonCode {
 	 */
 	public static final MMCode mmNotCompliantWithSLA = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotCompliantWithSLA";
 			owner_lazy = () -> RejectedStatusReason9Code.mmObject();
 		}
@@ -194,7 +196,7 @@ public class RejectedStatusReason9Code extends RejectedStatusReasonCode {
 	 */
 	public static final MMCode mmFinancialInstrumentQuantity = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentQuantity";
 			owner_lazy = () -> RejectedStatusReason9Code.mmObject();
 		}
@@ -217,7 +219,7 @@ public class RejectedStatusReason9Code extends RejectedStatusReasonCode {
 	 */
 	public static final MMCode mmSettlementAmountCurrency = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementAmountCurrency";
 			owner_lazy = () -> RejectedStatusReason9Code.mmObject();
 		}
@@ -240,7 +242,7 @@ public class RejectedStatusReason9Code extends RejectedStatusReasonCode {
 	 */
 	public static final MMCode mmPlaceOfTrade = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceOfTrade";
 			owner_lazy = () -> RejectedStatusReason9Code.mmObject();
 		}
@@ -263,7 +265,7 @@ public class RejectedStatusReason9Code extends RejectedStatusReasonCode {
 	 */
 	public static final MMCode mmTradeDate = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeDate";
 			owner_lazy = () -> RejectedStatusReason9Code.mmObject();
 		}
@@ -272,16 +274,14 @@ public class RejectedStatusReason9Code extends RejectedStatusReasonCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("DSEC");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RejectedStatusReason9Code";
 				definition = "Reason for which an instruction, request, report message is rejected.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RejectedStatusReason9Code.mmFinancialInstrumentIdentification,
-						com.tools20022.repository.codeset.RejectedStatusReason9Code.mmFinancialInstrumentIdentificationAndName, com.tools20022.repository.codeset.RejectedStatusReason9Code.mmDuplicateOrderReference,
-						com.tools20022.repository.codeset.RejectedStatusReason9Code.mmNotCompliantWithSLA, com.tools20022.repository.codeset.RejectedStatusReason9Code.mmFinancialInstrumentQuantity,
-						com.tools20022.repository.codeset.RejectedStatusReason9Code.mmSettlementAmountCurrency, com.tools20022.repository.codeset.RejectedStatusReason9Code.mmPlaceOfTrade,
-						com.tools20022.repository.codeset.RejectedStatusReason9Code.mmTradeDate);
+				code_lazy = () -> Arrays.asList(RejectedStatusReason9Code.mmFinancialInstrumentIdentification, RejectedStatusReason9Code.mmFinancialInstrumentIdentificationAndName, RejectedStatusReason9Code.mmDuplicateOrderReference,
+						RejectedStatusReason9Code.mmNotCompliantWithSLA, RejectedStatusReason9Code.mmFinancialInstrumentQuantity, RejectedStatusReason9Code.mmSettlementAmountCurrency, RejectedStatusReason9Code.mmPlaceOfTrade,
+						RejectedStatusReason9Code.mmTradeDate);
 				trace_lazy = () -> RejectedStatusReasonCode.mmObject();
 			}
 		});

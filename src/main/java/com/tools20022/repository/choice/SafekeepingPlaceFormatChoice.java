@@ -19,8 +19,12 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CountryCode;
+import com.tools20022.repository.entity.Country;
+import com.tools20022.repository.entity.PartyIdentificationInformation;
 import com.tools20022.repository.entity.SafekeepingPlace;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification5;
 import com.tools20022.repository.msg.SafekeepingPlaceAsCodeAndPartyIdentification;
 import java.util.Arrays;
@@ -107,7 +111,7 @@ public class SafekeepingPlaceFormatChoice {
 			componentContext_lazy = () -> SafekeepingPlaceFormatChoice.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Place of safekeeping expressed as a code and BIC.";
 			maxOccurs = 1;
@@ -152,11 +156,11 @@ public class SafekeepingPlaceFormatChoice {
 	 */
 	public static final MMMessageAttribute mmIdentificationAsDSS = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.mmOtherIdentification;
+			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmOtherIdentification;
 			componentContext_lazy = () -> SafekeepingPlaceFormatChoice.mmObject();
 			isDerived = false;
 			xmlTag = "IdAsDSS";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IdentificationAsDSS";
 			definition = "Place of safekeeping expressed with a propriety identification scheme.";
 			maxOccurs = 1;
@@ -199,11 +203,11 @@ public class SafekeepingPlaceFormatChoice {
 	 */
 	public static final MMMessageAttribute mmIdentificationAsCountry = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Country.mmCode;
+			businessElementTrace_lazy = () -> Country.mmCode;
 			componentContext_lazy = () -> SafekeepingPlaceFormatChoice.mmObject();
 			isDerived = false;
 			xmlTag = "IdAsCtry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IdentificationAsCountry";
 			definition = "Place of safekeeping expressed with a country code.";
 			maxOccurs = 1;
@@ -215,11 +219,10 @@ public class SafekeepingPlaceFormatChoice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SafekeepingPlaceFormatChoice.mmIdentification, com.tools20022.repository.choice.SafekeepingPlaceFormatChoice.mmIdentificationAsDSS,
-						com.tools20022.repository.choice.SafekeepingPlaceFormatChoice.mmIdentificationAsCountry);
+				messageElement_lazy = () -> Arrays.asList(SafekeepingPlaceFormatChoice.mmIdentification, SafekeepingPlaceFormatChoice.mmIdentificationAsDSS, SafekeepingPlaceFormatChoice.mmIdentificationAsCountry);
 				trace_lazy = () -> SafekeepingPlace.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SafekeepingPlaceFormatChoice";
 				definition = "Choice of formats for the place of safekeeping.";
 			}

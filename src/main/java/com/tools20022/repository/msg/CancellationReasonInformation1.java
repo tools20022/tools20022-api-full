@@ -20,9 +20,13 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.CancellationReason1Choice;
 import com.tools20022.repository.datatype.Max105Text;
+import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.entity.PaymentStatus;
+import com.tools20022.repository.entity.StatusReason;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -103,11 +107,11 @@ public class CancellationReasonInformation1 {
 	 */
 	public static final MMMessageAssociationEnd mmCancellationOriginator = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> CancellationReasonInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "CxlOrgtr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationOriginator";
 			definition = "Party issuing the cancellation request.";
 			maxOccurs = 1;
@@ -151,11 +155,11 @@ public class CancellationReasonInformation1 {
 	 */
 	public static final MMMessageAssociationEnd mmCancellationReason = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentStatus.mmCancellationReason;
+			businessElementTrace_lazy = () -> PaymentStatus.mmCancellationReason;
 			componentContext_lazy = () -> CancellationReasonInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "CxlRsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationReason";
 			definition = "Specifies the reason for the cancellation.";
 			maxOccurs = 1;
@@ -204,11 +208,11 @@ public class CancellationReasonInformation1 {
 	 */
 	public static final MMMessageAttribute mmAdditionalCancellationReasonInformation = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmReason;
+			businessElementTrace_lazy = () -> StatusReason.mmReason;
 			componentContext_lazy = () -> CancellationReasonInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlCxlRsnInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalCancellationReasonInformation";
 			definition = "Further details on the cancellation request reason.\n\nUsage: Additional cancellation reason information can be used to further detail the cancellation request reason.";
 			minOccurs = 0;
@@ -219,11 +223,11 @@ public class CancellationReasonInformation1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CancellationReasonInformation1.mmCancellationOriginator, com.tools20022.repository.msg.CancellationReasonInformation1.mmCancellationReason,
-						com.tools20022.repository.msg.CancellationReasonInformation1.mmAdditionalCancellationReasonInformation);
+				messageElement_lazy = () -> Arrays.asList(CancellationReasonInformation1.mmCancellationOriginator, CancellationReasonInformation1.mmCancellationReason,
+						CancellationReasonInformation1.mmAdditionalCancellationReasonInformation);
 				trace_lazy = () -> PaymentStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CancellationReasonInformation1";
 				definition = "Further information on the cancellation reason of the transaction.";
 			}

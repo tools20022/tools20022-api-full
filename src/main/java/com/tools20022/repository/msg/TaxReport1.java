@@ -19,7 +19,10 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.auth.InvoiceTaxReportV01;
 import com.tools20022.repository.entity.BuyerRole;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -125,7 +128,7 @@ public class TaxReport1 {
 			componentContext_lazy = () -> TaxReport1.mmObject();
 			isDerived = false;
 			xmlTag = "TaxRptHdr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxReportHeader";
 			definition = "Basic report details.";
 			maxOccurs = 1;
@@ -168,7 +171,7 @@ public class TaxReport1 {
 			componentContext_lazy = () -> TaxReport1.mmObject();
 			isDerived = false;
 			xmlTag = "Sellr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Seller";
 			definition = "Tax reporting agent, for example seller.\r\nResponsible to issue tax reporting to tax authority.";
 			maxOccurs = 1;
@@ -214,7 +217,7 @@ public class TaxReport1 {
 			componentContext_lazy = () -> TaxReport1.mmObject();
 			isDerived = false;
 			xmlTag = "Buyr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Buyer";
 			definition = "Specifies the buyer of goods/service reported in this message.";
 			maxOccurs = 1;
@@ -257,7 +260,7 @@ public class TaxReport1 {
 			componentContext_lazy = () -> TaxReport1.mmObject();
 			isDerived = false;
 			xmlTag = "TradSttlm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeSettlement";
 			definition = "Contains the details of the business transactions reported in the message.";
 			maxOccurs = 1;
@@ -298,7 +301,7 @@ public class TaxReport1 {
 			componentContext_lazy = () -> TaxReport1.mmObject();
 			isDerived = false;
 			xmlTag = "OthrPty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherParty";
 			definition = "Reserved for parties that may be required by a specific tax authority.";
 			minOccurs = 0;
@@ -337,7 +340,7 @@ public class TaxReport1 {
 			componentContext_lazy = () -> TaxReport1.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInformation";
 			definition = "Additional reference like site key or identifier.";
 			minOccurs = 0;
@@ -380,7 +383,7 @@ public class TaxReport1 {
 			componentContext_lazy = () -> TaxReport1.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalReference";
 			definition = "Structure to deliver link to external attachment or deliver base64-coded attachment inside message. ";
 			minOccurs = 0;
@@ -422,7 +425,7 @@ public class TaxReport1 {
 			componentContext_lazy = () -> TaxReport1.mmObject();
 			isDerived = false;
 			xmlTag = "SplmtryData";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryData";
 			definition = "Additional information that can not be captured in the structured fields and/or any other specific block. ";
 			minOccurs = 0;
@@ -434,13 +437,12 @@ public class TaxReport1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TaxReport1.mmTaxReportHeader, com.tools20022.repository.msg.TaxReport1.mmSeller, com.tools20022.repository.msg.TaxReport1.mmBuyer,
-						com.tools20022.repository.msg.TaxReport1.mmTradeSettlement, com.tools20022.repository.msg.TaxReport1.mmOtherParty, com.tools20022.repository.msg.TaxReport1.mmAdditionalInformation,
-						com.tools20022.repository.msg.TaxReport1.mmAdditionalReference, com.tools20022.repository.msg.TaxReport1.mmSupplementaryData);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.auth.InvoiceTaxReportV01.mmTaxReport);
+				messageElement_lazy = () -> Arrays.asList(TaxReport1.mmTaxReportHeader, TaxReport1.mmSeller, TaxReport1.mmBuyer, TaxReport1.mmTradeSettlement, TaxReport1.mmOtherParty, TaxReport1.mmAdditionalInformation,
+						TaxReport1.mmAdditionalReference, TaxReport1.mmSupplementaryData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(InvoiceTaxReportV01.mmTaxReport);
 				trace_lazy = () -> BuyerRole.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TaxReport1";
 				definition = "Contains all needed party details for tax agency (sender of the TaxReport) and tax authority (receiver of the TaxReport) and the details of the reported sales transaction and calculated tax related that specific business transaction.";
 				nextVersions_lazy = () -> Arrays.asList(TaxReportHeader1.mmObject());

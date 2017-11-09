@@ -20,6 +20,7 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.AccountIdentification4Choice;
 import com.tools20022.repository.choice.TradeMarket1Choice;
 import com.tools20022.repository.codeset.CurrencyCode;
@@ -27,7 +28,8 @@ import com.tools20022.repository.codeset.ExternalDocumentPurpose1Code;
 import com.tools20022.repository.codeset.LanguageCode;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.Max35Text;
-import com.tools20022.repository.entity.Invoice;
+import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -154,11 +156,11 @@ public class FinancialItemParameters1 {
 	 */
 	public static final MMMessageAttribute mmIdentifier = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvoiceFinancingAgreement.mmIdentification;
+			businessElementTrace_lazy = () -> InvoiceFinancingAgreement.mmIdentification;
 			componentContext_lazy = () -> FinancialItemParameters1.mmObject();
 			isDerived = false;
 			xmlTag = "Idr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identifier";
 			definition = "Unique identification of this item relative to the issuing party.";
 			maxOccurs = 1;
@@ -201,11 +203,11 @@ public class FinancialItemParameters1 {
 	 */
 	public static final MMMessageAttribute mmIssueDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Document.mmIssueDate;
+			businessElementTrace_lazy = () -> Document.mmIssueDate;
 			componentContext_lazy = () -> FinancialItemParameters1.mmObject();
 			isDerived = false;
 			xmlTag = "IsseDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssueDate";
 			definition = "Date of creation of the item.";
 			maxOccurs = 1;
@@ -252,7 +254,7 @@ public class FinancialItemParameters1 {
 			componentContext_lazy = () -> FinancialItemParameters1.mmObject();
 			isDerived = false;
 			xmlTag = "RltdItm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedItem";
 			definition = "Identifier of related items, for example an assignment or an advice.";
 			minOccurs = 0;
@@ -297,11 +299,11 @@ public class FinancialItemParameters1 {
 	 */
 	public static final MMMessageAttribute mmDocumentPurpose = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Document.mmPurpose;
+			businessElementTrace_lazy = () -> Document.mmPurpose;
 			componentContext_lazy = () -> FinancialItemParameters1.mmObject();
 			isDerived = false;
 			xmlTag = "DocPurp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DocumentPurpose";
 			definition = "Specifies the function of the document related to the item.";
 			maxOccurs = 1;
@@ -344,11 +346,11 @@ public class FinancialItemParameters1 {
 	 */
 	public static final MMMessageAttribute mmLanguageCode = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Document.mmLanguage;
+			businessElementTrace_lazy = () -> Document.mmLanguage;
 			componentContext_lazy = () -> FinancialItemParameters1.mmObject();
 			isDerived = false;
 			xmlTag = "LangCd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LanguageCode";
 			definition = "Language used for textual information in item.";
 			maxOccurs = 1;
@@ -391,11 +393,11 @@ public class FinancialItemParameters1 {
 	 */
 	public static final MMMessageAssociationEnd mmIssuer = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> FinancialItemParameters1.mmObject();
 			isDerived = false;
 			xmlTag = "Issr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Issuer";
 			definition = "Party that issued this list of items.";
 			maxOccurs = 1;
@@ -439,11 +441,11 @@ public class FinancialItemParameters1 {
 	 */
 	public static final MMMessageAssociationEnd mmRecipient = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> FinancialItemParameters1.mmObject();
 			isDerived = false;
 			xmlTag = "Rcpt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Recipient";
 			definition = "Receiving party of this list of items.";
 			maxOccurs = 1;
@@ -490,11 +492,11 @@ public class FinancialItemParameters1 {
 	 */
 	public static final MMMessageAssociationEnd mmBuyer = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> FinancialItemParameters1.mmObject();
 			isDerived = false;
 			xmlTag = "Buyr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Buyer";
 			definition = "Party that acts as buyer of the goods or services referred to by the financial item.";
 			maxOccurs = 1;
@@ -541,11 +543,11 @@ public class FinancialItemParameters1 {
 	 */
 	public static final MMMessageAssociationEnd mmSeller = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> FinancialItemParameters1.mmObject();
 			isDerived = false;
 			xmlTag = "Sellr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Seller";
 			definition = "Party that acts as seller of the goods or services referred to by the financial item.";
 			maxOccurs = 1;
@@ -589,11 +591,11 @@ public class FinancialItemParameters1 {
 	 */
 	public static final MMMessageAssociationEnd mmSellerFinancialAgent = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> FinancialItemParameters1.mmObject();
 			isDerived = false;
 			xmlTag = "SellrFinAgt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SellerFinancialAgent";
 			definition = "Financial agent for the seller.";
 			maxOccurs = 1;
@@ -637,11 +639,11 @@ public class FinancialItemParameters1 {
 	 */
 	public static final MMMessageAssociationEnd mmBuyerFinancialAgent = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> FinancialItemParameters1.mmObject();
 			isDerived = false;
 			xmlTag = "BuyrFinAgt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BuyerFinancialAgent";
 			definition = "Financial agent for the buyer.";
 			maxOccurs = 1;
@@ -686,11 +688,11 @@ public class FinancialItemParameters1 {
 	 */
 	public static final MMMessageAssociationEnd mmGoverningContract = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Document.mmAgreement;
+			businessElementTrace_lazy = () -> Document.mmAgreement;
 			componentContext_lazy = () -> FinancialItemParameters1.mmObject();
 			isDerived = false;
 			xmlTag = "GovngCtrct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GoverningContract";
 			definition = "Reference to contract that governs the exchange of the message.";
 			minOccurs = 0;
@@ -732,11 +734,11 @@ public class FinancialItemParameters1 {
 	 */
 	public static final MMMessageAssociationEnd mmLegalContext = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Jurisdiction.mmGovernanceRules;
+			businessElementTrace_lazy = () -> Jurisdiction.mmGovernanceRules;
 			componentContext_lazy = () -> FinancialItemParameters1.mmObject();
 			isDerived = false;
 			xmlTag = "LglCntxt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LegalContext";
 			definition = "Rules and laws governing the item.";
 			maxOccurs = 1;
@@ -780,11 +782,11 @@ public class FinancialItemParameters1 {
 	 */
 	public static final MMMessageAttribute mmCurrency = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Invoice.mmInvoiceCurrency;
+			businessElementTrace_lazy = () -> Invoice.mmInvoiceCurrency;
 			componentContext_lazy = () -> FinancialItemParameters1.mmObject();
 			isDerived = false;
 			xmlTag = "Ccy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Currency";
 			definition = "Currency of the item.";
 			maxOccurs = 1;
@@ -829,11 +831,11 @@ public class FinancialItemParameters1 {
 	 */
 	public static final MMMessageAssociationEnd mmDebitAccount = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.mmIdentification;
+			businessElementTrace_lazy = () -> Account.mmIdentification;
 			componentContext_lazy = () -> FinancialItemParameters1.mmObject();
 			isDerived = false;
 			xmlTag = "DbtAcct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DebitAccount";
 			definition = "Defines the account debited for charges (or credited for reimbursement).";
 			maxOccurs = 1;
@@ -879,11 +881,11 @@ public class FinancialItemParameters1 {
 	 */
 	public static final MMMessageAssociationEnd mmCreditAccount = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.mmIdentification;
+			businessElementTrace_lazy = () -> Account.mmIdentification;
 			componentContext_lazy = () -> FinancialItemParameters1.mmObject();
 			isDerived = false;
 			xmlTag = "CdtAcct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditAccount";
 			definition = "Defines the account credited for charges (or debited for reimbursement).";
 			maxOccurs = 1;
@@ -927,11 +929,11 @@ public class FinancialItemParameters1 {
 	 */
 	public static final MMMessageAssociationEnd mmTradeMarket = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Trade.mmMarket;
+			businessElementTrace_lazy = () -> Trade.mmMarket;
 			componentContext_lazy = () -> FinancialItemParameters1.mmObject();
 			isDerived = false;
 			xmlTag = "TradMkt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeMarket";
 			definition = "Identification of the geographical environment of the trade market.";
 			maxOccurs = 1;
@@ -944,16 +946,13 @@ public class FinancialItemParameters1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialItemParameters1.mmIdentifier, com.tools20022.repository.msg.FinancialItemParameters1.mmIssueDate,
-						com.tools20022.repository.msg.FinancialItemParameters1.mmRelatedItem, com.tools20022.repository.msg.FinancialItemParameters1.mmDocumentPurpose, com.tools20022.repository.msg.FinancialItemParameters1.mmLanguageCode,
-						com.tools20022.repository.msg.FinancialItemParameters1.mmIssuer, com.tools20022.repository.msg.FinancialItemParameters1.mmRecipient, com.tools20022.repository.msg.FinancialItemParameters1.mmBuyer,
-						com.tools20022.repository.msg.FinancialItemParameters1.mmSeller, com.tools20022.repository.msg.FinancialItemParameters1.mmSellerFinancialAgent,
-						com.tools20022.repository.msg.FinancialItemParameters1.mmBuyerFinancialAgent, com.tools20022.repository.msg.FinancialItemParameters1.mmGoverningContract,
-						com.tools20022.repository.msg.FinancialItemParameters1.mmLegalContext, com.tools20022.repository.msg.FinancialItemParameters1.mmCurrency, com.tools20022.repository.msg.FinancialItemParameters1.mmDebitAccount,
-						com.tools20022.repository.msg.FinancialItemParameters1.mmCreditAccount, com.tools20022.repository.msg.FinancialItemParameters1.mmTradeMarket);
+				messageElement_lazy = () -> Arrays.asList(FinancialItemParameters1.mmIdentifier, FinancialItemParameters1.mmIssueDate, FinancialItemParameters1.mmRelatedItem, FinancialItemParameters1.mmDocumentPurpose,
+						FinancialItemParameters1.mmLanguageCode, FinancialItemParameters1.mmIssuer, FinancialItemParameters1.mmRecipient, FinancialItemParameters1.mmBuyer, FinancialItemParameters1.mmSeller,
+						FinancialItemParameters1.mmSellerFinancialAgent, FinancialItemParameters1.mmBuyerFinancialAgent, FinancialItemParameters1.mmGoverningContract, FinancialItemParameters1.mmLegalContext,
+						FinancialItemParameters1.mmCurrency, FinancialItemParameters1.mmDebitAccount, FinancialItemParameters1.mmCreditAccount, FinancialItemParameters1.mmTradeMarket);
 				trace_lazy = () -> Invoice.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
 						return DateFormat.getDateInstance(java.text.DateFormat.LONG).parse("September 9, 2016");

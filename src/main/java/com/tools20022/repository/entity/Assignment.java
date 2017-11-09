@@ -17,8 +17,11 @@
 
 package com.tools20022.repository.entity;
 
+import com.tools20022.metamodel.MMAggregation;
 import com.tools20022.metamodel.MMBusinessAssociationEnd;
 import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -32,17 +35,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Assignment#mmPaymentObligation
- * Assignment.mmPaymentObligation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Assignment#mmFinancingAgreement
- * Assignment.mmFinancingAgreement}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
  * associationDomain} =
@@ -53,6 +45,17 @@ import java.util.List;
  * <li>
  * {@linkplain com.tools20022.repository.entity.InvoiceFinancingAgreement#mmAssignment
  * InvoiceFinancingAgreement.mmAssignment}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Assignment#mmPaymentObligation
+ * Assignment.mmPaymentObligation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Assignment#mmFinancingAgreement
+ * Assignment.mmFinancingAgreement}</li>
  * </ul>
  * </li>
  * <li>
@@ -110,12 +113,12 @@ public class Assignment {
 		{
 			elementContext_lazy = () -> Assignment.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PaymentObligation";
 			definition = "Payment obligations included in an assignment.";
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.PaymentObligation.mmRelatedAssignment;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.PaymentObligation.mmObject();
 		}
 	};
@@ -158,12 +161,12 @@ public class Assignment {
 		{
 			elementContext_lazy = () -> Assignment.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "FinancingAgreement";
 			definition = "Invoice financing agreement which creates a payment obligation.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.InvoiceFinancingAgreement.mmAssignment;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.InvoiceFinancingAgreement.mmObject();
 		}
 	};
@@ -171,12 +174,12 @@ public class Assignment {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Assignment";
 				definition = "Transfer by one party to a third party of its receivables.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.PaymentObligation.mmRelatedAssignment, com.tools20022.repository.entity.InvoiceFinancingAgreement.mmAssignment);
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Assignment.mmPaymentObligation, com.tools20022.repository.entity.Assignment.mmFinancingAgreement);
+				element_lazy = () -> Arrays.asList(Assignment.mmPaymentObligation, Assignment.mmFinancingAgreement);
 			}
 		});
 		return mmObject_lazy.get();

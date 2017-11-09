@@ -19,8 +19,10 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.PINFormat4Code;
 import com.tools20022.repository.datatype.Number;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -101,7 +103,7 @@ public class ATMSecurityConfiguration5 {
 			componentContext_lazy = () -> ATMSecurityConfiguration5.mmObject();
 			isDerived = false;
 			xmlTag = "PINFrmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PINFormat";
 			definition = "PIN block format the security module is able to manage for online verification of the PIN.";
 			minOccurs = 0;
@@ -144,7 +146,7 @@ public class ATMSecurityConfiguration5 {
 			componentContext_lazy = () -> ATMSecurityConfiguration5.mmObject();
 			isDerived = false;
 			xmlTag = "PINLngthCpblties";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PINLengthCapabilities";
 			definition = "Maximum number of digits the security module is able to accept when the cardholder enters its PIN.";
 			maxOccurs = 1;
@@ -156,9 +158,9 @@ public class ATMSecurityConfiguration5 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMSecurityConfiguration5.mmPINFormat, com.tools20022.repository.msg.ATMSecurityConfiguration5.mmPINLengthCapabilities);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(ATMSecurityConfiguration5.mmPINFormat, ATMSecurityConfiguration5.mmPINLengthCapabilities);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ATMSecurityConfiguration5";
 				definition = "Configuration of the PIN online verification.";
 				previousVersion_lazy = () -> ATMSecurityConfiguration4.mmObject();

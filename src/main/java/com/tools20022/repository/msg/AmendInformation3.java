@@ -19,6 +19,9 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.seev.MeetingResultDisseminationV05;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -105,10 +108,10 @@ public class AmendInformation3 {
 			componentContext_lazy = () -> AmendInformation3.mmObject();
 			isDerived = false;
 			xmlTag = "PrvsRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousReference";
 			definition = "Identifies the MeetingResultDissemination message to be amended.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AmendInformation2.mmPreviousReference;
+			previousVersion_lazy = () -> AmendInformation2.mmPreviousReference;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -119,10 +122,10 @@ public class AmendInformation3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AmendInformation3.mmPreviousReference);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.MeetingResultDisseminationV05.mmAmendment);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(AmendInformation3.mmPreviousReference);
+				messageBuildingBlock_lazy = () -> Arrays.asList(MeetingResultDisseminationV05.mmAmendment);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AmendInformation3";
 				definition = "Information specific to an amendment.";
 				previousVersion_lazy = () -> AmendInformation2.mmObject();

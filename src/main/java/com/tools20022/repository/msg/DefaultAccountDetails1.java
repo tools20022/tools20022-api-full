@@ -19,7 +19,9 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.DailyFundTransfer1Choice;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -95,7 +97,7 @@ public class DefaultAccountDetails1 {
 			componentContext_lazy = () -> DefaultAccountDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "AcctOwnr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountOwner";
 			definition = "Account owner identification.";
 			maxOccurs = 1;
@@ -136,7 +138,7 @@ public class DefaultAccountDetails1 {
 			componentContext_lazy = () -> DefaultAccountDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "Acct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Account";
 			definition = "Account identification.";
 			maxOccurs = 1;
@@ -178,7 +180,7 @@ public class DefaultAccountDetails1 {
 			componentContext_lazy = () -> DefaultAccountDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "DalyFndTrf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DailyFundTransfer";
 			definition = "Information about time and event fund transfer.";
 			maxOccurs = 1;
@@ -191,10 +193,9 @@ public class DefaultAccountDetails1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DefaultAccountDetails1.mmAccountOwner, com.tools20022.repository.msg.DefaultAccountDetails1.mmAccount,
-						com.tools20022.repository.msg.DefaultAccountDetails1.mmDailyFundTransfer);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(DefaultAccountDetails1.mmAccountOwner, DefaultAccountDetails1.mmAccount, DefaultAccountDetails1.mmDailyFundTransfer);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "DefaultAccountDetails1";
 				definition = "Details about successor account for automated default funds transfer.";
 			}

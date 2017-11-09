@@ -19,7 +19,9 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Exact3NumericText;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification18;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -91,7 +93,7 @@ public class Number23Choice {
 			componentContext_lazy = () -> Number23Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Shrt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Short";
 			definition = "Number of maximum 3 numeric text.";
 			maxOccurs = 1;
@@ -136,7 +138,7 @@ public class Number23Choice {
 			componentContext_lazy = () -> Number23Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Lng";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Long";
 			definition = "Number of maximum 35 text, with the possibility to provide an issuer for the number identification.";
 			maxOccurs = 1;
@@ -148,9 +150,9 @@ public class Number23Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Number23Choice.mmShort, com.tools20022.repository.choice.Number23Choice.mmLong);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(Number23Choice.mmShort, Number23Choice.mmLong);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Number23Choice";
 				definition = "Choice number format.";
 			}

@@ -19,8 +19,10 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Max350Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -110,7 +112,7 @@ public class CorporateActionDateSD7 {
 			componentContext_lazy = () -> CorporateActionDateSD7.mmObject();
 			isDerived = false;
 			xmlTag = "PlcAndNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "xPath to the element that is being extended.";
 			maxOccurs = 1;
@@ -152,7 +154,7 @@ public class CorporateActionDateSD7 {
 			componentContext_lazy = () -> CorporateActionDateSD7.mmObject();
 			isDerived = false;
 			xmlTag = "ActlEarlyXprtnDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ActualEarlyExpirationDate";
 			definition = "Actual early expiration time as set by the issuer/offer/agent.";
 			maxOccurs = 1;
@@ -194,7 +196,7 @@ public class CorporateActionDateSD7 {
 			componentContext_lazy = () -> CorporateActionDateSD7.mmObject();
 			isDerived = false;
 			xmlTag = "ActlPrtctXprtnDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ActualProtectExpirationDate";
 			definition = "Last day protect instructions can be submitted to the issuer / agent. ";
 			maxOccurs = 1;
@@ -238,7 +240,7 @@ public class CorporateActionDateSD7 {
 			componentContext_lazy = () -> CorporateActionDateSD7.mmObject();
 			isDerived = false;
 			xmlTag = "ActlEarlyPrtctXprtnDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ActualEarlyProtectExpirationDate";
 			definition = "Last day protect instructions can be submitted to the issuer / agent for the early expiration. ";
 			maxOccurs = 1;
@@ -282,7 +284,7 @@ public class CorporateActionDateSD7 {
 			componentContext_lazy = () -> CorporateActionDateSD7.mmObject();
 			isDerived = false;
 			xmlTag = "DTCEarlyPrtctXprtnDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCEarlyProtectExpirationDate";
 			definition = "Last day protect instructions can be submitted to DTC for the early expiration.";
 			maxOccurs = 1;
@@ -326,7 +328,7 @@ public class CorporateActionDateSD7 {
 			componentContext_lazy = () -> CorporateActionDateSD7.mmObject();
 			isDerived = false;
 			xmlTag = "ActlEarlyCoverPrtctXprtnDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ActualEarlyCoverProtectExpirationDate";
 			definition = "Last day cover early protect instructions can be submitted to the issuer / agent.";
 			maxOccurs = 1;
@@ -368,7 +370,7 @@ public class CorporateActionDateSD7 {
 			componentContext_lazy = () -> CorporateActionDateSD7.mmObject();
 			isDerived = false;
 			xmlTag = "DTCEarlyCoverPrtctXprtnDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCEarlyCoverProtectExpirationDate";
 			definition = "Last day cover early protect instructions can be submitted to DTC.";
 			maxOccurs = 1;
@@ -380,12 +382,11 @@ public class CorporateActionDateSD7 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionDateSD7.mmPlaceAndName, com.tools20022.repository.msg.CorporateActionDateSD7.mmActualEarlyExpirationDate,
-						com.tools20022.repository.msg.CorporateActionDateSD7.mmActualProtectExpirationDate, com.tools20022.repository.msg.CorporateActionDateSD7.mmActualEarlyProtectExpirationDate,
-						com.tools20022.repository.msg.CorporateActionDateSD7.mmDTCEarlyProtectExpirationDate, com.tools20022.repository.msg.CorporateActionDateSD7.mmActualEarlyCoverProtectExpirationDate,
-						com.tools20022.repository.msg.CorporateActionDateSD7.mmDTCEarlyCoverProtectExpirationDate);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(CorporateActionDateSD7.mmPlaceAndName, CorporateActionDateSD7.mmActualEarlyExpirationDate, CorporateActionDateSD7.mmActualProtectExpirationDate,
+						CorporateActionDateSD7.mmActualEarlyProtectExpirationDate, CorporateActionDateSD7.mmDTCEarlyProtectExpirationDate, CorporateActionDateSD7.mmActualEarlyCoverProtectExpirationDate,
+						CorporateActionDateSD7.mmDTCEarlyCoverProtectExpirationDate);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CorporateActionDateSD7";
 				definition = "Provides additional information regarding corporate action options date details.";
 			}

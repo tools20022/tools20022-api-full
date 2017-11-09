@@ -19,7 +19,9 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.CardPaymentAcquiring;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -124,11 +126,11 @@ public class CardPaymentContext5 {
 			componentContext_lazy = () -> CardPaymentContext5.mmObject();
 			isDerived = false;
 			xmlTag = "PmtCntxt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentContext";
 			definition = "Context of the card payment transaction.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardPaymentContext8.mmPaymentContext);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CardPaymentContext1.mmPaymentContext;
+			nextVersions_lazy = () -> Arrays.asList(CardPaymentContext8.mmPaymentContext);
+			previousVersion_lazy = () -> CardPaymentContext1.mmPaymentContext;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -187,11 +189,11 @@ public class CardPaymentContext5 {
 			componentContext_lazy = () -> CardPaymentContext5.mmObject();
 			isDerived = false;
 			xmlTag = "SaleCntxt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SaleContext";
 			definition = "Context of the sale involving the card payment transaction.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardPaymentContext8.mmSaleContext);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CardPaymentContext1.mmSaleContext;
+			nextVersions_lazy = () -> Arrays.asList(CardPaymentContext8.mmSaleContext);
+			previousVersion_lazy = () -> CardPaymentContext1.mmSaleContext;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -202,10 +204,10 @@ public class CardPaymentContext5 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardPaymentContext5.mmPaymentContext, com.tools20022.repository.msg.CardPaymentContext5.mmSaleContext);
+				messageElement_lazy = () -> Arrays.asList(CardPaymentContext5.mmPaymentContext, CardPaymentContext5.mmSaleContext);
 				trace_lazy = () -> CardPaymentAcquiring.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CardPaymentContext5";
 				definition = "Context in which the transaction is performed (payment and sale).";
 				nextVersions_lazy = () -> Arrays.asList(CardPaymentContext8.mmObject());

@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.TradingVenue2Code
+ * TradingVenue2Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TradingVenue1Code
+ * TradingVenue1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -53,15 +64,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.TradingVenueCode#mmRegulatedMarket
  * TradingVenueCode.mmRegulatedMarket}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.TradingVenue2Code
- * TradingVenue2Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TradingVenue1Code
- * TradingVenue1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -108,7 +110,7 @@ public class TradingVenueCode {
 	 */
 	public static final MMCode mmNationalCompetentAuthority = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NationalCompetentAuthority";
 			definition = "Organization that has the legally delegated or invested authority, capacity, or power to perform a designated function.";
 			owner_lazy = () -> TradingVenueCode.mmObject();
@@ -142,7 +144,7 @@ public class TradingVenueCode {
 	 */
 	public static final MMCode mmApprovedPublicationArrangement = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ApprovedPublicationArrangement";
 			definition = "Person authorised under the provisions established in the regulation to provide the service of publishing trade reports on behalf of investment firms.";
 			owner_lazy = () -> TradingVenueCode.mmObject();
@@ -177,7 +179,7 @@ public class TradingVenueCode {
 	 */
 	public static final MMCode mmSystematicInternaliser = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SystematicInternaliser";
 			definition = "Investment firm which, on an organised, frequent systematic and substantial basis, deals on own account when executing client orders outside a regulated market, an multilateral trading facility or an organised trading facility without operating a multilateral system.";
 			owner_lazy = () -> TradingVenueCode.mmObject();
@@ -210,7 +212,7 @@ public class TradingVenueCode {
 	 */
 	public static final MMCode mmTradingVenue = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradingVenue";
 			definition = "Multilateral system in which multiple third-party buying and selling trading interests in financial instruments.";
 			owner_lazy = () -> TradingVenueCode.mmObject();
@@ -244,7 +246,7 @@ public class TradingVenueCode {
 	 */
 	public static final MMCode mmMultilateralTradingFacility = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MultilateralTradingFacility";
 			definition = "Multilateral system which brings together multiple third-party buying and selling interests in financial instruments in a way that results in a contract.";
 			owner_lazy = () -> TradingVenueCode.mmObject();
@@ -279,7 +281,7 @@ public class TradingVenueCode {
 	 */
 	public static final MMCode mmOrganisedTradingFacility = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrganisedTradingFacility";
 			definition = "Multilateral system which is not a regulated market or multilateral trading facility in which multiple third-party buying and selling interests in bonds, structured finance products, emission allowances or derivatives are able to interact in a way that results in a contract.";
 			owner_lazy = () -> TradingVenueCode.mmObject();
@@ -314,7 +316,7 @@ public class TradingVenueCode {
 	 */
 	public static final MMCode mmConsolidatedTapeProvider = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConsolidatedTapeProvider";
 			definition = "Provider which will consolidate post-trade information into a continuous electronic data stream and make it publicly available as close to real time as technologically possible on a reasonable commercial basis and free of charge after 15 minutes.";
 			owner_lazy = () -> TradingVenueCode.mmObject();
@@ -347,7 +349,7 @@ public class TradingVenueCode {
 	 */
 	public static final MMCode mmRegulatedMarket = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RegulatedMarket";
 			definition = "Market on which financial instruments can be traded according to rules defined by the stock exchange.";
 			owner_lazy = () -> TradingVenueCode.mmObject();
@@ -358,14 +360,12 @@ public class TradingVenueCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TradingVenueCode";
 				definition = "Specifies the type of a trading venue.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TradingVenueCode.mmNationalCompetentAuthority, com.tools20022.repository.codeset.TradingVenueCode.mmApprovedPublicationArrangement,
-						com.tools20022.repository.codeset.TradingVenueCode.mmSystematicInternaliser, com.tools20022.repository.codeset.TradingVenueCode.mmTradingVenue,
-						com.tools20022.repository.codeset.TradingVenueCode.mmMultilateralTradingFacility, com.tools20022.repository.codeset.TradingVenueCode.mmOrganisedTradingFacility,
-						com.tools20022.repository.codeset.TradingVenueCode.mmConsolidatedTapeProvider, com.tools20022.repository.codeset.TradingVenueCode.mmRegulatedMarket);
+				code_lazy = () -> Arrays.asList(TradingVenueCode.mmNationalCompetentAuthority, TradingVenueCode.mmApprovedPublicationArrangement, TradingVenueCode.mmSystematicInternaliser, TradingVenueCode.mmTradingVenue,
+						TradingVenueCode.mmMultilateralTradingFacility, TradingVenueCode.mmOrganisedTradingFacility, TradingVenueCode.mmConsolidatedTapeProvider, TradingVenueCode.mmRegulatedMarket);
 				derivation_lazy = () -> Arrays.asList(TradingVenue2Code.mmObject(), TradingVenue1Code.mmObject());
 			}
 		});

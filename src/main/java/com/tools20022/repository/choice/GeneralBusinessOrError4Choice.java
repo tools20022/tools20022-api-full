@@ -19,7 +19,9 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.SystemBusinessInformation;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.ErrorHandling4;
 import com.tools20022.repository.msg.GeneralBusinessInformation;
 import java.util.Arrays;
@@ -107,10 +109,10 @@ public class GeneralBusinessOrError4Choice {
 			componentContext_lazy = () -> GeneralBusinessOrError4Choice.mmObject();
 			isDerived = false;
 			xmlTag = "BizErr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BusinessError";
 			definition = "Reason the requested business information is not given.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.GeneralBusinessOrError2Choice.mmBusinessError;
+			previousVersion_lazy = () -> GeneralBusinessOrError2Choice.mmBusinessError;
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ErrorHandling4.mmObject();
@@ -154,10 +156,10 @@ public class GeneralBusinessOrError4Choice {
 			componentContext_lazy = () -> GeneralBusinessOrError4Choice.mmObject();
 			isDerived = false;
 			xmlTag = "GnlBiz";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GeneralBusiness";
 			definition = "Requested business information.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.GeneralBusinessOrError2Choice.mmGeneralBusiness;
+			previousVersion_lazy = () -> GeneralBusinessOrError2Choice.mmGeneralBusiness;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -168,10 +170,10 @@ public class GeneralBusinessOrError4Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.GeneralBusinessOrError4Choice.mmBusinessError, com.tools20022.repository.choice.GeneralBusinessOrError4Choice.mmGeneralBusiness);
+				messageElement_lazy = () -> Arrays.asList(GeneralBusinessOrError4Choice.mmBusinessError, GeneralBusinessOrError4Choice.mmGeneralBusiness);
 				trace_lazy = () -> SystemBusinessInformation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "GeneralBusinessOrError4Choice";
 				definition = "Reports either on the business information or on a business error.";
 				previousVersion_lazy = () -> GeneralBusinessOrError2Choice.mmObject();

@@ -19,6 +19,8 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.BillingCancellationReport1;
 import com.tools20022.repository.msg.BillingReport1;
 import com.tools20022.repository.msg.ErrorHandling3;
@@ -99,7 +101,7 @@ public class BillingReportOrError1Choice {
 			componentContext_lazy = () -> BillingReportOrError1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "BllgRpt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BillingReport";
 			definition = "Report on billing data.";
 			maxOccurs = 1;
@@ -141,7 +143,7 @@ public class BillingReportOrError1Choice {
 			componentContext_lazy = () -> BillingReportOrError1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "CxlRpt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationReport";
 			definition = "Report on cancelled billing data.";
 			maxOccurs = 1;
@@ -185,7 +187,7 @@ public class BillingReportOrError1Choice {
 			componentContext_lazy = () -> BillingReportOrError1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "OprlErr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OperationalError";
 			definition = "Indicates that an operational error has been issued during the processing of the related request.";
 			minOccurs = 1;
@@ -197,10 +199,9 @@ public class BillingReportOrError1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.BillingReportOrError1Choice.mmBillingReport, com.tools20022.repository.choice.BillingReportOrError1Choice.mmCancellationReport,
-						com.tools20022.repository.choice.BillingReportOrError1Choice.mmOperationalError);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(BillingReportOrError1Choice.mmBillingReport, BillingReportOrError1Choice.mmCancellationReport, BillingReportOrError1Choice.mmOperationalError);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "BillingReportOrError1Choice";
 				definition = "Choice between report on billing data, billing cancellation request details or operational error.";
 			}

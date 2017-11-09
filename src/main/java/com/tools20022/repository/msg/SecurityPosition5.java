@@ -20,7 +20,14 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.seev.MeetingCancellationV02;
+import com.tools20022.repository.area.seev.MeetingEntitlementNotificationV02;
+import com.tools20022.repository.area.seev.MeetingNotificationV02;
+import com.tools20022.repository.area.seev.MeetingResultDisseminationV02;
 import com.tools20022.repository.entity.SecuritiesBalance;
+import com.tools20022.repository.entity.Security;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -118,11 +125,11 @@ public class SecurityPosition5 {
 	 */
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmIdentification;
+			businessElementTrace_lazy = () -> Security.mmIdentification;
 			componentContext_lazy = () -> SecurityPosition5.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Security held in an account on which the balance is calculated.";
 			maxOccurs = 1;
@@ -168,7 +175,7 @@ public class SecurityPosition5 {
 			componentContext_lazy = () -> SecurityPosition5.mmObject();
 			isDerived = false;
 			xmlTag = "Pos";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Position";
 			definition = "Amount of securities that are eligible for the vote.";
 			maxOccurs = 1000;
@@ -181,12 +188,11 @@ public class SecurityPosition5 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecurityPosition5.mmIdentification, com.tools20022.repository.msg.SecurityPosition5.mmPosition);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.MeetingNotificationV02.mmSecurity, com.tools20022.repository.area.seev.MeetingCancellationV02.mmSecurity,
-						com.tools20022.repository.area.seev.MeetingEntitlementNotificationV02.mmSecurity, com.tools20022.repository.area.seev.MeetingResultDisseminationV02.mmSecurity);
+				messageElement_lazy = () -> Arrays.asList(SecurityPosition5.mmIdentification, SecurityPosition5.mmPosition);
+				messageBuildingBlock_lazy = () -> Arrays.asList(MeetingNotificationV02.mmSecurity, MeetingCancellationV02.mmSecurity, MeetingEntitlementNotificationV02.mmSecurity, MeetingResultDisseminationV02.mmSecurity);
 				trace_lazy = () -> SecuritiesBalance.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecurityPosition5";
 				definition = "Identifies the securities for which the meeting is organised.";
 			}

@@ -20,8 +20,12 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.camt.ClaimNonReceiptV03;
 import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.PaymentInvestigationCase;
+import com.tools20022.repository.entity.PaymentInvestigationCaseResolution;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -112,11 +116,11 @@ public class MissingCover2 {
 	 */
 	public static final MMMessageAttribute mmMissingCoverIndicator = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentInvestigationCase.mmMissingCoverIndication;
+			businessElementTrace_lazy = () -> PaymentInvestigationCase.mmMissingCoverIndication;
 			componentContext_lazy = () -> MissingCover2.mmObject();
 			isDerived = false;
 			xmlTag = "MssngCoverInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MissingCoverIndicator";
 			definition = "Indicates whether or not the claim is related to a missing cover.";
 			maxOccurs = 1;
@@ -161,11 +165,11 @@ public class MissingCover2 {
 	 */
 	public static final MMMessageAssociationEnd mmCoverCorrection = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentInvestigationCaseResolution.mmCoverCorrection;
+			businessElementTrace_lazy = () -> PaymentInvestigationCaseResolution.mmCoverCorrection;
 			componentContext_lazy = () -> MissingCover2.mmObject();
 			isDerived = false;
 			xmlTag = "CoverCrrctn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoverCorrection";
 			definition = "Set of elements provided to update incorrect settlement information for the cover related to the received payment instruction.";
 			maxOccurs = 1;
@@ -178,11 +182,11 @@ public class MissingCover2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MissingCover2.mmMissingCoverIndicator, com.tools20022.repository.msg.MissingCover2.mmCoverCorrection);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.ClaimNonReceiptV03.mmCoverDetails);
+				messageElement_lazy = () -> Arrays.asList(MissingCover2.mmMissingCoverIndicator, MissingCover2.mmCoverCorrection);
+				messageBuildingBlock_lazy = () -> Arrays.asList(ClaimNonReceiptV03.mmCoverDetails);
 				trace_lazy = () -> PaymentInvestigationCase.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MissingCover2";
 				definition = "Set of elements used to provide additional cover details for the claim non receipt.";
 			}

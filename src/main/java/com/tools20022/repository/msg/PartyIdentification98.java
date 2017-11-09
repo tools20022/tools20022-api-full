@@ -20,9 +20,13 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.semt.*;
+import com.tools20022.repository.area.sese.*;
 import com.tools20022.repository.choice.PartyIdentification92Choice;
 import com.tools20022.repository.datatype.LEIIdentifier;
 import com.tools20022.repository.entity.PartyIdentificationInformation;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -185,10 +189,10 @@ public class PartyIdentification98 {
 			componentContext_lazy = () -> PartyIdentification98.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Unique identification of the party.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyIdentification109.mmIdentification);
+			nextVersions_lazy = () -> Arrays.asList(PartyIdentification109.mmIdentification);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -239,10 +243,10 @@ public class PartyIdentification98 {
 			componentContext_lazy = () -> PartyIdentification98.mmObject();
 			isDerived = false;
 			xmlTag = "LEI";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LEI";
 			definition = "Legal entity identification as an alternate identification for a party.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyIdentification109.mmLEI);
+			nextVersions_lazy = () -> Arrays.asList(PartyIdentification109.mmLEI);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> LEIIdentifier.mmObject();
@@ -252,21 +256,17 @@ public class PartyIdentification98 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyIdentification98.mmIdentification, com.tools20022.repository.msg.PartyIdentification98.mmLEI);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV09.mmAccountOwner,
-						com.tools20022.repository.area.sese.SecuritiesSettlementConditionsModificationRequestV06.mmAccountOwner, com.tools20022.repository.area.sese.PortfolioTransferNotificationV04.mmAccountOwner,
-						com.tools20022.repository.area.semt.SecuritiesTransactionPostingReportV06.mmAccountOwner, com.tools20022.repository.area.sese.SecuritiesStatusOrStatementQueryStatusAdviceV04.mmAccountOwner,
-						com.tools20022.repository.area.semt.SecuritiesMessageCancellationAdviceV05.mmAccountOwner, com.tools20022.repository.area.semt.SecuritiesStatementQueryV06.mmAccountOwner,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionModificationRequestStatusAdviceV04.mmAccountOwner,
-						com.tools20022.repository.area.sese.SecuritiesSettlementConditionModificationStatusAdviceV07.mmAccountOwner, com.tools20022.repository.area.sese.SecuritiesTransactionStatusQueryV04.mmAccountOwner,
-						com.tools20022.repository.area.sese.SecuritiesSettlementAllegementRemovalAdviceV04.mmAccountOwner, com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestV05.mmAccountOwner,
-						com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV09.mmAccountOwner, com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAllegementReportV05.mmAccountOwner,
-						com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAuditTrailReportV03.mmAccountOwner, com.tools20022.repository.area.semt.SecuritiesTransactionPendingReportV07.mmAccountOwner,
-						com.tools20022.repository.area.sese.SecuritiesSettlementConditionsModificationRequestV07.mmAccountOwner, com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAllegementReportV06.mmAccountOwner,
-						com.tools20022.repository.area.semt.SecuritiesTransactionPendingReportV08.mmAccountOwner, com.tools20022.repository.area.semt.SecuritiesTransactionPostingReportV07.mmAccountOwner);
+				messageElement_lazy = () -> Arrays.asList(PartyIdentification98.mmIdentification, PartyIdentification98.mmLEI);
+				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesBalanceCustodyReportV09.mmAccountOwner, SecuritiesSettlementConditionsModificationRequestV06.mmAccountOwner, PortfolioTransferNotificationV04.mmAccountOwner,
+						SecuritiesTransactionPostingReportV06.mmAccountOwner, SecuritiesStatusOrStatementQueryStatusAdviceV04.mmAccountOwner, SecuritiesMessageCancellationAdviceV05.mmAccountOwner,
+						SecuritiesStatementQueryV06.mmAccountOwner, SecuritiesSettlementTransactionModificationRequestStatusAdviceV04.mmAccountOwner, SecuritiesSettlementConditionModificationStatusAdviceV07.mmAccountOwner,
+						SecuritiesTransactionStatusQueryV04.mmAccountOwner, SecuritiesSettlementAllegementRemovalAdviceV04.mmAccountOwner, SecuritiesTransactionCancellationRequestV05.mmAccountOwner,
+						SecuritiesBalanceAccountingReportV09.mmAccountOwner, SecuritiesSettlementTransactionAllegementReportV05.mmAccountOwner, SecuritiesSettlementTransactionAuditTrailReportV03.mmAccountOwner,
+						SecuritiesTransactionPendingReportV07.mmAccountOwner, SecuritiesSettlementConditionsModificationRequestV07.mmAccountOwner, SecuritiesSettlementTransactionAllegementReportV06.mmAccountOwner,
+						SecuritiesTransactionPendingReportV08.mmAccountOwner, SecuritiesTransactionPostingReportV07.mmAccountOwner);
 				trace_lazy = () -> PartyIdentificationInformation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PartyIdentification98";
 				definition = "Identification of the party.";
 				nextVersions_lazy = () -> Arrays.asList(PartyIdentification109.mmObject());

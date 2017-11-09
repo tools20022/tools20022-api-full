@@ -17,15 +17,14 @@
 
 package com.tools20022.repository.entity;
 
-import com.tools20022.metamodel.MMBusinessAssociationEnd;
-import com.tools20022.metamodel.MMBusinessAttribute;
-import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.*;
 import com.tools20022.repository.choice.*;
 import com.tools20022.repository.codeset.DebitCreditCode;
 import com.tools20022.repository.codeset.InterestTypeCode;
 import com.tools20022.repository.datatype.CurrencyAndAmount;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.PercentageRate;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -43,151 +42,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Interest#mmAccruedInterestAmount
- * Interest.mmAccruedInterestAmount}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Interest#mmInterestCalculation
- * Interest.mmInterestCalculation}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Interest#mmAmount
- * Interest.mmAmount}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Interest#mmRate
- * Interest.mmRate}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Interest#mmRelatedCashProceedsDefinition
- * Interest.mmRelatedCashProceedsDefinition}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Interest#mmSecuritiesFinancing
- * Interest.mmSecuritiesFinancing}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Interest#mmInterestTax
- * Interest.mmInterestTax}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Interest#mmCreditDebitIndicator
- * Interest.mmCreditDebitIndicator}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Interest#mmCashEntry
- * Interest.mmCashEntry}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Interest#mmPaymentDate
- * Interest.mmPaymentDate}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Interest#mmRelatedInterestManagement
- * Interest.mmRelatedInterestManagement}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Interest#mmRelatedUndertakingAmount
- * Interest.mmRelatedUndertakingAmount}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Interest#mmRelatedDebitCreditFacility
- * Interest.mmRelatedDebitCreditFacility}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Interest#mmSecuritiesSettlement
- * Interest.mmSecuritiesSettlement}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Interest#mmInterestName
- * Interest.mmInterestName}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Interest#mmRelatedAssetHolding
- * Interest.mmRelatedAssetHolding}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Interest#mmDeposit
- * Interest.mmDeposit}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Interest#mmAccountBalance
- * Interest.mmAccountBalance}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Interest#mmRelatedAccountContract
- * Interest.mmRelatedAccountContract}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Interest#mmRelatedNetAssetValueCalculation
- * Interest.mmRelatedNetAssetValueCalculation}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Interest#mmTypeOfInterest
- * Interest.mmTypeOfInterest}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Interest#mmRelatedPaymentCard
- * Interest.mmRelatedPaymentCard}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmIdentificationForInterestName
- * GenericIdentification.mmIdentificationForInterestName}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.NetAssetValueCalculation#mmInterest
- * NetAssetValueCalculation.mmInterest}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Tax#mmInterest
- * Tax.mmInterest}</li>
- * <li>{@linkplain com.tools20022.repository.entity.AccountContract#mmInterest
- * AccountContract.mmInterest}</li>
- * <li>{@linkplain com.tools20022.repository.entity.PaymentCard#mmInterest
- * PaymentCard.mmInterest}</li>
- * <li>{@linkplain com.tools20022.repository.entity.CashEntry#mmInterest
- * CashEntry.mmInterest}</li>
- * <li>{@linkplain com.tools20022.repository.entity.AssetHolding#mmInterest
- * AssetHolding.mmInterest}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Balance#mmInterest
- * Balance.mmInterest}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmAccruedInterest
- * SecuritiesSettlement.mmAccruedInterest}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InterestCalculation#mmInterest
- * InterestCalculation.mmInterest}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesFinancing#mmInterest
- * SecuritiesFinancing.mmInterest}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CashProceedsDefinition#mmInterest
- * CashProceedsDefinition.mmInterest}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.DebitCreditFacility#mmCashAccountInterest
- * DebitCreditFacility.mmCashAccountInterest}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.UndertakingAmount#mmInterest
- * UndertakingAmount.mmInterest}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Deposit#mmInterest
- * Deposit.mmInterest}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InterestManagement#mmInterest
- * InterestManagement.mmInterest}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
- * derivationElement} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.choice.InterestRateUsedForPaymentFormat2Choice#mmRateTypeAndAmountAndRateStatus
- * InterestRateUsedForPaymentFormat2Choice.mmRateTypeAndAmountAndRateStatus}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.InterestRateUsedForPaymentFormat3Choice#mmRateTypeAndAmountAndRateStatus
- * InterestRateUsedForPaymentFormat3Choice.mmRateTypeAndAmountAndRateStatus}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.InterestRateUsedForPaymentFormat1Choice#mmRateTypeAndAmountAndRateStatus
- * InterestRateUsedForPaymentFormat1Choice.mmRateTypeAndAmountAndRateStatus}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.InterestRateUsedForPaymentFormat4Choice#mmRateTypeAndAmountAndRateStatus
- * InterestRateUsedForPaymentFormat4Choice.mmRateTypeAndAmountAndRateStatus}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.InterestRateUsedForPaymentFormat5Choice#mmRateTypeAndAmountAndRateStatus
- * InterestRateUsedForPaymentFormat5Choice.mmRateTypeAndAmountAndRateStatus}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.InterestRateUsedForPaymentFormat6Choice#mmRateTypeAndAmountAndRateStatus
- * InterestRateUsedForPaymentFormat6Choice.mmRateTypeAndAmountAndRateStatus}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.InterestRateUsedForPaymentFormat8Choice#mmRateTypeAndAmountAndRateStatus
- * InterestRateUsedForPaymentFormat8Choice.mmRateTypeAndAmountAndRateStatus}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.InterestRateUsedForPaymentFormat7Choice#mmRateTypeAndAmountAndRateStatus
- * InterestRateUsedForPaymentFormat7Choice.mmRateTypeAndAmountAndRateStatus}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.InterestRateUsedForPaymentFormat9Choice#mmRateTypeAndAmountAndRateStatus
- * InterestRateUsedForPaymentFormat9Choice.mmRateTypeAndAmountAndRateStatus}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.InterestRateUsedForPaymentFormat10Choice#mmRateTypeAndAmountAndRateStatus
- * InterestRateUsedForPaymentFormat10Choice.mmRateTypeAndAmountAndRateStatus}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -326,6 +180,151 @@ import java.util.List;
  * InterestRate6Choice}</li>
  * <li>{@linkplain com.tools20022.repository.choice.InterestRate8Choice
  * InterestRate8Choice}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmIdentificationForInterestName
+ * GenericIdentification.mmIdentificationForInterestName}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.NetAssetValueCalculation#mmInterest
+ * NetAssetValueCalculation.mmInterest}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Tax#mmInterest
+ * Tax.mmInterest}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.AccountContract#mmInterest
+ * AccountContract.mmInterest}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.PaymentCard#mmInterest
+ * PaymentCard.mmInterest}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.CashEntry#mmInterest
+ * CashEntry.mmInterest}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.AssetHolding#mmInterest
+ * AssetHolding.mmInterest}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Balance#mmInterest
+ * Balance.mmInterest}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmAccruedInterest
+ * SecuritiesSettlement.mmAccruedInterest}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InterestCalculation#mmInterest
+ * InterestCalculation.mmInterest}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesFinancing#mmInterest
+ * SecuritiesFinancing.mmInterest}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CashProceedsDefinition#mmInterest
+ * CashProceedsDefinition.mmInterest}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.DebitCreditFacility#mmCashAccountInterest
+ * DebitCreditFacility.mmCashAccountInterest}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.UndertakingAmount#mmInterest
+ * UndertakingAmount.mmInterest}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Deposit#mmInterest
+ * Deposit.mmInterest}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InterestManagement#mmInterest
+ * InterestManagement.mmInterest}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
+ * derivationElement} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.InterestRateUsedForPaymentFormat2Choice#mmRateTypeAndAmountAndRateStatus
+ * InterestRateUsedForPaymentFormat2Choice.mmRateTypeAndAmountAndRateStatus}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.InterestRateUsedForPaymentFormat3Choice#mmRateTypeAndAmountAndRateStatus
+ * InterestRateUsedForPaymentFormat3Choice.mmRateTypeAndAmountAndRateStatus}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.InterestRateUsedForPaymentFormat1Choice#mmRateTypeAndAmountAndRateStatus
+ * InterestRateUsedForPaymentFormat1Choice.mmRateTypeAndAmountAndRateStatus}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.InterestRateUsedForPaymentFormat4Choice#mmRateTypeAndAmountAndRateStatus
+ * InterestRateUsedForPaymentFormat4Choice.mmRateTypeAndAmountAndRateStatus}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.InterestRateUsedForPaymentFormat5Choice#mmRateTypeAndAmountAndRateStatus
+ * InterestRateUsedForPaymentFormat5Choice.mmRateTypeAndAmountAndRateStatus}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.InterestRateUsedForPaymentFormat6Choice#mmRateTypeAndAmountAndRateStatus
+ * InterestRateUsedForPaymentFormat6Choice.mmRateTypeAndAmountAndRateStatus}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.InterestRateUsedForPaymentFormat8Choice#mmRateTypeAndAmountAndRateStatus
+ * InterestRateUsedForPaymentFormat8Choice.mmRateTypeAndAmountAndRateStatus}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.InterestRateUsedForPaymentFormat7Choice#mmRateTypeAndAmountAndRateStatus
+ * InterestRateUsedForPaymentFormat7Choice.mmRateTypeAndAmountAndRateStatus}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.InterestRateUsedForPaymentFormat9Choice#mmRateTypeAndAmountAndRateStatus
+ * InterestRateUsedForPaymentFormat9Choice.mmRateTypeAndAmountAndRateStatus}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.InterestRateUsedForPaymentFormat10Choice#mmRateTypeAndAmountAndRateStatus
+ * InterestRateUsedForPaymentFormat10Choice.mmRateTypeAndAmountAndRateStatus}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Interest#mmAccruedInterestAmount
+ * Interest.mmAccruedInterestAmount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Interest#mmInterestCalculation
+ * Interest.mmInterestCalculation}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Interest#mmAmount
+ * Interest.mmAmount}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Interest#mmRate
+ * Interest.mmRate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Interest#mmRelatedCashProceedsDefinition
+ * Interest.mmRelatedCashProceedsDefinition}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Interest#mmSecuritiesFinancing
+ * Interest.mmSecuritiesFinancing}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Interest#mmInterestTax
+ * Interest.mmInterestTax}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Interest#mmCreditDebitIndicator
+ * Interest.mmCreditDebitIndicator}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Interest#mmCashEntry
+ * Interest.mmCashEntry}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Interest#mmPaymentDate
+ * Interest.mmPaymentDate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Interest#mmRelatedInterestManagement
+ * Interest.mmRelatedInterestManagement}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Interest#mmRelatedUndertakingAmount
+ * Interest.mmRelatedUndertakingAmount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Interest#mmRelatedDebitCreditFacility
+ * Interest.mmRelatedDebitCreditFacility}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Interest#mmSecuritiesSettlement
+ * Interest.mmSecuritiesSettlement}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Interest#mmInterestName
+ * Interest.mmInterestName}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Interest#mmRelatedAssetHolding
+ * Interest.mmRelatedAssetHolding}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Interest#mmDeposit
+ * Interest.mmDeposit}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Interest#mmAccountBalance
+ * Interest.mmAccountBalance}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Interest#mmRelatedAccountContract
+ * Interest.mmRelatedAccountContract}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Interest#mmRelatedNetAssetValueCalculation
+ * Interest.mmRelatedNetAssetValueCalculation}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Interest#mmTypeOfInterest
+ * Interest.mmTypeOfInterest}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Interest#mmRelatedPaymentCard
+ * Interest.mmRelatedPaymentCard}</li>
  * </ul>
  * </li>
  * <li>
@@ -784,70 +783,42 @@ public class Interest {
 	 */
 	public static final MMBusinessAttribute mmAccruedInterestAmount = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UnitPrice3.mmAccruedInterestNAV, com.tools20022.repository.msg.UnitPrice12.mmAccruedInterestNAV,
-					com.tools20022.repository.msg.OtherAmounts12.mmAccruedInterestAmount, com.tools20022.repository.msg.OtherAmounts14.mmAccruedInterestAmount, com.tools20022.repository.msg.OtherAmounts20.mmAccruedInterestAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts2.mmAccruedInterestAmount, com.tools20022.repository.msg.CorporateActionAmounts5.mmAccruedInterestAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts11.mmAccruedInterestAmount, com.tools20022.repository.msg.CorporateActionAmounts12.mmAccruedInterestAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts17.mmAccruedInterestAmount, com.tools20022.repository.msg.CorporateActionAmounts20.mmAccruedInterestAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts23.mmAccruedInterestAmount, com.tools20022.repository.msg.CorporateActionAmounts24.mmAccruedInterestAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts3.mmAccruedInterestAmount, com.tools20022.repository.msg.CorporateActionAmounts6.mmAccruedInterestAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts9.mmAccruedInterestAmount, com.tools20022.repository.msg.CorporateActionAmounts13.mmAccruedInterestAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts16.mmAccruedInterestAmount, com.tools20022.repository.msg.CorporateActionAmounts19.mmAccruedInterestAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts22.mmAccruedInterestAmount, com.tools20022.repository.msg.CorporateActionAmounts25.mmAccruedInterestAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts4.mmAccruedInterestAmount, com.tools20022.repository.msg.CorporateActionAmounts7.mmAccruedInterestAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts10.mmAccruedInterestAmount, com.tools20022.repository.msg.CorporateActionAmounts14.mmAccruedInterestAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts15.mmAccruedInterestAmount, com.tools20022.repository.msg.CorporateActionAmounts18.mmAccruedInterestAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts21.mmAccruedInterestAmount, com.tools20022.repository.msg.CorporateActionAmounts26.mmAccruedInterestAmount,
-					com.tools20022.repository.msg.BalanceAmounts1.mmAccruedInterestAmount, com.tools20022.repository.msg.BalanceAmounts5.mmAccruedInterestAmount,
-					com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace2.mmAccruedInterestAmount, com.tools20022.repository.msg.AggregateBalanceInformation2.mmAccruedInterestAmount,
-					com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace4.mmAccruedInterestAmount, com.tools20022.repository.msg.AggregateBalanceInformation3.mmAccruedInterestAmount,
-					com.tools20022.repository.msg.BalanceAmounts3.mmAccruedInterestAmount, com.tools20022.repository.msg.BalanceAmounts4.mmAccruedInterestAmount,
-					com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace1.mmAccruedInterestAmount, com.tools20022.repository.msg.AggregateBalanceInformation1.mmAccruedInterestAmount,
-					com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace3.mmAccruedInterestAmount, com.tools20022.repository.msg.AggregateBalanceInformation4.mmAccruedInterestAmount,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails3.mmAccruedInterestAmount, com.tools20022.repository.msg.OtherAmounts4.mmAccruedInterestAmount,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails5.mmAccruedInterestAmount, com.tools20022.repository.msg.OtherAmounts5.mmAccruedInterestAmount,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails1.mmAccruedInterestAmount, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails11.mmAccruedInterestAmount,
-					com.tools20022.repository.msg.OtherAmounts17.mmAccruedInterestAmount, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails14.mmAccruedInterestAmount,
-					com.tools20022.repository.msg.OtherAmounts23.mmAccruedInterestAmount, com.tools20022.repository.msg.OtherAmounts3.mmAccruedInterestAmount,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails4.mmAccruedInterestAmount, com.tools20022.repository.msg.OtherAmounts7.mmAccruedInterestAmount,
-					com.tools20022.repository.msg.OtherAmounts9.mmAccruedInterestAmount, com.tools20022.repository.msg.OtherAmounts10.mmAccruedInterestAmount, com.tools20022.repository.msg.OtherAmounts18.mmAccruedInterestAmount,
-					com.tools20022.repository.msg.OtherAmounts24.mmAccruedInterestAmount, com.tools20022.repository.msg.OtherAmounts13.mmAccruedInterestAmount, com.tools20022.repository.msg.TransactionDetails6.mmAccruedInterestAmount,
-					com.tools20022.repository.msg.TransactionDetails18.mmAccruedInterestAmount, com.tools20022.repository.msg.TransactionDetails24.mmAccruedInterestAmount,
-					com.tools20022.repository.msg.TransactionDetails34.mmAccruedInterestAmount, com.tools20022.repository.msg.TransactionDetails37.mmAccruedInterestAmount,
-					com.tools20022.repository.msg.TransactionDetails48.mmAccruedInterestAmount, com.tools20022.repository.msg.TransactionDetails57.mmAccruedInterestAmount,
-					com.tools20022.repository.msg.TransactionDetails60.mmAccruedInterestAmount, com.tools20022.repository.msg.OtherAmounts1.mmAccruedInterestAmount, com.tools20022.repository.msg.Order16.mmAccruedInterestAmount,
-					com.tools20022.repository.msg.Order14.mmAccruedInterestAmount, com.tools20022.repository.msg.SecuritiesFinancing10.mmAccruedInterestAmount, com.tools20022.repository.msg.OtherAmounts2.mmAccruedInterestAmount,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails7.mmAccruedInterestAmount, com.tools20022.repository.msg.OtherAmounts8.mmAccruedInterestAmount,
-					com.tools20022.repository.msg.InterestAmount1.mmAccruedInterestAmount, com.tools20022.repository.msg.InterestAmount2.mmAccruedInterestAmount, com.tools20022.repository.msg.InterestCalculation1.mmAccruedInterestAmount,
-					com.tools20022.repository.msg.InterestCalculation2.mmAccruedInterestAmount, com.tools20022.repository.msg.SummaryAmounts1.mmTotalAccruedInterestAmount,
-					com.tools20022.repository.msg.CollateralAmount1.mmAccruedInterestAmount, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19.mmAccruedInterestAmount,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails20.mmAccruedInterestAmount, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails9.mmAccruedInterestAmount,
-					com.tools20022.repository.msg.OtherAmounts11.mmAccruedInterestAmount, com.tools20022.repository.msg.OtherAmounts6.mmAccruedInterestAmount, com.tools20022.repository.msg.OtherAmounts15.mmAccruedInterestAmount,
-					com.tools20022.repository.msg.OtherAmounts22.mmAccruedInterestAmount, com.tools20022.repository.msg.TradeLeg2.mmAccruedInterestAmount, com.tools20022.repository.msg.TradeLeg5.mmAccruedInterestAmount,
-					com.tools20022.repository.msg.TradeLeg1.mmAccruedInterestAmount, com.tools20022.repository.msg.TradeLeg3.mmAccruedInterestAmount, com.tools20022.repository.msg.TradeLeg6.mmAccruedInterestAmount,
-					com.tools20022.repository.msg.TransactionDetails51.mmAccruedInterestAmount, com.tools20022.repository.msg.SecuritiesFinancing1.mmAccruedInterestAmount,
-					com.tools20022.repository.msg.TransactionDetails63.mmAccruedInterestAmount, com.tools20022.repository.msg.CorporateActionAmounts29.mmAccruedInterestAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts27.mmAccruedInterestAmount, com.tools20022.repository.msg.CorporateActionAmounts28.mmAccruedInterestAmount,
-					com.tools20022.repository.msg.Order17.mmAccruedInterestAmount, com.tools20022.repository.msg.Order18.mmAccruedInterestAmount, com.tools20022.repository.msg.CorporateActionAmounts33.mmAccruedInterestAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts32.mmAccruedInterestAmount, com.tools20022.repository.msg.CorporateActionAmounts35.mmAccruedInterestAmount,
-					com.tools20022.repository.msg.TransactionDetails68.mmAccruedInterestAmount, com.tools20022.repository.msg.TradeLeg8.mmAccruedInterestAmount, com.tools20022.repository.msg.TradeLeg9.mmAccruedInterestAmount,
-					com.tools20022.repository.msg.InterestCalculation3.mmAccruedInterestAmount, com.tools20022.repository.msg.TransactionDetails78.mmAccruedInterestAmount,
-					com.tools20022.repository.msg.OtherAmounts28.mmAccruedInterestAmount, com.tools20022.repository.msg.OtherAmounts30.mmAccruedInterestAmount,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails28.mmAccruedInterestAmount, com.tools20022.repository.msg.OtherAmounts31.mmAccruedInterestAmount,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27.mmAccruedInterestAmount, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails29.mmAccruedInterestAmount,
-					com.tools20022.repository.msg.OtherAmounts32.mmAccruedInterestAmount, com.tools20022.repository.msg.OtherAmounts29.mmAccruedInterestAmount, com.tools20022.repository.msg.CorporateActionAmounts37.mmAccruedInterestAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts36.mmAccruedInterestAmount, com.tools20022.repository.msg.UnitPrice21.mmAccruedInterestNAV,
-					com.tools20022.repository.msg.CorporateActionAmounts38.mmAccruedInterestAmount, com.tools20022.repository.msg.InterestCalculation4.mmAccruedInterestAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts39.mmAccruedInterestAmount, com.tools20022.repository.msg.CorporateActionAmounts41.mmAccruedInterestAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts40.mmAccruedInterestAmount, com.tools20022.repository.msg.OtherAmounts35.mmAccruedInterestAmount,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails32.mmAccruedInterestAmount, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails30.mmAccruedInterestAmount,
-					com.tools20022.repository.msg.OtherAmounts34.mmAccruedInterestAmount, com.tools20022.repository.msg.OtherAmounts38.mmAccruedInterestAmount, com.tools20022.repository.msg.OtherAmounts36.mmAccruedInterestAmount,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails34.mmAccruedInterestAmount, com.tools20022.repository.msg.OtherAmounts33.mmAccruedInterestAmount,
-					com.tools20022.repository.msg.TransactionDetails91.mmAccruedInterestAmount, com.tools20022.repository.msg.TransactionDetails95.mmAccruedInterestAmount,
-					com.tools20022.repository.msg.TransactionDetails98.mmAccruedInterestAmount);
+			derivation_lazy = () -> Arrays.asList(UnitPrice3.mmAccruedInterestNAV, UnitPrice12.mmAccruedInterestNAV, OtherAmounts12.mmAccruedInterestAmount, OtherAmounts14.mmAccruedInterestAmount, OtherAmounts20.mmAccruedInterestAmount,
+					CorporateActionAmounts2.mmAccruedInterestAmount, CorporateActionAmounts5.mmAccruedInterestAmount, CorporateActionAmounts11.mmAccruedInterestAmount, CorporateActionAmounts12.mmAccruedInterestAmount,
+					CorporateActionAmounts17.mmAccruedInterestAmount, CorporateActionAmounts20.mmAccruedInterestAmount, CorporateActionAmounts23.mmAccruedInterestAmount, CorporateActionAmounts24.mmAccruedInterestAmount,
+					CorporateActionAmounts3.mmAccruedInterestAmount, CorporateActionAmounts6.mmAccruedInterestAmount, CorporateActionAmounts9.mmAccruedInterestAmount, CorporateActionAmounts13.mmAccruedInterestAmount,
+					CorporateActionAmounts16.mmAccruedInterestAmount, CorporateActionAmounts19.mmAccruedInterestAmount, CorporateActionAmounts22.mmAccruedInterestAmount, CorporateActionAmounts25.mmAccruedInterestAmount,
+					CorporateActionAmounts4.mmAccruedInterestAmount, CorporateActionAmounts7.mmAccruedInterestAmount, CorporateActionAmounts10.mmAccruedInterestAmount, CorporateActionAmounts14.mmAccruedInterestAmount,
+					CorporateActionAmounts15.mmAccruedInterestAmount, CorporateActionAmounts18.mmAccruedInterestAmount, CorporateActionAmounts21.mmAccruedInterestAmount, CorporateActionAmounts26.mmAccruedInterestAmount,
+					BalanceAmounts1.mmAccruedInterestAmount, BalanceAmounts5.mmAccruedInterestAmount, AggregateBalancePerSafekeepingPlace2.mmAccruedInterestAmount, AggregateBalanceInformation2.mmAccruedInterestAmount,
+					AggregateBalancePerSafekeepingPlace4.mmAccruedInterestAmount, AggregateBalanceInformation3.mmAccruedInterestAmount, BalanceAmounts3.mmAccruedInterestAmount, BalanceAmounts4.mmAccruedInterestAmount,
+					AggregateBalancePerSafekeepingPlace1.mmAccruedInterestAmount, AggregateBalanceInformation1.mmAccruedInterestAmount, AggregateBalancePerSafekeepingPlace3.mmAccruedInterestAmount,
+					AggregateBalanceInformation4.mmAccruedInterestAmount, SecuritiesFinancingTransactionDetails3.mmAccruedInterestAmount, OtherAmounts4.mmAccruedInterestAmount,
+					SecuritiesFinancingTransactionDetails5.mmAccruedInterestAmount, OtherAmounts5.mmAccruedInterestAmount, SecuritiesFinancingTransactionDetails1.mmAccruedInterestAmount,
+					SecuritiesFinancingTransactionDetails11.mmAccruedInterestAmount, OtherAmounts17.mmAccruedInterestAmount, SecuritiesFinancingTransactionDetails14.mmAccruedInterestAmount, OtherAmounts23.mmAccruedInterestAmount,
+					OtherAmounts3.mmAccruedInterestAmount, SecuritiesFinancingTransactionDetails4.mmAccruedInterestAmount, OtherAmounts7.mmAccruedInterestAmount, OtherAmounts9.mmAccruedInterestAmount,
+					OtherAmounts10.mmAccruedInterestAmount, OtherAmounts18.mmAccruedInterestAmount, OtherAmounts24.mmAccruedInterestAmount, OtherAmounts13.mmAccruedInterestAmount, TransactionDetails6.mmAccruedInterestAmount,
+					TransactionDetails18.mmAccruedInterestAmount, TransactionDetails24.mmAccruedInterestAmount, TransactionDetails34.mmAccruedInterestAmount, TransactionDetails37.mmAccruedInterestAmount,
+					TransactionDetails48.mmAccruedInterestAmount, TransactionDetails57.mmAccruedInterestAmount, TransactionDetails60.mmAccruedInterestAmount, OtherAmounts1.mmAccruedInterestAmount, Order16.mmAccruedInterestAmount,
+					Order14.mmAccruedInterestAmount, SecuritiesFinancing10.mmAccruedInterestAmount, OtherAmounts2.mmAccruedInterestAmount, SecuritiesFinancingTransactionDetails7.mmAccruedInterestAmount,
+					OtherAmounts8.mmAccruedInterestAmount, InterestAmount1.mmAccruedInterestAmount, InterestAmount2.mmAccruedInterestAmount, InterestCalculation1.mmAccruedInterestAmount, InterestCalculation2.mmAccruedInterestAmount,
+					SummaryAmounts1.mmTotalAccruedInterestAmount, CollateralAmount1.mmAccruedInterestAmount, SecuritiesFinancingTransactionDetails19.mmAccruedInterestAmount, SecuritiesFinancingTransactionDetails20.mmAccruedInterestAmount,
+					SecuritiesFinancingTransactionDetails9.mmAccruedInterestAmount, OtherAmounts11.mmAccruedInterestAmount, OtherAmounts6.mmAccruedInterestAmount, OtherAmounts15.mmAccruedInterestAmount,
+					OtherAmounts22.mmAccruedInterestAmount, TradeLeg2.mmAccruedInterestAmount, TradeLeg5.mmAccruedInterestAmount, TradeLeg1.mmAccruedInterestAmount, TradeLeg3.mmAccruedInterestAmount, TradeLeg6.mmAccruedInterestAmount,
+					TransactionDetails51.mmAccruedInterestAmount, SecuritiesFinancing1.mmAccruedInterestAmount, TransactionDetails63.mmAccruedInterestAmount, CorporateActionAmounts29.mmAccruedInterestAmount,
+					CorporateActionAmounts27.mmAccruedInterestAmount, CorporateActionAmounts28.mmAccruedInterestAmount, Order17.mmAccruedInterestAmount, Order18.mmAccruedInterestAmount, CorporateActionAmounts33.mmAccruedInterestAmount,
+					CorporateActionAmounts32.mmAccruedInterestAmount, CorporateActionAmounts35.mmAccruedInterestAmount, TransactionDetails68.mmAccruedInterestAmount, TradeLeg8.mmAccruedInterestAmount, TradeLeg9.mmAccruedInterestAmount,
+					InterestCalculation3.mmAccruedInterestAmount, TransactionDetails78.mmAccruedInterestAmount, OtherAmounts28.mmAccruedInterestAmount, OtherAmounts30.mmAccruedInterestAmount,
+					SecuritiesFinancingTransactionDetails28.mmAccruedInterestAmount, OtherAmounts31.mmAccruedInterestAmount, SecuritiesFinancingTransactionDetails27.mmAccruedInterestAmount,
+					SecuritiesFinancingTransactionDetails29.mmAccruedInterestAmount, OtherAmounts32.mmAccruedInterestAmount, OtherAmounts29.mmAccruedInterestAmount, CorporateActionAmounts37.mmAccruedInterestAmount,
+					CorporateActionAmounts36.mmAccruedInterestAmount, UnitPrice21.mmAccruedInterestNAV, CorporateActionAmounts38.mmAccruedInterestAmount, InterestCalculation4.mmAccruedInterestAmount,
+					CorporateActionAmounts39.mmAccruedInterestAmount, CorporateActionAmounts41.mmAccruedInterestAmount, CorporateActionAmounts40.mmAccruedInterestAmount, OtherAmounts35.mmAccruedInterestAmount,
+					SecuritiesFinancingTransactionDetails32.mmAccruedInterestAmount, SecuritiesFinancingTransactionDetails30.mmAccruedInterestAmount, OtherAmounts34.mmAccruedInterestAmount, OtherAmounts38.mmAccruedInterestAmount,
+					OtherAmounts36.mmAccruedInterestAmount, SecuritiesFinancingTransactionDetails34.mmAccruedInterestAmount, OtherAmounts33.mmAccruedInterestAmount, TransactionDetails91.mmAccruedInterestAmount,
+					TransactionDetails95.mmAccruedInterestAmount, TransactionDetails98.mmAccruedInterestAmount);
 			elementContext_lazy = () -> Interest.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AccruedInterestAmount";
 			definition = "Interest amount that has accrued in between coupon payment periods.";
 			maxOccurs = 1;
@@ -1121,43 +1092,29 @@ public class Interest {
 	 */
 	public static final MMBusinessAssociationEnd mmInterestCalculation = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RateTypeAndAmountAndStatus1.mmRateType, com.tools20022.repository.msg.RateTypeAndAmountAndStatus3.mmRateType,
-					com.tools20022.repository.msg.RateTypeAndAmountAndStatus4.mmRateType, com.tools20022.repository.msg.RateTypeAndAmountAndStatus5.mmRateType, com.tools20022.repository.msg.RateTypeAndAmountAndStatus6.mmRateType,
-					com.tools20022.repository.msg.RateTypeAndAmountAndStatus2.mmRateType, com.tools20022.repository.msg.RateTypeAndAmountAndStatus7.mmRateType, com.tools20022.repository.msg.RateTypeAndAmountAndStatus8.mmRateType,
-					com.tools20022.repository.msg.RateTypeAndAmountAndStatus9.mmRateType, com.tools20022.repository.msg.RateTypeAndAmountAndStatus10.mmRateType, com.tools20022.repository.msg.RateTypeAndAmountAndStatus11.mmRateType,
-					com.tools20022.repository.msg.RateTypeAndAmountAndStatus12.mmRateType, com.tools20022.repository.msg.RateTypeAndAmountAndStatus15.mmRateType, com.tools20022.repository.msg.RateTypeAndAmountAndStatus16.mmRateType,
-					com.tools20022.repository.msg.RateTypeAndAmountAndStatus13.mmRateType, com.tools20022.repository.msg.RateTypeAndAmountAndStatus14.mmRateType, com.tools20022.repository.msg.RateTypeAndAmountAndStatus17.mmRateType,
-					com.tools20022.repository.msg.RateTypeAndAmountAndStatus18.mmRateType, com.tools20022.repository.msg.RateTypeAndAmountAndStatus19.mmRateType, com.tools20022.repository.msg.RateTypeAndAmountAndStatus20.mmRateType,
-					com.tools20022.repository.msg.RateTypeAndAmountAndStatus21.mmRateType, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails11.mmChargesRate,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails14.mmChargesRate, com.tools20022.repository.msg.EntryTransaction1.mmInterest, com.tools20022.repository.msg.ReportEntry1.mmInterest,
-					com.tools20022.repository.msg.AccountReport9.mmInterest, com.tools20022.repository.msg.EntryTransaction2.mmInterest, com.tools20022.repository.msg.ReportEntry2.mmInterest,
-					com.tools20022.repository.msg.AccountReport11.mmInterest, com.tools20022.repository.msg.InterestRecord1.mmType, com.tools20022.repository.msg.InterestRecord1.mmRate,
-					com.tools20022.repository.msg.EntryTransaction3.mmInterest, com.tools20022.repository.msg.ReportEntry3.mmInterest, com.tools20022.repository.msg.AccountReport12.mmInterest,
-					com.tools20022.repository.msg.EntryTransaction4.mmInterest, com.tools20022.repository.msg.ReportEntry4.mmInterest, com.tools20022.repository.msg.AccountReport16.mmInterest,
-					com.tools20022.repository.msg.NotificationEntry1.mmInterest, com.tools20022.repository.msg.AccountNotification2.mmInterest, com.tools20022.repository.msg.AccountNotification5.mmInterest,
-					com.tools20022.repository.msg.AccountNotification7.mmInterest, com.tools20022.repository.msg.StatementEntry1.mmInterest, com.tools20022.repository.msg.AccountStatement1.mmInterest,
-					com.tools20022.repository.msg.AccountStatement2.mmInterest, com.tools20022.repository.msg.AccountStatement3.mmInterest, com.tools20022.repository.msg.AccountStatement4.mmInterest,
-					com.tools20022.repository.msg.InterestStatement1.mmInterestCalculationDetails, com.tools20022.repository.msg.InterestStatement2.mmInterestCalculationDetails,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails19.mmChargesRate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails20.mmChargesRate,
-					com.tools20022.repository.msg.AccountReport18.mmInterest, com.tools20022.repository.msg.AccountStatement5.mmInterest, com.tools20022.repository.msg.AccountNotification11.mmInterest,
-					com.tools20022.repository.msg.ReportEntry7.mmInterest, com.tools20022.repository.msg.EntryTransaction7.mmInterest, com.tools20022.repository.msg.InterestStatement3.mmInterestCalculation,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails28.mmChargesRate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails27.mmChargesRate,
-					com.tools20022.repository.msg.AccountStatement6.mmInterest, com.tools20022.repository.msg.AccountReport19.mmInterest, com.tools20022.repository.msg.AccountNotification12.mmInterest,
-					com.tools20022.repository.msg.ReportEntry8.mmInterest, com.tools20022.repository.msg.EntryTransaction8.mmInterest, com.tools20022.repository.msg.RateTypeAndAmountAndStatus24.mmRateType,
-					com.tools20022.repository.msg.RateTypeAndAmountAndStatus22.mmRateType, com.tools20022.repository.msg.RateTypeAndAmountAndStatus25.mmRateType, com.tools20022.repository.msg.RateTypeAndAmountAndStatus27.mmRateType,
-					com.tools20022.repository.msg.RateTypeAndAmountAndStatus26.mmRateType, com.tools20022.repository.msg.RateTypeAndAmountAndStatus28.mmRateType, com.tools20022.repository.msg.RateTypeAndAmountAndStatus29.mmRateType,
-					com.tools20022.repository.msg.InterestStatement4.mmInterestCalculation, com.tools20022.repository.msg.RateTypeAndAmountAndStatus32.mmRateType, com.tools20022.repository.msg.RateTypeAndAmountAndStatus31.mmRateType,
-					com.tools20022.repository.msg.RateTypeAndAmountAndStatus33.mmRateType, com.tools20022.repository.msg.RateTypeAndAmountAndStatus36.mmRateType, com.tools20022.repository.msg.RateTypeAndAmountAndStatus35.mmRateType,
-					com.tools20022.repository.msg.RateTypeAndAmountAndStatus30.mmRateType, com.tools20022.repository.msg.RateTypeAndAmountAndStatus34.mmRateType,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails32.mmChargesRate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails30.mmChargesRate);
+			derivation_lazy = () -> Arrays.asList(RateTypeAndAmountAndStatus1.mmRateType, RateTypeAndAmountAndStatus3.mmRateType, RateTypeAndAmountAndStatus4.mmRateType, RateTypeAndAmountAndStatus5.mmRateType,
+					RateTypeAndAmountAndStatus6.mmRateType, RateTypeAndAmountAndStatus2.mmRateType, RateTypeAndAmountAndStatus7.mmRateType, RateTypeAndAmountAndStatus8.mmRateType, RateTypeAndAmountAndStatus9.mmRateType,
+					RateTypeAndAmountAndStatus10.mmRateType, RateTypeAndAmountAndStatus11.mmRateType, RateTypeAndAmountAndStatus12.mmRateType, RateTypeAndAmountAndStatus15.mmRateType, RateTypeAndAmountAndStatus16.mmRateType,
+					RateTypeAndAmountAndStatus13.mmRateType, RateTypeAndAmountAndStatus14.mmRateType, RateTypeAndAmountAndStatus17.mmRateType, RateTypeAndAmountAndStatus18.mmRateType, RateTypeAndAmountAndStatus19.mmRateType,
+					RateTypeAndAmountAndStatus20.mmRateType, RateTypeAndAmountAndStatus21.mmRateType, SecuritiesFinancingTransactionDetails11.mmChargesRate, SecuritiesFinancingTransactionDetails14.mmChargesRate,
+					EntryTransaction1.mmInterest, ReportEntry1.mmInterest, AccountReport9.mmInterest, EntryTransaction2.mmInterest, ReportEntry2.mmInterest, AccountReport11.mmInterest, InterestRecord1.mmType, InterestRecord1.mmRate,
+					EntryTransaction3.mmInterest, ReportEntry3.mmInterest, AccountReport12.mmInterest, EntryTransaction4.mmInterest, ReportEntry4.mmInterest, AccountReport16.mmInterest, NotificationEntry1.mmInterest,
+					AccountNotification2.mmInterest, AccountNotification5.mmInterest, AccountNotification7.mmInterest, StatementEntry1.mmInterest, AccountStatement1.mmInterest, AccountStatement2.mmInterest, AccountStatement3.mmInterest,
+					AccountStatement4.mmInterest, InterestStatement1.mmInterestCalculationDetails, InterestStatement2.mmInterestCalculationDetails, SecuritiesFinancingTransactionDetails19.mmChargesRate,
+					SecuritiesFinancingTransactionDetails20.mmChargesRate, AccountReport18.mmInterest, AccountStatement5.mmInterest, AccountNotification11.mmInterest, ReportEntry7.mmInterest, EntryTransaction7.mmInterest,
+					InterestStatement3.mmInterestCalculation, SecuritiesFinancingTransactionDetails28.mmChargesRate, SecuritiesFinancingTransactionDetails27.mmChargesRate, AccountStatement6.mmInterest, AccountReport19.mmInterest,
+					AccountNotification12.mmInterest, ReportEntry8.mmInterest, EntryTransaction8.mmInterest, RateTypeAndAmountAndStatus24.mmRateType, RateTypeAndAmountAndStatus22.mmRateType, RateTypeAndAmountAndStatus25.mmRateType,
+					RateTypeAndAmountAndStatus27.mmRateType, RateTypeAndAmountAndStatus26.mmRateType, RateTypeAndAmountAndStatus28.mmRateType, RateTypeAndAmountAndStatus29.mmRateType, InterestStatement4.mmInterestCalculation,
+					RateTypeAndAmountAndStatus32.mmRateType, RateTypeAndAmountAndStatus31.mmRateType, RateTypeAndAmountAndStatus33.mmRateType, RateTypeAndAmountAndStatus36.mmRateType, RateTypeAndAmountAndStatus35.mmRateType,
+					RateTypeAndAmountAndStatus30.mmRateType, RateTypeAndAmountAndStatus34.mmRateType, SecuritiesFinancingTransactionDetails32.mmChargesRate, SecuritiesFinancingTransactionDetails30.mmChargesRate);
 			elementContext_lazy = () -> Interest.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InterestCalculation";
 			definition = "Calculation parameters used to obtain the interest amount.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.InterestCalculation.mmInterest;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.InterestCalculation.mmObject();
 		}
 	};
@@ -1502,49 +1459,31 @@ public class Interest {
 	 */
 	public static final MMBusinessAttribute mmAmount = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RateTypeAndAmountAndStatus1.mmAmount, com.tools20022.repository.msg.RateTypeAndAmountAndStatus3.mmAmount,
-					com.tools20022.repository.choice.InterestRateUsedForPaymentFormat2Choice.mmAmount, com.tools20022.repository.msg.RateTypeAndAmountAndStatus4.mmAmount, com.tools20022.repository.msg.RateTypeAndAmountAndStatus5.mmAmount,
-					com.tools20022.repository.msg.RateTypeAndAmountAndStatus6.mmAmount, com.tools20022.repository.msg.CorporateActionAmounts2.mmInterestAmount, com.tools20022.repository.msg.RateTypeAndAmountAndStatus2.mmAmount,
-					com.tools20022.repository.msg.RateTypeAndAmountAndStatus7.mmAmount, com.tools20022.repository.choice.InterestRateUsedForPaymentFormat3Choice.mmAmount, com.tools20022.repository.msg.RateTypeAndAmountAndStatus8.mmAmount,
-					com.tools20022.repository.msg.RateTypeAndAmountAndStatus9.mmAmount, com.tools20022.repository.msg.RateTypeAndAmountAndStatus10.mmAmount, com.tools20022.repository.msg.CorporateActionAmounts5.mmInterestAmount,
-					com.tools20022.repository.msg.RateTypeAndAmountAndStatus11.mmAmount, com.tools20022.repository.msg.CorporateActionAmounts11.mmInterestAmount, com.tools20022.repository.msg.RateTypeAndAmountAndStatus12.mmAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts12.mmInterestAmount, com.tools20022.repository.msg.CorporateActionAmounts17.mmInterestAmount, com.tools20022.repository.msg.CorporateActionAmounts20.mmInterestAmount,
-					com.tools20022.repository.msg.RateTypeAndAmountAndStatus15.mmAmount, com.tools20022.repository.msg.RateTypeAndAmountAndStatus16.mmAmount, com.tools20022.repository.msg.CorporateActionAmounts23.mmInterestAmount,
-					com.tools20022.repository.msg.RateTypeAndAmountAndStatus13.mmAmount, com.tools20022.repository.msg.RateTypeAndAmountAndStatus14.mmAmount, com.tools20022.repository.msg.RateTypeAndAmountAndStatus17.mmAmount,
-					com.tools20022.repository.msg.RateTypeAndAmountAndStatus18.mmAmount, com.tools20022.repository.msg.RateTypeAndAmountAndStatus19.mmAmount, com.tools20022.repository.msg.CorporateActionAmounts24.mmInterestAmount,
-					com.tools20022.repository.msg.RateTypeAndAmountAndStatus20.mmAmount, com.tools20022.repository.msg.RateTypeAndAmountAndStatus21.mmAmount,
-					com.tools20022.repository.choice.InterestRateUsedForPaymentFormat1Choice.mmAmount, com.tools20022.repository.msg.CorporateActionAmounts3.mmInterestAmount,
-					com.tools20022.repository.choice.InterestRateUsedForPaymentFormat4Choice.mmAmount, com.tools20022.repository.msg.CorporateActionAmounts6.mmInterestAmount,
-					com.tools20022.repository.choice.InterestRateUsedForPaymentFormat5Choice.mmAmount, com.tools20022.repository.msg.CorporateActionAmounts9.mmInterestAmount,
-					com.tools20022.repository.choice.InterestRateUsedForPaymentFormat6Choice.mmAmount, com.tools20022.repository.msg.CorporateActionAmounts13.mmInterestAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts16.mmInterestAmount, com.tools20022.repository.msg.CorporateActionAmounts19.mmInterestAmount, com.tools20022.repository.msg.CorporateActionAmounts22.mmInterestAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts25.mmInterestAmount, com.tools20022.repository.msg.CorporateActionAmounts4.mmInterestAmount, com.tools20022.repository.msg.CorporateActionAmounts7.mmInterestAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts10.mmInterestAmount, com.tools20022.repository.msg.CorporateActionAmounts14.mmInterestAmount, com.tools20022.repository.msg.CorporateActionAmounts15.mmInterestAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts18.mmInterestAmount, com.tools20022.repository.msg.CorporateActionAmounts21.mmInterestAmount, com.tools20022.repository.msg.CorporateActionAmounts26.mmInterestAmount,
-					com.tools20022.repository.msg.OtherAmounts16.mmBorrowingInterestAmount, com.tools20022.repository.msg.TransactionInterest1.mmAmount, com.tools20022.repository.msg.TransactionInterest2.mmAmount,
-					com.tools20022.repository.msg.InterestRecord1.mmAmount, com.tools20022.repository.msg.CorporateActionAmounts1.mmInterestAmount, com.tools20022.repository.msg.InterestResult1.mmInterestDueToA,
-					com.tools20022.repository.msg.InterestResult1.mmInterestDueToB, com.tools20022.repository.msg.InterestCalculation1.mmAggregatedInterestAmount,
-					com.tools20022.repository.msg.InterestStatement1.mmTotalInterestAmountDueToA, com.tools20022.repository.msg.InterestStatement1.mmTotalInterestAmountDueToB,
-					com.tools20022.repository.msg.InterestCalculation2.mmAggregatedInterestAmount, com.tools20022.repository.msg.InterestStatement2.mmTotalInterestAmountDueToA,
-					com.tools20022.repository.msg.InterestStatement2.mmTotalInterestAmountDueToB, com.tools20022.repository.msg.NetPosition1.mmAccruedInterestAmount, com.tools20022.repository.msg.NetPosition2.mmAccruedInterestAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts29.mmInterestAmount, com.tools20022.repository.msg.CorporateActionAmounts27.mmInterestAmount, com.tools20022.repository.msg.CorporateActionAmounts28.mmInterestAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts33.mmInterestAmount, com.tools20022.repository.msg.CorporateActionAmounts32.mmInterestAmount, com.tools20022.repository.msg.CorporateActionAmounts35.mmInterestAmount,
-					com.tools20022.repository.msg.NetPosition3.mmAccruedInterestAmount, com.tools20022.repository.msg.InterestStatement3.mmTotalInterestAmountDueToA,
-					com.tools20022.repository.msg.InterestStatement3.mmTotalInterestAmountDueToB, com.tools20022.repository.msg.InterestCalculation3.mmAggregatedInterestAmount,
-					com.tools20022.repository.choice.InterestRateUsedForPaymentFormat8Choice.mmAmount, com.tools20022.repository.msg.RateTypeAndAmountAndStatus24.mmAmount,
-					com.tools20022.repository.msg.RateTypeAndAmountAndStatus22.mmAmount, com.tools20022.repository.msg.RateTypeAndAmountAndStatus25.mmAmount, com.tools20022.repository.msg.RateTypeAndAmountAndStatus27.mmAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts37.mmInterestAmount, com.tools20022.repository.msg.RateTypeAndAmountAndStatus26.mmAmount,
-					com.tools20022.repository.choice.InterestRateUsedForPaymentFormat7Choice.mmAmount, com.tools20022.repository.msg.CorporateActionAmounts36.mmInterestAmount,
-					com.tools20022.repository.msg.RateTypeAndAmountAndStatus28.mmAmount, com.tools20022.repository.msg.RateTypeAndAmountAndStatus29.mmAmount, com.tools20022.repository.msg.CorporateActionAmounts38.mmInterestAmount,
-					com.tools20022.repository.msg.InterestStatement4.mmTotalInterestAmountDueToA, com.tools20022.repository.msg.InterestStatement4.mmTotalInterestAmountDueToB,
-					com.tools20022.repository.msg.InterestCalculation4.mmAggregatedInterestAmount, com.tools20022.repository.choice.InterestRateUsedForPaymentFormat9Choice.mmAmount,
-					com.tools20022.repository.msg.RateTypeAndAmountAndStatus32.mmAmount, com.tools20022.repository.msg.RateTypeAndAmountAndStatus31.mmAmount, com.tools20022.repository.msg.CorporateActionAmounts39.mmInterestAmount,
-					com.tools20022.repository.msg.RateTypeAndAmountAndStatus33.mmAmount, com.tools20022.repository.msg.CorporateActionAmounts41.mmInterestAmount, com.tools20022.repository.msg.CorporateActionAmounts40.mmInterestAmount,
-					com.tools20022.repository.msg.RateTypeAndAmountAndStatus36.mmAmount, com.tools20022.repository.msg.RateTypeAndAmountAndStatus35.mmAmount, com.tools20022.repository.msg.RateTypeAndAmountAndStatus30.mmAmount,
-					com.tools20022.repository.choice.InterestRateUsedForPaymentFormat10Choice.mmAmount, com.tools20022.repository.msg.RateTypeAndAmountAndStatus34.mmAmount);
+			derivation_lazy = () -> Arrays.asList(RateTypeAndAmountAndStatus1.mmAmount, RateTypeAndAmountAndStatus3.mmAmount, InterestRateUsedForPaymentFormat2Choice.mmAmount, RateTypeAndAmountAndStatus4.mmAmount,
+					RateTypeAndAmountAndStatus5.mmAmount, RateTypeAndAmountAndStatus6.mmAmount, CorporateActionAmounts2.mmInterestAmount, RateTypeAndAmountAndStatus2.mmAmount, RateTypeAndAmountAndStatus7.mmAmount,
+					InterestRateUsedForPaymentFormat3Choice.mmAmount, RateTypeAndAmountAndStatus8.mmAmount, RateTypeAndAmountAndStatus9.mmAmount, RateTypeAndAmountAndStatus10.mmAmount, CorporateActionAmounts5.mmInterestAmount,
+					RateTypeAndAmountAndStatus11.mmAmount, CorporateActionAmounts11.mmInterestAmount, RateTypeAndAmountAndStatus12.mmAmount, CorporateActionAmounts12.mmInterestAmount, CorporateActionAmounts17.mmInterestAmount,
+					CorporateActionAmounts20.mmInterestAmount, RateTypeAndAmountAndStatus15.mmAmount, RateTypeAndAmountAndStatus16.mmAmount, CorporateActionAmounts23.mmInterestAmount, RateTypeAndAmountAndStatus13.mmAmount,
+					RateTypeAndAmountAndStatus14.mmAmount, RateTypeAndAmountAndStatus17.mmAmount, RateTypeAndAmountAndStatus18.mmAmount, RateTypeAndAmountAndStatus19.mmAmount, CorporateActionAmounts24.mmInterestAmount,
+					RateTypeAndAmountAndStatus20.mmAmount, RateTypeAndAmountAndStatus21.mmAmount, InterestRateUsedForPaymentFormat1Choice.mmAmount, CorporateActionAmounts3.mmInterestAmount, InterestRateUsedForPaymentFormat4Choice.mmAmount,
+					CorporateActionAmounts6.mmInterestAmount, InterestRateUsedForPaymentFormat5Choice.mmAmount, CorporateActionAmounts9.mmInterestAmount, InterestRateUsedForPaymentFormat6Choice.mmAmount,
+					CorporateActionAmounts13.mmInterestAmount, CorporateActionAmounts16.mmInterestAmount, CorporateActionAmounts19.mmInterestAmount, CorporateActionAmounts22.mmInterestAmount, CorporateActionAmounts25.mmInterestAmount,
+					CorporateActionAmounts4.mmInterestAmount, CorporateActionAmounts7.mmInterestAmount, CorporateActionAmounts10.mmInterestAmount, CorporateActionAmounts14.mmInterestAmount, CorporateActionAmounts15.mmInterestAmount,
+					CorporateActionAmounts18.mmInterestAmount, CorporateActionAmounts21.mmInterestAmount, CorporateActionAmounts26.mmInterestAmount, OtherAmounts16.mmBorrowingInterestAmount, TransactionInterest1.mmAmount,
+					TransactionInterest2.mmAmount, InterestRecord1.mmAmount, CorporateActionAmounts1.mmInterestAmount, InterestResult1.mmInterestDueToA, InterestResult1.mmInterestDueToB, InterestCalculation1.mmAggregatedInterestAmount,
+					InterestStatement1.mmTotalInterestAmountDueToA, InterestStatement1.mmTotalInterestAmountDueToB, InterestCalculation2.mmAggregatedInterestAmount, InterestStatement2.mmTotalInterestAmountDueToA,
+					InterestStatement2.mmTotalInterestAmountDueToB, NetPosition1.mmAccruedInterestAmount, NetPosition2.mmAccruedInterestAmount, CorporateActionAmounts29.mmInterestAmount, CorporateActionAmounts27.mmInterestAmount,
+					CorporateActionAmounts28.mmInterestAmount, CorporateActionAmounts33.mmInterestAmount, CorporateActionAmounts32.mmInterestAmount, CorporateActionAmounts35.mmInterestAmount, NetPosition3.mmAccruedInterestAmount,
+					InterestStatement3.mmTotalInterestAmountDueToA, InterestStatement3.mmTotalInterestAmountDueToB, InterestCalculation3.mmAggregatedInterestAmount, InterestRateUsedForPaymentFormat8Choice.mmAmount,
+					RateTypeAndAmountAndStatus24.mmAmount, RateTypeAndAmountAndStatus22.mmAmount, RateTypeAndAmountAndStatus25.mmAmount, RateTypeAndAmountAndStatus27.mmAmount, CorporateActionAmounts37.mmInterestAmount,
+					RateTypeAndAmountAndStatus26.mmAmount, InterestRateUsedForPaymentFormat7Choice.mmAmount, CorporateActionAmounts36.mmInterestAmount, RateTypeAndAmountAndStatus28.mmAmount, RateTypeAndAmountAndStatus29.mmAmount,
+					CorporateActionAmounts38.mmInterestAmount, InterestStatement4.mmTotalInterestAmountDueToA, InterestStatement4.mmTotalInterestAmountDueToB, InterestCalculation4.mmAggregatedInterestAmount,
+					InterestRateUsedForPaymentFormat9Choice.mmAmount, RateTypeAndAmountAndStatus32.mmAmount, RateTypeAndAmountAndStatus31.mmAmount, CorporateActionAmounts39.mmInterestAmount, RateTypeAndAmountAndStatus33.mmAmount,
+					CorporateActionAmounts41.mmInterestAmount, CorporateActionAmounts40.mmInterestAmount, RateTypeAndAmountAndStatus36.mmAmount, RateTypeAndAmountAndStatus35.mmAmount, RateTypeAndAmountAndStatus30.mmAmount,
+					InterestRateUsedForPaymentFormat10Choice.mmAmount, RateTypeAndAmountAndStatus34.mmAmount);
 			elementContext_lazy = () -> Interest.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Amount";
 			definition = "Amount of money representing interest payments.";
 			maxOccurs = 1;
@@ -1900,55 +1839,33 @@ public class Interest {
 	 */
 	public static final MMBusinessAttribute mmRate = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.InterestRateUsedForPaymentFormat2Choice.mmRate, com.tools20022.repository.msg.CorporateActionRate4.mmInterestRateUsedForPayment,
-					com.tools20022.repository.choice.InterestRateUsedForPaymentFormat3Choice.mmRate, com.tools20022.repository.msg.CorporateActionRate10.mmInterestRateUsedForPayment,
-					com.tools20022.repository.msg.CorporateActionRate20.mmInterestRateUsedForPayment, com.tools20022.repository.msg.RateDetails2.mmInterestRateUsedForPayment,
-					com.tools20022.repository.msg.CorporateActionRate22.mmInterestRateUsedForPayment, com.tools20022.repository.msg.RateDetails4.mmInterestRateUsedForPayment,
-					com.tools20022.repository.msg.CorporateActionRate26.mmInterestRateUsedForPayment, com.tools20022.repository.msg.RateDetails7.mmInterestRateUsedForPayment,
-					com.tools20022.repository.msg.CorporateActionRate31.mmInterestRateUsedForPayment, com.tools20022.repository.msg.RateDetails9.mmInterestRateUsedForPayment,
-					com.tools20022.repository.msg.CorporateActionRate38.mmInterestRateUsedForPayment, com.tools20022.repository.msg.RateDetails11.mmInterestRateUsedForPayment,
-					com.tools20022.repository.msg.CorporateActionRate39.mmInterestRateUsedForPayment, com.tools20022.repository.msg.RateDetails12.mmInterestRateUsedForPayment,
-					com.tools20022.repository.choice.InterestRateUsedForPaymentFormat1Choice.mmRate, com.tools20022.repository.msg.CorporateActionRate5.mmInterestRateUsedForPayment,
-					com.tools20022.repository.choice.InterestRateUsedForPaymentFormat4Choice.mmRate, com.tools20022.repository.msg.CorporateActionRate12.mmInterestRateUsedForPayment,
-					com.tools20022.repository.choice.InterestRateUsedForPaymentFormat5Choice.mmRate, com.tools20022.repository.msg.CorporateActionRate15.mmInterestRateUsedForPayment,
-					com.tools20022.repository.msg.RateDetails3.mmInterestRateUsedForPayment, com.tools20022.repository.choice.InterestRateUsedForPaymentFormat6Choice.mmRate,
-					com.tools20022.repository.msg.CorporateActionRate18.mmInterestRateUsedForPayment, com.tools20022.repository.msg.RateDetails5.mmInterestRateUsedForPayment,
-					com.tools20022.repository.msg.CorporateActionRate25.mmInterestRateUsedForPayment, com.tools20022.repository.msg.CorporateActionRate30.mmInterestRateUsedForPayment,
-					com.tools20022.repository.msg.CorporateActionRate37.mmInterestRateUsedForPayment, com.tools20022.repository.msg.RateDetails10.mmInterestRateUsedForPayment,
-					com.tools20022.repository.msg.CorporateActionRate40.mmInterestRateUsedForPayment, com.tools20022.repository.msg.RateDetails13.mmInterestRateUsedForPayment,
-					com.tools20022.repository.msg.CorporateActionRate36.mmInterestRateUsedForPayment, com.tools20022.repository.msg.CorporateActionRate42.mmInterestRateUsedForPayment,
-					com.tools20022.repository.choice.RateOrName1Choice.mmRate, com.tools20022.repository.choice.RateOrName2Choice.mmRate, com.tools20022.repository.msg.Order16.mmAccruedInterestPercentage,
-					com.tools20022.repository.msg.Order14.mmAccruedInterestPercentage, com.tools20022.repository.msg.SecuritiesFinancing10.mmAccruedInterestPercentage, com.tools20022.repository.msg.SecuritiesFinancing10.mmInterestRate,
-					com.tools20022.repository.msg.CorporateActionRate2.mmInterestForUsedPayment, com.tools20022.repository.msg.FinancialCard1.mmInterestRatePercent, com.tools20022.repository.choice.InterestRate1Choice.mmFixedInterestRate,
-					com.tools20022.repository.msg.InterestAmount1.mmInterestRate, com.tools20022.repository.msg.InterestAmount2.mmInterestRate, com.tools20022.repository.msg.InterestCalculation1.mmEffectiveRate,
-					com.tools20022.repository.msg.InterestCalculation2.mmEffectiveRate, com.tools20022.repository.msg.RateDetails15.mmInterestRateUsedForPayment,
-					com.tools20022.repository.msg.CorporateActionRate46.mmInterestRateUsedForPayment, com.tools20022.repository.msg.CorporateActionRate45.mmInterestRateUsedForPayment,
-					com.tools20022.repository.msg.CorporateActionRate44.mmInterestRateUsedForPayment, com.tools20022.repository.msg.RateDetails14.mmInterestRateUsedForPayment,
-					com.tools20022.repository.msg.Order17.mmAccruedInterestPercentage, com.tools20022.repository.msg.Order18.mmAccruedInterestPercentage, com.tools20022.repository.msg.CorporateActionRate60.mmInterestRateUsedForPayment,
-					com.tools20022.repository.msg.RateDetails18.mmInterestRateUsedForPayment, com.tools20022.repository.msg.CorporateActionRate64.mmInterestRateUsedForPayment,
-					com.tools20022.repository.msg.RateDetails21.mmInterestRateUsedForPayment, com.tools20022.repository.msg.CorporateActionRate57.mmInterestRateUsedForPayment,
-					com.tools20022.repository.msg.InterestCalculation3.mmEffectiveRate, com.tools20022.repository.msg.UnsecuredMarketTransaction1.mmDealRate, com.tools20022.repository.msg.OvernightIndexSwapTransaction1.mmFixedInterestRate,
-					com.tools20022.repository.msg.SecuredMarketTransaction1.mmDealRate, com.tools20022.repository.choice.InterestRate2Choice.mmFixed, com.tools20022.repository.msg.DebtInstrument2.mmInterestRate,
-					com.tools20022.repository.choice.InterestRateUsedForPaymentFormat8Choice.mmRate, com.tools20022.repository.msg.RateDetails23.mmInterestRateUsedForPayment,
-					com.tools20022.repository.msg.CorporateActionRate68.mmInterestRateUsedForPayment, com.tools20022.repository.msg.CorporateActionRate70.mmInterestRateUsedForPayment,
-					com.tools20022.repository.choice.InterestRateUsedForPaymentFormat7Choice.mmRate, com.tools20022.repository.msg.CorporateActionRate67.mmInterestRateUsedForPayment,
-					com.tools20022.repository.msg.RateDetails22.mmInterestRateUsedForPayment, com.tools20022.repository.msg.InterestCalculation4.mmEffectiveRate,
-					com.tools20022.repository.msg.CorporateActionRate74.mmInterestRateUsedForPayment, com.tools20022.repository.choice.InterestRateUsedForPaymentFormat9Choice.mmRate,
-					com.tools20022.repository.msg.CorporateActionRate79.mmInterestRateUsedForPayment, com.tools20022.repository.msg.RateDetails24.mmInterestRateUsedForPayment,
-					com.tools20022.repository.msg.RateDetails25.mmInterestRateUsedForPayment, com.tools20022.repository.msg.CorporateActionRate76.mmInterestRateUsedForPayment,
-					com.tools20022.repository.choice.InterestRateUsedForPaymentFormat10Choice.mmRate, com.tools20022.repository.msg.UnsecuredMarketTransaction2.mmDealRate, com.tools20022.repository.msg.SecuredMarketTransaction2.mmDealRate,
-					com.tools20022.repository.msg.UnsecuredMarketTransaction3.mmDealRate, com.tools20022.repository.msg.OvernightIndexSwapTransaction3.mmFixedInterestRate, com.tools20022.repository.msg.SecuredMarketTransaction3.mmDealRate,
-					com.tools20022.repository.choice.InterestRate6Choice.mmFixed, com.tools20022.repository.msg.DerivativeInterest3.mmInterestRate, com.tools20022.repository.msg.DerivativeInterest3.mmFirstLegInterestRate,
-					com.tools20022.repository.msg.DerivativeInterest3.mmOtherLegInterestRate, com.tools20022.repository.choice.InterestRate8Choice.mmFixed, com.tools20022.repository.msg.InterestRateDerivative5.mmInterestRateReference,
-					com.tools20022.repository.msg.RateDetails26.mmInterestRateUsedForPayment, com.tools20022.repository.msg.CorporateActionRate82.mmInterestRateUsedForPayment,
-					com.tools20022.repository.msg.CorporateActionRate80.mmInterestRateUsedForPayment, com.tools20022.repository.msg.RateDetails27.mmInterestRateUsedForPayment,
-					com.tools20022.repository.msg.CorporateActionRate81.mmInterestRateUsedForPayment, com.tools20022.repository.msg.CorporateActionRate83.mmInterestRateUsedForPayment,
-					com.tools20022.repository.msg.CorporateActionRate84.mmInterestRateUsedForPayment, com.tools20022.repository.msg.CorporateActionRate85.mmInterestRateUsedForPayment,
-					com.tools20022.repository.msg.RateDetails28.mmInterestRateUsedForPayment, com.tools20022.repository.msg.RateDetails30.mmInterestRateUsedForPayment, com.tools20022.repository.msg.SecuredMarketTransaction4.mmDealRate,
-					com.tools20022.repository.msg.OvernightIndexSwapTransaction4.mmFixedInterestRate, com.tools20022.repository.msg.UnsecuredMarketTransaction4.mmDealRate);
+			derivation_lazy = () -> Arrays.asList(InterestRateUsedForPaymentFormat2Choice.mmRate, CorporateActionRate4.mmInterestRateUsedForPayment, InterestRateUsedForPaymentFormat3Choice.mmRate,
+					CorporateActionRate10.mmInterestRateUsedForPayment, CorporateActionRate20.mmInterestRateUsedForPayment, RateDetails2.mmInterestRateUsedForPayment, CorporateActionRate22.mmInterestRateUsedForPayment,
+					RateDetails4.mmInterestRateUsedForPayment, CorporateActionRate26.mmInterestRateUsedForPayment, RateDetails7.mmInterestRateUsedForPayment, CorporateActionRate31.mmInterestRateUsedForPayment,
+					RateDetails9.mmInterestRateUsedForPayment, CorporateActionRate38.mmInterestRateUsedForPayment, RateDetails11.mmInterestRateUsedForPayment, CorporateActionRate39.mmInterestRateUsedForPayment,
+					RateDetails12.mmInterestRateUsedForPayment, InterestRateUsedForPaymentFormat1Choice.mmRate, CorporateActionRate5.mmInterestRateUsedForPayment, InterestRateUsedForPaymentFormat4Choice.mmRate,
+					CorporateActionRate12.mmInterestRateUsedForPayment, InterestRateUsedForPaymentFormat5Choice.mmRate, CorporateActionRate15.mmInterestRateUsedForPayment, RateDetails3.mmInterestRateUsedForPayment,
+					InterestRateUsedForPaymentFormat6Choice.mmRate, CorporateActionRate18.mmInterestRateUsedForPayment, RateDetails5.mmInterestRateUsedForPayment, CorporateActionRate25.mmInterestRateUsedForPayment,
+					CorporateActionRate30.mmInterestRateUsedForPayment, CorporateActionRate37.mmInterestRateUsedForPayment, RateDetails10.mmInterestRateUsedForPayment, CorporateActionRate40.mmInterestRateUsedForPayment,
+					RateDetails13.mmInterestRateUsedForPayment, CorporateActionRate36.mmInterestRateUsedForPayment, CorporateActionRate42.mmInterestRateUsedForPayment, RateOrName1Choice.mmRate, RateOrName2Choice.mmRate,
+					Order16.mmAccruedInterestPercentage, Order14.mmAccruedInterestPercentage, SecuritiesFinancing10.mmAccruedInterestPercentage, SecuritiesFinancing10.mmInterestRate, CorporateActionRate2.mmInterestForUsedPayment,
+					FinancialCard1.mmInterestRatePercent, InterestRate1Choice.mmFixedInterestRate, InterestAmount1.mmInterestRate, InterestAmount2.mmInterestRate, InterestCalculation1.mmEffectiveRate, InterestCalculation2.mmEffectiveRate,
+					RateDetails15.mmInterestRateUsedForPayment, CorporateActionRate46.mmInterestRateUsedForPayment, CorporateActionRate45.mmInterestRateUsedForPayment, CorporateActionRate44.mmInterestRateUsedForPayment,
+					RateDetails14.mmInterestRateUsedForPayment, Order17.mmAccruedInterestPercentage, Order18.mmAccruedInterestPercentage, CorporateActionRate60.mmInterestRateUsedForPayment, RateDetails18.mmInterestRateUsedForPayment,
+					CorporateActionRate64.mmInterestRateUsedForPayment, RateDetails21.mmInterestRateUsedForPayment, CorporateActionRate57.mmInterestRateUsedForPayment, InterestCalculation3.mmEffectiveRate,
+					UnsecuredMarketTransaction1.mmDealRate, OvernightIndexSwapTransaction1.mmFixedInterestRate, SecuredMarketTransaction1.mmDealRate, InterestRate2Choice.mmFixed, DebtInstrument2.mmInterestRate,
+					InterestRateUsedForPaymentFormat8Choice.mmRate, RateDetails23.mmInterestRateUsedForPayment, CorporateActionRate68.mmInterestRateUsedForPayment, CorporateActionRate70.mmInterestRateUsedForPayment,
+					InterestRateUsedForPaymentFormat7Choice.mmRate, CorporateActionRate67.mmInterestRateUsedForPayment, RateDetails22.mmInterestRateUsedForPayment, InterestCalculation4.mmEffectiveRate,
+					CorporateActionRate74.mmInterestRateUsedForPayment, InterestRateUsedForPaymentFormat9Choice.mmRate, CorporateActionRate79.mmInterestRateUsedForPayment, RateDetails24.mmInterestRateUsedForPayment,
+					RateDetails25.mmInterestRateUsedForPayment, CorporateActionRate76.mmInterestRateUsedForPayment, InterestRateUsedForPaymentFormat10Choice.mmRate, UnsecuredMarketTransaction2.mmDealRate,
+					SecuredMarketTransaction2.mmDealRate, UnsecuredMarketTransaction3.mmDealRate, OvernightIndexSwapTransaction3.mmFixedInterestRate, SecuredMarketTransaction3.mmDealRate, InterestRate6Choice.mmFixed,
+					DerivativeInterest3.mmInterestRate, DerivativeInterest3.mmFirstLegInterestRate, DerivativeInterest3.mmOtherLegInterestRate, InterestRate8Choice.mmFixed, InterestRateDerivative5.mmInterestRateReference,
+					RateDetails26.mmInterestRateUsedForPayment, CorporateActionRate82.mmInterestRateUsedForPayment, CorporateActionRate80.mmInterestRateUsedForPayment, RateDetails27.mmInterestRateUsedForPayment,
+					CorporateActionRate81.mmInterestRateUsedForPayment, CorporateActionRate83.mmInterestRateUsedForPayment, CorporateActionRate84.mmInterestRateUsedForPayment, CorporateActionRate85.mmInterestRateUsedForPayment,
+					RateDetails28.mmInterestRateUsedForPayment, RateDetails30.mmInterestRateUsedForPayment, SecuredMarketTransaction4.mmDealRate, OvernightIndexSwapTransaction4.mmFixedInterestRate, UnsecuredMarketTransaction4.mmDealRate);
 			elementContext_lazy = () -> Interest.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Rate";
 			definition = "The actual interest rate used for the payment of the interest for the specified interest period.";
 			maxOccurs = 1;
@@ -1995,12 +1912,12 @@ public class Interest {
 		{
 			elementContext_lazy = () -> Interest.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedCashProceedsDefinition";
 			definition = "Cash proceeds definition for which an interest is provided.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.CashProceedsDefinition.mmInterest;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.CashProceedsDefinition.mmObject();
 		}
 	};
@@ -2042,12 +1959,12 @@ public class Interest {
 		{
 			elementContext_lazy = () -> Interest.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SecuritiesFinancing";
 			definition = "Specifies the financing trade on which this interest apply.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancing.mmInterest;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancing.mmObject();
 		}
 	};
@@ -2102,17 +2019,16 @@ public class Interest {
 	 */
 	public static final MMBusinessAssociationEnd mmInterestTax = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesFinancing10.mmAccruedInterestTax, com.tools20022.repository.msg.AccountInterest3.mmTax, com.tools20022.repository.msg.InterestRecord1.mmTax,
-					com.tools20022.repository.msg.InterestAmount1.mmAppliedWithholdingTax, com.tools20022.repository.msg.InterestAmount2.mmAppliedWithholdingTax);
+			derivation_lazy = () -> Arrays.asList(SecuritiesFinancing10.mmAccruedInterestTax, AccountInterest3.mmTax, InterestRecord1.mmTax, InterestAmount1.mmAppliedWithholdingTax, InterestAmount2.mmAppliedWithholdingTax);
 			elementContext_lazy = () -> Interest.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InterestTax";
 			definition = "Specifies the tax on interest.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.Tax.mmInterest;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Tax.mmObject();
 		}
 	};
@@ -2155,10 +2071,10 @@ public class Interest {
 	 */
 	public static final MMBusinessAttribute mmCreditDebitIndicator = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionInterest1.mmCreditDebitIndicator, com.tools20022.repository.msg.TransactionInterest2.mmCreditDebitIndicator);
+			derivation_lazy = () -> Arrays.asList(TransactionInterest1.mmCreditDebitIndicator, TransactionInterest2.mmCreditDebitIndicator);
 			elementContext_lazy = () -> Interest.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CreditDebitIndicator";
 			definition = "Indicates whether the interest is a debit or credit.";
 			maxOccurs = 1;
@@ -2203,13 +2119,13 @@ public class Interest {
 		{
 			elementContext_lazy = () -> Interest.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CashEntry";
 			definition = "Entry which contains the interest.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.CashEntry.mmInterest;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.CashEntry.mmObject();
 		}
 	};
@@ -2272,12 +2188,11 @@ public class Interest {
 	 */
 	public static final MMBusinessAttribute mmPaymentDate = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InterestAmount1.mmValueDate, com.tools20022.repository.msg.InterestResult1.mmValueDate, com.tools20022.repository.msg.InterestAmount2.mmValueDate,
-					com.tools20022.repository.msg.InterestStatement1.mmValueDate, com.tools20022.repository.msg.InterestStatement2.mmValueDate, com.tools20022.repository.msg.InterestStatement3.mmValueDate,
-					com.tools20022.repository.msg.InterestPaymentDateRange1.mmExpectedDate, com.tools20022.repository.msg.InterestPaymentDateRange1.mmDueDate, com.tools20022.repository.msg.InterestStatement4.mmValueDate);
+			derivation_lazy = () -> Arrays.asList(InterestAmount1.mmValueDate, InterestResult1.mmValueDate, InterestAmount2.mmValueDate, InterestStatement1.mmValueDate, InterestStatement2.mmValueDate, InterestStatement3.mmValueDate,
+					InterestPaymentDateRange1.mmExpectedDate, InterestPaymentDateRange1.mmDueDate, InterestStatement4.mmValueDate);
 			elementContext_lazy = () -> Interest.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PaymentDate";
 			definition = "Date of the next interest payment.";
 			maxOccurs = 1;
@@ -2325,13 +2240,13 @@ public class Interest {
 		{
 			elementContext_lazy = () -> Interest.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedInterestManagement";
 			definition = "Management of interest which consists into calculating the interest, requesting its payment or distributing the interest proceeds.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.InterestManagement.mmInterest;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.InterestManagement.mmObject();
 		}
 	};
@@ -2372,13 +2287,13 @@ public class Interest {
 		{
 			elementContext_lazy = () -> Interest.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedUndertakingAmount";
 			definition = "Undertaking amount for which an interest is specified.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.UndertakingAmount.mmInterest;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.UndertakingAmount.mmObject();
 		}
 	};
@@ -2420,13 +2335,13 @@ public class Interest {
 		{
 			elementContext_lazy = () -> Interest.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedDebitCreditFacility";
 			definition = "Debit and credit facilities on which the interest applies.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.DebitCreditFacility.mmCashAccountInterest;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.DebitCreditFacility.mmObject();
 		}
 	};
@@ -2470,13 +2385,13 @@ public class Interest {
 		{
 			elementContext_lazy = () -> Interest.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SecuritiesSettlement";
 			definition = "Securities settlement process for which an accrued interest is specified.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmAccruedInterest;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmObject();
 		}
 	};
@@ -2518,13 +2433,13 @@ public class Interest {
 		{
 			elementContext_lazy = () -> Interest.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InterestName";
 			definition = "Interest rate expressed as a rate name.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmIdentificationForInterestName;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmObject();
 		}
 	};
@@ -2565,13 +2480,13 @@ public class Interest {
 		{
 			elementContext_lazy = () -> Interest.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedAssetHolding";
 			definition = "Asset holding on which interest is paid.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmInterest;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmObject();
 		}
 	};
@@ -2611,13 +2526,13 @@ public class Interest {
 		{
 			elementContext_lazy = () -> Interest.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Deposit";
 			definition = "Deposit for which an interest is specified.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.Deposit.mmInterest;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Deposit.mmObject();
 		}
 	};
@@ -2669,17 +2584,16 @@ public class Interest {
 	 */
 	public static final MMBusinessAssociationEnd mmAccountBalance = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMTransactionAmounts4.mmDailyBalance, com.tools20022.repository.msg.ATMTransactionAmounts4.mmWeeklyBalance,
-					com.tools20022.repository.msg.ATMTransactionAmounts4.mmMonthlyBalance);
+			derivation_lazy = () -> Arrays.asList(ATMTransactionAmounts4.mmDailyBalance, ATMTransactionAmounts4.mmWeeklyBalance, ATMTransactionAmounts4.mmMonthlyBalance);
 			elementContext_lazy = () -> Interest.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AccountBalance";
 			definition = "Balance for which an interest is calculated.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.Balance.mmInterest;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Balance.mmObject();
 		}
 	};
@@ -2721,13 +2635,13 @@ public class Interest {
 		{
 			elementContext_lazy = () -> Interest.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedAccountContract";
 			definition = "Account contract for which interest parameters are specified.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.AccountContract.mmInterest;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.AccountContract.mmObject();
 		}
 	};
@@ -2771,13 +2685,13 @@ public class Interest {
 		{
 			elementContext_lazy = () -> Interest.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedNetAssetValueCalculation";
 			definition = "Net asset value calculation for which an accrued interest is specified.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.NetAssetValueCalculation.mmInterest;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.NetAssetValueCalculation.mmObject();
 		}
 	};
@@ -2846,13 +2760,12 @@ public class Interest {
 	 */
 	public static final MMBusinessAttribute mmTypeOfInterest = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Order16.mmInterestType, com.tools20022.repository.msg.Order14.mmInterestType, com.tools20022.repository.msg.Order17.mmInterestType,
-					com.tools20022.repository.msg.Order18.mmInterestType, com.tools20022.repository.msg.UnsecuredMarketTransaction1.mmRateType, com.tools20022.repository.msg.SecuredMarketTransaction1.mmRateType,
-					com.tools20022.repository.msg.UnsecuredMarketTransaction2.mmRateType, com.tools20022.repository.msg.SecuredMarketTransaction2.mmRateType, com.tools20022.repository.msg.UnsecuredMarketTransaction3.mmRateType,
-					com.tools20022.repository.msg.SecuredMarketTransaction3.mmRateType, com.tools20022.repository.msg.SecuredMarketTransaction4.mmRateType, com.tools20022.repository.msg.UnsecuredMarketTransaction4.mmRateType);
+			derivation_lazy = () -> Arrays.asList(Order16.mmInterestType, Order14.mmInterestType, Order17.mmInterestType, Order18.mmInterestType, UnsecuredMarketTransaction1.mmRateType, SecuredMarketTransaction1.mmRateType,
+					UnsecuredMarketTransaction2.mmRateType, SecuredMarketTransaction2.mmRateType, UnsecuredMarketTransaction3.mmRateType, SecuredMarketTransaction3.mmRateType, SecuredMarketTransaction4.mmRateType,
+					UnsecuredMarketTransaction4.mmRateType);
 			elementContext_lazy = () -> Interest.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TypeOfInterest";
 			definition = "Specifies the type of interest associated with a trade.";
 			maxOccurs = 1;
@@ -2898,13 +2811,13 @@ public class Interest {
 		{
 			elementContext_lazy = () -> Interest.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedPaymentCard";
 			definition = "Payment card for which interest on due amounts is specified.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.PaymentCard.mmInterest;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.PaymentCard.mmObject();
 		}
 	};
@@ -2912,8 +2825,8 @@ public class Interest {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Interest";
 				definition = "Consideration, such as amount of money,  paid or received in exchange for an asset that has been invested, loaned or borrowed for a certain period. The interest is expressed as a fixed amount or percentage of the amount upon which the interest is applied.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.GenericIdentification.mmIdentificationForInterestName, com.tools20022.repository.entity.NetAssetValueCalculation.mmInterest,
@@ -2922,20 +2835,15 @@ public class Interest {
 						com.tools20022.repository.entity.SecuritiesSettlement.mmAccruedInterest, com.tools20022.repository.entity.InterestCalculation.mmInterest, com.tools20022.repository.entity.SecuritiesFinancing.mmInterest,
 						com.tools20022.repository.entity.CashProceedsDefinition.mmInterest, com.tools20022.repository.entity.DebitCreditFacility.mmCashAccountInterest, com.tools20022.repository.entity.UndertakingAmount.mmInterest,
 						com.tools20022.repository.entity.Deposit.mmInterest, com.tools20022.repository.entity.InterestManagement.mmInterest);
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.InterestRateUsedForPaymentFormat2Choice.mmRateTypeAndAmountAndRateStatus,
-						com.tools20022.repository.choice.InterestRateUsedForPaymentFormat3Choice.mmRateTypeAndAmountAndRateStatus, com.tools20022.repository.choice.InterestRateUsedForPaymentFormat1Choice.mmRateTypeAndAmountAndRateStatus,
-						com.tools20022.repository.choice.InterestRateUsedForPaymentFormat4Choice.mmRateTypeAndAmountAndRateStatus, com.tools20022.repository.choice.InterestRateUsedForPaymentFormat5Choice.mmRateTypeAndAmountAndRateStatus,
-						com.tools20022.repository.choice.InterestRateUsedForPaymentFormat6Choice.mmRateTypeAndAmountAndRateStatus, com.tools20022.repository.choice.InterestRateUsedForPaymentFormat8Choice.mmRateTypeAndAmountAndRateStatus,
-						com.tools20022.repository.choice.InterestRateUsedForPaymentFormat7Choice.mmRateTypeAndAmountAndRateStatus, com.tools20022.repository.choice.InterestRateUsedForPaymentFormat9Choice.mmRateTypeAndAmountAndRateStatus,
-						com.tools20022.repository.choice.InterestRateUsedForPaymentFormat10Choice.mmRateTypeAndAmountAndRateStatus);
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Interest.mmAccruedInterestAmount, com.tools20022.repository.entity.Interest.mmInterestCalculation, com.tools20022.repository.entity.Interest.mmAmount,
-						com.tools20022.repository.entity.Interest.mmRate, com.tools20022.repository.entity.Interest.mmRelatedCashProceedsDefinition, com.tools20022.repository.entity.Interest.mmSecuritiesFinancing,
-						com.tools20022.repository.entity.Interest.mmInterestTax, com.tools20022.repository.entity.Interest.mmCreditDebitIndicator, com.tools20022.repository.entity.Interest.mmCashEntry,
-						com.tools20022.repository.entity.Interest.mmPaymentDate, com.tools20022.repository.entity.Interest.mmRelatedInterestManagement, com.tools20022.repository.entity.Interest.mmRelatedUndertakingAmount,
-						com.tools20022.repository.entity.Interest.mmRelatedDebitCreditFacility, com.tools20022.repository.entity.Interest.mmSecuritiesSettlement, com.tools20022.repository.entity.Interest.mmInterestName,
-						com.tools20022.repository.entity.Interest.mmRelatedAssetHolding, com.tools20022.repository.entity.Interest.mmDeposit, com.tools20022.repository.entity.Interest.mmAccountBalance,
-						com.tools20022.repository.entity.Interest.mmRelatedAccountContract, com.tools20022.repository.entity.Interest.mmRelatedNetAssetValueCalculation, com.tools20022.repository.entity.Interest.mmTypeOfInterest,
-						com.tools20022.repository.entity.Interest.mmRelatedPaymentCard);
+				derivationElement_lazy = () -> Arrays.asList(InterestRateUsedForPaymentFormat2Choice.mmRateTypeAndAmountAndRateStatus, InterestRateUsedForPaymentFormat3Choice.mmRateTypeAndAmountAndRateStatus,
+						InterestRateUsedForPaymentFormat1Choice.mmRateTypeAndAmountAndRateStatus, InterestRateUsedForPaymentFormat4Choice.mmRateTypeAndAmountAndRateStatus,
+						InterestRateUsedForPaymentFormat5Choice.mmRateTypeAndAmountAndRateStatus, InterestRateUsedForPaymentFormat6Choice.mmRateTypeAndAmountAndRateStatus,
+						InterestRateUsedForPaymentFormat8Choice.mmRateTypeAndAmountAndRateStatus, InterestRateUsedForPaymentFormat7Choice.mmRateTypeAndAmountAndRateStatus,
+						InterestRateUsedForPaymentFormat9Choice.mmRateTypeAndAmountAndRateStatus, InterestRateUsedForPaymentFormat10Choice.mmRateTypeAndAmountAndRateStatus);
+				element_lazy = () -> Arrays.asList(Interest.mmAccruedInterestAmount, Interest.mmInterestCalculation, Interest.mmAmount, Interest.mmRate, Interest.mmRelatedCashProceedsDefinition, Interest.mmSecuritiesFinancing,
+						Interest.mmInterestTax, Interest.mmCreditDebitIndicator, Interest.mmCashEntry, Interest.mmPaymentDate, Interest.mmRelatedInterestManagement, Interest.mmRelatedUndertakingAmount,
+						Interest.mmRelatedDebitCreditFacility, Interest.mmSecuritiesSettlement, Interest.mmInterestName, Interest.mmRelatedAssetHolding, Interest.mmDeposit, Interest.mmAccountBalance, Interest.mmRelatedAccountContract,
+						Interest.mmRelatedNetAssetValueCalculation, Interest.mmTypeOfInterest, Interest.mmRelatedPaymentCard);
 				derivationComponent_lazy = () -> Arrays.asList(RateTypeAndAmountAndStatus1.mmObject(), RateTypeAndAmountAndStatus3.mmObject(), InterestRateUsedForPaymentFormat2Choice.mmObject(), RateTypeAndAmountAndStatus4.mmObject(),
 						RateTypeAndAmountAndStatus5.mmObject(), RateTypeAndAmountAndStatus6.mmObject(), RateTypeAndAmountAndStatus2.mmObject(), RateTypeAndAmountAndStatus7.mmObject(), InterestRateUsedForPaymentFormat3Choice.mmObject(),
 						RateTypeAndAmountAndStatus8.mmObject(), RateTypeAndAmountAndStatus9.mmObject(), RateTypeAndAmountAndStatus10.mmObject(), RateTypeAndAmountAndStatus11.mmObject(), RateTypeAndAmountAndStatus12.mmObject(),

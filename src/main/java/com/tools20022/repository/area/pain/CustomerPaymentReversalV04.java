@@ -20,6 +20,7 @@ package com.tools20022.repository.area.pain;
 import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.PaymentsInitiationArchive;
 import com.tools20022.repository.msg.GroupHeader56;
 import com.tools20022.repository.msg.OriginalGroupHeader3;
@@ -48,6 +49,9 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code pain.007.001.04}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.PaymentsInitiationArchive
@@ -80,9 +84,6 @@ import java.util.List;
  * CustomerPaymentReversalV04.mmSupplementaryData}</li>
  * </ul>
  * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code pain.007.001.04}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -147,10 +148,10 @@ public class CustomerPaymentReversalV04 {
 	public static final MMMessageBuildingBlock mmGroupHeader = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "GrpHdr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GroupHeader";
 			definition = "Set of characteristics shared by all individual transactions included in the message.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.pain.CustomerPaymentReversalV05.mmGroupHeader);
+			nextVersions_lazy = () -> Arrays.asList(CustomerPaymentReversalV05.mmGroupHeader);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GroupHeader56.mmObject();
@@ -194,10 +195,10 @@ public class CustomerPaymentReversalV04 {
 	public static final MMMessageBuildingBlock mmOriginalGroupInformation = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "OrgnlGrpInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalGroupInformation";
 			definition = "Information concerning the original group of transactions, to which the message refers.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.pain.CustomerPaymentReversalV05.mmOriginalGroupInformation);
+			nextVersions_lazy = () -> Arrays.asList(CustomerPaymentReversalV05.mmOriginalGroupInformation);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> OriginalGroupHeader3.mmObject();
@@ -241,10 +242,10 @@ public class CustomerPaymentReversalV04 {
 	public static final MMMessageBuildingBlock mmOriginalPaymentInformationAndReversal = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "OrgnlPmtInfAndRvsl";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalPaymentInformationAndReversal";
 			definition = "Information concerning the original payment information, to which the reversal message refers.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.pain.CustomerPaymentReversalV05.mmOriginalPaymentInformationAndReversal);
+			nextVersions_lazy = () -> Arrays.asList(CustomerPaymentReversalV05.mmOriginalPaymentInformationAndReversal);
 			minOccurs = 0;
 			complexType_lazy = () -> OriginalPaymentInstruction7.mmObject();
 		}
@@ -287,10 +288,10 @@ public class CustomerPaymentReversalV04 {
 	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SplmtryData";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryData";
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.pain.CustomerPaymentReversalV05.mmSupplementaryData);
+			nextVersions_lazy = () -> Arrays.asList(CustomerPaymentReversalV05.mmSupplementaryData);
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
@@ -299,7 +300,7 @@ public class CustomerPaymentReversalV04 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CustomerPaymentReversalV04";
 				definition = "Scope\r\nThe CustomerPaymentReversal message is sent by the initiating party to the next party in the payment chain. It is used to reverse a payment previously executed.\r\nUsage\r\nThe CustomerPaymentReversal message is exchanged between a non-financial institution customer and an agent to reverse a CustomerDirectDebitInitiation message that has been settled. The result will be a credit on the debtor account.\r\nThe CustomerPaymentReversal message refers to the original CustomerDirectDebitInitiation message by means of references only or by means of references and a set of elements from the original instruction.\r\nThe CustomerPaymentReversal message can be used in domestic and cross-border scenarios.";
 				nextVersions_lazy = () -> Arrays.asList(CustomerPaymentReversalV05.mmObject());
@@ -308,8 +309,8 @@ public class CustomerPaymentReversalV04 {
 				rootElement = "Document";
 				xmlTag = "CstmrPmtRvsl";
 				businessArea_lazy = () -> PaymentsInitiationArchive.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.pain.CustomerPaymentReversalV04.mmGroupHeader, com.tools20022.repository.area.pain.CustomerPaymentReversalV04.mmOriginalGroupInformation,
-						com.tools20022.repository.area.pain.CustomerPaymentReversalV04.mmOriginalPaymentInformationAndReversal, com.tools20022.repository.area.pain.CustomerPaymentReversalV04.mmSupplementaryData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(CustomerPaymentReversalV04.mmGroupHeader, CustomerPaymentReversalV04.mmOriginalGroupInformation, CustomerPaymentReversalV04.mmOriginalPaymentInformationAndReversal,
+						CustomerPaymentReversalV04.mmSupplementaryData);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "pain";

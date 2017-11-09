@@ -20,12 +20,17 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.TimeUnit2Choice;
 import com.tools20022.repository.choice.UnitOfMeasure2Choice;
 import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
 import com.tools20022.repository.datatype.BaseOneRate;
 import com.tools20022.repository.datatype.ISODateTime;
+import com.tools20022.repository.entity.Derivative;
 import com.tools20022.repository.entity.Future;
+import com.tools20022.repository.entity.FutureRule;
+import com.tools20022.repository.entity.SecuritiesConversion;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -115,11 +120,11 @@ public class Future2 {
 	 */
 	public static final MMMessageAttribute mmContractSize = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesConversion.mmContractSize;
+			businessElementTrace_lazy = () -> SecuritiesConversion.mmContractSize;
 			componentContext_lazy = () -> Future2.mmObject();
 			isDerived = false;
 			xmlTag = "CtrctSz";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ContractSize";
 			definition = "Ratio or multiplying factor used to convert one contract into a quantity.";
 			maxOccurs = 1;
@@ -163,11 +168,11 @@ public class Future2 {
 	 */
 	public static final MMMessageAttribute mmExercisePrice = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Derivative.mmExercisePrice;
+			businessElementTrace_lazy = () -> Derivative.mmExercisePrice;
 			componentContext_lazy = () -> Future2.mmObject();
 			isDerived = false;
 			xmlTag = "ExrcPric";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExercisePrice";
 			definition = "Predetermined price at which the holder of a Future will have  to buy or sell the underlying instrument.";
 			maxOccurs = 1;
@@ -209,11 +214,11 @@ public class Future2 {
 	 */
 	public static final MMMessageAttribute mmFutureDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Future.mmFutureDate;
+			businessElementTrace_lazy = () -> Future.mmFutureDate;
 			componentContext_lazy = () -> Future2.mmObject();
 			isDerived = false;
 			xmlTag = "FutrDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FutureDate";
 			definition = "Date on which future contracts settle.";
 			maxOccurs = 1;
@@ -259,11 +264,11 @@ public class Future2 {
 	 */
 	public static final MMMessageAttribute mmMinimumSize = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Future.mmMinimumSize;
+			businessElementTrace_lazy = () -> Future.mmMinimumSize;
 			componentContext_lazy = () -> Future2.mmObject();
 			isDerived = false;
 			xmlTag = "MinSz";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MinimumSize";
 			definition = "Specifies the minimum ratio or multiply factor used to convert from contracts to shares.";
 			maxOccurs = 1;
@@ -310,11 +315,11 @@ public class Future2 {
 	 */
 	public static final MMMessageAttribute mmUnitOfMeasure = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Future.mmUnitOfMeasure;
+			businessElementTrace_lazy = () -> Future.mmUnitOfMeasure;
 			componentContext_lazy = () -> Future2.mmObject();
 			isDerived = false;
 			xmlTag = "UnitOfMeasr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnitOfMeasure";
 			definition = "Used to indicate the measurement unit of the underlying commodity on which the contract is based (for example, 2500 lbs of lean cattle, 1000 barrels of crude oil, 1000 bushels of corn, etc.)";
 			maxOccurs = 1;
@@ -360,11 +365,11 @@ public class Future2 {
 	 */
 	public static final MMMessageAttribute mmTimeUnit = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.FutureRule.mmTimeType;
+			businessElementTrace_lazy = () -> FutureRule.mmTimeType;
 			componentContext_lazy = () -> Future2.mmObject();
 			isDerived = false;
 			xmlTag = "TmUnit";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TimeUnit";
 			definition = "Used to indicate a time unit for the contract (for example days, weeks, months, etc.).";
 			maxOccurs = 1;
@@ -406,11 +411,11 @@ public class Future2 {
 	 */
 	public static final MMMessageAssociationEnd mmAdditionalUnderlyingAttributes = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Derivative.mmUnderlyingAsset;
+			businessElementTrace_lazy = () -> Derivative.mmUnderlyingAsset;
 			componentContext_lazy = () -> Future2.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlUndrlygAttrbts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalUnderlyingAttributes";
 			definition = "Provides more information about the underlying instrument.";
 			minOccurs = 0;
@@ -422,12 +427,10 @@ public class Future2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Future2.mmContractSize, com.tools20022.repository.msg.Future2.mmExercisePrice, com.tools20022.repository.msg.Future2.mmFutureDate,
-						com.tools20022.repository.msg.Future2.mmMinimumSize, com.tools20022.repository.msg.Future2.mmUnitOfMeasure, com.tools20022.repository.msg.Future2.mmTimeUnit,
-						com.tools20022.repository.msg.Future2.mmAdditionalUnderlyingAttributes);
+				messageElement_lazy = () -> Arrays.asList(Future2.mmContractSize, Future2.mmExercisePrice, Future2.mmFutureDate, Future2.mmMinimumSize, Future2.mmUnitOfMeasure, Future2.mmTimeUnit, Future2.mmAdditionalUnderlyingAttributes);
 				trace_lazy = () -> Future.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Future2";
 				definition = "Parameters for contracts which obligate the buyer to receive and the seller to deliver in the future the assets specified at an agreed price.";
 			}

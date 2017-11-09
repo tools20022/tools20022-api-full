@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ConsentTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -77,7 +79,7 @@ public class ConsentType1Code extends ConsentTypeCode {
 	 */
 	public static final MMCode mmChangeInTerms = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChangeInTerms";
 			owner_lazy = () -> ConsentType1Code.mmObject();
 		}
@@ -100,7 +102,7 @@ public class ConsentType1Code extends ConsentTypeCode {
 	 */
 	public static final MMCode mmDueAndPayable = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DueAndPayable";
 			owner_lazy = () -> ConsentType1Code.mmObject();
 		}
@@ -109,11 +111,11 @@ public class ConsentType1Code extends ConsentTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ConsentType1Code";
 				definition = "Specifies the type of consent announced.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ConsentType1Code.mmChangeInTerms, com.tools20022.repository.codeset.ConsentType1Code.mmDueAndPayable);
+				code_lazy = () -> Arrays.asList(ConsentType1Code.mmChangeInTerms, ConsentType1Code.mmDueAndPayable);
 				trace_lazy = () -> ConsentTypeCode.mmObject();
 			}
 		});

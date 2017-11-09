@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,12 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.PutType1Code PutType1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>{@linkplain com.tools20022.repository.codeset.PutTypeCode#mmMandatory
@@ -35,12 +43,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * PutTypeCode.mmOptional}</li>
  * <li>{@linkplain com.tools20022.repository.codeset.PutTypeCode#mmBoth
  * PutTypeCode.mmBoth}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.PutType1Code PutType1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -89,7 +91,7 @@ public class PutTypeCode {
 	 */
 	public static final MMCode mmMandatory = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Mandatory";
 			definition = "Type of execution of the put feature is mandatory.";
 			owner_lazy = () -> PutTypeCode.mmObject();
@@ -118,7 +120,7 @@ public class PutTypeCode {
 	 */
 	public static final MMCode mmOptional = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Optional";
 			definition = "Type of execution of the put feature is optional.";
 			owner_lazy = () -> PutTypeCode.mmObject();
@@ -148,7 +150,7 @@ public class PutTypeCode {
 	 */
 	public static final MMCode mmBoth = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Both";
 			definition = "Type of execution of the put feature could be optional or mandatory.";
 			owner_lazy = () -> PutTypeCode.mmObject();
@@ -159,12 +161,12 @@ public class PutTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("MAND");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PutTypeCode";
 				definition = "Defines the type of execution of the put feature.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PutTypeCode.mmMandatory, com.tools20022.repository.codeset.PutTypeCode.mmOptional, com.tools20022.repository.codeset.PutTypeCode.mmBoth);
+				code_lazy = () -> Arrays.asList(PutTypeCode.mmMandatory, PutTypeCode.mmOptional, PutTypeCode.mmBoth);
 				derivation_lazy = () -> Arrays.asList(PutType1Code.mmObject());
 			}
 		});

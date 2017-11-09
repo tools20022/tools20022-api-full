@@ -20,8 +20,10 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Exact3UpperCaseAlphaNumericText;
 import com.tools20022.repository.datatype.Max30Text;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification19;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -115,10 +117,10 @@ public class IdentificationFormat1Choice {
 			componentContext_lazy = () -> IdentificationFormat1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "ShrtId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ShortIdentification";
 			definition = "Format expressed as a short identification.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.IdentificationFormat3Choice.mmShortIdentification);
+			nextVersions_lazy = () -> Arrays.asList(IdentificationFormat3Choice.mmShortIdentification);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Exact3UpperCaseAlphaNumericText.mmObject();
@@ -165,10 +167,10 @@ public class IdentificationFormat1Choice {
 			componentContext_lazy = () -> IdentificationFormat1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "LngId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LongIdentification";
 			definition = "Format expressed as a long identification.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.IdentificationFormat3Choice.mmLongIdentification);
+			nextVersions_lazy = () -> Arrays.asList(IdentificationFormat3Choice.mmLongIdentification);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max30Text.mmObject();
@@ -215,10 +217,10 @@ public class IdentificationFormat1Choice {
 			componentContext_lazy = () -> IdentificationFormat1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "PrtryId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProprietaryIdentification";
 			definition = "Format expressed as a proprietary identification.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.IdentificationFormat3Choice.mmProprietaryIdentification);
+			nextVersions_lazy = () -> Arrays.asList(IdentificationFormat3Choice.mmProprietaryIdentification);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -229,10 +231,9 @@ public class IdentificationFormat1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.IdentificationFormat1Choice.mmShortIdentification, com.tools20022.repository.choice.IdentificationFormat1Choice.mmLongIdentification,
-						com.tools20022.repository.choice.IdentificationFormat1Choice.mmProprietaryIdentification);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(IdentificationFormat1Choice.mmShortIdentification, IdentificationFormat1Choice.mmLongIdentification, IdentificationFormat1Choice.mmProprietaryIdentification);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "IdentificationFormat1Choice";
 				definition = "Choice between either a short, long or a proprietary identification format.";
 				nextVersions_lazy = () -> Arrays.asList(IdentificationFormat3Choice.mmObject());

@@ -17,12 +17,11 @@
 
 package com.tools20022.repository.entity;
 
-import com.tools20022.metamodel.MMBusinessAssociationEnd;
-import com.tools20022.metamodel.MMBusinessAttribute;
-import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.*;
 import com.tools20022.repository.choice.*;
 import com.tools20022.repository.codeset.CollateralProposalResponseCode;
 import com.tools20022.repository.codeset.ProposalTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -37,50 +36,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CollateralProposal#mmProposedCollateralMovement
- * CollateralProposal.mmProposedCollateralMovement}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CollateralProposal#mmResponseType
- * CollateralProposal.mmResponseType}</li>
- * <li>{@linkplain com.tools20022.repository.entity.CollateralProposal#mmType
- * CollateralProposal.mmType}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CollateralProposal#mmRelatedManagementProcess
- * CollateralProposal.mmRelatedManagementProcess}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CollateralMovement#mmRelatedCollateralProposal
- * CollateralMovement.mmRelatedCollateralProposal}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CollateralManagement#mmCollateralProposal
- * CollateralManagement.mmCollateralProposal}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
- * derivationElement} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Proposal1#mmProposalDetails
- * Proposal1.mmProposalDetails}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Proposal2#mmProposalDetails
- * Proposal2.mmProposalDetails}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Proposal3#mmCollateralProposal
- * Proposal3.mmCollateralProposal}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Proposal4#mmCollateralProposal
- * Proposal4.mmCollateralProposal}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Proposal5#mmCollateralProposal
- * Proposal5.mmCollateralProposal}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -167,6 +122,50 @@ import java.util.List;
  * CollateralProposal6}</li>
  * <li>{@linkplain com.tools20022.repository.msg.CollateralMovement11
  * CollateralMovement11}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CollateralMovement#mmRelatedCollateralProposal
+ * CollateralMovement.mmRelatedCollateralProposal}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CollateralManagement#mmCollateralProposal
+ * CollateralManagement.mmCollateralProposal}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
+ * derivationElement} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.Proposal1#mmProposalDetails
+ * Proposal1.mmProposalDetails}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Proposal2#mmProposalDetails
+ * Proposal2.mmProposalDetails}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Proposal3#mmCollateralProposal
+ * Proposal3.mmCollateralProposal}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Proposal4#mmCollateralProposal
+ * Proposal4.mmCollateralProposal}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Proposal5#mmCollateralProposal
+ * Proposal5.mmCollateralProposal}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CollateralProposal#mmProposedCollateralMovement
+ * CollateralProposal.mmProposedCollateralMovement}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CollateralProposal#mmResponseType
+ * CollateralProposal.mmResponseType}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.CollateralProposal#mmType
+ * CollateralProposal.mmType}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CollateralProposal#mmRelatedManagementProcess
+ * CollateralProposal.mmRelatedManagementProcess}</li>
  * </ul>
  * </li>
  * <li>
@@ -336,29 +335,22 @@ public class CollateralProposal {
 	 */
 	public static final MMBusinessAssociationEnd mmProposedCollateralMovement = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CollateralProposalResponse1Choice.mmCollateralProposalDetails, com.tools20022.repository.msg.CollateralMovement2.mmDeliver,
-					com.tools20022.repository.msg.CollateralMovement2.mmReturn, com.tools20022.repository.choice.CollateralMovement1Choice.mmCollateralMovementDetails, com.tools20022.repository.choice.CollateralMovement1Choice.mmReturn,
-					com.tools20022.repository.msg.CollateralMovement1.mmMovementDetails, com.tools20022.repository.choice.CollateralProposal1Choice.mmCollateralProposalDetails, com.tools20022.repository.msg.CollateralMovement3.mmDeliver,
-					com.tools20022.repository.msg.CollateralMovement3.mmReturn, com.tools20022.repository.choice.CollateralMovement2Choice.mmCollateralMovementDetails, com.tools20022.repository.choice.CollateralMovement2Choice.mmReturn,
-					com.tools20022.repository.msg.CollateralMovement4.mmMovementDetails, com.tools20022.repository.choice.CollateralProposal2Choice.mmCollateralProposalDetails,
-					com.tools20022.repository.choice.CollateralProposal3Choice.mmCollateralProposalDetails, com.tools20022.repository.msg.CollateralMovement6.mmDeliver, com.tools20022.repository.msg.CollateralMovement6.mmReturn,
-					com.tools20022.repository.msg.CollateralMovement5.mmMovementDirection, com.tools20022.repository.choice.CollateralMovement3Choice.mmCollateralMovementDirection,
-					com.tools20022.repository.choice.CollateralMovement3Choice.mmReturn, com.tools20022.repository.choice.CollateralProposalResponse2Choice.mmCollateralProposal,
-					com.tools20022.repository.msg.CollateralProposalResponseType2.mmResponse, com.tools20022.repository.choice.CollateralProposal4Choice.mmCollateralProposalDetails,
-					com.tools20022.repository.msg.CollateralMovement7.mmMovementDirection, com.tools20022.repository.choice.CollateralMovement4Choice.mmCollateralMovementDirection,
-					com.tools20022.repository.choice.CollateralMovement4Choice.mmReturn, com.tools20022.repository.msg.CollateralMovement8.mmDeliver, com.tools20022.repository.msg.CollateralMovement8.mmReturn,
-					com.tools20022.repository.choice.CollateralProposalResponse3Choice.mmCollateralProposal, com.tools20022.repository.msg.CollateralProposalResponseType3.mmResponse,
-					com.tools20022.repository.choice.CollateralProposal5Choice.mmCollateralProposalDetails, com.tools20022.repository.msg.CollateralMovement10.mmMovementDirection,
-					com.tools20022.repository.choice.CollateralMovement5Choice.mmCollateralMovementDirection, com.tools20022.repository.choice.CollateralMovement5Choice.mmReturn,
-					com.tools20022.repository.msg.CollateralMovement11.mmDeliver, com.tools20022.repository.msg.CollateralMovement11.mmReturn);
+			derivation_lazy = () -> Arrays.asList(CollateralProposalResponse1Choice.mmCollateralProposalDetails, CollateralMovement2.mmDeliver, CollateralMovement2.mmReturn, CollateralMovement1Choice.mmCollateralMovementDetails,
+					CollateralMovement1Choice.mmReturn, CollateralMovement1.mmMovementDetails, CollateralProposal1Choice.mmCollateralProposalDetails, CollateralMovement3.mmDeliver, CollateralMovement3.mmReturn,
+					CollateralMovement2Choice.mmCollateralMovementDetails, CollateralMovement2Choice.mmReturn, CollateralMovement4.mmMovementDetails, CollateralProposal2Choice.mmCollateralProposalDetails,
+					CollateralProposal3Choice.mmCollateralProposalDetails, CollateralMovement6.mmDeliver, CollateralMovement6.mmReturn, CollateralMovement5.mmMovementDirection, CollateralMovement3Choice.mmCollateralMovementDirection,
+					CollateralMovement3Choice.mmReturn, CollateralProposalResponse2Choice.mmCollateralProposal, CollateralProposalResponseType2.mmResponse, CollateralProposal4Choice.mmCollateralProposalDetails,
+					CollateralMovement7.mmMovementDirection, CollateralMovement4Choice.mmCollateralMovementDirection, CollateralMovement4Choice.mmReturn, CollateralMovement8.mmDeliver, CollateralMovement8.mmReturn,
+					CollateralProposalResponse3Choice.mmCollateralProposal, CollateralProposalResponseType3.mmResponse, CollateralProposal5Choice.mmCollateralProposalDetails, CollateralMovement10.mmMovementDirection,
+					CollateralMovement5Choice.mmCollateralMovementDirection, CollateralMovement5Choice.mmReturn, CollateralMovement11.mmDeliver, CollateralMovement11.mmReturn);
 			elementContext_lazy = () -> CollateralProposal.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProposedCollateralMovement";
 			definition = "Details the movement of collateral that is proposed to be delivered or returned by one of the collateral parties.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.CollateralMovement.mmRelatedCollateralProposal;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.CollateralMovement.mmObject();
 		}
 	};
@@ -408,11 +400,10 @@ public class CollateralProposal {
 	 */
 	public static final MMBusinessAttribute mmResponseType = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CollateralProposalResponseType1.mmType, com.tools20022.repository.msg.CollateralProposalResponseType2.mmType,
-					com.tools20022.repository.msg.CollateralProposalResponseType3.mmType);
+			derivation_lazy = () -> Arrays.asList(CollateralProposalResponseType1.mmType, CollateralProposalResponseType2.mmType, CollateralProposalResponseType3.mmType);
 			elementContext_lazy = () -> CollateralProposal.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ResponseType";
 			definition = "Indicates whether the collateral proposal is an initial or a counter proposal.";
 			maxOccurs = 1;
@@ -468,11 +459,10 @@ public class CollateralProposal {
 	 */
 	public static final MMBusinessAttribute mmType = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Proposal1.mmProposalType, com.tools20022.repository.msg.Proposal2.mmProposalType, com.tools20022.repository.msg.Proposal3.mmCollateralProposalType,
-					com.tools20022.repository.msg.Proposal4.mmCollateralProposalType, com.tools20022.repository.msg.Proposal5.mmCollateralProposalType);
+			derivation_lazy = () -> Arrays.asList(Proposal1.mmProposalType, Proposal2.mmProposalType, Proposal3.mmCollateralProposalType, Proposal4.mmCollateralProposalType, Proposal5.mmCollateralProposalType);
 			elementContext_lazy = () -> CollateralProposal.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Indicates whether this is an initial or counter proposal.";
 			maxOccurs = 1;
@@ -520,13 +510,13 @@ public class CollateralProposal {
 		{
 			elementContext_lazy = () -> CollateralProposal.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedManagementProcess";
 			definition = "Process which groups the activities related to collateral.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.CollateralManagement.mmCollateralProposal;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.CollateralManagement.mmObject();
 		}
 	};
@@ -534,15 +524,13 @@ public class CollateralProposal {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CollateralProposal";
 				definition = "Specifies collateral proposed to the counterparty.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CollateralMovement.mmRelatedCollateralProposal, com.tools20022.repository.entity.CollateralManagement.mmCollateralProposal);
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Proposal1.mmProposalDetails, com.tools20022.repository.msg.Proposal2.mmProposalDetails,
-						com.tools20022.repository.msg.Proposal3.mmCollateralProposal, com.tools20022.repository.msg.Proposal4.mmCollateralProposal, com.tools20022.repository.msg.Proposal5.mmCollateralProposal);
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CollateralProposal.mmProposedCollateralMovement, com.tools20022.repository.entity.CollateralProposal.mmResponseType,
-						com.tools20022.repository.entity.CollateralProposal.mmType, com.tools20022.repository.entity.CollateralProposal.mmRelatedManagementProcess);
+				derivationElement_lazy = () -> Arrays.asList(Proposal1.mmProposalDetails, Proposal2.mmProposalDetails, Proposal3.mmCollateralProposal, Proposal4.mmCollateralProposal, Proposal5.mmCollateralProposal);
+				element_lazy = () -> Arrays.asList(CollateralProposal.mmProposedCollateralMovement, CollateralProposal.mmResponseType, CollateralProposal.mmType, CollateralProposal.mmRelatedManagementProcess);
 				derivationComponent_lazy = () -> Arrays.asList(CollateralProposalResponse1.mmObject(), CollateralProposalResponse1Choice.mmObject(), ProposalType1Choice.mmObject(), CollateralMovement2.mmObject(),
 						CollateralMovement1Choice.mmObject(), CollateralMovement1.mmObject(), CollateralProposal2.mmObject(), CollateralProposal1Choice.mmObject(), Proposal1.mmObject(), CollateralMovement3.mmObject(),
 						CollateralMovement2Choice.mmObject(), CollateralMovement4.mmObject(), CollateralProposal3.mmObject(), CollateralProposal2Choice.mmObject(), Proposal2.mmObject(), Proposal3.mmObject(),

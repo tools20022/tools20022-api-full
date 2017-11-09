@@ -20,11 +20,15 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.AssuredType1Code;
 import com.tools20022.repository.codeset.InsuranceClauses1Code;
 import com.tools20022.repository.datatype.YesNoIndicator;
+import com.tools20022.repository.entity.Document;
 import com.tools20022.repository.entity.FinancialInstitution;
 import com.tools20022.repository.entity.InsuranceCertificate;
+import com.tools20022.repository.entity.Party;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -125,7 +129,7 @@ public class RequiredSubmission3 {
 			componentContext_lazy = () -> RequiredSubmission3.mmObject();
 			isDerived = false;
 			xmlTag = "Submitr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Submitter";
 			definition = "Specifies with party(ies) is authorised to submit the data set as part of the transaction.";
 			minOccurs = 1;
@@ -170,11 +174,11 @@ public class RequiredSubmission3 {
 	 */
 	public static final MMMessageAssociationEnd mmMatchIssuer = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> RequiredSubmission3.mmObject();
 			isDerived = false;
 			xmlTag = "MtchIssr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MatchIssuer";
 			definition = "Specifies if the issuer must be matched as part of the validation of the data set.";
 			maxOccurs = 1;
@@ -220,7 +224,7 @@ public class RequiredSubmission3 {
 			componentContext_lazy = () -> RequiredSubmission3.mmObject();
 			isDerived = false;
 			xmlTag = "MtchIsseDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MatchIssueDate";
 			definition = "Specifies if the issue date must be matched as part of the validation of the data set.";
 			maxOccurs = 1;
@@ -267,11 +271,11 @@ public class RequiredSubmission3 {
 	 */
 	public static final MMMessageAttribute mmMatchTransport = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Document.mmTransport;
+			businessElementTrace_lazy = () -> Document.mmTransport;
 			componentContext_lazy = () -> RequiredSubmission3.mmObject();
 			isDerived = false;
 			xmlTag = "MtchTrnsprt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MatchTransport";
 			definition = "Specifies if the transport information must be matched as part of the validation of the data set.";
 			maxOccurs = 1;
@@ -316,7 +320,7 @@ public class RequiredSubmission3 {
 			componentContext_lazy = () -> RequiredSubmission3.mmObject();
 			isDerived = false;
 			xmlTag = "MtchAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MatchAmount";
 			definition = "Specifies if the insured amount must be matched as part of the validation of the data set.";
 			maxOccurs = 1;
@@ -361,11 +365,11 @@ public class RequiredSubmission3 {
 	 */
 	public static final MMMessageAttribute mmClausesRequired = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InsuranceCertificate.mmInsuranceClauses;
+			businessElementTrace_lazy = () -> InsuranceCertificate.mmInsuranceClauses;
 			componentContext_lazy = () -> RequiredSubmission3.mmObject();
 			isDerived = false;
 			xmlTag = "ClausesReqrd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClausesRequired";
 			definition = "Specifies which clauses are required in the insurance data set.";
 			minOccurs = 0;
@@ -409,7 +413,7 @@ public class RequiredSubmission3 {
 			componentContext_lazy = () -> RequiredSubmission3.mmObject();
 			isDerived = false;
 			xmlTag = "MtchAssrdPty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MatchAssuredParty";
 			definition = "Specifies if the assured (insured) party must be matched as part of the validation of the data set.";
 			maxOccurs = 1;
@@ -421,12 +425,11 @@ public class RequiredSubmission3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RequiredSubmission3.mmSubmitter, com.tools20022.repository.msg.RequiredSubmission3.mmMatchIssuer,
-						com.tools20022.repository.msg.RequiredSubmission3.mmMatchIssueDate, com.tools20022.repository.msg.RequiredSubmission3.mmMatchTransport, com.tools20022.repository.msg.RequiredSubmission3.mmMatchAmount,
-						com.tools20022.repository.msg.RequiredSubmission3.mmClausesRequired, com.tools20022.repository.msg.RequiredSubmission3.mmMatchAssuredParty);
+				messageElement_lazy = () -> Arrays.asList(RequiredSubmission3.mmSubmitter, RequiredSubmission3.mmMatchIssuer, RequiredSubmission3.mmMatchIssueDate, RequiredSubmission3.mmMatchTransport, RequiredSubmission3.mmMatchAmount,
+						RequiredSubmission3.mmClausesRequired, RequiredSubmission3.mmMatchAssuredParty);
 				trace_lazy = () -> InsuranceCertificate.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RequiredSubmission3";
 				definition = "Specifies the details relative to the submission of the insurance data set.";
 			}

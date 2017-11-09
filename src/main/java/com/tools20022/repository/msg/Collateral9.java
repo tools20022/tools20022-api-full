@@ -19,7 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.colr.CollateralAndExposureReportV02;
 import com.tools20022.repository.entity.Collateral;
+import com.tools20022.repository.entity.CollateralManagement;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -133,15 +137,15 @@ public class Collateral9 {
 	 */
 	public static final MMMessageAssociationEnd mmAccountIdentification = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Collateral.mmCollateralAccount;
+			businessElementTrace_lazy = () -> Collateral.mmCollateralAccount;
 			componentContext_lazy = () -> Collateral9.mmObject();
 			isDerived = false;
 			xmlTag = "AcctId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountIdentification";
 			definition = "Provides information about the collateral account, that is the identification, the type and optionally the name.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Collateral13.mmAccountIdentification);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Collateral5.mmAccountIdentification;
+			nextVersions_lazy = () -> Arrays.asList(Collateral13.mmAccountIdentification);
+			previousVersion_lazy = () -> Collateral5.mmAccountIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -191,11 +195,11 @@ public class Collateral9 {
 			componentContext_lazy = () -> Collateral9.mmObject();
 			isDerived = false;
 			xmlTag = "RptSummry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportSummary";
 			definition = "Provides the summary of the collateral valuation report.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Collateral13.mmReportSummary);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Collateral5.mmReportSummary;
+			nextVersions_lazy = () -> Arrays.asList(Collateral13.mmReportSummary);
+			previousVersion_lazy = () -> Collateral5.mmReportSummary;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -251,15 +255,15 @@ public class Collateral9 {
 	 */
 	public static final MMMessageAssociationEnd mmCollateralValuation = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CollateralManagement.mmCollateralValuation;
+			businessElementTrace_lazy = () -> CollateralManagement.mmCollateralValuation;
 			componentContext_lazy = () -> Collateral9.mmObject();
 			isDerived = false;
 			xmlTag = "CollValtn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralValuation";
 			definition = "Provides additionnal information about the collateral valuation that has been posted.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Collateral13.mmCollateralValuation);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Collateral5.mmCollateralValuationDetails;
+			nextVersions_lazy = () -> Arrays.asList(Collateral13.mmCollateralValuation);
+			previousVersion_lazy = () -> Collateral5.mmCollateralValuationDetails;
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.CollateralValuation2.mmObject();
@@ -269,12 +273,11 @@ public class Collateral9 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Collateral9.mmAccountIdentification, com.tools20022.repository.msg.Collateral9.mmReportSummary,
-						com.tools20022.repository.msg.Collateral9.mmCollateralValuation);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.colr.CollateralAndExposureReportV02.mmCollateralReport);
+				messageElement_lazy = () -> Arrays.asList(Collateral9.mmAccountIdentification, Collateral9.mmReportSummary, Collateral9.mmCollateralValuation);
+				messageBuildingBlock_lazy = () -> Arrays.asList(CollateralAndExposureReportV02.mmCollateralReport);
 				trace_lazy = () -> Collateral.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Collateral9";
 				definition = "Provides for each collateral account the report summary and the valuation of each piece of collateral.";
 				nextVersions_lazy = () -> Arrays.asList(Collateral13.mmObject());

@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.RepurchaseType8Code
+ * RepurchaseType8Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.RepurchaseType10Code
+ * RepurchaseType10Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.RepurchaseType9Code
+ * RepurchaseType9Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -53,17 +66,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.RepurchaseTypeV2Code#mmPrincipalExposureAdjustment
  * RepurchaseTypeV2Code.mmPrincipalExposureAdjustment}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.RepurchaseType8Code
- * RepurchaseType8Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.RepurchaseType10Code
- * RepurchaseType10Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.RepurchaseType9Code
- * RepurchaseType9Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -113,7 +115,7 @@ public class RepurchaseTypeV2Code {
 	 */
 	public static final MMCode mmSwap = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Swap";
 			definition = "Relates to a swap/substitution.";
 			owner_lazy = () -> RepurchaseTypeV2Code.mmObject();
@@ -146,7 +148,7 @@ public class RepurchaseTypeV2Code {
 	 */
 	public static final MMCode mmRepurchaseCall = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RepurchaseCall";
 			definition = "Relates to the early closing/maturity date for a term repo or a termination date of an open repo with the underlying collateral.";
 			owner_lazy = () -> RepurchaseTypeV2Code.mmObject();
@@ -181,7 +183,7 @@ public class RepurchaseTypeV2Code {
 	 */
 	public static final MMCode mmPairoff = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Pairoff";
 			definition = "Relates to a transaction that is paired off and netted against one or more previous transactions. A paired off transaction is a buyback to offset and effectively liquidate a prior sale of securities or a sellback to offset and effectively liquidate a prior buy of securities.";
 			owner_lazy = () -> RepurchaseTypeV2Code.mmObject();
@@ -211,7 +213,7 @@ public class RepurchaseTypeV2Code {
 	 */
 	public static final MMCode mmRepoRate = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RepoRate";
 			definition = "Is part of a pair-off.";
 			owner_lazy = () -> RepurchaseTypeV2Code.mmObject();
@@ -244,7 +246,7 @@ public class RepurchaseTypeV2Code {
 	 */
 	public static final MMCode mmRepoContractRollover = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RepoContractRollover";
 			definition = "Relates to a repo rollover of a contract extending the closing or maturity date without the underlying collateral impacted.";
 			owner_lazy = () -> RepurchaseTypeV2Code.mmObject();
@@ -277,7 +279,7 @@ public class RepurchaseTypeV2Code {
 	 */
 	public static final MMCode mmTopUp = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TopUp";
 			definition = "Relates to a repo rollover of a position extending the closing or maturity date.";
 			owner_lazy = () -> RepurchaseTypeV2Code.mmObject();
@@ -310,7 +312,7 @@ public class RepurchaseTypeV2Code {
 	 */
 	public static final MMCode mmWithdrawal = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Withdrawal";
 			definition = "Relates to a repo rollover of a position extending the closing or maturity date.";
 			owner_lazy = () -> RepurchaseTypeV2Code.mmObject();
@@ -340,7 +342,7 @@ public class RepurchaseTypeV2Code {
 	 */
 	public static final MMCode mmPrincipalExposureAdjustment = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PrincipalExposureAdjustment";
 			definition = "Relates to a principal adjustment.";
 			owner_lazy = () -> RepurchaseTypeV2Code.mmObject();
@@ -351,15 +353,13 @@ public class RepurchaseTypeV2Code {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CADJ");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RepurchaseTypeV2Code";
 				definition = "Relates to a principal adjustment.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RepurchaseTypeV2Code.mmSwap, com.tools20022.repository.codeset.RepurchaseTypeV2Code.mmRepurchaseCall,
-						com.tools20022.repository.codeset.RepurchaseTypeV2Code.mmPairoff, com.tools20022.repository.codeset.RepurchaseTypeV2Code.mmRepoRate, com.tools20022.repository.codeset.RepurchaseTypeV2Code.mmRepoContractRollover,
-						com.tools20022.repository.codeset.RepurchaseTypeV2Code.mmTopUp, com.tools20022.repository.codeset.RepurchaseTypeV2Code.mmWithdrawal,
-						com.tools20022.repository.codeset.RepurchaseTypeV2Code.mmPrincipalExposureAdjustment);
+				code_lazy = () -> Arrays.asList(RepurchaseTypeV2Code.mmSwap, RepurchaseTypeV2Code.mmRepurchaseCall, RepurchaseTypeV2Code.mmPairoff, RepurchaseTypeV2Code.mmRepoRate, RepurchaseTypeV2Code.mmRepoContractRollover,
+						RepurchaseTypeV2Code.mmTopUp, RepurchaseTypeV2Code.mmWithdrawal, RepurchaseTypeV2Code.mmPrincipalExposureAdjustment);
 				derivation_lazy = () -> Arrays.asList(RepurchaseType8Code.mmObject(), RepurchaseType10Code.mmObject(), RepurchaseType9Code.mmObject());
 			}
 		});

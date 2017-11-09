@@ -19,8 +19,13 @@ package com.tools20022.repository.entity;
 
 import com.tools20022.metamodel.MMBusinessAttribute;
 import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.OriginatorRoleCode;
 import com.tools20022.repository.entity.InformationPartyRole;
+import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.Quote1;
+import com.tools20022.repository.msg.Quote3;
+import com.tools20022.repository.msg.Quote4;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -33,14 +38,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.QuoteOriginator#mmQuoteOriginatorType
- * QuoteOriginator.mmQuoteOriginatorType}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
  * derivationElement} =
@@ -53,6 +50,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * superType} =
  * {@linkplain com.tools20022.repository.entity.InformationPartyRole
  * InformationPartyRole}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.QuoteOriginator#mmQuoteOriginatorType
+ * QuoteOriginator.mmQuoteOriginatorType}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -116,10 +121,10 @@ public class QuoteOriginator extends InformationPartyRole {
 	 */
 	public static final MMBusinessAttribute mmQuoteOriginatorType = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Quote3.mmQuoteOriginatorRole, com.tools20022.repository.msg.Quote1.mmQuoteOriginatorRole, com.tools20022.repository.msg.Quote4.mmQuoteOriginatorRole);
+			derivation_lazy = () -> Arrays.asList(Quote3.mmQuoteOriginatorRole, Quote1.mmQuoteOriginatorRole, Quote4.mmQuoteOriginatorRole);
 			elementContext_lazy = () -> QuoteOriginator.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "QuoteOriginatorType";
 			definition = "Identifies in what capacity(role) the originator of the quote is acting.";
 			maxOccurs = 1;
@@ -131,13 +136,13 @@ public class QuoteOriginator extends InformationPartyRole {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "QuoteOriginator";
 				definition = "Originator of the quote.";
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Quote1.mmQuoteOriginator);
+				derivationElement_lazy = () -> Arrays.asList(Quote1.mmQuoteOriginator);
 				superType_lazy = () -> InformationPartyRole.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.QuoteOriginator.mmQuoteOriginatorType);
+				element_lazy = () -> Arrays.asList(QuoteOriginator.mmQuoteOriginatorType);
 			}
 		});
 		return mmObject_lazy.get();

@@ -20,8 +20,10 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max3000Binary;
 import com.tools20022.repository.datatype.Number;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -120,11 +122,11 @@ public class KeyTransport3 {
 			componentContext_lazy = () -> KeyTransport3.mmObject();
 			isDerived = false;
 			xmlTag = "Vrsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Version";
 			definition = "Version of the cryptographic key.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.KeyTransport4.mmVersion);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.KeyTransport2.mmVersion;
+			nextVersions_lazy = () -> Arrays.asList(KeyTransport4.mmVersion);
+			previousVersion_lazy = () -> KeyTransport2.mmVersion;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
@@ -175,11 +177,11 @@ public class KeyTransport3 {
 			componentContext_lazy = () -> KeyTransport3.mmObject();
 			isDerived = false;
 			xmlTag = "RcptId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RecipientIdentification";
 			definition = "Transport key or key encryption key (KEK) for the recipient.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.KeyTransport4.mmRecipientIdentification);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.KeyTransport2.mmRecipientIdentification;
+			nextVersions_lazy = () -> Arrays.asList(KeyTransport4.mmRecipientIdentification);
+			previousVersion_lazy = () -> KeyTransport2.mmRecipientIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -231,11 +233,11 @@ public class KeyTransport3 {
 			componentContext_lazy = () -> KeyTransport3.mmObject();
 			isDerived = false;
 			xmlTag = "KeyNcrptnAlgo";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "KeyEncryptionAlgorithm";
 			definition = "Algorithm to encrypt the key encryption key (KEK).";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.KeyTransport4.mmKeyEncryptionAlgorithm);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.KeyTransport2.mmKeyEncryptionAlgorithm;
+			nextVersions_lazy = () -> Arrays.asList(KeyTransport4.mmKeyEncryptionAlgorithm);
+			previousVersion_lazy = () -> KeyTransport2.mmKeyEncryptionAlgorithm;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -288,11 +290,11 @@ public class KeyTransport3 {
 			componentContext_lazy = () -> KeyTransport3.mmObject();
 			isDerived = false;
 			xmlTag = "NcrptdKey";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EncryptedKey";
 			definition = "Encrypted key encryption key (KEK).";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.KeyTransport4.mmEncryptedKey);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.KeyTransport2.mmEncryptedKey;
+			nextVersions_lazy = () -> Arrays.asList(KeyTransport4.mmEncryptedKey);
+			previousVersion_lazy = () -> KeyTransport2.mmEncryptedKey;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max3000Binary.mmObject();
@@ -302,10 +304,9 @@ public class KeyTransport3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.KeyTransport3.mmVersion, com.tools20022.repository.msg.KeyTransport3.mmRecipientIdentification,
-						com.tools20022.repository.msg.KeyTransport3.mmKeyEncryptionAlgorithm, com.tools20022.repository.msg.KeyTransport3.mmEncryptedKey);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(KeyTransport3.mmVersion, KeyTransport3.mmRecipientIdentification, KeyTransport3.mmKeyEncryptionAlgorithm, KeyTransport3.mmEncryptedKey);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "KeyTransport3";
 				definition = "Key encryption key (KEK), encrypted with a previously distributed asymmetric public key.";
 				nextVersions_lazy = () -> Arrays.asList(KeyTransport4.mmObject());

@@ -20,6 +20,7 @@ package com.tools20022.repository.area.sese;
 import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.SecuritiesSettlementPreviousVersion;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.msg.*;
@@ -51,6 +52,9 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code sese.007.001.06}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.SecuritiesSettlementPreviousVersion
@@ -107,9 +111,6 @@ import java.util.List;
  * TransferInConfirmationV06.mmExtension}</li>
  * </ul>
  * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code sese.007.001.06}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -180,11 +181,11 @@ public class TransferInConfirmationV06 {
 	public static final MMMessageBuildingBlock mmMessageIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "MsgId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageIdentification";
 			definition = "Reference that uniquely identifies a message from a business application standpoint.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.TransferInConfirmationV07.mmMessageIdentification);
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.TransferInConfirmationV05.mmMessageIdentification;
+			nextVersions_lazy = () -> Arrays.asList(TransferInConfirmationV07.mmMessageIdentification);
+			previousVersion_lazy = () -> TransferInConfirmationV05.mmMessageIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
@@ -230,11 +231,11 @@ public class TransferInConfirmationV06 {
 	public static final MMMessageBuildingBlock mmPoolReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "PoolRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PoolReference";
 			definition = "Collective reference identifying a set of messages.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.TransferInConfirmationV07.mmPoolReference);
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.TransferInConfirmationV05.mmPoolReference;
+			nextVersions_lazy = () -> Arrays.asList(TransferInConfirmationV07.mmPoolReference);
+			previousVersion_lazy = () -> TransferInConfirmationV05.mmPoolReference;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference2.mmObject();
@@ -281,11 +282,11 @@ public class TransferInConfirmationV06 {
 	public static final MMMessageBuildingBlock mmPreviousReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "PrvsRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousReference";
 			definition = "Reference of the linked message that was previously sent.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.TransferInConfirmationV07.mmPreviousReference);
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.TransferInConfirmationV05.mmPreviousReference;
+			nextVersions_lazy = () -> Arrays.asList(TransferInConfirmationV07.mmPreviousReference);
+			previousVersion_lazy = () -> TransferInConfirmationV05.mmPreviousReference;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference2.mmObject();
@@ -332,11 +333,11 @@ public class TransferInConfirmationV06 {
 	public static final MMMessageBuildingBlock mmRelatedReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "RltdRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedReference";
 			definition = "Reference to a linked message that was previously received.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.TransferInConfirmationV07.mmRelatedReference);
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.TransferInConfirmationV05.mmRelatedReference;
+			nextVersions_lazy = () -> Arrays.asList(TransferInConfirmationV07.mmRelatedReference);
+			previousVersion_lazy = () -> TransferInConfirmationV05.mmRelatedReference;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference2.mmObject();
@@ -385,11 +386,11 @@ public class TransferInConfirmationV06 {
 	public static final MMMessageBuildingBlock mmMasterReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "MstrRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MasterReference";
 			definition = "Unique and unambiguous identifier for a group of individual transfers as assigned by the instructing party. This identifier links the individual transfers together.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.TransferInConfirmationV07.mmMasterReference);
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.TransferInConfirmationV05.mmMasterReference;
+			nextVersions_lazy = () -> Arrays.asList(TransferInConfirmationV07.mmMasterReference);
+			previousVersion_lazy = () -> TransferInConfirmationV05.mmMasterReference;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -436,11 +437,11 @@ public class TransferInConfirmationV06 {
 	public static final MMMessageBuildingBlock mmTransferDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "TrfDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransferDetails";
 			definition = "General information related to the transfer of a financial instrument. ";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.TransferInConfirmationV07.mmTransferDetails);
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.TransferInConfirmationV05.mmTransferDetails;
+			nextVersions_lazy = () -> Arrays.asList(TransferInConfirmationV07.mmTransferDetails);
+			previousVersion_lazy = () -> TransferInConfirmationV05.mmTransferDetails;
 			minOccurs = 1;
 			complexType_lazy = () -> Transfer29.mmObject();
 		}
@@ -488,11 +489,11 @@ public class TransferInConfirmationV06 {
 	public static final MMMessageBuildingBlock mmAccountDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "AcctDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountDetails";
 			definition = "Information related to the account into which the financial instrument was received.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.TransferInConfirmationV07.mmAccountDetails);
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.TransferInConfirmationV05.mmAccountDetails;
+			nextVersions_lazy = () -> Arrays.asList(TransferInConfirmationV07.mmAccountDetails);
+			previousVersion_lazy = () -> TransferInConfirmationV05.mmAccountDetails;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> InvestmentAccount40.mmObject();
@@ -539,11 +540,11 @@ public class TransferInConfirmationV06 {
 	public static final MMMessageBuildingBlock mmSettlementDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SttlmDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementDetails";
 			definition = "Information related to the delivering side of the transfer.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.TransferInConfirmationV07.mmSettlementDetails);
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.TransferInConfirmationV05.mmSettlementDetails;
+			nextVersions_lazy = () -> Arrays.asList(TransferInConfirmationV07.mmSettlementDetails);
+			previousVersion_lazy = () -> TransferInConfirmationV05.mmSettlementDetails;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DeliverInformation14.mmObject();
@@ -590,11 +591,11 @@ public class TransferInConfirmationV06 {
 	public static final MMMessageBuildingBlock mmMarketPracticeVersion = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "MktPrctcVrsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketPracticeVersion";
 			definition = "Identifies the market practice to which the message conforms.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.TransferInConfirmationV07.mmMarketPracticeVersion);
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.TransferInConfirmationV05.mmMarketPracticeVersion;
+			nextVersions_lazy = () -> Arrays.asList(TransferInConfirmationV07.mmMarketPracticeVersion);
+			previousVersion_lazy = () -> TransferInConfirmationV05.mmMarketPracticeVersion;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> MarketPracticeVersion1.mmObject();
@@ -641,11 +642,11 @@ public class TransferInConfirmationV06 {
 	public static final MMMessageBuildingBlock mmCopyDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CpyDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CopyDetails";
 			definition = "Information provided when the message is a copy of a previous message.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.TransferInConfirmationV07.mmCopyDetails);
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.TransferInConfirmationV05.mmCopyDetails;
+			nextVersions_lazy = () -> Arrays.asList(TransferInConfirmationV07.mmCopyDetails);
+			previousVersion_lazy = () -> TransferInConfirmationV05.mmCopyDetails;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> CopyInformation2.mmObject();
@@ -693,11 +694,11 @@ public class TransferInConfirmationV06 {
 	public static final MMMessageBuildingBlock mmExtension = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Xtnsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Extension";
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.TransferInConfirmationV07.mmExtension);
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.TransferInConfirmationV05.mmExtension;
+			nextVersions_lazy = () -> Arrays.asList(TransferInConfirmationV07.mmExtension);
+			previousVersion_lazy = () -> TransferInConfirmationV05.mmExtension;
 			minOccurs = 0;
 			complexType_lazy = () -> Extension1.mmObject();
 		}
@@ -706,7 +707,7 @@ public class TransferInConfirmationV06 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "TransferInConfirmationV06";
 				definition = "Scope\r\nAn executing party, for example, a transfer agent, sends the TransferInConfirmation message to the instructing party, for example, an investment manager or its authorised representative, to confirm the receipt of a financial instrument, free of payment, on a given date, from a specified party.\r\nThis message may also be used to confirm the receipt of a financial instrument, free of payment, from another of the instructing parties own accounts or from a third party.\r\nUsage\r\nThe TransferInConfirmation message is used to confirm receipt of a financial instrument, either from another account owned by the instructing party or from a third party. The reference of the transfer confirmation is identified in TransferConfirmationReference.\r\nThe reference of the original transfer instruction is specified in TransferReference. The message identification of the TransferInInstruction message in which the transfer instruction was conveyed may also be quoted in RelatedReference.";
 				nextVersions_lazy = () -> Arrays.asList(TransferInConfirmationV07.mmObject());
@@ -715,12 +716,9 @@ public class TransferInConfirmationV06 {
 				rootElement = "Document";
 				xmlTag = "TrfInConf";
 				businessArea_lazy = () -> SecuritiesSettlementPreviousVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.TransferInConfirmationV06.mmMessageIdentification, com.tools20022.repository.area.sese.TransferInConfirmationV06.mmPoolReference,
-						com.tools20022.repository.area.sese.TransferInConfirmationV06.mmPreviousReference, com.tools20022.repository.area.sese.TransferInConfirmationV06.mmRelatedReference,
-						com.tools20022.repository.area.sese.TransferInConfirmationV06.mmMasterReference, com.tools20022.repository.area.sese.TransferInConfirmationV06.mmTransferDetails,
-						com.tools20022.repository.area.sese.TransferInConfirmationV06.mmAccountDetails, com.tools20022.repository.area.sese.TransferInConfirmationV06.mmSettlementDetails,
-						com.tools20022.repository.area.sese.TransferInConfirmationV06.mmMarketPracticeVersion, com.tools20022.repository.area.sese.TransferInConfirmationV06.mmCopyDetails,
-						com.tools20022.repository.area.sese.TransferInConfirmationV06.mmExtension);
+				messageBuildingBlock_lazy = () -> Arrays.asList(TransferInConfirmationV06.mmMessageIdentification, TransferInConfirmationV06.mmPoolReference, TransferInConfirmationV06.mmPreviousReference,
+						TransferInConfirmationV06.mmRelatedReference, TransferInConfirmationV06.mmMasterReference, TransferInConfirmationV06.mmTransferDetails, TransferInConfirmationV06.mmAccountDetails,
+						TransferInConfirmationV06.mmSettlementDetails, TransferInConfirmationV06.mmMarketPracticeVersion, TransferInConfirmationV06.mmCopyDetails, TransferInConfirmationV06.mmExtension);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "sese";

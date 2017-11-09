@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.PriceValueTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -89,7 +91,7 @@ public class PriceValueType4Code extends PriceValueTypeCode {
 	 */
 	public static final MMCode mmOpenDated = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OpenDated";
 			owner_lazy = () -> PriceValueType4Code.mmObject();
 		}
@@ -112,7 +114,7 @@ public class PriceValueType4Code extends PriceValueTypeCode {
 	 */
 	public static final MMCode mmToBeSpecified = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ToBeSpecified";
 			owner_lazy = () -> PriceValueType4Code.mmObject();
 		}
@@ -135,7 +137,7 @@ public class PriceValueType4Code extends PriceValueTypeCode {
 	 */
 	public static final MMCode mmUnspecified = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unspecified";
 			owner_lazy = () -> PriceValueType4Code.mmObject();
 		}
@@ -158,7 +160,7 @@ public class PriceValueType4Code extends PriceValueTypeCode {
 	 */
 	public static final MMCode mmUnknown = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unknown";
 			owner_lazy = () -> PriceValueType4Code.mmObject();
 		}
@@ -167,13 +169,12 @@ public class PriceValueType4Code extends PriceValueTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("OPEN");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PriceValueType4Code";
 				definition = "Specifies a type of price value.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PriceValueType4Code.mmOpenDated, com.tools20022.repository.codeset.PriceValueType4Code.mmToBeSpecified,
-						com.tools20022.repository.codeset.PriceValueType4Code.mmUnspecified, com.tools20022.repository.codeset.PriceValueType4Code.mmUnknown);
+				code_lazy = () -> Arrays.asList(PriceValueType4Code.mmOpenDated, PriceValueType4Code.mmToBeSpecified, PriceValueType4Code.mmUnspecified, PriceValueType4Code.mmUnknown);
 				trace_lazy = () -> PriceValueTypeCode.mmObject();
 			}
 		});

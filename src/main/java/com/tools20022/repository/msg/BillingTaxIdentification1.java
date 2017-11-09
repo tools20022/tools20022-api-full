@@ -19,8 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.entity.Person;
 import com.tools20022.repository.entity.TaxPartyRole;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -104,11 +107,11 @@ public class BillingTaxIdentification1 {
 	 */
 	public static final MMMessageAttribute mmVATRegistrationNumber = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TaxPartyRole.mmVATRegistrationNumber;
+			businessElementTrace_lazy = () -> TaxPartyRole.mmVATRegistrationNumber;
 			componentContext_lazy = () -> BillingTaxIdentification1.mmObject();
 			isDerived = false;
 			xmlTag = "VATRegnNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VATRegistrationNumber";
 			definition = "Value added tax (VAT) registration number as provided by the  region’s local taxing authority.";
 			maxOccurs = 1;
@@ -152,7 +155,7 @@ public class BillingTaxIdentification1 {
 			componentContext_lazy = () -> BillingTaxIdentification1.mmObject();
 			isDerived = false;
 			xmlTag = "TaxRegnNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxRegistrationNumber";
 			definition = "Tax registration number (TRN) as provided by the tax region’s local taxing authority.";
 			maxOccurs = 1;
@@ -198,11 +201,11 @@ public class BillingTaxIdentification1 {
 	 */
 	public static final MMMessageAttribute mmTaxContact = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Person.mmPersonIdentification;
+			businessElementTrace_lazy = () -> Person.mmPersonIdentification;
 			componentContext_lazy = () -> BillingTaxIdentification1.mmObject();
 			isDerived = false;
 			xmlTag = "TaxCtct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxContact";
 			definition = "Specifies financial institution's contact details for the tax region. This contact works for the financial institution, not the tax region.";
 			maxOccurs = 1;
@@ -214,11 +217,10 @@ public class BillingTaxIdentification1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BillingTaxIdentification1.mmVATRegistrationNumber, com.tools20022.repository.msg.BillingTaxIdentification1.mmTaxRegistrationNumber,
-						com.tools20022.repository.msg.BillingTaxIdentification1.mmTaxContact);
+				messageElement_lazy = () -> Arrays.asList(BillingTaxIdentification1.mmVATRegistrationNumber, BillingTaxIdentification1.mmTaxRegistrationNumber, BillingTaxIdentification1.mmTaxContact);
 				trace_lazy = () -> TaxPartyRole.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "BillingTaxIdentification1";
 				definition = "Specifies the tax identification related to a service to be billed.";
 			}

@@ -19,9 +19,13 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.BondType1Code;
 import com.tools20022.repository.datatype.ISODate;
+import com.tools20022.repository.entity.Asset;
+import com.tools20022.repository.entity.AssetClassification;
 import com.tools20022.repository.entity.Debt;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -96,11 +100,11 @@ public class DebtInstrument5 {
 	 */
 	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AssetClassification.mmProductType;
+			businessElementTrace_lazy = () -> AssetClassification.mmProductType;
 			componentContext_lazy = () -> DebtInstrument5.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Specifies the type of bond type.";
 			maxOccurs = 1;
@@ -144,11 +148,11 @@ public class DebtInstrument5 {
 	 */
 	public static final MMMessageAttribute mmIssuanceDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Asset.mmMaturityDate;
+			businessElementTrace_lazy = () -> Asset.mmMaturityDate;
 			componentContext_lazy = () -> DebtInstrument5.mmObject();
 			isDerived = false;
 			xmlTag = "IssncDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssuanceDate";
 			definition = "Date on which a bond is issued and begins to accrue interest.";
 			maxOccurs = 1;
@@ -160,10 +164,10 @@ public class DebtInstrument5 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DebtInstrument5.mmType, com.tools20022.repository.msg.DebtInstrument5.mmIssuanceDate);
+				messageElement_lazy = () -> Arrays.asList(DebtInstrument5.mmType, DebtInstrument5.mmIssuanceDate);
 				trace_lazy = () -> Debt.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DebtInstrument5";
 				definition = "Specifies the debit instrument.";
 			}

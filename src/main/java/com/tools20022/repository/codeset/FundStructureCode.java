@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -85,7 +87,7 @@ public class FundStructureCode {
 	 */
 	public static final MMCode mmMultiClassFund = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MultiClassFund";
 			definition = "Investment fund that contains more than one investment fund class.";
 			owner_lazy = () -> FundStructureCode.mmObject();
@@ -116,7 +118,7 @@ public class FundStructureCode {
 	 */
 	public static final MMCode mmSingleClassFund = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SingleClassFund";
 			definition = "Investment fund that contains only one investment fund class.";
 			owner_lazy = () -> FundStructureCode.mmObject();
@@ -127,12 +129,12 @@ public class FundStructureCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("MFUN");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FundStructureCode";
 				definition = "Specifies the structure of the fund.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.FundStructureCode.mmMultiClassFund, com.tools20022.repository.codeset.FundStructureCode.mmSingleClassFund);
+				code_lazy = () -> Arrays.asList(FundStructureCode.mmMultiClassFund, FundStructureCode.mmSingleClassFund);
 			}
 		});
 		return mmObject_lazy.get();

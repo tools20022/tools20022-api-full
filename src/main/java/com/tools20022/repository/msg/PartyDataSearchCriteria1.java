@@ -20,12 +20,14 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.CSDOrNCB1Choice;
 import com.tools20022.repository.choice.DateAndDateTimeSearchChoice;
 import com.tools20022.repository.choice.DateSearchChoice;
 import com.tools20022.repository.codeset.SystemPartyType1Code;
 import com.tools20022.repository.datatype.BICFIIdentifier;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -113,7 +115,7 @@ public class PartyDataSearchCriteria1 {
 			componentContext_lazy = () -> PartyDataSearchCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "OpngDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OpeningDate";
 			definition = "Specifies the opening date of the party.";
 			maxOccurs = 1;
@@ -155,7 +157,7 @@ public class PartyDataSearchCriteria1 {
 			componentContext_lazy = () -> PartyDataSearchCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "ClsgDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClosingDate";
 			definition = "Specifies the closing date of the party.";
 			maxOccurs = 1;
@@ -197,7 +199,7 @@ public class PartyDataSearchCriteria1 {
 			componentContext_lazy = () -> PartyDataSearchCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Specifies the type classification of the party.";
 			maxOccurs = 1;
@@ -240,7 +242,7 @@ public class PartyDataSearchCriteria1 {
 			componentContext_lazy = () -> PartyDataSearchCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "CSDOrNCB";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CSDOrNCB";
 			definition = "Identifies the central security depository or the national central bank which initially created the party reference data.";
 			maxOccurs = 1;
@@ -286,7 +288,7 @@ public class PartyDataSearchCriteria1 {
 			componentContext_lazy = () -> PartyDataSearchCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Unique identification to unambiguously identify the party within the system.";
 			maxOccurs = 1;
@@ -327,7 +329,7 @@ public class PartyDataSearchCriteria1 {
 			componentContext_lazy = () -> PartyDataSearchCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "RstrctnId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RestrictionIdentification";
 			definition = "Specifies the identification of a restriction.";
 			maxOccurs = 1;
@@ -370,7 +372,7 @@ public class PartyDataSearchCriteria1 {
 			componentContext_lazy = () -> PartyDataSearchCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "RstrctnIsseDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RestrictionIssueDate";
 			definition = "Specifies the date when the restriction for the party has been issued.";
 			maxOccurs = 1;
@@ -382,11 +384,10 @@ public class PartyDataSearchCriteria1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyDataSearchCriteria1.mmOpeningDate, com.tools20022.repository.msg.PartyDataSearchCriteria1.mmClosingDate,
-						com.tools20022.repository.msg.PartyDataSearchCriteria1.mmType, com.tools20022.repository.msg.PartyDataSearchCriteria1.mmCSDOrNCB, com.tools20022.repository.msg.PartyDataSearchCriteria1.mmIdentification,
-						com.tools20022.repository.msg.PartyDataSearchCriteria1.mmRestrictionIdentification, com.tools20022.repository.msg.PartyDataSearchCriteria1.mmRestrictionIssueDate);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(PartyDataSearchCriteria1.mmOpeningDate, PartyDataSearchCriteria1.mmClosingDate, PartyDataSearchCriteria1.mmType, PartyDataSearchCriteria1.mmCSDOrNCB,
+						PartyDataSearchCriteria1.mmIdentification, PartyDataSearchCriteria1.mmRestrictionIdentification, PartyDataSearchCriteria1.mmRestrictionIssueDate);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "PartyDataSearchCriteria1";
 				definition = "Set of search criteria for querying party reference data.";
 			}

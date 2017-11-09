@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.UnitOfMeasure2Code;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -196,7 +198,7 @@ public class UnitOfMeasure3Code extends UnitOfMeasure2Code {
 	 */
 	public static final MMCode mmKilogram = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Kilogram";
 			owner_lazy = () -> UnitOfMeasure3Code.mmObject();
 		}
@@ -219,7 +221,7 @@ public class UnitOfMeasure3Code extends UnitOfMeasure2Code {
 	 */
 	public static final MMCode mmEach = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Each";
 			owner_lazy = () -> UnitOfMeasure3Code.mmObject();
 		}
@@ -242,7 +244,7 @@ public class UnitOfMeasure3Code extends UnitOfMeasure2Code {
 	 */
 	public static final MMCode mmGBTon = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GBTon";
 			owner_lazy = () -> UnitOfMeasure3Code.mmObject();
 		}
@@ -265,7 +267,7 @@ public class UnitOfMeasure3Code extends UnitOfMeasure2Code {
 	 */
 	public static final MMCode mmMetre = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Metre";
 			owner_lazy = () -> UnitOfMeasure3Code.mmObject();
 		}
@@ -288,7 +290,7 @@ public class UnitOfMeasure3Code extends UnitOfMeasure2Code {
 	 */
 	public static final MMCode mmInch = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Inch";
 			owner_lazy = () -> UnitOfMeasure3Code.mmObject();
 		}
@@ -311,7 +313,7 @@ public class UnitOfMeasure3Code extends UnitOfMeasure2Code {
 	 */
 	public static final MMCode mmYard = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Yard";
 			owner_lazy = () -> UnitOfMeasure3Code.mmObject();
 		}
@@ -334,7 +336,7 @@ public class UnitOfMeasure3Code extends UnitOfMeasure2Code {
 	 */
 	public static final MMCode mmGBGallon = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GBGallon";
 			owner_lazy = () -> UnitOfMeasure3Code.mmObject();
 		}
@@ -357,7 +359,7 @@ public class UnitOfMeasure3Code extends UnitOfMeasure2Code {
 	 */
 	public static final MMCode mmGram = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Gram";
 			owner_lazy = () -> UnitOfMeasure3Code.mmObject();
 		}
@@ -380,7 +382,7 @@ public class UnitOfMeasure3Code extends UnitOfMeasure2Code {
 	 */
 	public static final MMCode mmCentimetre = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Centimetre";
 			owner_lazy = () -> UnitOfMeasure3Code.mmObject();
 		}
@@ -403,7 +405,7 @@ public class UnitOfMeasure3Code extends UnitOfMeasure2Code {
 	 */
 	public static final MMCode mmSquareMetre = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SquareMetre";
 			owner_lazy = () -> UnitOfMeasure3Code.mmObject();
 		}
@@ -426,7 +428,7 @@ public class UnitOfMeasure3Code extends UnitOfMeasure2Code {
 	 */
 	public static final MMCode mmFoot = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Foot";
 			owner_lazy = () -> UnitOfMeasure3Code.mmObject();
 		}
@@ -449,7 +451,7 @@ public class UnitOfMeasure3Code extends UnitOfMeasure2Code {
 	 */
 	public static final MMCode mmMile = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Mile";
 			owner_lazy = () -> UnitOfMeasure3Code.mmObject();
 		}
@@ -472,7 +474,7 @@ public class UnitOfMeasure3Code extends UnitOfMeasure2Code {
 	 */
 	public static final MMCode mmSquareInch = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SquareInch";
 			owner_lazy = () -> UnitOfMeasure3Code.mmObject();
 		}
@@ -495,7 +497,7 @@ public class UnitOfMeasure3Code extends UnitOfMeasure2Code {
 	 */
 	public static final MMCode mmSquareFoot = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SquareFoot";
 			owner_lazy = () -> UnitOfMeasure3Code.mmObject();
 		}
@@ -518,7 +520,7 @@ public class UnitOfMeasure3Code extends UnitOfMeasure2Code {
 	 */
 	public static final MMCode mmSquareMile = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SquareMile";
 			owner_lazy = () -> UnitOfMeasure3Code.mmObject();
 		}
@@ -541,7 +543,7 @@ public class UnitOfMeasure3Code extends UnitOfMeasure2Code {
 	 */
 	public static final MMCode mmOunce = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Ounce";
 			owner_lazy = () -> UnitOfMeasure3Code.mmObject();
 		}
@@ -564,7 +566,7 @@ public class UnitOfMeasure3Code extends UnitOfMeasure2Code {
 	 */
 	public static final MMCode mmGBPint = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GBPint";
 			owner_lazy = () -> UnitOfMeasure3Code.mmObject();
 		}
@@ -587,7 +589,7 @@ public class UnitOfMeasure3Code extends UnitOfMeasure2Code {
 	 */
 	public static final MMCode mmUSPint = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "USPint";
 			owner_lazy = () -> UnitOfMeasure3Code.mmObject();
 		}
@@ -610,7 +612,7 @@ public class UnitOfMeasure3Code extends UnitOfMeasure2Code {
 	 */
 	public static final MMCode mmGBQuart = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GBQuart";
 			owner_lazy = () -> UnitOfMeasure3Code.mmObject();
 		}
@@ -633,7 +635,7 @@ public class UnitOfMeasure3Code extends UnitOfMeasure2Code {
 	 */
 	public static final MMCode mmUSQuart = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "USQuart";
 			owner_lazy = () -> UnitOfMeasure3Code.mmObject();
 		}
@@ -656,7 +658,7 @@ public class UnitOfMeasure3Code extends UnitOfMeasure2Code {
 	 */
 	public static final MMCode mmUSGallon = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "USGallon";
 			owner_lazy = () -> UnitOfMeasure3Code.mmObject();
 		}
@@ -679,7 +681,7 @@ public class UnitOfMeasure3Code extends UnitOfMeasure2Code {
 	 */
 	public static final MMCode mmMillimetre = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Millimetre";
 			owner_lazy = () -> UnitOfMeasure3Code.mmObject();
 		}
@@ -702,7 +704,7 @@ public class UnitOfMeasure3Code extends UnitOfMeasure2Code {
 	 */
 	public static final MMCode mmKilometre = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Kilometre";
 			owner_lazy = () -> UnitOfMeasure3Code.mmObject();
 		}
@@ -725,7 +727,7 @@ public class UnitOfMeasure3Code extends UnitOfMeasure2Code {
 	 */
 	public static final MMCode mmSquareYard = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SquareYard";
 			owner_lazy = () -> UnitOfMeasure3Code.mmObject();
 		}
@@ -748,7 +750,7 @@ public class UnitOfMeasure3Code extends UnitOfMeasure2Code {
 	 */
 	public static final MMCode mmSquareMillimetre = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SquareMillimetre";
 			owner_lazy = () -> UnitOfMeasure3Code.mmObject();
 		}
@@ -771,7 +773,7 @@ public class UnitOfMeasure3Code extends UnitOfMeasure2Code {
 	 */
 	public static final MMCode mmSquareCentimetre = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SquareCentimetre";
 			owner_lazy = () -> UnitOfMeasure3Code.mmObject();
 		}
@@ -794,7 +796,7 @@ public class UnitOfMeasure3Code extends UnitOfMeasure2Code {
 	 */
 	public static final MMCode mmSquareKilometre = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SquareKilometre";
 			owner_lazy = () -> UnitOfMeasure3Code.mmObject();
 		}
@@ -817,7 +819,7 @@ public class UnitOfMeasure3Code extends UnitOfMeasure2Code {
 	 */
 	public static final MMCode mmCubicMillimetre = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CubicMillimetre";
 			owner_lazy = () -> UnitOfMeasure3Code.mmObject();
 		}
@@ -840,7 +842,7 @@ public class UnitOfMeasure3Code extends UnitOfMeasure2Code {
 	 */
 	public static final MMCode mmCentilitre = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Centilitre";
 			owner_lazy = () -> UnitOfMeasure3Code.mmObject();
 		}
@@ -863,7 +865,7 @@ public class UnitOfMeasure3Code extends UnitOfMeasure2Code {
 	 */
 	public static final MMCode mmLitre = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Litre";
 			owner_lazy = () -> UnitOfMeasure3Code.mmObject();
 		}
@@ -886,7 +888,7 @@ public class UnitOfMeasure3Code extends UnitOfMeasure2Code {
 	 */
 	public static final MMCode mmPound = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Pound";
 			owner_lazy = () -> UnitOfMeasure3Code.mmObject();
 		}
@@ -909,7 +911,7 @@ public class UnitOfMeasure3Code extends UnitOfMeasure2Code {
 	 */
 	public static final MMCode mmUSTon = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "USTon";
 			owner_lazy = () -> UnitOfMeasure3Code.mmObject();
 		}
@@ -932,7 +934,7 @@ public class UnitOfMeasure3Code extends UnitOfMeasure2Code {
 	 */
 	public static final MMCode mmUSBarrel = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "USBarrel";
 			owner_lazy = () -> UnitOfMeasure3Code.mmObject();
 		}
@@ -955,7 +957,7 @@ public class UnitOfMeasure3Code extends UnitOfMeasure2Code {
 	 */
 	public static final MMCode mmBox = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Box";
 			owner_lazy = () -> UnitOfMeasure3Code.mmObject();
 		}
@@ -978,7 +980,7 @@ public class UnitOfMeasure3Code extends UnitOfMeasure2Code {
 	 */
 	public static final MMCode mmBottle = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Bottle";
 			owner_lazy = () -> UnitOfMeasure3Code.mmObject();
 		}
@@ -1001,7 +1003,7 @@ public class UnitOfMeasure3Code extends UnitOfMeasure2Code {
 	 */
 	public static final MMCode mmCarton = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Carton";
 			owner_lazy = () -> UnitOfMeasure3Code.mmObject();
 		}
@@ -1024,7 +1026,7 @@ public class UnitOfMeasure3Code extends UnitOfMeasure2Code {
 	 */
 	public static final MMCode mmContainer = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Container";
 			owner_lazy = () -> UnitOfMeasure3Code.mmObject();
 		}
@@ -1047,7 +1049,7 @@ public class UnitOfMeasure3Code extends UnitOfMeasure2Code {
 	 */
 	public static final MMCode mmCrate = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Crate";
 			owner_lazy = () -> UnitOfMeasure3Code.mmObject();
 		}
@@ -1070,7 +1072,7 @@ public class UnitOfMeasure3Code extends UnitOfMeasure2Code {
 	 */
 	public static final MMCode mmCubicInch = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CubicInch";
 			owner_lazy = () -> UnitOfMeasure3Code.mmObject();
 		}
@@ -1093,7 +1095,7 @@ public class UnitOfMeasure3Code extends UnitOfMeasure2Code {
 	 */
 	public static final MMCode mmCubicMeter = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CubicMeter";
 			owner_lazy = () -> UnitOfMeasure3Code.mmObject();
 		}
@@ -1116,7 +1118,7 @@ public class UnitOfMeasure3Code extends UnitOfMeasure2Code {
 	 */
 	public static final MMCode mmGBFluidOunce = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GBFluidOunce";
 			owner_lazy = () -> UnitOfMeasure3Code.mmObject();
 		}
@@ -1139,7 +1141,7 @@ public class UnitOfMeasure3Code extends UnitOfMeasure2Code {
 	 */
 	public static final MMCode mmUSFluidOunce = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "USFluidOunce";
 			owner_lazy = () -> UnitOfMeasure3Code.mmObject();
 		}
@@ -1162,7 +1164,7 @@ public class UnitOfMeasure3Code extends UnitOfMeasure2Code {
 	 */
 	public static final MMCode mmBag = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Bag";
 			owner_lazy = () -> UnitOfMeasure3Code.mmObject();
 		}
@@ -1185,7 +1187,7 @@ public class UnitOfMeasure3Code extends UnitOfMeasure2Code {
 	 */
 	public static final MMCode mmBale = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Bale";
 			owner_lazy = () -> UnitOfMeasure3Code.mmObject();
 		}
@@ -1194,26 +1196,18 @@ public class UnitOfMeasure3Code extends UnitOfMeasure2Code {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("KGM");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "UnitOfMeasure3Code";
 				definition = "Identifies the unit of measure by means of a code. The code is taken from UN/ECE Recommendation 20.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnitOfMeasure3Code.mmKilogram, com.tools20022.repository.codeset.UnitOfMeasure3Code.mmEach, com.tools20022.repository.codeset.UnitOfMeasure3Code.mmGBTon,
-						com.tools20022.repository.codeset.UnitOfMeasure3Code.mmMetre, com.tools20022.repository.codeset.UnitOfMeasure3Code.mmInch, com.tools20022.repository.codeset.UnitOfMeasure3Code.mmYard,
-						com.tools20022.repository.codeset.UnitOfMeasure3Code.mmGBGallon, com.tools20022.repository.codeset.UnitOfMeasure3Code.mmGram, com.tools20022.repository.codeset.UnitOfMeasure3Code.mmCentimetre,
-						com.tools20022.repository.codeset.UnitOfMeasure3Code.mmSquareMetre, com.tools20022.repository.codeset.UnitOfMeasure3Code.mmFoot, com.tools20022.repository.codeset.UnitOfMeasure3Code.mmMile,
-						com.tools20022.repository.codeset.UnitOfMeasure3Code.mmSquareInch, com.tools20022.repository.codeset.UnitOfMeasure3Code.mmSquareFoot, com.tools20022.repository.codeset.UnitOfMeasure3Code.mmSquareMile,
-						com.tools20022.repository.codeset.UnitOfMeasure3Code.mmOunce, com.tools20022.repository.codeset.UnitOfMeasure3Code.mmGBPint, com.tools20022.repository.codeset.UnitOfMeasure3Code.mmUSPint,
-						com.tools20022.repository.codeset.UnitOfMeasure3Code.mmGBQuart, com.tools20022.repository.codeset.UnitOfMeasure3Code.mmUSQuart, com.tools20022.repository.codeset.UnitOfMeasure3Code.mmUSGallon,
-						com.tools20022.repository.codeset.UnitOfMeasure3Code.mmMillimetre, com.tools20022.repository.codeset.UnitOfMeasure3Code.mmKilometre, com.tools20022.repository.codeset.UnitOfMeasure3Code.mmSquareYard,
-						com.tools20022.repository.codeset.UnitOfMeasure3Code.mmSquareMillimetre, com.tools20022.repository.codeset.UnitOfMeasure3Code.mmSquareCentimetre,
-						com.tools20022.repository.codeset.UnitOfMeasure3Code.mmSquareKilometre, com.tools20022.repository.codeset.UnitOfMeasure3Code.mmCubicMillimetre, com.tools20022.repository.codeset.UnitOfMeasure3Code.mmCentilitre,
-						com.tools20022.repository.codeset.UnitOfMeasure3Code.mmLitre, com.tools20022.repository.codeset.UnitOfMeasure3Code.mmPound, com.tools20022.repository.codeset.UnitOfMeasure3Code.mmUSTon,
-						com.tools20022.repository.codeset.UnitOfMeasure3Code.mmUSBarrel, com.tools20022.repository.codeset.UnitOfMeasure3Code.mmBox, com.tools20022.repository.codeset.UnitOfMeasure3Code.mmBottle,
-						com.tools20022.repository.codeset.UnitOfMeasure3Code.mmCarton, com.tools20022.repository.codeset.UnitOfMeasure3Code.mmContainer, com.tools20022.repository.codeset.UnitOfMeasure3Code.mmCrate,
-						com.tools20022.repository.codeset.UnitOfMeasure3Code.mmCubicInch, com.tools20022.repository.codeset.UnitOfMeasure3Code.mmCubicMeter, com.tools20022.repository.codeset.UnitOfMeasure3Code.mmGBFluidOunce,
-						com.tools20022.repository.codeset.UnitOfMeasure3Code.mmUSFluidOunce, com.tools20022.repository.codeset.UnitOfMeasure3Code.mmBag, com.tools20022.repository.codeset.UnitOfMeasure3Code.mmBale);
+				code_lazy = () -> Arrays.asList(UnitOfMeasure3Code.mmKilogram, UnitOfMeasure3Code.mmEach, UnitOfMeasure3Code.mmGBTon, UnitOfMeasure3Code.mmMetre, UnitOfMeasure3Code.mmInch, UnitOfMeasure3Code.mmYard,
+						UnitOfMeasure3Code.mmGBGallon, UnitOfMeasure3Code.mmGram, UnitOfMeasure3Code.mmCentimetre, UnitOfMeasure3Code.mmSquareMetre, UnitOfMeasure3Code.mmFoot, UnitOfMeasure3Code.mmMile, UnitOfMeasure3Code.mmSquareInch,
+						UnitOfMeasure3Code.mmSquareFoot, UnitOfMeasure3Code.mmSquareMile, UnitOfMeasure3Code.mmOunce, UnitOfMeasure3Code.mmGBPint, UnitOfMeasure3Code.mmUSPint, UnitOfMeasure3Code.mmGBQuart, UnitOfMeasure3Code.mmUSQuart,
+						UnitOfMeasure3Code.mmUSGallon, UnitOfMeasure3Code.mmMillimetre, UnitOfMeasure3Code.mmKilometre, UnitOfMeasure3Code.mmSquareYard, UnitOfMeasure3Code.mmSquareMillimetre, UnitOfMeasure3Code.mmSquareCentimetre,
+						UnitOfMeasure3Code.mmSquareKilometre, UnitOfMeasure3Code.mmCubicMillimetre, UnitOfMeasure3Code.mmCentilitre, UnitOfMeasure3Code.mmLitre, UnitOfMeasure3Code.mmPound, UnitOfMeasure3Code.mmUSTon,
+						UnitOfMeasure3Code.mmUSBarrel, UnitOfMeasure3Code.mmBox, UnitOfMeasure3Code.mmBottle, UnitOfMeasure3Code.mmCarton, UnitOfMeasure3Code.mmContainer, UnitOfMeasure3Code.mmCrate, UnitOfMeasure3Code.mmCubicInch,
+						UnitOfMeasure3Code.mmCubicMeter, UnitOfMeasure3Code.mmGBFluidOunce, UnitOfMeasure3Code.mmUSFluidOunce, UnitOfMeasure3Code.mmBag, UnitOfMeasure3Code.mmBale);
 				trace_lazy = () -> UnitOfMeasure2Code.mmObject();
 			}
 		});

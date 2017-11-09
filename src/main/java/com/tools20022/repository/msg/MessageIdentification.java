@@ -19,7 +19,10 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.seev.*;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -140,7 +143,7 @@ public class MessageIdentification {
 			componentContext_lazy = () -> MessageIdentification.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "String of characters that uniquely identifies a message.";
 			maxOccurs = 1;
@@ -152,17 +155,14 @@ public class MessageIdentification {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MessageIdentification.mmIdentification);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.MeetingEntitlementNotificationV02.mmRelatedReference,
-						com.tools20022.repository.area.seev.MeetingEntitlementNotificationV03.mmRelatedReference, com.tools20022.repository.area.seev.MeetingEntitlementNotificationV04.mmRelatedReference,
-						com.tools20022.repository.area.seev.MeetingInstructionCancellationRequestV02.mmPreviousReference, com.tools20022.repository.area.seev.MeetingInstructionCancellationRequestV03.mmPreviousReference,
-						com.tools20022.repository.area.seev.MeetingInstructionCancellationRequestV04.mmPreviousReference, com.tools20022.repository.area.seev.MeetingInstructionStatusV02.mmInstructionIdentification,
-						com.tools20022.repository.area.seev.MeetingInstructionStatusV02.mmInstructionCancellationIdentification, com.tools20022.repository.area.seev.MeetingVoteExecutionConfirmationV02.mmRelatedReference,
-						com.tools20022.repository.area.seev.MeetingVoteExecutionConfirmationV03.mmRelatedReference, com.tools20022.repository.area.seev.MeetingVoteExecutionConfirmationV04.mmRelatedReference,
-						com.tools20022.repository.area.seev.MeetingInstructionCancellationRequestV05.mmPreviousReference, com.tools20022.repository.area.seev.MeetingVoteExecutionConfirmationV05.mmRelatedReference,
-						com.tools20022.repository.area.seev.MeetingEntitlementNotificationV05.mmRelatedReference);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(MessageIdentification.mmIdentification);
+				messageBuildingBlock_lazy = () -> Arrays.asList(MeetingEntitlementNotificationV02.mmRelatedReference, MeetingEntitlementNotificationV03.mmRelatedReference, MeetingEntitlementNotificationV04.mmRelatedReference,
+						MeetingInstructionCancellationRequestV02.mmPreviousReference, MeetingInstructionCancellationRequestV03.mmPreviousReference, MeetingInstructionCancellationRequestV04.mmPreviousReference,
+						MeetingInstructionStatusV02.mmInstructionIdentification, MeetingInstructionStatusV02.mmInstructionCancellationIdentification, MeetingVoteExecutionConfirmationV02.mmRelatedReference,
+						MeetingVoteExecutionConfirmationV03.mmRelatedReference, MeetingVoteExecutionConfirmationV04.mmRelatedReference, MeetingInstructionCancellationRequestV05.mmPreviousReference,
+						MeetingVoteExecutionConfirmationV05.mmRelatedReference, MeetingEntitlementNotificationV05.mmRelatedReference);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MessageIdentification";
 				definition = "Unique and unambiguous identifier for a message, as assigned by the Sender. This unique identifier can be used for cross-referencing purposes in subsequent messages.";
 			}

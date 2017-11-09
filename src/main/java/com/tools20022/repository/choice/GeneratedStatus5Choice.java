@@ -20,8 +20,11 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.NoReasonCode;
 import com.tools20022.repository.entity.SecuritiesTradeStatusReason;
+import com.tools20022.repository.entity.StatusReason;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GeneratedReason3;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -126,15 +129,15 @@ public class GeneratedStatus5Choice {
 	 */
 	public static final MMMessageAttribute mmNoSpecifiedReason = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmNoSpecifiedReason;
+			businessElementTrace_lazy = () -> StatusReason.mmNoSpecifiedReason;
 			componentContext_lazy = () -> GeneratedStatus5Choice.mmObject();
 			isDerived = false;
 			xmlTag = "NoSpcfdRsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoSpecifiedReason";
 			definition = "Indicates that there is no reason available or to report.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.GeneratedStatus7Choice.mmNoSpecifiedReason);
-			previousVersion_lazy = () -> com.tools20022.repository.choice.GeneratedStatus3Choice.mmNoSpecifiedReason;
+			nextVersions_lazy = () -> Arrays.asList(GeneratedStatus7Choice.mmNoSpecifiedReason);
+			previousVersion_lazy = () -> GeneratedStatus3Choice.mmNoSpecifiedReason;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> NoReasonCode.mmObject();
@@ -191,11 +194,11 @@ public class GeneratedStatus5Choice {
 			componentContext_lazy = () -> GeneratedStatus5Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Rsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reason";
 			definition = "Specifies the reason of the generated status.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.GeneratedStatus7Choice.mmReason);
-			previousVersion_lazy = () -> com.tools20022.repository.choice.GeneratedStatus3Choice.mmReason;
+			nextVersions_lazy = () -> Arrays.asList(GeneratedStatus7Choice.mmReason);
+			previousVersion_lazy = () -> GeneratedStatus3Choice.mmReason;
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GeneratedReason3.mmObject();
@@ -205,10 +208,10 @@ public class GeneratedStatus5Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.GeneratedStatus5Choice.mmNoSpecifiedReason, com.tools20022.repository.choice.GeneratedStatus5Choice.mmReason);
+				messageElement_lazy = () -> Arrays.asList(GeneratedStatus5Choice.mmNoSpecifiedReason, GeneratedStatus5Choice.mmReason);
 				trace_lazy = () -> SecuritiesTradeStatusReason.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "GeneratedStatus5Choice";
 				definition = "Choice of generated status.";
 				nextVersions_lazy = () -> Arrays.asList(GeneratedStatus7Choice.mmObject());

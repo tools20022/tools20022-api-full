@@ -19,11 +19,15 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.AmountOrCoefficientPrice1Choice;
 import com.tools20022.repository.codeset.ActiveCurrencyCode;
 import com.tools20022.repository.datatype.ISINIdentifier;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.entity.CollateralValuation;
+import com.tools20022.repository.entity.SecuritiesIdentification;
+import com.tools20022.repository.entity.Security;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -107,11 +111,11 @@ public class CollateralValue1 {
 	 */
 	public static final MMMessageAttribute mmSecurityIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesIdentification.mmSecurityIdentification;
+			businessElementTrace_lazy = () -> SecuritiesIdentification.mmSecurityIdentification;
 			componentContext_lazy = () -> CollateralValue1.mmObject();
 			isDerived = false;
 			xmlTag = "SctyId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityIdentification";
 			definition = "Identification of a security by an ISIN.";
 			maxOccurs = 1;
@@ -154,11 +158,11 @@ public class CollateralValue1 {
 	 */
 	public static final MMMessageAttribute mmValuationDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CollateralValuation.mmCollateralValuationDate;
+			businessElementTrace_lazy = () -> CollateralValuation.mmCollateralValuationDate;
 			componentContext_lazy = () -> CollateralValue1.mmObject();
 			isDerived = false;
 			xmlTag = "ValtnDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValuationDate";
 			definition = "Valuation date for the price.";
 			maxOccurs = 1;
@@ -202,11 +206,11 @@ public class CollateralValue1 {
 	 */
 	public static final MMMessageAttribute mmValuationCurrency = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CollateralValuation.mmCollateralValuationCurrency;
+			businessElementTrace_lazy = () -> CollateralValuation.mmCollateralValuationCurrency;
 			componentContext_lazy = () -> CollateralValue1.mmObject();
 			isDerived = false;
 			xmlTag = "ValtnCcy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValuationCurrency";
 			definition = "Provides details of the currency of the valuation.";
 			maxOccurs = 1;
@@ -250,11 +254,11 @@ public class CollateralValue1 {
 	 */
 	public static final MMMessageAttribute mmValuationPrice = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmPricing;
+			businessElementTrace_lazy = () -> Security.mmPricing;
 			componentContext_lazy = () -> CollateralValue1.mmObject();
 			isDerived = false;
 			xmlTag = "ValtnPric";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValuationPrice";
 			definition = "Provides details of the price provided for the security.";
 			maxOccurs = 1;
@@ -266,11 +270,10 @@ public class CollateralValue1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CollateralValue1.mmSecurityIdentification, com.tools20022.repository.msg.CollateralValue1.mmValuationDate,
-						com.tools20022.repository.msg.CollateralValue1.mmValuationCurrency, com.tools20022.repository.msg.CollateralValue1.mmValuationPrice);
+				messageElement_lazy = () -> Arrays.asList(CollateralValue1.mmSecurityIdentification, CollateralValue1.mmValuationDate, CollateralValue1.mmValuationCurrency, CollateralValue1.mmValuationPrice);
 				trace_lazy = () -> CollateralValuation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CollateralValue1";
 				definition = "Provides details of the collateral reference data.";
 			}

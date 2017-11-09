@@ -19,8 +19,20 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.fxtr.ForeignExchangeTradeInstructionAmendmentV04;
+import com.tools20022.repository.area.fxtr.ForeignExchangeTradeInstructionCancellationV04;
+import com.tools20022.repository.area.fxtr.ForeignExchangeTradeInstructionV04;
+import com.tools20022.repository.area.fxtr.ForeignExchangeTradeStatusAndDetailsNotificationV04;
+import com.tools20022.repository.area.other.ForeignExchangeTradeInstructionAmendmentV02;
+import com.tools20022.repository.area.other.ForeignExchangeTradeInstructionCancellationV02;
+import com.tools20022.repository.area.other.ForeignExchangeTradeInstructionV02;
+import com.tools20022.repository.area.other.ForeignExchangeTradeStatusAndDetailsNotificationV02;
 import com.tools20022.repository.choice.PartyIdentification73Choice;
+import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.entity.TreasuryTradePartyRole;
+import com.tools20022.repository.entity.TreasuryTradingParty;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -170,11 +182,11 @@ public class TradePartyIdentification6 {
 	 */
 	public static final MMMessageAssociationEnd mmSubmittingParty = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> TradePartyIdentification6.mmObject();
 			isDerived = false;
 			xmlTag = "SubmitgPty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubmittingParty";
 			definition = "Party that submits the foreign exchange trade to the matching system or to the settlement system or to the counterparty.";
 			maxOccurs = 1;
@@ -221,11 +233,11 @@ public class TradePartyIdentification6 {
 	 */
 	public static final MMMessageAssociationEnd mmTradeParty = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> TradePartyIdentification6.mmObject();
 			isDerived = false;
 			xmlTag = "TradPty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeParty";
 			definition = "Party that originated the foreign exchange trade. This party may be the same as the submitting party.";
 			maxOccurs = 1;
@@ -271,11 +283,11 @@ public class TradePartyIdentification6 {
 	 */
 	public static final MMMessageAssociationEnd mmFundIdentification = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TreasuryTradingParty.mmInvestmentFund;
+			businessElementTrace_lazy = () -> TreasuryTradingParty.mmInvestmentFund;
 			componentContext_lazy = () -> TradePartyIdentification6.mmObject();
 			isDerived = false;
 			xmlTag = "FndId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FundIdentification";
 			definition = "Identifies the fund that is one of the parties in the foreign exchange trade.\r\n";
 			minOccurs = 0;
@@ -287,25 +299,18 @@ public class TradePartyIdentification6 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TradePartyIdentification6.mmSubmittingParty, com.tools20022.repository.msg.TradePartyIdentification6.mmTradeParty,
-						com.tools20022.repository.msg.TradePartyIdentification6.mmFundIdentification);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.other.ForeignExchangeTradeInstructionAmendmentV02.mmTradingSideIdentification,
-						com.tools20022.repository.area.other.ForeignExchangeTradeInstructionAmendmentV02.mmCounterpartySideIdentification,
-						com.tools20022.repository.area.other.ForeignExchangeTradeInstructionCancellationV02.mmTradingSideIdentification,
-						com.tools20022.repository.area.other.ForeignExchangeTradeInstructionCancellationV02.mmCounterpartySideIdentification,
-						com.tools20022.repository.area.other.ForeignExchangeTradeInstructionV02.mmTradingSideIdentification, com.tools20022.repository.area.other.ForeignExchangeTradeInstructionV02.mmCounterpartySideIdentification,
-						com.tools20022.repository.area.other.ForeignExchangeTradeStatusAndDetailsNotificationV02.mmTradingSideIdentification,
-						com.tools20022.repository.area.other.ForeignExchangeTradeStatusAndDetailsNotificationV02.mmCounterpartySideIdentification,
-						com.tools20022.repository.area.fxtr.ForeignExchangeTradeInstructionV04.mmTradingSideIdentification, com.tools20022.repository.area.fxtr.ForeignExchangeTradeInstructionV04.mmCounterpartySideIdentification,
-						com.tools20022.repository.area.fxtr.ForeignExchangeTradeInstructionCancellationV04.mmTradingSideIdentification,
-						com.tools20022.repository.area.fxtr.ForeignExchangeTradeInstructionCancellationV04.mmCounterpartySideIdentification,
-						com.tools20022.repository.area.fxtr.ForeignExchangeTradeInstructionAmendmentV04.mmTradingSideIdentification,
-						com.tools20022.repository.area.fxtr.ForeignExchangeTradeInstructionAmendmentV04.mmCounterpartySideIdentification,
-						com.tools20022.repository.area.fxtr.ForeignExchangeTradeStatusAndDetailsNotificationV04.mmTradingSideIdentification,
-						com.tools20022.repository.area.fxtr.ForeignExchangeTradeStatusAndDetailsNotificationV04.mmCounterpartySideIdentification);
+				messageElement_lazy = () -> Arrays.asList(TradePartyIdentification6.mmSubmittingParty, TradePartyIdentification6.mmTradeParty, TradePartyIdentification6.mmFundIdentification);
+				messageBuildingBlock_lazy = () -> Arrays.asList(ForeignExchangeTradeInstructionAmendmentV02.mmTradingSideIdentification, ForeignExchangeTradeInstructionAmendmentV02.mmCounterpartySideIdentification,
+						ForeignExchangeTradeInstructionCancellationV02.mmTradingSideIdentification, ForeignExchangeTradeInstructionCancellationV02.mmCounterpartySideIdentification,
+						ForeignExchangeTradeInstructionV02.mmTradingSideIdentification, ForeignExchangeTradeInstructionV02.mmCounterpartySideIdentification, ForeignExchangeTradeStatusAndDetailsNotificationV02.mmTradingSideIdentification,
+						ForeignExchangeTradeStatusAndDetailsNotificationV02.mmCounterpartySideIdentification, ForeignExchangeTradeInstructionV04.mmTradingSideIdentification,
+						ForeignExchangeTradeInstructionV04.mmCounterpartySideIdentification, ForeignExchangeTradeInstructionCancellationV04.mmTradingSideIdentification,
+						ForeignExchangeTradeInstructionCancellationV04.mmCounterpartySideIdentification, ForeignExchangeTradeInstructionAmendmentV04.mmTradingSideIdentification,
+						ForeignExchangeTradeInstructionAmendmentV04.mmCounterpartySideIdentification, ForeignExchangeTradeStatusAndDetailsNotificationV04.mmTradingSideIdentification,
+						ForeignExchangeTradeStatusAndDetailsNotificationV04.mmCounterpartySideIdentification);
 				trace_lazy = () -> TreasuryTradePartyRole.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TradePartyIdentification6";
 				definition = "Entity involved in an activity.";
 				previousVersion_lazy = () -> TradePartyIdentification5.mmObject();

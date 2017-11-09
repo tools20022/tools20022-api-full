@@ -20,12 +20,14 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ServiceAdjustmentType1Code;
 import com.tools20022.repository.datatype.DecimalNumber;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.Max140Text;
 import com.tools20022.repository.datatype.Max35Text;
-import com.tools20022.repository.entity.CashAccountService;
+import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -142,11 +144,11 @@ public class BillingServiceAdjustment1 {
 	 */
 	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Service.mmType;
+			businessElementTrace_lazy = () -> Service.mmType;
 			componentContext_lazy = () -> BillingServiceAdjustment1.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Identifies the type of adjustment.";
 			maxOccurs = 1;
@@ -188,7 +190,7 @@ public class BillingServiceAdjustment1 {
 			componentContext_lazy = () -> BillingServiceAdjustment1.mmObject();
 			isDerived = false;
 			xmlTag = "Desc";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Description";
 			definition = "Free-form description and clarification of the adjustment.";
 			maxOccurs = 1;
@@ -235,11 +237,11 @@ public class BillingServiceAdjustment1 {
 	 */
 	public static final MMMessageAssociationEnd mmAmount = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Service.mmAmount;
+			businessElementTrace_lazy = () -> Service.mmAmount;
 			componentContext_lazy = () -> BillingServiceAdjustment1.mmObject();
 			isDerived = false;
 			xmlTag = "Amt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Amount of the adjustment, expressed in the settlement currency.\n\nUsage: If the amount would reduce charges due then the amount should be negatively signed.";
 			maxOccurs = 1;
@@ -283,11 +285,11 @@ public class BillingServiceAdjustment1 {
 	 */
 	public static final MMMessageAssociationEnd mmBalanceRequiredAmount = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashBalance.mmAmount;
+			businessElementTrace_lazy = () -> CashBalance.mmAmount;
 			componentContext_lazy = () -> BillingServiceAdjustment1.mmObject();
 			isDerived = false;
 			xmlTag = "BalReqrdAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BalanceRequiredAmount";
 			definition = "Specifies whether the balance amount requires an adjustment.";
 			maxOccurs = 1;
@@ -334,7 +336,7 @@ public class BillingServiceAdjustment1 {
 			componentContext_lazy = () -> BillingServiceAdjustment1.mmObject();
 			isDerived = false;
 			xmlTag = "ErrDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ErrorDate";
 			definition = "Date on which the situation causing the service adjustment occurred. If the date is not known then used the last day of the month in which the situation occurred or the date of the billing statement which reported the original service to which this adjustment applies.";
 			maxOccurs = 1;
@@ -378,7 +380,7 @@ public class BillingServiceAdjustment1 {
 			componentContext_lazy = () -> BillingServiceAdjustment1.mmObject();
 			isDerived = false;
 			xmlTag = "AdjstmntId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdjustmentIdentification";
 			definition = "Financial institution's own, internal service identification code, used to uniquely identify the service within the financial institution.";
 			maxOccurs = 1;
@@ -429,7 +431,7 @@ public class BillingServiceAdjustment1 {
 			componentContext_lazy = () -> BillingServiceAdjustment1.mmObject();
 			isDerived = false;
 			xmlTag = "SubSvc";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubService";
 			definition = "Defines the financial institution sub-service identification if the financial institution service identification code is used for more than one service.";
 			maxOccurs = 1;
@@ -475,11 +477,11 @@ public class BillingServiceAdjustment1 {
 	 */
 	public static final MMMessageAssociationEnd mmPriceChange = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Product.mmUnitPrice;
+			businessElementTrace_lazy = () -> Product.mmUnitPrice;
 			componentContext_lazy = () -> BillingServiceAdjustment1.mmObject();
 			isDerived = false;
 			xmlTag = "PricChng";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PriceChange";
 			definition = "Change in the service price, expressed in the pricing currency. A negative value indicates a price reduction.";
 			maxOccurs = 1;
@@ -525,11 +527,11 @@ public class BillingServiceAdjustment1 {
 	 */
 	public static final MMMessageAssociationEnd mmOriginalPrice = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Product.mmUnitPrice;
+			businessElementTrace_lazy = () -> Product.mmUnitPrice;
 			componentContext_lazy = () -> BillingServiceAdjustment1.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlPric";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalPrice";
 			definition = "Price that was applied to the service, prior to the change, expressed in the pricing currency.";
 			maxOccurs = 1;
@@ -573,11 +575,11 @@ public class BillingServiceAdjustment1 {
 	 */
 	public static final MMMessageAssociationEnd mmNewPrice = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Product.mmUnitPrice;
+			businessElementTrace_lazy = () -> Product.mmUnitPrice;
 			componentContext_lazy = () -> BillingServiceAdjustment1.mmObject();
 			isDerived = false;
 			xmlTag = "NewPric";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewPrice";
 			definition = "New, adjusted service price, expressed in the pricing currency.";
 			maxOccurs = 1;
@@ -625,11 +627,11 @@ public class BillingServiceAdjustment1 {
 	 */
 	public static final MMMessageAttribute mmVolumeChange = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ProductQuantity.mmValue;
+			businessElementTrace_lazy = () -> ProductQuantity.mmValue;
 			componentContext_lazy = () -> BillingServiceAdjustment1.mmObject();
 			isDerived = false;
 			xmlTag = "VolChng";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VolumeChange";
 			definition = "Change in the service volume. A negative value indicates a volume reduction.";
 			maxOccurs = 1;
@@ -673,11 +675,11 @@ public class BillingServiceAdjustment1 {
 	 */
 	public static final MMMessageAttribute mmOriginalVolume = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ProductQuantity.mmValue;
+			businessElementTrace_lazy = () -> ProductQuantity.mmValue;
 			componentContext_lazy = () -> BillingServiceAdjustment1.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlVol";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalVolume";
 			definition = "Original service volume.";
 			maxOccurs = 1;
@@ -721,11 +723,11 @@ public class BillingServiceAdjustment1 {
 	 */
 	public static final MMMessageAttribute mmNewVolume = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ProductQuantity.mmValue;
+			businessElementTrace_lazy = () -> ProductQuantity.mmValue;
 			componentContext_lazy = () -> BillingServiceAdjustment1.mmObject();
 			isDerived = false;
 			xmlTag = "NewVol";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewVolume";
 			definition = "New, adjusted service volume.";
 			maxOccurs = 1;
@@ -770,11 +772,11 @@ public class BillingServiceAdjustment1 {
 	 */
 	public static final MMMessageAssociationEnd mmOriginalChargeAmount = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Service.mmAmount;
+			businessElementTrace_lazy = () -> Service.mmAmount;
 			componentContext_lazy = () -> BillingServiceAdjustment1.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlChrgAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalChargeAmount";
 			definition = "Service charge that was applied to the service, prior to the change, expressed in the pricing currency.";
 			maxOccurs = 1;
@@ -818,11 +820,11 @@ public class BillingServiceAdjustment1 {
 	 */
 	public static final MMMessageAssociationEnd mmNewChargeAmount = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Service.mmAmount;
+			businessElementTrace_lazy = () -> Service.mmAmount;
 			componentContext_lazy = () -> BillingServiceAdjustment1.mmObject();
 			isDerived = false;
 			xmlTag = "NewChrgAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewChargeAmount";
 			definition = "New, adjusted service charge, expressed in the pricing currency.";
 			maxOccurs = 1;
@@ -835,15 +837,13 @@ public class BillingServiceAdjustment1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BillingServiceAdjustment1.mmType, com.tools20022.repository.msg.BillingServiceAdjustment1.mmDescription,
-						com.tools20022.repository.msg.BillingServiceAdjustment1.mmAmount, com.tools20022.repository.msg.BillingServiceAdjustment1.mmBalanceRequiredAmount, com.tools20022.repository.msg.BillingServiceAdjustment1.mmErrorDate,
-						com.tools20022.repository.msg.BillingServiceAdjustment1.mmAdjustmentIdentification, com.tools20022.repository.msg.BillingServiceAdjustment1.mmSubService,
-						com.tools20022.repository.msg.BillingServiceAdjustment1.mmPriceChange, com.tools20022.repository.msg.BillingServiceAdjustment1.mmOriginalPrice, com.tools20022.repository.msg.BillingServiceAdjustment1.mmNewPrice,
-						com.tools20022.repository.msg.BillingServiceAdjustment1.mmVolumeChange, com.tools20022.repository.msg.BillingServiceAdjustment1.mmOriginalVolume, com.tools20022.repository.msg.BillingServiceAdjustment1.mmNewVolume,
-						com.tools20022.repository.msg.BillingServiceAdjustment1.mmOriginalChargeAmount, com.tools20022.repository.msg.BillingServiceAdjustment1.mmNewChargeAmount);
+				messageElement_lazy = () -> Arrays.asList(BillingServiceAdjustment1.mmType, BillingServiceAdjustment1.mmDescription, BillingServiceAdjustment1.mmAmount, BillingServiceAdjustment1.mmBalanceRequiredAmount,
+						BillingServiceAdjustment1.mmErrorDate, BillingServiceAdjustment1.mmAdjustmentIdentification, BillingServiceAdjustment1.mmSubService, BillingServiceAdjustment1.mmPriceChange,
+						BillingServiceAdjustment1.mmOriginalPrice, BillingServiceAdjustment1.mmNewPrice, BillingServiceAdjustment1.mmVolumeChange, BillingServiceAdjustment1.mmOriginalVolume, BillingServiceAdjustment1.mmNewVolume,
+						BillingServiceAdjustment1.mmOriginalChargeAmount, BillingServiceAdjustment1.mmNewChargeAmount);
 				trace_lazy = () -> CashAccountService.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "BillingServiceAdjustment1";
 				definition = "Specifies the billing adjustments for a specific service.";
 			}

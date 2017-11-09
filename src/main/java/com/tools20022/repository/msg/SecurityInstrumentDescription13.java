@@ -19,8 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.entity.Asset;
 import com.tools20022.repository.entity.Debt;
 import com.tools20022.repository.entity.Security;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -105,7 +108,7 @@ public class SecurityInstrumentDescription13 {
 			componentContext_lazy = () -> SecurityInstrumentDescription13.mmObject();
 			isDerived = false;
 			xmlTag = "FinInstrmGnlAttrbts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentGeneralAttributes";
 			definition = "Attributes and characteristics of the financial instrument.";
 			maxOccurs = 1;
@@ -151,7 +154,7 @@ public class SecurityInstrumentDescription13 {
 			componentContext_lazy = () -> SecurityInstrumentDescription13.mmObject();
 			isDerived = false;
 			xmlTag = "DebtInstrmAttrbts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DebtInstrumentAttributes";
 			definition = "Attributes specific to debt instruments.";
 			maxOccurs = 1;
@@ -194,11 +197,11 @@ public class SecurityInstrumentDescription13 {
 	 */
 	public static final MMMessageAssociationEnd mmDerivativeInstrumentAttributes = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Asset.mmDerivative;
+			businessElementTrace_lazy = () -> Asset.mmDerivative;
 			componentContext_lazy = () -> SecurityInstrumentDescription13.mmObject();
 			isDerived = false;
 			xmlTag = "DerivInstrmAttrbts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DerivativeInstrumentAttributes";
 			definition = "Attributes specific to derivative instruments.";
 			maxOccurs = 1;
@@ -211,11 +214,11 @@ public class SecurityInstrumentDescription13 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecurityInstrumentDescription13.mmFinancialInstrumentGeneralAttributes,
-						com.tools20022.repository.msg.SecurityInstrumentDescription13.mmDebtInstrumentAttributes, com.tools20022.repository.msg.SecurityInstrumentDescription13.mmDerivativeInstrumentAttributes);
+				messageElement_lazy = () -> Arrays.asList(SecurityInstrumentDescription13.mmFinancialInstrumentGeneralAttributes, SecurityInstrumentDescription13.mmDebtInstrumentAttributes,
+						SecurityInstrumentDescription13.mmDerivativeInstrumentAttributes);
 				trace_lazy = () -> Security.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecurityInstrumentDescription13";
 				definition = "Identifies the security instrument by its name and typical characteristics.";
 			}

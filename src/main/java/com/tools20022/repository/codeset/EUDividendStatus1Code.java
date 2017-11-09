@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.EUDividendStatusCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -89,7 +91,7 @@ public class EUDividendStatus1Code extends EUDividendStatusCode {
 	 */
 	public static final MMCode mmDividendInScope = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DividendInScope";
 			owner_lazy = () -> EUDividendStatus1Code.mmObject();
 		}
@@ -112,7 +114,7 @@ public class EUDividendStatus1Code extends EUDividendStatusCode {
 	 */
 	public static final MMCode mmDividendOutScope = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DividendOutScope";
 			owner_lazy = () -> EUDividendStatus1Code.mmObject();
 		}
@@ -135,7 +137,7 @@ public class EUDividendStatus1Code extends EUDividendStatusCode {
 	 */
 	public static final MMCode mmDividendUnknown = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DividendUnknown";
 			owner_lazy = () -> EUDividendStatus1Code.mmObject();
 		}
@@ -144,13 +146,12 @@ public class EUDividendStatus1Code extends EUDividendStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("DIVI");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "EUDividendStatus1Code";
 				definition = "Specifies whether the dividend is in the scope of the European directive on taxation of savings income in the form of interest payments.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.EUDividendStatus1Code.mmDividendInScope, com.tools20022.repository.codeset.EUDividendStatus1Code.mmDividendOutScope,
-						com.tools20022.repository.codeset.EUDividendStatus1Code.mmDividendUnknown);
+				code_lazy = () -> Arrays.asList(EUDividendStatus1Code.mmDividendInScope, EUDividendStatus1Code.mmDividendOutScope, EUDividendStatus1Code.mmDividendUnknown);
 				trace_lazy = () -> EUDividendStatusCode.mmObject();
 			}
 		});

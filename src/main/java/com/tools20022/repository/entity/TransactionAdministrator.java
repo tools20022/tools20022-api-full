@@ -17,11 +17,11 @@
 
 package com.tools20022.repository.entity;
 
-import com.tools20022.metamodel.MMBusinessAssociationEnd;
-import com.tools20022.metamodel.MMBusinessAttribute;
-import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.*;
 import com.tools20022.repository.codeset.CurrencyCode;
 import com.tools20022.repository.entity.SystemPartyRole;
+import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -37,26 +37,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.TransactionAdministrator#mmCashClearingSystem
- * TransactionAdministrator.mmCashClearingSystem}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.TransactionAdministrator#mmCurrency
- * TransactionAdministrator.mmCurrency}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.TransactionAdministrator#mmCurrencyExchange
- * TransactionAdministrator.mmCurrencyExchange}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.TransactionAdministrator#mmCashManagementService
- * TransactionAdministrator.mmCashManagementService}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.TransactionAdministrator#mmSettlementInstruction
- * TransactionAdministrator.mmSettlementInstruction}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
  * associationDomain} =
@@ -78,6 +58,26 @@ import java.util.List;
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
  * superType} = {@linkplain com.tools20022.repository.entity.SystemPartyRole
  * SystemPartyRole}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.TransactionAdministrator#mmCashClearingSystem
+ * TransactionAdministrator.mmCashClearingSystem}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.TransactionAdministrator#mmCurrency
+ * TransactionAdministrator.mmCurrency}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.TransactionAdministrator#mmCurrencyExchange
+ * TransactionAdministrator.mmCurrencyExchange}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.TransactionAdministrator#mmCashManagementService
+ * TransactionAdministrator.mmCashManagementService}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.TransactionAdministrator#mmSettlementInstruction
+ * TransactionAdministrator.mmSettlementInstruction}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -169,20 +169,18 @@ public class TransactionAdministrator extends SystemPartyRole {
 	 */
 	public static final MMBusinessAssociationEnd mmCashClearingSystem = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RiskManagementLimitIdentificationDetails.mmSystemIdentification, com.tools20022.repository.msg.LimitIdentificationDetails1.mmSystemIdentification,
-					com.tools20022.repository.msg.LimitIdentificationDetails2.mmSystemIdentification, com.tools20022.repository.msg.LimitIdentificationDetails3.mmSystemIdentification,
-					com.tools20022.repository.msg.LimitIdentification1.mmSystemIdentification, com.tools20022.repository.msg.LimitIdentification2.mmSystemIdentification,
-					com.tools20022.repository.msg.LimitSearchCriteria1.mmSystemIdentification, com.tools20022.repository.msg.LimitSearchCriteria2.mmSystemIdentification,
-					com.tools20022.repository.msg.LimitSearchCriteria3.mmSystemIdentification, com.tools20022.repository.msg.LiquidityManagementLimitIdentificationDetails.mmSystemIdentification);
+			derivation_lazy = () -> Arrays.asList(RiskManagementLimitIdentificationDetails.mmSystemIdentification, LimitIdentificationDetails1.mmSystemIdentification, LimitIdentificationDetails2.mmSystemIdentification,
+					LimitIdentificationDetails3.mmSystemIdentification, LimitIdentification1.mmSystemIdentification, LimitIdentification2.mmSystemIdentification, LimitSearchCriteria1.mmSystemIdentification,
+					LimitSearchCriteria2.mmSystemIdentification, LimitSearchCriteria3.mmSystemIdentification, LiquidityManagementLimitIdentificationDetails.mmSystemIdentification);
 			elementContext_lazy = () -> TransactionAdministrator.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CashClearingSystem";
 			definition = "System where the clearing takes place.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.CashClearingSystem.mmTransactionAdministrator;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.CashClearingSystem.mmObject();
 		}
 	};
@@ -228,10 +226,10 @@ public class TransactionAdministrator extends SystemPartyRole {
 	 */
 	public static final MMBusinessAttribute mmCurrency = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SystemAvailabilityAndEventsDetails1.mmSystemCurrency, com.tools20022.repository.msg.SystemAvailabilityAndEvents1.mmSystemCurrency);
+			derivation_lazy = () -> Arrays.asList(SystemAvailabilityAndEventsDetails1.mmSystemCurrency, SystemAvailabilityAndEvents1.mmSystemCurrency);
 			elementContext_lazy = () -> TransactionAdministrator.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Currency";
 			definition = "Currency which may be processed by the system. A system may process transactions in a single currency or in multiple currencies.";
 			maxOccurs = 1;
@@ -280,12 +278,12 @@ public class TransactionAdministrator extends SystemPartyRole {
 		{
 			elementContext_lazy = () -> TransactionAdministrator.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CurrencyExchange";
 			definition = "Static data maintained by the transaction administrator and related to currency exchange details as maintained for system operations.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmCurrencyExchangeForTransactionAdministrator;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmObject();
 		}
 	};
@@ -331,12 +329,12 @@ public class TransactionAdministrator extends SystemPartyRole {
 		{
 			elementContext_lazy = () -> TransactionAdministrator.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CashManagementService";
 			definition = "Set of applications that provides services which facilitate the management of cash positions on an account.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.CashManagementService.mmRelatedTransactionAdministrator;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.CashManagementService.mmObject();
 		}
 	};
@@ -381,12 +379,12 @@ public class TransactionAdministrator extends SystemPartyRole {
 		{
 			elementContext_lazy = () -> TransactionAdministrator.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SettlementInstruction";
 			definition = "Specifies the settlement instruction managed by the transaction administrator.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.CashSettlement.mmRelatedTransactionAdministrator;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.CashSettlement.mmObject();
 		}
 	};
@@ -394,16 +392,15 @@ public class TransactionAdministrator extends SystemPartyRole {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TransactionAdministrator";
 				definition = "Set of integrated applications that provides centralised services such as clearing and settlement.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CashClearingSystem.mmTransactionAdministrator, com.tools20022.repository.entity.CashSettlement.mmRelatedTransactionAdministrator,
 						com.tools20022.repository.entity.CashManagementService.mmRelatedTransactionAdministrator, com.tools20022.repository.entity.CurrencyExchange.mmCurrencyExchangeForTransactionAdministrator);
 				superType_lazy = () -> SystemPartyRole.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.TransactionAdministrator.mmCashClearingSystem, com.tools20022.repository.entity.TransactionAdministrator.mmCurrency,
-						com.tools20022.repository.entity.TransactionAdministrator.mmCurrencyExchange, com.tools20022.repository.entity.TransactionAdministrator.mmCashManagementService,
-						com.tools20022.repository.entity.TransactionAdministrator.mmSettlementInstruction);
+				element_lazy = () -> Arrays.asList(TransactionAdministrator.mmCashClearingSystem, TransactionAdministrator.mmCurrency, TransactionAdministrator.mmCurrencyExchange, TransactionAdministrator.mmCashManagementService,
+						TransactionAdministrator.mmSettlementInstruction);
 			}
 		});
 		return mmObject_lazy.get();

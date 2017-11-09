@@ -19,6 +19,9 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.secl.DefaultFundContributionReportV02;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -108,7 +111,7 @@ public class DefaultFundReport1 {
 			componentContext_lazy = () -> DefaultFundReport1.mmObject();
 			isDerived = false;
 			xmlTag = "DfltFndClctn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DefaultFundCalculation";
 			definition = "Provides details about the calculation of the clearing member contribution to the default fund.";
 			minOccurs = 1;
@@ -148,7 +151,7 @@ public class DefaultFundReport1 {
 			componentContext_lazy = () -> DefaultFundReport1.mmObject();
 			isDerived = false;
 			xmlTag = "CollDesc";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralDescription";
 			definition = "Provides details about the collateral held.";
 			minOccurs = 1;
@@ -192,7 +195,7 @@ public class DefaultFundReport1 {
 			componentContext_lazy = () -> DefaultFundReport1.mmObject();
 			isDerived = false;
 			xmlTag = "NetXcssOrDfcit";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetExcessOrDeficit";
 			definition = "Excess amount that the central counterparty will restitute to the clearing member or deficit to be provided by the member for the guarantee fund.";
 			maxOccurs = 1;
@@ -205,11 +208,10 @@ public class DefaultFundReport1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DefaultFundReport1.mmDefaultFundCalculation, com.tools20022.repository.msg.DefaultFundReport1.mmCollateralDescription,
-						com.tools20022.repository.msg.DefaultFundReport1.mmNetExcessOrDeficit);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.secl.DefaultFundContributionReportV02.mmReportDetails);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(DefaultFundReport1.mmDefaultFundCalculation, DefaultFundReport1.mmCollateralDescription, DefaultFundReport1.mmNetExcessOrDeficit);
+				messageBuildingBlock_lazy = () -> Arrays.asList(DefaultFundContributionReportV02.mmReportDetails);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DefaultFundReport1";
 				definition = "Provides details on the calculation of the default fund and the collateral that has been posted by the clearing member.";
 			}

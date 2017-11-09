@@ -20,7 +20,9 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ISODate;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -94,7 +96,7 @@ public class SecuritiesAccountStatement1 {
 			componentContext_lazy = () -> SecuritiesAccountStatement1.mmObject();
 			isDerived = false;
 			xmlTag = "SysDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SystemDate";
 			definition = "Date for which the statement is valid.";
 			maxOccurs = 1;
@@ -138,7 +140,7 @@ public class SecuritiesAccountStatement1 {
 			componentContext_lazy = () -> SecuritiesAccountStatement1.mmObject();
 			isDerived = false;
 			xmlTag = "Chng";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Change";
 			definition = "Provides information on the actual change occurred to a securities account.";
 			minOccurs = 0;
@@ -150,9 +152,9 @@ public class SecuritiesAccountStatement1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesAccountStatement1.mmSystemDate, com.tools20022.repository.msg.SecuritiesAccountStatement1.mmChange);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(SecuritiesAccountStatement1.mmSystemDate, SecuritiesAccountStatement1.mmChange);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SecuritiesAccountStatement1";
 				definition = "Provides system date for all of the changes occurred for an entity.";
 			}

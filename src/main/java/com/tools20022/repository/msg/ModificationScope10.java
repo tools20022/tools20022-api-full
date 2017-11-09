@@ -20,7 +20,12 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.acmt.AccountModificationInstructionV02;
+import com.tools20022.repository.area.acmt.AccountModificationInstructionV03;
+import com.tools20022.repository.area.acmt.AccountModificationInstructionV04;
 import com.tools20022.repository.codeset.DataModification1Code;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -127,10 +132,10 @@ public class ModificationScope10 {
 			componentContext_lazy = () -> ModificationScope10.mmObject();
 			isDerived = false;
 			xmlTag = "ModScpIndctn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ModificationScopeIndication";
 			definition = "Specifies the type of modification to be applied on a set of information.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ModificationScope22.mmModificationScopeIndication);
+			nextVersions_lazy = () -> Arrays.asList(ModificationScope22.mmModificationScopeIndication);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DataModification1Code.mmObject();
@@ -178,10 +183,10 @@ public class ModificationScope10 {
 			componentContext_lazy = () -> ModificationScope10.mmObject();
 			isDerived = false;
 			xmlTag = "SvcLvlAgrmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ServiceLevelAgreement";
 			definition = "Identification of information which is part of a service level agreement.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ModificationScope22.mmServiceLevelAgreement);
+			nextVersions_lazy = () -> Arrays.asList(ModificationScope22.mmServiceLevelAgreement);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -192,11 +197,11 @@ public class ModificationScope10 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ModificationScope10.mmModificationScopeIndication, com.tools20022.repository.msg.ModificationScope10.mmServiceLevelAgreement);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountModificationInstructionV02.mmModifiedServiceLevelAgreement,
-						com.tools20022.repository.area.acmt.AccountModificationInstructionV03.mmModifiedServiceLevelAgreement, com.tools20022.repository.area.acmt.AccountModificationInstructionV04.mmModifiedServiceLevelAgreement);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(ModificationScope10.mmModificationScopeIndication, ModificationScope10.mmServiceLevelAgreement);
+				messageBuildingBlock_lazy = () -> Arrays.asList(AccountModificationInstructionV02.mmModifiedServiceLevelAgreement, AccountModificationInstructionV03.mmModifiedServiceLevelAgreement,
+						AccountModificationInstructionV04.mmModifiedServiceLevelAgreement);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ModificationScope10";
 				definition = "Scope of the modification to be applied on an identified set of information.";
 				nextVersions_lazy = () -> Arrays.asList(ModificationScope22.mmObject());

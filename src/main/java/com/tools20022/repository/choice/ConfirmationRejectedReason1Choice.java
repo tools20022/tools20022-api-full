@@ -19,8 +19,10 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.RejectedConfirmationStatusReason1Code;
 import com.tools20022.repository.entity.SecuritiesOrderStatus;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.ConfirmationRejectedStatus2;
 import com.tools20022.repository.msg.GenericIdentification1;
 import java.util.Arrays;
@@ -109,14 +111,14 @@ public class ConfirmationRejectedReason1Choice {
 	 */
 	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrderStatus.mmConfirmationRejectedStatusReason;
+			businessElementTrace_lazy = () -> SecuritiesOrderStatus.mmConfirmationRejectedStatusReason;
 			componentContext_lazy = () -> ConfirmationRejectedReason1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Cd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Reason for the rejected status expressed as a code.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ConfirmationRejectedStatus2.mmReason;
+			previousVersion_lazy = () -> ConfirmationRejectedStatus2.mmReason;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RejectedConfirmationStatusReason1Code.mmObject();
@@ -156,7 +158,7 @@ public class ConfirmationRejectedReason1Choice {
 			componentContext_lazy = () -> ConfirmationRejectedReason1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Reason for the rejected status.";
 			maxOccurs = 1;
@@ -168,10 +170,10 @@ public class ConfirmationRejectedReason1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ConfirmationRejectedReason1Choice.mmCode, com.tools20022.repository.choice.ConfirmationRejectedReason1Choice.mmProprietary);
+				messageElement_lazy = () -> Arrays.asList(ConfirmationRejectedReason1Choice.mmCode, ConfirmationRejectedReason1Choice.mmProprietary);
 				trace_lazy = () -> SecuritiesOrderStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ConfirmationRejectedReason1Choice";
 				definition = "Choice of formats for a rejection reason for a confirmation.";
 				previousVersion_lazy = () -> ConfirmationRejectedStatus2.mmObject();

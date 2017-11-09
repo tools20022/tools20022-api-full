@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -86,7 +88,7 @@ public class NamePrefix1Code {
 	 */
 	public static final MMCode mmDoctor = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Doctor";
 			definition = "Title of the person is Doctor or Dr.";
 			owner_lazy = () -> NamePrefix1Code.mmObject();
@@ -116,7 +118,7 @@ public class NamePrefix1Code {
 	 */
 	public static final MMCode mmMister = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Mister";
 			definition = "Title of the person is Mister or Mr.";
 			owner_lazy = () -> NamePrefix1Code.mmObject();
@@ -146,7 +148,7 @@ public class NamePrefix1Code {
 	 */
 	public static final MMCode mmMiss = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Miss";
 			definition = "Title of the person is Miss.";
 			owner_lazy = () -> NamePrefix1Code.mmObject();
@@ -176,7 +178,7 @@ public class NamePrefix1Code {
 	 */
 	public static final MMCode mmMadam = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Madam";
 			definition = "Title of the person is Madam.";
 			owner_lazy = () -> NamePrefix1Code.mmObject();
@@ -187,13 +189,12 @@ public class NamePrefix1Code {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("DOCT");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "NamePrefix1Code";
 				definition = "Specifies the terms used to formally address a person.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.NamePrefix1Code.mmDoctor, com.tools20022.repository.codeset.NamePrefix1Code.mmMister, com.tools20022.repository.codeset.NamePrefix1Code.mmMiss,
-						com.tools20022.repository.codeset.NamePrefix1Code.mmMadam);
+				code_lazy = () -> Arrays.asList(NamePrefix1Code.mmDoctor, NamePrefix1Code.mmMister, NamePrefix1Code.mmMiss, NamePrefix1Code.mmMadam);
 			}
 		});
 		return mmObject_lazy.get();

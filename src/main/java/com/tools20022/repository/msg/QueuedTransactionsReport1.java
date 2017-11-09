@@ -20,9 +20,11 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.Number;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -101,7 +103,7 @@ public class QueuedTransactionsReport1 {
 			componentContext_lazy = () -> QueuedTransactionsReport1.mmObject();
 			isDerived = false;
 			xmlTag = "QTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QueueType";
 			definition = "List of queue names/ identifiers.";
 			maxOccurs = 1;
@@ -142,7 +144,7 @@ public class QueuedTransactionsReport1 {
 			componentContext_lazy = () -> QueuedTransactionsReport1.mmObject();
 			isDerived = false;
 			xmlTag = "NbOfTxs";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NumberOfTransactions";
 			definition = "Number of transactions in the queue.";
 			maxOccurs = 1;
@@ -184,7 +186,7 @@ public class QueuedTransactionsReport1 {
 			componentContext_lazy = () -> QueuedTransactionsReport1.mmObject();
 			isDerived = false;
 			xmlTag = "TtlAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalAmount";
 			definition = "Total amount of transactions in a given queue.";
 			maxOccurs = 1;
@@ -224,7 +226,7 @@ public class QueuedTransactionsReport1 {
 			componentContext_lazy = () -> QueuedTransactionsReport1.mmObject();
 			isDerived = false;
 			xmlTag = "BrkdwnByCtrPty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BreakdownByCounterparty";
 			definition = "Transaction details sorted by counterparty account.";
 			minOccurs = 0;
@@ -236,10 +238,10 @@ public class QueuedTransactionsReport1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.QueuedTransactionsReport1.mmQueueType, com.tools20022.repository.msg.QueuedTransactionsReport1.mmNumberOfTransactions,
-						com.tools20022.repository.msg.QueuedTransactionsReport1.mmTotalAmount, com.tools20022.repository.msg.QueuedTransactionsReport1.mmBreakdownByCounterparty);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays
+						.asList(QueuedTransactionsReport1.mmQueueType, QueuedTransactionsReport1.mmNumberOfTransactions, QueuedTransactionsReport1.mmTotalAmount, QueuedTransactionsReport1.mmBreakdownByCounterparty);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "QueuedTransactionsReport1";
 				definition = "Payment funds transfer instructions from intraday queue.";
 			}

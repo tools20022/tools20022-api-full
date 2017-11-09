@@ -19,10 +19,12 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
 import com.tools20022.repository.datatype.Max210Text;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.MarginCall;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -100,11 +102,11 @@ public class Amount1 {
 	 */
 	public static final MMMessageAttribute mmAgreedAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.MarginCall.mmAgreedAmount;
+			businessElementTrace_lazy = () -> MarginCall.mmAgreedAmount;
 			componentContext_lazy = () -> Amount1.mmObject();
 			isDerived = false;
 			xmlTag = "AgrdAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AgreedAmount";
 			definition = "Undisputed amount of the margin call request.";
 			maxOccurs = 1;
@@ -144,7 +146,7 @@ public class Amount1 {
 			componentContext_lazy = () -> Amount1.mmObject();
 			isDerived = false;
 			xmlTag = "MrgnCallReqId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarginCallRequestIdentification";
 			definition = "Unique identifier for the margin call request.";
 			maxOccurs = 1;
@@ -187,7 +189,7 @@ public class Amount1 {
 			componentContext_lazy = () -> Amount1.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInformation";
 			definition = "Provides additional information related to the margin call amount that has been agreed.";
 			maxOccurs = 1;
@@ -199,11 +201,10 @@ public class Amount1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Amount1.mmAgreedAmount, com.tools20022.repository.msg.Amount1.mmMarginCallRequestIdentification,
-						com.tools20022.repository.msg.Amount1.mmAdditionalInformation);
+				messageElement_lazy = () -> Arrays.asList(Amount1.mmAgreedAmount, Amount1.mmMarginCallRequestIdentification, Amount1.mmAdditionalInformation);
 				trace_lazy = () -> MarginCall.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Amount1";
 				definition = "Margin amount payable by one party to the other party.";
 			}

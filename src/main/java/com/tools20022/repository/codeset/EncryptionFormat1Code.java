@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.EncryptionFormatCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -79,7 +81,7 @@ public class EncryptionFormat1Code extends EncryptionFormatCode {
 	 */
 	public static final MMCode mmTR31 = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TR31";
 			owner_lazy = () -> EncryptionFormat1Code.mmObject();
 		}
@@ -102,7 +104,7 @@ public class EncryptionFormat1Code extends EncryptionFormatCode {
 	 */
 	public static final MMCode mmTR34 = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TR34";
 			owner_lazy = () -> EncryptionFormat1Code.mmObject();
 		}
@@ -111,11 +113,11 @@ public class EncryptionFormat1Code extends EncryptionFormatCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "EncryptionFormat1Code";
 				definition = "Format of data before encryption, if the format is not plaintext or implicit.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.EncryptionFormat1Code.mmTR31, com.tools20022.repository.codeset.EncryptionFormat1Code.mmTR34);
+				code_lazy = () -> Arrays.asList(EncryptionFormat1Code.mmTR31, EncryptionFormat1Code.mmTR34);
 				trace_lazy = () -> EncryptionFormatCode.mmObject();
 			}
 		});

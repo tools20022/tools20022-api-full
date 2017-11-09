@@ -20,9 +20,11 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -108,7 +110,7 @@ public class SecuritiesAccountReferenceDataChange1 {
 			componentContext_lazy = () -> SecuritiesAccountReferenceDataChange1.mmObject();
 			isDerived = false;
 			xmlTag = "SctiesAcctId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesAccountIdentification";
 			definition = "Identifies the securities account for which the changes are listed in the advice.";
 			maxOccurs = 1;
@@ -153,7 +155,7 @@ public class SecuritiesAccountReferenceDataChange1 {
 			componentContext_lazy = () -> SecuritiesAccountReferenceDataChange1.mmObject();
 			isDerived = false;
 			xmlTag = "FldNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FieldName";
 			definition = "Name of the element, as specified in the short tag name for the field in the message.";
 			maxOccurs = 1;
@@ -195,7 +197,7 @@ public class SecuritiesAccountReferenceDataChange1 {
 			componentContext_lazy = () -> SecuritiesAccountReferenceDataChange1.mmObject();
 			isDerived = false;
 			xmlTag = "OdFldVal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OldFieldValue";
 			definition = "Value of the related field before the change was applied.";
 			maxOccurs = 1;
@@ -236,7 +238,7 @@ public class SecuritiesAccountReferenceDataChange1 {
 			componentContext_lazy = () -> SecuritiesAccountReferenceDataChange1.mmObject();
 			isDerived = false;
 			xmlTag = "NewFldVal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewFieldValue";
 			definition = "Value of the related field after the change was applied.";
 			maxOccurs = 1;
@@ -277,7 +279,7 @@ public class SecuritiesAccountReferenceDataChange1 {
 			componentContext_lazy = () -> SecuritiesAccountReferenceDataChange1.mmObject();
 			isDerived = false;
 			xmlTag = "OprTmStmp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OperationTimeStamp";
 			definition = "Specifies the timestamp of the operation.";
 			maxOccurs = 1;
@@ -289,11 +291,10 @@ public class SecuritiesAccountReferenceDataChange1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesAccountReferenceDataChange1.mmSecuritiesAccountIdentification,
-						com.tools20022.repository.msg.SecuritiesAccountReferenceDataChange1.mmFieldName, com.tools20022.repository.msg.SecuritiesAccountReferenceDataChange1.mmOldFieldValue,
-						com.tools20022.repository.msg.SecuritiesAccountReferenceDataChange1.mmNewFieldValue, com.tools20022.repository.msg.SecuritiesAccountReferenceDataChange1.mmOperationTimeStamp);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(SecuritiesAccountReferenceDataChange1.mmSecuritiesAccountIdentification, SecuritiesAccountReferenceDataChange1.mmFieldName, SecuritiesAccountReferenceDataChange1.mmOldFieldValue,
+						SecuritiesAccountReferenceDataChange1.mmNewFieldValue, SecuritiesAccountReferenceDataChange1.mmOperationTimeStamp);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SecuritiesAccountReferenceDataChange1";
 				definition = "Describes the comparison between the currently established baseline elements and the proposed ones.";
 			}

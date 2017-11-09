@@ -17,10 +17,9 @@
 
 package com.tools20022.repository.entity;
 
-import com.tools20022.metamodel.MMBusinessAssociationEnd;
-import com.tools20022.metamodel.MMBusinessAttribute;
-import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.*;
 import com.tools20022.repository.datatype.DecimalNumber;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.PerformanceFactors1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -34,6 +33,26 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.PerformanceFactors1
+ * PerformanceFactors1}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.NetAssetValueCalculation#mmInvestmentFundPerformanceFactors
+ * NetAssetValueCalculation.mmInvestmentFundPerformanceFactors}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.DateTimePeriod#mmPerformanceFactors
+ * DateTimePeriod.mmPerformanceFactors}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -52,26 +71,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.entity.PerformanceFactors#mmNormalPerformance
  * PerformanceFactors.mmNormalPerformance}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.NetAssetValueCalculation#mmInvestmentFundPerformanceFactors
- * NetAssetValueCalculation.mmInvestmentFundPerformanceFactors}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.DateTimePeriod#mmPerformanceFactors
- * DateTimePeriod.mmPerformanceFactors}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.PerformanceFactors1
- * PerformanceFactors1}</li>
  * </ul>
  * </li>
  * <li>
@@ -132,13 +131,13 @@ public class PerformanceFactors {
 		{
 			elementContext_lazy = () -> PerformanceFactors.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NetAssetValueCalculation";
 			definition = "Calculation for which the performance factors are obtained.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.NetAssetValueCalculation.mmInvestmentFundPerformanceFactors;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.NetAssetValueCalculation.mmObject();
 		}
 	};
@@ -182,10 +181,10 @@ public class PerformanceFactors {
 	 */
 	public static final MMBusinessAttribute mmCorporateActionFactor = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PerformanceFactors1.mmCorporateActionFactor);
+			derivation_lazy = () -> Arrays.asList(PerformanceFactors1.mmCorporateActionFactor);
 			elementContext_lazy = () -> PerformanceFactors.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CorporateActionFactor";
 			definition = "Value of the NAV before all corporate events of the valuation date, divided by the value of the NAV after the corporate event.";
 			maxOccurs = 1;
@@ -234,10 +233,10 @@ public class PerformanceFactors {
 	 */
 	public static final MMBusinessAttribute mmCumulativeCorporateActionFactor = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PerformanceFactors1.mmCumulativeCorporateActionFactor);
+			derivation_lazy = () -> Arrays.asList(PerformanceFactors1.mmCumulativeCorporateActionFactor);
 			elementContext_lazy = () -> PerformanceFactors.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CumulativeCorporateActionFactor";
 			definition = "Value of the NAV before a corporate event, divided by the value of the NAV after the corporate event, accumulated for a number of corporate events over the defined period of time.";
 			maxOccurs = 1;
@@ -292,16 +291,16 @@ public class PerformanceFactors {
 	 */
 	public static final MMBusinessAssociationEnd mmAccumulationPeriod = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PerformanceFactors1.mmAccumulationPeriod);
+			derivation_lazy = () -> Arrays.asList(PerformanceFactors1.mmAccumulationPeriod);
 			elementContext_lazy = () -> PerformanceFactors.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AccumulationPeriod";
 			definition = "Period of time for the calculation of the cumulative corporate action factor.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmPerformanceFactors;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmObject();
 		}
 	};
@@ -342,10 +341,10 @@ public class PerformanceFactors {
 	 */
 	public static final MMBusinessAttribute mmNormalPerformance = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PerformanceFactors1.mmNormalPerformance);
+			derivation_lazy = () -> Arrays.asList(PerformanceFactors1.mmNormalPerformance);
 			elementContext_lazy = () -> PerformanceFactors.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NormalPerformance";
 			definition = "Normal performance value of the NAV.";
 			maxOccurs = 1;
@@ -357,14 +356,13 @@ public class PerformanceFactors {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PerformanceFactors";
 				definition = "Performance factors of the investment fund / fund class.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.NetAssetValueCalculation.mmInvestmentFundPerformanceFactors, com.tools20022.repository.entity.DateTimePeriod.mmPerformanceFactors);
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.PerformanceFactors.mmNetAssetValueCalculation, com.tools20022.repository.entity.PerformanceFactors.mmCorporateActionFactor,
-						com.tools20022.repository.entity.PerformanceFactors.mmCumulativeCorporateActionFactor, com.tools20022.repository.entity.PerformanceFactors.mmAccumulationPeriod,
-						com.tools20022.repository.entity.PerformanceFactors.mmNormalPerformance);
+				element_lazy = () -> Arrays.asList(PerformanceFactors.mmNetAssetValueCalculation, PerformanceFactors.mmCorporateActionFactor, PerformanceFactors.mmCumulativeCorporateActionFactor, PerformanceFactors.mmAccumulationPeriod,
+						PerformanceFactors.mmNormalPerformance);
 				derivationComponent_lazy = () -> Arrays.asList(PerformanceFactors1.mmObject());
 			}
 		});

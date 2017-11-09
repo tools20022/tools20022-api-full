@@ -20,10 +20,12 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.GarnishmentType1Choice;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.Document;
 import com.tools20022.repository.entity.DocumentIssuer;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -110,10 +112,10 @@ public class GarnishmentType1 {
 			componentContext_lazy = () -> GarnishmentType1.mmObject();
 			isDerived = false;
 			xmlTag = "CdOrPrtry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CodeOrProprietary";
 			definition = "Provides the type details of the garnishment.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ReferredDocumentType2.mmCodeOrProprietary;
+			previousVersion_lazy = () -> ReferredDocumentType2.mmCodeOrProprietary;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -164,10 +166,10 @@ public class GarnishmentType1 {
 			componentContext_lazy = () -> GarnishmentType1.mmObject();
 			isDerived = false;
 			xmlTag = "Issr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Issuer";
 			definition = "Identification of the issuer of the garnishment type.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ReferredDocumentType2.mmIssuer;
+			previousVersion_lazy = () -> ReferredDocumentType2.mmIssuer;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -177,10 +179,10 @@ public class GarnishmentType1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GarnishmentType1.mmCodeOrProprietary, com.tools20022.repository.msg.GarnishmentType1.mmIssuer);
+				messageElement_lazy = () -> Arrays.asList(GarnishmentType1.mmCodeOrProprietary, GarnishmentType1.mmIssuer);
 				trace_lazy = () -> Document.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "GarnishmentType1";
 				definition = "Specifies the type of garnishment.";
 				previousVersion_lazy = () -> ReferredDocumentType2.mmObject();

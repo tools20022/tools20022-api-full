@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.TransferStatusCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -92,7 +94,7 @@ public class TransferStatus4Code extends TransferStatusCode {
 	 */
 	public static final MMCode mmAccepted = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Accepted";
 			owner_lazy = () -> TransferStatus4Code.mmObject();
 		}
@@ -115,7 +117,7 @@ public class TransferStatus4Code extends TransferStatusCode {
 	 */
 	public static final MMCode mmAlreadyExecuted = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AlreadyExecuted";
 			owner_lazy = () -> TransferStatus4Code.mmObject();
 		}
@@ -138,7 +140,7 @@ public class TransferStatus4Code extends TransferStatusCode {
 	 */
 	public static final MMCode mmMatched = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Matched";
 			owner_lazy = () -> TransferStatus4Code.mmObject();
 		}
@@ -161,7 +163,7 @@ public class TransferStatus4Code extends TransferStatusCode {
 	 */
 	public static final MMCode mmReceived = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Received";
 			owner_lazy = () -> TransferStatus4Code.mmObject();
 		}
@@ -184,7 +186,7 @@ public class TransferStatus4Code extends TransferStatusCode {
 	 */
 	public static final MMCode mmSentToNextParty = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SentToNextParty";
 			owner_lazy = () -> TransferStatus4Code.mmObject();
 		}
@@ -207,7 +209,7 @@ public class TransferStatus4Code extends TransferStatusCode {
 	 */
 	public static final MMCode mmSettled = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Settled";
 			owner_lazy = () -> TransferStatus4Code.mmObject();
 		}
@@ -230,7 +232,7 @@ public class TransferStatus4Code extends TransferStatusCode {
 	 */
 	public static final MMCode mmComplete = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Complete";
 			owner_lazy = () -> TransferStatus4Code.mmObject();
 		}
@@ -239,13 +241,12 @@ public class TransferStatus4Code extends TransferStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TransferStatus4Code";
 				definition = "Specifies the transfer or settlement instruction status.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TransferStatus4Code.mmAccepted, com.tools20022.repository.codeset.TransferStatus4Code.mmAlreadyExecuted,
-						com.tools20022.repository.codeset.TransferStatus4Code.mmMatched, com.tools20022.repository.codeset.TransferStatus4Code.mmReceived, com.tools20022.repository.codeset.TransferStatus4Code.mmSentToNextParty,
-						com.tools20022.repository.codeset.TransferStatus4Code.mmSettled, com.tools20022.repository.codeset.TransferStatus4Code.mmComplete);
+				code_lazy = () -> Arrays.asList(TransferStatus4Code.mmAccepted, TransferStatus4Code.mmAlreadyExecuted, TransferStatus4Code.mmMatched, TransferStatus4Code.mmReceived, TransferStatus4Code.mmSentToNextParty,
+						TransferStatus4Code.mmSettled, TransferStatus4Code.mmComplete);
 				trace_lazy = () -> TransferStatusCode.mmObject();
 			}
 		});

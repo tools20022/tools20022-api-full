@@ -18,7 +18,9 @@
 package com.tools20022.repository.msgset;
 
 import com.tools20022.metamodel.MMMessageSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.caaa.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -109,8 +111,8 @@ public class CAPEAcceptortoAcquirerMaintenance20142015 {
 	final static public MMMessageSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageSet() {
 			{
-				businessProcessCatalogue_lazy = () -> com.tools20022.repository.GeneratedRepository.mmcatalogue;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				businessProcessCatalogue_lazy = () -> GeneratedRepository.mmcatalogue;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CAPE - Acceptor to Acquirer - Maintenance 2014 - 2015";
 				definition = "This document describes the Card Payments Exchanges - Acceptor to Acquirer message set. It includes the new candidate versions of the MessageDefinitions that have been impacted by the maintenance cycle 2014/2015 (MCR #92) and are submitted to the approval of the Cards Standards Evaluation Group as ISO 20022 MessageDefinitions.";
 				messageDefinition_lazy = () -> Arrays.asList(AcceptorCompletionAdviceV04.mmObject(), AcceptorDiagnosticResponseV04.mmObject(), AcceptorReconciliationResponseV04.mmObject(), AcceptorCurrencyConversionRequestV02.mmObject(),

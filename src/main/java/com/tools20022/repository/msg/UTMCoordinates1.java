@@ -19,8 +19,10 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max16Text;
 import com.tools20022.repository.datatype.Number;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -99,7 +101,7 @@ public class UTMCoordinates1 {
 			componentContext_lazy = () -> UTMCoordinates1.mmObject();
 			isDerived = false;
 			xmlTag = "UTMZone";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UTMZone";
 			definition = "UTM grid zone combination of the longitude zone (1 to 60) and the latitude band, C to X, excluding I and O (for example Eiffel tower UTM zone is 31U).";
 			maxOccurs = 1;
@@ -143,7 +145,7 @@ public class UTMCoordinates1 {
 			componentContext_lazy = () -> UTMCoordinates1.mmObject();
 			isDerived = false;
 			xmlTag = "UTMEstwrd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UTMEastward";
 			definition = "X-coordinate of the Universal Transverse Mercator coordinate system in meters (for example 448 265m for Eiffel Tower X-coordinate).";
 			maxOccurs = 1;
@@ -187,7 +189,7 @@ public class UTMCoordinates1 {
 			componentContext_lazy = () -> UTMCoordinates1.mmObject();
 			isDerived = false;
 			xmlTag = "UTMNrthwrd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UTMNorthward";
 			definition = "Y-coordinate of the Universal Transverse Mercator coordinate system (for example 5 411 920m for Eiffel Tower Y-coordinate).";
 			maxOccurs = 1;
@@ -199,9 +201,9 @@ public class UTMCoordinates1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UTMCoordinates1.mmUTMZone, com.tools20022.repository.msg.UTMCoordinates1.mmUTMEastward, com.tools20022.repository.msg.UTMCoordinates1.mmUTMNorthward);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(UTMCoordinates1.mmUTMZone, UTMCoordinates1.mmUTMEastward, UTMCoordinates1.mmUTMNorthward);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "UTMCoordinates1";
 				definition = "Location on the Earth specified by the Universal Transverse Mercator coordinate system, using the WGS84 geodesic system.";
 			}

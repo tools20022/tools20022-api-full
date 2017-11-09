@@ -17,13 +17,13 @@
 
 package com.tools20022.repository.entity;
 
-import com.tools20022.metamodel.MMBusinessAssociationEnd;
-import com.tools20022.metamodel.MMBusinessAttribute;
-import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.*;
+import com.tools20022.repository.choice.*;
 import com.tools20022.repository.codeset.*;
 import com.tools20022.repository.datatype.*;
 import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.entity.Security;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -39,6 +39,98 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.Debt1 Debt1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Debt2 Debt2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.DebtInstrument2
+ * DebtInstrument2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.DebtInstrument4
+ * DebtInstrument4}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.DebtInstrument5
+ * DebtInstrument5}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.DateTimePeriod#mmExtendiblePeriodDebt
+ * DateTimePeriod.mmExtendiblePeriodDebt}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.DateTimePeriod#mmCustomDateDebt
+ * DateTimePeriod.mmCustomDateDebt}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmMinimumDenominationDebt
+ * SecuritiesQuantity.mmMinimumDenominationDebt}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmMinimumIncrementDebt
+ * SecuritiesQuantity.mmMinimumIncrementDebt}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InterestCalculation#mmDebtInstrument
+ * InterestCalculation.mmDebtInstrument}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
+ * derivationElement} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.FinancialInstrumentProperties1Choice#mmDebt
+ * FinancialInstrumentProperties1Choice.mmDebt}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument28#mmDebt
+ * FinancialInstrument28.mmDebt}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SingleQuote1#mmStipulations
+ * SingleQuote1.mmStipulations}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SingleQuote1#mmUnderlyingStipulations
+ * SingleQuote1.mmUnderlyingStipulations}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.QuoteCancellation1Choice#mmStipulations
+ * QuoteCancellation1Choice.mmStipulations}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.QuoteCancellation1Choice#mmUnderlyingStipulations
+ * QuoteCancellation1Choice.mmUnderlyingStipulations}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.QuoteRequest1#mmStipulations
+ * QuoteRequest1.mmStipulations}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.QuoteRequest1#mmUnderlyingStipulations
+ * QuoteRequest1.mmUnderlyingStipulations}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.RequestForQuote#mmStipulations
+ * RequestForQuote.mmStipulations}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.RequestForQuote#mmUnderlyingStipulations
+ * RequestForQuote.mmUnderlyingStipulations}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Quote1#mmStipulations
+ * Quote1.mmStipulations}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.Quote1#mmUnderlyingStipulations
+ * Quote1.mmUnderlyingStipulations}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesReferenceDataReport5#mmDebtInstrumentAttributes
+ * SecuritiesReferenceDataReport5.mmDebtInstrumentAttributes}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.TransparencyDataReport10#mmBond
+ * TransparencyDataReport10.mmBond}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.InterestRateDerivative5#mmUnderlyingBond
+ * InterestRateDerivative5.mmUnderlyingBond}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecurityInstrumentDescription13#mmDebtInstrumentAttributes
+ * SecurityInstrumentDescription13.mmDebtInstrumentAttributes}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.Security Security}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
+ * subType} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.Loan Loan}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -183,98 +275,6 @@ import java.util.List;
  * Debt.mmDebtSeniority}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
- * subType} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Loan Loan}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.DateTimePeriod#mmExtendiblePeriodDebt
- * DateTimePeriod.mmExtendiblePeriodDebt}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.DateTimePeriod#mmCustomDateDebt
- * DateTimePeriod.mmCustomDateDebt}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmMinimumDenominationDebt
- * SecuritiesQuantity.mmMinimumDenominationDebt}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmMinimumIncrementDebt
- * SecuritiesQuantity.mmMinimumIncrementDebt}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InterestCalculation#mmDebtInstrument
- * InterestCalculation.mmDebtInstrument}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
- * derivationElement} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.choice.FinancialInstrumentProperties1Choice#mmDebt
- * FinancialInstrumentProperties1Choice.mmDebt}</li>
- * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument28#mmDebt
- * FinancialInstrument28.mmDebt}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SingleQuote1#mmStipulations
- * SingleQuote1.mmStipulations}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.SingleQuote1#mmUnderlyingStipulations
- * SingleQuote1.mmUnderlyingStipulations}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.QuoteCancellation1Choice#mmStipulations
- * QuoteCancellation1Choice.mmStipulations}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.QuoteCancellation1Choice#mmUnderlyingStipulations
- * QuoteCancellation1Choice.mmUnderlyingStipulations}</li>
- * <li>{@linkplain com.tools20022.repository.msg.QuoteRequest1#mmStipulations
- * QuoteRequest1.mmStipulations}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.QuoteRequest1#mmUnderlyingStipulations
- * QuoteRequest1.mmUnderlyingStipulations}</li>
- * <li>{@linkplain com.tools20022.repository.msg.RequestForQuote#mmStipulations
- * RequestForQuote.mmStipulations}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.RequestForQuote#mmUnderlyingStipulations
- * RequestForQuote.mmUnderlyingStipulations}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Quote1#mmStipulations
- * Quote1.mmStipulations}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.Quote1#mmUnderlyingStipulations
- * Quote1.mmUnderlyingStipulations}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesReferenceDataReport5#mmDebtInstrumentAttributes
- * SecuritiesReferenceDataReport5.mmDebtInstrumentAttributes}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.TransparencyDataReport10#mmBond
- * TransparencyDataReport10.mmBond}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.InterestRateDerivative5#mmUnderlyingBond
- * InterestRateDerivative5.mmUnderlyingBond}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.SecurityInstrumentDescription13#mmDebtInstrumentAttributes
- * SecurityInstrumentDescription13.mmDebtInstrumentAttributes}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.Security Security}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Debt1 Debt1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Debt2 Debt2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.DebtInstrument2
- * DebtInstrument2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.DebtInstrument4
- * DebtInstrument4}</li>
- * <li>{@linkplain com.tools20022.repository.msg.DebtInstrument5
- * DebtInstrument5}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -395,20 +395,15 @@ public class Debt extends Security {
 	 */
 	public static final MMBusinessAttribute mmPaymentDirectionIndicator = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PaymentDirection1Choice.mmIndicator, com.tools20022.repository.choice.PaymentDirection1Choice.mmProprietary,
-					com.tools20022.repository.choice.PaymentDirection2Choice.mmIndicator, com.tools20022.repository.choice.PaymentDirection2Choice.mmProprietary,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes8.mmPaymentDirection, com.tools20022.repository.msg.FinancialInstrumentAttributes20.mmPaymentDirection,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes4.mmPaymentDirection, com.tools20022.repository.choice.PaymentDirection3Choice.mmIndicator,
-					com.tools20022.repository.choice.PaymentDirection3Choice.mmProprietary, com.tools20022.repository.msg.FinancialInstrumentAttributes13.mmPaymentDirection,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes21.mmPaymentDirection, com.tools20022.repository.msg.FinancialInstrumentAttributes26.mmPaymentDirection,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes27.mmPaymentDirection, com.tools20022.repository.msg.FinancialInstrumentAttributes14.mmPaymentDirection,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes30.mmPaymentDirection, com.tools20022.repository.msg.FinancialInstrumentAttributes28.mmPaymentDirection,
-					com.tools20022.repository.msg.Debt1.mmPaymentDirectionIndicator, com.tools20022.repository.msg.FinancialInstrumentAttributes15.mmPaymentDirection,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes29.mmPaymentDirection, com.tools20022.repository.msg.Debt2.mmPaymentDirectionIndicator,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes2.mmPaymentDirection);
+			derivation_lazy = () -> Arrays.asList(PaymentDirection1Choice.mmIndicator, PaymentDirection1Choice.mmProprietary, PaymentDirection2Choice.mmIndicator, PaymentDirection2Choice.mmProprietary,
+					FinancialInstrumentAttributes8.mmPaymentDirection, FinancialInstrumentAttributes20.mmPaymentDirection, FinancialInstrumentAttributes4.mmPaymentDirection, PaymentDirection3Choice.mmIndicator,
+					PaymentDirection3Choice.mmProprietary, FinancialInstrumentAttributes13.mmPaymentDirection, FinancialInstrumentAttributes21.mmPaymentDirection, FinancialInstrumentAttributes26.mmPaymentDirection,
+					FinancialInstrumentAttributes27.mmPaymentDirection, FinancialInstrumentAttributes14.mmPaymentDirection, FinancialInstrumentAttributes30.mmPaymentDirection, FinancialInstrumentAttributes28.mmPaymentDirection,
+					Debt1.mmPaymentDirectionIndicator, FinancialInstrumentAttributes15.mmPaymentDirection, FinancialInstrumentAttributes29.mmPaymentDirection, Debt2.mmPaymentDirectionIndicator,
+					FinancialInstrumentAttributes2.mmPaymentDirection);
 			elementContext_lazy = () -> Debt.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PaymentDirectionIndicator";
 			definition = "Indicates the direction of payment for asset or mortgage backed securities, ie, whether the repaid capital is distributed (payment direction is down) or capitalized (payment direction is up).";
 			maxOccurs = 1;
@@ -638,40 +633,25 @@ public class Debt extends Security {
 	 */
 	public static final MMBusinessAttribute mmNextCallableDate = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrumentAttributes8.mmNextCallableDate, com.tools20022.repository.msg.FinancialInstrumentAttributes20.mmNextCallableDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes35.mmNextCallableDate, com.tools20022.repository.msg.FinancialInstrumentAttributes41.mmNextCallableDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes6.mmNextCallableDate, com.tools20022.repository.msg.FinancialInstrumentAttributes9.mmNextCallableDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes18.mmNextCallableDate, com.tools20022.repository.msg.FinancialInstrumentAttributes22.mmNextCallableDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes32.mmNextCallableDate, com.tools20022.repository.msg.FinancialInstrumentAttributes38.mmNextCallableDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes7.mmNextCallableDate, com.tools20022.repository.msg.FinancialInstrumentAttributes5.mmNextCallableDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes11.mmNextCallableDate, com.tools20022.repository.msg.FinancialInstrumentAttributes10.mmNextCallableDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes19.mmNextCallableDate, com.tools20022.repository.msg.FinancialInstrumentAttributes16.mmNextCallableDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes23.mmNextCallableDate, com.tools20022.repository.msg.FinancialInstrumentAttributes24.mmNextCallableDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes33.mmNextCallableDate, com.tools20022.repository.msg.FinancialInstrumentAttributes34.mmNextCallableDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes39.mmNextCallableDate, com.tools20022.repository.msg.FinancialInstrumentAttributes40.mmNextCallableDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes43.mmNextCallableDate, com.tools20022.repository.msg.FinancialInstrumentAttributes45.mmNextCallableDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes4.mmNextCallableDate, com.tools20022.repository.msg.FinancialInstrumentAttributes13.mmNextCallableDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes21.mmNextCallableDate, com.tools20022.repository.msg.FinancialInstrumentAttributes26.mmNextCallableDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes36.mmNextCallableDate, com.tools20022.repository.msg.FinancialInstrumentAttributes42.mmNextCallableDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes27.mmNextCallableDate, com.tools20022.repository.msg.FinancialInstrumentAttributes14.mmNextCallableDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes30.mmNextCallableDate, com.tools20022.repository.msg.FinancialInstrumentAttributes28.mmNextCallableDate, com.tools20022.repository.msg.Debt1.mmNextCallableDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes31.mmNextCallableDate, com.tools20022.repository.msg.FinancialInstrumentAttributes44.mmNextCallableDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes15.mmNextCallableDate, com.tools20022.repository.msg.FinancialInstrumentAttributes29.mmNextCallableDate, com.tools20022.repository.msg.Debt2.mmNextCallableDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes2.mmNextCallableDate, com.tools20022.repository.msg.FinancialInstrumentAttributes48.mmNextCallableDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes50.mmNextCallableDate, com.tools20022.repository.msg.FinancialInstrumentAttributes49.mmNextCallableDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes55.mmNextCallableDate, com.tools20022.repository.msg.FinancialInstrumentAttributes57.mmNextCallableDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes56.mmNextCallableDate, com.tools20022.repository.msg.FinancialInstrumentAttributes63.mmNextCallableDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes64.mmNextCallableDate, com.tools20022.repository.msg.FinancialInstrumentAttributes66.mmNextCallableDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes65.mmNextCallableDate, com.tools20022.repository.msg.FinancialInstrumentAttributes67.mmNextCallableDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes70.mmNextCallableDate, com.tools20022.repository.msg.FinancialInstrumentAttributes69.mmNextCallableDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes71.mmNextCallableDate, com.tools20022.repository.msg.FinancialInstrumentAttributes75.mmNextCallableDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes78.mmNextCallableDate, com.tools20022.repository.msg.FinancialInstrumentAttributes79.mmNextCallableDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes81.mmNextCallableDate, com.tools20022.repository.msg.FinancialInstrumentAttributes80.mmNextCallableDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes85.mmNextCallableDate, com.tools20022.repository.msg.FinancialInstrumentAttributes84.mmNextCallableDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes83.mmNextCallableDate);
+			derivation_lazy = () -> Arrays.asList(FinancialInstrumentAttributes8.mmNextCallableDate, FinancialInstrumentAttributes20.mmNextCallableDate, FinancialInstrumentAttributes35.mmNextCallableDate,
+					FinancialInstrumentAttributes41.mmNextCallableDate, FinancialInstrumentAttributes6.mmNextCallableDate, FinancialInstrumentAttributes9.mmNextCallableDate, FinancialInstrumentAttributes18.mmNextCallableDate,
+					FinancialInstrumentAttributes22.mmNextCallableDate, FinancialInstrumentAttributes32.mmNextCallableDate, FinancialInstrumentAttributes38.mmNextCallableDate, FinancialInstrumentAttributes7.mmNextCallableDate,
+					FinancialInstrumentAttributes5.mmNextCallableDate, FinancialInstrumentAttributes11.mmNextCallableDate, FinancialInstrumentAttributes10.mmNextCallableDate, FinancialInstrumentAttributes19.mmNextCallableDate,
+					FinancialInstrumentAttributes16.mmNextCallableDate, FinancialInstrumentAttributes23.mmNextCallableDate, FinancialInstrumentAttributes24.mmNextCallableDate, FinancialInstrumentAttributes33.mmNextCallableDate,
+					FinancialInstrumentAttributes34.mmNextCallableDate, FinancialInstrumentAttributes39.mmNextCallableDate, FinancialInstrumentAttributes40.mmNextCallableDate, FinancialInstrumentAttributes43.mmNextCallableDate,
+					FinancialInstrumentAttributes45.mmNextCallableDate, FinancialInstrumentAttributes4.mmNextCallableDate, FinancialInstrumentAttributes13.mmNextCallableDate, FinancialInstrumentAttributes21.mmNextCallableDate,
+					FinancialInstrumentAttributes26.mmNextCallableDate, FinancialInstrumentAttributes36.mmNextCallableDate, FinancialInstrumentAttributes42.mmNextCallableDate, FinancialInstrumentAttributes27.mmNextCallableDate,
+					FinancialInstrumentAttributes14.mmNextCallableDate, FinancialInstrumentAttributes30.mmNextCallableDate, FinancialInstrumentAttributes28.mmNextCallableDate, Debt1.mmNextCallableDate,
+					FinancialInstrumentAttributes31.mmNextCallableDate, FinancialInstrumentAttributes44.mmNextCallableDate, FinancialInstrumentAttributes15.mmNextCallableDate, FinancialInstrumentAttributes29.mmNextCallableDate,
+					Debt2.mmNextCallableDate, FinancialInstrumentAttributes2.mmNextCallableDate, FinancialInstrumentAttributes48.mmNextCallableDate, FinancialInstrumentAttributes50.mmNextCallableDate,
+					FinancialInstrumentAttributes49.mmNextCallableDate, FinancialInstrumentAttributes55.mmNextCallableDate, FinancialInstrumentAttributes57.mmNextCallableDate, FinancialInstrumentAttributes56.mmNextCallableDate,
+					FinancialInstrumentAttributes63.mmNextCallableDate, FinancialInstrumentAttributes64.mmNextCallableDate, FinancialInstrumentAttributes66.mmNextCallableDate, FinancialInstrumentAttributes65.mmNextCallableDate,
+					FinancialInstrumentAttributes67.mmNextCallableDate, FinancialInstrumentAttributes70.mmNextCallableDate, FinancialInstrumentAttributes69.mmNextCallableDate, FinancialInstrumentAttributes71.mmNextCallableDate,
+					FinancialInstrumentAttributes75.mmNextCallableDate, FinancialInstrumentAttributes78.mmNextCallableDate, FinancialInstrumentAttributes79.mmNextCallableDate, FinancialInstrumentAttributes81.mmNextCallableDate,
+					FinancialInstrumentAttributes80.mmNextCallableDate, FinancialInstrumentAttributes85.mmNextCallableDate, FinancialInstrumentAttributes84.mmNextCallableDate, FinancialInstrumentAttributes83.mmNextCallableDate);
 			elementContext_lazy = () -> Debt.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NextCallableDate";
 			definition = "Next date/time at which the issuer has the right to pay the securitiy prior to maturity.";
 			maxOccurs = 1;
@@ -901,40 +881,25 @@ public class Debt extends Security {
 	 */
 	public static final MMBusinessAttribute mmPutableDate = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrumentAttributes8.mmPutableDate, com.tools20022.repository.msg.FinancialInstrumentAttributes20.mmPutableDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes35.mmPutableDate, com.tools20022.repository.msg.FinancialInstrumentAttributes41.mmPutableDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes6.mmPutableDate, com.tools20022.repository.msg.FinancialInstrumentAttributes9.mmPutableDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes18.mmPutableDate, com.tools20022.repository.msg.FinancialInstrumentAttributes22.mmPutableDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes32.mmPutableDate, com.tools20022.repository.msg.FinancialInstrumentAttributes38.mmPutableDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes7.mmPutableDate, com.tools20022.repository.msg.FinancialInstrumentAttributes5.mmPutableDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes11.mmPutableDate, com.tools20022.repository.msg.FinancialInstrumentAttributes10.mmPutableDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes19.mmPutableDate, com.tools20022.repository.msg.FinancialInstrumentAttributes16.mmPutableDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes23.mmPutableDate, com.tools20022.repository.msg.FinancialInstrumentAttributes24.mmPutableDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes33.mmPutableDate, com.tools20022.repository.msg.FinancialInstrumentAttributes34.mmPutableDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes39.mmPutableDate, com.tools20022.repository.msg.FinancialInstrumentAttributes40.mmPutableDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes43.mmPutableDate, com.tools20022.repository.msg.FinancialInstrumentAttributes45.mmPutableDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes4.mmPutableDate, com.tools20022.repository.msg.FinancialInstrumentAttributes13.mmPutableDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes21.mmPutableDate, com.tools20022.repository.msg.FinancialInstrumentAttributes26.mmPutableDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes36.mmPutableDate, com.tools20022.repository.msg.FinancialInstrumentAttributes42.mmPutableDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes27.mmPutableDate, com.tools20022.repository.msg.FinancialInstrumentAttributes14.mmPutableDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes30.mmPutableDate, com.tools20022.repository.msg.FinancialInstrumentAttributes28.mmPutableDate, com.tools20022.repository.msg.Debt1.mmPutableDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes31.mmPutableDate, com.tools20022.repository.msg.FinancialInstrumentAttributes44.mmPutableDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes15.mmPutableDate, com.tools20022.repository.msg.FinancialInstrumentAttributes29.mmPutableDate, com.tools20022.repository.msg.Debt2.mmPutableDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes2.mmPutableDate, com.tools20022.repository.msg.FinancialInstrumentAttributes48.mmPutableDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes50.mmPutableDate, com.tools20022.repository.msg.FinancialInstrumentAttributes49.mmPutableDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes55.mmPutableDate, com.tools20022.repository.msg.FinancialInstrumentAttributes57.mmPutableDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes56.mmPutableDate, com.tools20022.repository.msg.FinancialInstrumentAttributes63.mmPutableDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes64.mmPutableDate, com.tools20022.repository.msg.FinancialInstrumentAttributes66.mmPutableDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes65.mmPutableDate, com.tools20022.repository.msg.FinancialInstrumentAttributes67.mmPutableDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes70.mmPutableDate, com.tools20022.repository.msg.FinancialInstrumentAttributes69.mmPutableDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes71.mmPutableDate, com.tools20022.repository.msg.FinancialInstrumentAttributes75.mmPutableDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes78.mmPutableDate, com.tools20022.repository.msg.FinancialInstrumentAttributes79.mmPutableDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes81.mmPutableDate, com.tools20022.repository.msg.FinancialInstrumentAttributes80.mmPutableDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes85.mmPutableDate, com.tools20022.repository.msg.FinancialInstrumentAttributes84.mmPutableDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes83.mmPutableDate);
+			derivation_lazy = () -> Arrays.asList(FinancialInstrumentAttributes8.mmPutableDate, FinancialInstrumentAttributes20.mmPutableDate, FinancialInstrumentAttributes35.mmPutableDate, FinancialInstrumentAttributes41.mmPutableDate,
+					FinancialInstrumentAttributes6.mmPutableDate, FinancialInstrumentAttributes9.mmPutableDate, FinancialInstrumentAttributes18.mmPutableDate, FinancialInstrumentAttributes22.mmPutableDate,
+					FinancialInstrumentAttributes32.mmPutableDate, FinancialInstrumentAttributes38.mmPutableDate, FinancialInstrumentAttributes7.mmPutableDate, FinancialInstrumentAttributes5.mmPutableDate,
+					FinancialInstrumentAttributes11.mmPutableDate, FinancialInstrumentAttributes10.mmPutableDate, FinancialInstrumentAttributes19.mmPutableDate, FinancialInstrumentAttributes16.mmPutableDate,
+					FinancialInstrumentAttributes23.mmPutableDate, FinancialInstrumentAttributes24.mmPutableDate, FinancialInstrumentAttributes33.mmPutableDate, FinancialInstrumentAttributes34.mmPutableDate,
+					FinancialInstrumentAttributes39.mmPutableDate, FinancialInstrumentAttributes40.mmPutableDate, FinancialInstrumentAttributes43.mmPutableDate, FinancialInstrumentAttributes45.mmPutableDate,
+					FinancialInstrumentAttributes4.mmPutableDate, FinancialInstrumentAttributes13.mmPutableDate, FinancialInstrumentAttributes21.mmPutableDate, FinancialInstrumentAttributes26.mmPutableDate,
+					FinancialInstrumentAttributes36.mmPutableDate, FinancialInstrumentAttributes42.mmPutableDate, FinancialInstrumentAttributes27.mmPutableDate, FinancialInstrumentAttributes14.mmPutableDate,
+					FinancialInstrumentAttributes30.mmPutableDate, FinancialInstrumentAttributes28.mmPutableDate, Debt1.mmPutableDate, FinancialInstrumentAttributes31.mmPutableDate, FinancialInstrumentAttributes44.mmPutableDate,
+					FinancialInstrumentAttributes15.mmPutableDate, FinancialInstrumentAttributes29.mmPutableDate, Debt2.mmPutableDate, FinancialInstrumentAttributes2.mmPutableDate, FinancialInstrumentAttributes48.mmPutableDate,
+					FinancialInstrumentAttributes50.mmPutableDate, FinancialInstrumentAttributes49.mmPutableDate, FinancialInstrumentAttributes55.mmPutableDate, FinancialInstrumentAttributes57.mmPutableDate,
+					FinancialInstrumentAttributes56.mmPutableDate, FinancialInstrumentAttributes63.mmPutableDate, FinancialInstrumentAttributes64.mmPutableDate, FinancialInstrumentAttributes66.mmPutableDate,
+					FinancialInstrumentAttributes65.mmPutableDate, FinancialInstrumentAttributes67.mmPutableDate, FinancialInstrumentAttributes70.mmPutableDate, FinancialInstrumentAttributes69.mmPutableDate,
+					FinancialInstrumentAttributes71.mmPutableDate, FinancialInstrumentAttributes75.mmPutableDate, FinancialInstrumentAttributes78.mmPutableDate, FinancialInstrumentAttributes79.mmPutableDate,
+					FinancialInstrumentAttributes81.mmPutableDate, FinancialInstrumentAttributes80.mmPutableDate, FinancialInstrumentAttributes85.mmPutableDate, FinancialInstrumentAttributes84.mmPutableDate,
+					FinancialInstrumentAttributes83.mmPutableDate);
 			elementContext_lazy = () -> Debt.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PutableDate";
 			definition = "Date at which the holder has the right to ask for redemption of the security prior to final maturity.";
 			maxOccurs = 1;
@@ -1162,40 +1127,25 @@ public class Debt extends Security {
 	 */
 	public static final MMBusinessAttribute mmDatedDate = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrumentAttributes8.mmDatedDate, com.tools20022.repository.msg.FinancialInstrumentAttributes20.mmDatedDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes35.mmDatedDate, com.tools20022.repository.msg.FinancialInstrumentAttributes41.mmDatedDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes6.mmDatedDate, com.tools20022.repository.msg.FinancialInstrumentAttributes9.mmDatedDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes18.mmDatedDate, com.tools20022.repository.msg.FinancialInstrumentAttributes22.mmDatedDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes32.mmDatedDate, com.tools20022.repository.msg.FinancialInstrumentAttributes38.mmDatedDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes7.mmDatedDate, com.tools20022.repository.msg.FinancialInstrumentAttributes5.mmDatedDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes11.mmDatedDate, com.tools20022.repository.msg.FinancialInstrumentAttributes10.mmDatedDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes19.mmDatedDate, com.tools20022.repository.msg.FinancialInstrumentAttributes16.mmDatedDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes23.mmDatedDate, com.tools20022.repository.msg.FinancialInstrumentAttributes24.mmDatedDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes33.mmDatedDate, com.tools20022.repository.msg.FinancialInstrumentAttributes34.mmDatedDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes39.mmDatedDate, com.tools20022.repository.msg.FinancialInstrumentAttributes40.mmDatedDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes43.mmDatedDate, com.tools20022.repository.msg.FinancialInstrumentAttributes45.mmDatedDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes4.mmDatedDate, com.tools20022.repository.msg.FinancialInstrumentAttributes13.mmDatedDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes21.mmDatedDate, com.tools20022.repository.msg.FinancialInstrumentAttributes26.mmDatedDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes36.mmDatedDate, com.tools20022.repository.msg.FinancialInstrumentAttributes42.mmDatedDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes27.mmDatedDate, com.tools20022.repository.msg.FinancialInstrumentAttributes14.mmDatedDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes30.mmDatedDate, com.tools20022.repository.msg.FinancialInstrumentAttributes28.mmDatedDate, com.tools20022.repository.msg.Debt1.mmDatedDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes31.mmDatedDate, com.tools20022.repository.msg.FinancialInstrumentAttributes44.mmDatedDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes15.mmDatedDate, com.tools20022.repository.msg.FinancialInstrumentAttributes29.mmDatedDate, com.tools20022.repository.msg.Debt2.mmDatedDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes2.mmDatedDate, com.tools20022.repository.msg.FinancialInstrumentAttributes48.mmDatedDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes50.mmDatedDate, com.tools20022.repository.msg.FinancialInstrumentAttributes49.mmDatedDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes55.mmDatedDate, com.tools20022.repository.msg.FinancialInstrumentAttributes57.mmDatedDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes56.mmDatedDate, com.tools20022.repository.msg.FinancialInstrumentAttributes63.mmDatedDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes64.mmDatedDate, com.tools20022.repository.msg.FinancialInstrumentAttributes66.mmDatedDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes65.mmDatedDate, com.tools20022.repository.msg.FinancialInstrumentAttributes67.mmDatedDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes70.mmDatedDate, com.tools20022.repository.msg.FinancialInstrumentAttributes69.mmDatedDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes71.mmDatedDate, com.tools20022.repository.msg.FinancialInstrumentAttributes75.mmDatedDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes78.mmDatedDate, com.tools20022.repository.msg.FinancialInstrumentAttributes79.mmDatedDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes81.mmDatedDate, com.tools20022.repository.msg.FinancialInstrumentAttributes80.mmDatedDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes85.mmDatedDate, com.tools20022.repository.msg.FinancialInstrumentAttributes84.mmDatedDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes83.mmDatedDate);
+			derivation_lazy = () -> Arrays.asList(FinancialInstrumentAttributes8.mmDatedDate, FinancialInstrumentAttributes20.mmDatedDate, FinancialInstrumentAttributes35.mmDatedDate, FinancialInstrumentAttributes41.mmDatedDate,
+					FinancialInstrumentAttributes6.mmDatedDate, FinancialInstrumentAttributes9.mmDatedDate, FinancialInstrumentAttributes18.mmDatedDate, FinancialInstrumentAttributes22.mmDatedDate,
+					FinancialInstrumentAttributes32.mmDatedDate, FinancialInstrumentAttributes38.mmDatedDate, FinancialInstrumentAttributes7.mmDatedDate, FinancialInstrumentAttributes5.mmDatedDate,
+					FinancialInstrumentAttributes11.mmDatedDate, FinancialInstrumentAttributes10.mmDatedDate, FinancialInstrumentAttributes19.mmDatedDate, FinancialInstrumentAttributes16.mmDatedDate,
+					FinancialInstrumentAttributes23.mmDatedDate, FinancialInstrumentAttributes24.mmDatedDate, FinancialInstrumentAttributes33.mmDatedDate, FinancialInstrumentAttributes34.mmDatedDate,
+					FinancialInstrumentAttributes39.mmDatedDate, FinancialInstrumentAttributes40.mmDatedDate, FinancialInstrumentAttributes43.mmDatedDate, FinancialInstrumentAttributes45.mmDatedDate,
+					FinancialInstrumentAttributes4.mmDatedDate, FinancialInstrumentAttributes13.mmDatedDate, FinancialInstrumentAttributes21.mmDatedDate, FinancialInstrumentAttributes26.mmDatedDate,
+					FinancialInstrumentAttributes36.mmDatedDate, FinancialInstrumentAttributes42.mmDatedDate, FinancialInstrumentAttributes27.mmDatedDate, FinancialInstrumentAttributes14.mmDatedDate,
+					FinancialInstrumentAttributes30.mmDatedDate, FinancialInstrumentAttributes28.mmDatedDate, Debt1.mmDatedDate, FinancialInstrumentAttributes31.mmDatedDate, FinancialInstrumentAttributes44.mmDatedDate,
+					FinancialInstrumentAttributes15.mmDatedDate, FinancialInstrumentAttributes29.mmDatedDate, Debt2.mmDatedDate, FinancialInstrumentAttributes2.mmDatedDate, FinancialInstrumentAttributes48.mmDatedDate,
+					FinancialInstrumentAttributes50.mmDatedDate, FinancialInstrumentAttributes49.mmDatedDate, FinancialInstrumentAttributes55.mmDatedDate, FinancialInstrumentAttributes57.mmDatedDate,
+					FinancialInstrumentAttributes56.mmDatedDate, FinancialInstrumentAttributes63.mmDatedDate, FinancialInstrumentAttributes64.mmDatedDate, FinancialInstrumentAttributes66.mmDatedDate,
+					FinancialInstrumentAttributes65.mmDatedDate, FinancialInstrumentAttributes67.mmDatedDate, FinancialInstrumentAttributes70.mmDatedDate, FinancialInstrumentAttributes69.mmDatedDate,
+					FinancialInstrumentAttributes71.mmDatedDate, FinancialInstrumentAttributes75.mmDatedDate, FinancialInstrumentAttributes78.mmDatedDate, FinancialInstrumentAttributes79.mmDatedDate,
+					FinancialInstrumentAttributes81.mmDatedDate, FinancialInstrumentAttributes80.mmDatedDate, FinancialInstrumentAttributes85.mmDatedDate, FinancialInstrumentAttributes84.mmDatedDate,
+					FinancialInstrumentAttributes83.mmDatedDate);
 			elementContext_lazy = () -> Debt.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DatedDate";
 			definition = "First date/time at which a security begins to accrue interest.";
 			maxOccurs = 1;
@@ -1311,21 +1261,16 @@ public class Debt extends Security {
 	 */
 	public static final MMBusinessAttribute mmFirstPaymentDate = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrumentAttributes8.mmFirstPaymentDate, com.tools20022.repository.msg.FinancialInstrumentAttributes20.mmFirstPaymentDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes35.mmFirstPaymentDate, com.tools20022.repository.msg.FinancialInstrumentAttributes41.mmFirstPaymentDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes4.mmFirstPaymentDate, com.tools20022.repository.msg.FinancialInstrumentAttributes13.mmFirstPaymentDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes21.mmFirstPaymentDate, com.tools20022.repository.msg.FinancialInstrumentAttributes26.mmFirstPaymentDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes36.mmFirstPaymentDate, com.tools20022.repository.msg.FinancialInstrumentAttributes42.mmFirstPaymentDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes27.mmFirstPaymentDate, com.tools20022.repository.msg.FinancialInstrumentAttributes14.mmFirstPaymentDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes30.mmFirstPaymentDate, com.tools20022.repository.msg.FinancialInstrumentAttributes28.mmFirstPaymentDate, com.tools20022.repository.msg.Debt1.mmFirstPaymentDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes31.mmFirstPaymentDate, com.tools20022.repository.msg.FinancialInstrumentAttributes44.mmFirstPaymentDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes15.mmFirstPaymentDate, com.tools20022.repository.msg.FinancialInstrumentAttributes29.mmFirstPaymentDate, com.tools20022.repository.msg.Debt2.mmFirstPaymentDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes2.mmFirstPaymentDate, com.tools20022.repository.msg.FinancialInstrumentAttributes63.mmFirstPaymentDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes64.mmFirstPaymentDate, com.tools20022.repository.msg.FinancialInstrumentAttributes75.mmFirstPaymentDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes78.mmFirstPaymentDate);
+			derivation_lazy = () -> Arrays.asList(FinancialInstrumentAttributes8.mmFirstPaymentDate, FinancialInstrumentAttributes20.mmFirstPaymentDate, FinancialInstrumentAttributes35.mmFirstPaymentDate,
+					FinancialInstrumentAttributes41.mmFirstPaymentDate, FinancialInstrumentAttributes4.mmFirstPaymentDate, FinancialInstrumentAttributes13.mmFirstPaymentDate, FinancialInstrumentAttributes21.mmFirstPaymentDate,
+					FinancialInstrumentAttributes26.mmFirstPaymentDate, FinancialInstrumentAttributes36.mmFirstPaymentDate, FinancialInstrumentAttributes42.mmFirstPaymentDate, FinancialInstrumentAttributes27.mmFirstPaymentDate,
+					FinancialInstrumentAttributes14.mmFirstPaymentDate, FinancialInstrumentAttributes30.mmFirstPaymentDate, FinancialInstrumentAttributes28.mmFirstPaymentDate, Debt1.mmFirstPaymentDate,
+					FinancialInstrumentAttributes31.mmFirstPaymentDate, FinancialInstrumentAttributes44.mmFirstPaymentDate, FinancialInstrumentAttributes15.mmFirstPaymentDate, FinancialInstrumentAttributes29.mmFirstPaymentDate,
+					Debt2.mmFirstPaymentDate, FinancialInstrumentAttributes2.mmFirstPaymentDate, FinancialInstrumentAttributes63.mmFirstPaymentDate, FinancialInstrumentAttributes64.mmFirstPaymentDate,
+					FinancialInstrumentAttributes75.mmFirstPaymentDate, FinancialInstrumentAttributes78.mmFirstPaymentDate);
 			elementContext_lazy = () -> Debt.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "FirstPaymentDate";
 			definition = "Date/time at which the first interest payment is due to holders of the security.";
 			maxOccurs = 1;
@@ -1901,91 +1846,52 @@ public class Debt extends Security {
 	 */
 	public static final MMBusinessAttribute mmFactor = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrumentAttributes8.mmPreviousFactor, com.tools20022.repository.msg.FinancialInstrumentAttributes8.mmCurrentFactor,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes8.mmNextFactor, com.tools20022.repository.msg.FinancialInstrumentAttributes20.mmPreviousFactor,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes20.mmCurrentFactor, com.tools20022.repository.msg.FinancialInstrumentAttributes20.mmNextFactor,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes35.mmPreviousFactor, com.tools20022.repository.msg.FinancialInstrumentAttributes35.mmCurrentFactor,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes35.mmNextFactor, com.tools20022.repository.msg.FinancialInstrumentAttributes41.mmPreviousFactor,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes41.mmCurrentFactor, com.tools20022.repository.msg.FinancialInstrumentAttributes41.mmNextFactor,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes6.mmPreviousFactor, com.tools20022.repository.msg.FinancialInstrumentAttributes6.mmNextFactor,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes9.mmPreviousFactor, com.tools20022.repository.msg.FinancialInstrumentAttributes9.mmNextFactor,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes18.mmPreviousFactor, com.tools20022.repository.msg.FinancialInstrumentAttributes18.mmNextFactor,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes22.mmPreviousFactor, com.tools20022.repository.msg.FinancialInstrumentAttributes22.mmNextFactor,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes32.mmPreviousFactor, com.tools20022.repository.msg.FinancialInstrumentAttributes32.mmNextFactor,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes38.mmPreviousFactor, com.tools20022.repository.msg.FinancialInstrumentAttributes38.mmNextFactor,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes7.mmPreviousFactor, com.tools20022.repository.msg.FinancialInstrumentAttributes7.mmNextFactor,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes5.mmPreviousFactor, com.tools20022.repository.msg.FinancialInstrumentAttributes5.mmNextFactor,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes11.mmPreviousFactor, com.tools20022.repository.msg.FinancialInstrumentAttributes11.mmNextFactor,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes10.mmPreviousFactor, com.tools20022.repository.msg.FinancialInstrumentAttributes10.mmNextFactor,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes19.mmPreviousFactor, com.tools20022.repository.msg.FinancialInstrumentAttributes19.mmNextFactor,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes16.mmPreviousFactor, com.tools20022.repository.msg.FinancialInstrumentAttributes16.mmNextFactor,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes23.mmPreviousFactor, com.tools20022.repository.msg.FinancialInstrumentAttributes23.mmNextFactor,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes24.mmPreviousFactor, com.tools20022.repository.msg.FinancialInstrumentAttributes24.mmNextFactor,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes33.mmPreviousFactor, com.tools20022.repository.msg.FinancialInstrumentAttributes33.mmNextFactor,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes34.mmPreviousFactor, com.tools20022.repository.msg.FinancialInstrumentAttributes34.mmNextFactor,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes39.mmPreviousFactor, com.tools20022.repository.msg.FinancialInstrumentAttributes39.mmNextFactor,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes40.mmPreviousFactor, com.tools20022.repository.msg.FinancialInstrumentAttributes40.mmNextFactor,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes43.mmPreviousFactor, com.tools20022.repository.msg.FinancialInstrumentAttributes43.mmNextFactor,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes45.mmPreviousFactor, com.tools20022.repository.msg.FinancialInstrumentAttributes45.mmNextFactor,
-					com.tools20022.repository.msg.CorporateActionRate3.mmPreviousFactor, com.tools20022.repository.msg.CorporateActionRate3.mmNextFactor, com.tools20022.repository.msg.CorporateActionRate14.mmPreviousFactor,
-					com.tools20022.repository.msg.CorporateActionRate14.mmNextFactor, com.tools20022.repository.msg.CorporateActionRate16.mmPreviousFactor, com.tools20022.repository.msg.CorporateActionRate16.mmNextFactor,
-					com.tools20022.repository.msg.CorporateActionRate24.mmPreviousFactor, com.tools20022.repository.msg.CorporateActionRate24.mmNextFactor, com.tools20022.repository.msg.CorporateActionRate27.mmPreviousFactor,
-					com.tools20022.repository.msg.CorporateActionRate27.mmNextFactor, com.tools20022.repository.msg.CorporateActionRate32.mmPreviousFactor, com.tools20022.repository.msg.CorporateActionRate32.mmNextFactor,
-					com.tools20022.repository.msg.CorporateActionRate35.mmPreviousFactor, com.tools20022.repository.msg.CorporateActionRate35.mmNextFactor, com.tools20022.repository.msg.CorporateActionRate41.mmPreviousFactor,
-					com.tools20022.repository.msg.CorporateActionRate41.mmNextFactor, com.tools20022.repository.msg.FinancialInstrumentAttributes4.mmPreviousFactor,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes4.mmCurrentFactor, com.tools20022.repository.msg.FinancialInstrumentAttributes4.mmNextFactor,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes13.mmPreviousFactor, com.tools20022.repository.msg.FinancialInstrumentAttributes13.mmCurrentFactor,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes13.mmNextFactor, com.tools20022.repository.msg.FinancialInstrumentAttributes21.mmPreviousFactor,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes21.mmCurrentFactor, com.tools20022.repository.msg.FinancialInstrumentAttributes21.mmNextFactor,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes26.mmPreviousFactor, com.tools20022.repository.msg.FinancialInstrumentAttributes26.mmCurrentFactor,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes26.mmNextFactor, com.tools20022.repository.msg.FinancialInstrumentAttributes36.mmPreviousFactor,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes36.mmCurrentFactor, com.tools20022.repository.msg.FinancialInstrumentAttributes36.mmNextFactor,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes42.mmPreviousFactor, com.tools20022.repository.msg.FinancialInstrumentAttributes42.mmCurrentFactor,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes42.mmNextFactor, com.tools20022.repository.msg.FinancialInstrumentAttributes27.mmPreviousFactor,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes27.mmCurrentFactor, com.tools20022.repository.msg.FinancialInstrumentAttributes27.mmNextFactor,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes14.mmPreviousFactor, com.tools20022.repository.msg.FinancialInstrumentAttributes14.mmCurrentFactor,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes14.mmNextFactor, com.tools20022.repository.msg.FinancialInstrumentAttributes30.mmPreviousFactor,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes30.mmCurrentFactor, com.tools20022.repository.msg.FinancialInstrumentAttributes30.mmNextFactor,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes28.mmPreviousFactor, com.tools20022.repository.msg.FinancialInstrumentAttributes28.mmCurrentFactor,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes28.mmNextFactor, com.tools20022.repository.msg.Debt1.mmCurrentFactor, com.tools20022.repository.msg.Debt1.mmNextFactor,
-					com.tools20022.repository.msg.Debt1.mmPreviousFactor, com.tools20022.repository.msg.FinancialInstrumentAttributes31.mmPreviousFactor, com.tools20022.repository.msg.FinancialInstrumentAttributes31.mmCurrentFactor,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes31.mmNextFactor, com.tools20022.repository.msg.FinancialInstrumentAttributes31.mmEndFactor,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes44.mmPreviousFactor, com.tools20022.repository.msg.FinancialInstrumentAttributes44.mmCurrentFactor,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes44.mmNextFactor, com.tools20022.repository.msg.FinancialInstrumentAttributes44.mmEndFactor,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes15.mmPreviousFactor, com.tools20022.repository.msg.FinancialInstrumentAttributes15.mmCurrentFactor,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes15.mmNextFactor, com.tools20022.repository.msg.FinancialInstrumentAttributes29.mmPreviousFactor,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes29.mmCurrentFactor, com.tools20022.repository.msg.FinancialInstrumentAttributes29.mmNextFactor, com.tools20022.repository.msg.Debt2.mmCurrentFactor,
-					com.tools20022.repository.msg.Debt2.mmNextFactor, com.tools20022.repository.msg.Debt2.mmPreviousFactor, com.tools20022.repository.msg.FinancialInstrumentAttributes2.mmPreviousFactor,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes2.mmCurrentFactor, com.tools20022.repository.msg.FinancialInstrumentAttributes2.mmNextFactor,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes48.mmPreviousFactor, com.tools20022.repository.msg.FinancialInstrumentAttributes48.mmNextFactor,
-					com.tools20022.repository.msg.CorporateActionRate43.mmPreviousFactor, com.tools20022.repository.msg.CorporateActionRate43.mmNextFactor, com.tools20022.repository.msg.FinancialInstrumentAttributes50.mmPreviousFactor,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes50.mmNextFactor, com.tools20022.repository.msg.FinancialInstrumentAttributes49.mmPreviousFactor,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes49.mmNextFactor, com.tools20022.repository.msg.CorporateActionRate56.mmPreviousFactor, com.tools20022.repository.msg.CorporateActionRate56.mmNextFactor,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes55.mmPreviousFactor, com.tools20022.repository.msg.FinancialInstrumentAttributes55.mmNextFactor,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes57.mmPreviousFactor, com.tools20022.repository.msg.FinancialInstrumentAttributes57.mmNextFactor,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes56.mmPreviousFactor, com.tools20022.repository.msg.FinancialInstrumentAttributes56.mmNextFactor,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes63.mmPreviousFactor, com.tools20022.repository.msg.FinancialInstrumentAttributes63.mmCurrentFactor,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes63.mmNextFactor, com.tools20022.repository.msg.FinancialInstrumentAttributes64.mmPreviousFactor,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes64.mmCurrentFactor, com.tools20022.repository.msg.FinancialInstrumentAttributes64.mmNextFactor,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes66.mmPreviousFactor, com.tools20022.repository.msg.FinancialInstrumentAttributes66.mmNextFactor,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes65.mmPreviousFactor, com.tools20022.repository.msg.FinancialInstrumentAttributes65.mmNextFactor,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes67.mmPreviousFactor, com.tools20022.repository.msg.FinancialInstrumentAttributes67.mmNextFactor,
-					com.tools20022.repository.msg.CorporateActionRate66.mmPreviousFactor, com.tools20022.repository.msg.CorporateActionRate66.mmNextFactor, com.tools20022.repository.msg.FinancialInstrumentAttributes70.mmPreviousFactor,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes70.mmNextFactor, com.tools20022.repository.msg.FinancialInstrumentAttributes69.mmPreviousFactor,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes69.mmNextFactor, com.tools20022.repository.msg.FinancialInstrumentAttributes71.mmPreviousFactor,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes71.mmNextFactor, com.tools20022.repository.msg.CorporateActionRate78.mmPreviousFactor, com.tools20022.repository.msg.CorporateActionRate78.mmNextFactor,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes75.mmPreviousFactor, com.tools20022.repository.msg.FinancialInstrumentAttributes75.mmCurrentFactor,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes75.mmNextFactor, com.tools20022.repository.msg.FinancialInstrumentAttributes78.mmPreviousFactor,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes78.mmCurrentFactor, com.tools20022.repository.msg.FinancialInstrumentAttributes78.mmNextFactor,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes79.mmPreviousFactor, com.tools20022.repository.msg.FinancialInstrumentAttributes79.mmNextFactor,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes81.mmPreviousFactor, com.tools20022.repository.msg.FinancialInstrumentAttributes81.mmNextFactor,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes80.mmPreviousFactor, com.tools20022.repository.msg.FinancialInstrumentAttributes80.mmNextFactor,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes85.mmPreviousFactor, com.tools20022.repository.msg.FinancialInstrumentAttributes85.mmNextFactor,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes84.mmPreviousFactor, com.tools20022.repository.msg.FinancialInstrumentAttributes84.mmNextFactor,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes83.mmPreviousFactor, com.tools20022.repository.msg.FinancialInstrumentAttributes83.mmNextFactor);
+			derivation_lazy = () -> Arrays.asList(FinancialInstrumentAttributes8.mmPreviousFactor, FinancialInstrumentAttributes8.mmCurrentFactor, FinancialInstrumentAttributes8.mmNextFactor,
+					FinancialInstrumentAttributes20.mmPreviousFactor, FinancialInstrumentAttributes20.mmCurrentFactor, FinancialInstrumentAttributes20.mmNextFactor, FinancialInstrumentAttributes35.mmPreviousFactor,
+					FinancialInstrumentAttributes35.mmCurrentFactor, FinancialInstrumentAttributes35.mmNextFactor, FinancialInstrumentAttributes41.mmPreviousFactor, FinancialInstrumentAttributes41.mmCurrentFactor,
+					FinancialInstrumentAttributes41.mmNextFactor, FinancialInstrumentAttributes6.mmPreviousFactor, FinancialInstrumentAttributes6.mmNextFactor, FinancialInstrumentAttributes9.mmPreviousFactor,
+					FinancialInstrumentAttributes9.mmNextFactor, FinancialInstrumentAttributes18.mmPreviousFactor, FinancialInstrumentAttributes18.mmNextFactor, FinancialInstrumentAttributes22.mmPreviousFactor,
+					FinancialInstrumentAttributes22.mmNextFactor, FinancialInstrumentAttributes32.mmPreviousFactor, FinancialInstrumentAttributes32.mmNextFactor, FinancialInstrumentAttributes38.mmPreviousFactor,
+					FinancialInstrumentAttributes38.mmNextFactor, FinancialInstrumentAttributes7.mmPreviousFactor, FinancialInstrumentAttributes7.mmNextFactor, FinancialInstrumentAttributes5.mmPreviousFactor,
+					FinancialInstrumentAttributes5.mmNextFactor, FinancialInstrumentAttributes11.mmPreviousFactor, FinancialInstrumentAttributes11.mmNextFactor, FinancialInstrumentAttributes10.mmPreviousFactor,
+					FinancialInstrumentAttributes10.mmNextFactor, FinancialInstrumentAttributes19.mmPreviousFactor, FinancialInstrumentAttributes19.mmNextFactor, FinancialInstrumentAttributes16.mmPreviousFactor,
+					FinancialInstrumentAttributes16.mmNextFactor, FinancialInstrumentAttributes23.mmPreviousFactor, FinancialInstrumentAttributes23.mmNextFactor, FinancialInstrumentAttributes24.mmPreviousFactor,
+					FinancialInstrumentAttributes24.mmNextFactor, FinancialInstrumentAttributes33.mmPreviousFactor, FinancialInstrumentAttributes33.mmNextFactor, FinancialInstrumentAttributes34.mmPreviousFactor,
+					FinancialInstrumentAttributes34.mmNextFactor, FinancialInstrumentAttributes39.mmPreviousFactor, FinancialInstrumentAttributes39.mmNextFactor, FinancialInstrumentAttributes40.mmPreviousFactor,
+					FinancialInstrumentAttributes40.mmNextFactor, FinancialInstrumentAttributes43.mmPreviousFactor, FinancialInstrumentAttributes43.mmNextFactor, FinancialInstrumentAttributes45.mmPreviousFactor,
+					FinancialInstrumentAttributes45.mmNextFactor, CorporateActionRate3.mmPreviousFactor, CorporateActionRate3.mmNextFactor, CorporateActionRate14.mmPreviousFactor, CorporateActionRate14.mmNextFactor,
+					CorporateActionRate16.mmPreviousFactor, CorporateActionRate16.mmNextFactor, CorporateActionRate24.mmPreviousFactor, CorporateActionRate24.mmNextFactor, CorporateActionRate27.mmPreviousFactor,
+					CorporateActionRate27.mmNextFactor, CorporateActionRate32.mmPreviousFactor, CorporateActionRate32.mmNextFactor, CorporateActionRate35.mmPreviousFactor, CorporateActionRate35.mmNextFactor,
+					CorporateActionRate41.mmPreviousFactor, CorporateActionRate41.mmNextFactor, FinancialInstrumentAttributes4.mmPreviousFactor, FinancialInstrumentAttributes4.mmCurrentFactor, FinancialInstrumentAttributes4.mmNextFactor,
+					FinancialInstrumentAttributes13.mmPreviousFactor, FinancialInstrumentAttributes13.mmCurrentFactor, FinancialInstrumentAttributes13.mmNextFactor, FinancialInstrumentAttributes21.mmPreviousFactor,
+					FinancialInstrumentAttributes21.mmCurrentFactor, FinancialInstrumentAttributes21.mmNextFactor, FinancialInstrumentAttributes26.mmPreviousFactor, FinancialInstrumentAttributes26.mmCurrentFactor,
+					FinancialInstrumentAttributes26.mmNextFactor, FinancialInstrumentAttributes36.mmPreviousFactor, FinancialInstrumentAttributes36.mmCurrentFactor, FinancialInstrumentAttributes36.mmNextFactor,
+					FinancialInstrumentAttributes42.mmPreviousFactor, FinancialInstrumentAttributes42.mmCurrentFactor, FinancialInstrumentAttributes42.mmNextFactor, FinancialInstrumentAttributes27.mmPreviousFactor,
+					FinancialInstrumentAttributes27.mmCurrentFactor, FinancialInstrumentAttributes27.mmNextFactor, FinancialInstrumentAttributes14.mmPreviousFactor, FinancialInstrumentAttributes14.mmCurrentFactor,
+					FinancialInstrumentAttributes14.mmNextFactor, FinancialInstrumentAttributes30.mmPreviousFactor, FinancialInstrumentAttributes30.mmCurrentFactor, FinancialInstrumentAttributes30.mmNextFactor,
+					FinancialInstrumentAttributes28.mmPreviousFactor, FinancialInstrumentAttributes28.mmCurrentFactor, FinancialInstrumentAttributes28.mmNextFactor, Debt1.mmCurrentFactor, Debt1.mmNextFactor, Debt1.mmPreviousFactor,
+					FinancialInstrumentAttributes31.mmPreviousFactor, FinancialInstrumentAttributes31.mmCurrentFactor, FinancialInstrumentAttributes31.mmNextFactor, FinancialInstrumentAttributes31.mmEndFactor,
+					FinancialInstrumentAttributes44.mmPreviousFactor, FinancialInstrumentAttributes44.mmCurrentFactor, FinancialInstrumentAttributes44.mmNextFactor, FinancialInstrumentAttributes44.mmEndFactor,
+					FinancialInstrumentAttributes15.mmPreviousFactor, FinancialInstrumentAttributes15.mmCurrentFactor, FinancialInstrumentAttributes15.mmNextFactor, FinancialInstrumentAttributes29.mmPreviousFactor,
+					FinancialInstrumentAttributes29.mmCurrentFactor, FinancialInstrumentAttributes29.mmNextFactor, Debt2.mmCurrentFactor, Debt2.mmNextFactor, Debt2.mmPreviousFactor, FinancialInstrumentAttributes2.mmPreviousFactor,
+					FinancialInstrumentAttributes2.mmCurrentFactor, FinancialInstrumentAttributes2.mmNextFactor, FinancialInstrumentAttributes48.mmPreviousFactor, FinancialInstrumentAttributes48.mmNextFactor,
+					CorporateActionRate43.mmPreviousFactor, CorporateActionRate43.mmNextFactor, FinancialInstrumentAttributes50.mmPreviousFactor, FinancialInstrumentAttributes50.mmNextFactor,
+					FinancialInstrumentAttributes49.mmPreviousFactor, FinancialInstrumentAttributes49.mmNextFactor, CorporateActionRate56.mmPreviousFactor, CorporateActionRate56.mmNextFactor,
+					FinancialInstrumentAttributes55.mmPreviousFactor, FinancialInstrumentAttributes55.mmNextFactor, FinancialInstrumentAttributes57.mmPreviousFactor, FinancialInstrumentAttributes57.mmNextFactor,
+					FinancialInstrumentAttributes56.mmPreviousFactor, FinancialInstrumentAttributes56.mmNextFactor, FinancialInstrumentAttributes63.mmPreviousFactor, FinancialInstrumentAttributes63.mmCurrentFactor,
+					FinancialInstrumentAttributes63.mmNextFactor, FinancialInstrumentAttributes64.mmPreviousFactor, FinancialInstrumentAttributes64.mmCurrentFactor, FinancialInstrumentAttributes64.mmNextFactor,
+					FinancialInstrumentAttributes66.mmPreviousFactor, FinancialInstrumentAttributes66.mmNextFactor, FinancialInstrumentAttributes65.mmPreviousFactor, FinancialInstrumentAttributes65.mmNextFactor,
+					FinancialInstrumentAttributes67.mmPreviousFactor, FinancialInstrumentAttributes67.mmNextFactor, CorporateActionRate66.mmPreviousFactor, CorporateActionRate66.mmNextFactor,
+					FinancialInstrumentAttributes70.mmPreviousFactor, FinancialInstrumentAttributes70.mmNextFactor, FinancialInstrumentAttributes69.mmPreviousFactor, FinancialInstrumentAttributes69.mmNextFactor,
+					FinancialInstrumentAttributes71.mmPreviousFactor, FinancialInstrumentAttributes71.mmNextFactor, CorporateActionRate78.mmPreviousFactor, CorporateActionRate78.mmNextFactor,
+					FinancialInstrumentAttributes75.mmPreviousFactor, FinancialInstrumentAttributes75.mmCurrentFactor, FinancialInstrumentAttributes75.mmNextFactor, FinancialInstrumentAttributes78.mmPreviousFactor,
+					FinancialInstrumentAttributes78.mmCurrentFactor, FinancialInstrumentAttributes78.mmNextFactor, FinancialInstrumentAttributes79.mmPreviousFactor, FinancialInstrumentAttributes79.mmNextFactor,
+					FinancialInstrumentAttributes81.mmPreviousFactor, FinancialInstrumentAttributes81.mmNextFactor, FinancialInstrumentAttributes80.mmPreviousFactor, FinancialInstrumentAttributes80.mmNextFactor,
+					FinancialInstrumentAttributes85.mmPreviousFactor, FinancialInstrumentAttributes85.mmNextFactor, FinancialInstrumentAttributes84.mmPreviousFactor, FinancialInstrumentAttributes84.mmNextFactor,
+					FinancialInstrumentAttributes83.mmPreviousFactor, FinancialInstrumentAttributes83.mmNextFactor);
 			elementContext_lazy = () -> Debt.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Factor";
 			definition = "Rate that defines the outstanding principal of the factored security.\r\nFactored securities are debt instruments that have a factor that is used in the calculation of net money and market value. \r\nFactors can be specified as current, next, previous or end factors.\r\nEnd factor: portion of principal that is still due at the end of the financing period.\r\nPrevious factor: portion of principal that is still due before the current factor becomes applicable.\r\nNext factor: rate that will be applicable as of the next factor date.";
 			maxOccurs = 1;
@@ -2104,22 +2010,16 @@ public class Debt extends Security {
 	 */
 	public static final MMBusinessAttribute mmPoolNumber = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrumentAttributes8.mmPoolNumber, com.tools20022.repository.msg.FinancialInstrumentAttributes20.mmPoolNumber,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes35.mmPoolNumber, com.tools20022.repository.msg.FinancialInstrumentAttributes41.mmPoolNumber,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes4.mmPoolNumber, com.tools20022.repository.msg.FinancialInstrumentAttributes13.mmPoolNumber,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes21.mmPoolNumber, com.tools20022.repository.msg.FinancialInstrumentAttributes26.mmPoolNumber,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes36.mmPoolNumber, com.tools20022.repository.msg.FinancialInstrumentAttributes42.mmPoolNumber,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes27.mmPoolNumber, com.tools20022.repository.msg.FinancialInstrumentAttributes14.mmPoolNumber,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes30.mmPoolNumber, com.tools20022.repository.msg.FinancialInstrumentAttributes28.mmPoolNumber,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes1.mmPoolNumber, com.tools20022.repository.msg.FinancialInstrumentAttributes31.mmPoolNumber,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes44.mmPoolNumber, com.tools20022.repository.msg.FinancialInstrumentAttributes15.mmPoolNumber,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes29.mmPoolNumber, com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.mmPoolNumber,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes2.mmPoolNumber, com.tools20022.repository.msg.FinancialInstrumentAttributes63.mmPoolNumber,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes64.mmPoolNumber, com.tools20022.repository.msg.FinancialInstrumentAttributes75.mmPoolNumber,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes78.mmPoolNumber);
+			derivation_lazy = () -> Arrays.asList(FinancialInstrumentAttributes8.mmPoolNumber, FinancialInstrumentAttributes20.mmPoolNumber, FinancialInstrumentAttributes35.mmPoolNumber, FinancialInstrumentAttributes41.mmPoolNumber,
+					FinancialInstrumentAttributes4.mmPoolNumber, FinancialInstrumentAttributes13.mmPoolNumber, FinancialInstrumentAttributes21.mmPoolNumber, FinancialInstrumentAttributes26.mmPoolNumber,
+					FinancialInstrumentAttributes36.mmPoolNumber, FinancialInstrumentAttributes42.mmPoolNumber, FinancialInstrumentAttributes27.mmPoolNumber, FinancialInstrumentAttributes14.mmPoolNumber,
+					FinancialInstrumentAttributes30.mmPoolNumber, FinancialInstrumentAttributes28.mmPoolNumber, FinancialInstrumentAttributes1.mmPoolNumber, FinancialInstrumentAttributes31.mmPoolNumber,
+					FinancialInstrumentAttributes44.mmPoolNumber, FinancialInstrumentAttributes15.mmPoolNumber, FinancialInstrumentAttributes29.mmPoolNumber, CommonFinancialInstrumentAttributes1.mmPoolNumber,
+					FinancialInstrumentAttributes2.mmPoolNumber, FinancialInstrumentAttributes63.mmPoolNumber, FinancialInstrumentAttributes64.mmPoolNumber, FinancialInstrumentAttributes75.mmPoolNumber,
+					FinancialInstrumentAttributes78.mmPoolNumber);
 			elementContext_lazy = () -> Debt.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PoolNumber";
 			definition = "Number identifying a group of underlying assets assigned by the issuer of a factored security.";
 			maxOccurs = 1;
@@ -2238,22 +2138,17 @@ public class Debt extends Security {
 	 */
 	public static final MMBusinessAttribute mmVariableRateIndicator = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrumentAttributes8.mmVariableRateIndicator, com.tools20022.repository.msg.FinancialInstrumentAttributes20.mmVariableRateIndicator,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes35.mmVariableRateIndicator, com.tools20022.repository.msg.FinancialInstrumentAttributes41.mmVariableRateIndicator,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes4.mmVariableRateIndicator, com.tools20022.repository.msg.FinancialInstrumentAttributes13.mmVariableRateIndicator,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes21.mmVariableRateIndicator, com.tools20022.repository.msg.FinancialInstrumentAttributes26.mmVariableRateIndicator,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes36.mmVariableRateIndicator, com.tools20022.repository.msg.FinancialInstrumentAttributes42.mmVariableRateIndicator,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes27.mmVariableRateIndicator, com.tools20022.repository.msg.FinancialInstrumentAttributes14.mmVariableRateIndicator,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes30.mmVariableRateIndicator, com.tools20022.repository.msg.FinancialInstrumentAttributes28.mmVariableRateIndicator,
-					com.tools20022.repository.msg.Debt1.mmVariableRateIndicator, com.tools20022.repository.msg.FinancialInstrumentAttributes31.mmVariableRateIndicator,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes44.mmVariableRateIndicator, com.tools20022.repository.msg.FinancialInstrumentAttributes15.mmVariableRateIndicator,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes29.mmVariableRateIndicator, com.tools20022.repository.msg.Debt2.mmVariableRateIndicator,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes2.mmVariableRateIndicator, com.tools20022.repository.msg.FinancialInstrumentAttributes63.mmVariableRateIndicator,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes64.mmVariableRateIndicator, com.tools20022.repository.msg.FinancialInstrumentAttributes75.mmVariableRateIndicator,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes78.mmVariableRateIndicator);
+			derivation_lazy = () -> Arrays.asList(FinancialInstrumentAttributes8.mmVariableRateIndicator, FinancialInstrumentAttributes20.mmVariableRateIndicator, FinancialInstrumentAttributes35.mmVariableRateIndicator,
+					FinancialInstrumentAttributes41.mmVariableRateIndicator, FinancialInstrumentAttributes4.mmVariableRateIndicator, FinancialInstrumentAttributes13.mmVariableRateIndicator,
+					FinancialInstrumentAttributes21.mmVariableRateIndicator, FinancialInstrumentAttributes26.mmVariableRateIndicator, FinancialInstrumentAttributes36.mmVariableRateIndicator,
+					FinancialInstrumentAttributes42.mmVariableRateIndicator, FinancialInstrumentAttributes27.mmVariableRateIndicator, FinancialInstrumentAttributes14.mmVariableRateIndicator,
+					FinancialInstrumentAttributes30.mmVariableRateIndicator, FinancialInstrumentAttributes28.mmVariableRateIndicator, Debt1.mmVariableRateIndicator, FinancialInstrumentAttributes31.mmVariableRateIndicator,
+					FinancialInstrumentAttributes44.mmVariableRateIndicator, FinancialInstrumentAttributes15.mmVariableRateIndicator, FinancialInstrumentAttributes29.mmVariableRateIndicator, Debt2.mmVariableRateIndicator,
+					FinancialInstrumentAttributes2.mmVariableRateIndicator, FinancialInstrumentAttributes63.mmVariableRateIndicator, FinancialInstrumentAttributes64.mmVariableRateIndicator,
+					FinancialInstrumentAttributes75.mmVariableRateIndicator, FinancialInstrumentAttributes78.mmVariableRateIndicator);
 			elementContext_lazy = () -> Debt.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "VariableRateIndicator";
 			definition = "Indicates whether the interest rate of an interest bearing instrument is reset periodically.";
 			maxOccurs = 1;
@@ -2376,23 +2271,16 @@ public class Debt extends Security {
 	 */
 	public static final MMBusinessAttribute mmCallableIndicator = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrumentAttributes8.mmCallableIndicator, com.tools20022.repository.msg.FinancialInstrumentAttributes20.mmCallableIndicator,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes35.mmCallableIndicator, com.tools20022.repository.msg.FinancialInstrumentAttributes41.mmCallableIndicator,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes4.mmCallableIndicator, com.tools20022.repository.msg.FinancialInstrumentAttributes13.mmCallableIndicator,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes21.mmCallableIndicator, com.tools20022.repository.msg.FinancialInstrumentAttributes26.mmCallableIndicator,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes36.mmCallableIndicator, com.tools20022.repository.msg.FinancialInstrumentAttributes42.mmCallableIndicator,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes27.mmCallableIndicator, com.tools20022.repository.msg.FinancialInstrumentAttributes14.mmCallableIndicator,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes30.mmCallableIndicator, com.tools20022.repository.msg.FinancialInstrumentAttributes28.mmCallableIndicator,
-					com.tools20022.repository.msg.Debt1.mmCallableIndicator, com.tools20022.repository.msg.FinancialInstrumentStipulations.mmCallableIndicator,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes31.mmCallableIndicator, com.tools20022.repository.msg.FinancialInstrumentStipulations2.mmCallableIndicator,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes44.mmCallableIndicator, com.tools20022.repository.msg.FinancialInstrumentAttributes15.mmCallableIndicator,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes29.mmCallableIndicator, com.tools20022.repository.msg.Debt2.mmCallableIndicator,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes2.mmCallableIndicator, com.tools20022.repository.msg.FinancialInstrumentAttributes63.mmCallableIndicator,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes64.mmCallableIndicator, com.tools20022.repository.msg.FinancialInstrumentAttributes75.mmCallableIndicator,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes78.mmCallableIndicator);
+			derivation_lazy = () -> Arrays.asList(FinancialInstrumentAttributes8.mmCallableIndicator, FinancialInstrumentAttributes20.mmCallableIndicator, FinancialInstrumentAttributes35.mmCallableIndicator,
+					FinancialInstrumentAttributes41.mmCallableIndicator, FinancialInstrumentAttributes4.mmCallableIndicator, FinancialInstrumentAttributes13.mmCallableIndicator, FinancialInstrumentAttributes21.mmCallableIndicator,
+					FinancialInstrumentAttributes26.mmCallableIndicator, FinancialInstrumentAttributes36.mmCallableIndicator, FinancialInstrumentAttributes42.mmCallableIndicator, FinancialInstrumentAttributes27.mmCallableIndicator,
+					FinancialInstrumentAttributes14.mmCallableIndicator, FinancialInstrumentAttributes30.mmCallableIndicator, FinancialInstrumentAttributes28.mmCallableIndicator, Debt1.mmCallableIndicator,
+					FinancialInstrumentStipulations.mmCallableIndicator, FinancialInstrumentAttributes31.mmCallableIndicator, FinancialInstrumentStipulations2.mmCallableIndicator, FinancialInstrumentAttributes44.mmCallableIndicator,
+					FinancialInstrumentAttributes15.mmCallableIndicator, FinancialInstrumentAttributes29.mmCallableIndicator, Debt2.mmCallableIndicator, FinancialInstrumentAttributes2.mmCallableIndicator,
+					FinancialInstrumentAttributes63.mmCallableIndicator, FinancialInstrumentAttributes64.mmCallableIndicator, FinancialInstrumentAttributes75.mmCallableIndicator, FinancialInstrumentAttributes78.mmCallableIndicator);
 			elementContext_lazy = () -> Debt.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CallableIndicator";
 			definition = "Indicates whether the issuer has the right to pay the security prior to maturity. Also called RetractableIndicator.";
 			maxOccurs = 1;
@@ -2515,22 +2403,16 @@ public class Debt extends Security {
 	 */
 	public static final MMBusinessAttribute mmPutableIndicator = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrumentAttributes8.mmPutableIndicator, com.tools20022.repository.msg.FinancialInstrumentAttributes20.mmPutableIndicator,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes35.mmPutableIndicator, com.tools20022.repository.msg.FinancialInstrumentAttributes41.mmPutableIndicator,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes4.mmPutableIndicator, com.tools20022.repository.msg.FinancialInstrumentAttributes13.mmPutableIndicator,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes21.mmPutableIndicator, com.tools20022.repository.msg.FinancialInstrumentAttributes26.mmPutableIndicator,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes36.mmPutableIndicator, com.tools20022.repository.msg.FinancialInstrumentAttributes42.mmPutableIndicator,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes27.mmPutableIndicator, com.tools20022.repository.msg.FinancialInstrumentAttributes14.mmPutableIndicator,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes30.mmPutableIndicator, com.tools20022.repository.msg.FinancialInstrumentAttributes28.mmPutableIndicator, com.tools20022.repository.msg.Debt1.mmPutableIndicator,
-					com.tools20022.repository.msg.FinancialInstrumentStipulations.mmPutableIndicator, com.tools20022.repository.msg.FinancialInstrumentAttributes31.mmPutableIndicator,
-					com.tools20022.repository.msg.FinancialInstrumentStipulations2.mmPutableIndicator, com.tools20022.repository.msg.FinancialInstrumentAttributes44.mmPutableIndicator,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes15.mmPutableIndicator, com.tools20022.repository.msg.FinancialInstrumentAttributes29.mmPutableIndicator, com.tools20022.repository.msg.Debt2.mmPutableIndicator,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes2.mmPutableIndicator, com.tools20022.repository.msg.FinancialInstrumentAttributes63.mmPutableIndicator,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes64.mmPutableIndicator, com.tools20022.repository.msg.FinancialInstrumentAttributes75.mmPutableIndicator,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes78.mmPutableIndicator);
+			derivation_lazy = () -> Arrays.asList(FinancialInstrumentAttributes8.mmPutableIndicator, FinancialInstrumentAttributes20.mmPutableIndicator, FinancialInstrumentAttributes35.mmPutableIndicator,
+					FinancialInstrumentAttributes41.mmPutableIndicator, FinancialInstrumentAttributes4.mmPutableIndicator, FinancialInstrumentAttributes13.mmPutableIndicator, FinancialInstrumentAttributes21.mmPutableIndicator,
+					FinancialInstrumentAttributes26.mmPutableIndicator, FinancialInstrumentAttributes36.mmPutableIndicator, FinancialInstrumentAttributes42.mmPutableIndicator, FinancialInstrumentAttributes27.mmPutableIndicator,
+					FinancialInstrumentAttributes14.mmPutableIndicator, FinancialInstrumentAttributes30.mmPutableIndicator, FinancialInstrumentAttributes28.mmPutableIndicator, Debt1.mmPutableIndicator,
+					FinancialInstrumentStipulations.mmPutableIndicator, FinancialInstrumentAttributes31.mmPutableIndicator, FinancialInstrumentStipulations2.mmPutableIndicator, FinancialInstrumentAttributes44.mmPutableIndicator,
+					FinancialInstrumentAttributes15.mmPutableIndicator, FinancialInstrumentAttributes29.mmPutableIndicator, Debt2.mmPutableIndicator, FinancialInstrumentAttributes2.mmPutableIndicator,
+					FinancialInstrumentAttributes63.mmPutableIndicator, FinancialInstrumentAttributes64.mmPutableIndicator, FinancialInstrumentAttributes75.mmPutableIndicator, FinancialInstrumentAttributes78.mmPutableIndicator);
 			elementContext_lazy = () -> Debt.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PutableIndicator";
 			definition = "Indicates whether the holder has the right to ask for redemption of the security prior to final maturity. Also called RedeemableIndicator.";
 			maxOccurs = 1;
@@ -2596,13 +2478,12 @@ public class Debt extends Security {
 	 */
 	public static final MMBusinessAttribute mmYieldToMaturityRate = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrumentAttributes35.mmYieldToMaturityRate, com.tools20022.repository.msg.FinancialInstrumentAttributes41.mmYieldToMaturityRate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes36.mmYieldToMaturityRate, com.tools20022.repository.msg.FinancialInstrumentAttributes42.mmYieldToMaturityRate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes63.mmYieldToMaturityRate, com.tools20022.repository.msg.FinancialInstrumentAttributes64.mmYieldToMaturityRate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes75.mmYieldToMaturityRate, com.tools20022.repository.msg.FinancialInstrumentAttributes78.mmYieldToMaturityRate);
+			derivation_lazy = () -> Arrays.asList(FinancialInstrumentAttributes35.mmYieldToMaturityRate, FinancialInstrumentAttributes41.mmYieldToMaturityRate, FinancialInstrumentAttributes36.mmYieldToMaturityRate,
+					FinancialInstrumentAttributes42.mmYieldToMaturityRate, FinancialInstrumentAttributes63.mmYieldToMaturityRate, FinancialInstrumentAttributes64.mmYieldToMaturityRate, FinancialInstrumentAttributes75.mmYieldToMaturityRate,
+					FinancialInstrumentAttributes78.mmYieldToMaturityRate);
 			elementContext_lazy = () -> Debt.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "YieldToMaturityRate";
 			definition = "Rate of return anticipated on a bond when held until maturity date.";
 			maxOccurs = 1;
@@ -2731,23 +2612,16 @@ public class Debt extends Security {
 	 */
 	public static final MMBusinessAttribute mmAccruedCapitalisationAmount = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OtherAmounts12.mmAccruedCapitalisationAmount, com.tools20022.repository.msg.OtherAmounts14.mmAccruedCapitalisationAmount,
-					com.tools20022.repository.msg.OtherAmounts20.mmAccruedCapitalisationAmount, com.tools20022.repository.msg.OtherAmounts4.mmAccruedCapitalisationAmount,
-					com.tools20022.repository.msg.OtherAmounts5.mmAccruedCapitalisationAmount, com.tools20022.repository.msg.OtherAmounts17.mmAccruedCapitalisationAmount,
-					com.tools20022.repository.msg.OtherAmounts23.mmAccruedCapitalisationAmount, com.tools20022.repository.msg.OtherAmounts3.mmAccruedCapitalisationAmount,
-					com.tools20022.repository.msg.OtherAmounts7.mmAccruedCapitalisationAmount, com.tools20022.repository.msg.OtherAmounts9.mmAccruedCapitalisationAmount,
-					com.tools20022.repository.msg.OtherAmounts10.mmAccruedCapitalisationAmount, com.tools20022.repository.msg.OtherAmounts18.mmAccruedCapitalisationAmount,
-					com.tools20022.repository.msg.OtherAmounts24.mmAccruedCapitalisationAmount, com.tools20022.repository.msg.OtherAmounts13.mmAccruedCapitalisationAmount,
-					com.tools20022.repository.msg.OtherAmounts1.mmAccruedCapitalisationAmount, com.tools20022.repository.msg.OtherAmounts16.mmAccruedCapitalisationAmount,
-					com.tools20022.repository.msg.OtherAmounts2.mmAccruedCapitalisationAmount, com.tools20022.repository.msg.OtherAmounts6.mmAccruedCapitalisationAmount,
-					com.tools20022.repository.msg.OtherAmounts15.mmAccruedCapitalisationAmount, com.tools20022.repository.msg.OtherAmounts22.mmAccruedCapitalisationAmount,
-					com.tools20022.repository.msg.OtherAmounts28.mmAccruedCapitalisationAmount, com.tools20022.repository.msg.OtherAmounts30.mmAccruedCapitalisationAmount,
-					com.tools20022.repository.msg.OtherAmounts31.mmAccruedCapitalisationAmount, com.tools20022.repository.msg.OtherAmounts29.mmAccruedCapitalisationAmount,
-					com.tools20022.repository.msg.OtherAmounts35.mmAccruedCapitalisationAmount, com.tools20022.repository.msg.OtherAmounts34.mmAccruedCapitalisationAmount,
-					com.tools20022.repository.msg.OtherAmounts38.mmAccruedCapitalisationAmount, com.tools20022.repository.msg.OtherAmounts33.mmAccruedCapitalisationAmount);
+			derivation_lazy = () -> Arrays.asList(OtherAmounts12.mmAccruedCapitalisationAmount, OtherAmounts14.mmAccruedCapitalisationAmount, OtherAmounts20.mmAccruedCapitalisationAmount, OtherAmounts4.mmAccruedCapitalisationAmount,
+					OtherAmounts5.mmAccruedCapitalisationAmount, OtherAmounts17.mmAccruedCapitalisationAmount, OtherAmounts23.mmAccruedCapitalisationAmount, OtherAmounts3.mmAccruedCapitalisationAmount,
+					OtherAmounts7.mmAccruedCapitalisationAmount, OtherAmounts9.mmAccruedCapitalisationAmount, OtherAmounts10.mmAccruedCapitalisationAmount, OtherAmounts18.mmAccruedCapitalisationAmount,
+					OtherAmounts24.mmAccruedCapitalisationAmount, OtherAmounts13.mmAccruedCapitalisationAmount, OtherAmounts1.mmAccruedCapitalisationAmount, OtherAmounts16.mmAccruedCapitalisationAmount,
+					OtherAmounts2.mmAccruedCapitalisationAmount, OtherAmounts6.mmAccruedCapitalisationAmount, OtherAmounts15.mmAccruedCapitalisationAmount, OtherAmounts22.mmAccruedCapitalisationAmount,
+					OtherAmounts28.mmAccruedCapitalisationAmount, OtherAmounts30.mmAccruedCapitalisationAmount, OtherAmounts31.mmAccruedCapitalisationAmount, OtherAmounts29.mmAccruedCapitalisationAmount,
+					OtherAmounts35.mmAccruedCapitalisationAmount, OtherAmounts34.mmAccruedCapitalisationAmount, OtherAmounts38.mmAccruedCapitalisationAmount, OtherAmounts33.mmAccruedCapitalisationAmount);
 			elementContext_lazy = () -> Debt.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AccruedCapitalisationAmount";
 			definition = "Amount of unpaid interest (on bonds which have defaulted and have subsequently restructured), which is capitalized and added to the original principal amount of the bond.";
 			maxOccurs = 1;
@@ -2902,28 +2776,19 @@ public class Debt extends Security {
 	 */
 	public static final MMBusinessAttribute mmNextCouponDate = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrumentAttributes6.mmNextCouponDate, com.tools20022.repository.msg.FinancialInstrumentAttributes9.mmNextCouponDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes18.mmNextCouponDate, com.tools20022.repository.msg.FinancialInstrumentAttributes22.mmNextCouponDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes32.mmNextCouponDate, com.tools20022.repository.msg.FinancialInstrumentAttributes38.mmNextCouponDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes7.mmNextCouponDate, com.tools20022.repository.msg.FinancialInstrumentAttributes5.mmNextCouponDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes11.mmNextCouponDate, com.tools20022.repository.msg.FinancialInstrumentAttributes10.mmNextCouponDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes19.mmNextCouponDate, com.tools20022.repository.msg.FinancialInstrumentAttributes16.mmNextCouponDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes23.mmNextCouponDate, com.tools20022.repository.msg.FinancialInstrumentAttributes24.mmNextCouponDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes33.mmNextCouponDate, com.tools20022.repository.msg.FinancialInstrumentAttributes34.mmNextCouponDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes39.mmNextCouponDate, com.tools20022.repository.msg.FinancialInstrumentAttributes40.mmNextCouponDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes43.mmNextCouponDate, com.tools20022.repository.msg.FinancialInstrumentAttributes45.mmNextCouponDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes48.mmNextCouponDate, com.tools20022.repository.msg.FinancialInstrumentAttributes50.mmNextCouponDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes49.mmNextCouponDate, com.tools20022.repository.msg.FinancialInstrumentAttributes55.mmNextCouponDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes57.mmNextCouponDate, com.tools20022.repository.msg.FinancialInstrumentAttributes56.mmNextCouponDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes66.mmNextCouponDate, com.tools20022.repository.msg.FinancialInstrumentAttributes65.mmNextCouponDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes67.mmNextCouponDate, com.tools20022.repository.msg.FinancialInstrumentAttributes70.mmNextCouponDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes69.mmNextCouponDate, com.tools20022.repository.msg.FinancialInstrumentAttributes71.mmNextCouponDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes79.mmNextCouponDate, com.tools20022.repository.msg.FinancialInstrumentAttributes81.mmNextCouponDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes80.mmNextCouponDate, com.tools20022.repository.msg.FinancialInstrumentAttributes85.mmNextCouponDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes84.mmNextCouponDate, com.tools20022.repository.msg.FinancialInstrumentAttributes83.mmNextCouponDate);
+			derivation_lazy = () -> Arrays.asList(FinancialInstrumentAttributes6.mmNextCouponDate, FinancialInstrumentAttributes9.mmNextCouponDate, FinancialInstrumentAttributes18.mmNextCouponDate,
+					FinancialInstrumentAttributes22.mmNextCouponDate, FinancialInstrumentAttributes32.mmNextCouponDate, FinancialInstrumentAttributes38.mmNextCouponDate, FinancialInstrumentAttributes7.mmNextCouponDate,
+					FinancialInstrumentAttributes5.mmNextCouponDate, FinancialInstrumentAttributes11.mmNextCouponDate, FinancialInstrumentAttributes10.mmNextCouponDate, FinancialInstrumentAttributes19.mmNextCouponDate,
+					FinancialInstrumentAttributes16.mmNextCouponDate, FinancialInstrumentAttributes23.mmNextCouponDate, FinancialInstrumentAttributes24.mmNextCouponDate, FinancialInstrumentAttributes33.mmNextCouponDate,
+					FinancialInstrumentAttributes34.mmNextCouponDate, FinancialInstrumentAttributes39.mmNextCouponDate, FinancialInstrumentAttributes40.mmNextCouponDate, FinancialInstrumentAttributes43.mmNextCouponDate,
+					FinancialInstrumentAttributes45.mmNextCouponDate, FinancialInstrumentAttributes48.mmNextCouponDate, FinancialInstrumentAttributes50.mmNextCouponDate, FinancialInstrumentAttributes49.mmNextCouponDate,
+					FinancialInstrumentAttributes55.mmNextCouponDate, FinancialInstrumentAttributes57.mmNextCouponDate, FinancialInstrumentAttributes56.mmNextCouponDate, FinancialInstrumentAttributes66.mmNextCouponDate,
+					FinancialInstrumentAttributes65.mmNextCouponDate, FinancialInstrumentAttributes67.mmNextCouponDate, FinancialInstrumentAttributes70.mmNextCouponDate, FinancialInstrumentAttributes69.mmNextCouponDate,
+					FinancialInstrumentAttributes71.mmNextCouponDate, FinancialInstrumentAttributes79.mmNextCouponDate, FinancialInstrumentAttributes81.mmNextCouponDate, FinancialInstrumentAttributes80.mmNextCouponDate,
+					FinancialInstrumentAttributes85.mmNextCouponDate, FinancialInstrumentAttributes84.mmNextCouponDate, FinancialInstrumentAttributes83.mmNextCouponDate);
 			elementContext_lazy = () -> Debt.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NextCouponDate";
 			definition = "Next payment date of an interest bearing financial instrument.";
 			maxOccurs = 1;
@@ -2977,11 +2842,11 @@ public class Debt extends Security {
 	 */
 	public static final MMBusinessAttribute mmNextFactorDate = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Debt1.mmNextFactorDate, com.tools20022.repository.msg.FinancialInstrumentAttributes31.mmNextFactorDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes44.mmNextFactorDate, com.tools20022.repository.msg.Debt2.mmNextFactorDate, com.tools20022.repository.msg.FinancialInstrumentAttributes2.mmNextFactorDate);
+			derivation_lazy = () -> Arrays.asList(Debt1.mmNextFactorDate, FinancialInstrumentAttributes31.mmNextFactorDate, FinancialInstrumentAttributes44.mmNextFactorDate, Debt2.mmNextFactorDate,
+					FinancialInstrumentAttributes2.mmNextFactorDate);
 			elementContext_lazy = () -> Debt.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NextFactorDate";
 			definition = "The date that the current factor will be changed to a new factor.";
 			maxOccurs = 1;
@@ -3038,12 +2903,11 @@ public class Debt extends Security {
 	 */
 	public static final MMBusinessAttribute mmOddCouponIndicator = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Debt1.mmOddCouponIndicator, com.tools20022.repository.msg.FinancialInstrumentAttributes31.mmOddCouponIndicator,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes44.mmOddCouponIndicator, com.tools20022.repository.msg.Debt2.mmOddCouponIndicator,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes2.mmOddCouponIndicator);
+			derivation_lazy = () -> Arrays.asList(Debt1.mmOddCouponIndicator, FinancialInstrumentAttributes31.mmOddCouponIndicator, FinancialInstrumentAttributes44.mmOddCouponIndicator, Debt2.mmOddCouponIndicator,
+					FinancialInstrumentAttributes2.mmOddCouponIndicator);
 			elementContext_lazy = () -> Debt.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "OddCouponIndicator";
 			definition = "Specifies whether the payment of the coupon (interest) on a bond is off the normal schedule.";
 			maxOccurs = 1;
@@ -3091,10 +2955,10 @@ public class Debt extends Security {
 	 */
 	public static final MMBusinessAttribute mmCPProgram = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Debt1.mmCPProgram, com.tools20022.repository.msg.Debt2.mmCPProgram);
+			derivation_lazy = () -> Arrays.asList(Debt1.mmCPProgram, Debt2.mmCPProgram);
 			elementContext_lazy = () -> Debt.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CPProgram";
 			definition = "The program under which a commercial paper is issued. The values that are most used are:\n0 = N/A\n1 = 3(a)3\n2 = 4(2)\n3 = 3(a)4\n4 = 3(c)7\n5 = 144A\n6 = 3(a)2\n99 = Other";
 			maxOccurs = 1;
@@ -3138,10 +3002,10 @@ public class Debt extends Security {
 	 */
 	public static final MMBusinessAttribute mmCPRegistrationType = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Debt1.mmCPRegistrationType, com.tools20022.repository.msg.Debt2.mmCPRegistrationType);
+			derivation_lazy = () -> Arrays.asList(Debt1.mmCPRegistrationType, Debt2.mmCPRegistrationType);
 			elementContext_lazy = () -> Debt.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CPRegistrationType";
 			definition = "Registration type of a commercial paper issuance.";
 			maxOccurs = 1;
@@ -3205,13 +3069,11 @@ public class Debt extends Security {
 	 */
 	public static final MMBusinessAttribute mmConvertibleIndicator = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Debt1.mmConvertibleIndicator, com.tools20022.repository.msg.FinancialInstrumentStipulations.mmConvertibleIndicator,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes31.mmConvertibleIndicator, com.tools20022.repository.msg.FinancialInstrumentStipulations2.mmConvertibleIndicator,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes44.mmConvertibleIndicator, com.tools20022.repository.msg.Debt2.mmCouponRange,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes2.mmConvertibleIndicator);
+			derivation_lazy = () -> Arrays.asList(Debt1.mmConvertibleIndicator, FinancialInstrumentStipulations.mmConvertibleIndicator, FinancialInstrumentAttributes31.mmConvertibleIndicator,
+					FinancialInstrumentStipulations2.mmConvertibleIndicator, FinancialInstrumentAttributes44.mmConvertibleIndicator, Debt2.mmCouponRange, FinancialInstrumentAttributes2.mmConvertibleIndicator);
 			elementContext_lazy = () -> Debt.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ConvertibleIndicator";
 			definition = "Indicates whether the interest bearing security is convertible into another type of security.";
 			maxOccurs = 1;
@@ -3265,11 +3127,10 @@ public class Debt extends Security {
 	 */
 	public static final MMBusinessAttribute mmPreFundedIndicator = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Debt1.mmPreFundedIndicator, com.tools20022.repository.msg.FinancialInstrumentStipulations.mmPreFundedIndicator,
-					com.tools20022.repository.msg.FinancialInstrumentStipulations2.mmPreFundedIndicator, com.tools20022.repository.msg.Debt2.mmPreFundedIndicator);
+			derivation_lazy = () -> Arrays.asList(Debt1.mmPreFundedIndicator, FinancialInstrumentStipulations.mmPreFundedIndicator, FinancialInstrumentStipulations2.mmPreFundedIndicator, Debt2.mmPreFundedIndicator);
 			elementContext_lazy = () -> Debt.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PreFundedIndicator";
 			definition = "Indicates whether an interest bearing instrument is deposited in a fund that will be used to pay debt service on refunded securities.";
 			maxOccurs = 1;
@@ -3327,11 +3188,10 @@ public class Debt extends Security {
 	 */
 	public static final MMBusinessAttribute mmEscrowedIndicator = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Debt1.mmEscrowedIndicator, com.tools20022.repository.msg.FinancialInstrumentStipulations.mmEscrowedIndicator,
-					com.tools20022.repository.msg.FinancialInstrumentStipulations2.mmEscrowedIndicator, com.tools20022.repository.msg.Debt2.mmEscrowedIndicator);
+			derivation_lazy = () -> Arrays.asList(Debt1.mmEscrowedIndicator, FinancialInstrumentStipulations.mmEscrowedIndicator, FinancialInstrumentStipulations2.mmEscrowedIndicator, Debt2.mmEscrowedIndicator);
 			elementContext_lazy = () -> Debt.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "EscrowedIndicator";
 			definition = "Indicates whether an interest bearing instrument is being escrowed or collateralized either by direct obligations guaranteed by the US government, or by other types of securities. The maturity schedules of the securities in the escrow fund are determined in such a way to pay the maturity value, coupon, and premium payments (if any) of the refunded bonds.";
 			maxOccurs = 1;
@@ -3382,11 +3242,10 @@ public class Debt extends Security {
 	 */
 	public static final MMBusinessAttribute mmPerpetualIndicator = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Debt1.mmPerpetualIndicator, com.tools20022.repository.msg.FinancialInstrumentStipulations.mmPerpetualIndicator,
-					com.tools20022.repository.msg.FinancialInstrumentStipulations2.mmPerpetualIndicator, com.tools20022.repository.msg.Debt2.mmPerpetualIndicator);
+			derivation_lazy = () -> Arrays.asList(Debt1.mmPerpetualIndicator, FinancialInstrumentStipulations.mmPerpetualIndicator, FinancialInstrumentStipulations2.mmPerpetualIndicator, Debt2.mmPerpetualIndicator);
 			elementContext_lazy = () -> Debt.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PerpetualIndicator";
 			definition = "Indicates whether the security has no maturity date.";
 			maxOccurs = 1;
@@ -3434,10 +3293,10 @@ public class Debt extends Security {
 	 */
 	public static final MMBusinessAttribute mmSubordinatedIndicator = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Debt1.mmSubordinatedIndicator, com.tools20022.repository.msg.Debt2.mmSubordinatedIndicator);
+			derivation_lazy = () -> Arrays.asList(Debt1.mmSubordinatedIndicator, Debt2.mmSubordinatedIndicator);
 			elementContext_lazy = () -> Debt.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SubordinatedIndicator";
 			definition = "Indicates whether the security is a subordinated security.";
 			maxOccurs = 1;
@@ -3487,10 +3346,10 @@ public class Debt extends Security {
 	 */
 	public static final MMBusinessAttribute mmExtendibleIndicator = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Debt1.mmExtendibleIndicator, com.tools20022.repository.msg.Debt2.mmExtendibleIndicator);
+			derivation_lazy = () -> Arrays.asList(Debt1.mmExtendibleIndicator, Debt2.mmExtendibleIndicator);
 			elementContext_lazy = () -> Debt.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ExtendibleIndicator";
 			definition = "Indicates whether the security is extendible,eg, repayment may be extended or maturity changed.";
 			maxOccurs = 1;
@@ -3542,16 +3401,16 @@ public class Debt extends Security {
 	 */
 	public static final MMBusinessAssociationEnd mmExtendiblePeriod = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Debt1.mmExtendiblePeriod, com.tools20022.repository.msg.Debt2.mmExtendiblePeriod);
+			derivation_lazy = () -> Arrays.asList(Debt1.mmExtendiblePeriod, Debt2.mmExtendiblePeriod);
 			elementContext_lazy = () -> Debt.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ExtendiblePeriod";
 			definition = "Period during which a date might be extended.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmExtendiblePeriodDebt;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmObject();
 		}
 	};
@@ -3602,11 +3461,10 @@ public class Debt extends Security {
 	 */
 	public static final MMBusinessAttribute mmOverAllotmentAmount = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Debt1.mmOverAllotmentAmount, com.tools20022.repository.msg.FinancialInstrumentStipulations.mmOverAllotmentAmount,
-					com.tools20022.repository.msg.FinancialInstrumentStipulations2.mmOverAllotmentAmount, com.tools20022.repository.msg.Debt2.mmOverAllotmentAmount);
+			derivation_lazy = () -> Arrays.asList(Debt1.mmOverAllotmentAmount, FinancialInstrumentStipulations.mmOverAllotmentAmount, FinancialInstrumentStipulations2.mmOverAllotmentAmount, Debt2.mmOverAllotmentAmount);
 			elementContext_lazy = () -> Debt.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "OverAllotmentAmount";
 			definition = "Amount for which a security can be overalloted (as in greenshoe option).";
 			maxOccurs = 1;
@@ -3660,11 +3518,10 @@ public class Debt extends Security {
 	 */
 	public static final MMBusinessAttribute mmOverAllotmentRate = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Debt1.mmOverAllotmentRate, com.tools20022.repository.msg.FinancialInstrumentStipulations.mmOverAllotmentRate,
-					com.tools20022.repository.msg.FinancialInstrumentStipulations2.mmOverAllotmentRate, com.tools20022.repository.msg.Debt2.mmOverAllotmentRate);
+			derivation_lazy = () -> Arrays.asList(Debt1.mmOverAllotmentRate, FinancialInstrumentStipulations.mmOverAllotmentRate, FinancialInstrumentStipulations2.mmOverAllotmentRate, Debt2.mmOverAllotmentRate);
 			elementContext_lazy = () -> Debt.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "OverAllotmentRate";
 			definition = "Percentage for which a security can be overalloted (as in greenshoe option).";
 			maxOccurs = 1;
@@ -3723,12 +3580,11 @@ public class Debt extends Security {
 	 */
 	public static final MMBusinessAttribute mmAmortisableIndicator = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Debt1.mmAmortisableIndicator, com.tools20022.repository.msg.FinancialInstrumentStipulations.mmAmortisableIndicator,
-					com.tools20022.repository.msg.FinancialInstrumentStipulations.mmAlternativeMinimumTaxIndicator, com.tools20022.repository.msg.FinancialInstrumentStipulations2.mmAmortisableIndicator,
-					com.tools20022.repository.msg.Debt2.mmAmortisableIndicator);
+			derivation_lazy = () -> Arrays.asList(Debt1.mmAmortisableIndicator, FinancialInstrumentStipulations.mmAmortisableIndicator, FinancialInstrumentStipulations.mmAlternativeMinimumTaxIndicator,
+					FinancialInstrumentStipulations2.mmAmortisableIndicator, Debt2.mmAmortisableIndicator);
 			elementContext_lazy = () -> Debt.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AmortisableIndicator";
 			definition = "Indicates whether repayment is made via regular principal and interest payments over time.";
 			maxOccurs = 1;
@@ -3778,10 +3634,10 @@ public class Debt extends Security {
 	 */
 	public static final MMBusinessAttribute mmCapitalisedInterest = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Debt1.mmCapitalisedInterest, com.tools20022.repository.msg.Debt2.mmCapitalisedInterest);
+			derivation_lazy = () -> Arrays.asList(Debt1.mmCapitalisedInterest, Debt2.mmCapitalisedInterest);
 			elementContext_lazy = () -> Debt.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CapitalisedInterest";
 			definition = "Specifies whether the interest amount is capitalised until maturity date or paid out at each interest payment date.";
 			maxOccurs = 1;
@@ -3828,10 +3684,10 @@ public class Debt extends Security {
 	 */
 	public static final MMBusinessAttribute mmActualDenominationAmount = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Debt1.mmActualDenominationAmount, com.tools20022.repository.msg.Debt2.mmActualDenominationAmount);
+			derivation_lazy = () -> Arrays.asList(Debt1.mmActualDenominationAmount, Debt2.mmActualDenominationAmount);
 			elementContext_lazy = () -> Debt.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ActualDenominationAmount";
 			definition = "Nominal value per security unit.";
 			minOccurs = 0;
@@ -3875,10 +3731,10 @@ public class Debt extends Security {
 	 */
 	public static final MMBusinessAttribute mmPieces = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Debt1.mmPieces, com.tools20022.repository.msg.Debt2.mmPieces);
+			derivation_lazy = () -> Arrays.asList(Debt1.mmPieces, Debt2.mmPieces);
 			elementContext_lazy = () -> Debt.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Pieces";
 			definition = "Number of pieces composing a pool of financial assets.";
 			maxOccurs = 1;
@@ -3923,10 +3779,10 @@ public class Debt extends Security {
 	 */
 	public static final MMBusinessAttribute mmPoolsMaximum = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Debt1.mmPoolsMaximum, com.tools20022.repository.msg.Debt2.mmPoolsMaximum);
+			derivation_lazy = () -> Arrays.asList(Debt1.mmPoolsMaximum, Debt2.mmPoolsMaximum);
 			elementContext_lazy = () -> Debt.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PoolsMaximum";
 			definition = "Collection of assets by which a security is backed.";
 			maxOccurs = 1;
@@ -3974,10 +3830,10 @@ public class Debt extends Security {
 	 */
 	public static final MMBusinessAttribute mmPoolsPerMillion = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Debt1.mmPoolsPerMillion, com.tools20022.repository.msg.Debt2.mmPoolsPerMillion);
+			derivation_lazy = () -> Arrays.asList(Debt1.mmPoolsPerMillion, Debt2.mmPoolsPerMillion);
 			elementContext_lazy = () -> Debt.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PoolsPerMillion";
 			definition = "Indicates per million the collection of loans, mortgages or other assets assembled by an originator as the basis for a security.";
 			maxOccurs = 1;
@@ -4025,10 +3881,10 @@ public class Debt extends Security {
 	 */
 	public static final MMBusinessAttribute mmPoolsPerLot = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Debt1.mmPoolsPerLot, com.tools20022.repository.msg.Debt2.mmPoolsPerLot);
+			derivation_lazy = () -> Arrays.asList(Debt1.mmPoolsPerLot, Debt2.mmPoolsPerLot);
 			elementContext_lazy = () -> Debt.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PoolsPerLot";
 			definition = "Indicates per lot the collection of loans, mortgages or other assets assembled by an originator as the basis for a security.";
 			maxOccurs = 1;
@@ -4076,10 +3932,10 @@ public class Debt extends Security {
 	 */
 	public static final MMBusinessAttribute mmPoolsPerTrade = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Debt1.mmPoolsPerTrade, com.tools20022.repository.msg.Debt2.mmPoolsPerTrade);
+			derivation_lazy = () -> Arrays.asList(Debt1.mmPoolsPerTrade, Debt2.mmPoolsPerTrade);
 			elementContext_lazy = () -> Debt.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PoolsPerTrade";
 			definition = "Indicates per trade the collection of loans, mortgages or other assets assembled by an originator as the basis for a security.";
 			maxOccurs = 1;
@@ -4129,10 +3985,10 @@ public class Debt extends Security {
 	 */
 	public static final MMBusinessAttribute mmConstantPrePaymentPenalty = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Debt1.mmConstantPrePaymentPenaltyIndicator, com.tools20022.repository.msg.Debt2.mmConstantPrePaymentPenaltyIndicator);
+			derivation_lazy = () -> Arrays.asList(Debt1.mmConstantPrePaymentPenaltyIndicator, Debt2.mmConstantPrePaymentPenaltyIndicator);
 			elementContext_lazy = () -> Debt.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ConstantPrePaymentPenalty";
 			definition = "Indicates whether a penalty might be imposed to the borrower of a mortgage in case of prepayments occurring during the lockout period.";
 			maxOccurs = 1;
@@ -4178,10 +4034,10 @@ public class Debt extends Security {
 	 */
 	public static final MMBusinessAttribute mmPrePaymentSpeed = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Debt1.mmPrePaymentSpeed);
+			derivation_lazy = () -> Arrays.asList(Debt1.mmPrePaymentSpeed);
 			elementContext_lazy = () -> Debt.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PrePaymentSpeed";
 			definition = "Speed of unscheduled partial or complete payment of the principal amount outstanding on a debt obligation before its due date.";
 			maxOccurs = 1;
@@ -4230,10 +4086,10 @@ public class Debt extends Security {
 	 */
 	public static final MMBusinessAttribute mmConstantPrePaymentYield = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Debt1.mmConstantPrePaymentYield, com.tools20022.repository.msg.Debt2.mmConstantPrePaymentYield);
+			derivation_lazy = () -> Arrays.asList(Debt1.mmConstantPrePaymentYield, Debt2.mmConstantPrePaymentYield);
 			elementContext_lazy = () -> Debt.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ConstantPrePaymentYield";
 			definition = "Measure of prepayment as a yield of the current outstanding loan balance.";
 			maxOccurs = 1;
@@ -4283,10 +4139,10 @@ public class Debt extends Security {
 	 */
 	public static final MMBusinessAttribute mmWeightedAverageCoupon = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Debt1.mmWeightedAverageCoupon, com.tools20022.repository.msg.Debt2.mmWeightedAverageCoupon);
+			derivation_lazy = () -> Arrays.asList(Debt1.mmWeightedAverageCoupon, Debt2.mmWeightedAverageCoupon);
 			elementContext_lazy = () -> Debt.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "WeightedAverageCoupon";
 			definition = "Contains the weighted average coupon of the fixed income instrument (expressed as a percentage).";
 			maxOccurs = 1;
@@ -4336,10 +4192,10 @@ public class Debt extends Security {
 	 */
 	public static final MMBusinessAttribute mmWeightedAverageLife = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Debt1.mmWeightedAverageLife, com.tools20022.repository.msg.Debt2.mmWeightedAverageLife);
+			derivation_lazy = () -> Arrays.asList(Debt1.mmWeightedAverageLife, Debt2.mmWeightedAverageLife);
 			elementContext_lazy = () -> Debt.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "WeightedAverageLife";
 			definition = "Contains the weighted average life of the fixed income instrument (expressed in months).";
 			maxOccurs = 1;
@@ -4389,10 +4245,10 @@ public class Debt extends Security {
 	 */
 	public static final MMBusinessAttribute mmWeightedAverageLoan = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Debt1.mmWeightedAverageLoan, com.tools20022.repository.msg.Debt2.mmWeightedAverageLoan);
+			derivation_lazy = () -> Arrays.asList(Debt1.mmWeightedAverageLoan, Debt2.mmWeightedAverageLoan);
 			elementContext_lazy = () -> Debt.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "WeightedAverageLoan";
 			definition = "Contains the weighted average loan of the fixed income instrument (expressed in months).";
 			maxOccurs = 1;
@@ -4442,10 +4298,10 @@ public class Debt extends Security {
 	 */
 	public static final MMBusinessAttribute mmWeightedAverageMaturity = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Debt1.mmWeightedAverageMaturity, com.tools20022.repository.msg.Debt2.mmWeightedAverageMaturity);
+			derivation_lazy = () -> Arrays.asList(Debt1.mmWeightedAverageMaturity, Debt2.mmWeightedAverageMaturity);
 			elementContext_lazy = () -> Debt.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "WeightedAverageMaturity";
 			definition = "Contains the weighted average maturity of the fixed income instrument (expressed in months).";
 			maxOccurs = 1;
@@ -4498,11 +4354,10 @@ public class Debt extends Security {
 	 */
 	public static final MMBusinessAttribute mmInsuredIndicator = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Debt1.mmInsuredIndicator, com.tools20022.repository.msg.FinancialInstrumentStipulations.mmInsuredIndicator,
-					com.tools20022.repository.msg.FinancialInstrumentStipulations2.mmInsuredIndicator, com.tools20022.repository.msg.Debt2.mmInsuredIndicator);
+			derivation_lazy = () -> Arrays.asList(Debt1.mmInsuredIndicator, FinancialInstrumentStipulations.mmInsuredIndicator, FinancialInstrumentStipulations2.mmInsuredIndicator, Debt2.mmInsuredIndicator);
 			elementContext_lazy = () -> Debt.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InsuredIndicator";
 			definition = "Indicates whether the instruments is backed by any kind of asset or not.";
 			maxOccurs = 1;
@@ -4552,10 +4407,10 @@ public class Debt extends Security {
 	 */
 	public static final MMBusinessAttribute mmBankQualified = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Debt1.mmBankQualifiedIndicator, com.tools20022.repository.msg.Debt2.mmBankQualifiedIndicator);
+			derivation_lazy = () -> Arrays.asList(Debt1.mmBankQualifiedIndicator, Debt2.mmBankQualifiedIndicator);
 			elementContext_lazy = () -> Debt.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BankQualified";
 			definition = "Indicates whether the security is bank qualified (usually applies to loan products).";
 			maxOccurs = 1;
@@ -4608,11 +4463,10 @@ public class Debt extends Security {
 	 */
 	public static final MMBusinessAttribute mmAutoReinvestment = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrumentStipulations.mmAutoReinvestment, com.tools20022.repository.msg.FinancialInstrumentStipulations2.mmAutoReinvestment,
-					com.tools20022.repository.msg.Debt2.mmAutoReinvestment);
+			derivation_lazy = () -> Arrays.asList(FinancialInstrumentStipulations.mmAutoReinvestment, FinancialInstrumentStipulations2.mmAutoReinvestment, Debt2.mmAutoReinvestment);
 			elementContext_lazy = () -> Debt.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AutoReinvestment";
 			definition = "Indicates an instruction to reinvest dividends in the underlying security (or proceeds at maturity in a similar instrument) if the current rate equals the rate specified or better.";
 			maxOccurs = 1;
@@ -4669,16 +4523,16 @@ public class Debt extends Security {
 	 */
 	public static final MMBusinessAssociationEnd mmCustomDate = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrumentStipulations.mmCustomDate, com.tools20022.repository.msg.FinancialInstrumentStipulations2.mmCustomDate);
+			derivation_lazy = () -> Arrays.asList(FinancialInstrumentStipulations.mmCustomDate, FinancialInstrumentStipulations2.mmCustomDate);
 			elementContext_lazy = () -> Debt.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CustomDate";
 			definition = "Indicates an instruction to override an investment's default start and/or end date with a custom date.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmCustomDateDebt;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmObject();
 		}
 	};
@@ -4727,11 +4581,10 @@ public class Debt extends Security {
 	 */
 	public static final MMBusinessAttribute mmLookBack = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrumentStipulations.mmLookBack, com.tools20022.repository.msg.FinancialInstrumentStipulations2.mmLookBack,
-					com.tools20022.repository.msg.Debt2.mmLookBack);
+			derivation_lazy = () -> Arrays.asList(FinancialInstrumentStipulations.mmLookBack, FinancialInstrumentStipulations2.mmLookBack, Debt2.mmLookBack);
 			elementContext_lazy = () -> Debt.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "LookBack";
 			definition = "Indicates an instruction or attribute giving the number of days to be included in the look-back period for the investment. Some options allow exercise based on the underlying asset's optimal value over the look-back period.";
 			maxOccurs = 1;
@@ -4785,16 +4638,16 @@ public class Debt extends Security {
 	 */
 	public static final MMBusinessAssociationEnd mmMinimumDenomination = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrumentStipulations.mmMinimumDenomination, com.tools20022.repository.msg.FinancialInstrumentStipulations2.mmMinimumDenomination);
+			derivation_lazy = () -> Arrays.asList(FinancialInstrumentStipulations.mmMinimumDenomination, FinancialInstrumentStipulations2.mmMinimumDenomination);
 			elementContext_lazy = () -> Debt.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MinimumDenomination";
 			definition = "Indicates the minimum denomination of a security.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmMinimumDenominationDebt;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmObject();
 		}
 	};
@@ -4839,11 +4692,10 @@ public class Debt extends Security {
 	 */
 	public static final MMBusinessAttribute mmMaximumSubstitution = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrumentStipulations.mmMaximumSubstitution, com.tools20022.repository.msg.FinancialInstrumentStipulations2.mmMaximumSubstitution,
-					com.tools20022.repository.msg.Debt2.mmMaximumSubstitution);
+			derivation_lazy = () -> Arrays.asList(FinancialInstrumentStipulations.mmMaximumSubstitution, FinancialInstrumentStipulations2.mmMaximumSubstitution, Debt2.mmMaximumSubstitution);
 			elementContext_lazy = () -> Debt.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MaximumSubstitution";
 			definition = "Maximum number of time the collateral can be substitute.";
 			maxOccurs = 1;
@@ -4899,17 +4751,16 @@ public class Debt extends Security {
 	 */
 	public static final MMBusinessAssociationEnd mmMinimumIncrement = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrumentStipulations.mmMinimumIncrement, com.tools20022.repository.msg.FinancialInstrumentStipulations2.mmMinimumIncrement,
-					com.tools20022.repository.msg.Debt2.mmMinimumIncrement);
+			derivation_lazy = () -> Arrays.asList(FinancialInstrumentStipulations.mmMinimumIncrement, FinancialInstrumentStipulations2.mmMinimumIncrement, Debt2.mmMinimumIncrement);
 			elementContext_lazy = () -> Debt.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MinimumIncrement";
 			definition = "Indicates the minimum tradable increments of a security.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmMinimumIncrementDebt;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmObject();
 		}
 	};
@@ -4955,10 +4806,10 @@ public class Debt extends Security {
 	 */
 	public static final MMBusinessAttribute mmProduction = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrumentStipulations.mmProduction, com.tools20022.repository.msg.FinancialInstrumentStipulations2.mmProduction);
+			derivation_lazy = () -> Arrays.asList(FinancialInstrumentStipulations.mmProduction, FinancialInstrumentStipulations2.mmProduction);
 			elementContext_lazy = () -> Debt.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Production";
 			definition = "Indicates a search criterion used when looking to buy a bond, particularly an mortgage back security (MBS), issued in a particular year.";
 			maxOccurs = 1;
@@ -5006,10 +4857,10 @@ public class Debt extends Security {
 	 */
 	public static final MMBusinessAttribute mmRestricted = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrumentStipulations.mmRestrictedIndicator, com.tools20022.repository.msg.FinancialInstrumentStipulations2.mmRestrictedIndicator);
+			derivation_lazy = () -> Arrays.asList(FinancialInstrumentStipulations.mmRestrictedIndicator, FinancialInstrumentStipulations2.mmRestrictedIndicator);
 			elementContext_lazy = () -> Debt.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Restricted";
 			definition = "Identifies if the securities is restricted or not (as per Rule 144).";
 			maxOccurs = 1;
@@ -5062,11 +4913,10 @@ public class Debt extends Security {
 	 */
 	public static final MMBusinessAttribute mmPriceFrequency = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrumentStipulations.mmPriceFrequency, com.tools20022.repository.msg.FinancialInstrumentStipulations2.mmPriceFrequency,
-					com.tools20022.repository.msg.Debt2.mmPriceFrequency);
+			derivation_lazy = () -> Arrays.asList(FinancialInstrumentStipulations.mmPriceFrequency, FinancialInstrumentStipulations2.mmPriceFrequency, Debt2.mmPriceFrequency);
 			elementContext_lazy = () -> Debt.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PriceFrequency";
 			definition = "Indicates the frequency at which the bond is re-rated and therefore re-priced (bond attribute, particularly of floating rate and index linked instruments).";
 			maxOccurs = 1;
@@ -5117,11 +4967,10 @@ public class Debt extends Security {
 	 */
 	public static final MMBusinessAttribute mmSubstitutionFrequency = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrumentStipulations.mmSubstitutionFrequency, com.tools20022.repository.msg.FinancialInstrumentStipulations2.mmSubstitutionFrequency,
-					com.tools20022.repository.msg.Debt2.mmSubstitutionFrequency);
+			derivation_lazy = () -> Arrays.asList(FinancialInstrumentStipulations.mmSubstitutionFrequency, FinancialInstrumentStipulations2.mmSubstitutionFrequency, Debt2.mmSubstitutionFrequency);
 			elementContext_lazy = () -> Debt.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SubstitutionFrequency";
 			definition = "Indicates the maximum number of times collateral can be substituted.";
 			maxOccurs = 1;
@@ -5170,11 +5019,10 @@ public class Debt extends Security {
 	 */
 	public static final MMBusinessAttribute mmSubstitutionLeft = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrumentStipulations.mmSubstitutionLeft, com.tools20022.repository.msg.FinancialInstrumentStipulations2.mmSubstitutionLeft,
-					com.tools20022.repository.msg.Debt2.mmSubstitutionLeft);
+			derivation_lazy = () -> Arrays.asList(FinancialInstrumentStipulations.mmSubstitutionLeft, FinancialInstrumentStipulations2.mmSubstitutionLeft, Debt2.mmSubstitutionLeft);
 			elementContext_lazy = () -> Debt.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SubstitutionLeft";
 			definition = "Number of remaining times the collateral can be substitute.";
 			maxOccurs = 1;
@@ -5224,10 +5072,10 @@ public class Debt extends Security {
 	 */
 	public static final MMBusinessAttribute mmWholePool = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrumentStipulations.mmWholePoolIndicator, com.tools20022.repository.msg.FinancialInstrumentStipulations2.mmWholePoolIndicator);
+			derivation_lazy = () -> Arrays.asList(FinancialInstrumentStipulations.mmWholePoolIndicator, FinancialInstrumentStipulations2.mmWholePoolIndicator);
 			elementContext_lazy = () -> Debt.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "WholePool";
 			definition = "Indicates a search criterion when looking to buy an mortgage back security (MBS) that either is [yes] or is not [no] an entire pool.";
 			maxOccurs = 1;
@@ -5277,10 +5125,10 @@ public class Debt extends Security {
 	 */
 	public static final MMBusinessAttribute mmAlternativeMinimumTax = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrumentStipulations2.mmAlternativeMinimumTaxIndicator, com.tools20022.repository.msg.Debt2.mmAlternativeMinimumTaxIndicator);
+			derivation_lazy = () -> Arrays.asList(FinancialInstrumentStipulations2.mmAlternativeMinimumTaxIndicator, Debt2.mmAlternativeMinimumTaxIndicator);
 			elementContext_lazy = () -> Debt.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AlternativeMinimumTax";
 			definition = "Identifies whether the issue is subject to alternative minimum taxation (used for municipal bonds).";
 			maxOccurs = 1;
@@ -5326,13 +5174,13 @@ public class Debt extends Security {
 		{
 			elementContext_lazy = () -> Debt.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NextInterest";
 			definition = "Specifies the interest applicable to the next interest payment period.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.InterestCalculation.mmDebtInstrument;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.InterestCalculation.mmObject();
 		}
 	};
@@ -5365,7 +5213,7 @@ public class Debt extends Security {
 		{
 			elementContext_lazy = () -> Debt.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ExtendibleDate";
 			definition = "Date/time to which a date might be extended.";
 			maxOccurs = 1;
@@ -5407,7 +5255,7 @@ public class Debt extends Security {
 		{
 			elementContext_lazy = () -> Debt.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SinkableIndicator";
 			definition = "Indicates whether the security is a sinkung fund. A sinking fund is a bond in which part of the total principal amount is repaid according to agreed schedules of dates, amounts and prices.";
 			maxOccurs = 1;
@@ -5448,7 +5296,7 @@ public class Debt extends Security {
 		{
 			elementContext_lazy = () -> Debt.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Insured";
 			definition = "Identifies whether the lender is assured partial or full payment by a third party if the borrower defaults.";
 			maxOccurs = 1;
@@ -5495,10 +5343,10 @@ public class Debt extends Security {
 	 */
 	public static final MMBusinessAttribute mmGeographics = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Debt2.mmGeographics);
+			derivation_lazy = () -> Arrays.asList(Debt2.mmGeographics);
 			elementContext_lazy = () -> Debt.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Geographics";
 			definition = "Type of stipulation expressing geographical constraints on a fixed income instrument. It is expressed with a state or country abbreviation and a minimum or maximum percentage. Example: CA 0-80 (minimum of 80 percent in Californian assets).";
 			maxOccurs = 1;
@@ -5540,10 +5388,10 @@ public class Debt extends Security {
 	 */
 	public static final MMBusinessAttribute mmPaymentCurrency = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Debt2.mmPaymentCurrency);
+			derivation_lazy = () -> Arrays.asList(Debt2.mmPaymentCurrency);
 			elementContext_lazy = () -> Debt.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PaymentCurrency";
 			definition = "Currency of the payment.";
 			maxOccurs = 1;
@@ -5593,10 +5441,10 @@ public class Debt extends Security {
 	 */
 	public static final MMBusinessAttribute mmDirtyPrice = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UnderlyingAttributes.mmDirtyPrice, com.tools20022.repository.msg.UnderlyingAttributes2.mmDirtyPrice);
+			derivation_lazy = () -> Arrays.asList(UnderlyingAttributes.mmDirtyPrice, UnderlyingAttributes2.mmDirtyPrice);
 			elementContext_lazy = () -> Debt.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DirtyPrice";
 			definition = "Price that includes interest that has accrued since issue of the most recent coupon payment.";
 			maxOccurs = 1;
@@ -5637,7 +5485,7 @@ public class Debt extends Security {
 		{
 			elementContext_lazy = () -> Debt.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DebtSeniority";
 			definition = "Seniority of a specific debt instrument, that is the order of repayment in the event of a sale or bankruptcy of the issuer of the debt.";
 			maxOccurs = 1;
@@ -5649,42 +5497,27 @@ public class Debt extends Security {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Debt";
 				definition = "Financial instruments evidencing moneys owed by the issuer to the holder on terms as specified.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.DateTimePeriod.mmExtendiblePeriodDebt, com.tools20022.repository.entity.DateTimePeriod.mmCustomDateDebt,
 						com.tools20022.repository.entity.SecuritiesQuantity.mmMinimumDenominationDebt, com.tools20022.repository.entity.SecuritiesQuantity.mmMinimumIncrementDebt,
 						com.tools20022.repository.entity.InterestCalculation.mmDebtInstrument);
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.FinancialInstrumentProperties1Choice.mmDebt, com.tools20022.repository.msg.FinancialInstrument28.mmDebt,
-						com.tools20022.repository.msg.SingleQuote1.mmStipulations, com.tools20022.repository.msg.SingleQuote1.mmUnderlyingStipulations, com.tools20022.repository.choice.QuoteCancellation1Choice.mmStipulations,
-						com.tools20022.repository.choice.QuoteCancellation1Choice.mmUnderlyingStipulations, com.tools20022.repository.msg.QuoteRequest1.mmStipulations, com.tools20022.repository.msg.QuoteRequest1.mmUnderlyingStipulations,
-						com.tools20022.repository.msg.RequestForQuote.mmStipulations, com.tools20022.repository.msg.RequestForQuote.mmUnderlyingStipulations, com.tools20022.repository.msg.Quote1.mmStipulations,
-						com.tools20022.repository.msg.Quote1.mmUnderlyingStipulations, com.tools20022.repository.msg.SecuritiesReferenceDataReport5.mmDebtInstrumentAttributes, com.tools20022.repository.msg.TransparencyDataReport10.mmBond,
-						com.tools20022.repository.msg.InterestRateDerivative5.mmUnderlyingBond, com.tools20022.repository.msg.SecurityInstrumentDescription13.mmDebtInstrumentAttributes);
+				derivationElement_lazy = () -> Arrays.asList(FinancialInstrumentProperties1Choice.mmDebt, FinancialInstrument28.mmDebt, SingleQuote1.mmStipulations, SingleQuote1.mmUnderlyingStipulations,
+						QuoteCancellation1Choice.mmStipulations, QuoteCancellation1Choice.mmUnderlyingStipulations, QuoteRequest1.mmStipulations, QuoteRequest1.mmUnderlyingStipulations, RequestForQuote.mmStipulations,
+						RequestForQuote.mmUnderlyingStipulations, Quote1.mmStipulations, Quote1.mmUnderlyingStipulations, SecuritiesReferenceDataReport5.mmDebtInstrumentAttributes, TransparencyDataReport10.mmBond,
+						InterestRateDerivative5.mmUnderlyingBond, SecurityInstrumentDescription13.mmDebtInstrumentAttributes);
 				subType_lazy = () -> Arrays.asList(Loan.mmObject());
 				superType_lazy = () -> Security.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Debt.mmPaymentDirectionIndicator, com.tools20022.repository.entity.Debt.mmNextCallableDate, com.tools20022.repository.entity.Debt.mmPutableDate,
-						com.tools20022.repository.entity.Debt.mmDatedDate, com.tools20022.repository.entity.Debt.mmFirstPaymentDate, com.tools20022.repository.entity.Debt.mmFactor, com.tools20022.repository.entity.Debt.mmPoolNumber,
-						com.tools20022.repository.entity.Debt.mmVariableRateIndicator, com.tools20022.repository.entity.Debt.mmCallableIndicator, com.tools20022.repository.entity.Debt.mmPutableIndicator,
-						com.tools20022.repository.entity.Debt.mmYieldToMaturityRate, com.tools20022.repository.entity.Debt.mmAccruedCapitalisationAmount, com.tools20022.repository.entity.Debt.mmNextCouponDate,
-						com.tools20022.repository.entity.Debt.mmNextFactorDate, com.tools20022.repository.entity.Debt.mmOddCouponIndicator, com.tools20022.repository.entity.Debt.mmCPProgram,
-						com.tools20022.repository.entity.Debt.mmCPRegistrationType, com.tools20022.repository.entity.Debt.mmConvertibleIndicator, com.tools20022.repository.entity.Debt.mmPreFundedIndicator,
-						com.tools20022.repository.entity.Debt.mmEscrowedIndicator, com.tools20022.repository.entity.Debt.mmPerpetualIndicator, com.tools20022.repository.entity.Debt.mmSubordinatedIndicator,
-						com.tools20022.repository.entity.Debt.mmExtendibleIndicator, com.tools20022.repository.entity.Debt.mmExtendiblePeriod, com.tools20022.repository.entity.Debt.mmOverAllotmentAmount,
-						com.tools20022.repository.entity.Debt.mmOverAllotmentRate, com.tools20022.repository.entity.Debt.mmAmortisableIndicator, com.tools20022.repository.entity.Debt.mmCapitalisedInterest,
-						com.tools20022.repository.entity.Debt.mmActualDenominationAmount, com.tools20022.repository.entity.Debt.mmPieces, com.tools20022.repository.entity.Debt.mmPoolsMaximum,
-						com.tools20022.repository.entity.Debt.mmPoolsPerMillion, com.tools20022.repository.entity.Debt.mmPoolsPerLot, com.tools20022.repository.entity.Debt.mmPoolsPerTrade,
-						com.tools20022.repository.entity.Debt.mmConstantPrePaymentPenalty, com.tools20022.repository.entity.Debt.mmPrePaymentSpeed, com.tools20022.repository.entity.Debt.mmConstantPrePaymentYield,
-						com.tools20022.repository.entity.Debt.mmWeightedAverageCoupon, com.tools20022.repository.entity.Debt.mmWeightedAverageLife, com.tools20022.repository.entity.Debt.mmWeightedAverageLoan,
-						com.tools20022.repository.entity.Debt.mmWeightedAverageMaturity, com.tools20022.repository.entity.Debt.mmInsuredIndicator, com.tools20022.repository.entity.Debt.mmBankQualified,
-						com.tools20022.repository.entity.Debt.mmAutoReinvestment, com.tools20022.repository.entity.Debt.mmCustomDate, com.tools20022.repository.entity.Debt.mmLookBack,
-						com.tools20022.repository.entity.Debt.mmMinimumDenomination, com.tools20022.repository.entity.Debt.mmMaximumSubstitution, com.tools20022.repository.entity.Debt.mmMinimumIncrement,
-						com.tools20022.repository.entity.Debt.mmProduction, com.tools20022.repository.entity.Debt.mmRestricted, com.tools20022.repository.entity.Debt.mmPriceFrequency,
-						com.tools20022.repository.entity.Debt.mmSubstitutionFrequency, com.tools20022.repository.entity.Debt.mmSubstitutionLeft, com.tools20022.repository.entity.Debt.mmWholePool,
-						com.tools20022.repository.entity.Debt.mmAlternativeMinimumTax, com.tools20022.repository.entity.Debt.mmNextInterest, com.tools20022.repository.entity.Debt.mmExtendibleDate,
-						com.tools20022.repository.entity.Debt.mmSinkableIndicator, com.tools20022.repository.entity.Debt.mmInsured, com.tools20022.repository.entity.Debt.mmGeographics,
-						com.tools20022.repository.entity.Debt.mmPaymentCurrency, com.tools20022.repository.entity.Debt.mmDirtyPrice, com.tools20022.repository.entity.Debt.mmDebtSeniority);
+				element_lazy = () -> Arrays.asList(Debt.mmPaymentDirectionIndicator, Debt.mmNextCallableDate, Debt.mmPutableDate, Debt.mmDatedDate, Debt.mmFirstPaymentDate, Debt.mmFactor, Debt.mmPoolNumber, Debt.mmVariableRateIndicator,
+						Debt.mmCallableIndicator, Debt.mmPutableIndicator, Debt.mmYieldToMaturityRate, Debt.mmAccruedCapitalisationAmount, Debt.mmNextCouponDate, Debt.mmNextFactorDate, Debt.mmOddCouponIndicator, Debt.mmCPProgram,
+						Debt.mmCPRegistrationType, Debt.mmConvertibleIndicator, Debt.mmPreFundedIndicator, Debt.mmEscrowedIndicator, Debt.mmPerpetualIndicator, Debt.mmSubordinatedIndicator, Debt.mmExtendibleIndicator,
+						Debt.mmExtendiblePeriod, Debt.mmOverAllotmentAmount, Debt.mmOverAllotmentRate, Debt.mmAmortisableIndicator, Debt.mmCapitalisedInterest, Debt.mmActualDenominationAmount, Debt.mmPieces, Debt.mmPoolsMaximum,
+						Debt.mmPoolsPerMillion, Debt.mmPoolsPerLot, Debt.mmPoolsPerTrade, Debt.mmConstantPrePaymentPenalty, Debt.mmPrePaymentSpeed, Debt.mmConstantPrePaymentYield, Debt.mmWeightedAverageCoupon, Debt.mmWeightedAverageLife,
+						Debt.mmWeightedAverageLoan, Debt.mmWeightedAverageMaturity, Debt.mmInsuredIndicator, Debt.mmBankQualified, Debt.mmAutoReinvestment, Debt.mmCustomDate, Debt.mmLookBack, Debt.mmMinimumDenomination,
+						Debt.mmMaximumSubstitution, Debt.mmMinimumIncrement, Debt.mmProduction, Debt.mmRestricted, Debt.mmPriceFrequency, Debt.mmSubstitutionFrequency, Debt.mmSubstitutionLeft, Debt.mmWholePool,
+						Debt.mmAlternativeMinimumTax, Debt.mmNextInterest, Debt.mmExtendibleDate, Debt.mmSinkableIndicator, Debt.mmInsured, Debt.mmGeographics, Debt.mmPaymentCurrency, Debt.mmDirtyPrice, Debt.mmDebtSeniority);
 				derivationComponent_lazy = () -> Arrays.asList(Debt1.mmObject(), Debt2.mmObject(), DebtInstrument2.mmObject(), DebtInstrument4.mmObject(), DebtInstrument5.mmObject());
 			}
 		});

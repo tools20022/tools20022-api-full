@@ -20,11 +20,13 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.ATMCommandParameters1Choice;
 import com.tools20022.repository.codeset.ATMCommand4Code;
 import com.tools20022.repository.codeset.TMSContactLevel2Code;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.entity.TerminalManagementSystem;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -106,7 +108,7 @@ public class ATMCommand7 {
 			componentContext_lazy = () -> ATMCommand7.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Type of command to be performed by the ATM.";
 			maxOccurs = 1;
@@ -149,11 +151,11 @@ public class ATMCommand7 {
 	 */
 	public static final MMMessageAttribute mmUrgency = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TerminalManagementSystem.mmContactLevel;
+			businessElementTrace_lazy = () -> TerminalManagementSystem.mmContactLevel;
 			componentContext_lazy = () -> ATMCommand7.mmObject();
 			isDerived = false;
 			xmlTag = "Urgcy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Urgency";
 			definition = "Urgency of the command.";
 			maxOccurs = 1;
@@ -193,7 +195,7 @@ public class ATMCommand7 {
 			componentContext_lazy = () -> ATMCommand7.mmObject();
 			isDerived = false;
 			xmlTag = "DtTm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DateTime";
 			definition = "Date time on which the command must be performed.";
 			maxOccurs = 1;
@@ -233,7 +235,7 @@ public class ATMCommand7 {
 			componentContext_lazy = () -> ATMCommand7.mmObject();
 			isDerived = false;
 			xmlTag = "CmdId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommandIdentification";
 			definition = "Identification of the entity issuing the command.";
 			maxOccurs = 1;
@@ -274,7 +276,7 @@ public class ATMCommand7 {
 			componentContext_lazy = () -> ATMCommand7.mmObject();
 			isDerived = false;
 			xmlTag = "CmdParams";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommandParameters";
 			definition = "Specific parameters attached to the command.";
 			maxOccurs = 1;
@@ -287,11 +289,10 @@ public class ATMCommand7 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMCommand7.mmType, com.tools20022.repository.msg.ATMCommand7.mmUrgency, com.tools20022.repository.msg.ATMCommand7.mmDateTime,
-						com.tools20022.repository.msg.ATMCommand7.mmCommandIdentification, com.tools20022.repository.msg.ATMCommand7.mmCommandParameters);
+				messageElement_lazy = () -> Arrays.asList(ATMCommand7.mmType, ATMCommand7.mmUrgency, ATMCommand7.mmDateTime, ATMCommand7.mmCommandIdentification, ATMCommand7.mmCommandParameters);
 				trace_lazy = () -> TerminalManagementSystem.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ATMCommand7";
 				definition = "Maintenance command to perform on an ATM.";
 			}

@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CRSSourceStatusCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -78,7 +80,7 @@ public class CRSSourceStatus1Code extends CRSSourceStatusCode {
 	 */
 	public static final MMCode mmCalculated = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Calculated";
 			owner_lazy = () -> CRSSourceStatus1Code.mmObject();
 		}
@@ -101,7 +103,7 @@ public class CRSSourceStatus1Code extends CRSSourceStatusCode {
 	 */
 	public static final MMCode mmDeclared = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Declared";
 			owner_lazy = () -> CRSSourceStatus1Code.mmObject();
 		}
@@ -110,11 +112,11 @@ public class CRSSourceStatus1Code extends CRSSourceStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CRSSourceStatus1Code";
 				definition = "Specifies the source of Common Reporting Standard (CRS) status.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CRSSourceStatus1Code.mmCalculated, com.tools20022.repository.codeset.CRSSourceStatus1Code.mmDeclared);
+				code_lazy = () -> Arrays.asList(CRSSourceStatus1Code.mmCalculated, CRSSourceStatus1Code.mmDeclared);
 				trace_lazy = () -> CRSSourceStatusCode.mmObject();
 			}
 		});

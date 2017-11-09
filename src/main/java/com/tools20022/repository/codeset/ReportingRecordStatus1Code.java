@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.RecordStatusCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -95,7 +97,7 @@ public class ReportingRecordStatus1Code extends RecordStatusCode {
 	 */
 	public static final MMCode mmAccepted = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Accepted";
 			owner_lazy = () -> ReportingRecordStatus1Code.mmObject();
 		}
@@ -118,7 +120,7 @@ public class ReportingRecordStatus1Code extends RecordStatusCode {
 	 */
 	public static final MMCode mmAcceptedAfterPending = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcceptedAfterPending";
 			owner_lazy = () -> ReportingRecordStatus1Code.mmObject();
 		}
@@ -141,7 +143,7 @@ public class ReportingRecordStatus1Code extends RecordStatusCode {
 	 */
 	public static final MMCode mmPending = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Pending";
 			owner_lazy = () -> ReportingRecordStatus1Code.mmObject();
 		}
@@ -164,7 +166,7 @@ public class ReportingRecordStatus1Code extends RecordStatusCode {
 	 */
 	public static final MMCode mmReceived = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Received";
 			owner_lazy = () -> ReportingRecordStatus1Code.mmObject();
 		}
@@ -187,7 +189,7 @@ public class ReportingRecordStatus1Code extends RecordStatusCode {
 	 */
 	public static final MMCode mmRejected = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rejected";
 			owner_lazy = () -> ReportingRecordStatus1Code.mmObject();
 		}
@@ -210,7 +212,7 @@ public class ReportingRecordStatus1Code extends RecordStatusCode {
 	 */
 	public static final MMCode mmRejectedAfterPending = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RejectedAfterPending";
 			owner_lazy = () -> ReportingRecordStatus1Code.mmObject();
 		}
@@ -233,7 +235,7 @@ public class ReportingRecordStatus1Code extends RecordStatusCode {
 	 */
 	public static final MMCode mmWarning = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Warning";
 			owner_lazy = () -> ReportingRecordStatus1Code.mmObject();
 		}
@@ -242,14 +244,12 @@ public class ReportingRecordStatus1Code extends RecordStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ReportingRecordStatus1Code";
 				definition = "Specifies the status of the processing of an individual record within a message.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ReportingRecordStatus1Code.mmAccepted, com.tools20022.repository.codeset.ReportingRecordStatus1Code.mmAcceptedAfterPending,
-						com.tools20022.repository.codeset.ReportingRecordStatus1Code.mmPending, com.tools20022.repository.codeset.ReportingRecordStatus1Code.mmReceived,
-						com.tools20022.repository.codeset.ReportingRecordStatus1Code.mmRejected, com.tools20022.repository.codeset.ReportingRecordStatus1Code.mmRejectedAfterPending,
-						com.tools20022.repository.codeset.ReportingRecordStatus1Code.mmWarning);
+				code_lazy = () -> Arrays.asList(ReportingRecordStatus1Code.mmAccepted, ReportingRecordStatus1Code.mmAcceptedAfterPending, ReportingRecordStatus1Code.mmPending, ReportingRecordStatus1Code.mmReceived,
+						ReportingRecordStatus1Code.mmRejected, ReportingRecordStatus1Code.mmRejectedAfterPending, ReportingRecordStatus1Code.mmWarning);
 				trace_lazy = () -> RecordStatusCode.mmObject();
 			}
 		});

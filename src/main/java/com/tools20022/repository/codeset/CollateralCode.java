@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.Collateral1Code
+ * Collateral1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -35,13 +44,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.CollateralCode#mmNotCollateral
  * CollateralCode.mmNotCollateral}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.Collateral1Code
- * Collateral1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -85,7 +87,7 @@ public class CollateralCode {
 	 */
 	public static final MMCode mmCollateral = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Collateral";
 			definition = "Item is used as collateral.";
 			owner_lazy = () -> CollateralCode.mmObject();
@@ -115,7 +117,7 @@ public class CollateralCode {
 	 */
 	public static final MMCode mmNotCollateral = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotCollateral";
 			definition = "Item is not used as collateral.";
 			owner_lazy = () -> CollateralCode.mmObject();
@@ -126,11 +128,11 @@ public class CollateralCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CollateralCode";
 				definition = "Specifies whether the item is used as collateral.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CollateralCode.mmCollateral, com.tools20022.repository.codeset.CollateralCode.mmNotCollateral);
+				code_lazy = () -> Arrays.asList(CollateralCode.mmCollateral, CollateralCode.mmNotCollateral);
 				derivation_lazy = () -> Arrays.asList(Collateral1Code.mmObject());
 			}
 		});

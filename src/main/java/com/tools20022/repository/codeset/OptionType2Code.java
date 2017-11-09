@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.OptionDefinitionTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -87,7 +89,7 @@ public class OptionType2Code extends OptionDefinitionTypeCode {
 	 */
 	public static final MMCode mmCall = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Call";
 			owner_lazy = () -> OptionType2Code.mmObject();
 		}
@@ -110,7 +112,7 @@ public class OptionType2Code extends OptionDefinitionTypeCode {
 	 */
 	public static final MMCode mmPut = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Put";
 			owner_lazy = () -> OptionType2Code.mmObject();
 		}
@@ -133,7 +135,7 @@ public class OptionType2Code extends OptionDefinitionTypeCode {
 	 */
 	public static final MMCode mmOther = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
 			owner_lazy = () -> OptionType2Code.mmObject();
 		}
@@ -142,12 +144,12 @@ public class OptionType2Code extends OptionDefinitionTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CALL");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OptionType2Code";
 				definition = "Specifies whether it is a call option (right to purchase a specific underlying asset) or a put option (right to sell a specific underlying asset) or any other type of option.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OptionType2Code.mmCall, com.tools20022.repository.codeset.OptionType2Code.mmPut, com.tools20022.repository.codeset.OptionType2Code.mmOther);
+				code_lazy = () -> Arrays.asList(OptionType2Code.mmCall, OptionType2Code.mmPut, OptionType2Code.mmOther);
 				trace_lazy = () -> OptionDefinitionTypeCode.mmObject();
 			}
 		});

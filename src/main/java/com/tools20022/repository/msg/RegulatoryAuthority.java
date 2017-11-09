@@ -19,9 +19,13 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CountryCode;
 import com.tools20022.repository.datatype.Max70Text;
+import com.tools20022.repository.entity.Country;
+import com.tools20022.repository.entity.PartyName;
 import com.tools20022.repository.entity.RegulatoryAuthorityRole;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -100,11 +104,11 @@ public class RegulatoryAuthority {
 	 */
 	public static final MMMessageAttribute mmAuthorityName = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyName.mmName;
+			businessElementTrace_lazy = () -> PartyName.mmName;
 			componentContext_lazy = () -> RegulatoryAuthority.mmObject();
 			isDerived = false;
 			xmlTag = "AuthrtyNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AuthorityName";
 			definition = "Name of the entity requiring the regulatory reporting information.";
 			maxOccurs = 1;
@@ -148,11 +152,11 @@ public class RegulatoryAuthority {
 	 */
 	public static final MMMessageAttribute mmAuthorityCountry = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Country.mmCode;
+			businessElementTrace_lazy = () -> Country.mmCode;
 			componentContext_lazy = () -> RegulatoryAuthority.mmObject();
 			isDerived = false;
 			xmlTag = "AuthrtyCtry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AuthorityCountry";
 			definition = "Country of the entity requiring the regulatory reporting information.";
 			maxOccurs = 1;
@@ -164,10 +168,10 @@ public class RegulatoryAuthority {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RegulatoryAuthority.mmAuthorityName, com.tools20022.repository.msg.RegulatoryAuthority.mmAuthorityCountry);
+				messageElement_lazy = () -> Arrays.asList(RegulatoryAuthority.mmAuthorityName, RegulatoryAuthority.mmAuthorityCountry);
 				trace_lazy = () -> RegulatoryAuthorityRole.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RegulatoryAuthority";
 				definition = "Entity requiring the regulatory reporting information.";
 			}

@@ -20,12 +20,17 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.tsrv.UndertakingStatusReportV01;
 import com.tools20022.repository.codeset.ExternalUndertakingStatusCategory1Code;
 import com.tools20022.repository.codeset.UndertakingStatus3Code;
 import com.tools20022.repository.datatype.Max2000Text;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.Number;
+import com.tools20022.repository.entity.Party;
+import com.tools20022.repository.entity.Undertaking;
 import com.tools20022.repository.entity.UndertakingStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -141,11 +146,11 @@ public class UndertakingStatusAdvice1 {
 	 */
 	public static final MMMessageAssociationEnd mmInitiatingParty = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> UndertakingStatusAdvice1.mmObject();
 			isDerived = false;
 			xmlTag = "InitgPty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InitiatingParty";
 			definition = "Details related to the party that initiated the report.";
 			maxOccurs = 1;
@@ -189,11 +194,11 @@ public class UndertakingStatusAdvice1 {
 	 */
 	public static final MMMessageAssociationEnd mmUndertakingIdentification = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.UndertakingStatus.mmUndertaking;
+			businessElementTrace_lazy = () -> UndertakingStatus.mmUndertaking;
 			componentContext_lazy = () -> UndertakingStatusAdvice1.mmObject();
 			isDerived = false;
 			xmlTag = "UdrtkgId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UndertakingIdentification";
 			definition = "Details related to the identification of the undertaking.";
 			maxOccurs = 1;
@@ -238,7 +243,7 @@ public class UndertakingStatusAdvice1 {
 			componentContext_lazy = () -> UndertakingStatusAdvice1.mmObject();
 			isDerived = false;
 			xmlTag = "AmdmntSeqNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmendmentSequenceNumber";
 			definition = "Sequence number assigned by the issuer to each amendment of the undertaking.";
 			maxOccurs = 1;
@@ -282,7 +287,7 @@ public class UndertakingStatusAdvice1 {
 			componentContext_lazy = () -> UndertakingStatusAdvice1.mmObject();
 			isDerived = false;
 			xmlTag = "AdvsgPtyRefNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdvisingPartyReferenceNumber";
 			definition = "Unique and unambiguous identifier assigned by the advising party to the undertaking.";
 			maxOccurs = 1;
@@ -326,7 +331,7 @@ public class UndertakingStatusAdvice1 {
 			componentContext_lazy = () -> UndertakingStatusAdvice1.mmObject();
 			isDerived = false;
 			xmlTag = "CnfrmrRefNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConfirmerReferenceNumber";
 			definition = "Unique and unambiguous identifier assigned by the confirmer to the undertaking.";
 			maxOccurs = 1;
@@ -370,11 +375,11 @@ public class UndertakingStatusAdvice1 {
 	 */
 	public static final MMMessageAttribute mmStatusCategory = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.UndertakingStatus.mmStatusCategory;
+			businessElementTrace_lazy = () -> UndertakingStatus.mmStatusCategory;
 			componentContext_lazy = () -> UndertakingStatusAdvice1.mmObject();
 			isDerived = false;
 			xmlTag = "StsCtgy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusCategory";
 			definition = "Specifies the category of the status.";
 			maxOccurs = 1;
@@ -418,11 +423,11 @@ public class UndertakingStatusAdvice1 {
 	 */
 	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.UndertakingStatus.mmStatus;
+			businessElementTrace_lazy = () -> UndertakingStatus.mmStatus;
 			componentContext_lazy = () -> UndertakingStatusAdvice1.mmObject();
 			isDerived = false;
 			xmlTag = "Sts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Status";
 			definition = "Specifies the reported status.";
 			maxOccurs = 1;
@@ -468,11 +473,11 @@ public class UndertakingStatusAdvice1 {
 	 */
 	public static final MMMessageAssociationEnd mmStatusReason = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.UndertakingStatus.mmUndertakingStatusReason;
+			businessElementTrace_lazy = () -> UndertakingStatus.mmUndertakingStatusReason;
 			componentContext_lazy = () -> UndertakingStatusAdvice1.mmObject();
 			isDerived = false;
 			xmlTag = "StsRsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusReason";
 			definition = "Set of elements used to provide detailed information on the status reason.";
 			minOccurs = 0;
@@ -513,7 +518,7 @@ public class UndertakingStatusAdvice1 {
 			componentContext_lazy = () -> UndertakingStatusAdvice1.mmObject();
 			isDerived = false;
 			xmlTag = "RptdAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportedAmount";
 			definition = "Amount reported.";
 			minOccurs = 0;
@@ -555,7 +560,7 @@ public class UndertakingStatusAdvice1 {
 			componentContext_lazy = () -> UndertakingStatusAdvice1.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlMsgDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalMessageDetails";
 			definition = "Information concerning the original message to which the status report may be sent in response.";
 			maxOccurs = 1;
@@ -597,11 +602,11 @@ public class UndertakingStatusAdvice1 {
 	 */
 	public static final MMMessageAssociationEnd mmEnclosedFile = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Undertaking.mmSpecifiedDocument;
+			businessElementTrace_lazy = () -> Undertaking.mmSpecifiedDocument;
 			componentContext_lazy = () -> UndertakingStatusAdvice1.mmObject();
 			isDerived = false;
 			xmlTag = "NclsdFile";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EnclosedFile";
 			definition = "Document or template enclosed in the report.";
 			minOccurs = 0;
@@ -642,7 +647,7 @@ public class UndertakingStatusAdvice1 {
 			componentContext_lazy = () -> UndertakingStatusAdvice1.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInformation";
 			definition = "Additional information related to the report.";
 			maxOccurs = 5;
@@ -654,16 +659,14 @@ public class UndertakingStatusAdvice1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UndertakingStatusAdvice1.mmInitiatingParty, com.tools20022.repository.msg.UndertakingStatusAdvice1.mmUndertakingIdentification,
-						com.tools20022.repository.msg.UndertakingStatusAdvice1.mmAmendmentSequenceNumber, com.tools20022.repository.msg.UndertakingStatusAdvice1.mmAdvisingPartyReferenceNumber,
-						com.tools20022.repository.msg.UndertakingStatusAdvice1.mmConfirmerReferenceNumber, com.tools20022.repository.msg.UndertakingStatusAdvice1.mmStatusCategory,
-						com.tools20022.repository.msg.UndertakingStatusAdvice1.mmStatus, com.tools20022.repository.msg.UndertakingStatusAdvice1.mmStatusReason, com.tools20022.repository.msg.UndertakingStatusAdvice1.mmReportedAmount,
-						com.tools20022.repository.msg.UndertakingStatusAdvice1.mmOriginalMessageDetails, com.tools20022.repository.msg.UndertakingStatusAdvice1.mmEnclosedFile,
-						com.tools20022.repository.msg.UndertakingStatusAdvice1.mmAdditionalInformation);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsrv.UndertakingStatusReportV01.mmUndertakingStatusReportDetails);
+				messageElement_lazy = () -> Arrays.asList(UndertakingStatusAdvice1.mmInitiatingParty, UndertakingStatusAdvice1.mmUndertakingIdentification, UndertakingStatusAdvice1.mmAmendmentSequenceNumber,
+						UndertakingStatusAdvice1.mmAdvisingPartyReferenceNumber, UndertakingStatusAdvice1.mmConfirmerReferenceNumber, UndertakingStatusAdvice1.mmStatusCategory, UndertakingStatusAdvice1.mmStatus,
+						UndertakingStatusAdvice1.mmStatusReason, UndertakingStatusAdvice1.mmReportedAmount, UndertakingStatusAdvice1.mmOriginalMessageDetails, UndertakingStatusAdvice1.mmEnclosedFile,
+						UndertakingStatusAdvice1.mmAdditionalInformation);
+				messageBuildingBlock_lazy = () -> Arrays.asList(UndertakingStatusReportV01.mmUndertakingStatusReportDetails);
 				trace_lazy = () -> UndertakingStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "UndertakingStatusAdvice1";
 				definition = "Undertaking status information.";
 			}

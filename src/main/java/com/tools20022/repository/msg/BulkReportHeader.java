@@ -19,9 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.datatype.YesNoIndicator;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -100,7 +102,7 @@ public class BulkReportHeader {
 			componentContext_lazy = () -> BulkReportHeader.mmObject();
 			isDerived = false;
 			xmlTag = "RptId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportIdentification";
 			definition = "Unique and unambiguous identification of the full report.";
 			maxOccurs = 1;
@@ -141,7 +143,7 @@ public class BulkReportHeader {
 			componentContext_lazy = () -> BulkReportHeader.mmObject();
 			isDerived = false;
 			xmlTag = "TrchNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TrancheNumber";
 			definition = "Sequence number of the report tranche.";
 			maxOccurs = 1;
@@ -184,7 +186,7 @@ public class BulkReportHeader {
 			componentContext_lazy = () -> BulkReportHeader.mmObject();
 			isDerived = false;
 			xmlTag = "LastTrchInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LastTrancheIndicator";
 			definition = "Indicates whether this tranche is the last tranche of the full report.";
 			maxOccurs = 1;
@@ -196,10 +198,9 @@ public class BulkReportHeader {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BulkReportHeader.mmReportIdentification, com.tools20022.repository.msg.BulkReportHeader.mmTrancheNumber,
-						com.tools20022.repository.msg.BulkReportHeader.mmLastTrancheIndicator);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(BulkReportHeader.mmReportIdentification, BulkReportHeader.mmTrancheNumber, BulkReportHeader.mmLastTrancheIndicator);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "BulkReportHeader";
 				definition = "Identification of the report and information allowing a multi tranches report to be correctly reassembled.";
 			}

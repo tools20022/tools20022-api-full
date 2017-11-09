@@ -20,10 +20,12 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.DateAndDateTimeChoice;
 import com.tools20022.repository.datatype.Max2000Text;
 import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.Expiry;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -103,11 +105,11 @@ public class ExpiryTerms2 {
 	 */
 	public static final MMMessageAttribute mmDateTime = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Expiry.mmExpiryDateTime;
+			businessElementTrace_lazy = () -> Expiry.mmExpiryDateTime;
 			componentContext_lazy = () -> ExpiryTerms2.mmObject();
 			isDerived = false;
 			xmlTag = "DtTm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DateTime";
 			definition = "Date and time when the undertaking will cease to be available.";
 			maxOccurs = 1;
@@ -147,7 +149,7 @@ public class ExpiryTerms2 {
 			componentContext_lazy = () -> ExpiryTerms2.mmObject();
 			isDerived = false;
 			xmlTag = "AutoXtnsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AutoExtension";
 			definition = "Details related to the automatic extension of the undertaking.";
 			maxOccurs = 1;
@@ -193,11 +195,11 @@ public class ExpiryTerms2 {
 	 */
 	public static final MMMessageAttribute mmCondition = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Expiry.mmExpiryCondition;
+			businessElementTrace_lazy = () -> Expiry.mmExpiryCondition;
 			componentContext_lazy = () -> ExpiryTerms2.mmObject();
 			isDerived = false;
 			xmlTag = "Cond";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Condition";
 			definition = "Documentary condition that indicates when the undertaking will cease to be available. ";
 			maxOccurs = 1;
@@ -241,11 +243,11 @@ public class ExpiryTerms2 {
 	 */
 	public static final MMMessageAttribute mmOpenEndedIndicator = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Expiry.mmOpenEndedIndicator;
+			businessElementTrace_lazy = () -> Expiry.mmOpenEndedIndicator;
 			componentContext_lazy = () -> ExpiryTerms2.mmObject();
 			isDerived = false;
 			xmlTag = "OpnEnddInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OpenEndedIndicator";
 			definition = "Indicates whether the expiry terms are without a fixed expiry date.";
 			maxOccurs = 1;
@@ -257,11 +259,10 @@ public class ExpiryTerms2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ExpiryTerms2.mmDateTime, com.tools20022.repository.msg.ExpiryTerms2.mmAutoExtension, com.tools20022.repository.msg.ExpiryTerms2.mmCondition,
-						com.tools20022.repository.msg.ExpiryTerms2.mmOpenEndedIndicator);
+				messageElement_lazy = () -> Arrays.asList(ExpiryTerms2.mmDateTime, ExpiryTerms2.mmAutoExtension, ExpiryTerms2.mmCondition, ExpiryTerms2.mmOpenEndedIndicator);
 				trace_lazy = () -> Expiry.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ExpiryTerms2";
 				definition = "Expiry conditions.";
 			}

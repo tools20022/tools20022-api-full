@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.PhysicalTransferTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -86,7 +88,7 @@ public class PhysicalTransferType1Code extends PhysicalTransferTypeCode {
 	 */
 	public static final MMCode mmDematerialised = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Dematerialised";
 			owner_lazy = () -> PhysicalTransferType1Code.mmObject();
 		}
@@ -109,7 +111,7 @@ public class PhysicalTransferType1Code extends PhysicalTransferTypeCode {
 	 */
 	public static final MMCode mmPhysical = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Physical";
 			owner_lazy = () -> PhysicalTransferType1Code.mmObject();
 		}
@@ -118,12 +120,12 @@ public class PhysicalTransferType1Code extends PhysicalTransferTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("DEMT");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PhysicalTransferType1Code";
 				definition = "Specifies whether the financial instrument is to be physically delivered or is a dematerilized transfer.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PhysicalTransferType1Code.mmDematerialised, com.tools20022.repository.codeset.PhysicalTransferType1Code.mmPhysical);
+				code_lazy = () -> Arrays.asList(PhysicalTransferType1Code.mmDematerialised, PhysicalTransferType1Code.mmPhysical);
 				trace_lazy = () -> PhysicalTransferTypeCode.mmObject();
 			}
 		});

@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.ATMOperation1Code
+ * ATMOperation1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>{@linkplain com.tools20022.repository.codeset.ATMOperationCode#mmAdjust
@@ -42,13 +51,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.ATMOperationCode#mmUnloading
  * ATMOperationCode.mmUnloading}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.ATMOperation1Code
- * ATMOperation1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -92,7 +94,7 @@ public class ATMOperationCode {
 	 */
 	public static final MMCode mmAdjust = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Adjust";
 			definition = "Adjust logical counters of the cassette.";
 			owner_lazy = () -> ATMOperationCode.mmObject();
@@ -122,7 +124,7 @@ public class ATMOperationCode {
 	 */
 	public static final MMCode mmInsertMedia = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InsertMedia";
 			definition = "Add physically media to cassette.";
 			owner_lazy = () -> ATMOperationCode.mmObject();
@@ -152,7 +154,7 @@ public class ATMOperationCode {
 	 */
 	public static final MMCode mmLoading = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Loading";
 			definition = "Loading cassette.";
 			owner_lazy = () -> ATMOperationCode.mmObject();
@@ -182,7 +184,7 @@ public class ATMOperationCode {
 	 */
 	public static final MMCode mmRemoveMedia = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RemoveMedia";
 			definition = "Substract physically media from cassette.";
 			owner_lazy = () -> ATMOperationCode.mmObject();
@@ -212,7 +214,7 @@ public class ATMOperationCode {
 	 */
 	public static final MMCode mmUnloading = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unloading";
 			definition = "Unloading cassette.";
 			owner_lazy = () -> ATMOperationCode.mmObject();
@@ -223,12 +225,11 @@ public class ATMOperationCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ATMOperationCode";
 				definition = "Type of logical or physical operation on an ATM.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ATMOperationCode.mmAdjust, com.tools20022.repository.codeset.ATMOperationCode.mmInsertMedia, com.tools20022.repository.codeset.ATMOperationCode.mmLoading,
-						com.tools20022.repository.codeset.ATMOperationCode.mmRemoveMedia, com.tools20022.repository.codeset.ATMOperationCode.mmUnloading);
+				code_lazy = () -> Arrays.asList(ATMOperationCode.mmAdjust, ATMOperationCode.mmInsertMedia, ATMOperationCode.mmLoading, ATMOperationCode.mmRemoveMedia, ATMOperationCode.mmUnloading);
 				derivation_lazy = () -> Arrays.asList(ATMOperation1Code.mmObject());
 			}
 		});

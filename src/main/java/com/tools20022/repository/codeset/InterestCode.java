@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,19 +29,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.InterestType1Code
+ * InterestType1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>{@linkplain com.tools20022.repository.codeset.InterestCode#mmIntraDay
  * InterestCode.mmIntraDay}</li>
  * <li>{@linkplain com.tools20022.repository.codeset.InterestCode#mmOverNight
  * InterestCode.mmOverNight}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.InterestType1Code
- * InterestType1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -90,7 +92,7 @@ public class InterestCode {
 	 */
 	public static final MMCode mmIntraDay = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "IntraDay";
 			definition = "During or within a business day.";
 			owner_lazy = () -> InterestCode.mmObject();
@@ -122,7 +124,7 @@ public class InterestCode {
 	 */
 	public static final MMCode mmOverNight = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "OverNight";
 			definition = "Period of time between the end of a business day and the start of the next business day (usually the day after).";
 			owner_lazy = () -> InterestCode.mmObject();
@@ -133,12 +135,12 @@ public class InterestCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("INDY");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InterestCode";
 				definition = "Indicates which type of interest is applied to a balance left on an account.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.InterestCode.mmIntraDay, com.tools20022.repository.codeset.InterestCode.mmOverNight);
+				code_lazy = () -> Arrays.asList(InterestCode.mmIntraDay, InterestCode.mmOverNight);
 				derivation_lazy = () -> Arrays.asList(InterestType1Code.mmObject());
 			}
 		});

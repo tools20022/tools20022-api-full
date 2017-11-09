@@ -20,11 +20,13 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ActiveCurrencyCode;
 import com.tools20022.repository.codeset.ATMMediaType3Code;
 import com.tools20022.repository.datatype.ImpliedCurrencyAndAmount;
 import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.entity.Price;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -114,11 +116,11 @@ public class ATMCassetteCounters3 {
 	 */
 	public static final MMMessageAttribute mmUnitValue = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Price.mmAmount;
+			businessElementTrace_lazy = () -> Price.mmAmount;
 			componentContext_lazy = () -> ATMCassetteCounters3.mmObject();
 			isDerived = false;
 			xmlTag = "UnitVal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnitValue";
 			definition = "Amount of one media unit, if the media type is valued.";
 			maxOccurs = 1;
@@ -165,11 +167,11 @@ public class ATMCassetteCounters3 {
 	 */
 	public static final MMMessageAttribute mmCurrency = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Price.mmCurrency;
+			businessElementTrace_lazy = () -> Price.mmCurrency;
 			componentContext_lazy = () -> ATMCassetteCounters3.mmObject();
 			isDerived = false;
 			xmlTag = "Ccy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Currency";
 			definition = "Currency of the media, if the media type is valued and different from the currency of the requested amount.";
 			maxOccurs = 1;
@@ -211,7 +213,7 @@ public class ATMCassetteCounters3 {
 			componentContext_lazy = () -> ATMCassetteCounters3.mmObject();
 			isDerived = false;
 			xmlTag = "MdiaCtgy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MediaCategory";
 			definition = "Category of media items.";
 			maxOccurs = 1;
@@ -252,7 +254,7 @@ public class ATMCassetteCounters3 {
 			componentContext_lazy = () -> ATMCassetteCounters3.mmObject();
 			isDerived = false;
 			xmlTag = "CurNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrentNumber";
 			definition = "Current number of media present in the cassette.";
 			maxOccurs = 1;
@@ -296,11 +298,11 @@ public class ATMCassetteCounters3 {
 	 */
 	public static final MMMessageAttribute mmCurrentAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Price.mmAmount;
+			businessElementTrace_lazy = () -> Price.mmAmount;
 			componentContext_lazy = () -> ATMCassetteCounters3.mmObject();
 			isDerived = false;
 			xmlTag = "CurAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrentAmount";
 			definition = "Current amount in the cassette.";
 			maxOccurs = 1;
@@ -340,7 +342,7 @@ public class ATMCassetteCounters3 {
 			componentContext_lazy = () -> ATMCassetteCounters3.mmObject();
 			isDerived = false;
 			xmlTag = "FlowTtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FlowTotals";
 			definition = "Counters of media inside the cassette.";
 			minOccurs = 0;
@@ -352,12 +354,11 @@ public class ATMCassetteCounters3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMCassetteCounters3.mmUnitValue, com.tools20022.repository.msg.ATMCassetteCounters3.mmCurrency,
-						com.tools20022.repository.msg.ATMCassetteCounters3.mmMediaCategory, com.tools20022.repository.msg.ATMCassetteCounters3.mmCurrentNumber, com.tools20022.repository.msg.ATMCassetteCounters3.mmCurrentAmount,
-						com.tools20022.repository.msg.ATMCassetteCounters3.mmFlowTotals);
+				messageElement_lazy = () -> Arrays.asList(ATMCassetteCounters3.mmUnitValue, ATMCassetteCounters3.mmCurrency, ATMCassetteCounters3.mmMediaCategory, ATMCassetteCounters3.mmCurrentNumber, ATMCassetteCounters3.mmCurrentAmount,
+						ATMCassetteCounters3.mmFlowTotals);
 				trace_lazy = () -> Price.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ATMCassetteCounters3";
 				definition = "ATM cassette counter per unit value or globally.";
 			}

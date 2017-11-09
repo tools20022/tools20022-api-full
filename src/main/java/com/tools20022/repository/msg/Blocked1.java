@@ -19,10 +19,14 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.BlockedReason1Choice;
 import com.tools20022.repository.choice.FundOrderType1Choice;
 import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.AccountStatus;
+import com.tools20022.repository.entity.InvestmentFundTransaction;
+import com.tools20022.repository.entity.Status;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -114,14 +118,14 @@ public class Blocked1 {
 	 */
 	public static final MMMessageAttribute mmOrderType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundTransaction.mmInvestmentFundOrder;
+			businessElementTrace_lazy = () -> InvestmentFundTransaction.mmInvestmentFundOrder;
 			componentContext_lazy = () -> Blocked1.mmObject();
 			isDerived = false;
 			xmlTag = "OrdrTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrderType";
 			definition = "Specifies the order type for which the account is blocked.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Blocked2.mmOrderType);
+			nextVersions_lazy = () -> Arrays.asList(Blocked2.mmOrderType);
 			minOccurs = 1;
 			complexType_lazy = () -> FundOrderType1Choice.mmObject();
 		}
@@ -168,14 +172,14 @@ public class Blocked1 {
 	 */
 	public static final MMMessageAttribute mmBlocked = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AccountStatus.mmBlocked;
+			businessElementTrace_lazy = () -> AccountStatus.mmBlocked;
 			componentContext_lazy = () -> Blocked1.mmObject();
 			isDerived = false;
 			xmlTag = "Blckd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Blocked";
 			definition = "Indicates whether the account is blocked.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Blocked2.mmBlocked);
+			nextVersions_lazy = () -> Arrays.asList(Blocked2.mmBlocked);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
@@ -223,14 +227,14 @@ public class Blocked1 {
 	 */
 	public static final MMMessageAttribute mmReason = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.mmStatusReason;
+			businessElementTrace_lazy = () -> Status.mmStatusReason;
 			componentContext_lazy = () -> Blocked1.mmObject();
 			isDerived = false;
 			xmlTag = "Rsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reason";
 			definition = "Specifies the reason the account is blocked. ";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Blocked2.mmReason);
+			nextVersions_lazy = () -> Arrays.asList(Blocked2.mmReason);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> BlockedReason1Choice.mmObject();
@@ -240,10 +244,10 @@ public class Blocked1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Blocked1.mmOrderType, com.tools20022.repository.msg.Blocked1.mmBlocked, com.tools20022.repository.msg.Blocked1.mmReason);
+				messageElement_lazy = () -> Arrays.asList(Blocked1.mmOrderType, Blocked1.mmBlocked, Blocked1.mmReason);
 				trace_lazy = () -> AccountStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Blocked1";
 				definition = "Specifies information about blocked accounts.";
 				nextVersions_lazy = () -> Arrays.asList(Blocked2.mmObject());

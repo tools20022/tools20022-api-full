@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ProductTypeV2Code;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -88,7 +90,7 @@ public class ProductType5Code extends ProductTypeV2Code {
 	 */
 	public static final MMCode mmEmissionAllowance = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EmissionAllowance";
 			owner_lazy = () -> ProductType5Code.mmObject();
 		}
@@ -111,7 +113,7 @@ public class ProductType5Code extends ProductTypeV2Code {
 	 */
 	public static final MMCode mmInterestRate = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterestRate";
 			owner_lazy = () -> ProductType5Code.mmObject();
 		}
@@ -134,7 +136,7 @@ public class ProductType5Code extends ProductTypeV2Code {
 	 */
 	public static final MMCode mmEquity = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Equity";
 			owner_lazy = () -> ProductType5Code.mmObject();
 		}
@@ -157,7 +159,7 @@ public class ProductType5Code extends ProductTypeV2Code {
 	 */
 	public static final MMCode mmCommodity = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Commodity";
 			owner_lazy = () -> ProductType5Code.mmObject();
 		}
@@ -180,7 +182,7 @@ public class ProductType5Code extends ProductTypeV2Code {
 	 */
 	public static final MMCode mmCredit = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Credit";
 			owner_lazy = () -> ProductType5Code.mmObject();
 		}
@@ -203,7 +205,7 @@ public class ProductType5Code extends ProductTypeV2Code {
 	 */
 	public static final MMCode mmCurrency = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Currency";
 			owner_lazy = () -> ProductType5Code.mmObject();
 		}
@@ -212,13 +214,11 @@ public class ProductType5Code extends ProductTypeV2Code {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ProductType5Code";
 				definition = "Specifies the underlying type of product or financial instrument.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ProductType5Code.mmEmissionAllowance, com.tools20022.repository.codeset.ProductType5Code.mmInterestRate,
-						com.tools20022.repository.codeset.ProductType5Code.mmEquity, com.tools20022.repository.codeset.ProductType5Code.mmCommodity, com.tools20022.repository.codeset.ProductType5Code.mmCredit,
-						com.tools20022.repository.codeset.ProductType5Code.mmCurrency);
+				code_lazy = () -> Arrays.asList(ProductType5Code.mmEmissionAllowance, ProductType5Code.mmInterestRate, ProductType5Code.mmEquity, ProductType5Code.mmCommodity, ProductType5Code.mmCredit, ProductType5Code.mmCurrency);
 				trace_lazy = () -> ProductTypeV2Code.mmObject();
 			}
 		});

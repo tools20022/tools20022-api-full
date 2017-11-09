@@ -19,9 +19,11 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.SystemBalanceType2Code;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.Balance;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -112,14 +114,14 @@ public class BalanceType9Choice {
 	 */
 	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Balance.mmType;
+			businessElementTrace_lazy = () -> Balance.mmType;
 			componentContext_lazy = () -> BalanceType9Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Cd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Specifies the nature of a balance, in a coded form.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ContractBalanceType1Choice.mmCode);
+			nextVersions_lazy = () -> Arrays.asList(ContractBalanceType1Choice.mmCode);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> SystemBalanceType2Code.mmObject();
@@ -169,14 +171,14 @@ public class BalanceType9Choice {
 	 */
 	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Balance.mmType;
+			businessElementTrace_lazy = () -> Balance.mmType;
 			componentContext_lazy = () -> BalanceType9Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Specifies the nature of a balance, in a proprietary form.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ContractBalanceType1Choice.mmProprietary);
+			nextVersions_lazy = () -> Arrays.asList(ContractBalanceType1Choice.mmProprietary);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -186,10 +188,10 @@ public class BalanceType9Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.BalanceType9Choice.mmCode, com.tools20022.repository.choice.BalanceType9Choice.mmProprietary);
+				messageElement_lazy = () -> Arrays.asList(BalanceType9Choice.mmCode, BalanceType9Choice.mmProprietary);
 				trace_lazy = () -> Balance.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "BalanceType9Choice";
 				definition = "Specifies the balance details.";
 				nextVersions_lazy = () -> Arrays.asList(ContractBalanceType1Choice.mmObject());

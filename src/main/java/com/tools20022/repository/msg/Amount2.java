@@ -19,8 +19,10 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
 import com.tools20022.repository.datatype.ImpliedCurrencyAndAmount;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -94,7 +96,7 @@ public class Amount2 {
 			componentContext_lazy = () -> Amount2.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlCcyAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalCurrencyAmount";
 			definition = "Amount expressed in the original currency.";
 			maxOccurs = 1;
@@ -135,7 +137,7 @@ public class Amount2 {
 			componentContext_lazy = () -> Amount2.mmObject();
 			isDerived = false;
 			xmlTag = "RptgAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportingAmount";
 			definition = "Amount expressed in the reporting currency.";
 			maxOccurs = 1;
@@ -147,9 +149,9 @@ public class Amount2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Amount2.mmOriginalCurrencyAmount, com.tools20022.repository.msg.Amount2.mmReportingAmount);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(Amount2.mmOriginalCurrencyAmount, Amount2.mmReportingAmount);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Amount2";
 				definition = "Provides the amount in the reporting currency and optionally in the original currency.";
 			}

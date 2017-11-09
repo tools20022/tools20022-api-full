@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.PaymentStatusCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -98,7 +100,7 @@ public class PartialGroupStatus1Code extends PaymentStatusCode {
 	 */
 	public static final MMCode mmAcceptedTechnicalValidation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcceptedTechnicalValidation";
 			owner_lazy = () -> PartialGroupStatus1Code.mmObject();
 		}
@@ -121,7 +123,7 @@ public class PartialGroupStatus1Code extends PaymentStatusCode {
 	 */
 	public static final MMCode mmAcceptedCustomerProfile = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcceptedCustomerProfile";
 			owner_lazy = () -> PartialGroupStatus1Code.mmObject();
 		}
@@ -144,7 +146,7 @@ public class PartialGroupStatus1Code extends PaymentStatusCode {
 	 */
 	public static final MMCode mmAcceptedSettlementInProcess = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcceptedSettlementInProcess";
 			owner_lazy = () -> PartialGroupStatus1Code.mmObject();
 		}
@@ -167,7 +169,7 @@ public class PartialGroupStatus1Code extends PaymentStatusCode {
 	 */
 	public static final MMCode mmAcceptedSettlementCompleted = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcceptedSettlementCompleted";
 			owner_lazy = () -> PartialGroupStatus1Code.mmObject();
 		}
@@ -190,7 +192,7 @@ public class PartialGroupStatus1Code extends PaymentStatusCode {
 	 */
 	public static final MMCode mmAcceptedCancellationRequest = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcceptedCancellationRequest";
 			owner_lazy = () -> PartialGroupStatus1Code.mmObject();
 		}
@@ -213,7 +215,7 @@ public class PartialGroupStatus1Code extends PaymentStatusCode {
 	 */
 	public static final MMCode mmAcceptedWithChange = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcceptedWithChange";
 			owner_lazy = () -> PartialGroupStatus1Code.mmObject();
 		}
@@ -222,14 +224,13 @@ public class PartialGroupStatus1Code extends PaymentStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ACTC");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PartialGroupStatus1Code";
 				definition = "Indicates the status of a single payment transaction or of a group of payment transactions.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PartialGroupStatus1Code.mmAcceptedTechnicalValidation, com.tools20022.repository.codeset.PartialGroupStatus1Code.mmAcceptedCustomerProfile,
-						com.tools20022.repository.codeset.PartialGroupStatus1Code.mmAcceptedSettlementInProcess, com.tools20022.repository.codeset.PartialGroupStatus1Code.mmAcceptedSettlementCompleted,
-						com.tools20022.repository.codeset.PartialGroupStatus1Code.mmAcceptedCancellationRequest, com.tools20022.repository.codeset.PartialGroupStatus1Code.mmAcceptedWithChange);
+				code_lazy = () -> Arrays.asList(PartialGroupStatus1Code.mmAcceptedTechnicalValidation, PartialGroupStatus1Code.mmAcceptedCustomerProfile, PartialGroupStatus1Code.mmAcceptedSettlementInProcess,
+						PartialGroupStatus1Code.mmAcceptedSettlementCompleted, PartialGroupStatus1Code.mmAcceptedCancellationRequest, PartialGroupStatus1Code.mmAcceptedWithChange);
 				trace_lazy = () -> PaymentStatusCode.mmObject();
 			}
 		});

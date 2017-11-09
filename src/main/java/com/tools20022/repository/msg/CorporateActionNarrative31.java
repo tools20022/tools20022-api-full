@@ -19,8 +19,16 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.seev.CorporateActionMovementConfirmationV07;
+import com.tools20022.repository.area.seev.CorporateActionMovementConfirmationV08;
+import com.tools20022.repository.area.seev.CorporateActionMovementReversalAdviceV07;
+import com.tools20022.repository.area.seev.CorporateActionMovementReversalAdviceV08;
 import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.entity.CorporateActionEvent;
+import com.tools20022.repository.entity.Role;
+import com.tools20022.repository.entity.Tax;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -134,10 +142,10 @@ public class CorporateActionNarrative31 {
 			componentContext_lazy = () -> CorporateActionNarrative31.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlTxt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalText";
 			definition = "Provides additional information or specifies in more detail the content of a message. This field may only be used when the information to be transmitted, cannot be coded.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionNarrative4.mmAdditionalText;
+			previousVersion_lazy = () -> CorporateActionNarrative4.mmAdditionalText;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
@@ -184,10 +192,10 @@ public class CorporateActionNarrative31 {
 			componentContext_lazy = () -> CorporateActionNarrative31.mmObject();
 			isDerived = false;
 			xmlTag = "NrrtvVrsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NarrativeVersion";
 			definition = "Provides information that can be ignored for automated processing; - reiteration of information that has been included within structured fields, - or narrative information not needed for automatic processing.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionNarrative4.mmNarrativeVersion;
+			previousVersion_lazy = () -> CorporateActionNarrative4.mmNarrativeVersion;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
@@ -236,14 +244,14 @@ public class CorporateActionNarrative31 {
 	 */
 	public static final MMMessageAttribute mmPartyContactNarrative = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Role.mmContactPersonRole;
+			businessElementTrace_lazy = () -> Role.mmContactPersonRole;
 			componentContext_lazy = () -> CorporateActionNarrative31.mmObject();
 			isDerived = false;
 			xmlTag = "PtyCtctNrrtv";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartyContactNarrative";
 			definition = "Provides additional information regarding the party, for example, the contact unit or person responsible for the transaction identified in the message.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionNarrative4.mmPartyContactNarrative;
+			previousVersion_lazy = () -> CorporateActionNarrative4.mmPartyContactNarrative;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
@@ -292,14 +300,14 @@ public class CorporateActionNarrative31 {
 	 */
 	public static final MMMessageAttribute mmTaxationConditions = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.mmTaxationConditions;
+			businessElementTrace_lazy = () -> Tax.mmTaxationConditions;
 			componentContext_lazy = () -> CorporateActionNarrative31.mmObject();
 			isDerived = false;
 			xmlTag = "TaxtnConds";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxationConditions";
 			definition = "Provides taxation conditions that cannot be included within the structured fields of this message and has not been mentioned in the Service Level Agreement (SLA)";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionNarrative4.mmTaxationConditions;
+			previousVersion_lazy = () -> CorporateActionNarrative4.mmTaxationConditions;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
@@ -308,14 +316,13 @@ public class CorporateActionNarrative31 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionNarrative31.mmAdditionalText, com.tools20022.repository.msg.CorporateActionNarrative31.mmNarrativeVersion,
-						com.tools20022.repository.msg.CorporateActionNarrative31.mmPartyContactNarrative, com.tools20022.repository.msg.CorporateActionNarrative31.mmTaxationConditions);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.CorporateActionMovementConfirmationV07.mmAdditionalInformation,
-						com.tools20022.repository.area.seev.CorporateActionMovementReversalAdviceV07.mmAdditionalInformation, com.tools20022.repository.area.seev.CorporateActionMovementConfirmationV08.mmAdditionalInformation,
-						com.tools20022.repository.area.seev.CorporateActionMovementReversalAdviceV08.mmAdditionalInformation);
+				messageElement_lazy = () -> Arrays.asList(CorporateActionNarrative31.mmAdditionalText, CorporateActionNarrative31.mmNarrativeVersion, CorporateActionNarrative31.mmPartyContactNarrative,
+						CorporateActionNarrative31.mmTaxationConditions);
+				messageBuildingBlock_lazy = () -> Arrays.asList(CorporateActionMovementConfirmationV07.mmAdditionalInformation, CorporateActionMovementReversalAdviceV07.mmAdditionalInformation,
+						CorporateActionMovementConfirmationV08.mmAdditionalInformation, CorporateActionMovementReversalAdviceV08.mmAdditionalInformation);
 				trace_lazy = () -> CorporateActionEvent.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionNarrative31";
 				definition = "Provides additional information such as the taxation conditions.";
 				previousVersion_lazy = () -> CorporateActionNarrative4.mmObject();

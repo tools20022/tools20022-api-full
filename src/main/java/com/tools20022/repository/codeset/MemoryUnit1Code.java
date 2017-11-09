@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.MemoryUnitCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -90,7 +92,7 @@ public class MemoryUnit1Code extends MemoryUnitCode {
 	 */
 	public static final MMCode mmByte = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Byte";
 			owner_lazy = () -> MemoryUnit1Code.mmObject();
 		}
@@ -113,7 +115,7 @@ public class MemoryUnit1Code extends MemoryUnitCode {
 	 */
 	public static final MMCode mmExaByte = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExaByte";
 			owner_lazy = () -> MemoryUnit1Code.mmObject();
 		}
@@ -136,7 +138,7 @@ public class MemoryUnit1Code extends MemoryUnitCode {
 	 */
 	public static final MMCode mmGigaByte = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GigaByte";
 			owner_lazy = () -> MemoryUnit1Code.mmObject();
 		}
@@ -159,7 +161,7 @@ public class MemoryUnit1Code extends MemoryUnitCode {
 	 */
 	public static final MMCode mmKiloByte = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "KiloByte";
 			owner_lazy = () -> MemoryUnit1Code.mmObject();
 		}
@@ -182,7 +184,7 @@ public class MemoryUnit1Code extends MemoryUnitCode {
 	 */
 	public static final MMCode mmMegaByte = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MegaByte";
 			owner_lazy = () -> MemoryUnit1Code.mmObject();
 		}
@@ -205,7 +207,7 @@ public class MemoryUnit1Code extends MemoryUnitCode {
 	 */
 	public static final MMCode mmPetaByte = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PetaByte";
 			owner_lazy = () -> MemoryUnit1Code.mmObject();
 		}
@@ -228,7 +230,7 @@ public class MemoryUnit1Code extends MemoryUnitCode {
 	 */
 	public static final MMCode mmTeraByte = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TeraByte";
 			owner_lazy = () -> MemoryUnit1Code.mmObject();
 		}
@@ -237,14 +239,12 @@ public class MemoryUnit1Code extends MemoryUnitCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("BYTE");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MemoryUnit1Code";
 				definition = "Unit of the memory size.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MemoryUnit1Code.mmByte, com.tools20022.repository.codeset.MemoryUnit1Code.mmExaByte, com.tools20022.repository.codeset.MemoryUnit1Code.mmGigaByte,
-						com.tools20022.repository.codeset.MemoryUnit1Code.mmKiloByte, com.tools20022.repository.codeset.MemoryUnit1Code.mmMegaByte, com.tools20022.repository.codeset.MemoryUnit1Code.mmPetaByte,
-						com.tools20022.repository.codeset.MemoryUnit1Code.mmTeraByte);
+				code_lazy = () -> Arrays.asList(MemoryUnit1Code.mmByte, MemoryUnit1Code.mmExaByte, MemoryUnit1Code.mmGigaByte, MemoryUnit1Code.mmKiloByte, MemoryUnit1Code.mmMegaByte, MemoryUnit1Code.mmPetaByte, MemoryUnit1Code.mmTeraByte);
 				trace_lazy = () -> MemoryUnitCode.mmObject();
 			}
 		});

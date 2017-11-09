@@ -19,6 +19,8 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -100,7 +102,7 @@ public class FIToFICreditTransferTransactionInformationDetails1 {
 			componentContext_lazy = () -> FIToFICreditTransferTransactionInformationDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "GrpHdr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GroupHeader";
 			definition = "Common characteristics for all individual transactions included in the message.";
 			maxOccurs = 1;
@@ -145,7 +147,7 @@ public class FIToFICreditTransferTransactionInformationDetails1 {
 			componentContext_lazy = () -> FIToFICreditTransferTransactionInformationDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "CdtTrfTxInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditTransferTransactionInformation";
 			definition = "Provide further details specific to the individual transaction(s) included in the message.";
 			minOccurs = 1;
@@ -188,7 +190,7 @@ public class FIToFICreditTransferTransactionInformationDetails1 {
 			componentContext_lazy = () -> FIToFICreditTransferTransactionInformationDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "SplmtryData";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryData";
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
 			minOccurs = 0;
@@ -200,11 +202,10 @@ public class FIToFICreditTransferTransactionInformationDetails1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FIToFICreditTransferTransactionInformationDetails1.mmGroupHeader,
-						com.tools20022.repository.msg.FIToFICreditTransferTransactionInformationDetails1.mmCreditTransferTransactionInformation,
-						com.tools20022.repository.msg.FIToFICreditTransferTransactionInformationDetails1.mmSupplementaryData);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(FIToFICreditTransferTransactionInformationDetails1.mmGroupHeader, FIToFICreditTransferTransactionInformationDetails1.mmCreditTransferTransactionInformation,
+						FIToFICreditTransferTransactionInformationDetails1.mmSupplementaryData);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "FIToFICreditTransferTransactionInformationDetails1";
 				definition = "Set of elements providing information specific to the individual credit transfer(s).";
 			}

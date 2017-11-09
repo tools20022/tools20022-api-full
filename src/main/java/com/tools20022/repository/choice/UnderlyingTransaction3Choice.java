@@ -19,9 +19,12 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.camt.*;
 import com.tools20022.repository.entity.CashEntry;
 import com.tools20022.repository.entity.Payment;
 import com.tools20022.repository.entity.PaymentInstruction;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.UnderlyingPaymentInstruction3;
 import com.tools20022.repository.msg.UnderlyingPaymentTransaction2;
 import com.tools20022.repository.msg.UnderlyingStatementEntry1;
@@ -143,10 +146,10 @@ public class UnderlyingTransaction3Choice {
 			componentContext_lazy = () -> UnderlyingTransaction3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Initn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Initiation";
 			definition = "Set of elements used to reference the details of the original payment initiation.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.UnderlyingTransaction2Choice.mmInitiation;
+			previousVersion_lazy = () -> UnderlyingTransaction2Choice.mmInitiation;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -199,10 +202,10 @@ public class UnderlyingTransaction3Choice {
 			componentContext_lazy = () -> UnderlyingTransaction3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "IntrBk";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Interbank";
 			definition = "Set of elements used to reference the details of the original interbank payment transaction.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.UnderlyingTransaction2Choice.mmInterbank;
+			previousVersion_lazy = () -> UnderlyingTransaction2Choice.mmInterbank;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -253,10 +256,10 @@ public class UnderlyingTransaction3Choice {
 			componentContext_lazy = () -> UnderlyingTransaction3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "StmtNtry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatementEntry";
 			definition = "Reference details on the underlying statement cash entry.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.UnderlyingTransaction2Choice.mmStatementEntry;
+			previousVersion_lazy = () -> UnderlyingTransaction2Choice.mmStatementEntry;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -267,14 +270,12 @@ public class UnderlyingTransaction3Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.UnderlyingTransaction3Choice.mmInitiation, com.tools20022.repository.choice.UnderlyingTransaction3Choice.mmInterbank,
-						com.tools20022.repository.choice.UnderlyingTransaction3Choice.mmStatementEntry);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.UnableToApplyV05.mmUnderlying, com.tools20022.repository.area.camt.AdditionalPaymentInformationV07.mmUnderlying,
-						com.tools20022.repository.area.camt.DebitAuthorisationRequestV05.mmUnderlying, com.tools20022.repository.area.camt.ClaimNonReceiptV05.mmUnderlying,
-						com.tools20022.repository.area.camt.RequestToModifyPaymentV04.mmUnderlying);
+				messageElement_lazy = () -> Arrays.asList(UnderlyingTransaction3Choice.mmInitiation, UnderlyingTransaction3Choice.mmInterbank, UnderlyingTransaction3Choice.mmStatementEntry);
+				messageBuildingBlock_lazy = () -> Arrays.asList(UnableToApplyV05.mmUnderlying, AdditionalPaymentInformationV07.mmUnderlying, DebitAuthorisationRequestV05.mmUnderlying, ClaimNonReceiptV05.mmUnderlying,
+						RequestToModifyPaymentV04.mmUnderlying);
 				trace_lazy = () -> Payment.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "UnderlyingTransaction3Choice";
 				definition = "Specifies the details of the underlying transaction on which the investigation is processed.";
 				previousVersion_lazy = () -> UnderlyingTransaction2Choice.mmObject();

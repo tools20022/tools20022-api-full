@@ -19,8 +19,13 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.sese.*;
 import com.tools20022.repository.choice.*;
+import com.tools20022.repository.entity.Party;
+import com.tools20022.repository.entity.SecuritiesTradeExecution;
 import com.tools20022.repository.entity.SecuritiesTradeIdentification;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -134,10 +139,10 @@ public class Linkages37 {
 			componentContext_lazy = () -> Linkages37.mmObject();
 			isDerived = false;
 			xmlTag = "PrcgPos";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProcessingPosition";
 			definition = "When the transaction is to be executed relative to a linked transaction.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Linkages17.mmProcessingPosition;
+			previousVersion_lazy = () -> Linkages17.mmProcessingPosition;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -184,10 +189,10 @@ public class Linkages37 {
 			componentContext_lazy = () -> Linkages37.mmObject();
 			isDerived = false;
 			xmlTag = "MsgNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageNumber";
 			definition = "Message type number/message identifier of the message referenced in the linkage sequence.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Linkages17.mmMessageNumber;
+			previousVersion_lazy = () -> Linkages17.mmMessageNumber;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -236,10 +241,10 @@ public class Linkages37 {
 			componentContext_lazy = () -> Linkages37.mmObject();
 			isDerived = false;
 			xmlTag = "Ref";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reference";
 			definition = "Reference to the linked transaction.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Linkages17.mmReference;
+			previousVersion_lazy = () -> Linkages17.mmReference;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -288,14 +293,14 @@ public class Linkages37 {
 	 */
 	public static final MMMessageAssociationEnd mmLinkedQuantity = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeExecution.mmSecuritiesSettlement;
+			businessElementTrace_lazy = () -> SecuritiesTradeExecution.mmSecuritiesSettlement;
 			componentContext_lazy = () -> Linkages37.mmObject();
 			isDerived = false;
 			xmlTag = "LkdQty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LinkedQuantity";
 			definition = "Quantity of financial instruments of the linked transaction to be paired-off or turned.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Linkages17.mmLinkedQuantity;
+			previousVersion_lazy = () -> Linkages17.mmLinkedQuantity;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -341,14 +346,14 @@ public class Linkages37 {
 	 */
 	public static final MMMessageAssociationEnd mmReferenceOwner = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> Linkages37.mmObject();
 			isDerived = false;
 			xmlTag = "RefOwnr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReferenceOwner";
 			definition = "Party that generates the reference.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Linkages17.mmReferenceOwner;
+			previousVersion_lazy = () -> Linkages17.mmReferenceOwner;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -359,14 +364,12 @@ public class Linkages37 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Linkages37.mmProcessingPosition, com.tools20022.repository.msg.Linkages37.mmMessageNumber, com.tools20022.repository.msg.Linkages37.mmReference,
-						com.tools20022.repository.msg.Linkages37.mmLinkedQuantity, com.tools20022.repository.msg.Linkages37.mmReferenceOwner);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesSettlementTransactionInstructionV06.mmLinkages, com.tools20022.repository.area.sese.SecuritiesFinancingInstructionV06.mmLinkages,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV06.mmLinkages, com.tools20022.repository.area.sese.SecuritiesFinancingInstructionV07.mmLinkages,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV07.mmLinkages, com.tools20022.repository.area.sese.SecuritiesSettlementTransactionInstructionV07.mmLinkages);
+				messageElement_lazy = () -> Arrays.asList(Linkages37.mmProcessingPosition, Linkages37.mmMessageNumber, Linkages37.mmReference, Linkages37.mmLinkedQuantity, Linkages37.mmReferenceOwner);
+				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesSettlementTransactionInstructionV06.mmLinkages, SecuritiesFinancingInstructionV06.mmLinkages, SecuritiesSettlementTransactionGenerationNotificationV06.mmLinkages,
+						SecuritiesFinancingInstructionV07.mmLinkages, SecuritiesSettlementTransactionGenerationNotificationV07.mmLinkages, SecuritiesSettlementTransactionInstructionV07.mmLinkages);
 				trace_lazy = () -> SecuritiesTradeIdentification.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Linkages37";
 				definition = "Information related to a linked transaction.";
 				previousVersion_lazy = () -> Linkages17.mmObject();

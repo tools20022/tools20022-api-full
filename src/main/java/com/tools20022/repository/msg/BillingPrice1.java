@@ -20,10 +20,13 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ActiveOrHistoricCurrencyCode;
 import com.tools20022.repository.codeset.BillingChargeMethod1Code;
 import com.tools20022.repository.datatype.Max20Text;
+import com.tools20022.repository.entity.CashAccountService;
 import com.tools20022.repository.entity.Price;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -104,11 +107,11 @@ public class BillingPrice1 {
 	 */
 	public static final MMMessageAttribute mmCurrency = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Price.mmCurrency;
+			businessElementTrace_lazy = () -> Price.mmCurrency;
 			componentContext_lazy = () -> BillingPrice1.mmObject();
 			isDerived = false;
 			xmlTag = "Ccy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Currency";
 			definition = "Currency code in which the unit price and original charge price are expressed.";
 			maxOccurs = 1;
@@ -155,7 +158,7 @@ public class BillingPrice1 {
 			componentContext_lazy = () -> BillingPrice1.mmObject();
 			isDerived = false;
 			xmlTag = "UnitPric";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnitPrice";
 			definition = "Price per item or unit used to calculate the charge expressed in the pricing currency.";
 			maxOccurs = 1;
@@ -204,11 +207,11 @@ public class BillingPrice1 {
 	 */
 	public static final MMMessageAttribute mmMethod = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashAccountService.mmBillingChargeMethod;
+			businessElementTrace_lazy = () -> CashAccountService.mmBillingChargeMethod;
 			componentContext_lazy = () -> BillingPrice1.mmObject();
 			isDerived = false;
 			xmlTag = "Mtd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Method";
 			definition = "Identifies how the charge was calculated. \n\nUsage: The absence of this code assumes that the charge is calculated as the product of (volume x unit price).";
 			maxOccurs = 1;
@@ -251,7 +254,7 @@ public class BillingPrice1 {
 			componentContext_lazy = () -> BillingPrice1.mmObject();
 			isDerived = false;
 			xmlTag = "Rule";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rule";
 			definition = "Indicates that the charge calculation is based on a particular rule. The rule name is carried here and is defined by the trading partners.";
 			maxOccurs = 1;
@@ -263,11 +266,10 @@ public class BillingPrice1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BillingPrice1.mmCurrency, com.tools20022.repository.msg.BillingPrice1.mmUnitPrice, com.tools20022.repository.msg.BillingPrice1.mmMethod,
-						com.tools20022.repository.msg.BillingPrice1.mmRule);
+				messageElement_lazy = () -> Arrays.asList(BillingPrice1.mmCurrency, BillingPrice1.mmUnitPrice, BillingPrice1.mmMethod, BillingPrice1.mmRule);
 				trace_lazy = () -> Price.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "BillingPrice1";
 				definition = "Specifies the billing price of a service.";
 			}

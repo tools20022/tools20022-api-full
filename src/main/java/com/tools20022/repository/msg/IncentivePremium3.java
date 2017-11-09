@@ -19,11 +19,13 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.DateFormat3Choice;
 import com.tools20022.repository.choice.IncentivePremiumType1Choice;
 import com.tools20022.repository.choice.PriceRateOrAmountChoice;
 import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.entity.IncentivePremium;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -107,11 +109,11 @@ public class IncentivePremium3 {
 	 */
 	public static final MMMessageAttribute mmDescription = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.IncentivePremium.mmDescription;
+			businessElementTrace_lazy = () -> IncentivePremium.mmDescription;
 			componentContext_lazy = () -> IncentivePremium3.mmObject();
 			isDerived = false;
 			xmlTag = "Desc";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Description";
 			definition = "Description of the premium.";
 			maxOccurs = 1;
@@ -156,11 +158,11 @@ public class IncentivePremium3 {
 	 */
 	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.IncentivePremium.mmPremiumAmount;
+			businessElementTrace_lazy = () -> IncentivePremium.mmPremiumAmount;
 			componentContext_lazy = () -> IncentivePremium3.mmObject();
 			isDerived = false;
 			xmlTag = "Amt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Cash premium paid per security, per vote or per attendee.";
 			maxOccurs = 1;
@@ -208,7 +210,7 @@ public class IncentivePremium3 {
 			componentContext_lazy = () -> IncentivePremium3.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Type of incentive premium.";
 			maxOccurs = 1;
@@ -252,11 +254,11 @@ public class IncentivePremium3 {
 	 */
 	public static final MMMessageAttribute mmPaymentDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.IncentivePremium.mmPaymentDate;
+			businessElementTrace_lazy = () -> IncentivePremium.mmPaymentDate;
 			componentContext_lazy = () -> IncentivePremium3.mmObject();
 			isDerived = false;
 			xmlTag = "PmtDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentDate";
 			definition = "Date/time for the payment of the premium.";
 			maxOccurs = 1;
@@ -268,11 +270,10 @@ public class IncentivePremium3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IncentivePremium3.mmDescription, com.tools20022.repository.msg.IncentivePremium3.mmAmount, com.tools20022.repository.msg.IncentivePremium3.mmType,
-						com.tools20022.repository.msg.IncentivePremium3.mmPaymentDate);
+				messageElement_lazy = () -> Arrays.asList(IncentivePremium3.mmDescription, IncentivePremium3.mmAmount, IncentivePremium3.mmType, IncentivePremium3.mmPaymentDate);
 				trace_lazy = () -> IncentivePremium.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "IncentivePremium3";
 				definition = "Cash premium made available if the securities holder consents or participates to an event.";
 			}

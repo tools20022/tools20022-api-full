@@ -19,10 +19,13 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.IndicativeOrMarketPrice8Choice;
 import com.tools20022.repository.choice.PriceFormat49Choice;
 import com.tools20022.repository.choice.PriceFormat50Choice;
 import com.tools20022.repository.entity.CorporateActionPrice;
+import com.tools20022.repository.entity.Issuance;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -119,10 +122,10 @@ public class CorporateActionPrice60 {
 			componentContext_lazy = () -> CorporateActionPrice60.mmObject();
 			isDerived = false;
 			xmlTag = "IndctvOrMktPric";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IndicativeOrMarketPrice";
 			definition = "Indicates whether the price is an indicative price or a market price.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionPrice44.mmIndicativeOrMarketPrice;
+			previousVersion_lazy = () -> CorporateActionPrice44.mmIndicativeOrMarketPrice;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -168,14 +171,14 @@ public class CorporateActionPrice60 {
 	 */
 	public static final MMMessageAssociationEnd mmIssuePrice = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Issuance.mmIssuePrice;
+			businessElementTrace_lazy = () -> Issuance.mmIssuePrice;
 			componentContext_lazy = () -> CorporateActionPrice60.mmObject();
 			isDerived = false;
 			xmlTag = "IssePric";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssuePrice";
 			definition = "Initial issue price of a financial instrument.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionPrice44.mmIssuePrice;
+			previousVersion_lazy = () -> CorporateActionPrice44.mmIssuePrice;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -224,14 +227,14 @@ public class CorporateActionPrice60 {
 	 */
 	public static final MMMessageAssociationEnd mmGenericCashPriceReceivedPerProduct = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionPrice.mmGenericCashPriceReceivedPerProduct;
+			businessElementTrace_lazy = () -> CorporateActionPrice.mmGenericCashPriceReceivedPerProduct;
 			componentContext_lazy = () -> CorporateActionPrice60.mmObject();
 			isDerived = false;
 			xmlTag = "GncCshPricRcvdPerPdct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GenericCashPriceReceivedPerProduct";
 			definition = "Generic cash price received per product by the underlying security holder either as a percentage or an amount, for example, redemption price.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionPrice44.mmGenericCashPriceReceivedPerProduct;
+			previousVersion_lazy = () -> CorporateActionPrice44.mmGenericCashPriceReceivedPerProduct;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -280,14 +283,14 @@ public class CorporateActionPrice60 {
 	 */
 	public static final MMMessageAssociationEnd mmGenericCashPricePaidPerProduct = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionPrice.mmGenericCashPricePaidPerProduct;
+			businessElementTrace_lazy = () -> CorporateActionPrice.mmGenericCashPricePaidPerProduct;
 			componentContext_lazy = () -> CorporateActionPrice60.mmObject();
 			isDerived = false;
 			xmlTag = "GncCshPricPdPerPdct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GenericCashPricePaidPerProduct";
 			definition = "Generic cash price paid per product by the underlying security holder either as a percentage or an amount, for example, reinvestment price.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionPrice44.mmGenericCashPricePaidPerProduct;
+			previousVersion_lazy = () -> CorporateActionPrice44.mmGenericCashPricePaidPerProduct;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -298,11 +301,11 @@ public class CorporateActionPrice60 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionPrice60.mmIndicativeOrMarketPrice, com.tools20022.repository.msg.CorporateActionPrice60.mmIssuePrice,
-						com.tools20022.repository.msg.CorporateActionPrice60.mmGenericCashPriceReceivedPerProduct, com.tools20022.repository.msg.CorporateActionPrice60.mmGenericCashPricePaidPerProduct);
+				messageElement_lazy = () -> Arrays.asList(CorporateActionPrice60.mmIndicativeOrMarketPrice, CorporateActionPrice60.mmIssuePrice, CorporateActionPrice60.mmGenericCashPriceReceivedPerProduct,
+						CorporateActionPrice60.mmGenericCashPricePaidPerProduct);
 				trace_lazy = () -> CorporateActionPrice.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionPrice60";
 				definition = "Specifies prices related to a corporate action option.";
 				previousVersion_lazy = () -> CorporateActionPrice44.mmObject();

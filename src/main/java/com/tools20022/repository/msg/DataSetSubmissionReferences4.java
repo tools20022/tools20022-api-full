@@ -20,9 +20,14 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.tsmt.ForwardDataSetSubmissionReportV03;
+import com.tools20022.repository.area.tsmt.ForwardDataSetSubmissionReportV04;
+import com.tools20022.repository.area.tsmt.ForwardDataSetSubmissionReportV05;
 import com.tools20022.repository.codeset.BaselineStatus3Code;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.YesNoIndicator;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -129,7 +134,7 @@ public class DataSetSubmissionReferences4 {
 			componentContext_lazy = () -> DataSetSubmissionReferences4.mmObject();
 			isDerived = false;
 			xmlTag = "TxId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionIdentification";
 			definition = "Unique identification assigned by the matching application to the transaction.\nThis identification is to be used in any communication between the parties.";
 			maxOccurs = 1;
@@ -172,7 +177,7 @@ public class DataSetSubmissionReferences4 {
 			componentContext_lazy = () -> DataSetSubmissionReferences4.mmObject();
 			isDerived = false;
 			xmlTag = "PurchsOrdrRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PurchaseOrderReference";
 			definition = "Reference to the purchase order of the underlying transaction.";
 			maxOccurs = 1;
@@ -214,7 +219,7 @@ public class DataSetSubmissionReferences4 {
 			componentContext_lazy = () -> DataSetSubmissionReferences4.mmObject();
 			isDerived = false;
 			xmlTag = "UsrTxRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UserTransactionReference";
 			definition = "Own reference to the transaction for the financial institution.";
 			maxOccurs = 2;
@@ -261,7 +266,7 @@ public class DataSetSubmissionReferences4 {
 			componentContext_lazy = () -> DataSetSubmissionReferences4.mmObject();
 			isDerived = false;
 			xmlTag = "ForcdMtch";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForcedMatch";
 			definition = "Specifies that this message should force the matching application to match all data sets it has received so far for the transaction identified by the transaction identification.";
 			maxOccurs = 1;
@@ -305,7 +310,7 @@ public class DataSetSubmissionReferences4 {
 			componentContext_lazy = () -> DataSetSubmissionReferences4.mmObject();
 			isDerived = false;
 			xmlTag = "EstblishdBaselnId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EstablishedBaselineIdentification";
 			definition = "Unique identification assigned by the matching engine to the baseline when it is established.";
 			maxOccurs = 1;
@@ -349,7 +354,7 @@ public class DataSetSubmissionReferences4 {
 			componentContext_lazy = () -> DataSetSubmissionReferences4.mmObject();
 			isDerived = false;
 			xmlTag = "TxSts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionStatus";
 			definition = "Identifies the status of the transaction by means of a code.";
 			maxOccurs = 1;
@@ -361,13 +366,12 @@ public class DataSetSubmissionReferences4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DataSetSubmissionReferences4.mmTransactionIdentification, com.tools20022.repository.msg.DataSetSubmissionReferences4.mmPurchaseOrderReference,
-						com.tools20022.repository.msg.DataSetSubmissionReferences4.mmUserTransactionReference, com.tools20022.repository.msg.DataSetSubmissionReferences4.mmForcedMatch,
-						com.tools20022.repository.msg.DataSetSubmissionReferences4.mmEstablishedBaselineIdentification, com.tools20022.repository.msg.DataSetSubmissionReferences4.mmTransactionStatus);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.ForwardDataSetSubmissionReportV03.mmRelatedTransactionReferences,
-						com.tools20022.repository.area.tsmt.ForwardDataSetSubmissionReportV04.mmRelatedTransactionReferences, com.tools20022.repository.area.tsmt.ForwardDataSetSubmissionReportV05.mmRelatedTransactionReferences);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(DataSetSubmissionReferences4.mmTransactionIdentification, DataSetSubmissionReferences4.mmPurchaseOrderReference, DataSetSubmissionReferences4.mmUserTransactionReference,
+						DataSetSubmissionReferences4.mmForcedMatch, DataSetSubmissionReferences4.mmEstablishedBaselineIdentification, DataSetSubmissionReferences4.mmTransactionStatus);
+				messageBuildingBlock_lazy = () -> Arrays.asList(ForwardDataSetSubmissionReportV03.mmRelatedTransactionReferences, ForwardDataSetSubmissionReportV04.mmRelatedTransactionReferences,
+						ForwardDataSetSubmissionReportV05.mmRelatedTransactionReferences);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DataSetSubmissionReferences4";
 				definition = "Provides references to the transactions both for the matching application and for the user.";
 			}

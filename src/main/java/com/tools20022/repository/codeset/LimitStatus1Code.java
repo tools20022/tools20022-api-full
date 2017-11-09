@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.LimitStatusCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -87,7 +89,7 @@ public class LimitStatus1Code extends LimitStatusCode {
 	 */
 	public static final MMCode mmEnabled = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Enabled";
 			owner_lazy = () -> LimitStatus1Code.mmObject();
 		}
@@ -110,7 +112,7 @@ public class LimitStatus1Code extends LimitStatusCode {
 	 */
 	public static final MMCode mmDisabled = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Disabled";
 			owner_lazy = () -> LimitStatus1Code.mmObject();
 		}
@@ -133,7 +135,7 @@ public class LimitStatus1Code extends LimitStatusCode {
 	 */
 	public static final MMCode mmDeleted = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Deleted";
 			owner_lazy = () -> LimitStatus1Code.mmObject();
 		}
@@ -156,7 +158,7 @@ public class LimitStatus1Code extends LimitStatusCode {
 	 */
 	public static final MMCode mmRequested = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Requested";
 			owner_lazy = () -> LimitStatus1Code.mmObject();
 		}
@@ -165,13 +167,12 @@ public class LimitStatus1Code extends LimitStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ENAB");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "LimitStatus1Code";
 				definition = "Specifies the current status of a limit.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.LimitStatus1Code.mmEnabled, com.tools20022.repository.codeset.LimitStatus1Code.mmDisabled, com.tools20022.repository.codeset.LimitStatus1Code.mmDeleted,
-						com.tools20022.repository.codeset.LimitStatus1Code.mmRequested);
+				code_lazy = () -> Arrays.asList(LimitStatus1Code.mmEnabled, LimitStatus1Code.mmDisabled, LimitStatus1Code.mmDeleted, LimitStatus1Code.mmRequested);
 				trace_lazy = () -> LimitStatusCode.mmObject();
 			}
 		});

@@ -20,10 +20,12 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.VariationType1Code;
 import com.tools20022.repository.datatype.Max2000Text;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.AutomaticVariation;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -104,7 +106,7 @@ public class AutomaticVariation1 {
 			componentContext_lazy = () -> AutomaticVariation1.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Identification of the automatic variation.";
 			maxOccurs = 1;
@@ -148,11 +150,11 @@ public class AutomaticVariation1 {
 	 */
 	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AutomaticVariation.mmType;
+			businessElementTrace_lazy = () -> AutomaticVariation.mmType;
 			componentContext_lazy = () -> AutomaticVariation1.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Type of variation.";
 			maxOccurs = 1;
@@ -198,7 +200,7 @@ public class AutomaticVariation1 {
 			componentContext_lazy = () -> AutomaticVariation1.mmObject();
 			isDerived = false;
 			xmlTag = "AmtAndTrggr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmountAndTrigger";
 			definition = "Details related to the variation amount and its trigger.";
 			minOccurs = 1;
@@ -239,7 +241,7 @@ public class AutomaticVariation1 {
 			componentContext_lazy = () -> AutomaticVariation1.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInformation";
 			definition = "Additional information related to the variation.";
 			maxOccurs = 5;
@@ -251,11 +253,10 @@ public class AutomaticVariation1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AutomaticVariation1.mmIdentification, com.tools20022.repository.msg.AutomaticVariation1.mmType,
-						com.tools20022.repository.msg.AutomaticVariation1.mmAmountAndTrigger, com.tools20022.repository.msg.AutomaticVariation1.mmAdditionalInformation);
+				messageElement_lazy = () -> Arrays.asList(AutomaticVariation1.mmIdentification, AutomaticVariation1.mmType, AutomaticVariation1.mmAmountAndTrigger, AutomaticVariation1.mmAdditionalInformation);
 				trace_lazy = () -> AutomaticVariation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AutomaticVariation1";
 				definition = "Variation parameters and triggers.";
 			}

@@ -19,7 +19,9 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.Commodity;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.MetalCommodityNonPrecious1;
 import com.tools20022.repository.msg.MetalCommodityPrecious1;
 import java.util.Arrays;
@@ -98,11 +100,11 @@ public class AssetClassCommodityMetal1Choice {
 	 */
 	public static final MMMessageAssociationEnd mmNonPrecious = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Commodity.mmSubProduct;
+			businessElementTrace_lazy = () -> Commodity.mmSubProduct;
 			componentContext_lazy = () -> AssetClassCommodityMetal1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "NonPrcs";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonPrecious";
 			definition = "Non-precious metal commodity derivative.";
 			maxOccurs = 1;
@@ -146,11 +148,11 @@ public class AssetClassCommodityMetal1Choice {
 	 */
 	public static final MMMessageAssociationEnd mmPrecious = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Commodity.mmSubProduct;
+			businessElementTrace_lazy = () -> Commodity.mmSubProduct;
 			componentContext_lazy = () -> AssetClassCommodityMetal1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prcs";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Precious";
 			definition = "Precious metal commodity derivative.";
 			maxOccurs = 1;
@@ -163,10 +165,10 @@ public class AssetClassCommodityMetal1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AssetClassCommodityMetal1Choice.mmNonPrecious, com.tools20022.repository.choice.AssetClassCommodityMetal1Choice.mmPrecious);
+				messageElement_lazy = () -> Arrays.asList(AssetClassCommodityMetal1Choice.mmNonPrecious, AssetClassCommodityMetal1Choice.mmPrecious);
 				trace_lazy = () -> Commodity.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AssetClassCommodityMetal1Choice";
 				definition = "Defines commodity attributes of a derivative where the type is metal.";
 			}

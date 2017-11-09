@@ -17,15 +17,14 @@
 
 package com.tools20022.repository.entity;
 
-import com.tools20022.metamodel.MMBusinessAssociationEnd;
-import com.tools20022.metamodel.MMBusinessAttribute;
-import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.*;
 import com.tools20022.repository.choice.*;
 import com.tools20022.repository.codeset.CurrencyCode;
 import com.tools20022.repository.codeset.SettlementStandingInstructionDatabaseCode;
 import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.YesNoIndicator;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -41,47 +40,64 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.StandingSettlementInstruction#mmSettlement
- * StandingSettlementInstruction.mmSettlement}</li>
+ * {@linkplain com.tools20022.repository.choice.FXStandingInstruction1Choice
+ * FXStandingInstruction1Choice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.StandingSettlementInstruction#mmFXStandingInstruction
- * StandingSettlementInstruction.mmFXStandingInstruction}</li>
+ * {@linkplain com.tools20022.repository.choice.SettlementStandingInstructionDatabase1Choice
+ * SettlementStandingInstructionDatabase1Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.StandingSettlementInstruction1
+ * StandingSettlementInstruction1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.StandingSettlementInstruction4
+ * StandingSettlementInstruction4}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.StandingSettlementInstruction#mmSettlementStandingInstructionDatabase
- * StandingSettlementInstruction.mmSettlementStandingInstructionDatabase}</li>
+ * {@linkplain com.tools20022.repository.choice.FXStandingInstruction2Choice
+ * FXStandingInstruction2Choice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.StandingSettlementInstruction#mmIdentification
- * StandingSettlementInstruction.mmIdentification}</li>
+ * {@linkplain com.tools20022.repository.choice.SettlementStandingInstructionDatabase2Choice
+ * SettlementStandingInstructionDatabase2Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.StandingSettlementInstruction7
+ * StandingSettlementInstruction7}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.StandingSettlementInstruction2
+ * StandingSettlementInstruction2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.StandingSettlementInstruction3
+ * StandingSettlementInstruction3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.StandingSettlementInstruction6
+ * StandingSettlementInstruction6}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.StandingSettlementInstruction#mmRelatedCollateralAgreement
- * StandingSettlementInstruction.mmRelatedCollateralAgreement}</li>
+ * {@linkplain com.tools20022.repository.choice.FXStandingInstruction3Choice
+ * FXStandingInstruction3Choice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.StandingSettlementInstruction#mmSSIDatabaseName
- * StandingSettlementInstruction.mmSSIDatabaseName}</li>
+ * {@linkplain com.tools20022.repository.choice.SettlementStandingInstructionDatabase3Choice
+ * SettlementStandingInstructionDatabase3Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.StandingSettlementInstruction9
+ * StandingSettlementInstruction9}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.StandingSettlementInstruction5
+ * StandingSettlementInstruction5}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.StandingSettlementInstruction8
+ * StandingSettlementInstruction8}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.StandingSettlementInstruction#mmSSIDatabaseProvider
- * StandingSettlementInstruction.mmSSIDatabaseProvider}</li>
+ * {@linkplain com.tools20022.repository.msg.StandingSettlementInstruction11
+ * StandingSettlementInstruction11}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.StandingSettlementInstruction#mmValidityPeriod
- * StandingSettlementInstruction.mmValidityPeriod}</li>
+ * {@linkplain com.tools20022.repository.choice.SettlementStandingInstructionDatabase4Choice
+ * SettlementStandingInstructionDatabase4Choice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.StandingSettlementInstruction#mmCurrency
- * StandingSettlementInstruction.mmCurrency}</li>
+ * {@linkplain com.tools20022.repository.choice.FXStandingInstruction4Choice
+ * FXStandingInstruction4Choice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.StandingSettlementInstruction#mmAsset
- * StandingSettlementInstruction.mmAsset}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
- * subType} =
- * <ul>
+ * {@linkplain com.tools20022.repository.msg.StandingSettlementInstruction12
+ * StandingSettlementInstruction12}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.AgentCorporateActionStandingInstruction
- * AgentCorporateActionStandingInstruction}</li>
+ * {@linkplain com.tools20022.repository.choice.FXStandingInstruction5Choice
+ * FXStandingInstruction5Choice}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.SettlementStandingInstructionDatabase5Choice
+ * SettlementStandingInstructionDatabase5Choice}</li>
  * </ul>
  * </li>
  * <li>
@@ -144,64 +160,47 @@ import java.util.List;
  * StandingSettlementInstruction12.mmSettlementStandingInstructionDatabase}</li>
  * </ul>
  * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
+ * subType} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.FXStandingInstruction1Choice
- * FXStandingInstruction1Choice}</li>
+ * {@linkplain com.tools20022.repository.entity.AgentCorporateActionStandingInstruction
+ * AgentCorporateActionStandingInstruction}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SettlementStandingInstructionDatabase1Choice
- * SettlementStandingInstructionDatabase1Choice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.StandingSettlementInstruction1
- * StandingSettlementInstruction1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.StandingSettlementInstruction4
- * StandingSettlementInstruction4}</li>
+ * {@linkplain com.tools20022.repository.entity.StandingSettlementInstruction#mmSettlement
+ * StandingSettlementInstruction.mmSettlement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.FXStandingInstruction2Choice
- * FXStandingInstruction2Choice}</li>
+ * {@linkplain com.tools20022.repository.entity.StandingSettlementInstruction#mmFXStandingInstruction
+ * StandingSettlementInstruction.mmFXStandingInstruction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SettlementStandingInstructionDatabase2Choice
- * SettlementStandingInstructionDatabase2Choice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.StandingSettlementInstruction7
- * StandingSettlementInstruction7}</li>
- * <li>{@linkplain com.tools20022.repository.msg.StandingSettlementInstruction2
- * StandingSettlementInstruction2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.StandingSettlementInstruction3
- * StandingSettlementInstruction3}</li>
- * <li>{@linkplain com.tools20022.repository.msg.StandingSettlementInstruction6
- * StandingSettlementInstruction6}</li>
+ * {@linkplain com.tools20022.repository.entity.StandingSettlementInstruction#mmSettlementStandingInstructionDatabase
+ * StandingSettlementInstruction.mmSettlementStandingInstructionDatabase}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.FXStandingInstruction3Choice
- * FXStandingInstruction3Choice}</li>
+ * {@linkplain com.tools20022.repository.entity.StandingSettlementInstruction#mmIdentification
+ * StandingSettlementInstruction.mmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SettlementStandingInstructionDatabase3Choice
- * SettlementStandingInstructionDatabase3Choice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.StandingSettlementInstruction9
- * StandingSettlementInstruction9}</li>
- * <li>{@linkplain com.tools20022.repository.msg.StandingSettlementInstruction5
- * StandingSettlementInstruction5}</li>
- * <li>{@linkplain com.tools20022.repository.msg.StandingSettlementInstruction8
- * StandingSettlementInstruction8}</li>
+ * {@linkplain com.tools20022.repository.entity.StandingSettlementInstruction#mmRelatedCollateralAgreement
+ * StandingSettlementInstruction.mmRelatedCollateralAgreement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.StandingSettlementInstruction11
- * StandingSettlementInstruction11}</li>
+ * {@linkplain com.tools20022.repository.entity.StandingSettlementInstruction#mmSSIDatabaseName
+ * StandingSettlementInstruction.mmSSIDatabaseName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.SettlementStandingInstructionDatabase4Choice
- * SettlementStandingInstructionDatabase4Choice}</li>
+ * {@linkplain com.tools20022.repository.entity.StandingSettlementInstruction#mmSSIDatabaseProvider
+ * StandingSettlementInstruction.mmSSIDatabaseProvider}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.FXStandingInstruction4Choice
- * FXStandingInstruction4Choice}</li>
+ * {@linkplain com.tools20022.repository.entity.StandingSettlementInstruction#mmValidityPeriod
+ * StandingSettlementInstruction.mmValidityPeriod}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.StandingSettlementInstruction12
- * StandingSettlementInstruction12}</li>
+ * {@linkplain com.tools20022.repository.entity.StandingSettlementInstruction#mmCurrency
+ * StandingSettlementInstruction.mmCurrency}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.FXStandingInstruction5Choice
- * FXStandingInstruction5Choice}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.SettlementStandingInstructionDatabase5Choice
- * SettlementStandingInstructionDatabase5Choice}</li>
+ * {@linkplain com.tools20022.repository.entity.StandingSettlementInstruction#mmAsset
+ * StandingSettlementInstruction.mmAsset}</li>
  * </ul>
  * </li>
  * <li>
@@ -262,12 +261,12 @@ public class StandingSettlementInstruction {
 		{
 			elementContext_lazy = () -> StandingSettlementInstruction.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Settlement";
 			definition = "Settlement process to which the settlement instruction database applies.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.Settlement.mmStandingSettlementInstruction;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Settlement.mmObject();
 		}
 	};
@@ -337,14 +336,12 @@ public class StandingSettlementInstruction {
 	 */
 	public static final MMBusinessAttribute mmFXStandingInstruction = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.FXStandingInstruction1Choice.mmIndicator, com.tools20022.repository.choice.FXStandingInstruction1Choice.mmProprietary,
-					com.tools20022.repository.choice.FXStandingInstruction2Choice.mmIndicator, com.tools20022.repository.choice.FXStandingInstruction2Choice.mmProprietary,
-					com.tools20022.repository.choice.FXStandingInstruction3Choice.mmIndicator, com.tools20022.repository.choice.FXStandingInstruction3Choice.mmProprietary,
-					com.tools20022.repository.choice.FXStandingInstruction4Choice.mmIndicator, com.tools20022.repository.choice.FXStandingInstruction4Choice.mmProprietary,
-					com.tools20022.repository.choice.FXStandingInstruction5Choice.mmIndicator, com.tools20022.repository.choice.FXStandingInstruction5Choice.mmProprietary);
+			derivation_lazy = () -> Arrays.asList(FXStandingInstruction1Choice.mmIndicator, FXStandingInstruction1Choice.mmProprietary, FXStandingInstruction2Choice.mmIndicator, FXStandingInstruction2Choice.mmProprietary,
+					FXStandingInstruction3Choice.mmIndicator, FXStandingInstruction3Choice.mmProprietary, FXStandingInstruction4Choice.mmIndicator, FXStandingInstruction4Choice.mmProprietary, FXStandingInstruction5Choice.mmIndicator,
+					FXStandingInstruction5Choice.mmProprietary);
 			elementContext_lazy = () -> StandingSettlementInstruction.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "FXStandingInstruction";
 			definition = "Specifies whether the forex standing instruction in place should apply.";
 			maxOccurs = 1;
@@ -419,14 +416,13 @@ public class StandingSettlementInstruction {
 	 */
 	public static final MMBusinessAttribute mmSettlementStandingInstructionDatabase = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SettlementStandingInstructionDatabase1Choice.mmCode, com.tools20022.repository.choice.SettlementStandingInstructionDatabase1Choice.mmProprietary,
-					com.tools20022.repository.choice.SettlementStandingInstructionDatabase2Choice.mmCode, com.tools20022.repository.choice.SettlementStandingInstructionDatabase2Choice.mmProprietary,
-					com.tools20022.repository.choice.SettlementStandingInstructionDatabase3Choice.mmCode, com.tools20022.repository.choice.SettlementStandingInstructionDatabase3Choice.mmProprietary,
-					com.tools20022.repository.choice.SettlementStandingInstructionDatabase4Choice.mmCode, com.tools20022.repository.choice.SettlementStandingInstructionDatabase4Choice.mmProprietary,
-					com.tools20022.repository.choice.SettlementStandingInstructionDatabase5Choice.mmCode, com.tools20022.repository.choice.SettlementStandingInstructionDatabase5Choice.mmProprietary);
+			derivation_lazy = () -> Arrays.asList(SettlementStandingInstructionDatabase1Choice.mmCode, SettlementStandingInstructionDatabase1Choice.mmProprietary, SettlementStandingInstructionDatabase2Choice.mmCode,
+					SettlementStandingInstructionDatabase2Choice.mmProprietary, SettlementStandingInstructionDatabase3Choice.mmCode, SettlementStandingInstructionDatabase3Choice.mmProprietary,
+					SettlementStandingInstructionDatabase4Choice.mmCode, SettlementStandingInstructionDatabase4Choice.mmProprietary, SettlementStandingInstructionDatabase5Choice.mmCode,
+					SettlementStandingInstructionDatabase5Choice.mmProprietary);
 			elementContext_lazy = () -> StandingSettlementInstruction.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SettlementStandingInstructionDatabase";
 			definition = "Specifies what settlement standing instruction database is to be used to derive the settlement parties involved in the transaction.";
 			maxOccurs = 1;
@@ -471,10 +467,10 @@ public class StandingSettlementInstruction {
 	 */
 	public static final MMBusinessAttribute mmIdentification = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionStandingInstructionGeneralInformation1.mmClientStandingInstructionIdentification);
+			derivation_lazy = () -> Arrays.asList(CorporateActionStandingInstructionGeneralInformation1.mmClientStandingInstructionIdentification);
 			elementContext_lazy = () -> StandingSettlementInstruction.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Identification";
 			definition = "Identification of the standing instruction.";
 			maxOccurs = 1;
@@ -523,13 +519,13 @@ public class StandingSettlementInstruction {
 		{
 			elementContext_lazy = () -> StandingSettlementInstruction.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedCollateralAgreement";
 			definition = "Collateral agreement for which standing settlement instructions are specified.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.CollateralAgreement.mmStandingSettlementInstructions;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.CollateralAgreement.mmObject();
 		}
 	};
@@ -566,7 +562,7 @@ public class StandingSettlementInstruction {
 		{
 			elementContext_lazy = () -> StandingSettlementInstruction.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SSIDatabaseName";
 			definition = "Specifies the settlement standing instruction database to be used to derive the settlement parties involved in a transaction.";
 			maxOccurs = 1;
@@ -615,13 +611,13 @@ public class StandingSettlementInstruction {
 		{
 			elementContext_lazy = () -> StandingSettlementInstruction.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SSIDatabaseProvider";
 			definition = "Party which provides information on the parties and accounts to be used to settle a transaction.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.SSIDatabaseProvider.mmStandingSettlementDatabase;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SSIDatabaseProvider.mmObject();
 		}
 	};
@@ -663,13 +659,13 @@ public class StandingSettlementInstruction {
 		{
 			elementContext_lazy = () -> StandingSettlementInstruction.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ValidityPeriod";
 			definition = "Period during which the SSI is valid.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmRelatedStandingSettlementInstruction;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmObject();
 		}
 	};
@@ -703,7 +699,7 @@ public class StandingSettlementInstruction {
 		{
 			elementContext_lazy = () -> StandingSettlementInstruction.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Currency";
 			definition = "Currency of the payment to which the SSI applies.";
 			maxOccurs = 1;
@@ -749,13 +745,13 @@ public class StandingSettlementInstruction {
 		{
 			elementContext_lazy = () -> StandingSettlementInstruction.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Asset";
 			definition = "Inidicates the asset for the standing settlement instruction.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.Asset.mmStandingSettlementInstruction;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Asset.mmObject();
 		}
 	};
@@ -763,25 +759,22 @@ public class StandingSettlementInstruction {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "StandingSettlementInstruction";
 				definition = "Settlement instruction database information.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Asset.mmStandingSettlementInstruction, com.tools20022.repository.entity.DateTimePeriod.mmRelatedStandingSettlementInstruction,
 						com.tools20022.repository.entity.Settlement.mmStandingSettlementInstruction, com.tools20022.repository.entity.CollateralAgreement.mmStandingSettlementInstructions,
 						com.tools20022.repository.entity.SSIDatabaseProvider.mmStandingSettlementDatabase);
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StandingSettlementInstruction1.mmSettlementStandingInstructionDatabase,
-						com.tools20022.repository.msg.StandingSettlementInstruction4.mmSettlementStandingInstructionDatabase, com.tools20022.repository.msg.StandingSettlementInstruction7.mmSettlementStandingInstructionDatabase,
-						com.tools20022.repository.msg.StandingSettlementInstruction2.mmSettlementStandingInstructionDatabase, com.tools20022.repository.msg.StandingSettlementInstruction3.mmSettlementStandingInstructionDatabase,
-						com.tools20022.repository.msg.StandingSettlementInstruction6.mmSettlementStandingInstructionDatabase, com.tools20022.repository.msg.StandingSettlementInstruction9.mmSettlementStandingInstructionDatabase,
-						com.tools20022.repository.msg.StandingSettlementInstruction5.mmSettlementStandingInstructionDatabase, com.tools20022.repository.msg.StandingSettlementInstruction8.mmSettlementStandingInstructionDatabase,
-						com.tools20022.repository.msg.StandingSettlementInstruction11.mmSettlementStandingInstructionDatabase, com.tools20022.repository.msg.StandingSettlementInstruction12.mmSettlementStandingInstructionDatabase);
+				derivationElement_lazy = () -> Arrays.asList(StandingSettlementInstruction1.mmSettlementStandingInstructionDatabase, StandingSettlementInstruction4.mmSettlementStandingInstructionDatabase,
+						StandingSettlementInstruction7.mmSettlementStandingInstructionDatabase, StandingSettlementInstruction2.mmSettlementStandingInstructionDatabase, StandingSettlementInstruction3.mmSettlementStandingInstructionDatabase,
+						StandingSettlementInstruction6.mmSettlementStandingInstructionDatabase, StandingSettlementInstruction9.mmSettlementStandingInstructionDatabase, StandingSettlementInstruction5.mmSettlementStandingInstructionDatabase,
+						StandingSettlementInstruction8.mmSettlementStandingInstructionDatabase, StandingSettlementInstruction11.mmSettlementStandingInstructionDatabase,
+						StandingSettlementInstruction12.mmSettlementStandingInstructionDatabase);
 				subType_lazy = () -> Arrays.asList(AgentCorporateActionStandingInstruction.mmObject());
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.StandingSettlementInstruction.mmSettlement, com.tools20022.repository.entity.StandingSettlementInstruction.mmFXStandingInstruction,
-						com.tools20022.repository.entity.StandingSettlementInstruction.mmSettlementStandingInstructionDatabase, com.tools20022.repository.entity.StandingSettlementInstruction.mmIdentification,
-						com.tools20022.repository.entity.StandingSettlementInstruction.mmRelatedCollateralAgreement, com.tools20022.repository.entity.StandingSettlementInstruction.mmSSIDatabaseName,
-						com.tools20022.repository.entity.StandingSettlementInstruction.mmSSIDatabaseProvider, com.tools20022.repository.entity.StandingSettlementInstruction.mmValidityPeriod,
-						com.tools20022.repository.entity.StandingSettlementInstruction.mmCurrency, com.tools20022.repository.entity.StandingSettlementInstruction.mmAsset);
+				element_lazy = () -> Arrays.asList(StandingSettlementInstruction.mmSettlement, StandingSettlementInstruction.mmFXStandingInstruction, StandingSettlementInstruction.mmSettlementStandingInstructionDatabase,
+						StandingSettlementInstruction.mmIdentification, StandingSettlementInstruction.mmRelatedCollateralAgreement, StandingSettlementInstruction.mmSSIDatabaseName, StandingSettlementInstruction.mmSSIDatabaseProvider,
+						StandingSettlementInstruction.mmValidityPeriod, StandingSettlementInstruction.mmCurrency, StandingSettlementInstruction.mmAsset);
 				derivationComponent_lazy = () -> Arrays.asList(FXStandingInstruction1Choice.mmObject(), SettlementStandingInstructionDatabase1Choice.mmObject(), StandingSettlementInstruction1.mmObject(),
 						StandingSettlementInstruction4.mmObject(), FXStandingInstruction2Choice.mmObject(), SettlementStandingInstructionDatabase2Choice.mmObject(), StandingSettlementInstruction7.mmObject(),
 						StandingSettlementInstruction2.mmObject(), StandingSettlementInstruction3.mmObject(), StandingSettlementInstruction6.mmObject(), FXStandingInstruction3Choice.mmObject(),

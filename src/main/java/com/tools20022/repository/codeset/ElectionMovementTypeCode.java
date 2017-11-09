@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.ElectionMovementType2Code
+ * ElectionMovementType2Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ElectionMovementType1Code
+ * ElectionMovementType1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -38,15 +49,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.ElectionMovementTypeCode#mmSequestered
  * ElectionMovementTypeCode.mmSequestered}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.ElectionMovementType2Code
- * ElectionMovementType2Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ElectionMovementType1Code
- * ElectionMovementType1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -101,7 +103,7 @@ public class ElectionMovementTypeCode {
 	 */
 	public static final MMCode mmRestricted = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Restricted";
 			definition = "Election results in a change of balance type that transfers control of the securities rather than the securities themselves.";
 			owner_lazy = () -> ElectionMovementTypeCode.mmObject();
@@ -134,7 +136,7 @@ public class ElectionMovementTypeCode {
 	 */
 	public static final MMCode mmDirect = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Direct";
 			definition = "Direct movement of resource, ie, cash or security that is directly credited to the paying agent account.";
 			owner_lazy = () -> ElectionMovementTypeCode.mmObject();
@@ -167,7 +169,7 @@ public class ElectionMovementTypeCode {
 	 */
 	public static final MMCode mmSequestered = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Sequestered";
 			definition = "Election results in a change of balance type that transfers control of the securities rather than the securities themselves.";
 			owner_lazy = () -> ElectionMovementTypeCode.mmObject();
@@ -178,13 +180,12 @@ public class ElectionMovementTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("REST");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ElectionMovementTypeCode";
 				definition = "Specifies the effect on the holdings of electing a Corporate Action option.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ElectionMovementTypeCode.mmRestricted, com.tools20022.repository.codeset.ElectionMovementTypeCode.mmDirect,
-						com.tools20022.repository.codeset.ElectionMovementTypeCode.mmSequestered);
+				code_lazy = () -> Arrays.asList(ElectionMovementTypeCode.mmRestricted, ElectionMovementTypeCode.mmDirect, ElectionMovementTypeCode.mmSequestered);
 				derivation_lazy = () -> Arrays.asList(ElectionMovementType2Code.mmObject(), ElectionMovementType1Code.mmObject());
 			}
 		});

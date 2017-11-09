@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.DTCAutoOfferProgramCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -86,7 +88,7 @@ public class DTCAutoOfferProgram1Code extends DTCAutoOfferProgramCode {
 	 */
 	public static final MMCode mmOffine = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Offine";
 			owner_lazy = () -> DTCAutoOfferProgram1Code.mmObject();
 		}
@@ -109,7 +111,7 @@ public class DTCAutoOfferProgram1Code extends DTCAutoOfferProgramCode {
 	 */
 	public static final MMCode mmOnline = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Online";
 			owner_lazy = () -> DTCAutoOfferProgram1Code.mmObject();
 		}
@@ -118,12 +120,12 @@ public class DTCAutoOfferProgram1Code extends DTCAutoOfferProgramCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("OFFL");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DTCAutoOfferProgram1Code";
 				definition = "Indicates what type of interface an agent has with DTC (The Depository Trust Corporation).";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DTCAutoOfferProgram1Code.mmOffine, com.tools20022.repository.codeset.DTCAutoOfferProgram1Code.mmOnline);
+				code_lazy = () -> Arrays.asList(DTCAutoOfferProgram1Code.mmOffine, DTCAutoOfferProgram1Code.mmOnline);
 				trace_lazy = () -> DTCAutoOfferProgramCode.mmObject();
 			}
 		});

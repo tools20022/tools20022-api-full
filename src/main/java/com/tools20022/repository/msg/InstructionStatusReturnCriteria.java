@@ -19,7 +19,9 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.RequestedIndicator;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -96,7 +98,7 @@ public class InstructionStatusReturnCriteria {
 			componentContext_lazy = () -> InstructionStatusReturnCriteria.mmObject();
 			isDerived = false;
 			xmlTag = "PmtInstrStsInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentInstructionStatusIndicator";
 			definition = "Indicates if the instruction status is requested.";
 			maxOccurs = 1;
@@ -138,7 +140,7 @@ public class InstructionStatusReturnCriteria {
 			componentContext_lazy = () -> InstructionStatusReturnCriteria.mmObject();
 			isDerived = false;
 			xmlTag = "PmtInstrStsDtTmInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentInstructionStatusDateTimeIndicator";
 			definition = "Indicates if the status date and time are requested.";
 			maxOccurs = 1;
@@ -180,7 +182,7 @@ public class InstructionStatusReturnCriteria {
 			componentContext_lazy = () -> InstructionStatusReturnCriteria.mmObject();
 			isDerived = false;
 			xmlTag = "PmtInstrStsRsnInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentInstructionStatusReasonIndicator";
 			definition = "Indicates if the status reason is requested.";
 			maxOccurs = 1;
@@ -192,10 +194,10 @@ public class InstructionStatusReturnCriteria {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InstructionStatusReturnCriteria.mmPaymentInstructionStatusIndicator,
-						com.tools20022.repository.msg.InstructionStatusReturnCriteria.mmPaymentInstructionStatusDateTimeIndicator, com.tools20022.repository.msg.InstructionStatusReturnCriteria.mmPaymentInstructionStatusReasonIndicator);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(InstructionStatusReturnCriteria.mmPaymentInstructionStatusIndicator, InstructionStatusReturnCriteria.mmPaymentInstructionStatusDateTimeIndicator,
+						InstructionStatusReturnCriteria.mmPaymentInstructionStatusReasonIndicator);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InstructionStatusReturnCriteria";
 				definition = "Defines the criteria which are used to report on the payment status.";
 			}

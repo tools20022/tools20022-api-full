@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.PartyTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -104,9 +106,9 @@ public class PartyType16Code extends PartyTypeCode {
 	 */
 	public static final MMCode mmAcquirer = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Acquirer";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.PartyType13Code.mmAcquirer;
+			previousVersion_lazy = () -> PartyType13Code.mmAcquirer;
 			owner_lazy = () -> PartyType16Code.mmObject();
 		}
 	};
@@ -133,9 +135,9 @@ public class PartyType16Code extends PartyTypeCode {
 	 */
 	public static final MMCode mmCardIssuer = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CardIssuer";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.PartyType13Code.mmCardIssuer;
+			previousVersion_lazy = () -> PartyType13Code.mmCardIssuer;
 			owner_lazy = () -> PartyType16Code.mmObject();
 		}
 	};
@@ -162,9 +164,9 @@ public class PartyType16Code extends PartyTypeCode {
 	 */
 	public static final MMCode mmDelegateIssuer = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DelegateIssuer";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.PartyType13Code.mmDelegateIssuer;
+			previousVersion_lazy = () -> PartyType13Code.mmDelegateIssuer;
 			owner_lazy = () -> PartyType16Code.mmObject();
 		}
 	};
@@ -191,9 +193,9 @@ public class PartyType16Code extends PartyTypeCode {
 	 */
 	public static final MMCode mmIntermediaryAgent = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IntermediaryAgent";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.PartyType13Code.mmIntermediaryAgent;
+			previousVersion_lazy = () -> PartyType13Code.mmIntermediaryAgent;
 			owner_lazy = () -> PartyType16Code.mmObject();
 		}
 	};
@@ -220,9 +222,9 @@ public class PartyType16Code extends PartyTypeCode {
 	 */
 	public static final MMCode mmOriginatingTerminal = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginatingTerminal";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.PartyType13Code.mmOriginatingTerminal;
+			previousVersion_lazy = () -> PartyType13Code.mmOriginatingTerminal;
 			owner_lazy = () -> PartyType16Code.mmObject();
 		}
 	};
@@ -244,7 +246,7 @@ public class PartyType16Code extends PartyTypeCode {
 	 */
 	public static final MMCode mmAccountFromBank = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountFromBank";
 			owner_lazy = () -> PartyType16Code.mmObject();
 		}
@@ -267,7 +269,7 @@ public class PartyType16Code extends PartyTypeCode {
 	 */
 	public static final MMCode mmAccountToBank = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountToBank";
 			owner_lazy = () -> PartyType16Code.mmObject();
 		}
@@ -290,7 +292,7 @@ public class PartyType16Code extends PartyTypeCode {
 	 */
 	public static final MMCode mmATMManager = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ATMManager";
 			owner_lazy = () -> PartyType16Code.mmObject();
 		}
@@ -299,14 +301,13 @@ public class PartyType16Code extends PartyTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PartyType16Code";
 				definition = "Identifies the entity which initially sets the authorisation response value.";
 				previousVersion_lazy = () -> PartyType13Code.mmObject();
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PartyType16Code.mmAcquirer, com.tools20022.repository.codeset.PartyType16Code.mmCardIssuer,
-						com.tools20022.repository.codeset.PartyType16Code.mmDelegateIssuer, com.tools20022.repository.codeset.PartyType16Code.mmIntermediaryAgent, com.tools20022.repository.codeset.PartyType16Code.mmOriginatingTerminal,
-						com.tools20022.repository.codeset.PartyType16Code.mmAccountFromBank, com.tools20022.repository.codeset.PartyType16Code.mmAccountToBank, com.tools20022.repository.codeset.PartyType16Code.mmATMManager);
+				code_lazy = () -> Arrays.asList(PartyType16Code.mmAcquirer, PartyType16Code.mmCardIssuer, PartyType16Code.mmDelegateIssuer, PartyType16Code.mmIntermediaryAgent, PartyType16Code.mmOriginatingTerminal,
+						PartyType16Code.mmAccountFromBank, PartyType16Code.mmAccountToBank, PartyType16Code.mmATMManager);
 				trace_lazy = () -> PartyTypeCode.mmObject();
 			}
 		});

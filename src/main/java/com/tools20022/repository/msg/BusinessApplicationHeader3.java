@@ -20,9 +20,11 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.Party29Choice;
 import com.tools20022.repository.datatype.ISONormalisedDateTime;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -115,7 +117,7 @@ public class BusinessApplicationHeader3 {
 			componentContext_lazy = () -> BusinessApplicationHeader3.mmObject();
 			isDerived = false;
 			xmlTag = "Fr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "From";
 			definition = "The sending MessagingEndpoint that has created this Business Message for the receiving MessagingEndpoint that will process this Business Message.\r\n\r\nNote\tthe sending MessagingEndpoint might be different from the sending address potentially contained in the transport header (as defined in the transport layer).";
 			maxOccurs = 1;
@@ -163,7 +165,7 @@ public class BusinessApplicationHeader3 {
 			componentContext_lazy = () -> BusinessApplicationHeader3.mmObject();
 			isDerived = false;
 			xmlTag = "To";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "To";
 			definition = "The MessagingEndpoint designated by the sending MessagingEndpoint to be the recipient who will ultimately process this Business Message.\r\n\r\nNote the receiving MessagingEndpoint might be different from the receiving address potentially contained in the transport header (as defined in the transport layer).";
 			maxOccurs = 1;
@@ -208,7 +210,7 @@ public class BusinessApplicationHeader3 {
 			componentContext_lazy = () -> BusinessApplicationHeader3.mmObject();
 			isDerived = false;
 			xmlTag = "BizMsgIdr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BusinessMessageIdentifier";
 			definition = "Unambiguously identifies the Business Message to the MessagingEndpoint that has created the Business Message.";
 			maxOccurs = 1;
@@ -254,7 +256,7 @@ public class BusinessApplicationHeader3 {
 			componentContext_lazy = () -> BusinessApplicationHeader3.mmObject();
 			isDerived = false;
 			xmlTag = "MsgDefIdr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageDefinitionIdentifier";
 			definition = "Contains the MessageIdentifier that defines the BusinessMessage.\r\nIt must contain a MessageIdentifier published on the ISO 20022 website.\r\n\r\nexample\tcamt.001.001.03";
 			maxOccurs = 1;
@@ -301,7 +303,7 @@ public class BusinessApplicationHeader3 {
 			componentContext_lazy = () -> BusinessApplicationHeader3.mmObject();
 			isDerived = false;
 			xmlTag = "BizSvc";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BusinessService";
 			definition = "Specifies the business service agreed between the two MessagingEndpoints under which rules this Business Message is exchanged.\r\n To be used when there is a choice of processing services or processing service levels.\r\nExample: E&I";
 			maxOccurs = 1;
@@ -346,7 +348,7 @@ public class BusinessApplicationHeader3 {
 			componentContext_lazy = () -> BusinessApplicationHeader3.mmObject();
 			isDerived = false;
 			xmlTag = "CreDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreationDate";
 			definition = "Date and time when this Business Message (header) was created.\r\nNote    Times must be normalized, using the \"Z\" annotation.";
 			maxOccurs = 1;
@@ -358,11 +360,10 @@ public class BusinessApplicationHeader3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BusinessApplicationHeader3.mmFrom, com.tools20022.repository.msg.BusinessApplicationHeader3.mmTo,
-						com.tools20022.repository.msg.BusinessApplicationHeader3.mmBusinessMessageIdentifier, com.tools20022.repository.msg.BusinessApplicationHeader3.mmMessageDefinitionIdentifier,
-						com.tools20022.repository.msg.BusinessApplicationHeader3.mmBusinessService, com.tools20022.repository.msg.BusinessApplicationHeader3.mmCreationDate);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(BusinessApplicationHeader3.mmFrom, BusinessApplicationHeader3.mmTo, BusinessApplicationHeader3.mmBusinessMessageIdentifier, BusinessApplicationHeader3.mmMessageDefinitionIdentifier,
+						BusinessApplicationHeader3.mmBusinessService, BusinessApplicationHeader3.mmCreationDate);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "BusinessApplicationHeader3";
 				definition = "Specifies specific data from the Business Application Header of the Business Message.";
 			}

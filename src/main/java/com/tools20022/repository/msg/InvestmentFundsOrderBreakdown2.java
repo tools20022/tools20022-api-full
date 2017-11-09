@@ -19,9 +19,12 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.OrderBreakdownType1Choice;
 import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
 import com.tools20022.repository.entity.InvestmentFundOrder;
+import com.tools20022.repository.entity.SecuritiesOrder;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -111,14 +114,14 @@ public class InvestmentFundsOrderBreakdown2 {
 	 */
 	public static final MMMessageAttribute mmOrderBreakdownType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrder.mmOrderType;
+			businessElementTrace_lazy = () -> InvestmentFundOrder.mmOrderType;
 			componentContext_lazy = () -> InvestmentFundsOrderBreakdown2.mmObject();
 			isDerived = false;
 			xmlTag = "OrdrBrkdwnTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrderBreakdownType";
 			definition = "Type of order breakdown.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.InvestmentFundsOrderBreakdown1.mmOrderBreakdownType;
+			previousVersion_lazy = () -> InvestmentFundsOrderBreakdown1.mmOrderBreakdownType;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> OrderBreakdownType1Choice.mmObject();
@@ -166,14 +169,14 @@ public class InvestmentFundsOrderBreakdown2 {
 	 */
 	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmOrderedAmount;
+			businessElementTrace_lazy = () -> SecuritiesOrder.mmOrderedAmount;
 			componentContext_lazy = () -> InvestmentFundsOrderBreakdown2.mmObject();
 			isDerived = false;
 			xmlTag = "Amt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Portion of the net amount that is attributed to an order type.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.InvestmentFundsOrderBreakdown1.mmAmount;
+			previousVersion_lazy = () -> InvestmentFundsOrderBreakdown1.mmAmount;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
@@ -183,10 +186,10 @@ public class InvestmentFundsOrderBreakdown2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentFundsOrderBreakdown2.mmOrderBreakdownType, com.tools20022.repository.msg.InvestmentFundsOrderBreakdown2.mmAmount);
+				messageElement_lazy = () -> Arrays.asList(InvestmentFundsOrderBreakdown2.mmOrderBreakdownType, InvestmentFundsOrderBreakdown2.mmAmount);
 				trace_lazy = () -> InvestmentFundOrder.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InvestmentFundsOrderBreakdown2";
 				definition = "An investor's instruction to either subscribe or redeem an amount of money or its equivalent, for example, other assets, into or out of an investment fund.";
 				previousVersion_lazy = () -> InvestmentFundsOrderBreakdown1.mmObject();

@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.OvernightIndexSwapTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -77,7 +79,7 @@ public class OvernightIndexSwapType1Code extends OvernightIndexSwapTypeCode {
 	 */
 	public static final MMCode mmPaid = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Paid";
 			owner_lazy = () -> OvernightIndexSwapType1Code.mmObject();
 		}
@@ -100,7 +102,7 @@ public class OvernightIndexSwapType1Code extends OvernightIndexSwapTypeCode {
 	 */
 	public static final MMCode mmReceived = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Received";
 			owner_lazy = () -> OvernightIndexSwapType1Code.mmObject();
 		}
@@ -109,11 +111,11 @@ public class OvernightIndexSwapType1Code extends OvernightIndexSwapTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OvernightIndexSwapType1Code";
 				definition = "Specifies the type of overnight index swap transaction.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OvernightIndexSwapType1Code.mmPaid, com.tools20022.repository.codeset.OvernightIndexSwapType1Code.mmReceived);
+				code_lazy = () -> Arrays.asList(OvernightIndexSwapType1Code.mmPaid, OvernightIndexSwapType1Code.mmReceived);
 				trace_lazy = () -> OvernightIndexSwapTypeCode.mmObject();
 			}
 		});

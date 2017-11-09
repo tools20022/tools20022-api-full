@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ElectionMovementTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -85,7 +87,7 @@ public class ElectionMovementType1Code extends ElectionMovementTypeCode {
 	 */
 	public static final MMCode mmRestricted = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Restricted";
 			owner_lazy = () -> ElectionMovementType1Code.mmObject();
 		}
@@ -108,7 +110,7 @@ public class ElectionMovementType1Code extends ElectionMovementTypeCode {
 	 */
 	public static final MMCode mmDirect = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Direct";
 			owner_lazy = () -> ElectionMovementType1Code.mmObject();
 		}
@@ -117,12 +119,12 @@ public class ElectionMovementType1Code extends ElectionMovementTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("REST");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ElectionMovementType1Code";
 				definition = "Specifies the effect on the holdings of electing a Corporate Action option.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ElectionMovementType1Code.mmRestricted, com.tools20022.repository.codeset.ElectionMovementType1Code.mmDirect);
+				code_lazy = () -> Arrays.asList(ElectionMovementType1Code.mmRestricted, ElectionMovementType1Code.mmDirect);
 				trace_lazy = () -> ElectionMovementTypeCode.mmObject();
 			}
 		});

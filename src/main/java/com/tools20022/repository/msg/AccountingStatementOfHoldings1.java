@@ -19,7 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.semt.AccountingStatementOfHoldingsCancellation;
+import com.tools20022.repository.entity.Account;
 import com.tools20022.repository.entity.SecuritiesBalance;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -117,7 +121,7 @@ public class AccountingStatementOfHoldings1 {
 			componentContext_lazy = () -> AccountingStatementOfHoldings1.mmObject();
 			isDerived = false;
 			xmlTag = "MsgPgntn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessagePagination";
 			definition = "Pagination of the message.";
 			maxOccurs = 1;
@@ -160,7 +164,7 @@ public class AccountingStatementOfHoldings1 {
 			componentContext_lazy = () -> AccountingStatementOfHoldings1.mmObject();
 			isDerived = false;
 			xmlTag = "StmtGnlDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatementGeneralDetails";
 			definition = "General information related to the custody statement of holdings that is being cancelled.";
 			maxOccurs = 1;
@@ -206,11 +210,11 @@ public class AccountingStatementOfHoldings1 {
 	 */
 	public static final MMMessageAssociationEnd mmAccountDetails = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesBalance.mmSecuritiesAccount;
+			businessElementTrace_lazy = () -> SecuritiesBalance.mmSecuritiesAccount;
 			componentContext_lazy = () -> AccountingStatementOfHoldings1.mmObject();
 			isDerived = false;
 			xmlTag = "AcctDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountDetails";
 			definition = "The safekeeping or investment account of the statement that is being cancelled.";
 			maxOccurs = 1;
@@ -261,7 +265,7 @@ public class AccountingStatementOfHoldings1 {
 			componentContext_lazy = () -> AccountingStatementOfHoldings1.mmObject();
 			isDerived = false;
 			xmlTag = "BalForAcct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BalanceForAccount";
 			definition = "Net position of a segregated holding, in a single security, within the overall position held in a securities account.";
 			minOccurs = 0;
@@ -305,11 +309,11 @@ public class AccountingStatementOfHoldings1 {
 	 */
 	public static final MMMessageAssociationEnd mmSubAccountDetails = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.mmIdentification;
+			businessElementTrace_lazy = () -> Account.mmIdentification;
 			componentContext_lazy = () -> AccountingStatementOfHoldings1.mmObject();
 			isDerived = false;
 			xmlTag = "SubAcctDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubAccountDetails";
 			definition = "The sub-account of the safekeeping or investment account.";
 			minOccurs = 0;
@@ -350,7 +354,7 @@ public class AccountingStatementOfHoldings1 {
 			componentContext_lazy = () -> AccountingStatementOfHoldings1.mmObject();
 			isDerived = false;
 			xmlTag = "TtlVals";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalValues";
 			definition = "Value of total holdings reported.";
 			maxOccurs = 1;
@@ -393,7 +397,7 @@ public class AccountingStatementOfHoldings1 {
 			componentContext_lazy = () -> AccountingStatementOfHoldings1.mmObject();
 			isDerived = false;
 			xmlTag = "Xtnsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Extension";
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
 			minOccurs = 0;
@@ -405,14 +409,12 @@ public class AccountingStatementOfHoldings1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountingStatementOfHoldings1.mmMessagePagination, com.tools20022.repository.msg.AccountingStatementOfHoldings1.mmStatementGeneralDetails,
-						com.tools20022.repository.msg.AccountingStatementOfHoldings1.mmAccountDetails, com.tools20022.repository.msg.AccountingStatementOfHoldings1.mmBalanceForAccount,
-						com.tools20022.repository.msg.AccountingStatementOfHoldings1.mmSubAccountDetails, com.tools20022.repository.msg.AccountingStatementOfHoldings1.mmTotalValues,
-						com.tools20022.repository.msg.AccountingStatementOfHoldings1.mmExtension);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.AccountingStatementOfHoldingsCancellation.mmStatementToBeCancelled);
+				messageElement_lazy = () -> Arrays.asList(AccountingStatementOfHoldings1.mmMessagePagination, AccountingStatementOfHoldings1.mmStatementGeneralDetails, AccountingStatementOfHoldings1.mmAccountDetails,
+						AccountingStatementOfHoldings1.mmBalanceForAccount, AccountingStatementOfHoldings1.mmSubAccountDetails, AccountingStatementOfHoldings1.mmTotalValues, AccountingStatementOfHoldings1.mmExtension);
+				messageBuildingBlock_lazy = () -> Arrays.asList(AccountingStatementOfHoldingsCancellation.mmStatementToBeCancelled);
 				trace_lazy = () -> SecuritiesBalance.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AccountingStatementOfHoldings1";
 				definition = "Information about an accounting statement of holdings.";
 			}

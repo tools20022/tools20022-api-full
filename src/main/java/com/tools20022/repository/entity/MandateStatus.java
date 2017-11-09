@@ -17,13 +17,12 @@
 
 package com.tools20022.repository.entity;
 
-import com.tools20022.metamodel.MMBusinessAssociationEnd;
-import com.tools20022.metamodel.MMBusinessAttribute;
-import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.*;
 import com.tools20022.repository.codeset.ExternalCode;
 import com.tools20022.repository.codeset.ExternalMandateReason1Code;
 import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.Status;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.AcceptanceResult6;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -37,6 +36,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.AcceptanceResult6
+ * AcceptanceResult6}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.Mandate#mmMandateStatus
+ * Mandate.mmMandateStatus}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.Status Status}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -50,24 +67,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.entity.MandateStatus#mmMandateReason
  * MandateStatus.mmMandateReason}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Mandate#mmMandateStatus
- * Mandate.mmMandateStatus}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.Status Status}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.AcceptanceResult6
- * AcceptanceResult6}</li>
  * </ul>
  * </li>
  * <li>
@@ -126,10 +125,10 @@ public class MandateStatus extends Status {
 	 */
 	public static final MMBusinessAttribute mmAccepted = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcceptanceResult6.mmAccepted);
+			derivation_lazy = () -> Arrays.asList(AcceptanceResult6.mmAccepted);
 			elementContext_lazy = () -> MandateStatus.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Accepted";
 			definition = "Indicates whether the mandate request was accepted or rejected.";
 			maxOccurs = 1;
@@ -174,10 +173,10 @@ public class MandateStatus extends Status {
 	 */
 	public static final MMBusinessAttribute mmRejectReason = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcceptanceResult6.mmRejectReason);
+			derivation_lazy = () -> Arrays.asList(AcceptanceResult6.mmRejectReason);
 			elementContext_lazy = () -> MandateStatus.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RejectReason";
 			definition = "Specifies the reason for the rejection of a mandate request.";
 			maxOccurs = 1;
@@ -222,13 +221,13 @@ public class MandateStatus extends Status {
 		{
 			elementContext_lazy = () -> MandateStatus.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Mandate";
 			definition = "Mandate for which a status applies.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.Mandate.mmMandateStatus;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Mandate.mmObject();
 		}
 	};
@@ -264,7 +263,7 @@ public class MandateStatus extends Status {
 		{
 			elementContext_lazy = () -> MandateStatus.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MandateReason";
 			definition = "Specifies the reason for the request or status of a mandate.";
 			maxOccurs = 1;
@@ -276,14 +275,13 @@ public class MandateStatus extends Status {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MandateStatus";
 				definition = "Specifies whether a mandate is accepted or rejected.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Mandate.mmMandateStatus);
 				superType_lazy = () -> Status.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.MandateStatus.mmAccepted, com.tools20022.repository.entity.MandateStatus.mmRejectReason, com.tools20022.repository.entity.MandateStatus.mmMandate,
-						com.tools20022.repository.entity.MandateStatus.mmMandateReason);
+				element_lazy = () -> Arrays.asList(MandateStatus.mmAccepted, MandateStatus.mmRejectReason, MandateStatus.mmMandate, MandateStatus.mmMandateReason);
 				derivationComponent_lazy = () -> Arrays.asList(AcceptanceResult6.mmObject());
 			}
 		});

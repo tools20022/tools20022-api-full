@@ -19,10 +19,12 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ExtendedOptionFeature1Code;
 import com.tools20022.repository.datatype.Exact32AlphaNumericText;
 import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.datatype.YesNoIndicator;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -128,11 +130,11 @@ public class CorporateActionOptionSD8 {
 			componentContext_lazy = () -> CorporateActionOptionSD8.mmObject();
 			isDerived = false;
 			xmlTag = "PlcAndNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "xPath to the element that is being extended.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionOptionSD10.mmPlaceAndName);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionOptionSD6.mmPlaceAndName;
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionOptionSD10.mmPlaceAndName);
+			previousVersion_lazy = () -> CorporateActionOptionSD6.mmPlaceAndName;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
@@ -188,11 +190,11 @@ public class CorporateActionOptionSD8 {
 			componentContext_lazy = () -> CorporateActionOptionSD8.mmObject();
 			isDerived = false;
 			xmlTag = "XtndedOptnFeatrs";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExtendedOptionFeatures";
 			definition = "Used for options that have particular proprietary feature that cannot be represented in standard ISO message.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionOptionSD10.mmExtendedOptionFeatures);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionOptionSD6.mmExtendedOptionFeatures;
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionOptionSD10.mmExtendedOptionFeatures);
+			previousVersion_lazy = () -> CorporateActionOptionSD6.mmExtendedOptionFeatures;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ExtendedOptionFeature1Code.mmObject();
@@ -249,11 +251,11 @@ public class CorporateActionOptionSD8 {
 			componentContext_lazy = () -> CorporateActionOptionSD8.mmObject();
 			isDerived = false;
 			xmlTag = "DfltOptnFlg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DefaultOptionFlag";
 			definition = "Identifies whether the option is declared as default by the issuer / offeror,  and will be treated as default by the issuer / offeror if no elections is made.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionOptionSD10.mmDefaultOptionFlag);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionOptionSD6.mmDefaultOptionFlag;
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionOptionSD10.mmDefaultOptionFlag);
+			previousVersion_lazy = () -> CorporateActionOptionSD6.mmDefaultOptionFlag;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
@@ -311,11 +313,11 @@ public class CorporateActionOptionSD8 {
 			componentContext_lazy = () -> CorporateActionOptionSD8.mmObject();
 			isDerived = false;
 			xmlTag = "OptnlDvddSplmtryDataReqrdFlg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionalDividendSupplementaryDataRequiredFlag";
 			definition = "Indicates whether optional dividend supplementary data are required in the ISO 20022 CAIN instructions for this event.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionOptionSD10.mmOptionalDividendSupplementaryDataRequiredFlag);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionOptionSD6.mmOptionalDividendSupplementaryDataRequiredFlag;
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionOptionSD10.mmOptionalDividendSupplementaryDataRequiredFlag);
+			previousVersion_lazy = () -> CorporateActionOptionSD6.mmOptionalDividendSupplementaryDataRequiredFlag;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
@@ -372,10 +374,10 @@ public class CorporateActionOptionSD8 {
 			componentContext_lazy = () -> CorporateActionOptionSD8.mmObject();
 			isDerived = false;
 			xmlTag = "RDPRefNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RDPReferenceNumber";
 			definition = "Unique DTCC legacy reference used for matching and reconciling legacy records. The number algorhithm is as follows: Department ID (1:1), Activity Type (2:3), Cusip Country Code (5:2), Cusip (7:9), Record Date (15:8), Payable Date (22:8), Sequence Number (29:3), RDP Issue Type (31:1). \r\nUSAGE RULE: this sequence can be populated /extended to event details, option details or a movement, depending on sequence number coordinality to an event.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionOptionSD10.mmRDPReferenceNumber);
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionOptionSD10.mmRDPReferenceNumber);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Exact32AlphaNumericText.mmObject();
@@ -385,11 +387,10 @@ public class CorporateActionOptionSD8 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionOptionSD8.mmPlaceAndName, com.tools20022.repository.msg.CorporateActionOptionSD8.mmExtendedOptionFeatures,
-						com.tools20022.repository.msg.CorporateActionOptionSD8.mmDefaultOptionFlag, com.tools20022.repository.msg.CorporateActionOptionSD8.mmOptionalDividendSupplementaryDataRequiredFlag,
-						com.tools20022.repository.msg.CorporateActionOptionSD8.mmRDPReferenceNumber);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(CorporateActionOptionSD8.mmPlaceAndName, CorporateActionOptionSD8.mmExtendedOptionFeatures, CorporateActionOptionSD8.mmDefaultOptionFlag,
+						CorporateActionOptionSD8.mmOptionalDividendSupplementaryDataRequiredFlag, CorporateActionOptionSD8.mmRDPReferenceNumber);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionOptionSD8";
 				definition = "Provides additional information regarding corporate action option details.";
 				nextVersions_lazy = () -> Arrays.asList(CorporateActionOptionSD10.mmObject());

@@ -19,10 +19,16 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.camt.CaseStatusReportV03;
+import com.tools20022.repository.area.camt.CaseStatusReportV04;
 import com.tools20022.repository.codeset.CaseStatus2Code;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Max140Text;
 import com.tools20022.repository.entity.InvestigationCaseStatus;
+import com.tools20022.repository.entity.Status;
+import com.tools20022.repository.entity.StatusReason;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -111,11 +117,11 @@ public class CaseStatus2 {
 	 */
 	public static final MMMessageAttribute mmDateTime = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.mmStatusDateTime;
+			businessElementTrace_lazy = () -> Status.mmStatusDateTime;
 			componentContext_lazy = () -> CaseStatus2.mmObject();
 			isDerived = false;
 			xmlTag = "DtTm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DateTime";
 			definition = "Date and time of the status.";
 			maxOccurs = 1;
@@ -158,11 +164,11 @@ public class CaseStatus2 {
 	 */
 	public static final MMMessageAttribute mmCaseStatus = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestigationCaseStatus.mmCaseStatus;
+			businessElementTrace_lazy = () -> InvestigationCaseStatus.mmCaseStatus;
 			componentContext_lazy = () -> CaseStatus2.mmObject();
 			isDerived = false;
 			xmlTag = "CaseSts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CaseStatus";
 			definition = "Status of the case.";
 			maxOccurs = 1;
@@ -204,11 +210,11 @@ public class CaseStatus2 {
 	 */
 	public static final MMMessageAttribute mmReason = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmReason;
+			businessElementTrace_lazy = () -> StatusReason.mmReason;
 			componentContext_lazy = () -> CaseStatus2.mmObject();
 			isDerived = false;
 			xmlTag = "Rsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reason";
 			definition = "Free text justification of the status.";
 			maxOccurs = 1;
@@ -220,11 +226,11 @@ public class CaseStatus2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CaseStatus2.mmDateTime, com.tools20022.repository.msg.CaseStatus2.mmCaseStatus, com.tools20022.repository.msg.CaseStatus2.mmReason);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.CaseStatusReportV03.mmStatus, com.tools20022.repository.area.camt.CaseStatusReportV04.mmStatus);
+				messageElement_lazy = () -> Arrays.asList(CaseStatus2.mmDateTime, CaseStatus2.mmCaseStatus, CaseStatus2.mmReason);
+				messageBuildingBlock_lazy = () -> Arrays.asList(CaseStatusReportV03.mmStatus, CaseStatusReportV04.mmStatus);
 				trace_lazy = () -> InvestigationCaseStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CaseStatus2";
 				definition = "Defines the status of an investigation case.";
 			}

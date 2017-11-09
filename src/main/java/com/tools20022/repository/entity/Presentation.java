@@ -17,16 +17,16 @@
 
 package com.tools20022.repository.entity;
 
-import com.tools20022.metamodel.MMBusinessAssociationEnd;
-import com.tools20022.metamodel.MMBusinessAttribute;
-import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.*;
 import com.tools20022.repository.choice.Channel1Choice;
+import com.tools20022.repository.choice.Channel2Choice;
 import com.tools20022.repository.choice.CommunicationMethod1Choice;
 import com.tools20022.repository.choice.PresentationMedium1Choice;
 import com.tools20022.repository.codeset.CommunicationMethodCode;
 import com.tools20022.repository.codeset.ExternalChannelCode;
 import com.tools20022.repository.codeset.PresentationMediumCode;
 import com.tools20022.repository.datatype.ISODate;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -41,6 +41,40 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.choice.CommunicationMethod1Choice
+ * CommunicationMethod1Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CommunicationChannel1
+ * CommunicationChannel1}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.PresentationMedium1Choice
+ * PresentationMedium1Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.Channel1Choice
+ * Channel1Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Presentation3 Presentation3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Presentation4 Presentation4}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Presentation2 Presentation2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Presentation1 Presentation1}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.RegisteredContractCommunication1
+ * RegisteredContractCommunication1}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ElectronicAddress#mmRelatedPresentation
+ * ElectronicAddress.mmRelatedPresentation}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Document#mmPresentation
+ * Document.mmPresentation}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Undertaking#mmPresentation
+ * Undertaking.mmPresentation}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -64,40 +98,6 @@ import java.util.List;
  * <li>
  * {@linkplain com.tools20022.repository.entity.Presentation#mmApplicableChannel
  * Presentation.mmApplicableChannel}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ElectronicAddress#mmRelatedPresentation
- * ElectronicAddress.mmRelatedPresentation}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Document#mmPresentation
- * Document.mmPresentation}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Undertaking#mmPresentation
- * Undertaking.mmPresentation}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.choice.CommunicationMethod1Choice
- * CommunicationMethod1Choice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CommunicationChannel1
- * CommunicationChannel1}</li>
- * <li>{@linkplain com.tools20022.repository.choice.PresentationMedium1Choice
- * PresentationMedium1Choice}</li>
- * <li>{@linkplain com.tools20022.repository.choice.Channel1Choice
- * Channel1Choice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Presentation3 Presentation3}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Presentation4 Presentation4}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Presentation2 Presentation2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Presentation1 Presentation1}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.RegisteredContractCommunication1
- * RegisteredContractCommunication1}</li>
  * </ul>
  * </li>
  * <li>
@@ -199,15 +199,12 @@ public class Presentation {
 	 */
 	public static final MMBusinessAttribute mmCommunicationMethod = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Channel2Choice.mmCode, com.tools20022.repository.choice.Channel2Choice.mmProprietary, com.tools20022.repository.choice.CommunicationMethod1Choice.mmCode,
-					com.tools20022.repository.choice.CommunicationMethod1Choice.mmProprietary, com.tools20022.repository.msg.NonExtension1.mmNotificationMethod, com.tools20022.repository.msg.CommunicationChannel1.mmMethod,
-					com.tools20022.repository.msg.Undertaking11.mmDeliveryChannel, com.tools20022.repository.msg.Amendment1.mmDeliveryChannel, com.tools20022.repository.msg.Amendment3.mmDeliveryChannel,
-					com.tools20022.repository.choice.Channel1Choice.mmCode, com.tools20022.repository.choice.Channel1Choice.mmProprietary, com.tools20022.repository.msg.Presentation3.mmChannel,
-					com.tools20022.repository.msg.Document10.mmPresentationChannel, com.tools20022.repository.msg.Undertaking1.mmDeliveryChannel, com.tools20022.repository.msg.Undertaking4.mmDeliveryChannel,
-					com.tools20022.repository.msg.Undertaking3.mmDeliveryChannel, com.tools20022.repository.msg.RegisteredContractCommunication1.mmMethod);
+			derivation_lazy = () -> Arrays.asList(Channel2Choice.mmCode, Channel2Choice.mmProprietary, CommunicationMethod1Choice.mmCode, CommunicationMethod1Choice.mmProprietary, NonExtension1.mmNotificationMethod,
+					CommunicationChannel1.mmMethod, Undertaking11.mmDeliveryChannel, Amendment1.mmDeliveryChannel, Amendment3.mmDeliveryChannel, Channel1Choice.mmCode, Channel1Choice.mmProprietary, Presentation3.mmChannel,
+					Document10.mmPresentationChannel, Undertaking1.mmDeliveryChannel, Undertaking4.mmDeliveryChannel, Undertaking3.mmDeliveryChannel, RegisteredContractCommunication1.mmMethod);
 			elementContext_lazy = () -> Presentation.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CommunicationMethod";
 			definition = "Method by which the document is to be delivered.";
 			maxOccurs = 1;
@@ -255,13 +252,13 @@ public class Presentation {
 		{
 			elementContext_lazy = () -> Presentation.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PresentedUndertaking";
 			definition = "Specifies the undertaking which is presented and its associated documents.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.Undertaking.mmPresentation;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Undertaking.mmObject();
 		}
 	};
@@ -314,11 +311,10 @@ public class Presentation {
 	 */
 	public static final MMBusinessAttribute mmMedium = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PresentationMedium1Choice.mmCode, com.tools20022.repository.choice.PresentationMedium1Choice.mmProprietary,
-					com.tools20022.repository.msg.Presentation4.mmMedium, com.tools20022.repository.msg.Presentation1.mmMedium, com.tools20022.repository.msg.UndertakingAdvice2.mmOriginalIssuedMedium);
+			derivation_lazy = () -> Arrays.asList(PresentationMedium1Choice.mmCode, PresentationMedium1Choice.mmProprietary, Presentation4.mmMedium, Presentation1.mmMedium, UndertakingAdvice2.mmOriginalIssuedMedium);
 			elementContext_lazy = () -> Presentation.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Medium";
 			definition = "Medium through which the presentation can be submitted such as paper, electronic or both.";
 			maxOccurs = 1;
@@ -369,15 +365,15 @@ public class Presentation {
 	 */
 	public static final MMBusinessAssociationEnd mmPresentedDocument = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Presentation4.mmDocument, com.tools20022.repository.msg.Presentation1.mmDocument);
+			derivation_lazy = () -> Arrays.asList(Presentation4.mmDocument, Presentation1.mmDocument);
 			elementContext_lazy = () -> Presentation.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PresentedDocument";
 			definition = "Documents which are presented.";
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.Document.mmPresentation;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Document.mmObject();
 		}
 	};
@@ -423,16 +419,16 @@ public class Presentation {
 	 */
 	public static final MMBusinessAssociationEnd mmElectronicPresentationAddress = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Presentation3.mmAddress);
+			derivation_lazy = () -> Arrays.asList(Presentation3.mmAddress);
 			elementContext_lazy = () -> Presentation.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ElectronicPresentationAddress";
 			definition = "Electronic address for the presentation of documents.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.ElectronicAddress.mmRelatedPresentation;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.ElectronicAddress.mmObject();
 		}
 	};
@@ -474,10 +470,10 @@ public class Presentation {
 	 */
 	public static final MMBusinessAttribute mmPresentationDate = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Presentation2.mmBeneficiaryPresentationDate, com.tools20022.repository.msg.RegisteredContractCommunication1.mmDate);
+			derivation_lazy = () -> Arrays.asList(Presentation2.mmBeneficiaryPresentationDate, RegisteredContractCommunication1.mmDate);
 			elementContext_lazy = () -> Presentation.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PresentationDate";
 			definition = "Date on which the presentation is made.";
 			maxOccurs = 1;
@@ -515,7 +511,7 @@ public class Presentation {
 		{
 			elementContext_lazy = () -> Presentation.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ApplicableChannel";
 			definition = "Channel used for the transmission of a document.";
 			maxOccurs = 1;
@@ -527,15 +523,14 @@ public class Presentation {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Presentation";
 				definition = "Presentation of documents.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.ElectronicAddress.mmRelatedPresentation, com.tools20022.repository.entity.Document.mmPresentation,
 						com.tools20022.repository.entity.Undertaking.mmPresentation);
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Presentation.mmCommunicationMethod, com.tools20022.repository.entity.Presentation.mmPresentedUndertaking,
-						com.tools20022.repository.entity.Presentation.mmMedium, com.tools20022.repository.entity.Presentation.mmPresentedDocument, com.tools20022.repository.entity.Presentation.mmElectronicPresentationAddress,
-						com.tools20022.repository.entity.Presentation.mmPresentationDate, com.tools20022.repository.entity.Presentation.mmApplicableChannel);
+				element_lazy = () -> Arrays.asList(Presentation.mmCommunicationMethod, Presentation.mmPresentedUndertaking, Presentation.mmMedium, Presentation.mmPresentedDocument, Presentation.mmElectronicPresentationAddress,
+						Presentation.mmPresentationDate, Presentation.mmApplicableChannel);
 				derivationComponent_lazy = () -> Arrays.asList(CommunicationMethod1Choice.mmObject(), CommunicationChannel1.mmObject(), PresentationMedium1Choice.mmObject(), Channel1Choice.mmObject(), Presentation3.mmObject(),
 						Presentation4.mmObject(), Presentation2.mmObject(), Presentation1.mmObject(), RegisteredContractCommunication1.mmObject());
 			}

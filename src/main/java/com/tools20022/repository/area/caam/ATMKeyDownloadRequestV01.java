@@ -20,6 +20,7 @@ package com.tools20022.repository.area.caam;
 import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.ATMManagementLatestVersion;
 import com.tools20022.repository.msg.ATMKeyDownloadRequest1;
 import com.tools20022.repository.msg.ContentInformationType10;
@@ -35,6 +36,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code caam.003.001.01}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.ATMManagementLatestVersion
@@ -69,9 +73,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * ATMKeyDownloadRequestV01.mmSecurityTrailer}</li>
  * </ul>
  * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code caam.003.001.01}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -123,7 +124,7 @@ public class ATMKeyDownloadRequestV01 {
 	public static final MMMessageBuildingBlock mmHeader = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Hdr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Header";
 			definition = "Information related to the protocol management on a segment of the path from the ATM to the acquirer.";
 			maxOccurs = 1;
@@ -158,7 +159,7 @@ public class ATMKeyDownloadRequestV01 {
 	public static final MMMessageBuildingBlock mmProtectedATMKeyDownloadRequest = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "PrtctdATMKeyDwnldReq";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProtectedATMKeyDownloadRequest";
 			definition = "Encrypted body of the message.";
 			maxOccurs = 1;
@@ -194,7 +195,7 @@ public class ATMKeyDownloadRequestV01 {
 	public static final MMMessageBuildingBlock mmATMKeyDownloadRequest = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "ATMKeyDwnldReq";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ATMKeyDownloadRequest";
 			definition = "Information related to the request of a key download from an ATM.";
 			maxOccurs = 1;
@@ -230,7 +231,7 @@ public class ATMKeyDownloadRequestV01 {
 	public static final MMMessageBuildingBlock mmSecurityTrailer = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SctyTrlr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityTrailer";
 			definition = "Trailer of the message containing a MAC or a digital signature.";
 			maxOccurs = 1;
@@ -242,7 +243,7 @@ public class ATMKeyDownloadRequestV01 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ATMKeyDownloadRequestV01";
 				definition = "The ATMKeyDownloadRequest message is sent by an ATM to an ATM manager to initiate the download of one or several cryptographic keys.";
 				nextVersions_lazy = () -> Arrays.asList(ATMKeyDownloadRequestV02.mmObject());
@@ -250,8 +251,8 @@ public class ATMKeyDownloadRequestV01 {
 				rootElement = "Document";
 				xmlTag = "ATMKeyDwnldReq";
 				businessArea_lazy = () -> ATMManagementLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.caam.ATMKeyDownloadRequestV01.mmHeader, com.tools20022.repository.area.caam.ATMKeyDownloadRequestV01.mmProtectedATMKeyDownloadRequest,
-						com.tools20022.repository.area.caam.ATMKeyDownloadRequestV01.mmATMKeyDownloadRequest, com.tools20022.repository.area.caam.ATMKeyDownloadRequestV01.mmSecurityTrailer);
+				messageBuildingBlock_lazy = () -> Arrays.asList(ATMKeyDownloadRequestV01.mmHeader, ATMKeyDownloadRequestV01.mmProtectedATMKeyDownloadRequest, ATMKeyDownloadRequestV01.mmATMKeyDownloadRequest,
+						ATMKeyDownloadRequestV01.mmSecurityTrailer);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "caam";

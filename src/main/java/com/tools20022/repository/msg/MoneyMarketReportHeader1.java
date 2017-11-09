@@ -20,7 +20,10 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.auth.*;
 import com.tools20022.repository.datatype.LEIIdentifier;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -126,7 +129,7 @@ public class MoneyMarketReportHeader1 {
 			componentContext_lazy = () -> MoneyMarketReportHeader1.mmObject();
 			isDerived = false;
 			xmlTag = "RptgAgt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportingAgent";
 			definition = "Agent which is subject to reporting requirements.";
 			maxOccurs = 1;
@@ -170,7 +173,7 @@ public class MoneyMarketReportHeader1 {
 			componentContext_lazy = () -> MoneyMarketReportHeader1.mmObject();
 			isDerived = false;
 			xmlTag = "RefPrd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReferencePeriod";
 			definition = "Beginning and ending date-time to which the transaction data refers (trade date in case of new transactions and date of amendment in case of revisions). ";
 			maxOccurs = 1;
@@ -183,14 +186,12 @@ public class MoneyMarketReportHeader1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MoneyMarketReportHeader1.mmReportingAgent, com.tools20022.repository.msg.MoneyMarketReportHeader1.mmReferencePeriod);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.auth.MoneyMarketForeignExchangeSwapsStatisticalReportV01.mmReportHeader,
-						com.tools20022.repository.area.auth.MoneyMarketOvernightIndexSwapsStatisticalReportV01.mmReportHeader, com.tools20022.repository.area.auth.MoneyMarketUnsecuredMarketStatisticalReportV01.mmReportHeader,
-						com.tools20022.repository.area.auth.MoneyMarketSecuredMarketStatisticalReportV01.mmReportHeader, com.tools20022.repository.area.auth.MoneyMarketUnsecuredMarketStatisticalReportV02.mmReportHeader,
-						com.tools20022.repository.area.auth.MoneyMarketForeignExchangeSwapsStatisticalReportV02.mmReportHeader, com.tools20022.repository.area.auth.MoneyMarketSecuredMarketStatisticalReportV02.mmReportHeader,
-						com.tools20022.repository.area.auth.MoneyMarketOvernightIndexSwapsStatisticalReportV02.mmReportHeader);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(MoneyMarketReportHeader1.mmReportingAgent, MoneyMarketReportHeader1.mmReferencePeriod);
+				messageBuildingBlock_lazy = () -> Arrays.asList(MoneyMarketForeignExchangeSwapsStatisticalReportV01.mmReportHeader, MoneyMarketOvernightIndexSwapsStatisticalReportV01.mmReportHeader,
+						MoneyMarketUnsecuredMarketStatisticalReportV01.mmReportHeader, MoneyMarketSecuredMarketStatisticalReportV01.mmReportHeader, MoneyMarketUnsecuredMarketStatisticalReportV02.mmReportHeader,
+						MoneyMarketForeignExchangeSwapsStatisticalReportV02.mmReportHeader, MoneyMarketSecuredMarketStatisticalReportV02.mmReportHeader, MoneyMarketOvernightIndexSwapsStatisticalReportV02.mmReportHeader);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MoneyMarketReportHeader1";
 				definition = "Provides the money market statistical report instrument related header details.";
 			}

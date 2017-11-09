@@ -19,6 +19,8 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.other.*;
 import com.tools20022.repository.choice.DateAndDateTimeChoice;
 import com.tools20022.repository.choice.PartyIdentification73Choice;
 import com.tools20022.repository.codeset.AllocationIndicator1Code;
@@ -28,7 +30,8 @@ import com.tools20022.repository.datatype.Exact42Text;
 import com.tools20022.repository.datatype.Max210Text;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.YesNoIndicator;
-import com.tools20022.repository.entity.RegulatoryReport;
+import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -182,11 +185,11 @@ public class RegulatoryReporting1 {
 	 */
 	public static final MMMessageAttribute mmReportingJurisdiction = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmIdentification;
+			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> RegulatoryReporting1.mmObject();
 			isDerived = false;
 			xmlTag = "RptgJursdctn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportingJurisdiction";
 			definition = "Specifies the supervisory party to which the trade needs to be reported.";
 			maxOccurs = 1;
@@ -233,11 +236,11 @@ public class RegulatoryReporting1 {
 	 */
 	public static final MMMessageAttribute mmReportingParty = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> RegulatoryReporting1.mmObject();
 			isDerived = false;
 			xmlTag = "RptgPty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportingParty";
 			definition = "Identifies the party that is responsible for reporting the trade to the trade repository.";
 			maxOccurs = 1;
@@ -288,11 +291,11 @@ public class RegulatoryReporting1 {
 	 */
 	public static final MMMessageAttribute mmTradingSideUniqueTransactionIdentifier = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradeIdentification.mmUniqueTradeIdentifier;
+			businessElementTrace_lazy = () -> TradeIdentification.mmUniqueTradeIdentifier;
 			componentContext_lazy = () -> RegulatoryReporting1.mmObject();
 			isDerived = false;
 			xmlTag = "TradgSdUnqTxIdr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradingSideUniqueTransactionIdentifier";
 			definition = "Specifies the unique transaction identifier (UTI) to be created at the time a transaction is first executed, shared with all registered entities and counterparties involved in the transaction, and used to track that particular transaction over its life. This identifier can also be known as the Unique Swap Identifier (USI).This is the UTI from the Trading Side party.";
 			maxOccurs = 1;
@@ -343,11 +346,11 @@ public class RegulatoryReporting1 {
 	 */
 	public static final MMMessageAttribute mmCounterpartySideUniqueTransactionIdentifier = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Trade.mmTradeRelatedIdentifications;
+			businessElementTrace_lazy = () -> Trade.mmTradeRelatedIdentifications;
 			componentContext_lazy = () -> RegulatoryReporting1.mmObject();
 			isDerived = false;
 			xmlTag = "CtrPtySdUnqTxIdr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CounterpartySideUniqueTransactionIdentifier";
 			definition = "Specifies the unique transaction identifier (UTI) to be created at the time a transaction is first executed, shared with all registered entities and counterparties involved in the transaction, and used to track that particular transaction over its life. This identifier can also be known as the Unique Swap Identifier (USI).This is the UTI from the Counterparty Side party.";
 			maxOccurs = 1;
@@ -400,14 +403,14 @@ public class RegulatoryReporting1 {
 	 */
 	public static final MMMessageAttribute mmClearingExceptionParty = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> RegulatoryReporting1.mmObject();
 			isDerived = false;
 			xmlTag = "ClrXcptnPty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClearingExceptionParty";
 			definition = "Identifies the party that is exempt from a clearing obligation.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RegulatoryReporting4.mmClearingExceptionParty);
+			nextVersions_lazy = () -> Arrays.asList(RegulatoryReporting4.mmClearingExceptionParty);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification73Choice.mmObject();
@@ -462,14 +465,14 @@ public class RegulatoryReporting1 {
 	 */
 	public static final MMMessageAttribute mmClearingBrokerIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradeIdentification.mmClearingBrokerIdentification;
+			businessElementTrace_lazy = () -> TradeIdentification.mmClearingBrokerIdentification;
 			componentContext_lazy = () -> RegulatoryReporting1.mmObject();
 			isDerived = false;
 			xmlTag = "ClrBrkrId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClearingBrokerIdentification";
 			definition = "Specifies the reference number assigned by the clearing broker. A distinction can be made between the reference for the Central Counterparty (CCP) leg and the reference for the client leg of the transaction.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RegulatoryReporting4.mmClearingBrokerIdentification);
+			nextVersions_lazy = () -> Arrays.asList(RegulatoryReporting4.mmClearingBrokerIdentification);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.ClearingBrokerIdentification1.mmObject();
@@ -523,14 +526,14 @@ public class RegulatoryReporting1 {
 	 */
 	public static final MMMessageAttribute mmClearingThresholdIndicator = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Clearing.mmClearingThresholdIndicator;
+			businessElementTrace_lazy = () -> Clearing.mmClearingThresholdIndicator;
 			componentContext_lazy = () -> RegulatoryReporting1.mmObject();
 			isDerived = false;
 			xmlTag = "ClrThrshldInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClearingThresholdIndicator";
 			definition = "Specifies whether the contract is above or below the clearing threshold. Where No indicates the contract is below the clearing threshold and Yes indicates the contract is above the clearing threshold.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RegulatoryReporting4.mmClearingThresholdIndicator);
+			nextVersions_lazy = () -> Arrays.asList(RegulatoryReporting4.mmClearingThresholdIndicator);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
@@ -582,14 +585,14 @@ public class RegulatoryReporting1 {
 	 */
 	public static final MMMessageAttribute mmClearedProductIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Clearing.mmClearedIdentification;
+			businessElementTrace_lazy = () -> Clearing.mmClearedIdentification;
 			componentContext_lazy = () -> RegulatoryReporting1.mmObject();
 			isDerived = false;
 			xmlTag = "ClrdPdctId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClearedProductIdentification";
 			definition = "Specifies the reference number assigned by the Central Counterparty (CCP).";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RegulatoryReporting4.mmClearedProductIdentification);
+			nextVersions_lazy = () -> Arrays.asList(RegulatoryReporting4.mmClearedProductIdentification);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -639,14 +642,14 @@ public class RegulatoryReporting1 {
 	 */
 	public static final MMMessageAttribute mmUnderlyingProductIdentifier = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.RegulatoryReport.mmUnderlyingProduct;
+			businessElementTrace_lazy = () -> RegulatoryReport.mmUnderlyingProduct;
 			componentContext_lazy = () -> RegulatoryReporting1.mmObject();
 			isDerived = false;
 			xmlTag = "UndrlygPdctIdr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnderlyingProductIdentifier";
 			definition = "Specifies the underlying product type.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RegulatoryReporting4.mmUnderlyingProductIdentifier);
+			nextVersions_lazy = () -> Arrays.asList(RegulatoryReporting4.mmUnderlyingProductIdentifier);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> UnderlyingProductIdentifier1Code.mmObject();
@@ -699,14 +702,14 @@ public class RegulatoryReporting1 {
 	 */
 	public static final MMMessageAttribute mmAllocationIndicator = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Trade.mmAllocationIndicator;
+			businessElementTrace_lazy = () -> Trade.mmAllocationIndicator;
 			componentContext_lazy = () -> RegulatoryReporting1.mmObject();
 			isDerived = false;
 			xmlTag = "AllcnInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AllocationIndicator";
 			definition = "Specifies whether the trade is a pre-allocation or a post-allocation trade, or whether the trade is unallocated.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RegulatoryReporting4.mmAllocationIndicator);
+			nextVersions_lazy = () -> Arrays.asList(RegulatoryReporting4.mmAllocationIndicator);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> AllocationIndicator1Code.mmObject();
@@ -756,14 +759,14 @@ public class RegulatoryReporting1 {
 	 */
 	public static final MMMessageAttribute mmCollateralisationIndicator = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Trade.mmCollateralisationType;
+			businessElementTrace_lazy = () -> Trade.mmCollateralisationType;
 			componentContext_lazy = () -> RegulatoryReporting1.mmObject();
 			isDerived = false;
 			xmlTag = "CollstnInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralisationIndicator";
 			definition = "Specifies whether the transaction is collateralised.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RegulatoryReporting4.mmCollateralisationIndicator);
+			nextVersions_lazy = () -> Arrays.asList(RegulatoryReporting4.mmCollateralisationIndicator);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CollateralisationIndicator1Code.mmObject();
@@ -812,14 +815,14 @@ public class RegulatoryReporting1 {
 	 */
 	public static final MMMessageAttribute mmExecutionVenue = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmIdentification;
+			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> RegulatoryReporting1.mmObject();
 			isDerived = false;
 			xmlTag = "ExctnVn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExecutionVenue";
 			definition = "Specifies the trading venue of the transaction.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RegulatoryReporting4.mmExecutionVenue);
+			nextVersions_lazy = () -> Arrays.asList(RegulatoryReporting4.mmExecutionVenue);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -872,14 +875,14 @@ public class RegulatoryReporting1 {
 	 */
 	public static final MMMessageAttribute mmExecutionTimestamp = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Trade.mmTradeDateTime;
+			businessElementTrace_lazy = () -> Trade.mmTradeDateTime;
 			componentContext_lazy = () -> RegulatoryReporting1.mmObject();
 			isDerived = false;
 			xmlTag = "ExctnTmstmp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExecutionTimestamp";
 			definition = "Specifies the date and time of the execution of the transaction in Coordinated Universal Time (UTC).";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RegulatoryReporting4.mmExecutionTimestamp);
+			nextVersions_lazy = () -> Arrays.asList(RegulatoryReporting4.mmExecutionTimestamp);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
@@ -934,14 +937,14 @@ public class RegulatoryReporting1 {
 	 */
 	public static final MMMessageAttribute mmNonStandardFlag = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.RegulatoryReport.mmNonStandardFlag;
+			businessElementTrace_lazy = () -> RegulatoryReport.mmNonStandardFlag;
 			componentContext_lazy = () -> RegulatoryReporting1.mmObject();
 			isDerived = false;
 			xmlTag = "NonStdFlg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonStandardFlag";
 			definition = "Specifies whether the reportable transaction has one or more additional terms or provisions, other than those listed in the required real-time data fields, that materially affects the price of the reportable transaction.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RegulatoryReporting4.mmNonStandardFlag);
+			nextVersions_lazy = () -> Arrays.asList(RegulatoryReporting4.mmNonStandardFlag);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
@@ -993,14 +996,14 @@ public class RegulatoryReporting1 {
 	 */
 	public static final MMMessageAttribute mmLinkSwapIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ForeignExchangeSwap.mmLinkSwapIdentification;
+			businessElementTrace_lazy = () -> ForeignExchangeSwap.mmLinkSwapIdentification;
 			componentContext_lazy = () -> RegulatoryReporting1.mmObject();
 			isDerived = false;
 			xmlTag = "LkSwpId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LinkSwapIdentification";
 			definition = "Specifies the common reference or correlation identification for a swap transaction where the near and far leg are confirmed separately.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RegulatoryReporting4.mmLinkSwapIdentification);
+			nextVersions_lazy = () -> Arrays.asList(RegulatoryReporting4.mmLinkSwapIdentification);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Exact42Text.mmObject();
@@ -1049,10 +1052,10 @@ public class RegulatoryReporting1 {
 			componentContext_lazy = () -> RegulatoryReporting1.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlRptgInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalReportingInformation";
 			definition = "Specifies additional information that might be required by the regulator.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RegulatoryReporting4.mmAdditionalReportingInformation);
+			nextVersions_lazy = () -> Arrays.asList(RegulatoryReporting4.mmAdditionalReportingInformation);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max210Text.mmObject();
@@ -1062,20 +1065,16 @@ public class RegulatoryReporting1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RegulatoryReporting1.mmReportingJurisdiction, com.tools20022.repository.msg.RegulatoryReporting1.mmReportingParty,
-						com.tools20022.repository.msg.RegulatoryReporting1.mmTradingSideUniqueTransactionIdentifier, com.tools20022.repository.msg.RegulatoryReporting1.mmCounterpartySideUniqueTransactionIdentifier,
-						com.tools20022.repository.msg.RegulatoryReporting1.mmClearingExceptionParty, com.tools20022.repository.msg.RegulatoryReporting1.mmClearingBrokerIdentification,
-						com.tools20022.repository.msg.RegulatoryReporting1.mmClearingThresholdIndicator, com.tools20022.repository.msg.RegulatoryReporting1.mmClearedProductIdentification,
-						com.tools20022.repository.msg.RegulatoryReporting1.mmUnderlyingProductIdentifier, com.tools20022.repository.msg.RegulatoryReporting1.mmAllocationIndicator,
-						com.tools20022.repository.msg.RegulatoryReporting1.mmCollateralisationIndicator, com.tools20022.repository.msg.RegulatoryReporting1.mmExecutionVenue,
-						com.tools20022.repository.msg.RegulatoryReporting1.mmExecutionTimestamp, com.tools20022.repository.msg.RegulatoryReporting1.mmNonStandardFlag,
-						com.tools20022.repository.msg.RegulatoryReporting1.mmLinkSwapIdentification, com.tools20022.repository.msg.RegulatoryReporting1.mmAdditionalReportingInformation);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.other.ForeignExchangeTradeInstructionAmendmentV02.mmRegulatoryReporting,
-						com.tools20022.repository.area.other.ForeignExchangeTradeInstructionCancellationV02.mmRegulatoryReporting, com.tools20022.repository.area.other.ForeignExchangeTradeInstructionV02.mmRegulatoryReporting,
-						com.tools20022.repository.area.other.ForeignExchangeTradeStatusAndDetailsNotificationV02.mmRegulatoryReporting, com.tools20022.repository.area.other.ForeignExchangeTradeStatusNotificationV04.mmRegulatoryReporting);
+				messageElement_lazy = () -> Arrays.asList(RegulatoryReporting1.mmReportingJurisdiction, RegulatoryReporting1.mmReportingParty, RegulatoryReporting1.mmTradingSideUniqueTransactionIdentifier,
+						RegulatoryReporting1.mmCounterpartySideUniqueTransactionIdentifier, RegulatoryReporting1.mmClearingExceptionParty, RegulatoryReporting1.mmClearingBrokerIdentification,
+						RegulatoryReporting1.mmClearingThresholdIndicator, RegulatoryReporting1.mmClearedProductIdentification, RegulatoryReporting1.mmUnderlyingProductIdentifier, RegulatoryReporting1.mmAllocationIndicator,
+						RegulatoryReporting1.mmCollateralisationIndicator, RegulatoryReporting1.mmExecutionVenue, RegulatoryReporting1.mmExecutionTimestamp, RegulatoryReporting1.mmNonStandardFlag,
+						RegulatoryReporting1.mmLinkSwapIdentification, RegulatoryReporting1.mmAdditionalReportingInformation);
+				messageBuildingBlock_lazy = () -> Arrays.asList(ForeignExchangeTradeInstructionAmendmentV02.mmRegulatoryReporting, ForeignExchangeTradeInstructionCancellationV02.mmRegulatoryReporting,
+						ForeignExchangeTradeInstructionV02.mmRegulatoryReporting, ForeignExchangeTradeStatusAndDetailsNotificationV02.mmRegulatoryReporting, ForeignExchangeTradeStatusNotificationV04.mmRegulatoryReporting);
 				trace_lazy = () -> RegulatoryReport.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "RegulatoryReporting1";
 				definition = "Includes data elements that can be used for reporting to trade repositories, it is not to be used on regular trade confirmations. Although some fields, for example, unique transaction identifier and prior unique transaction identifier, might be used on regular confirmations.";
 				nextVersions_lazy = () -> Arrays.asList(RegulatoryReporting4.mmObject());

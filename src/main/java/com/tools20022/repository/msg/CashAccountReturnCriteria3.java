@@ -20,7 +20,9 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.RequestedIndicator;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -117,7 +119,7 @@ public class CashAccountReturnCriteria3 {
 			componentContext_lazy = () -> CashAccountReturnCriteria3.mmObject();
 			isDerived = false;
 			xmlTag = "NmInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NameIndicator";
 			definition = "Indicates whether the account name is requested.";
 			maxOccurs = 1;
@@ -159,7 +161,7 @@ public class CashAccountReturnCriteria3 {
 			componentContext_lazy = () -> CashAccountReturnCriteria3.mmObject();
 			isDerived = false;
 			xmlTag = "CcyInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrencyIndicator";
 			definition = "Indicates whether the account currency is requested.";
 			maxOccurs = 1;
@@ -201,7 +203,7 @@ public class CashAccountReturnCriteria3 {
 			componentContext_lazy = () -> CashAccountReturnCriteria3.mmObject();
 			isDerived = false;
 			xmlTag = "TpInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TypeIndicator";
 			definition = "Indicates whether the account type is requested.";
 			maxOccurs = 1;
@@ -243,7 +245,7 @@ public class CashAccountReturnCriteria3 {
 			componentContext_lazy = () -> CashAccountReturnCriteria3.mmObject();
 			isDerived = false;
 			xmlTag = "MulLmtInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MultilateralLimitIndicator";
 			definition = "Indicates whether the multilateral limit is requested.";
 			maxOccurs = 1;
@@ -285,7 +287,7 @@ public class CashAccountReturnCriteria3 {
 			componentContext_lazy = () -> CashAccountReturnCriteria3.mmObject();
 			isDerived = false;
 			xmlTag = "MulBalRtrCrit";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MultilateralBalanceReturnCriteria";
 			definition = "Defines the criteria used to report on a multilateral balance.";
 			maxOccurs = 1;
@@ -328,7 +330,7 @@ public class CashAccountReturnCriteria3 {
 			componentContext_lazy = () -> CashAccountReturnCriteria3.mmObject();
 			isDerived = false;
 			xmlTag = "BilLmtInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BilateralLimitIndicator";
 			definition = "Indicates whether the bilateral limit is requested.";
 			maxOccurs = 1;
@@ -370,7 +372,7 @@ public class CashAccountReturnCriteria3 {
 			componentContext_lazy = () -> CashAccountReturnCriteria3.mmObject();
 			isDerived = false;
 			xmlTag = "BilBalRtrCrit";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BilateralBalanceReturnCriteria";
 			definition = "Defines the criteria used to report on a bilateral balance.";
 			maxOccurs = 1;
@@ -414,7 +416,7 @@ public class CashAccountReturnCriteria3 {
 			componentContext_lazy = () -> CashAccountReturnCriteria3.mmObject();
 			isDerived = false;
 			xmlTag = "StgOrdrInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StandingOrderIndicator";
 			definition = "Indicates whether the account standing order is requested.";
 			maxOccurs = 1;
@@ -457,7 +459,7 @@ public class CashAccountReturnCriteria3 {
 			componentContext_lazy = () -> CashAccountReturnCriteria3.mmObject();
 			isDerived = false;
 			xmlTag = "AcctOwnrInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountOwnerIndicator";
 			definition = "Indicates whether the account owner information is requested.";
 			maxOccurs = 1;
@@ -500,7 +502,7 @@ public class CashAccountReturnCriteria3 {
 			componentContext_lazy = () -> CashAccountReturnCriteria3.mmObject();
 			isDerived = false;
 			xmlTag = "AcctSvcrInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountServicerIndicator";
 			definition = "Indicates whether the account servicer information is requested.";
 			maxOccurs = 1;
@@ -512,13 +514,12 @@ public class CashAccountReturnCriteria3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashAccountReturnCriteria3.mmNameIndicator, com.tools20022.repository.msg.CashAccountReturnCriteria3.mmCurrencyIndicator,
-						com.tools20022.repository.msg.CashAccountReturnCriteria3.mmTypeIndicator, com.tools20022.repository.msg.CashAccountReturnCriteria3.mmMultilateralLimitIndicator,
-						com.tools20022.repository.msg.CashAccountReturnCriteria3.mmMultilateralBalanceReturnCriteria, com.tools20022.repository.msg.CashAccountReturnCriteria3.mmBilateralLimitIndicator,
-						com.tools20022.repository.msg.CashAccountReturnCriteria3.mmBilateralBalanceReturnCriteria, com.tools20022.repository.msg.CashAccountReturnCriteria3.mmStandingOrderIndicator,
-						com.tools20022.repository.msg.CashAccountReturnCriteria3.mmAccountOwnerIndicator, com.tools20022.repository.msg.CashAccountReturnCriteria3.mmAccountServicerIndicator);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(CashAccountReturnCriteria3.mmNameIndicator, CashAccountReturnCriteria3.mmCurrencyIndicator, CashAccountReturnCriteria3.mmTypeIndicator,
+						CashAccountReturnCriteria3.mmMultilateralLimitIndicator, CashAccountReturnCriteria3.mmMultilateralBalanceReturnCriteria, CashAccountReturnCriteria3.mmBilateralLimitIndicator,
+						CashAccountReturnCriteria3.mmBilateralBalanceReturnCriteria, CashAccountReturnCriteria3.mmStandingOrderIndicator, CashAccountReturnCriteria3.mmAccountOwnerIndicator,
+						CashAccountReturnCriteria3.mmAccountServicerIndicator);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CashAccountReturnCriteria3";
 				definition = "Defines the criteria used to report on an account.";
 			}

@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.QuoteResponseTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -96,7 +98,7 @@ public class QuoteResponseType1Code extends QuoteResponseTypeCode {
 	 */
 	public static final MMCode mmHitLift = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HitLift";
 			owner_lazy = () -> QuoteResponseType1Code.mmObject();
 		}
@@ -119,7 +121,7 @@ public class QuoteResponseType1Code extends QuoteResponseTypeCode {
 	 */
 	public static final MMCode mmCounterQuote = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CounterQuote";
 			owner_lazy = () -> QuoteResponseType1Code.mmObject();
 		}
@@ -142,7 +144,7 @@ public class QuoteResponseType1Code extends QuoteResponseTypeCode {
 	 */
 	public static final MMCode mmExpired = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Expired";
 			owner_lazy = () -> QuoteResponseType1Code.mmObject();
 		}
@@ -165,7 +167,7 @@ public class QuoteResponseType1Code extends QuoteResponseTypeCode {
 	 */
 	public static final MMCode mmCover = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cover";
 			owner_lazy = () -> QuoteResponseType1Code.mmObject();
 		}
@@ -188,7 +190,7 @@ public class QuoteResponseType1Code extends QuoteResponseTypeCode {
 	 */
 	public static final MMCode mmDoneAway = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DoneAway";
 			owner_lazy = () -> QuoteResponseType1Code.mmObject();
 		}
@@ -211,7 +213,7 @@ public class QuoteResponseType1Code extends QuoteResponseTypeCode {
 	 */
 	public static final MMCode mmPass = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Pass";
 			owner_lazy = () -> QuoteResponseType1Code.mmObject();
 		}
@@ -220,14 +222,13 @@ public class QuoteResponseType1Code extends QuoteResponseTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("HILI");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "QuoteResponseType1Code";
 				definition = "Qualifies the nature of response to a previoulsy addressed quote.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.QuoteResponseType1Code.mmHitLift, com.tools20022.repository.codeset.QuoteResponseType1Code.mmCounterQuote,
-						com.tools20022.repository.codeset.QuoteResponseType1Code.mmExpired, com.tools20022.repository.codeset.QuoteResponseType1Code.mmCover, com.tools20022.repository.codeset.QuoteResponseType1Code.mmDoneAway,
-						com.tools20022.repository.codeset.QuoteResponseType1Code.mmPass);
+				code_lazy = () -> Arrays.asList(QuoteResponseType1Code.mmHitLift, QuoteResponseType1Code.mmCounterQuote, QuoteResponseType1Code.mmExpired, QuoteResponseType1Code.mmCover, QuoteResponseType1Code.mmDoneAway,
+						QuoteResponseType1Code.mmPass);
 				trace_lazy = () -> QuoteResponseTypeCode.mmObject();
 			}
 		});

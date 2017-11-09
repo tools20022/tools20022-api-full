@@ -20,9 +20,12 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.Max70Text;
 import com.tools20022.repository.entity.PointOfInteraction;
+import com.tools20022.repository.entity.SystemName;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -117,7 +120,7 @@ public class PointOfInteraction1 {
 			componentContext_lazy = () -> PointOfInteraction1.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Identification of the POI (Point Of Interaction) for the acquirer or its agent.";
 			maxOccurs = 1;
@@ -161,11 +164,11 @@ public class PointOfInteraction1 {
 	 */
 	public static final MMMessageAttribute mmSystemName = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SystemName.mmName;
+			businessElementTrace_lazy = () -> SystemName.mmName;
 			componentContext_lazy = () -> PointOfInteraction1.mmObject();
 			isDerived = false;
 			xmlTag = "SysNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SystemName";
 			definition = "Common name assigned by the acquirer to the POI system.";
 			maxOccurs = 1;
@@ -209,7 +212,7 @@ public class PointOfInteraction1 {
 			componentContext_lazy = () -> PointOfInteraction1.mmObject();
 			isDerived = false;
 			xmlTag = "GrpId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GroupIdentification";
 			definition = "Identifier assigned by the merchant identifying a set of POI terminals performing some categories of transactions.";
 			maxOccurs = 1;
@@ -256,7 +259,7 @@ public class PointOfInteraction1 {
 			componentContext_lazy = () -> PointOfInteraction1.mmObject();
 			isDerived = false;
 			xmlTag = "Cpblties";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Capabilities";
 			definition = "Capabilities of the POI performing the transaction.";
 			maxOccurs = 1;
@@ -301,11 +304,11 @@ public class PointOfInteraction1 {
 	 */
 	public static final MMMessageAssociationEnd mmComponent = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PointOfInteraction.mmComponent;
+			businessElementTrace_lazy = () -> PointOfInteraction.mmComponent;
 			componentContext_lazy = () -> PointOfInteraction1.mmObject();
 			isDerived = false;
 			xmlTag = "Cmpnt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Component";
 			definition = "Data related to a component of the POI performing the transaction.";
 			minOccurs = 0;
@@ -317,11 +320,11 @@ public class PointOfInteraction1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PointOfInteraction1.mmIdentification, com.tools20022.repository.msg.PointOfInteraction1.mmSystemName,
-						com.tools20022.repository.msg.PointOfInteraction1.mmGroupIdentification, com.tools20022.repository.msg.PointOfInteraction1.mmCapabilities, com.tools20022.repository.msg.PointOfInteraction1.mmComponent);
+				messageElement_lazy = () -> Arrays.asList(PointOfInteraction1.mmIdentification, PointOfInteraction1.mmSystemName, PointOfInteraction1.mmGroupIdentification, PointOfInteraction1.mmCapabilities,
+						PointOfInteraction1.mmComponent);
 				trace_lazy = () -> PointOfInteraction.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PointOfInteraction1";
 				definition = "Point of interaction (POI) performing the transaction.";
 				nextVersions_lazy = () -> Arrays.asList(PointOfInteraction2.mmObject());

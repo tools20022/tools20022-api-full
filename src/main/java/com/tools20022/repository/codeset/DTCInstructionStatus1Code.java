@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.DTCInstructionStatusCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -90,7 +92,7 @@ public class DTCInstructionStatus1Code extends DTCInstructionStatusCode {
 	 */
 	public static final MMCode mmRecycle = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Recycle";
 			owner_lazy = () -> DTCInstructionStatus1Code.mmObject();
 		}
@@ -113,7 +115,7 @@ public class DTCInstructionStatus1Code extends DTCInstructionStatusCode {
 	 */
 	public static final MMCode mmMade = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Made";
 			owner_lazy = () -> DTCInstructionStatus1Code.mmObject();
 		}
@@ -136,7 +138,7 @@ public class DTCInstructionStatus1Code extends DTCInstructionStatusCode {
 	 */
 	public static final MMCode mmDropped = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Dropped";
 			owner_lazy = () -> DTCInstructionStatus1Code.mmObject();
 		}
@@ -159,7 +161,7 @@ public class DTCInstructionStatus1Code extends DTCInstructionStatusCode {
 	 */
 	public static final MMCode mmEditReject = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EditReject";
 			owner_lazy = () -> DTCInstructionStatus1Code.mmObject();
 		}
@@ -168,13 +170,12 @@ public class DTCInstructionStatus1Code extends DTCInstructionStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("RECY");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DTCInstructionStatus1Code";
 				definition = "DTC (The Depository Trust Company) system status code of instruction.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DTCInstructionStatus1Code.mmRecycle, com.tools20022.repository.codeset.DTCInstructionStatus1Code.mmMade,
-						com.tools20022.repository.codeset.DTCInstructionStatus1Code.mmDropped, com.tools20022.repository.codeset.DTCInstructionStatus1Code.mmEditReject);
+				code_lazy = () -> Arrays.asList(DTCInstructionStatus1Code.mmRecycle, DTCInstructionStatus1Code.mmMade, DTCInstructionStatus1Code.mmDropped, DTCInstructionStatus1Code.mmEditReject);
 				trace_lazy = () -> DTCInstructionStatusCode.mmObject();
 			}
 		});

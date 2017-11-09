@@ -20,9 +20,11 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.SafekeepingPlaceFormat17Choice;
 import com.tools20022.repository.datatype.LEIIdentifier;
 import com.tools20022.repository.entity.PartyIdentificationInformation;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -112,10 +114,10 @@ public class SafeKeepingPlace2 {
 			componentContext_lazy = () -> SafeKeepingPlace2.mmObject();
 			isDerived = false;
 			xmlTag = "SfkpgPlcFrmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlaceFormat";
 			definition = "Unique identification of the party.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SafeKeepingPlace1.mmSafekeepingPlaceFormat;
+			previousVersion_lazy = () -> SafeKeepingPlace1.mmSafekeepingPlaceFormat;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -164,10 +166,10 @@ public class SafeKeepingPlace2 {
 			componentContext_lazy = () -> SafeKeepingPlace2.mmObject();
 			isDerived = false;
 			xmlTag = "LEI";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LEI";
 			definition = "Legal entity identification as an alternate identification for a place of safekeeping.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SafeKeepingPlace1.mmLEI;
+			previousVersion_lazy = () -> SafeKeepingPlace1.mmLEI;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> LEIIdentifier.mmObject();
@@ -177,10 +179,10 @@ public class SafeKeepingPlace2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SafeKeepingPlace2.mmSafekeepingPlaceFormat, com.tools20022.repository.msg.SafeKeepingPlace2.mmLEI);
+				messageElement_lazy = () -> Arrays.asList(SafeKeepingPlace2.mmSafekeepingPlaceFormat, SafeKeepingPlace2.mmLEI);
 				trace_lazy = () -> PartyIdentificationInformation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SafeKeepingPlace2";
 				definition = "Place where the securities are safe-kept, physically or notionally. This place can be, for example, a local custodian, a Central Securities Depository (CSD) or an International Central Securities Depository (ICSD).";
 			}

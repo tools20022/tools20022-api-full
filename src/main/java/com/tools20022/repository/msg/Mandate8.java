@@ -20,11 +20,13 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.MandateSetupReason1Choice;
 import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.TrueFalseIndicator;
-import com.tools20022.repository.entity.DirectDebitMandate;
+import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -155,14 +157,14 @@ public class Mandate8 {
 	 */
 	public static final MMMessageAttribute mmMandateIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmIdentification;
+			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> Mandate8.mmObject();
 			isDerived = false;
 			xmlTag = "MndtId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MandateIdentification";
 			definition = "Unique identification, as assigned by the responsible party (such as the creditor) or agent (such as the debtor agent), to unambiguously identify the mandate.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Mandate6.mmMandateIdentification;
+			previousVersion_lazy = () -> Mandate6.mmMandateIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -208,10 +210,10 @@ public class Mandate8 {
 			componentContext_lazy = () -> Mandate8.mmObject();
 			isDerived = false;
 			xmlTag = "MndtReqId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MandateRequestIdentification";
 			definition = "Identification for the mandate request, as assigned by the initiating party.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Mandate6.mmMandateRequestIdentification;
+			previousVersion_lazy = () -> Mandate6.mmMandateRequestIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -251,11 +253,11 @@ public class Mandate8 {
 	 */
 	public static final MMMessageAssociationEnd mmAuthentication = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Mandate.mmAuthentication;
+			businessElementTrace_lazy = () -> Mandate.mmAuthentication;
 			componentContext_lazy = () -> Mandate8.mmObject();
 			isDerived = false;
 			xmlTag = "Authntcn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Authentication";
 			definition = "Specifies the transport authentication details related to the mandate.";
 			maxOccurs = 1;
@@ -304,14 +306,14 @@ public class Mandate8 {
 	 */
 	public static final MMMessageAssociationEnd mmType = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.DirectDebitMandate.mmMandatePaymentType;
+			businessElementTrace_lazy = () -> DirectDebitMandate.mmMandatePaymentType;
 			componentContext_lazy = () -> Mandate8.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Specifies the type of mandate, such as paper, electronic or scheme.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Mandate6.mmType;
+			previousVersion_lazy = () -> Mandate6.mmType;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -363,10 +365,10 @@ public class Mandate8 {
 			componentContext_lazy = () -> Mandate8.mmObject();
 			isDerived = false;
 			xmlTag = "Ocrncs";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Occurrences";
 			definition = "Provides details of the duration of the mandate and occurrence of the underlying transactions.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Mandate6.mmOccurrences;
+			previousVersion_lazy = () -> Mandate6.mmOccurrences;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -411,11 +413,11 @@ public class Mandate8 {
 	 */
 	public static final MMMessageAttribute mmTrackingIndicator = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Mandate.mmTrackingIndicator;
+			businessElementTrace_lazy = () -> Mandate.mmTrackingIndicator;
 			componentContext_lazy = () -> Mandate8.mmObject();
 			isDerived = false;
 			xmlTag = "TrckgInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TrackingIndicator";
 			definition = "Specifies whether the direct debit instructions should be automatically re-submitted periodically when bilaterally agreed.";
 			maxOccurs = 1;
@@ -461,11 +463,11 @@ public class Mandate8 {
 	 */
 	public static final MMMessageAttribute mmFirstCollectionAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.DirectDebitMandate.mmCollectionAmount;
+			businessElementTrace_lazy = () -> DirectDebitMandate.mmCollectionAmount;
 			componentContext_lazy = () -> Mandate8.mmObject();
 			isDerived = false;
 			xmlTag = "FrstColltnAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FirstCollectionAmount";
 			definition = "Amount different from the collection amount, as it includes the costs associated with the first debited amount.";
 			maxOccurs = 1;
@@ -513,14 +515,14 @@ public class Mandate8 {
 	 */
 	public static final MMMessageAttribute mmCollectionAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.DirectDebitMandate.mmCollectionAmount;
+			businessElementTrace_lazy = () -> DirectDebitMandate.mmCollectionAmount;
 			componentContext_lazy = () -> Mandate8.mmObject();
 			isDerived = false;
 			xmlTag = "ColltnAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollectionAmount";
 			definition = "Fixed amount to be collected from the debtor's account.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Mandate6.mmCollectionAmount;
+			previousVersion_lazy = () -> Mandate6.mmCollectionAmount;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
@@ -569,14 +571,14 @@ public class Mandate8 {
 	 */
 	public static final MMMessageAttribute mmMaximumAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.DirectDebitMandate.mmMaximumAmount;
+			businessElementTrace_lazy = () -> DirectDebitMandate.mmMaximumAmount;
 			componentContext_lazy = () -> Mandate8.mmObject();
 			isDerived = false;
 			xmlTag = "MaxAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaximumAmount";
 			definition = "Maximum amount that may be collected from the debtor's account, per instruction.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Mandate6.mmMaximumAmount;
+			previousVersion_lazy = () -> Mandate6.mmMaximumAmount;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
@@ -618,11 +620,11 @@ public class Mandate8 {
 	 */
 	public static final MMMessageAssociationEnd mmAdjustment = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Mandate.mmAmendment;
+			businessElementTrace_lazy = () -> Mandate.mmAmendment;
 			componentContext_lazy = () -> Mandate8.mmObject();
 			isDerived = false;
 			xmlTag = "Adjstmnt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Adjustment";
 			definition = "Specifies the characteristics of the adjustment applied to the collection amount of a direct debit instruction.";
 			maxOccurs = 1;
@@ -670,14 +672,14 @@ public class Mandate8 {
 	 */
 	public static final MMMessageAssociationEnd mmReason = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Agreement.mmDescription;
+			businessElementTrace_lazy = () -> Agreement.mmDescription;
 			componentContext_lazy = () -> Mandate8.mmObject();
 			isDerived = false;
 			xmlTag = "Rsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reason";
 			definition = "Provides the reason for the setup of the mandate.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Mandate6.mmReason;
+			previousVersion_lazy = () -> Mandate6.mmReason;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -722,14 +724,14 @@ public class Mandate8 {
 	 */
 	public static final MMMessageAssociationEnd mmCreditorSchemeIdentification = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> Mandate8.mmObject();
 			isDerived = false;
 			xmlTag = "CdtrSchmeId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditorSchemeIdentification";
 			definition = "Credit party that signs the mandate.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Mandate6.mmCreditorSchemeIdentification;
+			previousVersion_lazy = () -> Mandate6.mmCreditorSchemeIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -775,14 +777,14 @@ public class Mandate8 {
 	 */
 	public static final MMMessageAssociationEnd mmCreditor = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> Mandate8.mmObject();
 			isDerived = false;
 			xmlTag = "Cdtr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Creditor";
 			definition = "Party that signs the mandate and to whom an amount of money is due.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Mandate6.mmCreditor;
+			previousVersion_lazy = () -> Mandate6.mmCreditor;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -830,14 +832,14 @@ public class Mandate8 {
 	 */
 	public static final MMMessageAssociationEnd mmCreditorAccount = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentPartyRole.mmCashAccount;
+			businessElementTrace_lazy = () -> PaymentPartyRole.mmCashAccount;
 			componentContext_lazy = () -> Mandate8.mmObject();
 			isDerived = false;
 			xmlTag = "CdtrAcct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditorAccount";
 			definition = "Unambiguous identification of the account of the creditor to which a credit entry will be posted as a result of the payment transaction.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Mandate6.mmCreditorAccount;
+			previousVersion_lazy = () -> Mandate6.mmCreditorAccount;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -884,14 +886,14 @@ public class Mandate8 {
 	 */
 	public static final MMMessageAssociationEnd mmCreditorAgent = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Organisation.mmOrganisationIdentification;
+			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> Mandate8.mmObject();
 			isDerived = false;
 			xmlTag = "CdtrAgt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditorAgent";
 			definition = "Financial institution servicing an account for the creditor.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Mandate6.mmCreditorAgent;
+			previousVersion_lazy = () -> Mandate6.mmCreditorAgent;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -936,14 +938,14 @@ public class Mandate8 {
 	 */
 	public static final MMMessageAssociationEnd mmUltimateCreditor = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> Mandate8.mmObject();
 			isDerived = false;
 			xmlTag = "UltmtCdtr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UltimateCreditor";
 			definition = "Ultimate party to which an amount of money is due.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Mandate6.mmUltimateCreditor;
+			previousVersion_lazy = () -> Mandate6.mmUltimateCreditor;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -991,14 +993,14 @@ public class Mandate8 {
 	 */
 	public static final MMMessageAssociationEnd mmDebtor = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> Mandate8.mmObject();
 			isDerived = false;
 			xmlTag = "Dbtr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Debtor";
 			definition = "Party that signs the mandate and owes an amount of money to the (ultimate) creditor.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Mandate6.mmDebtor;
+			previousVersion_lazy = () -> Mandate6.mmDebtor;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -1046,14 +1048,14 @@ public class Mandate8 {
 	 */
 	public static final MMMessageAssociationEnd mmDebtorAccount = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentPartyRole.mmCashAccount;
+			businessElementTrace_lazy = () -> PaymentPartyRole.mmCashAccount;
 			componentContext_lazy = () -> Mandate8.mmObject();
 			isDerived = false;
 			xmlTag = "DbtrAcct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DebtorAccount";
 			definition = "Unambiguous identification of the account of the debtor, to which a debit entry will be made as a result of the transaction.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Mandate6.mmDebtorAccount;
+			previousVersion_lazy = () -> Mandate6.mmDebtorAccount;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -1100,14 +1102,14 @@ public class Mandate8 {
 	 */
 	public static final MMMessageAssociationEnd mmDebtorAgent = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Organisation.mmOrganisationIdentification;
+			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> Mandate8.mmObject();
 			isDerived = false;
 			xmlTag = "DbtrAgt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DebtorAgent";
 			definition = "Financial institution servicing an account for the debtor.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Mandate6.mmDebtorAgent;
+			previousVersion_lazy = () -> Mandate6.mmDebtorAgent;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -1154,14 +1156,14 @@ public class Mandate8 {
 	 */
 	public static final MMMessageAssociationEnd mmUltimateDebtor = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> Mandate8.mmObject();
 			isDerived = false;
 			xmlTag = "UltmtDbtr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UltimateDebtor";
 			definition = "Ultimate party that owes an amount of money to the (ultimate) creditor.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Mandate6.mmUltimateDebtor;
+			previousVersion_lazy = () -> Mandate6.mmUltimateDebtor;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -1205,11 +1207,11 @@ public class Mandate8 {
 	 */
 	public static final MMMessageAttribute mmMandateReference = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Document.mmDocumentIdentification;
+			businessElementTrace_lazy = () -> Document.mmDocumentIdentification;
 			componentContext_lazy = () -> Mandate8.mmObject();
 			isDerived = false;
 			xmlTag = "MndtRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MandateReference";
 			definition = "Reference assigned by a creditor or ultimate creditor for internal usage for the mandate.";
 			maxOccurs = 1;
@@ -1259,14 +1261,14 @@ public class Mandate8 {
 	 */
 	public static final MMMessageAssociationEnd mmReferredDocument = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Agreement.mmDocument;
+			businessElementTrace_lazy = () -> Agreement.mmDocument;
 			componentContext_lazy = () -> Mandate8.mmObject();
 			isDerived = false;
 			xmlTag = "RfrdDoc";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReferredDocument";
 			definition = "Provides information to identify the underlying documents associated with the mandate.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Mandate6.mmReferredDocument;
+			previousVersion_lazy = () -> Mandate6.mmReferredDocument;
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.ReferredMandateDocument1.mmObject();
@@ -1276,17 +1278,13 @@ public class Mandate8 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Mandate8.mmMandateIdentification, com.tools20022.repository.msg.Mandate8.mmMandateRequestIdentification,
-						com.tools20022.repository.msg.Mandate8.mmAuthentication, com.tools20022.repository.msg.Mandate8.mmType, com.tools20022.repository.msg.Mandate8.mmOccurrences,
-						com.tools20022.repository.msg.Mandate8.mmTrackingIndicator, com.tools20022.repository.msg.Mandate8.mmFirstCollectionAmount, com.tools20022.repository.msg.Mandate8.mmCollectionAmount,
-						com.tools20022.repository.msg.Mandate8.mmMaximumAmount, com.tools20022.repository.msg.Mandate8.mmAdjustment, com.tools20022.repository.msg.Mandate8.mmReason,
-						com.tools20022.repository.msg.Mandate8.mmCreditorSchemeIdentification, com.tools20022.repository.msg.Mandate8.mmCreditor, com.tools20022.repository.msg.Mandate8.mmCreditorAccount,
-						com.tools20022.repository.msg.Mandate8.mmCreditorAgent, com.tools20022.repository.msg.Mandate8.mmUltimateCreditor, com.tools20022.repository.msg.Mandate8.mmDebtor,
-						com.tools20022.repository.msg.Mandate8.mmDebtorAccount, com.tools20022.repository.msg.Mandate8.mmDebtorAgent, com.tools20022.repository.msg.Mandate8.mmUltimateDebtor,
-						com.tools20022.repository.msg.Mandate8.mmMandateReference, com.tools20022.repository.msg.Mandate8.mmReferredDocument);
+				messageElement_lazy = () -> Arrays.asList(Mandate8.mmMandateIdentification, Mandate8.mmMandateRequestIdentification, Mandate8.mmAuthentication, Mandate8.mmType, Mandate8.mmOccurrences, Mandate8.mmTrackingIndicator,
+						Mandate8.mmFirstCollectionAmount, Mandate8.mmCollectionAmount, Mandate8.mmMaximumAmount, Mandate8.mmAdjustment, Mandate8.mmReason, Mandate8.mmCreditorSchemeIdentification, Mandate8.mmCreditor,
+						Mandate8.mmCreditorAccount, Mandate8.mmCreditorAgent, Mandate8.mmUltimateCreditor, Mandate8.mmDebtor, Mandate8.mmDebtorAccount, Mandate8.mmDebtorAgent, Mandate8.mmUltimateDebtor, Mandate8.mmMandateReference,
+						Mandate8.mmReferredDocument);
 				trace_lazy = () -> DirectDebitMandate.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Mandate8";
 				definition = "Information that serves as a basis to debit an account.";
 				previousVersion_lazy = () -> Mandate6.mmObject();

@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.SettlementTransactionConditionCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -91,7 +93,7 @@ public class SettlementTransactionCondition5Code extends SettlementTransactionCo
 	 */
 	public static final MMCode mmPartialAllowed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartialAllowed";
 			owner_lazy = () -> SettlementTransactionCondition5Code.mmObject();
 		}
@@ -114,7 +116,7 @@ public class SettlementTransactionCondition5Code extends SettlementTransactionCo
 	 */
 	public static final MMCode mmPartialNotAllowed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartialNotAllowed";
 			owner_lazy = () -> SettlementTransactionCondition5Code.mmObject();
 		}
@@ -137,7 +139,7 @@ public class SettlementTransactionCondition5Code extends SettlementTransactionCo
 	 */
 	public static final MMCode mmPartialSettlementCashThresholdAllowed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartialSettlementCashThresholdAllowed";
 			owner_lazy = () -> SettlementTransactionCondition5Code.mmObject();
 		}
@@ -160,7 +162,7 @@ public class SettlementTransactionCondition5Code extends SettlementTransactionCo
 	 */
 	public static final MMCode mmPartialSettlementQuantityThresholdAllowed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartialSettlementQuantityThresholdAllowed";
 			owner_lazy = () -> SettlementTransactionCondition5Code.mmObject();
 		}
@@ -169,14 +171,13 @@ public class SettlementTransactionCondition5Code extends SettlementTransactionCo
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("PART");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SettlementTransactionCondition5Code";
 				definition = "Specifies the conditions under which the order/trade is to be settled.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SettlementTransactionCondition5Code.mmPartialAllowed, com.tools20022.repository.codeset.SettlementTransactionCondition5Code.mmPartialNotAllowed,
-						com.tools20022.repository.codeset.SettlementTransactionCondition5Code.mmPartialSettlementCashThresholdAllowed,
-						com.tools20022.repository.codeset.SettlementTransactionCondition5Code.mmPartialSettlementQuantityThresholdAllowed);
+				code_lazy = () -> Arrays.asList(SettlementTransactionCondition5Code.mmPartialAllowed, SettlementTransactionCondition5Code.mmPartialNotAllowed, SettlementTransactionCondition5Code.mmPartialSettlementCashThresholdAllowed,
+						SettlementTransactionCondition5Code.mmPartialSettlementQuantityThresholdAllowed);
 				trace_lazy = () -> SettlementTransactionConditionCode.mmObject();
 			}
 		});

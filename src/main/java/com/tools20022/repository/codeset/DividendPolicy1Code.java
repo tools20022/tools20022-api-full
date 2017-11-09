@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.DividendPolicyCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -84,7 +86,7 @@ public class DividendPolicy1Code extends DividendPolicyCode {
 	 */
 	public static final MMCode mmCash = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cash";
 			owner_lazy = () -> DividendPolicy1Code.mmObject();
 		}
@@ -107,7 +109,7 @@ public class DividendPolicy1Code extends DividendPolicyCode {
 	 */
 	public static final MMCode mmUnits = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Units";
 			owner_lazy = () -> DividendPolicy1Code.mmObject();
 		}
@@ -130,7 +132,7 @@ public class DividendPolicy1Code extends DividendPolicyCode {
 	 */
 	public static final MMCode mmBoth = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Both";
 			owner_lazy = () -> DividendPolicy1Code.mmObject();
 		}
@@ -139,12 +141,12 @@ public class DividendPolicy1Code extends DividendPolicyCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CASH");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DividendPolicy1Code";
 				definition = "Specifies the dividend policy of the financial instrument.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DividendPolicy1Code.mmCash, com.tools20022.repository.codeset.DividendPolicy1Code.mmUnits, com.tools20022.repository.codeset.DividendPolicy1Code.mmBoth);
+				code_lazy = () -> Arrays.asList(DividendPolicy1Code.mmCash, DividendPolicy1Code.mmUnits, DividendPolicy1Code.mmBoth);
 				trace_lazy = () -> DividendPolicyCode.mmObject();
 			}
 		});

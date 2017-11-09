@@ -20,9 +20,13 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.BillingBalanceType1Choice;
 import com.tools20022.repository.codeset.BillingCurrencyType1Code;
+import com.tools20022.repository.entity.Balance;
+import com.tools20022.repository.entity.CashAccountService;
 import com.tools20022.repository.entity.CashBalance;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -99,11 +103,11 @@ public class BillingBalance1 {
 	 */
 	public static final MMMessageAssociationEnd mmType = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Balance.mmType;
+			businessElementTrace_lazy = () -> Balance.mmType;
 			componentContext_lazy = () -> BillingBalance1.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Defines the type of  balance.";
 			maxOccurs = 1;
@@ -146,11 +150,11 @@ public class BillingBalance1 {
 	 */
 	public static final MMMessageAssociationEnd mmValue = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashBalance.mmCashBalanceEntry;
+			businessElementTrace_lazy = () -> CashBalance.mmCashBalanceEntry;
 			componentContext_lazy = () -> BillingBalance1.mmObject();
 			isDerived = false;
 			xmlTag = "Val";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Value";
 			definition = "Balance value.";
 			maxOccurs = 1;
@@ -198,11 +202,11 @@ public class BillingBalance1 {
 	 */
 	public static final MMMessageAttribute mmCurrencyType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashAccountService.mmBillingCurrency;
+			businessElementTrace_lazy = () -> CashAccountService.mmBillingCurrency;
 			componentContext_lazy = () -> BillingBalance1.mmObject();
 			isDerived = false;
 			xmlTag = "CcyTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrencyType";
 			definition = "Identifies the currency type used to report the balance. This is not the ISO code.";
 			maxOccurs = 1;
@@ -214,10 +218,10 @@ public class BillingBalance1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BillingBalance1.mmType, com.tools20022.repository.msg.BillingBalance1.mmValue, com.tools20022.repository.msg.BillingBalance1.mmCurrencyType);
+				messageElement_lazy = () -> Arrays.asList(BillingBalance1.mmType, BillingBalance1.mmValue, BillingBalance1.mmCurrencyType);
 				trace_lazy = () -> CashBalance.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "BillingBalance1";
 				definition = "Provides the balance for the billing services.";
 			}

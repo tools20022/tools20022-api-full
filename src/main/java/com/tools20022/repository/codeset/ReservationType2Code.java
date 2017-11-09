@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ReservationTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -95,7 +97,7 @@ public class ReservationType2Code extends ReservationTypeCode {
 	 */
 	public static final MMCode mmCashReservation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashReservation";
 			owner_lazy = () -> ReservationType2Code.mmObject();
 		}
@@ -118,7 +120,7 @@ public class ReservationType2Code extends ReservationTypeCode {
 	 */
 	public static final MMCode mmUrgentPaymentReservation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UrgentPaymentReservation";
 			owner_lazy = () -> ReservationType2Code.mmObject();
 		}
@@ -141,7 +143,7 @@ public class ReservationType2Code extends ReservationTypeCode {
 	 */
 	public static final MMCode mmNetSSSReservation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetSSSReservation";
 			owner_lazy = () -> ReservationType2Code.mmObject();
 		}
@@ -164,7 +166,7 @@ public class ReservationType2Code extends ReservationTypeCode {
 	 */
 	public static final MMCode mmHighlyUrgentPaymentReservation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HighlyUrgentPaymentReservation";
 			owner_lazy = () -> ReservationType2Code.mmObject();
 		}
@@ -187,7 +189,7 @@ public class ReservationType2Code extends ReservationTypeCode {
 	 */
 	public static final MMCode mmThresholdForInvestment = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ThresholdForInvestment";
 			owner_lazy = () -> ReservationType2Code.mmObject();
 		}
@@ -210,7 +212,7 @@ public class ReservationType2Code extends ReservationTypeCode {
 	 */
 	public static final MMCode mmBlocked = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Blocked";
 			owner_lazy = () -> ReservationType2Code.mmObject();
 		}
@@ -219,14 +221,13 @@ public class ReservationType2Code extends ReservationTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CARE");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ReservationType2Code";
 				definition = "Specifies the precise type of reservation.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ReservationType2Code.mmCashReservation, com.tools20022.repository.codeset.ReservationType2Code.mmUrgentPaymentReservation,
-						com.tools20022.repository.codeset.ReservationType2Code.mmNetSSSReservation, com.tools20022.repository.codeset.ReservationType2Code.mmHighlyUrgentPaymentReservation,
-						com.tools20022.repository.codeset.ReservationType2Code.mmThresholdForInvestment, com.tools20022.repository.codeset.ReservationType2Code.mmBlocked);
+				code_lazy = () -> Arrays.asList(ReservationType2Code.mmCashReservation, ReservationType2Code.mmUrgentPaymentReservation, ReservationType2Code.mmNetSSSReservation, ReservationType2Code.mmHighlyUrgentPaymentReservation,
+						ReservationType2Code.mmThresholdForInvestment, ReservationType2Code.mmBlocked);
 				trace_lazy = () -> ReservationTypeCode.mmObject();
 			}
 		});

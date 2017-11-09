@@ -20,10 +20,13 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.DateAndDateTimeChoice;
 import com.tools20022.repository.choice.PaymentStatusCode3Choice;
 import com.tools20022.repository.choice.PaymentStatusReasonCode3Choice;
 import com.tools20022.repository.entity.PaymentStatus;
+import com.tools20022.repository.entity.Status;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -105,7 +108,7 @@ public class PaymentStatusDetails3 {
 			componentContext_lazy = () -> PaymentStatusDetails3.mmObject();
 			isDerived = false;
 			xmlTag = "PmtInstrSts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentInstructionStatus";
 			definition = "Status of a transfer, in coded form, as  assigned by the transaction administrator.";
 			maxOccurs = 1;
@@ -151,11 +154,11 @@ public class PaymentStatusDetails3 {
 	 */
 	public static final MMMessageAttribute mmPaymentInstructionStatusDateTime = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.mmStatusDateTime;
+			businessElementTrace_lazy = () -> Status.mmStatusDateTime;
 			componentContext_lazy = () -> PaymentStatusDetails3.mmObject();
 			isDerived = false;
 			xmlTag = "PmtInstrStsDtTm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentInstructionStatusDateTime";
 			definition = "Date and time at which the status was assigned to the transfer.";
 			maxOccurs = 1;
@@ -197,7 +200,7 @@ public class PaymentStatusDetails3 {
 			componentContext_lazy = () -> PaymentStatusDetails3.mmObject();
 			isDerived = false;
 			xmlTag = "PmtInstrStsRsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentInstructionStatusReason";
 			definition = "Reason provided for the status of a transfer.";
 			minOccurs = 0;
@@ -208,11 +211,10 @@ public class PaymentStatusDetails3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentStatusDetails3.mmPaymentInstructionStatus, com.tools20022.repository.msg.PaymentStatusDetails3.mmPaymentInstructionStatusDateTime,
-						com.tools20022.repository.msg.PaymentStatusDetails3.mmPaymentInstructionStatusReason);
+				messageElement_lazy = () -> Arrays.asList(PaymentStatusDetails3.mmPaymentInstructionStatus, PaymentStatusDetails3.mmPaymentInstructionStatusDateTime, PaymentStatusDetails3.mmPaymentInstructionStatusReason);
 				trace_lazy = () -> PaymentStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "PaymentStatusDetails3";
 				definition = "Information related to the payment status details.";
 			}

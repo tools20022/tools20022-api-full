@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.BytePaddingCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -89,7 +91,7 @@ public class BytePadding1Code extends BytePaddingCode {
 	 */
 	public static final MMCode mmLengthPadding = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LengthPadding";
 			owner_lazy = () -> BytePadding1Code.mmObject();
 		}
@@ -112,7 +114,7 @@ public class BytePadding1Code extends BytePaddingCode {
 	 */
 	public static final MMCode mmNull80Padding = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Null80Padding";
 			owner_lazy = () -> BytePadding1Code.mmObject();
 		}
@@ -135,7 +137,7 @@ public class BytePadding1Code extends BytePaddingCode {
 	 */
 	public static final MMCode mmNullLengthPadding = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NullLengthPadding";
 			owner_lazy = () -> BytePadding1Code.mmObject();
 		}
@@ -158,7 +160,7 @@ public class BytePadding1Code extends BytePaddingCode {
 	 */
 	public static final MMCode mmNullPadding = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NullPadding";
 			owner_lazy = () -> BytePadding1Code.mmObject();
 		}
@@ -181,7 +183,7 @@ public class BytePadding1Code extends BytePaddingCode {
 	 */
 	public static final MMCode mmRandomPadding = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RandomPadding";
 			owner_lazy = () -> BytePadding1Code.mmObject();
 		}
@@ -190,12 +192,11 @@ public class BytePadding1Code extends BytePaddingCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "BytePadding1Code";
 				definition = "Byte padding for a cypher block chaining mode encryption, if the padding is not implicit.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.BytePadding1Code.mmLengthPadding, com.tools20022.repository.codeset.BytePadding1Code.mmNull80Padding,
-						com.tools20022.repository.codeset.BytePadding1Code.mmNullLengthPadding, com.tools20022.repository.codeset.BytePadding1Code.mmNullPadding, com.tools20022.repository.codeset.BytePadding1Code.mmRandomPadding);
+				code_lazy = () -> Arrays.asList(BytePadding1Code.mmLengthPadding, BytePadding1Code.mmNull80Padding, BytePadding1Code.mmNullLengthPadding, BytePadding1Code.mmNullPadding, BytePadding1Code.mmRandomPadding);
 				trace_lazy = () -> BytePaddingCode.mmObject();
 			}
 		});

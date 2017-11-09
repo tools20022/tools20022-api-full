@@ -19,9 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.FinancialInstrumentQuantity1Choice;
 import com.tools20022.repository.choice.SettlementUnitType2Choice;
 import com.tools20022.repository.datatype.ISOYearMonth;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -108,7 +110,7 @@ public class SettlementInformation4 {
 			componentContext_lazy = () -> SettlementInformation4.mmObject();
 			isDerived = false;
 			xmlTag = "SctiesQtyTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesQuantityType";
 			definition = "Choice between formats for the quantity of security.";
 			maxOccurs = 1;
@@ -150,7 +152,7 @@ public class SettlementInformation4 {
 			componentContext_lazy = () -> SettlementInformation4.mmObject();
 			isDerived = false;
 			xmlTag = "CtrctSttlmMnth";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ContractSettlementMonth";
 			definition = "Specifies when the contract (i.e. MBS/TBA) will settle.";
 			maxOccurs = 1;
@@ -193,7 +195,7 @@ public class SettlementInformation4 {
 			componentContext_lazy = () -> SettlementInformation4.mmObject();
 			isDerived = false;
 			xmlTag = "MinDnmtn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MinimumDenomination";
 			definition = "Indicates the minimum quantity (unit or nominal) of a security.";
 			maxOccurs = 1;
@@ -236,7 +238,7 @@ public class SettlementInformation4 {
 			componentContext_lazy = () -> SettlementInformation4.mmObject();
 			isDerived = false;
 			xmlTag = "MinMltplQty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MinimumMultipleQuantity";
 			definition = "Minimum multiple quantity (unit or nominal) of securities.";
 			maxOccurs = 1;
@@ -283,7 +285,7 @@ public class SettlementInformation4 {
 			componentContext_lazy = () -> SettlementInformation4.mmObject();
 			isDerived = false;
 			xmlTag = "DevtgSttlmUnit";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeviatingSettlementUnit";
 			definition = "Minimum quantity of securities that can be purchased without incurring a larger fee. For example, if the round lot size is 100 and the trade is for 125  shares, then 100 will be processed without a fee and the remaining 25 will incur a service fee for being an odd lot size.";
 			minOccurs = 0;
@@ -294,11 +296,10 @@ public class SettlementInformation4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SettlementInformation4.mmSecuritiesQuantityType, com.tools20022.repository.msg.SettlementInformation4.mmContractSettlementMonth,
-						com.tools20022.repository.msg.SettlementInformation4.mmMinimumDenomination, com.tools20022.repository.msg.SettlementInformation4.mmMinimumMultipleQuantity,
-						com.tools20022.repository.msg.SettlementInformation4.mmDeviatingSettlementUnit);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(SettlementInformation4.mmSecuritiesQuantityType, SettlementInformation4.mmContractSettlementMonth, SettlementInformation4.mmMinimumDenomination,
+						SettlementInformation4.mmMinimumMultipleQuantity, SettlementInformation4.mmDeviatingSettlementUnit);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SettlementInformation4";
 				definition = "Settlement of the securities in a securities transaction, that is, the instruction to deliver or receive securities, involving the payment of an amount of money or not.";
 			}

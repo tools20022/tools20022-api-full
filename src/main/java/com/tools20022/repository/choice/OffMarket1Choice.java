@@ -19,9 +19,12 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.OffMarket1Code;
 import com.tools20022.repository.datatype.AnyBICIdentifier;
+import com.tools20022.repository.entity.OrganisationIdentification;
 import com.tools20022.repository.entity.SecuritiesTradeExecution;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -100,11 +103,11 @@ public class OffMarket1Choice {
 	 */
 	public static final MMMessageAttribute mmOffMarketIndicator = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeExecution.mmOffMarketReason;
+			businessElementTrace_lazy = () -> SecuritiesTradeExecution.mmOffMarketReason;
 			componentContext_lazy = () -> OffMarket1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "OffMktInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OffMarketIndicator";
 			definition = "Indicates that the trade was executed off-exchange.";
 			maxOccurs = 1;
@@ -148,11 +151,11 @@ public class OffMarket1Choice {
 	 */
 	public static final MMMessageAttribute mmSystematicInternaliser = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.mmAnyBIC;
+			businessElementTrace_lazy = () -> OrganisationIdentification.mmAnyBIC;
 			componentContext_lazy = () -> OffMarket1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "SystmtcIntlr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SystematicInternaliser";
 			definition = "Provides the BIC code of the systematic internaliser.";
 			maxOccurs = 1;
@@ -164,10 +167,10 @@ public class OffMarket1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.OffMarket1Choice.mmOffMarketIndicator, com.tools20022.repository.choice.OffMarket1Choice.mmSystematicInternaliser);
+				messageElement_lazy = () -> Arrays.asList(OffMarket1Choice.mmOffMarketIndicator, OffMarket1Choice.mmSystematicInternaliser);
 				trace_lazy = () -> SecuritiesTradeExecution.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OffMarket1Choice";
 				definition = "Choice for specifying how the trade was executed off-market.";
 			}

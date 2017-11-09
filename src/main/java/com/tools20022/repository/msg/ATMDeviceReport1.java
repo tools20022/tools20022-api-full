@@ -19,6 +19,10 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.caam.ATMDeviceReportV01;
+import com.tools20022.repository.area.caam.ATMDeviceReportV02;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -110,7 +114,7 @@ public class ATMDeviceReport1 {
 			componentContext_lazy = () -> ATMDeviceReport1.mmObject();
 			isDerived = false;
 			xmlTag = "Envt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Environment";
 			definition = "Environment of the transaction.";
 			maxOccurs = 1;
@@ -150,7 +154,7 @@ public class ATMDeviceReport1 {
 			componentContext_lazy = () -> ATMDeviceReport1.mmObject();
 			isDerived = false;
 			xmlTag = "ATMGblSts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ATMGlobalStatus";
 			definition = "Global status of the ATM.";
 			maxOccurs = 1;
@@ -191,7 +195,7 @@ public class ATMDeviceReport1 {
 			componentContext_lazy = () -> ATMDeviceReport1.mmObject();
 			isDerived = false;
 			xmlTag = "CmdRslt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommandResult";
 			definition = "Result of a maintenance command performed by the ATM.";
 			minOccurs = 0;
@@ -232,7 +236,7 @@ public class ATMDeviceReport1 {
 			componentContext_lazy = () -> ATMDeviceReport1.mmObject();
 			isDerived = false;
 			xmlTag = "CmdCntxt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommandContext";
 			definition = "Maintenance command which has requested the device report.";
 			maxOccurs = 1;
@@ -273,7 +277,7 @@ public class ATMDeviceReport1 {
 			componentContext_lazy = () -> ATMDeviceReport1.mmObject();
 			isDerived = false;
 			xmlTag = "ATMSctyCntxt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ATMSecurityContext";
 			definition = "Information related to security commands.";
 			maxOccurs = 1;
@@ -286,11 +290,10 @@ public class ATMDeviceReport1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMDeviceReport1.mmEnvironment, com.tools20022.repository.msg.ATMDeviceReport1.mmATMGlobalStatus,
-						com.tools20022.repository.msg.ATMDeviceReport1.mmCommandResult, com.tools20022.repository.msg.ATMDeviceReport1.mmCommandContext, com.tools20022.repository.msg.ATMDeviceReport1.mmATMSecurityContext);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.caam.ATMDeviceReportV01.mmATMDeviceReport, com.tools20022.repository.area.caam.ATMDeviceReportV02.mmATMDeviceReport);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(ATMDeviceReport1.mmEnvironment, ATMDeviceReport1.mmATMGlobalStatus, ATMDeviceReport1.mmCommandResult, ATMDeviceReport1.mmCommandContext, ATMDeviceReport1.mmATMSecurityContext);
+				messageBuildingBlock_lazy = () -> Arrays.asList(ATMDeviceReportV01.mmATMDeviceReport, ATMDeviceReportV02.mmATMDeviceReport);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ATMDeviceReport1";
 				definition = "Information related to the report from an ATM device.";
 			}

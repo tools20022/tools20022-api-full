@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.TransactionStatusCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -87,7 +89,7 @@ public class TransactionStatus1Code extends TransactionStatusCode {
 	 */
 	public static final MMCode mmReversal = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reversal";
 			owner_lazy = () -> TransactionStatus1Code.mmObject();
 		}
@@ -110,7 +112,7 @@ public class TransactionStatus1Code extends TransactionStatusCode {
 	 */
 	public static final MMCode mmRebooked = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rebooked";
 			owner_lazy = () -> TransactionStatus1Code.mmObject();
 		}
@@ -133,7 +135,7 @@ public class TransactionStatus1Code extends TransactionStatusCode {
 	 */
 	public static final MMCode mmCancelled = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cancelled";
 			owner_lazy = () -> TransactionStatus1Code.mmObject();
 		}
@@ -142,13 +144,12 @@ public class TransactionStatus1Code extends TransactionStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("RVSL");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TransactionStatus1Code";
 				definition = "Specifies the processing status of an investment fund transaction.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TransactionStatus1Code.mmReversal, com.tools20022.repository.codeset.TransactionStatus1Code.mmRebooked,
-						com.tools20022.repository.codeset.TransactionStatus1Code.mmCancelled);
+				code_lazy = () -> Arrays.asList(TransactionStatus1Code.mmReversal, TransactionStatus1Code.mmRebooked, TransactionStatus1Code.mmCancelled);
 				trace_lazy = () -> TransactionStatusCode.mmObject();
 			}
 		});

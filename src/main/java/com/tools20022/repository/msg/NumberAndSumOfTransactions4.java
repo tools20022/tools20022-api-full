@@ -19,8 +19,10 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.DecimalNumber;
 import com.tools20022.repository.datatype.Max15NumericText;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -100,7 +102,7 @@ public class NumberAndSumOfTransactions4 {
 			componentContext_lazy = () -> NumberAndSumOfTransactions4.mmObject();
 			isDerived = false;
 			xmlTag = "NbOfNtries";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NumberOfEntries";
 			definition = "Number of individual entries included in the report.";
 			maxOccurs = 1;
@@ -142,7 +144,7 @@ public class NumberAndSumOfTransactions4 {
 			componentContext_lazy = () -> NumberAndSumOfTransactions4.mmObject();
 			isDerived = false;
 			xmlTag = "Sum";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Sum";
 			definition = "Total of all individual entries included in the report.";
 			maxOccurs = 1;
@@ -187,7 +189,7 @@ public class NumberAndSumOfTransactions4 {
 			componentContext_lazy = () -> NumberAndSumOfTransactions4.mmObject();
 			isDerived = false;
 			xmlTag = "TtlNetNtry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalNetEntry";
 			definition = "Resulting debit or credit amount of the netted amounts for all debit and credit entries.";
 			maxOccurs = 1;
@@ -199,10 +201,9 @@ public class NumberAndSumOfTransactions4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.NumberAndSumOfTransactions4.mmNumberOfEntries, com.tools20022.repository.msg.NumberAndSumOfTransactions4.mmSum,
-						com.tools20022.repository.msg.NumberAndSumOfTransactions4.mmTotalNetEntry);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(NumberAndSumOfTransactions4.mmNumberOfEntries, NumberAndSumOfTransactions4.mmSum, NumberAndSumOfTransactions4.mmTotalNetEntry);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "NumberAndSumOfTransactions4";
 				definition = "Set of elements providing the total sum of entries.";
 				previousVersion_lazy = () -> NumberAndSumOfTransactions3.mmObject();

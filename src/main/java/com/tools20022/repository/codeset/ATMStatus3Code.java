@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ATMStatusCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -78,7 +80,7 @@ public class ATMStatus3Code extends ATMStatusCode {
 	 */
 	public static final MMCode mmInOperation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InOperation";
 			owner_lazy = () -> ATMStatus3Code.mmObject();
 		}
@@ -101,7 +103,7 @@ public class ATMStatus3Code extends ATMStatusCode {
 	 */
 	public static final MMCode mmStopped = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Stopped";
 			owner_lazy = () -> ATMStatus3Code.mmObject();
 		}
@@ -124,7 +126,7 @@ public class ATMStatus3Code extends ATMStatusCode {
 	 */
 	public static final MMCode mmWaitingActivation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WaitingActivation";
 			owner_lazy = () -> ATMStatus3Code.mmObject();
 		}
@@ -133,12 +135,11 @@ public class ATMStatus3Code extends ATMStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ATMStatus3Code";
 				definition = "Current status of the key.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ATMStatus3Code.mmInOperation, com.tools20022.repository.codeset.ATMStatus3Code.mmStopped,
-						com.tools20022.repository.codeset.ATMStatus3Code.mmWaitingActivation);
+				code_lazy = () -> Arrays.asList(ATMStatus3Code.mmInOperation, ATMStatus3Code.mmStopped, ATMStatus3Code.mmWaitingActivation);
 				trace_lazy = () -> ATMStatusCode.mmObject();
 			}
 		});

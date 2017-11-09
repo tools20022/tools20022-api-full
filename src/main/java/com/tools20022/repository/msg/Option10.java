@@ -20,10 +20,11 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.*;
 import com.tools20022.repository.datatype.*;
-import com.tools20022.repository.entity.CurrencyOption;
-import com.tools20022.repository.entity.ForeignExchangeTrade;
+import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -136,7 +137,7 @@ public class Option10 {
 			componentContext_lazy = () -> Option10.mmObject();
 			isDerived = false;
 			xmlTag = "Data";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Data";
 			definition = "Type of data to indicate whether a trade is an option or resulted by an option exercise.";
 			maxOccurs = 1;
@@ -177,7 +178,7 @@ public class Option10 {
 			componentContext_lazy = () -> Option10.mmObject();
 			isDerived = false;
 			xmlTag = "ExrcSts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExerciseStatus";
 			definition = "Specifies the exercise status of the option.";
 			maxOccurs = 1;
@@ -223,10 +224,10 @@ public class Option10 {
 			componentContext_lazy = () -> Option10.mmObject();
 			isDerived = false;
 			xmlTag = "ExrcStyle";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExerciseStyle";
 			definition = "Defines how an option can be exercised.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Option3.mmExerciseStyle;
+			previousVersion_lazy = () -> Option3.mmExerciseStyle;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> OptionStyle2Code.mmObject();
@@ -267,11 +268,11 @@ public class Option10 {
 	 */
 	public static final MMMessageAttribute mmOptionType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Option.mmOptionType;
+			businessElementTrace_lazy = () -> Option.mmOptionType;
 			componentContext_lazy = () -> Option10.mmObject();
 			isDerived = false;
 			xmlTag = "OptnTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionType";
 			definition = "Choice of format for option type.";
 			maxOccurs = 1;
@@ -311,7 +312,7 @@ public class Option10 {
 			componentContext_lazy = () -> Option10.mmObject();
 			isDerived = false;
 			xmlTag = "DerivOptnId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DerivativeOptionIdentification";
 			definition = "Identifies the derivative option.";
 			maxOccurs = 1;
@@ -355,7 +356,7 @@ public class Option10 {
 			componentContext_lazy = () -> Option10.mmObject();
 			isDerived = false;
 			xmlTag = "OptnPyoutTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionPayoutType";
 			definition = "Indicates the type of payout that will result from an in-the-money option.";
 			maxOccurs = 1;
@@ -396,11 +397,11 @@ public class Option10 {
 	 */
 	public static final MMMessageAssociationEnd mmValuationRate = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Trade.mmValueDate;
+			businessElementTrace_lazy = () -> Trade.mmValueDate;
 			componentContext_lazy = () -> Option10.mmObject();
 			isDerived = false;
 			xmlTag = "ValtnRate";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValuationRate";
 			definition = "Specifies the valuation rate used for the trade.";
 			maxOccurs = 1;
@@ -450,14 +451,14 @@ public class Option10 {
 	 */
 	public static final MMMessageAssociationEnd mmStrikePrice = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmExchangeRate;
+			businessElementTrace_lazy = () -> CurrencyExchange.mmExchangeRate;
 			componentContext_lazy = () -> Option10.mmObject();
 			isDerived = false;
 			xmlTag = "StrkPric";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StrikePrice";
 			definition = "Specifies the rate of exchange at which the foreign exchange option has been struck.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Option3.mmStrikePrice;
+			previousVersion_lazy = () -> Option3.mmStrikePrice;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -497,7 +498,7 @@ public class Option10 {
 			componentContext_lazy = () -> Option10.mmObject();
 			isDerived = false;
 			xmlTag = "VoltlyMrgn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VolatilityMargin";
 			definition = "Annualized volatility for option model calculations.";
 			maxOccurs = 1;
@@ -541,7 +542,7 @@ public class Option10 {
 			componentContext_lazy = () -> Option10.mmObject();
 			isDerived = false;
 			xmlTag = "RskAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RiskAmount";
 			definition = "Measurement of the amount of the trade values converted in the US dollars.";
 			maxOccurs = 1;
@@ -593,14 +594,14 @@ public class Option10 {
 	 */
 	public static final MMMessageAttribute mmExpiryDateAndTime = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Option.mmExpiryDateAndTime;
+			businessElementTrace_lazy = () -> Option.mmExpiryDateAndTime;
 			componentContext_lazy = () -> Option10.mmObject();
 			isDerived = false;
 			xmlTag = "XpryDtAndTm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExpiryDateAndTime";
 			definition = "Date on which a privilege (for example, option, right, warrant,...) expires. If it is an European option, the option holder can only exercise the right or let it lapse on expiry date. If it is an American option, the option holder can exercise the right up to the expiry date.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Option3.mmExpiryDateAndTime;
+			previousVersion_lazy = () -> Option3.mmExpiryDateAndTime;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
@@ -646,14 +647,14 @@ public class Option10 {
 	 */
 	public static final MMMessageAttribute mmExpiryLocation = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Option.mmExpiryLocation;
+			businessElementTrace_lazy = () -> Option.mmExpiryLocation;
 			componentContext_lazy = () -> Option10.mmObject();
 			isDerived = false;
 			xmlTag = "XpryLctn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExpiryLocation";
 			definition = "Financial center where option expires.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Option3.mmExpiryLocation;
+			previousVersion_lazy = () -> Option3.mmExpiryLocation;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max4AlphaNumericText.mmObject();
@@ -692,7 +693,7 @@ public class Option10 {
 			componentContext_lazy = () -> Option10.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementType";
 			definition = "Specifies the settlment period of the option trade.";
 			maxOccurs = 1;
@@ -745,10 +746,10 @@ public class Option10 {
 			componentContext_lazy = () -> Option10.mmObject();
 			isDerived = false;
 			xmlTag = "OptnAmts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionAmounts";
 			definition = "Specifies the call and the put amount of the underlying foreign exchange trade.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Option3.mmOptionAmounts;
+			previousVersion_lazy = () -> Option3.mmOptionAmounts;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -794,10 +795,10 @@ public class Option10 {
 			componentContext_lazy = () -> Option10.mmObject();
 			isDerived = false;
 			xmlTag = "Prm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Premium";
 			definition = "Specifies the amount of the premium of a foreign exchange option trade and its settlement place.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Option3.mmPremium;
+			previousVersion_lazy = () -> Option3.mmPremium;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -840,7 +841,7 @@ public class Option10 {
 			componentContext_lazy = () -> Option10.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmAmtTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementAmountType";
 			definition = "Indicates whether the trade is to be settled as principal or netted off against another trade.";
 			maxOccurs = 1;
@@ -886,10 +887,10 @@ public class Option10 {
 			componentContext_lazy = () -> Option10.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlOptnInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalOptionInformation";
 			definition = "Free format text that may contain information on the option.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Option3.mmAdditionalOptionInformation;
+			previousVersion_lazy = () -> Option3.mmAdditionalOptionInformation;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max140Text.mmObject();
@@ -899,15 +900,12 @@ public class Option10 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Option10.mmData, com.tools20022.repository.msg.Option10.mmExerciseStatus, com.tools20022.repository.msg.Option10.mmExerciseStyle,
-						com.tools20022.repository.msg.Option10.mmOptionType, com.tools20022.repository.msg.Option10.mmDerivativeOptionIdentification, com.tools20022.repository.msg.Option10.mmOptionPayoutType,
-						com.tools20022.repository.msg.Option10.mmValuationRate, com.tools20022.repository.msg.Option10.mmStrikePrice, com.tools20022.repository.msg.Option10.mmVolatilityMargin,
-						com.tools20022.repository.msg.Option10.mmRiskAmount, com.tools20022.repository.msg.Option10.mmExpiryDateAndTime, com.tools20022.repository.msg.Option10.mmExpiryLocation,
-						com.tools20022.repository.msg.Option10.mmSettlementType, com.tools20022.repository.msg.Option10.mmOptionAmounts, com.tools20022.repository.msg.Option10.mmPremium,
-						com.tools20022.repository.msg.Option10.mmSettlementAmountType, com.tools20022.repository.msg.Option10.mmAdditionalOptionInformation);
+				messageElement_lazy = () -> Arrays.asList(Option10.mmData, Option10.mmExerciseStatus, Option10.mmExerciseStyle, Option10.mmOptionType, Option10.mmDerivativeOptionIdentification, Option10.mmOptionPayoutType,
+						Option10.mmValuationRate, Option10.mmStrikePrice, Option10.mmVolatilityMargin, Option10.mmRiskAmount, Option10.mmExpiryDateAndTime, Option10.mmExpiryLocation, Option10.mmSettlementType, Option10.mmOptionAmounts,
+						Option10.mmPremium, Option10.mmSettlementAmountType, Option10.mmAdditionalOptionInformation);
 				trace_lazy = () -> CurrencyOption.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Option10";
 				definition = "List of elements which provide the parameters of an option trade.";
 				previousVersion_lazy = () -> Option3.mmObject();

@@ -20,14 +20,18 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.secl.BuyInConfirmationV03;
+import com.tools20022.repository.area.secl.BuyInNotificationV03;
+import com.tools20022.repository.area.secl.BuyInResponseV03;
 import com.tools20022.repository.choice.FinancialInstrumentQuantity1Choice;
 import com.tools20022.repository.choice.PartyIdentification34Choice;
 import com.tools20022.repository.choice.PartyIdentification35Choice;
 import com.tools20022.repository.choice.SafekeepingPlaceFormat7Choice;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.Max35Text;
-import com.tools20022.repository.entity.SecuritiesQuantity;
-import com.tools20022.repository.entity.SecuritiesSettlement;
+import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -174,10 +178,10 @@ public class SettlementObligation7 {
 			componentContext_lazy = () -> SettlementObligation7.mmObject();
 			isDerived = false;
 			xmlTag = "CSDTxId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CSDTransactionIdentification";
 			definition = "Last reference given by the settlement platform (this is the central securities depository)  to the transaction (non settled instruction).";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SettlementObligation6.mmCSDTransactionIdentification;
+			previousVersion_lazy = () -> SettlementObligation6.mmCSDTransactionIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -227,14 +231,14 @@ public class SettlementObligation7 {
 	 */
 	public static final MMMessageAttribute mmCentralCounterpartyTransactionIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeIdentification.mmCentralCounterpartyTransactionIdentification;
+			businessElementTrace_lazy = () -> SecuritiesTradeIdentification.mmCentralCounterpartyTransactionIdentification;
 			componentContext_lazy = () -> SettlementObligation7.mmObject();
 			isDerived = false;
 			xmlTag = "CntrlCtrPtyTxId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CentralCounterpartyTransactionIdentification";
 			definition = "Reference of the transaction (non settled instruction) given by the central counterparty.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SettlementObligation6.mmCentralCounterpartyTransactionIdentification;
+			previousVersion_lazy = () -> SettlementObligation6.mmCentralCounterpartyTransactionIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -276,7 +280,7 @@ public class SettlementObligation7 {
 			componentContext_lazy = () -> SettlementObligation7.mmObject();
 			isDerived = false;
 			xmlTag = "PrvsBuyInId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousBuyInIdentification";
 			definition = "Original buy-in identification number in case an event causes a generation of a new buy-in identification.";
 			maxOccurs = 1;
@@ -327,14 +331,14 @@ public class SettlementObligation7 {
 	 */
 	public static final MMMessageAssociationEnd mmDeliveryAccount = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ClearingMemberRole.mmDeliveryAccount;
+			businessElementTrace_lazy = () -> ClearingMemberRole.mmDeliveryAccount;
 			componentContext_lazy = () -> SettlementObligation7.mmObject();
 			isDerived = false;
 			xmlTag = "DlvryAcct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeliveryAccount";
 			definition = "An account opened by the central counterparty in the name of the clearing member within the account structure, for settlement purposes (gives information about the clearing member account at central counterparty).";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SettlementObligation6.mmDeliveryAccount;
+			previousVersion_lazy = () -> SettlementObligation6.mmDeliveryAccount;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -381,11 +385,11 @@ public class SettlementObligation7 {
 	 */
 	public static final MMMessageAssociationEnd mmSafekeepingPlace = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesAccount.mmSafekeepingPlace;
+			businessElementTrace_lazy = () -> SecuritiesAccount.mmSafekeepingPlace;
 			componentContext_lazy = () -> SettlementObligation7.mmObject();
 			isDerived = false;
 			xmlTag = "SfkpgPlc";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlace";
 			definition = "Place where the securities are safe-kept, physically or notionally. This place can be, for example, a local custodian, a Central Securities Depository (CSD) or an International Central Securities Depository (ICSD).";
 			maxOccurs = 1;
@@ -434,14 +438,14 @@ public class SettlementObligation7 {
 	 */
 	public static final MMMessageAssociationEnd mmSafekeepingAccount = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ClearingMemberRole.mmClearingAccount;
+			businessElementTrace_lazy = () -> ClearingMemberRole.mmClearingAccount;
 			componentContext_lazy = () -> SettlementObligation7.mmObject();
 			isDerived = false;
 			xmlTag = "SfkpgAcct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingAccount";
 			definition = "Clearing member account at the central securities depository.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SettlementObligation6.mmSafekeepingAccount;
+			previousVersion_lazy = () -> SettlementObligation6.mmSafekeepingAccount;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -495,14 +499,14 @@ public class SettlementObligation7 {
 	 */
 	public static final MMMessageAssociationEnd mmClearingSegment = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> SettlementObligation7.mmObject();
 			isDerived = false;
 			xmlTag = "ClrSgmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClearingSegment";
 			definition = "Clearing organisation that will clear the trade.\r\n\r\nNote: This field allows clearing member firm to segregate flows coming from clearing counterparty's clearing system. Indeed, clearing member firms receive messages from the same system (same sender) and this field allows them to know if the message is related to equities or derivatives.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SettlementObligation6.mmClearingSegment;
+			previousVersion_lazy = () -> SettlementObligation6.mmClearingSegment;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -550,14 +554,14 @@ public class SettlementObligation7 {
 	 */
 	public static final MMMessageAssociationEnd mmNonClearingMember = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> SettlementObligation7.mmObject();
 			isDerived = false;
 			xmlTag = "NonClrMmb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonClearingMember";
 			definition = "Provides the identification for the non-clearing member and account.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SettlementObligation6.mmNonClearingMember;
+			previousVersion_lazy = () -> SettlementObligation6.mmNonClearingMember;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -604,14 +608,14 @@ public class SettlementObligation7 {
 	 */
 	public static final MMMessageAttribute mmIntendedSettlementDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmSettlementDate;
+			businessElementTrace_lazy = () -> SecuritiesSettlement.mmSettlementDate;
 			componentContext_lazy = () -> SettlementObligation7.mmObject();
 			isDerived = false;
 			xmlTag = "IntnddSttlmDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IntendedSettlementDate";
 			definition = "Provides the intended settlement date of the position.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SettlementObligation6.mmIntendedSettlementDate;
+			previousVersion_lazy = () -> SettlementObligation6.mmIntendedSettlementDate;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
@@ -657,14 +661,14 @@ public class SettlementObligation7 {
 	 */
 	public static final MMMessageAssociationEnd mmFinancialInstrumentIdentification = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmIdentification;
+			businessElementTrace_lazy = () -> Security.mmIdentification;
 			componentContext_lazy = () -> SettlementObligation7.mmObject();
 			isDerived = false;
 			xmlTag = "FinInstrmId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentIdentification";
 			definition = "Provides details about the security identification.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SettlementObligation6.mmFinancialInstrumentIdentification;
+			previousVersion_lazy = () -> SettlementObligation6.mmFinancialInstrumentIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -711,14 +715,14 @@ public class SettlementObligation7 {
 	 */
 	public static final MMMessageAttribute mmTradeDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Trade.mmTradeDateTime;
+			businessElementTrace_lazy = () -> Trade.mmTradeDateTime;
 			componentContext_lazy = () -> SettlementObligation7.mmObject();
 			isDerived = false;
 			xmlTag = "TradDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeDate";
 			definition = "Provides the trade date.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SettlementObligation6.mmTradeDate;
+			previousVersion_lazy = () -> SettlementObligation6.mmTradeDate;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
@@ -762,14 +766,14 @@ public class SettlementObligation7 {
 	 */
 	public static final MMMessageAssociationEnd mmDealPrice = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeExecution.mmDealPrice;
+			businessElementTrace_lazy = () -> SecuritiesTradeExecution.mmDealPrice;
 			componentContext_lazy = () -> SettlementObligation7.mmObject();
 			isDerived = false;
 			xmlTag = "DealPric";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DealPrice";
 			definition = "Provides the price of the trade.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SettlementObligation6.mmDealPrice;
+			previousVersion_lazy = () -> SettlementObligation6.mmDealPrice;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -816,14 +820,14 @@ public class SettlementObligation7 {
 	 */
 	public static final MMMessageAssociationEnd mmQuantity = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTransfer.mmTransferredQuantity;
+			businessElementTrace_lazy = () -> SecuritiesTransfer.mmTransferredQuantity;
 			componentContext_lazy = () -> SettlementObligation7.mmObject();
 			isDerived = false;
 			xmlTag = "Qty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Quantity";
 			definition = "Provides the quantity of the trade.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SettlementObligation6.mmQuantity;
+			previousVersion_lazy = () -> SettlementObligation6.mmQuantity;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -870,14 +874,14 @@ public class SettlementObligation7 {
 	 */
 	public static final MMMessageAssociationEnd mmDepository = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> SettlementObligation7.mmObject();
 			isDerived = false;
 			xmlTag = "Dpstry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Depository";
 			definition = "Place where settlement of the securities takes place.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SettlementObligation6.mmDepository;
+			previousVersion_lazy = () -> SettlementObligation6.mmDepository;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -928,10 +932,10 @@ public class SettlementObligation7 {
 			componentContext_lazy = () -> SettlementObligation7.mmObject();
 			isDerived = false;
 			xmlTag = "RmngQtyToBeSttld";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RemainingQuantityToBeSettled";
 			definition = "Provides the remaining quantity to be settled.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SettlementObligation6.mmRemainingQuantityToBeSettled;
+			previousVersion_lazy = () -> SettlementObligation6.mmRemainingQuantityToBeSettled;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -977,14 +981,14 @@ public class SettlementObligation7 {
 	 */
 	public static final MMMessageAssociationEnd mmSettlementAmount = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmSettlementAmount;
+			businessElementTrace_lazy = () -> SecuritiesSettlement.mmSettlementAmount;
 			componentContext_lazy = () -> SettlementObligation7.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementAmount";
 			definition = "Provides the amount to be settled.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SettlementObligation6.mmSettlementAmount;
+			previousVersion_lazy = () -> SettlementObligation6.mmSettlementAmount;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -1030,14 +1034,14 @@ public class SettlementObligation7 {
 	 */
 	public static final MMMessageAssociationEnd mmRemainingAmountToBeSettled = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmSettlementAmount;
+			businessElementTrace_lazy = () -> SecuritiesSettlement.mmSettlementAmount;
 			componentContext_lazy = () -> SettlementObligation7.mmObject();
 			isDerived = false;
 			xmlTag = "RmngAmtToBeSttld";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RemainingAmountToBeSettled";
 			definition = "Provides the remaining amount to be settled.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SettlementObligation6.mmRemainingAmountToBeSettled;
+			previousVersion_lazy = () -> SettlementObligation6.mmRemainingAmountToBeSettled;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -1048,20 +1052,14 @@ public class SettlementObligation7 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SettlementObligation7.mmCSDTransactionIdentification,
-						com.tools20022.repository.msg.SettlementObligation7.mmCentralCounterpartyTransactionIdentification, com.tools20022.repository.msg.SettlementObligation7.mmPreviousBuyInIdentification,
-						com.tools20022.repository.msg.SettlementObligation7.mmDeliveryAccount, com.tools20022.repository.msg.SettlementObligation7.mmSafekeepingPlace,
-						com.tools20022.repository.msg.SettlementObligation7.mmSafekeepingAccount, com.tools20022.repository.msg.SettlementObligation7.mmClearingSegment,
-						com.tools20022.repository.msg.SettlementObligation7.mmNonClearingMember, com.tools20022.repository.msg.SettlementObligation7.mmIntendedSettlementDate,
-						com.tools20022.repository.msg.SettlementObligation7.mmFinancialInstrumentIdentification, com.tools20022.repository.msg.SettlementObligation7.mmTradeDate,
-						com.tools20022.repository.msg.SettlementObligation7.mmDealPrice, com.tools20022.repository.msg.SettlementObligation7.mmQuantity, com.tools20022.repository.msg.SettlementObligation7.mmDepository,
-						com.tools20022.repository.msg.SettlementObligation7.mmRemainingQuantityToBeSettled, com.tools20022.repository.msg.SettlementObligation7.mmSettlementAmount,
-						com.tools20022.repository.msg.SettlementObligation7.mmRemainingAmountToBeSettled);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.secl.BuyInNotificationV03.mmOriginalSettlementObligation,
-						com.tools20022.repository.area.secl.BuyInConfirmationV03.mmOriginalSettlementObligation, com.tools20022.repository.area.secl.BuyInResponseV03.mmOriginalSettlementObligationDetails);
+				messageElement_lazy = () -> Arrays.asList(SettlementObligation7.mmCSDTransactionIdentification, SettlementObligation7.mmCentralCounterpartyTransactionIdentification, SettlementObligation7.mmPreviousBuyInIdentification,
+						SettlementObligation7.mmDeliveryAccount, SettlementObligation7.mmSafekeepingPlace, SettlementObligation7.mmSafekeepingAccount, SettlementObligation7.mmClearingSegment, SettlementObligation7.mmNonClearingMember,
+						SettlementObligation7.mmIntendedSettlementDate, SettlementObligation7.mmFinancialInstrumentIdentification, SettlementObligation7.mmTradeDate, SettlementObligation7.mmDealPrice, SettlementObligation7.mmQuantity,
+						SettlementObligation7.mmDepository, SettlementObligation7.mmRemainingQuantityToBeSettled, SettlementObligation7.mmSettlementAmount, SettlementObligation7.mmRemainingAmountToBeSettled);
+				messageBuildingBlock_lazy = () -> Arrays.asList(BuyInNotificationV03.mmOriginalSettlementObligation, BuyInConfirmationV03.mmOriginalSettlementObligation, BuyInResponseV03.mmOriginalSettlementObligationDetails);
 				trace_lazy = () -> SecuritiesSettlement.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SettlementObligation7";
 				definition = "Provides details about the settlement obligation.";
 				previousVersion_lazy = () -> SettlementObligation6.mmObject();

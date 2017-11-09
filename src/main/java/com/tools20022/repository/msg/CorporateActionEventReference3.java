@@ -19,9 +19,12 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.seev.*;
 import com.tools20022.repository.choice.CorporateActionEventReference3Choice;
 import com.tools20022.repository.choice.ProcessingPosition7Choice;
 import com.tools20022.repository.entity.CorporateActionEventRegistration;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -144,14 +147,14 @@ public class CorporateActionEventReference3 {
 	 */
 	public static final MMMessageAssociationEnd mmEventIdentification = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEventRegistration.mmCorporateActionEventIdentification;
+			businessElementTrace_lazy = () -> CorporateActionEventRegistration.mmCorporateActionEventIdentification;
 			componentContext_lazy = () -> CorporateActionEventReference3.mmObject();
 			isDerived = false;
 			xmlTag = "EvtId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventIdentification";
 			definition = "Identification of the linked corporate action event.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionEventReference1.mmEventIdentification;
+			previousVersion_lazy = () -> CorporateActionEventReference1.mmEventIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -199,10 +202,10 @@ public class CorporateActionEventReference3 {
 			componentContext_lazy = () -> CorporateActionEventReference3.mmObject();
 			isDerived = false;
 			xmlTag = "LkgTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LinkageType";
 			definition = "Specifies when this corporate action event is to be processed relative to a linked corporate action event.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionEventReference1.mmLinkageType;
+			previousVersion_lazy = () -> CorporateActionEventReference1.mmLinkageType;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -213,16 +216,13 @@ public class CorporateActionEventReference3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionEventReference3.mmEventIdentification, com.tools20022.repository.msg.CorporateActionEventReference3.mmLinkageType);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.CorporateActionInstructionV06.mmEventsLinkage,
-						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV07.mmEventsLinkage, com.tools20022.repository.area.seev.CorporateActionMovementConfirmationV07.mmEventsLinkage,
-						com.tools20022.repository.area.seev.CorporateActionNotificationV06.mmEventsLinkage, com.tools20022.repository.area.seev.CorporateActionMovementReversalAdviceV07.mmEventsLinkage,
-						com.tools20022.repository.area.seev.CorporateActionNotificationV07.mmEventsLinkage, com.tools20022.repository.area.seev.CorporateActionMovementConfirmationV08.mmEventsLinkage,
-						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV08.mmEventsLinkage, com.tools20022.repository.area.seev.CorporateActionMovementReversalAdviceV08.mmEventsLinkage,
-						com.tools20022.repository.area.seev.CorporateActionInstructionV07.mmEventsLinkage);
+				messageElement_lazy = () -> Arrays.asList(CorporateActionEventReference3.mmEventIdentification, CorporateActionEventReference3.mmLinkageType);
+				messageBuildingBlock_lazy = () -> Arrays.asList(CorporateActionInstructionV06.mmEventsLinkage, CorporateActionMovementPreliminaryAdviceV07.mmEventsLinkage, CorporateActionMovementConfirmationV07.mmEventsLinkage,
+						CorporateActionNotificationV06.mmEventsLinkage, CorporateActionMovementReversalAdviceV07.mmEventsLinkage, CorporateActionNotificationV07.mmEventsLinkage, CorporateActionMovementConfirmationV08.mmEventsLinkage,
+						CorporateActionMovementPreliminaryAdviceV08.mmEventsLinkage, CorporateActionMovementReversalAdviceV08.mmEventsLinkage, CorporateActionInstructionV07.mmEventsLinkage);
 				trace_lazy = () -> CorporateActionEventRegistration.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionEventReference3";
 				definition = "Identification of a linked corporate action event.";
 				previousVersion_lazy = () -> CorporateActionEventReference1.mmObject();

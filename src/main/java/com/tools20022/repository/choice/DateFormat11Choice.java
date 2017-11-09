@@ -20,6 +20,8 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -107,10 +109,10 @@ public class DateFormat11Choice {
 			componentContext_lazy = () -> DateFormat11Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Dt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Date";
 			definition = "Date expressed as a calendar date.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.DateFormat33Choice.mmDate);
+			nextVersions_lazy = () -> Arrays.asList(DateFormat33Choice.mmDate);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> com.tools20022.repository.choice.DateAndDateTimeChoice.mmObject();
@@ -156,10 +158,10 @@ public class DateFormat11Choice {
 			componentContext_lazy = () -> DateFormat11Choice.mmObject();
 			isDerived = false;
 			xmlTag = "DtCd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DateCode";
 			definition = "Specifies the type of date.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.DateFormat33Choice.mmDateCode);
+			nextVersions_lazy = () -> Arrays.asList(DateFormat33Choice.mmDateCode);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -170,9 +172,9 @@ public class DateFormat11Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.DateFormat11Choice.mmDate, com.tools20022.repository.choice.DateFormat11Choice.mmDateCode);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(DateFormat11Choice.mmDate, DateFormat11Choice.mmDateCode);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DateFormat11Choice";
 				definition = "Choice between an ISODate or ISODateTime format or a date code.";
 				nextVersions_lazy = () -> Arrays.asList(DateFormat33Choice.mmObject());

@@ -19,10 +19,12 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.WorkflowStatus1Code;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.datatype.YesNoIndicator;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -101,7 +103,7 @@ public class CorporateActionOptionSD5 {
 			componentContext_lazy = () -> CorporateActionOptionSD5.mmObject();
 			isDerived = false;
 			xmlTag = "PlcAndNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "xPath to the element that is being extended.";
 			maxOccurs = 1;
@@ -146,7 +148,7 @@ public class CorporateActionOptionSD5 {
 			componentContext_lazy = () -> CorporateActionOptionSD5.mmObject();
 			isDerived = false;
 			xmlTag = "OptnSts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionStatus";
 			definition = "Workflow status of the specified option based on the consistency of the issuer declared data elements (excluding DTC data elements).";
 			maxOccurs = 1;
@@ -195,7 +197,7 @@ public class CorporateActionOptionSD5 {
 			componentContext_lazy = () -> CorporateActionOptionSD5.mmObject();
 			isDerived = false;
 			xmlTag = "RandLotPrefFlg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RandomLotPreferenceFlag";
 			definition = "Indicates whether or not the offeror will select random lots if the offer has been prorated. The offeror may accept or reject conditional tenders on a random basis. Holders must indicate their willingness to have their rejected conditional tender accepted by random lot (if necessary). The holder must surrender all shares held in order to be eligible for this preference. ";
 			maxOccurs = 1;
@@ -240,7 +242,7 @@ public class CorporateActionOptionSD5 {
 			componentContext_lazy = () -> CorporateActionOptionSD5.mmObject();
 			isDerived = false;
 			xmlTag = "NewShrDsptchdDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewShareDispatchedDate";
 			definition = "Date on which the new shares to be issued will be distributed, as opposed to the \"declared payable date.\" This date is typically used in some Asian markets.";
 			maxOccurs = 1;
@@ -252,10 +254,10 @@ public class CorporateActionOptionSD5 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionOptionSD5.mmPlaceAndName, com.tools20022.repository.msg.CorporateActionOptionSD5.mmOptionStatus,
-						com.tools20022.repository.msg.CorporateActionOptionSD5.mmRandomLotPreferenceFlag, com.tools20022.repository.msg.CorporateActionOptionSD5.mmNewShareDispatchedDate);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(CorporateActionOptionSD5.mmPlaceAndName, CorporateActionOptionSD5.mmOptionStatus, CorporateActionOptionSD5.mmRandomLotPreferenceFlag,
+						CorporateActionOptionSD5.mmNewShareDispatchedDate);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CorporateActionOptionSD5";
 				definition = "Provides additional information regarding corporate action option details.";
 			}

@@ -19,7 +19,12 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.CashEntry;
+import com.tools20022.repository.entity.CorporateActionDistribution;
+import com.tools20022.repository.entity.CurrencyExchange;
+import com.tools20022.repository.entity.Payment;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -114,11 +119,11 @@ public class AmountAndCurrencyExchange2 {
 	 */
 	public static final MMMessageAssociationEnd mmInstructedAmount = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.mmInstructedAmount;
+			businessElementTrace_lazy = () -> Payment.mmInstructedAmount;
 			componentContext_lazy = () -> AmountAndCurrencyExchange2.mmObject();
 			isDerived = false;
 			xmlTag = "InstdAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructedAmount";
 			definition = "Identifies the amount of money to be moved between the debtor and creditor, before deduction of charges, expressed in the currency as ordered by the initiating party and provides currency exchange info in case the instructed amount and/or currency is/are different from the entry amount and/or currency.";
 			maxOccurs = 1;
@@ -162,11 +167,11 @@ public class AmountAndCurrencyExchange2 {
 	 */
 	public static final MMMessageAssociationEnd mmTransactionAmount = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmOriginalAmount;
+			businessElementTrace_lazy = () -> CurrencyExchange.mmOriginalAmount;
 			componentContext_lazy = () -> AmountAndCurrencyExchange2.mmObject();
 			isDerived = false;
 			xmlTag = "TxAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionAmount";
 			definition = "Amount of the underlying transaction.";
 			maxOccurs = 1;
@@ -215,11 +220,11 @@ public class AmountAndCurrencyExchange2 {
 	 */
 	public static final MMMessageAssociationEnd mmCounterValueAmount = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmResultingAmount;
+			businessElementTrace_lazy = () -> CurrencyExchange.mmResultingAmount;
 			componentContext_lazy = () -> AmountAndCurrencyExchange2.mmObject();
 			isDerived = false;
 			xmlTag = "CntrValAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CounterValueAmount";
 			definition = "Identifies the countervalue amount and provides currency exchange information. Either the counter amount quoted in an FX deal, or the result of the currency information applied to an instructed amount, before deduction of charges.";
 			maxOccurs = 1;
@@ -271,11 +276,11 @@ public class AmountAndCurrencyExchange2 {
 	 */
 	public static final MMMessageAssociationEnd mmAnnouncedPostingAmount = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionDistribution.mmPostingAmount;
+			businessElementTrace_lazy = () -> CorporateActionDistribution.mmPostingAmount;
 			componentContext_lazy = () -> AmountAndCurrencyExchange2.mmObject();
 			isDerived = false;
 			xmlTag = "AnncdPstngAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AnnouncedPostingAmount";
 			definition = "Information on the amount of money, based on terms of corporate action event and balance of underlying securities, entitled to/from the account owner.\n\nAmount of money, based on terms of corporate action event and balance of underlying securities, entitled to/from the account owner.\nIn those situations, this amount may alternatively be called entitled amount.";
 			maxOccurs = 1;
@@ -322,7 +327,7 @@ public class AmountAndCurrencyExchange2 {
 			componentContext_lazy = () -> AmountAndCurrencyExchange2.mmObject();
 			isDerived = false;
 			xmlTag = "PrtryAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProprietaryAmount";
 			definition = "Provides proprietary amount information.";
 			minOccurs = 0;
@@ -334,12 +339,11 @@ public class AmountAndCurrencyExchange2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AmountAndCurrencyExchange2.mmInstructedAmount, com.tools20022.repository.msg.AmountAndCurrencyExchange2.mmTransactionAmount,
-						com.tools20022.repository.msg.AmountAndCurrencyExchange2.mmCounterValueAmount, com.tools20022.repository.msg.AmountAndCurrencyExchange2.mmAnnouncedPostingAmount,
-						com.tools20022.repository.msg.AmountAndCurrencyExchange2.mmProprietaryAmount);
+				messageElement_lazy = () -> Arrays.asList(AmountAndCurrencyExchange2.mmInstructedAmount, AmountAndCurrencyExchange2.mmTransactionAmount, AmountAndCurrencyExchange2.mmCounterValueAmount,
+						AmountAndCurrencyExchange2.mmAnnouncedPostingAmount, AmountAndCurrencyExchange2.mmProprietaryAmount);
 				trace_lazy = () -> CashEntry.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AmountAndCurrencyExchange2";
 				definition = "Set of elements providing information on the original amount and currency information.";
 			}

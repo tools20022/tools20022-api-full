@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.RepairReasonV2Code;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -164,7 +166,7 @@ public class RepairReason4Code extends RepairReasonV2Code {
 	 */
 	public static final MMCode mmProcessingBatch = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProcessingBatch";
 			owner_lazy = () -> RepairReason4Code.mmObject();
 		}
@@ -187,7 +189,7 @@ public class RepairReason4Code extends RepairReasonV2Code {
 	 */
 	public static final MMCode mmCorporateAction = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorporateAction";
 			owner_lazy = () -> RepairReason4Code.mmObject();
 		}
@@ -210,7 +212,7 @@ public class RepairReason4Code extends RepairReasonV2Code {
 	 */
 	public static final MMCode mmCashAccount = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashAccount";
 			owner_lazy = () -> RepairReason4Code.mmObject();
 		}
@@ -233,7 +235,7 @@ public class RepairReason4Code extends RepairReasonV2Code {
 	 */
 	public static final MMCode mmImpossibleCashSettlementSystem = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ImpossibleCashSettlementSystem";
 			owner_lazy = () -> RepairReason4Code.mmObject();
 		}
@@ -256,7 +258,7 @@ public class RepairReason4Code extends RepairReasonV2Code {
 	 */
 	public static final MMCode mmSettlementDate = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementDate";
 			owner_lazy = () -> RepairReason4Code.mmObject();
 		}
@@ -279,7 +281,7 @@ public class RepairReason4Code extends RepairReasonV2Code {
 	 */
 	public static final MMCode mmDealPrice = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DealPrice";
 			owner_lazy = () -> RepairReason4Code.mmObject();
 		}
@@ -302,7 +304,7 @@ public class RepairReason4Code extends RepairReasonV2Code {
 	 */
 	public static final MMCode mmSettlementAmount = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementAmount";
 			owner_lazy = () -> RepairReason4Code.mmObject();
 		}
@@ -325,7 +327,7 @@ public class RepairReason4Code extends RepairReasonV2Code {
 	 */
 	public static final MMCode mmQuantity = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Quantity";
 			owner_lazy = () -> RepairReason4Code.mmObject();
 		}
@@ -348,7 +350,7 @@ public class RepairReason4Code extends RepairReasonV2Code {
 	 */
 	public static final MMCode mmSecurity = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Security";
 			owner_lazy = () -> RepairReason4Code.mmObject();
 		}
@@ -371,7 +373,7 @@ public class RepairReason4Code extends RepairReasonV2Code {
 	 */
 	public static final MMCode mmTradeDate = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeDate";
 			owner_lazy = () -> RepairReason4Code.mmObject();
 		}
@@ -394,7 +396,7 @@ public class RepairReason4Code extends RepairReasonV2Code {
 	 */
 	public static final MMCode mmCommonReference = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommonReference";
 			owner_lazy = () -> RepairReason4Code.mmObject();
 		}
@@ -417,7 +419,7 @@ public class RepairReason4Code extends RepairReasonV2Code {
 	 */
 	public static final MMCode mmMinimumSettlementQuantity = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MinimumSettlementQuantity";
 			owner_lazy = () -> RepairReason4Code.mmObject();
 		}
@@ -440,7 +442,7 @@ public class RepairReason4Code extends RepairReasonV2Code {
 	 */
 	public static final MMCode mmMultipleSettlementQuantity = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MultipleSettlementQuantity";
 			owner_lazy = () -> RepairReason4Code.mmObject();
 		}
@@ -463,7 +465,7 @@ public class RepairReason4Code extends RepairReasonV2Code {
 	 */
 	public static final MMCode mmSettlementAmountCurrency = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementAmountCurrency";
 			owner_lazy = () -> RepairReason4Code.mmObject();
 		}
@@ -486,7 +488,7 @@ public class RepairReason4Code extends RepairReasonV2Code {
 	 */
 	public static final MMCode mmPhysicalSettlementImpossible = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PhysicalSettlementImpossible";
 			owner_lazy = () -> RepairReason4Code.mmObject();
 		}
@@ -509,7 +511,7 @@ public class RepairReason4Code extends RepairReasonV2Code {
 	 */
 	public static final MMCode mmPlaceOfTrade = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceOfTrade";
 			owner_lazy = () -> RepairReason4Code.mmObject();
 		}
@@ -532,7 +534,7 @@ public class RepairReason4Code extends RepairReasonV2Code {
 	 */
 	public static final MMCode mmReference = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reference";
 			owner_lazy = () -> RepairReason4Code.mmObject();
 		}
@@ -555,7 +557,7 @@ public class RepairReason4Code extends RepairReasonV2Code {
 	 */
 	public static final MMCode mmImpossibleToUseTheRTGSSystemInstructed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ImpossibleToUseTheRTGSSystemInstructed";
 			owner_lazy = () -> RepairReason4Code.mmObject();
 		}
@@ -578,7 +580,7 @@ public class RepairReason4Code extends RepairReasonV2Code {
 	 */
 	public static final MMCode mmSafekeepingAccount = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingAccount";
 			owner_lazy = () -> RepairReason4Code.mmObject();
 		}
@@ -601,7 +603,7 @@ public class RepairReason4Code extends RepairReasonV2Code {
 	 */
 	public static final MMCode mmSettlementTransaction = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementTransaction";
 			owner_lazy = () -> RepairReason4Code.mmObject();
 		}
@@ -624,7 +626,7 @@ public class RepairReason4Code extends RepairReasonV2Code {
 	 */
 	public static final MMCode mmSettlementSystemMethod = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementSystemMethod";
 			owner_lazy = () -> RepairReason4Code.mmObject();
 		}
@@ -647,7 +649,7 @@ public class RepairReason4Code extends RepairReasonV2Code {
 	 */
 	public static final MMCode mmTaxStatus = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxStatus";
 			owner_lazy = () -> RepairReason4Code.mmObject();
 		}
@@ -670,7 +672,7 @@ public class RepairReason4Code extends RepairReasonV2Code {
 	 */
 	public static final MMCode mmPlaceOfSafekeeping = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceOfSafekeeping";
 			owner_lazy = () -> RepairReason4Code.mmObject();
 		}
@@ -693,7 +695,7 @@ public class RepairReason4Code extends RepairReasonV2Code {
 	 */
 	public static final MMCode mmStampDuty = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StampDuty";
 			owner_lazy = () -> RepairReason4Code.mmObject();
 		}
@@ -716,7 +718,7 @@ public class RepairReason4Code extends RepairReasonV2Code {
 	 */
 	public static final MMCode mmOther = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
 			owner_lazy = () -> RepairReason4Code.mmObject();
 		}
@@ -739,7 +741,7 @@ public class RepairReason4Code extends RepairReasonV2Code {
 	 */
 	public static final MMCode mmReceivingDeliveringParty3 = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceivingDeliveringParty3";
 			owner_lazy = () -> RepairReason4Code.mmObject();
 		}
@@ -762,7 +764,7 @@ public class RepairReason4Code extends RepairReasonV2Code {
 	 */
 	public static final MMCode mmReceivingDeliveringParty1 = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceivingDeliveringParty1";
 			owner_lazy = () -> RepairReason4Code.mmObject();
 		}
@@ -785,7 +787,7 @@ public class RepairReason4Code extends RepairReasonV2Code {
 	 */
 	public static final MMCode mmReceivingDeliveringDepository = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceivingDeliveringDepository";
 			owner_lazy = () -> RepairReason4Code.mmObject();
 		}
@@ -808,7 +810,7 @@ public class RepairReason4Code extends RepairReasonV2Code {
 	 */
 	public static final MMCode mmReceivingDeliveringParty2 = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceivingDeliveringParty2";
 			owner_lazy = () -> RepairReason4Code.mmObject();
 		}
@@ -817,24 +819,17 @@ public class RepairReason4Code extends RepairReasonV2Code {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("BATC");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RepairReason4Code";
 				definition = "Specifies the reason why the settlement instruction has a repair status.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RepairReason4Code.mmProcessingBatch, com.tools20022.repository.codeset.RepairReason4Code.mmCorporateAction,
-						com.tools20022.repository.codeset.RepairReason4Code.mmCashAccount, com.tools20022.repository.codeset.RepairReason4Code.mmImpossibleCashSettlementSystem,
-						com.tools20022.repository.codeset.RepairReason4Code.mmSettlementDate, com.tools20022.repository.codeset.RepairReason4Code.mmDealPrice, com.tools20022.repository.codeset.RepairReason4Code.mmSettlementAmount,
-						com.tools20022.repository.codeset.RepairReason4Code.mmQuantity, com.tools20022.repository.codeset.RepairReason4Code.mmSecurity, com.tools20022.repository.codeset.RepairReason4Code.mmTradeDate,
-						com.tools20022.repository.codeset.RepairReason4Code.mmCommonReference, com.tools20022.repository.codeset.RepairReason4Code.mmMinimumSettlementQuantity,
-						com.tools20022.repository.codeset.RepairReason4Code.mmMultipleSettlementQuantity, com.tools20022.repository.codeset.RepairReason4Code.mmSettlementAmountCurrency,
-						com.tools20022.repository.codeset.RepairReason4Code.mmPhysicalSettlementImpossible, com.tools20022.repository.codeset.RepairReason4Code.mmPlaceOfTrade,
-						com.tools20022.repository.codeset.RepairReason4Code.mmReference, com.tools20022.repository.codeset.RepairReason4Code.mmImpossibleToUseTheRTGSSystemInstructed,
-						com.tools20022.repository.codeset.RepairReason4Code.mmSafekeepingAccount, com.tools20022.repository.codeset.RepairReason4Code.mmSettlementTransaction,
-						com.tools20022.repository.codeset.RepairReason4Code.mmSettlementSystemMethod, com.tools20022.repository.codeset.RepairReason4Code.mmTaxStatus,
-						com.tools20022.repository.codeset.RepairReason4Code.mmPlaceOfSafekeeping, com.tools20022.repository.codeset.RepairReason4Code.mmStampDuty, com.tools20022.repository.codeset.RepairReason4Code.mmOther,
-						com.tools20022.repository.codeset.RepairReason4Code.mmReceivingDeliveringParty3, com.tools20022.repository.codeset.RepairReason4Code.mmReceivingDeliveringParty1,
-						com.tools20022.repository.codeset.RepairReason4Code.mmReceivingDeliveringDepository, com.tools20022.repository.codeset.RepairReason4Code.mmReceivingDeliveringParty2);
+				code_lazy = () -> Arrays.asList(RepairReason4Code.mmProcessingBatch, RepairReason4Code.mmCorporateAction, RepairReason4Code.mmCashAccount, RepairReason4Code.mmImpossibleCashSettlementSystem,
+						RepairReason4Code.mmSettlementDate, RepairReason4Code.mmDealPrice, RepairReason4Code.mmSettlementAmount, RepairReason4Code.mmQuantity, RepairReason4Code.mmSecurity, RepairReason4Code.mmTradeDate,
+						RepairReason4Code.mmCommonReference, RepairReason4Code.mmMinimumSettlementQuantity, RepairReason4Code.mmMultipleSettlementQuantity, RepairReason4Code.mmSettlementAmountCurrency,
+						RepairReason4Code.mmPhysicalSettlementImpossible, RepairReason4Code.mmPlaceOfTrade, RepairReason4Code.mmReference, RepairReason4Code.mmImpossibleToUseTheRTGSSystemInstructed, RepairReason4Code.mmSafekeepingAccount,
+						RepairReason4Code.mmSettlementTransaction, RepairReason4Code.mmSettlementSystemMethod, RepairReason4Code.mmTaxStatus, RepairReason4Code.mmPlaceOfSafekeeping, RepairReason4Code.mmStampDuty, RepairReason4Code.mmOther,
+						RepairReason4Code.mmReceivingDeliveringParty3, RepairReason4Code.mmReceivingDeliveringParty1, RepairReason4Code.mmReceivingDeliveringDepository, RepairReason4Code.mmReceivingDeliveringParty2);
 				trace_lazy = () -> RepairReasonV2Code.mmObject();
 			}
 		});

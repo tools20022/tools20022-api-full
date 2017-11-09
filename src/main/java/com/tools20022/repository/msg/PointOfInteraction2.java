@@ -20,9 +20,12 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.Max70Text;
 import com.tools20022.repository.entity.PointOfInteraction;
+import com.tools20022.repository.entity.SystemName;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -129,10 +132,10 @@ public class PointOfInteraction2 {
 			componentContext_lazy = () -> PointOfInteraction2.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Identification of the POI (Point Of Interaction) for the acquirer or its agent.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PointOfInteraction3.mmIdentification);
+			nextVersions_lazy = () -> Arrays.asList(PointOfInteraction3.mmIdentification);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -182,14 +185,14 @@ public class PointOfInteraction2 {
 	 */
 	public static final MMMessageAttribute mmSystemName = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SystemName.mmName;
+			businessElementTrace_lazy = () -> SystemName.mmName;
 			componentContext_lazy = () -> PointOfInteraction2.mmObject();
 			isDerived = false;
 			xmlTag = "SysNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SystemName";
 			definition = "Common name assigned by the acquirer to the POI system.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PointOfInteraction3.mmSystemName);
+			nextVersions_lazy = () -> Arrays.asList(PointOfInteraction3.mmSystemName);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max70Text.mmObject();
@@ -239,10 +242,10 @@ public class PointOfInteraction2 {
 			componentContext_lazy = () -> PointOfInteraction2.mmObject();
 			isDerived = false;
 			xmlTag = "GrpId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GroupIdentification";
 			definition = "Identifier assigned by the merchant identifying a set of POI terminals performing some categories of transactions.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PointOfInteraction3.mmGroupIdentification);
+			nextVersions_lazy = () -> Arrays.asList(PointOfInteraction3.mmGroupIdentification);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -295,10 +298,10 @@ public class PointOfInteraction2 {
 			componentContext_lazy = () -> PointOfInteraction2.mmObject();
 			isDerived = false;
 			xmlTag = "Cpblties";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Capabilities";
 			definition = "Capabilities of the POI performing the transaction.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PointOfInteraction3.mmCapabilities);
+			nextVersions_lazy = () -> Arrays.asList(PointOfInteraction3.mmCapabilities);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -349,14 +352,14 @@ public class PointOfInteraction2 {
 	 */
 	public static final MMMessageAssociationEnd mmComponent = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PointOfInteraction.mmComponent;
+			businessElementTrace_lazy = () -> PointOfInteraction.mmComponent;
 			componentContext_lazy = () -> PointOfInteraction2.mmObject();
 			isDerived = false;
 			xmlTag = "Cmpnt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Component";
 			definition = "Data related to a component of the POI performing the transaction.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PointOfInteraction3.mmComponent);
+			nextVersions_lazy = () -> Arrays.asList(PointOfInteraction3.mmComponent);
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.PointOfInteractionComponent3.mmObject();
@@ -366,11 +369,11 @@ public class PointOfInteraction2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PointOfInteraction2.mmIdentification, com.tools20022.repository.msg.PointOfInteraction2.mmSystemName,
-						com.tools20022.repository.msg.PointOfInteraction2.mmGroupIdentification, com.tools20022.repository.msg.PointOfInteraction2.mmCapabilities, com.tools20022.repository.msg.PointOfInteraction2.mmComponent);
+				messageElement_lazy = () -> Arrays.asList(PointOfInteraction2.mmIdentification, PointOfInteraction2.mmSystemName, PointOfInteraction2.mmGroupIdentification, PointOfInteraction2.mmCapabilities,
+						PointOfInteraction2.mmComponent);
 				trace_lazy = () -> PointOfInteraction.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PointOfInteraction2";
 				definition = "Point of interaction (POI) performing the transaction.";
 				nextVersions_lazy = () -> Arrays.asList(PointOfInteraction3.mmObject());

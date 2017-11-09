@@ -19,7 +19,9 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.Limit;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -97,11 +99,11 @@ public class LimitAmount1 {
 	 */
 	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Limit.mmAmount;
+			businessElementTrace_lazy = () -> Limit.mmAmount;
 			componentContext_lazy = () -> LimitAmount1.mmObject();
 			isDerived = false;
 			xmlTag = "Amt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Amount of money of the limit, expressed in an eligible currency.";
 			maxOccurs = 1;
@@ -146,11 +148,11 @@ public class LimitAmount1 {
 	 */
 	public static final MMMessageAttribute mmUtilisationAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Limit.mmUsedAmount;
+			businessElementTrace_lazy = () -> Limit.mmUsedAmount;
 			componentContext_lazy = () -> LimitAmount1.mmObject();
 			isDerived = false;
 			xmlTag = "UtlstnAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UtilisationAmount";
 			definition = "Utilised amount of money of the limit expressed in an eligible currency.";
 			maxOccurs = 1;
@@ -195,11 +197,11 @@ public class LimitAmount1 {
 	 */
 	public static final MMMessageAttribute mmAvailableAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Limit.mmAvailableAmount;
+			businessElementTrace_lazy = () -> Limit.mmAvailableAmount;
 			componentContext_lazy = () -> LimitAmount1.mmObject();
 			isDerived = false;
 			xmlTag = "AvlblAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AvailableAmount";
 			definition = "Remaining amount of money of the limit expressed in an eligible currency.";
 			maxOccurs = 1;
@@ -211,10 +213,10 @@ public class LimitAmount1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LimitAmount1.mmAmount, com.tools20022.repository.msg.LimitAmount1.mmUtilisationAmount, com.tools20022.repository.msg.LimitAmount1.mmAvailableAmount);
+				messageElement_lazy = () -> Arrays.asList(LimitAmount1.mmAmount, LimitAmount1.mmUtilisationAmount, LimitAmount1.mmAvailableAmount);
 				trace_lazy = () -> Limit.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "LimitAmount1";
 				definition = "Amount of money characterics used to specify a limit.";
 			}

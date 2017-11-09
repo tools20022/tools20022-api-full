@@ -20,12 +20,14 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.SystemPartyType1Code;
 import com.tools20022.repository.codeset.SystemSecuritiesAccountType1Code;
 import com.tools20022.repository.datatype.Exact4AlphaNumericText;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.TrueFalseIndicator;
 import com.tools20022.repository.datatype.YesNoIndicator;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -132,7 +134,7 @@ public class SystemSecuritiesAccount3 {
 			componentContext_lazy = () -> SystemSecuritiesAccount3.mmObject();
 			isDerived = false;
 			xmlTag = "OpngDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OpeningDate";
 			definition = "Legal opening date for the securities account.";
 			maxOccurs = 1;
@@ -173,7 +175,7 @@ public class SystemSecuritiesAccount3 {
 			componentContext_lazy = () -> SystemSecuritiesAccount3.mmObject();
 			isDerived = false;
 			xmlTag = "ClsgDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClosingDate";
 			definition = "Legal closing date for the securities account.";
 			maxOccurs = 1;
@@ -218,7 +220,7 @@ public class SystemSecuritiesAccount3 {
 			componentContext_lazy = () -> SystemSecuritiesAccount3.mmObject();
 			isDerived = false;
 			xmlTag = "HldInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HoldIndicator";
 			definition = "Meaning when true : Account is in Hold status.\r\nMeaning when false : Account is in Release status.";
 			maxOccurs = 1;
@@ -263,7 +265,7 @@ public class SystemSecuritiesAccount3 {
 			componentContext_lazy = () -> SystemSecuritiesAccount3.mmObject();
 			isDerived = false;
 			xmlTag = "NegPos";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NegativePosition";
 			definition = "Specifies whether the securities account can hold a negative position in a security.";
 			maxOccurs = 1;
@@ -305,7 +307,7 @@ public class SystemSecuritiesAccount3 {
 			componentContext_lazy = () -> SystemSecuritiesAccount3.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Specifies the type of the securities account.";
 			maxOccurs = 1;
@@ -346,7 +348,7 @@ public class SystemSecuritiesAccount3 {
 			componentContext_lazy = () -> SystemSecuritiesAccount3.mmObject();
 			isDerived = false;
 			xmlTag = "AcctOwnr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountOwner";
 			definition = "Party that legally owns the account.";
 			maxOccurs = 1;
@@ -389,7 +391,7 @@ public class SystemSecuritiesAccount3 {
 			componentContext_lazy = () -> SystemSecuritiesAccount3.mmObject();
 			isDerived = false;
 			xmlTag = "PtyTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartyType";
 			definition = "Specifies the type of the party owning the account.";
 			maxOccurs = 1;
@@ -433,7 +435,7 @@ public class SystemSecuritiesAccount3 {
 			componentContext_lazy = () -> SystemSecuritiesAccount3.mmObject();
 			isDerived = false;
 			xmlTag = "MktSpcfcAttr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketSpecificAttribute";
 			definition = "Additional attributes defined by a central security depositary for a party.";
 			minOccurs = 0;
@@ -477,7 +479,7 @@ public class SystemSecuritiesAccount3 {
 			componentContext_lazy = () -> SystemSecuritiesAccount3.mmObject();
 			isDerived = false;
 			xmlTag = "Rstrctn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Restriction";
 			definition = "Defines the specific processing characteristics for a securities account  to ensure configurability of specific requirements, as prescribed by national legal and regulatory requirements and practices.";
 			minOccurs = 0;
@@ -522,7 +524,7 @@ public class SystemSecuritiesAccount3 {
 			componentContext_lazy = () -> SystemSecuritiesAccount3.mmObject();
 			isDerived = false;
 			xmlTag = "EndInvstrFlg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EndInvestorFlag";
 			definition = "Specifies information to identify securities accounts where allocation instructions are posted.";
 			maxOccurs = 1;
@@ -565,7 +567,7 @@ public class SystemSecuritiesAccount3 {
 			componentContext_lazy = () -> SystemSecuritiesAccount3.mmObject();
 			isDerived = false;
 			xmlTag = "PricgSchme";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PricingScheme";
 			definition = "Defines how the price is applied to the securities account.";
 			maxOccurs = 1;
@@ -577,13 +579,11 @@ public class SystemSecuritiesAccount3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SystemSecuritiesAccount3.mmOpeningDate, com.tools20022.repository.msg.SystemSecuritiesAccount3.mmClosingDate,
-						com.tools20022.repository.msg.SystemSecuritiesAccount3.mmHoldIndicator, com.tools20022.repository.msg.SystemSecuritiesAccount3.mmNegativePosition, com.tools20022.repository.msg.SystemSecuritiesAccount3.mmType,
-						com.tools20022.repository.msg.SystemSecuritiesAccount3.mmAccountOwner, com.tools20022.repository.msg.SystemSecuritiesAccount3.mmPartyType,
-						com.tools20022.repository.msg.SystemSecuritiesAccount3.mmMarketSpecificAttribute, com.tools20022.repository.msg.SystemSecuritiesAccount3.mmRestriction,
-						com.tools20022.repository.msg.SystemSecuritiesAccount3.mmEndInvestorFlag, com.tools20022.repository.msg.SystemSecuritiesAccount3.mmPricingScheme);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(SystemSecuritiesAccount3.mmOpeningDate, SystemSecuritiesAccount3.mmClosingDate, SystemSecuritiesAccount3.mmHoldIndicator, SystemSecuritiesAccount3.mmNegativePosition,
+						SystemSecuritiesAccount3.mmType, SystemSecuritiesAccount3.mmAccountOwner, SystemSecuritiesAccount3.mmPartyType, SystemSecuritiesAccount3.mmMarketSpecificAttribute, SystemSecuritiesAccount3.mmRestriction,
+						SystemSecuritiesAccount3.mmEndInvestorFlag, SystemSecuritiesAccount3.mmPricingScheme);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SystemSecuritiesAccount3";
 				definition = "Account to or from which a securities entry is made.\r\nIt holds information such as opening and closing date and whether it can hold negative positions.\r\nDefinition of the entity includes the default setting for holding of settlement instructions involving positions related to the account.\r\nSet of market specific attributes define specific properties for the account.";
 			}

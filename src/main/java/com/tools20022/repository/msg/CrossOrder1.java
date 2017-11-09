@@ -20,9 +20,11 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CrossType1Code;
 import com.tools20022.repository.codeset.Prioritisation1Code;
 import com.tools20022.repository.entity.CrossTrade;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -101,11 +103,11 @@ public class CrossOrder1 {
 	 */
 	public static final MMMessageAttribute mmCrossType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CrossTrade.mmCrossType;
+			businessElementTrace_lazy = () -> CrossTrade.mmCrossType;
 			componentContext_lazy = () -> CrossOrder1.mmObject();
 			isDerived = false;
 			xmlTag = "CrossTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CrossType";
 			definition = "Type of cross being submitted to a market.";
 			maxOccurs = 1;
@@ -155,11 +157,11 @@ public class CrossOrder1 {
 	 */
 	public static final MMMessageAttribute mmPrioritisation = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CrossTrade.mmPrioritisation;
+			businessElementTrace_lazy = () -> CrossTrade.mmPrioritisation;
 			componentContext_lazy = () -> CrossOrder1.mmObject();
 			isDerived = false;
 			xmlTag = "Prtistn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Prioritisation";
 			definition = "Indicates if one side or the other of a cross order should be prioritized.\nThe definition of prioritization is left to the market. In some markets prioritization means which side of the cross order is applied to the market first. In other markets, prioritization may mean that the prioritized side is fully executed (sometimes referred to as the side being protected).";
 			maxOccurs = 1;
@@ -199,11 +201,11 @@ public class CrossOrder1 {
 	 */
 	public static final MMMessageAssociationEnd mmBuySideDetails = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CrossTrade.mmBuySideOrder;
+			businessElementTrace_lazy = () -> CrossTrade.mmBuySideOrder;
 			componentContext_lazy = () -> CrossOrder1.mmObject();
 			isDerived = false;
 			xmlTag = "BuySdDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BuySideDetails";
 			definition = "Buyside order details.";
 			maxOccurs = 1;
@@ -244,11 +246,11 @@ public class CrossOrder1 {
 	 */
 	public static final MMMessageAssociationEnd mmSellSideDetails = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CrossTrade.mmSellSideOrder;
+			businessElementTrace_lazy = () -> CrossTrade.mmSellSideOrder;
 			componentContext_lazy = () -> CrossOrder1.mmObject();
 			isDerived = false;
 			xmlTag = "SellSdDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SellSideDetails";
 			definition = "Sell side order details.";
 			maxOccurs = 1;
@@ -261,11 +263,10 @@ public class CrossOrder1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CrossOrder1.mmCrossType, com.tools20022.repository.msg.CrossOrder1.mmPrioritisation, com.tools20022.repository.msg.CrossOrder1.mmBuySideDetails,
-						com.tools20022.repository.msg.CrossOrder1.mmSellSideDetails);
+				messageElement_lazy = () -> Arrays.asList(CrossOrder1.mmCrossType, CrossOrder1.mmPrioritisation, CrossOrder1.mmBuySideDetails, CrossOrder1.mmSellSideDetails);
 				trace_lazy = () -> CrossTrade.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CrossOrder1";
 				definition = "Provides details about the cross order (common to each side of the cross).";
 			}

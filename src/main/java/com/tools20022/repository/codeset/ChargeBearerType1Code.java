@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ChargeBearerTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -92,7 +94,7 @@ public class ChargeBearerType1Code extends ChargeBearerTypeCode {
 	 */
 	public static final MMCode mmBorneByDebtor = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BorneByDebtor";
 			owner_lazy = () -> ChargeBearerType1Code.mmObject();
 		}
@@ -115,7 +117,7 @@ public class ChargeBearerType1Code extends ChargeBearerTypeCode {
 	 */
 	public static final MMCode mmBorneByCreditor = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BorneByCreditor";
 			owner_lazy = () -> ChargeBearerType1Code.mmObject();
 		}
@@ -138,7 +140,7 @@ public class ChargeBearerType1Code extends ChargeBearerTypeCode {
 	 */
 	public static final MMCode mmShared = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Shared";
 			owner_lazy = () -> ChargeBearerType1Code.mmObject();
 		}
@@ -161,7 +163,7 @@ public class ChargeBearerType1Code extends ChargeBearerTypeCode {
 	 */
 	public static final MMCode mmFollowingServiceLevel = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FollowingServiceLevel";
 			owner_lazy = () -> ChargeBearerType1Code.mmObject();
 		}
@@ -170,13 +172,12 @@ public class ChargeBearerType1Code extends ChargeBearerTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("DEBT");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ChargeBearerType1Code";
 				definition = "Specifies which party(ies) will pay charges due for processing of the instruction.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ChargeBearerType1Code.mmBorneByDebtor, com.tools20022.repository.codeset.ChargeBearerType1Code.mmBorneByCreditor,
-						com.tools20022.repository.codeset.ChargeBearerType1Code.mmShared, com.tools20022.repository.codeset.ChargeBearerType1Code.mmFollowingServiceLevel);
+				code_lazy = () -> Arrays.asList(ChargeBearerType1Code.mmBorneByDebtor, ChargeBearerType1Code.mmBorneByCreditor, ChargeBearerType1Code.mmShared, ChargeBearerType1Code.mmFollowingServiceLevel);
 				trace_lazy = () -> ChargeBearerTypeCode.mmObject();
 			}
 		});

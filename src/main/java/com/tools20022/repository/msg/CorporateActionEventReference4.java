@@ -19,9 +19,12 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.seev.*;
 import com.tools20022.repository.choice.CorporateActionEventReference4Choice;
 import com.tools20022.repository.choice.ProcessingPosition10Choice;
 import com.tools20022.repository.entity.CorporateActionEventRegistration;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -120,11 +123,11 @@ public class CorporateActionEventReference4 {
 	 */
 	public static final MMMessageAssociationEnd mmEventIdentification = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEventRegistration.mmCorporateActionEventIdentification;
+			businessElementTrace_lazy = () -> CorporateActionEventRegistration.mmCorporateActionEventIdentification;
 			componentContext_lazy = () -> CorporateActionEventReference4.mmObject();
 			isDerived = false;
 			xmlTag = "EvtId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventIdentification";
 			definition = "Identification of the linked corporate action event.";
 			maxOccurs = 1;
@@ -169,7 +172,7 @@ public class CorporateActionEventReference4 {
 			componentContext_lazy = () -> CorporateActionEventReference4.mmObject();
 			isDerived = false;
 			xmlTag = "LkgTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LinkageType";
 			definition = "Specifies when this corporate action event is to be processed relative to a linked corporate action event.";
 			maxOccurs = 1;
@@ -182,13 +185,12 @@ public class CorporateActionEventReference4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionEventReference4.mmEventIdentification, com.tools20022.repository.msg.CorporateActionEventReference4.mmLinkageType);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.CorporateActionInstruction002V07.mmEventsLinkage,
-						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdvice002V08.mmEventsLinkage, com.tools20022.repository.area.seev.CorporateActionMovementReversalAdvice002V08.mmEventsLinkage,
-						com.tools20022.repository.area.seev.CorporateActionNotification002V07.mmEventsLinkage, com.tools20022.repository.area.seev.CorporateActionMovementConfirmation002V08.mmEventsLinkage);
+				messageElement_lazy = () -> Arrays.asList(CorporateActionEventReference4.mmEventIdentification, CorporateActionEventReference4.mmLinkageType);
+				messageBuildingBlock_lazy = () -> Arrays.asList(CorporateActionInstruction002V07.mmEventsLinkage, CorporateActionMovementPreliminaryAdvice002V08.mmEventsLinkage, CorporateActionMovementReversalAdvice002V08.mmEventsLinkage,
+						CorporateActionNotification002V07.mmEventsLinkage, CorporateActionMovementConfirmation002V08.mmEventsLinkage);
 				trace_lazy = () -> CorporateActionEventRegistration.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionEventReference4";
 				definition = "Identification of a linked corporate action event.";
 			}

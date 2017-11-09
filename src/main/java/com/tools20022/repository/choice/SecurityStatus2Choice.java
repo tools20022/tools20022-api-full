@@ -20,8 +20,10 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.SecurityStatus2Code;
 import com.tools20022.repository.entity.SecuritiesStatus;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification40;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -98,7 +100,7 @@ public class SecurityStatus2Choice {
 			componentContext_lazy = () -> SecurityStatus2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Cd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Security status expressed as an ISO 20022 code.";
 			maxOccurs = 1;
@@ -139,7 +141,7 @@ public class SecurityStatus2Choice {
 			componentContext_lazy = () -> SecurityStatus2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Security status expressed as a proprietary code.";
 			maxOccurs = 1;
@@ -152,10 +154,10 @@ public class SecurityStatus2Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SecurityStatus2Choice.mmCode, com.tools20022.repository.choice.SecurityStatus2Choice.mmProprietary);
+				messageElement_lazy = () -> Arrays.asList(SecurityStatus2Choice.mmCode, SecurityStatus2Choice.mmProprietary);
 				trace_lazy = () -> SecuritiesStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SecurityStatus2Choice";
 				definition = "Choice of format for security status.";
 			}

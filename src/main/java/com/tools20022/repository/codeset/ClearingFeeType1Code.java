@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ClearingFeeTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -122,7 +124,7 @@ public class ClearingFeeType1Code extends ClearingFeeTypeCode {
 	 */
 	public static final MMCode mmCBOEMember = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CBOEMember";
 			owner_lazy = () -> ClearingFeeType1Code.mmObject();
 		}
@@ -145,7 +147,7 @@ public class ClearingFeeType1Code extends ClearingFeeTypeCode {
 	 */
 	public static final MMCode mmNonMemberAndCustomer = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonMemberAndCustomer";
 			owner_lazy = () -> ClearingFeeType1Code.mmObject();
 		}
@@ -168,7 +170,7 @@ public class ClearingFeeType1Code extends ClearingFeeTypeCode {
 	 */
 	public static final MMCode mmEquityClearingMember = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EquityClearingMember";
 			owner_lazy = () -> ClearingFeeType1Code.mmObject();
 		}
@@ -191,7 +193,7 @@ public class ClearingFeeType1Code extends ClearingFeeTypeCode {
 	 */
 	public static final MMCode mmFullAssociateMember = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FullAssociateMember";
 			owner_lazy = () -> ClearingFeeType1Code.mmObject();
 		}
@@ -214,7 +216,7 @@ public class ClearingFeeType1Code extends ClearingFeeTypeCode {
 	 */
 	public static final MMCode mmJ106AndHFirms = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "J106AndHFirms";
 			owner_lazy = () -> ClearingFeeType1Code.mmObject();
 		}
@@ -237,7 +239,7 @@ public class ClearingFeeType1Code extends ClearingFeeTypeCode {
 	 */
 	public static final MMCode mmGICInterestHolders = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GICInterestHolders";
 			owner_lazy = () -> ClearingFeeType1Code.mmObject();
 		}
@@ -260,7 +262,7 @@ public class ClearingFeeType1Code extends ClearingFeeTypeCode {
 	 */
 	public static final MMCode mmLesseeAnd106FFirms = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LesseeAnd106FFirms";
 			owner_lazy = () -> ClearingFeeType1Code.mmObject();
 		}
@@ -283,7 +285,7 @@ public class ClearingFeeType1Code extends ClearingFeeTypeCode {
 	 */
 	public static final MMCode mmOtherOwnershipTypes = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherOwnershipTypes";
 			owner_lazy = () -> ClearingFeeType1Code.mmObject();
 		}
@@ -306,7 +308,7 @@ public class ClearingFeeType1Code extends ClearingFeeTypeCode {
 	 */
 	public static final MMCode mmFirstYearOwnAccount = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FirstYearOwnAccount";
 			owner_lazy = () -> ClearingFeeType1Code.mmObject();
 		}
@@ -329,7 +331,7 @@ public class ClearingFeeType1Code extends ClearingFeeTypeCode {
 	 */
 	public static final MMCode mmSecondYearOwnAccount = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecondYearOwnAccount";
 			owner_lazy = () -> ClearingFeeType1Code.mmObject();
 		}
@@ -352,7 +354,7 @@ public class ClearingFeeType1Code extends ClearingFeeTypeCode {
 	 */
 	public static final MMCode mmThirdYearOwnAccount = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ThirdYearOwnAccount";
 			owner_lazy = () -> ClearingFeeType1Code.mmObject();
 		}
@@ -375,7 +377,7 @@ public class ClearingFeeType1Code extends ClearingFeeTypeCode {
 	 */
 	public static final MMCode mmFourthYearOwnAccount = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FourthYearOwnAccount";
 			owner_lazy = () -> ClearingFeeType1Code.mmObject();
 		}
@@ -398,7 +400,7 @@ public class ClearingFeeType1Code extends ClearingFeeTypeCode {
 	 */
 	public static final MMCode mmFifthYearOwnAccount = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FifthYearOwnAccount";
 			owner_lazy = () -> ClearingFeeType1Code.mmObject();
 		}
@@ -421,7 +423,7 @@ public class ClearingFeeType1Code extends ClearingFeeTypeCode {
 	 */
 	public static final MMCode mmMoreThanFiveYearOwnAccount = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MoreThanFiveYearOwnAccount";
 			owner_lazy = () -> ClearingFeeType1Code.mmObject();
 		}
@@ -430,18 +432,15 @@ public class ClearingFeeType1Code extends ClearingFeeTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CBOE");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ClearingFeeType1Code";
 				definition = "Indicates the type of fee being assessed of the customer for trade executions at an exchange. Applicable for futures markets only at this time.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ClearingFeeType1Code.mmCBOEMember, com.tools20022.repository.codeset.ClearingFeeType1Code.mmNonMemberAndCustomer,
-						com.tools20022.repository.codeset.ClearingFeeType1Code.mmEquityClearingMember, com.tools20022.repository.codeset.ClearingFeeType1Code.mmFullAssociateMember,
-						com.tools20022.repository.codeset.ClearingFeeType1Code.mmJ106AndHFirms, com.tools20022.repository.codeset.ClearingFeeType1Code.mmGICInterestHolders,
-						com.tools20022.repository.codeset.ClearingFeeType1Code.mmLesseeAnd106FFirms, com.tools20022.repository.codeset.ClearingFeeType1Code.mmOtherOwnershipTypes,
-						com.tools20022.repository.codeset.ClearingFeeType1Code.mmFirstYearOwnAccount, com.tools20022.repository.codeset.ClearingFeeType1Code.mmSecondYearOwnAccount,
-						com.tools20022.repository.codeset.ClearingFeeType1Code.mmThirdYearOwnAccount, com.tools20022.repository.codeset.ClearingFeeType1Code.mmFourthYearOwnAccount,
-						com.tools20022.repository.codeset.ClearingFeeType1Code.mmFifthYearOwnAccount, com.tools20022.repository.codeset.ClearingFeeType1Code.mmMoreThanFiveYearOwnAccount);
+				code_lazy = () -> Arrays.asList(ClearingFeeType1Code.mmCBOEMember, ClearingFeeType1Code.mmNonMemberAndCustomer, ClearingFeeType1Code.mmEquityClearingMember, ClearingFeeType1Code.mmFullAssociateMember,
+						ClearingFeeType1Code.mmJ106AndHFirms, ClearingFeeType1Code.mmGICInterestHolders, ClearingFeeType1Code.mmLesseeAnd106FFirms, ClearingFeeType1Code.mmOtherOwnershipTypes, ClearingFeeType1Code.mmFirstYearOwnAccount,
+						ClearingFeeType1Code.mmSecondYearOwnAccount, ClearingFeeType1Code.mmThirdYearOwnAccount, ClearingFeeType1Code.mmFourthYearOwnAccount, ClearingFeeType1Code.mmFifthYearOwnAccount,
+						ClearingFeeType1Code.mmMoreThanFiveYearOwnAccount);
 				trace_lazy = () -> ClearingFeeTypeCode.mmObject();
 			}
 		});

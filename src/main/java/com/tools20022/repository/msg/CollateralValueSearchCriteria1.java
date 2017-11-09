@@ -20,9 +20,11 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.AccountIdentification4Choice;
 import com.tools20022.repository.choice.PartyIdentification71Choice;
 import com.tools20022.repository.codeset.ActiveOrHistoricCurrencyCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -113,7 +115,7 @@ public class CollateralValueSearchCriteria1 {
 			componentContext_lazy = () -> CollateralValueSearchCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "AcctId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountIdentification";
 			definition = "Unique and unambiguous identification for the account between the account owner and the account servicer.";
 			maxOccurs = 1;
@@ -156,7 +158,7 @@ public class CollateralValueSearchCriteria1 {
 			componentContext_lazy = () -> CollateralValueSearchCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "Ccy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Currency";
 			definition = "Medium of exchange of value.";
 			minOccurs = 0;
@@ -197,7 +199,7 @@ public class CollateralValueSearchCriteria1 {
 			componentContext_lazy = () -> CollateralValueSearchCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "AcctOwnr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountOwner";
 			definition = "Party that legally owns the account being queried.";
 			maxOccurs = 1;
@@ -242,7 +244,7 @@ public class CollateralValueSearchCriteria1 {
 			componentContext_lazy = () -> CollateralValueSearchCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "AcctSvcr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountServicer";
 			definition = "Party that manages the account on behalf of the account owner, which is being queried.";
 			maxOccurs = 1;
@@ -286,7 +288,7 @@ public class CollateralValueSearchCriteria1 {
 			componentContext_lazy = () -> CollateralValueSearchCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "FinInstrmId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentIdentification";
 			definition = "ISIN identification of the related financial instrument into which this security can be converted.";
 			minOccurs = 0;
@@ -329,7 +331,7 @@ public class CollateralValueSearchCriteria1 {
 			componentContext_lazy = () -> CollateralValueSearchCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "SctiesAcctOwnr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesAccountOwner";
 			definition = "Unique and unambiguous identification of the securities account owner.";
 			maxOccurs = 1;
@@ -373,7 +375,7 @@ public class CollateralValueSearchCriteria1 {
 			componentContext_lazy = () -> CollateralValueSearchCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "SctiesAcctSvcr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesAccountServicer";
 			definition = "Party that manages the securities account on behalf of the account owner.";
 			maxOccurs = 1;
@@ -385,12 +387,11 @@ public class CollateralValueSearchCriteria1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CollateralValueSearchCriteria1.mmAccountIdentification, com.tools20022.repository.msg.CollateralValueSearchCriteria1.mmCurrency,
-						com.tools20022.repository.msg.CollateralValueSearchCriteria1.mmAccountOwner, com.tools20022.repository.msg.CollateralValueSearchCriteria1.mmAccountServicer,
-						com.tools20022.repository.msg.CollateralValueSearchCriteria1.mmFinancialInstrumentIdentification, com.tools20022.repository.msg.CollateralValueSearchCriteria1.mmSecuritiesAccountOwner,
-						com.tools20022.repository.msg.CollateralValueSearchCriteria1.mmSecuritiesAccountServicer);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(CollateralValueSearchCriteria1.mmAccountIdentification, CollateralValueSearchCriteria1.mmCurrency, CollateralValueSearchCriteria1.mmAccountOwner,
+						CollateralValueSearchCriteria1.mmAccountServicer, CollateralValueSearchCriteria1.mmFinancialInstrumentIdentification, CollateralValueSearchCriteria1.mmSecuritiesAccountOwner,
+						CollateralValueSearchCriteria1.mmSecuritiesAccountServicer);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CollateralValueSearchCriteria1";
 				definition = "Defines the criteria used to search for an account.";
 			}

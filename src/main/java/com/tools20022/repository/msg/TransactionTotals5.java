@@ -19,8 +19,10 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ImpliedCurrencyAndAmount;
 import com.tools20022.repository.datatype.Number;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -110,7 +112,7 @@ public class TransactionTotals5 {
 			componentContext_lazy = () -> TransactionTotals5.mmObject();
 			isDerived = false;
 			xmlTag = "Amt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Cumulative amount of all financial transactions.";
 			maxOccurs = 1;
@@ -151,7 +153,7 @@ public class TransactionTotals5 {
 			componentContext_lazy = () -> TransactionTotals5.mmObject();
 			isDerived = false;
 			xmlTag = "Nb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Number";
 			definition = "Number of all financial transactions.";
 			maxOccurs = 1;
@@ -195,7 +197,7 @@ public class TransactionTotals5 {
 			componentContext_lazy = () -> TransactionTotals5.mmObject();
 			isDerived = false;
 			xmlTag = "ChrgBckAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChargeBackAmount";
 			definition = "Cumulative amount of all chargeback transactions exclusive of any fees.";
 			maxOccurs = 1;
@@ -236,7 +238,7 @@ public class TransactionTotals5 {
 			componentContext_lazy = () -> TransactionTotals5.mmObject();
 			isDerived = false;
 			xmlTag = "ChrgBckNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChargeBackNumber";
 			definition = "Total number of chargeback transactions.";
 			maxOccurs = 1;
@@ -279,7 +281,7 @@ public class TransactionTotals5 {
 			componentContext_lazy = () -> TransactionTotals5.mmObject();
 			isDerived = false;
 			xmlTag = "RvslAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReversalAmount";
 			definition = "Cumulative amount of all reversal transactions exclusive of any fees.";
 			maxOccurs = 1;
@@ -320,7 +322,7 @@ public class TransactionTotals5 {
 			componentContext_lazy = () -> TransactionTotals5.mmObject();
 			isDerived = false;
 			xmlTag = "RvslNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReversalNumber";
 			definition = "Total number of reversal transactions.";
 			maxOccurs = 1;
@@ -362,7 +364,7 @@ public class TransactionTotals5 {
 			componentContext_lazy = () -> TransactionTotals5.mmObject();
 			isDerived = false;
 			xmlTag = "FeeAmts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FeeAmounts";
 			definition = "Sum amount of all fees.";
 			maxOccurs = 1;
@@ -374,11 +376,10 @@ public class TransactionTotals5 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionTotals5.mmAmount, com.tools20022.repository.msg.TransactionTotals5.mmNumber,
-						com.tools20022.repository.msg.TransactionTotals5.mmChargeBackAmount, com.tools20022.repository.msg.TransactionTotals5.mmChargeBackNumber, com.tools20022.repository.msg.TransactionTotals5.mmReversalAmount,
-						com.tools20022.repository.msg.TransactionTotals5.mmReversalNumber, com.tools20022.repository.msg.TransactionTotals5.mmFeeAmounts);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(TransactionTotals5.mmAmount, TransactionTotals5.mmNumber, TransactionTotals5.mmChargeBackAmount, TransactionTotals5.mmChargeBackNumber, TransactionTotals5.mmReversalAmount,
+						TransactionTotals5.mmReversalNumber, TransactionTotals5.mmFeeAmounts);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TransactionTotals5";
 				definition = "Total of credit or debit transactions";
 				previousVersion_lazy = () -> TransactionTotals4.mmObject();

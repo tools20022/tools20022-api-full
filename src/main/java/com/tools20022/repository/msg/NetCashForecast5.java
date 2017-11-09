@@ -19,10 +19,14 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.FlowDirectionType1Code;
 import com.tools20022.repository.datatype.ActiveOrHistoricCurrencyAndAmount;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.entity.FundsCashFlow;
+import com.tools20022.repository.entity.Payment;
+import com.tools20022.repository.entity.SecuritiesQuantity;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -113,14 +117,14 @@ public class NetCashForecast5 {
 	 */
 	public static final MMMessageAttribute mmCashSettlementDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.mmValueDate;
+			businessElementTrace_lazy = () -> Payment.mmValueDate;
 			componentContext_lazy = () -> NetCashForecast5.mmObject();
 			isDerived = false;
 			xmlTag = "CshSttlmDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashSettlementDate";
 			definition = "Date on which cash is available.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.NetCashForecast4.mmCashSettlementDate;
+			previousVersion_lazy = () -> NetCashForecast4.mmCashSettlementDate;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
@@ -168,14 +172,14 @@ public class NetCashForecast5 {
 	 */
 	public static final MMMessageAttribute mmNetAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmAmount;
+			businessElementTrace_lazy = () -> SecuritiesQuantity.mmAmount;
 			componentContext_lazy = () -> NetCashForecast5.mmObject();
 			isDerived = false;
 			xmlTag = "NetAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetAmount";
 			definition = "Net amount of the cash flow, expressed as an amount of money.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.NetCashForecast4.mmNetAmount;
+			previousVersion_lazy = () -> NetCashForecast4.mmNetAmount;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
@@ -222,14 +226,14 @@ public class NetCashForecast5 {
 	 */
 	public static final MMMessageAttribute mmNetUnitsNumber = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmUnit;
+			businessElementTrace_lazy = () -> SecuritiesQuantity.mmUnit;
 			componentContext_lazy = () -> NetCashForecast5.mmObject();
 			isDerived = false;
 			xmlTag = "NetUnitsNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetUnitsNumber";
 			definition = "Net amount, expressed as a number of units.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.NetCashForecast4.mmNetUnitsNumber;
+			previousVersion_lazy = () -> NetCashForecast4.mmNetUnitsNumber;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentQuantity1.mmObject();
@@ -279,14 +283,14 @@ public class NetCashForecast5 {
 	 */
 	public static final MMMessageAttribute mmFlowDirection = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.FundsCashFlow.mmFlowDirection;
+			businessElementTrace_lazy = () -> FundsCashFlow.mmFlowDirection;
 			componentContext_lazy = () -> NetCashForecast5.mmObject();
 			isDerived = false;
 			xmlTag = "FlowDrctn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FlowDirection";
 			definition = "Specifies the direction of the cash flow from the perspective of the fund.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.NetCashForecast4.mmFlowDirection;
+			previousVersion_lazy = () -> NetCashForecast4.mmFlowDirection;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> FlowDirectionType1Code.mmObject();
@@ -296,11 +300,10 @@ public class NetCashForecast5 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.NetCashForecast5.mmCashSettlementDate, com.tools20022.repository.msg.NetCashForecast5.mmNetAmount,
-						com.tools20022.repository.msg.NetCashForecast5.mmNetUnitsNumber, com.tools20022.repository.msg.NetCashForecast5.mmFlowDirection);
+				messageElement_lazy = () -> Arrays.asList(NetCashForecast5.mmCashSettlementDate, NetCashForecast5.mmNetAmount, NetCashForecast5.mmNetUnitsNumber, NetCashForecast5.mmFlowDirection);
 				trace_lazy = () -> FundsCashFlow.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "NetCashForecast5";
 				definition = "Net cash movement to a fund as a result of investment funds transactions.";
 				previousVersion_lazy = () -> NetCashForecast4.mmObject();

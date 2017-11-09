@@ -20,10 +20,13 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.catp.ATMRejectV02;
 import com.tools20022.repository.codeset.RejectReason1Code;
 import com.tools20022.repository.datatype.Max100KBinary;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.Max500Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -111,7 +114,7 @@ public class ATMReject2 {
 			componentContext_lazy = () -> ATMReject2.mmObject();
 			isDerived = false;
 			xmlTag = "RjctInitrId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RejectInitiatorIdentification";
 			definition = "Identification of the entity sending the reject message.";
 			maxOccurs = 1;
@@ -155,7 +158,7 @@ public class ATMReject2 {
 			componentContext_lazy = () -> ATMReject2.mmObject();
 			isDerived = false;
 			xmlTag = "RjctRsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RejectReason";
 			definition = "High level information allowing the sender of a request or an advice to know the types of error, and handle them accordingly.";
 			maxOccurs = 1;
@@ -201,7 +204,7 @@ public class ATMReject2 {
 			componentContext_lazy = () -> ATMReject2.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInformation";
 			definition = "Additional information related to the sending of a reject message in response to a request or an advice.\r\nFor logging purpose, in order to allow further analysis, statistics and deferred processing on the success or the failure of the request processing.";
 			maxOccurs = 1;
@@ -240,7 +243,7 @@ public class ATMReject2 {
 			componentContext_lazy = () -> ATMReject2.mmObject();
 			isDerived = false;
 			xmlTag = "Cmd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Command";
 			definition = "Maintenance command to perform on the ATM.";
 			minOccurs = 0;
@@ -281,7 +284,7 @@ public class ATMReject2 {
 			componentContext_lazy = () -> ATMReject2.mmObject();
 			isDerived = false;
 			xmlTag = "MsgInErr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageInError";
 			definition = "Received message that has been rejected.";
 			maxOccurs = 1;
@@ -293,11 +296,10 @@ public class ATMReject2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMReject2.mmRejectInitiatorIdentification, com.tools20022.repository.msg.ATMReject2.mmRejectReason,
-						com.tools20022.repository.msg.ATMReject2.mmAdditionalInformation, com.tools20022.repository.msg.ATMReject2.mmCommand, com.tools20022.repository.msg.ATMReject2.mmMessageInError);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.catp.ATMRejectV02.mmATMReject);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(ATMReject2.mmRejectInitiatorIdentification, ATMReject2.mmRejectReason, ATMReject2.mmAdditionalInformation, ATMReject2.mmCommand, ATMReject2.mmMessageInError);
+				messageBuildingBlock_lazy = () -> Arrays.asList(ATMRejectV02.mmATMReject);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ATMReject2";
 				definition = "Information related to the reject of a message from an ATM or an ATM manager.";
 			}

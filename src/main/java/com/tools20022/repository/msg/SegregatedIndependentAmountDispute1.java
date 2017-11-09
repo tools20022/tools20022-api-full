@@ -19,8 +19,10 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.DisputeResolutionType1Choice;
 import com.tools20022.repository.entity.DisputeManagement;
+import com.tools20022.repository.GeneratedRepository;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -101,7 +103,7 @@ public class SegregatedIndependentAmountDispute1 {
 			componentContext_lazy = () -> SegregatedIndependentAmountDispute1.mmObject();
 			isDerived = false;
 			xmlTag = "DsptDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DisputeDetails";
 			definition = "Details of the disputed instruction.";
 			maxOccurs = 1;
@@ -146,7 +148,7 @@ public class SegregatedIndependentAmountDispute1 {
 			componentContext_lazy = () -> SegregatedIndependentAmountDispute1.mmObject();
 			isDerived = false;
 			xmlTag = "DsptRsltnTp1Chc";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DisputeResolutionType1Choice";
 			definition = "Specifies the type of dispute that is to be resolved regarding the disputed collateral amount.";
 			minOccurs = 0;
@@ -158,10 +160,10 @@ public class SegregatedIndependentAmountDispute1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SegregatedIndependentAmountDispute1.mmDisputeDetails, com.tools20022.repository.msg.SegregatedIndependentAmountDispute1.mmDisputeResolutionType1Choice);
+				messageElement_lazy = () -> Arrays.asList(SegregatedIndependentAmountDispute1.mmDisputeDetails, SegregatedIndependentAmountDispute1.mmDisputeResolutionType1Choice);
 				trace_lazy = () -> DisputeManagement.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
 						return DateFormat.getDateInstance(java.text.DateFormat.LONG).parse("September 9, 2017");

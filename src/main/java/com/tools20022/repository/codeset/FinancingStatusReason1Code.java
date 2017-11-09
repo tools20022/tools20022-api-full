@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.FinancingStatusReasonCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -125,7 +127,7 @@ public class FinancingStatusReason1Code extends FinancingStatusReasonCode {
 	 */
 	public static final MMCode mmCancellationRequestOutOfTime = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationRequestOutOfTime";
 			owner_lazy = () -> FinancingStatusReason1Code.mmObject();
 		}
@@ -148,7 +150,7 @@ public class FinancingStatusReason1Code extends FinancingStatusReasonCode {
 	 */
 	public static final MMCode mmNoMatchingFinancingRequest = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoMatchingFinancingRequest";
 			owner_lazy = () -> FinancingStatusReason1Code.mmObject();
 		}
@@ -171,7 +173,7 @@ public class FinancingStatusReason1Code extends FinancingStatusReasonCode {
 	 */
 	public static final MMCode mmIncorrectAccountNumber = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncorrectAccountNumber";
 			owner_lazy = () -> FinancingStatusReason1Code.mmObject();
 		}
@@ -194,7 +196,7 @@ public class FinancingStatusReason1Code extends FinancingStatusReasonCode {
 	 */
 	public static final MMCode mmClosedAccountNumber = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClosedAccountNumber";
 			owner_lazy = () -> FinancingStatusReason1Code.mmObject();
 		}
@@ -217,7 +219,7 @@ public class FinancingStatusReason1Code extends FinancingStatusReasonCode {
 	 */
 	public static final MMCode mmBlockedAccount = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BlockedAccount";
 			owner_lazy = () -> FinancingStatusReason1Code.mmObject();
 		}
@@ -240,7 +242,7 @@ public class FinancingStatusReason1Code extends FinancingStatusReasonCode {
 	 */
 	public static final MMCode mmUnrecognisedFinancingRequestor = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnrecognisedFinancingRequestor";
 			owner_lazy = () -> FinancingStatusReason1Code.mmObject();
 		}
@@ -263,7 +265,7 @@ public class FinancingStatusReason1Code extends FinancingStatusReasonCode {
 	 */
 	public static final MMCode mmUnrecognisedIntermediaryAgent = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnrecognisedIntermediaryAgent";
 			owner_lazy = () -> FinancingStatusReason1Code.mmObject();
 		}
@@ -286,7 +288,7 @@ public class FinancingStatusReason1Code extends FinancingStatusReasonCode {
 	 */
 	public static final MMCode mmUnexpectedIntermediaryAgent = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnexpectedIntermediaryAgent";
 			owner_lazy = () -> FinancingStatusReason1Code.mmObject();
 		}
@@ -309,7 +311,7 @@ public class FinancingStatusReason1Code extends FinancingStatusReasonCode {
 	 */
 	public static final MMCode mmUnrecognisedParty = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnrecognisedParty";
 			owner_lazy = () -> FinancingStatusReason1Code.mmObject();
 		}
@@ -332,7 +334,7 @@ public class FinancingStatusReason1Code extends FinancingStatusReasonCode {
 	 */
 	public static final MMCode mmInvalidPaymentDueDate = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvalidPaymentDueDate";
 			owner_lazy = () -> FinancingStatusReason1Code.mmObject();
 		}
@@ -355,7 +357,7 @@ public class FinancingStatusReason1Code extends FinancingStatusReasonCode {
 	 */
 	public static final MMCode mmDuplicatedRequestMessage = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DuplicatedRequestMessage";
 			owner_lazy = () -> FinancingStatusReason1Code.mmObject();
 		}
@@ -378,7 +380,7 @@ public class FinancingStatusReason1Code extends FinancingStatusReasonCode {
 	 */
 	public static final MMCode mmWrongIdentification = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WrongIdentification";
 			owner_lazy = () -> FinancingStatusReason1Code.mmObject();
 		}
@@ -401,7 +403,7 @@ public class FinancingStatusReason1Code extends FinancingStatusReasonCode {
 	 */
 	public static final MMCode mmInvalidDocumentNumber = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvalidDocumentNumber";
 			owner_lazy = () -> FinancingStatusReason1Code.mmObject();
 		}
@@ -424,7 +426,7 @@ public class FinancingStatusReason1Code extends FinancingStatusReasonCode {
 	 */
 	public static final MMCode mmMissingMandatoryInformation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MissingMandatoryInformation";
 			owner_lazy = () -> FinancingStatusReason1Code.mmObject();
 		}
@@ -447,7 +449,7 @@ public class FinancingStatusReason1Code extends FinancingStatusReasonCode {
 	 */
 	public static final MMCode mmNarrative = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Narrative";
 			owner_lazy = () -> FinancingStatusReason1Code.mmObject();
 		}
@@ -470,7 +472,7 @@ public class FinancingStatusReason1Code extends FinancingStatusReasonCode {
 	 */
 	public static final MMCode mmFinancingProcessAlreadyInitiated = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancingProcessAlreadyInitiated";
 			owner_lazy = () -> FinancingStatusReason1Code.mmObject();
 		}
@@ -479,19 +481,16 @@ public class FinancingStatusReason1Code extends FinancingStatusReasonCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CA01");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FinancingStatusReason1Code";
 				definition = "Specifies the coded reason for the financing status.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.FinancingStatusReason1Code.mmCancellationRequestOutOfTime, com.tools20022.repository.codeset.FinancingStatusReason1Code.mmNoMatchingFinancingRequest,
-						com.tools20022.repository.codeset.FinancingStatusReason1Code.mmIncorrectAccountNumber, com.tools20022.repository.codeset.FinancingStatusReason1Code.mmClosedAccountNumber,
-						com.tools20022.repository.codeset.FinancingStatusReason1Code.mmBlockedAccount, com.tools20022.repository.codeset.FinancingStatusReason1Code.mmUnrecognisedFinancingRequestor,
-						com.tools20022.repository.codeset.FinancingStatusReason1Code.mmUnrecognisedIntermediaryAgent, com.tools20022.repository.codeset.FinancingStatusReason1Code.mmUnexpectedIntermediaryAgent,
-						com.tools20022.repository.codeset.FinancingStatusReason1Code.mmUnrecognisedParty, com.tools20022.repository.codeset.FinancingStatusReason1Code.mmInvalidPaymentDueDate,
-						com.tools20022.repository.codeset.FinancingStatusReason1Code.mmDuplicatedRequestMessage, com.tools20022.repository.codeset.FinancingStatusReason1Code.mmWrongIdentification,
-						com.tools20022.repository.codeset.FinancingStatusReason1Code.mmInvalidDocumentNumber, com.tools20022.repository.codeset.FinancingStatusReason1Code.mmMissingMandatoryInformation,
-						com.tools20022.repository.codeset.FinancingStatusReason1Code.mmNarrative, com.tools20022.repository.codeset.FinancingStatusReason1Code.mmFinancingProcessAlreadyInitiated);
+				code_lazy = () -> Arrays.asList(FinancingStatusReason1Code.mmCancellationRequestOutOfTime, FinancingStatusReason1Code.mmNoMatchingFinancingRequest, FinancingStatusReason1Code.mmIncorrectAccountNumber,
+						FinancingStatusReason1Code.mmClosedAccountNumber, FinancingStatusReason1Code.mmBlockedAccount, FinancingStatusReason1Code.mmUnrecognisedFinancingRequestor, FinancingStatusReason1Code.mmUnrecognisedIntermediaryAgent,
+						FinancingStatusReason1Code.mmUnexpectedIntermediaryAgent, FinancingStatusReason1Code.mmUnrecognisedParty, FinancingStatusReason1Code.mmInvalidPaymentDueDate, FinancingStatusReason1Code.mmDuplicatedRequestMessage,
+						FinancingStatusReason1Code.mmWrongIdentification, FinancingStatusReason1Code.mmInvalidDocumentNumber, FinancingStatusReason1Code.mmMissingMandatoryInformation, FinancingStatusReason1Code.mmNarrative,
+						FinancingStatusReason1Code.mmFinancingProcessAlreadyInitiated);
 				trace_lazy = () -> FinancingStatusReasonCode.mmObject();
 			}
 		});

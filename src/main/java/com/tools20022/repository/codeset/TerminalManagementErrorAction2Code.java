@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.TerminalManagementErrorActionCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -85,7 +87,7 @@ public class TerminalManagementErrorAction2Code extends TerminalManagementErrorA
 	 */
 	public static final MMCode mmSendStatusReport = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SendStatusReport";
 			owner_lazy = () -> TerminalManagementErrorAction2Code.mmObject();
 		}
@@ -108,7 +110,7 @@ public class TerminalManagementErrorAction2Code extends TerminalManagementErrorA
 	 */
 	public static final MMCode mmStopSequence = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StopSequence";
 			owner_lazy = () -> TerminalManagementErrorAction2Code.mmObject();
 		}
@@ -117,12 +119,12 @@ public class TerminalManagementErrorAction2Code extends TerminalManagementErrorA
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("SDSR");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TerminalManagementErrorAction2Code";
 				definition = "Action to perform in case of error during the maintenance action in progress.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TerminalManagementErrorAction2Code.mmSendStatusReport, com.tools20022.repository.codeset.TerminalManagementErrorAction2Code.mmStopSequence);
+				code_lazy = () -> Arrays.asList(TerminalManagementErrorAction2Code.mmSendStatusReport, TerminalManagementErrorAction2Code.mmStopSequence);
 				trace_lazy = () -> TerminalManagementErrorActionCode.mmObject();
 			}
 		});

@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.AssetClassCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -86,7 +88,7 @@ public class AssetClass1Code extends AssetClassCode {
 	 */
 	public static final MMCode mmCorporateDebt = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorporateDebt";
 			owner_lazy = () -> AssetClass1Code.mmObject();
 		}
@@ -109,7 +111,7 @@ public class AssetClass1Code extends AssetClassCode {
 	 */
 	public static final MMCode mmCorporateEquity = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorporateEquity";
 			owner_lazy = () -> AssetClass1Code.mmObject();
 		}
@@ -132,7 +134,7 @@ public class AssetClass1Code extends AssetClassCode {
 	 */
 	public static final MMCode mmMunicipalDebt = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MunicipalDebt";
 			owner_lazy = () -> AssetClass1Code.mmObject();
 		}
@@ -141,13 +143,12 @@ public class AssetClass1Code extends AssetClassCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CRPB");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AssetClass1Code";
 				definition = "Specifies DTC (The Depository Trust Company) defined asset class.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AssetClass1Code.mmCorporateDebt, com.tools20022.repository.codeset.AssetClass1Code.mmCorporateEquity,
-						com.tools20022.repository.codeset.AssetClass1Code.mmMunicipalDebt);
+				code_lazy = () -> Arrays.asList(AssetClass1Code.mmCorporateDebt, AssetClass1Code.mmCorporateEquity, AssetClass1Code.mmMunicipalDebt);
 				trace_lazy = () -> AssetClassCode.mmObject();
 			}
 		});

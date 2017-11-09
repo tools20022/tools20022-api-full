@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,12 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.Entry2Code Entry2Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>{@linkplain com.tools20022.repository.codeset.EntryCode#mmTrial
@@ -35,12 +43,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * EntryCode.mmOfficial}</li>
  * <li>{@linkplain com.tools20022.repository.codeset.EntryCode#mmRequested
  * EntryCode.mmRequested}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.Entry2Code Entry2Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -89,7 +91,7 @@ public class EntryCode {
 	 */
 	public static final MMCode mmTrial = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Trial";
 			definition = "Trial pay-in schedule.";
 			owner_lazy = () -> EntryCode.mmObject();
@@ -118,7 +120,7 @@ public class EntryCode {
 	 */
 	public static final MMCode mmOfficial = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Official";
 			definition = "Official pay-in schedule.";
 			owner_lazy = () -> EntryCode.mmObject();
@@ -147,7 +149,7 @@ public class EntryCode {
 	 */
 	public static final MMCode mmRequested = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Requested";
 			definition = "Pay-in schedule on request.";
 			owner_lazy = () -> EntryCode.mmObject();
@@ -158,12 +160,12 @@ public class EntryCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("TRIA");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "EntryCode";
 				definition = "Specifies the type of an entry in a report.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.EntryCode.mmTrial, com.tools20022.repository.codeset.EntryCode.mmOfficial, com.tools20022.repository.codeset.EntryCode.mmRequested);
+				code_lazy = () -> Arrays.asList(EntryCode.mmTrial, EntryCode.mmOfficial, EntryCode.mmRequested);
 				derivation_lazy = () -> Arrays.asList(Entry2Code.mmObject());
 			}
 		});

@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.AmountTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -85,7 +87,7 @@ public class AmountType2Code extends AmountTypeCode {
 	 */
 	public static final MMCode mmFixedAmount = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FixedAmount";
 			owner_lazy = () -> AmountType2Code.mmObject();
 		}
@@ -108,7 +110,7 @@ public class AmountType2Code extends AmountTypeCode {
 	 */
 	public static final MMCode mmMaximumAmount = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaximumAmount";
 			owner_lazy = () -> AmountType2Code.mmObject();
 		}
@@ -131,7 +133,7 @@ public class AmountType2Code extends AmountTypeCode {
 	 */
 	public static final MMCode mmMinimumAmount = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MinimumAmount";
 			owner_lazy = () -> AmountType2Code.mmObject();
 		}
@@ -140,13 +142,12 @@ public class AmountType2Code extends AmountTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("FIXD");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AmountType2Code";
 				definition = "Specifies the amount type.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AmountType2Code.mmFixedAmount, com.tools20022.repository.codeset.AmountType2Code.mmMaximumAmount,
-						com.tools20022.repository.codeset.AmountType2Code.mmMinimumAmount);
+				code_lazy = () -> Arrays.asList(AmountType2Code.mmFixedAmount, AmountType2Code.mmMaximumAmount, AmountType2Code.mmMinimumAmount);
 				trace_lazy = () -> AmountTypeCode.mmObject();
 			}
 		});

@@ -17,9 +17,13 @@
 
 package com.tools20022.repository.entity;
 
+import com.tools20022.metamodel.MMAggregation;
 import com.tools20022.metamodel.MMBusinessAssociationEnd;
 import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.CashSettlementInstructionPartyRole;
+import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -35,14 +39,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SettlementInstructionSystemRole#mmSystem
- * SettlementInstructionSystemRole.mmSystem}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
  * associationDomain} =
@@ -71,6 +67,14 @@ import java.util.List;
  * superType} =
  * {@linkplain com.tools20022.repository.entity.CashSettlementInstructionPartyRole
  * CashSettlementInstructionPartyRole}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SettlementInstructionSystemRole#mmSystem
+ * SettlementInstructionSystemRole.mmSystem}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -491,54 +495,38 @@ public class SettlementInstructionSystemRole extends CashSettlementInstructionPa
 	 */
 	public static final MMBusinessAssociationEnd mmSystem = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SettlementDetails50.mmCashClearingSystem, com.tools20022.repository.msg.SettlementDetails51.mmCashClearingSystem,
-					com.tools20022.repository.msg.SettlementDetails9.mmCashClearingSystem, com.tools20022.repository.msg.SettlementDetails17.mmCashClearingSystem, com.tools20022.repository.msg.SettlementDetails30.mmCashClearingSystem,
-					com.tools20022.repository.msg.SettlementDetails32.mmCashClearingSystem, com.tools20022.repository.msg.SettlementDetails60.mmCashClearingSystem, com.tools20022.repository.msg.SettlementDetails64.mmCashClearingSystem,
-					com.tools20022.repository.msg.SettlementDetails3.mmCashClearingSystem, com.tools20022.repository.msg.SettlementDetails16.mmCashClearingSystem, com.tools20022.repository.msg.SettlementDetails31.mmCashClearingSystem,
-					com.tools20022.repository.msg.SettlementDetails40.mmCashClearingSystem, com.tools20022.repository.msg.SettlementDetails62.mmCashClearingSystem, com.tools20022.repository.msg.SettlementDetails63.mmCashClearingSystem,
-					com.tools20022.repository.msg.SettlementDetails6.mmCashClearingSystem, com.tools20022.repository.msg.SettlementDetails20.mmCashClearingSystem, com.tools20022.repository.msg.SettlementDetails24.mmCashClearingSystem,
-					com.tools20022.repository.msg.SettlementDetails33.mmCashClearingSystem, com.tools20022.repository.msg.SettlementDetails45.mmCashClearingSystem, com.tools20022.repository.msg.SettlementDetails54.mmCashClearingSystem,
-					com.tools20022.repository.msg.SettlementDetails1.mmCashClearingSystem, com.tools20022.repository.msg.SettlementDetails19.mmCashClearingSystem, com.tools20022.repository.msg.SettlementDetails22.mmCashClearingSystem,
-					com.tools20022.repository.msg.SettlementDetails35.mmCashClearingSystem, com.tools20022.repository.msg.SettlementDetails42.mmCashClearingSystem, com.tools20022.repository.msg.SettlementDetails52.mmCashClearingSystem,
-					com.tools20022.repository.msg.SettlementDetails8.mmCashClearingSystem, com.tools20022.repository.msg.SettlementDetails11.mmCashClearingSystem, com.tools20022.repository.msg.SettlementDetails23.mmCashClearingSystem,
-					com.tools20022.repository.msg.SettlementDetails37.mmCashClearingSystem, com.tools20022.repository.msg.SettlementDetails44.mmCashClearingSystem, com.tools20022.repository.msg.SettlementDetails53.mmCashClearingSystem,
-					com.tools20022.repository.msg.SettlementDetails7.mmCashClearingSystem, com.tools20022.repository.msg.SettlementDetails12.mmCashClearingSystem, com.tools20022.repository.msg.SettlementDetails28.mmCashClearingSystem,
-					com.tools20022.repository.msg.SettlementDetails38.mmCashClearingSystem, com.tools20022.repository.msg.SettlementDetails47.mmCashClearingSystem, com.tools20022.repository.msg.SettlementDetails56.mmCashClearingSystem,
-					com.tools20022.repository.msg.SettlementDetails2.mmCashClearingSystem, com.tools20022.repository.msg.SettlementDetails13.mmCashClearingSystem, com.tools20022.repository.msg.SettlementDetails27.mmCashClearingSystem,
-					com.tools20022.repository.msg.SettlementDetails39.mmCashClearingSystem, com.tools20022.repository.msg.SettlementDetails48.mmCashClearingSystem, com.tools20022.repository.msg.SettlementDetails57.mmCashClearingSystem,
-					com.tools20022.repository.msg.SettlementDetails43.mmCashClearingSystem, com.tools20022.repository.msg.SettlementDetails10.mmCashClearingSystem, com.tools20022.repository.msg.SettlementDetails29.mmCashClearingSystem,
-					com.tools20022.repository.msg.SettlementDetails5.mmCashClearingSystem, com.tools20022.repository.msg.SettlementDetails25.mmCashClearingSystem, com.tools20022.repository.msg.SettlementDetails26.mmCashClearingSystem,
-					com.tools20022.repository.msg.SettlementDetails65.mmCashClearingSystem, com.tools20022.repository.msg.SettlementDetails14.mmCashClearingSystem, com.tools20022.repository.msg.SettlementDetails41.mmCashClearingSystem,
-					com.tools20022.repository.msg.SettlementDetails61.mmCashClearingSystem, com.tools20022.repository.msg.SettlementDetails59.mmCashClearingSystem, com.tools20022.repository.msg.SettlementDetails15.mmCashClearingSystem,
-					com.tools20022.repository.msg.SettlementDetails34.mmCashClearingSystem, com.tools20022.repository.msg.SettlementDetails49.mmCashClearingSystem, com.tools20022.repository.msg.SettlementDetails58.mmCashClearingSystem,
-					com.tools20022.repository.msg.SettlementDetails36.mmCashClearingSystem, com.tools20022.repository.msg.SettlementDetails66.mmCashClearingSystem, com.tools20022.repository.msg.SettlementDetails67.mmCashClearingSystem,
-					com.tools20022.repository.msg.SettlementDetails70.mmCashClearingSystem, com.tools20022.repository.msg.SettlementDetails68.mmCashClearingSystem, com.tools20022.repository.msg.SettlementDetails69.mmCashClearingSystem,
-					com.tools20022.repository.msg.SettlementDetails71.mmCashClearingSystem, com.tools20022.repository.msg.SettlementDetails72.mmCashClearingSystem, com.tools20022.repository.msg.SettlementDetails75.mmCashClearingSystem,
-					com.tools20022.repository.msg.SettlementDetails73.mmCashClearingSystem, com.tools20022.repository.msg.SettlementDetails74.mmCashClearingSystem, com.tools20022.repository.msg.SettlementDetails81.mmCashClearingSystem,
-					com.tools20022.repository.msg.SettlementDetails76.mmCashClearingSystem, com.tools20022.repository.msg.SettlementDetails80.mmCashClearingSystem, com.tools20022.repository.msg.SettlementDetails78.mmCashClearingSystem,
-					com.tools20022.repository.msg.SettlementDetails77.mmCashClearingSystem, com.tools20022.repository.msg.SettlementDetails79.mmCashClearingSystem, com.tools20022.repository.msg.SettlementDetails87.mmCashClearingSystem,
-					com.tools20022.repository.msg.SettlementDetails83.mmCashClearingSystem, com.tools20022.repository.msg.SettlementDetails86.mmCashClearingSystem, com.tools20022.repository.msg.SettlementDetails85.mmCashClearingSystem,
-					com.tools20022.repository.msg.SettlementDetails93.mmCashClearingSystem, com.tools20022.repository.msg.SettlementDetails90.mmCashClearingSystem, com.tools20022.repository.msg.SettlementDetails96.mmCashClearingSystem,
-					com.tools20022.repository.msg.SettlementDetails97.mmCashClearingSystem, com.tools20022.repository.msg.SettlementDetails99.mmCashClearingSystem, com.tools20022.repository.msg.SettlementDetails94.mmCashClearingSystem,
-					com.tools20022.repository.msg.SettlementDetails95.mmCashClearingSystem, com.tools20022.repository.msg.SettlementDetails91.mmCashClearingSystem, com.tools20022.repository.msg.SettlementDetails92.mmCashClearingSystem,
-					com.tools20022.repository.msg.SettlementDetails98.mmCashClearingSystem, com.tools20022.repository.msg.SettlementDetails101.mmCashClearingSystem, com.tools20022.repository.msg.SettlementDetails105.mmCashClearingSystem,
-					com.tools20022.repository.msg.SettlementDetails106.mmCashClearingSystem, com.tools20022.repository.msg.SettlementDetails104.mmCashClearingSystem, com.tools20022.repository.msg.SettlementDetails111.mmCashClearingSystem,
-					com.tools20022.repository.msg.SettlementDetails112.mmCashClearingSystem, com.tools20022.repository.msg.SettlementDetails110.mmCashClearingSystem, com.tools20022.repository.msg.SettlementDetails108.mmCashClearingSystem,
-					com.tools20022.repository.msg.SettlementDetails107.mmCashClearingSystem, com.tools20022.repository.msg.SettlementDetails115.mmCashClearingSystem, com.tools20022.repository.msg.SettlementDetails117.mmCashClearingSystem,
-					com.tools20022.repository.msg.SettlementDetails116.mmCashClearingSystem, com.tools20022.repository.msg.SettlementDetails113.mmCashClearingSystem, com.tools20022.repository.msg.SettlementDetails128.mmCashClearingSystem,
-					com.tools20022.repository.msg.SettlementDetails120.mmCashClearingSystem, com.tools20022.repository.msg.SettlementDetails119.mmCashClearingSystem, com.tools20022.repository.msg.SettlementDetails125.mmCashClearingSystem,
-					com.tools20022.repository.msg.SettlementDetails126.mmCashClearingSystem, com.tools20022.repository.msg.SettlementDetails122.mmCashClearingSystem, com.tools20022.repository.msg.SettlementDetails127.mmCashClearingSystem,
-					com.tools20022.repository.msg.SettlementDetails121.mmCashClearingSystem, com.tools20022.repository.msg.SettlementDetails134.mmCashClearingSystem, com.tools20022.repository.msg.SettlementDetails137.mmCashClearingSystem,
-					com.tools20022.repository.msg.SettlementDetails132.mmCashClearingSystem, com.tools20022.repository.msg.SettlementDetails138.mmCashClearingSystem, com.tools20022.repository.msg.SettlementDetails130.mmCashClearingSystem,
-					com.tools20022.repository.msg.SettlementDetails131.mmCashClearingSystem, com.tools20022.repository.msg.SettlementDetails133.mmCashClearingSystem, com.tools20022.repository.msg.SettlementDetails139.mmCashClearingSystem);
+			derivation_lazy = () -> Arrays.asList(SettlementDetails50.mmCashClearingSystem, SettlementDetails51.mmCashClearingSystem, SettlementDetails9.mmCashClearingSystem, SettlementDetails17.mmCashClearingSystem,
+					SettlementDetails30.mmCashClearingSystem, SettlementDetails32.mmCashClearingSystem, SettlementDetails60.mmCashClearingSystem, SettlementDetails64.mmCashClearingSystem, SettlementDetails3.mmCashClearingSystem,
+					SettlementDetails16.mmCashClearingSystem, SettlementDetails31.mmCashClearingSystem, SettlementDetails40.mmCashClearingSystem, SettlementDetails62.mmCashClearingSystem, SettlementDetails63.mmCashClearingSystem,
+					SettlementDetails6.mmCashClearingSystem, SettlementDetails20.mmCashClearingSystem, SettlementDetails24.mmCashClearingSystem, SettlementDetails33.mmCashClearingSystem, SettlementDetails45.mmCashClearingSystem,
+					SettlementDetails54.mmCashClearingSystem, SettlementDetails1.mmCashClearingSystem, SettlementDetails19.mmCashClearingSystem, SettlementDetails22.mmCashClearingSystem, SettlementDetails35.mmCashClearingSystem,
+					SettlementDetails42.mmCashClearingSystem, SettlementDetails52.mmCashClearingSystem, SettlementDetails8.mmCashClearingSystem, SettlementDetails11.mmCashClearingSystem, SettlementDetails23.mmCashClearingSystem,
+					SettlementDetails37.mmCashClearingSystem, SettlementDetails44.mmCashClearingSystem, SettlementDetails53.mmCashClearingSystem, SettlementDetails7.mmCashClearingSystem, SettlementDetails12.mmCashClearingSystem,
+					SettlementDetails28.mmCashClearingSystem, SettlementDetails38.mmCashClearingSystem, SettlementDetails47.mmCashClearingSystem, SettlementDetails56.mmCashClearingSystem, SettlementDetails2.mmCashClearingSystem,
+					SettlementDetails13.mmCashClearingSystem, SettlementDetails27.mmCashClearingSystem, SettlementDetails39.mmCashClearingSystem, SettlementDetails48.mmCashClearingSystem, SettlementDetails57.mmCashClearingSystem,
+					SettlementDetails43.mmCashClearingSystem, SettlementDetails10.mmCashClearingSystem, SettlementDetails29.mmCashClearingSystem, SettlementDetails5.mmCashClearingSystem, SettlementDetails25.mmCashClearingSystem,
+					SettlementDetails26.mmCashClearingSystem, SettlementDetails65.mmCashClearingSystem, SettlementDetails14.mmCashClearingSystem, SettlementDetails41.mmCashClearingSystem, SettlementDetails61.mmCashClearingSystem,
+					SettlementDetails59.mmCashClearingSystem, SettlementDetails15.mmCashClearingSystem, SettlementDetails34.mmCashClearingSystem, SettlementDetails49.mmCashClearingSystem, SettlementDetails58.mmCashClearingSystem,
+					SettlementDetails36.mmCashClearingSystem, SettlementDetails66.mmCashClearingSystem, SettlementDetails67.mmCashClearingSystem, SettlementDetails70.mmCashClearingSystem, SettlementDetails68.mmCashClearingSystem,
+					SettlementDetails69.mmCashClearingSystem, SettlementDetails71.mmCashClearingSystem, SettlementDetails72.mmCashClearingSystem, SettlementDetails75.mmCashClearingSystem, SettlementDetails73.mmCashClearingSystem,
+					SettlementDetails74.mmCashClearingSystem, SettlementDetails81.mmCashClearingSystem, SettlementDetails76.mmCashClearingSystem, SettlementDetails80.mmCashClearingSystem, SettlementDetails78.mmCashClearingSystem,
+					SettlementDetails77.mmCashClearingSystem, SettlementDetails79.mmCashClearingSystem, SettlementDetails87.mmCashClearingSystem, SettlementDetails83.mmCashClearingSystem, SettlementDetails86.mmCashClearingSystem,
+					SettlementDetails85.mmCashClearingSystem, SettlementDetails93.mmCashClearingSystem, SettlementDetails90.mmCashClearingSystem, SettlementDetails96.mmCashClearingSystem, SettlementDetails97.mmCashClearingSystem,
+					SettlementDetails99.mmCashClearingSystem, SettlementDetails94.mmCashClearingSystem, SettlementDetails95.mmCashClearingSystem, SettlementDetails91.mmCashClearingSystem, SettlementDetails92.mmCashClearingSystem,
+					SettlementDetails98.mmCashClearingSystem, SettlementDetails101.mmCashClearingSystem, SettlementDetails105.mmCashClearingSystem, SettlementDetails106.mmCashClearingSystem, SettlementDetails104.mmCashClearingSystem,
+					SettlementDetails111.mmCashClearingSystem, SettlementDetails112.mmCashClearingSystem, SettlementDetails110.mmCashClearingSystem, SettlementDetails108.mmCashClearingSystem, SettlementDetails107.mmCashClearingSystem,
+					SettlementDetails115.mmCashClearingSystem, SettlementDetails117.mmCashClearingSystem, SettlementDetails116.mmCashClearingSystem, SettlementDetails113.mmCashClearingSystem, SettlementDetails128.mmCashClearingSystem,
+					SettlementDetails120.mmCashClearingSystem, SettlementDetails119.mmCashClearingSystem, SettlementDetails125.mmCashClearingSystem, SettlementDetails126.mmCashClearingSystem, SettlementDetails122.mmCashClearingSystem,
+					SettlementDetails127.mmCashClearingSystem, SettlementDetails121.mmCashClearingSystem, SettlementDetails134.mmCashClearingSystem, SettlementDetails137.mmCashClearingSystem, SettlementDetails132.mmCashClearingSystem,
+					SettlementDetails138.mmCashClearingSystem, SettlementDetails130.mmCashClearingSystem, SettlementDetails131.mmCashClearingSystem, SettlementDetails133.mmCashClearingSystem, SettlementDetails139.mmCashClearingSystem);
 			elementContext_lazy = () -> SettlementInstructionSystemRole.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "System";
 			definition = "Specifies the system which plays a role in the settlement of a payment.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.CashClearingSystem.mmSystemRole;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.CashClearingSystem.mmObject();
 		}
 	};
@@ -546,15 +534,14 @@ public class SettlementInstructionSystemRole extends CashSettlementInstructionPa
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SettlementInstructionSystemRole";
 				definition = "Identification of a specific system or set of rules and/or processes to be applied at the settlement place.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CashClearingSystem.mmSystemRole);
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SettlementInstruction4.mmClearingSystem, com.tools20022.repository.msg.SettlementInstruction1.mmClearingSystem,
-						com.tools20022.repository.msg.SettlementInstruction2.mmClearingSystem);
+				derivationElement_lazy = () -> Arrays.asList(SettlementInstruction4.mmClearingSystem, SettlementInstruction1.mmClearingSystem, SettlementInstruction2.mmClearingSystem);
 				superType_lazy = () -> CashSettlementInstructionPartyRole.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SettlementInstructionSystemRole.mmSystem);
+				element_lazy = () -> Arrays.asList(SettlementInstructionSystemRole.mmSystem);
 			}
 		});
 		return mmObject_lazy.get();

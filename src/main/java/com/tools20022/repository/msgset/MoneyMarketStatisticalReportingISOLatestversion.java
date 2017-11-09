@@ -18,7 +18,9 @@
 package com.tools20022.repository.msgset;
 
 import com.tools20022.metamodel.MMMessageSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.auth.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -72,8 +74,8 @@ public class MoneyMarketStatisticalReportingISOLatestversion {
 	final static public MMMessageSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageSet() {
 			{
-				businessProcessCatalogue_lazy = () -> com.tools20022.repository.GeneratedRepository.mmcatalogue;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				businessProcessCatalogue_lazy = () -> GeneratedRepository.mmcatalogue;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Money Market Statistical Reporting - ISO - Latest version";
 				definition = "This message set provides for the specification of the statistical reporting requirements.";
 				messageDefinition_lazy = () -> Arrays.asList(MoneyMarketStatisticalReportStatusAdviceV01.mmObject(), MoneyMarketUnsecuredMarketStatisticalReportV02.mmObject(), MoneyMarketForeignExchangeSwapsStatisticalReportV02.mmObject(),

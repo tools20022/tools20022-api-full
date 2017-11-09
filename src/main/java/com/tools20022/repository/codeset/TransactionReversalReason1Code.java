@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.TransactionReasonCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -95,7 +97,7 @@ public class TransactionReversalReason1Code extends TransactionReasonCode {
 	 */
 	public static final MMCode mmClosedAccountNumber = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClosedAccountNumber";
 			owner_lazy = () -> TransactionReversalReason1Code.mmObject();
 		}
@@ -118,7 +120,7 @@ public class TransactionReversalReason1Code extends TransactionReasonCode {
 	 */
 	public static final MMCode mmDuplication = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Duplication";
 			owner_lazy = () -> TransactionReversalReason1Code.mmObject();
 		}
@@ -141,7 +143,7 @@ public class TransactionReversalReason1Code extends TransactionReasonCode {
 	 */
 	public static final MMCode mmInvalidBankOperationCode = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvalidBankOperationCode";
 			owner_lazy = () -> TransactionReversalReason1Code.mmObject();
 		}
@@ -164,7 +166,7 @@ public class TransactionReversalReason1Code extends TransactionReasonCode {
 	 */
 	public static final MMCode mmNoMandate = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoMandate";
 			owner_lazy = () -> TransactionReversalReason1Code.mmObject();
 		}
@@ -187,7 +189,7 @@ public class TransactionReversalReason1Code extends TransactionReasonCode {
 	 */
 	public static final MMCode mmCollectionNotDue = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollectionNotDue";
 			owner_lazy = () -> TransactionReversalReason1Code.mmObject();
 		}
@@ -196,14 +198,13 @@ public class TransactionReversalReason1Code extends TransactionReasonCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("AC04");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TransactionReversalReason1Code";
 				definition = "Specifies the reason for a transaction to be reversed by an instructed agent or somebody acting on behalf of an instructed agent.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TransactionReversalReason1Code.mmClosedAccountNumber, com.tools20022.repository.codeset.TransactionReversalReason1Code.mmDuplication,
-						com.tools20022.repository.codeset.TransactionReversalReason1Code.mmInvalidBankOperationCode, com.tools20022.repository.codeset.TransactionReversalReason1Code.mmNoMandate,
-						com.tools20022.repository.codeset.TransactionReversalReason1Code.mmCollectionNotDue);
+				code_lazy = () -> Arrays.asList(TransactionReversalReason1Code.mmClosedAccountNumber, TransactionReversalReason1Code.mmDuplication, TransactionReversalReason1Code.mmInvalidBankOperationCode,
+						TransactionReversalReason1Code.mmNoMandate, TransactionReversalReason1Code.mmCollectionNotDue);
 				trace_lazy = () -> TransactionReasonCode.mmObject();
 			}
 		});

@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.InterestMethodCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -84,7 +86,7 @@ public class InterestMethod1Code extends InterestMethodCode {
 	 */
 	public static final MMCode mmPhysicalSettlement = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PhysicalSettlement";
 			owner_lazy = () -> InterestMethod1Code.mmObject();
 		}
@@ -107,7 +109,7 @@ public class InterestMethod1Code extends InterestMethodCode {
 	 */
 	public static final MMCode mmRollIn = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RollIn";
 			owner_lazy = () -> InterestMethod1Code.mmObject();
 		}
@@ -116,12 +118,12 @@ public class InterestMethod1Code extends InterestMethodCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("PHYS");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InterestMethod1Code";
 				definition = "Specifies whether the interest will be setlled in cash or rolled in.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.InterestMethod1Code.mmPhysicalSettlement, com.tools20022.repository.codeset.InterestMethod1Code.mmRollIn);
+				code_lazy = () -> Arrays.asList(InterestMethod1Code.mmPhysicalSettlement, InterestMethod1Code.mmRollIn);
 				trace_lazy = () -> InterestMethodCode.mmObject();
 			}
 		});

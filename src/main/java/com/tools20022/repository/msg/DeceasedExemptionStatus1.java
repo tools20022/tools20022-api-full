@@ -20,9 +20,11 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.AcknowledgementOfExemption1Choice;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -100,7 +102,7 @@ public class DeceasedExemptionStatus1 {
 			componentContext_lazy = () -> DeceasedExemptionStatus1.mmObject();
 			isDerived = false;
 			xmlTag = "BnfclOwnrDthDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BeneficialOwnerDeathDate";
 			definition = "Date of death of the beneficial owner.";
 			maxOccurs = 1;
@@ -141,7 +143,7 @@ public class DeceasedExemptionStatus1 {
 			componentContext_lazy = () -> DeceasedExemptionStatus1.mmObject();
 			isDerived = false;
 			xmlTag = "DthCertSrlNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeathCertificateSerialNumber";
 			definition = "Serial number of the death certificate.";
 			maxOccurs = 1;
@@ -183,7 +185,7 @@ public class DeceasedExemptionStatus1 {
 			componentContext_lazy = () -> DeceasedExemptionStatus1.mmObject();
 			isDerived = false;
 			xmlTag = "IssgJursdctn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssuingJurisdiction";
 			definition = "Identification of the jurisdiction issuing the death certificate.";
 			maxOccurs = 1;
@@ -228,7 +230,7 @@ public class DeceasedExemptionStatus1 {
 			componentContext_lazy = () -> DeceasedExemptionStatus1.mmObject();
 			isDerived = false;
 			xmlTag = "DcmnttnAckOfXmptn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DocumentationAcknowledgementOfExemption";
 			definition = "Acknowledgement of exempt instruction specifying whether the documentation will be sent to DTC (The Depository Trust Corporation) or not (not maintained by DTCC).";
 			maxOccurs = 1;
@@ -241,10 +243,10 @@ public class DeceasedExemptionStatus1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DeceasedExemptionStatus1.mmBeneficialOwnerDeathDate, com.tools20022.repository.msg.DeceasedExemptionStatus1.mmDeathCertificateSerialNumber,
-						com.tools20022.repository.msg.DeceasedExemptionStatus1.mmIssuingJurisdiction, com.tools20022.repository.msg.DeceasedExemptionStatus1.mmDocumentationAcknowledgementOfExemption);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(DeceasedExemptionStatus1.mmBeneficialOwnerDeathDate, DeceasedExemptionStatus1.mmDeathCertificateSerialNumber, DeceasedExemptionStatus1.mmIssuingJurisdiction,
+						DeceasedExemptionStatus1.mmDocumentationAcknowledgementOfExemption);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "DeceasedExemptionStatus1";
 				definition = "Deceased beneficial owner exemption information.";
 			}

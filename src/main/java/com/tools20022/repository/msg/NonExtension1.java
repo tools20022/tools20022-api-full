@@ -20,12 +20,13 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.CommunicationMethod1Choice;
 import com.tools20022.repository.choice.PartyType1Choice;
 import com.tools20022.repository.datatype.Max140Text;
 import com.tools20022.repository.datatype.Number;
-import com.tools20022.repository.entity.PostalAddress;
-import com.tools20022.repository.entity.UndertakingExtension;
+import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -113,11 +114,11 @@ public class NonExtension1 {
 	 */
 	public static final MMMessageAttribute mmNotificationPeriod = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.UndertakingExtension.mmNonExtensionNoticePeriod;
+			businessElementTrace_lazy = () -> UndertakingExtension.mmNonExtensionNoticePeriod;
 			componentContext_lazy = () -> NonExtension1.mmObject();
 			isDerived = false;
 			xmlTag = "NtfctnPrd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotificationPeriod";
 			definition = "Minimum number of days prior to the then current expiry date by which notice of non-extension must be sent. ";
 			maxOccurs = 1;
@@ -162,11 +163,11 @@ public class NonExtension1 {
 	 */
 	public static final MMMessageAttribute mmNotificationMethod = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Presentation.mmCommunicationMethod;
+			businessElementTrace_lazy = () -> Presentation.mmCommunicationMethod;
 			componentContext_lazy = () -> NonExtension1.mmObject();
 			isDerived = false;
 			xmlTag = "NtfctnMtd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotificationMethod";
 			definition = "Method by which the notice of non-extension is intended to be delivered.";
 			maxOccurs = 1;
@@ -210,11 +211,11 @@ public class NonExtension1 {
 	 */
 	public static final MMMessageAssociationEnd mmNotificationRecipientType = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> NonExtension1.mmObject();
 			isDerived = false;
 			xmlTag = "NtfctnRcptTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotificationRecipientType";
 			definition = "Type of party to whom the notice of non-extension is intended to be delivered.";
 			maxOccurs = 1;
@@ -260,11 +261,11 @@ public class NonExtension1 {
 	 */
 	public static final MMMessageAttribute mmNotificationRecipientName = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyName.mmName;
+			businessElementTrace_lazy = () -> PartyName.mmName;
 			componentContext_lazy = () -> NonExtension1.mmObject();
 			isDerived = false;
 			xmlTag = "NtfctnRcptNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotificationRecipientName";
 			definition = "Name of party to whom the notice of non-extension is intended to be delivered.";
 			maxOccurs = 1;
@@ -313,7 +314,7 @@ public class NonExtension1 {
 			componentContext_lazy = () -> NonExtension1.mmObject();
 			isDerived = false;
 			xmlTag = "NtfctnRcptAdr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotificationRecipientAddress";
 			definition = "Address of party to whom the notice of non-extension is intended to be delivered.";
 			maxOccurs = 1;
@@ -325,12 +326,11 @@ public class NonExtension1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.NonExtension1.mmNotificationPeriod, com.tools20022.repository.msg.NonExtension1.mmNotificationMethod,
-						com.tools20022.repository.msg.NonExtension1.mmNotificationRecipientType, com.tools20022.repository.msg.NonExtension1.mmNotificationRecipientName,
-						com.tools20022.repository.msg.NonExtension1.mmNotificationRecipientAddress);
+				messageElement_lazy = () -> Arrays.asList(NonExtension1.mmNotificationPeriod, NonExtension1.mmNotificationMethod, NonExtension1.mmNotificationRecipientType, NonExtension1.mmNotificationRecipientName,
+						NonExtension1.mmNotificationRecipientAddress);
 				trace_lazy = () -> UndertakingExtension.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "NonExtension1";
 				definition = "Non-extension information.";
 			}

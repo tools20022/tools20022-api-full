@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -28,6 +30,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.OrderType1Code
+ * OrderType1Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.OrderType2Code
+ * OrderType2Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>{@linkplain com.tools20022.repository.codeset.OrderTypeCode#mmAllOrNone
@@ -112,15 +123,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * OrderTypeCode.mmCounterOrderSelection}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.OrderType1Code
- * OrderType1Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.OrderType2Code
- * OrderType2Code}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -175,7 +177,7 @@ public class OrderTypeCode {
 	 */
 	public static final MMCode mmAllOrNone = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AllOrNone";
 			definition = "A round-lot market or limit price order that must be executed in its entirety or not at all; unlike fill or kill orders, all or none orders are not treated as canceled if they are not executed as soon as represented in the trading crowd.";
 			owner_lazy = () -> OrderTypeCode.mmObject();
@@ -205,7 +207,7 @@ public class OrderTypeCode {
 	 */
 	public static final MMCode mmBuyContraShortExempt = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BuyContraShortExempt";
 			definition = "A buy contra short exempt.";
 			owner_lazy = () -> OrderTypeCode.mmObject();
@@ -235,7 +237,7 @@ public class OrderTypeCode {
 	 */
 	public static final MMCode mmBuyContraShort = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BuyContraShort";
 			definition = "An order to buy contra short.";
 			owner_lazy = () -> OrderTypeCode.mmObject();
@@ -273,7 +275,7 @@ public class OrderTypeCode {
 	 */
 	public static final MMCode mmBuyMinus = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BuyMinus";
 			definition = "An order to buy at a price lower than the current market price. This is an order to buy a stated amount of a financial instrument provided that its price is not higher than the last sale if the last sale was a minus or zero minus tick, not higher than the last sale minus the minimum fractional change in the stock if the last sale was a plus or zero plus tick. The price limit indicates the highest price at which the order can be executed.";
 			owner_lazy = () -> OrderTypeCode.mmObject();
@@ -306,7 +308,7 @@ public class OrderTypeCode {
 	 */
 	public static final MMCode mmCarefully = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Carefully";
 			definition = "An order which is not to be executed as a whole if the executing broker judges that it may disturb the price.";
 			owner_lazy = () -> OrderTypeCode.mmObject();
@@ -340,7 +342,7 @@ public class OrderTypeCode {
 	 */
 	public static final MMCode mmCombination = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Combination";
 			definition = "An order which is linked to another order to buy or sell and must be executed as a unit, both or none, or cancelled as a unit. The linkage sequence must be completed with a reference to the linked order.";
 			owner_lazy = () -> OrderTypeCode.mmObject();
@@ -373,7 +375,7 @@ public class OrderTypeCode {
 	 */
 	public static final MMCode mmDiscretionary = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Discretionary";
 			definition = "An order where the executing broker or investment manager decides on the quantity or price.";
 			owner_lazy = () -> OrderTypeCode.mmObject();
@@ -406,7 +408,7 @@ public class OrderTypeCode {
 	 */
 	public static final MMCode mmLimit = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Limit";
 			definition = "An order to buy at the indicated price limit or lower or an order to sell at the indicated limit price or higher.";
 			owner_lazy = () -> OrderTypeCode.mmObject();
@@ -439,7 +441,7 @@ public class OrderTypeCode {
 	 */
 	public static final MMCode mmLimitOnClose = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LimitOnClose";
 			definition = "Indicates that if the limit conditions are not satisfied, it should not be executed.";
 			owner_lazy = () -> OrderTypeCode.mmObject();
@@ -469,7 +471,7 @@ public class OrderTypeCode {
 	 */
 	public static final MMCode mmLimitOrBetter = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LimitOrBetter";
 			definition = "A trade at this specified price or better.";
 			owner_lazy = () -> OrderTypeCode.mmObject();
@@ -502,7 +504,7 @@ public class OrderTypeCode {
 	 */
 	public static final MMCode mmLimitWith = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LimitWith";
 			definition = "An order to be executed at a limit price, with a round-lot (or board-lot) sales; valid only for odd lot orders.";
 			owner_lazy = () -> OrderTypeCode.mmObject();
@@ -535,7 +537,7 @@ public class OrderTypeCode {
 	 */
 	public static final MMCode mmLimitWithout = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LimitWithout";
 			definition = "An order to be executed at a limit price, without a round-lot (or board-lot) sales; valid only for odd lot orders.";
 			owner_lazy = () -> OrderTypeCode.mmObject();
@@ -568,7 +570,7 @@ public class OrderTypeCode {
 	 */
 	public static final MMCode mmMarket = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Market";
 			definition = "An order to buy or sell a specified amount of a financial instrument at the quoted market price or better.";
 			owner_lazy = () -> OrderTypeCode.mmObject();
@@ -601,7 +603,7 @@ public class OrderTypeCode {
 	 */
 	public static final MMCode mmMarketNotHeld = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketNotHeld";
 			definition = "An order to buy or sell a stated amount of a financial instrument at the quoted market price or better with some discretion on the price limit.";
 			owner_lazy = () -> OrderTypeCode.mmObject();
@@ -633,7 +635,7 @@ public class OrderTypeCode {
 	 */
 	public static final MMCode mmMarketTouched = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketTouched";
 			definition = "An order which becomes a market order once the market price is reached.";
 			owner_lazy = () -> OrderTypeCode.mmObject();
@@ -666,7 +668,7 @@ public class OrderTypeCode {
 	 */
 	public static final MMCode mmNotHeld = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotHeld";
 			definition = "An order which may be executed in partials or outside the hours of the exchange or other exchange rules.";
 			owner_lazy = () -> OrderTypeCode.mmObject();
@@ -702,7 +704,7 @@ public class OrderTypeCode {
 	 */
 	public static final MMCode mmOrderLie = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrderLie";
 			definition = "An order which is related to another order where the second part may be cancelled without canceling the first. In this case, the second order is identified as the second part. Normally the sell order must be executed before the buy order. The linkage sequence must be completed with a reference to the linked order.";
 			owner_lazy = () -> OrderTypeCode.mmObject();
@@ -735,7 +737,7 @@ public class OrderTypeCode {
 	 */
 	public static final MMCode mmOnBasisPrice = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OnBasisPrice";
 			definition = "A price established by joint agreement of odd-lot dealers for as illiquid financial instrument.";
 			owner_lazy = () -> OrderTypeCode.mmObject();
@@ -771,7 +773,7 @@ public class OrderTypeCode {
 	 */
 	public static final MMCode mmStop = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Stop";
 			definition = "An order to buy which becomes a market order when the financial instrument trades at or above the stop price after the order is submitted or an order to sell which becomes a market order when the financial instrument trades at or below the stop price after the order is submitted.";
 			owner_lazy = () -> OrderTypeCode.mmObject();
@@ -807,7 +809,7 @@ public class OrderTypeCode {
 	 */
 	public static final MMCode mmStopLimit = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StopLimit";
 			definition = "A stop order to buy which becomes a limit order at the limit price when the financial instrument trades at or above the stop price after the order is submitted. A stop order to sell which becomes a limit order at the limit price when the financial instrument trades at or below the stop price after the order is submitted.";
 			owner_lazy = () -> OrderTypeCode.mmObject();
@@ -838,7 +840,7 @@ public class OrderTypeCode {
 	 */
 	public static final MMCode mmStopLoss = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StopLoss";
 			definition = "An order to sell that sets the sell price below the market price.";
 			owner_lazy = () -> OrderTypeCode.mmObject();
@@ -873,7 +875,7 @@ public class OrderTypeCode {
 	 */
 	public static final MMCode mmSellPlus = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SellPlus";
 			definition = "An order to sell a stated amount provided that the price is not lower than the last sale price if the last sale was a plus or zero plus tick and not lower than the last sale minus the minimum fractional change in the financial instrument if the last sale was a minus or zero minus tick.";
 			owner_lazy = () -> OrderTypeCode.mmObject();
@@ -907,7 +909,7 @@ public class OrderTypeCode {
 	 */
 	public static final MMCode mmSellShort = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SellShort";
 			definition = "An order to sell that the seller does not own; a sale effected by delivering a financial instrument borrowed by or for the account of the seller.";
 			owner_lazy = () -> OrderTypeCode.mmObject();
@@ -938,7 +940,7 @@ public class OrderTypeCode {
 	 */
 	public static final MMCode mmSellShortExempt = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SellShortExempt";
 			definition = "An order to sell short which is exempt from short-sale rules.";
 			owner_lazy = () -> OrderTypeCode.mmObject();
@@ -972,7 +974,7 @@ public class OrderTypeCode {
 	 */
 	public static final MMCode mmWithOrWithout = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WithOrWithout";
 			definition = "An odd lot order filled on an effective round lot transaction, or on an effective bid or offer, whichever occurs first after the specialist receives the order. (e.g. NYSE order type).";
 			owner_lazy = () -> OrderTypeCode.mmObject();
@@ -1002,7 +1004,7 @@ public class OrderTypeCode {
 	 */
 	public static final MMCode mmPreviouslyQuoted = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviouslyQuoted";
 			definition = "An order sent in response to a Quote message.";
 			owner_lazy = () -> OrderTypeCode.mmObject();
@@ -1033,7 +1035,7 @@ public class OrderTypeCode {
 	 */
 	public static final MMCode mmPreviouslyIndicated = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviouslyIndicated";
 			definition = "An order sent in response to an Indication of Interest message.";
 			owner_lazy = () -> OrderTypeCode.mmObject();
@@ -1064,7 +1066,7 @@ public class OrderTypeCode {
 	 */
 	public static final MMCode mmForexSwap = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForexSwap";
 			definition = "A \"Swap\" order for Foreign Exchange (currency trading).";
 			owner_lazy = () -> OrderTypeCode.mmObject();
@@ -1098,7 +1100,7 @@ public class OrderTypeCode {
 	 */
 	public static final MMCode mmFunari = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Funari";
 			definition = "Japanese term for an order to buy or sell a stated amount of a security at a specified limit price. Any unexecuted (leftover) quantity becomes a Market On Close order.";
 			owner_lazy = () -> OrderTypeCode.mmObject();
@@ -1132,7 +1134,7 @@ public class OrderTypeCode {
 	 */
 	public static final MMCode mmMarketWithLeftover = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketWithLeftover";
 			definition = "Indicates an order to buy or sell a stated amount of a security at the prevailing market price with any unexecuted (leftover) quantity becoming a Limit order at the last executed price.";
 			owner_lazy = () -> OrderTypeCode.mmObject();
@@ -1166,7 +1168,7 @@ public class OrderTypeCode {
 	 */
 	public static final MMCode mmPegged = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Pegged";
 			definition = "Limit order, where the limit price fluctuates relative to another quantity, such as the last sale, midpoint, opening price, bid, offer, or VWAP (Volume Weighted Average Price).";
 			owner_lazy = () -> OrderTypeCode.mmObject();
@@ -1196,7 +1198,7 @@ public class OrderTypeCode {
 	 */
 	public static final MMCode mmCounterOrderSelection = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CounterOrderSelection";
 			definition = "Indicates that the order is a counter order.";
 			owner_lazy = () -> OrderTypeCode.mmObject();
@@ -1207,22 +1209,16 @@ public class OrderTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ALNO");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OrderTypeCode";
 				definition = "Indicates the type of  instruction to a broker or dealer to buy or sell a financial instrument.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OrderTypeCode.mmAllOrNone, com.tools20022.repository.codeset.OrderTypeCode.mmBuyContraShortExempt,
-						com.tools20022.repository.codeset.OrderTypeCode.mmBuyContraShort, com.tools20022.repository.codeset.OrderTypeCode.mmBuyMinus, com.tools20022.repository.codeset.OrderTypeCode.mmCarefully,
-						com.tools20022.repository.codeset.OrderTypeCode.mmCombination, com.tools20022.repository.codeset.OrderTypeCode.mmDiscretionary, com.tools20022.repository.codeset.OrderTypeCode.mmLimit,
-						com.tools20022.repository.codeset.OrderTypeCode.mmLimitOnClose, com.tools20022.repository.codeset.OrderTypeCode.mmLimitOrBetter, com.tools20022.repository.codeset.OrderTypeCode.mmLimitWith,
-						com.tools20022.repository.codeset.OrderTypeCode.mmLimitWithout, com.tools20022.repository.codeset.OrderTypeCode.mmMarket, com.tools20022.repository.codeset.OrderTypeCode.mmMarketNotHeld,
-						com.tools20022.repository.codeset.OrderTypeCode.mmMarketTouched, com.tools20022.repository.codeset.OrderTypeCode.mmNotHeld, com.tools20022.repository.codeset.OrderTypeCode.mmOrderLie,
-						com.tools20022.repository.codeset.OrderTypeCode.mmOnBasisPrice, com.tools20022.repository.codeset.OrderTypeCode.mmStop, com.tools20022.repository.codeset.OrderTypeCode.mmStopLimit,
-						com.tools20022.repository.codeset.OrderTypeCode.mmStopLoss, com.tools20022.repository.codeset.OrderTypeCode.mmSellPlus, com.tools20022.repository.codeset.OrderTypeCode.mmSellShort,
-						com.tools20022.repository.codeset.OrderTypeCode.mmSellShortExempt, com.tools20022.repository.codeset.OrderTypeCode.mmWithOrWithout, com.tools20022.repository.codeset.OrderTypeCode.mmPreviouslyQuoted,
-						com.tools20022.repository.codeset.OrderTypeCode.mmPreviouslyIndicated, com.tools20022.repository.codeset.OrderTypeCode.mmForexSwap, com.tools20022.repository.codeset.OrderTypeCode.mmFunari,
-						com.tools20022.repository.codeset.OrderTypeCode.mmMarketWithLeftover, com.tools20022.repository.codeset.OrderTypeCode.mmPegged, com.tools20022.repository.codeset.OrderTypeCode.mmCounterOrderSelection);
+				code_lazy = () -> Arrays.asList(OrderTypeCode.mmAllOrNone, OrderTypeCode.mmBuyContraShortExempt, OrderTypeCode.mmBuyContraShort, OrderTypeCode.mmBuyMinus, OrderTypeCode.mmCarefully, OrderTypeCode.mmCombination,
+						OrderTypeCode.mmDiscretionary, OrderTypeCode.mmLimit, OrderTypeCode.mmLimitOnClose, OrderTypeCode.mmLimitOrBetter, OrderTypeCode.mmLimitWith, OrderTypeCode.mmLimitWithout, OrderTypeCode.mmMarket,
+						OrderTypeCode.mmMarketNotHeld, OrderTypeCode.mmMarketTouched, OrderTypeCode.mmNotHeld, OrderTypeCode.mmOrderLie, OrderTypeCode.mmOnBasisPrice, OrderTypeCode.mmStop, OrderTypeCode.mmStopLimit,
+						OrderTypeCode.mmStopLoss, OrderTypeCode.mmSellPlus, OrderTypeCode.mmSellShort, OrderTypeCode.mmSellShortExempt, OrderTypeCode.mmWithOrWithout, OrderTypeCode.mmPreviouslyQuoted, OrderTypeCode.mmPreviouslyIndicated,
+						OrderTypeCode.mmForexSwap, OrderTypeCode.mmFunari, OrderTypeCode.mmMarketWithLeftover, OrderTypeCode.mmPegged, OrderTypeCode.mmCounterOrderSelection);
 				derivation_lazy = () -> Arrays.asList(OrderType1Code.mmObject(), OrderType2Code.mmObject());
 			}
 		});

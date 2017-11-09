@@ -20,6 +20,7 @@ package com.tools20022.repository.area.camt;
 import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.CashManagementLatestVersion;
 import com.tools20022.repository.msg.ReportHeader3;
 import com.tools20022.repository.msg.StatementGroup2;
@@ -65,6 +66,9 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code camt.086.001.02}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.CashManagementLatestVersion
@@ -93,9 +97,6 @@ import java.util.List;
  * BankServicesBillingStatementV02.mmBillingStatementGroup}</li>
  * </ul>
  * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code camt.086.001.02}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -146,10 +147,10 @@ public class BankServicesBillingStatementV02 {
 	public static final MMMessageBuildingBlock mmReportHeader = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "RptHdr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportHeader";
 			definition = "Provides header details on the billing statement report.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.camt.BankServicesBillingStatementV01.mmReportHeader;
+			previousVersion_lazy = () -> BankServicesBillingStatementV01.mmReportHeader;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> ReportHeader3.mmObject();
@@ -189,10 +190,10 @@ public class BankServicesBillingStatementV02 {
 	public static final MMMessageBuildingBlock mmBillingStatementGroup = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "BllgStmtGrp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BillingStatementGroup";
 			definition = "Group of bank services billing statements with the same sender and receiver characteristics.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.camt.BankServicesBillingStatementV01.mmBillingStatementGroup;
+			previousVersion_lazy = () -> BankServicesBillingStatementV01.mmBillingStatementGroup;
 			minOccurs = 1;
 			complexType_lazy = () -> StatementGroup2.mmObject();
 		}
@@ -201,7 +202,7 @@ public class BankServicesBillingStatementV02 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "BankServicesBillingStatementV02";
 				definition = "Scope\r\nThe BankServicesBillingStatement message is used to send from a Financial Institution (FI) to its wholesale customers (corporations, governments, institutions, etc.), information describing the FI’s billing of services rendered in the form of an electronic statement in a standardised format. The BankServicesBillingStatement is a periodic (usually end of month) recounting of all service chargeable events that occurred during a reporting cycle, typically a calendar month, along with detailed tax and currency translation information. Account balance information, although strongly recommended, is not required.\r\nUsage\r\nThe BankServicesBillingStatement message is designed to provide details related to invoices (or an advice of debit) which a financial institution may supply to its customers. The BankServicesBillingStatement is not expressly designed to be an invoice, nor to replace invoices currently in use. The message may be used as an invoice by agreement between the sender and the receiver. No regulatory or legislative requirements were considered when creating this message standard. Users of the BankServicesBillingStatement message are cautioned to be aware of any regulatory or legal requirement for invoices before replacing existing invoices.\r\nThe BankServicesBillingStatement message can supply the detail supporting separate invoices or debits but it is not the\r\ninvoice or advice of debit of record. The BankServicesBillingStatement message must accurately reflect all the charge and tax related events that occurred during the calendar month and how the FI and taxing authorities were compensated\r\nfor these events. The BankServicesBillingStatement does not ask the financial institution to revise its established pricing and billing procedures. \r\nHow, when and what the customer is actually charged for remains in place. The BankServicesBillingStatement message asks the financial institution to aggregate and report what actually happened during the calendar month.\r\nThe BankServicesBillingStatement message is intended for use with the ISO 20022 Business Application Header.";
 				previousVersion_lazy = () -> BankServicesBillingStatementV01.mmObject();
@@ -209,8 +210,7 @@ public class BankServicesBillingStatementV02 {
 				rootElement = "Document";
 				xmlTag = "BkSvcsBllgStmt";
 				businessArea_lazy = () -> CashManagementLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays
-						.asList(com.tools20022.repository.area.camt.BankServicesBillingStatementV02.mmReportHeader, com.tools20022.repository.area.camt.BankServicesBillingStatementV02.mmBillingStatementGroup);
+				messageBuildingBlock_lazy = () -> Arrays.asList(BankServicesBillingStatementV02.mmReportHeader, BankServicesBillingStatementV02.mmBillingStatementGroup);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "camt";

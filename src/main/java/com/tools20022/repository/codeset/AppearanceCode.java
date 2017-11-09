@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.Appearance1Code
+ * Appearance1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -50,13 +59,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * AppearanceCode.mmTemporaryGlobal}</li>
  * <li>{@linkplain com.tools20022.repository.codeset.AppearanceCode#mmGlobal
  * AppearanceCode.mmGlobal}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.Appearance1Code
- * Appearance1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -106,7 +108,7 @@ public class AppearanceCode {
 	 */
 	public static final MMCode mmDeliverable = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Deliverable";
 			definition = "Physical certificates exist.";
 			owner_lazy = () -> AppearanceCode.mmObject();
@@ -136,7 +138,7 @@ public class AppearanceCode {
 	 */
 	public static final MMCode mmNotDeliverable = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NotDeliverable";
 			definition = "Not yet deliverable contract.";
 			owner_lazy = () -> AppearanceCode.mmObject();
@@ -166,7 +168,7 @@ public class AppearanceCode {
 	 */
 	public static final MMCode mmLimited = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Limited";
 			definition = "Limited or partial deliverability.";
 			owner_lazy = () -> AppearanceCode.mmObject();
@@ -199,7 +201,7 @@ public class AppearanceCode {
 	 */
 	public static final MMCode mmBookEntry = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BookEntry";
 			definition = "Security exists only as an electronic record, ie, there are no physical certificates representing the security.";
 			owner_lazy = () -> AppearanceCode.mmObject();
@@ -229,7 +231,7 @@ public class AppearanceCode {
 	 */
 	public static final MMCode mmDeferredBookEntry = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DeferredBookEntry";
 			definition = "Deferred printing, book entry.";
 			owner_lazy = () -> AppearanceCode.mmObject();
@@ -259,7 +261,7 @@ public class AppearanceCode {
 	 */
 	public static final MMCode mmDeliverableBookEntry = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DeliverableBookEntry";
 			definition = "Deliverable, book entry.";
 			owner_lazy = () -> AppearanceCode.mmObject();
@@ -289,7 +291,7 @@ public class AppearanceCode {
 	 */
 	public static final MMCode mmTemporaryGlobal = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TemporaryGlobal";
 			definition = "Deferred printing, global certificate.";
 			owner_lazy = () -> AppearanceCode.mmObject();
@@ -319,7 +321,7 @@ public class AppearanceCode {
 	 */
 	public static final MMCode mmGlobal = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Global";
 			definition = "Not deliverable, global certificate.";
 			owner_lazy = () -> AppearanceCode.mmObject();
@@ -330,14 +332,13 @@ public class AppearanceCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("DELI");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AppearanceCode";
 				definition = "Specifies the deliverability of a security.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AppearanceCode.mmDeliverable, com.tools20022.repository.codeset.AppearanceCode.mmNotDeliverable, com.tools20022.repository.codeset.AppearanceCode.mmLimited,
-						com.tools20022.repository.codeset.AppearanceCode.mmBookEntry, com.tools20022.repository.codeset.AppearanceCode.mmDeferredBookEntry, com.tools20022.repository.codeset.AppearanceCode.mmDeliverableBookEntry,
-						com.tools20022.repository.codeset.AppearanceCode.mmTemporaryGlobal, com.tools20022.repository.codeset.AppearanceCode.mmGlobal);
+				code_lazy = () -> Arrays.asList(AppearanceCode.mmDeliverable, AppearanceCode.mmNotDeliverable, AppearanceCode.mmLimited, AppearanceCode.mmBookEntry, AppearanceCode.mmDeferredBookEntry, AppearanceCode.mmDeliverableBookEntry,
+						AppearanceCode.mmTemporaryGlobal, AppearanceCode.mmGlobal);
 				derivation_lazy = () -> Arrays.asList(Appearance1Code.mmObject());
 			}
 		});

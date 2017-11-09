@@ -19,7 +19,9 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.RequestedIndicator;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -140,7 +142,7 @@ public class SecuritiesReturnCriteria1 {
 			componentContext_lazy = () -> SecuritiesReturnCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "FinInstrmId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentIdentification";
 			definition = "Identification of a security.";
 			maxOccurs = 1;
@@ -182,7 +184,7 @@ public class SecuritiesReturnCriteria1 {
 			componentContext_lazy = () -> SecuritiesReturnCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "ISOSctyLngNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ISOSecurityLongName";
 			definition = "Name of the security.";
 			maxOccurs = 1;
@@ -224,7 +226,7 @@ public class SecuritiesReturnCriteria1 {
 			componentContext_lazy = () -> SecuritiesReturnCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "ISOSctyShrtNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ISOSecurityShortName";
 			definition = "Short name of the security expressed as ISO 18773/18774.";
 			maxOccurs = 1;
@@ -270,7 +272,7 @@ public class SecuritiesReturnCriteria1 {
 			componentContext_lazy = () -> SecuritiesReturnCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "ClssfctnFinInstrm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClassificationFinancialInstrument";
 			definition = "Classification type of the financial instrument, as per the ISO Classification of Financial Instrument (CFI) codification, for example, common share with voting rights, fully paid, or registered.";
 			maxOccurs = 1;
@@ -312,7 +314,7 @@ public class SecuritiesReturnCriteria1 {
 			componentContext_lazy = () -> SecuritiesReturnCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "MtrtyDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaturityDate";
 			definition = "Planned final repayment date at the time of issuance.";
 			maxOccurs = 1;
@@ -354,7 +356,7 @@ public class SecuritiesReturnCriteria1 {
 			componentContext_lazy = () -> SecuritiesReturnCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "IsseDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssueDate";
 			definition = "Date/time at which the security was made available.";
 			maxOccurs = 1;
@@ -396,7 +398,7 @@ public class SecuritiesReturnCriteria1 {
 			componentContext_lazy = () -> SecuritiesReturnCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "IsseCcy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssueCurrency";
 			definition = "Currency in which a security is issued or redenominated.";
 			maxOccurs = 1;
@@ -441,7 +443,7 @@ public class SecuritiesReturnCriteria1 {
 			componentContext_lazy = () -> SecuritiesReturnCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "CtryOfIsse";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CountryOfIssue";
 			definition = "Primary market or country where a security is issued by the issuer or its agent.";
 			maxOccurs = 1;
@@ -484,7 +486,7 @@ public class SecuritiesReturnCriteria1 {
 			componentContext_lazy = () -> SecuritiesReturnCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "SctySts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityStatus";
 			definition = "Specifies the status of the security within its lifecycle.";
 			maxOccurs = 1;
@@ -526,7 +528,7 @@ public class SecuritiesReturnCriteria1 {
 			componentContext_lazy = () -> SecuritiesReturnCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "InvstrCSD";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestorCSD";
 			definition = "CSD Investor of a security.";
 			maxOccurs = 1;
@@ -568,7 +570,7 @@ public class SecuritiesReturnCriteria1 {
 			componentContext_lazy = () -> SecuritiesReturnCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "IssrCSD";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssuerCSD";
 			definition = "CSD Issuer of a security.";
 			maxOccurs = 1;
@@ -610,7 +612,7 @@ public class SecuritiesReturnCriteria1 {
 			componentContext_lazy = () -> SecuritiesReturnCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "TechIssrCSD";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TechnicalIssuerCSD";
 			definition = "Technical issuer of a security.";
 			maxOccurs = 1;
@@ -652,7 +654,7 @@ public class SecuritiesReturnCriteria1 {
 			componentContext_lazy = () -> SecuritiesReturnCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "CSD";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CSD";
 			definition = "CSD of a security";
 			maxOccurs = 1;
@@ -694,7 +696,7 @@ public class SecuritiesReturnCriteria1 {
 			componentContext_lazy = () -> SecuritiesReturnCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "SctiesQtyTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesQuantityType";
 			definition = "Quantity of a security.";
 			maxOccurs = 1;
@@ -737,7 +739,7 @@ public class SecuritiesReturnCriteria1 {
 			componentContext_lazy = () -> SecuritiesReturnCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "MinDnmtn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MinimumDenomination";
 			definition = "Indicates the minimum quantity (unit or nominal) of a security.";
 			maxOccurs = 1;
@@ -780,7 +782,7 @@ public class SecuritiesReturnCriteria1 {
 			componentContext_lazy = () -> SecuritiesReturnCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "MinMltplQty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MinimumMultipleQuantity";
 			definition = "Minimum multiple quantity (unit or nominal) of securities.";
 			maxOccurs = 1;
@@ -827,7 +829,7 @@ public class SecuritiesReturnCriteria1 {
 			componentContext_lazy = () -> SecuritiesReturnCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "DevtgSttlmUnit";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeviatingSettlementUnit";
 			definition = "Minimum quantity of securities that can be purchased without incurring a larger fee. For example, if the round lot size is 100 and the trade is for 125  shares, then 100 will be processed without a fee and the remaining 25 will incur a service fee for being an odd lot size.";
 			maxOccurs = 1;
@@ -839,16 +841,13 @@ public class SecuritiesReturnCriteria1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesReturnCriteria1.mmFinancialInstrumentIdentification, com.tools20022.repository.msg.SecuritiesReturnCriteria1.mmISOSecurityLongName,
-						com.tools20022.repository.msg.SecuritiesReturnCriteria1.mmISOSecurityShortName, com.tools20022.repository.msg.SecuritiesReturnCriteria1.mmClassificationFinancialInstrument,
-						com.tools20022.repository.msg.SecuritiesReturnCriteria1.mmMaturityDate, com.tools20022.repository.msg.SecuritiesReturnCriteria1.mmIssueDate, com.tools20022.repository.msg.SecuritiesReturnCriteria1.mmIssueCurrency,
-						com.tools20022.repository.msg.SecuritiesReturnCriteria1.mmCountryOfIssue, com.tools20022.repository.msg.SecuritiesReturnCriteria1.mmSecurityStatus,
-						com.tools20022.repository.msg.SecuritiesReturnCriteria1.mmInvestorCSD, com.tools20022.repository.msg.SecuritiesReturnCriteria1.mmIssuerCSD,
-						com.tools20022.repository.msg.SecuritiesReturnCriteria1.mmTechnicalIssuerCSD, com.tools20022.repository.msg.SecuritiesReturnCriteria1.mmCSD,
-						com.tools20022.repository.msg.SecuritiesReturnCriteria1.mmSecuritiesQuantityType, com.tools20022.repository.msg.SecuritiesReturnCriteria1.mmMinimumDenomination,
-						com.tools20022.repository.msg.SecuritiesReturnCriteria1.mmMinimumMultipleQuantity, com.tools20022.repository.msg.SecuritiesReturnCriteria1.mmDeviatingSettlementUnit);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(SecuritiesReturnCriteria1.mmFinancialInstrumentIdentification, SecuritiesReturnCriteria1.mmISOSecurityLongName, SecuritiesReturnCriteria1.mmISOSecurityShortName,
+						SecuritiesReturnCriteria1.mmClassificationFinancialInstrument, SecuritiesReturnCriteria1.mmMaturityDate, SecuritiesReturnCriteria1.mmIssueDate, SecuritiesReturnCriteria1.mmIssueCurrency,
+						SecuritiesReturnCriteria1.mmCountryOfIssue, SecuritiesReturnCriteria1.mmSecurityStatus, SecuritiesReturnCriteria1.mmInvestorCSD, SecuritiesReturnCriteria1.mmIssuerCSD, SecuritiesReturnCriteria1.mmTechnicalIssuerCSD,
+						SecuritiesReturnCriteria1.mmCSD, SecuritiesReturnCriteria1.mmSecuritiesQuantityType, SecuritiesReturnCriteria1.mmMinimumDenomination, SecuritiesReturnCriteria1.mmMinimumMultipleQuantity,
+						SecuritiesReturnCriteria1.mmDeviatingSettlementUnit);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SecuritiesReturnCriteria1";
 				definition = "Return criteria for information to be returned in the report deriving from a query about securities reference data.";
 			}

@@ -19,7 +19,9 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -92,7 +94,7 @@ public class MaintenanceIdentificationAssociation1 {
 			componentContext_lazy = () -> MaintenanceIdentificationAssociation1.mmObject();
 			isDerived = false;
 			xmlTag = "MstrTMId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MasterTMIdentification";
 			definition = "Identifier for the master terminal manager.";
 			maxOccurs = 1;
@@ -134,7 +136,7 @@ public class MaintenanceIdentificationAssociation1 {
 			componentContext_lazy = () -> MaintenanceIdentificationAssociation1.mmObject();
 			isDerived = false;
 			xmlTag = "TMId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TMIdentification";
 			definition = "Identifier for the terminal manager requesting the delegation.";
 			maxOccurs = 1;
@@ -146,9 +148,9 @@ public class MaintenanceIdentificationAssociation1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MaintenanceIdentificationAssociation1.mmMasterTMIdentification, com.tools20022.repository.msg.MaintenanceIdentificationAssociation1.mmTMIdentification);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(MaintenanceIdentificationAssociation1.mmMasterTMIdentification, MaintenanceIdentificationAssociation1.mmTMIdentification);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MaintenanceIdentificationAssociation1";
 				definition = "Association of the TM identifier and the MTM identifier of an entity.";
 			}

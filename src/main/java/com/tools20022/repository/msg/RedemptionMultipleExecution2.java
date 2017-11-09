@@ -20,11 +20,12 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.setr.RedemptionMultipleOrderConfirmationV02;
 import com.tools20022.repository.codeset.CountryCode;
 import com.tools20022.repository.datatype.ISODateTime;
-import com.tools20022.repository.entity.BulkPayment;
-import com.tools20022.repository.entity.Person;
-import com.tools20022.repository.entity.RedemptionExecution;
+import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -128,7 +129,7 @@ public class RedemptionMultipleExecution2 {
 			componentContext_lazy = () -> RedemptionMultipleExecution2.mmObject();
 			isDerived = false;
 			xmlTag = "BnfcryDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BeneficiaryDetails";
 			definition = "Additional information about the investor.";
 			maxOccurs = 1;
@@ -173,11 +174,11 @@ public class RedemptionMultipleExecution2 {
 	 */
 	public static final MMMessageAttribute mmPlaceOfTrade = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Country.mmCode;
+			businessElementTrace_lazy = () -> Country.mmCode;
 			componentContext_lazy = () -> RedemptionMultipleExecution2.mmObject();
 			isDerived = false;
 			xmlTag = "PlcOfTrad";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceOfTrade";
 			definition = "Market in which the advised trade transaction was executed.";
 			maxOccurs = 1;
@@ -221,11 +222,11 @@ public class RedemptionMultipleExecution2 {
 	 */
 	public static final MMMessageAttribute mmOrderDateTime = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrder.mmOrderDateTime;
+			businessElementTrace_lazy = () -> InvestmentFundOrder.mmOrderDateTime;
 			componentContext_lazy = () -> RedemptionMultipleExecution2.mmObject();
 			isDerived = false;
 			xmlTag = "OrdrDtTm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrderDateTime";
 			definition = "Date and time at which the order was placed by the investor.";
 			maxOccurs = 1;
@@ -272,11 +273,11 @@ public class RedemptionMultipleExecution2 {
 	 */
 	public static final MMMessageAttribute mmCancellationRight = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrder.mmCancellationRight;
+			businessElementTrace_lazy = () -> InvestmentFundOrder.mmCancellationRight;
 			componentContext_lazy = () -> RedemptionMultipleExecution2.mmObject();
 			isDerived = false;
 			xmlTag = "CxlRght";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationRight";
 			definition = "Cancellation right of an investor with respect to an investment fund order.";
 			maxOccurs = 1;
@@ -318,11 +319,11 @@ public class RedemptionMultipleExecution2 {
 	 */
 	public static final MMMessageAssociationEnd mmInvestmentAccountDetails = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundTransaction.mmInvestmentAccount;
+			businessElementTrace_lazy = () -> InvestmentFundTransaction.mmInvestmentAccount;
 			componentContext_lazy = () -> RedemptionMultipleExecution2.mmObject();
 			isDerived = false;
 			xmlTag = "InvstmtAcctDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestmentAccountDetails";
 			definition = "Account impacted by an investment fund order.";
 			maxOccurs = 1;
@@ -369,7 +370,7 @@ public class RedemptionMultipleExecution2 {
 			componentContext_lazy = () -> RedemptionMultipleExecution2.mmObject();
 			isDerived = false;
 			xmlTag = "IndvExctnDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IndividualExecutionDetails";
 			definition = "Execution of a redemption order.";
 			minOccurs = 1;
@@ -416,7 +417,7 @@ public class RedemptionMultipleExecution2 {
 			componentContext_lazy = () -> RedemptionMultipleExecution2.mmObject();
 			isDerived = false;
 			xmlTag = "BlkCshSttlmDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BulkCashSettlementDetails";
 			definition = "Payment transaction resulting from the investment fund order execution.";
 			maxOccurs = 1;
@@ -429,14 +430,13 @@ public class RedemptionMultipleExecution2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RedemptionMultipleExecution2.mmBeneficiaryDetails, com.tools20022.repository.msg.RedemptionMultipleExecution2.mmPlaceOfTrade,
-						com.tools20022.repository.msg.RedemptionMultipleExecution2.mmOrderDateTime, com.tools20022.repository.msg.RedemptionMultipleExecution2.mmCancellationRight,
-						com.tools20022.repository.msg.RedemptionMultipleExecution2.mmInvestmentAccountDetails, com.tools20022.repository.msg.RedemptionMultipleExecution2.mmIndividualExecutionDetails,
-						com.tools20022.repository.msg.RedemptionMultipleExecution2.mmBulkCashSettlementDetails);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.RedemptionMultipleOrderConfirmationV02.mmMultipleExecutionDetails);
+				messageElement_lazy = () -> Arrays.asList(RedemptionMultipleExecution2.mmBeneficiaryDetails, RedemptionMultipleExecution2.mmPlaceOfTrade, RedemptionMultipleExecution2.mmOrderDateTime,
+						RedemptionMultipleExecution2.mmCancellationRight, RedemptionMultipleExecution2.mmInvestmentAccountDetails, RedemptionMultipleExecution2.mmIndividualExecutionDetails,
+						RedemptionMultipleExecution2.mmBulkCashSettlementDetails);
+				messageBuildingBlock_lazy = () -> Arrays.asList(RedemptionMultipleOrderConfirmationV02.mmMultipleExecutionDetails);
 				trace_lazy = () -> RedemptionExecution.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RedemptionMultipleExecution2";
 				definition = "Execution of a redemption order.";
 			}

@@ -19,8 +19,10 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ActiveCurrencyCode;
 import com.tools20022.repository.datatype.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -135,7 +137,7 @@ public class CorporateActionConfirmationDetailsExtension1 {
 			componentContext_lazy = () -> CorporateActionConfirmationDetailsExtension1.mmObject();
 			isDerived = false;
 			xmlTag = "PlcAndNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "xPath to the element that is being extended.";
 			maxOccurs = 1;
@@ -183,7 +185,7 @@ public class CorporateActionConfirmationDetailsExtension1 {
 			componentContext_lazy = () -> CorporateActionConfirmationDetailsExtension1.mmObject();
 			isDerived = false;
 			xmlTag = "DTCCOptnTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCCOptionType";
 			definition = "Used for the option types that cannot be classified in ISO and marked as Option Type: OTHR. Options like convert and dividend reinvestment, or DTC (The Depository Trust Corporation)  special option types for the instances where the event and security are eligible for DTC (The Depository Trust Corporation) services like Foreign Tax, Foreign Currency Payments, etc.";
 			maxOccurs = 1;
@@ -225,7 +227,7 @@ public class CorporateActionConfirmationDetailsExtension1 {
 			componentContext_lazy = () -> CorporateActionConfirmationDetailsExtension1.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlCcy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalCurrency";
 			definition = "Original currency initially announced by the issuer.";
 			maxOccurs = 1;
@@ -269,7 +271,7 @@ public class CorporateActionConfirmationDetailsExtension1 {
 			componentContext_lazy = () -> CorporateActionConfirmationDetailsExtension1.mmObject();
 			isDerived = false;
 			xmlTag = "DTCGnrtdDpstRefId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCGeneratedDepositReferenceIdentification";
 			definition = "Unique identification issued by DTC (The Depository Trust Corporation) for reorganisation deposit.";
 			maxOccurs = 1;
@@ -312,7 +314,7 @@ public class CorporateActionConfirmationDetailsExtension1 {
 			componentContext_lazy = () -> CorporateActionConfirmationDetailsExtension1.mmObject();
 			isDerived = false;
 			xmlTag = "PtcptDpstRefId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ParticipantDepositReferenceIdentification";
 			definition = "Unique identifier issued by a participant for the reorganisation deposit.";
 			maxOccurs = 1;
@@ -353,7 +355,7 @@ public class CorporateActionConfirmationDetailsExtension1 {
 			componentContext_lazy = () -> CorporateActionConfirmationDetailsExtension1.mmObject();
 			isDerived = false;
 			xmlTag = "DpstDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DepositDate";
 			definition = "Date at which the reorganisation deposit was made.";
 			maxOccurs = 1;
@@ -395,7 +397,7 @@ public class CorporateActionConfirmationDetailsExtension1 {
 			componentContext_lazy = () -> CorporateActionConfirmationDetailsExtension1.mmObject();
 			isDerived = false;
 			xmlTag = "CtdyCstmrId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CustodyCustomerIdentification";
 			definition = "Participant generated account number for custody deposits.";
 			maxOccurs = 1;
@@ -437,7 +439,7 @@ public class CorporateActionConfirmationDetailsExtension1 {
 			componentContext_lazy = () -> CorporateActionConfirmationDetailsExtension1.mmObject();
 			isDerived = false;
 			xmlTag = "AsOfDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AsOfDate";
 			definition = "Effective date of the adjustment to the participant account.";
 			maxOccurs = 1;
@@ -481,7 +483,7 @@ public class CorporateActionConfirmationDetailsExtension1 {
 			componentContext_lazy = () -> CorporateActionConfirmationDetailsExtension1.mmObject();
 			isDerived = false;
 			xmlTag = "PtcptCrossRefId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ParticipantCrossReferenceIdentification";
 			definition = "Transaction identification that the participant provides on the reorganisation deposit.";
 			maxOccurs = 1;
@@ -526,7 +528,7 @@ public class CorporateActionConfirmationDetailsExtension1 {
 			componentContext_lazy = () -> CorporateActionConfirmationDetailsExtension1.mmObject();
 			isDerived = false;
 			xmlTag = "DTCWhldgTaxRate";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCWithholdingTaxRate";
 			definition = "Withholding tax rate after the application of statutory or treaty withholding percentages used at DTC (The Depository Trust Corporation).";
 			maxOccurs = 1;
@@ -571,7 +573,7 @@ public class CorporateActionConfirmationDetailsExtension1 {
 			componentContext_lazy = () -> CorporateActionConfirmationDetailsExtension1.mmObject();
 			isDerived = false;
 			xmlTag = "DTCCshRate";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCCashRate";
 			definition = "Rate of the dividend payable in cash at DTC (The Depository Trust Corporation).";
 			maxOccurs = 1;
@@ -613,7 +615,7 @@ public class CorporateActionConfirmationDetailsExtension1 {
 			componentContext_lazy = () -> CorporateActionConfirmationDetailsExtension1.mmObject();
 			isDerived = false;
 			xmlTag = "PyoutNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PayoutNumber";
 			definition = "Unique number associated with a payout within an option.";
 			maxOccurs = 1;
@@ -658,7 +660,7 @@ public class CorporateActionConfirmationDetailsExtension1 {
 			componentContext_lazy = () -> CorporateActionConfirmationDetailsExtension1.mmObject();
 			isDerived = false;
 			xmlTag = "DTCSctyRate";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCSecurityRate";
 			definition = "Rate of the dividend payable in stock rather than in cash at DTC (The Depository Trust Corporation).";
 			maxOccurs = 1;
@@ -701,7 +703,7 @@ public class CorporateActionConfirmationDetailsExtension1 {
 			componentContext_lazy = () -> CorporateActionConfirmationDetailsExtension1.mmObject();
 			isDerived = false;
 			xmlTag = "AllctdCshVal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AllocatedCashValue";
 			definition = "Cash value calculated based on the rate and allocated positions.";
 			maxOccurs = 1;
@@ -713,17 +715,15 @@ public class CorporateActionConfirmationDetailsExtension1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionConfirmationDetailsExtension1.mmPlaceAndName,
-						com.tools20022.repository.msg.CorporateActionConfirmationDetailsExtension1.mmDTCCOptionType, com.tools20022.repository.msg.CorporateActionConfirmationDetailsExtension1.mmOriginalCurrency,
-						com.tools20022.repository.msg.CorporateActionConfirmationDetailsExtension1.mmDTCGeneratedDepositReferenceIdentification,
-						com.tools20022.repository.msg.CorporateActionConfirmationDetailsExtension1.mmParticipantDepositReferenceIdentification, com.tools20022.repository.msg.CorporateActionConfirmationDetailsExtension1.mmDepositDate,
-						com.tools20022.repository.msg.CorporateActionConfirmationDetailsExtension1.mmCustodyCustomerIdentification, com.tools20022.repository.msg.CorporateActionConfirmationDetailsExtension1.mmAsOfDate,
-						com.tools20022.repository.msg.CorporateActionConfirmationDetailsExtension1.mmParticipantCrossReferenceIdentification,
-						com.tools20022.repository.msg.CorporateActionConfirmationDetailsExtension1.mmDTCWithholdingTaxRate, com.tools20022.repository.msg.CorporateActionConfirmationDetailsExtension1.mmDTCCashRate,
-						com.tools20022.repository.msg.CorporateActionConfirmationDetailsExtension1.mmPayoutNumber, com.tools20022.repository.msg.CorporateActionConfirmationDetailsExtension1.mmDTCSecurityRate,
-						com.tools20022.repository.msg.CorporateActionConfirmationDetailsExtension1.mmAllocatedCashValue);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(CorporateActionConfirmationDetailsExtension1.mmPlaceAndName, CorporateActionConfirmationDetailsExtension1.mmDTCCOptionType,
+						CorporateActionConfirmationDetailsExtension1.mmOriginalCurrency, CorporateActionConfirmationDetailsExtension1.mmDTCGeneratedDepositReferenceIdentification,
+						CorporateActionConfirmationDetailsExtension1.mmParticipantDepositReferenceIdentification, CorporateActionConfirmationDetailsExtension1.mmDepositDate,
+						CorporateActionConfirmationDetailsExtension1.mmCustodyCustomerIdentification, CorporateActionConfirmationDetailsExtension1.mmAsOfDate,
+						CorporateActionConfirmationDetailsExtension1.mmParticipantCrossReferenceIdentification, CorporateActionConfirmationDetailsExtension1.mmDTCWithholdingTaxRate,
+						CorporateActionConfirmationDetailsExtension1.mmDTCCashRate, CorporateActionConfirmationDetailsExtension1.mmPayoutNumber, CorporateActionConfirmationDetailsExtension1.mmDTCSecurityRate,
+						CorporateActionConfirmationDetailsExtension1.mmAllocatedCashValue);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CorporateActionConfirmationDetailsExtension1";
 				definition = "Provides additional information regarding corporate action confirmation details.";
 			}

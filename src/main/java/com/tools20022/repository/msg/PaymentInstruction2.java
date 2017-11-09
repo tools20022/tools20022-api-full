@@ -19,11 +19,14 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.DateTimePeriodChoice;
 import com.tools20022.repository.choice.PaymentType3Choice;
 import com.tools20022.repository.choice.PriorityCodeChoice;
 import com.tools20022.repository.codeset.Instruction1Code;
+import com.tools20022.repository.entity.Payment;
 import com.tools20022.repository.entity.PaymentInstruction;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -125,14 +128,14 @@ public class PaymentInstruction2 {
 	 */
 	public static final MMMessageAttribute mmInstruction = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentInstruction.mmInstructionForNextAgent;
+			businessElementTrace_lazy = () -> PaymentInstruction.mmInstructionForNextAgent;
 			componentContext_lazy = () -> PaymentInstruction2.mmObject();
 			isDerived = false;
 			xmlTag = "Instr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Instruction";
 			definition = "Further information related to the processing of the payment instruction. The instruction can relate to a level of service between the bank and the customer, or give instructions to and for specific parties in the payment chain.\n";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentInstruction12.mmInstruction);
+			nextVersions_lazy = () -> Arrays.asList(PaymentInstruction12.mmInstruction);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Instruction1Code.mmObject();
@@ -183,14 +186,14 @@ public class PaymentInstruction2 {
 	 */
 	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.mmType;
+			businessElementTrace_lazy = () -> Payment.mmType;
 			componentContext_lazy = () -> PaymentInstruction2.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Type, or nature, of the payment, for example an express payment.\r\n";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentInstruction12.mmType);
+			nextVersions_lazy = () -> Arrays.asList(PaymentInstruction12.mmType);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> PaymentType3Choice.mmObject();
@@ -244,14 +247,14 @@ public class PaymentInstruction2 {
 	 */
 	public static final MMMessageAttribute mmPriority = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.mmPriority;
+			businessElementTrace_lazy = () -> Payment.mmPriority;
 			componentContext_lazy = () -> PaymentInstruction2.mmObject();
 			isDerived = false;
 			xmlTag = "Prty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Priority";
 			definition = "Urgency or order of importance that the originator would like the recipient of the payment instruction to apply to the processing of the payment instruction.\n";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentInstruction12.mmPriority);
+			nextVersions_lazy = () -> Arrays.asList(PaymentInstruction12.mmPriority);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> PriorityCodeChoice.mmObject();
@@ -304,14 +307,14 @@ public class PaymentInstruction2 {
 	 */
 	public static final MMMessageAttribute mmProcessingValidityTime = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentInstruction.mmProcessingValidityTime;
+			businessElementTrace_lazy = () -> PaymentInstruction.mmProcessingValidityTime;
 			componentContext_lazy = () -> PaymentInstruction2.mmObject();
 			isDerived = false;
 			xmlTag = "PrcgVldtyTm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProcessingValidityTime";
 			definition = "Date and time range within which the payment instruction must be processed.\n";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentInstruction12.mmProcessingValidityTime);
+			nextVersions_lazy = () -> Arrays.asList(PaymentInstruction12.mmProcessingValidityTime);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateTimePeriodChoice.mmObject();
@@ -321,11 +324,10 @@ public class PaymentInstruction2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentInstruction2.mmInstruction, com.tools20022.repository.msg.PaymentInstruction2.mmType,
-						com.tools20022.repository.msg.PaymentInstruction2.mmPriority, com.tools20022.repository.msg.PaymentInstruction2.mmProcessingValidityTime);
+				messageElement_lazy = () -> Arrays.asList(PaymentInstruction2.mmInstruction, PaymentInstruction2.mmType, PaymentInstruction2.mmPriority, PaymentInstruction2.mmProcessingValidityTime);
 				trace_lazy = () -> PaymentInstruction.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "PaymentInstruction2";
 				definition = "Provides details on the payment instruction.";
 				nextVersions_lazy = () -> Arrays.asList(PaymentInstruction12.mmObject());

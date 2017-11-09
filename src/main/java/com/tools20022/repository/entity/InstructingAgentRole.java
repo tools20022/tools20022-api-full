@@ -19,8 +19,12 @@ package com.tools20022.repository.entity;
 
 import com.tools20022.metamodel.MMBusinessAttribute;
 import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.PaymentPartyRole;
+import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.PaymentInstructionReferenceDetails2;
+import com.tools20022.repository.msg.ShortPaymentIdentification1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -34,14 +38,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InstructingAgentRole#mmPrevious
- * InstructingAgentRole.mmPrevious}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
  * derivationElement} =
@@ -57,6 +53,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
  * superType} = {@linkplain com.tools20022.repository.entity.PaymentPartyRole
  * PaymentPartyRole}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InstructingAgentRole#mmPrevious
+ * InstructingAgentRole.mmPrevious}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -108,7 +112,7 @@ public class InstructingAgentRole extends PaymentPartyRole {
 		{
 			elementContext_lazy = () -> InstructingAgentRole.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Previous";
 			definition = "Agent immediately prior to the instructing agent.";
 			maxOccurs = 1;
@@ -120,13 +124,13 @@ public class InstructingAgentRole extends PaymentPartyRole {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InstructingAgentRole";
 				definition = "Agent that instructs the next party in the chain to carry out the (set of) instruction(s).";
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentInstructionReferenceDetails2.mmInstructingAgentIdentification, com.tools20022.repository.msg.ShortPaymentIdentification1.mmInstructingAgent);
+				derivationElement_lazy = () -> Arrays.asList(PaymentInstructionReferenceDetails2.mmInstructingAgentIdentification, ShortPaymentIdentification1.mmInstructingAgent);
 				superType_lazy = () -> PaymentPartyRole.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.InstructingAgentRole.mmPrevious);
+				element_lazy = () -> Arrays.asList(InstructingAgentRole.mmPrevious);
 			}
 		});
 		return mmObject_lazy.get();

@@ -20,9 +20,13 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.ReturnReason4Choice;
 import com.tools20022.repository.datatype.Max105Text;
+import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.entity.PaymentStatus;
+import com.tools20022.repository.entity.Status;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -102,11 +106,11 @@ public class ReturnReasonInformation7 {
 	 */
 	public static final MMMessageAssociationEnd mmReturnOriginator = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> ReturnReasonInformation7.mmObject();
 			isDerived = false;
 			xmlTag = "RtrOrgtr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReturnOriginator";
 			definition = "Party issuing the return.";
 			maxOccurs = 1;
@@ -149,11 +153,11 @@ public class ReturnReasonInformation7 {
 	 */
 	public static final MMMessageAssociationEnd mmReturnReason = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.mmStatusReason;
+			businessElementTrace_lazy = () -> Status.mmStatusReason;
 			componentContext_lazy = () -> ReturnReasonInformation7.mmObject();
 			isDerived = false;
 			xmlTag = "RtrRsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReturnReason";
 			definition = "Specifies the reason for the return.";
 			maxOccurs = 1;
@@ -195,7 +199,7 @@ public class ReturnReasonInformation7 {
 			componentContext_lazy = () -> ReturnReasonInformation7.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlRtrRsnInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalReturnReasonInformation";
 			definition = "Further details on the return reason.";
 			minOccurs = 0;
@@ -206,11 +210,10 @@ public class ReturnReasonInformation7 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReturnReasonInformation7.mmReturnOriginator, com.tools20022.repository.msg.ReturnReasonInformation7.mmReturnReason,
-						com.tools20022.repository.msg.ReturnReasonInformation7.mmAdditionalReturnReasonInformation);
+				messageElement_lazy = () -> Arrays.asList(ReturnReasonInformation7.mmReturnOriginator, ReturnReasonInformation7.mmReturnReason, ReturnReasonInformation7.mmAdditionalReturnReasonInformation);
 				trace_lazy = () -> PaymentStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ReturnReasonInformation7";
 				definition = "Further information on the return reason of the transaction.";
 			}

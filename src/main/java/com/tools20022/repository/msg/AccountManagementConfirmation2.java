@@ -19,8 +19,13 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.acmt.AccountDetailsConfirmationV05;
 import com.tools20022.repository.codeset.AccountManagementType2Code;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.entity.InvestmentFundTransaction;
+import com.tools20022.repository.entity.TradeIdentification;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -135,11 +140,11 @@ public class AccountManagementConfirmation2 {
 			componentContext_lazy = () -> AccountManagementConfirmation2.mmObject();
 			isDerived = false;
 			xmlTag = "ConfTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConfirmationType";
 			definition = "Specifies if the confirmation message applies to an account opening,  an account modification request or to a get account details.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountManagementConfirmation3.mmConfirmationType);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AccountManagementConfirmation1.mmConfirmationType;
+			nextVersions_lazy = () -> Arrays.asList(AccountManagementConfirmation3.mmConfirmationType);
+			previousVersion_lazy = () -> AccountManagementConfirmation1.mmConfirmationType;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AccountManagementType2Code.mmObject();
@@ -194,11 +199,11 @@ public class AccountManagementConfirmation2 {
 			componentContext_lazy = () -> AccountManagementConfirmation2.mmObject();
 			isDerived = false;
 			xmlTag = "AcctApplId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountApplicationIdentification";
 			definition = "Unique and unambiguous identifier of the account opening or modification instruction at application level.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountManagementConfirmation3.mmAccountApplicationIdentification);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AccountManagementConfirmation1.mmAccountApplicationIdentification;
+			nextVersions_lazy = () -> Arrays.asList(AccountManagementConfirmation3.mmAccountApplicationIdentification);
+			previousVersion_lazy = () -> AccountManagementConfirmation1.mmAccountApplicationIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -248,14 +253,14 @@ public class AccountManagementConfirmation2 {
 	 */
 	public static final MMMessageAttribute mmClientReference = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundTransaction.mmClientReference;
+			businessElementTrace_lazy = () -> InvestmentFundTransaction.mmClientReference;
 			componentContext_lazy = () -> AccountManagementConfirmation2.mmObject();
 			isDerived = false;
 			xmlTag = "ClntRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClientReference";
 			definition = "Unique and unambiguous investor's identification of a transfer.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountManagementConfirmation3.mmClientReference);
+			nextVersions_lazy = () -> Arrays.asList(AccountManagementConfirmation3.mmClientReference);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -308,14 +313,14 @@ public class AccountManagementConfirmation2 {
 	 */
 	public static final MMMessageAttribute mmCounterpartyReference = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradeIdentification.mmCounterpartyReference;
+			businessElementTrace_lazy = () -> TradeIdentification.mmCounterpartyReference;
 			componentContext_lazy = () -> AccountManagementConfirmation2.mmObject();
 			isDerived = false;
 			xmlTag = "CtrPtyRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CounterpartyReference";
 			definition = "Unambiguous identification of the transfer as allocated by the counterparty.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountManagementConfirmation3.mmCounterpartyReference);
+			nextVersions_lazy = () -> Arrays.asList(AccountManagementConfirmation3.mmCounterpartyReference);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.AdditionalReference2.mmObject();
@@ -325,11 +330,11 @@ public class AccountManagementConfirmation2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountManagementConfirmation2.mmConfirmationType, com.tools20022.repository.msg.AccountManagementConfirmation2.mmAccountApplicationIdentification,
-						com.tools20022.repository.msg.AccountManagementConfirmation2.mmClientReference, com.tools20022.repository.msg.AccountManagementConfirmation2.mmCounterpartyReference);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountDetailsConfirmationV05.mmConfirmationDetails);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(AccountManagementConfirmation2.mmConfirmationType, AccountManagementConfirmation2.mmAccountApplicationIdentification, AccountManagementConfirmation2.mmClientReference,
+						AccountManagementConfirmation2.mmCounterpartyReference);
+				messageBuildingBlock_lazy = () -> Arrays.asList(AccountDetailsConfirmationV05.mmConfirmationDetails);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "AccountManagementConfirmation2";
 				definition = "Information about the type of request or instruction.";
 				nextVersions_lazy = () -> Arrays.asList(AccountManagementConfirmation3.mmObject());

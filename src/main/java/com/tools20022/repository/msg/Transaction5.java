@@ -20,10 +20,11 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CreditDebitCode;
-import com.tools20022.repository.entity.Payment;
-import com.tools20022.repository.entity.PaymentInstruction;
+import com.tools20022.repository.entity.*;
 import com.tools20022.repository.entity.System;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -106,7 +107,7 @@ public class Transaction5 {
 			componentContext_lazy = () -> Transaction5.mmObject();
 			isDerived = false;
 			xmlTag = "PmtTo";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentTo";
 			definition = "Destination of the payment (be it a member or a system or both).";
 			maxOccurs = 1;
@@ -152,7 +153,7 @@ public class Transaction5 {
 			componentContext_lazy = () -> Transaction5.mmObject();
 			isDerived = false;
 			xmlTag = "PmtFr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentFrom";
 			definition = "Origin of the payment (be it a member or a system or both).";
 			maxOccurs = 1;
@@ -199,11 +200,11 @@ public class Transaction5 {
 	 */
 	public static final MMMessageAttribute mmCreditDebitIndicator = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentExecution.mmCreditDebitIndicator;
+			businessElementTrace_lazy = () -> PaymentExecution.mmCreditDebitIndicator;
 			componentContext_lazy = () -> Transaction5.mmObject();
 			isDerived = false;
 			xmlTag = "CdtDbtInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditDebitIndicator";
 			definition = "Indicates whether the payment transaction is a debit or credit transaction.";
 			maxOccurs = 1;
@@ -252,7 +253,7 @@ public class Transaction5 {
 			componentContext_lazy = () -> Transaction5.mmObject();
 			isDerived = false;
 			xmlTag = "Pmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Payment";
 			definition = "Instruction to pay an amount of money to an ultimate beneficiary, on behalf of an originator. This instruction may have to be forwarded several times to complete the settlement chain.";
 			maxOccurs = 1;
@@ -299,11 +300,11 @@ public class Transaction5 {
 	 */
 	public static final MMMessageAssociationEnd mmAccountEntry = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BookEntry.mmCashEntry;
+			businessElementTrace_lazy = () -> BookEntry.mmCashEntry;
 			componentContext_lazy = () -> Transaction5.mmObject();
 			isDerived = false;
 			xmlTag = "AcctNtry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountEntry";
 			definition = "Posting of an item to a cash account, in the context of a cash transaction, that results in an increase or decrease to the balance of the account.";
 			maxOccurs = 1;
@@ -316,11 +317,10 @@ public class Transaction5 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Transaction5.mmPaymentTo, com.tools20022.repository.msg.Transaction5.mmPaymentFrom, com.tools20022.repository.msg.Transaction5.mmCreditDebitIndicator,
-						com.tools20022.repository.msg.Transaction5.mmPayment, com.tools20022.repository.msg.Transaction5.mmAccountEntry);
+				messageElement_lazy = () -> Arrays.asList(Transaction5.mmPaymentTo, Transaction5.mmPaymentFrom, Transaction5.mmCreditDebitIndicator, Transaction5.mmPayment, Transaction5.mmAccountEntry);
 				trace_lazy = () -> Payment.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Transaction5";
 				definition = "Information related to the payment transaction.";
 			}

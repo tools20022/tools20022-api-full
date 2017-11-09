@@ -20,11 +20,13 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ExternalDocumentType1Code;
 import com.tools20022.repository.codeset.LanguageCode;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.Payment;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -125,10 +127,10 @@ public class GroupHeader69 {
 			componentContext_lazy = () -> GroupHeader69.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Report identification, for example invoice number or report number from point of sales system.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.GroupHeader12.mmMessageIdentification;
+			previousVersion_lazy = () -> GroupHeader12.mmMessageIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -171,10 +173,10 @@ public class GroupHeader69 {
 			componentContext_lazy = () -> GroupHeader69.mmObject();
 			isDerived = false;
 			xmlTag = "IssdDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssuedDate";
 			definition = "Date at which the status report was created.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.GroupHeader12.mmCreationDateTime;
+			previousVersion_lazy = () -> GroupHeader12.mmCreationDateTime;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
@@ -216,7 +218,7 @@ public class GroupHeader69 {
 			componentContext_lazy = () -> GroupHeader69.mmObject();
 			isDerived = false;
 			xmlTag = "RptCtgy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportCategory";
 			definition = "Specifies if the report is based on debit invoice, credit invoice, card transaction or cash transaction. ";
 			maxOccurs = 1;
@@ -257,7 +259,7 @@ public class GroupHeader69 {
 			componentContext_lazy = () -> GroupHeader69.mmObject();
 			isDerived = false;
 			xmlTag = "TaxRptPurp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxReportPurpose";
 			definition = "Specifies if the TaxReport is new, correction or remove.";
 			maxOccurs = 1;
@@ -300,7 +302,7 @@ public class GroupHeader69 {
 			componentContext_lazy = () -> GroupHeader69.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalIdentification";
 			definition = "Original tax report identification, used for example original invoice number with credit notes.";
 			maxOccurs = 1;
@@ -343,7 +345,7 @@ public class GroupHeader69 {
 			componentContext_lazy = () -> GroupHeader69.mmObject();
 			isDerived = false;
 			xmlTag = "SellrTaxRprtv";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SellerTaxRepresentative";
 			definition = "Details of tax representative. The corporate (seller) is allowed to use a tax representative for value added tax responsibilities in case the seller is not registered in a specific value added tax registry.";
 			maxOccurs = 1;
@@ -387,7 +389,7 @@ public class GroupHeader69 {
 			componentContext_lazy = () -> GroupHeader69.mmObject();
 			isDerived = false;
 			xmlTag = "BuyrTaxRprtv";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BuyerTaxRepresentative";
 			definition = "Details of tax representative. The corporate (buyer) is allowed to use a tax representative for value added tax responsibilities in  case the buyer is not registered in a specific value added tax registry.";
 			maxOccurs = 1;
@@ -428,7 +430,7 @@ public class GroupHeader69 {
 			componentContext_lazy = () -> GroupHeader69.mmObject();
 			isDerived = false;
 			xmlTag = "LangCd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LanguageCode";
 			definition = "Specifies the language used in the message.";
 			maxOccurs = 1;
@@ -440,12 +442,11 @@ public class GroupHeader69 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GroupHeader69.mmIdentification, com.tools20022.repository.msg.GroupHeader69.mmIssuedDate, com.tools20022.repository.msg.GroupHeader69.mmReportCategory,
-						com.tools20022.repository.msg.GroupHeader69.mmTaxReportPurpose, com.tools20022.repository.msg.GroupHeader69.mmOriginalIdentification, com.tools20022.repository.msg.GroupHeader69.mmSellerTaxRepresentative,
-						com.tools20022.repository.msg.GroupHeader69.mmBuyerTaxRepresentative, com.tools20022.repository.msg.GroupHeader69.mmLanguageCode);
+				messageElement_lazy = () -> Arrays.asList(GroupHeader69.mmIdentification, GroupHeader69.mmIssuedDate, GroupHeader69.mmReportCategory, GroupHeader69.mmTaxReportPurpose, GroupHeader69.mmOriginalIdentification,
+						GroupHeader69.mmSellerTaxRepresentative, GroupHeader69.mmBuyerTaxRepresentative, GroupHeader69.mmLanguageCode);
 				trace_lazy = () -> Payment.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "GroupHeader69";
 				definition = "Set of characteristics shared by all individual transactions included in the message.";
 				previousVersion_lazy = () -> GroupHeader12.mmObject();

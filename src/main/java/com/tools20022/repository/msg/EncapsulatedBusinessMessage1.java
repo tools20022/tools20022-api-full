@@ -20,9 +20,15 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.tsin.*;
+import com.tools20022.repository.area.tsmt.InvoicePaymentReconciliationAdviceV01;
+import com.tools20022.repository.area.tsmt.InvoicePaymentReconciliationStatusV01;
+import com.tools20022.repository.area.tsmt.PartyEventAdviceV01;
 import com.tools20022.repository.datatype.ID;
 import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.Document;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.other.StrictPayload;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -159,7 +165,7 @@ public class EncapsulatedBusinessMessage1 {
 			componentContext_lazy = () -> EncapsulatedBusinessMessage1.mmObject();
 			isDerived = false;
 			xmlTag = "Hdr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Header";
 			definition = "The Business Application Header associated to the encapsulated message if it exists.";
 			maxOccurs = 1;
@@ -203,7 +209,7 @@ public class EncapsulatedBusinessMessage1 {
 			componentContext_lazy = () -> EncapsulatedBusinessMessage1.mmObject();
 			isDerived = false;
 			xmlTag = "Prfx";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Prefix";
 			definition = "Prefix of ID/IDREFs in the encapsulated message to be removed before signature verification.";
 			maxOccurs = 1;
@@ -247,7 +253,7 @@ public class EncapsulatedBusinessMessage1 {
 			componentContext_lazy = () -> EncapsulatedBusinessMessage1.mmObject();
 			isDerived = false;
 			xmlTag = "Prtl";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Partial";
 			definition = "If yes, the Msg element contains only a subset of the original message.";
 			maxOccurs = 1;
@@ -293,7 +299,7 @@ public class EncapsulatedBusinessMessage1 {
 			componentContext_lazy = () -> EncapsulatedBusinessMessage1.mmObject();
 			isDerived = false;
 			xmlTag = "Msg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Message";
 			definition = "The encapsulated ISO 20022 message.";
 			maxOccurs = 1;
@@ -305,17 +311,15 @@ public class EncapsulatedBusinessMessage1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.EncapsulatedBusinessMessage1.mmHeader, com.tools20022.repository.msg.EncapsulatedBusinessMessage1.mmPrefix,
-						com.tools20022.repository.msg.EncapsulatedBusinessMessage1.mmPartial, com.tools20022.repository.msg.EncapsulatedBusinessMessage1.mmMessage);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.InvoicePaymentReconciliationAdviceV01.mmAttachedMessage, com.tools20022.repository.area.tsin.InvoiceAssignmentRequestV01.mmAttachedMessage,
-						com.tools20022.repository.area.tsin.PartyRegistrationAndGuaranteeAcknowledgementV01.mmAttachedMessage, com.tools20022.repository.area.tsmt.PartyEventAdviceV01.mmAttachedMessage,
-						com.tools20022.repository.area.tsin.PartyRegistrationAndGuaranteeStatusV01.mmAttachedMessage, com.tools20022.repository.area.tsin.PartyRegistrationAndGuaranteeNotificationV01.mmAttachedMessage,
-						com.tools20022.repository.area.tsin.InvoiceAssignmentNotificationV01.mmAttachedMessage, com.tools20022.repository.area.tsin.InvoiceAssignmentAcknowledgementV01.mmAttachedMessage,
-						com.tools20022.repository.area.tsin.InvoiceAssignmentStatusV01.mmAttachedMessage, com.tools20022.repository.area.tsin.PartyRegistrationAndGuaranteeRequestV01.mmAttachedMessage,
-						com.tools20022.repository.area.tsmt.InvoicePaymentReconciliationStatusV01.mmAttachedMessage);
+				messageElement_lazy = () -> Arrays.asList(EncapsulatedBusinessMessage1.mmHeader, EncapsulatedBusinessMessage1.mmPrefix, EncapsulatedBusinessMessage1.mmPartial, EncapsulatedBusinessMessage1.mmMessage);
+				messageBuildingBlock_lazy = () -> Arrays
+						.asList(InvoicePaymentReconciliationAdviceV01.mmAttachedMessage, InvoiceAssignmentRequestV01.mmAttachedMessage, PartyRegistrationAndGuaranteeAcknowledgementV01.mmAttachedMessage,
+								PartyEventAdviceV01.mmAttachedMessage, PartyRegistrationAndGuaranteeStatusV01.mmAttachedMessage, PartyRegistrationAndGuaranteeNotificationV01.mmAttachedMessage,
+								InvoiceAssignmentNotificationV01.mmAttachedMessage, InvoiceAssignmentAcknowledgementV01.mmAttachedMessage, InvoiceAssignmentStatusV01.mmAttachedMessage,
+								PartyRegistrationAndGuaranteeRequestV01.mmAttachedMessage, InvoicePaymentReconciliationStatusV01.mmAttachedMessage);
 				trace_lazy = () -> Document.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "EncapsulatedBusinessMessage1";
 				definition = "Defines an encapsulated form of an ISO 20022 message and, if present, its associated Business Application Header. The encapsulation guarantees uniqueness of ID/IDREFs though the use of the Prefix element. This element can be added during message preparation to ID/IDREFs. In order to verify the signature in the Hdr element or inside the encapsulated message, for each occurrence of an ID orIDREF that possesses the same value as a prefix, the prefix part is removed before signature verification. This is not done for surrounding signatures.";
 			}

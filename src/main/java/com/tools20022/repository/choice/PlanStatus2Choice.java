@@ -20,8 +20,10 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.PlanStatus1Code;
 import com.tools20022.repository.entity.InvestmentPlan;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification47;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -108,14 +110,14 @@ public class PlanStatus2Choice {
 	 */
 	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentPlan.mmPlanStatus;
+			businessElementTrace_lazy = () -> InvestmentPlan.mmPlanStatus;
 			componentContext_lazy = () -> PlanStatus2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Cd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Status of the plan expressed as a code.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.PlanStatus1Choice.mmCode;
+			previousVersion_lazy = () -> PlanStatus1Choice.mmCode;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PlanStatus1Code.mmObject();
@@ -159,10 +161,10 @@ public class PlanStatus2Choice {
 			componentContext_lazy = () -> PlanStatus2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Status of the plan expressed as a proprietary code.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.PlanStatus1Choice.mmProprietary;
+			previousVersion_lazy = () -> PlanStatus1Choice.mmProprietary;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -173,10 +175,10 @@ public class PlanStatus2Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PlanStatus2Choice.mmCode, com.tools20022.repository.choice.PlanStatus2Choice.mmProprietary);
+				messageElement_lazy = () -> Arrays.asList(PlanStatus2Choice.mmCode, PlanStatus2Choice.mmProprietary);
 				trace_lazy = () -> InvestmentPlan.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PlanStatus2Choice";
 				definition = "Choice of formats for the status of a plan.";
 				previousVersion_lazy = () -> PlanStatus1Choice.mmObject();

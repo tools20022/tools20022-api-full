@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ExecutionTimeLimitCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -107,7 +109,7 @@ public class ExecutionTimeLimit1Code extends ExecutionTimeLimitCode {
 	 */
 	public static final MMCode mmAtTheOpening = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AtTheOpening";
 			owner_lazy = () -> ExecutionTimeLimit1Code.mmObject();
 		}
@@ -130,7 +132,7 @@ public class ExecutionTimeLimit1Code extends ExecutionTimeLimitCode {
 	 */
 	public static final MMCode mmAtTheClosing = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AtTheClosing";
 			owner_lazy = () -> ExecutionTimeLimit1Code.mmObject();
 		}
@@ -153,7 +155,7 @@ public class ExecutionTimeLimit1Code extends ExecutionTimeLimitCode {
 	 */
 	public static final MMCode mmGoodForTheDay = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GoodForTheDay";
 			owner_lazy = () -> ExecutionTimeLimit1Code.mmObject();
 		}
@@ -176,7 +178,7 @@ public class ExecutionTimeLimit1Code extends ExecutionTimeLimitCode {
 	 */
 	public static final MMCode mmGoodUntilCancelled = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GoodUntilCancelled";
 			owner_lazy = () -> ExecutionTimeLimit1Code.mmObject();
 		}
@@ -199,7 +201,7 @@ public class ExecutionTimeLimit1Code extends ExecutionTimeLimitCode {
 	 */
 	public static final MMCode mmGoodThroughDate = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GoodThroughDate";
 			owner_lazy = () -> ExecutionTimeLimit1Code.mmObject();
 		}
@@ -222,7 +224,7 @@ public class ExecutionTimeLimit1Code extends ExecutionTimeLimitCode {
 	 */
 	public static final MMCode mmGoodForTheMonth = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GoodForTheMonth";
 			owner_lazy = () -> ExecutionTimeLimit1Code.mmObject();
 		}
@@ -245,7 +247,7 @@ public class ExecutionTimeLimit1Code extends ExecutionTimeLimitCode {
 	 */
 	public static final MMCode mmFillOrKill = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FillOrKill";
 			owner_lazy = () -> ExecutionTimeLimit1Code.mmObject();
 		}
@@ -268,7 +270,7 @@ public class ExecutionTimeLimit1Code extends ExecutionTimeLimitCode {
 	 */
 	public static final MMCode mmGoodUntilTheEndOfNextMonth = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GoodUntilTheEndOfNextMonth";
 			owner_lazy = () -> ExecutionTimeLimit1Code.mmObject();
 		}
@@ -291,7 +293,7 @@ public class ExecutionTimeLimit1Code extends ExecutionTimeLimitCode {
 	 */
 	public static final MMCode mmGoodTillCrossed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GoodTillCrossed";
 			owner_lazy = () -> ExecutionTimeLimit1Code.mmObject();
 		}
@@ -314,7 +316,7 @@ public class ExecutionTimeLimit1Code extends ExecutionTimeLimitCode {
 	 */
 	public static final MMCode mmImmediateOrCancel = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ImmediateOrCancel";
 			owner_lazy = () -> ExecutionTimeLimit1Code.mmObject();
 		}
@@ -323,16 +325,14 @@ public class ExecutionTimeLimit1Code extends ExecutionTimeLimitCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("OPEN");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ExecutionTimeLimit1Code";
 				definition = "Indicates from/until when an order must be executed.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ExecutionTimeLimit1Code.mmAtTheOpening, com.tools20022.repository.codeset.ExecutionTimeLimit1Code.mmAtTheClosing,
-						com.tools20022.repository.codeset.ExecutionTimeLimit1Code.mmGoodForTheDay, com.tools20022.repository.codeset.ExecutionTimeLimit1Code.mmGoodUntilCancelled,
-						com.tools20022.repository.codeset.ExecutionTimeLimit1Code.mmGoodThroughDate, com.tools20022.repository.codeset.ExecutionTimeLimit1Code.mmGoodForTheMonth,
-						com.tools20022.repository.codeset.ExecutionTimeLimit1Code.mmFillOrKill, com.tools20022.repository.codeset.ExecutionTimeLimit1Code.mmGoodUntilTheEndOfNextMonth,
-						com.tools20022.repository.codeset.ExecutionTimeLimit1Code.mmGoodTillCrossed, com.tools20022.repository.codeset.ExecutionTimeLimit1Code.mmImmediateOrCancel);
+				code_lazy = () -> Arrays.asList(ExecutionTimeLimit1Code.mmAtTheOpening, ExecutionTimeLimit1Code.mmAtTheClosing, ExecutionTimeLimit1Code.mmGoodForTheDay, ExecutionTimeLimit1Code.mmGoodUntilCancelled,
+						ExecutionTimeLimit1Code.mmGoodThroughDate, ExecutionTimeLimit1Code.mmGoodForTheMonth, ExecutionTimeLimit1Code.mmFillOrKill, ExecutionTimeLimit1Code.mmGoodUntilTheEndOfNextMonth,
+						ExecutionTimeLimit1Code.mmGoodTillCrossed, ExecutionTimeLimit1Code.mmImmediateOrCancel);
 				trace_lazy = () -> ExecutionTimeLimitCode.mmObject();
 			}
 		});

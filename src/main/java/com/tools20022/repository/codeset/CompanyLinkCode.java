@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.CompanyLink1Code
+ * CompanyLink1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>{@linkplain com.tools20022.repository.codeset.CompanyLinkCode#mmBroker
@@ -44,13 +53,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.CompanyLinkCode#mmMemberBroker
  * CompanyLinkCode.mmMemberBroker}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.CompanyLink1Code
- * CompanyLink1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -94,7 +96,7 @@ public class CompanyLinkCode {
 	 */
 	public static final MMCode mmBroker = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Broker";
 			definition = "Employee, operator or agent of the broker.";
 			owner_lazy = () -> CompanyLinkCode.mmObject();
@@ -124,7 +126,7 @@ public class CompanyLinkCode {
 	 */
 	public static final MMCode mmAgent = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Agent";
 			definition = "Autonomous agent accredited by the broker.";
 			owner_lazy = () -> CompanyLinkCode.mmObject();
@@ -158,7 +160,7 @@ public class CompanyLinkCode {
 	 */
 	public static final MMCode mmBrokeragePartner = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BrokeragePartner";
 			definition = "Brokerage partner or shareholder, individual or entity who holds a direct or an indirect control function and the holder of a management or an administration position.";
 			owner_lazy = () -> CompanyLinkCode.mmObject();
@@ -193,7 +195,7 @@ public class CompanyLinkCode {
 	 */
 	public static final MMCode mmRelative = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Relative";
 			definition = "Spouse or partner and child of an employee, operator or agent of the broker; agent of the broker; brokerage partners or shareholders; individual or entity who holds a direct or an indirect control function and the holder of a management or an administration position.";
 			owner_lazy = () -> CompanyLinkCode.mmObject();
@@ -223,7 +225,7 @@ public class CompanyLinkCode {
 	 */
 	public static final MMCode mmParentCompany = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ParentCompany";
 			definition = "Parent company of the broker.";
 			owner_lazy = () -> CompanyLinkCode.mmObject();
@@ -256,7 +258,7 @@ public class CompanyLinkCode {
 	 */
 	public static final MMCode mmMemberBroker = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MemberBroker";
 			definition = "Member broker of a financial conglomerate (person is a board member, director, officer and employee of a member company of the conglomerate).";
 			owner_lazy = () -> CompanyLinkCode.mmObject();
@@ -267,12 +269,11 @@ public class CompanyLinkCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CompanyLinkCode";
 				definition = "Specifies the type of links to a company.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CompanyLinkCode.mmBroker, com.tools20022.repository.codeset.CompanyLinkCode.mmAgent, com.tools20022.repository.codeset.CompanyLinkCode.mmBrokeragePartner,
-						com.tools20022.repository.codeset.CompanyLinkCode.mmRelative, com.tools20022.repository.codeset.CompanyLinkCode.mmParentCompany, com.tools20022.repository.codeset.CompanyLinkCode.mmMemberBroker);
+				code_lazy = () -> Arrays.asList(CompanyLinkCode.mmBroker, CompanyLinkCode.mmAgent, CompanyLinkCode.mmBrokeragePartner, CompanyLinkCode.mmRelative, CompanyLinkCode.mmParentCompany, CompanyLinkCode.mmMemberBroker);
 				derivation_lazy = () -> Arrays.asList(CompanyLink1Code.mmObject());
 			}
 		});

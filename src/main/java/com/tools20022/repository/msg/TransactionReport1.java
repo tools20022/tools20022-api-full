@@ -19,8 +19,10 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.PaymentIdentification4Choice;
 import com.tools20022.repository.choice.TransactionOrError1Choice;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -110,10 +112,10 @@ public class TransactionReport1 {
 			componentContext_lazy = () -> TransactionReport1.mmObject();
 			isDerived = false;
 			xmlTag = "PmtId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentIdentification";
 			definition = "Reference to the instruction related to the payment for which information is requested.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionReport2.mmPaymentIdentification);
+			nextVersions_lazy = () -> Arrays.asList(TransactionReport2.mmPaymentIdentification);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -164,10 +166,10 @@ public class TransactionReport1 {
 			componentContext_lazy = () -> TransactionReport1.mmObject();
 			isDerived = false;
 			xmlTag = "TxOrErr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionOrError";
 			definition = "Requested information on the payment transaction when information has not been found.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionReport2.mmTransactionOrError);
+			nextVersions_lazy = () -> Arrays.asList(TransactionReport2.mmTransactionOrError);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -178,9 +180,9 @@ public class TransactionReport1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionReport1.mmPaymentIdentification, com.tools20022.repository.msg.TransactionReport1.mmTransactionOrError);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(TransactionReport1.mmPaymentIdentification, TransactionReport1.mmTransactionOrError);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "TransactionReport1";
 				definition = "Provides details on the payment transactions.";
 				nextVersions_lazy = () -> Arrays.asList(TransactionReport2.mmObject());

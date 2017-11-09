@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.PendingFailingReasonCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -118,7 +120,7 @@ public class PendingReason5Code extends PendingFailingReasonCode {
 	 */
 	public static final MMCode mmAccountServicerDeadlineMissed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountServicerDeadlineMissed";
 			owner_lazy = () -> PendingReason5Code.mmObject();
 		}
@@ -141,7 +143,7 @@ public class PendingReason5Code extends PendingFailingReasonCode {
 	 */
 	public static final MMCode mmSentToTaxAuthorities = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SentToTaxAuthorities";
 			owner_lazy = () -> PendingReason5Code.mmObject();
 		}
@@ -164,7 +166,7 @@ public class PendingReason5Code extends PendingFailingReasonCode {
 	 */
 	public static final MMCode mmQuantityDisagreement = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuantityDisagreement";
 			owner_lazy = () -> PendingReason5Code.mmObject();
 		}
@@ -187,7 +189,7 @@ public class PendingReason5Code extends PendingFailingReasonCode {
 	 */
 	public static final MMCode mmLackOfSecurities = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LackOfSecurities";
 			owner_lazy = () -> PendingReason5Code.mmObject();
 		}
@@ -210,7 +212,7 @@ public class PendingReason5Code extends PendingFailingReasonCode {
 	 */
 	public static final MMCode mmMarketDeadlineMissed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketDeadlineMissed";
 			owner_lazy = () -> PendingReason5Code.mmObject();
 		}
@@ -233,7 +235,7 @@ public class PendingReason5Code extends PendingFailingReasonCode {
 	 */
 	public static final MMCode mmMissingCertification = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MissingCertification";
 			owner_lazy = () -> PendingReason5Code.mmObject();
 		}
@@ -256,7 +258,7 @@ public class PendingReason5Code extends PendingFailingReasonCode {
 	 */
 	public static final MMCode mmInsufficientMoney = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InsufficientMoney";
 			owner_lazy = () -> PendingReason5Code.mmObject();
 		}
@@ -279,7 +281,7 @@ public class PendingReason5Code extends PendingFailingReasonCode {
 	 */
 	public static final MMCode mmOther = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
 			owner_lazy = () -> PendingReason5Code.mmObject();
 		}
@@ -302,7 +304,7 @@ public class PendingReason5Code extends PendingFailingReasonCode {
 	 */
 	public static final MMCode mmNoPayment = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoPayment";
 			owner_lazy = () -> PendingReason5Code.mmObject();
 		}
@@ -325,7 +327,7 @@ public class PendingReason5Code extends PendingFailingReasonCode {
 	 */
 	public static final MMCode mmNotDelivered = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotDelivered";
 			owner_lazy = () -> PendingReason5Code.mmObject();
 		}
@@ -348,7 +350,7 @@ public class PendingReason5Code extends PendingFailingReasonCode {
 	 */
 	public static final MMCode mmPendingReceipt = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingReceipt";
 			owner_lazy = () -> PendingReason5Code.mmObject();
 		}
@@ -371,7 +373,7 @@ public class PendingReason5Code extends PendingFailingReasonCode {
 	 */
 	public static final MMCode mmValidForTaxAuthorities = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValidForTaxAuthorities";
 			owner_lazy = () -> PendingReason5Code.mmObject();
 		}
@@ -394,7 +396,7 @@ public class PendingReason5Code extends PendingFailingReasonCode {
 	 */
 	public static final MMCode mmWrongCertificatesNumbers = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WrongCertificatesNumbers";
 			owner_lazy = () -> PendingReason5Code.mmObject();
 		}
@@ -403,17 +405,14 @@ public class PendingReason5Code extends PendingFailingReasonCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ADEA");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PendingReason5Code";
 				definition = "Standard code to specify the reason why the instruction/event has a pending status.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PendingReason5Code.mmAccountServicerDeadlineMissed, com.tools20022.repository.codeset.PendingReason5Code.mmSentToTaxAuthorities,
-						com.tools20022.repository.codeset.PendingReason5Code.mmQuantityDisagreement, com.tools20022.repository.codeset.PendingReason5Code.mmLackOfSecurities,
-						com.tools20022.repository.codeset.PendingReason5Code.mmMarketDeadlineMissed, com.tools20022.repository.codeset.PendingReason5Code.mmMissingCertification,
-						com.tools20022.repository.codeset.PendingReason5Code.mmInsufficientMoney, com.tools20022.repository.codeset.PendingReason5Code.mmOther, com.tools20022.repository.codeset.PendingReason5Code.mmNoPayment,
-						com.tools20022.repository.codeset.PendingReason5Code.mmNotDelivered, com.tools20022.repository.codeset.PendingReason5Code.mmPendingReceipt,
-						com.tools20022.repository.codeset.PendingReason5Code.mmValidForTaxAuthorities, com.tools20022.repository.codeset.PendingReason5Code.mmWrongCertificatesNumbers);
+				code_lazy = () -> Arrays.asList(PendingReason5Code.mmAccountServicerDeadlineMissed, PendingReason5Code.mmSentToTaxAuthorities, PendingReason5Code.mmQuantityDisagreement, PendingReason5Code.mmLackOfSecurities,
+						PendingReason5Code.mmMarketDeadlineMissed, PendingReason5Code.mmMissingCertification, PendingReason5Code.mmInsufficientMoney, PendingReason5Code.mmOther, PendingReason5Code.mmNoPayment,
+						PendingReason5Code.mmNotDelivered, PendingReason5Code.mmPendingReceipt, PendingReason5Code.mmValidForTaxAuthorities, PendingReason5Code.mmWrongCertificatesNumbers);
 				trace_lazy = () -> PendingFailingReasonCode.mmObject();
 			}
 		});

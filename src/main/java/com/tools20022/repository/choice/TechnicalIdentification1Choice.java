@@ -19,10 +19,13 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.BICFIIdentifier;
 import com.tools20022.repository.datatype.Max256Text;
 import com.tools20022.repository.entity.ElectronicAddress;
+import com.tools20022.repository.entity.OrganisationIdentification;
 import com.tools20022.repository.entity.PartyIdentificationInformation;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -107,11 +110,11 @@ public class TechnicalIdentification1Choice {
 	 */
 	public static final MMMessageAttribute mmBICFI = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.mmBICFI;
+			businessElementTrace_lazy = () -> OrganisationIdentification.mmBICFI;
 			componentContext_lazy = () -> TechnicalIdentification1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "BICFI";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BICFI";
 			definition = "Technical address of the party is defined as a financial institution business idenfier code.";
 			maxOccurs = 1;
@@ -159,7 +162,7 @@ public class TechnicalIdentification1Choice {
 			componentContext_lazy = () -> TechnicalIdentification1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "TechAdr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TechnicalAddress";
 			definition = "Technical address of the party is defined in a free text format.";
 			maxOccurs = 1;
@@ -171,10 +174,10 @@ public class TechnicalIdentification1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.TechnicalIdentification1Choice.mmBICFI, com.tools20022.repository.choice.TechnicalIdentification1Choice.mmTechnicalAddress);
+				messageElement_lazy = () -> Arrays.asList(TechnicalIdentification1Choice.mmBICFI, TechnicalIdentification1Choice.mmTechnicalAddress);
 				trace_lazy = () -> PartyIdentificationInformation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "TechnicalIdentification1Choice";
 				definition = "Selection between a generic technical address or a BIC identifier when setting up or modifying the technical address for a party.";
 			}

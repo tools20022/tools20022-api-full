@@ -19,13 +19,18 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ActiveCurrencyCode;
 import com.tools20022.repository.codeset.EventFrequency2Code;
 import com.tools20022.repository.codeset.PriceMethod1Code;
 import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.datatype.YesNoIndicator;
+import com.tools20022.repository.entity.InvestmentFundClass;
 import com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics;
+import com.tools20022.repository.entity.NetAssetValueCalculation;
+import com.tools20022.repository.entity.SecuritiesPricing;
+import com.tools20022.repository.GeneratedRepository;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -147,11 +152,11 @@ public class ValuationDealingProcessingCharacteristics {
 	 */
 	public static final MMMessageAttribute mmValuationFrequency = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.NetAssetValueCalculation.mmValuationFrequency;
+			businessElementTrace_lazy = () -> NetAssetValueCalculation.mmValuationFrequency;
 			componentContext_lazy = () -> ValuationDealingProcessingCharacteristics.mmObject();
 			isDerived = false;
 			xmlTag = "ValtnFrqcy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValuationFrequency";
 			definition = "Frequency of the valuation.";
 			maxOccurs = 1;
@@ -195,7 +200,7 @@ public class ValuationDealingProcessingCharacteristics {
 			componentContext_lazy = () -> ValuationDealingProcessingCharacteristics.mmObject();
 			isDerived = false;
 			xmlTag = "ValtnFrqcyDesc";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValuationFrequencyDescription";
 			definition = "Further details regarding the dealing frequency, eg, Tuesday (for weekly dealing) or last business day of the month.";
 			maxOccurs = 1;
@@ -237,7 +242,7 @@ public class ValuationDealingProcessingCharacteristics {
 			componentContext_lazy = () -> ValuationDealingProcessingCharacteristics.mmObject();
 			isDerived = false;
 			xmlTag = "SbcptDealgFrqcy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubscriptionDealingFrequency";
 			definition = "Frequency at which the subscriptions are done.";
 			maxOccurs = 1;
@@ -279,7 +284,7 @@ public class ValuationDealingProcessingCharacteristics {
 			componentContext_lazy = () -> ValuationDealingProcessingCharacteristics.mmObject();
 			isDerived = false;
 			xmlTag = "SbcptDealFrqcyDesc";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubscriptionDealFrequencyDescription";
 			definition = "Description of frequency at which the subscription is done.";
 			maxOccurs = 1;
@@ -326,11 +331,11 @@ public class ValuationDealingProcessingCharacteristics {
 	 */
 	public static final MMMessageAttribute mmLimitedSubscriptionPeriod = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics.mmLimitedSubscriptionPeriod;
+			businessElementTrace_lazy = () -> InvestmentFundClassProcessingCharacteristics.mmLimitedSubscriptionPeriod;
 			componentContext_lazy = () -> ValuationDealingProcessingCharacteristics.mmObject();
 			isDerived = false;
 			xmlTag = "LtdSbcptPrd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LimitedSubscriptionPeriod";
 			definition = "Specific period, eg, for some guaranteed funds, during which the units/shares may be subscribed to.";
 			maxOccurs = 1;
@@ -372,7 +377,7 @@ public class ValuationDealingProcessingCharacteristics {
 			componentContext_lazy = () -> ValuationDealingProcessingCharacteristics.mmObject();
 			isDerived = false;
 			xmlTag = "RedDealgFrqcy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RedemptionDealingFrequency";
 			definition = "Frequency at which the redemptions are done.";
 			maxOccurs = 1;
@@ -414,7 +419,7 @@ public class ValuationDealingProcessingCharacteristics {
 			componentContext_lazy = () -> ValuationDealingProcessingCharacteristics.mmObject();
 			isDerived = false;
 			xmlTag = "RedDealFrqcyDesc";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RedemptionDealFrequencyDescription";
 			definition = "Description of frequency at which the redemption is done.";
 			maxOccurs = 1;
@@ -460,11 +465,11 @@ public class ValuationDealingProcessingCharacteristics {
 	 */
 	public static final MMMessageAttribute mmLimitedRedemptionPeriod = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics.mmLimitedRedemptionPeriod;
+			businessElementTrace_lazy = () -> InvestmentFundClassProcessingCharacteristics.mmLimitedRedemptionPeriod;
 			componentContext_lazy = () -> ValuationDealingProcessingCharacteristics.mmObject();
 			isDerived = false;
 			xmlTag = "LtdRedPrd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LimitedRedemptionPeriod";
 			definition = "Specific period, eg, for some guaranteed funds, during which the units/shares may be redeemed.";
 			maxOccurs = 1;
@@ -509,11 +514,11 @@ public class ValuationDealingProcessingCharacteristics {
 	 */
 	public static final MMMessageAttribute mmDecimalisationPrice = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics.mmDecimalisation;
+			businessElementTrace_lazy = () -> InvestmentFundClassProcessingCharacteristics.mmDecimalisation;
 			componentContext_lazy = () -> ValuationDealingProcessingCharacteristics.mmObject();
 			isDerived = false;
 			xmlTag = "DcmlstnPric";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DecimalisationPrice";
 			definition = "Number of decimal places to which quantities of units/shares are rounded.";
 			maxOccurs = 1;
@@ -558,11 +563,11 @@ public class ValuationDealingProcessingCharacteristics {
 	 */
 	public static final MMMessageAttribute mmDecimalisationUnits = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics.mmDecimalisation;
+			businessElementTrace_lazy = () -> InvestmentFundClassProcessingCharacteristics.mmDecimalisation;
 			componentContext_lazy = () -> ValuationDealingProcessingCharacteristics.mmObject();
 			isDerived = false;
 			xmlTag = "DcmlstnUnits";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DecimalisationUnits";
 			definition = "Number of decimal places to which quantities of units/shares are rounded.";
 			maxOccurs = 1;
@@ -606,11 +611,11 @@ public class ValuationDealingProcessingCharacteristics {
 	 */
 	public static final MMMessageAttribute mmDualFundIndicator = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmDualFundIndicator;
+			businessElementTrace_lazy = () -> InvestmentFundClass.mmDualFundIndicator;
 			componentContext_lazy = () -> ValuationDealingProcessingCharacteristics.mmObject();
 			isDerived = false;
 			xmlTag = "DualFndInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DualFundIndicator";
 			definition = "Indicates whether the fund has two prices.";
 			maxOccurs = 1;
@@ -654,11 +659,11 @@ public class ValuationDealingProcessingCharacteristics {
 	 */
 	public static final MMMessageAttribute mmPriceMethod = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmPriceMethod;
+			businessElementTrace_lazy = () -> SecuritiesPricing.mmPriceMethod;
 			componentContext_lazy = () -> ValuationDealingProcessingCharacteristics.mmObject();
 			isDerived = false;
 			xmlTag = "PricMtd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PriceMethod";
 			definition = "Type of pricing calculation method.";
 			maxOccurs = 1;
@@ -705,11 +710,11 @@ public class ValuationDealingProcessingCharacteristics {
 	 */
 	public static final MMMessageAttribute mmPriceCurrency = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmRequestedNAVCurrency;
+			businessElementTrace_lazy = () -> InvestmentFundClass.mmRequestedNAVCurrency;
 			componentContext_lazy = () -> ValuationDealingProcessingCharacteristics.mmObject();
 			isDerived = false;
 			xmlTag = "PricCcy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PriceCurrency";
 			definition = "Currencies in which the prices for the investment fund class are published by the fund management company.";
 			minOccurs = 1;
@@ -720,16 +725,15 @@ public class ValuationDealingProcessingCharacteristics {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ValuationDealingProcessingCharacteristics.mmValuationFrequency,
-						com.tools20022.repository.msg.ValuationDealingProcessingCharacteristics.mmValuationFrequencyDescription, com.tools20022.repository.msg.ValuationDealingProcessingCharacteristics.mmSubscriptionDealingFrequency,
-						com.tools20022.repository.msg.ValuationDealingProcessingCharacteristics.mmSubscriptionDealFrequencyDescription, com.tools20022.repository.msg.ValuationDealingProcessingCharacteristics.mmLimitedSubscriptionPeriod,
-						com.tools20022.repository.msg.ValuationDealingProcessingCharacteristics.mmRedemptionDealingFrequency, com.tools20022.repository.msg.ValuationDealingProcessingCharacteristics.mmRedemptionDealFrequencyDescription,
-						com.tools20022.repository.msg.ValuationDealingProcessingCharacteristics.mmLimitedRedemptionPeriod, com.tools20022.repository.msg.ValuationDealingProcessingCharacteristics.mmDecimalisationPrice,
-						com.tools20022.repository.msg.ValuationDealingProcessingCharacteristics.mmDecimalisationUnits, com.tools20022.repository.msg.ValuationDealingProcessingCharacteristics.mmDualFundIndicator,
-						com.tools20022.repository.msg.ValuationDealingProcessingCharacteristics.mmPriceMethod, com.tools20022.repository.msg.ValuationDealingProcessingCharacteristics.mmPriceCurrency);
+				messageElement_lazy = () -> Arrays.asList(ValuationDealingProcessingCharacteristics.mmValuationFrequency, ValuationDealingProcessingCharacteristics.mmValuationFrequencyDescription,
+						ValuationDealingProcessingCharacteristics.mmSubscriptionDealingFrequency, ValuationDealingProcessingCharacteristics.mmSubscriptionDealFrequencyDescription,
+						ValuationDealingProcessingCharacteristics.mmLimitedSubscriptionPeriod, ValuationDealingProcessingCharacteristics.mmRedemptionDealingFrequency,
+						ValuationDealingProcessingCharacteristics.mmRedemptionDealFrequencyDescription, ValuationDealingProcessingCharacteristics.mmLimitedRedemptionPeriod, ValuationDealingProcessingCharacteristics.mmDecimalisationPrice,
+						ValuationDealingProcessingCharacteristics.mmDecimalisationUnits, ValuationDealingProcessingCharacteristics.mmDualFundIndicator, ValuationDealingProcessingCharacteristics.mmPriceMethod,
+						ValuationDealingProcessingCharacteristics.mmPriceCurrency);
 				trace_lazy = () -> InvestmentFundClassProcessingCharacteristics.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
 						return DateFormat.getDateInstance(java.text.DateFormat.LONG).parse("September 9, 2017");

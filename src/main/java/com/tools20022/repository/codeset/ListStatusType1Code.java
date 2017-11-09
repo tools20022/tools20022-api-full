@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ListStatusTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -95,7 +97,7 @@ public class ListStatusType1Code extends ListStatusTypeCode {
 	 */
 	public static final MMCode mmAcknowledgement = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Acknowledgement";
 			owner_lazy = () -> ListStatusType1Code.mmObject();
 		}
@@ -118,7 +120,7 @@ public class ListStatusType1Code extends ListStatusTypeCode {
 	 */
 	public static final MMCode mmResponse = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Response";
 			owner_lazy = () -> ListStatusType1Code.mmObject();
 		}
@@ -141,7 +143,7 @@ public class ListStatusType1Code extends ListStatusTypeCode {
 	 */
 	public static final MMCode mmAllDone = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AllDone";
 			owner_lazy = () -> ListStatusType1Code.mmObject();
 		}
@@ -164,7 +166,7 @@ public class ListStatusType1Code extends ListStatusTypeCode {
 	 */
 	public static final MMCode mmAlert = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Alert";
 			owner_lazy = () -> ListStatusType1Code.mmObject();
 		}
@@ -187,7 +189,7 @@ public class ListStatusType1Code extends ListStatusTypeCode {
 	 */
 	public static final MMCode mmExecutionStarted = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExecutionStarted";
 			owner_lazy = () -> ListStatusType1Code.mmObject();
 		}
@@ -210,7 +212,7 @@ public class ListStatusType1Code extends ListStatusTypeCode {
 	 */
 	public static final MMCode mmTimed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Timed";
 			owner_lazy = () -> ListStatusType1Code.mmObject();
 		}
@@ -219,14 +221,13 @@ public class ListStatusType1Code extends ListStatusTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ACKN");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ListStatusType1Code";
 				definition = "Identifies the type of status.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ListStatusType1Code.mmAcknowledgement, com.tools20022.repository.codeset.ListStatusType1Code.mmResponse,
-						com.tools20022.repository.codeset.ListStatusType1Code.mmAllDone, com.tools20022.repository.codeset.ListStatusType1Code.mmAlert, com.tools20022.repository.codeset.ListStatusType1Code.mmExecutionStarted,
-						com.tools20022.repository.codeset.ListStatusType1Code.mmTimed);
+				code_lazy = () -> Arrays.asList(ListStatusType1Code.mmAcknowledgement, ListStatusType1Code.mmResponse, ListStatusType1Code.mmAllDone, ListStatusType1Code.mmAlert, ListStatusType1Code.mmExecutionStarted,
+						ListStatusType1Code.mmTimed);
 				trace_lazy = () -> ListStatusTypeCode.mmObject();
 			}
 		});

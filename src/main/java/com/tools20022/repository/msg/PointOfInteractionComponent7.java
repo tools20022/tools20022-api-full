@@ -19,9 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.POIComponentType4Code;
 import com.tools20022.repository.entity.Status;
 import com.tools20022.repository.entity.SystemStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -122,10 +124,10 @@ public class PointOfInteractionComponent7 {
 			componentContext_lazy = () -> PointOfInteractionComponent7.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Type of component belonging to a POI (Point Of Interaction) Terminal.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PointOfInteractionComponent6.mmType;
+			previousVersion_lazy = () -> PointOfInteractionComponent6.mmType;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> POIComponentType4Code.mmObject();
@@ -171,10 +173,10 @@ public class PointOfInteractionComponent7 {
 			componentContext_lazy = () -> PointOfInteractionComponent7.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Identification of the POI (Point Of Interaction) component.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PointOfInteractionComponent6.mmIdentification;
+			previousVersion_lazy = () -> PointOfInteractionComponent6.mmIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> com.tools20022.repository.msg.PointOfInteractionComponentIdentification1.mmObject();
@@ -224,10 +226,10 @@ public class PointOfInteractionComponent7 {
 			componentContext_lazy = () -> PointOfInteractionComponent7.mmObject();
 			isDerived = false;
 			xmlTag = "Sts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Status";
 			definition = "Status of the POI (Point Of Interaction) component.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PointOfInteractionComponent6.mmStatus;
+			previousVersion_lazy = () -> PointOfInteractionComponent6.mmStatus;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.PointOfInteractionComponentStatus3.mmObject();
@@ -273,10 +275,10 @@ public class PointOfInteractionComponent7 {
 			componentContext_lazy = () -> PointOfInteractionComponent7.mmObject();
 			isDerived = false;
 			xmlTag = "StdCmplc";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StandardCompliance";
 			definition = "Identification of the standard for which the component complies with.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PointOfInteractionComponent6.mmStandardCompliance;
+			previousVersion_lazy = () -> PointOfInteractionComponent6.mmStandardCompliance;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.GenericIdentification48.mmObject();
 		}
@@ -321,10 +323,10 @@ public class PointOfInteractionComponent7 {
 			componentContext_lazy = () -> PointOfInteractionComponent7.mmObject();
 			isDerived = false;
 			xmlTag = "Chrtcs";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Characteristics";
 			definition = "Characteristics of a POI (Point Of Interaction) component.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PointOfInteractionComponent6.mmCharacteristics;
+			previousVersion_lazy = () -> PointOfInteractionComponent6.mmCharacteristics;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.PointOfInteractionComponentCharacteristics3.mmObject();
@@ -370,10 +372,10 @@ public class PointOfInteractionComponent7 {
 			componentContext_lazy = () -> PointOfInteractionComponent7.mmObject();
 			isDerived = false;
 			xmlTag = "Assmnt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Assessment";
 			definition = "Assessments for the component of the point of interaction.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PointOfInteractionComponent6.mmAssessment;
+			previousVersion_lazy = () -> PointOfInteractionComponent6.mmAssessment;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.PointOfInteractionComponentAssessment1.mmObject();
 		}
@@ -382,12 +384,11 @@ public class PointOfInteractionComponent7 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PointOfInteractionComponent7.mmType, com.tools20022.repository.msg.PointOfInteractionComponent7.mmIdentification,
-						com.tools20022.repository.msg.PointOfInteractionComponent7.mmStatus, com.tools20022.repository.msg.PointOfInteractionComponent7.mmStandardCompliance,
-						com.tools20022.repository.msg.PointOfInteractionComponent7.mmCharacteristics, com.tools20022.repository.msg.PointOfInteractionComponent7.mmAssessment);
+				messageElement_lazy = () -> Arrays.asList(PointOfInteractionComponent7.mmType, PointOfInteractionComponent7.mmIdentification, PointOfInteractionComponent7.mmStatus, PointOfInteractionComponent7.mmStandardCompliance,
+						PointOfInteractionComponent7.mmCharacteristics, PointOfInteractionComponent7.mmAssessment);
 				trace_lazy = () -> Status.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PointOfInteractionComponent7";
 				definition = "Data related to a component of the POI (Point Of Interaction) performing the transaction.";
 				previousVersion_lazy = () -> PointOfInteractionComponent6.mmObject();

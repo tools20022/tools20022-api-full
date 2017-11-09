@@ -19,8 +19,10 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.FinancialInstrumentQuantity1Choice;
 import com.tools20022.repository.entity.UnderlyingRatio;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -102,11 +104,11 @@ public class UnderlyingRatio1 {
 	 */
 	public static final MMMessageAssociationEnd mmUnderlyingQuantityDenominator = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.UnderlyingRatio.mmUnderlyingQuantityDenominator;
+			businessElementTrace_lazy = () -> UnderlyingRatio.mmUnderlyingQuantityDenominator;
 			componentContext_lazy = () -> UnderlyingRatio1.mmObject();
 			isDerived = false;
 			xmlTag = "UndrlygQtyDnmtr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnderlyingQuantityDenominator";
 			definition = "Number of held securities for the exercise.";
 			maxOccurs = 1;
@@ -150,11 +152,11 @@ public class UnderlyingRatio1 {
 	 */
 	public static final MMMessageAssociationEnd mmUnderlyingQuantityNumerator = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.UnderlyingRatio.mmUnderlyingQuantityNumerator;
+			businessElementTrace_lazy = () -> UnderlyingRatio.mmUnderlyingQuantityNumerator;
 			componentContext_lazy = () -> UnderlyingRatio1.mmObject();
 			isDerived = false;
 			xmlTag = "UndrlygQtyNmrtr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnderlyingQuantityNumerator";
 			definition = "Number of related securities for the exercise.";
 			maxOccurs = 1;
@@ -199,11 +201,11 @@ public class UnderlyingRatio1 {
 	 */
 	public static final MMMessageAssociationEnd mmRelatedFinancialInstrumentIdentification = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.UnderlyingRatio.mmSecuritiesConversion;
+			businessElementTrace_lazy = () -> UnderlyingRatio.mmSecuritiesConversion;
 			componentContext_lazy = () -> UnderlyingRatio1.mmObject();
 			isDerived = false;
 			xmlTag = "RltdFinInstrmId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedFinancialInstrumentIdentification";
 			definition = "Related security into which the security can be converted.";
 			minOccurs = 0;
@@ -215,11 +217,10 @@ public class UnderlyingRatio1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UnderlyingRatio1.mmUnderlyingQuantityDenominator, com.tools20022.repository.msg.UnderlyingRatio1.mmUnderlyingQuantityNumerator,
-						com.tools20022.repository.msg.UnderlyingRatio1.mmRelatedFinancialInstrumentIdentification);
+				messageElement_lazy = () -> Arrays.asList(UnderlyingRatio1.mmUnderlyingQuantityDenominator, UnderlyingRatio1.mmUnderlyingQuantityNumerator, UnderlyingRatio1.mmRelatedFinancialInstrumentIdentification);
 				trace_lazy = () -> UnderlyingRatio.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "UnderlyingRatio1";
 				definition = "Related financial instrument into which the security can be converted.";
 			}

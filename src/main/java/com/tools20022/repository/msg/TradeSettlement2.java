@@ -20,12 +20,16 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.CurrencyAndAmount;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.Max4Text;
 import com.tools20022.repository.datatype.Max500Text;
 import com.tools20022.repository.entity.CommercialTrade;
+import com.tools20022.repository.entity.PaymentObligation;
 import com.tools20022.repository.entity.Tax;
+import com.tools20022.repository.entity.Trade;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -133,7 +137,7 @@ public class TradeSettlement2 {
 			componentContext_lazy = () -> TradeSettlement2.mmObject();
 			isDerived = false;
 			xmlTag = "PmtRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentReference";
 			definition = "Payment or creditor reference.";
 			maxOccurs = 1;
@@ -175,7 +179,7 @@ public class TradeSettlement2 {
 			componentContext_lazy = () -> TradeSettlement2.mmObject();
 			isDerived = false;
 			xmlTag = "DueDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DueDate";
 			definition = "Date when invoice should be paid. ";
 			maxOccurs = 1;
@@ -224,14 +228,14 @@ public class TradeSettlement2 {
 	 */
 	public static final MMMessageAttribute mmDuePayableAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentObligation.mmAmount;
+			businessElementTrace_lazy = () -> PaymentObligation.mmAmount;
 			componentContext_lazy = () -> TradeSettlement2.mmObject();
 			isDerived = false;
 			xmlTag = "DuePyblAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DuePayableAmount";
 			definition = "Payable amount with currency code.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TradeSettlement1.mmDuePayableAmount;
+			previousVersion_lazy = () -> TradeSettlement1.mmDuePayableAmount;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
@@ -272,7 +276,7 @@ public class TradeSettlement2 {
 			componentContext_lazy = () -> TradeSettlement2.mmObject();
 			isDerived = false;
 			xmlTag = "InvcCcyXchg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvoiceCurrencyExchange";
 			definition = "If invoice currency is different from local tax reporting currency, then applied exchange rate is given in this message structure.";
 			maxOccurs = 1;
@@ -314,7 +318,7 @@ public class TradeSettlement2 {
 			componentContext_lazy = () -> TradeSettlement2.mmObject();
 			isDerived = false;
 			xmlTag = "DlvryDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeliveryDate";
 			definition = "Date when goods/services are delivered to buyer.";
 			maxOccurs = 1;
@@ -356,11 +360,11 @@ public class TradeSettlement2 {
 	 */
 	public static final MMMessageAssociationEnd mmBillingPeriod = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Trade.mmStartDate;
+			businessElementTrace_lazy = () -> Trade.mmStartDate;
 			componentContext_lazy = () -> TradeSettlement2.mmObject();
 			isDerived = false;
 			xmlTag = "BllgPrd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BillingPeriod";
 			definition = "Period during which delivery executed or agreed invoicing period.";
 			maxOccurs = 1;
@@ -405,11 +409,11 @@ public class TradeSettlement2 {
 	 */
 	public static final MMMessageAttribute mmTaxTotalAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CommercialTrade.mmTotalAcceptedAmount;
+			businessElementTrace_lazy = () -> CommercialTrade.mmTotalAcceptedAmount;
 			componentContext_lazy = () -> TradeSettlement2.mmObject();
 			isDerived = false;
 			xmlTag = "TaxTtlAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxTotalAmount";
 			definition = "Tax total amount with currency code.";
 			maxOccurs = 1;
@@ -453,7 +457,7 @@ public class TradeSettlement2 {
 			componentContext_lazy = () -> TradeSettlement2.mmObject();
 			isDerived = false;
 			xmlTag = "XmptnRsnCd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExemptionReasonCode";
 			definition = "Reason for tax exemption expressed as a code,  if invoice or card transaction is out of tax processing.";
 			maxOccurs = 1;
@@ -497,7 +501,7 @@ public class TradeSettlement2 {
 			componentContext_lazy = () -> TradeSettlement2.mmObject();
 			isDerived = false;
 			xmlTag = "XmptnRsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExemptionReason";
 			definition = "Reason for a tax exemption, if invoice or card transaction is out of tax processing.";
 			maxOccurs = 1;
@@ -548,10 +552,10 @@ public class TradeSettlement2 {
 			componentContext_lazy = () -> TradeSettlement2.mmObject();
 			isDerived = false;
 			xmlTag = "SubTtlClctdTax";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubTotalCalculatedTax";
 			definition = "Calculated tax subtotal";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TradeSettlement1.mmSubTotalCalculatedTax;
+			previousVersion_lazy = () -> TradeSettlement1.mmSubTotalCalculatedTax;
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.SettlementSubTotalCalculatedTax2.mmObject();
@@ -589,7 +593,7 @@ public class TradeSettlement2 {
 			componentContext_lazy = () -> TradeSettlement2.mmObject();
 			isDerived = false;
 			xmlTag = "EarlyPmts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EarlyPayments";
 			definition = "Details of each early payment discount.";
 			minOccurs = 0;
@@ -601,13 +605,12 @@ public class TradeSettlement2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TradeSettlement2.mmPaymentReference, com.tools20022.repository.msg.TradeSettlement2.mmDueDate,
-						com.tools20022.repository.msg.TradeSettlement2.mmDuePayableAmount, com.tools20022.repository.msg.TradeSettlement2.mmInvoiceCurrencyExchange, com.tools20022.repository.msg.TradeSettlement2.mmDeliveryDate,
-						com.tools20022.repository.msg.TradeSettlement2.mmBillingPeriod, com.tools20022.repository.msg.TradeSettlement2.mmTaxTotalAmount, com.tools20022.repository.msg.TradeSettlement2.mmExemptionReasonCode,
-						com.tools20022.repository.msg.TradeSettlement2.mmExemptionReason, com.tools20022.repository.msg.TradeSettlement2.mmSubTotalCalculatedTax, com.tools20022.repository.msg.TradeSettlement2.mmEarlyPayments);
+				messageElement_lazy = () -> Arrays.asList(TradeSettlement2.mmPaymentReference, TradeSettlement2.mmDueDate, TradeSettlement2.mmDuePayableAmount, TradeSettlement2.mmInvoiceCurrencyExchange, TradeSettlement2.mmDeliveryDate,
+						TradeSettlement2.mmBillingPeriod, TradeSettlement2.mmTaxTotalAmount, TradeSettlement2.mmExemptionReasonCode, TradeSettlement2.mmExemptionReason, TradeSettlement2.mmSubTotalCalculatedTax,
+						TradeSettlement2.mmEarlyPayments);
 				trace_lazy = () -> CommercialTrade.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TradeSettlement2";
 				definition = "Trade settlement details for this invoice which involves the payment of an outstanding debt, account, or charge";
 				previousVersion_lazy = () -> TradeSettlement1.mmObject();

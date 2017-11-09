@@ -20,7 +20,9 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ATMSecurityScheme1Code;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -108,10 +110,10 @@ public class ATMSecurityContext2 {
 			componentContext_lazy = () -> ATMSecurityContext2.mmObject();
 			isDerived = false;
 			xmlTag = "CurSctySchme";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrentSecurityScheme";
 			definition = "Key exchange security scheme in activation on the ATM for the host manager.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMSecurityContext1.mmCurrentSecurityScheme;
+			previousVersion_lazy = () -> ATMSecurityContext1.mmCurrentSecurityScheme;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ATMSecurityScheme1Code.mmObject();
@@ -152,7 +154,7 @@ public class ATMSecurityContext2 {
 			componentContext_lazy = () -> ATMSecurityContext2.mmObject();
 			isDerived = false;
 			xmlTag = "DvcPrprty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeviceProperty";
 			definition = "Hardware security module information, so called EPP for Encrypted PIN Pad.";
 			maxOccurs = 1;
@@ -194,7 +196,7 @@ public class ATMSecurityContext2 {
 			componentContext_lazy = () -> ATMSecurityContext2.mmObject();
 			isDerived = false;
 			xmlTag = "CurCfgtn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrentConfiguration";
 			definition = "Configuration parameters in use by the security device.";
 			maxOccurs = 1;
@@ -207,10 +209,9 @@ public class ATMSecurityContext2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMSecurityContext2.mmCurrentSecurityScheme, com.tools20022.repository.msg.ATMSecurityContext2.mmDeviceProperty,
-						com.tools20022.repository.msg.ATMSecurityContext2.mmCurrentConfiguration);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(ATMSecurityContext2.mmCurrentSecurityScheme, ATMSecurityContext2.mmDeviceProperty, ATMSecurityContext2.mmCurrentConfiguration);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ATMSecurityContext2";
 				definition = "Context of the ATM for the key download.";
 				previousVersion_lazy = () -> ATMSecurityContext1.mmObject();

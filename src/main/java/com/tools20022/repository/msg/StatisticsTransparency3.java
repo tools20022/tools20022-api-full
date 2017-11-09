@@ -19,9 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
 import com.tools20022.repository.datatype.DecimalNumber;
 import com.tools20022.repository.datatype.Number;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -115,7 +117,7 @@ public class StatisticsTransparency3 {
 			componentContext_lazy = () -> StatisticsTransparency3.mmObject();
 			isDerived = false;
 			xmlTag = "AvrgDalyTrnvr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AverageDailyTurnover";
 			definition = "Average Daily Turnover for the instrument in Euros.";
 			maxOccurs = 1;
@@ -158,7 +160,7 @@ public class StatisticsTransparency3 {
 			componentContext_lazy = () -> StatisticsTransparency3.mmObject();
 			isDerived = false;
 			xmlTag = "AvrgTxVal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AverageTransactionValue";
 			definition = "Average value of the transactions for the instrument in Euro.";
 			maxOccurs = 1;
@@ -207,7 +209,7 @@ public class StatisticsTransparency3 {
 			componentContext_lazy = () -> StatisticsTransparency3.mmObject();
 			isDerived = false;
 			xmlTag = "LrgInScale";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LargeInScale";
 			definition = "Large in scale order in respect of a share, depositary receipt, certificate or other similar financial instrument shall be considered large in scale compared with normal market size if, on the basis of the average daily turnover for that financial instrument, the order is equal to or larger than the minimum size of orders set out in the local regulation.";
 			maxOccurs = 1;
@@ -255,7 +257,7 @@ public class StatisticsTransparency3 {
 			componentContext_lazy = () -> StatisticsTransparency3.mmObject();
 			isDerived = false;
 			xmlTag = "StdMktSz";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StandardMarketSize";
 			definition = "Standard market size for shares, depositary receipts, ETFs, certificates and other similar financial instruments for which there is a liquid market shall be determined on the basis of the average value of transactions for each financial instrument and in accordance with the local regulation.";
 			maxOccurs = 1;
@@ -300,7 +302,7 @@ public class StatisticsTransparency3 {
 			componentContext_lazy = () -> StatisticsTransparency3.mmObject();
 			isDerived = false;
 			xmlTag = "AvrgDalyNbOfTxs";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AverageDailyNumberOfTransactions";
 			definition = "Average daily number of transactions that have been performed on this market.";
 			maxOccurs = 1;
@@ -343,7 +345,7 @@ public class StatisticsTransparency3 {
 			componentContext_lazy = () -> StatisticsTransparency3.mmObject();
 			isDerived = false;
 			xmlTag = "TtlNbOfTxsExctd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalNumberOfTransactionsExecuted";
 			definition = "Total number of transactions that have been performed on this market.";
 			maxOccurs = 1;
@@ -386,7 +388,7 @@ public class StatisticsTransparency3 {
 			componentContext_lazy = () -> StatisticsTransparency3.mmObject();
 			isDerived = false;
 			xmlTag = "TtlVolOfTxsExctd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalVolumeOfTransactionsExecuted";
 			definition = "Total volume of transactions that have been performed on this market.";
 			maxOccurs = 1;
@@ -428,7 +430,7 @@ public class StatisticsTransparency3 {
 			componentContext_lazy = () -> StatisticsTransparency3.mmObject();
 			isDerived = false;
 			xmlTag = "TtlNbOfTradgDays";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalNumberOfTradingDays";
 			definition = "The total number of trading days for which the data is provided.";
 			maxOccurs = 1;
@@ -440,12 +442,11 @@ public class StatisticsTransparency3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StatisticsTransparency3.mmAverageDailyTurnover, com.tools20022.repository.msg.StatisticsTransparency3.mmAverageTransactionValue,
-						com.tools20022.repository.msg.StatisticsTransparency3.mmLargeInScale, com.tools20022.repository.msg.StatisticsTransparency3.mmStandardMarketSize,
-						com.tools20022.repository.msg.StatisticsTransparency3.mmAverageDailyNumberOfTransactions, com.tools20022.repository.msg.StatisticsTransparency3.mmTotalNumberOfTransactionsExecuted,
-						com.tools20022.repository.msg.StatisticsTransparency3.mmTotalVolumeOfTransactionsExecuted, com.tools20022.repository.msg.StatisticsTransparency3.mmTotalNumberOfTradingDays);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(StatisticsTransparency3.mmAverageDailyTurnover, StatisticsTransparency3.mmAverageTransactionValue, StatisticsTransparency3.mmLargeInScale,
+						StatisticsTransparency3.mmStandardMarketSize, StatisticsTransparency3.mmAverageDailyNumberOfTransactions, StatisticsTransparency3.mmTotalNumberOfTransactionsExecuted,
+						StatisticsTransparency3.mmTotalVolumeOfTransactionsExecuted, StatisticsTransparency3.mmTotalNumberOfTradingDays);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "StatisticsTransparency3";
 				definition = "Statistics for a financial instrument generated as part of transparency calculations.";
 			}

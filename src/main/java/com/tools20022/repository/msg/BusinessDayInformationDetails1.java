@@ -19,6 +19,8 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -96,7 +98,7 @@ public class BusinessDayInformationDetails1 {
 			componentContext_lazy = () -> BusinessDayInformationDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "SysSts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SystemStatus";
 			definition = "Status of a system and the period of time during which the status is valid.";
 			maxOccurs = 1;
@@ -141,7 +143,7 @@ public class BusinessDayInformationDetails1 {
 			componentContext_lazy = () -> BusinessDayInformationDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "SysInfPerCcy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SystemInformationPerCurrency";
 			definition = "Information relating to system operations and foreseen events relating to the operation of the system.";
 			minOccurs = 0;
@@ -153,9 +155,9 @@ public class BusinessDayInformationDetails1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BusinessDayInformationDetails1.mmSystemStatus, com.tools20022.repository.msg.BusinessDayInformationDetails1.mmSystemInformationPerCurrency);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(BusinessDayInformationDetails1.mmSystemStatus, BusinessDayInformationDetails1.mmSystemInformationPerCurrency);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "BusinessDayInformationDetails1";
 				definition = "Payment system operational information, eg, opening, closure, session period or events. given per currency.";
 			}

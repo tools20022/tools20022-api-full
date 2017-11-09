@@ -19,10 +19,16 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.semt.*;
 import com.tools20022.repository.choice.PurposeCode1Choice;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.Max70Text;
+import com.tools20022.repository.entity.AccountIdentification;
+import com.tools20022.repository.entity.GenericIdentification;
+import com.tools20022.repository.entity.InvestmentAccount;
 import com.tools20022.repository.entity.SecuritiesAccount;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -163,14 +169,14 @@ public class SecuritiesAccount11 {
 	 */
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmIdentification;
+			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> SecuritiesAccount11.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Unique and unambiguous identification for the account between the account owner and the account servicer.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesAccount26.mmIdentification);
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesAccount26.mmIdentification);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -219,14 +225,14 @@ public class SecuritiesAccount11 {
 	 */
 	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesAccount.mmSecuritiesAccountType;
+			businessElementTrace_lazy = () -> SecuritiesAccount.mmSecuritiesAccountType;
 			componentContext_lazy = () -> SecuritiesAccount11.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Specifies the type of securities account.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesAccount26.mmType);
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesAccount26.mmType);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> PurposeCode1Choice.mmObject();
@@ -278,14 +284,14 @@ public class SecuritiesAccount11 {
 	 */
 	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AccountIdentification.mmName;
+			businessElementTrace_lazy = () -> AccountIdentification.mmName;
 			componentContext_lazy = () -> SecuritiesAccount11.mmObject();
 			isDerived = false;
 			xmlTag = "Nm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Name";
 			definition = "Name of the account. It provides an additional means of identification, and is designated by the account servicer in agreement with the account owner.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesAccount26.mmName);
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesAccount26.mmName);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max70Text.mmObject();
@@ -340,14 +346,14 @@ public class SecuritiesAccount11 {
 	 */
 	public static final MMMessageAttribute mmDesignation = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentAccount.mmDesignation;
+			businessElementTrace_lazy = () -> InvestmentAccount.mmDesignation;
 			componentContext_lazy = () -> SecuritiesAccount11.mmObject();
 			isDerived = false;
 			xmlTag = "Dsgnt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Designation";
 			definition = "Supplementary registration information applying to a specific block of units for dealing and reporting purposes. The supplementary registration information may be used when all the units are registered, for example, to a funds supermarket, but holdings for each investor have to reconciled individually.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesAccount26.mmDesignation);
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesAccount26.mmDesignation);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -357,18 +363,15 @@ public class SecuritiesAccount11 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesAccount11.mmIdentification, com.tools20022.repository.msg.SecuritiesAccount11.mmType,
-						com.tools20022.repository.msg.SecuritiesAccount11.mmName, com.tools20022.repository.msg.SecuritiesAccount11.mmDesignation);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV03.mmSafekeepingAccount,
-						com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV04.mmSafekeepingAccount, com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV05.mmSafekeepingAccount,
-						com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV06.mmSafekeepingAccount, com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV03.mmSafekeepingAccount,
-						com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV04.mmSafekeepingAccount, com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV05.mmSafekeepingAccount,
-						com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV06.mmSafekeepingAccount, com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV07.mmSafekeepingAccount,
-						com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV07.mmSafekeepingAccount, com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV08.mmSafekeepingAccount,
-						com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV08.mmSafekeepingAccount);
+				messageElement_lazy = () -> Arrays.asList(SecuritiesAccount11.mmIdentification, SecuritiesAccount11.mmType, SecuritiesAccount11.mmName, SecuritiesAccount11.mmDesignation);
+				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesBalanceAccountingReportV03.mmSafekeepingAccount, SecuritiesBalanceAccountingReportV04.mmSafekeepingAccount,
+						SecuritiesBalanceAccountingReportV05.mmSafekeepingAccount, SecuritiesBalanceAccountingReportV06.mmSafekeepingAccount, SecuritiesBalanceCustodyReportV03.mmSafekeepingAccount,
+						SecuritiesBalanceCustodyReportV04.mmSafekeepingAccount, SecuritiesBalanceCustodyReportV05.mmSafekeepingAccount, SecuritiesBalanceCustodyReportV06.mmSafekeepingAccount,
+						SecuritiesBalanceCustodyReportV07.mmSafekeepingAccount, SecuritiesBalanceAccountingReportV07.mmSafekeepingAccount, SecuritiesBalanceCustodyReportV08.mmSafekeepingAccount,
+						SecuritiesBalanceAccountingReportV08.mmSafekeepingAccount);
 				trace_lazy = () -> SecuritiesAccount.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesAccount11";
 				definition = "Account to or from which a securities entry is made.";
 				nextVersions_lazy = () -> Arrays.asList(SecuritiesAccount26.mmObject());

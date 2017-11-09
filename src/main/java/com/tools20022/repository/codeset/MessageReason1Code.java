@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.MessageReasonCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -192,7 +194,7 @@ public class MessageReason1Code extends MessageReasonCode {
 	 */
 	public static final MMCode mmAcquirerStandin = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcquirerStandin";
 			owner_lazy = () -> MessageReason1Code.mmObject();
 		}
@@ -215,7 +217,7 @@ public class MessageReason1Code extends MessageReasonCode {
 	 */
 	public static final MMCode mmAmountInconsistency = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmountInconsistency";
 			owner_lazy = () -> MessageReason1Code.mmObject();
 		}
@@ -238,7 +240,7 @@ public class MessageReason1Code extends MessageReasonCode {
 	 */
 	public static final MMCode mmCardAcceptorSuspicious = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CardAcceptorSuspicious";
 			owner_lazy = () -> MessageReason1Code.mmObject();
 		}
@@ -261,7 +263,7 @@ public class MessageReason1Code extends MessageReasonCode {
 	 */
 	public static final MMCode mmCardDeclined = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CardDeclined";
 			owner_lazy = () -> MessageReason1Code.mmObject();
 		}
@@ -284,7 +286,7 @@ public class MessageReason1Code extends MessageReasonCode {
 	 */
 	public static final MMCode mmCardProcessed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CardProcessed";
 			owner_lazy = () -> MessageReason1Code.mmObject();
 		}
@@ -307,7 +309,7 @@ public class MessageReason1Code extends MessageReasonCode {
 	 */
 	public static final MMCode mmCardRandomSelection = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CardRandomSelection";
 			owner_lazy = () -> MessageReason1Code.mmObject();
 		}
@@ -330,7 +332,7 @@ public class MessageReason1Code extends MessageReasonCode {
 	 */
 	public static final MMCode mmCardRetained = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CardRetained";
 			owner_lazy = () -> MessageReason1Code.mmObject();
 		}
@@ -353,7 +355,7 @@ public class MessageReason1Code extends MessageReasonCode {
 	 */
 	public static final MMCode mmCardUnableToProcess = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CardUnableToProcess";
 			owner_lazy = () -> MessageReason1Code.mmObject();
 		}
@@ -376,7 +378,7 @@ public class MessageReason1Code extends MessageReasonCode {
 	 */
 	public static final MMCode mmCustomerCancel = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CustomerCancel";
 			owner_lazy = () -> MessageReason1Code.mmObject();
 		}
@@ -399,7 +401,7 @@ public class MessageReason1Code extends MessageReasonCode {
 	 */
 	public static final MMCode mmDeactivatedKey = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeactivatedKey";
 			owner_lazy = () -> MessageReason1Code.mmObject();
 		}
@@ -422,7 +424,7 @@ public class MessageReason1Code extends MessageReasonCode {
 	 */
 	public static final MMCode mmErrorInResponse = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ErrorInResponse";
 			owner_lazy = () -> MessageReason1Code.mmObject();
 		}
@@ -445,7 +447,7 @@ public class MessageReason1Code extends MessageReasonCode {
 	 */
 	public static final MMCode mmFloorLimit = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FloorLimit";
 			owner_lazy = () -> MessageReason1Code.mmObject();
 		}
@@ -468,7 +470,7 @@ public class MessageReason1Code extends MessageReasonCode {
 	 */
 	public static final MMCode mmInconsistentDeposit = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InconsistentDeposit";
 			owner_lazy = () -> MessageReason1Code.mmObject();
 		}
@@ -491,7 +493,7 @@ public class MessageReason1Code extends MessageReasonCode {
 	 */
 	public static final MMCode mmInvalidVerification = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvalidVerification";
 			owner_lazy = () -> MessageReason1Code.mmObject();
 		}
@@ -514,7 +516,7 @@ public class MessageReason1Code extends MessageReasonCode {
 	 */
 	public static final MMCode mmIssuerSignedOff = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssuerSignedOff";
 			owner_lazy = () -> MessageReason1Code.mmObject();
 		}
@@ -537,7 +539,7 @@ public class MessageReason1Code extends MessageReasonCode {
 	 */
 	public static final MMCode mmIssuerStandin = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssuerStandin";
 			owner_lazy = () -> MessageReason1Code.mmObject();
 		}
@@ -560,7 +562,7 @@ public class MessageReason1Code extends MessageReasonCode {
 	 */
 	public static final MMCode mmIssuerTimeout = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssuerTimeout";
 			owner_lazy = () -> MessageReason1Code.mmObject();
 		}
@@ -583,7 +585,7 @@ public class MessageReason1Code extends MessageReasonCode {
 	 */
 	public static final MMCode mmIssuerUnavailable = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssuerUnavailable";
 			owner_lazy = () -> MessageReason1Code.mmObject();
 		}
@@ -606,7 +608,7 @@ public class MessageReason1Code extends MessageReasonCode {
 	 */
 	public static final MMCode mmLifeCycleEnd = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LifeCycleEnd";
 			owner_lazy = () -> MessageReason1Code.mmObject();
 		}
@@ -629,7 +631,7 @@ public class MessageReason1Code extends MessageReasonCode {
 	 */
 	public static final MMCode mmMalfunction = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Malfunction";
 			owner_lazy = () -> MessageReason1Code.mmObject();
 		}
@@ -652,7 +654,7 @@ public class MessageReason1Code extends MessageReasonCode {
 	 */
 	public static final MMCode mmOfflineDeclined = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OfflineDeclined";
 			owner_lazy = () -> MessageReason1Code.mmObject();
 		}
@@ -675,7 +677,7 @@ public class MessageReason1Code extends MessageReasonCode {
 	 */
 	public static final MMCode mmOnLineDeclined = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OnLineDeclined";
 			owner_lazy = () -> MessageReason1Code.mmObject();
 		}
@@ -698,7 +700,7 @@ public class MessageReason1Code extends MessageReasonCode {
 	 */
 	public static final MMCode mmOnlineForced = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OnlineForced";
 			owner_lazy = () -> MessageReason1Code.mmObject();
 		}
@@ -721,7 +723,7 @@ public class MessageReason1Code extends MessageReasonCode {
 	 */
 	public static final MMCode mmOutOfSynchronisation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OutOfSynchronisation";
 			owner_lazy = () -> MessageReason1Code.mmObject();
 		}
@@ -744,7 +746,7 @@ public class MessageReason1Code extends MessageReasonCode {
 	 */
 	public static final MMCode mmUncompleteDispense = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UncompleteDispense";
 			owner_lazy = () -> MessageReason1Code.mmObject();
 		}
@@ -767,7 +769,7 @@ public class MessageReason1Code extends MessageReasonCode {
 	 */
 	public static final MMCode mmUnableToSend = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnableToSend";
 			owner_lazy = () -> MessageReason1Code.mmObject();
 		}
@@ -790,7 +792,7 @@ public class MessageReason1Code extends MessageReasonCode {
 	 */
 	public static final MMCode mmUnableToComplete = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnableToComplete";
 			owner_lazy = () -> MessageReason1Code.mmObject();
 		}
@@ -813,7 +815,7 @@ public class MessageReason1Code extends MessageReasonCode {
 	 */
 	public static final MMCode mmTooLateResponse = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TooLateResponse";
 			owner_lazy = () -> MessageReason1Code.mmObject();
 		}
@@ -836,7 +838,7 @@ public class MessageReason1Code extends MessageReasonCode {
 	 */
 	public static final MMCode mmTimeOut = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TimeOut";
 			owner_lazy = () -> MessageReason1Code.mmObject();
 		}
@@ -859,7 +861,7 @@ public class MessageReason1Code extends MessageReasonCode {
 	 */
 	public static final MMCode mmTerminalUnableToProcess = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TerminalUnableToProcess";
 			owner_lazy = () -> MessageReason1Code.mmObject();
 		}
@@ -882,7 +884,7 @@ public class MessageReason1Code extends MessageReasonCode {
 	 */
 	public static final MMCode mmTerminalRandomSelection = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TerminalRandomSelection";
 			owner_lazy = () -> MessageReason1Code.mmObject();
 		}
@@ -905,7 +907,7 @@ public class MessageReason1Code extends MessageReasonCode {
 	 */
 	public static final MMCode mmTerminalProcessed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TerminalProcessed";
 			owner_lazy = () -> MessageReason1Code.mmObject();
 		}
@@ -928,7 +930,7 @@ public class MessageReason1Code extends MessageReasonCode {
 	 */
 	public static final MMCode mmSuspectedFraud = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SuspectedFraud";
 			owner_lazy = () -> MessageReason1Code.mmObject();
 		}
@@ -951,7 +953,7 @@ public class MessageReason1Code extends MessageReasonCode {
 	 */
 	public static final MMCode mmSecurityReason = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityReason";
 			owner_lazy = () -> MessageReason1Code.mmObject();
 		}
@@ -974,7 +976,7 @@ public class MessageReason1Code extends MessageReasonCode {
 	 */
 	public static final MMCode mmReceiverUnavailable = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceiverUnavailable";
 			owner_lazy = () -> MessageReason1Code.mmObject();
 		}
@@ -997,7 +999,7 @@ public class MessageReason1Code extends MessageReasonCode {
 	 */
 	public static final MMCode mmReceiverTimeout = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceiverTimeout";
 			owner_lazy = () -> MessageReason1Code.mmObject();
 		}
@@ -1020,7 +1022,7 @@ public class MessageReason1Code extends MessageReasonCode {
 	 */
 	public static final MMCode mmReceiverStandin = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceiverStandin";
 			owner_lazy = () -> MessageReason1Code.mmObject();
 		}
@@ -1043,7 +1045,7 @@ public class MessageReason1Code extends MessageReasonCode {
 	 */
 	public static final MMCode mmReceiverSignedOff = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceiverSignedOff";
 			owner_lazy = () -> MessageReason1Code.mmObject();
 		}
@@ -1066,7 +1068,7 @@ public class MessageReason1Code extends MessageReasonCode {
 	 */
 	public static final MMCode mmPartiallyCompleted = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartiallyCompleted";
 			owner_lazy = () -> MessageReason1Code.mmObject();
 		}
@@ -1075,27 +1077,18 @@ public class MessageReason1Code extends MessageReasonCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MessageReason1Code";
 				definition = "Reason to send an card acquirer to issuer message.\r\nIt corresponds to ISO 8583, field number 25 for the version 93, and 9 for the version 2003.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MessageReason1Code.mmAcquirerStandin, com.tools20022.repository.codeset.MessageReason1Code.mmAmountInconsistency,
-						com.tools20022.repository.codeset.MessageReason1Code.mmCardAcceptorSuspicious, com.tools20022.repository.codeset.MessageReason1Code.mmCardDeclined,
-						com.tools20022.repository.codeset.MessageReason1Code.mmCardProcessed, com.tools20022.repository.codeset.MessageReason1Code.mmCardRandomSelection, com.tools20022.repository.codeset.MessageReason1Code.mmCardRetained,
-						com.tools20022.repository.codeset.MessageReason1Code.mmCardUnableToProcess, com.tools20022.repository.codeset.MessageReason1Code.mmCustomerCancel,
-						com.tools20022.repository.codeset.MessageReason1Code.mmDeactivatedKey, com.tools20022.repository.codeset.MessageReason1Code.mmErrorInResponse, com.tools20022.repository.codeset.MessageReason1Code.mmFloorLimit,
-						com.tools20022.repository.codeset.MessageReason1Code.mmInconsistentDeposit, com.tools20022.repository.codeset.MessageReason1Code.mmInvalidVerification,
-						com.tools20022.repository.codeset.MessageReason1Code.mmIssuerSignedOff, com.tools20022.repository.codeset.MessageReason1Code.mmIssuerStandin, com.tools20022.repository.codeset.MessageReason1Code.mmIssuerTimeout,
-						com.tools20022.repository.codeset.MessageReason1Code.mmIssuerUnavailable, com.tools20022.repository.codeset.MessageReason1Code.mmLifeCycleEnd, com.tools20022.repository.codeset.MessageReason1Code.mmMalfunction,
-						com.tools20022.repository.codeset.MessageReason1Code.mmOfflineDeclined, com.tools20022.repository.codeset.MessageReason1Code.mmOnLineDeclined, com.tools20022.repository.codeset.MessageReason1Code.mmOnlineForced,
-						com.tools20022.repository.codeset.MessageReason1Code.mmOutOfSynchronisation, com.tools20022.repository.codeset.MessageReason1Code.mmUncompleteDispense,
-						com.tools20022.repository.codeset.MessageReason1Code.mmUnableToSend, com.tools20022.repository.codeset.MessageReason1Code.mmUnableToComplete, com.tools20022.repository.codeset.MessageReason1Code.mmTooLateResponse,
-						com.tools20022.repository.codeset.MessageReason1Code.mmTimeOut, com.tools20022.repository.codeset.MessageReason1Code.mmTerminalUnableToProcess,
-						com.tools20022.repository.codeset.MessageReason1Code.mmTerminalRandomSelection, com.tools20022.repository.codeset.MessageReason1Code.mmTerminalProcessed,
-						com.tools20022.repository.codeset.MessageReason1Code.mmSuspectedFraud, com.tools20022.repository.codeset.MessageReason1Code.mmSecurityReason,
-						com.tools20022.repository.codeset.MessageReason1Code.mmReceiverUnavailable, com.tools20022.repository.codeset.MessageReason1Code.mmReceiverTimeout,
-						com.tools20022.repository.codeset.MessageReason1Code.mmReceiverStandin, com.tools20022.repository.codeset.MessageReason1Code.mmReceiverSignedOff,
-						com.tools20022.repository.codeset.MessageReason1Code.mmPartiallyCompleted);
+				code_lazy = () -> Arrays.asList(MessageReason1Code.mmAcquirerStandin, MessageReason1Code.mmAmountInconsistency, MessageReason1Code.mmCardAcceptorSuspicious, MessageReason1Code.mmCardDeclined,
+						MessageReason1Code.mmCardProcessed, MessageReason1Code.mmCardRandomSelection, MessageReason1Code.mmCardRetained, MessageReason1Code.mmCardUnableToProcess, MessageReason1Code.mmCustomerCancel,
+						MessageReason1Code.mmDeactivatedKey, MessageReason1Code.mmErrorInResponse, MessageReason1Code.mmFloorLimit, MessageReason1Code.mmInconsistentDeposit, MessageReason1Code.mmInvalidVerification,
+						MessageReason1Code.mmIssuerSignedOff, MessageReason1Code.mmIssuerStandin, MessageReason1Code.mmIssuerTimeout, MessageReason1Code.mmIssuerUnavailable, MessageReason1Code.mmLifeCycleEnd,
+						MessageReason1Code.mmMalfunction, MessageReason1Code.mmOfflineDeclined, MessageReason1Code.mmOnLineDeclined, MessageReason1Code.mmOnlineForced, MessageReason1Code.mmOutOfSynchronisation,
+						MessageReason1Code.mmUncompleteDispense, MessageReason1Code.mmUnableToSend, MessageReason1Code.mmUnableToComplete, MessageReason1Code.mmTooLateResponse, MessageReason1Code.mmTimeOut,
+						MessageReason1Code.mmTerminalUnableToProcess, MessageReason1Code.mmTerminalRandomSelection, MessageReason1Code.mmTerminalProcessed, MessageReason1Code.mmSuspectedFraud, MessageReason1Code.mmSecurityReason,
+						MessageReason1Code.mmReceiverUnavailable, MessageReason1Code.mmReceiverTimeout, MessageReason1Code.mmReceiverStandin, MessageReason1Code.mmReceiverSignedOff, MessageReason1Code.mmPartiallyCompleted);
 				trace_lazy = () -> MessageReasonCode.mmObject();
 			}
 		});

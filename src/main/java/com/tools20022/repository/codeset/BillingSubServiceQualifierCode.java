@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.BillingSubServiceQualifier1Code
+ * BillingSubServiceQualifier1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -44,14 +54,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.BillingSubServiceQualifierCode#mmMemberAccount
  * BillingSubServiceQualifierCode.mmMemberAccount}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.BillingSubServiceQualifier1Code
- * BillingSubServiceQualifier1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -104,7 +106,7 @@ public class BillingSubServiceQualifierCode {
 	 */
 	public static final MMCode mmLockbox = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Lockbox";
 			definition = "Subservice code contains a lockbox number which identifies the lockbox using the service.";
 			owner_lazy = () -> BillingSubServiceQualifierCode.mmObject();
@@ -137,7 +139,7 @@ public class BillingSubServiceQualifierCode {
 	 */
 	public static final MMCode mmStore = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Store";
 			definition = "Subservice code contains a store number which identifies the store using the service.";
 			owner_lazy = () -> BillingSubServiceQualifierCode.mmObject();
@@ -168,7 +170,7 @@ public class BillingSubServiceQualifierCode {
 	 */
 	public static final MMCode mmBilaterallyAgreed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BilaterallyAgreed";
 			definition = "Meaning of the subservice code is established by the trading partners.";
 			owner_lazy = () -> BillingSubServiceQualifierCode.mmObject();
@@ -201,7 +203,7 @@ public class BillingSubServiceQualifierCode {
 	 */
 	public static final MMCode mmSequenceNumber = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SequenceNumber";
 			definition = "Subservice code is an arbitrary sequence number used to uniquely identify this Service and prevent duplicate services within this statement.";
 			owner_lazy = () -> BillingSubServiceQualifierCode.mmObject();
@@ -236,7 +238,7 @@ public class BillingSubServiceQualifierCode {
 	 */
 	public static final MMCode mmMemberAccount = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MemberAccount";
 			definition = "Subservice code is the account number of a member of a relationship structure. This allows a parent statement to include the same service as rolled up from its member accounts and still avoid duplicate service identification within the statement.";
 			owner_lazy = () -> BillingSubServiceQualifierCode.mmObject();
@@ -247,14 +249,13 @@ public class BillingSubServiceQualifierCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("LBOX");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "BillingSubServiceQualifierCode";
 				definition = "Qualifies the content of the subservice code.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.BillingSubServiceQualifierCode.mmLockbox, com.tools20022.repository.codeset.BillingSubServiceQualifierCode.mmStore,
-						com.tools20022.repository.codeset.BillingSubServiceQualifierCode.mmBilaterallyAgreed, com.tools20022.repository.codeset.BillingSubServiceQualifierCode.mmSequenceNumber,
-						com.tools20022.repository.codeset.BillingSubServiceQualifierCode.mmMemberAccount);
+				code_lazy = () -> Arrays.asList(BillingSubServiceQualifierCode.mmLockbox, BillingSubServiceQualifierCode.mmStore, BillingSubServiceQualifierCode.mmBilaterallyAgreed, BillingSubServiceQualifierCode.mmSequenceNumber,
+						BillingSubServiceQualifierCode.mmMemberAccount);
 				derivation_lazy = () -> Arrays.asList(BillingSubServiceQualifier1Code.mmObject());
 			}
 		});

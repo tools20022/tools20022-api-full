@@ -20,9 +20,11 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.TechnicalIdentification1Choice;
 import com.tools20022.repository.codeset.SystemPartyType1Code;
 import com.tools20022.repository.datatype.ISODate;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -116,7 +118,7 @@ public class SystemParty3 {
 			componentContext_lazy = () -> SystemParty3.mmObject();
 			isDerived = false;
 			xmlTag = "OpngDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OpeningDate";
 			definition = "Specifies the opening date of the party.";
 			maxOccurs = 1;
@@ -156,7 +158,7 @@ public class SystemParty3 {
 			componentContext_lazy = () -> SystemParty3.mmObject();
 			isDerived = false;
 			xmlTag = "ClsgDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClosingDate";
 			definition = "Specifies the closing date of the party";
 			maxOccurs = 1;
@@ -197,7 +199,7 @@ public class SystemParty3 {
 			componentContext_lazy = () -> SystemParty3.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Specifies the type classification of the party.";
 			maxOccurs = 1;
@@ -241,7 +243,7 @@ public class SystemParty3 {
 			componentContext_lazy = () -> SystemParty3.mmObject();
 			isDerived = false;
 			xmlTag = "TechAdr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TechnicalAddress";
 			definition = "Unique technical address to unambiguously identify a party for receiving messages from the executing system.";
 			minOccurs = 0;
@@ -283,7 +285,7 @@ public class SystemParty3 {
 			componentContext_lazy = () -> SystemParty3.mmObject();
 			isDerived = false;
 			xmlTag = "MktSpcfcAttr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketSpecificAttribute";
 			definition = "Additional attributes defined by a central security depositary for a party.";
 			minOccurs = 0;
@@ -324,7 +326,7 @@ public class SystemParty3 {
 			componentContext_lazy = () -> SystemParty3.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Unique and unambiguous way to identify an organisation.";
 			maxOccurs = 1;
@@ -367,7 +369,7 @@ public class SystemParty3 {
 			componentContext_lazy = () -> SystemParty3.mmObject();
 			isDerived = false;
 			xmlTag = "Nm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Name";
 			definition = "Name by which an organisation is known and which is usually used to identify that organisation.";
 			maxOccurs = 1;
@@ -408,7 +410,7 @@ public class SystemParty3 {
 			componentContext_lazy = () -> SystemParty3.mmObject();
 			isDerived = false;
 			xmlTag = "Adr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Address";
 			definition = "Information that locates and identifies a specific address.";
 			maxOccurs = 1;
@@ -453,7 +455,7 @@ public class SystemParty3 {
 			componentContext_lazy = () -> SystemParty3.mmObject();
 			isDerived = false;
 			xmlTag = "Rstrctn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Restriction";
 			definition = "Defines the specific processing characteristics for a party to ensure configurability of specific requirements, as prescribed by national legal and regulatory requirements and practices.";
 			minOccurs = 0;
@@ -464,11 +466,10 @@ public class SystemParty3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SystemParty3.mmOpeningDate, com.tools20022.repository.msg.SystemParty3.mmClosingDate, com.tools20022.repository.msg.SystemParty3.mmType,
-						com.tools20022.repository.msg.SystemParty3.mmTechnicalAddress, com.tools20022.repository.msg.SystemParty3.mmMarketSpecificAttribute, com.tools20022.repository.msg.SystemParty3.mmIdentification,
-						com.tools20022.repository.msg.SystemParty3.mmName, com.tools20022.repository.msg.SystemParty3.mmAddress, com.tools20022.repository.msg.SystemParty3.mmRestriction);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(SystemParty3.mmOpeningDate, SystemParty3.mmClosingDate, SystemParty3.mmType, SystemParty3.mmTechnicalAddress, SystemParty3.mmMarketSpecificAttribute, SystemParty3.mmIdentification,
+						SystemParty3.mmName, SystemParty3.mmAddress, SystemParty3.mmRestriction);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SystemParty3";
 				definition = "Provides the definition of a party within a system. \r\nA party shall denote any legal or organisational entity required in the system. \r\nThis entity shall store the parties from the first three levels: the system operator, the central securities depositaries, the participants of the central securities depositaries, the national central banks and payment banks.";
 			}

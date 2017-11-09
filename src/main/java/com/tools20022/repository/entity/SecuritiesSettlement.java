@@ -17,15 +17,16 @@
 
 package com.tools20022.repository.entity;
 
-import com.tools20022.metamodel.MMBusinessAssociationEnd;
-import com.tools20022.metamodel.MMBusinessAttribute;
-import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.*;
+import com.tools20022.repository.choice.*;
 import com.tools20022.repository.codeset.*;
 import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.Settlement;
+import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -42,125 +43,9 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmTransferOperation
- * SecuritiesSettlement.mmTransferOperation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmSettlementDate
- * SecuritiesSettlement.mmSettlementDate}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmPartyRole
- * SecuritiesSettlement.mmPartyRole}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmSettlementAmount
- * SecuritiesSettlement.mmSettlementAmount}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmHoldingsPlanType
- * SecuritiesSettlement.mmHoldingsPlanType}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmSecuritiesMovementType
- * SecuritiesSettlement.mmSecuritiesMovementType}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmSettlementQuantity
- * SecuritiesSettlement.mmSettlementQuantity}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmSecuritiesTradeExecution
- * SecuritiesSettlement.mmSecuritiesTradeExecution}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmCurrencyToBuy
- * SecuritiesSettlement.mmCurrencyToBuy}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmCurrencyToSell
- * SecuritiesSettlement.mmCurrencyToSell}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmDenominationChoice
- * SecuritiesSettlement.mmDenominationChoice}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmSettlementTransactionCondition
- * SecuritiesSettlement.mmSettlementTransactionCondition}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmBeneficialOwnershipIndicator
- * SecuritiesSettlement.mmBeneficialOwnershipIndicator}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmMarketClientSide
- * SecuritiesSettlement.mmMarketClientSide}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmTracking
- * SecuritiesSettlement.mmTracking}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmLetterOfGuarantee
- * SecuritiesSettlement.mmLetterOfGuarantee}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmEligibleForCollateral
- * SecuritiesSettlement.mmEligibleForCollateral}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmAccruedInterestIndicator
- * SecuritiesSettlement.mmAccruedInterestIndicator}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmPreConfirmation
- * SecuritiesSettlement.mmPreConfirmation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmSecuritiesRealTimeGrossSettlement
- * SecuritiesSettlement.mmSecuritiesRealTimeGrossSettlement}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmBlockTrade
- * SecuritiesSettlement.mmBlockTrade}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmSettlementSystemMethod
- * SecuritiesSettlement.mmSettlementSystemMethod}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmAutomaticBorrowing
- * SecuritiesSettlement.mmAutomaticBorrowing}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmPartialSettlementIndicator
- * SecuritiesSettlement.mmPartialSettlementIndicator}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmHoldIndicator
- * SecuritiesSettlement.mmHoldIndicator}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmRequestedSafekeepingPlace
- * SecuritiesSettlement.mmRequestedSafekeepingPlace}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmPairOff
- * SecuritiesSettlement.mmPairOff}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmAccruedInterest
- * SecuritiesSettlement.mmAccruedInterest}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmSecuritiesClearing
- * SecuritiesSettlement.mmSecuritiesClearing}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmPayment
- * SecuritiesSettlement.mmPayment}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmSettledAllocation
- * SecuritiesSettlement.mmSettledAllocation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmRelatedForeignExchangeOperation
- * SecuritiesSettlement.mmRelatedForeignExchangeOperation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmSecurity
- * SecuritiesSettlement.mmSecurity}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmPosition
- * SecuritiesSettlement.mmPosition}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmRollover
- * SecuritiesSettlement.mmRollover}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmTurnedQuantity
- * SecuritiesSettlement.mmTurnedQuantity}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmSettlementReason
- * SecuritiesSettlement.mmSettlementReason}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmSettlementType
- * SecuritiesSettlement.mmSettlementType}</li>
- * </ul>
- * </li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} = List of 505 elements</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
  * associationDomain} =
@@ -623,9 +508,125 @@ import java.util.List;
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
  * superType} = {@linkplain com.tools20022.repository.entity.Settlement
  * Settlement}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
  * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} = List of 505 elements</li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmTransferOperation
+ * SecuritiesSettlement.mmTransferOperation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmSettlementDate
+ * SecuritiesSettlement.mmSettlementDate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmPartyRole
+ * SecuritiesSettlement.mmPartyRole}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmSettlementAmount
+ * SecuritiesSettlement.mmSettlementAmount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmHoldingsPlanType
+ * SecuritiesSettlement.mmHoldingsPlanType}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmSecuritiesMovementType
+ * SecuritiesSettlement.mmSecuritiesMovementType}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmSettlementQuantity
+ * SecuritiesSettlement.mmSettlementQuantity}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmSecuritiesTradeExecution
+ * SecuritiesSettlement.mmSecuritiesTradeExecution}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmCurrencyToBuy
+ * SecuritiesSettlement.mmCurrencyToBuy}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmCurrencyToSell
+ * SecuritiesSettlement.mmCurrencyToSell}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmDenominationChoice
+ * SecuritiesSettlement.mmDenominationChoice}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmSettlementTransactionCondition
+ * SecuritiesSettlement.mmSettlementTransactionCondition}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmBeneficialOwnershipIndicator
+ * SecuritiesSettlement.mmBeneficialOwnershipIndicator}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmMarketClientSide
+ * SecuritiesSettlement.mmMarketClientSide}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmTracking
+ * SecuritiesSettlement.mmTracking}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmLetterOfGuarantee
+ * SecuritiesSettlement.mmLetterOfGuarantee}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmEligibleForCollateral
+ * SecuritiesSettlement.mmEligibleForCollateral}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmAccruedInterestIndicator
+ * SecuritiesSettlement.mmAccruedInterestIndicator}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmPreConfirmation
+ * SecuritiesSettlement.mmPreConfirmation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmSecuritiesRealTimeGrossSettlement
+ * SecuritiesSettlement.mmSecuritiesRealTimeGrossSettlement}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmBlockTrade
+ * SecuritiesSettlement.mmBlockTrade}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmSettlementSystemMethod
+ * SecuritiesSettlement.mmSettlementSystemMethod}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmAutomaticBorrowing
+ * SecuritiesSettlement.mmAutomaticBorrowing}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmPartialSettlementIndicator
+ * SecuritiesSettlement.mmPartialSettlementIndicator}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmHoldIndicator
+ * SecuritiesSettlement.mmHoldIndicator}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmRequestedSafekeepingPlace
+ * SecuritiesSettlement.mmRequestedSafekeepingPlace}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmPairOff
+ * SecuritiesSettlement.mmPairOff}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmAccruedInterest
+ * SecuritiesSettlement.mmAccruedInterest}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmSecuritiesClearing
+ * SecuritiesSettlement.mmSecuritiesClearing}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmPayment
+ * SecuritiesSettlement.mmPayment}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmSettledAllocation
+ * SecuritiesSettlement.mmSettledAllocation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmRelatedForeignExchangeOperation
+ * SecuritiesSettlement.mmRelatedForeignExchangeOperation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmSecurity
+ * SecuritiesSettlement.mmSecurity}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmPosition
+ * SecuritiesSettlement.mmPosition}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmRollover
+ * SecuritiesSettlement.mmRollover}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmTurnedQuantity
+ * SecuritiesSettlement.mmTurnedQuantity}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmSettlementReason
+ * SecuritiesSettlement.mmSettlementReason}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement#mmSettlementType
+ * SecuritiesSettlement.mmSettlementType}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -699,18 +700,17 @@ public class SecuritiesSettlement extends Settlement {
 	 */
 	public static final MMBusinessAssociationEnd mmTransferOperation = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Cancellation3Choice.mmCancellationByTransferInstructionDetails,
-					com.tools20022.repository.choice.Cancellation6Choice.mmCancellationByTransferInstructionDetails, com.tools20022.repository.choice.Cancellation7Choice.mmCancellationByTransferInstructionDetails,
-					com.tools20022.repository.choice.Cancellation11Choice.mmCancellationByTransferInstructionDetails);
+			derivation_lazy = () -> Arrays.asList(Cancellation3Choice.mmCancellationByTransferInstructionDetails, Cancellation6Choice.mmCancellationByTransferInstructionDetails,
+					Cancellation7Choice.mmCancellationByTransferInstructionDetails, Cancellation11Choice.mmCancellationByTransferInstructionDetails);
 			elementContext_lazy = () -> SecuritiesSettlement.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TransferOperation";
 			definition = "Set of processes resulting in a securities transfer.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesTransfer.mmRelatedSettlement;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SecuritiesTransfer.mmObject();
 		}
 	};
@@ -1106,59 +1106,36 @@ public class SecuritiesSettlement extends Settlement {
 	 */
 	public static final MMBusinessAttribute mmSettlementDate = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DeliverInformation4.mmEffectiveSettlementDate, com.tools20022.repository.msg.DeliverInformation7.mmEffectiveSettlementDate,
-					com.tools20022.repository.msg.ReceiveInformation4.mmEffectiveSettlementDate, com.tools20022.repository.msg.ReceiveInformation8.mmEffectiveSettlementDate,
-					com.tools20022.repository.msg.Transfer24.mmEffectiveSettlementDate, com.tools20022.repository.msg.ReceiveInformation6.mmEffectiveSettlementDate,
-					com.tools20022.repository.msg.ReceiveInformation11.mmEffectiveSettlementDate, com.tools20022.repository.msg.Transfer25.mmEffectiveSettlementDate,
-					com.tools20022.repository.msg.DeliverInformation11.mmEffectiveSettlementDate, com.tools20022.repository.msg.DeliverInformation6.mmEffectiveSettlementDate,
-					com.tools20022.repository.msg.Transfer26.mmEffectiveSettlementDate, com.tools20022.repository.msg.Transfer23.mmEffectiveSettlementDate, com.tools20022.repository.msg.SettlementTypeAndIdentification2.mmSettlementDate,
-					com.tools20022.repository.msg.SettlementTypeAndIdentification5.mmSettlementDate, com.tools20022.repository.msg.IntraPositionDetails2.mmSettlementDate,
-					com.tools20022.repository.msg.IntraPositionDetails8.mmSettlementDate, com.tools20022.repository.msg.IntraPositionDetails12.mmSettlementDate, com.tools20022.repository.msg.IntraPositionDetails13.mmSettlementDate,
-					com.tools20022.repository.msg.IntraPositionDetails22.mmSettlementDate, com.tools20022.repository.msg.IntraPositionDetails26.mmSettlementDate, com.tools20022.repository.msg.IntraPositionDetails27.mmSettlementDate,
-					com.tools20022.repository.msg.IntraPositionDetails29.mmSettlementDate, com.tools20022.repository.msg.SecuritiesTradeDetails6.mmEffectiveSettlementDate,
-					com.tools20022.repository.msg.SecuritiesTradeDetails13.mmEffectiveSettlementDate, com.tools20022.repository.msg.AdditionalInformation3.mmEffectiveDate,
-					com.tools20022.repository.msg.AdditionalInformation4.mmEffectiveDate, com.tools20022.repository.msg.AdditionalInformation7.mmEffectiveDate, com.tools20022.repository.msg.AdditionalInformation8.mmEffectiveDate,
-					com.tools20022.repository.msg.SecuritiesTradeDetails2.mmEffectiveSettlementDate, com.tools20022.repository.msg.SecuritiesTradeDetails16.mmEffectiveSettlementDate,
-					com.tools20022.repository.msg.TransactionDetails6.mmEffectiveSettlementDate, com.tools20022.repository.msg.TransactionDetails18.mmEffectiveSettlementDate,
-					com.tools20022.repository.msg.TransactionDetails24.mmEffectiveSettlementDate, com.tools20022.repository.msg.TransactionDetails34.mmEffectiveSettlementDate,
-					com.tools20022.repository.msg.TransactionDetails37.mmEffectiveSettlementDate, com.tools20022.repository.msg.TransactionDetails48.mmEffectiveSettlementDate,
-					com.tools20022.repository.msg.TransactionDetails57.mmEffectiveSettlementDate, com.tools20022.repository.msg.TransactionDetails60.mmEffectiveSettlementDate,
-					com.tools20022.repository.msg.InvestmentFundTransaction2.mmSettlementDate, com.tools20022.repository.msg.InvestmentFundTransaction3.mmSettlementDate, com.tools20022.repository.msg.IntraPositionDetails1.mmSettlementDate,
-					com.tools20022.repository.msg.IntraPositionDetails11.mmSettlementDate, com.tools20022.repository.msg.IntraPositionDetails4.mmSettlementDate, com.tools20022.repository.msg.IntraPositionDetails9.mmSettlementDate,
-					com.tools20022.repository.msg.IntraPositionDetails7.mmSettlementDate, com.tools20022.repository.msg.IntraPositionDetails16.mmSettlementDate, com.tools20022.repository.msg.IntraPositionDetails21.mmSettlementDate,
-					com.tools20022.repository.msg.IntraPositionDetails25.mmSettlementDate, com.tools20022.repository.msg.IntraPositionDetails5.mmSettlementDate, com.tools20022.repository.msg.IntraPositionDetails15.mmSettlementDate,
-					com.tools20022.repository.msg.IntraPositionDetails19.mmSettlementDate, com.tools20022.repository.msg.IntraPositionDetails23.mmSettlementDate, com.tools20022.repository.msg.SettlementObligation1.mmIntendedSettlementDate,
-					com.tools20022.repository.msg.SettlementObligation6.mmIntendedSettlementDate, com.tools20022.repository.msg.SettlementObligation3.mmSettlementDate,
-					com.tools20022.repository.msg.SettlementObligation2.mmIntendedSettlementDate, com.tools20022.repository.msg.SettlementObligation5.mmSettlementDate,
-					com.tools20022.repository.msg.SettlementObligation4.mmIntendedSettlementDate, com.tools20022.repository.msg.NetPosition2.mmSettlementDate, com.tools20022.repository.msg.TransactionDetails51.mmEffectiveSettlementDate,
-					com.tools20022.repository.msg.IntraPositionQueryCriteria1.mmEffectiveSettlementDate, com.tools20022.repository.msg.IntraPosition4.mmSettlementDate, com.tools20022.repository.msg.InstrumentLeg2.mmLegSettlementDate,
-					com.tools20022.repository.msg.Transfer28.mmEffectiveSettlementDate, com.tools20022.repository.msg.ReceiveInformation12.mmEffectiveSettlementDate, com.tools20022.repository.msg.Transfer29.mmEffectiveSettlementDate,
-					com.tools20022.repository.msg.DeliverInformation12.mmEffectiveSettlementDate, com.tools20022.repository.msg.TransactionDetails63.mmEffectiveSettlementDate,
-					com.tools20022.repository.msg.SecuritiesTradeDetails31.mmEffectiveSettlementDate, com.tools20022.repository.msg.SecuritiesTradeDetails38.mmEffectiveSettlementDate,
-					com.tools20022.repository.msg.AdditionalInformation9.mmEffectiveDate, com.tools20022.repository.msg.SecuritiesTradeDetails39.mmEffectiveSettlementDate,
-					com.tools20022.repository.msg.SecuritiesTradeDetails43.mmEffectiveSettlementDate, com.tools20022.repository.msg.AdditionalInformation10.mmEffectiveDate,
-					com.tools20022.repository.msg.TransactionDetails68.mmEffectiveSettlementDate, com.tools20022.repository.msg.InvestmentFundTransaction4.mmSettlementDate,
-					com.tools20022.repository.msg.DeliverInformation14.mmEffectiveSettlementDate, com.tools20022.repository.msg.ReceiveInformation14.mmEffectiveSettlementDate,
-					com.tools20022.repository.msg.SettlementObligation7.mmIntendedSettlementDate, com.tools20022.repository.msg.NetPosition3.mmSettlementDate, com.tools20022.repository.msg.SettlementObligation8.mmIntendedSettlementDate,
-					com.tools20022.repository.msg.UnsecuredMarketTransaction1.mmSettlementDate, com.tools20022.repository.msg.SecuredMarketTransaction1.mmSettlementDate,
-					com.tools20022.repository.msg.AdditionalInformation11.mmEffectiveDate, com.tools20022.repository.msg.IntraPositionDetails31.mmSettlementDate, com.tools20022.repository.msg.TransactionDetails78.mmEffectiveSettlementDate,
-					com.tools20022.repository.msg.InstrumentLeg6.mmLegSettlementDate, com.tools20022.repository.msg.IntraPositionDetails33.mmSettlementDate, com.tools20022.repository.msg.SecuritiesTradeDetails53.mmEffectiveSettlementDate,
-					com.tools20022.repository.msg.SecuritiesTradeDetails55.mmEffectiveSettlementDate, com.tools20022.repository.msg.IntraPositionDetails34.mmSettlementDate,
-					com.tools20022.repository.msg.SettlementTypeAndIdentification20.mmSettlementDate, com.tools20022.repository.msg.ReceiveInformation17.mmEffectiveSettlementDate,
-					com.tools20022.repository.msg.Transfer31.mmEffectiveSettlementDate, com.tools20022.repository.msg.DeliverInformation17.mmEffectiveSettlementDate, com.tools20022.repository.msg.Transfer33.mmEffectiveSettlementDate,
-					com.tools20022.repository.msg.SettlementTypeAndIdentification21.mmSettlementDate, com.tools20022.repository.msg.AdditionalInformation12.mmEffectiveDate,
-					com.tools20022.repository.msg.SecuritiesTradeDetails58.mmEffectiveSettlementDate, com.tools20022.repository.msg.IntraPositionDetails35.mmSettlementDate,
-					com.tools20022.repository.msg.IntraPositionDetails36.mmSettlementDate, com.tools20022.repository.msg.IntraPositionDetails38.mmSettlementDate,
-					com.tools20022.repository.msg.SecuritiesTradeDetails62.mmEffectiveSettlementDate, com.tools20022.repository.msg.TransactionDetails91.mmEffectiveSettlementDate,
-					com.tools20022.repository.msg.UnsecuredMarketTransaction2.mmSettlementDate, com.tools20022.repository.msg.SecuredMarketTransaction2.mmSettlementDate,
-					com.tools20022.repository.msg.UnsecuredMarketTransaction3.mmSettlementDate, com.tools20022.repository.msg.SecuredMarketTransaction3.mmSettlementDate,
-					com.tools20022.repository.msg.IntraPositionDetails41.mmSettlementDate, com.tools20022.repository.msg.IntraPositionDetails39.mmSettlementDate, com.tools20022.repository.msg.AdditionalInformation13.mmEffectiveDate,
-					com.tools20022.repository.msg.TransactionDetails95.mmEffectiveSettlementDate, com.tools20022.repository.msg.IntraPositionDetails43.mmSettlementDate, com.tools20022.repository.msg.IntraPositionDetails42.mmSettlementDate,
-					com.tools20022.repository.msg.AdditionalInformation14.mmEffectiveDate, com.tools20022.repository.msg.TransactionDetails98.mmEffectiveSettlementDate,
-					com.tools20022.repository.msg.SecuredMarketTransaction4.mmSettlementDate, com.tools20022.repository.msg.UnsecuredMarketTransaction4.mmSettlementDate);
+			derivation_lazy = () -> Arrays.asList(DeliverInformation4.mmEffectiveSettlementDate, DeliverInformation7.mmEffectiveSettlementDate, ReceiveInformation4.mmEffectiveSettlementDate, ReceiveInformation8.mmEffectiveSettlementDate,
+					Transfer24.mmEffectiveSettlementDate, ReceiveInformation6.mmEffectiveSettlementDate, ReceiveInformation11.mmEffectiveSettlementDate, Transfer25.mmEffectiveSettlementDate, DeliverInformation11.mmEffectiveSettlementDate,
+					DeliverInformation6.mmEffectiveSettlementDate, Transfer26.mmEffectiveSettlementDate, Transfer23.mmEffectiveSettlementDate, SettlementTypeAndIdentification2.mmSettlementDate,
+					SettlementTypeAndIdentification5.mmSettlementDate, IntraPositionDetails2.mmSettlementDate, IntraPositionDetails8.mmSettlementDate, IntraPositionDetails12.mmSettlementDate, IntraPositionDetails13.mmSettlementDate,
+					IntraPositionDetails22.mmSettlementDate, IntraPositionDetails26.mmSettlementDate, IntraPositionDetails27.mmSettlementDate, IntraPositionDetails29.mmSettlementDate, SecuritiesTradeDetails6.mmEffectiveSettlementDate,
+					SecuritiesTradeDetails13.mmEffectiveSettlementDate, AdditionalInformation3.mmEffectiveDate, AdditionalInformation4.mmEffectiveDate, AdditionalInformation7.mmEffectiveDate, AdditionalInformation8.mmEffectiveDate,
+					SecuritiesTradeDetails2.mmEffectiveSettlementDate, SecuritiesTradeDetails16.mmEffectiveSettlementDate, TransactionDetails6.mmEffectiveSettlementDate, TransactionDetails18.mmEffectiveSettlementDate,
+					TransactionDetails24.mmEffectiveSettlementDate, TransactionDetails34.mmEffectiveSettlementDate, TransactionDetails37.mmEffectiveSettlementDate, TransactionDetails48.mmEffectiveSettlementDate,
+					TransactionDetails57.mmEffectiveSettlementDate, TransactionDetails60.mmEffectiveSettlementDate, InvestmentFundTransaction2.mmSettlementDate, InvestmentFundTransaction3.mmSettlementDate,
+					IntraPositionDetails1.mmSettlementDate, IntraPositionDetails11.mmSettlementDate, IntraPositionDetails4.mmSettlementDate, IntraPositionDetails9.mmSettlementDate, IntraPositionDetails7.mmSettlementDate,
+					IntraPositionDetails16.mmSettlementDate, IntraPositionDetails21.mmSettlementDate, IntraPositionDetails25.mmSettlementDate, IntraPositionDetails5.mmSettlementDate, IntraPositionDetails15.mmSettlementDate,
+					IntraPositionDetails19.mmSettlementDate, IntraPositionDetails23.mmSettlementDate, SettlementObligation1.mmIntendedSettlementDate, SettlementObligation6.mmIntendedSettlementDate, SettlementObligation3.mmSettlementDate,
+					SettlementObligation2.mmIntendedSettlementDate, SettlementObligation5.mmSettlementDate, SettlementObligation4.mmIntendedSettlementDate, NetPosition2.mmSettlementDate, TransactionDetails51.mmEffectiveSettlementDate,
+					IntraPositionQueryCriteria1.mmEffectiveSettlementDate, IntraPosition4.mmSettlementDate, InstrumentLeg2.mmLegSettlementDate, Transfer28.mmEffectiveSettlementDate, ReceiveInformation12.mmEffectiveSettlementDate,
+					Transfer29.mmEffectiveSettlementDate, DeliverInformation12.mmEffectiveSettlementDate, TransactionDetails63.mmEffectiveSettlementDate, SecuritiesTradeDetails31.mmEffectiveSettlementDate,
+					SecuritiesTradeDetails38.mmEffectiveSettlementDate, AdditionalInformation9.mmEffectiveDate, SecuritiesTradeDetails39.mmEffectiveSettlementDate, SecuritiesTradeDetails43.mmEffectiveSettlementDate,
+					AdditionalInformation10.mmEffectiveDate, TransactionDetails68.mmEffectiveSettlementDate, InvestmentFundTransaction4.mmSettlementDate, DeliverInformation14.mmEffectiveSettlementDate,
+					ReceiveInformation14.mmEffectiveSettlementDate, SettlementObligation7.mmIntendedSettlementDate, NetPosition3.mmSettlementDate, SettlementObligation8.mmIntendedSettlementDate,
+					UnsecuredMarketTransaction1.mmSettlementDate, SecuredMarketTransaction1.mmSettlementDate, AdditionalInformation11.mmEffectiveDate, IntraPositionDetails31.mmSettlementDate, TransactionDetails78.mmEffectiveSettlementDate,
+					InstrumentLeg6.mmLegSettlementDate, IntraPositionDetails33.mmSettlementDate, SecuritiesTradeDetails53.mmEffectiveSettlementDate, SecuritiesTradeDetails55.mmEffectiveSettlementDate,
+					IntraPositionDetails34.mmSettlementDate, SettlementTypeAndIdentification20.mmSettlementDate, ReceiveInformation17.mmEffectiveSettlementDate, Transfer31.mmEffectiveSettlementDate,
+					DeliverInformation17.mmEffectiveSettlementDate, Transfer33.mmEffectiveSettlementDate, SettlementTypeAndIdentification21.mmSettlementDate, AdditionalInformation12.mmEffectiveDate,
+					SecuritiesTradeDetails58.mmEffectiveSettlementDate, IntraPositionDetails35.mmSettlementDate, IntraPositionDetails36.mmSettlementDate, IntraPositionDetails38.mmSettlementDate,
+					SecuritiesTradeDetails62.mmEffectiveSettlementDate, TransactionDetails91.mmEffectiveSettlementDate, UnsecuredMarketTransaction2.mmSettlementDate, SecuredMarketTransaction2.mmSettlementDate,
+					UnsecuredMarketTransaction3.mmSettlementDate, SecuredMarketTransaction3.mmSettlementDate, IntraPositionDetails41.mmSettlementDate, IntraPositionDetails39.mmSettlementDate, AdditionalInformation13.mmEffectiveDate,
+					TransactionDetails95.mmEffectiveSettlementDate, IntraPositionDetails43.mmSettlementDate, IntraPositionDetails42.mmSettlementDate, AdditionalInformation14.mmEffectiveDate, TransactionDetails98.mmEffectiveSettlementDate,
+					SecuredMarketTransaction4.mmSettlementDate, UnsecuredMarketTransaction4.mmSettlementDate);
 			elementContext_lazy = () -> SecuritiesSettlement.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SettlementDate";
 			definition = "Date and time at which a transaction is completed and cleared. \r\nIt can be an effective settlement date, that is, payment is effected and securities are delivered or an intended settlement date that is, the date and time at which the amount of money is intended to be moved.";
 			maxOccurs = 1;
@@ -1961,139 +1938,79 @@ public class SecuritiesSettlement extends Settlement {
 	 */
 	public static final MMBusinessAssociationEnd mmPartyRole = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DeliverInformation2.mmSettlementPartiesDetails, com.tools20022.repository.msg.DeliverInformation4.mmSettlementPartiesDetails,
-					com.tools20022.repository.msg.DeliverInformation7.mmSettlementPartiesDetails, com.tools20022.repository.msg.ReceiveInformation2.mmSettlementPartiesDetails,
-					com.tools20022.repository.msg.ReceiveInformation4.mmSettlementPartiesDetails, com.tools20022.repository.msg.ReceiveInformation8.mmSettlementPartiesDetails,
-					com.tools20022.repository.msg.ReceiveInformation6.mmSettlementPartiesDetails, com.tools20022.repository.msg.ReceiveInformation11.mmSettlementPartiesDetails,
-					com.tools20022.repository.msg.DeliverInformation11.mmSettlementPartiesDetails, com.tools20022.repository.msg.TransactionDetails10.mmDeliveringSettlementParties,
-					com.tools20022.repository.msg.TransactionDetails10.mmReceivingSettlementParties, com.tools20022.repository.msg.TransactionDetails29.mmDeliveringSettlementParties,
-					com.tools20022.repository.msg.TransactionDetails29.mmReceivingSettlementParties, com.tools20022.repository.msg.StandingSettlementInstruction1.mmOtherDeliveringSettlementParties,
-					com.tools20022.repository.msg.StandingSettlementInstruction1.mmOtherReceivingSettlementParties, com.tools20022.repository.msg.TransactionDetails28.mmDeliveringSettlementParties,
-					com.tools20022.repository.msg.TransactionDetails28.mmReceivingSettlementParties, com.tools20022.repository.msg.TransactionDetails31.mmDeliveringSettlementParties,
-					com.tools20022.repository.msg.TransactionDetails31.mmReceivingSettlementParties, com.tools20022.repository.msg.TransactionDetails44.mmDeliveringSettlementParties,
-					com.tools20022.repository.msg.TransactionDetails44.mmReceivingSettlementParties, com.tools20022.repository.msg.DeliverInformation1.mmSettlementPartiesDetails,
-					com.tools20022.repository.msg.DeliverInformation3.mmSettlementPartiesDetails, com.tools20022.repository.msg.DeliverInformation8.mmSettlementPartiesDetails,
-					com.tools20022.repository.msg.ReceiveInformation1.mmSettlementPartiesDetails, com.tools20022.repository.msg.ReceiveInformation3.mmSettlementPartiesDetails,
-					com.tools20022.repository.msg.ReceiveInformation7.mmSettlementPartiesDetails, com.tools20022.repository.msg.ReceiveInformation5.mmSettlementPartiesDetails,
-					com.tools20022.repository.msg.ReceiveInformation9.mmSettlementPartiesDetails, com.tools20022.repository.msg.DeliverInformation5.mmSettlementPartiesDetails,
-					com.tools20022.repository.msg.DeliverInformation9.mmSettlementPartiesDetails, com.tools20022.repository.msg.DeliverInformation6.mmSettlementPartiesDetails,
-					com.tools20022.repository.msg.StandingSettlementInstruction2.mmOtherDeliveringSettlementParties, com.tools20022.repository.msg.StandingSettlementInstruction2.mmOtherReceivingSettlementParties,
-					com.tools20022.repository.msg.TransactionDetails5.mmReceivingSettlementParties, com.tools20022.repository.msg.TransactionDetails5.mmDeliveringSettlementParties,
-					com.tools20022.repository.msg.TransactionDetails9.mmReceivingSettlementParties, com.tools20022.repository.msg.TransactionDetails9.mmDeliveringSettlementParties,
-					com.tools20022.repository.msg.TransactionDetails22.mmReceivingSettlementParties, com.tools20022.repository.msg.TransactionDetails22.mmDeliveringSettlementParties,
-					com.tools20022.repository.msg.TransactionDetails23.mmReceivingSettlementParties, com.tools20022.repository.msg.TransactionDetails23.mmDeliveringSettlementParties,
-					com.tools20022.repository.msg.TransactionDetails36.mmReceivingSettlementParties, com.tools20022.repository.msg.TransactionDetails36.mmDeliveringSettlementParties,
-					com.tools20022.repository.msg.TransactionDetails47.mmReceivingSettlementParties, com.tools20022.repository.msg.TransactionDetails47.mmDeliveringSettlementParties,
-					com.tools20022.repository.msg.TransactionDetails53.mmReceivingSettlementParties, com.tools20022.repository.msg.TransactionDetails53.mmDeliveringSettlementParties,
-					com.tools20022.repository.msg.TransactionDetails58.mmReceivingSettlementParties, com.tools20022.repository.msg.TransactionDetails58.mmDeliveringSettlementParties,
-					com.tools20022.repository.msg.TransactionDetails7.mmDeliveringSettlementParties, com.tools20022.repository.msg.TransactionDetails7.mmReceivingSettlementParties,
-					com.tools20022.repository.msg.TransactionDetails8.mmDeliveringSettlementParties, com.tools20022.repository.msg.TransactionDetails8.mmReceivingSettlementParties,
-					com.tools20022.repository.msg.TransactionDetails16.mmDeliveringSettlementParties, com.tools20022.repository.msg.TransactionDetails16.mmReceivingSettlementParties,
-					com.tools20022.repository.msg.TransactionDetails17.mmDeliveringSettlementParties, com.tools20022.repository.msg.TransactionDetails17.mmReceivingSettlementParties,
-					com.tools20022.repository.msg.TransactionDetails26.mmDeliveringSettlementParties, com.tools20022.repository.msg.TransactionDetails26.mmReceivingSettlementParties,
-					com.tools20022.repository.msg.TransactionDetails25.mmDeliveringSettlementParties, com.tools20022.repository.msg.TransactionDetails25.mmReceivingSettlementParties,
-					com.tools20022.repository.msg.TransactionDetails27.mmDeliveringSettlementParties, com.tools20022.repository.msg.TransactionDetails27.mmReceivingSettlementParties,
-					com.tools20022.repository.msg.TransactionDetails33.mmDeliveringSettlementParties, com.tools20022.repository.msg.TransactionDetails33.mmReceivingSettlementParties,
-					com.tools20022.repository.msg.TransactionDetails39.mmDeliveringSettlementParties, com.tools20022.repository.msg.TransactionDetails39.mmReceivingSettlementParties,
-					com.tools20022.repository.msg.TransactionDetails50.mmDeliveringSettlementParties, com.tools20022.repository.msg.TransactionDetails50.mmReceivingSettlementParties,
-					com.tools20022.repository.msg.TransactionDetails56.mmDeliveringSettlementParties, com.tools20022.repository.msg.TransactionDetails56.mmReceivingSettlementParties,
-					com.tools20022.repository.msg.TransactionDetails59.mmDeliveringSettlementParties, com.tools20022.repository.msg.TransactionDetails59.mmReceivingSettlementParties,
-					com.tools20022.repository.msg.TransactionDetails6.mmDeliveringSettlementParties, com.tools20022.repository.msg.TransactionDetails6.mmReceivingSettlementParties,
-					com.tools20022.repository.msg.TransactionDetails18.mmDeliveringSettlementParties, com.tools20022.repository.msg.TransactionDetails18.mmReceivingSettlementParties,
-					com.tools20022.repository.msg.TransactionDetails24.mmDeliveringSettlementParties, com.tools20022.repository.msg.TransactionDetails24.mmReceivingSettlementParties,
-					com.tools20022.repository.msg.TransactionDetails34.mmDeliveringSettlementParties, com.tools20022.repository.msg.TransactionDetails34.mmReceivingSettlementParties,
-					com.tools20022.repository.msg.TransactionDetails37.mmDeliveringSettlementParties, com.tools20022.repository.msg.TransactionDetails37.mmReceivingSettlementParties,
-					com.tools20022.repository.msg.TransactionDetails48.mmDeliveringSettlementParties, com.tools20022.repository.msg.TransactionDetails48.mmReceivingSettlementParties,
-					com.tools20022.repository.msg.TransactionDetails57.mmDeliveringSettlementParties, com.tools20022.repository.msg.TransactionDetails57.mmReceivingSettlementParties,
-					com.tools20022.repository.msg.TransactionDetails60.mmDeliveringSettlementParties, com.tools20022.repository.msg.TransactionDetails60.mmReceivingSettlementParties,
-					com.tools20022.repository.msg.FundSettlementParameters3.mmReceivingSideDetails, com.tools20022.repository.msg.FundSettlementParameters3.mmDeliveringSideDetails,
-					com.tools20022.repository.msg.FundSettlementParameters4.mmReceivingSideDetails, com.tools20022.repository.msg.FundSettlementParameters4.mmDeliveringSideDetails,
-					com.tools20022.repository.msg.SecuritiesTradeDetails7.mmDeliveringSettlementParties, com.tools20022.repository.msg.SecuritiesTradeDetails7.mmReceivingSettlementParties,
-					com.tools20022.repository.msg.SecuritiesTradeDetails19.mmDeliveringSettlementParties, com.tools20022.repository.msg.SecuritiesTradeDetails19.mmReceivingSettlementParties,
-					com.tools20022.repository.msg.SecuritiesTradeDetails4.mmDeliveringSettlementParties, com.tools20022.repository.msg.SecuritiesTradeDetails4.mmReceivingSettlementParties,
-					com.tools20022.repository.msg.SecuritiesTradeDetails17.mmDeliveringSettlementParties, com.tools20022.repository.msg.SecuritiesTradeDetails17.mmReceivingSettlementParties,
-					com.tools20022.repository.msg.TransactionDetails4.mmDeliveringSettlementParties, com.tools20022.repository.msg.TransactionDetails4.mmReceivingSettlementParties,
-					com.tools20022.repository.msg.TransactionDetails30.mmDeliveringSettlementParties, com.tools20022.repository.msg.TransactionDetails30.mmReceivingSettlementParties,
-					com.tools20022.repository.msg.TransactionDetails20.mmDeliveringSettlementParties, com.tools20022.repository.msg.TransactionDetails20.mmReceivingSettlementParties,
-					com.tools20022.repository.msg.SecuritiesTradeDetails10.mmDeliveringSettlementParties, com.tools20022.repository.msg.SecuritiesTradeDetails10.mmReceivingSettlementParties,
-					com.tools20022.repository.msg.SecuritiesTradeDetails22.mmDeliveringSettlementParties, com.tools20022.repository.msg.SecuritiesTradeDetails22.mmReceivingSettlementParties,
-					com.tools20022.repository.msg.SecuritiesTradeDetails23.mmDeliveringSettlementParties, com.tools20022.repository.msg.SecuritiesTradeDetails23.mmReceivingSettlementParties,
-					com.tools20022.repository.msg.SecuritiesTradeDetails29.mmDeliveringSettlementParties, com.tools20022.repository.msg.SecuritiesTradeDetails29.mmReceivingSettlementParties,
-					com.tools20022.repository.msg.TransactionDetails40.mmDeliveringSettlementParties, com.tools20022.repository.msg.TransactionDetails40.mmReceivingSettlementParties,
-					com.tools20022.repository.msg.TransactionDetails42.mmDeliveringSettlementParties, com.tools20022.repository.msg.TransactionDetails42.mmReceivingSettlementParties,
-					com.tools20022.repository.msg.TransactionDetails46.mmDeliveringSettlementParties, com.tools20022.repository.msg.TransactionDetails46.mmReceivingSettlementParties,
-					com.tools20022.repository.msg.TransactionDetails32.mmDeliveringSettlementParties, com.tools20022.repository.msg.TransactionDetails32.mmReceivingSettlementParties,
-					com.tools20022.repository.msg.TransactionDetails14.mmDeliveringSettlementParties, com.tools20022.repository.msg.TransactionDetails14.mmReceivingSettlementParties,
-					com.tools20022.repository.msg.TransactionDetails35.mmDeliveringSettlementParties, com.tools20022.repository.msg.TransactionDetails35.mmReceivingSettlementParties,
-					com.tools20022.repository.msg.SecuritiesTradeDetails14.mmDeliveringSettlementParties, com.tools20022.repository.msg.SecuritiesTradeDetails14.mmReceivingSettlementParties,
-					com.tools20022.repository.msg.SecuritiesTradeDetails20.mmDeliveringSettlementParties, com.tools20022.repository.msg.SecuritiesTradeDetails20.mmReceivingSettlementParties,
-					com.tools20022.repository.msg.SecuritiesTradeDetails24.mmDeliveringSettlementParties, com.tools20022.repository.msg.SecuritiesTradeDetails24.mmReceivingSettlementParties,
-					com.tools20022.repository.msg.SecuritiesTradeDetails30.mmDeliveringSettlementParties, com.tools20022.repository.msg.SecuritiesTradeDetails30.mmReceivingSettlementParties,
-					com.tools20022.repository.msg.TransactionDetails45.mmDeliveringSettlementParties, com.tools20022.repository.msg.TransactionDetails45.mmReceivingSettlementParties,
-					com.tools20022.repository.msg.SettlementObligation4.mmSettlementParties, com.tools20022.repository.msg.FundSettlementParameters7.mmDeliveringSideDetails,
-					com.tools20022.repository.msg.FundSettlementParameters8.mmReceivingSideDetails, com.tools20022.repository.msg.FundSettlementParameters5.mmReceivingSideDetails,
-					com.tools20022.repository.msg.FundSettlementParameters5.mmDeliveringSideDetails, com.tools20022.repository.msg.FundSettlementParameters6.mmReceivingSideDetails,
-					com.tools20022.repository.msg.FundSettlementParameters6.mmDeliveringSideDetails, com.tools20022.repository.msg.TransactionDetails51.mmDeliveringSettlementParties,
-					com.tools20022.repository.msg.TransactionDetails51.mmReceivingSettlementParties, com.tools20022.repository.msg.TransactionDetails52.mmDeliveringSettlementParties,
-					com.tools20022.repository.msg.TransactionDetails52.mmReceivingSettlementParties, com.tools20022.repository.msg.OrderStatusAndReason5.mmReceivingSettlementParties,
-					com.tools20022.repository.msg.OrderStatusAndReason5.mmDeliveringSettlementParties, com.tools20022.repository.msg.ReceiveInformation13.mmSettlementPartiesDetails,
-					com.tools20022.repository.msg.ReceiveInformation12.mmSettlementPartiesDetails, com.tools20022.repository.msg.DeliverInformation12.mmSettlementPartiesDetails,
-					com.tools20022.repository.msg.DeliverInformation13.mmSettlementPartiesDetails, com.tools20022.repository.msg.TransactionDetails61.mmReceivingSettlementParties,
-					com.tools20022.repository.msg.TransactionDetails61.mmDeliveringSettlementParties, com.tools20022.repository.msg.TransactionDetails62.mmDeliveringSettlementParties,
-					com.tools20022.repository.msg.TransactionDetails62.mmReceivingSettlementParties, com.tools20022.repository.msg.TransactionDetails63.mmDeliveringSettlementParties,
-					com.tools20022.repository.msg.TransactionDetails63.mmReceivingSettlementParties, com.tools20022.repository.msg.SecuritiesTradeDetails35.mmDeliveringSettlementParties,
-					com.tools20022.repository.msg.SecuritiesTradeDetails35.mmReceivingSettlementParties, com.tools20022.repository.msg.TransactionDetails66.mmReceivingSettlementParties,
-					com.tools20022.repository.msg.TransactionDetails66.mmDeliveringSettlementParties, com.tools20022.repository.msg.SecuritiesTradeDetails42.mmDeliveringSettlementParties,
-					com.tools20022.repository.msg.SecuritiesTradeDetails42.mmReceivingSettlementParties, com.tools20022.repository.msg.TransactionDetails67.mmDeliveringSettlementParties,
-					com.tools20022.repository.msg.TransactionDetails67.mmReceivingSettlementParties, com.tools20022.repository.msg.TransactionDetails68.mmDeliveringSettlementParties,
-					com.tools20022.repository.msg.TransactionDetails68.mmReceivingSettlementParties, com.tools20022.repository.msg.DeliverInformation15.mmSettlementPartiesDetails,
-					com.tools20022.repository.msg.DeliverInformation14.mmSettlementPartiesDetails, com.tools20022.repository.msg.ReceiveInformation15.mmSettlementPartiesDetails,
-					com.tools20022.repository.msg.ReceiveInformation14.mmSettlementPartiesDetails, com.tools20022.repository.msg.TransactionDetails70.mmReceivingSettlementParties,
-					com.tools20022.repository.msg.TransactionDetails70.mmDeliveringSettlementParties, com.tools20022.repository.msg.TransactionDetails69.mmDeliveringSettlementParties,
-					com.tools20022.repository.msg.TransactionDetails69.mmReceivingSettlementParties, com.tools20022.repository.msg.SettlementObligation8.mmSettlementParties,
-					com.tools20022.repository.msg.SettlementDetails88.mmSettlementParties, com.tools20022.repository.msg.TransactionDetails71.mmReceivingSettlementParties,
-					com.tools20022.repository.msg.TransactionDetails71.mmDeliveringSettlementParties, com.tools20022.repository.msg.TransactionDetails72.mmDeliveringSettlementParties,
-					com.tools20022.repository.msg.TransactionDetails72.mmReceivingSettlementParties, com.tools20022.repository.msg.TransactionDetails81.mmDeliveringSettlementParties,
-					com.tools20022.repository.msg.TransactionDetails81.mmReceivingSettlementParties, com.tools20022.repository.msg.TransactionDetails74.mmDeliveringSettlementParties,
-					com.tools20022.repository.msg.TransactionDetails74.mmReceivingSettlementParties, com.tools20022.repository.msg.SecuritiesTradeDetails49.mmDeliveringSettlementParties,
-					com.tools20022.repository.msg.SecuritiesTradeDetails49.mmReceivingSettlementParties, com.tools20022.repository.msg.TransactionDetails82.mmDeliveringSettlementParties,
-					com.tools20022.repository.msg.TransactionDetails82.mmReceivingSettlementParties, com.tools20022.repository.msg.TransactionDetails79.mmReceivingSettlementParties,
-					com.tools20022.repository.msg.TransactionDetails79.mmDeliveringSettlementParties, com.tools20022.repository.msg.SecuritiesTradeDetails48.mmDeliveringSettlementParties,
-					com.tools20022.repository.msg.SecuritiesTradeDetails48.mmReceivingSettlementParties, com.tools20022.repository.msg.TransactionDetails80.mmDeliveringSettlementParties,
-					com.tools20022.repository.msg.TransactionDetails80.mmReceivingSettlementParties, com.tools20022.repository.msg.TransactionDetails75.mmDeliveringSettlementParties,
-					com.tools20022.repository.msg.TransactionDetails75.mmReceivingSettlementParties, com.tools20022.repository.msg.TransactionDetails78.mmDeliveringSettlementParties,
-					com.tools20022.repository.msg.TransactionDetails78.mmReceivingSettlementParties, com.tools20022.repository.msg.ReceiveInformation17.mmSettlementPartiesDetails,
-					com.tools20022.repository.msg.ReceiveInformation16.mmSettlementPartiesDetails, com.tools20022.repository.msg.InvestmentAccount56.mmSettlementPartiesDetails,
-					com.tools20022.repository.msg.DeliverInformation16.mmSettlementPartiesDetails, com.tools20022.repository.msg.DeliverInformation17.mmSettlementPartiesDetails,
-					com.tools20022.repository.msg.FinancialInstrument48.mmSettlementPartiesReceivingSideDetails, com.tools20022.repository.msg.FinancialInstrument46.mmSettlementPartiesReceivingSideDetails,
-					com.tools20022.repository.msg.SettlementDetails102.mmSettlementParties, com.tools20022.repository.msg.SecuritiesTradeDetails57.mmDeliveringSettlementParties,
-					com.tools20022.repository.msg.SecuritiesTradeDetails57.mmReceivingSettlementParties, com.tools20022.repository.msg.TransactionDetails88.mmDeliveringSettlementParties,
-					com.tools20022.repository.msg.TransactionDetails88.mmReceivingSettlementParties, com.tools20022.repository.msg.SecuritiesTradeDetails61.mmDeliveringSettlementParties,
-					com.tools20022.repository.msg.SecuritiesTradeDetails61.mmReceivingSettlementParties, com.tools20022.repository.msg.TransactionDetails92.mmDeliveringSettlementParties,
-					com.tools20022.repository.msg.TransactionDetails92.mmReceivingSettlementParties, com.tools20022.repository.msg.TransactionDetails84.mmDeliveringSettlementParties,
-					com.tools20022.repository.msg.TransactionDetails84.mmReceivingSettlementParties, com.tools20022.repository.msg.TransactionDetails83.mmDeliveringSettlementParties,
-					com.tools20022.repository.msg.TransactionDetails83.mmReceivingSettlementParties, com.tools20022.repository.msg.TransactionDetails87.mmReceivingSettlementParties,
-					com.tools20022.repository.msg.TransactionDetails87.mmDeliveringSettlementParties, com.tools20022.repository.msg.TransactionDetails91.mmDeliveringSettlementParties,
-					com.tools20022.repository.msg.TransactionDetails91.mmReceivingSettlementParties, com.tools20022.repository.msg.TransactionDetails90.mmDeliveringSettlementParties,
-					com.tools20022.repository.msg.TransactionDetails90.mmReceivingSettlementParties, com.tools20022.repository.msg.FundSettlementParameters11.mmReceivingSideDetails,
-					com.tools20022.repository.msg.FundSettlementParameters11.mmDeliveringSideDetails, com.tools20022.repository.msg.FundSettlementParameters12.mmReceivingSideDetails,
-					com.tools20022.repository.msg.FundSettlementParameters12.mmDeliveringSideDetails, com.tools20022.repository.msg.SecuritiesTradeDetails68.mmDeliveringSettlementParties,
-					com.tools20022.repository.msg.SecuritiesTradeDetails68.mmReceivingSettlementParties, com.tools20022.repository.msg.TransactionDetails97.mmReceivingSettlementParties,
-					com.tools20022.repository.msg.TransactionDetails97.mmDeliveringSettlementParties, com.tools20022.repository.msg.TransactionDetails96.mmDeliveringSettlementParties,
-					com.tools20022.repository.msg.TransactionDetails96.mmReceivingSettlementParties, com.tools20022.repository.msg.TransactionDetails95.mmDeliveringSettlementParties,
-					com.tools20022.repository.msg.TransactionDetails95.mmReceivingSettlementParties, com.tools20022.repository.msg.SettlementDetails118.mmSettlementParties,
-					com.tools20022.repository.msg.SecuritiesTradeDetails69.mmDeliveringSettlementParties, com.tools20022.repository.msg.SecuritiesTradeDetails69.mmReceivingSettlementParties,
-					com.tools20022.repository.msg.TransactionDetails100.mmReceivingSettlementParties, com.tools20022.repository.msg.TransactionDetails100.mmDeliveringSettlementParties,
-					com.tools20022.repository.msg.TransactionDetails99.mmDeliveringSettlementParties, com.tools20022.repository.msg.TransactionDetails99.mmReceivingSettlementParties,
-					com.tools20022.repository.msg.TransactionDetails98.mmDeliveringSettlementParties, com.tools20022.repository.msg.TransactionDetails98.mmReceivingSettlementParties);
+			derivation_lazy = () -> Arrays.asList(DeliverInformation2.mmSettlementPartiesDetails, DeliverInformation4.mmSettlementPartiesDetails, DeliverInformation7.mmSettlementPartiesDetails,
+					ReceiveInformation2.mmSettlementPartiesDetails, ReceiveInformation4.mmSettlementPartiesDetails, ReceiveInformation8.mmSettlementPartiesDetails, ReceiveInformation6.mmSettlementPartiesDetails,
+					ReceiveInformation11.mmSettlementPartiesDetails, DeliverInformation11.mmSettlementPartiesDetails, TransactionDetails10.mmDeliveringSettlementParties, TransactionDetails10.mmReceivingSettlementParties,
+					TransactionDetails29.mmDeliveringSettlementParties, TransactionDetails29.mmReceivingSettlementParties, StandingSettlementInstruction1.mmOtherDeliveringSettlementParties,
+					StandingSettlementInstruction1.mmOtherReceivingSettlementParties, TransactionDetails28.mmDeliveringSettlementParties, TransactionDetails28.mmReceivingSettlementParties,
+					TransactionDetails31.mmDeliveringSettlementParties, TransactionDetails31.mmReceivingSettlementParties, TransactionDetails44.mmDeliveringSettlementParties, TransactionDetails44.mmReceivingSettlementParties,
+					DeliverInformation1.mmSettlementPartiesDetails, DeliverInformation3.mmSettlementPartiesDetails, DeliverInformation8.mmSettlementPartiesDetails, ReceiveInformation1.mmSettlementPartiesDetails,
+					ReceiveInformation3.mmSettlementPartiesDetails, ReceiveInformation7.mmSettlementPartiesDetails, ReceiveInformation5.mmSettlementPartiesDetails, ReceiveInformation9.mmSettlementPartiesDetails,
+					DeliverInformation5.mmSettlementPartiesDetails, DeliverInformation9.mmSettlementPartiesDetails, DeliverInformation6.mmSettlementPartiesDetails, StandingSettlementInstruction2.mmOtherDeliveringSettlementParties,
+					StandingSettlementInstruction2.mmOtherReceivingSettlementParties, TransactionDetails5.mmReceivingSettlementParties, TransactionDetails5.mmDeliveringSettlementParties, TransactionDetails9.mmReceivingSettlementParties,
+					TransactionDetails9.mmDeliveringSettlementParties, TransactionDetails22.mmReceivingSettlementParties, TransactionDetails22.mmDeliveringSettlementParties, TransactionDetails23.mmReceivingSettlementParties,
+					TransactionDetails23.mmDeliveringSettlementParties, TransactionDetails36.mmReceivingSettlementParties, TransactionDetails36.mmDeliveringSettlementParties, TransactionDetails47.mmReceivingSettlementParties,
+					TransactionDetails47.mmDeliveringSettlementParties, TransactionDetails53.mmReceivingSettlementParties, TransactionDetails53.mmDeliveringSettlementParties, TransactionDetails58.mmReceivingSettlementParties,
+					TransactionDetails58.mmDeliveringSettlementParties, TransactionDetails7.mmDeliveringSettlementParties, TransactionDetails7.mmReceivingSettlementParties, TransactionDetails8.mmDeliveringSettlementParties,
+					TransactionDetails8.mmReceivingSettlementParties, TransactionDetails16.mmDeliveringSettlementParties, TransactionDetails16.mmReceivingSettlementParties, TransactionDetails17.mmDeliveringSettlementParties,
+					TransactionDetails17.mmReceivingSettlementParties, TransactionDetails26.mmDeliveringSettlementParties, TransactionDetails26.mmReceivingSettlementParties, TransactionDetails25.mmDeliveringSettlementParties,
+					TransactionDetails25.mmReceivingSettlementParties, TransactionDetails27.mmDeliveringSettlementParties, TransactionDetails27.mmReceivingSettlementParties, TransactionDetails33.mmDeliveringSettlementParties,
+					TransactionDetails33.mmReceivingSettlementParties, TransactionDetails39.mmDeliveringSettlementParties, TransactionDetails39.mmReceivingSettlementParties, TransactionDetails50.mmDeliveringSettlementParties,
+					TransactionDetails50.mmReceivingSettlementParties, TransactionDetails56.mmDeliveringSettlementParties, TransactionDetails56.mmReceivingSettlementParties, TransactionDetails59.mmDeliveringSettlementParties,
+					TransactionDetails59.mmReceivingSettlementParties, TransactionDetails6.mmDeliveringSettlementParties, TransactionDetails6.mmReceivingSettlementParties, TransactionDetails18.mmDeliveringSettlementParties,
+					TransactionDetails18.mmReceivingSettlementParties, TransactionDetails24.mmDeliveringSettlementParties, TransactionDetails24.mmReceivingSettlementParties, TransactionDetails34.mmDeliveringSettlementParties,
+					TransactionDetails34.mmReceivingSettlementParties, TransactionDetails37.mmDeliveringSettlementParties, TransactionDetails37.mmReceivingSettlementParties, TransactionDetails48.mmDeliveringSettlementParties,
+					TransactionDetails48.mmReceivingSettlementParties, TransactionDetails57.mmDeliveringSettlementParties, TransactionDetails57.mmReceivingSettlementParties, TransactionDetails60.mmDeliveringSettlementParties,
+					TransactionDetails60.mmReceivingSettlementParties, FundSettlementParameters3.mmReceivingSideDetails, FundSettlementParameters3.mmDeliveringSideDetails, FundSettlementParameters4.mmReceivingSideDetails,
+					FundSettlementParameters4.mmDeliveringSideDetails, SecuritiesTradeDetails7.mmDeliveringSettlementParties, SecuritiesTradeDetails7.mmReceivingSettlementParties, SecuritiesTradeDetails19.mmDeliveringSettlementParties,
+					SecuritiesTradeDetails19.mmReceivingSettlementParties, SecuritiesTradeDetails4.mmDeliveringSettlementParties, SecuritiesTradeDetails4.mmReceivingSettlementParties, SecuritiesTradeDetails17.mmDeliveringSettlementParties,
+					SecuritiesTradeDetails17.mmReceivingSettlementParties, TransactionDetails4.mmDeliveringSettlementParties, TransactionDetails4.mmReceivingSettlementParties, TransactionDetails30.mmDeliveringSettlementParties,
+					TransactionDetails30.mmReceivingSettlementParties, TransactionDetails20.mmDeliveringSettlementParties, TransactionDetails20.mmReceivingSettlementParties, SecuritiesTradeDetails10.mmDeliveringSettlementParties,
+					SecuritiesTradeDetails10.mmReceivingSettlementParties, SecuritiesTradeDetails22.mmDeliveringSettlementParties, SecuritiesTradeDetails22.mmReceivingSettlementParties,
+					SecuritiesTradeDetails23.mmDeliveringSettlementParties, SecuritiesTradeDetails23.mmReceivingSettlementParties, SecuritiesTradeDetails29.mmDeliveringSettlementParties,
+					SecuritiesTradeDetails29.mmReceivingSettlementParties, TransactionDetails40.mmDeliveringSettlementParties, TransactionDetails40.mmReceivingSettlementParties, TransactionDetails42.mmDeliveringSettlementParties,
+					TransactionDetails42.mmReceivingSettlementParties, TransactionDetails46.mmDeliveringSettlementParties, TransactionDetails46.mmReceivingSettlementParties, TransactionDetails32.mmDeliveringSettlementParties,
+					TransactionDetails32.mmReceivingSettlementParties, TransactionDetails14.mmDeliveringSettlementParties, TransactionDetails14.mmReceivingSettlementParties, TransactionDetails35.mmDeliveringSettlementParties,
+					TransactionDetails35.mmReceivingSettlementParties, SecuritiesTradeDetails14.mmDeliveringSettlementParties, SecuritiesTradeDetails14.mmReceivingSettlementParties, SecuritiesTradeDetails20.mmDeliveringSettlementParties,
+					SecuritiesTradeDetails20.mmReceivingSettlementParties, SecuritiesTradeDetails24.mmDeliveringSettlementParties, SecuritiesTradeDetails24.mmReceivingSettlementParties,
+					SecuritiesTradeDetails30.mmDeliveringSettlementParties, SecuritiesTradeDetails30.mmReceivingSettlementParties, TransactionDetails45.mmDeliveringSettlementParties, TransactionDetails45.mmReceivingSettlementParties,
+					SettlementObligation4.mmSettlementParties, FundSettlementParameters7.mmDeliveringSideDetails, FundSettlementParameters8.mmReceivingSideDetails, FundSettlementParameters5.mmReceivingSideDetails,
+					FundSettlementParameters5.mmDeliveringSideDetails, FundSettlementParameters6.mmReceivingSideDetails, FundSettlementParameters6.mmDeliveringSideDetails, TransactionDetails51.mmDeliveringSettlementParties,
+					TransactionDetails51.mmReceivingSettlementParties, TransactionDetails52.mmDeliveringSettlementParties, TransactionDetails52.mmReceivingSettlementParties, OrderStatusAndReason5.mmReceivingSettlementParties,
+					OrderStatusAndReason5.mmDeliveringSettlementParties, ReceiveInformation13.mmSettlementPartiesDetails, ReceiveInformation12.mmSettlementPartiesDetails, DeliverInformation12.mmSettlementPartiesDetails,
+					DeliverInformation13.mmSettlementPartiesDetails, TransactionDetails61.mmReceivingSettlementParties, TransactionDetails61.mmDeliveringSettlementParties, TransactionDetails62.mmDeliveringSettlementParties,
+					TransactionDetails62.mmReceivingSettlementParties, TransactionDetails63.mmDeliveringSettlementParties, TransactionDetails63.mmReceivingSettlementParties, SecuritiesTradeDetails35.mmDeliveringSettlementParties,
+					SecuritiesTradeDetails35.mmReceivingSettlementParties, TransactionDetails66.mmReceivingSettlementParties, TransactionDetails66.mmDeliveringSettlementParties, SecuritiesTradeDetails42.mmDeliveringSettlementParties,
+					SecuritiesTradeDetails42.mmReceivingSettlementParties, TransactionDetails67.mmDeliveringSettlementParties, TransactionDetails67.mmReceivingSettlementParties, TransactionDetails68.mmDeliveringSettlementParties,
+					TransactionDetails68.mmReceivingSettlementParties, DeliverInformation15.mmSettlementPartiesDetails, DeliverInformation14.mmSettlementPartiesDetails, ReceiveInformation15.mmSettlementPartiesDetails,
+					ReceiveInformation14.mmSettlementPartiesDetails, TransactionDetails70.mmReceivingSettlementParties, TransactionDetails70.mmDeliveringSettlementParties, TransactionDetails69.mmDeliveringSettlementParties,
+					TransactionDetails69.mmReceivingSettlementParties, SettlementObligation8.mmSettlementParties, SettlementDetails88.mmSettlementParties, TransactionDetails71.mmReceivingSettlementParties,
+					TransactionDetails71.mmDeliveringSettlementParties, TransactionDetails72.mmDeliveringSettlementParties, TransactionDetails72.mmReceivingSettlementParties, TransactionDetails81.mmDeliveringSettlementParties,
+					TransactionDetails81.mmReceivingSettlementParties, TransactionDetails74.mmDeliveringSettlementParties, TransactionDetails74.mmReceivingSettlementParties, SecuritiesTradeDetails49.mmDeliveringSettlementParties,
+					SecuritiesTradeDetails49.mmReceivingSettlementParties, TransactionDetails82.mmDeliveringSettlementParties, TransactionDetails82.mmReceivingSettlementParties, TransactionDetails79.mmReceivingSettlementParties,
+					TransactionDetails79.mmDeliveringSettlementParties, SecuritiesTradeDetails48.mmDeliveringSettlementParties, SecuritiesTradeDetails48.mmReceivingSettlementParties, TransactionDetails80.mmDeliveringSettlementParties,
+					TransactionDetails80.mmReceivingSettlementParties, TransactionDetails75.mmDeliveringSettlementParties, TransactionDetails75.mmReceivingSettlementParties, TransactionDetails78.mmDeliveringSettlementParties,
+					TransactionDetails78.mmReceivingSettlementParties, ReceiveInformation17.mmSettlementPartiesDetails, ReceiveInformation16.mmSettlementPartiesDetails, InvestmentAccount56.mmSettlementPartiesDetails,
+					DeliverInformation16.mmSettlementPartiesDetails, DeliverInformation17.mmSettlementPartiesDetails, FinancialInstrument48.mmSettlementPartiesReceivingSideDetails,
+					FinancialInstrument46.mmSettlementPartiesReceivingSideDetails, SettlementDetails102.mmSettlementParties, SecuritiesTradeDetails57.mmDeliveringSettlementParties, SecuritiesTradeDetails57.mmReceivingSettlementParties,
+					TransactionDetails88.mmDeliveringSettlementParties, TransactionDetails88.mmReceivingSettlementParties, SecuritiesTradeDetails61.mmDeliveringSettlementParties, SecuritiesTradeDetails61.mmReceivingSettlementParties,
+					TransactionDetails92.mmDeliveringSettlementParties, TransactionDetails92.mmReceivingSettlementParties, TransactionDetails84.mmDeliveringSettlementParties, TransactionDetails84.mmReceivingSettlementParties,
+					TransactionDetails83.mmDeliveringSettlementParties, TransactionDetails83.mmReceivingSettlementParties, TransactionDetails87.mmReceivingSettlementParties, TransactionDetails87.mmDeliveringSettlementParties,
+					TransactionDetails91.mmDeliveringSettlementParties, TransactionDetails91.mmReceivingSettlementParties, TransactionDetails90.mmDeliveringSettlementParties, TransactionDetails90.mmReceivingSettlementParties,
+					FundSettlementParameters11.mmReceivingSideDetails, FundSettlementParameters11.mmDeliveringSideDetails, FundSettlementParameters12.mmReceivingSideDetails, FundSettlementParameters12.mmDeliveringSideDetails,
+					SecuritiesTradeDetails68.mmDeliveringSettlementParties, SecuritiesTradeDetails68.mmReceivingSettlementParties, TransactionDetails97.mmReceivingSettlementParties, TransactionDetails97.mmDeliveringSettlementParties,
+					TransactionDetails96.mmDeliveringSettlementParties, TransactionDetails96.mmReceivingSettlementParties, TransactionDetails95.mmDeliveringSettlementParties, TransactionDetails95.mmReceivingSettlementParties,
+					SettlementDetails118.mmSettlementParties, SecuritiesTradeDetails69.mmDeliveringSettlementParties, SecuritiesTradeDetails69.mmReceivingSettlementParties, TransactionDetails100.mmReceivingSettlementParties,
+					TransactionDetails100.mmDeliveringSettlementParties, TransactionDetails99.mmDeliveringSettlementParties, TransactionDetails99.mmReceivingSettlementParties, TransactionDetails98.mmDeliveringSettlementParties,
+					TransactionDetails98.mmReceivingSettlementParties);
 			elementContext_lazy = () -> SecuritiesSettlement.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PartyRole";
 			definition = "Specifies each role linked to the settlement of securities and played by a party at that step in a securities transaction flow.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlementPartyRole.mmSecuritiesSettlement;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlementPartyRole.mmObject();
 		}
 	};
@@ -2953,114 +2870,69 @@ public class SecuritiesSettlement extends Settlement {
 	 */
 	public static final MMBusinessAttribute mmSettlementAmount = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DeliverInformation4.mmSettlementAmount, com.tools20022.repository.msg.DeliverInformation7.mmSettlementAmount,
-					com.tools20022.repository.msg.ReceiveInformation4.mmSettlementAmount, com.tools20022.repository.msg.ReceiveInformation8.mmSettlementAmount, com.tools20022.repository.msg.ReceiveInformation6.mmSettlementAmount,
-					com.tools20022.repository.msg.ReceiveInformation11.mmSettlementAmount, com.tools20022.repository.msg.DeliverInformation11.mmSettlementAmount, com.tools20022.repository.msg.AmountAndDirection8.mmAmount,
-					com.tools20022.repository.msg.TransactionDetails10.mmSettlementAmount, com.tools20022.repository.msg.TransactionDetails29.mmSettlementAmount, com.tools20022.repository.msg.AmountAndDirection32.mmAmount,
-					com.tools20022.repository.msg.AmountAndDirection9.mmAmount, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails3.mmSettlementAmount,
-					com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails4.mmSettlementAmount, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails2.mmSettlementAmount,
-					com.tools20022.repository.msg.TransactionDetails28.mmSettlementAmount, com.tools20022.repository.msg.AmountAndDirection12.mmAmount, com.tools20022.repository.msg.TransactionDetails31.mmSettlementAmount,
-					com.tools20022.repository.msg.TransactionDetails44.mmSettlementAmount, com.tools20022.repository.msg.AmountAndDirection33.mmAmount, com.tools20022.repository.msg.AmountAndDirection17.mmAmount,
-					com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails5.mmSettlementAmount, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails6.mmSettlementAmount,
-					com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails7.mmSettlementAmount, com.tools20022.repository.msg.DeliverInformation3.mmSettlementAmount,
-					com.tools20022.repository.msg.DeliverInformation8.mmSettlementAmount, com.tools20022.repository.msg.ReceiveInformation3.mmSettlementAmount, com.tools20022.repository.msg.ReceiveInformation7.mmSettlementAmount,
-					com.tools20022.repository.msg.ReceiveInformation5.mmSettlementAmount, com.tools20022.repository.msg.ReceiveInformation9.mmSettlementAmount, com.tools20022.repository.msg.DeliverInformation5.mmSettlementAmount,
-					com.tools20022.repository.msg.DeliverInformation9.mmSettlementAmount, com.tools20022.repository.msg.DeliverInformation6.mmSettlementAmount,
-					com.tools20022.repository.msg.IntraPositionDetails2.mmRemainingToBeSettledQuantity, com.tools20022.repository.msg.IntraPositionDetails8.mmRemainingToBeSettledQuantity,
-					com.tools20022.repository.msg.IntraPositionDetails12.mmRemainingToBeSettledQuantity, com.tools20022.repository.msg.AmountAndDirection24.mmAmount,
-					com.tools20022.repository.msg.IntraPositionDetails13.mmRemainingToBeSettledQuantity, com.tools20022.repository.msg.IntraPositionDetails22.mmRemainingToBeSettledQuantity,
-					com.tools20022.repository.msg.IntraPositionDetails26.mmRemainingToBeSettledQuantity, com.tools20022.repository.msg.IntraPositionDetails27.mmRemainingToBeSettledQuantity,
-					com.tools20022.repository.msg.IntraPositionDetails29.mmRemainingToBeSettledQuantity, com.tools20022.repository.msg.AmountAndDirection6.mmAmount, com.tools20022.repository.msg.AmountAndDirection14.mmAmount,
-					com.tools20022.repository.msg.AmountAndDirection5.mmAmount, com.tools20022.repository.msg.QuantityAndAccount6.mmPreviouslySettledAmount, com.tools20022.repository.msg.QuantityAndAccount6.mmRemainingToBeSettledAmount,
-					com.tools20022.repository.msg.AmountAndDirection4.mmAmount, com.tools20022.repository.msg.AmountAndDirection2.mmAmount, com.tools20022.repository.msg.AmountAndDirection19.mmAmount,
-					com.tools20022.repository.msg.QuantityAndAccount11.mmPreviouslySettledAmount, com.tools20022.repository.msg.QuantityAndAccount11.mmRemainingToBeSettledAmount, com.tools20022.repository.msg.AmountAndDirection13.mmAmount,
-					com.tools20022.repository.msg.AmountAndDirection16.mmAmount, com.tools20022.repository.msg.QuantityAndAccount18.mmPreviouslySettledAmount, com.tools20022.repository.msg.QuantityAndAccount18.mmRemainingToBeSettledAmount,
-					com.tools20022.repository.msg.QuantityAndAccount19.mmPreviouslySettledAmount, com.tools20022.repository.msg.QuantityAndAccount19.mmRemainingToBeSettledAmount, com.tools20022.repository.msg.AmountAndDirection7.mmAmount,
-					com.tools20022.repository.msg.QuantityAndAccount2.mmPreviouslySettledAmount, com.tools20022.repository.msg.QuantityAndAccount2.mmRemainingToBeSettledAmount, com.tools20022.repository.msg.AmountAndDirection15.mmAmount,
-					com.tools20022.repository.msg.QuantityAndAccount12.mmPreviouslySettledAmount, com.tools20022.repository.msg.QuantityAndAccount12.mmRemainingToBeSettledAmount,
-					com.tools20022.repository.msg.QuantityAndAccount15.mmPreviouslySettledAmount, com.tools20022.repository.msg.QuantityAndAccount15.mmRemainingToBeSettledAmount,
-					com.tools20022.repository.msg.QuantityAndAccount20.mmPreviouslySettledAmount, com.tools20022.repository.msg.QuantityAndAccount20.mmRemainingToBeSettledAmount,
-					com.tools20022.repository.msg.QuantityAndAccount28.mmPreviouslySettledAmount, com.tools20022.repository.msg.QuantityAndAccount28.mmRemainingToBeSettledAmount,
-					com.tools20022.repository.msg.QuantityAndAccount37.mmPreviouslySettledAmount, com.tools20022.repository.msg.QuantityAndAccount37.mmRemainingToBeSettledAmount,
-					com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails8.mmSettlementAmount, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails9.mmSettlementAmount,
-					com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails10.mmSettlementAmount, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails11.mmSettlementAmount,
-					com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails12.mmSettlementAmount, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails13.mmSettlementAmount,
-					com.tools20022.repository.msg.TransactionDetails5.mmSettlementAmount, com.tools20022.repository.msg.TransactionDetails9.mmSettlementAmount, com.tools20022.repository.msg.TransactionDetails22.mmSettlementAmount,
-					com.tools20022.repository.msg.TransactionDetails23.mmSettlementAmount, com.tools20022.repository.msg.TransactionDetails36.mmSettlementAmount, com.tools20022.repository.msg.TransactionDetails47.mmSettlementAmount,
-					com.tools20022.repository.msg.TransactionDetails53.mmSettlementAmount, com.tools20022.repository.msg.TransactionDetails58.mmSettlementAmount, com.tools20022.repository.msg.TransactionDetails7.mmPostingAmount,
-					com.tools20022.repository.msg.TransactionDetails8.mmPostingAmount, com.tools20022.repository.msg.TransactionDetails16.mmPostingAmount, com.tools20022.repository.msg.TransactionDetails17.mmPostingAmount,
-					com.tools20022.repository.msg.TransactionDetails26.mmPostingAmount, com.tools20022.repository.msg.TransactionDetails25.mmPostingAmount, com.tools20022.repository.msg.TransactionDetails27.mmPostingAmount,
-					com.tools20022.repository.msg.TransactionDetails33.mmPostingAmount, com.tools20022.repository.msg.TransactionDetails39.mmPostingAmount, com.tools20022.repository.msg.TransactionDetails50.mmPostingAmount,
-					com.tools20022.repository.msg.TransactionDetails56.mmPostingAmount, com.tools20022.repository.msg.TransactionDetails59.mmPostingAmount, com.tools20022.repository.msg.AmountAndDirection3.mmAmount,
-					com.tools20022.repository.msg.TransactionDetails6.mmPostingAmount, com.tools20022.repository.msg.AmountAndDirection18.mmAmount, com.tools20022.repository.msg.TransactionDetails18.mmPostingAmount,
-					com.tools20022.repository.msg.TransactionDetails24.mmPostingAmount, com.tools20022.repository.msg.TransactionDetails34.mmPostingAmount, com.tools20022.repository.msg.TransactionDetails37.mmPostingAmount,
-					com.tools20022.repository.msg.TransactionDetails48.mmPostingAmount, com.tools20022.repository.msg.TransactionDetails57.mmPostingAmount, com.tools20022.repository.msg.TransactionDetails60.mmPostingAmount,
-					com.tools20022.repository.msg.AmountAndDirection1.mmAmount, com.tools20022.repository.msg.AmountAndDirection29.mmAmount, com.tools20022.repository.msg.AmountAndDirection28.mmAmount,
-					com.tools20022.repository.msg.RedemptionOrder5.mmSettlementAmount, com.tools20022.repository.msg.RedemptionOrder7.mmSettlementAmount, com.tools20022.repository.msg.RedemptionOrder6.mmSettlementAmount,
-					com.tools20022.repository.msg.RedemptionOrder8.mmSettlementAmount, com.tools20022.repository.msg.InvestmentFundTransaction3.mmSettlementAmount, com.tools20022.repository.msg.SubscriptionOrder5.mmSettlementAmount,
-					com.tools20022.repository.msg.SubscriptionExecution5.mmSettlementAmount, com.tools20022.repository.msg.SubscriptionOrder7.mmSettlementAmount, com.tools20022.repository.msg.SubscriptionOrder6.mmSettlementAmount,
-					com.tools20022.repository.msg.SubscriptionExecution6.mmSettlementAmount, com.tools20022.repository.msg.SubscriptionOrder8.mmSettlementAmount, com.tools20022.repository.msg.SwitchOrder3.mmSettlementAmount,
-					com.tools20022.repository.msg.SwitchExecution4.mmSettlementAmount, com.tools20022.repository.msg.SwitchOrder4.mmSettlementAmount, com.tools20022.repository.msg.TransactionDetails1.mmSettlementAmount,
-					com.tools20022.repository.msg.TransactionDetails3.mmSettlementAmount, com.tools20022.repository.msg.AmountAndDirection10.mmAmount, com.tools20022.repository.msg.AmountAndDirection22.mmAmount,
-					com.tools20022.repository.msg.AmountAndDirection23.mmAmount, com.tools20022.repository.msg.TransactionDetails4.mmSettlementAmount, com.tools20022.repository.msg.TransactionDetails30.mmSettlementAmount,
-					com.tools20022.repository.msg.AmountAndDirection20.mmAmount, com.tools20022.repository.msg.AmountAndDirection11.mmAmount, com.tools20022.repository.msg.TransactionDetails20.mmSettlementAmount,
-					com.tools20022.repository.msg.AmountAndDirection25.mmAmount, com.tools20022.repository.msg.AmountAndDirection26.mmAmount, com.tools20022.repository.msg.TransactionDetails40.mmSettlementAmount,
-					com.tools20022.repository.msg.TransactionDetails42.mmSettlementAmount, com.tools20022.repository.msg.TransactionDetails46.mmSettlementAmount, com.tools20022.repository.msg.TransactionDetails32.mmSettlementAmount,
-					com.tools20022.repository.msg.TransactionDetails14.mmSettlementAmount, com.tools20022.repository.msg.TransactionDetails35.mmSettlementAmount, com.tools20022.repository.msg.TransactionDetails45.mmSettlementAmount,
-					com.tools20022.repository.msg.AmountAndDirection31.mmAmount, com.tools20022.repository.msg.SettlementObligation1.mmSettlementAmount, com.tools20022.repository.msg.SettlementObligation1.mmRemainingAmountToBeSettled,
-					com.tools20022.repository.msg.AmountAndDirection27.mmAmount, com.tools20022.repository.msg.SettlementObligation6.mmSettlementAmount, com.tools20022.repository.msg.SettlementObligation6.mmRemainingAmountToBeSettled,
-					com.tools20022.repository.msg.SettlementObligation3.mmSettlementAmount, com.tools20022.repository.msg.SettlementObligation2.mmSettlementAmount, com.tools20022.repository.msg.SettlementObligation5.mmSettlementAmount,
-					com.tools20022.repository.msg.SettlementObligation4.mmSettlementAmount, com.tools20022.repository.msg.AmountAndDirection21.mmAmount, com.tools20022.repository.msg.SettlementDetails21.mmSettlementAmount,
-					com.tools20022.repository.msg.FinancialInstrumentQuantity2.mmSettlementAmount, com.tools20022.repository.msg.FinancialInstrumentQuantity3.mmSettlementAmount,
-					com.tools20022.repository.msg.SubscriptionExecution9.mmSettlementAmount, com.tools20022.repository.msg.TransactionDetails51.mmSettlementAmount, com.tools20022.repository.msg.TransactionDetails51.mmSettledAmount,
-					com.tools20022.repository.msg.TransactionDetails51.mmPreviouslySettledAmount, com.tools20022.repository.msg.TransactionDetails51.mmRemainingSettlementAmount,
-					com.tools20022.repository.msg.TransactionDetails52.mmSettlementAmount, com.tools20022.repository.msg.ReceiveInformation13.mmSettlementAmount, com.tools20022.repository.msg.ReceiveInformation12.mmSettlementAmount,
-					com.tools20022.repository.msg.DeliverInformation12.mmSettlementAmount, com.tools20022.repository.msg.DeliverInformation13.mmSettlementAmount, com.tools20022.repository.msg.TransactionDetails61.mmSettlementAmount,
-					com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails16.mmSettlementAmount, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails14.mmSettlementAmount,
-					com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails15.mmSettlementAmount, com.tools20022.repository.msg.AmountAndDirection36.mmAmount, com.tools20022.repository.msg.TransactionDetails62.mmPostingAmount,
-					com.tools20022.repository.msg.AmountAndDirection37.mmAmount, com.tools20022.repository.msg.TransactionDetails63.mmPostingAmount, com.tools20022.repository.msg.AmountAndDirection38.mmAmount,
-					com.tools20022.repository.msg.TransactionDetails66.mmSettlementAmount, com.tools20022.repository.msg.TransactionDetails67.mmPostingAmount, com.tools20022.repository.msg.TransactionDetails68.mmPostingAmount,
-					com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails17.mmSettlementAmount, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails18.mmSettlementAmount,
-					com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails19.mmSettlementAmount, com.tools20022.repository.msg.AmountAndDirection40.mmAmount,
-					com.tools20022.repository.msg.InvestmentFundTransaction4.mmSettlementAmount, com.tools20022.repository.msg.DeliverInformation15.mmSettlementAmount, com.tools20022.repository.msg.DeliverInformation14.mmSettlementAmount,
-					com.tools20022.repository.msg.ReceiveInformation15.mmSettlementAmount, com.tools20022.repository.msg.ReceiveInformation14.mmSettlementAmount, com.tools20022.repository.msg.TransactionDetails70.mmSettlementAmount,
-					com.tools20022.repository.msg.TransactionDetails69.mmPostingAmount, com.tools20022.repository.msg.SettlementObligation7.mmSettlementAmount,
-					com.tools20022.repository.msg.SettlementObligation7.mmRemainingAmountToBeSettled, com.tools20022.repository.msg.SettlementObligation8.mmSettlementAmount,
-					com.tools20022.repository.msg.TransactionDetails71.mmSettlementAmount, com.tools20022.repository.msg.TransactionDetails72.mmPostingAmount, com.tools20022.repository.msg.QuantityAndAccount41.mmPreviouslySettledAmount,
-					com.tools20022.repository.msg.QuantityAndAccount41.mmRemainingToBeSettledAmount, com.tools20022.repository.msg.QuantityAndAccount40.mmPreviouslySettledAmount,
-					com.tools20022.repository.msg.QuantityAndAccount40.mmRemainingToBeSettledAmount, com.tools20022.repository.msg.TransactionDetails81.mmSettlementAmount,
-					com.tools20022.repository.msg.TransactionDetails74.mmSettlementAmount, com.tools20022.repository.msg.TransactionDetails82.mmSettlementAmount, com.tools20022.repository.msg.TransactionDetails79.mmSettlementAmount,
-					com.tools20022.repository.msg.TransactionDetails80.mmSettlementAmount, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails21.mmSettlementAmount,
-					com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails22.mmSettlementAmount, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails20.mmSettlementAmount,
-					com.tools20022.repository.msg.TransactionDetails75.mmPostingAmount, com.tools20022.repository.msg.TransactionDetails78.mmPostingAmount, com.tools20022.repository.msg.AmountAndDirection46.mmAmount,
-					com.tools20022.repository.msg.AmountAndDirection49.mmAmount, com.tools20022.repository.msg.IntraPositionDetails34.mmRemainingToBeSettledQuantity, com.tools20022.repository.msg.AmountAndDirection48.mmAmount,
-					com.tools20022.repository.msg.AmountAndDirection44.mmAmount, com.tools20022.repository.msg.AmountAndDirection45.mmAmount, com.tools20022.repository.msg.AmountAndDirection51.mmAmount,
-					com.tools20022.repository.msg.AmountAndDirection52.mmAmount, com.tools20022.repository.msg.AmountAndDirection47.mmAmount, com.tools20022.repository.msg.ReceiveInformation17.mmSettlementAmount,
-					com.tools20022.repository.msg.ReceiveInformation16.mmSettlementAmount, com.tools20022.repository.msg.DeliverInformation16.mmSettlementAmount, com.tools20022.repository.msg.DeliverInformation17.mmSettlementAmount,
-					com.tools20022.repository.msg.AmountAndDirection66.mmAmount, com.tools20022.repository.msg.TransactionDetails88.mmSettlementAmount, com.tools20022.repository.msg.QuantityAndAccount46.mmPreviouslySettledAmount,
-					com.tools20022.repository.msg.QuantityAndAccount46.mmRemainingToBeSettledAmount, com.tools20022.repository.msg.AmountAndDirection60.mmAmount, com.tools20022.repository.msg.TransactionDetails92.mmSettlementAmount,
-					com.tools20022.repository.msg.TransactionDetails84.mmSettlementAmount, com.tools20022.repository.msg.IntraPositionDetails35.mmRemainingToBeSettledQuantity,
-					com.tools20022.repository.msg.TransactionDetails83.mmSettlementAmount, com.tools20022.repository.msg.QuantityAndAccount51.mmPreviouslySettledAmount,
-					com.tools20022.repository.msg.QuantityAndAccount51.mmRemainingToBeSettledAmount, com.tools20022.repository.msg.TransactionDetails87.mmSettlementAmount, com.tools20022.repository.msg.AmountAndDirection71.mmAmount,
-					com.tools20022.repository.msg.AmountAndDirection57.mmAmount, com.tools20022.repository.msg.AmountAndDirection85.mmAmount, com.tools20022.repository.msg.AmountAndDirection55.mmAmount,
-					com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails23.mmSettlementAmount, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails25.mmSettlementAmount,
-					com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails24.mmSettlementAmount, com.tools20022.repository.msg.AmountAndDirection59.mmAmount, com.tools20022.repository.msg.TransactionDetails91.mmPostingAmount,
-					com.tools20022.repository.msg.AmountAndDirection58.mmAmount, com.tools20022.repository.msg.AmountAndDirection72.mmAmount, com.tools20022.repository.msg.TransactionDetails90.mmPostingAmount,
-					com.tools20022.repository.msg.AmountAndDirection67.mmAmount, com.tools20022.repository.msg.SwitchExecution7.mmSettlementAmount, com.tools20022.repository.msg.SwitchOrder7.mmSettlementAmount,
-					com.tools20022.repository.msg.RedemptionOrder14.mmSettlementAmount, com.tools20022.repository.msg.SubscriptionExecution13.mmSettlementAmount, com.tools20022.repository.msg.SubscriptionExecution12.mmSettlementAmount,
-					com.tools20022.repository.msg.SubscriptionOrder15.mmSettlementAmount, com.tools20022.repository.msg.RedemptionOrder15.mmSettlementAmount, com.tools20022.repository.msg.SubscriptionOrder14.mmSettlementAmount,
-					com.tools20022.repository.msg.IntraPositionDetails41.mmRemainingToBeSettledQuantity, com.tools20022.repository.msg.TransactionDetails97.mmSettlementAmount,
-					com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails27.mmSettlementAmount, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails28.mmSettlementAmount,
-					com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails26.mmSettlementAmount, com.tools20022.repository.msg.TransactionDetails96.mmPostingAmount,
-					com.tools20022.repository.msg.TransactionDetails95.mmPostingAmount, com.tools20022.repository.msg.IntraPositionDetails43.mmRemainingToBeSettledQuantity,
-					com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails30.mmSettlementAmount, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails29.mmSettlementAmount,
-					com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails31.mmSettlementAmount, com.tools20022.repository.msg.TransactionDetails100.mmSettlementAmount,
-					com.tools20022.repository.msg.TransactionDetails99.mmPostingAmount, com.tools20022.repository.msg.TransactionDetails98.mmPostingAmount, com.tools20022.repository.msg.QuantityAndAccount57.mmPreviouslySettledAmount,
-					com.tools20022.repository.msg.QuantityAndAccount57.mmRemainingToBeSettledAmount, com.tools20022.repository.msg.QuantityAndAccount62.mmPreviouslySettledAmount,
-					com.tools20022.repository.msg.QuantityAndAccount62.mmRemainingToBeSettledAmount);
+			derivation_lazy = () -> Arrays.asList(DeliverInformation4.mmSettlementAmount, DeliverInformation7.mmSettlementAmount, ReceiveInformation4.mmSettlementAmount, ReceiveInformation8.mmSettlementAmount,
+					ReceiveInformation6.mmSettlementAmount, ReceiveInformation11.mmSettlementAmount, DeliverInformation11.mmSettlementAmount, AmountAndDirection8.mmAmount, TransactionDetails10.mmSettlementAmount,
+					TransactionDetails29.mmSettlementAmount, AmountAndDirection32.mmAmount, AmountAndDirection9.mmAmount, SecuritiesSettlementTransactionDetails3.mmSettlementAmount,
+					SecuritiesSettlementTransactionDetails4.mmSettlementAmount, SecuritiesSettlementTransactionDetails2.mmSettlementAmount, TransactionDetails28.mmSettlementAmount, AmountAndDirection12.mmAmount,
+					TransactionDetails31.mmSettlementAmount, TransactionDetails44.mmSettlementAmount, AmountAndDirection33.mmAmount, AmountAndDirection17.mmAmount, SecuritiesSettlementTransactionDetails5.mmSettlementAmount,
+					SecuritiesSettlementTransactionDetails6.mmSettlementAmount, SecuritiesSettlementTransactionDetails7.mmSettlementAmount, DeliverInformation3.mmSettlementAmount, DeliverInformation8.mmSettlementAmount,
+					ReceiveInformation3.mmSettlementAmount, ReceiveInformation7.mmSettlementAmount, ReceiveInformation5.mmSettlementAmount, ReceiveInformation9.mmSettlementAmount, DeliverInformation5.mmSettlementAmount,
+					DeliverInformation9.mmSettlementAmount, DeliverInformation6.mmSettlementAmount, IntraPositionDetails2.mmRemainingToBeSettledQuantity, IntraPositionDetails8.mmRemainingToBeSettledQuantity,
+					IntraPositionDetails12.mmRemainingToBeSettledQuantity, AmountAndDirection24.mmAmount, IntraPositionDetails13.mmRemainingToBeSettledQuantity, IntraPositionDetails22.mmRemainingToBeSettledQuantity,
+					IntraPositionDetails26.mmRemainingToBeSettledQuantity, IntraPositionDetails27.mmRemainingToBeSettledQuantity, IntraPositionDetails29.mmRemainingToBeSettledQuantity, AmountAndDirection6.mmAmount,
+					AmountAndDirection14.mmAmount, AmountAndDirection5.mmAmount, QuantityAndAccount6.mmPreviouslySettledAmount, QuantityAndAccount6.mmRemainingToBeSettledAmount, AmountAndDirection4.mmAmount, AmountAndDirection2.mmAmount,
+					AmountAndDirection19.mmAmount, QuantityAndAccount11.mmPreviouslySettledAmount, QuantityAndAccount11.mmRemainingToBeSettledAmount, AmountAndDirection13.mmAmount, AmountAndDirection16.mmAmount,
+					QuantityAndAccount18.mmPreviouslySettledAmount, QuantityAndAccount18.mmRemainingToBeSettledAmount, QuantityAndAccount19.mmPreviouslySettledAmount, QuantityAndAccount19.mmRemainingToBeSettledAmount,
+					AmountAndDirection7.mmAmount, QuantityAndAccount2.mmPreviouslySettledAmount, QuantityAndAccount2.mmRemainingToBeSettledAmount, AmountAndDirection15.mmAmount, QuantityAndAccount12.mmPreviouslySettledAmount,
+					QuantityAndAccount12.mmRemainingToBeSettledAmount, QuantityAndAccount15.mmPreviouslySettledAmount, QuantityAndAccount15.mmRemainingToBeSettledAmount, QuantityAndAccount20.mmPreviouslySettledAmount,
+					QuantityAndAccount20.mmRemainingToBeSettledAmount, QuantityAndAccount28.mmPreviouslySettledAmount, QuantityAndAccount28.mmRemainingToBeSettledAmount, QuantityAndAccount37.mmPreviouslySettledAmount,
+					QuantityAndAccount37.mmRemainingToBeSettledAmount, SecuritiesSettlementTransactionDetails8.mmSettlementAmount, SecuritiesSettlementTransactionDetails9.mmSettlementAmount,
+					SecuritiesSettlementTransactionDetails10.mmSettlementAmount, SecuritiesSettlementTransactionDetails11.mmSettlementAmount, SecuritiesSettlementTransactionDetails12.mmSettlementAmount,
+					SecuritiesSettlementTransactionDetails13.mmSettlementAmount, TransactionDetails5.mmSettlementAmount, TransactionDetails9.mmSettlementAmount, TransactionDetails22.mmSettlementAmount,
+					TransactionDetails23.mmSettlementAmount, TransactionDetails36.mmSettlementAmount, TransactionDetails47.mmSettlementAmount, TransactionDetails53.mmSettlementAmount, TransactionDetails58.mmSettlementAmount,
+					TransactionDetails7.mmPostingAmount, TransactionDetails8.mmPostingAmount, TransactionDetails16.mmPostingAmount, TransactionDetails17.mmPostingAmount, TransactionDetails26.mmPostingAmount,
+					TransactionDetails25.mmPostingAmount, TransactionDetails27.mmPostingAmount, TransactionDetails33.mmPostingAmount, TransactionDetails39.mmPostingAmount, TransactionDetails50.mmPostingAmount,
+					TransactionDetails56.mmPostingAmount, TransactionDetails59.mmPostingAmount, AmountAndDirection3.mmAmount, TransactionDetails6.mmPostingAmount, AmountAndDirection18.mmAmount, TransactionDetails18.mmPostingAmount,
+					TransactionDetails24.mmPostingAmount, TransactionDetails34.mmPostingAmount, TransactionDetails37.mmPostingAmount, TransactionDetails48.mmPostingAmount, TransactionDetails57.mmPostingAmount,
+					TransactionDetails60.mmPostingAmount, AmountAndDirection1.mmAmount, AmountAndDirection29.mmAmount, AmountAndDirection28.mmAmount, RedemptionOrder5.mmSettlementAmount, RedemptionOrder7.mmSettlementAmount,
+					RedemptionOrder6.mmSettlementAmount, RedemptionOrder8.mmSettlementAmount, InvestmentFundTransaction3.mmSettlementAmount, SubscriptionOrder5.mmSettlementAmount, SubscriptionExecution5.mmSettlementAmount,
+					SubscriptionOrder7.mmSettlementAmount, SubscriptionOrder6.mmSettlementAmount, SubscriptionExecution6.mmSettlementAmount, SubscriptionOrder8.mmSettlementAmount, SwitchOrder3.mmSettlementAmount,
+					SwitchExecution4.mmSettlementAmount, SwitchOrder4.mmSettlementAmount, TransactionDetails1.mmSettlementAmount, TransactionDetails3.mmSettlementAmount, AmountAndDirection10.mmAmount, AmountAndDirection22.mmAmount,
+					AmountAndDirection23.mmAmount, TransactionDetails4.mmSettlementAmount, TransactionDetails30.mmSettlementAmount, AmountAndDirection20.mmAmount, AmountAndDirection11.mmAmount, TransactionDetails20.mmSettlementAmount,
+					AmountAndDirection25.mmAmount, AmountAndDirection26.mmAmount, TransactionDetails40.mmSettlementAmount, TransactionDetails42.mmSettlementAmount, TransactionDetails46.mmSettlementAmount,
+					TransactionDetails32.mmSettlementAmount, TransactionDetails14.mmSettlementAmount, TransactionDetails35.mmSettlementAmount, TransactionDetails45.mmSettlementAmount, AmountAndDirection31.mmAmount,
+					SettlementObligation1.mmSettlementAmount, SettlementObligation1.mmRemainingAmountToBeSettled, AmountAndDirection27.mmAmount, SettlementObligation6.mmSettlementAmount, SettlementObligation6.mmRemainingAmountToBeSettled,
+					SettlementObligation3.mmSettlementAmount, SettlementObligation2.mmSettlementAmount, SettlementObligation5.mmSettlementAmount, SettlementObligation4.mmSettlementAmount, AmountAndDirection21.mmAmount,
+					SettlementDetails21.mmSettlementAmount, FinancialInstrumentQuantity2.mmSettlementAmount, FinancialInstrumentQuantity3.mmSettlementAmount, SubscriptionExecution9.mmSettlementAmount,
+					TransactionDetails51.mmSettlementAmount, TransactionDetails51.mmSettledAmount, TransactionDetails51.mmPreviouslySettledAmount, TransactionDetails51.mmRemainingSettlementAmount, TransactionDetails52.mmSettlementAmount,
+					ReceiveInformation13.mmSettlementAmount, ReceiveInformation12.mmSettlementAmount, DeliverInformation12.mmSettlementAmount, DeliverInformation13.mmSettlementAmount, TransactionDetails61.mmSettlementAmount,
+					SecuritiesSettlementTransactionDetails16.mmSettlementAmount, SecuritiesSettlementTransactionDetails14.mmSettlementAmount, SecuritiesSettlementTransactionDetails15.mmSettlementAmount, AmountAndDirection36.mmAmount,
+					TransactionDetails62.mmPostingAmount, AmountAndDirection37.mmAmount, TransactionDetails63.mmPostingAmount, AmountAndDirection38.mmAmount, TransactionDetails66.mmSettlementAmount, TransactionDetails67.mmPostingAmount,
+					TransactionDetails68.mmPostingAmount, SecuritiesSettlementTransactionDetails17.mmSettlementAmount, SecuritiesSettlementTransactionDetails18.mmSettlementAmount,
+					SecuritiesSettlementTransactionDetails19.mmSettlementAmount, AmountAndDirection40.mmAmount, InvestmentFundTransaction4.mmSettlementAmount, DeliverInformation15.mmSettlementAmount,
+					DeliverInformation14.mmSettlementAmount, ReceiveInformation15.mmSettlementAmount, ReceiveInformation14.mmSettlementAmount, TransactionDetails70.mmSettlementAmount, TransactionDetails69.mmPostingAmount,
+					SettlementObligation7.mmSettlementAmount, SettlementObligation7.mmRemainingAmountToBeSettled, SettlementObligation8.mmSettlementAmount, TransactionDetails71.mmSettlementAmount, TransactionDetails72.mmPostingAmount,
+					QuantityAndAccount41.mmPreviouslySettledAmount, QuantityAndAccount41.mmRemainingToBeSettledAmount, QuantityAndAccount40.mmPreviouslySettledAmount, QuantityAndAccount40.mmRemainingToBeSettledAmount,
+					TransactionDetails81.mmSettlementAmount, TransactionDetails74.mmSettlementAmount, TransactionDetails82.mmSettlementAmount, TransactionDetails79.mmSettlementAmount, TransactionDetails80.mmSettlementAmount,
+					SecuritiesSettlementTransactionDetails21.mmSettlementAmount, SecuritiesSettlementTransactionDetails22.mmSettlementAmount, SecuritiesSettlementTransactionDetails20.mmSettlementAmount,
+					TransactionDetails75.mmPostingAmount, TransactionDetails78.mmPostingAmount, AmountAndDirection46.mmAmount, AmountAndDirection49.mmAmount, IntraPositionDetails34.mmRemainingToBeSettledQuantity,
+					AmountAndDirection48.mmAmount, AmountAndDirection44.mmAmount, AmountAndDirection45.mmAmount, AmountAndDirection51.mmAmount, AmountAndDirection52.mmAmount, AmountAndDirection47.mmAmount,
+					ReceiveInformation17.mmSettlementAmount, ReceiveInformation16.mmSettlementAmount, DeliverInformation16.mmSettlementAmount, DeliverInformation17.mmSettlementAmount, AmountAndDirection66.mmAmount,
+					TransactionDetails88.mmSettlementAmount, QuantityAndAccount46.mmPreviouslySettledAmount, QuantityAndAccount46.mmRemainingToBeSettledAmount, AmountAndDirection60.mmAmount, TransactionDetails92.mmSettlementAmount,
+					TransactionDetails84.mmSettlementAmount, IntraPositionDetails35.mmRemainingToBeSettledQuantity, TransactionDetails83.mmSettlementAmount, QuantityAndAccount51.mmPreviouslySettledAmount,
+					QuantityAndAccount51.mmRemainingToBeSettledAmount, TransactionDetails87.mmSettlementAmount, AmountAndDirection71.mmAmount, AmountAndDirection57.mmAmount, AmountAndDirection85.mmAmount, AmountAndDirection55.mmAmount,
+					SecuritiesSettlementTransactionDetails23.mmSettlementAmount, SecuritiesSettlementTransactionDetails25.mmSettlementAmount, SecuritiesSettlementTransactionDetails24.mmSettlementAmount, AmountAndDirection59.mmAmount,
+					TransactionDetails91.mmPostingAmount, AmountAndDirection58.mmAmount, AmountAndDirection72.mmAmount, TransactionDetails90.mmPostingAmount, AmountAndDirection67.mmAmount, SwitchExecution7.mmSettlementAmount,
+					SwitchOrder7.mmSettlementAmount, RedemptionOrder14.mmSettlementAmount, SubscriptionExecution13.mmSettlementAmount, SubscriptionExecution12.mmSettlementAmount, SubscriptionOrder15.mmSettlementAmount,
+					RedemptionOrder15.mmSettlementAmount, SubscriptionOrder14.mmSettlementAmount, IntraPositionDetails41.mmRemainingToBeSettledQuantity, TransactionDetails97.mmSettlementAmount,
+					SecuritiesSettlementTransactionDetails27.mmSettlementAmount, SecuritiesSettlementTransactionDetails28.mmSettlementAmount, SecuritiesSettlementTransactionDetails26.mmSettlementAmount,
+					TransactionDetails96.mmPostingAmount, TransactionDetails95.mmPostingAmount, IntraPositionDetails43.mmRemainingToBeSettledQuantity, SecuritiesSettlementTransactionDetails30.mmSettlementAmount,
+					SecuritiesSettlementTransactionDetails29.mmSettlementAmount, SecuritiesSettlementTransactionDetails31.mmSettlementAmount, TransactionDetails100.mmSettlementAmount, TransactionDetails99.mmPostingAmount,
+					TransactionDetails98.mmPostingAmount, QuantityAndAccount57.mmPreviouslySettledAmount, QuantityAndAccount57.mmRemainingToBeSettledAmount, QuantityAndAccount62.mmPreviouslySettledAmount,
+					QuantityAndAccount62.mmRemainingToBeSettledAmount);
 			elementContext_lazy = () -> SecuritiesSettlement.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SettlementAmount";
 			definition = "Amount of money settled or to be settled.";
 			maxOccurs = 1;
@@ -3173,17 +3045,13 @@ public class SecuritiesSettlement extends Settlement {
 	 */
 	public static final MMBusinessAttribute mmHoldingsPlanType = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Transfer17.mmHoldingsPlanType, com.tools20022.repository.msg.Transfer14.mmHoldingsPlanType, com.tools20022.repository.msg.Transfer24.mmHoldingsPlanType,
-					com.tools20022.repository.msg.Transfer25.mmHoldingsPlanType, com.tools20022.repository.msg.Transfer16.mmHoldingsPlanType, com.tools20022.repository.msg.Transfer12.mmHoldingsPlanType,
-					com.tools20022.repository.msg.Transfer20.mmHoldingsPlanType, com.tools20022.repository.msg.Transfer22.mmHoldingsPlanType, com.tools20022.repository.msg.Transfer18.mmHoldingsPlanType,
-					com.tools20022.repository.msg.Transfer26.mmHoldingsPlanType, com.tools20022.repository.msg.Transfer15.mmHoldingsPlanType, com.tools20022.repository.msg.Transfer21.mmHoldingsPlanType,
-					com.tools20022.repository.msg.Transfer13.mmHoldingsPlanType, com.tools20022.repository.msg.Transfer23.mmHoldingsPlanType, com.tools20022.repository.msg.Transfer11.mmHoldingsPlanType,
-					com.tools20022.repository.msg.Transfer19.mmHoldingsPlanType, com.tools20022.repository.msg.Transfer27.mmHoldingsPlanType, com.tools20022.repository.msg.Transfer28.mmHoldingsPlanType,
-					com.tools20022.repository.msg.Transfer29.mmHoldingsPlanType, com.tools20022.repository.msg.Transfer31.mmHoldingsPlanType, com.tools20022.repository.msg.Transfer30.mmHoldingsPlanType,
-					com.tools20022.repository.msg.Transfer32.mmHoldingsPlanType, com.tools20022.repository.msg.Transfer33.mmHoldingsPlanType);
+			derivation_lazy = () -> Arrays.asList(Transfer17.mmHoldingsPlanType, Transfer14.mmHoldingsPlanType, Transfer24.mmHoldingsPlanType, Transfer25.mmHoldingsPlanType, Transfer16.mmHoldingsPlanType, Transfer12.mmHoldingsPlanType,
+					Transfer20.mmHoldingsPlanType, Transfer22.mmHoldingsPlanType, Transfer18.mmHoldingsPlanType, Transfer26.mmHoldingsPlanType, Transfer15.mmHoldingsPlanType, Transfer21.mmHoldingsPlanType, Transfer13.mmHoldingsPlanType,
+					Transfer23.mmHoldingsPlanType, Transfer11.mmHoldingsPlanType, Transfer19.mmHoldingsPlanType, Transfer27.mmHoldingsPlanType, Transfer28.mmHoldingsPlanType, Transfer29.mmHoldingsPlanType, Transfer31.mmHoldingsPlanType,
+					Transfer30.mmHoldingsPlanType, Transfer32.mmHoldingsPlanType, Transfer33.mmHoldingsPlanType);
 			elementContext_lazy = () -> SecuritiesSettlement.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "HoldingsPlanType";
 			definition = "Identifies whether or not saving plan or withdrawal or switch plan are included in the holdings.";
 			maxOccurs = 1;
@@ -3648,79 +3516,49 @@ public class SecuritiesSettlement extends Settlement {
 	 */
 	public static final MMBusinessAttribute mmSecuritiesMovementType = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SettlementTypeAndIdentification3.mmSecuritiesMovementType, com.tools20022.repository.msg.SettlementTypeAndAdditionalParameters5.mmSecuritiesMovementType,
-					com.tools20022.repository.msg.SettlementTypeAndIdentification13.mmSecuritiesMovementType, com.tools20022.repository.msg.SettlementTypeAndIdentification7.mmSecuritiesMovementType,
-					com.tools20022.repository.msg.SettlementTypeAndAdditionalParameters8.mmSecuritiesMovementType, com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters3.mmSecuritiesMovementType,
-					com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters6.mmSecuritiesMovementType, com.tools20022.repository.msg.SettlementTypeAndIdentification14.mmSecuritiesMovementType,
-					com.tools20022.repository.msg.SettlementTypeAndIdentification1.mmSecuritiesMovementType, com.tools20022.repository.msg.SettlementTypeAndIdentification8.mmSecuritiesMovementType,
-					com.tools20022.repository.msg.SettlementTypeAndIdentification9.mmSecuritiesMovementType, com.tools20022.repository.msg.SettlementTypeAndIdentification11.mmSecuritiesMovementType,
-					com.tools20022.repository.msg.SettlementTypeAndIdentification15.mmSecuritiesMovementType, com.tools20022.repository.msg.SettlementTypeAndIdentification17.mmSecuritiesMovementType,
-					com.tools20022.repository.msg.SettlementTypeAndIdentification10.mmSecuritiesMovementType, com.tools20022.repository.msg.SettlementTypeAndIdentification12.mmSecuritiesMovementType,
-					com.tools20022.repository.msg.SettlementTypeAndAdditionalParameters1.mmSecuritiesMovementType, com.tools20022.repository.msg.SettlementTypeAndAdditionalParameters4.mmSecuritiesMovementType,
-					com.tools20022.repository.msg.SettlementTypeAndAdditionalParameters9.mmSecuritiesMovementType, com.tools20022.repository.msg.SettlementTypeAndAdditionalParameters10.mmSecuritiesMovementType,
-					com.tools20022.repository.msg.TransactionDetails5.mmSecuritiesMovementType, com.tools20022.repository.msg.TransactionDetails9.mmSecuritiesMovementType,
-					com.tools20022.repository.msg.TransactionDetails22.mmSecuritiesMovementType, com.tools20022.repository.msg.TransactionDetails23.mmSecuritiesMovementType,
-					com.tools20022.repository.msg.TransactionDetails36.mmSecuritiesMovementType, com.tools20022.repository.msg.TransactionDetails47.mmSecuritiesMovementType,
-					com.tools20022.repository.msg.TransactionDetails53.mmSecuritiesMovementType, com.tools20022.repository.msg.TransactionDetails58.mmSecuritiesMovementType,
-					com.tools20022.repository.msg.TransactionDetails7.mmSecuritiesMovementType, com.tools20022.repository.msg.TransactionDetails8.mmSecuritiesMovementType,
-					com.tools20022.repository.msg.TransactionDetails16.mmSecuritiesMovementType, com.tools20022.repository.msg.TransactionDetails17.mmSecuritiesMovementType,
-					com.tools20022.repository.msg.TransactionDetails26.mmSecuritiesMovementType, com.tools20022.repository.msg.TransactionDetails25.mmSecuritiesMovementType,
-					com.tools20022.repository.msg.TransactionDetails27.mmSecuritiesMovementType, com.tools20022.repository.msg.TransactionDetails33.mmSecuritiesMovementType,
-					com.tools20022.repository.msg.TransactionDetails39.mmSecuritiesMovementType, com.tools20022.repository.msg.TransactionDetails50.mmSecuritiesMovementType,
-					com.tools20022.repository.msg.TransactionDetails56.mmSecuritiesMovementType, com.tools20022.repository.msg.TransactionDetails59.mmSecuritiesMovementType,
-					com.tools20022.repository.msg.TransactionDetails6.mmSecuritiesMovementType, com.tools20022.repository.msg.TransactionDetails18.mmSecuritiesMovementType,
-					com.tools20022.repository.msg.TransactionDetails24.mmSecuritiesMovementType, com.tools20022.repository.msg.TransactionDetails34.mmSecuritiesMovementType,
-					com.tools20022.repository.msg.TransactionDetails37.mmSecuritiesMovementType, com.tools20022.repository.msg.TransactionDetails48.mmSecuritiesMovementType,
-					com.tools20022.repository.msg.TransactionDetails57.mmSecuritiesMovementType, com.tools20022.repository.msg.TransactionDetails60.mmSecuritiesMovementType,
-					com.tools20022.repository.msg.SecuritiesTradeDetails7.mmSecuritiesMovementType, com.tools20022.repository.msg.SecuritiesTradeDetails19.mmSecuritiesMovementType,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails2.mmSecuritiesMovementType, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails8.mmSecuritiesMovementType,
-					com.tools20022.repository.msg.SettlementTypeAndAdditionalParameters2.mmSecuritiesMovementType, com.tools20022.repository.msg.SecuritiesTradeDetails4.mmSecuritiesMovementType,
-					com.tools20022.repository.msg.SecuritiesTradeDetails17.mmSecuritiesMovementType, com.tools20022.repository.msg.SettlementTypeAndIdentification4.mmSecuritiesMovementType,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails6.mmSecuritiesMovementType, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails10.mmSecuritiesMovementType,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails17.mmSecuritiesMovementType, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails18.mmSecuritiesMovementType,
-					com.tools20022.repository.msg.SettlementTypeAndAdditionalParameters3.mmSecuritiesMovementType, com.tools20022.repository.msg.SecuritiesTradeDetails10.mmSecuritiesMovementType,
-					com.tools20022.repository.msg.SecuritiesTradeDetails22.mmSecuritiesMovementType, com.tools20022.repository.msg.SecuritiesTradeDetails23.mmSecuritiesMovementType,
-					com.tools20022.repository.msg.SecuritiesTradeDetails29.mmSecuritiesMovementType, com.tools20022.repository.msg.TransactionDetails40.mmSecuritiesMovementType,
-					com.tools20022.repository.msg.TransactionDetails42.mmSecuritiesMovementType, com.tools20022.repository.msg.TransactionDetails46.mmSecuritiesMovementType,
-					com.tools20022.repository.msg.SettlementTypeAndIdentification6.mmSecuritiesMovementType, com.tools20022.repository.msg.SecuritiesTradeDetails14.mmSecuritiesMovementType,
-					com.tools20022.repository.msg.SecuritiesTradeDetails20.mmSecuritiesMovementType, com.tools20022.repository.msg.SecuritiesTradeDetails24.mmSecuritiesMovementType,
-					com.tools20022.repository.msg.SecuritiesTradeDetails30.mmSecuritiesMovementType, com.tools20022.repository.msg.TransactionDetails45.mmSecuritiesMovementType,
-					com.tools20022.repository.msg.SettlementObligation3.mmSecuritiesMovementType, com.tools20022.repository.msg.SettlementObligation5.mmSecuritiesMovementType,
-					com.tools20022.repository.msg.SettlementObligation4.mmSecuritiesMovementType, com.tools20022.repository.msg.NetPosition1.mmSecuritiesMovementType, com.tools20022.repository.msg.NetPosition2.mmSecuritiesMovementType,
-					com.tools20022.repository.msg.TransactionDetails51.mmSecuritiesMovementType, com.tools20022.repository.msg.TransactionDetails61.mmSecuritiesMovementType,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails21.mmSecuritiesMovementType, com.tools20022.repository.msg.TransactionDetails62.mmSecuritiesMovementType,
-					com.tools20022.repository.msg.TransactionDetails63.mmSecuritiesMovementType, com.tools20022.repository.msg.SecuritiesTradeDetails35.mmSecuritiesMovementType,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails22.mmSecuritiesMovementType, com.tools20022.repository.msg.TransactionDetails66.mmSecuritiesMovementType,
-					com.tools20022.repository.msg.SecuritiesTradeDetails42.mmSecuritiesMovementType, com.tools20022.repository.msg.TransactionDetails67.mmSecuritiesMovementType,
-					com.tools20022.repository.msg.TransactionDetails68.mmSecuritiesMovementType, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails24.mmSecuritiesMovementType,
-					com.tools20022.repository.msg.TransactionDetails70.mmSecuritiesMovementType, com.tools20022.repository.msg.TransactionDetails69.mmSecuritiesMovementType,
-					com.tools20022.repository.msg.NetPosition3.mmSecuritiesMovementType, com.tools20022.repository.msg.SettlementObligation8.mmSecuritiesMovementType,
-					com.tools20022.repository.msg.TransactionDetails71.mmSecuritiesMovementType, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails25.mmSecuritiesMovementType,
-					com.tools20022.repository.msg.TransactionDetails72.mmSecuritiesMovementType, com.tools20022.repository.msg.TransactionDetails81.mmSecuritiesMovementType,
-					com.tools20022.repository.msg.SecuritiesTradeDetails49.mmSecuritiesMovementType, com.tools20022.repository.msg.TransactionDetails82.mmSecuritiesMovementType,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails26.mmSecuritiesMovementType, com.tools20022.repository.msg.TransactionDetails79.mmSecuritiesMovementType,
-					com.tools20022.repository.msg.SecuritiesTradeDetails48.mmSecuritiesMovementType, com.tools20022.repository.msg.TransactionDetails75.mmSecuritiesMovementType,
-					com.tools20022.repository.msg.TransactionDetails78.mmSecuritiesMovementType, com.tools20022.repository.msg.SettlementTypeAndIdentification18.mmSecuritiesMovementType,
-					com.tools20022.repository.msg.SettlementTypeAndIdentification19.mmSecuritiesMovementType, com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters10.mmSecuritiesMovementType,
-					com.tools20022.repository.msg.SettlementTypeAndAdditionalParameters11.mmSecuritiesMovementType, com.tools20022.repository.msg.SettlementTypeAndAdditionalParameters12.mmSecuritiesMovementType,
-					com.tools20022.repository.msg.SettlementTypeAndAdditionalParameters14.mmSecuritiesMovementType, com.tools20022.repository.msg.SecuritiesTradeDetails57.mmSecuritiesMovementType,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails33.mmSecuritiesMovementType, com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters12.mmSecuritiesMovementType,
-					com.tools20022.repository.msg.SecuritiesTradeDetails61.mmSecuritiesMovementType, com.tools20022.repository.msg.TransactionDetails92.mmSecuritiesMovementType,
-					com.tools20022.repository.msg.TransactionDetails84.mmSecuritiesMovementType, com.tools20022.repository.msg.SettlementTypeAndAdditionalParameters16.mmSecuritiesMovementType,
-					com.tools20022.repository.msg.SettlementTypeAndIdentification24.mmSecuritiesMovementType, com.tools20022.repository.msg.TransactionDetails87.mmSecuritiesMovementType,
-					com.tools20022.repository.msg.SettlementTypeAndAdditionalParameters15.mmSecuritiesMovementType, com.tools20022.repository.msg.TransactionDetails91.mmSecuritiesMovementType,
-					com.tools20022.repository.msg.TransactionDetails90.mmSecuritiesMovementType, com.tools20022.repository.msg.SettlementTypeAndAdditionalParameters18.mmSecuritiesMovementType,
-					com.tools20022.repository.msg.SettlementTypeAndIdentification22.mmSecuritiesMovementType, com.tools20022.repository.msg.SettlementTypeAndAdditionalParameters19.mmSecuritiesMovementType,
-					com.tools20022.repository.msg.SecuritiesTradeDetails68.mmSecuritiesMovementType, com.tools20022.repository.msg.TransactionDetails97.mmSecuritiesMovementType,
-					com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters16.mmSecuritiesMovementType, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails35.mmSecuritiesMovementType,
-					com.tools20022.repository.msg.TransactionDetails96.mmSecuritiesMovementType, com.tools20022.repository.msg.TransactionDetails95.mmSecuritiesMovementType,
-					com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters19.mmSecuritiesMovementType, com.tools20022.repository.msg.SecuritiesTradeDetails69.mmSecuritiesMovementType,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails36.mmSecuritiesMovementType, com.tools20022.repository.msg.SettlementTypeAndAdditionalParameters20.mmSecuritiesMovementType,
-					com.tools20022.repository.msg.TransactionDetails100.mmSecuritiesMovementType, com.tools20022.repository.msg.TransactionDetails99.mmSecuritiesMovementType,
-					com.tools20022.repository.msg.TransactionDetails98.mmSecuritiesMovementType);
+			derivation_lazy = () -> Arrays.asList(SettlementTypeAndIdentification3.mmSecuritiesMovementType, SettlementTypeAndAdditionalParameters5.mmSecuritiesMovementType, SettlementTypeAndIdentification13.mmSecuritiesMovementType,
+					SettlementTypeAndIdentification7.mmSecuritiesMovementType, SettlementTypeAndAdditionalParameters8.mmSecuritiesMovementType, TransactionTypeAndAdditionalParameters3.mmSecuritiesMovementType,
+					TransactionTypeAndAdditionalParameters6.mmSecuritiesMovementType, SettlementTypeAndIdentification14.mmSecuritiesMovementType, SettlementTypeAndIdentification1.mmSecuritiesMovementType,
+					SettlementTypeAndIdentification8.mmSecuritiesMovementType, SettlementTypeAndIdentification9.mmSecuritiesMovementType, SettlementTypeAndIdentification11.mmSecuritiesMovementType,
+					SettlementTypeAndIdentification15.mmSecuritiesMovementType, SettlementTypeAndIdentification17.mmSecuritiesMovementType, SettlementTypeAndIdentification10.mmSecuritiesMovementType,
+					SettlementTypeAndIdentification12.mmSecuritiesMovementType, SettlementTypeAndAdditionalParameters1.mmSecuritiesMovementType, SettlementTypeAndAdditionalParameters4.mmSecuritiesMovementType,
+					SettlementTypeAndAdditionalParameters9.mmSecuritiesMovementType, SettlementTypeAndAdditionalParameters10.mmSecuritiesMovementType, TransactionDetails5.mmSecuritiesMovementType,
+					TransactionDetails9.mmSecuritiesMovementType, TransactionDetails22.mmSecuritiesMovementType, TransactionDetails23.mmSecuritiesMovementType, TransactionDetails36.mmSecuritiesMovementType,
+					TransactionDetails47.mmSecuritiesMovementType, TransactionDetails53.mmSecuritiesMovementType, TransactionDetails58.mmSecuritiesMovementType, TransactionDetails7.mmSecuritiesMovementType,
+					TransactionDetails8.mmSecuritiesMovementType, TransactionDetails16.mmSecuritiesMovementType, TransactionDetails17.mmSecuritiesMovementType, TransactionDetails26.mmSecuritiesMovementType,
+					TransactionDetails25.mmSecuritiesMovementType, TransactionDetails27.mmSecuritiesMovementType, TransactionDetails33.mmSecuritiesMovementType, TransactionDetails39.mmSecuritiesMovementType,
+					TransactionDetails50.mmSecuritiesMovementType, TransactionDetails56.mmSecuritiesMovementType, TransactionDetails59.mmSecuritiesMovementType, TransactionDetails6.mmSecuritiesMovementType,
+					TransactionDetails18.mmSecuritiesMovementType, TransactionDetails24.mmSecuritiesMovementType, TransactionDetails34.mmSecuritiesMovementType, TransactionDetails37.mmSecuritiesMovementType,
+					TransactionDetails48.mmSecuritiesMovementType, TransactionDetails57.mmSecuritiesMovementType, TransactionDetails60.mmSecuritiesMovementType, SecuritiesTradeDetails7.mmSecuritiesMovementType,
+					SecuritiesTradeDetails19.mmSecuritiesMovementType, SecuritiesFinancingTransactionDetails2.mmSecuritiesMovementType, SecuritiesFinancingTransactionDetails8.mmSecuritiesMovementType,
+					SettlementTypeAndAdditionalParameters2.mmSecuritiesMovementType, SecuritiesTradeDetails4.mmSecuritiesMovementType, SecuritiesTradeDetails17.mmSecuritiesMovementType,
+					SettlementTypeAndIdentification4.mmSecuritiesMovementType, SecuritiesFinancingTransactionDetails6.mmSecuritiesMovementType, SecuritiesFinancingTransactionDetails10.mmSecuritiesMovementType,
+					SecuritiesFinancingTransactionDetails17.mmSecuritiesMovementType, SecuritiesFinancingTransactionDetails18.mmSecuritiesMovementType, SettlementTypeAndAdditionalParameters3.mmSecuritiesMovementType,
+					SecuritiesTradeDetails10.mmSecuritiesMovementType, SecuritiesTradeDetails22.mmSecuritiesMovementType, SecuritiesTradeDetails23.mmSecuritiesMovementType, SecuritiesTradeDetails29.mmSecuritiesMovementType,
+					TransactionDetails40.mmSecuritiesMovementType, TransactionDetails42.mmSecuritiesMovementType, TransactionDetails46.mmSecuritiesMovementType, SettlementTypeAndIdentification6.mmSecuritiesMovementType,
+					SecuritiesTradeDetails14.mmSecuritiesMovementType, SecuritiesTradeDetails20.mmSecuritiesMovementType, SecuritiesTradeDetails24.mmSecuritiesMovementType, SecuritiesTradeDetails30.mmSecuritiesMovementType,
+					TransactionDetails45.mmSecuritiesMovementType, SettlementObligation3.mmSecuritiesMovementType, SettlementObligation5.mmSecuritiesMovementType, SettlementObligation4.mmSecuritiesMovementType,
+					NetPosition1.mmSecuritiesMovementType, NetPosition2.mmSecuritiesMovementType, TransactionDetails51.mmSecuritiesMovementType, TransactionDetails61.mmSecuritiesMovementType,
+					SecuritiesFinancingTransactionDetails21.mmSecuritiesMovementType, TransactionDetails62.mmSecuritiesMovementType, TransactionDetails63.mmSecuritiesMovementType, SecuritiesTradeDetails35.mmSecuritiesMovementType,
+					SecuritiesFinancingTransactionDetails22.mmSecuritiesMovementType, TransactionDetails66.mmSecuritiesMovementType, SecuritiesTradeDetails42.mmSecuritiesMovementType, TransactionDetails67.mmSecuritiesMovementType,
+					TransactionDetails68.mmSecuritiesMovementType, SecuritiesFinancingTransactionDetails24.mmSecuritiesMovementType, TransactionDetails70.mmSecuritiesMovementType, TransactionDetails69.mmSecuritiesMovementType,
+					NetPosition3.mmSecuritiesMovementType, SettlementObligation8.mmSecuritiesMovementType, TransactionDetails71.mmSecuritiesMovementType, SecuritiesFinancingTransactionDetails25.mmSecuritiesMovementType,
+					TransactionDetails72.mmSecuritiesMovementType, TransactionDetails81.mmSecuritiesMovementType, SecuritiesTradeDetails49.mmSecuritiesMovementType, TransactionDetails82.mmSecuritiesMovementType,
+					SecuritiesFinancingTransactionDetails26.mmSecuritiesMovementType, TransactionDetails79.mmSecuritiesMovementType, SecuritiesTradeDetails48.mmSecuritiesMovementType, TransactionDetails75.mmSecuritiesMovementType,
+					TransactionDetails78.mmSecuritiesMovementType, SettlementTypeAndIdentification18.mmSecuritiesMovementType, SettlementTypeAndIdentification19.mmSecuritiesMovementType,
+					TransactionTypeAndAdditionalParameters10.mmSecuritiesMovementType, SettlementTypeAndAdditionalParameters11.mmSecuritiesMovementType, SettlementTypeAndAdditionalParameters12.mmSecuritiesMovementType,
+					SettlementTypeAndAdditionalParameters14.mmSecuritiesMovementType, SecuritiesTradeDetails57.mmSecuritiesMovementType, SecuritiesFinancingTransactionDetails33.mmSecuritiesMovementType,
+					TransactionTypeAndAdditionalParameters12.mmSecuritiesMovementType, SecuritiesTradeDetails61.mmSecuritiesMovementType, TransactionDetails92.mmSecuritiesMovementType, TransactionDetails84.mmSecuritiesMovementType,
+					SettlementTypeAndAdditionalParameters16.mmSecuritiesMovementType, SettlementTypeAndIdentification24.mmSecuritiesMovementType, TransactionDetails87.mmSecuritiesMovementType,
+					SettlementTypeAndAdditionalParameters15.mmSecuritiesMovementType, TransactionDetails91.mmSecuritiesMovementType, TransactionDetails90.mmSecuritiesMovementType,
+					SettlementTypeAndAdditionalParameters18.mmSecuritiesMovementType, SettlementTypeAndIdentification22.mmSecuritiesMovementType, SettlementTypeAndAdditionalParameters19.mmSecuritiesMovementType,
+					SecuritiesTradeDetails68.mmSecuritiesMovementType, TransactionDetails97.mmSecuritiesMovementType, TransactionTypeAndAdditionalParameters16.mmSecuritiesMovementType,
+					SecuritiesFinancingTransactionDetails35.mmSecuritiesMovementType, TransactionDetails96.mmSecuritiesMovementType, TransactionDetails95.mmSecuritiesMovementType,
+					TransactionTypeAndAdditionalParameters19.mmSecuritiesMovementType, SecuritiesTradeDetails69.mmSecuritiesMovementType, SecuritiesFinancingTransactionDetails36.mmSecuritiesMovementType,
+					SettlementTypeAndAdditionalParameters20.mmSecuritiesMovementType, TransactionDetails100.mmSecuritiesMovementType, TransactionDetails99.mmSecuritiesMovementType, TransactionDetails98.mmSecuritiesMovementType);
 			elementContext_lazy = () -> SecuritiesSettlement.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SecuritiesMovementType";
 			definition = "Specifies if the movement on a securities account results from a deliver or a receive instruction.";
 			maxOccurs = 1;
@@ -4366,100 +4204,62 @@ public class SecuritiesSettlement extends Settlement {
 	 */
 	public static final MMBusinessAssociationEnd mmSettlementQuantity = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionDetails10.mmSettlementQuantity, com.tools20022.repository.msg.TransactionDetails29.mmSettlementQuantity,
-					com.tools20022.repository.msg.QuantityAndAccount30.mmSettlementQuantity, com.tools20022.repository.msg.TransactionDetails28.mmSettlementQuantity, com.tools20022.repository.msg.TransactionDetails31.mmSettlementQuantity,
-					com.tools20022.repository.msg.TransactionDetails44.mmSettlementQuantity, com.tools20022.repository.msg.QuantityAndAccount33.mmSettlementQuantity,
-					com.tools20022.repository.msg.IntraPositionMovementDetails1.mmRemainingToBeSettledQuantity, com.tools20022.repository.msg.IntraPositionMovementDetails2.mmRemainingToBeSettledQuantity,
-					com.tools20022.repository.msg.IntraPositionMovementDetails5.mmRemainingToBeSettledQuantity, com.tools20022.repository.msg.IntraPositionMovementDetails6.mmRemainingToBeSettledQuantity,
-					com.tools20022.repository.msg.IntraPositionMovementDetails7.mmRemainingToBeSettledQuantity, com.tools20022.repository.msg.IntraPositionMovementDetails8.mmRemainingToBeSettledQuantity,
-					com.tools20022.repository.msg.IntraPositionMovementDetails9.mmRemainingToBeSettledQuantity, com.tools20022.repository.msg.IntraPositionMovementDetails10.mmRemainingToBeSettledQuantity,
-					com.tools20022.repository.msg.QuantityAndAccount6.mmSettledQuantity, com.tools20022.repository.msg.QuantityAndAccount6.mmPreviouslySettledQuantity,
-					com.tools20022.repository.msg.QuantityAndAccount6.mmRemainingToBeSettledQuantity, com.tools20022.repository.msg.QuantityAndAccount11.mmSettledQuantity,
-					com.tools20022.repository.msg.QuantityAndAccount11.mmPreviouslySettledQuantity, com.tools20022.repository.msg.QuantityAndAccount11.mmRemainingToBeSettledQuantity,
-					com.tools20022.repository.msg.QuantityAndAccount18.mmSettledQuantity, com.tools20022.repository.msg.QuantityAndAccount18.mmPreviouslySettledQuantity,
-					com.tools20022.repository.msg.QuantityAndAccount18.mmRemainingToBeSettledQuantity, com.tools20022.repository.msg.QuantityAndAccount19.mmSettledQuantity,
-					com.tools20022.repository.msg.QuantityAndAccount19.mmPreviouslySettledQuantity, com.tools20022.repository.msg.QuantityAndAccount19.mmRemainingToBeSettledQuantity,
-					com.tools20022.repository.msg.QuantityAndAccount1.mmSettlementQuantity, com.tools20022.repository.msg.QuantityAndAccount5.mmSettlementQuantity, com.tools20022.repository.msg.QuantityAndAccount17.mmSettlementQuantity,
-					com.tools20022.repository.msg.QuantityAndAccount24.mmSettlementQuantity, com.tools20022.repository.msg.QuantityAndAccount25.mmSettlementQuantity, com.tools20022.repository.msg.QuantityAndAccount34.mmSettlementQuantity,
-					com.tools20022.repository.msg.QuantityAndAccount2.mmSettledQuantity, com.tools20022.repository.msg.QuantityAndAccount2.mmPreviouslySettledQuantity,
-					com.tools20022.repository.msg.QuantityAndAccount2.mmRemainingToBeSettledQuantity, com.tools20022.repository.msg.QuantityAndAccount12.mmSettledQuantity,
-					com.tools20022.repository.msg.QuantityAndAccount12.mmPreviouslySettledQuantity, com.tools20022.repository.msg.QuantityAndAccount12.mmRemainingToBeSettledQuantity,
-					com.tools20022.repository.msg.QuantityAndAccount15.mmSettledQuantity, com.tools20022.repository.msg.QuantityAndAccount15.mmPreviouslySettledQuantity,
-					com.tools20022.repository.msg.QuantityAndAccount15.mmRemainingToBeSettledQuantity, com.tools20022.repository.msg.QuantityAndAccount20.mmSettledQuantity,
-					com.tools20022.repository.msg.QuantityAndAccount20.mmPreviouslySettledQuantity, com.tools20022.repository.msg.QuantityAndAccount20.mmRemainingToBeSettledQuantity,
-					com.tools20022.repository.msg.QuantityAndAccount28.mmSettledQuantity, com.tools20022.repository.msg.QuantityAndAccount28.mmPreviouslySettledQuantity,
-					com.tools20022.repository.msg.QuantityAndAccount28.mmRemainingToBeSettledQuantity, com.tools20022.repository.msg.QuantityAndAccount37.mmSettledQuantity,
-					com.tools20022.repository.msg.QuantityAndAccount37.mmPreviouslySettledQuantity, com.tools20022.repository.msg.QuantityAndAccount37.mmRemainingToBeSettledQuantity,
-					com.tools20022.repository.msg.TransactionDetails5.mmSettlementQuantity, com.tools20022.repository.msg.TransactionDetails9.mmSettlementQuantity, com.tools20022.repository.msg.TransactionDetails22.mmSettlementQuantity,
-					com.tools20022.repository.msg.TransactionDetails23.mmSettlementQuantity, com.tools20022.repository.msg.TransactionDetails36.mmSettlementQuantity, com.tools20022.repository.msg.TransactionDetails47.mmSettlementQuantity,
-					com.tools20022.repository.msg.TransactionDetails53.mmSettlementQuantity, com.tools20022.repository.msg.TransactionDetails58.mmSettlementQuantity, com.tools20022.repository.msg.TransactionDetails7.mmPostingQuantity,
-					com.tools20022.repository.msg.TransactionDetails8.mmPostingQuantity, com.tools20022.repository.msg.TransactionDetails16.mmPostingQuantity, com.tools20022.repository.msg.TransactionDetails17.mmPostingQuantity,
-					com.tools20022.repository.msg.TransactionDetails26.mmPostingQuantity, com.tools20022.repository.msg.TransactionDetails25.mmPostingQuantity, com.tools20022.repository.msg.TransactionDetails27.mmPostingQuantity,
-					com.tools20022.repository.msg.TransactionDetails33.mmPostingQuantity, com.tools20022.repository.msg.TransactionDetails39.mmPostingQuantity, com.tools20022.repository.msg.TransactionDetails50.mmPostingQuantity,
-					com.tools20022.repository.msg.TransactionDetails56.mmPostingQuantity, com.tools20022.repository.msg.TransactionDetails59.mmPostingQuantity, com.tools20022.repository.msg.TransactionDetails6.mmPostingQuantity,
-					com.tools20022.repository.msg.TransactionDetails18.mmPostingQuantity, com.tools20022.repository.msg.TransactionDetails24.mmPostingQuantity, com.tools20022.repository.msg.TransactionDetails34.mmPostingQuantity,
-					com.tools20022.repository.msg.TransactionDetails37.mmPostingQuantity, com.tools20022.repository.msg.TransactionDetails48.mmPostingQuantity, com.tools20022.repository.msg.TransactionDetails57.mmPostingQuantity,
-					com.tools20022.repository.msg.TransactionDetails60.mmPostingQuantity, com.tools20022.repository.msg.Quantity5.mmSettlementQuantity, com.tools20022.repository.msg.QuantityAndAccount7.mmSettlementQuantity,
-					com.tools20022.repository.msg.QuantityAndAccount16.mmSettlementQuantity, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails2.mmSettlementQuantity,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails8.mmSettlementQuantity, com.tools20022.repository.msg.QuantityAndAccount3.mmSettlementQuantity,
-					com.tools20022.repository.msg.QuantityAndAccount13.mmSettlementQuantity, com.tools20022.repository.msg.QuantityAndAccount8.mmSettlementQuantity, com.tools20022.repository.msg.QuantityAndAccount14.mmSettlementQuantity,
-					com.tools20022.repository.msg.TransactionDetails4.mmSettlementQuantity, com.tools20022.repository.msg.TransactionDetails30.mmSettlementQuantity, com.tools20022.repository.msg.QuantityAndAccount10.mmSettlementQuantity,
-					com.tools20022.repository.msg.QuantityAndAccount21.mmSettlementQuantity, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails6.mmSettlementQuantity,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails10.mmSettlementQuantity, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails17.mmSettlementQuantity,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails18.mmSettlementQuantity, com.tools20022.repository.msg.TransactionDetails20.mmSettlementQuantity,
-					com.tools20022.repository.msg.QuantityAndAccount4.mmSettlementQuantity, com.tools20022.repository.msg.QuantityAndAccount22.mmSettlementQuantity, com.tools20022.repository.msg.QuantityAndAccount27.mmSettlementQuantity,
-					com.tools20022.repository.msg.QuantityAndAccount36.mmSettlementQuantity, com.tools20022.repository.msg.QuantityAndAccount9.mmSettlementQuantity, com.tools20022.repository.msg.QuantityAndAccount23.mmSettlementQuantity,
-					com.tools20022.repository.msg.QuantityAndAccount26.mmSettlementQuantity, com.tools20022.repository.msg.QuantityAndAccount35.mmSettlementQuantity, com.tools20022.repository.msg.TransactionDetails40.mmSettlementQuantity,
-					com.tools20022.repository.msg.TransactionDetails42.mmSettlementQuantity, com.tools20022.repository.msg.TransactionDetails46.mmSettlementQuantity, com.tools20022.repository.msg.TransactionDetails32.mmSettlementQuantity,
-					com.tools20022.repository.msg.TransactionDetails14.mmSettlementQuantity, com.tools20022.repository.msg.TransactionDetails35.mmSettlementQuantity, com.tools20022.repository.msg.Quantity6.mmSettlementQuantity,
-					com.tools20022.repository.msg.Quantity7.mmSettlementQuantity, com.tools20022.repository.msg.Quantity8.mmSettlementQuantity, com.tools20022.repository.msg.TransactionDetails45.mmSettlementQuantity,
-					com.tools20022.repository.msg.SettlementObligation1.mmRemainingQuantityToBeSettled, com.tools20022.repository.msg.IntraPositionMovementDetails3.mmRemainingToBeSettledQuantity,
-					com.tools20022.repository.msg.IntraPositionMovementDetails4.mmRemainingToBeSettledQuantity, com.tools20022.repository.msg.TransactionDetails51.mmSettlementQuantity,
-					com.tools20022.repository.msg.TransactionDetails51.mmSettledQuantity, com.tools20022.repository.msg.TransactionDetails51.mmPreviouslySettledQuantity,
-					com.tools20022.repository.msg.TransactionDetails51.mmRemainingToBeSettledQuantity, com.tools20022.repository.msg.TransactionDetails52.mmSettlementQuantity,
-					com.tools20022.repository.msg.TransactionDetails61.mmSettlementQuantity, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails21.mmSettlementQuantity,
-					com.tools20022.repository.msg.TransactionDetails62.mmPostingQuantity, com.tools20022.repository.msg.TransactionDetails63.mmPostingQuantity,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails22.mmSettlementQuantity, com.tools20022.repository.msg.TransactionDetails66.mmSettlementQuantity,
-					com.tools20022.repository.msg.TransactionDetails67.mmPostingQuantity, com.tools20022.repository.msg.TransactionDetails68.mmPostingQuantity,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails24.mmSettlementQuantity, com.tools20022.repository.msg.TransactionDetails70.mmSettlementQuantity,
-					com.tools20022.repository.msg.TransactionDetails69.mmPostingQuantity, com.tools20022.repository.msg.TransactionDetails71.mmSettlementQuantity,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails25.mmSettlementQuantity, com.tools20022.repository.msg.TransactionDetails72.mmPostingQuantity,
-					com.tools20022.repository.msg.QuantityAndAccount39.mmSettlementQuantity, com.tools20022.repository.msg.QuantityAndAccount41.mmSettledQuantity,
-					com.tools20022.repository.msg.QuantityAndAccount41.mmPreviouslySettledQuantity, com.tools20022.repository.msg.QuantityAndAccount41.mmRemainingToBeSettledQuantity,
-					com.tools20022.repository.msg.QuantityAndAccount40.mmSettledQuantity, com.tools20022.repository.msg.QuantityAndAccount40.mmPreviouslySettledQuantity,
-					com.tools20022.repository.msg.QuantityAndAccount40.mmRemainingToBeSettledQuantity, com.tools20022.repository.msg.TransactionDetails81.mmSettlementQuantity,
-					com.tools20022.repository.msg.QuantityAndAccount42.mmSettlementQuantity, com.tools20022.repository.msg.TransactionDetails74.mmSettlementQuantity, com.tools20022.repository.msg.TransactionDetails82.mmSettlementQuantity,
-					com.tools20022.repository.msg.QuantityAndAccount38.mmSettlementQuantity, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails26.mmSettlementQuantity,
-					com.tools20022.repository.msg.TransactionDetails79.mmSettlementQuantity, com.tools20022.repository.msg.TransactionDetails80.mmSettlementQuantity, com.tools20022.repository.msg.QuantityAndAccount43.mmSettlementQuantity,
-					com.tools20022.repository.msg.TransactionDetails75.mmPostingQuantity, com.tools20022.repository.msg.TransactionDetails78.mmPostingQuantity, com.tools20022.repository.msg.Quantity11.mmSettlementQuantity,
-					com.tools20022.repository.msg.QuantityAndAccount45.mmSettlementQuantity, com.tools20022.repository.msg.IntraPositionMovementDetails11.mmRemainingToBeSettledQuantity,
-					com.tools20022.repository.msg.QuantityAndAccount47.mmSettlementQuantity, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails33.mmSettlementQuantity,
-					com.tools20022.repository.msg.QuantityAndAccount48.mmSettlementQuantity, com.tools20022.repository.msg.TransactionDetails88.mmSettlementQuantity, com.tools20022.repository.msg.QuantityAndAccount46.mmSettledQuantity,
-					com.tools20022.repository.msg.QuantityAndAccount46.mmPreviouslySettledQuantity, com.tools20022.repository.msg.QuantityAndAccount46.mmRemainingToBeSettledQuantity,
-					com.tools20022.repository.msg.TransactionDetails92.mmSettlementQuantity, com.tools20022.repository.msg.TransactionDetails84.mmSettlementQuantity, com.tools20022.repository.msg.TransactionDetails83.mmSettlementQuantity,
-					com.tools20022.repository.msg.QuantityAndAccount51.mmSettledQuantity, com.tools20022.repository.msg.QuantityAndAccount51.mmPreviouslySettledQuantity,
-					com.tools20022.repository.msg.QuantityAndAccount51.mmRemainingToBeSettledQuantity, com.tools20022.repository.msg.TransactionDetails87.mmSettlementQuantity,
-					com.tools20022.repository.msg.QuantityAndAccount49.mmSettlementQuantity, com.tools20022.repository.msg.Quantity12.mmSettlementQuantity, com.tools20022.repository.msg.TransactionDetails91.mmPostingQuantity,
-					com.tools20022.repository.msg.QuantityAndAccount50.mmSettlementQuantity, com.tools20022.repository.msg.TransactionDetails90.mmPostingQuantity, com.tools20022.repository.msg.QuantityAndAccount55.mmSettlementQuantity,
-					com.tools20022.repository.msg.IntraPositionMovementDetails12.mmRemainingToBeSettledQuantity, com.tools20022.repository.msg.TransactionDetails97.mmSettlementQuantity,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails35.mmSettlementQuantity, com.tools20022.repository.msg.TransactionDetails96.mmPostingQuantity,
-					com.tools20022.repository.msg.IntraPositionMovementDetails13.mmRemainingToBeSettledQuantity, com.tools20022.repository.msg.TransactionDetails95.mmPostingQuantity,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails36.mmSettlementQuantity, com.tools20022.repository.msg.IntraPositionMovementDetails14.mmRemainingToBeSettledQuantity,
-					com.tools20022.repository.msg.TransactionDetails100.mmSettlementQuantity, com.tools20022.repository.msg.TransactionDetails99.mmPostingQuantity, com.tools20022.repository.msg.TransactionDetails98.mmPostingQuantity,
-					com.tools20022.repository.msg.QuantityAndAccount57.mmSettledQuantity, com.tools20022.repository.msg.QuantityAndAccount57.mmPreviouslySettledQuantity,
-					com.tools20022.repository.msg.QuantityAndAccount57.mmRemainingToBeSettledQuantity, com.tools20022.repository.msg.QuantityAndAccount58.mmSettlementQuantity,
-					com.tools20022.repository.msg.QuantityAndAccount56.mmSettlementQuantity, com.tools20022.repository.msg.QuantityAndAccount61.mmSettlementQuantity, com.tools20022.repository.msg.QuantityAndAccount62.mmSettledQuantity,
-					com.tools20022.repository.msg.QuantityAndAccount62.mmPreviouslySettledQuantity, com.tools20022.repository.msg.QuantityAndAccount62.mmRemainingToBeSettledQuantity,
-					com.tools20022.repository.msg.QuantityAndAccount60.mmSettlementQuantity);
+			derivation_lazy = () -> Arrays.asList(TransactionDetails10.mmSettlementQuantity, TransactionDetails29.mmSettlementQuantity, QuantityAndAccount30.mmSettlementQuantity, TransactionDetails28.mmSettlementQuantity,
+					TransactionDetails31.mmSettlementQuantity, TransactionDetails44.mmSettlementQuantity, QuantityAndAccount33.mmSettlementQuantity, IntraPositionMovementDetails1.mmRemainingToBeSettledQuantity,
+					IntraPositionMovementDetails2.mmRemainingToBeSettledQuantity, IntraPositionMovementDetails5.mmRemainingToBeSettledQuantity, IntraPositionMovementDetails6.mmRemainingToBeSettledQuantity,
+					IntraPositionMovementDetails7.mmRemainingToBeSettledQuantity, IntraPositionMovementDetails8.mmRemainingToBeSettledQuantity, IntraPositionMovementDetails9.mmRemainingToBeSettledQuantity,
+					IntraPositionMovementDetails10.mmRemainingToBeSettledQuantity, QuantityAndAccount6.mmSettledQuantity, QuantityAndAccount6.mmPreviouslySettledQuantity, QuantityAndAccount6.mmRemainingToBeSettledQuantity,
+					QuantityAndAccount11.mmSettledQuantity, QuantityAndAccount11.mmPreviouslySettledQuantity, QuantityAndAccount11.mmRemainingToBeSettledQuantity, QuantityAndAccount18.mmSettledQuantity,
+					QuantityAndAccount18.mmPreviouslySettledQuantity, QuantityAndAccount18.mmRemainingToBeSettledQuantity, QuantityAndAccount19.mmSettledQuantity, QuantityAndAccount19.mmPreviouslySettledQuantity,
+					QuantityAndAccount19.mmRemainingToBeSettledQuantity, QuantityAndAccount1.mmSettlementQuantity, QuantityAndAccount5.mmSettlementQuantity, QuantityAndAccount17.mmSettlementQuantity,
+					QuantityAndAccount24.mmSettlementQuantity, QuantityAndAccount25.mmSettlementQuantity, QuantityAndAccount34.mmSettlementQuantity, QuantityAndAccount2.mmSettledQuantity, QuantityAndAccount2.mmPreviouslySettledQuantity,
+					QuantityAndAccount2.mmRemainingToBeSettledQuantity, QuantityAndAccount12.mmSettledQuantity, QuantityAndAccount12.mmPreviouslySettledQuantity, QuantityAndAccount12.mmRemainingToBeSettledQuantity,
+					QuantityAndAccount15.mmSettledQuantity, QuantityAndAccount15.mmPreviouslySettledQuantity, QuantityAndAccount15.mmRemainingToBeSettledQuantity, QuantityAndAccount20.mmSettledQuantity,
+					QuantityAndAccount20.mmPreviouslySettledQuantity, QuantityAndAccount20.mmRemainingToBeSettledQuantity, QuantityAndAccount28.mmSettledQuantity, QuantityAndAccount28.mmPreviouslySettledQuantity,
+					QuantityAndAccount28.mmRemainingToBeSettledQuantity, QuantityAndAccount37.mmSettledQuantity, QuantityAndAccount37.mmPreviouslySettledQuantity, QuantityAndAccount37.mmRemainingToBeSettledQuantity,
+					TransactionDetails5.mmSettlementQuantity, TransactionDetails9.mmSettlementQuantity, TransactionDetails22.mmSettlementQuantity, TransactionDetails23.mmSettlementQuantity, TransactionDetails36.mmSettlementQuantity,
+					TransactionDetails47.mmSettlementQuantity, TransactionDetails53.mmSettlementQuantity, TransactionDetails58.mmSettlementQuantity, TransactionDetails7.mmPostingQuantity, TransactionDetails8.mmPostingQuantity,
+					TransactionDetails16.mmPostingQuantity, TransactionDetails17.mmPostingQuantity, TransactionDetails26.mmPostingQuantity, TransactionDetails25.mmPostingQuantity, TransactionDetails27.mmPostingQuantity,
+					TransactionDetails33.mmPostingQuantity, TransactionDetails39.mmPostingQuantity, TransactionDetails50.mmPostingQuantity, TransactionDetails56.mmPostingQuantity, TransactionDetails59.mmPostingQuantity,
+					TransactionDetails6.mmPostingQuantity, TransactionDetails18.mmPostingQuantity, TransactionDetails24.mmPostingQuantity, TransactionDetails34.mmPostingQuantity, TransactionDetails37.mmPostingQuantity,
+					TransactionDetails48.mmPostingQuantity, TransactionDetails57.mmPostingQuantity, TransactionDetails60.mmPostingQuantity, Quantity5.mmSettlementQuantity, QuantityAndAccount7.mmSettlementQuantity,
+					QuantityAndAccount16.mmSettlementQuantity, SecuritiesFinancingTransactionDetails2.mmSettlementQuantity, SecuritiesFinancingTransactionDetails8.mmSettlementQuantity, QuantityAndAccount3.mmSettlementQuantity,
+					QuantityAndAccount13.mmSettlementQuantity, QuantityAndAccount8.mmSettlementQuantity, QuantityAndAccount14.mmSettlementQuantity, TransactionDetails4.mmSettlementQuantity, TransactionDetails30.mmSettlementQuantity,
+					QuantityAndAccount10.mmSettlementQuantity, QuantityAndAccount21.mmSettlementQuantity, SecuritiesFinancingTransactionDetails6.mmSettlementQuantity, SecuritiesFinancingTransactionDetails10.mmSettlementQuantity,
+					SecuritiesFinancingTransactionDetails17.mmSettlementQuantity, SecuritiesFinancingTransactionDetails18.mmSettlementQuantity, TransactionDetails20.mmSettlementQuantity, QuantityAndAccount4.mmSettlementQuantity,
+					QuantityAndAccount22.mmSettlementQuantity, QuantityAndAccount27.mmSettlementQuantity, QuantityAndAccount36.mmSettlementQuantity, QuantityAndAccount9.mmSettlementQuantity, QuantityAndAccount23.mmSettlementQuantity,
+					QuantityAndAccount26.mmSettlementQuantity, QuantityAndAccount35.mmSettlementQuantity, TransactionDetails40.mmSettlementQuantity, TransactionDetails42.mmSettlementQuantity, TransactionDetails46.mmSettlementQuantity,
+					TransactionDetails32.mmSettlementQuantity, TransactionDetails14.mmSettlementQuantity, TransactionDetails35.mmSettlementQuantity, Quantity6.mmSettlementQuantity, Quantity7.mmSettlementQuantity,
+					Quantity8.mmSettlementQuantity, TransactionDetails45.mmSettlementQuantity, SettlementObligation1.mmRemainingQuantityToBeSettled, IntraPositionMovementDetails3.mmRemainingToBeSettledQuantity,
+					IntraPositionMovementDetails4.mmRemainingToBeSettledQuantity, TransactionDetails51.mmSettlementQuantity, TransactionDetails51.mmSettledQuantity, TransactionDetails51.mmPreviouslySettledQuantity,
+					TransactionDetails51.mmRemainingToBeSettledQuantity, TransactionDetails52.mmSettlementQuantity, TransactionDetails61.mmSettlementQuantity, SecuritiesFinancingTransactionDetails21.mmSettlementQuantity,
+					TransactionDetails62.mmPostingQuantity, TransactionDetails63.mmPostingQuantity, SecuritiesFinancingTransactionDetails22.mmSettlementQuantity, TransactionDetails66.mmSettlementQuantity,
+					TransactionDetails67.mmPostingQuantity, TransactionDetails68.mmPostingQuantity, SecuritiesFinancingTransactionDetails24.mmSettlementQuantity, TransactionDetails70.mmSettlementQuantity,
+					TransactionDetails69.mmPostingQuantity, TransactionDetails71.mmSettlementQuantity, SecuritiesFinancingTransactionDetails25.mmSettlementQuantity, TransactionDetails72.mmPostingQuantity,
+					QuantityAndAccount39.mmSettlementQuantity, QuantityAndAccount41.mmSettledQuantity, QuantityAndAccount41.mmPreviouslySettledQuantity, QuantityAndAccount41.mmRemainingToBeSettledQuantity,
+					QuantityAndAccount40.mmSettledQuantity, QuantityAndAccount40.mmPreviouslySettledQuantity, QuantityAndAccount40.mmRemainingToBeSettledQuantity, TransactionDetails81.mmSettlementQuantity,
+					QuantityAndAccount42.mmSettlementQuantity, TransactionDetails74.mmSettlementQuantity, TransactionDetails82.mmSettlementQuantity, QuantityAndAccount38.mmSettlementQuantity,
+					SecuritiesFinancingTransactionDetails26.mmSettlementQuantity, TransactionDetails79.mmSettlementQuantity, TransactionDetails80.mmSettlementQuantity, QuantityAndAccount43.mmSettlementQuantity,
+					TransactionDetails75.mmPostingQuantity, TransactionDetails78.mmPostingQuantity, Quantity11.mmSettlementQuantity, QuantityAndAccount45.mmSettlementQuantity, IntraPositionMovementDetails11.mmRemainingToBeSettledQuantity,
+					QuantityAndAccount47.mmSettlementQuantity, SecuritiesFinancingTransactionDetails33.mmSettlementQuantity, QuantityAndAccount48.mmSettlementQuantity, TransactionDetails88.mmSettlementQuantity,
+					QuantityAndAccount46.mmSettledQuantity, QuantityAndAccount46.mmPreviouslySettledQuantity, QuantityAndAccount46.mmRemainingToBeSettledQuantity, TransactionDetails92.mmSettlementQuantity,
+					TransactionDetails84.mmSettlementQuantity, TransactionDetails83.mmSettlementQuantity, QuantityAndAccount51.mmSettledQuantity, QuantityAndAccount51.mmPreviouslySettledQuantity,
+					QuantityAndAccount51.mmRemainingToBeSettledQuantity, TransactionDetails87.mmSettlementQuantity, QuantityAndAccount49.mmSettlementQuantity, Quantity12.mmSettlementQuantity, TransactionDetails91.mmPostingQuantity,
+					QuantityAndAccount50.mmSettlementQuantity, TransactionDetails90.mmPostingQuantity, QuantityAndAccount55.mmSettlementQuantity, IntraPositionMovementDetails12.mmRemainingToBeSettledQuantity,
+					TransactionDetails97.mmSettlementQuantity, SecuritiesFinancingTransactionDetails35.mmSettlementQuantity, TransactionDetails96.mmPostingQuantity, IntraPositionMovementDetails13.mmRemainingToBeSettledQuantity,
+					TransactionDetails95.mmPostingQuantity, SecuritiesFinancingTransactionDetails36.mmSettlementQuantity, IntraPositionMovementDetails14.mmRemainingToBeSettledQuantity, TransactionDetails100.mmSettlementQuantity,
+					TransactionDetails99.mmPostingQuantity, TransactionDetails98.mmPostingQuantity, QuantityAndAccount57.mmSettledQuantity, QuantityAndAccount57.mmPreviouslySettledQuantity,
+					QuantityAndAccount57.mmRemainingToBeSettledQuantity, QuantityAndAccount58.mmSettlementQuantity, QuantityAndAccount56.mmSettlementQuantity, QuantityAndAccount61.mmSettlementQuantity,
+					QuantityAndAccount62.mmSettledQuantity, QuantityAndAccount62.mmPreviouslySettledQuantity, QuantityAndAccount62.mmRemainingToBeSettledQuantity, QuantityAndAccount60.mmSettlementQuantity);
 			elementContext_lazy = () -> SecuritiesSettlement.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SettlementQuantity";
 			definition = "Total quantity of securities to be settled.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmSecuritiesSettlement;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmObject();
 		}
 	};
@@ -4503,13 +4303,13 @@ public class SecuritiesSettlement extends Settlement {
 		{
 			elementContext_lazy = () -> SecuritiesSettlement.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SecuritiesTradeExecution";
 			definition = "Specifies the trade which originates the settlement process.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeExecution.mmSecuritiesSettlement;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeExecution.mmObject();
 		}
 	};
@@ -4594,15 +4394,13 @@ public class SecuritiesSettlement extends Settlement {
 	 */
 	public static final MMBusinessAttribute mmCurrencyToBuy = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CurrencyToBuyOrSell1Choice.mmCurrencyToBuy, com.tools20022.repository.msg.CorporateActionOption5.mmCurrencyToBuy,
-					com.tools20022.repository.msg.CorporateActionOption13.mmCurrencyToBuy, com.tools20022.repository.msg.CorporateActionOption25.mmCurrencyToBuy, com.tools20022.repository.msg.CorporateActionOption30.mmCurrencyToBuy,
-					com.tools20022.repository.msg.CorporateActionOption38.mmCurrencyToBuy, com.tools20022.repository.msg.CorporateActionOption47.mmCurrencyToBuy, com.tools20022.repository.msg.CorporateActionOption57.mmCurrencyToBuy,
-					com.tools20022.repository.msg.CorporateActionOption58.mmCurrencyToBuy, com.tools20022.repository.msg.CorporateActionOption103.mmCurrencyToBuy, com.tools20022.repository.msg.CorporateActionOption107.mmCurrencyToBuy,
-					com.tools20022.repository.msg.CorporateActionOption118.mmCurrencyToBuy, com.tools20022.repository.msg.CorporateActionOption123.mmCurrencyToBuy, com.tools20022.repository.msg.CorporateActionOption131.mmCurrencyToBuy,
-					com.tools20022.repository.msg.CorporateActionOption134.mmCurrencyToBuy);
+			derivation_lazy = () -> Arrays.asList(CurrencyToBuyOrSell1Choice.mmCurrencyToBuy, CorporateActionOption5.mmCurrencyToBuy, CorporateActionOption13.mmCurrencyToBuy, CorporateActionOption25.mmCurrencyToBuy,
+					CorporateActionOption30.mmCurrencyToBuy, CorporateActionOption38.mmCurrencyToBuy, CorporateActionOption47.mmCurrencyToBuy, CorporateActionOption57.mmCurrencyToBuy, CorporateActionOption58.mmCurrencyToBuy,
+					CorporateActionOption103.mmCurrencyToBuy, CorporateActionOption107.mmCurrencyToBuy, CorporateActionOption118.mmCurrencyToBuy, CorporateActionOption123.mmCurrencyToBuy, CorporateActionOption131.mmCurrencyToBuy,
+					CorporateActionOption134.mmCurrencyToBuy);
 			elementContext_lazy = () -> SecuritiesSettlement.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CurrencyToBuy";
 			definition = "Account servicer is instructed to buy the indicated currency after the receipt of cash proceeds.";
 			maxOccurs = 1;
@@ -4691,15 +4489,13 @@ public class SecuritiesSettlement extends Settlement {
 	 */
 	public static final MMBusinessAttribute mmCurrencyToSell = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CurrencyToBuyOrSell1Choice.mmCurrencyToSell, com.tools20022.repository.msg.CorporateActionOption5.mmCurrencyToSell,
-					com.tools20022.repository.msg.CorporateActionOption13.mmCurrencyToSell, com.tools20022.repository.msg.CorporateActionOption25.mmCurrencyToSell, com.tools20022.repository.msg.CorporateActionOption30.mmCurrencyToSell,
-					com.tools20022.repository.msg.CorporateActionOption38.mmCurrencyToSell, com.tools20022.repository.msg.CorporateActionOption47.mmCurrencyToSell, com.tools20022.repository.msg.CorporateActionOption57.mmCurrencyToSell,
-					com.tools20022.repository.msg.CorporateActionOption58.mmCurrencyToSell, com.tools20022.repository.msg.CorporateActionOption103.mmCurrencyToSell, com.tools20022.repository.msg.CorporateActionOption107.mmCurrencyToSell,
-					com.tools20022.repository.msg.CorporateActionOption118.mmCurrencyToSell, com.tools20022.repository.msg.CorporateActionOption123.mmCurrencyToSell, com.tools20022.repository.msg.CorporateActionOption131.mmCurrencyToSell,
-					com.tools20022.repository.msg.CorporateActionOption134.mmCurrencyToSell);
+			derivation_lazy = () -> Arrays.asList(CurrencyToBuyOrSell1Choice.mmCurrencyToSell, CorporateActionOption5.mmCurrencyToSell, CorporateActionOption13.mmCurrencyToSell, CorporateActionOption25.mmCurrencyToSell,
+					CorporateActionOption30.mmCurrencyToSell, CorporateActionOption38.mmCurrencyToSell, CorporateActionOption47.mmCurrencyToSell, CorporateActionOption57.mmCurrencyToSell, CorporateActionOption58.mmCurrencyToSell,
+					CorporateActionOption103.mmCurrencyToSell, CorporateActionOption107.mmCurrencyToSell, CorporateActionOption118.mmCurrencyToSell, CorporateActionOption123.mmCurrencyToSell, CorporateActionOption131.mmCurrencyToSell,
+					CorporateActionOption134.mmCurrencyToSell);
 			elementContext_lazy = () -> SecuritiesSettlement.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CurrencyToSell";
 			definition = "Account servicer is instructed to sell a currency in order to obtain the currency needed to fund the transaction.";
 			maxOccurs = 1;
@@ -4896,27 +4692,20 @@ public class SecuritiesSettlement extends Settlement {
 	 */
 	public static final MMBusinessAttribute mmDenominationChoice = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.QuantityAndAccount29.mmDenominationChoice, com.tools20022.repository.msg.QuantityAndAccount30.mmDenominationChoice,
-					com.tools20022.repository.msg.QuantityAndAccount32.mmDenominationChoice, com.tools20022.repository.msg.QuantityAndAccount33.mmDenominationChoice, com.tools20022.repository.msg.QuantityAndAccount1.mmDenominationChoice,
-					com.tools20022.repository.msg.QuantityAndAccount5.mmDenominationChoice, com.tools20022.repository.msg.QuantityAndAccount17.mmDenominationChoice, com.tools20022.repository.msg.QuantityAndAccount24.mmDenominationChoice,
-					com.tools20022.repository.msg.QuantityAndAccount25.mmDenominationChoice, com.tools20022.repository.msg.QuantityAndAccount34.mmDenominationChoice, com.tools20022.repository.msg.QuantityAndAccount2.mmDenominationChoice,
-					com.tools20022.repository.msg.QuantityAndAccount12.mmDenominationChoice, com.tools20022.repository.msg.QuantityAndAccount15.mmDenominationChoice, com.tools20022.repository.msg.QuantityAndAccount20.mmDenominationChoice,
-					com.tools20022.repository.msg.QuantityAndAccount28.mmDenominationChoice, com.tools20022.repository.msg.QuantityAndAccount37.mmDenominationChoice, com.tools20022.repository.msg.Quantity5.mmDenominationChoice,
-					com.tools20022.repository.msg.QuantityAndAccount3.mmDenominationChoice, com.tools20022.repository.msg.QuantityAndAccount13.mmDenominationChoice, com.tools20022.repository.msg.QuantityAndAccount8.mmDenominationChoice,
-					com.tools20022.repository.msg.QuantityAndAccount14.mmDenominationChoice, com.tools20022.repository.msg.QuantityAndAccount4.mmDenominationChoice, com.tools20022.repository.msg.QuantityAndAccount22.mmDenominationChoice,
-					com.tools20022.repository.msg.QuantityAndAccount27.mmDenominationChoice, com.tools20022.repository.msg.QuantityAndAccount36.mmDenominationChoice, com.tools20022.repository.msg.QuantityAndAccount9.mmDenominationChoice,
-					com.tools20022.repository.msg.QuantityAndAccount23.mmDenominationChoice, com.tools20022.repository.msg.QuantityAndAccount26.mmDenominationChoice, com.tools20022.repository.msg.QuantityAndAccount35.mmDenominationChoice,
-					com.tools20022.repository.msg.Quantity6.mmDenominationChoice, com.tools20022.repository.msg.Quantity7.mmDenominationChoice, com.tools20022.repository.msg.Quantity8.mmDenominationChoice,
-					com.tools20022.repository.msg.QuantityAndAccount39.mmDenominationChoice, com.tools20022.repository.msg.QuantityAndAccount41.mmDenominationChoice, com.tools20022.repository.msg.QuantityAndAccount42.mmDenominationChoice,
-					com.tools20022.repository.msg.QuantityAndAccount43.mmDenominationChoice, com.tools20022.repository.msg.Quantity11.mmDenominationChoice, com.tools20022.repository.msg.QuantityAndAccount45.mmDenominationChoice,
-					com.tools20022.repository.msg.QuantityAndAccount44.mmDenominationChoice, com.tools20022.repository.msg.QuantityAndAccount47.mmDenominationChoice, com.tools20022.repository.msg.QuantityAndAccount51.mmDenominationChoice,
-					com.tools20022.repository.msg.QuantityAndAccount49.mmDenominationChoice, com.tools20022.repository.msg.Quantity12.mmDenominationChoice, com.tools20022.repository.msg.QuantityAndAccount50.mmDenominationChoice,
-					com.tools20022.repository.msg.QuantityAndAccount55.mmDenominationChoice, com.tools20022.repository.msg.QuantityAndAccount54.mmDenominationChoice, com.tools20022.repository.msg.QuantityAndAccount57.mmDenominationChoice,
-					com.tools20022.repository.msg.QuantityAndAccount58.mmDenominationChoice, com.tools20022.repository.msg.QuantityAndAccount56.mmDenominationChoice, com.tools20022.repository.msg.QuantityAndAccount59.mmDenominationChoice,
-					com.tools20022.repository.msg.QuantityAndAccount60.mmDenominationChoice);
+			derivation_lazy = () -> Arrays.asList(QuantityAndAccount29.mmDenominationChoice, QuantityAndAccount30.mmDenominationChoice, QuantityAndAccount32.mmDenominationChoice, QuantityAndAccount33.mmDenominationChoice,
+					QuantityAndAccount1.mmDenominationChoice, QuantityAndAccount5.mmDenominationChoice, QuantityAndAccount17.mmDenominationChoice, QuantityAndAccount24.mmDenominationChoice, QuantityAndAccount25.mmDenominationChoice,
+					QuantityAndAccount34.mmDenominationChoice, QuantityAndAccount2.mmDenominationChoice, QuantityAndAccount12.mmDenominationChoice, QuantityAndAccount15.mmDenominationChoice, QuantityAndAccount20.mmDenominationChoice,
+					QuantityAndAccount28.mmDenominationChoice, QuantityAndAccount37.mmDenominationChoice, Quantity5.mmDenominationChoice, QuantityAndAccount3.mmDenominationChoice, QuantityAndAccount13.mmDenominationChoice,
+					QuantityAndAccount8.mmDenominationChoice, QuantityAndAccount14.mmDenominationChoice, QuantityAndAccount4.mmDenominationChoice, QuantityAndAccount22.mmDenominationChoice, QuantityAndAccount27.mmDenominationChoice,
+					QuantityAndAccount36.mmDenominationChoice, QuantityAndAccount9.mmDenominationChoice, QuantityAndAccount23.mmDenominationChoice, QuantityAndAccount26.mmDenominationChoice, QuantityAndAccount35.mmDenominationChoice,
+					Quantity6.mmDenominationChoice, Quantity7.mmDenominationChoice, Quantity8.mmDenominationChoice, QuantityAndAccount39.mmDenominationChoice, QuantityAndAccount41.mmDenominationChoice,
+					QuantityAndAccount42.mmDenominationChoice, QuantityAndAccount43.mmDenominationChoice, Quantity11.mmDenominationChoice, QuantityAndAccount45.mmDenominationChoice, QuantityAndAccount44.mmDenominationChoice,
+					QuantityAndAccount47.mmDenominationChoice, QuantityAndAccount51.mmDenominationChoice, QuantityAndAccount49.mmDenominationChoice, Quantity12.mmDenominationChoice, QuantityAndAccount50.mmDenominationChoice,
+					QuantityAndAccount55.mmDenominationChoice, QuantityAndAccount54.mmDenominationChoice, QuantityAndAccount57.mmDenominationChoice, QuantityAndAccount58.mmDenominationChoice, QuantityAndAccount56.mmDenominationChoice,
+					QuantityAndAccount59.mmDenominationChoice, QuantityAndAccount60.mmDenominationChoice);
 			elementContext_lazy = () -> SecuritiesSettlement.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DenominationChoice";
 			definition = "Denomination (stated value found on financial instruments) of the security to be received or delivered.";
 			maxOccurs = 1;
@@ -5768,144 +5557,78 @@ public class SecuritiesSettlement extends Settlement {
 	 */
 	public static final MMBusinessAttribute mmSettlementTransactionCondition = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SettlementTransactionCondition1Choice.mmCode, com.tools20022.repository.choice.SettlementTransactionCondition1Choice.mmProprietary,
-					com.tools20022.repository.choice.SettlementTransactionCondition6Choice.mmCode, com.tools20022.repository.choice.SettlementTransactionCondition6Choice.mmProprietary,
-					com.tools20022.repository.choice.SettlementTransactionCondition12Choice.mmCode, com.tools20022.repository.choice.SettlementTransactionCondition12Choice.mmProprietary,
-					com.tools20022.repository.msg.SettlementDetails50.mmSettlementTransactionCondition, com.tools20022.repository.choice.SettlementTransactionCondition14Choice.mmCode,
-					com.tools20022.repository.choice.SettlementTransactionCondition14Choice.mmProprietary, com.tools20022.repository.msg.SettlementDetails51.mmSettlementTransactionCondition,
-					com.tools20022.repository.msg.SettlementDetails9.mmSettlementTransactionCondition, com.tools20022.repository.choice.SettlementTransactionCondition3Choice.mmCode,
-					com.tools20022.repository.choice.SettlementTransactionCondition3Choice.mmProprietary, com.tools20022.repository.msg.SettlementDetails17.mmSettlementTransactionCondition,
-					com.tools20022.repository.choice.SettlementTransactionCondition7Choice.mmCode, com.tools20022.repository.choice.SettlementTransactionCondition7Choice.mmProprietary,
-					com.tools20022.repository.msg.SettlementDetails30.mmSettlementTransactionCondition, com.tools20022.repository.choice.SettlementTransactionCondition8Choice.mmCode,
-					com.tools20022.repository.choice.SettlementTransactionCondition8Choice.mmProprietary, com.tools20022.repository.msg.SettlementDetails32.mmSettlementTransactionCondition,
-					com.tools20022.repository.msg.SettlementDetails60.mmSettlementTransactionCondition, com.tools20022.repository.msg.SettlementDetails60.mmPartialSettlementIndicator,
-					com.tools20022.repository.msg.SettlementDetails64.mmSettlementTransactionCondition, com.tools20022.repository.msg.SettlementDetails64.mmPartialSettlementIndicator,
-					com.tools20022.repository.msg.SettlementDetails3.mmSettlementTransactionCondition, com.tools20022.repository.msg.SettlementDetails16.mmSettlementTransactionCondition,
-					com.tools20022.repository.msg.SettlementDetails31.mmSettlementTransactionCondition, com.tools20022.repository.msg.SettlementDetails40.mmSettlementTransactionCondition,
-					com.tools20022.repository.msg.SettlementDetails62.mmSettlementTransactionCondition, com.tools20022.repository.msg.SettlementDetails62.mmPartialSettlementIndicator,
-					com.tools20022.repository.msg.SettlementDetails63.mmSettlementTransactionCondition, com.tools20022.repository.msg.SettlementDetails63.mmPartialSettlementIndicator,
-					com.tools20022.repository.msg.RequestDetails6.mmPartialSettlementIndicator, com.tools20022.repository.msg.RequestDetails7.mmPartialSettlementIndicator,
-					com.tools20022.repository.msg.RequestDetails8.mmPartialSettlementIndicator, com.tools20022.repository.msg.RequestDetails9.mmPartialSettlementIndicator,
-					com.tools20022.repository.msg.RequestDetails11.mmPartialSettlementIndicator, com.tools20022.repository.msg.RequestDetails12.mmPartialSettlementIndicator,
-					com.tools20022.repository.msg.SettlementDetails6.mmSettlementTransactionCondition, com.tools20022.repository.msg.SettlementDetails20.mmSettlementTransactionCondition,
-					com.tools20022.repository.msg.SettlementDetails24.mmSettlementTransactionCondition, com.tools20022.repository.msg.SettlementDetails24.mmPartialSettlementIndicator,
-					com.tools20022.repository.choice.SettlementTransactionCondition9Choice.mmCode, com.tools20022.repository.choice.SettlementTransactionCondition9Choice.mmProprietary,
-					com.tools20022.repository.msg.SettlementDetails33.mmSettlementTransactionCondition, com.tools20022.repository.msg.SettlementDetails33.mmPartialSettlementIndicator,
-					com.tools20022.repository.msg.SettlementDetails45.mmSettlementTransactionCondition, com.tools20022.repository.msg.SettlementDetails45.mmPartialSettlementIndicator,
-					com.tools20022.repository.msg.SettlementDetails54.mmSettlementTransactionCondition, com.tools20022.repository.msg.SettlementDetails54.mmPartialSettlementIndicator,
-					com.tools20022.repository.msg.SettlementDetails1.mmSettlementTransactionCondition, com.tools20022.repository.msg.SettlementDetails19.mmSettlementTransactionCondition,
-					com.tools20022.repository.msg.SettlementDetails22.mmSettlementTransactionCondition, com.tools20022.repository.msg.SettlementDetails22.mmPartialSettlementIndicator,
-					com.tools20022.repository.msg.SettlementDetails35.mmSettlementTransactionCondition, com.tools20022.repository.msg.SettlementDetails35.mmPartialSettlementIndicator,
-					com.tools20022.repository.msg.SettlementDetails42.mmSettlementTransactionCondition, com.tools20022.repository.msg.SettlementDetails42.mmPartialSettlementIndicator,
-					com.tools20022.repository.msg.SettlementDetails52.mmSettlementTransactionCondition, com.tools20022.repository.msg.SettlementDetails52.mmPartialSettlementIndicator,
-					com.tools20022.repository.msg.SettlementDetails8.mmSettlementTransactionCondition, com.tools20022.repository.msg.SettlementDetails11.mmSettlementTransactionCondition,
-					com.tools20022.repository.msg.SettlementDetails23.mmSettlementTransactionCondition, com.tools20022.repository.msg.SettlementDetails23.mmPartialSettlementIndicator,
-					com.tools20022.repository.msg.SettlementDetails37.mmSettlementTransactionCondition, com.tools20022.repository.msg.SettlementDetails37.mmPartialSettlementIndicator,
-					com.tools20022.repository.msg.SettlementDetails44.mmSettlementTransactionCondition, com.tools20022.repository.msg.SettlementDetails44.mmPartialSettlementIndicator,
-					com.tools20022.repository.msg.SettlementDetails53.mmSettlementTransactionCondition, com.tools20022.repository.msg.SettlementDetails53.mmPartialSettlementIndicator,
-					com.tools20022.repository.msg.SettlementDetails7.mmSettlementTransactionCondition, com.tools20022.repository.msg.SettlementDetails12.mmSettlementTransactionCondition,
-					com.tools20022.repository.msg.SettlementDetails28.mmSettlementTransactionCondition, com.tools20022.repository.msg.SettlementDetails28.mmPartialSettlementIndicator,
-					com.tools20022.repository.msg.SettlementDetails38.mmSettlementTransactionCondition, com.tools20022.repository.msg.SettlementDetails38.mmPartialSettlementIndicator,
-					com.tools20022.repository.msg.SettlementDetails47.mmSettlementTransactionCondition, com.tools20022.repository.msg.SettlementDetails47.mmPartialSettlementIndicator,
-					com.tools20022.repository.msg.SettlementDetails56.mmSettlementTransactionCondition, com.tools20022.repository.msg.SettlementDetails56.mmPartialSettlementIndicator,
-					com.tools20022.repository.msg.SettlementDetails2.mmSettlementTransactionCondition, com.tools20022.repository.msg.SettlementDetails13.mmSettlementTransactionCondition,
-					com.tools20022.repository.msg.SettlementDetails27.mmSettlementTransactionCondition, com.tools20022.repository.msg.SettlementDetails27.mmPartialSettlementIndicator,
-					com.tools20022.repository.msg.SettlementDetails39.mmSettlementTransactionCondition, com.tools20022.repository.msg.SettlementDetails39.mmPartialSettlementIndicator,
-					com.tools20022.repository.msg.SettlementDetails48.mmSettlementTransactionCondition, com.tools20022.repository.msg.SettlementDetails48.mmPartialSettlementIndicator,
-					com.tools20022.repository.msg.SettlementDetails57.mmSettlementTransactionCondition, com.tools20022.repository.msg.SettlementDetails57.mmPartialSettlementIndicator,
-					com.tools20022.repository.choice.SettlementTransactionCondition2Choice.mmCode, com.tools20022.repository.choice.SettlementTransactionCondition2Choice.mmProprietary,
-					com.tools20022.repository.choice.SettlementTransactionCondition11Choice.mmCode, com.tools20022.repository.choice.SettlementTransactionCondition11Choice.mmProprietary,
-					com.tools20022.repository.msg.SettlementDetails43.mmSettlementTransactionCondition, com.tools20022.repository.msg.SettlementDetails4.mmSettlementTransactionCondition,
-					com.tools20022.repository.msg.SettlementDetails10.mmSettlementTransactionCondition, com.tools20022.repository.msg.SettlementDetails29.mmSettlementTransactionCondition,
-					com.tools20022.repository.msg.SettlementDetails5.mmSettlementTransactionCondition, com.tools20022.repository.choice.SettlementTransactionCondition5Choice.mmCode,
-					com.tools20022.repository.choice.SettlementTransactionCondition5Choice.mmProprietary, com.tools20022.repository.msg.SettlementDetails25.mmSettlementTransactionCondition,
-					com.tools20022.repository.msg.SettlementDetails26.mmSettlementTransactionCondition, com.tools20022.repository.msg.SettlementDetails26.mmPartialSettlementIndicator,
-					com.tools20022.repository.msg.SettlementDetails65.mmSettlementTransactionCondition, com.tools20022.repository.msg.SettlementDetails65.mmPartialSettlementIndicator,
-					com.tools20022.repository.msg.SettlementDetails14.mmSettlementTransactionCondition, com.tools20022.repository.msg.SettlementDetails41.mmSettlementTransactionCondition,
-					com.tools20022.repository.msg.SettlementDetails61.mmSettlementTransactionCondition, com.tools20022.repository.msg.SettlementDetails61.mmPartialSettlementIndicator,
-					com.tools20022.repository.msg.SettlementDetails59.mmSettlementTransactionCondition, com.tools20022.repository.msg.SettlementDetails59.mmPartialSettlementIndicator,
-					com.tools20022.repository.choice.SettlementTransactionCondition4Choice.mmCode, com.tools20022.repository.choice.SettlementTransactionCondition4Choice.mmProprietary,
-					com.tools20022.repository.msg.SettlementDetails15.mmSettlementTransactionCondition, com.tools20022.repository.choice.SettlementTransactionCondition10Choice.mmCode,
-					com.tools20022.repository.choice.SettlementTransactionCondition10Choice.mmProprietary, com.tools20022.repository.msg.SettlementDetails34.mmSettlementTransactionCondition,
-					com.tools20022.repository.msg.SettlementDetails49.mmSettlementTransactionCondition, com.tools20022.repository.msg.SettlementDetails49.mmPartialSettlementIndicator,
-					com.tools20022.repository.msg.SettlementDetails58.mmSettlementTransactionCondition, com.tools20022.repository.msg.SettlementDetails58.mmPartialSettlementIndicator,
-					com.tools20022.repository.msg.SettlementDetails36.mmSettlementTransactionCondition, com.tools20022.repository.msg.SettlementDetails36.mmPartialSettlementIndicator,
-					com.tools20022.repository.msg.SettlementDetails18.mmSettlementTransactionCondition, com.tools20022.repository.msg.SettlementDetails66.mmSettlementTransactionCondition,
-					com.tools20022.repository.msg.SettlementDetails66.mmPartialSettlementIndicator, com.tools20022.repository.msg.SettlementInstructionQueryCriteria1.mmPartialSettlementIndicator,
-					com.tools20022.repository.msg.SettlementDetails67.mmSettlementTransactionCondition, com.tools20022.repository.msg.SettlementDetails67.mmPartialSettlementIndicator,
-					com.tools20022.repository.msg.SettlementDetails70.mmSettlementTransactionCondition, com.tools20022.repository.msg.SettlementDetails70.mmPartialSettlementIndicator,
-					com.tools20022.repository.msg.SettlementDetails68.mmSettlementTransactionCondition, com.tools20022.repository.msg.SettlementDetails69.mmSettlementTransactionCondition,
-					com.tools20022.repository.msg.SettlementDetails69.mmPartialSettlementIndicator, com.tools20022.repository.msg.SettlementDetails71.mmSettlementTransactionCondition,
-					com.tools20022.repository.msg.SettlementDetails71.mmPartialSettlementIndicator, com.tools20022.repository.msg.SettlementDetails72.mmSettlementTransactionCondition,
-					com.tools20022.repository.msg.SettlementDetails72.mmPartialSettlementIndicator, com.tools20022.repository.msg.SettlementDetails75.mmSettlementTransactionCondition,
-					com.tools20022.repository.msg.SettlementDetails75.mmPartialSettlementIndicator, com.tools20022.repository.msg.SettlementDetails73.mmSettlementTransactionCondition,
-					com.tools20022.repository.msg.SettlementDetails73.mmPartialSettlementIndicator, com.tools20022.repository.msg.SettlementDetails74.mmSettlementTransactionCondition,
-					com.tools20022.repository.msg.SettlementDetails74.mmPartialSettlementIndicator, com.tools20022.repository.msg.RequestDetails13.mmPartialSettlementIndicator,
-					com.tools20022.repository.msg.SettlementDetails81.mmSettlementTransactionCondition, com.tools20022.repository.msg.SettlementDetails81.mmPartialSettlementIndicator,
-					com.tools20022.repository.msg.SettlementDetails76.mmSettlementTransactionCondition, com.tools20022.repository.msg.SettlementDetails76.mmPartialSettlementIndicator,
-					com.tools20022.repository.msg.SettlementDetails80.mmSettlementTransactionCondition, com.tools20022.repository.msg.SettlementDetails80.mmPartialSettlementIndicator,
-					com.tools20022.repository.msg.SettlementDetails78.mmSettlementTransactionCondition, com.tools20022.repository.msg.SettlementDetails78.mmPartialSettlementIndicator,
-					com.tools20022.repository.msg.SettlementDetails77.mmSettlementTransactionCondition, com.tools20022.repository.msg.SettlementDetails77.mmPartialSettlementIndicator,
-					com.tools20022.repository.msg.RequestDetails14.mmPartialSettlementIndicator, com.tools20022.repository.msg.SettlementDetails79.mmSettlementTransactionCondition,
-					com.tools20022.repository.msg.SettlementDetails79.mmPartialSettlementIndicator, com.tools20022.repository.msg.SettlementDetails87.mmSettlementTransactionCondition,
-					com.tools20022.repository.msg.SettlementDetails87.mmPartialSettlementIndicator, com.tools20022.repository.msg.SettlementDetails83.mmSettlementTransactionCondition,
-					com.tools20022.repository.msg.SettlementDetails86.mmSettlementTransactionCondition, com.tools20022.repository.msg.SettlementDetails86.mmPartialSettlementIndicator,
-					com.tools20022.repository.msg.SettlementDetails85.mmSettlementTransactionCondition, com.tools20022.repository.msg.SettlementDetails85.mmPartialSettlementIndicator,
-					com.tools20022.repository.msg.SettlementDetails93.mmSettlementTransactionCondition, com.tools20022.repository.msg.SettlementDetails93.mmPartialSettlementIndicator,
-					com.tools20022.repository.msg.RequestDetails15.mmPartialSettlementIndicator, com.tools20022.repository.msg.SettlementDetails90.mmSettlementTransactionCondition,
-					com.tools20022.repository.msg.SettlementDetails90.mmPartialSettlementIndicator, com.tools20022.repository.msg.SettlementDetails96.mmSettlementTransactionCondition,
-					com.tools20022.repository.msg.SettlementDetails96.mmPartialSettlementIndicator, com.tools20022.repository.msg.SettlementDetails97.mmSettlementTransactionCondition,
-					com.tools20022.repository.msg.SettlementDetails97.mmPartialSettlementIndicator, com.tools20022.repository.msg.SettlementDetails99.mmSettlementTransactionCondition,
-					com.tools20022.repository.msg.SettlementDetails99.mmPartialSettlementIndicator, com.tools20022.repository.choice.SettlementTransactionCondition16Choice.mmCode,
-					com.tools20022.repository.choice.SettlementTransactionCondition16Choice.mmProprietary, com.tools20022.repository.msg.SettlementDetails94.mmSettlementTransactionCondition,
-					com.tools20022.repository.msg.SettlementDetails100.mmSettlementTransactionCondition, com.tools20022.repository.choice.SettlementTransactionCondition19Choice.mmCode,
-					com.tools20022.repository.choice.SettlementTransactionCondition19Choice.mmProprietary, com.tools20022.repository.choice.SettlementTransactionCondition18Choice.mmCode,
-					com.tools20022.repository.choice.SettlementTransactionCondition18Choice.mmProprietary, com.tools20022.repository.msg.SettlementDetails95.mmSettlementTransactionCondition,
-					com.tools20022.repository.msg.SettlementDetails95.mmPartialSettlementIndicator, com.tools20022.repository.msg.SettlementDetails91.mmSettlementTransactionCondition,
-					com.tools20022.repository.msg.SettlementDetails91.mmPartialSettlementIndicator, com.tools20022.repository.msg.SettlementDetails92.mmSettlementTransactionCondition,
-					com.tools20022.repository.msg.SettlementDetails92.mmPartialSettlementIndicator, com.tools20022.repository.choice.SettlementTransactionCondition17Choice.mmCode,
-					com.tools20022.repository.choice.SettlementTransactionCondition17Choice.mmProprietary, com.tools20022.repository.msg.SettlementDetails98.mmSettlementTransactionCondition,
-					com.tools20022.repository.msg.SettlementDetails98.mmPartialSettlementIndicator, com.tools20022.repository.msg.SettlementDetails101.mmSettlementTransactionCondition,
-					com.tools20022.repository.msg.SettlementDetails101.mmPartialSettlementIndicator, com.tools20022.repository.choice.SettlementTransactionCondition20Choice.mmCode,
-					com.tools20022.repository.choice.SettlementTransactionCondition20Choice.mmProprietary, com.tools20022.repository.msg.SettlementDetails105.mmSettlementTransactionCondition,
-					com.tools20022.repository.msg.SettlementDetails105.mmPartialSettlementIndicator, com.tools20022.repository.msg.SettlementDetails106.mmSettlementTransactionCondition,
-					com.tools20022.repository.msg.SettlementDetails106.mmPartialSettlementIndicator, com.tools20022.repository.msg.SettlementDetails104.mmSettlementTransactionCondition,
-					com.tools20022.repository.msg.SettlementDetails104.mmPartialSettlementIndicator, com.tools20022.repository.msg.SettlementDetails111.mmSettlementTransactionCondition,
-					com.tools20022.repository.msg.SettlementDetails111.mmPartialSettlementIndicator, com.tools20022.repository.msg.RequestDetails16.mmPartialSettlementIndicator,
-					com.tools20022.repository.msg.SettlementDetails112.mmSettlementTransactionCondition, com.tools20022.repository.msg.SettlementDetails112.mmPartialSettlementIndicator,
-					com.tools20022.repository.msg.SettlementDetails110.mmSettlementTransactionCondition, com.tools20022.repository.msg.SettlementDetails110.mmPartialSettlementIndicator,
-					com.tools20022.repository.msg.SettlementDetails108.mmSettlementTransactionCondition, com.tools20022.repository.msg.SettlementDetails108.mmPartialSettlementIndicator,
-					com.tools20022.repository.msg.SettlementDetails103.mmSettlementTransactionCondition, com.tools20022.repository.msg.SettlementDetails107.mmSettlementTransactionCondition,
-					com.tools20022.repository.msg.SettlementDetails107.mmPartialSettlementIndicator, com.tools20022.repository.choice.SettlementTransactionCondition26Choice.mmCode,
-					com.tools20022.repository.choice.SettlementTransactionCondition26Choice.mmProprietary, com.tools20022.repository.msg.SettlementDetails115.mmSettlementTransactionCondition,
-					com.tools20022.repository.msg.SettlementDetails115.mmPartialSettlementIndicator, com.tools20022.repository.choice.SettlementTransactionCondition21Choice.mmCode,
-					com.tools20022.repository.choice.SettlementTransactionCondition21Choice.mmProprietary, com.tools20022.repository.choice.SettlementTransactionCondition28Choice.mmCode,
-					com.tools20022.repository.choice.SettlementTransactionCondition28Choice.mmProprietary, com.tools20022.repository.msg.SettlementDetails117.mmSettlementTransactionCondition,
-					com.tools20022.repository.msg.SettlementDetails117.mmPartialSettlementIndicator, com.tools20022.repository.msg.SettlementDetails116.mmSettlementTransactionCondition,
-					com.tools20022.repository.msg.SettlementDetails116.mmPartialSettlementIndicator, com.tools20022.repository.choice.SettlementTransactionCondition22Choice.mmCode,
-					com.tools20022.repository.choice.SettlementTransactionCondition22Choice.mmProprietary, com.tools20022.repository.msg.SettlementDetails113.mmSettlementTransactionCondition,
-					com.tools20022.repository.choice.SettlementTransactionCondition29Choice.mmCode, com.tools20022.repository.choice.SettlementTransactionCondition29Choice.mmProprietary,
-					com.tools20022.repository.msg.FundSettlementParameters11.mmSettlementTransactionCondition, com.tools20022.repository.msg.FundSettlementParameters12.mmSettlementTransactionCondition,
-					com.tools20022.repository.choice.SettlementTransactionCondition30Choice.mmCode, com.tools20022.repository.choice.SettlementTransactionCondition30Choice.mmProprietary,
-					com.tools20022.repository.choice.TradeTransactionCondition8Choice.mmCode, com.tools20022.repository.choice.TradeTransactionCondition8Choice.mmProprietary,
-					com.tools20022.repository.msg.SettlementDetails128.mmSettlementTransactionCondition, com.tools20022.repository.msg.SettlementDetails128.mmPartialSettlementIndicator,
-					com.tools20022.repository.msg.SettlementDetails120.mmSettlementTransactionCondition, com.tools20022.repository.msg.SettlementDetails120.mmPartialSettlementIndicator,
-					com.tools20022.repository.msg.SettlementDetails119.mmSettlementTransactionCondition, com.tools20022.repository.msg.SettlementDetails119.mmPartialSettlementIndicator,
-					com.tools20022.repository.msg.SettlementDetails125.mmSettlementTransactionCondition, com.tools20022.repository.msg.SettlementDetails125.mmPartialSettlementIndicator,
-					com.tools20022.repository.msg.SettlementDetails126.mmSettlementTransactionCondition, com.tools20022.repository.msg.SettlementDetails126.mmPartialSettlementIndicator,
-					com.tools20022.repository.msg.SettlementDetails122.mmSettlementTransactionCondition, com.tools20022.repository.msg.SettlementDetails127.mmSettlementTransactionCondition,
-					com.tools20022.repository.msg.SettlementDetails127.mmPartialSettlementIndicator, com.tools20022.repository.msg.SettlementDetails121.mmSettlementTransactionCondition,
-					com.tools20022.repository.msg.SettlementDetails121.mmPartialSettlementIndicator, com.tools20022.repository.msg.SettlementDetails134.mmSettlementTransactionCondition,
-					com.tools20022.repository.msg.SettlementDetails134.mmPartialSettlementIndicator, com.tools20022.repository.msg.SettlementDetails137.mmSettlementTransactionCondition,
-					com.tools20022.repository.msg.SettlementDetails137.mmPartialSettlementIndicator, com.tools20022.repository.msg.SettlementDetails132.mmSettlementTransactionCondition,
-					com.tools20022.repository.msg.SettlementDetails132.mmPartialSettlementIndicator, com.tools20022.repository.msg.SettlementDetails138.mmSettlementTransactionCondition,
-					com.tools20022.repository.msg.SettlementDetails130.mmSettlementTransactionCondition, com.tools20022.repository.msg.SettlementDetails130.mmPartialSettlementIndicator,
-					com.tools20022.repository.msg.SettlementDetails131.mmSettlementTransactionCondition, com.tools20022.repository.msg.SettlementDetails131.mmPartialSettlementIndicator,
-					com.tools20022.repository.msg.SettlementDetails133.mmSettlementTransactionCondition, com.tools20022.repository.msg.SettlementDetails133.mmPartialSettlementIndicator,
-					com.tools20022.repository.msg.SettlementDetails139.mmSettlementTransactionCondition, com.tools20022.repository.msg.SettlementDetails139.mmPartialSettlementIndicator);
+			derivation_lazy = () -> Arrays.asList(SettlementTransactionCondition1Choice.mmCode, SettlementTransactionCondition1Choice.mmProprietary, SettlementTransactionCondition6Choice.mmCode,
+					SettlementTransactionCondition6Choice.mmProprietary, SettlementTransactionCondition12Choice.mmCode, SettlementTransactionCondition12Choice.mmProprietary, SettlementDetails50.mmSettlementTransactionCondition,
+					SettlementTransactionCondition14Choice.mmCode, SettlementTransactionCondition14Choice.mmProprietary, SettlementDetails51.mmSettlementTransactionCondition, SettlementDetails9.mmSettlementTransactionCondition,
+					SettlementTransactionCondition3Choice.mmCode, SettlementTransactionCondition3Choice.mmProprietary, SettlementDetails17.mmSettlementTransactionCondition, SettlementTransactionCondition7Choice.mmCode,
+					SettlementTransactionCondition7Choice.mmProprietary, SettlementDetails30.mmSettlementTransactionCondition, SettlementTransactionCondition8Choice.mmCode, SettlementTransactionCondition8Choice.mmProprietary,
+					SettlementDetails32.mmSettlementTransactionCondition, SettlementDetails60.mmSettlementTransactionCondition, SettlementDetails60.mmPartialSettlementIndicator, SettlementDetails64.mmSettlementTransactionCondition,
+					SettlementDetails64.mmPartialSettlementIndicator, SettlementDetails3.mmSettlementTransactionCondition, SettlementDetails16.mmSettlementTransactionCondition, SettlementDetails31.mmSettlementTransactionCondition,
+					SettlementDetails40.mmSettlementTransactionCondition, SettlementDetails62.mmSettlementTransactionCondition, SettlementDetails62.mmPartialSettlementIndicator, SettlementDetails63.mmSettlementTransactionCondition,
+					SettlementDetails63.mmPartialSettlementIndicator, RequestDetails6.mmPartialSettlementIndicator, RequestDetails7.mmPartialSettlementIndicator, RequestDetails8.mmPartialSettlementIndicator,
+					RequestDetails9.mmPartialSettlementIndicator, RequestDetails11.mmPartialSettlementIndicator, RequestDetails12.mmPartialSettlementIndicator, SettlementDetails6.mmSettlementTransactionCondition,
+					SettlementDetails20.mmSettlementTransactionCondition, SettlementDetails24.mmSettlementTransactionCondition, SettlementDetails24.mmPartialSettlementIndicator, SettlementTransactionCondition9Choice.mmCode,
+					SettlementTransactionCondition9Choice.mmProprietary, SettlementDetails33.mmSettlementTransactionCondition, SettlementDetails33.mmPartialSettlementIndicator, SettlementDetails45.mmSettlementTransactionCondition,
+					SettlementDetails45.mmPartialSettlementIndicator, SettlementDetails54.mmSettlementTransactionCondition, SettlementDetails54.mmPartialSettlementIndicator, SettlementDetails1.mmSettlementTransactionCondition,
+					SettlementDetails19.mmSettlementTransactionCondition, SettlementDetails22.mmSettlementTransactionCondition, SettlementDetails22.mmPartialSettlementIndicator, SettlementDetails35.mmSettlementTransactionCondition,
+					SettlementDetails35.mmPartialSettlementIndicator, SettlementDetails42.mmSettlementTransactionCondition, SettlementDetails42.mmPartialSettlementIndicator, SettlementDetails52.mmSettlementTransactionCondition,
+					SettlementDetails52.mmPartialSettlementIndicator, SettlementDetails8.mmSettlementTransactionCondition, SettlementDetails11.mmSettlementTransactionCondition, SettlementDetails23.mmSettlementTransactionCondition,
+					SettlementDetails23.mmPartialSettlementIndicator, SettlementDetails37.mmSettlementTransactionCondition, SettlementDetails37.mmPartialSettlementIndicator, SettlementDetails44.mmSettlementTransactionCondition,
+					SettlementDetails44.mmPartialSettlementIndicator, SettlementDetails53.mmSettlementTransactionCondition, SettlementDetails53.mmPartialSettlementIndicator, SettlementDetails7.mmSettlementTransactionCondition,
+					SettlementDetails12.mmSettlementTransactionCondition, SettlementDetails28.mmSettlementTransactionCondition, SettlementDetails28.mmPartialSettlementIndicator, SettlementDetails38.mmSettlementTransactionCondition,
+					SettlementDetails38.mmPartialSettlementIndicator, SettlementDetails47.mmSettlementTransactionCondition, SettlementDetails47.mmPartialSettlementIndicator, SettlementDetails56.mmSettlementTransactionCondition,
+					SettlementDetails56.mmPartialSettlementIndicator, SettlementDetails2.mmSettlementTransactionCondition, SettlementDetails13.mmSettlementTransactionCondition, SettlementDetails27.mmSettlementTransactionCondition,
+					SettlementDetails27.mmPartialSettlementIndicator, SettlementDetails39.mmSettlementTransactionCondition, SettlementDetails39.mmPartialSettlementIndicator, SettlementDetails48.mmSettlementTransactionCondition,
+					SettlementDetails48.mmPartialSettlementIndicator, SettlementDetails57.mmSettlementTransactionCondition, SettlementDetails57.mmPartialSettlementIndicator, SettlementTransactionCondition2Choice.mmCode,
+					SettlementTransactionCondition2Choice.mmProprietary, SettlementTransactionCondition11Choice.mmCode, SettlementTransactionCondition11Choice.mmProprietary, SettlementDetails43.mmSettlementTransactionCondition,
+					SettlementDetails4.mmSettlementTransactionCondition, SettlementDetails10.mmSettlementTransactionCondition, SettlementDetails29.mmSettlementTransactionCondition, SettlementDetails5.mmSettlementTransactionCondition,
+					SettlementTransactionCondition5Choice.mmCode, SettlementTransactionCondition5Choice.mmProprietary, SettlementDetails25.mmSettlementTransactionCondition, SettlementDetails26.mmSettlementTransactionCondition,
+					SettlementDetails26.mmPartialSettlementIndicator, SettlementDetails65.mmSettlementTransactionCondition, SettlementDetails65.mmPartialSettlementIndicator, SettlementDetails14.mmSettlementTransactionCondition,
+					SettlementDetails41.mmSettlementTransactionCondition, SettlementDetails61.mmSettlementTransactionCondition, SettlementDetails61.mmPartialSettlementIndicator, SettlementDetails59.mmSettlementTransactionCondition,
+					SettlementDetails59.mmPartialSettlementIndicator, SettlementTransactionCondition4Choice.mmCode, SettlementTransactionCondition4Choice.mmProprietary, SettlementDetails15.mmSettlementTransactionCondition,
+					SettlementTransactionCondition10Choice.mmCode, SettlementTransactionCondition10Choice.mmProprietary, SettlementDetails34.mmSettlementTransactionCondition, SettlementDetails49.mmSettlementTransactionCondition,
+					SettlementDetails49.mmPartialSettlementIndicator, SettlementDetails58.mmSettlementTransactionCondition, SettlementDetails58.mmPartialSettlementIndicator, SettlementDetails36.mmSettlementTransactionCondition,
+					SettlementDetails36.mmPartialSettlementIndicator, SettlementDetails18.mmSettlementTransactionCondition, SettlementDetails66.mmSettlementTransactionCondition, SettlementDetails66.mmPartialSettlementIndicator,
+					SettlementInstructionQueryCriteria1.mmPartialSettlementIndicator, SettlementDetails67.mmSettlementTransactionCondition, SettlementDetails67.mmPartialSettlementIndicator,
+					SettlementDetails70.mmSettlementTransactionCondition, SettlementDetails70.mmPartialSettlementIndicator, SettlementDetails68.mmSettlementTransactionCondition, SettlementDetails69.mmSettlementTransactionCondition,
+					SettlementDetails69.mmPartialSettlementIndicator, SettlementDetails71.mmSettlementTransactionCondition, SettlementDetails71.mmPartialSettlementIndicator, SettlementDetails72.mmSettlementTransactionCondition,
+					SettlementDetails72.mmPartialSettlementIndicator, SettlementDetails75.mmSettlementTransactionCondition, SettlementDetails75.mmPartialSettlementIndicator, SettlementDetails73.mmSettlementTransactionCondition,
+					SettlementDetails73.mmPartialSettlementIndicator, SettlementDetails74.mmSettlementTransactionCondition, SettlementDetails74.mmPartialSettlementIndicator, RequestDetails13.mmPartialSettlementIndicator,
+					SettlementDetails81.mmSettlementTransactionCondition, SettlementDetails81.mmPartialSettlementIndicator, SettlementDetails76.mmSettlementTransactionCondition, SettlementDetails76.mmPartialSettlementIndicator,
+					SettlementDetails80.mmSettlementTransactionCondition, SettlementDetails80.mmPartialSettlementIndicator, SettlementDetails78.mmSettlementTransactionCondition, SettlementDetails78.mmPartialSettlementIndicator,
+					SettlementDetails77.mmSettlementTransactionCondition, SettlementDetails77.mmPartialSettlementIndicator, RequestDetails14.mmPartialSettlementIndicator, SettlementDetails79.mmSettlementTransactionCondition,
+					SettlementDetails79.mmPartialSettlementIndicator, SettlementDetails87.mmSettlementTransactionCondition, SettlementDetails87.mmPartialSettlementIndicator, SettlementDetails83.mmSettlementTransactionCondition,
+					SettlementDetails86.mmSettlementTransactionCondition, SettlementDetails86.mmPartialSettlementIndicator, SettlementDetails85.mmSettlementTransactionCondition, SettlementDetails85.mmPartialSettlementIndicator,
+					SettlementDetails93.mmSettlementTransactionCondition, SettlementDetails93.mmPartialSettlementIndicator, RequestDetails15.mmPartialSettlementIndicator, SettlementDetails90.mmSettlementTransactionCondition,
+					SettlementDetails90.mmPartialSettlementIndicator, SettlementDetails96.mmSettlementTransactionCondition, SettlementDetails96.mmPartialSettlementIndicator, SettlementDetails97.mmSettlementTransactionCondition,
+					SettlementDetails97.mmPartialSettlementIndicator, SettlementDetails99.mmSettlementTransactionCondition, SettlementDetails99.mmPartialSettlementIndicator, SettlementTransactionCondition16Choice.mmCode,
+					SettlementTransactionCondition16Choice.mmProprietary, SettlementDetails94.mmSettlementTransactionCondition, SettlementDetails100.mmSettlementTransactionCondition, SettlementTransactionCondition19Choice.mmCode,
+					SettlementTransactionCondition19Choice.mmProprietary, SettlementTransactionCondition18Choice.mmCode, SettlementTransactionCondition18Choice.mmProprietary, SettlementDetails95.mmSettlementTransactionCondition,
+					SettlementDetails95.mmPartialSettlementIndicator, SettlementDetails91.mmSettlementTransactionCondition, SettlementDetails91.mmPartialSettlementIndicator, SettlementDetails92.mmSettlementTransactionCondition,
+					SettlementDetails92.mmPartialSettlementIndicator, SettlementTransactionCondition17Choice.mmCode, SettlementTransactionCondition17Choice.mmProprietary, SettlementDetails98.mmSettlementTransactionCondition,
+					SettlementDetails98.mmPartialSettlementIndicator, SettlementDetails101.mmSettlementTransactionCondition, SettlementDetails101.mmPartialSettlementIndicator, SettlementTransactionCondition20Choice.mmCode,
+					SettlementTransactionCondition20Choice.mmProprietary, SettlementDetails105.mmSettlementTransactionCondition, SettlementDetails105.mmPartialSettlementIndicator, SettlementDetails106.mmSettlementTransactionCondition,
+					SettlementDetails106.mmPartialSettlementIndicator, SettlementDetails104.mmSettlementTransactionCondition, SettlementDetails104.mmPartialSettlementIndicator, SettlementDetails111.mmSettlementTransactionCondition,
+					SettlementDetails111.mmPartialSettlementIndicator, RequestDetails16.mmPartialSettlementIndicator, SettlementDetails112.mmSettlementTransactionCondition, SettlementDetails112.mmPartialSettlementIndicator,
+					SettlementDetails110.mmSettlementTransactionCondition, SettlementDetails110.mmPartialSettlementIndicator, SettlementDetails108.mmSettlementTransactionCondition, SettlementDetails108.mmPartialSettlementIndicator,
+					SettlementDetails103.mmSettlementTransactionCondition, SettlementDetails107.mmSettlementTransactionCondition, SettlementDetails107.mmPartialSettlementIndicator, SettlementTransactionCondition26Choice.mmCode,
+					SettlementTransactionCondition26Choice.mmProprietary, SettlementDetails115.mmSettlementTransactionCondition, SettlementDetails115.mmPartialSettlementIndicator, SettlementTransactionCondition21Choice.mmCode,
+					SettlementTransactionCondition21Choice.mmProprietary, SettlementTransactionCondition28Choice.mmCode, SettlementTransactionCondition28Choice.mmProprietary, SettlementDetails117.mmSettlementTransactionCondition,
+					SettlementDetails117.mmPartialSettlementIndicator, SettlementDetails116.mmSettlementTransactionCondition, SettlementDetails116.mmPartialSettlementIndicator, SettlementTransactionCondition22Choice.mmCode,
+					SettlementTransactionCondition22Choice.mmProprietary, SettlementDetails113.mmSettlementTransactionCondition, SettlementTransactionCondition29Choice.mmCode, SettlementTransactionCondition29Choice.mmProprietary,
+					FundSettlementParameters11.mmSettlementTransactionCondition, FundSettlementParameters12.mmSettlementTransactionCondition, SettlementTransactionCondition30Choice.mmCode,
+					SettlementTransactionCondition30Choice.mmProprietary, TradeTransactionCondition8Choice.mmCode, TradeTransactionCondition8Choice.mmProprietary, SettlementDetails128.mmSettlementTransactionCondition,
+					SettlementDetails128.mmPartialSettlementIndicator, SettlementDetails120.mmSettlementTransactionCondition, SettlementDetails120.mmPartialSettlementIndicator, SettlementDetails119.mmSettlementTransactionCondition,
+					SettlementDetails119.mmPartialSettlementIndicator, SettlementDetails125.mmSettlementTransactionCondition, SettlementDetails125.mmPartialSettlementIndicator, SettlementDetails126.mmSettlementTransactionCondition,
+					SettlementDetails126.mmPartialSettlementIndicator, SettlementDetails122.mmSettlementTransactionCondition, SettlementDetails127.mmSettlementTransactionCondition, SettlementDetails127.mmPartialSettlementIndicator,
+					SettlementDetails121.mmSettlementTransactionCondition, SettlementDetails121.mmPartialSettlementIndicator, SettlementDetails134.mmSettlementTransactionCondition, SettlementDetails134.mmPartialSettlementIndicator,
+					SettlementDetails137.mmSettlementTransactionCondition, SettlementDetails137.mmPartialSettlementIndicator, SettlementDetails132.mmSettlementTransactionCondition, SettlementDetails132.mmPartialSettlementIndicator,
+					SettlementDetails138.mmSettlementTransactionCondition, SettlementDetails130.mmSettlementTransactionCondition, SettlementDetails130.mmPartialSettlementIndicator, SettlementDetails131.mmSettlementTransactionCondition,
+					SettlementDetails131.mmPartialSettlementIndicator, SettlementDetails133.mmSettlementTransactionCondition, SettlementDetails133.mmPartialSettlementIndicator, SettlementDetails139.mmSettlementTransactionCondition,
+					SettlementDetails139.mmPartialSettlementIndicator);
 			elementContext_lazy = () -> SecuritiesSettlement.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SettlementTransactionCondition";
 			definition = "Conditions under which the order/trade is to be settled.";
 			maxOccurs = 1;
@@ -6332,59 +6055,35 @@ public class SecuritiesSettlement extends Settlement {
 	 */
 	public static final MMBusinessAttribute mmBeneficialOwnershipIndicator = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.BeneficialOwnership1Choice.mmIndicator, com.tools20022.repository.choice.BeneficialOwnership1Choice.mmProprietary,
-					com.tools20022.repository.msg.SettlementDetails50.mmBeneficialOwnership, com.tools20022.repository.choice.BeneficialOwnership2Choice.mmIndicator,
-					com.tools20022.repository.choice.BeneficialOwnership2Choice.mmProprietary, com.tools20022.repository.msg.SettlementDetails51.mmBeneficialOwnership, com.tools20022.repository.msg.SettlementDetails9.mmBeneficialOwnership,
-					com.tools20022.repository.msg.SettlementDetails17.mmBeneficialOwnership, com.tools20022.repository.msg.SettlementDetails30.mmBeneficialOwnership, com.tools20022.repository.msg.SettlementDetails32.mmBeneficialOwnership,
-					com.tools20022.repository.msg.SettlementDetails60.mmBeneficialOwnership, com.tools20022.repository.msg.SettlementDetails64.mmBeneficialOwnership, com.tools20022.repository.msg.SettlementDetails3.mmBeneficialOwnership,
-					com.tools20022.repository.msg.SettlementDetails16.mmBeneficialOwnership, com.tools20022.repository.msg.SettlementDetails31.mmBeneficialOwnership, com.tools20022.repository.msg.SettlementDetails40.mmBeneficialOwnership,
-					com.tools20022.repository.msg.SettlementDetails62.mmBeneficialOwnership, com.tools20022.repository.msg.SettlementDetails63.mmBeneficialOwnership, com.tools20022.repository.msg.SettlementDetails6.mmBeneficialOwnership,
-					com.tools20022.repository.msg.SettlementDetails20.mmBeneficialOwnership, com.tools20022.repository.msg.SettlementDetails24.mmBeneficialOwnership, com.tools20022.repository.msg.SettlementDetails33.mmBeneficialOwnership,
-					com.tools20022.repository.msg.SettlementDetails45.mmBeneficialOwnership, com.tools20022.repository.msg.SettlementDetails54.mmBeneficialOwnership, com.tools20022.repository.msg.SettlementDetails1.mmBeneficialOwnership,
-					com.tools20022.repository.msg.SettlementDetails19.mmBeneficialOwnership, com.tools20022.repository.msg.SettlementDetails22.mmBeneficialOwnership, com.tools20022.repository.msg.SettlementDetails35.mmBeneficialOwnership,
-					com.tools20022.repository.msg.SettlementDetails42.mmBeneficialOwnership, com.tools20022.repository.msg.SettlementDetails52.mmBeneficialOwnership, com.tools20022.repository.msg.SettlementDetails8.mmBeneficialOwnership,
-					com.tools20022.repository.msg.SettlementDetails11.mmBeneficialOwnership, com.tools20022.repository.msg.SettlementDetails23.mmBeneficialOwnership, com.tools20022.repository.msg.SettlementDetails37.mmBeneficialOwnership,
-					com.tools20022.repository.msg.SettlementDetails44.mmBeneficialOwnership, com.tools20022.repository.msg.SettlementDetails53.mmBeneficialOwnership, com.tools20022.repository.msg.SettlementDetails7.mmBeneficialOwnership,
-					com.tools20022.repository.msg.SettlementDetails12.mmBeneficialOwnership, com.tools20022.repository.msg.SettlementDetails28.mmBeneficialOwnership, com.tools20022.repository.msg.SettlementDetails38.mmBeneficialOwnership,
-					com.tools20022.repository.msg.SettlementDetails47.mmBeneficialOwnership, com.tools20022.repository.msg.SettlementDetails56.mmBeneficialOwnership, com.tools20022.repository.msg.SettlementDetails2.mmBeneficialOwnership,
-					com.tools20022.repository.msg.SettlementDetails13.mmBeneficialOwnership, com.tools20022.repository.msg.SettlementDetails27.mmBeneficialOwnership, com.tools20022.repository.msg.SettlementDetails39.mmBeneficialOwnership,
-					com.tools20022.repository.msg.SettlementDetails48.mmBeneficialOwnership, com.tools20022.repository.msg.SettlementDetails57.mmBeneficialOwnership, com.tools20022.repository.choice.BeneficialOwnership3Choice.mmIndicator,
-					com.tools20022.repository.choice.BeneficialOwnership3Choice.mmProprietary, com.tools20022.repository.msg.SettlementDetails43.mmBeneficialOwnership,
-					com.tools20022.repository.msg.SettlementDetails10.mmBeneficialOwnership, com.tools20022.repository.msg.SettlementDetails29.mmBeneficialOwnership, com.tools20022.repository.msg.SettlementDetails5.mmBeneficialOwnership,
-					com.tools20022.repository.msg.SettlementDetails25.mmBeneficialOwnership, com.tools20022.repository.msg.SettlementDetails26.mmBeneficialOwnership, com.tools20022.repository.msg.SettlementDetails65.mmBeneficialOwnership,
-					com.tools20022.repository.msg.SettlementDetails14.mmBeneficialOwnership, com.tools20022.repository.msg.SettlementDetails41.mmBeneficialOwnership, com.tools20022.repository.msg.SettlementDetails61.mmBeneficialOwnership,
-					com.tools20022.repository.msg.SettlementDetails59.mmBeneficialOwnership, com.tools20022.repository.msg.SettlementDetails15.mmBeneficialOwnership, com.tools20022.repository.msg.SettlementDetails34.mmBeneficialOwnership,
-					com.tools20022.repository.msg.SettlementDetails49.mmBeneficialOwnership, com.tools20022.repository.msg.SettlementDetails58.mmBeneficialOwnership, com.tools20022.repository.msg.SettlementDetails36.mmBeneficialOwnership,
-					com.tools20022.repository.msg.SettlementDetails67.mmBeneficialOwnership, com.tools20022.repository.msg.SettlementDetails70.mmBeneficialOwnership, com.tools20022.repository.msg.SettlementDetails68.mmBeneficialOwnership,
-					com.tools20022.repository.msg.SettlementDetails69.mmBeneficialOwnership, com.tools20022.repository.msg.SettlementDetails71.mmBeneficialOwnership, com.tools20022.repository.msg.SettlementDetails72.mmBeneficialOwnership,
-					com.tools20022.repository.msg.SettlementDetails75.mmBeneficialOwnership, com.tools20022.repository.msg.SettlementDetails73.mmBeneficialOwnership, com.tools20022.repository.msg.SettlementDetails74.mmBeneficialOwnership,
-					com.tools20022.repository.msg.SettlementDetails81.mmBeneficialOwnership, com.tools20022.repository.msg.SettlementDetails76.mmBeneficialOwnership, com.tools20022.repository.msg.SettlementDetails80.mmBeneficialOwnership,
-					com.tools20022.repository.msg.SettlementDetails78.mmBeneficialOwnership, com.tools20022.repository.msg.SettlementDetails77.mmBeneficialOwnership, com.tools20022.repository.msg.SettlementDetails79.mmBeneficialOwnership,
-					com.tools20022.repository.msg.SettlementDetails87.mmBeneficialOwnership, com.tools20022.repository.msg.SettlementDetails83.mmBeneficialOwnership, com.tools20022.repository.msg.SettlementDetails86.mmBeneficialOwnership,
-					com.tools20022.repository.msg.SettlementDetails85.mmBeneficialOwnership, com.tools20022.repository.msg.SettlementDetails93.mmBeneficialOwnership, com.tools20022.repository.msg.SettlementDetails90.mmBeneficialOwnership,
-					com.tools20022.repository.msg.SettlementDetails96.mmBeneficialOwnership, com.tools20022.repository.msg.SettlementDetails97.mmBeneficialOwnership, com.tools20022.repository.msg.SettlementDetails99.mmBeneficialOwnership,
-					com.tools20022.repository.msg.SettlementDetails94.mmBeneficialOwnership, com.tools20022.repository.choice.BeneficialOwnership4Choice.mmIndicator,
-					com.tools20022.repository.choice.BeneficialOwnership4Choice.mmProprietary, com.tools20022.repository.msg.SettlementDetails95.mmBeneficialOwnership,
-					com.tools20022.repository.msg.SettlementDetails91.mmBeneficialOwnership, com.tools20022.repository.msg.SettlementDetails92.mmBeneficialOwnership, com.tools20022.repository.msg.SettlementDetails98.mmBeneficialOwnership,
-					com.tools20022.repository.msg.SettlementDetails101.mmBeneficialOwnership, com.tools20022.repository.msg.SettlementDetails105.mmBeneficialOwnership,
-					com.tools20022.repository.msg.SettlementDetails106.mmBeneficialOwnership, com.tools20022.repository.msg.SettlementDetails104.mmBeneficialOwnership,
-					com.tools20022.repository.msg.SettlementDetails111.mmBeneficialOwnership, com.tools20022.repository.msg.SettlementDetails112.mmBeneficialOwnership,
-					com.tools20022.repository.msg.SettlementDetails110.mmBeneficialOwnership, com.tools20022.repository.msg.SettlementDetails108.mmBeneficialOwnership,
-					com.tools20022.repository.msg.SettlementDetails107.mmBeneficialOwnership, com.tools20022.repository.choice.BeneficialOwnership5Choice.mmIndicator,
-					com.tools20022.repository.choice.BeneficialOwnership5Choice.mmProprietary, com.tools20022.repository.msg.SettlementDetails115.mmBeneficialOwnership,
-					com.tools20022.repository.msg.SettlementDetails117.mmBeneficialOwnership, com.tools20022.repository.msg.SettlementDetails116.mmBeneficialOwnership,
-					com.tools20022.repository.msg.SettlementDetails113.mmBeneficialOwnership, com.tools20022.repository.msg.SettlementDetails128.mmBeneficialOwnership,
-					com.tools20022.repository.msg.SettlementDetails120.mmBeneficialOwnership, com.tools20022.repository.msg.SettlementDetails119.mmBeneficialOwnership,
-					com.tools20022.repository.msg.SettlementDetails125.mmBeneficialOwnership, com.tools20022.repository.msg.SettlementDetails126.mmBeneficialOwnership,
-					com.tools20022.repository.msg.SettlementDetails122.mmBeneficialOwnership, com.tools20022.repository.msg.SettlementDetails127.mmBeneficialOwnership,
-					com.tools20022.repository.msg.SettlementDetails121.mmBeneficialOwnership, com.tools20022.repository.msg.SettlementDetails134.mmBeneficialOwnership,
-					com.tools20022.repository.msg.SettlementDetails137.mmBeneficialOwnership, com.tools20022.repository.msg.SettlementDetails132.mmBeneficialOwnership,
-					com.tools20022.repository.msg.SettlementDetails138.mmBeneficialOwnership, com.tools20022.repository.msg.SettlementDetails130.mmBeneficialOwnership,
-					com.tools20022.repository.msg.SettlementDetails131.mmBeneficialOwnership, com.tools20022.repository.msg.SettlementDetails133.mmBeneficialOwnership,
-					com.tools20022.repository.msg.SettlementDetails139.mmBeneficialOwnership);
+			derivation_lazy = () -> Arrays.asList(BeneficialOwnership1Choice.mmIndicator, BeneficialOwnership1Choice.mmProprietary, SettlementDetails50.mmBeneficialOwnership, BeneficialOwnership2Choice.mmIndicator,
+					BeneficialOwnership2Choice.mmProprietary, SettlementDetails51.mmBeneficialOwnership, SettlementDetails9.mmBeneficialOwnership, SettlementDetails17.mmBeneficialOwnership, SettlementDetails30.mmBeneficialOwnership,
+					SettlementDetails32.mmBeneficialOwnership, SettlementDetails60.mmBeneficialOwnership, SettlementDetails64.mmBeneficialOwnership, SettlementDetails3.mmBeneficialOwnership, SettlementDetails16.mmBeneficialOwnership,
+					SettlementDetails31.mmBeneficialOwnership, SettlementDetails40.mmBeneficialOwnership, SettlementDetails62.mmBeneficialOwnership, SettlementDetails63.mmBeneficialOwnership, SettlementDetails6.mmBeneficialOwnership,
+					SettlementDetails20.mmBeneficialOwnership, SettlementDetails24.mmBeneficialOwnership, SettlementDetails33.mmBeneficialOwnership, SettlementDetails45.mmBeneficialOwnership, SettlementDetails54.mmBeneficialOwnership,
+					SettlementDetails1.mmBeneficialOwnership, SettlementDetails19.mmBeneficialOwnership, SettlementDetails22.mmBeneficialOwnership, SettlementDetails35.mmBeneficialOwnership, SettlementDetails42.mmBeneficialOwnership,
+					SettlementDetails52.mmBeneficialOwnership, SettlementDetails8.mmBeneficialOwnership, SettlementDetails11.mmBeneficialOwnership, SettlementDetails23.mmBeneficialOwnership, SettlementDetails37.mmBeneficialOwnership,
+					SettlementDetails44.mmBeneficialOwnership, SettlementDetails53.mmBeneficialOwnership, SettlementDetails7.mmBeneficialOwnership, SettlementDetails12.mmBeneficialOwnership, SettlementDetails28.mmBeneficialOwnership,
+					SettlementDetails38.mmBeneficialOwnership, SettlementDetails47.mmBeneficialOwnership, SettlementDetails56.mmBeneficialOwnership, SettlementDetails2.mmBeneficialOwnership, SettlementDetails13.mmBeneficialOwnership,
+					SettlementDetails27.mmBeneficialOwnership, SettlementDetails39.mmBeneficialOwnership, SettlementDetails48.mmBeneficialOwnership, SettlementDetails57.mmBeneficialOwnership, BeneficialOwnership3Choice.mmIndicator,
+					BeneficialOwnership3Choice.mmProprietary, SettlementDetails43.mmBeneficialOwnership, SettlementDetails10.mmBeneficialOwnership, SettlementDetails29.mmBeneficialOwnership, SettlementDetails5.mmBeneficialOwnership,
+					SettlementDetails25.mmBeneficialOwnership, SettlementDetails26.mmBeneficialOwnership, SettlementDetails65.mmBeneficialOwnership, SettlementDetails14.mmBeneficialOwnership, SettlementDetails41.mmBeneficialOwnership,
+					SettlementDetails61.mmBeneficialOwnership, SettlementDetails59.mmBeneficialOwnership, SettlementDetails15.mmBeneficialOwnership, SettlementDetails34.mmBeneficialOwnership, SettlementDetails49.mmBeneficialOwnership,
+					SettlementDetails58.mmBeneficialOwnership, SettlementDetails36.mmBeneficialOwnership, SettlementDetails67.mmBeneficialOwnership, SettlementDetails70.mmBeneficialOwnership, SettlementDetails68.mmBeneficialOwnership,
+					SettlementDetails69.mmBeneficialOwnership, SettlementDetails71.mmBeneficialOwnership, SettlementDetails72.mmBeneficialOwnership, SettlementDetails75.mmBeneficialOwnership, SettlementDetails73.mmBeneficialOwnership,
+					SettlementDetails74.mmBeneficialOwnership, SettlementDetails81.mmBeneficialOwnership, SettlementDetails76.mmBeneficialOwnership, SettlementDetails80.mmBeneficialOwnership, SettlementDetails78.mmBeneficialOwnership,
+					SettlementDetails77.mmBeneficialOwnership, SettlementDetails79.mmBeneficialOwnership, SettlementDetails87.mmBeneficialOwnership, SettlementDetails83.mmBeneficialOwnership, SettlementDetails86.mmBeneficialOwnership,
+					SettlementDetails85.mmBeneficialOwnership, SettlementDetails93.mmBeneficialOwnership, SettlementDetails90.mmBeneficialOwnership, SettlementDetails96.mmBeneficialOwnership, SettlementDetails97.mmBeneficialOwnership,
+					SettlementDetails99.mmBeneficialOwnership, SettlementDetails94.mmBeneficialOwnership, BeneficialOwnership4Choice.mmIndicator, BeneficialOwnership4Choice.mmProprietary, SettlementDetails95.mmBeneficialOwnership,
+					SettlementDetails91.mmBeneficialOwnership, SettlementDetails92.mmBeneficialOwnership, SettlementDetails98.mmBeneficialOwnership, SettlementDetails101.mmBeneficialOwnership, SettlementDetails105.mmBeneficialOwnership,
+					SettlementDetails106.mmBeneficialOwnership, SettlementDetails104.mmBeneficialOwnership, SettlementDetails111.mmBeneficialOwnership, SettlementDetails112.mmBeneficialOwnership, SettlementDetails110.mmBeneficialOwnership,
+					SettlementDetails108.mmBeneficialOwnership, SettlementDetails107.mmBeneficialOwnership, BeneficialOwnership5Choice.mmIndicator, BeneficialOwnership5Choice.mmProprietary, SettlementDetails115.mmBeneficialOwnership,
+					SettlementDetails117.mmBeneficialOwnership, SettlementDetails116.mmBeneficialOwnership, SettlementDetails113.mmBeneficialOwnership, SettlementDetails128.mmBeneficialOwnership, SettlementDetails120.mmBeneficialOwnership,
+					SettlementDetails119.mmBeneficialOwnership, SettlementDetails125.mmBeneficialOwnership, SettlementDetails126.mmBeneficialOwnership, SettlementDetails122.mmBeneficialOwnership, SettlementDetails127.mmBeneficialOwnership,
+					SettlementDetails121.mmBeneficialOwnership, SettlementDetails134.mmBeneficialOwnership, SettlementDetails137.mmBeneficialOwnership, SettlementDetails132.mmBeneficialOwnership, SettlementDetails138.mmBeneficialOwnership,
+					SettlementDetails130.mmBeneficialOwnership, SettlementDetails131.mmBeneficialOwnership, SettlementDetails133.mmBeneficialOwnership, SettlementDetails139.mmBeneficialOwnership);
 			elementContext_lazy = () -> SecuritiesSettlement.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BeneficialOwnershipIndicator";
 			definition = "Specifies whether there is change of beneficial ownership.";
 			maxOccurs = 1;
@@ -6813,52 +6512,35 @@ public class SecuritiesSettlement extends Settlement {
 	 */
 	public static final MMBusinessAttribute mmMarketClientSide = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.MarketClientSide1Choice.mmCode, com.tools20022.repository.choice.MarketClientSide1Choice.mmProprietary,
-					com.tools20022.repository.msg.SettlementDetails50.mmMarketClientSide, com.tools20022.repository.choice.MarketClientSide2Choice.mmCode, com.tools20022.repository.choice.MarketClientSide2Choice.mmProprietary,
-					com.tools20022.repository.msg.SettlementDetails51.mmMarketClientSide, com.tools20022.repository.msg.SettlementDetails9.mmMarketClientSide, com.tools20022.repository.msg.SettlementDetails17.mmMarketClientSide,
-					com.tools20022.repository.msg.SettlementDetails30.mmMarketClientSide, com.tools20022.repository.msg.SettlementDetails32.mmMarketClientSide, com.tools20022.repository.msg.SettlementDetails60.mmMarketClientSide,
-					com.tools20022.repository.msg.SettlementDetails64.mmMarketClientSide, com.tools20022.repository.msg.SettlementDetails3.mmMarketClientSide, com.tools20022.repository.msg.SettlementDetails16.mmMarketClientSide,
-					com.tools20022.repository.msg.SettlementDetails31.mmMarketClientSide, com.tools20022.repository.msg.SettlementDetails40.mmMarketClientSide, com.tools20022.repository.msg.SettlementDetails62.mmMarketClientSide,
-					com.tools20022.repository.msg.SettlementDetails63.mmMarketClientSide, com.tools20022.repository.msg.SettlementDetails6.mmMarketClientSide, com.tools20022.repository.msg.SettlementDetails20.mmMarketClientSide,
-					com.tools20022.repository.msg.SettlementDetails24.mmMarketClientSide, com.tools20022.repository.msg.SettlementDetails33.mmMarketClientSide, com.tools20022.repository.msg.SettlementDetails45.mmMarketClientSide,
-					com.tools20022.repository.msg.SettlementDetails54.mmMarketClientSide, com.tools20022.repository.msg.SettlementDetails1.mmMarketClientSide, com.tools20022.repository.msg.SettlementDetails19.mmMarketClientSide,
-					com.tools20022.repository.msg.SettlementDetails22.mmMarketClientSide, com.tools20022.repository.msg.SettlementDetails35.mmMarketClientSide, com.tools20022.repository.msg.SettlementDetails42.mmMarketClientSide,
-					com.tools20022.repository.msg.SettlementDetails52.mmMarketClientSide, com.tools20022.repository.msg.SettlementDetails8.mmMarketClientSide, com.tools20022.repository.msg.SettlementDetails11.mmMarketClientSide,
-					com.tools20022.repository.msg.SettlementDetails23.mmMarketClientSide, com.tools20022.repository.msg.SettlementDetails37.mmMarketClientSide, com.tools20022.repository.msg.SettlementDetails44.mmMarketClientSide,
-					com.tools20022.repository.msg.SettlementDetails53.mmMarketClientSide, com.tools20022.repository.msg.SettlementDetails7.mmMarketClientSide, com.tools20022.repository.msg.SettlementDetails12.mmMarketClientSide,
-					com.tools20022.repository.msg.SettlementDetails28.mmMarketClientSide, com.tools20022.repository.msg.SettlementDetails38.mmMarketClientSide, com.tools20022.repository.msg.SettlementDetails47.mmMarketClientSide,
-					com.tools20022.repository.msg.SettlementDetails56.mmMarketClientSide, com.tools20022.repository.msg.SettlementDetails2.mmMarketClientSide, com.tools20022.repository.msg.SettlementDetails13.mmMarketClientSide,
-					com.tools20022.repository.msg.SettlementDetails27.mmMarketClientSide, com.tools20022.repository.msg.SettlementDetails39.mmMarketClientSide, com.tools20022.repository.msg.SettlementDetails48.mmMarketClientSide,
-					com.tools20022.repository.msg.SettlementDetails57.mmMarketClientSide, com.tools20022.repository.choice.MarketClientSide3Choice.mmCode, com.tools20022.repository.choice.MarketClientSide3Choice.mmProprietary,
-					com.tools20022.repository.msg.SettlementDetails43.mmMarketClientSide, com.tools20022.repository.msg.SettlementDetails10.mmMarketClientSide, com.tools20022.repository.msg.SettlementDetails29.mmMarketClientSide,
-					com.tools20022.repository.msg.SettlementDetails5.mmMarketClientSide, com.tools20022.repository.msg.SettlementDetails25.mmMarketClientSide, com.tools20022.repository.msg.SettlementDetails26.mmMarketClientSide,
-					com.tools20022.repository.msg.SettlementDetails65.mmMarketClientSide, com.tools20022.repository.msg.SettlementDetails14.mmMarketClientSide, com.tools20022.repository.msg.SettlementDetails41.mmMarketClientSide,
-					com.tools20022.repository.msg.SettlementDetails61.mmMarketClientSide, com.tools20022.repository.msg.SettlementDetails59.mmMarketClientSide, com.tools20022.repository.msg.SettlementDetails15.mmMarketClientSide,
-					com.tools20022.repository.msg.SettlementDetails34.mmMarketClientSide, com.tools20022.repository.msg.SettlementDetails49.mmMarketClientSide, com.tools20022.repository.msg.SettlementDetails58.mmMarketClientSide,
-					com.tools20022.repository.msg.SettlementDetails36.mmMarketClientSide, com.tools20022.repository.msg.SettlementDetails67.mmMarketClientSide, com.tools20022.repository.msg.SettlementDetails70.mmMarketClientSide,
-					com.tools20022.repository.msg.SettlementDetails68.mmMarketClientSide, com.tools20022.repository.msg.SettlementDetails69.mmMarketClientSide, com.tools20022.repository.msg.SettlementDetails71.mmMarketClientSide,
-					com.tools20022.repository.msg.SettlementDetails72.mmMarketClientSide, com.tools20022.repository.msg.SettlementDetails75.mmMarketClientSide, com.tools20022.repository.msg.SettlementDetails73.mmMarketClientSide,
-					com.tools20022.repository.msg.SettlementDetails74.mmMarketClientSide, com.tools20022.repository.msg.SettlementDetails81.mmMarketClientSide, com.tools20022.repository.msg.SettlementDetails76.mmMarketClientSide,
-					com.tools20022.repository.msg.SettlementDetails80.mmMarketClientSide, com.tools20022.repository.msg.SettlementDetails78.mmMarketClientSide, com.tools20022.repository.msg.SettlementDetails77.mmMarketClientSide,
-					com.tools20022.repository.msg.SettlementDetails79.mmMarketClientSide, com.tools20022.repository.msg.SettlementDetails87.mmMarketClientSide, com.tools20022.repository.msg.SettlementDetails83.mmMarketClientSide,
-					com.tools20022.repository.msg.SettlementDetails86.mmMarketClientSide, com.tools20022.repository.msg.SettlementDetails85.mmMarketClientSide, com.tools20022.repository.msg.SettlementDetails93.mmMarketClientSide,
-					com.tools20022.repository.msg.SettlementDetails90.mmMarketClientSide, com.tools20022.repository.msg.SettlementDetails96.mmMarketClientSide, com.tools20022.repository.msg.SettlementDetails97.mmMarketClientSide,
-					com.tools20022.repository.msg.SettlementDetails99.mmMarketClientSide, com.tools20022.repository.msg.SettlementDetails94.mmMarketClientSide, com.tools20022.repository.choice.MarketClientSide4Choice.mmCode,
-					com.tools20022.repository.choice.MarketClientSide4Choice.mmProprietary, com.tools20022.repository.msg.SettlementDetails95.mmMarketClientSide, com.tools20022.repository.msg.SettlementDetails91.mmMarketClientSide,
-					com.tools20022.repository.msg.SettlementDetails92.mmMarketClientSide, com.tools20022.repository.msg.SettlementDetails98.mmMarketClientSide, com.tools20022.repository.msg.SettlementDetails101.mmMarketClientSide,
-					com.tools20022.repository.msg.SettlementDetails105.mmMarketClientSide, com.tools20022.repository.msg.SettlementDetails106.mmMarketClientSide, com.tools20022.repository.msg.SettlementDetails104.mmMarketClientSide,
-					com.tools20022.repository.msg.SettlementDetails111.mmMarketClientSide, com.tools20022.repository.msg.SettlementDetails112.mmMarketClientSide, com.tools20022.repository.msg.SettlementDetails110.mmMarketClientSide,
-					com.tools20022.repository.msg.SettlementDetails108.mmMarketClientSide, com.tools20022.repository.msg.SettlementDetails107.mmMarketClientSide, com.tools20022.repository.choice.MarketClientSide5Choice.mmCode,
-					com.tools20022.repository.choice.MarketClientSide5Choice.mmProprietary, com.tools20022.repository.msg.SettlementDetails115.mmMarketClientSide, com.tools20022.repository.msg.SettlementDetails117.mmMarketClientSide,
-					com.tools20022.repository.msg.SettlementDetails116.mmMarketClientSide, com.tools20022.repository.msg.SettlementDetails113.mmMarketClientSide, com.tools20022.repository.msg.SettlementDetails128.mmMarketClientSide,
-					com.tools20022.repository.msg.SettlementDetails120.mmMarketClientSide, com.tools20022.repository.msg.SettlementDetails119.mmMarketClientSide, com.tools20022.repository.msg.SettlementDetails125.mmMarketClientSide,
-					com.tools20022.repository.msg.SettlementDetails126.mmMarketClientSide, com.tools20022.repository.msg.SettlementDetails122.mmMarketClientSide, com.tools20022.repository.msg.SettlementDetails127.mmMarketClientSide,
-					com.tools20022.repository.msg.SettlementDetails121.mmMarketClientSide, com.tools20022.repository.msg.SettlementDetails134.mmMarketClientSide, com.tools20022.repository.msg.SettlementDetails137.mmMarketClientSide,
-					com.tools20022.repository.msg.SettlementDetails132.mmMarketClientSide, com.tools20022.repository.msg.SettlementDetails138.mmMarketClientSide, com.tools20022.repository.msg.SettlementDetails130.mmMarketClientSide,
-					com.tools20022.repository.msg.SettlementDetails131.mmMarketClientSide, com.tools20022.repository.msg.SettlementDetails133.mmMarketClientSide, com.tools20022.repository.msg.SettlementDetails139.mmMarketClientSide);
+			derivation_lazy = () -> Arrays.asList(MarketClientSide1Choice.mmCode, MarketClientSide1Choice.mmProprietary, SettlementDetails50.mmMarketClientSide, MarketClientSide2Choice.mmCode, MarketClientSide2Choice.mmProprietary,
+					SettlementDetails51.mmMarketClientSide, SettlementDetails9.mmMarketClientSide, SettlementDetails17.mmMarketClientSide, SettlementDetails30.mmMarketClientSide, SettlementDetails32.mmMarketClientSide,
+					SettlementDetails60.mmMarketClientSide, SettlementDetails64.mmMarketClientSide, SettlementDetails3.mmMarketClientSide, SettlementDetails16.mmMarketClientSide, SettlementDetails31.mmMarketClientSide,
+					SettlementDetails40.mmMarketClientSide, SettlementDetails62.mmMarketClientSide, SettlementDetails63.mmMarketClientSide, SettlementDetails6.mmMarketClientSide, SettlementDetails20.mmMarketClientSide,
+					SettlementDetails24.mmMarketClientSide, SettlementDetails33.mmMarketClientSide, SettlementDetails45.mmMarketClientSide, SettlementDetails54.mmMarketClientSide, SettlementDetails1.mmMarketClientSide,
+					SettlementDetails19.mmMarketClientSide, SettlementDetails22.mmMarketClientSide, SettlementDetails35.mmMarketClientSide, SettlementDetails42.mmMarketClientSide, SettlementDetails52.mmMarketClientSide,
+					SettlementDetails8.mmMarketClientSide, SettlementDetails11.mmMarketClientSide, SettlementDetails23.mmMarketClientSide, SettlementDetails37.mmMarketClientSide, SettlementDetails44.mmMarketClientSide,
+					SettlementDetails53.mmMarketClientSide, SettlementDetails7.mmMarketClientSide, SettlementDetails12.mmMarketClientSide, SettlementDetails28.mmMarketClientSide, SettlementDetails38.mmMarketClientSide,
+					SettlementDetails47.mmMarketClientSide, SettlementDetails56.mmMarketClientSide, SettlementDetails2.mmMarketClientSide, SettlementDetails13.mmMarketClientSide, SettlementDetails27.mmMarketClientSide,
+					SettlementDetails39.mmMarketClientSide, SettlementDetails48.mmMarketClientSide, SettlementDetails57.mmMarketClientSide, MarketClientSide3Choice.mmCode, MarketClientSide3Choice.mmProprietary,
+					SettlementDetails43.mmMarketClientSide, SettlementDetails10.mmMarketClientSide, SettlementDetails29.mmMarketClientSide, SettlementDetails5.mmMarketClientSide, SettlementDetails25.mmMarketClientSide,
+					SettlementDetails26.mmMarketClientSide, SettlementDetails65.mmMarketClientSide, SettlementDetails14.mmMarketClientSide, SettlementDetails41.mmMarketClientSide, SettlementDetails61.mmMarketClientSide,
+					SettlementDetails59.mmMarketClientSide, SettlementDetails15.mmMarketClientSide, SettlementDetails34.mmMarketClientSide, SettlementDetails49.mmMarketClientSide, SettlementDetails58.mmMarketClientSide,
+					SettlementDetails36.mmMarketClientSide, SettlementDetails67.mmMarketClientSide, SettlementDetails70.mmMarketClientSide, SettlementDetails68.mmMarketClientSide, SettlementDetails69.mmMarketClientSide,
+					SettlementDetails71.mmMarketClientSide, SettlementDetails72.mmMarketClientSide, SettlementDetails75.mmMarketClientSide, SettlementDetails73.mmMarketClientSide, SettlementDetails74.mmMarketClientSide,
+					SettlementDetails81.mmMarketClientSide, SettlementDetails76.mmMarketClientSide, SettlementDetails80.mmMarketClientSide, SettlementDetails78.mmMarketClientSide, SettlementDetails77.mmMarketClientSide,
+					SettlementDetails79.mmMarketClientSide, SettlementDetails87.mmMarketClientSide, SettlementDetails83.mmMarketClientSide, SettlementDetails86.mmMarketClientSide, SettlementDetails85.mmMarketClientSide,
+					SettlementDetails93.mmMarketClientSide, SettlementDetails90.mmMarketClientSide, SettlementDetails96.mmMarketClientSide, SettlementDetails97.mmMarketClientSide, SettlementDetails99.mmMarketClientSide,
+					SettlementDetails94.mmMarketClientSide, MarketClientSide4Choice.mmCode, MarketClientSide4Choice.mmProprietary, SettlementDetails95.mmMarketClientSide, SettlementDetails91.mmMarketClientSide,
+					SettlementDetails92.mmMarketClientSide, SettlementDetails98.mmMarketClientSide, SettlementDetails101.mmMarketClientSide, SettlementDetails105.mmMarketClientSide, SettlementDetails106.mmMarketClientSide,
+					SettlementDetails104.mmMarketClientSide, SettlementDetails111.mmMarketClientSide, SettlementDetails112.mmMarketClientSide, SettlementDetails110.mmMarketClientSide, SettlementDetails108.mmMarketClientSide,
+					SettlementDetails107.mmMarketClientSide, MarketClientSide5Choice.mmCode, MarketClientSide5Choice.mmProprietary, SettlementDetails115.mmMarketClientSide, SettlementDetails117.mmMarketClientSide,
+					SettlementDetails116.mmMarketClientSide, SettlementDetails113.mmMarketClientSide, SettlementDetails128.mmMarketClientSide, SettlementDetails120.mmMarketClientSide, SettlementDetails119.mmMarketClientSide,
+					SettlementDetails125.mmMarketClientSide, SettlementDetails126.mmMarketClientSide, SettlementDetails122.mmMarketClientSide, SettlementDetails127.mmMarketClientSide, SettlementDetails121.mmMarketClientSide,
+					SettlementDetails134.mmMarketClientSide, SettlementDetails137.mmMarketClientSide, SettlementDetails132.mmMarketClientSide, SettlementDetails138.mmMarketClientSide, SettlementDetails130.mmMarketClientSide,
+					SettlementDetails131.mmMarketClientSide, SettlementDetails133.mmMarketClientSide, SettlementDetails139.mmMarketClientSide);
 			elementContext_lazy = () -> SecuritiesSettlement.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MarketClientSide";
 			definition = "Specifies if an instruction is for a market side or a client side transaction.";
 			maxOccurs = 1;
@@ -7014,22 +6696,16 @@ public class SecuritiesSettlement extends Settlement {
 	 */
 	public static final MMBusinessAttribute mmTracking = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SettlementDetails50.mmTracking, com.tools20022.repository.msg.SettlementDetails51.mmTracking, com.tools20022.repository.msg.SettlementDetails3.mmTracking,
-					com.tools20022.repository.msg.SettlementDetails16.mmTracking, com.tools20022.repository.msg.SettlementDetails31.mmTracking, com.tools20022.repository.msg.SettlementDetails40.mmTracking,
-					com.tools20022.repository.msg.SettlementDetails62.mmTracking, com.tools20022.repository.msg.SettlementDetails63.mmTracking, com.tools20022.repository.msg.SettlementDetails1.mmTracking,
-					com.tools20022.repository.msg.SettlementDetails19.mmTracking, com.tools20022.repository.msg.SettlementDetails22.mmTracking, com.tools20022.repository.msg.SettlementDetails35.mmTracking,
-					com.tools20022.repository.msg.SettlementDetails42.mmTracking, com.tools20022.repository.msg.SettlementDetails52.mmTracking, com.tools20022.repository.msg.SettlementDetails43.mmTracking,
-					com.tools20022.repository.msg.SettlementDetails65.mmTracking, com.tools20022.repository.msg.SettlementDetails67.mmTracking, com.tools20022.repository.msg.SettlementDetails68.mmTracking,
-					com.tools20022.repository.msg.SettlementDetails72.mmTracking, com.tools20022.repository.msg.SettlementDetails81.mmTracking, com.tools20022.repository.msg.SettlementDetails78.mmTracking,
-					com.tools20022.repository.msg.SettlementDetails77.mmTracking, com.tools20022.repository.msg.SettlementDetails83.mmTracking, com.tools20022.repository.msg.SettlementDetails93.mmTracking,
-					com.tools20022.repository.msg.SettlementDetails97.mmTracking, com.tools20022.repository.msg.SettlementDetails94.mmTracking, com.tools20022.repository.msg.SettlementDetails101.mmTracking,
-					com.tools20022.repository.msg.SettlementDetails105.mmTracking, com.tools20022.repository.msg.SettlementDetails106.mmTracking, com.tools20022.repository.msg.SettlementDetails111.mmTracking,
-					com.tools20022.repository.msg.SettlementDetails112.mmTracking, com.tools20022.repository.msg.SettlementDetails113.mmTracking, com.tools20022.repository.msg.SettlementDetails120.mmTracking,
-					com.tools20022.repository.msg.SettlementDetails119.mmTracking, com.tools20022.repository.msg.SettlementDetails122.mmTracking, com.tools20022.repository.msg.SettlementDetails137.mmTracking,
-					com.tools20022.repository.msg.SettlementDetails132.mmTracking, com.tools20022.repository.msg.SettlementDetails138.mmTracking);
+			derivation_lazy = () -> Arrays.asList(SettlementDetails50.mmTracking, SettlementDetails51.mmTracking, SettlementDetails3.mmTracking, SettlementDetails16.mmTracking, SettlementDetails31.mmTracking,
+					SettlementDetails40.mmTracking, SettlementDetails62.mmTracking, SettlementDetails63.mmTracking, SettlementDetails1.mmTracking, SettlementDetails19.mmTracking, SettlementDetails22.mmTracking,
+					SettlementDetails35.mmTracking, SettlementDetails42.mmTracking, SettlementDetails52.mmTracking, SettlementDetails43.mmTracking, SettlementDetails65.mmTracking, SettlementDetails67.mmTracking,
+					SettlementDetails68.mmTracking, SettlementDetails72.mmTracking, SettlementDetails81.mmTracking, SettlementDetails78.mmTracking, SettlementDetails77.mmTracking, SettlementDetails83.mmTracking,
+					SettlementDetails93.mmTracking, SettlementDetails97.mmTracking, SettlementDetails94.mmTracking, SettlementDetails101.mmTracking, SettlementDetails105.mmTracking, SettlementDetails106.mmTracking,
+					SettlementDetails111.mmTracking, SettlementDetails112.mmTracking, SettlementDetails113.mmTracking, SettlementDetails120.mmTracking, SettlementDetails119.mmTracking, SettlementDetails122.mmTracking,
+					SettlementDetails137.mmTracking, SettlementDetails132.mmTracking, SettlementDetails138.mmTracking);
 			elementContext_lazy = () -> SecuritiesSettlement.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Tracking";
 			definition = "Specifies whether the loan and/or collateral is tracked.";
 			maxOccurs = 1;
@@ -7338,39 +7014,27 @@ public class SecuritiesSettlement extends Settlement {
 	 */
 	public static final MMBusinessAttribute mmLetterOfGuarantee = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.LetterOfGuarantee1Choice.mmIndicator, com.tools20022.repository.choice.LetterOfGuarantee1Choice.mmProprietary,
-					com.tools20022.repository.msg.SettlementDetails50.mmLetterOfGuarantee, com.tools20022.repository.choice.LetterOfGuarantee2Choice.mmIndicator, com.tools20022.repository.choice.LetterOfGuarantee2Choice.mmProprietary,
-					com.tools20022.repository.msg.SettlementDetails51.mmLetterOfGuarantee, com.tools20022.repository.msg.SettlementDetails6.mmLetterOfGuarantee, com.tools20022.repository.msg.SettlementDetails20.mmLetterOfGuarantee,
-					com.tools20022.repository.msg.SettlementDetails24.mmLetterOfGuarantee, com.tools20022.repository.msg.SettlementDetails33.mmLetterOfGuarantee, com.tools20022.repository.msg.SettlementDetails45.mmLetterOfGuarantee,
-					com.tools20022.repository.msg.SettlementDetails54.mmLetterOfGuarantee, com.tools20022.repository.msg.SettlementDetails1.mmLetterOfGuarantee, com.tools20022.repository.msg.SettlementDetails19.mmLetterOfGuarantee,
-					com.tools20022.repository.msg.SettlementDetails22.mmLetterOfGuarantee, com.tools20022.repository.msg.SettlementDetails35.mmLetterOfGuarantee, com.tools20022.repository.msg.SettlementDetails42.mmLetterOfGuarantee,
-					com.tools20022.repository.msg.SettlementDetails52.mmLetterOfGuarantee, com.tools20022.repository.msg.SettlementDetails8.mmLetterOfGuarantee, com.tools20022.repository.msg.SettlementDetails11.mmLetterOfGuarantee,
-					com.tools20022.repository.msg.SettlementDetails23.mmLetterOfGuarantee, com.tools20022.repository.msg.SettlementDetails37.mmLetterOfGuarantee, com.tools20022.repository.msg.SettlementDetails44.mmLetterOfGuarantee,
-					com.tools20022.repository.msg.SettlementDetails53.mmLetterOfGuarantee, com.tools20022.repository.msg.SettlementDetails7.mmLetterOfGuarantee, com.tools20022.repository.msg.SettlementDetails12.mmLetterOfGuarantee,
-					com.tools20022.repository.msg.SettlementDetails28.mmLetterOfGuarantee, com.tools20022.repository.msg.SettlementDetails38.mmLetterOfGuarantee, com.tools20022.repository.msg.SettlementDetails47.mmLetterOfGuarantee,
-					com.tools20022.repository.msg.SettlementDetails56.mmLetterOfGuarantee, com.tools20022.repository.msg.SettlementDetails2.mmLetterOfGuarantee, com.tools20022.repository.msg.SettlementDetails13.mmLetterOfGuarantee,
-					com.tools20022.repository.msg.SettlementDetails27.mmLetterOfGuarantee, com.tools20022.repository.msg.SettlementDetails39.mmLetterOfGuarantee, com.tools20022.repository.msg.SettlementDetails48.mmLetterOfGuarantee,
-					com.tools20022.repository.msg.SettlementDetails57.mmLetterOfGuarantee, com.tools20022.repository.choice.LetterOfGuarantee3Choice.mmIndicator, com.tools20022.repository.choice.LetterOfGuarantee3Choice.mmProprietary,
-					com.tools20022.repository.msg.SettlementDetails43.mmLetterOfGuarantee, com.tools20022.repository.msg.SettlementDetails5.mmLetterOfGuarantee, com.tools20022.repository.msg.SettlementDetails26.mmLetterOfGuarantee,
-					com.tools20022.repository.msg.SettlementDetails15.mmLetterOfGuarantee, com.tools20022.repository.msg.SettlementDetails36.mmLetterOfGuarantee, com.tools20022.repository.msg.SettlementDetails66.mmLetterOfGuarantee,
-					com.tools20022.repository.msg.SettlementDetails67.mmLetterOfGuarantee, com.tools20022.repository.msg.SettlementDetails70.mmLetterOfGuarantee, com.tools20022.repository.msg.SettlementDetails68.mmLetterOfGuarantee,
-					com.tools20022.repository.msg.SettlementDetails69.mmLetterOfGuarantee, com.tools20022.repository.msg.SettlementDetails75.mmLetterOfGuarantee, com.tools20022.repository.msg.SettlementDetails74.mmLetterOfGuarantee,
-					com.tools20022.repository.msg.SettlementDetails81.mmLetterOfGuarantee, com.tools20022.repository.msg.SettlementDetails80.mmLetterOfGuarantee, com.tools20022.repository.msg.SettlementDetails87.mmLetterOfGuarantee,
-					com.tools20022.repository.msg.SettlementDetails83.mmLetterOfGuarantee, com.tools20022.repository.msg.SettlementDetails86.mmLetterOfGuarantee, com.tools20022.repository.msg.SettlementDetails85.mmLetterOfGuarantee,
-					com.tools20022.repository.msg.SettlementDetails93.mmLetterOfGuarantee, com.tools20022.repository.msg.SettlementDetails90.mmLetterOfGuarantee, com.tools20022.repository.msg.SettlementDetails94.mmLetterOfGuarantee,
-					com.tools20022.repository.msg.SettlementDetails95.mmLetterOfGuarantee, com.tools20022.repository.msg.SettlementDetails91.mmLetterOfGuarantee, com.tools20022.repository.choice.LetterOfGuarantee4Choice.mmIndicator,
-					com.tools20022.repository.choice.LetterOfGuarantee4Choice.mmProprietary, com.tools20022.repository.msg.SettlementDetails92.mmLetterOfGuarantee, com.tools20022.repository.msg.SettlementDetails101.mmLetterOfGuarantee,
-					com.tools20022.repository.msg.SettlementDetails111.mmLetterOfGuarantee, com.tools20022.repository.msg.SettlementDetails112.mmLetterOfGuarantee, com.tools20022.repository.msg.SettlementDetails110.mmLetterOfGuarantee,
-					com.tools20022.repository.msg.SettlementDetails115.mmLetterOfGuarantee, com.tools20022.repository.choice.LetterOfGuarantee5Choice.mmIndicator, com.tools20022.repository.choice.LetterOfGuarantee5Choice.mmProprietary,
-					com.tools20022.repository.msg.SettlementDetails117.mmLetterOfGuarantee, com.tools20022.repository.msg.SettlementDetails116.mmLetterOfGuarantee, com.tools20022.repository.msg.SettlementDetails113.mmLetterOfGuarantee,
-					com.tools20022.repository.msg.SettlementDetails128.mmLetterOfGuarantee, com.tools20022.repository.msg.SettlementDetails120.mmLetterOfGuarantee, com.tools20022.repository.msg.SettlementDetails119.mmLetterOfGuarantee,
-					com.tools20022.repository.msg.SettlementDetails126.mmLetterOfGuarantee, com.tools20022.repository.msg.SettlementDetails122.mmLetterOfGuarantee, com.tools20022.repository.msg.SettlementDetails127.mmLetterOfGuarantee,
-					com.tools20022.repository.msg.SettlementDetails121.mmLetterOfGuarantee, com.tools20022.repository.msg.SettlementDetails134.mmLetterOfGuarantee, com.tools20022.repository.msg.SettlementDetails137.mmLetterOfGuarantee,
-					com.tools20022.repository.msg.SettlementDetails132.mmLetterOfGuarantee, com.tools20022.repository.msg.SettlementDetails138.mmLetterOfGuarantee, com.tools20022.repository.msg.SettlementDetails130.mmLetterOfGuarantee,
-					com.tools20022.repository.msg.SettlementDetails133.mmLetterOfGuarantee, com.tools20022.repository.msg.SettlementDetails139.mmLetterOfGuarantee);
+			derivation_lazy = () -> Arrays.asList(LetterOfGuarantee1Choice.mmIndicator, LetterOfGuarantee1Choice.mmProprietary, SettlementDetails50.mmLetterOfGuarantee, LetterOfGuarantee2Choice.mmIndicator,
+					LetterOfGuarantee2Choice.mmProprietary, SettlementDetails51.mmLetterOfGuarantee, SettlementDetails6.mmLetterOfGuarantee, SettlementDetails20.mmLetterOfGuarantee, SettlementDetails24.mmLetterOfGuarantee,
+					SettlementDetails33.mmLetterOfGuarantee, SettlementDetails45.mmLetterOfGuarantee, SettlementDetails54.mmLetterOfGuarantee, SettlementDetails1.mmLetterOfGuarantee, SettlementDetails19.mmLetterOfGuarantee,
+					SettlementDetails22.mmLetterOfGuarantee, SettlementDetails35.mmLetterOfGuarantee, SettlementDetails42.mmLetterOfGuarantee, SettlementDetails52.mmLetterOfGuarantee, SettlementDetails8.mmLetterOfGuarantee,
+					SettlementDetails11.mmLetterOfGuarantee, SettlementDetails23.mmLetterOfGuarantee, SettlementDetails37.mmLetterOfGuarantee, SettlementDetails44.mmLetterOfGuarantee, SettlementDetails53.mmLetterOfGuarantee,
+					SettlementDetails7.mmLetterOfGuarantee, SettlementDetails12.mmLetterOfGuarantee, SettlementDetails28.mmLetterOfGuarantee, SettlementDetails38.mmLetterOfGuarantee, SettlementDetails47.mmLetterOfGuarantee,
+					SettlementDetails56.mmLetterOfGuarantee, SettlementDetails2.mmLetterOfGuarantee, SettlementDetails13.mmLetterOfGuarantee, SettlementDetails27.mmLetterOfGuarantee, SettlementDetails39.mmLetterOfGuarantee,
+					SettlementDetails48.mmLetterOfGuarantee, SettlementDetails57.mmLetterOfGuarantee, LetterOfGuarantee3Choice.mmIndicator, LetterOfGuarantee3Choice.mmProprietary, SettlementDetails43.mmLetterOfGuarantee,
+					SettlementDetails5.mmLetterOfGuarantee, SettlementDetails26.mmLetterOfGuarantee, SettlementDetails15.mmLetterOfGuarantee, SettlementDetails36.mmLetterOfGuarantee, SettlementDetails66.mmLetterOfGuarantee,
+					SettlementDetails67.mmLetterOfGuarantee, SettlementDetails70.mmLetterOfGuarantee, SettlementDetails68.mmLetterOfGuarantee, SettlementDetails69.mmLetterOfGuarantee, SettlementDetails75.mmLetterOfGuarantee,
+					SettlementDetails74.mmLetterOfGuarantee, SettlementDetails81.mmLetterOfGuarantee, SettlementDetails80.mmLetterOfGuarantee, SettlementDetails87.mmLetterOfGuarantee, SettlementDetails83.mmLetterOfGuarantee,
+					SettlementDetails86.mmLetterOfGuarantee, SettlementDetails85.mmLetterOfGuarantee, SettlementDetails93.mmLetterOfGuarantee, SettlementDetails90.mmLetterOfGuarantee, SettlementDetails94.mmLetterOfGuarantee,
+					SettlementDetails95.mmLetterOfGuarantee, SettlementDetails91.mmLetterOfGuarantee, LetterOfGuarantee4Choice.mmIndicator, LetterOfGuarantee4Choice.mmProprietary, SettlementDetails92.mmLetterOfGuarantee,
+					SettlementDetails101.mmLetterOfGuarantee, SettlementDetails111.mmLetterOfGuarantee, SettlementDetails112.mmLetterOfGuarantee, SettlementDetails110.mmLetterOfGuarantee, SettlementDetails115.mmLetterOfGuarantee,
+					LetterOfGuarantee5Choice.mmIndicator, LetterOfGuarantee5Choice.mmProprietary, SettlementDetails117.mmLetterOfGuarantee, SettlementDetails116.mmLetterOfGuarantee, SettlementDetails113.mmLetterOfGuarantee,
+					SettlementDetails128.mmLetterOfGuarantee, SettlementDetails120.mmLetterOfGuarantee, SettlementDetails119.mmLetterOfGuarantee, SettlementDetails126.mmLetterOfGuarantee, SettlementDetails122.mmLetterOfGuarantee,
+					SettlementDetails127.mmLetterOfGuarantee, SettlementDetails121.mmLetterOfGuarantee, SettlementDetails134.mmLetterOfGuarantee, SettlementDetails137.mmLetterOfGuarantee, SettlementDetails132.mmLetterOfGuarantee,
+					SettlementDetails138.mmLetterOfGuarantee, SettlementDetails130.mmLetterOfGuarantee, SettlementDetails133.mmLetterOfGuarantee, SettlementDetails139.mmLetterOfGuarantee);
 			elementContext_lazy = () -> SecuritiesSettlement.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "LetterOfGuarantee";
 			definition = "Specifies whether physical settlement may be executed using a letter of guarantee or if the physical certificates should be used.";
 			maxOccurs = 1;
@@ -7709,58 +7373,35 @@ public class SecuritiesSettlement extends Settlement {
 	 */
 	public static final MMBusinessAttribute mmEligibleForCollateral = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SettlementDetails50.mmEligibleForCollateral, com.tools20022.repository.msg.SettlementDetails51.mmEligibleForCollateral,
-					com.tools20022.repository.msg.CorporateActionOption5.mmEligibleForCollateralIndicator, com.tools20022.repository.msg.CorporateActionOption13.mmEligibleForCollateralIndicator,
-					com.tools20022.repository.msg.CorporateActionOption25.mmEligibleForCollateralIndicator, com.tools20022.repository.msg.CorporateActionOption30.mmEligibleForCollateralIndicator,
-					com.tools20022.repository.msg.CorporateActionOption38.mmEligibleForCollateralIndicator, com.tools20022.repository.msg.CorporateActionOption47.mmEligibleForCollateralIndicator,
-					com.tools20022.repository.msg.CorporateActionOption57.mmEligibleForCollateralIndicator, com.tools20022.repository.msg.CorporateActionOption58.mmEligibleForCollateralIndicator,
-					com.tools20022.repository.msg.SettlementDetails9.mmEligibleForCollateral, com.tools20022.repository.msg.SettlementDetails17.mmEligibleForCollateral,
-					com.tools20022.repository.msg.SettlementDetails30.mmEligibleForCollateral, com.tools20022.repository.msg.SettlementDetails32.mmEligibleForCollateral,
-					com.tools20022.repository.msg.SettlementDetails60.mmEligibleForCollateral, com.tools20022.repository.msg.SettlementDetails64.mmEligibleForCollateral,
-					com.tools20022.repository.msg.SettlementDetails3.mmEligibleForCollateral, com.tools20022.repository.msg.SettlementDetails16.mmEligibleForCollateral,
-					com.tools20022.repository.msg.SettlementDetails31.mmEligibleForCollateral, com.tools20022.repository.msg.SettlementDetails40.mmEligibleForCollateral,
-					com.tools20022.repository.msg.SettlementDetails62.mmEligibleForCollateral, com.tools20022.repository.msg.SettlementDetails63.mmEligibleForCollateral,
-					com.tools20022.repository.msg.SettlementDetails6.mmEligibleForCollateral, com.tools20022.repository.msg.SettlementDetails20.mmEligibleForCollateral,
-					com.tools20022.repository.msg.SettlementDetails24.mmEligibleForCollateral, com.tools20022.repository.msg.SettlementDetails33.mmEligibleForCollateral,
-					com.tools20022.repository.msg.SettlementDetails45.mmEligibleForCollateral, com.tools20022.repository.msg.SettlementDetails54.mmEligibleForCollateral,
-					com.tools20022.repository.msg.SettlementDetails1.mmEligibleForCollateral, com.tools20022.repository.msg.SettlementDetails19.mmEligibleForCollateral,
-					com.tools20022.repository.msg.SettlementDetails22.mmEligibleForCollateral, com.tools20022.repository.msg.SettlementDetails35.mmEligibleForCollateral,
-					com.tools20022.repository.msg.SettlementDetails42.mmEligibleForCollateral, com.tools20022.repository.msg.SettlementDetails52.mmEligibleForCollateral,
-					com.tools20022.repository.msg.SettlementDetails8.mmEligibleForCollateral, com.tools20022.repository.msg.SettlementDetails11.mmEligibleForCollateral,
-					com.tools20022.repository.msg.SettlementDetails23.mmEligibleForCollateral, com.tools20022.repository.msg.SettlementDetails37.mmEligibleForCollateral,
-					com.tools20022.repository.msg.SettlementDetails44.mmEligibleForCollateral, com.tools20022.repository.msg.SettlementDetails53.mmEligibleForCollateral,
-					com.tools20022.repository.msg.SettlementDetails43.mmEligibleForCollateral, com.tools20022.repository.msg.SettlementDetails10.mmEligibleForCollateral,
-					com.tools20022.repository.msg.SettlementDetails29.mmEligibleForCollateral, com.tools20022.repository.msg.SettlementDetails26.mmEligibleForCollateral,
-					com.tools20022.repository.msg.SettlementDetails65.mmEligibleForCollateral, com.tools20022.repository.msg.SettlementDetails14.mmEligibleForCollateral,
-					com.tools20022.repository.msg.SettlementDetails41.mmEligibleForCollateral, com.tools20022.repository.msg.SettlementDetails61.mmEligibleForCollateral,
-					com.tools20022.repository.msg.SettlementDetails59.mmEligibleForCollateral, com.tools20022.repository.msg.SettlementDetails36.mmEligibleForCollateral,
-					com.tools20022.repository.msg.SettlementDetails67.mmEligibleForCollateral, com.tools20022.repository.msg.SettlementDetails70.mmEligibleForCollateral,
-					com.tools20022.repository.msg.SettlementDetails68.mmEligibleForCollateral, com.tools20022.repository.msg.SettlementDetails69.mmEligibleForCollateral,
-					com.tools20022.repository.msg.SettlementDetails71.mmEligibleForCollateral, com.tools20022.repository.msg.SettlementDetails72.mmEligibleForCollateral,
-					com.tools20022.repository.msg.SettlementDetails73.mmEligibleForCollateral, com.tools20022.repository.msg.CorporateActionOption103.mmEligibleForCollateralIndicator,
-					com.tools20022.repository.msg.CorporateActionOption107.mmEligibleForCollateralIndicator, com.tools20022.repository.msg.SettlementDetails81.mmEligibleForCollateral,
-					com.tools20022.repository.msg.SettlementDetails76.mmEligibleForCollateral, com.tools20022.repository.msg.SettlementDetails80.mmEligibleForCollateral,
-					com.tools20022.repository.msg.SettlementDetails78.mmEligibleForCollateral, com.tools20022.repository.msg.SettlementDetails77.mmEligibleForCollateral,
-					com.tools20022.repository.msg.SettlementDetails79.mmEligibleForCollateral, com.tools20022.repository.msg.SettlementDetails83.mmEligibleForCollateral,
-					com.tools20022.repository.msg.SettlementDetails85.mmEligibleForCollateral, com.tools20022.repository.msg.SettlementDetails93.mmEligibleForCollateral,
-					com.tools20022.repository.msg.SettlementDetails90.mmEligibleForCollateral, com.tools20022.repository.msg.SettlementDetails96.mmEligibleForCollateral,
-					com.tools20022.repository.msg.SettlementDetails97.mmEligibleForCollateral, com.tools20022.repository.msg.SettlementDetails94.mmEligibleForCollateral,
-					com.tools20022.repository.msg.SettlementDetails95.mmEligibleForCollateral, com.tools20022.repository.msg.SettlementDetails98.mmEligibleForCollateral,
-					com.tools20022.repository.msg.CorporateActionOption118.mmEligibleForCollateralIndicator, com.tools20022.repository.msg.SettlementDetails101.mmEligibleForCollateral,
-					com.tools20022.repository.msg.CorporateActionOption123.mmEligibleForCollateralIndicator, com.tools20022.repository.msg.SettlementDetails105.mmEligibleForCollateral,
-					com.tools20022.repository.msg.SettlementDetails106.mmEligibleForCollateral, com.tools20022.repository.msg.SettlementDetails104.mmEligibleForCollateral,
-					com.tools20022.repository.msg.SettlementDetails111.mmEligibleForCollateral, com.tools20022.repository.msg.SettlementDetails112.mmEligibleForCollateral,
-					com.tools20022.repository.msg.SettlementDetails110.mmEligibleForCollateral, com.tools20022.repository.msg.SettlementDetails107.mmEligibleForCollateral,
-					com.tools20022.repository.msg.SettlementDetails115.mmEligibleForCollateral, com.tools20022.repository.msg.SettlementDetails113.mmEligibleForCollateral,
-					com.tools20022.repository.msg.CorporateActionOption131.mmEligibleForCollateralIndicator, com.tools20022.repository.msg.SettlementDetails128.mmEligibleForCollateral,
-					com.tools20022.repository.msg.SettlementDetails120.mmEligibleForCollateral, com.tools20022.repository.msg.SettlementDetails119.mmEligibleForCollateral,
-					com.tools20022.repository.msg.SettlementDetails122.mmEligibleForCollateral, com.tools20022.repository.msg.SettlementDetails121.mmEligibleForCollateral,
-					com.tools20022.repository.msg.CorporateActionOption134.mmEligibleForCollateralIndicator, com.tools20022.repository.msg.SettlementDetails134.mmEligibleForCollateral,
-					com.tools20022.repository.msg.SettlementDetails137.mmEligibleForCollateral, com.tools20022.repository.msg.SettlementDetails132.mmEligibleForCollateral,
-					com.tools20022.repository.msg.SettlementDetails138.mmEligibleForCollateral, com.tools20022.repository.msg.SettlementDetails133.mmEligibleForCollateral);
+			derivation_lazy = () -> Arrays.asList(SettlementDetails50.mmEligibleForCollateral, SettlementDetails51.mmEligibleForCollateral, CorporateActionOption5.mmEligibleForCollateralIndicator,
+					CorporateActionOption13.mmEligibleForCollateralIndicator, CorporateActionOption25.mmEligibleForCollateralIndicator, CorporateActionOption30.mmEligibleForCollateralIndicator,
+					CorporateActionOption38.mmEligibleForCollateralIndicator, CorporateActionOption47.mmEligibleForCollateralIndicator, CorporateActionOption57.mmEligibleForCollateralIndicator,
+					CorporateActionOption58.mmEligibleForCollateralIndicator, SettlementDetails9.mmEligibleForCollateral, SettlementDetails17.mmEligibleForCollateral, SettlementDetails30.mmEligibleForCollateral,
+					SettlementDetails32.mmEligibleForCollateral, SettlementDetails60.mmEligibleForCollateral, SettlementDetails64.mmEligibleForCollateral, SettlementDetails3.mmEligibleForCollateral,
+					SettlementDetails16.mmEligibleForCollateral, SettlementDetails31.mmEligibleForCollateral, SettlementDetails40.mmEligibleForCollateral, SettlementDetails62.mmEligibleForCollateral,
+					SettlementDetails63.mmEligibleForCollateral, SettlementDetails6.mmEligibleForCollateral, SettlementDetails20.mmEligibleForCollateral, SettlementDetails24.mmEligibleForCollateral,
+					SettlementDetails33.mmEligibleForCollateral, SettlementDetails45.mmEligibleForCollateral, SettlementDetails54.mmEligibleForCollateral, SettlementDetails1.mmEligibleForCollateral,
+					SettlementDetails19.mmEligibleForCollateral, SettlementDetails22.mmEligibleForCollateral, SettlementDetails35.mmEligibleForCollateral, SettlementDetails42.mmEligibleForCollateral,
+					SettlementDetails52.mmEligibleForCollateral, SettlementDetails8.mmEligibleForCollateral, SettlementDetails11.mmEligibleForCollateral, SettlementDetails23.mmEligibleForCollateral,
+					SettlementDetails37.mmEligibleForCollateral, SettlementDetails44.mmEligibleForCollateral, SettlementDetails53.mmEligibleForCollateral, SettlementDetails43.mmEligibleForCollateral,
+					SettlementDetails10.mmEligibleForCollateral, SettlementDetails29.mmEligibleForCollateral, SettlementDetails26.mmEligibleForCollateral, SettlementDetails65.mmEligibleForCollateral,
+					SettlementDetails14.mmEligibleForCollateral, SettlementDetails41.mmEligibleForCollateral, SettlementDetails61.mmEligibleForCollateral, SettlementDetails59.mmEligibleForCollateral,
+					SettlementDetails36.mmEligibleForCollateral, SettlementDetails67.mmEligibleForCollateral, SettlementDetails70.mmEligibleForCollateral, SettlementDetails68.mmEligibleForCollateral,
+					SettlementDetails69.mmEligibleForCollateral, SettlementDetails71.mmEligibleForCollateral, SettlementDetails72.mmEligibleForCollateral, SettlementDetails73.mmEligibleForCollateral,
+					CorporateActionOption103.mmEligibleForCollateralIndicator, CorporateActionOption107.mmEligibleForCollateralIndicator, SettlementDetails81.mmEligibleForCollateral, SettlementDetails76.mmEligibleForCollateral,
+					SettlementDetails80.mmEligibleForCollateral, SettlementDetails78.mmEligibleForCollateral, SettlementDetails77.mmEligibleForCollateral, SettlementDetails79.mmEligibleForCollateral,
+					SettlementDetails83.mmEligibleForCollateral, SettlementDetails85.mmEligibleForCollateral, SettlementDetails93.mmEligibleForCollateral, SettlementDetails90.mmEligibleForCollateral,
+					SettlementDetails96.mmEligibleForCollateral, SettlementDetails97.mmEligibleForCollateral, SettlementDetails94.mmEligibleForCollateral, SettlementDetails95.mmEligibleForCollateral,
+					SettlementDetails98.mmEligibleForCollateral, CorporateActionOption118.mmEligibleForCollateralIndicator, SettlementDetails101.mmEligibleForCollateral, CorporateActionOption123.mmEligibleForCollateralIndicator,
+					SettlementDetails105.mmEligibleForCollateral, SettlementDetails106.mmEligibleForCollateral, SettlementDetails104.mmEligibleForCollateral, SettlementDetails111.mmEligibleForCollateral,
+					SettlementDetails112.mmEligibleForCollateral, SettlementDetails110.mmEligibleForCollateral, SettlementDetails107.mmEligibleForCollateral, SettlementDetails115.mmEligibleForCollateral,
+					SettlementDetails113.mmEligibleForCollateral, CorporateActionOption131.mmEligibleForCollateralIndicator, SettlementDetails128.mmEligibleForCollateral, SettlementDetails120.mmEligibleForCollateral,
+					SettlementDetails119.mmEligibleForCollateral, SettlementDetails122.mmEligibleForCollateral, SettlementDetails121.mmEligibleForCollateral, CorporateActionOption134.mmEligibleForCollateralIndicator,
+					SettlementDetails134.mmEligibleForCollateral, SettlementDetails137.mmEligibleForCollateral, SettlementDetails132.mmEligibleForCollateral, SettlementDetails138.mmEligibleForCollateral,
+					SettlementDetails133.mmEligibleForCollateral);
 			elementContext_lazy = () -> SecuritiesSettlement.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "EligibleForCollateral";
 			definition = "Specifies whether securities should be included in the pool of securities eligible for collateral purposes.";
 			maxOccurs = 1;
@@ -7880,22 +7521,16 @@ public class SecuritiesSettlement extends Settlement {
 	 */
 	public static final MMBusinessAttribute mmAccruedInterestIndicator = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AmountAndDirection32.mmAccruedInterestIndicator, com.tools20022.repository.msg.AmountAndDirection33.mmAccruedInterestIndicator,
-					com.tools20022.repository.msg.CorporateAction3.mmAccruedInterestIndicator, com.tools20022.repository.msg.CorporateAction4.mmAccruedInterestIndicator,
-					com.tools20022.repository.msg.CorporateAction5.mmAccruedInterestIndicator, com.tools20022.repository.msg.CorporateAction6.mmAccruedInterestIndicator,
-					com.tools20022.repository.msg.CorporateAction7.mmAccruedInterestIndicator, com.tools20022.repository.msg.CorporateAction8.mmAccruedInterestIndicator,
-					com.tools20022.repository.msg.CorporateAction10.mmAccruedInterestIndicator, com.tools20022.repository.msg.CorporateAction11.mmAccruedInterestIndicator,
-					com.tools20022.repository.msg.AmountAndDirection2.mmAccruedInterestIndicator, com.tools20022.repository.msg.AmountAndDirection16.mmAccruedInterestIndicator,
-					com.tools20022.repository.msg.AmountAndDirection28.mmAccruedInterestIndicator, com.tools20022.repository.msg.AmountAndDirection36.mmAccruedInterestIndicator,
-					com.tools20022.repository.msg.AmountAndDirection37.mmAccruedInterestIndicator, com.tools20022.repository.msg.CorporateAction12.mmAccruedInterestIndicator,
-					com.tools20022.repository.msg.CorporateAction17.mmAccruedInterestIndicator, com.tools20022.repository.msg.AmountAndDirection38.mmAccruedInterestIndicator,
-					com.tools20022.repository.msg.AmountAndDirection40.mmAccruedInterestIndicator, com.tools20022.repository.msg.AmountAndDirection46.mmAccruedInterestIndicator,
-					com.tools20022.repository.msg.AmountAndDirection45.mmAccruedInterestIndicator, com.tools20022.repository.msg.CorporateAction31.mmAccruedInterestIndicator,
-					com.tools20022.repository.msg.CorporateAction40.mmAccruedInterestIndicator, com.tools20022.repository.msg.AmountAndDirection60.mmAccruedInterestIndicator,
-					com.tools20022.repository.msg.AmountAndDirection85.mmAccruedInterestIndicator);
+			derivation_lazy = () -> Arrays.asList(AmountAndDirection32.mmAccruedInterestIndicator, AmountAndDirection33.mmAccruedInterestIndicator, CorporateAction3.mmAccruedInterestIndicator, CorporateAction4.mmAccruedInterestIndicator,
+					CorporateAction5.mmAccruedInterestIndicator, CorporateAction6.mmAccruedInterestIndicator, CorporateAction7.mmAccruedInterestIndicator, CorporateAction8.mmAccruedInterestIndicator,
+					CorporateAction10.mmAccruedInterestIndicator, CorporateAction11.mmAccruedInterestIndicator, AmountAndDirection2.mmAccruedInterestIndicator, AmountAndDirection16.mmAccruedInterestIndicator,
+					AmountAndDirection28.mmAccruedInterestIndicator, AmountAndDirection36.mmAccruedInterestIndicator, AmountAndDirection37.mmAccruedInterestIndicator, CorporateAction12.mmAccruedInterestIndicator,
+					CorporateAction17.mmAccruedInterestIndicator, AmountAndDirection38.mmAccruedInterestIndicator, AmountAndDirection40.mmAccruedInterestIndicator, AmountAndDirection46.mmAccruedInterestIndicator,
+					AmountAndDirection45.mmAccruedInterestIndicator, CorporateAction31.mmAccruedInterestIndicator, CorporateAction40.mmAccruedInterestIndicator, AmountAndDirection60.mmAccruedInterestIndicator,
+					AmountAndDirection85.mmAccruedInterestIndicator);
 			elementContext_lazy = () -> SecuritiesSettlement.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AccruedInterestIndicator";
 			definition = "Indicates whether the net proceeds include interest accrued on the financial instrument.";
 			maxOccurs = 1;
@@ -8006,17 +7641,14 @@ public class SecuritiesSettlement extends Settlement {
 	 */
 	public static final MMBusinessAttribute mmPreConfirmation = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AdditionalParameters2.mmPreConfirmation, com.tools20022.repository.msg.AdditionalParameters6.mmPreConfirmation,
-					com.tools20022.repository.msg.AdditionalParameters12.mmPreConfirmation, com.tools20022.repository.msg.AdditionalParameters13.mmPreConfirmation, com.tools20022.repository.msg.AdditionalParameters18.mmPreConfirmation,
-					com.tools20022.repository.msg.AdditionalParameters19.mmPreConfirmation, com.tools20022.repository.msg.AdditionalParameters17.mmPreConfirmation, com.tools20022.repository.msg.AdditionalParameters20.mmPreConfirmation,
-					com.tools20022.repository.msg.AdditionalParameters4.mmPreConfirmation, com.tools20022.repository.msg.AdditionalParameters5.mmPreConfirmation, com.tools20022.repository.msg.AdditionalParameters14.mmPreConfirmation,
-					com.tools20022.repository.msg.AdditionalParameters15.mmPreConfirmation, com.tools20022.repository.msg.AdditionalParameters23.mmPreConfirmation, com.tools20022.repository.msg.AdditionalParameters24.mmPreConfirmation,
-					com.tools20022.repository.msg.AdditionalParameters22.mmPreConfirmation, com.tools20022.repository.msg.AdditionalParameters26.mmPreConfirmation, com.tools20022.repository.msg.AdditionalParameters28.mmPreConfirmation,
-					com.tools20022.repository.msg.AdditionalParameters27.mmPreConfirmation, com.tools20022.repository.msg.AdditionalParameters29.mmPreConfirmation, com.tools20022.repository.msg.AdditionalParameters30.mmPreConfirmation,
-					com.tools20022.repository.msg.AdditionalParameters31.mmPreConfirmation, com.tools20022.repository.msg.AdditionalParameters32.mmPreConfirmation);
+			derivation_lazy = () -> Arrays.asList(AdditionalParameters2.mmPreConfirmation, AdditionalParameters6.mmPreConfirmation, AdditionalParameters12.mmPreConfirmation, AdditionalParameters13.mmPreConfirmation,
+					AdditionalParameters18.mmPreConfirmation, AdditionalParameters19.mmPreConfirmation, AdditionalParameters17.mmPreConfirmation, AdditionalParameters20.mmPreConfirmation, AdditionalParameters4.mmPreConfirmation,
+					AdditionalParameters5.mmPreConfirmation, AdditionalParameters14.mmPreConfirmation, AdditionalParameters15.mmPreConfirmation, AdditionalParameters23.mmPreConfirmation, AdditionalParameters24.mmPreConfirmation,
+					AdditionalParameters22.mmPreConfirmation, AdditionalParameters26.mmPreConfirmation, AdditionalParameters28.mmPreConfirmation, AdditionalParameters27.mmPreConfirmation, AdditionalParameters29.mmPreConfirmation,
+					AdditionalParameters30.mmPreConfirmation, AdditionalParameters31.mmPreConfirmation, AdditionalParameters32.mmPreConfirmation);
 			elementContext_lazy = () -> SecuritiesSettlement.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PreConfirmation";
 			definition = "Pre-confirmation of the cash transfer pending the securities transfer, or vice versa.";
 			maxOccurs = 1;
@@ -8472,55 +8104,36 @@ public class SecuritiesSettlement extends Settlement {
 	 */
 	public static final MMBusinessAttribute mmSecuritiesRealTimeGrossSettlement = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SecuritiesRTGS1Choice.mmIndicator, com.tools20022.repository.choice.SecuritiesRTGS1Choice.mmProprietary,
-					com.tools20022.repository.msg.SettlementDetails9.mmSecuritiesRTGS, com.tools20022.repository.choice.SecuritiesRTGS2Choice.mmIndicator, com.tools20022.repository.choice.SecuritiesRTGS2Choice.mmProprietary,
-					com.tools20022.repository.msg.SettlementDetails17.mmSecuritiesRTGS, com.tools20022.repository.msg.SettlementDetails30.mmSecuritiesRTGS, com.tools20022.repository.msg.SettlementDetails32.mmSecuritiesRTGS,
-					com.tools20022.repository.msg.SettlementDetails60.mmSecuritiesRTGS, com.tools20022.repository.msg.SettlementDetails64.mmSecuritiesRTGS, com.tools20022.repository.msg.SettlementDetails3.mmSecuritiesRTGS,
-					com.tools20022.repository.msg.SettlementDetails16.mmSecuritiesRTGS, com.tools20022.repository.msg.SettlementDetails31.mmSecuritiesRTGS, com.tools20022.repository.msg.SettlementDetails40.mmSecuritiesRTGS,
-					com.tools20022.repository.msg.SettlementDetails62.mmSecuritiesRTGS, com.tools20022.repository.msg.SettlementDetails63.mmSecuritiesRTGS, com.tools20022.repository.msg.RequestDetails1.mmSecuritiesRTGS,
-					com.tools20022.repository.msg.RequestDetails2.mmSecuritiesRTGS, com.tools20022.repository.msg.RequestDetails6.mmSecuritiesRTGS, com.tools20022.repository.msg.RequestDetails7.mmSecuritiesRTGS,
-					com.tools20022.repository.msg.RequestDetails8.mmSecuritiesRTGS, com.tools20022.repository.msg.RequestDetails9.mmSecuritiesRTGS, com.tools20022.repository.msg.RequestDetails11.mmSecuritiesRTGS,
-					com.tools20022.repository.msg.RequestDetails12.mmSecuritiesRTGS, com.tools20022.repository.msg.SettlementDetails6.mmSecuritiesRTGS, com.tools20022.repository.msg.SettlementDetails20.mmSecuritiesRTGS,
-					com.tools20022.repository.msg.SettlementDetails24.mmSecuritiesRTGS, com.tools20022.repository.msg.SettlementDetails33.mmSecuritiesRTGS, com.tools20022.repository.msg.SettlementDetails45.mmSecuritiesRTGS,
-					com.tools20022.repository.msg.SettlementDetails54.mmSecuritiesRTGS, com.tools20022.repository.msg.SettlementDetails1.mmSecuritiesRTGS, com.tools20022.repository.msg.SettlementDetails19.mmSecuritiesRTGS,
-					com.tools20022.repository.msg.SettlementDetails22.mmSecuritiesRTGS, com.tools20022.repository.msg.SettlementDetails35.mmSecuritiesRTGS, com.tools20022.repository.msg.SettlementDetails42.mmSecuritiesRTGS,
-					com.tools20022.repository.msg.SettlementDetails52.mmSecuritiesRTGS, com.tools20022.repository.msg.SettlementDetails8.mmSecuritiesRTGS, com.tools20022.repository.msg.SettlementDetails11.mmSecuritiesRTGS,
-					com.tools20022.repository.msg.SettlementDetails23.mmSecuritiesRTGS, com.tools20022.repository.msg.SettlementDetails37.mmSecuritiesRTGS, com.tools20022.repository.msg.SettlementDetails44.mmSecuritiesRTGS,
-					com.tools20022.repository.msg.SettlementDetails53.mmSecuritiesRTGS, com.tools20022.repository.msg.SettlementDetails7.mmSecuritiesRTGS, com.tools20022.repository.msg.SettlementDetails12.mmSecuritiesRTGS,
-					com.tools20022.repository.msg.SettlementDetails28.mmSecuritiesRTGS, com.tools20022.repository.msg.SettlementDetails38.mmSecuritiesRTGS, com.tools20022.repository.msg.SettlementDetails47.mmSecuritiesRTGS,
-					com.tools20022.repository.msg.SettlementDetails56.mmSecuritiesRTGS, com.tools20022.repository.msg.SettlementDetails2.mmSecuritiesRTGS, com.tools20022.repository.msg.SettlementDetails13.mmSecuritiesRTGS,
-					com.tools20022.repository.msg.SettlementDetails27.mmSecuritiesRTGS, com.tools20022.repository.msg.SettlementDetails39.mmSecuritiesRTGS, com.tools20022.repository.msg.SettlementDetails48.mmSecuritiesRTGS,
-					com.tools20022.repository.msg.SettlementDetails57.mmSecuritiesRTGS, com.tools20022.repository.choice.SecuritiesRTGS3Choice.mmIndicator, com.tools20022.repository.choice.SecuritiesRTGS3Choice.mmProprietary,
-					com.tools20022.repository.msg.SettlementDetails43.mmSecuritiesRTGS, com.tools20022.repository.msg.SettlementDetails4.mmSecuritiesRTGS, com.tools20022.repository.msg.SettlementDetails10.mmSecuritiesRTGS,
-					com.tools20022.repository.msg.SettlementDetails29.mmSecuritiesRTGS, com.tools20022.repository.msg.SettlementDetails5.mmSecuritiesRTGS, com.tools20022.repository.msg.SettlementDetails25.mmSecuritiesRTGS,
-					com.tools20022.repository.msg.SettlementDetails26.mmSecuritiesRTGS, com.tools20022.repository.msg.SettlementDetails65.mmSecuritiesRTGS, com.tools20022.repository.msg.SettlementDetails14.mmSecuritiesRTGS,
-					com.tools20022.repository.msg.SettlementDetails41.mmSecuritiesRTGS, com.tools20022.repository.msg.SettlementDetails61.mmSecuritiesRTGS, com.tools20022.repository.msg.SettlementDetails59.mmSecuritiesRTGS,
-					com.tools20022.repository.msg.SettlementDetails15.mmSecuritiesRTGS, com.tools20022.repository.msg.SettlementDetails34.mmSecuritiesRTGS, com.tools20022.repository.msg.SettlementDetails49.mmSecuritiesRTGS,
-					com.tools20022.repository.msg.SettlementDetails58.mmSecuritiesRTGS, com.tools20022.repository.msg.SettlementDetails36.mmSecuritiesRTGS, com.tools20022.repository.msg.SettlementDetails18.mmSecuritiesRTGS,
-					com.tools20022.repository.msg.SettlementDetails66.mmSecuritiesRTGS, com.tools20022.repository.msg.SettlementDetails67.mmSecuritiesRTGS, com.tools20022.repository.msg.SettlementDetails70.mmSecuritiesRTGS,
-					com.tools20022.repository.msg.SettlementDetails69.mmSecuritiesRTGS, com.tools20022.repository.msg.SettlementDetails71.mmSecuritiesRTGS, com.tools20022.repository.msg.SettlementDetails72.mmSecuritiesRTGS,
-					com.tools20022.repository.msg.SettlementDetails75.mmSecuritiesRTGS, com.tools20022.repository.msg.SettlementDetails73.mmSecuritiesRTGS, com.tools20022.repository.msg.SettlementDetails74.mmSecuritiesRTGS,
-					com.tools20022.repository.msg.RequestDetails13.mmSecuritiesRTGS, com.tools20022.repository.msg.SettlementDetails81.mmSecuritiesRTGS, com.tools20022.repository.msg.SettlementDetails76.mmSecuritiesRTGS,
-					com.tools20022.repository.msg.SettlementDetails80.mmSecuritiesRTGS, com.tools20022.repository.msg.SettlementDetails78.mmSecuritiesRTGS, com.tools20022.repository.msg.SettlementDetails77.mmSecuritiesRTGS,
-					com.tools20022.repository.msg.RequestDetails14.mmSecuritiesRTGS, com.tools20022.repository.msg.SettlementDetails79.mmSecuritiesRTGS, com.tools20022.repository.msg.SettlementDetails87.mmSecuritiesRTGS,
-					com.tools20022.repository.msg.SettlementDetails86.mmSecuritiesRTGS, com.tools20022.repository.msg.SettlementDetails85.mmSecuritiesRTGS, com.tools20022.repository.msg.SettlementDetails93.mmSecuritiesRTGS,
-					com.tools20022.repository.msg.RequestDetails15.mmSecuritiesRTGS, com.tools20022.repository.msg.SettlementDetails90.mmSecuritiesRTGS, com.tools20022.repository.msg.SettlementDetails96.mmSecuritiesRTGS,
-					com.tools20022.repository.msg.SettlementDetails97.mmSecuritiesRTGS, com.tools20022.repository.msg.SettlementDetails99.mmSecuritiesRTGS, com.tools20022.repository.msg.SettlementDetails100.mmSecuritiesRTGS,
-					com.tools20022.repository.choice.SecuritiesRTGS4Choice.mmIndicator, com.tools20022.repository.choice.SecuritiesRTGS4Choice.mmProprietary, com.tools20022.repository.msg.SettlementDetails95.mmSecuritiesRTGS,
-					com.tools20022.repository.msg.SettlementDetails91.mmSecuritiesRTGS, com.tools20022.repository.msg.SettlementDetails92.mmSecuritiesRTGS, com.tools20022.repository.msg.SettlementDetails98.mmSecuritiesRTGS,
-					com.tools20022.repository.msg.SettlementDetails101.mmSecuritiesRTGS, com.tools20022.repository.msg.SettlementDetails105.mmSecuritiesRTGS, com.tools20022.repository.msg.SettlementDetails106.mmSecuritiesRTGS,
-					com.tools20022.repository.msg.SettlementDetails104.mmSecuritiesRTGS, com.tools20022.repository.msg.SettlementDetails111.mmSecuritiesRTGS, com.tools20022.repository.msg.RequestDetails16.mmSecuritiesRTGS,
-					com.tools20022.repository.msg.SettlementDetails112.mmSecuritiesRTGS, com.tools20022.repository.msg.SettlementDetails110.mmSecuritiesRTGS, com.tools20022.repository.msg.SettlementDetails108.mmSecuritiesRTGS,
-					com.tools20022.repository.msg.SettlementDetails103.mmSecuritiesRTGS, com.tools20022.repository.msg.SettlementDetails107.mmSecuritiesRTGS, com.tools20022.repository.msg.SettlementDetails115.mmSecuritiesRTGS,
-					com.tools20022.repository.msg.SettlementDetails117.mmSecuritiesRTGS, com.tools20022.repository.choice.SecuritiesRTGS5Choice.mmIndicator, com.tools20022.repository.choice.SecuritiesRTGS5Choice.mmProprietary,
-					com.tools20022.repository.msg.SettlementDetails116.mmSecuritiesRTGS, com.tools20022.repository.msg.SettlementDetails128.mmSecuritiesRTGS, com.tools20022.repository.msg.SettlementDetails120.mmSecuritiesRTGS,
-					com.tools20022.repository.msg.SettlementDetails119.mmSecuritiesRTGS, com.tools20022.repository.msg.SettlementDetails125.mmSecuritiesRTGS, com.tools20022.repository.msg.SettlementDetails126.mmSecuritiesRTGS,
-					com.tools20022.repository.msg.SettlementDetails127.mmSecuritiesRTGS, com.tools20022.repository.msg.SettlementDetails121.mmSecuritiesRTGS, com.tools20022.repository.msg.SettlementDetails134.mmSecuritiesRTGS,
-					com.tools20022.repository.msg.SettlementDetails137.mmSecuritiesRTGS, com.tools20022.repository.msg.SettlementDetails132.mmSecuritiesRTGS, com.tools20022.repository.msg.SettlementDetails130.mmSecuritiesRTGS,
-					com.tools20022.repository.msg.SettlementDetails131.mmSecuritiesRTGS, com.tools20022.repository.msg.SettlementDetails133.mmSecuritiesRTGS, com.tools20022.repository.msg.SettlementDetails139.mmSecuritiesRTGS);
+			derivation_lazy = () -> Arrays.asList(SecuritiesRTGS1Choice.mmIndicator, SecuritiesRTGS1Choice.mmProprietary, SettlementDetails9.mmSecuritiesRTGS, SecuritiesRTGS2Choice.mmIndicator, SecuritiesRTGS2Choice.mmProprietary,
+					SettlementDetails17.mmSecuritiesRTGS, SettlementDetails30.mmSecuritiesRTGS, SettlementDetails32.mmSecuritiesRTGS, SettlementDetails60.mmSecuritiesRTGS, SettlementDetails64.mmSecuritiesRTGS,
+					SettlementDetails3.mmSecuritiesRTGS, SettlementDetails16.mmSecuritiesRTGS, SettlementDetails31.mmSecuritiesRTGS, SettlementDetails40.mmSecuritiesRTGS, SettlementDetails62.mmSecuritiesRTGS,
+					SettlementDetails63.mmSecuritiesRTGS, RequestDetails1.mmSecuritiesRTGS, RequestDetails2.mmSecuritiesRTGS, RequestDetails6.mmSecuritiesRTGS, RequestDetails7.mmSecuritiesRTGS, RequestDetails8.mmSecuritiesRTGS,
+					RequestDetails9.mmSecuritiesRTGS, RequestDetails11.mmSecuritiesRTGS, RequestDetails12.mmSecuritiesRTGS, SettlementDetails6.mmSecuritiesRTGS, SettlementDetails20.mmSecuritiesRTGS, SettlementDetails24.mmSecuritiesRTGS,
+					SettlementDetails33.mmSecuritiesRTGS, SettlementDetails45.mmSecuritiesRTGS, SettlementDetails54.mmSecuritiesRTGS, SettlementDetails1.mmSecuritiesRTGS, SettlementDetails19.mmSecuritiesRTGS,
+					SettlementDetails22.mmSecuritiesRTGS, SettlementDetails35.mmSecuritiesRTGS, SettlementDetails42.mmSecuritiesRTGS, SettlementDetails52.mmSecuritiesRTGS, SettlementDetails8.mmSecuritiesRTGS,
+					SettlementDetails11.mmSecuritiesRTGS, SettlementDetails23.mmSecuritiesRTGS, SettlementDetails37.mmSecuritiesRTGS, SettlementDetails44.mmSecuritiesRTGS, SettlementDetails53.mmSecuritiesRTGS,
+					SettlementDetails7.mmSecuritiesRTGS, SettlementDetails12.mmSecuritiesRTGS, SettlementDetails28.mmSecuritiesRTGS, SettlementDetails38.mmSecuritiesRTGS, SettlementDetails47.mmSecuritiesRTGS,
+					SettlementDetails56.mmSecuritiesRTGS, SettlementDetails2.mmSecuritiesRTGS, SettlementDetails13.mmSecuritiesRTGS, SettlementDetails27.mmSecuritiesRTGS, SettlementDetails39.mmSecuritiesRTGS,
+					SettlementDetails48.mmSecuritiesRTGS, SettlementDetails57.mmSecuritiesRTGS, SecuritiesRTGS3Choice.mmIndicator, SecuritiesRTGS3Choice.mmProprietary, SettlementDetails43.mmSecuritiesRTGS,
+					SettlementDetails4.mmSecuritiesRTGS, SettlementDetails10.mmSecuritiesRTGS, SettlementDetails29.mmSecuritiesRTGS, SettlementDetails5.mmSecuritiesRTGS, SettlementDetails25.mmSecuritiesRTGS,
+					SettlementDetails26.mmSecuritiesRTGS, SettlementDetails65.mmSecuritiesRTGS, SettlementDetails14.mmSecuritiesRTGS, SettlementDetails41.mmSecuritiesRTGS, SettlementDetails61.mmSecuritiesRTGS,
+					SettlementDetails59.mmSecuritiesRTGS, SettlementDetails15.mmSecuritiesRTGS, SettlementDetails34.mmSecuritiesRTGS, SettlementDetails49.mmSecuritiesRTGS, SettlementDetails58.mmSecuritiesRTGS,
+					SettlementDetails36.mmSecuritiesRTGS, SettlementDetails18.mmSecuritiesRTGS, SettlementDetails66.mmSecuritiesRTGS, SettlementDetails67.mmSecuritiesRTGS, SettlementDetails70.mmSecuritiesRTGS,
+					SettlementDetails69.mmSecuritiesRTGS, SettlementDetails71.mmSecuritiesRTGS, SettlementDetails72.mmSecuritiesRTGS, SettlementDetails75.mmSecuritiesRTGS, SettlementDetails73.mmSecuritiesRTGS,
+					SettlementDetails74.mmSecuritiesRTGS, RequestDetails13.mmSecuritiesRTGS, SettlementDetails81.mmSecuritiesRTGS, SettlementDetails76.mmSecuritiesRTGS, SettlementDetails80.mmSecuritiesRTGS,
+					SettlementDetails78.mmSecuritiesRTGS, SettlementDetails77.mmSecuritiesRTGS, RequestDetails14.mmSecuritiesRTGS, SettlementDetails79.mmSecuritiesRTGS, SettlementDetails87.mmSecuritiesRTGS,
+					SettlementDetails86.mmSecuritiesRTGS, SettlementDetails85.mmSecuritiesRTGS, SettlementDetails93.mmSecuritiesRTGS, RequestDetails15.mmSecuritiesRTGS, SettlementDetails90.mmSecuritiesRTGS,
+					SettlementDetails96.mmSecuritiesRTGS, SettlementDetails97.mmSecuritiesRTGS, SettlementDetails99.mmSecuritiesRTGS, SettlementDetails100.mmSecuritiesRTGS, SecuritiesRTGS4Choice.mmIndicator,
+					SecuritiesRTGS4Choice.mmProprietary, SettlementDetails95.mmSecuritiesRTGS, SettlementDetails91.mmSecuritiesRTGS, SettlementDetails92.mmSecuritiesRTGS, SettlementDetails98.mmSecuritiesRTGS,
+					SettlementDetails101.mmSecuritiesRTGS, SettlementDetails105.mmSecuritiesRTGS, SettlementDetails106.mmSecuritiesRTGS, SettlementDetails104.mmSecuritiesRTGS, SettlementDetails111.mmSecuritiesRTGS,
+					RequestDetails16.mmSecuritiesRTGS, SettlementDetails112.mmSecuritiesRTGS, SettlementDetails110.mmSecuritiesRTGS, SettlementDetails108.mmSecuritiesRTGS, SettlementDetails103.mmSecuritiesRTGS,
+					SettlementDetails107.mmSecuritiesRTGS, SettlementDetails115.mmSecuritiesRTGS, SettlementDetails117.mmSecuritiesRTGS, SecuritiesRTGS5Choice.mmIndicator, SecuritiesRTGS5Choice.mmProprietary,
+					SettlementDetails116.mmSecuritiesRTGS, SettlementDetails128.mmSecuritiesRTGS, SettlementDetails120.mmSecuritiesRTGS, SettlementDetails119.mmSecuritiesRTGS, SettlementDetails125.mmSecuritiesRTGS,
+					SettlementDetails126.mmSecuritiesRTGS, SettlementDetails127.mmSecuritiesRTGS, SettlementDetails121.mmSecuritiesRTGS, SettlementDetails134.mmSecuritiesRTGS, SettlementDetails137.mmSecuritiesRTGS,
+					SettlementDetails132.mmSecuritiesRTGS, SettlementDetails130.mmSecuritiesRTGS, SettlementDetails131.mmSecuritiesRTGS, SettlementDetails133.mmSecuritiesRTGS, SettlementDetails139.mmSecuritiesRTGS);
 			elementContext_lazy = () -> SecuritiesSettlement.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SecuritiesRealTimeGrossSettlement";
 			definition = "Specifies whether the settlement transaction is to be settled through an RTGS or a non RTGS system.";
 			maxOccurs = 1;
@@ -8897,46 +8510,28 @@ public class SecuritiesSettlement extends Settlement {
 	 */
 	public static final MMBusinessAttribute mmBlockTrade = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.BlockTrade1Choice.mmCode, com.tools20022.repository.choice.BlockTrade1Choice.mmProprietary, com.tools20022.repository.msg.SettlementDetails9.mmBlockTrade,
-					com.tools20022.repository.choice.BlockTrade2Choice.mmCode, com.tools20022.repository.choice.BlockTrade2Choice.mmProprietary, com.tools20022.repository.msg.SettlementDetails17.mmBlockTrade,
-					com.tools20022.repository.msg.SettlementDetails30.mmBlockTrade, com.tools20022.repository.msg.SettlementDetails32.mmBlockTrade, com.tools20022.repository.msg.SettlementDetails60.mmBlockTrade,
-					com.tools20022.repository.msg.SettlementDetails64.mmBlockTrade, com.tools20022.repository.msg.SettlementDetails3.mmBlockTrade, com.tools20022.repository.msg.SettlementDetails16.mmBlockTrade,
-					com.tools20022.repository.msg.SettlementDetails31.mmBlockTrade, com.tools20022.repository.msg.SettlementDetails40.mmBlockTrade, com.tools20022.repository.msg.SettlementDetails62.mmBlockTrade,
-					com.tools20022.repository.msg.SettlementDetails63.mmBlockTrade, com.tools20022.repository.msg.SettlementDetails6.mmBlockTrade, com.tools20022.repository.msg.SettlementDetails20.mmBlockTrade,
-					com.tools20022.repository.msg.SettlementDetails24.mmBlockTrade, com.tools20022.repository.msg.SettlementDetails33.mmBlockTrade, com.tools20022.repository.msg.SettlementDetails45.mmBlockTrade,
-					com.tools20022.repository.msg.SettlementDetails54.mmBlockTrade, com.tools20022.repository.msg.SettlementDetails1.mmBlockTrade, com.tools20022.repository.msg.SettlementDetails19.mmBlockTrade,
-					com.tools20022.repository.msg.SettlementDetails22.mmBlockTrade, com.tools20022.repository.msg.SettlementDetails35.mmBlockTrade, com.tools20022.repository.msg.SettlementDetails42.mmBlockTrade,
-					com.tools20022.repository.msg.SettlementDetails52.mmBlockTrade, com.tools20022.repository.msg.SettlementDetails8.mmBlockTrade, com.tools20022.repository.msg.SettlementDetails11.mmBlockTrade,
-					com.tools20022.repository.msg.SettlementDetails23.mmBlockTrade, com.tools20022.repository.msg.SettlementDetails37.mmBlockTrade, com.tools20022.repository.msg.SettlementDetails44.mmBlockTrade,
-					com.tools20022.repository.msg.SettlementDetails53.mmBlockTrade, com.tools20022.repository.msg.SettlementDetails7.mmBlockTrade, com.tools20022.repository.msg.SettlementDetails12.mmBlockTrade,
-					com.tools20022.repository.msg.SettlementDetails28.mmBlockTrade, com.tools20022.repository.msg.SettlementDetails38.mmBlockTrade, com.tools20022.repository.msg.SettlementDetails47.mmBlockTrade,
-					com.tools20022.repository.msg.SettlementDetails56.mmBlockTrade, com.tools20022.repository.msg.SettlementDetails2.mmBlockTrade, com.tools20022.repository.msg.SettlementDetails13.mmBlockTrade,
-					com.tools20022.repository.msg.SettlementDetails27.mmBlockTrade, com.tools20022.repository.msg.SettlementDetails39.mmBlockTrade, com.tools20022.repository.msg.SettlementDetails48.mmBlockTrade,
-					com.tools20022.repository.msg.SettlementDetails57.mmBlockTrade, com.tools20022.repository.choice.BlockTrade3Choice.mmCode, com.tools20022.repository.choice.BlockTrade3Choice.mmProprietary,
-					com.tools20022.repository.msg.SettlementDetails43.mmBlockTrade, com.tools20022.repository.msg.SettlementDetails10.mmBlockTrade, com.tools20022.repository.msg.SettlementDetails29.mmBlockTrade,
-					com.tools20022.repository.msg.SettlementDetails26.mmBlockTrade, com.tools20022.repository.msg.SettlementDetails65.mmBlockTrade, com.tools20022.repository.msg.SettlementDetails14.mmBlockTrade,
-					com.tools20022.repository.msg.SettlementDetails41.mmBlockTrade, com.tools20022.repository.msg.SettlementDetails61.mmBlockTrade, com.tools20022.repository.msg.SettlementDetails59.mmBlockTrade,
-					com.tools20022.repository.msg.SettlementDetails36.mmBlockTrade, com.tools20022.repository.msg.SettlementDetails66.mmBlockTrade, com.tools20022.repository.msg.SettlementDetails67.mmBlockTrade,
-					com.tools20022.repository.msg.SettlementDetails70.mmBlockTrade, com.tools20022.repository.msg.SettlementDetails69.mmBlockTrade, com.tools20022.repository.msg.SettlementDetails71.mmBlockTrade,
-					com.tools20022.repository.msg.SettlementDetails72.mmBlockTrade, com.tools20022.repository.msg.SettlementDetails75.mmBlockTrade, com.tools20022.repository.msg.SettlementDetails73.mmBlockTrade,
-					com.tools20022.repository.msg.SettlementDetails74.mmBlockTrade, com.tools20022.repository.msg.SettlementDetails81.mmBlockTrade, com.tools20022.repository.msg.SettlementDetails76.mmBlockTrade,
-					com.tools20022.repository.msg.SettlementDetails80.mmBlockTrade, com.tools20022.repository.msg.SettlementDetails78.mmBlockTrade, com.tools20022.repository.msg.SettlementDetails77.mmBlockTrade,
-					com.tools20022.repository.msg.SettlementDetails79.mmBlockTrade, com.tools20022.repository.msg.SettlementDetails87.mmBlockTrade, com.tools20022.repository.msg.SettlementDetails86.mmBlockTrade,
-					com.tools20022.repository.msg.SettlementDetails85.mmBlockTrade, com.tools20022.repository.msg.SettlementDetails93.mmBlockTrade, com.tools20022.repository.msg.SettlementDetails90.mmBlockTrade,
-					com.tools20022.repository.msg.SettlementDetails96.mmBlockTrade, com.tools20022.repository.msg.SettlementDetails97.mmBlockTrade, com.tools20022.repository.choice.BlockTrade4Choice.mmCode,
-					com.tools20022.repository.choice.BlockTrade4Choice.mmProprietary, com.tools20022.repository.msg.SettlementDetails95.mmBlockTrade, com.tools20022.repository.msg.SettlementDetails91.mmBlockTrade,
-					com.tools20022.repository.msg.SettlementDetails92.mmBlockTrade, com.tools20022.repository.msg.SettlementDetails98.mmBlockTrade, com.tools20022.repository.msg.SettlementDetails101.mmBlockTrade,
-					com.tools20022.repository.msg.SettlementDetails105.mmBlockTrade, com.tools20022.repository.msg.SettlementDetails106.mmBlockTrade, com.tools20022.repository.msg.SettlementDetails104.mmBlockTrade,
-					com.tools20022.repository.msg.SettlementDetails111.mmBlockTrade, com.tools20022.repository.msg.SettlementDetails112.mmBlockTrade, com.tools20022.repository.msg.SettlementDetails110.mmBlockTrade,
-					com.tools20022.repository.msg.SettlementDetails107.mmBlockTrade, com.tools20022.repository.msg.SettlementDetails115.mmBlockTrade, com.tools20022.repository.msg.SettlementDetails117.mmBlockTrade,
-					com.tools20022.repository.choice.BlockTrade5Choice.mmCode, com.tools20022.repository.choice.BlockTrade5Choice.mmProprietary, com.tools20022.repository.msg.SettlementDetails116.mmBlockTrade,
-					com.tools20022.repository.msg.SettlementDetails128.mmBlockTrade, com.tools20022.repository.msg.SettlementDetails120.mmBlockTrade, com.tools20022.repository.msg.SettlementDetails119.mmBlockTrade,
-					com.tools20022.repository.msg.SettlementDetails126.mmBlockTrade, com.tools20022.repository.msg.SettlementDetails127.mmBlockTrade, com.tools20022.repository.msg.SettlementDetails121.mmBlockTrade,
-					com.tools20022.repository.msg.SettlementDetails134.mmBlockTrade, com.tools20022.repository.msg.SettlementDetails137.mmBlockTrade, com.tools20022.repository.msg.SettlementDetails132.mmBlockTrade,
-					com.tools20022.repository.msg.SettlementDetails130.mmBlockTrade, com.tools20022.repository.msg.SettlementDetails133.mmBlockTrade, com.tools20022.repository.msg.SettlementDetails139.mmBlockTrade);
+			derivation_lazy = () -> Arrays.asList(BlockTrade1Choice.mmCode, BlockTrade1Choice.mmProprietary, SettlementDetails9.mmBlockTrade, BlockTrade2Choice.mmCode, BlockTrade2Choice.mmProprietary, SettlementDetails17.mmBlockTrade,
+					SettlementDetails30.mmBlockTrade, SettlementDetails32.mmBlockTrade, SettlementDetails60.mmBlockTrade, SettlementDetails64.mmBlockTrade, SettlementDetails3.mmBlockTrade, SettlementDetails16.mmBlockTrade,
+					SettlementDetails31.mmBlockTrade, SettlementDetails40.mmBlockTrade, SettlementDetails62.mmBlockTrade, SettlementDetails63.mmBlockTrade, SettlementDetails6.mmBlockTrade, SettlementDetails20.mmBlockTrade,
+					SettlementDetails24.mmBlockTrade, SettlementDetails33.mmBlockTrade, SettlementDetails45.mmBlockTrade, SettlementDetails54.mmBlockTrade, SettlementDetails1.mmBlockTrade, SettlementDetails19.mmBlockTrade,
+					SettlementDetails22.mmBlockTrade, SettlementDetails35.mmBlockTrade, SettlementDetails42.mmBlockTrade, SettlementDetails52.mmBlockTrade, SettlementDetails8.mmBlockTrade, SettlementDetails11.mmBlockTrade,
+					SettlementDetails23.mmBlockTrade, SettlementDetails37.mmBlockTrade, SettlementDetails44.mmBlockTrade, SettlementDetails53.mmBlockTrade, SettlementDetails7.mmBlockTrade, SettlementDetails12.mmBlockTrade,
+					SettlementDetails28.mmBlockTrade, SettlementDetails38.mmBlockTrade, SettlementDetails47.mmBlockTrade, SettlementDetails56.mmBlockTrade, SettlementDetails2.mmBlockTrade, SettlementDetails13.mmBlockTrade,
+					SettlementDetails27.mmBlockTrade, SettlementDetails39.mmBlockTrade, SettlementDetails48.mmBlockTrade, SettlementDetails57.mmBlockTrade, BlockTrade3Choice.mmCode, BlockTrade3Choice.mmProprietary,
+					SettlementDetails43.mmBlockTrade, SettlementDetails10.mmBlockTrade, SettlementDetails29.mmBlockTrade, SettlementDetails26.mmBlockTrade, SettlementDetails65.mmBlockTrade, SettlementDetails14.mmBlockTrade,
+					SettlementDetails41.mmBlockTrade, SettlementDetails61.mmBlockTrade, SettlementDetails59.mmBlockTrade, SettlementDetails36.mmBlockTrade, SettlementDetails66.mmBlockTrade, SettlementDetails67.mmBlockTrade,
+					SettlementDetails70.mmBlockTrade, SettlementDetails69.mmBlockTrade, SettlementDetails71.mmBlockTrade, SettlementDetails72.mmBlockTrade, SettlementDetails75.mmBlockTrade, SettlementDetails73.mmBlockTrade,
+					SettlementDetails74.mmBlockTrade, SettlementDetails81.mmBlockTrade, SettlementDetails76.mmBlockTrade, SettlementDetails80.mmBlockTrade, SettlementDetails78.mmBlockTrade, SettlementDetails77.mmBlockTrade,
+					SettlementDetails79.mmBlockTrade, SettlementDetails87.mmBlockTrade, SettlementDetails86.mmBlockTrade, SettlementDetails85.mmBlockTrade, SettlementDetails93.mmBlockTrade, SettlementDetails90.mmBlockTrade,
+					SettlementDetails96.mmBlockTrade, SettlementDetails97.mmBlockTrade, BlockTrade4Choice.mmCode, BlockTrade4Choice.mmProprietary, SettlementDetails95.mmBlockTrade, SettlementDetails91.mmBlockTrade,
+					SettlementDetails92.mmBlockTrade, SettlementDetails98.mmBlockTrade, SettlementDetails101.mmBlockTrade, SettlementDetails105.mmBlockTrade, SettlementDetails106.mmBlockTrade, SettlementDetails104.mmBlockTrade,
+					SettlementDetails111.mmBlockTrade, SettlementDetails112.mmBlockTrade, SettlementDetails110.mmBlockTrade, SettlementDetails107.mmBlockTrade, SettlementDetails115.mmBlockTrade, SettlementDetails117.mmBlockTrade,
+					BlockTrade5Choice.mmCode, BlockTrade5Choice.mmProprietary, SettlementDetails116.mmBlockTrade, SettlementDetails128.mmBlockTrade, SettlementDetails120.mmBlockTrade, SettlementDetails119.mmBlockTrade,
+					SettlementDetails126.mmBlockTrade, SettlementDetails127.mmBlockTrade, SettlementDetails121.mmBlockTrade, SettlementDetails134.mmBlockTrade, SettlementDetails137.mmBlockTrade, SettlementDetails132.mmBlockTrade,
+					SettlementDetails130.mmBlockTrade, SettlementDetails133.mmBlockTrade, SettlementDetails139.mmBlockTrade);
 			elementContext_lazy = () -> SecuritiesSettlement.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BlockTrade";
 			definition = "Specifies whether the settlement instruction is a block parent or child.";
 			maxOccurs = 1;
@@ -9332,68 +8927,39 @@ public class SecuritiesSettlement extends Settlement {
 	 */
 	public static final MMBusinessAttribute mmSettlementSystemMethod = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SettlementSystemMethod1Choice.mmCode, com.tools20022.repository.choice.SettlementSystemMethod1Choice.mmProprietary,
-					com.tools20022.repository.msg.SettlementDetails9.mmSettlementSystemMethod, com.tools20022.repository.choice.SettlementSystemMethod2Choice.mmCode,
-					com.tools20022.repository.choice.SettlementSystemMethod2Choice.mmProprietary, com.tools20022.repository.msg.SettlementDetails17.mmSettlementSystemMethod,
-					com.tools20022.repository.msg.SettlementDetails30.mmSettlementSystemMethod, com.tools20022.repository.msg.SettlementDetails32.mmSettlementSystemMethod,
-					com.tools20022.repository.msg.SettlementDetails60.mmSettlementSystemMethod, com.tools20022.repository.msg.SettlementDetails64.mmSettlementSystemMethod,
-					com.tools20022.repository.msg.SettlementDetails3.mmSettlementSystemMethod, com.tools20022.repository.msg.SettlementDetails16.mmSettlementSystemMethod,
-					com.tools20022.repository.msg.SettlementDetails31.mmSettlementSystemMethod, com.tools20022.repository.msg.SettlementDetails40.mmSettlementSystemMethod,
-					com.tools20022.repository.msg.SettlementDetails62.mmSettlementSystemMethod, com.tools20022.repository.msg.SettlementDetails63.mmSettlementSystemMethod,
-					com.tools20022.repository.msg.SettlementDetails6.mmSettlementSystemMethod, com.tools20022.repository.msg.SettlementDetails20.mmSettlementSystemMethod,
-					com.tools20022.repository.msg.SettlementDetails24.mmSettlementSystemMethod, com.tools20022.repository.msg.SettlementDetails33.mmSettlementSystemMethod,
-					com.tools20022.repository.msg.SettlementDetails45.mmSettlementSystemMethod, com.tools20022.repository.msg.SettlementDetails54.mmSettlementSystemMethod,
-					com.tools20022.repository.msg.SettlementDetails1.mmSettlementSystemMethod, com.tools20022.repository.msg.SettlementDetails19.mmSettlementSystemMethod,
-					com.tools20022.repository.msg.SettlementDetails22.mmSettlementSystemMethod, com.tools20022.repository.msg.SettlementDetails35.mmSettlementSystemMethod,
-					com.tools20022.repository.msg.SettlementDetails42.mmSettlementSystemMethod, com.tools20022.repository.msg.SettlementDetails52.mmSettlementSystemMethod,
-					com.tools20022.repository.msg.SettlementDetails8.mmSettlementSystemMethod, com.tools20022.repository.msg.SettlementDetails11.mmSettlementSystemMethod,
-					com.tools20022.repository.msg.SettlementDetails23.mmSettlementSystemMethod, com.tools20022.repository.msg.SettlementDetails37.mmSettlementSystemMethod,
-					com.tools20022.repository.msg.SettlementDetails44.mmSettlementSystemMethod, com.tools20022.repository.msg.SettlementDetails53.mmSettlementSystemMethod,
-					com.tools20022.repository.msg.SettlementDetails7.mmSettlementSystemMethod, com.tools20022.repository.msg.SettlementDetails12.mmSettlementSystemMethod,
-					com.tools20022.repository.msg.SettlementDetails28.mmSettlementSystemMethod, com.tools20022.repository.msg.SettlementDetails38.mmSettlementSystemMethod,
-					com.tools20022.repository.msg.SettlementDetails47.mmSettlementSystemMethod, com.tools20022.repository.msg.SettlementDetails56.mmSettlementSystemMethod,
-					com.tools20022.repository.msg.SettlementDetails2.mmSettlementSystemMethod, com.tools20022.repository.msg.SettlementDetails13.mmSettlementSystemMethod,
-					com.tools20022.repository.msg.SettlementDetails27.mmSettlementSystemMethod, com.tools20022.repository.msg.SettlementDetails39.mmSettlementSystemMethod,
-					com.tools20022.repository.msg.SettlementDetails48.mmSettlementSystemMethod, com.tools20022.repository.msg.SettlementDetails57.mmSettlementSystemMethod,
-					com.tools20022.repository.choice.SettlementSystemMethod3Choice.mmCode, com.tools20022.repository.choice.SettlementSystemMethod3Choice.mmProprietary,
-					com.tools20022.repository.msg.SettlementDetails43.mmSettlementSystemMethod, com.tools20022.repository.msg.SettlementDetails4.mmSettlementSystemMethod,
-					com.tools20022.repository.msg.SettlementDetails10.mmSettlementSystemMethod, com.tools20022.repository.msg.SettlementDetails29.mmSettlementSystemMethod,
-					com.tools20022.repository.msg.SettlementDetails5.mmSettlementSystemMethod, com.tools20022.repository.msg.SettlementDetails26.mmSettlementSystemMethod,
-					com.tools20022.repository.msg.SettlementDetails65.mmSettlementSystemMethod, com.tools20022.repository.msg.SettlementDetails14.mmSettlementSystemMethod,
-					com.tools20022.repository.msg.SettlementDetails41.mmSettlementSystemMethod, com.tools20022.repository.msg.SettlementDetails61.mmSettlementSystemMethod,
-					com.tools20022.repository.msg.SettlementDetails59.mmSettlementSystemMethod, com.tools20022.repository.msg.SettlementDetails15.mmSettlementSystemMethod,
-					com.tools20022.repository.msg.SettlementDetails36.mmSettlementSystemMethod, com.tools20022.repository.msg.SettlementDetails18.mmSettlementSystemMethod,
-					com.tools20022.repository.msg.SettlementDetails66.mmSettlementSystemMethod, com.tools20022.repository.msg.SettlementDetails67.mmSettlementSystemMethod,
-					com.tools20022.repository.msg.SettlementDetails70.mmSettlementSystemMethod, com.tools20022.repository.msg.SettlementDetails69.mmSettlementSystemMethod,
-					com.tools20022.repository.msg.SettlementDetails71.mmSettlementSystemMethod, com.tools20022.repository.msg.SettlementDetails72.mmSettlementSystemMethod,
-					com.tools20022.repository.msg.SettlementDetails75.mmSettlementSystemMethod, com.tools20022.repository.msg.SettlementDetails73.mmSettlementSystemMethod,
-					com.tools20022.repository.msg.SettlementDetails74.mmSettlementSystemMethod, com.tools20022.repository.msg.SettlementDetails81.mmSettlementSystemMethod,
-					com.tools20022.repository.msg.SettlementDetails76.mmSettlementSystemMethod, com.tools20022.repository.msg.SettlementDetails80.mmSettlementSystemMethod,
-					com.tools20022.repository.msg.SettlementDetails78.mmSettlementSystemMethod, com.tools20022.repository.msg.SettlementDetails77.mmSettlementSystemMethod,
-					com.tools20022.repository.msg.SettlementDetails79.mmSettlementSystemMethod, com.tools20022.repository.msg.SettlementDetails87.mmSettlementSystemMethod,
-					com.tools20022.repository.msg.SettlementDetails86.mmSettlementSystemMethod, com.tools20022.repository.msg.SettlementDetails85.mmSettlementSystemMethod,
-					com.tools20022.repository.msg.SettlementDetails93.mmSettlementSystemMethod, com.tools20022.repository.msg.SettlementDetails90.mmSettlementSystemMethod,
-					com.tools20022.repository.msg.SettlementDetails96.mmSettlementSystemMethod, com.tools20022.repository.msg.SettlementDetails97.mmSettlementSystemMethod,
-					com.tools20022.repository.msg.SettlementDetails100.mmSettlementSystemMethod, com.tools20022.repository.choice.SettlementSystemMethod4Choice.mmCode,
-					com.tools20022.repository.choice.SettlementSystemMethod4Choice.mmProprietary, com.tools20022.repository.msg.SettlementDetails95.mmSettlementSystemMethod,
-					com.tools20022.repository.msg.SettlementDetails91.mmSettlementSystemMethod, com.tools20022.repository.msg.SettlementDetails92.mmSettlementSystemMethod,
-					com.tools20022.repository.msg.SettlementDetails98.mmSettlementSystemMethod, com.tools20022.repository.msg.SettlementDetails101.mmSettlementSystemMethod,
-					com.tools20022.repository.msg.SettlementDetails105.mmSettlementSystemMethod, com.tools20022.repository.msg.SettlementDetails106.mmSettlementSystemMethod,
-					com.tools20022.repository.msg.SettlementDetails104.mmSettlementSystemMethod, com.tools20022.repository.msg.SettlementDetails111.mmSettlementSystemMethod,
-					com.tools20022.repository.msg.SettlementDetails112.mmSettlementSystemMethod, com.tools20022.repository.msg.SettlementDetails110.mmSettlementSystemMethod,
-					com.tools20022.repository.msg.SettlementDetails103.mmSettlementSystemMethod, com.tools20022.repository.msg.SettlementDetails107.mmSettlementSystemMethod,
-					com.tools20022.repository.msg.SettlementDetails115.mmSettlementSystemMethod, com.tools20022.repository.msg.SettlementDetails117.mmSettlementSystemMethod,
-					com.tools20022.repository.choice.SettlementSystemMethod5Choice.mmCode, com.tools20022.repository.choice.SettlementSystemMethod5Choice.mmProprietary,
-					com.tools20022.repository.msg.SettlementDetails116.mmSettlementSystemMethod, com.tools20022.repository.msg.SettlementDetails128.mmSettlementSystemMethod,
-					com.tools20022.repository.msg.SettlementDetails120.mmSettlementSystemMethod, com.tools20022.repository.msg.SettlementDetails119.mmSettlementSystemMethod,
-					com.tools20022.repository.msg.SettlementDetails126.mmSettlementSystemMethod, com.tools20022.repository.msg.SettlementDetails127.mmSettlementSystemMethod,
-					com.tools20022.repository.msg.SettlementDetails121.mmSettlementSystemMethod, com.tools20022.repository.msg.SettlementDetails134.mmSettlementSystemMethod,
-					com.tools20022.repository.msg.SettlementDetails137.mmSettlementSystemMethod, com.tools20022.repository.msg.SettlementDetails132.mmSettlementSystemMethod,
-					com.tools20022.repository.msg.SettlementDetails130.mmSettlementSystemMethod, com.tools20022.repository.msg.SettlementDetails133.mmSettlementSystemMethod,
-					com.tools20022.repository.msg.SettlementDetails139.mmSettlementSystemMethod);
+			derivation_lazy = () -> Arrays.asList(SettlementSystemMethod1Choice.mmCode, SettlementSystemMethod1Choice.mmProprietary, SettlementDetails9.mmSettlementSystemMethod, SettlementSystemMethod2Choice.mmCode,
+					SettlementSystemMethod2Choice.mmProprietary, SettlementDetails17.mmSettlementSystemMethod, SettlementDetails30.mmSettlementSystemMethod, SettlementDetails32.mmSettlementSystemMethod,
+					SettlementDetails60.mmSettlementSystemMethod, SettlementDetails64.mmSettlementSystemMethod, SettlementDetails3.mmSettlementSystemMethod, SettlementDetails16.mmSettlementSystemMethod,
+					SettlementDetails31.mmSettlementSystemMethod, SettlementDetails40.mmSettlementSystemMethod, SettlementDetails62.mmSettlementSystemMethod, SettlementDetails63.mmSettlementSystemMethod,
+					SettlementDetails6.mmSettlementSystemMethod, SettlementDetails20.mmSettlementSystemMethod, SettlementDetails24.mmSettlementSystemMethod, SettlementDetails33.mmSettlementSystemMethod,
+					SettlementDetails45.mmSettlementSystemMethod, SettlementDetails54.mmSettlementSystemMethod, SettlementDetails1.mmSettlementSystemMethod, SettlementDetails19.mmSettlementSystemMethod,
+					SettlementDetails22.mmSettlementSystemMethod, SettlementDetails35.mmSettlementSystemMethod, SettlementDetails42.mmSettlementSystemMethod, SettlementDetails52.mmSettlementSystemMethod,
+					SettlementDetails8.mmSettlementSystemMethod, SettlementDetails11.mmSettlementSystemMethod, SettlementDetails23.mmSettlementSystemMethod, SettlementDetails37.mmSettlementSystemMethod,
+					SettlementDetails44.mmSettlementSystemMethod, SettlementDetails53.mmSettlementSystemMethod, SettlementDetails7.mmSettlementSystemMethod, SettlementDetails12.mmSettlementSystemMethod,
+					SettlementDetails28.mmSettlementSystemMethod, SettlementDetails38.mmSettlementSystemMethod, SettlementDetails47.mmSettlementSystemMethod, SettlementDetails56.mmSettlementSystemMethod,
+					SettlementDetails2.mmSettlementSystemMethod, SettlementDetails13.mmSettlementSystemMethod, SettlementDetails27.mmSettlementSystemMethod, SettlementDetails39.mmSettlementSystemMethod,
+					SettlementDetails48.mmSettlementSystemMethod, SettlementDetails57.mmSettlementSystemMethod, SettlementSystemMethod3Choice.mmCode, SettlementSystemMethod3Choice.mmProprietary,
+					SettlementDetails43.mmSettlementSystemMethod, SettlementDetails4.mmSettlementSystemMethod, SettlementDetails10.mmSettlementSystemMethod, SettlementDetails29.mmSettlementSystemMethod,
+					SettlementDetails5.mmSettlementSystemMethod, SettlementDetails26.mmSettlementSystemMethod, SettlementDetails65.mmSettlementSystemMethod, SettlementDetails14.mmSettlementSystemMethod,
+					SettlementDetails41.mmSettlementSystemMethod, SettlementDetails61.mmSettlementSystemMethod, SettlementDetails59.mmSettlementSystemMethod, SettlementDetails15.mmSettlementSystemMethod,
+					SettlementDetails36.mmSettlementSystemMethod, SettlementDetails18.mmSettlementSystemMethod, SettlementDetails66.mmSettlementSystemMethod, SettlementDetails67.mmSettlementSystemMethod,
+					SettlementDetails70.mmSettlementSystemMethod, SettlementDetails69.mmSettlementSystemMethod, SettlementDetails71.mmSettlementSystemMethod, SettlementDetails72.mmSettlementSystemMethod,
+					SettlementDetails75.mmSettlementSystemMethod, SettlementDetails73.mmSettlementSystemMethod, SettlementDetails74.mmSettlementSystemMethod, SettlementDetails81.mmSettlementSystemMethod,
+					SettlementDetails76.mmSettlementSystemMethod, SettlementDetails80.mmSettlementSystemMethod, SettlementDetails78.mmSettlementSystemMethod, SettlementDetails77.mmSettlementSystemMethod,
+					SettlementDetails79.mmSettlementSystemMethod, SettlementDetails87.mmSettlementSystemMethod, SettlementDetails86.mmSettlementSystemMethod, SettlementDetails85.mmSettlementSystemMethod,
+					SettlementDetails93.mmSettlementSystemMethod, SettlementDetails90.mmSettlementSystemMethod, SettlementDetails96.mmSettlementSystemMethod, SettlementDetails97.mmSettlementSystemMethod,
+					SettlementDetails100.mmSettlementSystemMethod, SettlementSystemMethod4Choice.mmCode, SettlementSystemMethod4Choice.mmProprietary, SettlementDetails95.mmSettlementSystemMethod,
+					SettlementDetails91.mmSettlementSystemMethod, SettlementDetails92.mmSettlementSystemMethod, SettlementDetails98.mmSettlementSystemMethod, SettlementDetails101.mmSettlementSystemMethod,
+					SettlementDetails105.mmSettlementSystemMethod, SettlementDetails106.mmSettlementSystemMethod, SettlementDetails104.mmSettlementSystemMethod, SettlementDetails111.mmSettlementSystemMethod,
+					SettlementDetails112.mmSettlementSystemMethod, SettlementDetails110.mmSettlementSystemMethod, SettlementDetails103.mmSettlementSystemMethod, SettlementDetails107.mmSettlementSystemMethod,
+					SettlementDetails115.mmSettlementSystemMethod, SettlementDetails117.mmSettlementSystemMethod, SettlementSystemMethod5Choice.mmCode, SettlementSystemMethod5Choice.mmProprietary,
+					SettlementDetails116.mmSettlementSystemMethod, SettlementDetails128.mmSettlementSystemMethod, SettlementDetails120.mmSettlementSystemMethod, SettlementDetails119.mmSettlementSystemMethod,
+					SettlementDetails126.mmSettlementSystemMethod, SettlementDetails127.mmSettlementSystemMethod, SettlementDetails121.mmSettlementSystemMethod, SettlementDetails134.mmSettlementSystemMethod,
+					SettlementDetails137.mmSettlementSystemMethod, SettlementDetails132.mmSettlementSystemMethod, SettlementDetails130.mmSettlementSystemMethod, SettlementDetails133.mmSettlementSystemMethod,
+					SettlementDetails139.mmSettlementSystemMethod);
 			elementContext_lazy = () -> SecuritiesSettlement.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SettlementSystemMethod";
 			definition = "Specifies whether the settlement instruction is to be settled through the default or the alternate settlement system.";
 			maxOccurs = 1;
@@ -9690,38 +9256,27 @@ public class SecuritiesSettlement extends Settlement {
 	 */
 	public static final MMBusinessAttribute mmAutomaticBorrowing = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AutomaticBorrowing1Choice.mmCode, com.tools20022.repository.choice.AutomaticBorrowing1Choice.mmProprietary,
-					com.tools20022.repository.msg.SettlementDetails9.mmAutomaticBorrowing, com.tools20022.repository.choice.AutomaticBorrowing4Choice.mmCode, com.tools20022.repository.choice.AutomaticBorrowing4Choice.mmProprietary,
-					com.tools20022.repository.msg.SettlementDetails17.mmAutomaticBorrowing, com.tools20022.repository.msg.SettlementDetails30.mmAutomaticBorrowing, com.tools20022.repository.msg.SettlementDetails32.mmAutomaticBorrowing,
-					com.tools20022.repository.msg.SettlementDetails60.mmAutomaticBorrowing, com.tools20022.repository.msg.SettlementDetails64.mmAutomaticBorrowing, com.tools20022.repository.msg.SettlementDetails3.mmAutomaticBorrowing,
-					com.tools20022.repository.msg.SettlementDetails16.mmAutomaticBorrowing, com.tools20022.repository.msg.SettlementDetails31.mmAutomaticBorrowing, com.tools20022.repository.msg.SettlementDetails40.mmAutomaticBorrowing,
-					com.tools20022.repository.msg.SettlementDetails62.mmAutomaticBorrowing, com.tools20022.repository.msg.SettlementDetails63.mmAutomaticBorrowing, com.tools20022.repository.choice.AutomaticBorrowing2Choice.mmCode,
-					com.tools20022.repository.choice.AutomaticBorrowing2Choice.mmProprietary, com.tools20022.repository.msg.RequestDetails1.mmAutomaticBorrowing, com.tools20022.repository.choice.AutomaticBorrowing3Choice.mmCode,
-					com.tools20022.repository.choice.AutomaticBorrowing3Choice.mmProprietary, com.tools20022.repository.msg.RequestDetails2.mmAutomaticBorrowing, com.tools20022.repository.msg.RequestDetails6.mmAutomaticBorrowing,
-					com.tools20022.repository.msg.RequestDetails7.mmAutomaticBorrowing, com.tools20022.repository.msg.RequestDetails8.mmAutomaticBorrowing, com.tools20022.repository.msg.RequestDetails9.mmAutomaticBorrowing,
-					com.tools20022.repository.msg.RequestDetails11.mmAutomaticBorrowing, com.tools20022.repository.msg.RequestDetails12.mmAutomaticBorrowing, com.tools20022.repository.msg.SettlementDetails6.mmAutomaticBorrowing,
-					com.tools20022.repository.msg.SettlementDetails20.mmAutomaticBorrowing, com.tools20022.repository.msg.SettlementDetails24.mmAutomaticBorrowing, com.tools20022.repository.msg.SettlementDetails33.mmAutomaticBorrowing,
-					com.tools20022.repository.msg.SettlementDetails45.mmAutomaticBorrowing, com.tools20022.repository.msg.SettlementDetails54.mmAutomaticBorrowing, com.tools20022.repository.msg.SettlementDetails1.mmAutomaticBorrowing,
-					com.tools20022.repository.msg.SettlementDetails19.mmAutomaticBorrowing, com.tools20022.repository.msg.SettlementDetails22.mmAutomaticBorrowing, com.tools20022.repository.msg.SettlementDetails35.mmAutomaticBorrowing,
-					com.tools20022.repository.msg.SettlementDetails42.mmAutomaticBorrowing, com.tools20022.repository.msg.SettlementDetails52.mmAutomaticBorrowing, com.tools20022.repository.choice.AutomaticBorrowing5Choice.mmCode,
-					com.tools20022.repository.choice.AutomaticBorrowing5Choice.mmProprietary, com.tools20022.repository.msg.SettlementDetails43.mmAutomaticBorrowing, com.tools20022.repository.msg.SettlementDetails26.mmAutomaticBorrowing,
-					com.tools20022.repository.msg.SettlementDetails65.mmAutomaticBorrowing, com.tools20022.repository.msg.SettlementDetails36.mmAutomaticBorrowing, com.tools20022.repository.msg.SettlementDetails67.mmAutomaticBorrowing,
-					com.tools20022.repository.msg.SettlementDetails70.mmAutomaticBorrowing, com.tools20022.repository.msg.SettlementDetails71.mmAutomaticBorrowing, com.tools20022.repository.msg.SettlementDetails72.mmAutomaticBorrowing,
-					com.tools20022.repository.msg.RequestDetails13.mmAutomaticBorrowing, com.tools20022.repository.msg.SettlementDetails81.mmAutomaticBorrowing, com.tools20022.repository.msg.SettlementDetails76.mmAutomaticBorrowing,
-					com.tools20022.repository.msg.SettlementDetails80.mmAutomaticBorrowing, com.tools20022.repository.msg.SettlementDetails78.mmAutomaticBorrowing, com.tools20022.repository.msg.SettlementDetails77.mmAutomaticBorrowing,
-					com.tools20022.repository.msg.RequestDetails14.mmAutomaticBorrowing, com.tools20022.repository.choice.CommissionType5Choice.mmProprietary, com.tools20022.repository.msg.SettlementDetails93.mmAutomaticBorrowing,
-					com.tools20022.repository.msg.RequestDetails15.mmAutomaticBorrowing, com.tools20022.repository.msg.SettlementDetails90.mmAutomaticBorrowing, com.tools20022.repository.msg.SettlementDetails96.mmAutomaticBorrowing,
-					com.tools20022.repository.msg.SettlementDetails97.mmAutomaticBorrowing, com.tools20022.repository.choice.AutomaticBorrowing6Choice.mmCode, com.tools20022.repository.choice.AutomaticBorrowing6Choice.mmProprietary,
-					com.tools20022.repository.choice.AutomaticBorrowing7Choice.mmCode, com.tools20022.repository.choice.AutomaticBorrowing7Choice.mmProprietary, com.tools20022.repository.msg.SettlementDetails101.mmAutomaticBorrowing,
-					com.tools20022.repository.msg.SettlementDetails105.mmAutomaticBorrowing, com.tools20022.repository.msg.SettlementDetails106.mmAutomaticBorrowing, com.tools20022.repository.msg.SettlementDetails104.mmAutomaticBorrowing,
-					com.tools20022.repository.msg.SettlementDetails111.mmAutomaticBorrowing, com.tools20022.repository.msg.RequestDetails16.mmAutomaticBorrowing, com.tools20022.repository.msg.SettlementDetails112.mmAutomaticBorrowing,
-					com.tools20022.repository.msg.SettlementDetails110.mmAutomaticBorrowing, com.tools20022.repository.choice.AutomaticBorrowing8Choice.mmCode, com.tools20022.repository.choice.AutomaticBorrowing8Choice.mmProprietary,
-					com.tools20022.repository.choice.AutomaticBorrowing11Choice.mmCode, com.tools20022.repository.choice.AutomaticBorrowing11Choice.mmProprietary, com.tools20022.repository.msg.SettlementDetails128.mmAutomaticBorrowing,
-					com.tools20022.repository.msg.SettlementDetails120.mmAutomaticBorrowing, com.tools20022.repository.msg.SettlementDetails119.mmAutomaticBorrowing, com.tools20022.repository.msg.SettlementDetails134.mmAutomaticBorrowing,
-					com.tools20022.repository.msg.SettlementDetails137.mmAutomaticBorrowing, com.tools20022.repository.msg.SettlementDetails132.mmAutomaticBorrowing);
+			derivation_lazy = () -> Arrays.asList(AutomaticBorrowing1Choice.mmCode, AutomaticBorrowing1Choice.mmProprietary, SettlementDetails9.mmAutomaticBorrowing, AutomaticBorrowing4Choice.mmCode,
+					AutomaticBorrowing4Choice.mmProprietary, SettlementDetails17.mmAutomaticBorrowing, SettlementDetails30.mmAutomaticBorrowing, SettlementDetails32.mmAutomaticBorrowing, SettlementDetails60.mmAutomaticBorrowing,
+					SettlementDetails64.mmAutomaticBorrowing, SettlementDetails3.mmAutomaticBorrowing, SettlementDetails16.mmAutomaticBorrowing, SettlementDetails31.mmAutomaticBorrowing, SettlementDetails40.mmAutomaticBorrowing,
+					SettlementDetails62.mmAutomaticBorrowing, SettlementDetails63.mmAutomaticBorrowing, AutomaticBorrowing2Choice.mmCode, AutomaticBorrowing2Choice.mmProprietary, RequestDetails1.mmAutomaticBorrowing,
+					AutomaticBorrowing3Choice.mmCode, AutomaticBorrowing3Choice.mmProprietary, RequestDetails2.mmAutomaticBorrowing, RequestDetails6.mmAutomaticBorrowing, RequestDetails7.mmAutomaticBorrowing,
+					RequestDetails8.mmAutomaticBorrowing, RequestDetails9.mmAutomaticBorrowing, RequestDetails11.mmAutomaticBorrowing, RequestDetails12.mmAutomaticBorrowing, SettlementDetails6.mmAutomaticBorrowing,
+					SettlementDetails20.mmAutomaticBorrowing, SettlementDetails24.mmAutomaticBorrowing, SettlementDetails33.mmAutomaticBorrowing, SettlementDetails45.mmAutomaticBorrowing, SettlementDetails54.mmAutomaticBorrowing,
+					SettlementDetails1.mmAutomaticBorrowing, SettlementDetails19.mmAutomaticBorrowing, SettlementDetails22.mmAutomaticBorrowing, SettlementDetails35.mmAutomaticBorrowing, SettlementDetails42.mmAutomaticBorrowing,
+					SettlementDetails52.mmAutomaticBorrowing, AutomaticBorrowing5Choice.mmCode, AutomaticBorrowing5Choice.mmProprietary, SettlementDetails43.mmAutomaticBorrowing, SettlementDetails26.mmAutomaticBorrowing,
+					SettlementDetails65.mmAutomaticBorrowing, SettlementDetails36.mmAutomaticBorrowing, SettlementDetails67.mmAutomaticBorrowing, SettlementDetails70.mmAutomaticBorrowing, SettlementDetails71.mmAutomaticBorrowing,
+					SettlementDetails72.mmAutomaticBorrowing, RequestDetails13.mmAutomaticBorrowing, SettlementDetails81.mmAutomaticBorrowing, SettlementDetails76.mmAutomaticBorrowing, SettlementDetails80.mmAutomaticBorrowing,
+					SettlementDetails78.mmAutomaticBorrowing, SettlementDetails77.mmAutomaticBorrowing, RequestDetails14.mmAutomaticBorrowing, CommissionType5Choice.mmProprietary, SettlementDetails93.mmAutomaticBorrowing,
+					RequestDetails15.mmAutomaticBorrowing, SettlementDetails90.mmAutomaticBorrowing, SettlementDetails96.mmAutomaticBorrowing, SettlementDetails97.mmAutomaticBorrowing, AutomaticBorrowing6Choice.mmCode,
+					AutomaticBorrowing6Choice.mmProprietary, AutomaticBorrowing7Choice.mmCode, AutomaticBorrowing7Choice.mmProprietary, SettlementDetails101.mmAutomaticBorrowing, SettlementDetails105.mmAutomaticBorrowing,
+					SettlementDetails106.mmAutomaticBorrowing, SettlementDetails104.mmAutomaticBorrowing, SettlementDetails111.mmAutomaticBorrowing, RequestDetails16.mmAutomaticBorrowing, SettlementDetails112.mmAutomaticBorrowing,
+					SettlementDetails110.mmAutomaticBorrowing, AutomaticBorrowing8Choice.mmCode, AutomaticBorrowing8Choice.mmProprietary, AutomaticBorrowing11Choice.mmCode, AutomaticBorrowing11Choice.mmProprietary,
+					SettlementDetails128.mmAutomaticBorrowing, SettlementDetails120.mmAutomaticBorrowing, SettlementDetails119.mmAutomaticBorrowing, SettlementDetails134.mmAutomaticBorrowing, SettlementDetails137.mmAutomaticBorrowing,
+					SettlementDetails132.mmAutomaticBorrowing);
 			elementContext_lazy = () -> SecuritiesSettlement.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AutomaticBorrowing";
 			definition = "Condition for automatic borrowing.";
 			maxOccurs = 1;
@@ -9853,24 +9408,17 @@ public class SecuritiesSettlement extends Settlement {
 	 */
 	public static final MMBusinessAttribute mmPartialSettlementIndicator = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SettlementDetails9.mmPartialSettlementIndicator, com.tools20022.repository.msg.SettlementDetails17.mmPartialSettlementIndicator,
-					com.tools20022.repository.msg.SettlementDetails30.mmPartialSettlementIndicator, com.tools20022.repository.msg.SettlementDetails32.mmPartialSettlementIndicator,
-					com.tools20022.repository.msg.SettlementDetails3.mmPartialSettlementIndicator, com.tools20022.repository.msg.SettlementDetails16.mmPartialSettlementIndicator,
-					com.tools20022.repository.msg.SettlementDetails31.mmPartialSettlementIndicator, com.tools20022.repository.msg.SettlementDetails40.mmPartialSettlementIndicator,
-					com.tools20022.repository.msg.RequestDetails1.mmPartialSettlementIndicator, com.tools20022.repository.msg.RequestDetails2.mmPartialSettlementIndicator,
-					com.tools20022.repository.msg.SettlementDetails6.mmPartialSettlementIndicator, com.tools20022.repository.msg.SettlementDetails20.mmPartialSettlementIndicator,
-					com.tools20022.repository.msg.SettlementDetails1.mmPartialSettlementIndicator, com.tools20022.repository.msg.SettlementDetails19.mmPartialSettlementIndicator,
-					com.tools20022.repository.msg.SettlementDetails8.mmPartialSettlementIndicator, com.tools20022.repository.msg.SettlementDetails11.mmPartialSettlementIndicator,
-					com.tools20022.repository.msg.SettlementDetails7.mmPartialSettlementIndicator, com.tools20022.repository.msg.SettlementDetails12.mmPartialSettlementIndicator,
-					com.tools20022.repository.msg.SettlementDetails2.mmPartialSettlementIndicator, com.tools20022.repository.msg.SettlementDetails13.mmPartialSettlementIndicator,
-					com.tools20022.repository.msg.SettlementDetails43.mmPartialSettlementIndicator, com.tools20022.repository.msg.SettlementDetails10.mmPartialSettlementIndicator,
-					com.tools20022.repository.msg.SettlementDetails29.mmPartialSettlementIndicator, com.tools20022.repository.msg.SettlementDetails5.mmPartialSettlementIndicator,
-					com.tools20022.repository.msg.SettlementDetails25.mmPartialSettlementIndicator, com.tools20022.repository.msg.SettlementDetails14.mmPartialSettlementIndicator,
-					com.tools20022.repository.msg.SettlementDetails41.mmPartialSettlementIndicator, com.tools20022.repository.msg.SettlementDetails15.mmPartialSettlementIndicator,
-					com.tools20022.repository.msg.SettlementDetails34.mmPartialSettlementIndicator, com.tools20022.repository.msg.RequestDetails10.mmPartialSettlementIndicator);
+			derivation_lazy = () -> Arrays.asList(SettlementDetails9.mmPartialSettlementIndicator, SettlementDetails17.mmPartialSettlementIndicator, SettlementDetails30.mmPartialSettlementIndicator,
+					SettlementDetails32.mmPartialSettlementIndicator, SettlementDetails3.mmPartialSettlementIndicator, SettlementDetails16.mmPartialSettlementIndicator, SettlementDetails31.mmPartialSettlementIndicator,
+					SettlementDetails40.mmPartialSettlementIndicator, RequestDetails1.mmPartialSettlementIndicator, RequestDetails2.mmPartialSettlementIndicator, SettlementDetails6.mmPartialSettlementIndicator,
+					SettlementDetails20.mmPartialSettlementIndicator, SettlementDetails1.mmPartialSettlementIndicator, SettlementDetails19.mmPartialSettlementIndicator, SettlementDetails8.mmPartialSettlementIndicator,
+					SettlementDetails11.mmPartialSettlementIndicator, SettlementDetails7.mmPartialSettlementIndicator, SettlementDetails12.mmPartialSettlementIndicator, SettlementDetails2.mmPartialSettlementIndicator,
+					SettlementDetails13.mmPartialSettlementIndicator, SettlementDetails43.mmPartialSettlementIndicator, SettlementDetails10.mmPartialSettlementIndicator, SettlementDetails29.mmPartialSettlementIndicator,
+					SettlementDetails5.mmPartialSettlementIndicator, SettlementDetails25.mmPartialSettlementIndicator, SettlementDetails14.mmPartialSettlementIndicator, SettlementDetails41.mmPartialSettlementIndicator,
+					SettlementDetails15.mmPartialSettlementIndicator, SettlementDetails34.mmPartialSettlementIndicator, RequestDetails10.mmPartialSettlementIndicator);
 			elementContext_lazy = () -> SecuritiesSettlement.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PartialSettlementIndicator";
 			definition = "Specifies whether partial settlement is allowed.";
 			maxOccurs = 1;
@@ -10186,41 +9734,27 @@ public class SecuritiesSettlement extends Settlement {
 	 */
 	public static final MMBusinessAttribute mmHoldIndicator = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SettlementDetails3.mmHoldIndicator, com.tools20022.repository.msg.SettlementDetails16.mmHoldIndicator,
-					com.tools20022.repository.msg.SettlementDetails31.mmHoldIndicator, com.tools20022.repository.msg.SettlementDetails40.mmHoldIndicator, com.tools20022.repository.msg.SettlementDetails62.mmHoldIndicator,
-					com.tools20022.repository.msg.SettlementDetails63.mmHoldIndicator, com.tools20022.repository.msg.RequestDetails1.mmHoldIndicator, com.tools20022.repository.msg.RequestDetails2.mmHoldIndicator,
-					com.tools20022.repository.msg.HoldIndicator2.mmIndicator, com.tools20022.repository.msg.RequestDetails6.mmHoldIndicator, com.tools20022.repository.msg.HoldIndicator3.mmIndicator,
-					com.tools20022.repository.msg.RequestDetails7.mmHoldIndicator, com.tools20022.repository.msg.HoldIndicator4.mmIndicator, com.tools20022.repository.msg.RequestDetails8.mmHoldIndicator,
-					com.tools20022.repository.msg.HoldIndicator5.mmIndicator, com.tools20022.repository.msg.RequestDetails9.mmHoldIndicator, com.tools20022.repository.msg.RequestDetails11.mmHoldIndicator,
-					com.tools20022.repository.msg.RequestDetails12.mmHoldIndicator, com.tools20022.repository.msg.SettlementDetails1.mmHoldIndicator, com.tools20022.repository.msg.SettlementDetails19.mmHoldIndicator,
-					com.tools20022.repository.msg.SettlementDetails22.mmHoldIndicator, com.tools20022.repository.msg.SettlementDetails35.mmHoldIndicator, com.tools20022.repository.msg.SettlementDetails42.mmHoldIndicator,
-					com.tools20022.repository.msg.SettlementDetails52.mmHoldIndicator, com.tools20022.repository.msg.SettlementDetails8.mmHoldIndicator, com.tools20022.repository.msg.SettlementDetails11.mmHoldIndicator,
-					com.tools20022.repository.msg.SettlementDetails23.mmHoldIndicator, com.tools20022.repository.msg.SettlementDetails37.mmHoldIndicator, com.tools20022.repository.msg.SettlementDetails44.mmHoldIndicator,
-					com.tools20022.repository.msg.SettlementDetails53.mmHoldIndicator, com.tools20022.repository.msg.SettlementDetails7.mmHoldIndicator, com.tools20022.repository.msg.SettlementDetails12.mmHoldIndicator,
-					com.tools20022.repository.msg.SettlementDetails28.mmHoldIndicator, com.tools20022.repository.msg.SettlementDetails38.mmHoldIndicator, com.tools20022.repository.msg.SettlementDetails47.mmHoldIndicator,
-					com.tools20022.repository.msg.SettlementDetails56.mmHoldIndicator, com.tools20022.repository.msg.SettlementDetails43.mmHoldIndicator, com.tools20022.repository.msg.SettlementDetails10.mmHoldIndicator,
-					com.tools20022.repository.msg.SettlementDetails29.mmHoldIndicator, com.tools20022.repository.msg.SettlementDetails5.mmHoldIndicator, com.tools20022.repository.msg.SettlementDetails25.mmHoldIndicator,
-					com.tools20022.repository.msg.SettlementDetails65.mmHoldIndicator, com.tools20022.repository.msg.SettlementDetails14.mmHoldIndicator, com.tools20022.repository.msg.SettlementDetails41.mmHoldIndicator,
-					com.tools20022.repository.msg.SettlementDetails61.mmHoldIndicator, com.tools20022.repository.msg.SettlementDetails59.mmHoldIndicator, com.tools20022.repository.msg.SettlementDetails15.mmHoldIndicator,
-					com.tools20022.repository.msg.SettlementDetails34.mmHoldIndicator, com.tools20022.repository.msg.SettlementDetails49.mmHoldIndicator, com.tools20022.repository.msg.SettlementDetails58.mmHoldIndicator,
-					com.tools20022.repository.msg.SettlementDetails66.mmHoldIndicator, com.tools20022.repository.msg.SettlementDetails67.mmHoldIndicator, com.tools20022.repository.msg.SettlementDetails69.mmHoldIndicator,
-					com.tools20022.repository.msg.SettlementDetails72.mmHoldIndicator, com.tools20022.repository.msg.SettlementDetails73.mmHoldIndicator, com.tools20022.repository.msg.SettlementDetails74.mmHoldIndicator,
-					com.tools20022.repository.msg.RequestDetails13.mmHoldIndicator, com.tools20022.repository.msg.SettlementDetails81.mmHoldIndicator, com.tools20022.repository.msg.SettlementDetails78.mmHoldIndicator,
-					com.tools20022.repository.msg.SettlementDetails77.mmHoldIndicator, com.tools20022.repository.msg.RequestDetails14.mmHoldIndicator, com.tools20022.repository.msg.SettlementDetails79.mmHoldIndicator,
-					com.tools20022.repository.msg.SettlementDetails86.mmHoldIndicator, com.tools20022.repository.msg.SettlementDetails85.mmHoldIndicator, com.tools20022.repository.msg.SettlementDetails93.mmHoldIndicator,
-					com.tools20022.repository.msg.RequestDetails15.mmHoldIndicator, com.tools20022.repository.msg.SettlementDetails97.mmHoldIndicator, com.tools20022.repository.msg.SettlementDetails99.mmHoldIndicator,
-					com.tools20022.repository.msg.SettlementDetails95.mmHoldIndicator, com.tools20022.repository.msg.SettlementDetails92.mmHoldIndicator, com.tools20022.repository.msg.HoldIndicator6.mmIndicator,
-					com.tools20022.repository.msg.SettlementDetails98.mmHoldIndicator, com.tools20022.repository.msg.SettlementDetails101.mmHoldIndicator, com.tools20022.repository.msg.SettlementDetails105.mmHoldIndicator,
-					com.tools20022.repository.msg.SettlementDetails106.mmHoldIndicator, com.tools20022.repository.msg.SettlementDetails111.mmHoldIndicator, com.tools20022.repository.msg.RequestDetails16.mmHoldIndicator,
-					com.tools20022.repository.msg.SettlementDetails112.mmHoldIndicator, com.tools20022.repository.msg.SettlementDetails108.mmHoldIndicator, com.tools20022.repository.msg.SettlementDetails107.mmHoldIndicator,
-					com.tools20022.repository.msg.SettlementDetails115.mmHoldIndicator, com.tools20022.repository.msg.HoldIndicator7.mmIndicator, com.tools20022.repository.msg.SettlementDetails116.mmHoldIndicator,
-					com.tools20022.repository.msg.SettlementDetails120.mmHoldIndicator, com.tools20022.repository.msg.SettlementDetails119.mmHoldIndicator, com.tools20022.repository.msg.SettlementDetails125.mmHoldIndicator,
-					com.tools20022.repository.msg.SettlementDetails127.mmHoldIndicator, com.tools20022.repository.msg.SettlementDetails121.mmHoldIndicator, com.tools20022.repository.msg.SettlementDetails137.mmHoldIndicator,
-					com.tools20022.repository.msg.SettlementDetails132.mmHoldIndicator, com.tools20022.repository.msg.SettlementDetails130.mmHoldIndicator, com.tools20022.repository.msg.SettlementDetails131.mmHoldIndicator,
-					com.tools20022.repository.msg.SettlementDetails133.mmHoldIndicator);
+			derivation_lazy = () -> Arrays.asList(SettlementDetails3.mmHoldIndicator, SettlementDetails16.mmHoldIndicator, SettlementDetails31.mmHoldIndicator, SettlementDetails40.mmHoldIndicator, SettlementDetails62.mmHoldIndicator,
+					SettlementDetails63.mmHoldIndicator, RequestDetails1.mmHoldIndicator, RequestDetails2.mmHoldIndicator, HoldIndicator2.mmIndicator, RequestDetails6.mmHoldIndicator, HoldIndicator3.mmIndicator,
+					RequestDetails7.mmHoldIndicator, HoldIndicator4.mmIndicator, RequestDetails8.mmHoldIndicator, HoldIndicator5.mmIndicator, RequestDetails9.mmHoldIndicator, RequestDetails11.mmHoldIndicator,
+					RequestDetails12.mmHoldIndicator, SettlementDetails1.mmHoldIndicator, SettlementDetails19.mmHoldIndicator, SettlementDetails22.mmHoldIndicator, SettlementDetails35.mmHoldIndicator, SettlementDetails42.mmHoldIndicator,
+					SettlementDetails52.mmHoldIndicator, SettlementDetails8.mmHoldIndicator, SettlementDetails11.mmHoldIndicator, SettlementDetails23.mmHoldIndicator, SettlementDetails37.mmHoldIndicator,
+					SettlementDetails44.mmHoldIndicator, SettlementDetails53.mmHoldIndicator, SettlementDetails7.mmHoldIndicator, SettlementDetails12.mmHoldIndicator, SettlementDetails28.mmHoldIndicator,
+					SettlementDetails38.mmHoldIndicator, SettlementDetails47.mmHoldIndicator, SettlementDetails56.mmHoldIndicator, SettlementDetails43.mmHoldIndicator, SettlementDetails10.mmHoldIndicator,
+					SettlementDetails29.mmHoldIndicator, SettlementDetails5.mmHoldIndicator, SettlementDetails25.mmHoldIndicator, SettlementDetails65.mmHoldIndicator, SettlementDetails14.mmHoldIndicator,
+					SettlementDetails41.mmHoldIndicator, SettlementDetails61.mmHoldIndicator, SettlementDetails59.mmHoldIndicator, SettlementDetails15.mmHoldIndicator, SettlementDetails34.mmHoldIndicator,
+					SettlementDetails49.mmHoldIndicator, SettlementDetails58.mmHoldIndicator, SettlementDetails66.mmHoldIndicator, SettlementDetails67.mmHoldIndicator, SettlementDetails69.mmHoldIndicator,
+					SettlementDetails72.mmHoldIndicator, SettlementDetails73.mmHoldIndicator, SettlementDetails74.mmHoldIndicator, RequestDetails13.mmHoldIndicator, SettlementDetails81.mmHoldIndicator, SettlementDetails78.mmHoldIndicator,
+					SettlementDetails77.mmHoldIndicator, RequestDetails14.mmHoldIndicator, SettlementDetails79.mmHoldIndicator, SettlementDetails86.mmHoldIndicator, SettlementDetails85.mmHoldIndicator, SettlementDetails93.mmHoldIndicator,
+					RequestDetails15.mmHoldIndicator, SettlementDetails97.mmHoldIndicator, SettlementDetails99.mmHoldIndicator, SettlementDetails95.mmHoldIndicator, SettlementDetails92.mmHoldIndicator, HoldIndicator6.mmIndicator,
+					SettlementDetails98.mmHoldIndicator, SettlementDetails101.mmHoldIndicator, SettlementDetails105.mmHoldIndicator, SettlementDetails106.mmHoldIndicator, SettlementDetails111.mmHoldIndicator,
+					RequestDetails16.mmHoldIndicator, SettlementDetails112.mmHoldIndicator, SettlementDetails108.mmHoldIndicator, SettlementDetails107.mmHoldIndicator, SettlementDetails115.mmHoldIndicator, HoldIndicator7.mmIndicator,
+					SettlementDetails116.mmHoldIndicator, SettlementDetails120.mmHoldIndicator, SettlementDetails119.mmHoldIndicator, SettlementDetails125.mmHoldIndicator, SettlementDetails127.mmHoldIndicator,
+					SettlementDetails121.mmHoldIndicator, SettlementDetails137.mmHoldIndicator, SettlementDetails132.mmHoldIndicator, SettlementDetails130.mmHoldIndicator, SettlementDetails131.mmHoldIndicator,
+					SettlementDetails133.mmHoldIndicator);
 			elementContext_lazy = () -> SecuritiesSettlement.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "HoldIndicator";
 			definition = "Specifies whether the transaction is on hold/blocked/frozen.";
 			maxOccurs = 1;
@@ -10266,13 +9800,13 @@ public class SecuritiesSettlement extends Settlement {
 		{
 			elementContext_lazy = () -> SecuritiesSettlement.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RequestedSafekeepingPlace";
 			definition = "Place requested as the place of safekeeping.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.SafekeepingPlace.mmSecuritiesSettlement;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SafekeepingPlace.mmObject();
 		}
 	};
@@ -10316,12 +9850,12 @@ public class SecuritiesSettlement extends Settlement {
 		{
 			elementContext_lazy = () -> SecuritiesSettlement.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PairOff";
 			definition = "Buy and sell trades are settled in cash, based on the difference in the prices between the off-setting trades.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.PairOff.mmRelatedSecuritiesSettlement;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.PairOff.mmObject();
 		}
 	};
@@ -10362,12 +9896,12 @@ public class SecuritiesSettlement extends Settlement {
 		{
 			elementContext_lazy = () -> SecuritiesSettlement.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AccruedInterest";
 			definition = "Interest included in the settlement.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.Interest.mmSecuritiesSettlement;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Interest.mmObject();
 		}
 	};
@@ -10409,13 +9943,13 @@ public class SecuritiesSettlement extends Settlement {
 		{
 			elementContext_lazy = () -> SecuritiesSettlement.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SecuritiesClearing";
 			definition = "Clearing process which triggers the settlement process.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesClearing.mmSecuritiesSettlement;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SecuritiesClearing.mmObject();
 		}
 	};
@@ -10457,13 +9991,13 @@ public class SecuritiesSettlement extends Settlement {
 		{
 			elementContext_lazy = () -> SecuritiesSettlement.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Payment";
 			definition = "Specifies the cash payment information of a securities settlement.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.Payment.mmRelatedSecuritiesSettlement;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Payment.mmObject();
 		}
 	};
@@ -10505,13 +10039,13 @@ public class SecuritiesSettlement extends Settlement {
 		{
 			elementContext_lazy = () -> SecuritiesSettlement.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SettledAllocation";
 			definition = "Allocation which is settled.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.Allocation.mmSettlementExecutionParameters;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Allocation.mmObject();
 		}
 	};
@@ -10554,12 +10088,12 @@ public class SecuritiesSettlement extends Settlement {
 		{
 			elementContext_lazy = () -> SecuritiesSettlement.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedForeignExchangeOperation";
 			definition = "Entry details related to currency exchange information.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.ForeignExchangeTrade.mmCurrencyExchangeForSecuritiesSettlement;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.ForeignExchangeTrade.mmObject();
 		}
 	};
@@ -10715,30 +10249,28 @@ public class SecuritiesSettlement extends Settlement {
 	 */
 	public static final MMBusinessAssociationEnd mmSecurity = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails3.mmFinancialInstrumentAttributes,
-					com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails4.mmFinancialInstrumentAttributes, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails2.mmFinancialInstrumentAttributes,
-					com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails5.mmFinancialInstrumentAttributes, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails6.mmFinancialInstrumentAttributes,
-					com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails7.mmFinancialInstrumentAttributes, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails8.mmFinancialInstrumentAttributes,
-					com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails9.mmFinancialInstrumentAttributes, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails10.mmFinancialInstrumentAttributes,
-					com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails11.mmFinancialInstrumentAttributes, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails12.mmFinancialInstrumentAttributes,
-					com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails13.mmFinancialInstrumentAttributes, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails16.mmFinancialInstrumentAttributes,
-					com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails14.mmFinancialInstrumentAttributes, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails15.mmFinancialInstrumentAttributes,
-					com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails17.mmFinancialInstrumentAttributes, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails18.mmFinancialInstrumentAttributes,
-					com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails19.mmFinancialInstrumentAttributes, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails21.mmFinancialInstrumentAttributes,
-					com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails22.mmFinancialInstrumentAttributes, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails20.mmFinancialInstrumentAttributes,
-					com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails23.mmFinancialInstrumentAttributes, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails25.mmFinancialInstrumentAttributes,
-					com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails24.mmFinancialInstrumentAttributes, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails27.mmFinancialInstrumentAttributes,
-					com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails28.mmFinancialInstrumentAttributes, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails26.mmFinancialInstrumentAttributes,
-					com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails30.mmFinancialInstrumentAttributes, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails29.mmFinancialInstrumentAttributes,
-					com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails31.mmFinancialInstrumentAttributes);
+			derivation_lazy = () -> Arrays.asList(SecuritiesSettlementTransactionDetails3.mmFinancialInstrumentAttributes, SecuritiesSettlementTransactionDetails4.mmFinancialInstrumentAttributes,
+					SecuritiesSettlementTransactionDetails2.mmFinancialInstrumentAttributes, SecuritiesSettlementTransactionDetails5.mmFinancialInstrumentAttributes, SecuritiesSettlementTransactionDetails6.mmFinancialInstrumentAttributes,
+					SecuritiesSettlementTransactionDetails7.mmFinancialInstrumentAttributes, SecuritiesSettlementTransactionDetails8.mmFinancialInstrumentAttributes, SecuritiesSettlementTransactionDetails9.mmFinancialInstrumentAttributes,
+					SecuritiesSettlementTransactionDetails10.mmFinancialInstrumentAttributes, SecuritiesSettlementTransactionDetails11.mmFinancialInstrumentAttributes,
+					SecuritiesSettlementTransactionDetails12.mmFinancialInstrumentAttributes, SecuritiesSettlementTransactionDetails13.mmFinancialInstrumentAttributes,
+					SecuritiesSettlementTransactionDetails16.mmFinancialInstrumentAttributes, SecuritiesSettlementTransactionDetails14.mmFinancialInstrumentAttributes,
+					SecuritiesSettlementTransactionDetails15.mmFinancialInstrumentAttributes, SecuritiesSettlementTransactionDetails17.mmFinancialInstrumentAttributes,
+					SecuritiesSettlementTransactionDetails18.mmFinancialInstrumentAttributes, SecuritiesSettlementTransactionDetails19.mmFinancialInstrumentAttributes,
+					SecuritiesSettlementTransactionDetails21.mmFinancialInstrumentAttributes, SecuritiesSettlementTransactionDetails22.mmFinancialInstrumentAttributes,
+					SecuritiesSettlementTransactionDetails20.mmFinancialInstrumentAttributes, SecuritiesSettlementTransactionDetails23.mmFinancialInstrumentAttributes,
+					SecuritiesSettlementTransactionDetails25.mmFinancialInstrumentAttributes, SecuritiesSettlementTransactionDetails24.mmFinancialInstrumentAttributes,
+					SecuritiesSettlementTransactionDetails27.mmFinancialInstrumentAttributes, SecuritiesSettlementTransactionDetails28.mmFinancialInstrumentAttributes,
+					SecuritiesSettlementTransactionDetails26.mmFinancialInstrumentAttributes, SecuritiesSettlementTransactionDetails30.mmFinancialInstrumentAttributes,
+					SecuritiesSettlementTransactionDetails29.mmFinancialInstrumentAttributes, SecuritiesSettlementTransactionDetails31.mmFinancialInstrumentAttributes);
 			elementContext_lazy = () -> SecuritiesSettlement.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Security";
 			definition = "Security which is settled.";
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.Security.mmSecuritiesSettlement;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 		}
 	};
@@ -10780,13 +10312,13 @@ public class SecuritiesSettlement extends Settlement {
 		{
 			elementContext_lazy = () -> SecuritiesSettlement.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Position";
 			definition = "Information on the quantities and amounts to be settled in a position.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.Position.mmSecuritiesSettlement;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Position.mmObject();
 		}
 	};
@@ -10828,13 +10360,13 @@ public class SecuritiesSettlement extends Settlement {
 		{
 			elementContext_lazy = () -> SecuritiesSettlement.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Rollover";
 			definition = "Process whereby a financial instrument is reinvested at maturity.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.Rollover.mmSecuritiesSettlement;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Rollover.mmObject();
 		}
 	};
@@ -10894,17 +10426,17 @@ public class SecuritiesSettlement extends Settlement {
 	 */
 	public static final MMBusinessAssociationEnd mmTurnedQuantity = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PairedOrTurnedQuantity1Choice.mmTurnedQuantity, com.tools20022.repository.choice.PairedOrTurnedQuantity2Choice.mmTurnedQuantity,
-					com.tools20022.repository.choice.PairedOrTurnedQuantity3Choice.mmTurnedQuantity, com.tools20022.repository.choice.PairedOrTurnedQuantity4Choice.mmTurnedQuantity);
+			derivation_lazy = () -> Arrays.asList(PairedOrTurnedQuantity1Choice.mmTurnedQuantity, PairedOrTurnedQuantity2Choice.mmTurnedQuantity, PairedOrTurnedQuantity3Choice.mmTurnedQuantity,
+					PairedOrTurnedQuantity4Choice.mmTurnedQuantity);
 			elementContext_lazy = () -> SecuritiesSettlement.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TurnedQuantity";
 			definition = "Relates to a turnaround: the same security is bought and sold to settle the same day, to or from different brokers.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmRelatedTurnaroundSettlement;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmObject();
 		}
 	};
@@ -10957,11 +10489,10 @@ public class SecuritiesSettlement extends Settlement {
 	 */
 	public static final MMBusinessAttribute mmSettlementReason = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ObligationType1Choice.mmCode, com.tools20022.repository.choice.ObligationType1Choice.mmProprietary,
-					com.tools20022.repository.msg.SettlementObligation3.mmObligationType, com.tools20022.repository.msg.SettlementObligation5.mmObligationType);
+			derivation_lazy = () -> Arrays.asList(ObligationType1Choice.mmCode, ObligationType1Choice.mmProprietary, SettlementObligation3.mmObligationType, SettlementObligation5.mmObligationType);
 			elementContext_lazy = () -> SecuritiesSettlement.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementReason";
 			definition = "Specifies the reason for the settlement related to the type of underlying trade.";
 			maxOccurs = 1;
@@ -11568,81 +11099,47 @@ public class SecuritiesSettlement extends Settlement {
 	 */
 	public static final MMBusinessAttribute mmSettlementType = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SettlementTypeAndIdentification3.mmPayment, com.tools20022.repository.msg.SettlementTypeAndAdditionalParameters5.mmPayment,
-					com.tools20022.repository.msg.SettlementTypeAndIdentification13.mmPayment, com.tools20022.repository.msg.SettlementTypeAndIdentification7.mmPayment,
-					com.tools20022.repository.msg.SettlementTypeAndAdditionalParameters8.mmPayment, com.tools20022.repository.msg.SettlementTypeAndIdentification2.mmPayment,
-					com.tools20022.repository.msg.SettlementTypeAndIdentification5.mmPayment, com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters3.mmPayment,
-					com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters6.mmPayment, com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters1.mmPayment,
-					com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters4.mmPayment, com.tools20022.repository.msg.SettlementTypeAndIdentification14.mmPayment,
-					com.tools20022.repository.msg.SettlementTypeAndIdentification1.mmPayment, com.tools20022.repository.msg.SettlementTypeAndIdentification8.mmPayment,
-					com.tools20022.repository.msg.SettlementTypeAndIdentification9.mmPayment, com.tools20022.repository.msg.SettlementTypeAndIdentification11.mmPayment,
-					com.tools20022.repository.msg.SettlementTypeAndIdentification15.mmPayment, com.tools20022.repository.msg.SettlementTypeAndIdentification17.mmPayment,
-					com.tools20022.repository.msg.SettlementTypeAndIdentification10.mmPayment, com.tools20022.repository.msg.SettlementTypeAndIdentification12.mmPayment,
-					com.tools20022.repository.msg.SettlementTypeAndAdditionalParameters1.mmPayment, com.tools20022.repository.msg.SettlementTypeAndAdditionalParameters4.mmPayment,
-					com.tools20022.repository.msg.SettlementTypeAndAdditionalParameters9.mmPayment, com.tools20022.repository.msg.SettlementTypeAndAdditionalParameters10.mmPayment,
-					com.tools20022.repository.msg.TransactionDetails5.mmPayment, com.tools20022.repository.msg.TransactionDetails9.mmPayment, com.tools20022.repository.msg.TransactionDetails22.mmPayment,
-					com.tools20022.repository.msg.TransactionDetails23.mmPayment, com.tools20022.repository.msg.TransactionDetails36.mmPayment, com.tools20022.repository.msg.TransactionDetails47.mmPayment,
-					com.tools20022.repository.msg.TransactionDetails53.mmPayment, com.tools20022.repository.msg.TransactionDetails58.mmPayment, com.tools20022.repository.msg.TransactionDetails7.mmPayment,
-					com.tools20022.repository.msg.TransactionDetails8.mmPayment, com.tools20022.repository.msg.TransactionDetails16.mmPayment, com.tools20022.repository.msg.TransactionDetails17.mmPayment,
-					com.tools20022.repository.msg.TransactionDetails26.mmPayment, com.tools20022.repository.msg.TransactionDetails25.mmPayment, com.tools20022.repository.msg.TransactionDetails27.mmPayment,
-					com.tools20022.repository.msg.TransactionDetails33.mmPayment, com.tools20022.repository.msg.TransactionDetails39.mmPayment, com.tools20022.repository.msg.TransactionDetails50.mmPayment,
-					com.tools20022.repository.msg.TransactionDetails56.mmPayment, com.tools20022.repository.msg.TransactionDetails59.mmPayment, com.tools20022.repository.msg.TransactionDetails6.mmPayment,
-					com.tools20022.repository.msg.TransactionDetails18.mmPayment, com.tools20022.repository.msg.TransactionDetails24.mmPayment, com.tools20022.repository.msg.TransactionDetails34.mmPayment,
-					com.tools20022.repository.msg.TransactionDetails37.mmPayment, com.tools20022.repository.msg.TransactionDetails48.mmPayment, com.tools20022.repository.msg.TransactionDetails57.mmPayment,
-					com.tools20022.repository.msg.TransactionDetails60.mmPayment, com.tools20022.repository.msg.Order14.mmPayment, com.tools20022.repository.msg.FundOrderData2.mmSettlementMethod,
-					com.tools20022.repository.msg.RedemptionOrder5.mmSettlementMethod, com.tools20022.repository.msg.RedemptionExecution5.mmSettlementMethod, com.tools20022.repository.msg.RedemptionOrder7.mmSettlementMethod,
-					com.tools20022.repository.msg.RedemptionOrder6.mmSettlementMethod, com.tools20022.repository.msg.RedemptionExecution6.mmSettlementMethod, com.tools20022.repository.msg.RedemptionOrder8.mmSettlementMethod,
-					com.tools20022.repository.msg.SubscriptionOrder5.mmSettlementMethod, com.tools20022.repository.msg.SubscriptionExecution5.mmSettlementMethod, com.tools20022.repository.msg.SubscriptionOrder7.mmSettlementMethod,
-					com.tools20022.repository.msg.SubscriptionOrder6.mmSettlementMethod, com.tools20022.repository.msg.SubscriptionExecution6.mmSettlementMethod, com.tools20022.repository.msg.SubscriptionOrder8.mmSettlementMethod,
-					com.tools20022.repository.msg.SwitchOrder3.mmSettlementMethod, com.tools20022.repository.msg.SwitchExecution4.mmSettlementMethod, com.tools20022.repository.msg.SwitchOrder4.mmSettlementMethod,
-					com.tools20022.repository.msg.SecuritiesTradeDetails7.mmPayment, com.tools20022.repository.msg.SecuritiesTradeDetails19.mmPayment, com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters2.mmPayment,
-					com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters7.mmPayment, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails2.mmPayment,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails8.mmPayment, com.tools20022.repository.msg.SettlementTypeAndAdditionalParameters2.mmPayment,
-					com.tools20022.repository.msg.SecuritiesTradeDetails4.mmPayment, com.tools20022.repository.msg.SecuritiesTradeDetails17.mmPayment, com.tools20022.repository.msg.SettlementTypeAndIdentification4.mmPayment,
-					com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters5.mmPayment, com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters8.mmPayment,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails6.mmPayment, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails10.mmPayment,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails17.mmPayment, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails18.mmPayment,
-					com.tools20022.repository.msg.SettlementTypeAndAdditionalParameters3.mmPayment, com.tools20022.repository.msg.SecuritiesTradeDetails10.mmPayment, com.tools20022.repository.msg.SecuritiesTradeDetails22.mmPayment,
-					com.tools20022.repository.msg.SecuritiesTradeDetails23.mmPayment, com.tools20022.repository.msg.SecuritiesTradeDetails29.mmPayment, com.tools20022.repository.msg.TransactionDetails40.mmPayment,
-					com.tools20022.repository.msg.TransactionDetails42.mmPayment, com.tools20022.repository.msg.TransactionDetails46.mmPayment, com.tools20022.repository.msg.SettlementTypeAndIdentification6.mmPayment,
-					com.tools20022.repository.msg.SecuritiesTradeDetails14.mmPayment, com.tools20022.repository.msg.SecuritiesTradeDetails20.mmPayment, com.tools20022.repository.msg.SecuritiesTradeDetails24.mmPayment,
-					com.tools20022.repository.msg.SecuritiesTradeDetails30.mmPayment, com.tools20022.repository.msg.TransactionDetails45.mmPayment, com.tools20022.repository.msg.SettlementObligation3.mmPayment,
-					com.tools20022.repository.msg.SettlementObligation5.mmPayment, com.tools20022.repository.msg.SettlementObligation4.mmPayment, com.tools20022.repository.msg.RedemptionOrder11.mmSettlementMethod,
-					com.tools20022.repository.msg.RedemptionExecution12.mmSettlementMethod, com.tools20022.repository.msg.SubscriptionOrder11.mmSettlementMethod, com.tools20022.repository.msg.SubscriptionExecution9.mmSettlementMethod,
-					com.tools20022.repository.msg.TransactionDetails51.mmPayment, com.tools20022.repository.msg.TransactionDetails61.mmPayment, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails21.mmPayment,
-					com.tools20022.repository.msg.TransactionDetails62.mmPayment, com.tools20022.repository.msg.TransactionDetails63.mmPayment, com.tools20022.repository.msg.SecuritiesTradeDetails35.mmPayment,
-					com.tools20022.repository.msg.Order17.mmPayment, com.tools20022.repository.msg.Order18.mmPayment, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails22.mmPayment,
-					com.tools20022.repository.msg.TransactionDetails66.mmPayment, com.tools20022.repository.msg.SecuritiesTradeDetails42.mmPayment, com.tools20022.repository.msg.TransactionDetails67.mmPayment,
-					com.tools20022.repository.msg.TransactionDetails68.mmPayment, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails24.mmPayment, com.tools20022.repository.msg.TransactionDetails70.mmPayment,
-					com.tools20022.repository.msg.TransactionDetails69.mmPayment, com.tools20022.repository.msg.SettlementObligation8.mmPayment, com.tools20022.repository.msg.TransactionDetails71.mmPayment,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails25.mmPayment, com.tools20022.repository.msg.TransactionDetails72.mmPayment, com.tools20022.repository.msg.TransactionDetails81.mmPayment,
-					com.tools20022.repository.msg.SecuritiesTradeDetails49.mmPayment, com.tools20022.repository.msg.TransactionDetails82.mmPayment, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails26.mmPayment,
-					com.tools20022.repository.msg.TransactionDetails79.mmPayment, com.tools20022.repository.msg.SecuritiesTradeDetails48.mmPayment, com.tools20022.repository.msg.TransactionDetails75.mmPayment,
-					com.tools20022.repository.msg.TransactionDetails78.mmPayment, com.tools20022.repository.msg.SettlementTypeAndIdentification18.mmPayment, com.tools20022.repository.msg.SettlementTypeAndIdentification19.mmPayment,
-					com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters10.mmPayment, com.tools20022.repository.msg.SettlementTypeAndAdditionalParameters11.mmPayment,
-					com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters9.mmPayment, com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters11.mmPayment,
-					com.tools20022.repository.msg.SettlementTypeAndAdditionalParameters12.mmPayment, com.tools20022.repository.msg.SettlementTypeAndAdditionalParameters14.mmPayment,
-					com.tools20022.repository.msg.SettlementTypeAndIdentification20.mmPayment, com.tools20022.repository.msg.SettlementTypeAndIdentification21.mmPayment, com.tools20022.repository.msg.SecuritiesTradeDetails57.mmPayment,
-					com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters13.mmPayment, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails33.mmPayment,
-					com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters14.mmPayment, com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters12.mmPayment,
-					com.tools20022.repository.msg.SecuritiesTradeDetails61.mmPayment, com.tools20022.repository.msg.TransactionDetails92.mmPayment, com.tools20022.repository.msg.TransactionDetails84.mmPayment,
-					com.tools20022.repository.msg.SettlementTypeAndAdditionalParameters16.mmPayment, com.tools20022.repository.msg.SettlementTypeAndIdentification24.mmPayment, com.tools20022.repository.msg.TransactionDetails87.mmPayment,
-					com.tools20022.repository.msg.SettlementTypeAndAdditionalParameters15.mmPayment, com.tools20022.repository.msg.TransactionDetails91.mmPayment, com.tools20022.repository.msg.TransactionDetails90.mmPayment,
-					com.tools20022.repository.msg.SettlementTypeAndAdditionalParameters18.mmPayment, com.tools20022.repository.msg.SettlementTypeAndIdentification22.mmPayment,
-					com.tools20022.repository.msg.SwitchExecution7.mmSettlementMethod, com.tools20022.repository.msg.SwitchOrder7.mmSettlementMethod, com.tools20022.repository.msg.RedemptionOrder14.mmSettlementMethod,
-					com.tools20022.repository.msg.SubscriptionExecution13.mmSettlementMethod, com.tools20022.repository.msg.SubscriptionExecution12.mmSettlementMethod, com.tools20022.repository.msg.SubscriptionOrder15.mmSettlementMethod,
-					com.tools20022.repository.msg.RedemptionOrder15.mmSettlementMethod, com.tools20022.repository.msg.RedemptionExecution16.mmSettlementMethod, com.tools20022.repository.msg.SubscriptionOrder14.mmSettlementMethod,
-					com.tools20022.repository.msg.FundOrderData6.mmSettlementMethod, com.tools20022.repository.msg.RedemptionExecution15.mmSettlementMethod, com.tools20022.repository.msg.SettlementTypeAndAdditionalParameters19.mmPayment,
-					com.tools20022.repository.msg.SecuritiesTradeDetails68.mmPayment, com.tools20022.repository.msg.TransactionDetails97.mmPayment, com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters15.mmPayment,
-					com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters17.mmPayment, com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters16.mmPayment,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails35.mmPayment, com.tools20022.repository.msg.TransactionDetails96.mmPayment, com.tools20022.repository.msg.TransactionDetails95.mmPayment,
-					com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters19.mmPayment, com.tools20022.repository.msg.SecuritiesTradeDetails69.mmPayment,
-					com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters20.mmPayment, com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters18.mmPayment,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails36.mmPayment, com.tools20022.repository.msg.SettlementTypeAndAdditionalParameters20.mmPayment,
-					com.tools20022.repository.msg.TransactionDetails100.mmPayment, com.tools20022.repository.msg.TransactionDetails99.mmPayment, com.tools20022.repository.msg.TransactionDetails98.mmPayment);
+			derivation_lazy = () -> Arrays.asList(SettlementTypeAndIdentification3.mmPayment, SettlementTypeAndAdditionalParameters5.mmPayment, SettlementTypeAndIdentification13.mmPayment, SettlementTypeAndIdentification7.mmPayment,
+					SettlementTypeAndAdditionalParameters8.mmPayment, SettlementTypeAndIdentification2.mmPayment, SettlementTypeAndIdentification5.mmPayment, TransactionTypeAndAdditionalParameters3.mmPayment,
+					TransactionTypeAndAdditionalParameters6.mmPayment, TransactionTypeAndAdditionalParameters1.mmPayment, TransactionTypeAndAdditionalParameters4.mmPayment, SettlementTypeAndIdentification14.mmPayment,
+					SettlementTypeAndIdentification1.mmPayment, SettlementTypeAndIdentification8.mmPayment, SettlementTypeAndIdentification9.mmPayment, SettlementTypeAndIdentification11.mmPayment,
+					SettlementTypeAndIdentification15.mmPayment, SettlementTypeAndIdentification17.mmPayment, SettlementTypeAndIdentification10.mmPayment, SettlementTypeAndIdentification12.mmPayment,
+					SettlementTypeAndAdditionalParameters1.mmPayment, SettlementTypeAndAdditionalParameters4.mmPayment, SettlementTypeAndAdditionalParameters9.mmPayment, SettlementTypeAndAdditionalParameters10.mmPayment,
+					TransactionDetails5.mmPayment, TransactionDetails9.mmPayment, TransactionDetails22.mmPayment, TransactionDetails23.mmPayment, TransactionDetails36.mmPayment, TransactionDetails47.mmPayment,
+					TransactionDetails53.mmPayment, TransactionDetails58.mmPayment, TransactionDetails7.mmPayment, TransactionDetails8.mmPayment, TransactionDetails16.mmPayment, TransactionDetails17.mmPayment,
+					TransactionDetails26.mmPayment, TransactionDetails25.mmPayment, TransactionDetails27.mmPayment, TransactionDetails33.mmPayment, TransactionDetails39.mmPayment, TransactionDetails50.mmPayment,
+					TransactionDetails56.mmPayment, TransactionDetails59.mmPayment, TransactionDetails6.mmPayment, TransactionDetails18.mmPayment, TransactionDetails24.mmPayment, TransactionDetails34.mmPayment,
+					TransactionDetails37.mmPayment, TransactionDetails48.mmPayment, TransactionDetails57.mmPayment, TransactionDetails60.mmPayment, Order14.mmPayment, FundOrderData2.mmSettlementMethod, RedemptionOrder5.mmSettlementMethod,
+					RedemptionExecution5.mmSettlementMethod, RedemptionOrder7.mmSettlementMethod, RedemptionOrder6.mmSettlementMethod, RedemptionExecution6.mmSettlementMethod, RedemptionOrder8.mmSettlementMethod,
+					SubscriptionOrder5.mmSettlementMethod, SubscriptionExecution5.mmSettlementMethod, SubscriptionOrder7.mmSettlementMethod, SubscriptionOrder6.mmSettlementMethod, SubscriptionExecution6.mmSettlementMethod,
+					SubscriptionOrder8.mmSettlementMethod, SwitchOrder3.mmSettlementMethod, SwitchExecution4.mmSettlementMethod, SwitchOrder4.mmSettlementMethod, SecuritiesTradeDetails7.mmPayment, SecuritiesTradeDetails19.mmPayment,
+					TransactionTypeAndAdditionalParameters2.mmPayment, TransactionTypeAndAdditionalParameters7.mmPayment, SecuritiesFinancingTransactionDetails2.mmPayment, SecuritiesFinancingTransactionDetails8.mmPayment,
+					SettlementTypeAndAdditionalParameters2.mmPayment, SecuritiesTradeDetails4.mmPayment, SecuritiesTradeDetails17.mmPayment, SettlementTypeAndIdentification4.mmPayment, TransactionTypeAndAdditionalParameters5.mmPayment,
+					TransactionTypeAndAdditionalParameters8.mmPayment, SecuritiesFinancingTransactionDetails6.mmPayment, SecuritiesFinancingTransactionDetails10.mmPayment, SecuritiesFinancingTransactionDetails17.mmPayment,
+					SecuritiesFinancingTransactionDetails18.mmPayment, SettlementTypeAndAdditionalParameters3.mmPayment, SecuritiesTradeDetails10.mmPayment, SecuritiesTradeDetails22.mmPayment, SecuritiesTradeDetails23.mmPayment,
+					SecuritiesTradeDetails29.mmPayment, TransactionDetails40.mmPayment, TransactionDetails42.mmPayment, TransactionDetails46.mmPayment, SettlementTypeAndIdentification6.mmPayment, SecuritiesTradeDetails14.mmPayment,
+					SecuritiesTradeDetails20.mmPayment, SecuritiesTradeDetails24.mmPayment, SecuritiesTradeDetails30.mmPayment, TransactionDetails45.mmPayment, SettlementObligation3.mmPayment, SettlementObligation5.mmPayment,
+					SettlementObligation4.mmPayment, RedemptionOrder11.mmSettlementMethod, RedemptionExecution12.mmSettlementMethod, SubscriptionOrder11.mmSettlementMethod, SubscriptionExecution9.mmSettlementMethod,
+					TransactionDetails51.mmPayment, TransactionDetails61.mmPayment, SecuritiesFinancingTransactionDetails21.mmPayment, TransactionDetails62.mmPayment, TransactionDetails63.mmPayment, SecuritiesTradeDetails35.mmPayment,
+					Order17.mmPayment, Order18.mmPayment, SecuritiesFinancingTransactionDetails22.mmPayment, TransactionDetails66.mmPayment, SecuritiesTradeDetails42.mmPayment, TransactionDetails67.mmPayment,
+					TransactionDetails68.mmPayment, SecuritiesFinancingTransactionDetails24.mmPayment, TransactionDetails70.mmPayment, TransactionDetails69.mmPayment, SettlementObligation8.mmPayment, TransactionDetails71.mmPayment,
+					SecuritiesFinancingTransactionDetails25.mmPayment, TransactionDetails72.mmPayment, TransactionDetails81.mmPayment, SecuritiesTradeDetails49.mmPayment, TransactionDetails82.mmPayment,
+					SecuritiesFinancingTransactionDetails26.mmPayment, TransactionDetails79.mmPayment, SecuritiesTradeDetails48.mmPayment, TransactionDetails75.mmPayment, TransactionDetails78.mmPayment,
+					SettlementTypeAndIdentification18.mmPayment, SettlementTypeAndIdentification19.mmPayment, TransactionTypeAndAdditionalParameters10.mmPayment, SettlementTypeAndAdditionalParameters11.mmPayment,
+					TransactionTypeAndAdditionalParameters9.mmPayment, TransactionTypeAndAdditionalParameters11.mmPayment, SettlementTypeAndAdditionalParameters12.mmPayment, SettlementTypeAndAdditionalParameters14.mmPayment,
+					SettlementTypeAndIdentification20.mmPayment, SettlementTypeAndIdentification21.mmPayment, SecuritiesTradeDetails57.mmPayment, TransactionTypeAndAdditionalParameters13.mmPayment,
+					SecuritiesFinancingTransactionDetails33.mmPayment, TransactionTypeAndAdditionalParameters14.mmPayment, TransactionTypeAndAdditionalParameters12.mmPayment, SecuritiesTradeDetails61.mmPayment,
+					TransactionDetails92.mmPayment, TransactionDetails84.mmPayment, SettlementTypeAndAdditionalParameters16.mmPayment, SettlementTypeAndIdentification24.mmPayment, TransactionDetails87.mmPayment,
+					SettlementTypeAndAdditionalParameters15.mmPayment, TransactionDetails91.mmPayment, TransactionDetails90.mmPayment, SettlementTypeAndAdditionalParameters18.mmPayment, SettlementTypeAndIdentification22.mmPayment,
+					SwitchExecution7.mmSettlementMethod, SwitchOrder7.mmSettlementMethod, RedemptionOrder14.mmSettlementMethod, SubscriptionExecution13.mmSettlementMethod, SubscriptionExecution12.mmSettlementMethod,
+					SubscriptionOrder15.mmSettlementMethod, RedemptionOrder15.mmSettlementMethod, RedemptionExecution16.mmSettlementMethod, SubscriptionOrder14.mmSettlementMethod, FundOrderData6.mmSettlementMethod,
+					RedemptionExecution15.mmSettlementMethod, SettlementTypeAndAdditionalParameters19.mmPayment, SecuritiesTradeDetails68.mmPayment, TransactionDetails97.mmPayment, TransactionTypeAndAdditionalParameters15.mmPayment,
+					TransactionTypeAndAdditionalParameters17.mmPayment, TransactionTypeAndAdditionalParameters16.mmPayment, SecuritiesFinancingTransactionDetails35.mmPayment, TransactionDetails96.mmPayment, TransactionDetails95.mmPayment,
+					TransactionTypeAndAdditionalParameters19.mmPayment, SecuritiesTradeDetails69.mmPayment, TransactionTypeAndAdditionalParameters20.mmPayment, TransactionTypeAndAdditionalParameters18.mmPayment,
+					SecuritiesFinancingTransactionDetails36.mmPayment, SettlementTypeAndAdditionalParameters20.mmPayment, TransactionDetails100.mmPayment, TransactionDetails99.mmPayment, TransactionDetails98.mmPayment);
 			elementContext_lazy = () -> SecuritiesSettlement.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SettlementType";
 			definition = "Specifies how the transaction is to be settled, eg, against payment.";
 			maxOccurs = 1;
@@ -11654,8 +11151,8 @@ public class SecuritiesSettlement extends Settlement {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesSettlement";
 				definition = "Settlement of the securities in a securities transaction, that is, the instruction to deliver or receive securities, involving the payment of an amount of money or not.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Security.mmSecuritiesSettlement, com.tools20022.repository.entity.Payment.mmRelatedSecuritiesSettlement,
@@ -11665,85 +11162,64 @@ public class SecuritiesSettlement extends Settlement {
 						com.tools20022.repository.entity.SecuritiesTradeExecution.mmSecuritiesSettlement, com.tools20022.repository.entity.ForeignExchangeTrade.mmCurrencyExchangeForSecuritiesSettlement,
 						com.tools20022.repository.entity.Allocation.mmSettlementExecutionParameters, com.tools20022.repository.entity.PairOff.mmRelatedSecuritiesSettlement, com.tools20022.repository.entity.Rollover.mmSecuritiesSettlement,
 						com.tools20022.repository.entity.SecuritiesClearing.mmSecuritiesSettlement, com.tools20022.repository.entity.Position.mmSecuritiesSettlement);
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails3.mmSettlementTypeAndAdditionalParameters,
-						com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails3.mmQuantityAndAccountDetails, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails3.mmSettlementParameters,
-						com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails4.mmSettlementTypeAndAdditionalParameters, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails4.mmQuantityAndAccountDetails,
-						com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails4.mmSettlementParameters, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails2.mmSettlementTypeAndAdditionalParameters,
-						com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails2.mmQuantityAndAccountDetails, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails2.mmSettlementParameters,
-						com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails5.mmSettlementTypeAndAdditionalParameters, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails5.mmQuantityAndAccountDetails,
-						com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails5.mmSettlementParameters, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails6.mmSettlementTypeAndAdditionalParameters,
-						com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails6.mmQuantityAndAccountDetails, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails6.mmSettlementParameters,
-						com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails7.mmSettlementTypeAndAdditionalParameters, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails7.mmQuantityAndAccountDetails,
-						com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails7.mmSettlementParameters, com.tools20022.repository.choice.Cancellation1Choice.mmTransferOutDetails,
-						com.tools20022.repository.choice.Cancellation2Choice.mmTransferInDetails, com.tools20022.repository.msg.RequestDetails1.mmUnilateralSplit, com.tools20022.repository.msg.RequestDetails2.mmUnilateralSplit,
-						com.tools20022.repository.msg.RequestDetails6.mmUnilateralSplit, com.tools20022.repository.msg.RequestDetails7.mmUnilateralSplit, com.tools20022.repository.msg.RequestDetails8.mmUnilateralSplit,
-						com.tools20022.repository.msg.RequestDetails9.mmUnilateralSplit, com.tools20022.repository.msg.RequestDetails11.mmUnilateralSplit, com.tools20022.repository.msg.RequestDetails12.mmUnilateralSplit,
-						com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails8.mmSettlementTypeAndAdditionalParameters, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails8.mmQuantityAndAccountDetails,
-						com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails8.mmSettlementParameters, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails9.mmSettlementTypeAndAdditionalParameters,
-						com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails9.mmQuantityAndAccountDetails, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails9.mmSettlementParameters,
-						com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails10.mmSettlementTypeAndAdditionalParameters, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails10.mmQuantityAndAccountDetails,
-						com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails10.mmSettlementParameters, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails11.mmSettlementTypeAndAdditionalParameters,
-						com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails11.mmQuantityAndAccountDetails, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails11.mmSettlementParameters,
-						com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails12.mmSettlementTypeAndAdditionalParameters, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails12.mmQuantityAndAccountDetails,
-						com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails12.mmSettlementParameters, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails13.mmSettlementTypeAndAdditionalParameters,
-						com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails13.mmQuantityAndAccountDetails, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails13.mmSettlementParameters,
-						com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails2.mmSettlementParameters, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails8.mmSettlementParameters,
-						com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails6.mmSettlementParameters, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails10.mmSettlementParameters,
-						com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails17.mmSettlementParameters, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails18.mmSettlementParameters,
-						com.tools20022.repository.choice.Cancellation5Choice.mmTransferInDetails, com.tools20022.repository.choice.Cancellation4Choice.mmTransferOutDetails,
-						com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails16.mmSettlementTypeAndAdditionalParameters, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails16.mmQuantityAndAccountDetails,
-						com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails16.mmSettlementParameters, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails14.mmSettlementTypeAndAdditionalParameters,
-						com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails14.mmQuantityAndAccountDetails, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails14.mmSettlementParameters,
-						com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails15.mmSettlementTypeAndAdditionalParameters, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails15.mmQuantityAndAccountDetails,
-						com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails15.mmSettlementParameters, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails21.mmSettlementParameters,
-						com.tools20022.repository.msg.RequestDetails13.mmUnilateralSplit, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails22.mmSettlementParameters,
-						com.tools20022.repository.msg.RequestDetails14.mmUnilateralSplit, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails17.mmSettlementTypeAndAdditionalParameters,
-						com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails17.mmQuantityAndAccountDetails, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails17.mmSettlementParameters,
-						com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails18.mmSettlementTypeAndAdditionalParameters, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails18.mmQuantityAndAccountDetails,
-						com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails18.mmSettlementParameters, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails19.mmSettlementTypeAndAdditionalParameters,
-						com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails19.mmQuantityAndAccountDetails, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails19.mmSettlementParameters,
-						com.tools20022.repository.choice.Cancellation9Choice.mmTransferInDetails, com.tools20022.repository.choice.Cancellation8Choice.mmTransferOutDetails,
-						com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails24.mmSettlementParameters, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails25.mmSettlementParameters,
-						com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails26.mmSettlementParameters, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails21.mmSettlementTypeAndAdditionalParameters,
-						com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails21.mmQuantityAndAccountDetails, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails21.mmSettlementParameters,
-						com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails22.mmSettlementTypeAndAdditionalParameters, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails22.mmQuantityAndAccountDetails,
-						com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails22.mmSettlementParameters, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails20.mmSettlementTypeAndAdditionalParameters,
-						com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails20.mmQuantityAndAccountDetails, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails20.mmSettlementParameters,
-						com.tools20022.repository.msg.RequestDetails15.mmUnilateralSplit, com.tools20022.repository.choice.Cancellation12Choice.mmTransferOutDetails,
-						com.tools20022.repository.choice.Cancellation10Choice.mmTransferInDetails, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails33.mmSettlementParameters,
-						com.tools20022.repository.msg.RequestDetails16.mmUnilateralSplit, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails23.mmSettlementTypeAndAdditionalParameters,
-						com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails23.mmQuantityAndAccountDetails, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails23.mmSettlementParameters,
-						com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails25.mmSettlementTypeAndAdditionalParameters, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails25.mmQuantityAndAccountDetails,
-						com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails25.mmSettlementParameters, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails24.mmSettlementTypeAndAdditionalParameters,
-						com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails24.mmQuantityAndAccountDetails, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails24.mmSettlementParameters,
-						com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails35.mmSettlementParameters, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails27.mmSettlementTypeAndAdditionalParameters,
-						com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails27.mmQuantityAndAccountDetails, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails27.mmSettlementParameters,
-						com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails28.mmSettlementTypeAndAdditionalParameters, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails28.mmQuantityAndAccountDetails,
-						com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails28.mmSettlementParameters, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails26.mmSettlementTypeAndAdditionalParameters,
-						com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails26.mmQuantityAndAccountDetails, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails26.mmSettlementParameters,
-						com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails36.mmSettlementParameters, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails30.mmSettlementTypeAndAdditionalParameters,
-						com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails30.mmQuantityAndAccountDetails, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails30.mmSettlementParameters,
-						com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails29.mmSettlementTypeAndAdditionalParameters, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails29.mmQuantityAndAccountDetails,
-						com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails29.mmSettlementParameters, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails31.mmSettlementTypeAndAdditionalParameters,
-						com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails31.mmQuantityAndAccountDetails, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails31.mmSettlementParameters);
+				derivationElement_lazy = () -> Arrays.asList(SecuritiesSettlementTransactionDetails3.mmSettlementTypeAndAdditionalParameters, SecuritiesSettlementTransactionDetails3.mmQuantityAndAccountDetails,
+						SecuritiesSettlementTransactionDetails3.mmSettlementParameters, SecuritiesSettlementTransactionDetails4.mmSettlementTypeAndAdditionalParameters, SecuritiesSettlementTransactionDetails4.mmQuantityAndAccountDetails,
+						SecuritiesSettlementTransactionDetails4.mmSettlementParameters, SecuritiesSettlementTransactionDetails2.mmSettlementTypeAndAdditionalParameters, SecuritiesSettlementTransactionDetails2.mmQuantityAndAccountDetails,
+						SecuritiesSettlementTransactionDetails2.mmSettlementParameters, SecuritiesSettlementTransactionDetails5.mmSettlementTypeAndAdditionalParameters, SecuritiesSettlementTransactionDetails5.mmQuantityAndAccountDetails,
+						SecuritiesSettlementTransactionDetails5.mmSettlementParameters, SecuritiesSettlementTransactionDetails6.mmSettlementTypeAndAdditionalParameters, SecuritiesSettlementTransactionDetails6.mmQuantityAndAccountDetails,
+						SecuritiesSettlementTransactionDetails6.mmSettlementParameters, SecuritiesSettlementTransactionDetails7.mmSettlementTypeAndAdditionalParameters, SecuritiesSettlementTransactionDetails7.mmQuantityAndAccountDetails,
+						SecuritiesSettlementTransactionDetails7.mmSettlementParameters, Cancellation1Choice.mmTransferOutDetails, Cancellation2Choice.mmTransferInDetails, RequestDetails1.mmUnilateralSplit,
+						RequestDetails2.mmUnilateralSplit, RequestDetails6.mmUnilateralSplit, RequestDetails7.mmUnilateralSplit, RequestDetails8.mmUnilateralSplit, RequestDetails9.mmUnilateralSplit, RequestDetails11.mmUnilateralSplit,
+						RequestDetails12.mmUnilateralSplit, SecuritiesSettlementTransactionDetails8.mmSettlementTypeAndAdditionalParameters, SecuritiesSettlementTransactionDetails8.mmQuantityAndAccountDetails,
+						SecuritiesSettlementTransactionDetails8.mmSettlementParameters, SecuritiesSettlementTransactionDetails9.mmSettlementTypeAndAdditionalParameters, SecuritiesSettlementTransactionDetails9.mmQuantityAndAccountDetails,
+						SecuritiesSettlementTransactionDetails9.mmSettlementParameters, SecuritiesSettlementTransactionDetails10.mmSettlementTypeAndAdditionalParameters, SecuritiesSettlementTransactionDetails10.mmQuantityAndAccountDetails,
+						SecuritiesSettlementTransactionDetails10.mmSettlementParameters, SecuritiesSettlementTransactionDetails11.mmSettlementTypeAndAdditionalParameters,
+						SecuritiesSettlementTransactionDetails11.mmQuantityAndAccountDetails, SecuritiesSettlementTransactionDetails11.mmSettlementParameters,
+						SecuritiesSettlementTransactionDetails12.mmSettlementTypeAndAdditionalParameters, SecuritiesSettlementTransactionDetails12.mmQuantityAndAccountDetails,
+						SecuritiesSettlementTransactionDetails12.mmSettlementParameters, SecuritiesSettlementTransactionDetails13.mmSettlementTypeAndAdditionalParameters,
+						SecuritiesSettlementTransactionDetails13.mmQuantityAndAccountDetails, SecuritiesSettlementTransactionDetails13.mmSettlementParameters, SecuritiesFinancingTransactionDetails2.mmSettlementParameters,
+						SecuritiesFinancingTransactionDetails8.mmSettlementParameters, SecuritiesFinancingTransactionDetails6.mmSettlementParameters, SecuritiesFinancingTransactionDetails10.mmSettlementParameters,
+						SecuritiesFinancingTransactionDetails17.mmSettlementParameters, SecuritiesFinancingTransactionDetails18.mmSettlementParameters, Cancellation5Choice.mmTransferInDetails, Cancellation4Choice.mmTransferOutDetails,
+						SecuritiesSettlementTransactionDetails16.mmSettlementTypeAndAdditionalParameters, SecuritiesSettlementTransactionDetails16.mmQuantityAndAccountDetails,
+						SecuritiesSettlementTransactionDetails16.mmSettlementParameters, SecuritiesSettlementTransactionDetails14.mmSettlementTypeAndAdditionalParameters,
+						SecuritiesSettlementTransactionDetails14.mmQuantityAndAccountDetails, SecuritiesSettlementTransactionDetails14.mmSettlementParameters,
+						SecuritiesSettlementTransactionDetails15.mmSettlementTypeAndAdditionalParameters, SecuritiesSettlementTransactionDetails15.mmQuantityAndAccountDetails,
+						SecuritiesSettlementTransactionDetails15.mmSettlementParameters, SecuritiesFinancingTransactionDetails21.mmSettlementParameters, RequestDetails13.mmUnilateralSplit,
+						SecuritiesFinancingTransactionDetails22.mmSettlementParameters, RequestDetails14.mmUnilateralSplit, SecuritiesSettlementTransactionDetails17.mmSettlementTypeAndAdditionalParameters,
+						SecuritiesSettlementTransactionDetails17.mmQuantityAndAccountDetails, SecuritiesSettlementTransactionDetails17.mmSettlementParameters,
+						SecuritiesSettlementTransactionDetails18.mmSettlementTypeAndAdditionalParameters, SecuritiesSettlementTransactionDetails18.mmQuantityAndAccountDetails,
+						SecuritiesSettlementTransactionDetails18.mmSettlementParameters, SecuritiesSettlementTransactionDetails19.mmSettlementTypeAndAdditionalParameters,
+						SecuritiesSettlementTransactionDetails19.mmQuantityAndAccountDetails, SecuritiesSettlementTransactionDetails19.mmSettlementParameters, Cancellation9Choice.mmTransferInDetails,
+						Cancellation8Choice.mmTransferOutDetails, SecuritiesFinancingTransactionDetails24.mmSettlementParameters, SecuritiesFinancingTransactionDetails25.mmSettlementParameters,
+						SecuritiesFinancingTransactionDetails26.mmSettlementParameters, SecuritiesSettlementTransactionDetails21.mmSettlementTypeAndAdditionalParameters, SecuritiesSettlementTransactionDetails21.mmQuantityAndAccountDetails,
+						SecuritiesSettlementTransactionDetails21.mmSettlementParameters, SecuritiesSettlementTransactionDetails22.mmSettlementTypeAndAdditionalParameters,
+						SecuritiesSettlementTransactionDetails22.mmQuantityAndAccountDetails, SecuritiesSettlementTransactionDetails22.mmSettlementParameters,
+						SecuritiesSettlementTransactionDetails20.mmSettlementTypeAndAdditionalParameters, SecuritiesSettlementTransactionDetails20.mmQuantityAndAccountDetails,
+						SecuritiesSettlementTransactionDetails20.mmSettlementParameters, RequestDetails15.mmUnilateralSplit, Cancellation12Choice.mmTransferOutDetails, Cancellation10Choice.mmTransferInDetails,
+						SecuritiesFinancingTransactionDetails33.mmSettlementParameters, RequestDetails16.mmUnilateralSplit, SecuritiesSettlementTransactionDetails23.mmSettlementTypeAndAdditionalParameters,
+						SecuritiesSettlementTransactionDetails23.mmQuantityAndAccountDetails, SecuritiesSettlementTransactionDetails23.mmSettlementParameters,
+						SecuritiesSettlementTransactionDetails25.mmSettlementTypeAndAdditionalParameters, SecuritiesSettlementTransactionDetails25.mmQuantityAndAccountDetails,
+						SecuritiesSettlementTransactionDetails25.mmSettlementParameters, SecuritiesSettlementTransactionDetails24.mmSettlementTypeAndAdditionalParameters,
+						SecuritiesSettlementTransactionDetails24.mmQuantityAndAccountDetails, SecuritiesSettlementTransactionDetails24.mmSettlementParameters, SecuritiesFinancingTransactionDetails35.mmSettlementParameters,
+						SecuritiesSettlementTransactionDetails27.mmSettlementTypeAndAdditionalParameters, SecuritiesSettlementTransactionDetails27.mmQuantityAndAccountDetails,
+						SecuritiesSettlementTransactionDetails27.mmSettlementParameters, SecuritiesSettlementTransactionDetails28.mmSettlementTypeAndAdditionalParameters,
+						SecuritiesSettlementTransactionDetails28.mmQuantityAndAccountDetails, SecuritiesSettlementTransactionDetails28.mmSettlementParameters,
+						SecuritiesSettlementTransactionDetails26.mmSettlementTypeAndAdditionalParameters, SecuritiesSettlementTransactionDetails26.mmQuantityAndAccountDetails,
+						SecuritiesSettlementTransactionDetails26.mmSettlementParameters, SecuritiesFinancingTransactionDetails36.mmSettlementParameters, SecuritiesSettlementTransactionDetails30.mmSettlementTypeAndAdditionalParameters,
+						SecuritiesSettlementTransactionDetails30.mmQuantityAndAccountDetails, SecuritiesSettlementTransactionDetails30.mmSettlementParameters,
+						SecuritiesSettlementTransactionDetails29.mmSettlementTypeAndAdditionalParameters, SecuritiesSettlementTransactionDetails29.mmQuantityAndAccountDetails,
+						SecuritiesSettlementTransactionDetails29.mmSettlementParameters, SecuritiesSettlementTransactionDetails31.mmSettlementTypeAndAdditionalParameters,
+						SecuritiesSettlementTransactionDetails31.mmQuantityAndAccountDetails, SecuritiesSettlementTransactionDetails31.mmSettlementParameters);
 				superType_lazy = () -> Settlement.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesSettlement.mmTransferOperation, com.tools20022.repository.entity.SecuritiesSettlement.mmSettlementDate,
-						com.tools20022.repository.entity.SecuritiesSettlement.mmPartyRole, com.tools20022.repository.entity.SecuritiesSettlement.mmSettlementAmount, com.tools20022.repository.entity.SecuritiesSettlement.mmHoldingsPlanType,
-						com.tools20022.repository.entity.SecuritiesSettlement.mmSecuritiesMovementType, com.tools20022.repository.entity.SecuritiesSettlement.mmSettlementQuantity,
-						com.tools20022.repository.entity.SecuritiesSettlement.mmSecuritiesTradeExecution, com.tools20022.repository.entity.SecuritiesSettlement.mmCurrencyToBuy,
-						com.tools20022.repository.entity.SecuritiesSettlement.mmCurrencyToSell, com.tools20022.repository.entity.SecuritiesSettlement.mmDenominationChoice,
-						com.tools20022.repository.entity.SecuritiesSettlement.mmSettlementTransactionCondition, com.tools20022.repository.entity.SecuritiesSettlement.mmBeneficialOwnershipIndicator,
-						com.tools20022.repository.entity.SecuritiesSettlement.mmMarketClientSide, com.tools20022.repository.entity.SecuritiesSettlement.mmTracking, com.tools20022.repository.entity.SecuritiesSettlement.mmLetterOfGuarantee,
-						com.tools20022.repository.entity.SecuritiesSettlement.mmEligibleForCollateral, com.tools20022.repository.entity.SecuritiesSettlement.mmAccruedInterestIndicator,
-						com.tools20022.repository.entity.SecuritiesSettlement.mmPreConfirmation, com.tools20022.repository.entity.SecuritiesSettlement.mmSecuritiesRealTimeGrossSettlement,
-						com.tools20022.repository.entity.SecuritiesSettlement.mmBlockTrade, com.tools20022.repository.entity.SecuritiesSettlement.mmSettlementSystemMethod,
-						com.tools20022.repository.entity.SecuritiesSettlement.mmAutomaticBorrowing, com.tools20022.repository.entity.SecuritiesSettlement.mmPartialSettlementIndicator,
-						com.tools20022.repository.entity.SecuritiesSettlement.mmHoldIndicator, com.tools20022.repository.entity.SecuritiesSettlement.mmRequestedSafekeepingPlace,
-						com.tools20022.repository.entity.SecuritiesSettlement.mmPairOff, com.tools20022.repository.entity.SecuritiesSettlement.mmAccruedInterest, com.tools20022.repository.entity.SecuritiesSettlement.mmSecuritiesClearing,
-						com.tools20022.repository.entity.SecuritiesSettlement.mmPayment, com.tools20022.repository.entity.SecuritiesSettlement.mmSettledAllocation,
-						com.tools20022.repository.entity.SecuritiesSettlement.mmRelatedForeignExchangeOperation, com.tools20022.repository.entity.SecuritiesSettlement.mmSecurity,
-						com.tools20022.repository.entity.SecuritiesSettlement.mmPosition, com.tools20022.repository.entity.SecuritiesSettlement.mmRollover, com.tools20022.repository.entity.SecuritiesSettlement.mmTurnedQuantity,
-						com.tools20022.repository.entity.SecuritiesSettlement.mmSettlementReason, com.tools20022.repository.entity.SecuritiesSettlement.mmSettlementType);
+				element_lazy = () -> Arrays.asList(SecuritiesSettlement.mmTransferOperation, SecuritiesSettlement.mmSettlementDate, SecuritiesSettlement.mmPartyRole, SecuritiesSettlement.mmSettlementAmount,
+						SecuritiesSettlement.mmHoldingsPlanType, SecuritiesSettlement.mmSecuritiesMovementType, SecuritiesSettlement.mmSettlementQuantity, SecuritiesSettlement.mmSecuritiesTradeExecution,
+						SecuritiesSettlement.mmCurrencyToBuy, SecuritiesSettlement.mmCurrencyToSell, SecuritiesSettlement.mmDenominationChoice, SecuritiesSettlement.mmSettlementTransactionCondition,
+						SecuritiesSettlement.mmBeneficialOwnershipIndicator, SecuritiesSettlement.mmMarketClientSide, SecuritiesSettlement.mmTracking, SecuritiesSettlement.mmLetterOfGuarantee, SecuritiesSettlement.mmEligibleForCollateral,
+						SecuritiesSettlement.mmAccruedInterestIndicator, SecuritiesSettlement.mmPreConfirmation, SecuritiesSettlement.mmSecuritiesRealTimeGrossSettlement, SecuritiesSettlement.mmBlockTrade,
+						SecuritiesSettlement.mmSettlementSystemMethod, SecuritiesSettlement.mmAutomaticBorrowing, SecuritiesSettlement.mmPartialSettlementIndicator, SecuritiesSettlement.mmHoldIndicator,
+						SecuritiesSettlement.mmRequestedSafekeepingPlace, SecuritiesSettlement.mmPairOff, SecuritiesSettlement.mmAccruedInterest, SecuritiesSettlement.mmSecuritiesClearing, SecuritiesSettlement.mmPayment,
+						SecuritiesSettlement.mmSettledAllocation, SecuritiesSettlement.mmRelatedForeignExchangeOperation, SecuritiesSettlement.mmSecurity, SecuritiesSettlement.mmPosition, SecuritiesSettlement.mmRollover,
+						SecuritiesSettlement.mmTurnedQuantity, SecuritiesSettlement.mmSettlementReason, SecuritiesSettlement.mmSettlementType);
 				derivationComponent_lazy = () -> ListBuilderForSecuritiesSettlement_00.addElems(new ArrayList<>());
 			}
 		});

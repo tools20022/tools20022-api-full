@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.TransparencyMethodology2Code
+ * TransparencyMethodology2Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -41,14 +51,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.TransparencyMethodologyCode#mmSystematicInternaliser
  * TransparencyMethodologyCode.mmSystematicInternaliser}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.TransparencyMethodology2Code
- * TransparencyMethodology2Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -92,7 +94,7 @@ public class TransparencyMethodologyCode {
 	 */
 	public static final MMCode mmEstimated = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Estimated";
 			definition = "Estimation for New Equity Instruments.";
 			owner_lazy = () -> TransparencyMethodologyCode.mmObject();
@@ -124,7 +126,7 @@ public class TransparencyMethodologyCode {
 	 */
 	public static final MMCode mmFirstFourWeeks = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FirstFourWeeks";
 			definition = "Calculation based on first Four Weeks of Trading for Equity Instruments.";
 			owner_lazy = () -> TransparencyMethodologyCode.mmObject();
@@ -154,7 +156,7 @@ public class TransparencyMethodologyCode {
 	 */
 	public static final MMCode mmYear = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Year";
 			definition = "Calculation based on yearly cycle.";
 			owner_lazy = () -> TransparencyMethodologyCode.mmObject();
@@ -185,7 +187,7 @@ public class TransparencyMethodologyCode {
 	 */
 	public static final MMCode mmSystematicInternaliser = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SystematicInternaliser";
 			definition = "Results of calculations supporting Systematic Internaliser regime.";
 			owner_lazy = () -> TransparencyMethodologyCode.mmObject();
@@ -196,12 +198,11 @@ public class TransparencyMethodologyCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TransparencyMethodologyCode";
 				definition = "Specifies the methodology used for a transparency operation.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TransparencyMethodologyCode.mmEstimated, com.tools20022.repository.codeset.TransparencyMethodologyCode.mmFirstFourWeeks,
-						com.tools20022.repository.codeset.TransparencyMethodologyCode.mmYear, com.tools20022.repository.codeset.TransparencyMethodologyCode.mmSystematicInternaliser);
+				code_lazy = () -> Arrays.asList(TransparencyMethodologyCode.mmEstimated, TransparencyMethodologyCode.mmFirstFourWeeks, TransparencyMethodologyCode.mmYear, TransparencyMethodologyCode.mmSystematicInternaliser);
 				derivation_lazy = () -> Arrays.asList(TransparencyMethodology2Code.mmObject());
 			}
 		});

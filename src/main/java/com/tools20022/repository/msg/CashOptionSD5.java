@@ -19,11 +19,13 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.DTCCPayoutType1Code;
 import com.tools20022.repository.codeset.WorkflowStatus1Code;
 import com.tools20022.repository.datatype.Exact3NumericText;
 import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.datatype.PercentageRate;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -102,7 +104,7 @@ public class CashOptionSD5 {
 			componentContext_lazy = () -> CashOptionSD5.mmObject();
 			isDerived = false;
 			xmlTag = "PlcAndNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "xPath to the element that is being extended.";
 			maxOccurs = 1;
@@ -143,7 +145,7 @@ public class CashOptionSD5 {
 			componentContext_lazy = () -> CashOptionSD5.mmObject();
 			isDerived = false;
 			xmlTag = "PyoutNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PayoutNumber";
 			definition = "Unique number associated with a payout within an option.";
 			maxOccurs = 1;
@@ -184,7 +186,7 @@ public class CashOptionSD5 {
 			componentContext_lazy = () -> CashOptionSD5.mmObject();
 			isDerived = false;
 			xmlTag = "PyoutTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PayoutType";
 			definition = "Describes the type of payout associated with the event.";
 			maxOccurs = 1;
@@ -225,7 +227,7 @@ public class CashOptionSD5 {
 			componentContext_lazy = () -> CashOptionSD5.mmObject();
 			isDerived = false;
 			xmlTag = "PyoutSts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PayoutStatus";
 			definition = "Workflow status of the payout.";
 			maxOccurs = 1;
@@ -267,7 +269,7 @@ public class CashOptionSD5 {
 			componentContext_lazy = () -> CashOptionSD5.mmObject();
 			isDerived = false;
 			xmlTag = "MaxWhldgTaxPctg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaximumWithholdingTaxPercentage";
 			definition = "Maximum withholding rate based on the country of the sourced income.  ";
 			maxOccurs = 1;
@@ -279,10 +281,9 @@ public class CashOptionSD5 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashOptionSD5.mmPlaceAndName, com.tools20022.repository.msg.CashOptionSD5.mmPayoutNumber, com.tools20022.repository.msg.CashOptionSD5.mmPayoutType,
-						com.tools20022.repository.msg.CashOptionSD5.mmPayoutStatus, com.tools20022.repository.msg.CashOptionSD5.mmMaximumWithholdingTaxPercentage);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(CashOptionSD5.mmPlaceAndName, CashOptionSD5.mmPayoutNumber, CashOptionSD5.mmPayoutType, CashOptionSD5.mmPayoutStatus, CashOptionSD5.mmMaximumWithholdingTaxPercentage);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CashOptionSD5";
 				definition = "Provides additional information regarding corporate action option cash movement details.";
 			}

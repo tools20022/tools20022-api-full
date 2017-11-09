@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ReversibleCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -86,7 +88,7 @@ public class Reversible1Code extends ReversibleCode {
 	 */
 	public static final MMCode mmReversible = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reversible";
 			owner_lazy = () -> Reversible1Code.mmObject();
 		}
@@ -109,7 +111,7 @@ public class Reversible1Code extends ReversibleCode {
 	 */
 	public static final MMCode mmFixed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Fixed";
 			owner_lazy = () -> Reversible1Code.mmObject();
 		}
@@ -132,7 +134,7 @@ public class Reversible1Code extends ReversibleCode {
 	 */
 	public static final MMCode mmCallBack = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CallBack";
 			owner_lazy = () -> Reversible1Code.mmObject();
 		}
@@ -141,12 +143,12 @@ public class Reversible1Code extends ReversibleCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("REVL");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Reversible1Code";
 				definition = "Indicates the possibility to terminate the securitiesc lending contract either by the borrower or lender before the expiration date.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Reversible1Code.mmReversible, com.tools20022.repository.codeset.Reversible1Code.mmFixed, com.tools20022.repository.codeset.Reversible1Code.mmCallBack);
+				code_lazy = () -> Arrays.asList(Reversible1Code.mmReversible, Reversible1Code.mmFixed, Reversible1Code.mmCallBack);
 				trace_lazy = () -> ReversibleCode.mmObject();
 			}
 		});

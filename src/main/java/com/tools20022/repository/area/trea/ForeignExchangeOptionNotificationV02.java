@@ -20,6 +20,7 @@ package com.tools20022.repository.area.trea;
 import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.TreasuryArchive;
 import com.tools20022.repository.msg.OptionData2;
 import com.tools20022.repository.msg.SettlementData2;
@@ -41,6 +42,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code trea.012.001.02}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} = {@linkplain com.tools20022.repository.area.TreasuryArchive
  * TreasuryArchive}</li>
@@ -77,9 +81,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * ForeignExchangeOptionNotificationV02.mmSettlementData}</li>
  * </ul>
  * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code trea.012.001.02}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -125,7 +126,7 @@ public class ForeignExchangeOptionNotificationV02 {
 	public static final MMMessageBuildingBlock mmTradingSideIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "TradgSdId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradingSideIdentification";
 			definition = "Specifies the trading side of the currency option trade which is reported.";
 			maxOccurs = 1;
@@ -163,7 +164,7 @@ public class ForeignExchangeOptionNotificationV02 {
 	public static final MMMessageBuildingBlock mmCounterpartySideIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CtrPtySdId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CounterpartySideIdentification";
 			definition = "Specifies the counterparty of the non deliverable trade which is reported.";
 			maxOccurs = 1;
@@ -197,7 +198,7 @@ public class ForeignExchangeOptionNotificationV02 {
 	public static final MMMessageBuildingBlock mmOptionData = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "OptnData";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionData";
 			definition = "Provides information on the conditions of the option.";
 			maxOccurs = 1;
@@ -232,7 +233,7 @@ public class ForeignExchangeOptionNotificationV02 {
 	public static final MMMessageBuildingBlock mmTradeStatus = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "TradSts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeStatus";
 			definition = "Provides information on the status of a trade in a settlement system.";
 			maxOccurs = 1;
@@ -266,7 +267,7 @@ public class ForeignExchangeOptionNotificationV02 {
 	public static final MMMessageBuildingBlock mmSettlementData = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SttlmData";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementData";
 			definition = "Provides information on the settlement of a trade.";
 			maxOccurs = 1;
@@ -278,16 +279,15 @@ public class ForeignExchangeOptionNotificationV02 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ForeignExchangeOptionNotificationV02";
 				definition = "Scope\r\nThe ForeignExchangeOptionNotification message is sent by a central system to a participant to provide details of a foreign exchange option trade.\r\nUsage\r\nThe notification is sent by the central settlement system to the two trading parties after it has received Create, Amend or Cancel messages from both. The message may also contain information on the settlement of the trade and/or premium.";
 				messageSet_lazy = () -> Arrays.asList(ForexNotificationsISOArchive.mmObject());
 				rootElement = "Document";
 				xmlTag = "FXOptnNtfctnV02";
 				businessArea_lazy = () -> TreasuryArchive.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.trea.ForeignExchangeOptionNotificationV02.mmTradingSideIdentification,
-						com.tools20022.repository.area.trea.ForeignExchangeOptionNotificationV02.mmCounterpartySideIdentification, com.tools20022.repository.area.trea.ForeignExchangeOptionNotificationV02.mmOptionData,
-						com.tools20022.repository.area.trea.ForeignExchangeOptionNotificationV02.mmTradeStatus, com.tools20022.repository.area.trea.ForeignExchangeOptionNotificationV02.mmSettlementData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(ForeignExchangeOptionNotificationV02.mmTradingSideIdentification, ForeignExchangeOptionNotificationV02.mmCounterpartySideIdentification,
+						ForeignExchangeOptionNotificationV02.mmOptionData, ForeignExchangeOptionNotificationV02.mmTradeStatus, ForeignExchangeOptionNotificationV02.mmSettlementData);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "trea";

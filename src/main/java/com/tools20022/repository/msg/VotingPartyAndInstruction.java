@@ -17,17 +17,14 @@
 
 package com.tools20022.repository.msg;
 
-import com.tools20022.metamodel.MMMessageAssociationEnd;
-import com.tools20022.metamodel.MMMessageAttribute;
-import com.tools20022.metamodel.MMMessageComponent;
-import com.tools20022.metamodel.MMXor;
+import com.tools20022.metamodel.*;
 import com.tools20022.repository.choice.VoteChoice;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Max105Text;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.Number;
-import com.tools20022.repository.entity.Person;
-import com.tools20022.repository.entity.VoteInstructionRequest;
+import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -121,7 +118,7 @@ public class VotingPartyAndInstruction {
 			componentContext_lazy = () -> VotingPartyAndInstruction.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Identifies the detailed instruction.";
 			maxOccurs = 1;
@@ -164,11 +161,11 @@ public class VotingPartyAndInstruction {
 	 */
 	public static final MMMessageAttribute mmRequestedExecutionDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InstructionForMeeting.mmRequestedExecutionDate;
+			businessElementTrace_lazy = () -> InstructionForMeeting.mmRequestedExecutionDate;
 			componentContext_lazy = () -> VotingPartyAndInstruction.mmObject();
 			isDerived = false;
 			xmlTag = "ReqdExctnDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestedExecutionDate";
 			definition = "Date at which the instruction must b e executed.";
 			maxOccurs = 1;
@@ -213,7 +210,7 @@ public class VotingPartyAndInstruction {
 			componentContext_lazy = () -> VotingPartyAndInstruction.mmObject();
 			isDerived = false;
 			xmlTag = "PrsnDtl";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PersonDetail";
 			definition = "Person attending the meeting or assigned as proxy.";
 			maxOccurs = 1;
@@ -257,11 +254,11 @@ public class VotingPartyAndInstruction {
 	 */
 	public static final MMMessageAttribute mmQuantityOfSecurity = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmUnit;
+			businessElementTrace_lazy = () -> SecuritiesQuantity.mmUnit;
 			componentContext_lazy = () -> VotingPartyAndInstruction.mmObject();
 			isDerived = false;
 			xmlTag = "QtyOfScty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuantityOfSecurity";
 			definition = "Quantity expressed as a number, eg, a number of shares.";
 			maxOccurs = 1;
@@ -307,7 +304,7 @@ public class VotingPartyAndInstruction {
 			componentContext_lazy = () -> VotingPartyAndInstruction.mmObject();
 			isDerived = false;
 			xmlTag = "VotePerRsltn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VotePerResolution";
 			definition = "Details of the vote.";
 			maxOccurs = 1;
@@ -351,11 +348,11 @@ public class VotingPartyAndInstruction {
 	 */
 	public static final MMMessageAttribute mmAttendanceCardLabelling = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AttendanceCard.mmAttendanceCardLabelling;
+			businessElementTrace_lazy = () -> AttendanceCard.mmAttendanceCardLabelling;
 			componentContext_lazy = () -> VotingPartyAndInstruction.mmObject();
 			isDerived = false;
 			xmlTag = "AttndncCardLbllg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AttendanceCardLabelling";
 			definition = "Information to be indicated on the attendance card.";
 			maxOccurs = 1;
@@ -368,6 +365,10 @@ public class VotingPartyAndInstruction {
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
+	 * messageComponent} =
+	 * {@linkplain com.tools20022.repository.msg.VotingPartyAndInstruction
+	 * VotingPartyAndInstruction}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getImpactedElements
 	 * impactedElements} =
 	 * <ul>
@@ -379,10 +380,6 @@ public class VotingPartyAndInstruction {
 	 * VotingPartyAndInstruction.mmVotePerResolution}</li>
 	 * </ul>
 	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
-	 * messageComponent} =
-	 * {@linkplain com.tools20022.repository.msg.VotingPartyAndInstruction
-	 * VotingPartyAndInstruction}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -393,25 +390,24 @@ public class VotingPartyAndInstruction {
 	 */
 	public static final MMXor mmQuantityOfSecurityOrVote = new MMXor() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuantityOfSecurityOrVote";
 			messageComponent_lazy = () -> VotingPartyAndInstruction.mmObject();
-			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.VotingPartyAndInstruction.mmQuantityOfSecurity, com.tools20022.repository.msg.VotingPartyAndInstruction.mmVotePerResolution);
+			impactedElements_lazy = () -> Arrays.asList(VotingPartyAndInstruction.mmQuantityOfSecurity, VotingPartyAndInstruction.mmVotePerResolution);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.VotingPartyAndInstruction.mmIdentification, com.tools20022.repository.msg.VotingPartyAndInstruction.mmRequestedExecutionDate,
-						com.tools20022.repository.msg.VotingPartyAndInstruction.mmPersonDetail, com.tools20022.repository.msg.VotingPartyAndInstruction.mmQuantityOfSecurity,
-						com.tools20022.repository.msg.VotingPartyAndInstruction.mmVotePerResolution, com.tools20022.repository.msg.VotingPartyAndInstruction.mmAttendanceCardLabelling);
+				messageElement_lazy = () -> Arrays.asList(VotingPartyAndInstruction.mmIdentification, VotingPartyAndInstruction.mmRequestedExecutionDate, VotingPartyAndInstruction.mmPersonDetail,
+						VotingPartyAndInstruction.mmQuantityOfSecurity, VotingPartyAndInstruction.mmVotePerResolution, VotingPartyAndInstruction.mmAttendanceCardLabelling);
 				trace_lazy = () -> VoteInstructionRequest.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "VotingPartyAndInstruction";
 				definition = "Groups the vote and the voting party information.";
-				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.VotingPartyAndInstruction.mmQuantityOfSecurityOrVote);
+				xors_lazy = () -> Arrays.asList(VotingPartyAndInstruction.mmQuantityOfSecurityOrVote);
 			}
 		});
 		return mmObject_lazy.get();

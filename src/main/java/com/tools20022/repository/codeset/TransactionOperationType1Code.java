@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.TransactionOperationTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -84,7 +86,7 @@ public class TransactionOperationType1Code extends TransactionOperationTypeCode 
 	 */
 	public static final MMCode mmAmendment = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amendment";
 			owner_lazy = () -> TransactionOperationType1Code.mmObject();
 		}
@@ -107,7 +109,7 @@ public class TransactionOperationType1Code extends TransactionOperationTypeCode 
 	 */
 	public static final MMCode mmCancellation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cancellation";
 			owner_lazy = () -> TransactionOperationType1Code.mmObject();
 		}
@@ -130,7 +132,7 @@ public class TransactionOperationType1Code extends TransactionOperationTypeCode 
 	 */
 	public static final MMCode mmCorrection = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Correction";
 			owner_lazy = () -> TransactionOperationType1Code.mmObject();
 		}
@@ -153,7 +155,7 @@ public class TransactionOperationType1Code extends TransactionOperationTypeCode 
 	 */
 	public static final MMCode mmNewTransaction = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewTransaction";
 			owner_lazy = () -> TransactionOperationType1Code.mmObject();
 		}
@@ -162,12 +164,11 @@ public class TransactionOperationType1Code extends TransactionOperationTypeCode 
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TransactionOperationType1Code";
 				definition = "Specifies the type of process related to a specific transaction.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TransactionOperationType1Code.mmAmendment, com.tools20022.repository.codeset.TransactionOperationType1Code.mmCancellation,
-						com.tools20022.repository.codeset.TransactionOperationType1Code.mmCorrection, com.tools20022.repository.codeset.TransactionOperationType1Code.mmNewTransaction);
+				code_lazy = () -> Arrays.asList(TransactionOperationType1Code.mmAmendment, TransactionOperationType1Code.mmCancellation, TransactionOperationType1Code.mmCorrection, TransactionOperationType1Code.mmNewTransaction);
 				trace_lazy = () -> TransactionOperationTypeCode.mmObject();
 			}
 		});

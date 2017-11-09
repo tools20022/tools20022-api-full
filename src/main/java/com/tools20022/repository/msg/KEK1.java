@@ -20,8 +20,10 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max140Binary;
 import com.tools20022.repository.datatype.Number;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -99,7 +101,7 @@ public class KEK1 {
 			componentContext_lazy = () -> KEK1.mmObject();
 			isDerived = false;
 			xmlTag = "Vrsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Version";
 			definition = "Version of the cryptographic key.";
 			maxOccurs = 1;
@@ -137,7 +139,7 @@ public class KEK1 {
 			componentContext_lazy = () -> KEK1.mmObject();
 			isDerived = false;
 			xmlTag = "KEKId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "KEKIdentification";
 			definition = "Identification of the key encryption key (KEK).";
 			maxOccurs = 1;
@@ -177,7 +179,7 @@ public class KEK1 {
 			componentContext_lazy = () -> KEK1.mmObject();
 			isDerived = false;
 			xmlTag = "KeyNcrptnAlgo";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "KeyEncryptionAlgorithm";
 			definition = "Algorithm to encrypt the key encryption key (KEK).";
 			maxOccurs = 1;
@@ -218,7 +220,7 @@ public class KEK1 {
 			componentContext_lazy = () -> KEK1.mmObject();
 			isDerived = false;
 			xmlTag = "NcrptdKey";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EncryptedKey";
 			definition = "Encrypted key encryption key (KEK).";
 			maxOccurs = 1;
@@ -230,10 +232,9 @@ public class KEK1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.KEK1.mmVersion, com.tools20022.repository.msg.KEK1.mmKEKIdentification, com.tools20022.repository.msg.KEK1.mmKeyEncryptionAlgorithm,
-						com.tools20022.repository.msg.KEK1.mmEncryptedKey);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(KEK1.mmVersion, KEK1.mmKEKIdentification, KEK1.mmKeyEncryptionAlgorithm, KEK1.mmEncryptedKey);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "KEK1";
 				definition = "Key encryption key (KEK), using previously distributed symmetric key.";
 				nextVersions_lazy = () -> Arrays.asList(KEK2.mmObject());

@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.TaxTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -84,7 +86,7 @@ public class TaxType3Code extends TaxTypeCode {
 	 */
 	public static final MMCode mmGermanLocalTax2 = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GermanLocalTax2";
 			owner_lazy = () -> TaxType3Code.mmObject();
 		}
@@ -106,7 +108,7 @@ public class TaxType3Code extends TaxTypeCode {
 	 */
 	public static final MMCode mmWithholdingOfForeignTax = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WithholdingOfForeignTax";
 			owner_lazy = () -> TaxType3Code.mmObject();
 		}
@@ -128,7 +130,7 @@ public class TaxType3Code extends TaxTypeCode {
 	 */
 	public static final MMCode mmWithholdingOfLocalTax = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WithholdingOfLocalTax";
 			owner_lazy = () -> TaxType3Code.mmObject();
 		}
@@ -137,13 +139,12 @@ public class TaxType3Code extends TaxTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("LIDT");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TaxType3Code";
 				definition = "Type of tax";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TaxType3Code.mmGermanLocalTax2, com.tools20022.repository.codeset.TaxType3Code.mmWithholdingOfForeignTax,
-						com.tools20022.repository.codeset.TaxType3Code.mmWithholdingOfLocalTax);
+				code_lazy = () -> Arrays.asList(TaxType3Code.mmGermanLocalTax2, TaxType3Code.mmWithholdingOfForeignTax, TaxType3Code.mmWithholdingOfLocalTax);
 				trace_lazy = () -> TaxTypeCode.mmObject();
 			}
 		});

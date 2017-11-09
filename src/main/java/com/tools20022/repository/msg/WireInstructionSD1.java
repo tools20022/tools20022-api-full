@@ -19,9 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.FinancialInstrumentQuantity15Choice;
 import com.tools20022.repository.codeset.CountryCode;
 import com.tools20022.repository.datatype.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -125,7 +127,7 @@ public class WireInstructionSD1 {
 			componentContext_lazy = () -> WireInstructionSD1.mmObject();
 			isDerived = false;
 			xmlTag = "PlcAndNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "xPath to the element that is being extended.";
 			maxOccurs = 1;
@@ -167,7 +169,7 @@ public class WireInstructionSD1 {
 			componentContext_lazy = () -> WireInstructionSD1.mmObject();
 			isDerived = false;
 			xmlTag = "WireQty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WireQuantity";
 			definition = "Quantity of securities concerned in this wire.";
 			maxOccurs = 1;
@@ -208,7 +210,7 @@ public class WireInstructionSD1 {
 			componentContext_lazy = () -> WireInstructionSD1.mmObject();
 			isDerived = false;
 			xmlTag = "BkNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BankName";
 			definition = "Name of the recipient bank for the wire.";
 			maxOccurs = 1;
@@ -249,7 +251,7 @@ public class WireInstructionSD1 {
 			componentContext_lazy = () -> WireInstructionSD1.mmObject();
 			isDerived = false;
 			xmlTag = "BkAdr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BankAddress";
 			definition = "Street address of the recipient bank for the wire.";
 			maxOccurs = 1;
@@ -290,7 +292,7 @@ public class WireInstructionSD1 {
 			componentContext_lazy = () -> WireInstructionSD1.mmObject();
 			isDerived = false;
 			xmlTag = "BkCity";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BankCity";
 			definition = "City of the recipient bank for the wire.";
 			maxOccurs = 1;
@@ -331,7 +333,7 @@ public class WireInstructionSD1 {
 			componentContext_lazy = () -> WireInstructionSD1.mmObject();
 			isDerived = false;
 			xmlTag = "BkCtry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BankCountry";
 			definition = "Country of the recipient bank for the wire.";
 			maxOccurs = 1;
@@ -372,7 +374,7 @@ public class WireInstructionSD1 {
 			componentContext_lazy = () -> WireInstructionSD1.mmObject();
 			isDerived = false;
 			xmlTag = "BkAttnTo";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BankAttentionTo";
 			definition = "Responsible person in the recipient back for the wire.";
 			maxOccurs = 1;
@@ -413,7 +415,7 @@ public class WireInstructionSD1 {
 			componentContext_lazy = () -> WireInstructionSD1.mmObject();
 			isDerived = false;
 			xmlTag = "BkCmnts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BankComments";
 			definition = "Notes or comments for the recipient bank for the wire.";
 			maxOccurs = 1;
@@ -454,7 +456,7 @@ public class WireInstructionSD1 {
 			componentContext_lazy = () -> WireInstructionSD1.mmObject();
 			isDerived = false;
 			xmlTag = "BnfcryAcct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BeneficiaryAccount";
 			definition = "Account type at the recipient bank for the wire.";
 			maxOccurs = 1;
@@ -497,7 +499,7 @@ public class WireInstructionSD1 {
 			componentContext_lazy = () -> WireInstructionSD1.mmObject();
 			isDerived = false;
 			xmlTag = "BnfcryAcctId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BeneficiaryAccountIdentification";
 			definition = "Account identification at the recipient bank for the wire.";
 			maxOccurs = 1;
@@ -541,7 +543,7 @@ public class WireInstructionSD1 {
 			componentContext_lazy = () -> WireInstructionSD1.mmObject();
 			isDerived = false;
 			xmlTag = "BnfcryAcctCmnts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BeneficiaryAccountComments";
 			definition = "Notes or comments for the beneficiary account at the recipient bank for the wire.";
 			maxOccurs = 1;
@@ -553,13 +555,11 @@ public class WireInstructionSD1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.WireInstructionSD1.mmPlaceAndName, com.tools20022.repository.msg.WireInstructionSD1.mmWireQuantity,
-						com.tools20022.repository.msg.WireInstructionSD1.mmBankName, com.tools20022.repository.msg.WireInstructionSD1.mmBankAddress, com.tools20022.repository.msg.WireInstructionSD1.mmBankCity,
-						com.tools20022.repository.msg.WireInstructionSD1.mmBankCountry, com.tools20022.repository.msg.WireInstructionSD1.mmBankAttentionTo, com.tools20022.repository.msg.WireInstructionSD1.mmBankComments,
-						com.tools20022.repository.msg.WireInstructionSD1.mmBeneficiaryAccount, com.tools20022.repository.msg.WireInstructionSD1.mmBeneficiaryAccountIdentification,
-						com.tools20022.repository.msg.WireInstructionSD1.mmBeneficiaryAccountComments);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(WireInstructionSD1.mmPlaceAndName, WireInstructionSD1.mmWireQuantity, WireInstructionSD1.mmBankName, WireInstructionSD1.mmBankAddress, WireInstructionSD1.mmBankCity,
+						WireInstructionSD1.mmBankCountry, WireInstructionSD1.mmBankAttentionTo, WireInstructionSD1.mmBankComments, WireInstructionSD1.mmBeneficiaryAccount, WireInstructionSD1.mmBeneficiaryAccountIdentification,
+						WireInstructionSD1.mmBeneficiaryAccountComments);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "WireInstructionSD1";
 				definition = "Payment wire instruction details.";
 				nextVersions_lazy = () -> Arrays.asList(WireInstructionSD2.mmObject());

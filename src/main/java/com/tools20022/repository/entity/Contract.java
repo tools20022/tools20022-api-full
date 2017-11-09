@@ -17,13 +17,15 @@
 
 package com.tools20022.repository.entity;
 
+import com.tools20022.metamodel.MMAggregation;
 import com.tools20022.metamodel.MMBusinessAssociationEnd;
 import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.ContractClosureReason1Choice;
 import com.tools20022.repository.choice.UnderlyingContract1Choice;
 import com.tools20022.repository.entity.Agreement;
-import com.tools20022.repository.msg.TradeContract1;
-import com.tools20022.repository.msg.TransactionCertificateContract1;
+import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -38,21 +40,19 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Contract#mmMasterAgreement
- * Contract.mmMasterAgreement}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
- * subType} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.AccountContract
- * AccountContract}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Mandate Mandate}</li>
- * <li>{@linkplain com.tools20022.repository.entity.RegisteredContract
- * RegisteredContract}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.UnderlyingContract1Choice
+ * UnderlyingContract1Choice}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.TransactionCertificateContract1
+ * TransactionCertificateContract1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TradeContract1 TradeContract1}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.ContractClosureReason1Choice
+ * ContractClosureReason1Choice}</li>
  * </ul>
  * </li>
  * <li>
@@ -82,19 +82,21 @@ import java.util.List;
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
  * superType} = {@linkplain com.tools20022.repository.entity.Agreement
  * Agreement}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
+ * subType} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.choice.UnderlyingContract1Choice
- * UnderlyingContract1Choice}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.TransactionCertificateContract1
- * TransactionCertificateContract1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TradeContract1 TradeContract1}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.ContractClosureReason1Choice
- * ContractClosureReason1Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.AccountContract
+ * AccountContract}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Mandate Mandate}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.RegisteredContract
+ * RegisteredContract}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.Contract#mmMasterAgreement
+ * Contract.mmMasterAgreement}</li>
  * </ul>
  * </li>
  * <li>
@@ -155,12 +157,12 @@ public class Contract extends Agreement {
 		{
 			elementContext_lazy = () -> Contract.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MasterAgreement";
 			definition = "Agreement that governs a contract agreed between  parties.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.MasterAgreement.mmGovernedContract;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.MasterAgreement.mmObject();
 		}
 	};
@@ -168,16 +170,15 @@ public class Contract extends Agreement {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Contract";
 				definition = "Document that contains the information of the contract agreed between both parties.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.MasterAgreement.mmGovernedContract);
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RegisteredContract4.mmContract, com.tools20022.repository.msg.TransactionCertificateRecord1.mmContract,
-						com.tools20022.repository.msg.RegisteredContract5.mmContract, com.tools20022.repository.msg.RegisteredContract3.mmContract);
+				derivationElement_lazy = () -> Arrays.asList(RegisteredContract4.mmContract, TransactionCertificateRecord1.mmContract, RegisteredContract5.mmContract, RegisteredContract3.mmContract);
 				subType_lazy = () -> Arrays.asList(AccountContract.mmObject(), Mandate.mmObject(), RegisteredContract.mmObject());
 				superType_lazy = () -> Agreement.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Contract.mmMasterAgreement);
+				element_lazy = () -> Arrays.asList(Contract.mmMasterAgreement);
 				derivationComponent_lazy = () -> Arrays.asList(UnderlyingContract1Choice.mmObject(), TransactionCertificateContract1.mmObject(), TradeContract1.mmObject(), ContractClosureReason1Choice.mmObject());
 			}
 		});

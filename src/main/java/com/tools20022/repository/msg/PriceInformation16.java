@@ -20,11 +20,14 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.DateAndDateTimeChoice;
 import com.tools20022.repository.choice.PriceRateOrAmountOrUnknown1Choice;
 import com.tools20022.repository.choice.TypeOfPrice45Choice;
 import com.tools20022.repository.choice.YieldedOrValueType1Choice;
 import com.tools20022.repository.entity.SecuritiesPricing;
+import com.tools20022.repository.entity.SourceOfPrice;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -110,11 +113,11 @@ public class PriceInformation16 {
 	 */
 	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmPriceType;
+			businessElementTrace_lazy = () -> SecuritiesPricing.mmPriceType;
 			componentContext_lazy = () -> PriceInformation16.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Specifies the type of price and information about the price.";
 			maxOccurs = 1;
@@ -158,11 +161,11 @@ public class PriceInformation16 {
 	 */
 	public static final MMMessageAttribute mmValueType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmTypeOfRate;
+			businessElementTrace_lazy = () -> SecuritiesPricing.mmTypeOfRate;
 			componentContext_lazy = () -> PriceInformation16.mmObject();
 			isDerived = false;
 			xmlTag = "ValTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValueType";
 			definition = "Type of value in which the price is expressed.";
 			maxOccurs = 1;
@@ -210,7 +213,7 @@ public class PriceInformation16 {
 			componentContext_lazy = () -> PriceInformation16.mmObject();
 			isDerived = false;
 			xmlTag = "Val";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Value";
 			definition = "Value of the price, eg, as a currency and value.";
 			maxOccurs = 1;
@@ -252,11 +255,11 @@ public class PriceInformation16 {
 	 */
 	public static final MMMessageAssociationEnd mmSourceOfPrice = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SourceOfPrice.mmMarketIdentification;
+			businessElementTrace_lazy = () -> SourceOfPrice.mmMarketIdentification;
 			componentContext_lazy = () -> PriceInformation16.mmObject();
 			isDerived = false;
 			xmlTag = "SrcOfPric";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SourceOfPrice";
 			definition = "Place from which the price was obtained.";
 			maxOccurs = 1;
@@ -304,11 +307,11 @@ public class PriceInformation16 {
 	 */
 	public static final MMMessageAttribute mmQuotationDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmQuotationDate;
+			businessElementTrace_lazy = () -> SecuritiesPricing.mmQuotationDate;
 			componentContext_lazy = () -> PriceInformation16.mmObject();
 			isDerived = false;
 			xmlTag = "QtnDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuotationDate";
 			definition = "Date on which the price is obtained. With an investment fund, this is as stated in the prospectus.";
 			maxOccurs = 1;
@@ -320,11 +323,10 @@ public class PriceInformation16 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PriceInformation16.mmType, com.tools20022.repository.msg.PriceInformation16.mmValueType, com.tools20022.repository.msg.PriceInformation16.mmValue,
-						com.tools20022.repository.msg.PriceInformation16.mmSourceOfPrice, com.tools20022.repository.msg.PriceInformation16.mmQuotationDate);
+				messageElement_lazy = () -> Arrays.asList(PriceInformation16.mmType, PriceInformation16.mmValueType, PriceInformation16.mmValue, PriceInformation16.mmSourceOfPrice, PriceInformation16.mmQuotationDate);
 				trace_lazy = () -> SecuritiesPricing.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PriceInformation16";
 				definition = "Amount of money for which goods or services are offered, sold, or bought.";
 			}

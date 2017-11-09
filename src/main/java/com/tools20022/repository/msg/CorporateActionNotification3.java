@@ -20,10 +20,16 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.seev.CorporateActionNotificationV03;
+import com.tools20022.repository.area.seev.CorporateActionNotificationV04;
 import com.tools20022.repository.choice.CorporateActionProcessingStatus3Choice;
 import com.tools20022.repository.codeset.CorporateActionNotificationType1Code;
 import com.tools20022.repository.datatype.YesNoIndicator;
+import com.tools20022.repository.entity.CorporateActionEntitlement;
+import com.tools20022.repository.entity.CorporateActionEvent;
 import com.tools20022.repository.entity.CorporateActionNotification;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -136,14 +142,14 @@ public class CorporateActionNotification3 {
 	 */
 	public static final MMMessageAttribute mmNotificationType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionNotification.mmNotificationType;
+			businessElementTrace_lazy = () -> CorporateActionNotification.mmNotificationType;
 			componentContext_lazy = () -> CorporateActionNotification3.mmObject();
 			isDerived = false;
 			xmlTag = "NtfctnTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotificationType";
 			definition = "Specifies the type of notification.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionNotification4.mmNotificationType);
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionNotification4.mmNotificationType);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CorporateActionNotificationType1Code.mmObject();
@@ -193,14 +199,14 @@ public class CorporateActionNotification3 {
 	 */
 	public static final MMMessageAssociationEnd mmProcessingStatus = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmCorporateActionStatus;
+			businessElementTrace_lazy = () -> CorporateActionEvent.mmCorporateActionStatus;
 			componentContext_lazy = () -> CorporateActionNotification3.mmObject();
 			isDerived = false;
 			xmlTag = "PrcgSts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProcessingStatus";
 			definition = "Specifies the status of the details of the corporate action event.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionNotification4.mmProcessingStatus);
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionNotification4.mmProcessingStatus);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -255,14 +261,14 @@ public class CorporateActionNotification3 {
 	 */
 	public static final MMMessageAttribute mmEligibleBalanceIndicator = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEntitlement.mmEligibleBalanceIndicator;
+			businessElementTrace_lazy = () -> CorporateActionEntitlement.mmEligibleBalanceIndicator;
 			componentContext_lazy = () -> CorporateActionNotification3.mmObject();
 			isDerived = false;
 			xmlTag = "ElgblBalInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EligibleBalanceIndicator";
 			definition = "Indicates whether the eligible balance is final except for a voluntary corporate action event where it can represent the current eligible balance when communicated before expiration date of that event.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionNotification4.mmEligibleBalanceIndicator);
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionNotification4.mmEligibleBalanceIndicator);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
@@ -272,13 +278,11 @@ public class CorporateActionNotification3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionNotification3.mmNotificationType, com.tools20022.repository.msg.CorporateActionNotification3.mmProcessingStatus,
-						com.tools20022.repository.msg.CorporateActionNotification3.mmEligibleBalanceIndicator);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.CorporateActionNotificationV03.mmNotificationGeneralInformation,
-						com.tools20022.repository.area.seev.CorporateActionNotificationV04.mmNotificationGeneralInformation);
+				messageElement_lazy = () -> Arrays.asList(CorporateActionNotification3.mmNotificationType, CorporateActionNotification3.mmProcessingStatus, CorporateActionNotification3.mmEligibleBalanceIndicator);
+				messageBuildingBlock_lazy = () -> Arrays.asList(CorporateActionNotificationV03.mmNotificationGeneralInformation, CorporateActionNotificationV04.mmNotificationGeneralInformation);
 				trace_lazy = () -> CorporateActionNotification.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionNotification3";
 				definition = "Corporate action event notification status and contents.";
 				nextVersions_lazy = () -> Arrays.asList(CorporateActionNotification4.mmObject());

@@ -19,7 +19,9 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.RequestedIndicator;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -110,7 +112,7 @@ public class AccountCashEntryReturnCriteria2 {
 			componentContext_lazy = () -> AccountCashEntryReturnCriteria2.mmObject();
 			isDerived = false;
 			xmlTag = "NtryRefInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EntryReferenceIndicator";
 			definition = "Indicates whether the entry reference is requested.";
 			maxOccurs = 1;
@@ -152,7 +154,7 @@ public class AccountCashEntryReturnCriteria2 {
 			componentContext_lazy = () -> AccountCashEntryReturnCriteria2.mmObject();
 			isDerived = false;
 			xmlTag = "AcctTpInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountTypeIndicator";
 			definition = "Indicates whether the account type is requested.";
 			maxOccurs = 1;
@@ -194,7 +196,7 @@ public class AccountCashEntryReturnCriteria2 {
 			componentContext_lazy = () -> AccountCashEntryReturnCriteria2.mmObject();
 			isDerived = false;
 			xmlTag = "NtryAmtInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EntryAmountIndicator";
 			definition = "Indicates whether the entry amount is requested.";
 			maxOccurs = 1;
@@ -236,7 +238,7 @@ public class AccountCashEntryReturnCriteria2 {
 			componentContext_lazy = () -> AccountCashEntryReturnCriteria2.mmObject();
 			isDerived = false;
 			xmlTag = "AcctCcyInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountCurrencyIndicator";
 			definition = "Indicates whether the account currency is requested.";
 			maxOccurs = 1;
@@ -278,7 +280,7 @@ public class AccountCashEntryReturnCriteria2 {
 			componentContext_lazy = () -> AccountCashEntryReturnCriteria2.mmObject();
 			isDerived = false;
 			xmlTag = "NtryStsInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EntryStatusIndicator";
 			definition = "Indicates whether the entry status is requested.";
 			maxOccurs = 1;
@@ -320,7 +322,7 @@ public class AccountCashEntryReturnCriteria2 {
 			componentContext_lazy = () -> AccountCashEntryReturnCriteria2.mmObject();
 			isDerived = false;
 			xmlTag = "NtryDtInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EntryDateIndicator";
 			definition = "Indicates whether the entry date is requested.";
 			maxOccurs = 1;
@@ -362,7 +364,7 @@ public class AccountCashEntryReturnCriteria2 {
 			componentContext_lazy = () -> AccountCashEntryReturnCriteria2.mmObject();
 			isDerived = false;
 			xmlTag = "AcctSrcrInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountServicerIndicator";
 			definition = "Indicates whether the account servicer is requested.";
 			maxOccurs = 1;
@@ -404,7 +406,7 @@ public class AccountCashEntryReturnCriteria2 {
 			componentContext_lazy = () -> AccountCashEntryReturnCriteria2.mmObject();
 			isDerived = false;
 			xmlTag = "AcctOwnrInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountOwnerIndicator";
 			definition = "Indicates whether the account owner is requested.";
 			maxOccurs = 1;
@@ -416,12 +418,11 @@ public class AccountCashEntryReturnCriteria2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountCashEntryReturnCriteria2.mmEntryReferenceIndicator, com.tools20022.repository.msg.AccountCashEntryReturnCriteria2.mmAccountTypeIndicator,
-						com.tools20022.repository.msg.AccountCashEntryReturnCriteria2.mmEntryAmountIndicator, com.tools20022.repository.msg.AccountCashEntryReturnCriteria2.mmAccountCurrencyIndicator,
-						com.tools20022.repository.msg.AccountCashEntryReturnCriteria2.mmEntryStatusIndicator, com.tools20022.repository.msg.AccountCashEntryReturnCriteria2.mmEntryDateIndicator,
-						com.tools20022.repository.msg.AccountCashEntryReturnCriteria2.mmAccountServicerIndicator, com.tools20022.repository.msg.AccountCashEntryReturnCriteria2.mmAccountOwnerIndicator);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(AccountCashEntryReturnCriteria2.mmEntryReferenceIndicator, AccountCashEntryReturnCriteria2.mmAccountTypeIndicator, AccountCashEntryReturnCriteria2.mmEntryAmountIndicator,
+						AccountCashEntryReturnCriteria2.mmAccountCurrencyIndicator, AccountCashEntryReturnCriteria2.mmEntryStatusIndicator, AccountCashEntryReturnCriteria2.mmEntryDateIndicator,
+						AccountCashEntryReturnCriteria2.mmAccountServicerIndicator, AccountCashEntryReturnCriteria2.mmAccountOwnerIndicator);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AccountCashEntryReturnCriteria2";
 				definition = "Defines the criteria used to report on the cash entry.";
 			}

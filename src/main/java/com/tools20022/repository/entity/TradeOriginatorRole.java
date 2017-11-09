@@ -19,12 +19,15 @@ package com.tools20022.repository.entity;
 
 import com.tools20022.metamodel.MMBusinessAttribute;
 import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.TradeOriginator1Choice;
 import com.tools20022.repository.choice.TradeOriginator2Choice;
 import com.tools20022.repository.choice.TradeOriginator3Choice;
 import com.tools20022.repository.choice.TradeOriginator4Choice;
 import com.tools20022.repository.codeset.OriginatorRoleCode;
 import com.tools20022.repository.entity.TradePartyRole;
+import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -37,12 +40,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.TradeOriginatorRole#mmOriginatorRole
- * TradeOriginatorRole.mmOriginatorRole}</li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.choice.TradeOriginator1Choice
+ * TradeOriginator1Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.TradeOriginator2Choice
+ * TradeOriginator2Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.TradeOriginator3Choice
+ * TradeOriginator3Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.TradeOriginator4Choice
+ * TradeOriginator4Choice}</li>
  * </ul>
  * </li>
  * <li>
@@ -168,18 +177,12 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
  * superType} = {@linkplain com.tools20022.repository.entity.TradePartyRole
  * TradePartyRole}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.choice.TradeOriginator1Choice
- * TradeOriginator1Choice}</li>
- * <li>{@linkplain com.tools20022.repository.choice.TradeOriginator2Choice
- * TradeOriginator2Choice}</li>
- * <li>{@linkplain com.tools20022.repository.choice.TradeOriginator3Choice
- * TradeOriginator3Choice}</li>
- * <li>{@linkplain com.tools20022.repository.choice.TradeOriginator4Choice
- * TradeOriginator4Choice}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.TradeOriginatorRole#mmOriginatorRole
+ * TradeOriginatorRole.mmOriginatorRole}</li>
  * </ul>
  * </li>
  * <li>
@@ -260,12 +263,11 @@ public class TradeOriginatorRole extends TradePartyRole {
 	 */
 	public static final MMBusinessAttribute mmOriginatorRole = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.TradeOriginator1Choice.mmCode, com.tools20022.repository.choice.TradeOriginator1Choice.mmProprietary,
-					com.tools20022.repository.choice.TradeOriginator2Choice.mmCode, com.tools20022.repository.choice.TradeOriginator2Choice.mmProprietary, com.tools20022.repository.choice.TradeOriginator3Choice.mmCode,
-					com.tools20022.repository.choice.TradeOriginator3Choice.mmProprietary, com.tools20022.repository.choice.TradeOriginator4Choice.mmCode, com.tools20022.repository.choice.TradeOriginator4Choice.mmProprietary);
+			derivation_lazy = () -> Arrays.asList(TradeOriginator1Choice.mmCode, TradeOriginator1Choice.mmProprietary, TradeOriginator2Choice.mmCode, TradeOriginator2Choice.mmProprietary, TradeOriginator3Choice.mmCode,
+					TradeOriginator3Choice.mmProprietary, TradeOriginator4Choice.mmCode, TradeOriginator4Choice.mmProprietary);
 			elementContext_lazy = () -> TradeOriginatorRole.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "OriginatorRole";
 			definition = "Specifies the role of the trading party in the transaction.";
 			maxOccurs = 1;
@@ -277,31 +279,22 @@ public class TradeOriginatorRole extends TradePartyRole {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TradeOriginatorRole";
 				definition = "Specifies the trading party at the source of the transaction.";
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesTradeDetails25.mmTradeOriginatorRole, com.tools20022.repository.msg.SecuritiesTradeDetails26.mmTradeOriginatorRole,
-						com.tools20022.repository.msg.SecuritiesTradeDetails27.mmTradeOriginatorRole, com.tools20022.repository.msg.SecuritiesTradeDetails28.mmTradeOriginatorRole,
-						com.tools20022.repository.msg.SecuritiesTradeDetails6.mmTradeOriginatorRole, com.tools20022.repository.msg.SecuritiesTradeDetails13.mmTradeOriginatorRole,
-						com.tools20022.repository.msg.SecuritiesTradeDetails3.mmTradeOriginatorRole, com.tools20022.repository.msg.SecuritiesTradeDetails11.mmTradeOriginatorRole,
-						com.tools20022.repository.msg.SecuritiesTradeDetails2.mmTradeOriginatorRole, com.tools20022.repository.msg.SecuritiesTradeDetails16.mmTradeOriginatorRole,
-						com.tools20022.repository.msg.SecuritiesTradeDetails1.mmTradeOriginatorRole, com.tools20022.repository.msg.SecuritiesTradeDetails15.mmTradeOriginatorRole,
-						com.tools20022.repository.msg.SecuritiesTradeDetails31.mmTradeOriginatorRole, com.tools20022.repository.msg.SecuritiesTradeDetails33.mmTradeOriginatorRole,
-						com.tools20022.repository.msg.SecuritiesTradeDetails38.mmTradeOriginatorRole, com.tools20022.repository.msg.SecuritiesTradeDetails37.mmTradeOriginatorRole,
-						com.tools20022.repository.msg.SecuritiesTradeDetails34.mmTradeOriginatorRole, com.tools20022.repository.msg.SecuritiesTradeDetails32.mmTradeOriginatorRole,
-						com.tools20022.repository.msg.SecuritiesTradeDetails44.mmTradeOriginatorRole, com.tools20022.repository.msg.SecuritiesTradeDetails39.mmTradeOriginatorRole,
-						com.tools20022.repository.msg.SecuritiesTradeDetails43.mmTradeOriginatorRole, com.tools20022.repository.msg.SecuritiesTradeDetails40.mmTradeOriginatorRole,
-						com.tools20022.repository.msg.SecuritiesTradeDetails46.mmTradeOriginatorRole, com.tools20022.repository.msg.SecuritiesTradeDetails47.mmTradeOriginatorRole,
-						com.tools20022.repository.msg.SecuritiesTradeDetails51.mmTradeOriginatorRole, com.tools20022.repository.msg.SecuritiesTradeDetails53.mmTradeOriginatorRole,
-						com.tools20022.repository.msg.SecuritiesTradeDetails55.mmTradeOriginatorRole, com.tools20022.repository.msg.SecuritiesTradeDetails56.mmTradeOriginatorRole,
-						com.tools20022.repository.msg.SecuritiesTradeDetails52.mmTradeOriginatorRole, com.tools20022.repository.msg.SecuritiesTradeDetails50.mmTradeOriginatorRole,
-						com.tools20022.repository.msg.SecuritiesTradeDetails59.mmTradeOriginatorRole, com.tools20022.repository.msg.SecuritiesTradeDetails58.mmTradeOriginatorRole,
-						com.tools20022.repository.msg.SecuritiesTradeDetails63.mmTradeOriginatorRole, com.tools20022.repository.msg.SecuritiesTradeDetails62.mmTradeOriginatorRole,
-						com.tools20022.repository.msg.SecuritiesTradeDetails65.mmTradeOriginatorRole, com.tools20022.repository.msg.SecuritiesTradeDetails66.mmTradeOriginatorRole,
-						com.tools20022.repository.msg.SecuritiesTradeDetails67.mmTradeOriginatorRole, com.tools20022.repository.msg.SecuritiesTradeDetails70.mmTradeOriginatorRole);
+				derivationElement_lazy = () -> Arrays.asList(SecuritiesTradeDetails25.mmTradeOriginatorRole, SecuritiesTradeDetails26.mmTradeOriginatorRole, SecuritiesTradeDetails27.mmTradeOriginatorRole,
+						SecuritiesTradeDetails28.mmTradeOriginatorRole, SecuritiesTradeDetails6.mmTradeOriginatorRole, SecuritiesTradeDetails13.mmTradeOriginatorRole, SecuritiesTradeDetails3.mmTradeOriginatorRole,
+						SecuritiesTradeDetails11.mmTradeOriginatorRole, SecuritiesTradeDetails2.mmTradeOriginatorRole, SecuritiesTradeDetails16.mmTradeOriginatorRole, SecuritiesTradeDetails1.mmTradeOriginatorRole,
+						SecuritiesTradeDetails15.mmTradeOriginatorRole, SecuritiesTradeDetails31.mmTradeOriginatorRole, SecuritiesTradeDetails33.mmTradeOriginatorRole, SecuritiesTradeDetails38.mmTradeOriginatorRole,
+						SecuritiesTradeDetails37.mmTradeOriginatorRole, SecuritiesTradeDetails34.mmTradeOriginatorRole, SecuritiesTradeDetails32.mmTradeOriginatorRole, SecuritiesTradeDetails44.mmTradeOriginatorRole,
+						SecuritiesTradeDetails39.mmTradeOriginatorRole, SecuritiesTradeDetails43.mmTradeOriginatorRole, SecuritiesTradeDetails40.mmTradeOriginatorRole, SecuritiesTradeDetails46.mmTradeOriginatorRole,
+						SecuritiesTradeDetails47.mmTradeOriginatorRole, SecuritiesTradeDetails51.mmTradeOriginatorRole, SecuritiesTradeDetails53.mmTradeOriginatorRole, SecuritiesTradeDetails55.mmTradeOriginatorRole,
+						SecuritiesTradeDetails56.mmTradeOriginatorRole, SecuritiesTradeDetails52.mmTradeOriginatorRole, SecuritiesTradeDetails50.mmTradeOriginatorRole, SecuritiesTradeDetails59.mmTradeOriginatorRole,
+						SecuritiesTradeDetails58.mmTradeOriginatorRole, SecuritiesTradeDetails63.mmTradeOriginatorRole, SecuritiesTradeDetails62.mmTradeOriginatorRole, SecuritiesTradeDetails65.mmTradeOriginatorRole,
+						SecuritiesTradeDetails66.mmTradeOriginatorRole, SecuritiesTradeDetails67.mmTradeOriginatorRole, SecuritiesTradeDetails70.mmTradeOriginatorRole);
 				superType_lazy = () -> TradePartyRole.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.TradeOriginatorRole.mmOriginatorRole);
+				element_lazy = () -> Arrays.asList(TradeOriginatorRole.mmOriginatorRole);
 				derivationComponent_lazy = () -> Arrays.asList(TradeOriginator1Choice.mmObject(), TradeOriginator2Choice.mmObject(), TradeOriginator3Choice.mmObject(), TradeOriginator4Choice.mmObject());
 			}
 		});

@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.OrderConfirmationStatusCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -92,7 +94,7 @@ public class OrderConfirmationStatus1Code extends OrderConfirmationStatusCode {
 	 */
 	public static final MMCode mmSentToNextParty = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SentToNextParty";
 			owner_lazy = () -> OrderConfirmationStatus1Code.mmObject();
 		}
@@ -115,7 +117,7 @@ public class OrderConfirmationStatus1Code extends OrderConfirmationStatusCode {
 	 */
 	public static final MMCode mmCommunicationProblemNextParty = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommunicationProblemNextParty";
 			owner_lazy = () -> OrderConfirmationStatus1Code.mmObject();
 		}
@@ -138,7 +140,7 @@ public class OrderConfirmationStatus1Code extends OrderConfirmationStatusCode {
 	 */
 	public static final MMCode mmConfirmationAccepted = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConfirmationAccepted";
 			owner_lazy = () -> OrderConfirmationStatus1Code.mmObject();
 		}
@@ -161,7 +163,7 @@ public class OrderConfirmationStatus1Code extends OrderConfirmationStatusCode {
 	 */
 	public static final MMCode mmConfirmationReceived = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConfirmationReceived";
 			owner_lazy = () -> OrderConfirmationStatus1Code.mmObject();
 		}
@@ -170,13 +172,13 @@ public class OrderConfirmationStatus1Code extends OrderConfirmationStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("STNP");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OrderConfirmationStatus1Code";
 				definition = "Specifies the current status of an order confirmation or of an order confirmation amendment.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OrderConfirmationStatus1Code.mmSentToNextParty, com.tools20022.repository.codeset.OrderConfirmationStatus1Code.mmCommunicationProblemNextParty,
-						com.tools20022.repository.codeset.OrderConfirmationStatus1Code.mmConfirmationAccepted, com.tools20022.repository.codeset.OrderConfirmationStatus1Code.mmConfirmationReceived);
+				code_lazy = () -> Arrays.asList(OrderConfirmationStatus1Code.mmSentToNextParty, OrderConfirmationStatus1Code.mmCommunicationProblemNextParty, OrderConfirmationStatus1Code.mmConfirmationAccepted,
+						OrderConfirmationStatus1Code.mmConfirmationReceived);
 				trace_lazy = () -> OrderConfirmationStatusCode.mmObject();
 			}
 		});

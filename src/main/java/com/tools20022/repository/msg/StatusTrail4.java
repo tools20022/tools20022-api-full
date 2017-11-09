@@ -20,10 +20,14 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAuditTrailReportV02;
 import com.tools20022.repository.choice.*;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.entity.SecuritiesTradeStatus;
 import com.tools20022.repository.entity.Status;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -156,15 +160,15 @@ public class StatusTrail4 {
 	 */
 	public static final MMMessageAttribute mmStatusDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.mmStatusDateTime;
+			businessElementTrace_lazy = () -> Status.mmStatusDateTime;
 			componentContext_lazy = () -> StatusTrail4.mmObject();
 			isDerived = false;
 			xmlTag = "StsDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusDate";
 			definition = "Date and time at which the status was assigned.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StatusTrail6.mmStatusDate);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.StatusTrail2.mmStatusDate;
+			nextVersions_lazy = () -> Arrays.asList(StatusTrail6.mmStatusDate);
+			previousVersion_lazy = () -> StatusTrail2.mmStatusDate;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
@@ -219,11 +223,11 @@ public class StatusTrail4 {
 			componentContext_lazy = () -> StatusTrail4.mmObject();
 			isDerived = false;
 			xmlTag = "SndgOrgId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SendingOrganisationIdentification";
 			definition = "Unique and unambiguous way to identify the organisation that sent the message instance.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StatusTrail6.mmSendingOrganisationIdentification);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.StatusTrail2.mmSendingOrganisationIdentification;
+			nextVersions_lazy = () -> Arrays.asList(StatusTrail6.mmSendingOrganisationIdentification);
+			previousVersion_lazy = () -> StatusTrail2.mmSendingOrganisationIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.OrganisationIdentification7.mmObject();
@@ -277,11 +281,11 @@ public class StatusTrail4 {
 			componentContext_lazy = () -> StatusTrail4.mmObject();
 			isDerived = false;
 			xmlTag = "UsrId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UserIdentification";
 			definition = "Unique and unambiguous way to identify the user that created the message instance.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StatusTrail6.mmUserIdentification);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.StatusTrail2.mmUserIdentification;
+			nextVersions_lazy = () -> Arrays.asList(StatusTrail6.mmUserIdentification);
+			previousVersion_lazy = () -> StatusTrail2.mmUserIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -338,11 +342,11 @@ public class StatusTrail4 {
 			componentContext_lazy = () -> StatusTrail4.mmObject();
 			isDerived = false;
 			xmlTag = "PrcgSts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProcessingStatus";
 			definition = "Provides details on the processing status of the transaction.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StatusTrail6.mmProcessingStatus);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.StatusTrail2.mmProcessingStatus;
+			nextVersions_lazy = () -> Arrays.asList(StatusTrail6.mmProcessingStatus);
+			previousVersion_lazy = () -> StatusTrail2.mmProcessingStatus;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -400,15 +404,15 @@ public class StatusTrail4 {
 	 */
 	public static final MMMessageAssociationEnd mmInferredMatchingStatus = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeStatus.mmMatchingStatus;
+			businessElementTrace_lazy = () -> SecuritiesTradeStatus.mmMatchingStatus;
 			componentContext_lazy = () -> StatusTrail4.mmObject();
 			isDerived = false;
 			xmlTag = "IfrrdMtchgSts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InferredMatchingStatus";
 			definition = "Provides the matching status of an instruction as per the account servicer or the Market Infrastructure based on an allegement. At this time no matching took place on the market (at the CSD/ICSD/MI).";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StatusTrail6.mmInferredMatchingStatus);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.StatusTrail2.mmInferredMatchingStatus;
+			nextVersions_lazy = () -> Arrays.asList(StatusTrail6.mmInferredMatchingStatus);
+			previousVersion_lazy = () -> StatusTrail2.mmInferredMatchingStatus;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -462,15 +466,15 @@ public class StatusTrail4 {
 	 */
 	public static final MMMessageAssociationEnd mmMatchingStatus = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeStatus.mmMatchingStatus;
+			businessElementTrace_lazy = () -> SecuritiesTradeStatus.mmMatchingStatus;
 			componentContext_lazy = () -> StatusTrail4.mmObject();
 			isDerived = false;
 			xmlTag = "MtchgSts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MatchingStatus";
 			definition = "Provides the matching status of the instruction.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StatusTrail6.mmMatchingStatus);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.StatusTrail2.mmMatchingStatus;
+			nextVersions_lazy = () -> Arrays.asList(StatusTrail6.mmMatchingStatus);
+			previousVersion_lazy = () -> StatusTrail2.mmMatchingStatus;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -524,15 +528,15 @@ public class StatusTrail4 {
 	 */
 	public static final MMMessageAssociationEnd mmSettlementStatus = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.mmSettlementStatus;
+			businessElementTrace_lazy = () -> Status.mmSettlementStatus;
 			componentContext_lazy = () -> StatusTrail4.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmSts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementStatus";
 			definition = "Provides the status of settlement of a transaction.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StatusTrail6.mmSettlementStatus);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.StatusTrail2.mmSettlementStatus;
+			nextVersions_lazy = () -> Arrays.asList(StatusTrail6.mmSettlementStatus);
+			previousVersion_lazy = () -> StatusTrail2.mmSettlementStatus;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -592,11 +596,11 @@ public class StatusTrail4 {
 			componentContext_lazy = () -> StatusTrail4.mmObject();
 			isDerived = false;
 			xmlTag = "ModPrcgSts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ModificationProcessingStatus";
 			definition = "Provides details on the modification processing status of the transaction.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StatusTrail6.mmModificationProcessingStatus);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.StatusTrail2.mmModificationProcessingStatus;
+			nextVersions_lazy = () -> Arrays.asList(StatusTrail6.mmModificationProcessingStatus);
+			previousVersion_lazy = () -> StatusTrail2.mmModificationProcessingStatus;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -654,11 +658,11 @@ public class StatusTrail4 {
 			componentContext_lazy = () -> StatusTrail4.mmObject();
 			isDerived = false;
 			xmlTag = "CxlSts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationStatus";
 			definition = "Provides details on the processing status of the cancellation request.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StatusTrail6.mmCancellationStatus);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.StatusTrail2.mmCancellationStatus;
+			nextVersions_lazy = () -> Arrays.asList(StatusTrail6.mmCancellationStatus);
+			previousVersion_lazy = () -> StatusTrail2.mmCancellationStatus;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -713,11 +717,11 @@ public class StatusTrail4 {
 			componentContext_lazy = () -> StatusTrail4.mmObject();
 			isDerived = false;
 			xmlTag = "Sttld";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Settled";
 			definition = "Status is settled.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StatusTrail6.mmSettled);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.StatusTrail2.mmSettled;
+			nextVersions_lazy = () -> Arrays.asList(StatusTrail6.mmSettled);
+			previousVersion_lazy = () -> StatusTrail2.mmSettled;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -771,11 +775,11 @@ public class StatusTrail4 {
 			componentContext_lazy = () -> StatusTrail4.mmObject();
 			isDerived = false;
 			xmlTag = "SplmtryData";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryData";
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StatusTrail6.mmSupplementaryData);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.StatusTrail2.mmSupplementaryData;
+			nextVersions_lazy = () -> Arrays.asList(StatusTrail6.mmSupplementaryData);
+			previousVersion_lazy = () -> StatusTrail2.mmSupplementaryData;
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.SupplementaryData1.mmObject();
@@ -785,14 +789,13 @@ public class StatusTrail4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StatusTrail4.mmStatusDate, com.tools20022.repository.msg.StatusTrail4.mmSendingOrganisationIdentification,
-						com.tools20022.repository.msg.StatusTrail4.mmUserIdentification, com.tools20022.repository.msg.StatusTrail4.mmProcessingStatus, com.tools20022.repository.msg.StatusTrail4.mmInferredMatchingStatus,
-						com.tools20022.repository.msg.StatusTrail4.mmMatchingStatus, com.tools20022.repository.msg.StatusTrail4.mmSettlementStatus, com.tools20022.repository.msg.StatusTrail4.mmModificationProcessingStatus,
-						com.tools20022.repository.msg.StatusTrail4.mmCancellationStatus, com.tools20022.repository.msg.StatusTrail4.mmSettled, com.tools20022.repository.msg.StatusTrail4.mmSupplementaryData);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAuditTrailReportV02.mmStatusTrail);
+				messageElement_lazy = () -> Arrays.asList(StatusTrail4.mmStatusDate, StatusTrail4.mmSendingOrganisationIdentification, StatusTrail4.mmUserIdentification, StatusTrail4.mmProcessingStatus,
+						StatusTrail4.mmInferredMatchingStatus, StatusTrail4.mmMatchingStatus, StatusTrail4.mmSettlementStatus, StatusTrail4.mmModificationProcessingStatus, StatusTrail4.mmCancellationStatus, StatusTrail4.mmSettled,
+						StatusTrail4.mmSupplementaryData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesSettlementTransactionAuditTrailReportV02.mmStatusTrail);
 				trace_lazy = () -> Status.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "StatusTrail4";
 				definition = "Provides the history of status and reasons for a pending, posted or cancelled transaction.";
 				nextVersions_lazy = () -> Arrays.asList(StatusTrail6.mmObject());

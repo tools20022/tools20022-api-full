@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -28,6 +30,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.OrderConfirmationStatus1Code
+ * OrderConfirmationStatus1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -42,14 +52,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.OrderConfirmationStatusCode#mmCommunicationProblemNextParty
  * OrderConfirmationStatusCode.mmCommunicationProblemNextParty}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.OrderConfirmationStatus1Code
- * OrderConfirmationStatus1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -102,7 +104,7 @@ public class OrderConfirmationStatusCode {
 	 */
 	public static final MMCode mmConfirmationAccepted = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConfirmationAccepted";
 			definition = "Order confirmation or order confirmation amendment is accepted.";
 			owner_lazy = () -> OrderConfirmationStatusCode.mmObject();
@@ -136,7 +138,7 @@ public class OrderConfirmationStatusCode {
 	 */
 	public static final MMCode mmConfirmationReceived = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConfirmationReceived";
 			definition = "Order confirmation or order confirmation amendment is received, ie, technical validation of the message is ok, and the message is now at the receiving side.";
 			owner_lazy = () -> OrderConfirmationStatusCode.mmObject();
@@ -170,7 +172,7 @@ public class OrderConfirmationStatusCode {
 	 */
 	public static final MMCode mmSentToNextParty = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SentToNextParty";
 			definition = "Order confirmation or order confirmation cancellation instruction or order confirmation amendment has been sent to the next party, eg, the next intermediary.";
 			owner_lazy = () -> OrderConfirmationStatusCode.mmObject();
@@ -200,7 +202,7 @@ public class OrderConfirmationStatusCode {
 	 */
 	public static final MMCode mmCommunicationProblemNextParty = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommunicationProblemNextParty";
 			definition = "Communication problems with the next party.";
 			owner_lazy = () -> OrderConfirmationStatusCode.mmObject();
@@ -211,13 +213,13 @@ public class OrderConfirmationStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("COAC");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OrderConfirmationStatusCode";
 				definition = "Specifies the current status of an order confirmation or of an order confirmation amendment.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OrderConfirmationStatusCode.mmConfirmationAccepted, com.tools20022.repository.codeset.OrderConfirmationStatusCode.mmConfirmationReceived,
-						com.tools20022.repository.codeset.OrderConfirmationStatusCode.mmSentToNextParty, com.tools20022.repository.codeset.OrderConfirmationStatusCode.mmCommunicationProblemNextParty);
+				code_lazy = () -> Arrays.asList(OrderConfirmationStatusCode.mmConfirmationAccepted, OrderConfirmationStatusCode.mmConfirmationReceived, OrderConfirmationStatusCode.mmSentToNextParty,
+						OrderConfirmationStatusCode.mmCommunicationProblemNextParty);
 				derivation_lazy = () -> Arrays.asList(OrderConfirmationStatus1Code.mmObject());
 			}
 		});

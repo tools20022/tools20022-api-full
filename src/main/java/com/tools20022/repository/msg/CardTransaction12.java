@@ -20,9 +20,11 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CardServiceType2Code;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Number;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -122,10 +124,10 @@ public class CardTransaction12 {
 			componentContext_lazy = () -> CardTransaction12.mmObject();
 			isDerived = false;
 			xmlTag = "NtwkMgmtTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetworkManagementType";
 			definition = "Type of network management service (correspond to the ISO 8583 field 24)";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CardTransaction11.mmNetworkManagementType;
+			previousVersion_lazy = () -> CardTransaction11.mmNetworkManagementType;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CardServiceType2Code.mmObject();
@@ -164,7 +166,7 @@ public class CardTransaction12 {
 			componentContext_lazy = () -> CardTransaction12.mmObject();
 			isDerived = false;
 			xmlTag = "InitrDtTm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InitiatorDateTime";
 			definition = "Date and time of the transaction.";
 			maxOccurs = 1;
@@ -210,10 +212,10 @@ public class CardTransaction12 {
 			componentContext_lazy = () -> CardTransaction12.mmObject();
 			isDerived = false;
 			xmlTag = "NbOfMsgs";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NumberOfMessages";
 			definition = "Number of messages in the store and forward queue.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CardTransaction11.mmNumberOfMessages;
+			previousVersion_lazy = () -> CardTransaction11.mmNumberOfMessages;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
@@ -258,10 +260,10 @@ public class CardTransaction12 {
 			componentContext_lazy = () -> CardTransaction12.mmObject();
 			isDerived = false;
 			xmlTag = "MaxNbOfMsgs";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaximumNumberOfMessages";
 			definition = "Maximum number of messages in the store and forward queue.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CardTransaction11.mmMaximumNumberOfMessages;
+			previousVersion_lazy = () -> CardTransaction11.mmMaximumNumberOfMessages;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
@@ -299,7 +301,7 @@ public class CardTransaction12 {
 			componentContext_lazy = () -> CardTransaction12.mmObject();
 			isDerived = false;
 			xmlTag = "TxRspn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionResponse";
 			definition = "Response to the network management request.";
 			maxOccurs = 1;
@@ -312,10 +314,10 @@ public class CardTransaction12 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardTransaction12.mmNetworkManagementType, com.tools20022.repository.msg.CardTransaction12.mmInitiatorDateTime,
-						com.tools20022.repository.msg.CardTransaction12.mmNumberOfMessages, com.tools20022.repository.msg.CardTransaction12.mmMaximumNumberOfMessages, com.tools20022.repository.msg.CardTransaction12.mmTransactionResponse);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(CardTransaction12.mmNetworkManagementType, CardTransaction12.mmInitiatorDateTime, CardTransaction12.mmNumberOfMessages, CardTransaction12.mmMaximumNumberOfMessages,
+						CardTransaction12.mmTransactionResponse);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CardTransaction12";
 				definition = "Network management transaction.";
 				nextVersions_lazy = () -> Arrays.asList(CardTransaction13.mmObject());

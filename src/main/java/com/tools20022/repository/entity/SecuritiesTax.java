@@ -17,16 +17,13 @@
 
 package com.tools20022.repository.entity;
 
-import com.tools20022.metamodel.MMBusinessAssociationEnd;
-import com.tools20022.metamodel.MMBusinessAttribute;
-import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.*;
 import com.tools20022.repository.choice.*;
 import com.tools20022.repository.codeset.*;
 import com.tools20022.repository.datatype.*;
 import com.tools20022.repository.entity.Tax;
-import com.tools20022.repository.msg.EUCapitalGain1;
-import com.tools20022.repository.msg.InformativeTax1;
-import com.tools20022.repository.msg.TaxableIncomePerShareCalculated1;
+import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -40,122 +37,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesTax#mmTaxableIncomePerShare
- * SecuritiesTax.mmTaxableIncomePerShare}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesTax#mmTaxableIncomePerShareCalculated
- * SecuritiesTax.mmTaxableIncomePerShareCalculated}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesTax#mmEUCapitalGain
- * SecuritiesTax.mmEUCapitalGain}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesTax#mmEUDividendStatus
- * SecuritiesTax.mmEUDividendStatus}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesTax#mmTaxableIncomePerDividend
- * SecuritiesTax.mmTaxableIncomePerDividend}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesTax#mmStampDutyType
- * SecuritiesTax.mmStampDutyType}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesTax#mmStampDutyTaxBasis
- * SecuritiesTax.mmStampDutyTaxBasis}</li>
- * <li>{@linkplain com.tools20022.repository.entity.SecuritiesTax#mmTaxVoucher
- * SecuritiesTax.mmTaxVoucher}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesTax#mmTaxableIncomePerDividendShare
- * SecuritiesTax.mmTaxableIncomePerDividendShare}</li>
- * <li>{@linkplain com.tools20022.repository.entity.SecuritiesTax#mmRelatedTax
- * SecuritiesTax.mmRelatedTax}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesTax#mmTaxLotNumber
- * SecuritiesTax.mmTaxLotNumber}</li>
- * <li>{@linkplain com.tools20022.repository.entity.SecuritiesTax#mmSecurity
- * SecuritiesTax.mmSecurity}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesTax#mmTaxRuleExemptIndicator
- * SecuritiesTax.mmTaxRuleExemptIndicator}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesTax#mmEffectivePeriod
- * SecuritiesTax.mmEffectivePeriod}</li>
- * <li>{@linkplain com.tools20022.repository.entity.SecuritiesTax#mmFrankedRate
- * SecuritiesTax.mmFrankedRate}</li>
- * <li>{@linkplain com.tools20022.repository.entity.SecuritiesTax#mmTEFRARule
- * SecuritiesTax.mmTEFRARule}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesTax#mmJurisdiction
- * SecuritiesTax.mmJurisdiction}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
- * subType} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.InvestmentFundTax
- * InvestmentFundTax}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Security#mmTaxDetails
- * Security.mmTaxDetails}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.TaxVoucher#mmRelatedSecurityTax
- * TaxVoucher.mmRelatedSecurityTax}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.RateAndAmount#mmSecuritiesTax
- * RateAndAmount.mmSecuritiesTax}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Jurisdiction#mmRelatedSecuritiesTax
- * Jurisdiction.mmRelatedSecuritiesTax}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
- * derivationElement} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.choice.RateAndAmountFormat21Choice#mmRateTypeAndRate
- * RateAndAmountFormat21Choice.mmRateTypeAndRate}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.RateAndAmountFormat35Choice#mmRateTypeAndRate
- * RateAndAmountFormat35Choice.mmRateTypeAndRate}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.RateAndAmountFormat32Choice#mmRateTypeAndRate
- * RateAndAmountFormat32Choice.mmRateTypeAndRate}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.RateAndAmountFormat40Choice#mmRateTypeAndRate
- * RateAndAmountFormat40Choice.mmRateTypeAndRate}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.RateAndAmountFormat45Choice#mmRateTypeAndRate
- * RateAndAmountFormat45Choice.mmRateTypeAndRate}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.SubscriptionExecution13#mmInformativeTaxDetails
- * SubscriptionExecution13.mmInformativeTaxDetails}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.SubscriptionExecution12#mmInformativeTaxDetails
- * SubscriptionExecution12.mmInformativeTaxDetails}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.RedemptionExecution16#mmInformativeTaxDetails
- * RedemptionExecution16.mmInformativeTaxDetails}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.SwitchSubscriptionLegExecution4#mmInformativeTaxDetails
- * SwitchSubscriptionLegExecution4.mmInformativeTaxDetails}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.RedemptionExecution15#mmInformativeTaxDetails
- * RedemptionExecution15.mmInformativeTaxDetails}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.SwitchRedemptionLegExecution4#mmInformativeTaxDetails
- * SwitchRedemptionLegExecution4.mmInformativeTaxDetails}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.Tax Tax}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -216,6 +97,122 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.choice.TaxableIncomePerShareCalculated2Choice
  * TaxableIncomePerShareCalculated2Choice}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.Security#mmTaxDetails
+ * Security.mmTaxDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.TaxVoucher#mmRelatedSecurityTax
+ * TaxVoucher.mmRelatedSecurityTax}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.RateAndAmount#mmSecuritiesTax
+ * RateAndAmount.mmSecuritiesTax}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Jurisdiction#mmRelatedSecuritiesTax
+ * Jurisdiction.mmRelatedSecuritiesTax}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
+ * derivationElement} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.RateAndAmountFormat21Choice#mmRateTypeAndRate
+ * RateAndAmountFormat21Choice.mmRateTypeAndRate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.RateAndAmountFormat35Choice#mmRateTypeAndRate
+ * RateAndAmountFormat35Choice.mmRateTypeAndRate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.RateAndAmountFormat32Choice#mmRateTypeAndRate
+ * RateAndAmountFormat32Choice.mmRateTypeAndRate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.RateAndAmountFormat40Choice#mmRateTypeAndRate
+ * RateAndAmountFormat40Choice.mmRateTypeAndRate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.RateAndAmountFormat45Choice#mmRateTypeAndRate
+ * RateAndAmountFormat45Choice.mmRateTypeAndRate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SubscriptionExecution13#mmInformativeTaxDetails
+ * SubscriptionExecution13.mmInformativeTaxDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SubscriptionExecution12#mmInformativeTaxDetails
+ * SubscriptionExecution12.mmInformativeTaxDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.RedemptionExecution16#mmInformativeTaxDetails
+ * RedemptionExecution16.mmInformativeTaxDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SwitchSubscriptionLegExecution4#mmInformativeTaxDetails
+ * SwitchSubscriptionLegExecution4.mmInformativeTaxDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.RedemptionExecution15#mmInformativeTaxDetails
+ * RedemptionExecution15.mmInformativeTaxDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SwitchRedemptionLegExecution4#mmInformativeTaxDetails
+ * SwitchRedemptionLegExecution4.mmInformativeTaxDetails}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.Tax Tax}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
+ * subType} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.InvestmentFundTax
+ * InvestmentFundTax}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesTax#mmTaxableIncomePerShare
+ * SecuritiesTax.mmTaxableIncomePerShare}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesTax#mmTaxableIncomePerShareCalculated
+ * SecuritiesTax.mmTaxableIncomePerShareCalculated}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesTax#mmEUCapitalGain
+ * SecuritiesTax.mmEUCapitalGain}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesTax#mmEUDividendStatus
+ * SecuritiesTax.mmEUDividendStatus}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesTax#mmTaxableIncomePerDividend
+ * SecuritiesTax.mmTaxableIncomePerDividend}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesTax#mmStampDutyType
+ * SecuritiesTax.mmStampDutyType}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesTax#mmStampDutyTaxBasis
+ * SecuritiesTax.mmStampDutyTaxBasis}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.SecuritiesTax#mmTaxVoucher
+ * SecuritiesTax.mmTaxVoucher}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesTax#mmTaxableIncomePerDividendShare
+ * SecuritiesTax.mmTaxableIncomePerDividendShare}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.SecuritiesTax#mmRelatedTax
+ * SecuritiesTax.mmRelatedTax}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesTax#mmTaxLotNumber
+ * SecuritiesTax.mmTaxLotNumber}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.SecuritiesTax#mmSecurity
+ * SecuritiesTax.mmSecurity}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesTax#mmTaxRuleExemptIndicator
+ * SecuritiesTax.mmTaxRuleExemptIndicator}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesTax#mmEffectivePeriod
+ * SecuritiesTax.mmEffectivePeriod}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.SecuritiesTax#mmFrankedRate
+ * SecuritiesTax.mmFrankedRate}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.SecuritiesTax#mmTEFRARule
+ * SecuritiesTax.mmTEFRARule}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesTax#mmJurisdiction
+ * SecuritiesTax.mmJurisdiction}</li>
  * </ul>
  * </li>
  * <li>
@@ -312,14 +309,12 @@ public class SecuritiesTax extends Tax {
 	 */
 	public static final MMBusinessAttribute mmTaxableIncomePerShare = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UnitPrice6.mmTaxableIncomePerShare, com.tools20022.repository.msg.UnitPrice15.mmTaxableIncomePerShare,
-					com.tools20022.repository.msg.UnitPrice3.mmTaxableIncomePerShare, com.tools20022.repository.msg.UnitPrice12.mmTaxableIncomePerShare, com.tools20022.repository.msg.FinancialInstrumentAttributes31.mmTaxableIncomePerShare,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes44.mmTaxableIncomePerShare, com.tools20022.repository.msg.UnitPrice5.mmTaxableIncomePerShare, com.tools20022.repository.msg.UnitPrice10.mmTaxableIncomePerShare,
-					com.tools20022.repository.msg.UnitPrice16.mmTaxableIncomePerShare, com.tools20022.repository.msg.UnitPrice17.mmTaxableIncomePerShare, com.tools20022.repository.msg.UnitPrice21.mmTaxableIncomePerShare,
-					com.tools20022.repository.msg.UnitPrice22.mmTaxableIncomePerShare);
+			derivation_lazy = () -> Arrays.asList(UnitPrice6.mmTaxableIncomePerShare, UnitPrice15.mmTaxableIncomePerShare, UnitPrice3.mmTaxableIncomePerShare, UnitPrice12.mmTaxableIncomePerShare,
+					FinancialInstrumentAttributes31.mmTaxableIncomePerShare, FinancialInstrumentAttributes44.mmTaxableIncomePerShare, UnitPrice5.mmTaxableIncomePerShare, UnitPrice10.mmTaxableIncomePerShare,
+					UnitPrice16.mmTaxableIncomePerShare, UnitPrice17.mmTaxableIncomePerShare, UnitPrice21.mmTaxableIncomePerShare, UnitPrice22.mmTaxableIncomePerShare);
 			elementContext_lazy = () -> SecuritiesTax.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TaxableIncomePerShare";
 			definition = "Amount included in the NAV that corresponds to gains directly or indirectly derived from interest payment in the scope of the European Directive on taxation of savings income in the form of interest payments.";
 			maxOccurs = 1;
@@ -469,27 +464,19 @@ public class SecuritiesTax extends Tax {
 	 */
 	public static final MMBusinessAttribute mmTaxableIncomePerShareCalculated = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TaxableIncomePerShareCalculated1.mmStructured, com.tools20022.repository.msg.UnitPrice6.mmTaxableIncomePerShareCalculated,
-					com.tools20022.repository.msg.UnitPrice15.mmTaxableIncomePerShareCalculated, com.tools20022.repository.msg.UnitPrice15.mmExtendedTaxableIncomePerShareCalculated,
-					com.tools20022.repository.choice.TaxableIncomePerShareCalculatedFormat1Choice.mmCode, com.tools20022.repository.choice.TaxableIncomePerShareCalculatedFormat1Choice.mmProprietary,
-					com.tools20022.repository.msg.CorporateAction3.mmTaxableIncomePerShareCalculated, com.tools20022.repository.choice.TaxableIncomePerShareCalculatedFormat2Choice.mmCode,
-					com.tools20022.repository.choice.TaxableIncomePerShareCalculatedFormat2Choice.mmProprietary, com.tools20022.repository.msg.CorporateAction4.mmTaxableIncomePerShareCalculated,
-					com.tools20022.repository.msg.CorporateAction5.mmTaxableIncomePerShareCalculated, com.tools20022.repository.msg.CorporateAction6.mmTaxableIncomePerShareCalculated,
-					com.tools20022.repository.msg.CorporateAction7.mmTaxableIncomePerShareCalculated, com.tools20022.repository.msg.CorporateAction8.mmTaxableIncomePerShareCalculated,
-					com.tools20022.repository.msg.CorporateAction10.mmTaxableIncomePerShareCalculated, com.tools20022.repository.msg.CorporateAction11.mmTaxableIncomePerShareCalculated,
-					com.tools20022.repository.msg.UnitPrice5.mmTaxableIncomePerShareCalculated, com.tools20022.repository.msg.UnitPrice10.mmTaxableIncomePerShareCalculated,
-					com.tools20022.repository.msg.UnitPrice10.mmExtendedTaxableIncomePerShareCalculated, com.tools20022.repository.msg.CorporateAction2.mmTaxableIncomePerShareCalculated,
-					com.tools20022.repository.choice.TaxableIncomePerShareCalculatedType1Choice.mmTaxableIncomePerShareCalculated, com.tools20022.repository.choice.TaxableIncomePerShareCalculatedType1Choice.mmProprietary,
-					com.tools20022.repository.msg.UnitPrice16.mmTaxableIncomePerShareCalculated, com.tools20022.repository.msg.UnitPrice17.mmTaxableIncomePerShareCalculated,
-					com.tools20022.repository.msg.CorporateAction12.mmTaxableIncomePerShareCalculated, com.tools20022.repository.msg.CorporateAction17.mmTaxableIncomePerShareCalculated,
-					com.tools20022.repository.msg.CorporateAction31.mmTaxableIncomePerShareCalculated, com.tools20022.repository.choice.TaxableIncomePerShareCalculatedFormat3Choice.mmCode,
-					com.tools20022.repository.choice.TaxableIncomePerShareCalculatedFormat3Choice.mmProprietary, com.tools20022.repository.msg.CorporateAction40.mmTaxableIncomePerShareCalculated,
-					com.tools20022.repository.choice.TaxableIncomePerShareCalculatedFormat4Choice.mmCode, com.tools20022.repository.choice.TaxableIncomePerShareCalculatedFormat4Choice.mmProprietary,
-					com.tools20022.repository.msg.UnitPrice22.mmTaxableIncomePerShareCalculated, com.tools20022.repository.choice.TaxableIncomePerShareCalculated2Choice.mmCode,
-					com.tools20022.repository.choice.TaxableIncomePerShareCalculated2Choice.mmProprietary);
+			derivation_lazy = () -> Arrays.asList(TaxableIncomePerShareCalculated1.mmStructured, UnitPrice6.mmTaxableIncomePerShareCalculated, UnitPrice15.mmTaxableIncomePerShareCalculated,
+					UnitPrice15.mmExtendedTaxableIncomePerShareCalculated, TaxableIncomePerShareCalculatedFormat1Choice.mmCode, TaxableIncomePerShareCalculatedFormat1Choice.mmProprietary, CorporateAction3.mmTaxableIncomePerShareCalculated,
+					TaxableIncomePerShareCalculatedFormat2Choice.mmCode, TaxableIncomePerShareCalculatedFormat2Choice.mmProprietary, CorporateAction4.mmTaxableIncomePerShareCalculated, CorporateAction5.mmTaxableIncomePerShareCalculated,
+					CorporateAction6.mmTaxableIncomePerShareCalculated, CorporateAction7.mmTaxableIncomePerShareCalculated, CorporateAction8.mmTaxableIncomePerShareCalculated, CorporateAction10.mmTaxableIncomePerShareCalculated,
+					CorporateAction11.mmTaxableIncomePerShareCalculated, UnitPrice5.mmTaxableIncomePerShareCalculated, UnitPrice10.mmTaxableIncomePerShareCalculated, UnitPrice10.mmExtendedTaxableIncomePerShareCalculated,
+					CorporateAction2.mmTaxableIncomePerShareCalculated, TaxableIncomePerShareCalculatedType1Choice.mmTaxableIncomePerShareCalculated, TaxableIncomePerShareCalculatedType1Choice.mmProprietary,
+					UnitPrice16.mmTaxableIncomePerShareCalculated, UnitPrice17.mmTaxableIncomePerShareCalculated, CorporateAction12.mmTaxableIncomePerShareCalculated, CorporateAction17.mmTaxableIncomePerShareCalculated,
+					CorporateAction31.mmTaxableIncomePerShareCalculated, TaxableIncomePerShareCalculatedFormat3Choice.mmCode, TaxableIncomePerShareCalculatedFormat3Choice.mmProprietary, CorporateAction40.mmTaxableIncomePerShareCalculated,
+					TaxableIncomePerShareCalculatedFormat4Choice.mmCode, TaxableIncomePerShareCalculatedFormat4Choice.mmProprietary, UnitPrice22.mmTaxableIncomePerShareCalculated, TaxableIncomePerShareCalculated2Choice.mmCode,
+					TaxableIncomePerShareCalculated2Choice.mmProprietary);
 			elementContext_lazy = () -> SecuritiesTax.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TaxableIncomePerShareCalculated";
 			definition = "Specifies whether the fund calculates a taxable interest per share (TIS).";
 			maxOccurs = 1;
@@ -649,24 +636,17 @@ public class SecuritiesTax extends Tax {
 	 */
 	public static final MMBusinessAttribute mmEUCapitalGain = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TaxCalculationInformation2.mmEUCapitalGain, com.tools20022.repository.msg.TaxCalculationInformation4.mmEUCapitalGain,
-					com.tools20022.repository.msg.TaxCalculationInformation4.mmExtendedEUCapitalGain, com.tools20022.repository.choice.CapitalGainFormat1Choice.mmCode,
-					com.tools20022.repository.choice.CapitalGainFormat1Choice.mmProprietary, com.tools20022.repository.msg.CorporateAction3.mmCapitalGainInOutIndicator, com.tools20022.repository.choice.CapitalGainFormat2Choice.mmCode,
-					com.tools20022.repository.choice.CapitalGainFormat2Choice.mmProprietary, com.tools20022.repository.msg.CorporateAction4.mmCapitalGainInOutIndicator,
-					com.tools20022.repository.msg.CorporateAction5.mmCapitalGainInOutIndicator, com.tools20022.repository.msg.CorporateAction6.mmCapitalGainInOutIndicator,
-					com.tools20022.repository.msg.CorporateAction7.mmCapitalGainInOutIndicator, com.tools20022.repository.msg.CorporateAction8.mmCapitalGainInOutIndicator,
-					com.tools20022.repository.msg.CorporateAction10.mmCapitalGainInOutIndicator, com.tools20022.repository.msg.CorporateAction11.mmCapitalGainInOutIndicator,
-					com.tools20022.repository.choice.EUCapitalGainType2Choice.mmEUCapitalGain, com.tools20022.repository.choice.EUCapitalGainType2Choice.mmProprietary, com.tools20022.repository.msg.Order16.mmCapitalGainType,
-					com.tools20022.repository.msg.Order14.mmCapitalGainType, com.tools20022.repository.msg.TaxCalculationInformation3.mmEUCapitalGain, com.tools20022.repository.msg.TotalTaxes3.mmEUCapitalGain,
-					com.tools20022.repository.msg.TotalTaxes3.mmExtendedEUCapitalGain, com.tools20022.repository.msg.CorporateAction2.mmCapitalGain, com.tools20022.repository.choice.EUCapitalGainType1Choice.mmEUCapitalGain,
-					com.tools20022.repository.choice.EUCapitalGainType1Choice.mmProprietary, com.tools20022.repository.msg.TotalTaxes5.mmEUCapitalGain, com.tools20022.repository.msg.CorporateAction12.mmCapitalGainInOutIndicator,
-					com.tools20022.repository.msg.Order17.mmCapitalGainType, com.tools20022.repository.msg.Order18.mmCapitalGainType, com.tools20022.repository.msg.CorporateAction17.mmCapitalGainInOutIndicator,
-					com.tools20022.repository.msg.CorporateAction31.mmCapitalGainInOutIndicator, com.tools20022.repository.choice.CapitalGainFormat3Choice.mmCode, com.tools20022.repository.choice.CapitalGainFormat3Choice.mmProprietary,
-					com.tools20022.repository.msg.CorporateAction40.mmCapitalGainInOutIndicator, com.tools20022.repository.choice.CapitalGainFormat4Choice.mmCode, com.tools20022.repository.choice.CapitalGainFormat4Choice.mmProprietary,
-					com.tools20022.repository.msg.InformativeTax1.mmEUCapitalGain, com.tools20022.repository.choice.EUCapitalGain3Choice.mmCode, com.tools20022.repository.choice.EUCapitalGain3Choice.mmProprietary);
+			derivation_lazy = () -> Arrays.asList(TaxCalculationInformation2.mmEUCapitalGain, TaxCalculationInformation4.mmEUCapitalGain, TaxCalculationInformation4.mmExtendedEUCapitalGain, CapitalGainFormat1Choice.mmCode,
+					CapitalGainFormat1Choice.mmProprietary, CorporateAction3.mmCapitalGainInOutIndicator, CapitalGainFormat2Choice.mmCode, CapitalGainFormat2Choice.mmProprietary, CorporateAction4.mmCapitalGainInOutIndicator,
+					CorporateAction5.mmCapitalGainInOutIndicator, CorporateAction6.mmCapitalGainInOutIndicator, CorporateAction7.mmCapitalGainInOutIndicator, CorporateAction8.mmCapitalGainInOutIndicator,
+					CorporateAction10.mmCapitalGainInOutIndicator, CorporateAction11.mmCapitalGainInOutIndicator, EUCapitalGainType2Choice.mmEUCapitalGain, EUCapitalGainType2Choice.mmProprietary, Order16.mmCapitalGainType,
+					Order14.mmCapitalGainType, TaxCalculationInformation3.mmEUCapitalGain, TotalTaxes3.mmEUCapitalGain, TotalTaxes3.mmExtendedEUCapitalGain, CorporateAction2.mmCapitalGain, EUCapitalGainType1Choice.mmEUCapitalGain,
+					EUCapitalGainType1Choice.mmProprietary, TotalTaxes5.mmEUCapitalGain, CorporateAction12.mmCapitalGainInOutIndicator, Order17.mmCapitalGainType, Order18.mmCapitalGainType, CorporateAction17.mmCapitalGainInOutIndicator,
+					CorporateAction31.mmCapitalGainInOutIndicator, CapitalGainFormat3Choice.mmCode, CapitalGainFormat3Choice.mmProprietary, CorporateAction40.mmCapitalGainInOutIndicator, CapitalGainFormat4Choice.mmCode,
+					CapitalGainFormat4Choice.mmProprietary, InformativeTax1.mmEUCapitalGain, EUCapitalGain3Choice.mmCode, EUCapitalGain3Choice.mmProprietary);
 			elementContext_lazy = () -> SecuritiesTax.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "EUCapitalGain";
 			definition = "Specifies whether capital gain is in the scope of the European directive on taxation of savings income in the form of interest payments (Council Directive 2003/48/EC 3 June), or an income realised upon sale, a refund or redemption of shares and units, etc.";
 			maxOccurs = 1;
@@ -752,14 +732,12 @@ public class SecuritiesTax extends Tax {
 	 */
 	public static final MMBusinessAttribute mmEUDividendStatus = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TaxCalculationInformation4.mmEUDividendStatus, com.tools20022.repository.msg.TaxCalculationInformation4.mmExtendedEUDividendStatus,
-					com.tools20022.repository.msg.UnitPrice15.mmEUDividendStatus, com.tools20022.repository.msg.UnitPrice15.mmExtendedEUDividendStatus, com.tools20022.repository.msg.TotalTaxes3.mmEUDividendStatus,
-					com.tools20022.repository.msg.TotalTaxes3.mmExtendedEUDividendStatus, com.tools20022.repository.choice.EUDividendStatusType1Choice.mmEUDividendStatus,
-					com.tools20022.repository.choice.EUDividendStatusType1Choice.mmProprietary, com.tools20022.repository.msg.Tax18.mmEUDividendStatusType, com.tools20022.repository.msg.Tax19.mmEUDividendStatusType,
-					com.tools20022.repository.msg.InformativeTax1.mmEUDividendStatus, com.tools20022.repository.choice.EUDividendStatusType2Choice.mmCode, com.tools20022.repository.choice.EUDividendStatusType2Choice.mmProprietary);
+			derivation_lazy = () -> Arrays.asList(TaxCalculationInformation4.mmEUDividendStatus, TaxCalculationInformation4.mmExtendedEUDividendStatus, UnitPrice15.mmEUDividendStatus, UnitPrice15.mmExtendedEUDividendStatus,
+					TotalTaxes3.mmEUDividendStatus, TotalTaxes3.mmExtendedEUDividendStatus, EUDividendStatusType1Choice.mmEUDividendStatus, EUDividendStatusType1Choice.mmProprietary, Tax18.mmEUDividendStatusType,
+					Tax19.mmEUDividendStatusType, InformativeTax1.mmEUDividendStatus, EUDividendStatusType2Choice.mmCode, EUDividendStatusType2Choice.mmProprietary);
 			elementContext_lazy = () -> SecuritiesTax.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "EUDividendStatus";
 			definition = "Specifies whether dividend is in the scope of the European directive on taxation of savings income in the form of interest payments (Council Directive 2003/48/EC 3 June), or an income realised upon sale, a refund or redemption of shares and units, etc.";
 			maxOccurs = 1;
@@ -820,11 +798,11 @@ public class SecuritiesTax extends Tax {
 	 */
 	public static final MMBusinessAttribute mmTaxableIncomePerDividend = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TaxCalculationInformation4.mmTaxableIncomePerDividend, com.tools20022.repository.msg.UnitPrice15.mmTaxableIncomePerDividend,
-					com.tools20022.repository.msg.TotalTaxes3.mmTaxableIncomePerDividend, com.tools20022.repository.msg.TotalTaxes4.mmTaxableIncomePerDividend, com.tools20022.repository.msg.InformativeTax1.mmTaxableIncomePerDividend);
+			derivation_lazy = () -> Arrays.asList(TaxCalculationInformation4.mmTaxableIncomePerDividend, UnitPrice15.mmTaxableIncomePerDividend, TotalTaxes3.mmTaxableIncomePerDividend, TotalTaxes4.mmTaxableIncomePerDividend,
+					InformativeTax1.mmTaxableIncomePerDividend);
 			elementContext_lazy = () -> SecuritiesTax.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TaxableIncomePerDividend";
 			definition = "Amount included in the dividend that corresponds to gains directly or indirectly derived from interest payment in the scope of the European Directive on taxation of savings income in the form of interest payments.";
 			maxOccurs = 1;
@@ -944,18 +922,14 @@ public class SecuritiesTax extends Tax {
 	 */
 	public static final MMBusinessAttribute mmStampDutyType = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DeliverInformation7.mmStampDuty, com.tools20022.repository.msg.ReceiveInformation8.mmStampDuty, com.tools20022.repository.msg.ReceiveInformation6.mmStampDuty,
-					com.tools20022.repository.msg.ReceiveInformation11.mmStampDuty, com.tools20022.repository.msg.DeliverInformation11.mmStampDuty, com.tools20022.repository.msg.DeliverInformation8.mmStampDuty,
-					com.tools20022.repository.msg.ReceiveInformation7.mmStampDuty, com.tools20022.repository.msg.ReceiveInformation5.mmStampDuty, com.tools20022.repository.msg.ReceiveInformation9.mmStampDuty,
-					com.tools20022.repository.msg.DeliverInformation5.mmStampDuty, com.tools20022.repository.msg.DeliverInformation9.mmStampDuty, com.tools20022.repository.msg.DeliverInformation6.mmStampDuty,
-					com.tools20022.repository.choice.StampDutyType1FormatChoice.mmCode, com.tools20022.repository.choice.StampDutyType1FormatChoice.mmProprietary, com.tools20022.repository.msg.ReceiveInformation13.mmStampDuty,
-					com.tools20022.repository.msg.ReceiveInformation12.mmStampDuty, com.tools20022.repository.msg.DeliverInformation12.mmStampDuty, com.tools20022.repository.msg.DeliverInformation13.mmStampDuty,
-					com.tools20022.repository.msg.DeliverInformation15.mmStampDuty, com.tools20022.repository.msg.DeliverInformation14.mmStampDuty, com.tools20022.repository.msg.ReceiveInformation15.mmStampDuty,
-					com.tools20022.repository.msg.ReceiveInformation14.mmStampDuty, com.tools20022.repository.msg.ReceiveInformation17.mmStampDuty, com.tools20022.repository.msg.ReceiveInformation16.mmStampDuty,
-					com.tools20022.repository.msg.DeliverInformation16.mmStampDuty, com.tools20022.repository.msg.DeliverInformation17.mmStampDuty);
+			derivation_lazy = () -> Arrays.asList(DeliverInformation7.mmStampDuty, ReceiveInformation8.mmStampDuty, ReceiveInformation6.mmStampDuty, ReceiveInformation11.mmStampDuty, DeliverInformation11.mmStampDuty,
+					DeliverInformation8.mmStampDuty, ReceiveInformation7.mmStampDuty, ReceiveInformation5.mmStampDuty, ReceiveInformation9.mmStampDuty, DeliverInformation5.mmStampDuty, DeliverInformation9.mmStampDuty,
+					DeliverInformation6.mmStampDuty, StampDutyType1FormatChoice.mmCode, StampDutyType1FormatChoice.mmProprietary, ReceiveInformation13.mmStampDuty, ReceiveInformation12.mmStampDuty, DeliverInformation12.mmStampDuty,
+					DeliverInformation13.mmStampDuty, DeliverInformation15.mmStampDuty, DeliverInformation14.mmStampDuty, ReceiveInformation15.mmStampDuty, ReceiveInformation14.mmStampDuty, ReceiveInformation17.mmStampDuty,
+					ReceiveInformation16.mmStampDuty, DeliverInformation16.mmStampDuty, DeliverInformation17.mmStampDuty);
 			elementContext_lazy = () -> SecuritiesTax.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "StampDutyType";
 			definition = "Indicates how the stamp duty should be applied.";
 			maxOccurs = 1;
@@ -1369,51 +1343,34 @@ public class SecuritiesTax extends Tax {
 	 */
 	public static final MMBusinessAttribute mmStampDutyTaxBasis = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SettlementDetails50.mmStampDutyTaxBasis, com.tools20022.repository.msg.SettlementDetails51.mmStampDutyTaxBasis,
-					com.tools20022.repository.msg.SettlementDetails9.mmStampDutyTaxBasis, com.tools20022.repository.msg.SettlementDetails17.mmStampDutyTaxBasis, com.tools20022.repository.msg.SettlementDetails30.mmStampDutyTaxBasis,
-					com.tools20022.repository.msg.SettlementDetails32.mmStampDutyTaxBasis, com.tools20022.repository.msg.SettlementDetails60.mmStampDutyTaxBasis, com.tools20022.repository.msg.SettlementDetails64.mmStampDutyTaxBasis,
-					com.tools20022.repository.msg.SettlementDetails3.mmStampDutyTaxBasis, com.tools20022.repository.msg.SettlementDetails16.mmStampDutyTaxBasis, com.tools20022.repository.msg.SettlementDetails31.mmStampDutyTaxBasis,
-					com.tools20022.repository.msg.SettlementDetails40.mmStampDutyTaxBasis, com.tools20022.repository.msg.SettlementDetails62.mmStampDutyTaxBasis, com.tools20022.repository.msg.SettlementDetails63.mmStampDutyTaxBasis,
-					com.tools20022.repository.msg.SettlementDetails6.mmStampDutyTaxBasis, com.tools20022.repository.msg.SettlementDetails20.mmStampDutyTaxBasis, com.tools20022.repository.msg.SettlementDetails24.mmStampDutyTaxBasis,
-					com.tools20022.repository.msg.SettlementDetails33.mmStampDutyTaxBasis, com.tools20022.repository.msg.SettlementDetails45.mmStampDutyTaxBasis, com.tools20022.repository.msg.SettlementDetails54.mmStampDutyTaxBasis,
-					com.tools20022.repository.msg.SettlementDetails1.mmStampDutyTaxBasis, com.tools20022.repository.msg.SettlementDetails19.mmStampDutyTaxBasis, com.tools20022.repository.msg.SettlementDetails22.mmStampDutyTaxBasis,
-					com.tools20022.repository.msg.SettlementDetails35.mmStampDutyTaxBasis, com.tools20022.repository.msg.SettlementDetails42.mmStampDutyTaxBasis, com.tools20022.repository.msg.SettlementDetails52.mmStampDutyTaxBasis,
-					com.tools20022.repository.msg.SettlementDetails8.mmStampDutyTaxBasis, com.tools20022.repository.msg.SettlementDetails11.mmStampDutyTaxBasis, com.tools20022.repository.msg.SettlementDetails23.mmStampDutyTaxBasis,
-					com.tools20022.repository.msg.SettlementDetails37.mmStampDutyTaxBasis, com.tools20022.repository.msg.SettlementDetails44.mmStampDutyTaxBasis, com.tools20022.repository.msg.SettlementDetails53.mmStampDutyTaxBasis,
-					com.tools20022.repository.msg.SettlementDetails7.mmStampDutyTaxBasis, com.tools20022.repository.msg.SettlementDetails12.mmStampDutyTaxBasis, com.tools20022.repository.msg.SettlementDetails28.mmStampDutyTaxBasis,
-					com.tools20022.repository.msg.SettlementDetails38.mmStampDutyTaxBasis, com.tools20022.repository.msg.SettlementDetails47.mmStampDutyTaxBasis, com.tools20022.repository.msg.SettlementDetails56.mmStampDutyTaxBasis,
-					com.tools20022.repository.msg.SettlementDetails2.mmStampDutyTaxBasis, com.tools20022.repository.msg.SettlementDetails13.mmStampDutyTaxBasis, com.tools20022.repository.msg.SettlementDetails27.mmStampDutyTaxBasis,
-					com.tools20022.repository.msg.SettlementDetails39.mmStampDutyTaxBasis, com.tools20022.repository.msg.SettlementDetails48.mmStampDutyTaxBasis, com.tools20022.repository.msg.SettlementDetails57.mmStampDutyTaxBasis,
-					com.tools20022.repository.msg.SettlementDetails43.mmStampDutyTaxBasis, com.tools20022.repository.msg.SettlementDetails4.mmStampDutyTaxBasis, com.tools20022.repository.msg.SettlementDetails10.mmStampDutyTaxBasis,
-					com.tools20022.repository.msg.SettlementDetails29.mmStampDutyTaxBasis, com.tools20022.repository.msg.SettlementDetails5.mmStampDutyTaxBasis, com.tools20022.repository.msg.SettlementDetails25.mmStampDutyTaxBasis,
-					com.tools20022.repository.msg.SettlementDetails26.mmStampDutyTaxBasis, com.tools20022.repository.msg.SettlementDetails65.mmStampDutyTaxBasis, com.tools20022.repository.msg.SettlementDetails14.mmStampDutyTaxBasis,
-					com.tools20022.repository.msg.SettlementDetails41.mmStampDutyTaxBasis, com.tools20022.repository.msg.SettlementDetails61.mmStampDutyTaxBasis, com.tools20022.repository.msg.SettlementDetails59.mmStampDutyTaxBasis,
-					com.tools20022.repository.msg.SettlementDetails15.mmStampDutyTaxBasis, com.tools20022.repository.msg.SettlementDetails34.mmStampDutyTaxBasis, com.tools20022.repository.msg.SettlementDetails49.mmStampDutyTaxBasis,
-					com.tools20022.repository.msg.SettlementDetails58.mmStampDutyTaxBasis, com.tools20022.repository.msg.SettlementDetails36.mmStampDutyTaxBasis, com.tools20022.repository.msg.SettlementDetails18.mmStampDutyTaxBasis,
-					com.tools20022.repository.msg.SettlementDetails66.mmStampDutyTaxBasis, com.tools20022.repository.msg.SettlementDetails67.mmStampDutyTaxBasis, com.tools20022.repository.msg.SettlementDetails70.mmStampDutyTaxBasis,
-					com.tools20022.repository.msg.SettlementDetails68.mmStampDutyTaxBasis, com.tools20022.repository.msg.SettlementDetails69.mmStampDutyTaxBasis, com.tools20022.repository.msg.SettlementDetails71.mmStampDutyTaxBasis,
-					com.tools20022.repository.msg.SettlementDetails72.mmStampDutyTaxBasis, com.tools20022.repository.msg.SettlementDetails75.mmStampDutyTaxBasis, com.tools20022.repository.msg.SettlementDetails73.mmStampDutyTaxBasis,
-					com.tools20022.repository.msg.SettlementDetails74.mmStampDutyTaxBasis, com.tools20022.repository.msg.SettlementDetails81.mmStampDutyTaxBasis, com.tools20022.repository.msg.SettlementDetails76.mmStampDutyTaxBasis,
-					com.tools20022.repository.msg.SettlementDetails80.mmStampDutyTaxBasis, com.tools20022.repository.msg.SettlementDetails78.mmStampDutyTaxBasis, com.tools20022.repository.msg.SettlementDetails77.mmStampDutyTaxBasis,
-					com.tools20022.repository.msg.SettlementDetails79.mmStampDutyTaxBasis, com.tools20022.repository.msg.SettlementDetails87.mmStampDutyTaxBasis, com.tools20022.repository.msg.SettlementDetails83.mmStampDutyTaxBasis,
-					com.tools20022.repository.msg.SettlementDetails86.mmStampDutyTaxBasis, com.tools20022.repository.msg.SettlementDetails85.mmStampDutyTaxBasis, com.tools20022.repository.msg.SettlementDetails93.mmStampDutyTaxBasis,
-					com.tools20022.repository.msg.SettlementDetails90.mmStampDutyTaxBasis, com.tools20022.repository.msg.SettlementDetails96.mmStampDutyTaxBasis, com.tools20022.repository.msg.SettlementDetails97.mmStampDutyTaxBasis,
-					com.tools20022.repository.msg.SettlementDetails99.mmStampDutyTaxBasis, com.tools20022.repository.msg.SettlementDetails94.mmStampDutyTaxBasis, com.tools20022.repository.msg.SettlementDetails100.mmStampDutyTaxBasis,
-					com.tools20022.repository.msg.SettlementDetails95.mmStampDutyTaxBasis, com.tools20022.repository.msg.SettlementDetails91.mmStampDutyTaxBasis, com.tools20022.repository.msg.SettlementDetails92.mmStampDutyTaxBasis,
-					com.tools20022.repository.msg.SettlementDetails98.mmStampDutyTaxBasis, com.tools20022.repository.msg.SettlementDetails101.mmStampDutyTaxBasis, com.tools20022.repository.msg.SettlementDetails105.mmStampDutyTaxBasis,
-					com.tools20022.repository.msg.SettlementDetails106.mmStampDutyTaxBasis, com.tools20022.repository.msg.SettlementDetails104.mmStampDutyTaxBasis, com.tools20022.repository.msg.SettlementDetails111.mmStampDutyTaxBasis,
-					com.tools20022.repository.msg.SettlementDetails112.mmStampDutyTaxBasis, com.tools20022.repository.msg.SettlementDetails110.mmStampDutyTaxBasis, com.tools20022.repository.msg.SettlementDetails108.mmStampDutyTaxBasis,
-					com.tools20022.repository.msg.SettlementDetails103.mmStampDutyTaxBasis, com.tools20022.repository.msg.SettlementDetails107.mmStampDutyTaxBasis, com.tools20022.repository.msg.SettlementDetails115.mmStampDutyTaxBasis,
-					com.tools20022.repository.msg.SettlementDetails117.mmStampDutyTaxBasis, com.tools20022.repository.msg.SettlementDetails116.mmStampDutyTaxBasis, com.tools20022.repository.msg.SettlementDetails113.mmStampDutyTaxBasis,
-					com.tools20022.repository.msg.SettlementDetails128.mmStampDutyTaxBasis, com.tools20022.repository.msg.SettlementDetails120.mmStampDutyTaxBasis, com.tools20022.repository.msg.SettlementDetails119.mmStampDutyTaxBasis,
-					com.tools20022.repository.msg.SettlementDetails125.mmStampDutyTaxBasis, com.tools20022.repository.msg.SettlementDetails126.mmStampDutyTaxBasis, com.tools20022.repository.msg.SettlementDetails122.mmStampDutyTaxBasis,
-					com.tools20022.repository.msg.SettlementDetails127.mmStampDutyTaxBasis, com.tools20022.repository.msg.SettlementDetails121.mmStampDutyTaxBasis, com.tools20022.repository.msg.SettlementDetails134.mmStampDutyTaxBasis,
-					com.tools20022.repository.msg.SettlementDetails137.mmStampDutyTaxBasis, com.tools20022.repository.msg.SettlementDetails132.mmStampDutyTaxBasis, com.tools20022.repository.msg.SettlementDetails138.mmStampDutyTaxBasis,
-					com.tools20022.repository.msg.SettlementDetails130.mmStampDutyTaxBasis, com.tools20022.repository.msg.SettlementDetails131.mmStampDutyTaxBasis, com.tools20022.repository.msg.SettlementDetails133.mmStampDutyTaxBasis,
-					com.tools20022.repository.msg.SettlementDetails139.mmStampDutyTaxBasis);
+			derivation_lazy = () -> Arrays.asList(SettlementDetails50.mmStampDutyTaxBasis, SettlementDetails51.mmStampDutyTaxBasis, SettlementDetails9.mmStampDutyTaxBasis, SettlementDetails17.mmStampDutyTaxBasis,
+					SettlementDetails30.mmStampDutyTaxBasis, SettlementDetails32.mmStampDutyTaxBasis, SettlementDetails60.mmStampDutyTaxBasis, SettlementDetails64.mmStampDutyTaxBasis, SettlementDetails3.mmStampDutyTaxBasis,
+					SettlementDetails16.mmStampDutyTaxBasis, SettlementDetails31.mmStampDutyTaxBasis, SettlementDetails40.mmStampDutyTaxBasis, SettlementDetails62.mmStampDutyTaxBasis, SettlementDetails63.mmStampDutyTaxBasis,
+					SettlementDetails6.mmStampDutyTaxBasis, SettlementDetails20.mmStampDutyTaxBasis, SettlementDetails24.mmStampDutyTaxBasis, SettlementDetails33.mmStampDutyTaxBasis, SettlementDetails45.mmStampDutyTaxBasis,
+					SettlementDetails54.mmStampDutyTaxBasis, SettlementDetails1.mmStampDutyTaxBasis, SettlementDetails19.mmStampDutyTaxBasis, SettlementDetails22.mmStampDutyTaxBasis, SettlementDetails35.mmStampDutyTaxBasis,
+					SettlementDetails42.mmStampDutyTaxBasis, SettlementDetails52.mmStampDutyTaxBasis, SettlementDetails8.mmStampDutyTaxBasis, SettlementDetails11.mmStampDutyTaxBasis, SettlementDetails23.mmStampDutyTaxBasis,
+					SettlementDetails37.mmStampDutyTaxBasis, SettlementDetails44.mmStampDutyTaxBasis, SettlementDetails53.mmStampDutyTaxBasis, SettlementDetails7.mmStampDutyTaxBasis, SettlementDetails12.mmStampDutyTaxBasis,
+					SettlementDetails28.mmStampDutyTaxBasis, SettlementDetails38.mmStampDutyTaxBasis, SettlementDetails47.mmStampDutyTaxBasis, SettlementDetails56.mmStampDutyTaxBasis, SettlementDetails2.mmStampDutyTaxBasis,
+					SettlementDetails13.mmStampDutyTaxBasis, SettlementDetails27.mmStampDutyTaxBasis, SettlementDetails39.mmStampDutyTaxBasis, SettlementDetails48.mmStampDutyTaxBasis, SettlementDetails57.mmStampDutyTaxBasis,
+					SettlementDetails43.mmStampDutyTaxBasis, SettlementDetails4.mmStampDutyTaxBasis, SettlementDetails10.mmStampDutyTaxBasis, SettlementDetails29.mmStampDutyTaxBasis, SettlementDetails5.mmStampDutyTaxBasis,
+					SettlementDetails25.mmStampDutyTaxBasis, SettlementDetails26.mmStampDutyTaxBasis, SettlementDetails65.mmStampDutyTaxBasis, SettlementDetails14.mmStampDutyTaxBasis, SettlementDetails41.mmStampDutyTaxBasis,
+					SettlementDetails61.mmStampDutyTaxBasis, SettlementDetails59.mmStampDutyTaxBasis, SettlementDetails15.mmStampDutyTaxBasis, SettlementDetails34.mmStampDutyTaxBasis, SettlementDetails49.mmStampDutyTaxBasis,
+					SettlementDetails58.mmStampDutyTaxBasis, SettlementDetails36.mmStampDutyTaxBasis, SettlementDetails18.mmStampDutyTaxBasis, SettlementDetails66.mmStampDutyTaxBasis, SettlementDetails67.mmStampDutyTaxBasis,
+					SettlementDetails70.mmStampDutyTaxBasis, SettlementDetails68.mmStampDutyTaxBasis, SettlementDetails69.mmStampDutyTaxBasis, SettlementDetails71.mmStampDutyTaxBasis, SettlementDetails72.mmStampDutyTaxBasis,
+					SettlementDetails75.mmStampDutyTaxBasis, SettlementDetails73.mmStampDutyTaxBasis, SettlementDetails74.mmStampDutyTaxBasis, SettlementDetails81.mmStampDutyTaxBasis, SettlementDetails76.mmStampDutyTaxBasis,
+					SettlementDetails80.mmStampDutyTaxBasis, SettlementDetails78.mmStampDutyTaxBasis, SettlementDetails77.mmStampDutyTaxBasis, SettlementDetails79.mmStampDutyTaxBasis, SettlementDetails87.mmStampDutyTaxBasis,
+					SettlementDetails83.mmStampDutyTaxBasis, SettlementDetails86.mmStampDutyTaxBasis, SettlementDetails85.mmStampDutyTaxBasis, SettlementDetails93.mmStampDutyTaxBasis, SettlementDetails90.mmStampDutyTaxBasis,
+					SettlementDetails96.mmStampDutyTaxBasis, SettlementDetails97.mmStampDutyTaxBasis, SettlementDetails99.mmStampDutyTaxBasis, SettlementDetails94.mmStampDutyTaxBasis, SettlementDetails100.mmStampDutyTaxBasis,
+					SettlementDetails95.mmStampDutyTaxBasis, SettlementDetails91.mmStampDutyTaxBasis, SettlementDetails92.mmStampDutyTaxBasis, SettlementDetails98.mmStampDutyTaxBasis, SettlementDetails101.mmStampDutyTaxBasis,
+					SettlementDetails105.mmStampDutyTaxBasis, SettlementDetails106.mmStampDutyTaxBasis, SettlementDetails104.mmStampDutyTaxBasis, SettlementDetails111.mmStampDutyTaxBasis, SettlementDetails112.mmStampDutyTaxBasis,
+					SettlementDetails110.mmStampDutyTaxBasis, SettlementDetails108.mmStampDutyTaxBasis, SettlementDetails103.mmStampDutyTaxBasis, SettlementDetails107.mmStampDutyTaxBasis, SettlementDetails115.mmStampDutyTaxBasis,
+					SettlementDetails117.mmStampDutyTaxBasis, SettlementDetails116.mmStampDutyTaxBasis, SettlementDetails113.mmStampDutyTaxBasis, SettlementDetails128.mmStampDutyTaxBasis, SettlementDetails120.mmStampDutyTaxBasis,
+					SettlementDetails119.mmStampDutyTaxBasis, SettlementDetails125.mmStampDutyTaxBasis, SettlementDetails126.mmStampDutyTaxBasis, SettlementDetails122.mmStampDutyTaxBasis, SettlementDetails127.mmStampDutyTaxBasis,
+					SettlementDetails121.mmStampDutyTaxBasis, SettlementDetails134.mmStampDutyTaxBasis, SettlementDetails137.mmStampDutyTaxBasis, SettlementDetails132.mmStampDutyTaxBasis, SettlementDetails138.mmStampDutyTaxBasis,
+					SettlementDetails130.mmStampDutyTaxBasis, SettlementDetails131.mmStampDutyTaxBasis, SettlementDetails133.mmStampDutyTaxBasis, SettlementDetails139.mmStampDutyTaxBasis);
 			elementContext_lazy = () -> SecuritiesTax.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "StampDutyTaxBasis";
 			definition = "Specifies the stamp duty type or exemption reason applicable to the settlement transaction.";
 			maxOccurs = 1;
@@ -1459,13 +1416,13 @@ public class SecuritiesTax extends Tax {
 		{
 			elementContext_lazy = () -> SecuritiesTax.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TaxVoucher";
 			definition = "Tax voucher which is related to a securities tax.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.TaxVoucher.mmRelatedSecurityTax;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.TaxVoucher.mmObject();
 		}
 	};
@@ -1618,28 +1575,19 @@ public class SecuritiesTax extends Tax {
 	 */
 	public static final MMBusinessAttribute mmTaxableIncomePerDividendShare = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionPrice5.mmTaxableIncomePerDividendShare, com.tools20022.repository.msg.CorporateActionPrice7.mmTaxableIncomePerDividendShare,
-					com.tools20022.repository.msg.CorporateActionRate20.mmTaxableIncomePerDividendShare, com.tools20022.repository.msg.CorporateActionRate22.mmTaxableIncomePerDividendShare,
-					com.tools20022.repository.msg.CorporateActionRate26.mmTaxableIncomePerDividendShare, com.tools20022.repository.msg.CorporateActionRate31.mmTaxableIncomePerDividendShare,
-					com.tools20022.repository.msg.CorporateActionRate38.mmTaxableIncomePerDividendShare, com.tools20022.repository.msg.CorporateActionRate39.mmTaxableIncomePerDividendShare,
-					com.tools20022.repository.msg.CorporateActionPrice6.mmTaxableIncomePerDividendShare, com.tools20022.repository.msg.CorporateActionPrice14.mmTaxableIncomePerDividendShare,
-					com.tools20022.repository.msg.CorporateActionRate15.mmTaxableIncomePerDividendShare, com.tools20022.repository.msg.CorporateActionRate18.mmTaxableIncomePerDividendShare,
-					com.tools20022.repository.msg.CorporateActionRate25.mmTaxableIncomePerDividendShare, com.tools20022.repository.msg.CorporateActionRate30.mmTaxableIncomePerDividendShare,
-					com.tools20022.repository.msg.CorporateActionRate37.mmTaxableIncomePerDividendShare, com.tools20022.repository.msg.CorporateActionRate40.mmTaxableIncomePerDividendShare,
-					com.tools20022.repository.msg.CorporateActionRate36.mmTaxableIncomePerDividendShare, com.tools20022.repository.msg.CorporateActionRate42.mmTaxableIncomePerDividendShare,
-					com.tools20022.repository.msg.CorporateActionPrice1.mmTaxableIncomePerDividendShare, com.tools20022.repository.msg.CorporateActionRate46.mmTaxableIncomePerDividendShare,
-					com.tools20022.repository.msg.CorporateActionRate45.mmTaxableIncomePerDividendShare, com.tools20022.repository.msg.CorporateActionRate44.mmTaxableIncomePerDividendShare,
-					com.tools20022.repository.msg.CorporateActionRate60.mmTaxableIncomePerDividendShare, com.tools20022.repository.msg.CorporateActionRate64.mmTaxableIncomePerDividendShare,
-					com.tools20022.repository.msg.CorporateActionRate57.mmTaxableIncomePerDividendShare, com.tools20022.repository.msg.CorporateActionRate68.mmTaxableIncomePerDividendShare,
-					com.tools20022.repository.msg.CorporateActionRate70.mmTaxableIncomePerDividendShare, com.tools20022.repository.msg.CorporateActionRate67.mmTaxableIncomePerDividendShare,
-					com.tools20022.repository.msg.CorporateActionRate74.mmTaxableIncomePerDividendShare, com.tools20022.repository.msg.CorporateActionRate79.mmTaxableIncomePerDividendShare,
-					com.tools20022.repository.msg.CorporateActionRate76.mmTaxableIncomePerDividendShare, com.tools20022.repository.msg.CorporateActionRate82.mmTaxableIncomePerDividendShare,
-					com.tools20022.repository.msg.CorporateActionRate80.mmTaxableIncomePerDividendShare, com.tools20022.repository.msg.CorporateActionRate81.mmTaxableIncomePerDividendShare,
-					com.tools20022.repository.msg.CorporateActionRate83.mmTaxableIncomePerDividendShare, com.tools20022.repository.msg.CorporateActionRate84.mmTaxableIncomePerDividendShare,
-					com.tools20022.repository.msg.CorporateActionRate85.mmTaxableIncomePerDividendShare);
+			derivation_lazy = () -> Arrays.asList(CorporateActionPrice5.mmTaxableIncomePerDividendShare, CorporateActionPrice7.mmTaxableIncomePerDividendShare, CorporateActionRate20.mmTaxableIncomePerDividendShare,
+					CorporateActionRate22.mmTaxableIncomePerDividendShare, CorporateActionRate26.mmTaxableIncomePerDividendShare, CorporateActionRate31.mmTaxableIncomePerDividendShare, CorporateActionRate38.mmTaxableIncomePerDividendShare,
+					CorporateActionRate39.mmTaxableIncomePerDividendShare, CorporateActionPrice6.mmTaxableIncomePerDividendShare, CorporateActionPrice14.mmTaxableIncomePerDividendShare,
+					CorporateActionRate15.mmTaxableIncomePerDividendShare, CorporateActionRate18.mmTaxableIncomePerDividendShare, CorporateActionRate25.mmTaxableIncomePerDividendShare, CorporateActionRate30.mmTaxableIncomePerDividendShare,
+					CorporateActionRate37.mmTaxableIncomePerDividendShare, CorporateActionRate40.mmTaxableIncomePerDividendShare, CorporateActionRate36.mmTaxableIncomePerDividendShare, CorporateActionRate42.mmTaxableIncomePerDividendShare,
+					CorporateActionPrice1.mmTaxableIncomePerDividendShare, CorporateActionRate46.mmTaxableIncomePerDividendShare, CorporateActionRate45.mmTaxableIncomePerDividendShare, CorporateActionRate44.mmTaxableIncomePerDividendShare,
+					CorporateActionRate60.mmTaxableIncomePerDividendShare, CorporateActionRate64.mmTaxableIncomePerDividendShare, CorporateActionRate57.mmTaxableIncomePerDividendShare, CorporateActionRate68.mmTaxableIncomePerDividendShare,
+					CorporateActionRate70.mmTaxableIncomePerDividendShare, CorporateActionRate67.mmTaxableIncomePerDividendShare, CorporateActionRate74.mmTaxableIncomePerDividendShare, CorporateActionRate79.mmTaxableIncomePerDividendShare,
+					CorporateActionRate76.mmTaxableIncomePerDividendShare, CorporateActionRate82.mmTaxableIncomePerDividendShare, CorporateActionRate80.mmTaxableIncomePerDividendShare, CorporateActionRate81.mmTaxableIncomePerDividendShare,
+					CorporateActionRate83.mmTaxableIncomePerDividendShare, CorporateActionRate84.mmTaxableIncomePerDividendShare, CorporateActionRate85.mmTaxableIncomePerDividendShare);
 			elementContext_lazy = () -> SecuritiesTax.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TaxableIncomePerDividendShare";
 			definition = "Amount included in the dividend/NAV that is identified as gains directly or indirectly derived from interest payments within the scope of the EU Savings directive";
 			maxOccurs = 1;
@@ -1686,13 +1634,13 @@ public class SecuritiesTax extends Tax {
 		{
 			elementContext_lazy = () -> SecuritiesTax.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedTax";
 			definition = "Percentage of the gross dividend rate on which tax must be paid .";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.RateAndAmount.mmSecuritiesTax;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.RateAndAmount.mmObject();
 		}
 	};
@@ -1736,10 +1684,10 @@ public class SecuritiesTax extends Tax {
 	 */
 	public static final MMBusinessAttribute mmTaxLotNumber = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrumentAttributes1.mmTaxLotNumber);
+			derivation_lazy = () -> Arrays.asList(FinancialInstrumentAttributes1.mmTaxLotNumber);
 			elementContext_lazy = () -> SecuritiesTax.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TaxLotNumber";
 			definition = "Identification, for tax purposes, of a lot of identical securities that are bought at a certain date and at a certain price.";
 			maxOccurs = 1;
@@ -1784,13 +1732,13 @@ public class SecuritiesTax extends Tax {
 		{
 			elementContext_lazy = () -> SecuritiesTax.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Security";
 			definition = "Security on which the tax applies.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.Security.mmTaxDetails;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 		}
 	};
@@ -1828,7 +1776,7 @@ public class SecuritiesTax extends Tax {
 		{
 			elementContext_lazy = () -> SecuritiesTax.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TaxRuleExemptIndicator";
 			definition = "Indicates whether the tax rule applies within the jurisdiction as a condition of this security.";
 			maxOccurs = 1;
@@ -1868,7 +1816,7 @@ public class SecuritiesTax extends Tax {
 		{
 			elementContext_lazy = () -> SecuritiesTax.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "EffectivePeriod";
 			definition = "Period during which the tax rule applies within the jurisdiction.";
 			maxOccurs = 1;
@@ -1907,7 +1855,7 @@ public class SecuritiesTax extends Tax {
 		{
 			elementContext_lazy = () -> SecuritiesTax.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "FrankedRate";
 			definition = "Percentage of dividend for which tax is already paid.";
 			maxOccurs = 1;
@@ -1956,10 +1904,10 @@ public class SecuritiesTax extends Tax {
 	 */
 	public static final MMBusinessAttribute mmTEFRARule = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.TEFRARules2Choice.mmCode, com.tools20022.repository.choice.TEFRARules2Choice.mmProprietary);
+			derivation_lazy = () -> Arrays.asList(TEFRARules2Choice.mmCode, TEFRARules2Choice.mmProprietary);
 			elementContext_lazy = () -> SecuritiesTax.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TEFRARule";
 			definition = "Indicates the TEFRA rule under which the security is issued.";
 			maxOccurs = 1;
@@ -2005,13 +1953,13 @@ public class SecuritiesTax extends Tax {
 		{
 			elementContext_lazy = () -> SecuritiesTax.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Jurisdiction";
 			definition = "Jurisdiction in which the tax rule applies.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.Jurisdiction.mmRelatedSecuritiesTax;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Jurisdiction.mmObject();
 		}
 	};
@@ -2019,26 +1967,20 @@ public class SecuritiesTax extends Tax {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesTax";
 				definition = "Amount of money due to the government or tax authority, according to various pre-defined parameters such as thresholds or income.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Security.mmTaxDetails, com.tools20022.repository.entity.TaxVoucher.mmRelatedSecurityTax,
 						com.tools20022.repository.entity.RateAndAmount.mmSecuritiesTax, com.tools20022.repository.entity.Jurisdiction.mmRelatedSecuritiesTax);
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.RateAndAmountFormat21Choice.mmRateTypeAndRate, com.tools20022.repository.choice.RateAndAmountFormat35Choice.mmRateTypeAndRate,
-						com.tools20022.repository.choice.RateAndAmountFormat32Choice.mmRateTypeAndRate, com.tools20022.repository.choice.RateAndAmountFormat40Choice.mmRateTypeAndRate,
-						com.tools20022.repository.choice.RateAndAmountFormat45Choice.mmRateTypeAndRate, com.tools20022.repository.msg.SubscriptionExecution13.mmInformativeTaxDetails,
-						com.tools20022.repository.msg.SubscriptionExecution12.mmInformativeTaxDetails, com.tools20022.repository.msg.RedemptionExecution16.mmInformativeTaxDetails,
-						com.tools20022.repository.msg.SwitchSubscriptionLegExecution4.mmInformativeTaxDetails, com.tools20022.repository.msg.RedemptionExecution15.mmInformativeTaxDetails,
-						com.tools20022.repository.msg.SwitchRedemptionLegExecution4.mmInformativeTaxDetails);
+				derivationElement_lazy = () -> Arrays.asList(RateAndAmountFormat21Choice.mmRateTypeAndRate, RateAndAmountFormat35Choice.mmRateTypeAndRate, RateAndAmountFormat32Choice.mmRateTypeAndRate,
+						RateAndAmountFormat40Choice.mmRateTypeAndRate, RateAndAmountFormat45Choice.mmRateTypeAndRate, SubscriptionExecution13.mmInformativeTaxDetails, SubscriptionExecution12.mmInformativeTaxDetails,
+						RedemptionExecution16.mmInformativeTaxDetails, SwitchSubscriptionLegExecution4.mmInformativeTaxDetails, RedemptionExecution15.mmInformativeTaxDetails, SwitchRedemptionLegExecution4.mmInformativeTaxDetails);
 				subType_lazy = () -> Arrays.asList(InvestmentFundTax.mmObject());
 				superType_lazy = () -> Tax.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesTax.mmTaxableIncomePerShare, com.tools20022.repository.entity.SecuritiesTax.mmTaxableIncomePerShareCalculated,
-						com.tools20022.repository.entity.SecuritiesTax.mmEUCapitalGain, com.tools20022.repository.entity.SecuritiesTax.mmEUDividendStatus, com.tools20022.repository.entity.SecuritiesTax.mmTaxableIncomePerDividend,
-						com.tools20022.repository.entity.SecuritiesTax.mmStampDutyType, com.tools20022.repository.entity.SecuritiesTax.mmStampDutyTaxBasis, com.tools20022.repository.entity.SecuritiesTax.mmTaxVoucher,
-						com.tools20022.repository.entity.SecuritiesTax.mmTaxableIncomePerDividendShare, com.tools20022.repository.entity.SecuritiesTax.mmRelatedTax, com.tools20022.repository.entity.SecuritiesTax.mmTaxLotNumber,
-						com.tools20022.repository.entity.SecuritiesTax.mmSecurity, com.tools20022.repository.entity.SecuritiesTax.mmTaxRuleExemptIndicator, com.tools20022.repository.entity.SecuritiesTax.mmEffectivePeriod,
-						com.tools20022.repository.entity.SecuritiesTax.mmFrankedRate, com.tools20022.repository.entity.SecuritiesTax.mmTEFRARule, com.tools20022.repository.entity.SecuritiesTax.mmJurisdiction);
+				element_lazy = () -> Arrays.asList(SecuritiesTax.mmTaxableIncomePerShare, SecuritiesTax.mmTaxableIncomePerShareCalculated, SecuritiesTax.mmEUCapitalGain, SecuritiesTax.mmEUDividendStatus,
+						SecuritiesTax.mmTaxableIncomePerDividend, SecuritiesTax.mmStampDutyType, SecuritiesTax.mmStampDutyTaxBasis, SecuritiesTax.mmTaxVoucher, SecuritiesTax.mmTaxableIncomePerDividendShare, SecuritiesTax.mmRelatedTax,
+						SecuritiesTax.mmTaxLotNumber, SecuritiesTax.mmSecurity, SecuritiesTax.mmTaxRuleExemptIndicator, SecuritiesTax.mmEffectivePeriod, SecuritiesTax.mmFrankedRate, SecuritiesTax.mmTEFRARule, SecuritiesTax.mmJurisdiction);
 				derivationComponent_lazy = () -> Arrays.asList(TaxableIncomePerShareCalculated1.mmObject(), EUCapitalGain1.mmObject(), CapitalGainFormat1Choice.mmObject(), TaxableIncomePerShareCalculatedFormat1Choice.mmObject(),
 						CapitalGainFormat2Choice.mmObject(), TaxableIncomePerShareCalculatedFormat2Choice.mmObject(), EUCapitalGainType2Choice.mmObject(), StampDutyType1FormatChoice.mmObject(),
 						TaxableIncomePerShareCalculatedType1Choice.mmObject(), EUDividendStatusType1Choice.mmObject(), EUCapitalGainType1Choice.mmObject(), TEFRARules2Choice.mmObject(), RateAndAmountFormat21Choice.mmObject(),

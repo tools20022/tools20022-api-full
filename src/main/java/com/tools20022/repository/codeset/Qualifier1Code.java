@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.QualifierCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -123,7 +125,7 @@ public class Qualifier1Code extends QualifierCode {
 	 */
 	public static final MMCode mmAllOrNone = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AllOrNone";
 			owner_lazy = () -> Qualifier1Code.mmObject();
 		}
@@ -146,7 +148,7 @@ public class Qualifier1Code extends QualifierCode {
 	 */
 	public static final MMCode mmMarketOnClose = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketOnClose";
 			owner_lazy = () -> Qualifier1Code.mmObject();
 		}
@@ -169,7 +171,7 @@ public class Qualifier1Code extends QualifierCode {
 	 */
 	public static final MMCode mmAtClose = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AtClose";
 			owner_lazy = () -> Qualifier1Code.mmObject();
 		}
@@ -192,7 +194,7 @@ public class Qualifier1Code extends QualifierCode {
 	 */
 	public static final MMCode mmVolumeWeightedAveragePrice = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VolumeWeightedAveragePrice";
 			owner_lazy = () -> Qualifier1Code.mmObject();
 		}
@@ -215,7 +217,7 @@ public class Qualifier1Code extends QualifierCode {
 	 */
 	public static final MMCode mmInTouchWith = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InTouchWith";
 			owner_lazy = () -> Qualifier1Code.mmObject();
 		}
@@ -238,7 +240,7 @@ public class Qualifier1Code extends QualifierCode {
 	 */
 	public static final MMCode mmLimit = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Limit";
 			owner_lazy = () -> Qualifier1Code.mmObject();
 		}
@@ -261,7 +263,7 @@ public class Qualifier1Code extends QualifierCode {
 	 */
 	public static final MMCode mmMoreBehind = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MoreBehind";
 			owner_lazy = () -> Qualifier1Code.mmObject();
 		}
@@ -284,7 +286,7 @@ public class Qualifier1Code extends QualifierCode {
 	 */
 	public static final MMCode mmAtOpen = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AtOpen";
 			owner_lazy = () -> Qualifier1Code.mmObject();
 		}
@@ -307,7 +309,7 @@ public class Qualifier1Code extends QualifierCode {
 	 */
 	public static final MMCode mmTakingPosition = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TakingPosition";
 			owner_lazy = () -> Qualifier1Code.mmObject();
 		}
@@ -330,7 +332,7 @@ public class Qualifier1Code extends QualifierCode {
 	 */
 	public static final MMCode mmAtMarket = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AtMarket";
 			owner_lazy = () -> Qualifier1Code.mmObject();
 		}
@@ -353,7 +355,7 @@ public class Qualifier1Code extends QualifierCode {
 	 */
 	public static final MMCode mmReadyToTrade = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReadyToTrade";
 			owner_lazy = () -> Qualifier1Code.mmObject();
 		}
@@ -376,7 +378,7 @@ public class Qualifier1Code extends QualifierCode {
 	 */
 	public static final MMCode mmPortfolioShown = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PortfolioShown";
 			owner_lazy = () -> Qualifier1Code.mmObject();
 		}
@@ -399,7 +401,7 @@ public class Qualifier1Code extends QualifierCode {
 	 */
 	public static final MMCode mmThroughDay = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ThroughDay";
 			owner_lazy = () -> Qualifier1Code.mmObject();
 		}
@@ -422,7 +424,7 @@ public class Qualifier1Code extends QualifierCode {
 	 */
 	public static final MMCode mmVersus = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Versus";
 			owner_lazy = () -> Qualifier1Code.mmObject();
 		}
@@ -445,7 +447,7 @@ public class Qualifier1Code extends QualifierCode {
 	 */
 	public static final MMCode mmWorkingAway = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WorkingAway";
 			owner_lazy = () -> Qualifier1Code.mmObject();
 		}
@@ -468,7 +470,7 @@ public class Qualifier1Code extends QualifierCode {
 	 */
 	public static final MMCode mmCrossing = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Crossing";
 			owner_lazy = () -> Qualifier1Code.mmObject();
 		}
@@ -491,7 +493,7 @@ public class Qualifier1Code extends QualifierCode {
 	 */
 	public static final MMCode mmAtMidpoint = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AtMidpoint";
 			owner_lazy = () -> Qualifier1Code.mmObject();
 		}
@@ -514,7 +516,7 @@ public class Qualifier1Code extends QualifierCode {
 	 */
 	public static final MMCode mmPreOpen = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreOpen";
 			owner_lazy = () -> Qualifier1Code.mmObject();
 		}
@@ -523,17 +525,14 @@ public class Qualifier1Code extends QualifierCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ALNO");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Qualifier1Code";
 				definition = "Qualifies the use of the quote or the indication of interest.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Qualifier1Code.mmAllOrNone, com.tools20022.repository.codeset.Qualifier1Code.mmMarketOnClose, com.tools20022.repository.codeset.Qualifier1Code.mmAtClose,
-						com.tools20022.repository.codeset.Qualifier1Code.mmVolumeWeightedAveragePrice, com.tools20022.repository.codeset.Qualifier1Code.mmInTouchWith, com.tools20022.repository.codeset.Qualifier1Code.mmLimit,
-						com.tools20022.repository.codeset.Qualifier1Code.mmMoreBehind, com.tools20022.repository.codeset.Qualifier1Code.mmAtOpen, com.tools20022.repository.codeset.Qualifier1Code.mmTakingPosition,
-						com.tools20022.repository.codeset.Qualifier1Code.mmAtMarket, com.tools20022.repository.codeset.Qualifier1Code.mmReadyToTrade, com.tools20022.repository.codeset.Qualifier1Code.mmPortfolioShown,
-						com.tools20022.repository.codeset.Qualifier1Code.mmThroughDay, com.tools20022.repository.codeset.Qualifier1Code.mmVersus, com.tools20022.repository.codeset.Qualifier1Code.mmWorkingAway,
-						com.tools20022.repository.codeset.Qualifier1Code.mmCrossing, com.tools20022.repository.codeset.Qualifier1Code.mmAtMidpoint, com.tools20022.repository.codeset.Qualifier1Code.mmPreOpen);
+				code_lazy = () -> Arrays.asList(Qualifier1Code.mmAllOrNone, Qualifier1Code.mmMarketOnClose, Qualifier1Code.mmAtClose, Qualifier1Code.mmVolumeWeightedAveragePrice, Qualifier1Code.mmInTouchWith, Qualifier1Code.mmLimit,
+						Qualifier1Code.mmMoreBehind, Qualifier1Code.mmAtOpen, Qualifier1Code.mmTakingPosition, Qualifier1Code.mmAtMarket, Qualifier1Code.mmReadyToTrade, Qualifier1Code.mmPortfolioShown, Qualifier1Code.mmThroughDay,
+						Qualifier1Code.mmVersus, Qualifier1Code.mmWorkingAway, Qualifier1Code.mmCrossing, Qualifier1Code.mmAtMidpoint, Qualifier1Code.mmPreOpen);
 				trace_lazy = () -> QualifierCode.mmObject();
 			}
 		});

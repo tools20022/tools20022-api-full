@@ -19,8 +19,10 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Exact3NumericText;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -94,7 +96,7 @@ public class DTCTaxReliefSD1 {
 			componentContext_lazy = () -> DTCTaxReliefSD1.mmObject();
 			isDerived = false;
 			xmlTag = "CtgyId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CategoryIdentification";
 			definition = "DTC System assigned identification for tax relief category.";
 			maxOccurs = 1;
@@ -135,7 +137,7 @@ public class DTCTaxReliefSD1 {
 			componentContext_lazy = () -> DTCTaxReliefSD1.mmObject();
 			isDerived = false;
 			xmlTag = "CtgyDesc";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CategoryDescription";
 			definition = "Describes tax relief category.";
 			maxOccurs = 1;
@@ -147,9 +149,9 @@ public class DTCTaxReliefSD1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DTCTaxReliefSD1.mmCategoryIdentification, com.tools20022.repository.msg.DTCTaxReliefSD1.mmCategoryDescription);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(DTCTaxReliefSD1.mmCategoryIdentification, DTCTaxReliefSD1.mmCategoryDescription);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "DTCTaxReliefSD1";
 				definition = "Provides information about tax relief categories.";
 			}

@@ -20,8 +20,12 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.seev.AgentCAMovementInstructionV01;
 import com.tools20022.repository.choice.UnitOrFaceAmount1Choice;
 import com.tools20022.repository.entity.SecuritiesEntry;
+import com.tools20022.repository.entity.Security;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -113,11 +117,11 @@ public class UnderlyingSecurityMovement1 {
 	 */
 	public static final MMMessageAttribute mmSecurityIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmIdentification;
+			businessElementTrace_lazy = () -> Security.mmIdentification;
 			componentContext_lazy = () -> UnderlyingSecurityMovement1.mmObject();
 			isDerived = false;
 			xmlTag = "SctyId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityIdentification";
 			definition = "Identification of the financial instrument.";
 			maxOccurs = 1;
@@ -161,11 +165,11 @@ public class UnderlyingSecurityMovement1 {
 	 */
 	public static final MMMessageAttribute mmSecuritiesQuantity = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesEntry.mmFinancialInstrumentQuantity;
+			businessElementTrace_lazy = () -> SecuritiesEntry.mmFinancialInstrumentQuantity;
 			componentContext_lazy = () -> UnderlyingSecurityMovement1.mmObject();
 			isDerived = false;
 			xmlTag = "SctiesQty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesQuantity";
 			definition = "Quantity of financial instrument.";
 			maxOccurs = 1;
@@ -208,11 +212,11 @@ public class UnderlyingSecurityMovement1 {
 	 */
 	public static final MMMessageAssociationEnd mmAccountDetails = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesEntry.mmSecuritiesAccount;
+			businessElementTrace_lazy = () -> SecuritiesEntry.mmSecuritiesAccount;
 			componentContext_lazy = () -> UnderlyingSecurityMovement1.mmObject();
 			isDerived = false;
 			xmlTag = "AcctDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountDetails";
 			definition = "Provides information about the debited/credited securities account.";
 			maxOccurs = 2;
@@ -225,12 +229,11 @@ public class UnderlyingSecurityMovement1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UnderlyingSecurityMovement1.mmSecurityIdentification, com.tools20022.repository.msg.UnderlyingSecurityMovement1.mmSecuritiesQuantity,
-						com.tools20022.repository.msg.UnderlyingSecurityMovement1.mmAccountDetails);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.AgentCAMovementInstructionV01.mmUnderlyingSecuritiesMovementDetails);
+				messageElement_lazy = () -> Arrays.asList(UnderlyingSecurityMovement1.mmSecurityIdentification, UnderlyingSecurityMovement1.mmSecuritiesQuantity, UnderlyingSecurityMovement1.mmAccountDetails);
+				messageBuildingBlock_lazy = () -> Arrays.asList(AgentCAMovementInstructionV01.mmUnderlyingSecuritiesMovementDetails);
 				trace_lazy = () -> SecuritiesEntry.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "UnderlyingSecurityMovement1";
 				definition = "Provides information about the underlying securities movement.";
 			}

@@ -20,9 +20,15 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.acmt.AccountReportV01;
+import com.tools20022.repository.area.acmt.AccountReportV02;
+import com.tools20022.repository.area.acmt.AccountRequestAcknowledgementV01;
+import com.tools20022.repository.area.acmt.AccountRequestAcknowledgementV02;
 import com.tools20022.repository.codeset.UseCases1Code;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.Max70Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -125,7 +131,7 @@ public class References5 {
 			componentContext_lazy = () -> References5.mmObject();
 			isDerived = false;
 			xmlTag = "ReqTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestType";
 			definition = "Identifies the type of acknowledged request.";
 			maxOccurs = 1;
@@ -167,7 +173,7 @@ public class References5 {
 			componentContext_lazy = () -> References5.mmObject();
 			isDerived = false;
 			xmlTag = "MsgId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageIdentification";
 			definition = "Identifies a message by a unique identifier and the date and time when the message was created by the sender.";
 			maxOccurs = 1;
@@ -213,7 +219,7 @@ public class References5 {
 			componentContext_lazy = () -> References5.mmObject();
 			isDerived = false;
 			xmlTag = "PrcId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProcessIdentification";
 			definition = "Identifies a process by a unique identifier and the date and time when the first message belonging to the process was created by the sender. The process identification remains the same in all messages belonging to the same process, from the initial request message to the final account report closing the process.";
 			maxOccurs = 1;
@@ -253,7 +259,7 @@ public class References5 {
 			componentContext_lazy = () -> References5.mmObject();
 			isDerived = false;
 			xmlTag = "AckdMsgId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcknowledgedMessageIdentification";
 			definition = "Reference to the message that is acknowledged.";
 			minOccurs = 0;
@@ -293,7 +299,7 @@ public class References5 {
 			componentContext_lazy = () -> References5.mmObject();
 			isDerived = false;
 			xmlTag = "Sts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Status";
 			definition = "Status of the request.";
 			maxOccurs = 1;
@@ -334,7 +340,7 @@ public class References5 {
 			componentContext_lazy = () -> References5.mmObject();
 			isDerived = false;
 			xmlTag = "AttchdDocNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AttachedDocumentName";
 			definition = "File name of a document logically related to the request.";
 			minOccurs = 0;
@@ -345,13 +351,11 @@ public class References5 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.References5.mmRequestType, com.tools20022.repository.msg.References5.mmMessageIdentification,
-						com.tools20022.repository.msg.References5.mmProcessIdentification, com.tools20022.repository.msg.References5.mmAcknowledgedMessageIdentification, com.tools20022.repository.msg.References5.mmStatus,
-						com.tools20022.repository.msg.References5.mmAttachedDocumentName);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountReportV01.mmReferences, com.tools20022.repository.area.acmt.AccountReportV02.mmReferences,
-						com.tools20022.repository.area.acmt.AccountRequestAcknowledgementV01.mmReferences, com.tools20022.repository.area.acmt.AccountRequestAcknowledgementV02.mmReferences);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(References5.mmRequestType, References5.mmMessageIdentification, References5.mmProcessIdentification, References5.mmAcknowledgedMessageIdentification, References5.mmStatus,
+						References5.mmAttachedDocumentName);
+				messageBuildingBlock_lazy = () -> Arrays.asList(AccountReportV01.mmReferences, AccountReportV02.mmReferences, AccountRequestAcknowledgementV01.mmReferences, AccountRequestAcknowledgementV02.mmReferences);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "References5";
 				definition = "Set of elements for the identification of the message and related references.";
 			}

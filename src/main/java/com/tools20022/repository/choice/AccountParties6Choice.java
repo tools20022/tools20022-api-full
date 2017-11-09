@@ -19,7 +19,9 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.InvestmentAccountOwnershipInformation11;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -139,11 +141,11 @@ public class AccountParties6Choice {
 			componentContext_lazy = () -> AccountParties6Choice.mmObject();
 			isDerived = false;
 			xmlTag = "PmryOwnr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PrimaryOwner";
 			definition = "Single owner of the investment account or, when the ownership is split among several owners, the primary owner is the one giving its address and account details for the registration.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AccountParties9Choice.mmPrimaryOwner);
-			previousVersion_lazy = () -> com.tools20022.repository.choice.AccountParties3Choice.mmPrimaryOwner;
+			nextVersions_lazy = () -> Arrays.asList(AccountParties9Choice.mmPrimaryOwner);
+			previousVersion_lazy = () -> AccountParties3Choice.mmPrimaryOwner;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -204,11 +206,11 @@ public class AccountParties6Choice {
 			componentContext_lazy = () -> AccountParties6Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Trstee";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Trustee";
 			definition = "Legal owners of the property. However, the beneficiary has the equitable or beneficial ownership.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AccountParties9Choice.mmTrustee);
-			previousVersion_lazy = () -> com.tools20022.repository.choice.AccountParties3Choice.mmTrustee;
+			nextVersions_lazy = () -> Arrays.asList(AccountParties9Choice.mmTrustee);
+			previousVersion_lazy = () -> AccountParties3Choice.mmTrustee;
 			maxOccurs = 5;
 			minOccurs = 1;
 			isComposite = true;
@@ -263,10 +265,10 @@ public class AccountParties6Choice {
 			componentContext_lazy = () -> AccountParties6Choice.mmObject();
 			isDerived = false;
 			xmlTag = "CtdnForMnr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CustodianForMinor";
 			definition = "Entity that holds shares/units on behalf of a legal minor. Although the account is registered under the name of the minor, the custodian retains control of the account.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.AccountParties3Choice.mmCustodianForMinor;
+			previousVersion_lazy = () -> AccountParties3Choice.mmCustodianForMinor;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -327,11 +329,11 @@ public class AccountParties6Choice {
 			componentContext_lazy = () -> AccountParties6Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Nmnee";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Nominee";
 			definition = "Entity named by the beneficial owner to act on its behalf, often to facilitate dealing, or to conceal the identity of the beneficiary.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AccountParties9Choice.mmNominee);
-			previousVersion_lazy = () -> com.tools20022.repository.choice.AccountParties3Choice.mmNominee;
+			nextVersions_lazy = () -> Arrays.asList(AccountParties9Choice.mmNominee);
+			previousVersion_lazy = () -> AccountParties3Choice.mmNominee;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -392,11 +394,11 @@ public class AccountParties6Choice {
 			componentContext_lazy = () -> AccountParties6Choice.mmObject();
 			isDerived = false;
 			xmlTag = "JntOwnr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "JointOwner";
 			definition = "Co-owner of the investment account when the ownership is assigned to more than one party.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AccountParties9Choice.mmJointOwner);
-			previousVersion_lazy = () -> com.tools20022.repository.choice.AccountParties3Choice.mmJointOwner;
+			nextVersions_lazy = () -> Arrays.asList(AccountParties9Choice.mmJointOwner);
+			previousVersion_lazy = () -> AccountParties3Choice.mmJointOwner;
 			maxOccurs = 5;
 			minOccurs = 1;
 			isComposite = true;
@@ -407,11 +409,11 @@ public class AccountParties6Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AccountParties6Choice.mmPrimaryOwner, com.tools20022.repository.choice.AccountParties6Choice.mmTrustee,
-						com.tools20022.repository.choice.AccountParties6Choice.mmCustodianForMinor, com.tools20022.repository.choice.AccountParties6Choice.mmNominee, com.tools20022.repository.choice.AccountParties6Choice.mmJointOwner);
+				messageElement_lazy = () -> Arrays
+						.asList(AccountParties6Choice.mmPrimaryOwner, AccountParties6Choice.mmTrustee, AccountParties6Choice.mmCustodianForMinor, AccountParties6Choice.mmNominee, AccountParties6Choice.mmJointOwner);
 				trace_lazy = () -> InvestmentAccountPartyRole.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "AccountParties6Choice";
 				definition = "Information about a party's account.";
 				nextVersions_lazy = () -> Arrays.asList(AccountParties9Choice.mmObject());

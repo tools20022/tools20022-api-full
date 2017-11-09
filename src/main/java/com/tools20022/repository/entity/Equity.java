@@ -19,12 +19,18 @@ package com.tools20022.repository.entity;
 
 import com.tools20022.metamodel.MMBusinessAttribute;
 import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.choice.FinancialInstrumentProperties1Choice;
+import com.tools20022.repository.choice.PreferenceToIncome1Choice;
+import com.tools20022.repository.choice.PreferenceToIncome2Choice;
+import com.tools20022.repository.choice.PreferenceToIncome3Choice;
 import com.tools20022.repository.codeset.PreferenceToIncomeCode;
 import com.tools20022.repository.datatype.CurrencyAndAmount;
 import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.Security;
-import com.tools20022.repository.msg.Equity1;
+import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -43,21 +49,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Equity#mmPreferenceToIncome
- * Equity.mmPreferenceToIncome}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Equity#mmConvertibleIndicator
- * Equity.mmConvertibleIndicator}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Equity#mmNonPaidAmount
- * Equity.mmNonPaidAmount}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Equity#mmParValue
- * Equity.mmParValue}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Equity#mmVotingRightsPerShare
- * Equity.mmVotingRightsPerShare}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Equity1 Equity1}</li>
  * </ul>
  * </li>
  * <li>
@@ -73,11 +69,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
  * superType} = {@linkplain com.tools20022.repository.entity.Security Security}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Equity1 Equity1}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Equity#mmPreferenceToIncome
+ * Equity.mmPreferenceToIncome}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Equity#mmConvertibleIndicator
+ * Equity.mmConvertibleIndicator}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Equity#mmNonPaidAmount
+ * Equity.mmNonPaidAmount}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Equity#mmParValue
+ * Equity.mmParValue}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Equity#mmVotingRightsPerShare
+ * Equity.mmVotingRightsPerShare}</li>
  * </ul>
  * </li>
  * <li>
@@ -201,20 +207,16 @@ public class Equity extends Security {
 	 */
 	public static final MMBusinessAttribute mmPreferenceToIncome = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PreferenceToIncome1Choice.mmCode, com.tools20022.repository.choice.PreferenceToIncome1Choice.mmProprietary,
-					com.tools20022.repository.choice.PreferenceToIncome2Choice.mmCode, com.tools20022.repository.choice.PreferenceToIncome2Choice.mmProprietary,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes8.mmPreferenceToIncome, com.tools20022.repository.msg.FinancialInstrumentAttributes20.mmPreferenceToIncome,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes4.mmPreferenceToIncome, com.tools20022.repository.choice.PreferenceToIncome3Choice.mmCode,
-					com.tools20022.repository.choice.PreferenceToIncome3Choice.mmProprietary, com.tools20022.repository.msg.FinancialInstrumentAttributes13.mmPreferenceToIncome,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes21.mmPreferenceToIncome, com.tools20022.repository.msg.FinancialInstrumentAttributes26.mmPreferenceToIncome,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes27.mmPreferenceToIncome, com.tools20022.repository.msg.FinancialInstrumentAttributes14.mmPreferenceToIncome,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes30.mmPreferenceToIncome, com.tools20022.repository.msg.FinancialInstrumentAttributes28.mmPreferenceToIncome,
-					com.tools20022.repository.msg.Equity1.mmPreferenceToIncome, com.tools20022.repository.msg.FinancialInstrumentAttributes15.mmPreferenceToIncome,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes29.mmPreferenceToIncome, com.tools20022.repository.msg.Equity2.mmPreferenceToIncome,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes2.mmPreferenceToIncome);
+			derivation_lazy = () -> Arrays
+					.asList(PreferenceToIncome1Choice.mmCode, PreferenceToIncome1Choice.mmProprietary, PreferenceToIncome2Choice.mmCode, PreferenceToIncome2Choice.mmProprietary, FinancialInstrumentAttributes8.mmPreferenceToIncome,
+							FinancialInstrumentAttributes20.mmPreferenceToIncome, FinancialInstrumentAttributes4.mmPreferenceToIncome, PreferenceToIncome3Choice.mmCode, PreferenceToIncome3Choice.mmProprietary,
+							FinancialInstrumentAttributes13.mmPreferenceToIncome, FinancialInstrumentAttributes21.mmPreferenceToIncome, FinancialInstrumentAttributes26.mmPreferenceToIncome,
+							FinancialInstrumentAttributes27.mmPreferenceToIncome, FinancialInstrumentAttributes14.mmPreferenceToIncome, FinancialInstrumentAttributes30.mmPreferenceToIncome,
+							FinancialInstrumentAttributes28.mmPreferenceToIncome, Equity1.mmPreferenceToIncome, FinancialInstrumentAttributes15.mmPreferenceToIncome, FinancialInstrumentAttributes29.mmPreferenceToIncome,
+							Equity2.mmPreferenceToIncome, FinancialInstrumentAttributes2.mmPreferenceToIncome);
 			elementContext_lazy = () -> Equity.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PreferenceToIncome";
 			definition = "Indicates the  level of priority to claim on income and assets of the company in case of the payment of dividends and in the event of a bankruptcy, for example, ordinary/common stocks, preferred stocks, subordinated debt, etc.";
 			maxOccurs = 1;
@@ -259,10 +261,10 @@ public class Equity extends Security {
 	 */
 	public static final MMBusinessAttribute mmConvertibleIndicator = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Equity1.mmConvertibleIndicator);
+			derivation_lazy = () -> Arrays.asList(Equity1.mmConvertibleIndicator);
 			elementContext_lazy = () -> Equity.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ConvertibleIndicator";
 			definition = "Indicates whether the investor or the issuer has a conversion option.";
 			maxOccurs = 1;
@@ -307,10 +309,10 @@ public class Equity extends Security {
 	 */
 	public static final MMBusinessAttribute mmNonPaidAmount = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Equity1.mmNonPaidAmount, com.tools20022.repository.msg.Equity2.mmNonPaidAmount);
+			derivation_lazy = () -> Arrays.asList(Equity1.mmNonPaidAmount, Equity2.mmNonPaidAmount);
 			elementContext_lazy = () -> Equity.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NonPaidAmount";
 			definition = "Nominal amount which is not paid yet.";
 			maxOccurs = 1;
@@ -355,10 +357,10 @@ public class Equity extends Security {
 	 */
 	public static final MMBusinessAttribute mmParValue = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Equity1.mmParValue, com.tools20022.repository.msg.Equity2.mmParValue);
+			derivation_lazy = () -> Arrays.asList(Equity1.mmParValue, Equity2.mmParValue);
 			elementContext_lazy = () -> Equity.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ParValue";
 			definition = "Nominal value of an equity security.";
 			maxOccurs = 1;
@@ -404,10 +406,10 @@ public class Equity extends Security {
 	 */
 	public static final MMBusinessAttribute mmVotingRightsPerShare = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Equity1.mmVotingRightsPerShare, com.tools20022.repository.msg.Equity2.mmVotingRightsPerShare);
+			derivation_lazy = () -> Arrays.asList(Equity1.mmVotingRightsPerShare, Equity2.mmVotingRightsPerShare);
 			elementContext_lazy = () -> Equity.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "VotingRightsPerShare";
 			definition = "Number of voting rights per share.";
 			maxOccurs = 1;
@@ -419,14 +421,13 @@ public class Equity extends Security {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Equity";
 				definition = "Financial instrument that represents a title of ownership in a company. That is, the shareholder is entitled to a part of the company's profit - usually by payment of a dividend - and to voting rights, if any. Each company issues generally different classes of shares, for example, ordinary or common shares, which have no guaranteed amount of dividend but carry voting rights, or preferred shares, which receive dividends before ordinary shares but have no voting right.";
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.FinancialInstrumentProperties1Choice.mmEquity, com.tools20022.repository.msg.FinancialInstrument28.mmEquity);
+				derivationElement_lazy = () -> Arrays.asList(FinancialInstrumentProperties1Choice.mmEquity, FinancialInstrument28.mmEquity);
 				superType_lazy = () -> Security.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Equity.mmPreferenceToIncome, com.tools20022.repository.entity.Equity.mmConvertibleIndicator, com.tools20022.repository.entity.Equity.mmNonPaidAmount,
-						com.tools20022.repository.entity.Equity.mmParValue, com.tools20022.repository.entity.Equity.mmVotingRightsPerShare);
+				element_lazy = () -> Arrays.asList(Equity.mmPreferenceToIncome, Equity.mmConvertibleIndicator, Equity.mmNonPaidAmount, Equity.mmParValue, Equity.mmVotingRightsPerShare);
 				derivationComponent_lazy = () -> Arrays.asList(Equity1.mmObject());
 			}
 		});

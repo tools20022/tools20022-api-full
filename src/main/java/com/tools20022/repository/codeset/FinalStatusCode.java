@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.PaymentInstructionStatusCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -87,7 +89,7 @@ public class FinalStatusCode extends PaymentInstructionStatusCode {
 	 */
 	public static final MMCode mmSettled = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Settled";
 			owner_lazy = () -> FinalStatusCode.mmObject();
 		}
@@ -110,7 +112,7 @@ public class FinalStatusCode extends PaymentInstructionStatusCode {
 	 */
 	public static final MMCode mmRejected = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rejected";
 			owner_lazy = () -> FinalStatusCode.mmObject();
 		}
@@ -133,7 +135,7 @@ public class FinalStatusCode extends PaymentInstructionStatusCode {
 	 */
 	public static final MMCode mmCancelled = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cancelled";
 			owner_lazy = () -> FinalStatusCode.mmObject();
 		}
@@ -156,7 +158,7 @@ public class FinalStatusCode extends PaymentInstructionStatusCode {
 	 */
 	public static final MMCode mmFinalised = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Finalised";
 			owner_lazy = () -> FinalStatusCode.mmObject();
 		}
@@ -165,13 +167,12 @@ public class FinalStatusCode extends PaymentInstructionStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("STLD");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FinalStatusCode";
 				definition = "Specifies the final status of a transaction.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.FinalStatusCode.mmSettled, com.tools20022.repository.codeset.FinalStatusCode.mmRejected, com.tools20022.repository.codeset.FinalStatusCode.mmCancelled,
-						com.tools20022.repository.codeset.FinalStatusCode.mmFinalised);
+				code_lazy = () -> Arrays.asList(FinalStatusCode.mmSettled, FinalStatusCode.mmRejected, FinalStatusCode.mmCancelled, FinalStatusCode.mmFinalised);
 				trace_lazy = () -> PaymentInstructionStatusCode.mmObject();
 			}
 		});

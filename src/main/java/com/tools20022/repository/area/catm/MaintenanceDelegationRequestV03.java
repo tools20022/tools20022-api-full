@@ -20,6 +20,7 @@ package com.tools20022.repository.area.catm;
 import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.TerminalManagementLatestVersion;
 import com.tools20022.repository.msg.ContentInformationType12;
 import com.tools20022.repository.msg.Header29;
@@ -35,6 +36,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code catm.005.001.03}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.TerminalManagementLatestVersion
@@ -66,9 +70,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * MaintenanceDelegationRequestV03.mmSecurityTrailer}</li>
  * </ul>
  * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code catm.005.001.03}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -119,10 +120,10 @@ public class MaintenanceDelegationRequestV03 {
 	public static final MMMessageBuildingBlock mmHeader = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Hdr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Header";
 			definition = "Information related to the protocol management.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.catm.MaintenanceDelegationRequestV02.mmHeader;
+			previousVersion_lazy = () -> MaintenanceDelegationRequestV02.mmHeader;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> Header29.mmObject();
@@ -161,10 +162,10 @@ public class MaintenanceDelegationRequestV03 {
 	public static final MMMessageBuildingBlock mmMaintenanceDelegationRequest = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "MntncDlgtnReq";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaintenanceDelegationRequest";
 			definition = "Information related to the request of maintenance delegations.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.catm.MaintenanceDelegationRequestV02.mmMaintenanceDelegationRequest;
+			previousVersion_lazy = () -> MaintenanceDelegationRequestV02.mmMaintenanceDelegationRequest;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> MaintenanceDelegationRequest3.mmObject();
@@ -203,10 +204,10 @@ public class MaintenanceDelegationRequestV03 {
 	public static final MMMessageBuildingBlock mmSecurityTrailer = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SctyTrlr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityTrailer";
 			definition = "Trailer of the message containing a MAC or a digital signature.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.catm.MaintenanceDelegationRequestV02.mmSecurityTrailer;
+			previousVersion_lazy = () -> MaintenanceDelegationRequestV02.mmSecurityTrailer;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> ContentInformationType12.mmObject();
@@ -216,7 +217,7 @@ public class MaintenanceDelegationRequestV03 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MaintenanceDelegationRequestV03";
 				definition = "A terminal manager requests to the master terminal manager the delegation of maintenance functions or maintenance operation on the terminal estate managed by the master terminal manager.";
 				previousVersion_lazy = () -> MaintenanceDelegationRequestV02.mmObject();
@@ -224,8 +225,7 @@ public class MaintenanceDelegationRequestV03 {
 				rootElement = "Document";
 				xmlTag = "MntncDlgtnReq";
 				businessArea_lazy = () -> TerminalManagementLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.catm.MaintenanceDelegationRequestV03.mmHeader,
-						com.tools20022.repository.area.catm.MaintenanceDelegationRequestV03.mmMaintenanceDelegationRequest, com.tools20022.repository.area.catm.MaintenanceDelegationRequestV03.mmSecurityTrailer);
+				messageBuildingBlock_lazy = () -> Arrays.asList(MaintenanceDelegationRequestV03.mmHeader, MaintenanceDelegationRequestV03.mmMaintenanceDelegationRequest, MaintenanceDelegationRequestV03.mmSecurityTrailer);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "catm";

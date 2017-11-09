@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.TypeOfIdentificationCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -101,7 +103,7 @@ public class TypeOfIdentification1Code extends TypeOfIdentificationCode {
 	 */
 	public static final MMCode mmAlienRegistrationNumber = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AlienRegistrationNumber";
 			owner_lazy = () -> TypeOfIdentification1Code.mmObject();
 		}
@@ -124,7 +126,7 @@ public class TypeOfIdentification1Code extends TypeOfIdentificationCode {
 	 */
 	public static final MMCode mmPassportNumber = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PassportNumber";
 			owner_lazy = () -> TypeOfIdentification1Code.mmObject();
 		}
@@ -147,7 +149,7 @@ public class TypeOfIdentification1Code extends TypeOfIdentificationCode {
 	 */
 	public static final MMCode mmTaxExemptIdentificationNumber = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxExemptIdentificationNumber";
 			owner_lazy = () -> TypeOfIdentification1Code.mmObject();
 		}
@@ -170,7 +172,7 @@ public class TypeOfIdentification1Code extends TypeOfIdentificationCode {
 	 */
 	public static final MMCode mmCorporateIdentification = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorporateIdentification";
 			owner_lazy = () -> TypeOfIdentification1Code.mmObject();
 		}
@@ -193,7 +195,7 @@ public class TypeOfIdentification1Code extends TypeOfIdentificationCode {
 	 */
 	public static final MMCode mmDriverLicenseNumber = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DriverLicenseNumber";
 			owner_lazy = () -> TypeOfIdentification1Code.mmObject();
 		}
@@ -216,7 +218,7 @@ public class TypeOfIdentification1Code extends TypeOfIdentificationCode {
 	 */
 	public static final MMCode mmForeignInvestmentIdentityNumber = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForeignInvestmentIdentityNumber";
 			owner_lazy = () -> TypeOfIdentification1Code.mmObject();
 		}
@@ -239,7 +241,7 @@ public class TypeOfIdentification1Code extends TypeOfIdentificationCode {
 	 */
 	public static final MMCode mmTaxIdentificationNumber = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxIdentificationNumber";
 			owner_lazy = () -> TypeOfIdentification1Code.mmObject();
 		}
@@ -248,15 +250,13 @@ public class TypeOfIdentification1Code extends TypeOfIdentificationCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ARNU");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TypeOfIdentification1Code";
 				definition = "Specifies the type of alternate identification which can be used to give an alternate identification of the party identified.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TypeOfIdentification1Code.mmAlienRegistrationNumber, com.tools20022.repository.codeset.TypeOfIdentification1Code.mmPassportNumber,
-						com.tools20022.repository.codeset.TypeOfIdentification1Code.mmTaxExemptIdentificationNumber, com.tools20022.repository.codeset.TypeOfIdentification1Code.mmCorporateIdentification,
-						com.tools20022.repository.codeset.TypeOfIdentification1Code.mmDriverLicenseNumber, com.tools20022.repository.codeset.TypeOfIdentification1Code.mmForeignInvestmentIdentityNumber,
-						com.tools20022.repository.codeset.TypeOfIdentification1Code.mmTaxIdentificationNumber);
+				code_lazy = () -> Arrays.asList(TypeOfIdentification1Code.mmAlienRegistrationNumber, TypeOfIdentification1Code.mmPassportNumber, TypeOfIdentification1Code.mmTaxExemptIdentificationNumber,
+						TypeOfIdentification1Code.mmCorporateIdentification, TypeOfIdentification1Code.mmDriverLicenseNumber, TypeOfIdentification1Code.mmForeignInvestmentIdentityNumber, TypeOfIdentification1Code.mmTaxIdentificationNumber);
 				trace_lazy = () -> TypeOfIdentificationCode.mmObject();
 			}
 		});

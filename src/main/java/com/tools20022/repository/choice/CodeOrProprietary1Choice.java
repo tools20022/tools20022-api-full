@@ -19,8 +19,10 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max4Text;
 import com.tools20022.repository.entity.AccountRestriction;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification13;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -100,11 +102,11 @@ public class CodeOrProprietary1Choice {
 	 */
 	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AccountRestriction.mmRestrictionType;
+			businessElementTrace_lazy = () -> AccountRestriction.mmRestrictionType;
 			componentContext_lazy = () -> CodeOrProprietary1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Cd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Element expressed as an ISO 20022 code from an external list.";
 			maxOccurs = 1;
@@ -148,11 +150,11 @@ public class CodeOrProprietary1Choice {
 	 */
 	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AccountRestriction.mmRestrictionType;
+			businessElementTrace_lazy = () -> AccountRestriction.mmRestrictionType;
 			componentContext_lazy = () -> CodeOrProprietary1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Element expressed as a proprietary code.";
 			maxOccurs = 1;
@@ -164,10 +166,10 @@ public class CodeOrProprietary1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CodeOrProprietary1Choice.mmCode, com.tools20022.repository.choice.CodeOrProprietary1Choice.mmProprietary);
+				messageElement_lazy = () -> Arrays.asList(CodeOrProprietary1Choice.mmCode, CodeOrProprietary1Choice.mmProprietary);
 				trace_lazy = () -> AccountRestriction.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CodeOrProprietary1Choice";
 				definition = "Choice of format between an ISO 20022 code and a proprietary code.";
 			}

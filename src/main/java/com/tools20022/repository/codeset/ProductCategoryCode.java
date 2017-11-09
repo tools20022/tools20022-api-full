@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.ProductCategory1Code
+ * ProductCategory1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -44,13 +53,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.ProductCategoryCode#mmGender
  * ProductCategoryCode.mmGender}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.ProductCategory1Code
- * ProductCategory1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -102,7 +104,7 @@ public class ProductCategoryCode {
 	 */
 	public static final MMCode mmHarmonizedTariffCodeName = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "HarmonizedTariffCodeName";
 			definition = "Classification of goods as developed by the Customs Cooperation council.";
 			owner_lazy = () -> ProductCategoryCode.mmObject();
@@ -132,7 +134,7 @@ public class ProductCategoryCode {
 	 */
 	public static final MMCode mmQuotaCategory = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "QuotaCategory";
 			definition = "Product identifier used by the retail industry.";
 			owner_lazy = () -> ProductCategoryCode.mmObject();
@@ -162,7 +164,7 @@ public class ProductCategoryCode {
 	 */
 	public static final MMCode mmProductGroup = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ProductGroup";
 			definition = "Product Group Code.";
 			owner_lazy = () -> ProductCategoryCode.mmObject();
@@ -192,7 +194,7 @@ public class ProductCategoryCode {
 	 */
 	public static final MMCode mmLineOfBusiness = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "LineOfBusiness";
 			definition = "Line of business code.";
 			owner_lazy = () -> ProductCategoryCode.mmObject();
@@ -222,7 +224,7 @@ public class ProductCategoryCode {
 	 */
 	public static final MMCode mmGender = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Gender";
 			definition = "Code for gender.";
 			owner_lazy = () -> ProductCategoryCode.mmObject();
@@ -233,13 +235,12 @@ public class ProductCategoryCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("HRTR");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ProductCategoryCode";
 				definition = "Specifies the category of a product.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ProductCategoryCode.mmHarmonizedTariffCodeName, com.tools20022.repository.codeset.ProductCategoryCode.mmQuotaCategory,
-						com.tools20022.repository.codeset.ProductCategoryCode.mmProductGroup, com.tools20022.repository.codeset.ProductCategoryCode.mmLineOfBusiness, com.tools20022.repository.codeset.ProductCategoryCode.mmGender);
+				code_lazy = () -> Arrays.asList(ProductCategoryCode.mmHarmonizedTariffCodeName, ProductCategoryCode.mmQuotaCategory, ProductCategoryCode.mmProductGroup, ProductCategoryCode.mmLineOfBusiness, ProductCategoryCode.mmGender);
 				derivation_lazy = () -> Arrays.asList(ProductCategory1Code.mmObject());
 			}
 		});

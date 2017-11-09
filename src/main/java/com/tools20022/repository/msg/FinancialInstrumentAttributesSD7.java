@@ -19,10 +19,12 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CountryCode;
 import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.datatype.Max70Text;
 import com.tools20022.repository.datatype.YesNoIndicator;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -104,7 +106,7 @@ public class FinancialInstrumentAttributesSD7 {
 			componentContext_lazy = () -> FinancialInstrumentAttributesSD7.mmObject();
 			isDerived = false;
 			xmlTag = "PlcAndNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "xPath to the element that is being extended.";
 			maxOccurs = 1;
@@ -145,7 +147,7 @@ public class FinancialInstrumentAttributesSD7 {
 			componentContext_lazy = () -> FinancialInstrumentAttributesSD7.mmObject();
 			isDerived = false;
 			xmlTag = "IssrDesc";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssuerDescription";
 			definition = "Name of the issuer.";
 			maxOccurs = 1;
@@ -186,7 +188,7 @@ public class FinancialInstrumentAttributesSD7 {
 			componentContext_lazy = () -> FinancialInstrumentAttributesSD7.mmObject();
 			isDerived = false;
 			xmlTag = "CtryOfIncorprtn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CountryOfIncorporation";
 			definition = "Country of incorporation of the issuer.";
 			maxOccurs = 1;
@@ -231,7 +233,7 @@ public class FinancialInstrumentAttributesSD7 {
 			componentContext_lazy = () -> FinancialInstrumentAttributesSD7.mmObject();
 			isDerived = false;
 			xmlTag = "PmryXchgFlg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PrimaryExchangeFlag";
 			definition = "Indicates if the stock exchange associated to place of listing code is primary.";
 			maxOccurs = 1;
@@ -276,7 +278,7 @@ public class FinancialInstrumentAttributesSD7 {
 			componentContext_lazy = () -> FinancialInstrumentAttributesSD7.mmObject();
 			isDerived = false;
 			xmlTag = "SECRegdFlg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SECRegisteredFlag";
 			definition = "Indicates whether the event has been registered with US Securities Exchange Commission (SEC).";
 			maxOccurs = 1;
@@ -288,11 +290,10 @@ public class FinancialInstrumentAttributesSD7 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrumentAttributesSD7.mmPlaceAndName, com.tools20022.repository.msg.FinancialInstrumentAttributesSD7.mmIssuerDescription,
-						com.tools20022.repository.msg.FinancialInstrumentAttributesSD7.mmCountryOfIncorporation, com.tools20022.repository.msg.FinancialInstrumentAttributesSD7.mmPrimaryExchangeFlag,
-						com.tools20022.repository.msg.FinancialInstrumentAttributesSD7.mmSECRegisteredFlag);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(FinancialInstrumentAttributesSD7.mmPlaceAndName, FinancialInstrumentAttributesSD7.mmIssuerDescription, FinancialInstrumentAttributesSD7.mmCountryOfIncorporation,
+						FinancialInstrumentAttributesSD7.mmPrimaryExchangeFlag, FinancialInstrumentAttributesSD7.mmSECRegisteredFlag);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "FinancialInstrumentAttributesSD7";
 				definition = "Provides additional information regarding underlying security details.";
 			}

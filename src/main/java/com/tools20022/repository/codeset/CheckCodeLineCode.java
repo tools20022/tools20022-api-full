@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.CheckCodeLine1Code
+ * CheckCodeLine1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>{@linkplain com.tools20022.repository.codeset.CheckCodeLineCode#mmCMC7
@@ -40,13 +49,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.CheckCodeLineCode#mmOCRDefault
  * CheckCodeLineCode.mmOCRDefault}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.CheckCodeLine1Code
- * CheckCodeLine1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -90,7 +92,7 @@ public class CheckCodeLineCode {
 	 */
 	public static final MMCode mmCMC7 = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CMC7";
 			definition = "Magnetic ink character digitally encoded with 7 sticks.";
 			owner_lazy = () -> CheckCodeLineCode.mmObject();
@@ -120,7 +122,7 @@ public class CheckCodeLineCode {
 	 */
 	public static final MMCode mmE13B = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "E13B";
 			definition = "Magnetic ink character recognition.,conform to ISO 1004.";
 			owner_lazy = () -> CheckCodeLineCode.mmObject();
@@ -151,7 +153,7 @@ public class CheckCodeLineCode {
 	 */
 	public static final MMCode mmOCRA = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OCRA";
 			definition = "Optical character recognition font A, conform to ANSI X3.17:1981.";
 			owner_lazy = () -> CheckCodeLineCode.mmObject();
@@ -182,7 +184,7 @@ public class CheckCodeLineCode {
 	 */
 	public static final MMCode mmOCRB = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OCRB";
 			definition = "Optical character recognition font B, conform to ANSI X3.49:1975.";
 			owner_lazy = () -> CheckCodeLineCode.mmObject();
@@ -212,7 +214,7 @@ public class CheckCodeLineCode {
 	 */
 	public static final MMCode mmOCRDefault = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OCRDefault";
 			definition = "Default optical character recognition used.";
 			owner_lazy = () -> CheckCodeLineCode.mmObject();
@@ -223,12 +225,11 @@ public class CheckCodeLineCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CheckCodeLineCode";
 				definition = "Format of the check code line.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CheckCodeLineCode.mmCMC7, com.tools20022.repository.codeset.CheckCodeLineCode.mmE13B, com.tools20022.repository.codeset.CheckCodeLineCode.mmOCRA,
-						com.tools20022.repository.codeset.CheckCodeLineCode.mmOCRB, com.tools20022.repository.codeset.CheckCodeLineCode.mmOCRDefault);
+				code_lazy = () -> Arrays.asList(CheckCodeLineCode.mmCMC7, CheckCodeLineCode.mmE13B, CheckCodeLineCode.mmOCRA, CheckCodeLineCode.mmOCRB, CheckCodeLineCode.mmOCRDefault);
 				derivation_lazy = () -> Arrays.asList(CheckCodeLine1Code.mmObject());
 			}
 		});

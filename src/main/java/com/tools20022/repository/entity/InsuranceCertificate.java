@@ -17,9 +17,7 @@
 
 package com.tools20022.repository.entity;
 
-import com.tools20022.metamodel.MMBusinessAssociationEnd;
-import com.tools20022.metamodel.MMBusinessAttribute;
-import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.*;
 import com.tools20022.repository.choice.InsuranceType1Choice;
 import com.tools20022.repository.choice.InsuranceType2Choice;
 import com.tools20022.repository.codeset.CurrencyCode;
@@ -29,6 +27,7 @@ import com.tools20022.repository.datatype.CurrencyAndAmount;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.entity.Document;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.InsuranceDataSet1;
 import com.tools20022.repository.msg.RequiredSubmission3;
 import java.util.Arrays;
@@ -45,6 +44,39 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.choice.InsuranceType1Choice
+ * InsuranceType1Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.RequiredSubmission3
+ * RequiredSubmission3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.InsuranceDataSet1
+ * InsuranceDataSet1}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.InsuranceType2Choice
+ * InsuranceType2Choice}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Location#mmInsuranceCertificate
+ * Location.mmInsuranceCertificate}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.InvestmentPlan#mmInsurance
+ * InvestmentPlan.mmInsurance}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ProductDelivery#mmInsuranceCertificate
+ * ProductDelivery.mmInsuranceCertificate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InsurancePartyRole#mmInsuranceCertificate
+ * InsurancePartyRole.mmInsuranceCertificate}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.Document Document}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -78,39 +110,6 @@ import java.util.List;
  * <li>
  * {@linkplain com.tools20022.repository.entity.InsuranceCertificate#mmRelatedInvestmentPlan
  * InsuranceCertificate.mmRelatedInvestmentPlan}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Location#mmInsuranceCertificate
- * Location.mmInsuranceCertificate}</li>
- * <li>{@linkplain com.tools20022.repository.entity.InvestmentPlan#mmInsurance
- * InvestmentPlan.mmInsurance}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ProductDelivery#mmInsuranceCertificate
- * ProductDelivery.mmInsuranceCertificate}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InsurancePartyRole#mmInsuranceCertificate
- * InsurancePartyRole.mmInsuranceCertificate}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.Document Document}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.choice.InsuranceType1Choice
- * InsuranceType1Choice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.RequiredSubmission3
- * RequiredSubmission3}</li>
- * <li>{@linkplain com.tools20022.repository.msg.InsuranceDataSet1
- * InsuranceDataSet1}</li>
- * <li>{@linkplain com.tools20022.repository.choice.InsuranceType2Choice
- * InsuranceType2Choice}</li>
  * </ul>
  * </li>
  * <li>
@@ -170,10 +169,10 @@ public class InsuranceCertificate extends Document {
 	 */
 	public static final MMBusinessAttribute mmEffectiveDate = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InsuranceDataSet1.mmEffectiveDate);
+			derivation_lazy = () -> Arrays.asList(InsuranceDataSet1.mmEffectiveDate);
 			elementContext_lazy = () -> InsuranceCertificate.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "EffectiveDate";
 			definition = "Date upon which cover under an insurance policy becomes effective.";
 			maxOccurs = 1;
@@ -219,10 +218,10 @@ public class InsuranceCertificate extends Document {
 	 */
 	public static final MMBusinessAttribute mmInsuredAmount = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InsuranceDataSet1.mmInsuredAmount);
+			derivation_lazy = () -> Arrays.asList(InsuranceDataSet1.mmInsuredAmount);
 			elementContext_lazy = () -> InsuranceCertificate.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InsuredAmount";
 			definition = "Value of the goods as insured under the insurance policy.";
 			maxOccurs = 1;
@@ -269,10 +268,10 @@ public class InsuranceCertificate extends Document {
 	 */
 	public static final MMBusinessAttribute mmInsuranceConditions = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InsuranceDataSet1.mmInsuranceConditions);
+			derivation_lazy = () -> Arrays.asList(InsuranceDataSet1.mmInsuranceConditions);
 			elementContext_lazy = () -> InsuranceCertificate.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InsuranceConditions";
 			definition = "Description of the conditions and exclusion clauses under which insurance is granted.";
 			maxOccurs = 1;
@@ -323,10 +322,10 @@ public class InsuranceCertificate extends Document {
 	 */
 	public static final MMBusinessAttribute mmInsuranceClauses = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RequiredSubmission3.mmClausesRequired, com.tools20022.repository.msg.InsuranceDataSet1.mmInsuranceClauses);
+			derivation_lazy = () -> Arrays.asList(RequiredSubmission3.mmClausesRequired, InsuranceDataSet1.mmInsuranceClauses);
 			elementContext_lazy = () -> InsuranceCertificate.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InsuranceClauses";
 			definition = "Standard insurance clauses defined by the Institute of London Underwriters (or the American Institute of marine Underwriters).";
 			maxOccurs = 1;
@@ -378,16 +377,16 @@ public class InsuranceCertificate extends Document {
 	 */
 	public static final MMBusinessAssociationEnd mmClaimsPayableAt = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InsuranceDataSet1.mmClaimsPayableAt);
+			derivation_lazy = () -> Arrays.asList(InsuranceDataSet1.mmClaimsPayableAt);
 			elementContext_lazy = () -> InsuranceCertificate.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ClaimsPayableAt";
 			definition = "Place where claims under the insurance policy will be paid.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.Location.mmInsuranceCertificate;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Location.mmObject();
 		}
 	};
@@ -427,10 +426,10 @@ public class InsuranceCertificate extends Document {
 	 */
 	public static final MMBusinessAttribute mmClaimsPayableIn = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InsuranceDataSet1.mmClaimsPayableIn);
+			derivation_lazy = () -> Arrays.asList(InsuranceDataSet1.mmClaimsPayableIn);
 			elementContext_lazy = () -> InsuranceCertificate.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ClaimsPayableIn";
 			definition = "Currency in which claims, if valid, will be paid.";
 			maxOccurs = 1;
@@ -476,12 +475,12 @@ public class InsuranceCertificate extends Document {
 		{
 			elementContext_lazy = () -> InsuranceCertificate.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InsurancePartyRole";
 			definition = "Role played by a party in the context of insurance.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.InsurancePartyRole.mmInsuranceCertificate;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.InsurancePartyRole.mmObject();
 		}
 	};
@@ -523,13 +522,13 @@ public class InsuranceCertificate extends Document {
 		{
 			elementContext_lazy = () -> InsuranceCertificate.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ProductDelivery";
 			definition = "Delivery parameters of a trade.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.ProductDelivery.mmInsuranceCertificate;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.ProductDelivery.mmObject();
 		}
 	};
@@ -579,11 +578,10 @@ public class InsuranceCertificate extends Document {
 	 */
 	public static final MMBusinessAttribute mmInsuranceType = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.InsuranceType1Choice.mmCode, com.tools20022.repository.choice.InsuranceType1Choice.mmProprietary,
-					com.tools20022.repository.choice.InsuranceType2Choice.mmCode, com.tools20022.repository.choice.InsuranceType2Choice.mmProprietary);
+			derivation_lazy = () -> Arrays.asList(InsuranceType1Choice.mmCode, InsuranceType1Choice.mmProprietary, InsuranceType2Choice.mmCode, InsuranceType2Choice.mmProprietary);
 			elementContext_lazy = () -> InsuranceCertificate.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InsuranceType";
 			definition = "Specifies the type of insurance.";
 			maxOccurs = 1;
@@ -629,13 +627,13 @@ public class InsuranceCertificate extends Document {
 		{
 			elementContext_lazy = () -> InsuranceCertificate.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedInvestmentPlan";
 			definition = "Investment plan covered by an insurance contract.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.InvestmentPlan.mmInsurance;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.InvestmentPlan.mmObject();
 		}
 	};
@@ -643,18 +641,16 @@ public class InsuranceCertificate extends Document {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InsuranceCertificate";
 				definition = "Formal document used to record a fact and used as proof of the fact that goods have been insured under an insurance policy.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Location.mmInsuranceCertificate, com.tools20022.repository.entity.InvestmentPlan.mmInsurance,
 						com.tools20022.repository.entity.ProductDelivery.mmInsuranceCertificate, com.tools20022.repository.entity.InsurancePartyRole.mmInsuranceCertificate);
 				superType_lazy = () -> Document.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.InsuranceCertificate.mmEffectiveDate, com.tools20022.repository.entity.InsuranceCertificate.mmInsuredAmount,
-						com.tools20022.repository.entity.InsuranceCertificate.mmInsuranceConditions, com.tools20022.repository.entity.InsuranceCertificate.mmInsuranceClauses,
-						com.tools20022.repository.entity.InsuranceCertificate.mmClaimsPayableAt, com.tools20022.repository.entity.InsuranceCertificate.mmClaimsPayableIn,
-						com.tools20022.repository.entity.InsuranceCertificate.mmInsurancePartyRole, com.tools20022.repository.entity.InsuranceCertificate.mmProductDelivery,
-						com.tools20022.repository.entity.InsuranceCertificate.mmInsuranceType, com.tools20022.repository.entity.InsuranceCertificate.mmRelatedInvestmentPlan);
+				element_lazy = () -> Arrays.asList(InsuranceCertificate.mmEffectiveDate, InsuranceCertificate.mmInsuredAmount, InsuranceCertificate.mmInsuranceConditions, InsuranceCertificate.mmInsuranceClauses,
+						InsuranceCertificate.mmClaimsPayableAt, InsuranceCertificate.mmClaimsPayableIn, InsuranceCertificate.mmInsurancePartyRole, InsuranceCertificate.mmProductDelivery, InsuranceCertificate.mmInsuranceType,
+						InsuranceCertificate.mmRelatedInvestmentPlan);
 				derivationComponent_lazy = () -> Arrays.asList(InsuranceType1Choice.mmObject(), RequiredSubmission3.mmObject(), InsuranceDataSet1.mmObject(), InsuranceType2Choice.mmObject());
 			}
 		});

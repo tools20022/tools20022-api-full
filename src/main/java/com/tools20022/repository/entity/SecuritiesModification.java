@@ -17,13 +17,13 @@
 
 package com.tools20022.repository.entity;
 
-import com.tools20022.metamodel.MMBusinessAssociationEnd;
-import com.tools20022.metamodel.MMBusinessAttribute;
-import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.*;
 import com.tools20022.repository.choice.*;
 import com.tools20022.repository.codeset.CorporateActionChangeTypeCode;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Number;
+import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -38,43 +38,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesModification#mmChangeType
- * SecuritiesModification.mmChangeType}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesModification#mmNewOrganisationInformation
- * SecuritiesModification.mmNewOrganisationInformation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesModification#mmRelatedCorporateEvent
- * SecuritiesModification.mmRelatedCorporateEvent}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesModification#mmNewSecurityReferenceData
- * SecuritiesModification.mmNewSecurityReferenceData}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesModification#mmNumberOfSharesIssued
- * SecuritiesModification.mmNumberOfSharesIssued}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesModification#mmLastTradingDate
- * SecuritiesModification.mmLastTradingDate}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Security#mmModification
- * Security.mmModification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Organisation#mmSecuritiesModification
- * Organisation.mmSecuritiesModification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmSecuritiesModification
- * CorporateActionEvent.mmSecuritiesModification}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -106,6 +69,43 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.choice.CorporateActionChangeTypeFormat7Choice
  * CorporateActionChangeTypeFormat7Choice}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.Security#mmModification
+ * Security.mmModification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Organisation#mmSecuritiesModification
+ * Organisation.mmSecuritiesModification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmSecuritiesModification
+ * CorporateActionEvent.mmSecuritiesModification}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesModification#mmChangeType
+ * SecuritiesModification.mmChangeType}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesModification#mmNewOrganisationInformation
+ * SecuritiesModification.mmNewOrganisationInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesModification#mmRelatedCorporateEvent
+ * SecuritiesModification.mmRelatedCorporateEvent}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesModification#mmNewSecurityReferenceData
+ * SecuritiesModification.mmNewSecurityReferenceData}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesModification#mmNumberOfSharesIssued
+ * SecuritiesModification.mmNumberOfSharesIssued}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesModification#mmLastTradingDate
+ * SecuritiesModification.mmLastTradingDate}</li>
  * </ul>
  * </li>
  * <li>
@@ -297,27 +297,19 @@ public class SecuritiesModification {
 	 */
 	public static final MMBusinessAttribute mmChangeType = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CorporateActionChangeTypeFormat2Choice.mmCode, com.tools20022.repository.choice.CorporateActionChangeTypeFormat2Choice.mmProprietary,
-					com.tools20022.repository.msg.CorporateActionOption5.mmChangeType, com.tools20022.repository.choice.CorporateActionChangeTypeFormat4Choice.mmCode,
-					com.tools20022.repository.choice.CorporateActionChangeTypeFormat4Choice.mmProprietary, com.tools20022.repository.msg.CorporateActionOption13.mmChangeType,
-					com.tools20022.repository.msg.CorporateActionOption25.mmChangeType, com.tools20022.repository.msg.CorporateActionOption30.mmChangeType, com.tools20022.repository.msg.CorporateActionOption38.mmChangeType,
-					com.tools20022.repository.msg.CorporateActionOption47.mmChangeType, com.tools20022.repository.msg.CorporateActionOption57.mmChangeType, com.tools20022.repository.msg.CorporateActionOption58.mmChangeType,
-					com.tools20022.repository.choice.CorporateActionChangeTypeFormat1Choice.mmCode, com.tools20022.repository.choice.CorporateActionChangeTypeFormat1Choice.mmProprietary,
-					com.tools20022.repository.msg.CorporateAction3.mmChangeType, com.tools20022.repository.choice.CorporateActionChangeTypeFormat3Choice.mmCode,
-					com.tools20022.repository.choice.CorporateActionChangeTypeFormat3Choice.mmProprietary, com.tools20022.repository.msg.CorporateAction4.mmChangeType, com.tools20022.repository.msg.CorporateAction5.mmChangeType,
-					com.tools20022.repository.msg.CorporateAction6.mmChangeType, com.tools20022.repository.msg.CorporateAction7.mmChangeType, com.tools20022.repository.msg.CorporateAction8.mmChangeType,
-					com.tools20022.repository.msg.CorporateAction10.mmChangeType, com.tools20022.repository.msg.CorporateAction11.mmChangeType, com.tools20022.repository.choice.CorporateActionChangeType1FormatChoice.mmCode,
-					com.tools20022.repository.choice.CorporateActionChangeType1FormatChoice.mmProprietary, com.tools20022.repository.msg.CorporateAction2.mmChangeType, com.tools20022.repository.msg.CorporateActionOption103.mmChangeType,
-					com.tools20022.repository.msg.CorporateAction12.mmChangeType, com.tools20022.repository.msg.CorporateActionOption107.mmChangeType, com.tools20022.repository.msg.CorporateAction17.mmChangeType,
-					com.tools20022.repository.msg.CorporateActionOption118.mmChangeType, com.tools20022.repository.msg.CorporateAction31.mmChangeType, com.tools20022.repository.choice.CorporateActionChangeTypeFormat5Choice.mmCode,
-					com.tools20022.repository.choice.CorporateActionChangeTypeFormat5Choice.mmProprietary, com.tools20022.repository.choice.CorporateActionChangeTypeFormat6Choice.mmCode,
-					com.tools20022.repository.choice.CorporateActionChangeTypeFormat6Choice.mmProprietary, com.tools20022.repository.msg.CorporateActionOption123.mmChangeType, com.tools20022.repository.msg.CorporateAction40.mmChangeType,
-					com.tools20022.repository.choice.CorporateActionChangeTypeFormat8Choice.mmCode, com.tools20022.repository.choice.CorporateActionChangeTypeFormat8Choice.mmProprietary,
-					com.tools20022.repository.choice.CorporateActionChangeTypeFormat7Choice.mmCode, com.tools20022.repository.choice.CorporateActionChangeTypeFormat7Choice.mmProprietary,
-					com.tools20022.repository.msg.CorporateActionOption131.mmChangeType, com.tools20022.repository.msg.CorporateActionOption134.mmChangeType);
+			derivation_lazy = () -> Arrays.asList(CorporateActionChangeTypeFormat2Choice.mmCode, CorporateActionChangeTypeFormat2Choice.mmProprietary, CorporateActionOption5.mmChangeType, CorporateActionChangeTypeFormat4Choice.mmCode,
+					CorporateActionChangeTypeFormat4Choice.mmProprietary, CorporateActionOption13.mmChangeType, CorporateActionOption25.mmChangeType, CorporateActionOption30.mmChangeType, CorporateActionOption38.mmChangeType,
+					CorporateActionOption47.mmChangeType, CorporateActionOption57.mmChangeType, CorporateActionOption58.mmChangeType, CorporateActionChangeTypeFormat1Choice.mmCode, CorporateActionChangeTypeFormat1Choice.mmProprietary,
+					CorporateAction3.mmChangeType, CorporateActionChangeTypeFormat3Choice.mmCode, CorporateActionChangeTypeFormat3Choice.mmProprietary, CorporateAction4.mmChangeType, CorporateAction5.mmChangeType,
+					CorporateAction6.mmChangeType, CorporateAction7.mmChangeType, CorporateAction8.mmChangeType, CorporateAction10.mmChangeType, CorporateAction11.mmChangeType, CorporateActionChangeType1FormatChoice.mmCode,
+					CorporateActionChangeType1FormatChoice.mmProprietary, CorporateAction2.mmChangeType, CorporateActionOption103.mmChangeType, CorporateAction12.mmChangeType, CorporateActionOption107.mmChangeType,
+					CorporateAction17.mmChangeType, CorporateActionOption118.mmChangeType, CorporateAction31.mmChangeType, CorporateActionChangeTypeFormat5Choice.mmCode, CorporateActionChangeTypeFormat5Choice.mmProprietary,
+					CorporateActionChangeTypeFormat6Choice.mmCode, CorporateActionChangeTypeFormat6Choice.mmProprietary, CorporateActionOption123.mmChangeType, CorporateAction40.mmChangeType, CorporateActionChangeTypeFormat8Choice.mmCode,
+					CorporateActionChangeTypeFormat8Choice.mmProprietary, CorporateActionChangeTypeFormat7Choice.mmCode, CorporateActionChangeTypeFormat7Choice.mmProprietary, CorporateActionOption131.mmChangeType,
+					CorporateActionOption134.mmChangeType);
 			elementContext_lazy = () -> SecuritiesModification.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ChangeType";
 			definition = "Type of changes affecting the security form.";
 			maxOccurs = 1;
@@ -405,22 +397,19 @@ public class SecuritiesModification {
 	 */
 	public static final MMBusinessAssociationEnd mmNewOrganisationInformation = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateAction3.mmNewPlaceOfIncorporation, com.tools20022.repository.msg.CorporateAction4.mmNewPlaceOfIncorporation,
-					com.tools20022.repository.msg.CorporateAction5.mmNewPlaceOfIncorporation, com.tools20022.repository.msg.CorporateAction6.mmNewPlaceOfIncorporation,
-					com.tools20022.repository.msg.CorporateAction7.mmNewPlaceOfIncorporation, com.tools20022.repository.msg.CorporateAction8.mmNewPlaceOfIncorporation,
-					com.tools20022.repository.msg.CorporateAction10.mmNewPlaceOfIncorporation, com.tools20022.repository.msg.CorporateAction11.mmNewPlaceOfIncorporation,
-					com.tools20022.repository.msg.CorporateAction2.mmNewPlaceOfIncorporation, com.tools20022.repository.msg.CorporateAction12.mmNewPlaceOfIncorporation,
-					com.tools20022.repository.msg.CorporateAction17.mmNewPlaceOfIncorporation, com.tools20022.repository.msg.CorporateAction31.mmNewPlaceOfIncorporation,
-					com.tools20022.repository.msg.CorporateAction40.mmNewPlaceOfIncorporation);
+			derivation_lazy = () -> Arrays.asList(CorporateAction3.mmNewPlaceOfIncorporation, CorporateAction4.mmNewPlaceOfIncorporation, CorporateAction5.mmNewPlaceOfIncorporation, CorporateAction6.mmNewPlaceOfIncorporation,
+					CorporateAction7.mmNewPlaceOfIncorporation, CorporateAction8.mmNewPlaceOfIncorporation, CorporateAction10.mmNewPlaceOfIncorporation, CorporateAction11.mmNewPlaceOfIncorporation,
+					CorporateAction2.mmNewPlaceOfIncorporation, CorporateAction12.mmNewPlaceOfIncorporation, CorporateAction17.mmNewPlaceOfIncorporation, CorporateAction31.mmNewPlaceOfIncorporation,
+					CorporateAction40.mmNewPlaceOfIncorporation);
 			elementContext_lazy = () -> SecuritiesModification.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NewOrganisationInformation";
 			definition = "New name of a company following a name change.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.Organisation.mmSecuritiesModification;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Organisation.mmObject();
 		}
 	};
@@ -466,13 +455,13 @@ public class SecuritiesModification {
 		{
 			elementContext_lazy = () -> SecuritiesModification.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedCorporateEvent";
 			definition = "Specifies the parameters of the event related to the modification of the securities.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmSecuritiesModification;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmObject();
 		}
 	};
@@ -513,13 +502,13 @@ public class SecuritiesModification {
 		{
 			elementContext_lazy = () -> SecuritiesModification.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NewSecurityReferenceData";
 			definition = "Specifies the updated information of the new security.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.Security.mmModification;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 		}
 	};
@@ -554,7 +543,7 @@ public class SecuritiesModification {
 		{
 			elementContext_lazy = () -> SecuritiesModification.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NumberOfSharesIssued";
 			definition = "The number of shares the issuer is creating as part of the event";
 			maxOccurs = 1;
@@ -595,7 +584,7 @@ public class SecuritiesModification {
 		{
 			elementContext_lazy = () -> SecuritiesModification.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "LastTradingDate";
 			definition = "Date/time at which the securities to be reorganised will cease to be tradeable.";
 			maxOccurs = 1;
@@ -607,15 +596,14 @@ public class SecuritiesModification {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesModification";
 				definition = "Modification of the reference data of a security or of the organisation that issued it.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Security.mmModification, com.tools20022.repository.entity.Organisation.mmSecuritiesModification,
 						com.tools20022.repository.entity.CorporateActionEvent.mmSecuritiesModification);
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesModification.mmChangeType, com.tools20022.repository.entity.SecuritiesModification.mmNewOrganisationInformation,
-						com.tools20022.repository.entity.SecuritiesModification.mmRelatedCorporateEvent, com.tools20022.repository.entity.SecuritiesModification.mmNewSecurityReferenceData,
-						com.tools20022.repository.entity.SecuritiesModification.mmNumberOfSharesIssued, com.tools20022.repository.entity.SecuritiesModification.mmLastTradingDate);
+				element_lazy = () -> Arrays.asList(SecuritiesModification.mmChangeType, SecuritiesModification.mmNewOrganisationInformation, SecuritiesModification.mmRelatedCorporateEvent, SecuritiesModification.mmNewSecurityReferenceData,
+						SecuritiesModification.mmNumberOfSharesIssued, SecuritiesModification.mmLastTradingDate);
 				derivationComponent_lazy = () -> Arrays.asList(CorporateActionChangeTypeFormat2Choice.mmObject(), CorporateActionChangeTypeFormat4Choice.mmObject(), CorporateActionChangeTypeFormat1Choice.mmObject(),
 						CorporateActionChangeTypeFormat3Choice.mmObject(), CorporateActionChangeType1FormatChoice.mmObject(), CorporateActionChangeTypeFormat5Choice.mmObject(), CorporateActionChangeTypeFormat6Choice.mmObject(),
 						CorporateActionChangeTypeFormat8Choice.mmObject(), CorporateActionChangeTypeFormat7Choice.mmObject());

@@ -19,7 +19,9 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.SecuritiesQuantity;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.ProprietaryQuantity1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -104,7 +106,7 @@ public class TransactionQuantities1Choice {
 			componentContext_lazy = () -> TransactionQuantities1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Qty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Quantity";
 			definition = "Specifies the quantity (eg of securities) in the underlying transaction.";
 			maxOccurs = 1;
@@ -154,7 +156,7 @@ public class TransactionQuantities1Choice {
 			componentContext_lazy = () -> TransactionQuantities1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Proprietary quantities specification defined in the underlying transaction.";
 			maxOccurs = 1;
@@ -167,10 +169,10 @@ public class TransactionQuantities1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.TransactionQuantities1Choice.mmQuantity, com.tools20022.repository.choice.TransactionQuantities1Choice.mmProprietary);
+				messageElement_lazy = () -> Arrays.asList(TransactionQuantities1Choice.mmQuantity, TransactionQuantities1Choice.mmProprietary);
 				trace_lazy = () -> SecuritiesQuantity.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TransactionQuantities1Choice";
 				definition = "Specifies the quantities (eg of securities) in the underlying transaction.";
 			}

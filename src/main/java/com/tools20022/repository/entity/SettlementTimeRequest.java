@@ -17,12 +17,11 @@
 
 package com.tools20022.repository.entity;
 
-import com.tools20022.metamodel.MMBusinessAssociationEnd;
-import com.tools20022.metamodel.MMBusinessAttribute;
-import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.*;
 import com.tools20022.repository.choice.SettlementDate8Choice;
 import com.tools20022.repository.choice.SettlementDateCode5Choice;
 import com.tools20022.repository.datatype.ISODateTime;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.SettlementTimeRequest1;
 import com.tools20022.repository.msg.SettlementTimeRequest2;
 import java.util.Arrays;
@@ -39,24 +38,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
  * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SettlementTimeRequest#mmPayment
- * SettlementTimeRequest.mmPayment}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SettlementTimeRequest#mmCLSTime
- * SettlementTimeRequest.mmCLSTime}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SettlementTimeRequest#mmTillTime
- * SettlementTimeRequest.mmTillTime}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SettlementTimeRequest#mmFromTime
- * SettlementTimeRequest.mmFromTime}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SettlementTimeRequest#mmRejectTime
- * SettlementTimeRequest.mmRejectTime}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.SettlementDateCode5Choice
+ * SettlementDateCode5Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.SettlementDate8Choice
+ * SettlementDate8Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SettlementTimeRequest1
+ * SettlementTimeRequest1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SettlementTimeRequest2
+ * SettlementTimeRequest2}</li>
  * </ul>
  * </li>
  * <li>
@@ -80,18 +73,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * SettlementDate8Choice.mmCode}</li>
  * </ul>
  * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.choice.SettlementDateCode5Choice
- * SettlementDateCode5Choice}</li>
- * <li>{@linkplain com.tools20022.repository.choice.SettlementDate8Choice
- * SettlementDate8Choice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SettlementTimeRequest1
- * SettlementTimeRequest1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SettlementTimeRequest2
- * SettlementTimeRequest2}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SettlementTimeRequest#mmPayment
+ * SettlementTimeRequest.mmPayment}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SettlementTimeRequest#mmCLSTime
+ * SettlementTimeRequest.mmCLSTime}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SettlementTimeRequest#mmTillTime
+ * SettlementTimeRequest.mmTillTime}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SettlementTimeRequest#mmFromTime
+ * SettlementTimeRequest.mmFromTime}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SettlementTimeRequest#mmRejectTime
+ * SettlementTimeRequest.mmRejectTime}</li>
  * </ul>
  * </li>
  * <li>
@@ -151,13 +150,13 @@ public class SettlementTimeRequest {
 		{
 			elementContext_lazy = () -> SettlementTimeRequest.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Payment";
 			definition = "Payment for which settlement times are specified.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.Payment.mmSettlementTimeRequest;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Payment.mmObject();
 		}
 	};
@@ -204,10 +203,10 @@ public class SettlementTimeRequest {
 	 */
 	public static final MMBusinessAttribute mmCLSTime = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SettlementTimeRequest1.mmCLSTime, com.tools20022.repository.msg.SettlementTimeRequest2.mmCLSTime);
+			derivation_lazy = () -> Arrays.asList(SettlementTimeRequest1.mmCLSTime, SettlementTimeRequest2.mmCLSTime);
 			elementContext_lazy = () -> SettlementTimeRequest.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CLSTime";
 			definition = "Time by which the amount of money must be credited, with confirmation, to the CLS Bank's account at the central bank.\r\nUsage: Time must be expressed in Central European Time (CET).";
 			maxOccurs = 1;
@@ -251,10 +250,10 @@ public class SettlementTimeRequest {
 	 */
 	public static final MMBusinessAttribute mmTillTime = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SettlementTimeRequest2.mmTillTime);
+			derivation_lazy = () -> Arrays.asList(SettlementTimeRequest2.mmTillTime);
 			elementContext_lazy = () -> SettlementTimeRequest.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TillTime";
 			definition = "Time until when the payment may be settled.";
 			maxOccurs = 1;
@@ -298,10 +297,10 @@ public class SettlementTimeRequest {
 	 */
 	public static final MMBusinessAttribute mmFromTime = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SettlementTimeRequest2.mmFromTime);
+			derivation_lazy = () -> Arrays.asList(SettlementTimeRequest2.mmFromTime);
 			elementContext_lazy = () -> SettlementTimeRequest.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "FromTime";
 			definition = "Time as from when the payment may be settled.";
 			maxOccurs = 1;
@@ -346,10 +345,10 @@ public class SettlementTimeRequest {
 	 */
 	public static final MMBusinessAttribute mmRejectTime = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SettlementTimeRequest2.mmRejectTime);
+			derivation_lazy = () -> Arrays.asList(SettlementTimeRequest2.mmRejectTime);
 			elementContext_lazy = () -> SettlementTimeRequest.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RejectTime";
 			definition = "Time by when the payment must be settled to avoid rejection.";
 			maxOccurs = 1;
@@ -361,14 +360,13 @@ public class SettlementTimeRequest {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SettlementTimeRequest";
 				definition = "Provides information on the requested settlement time(s) of the payment instruction.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Payment.mmSettlementTimeRequest);
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SettlementDate8Choice.mmDate, com.tools20022.repository.choice.SettlementDate8Choice.mmCode);
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SettlementTimeRequest.mmPayment, com.tools20022.repository.entity.SettlementTimeRequest.mmCLSTime,
-						com.tools20022.repository.entity.SettlementTimeRequest.mmTillTime, com.tools20022.repository.entity.SettlementTimeRequest.mmFromTime, com.tools20022.repository.entity.SettlementTimeRequest.mmRejectTime);
+				derivationElement_lazy = () -> Arrays.asList(SettlementDate8Choice.mmDate, SettlementDate8Choice.mmCode);
+				element_lazy = () -> Arrays.asList(SettlementTimeRequest.mmPayment, SettlementTimeRequest.mmCLSTime, SettlementTimeRequest.mmTillTime, SettlementTimeRequest.mmFromTime, SettlementTimeRequest.mmRejectTime);
 				derivationComponent_lazy = () -> Arrays.asList(SettlementDateCode5Choice.mmObject(), SettlementDate8Choice.mmObject(), SettlementTimeRequest1.mmObject(), SettlementTimeRequest2.mmObject());
 			}
 		});

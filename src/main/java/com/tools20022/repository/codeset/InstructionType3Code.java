@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.InstructionTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -84,7 +86,7 @@ public class InstructionType3Code extends InstructionTypeCode {
 	 */
 	public static final MMCode mmMatch = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Match";
 			owner_lazy = () -> InstructionType3Code.mmObject();
 		}
@@ -107,7 +109,7 @@ public class InstructionType3Code extends InstructionTypeCode {
 	 */
 	public static final MMCode mmPreMatch = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreMatch";
 			owner_lazy = () -> InstructionType3Code.mmObject();
 		}
@@ -116,12 +118,12 @@ public class InstructionType3Code extends InstructionTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("MTCH");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InstructionType3Code";
 				definition = "Specifies whether the submitted data set must be matched or pre-matched.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.InstructionType3Code.mmMatch, com.tools20022.repository.codeset.InstructionType3Code.mmPreMatch);
+				code_lazy = () -> Arrays.asList(InstructionType3Code.mmMatch, InstructionType3Code.mmPreMatch);
 				trace_lazy = () -> InstructionTypeCode.mmObject();
 			}
 		});

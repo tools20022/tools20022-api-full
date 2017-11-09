@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.MessageTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -86,7 +88,7 @@ public class StatementType1Code extends MessageTypeCode {
 	 */
 	public static final MMCode mmAccountingHoldings = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountingHoldings";
 			owner_lazy = () -> StatementType1Code.mmObject();
 		}
@@ -109,7 +111,7 @@ public class StatementType1Code extends MessageTypeCode {
 	 */
 	public static final MMCode mmCustodyHoldings = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CustodyHoldings";
 			owner_lazy = () -> StatementType1Code.mmObject();
 		}
@@ -132,7 +134,7 @@ public class StatementType1Code extends MessageTypeCode {
 	 */
 	public static final MMCode mmInvestmentFundTransactions = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestmentFundTransactions";
 			owner_lazy = () -> StatementType1Code.mmObject();
 		}
@@ -141,13 +143,12 @@ public class StatementType1Code extends MessageTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ST03");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "StatementType1Code";
 				definition = "Specifies the statement message.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.StatementType1Code.mmAccountingHoldings, com.tools20022.repository.codeset.StatementType1Code.mmCustodyHoldings,
-						com.tools20022.repository.codeset.StatementType1Code.mmInvestmentFundTransactions);
+				code_lazy = () -> Arrays.asList(StatementType1Code.mmAccountingHoldings, StatementType1Code.mmCustodyHoldings, StatementType1Code.mmInvestmentFundTransactions);
 				trace_lazy = () -> MessageTypeCode.mmObject();
 			}
 		});

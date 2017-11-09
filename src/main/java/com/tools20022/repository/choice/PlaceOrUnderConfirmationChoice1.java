@@ -20,8 +20,10 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.PresentationParty1Code;
 import com.tools20022.repository.entity.UndertakingPlaceOfPresentation;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.PlaceOfPresentation1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -103,7 +105,7 @@ public class PlaceOrUnderConfirmationChoice1 {
 			componentContext_lazy = () -> PlaceOrUnderConfirmationChoice1.mmObject();
 			isDerived = false;
 			xmlTag = "PlcOfPresntn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceOfPresentation";
 			definition = "Party to which the presentation is to be made.";
 			maxOccurs = 1;
@@ -146,7 +148,7 @@ public class PlaceOrUnderConfirmationChoice1 {
 			componentContext_lazy = () -> PlaceOrUnderConfirmationChoice1.mmObject();
 			isDerived = false;
 			xmlTag = "PresntnUdrConf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PresentationUnderConfirmation";
 			definition = "Place of presentation when there is a confirmation.";
 			maxOccurs = 1;
@@ -158,11 +160,10 @@ public class PlaceOrUnderConfirmationChoice1 {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PlaceOrUnderConfirmationChoice1.mmPlaceOfPresentation,
-						com.tools20022.repository.choice.PlaceOrUnderConfirmationChoice1.mmPresentationUnderConfirmation);
+				messageElement_lazy = () -> Arrays.asList(PlaceOrUnderConfirmationChoice1.mmPlaceOfPresentation, PlaceOrUnderConfirmationChoice1.mmPresentationUnderConfirmation);
 				trace_lazy = () -> UndertakingPlaceOfPresentation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PlaceOrUnderConfirmationChoice1";
 				definition = "Choice between a location and codified form.";
 			}

@@ -20,11 +20,12 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.TransactionIndividualStatus1Code;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Max35Text;
-import com.tools20022.repository.entity.Charges;
-import com.tools20022.repository.entity.Payment;
+import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -147,7 +148,7 @@ public class PaymentTransactionInformation1 {
 			componentContext_lazy = () -> PaymentTransactionInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "StsId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusIdentification";
 			definition = "Unique identification as assigned by an instructing party for an instructed party to unambiguously identify the reported status.";
 			maxOccurs = 1;
@@ -193,11 +194,11 @@ public class PaymentTransactionInformation1 {
 	 */
 	public static final MMMessageAttribute mmOriginalPaymentInformationIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentIdentification.mmExecutionIdentification;
+			businessElementTrace_lazy = () -> PaymentIdentification.mmExecutionIdentification;
 			componentContext_lazy = () -> PaymentTransactionInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlPmtInfId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalPaymentInformationIdentification";
 			definition = "Unique and unambiguous identifier of the original payment information block as assigned by the original sending party.";
 			maxOccurs = 1;
@@ -248,11 +249,11 @@ public class PaymentTransactionInformation1 {
 	 */
 	public static final MMMessageAttribute mmOriginalInstructionIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentIdentification.mmInstructionIdentification;
+			businessElementTrace_lazy = () -> PaymentIdentification.mmInstructionIdentification;
 			componentContext_lazy = () -> PaymentTransactionInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlInstrId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalInstructionIdentification";
 			definition = "Original unique instruction identification as assigned by an instructing party for an instructed party to unambiguously identify the original instruction.\n\nUsage: the original instruction identification is the original point to point reference used between the instructing party and the instructed party to refer to the original instruction.";
 			maxOccurs = 1;
@@ -299,11 +300,11 @@ public class PaymentTransactionInformation1 {
 	 */
 	public static final MMMessageAttribute mmOriginalEndToEndIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentIdentification.mmEndToEndIdentification;
+			businessElementTrace_lazy = () -> PaymentIdentification.mmEndToEndIdentification;
 			componentContext_lazy = () -> PaymentTransactionInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlEndToEndId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalEndToEndIdentification";
 			definition = "Original unique identification assigned by the initiating party to unambiguously identify the original transaction. This identification is passed on, unchanged, throughout the entire end-to-end chain.";
 			maxOccurs = 1;
@@ -350,11 +351,11 @@ public class PaymentTransactionInformation1 {
 	 */
 	public static final MMMessageAttribute mmOriginalTransactionIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentIdentification.mmTransactionIdentification;
+			businessElementTrace_lazy = () -> PaymentIdentification.mmTransactionIdentification;
 			componentContext_lazy = () -> PaymentTransactionInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlTxId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalTransactionIdentification";
 			definition = "Original identification of a transaction, as assigned by the first instructing agent and passed on, unchanged, throughout the entire interbank chain.";
 			maxOccurs = 1;
@@ -398,11 +399,11 @@ public class PaymentTransactionInformation1 {
 	 */
 	public static final MMMessageAttribute mmTransactionStatus = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentStatus.mmStatus;
+			businessElementTrace_lazy = () -> PaymentStatus.mmStatus;
 			componentContext_lazy = () -> PaymentTransactionInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "TxSts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionStatus";
 			definition = "Specifies the status of a transaction, in a coded form.";
 			maxOccurs = 1;
@@ -445,11 +446,11 @@ public class PaymentTransactionInformation1 {
 	 */
 	public static final MMMessageAssociationEnd mmStatusReasonInformation = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.mmStatusReason;
+			businessElementTrace_lazy = () -> Status.mmStatusReason;
 			componentContext_lazy = () -> PaymentTransactionInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "StsRsnInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusReasonInformation";
 			definition = "Detailed information on the status reason.";
 			minOccurs = 0;
@@ -500,7 +501,7 @@ public class PaymentTransactionInformation1 {
 			componentContext_lazy = () -> PaymentTransactionInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "ChrgsInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChargesInformation";
 			definition = "Information on charges related to the processing of the rejection of the instruction.\n\nUsage: ChargesInformation is past on for information purposes only. Settlement of the charges will be done separately.";
 			minOccurs = 0;
@@ -550,11 +551,11 @@ public class PaymentTransactionInformation1 {
 	 */
 	public static final MMMessageAttribute mmAcceptanceDateTime = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentExecution.mmAcceptanceDateTime;
+			businessElementTrace_lazy = () -> PaymentExecution.mmAcceptanceDateTime;
 			componentContext_lazy = () -> PaymentTransactionInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "AccptncDtTm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcceptanceDateTime";
 			definition = "Point in time when the payment order from the initiating party meets the processing conditions of the account servicing agent (debtor's agent in case of a credit transfer, creditor's agent in case of a direct debit). This means - amongst others - that the account servicing agent has received the payment order and has applied checks as eg, authorisation, availability of funds.";
 			maxOccurs = 1;
@@ -600,11 +601,11 @@ public class PaymentTransactionInformation1 {
 	 */
 	public static final MMMessageAssociationEnd mmInstructingAgent = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Organisation.mmOrganisationIdentification;
+			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> PaymentTransactionInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "InstgAgt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructingAgent";
 			definition = "Agent that instructs the next party in the chain to carry out the (set of) instruction(s).";
 			maxOccurs = 1;
@@ -651,11 +652,11 @@ public class PaymentTransactionInformation1 {
 	 */
 	public static final MMMessageAssociationEnd mmInstructedAgent = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Organisation.mmOrganisationIdentification;
+			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> PaymentTransactionInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "InstdAgt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructedAgent";
 			definition = "Agent that is instructed by the previous party in the chain to carry out the (set of) instruction(s).";
 			maxOccurs = 1;
@@ -703,7 +704,7 @@ public class PaymentTransactionInformation1 {
 			componentContext_lazy = () -> PaymentTransactionInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlTxRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalTransactionReference";
 			definition = "Set of key elements of the original transaction being referred to.";
 			maxOccurs = 1;
@@ -716,18 +717,15 @@ public class PaymentTransactionInformation1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentTransactionInformation1.mmStatusIdentification,
-						com.tools20022.repository.msg.PaymentTransactionInformation1.mmOriginalPaymentInformationIdentification, com.tools20022.repository.msg.PaymentTransactionInformation1.mmOriginalInstructionIdentification,
-						com.tools20022.repository.msg.PaymentTransactionInformation1.mmOriginalEndToEndIdentification, com.tools20022.repository.msg.PaymentTransactionInformation1.mmOriginalTransactionIdentification,
-						com.tools20022.repository.msg.PaymentTransactionInformation1.mmTransactionStatus, com.tools20022.repository.msg.PaymentTransactionInformation1.mmStatusReasonInformation,
-						com.tools20022.repository.msg.PaymentTransactionInformation1.mmChargesInformation, com.tools20022.repository.msg.PaymentTransactionInformation1.mmAcceptanceDateTime,
-						com.tools20022.repository.msg.PaymentTransactionInformation1.mmInstructingAgent, com.tools20022.repository.msg.PaymentTransactionInformation1.mmInstructedAgent,
-						com.tools20022.repository.msg.PaymentTransactionInformation1.mmOriginalTransactionReference);
+				messageElement_lazy = () -> Arrays.asList(PaymentTransactionInformation1.mmStatusIdentification, PaymentTransactionInformation1.mmOriginalPaymentInformationIdentification,
+						PaymentTransactionInformation1.mmOriginalInstructionIdentification, PaymentTransactionInformation1.mmOriginalEndToEndIdentification, PaymentTransactionInformation1.mmOriginalTransactionIdentification,
+						PaymentTransactionInformation1.mmTransactionStatus, PaymentTransactionInformation1.mmStatusReasonInformation, PaymentTransactionInformation1.mmChargesInformation, PaymentTransactionInformation1.mmAcceptanceDateTime,
+						PaymentTransactionInformation1.mmInstructingAgent, PaymentTransactionInformation1.mmInstructedAgent, PaymentTransactionInformation1.mmOriginalTransactionReference);
 				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.pain.PaymentStatusReportV02.mmTransactionInformationAndStatus,
 						com.tools20022.repository.area.pacs.PaymentStatusReportV02.mmTransactionInformationAndStatus);
 				trace_lazy = () -> Payment.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PaymentTransactionInformation1";
 				definition = "Information concerning the original transactions, to which the status report message refers.";
 			}

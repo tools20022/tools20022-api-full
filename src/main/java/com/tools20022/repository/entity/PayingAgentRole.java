@@ -19,7 +19,9 @@ package com.tools20022.repository.entity;
 
 import com.tools20022.metamodel.MMBusinessAttribute;
 import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.CurrencyAndAmount;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -92,7 +94,7 @@ public class PayingAgentRole {
 		{
 			elementContext_lazy = () -> PayingAgentRole.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CommissionAmount";
 			definition = "Amount of paying/sub-paying agent commission.";
 			maxOccurs = 1;
@@ -104,11 +106,11 @@ public class PayingAgentRole {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PayingAgentRole";
 				definition = "Additional party appointed to distribute payment or securities on behalf of the issuer.";
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.PayingAgentRole.mmCommissionAmount);
+				element_lazy = () -> Arrays.asList(PayingAgentRole.mmCommissionAmount);
 			}
 		});
 		return mmObject_lazy.get();

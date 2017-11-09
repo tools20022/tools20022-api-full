@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.TradingModeTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -92,7 +94,7 @@ public class TradingModeType1Code extends TradingModeTypeCode {
 	 */
 	public static final MMCode mmQuotationDriven = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuotationDriven";
 			owner_lazy = () -> TradingModeType1Code.mmObject();
 		}
@@ -115,7 +117,7 @@ public class TradingModeType1Code extends TradingModeTypeCode {
 	 */
 	public static final MMCode mmOrderDriven = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrderDriven";
 			owner_lazy = () -> TradingModeType1Code.mmObject();
 		}
@@ -138,7 +140,7 @@ public class TradingModeType1Code extends TradingModeTypeCode {
 	 */
 	public static final MMCode mmNegotiationTrade = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NegotiationTrade";
 			owner_lazy = () -> TradingModeType1Code.mmObject();
 		}
@@ -161,7 +163,7 @@ public class TradingModeType1Code extends TradingModeTypeCode {
 	 */
 	public static final MMCode mmAuction = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Auction";
 			owner_lazy = () -> TradingModeType1Code.mmObject();
 		}
@@ -184,7 +186,7 @@ public class TradingModeType1Code extends TradingModeTypeCode {
 	 */
 	public static final MMCode mmMatching = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Matching";
 			owner_lazy = () -> TradingModeType1Code.mmObject();
 		}
@@ -207,7 +209,7 @@ public class TradingModeType1Code extends TradingModeTypeCode {
 	 */
 	public static final MMCode mmBilateral = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Bilateral";
 			owner_lazy = () -> TradingModeType1Code.mmObject();
 		}
@@ -230,7 +232,7 @@ public class TradingModeType1Code extends TradingModeTypeCode {
 	 */
 	public static final MMCode mmAnonymous = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Anonymous";
 			owner_lazy = () -> TradingModeType1Code.mmObject();
 		}
@@ -239,13 +241,12 @@ public class TradingModeType1Code extends TradingModeTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TradingModeType1Code";
 				definition = "Identifies the type of the trading mode.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TradingModeType1Code.mmQuotationDriven, com.tools20022.repository.codeset.TradingModeType1Code.mmOrderDriven,
-						com.tools20022.repository.codeset.TradingModeType1Code.mmNegotiationTrade, com.tools20022.repository.codeset.TradingModeType1Code.mmAuction, com.tools20022.repository.codeset.TradingModeType1Code.mmMatching,
-						com.tools20022.repository.codeset.TradingModeType1Code.mmBilateral, com.tools20022.repository.codeset.TradingModeType1Code.mmAnonymous);
+				code_lazy = () -> Arrays.asList(TradingModeType1Code.mmQuotationDriven, TradingModeType1Code.mmOrderDriven, TradingModeType1Code.mmNegotiationTrade, TradingModeType1Code.mmAuction, TradingModeType1Code.mmMatching,
+						TradingModeType1Code.mmBilateral, TradingModeType1Code.mmAnonymous);
 				trace_lazy = () -> TradingModeTypeCode.mmObject();
 			}
 		});

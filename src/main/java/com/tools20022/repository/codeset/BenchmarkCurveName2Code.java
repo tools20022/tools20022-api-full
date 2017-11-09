@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.BenchmarkCurveNameCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -149,7 +151,7 @@ public class BenchmarkCurveName2Code extends BenchmarkCurveNameCode {
 	 */
 	public static final MMCode mmWIBOR = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WIBOR";
 			owner_lazy = () -> BenchmarkCurveName2Code.mmObject();
 		}
@@ -172,7 +174,7 @@ public class BenchmarkCurveName2Code extends BenchmarkCurveNameCode {
 	 */
 	public static final MMCode mmTreasury = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Treasury";
 			owner_lazy = () -> BenchmarkCurveName2Code.mmObject();
 		}
@@ -195,7 +197,7 @@ public class BenchmarkCurveName2Code extends BenchmarkCurveNameCode {
 	 */
 	public static final MMCode mmTIBOR = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TIBOR";
 			owner_lazy = () -> BenchmarkCurveName2Code.mmObject();
 		}
@@ -218,7 +220,7 @@ public class BenchmarkCurveName2Code extends BenchmarkCurveNameCode {
 	 */
 	public static final MMCode mmTELBOR = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TELBOR";
 			owner_lazy = () -> BenchmarkCurveName2Code.mmObject();
 		}
@@ -241,7 +243,7 @@ public class BenchmarkCurveName2Code extends BenchmarkCurveNameCode {
 	 */
 	public static final MMCode mmSWAP = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SWAP";
 			owner_lazy = () -> BenchmarkCurveName2Code.mmObject();
 		}
@@ -264,7 +266,7 @@ public class BenchmarkCurveName2Code extends BenchmarkCurveNameCode {
 	 */
 	public static final MMCode mmSTIBOR = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "STIBOR";
 			owner_lazy = () -> BenchmarkCurveName2Code.mmObject();
 		}
@@ -287,7 +289,7 @@ public class BenchmarkCurveName2Code extends BenchmarkCurveNameCode {
 	 */
 	public static final MMCode mmPRIBOR = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PRIBOR";
 			owner_lazy = () -> BenchmarkCurveName2Code.mmObject();
 		}
@@ -310,7 +312,7 @@ public class BenchmarkCurveName2Code extends BenchmarkCurveNameCode {
 	 */
 	public static final MMCode mmPfandbriefe = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Pfandbriefe";
 			owner_lazy = () -> BenchmarkCurveName2Code.mmObject();
 		}
@@ -333,7 +335,7 @@ public class BenchmarkCurveName2Code extends BenchmarkCurveNameCode {
 	 */
 	public static final MMCode mmNIBOR = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NIBOR";
 			owner_lazy = () -> BenchmarkCurveName2Code.mmObject();
 		}
@@ -356,7 +358,7 @@ public class BenchmarkCurveName2Code extends BenchmarkCurveNameCode {
 	 */
 	public static final MMCode mmMuniAAA = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MuniAAA";
 			owner_lazy = () -> BenchmarkCurveName2Code.mmObject();
 		}
@@ -379,7 +381,7 @@ public class BenchmarkCurveName2Code extends BenchmarkCurveNameCode {
 	 */
 	public static final MMCode mmMOSPRIM = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MOSPRIM";
 			owner_lazy = () -> BenchmarkCurveName2Code.mmObject();
 		}
@@ -402,7 +404,7 @@ public class BenchmarkCurveName2Code extends BenchmarkCurveNameCode {
 	 */
 	public static final MMCode mmLIBOR = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LIBOR";
 			owner_lazy = () -> BenchmarkCurveName2Code.mmObject();
 		}
@@ -425,7 +427,7 @@ public class BenchmarkCurveName2Code extends BenchmarkCurveNameCode {
 	 */
 	public static final MMCode mmLIBID = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LIBID";
 			owner_lazy = () -> BenchmarkCurveName2Code.mmObject();
 		}
@@ -448,7 +450,7 @@ public class BenchmarkCurveName2Code extends BenchmarkCurveNameCode {
 	 */
 	public static final MMCode mmJIBAR = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "JIBAR";
 			owner_lazy = () -> BenchmarkCurveName2Code.mmObject();
 		}
@@ -471,7 +473,7 @@ public class BenchmarkCurveName2Code extends BenchmarkCurveNameCode {
 	 */
 	public static final MMCode mmISDAFIX = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ISDAFIX";
 			owner_lazy = () -> BenchmarkCurveName2Code.mmObject();
 		}
@@ -494,7 +496,7 @@ public class BenchmarkCurveName2Code extends BenchmarkCurveNameCode {
 	 */
 	public static final MMCode mmGCFRepo = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GCFRepo";
 			owner_lazy = () -> BenchmarkCurveName2Code.mmObject();
 		}
@@ -517,7 +519,7 @@ public class BenchmarkCurveName2Code extends BenchmarkCurveNameCode {
 	 */
 	public static final MMCode mmFutureSWAP = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FutureSWAP";
 			owner_lazy = () -> BenchmarkCurveName2Code.mmObject();
 		}
@@ -540,7 +542,7 @@ public class BenchmarkCurveName2Code extends BenchmarkCurveNameCode {
 	 */
 	public static final MMCode mmEuroSwiss = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EuroSwiss";
 			owner_lazy = () -> BenchmarkCurveName2Code.mmObject();
 		}
@@ -563,7 +565,7 @@ public class BenchmarkCurveName2Code extends BenchmarkCurveNameCode {
 	 */
 	public static final MMCode mmEURODOLLAR = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EURODOLLAR";
 			owner_lazy = () -> BenchmarkCurveName2Code.mmObject();
 		}
@@ -586,7 +588,7 @@ public class BenchmarkCurveName2Code extends BenchmarkCurveNameCode {
 	 */
 	public static final MMCode mmEuribor = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Euribor";
 			owner_lazy = () -> BenchmarkCurveName2Code.mmObject();
 		}
@@ -609,7 +611,7 @@ public class BenchmarkCurveName2Code extends BenchmarkCurveNameCode {
 	 */
 	public static final MMCode mmEONIASwaps = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EONIASwaps";
 			owner_lazy = () -> BenchmarkCurveName2Code.mmObject();
 		}
@@ -632,7 +634,7 @@ public class BenchmarkCurveName2Code extends BenchmarkCurveNameCode {
 	 */
 	public static final MMCode mmEONIA = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EONIA";
 			owner_lazy = () -> BenchmarkCurveName2Code.mmObject();
 		}
@@ -655,7 +657,7 @@ public class BenchmarkCurveName2Code extends BenchmarkCurveNameCode {
 	 */
 	public static final MMCode mmCIBOR = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CIBOR";
 			owner_lazy = () -> BenchmarkCurveName2Code.mmObject();
 		}
@@ -678,7 +680,7 @@ public class BenchmarkCurveName2Code extends BenchmarkCurveNameCode {
 	 */
 	public static final MMCode mmCDOR = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CDOR";
 			owner_lazy = () -> BenchmarkCurveName2Code.mmObject();
 		}
@@ -701,7 +703,7 @@ public class BenchmarkCurveName2Code extends BenchmarkCurveNameCode {
 	 */
 	public static final MMCode mmBUBOR = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BUBOR";
 			owner_lazy = () -> BenchmarkCurveName2Code.mmObject();
 		}
@@ -724,7 +726,7 @@ public class BenchmarkCurveName2Code extends BenchmarkCurveNameCode {
 	 */
 	public static final MMCode mmBBSW = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BBSW";
 			owner_lazy = () -> BenchmarkCurveName2Code.mmObject();
 		}
@@ -733,19 +735,15 @@ public class BenchmarkCurveName2Code extends BenchmarkCurveNameCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "BenchmarkCurveName2Code";
 				definition = "Specifies a benchmark curve name.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.BenchmarkCurveName2Code.mmWIBOR, com.tools20022.repository.codeset.BenchmarkCurveName2Code.mmTreasury,
-						com.tools20022.repository.codeset.BenchmarkCurveName2Code.mmTIBOR, com.tools20022.repository.codeset.BenchmarkCurveName2Code.mmTELBOR, com.tools20022.repository.codeset.BenchmarkCurveName2Code.mmSWAP,
-						com.tools20022.repository.codeset.BenchmarkCurveName2Code.mmSTIBOR, com.tools20022.repository.codeset.BenchmarkCurveName2Code.mmPRIBOR, com.tools20022.repository.codeset.BenchmarkCurveName2Code.mmPfandbriefe,
-						com.tools20022.repository.codeset.BenchmarkCurveName2Code.mmNIBOR, com.tools20022.repository.codeset.BenchmarkCurveName2Code.mmMuniAAA, com.tools20022.repository.codeset.BenchmarkCurveName2Code.mmMOSPRIM,
-						com.tools20022.repository.codeset.BenchmarkCurveName2Code.mmLIBOR, com.tools20022.repository.codeset.BenchmarkCurveName2Code.mmLIBID, com.tools20022.repository.codeset.BenchmarkCurveName2Code.mmJIBAR,
-						com.tools20022.repository.codeset.BenchmarkCurveName2Code.mmISDAFIX, com.tools20022.repository.codeset.BenchmarkCurveName2Code.mmGCFRepo, com.tools20022.repository.codeset.BenchmarkCurveName2Code.mmFutureSWAP,
-						com.tools20022.repository.codeset.BenchmarkCurveName2Code.mmEuroSwiss, com.tools20022.repository.codeset.BenchmarkCurveName2Code.mmEURODOLLAR, com.tools20022.repository.codeset.BenchmarkCurveName2Code.mmEuribor,
-						com.tools20022.repository.codeset.BenchmarkCurveName2Code.mmEONIASwaps, com.tools20022.repository.codeset.BenchmarkCurveName2Code.mmEONIA, com.tools20022.repository.codeset.BenchmarkCurveName2Code.mmCIBOR,
-						com.tools20022.repository.codeset.BenchmarkCurveName2Code.mmCDOR, com.tools20022.repository.codeset.BenchmarkCurveName2Code.mmBUBOR, com.tools20022.repository.codeset.BenchmarkCurveName2Code.mmBBSW);
+				code_lazy = () -> Arrays.asList(BenchmarkCurveName2Code.mmWIBOR, BenchmarkCurveName2Code.mmTreasury, BenchmarkCurveName2Code.mmTIBOR, BenchmarkCurveName2Code.mmTELBOR, BenchmarkCurveName2Code.mmSWAP,
+						BenchmarkCurveName2Code.mmSTIBOR, BenchmarkCurveName2Code.mmPRIBOR, BenchmarkCurveName2Code.mmPfandbriefe, BenchmarkCurveName2Code.mmNIBOR, BenchmarkCurveName2Code.mmMuniAAA, BenchmarkCurveName2Code.mmMOSPRIM,
+						BenchmarkCurveName2Code.mmLIBOR, BenchmarkCurveName2Code.mmLIBID, BenchmarkCurveName2Code.mmJIBAR, BenchmarkCurveName2Code.mmISDAFIX, BenchmarkCurveName2Code.mmGCFRepo, BenchmarkCurveName2Code.mmFutureSWAP,
+						BenchmarkCurveName2Code.mmEuroSwiss, BenchmarkCurveName2Code.mmEURODOLLAR, BenchmarkCurveName2Code.mmEuribor, BenchmarkCurveName2Code.mmEONIASwaps, BenchmarkCurveName2Code.mmEONIA, BenchmarkCurveName2Code.mmCIBOR,
+						BenchmarkCurveName2Code.mmCDOR, BenchmarkCurveName2Code.mmBUBOR, BenchmarkCurveName2Code.mmBBSW);
 				trace_lazy = () -> BenchmarkCurveNameCode.mmObject();
 			}
 		});

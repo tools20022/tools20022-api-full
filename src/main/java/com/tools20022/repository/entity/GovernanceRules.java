@@ -17,12 +17,11 @@
 
 package com.tools20022.repository.entity;
 
-import com.tools20022.metamodel.MMBusinessAssociationEnd;
-import com.tools20022.metamodel.MMBusinessAttribute;
-import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.*;
 import com.tools20022.repository.choice.GovernanceIdentification1Choice;
 import com.tools20022.repository.codeset.GovernanceIdentificationCode;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GovernanceRules1;
 import com.tools20022.repository.msg.GovernanceRules2;
 import java.util.Arrays;
@@ -38,6 +37,30 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.GovernanceIdentification1Choice
+ * GovernanceIdentification1Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.GovernanceRules1
+ * GovernanceRules1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.GovernanceRules2
+ * GovernanceRules2}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.ModelForm#mmGovernanceRules
+ * ModelForm.mmGovernanceRules}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Jurisdiction#mmGovernanceRules
+ * Jurisdiction.mmGovernanceRules}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -55,30 +78,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.entity.GovernanceRules#mmPublicationAgency
  * GovernanceRules.mmPublicationAgency}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.ModelForm#mmGovernanceRules
- * ModelForm.mmGovernanceRules}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Jurisdiction#mmGovernanceRules
- * Jurisdiction.mmGovernanceRules}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.choice.GovernanceIdentification1Choice
- * GovernanceIdentification1Choice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.GovernanceRules1
- * GovernanceRules1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.GovernanceRules2
- * GovernanceRules2}</li>
  * </ul>
  * </li>
  * <li>
@@ -139,13 +138,13 @@ public class GovernanceRules {
 		{
 			elementContext_lazy = () -> GovernanceRules.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ModelForm";
 			definition = "Model form to which the governance rules apply.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.ModelForm.mmGovernanceRules;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.ModelForm.mmObject();
 		}
 	};
@@ -195,11 +194,10 @@ public class GovernanceRules {
 	 */
 	public static final MMBusinessAttribute mmIdentification = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.GovernanceIdentification1Choice.mmCode, com.tools20022.repository.choice.GovernanceIdentification1Choice.mmProprietary,
-					com.tools20022.repository.msg.GovernanceRules1.mmRuleIdentification, com.tools20022.repository.msg.GovernanceRules2.mmRuleIdentification);
+			derivation_lazy = () -> Arrays.asList(GovernanceIdentification1Choice.mmCode, GovernanceIdentification1Choice.mmProprietary, GovernanceRules1.mmRuleIdentification, GovernanceRules2.mmRuleIdentification);
 			elementContext_lazy = () -> GovernanceRules.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Identification";
 			definition = "Identification of the governance rules.";
 			maxOccurs = 1;
@@ -246,10 +244,10 @@ public class GovernanceRules {
 	 */
 	public static final MMBusinessAttribute mmApplicableLaw = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GovernanceRules1.mmApplicableLaw, com.tools20022.repository.msg.GovernanceRules2.mmApplicableLaw);
+			derivation_lazy = () -> Arrays.asList(GovernanceRules1.mmApplicableLaw, GovernanceRules2.mmApplicableLaw);
 			elementContext_lazy = () -> GovernanceRules.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ApplicableLaw";
 			definition = "Law under which the undertaking has been issued.";
 			maxOccurs = 1;
@@ -304,16 +302,16 @@ public class GovernanceRules {
 	 */
 	public static final MMBusinessAssociationEnd mmJurisdiction = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GovernanceRules1.mmJurisdiction, com.tools20022.repository.msg.GovernanceRules2.mmJurisdiction);
+			derivation_lazy = () -> Arrays.asList(GovernanceRules1.mmJurisdiction, GovernanceRules2.mmJurisdiction);
 			elementContext_lazy = () -> GovernanceRules.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Jurisdiction";
 			definition = "Jurisdiction which applies to the governance rules.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.Jurisdiction.mmGovernanceRules;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Jurisdiction.mmObject();
 		}
 	};
@@ -347,7 +345,7 @@ public class GovernanceRules {
 		{
 			elementContext_lazy = () -> GovernanceRules.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PublicationAgency";
 			definition = "Agency that publishes the governance rules.";
 			maxOccurs = 1;
@@ -359,13 +357,12 @@ public class GovernanceRules {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "GovernanceRules";
 				definition = "Rules governing an undertaking such as a guarantee or standby letter of credit.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.ModelForm.mmGovernanceRules, com.tools20022.repository.entity.Jurisdiction.mmGovernanceRules);
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.GovernanceRules.mmModelForm, com.tools20022.repository.entity.GovernanceRules.mmIdentification,
-						com.tools20022.repository.entity.GovernanceRules.mmApplicableLaw, com.tools20022.repository.entity.GovernanceRules.mmJurisdiction, com.tools20022.repository.entity.GovernanceRules.mmPublicationAgency);
+				element_lazy = () -> Arrays.asList(GovernanceRules.mmModelForm, GovernanceRules.mmIdentification, GovernanceRules.mmApplicableLaw, GovernanceRules.mmJurisdiction, GovernanceRules.mmPublicationAgency);
 				derivationComponent_lazy = () -> Arrays.asList(GovernanceIdentification1Choice.mmObject(), GovernanceRules1.mmObject(), GovernanceRules2.mmObject());
 			}
 		});

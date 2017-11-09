@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.SafekeepingPlaceCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -89,7 +91,7 @@ public class SafekeepingPlace1Code extends SafekeepingPlaceCode {
 	 */
 	public static final MMCode mmSharesHeldAtLocalCustodian = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SharesHeldAtLocalCustodian";
 			owner_lazy = () -> SafekeepingPlace1Code.mmObject();
 		}
@@ -112,7 +114,7 @@ public class SafekeepingPlace1Code extends SafekeepingPlaceCode {
 	 */
 	public static final MMCode mmSharesHeldAtICSD = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SharesHeldAtICSD";
 			owner_lazy = () -> SafekeepingPlace1Code.mmObject();
 		}
@@ -135,7 +137,7 @@ public class SafekeepingPlace1Code extends SafekeepingPlaceCode {
 	 */
 	public static final MMCode mmSharesHeldAtNCSD = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SharesHeldAtNCSD";
 			owner_lazy = () -> SafekeepingPlace1Code.mmObject();
 		}
@@ -158,7 +160,7 @@ public class SafekeepingPlace1Code extends SafekeepingPlaceCode {
 	 */
 	public static final MMCode mmSharesHeldElsewhere = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SharesHeldElsewhere";
 			owner_lazy = () -> SafekeepingPlace1Code.mmObject();
 		}
@@ -167,13 +169,12 @@ public class SafekeepingPlace1Code extends SafekeepingPlaceCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CUST");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SafekeepingPlace1Code";
 				definition = "Specifies the type of place of safekeeping.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SafekeepingPlace1Code.mmSharesHeldAtLocalCustodian, com.tools20022.repository.codeset.SafekeepingPlace1Code.mmSharesHeldAtICSD,
-						com.tools20022.repository.codeset.SafekeepingPlace1Code.mmSharesHeldAtNCSD, com.tools20022.repository.codeset.SafekeepingPlace1Code.mmSharesHeldElsewhere);
+				code_lazy = () -> Arrays.asList(SafekeepingPlace1Code.mmSharesHeldAtLocalCustodian, SafekeepingPlace1Code.mmSharesHeldAtICSD, SafekeepingPlace1Code.mmSharesHeldAtNCSD, SafekeepingPlace1Code.mmSharesHeldElsewhere);
 				trace_lazy = () -> SafekeepingPlaceCode.mmObject();
 			}
 		});

@@ -17,10 +17,11 @@
 
 package com.tools20022.repository.entity;
 
-import com.tools20022.metamodel.MMBusinessAssociationEnd;
-import com.tools20022.metamodel.MMBusinessAttribute;
-import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.*;
+import com.tools20022.repository.choice.*;
 import com.tools20022.repository.datatype.Max140Text;
+import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -34,14 +35,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.PartyName#mmName
- * PartyName.mmName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.PartyName#mmPartyIdentification
- * PartyName.mmPartyIdentification}</li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation#mmPartyName
+ * PartyIdentificationInformation.mmPartyName}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
@@ -52,13 +52,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * OrganisationName}</li>
  * </ul>
  * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
  * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.PartyName#mmName
+ * PartyName.mmName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation#mmPartyName
- * PartyIdentificationInformation.mmPartyName}</li>
+ * {@linkplain com.tools20022.repository.entity.PartyName#mmPartyIdentification
+ * PartyName.mmPartyIdentification}</li>
  * </ul>
  * </li>
  * <li>
@@ -437,49 +438,28 @@ public class PartyName {
 	 */
 	public static final MMBusinessAttribute mmName = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ContactDetails1.mmName, com.tools20022.repository.msg.OrderDeskContactDetails.mmName, com.tools20022.repository.msg.ContactAttributes1.mmName,
-					com.tools20022.repository.msg.NameAndAddress2.mmName, com.tools20022.repository.msg.NameAndAddress5.mmName, com.tools20022.repository.msg.NameAndAddress1.mmName, com.tools20022.repository.msg.NameAndAddress4.mmName,
-					com.tools20022.repository.msg.BranchData.mmName, com.tools20022.repository.msg.PaymentCard2.mmCardIssuerName, com.tools20022.repository.msg.Organisation13.mmName,
-					com.tools20022.repository.msg.FinancialInstitutionIdentification8.mmName, com.tools20022.repository.msg.BranchData2.mmName, com.tools20022.repository.msg.PartyIdentification8.mmName,
-					com.tools20022.repository.msg.ContactDetails2.mmName, com.tools20022.repository.msg.PartyIdentification32.mmName, com.tools20022.repository.msg.PartyIdentification43.mmName,
-					com.tools20022.repository.msg.PartyIdentification.mmName, com.tools20022.repository.msg.NameAndAddress7.mmName, com.tools20022.repository.msg.FinancialInstitutionIdentification3.mmName,
-					com.tools20022.repository.msg.FinancialInstitutionIdentification7.mmName, com.tools20022.repository.msg.ContactIdentification2.mmName, com.tools20022.repository.choice.IdentificationSource1Choice.mmProprietary,
-					com.tools20022.repository.choice.IdentificationSource3Choice.mmProprietary, com.tools20022.repository.msg.NameAndAddress12.mmName, com.tools20022.repository.choice.IdentificationSource4Choice.mmProprietary,
-					com.tools20022.repository.choice.IdentificationSource2Choice.mmProprietary, com.tools20022.repository.msg.ContactIdentification1.mmName, com.tools20022.repository.msg.NameAndAddress13.mmName,
-					com.tools20022.repository.msg.PartyIdentification41.mmName, com.tools20022.repository.msg.PartyIdentification40.mmName, com.tools20022.repository.msg.NameAndAddress3.mmName,
-					com.tools20022.repository.msg.NameAndAddress10.mmName, com.tools20022.repository.msg.TaxAuthorisation1.mmName, com.tools20022.repository.msg.RegulatoryAuthority.mmAuthorityName,
-					com.tools20022.repository.msg.RegulatoryAuthority2.mmName, com.tools20022.repository.msg.Contacts3.mmName, com.tools20022.repository.msg.PartyIdentification42.mmName,
-					com.tools20022.repository.msg.NonExtension1.mmNotificationRecipientName, com.tools20022.repository.msg.CommunicationChannel1.mmDeliverToName, com.tools20022.repository.msg.NameAndAddress8.mmName,
-					com.tools20022.repository.msg.PartyIdentification59.mmPartyName, com.tools20022.repository.msg.ContactInformation1.mmName, com.tools20022.repository.msg.Organisation5.mmCommonName,
-					com.tools20022.repository.msg.Organisation8.mmCommonName, com.tools20022.repository.msg.Organisation9.mmCommonName, com.tools20022.repository.msg.PartyIdentification1.mmName,
-					com.tools20022.repository.msg.FinancialInstitutionIdentification1.mmName, com.tools20022.repository.msg.NameAndAddress9.mmName, com.tools20022.repository.msg.ContactIdentification4.mmName,
-					com.tools20022.repository.msg.PartyIdentification25.mmName, com.tools20022.repository.msg.PartyIdentification45.mmName, com.tools20022.repository.msg.LegalOrganisation1.mmName,
-					com.tools20022.repository.msg.PartyIdentification9.mmName, com.tools20022.repository.msg.NameAndAddress6.mmName, com.tools20022.repository.msg.PartyIdentification26.mmName,
-					com.tools20022.repository.msg.TransportByAir3.mmAirCarrierName, com.tools20022.repository.msg.TransportByRoad3.mmRoadCarrierName, com.tools20022.repository.msg.TransportByRail3.mmRailCarrierName,
-					com.tools20022.repository.msg.PartyIdentification27.mmName, com.tools20022.repository.msg.ContactIdentification3.mmName, com.tools20022.repository.msg.TransportByAir2.mmAirCarrierName,
-					com.tools20022.repository.msg.TransportByRoad2.mmRoadCarrierName, com.tools20022.repository.msg.TransportByRail2.mmRailCarrierName, com.tools20022.repository.msg.MultimodalTransport2.mmAirCarrierName,
-					com.tools20022.repository.msg.MultimodalTransport2.mmRoadCarrierName, com.tools20022.repository.msg.MultimodalTransport2.mmRailCarrierName, com.tools20022.repository.msg.PartyIdentification28.mmName,
-					com.tools20022.repository.msg.ContactIdentificationAndAddress.mmName, com.tools20022.repository.msg.MemberDetails.mmName, com.tools20022.repository.msg.ContactDetails3.mmName,
-					com.tools20022.repository.msg.PartyIdentification58.mmName, com.tools20022.repository.msg.PartyIdentification14.mmName, com.tools20022.repository.msg.PartyIdentification17.mmName,
-					com.tools20022.repository.msg.PartyIdentification12.mmName, com.tools20022.repository.msg.PartyIdentification19.mmName, com.tools20022.repository.msg.PartyIdentification30.mmName,
-					com.tools20022.repository.msg.PartyIdentification18.mmName, com.tools20022.repository.msg.PartyIdentification20.mmName, com.tools20022.repository.msg.PartyIdentification31.mmName,
-					com.tools20022.repository.msg.PartyIdentification13.mmName, com.tools20022.repository.msg.PartyIdentification16.mmName, com.tools20022.repository.msg.NameAndAddress11.mmName,
-					com.tools20022.repository.msg.PartyIdentification5.mmName, com.tools20022.repository.msg.PartyIdentification24.mmName, com.tools20022.repository.msg.Member1.mmName, com.tools20022.repository.msg.Organisation15.mmName,
-					com.tools20022.repository.msg.TransportByRail4.mmRailCarrierName, com.tools20022.repository.msg.TransportByRail4.mmCarrierAgentName, com.tools20022.repository.msg.TransportByAir4.mmAirCarrierName,
-					com.tools20022.repository.msg.TransportByAir4.mmCarrierAgentName, com.tools20022.repository.msg.TransportByRoad4.mmRoadCarrierName, com.tools20022.repository.msg.TransportByRoad4.mmCarrierAgentName,
-					com.tools20022.repository.msg.TransportBySea5.mmCarrierAgentName, com.tools20022.repository.msg.TransportByAir5.mmAirCarrierName, com.tools20022.repository.msg.TransportByAir5.mmCarrierAgentName,
-					com.tools20022.repository.msg.TransportBySea6.mmSeaCarrierName, com.tools20022.repository.msg.TransportBySea6.mmCarrierAgentName, com.tools20022.repository.msg.TransportByRail5.mmRailCarrierName,
-					com.tools20022.repository.msg.TransportByRail5.mmCarrierAgentName, com.tools20022.repository.msg.TransportByRoad5.mmRoadCarrierName, com.tools20022.repository.msg.TransportByRoad5.mmCarrierAgentName,
-					com.tools20022.repository.msg.Organisation16.mmName, com.tools20022.repository.msg.Organisation17.mmName, com.tools20022.repository.choice.IdentificationSource5Choice.mmProprietaryIdentificationSource,
-					com.tools20022.repository.msg.PersonIdentification10.mmName, com.tools20022.repository.msg.PartyIdentification77.mmName, com.tools20022.repository.msg.LegalOrganisation2.mmName,
-					com.tools20022.repository.msg.Organisation22.mmName, com.tools20022.repository.msg.Organisation23.mmName, com.tools20022.repository.msg.Organisation24.mmName,
-					com.tools20022.repository.msg.PersonalInformation1.mmMaidenNameOfMother, com.tools20022.repository.msg.PaymentCard18.mmCardIssuerName, com.tools20022.repository.msg.NameAndAddress15.mmName,
-					com.tools20022.repository.msg.Organisation25.mmCommonName, com.tools20022.repository.msg.Organisation26.mmCommonName, com.tools20022.repository.msg.PartyIdentification112.mmName,
-					com.tools20022.repository.msg.Organisation30.mmName, com.tools20022.repository.msg.PaymentCard25.mmCardIssuerName, com.tools20022.repository.msg.Organisation29.mmName,
-					com.tools20022.repository.msg.MarketIdentification92.mmInstitutionName);
+			derivation_lazy = () -> Arrays.asList(ContactDetails1.mmName, OrderDeskContactDetails.mmName, ContactAttributes1.mmName, NameAndAddress2.mmName, NameAndAddress5.mmName, NameAndAddress1.mmName, NameAndAddress4.mmName,
+					BranchData.mmName, PaymentCard2.mmCardIssuerName, Organisation13.mmName, FinancialInstitutionIdentification8.mmName, BranchData2.mmName, PartyIdentification8.mmName, ContactDetails2.mmName, PartyIdentification32.mmName,
+					PartyIdentification43.mmName, PartyIdentification.mmName, NameAndAddress7.mmName, FinancialInstitutionIdentification3.mmName, FinancialInstitutionIdentification7.mmName, ContactIdentification2.mmName,
+					IdentificationSource1Choice.mmProprietary, IdentificationSource3Choice.mmProprietary, NameAndAddress12.mmName, IdentificationSource4Choice.mmProprietary, IdentificationSource2Choice.mmProprietary,
+					ContactIdentification1.mmName, NameAndAddress13.mmName, PartyIdentification41.mmName, PartyIdentification40.mmName, NameAndAddress3.mmName, NameAndAddress10.mmName, TaxAuthorisation1.mmName,
+					RegulatoryAuthority.mmAuthorityName, RegulatoryAuthority2.mmName, Contacts3.mmName, PartyIdentification42.mmName, NonExtension1.mmNotificationRecipientName, CommunicationChannel1.mmDeliverToName, NameAndAddress8.mmName,
+					PartyIdentification59.mmPartyName, ContactInformation1.mmName, Organisation5.mmCommonName, Organisation8.mmCommonName, Organisation9.mmCommonName, PartyIdentification1.mmName, FinancialInstitutionIdentification1.mmName,
+					NameAndAddress9.mmName, ContactIdentification4.mmName, PartyIdentification25.mmName, PartyIdentification45.mmName, LegalOrganisation1.mmName, PartyIdentification9.mmName, NameAndAddress6.mmName,
+					PartyIdentification26.mmName, TransportByAir3.mmAirCarrierName, TransportByRoad3.mmRoadCarrierName, TransportByRail3.mmRailCarrierName, PartyIdentification27.mmName, ContactIdentification3.mmName,
+					TransportByAir2.mmAirCarrierName, TransportByRoad2.mmRoadCarrierName, TransportByRail2.mmRailCarrierName, MultimodalTransport2.mmAirCarrierName, MultimodalTransport2.mmRoadCarrierName,
+					MultimodalTransport2.mmRailCarrierName, PartyIdentification28.mmName, ContactIdentificationAndAddress.mmName, MemberDetails.mmName, ContactDetails3.mmName, PartyIdentification58.mmName, PartyIdentification14.mmName,
+					PartyIdentification17.mmName, PartyIdentification12.mmName, PartyIdentification19.mmName, PartyIdentification30.mmName, PartyIdentification18.mmName, PartyIdentification20.mmName, PartyIdentification31.mmName,
+					PartyIdentification13.mmName, PartyIdentification16.mmName, NameAndAddress11.mmName, PartyIdentification5.mmName, PartyIdentification24.mmName, Member1.mmName, Organisation15.mmName, TransportByRail4.mmRailCarrierName,
+					TransportByRail4.mmCarrierAgentName, TransportByAir4.mmAirCarrierName, TransportByAir4.mmCarrierAgentName, TransportByRoad4.mmRoadCarrierName, TransportByRoad4.mmCarrierAgentName, TransportBySea5.mmCarrierAgentName,
+					TransportByAir5.mmAirCarrierName, TransportByAir5.mmCarrierAgentName, TransportBySea6.mmSeaCarrierName, TransportBySea6.mmCarrierAgentName, TransportByRail5.mmRailCarrierName, TransportByRail5.mmCarrierAgentName,
+					TransportByRoad5.mmRoadCarrierName, TransportByRoad5.mmCarrierAgentName, Organisation16.mmName, Organisation17.mmName, IdentificationSource5Choice.mmProprietaryIdentificationSource, PersonIdentification10.mmName,
+					PartyIdentification77.mmName, LegalOrganisation2.mmName, Organisation22.mmName, Organisation23.mmName, Organisation24.mmName, PersonalInformation1.mmMaidenNameOfMother, PaymentCard18.mmCardIssuerName,
+					NameAndAddress15.mmName, Organisation25.mmCommonName, Organisation26.mmCommonName, PartyIdentification112.mmName, Organisation30.mmName, PaymentCard25.mmCardIssuerName, Organisation29.mmName,
+					MarketIdentification92.mmInstitutionName);
 			elementContext_lazy = () -> PartyName.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Name";
 			definition = "Name by which a party is known and which is usually used to identify that party. This name is derived from the concatenation of the elements that compose the name of a person or from the legal name of an organisation.";
 			maxOccurs = 1;
@@ -525,13 +505,13 @@ public class PartyName {
 		{
 			elementContext_lazy = () -> PartyName.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PartyIdentification";
 			definition = "Party identification which contains a name.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.mmPartyName;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.mmObject();
 		}
 	};
@@ -539,13 +519,13 @@ public class PartyName {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PartyName";
 				definition = "Name by which a party is known and which is usually used to identify that party.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.PartyIdentificationInformation.mmPartyName);
 				subType_lazy = () -> Arrays.asList(PersonName.mmObject(), OrganisationName.mmObject());
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.PartyName.mmName, com.tools20022.repository.entity.PartyName.mmPartyIdentification);
+				element_lazy = () -> Arrays.asList(PartyName.mmName, PartyName.mmPartyIdentification);
 			}
 		});
 		return mmObject_lazy.get();

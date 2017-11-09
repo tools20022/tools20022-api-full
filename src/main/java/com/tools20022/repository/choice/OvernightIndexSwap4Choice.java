@@ -20,7 +20,10 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.auth.MoneyMarketOvernightIndexSwapsStatisticalReportV02;
 import com.tools20022.repository.codeset.ReportPeriodActivity3Code;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.OvernightIndexSwapTransaction4;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -120,10 +123,10 @@ public class OvernightIndexSwap4Choice {
 			componentContext_lazy = () -> OvernightIndexSwap4Choice.mmObject();
 			isDerived = false;
 			xmlTag = "DataSetActn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DataSetAction";
 			definition = "Provides the reason why no transactions are being reported for a money market reporting period. ";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.OvernightIndexSwap3Choice.mmDataSetAction;
+			previousVersion_lazy = () -> OvernightIndexSwap3Choice.mmDataSetAction;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ReportPeriodActivity3Code.mmObject();
@@ -170,10 +173,10 @@ public class OvernightIndexSwap4Choice {
 			componentContext_lazy = () -> OvernightIndexSwap4Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Tx";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Transaction";
 			definition = "Provides the details of the secured market transaction as reported by the reporting agent";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.OvernightIndexSwap3Choice.mmTransaction;
+			previousVersion_lazy = () -> OvernightIndexSwap3Choice.mmTransaction;
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> OvernightIndexSwapTransaction4.mmObject();
@@ -183,10 +186,10 @@ public class OvernightIndexSwap4Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.OvernightIndexSwap4Choice.mmDataSetAction, com.tools20022.repository.choice.OvernightIndexSwap4Choice.mmTransaction);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.auth.MoneyMarketOvernightIndexSwapsStatisticalReportV02.mmOvernightIndexSwapsReport);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(OvernightIndexSwap4Choice.mmDataSetAction, OvernightIndexSwap4Choice.mmTransaction);
+				messageBuildingBlock_lazy = () -> Arrays.asList(MoneyMarketOvernightIndexSwapsStatisticalReportV02.mmOvernightIndexSwapsReport);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OvernightIndexSwap4Choice";
 				definition = "Choice between a reason for no activity and the overnight index swaps segment transaction details.";
 				previousVersion_lazy = () -> OvernightIndexSwap3Choice.mmObject();

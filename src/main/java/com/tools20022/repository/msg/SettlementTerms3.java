@@ -19,8 +19,12 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.FinancialInstitutionIdentification4Choice;
 import com.tools20022.repository.entity.CashSettlement;
+import com.tools20022.repository.entity.Organisation;
+import com.tools20022.repository.entity.PaymentPartyRole;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -111,14 +115,14 @@ public class SettlementTerms3 {
 	 */
 	public static final MMMessageAssociationEnd mmCreditorAgent = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Organisation.mmOrganisationIdentification;
+			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> SettlementTerms3.mmObject();
 			isDerived = false;
 			xmlTag = "CdtrAgt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditorAgent";
 			definition = "Financial institution that receives the payment transaction on behalf of an account owner, and posts the transaction into the account.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SettlementTerms2.mmCreditorAgent;
+			previousVersion_lazy = () -> SettlementTerms2.mmCreditorAgent;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -164,14 +168,14 @@ public class SettlementTerms3 {
 	 */
 	public static final MMMessageAssociationEnd mmCreditorAccount = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentPartyRole.mmCashAccount;
+			businessElementTrace_lazy = () -> PaymentPartyRole.mmCashAccount;
 			componentContext_lazy = () -> SettlementTerms3.mmObject();
 			isDerived = false;
 			xmlTag = "CdtrAcct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditorAccount";
 			definition = "Account to be credited as a result of an instruction.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SettlementTerms2.mmCreditorAccount;
+			previousVersion_lazy = () -> SettlementTerms2.mmCreditorAccount;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -182,10 +186,10 @@ public class SettlementTerms3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SettlementTerms3.mmCreditorAgent, com.tools20022.repository.msg.SettlementTerms3.mmCreditorAccount);
+				messageElement_lazy = () -> Arrays.asList(SettlementTerms3.mmCreditorAgent, SettlementTerms3.mmCreditorAccount);
 				trace_lazy = () -> CashSettlement.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SettlementTerms3";
 				definition = "Specifies the beneficiary's account information for the settlement of a purchase of goods or services.";
 				previousVersion_lazy = () -> SettlementTerms2.mmObject();

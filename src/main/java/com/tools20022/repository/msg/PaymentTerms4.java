@@ -19,9 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.AmountOrPercentage2Choice;
 import com.tools20022.repository.choice.PaymentCodeOrOther1Choice;
 import com.tools20022.repository.entity.PaymentObligation;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -113,14 +115,14 @@ public class PaymentTerms4 {
 	 */
 	public static final MMMessageAssociationEnd mmPaymentTerms = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentObligation.mmPaymentOffset;
+			businessElementTrace_lazy = () -> PaymentObligation.mmPaymentOffset;
 			componentContext_lazy = () -> PaymentTerms4.mmObject();
 			isDerived = false;
 			xmlTag = "PmtTerms";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentTerms";
 			definition = "Specifies the payment terms using a code or other means.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentTerms5.mmPaymentTerms);
+			nextVersions_lazy = () -> Arrays.asList(PaymentTerms5.mmPaymentTerms);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -167,10 +169,10 @@ public class PaymentTerms4 {
 			componentContext_lazy = () -> PaymentTerms4.mmObject();
 			isDerived = false;
 			xmlTag = "AmtOrPctg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmountOrPercentage";
 			definition = "Specifies if it is a fixed amount or a percentage.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentTerms5.mmAmountOrPercentage);
+			nextVersions_lazy = () -> Arrays.asList(PaymentTerms5.mmAmountOrPercentage);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -181,10 +183,10 @@ public class PaymentTerms4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentTerms4.mmPaymentTerms, com.tools20022.repository.msg.PaymentTerms4.mmAmountOrPercentage);
+				messageElement_lazy = () -> Arrays.asList(PaymentTerms4.mmPaymentTerms, PaymentTerms4.mmAmountOrPercentage);
 				trace_lazy = () -> PaymentObligation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PaymentTerms4";
 				definition = "Specifies the payment terms of the underlying transaction.";
 				nextVersions_lazy = () -> Arrays.asList(PaymentTerms5.mmObject());

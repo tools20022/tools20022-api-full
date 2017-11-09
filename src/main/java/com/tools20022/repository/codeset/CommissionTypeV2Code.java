@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.CommissionType7Code
+ * CommissionType7Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.CommissionType9Code
+ * CommissionType9Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.CommissionType6Code
+ * CommissionType6Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.CommissionType8Code
+ * CommissionType8Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -106,19 +121,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * CommissionTypeV2Code.mmPercentageCommissionWaivedAsAdditionalUnits}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.CommissionType7Code
- * CommissionType7Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.CommissionType9Code
- * CommissionType9Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.CommissionType6Code
- * CommissionType6Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.CommissionType8Code
- * CommissionType8Code}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -166,7 +168,7 @@ public class CommissionTypeV2Code {
 	 */
 	public static final MMCode mmClientDirected = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ClientDirected";
 			definition = "Commission is as per client agreement.";
 			owner_lazy = () -> CommissionTypeV2Code.mmObject();
@@ -197,7 +199,7 @@ public class CommissionTypeV2Code {
 	 */
 	public static final MMCode mmStepOut = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "StepOut";
 			definition = "Commission for a step-out trade, charged by the step-out broker.";
 			owner_lazy = () -> CommissionTypeV2Code.mmObject();
@@ -230,7 +232,7 @@ public class CommissionTypeV2Code {
 	 */
 	public static final MMCode mmFrontEndLoad = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "FrontEndLoad";
 			definition = "Commission for subscribing to an investment, paid at the time of the subscription.";
 			owner_lazy = () -> CommissionTypeV2Code.mmObject();
@@ -260,7 +262,7 @@ public class CommissionTypeV2Code {
 	 */
 	public static final MMCode mmInitial = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Initial";
 			definition = "Commission paid at the time of first subscription.";
 			owner_lazy = () -> CommissionTypeV2Code.mmObject();
@@ -293,7 +295,7 @@ public class CommissionTypeV2Code {
 	 */
 	public static final MMCode mmBackEndLoad = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BackEndLoad";
 			definition = "Commission for redeeming  an investment, when an investor redeems an investment fund within a certain period of time.";
 			owner_lazy = () -> CommissionTypeV2Code.mmObject();
@@ -324,7 +326,7 @@ public class CommissionTypeV2Code {
 	 */
 	public static final MMCode mmTrailer = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Trailer";
 			definition = "Commission that is calculated on the position of an account.";
 			owner_lazy = () -> CommissionTypeV2Code.mmObject();
@@ -354,7 +356,7 @@ public class CommissionTypeV2Code {
 	 */
 	public static final MMCode mmRegular = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Regular";
 			definition = "Commission that is regular.";
 			owner_lazy = () -> CommissionTypeV2Code.mmObject();
@@ -385,7 +387,7 @@ public class CommissionTypeV2Code {
 	 */
 	public static final MMCode mmStepIn = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "StepIn";
 			definition = "Commission for a step-in trade, charged by the step-in broker.";
 			owner_lazy = () -> CommissionTypeV2Code.mmObject();
@@ -435,7 +437,7 @@ public class CommissionTypeV2Code {
 	 */
 	public static final MMCode mmSoftDollar = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SoftDollar";
 			definition = "Commission designated by the broker for third party services. The soft dollar arrangement refers to an arrangement wherean investment manager directs transactions to a brokerand, in exchange, the broker provides brokerage and research services to the investment manager. Soft dollar arrangements include proprietary and third party research arrangements, but do not include client-directed brokerage arrangements. The U.S. Securities Exchange Act of 1934, Section 238(e), created a \"safe harbor\" to protect investment managers from claims that they had breached their fiduciary duties by using their client commissions to pay a higher commission than they might have paid for execution services to acquire investment research. The SEC defines soft dollars as: The Commission has defined soft dollar practices as arrangements under which products or services, other than execution of securities transactions, are obtained through an adviser or a broker-dealer in exchange for the direction by the adviser of client brokerage transactions to the broker-dealer. An individual or firm must exercise \"investment discretion\" over an account, as defined in Section 3(a)(35) of the Exchange Act, in order to use client commissions to obtain research under Section 28(e) of the Exchange Act (\"Section 28(e)\").";
 			owner_lazy = () -> CommissionTypeV2Code.mmObject();
@@ -468,7 +470,7 @@ public class CommissionTypeV2Code {
 	 */
 	public static final MMCode mmSoftDollarStepIn = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SoftDollarStepIn";
 			definition = "Commission that combines soft dollar and step-in commission characteristics.";
 			owner_lazy = () -> CommissionTypeV2Code.mmObject();
@@ -501,7 +503,7 @@ public class CommissionTypeV2Code {
 	 */
 	public static final MMCode mmSoftDollarStepOut = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SoftDollarStepOut";
 			definition = "Commission that combines soft dollar and step-out commission characteristics.";
 			owner_lazy = () -> CommissionTypeV2Code.mmObject();
@@ -531,7 +533,7 @@ public class CommissionTypeV2Code {
 	 */
 	public static final MMCode mmPlanSponsor = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PlanSponsor";
 			definition = "Commission for a plan sponsor's services.";
 			owner_lazy = () -> CommissionTypeV2Code.mmObject();
@@ -561,7 +563,7 @@ public class CommissionTypeV2Code {
 	 */
 	public static final MMCode mmPercentageOfPrincipal = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PercentageOfPrincipal";
 			definition = "Commission is a percentage of principal.";
 			owner_lazy = () -> CommissionTypeV2Code.mmObject();
@@ -595,7 +597,7 @@ public class CommissionTypeV2Code {
 	 */
 	public static final MMCode mmMarkup = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Markup";
 			definition = "Amount or percentage that is added to an offer price when an investor buys from a broker or market maker.  In this case, the price is adjusted to reflect changing market conditions.";
 			owner_lazy = () -> CommissionTypeV2Code.mmObject();
@@ -628,7 +630,7 @@ public class CommissionTypeV2Code {
 	 */
 	public static final MMCode mmCommissionDePlacement = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CommissionDePlacement";
 			definition = "Amount of cash due to an intermediary for selling a product, or services, to a third party.";
 			owner_lazy = () -> CommissionTypeV2Code.mmObject();
@@ -658,7 +660,7 @@ public class CommissionTypeV2Code {
 	 */
 	public static final MMCode mmBrokerCredit = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BrokerCredit";
 			definition = "Amount financed to cover the back-end load.";
 			owner_lazy = () -> CommissionTypeV2Code.mmObject();
@@ -688,7 +690,7 @@ public class CommissionTypeV2Code {
 	 */
 	public static final MMCode mmOther = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Other";
 			definition = "Commission is another type of transaction.";
 			owner_lazy = () -> CommissionTypeV2Code.mmObject();
@@ -721,7 +723,7 @@ public class CommissionTypeV2Code {
 	 */
 	public static final MMCode mmFundBasedRenewal = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "FundBasedRenewal";
 			definition = "Annual fund based renewal commission, expressed as a percentage of the deal.";
 			owner_lazy = () -> CommissionTypeV2Code.mmObject();
@@ -751,7 +753,7 @@ public class CommissionTypeV2Code {
 	 */
 	public static final MMCode mmFlatFee = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FlatFee";
 			definition = "Commission is a flat fee.";
 			owner_lazy = () -> CommissionTypeV2Code.mmObject();
@@ -781,7 +783,7 @@ public class CommissionTypeV2Code {
 	 */
 	public static final MMCode mmPointsPerBondOrContract = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PointsPerBondOrContract";
 			definition = "Commission is based on points per bond or contract.";
 			owner_lazy = () -> CommissionTypeV2Code.mmObject();
@@ -811,7 +813,7 @@ public class CommissionTypeV2Code {
 	 */
 	public static final MMCode mmDifferentialOrDeferredPayment = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DifferentialOrDeferredPayment";
 			definition = "Differential or deferred payment commission rate.  ";
 			owner_lazy = () -> CommissionTypeV2Code.mmObject();
@@ -841,7 +843,7 @@ public class CommissionTypeV2Code {
 	 */
 	public static final MMCode mmBrokerageRate = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BrokerageRate";
 			definition = "Brokerage commission.";
 			owner_lazy = () -> CommissionTypeV2Code.mmObject();
@@ -871,7 +873,7 @@ public class CommissionTypeV2Code {
 	 */
 	public static final MMCode mmPerUnit = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PerUnit";
 			definition = "Commission is per unit of financial instrument.";
 			owner_lazy = () -> CommissionTypeV2Code.mmObject();
@@ -902,7 +904,7 @@ public class CommissionTypeV2Code {
 	 */
 	public static final MMCode mmPercentageCommissionWaivedAsCashDiscount = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PercentageCommissionWaivedAsCashDiscount";
 			definition = "Commission is a percentage commission waived as cash discount.";
 			owner_lazy = () -> CommissionTypeV2Code.mmObject();
@@ -933,7 +935,7 @@ public class CommissionTypeV2Code {
 	 */
 	public static final MMCode mmPercentageCommissionWaivedAsAdditionalUnits = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PercentageCommissionWaivedAsAdditionalUnits";
 			definition = "Commission is a percentage commission waived as additional units.";
 			owner_lazy = () -> CommissionTypeV2Code.mmObject();
@@ -944,22 +946,16 @@ public class CommissionTypeV2Code {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CLDI");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CommissionTypeV2Code";
 				definition = "Type of service for which the commission is asked or paid.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CommissionTypeV2Code.mmClientDirected, com.tools20022.repository.codeset.CommissionTypeV2Code.mmStepOut,
-						com.tools20022.repository.codeset.CommissionTypeV2Code.mmFrontEndLoad, com.tools20022.repository.codeset.CommissionTypeV2Code.mmInitial, com.tools20022.repository.codeset.CommissionTypeV2Code.mmBackEndLoad,
-						com.tools20022.repository.codeset.CommissionTypeV2Code.mmTrailer, com.tools20022.repository.codeset.CommissionTypeV2Code.mmRegular, com.tools20022.repository.codeset.CommissionTypeV2Code.mmStepIn,
-						com.tools20022.repository.codeset.CommissionTypeV2Code.mmSoftDollar, com.tools20022.repository.codeset.CommissionTypeV2Code.mmSoftDollarStepIn,
-						com.tools20022.repository.codeset.CommissionTypeV2Code.mmSoftDollarStepOut, com.tools20022.repository.codeset.CommissionTypeV2Code.mmPlanSponsor,
-						com.tools20022.repository.codeset.CommissionTypeV2Code.mmPercentageOfPrincipal, com.tools20022.repository.codeset.CommissionTypeV2Code.mmMarkup,
-						com.tools20022.repository.codeset.CommissionTypeV2Code.mmCommissionDePlacement, com.tools20022.repository.codeset.CommissionTypeV2Code.mmBrokerCredit, com.tools20022.repository.codeset.CommissionTypeV2Code.mmOther,
-						com.tools20022.repository.codeset.CommissionTypeV2Code.mmFundBasedRenewal, com.tools20022.repository.codeset.CommissionTypeV2Code.mmFlatFee,
-						com.tools20022.repository.codeset.CommissionTypeV2Code.mmPointsPerBondOrContract, com.tools20022.repository.codeset.CommissionTypeV2Code.mmDifferentialOrDeferredPayment,
-						com.tools20022.repository.codeset.CommissionTypeV2Code.mmBrokerageRate, com.tools20022.repository.codeset.CommissionTypeV2Code.mmPerUnit,
-						com.tools20022.repository.codeset.CommissionTypeV2Code.mmPercentageCommissionWaivedAsCashDiscount, com.tools20022.repository.codeset.CommissionTypeV2Code.mmPercentageCommissionWaivedAsAdditionalUnits);
+				code_lazy = () -> Arrays.asList(CommissionTypeV2Code.mmClientDirected, CommissionTypeV2Code.mmStepOut, CommissionTypeV2Code.mmFrontEndLoad, CommissionTypeV2Code.mmInitial, CommissionTypeV2Code.mmBackEndLoad,
+						CommissionTypeV2Code.mmTrailer, CommissionTypeV2Code.mmRegular, CommissionTypeV2Code.mmStepIn, CommissionTypeV2Code.mmSoftDollar, CommissionTypeV2Code.mmSoftDollarStepIn, CommissionTypeV2Code.mmSoftDollarStepOut,
+						CommissionTypeV2Code.mmPlanSponsor, CommissionTypeV2Code.mmPercentageOfPrincipal, CommissionTypeV2Code.mmMarkup, CommissionTypeV2Code.mmCommissionDePlacement, CommissionTypeV2Code.mmBrokerCredit,
+						CommissionTypeV2Code.mmOther, CommissionTypeV2Code.mmFundBasedRenewal, CommissionTypeV2Code.mmFlatFee, CommissionTypeV2Code.mmPointsPerBondOrContract, CommissionTypeV2Code.mmDifferentialOrDeferredPayment,
+						CommissionTypeV2Code.mmBrokerageRate, CommissionTypeV2Code.mmPerUnit, CommissionTypeV2Code.mmPercentageCommissionWaivedAsCashDiscount, CommissionTypeV2Code.mmPercentageCommissionWaivedAsAdditionalUnits);
 				derivation_lazy = () -> Arrays.asList(CommissionType7Code.mmObject(), CommissionType9Code.mmObject(), CommissionType6Code.mmObject(), CommissionType8Code.mmObject());
 			}
 		});

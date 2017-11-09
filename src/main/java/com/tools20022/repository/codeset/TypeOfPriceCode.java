@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,43 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.TypeOfPrice6Code
+ * TypeOfPrice6Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TypeOfPrice8Code
+ * TypeOfPrice8Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TypeOfPrice9Code
+ * TypeOfPrice9Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TypeOfPrice2Code
+ * TypeOfPrice2Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TypeOfPrice12Code
+ * TypeOfPrice12Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TypeOfPrice14Code
+ * TypeOfPrice14Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TypeOfPrice11Code
+ * TypeOfPrice11Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TypeOfPrice5Code
+ * TypeOfPrice5Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TypeOfPrice16Code
+ * TypeOfPrice16Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TypeOfPrice1Code
+ * TypeOfPrice1Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TypeOfPrice3Code
+ * TypeOfPrice3Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TypeOfPrice7Code
+ * TypeOfPrice7Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TypeOfPrice10Code
+ * TypeOfPrice10Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TypeOfPrice30Code
+ * TypeOfPrice30Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TypeOfPrice13Code
+ * TypeOfPrice13Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TypeOfPrice15Code
+ * TypeOfPrice15Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>{@linkplain com.tools20022.repository.codeset.TypeOfPriceCode#mmAverage
@@ -155,43 +194,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * TypeOfPriceCode.mmTaxableIncomePerShareCalculated}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.TypeOfPrice6Code
- * TypeOfPrice6Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TypeOfPrice8Code
- * TypeOfPrice8Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TypeOfPrice9Code
- * TypeOfPrice9Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TypeOfPrice2Code
- * TypeOfPrice2Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TypeOfPrice12Code
- * TypeOfPrice12Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TypeOfPrice14Code
- * TypeOfPrice14Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TypeOfPrice11Code
- * TypeOfPrice11Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TypeOfPrice5Code
- * TypeOfPrice5Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TypeOfPrice16Code
- * TypeOfPrice16Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TypeOfPrice1Code
- * TypeOfPrice1Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TypeOfPrice3Code
- * TypeOfPrice3Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TypeOfPrice7Code
- * TypeOfPrice7Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TypeOfPrice10Code
- * TypeOfPrice10Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TypeOfPrice30Code
- * TypeOfPrice30Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TypeOfPrice13Code
- * TypeOfPrice13Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TypeOfPrice15Code
- * TypeOfPrice15Code}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -239,7 +241,7 @@ public class TypeOfPriceCode {
 	 */
 	public static final MMCode mmAverage = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Average";
 			definition = "Price is an average execution price.";
 			owner_lazy = () -> TypeOfPriceCode.mmObject();
@@ -269,7 +271,7 @@ public class TypeOfPriceCode {
 	 */
 	public static final MMCode mmAverageOverride = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AverageOverride";
 			definition = "Price is an override of the average price.";
 			owner_lazy = () -> TypeOfPriceCode.mmObject();
@@ -300,7 +302,7 @@ public class TypeOfPriceCode {
 	 */
 	public static final MMCode mmCombined = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Combined";
 			definition = "Price is composed of the combined expenses (used in the UK market).";
 			owner_lazy = () -> TypeOfPriceCode.mmObject();
@@ -333,7 +335,7 @@ public class TypeOfPriceCode {
 	 */
 	public static final MMCode mmGrossOfAll = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "GrossOfAll";
 			definition = "Price is a gross execution price. The price is an all inclusive price, ie, including all charges, fees, and taxes.";
 			owner_lazy = () -> TypeOfPriceCode.mmObject();
@@ -366,7 +368,7 @@ public class TypeOfPriceCode {
 	 */
 	public static final MMCode mmLimit = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Limit";
 			definition = "Price is the limit price of a limit order, eg, a customer might put in a limit order to sell financial instruments at 67 or to buy at 60.";
 			owner_lazy = () -> TypeOfPriceCode.mmObject();
@@ -399,7 +401,7 @@ public class TypeOfPriceCode {
 	 */
 	public static final MMCode mmNet = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Net";
 			definition = "Price is a net price, ie, net only of local broker's commission, local fees and local taxes.";
 			owner_lazy = () -> TypeOfPriceCode.mmObject();
@@ -429,7 +431,7 @@ public class TypeOfPriceCode {
 	 */
 	public static final MMCode mmNetDisclosed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NetDisclosed";
 			definition = "Price is net to the disclosed client.";
 			owner_lazy = () -> TypeOfPriceCode.mmObject();
@@ -460,7 +462,7 @@ public class TypeOfPriceCode {
 	 */
 	public static final MMCode mmNetOfAll = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NetOfAll";
 			definition = "Price is a net price, ie, net of all charges, fees and taxes.";
 			owner_lazy = () -> TypeOfPriceCode.mmObject();
@@ -491,7 +493,7 @@ public class TypeOfPriceCode {
 	 */
 	public static final MMCode mmNetUndisclosed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NetUndisclosed";
 			definition = "Price is net to the client undisclosed (used in the UK market).";
 			owner_lazy = () -> TypeOfPriceCode.mmObject();
@@ -521,7 +523,7 @@ public class TypeOfPriceCode {
 	 */
 	public static final MMCode mmNotionalGross = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NotionalGross";
 			definition = "Price is notional gross (used in the UK market).";
 			owner_lazy = () -> TypeOfPriceCode.mmObject();
@@ -552,7 +554,7 @@ public class TypeOfPriceCode {
 	 */
 	public static final MMCode mmParValue = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ParValue";
 			definition = "Price is equal to the nominal or face value of the instrument.";
 			owner_lazy = () -> TypeOfPriceCode.mmObject();
@@ -582,7 +584,7 @@ public class TypeOfPriceCode {
 	 */
 	public static final MMCode mmRoundedAverage = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RoundedAverage";
 			definition = "Price  is a rounded average price.";
 			owner_lazy = () -> TypeOfPriceCode.mmObject();
@@ -618,7 +620,7 @@ public class TypeOfPriceCode {
 	 */
 	public static final MMCode mmStop = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Stop";
 			definition = "Price is a stop price used in an order to buy.  The order becomes a market order when the financial instrument trades at or above the stop price after the order is submitted.  In an order to sell the order becomes a market order when the financial instrument trades at or below the stop price.";
 			owner_lazy = () -> TypeOfPriceCode.mmObject();
@@ -651,7 +653,7 @@ public class TypeOfPriceCode {
 	 */
 	public static final MMCode mmBid = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Bid";
 			definition = "Price is the calculated bid price of a dual-priced fund (offer-bid prices), ie, the selling price of the units for the investor.";
 			owner_lazy = () -> TypeOfPriceCode.mmObject();
@@ -684,7 +686,7 @@ public class TypeOfPriceCode {
 	 */
 	public static final MMCode mmOffer = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Offer";
 			definition = "Price is the calculated offer price of a dual-priced investment fund (offer-bid prices), ie, the buying price of the units for an investor.";
 			owner_lazy = () -> TypeOfPriceCode.mmObject();
@@ -718,7 +720,7 @@ public class TypeOfPriceCode {
 	 */
 	public static final MMCode mmNetAssetValue = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NetAssetValue";
 			definition = "Price is the net asset value per unit that is used either as a transacting price for a single-priced investment fund class, or as a notional price for the calculation of other prices.";
 			owner_lazy = () -> TypeOfPriceCode.mmObject();
@@ -753,7 +755,7 @@ public class TypeOfPriceCode {
 	 */
 	public static final MMCode mmCreation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Creation";
 			definition = "Price is the calculated creation price of a dual-priced investment fund (creation-cancellation prices) and the highest possible buying price of the units before the initial charge. The actual buying or offer price, which includes charges, will be higher.";
 			owner_lazy = () -> TypeOfPriceCode.mmObject();
@@ -788,7 +790,7 @@ public class TypeOfPriceCode {
 	 */
 	public static final MMCode mmCancellation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Cancellation";
 			definition = "Price is the calculated cancellation price of a dual-priced investment fund (creation-cancellation price), and the lowest possible valuation of the units on any one-day. The actual selling or bid price is usually higher.";
 			owner_lazy = () -> TypeOfPriceCode.mmObject();
@@ -821,7 +823,7 @@ public class TypeOfPriceCode {
 	 */
 	public static final MMCode mmInterim = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Interim";
 			definition = "Price is the non-official interim price given to an investor before the executed price.";
 			owner_lazy = () -> TypeOfPriceCode.mmObject();
@@ -857,7 +859,7 @@ public class TypeOfPriceCode {
 	 */
 	public static final MMCode mmSwing = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Swing";
 			definition = "Price is the calculated net asset value price of a single-priced investment fund. The price is adjusted to take into account the dealing costs due to individual large deals, or due to a significant imbalance in volumes of subscriptions vs redemptions, as an alternative to dilution levy.";
 			owner_lazy = () -> TypeOfPriceCode.mmObject();
@@ -888,7 +890,7 @@ public class TypeOfPriceCode {
 	 */
 	public static final MMCode mmOther = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Other";
 			definition = "Price is another type of price, which is not explicitly defined.";
 			owner_lazy = () -> TypeOfPriceCode.mmObject();
@@ -919,7 +921,7 @@ public class TypeOfPriceCode {
 	 */
 	public static final MMCode mmMid = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Mid";
 			definition = "Price is the average price between the bid and offer prices.";
 			owner_lazy = () -> TypeOfPriceCode.mmObject();
@@ -950,7 +952,7 @@ public class TypeOfPriceCode {
 	 */
 	public static final MMCode mmReinvestment = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Reinvestment";
 			definition = "Price is the price used when reinvesting units after distribution.";
 			owner_lazy = () -> TypeOfPriceCode.mmObject();
@@ -981,7 +983,7 @@ public class TypeOfPriceCode {
 	 */
 	public static final MMCode mmSwitch = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Switch";
 			definition = "Price is the price used when transferring units between products.";
 			owner_lazy = () -> TypeOfPriceCode.mmObject();
@@ -1014,7 +1016,7 @@ public class TypeOfPriceCode {
 	 */
 	public static final MMCode mmDailyDividendRate = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DailyDividendRate";
 			definition = "Price is the net income of a financial instrument, calculated on each dealing day, and divided by all the units outstanding on that day.";
 			owner_lazy = () -> TypeOfPriceCode.mmObject();
@@ -1044,7 +1046,7 @@ public class TypeOfPriceCode {
 	 */
 	public static final MMCode mmMarket = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Market";
 			definition = "Price is the current market price.";
 			owner_lazy = () -> TypeOfPriceCode.mmObject();
@@ -1074,7 +1076,7 @@ public class TypeOfPriceCode {
 	 */
 	public static final MMCode mmIndicative = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Indicative";
 			definition = "Price is the estimated indicative price.";
 			owner_lazy = () -> TypeOfPriceCode.mmObject();
@@ -1104,7 +1106,7 @@ public class TypeOfPriceCode {
 	 */
 	public static final MMCode mmActual = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Actual";
 			definition = "True offer price.";
 			owner_lazy = () -> TypeOfPriceCode.mmObject();
@@ -1135,7 +1137,7 @@ public class TypeOfPriceCode {
 	 */
 	public static final MMCode mmNonAdjustedUnpublished = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NonAdjustedUnpublished";
 			definition = "The original NAV before the price of the investment fund was swung.";
 			owner_lazy = () -> TypeOfPriceCode.mmObject();
@@ -1165,7 +1167,7 @@ public class TypeOfPriceCode {
 	 */
 	public static final MMCode mmGuaranteed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Guaranteed";
 			definition = "Price is a guaranteed price.";
 			owner_lazy = () -> TypeOfPriceCode.mmObject();
@@ -1195,7 +1197,7 @@ public class TypeOfPriceCode {
 	 */
 	public static final MMCode mmEstimatedNAV = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "EstimatedNAV";
 			definition = "Price is an estimated net asset value per unit";
 			owner_lazy = () -> TypeOfPriceCode.mmObject();
@@ -1229,7 +1231,7 @@ public class TypeOfPriceCode {
 	 */
 	public static final MMCode mmGrossAssetValue = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "GrossAssetValue";
 			definition = "Price is the gross asset value per unit and includes the performance fee per share. It is used as the transacting price for a fund with equalisation. GAVL price minus the NAVL price = performance fee.";
 			owner_lazy = () -> TypeOfPriceCode.mmObject();
@@ -1263,7 +1265,7 @@ public class TypeOfPriceCode {
 	 */
 	public static final MMCode mmEstimatedGAV = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "EstimatedGAV";
 			definition = "Price is the estimated gross asset value per unit and includes the performance fee per share. It is used as the transacting price for a fund with equalisation. GAVL price minus the NAVL price = performance fee.";
 			owner_lazy = () -> TypeOfPriceCode.mmObject();
@@ -1294,7 +1296,7 @@ public class TypeOfPriceCode {
 	 */
 	public static final MMCode mmSidePocketNAV = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SidePocketNAV";
 			definition = "Price is the estimated net asset value for the side pocket.";
 			owner_lazy = () -> TypeOfPriceCode.mmObject();
@@ -1324,7 +1326,7 @@ public class TypeOfPriceCode {
 	 */
 	public static final MMCode mmAsk = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Ask";
 			definition = "Offer.  Price for which seller is willing to sell item.";
 			owner_lazy = () -> TypeOfPriceCode.mmObject();
@@ -1354,7 +1356,7 @@ public class TypeOfPriceCode {
 	 */
 	public static final MMCode mmAuction = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Auction";
 			definition = "Price selected as a crossing of an auction.";
 			owner_lazy = () -> TypeOfPriceCode.mmObject();
@@ -1384,7 +1386,7 @@ public class TypeOfPriceCode {
 	 */
 	public static final MMCode mmCalculated = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Calculated";
 			definition = "Price is calculated.";
 			owner_lazy = () -> TypeOfPriceCode.mmObject();
@@ -1414,7 +1416,7 @@ public class TypeOfPriceCode {
 	 */
 	public static final MMCode mmClean = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Clean";
 			definition = "Paid without accumulated interest.";
 			owner_lazy = () -> TypeOfPriceCode.mmObject();
@@ -1444,7 +1446,7 @@ public class TypeOfPriceCode {
 	 */
 	public static final MMCode mmDirty = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Dirty";
 			definition = "Paid with accumulated interest.";
 			owner_lazy = () -> TypeOfPriceCode.mmObject();
@@ -1474,7 +1476,7 @@ public class TypeOfPriceCode {
 	 */
 	public static final MMCode mmDraw = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Draw";
 			definition = "Price selected as a result of a lottery/tiebreaker.";
 			owner_lazy = () -> TypeOfPriceCode.mmObject();
@@ -1504,7 +1506,7 @@ public class TypeOfPriceCode {
 	 */
 	public static final MMCode mmFairValue = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "FairValue";
 			definition = "Estimate of the potential market price.";
 			owner_lazy = () -> TypeOfPriceCode.mmObject();
@@ -1535,7 +1537,7 @@ public class TypeOfPriceCode {
 	 */
 	public static final MMCode mmIndicativePaid = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "IndicativePaid";
 			definition = "Reduced and partial execution based on high bids and ask orders.";
 			owner_lazy = () -> TypeOfPriceCode.mmObject();
@@ -1565,7 +1567,7 @@ public class TypeOfPriceCode {
 	 */
 	public static final MMCode mmKassa = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Kassa";
 			definition = "Official declared price.";
 			owner_lazy = () -> TypeOfPriceCode.mmObject();
@@ -1595,7 +1597,7 @@ public class TypeOfPriceCode {
 	 */
 	public static final MMCode mmPaid = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Paid";
 			definition = "Price at which the trade was done.";
 			owner_lazy = () -> TypeOfPriceCode.mmObject();
@@ -1625,7 +1627,7 @@ public class TypeOfPriceCode {
 	 */
 	public static final MMCode mmRedemptionNAV = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RedemptionNAV";
 			definition = "Net Asset Value (NAV) applicable to redemptions.";
 			owner_lazy = () -> TypeOfPriceCode.mmObject();
@@ -1655,7 +1657,7 @@ public class TypeOfPriceCode {
 	 */
 	public static final MMCode mmSettlement = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Settlement";
 			definition = "Price used for the settlement of futures and options.";
 			owner_lazy = () -> TypeOfPriceCode.mmObject();
@@ -1685,7 +1687,7 @@ public class TypeOfPriceCode {
 	 */
 	public static final MMCode mmSpread = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Spread";
 			definition = "The difference between bid and ask.";
 			owner_lazy = () -> TypeOfPriceCode.mmObject();
@@ -1715,7 +1717,7 @@ public class TypeOfPriceCode {
 	 */
 	public static final MMCode mmSubscriptionNAV = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SubscriptionNAV";
 			definition = "Net Asset Value (NAV) applicable to subscriptions.";
 			owner_lazy = () -> TypeOfPriceCode.mmObject();
@@ -1745,7 +1747,7 @@ public class TypeOfPriceCode {
 	 */
 	public static final MMCode mmTax = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Tax";
 			definition = "Price for tax declaration purpose.";
 			owner_lazy = () -> TypeOfPriceCode.mmObject();
@@ -1777,7 +1779,7 @@ public class TypeOfPriceCode {
 	 */
 	public static final MMCode mmTaxableIncomePerShareCalculated = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TaxableIncomePerShareCalculated";
 			definition = "Specifies whether the fund calculates a taxable interest per share (TIS).";
 			owner_lazy = () -> TypeOfPriceCode.mmObject();
@@ -1788,28 +1790,19 @@ public class TypeOfPriceCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("AVER");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TypeOfPriceCode";
 				definition = "Specifies the type of price and information about the price.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TypeOfPriceCode.mmAverage, com.tools20022.repository.codeset.TypeOfPriceCode.mmAverageOverride, com.tools20022.repository.codeset.TypeOfPriceCode.mmCombined,
-						com.tools20022.repository.codeset.TypeOfPriceCode.mmGrossOfAll, com.tools20022.repository.codeset.TypeOfPriceCode.mmLimit, com.tools20022.repository.codeset.TypeOfPriceCode.mmNet,
-						com.tools20022.repository.codeset.TypeOfPriceCode.mmNetDisclosed, com.tools20022.repository.codeset.TypeOfPriceCode.mmNetOfAll, com.tools20022.repository.codeset.TypeOfPriceCode.mmNetUndisclosed,
-						com.tools20022.repository.codeset.TypeOfPriceCode.mmNotionalGross, com.tools20022.repository.codeset.TypeOfPriceCode.mmParValue, com.tools20022.repository.codeset.TypeOfPriceCode.mmRoundedAverage,
-						com.tools20022.repository.codeset.TypeOfPriceCode.mmStop, com.tools20022.repository.codeset.TypeOfPriceCode.mmBid, com.tools20022.repository.codeset.TypeOfPriceCode.mmOffer,
-						com.tools20022.repository.codeset.TypeOfPriceCode.mmNetAssetValue, com.tools20022.repository.codeset.TypeOfPriceCode.mmCreation, com.tools20022.repository.codeset.TypeOfPriceCode.mmCancellation,
-						com.tools20022.repository.codeset.TypeOfPriceCode.mmInterim, com.tools20022.repository.codeset.TypeOfPriceCode.mmSwing, com.tools20022.repository.codeset.TypeOfPriceCode.mmOther,
-						com.tools20022.repository.codeset.TypeOfPriceCode.mmMid, com.tools20022.repository.codeset.TypeOfPriceCode.mmReinvestment, com.tools20022.repository.codeset.TypeOfPriceCode.mmSwitch,
-						com.tools20022.repository.codeset.TypeOfPriceCode.mmDailyDividendRate, com.tools20022.repository.codeset.TypeOfPriceCode.mmMarket, com.tools20022.repository.codeset.TypeOfPriceCode.mmIndicative,
-						com.tools20022.repository.codeset.TypeOfPriceCode.mmActual, com.tools20022.repository.codeset.TypeOfPriceCode.mmNonAdjustedUnpublished, com.tools20022.repository.codeset.TypeOfPriceCode.mmGuaranteed,
-						com.tools20022.repository.codeset.TypeOfPriceCode.mmEstimatedNAV, com.tools20022.repository.codeset.TypeOfPriceCode.mmGrossAssetValue, com.tools20022.repository.codeset.TypeOfPriceCode.mmEstimatedGAV,
-						com.tools20022.repository.codeset.TypeOfPriceCode.mmSidePocketNAV, com.tools20022.repository.codeset.TypeOfPriceCode.mmAsk, com.tools20022.repository.codeset.TypeOfPriceCode.mmAuction,
-						com.tools20022.repository.codeset.TypeOfPriceCode.mmCalculated, com.tools20022.repository.codeset.TypeOfPriceCode.mmClean, com.tools20022.repository.codeset.TypeOfPriceCode.mmDirty,
-						com.tools20022.repository.codeset.TypeOfPriceCode.mmDraw, com.tools20022.repository.codeset.TypeOfPriceCode.mmFairValue, com.tools20022.repository.codeset.TypeOfPriceCode.mmIndicativePaid,
-						com.tools20022.repository.codeset.TypeOfPriceCode.mmKassa, com.tools20022.repository.codeset.TypeOfPriceCode.mmPaid, com.tools20022.repository.codeset.TypeOfPriceCode.mmRedemptionNAV,
-						com.tools20022.repository.codeset.TypeOfPriceCode.mmSettlement, com.tools20022.repository.codeset.TypeOfPriceCode.mmSpread, com.tools20022.repository.codeset.TypeOfPriceCode.mmSubscriptionNAV,
-						com.tools20022.repository.codeset.TypeOfPriceCode.mmTax, com.tools20022.repository.codeset.TypeOfPriceCode.mmTaxableIncomePerShareCalculated);
+				code_lazy = () -> Arrays.asList(TypeOfPriceCode.mmAverage, TypeOfPriceCode.mmAverageOverride, TypeOfPriceCode.mmCombined, TypeOfPriceCode.mmGrossOfAll, TypeOfPriceCode.mmLimit, TypeOfPriceCode.mmNet,
+						TypeOfPriceCode.mmNetDisclosed, TypeOfPriceCode.mmNetOfAll, TypeOfPriceCode.mmNetUndisclosed, TypeOfPriceCode.mmNotionalGross, TypeOfPriceCode.mmParValue, TypeOfPriceCode.mmRoundedAverage, TypeOfPriceCode.mmStop,
+						TypeOfPriceCode.mmBid, TypeOfPriceCode.mmOffer, TypeOfPriceCode.mmNetAssetValue, TypeOfPriceCode.mmCreation, TypeOfPriceCode.mmCancellation, TypeOfPriceCode.mmInterim, TypeOfPriceCode.mmSwing,
+						TypeOfPriceCode.mmOther, TypeOfPriceCode.mmMid, TypeOfPriceCode.mmReinvestment, TypeOfPriceCode.mmSwitch, TypeOfPriceCode.mmDailyDividendRate, TypeOfPriceCode.mmMarket, TypeOfPriceCode.mmIndicative,
+						TypeOfPriceCode.mmActual, TypeOfPriceCode.mmNonAdjustedUnpublished, TypeOfPriceCode.mmGuaranteed, TypeOfPriceCode.mmEstimatedNAV, TypeOfPriceCode.mmGrossAssetValue, TypeOfPriceCode.mmEstimatedGAV,
+						TypeOfPriceCode.mmSidePocketNAV, TypeOfPriceCode.mmAsk, TypeOfPriceCode.mmAuction, TypeOfPriceCode.mmCalculated, TypeOfPriceCode.mmClean, TypeOfPriceCode.mmDirty, TypeOfPriceCode.mmDraw, TypeOfPriceCode.mmFairValue,
+						TypeOfPriceCode.mmIndicativePaid, TypeOfPriceCode.mmKassa, TypeOfPriceCode.mmPaid, TypeOfPriceCode.mmRedemptionNAV, TypeOfPriceCode.mmSettlement, TypeOfPriceCode.mmSpread, TypeOfPriceCode.mmSubscriptionNAV,
+						TypeOfPriceCode.mmTax, TypeOfPriceCode.mmTaxableIncomePerShareCalculated);
 				derivation_lazy = () -> Arrays.asList(TypeOfPrice6Code.mmObject(), TypeOfPrice8Code.mmObject(), TypeOfPrice9Code.mmObject(), TypeOfPrice2Code.mmObject(), TypeOfPrice12Code.mmObject(), TypeOfPrice14Code.mmObject(),
 						TypeOfPrice11Code.mmObject(), TypeOfPrice5Code.mmObject(), TypeOfPrice16Code.mmObject(), TypeOfPrice1Code.mmObject(), TypeOfPrice3Code.mmObject(), TypeOfPrice7Code.mmObject(), TypeOfPrice10Code.mmObject(),
 						TypeOfPrice30Code.mmObject(), TypeOfPrice13Code.mmObject(), TypeOfPrice15Code.mmObject());

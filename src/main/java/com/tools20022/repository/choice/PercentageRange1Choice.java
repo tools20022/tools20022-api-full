@@ -20,7 +20,9 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.PercentageRate;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.FromToPercentageRange1;
 import com.tools20022.repository.msg.PercentageRangeBoundary1;
 import java.util.Arrays;
@@ -106,7 +108,7 @@ public class PercentageRange1Choice {
 			componentContext_lazy = () -> PercentageRange1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Fr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "From";
 			definition = "Lower boundary of a range of percentage rates.";
 			maxOccurs = 1;
@@ -148,7 +150,7 @@ public class PercentageRange1Choice {
 			componentContext_lazy = () -> PercentageRange1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "To";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "To";
 			definition = "Upper boundary of a range of percentage rates.";
 			maxOccurs = 1;
@@ -189,7 +191,7 @@ public class PercentageRange1Choice {
 			componentContext_lazy = () -> PercentageRange1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "FrTo";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FromTo";
 			definition = "Range of valid percentage rates.";
 			maxOccurs = 1;
@@ -232,7 +234,7 @@ public class PercentageRange1Choice {
 			componentContext_lazy = () -> PercentageRange1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "EQ";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Equal";
 			definition = "Exact percentage rate must match to be considered valid.";
 			maxOccurs = 1;
@@ -275,7 +277,7 @@ public class PercentageRange1Choice {
 			componentContext_lazy = () -> PercentageRange1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "NEQ";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotEqual";
 			definition = "Value that percentage rate must not match to be considered valid.";
 			maxOccurs = 1;
@@ -287,10 +289,9 @@ public class PercentageRange1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PercentageRange1Choice.mmFrom, com.tools20022.repository.choice.PercentageRange1Choice.mmTo,
-						com.tools20022.repository.choice.PercentageRange1Choice.mmFromTo, com.tools20022.repository.choice.PercentageRange1Choice.mmEqual, com.tools20022.repository.choice.PercentageRange1Choice.mmNotEqual);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(PercentageRange1Choice.mmFrom, PercentageRange1Choice.mmTo, PercentageRange1Choice.mmFromTo, PercentageRange1Choice.mmEqual, PercentageRange1Choice.mmNotEqual);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "PercentageRange1Choice";
 				definition = "Choice between ranges of rates in which a percentage rate is considered valid or a specified percentage rate which has to be matched or unmatched to be valid.";
 			}

@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CustomerOrderCapacityCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -86,7 +88,7 @@ public class CustomerOrderCapacity1Code extends CustomerOrderCapacityCode {
 	 */
 	public static final MMCode mmMemberOwnAccount = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MemberOwnAccount";
 			owner_lazy = () -> CustomerOrderCapacity1Code.mmObject();
 		}
@@ -109,7 +111,7 @@ public class CustomerOrderCapacity1Code extends CustomerOrderCapacityCode {
 	 */
 	public static final MMCode mmClearingProprietary = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClearingProprietary";
 			owner_lazy = () -> CustomerOrderCapacity1Code.mmObject();
 		}
@@ -132,7 +134,7 @@ public class CustomerOrderCapacity1Code extends CustomerOrderCapacityCode {
 	 */
 	public static final MMCode mmMemberOtherMember = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MemberOtherMember";
 			owner_lazy = () -> CustomerOrderCapacity1Code.mmObject();
 		}
@@ -141,13 +143,12 @@ public class CustomerOrderCapacity1Code extends CustomerOrderCapacityCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("OWNE");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CustomerOrderCapacity1Code";
 				definition = "Designation of the capacity of the firm placing the order.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CustomerOrderCapacity1Code.mmMemberOwnAccount, com.tools20022.repository.codeset.CustomerOrderCapacity1Code.mmClearingProprietary,
-						com.tools20022.repository.codeset.CustomerOrderCapacity1Code.mmMemberOtherMember);
+				code_lazy = () -> Arrays.asList(CustomerOrderCapacity1Code.mmMemberOwnAccount, CustomerOrderCapacity1Code.mmClearingProprietary, CustomerOrderCapacity1Code.mmMemberOtherMember);
 				trace_lazy = () -> CustomerOrderCapacityCode.mmObject();
 			}
 		});

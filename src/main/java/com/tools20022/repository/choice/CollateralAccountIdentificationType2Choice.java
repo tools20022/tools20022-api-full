@@ -19,8 +19,10 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CollateralAccountType1Code;
 import com.tools20022.repository.entity.Account;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification36;
 import java.text.DateFormat;
 import java.util.Arrays;
@@ -128,15 +130,15 @@ public class CollateralAccountIdentificationType2Choice {
 	 */
 	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.mmCollateralAccountType;
+			businessElementTrace_lazy = () -> Account.mmCollateralAccountType;
 			componentContext_lazy = () -> CollateralAccountIdentificationType2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Indicates the type of collateral account expressed as a code.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CollateralAccountIdentificationType3Choice.mmType);
-			previousVersion_lazy = () -> com.tools20022.repository.choice.CollateralAccountIdentificationType1Choice.mmType;
+			nextVersions_lazy = () -> Arrays.asList(CollateralAccountIdentificationType3Choice.mmType);
+			previousVersion_lazy = () -> CollateralAccountIdentificationType1Choice.mmType;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CollateralAccountType1Code.mmObject();
@@ -192,15 +194,15 @@ public class CollateralAccountIdentificationType2Choice {
 	 */
 	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.mmCollateralAccountType;
+			businessElementTrace_lazy = () -> Account.mmCollateralAccountType;
 			componentContext_lazy = () -> CollateralAccountIdentificationType2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Specifies the collateral account expressed as a proprietary code.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CollateralAccountIdentificationType3Choice.mmProprietary);
-			previousVersion_lazy = () -> com.tools20022.repository.choice.CollateralAccountIdentificationType1Choice.mmProprietary;
+			nextVersions_lazy = () -> Arrays.asList(CollateralAccountIdentificationType3Choice.mmProprietary);
+			previousVersion_lazy = () -> CollateralAccountIdentificationType1Choice.mmProprietary;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification36.mmObject();
@@ -210,10 +212,10 @@ public class CollateralAccountIdentificationType2Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CollateralAccountIdentificationType2Choice.mmType, com.tools20022.repository.choice.CollateralAccountIdentificationType2Choice.mmProprietary);
+				messageElement_lazy = () -> Arrays.asList(CollateralAccountIdentificationType2Choice.mmType, CollateralAccountIdentificationType2Choice.mmProprietary);
 				trace_lazy = () -> Account.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
 						return DateFormat.getDateInstance(java.text.DateFormat.LONG).parse("November 11, 2017");

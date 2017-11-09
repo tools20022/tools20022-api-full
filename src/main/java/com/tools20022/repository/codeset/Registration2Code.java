@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.RegistrationCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -89,7 +91,7 @@ public class Registration2Code extends RegistrationCode {
 	 */
 	public static final MMCode mmPartyHold = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartyHold";
 			owner_lazy = () -> Registration2Code.mmObject();
 		}
@@ -112,7 +114,7 @@ public class Registration2Code extends RegistrationCode {
 	 */
 	public static final MMCode mmCSDHold = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CSDHold";
 			owner_lazy = () -> Registration2Code.mmObject();
 		}
@@ -135,7 +137,7 @@ public class Registration2Code extends RegistrationCode {
 	 */
 	public static final MMCode mmConditionalDelivery = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConditionalDelivery";
 			owner_lazy = () -> Registration2Code.mmObject();
 		}
@@ -158,7 +160,7 @@ public class Registration2Code extends RegistrationCode {
 	 */
 	public static final MMCode mmCSDValidation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CSDValidation";
 			owner_lazy = () -> Registration2Code.mmObject();
 		}
@@ -167,13 +169,12 @@ public class Registration2Code extends RegistrationCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("PTYH");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Registration2Code";
 				definition = "Specifies whether registration should occur upon receipt.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Registration2Code.mmPartyHold, com.tools20022.repository.codeset.Registration2Code.mmCSDHold,
-						com.tools20022.repository.codeset.Registration2Code.mmConditionalDelivery, com.tools20022.repository.codeset.Registration2Code.mmCSDValidation);
+				code_lazy = () -> Arrays.asList(Registration2Code.mmPartyHold, Registration2Code.mmCSDHold, Registration2Code.mmConditionalDelivery, Registration2Code.mmCSDValidation);
 				trace_lazy = () -> RegistrationCode.mmObject();
 			}
 		});

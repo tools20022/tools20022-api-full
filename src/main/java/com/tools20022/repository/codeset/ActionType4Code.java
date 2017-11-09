@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ActionTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -86,7 +88,7 @@ public class ActionType4Code extends ActionTypeCode {
 	 */
 	public static final MMCode mmCaptureCard = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CaptureCard";
 			owner_lazy = () -> ActionType4Code.mmObject();
 		}
@@ -109,7 +111,7 @@ public class ActionType4Code extends ActionTypeCode {
 	 */
 	public static final MMCode mmIdentificationRequired = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IdentificationRequired";
 			owner_lazy = () -> ActionType4Code.mmObject();
 		}
@@ -132,7 +134,7 @@ public class ActionType4Code extends ActionTypeCode {
 	 */
 	public static final MMCode mmReferral = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Referral";
 			owner_lazy = () -> ActionType4Code.mmObject();
 		}
@@ -155,7 +157,7 @@ public class ActionType4Code extends ActionTypeCode {
 	 */
 	public static final MMCode mmApprove = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Approve";
 			owner_lazy = () -> ActionType4Code.mmObject();
 		}
@@ -178,7 +180,7 @@ public class ActionType4Code extends ActionTypeCode {
 	 */
 	public static final MMCode mmBlockCard = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BlockCard";
 			owner_lazy = () -> ActionType4Code.mmObject();
 		}
@@ -201,7 +203,7 @@ public class ActionType4Code extends ActionTypeCode {
 	 */
 	public static final MMCode mmNoReasonForDecline = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoReasonForDecline";
 			owner_lazy = () -> ActionType4Code.mmObject();
 		}
@@ -210,13 +212,12 @@ public class ActionType4Code extends ActionTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ActionType4Code";
 				definition = "Recommended action for the issuer.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ActionType4Code.mmCaptureCard, com.tools20022.repository.codeset.ActionType4Code.mmIdentificationRequired,
-						com.tools20022.repository.codeset.ActionType4Code.mmReferral, com.tools20022.repository.codeset.ActionType4Code.mmApprove, com.tools20022.repository.codeset.ActionType4Code.mmBlockCard,
-						com.tools20022.repository.codeset.ActionType4Code.mmNoReasonForDecline);
+				code_lazy = () -> Arrays.asList(ActionType4Code.mmCaptureCard, ActionType4Code.mmIdentificationRequired, ActionType4Code.mmReferral, ActionType4Code.mmApprove, ActionType4Code.mmBlockCard,
+						ActionType4Code.mmNoReasonForDecline);
 				trace_lazy = () -> ActionTypeCode.mmObject();
 			}
 		});

@@ -20,14 +20,14 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.AccountIdentification30Choice;
 import com.tools20022.repository.choice.PartyIdentification72Choice;
 import com.tools20022.repository.codeset.AccountChoiceMethod1Code;
 import com.tools20022.repository.codeset.CardAccountType2Code;
 import com.tools20022.repository.datatype.Max70Text;
-import com.tools20022.repository.entity.AccountOwnerRole;
-import com.tools20022.repository.entity.AccountServicerRole;
-import com.tools20022.repository.entity.CashAccount;
+import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -131,10 +131,10 @@ public class CardAccount1 {
 			componentContext_lazy = () -> CardAccount1.mmObject();
 			isDerived = false;
 			xmlTag = "SelctnMtd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SelectionMethod";
 			definition = "Method used by the cardholder and the terminal for the choice of the account.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardAccount3.mmSelectionMethod);
+			nextVersions_lazy = () -> Arrays.asList(CardAccount3.mmSelectionMethod);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> AccountChoiceMethod1Code.mmObject();
@@ -186,14 +186,14 @@ public class CardAccount1 {
 	 */
 	public static final MMMessageAttribute mmSelectedAccountType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentCard.mmRelatedAccountType;
+			businessElementTrace_lazy = () -> PaymentCard.mmRelatedAccountType;
 			componentContext_lazy = () -> CardAccount1.mmObject();
 			isDerived = false;
 			xmlTag = "SelctdAcctTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SelectedAccountType";
 			definition = "Type of cardholder account used for the transaction.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardAccount3.mmSelectedAccountType, com.tools20022.repository.msg.CardAccount2.mmSelectedAccountType);
+			nextVersions_lazy = () -> Arrays.asList(CardAccount3.mmSelectedAccountType, CardAccount2.mmSelectedAccountType);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CardAccountType2Code.mmObject();
@@ -250,14 +250,14 @@ public class CardAccount1 {
 	 */
 	public static final MMMessageAttribute mmAccountName = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AccountIdentification.mmName;
+			businessElementTrace_lazy = () -> AccountIdentification.mmName;
 			componentContext_lazy = () -> CardAccount1.mmObject();
 			isDerived = false;
 			xmlTag = "AcctNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountName";
 			definition = "Name of the account, as assigned by the account servicing institution, in agreement with the account owner in order to provide an additional means of identification of the account.\r\nUsage: The account name is different from the account owner name. The account name is used in certain user communities to provide a means of identifying the account, in addition to the account owner's identity and the account number.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardAccount3.mmAccountName, com.tools20022.repository.msg.CardAccount2.mmAccountName);
+			nextVersions_lazy = () -> Arrays.asList(CardAccount3.mmAccountName, CardAccount2.mmAccountName);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max70Text.mmObject();
@@ -311,10 +311,10 @@ public class CardAccount1 {
 			componentContext_lazy = () -> CardAccount1.mmObject();
 			isDerived = false;
 			xmlTag = "AcctOwnr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountOwner";
 			definition = "Party that legally owns the account.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardAccount3.mmAccountOwner, com.tools20022.repository.msg.CardAccount2.mmAccountOwner);
+			nextVersions_lazy = () -> Arrays.asList(CardAccount3.mmAccountOwner, CardAccount2.mmAccountOwner);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -367,14 +367,14 @@ public class CardAccount1 {
 	 */
 	public static final MMMessageAssociationEnd mmAccountIdentifier = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.mmIdentification;
+			businessElementTrace_lazy = () -> Account.mmIdentification;
 			componentContext_lazy = () -> CardAccount1.mmObject();
 			isDerived = false;
 			xmlTag = "AcctIdr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountIdentifier";
 			definition = "Unique identifier of the account, as assigned by the account servicer.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardAccount3.mmAccountIdentifier, com.tools20022.repository.msg.CardAccount2.mmAccountIdentifier);
+			nextVersions_lazy = () -> Arrays.asList(CardAccount3.mmAccountIdentifier, CardAccount2.mmAccountIdentifier);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -433,10 +433,10 @@ public class CardAccount1 {
 			componentContext_lazy = () -> CardAccount1.mmObject();
 			isDerived = false;
 			xmlTag = "Svcr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Servicer";
 			definition = "Party that manages the account on behalf of the account owner, that is manages the registration and booking of entries on the account, calculates balances on the account and provides information about the account.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardAccount3.mmServicer, com.tools20022.repository.msg.CardAccount2.mmServicer);
+			nextVersions_lazy = () -> Arrays.asList(CardAccount3.mmServicer, CardAccount2.mmServicer);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -447,12 +447,11 @@ public class CardAccount1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardAccount1.mmSelectionMethod, com.tools20022.repository.msg.CardAccount1.mmSelectedAccountType,
-						com.tools20022.repository.msg.CardAccount1.mmAccountName, com.tools20022.repository.msg.CardAccount1.mmAccountOwner, com.tools20022.repository.msg.CardAccount1.mmAccountIdentifier,
-						com.tools20022.repository.msg.CardAccount1.mmServicer);
+				messageElement_lazy = () -> Arrays.asList(CardAccount1.mmSelectionMethod, CardAccount1.mmSelectedAccountType, CardAccount1.mmAccountName, CardAccount1.mmAccountOwner, CardAccount1.mmAccountIdentifier,
+						CardAccount1.mmServicer);
 				trace_lazy = () -> CashAccount.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CardAccount1";
 				definition = "Way to identify a customer account or a relationship to its account affected for the transaction.";
 				nextVersions_lazy = () -> Arrays.asList(CardAccount3.mmObject(), CardAccount2.mmObject());

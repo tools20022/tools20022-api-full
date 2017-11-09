@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ChargeTaxBasisCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -83,7 +85,7 @@ public class ChargeTaxBasis1Code extends ChargeTaxBasisCode {
 	 */
 	public static final MMCode mmFlatOrAbsolute = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FlatOrAbsolute";
 			owner_lazy = () -> ChargeTaxBasis1Code.mmObject();
 		}
@@ -106,7 +108,7 @@ public class ChargeTaxBasis1Code extends ChargeTaxBasisCode {
 	 */
 	public static final MMCode mmPerUnit = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PerUnit";
 			owner_lazy = () -> ChargeTaxBasis1Code.mmObject();
 		}
@@ -115,12 +117,12 @@ public class ChargeTaxBasis1Code extends ChargeTaxBasisCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("FLAT");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ChargeTaxBasis1Code";
 				definition = "Define the Charges/tax basis for the trade being allocated.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ChargeTaxBasis1Code.mmFlatOrAbsolute, com.tools20022.repository.codeset.ChargeTaxBasis1Code.mmPerUnit);
+				code_lazy = () -> Arrays.asList(ChargeTaxBasis1Code.mmFlatOrAbsolute, ChargeTaxBasis1Code.mmPerUnit);
 				trace_lazy = () -> ChargeTaxBasisCode.mmObject();
 			}
 		});

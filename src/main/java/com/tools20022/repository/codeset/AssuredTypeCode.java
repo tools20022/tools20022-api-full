@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -28,6 +30,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.AssuredType1Code
+ * AssuredType1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>{@linkplain com.tools20022.repository.codeset.AssuredTypeCode#mmBuyer
@@ -40,13 +49,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.AssuredTypeCode#mmSellerBank
  * AssuredTypeCode.mmSellerBank}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.AssuredType1Code
- * AssuredType1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -98,7 +100,7 @@ public class AssuredTypeCode {
 	 */
 	public static final MMCode mmBuyer = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Buyer";
 			definition = "The buyer should be the assured.";
 			owner_lazy = () -> AssuredTypeCode.mmObject();
@@ -128,7 +130,7 @@ public class AssuredTypeCode {
 	 */
 	public static final MMCode mmSeller = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Seller";
 			definition = "The seller should be the assured.";
 			owner_lazy = () -> AssuredTypeCode.mmObject();
@@ -158,7 +160,7 @@ public class AssuredTypeCode {
 	 */
 	public static final MMCode mmBuyerBank = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BuyerBank";
 			definition = "The buyer's bank should be the assured.";
 			owner_lazy = () -> AssuredTypeCode.mmObject();
@@ -188,7 +190,7 @@ public class AssuredTypeCode {
 	 */
 	public static final MMCode mmSellerBank = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SellerBank";
 			definition = "The seller's bank should be the assured.";
 			owner_lazy = () -> AssuredTypeCode.mmObject();
@@ -199,13 +201,12 @@ public class AssuredTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("BUYE");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AssuredTypeCode";
 				definition = "Specifies which type of party should be the assured on the insurance certificate.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AssuredTypeCode.mmBuyer, com.tools20022.repository.codeset.AssuredTypeCode.mmSeller, com.tools20022.repository.codeset.AssuredTypeCode.mmBuyerBank,
-						com.tools20022.repository.codeset.AssuredTypeCode.mmSellerBank);
+				code_lazy = () -> Arrays.asList(AssuredTypeCode.mmBuyer, AssuredTypeCode.mmSeller, AssuredTypeCode.mmBuyerBank, AssuredTypeCode.mmSellerBank);
 				derivation_lazy = () -> Arrays.asList(AssuredType1Code.mmObject());
 			}
 		});

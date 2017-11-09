@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.EventFrequencyCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -131,9 +133,9 @@ public class EventFrequency1Code extends EventFrequencyCode {
 	 */
 	public static final MMCode mmAnnual = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Annual";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.EventFrequency9Code.mmAnnual);
+			nextVersions_lazy = () -> Arrays.asList(EventFrequency9Code.mmAnnual);
 			owner_lazy = () -> EventFrequency1Code.mmObject();
 		}
 	};
@@ -163,9 +165,9 @@ public class EventFrequency1Code extends EventFrequencyCode {
 	 */
 	public static final MMCode mmSemiAnnual = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SemiAnnual";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.EventFrequency9Code.mmSemiAnnual);
+			nextVersions_lazy = () -> Arrays.asList(EventFrequency9Code.mmSemiAnnual);
 			owner_lazy = () -> EventFrequency1Code.mmObject();
 		}
 	};
@@ -195,9 +197,9 @@ public class EventFrequency1Code extends EventFrequencyCode {
 	 */
 	public static final MMCode mmQuarterly = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Quarterly";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.EventFrequency9Code.mmQuarterly);
+			nextVersions_lazy = () -> Arrays.asList(EventFrequency9Code.mmQuarterly);
 			owner_lazy = () -> EventFrequency1Code.mmObject();
 		}
 	};
@@ -227,9 +229,9 @@ public class EventFrequency1Code extends EventFrequencyCode {
 	 */
 	public static final MMCode mmEveryTwoMonths = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EveryTwoMonths";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.EventFrequency9Code.mmEveryTwoMonths);
+			nextVersions_lazy = () -> Arrays.asList(EventFrequency9Code.mmEveryTwoMonths);
 			owner_lazy = () -> EventFrequency1Code.mmObject();
 		}
 	};
@@ -259,9 +261,9 @@ public class EventFrequency1Code extends EventFrequencyCode {
 	 */
 	public static final MMCode mmMonthly = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Monthly";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.EventFrequency9Code.mmMonthly);
+			nextVersions_lazy = () -> Arrays.asList(EventFrequency9Code.mmMonthly);
 			owner_lazy = () -> EventFrequency1Code.mmObject();
 		}
 	};
@@ -291,9 +293,9 @@ public class EventFrequency1Code extends EventFrequencyCode {
 	 */
 	public static final MMCode mmTwiceAMonth = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TwiceAMonth";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.EventFrequency9Code.mmTwiceAMonth);
+			nextVersions_lazy = () -> Arrays.asList(EventFrequency9Code.mmTwiceAMonth);
 			owner_lazy = () -> EventFrequency1Code.mmObject();
 		}
 	};
@@ -323,9 +325,9 @@ public class EventFrequency1Code extends EventFrequencyCode {
 	 */
 	public static final MMCode mmEveryTwoWeeks = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EveryTwoWeeks";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.EventFrequency9Code.mmEveryTwoWeeks);
+			nextVersions_lazy = () -> Arrays.asList(EventFrequency9Code.mmEveryTwoWeeks);
 			owner_lazy = () -> EventFrequency1Code.mmObject();
 		}
 	};
@@ -355,9 +357,9 @@ public class EventFrequency1Code extends EventFrequencyCode {
 	 */
 	public static final MMCode mmWeekly = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Weekly";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.EventFrequency9Code.mmWeekly);
+			nextVersions_lazy = () -> Arrays.asList(EventFrequency9Code.mmWeekly);
 			owner_lazy = () -> EventFrequency1Code.mmObject();
 		}
 	};
@@ -387,9 +389,9 @@ public class EventFrequency1Code extends EventFrequencyCode {
 	 */
 	public static final MMCode mmDaily = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Daily";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.EventFrequency9Code.mmDaily);
+			nextVersions_lazy = () -> Arrays.asList(EventFrequency9Code.mmDaily);
 			owner_lazy = () -> EventFrequency1Code.mmObject();
 		}
 	};
@@ -419,9 +421,9 @@ public class EventFrequency1Code extends EventFrequencyCode {
 	 */
 	public static final MMCode mmAdhoc = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Adhoc";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.EventFrequency9Code.mmAdhoc);
+			nextVersions_lazy = () -> Arrays.asList(EventFrequency9Code.mmAdhoc);
 			owner_lazy = () -> EventFrequency1Code.mmObject();
 		}
 	};
@@ -451,9 +453,9 @@ public class EventFrequency1Code extends EventFrequencyCode {
 	 */
 	public static final MMCode mmIntraDay = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IntraDay";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.EventFrequency9Code.mmIntraDay);
+			nextVersions_lazy = () -> Arrays.asList(EventFrequency9Code.mmIntraDay);
 			owner_lazy = () -> EventFrequency1Code.mmObject();
 		}
 	};
@@ -483,9 +485,9 @@ public class EventFrequency1Code extends EventFrequencyCode {
 	 */
 	public static final MMCode mmOvernight = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Overnight";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.EventFrequency9Code.mmOvernight);
+			nextVersions_lazy = () -> Arrays.asList(EventFrequency9Code.mmOvernight);
 			owner_lazy = () -> EventFrequency1Code.mmObject();
 		}
 	};
@@ -515,9 +517,9 @@ public class EventFrequency1Code extends EventFrequencyCode {
 	 */
 	public static final MMCode mmOnDemand = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OnDemand";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.EventFrequency9Code.mmOnDemand);
+			nextVersions_lazy = () -> Arrays.asList(EventFrequency9Code.mmOnDemand);
 			owner_lazy = () -> EventFrequency1Code.mmObject();
 		}
 	};
@@ -525,17 +527,15 @@ public class EventFrequency1Code extends EventFrequencyCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("YEAR");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "EventFrequency1Code";
 				definition = "Specifies the regularity of an event.";
 				nextVersions_lazy = () -> Arrays.asList(EventFrequency9Code.mmObject());
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.EventFrequency1Code.mmAnnual, com.tools20022.repository.codeset.EventFrequency1Code.mmSemiAnnual,
-						com.tools20022.repository.codeset.EventFrequency1Code.mmQuarterly, com.tools20022.repository.codeset.EventFrequency1Code.mmEveryTwoMonths, com.tools20022.repository.codeset.EventFrequency1Code.mmMonthly,
-						com.tools20022.repository.codeset.EventFrequency1Code.mmTwiceAMonth, com.tools20022.repository.codeset.EventFrequency1Code.mmEveryTwoWeeks, com.tools20022.repository.codeset.EventFrequency1Code.mmWeekly,
-						com.tools20022.repository.codeset.EventFrequency1Code.mmDaily, com.tools20022.repository.codeset.EventFrequency1Code.mmAdhoc, com.tools20022.repository.codeset.EventFrequency1Code.mmIntraDay,
-						com.tools20022.repository.codeset.EventFrequency1Code.mmOvernight, com.tools20022.repository.codeset.EventFrequency1Code.mmOnDemand);
+				code_lazy = () -> Arrays.asList(EventFrequency1Code.mmAnnual, EventFrequency1Code.mmSemiAnnual, EventFrequency1Code.mmQuarterly, EventFrequency1Code.mmEveryTwoMonths, EventFrequency1Code.mmMonthly,
+						EventFrequency1Code.mmTwiceAMonth, EventFrequency1Code.mmEveryTwoWeeks, EventFrequency1Code.mmWeekly, EventFrequency1Code.mmDaily, EventFrequency1Code.mmAdhoc, EventFrequency1Code.mmIntraDay,
+						EventFrequency1Code.mmOvernight, EventFrequency1Code.mmOnDemand);
 				trace_lazy = () -> EventFrequencyCode.mmObject();
 			}
 		});

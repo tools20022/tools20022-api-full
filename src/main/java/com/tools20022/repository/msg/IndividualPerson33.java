@@ -20,6 +20,7 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.CivilStatus1Choice;
 import com.tools20022.repository.choice.NamePrefix1Choice;
 import com.tools20022.repository.choice.PoliticalExposureType1Choice;
@@ -29,8 +30,8 @@ import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.Max140Text;
 import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.datatype.Max35Text;
-import com.tools20022.repository.entity.EmployingPartyRole;
-import com.tools20022.repository.entity.Person;
+import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -169,14 +170,14 @@ public class IndividualPerson33 {
 	 */
 	public static final MMMessageAttribute mmNamePrefix = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PersonName.mmNamePrefix;
+			businessElementTrace_lazy = () -> PersonName.mmNamePrefix;
 			componentContext_lazy = () -> IndividualPerson33.mmObject();
 			isDerived = false;
 			xmlTag = "NmPrfx";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NamePrefix";
 			definition = "Term used to address the person.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.IndividualPerson28.mmNamePrefix;
+			previousVersion_lazy = () -> IndividualPerson28.mmNamePrefix;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> NamePrefix1Choice.mmObject();
@@ -222,14 +223,14 @@ public class IndividualPerson33 {
 	 */
 	public static final MMMessageAttribute mmGivenName = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PersonName.mmGivenName;
+			businessElementTrace_lazy = () -> PersonName.mmGivenName;
 			componentContext_lazy = () -> IndividualPerson33.mmObject();
 			isDerived = false;
 			xmlTag = "GvnNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GivenName";
 			definition = "First name of the person.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.IndividualPerson28.mmGivenName;
+			previousVersion_lazy = () -> IndividualPerson28.mmGivenName;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -275,14 +276,14 @@ public class IndividualPerson33 {
 	 */
 	public static final MMMessageAttribute mmMiddleName = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PersonName.mmMiddleName;
+			businessElementTrace_lazy = () -> PersonName.mmMiddleName;
 			componentContext_lazy = () -> IndividualPerson33.mmObject();
 			isDerived = false;
 			xmlTag = "MddlNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MiddleName";
 			definition = "Second name of the person.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.IndividualPerson28.mmMiddleName;
+			previousVersion_lazy = () -> IndividualPerson28.mmMiddleName;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -331,14 +332,14 @@ public class IndividualPerson33 {
 	 */
 	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PersonName.mmBirthName;
+			businessElementTrace_lazy = () -> PersonName.mmBirthName;
 			componentContext_lazy = () -> IndividualPerson33.mmObject();
 			isDerived = false;
 			xmlTag = "Nm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Name";
 			definition = "Name by which the party is known and which is usually used to identify that person.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.IndividualPerson28.mmName;
+			previousVersion_lazy = () -> IndividualPerson28.mmName;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
@@ -387,14 +388,14 @@ public class IndividualPerson33 {
 	 */
 	public static final MMMessageAttribute mmNameSuffix = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PersonName.mmNameSuffix;
+			businessElementTrace_lazy = () -> PersonName.mmNameSuffix;
 			componentContext_lazy = () -> IndividualPerson33.mmObject();
 			isDerived = false;
 			xmlTag = "NmSfx";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NameSuffix";
 			definition = "Additional information about the person that follows a person's name, for example, qualification such as Doctor of Philosophy (PhD).";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.IndividualPerson28.mmNameSuffix;
+			previousVersion_lazy = () -> IndividualPerson28.mmNameSuffix;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -440,14 +441,14 @@ public class IndividualPerson33 {
 	 */
 	public static final MMMessageAttribute mmGender = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Person.mmGender;
+			businessElementTrace_lazy = () -> Person.mmGender;
 			componentContext_lazy = () -> IndividualPerson33.mmObject();
 			isDerived = false;
 			xmlTag = "Gndr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Gender";
 			definition = "Gender of the person.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.IndividualPerson28.mmGender;
+			previousVersion_lazy = () -> IndividualPerson28.mmGender;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Gender1Code.mmObject();
@@ -493,14 +494,14 @@ public class IndividualPerson33 {
 	 */
 	public static final MMMessageAttribute mmBirthDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Person.mmBirthDate;
+			businessElementTrace_lazy = () -> Person.mmBirthDate;
 			componentContext_lazy = () -> IndividualPerson33.mmObject();
 			isDerived = false;
 			xmlTag = "BirthDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BirthDate";
 			definition = "Date on which the person was born.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.IndividualPerson28.mmBirthDate;
+			previousVersion_lazy = () -> IndividualPerson28.mmBirthDate;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
@@ -546,14 +547,14 @@ public class IndividualPerson33 {
 	 */
 	public static final MMMessageAttribute mmCountryOfBirth = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Person.mmPlaceOfBirth;
+			businessElementTrace_lazy = () -> Person.mmPlaceOfBirth;
 			componentContext_lazy = () -> IndividualPerson33.mmObject();
 			isDerived = false;
 			xmlTag = "CtryOfBirth";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CountryOfBirth";
 			definition = "Country where the person was born.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.IndividualPerson28.mmCountryOfBirth;
+			previousVersion_lazy = () -> IndividualPerson28.mmCountryOfBirth;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CountryCode.mmObject();
@@ -599,14 +600,14 @@ public class IndividualPerson33 {
 	 */
 	public static final MMMessageAttribute mmProvinceOfBirth = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Person.mmPlaceOfBirth;
+			businessElementTrace_lazy = () -> Person.mmPlaceOfBirth;
 			componentContext_lazy = () -> IndividualPerson33.mmObject();
 			isDerived = false;
 			xmlTag = "PrvcOfBirth";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProvinceOfBirth";
 			definition = "Province where the person was born.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.IndividualPerson28.mmProvinceOfBirth;
+			previousVersion_lazy = () -> IndividualPerson28.mmProvinceOfBirth;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -652,14 +653,14 @@ public class IndividualPerson33 {
 	 */
 	public static final MMMessageAttribute mmCityOfBirth = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Person.mmPlaceOfBirth;
+			businessElementTrace_lazy = () -> Person.mmPlaceOfBirth;
 			componentContext_lazy = () -> IndividualPerson33.mmObject();
 			isDerived = false;
 			xmlTag = "CityOfBirth";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CityOfBirth";
 			definition = "City where the person was born.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.IndividualPerson28.mmCityOfBirth;
+			previousVersion_lazy = () -> IndividualPerson28.mmCityOfBirth;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -705,14 +706,14 @@ public class IndividualPerson33 {
 	 */
 	public static final MMMessageAttribute mmProfession = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Person.mmProfession;
+			businessElementTrace_lazy = () -> Person.mmProfession;
 			componentContext_lazy = () -> IndividualPerson33.mmObject();
 			isDerived = false;
 			xmlTag = "Prfssn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Profession";
 			definition = "Name of the occupation or job of the person.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.IndividualPerson28.mmProfession;
+			previousVersion_lazy = () -> IndividualPerson28.mmProfession;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -758,14 +759,14 @@ public class IndividualPerson33 {
 	 */
 	public static final MMMessageAssociationEnd mmModifiedPostalAddress = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Location.mmAddress;
+			businessElementTrace_lazy = () -> Location.mmAddress;
 			componentContext_lazy = () -> IndividualPerson33.mmObject();
 			isDerived = false;
 			xmlTag = "ModfdPstlAdr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ModifiedPostalAddress";
 			definition = "Information related to an address to be inserted, updated or deleted.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.IndividualPerson28.mmModifiedPostalAddress;
+			previousVersion_lazy = () -> IndividualPerson28.mmModifiedPostalAddress;
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.ModificationScope34.mmObject();
@@ -810,14 +811,14 @@ public class IndividualPerson33 {
 	 */
 	public static final MMMessageAssociationEnd mmModifiedCitizenship = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Person.mmNationality;
+			businessElementTrace_lazy = () -> Person.mmNationality;
 			componentContext_lazy = () -> IndividualPerson33.mmObject();
 			isDerived = false;
 			xmlTag = "ModfdCtznsh";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ModifiedCitizenship";
 			definition = "Citizenship information to be inserted or deleted.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.IndividualPerson28.mmModifiedCitizenship;
+			previousVersion_lazy = () -> IndividualPerson28.mmModifiedCitizenship;
 			maxOccurs = 3;
 			minOccurs = 0;
 			isComposite = true;
@@ -869,10 +870,10 @@ public class IndividualPerson33 {
 			componentContext_lazy = () -> IndividualPerson33.mmObject();
 			isDerived = false;
 			xmlTag = "EmplngCpny";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EmployingCompany";
 			definition = "Organisation represented by a person, or for which a person works.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.IndividualPerson28.mmEmployingCompany;
+			previousVersion_lazy = () -> IndividualPerson28.mmEmployingCompany;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
@@ -918,14 +919,14 @@ public class IndividualPerson33 {
 	 */
 	public static final MMMessageAttribute mmBusinessFunction = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Person.mmBusinessFunctionTitle;
+			businessElementTrace_lazy = () -> Person.mmBusinessFunctionTitle;
 			componentContext_lazy = () -> IndividualPerson33.mmObject();
 			isDerived = false;
 			xmlTag = "BizFctn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BusinessFunction";
 			definition = "Title of the function.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.IndividualPerson28.mmBusinessFunction;
+			previousVersion_lazy = () -> IndividualPerson28.mmBusinessFunction;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -977,14 +978,14 @@ public class IndividualPerson33 {
 	 */
 	public static final MMMessageAssociationEnd mmPoliticallyExposedPersonType = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PersonProfile.mmPoliticalExposureType;
+			businessElementTrace_lazy = () -> PersonProfile.mmPoliticalExposureType;
 			componentContext_lazy = () -> IndividualPerson33.mmObject();
 			isDerived = false;
 			xmlTag = "PltclyXpsdPrsnTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PoliticallyExposedPersonType";
 			definition = "Specifies if due diligence checks on the political exposure of the investor or account servicer have been carried out and whether these checks are national or foreign. (A politically exposed person is someone who has been entrusted with a prominent public function, or an individual who is closely related to such a person.)";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.IndividualPerson28.mmPoliticallyExposedPersonType;
+			previousVersion_lazy = () -> IndividualPerson28.mmPoliticallyExposedPersonType;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -1031,14 +1032,14 @@ public class IndividualPerson33 {
 	 */
 	public static final MMMessageAttribute mmDeathDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Person.mmDeathDate;
+			businessElementTrace_lazy = () -> Person.mmDeathDate;
 			componentContext_lazy = () -> IndividualPerson33.mmObject();
 			isDerived = false;
 			xmlTag = "DthDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeathDate";
 			definition = "Date of death.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.IndividualPerson28.mmDeathDate;
+			previousVersion_lazy = () -> IndividualPerson28.mmDeathDate;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
@@ -1083,14 +1084,14 @@ public class IndividualPerson33 {
 	 */
 	public static final MMMessageAssociationEnd mmCivilStatus = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Person.mmCivilStatus;
+			businessElementTrace_lazy = () -> Person.mmCivilStatus;
 			componentContext_lazy = () -> IndividualPerson33.mmObject();
 			isDerived = false;
 			xmlTag = "CvlSts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CivilStatus";
 			definition = "Civil status of the individual person.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.IndividualPerson28.mmCivilStatus;
+			previousVersion_lazy = () -> IndividualPerson28.mmCivilStatus;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -1136,10 +1137,10 @@ public class IndividualPerson33 {
 			componentContext_lazy = () -> IndividualPerson33.mmObject();
 			isDerived = false;
 			xmlTag = "EdctnLvl";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EducationLevel";
 			definition = "Highest level of education reached by the individual person.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.IndividualPerson28.mmEducationLevel;
+			previousVersion_lazy = () -> IndividualPerson28.mmEducationLevel;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -1187,10 +1188,10 @@ public class IndividualPerson33 {
 			componentContext_lazy = () -> IndividualPerson33.mmObject();
 			isDerived = false;
 			xmlTag = "FmlyInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FamilyInformation";
 			definition = "Information related to the person.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.IndividualPerson28.mmFamilyInformation;
+			previousVersion_lazy = () -> IndividualPerson28.mmFamilyInformation;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -1201,16 +1202,13 @@ public class IndividualPerson33 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IndividualPerson33.mmNamePrefix, com.tools20022.repository.msg.IndividualPerson33.mmGivenName,
-						com.tools20022.repository.msg.IndividualPerson33.mmMiddleName, com.tools20022.repository.msg.IndividualPerson33.mmName, com.tools20022.repository.msg.IndividualPerson33.mmNameSuffix,
-						com.tools20022.repository.msg.IndividualPerson33.mmGender, com.tools20022.repository.msg.IndividualPerson33.mmBirthDate, com.tools20022.repository.msg.IndividualPerson33.mmCountryOfBirth,
-						com.tools20022.repository.msg.IndividualPerson33.mmProvinceOfBirth, com.tools20022.repository.msg.IndividualPerson33.mmCityOfBirth, com.tools20022.repository.msg.IndividualPerson33.mmProfession,
-						com.tools20022.repository.msg.IndividualPerson33.mmModifiedPostalAddress, com.tools20022.repository.msg.IndividualPerson33.mmModifiedCitizenship, com.tools20022.repository.msg.IndividualPerson33.mmEmployingCompany,
-						com.tools20022.repository.msg.IndividualPerson33.mmBusinessFunction, com.tools20022.repository.msg.IndividualPerson33.mmPoliticallyExposedPersonType, com.tools20022.repository.msg.IndividualPerson33.mmDeathDate,
-						com.tools20022.repository.msg.IndividualPerson33.mmCivilStatus, com.tools20022.repository.msg.IndividualPerson33.mmEducationLevel, com.tools20022.repository.msg.IndividualPerson33.mmFamilyInformation);
+				messageElement_lazy = () -> Arrays.asList(IndividualPerson33.mmNamePrefix, IndividualPerson33.mmGivenName, IndividualPerson33.mmMiddleName, IndividualPerson33.mmName, IndividualPerson33.mmNameSuffix,
+						IndividualPerson33.mmGender, IndividualPerson33.mmBirthDate, IndividualPerson33.mmCountryOfBirth, IndividualPerson33.mmProvinceOfBirth, IndividualPerson33.mmCityOfBirth, IndividualPerson33.mmProfession,
+						IndividualPerson33.mmModifiedPostalAddress, IndividualPerson33.mmModifiedCitizenship, IndividualPerson33.mmEmployingCompany, IndividualPerson33.mmBusinessFunction, IndividualPerson33.mmPoliticallyExposedPersonType,
+						IndividualPerson33.mmDeathDate, IndividualPerson33.mmCivilStatus, IndividualPerson33.mmEducationLevel, IndividualPerson33.mmFamilyInformation);
 				trace_lazy = () -> Person.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "IndividualPerson33";
 				definition = "Human entity, as distinguished from a corporate entity (which is sometimes referred to as an 'artificial person').";
 				previousVersion_lazy = () -> IndividualPerson28.mmObject();

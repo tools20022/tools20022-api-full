@@ -20,6 +20,9 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.acmt.AccountDetailsConfirmationV04;
+import com.tools20022.repository.area.acmt.AccountOpeningInstructionV04;
 import com.tools20022.repository.choice.Frequency20Choice;
 import com.tools20022.repository.choice.InsuranceType1Choice;
 import com.tools20022.repository.choice.UnitsOrAmount1Choice;
@@ -29,8 +32,8 @@ import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.datatype.YesNoIndicator;
-import com.tools20022.repository.entity.InvestmentFundClass;
-import com.tools20022.repository.entity.InvestmentPlan;
+import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -191,15 +194,15 @@ public class InvestmentPlan9 {
 	 */
 	public static final MMMessageAttribute mmFrequency = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentPlan.mmFrequency;
+			businessElementTrace_lazy = () -> InvestmentPlan.mmFrequency;
 			componentContext_lazy = () -> InvestmentPlan9.mmObject();
 			isDerived = false;
 			xmlTag = "Frqcy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Frequency";
 			definition = "Frequency of the investment or divestment.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentPlan10.mmFrequency);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.InvestmentPlan6.mmFrequency;
+			nextVersions_lazy = () -> Arrays.asList(InvestmentPlan10.mmFrequency);
+			previousVersion_lazy = () -> InvestmentPlan6.mmFrequency;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> Frequency20Choice.mmObject();
@@ -253,15 +256,15 @@ public class InvestmentPlan9 {
 	 */
 	public static final MMMessageAttribute mmStartDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmFromDateTime;
+			businessElementTrace_lazy = () -> DateTimePeriod.mmFromDateTime;
 			componentContext_lazy = () -> InvestmentPlan9.mmObject();
 			isDerived = false;
 			xmlTag = "StartDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StartDate";
 			definition = "Date the investment plan starts.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentPlan10.mmStartDate);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.InvestmentPlan6.mmStartDate;
+			nextVersions_lazy = () -> Arrays.asList(InvestmentPlan10.mmStartDate);
+			previousVersion_lazy = () -> InvestmentPlan6.mmStartDate;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
@@ -314,15 +317,15 @@ public class InvestmentPlan9 {
 	 */
 	public static final MMMessageAttribute mmEndDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmToDateTime;
+			businessElementTrace_lazy = () -> DateTimePeriod.mmToDateTime;
 			componentContext_lazy = () -> InvestmentPlan9.mmObject();
 			isDerived = false;
 			xmlTag = "EndDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EndDate";
 			definition = "Date the investment plan stops.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentPlan10.mmEndDate);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.InvestmentPlan6.mmEndDate;
+			nextVersions_lazy = () -> Arrays.asList(InvestmentPlan10.mmEndDate);
+			previousVersion_lazy = () -> InvestmentPlan6.mmEndDate;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
@@ -381,11 +384,11 @@ public class InvestmentPlan9 {
 			componentContext_lazy = () -> InvestmentPlan9.mmObject();
 			isDerived = false;
 			xmlTag = "Qty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Quantity";
 			definition = "Amount of the periodical payments.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentPlan10.mmQuantity);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.InvestmentPlan6.mmQuantity;
+			nextVersions_lazy = () -> Arrays.asList(InvestmentPlan10.mmQuantity);
+			previousVersion_lazy = () -> InvestmentPlan6.mmQuantity;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> UnitsOrAmount1Choice.mmObject();
@@ -445,15 +448,15 @@ public class InvestmentPlan9 {
 	 */
 	public static final MMMessageAttribute mmGrossAmountIndicator = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrder.mmGrossAmountIndicator;
+			businessElementTrace_lazy = () -> InvestmentFundOrder.mmGrossAmountIndicator;
 			componentContext_lazy = () -> InvestmentPlan9.mmObject();
 			isDerived = false;
 			xmlTag = "GrssAmtInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GrossAmountIndicator";
 			definition = "Indicates whether an ordered amount is a gross amount (including all charges, commissions, tax). If it is not a gross amount, the ordered amount is a net amount (amount to be invested or redeemed from the fund to which other elements will be added).";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentPlan10.mmGrossAmountIndicator);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.InvestmentPlan6.mmGrossAmountIndicator;
+			nextVersions_lazy = () -> Arrays.asList(InvestmentPlan10.mmGrossAmountIndicator);
+			previousVersion_lazy = () -> InvestmentPlan6.mmGrossAmountIndicator;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
@@ -511,15 +514,15 @@ public class InvestmentPlan9 {
 	 */
 	public static final MMMessageAttribute mmIncomePreference = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentAccountService.mmIncomePreference;
+			businessElementTrace_lazy = () -> InvestmentAccountService.mmIncomePreference;
 			componentContext_lazy = () -> InvestmentPlan9.mmObject();
 			isDerived = false;
 			xmlTag = "IncmPref";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncomePreference";
 			definition = "Dividend option chosen by the account owner based on the options offered in the prospectus.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentPlan10.mmIncomePreference);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.InvestmentPlan6.mmIncomePreference;
+			nextVersions_lazy = () -> Arrays.asList(InvestmentPlan10.mmIncomePreference);
+			previousVersion_lazy = () -> InvestmentPlan6.mmIncomePreference;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> IncomePreference1Code.mmObject();
@@ -576,15 +579,15 @@ public class InvestmentPlan9 {
 	 */
 	public static final MMMessageAttribute mmInitialNumberOfInstalments = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Instalment.mmInitialNumberOfInstalment;
+			businessElementTrace_lazy = () -> Instalment.mmInitialNumberOfInstalment;
 			componentContext_lazy = () -> InvestmentPlan9.mmObject();
 			isDerived = false;
 			xmlTag = "InitlNbOfInstlmts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InitialNumberOfInstalments";
 			definition = "Number of pre-paid instalment periods at the time the investment plan is created.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentPlan10.mmInitialNumberOfInstalments);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.InvestmentPlan6.mmInitialNumberOfInstalment;
+			nextVersions_lazy = () -> Arrays.asList(InvestmentPlan10.mmInitialNumberOfInstalments);
+			previousVersion_lazy = () -> InvestmentPlan6.mmInitialNumberOfInstalment;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
@@ -641,15 +644,15 @@ public class InvestmentPlan9 {
 	 */
 	public static final MMMessageAttribute mmTotalNumberOfInstalments = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Instalment.mmTotalNumberOfInstalment;
+			businessElementTrace_lazy = () -> Instalment.mmTotalNumberOfInstalment;
 			componentContext_lazy = () -> InvestmentPlan9.mmObject();
 			isDerived = false;
 			xmlTag = "TtlNbOfInstlmts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalNumberOfInstalments";
 			definition = "Total number of times the amount must be invested at the predefined frequency as of the start date of the investment plan.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentPlan10.mmTotalNumberOfInstalments);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.InvestmentPlan6.mmTotalNumberOfInstalment;
+			nextVersions_lazy = () -> Arrays.asList(InvestmentPlan10.mmTotalNumberOfInstalments);
+			previousVersion_lazy = () -> InvestmentPlan6.mmTotalNumberOfInstalment;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
@@ -707,15 +710,15 @@ public class InvestmentPlan9 {
 	 */
 	public static final MMMessageAttribute mmRoundingDirection = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.RoundingParameters.mmRoundingDirection;
+			businessElementTrace_lazy = () -> RoundingParameters.mmRoundingDirection;
 			componentContext_lazy = () -> InvestmentPlan9.mmObject();
 			isDerived = false;
 			xmlTag = "RndgDrctn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RoundingDirection";
 			definition = "Indicates the rounding direction when an amount is to be spread over several funds.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentPlan10.mmRoundingDirection);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.InvestmentPlan6.mmRoundingDirection;
+			nextVersions_lazy = () -> Arrays.asList(InvestmentPlan10.mmRoundingDirection);
+			previousVersion_lazy = () -> InvestmentPlan6.mmRoundingDirection;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RoundingDirection1Code.mmObject();
@@ -775,11 +778,11 @@ public class InvestmentPlan9 {
 			componentContext_lazy = () -> InvestmentPlan9.mmObject();
 			isDerived = false;
 			xmlTag = "SctyDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityDetails";
 			definition = "Security that an investment plan invests in, or from which the investment plan divests.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentPlan10.mmSecurityDetails);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.InvestmentPlan6.mmSecurityDetails;
+			nextVersions_lazy = () -> Arrays.asList(InvestmentPlan10.mmSecurityDetails);
+			previousVersion_lazy = () -> InvestmentPlan6.mmSecurityDetails;
 			maxOccurs = 50;
 			minOccurs = 1;
 			isComposite = true;
@@ -836,15 +839,15 @@ public class InvestmentPlan9 {
 	 */
 	public static final MMMessageAssociationEnd mmCashSettlement = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentObligation.mmPaymentOffset;
+			businessElementTrace_lazy = () -> PaymentObligation.mmPaymentOffset;
 			componentContext_lazy = () -> InvestmentPlan9.mmObject();
 			isDerived = false;
 			xmlTag = "CshSttlm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashSettlement";
 			definition = "Cash settlement standing instruction associated to the investment plan.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentPlan10.mmCashSettlement);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.InvestmentPlan6.mmCashSettlement;
+			nextVersions_lazy = () -> Arrays.asList(InvestmentPlan10.mmCashSettlement);
+			previousVersion_lazy = () -> InvestmentPlan6.mmCashSettlement;
 			maxOccurs = 8;
 			minOccurs = 0;
 			isComposite = true;
@@ -901,11 +904,11 @@ public class InvestmentPlan9 {
 			componentContext_lazy = () -> InvestmentPlan9.mmObject();
 			isDerived = false;
 			xmlTag = "CtrctRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ContractReference";
 			definition = "Reference of the underlying investment contract. In some markets, such as Italy, this might be required to segregate holdings between the same investment account. ";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentPlan10.mmContractReference);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.InvestmentPlan6.mmContractReference;
+			nextVersions_lazy = () -> Arrays.asList(InvestmentPlan10.mmContractReference);
+			previousVersion_lazy = () -> InvestmentPlan6.mmContractReference;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -960,11 +963,11 @@ public class InvestmentPlan9 {
 			componentContext_lazy = () -> InvestmentPlan9.mmObject();
 			isDerived = false;
 			xmlTag = "RltdCtrctRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedContractReference";
 			definition = "Reference of the previous contract to which this savings or withdrawal plan is related.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentPlan10.mmRelatedContractReference);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.InvestmentPlan6.mmRelatedContractReference;
+			nextVersions_lazy = () -> Arrays.asList(InvestmentPlan10.mmRelatedContractReference);
+			previousVersion_lazy = () -> InvestmentPlan6.mmRelatedContractReference;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -1021,11 +1024,11 @@ public class InvestmentPlan9 {
 			componentContext_lazy = () -> InvestmentPlan9.mmObject();
 			isDerived = false;
 			xmlTag = "PdctId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProductIdentification";
 			definition = "Identification of the product as designated by the fund manager. In some markets, such as Italy, the financial product or service related to a savings plan or withdrawal plan are identified by a product identification or number.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentPlan10.mmProductIdentification);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.InvestmentPlan6.mmProductIdentification;
+			nextVersions_lazy = () -> Arrays.asList(InvestmentPlan10.mmProductIdentification);
+			previousVersion_lazy = () -> InvestmentPlan6.mmProductIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -1080,11 +1083,11 @@ public class InvestmentPlan9 {
 			componentContext_lazy = () -> InvestmentPlan9.mmObject();
 			isDerived = false;
 			xmlTag = "SLAChrgAndComssnRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SLAChargeAndCommissionReference";
 			definition = "Reference of the underlying service level agreement (SLA) governing charges and commission.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentPlan10.mmSLAChargeAndCommissionReference);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.InvestmentPlan6.mmSLAChargeAndCommissionReference;
+			nextVersions_lazy = () -> Arrays.asList(InvestmentPlan10.mmSLAChargeAndCommissionReference);
+			previousVersion_lazy = () -> InvestmentPlan6.mmSLAChargeAndCommissionReference;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -1140,11 +1143,11 @@ public class InvestmentPlan9 {
 			componentContext_lazy = () -> InvestmentPlan9.mmObject();
 			isDerived = false;
 			xmlTag = "InsrncCover";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InsuranceCover";
 			definition = "Specifies the type of insurance contract to which the savings investment plan is linked.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentPlan10.mmInsuranceCover);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.InvestmentPlan6.mmInsuranceCover;
+			nextVersions_lazy = () -> Arrays.asList(InvestmentPlan10.mmInsuranceCover);
+			previousVersion_lazy = () -> InvestmentPlan6.mmInsuranceCover;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> InsuranceType1Choice.mmObject();
@@ -1154,18 +1157,15 @@ public class InvestmentPlan9 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentPlan9.mmFrequency, com.tools20022.repository.msg.InvestmentPlan9.mmStartDate, com.tools20022.repository.msg.InvestmentPlan9.mmEndDate,
-						com.tools20022.repository.msg.InvestmentPlan9.mmQuantity, com.tools20022.repository.msg.InvestmentPlan9.mmGrossAmountIndicator, com.tools20022.repository.msg.InvestmentPlan9.mmIncomePreference,
-						com.tools20022.repository.msg.InvestmentPlan9.mmInitialNumberOfInstalments, com.tools20022.repository.msg.InvestmentPlan9.mmTotalNumberOfInstalments,
-						com.tools20022.repository.msg.InvestmentPlan9.mmRoundingDirection, com.tools20022.repository.msg.InvestmentPlan9.mmSecurityDetails, com.tools20022.repository.msg.InvestmentPlan9.mmCashSettlement,
-						com.tools20022.repository.msg.InvestmentPlan9.mmContractReference, com.tools20022.repository.msg.InvestmentPlan9.mmRelatedContractReference, com.tools20022.repository.msg.InvestmentPlan9.mmProductIdentification,
-						com.tools20022.repository.msg.InvestmentPlan9.mmSLAChargeAndCommissionReference, com.tools20022.repository.msg.InvestmentPlan9.mmInsuranceCover);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountDetailsConfirmationV04.mmSavingsInvestmentPlan,
-						com.tools20022.repository.area.acmt.AccountDetailsConfirmationV04.mmWithdrawalInvestmentPlan, com.tools20022.repository.area.acmt.AccountOpeningInstructionV04.mmSavingsInvestmentPlan,
-						com.tools20022.repository.area.acmt.AccountOpeningInstructionV04.mmWithdrawalInvestmentPlan);
+				messageElement_lazy = () -> Arrays.asList(InvestmentPlan9.mmFrequency, InvestmentPlan9.mmStartDate, InvestmentPlan9.mmEndDate, InvestmentPlan9.mmQuantity, InvestmentPlan9.mmGrossAmountIndicator,
+						InvestmentPlan9.mmIncomePreference, InvestmentPlan9.mmInitialNumberOfInstalments, InvestmentPlan9.mmTotalNumberOfInstalments, InvestmentPlan9.mmRoundingDirection, InvestmentPlan9.mmSecurityDetails,
+						InvestmentPlan9.mmCashSettlement, InvestmentPlan9.mmContractReference, InvestmentPlan9.mmRelatedContractReference, InvestmentPlan9.mmProductIdentification, InvestmentPlan9.mmSLAChargeAndCommissionReference,
+						InvestmentPlan9.mmInsuranceCover);
+				messageBuildingBlock_lazy = () -> Arrays.asList(AccountDetailsConfirmationV04.mmSavingsInvestmentPlan, AccountDetailsConfirmationV04.mmWithdrawalInvestmentPlan, AccountOpeningInstructionV04.mmSavingsInvestmentPlan,
+						AccountOpeningInstructionV04.mmWithdrawalInvestmentPlan);
 				trace_lazy = () -> InvestmentPlan.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InvestmentPlan9";
 				definition = "Plan that allows investors to schedule periodical investments or divestments, according to pre-defined criteria.";
 				nextVersions_lazy = () -> Arrays.asList(InvestmentPlan10.mmObject());

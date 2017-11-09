@@ -19,11 +19,14 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.BICIdentifier;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.InstructingAgentRole;
+import com.tools20022.repository.entity.PaymentIdentification;
 import com.tools20022.repository.entity.PaymentInstruction;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -109,11 +112,11 @@ public class PaymentInstructionReferenceDetails2 {
 	 */
 	public static final MMMessageAttribute mmPaymentInstructionReference = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentIdentification.mmExecutionIdentification;
+			businessElementTrace_lazy = () -> PaymentIdentification.mmExecutionIdentification;
 			componentContext_lazy = () -> PaymentInstructionReferenceDetails2.mmObject();
 			isDerived = false;
 			xmlTag = "PmtInstrRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentInstructionReference";
 			definition = "Unique and unambiguous identifier for a payment instruction, as assigned by the clearing agent or the initiating party.";
 			maxOccurs = 1;
@@ -158,7 +161,7 @@ public class PaymentInstructionReferenceDetails2 {
 			componentContext_lazy = () -> PaymentInstructionReferenceDetails2.mmObject();
 			isDerived = false;
 			xmlTag = "IntrBkValDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterbankValueDate";
 			definition = "Date on which the amount of money ceases to be available to the agent that owes it and when the amount of money becomes available to the agent to which it is due.";
 			maxOccurs = 1;
@@ -209,7 +212,7 @@ public class PaymentInstructionReferenceDetails2 {
 			componentContext_lazy = () -> PaymentInstructionReferenceDetails2.mmObject();
 			isDerived = false;
 			xmlTag = "InstgAgtId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructingAgentIdentification";
 			definition = "The identification of the instructing agent that transmitted the payment instruction.";
 			maxOccurs = 1;
@@ -221,11 +224,11 @@ public class PaymentInstructionReferenceDetails2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentInstructionReferenceDetails2.mmPaymentInstructionReference,
-						com.tools20022.repository.msg.PaymentInstructionReferenceDetails2.mmInterbankValueDate, com.tools20022.repository.msg.PaymentInstructionReferenceDetails2.mmInstructingAgentIdentification);
+				messageElement_lazy = () -> Arrays.asList(PaymentInstructionReferenceDetails2.mmPaymentInstructionReference, PaymentInstructionReferenceDetails2.mmInterbankValueDate,
+						PaymentInstructionReferenceDetails2.mmInstructingAgentIdentification);
 				trace_lazy = () -> PaymentInstruction.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "PaymentInstructionReferenceDetails2";
 				definition = "Identifies a payment instruction by a simple set of characteristics which provides an unambiguous indentification of the instruction.";
 			}

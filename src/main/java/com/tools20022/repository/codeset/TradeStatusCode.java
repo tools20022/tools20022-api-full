@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,25 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.TradeStatus1Code
+ * TradeStatus1Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TradeStatus3Code
+ * TradeStatus3Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TradeStatus5Code
+ * TradeStatus5Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TradeStatus2Code
+ * TradeStatus2Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TradeStatus4Code
+ * TradeStatus4Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TradeStatus6Code
+ * TradeStatus6Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TradeStatus7Code
+ * TradeStatus7Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -99,25 +120,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * TradeStatusCode.mmPartialFix}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.TradeStatus1Code
- * TradeStatus1Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TradeStatus3Code
- * TradeStatus3Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TradeStatus5Code
- * TradeStatus5Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TradeStatus2Code
- * TradeStatus2Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TradeStatus4Code
- * TradeStatus4Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TradeStatus6Code
- * TradeStatus6Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TradeStatus7Code
- * TradeStatus7Code}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -167,7 +169,7 @@ public class TradeStatusCode {
 	 */
 	public static final MMCode mmValidated = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Validated";
 			definition = "Trade is validated.";
 			owner_lazy = () -> TradeStatusCode.mmObject();
@@ -197,7 +199,7 @@ public class TradeStatusCode {
 	 */
 	public static final MMCode mmRegulatoryChecked = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RegulatoryChecked";
 			definition = "Trade passed regulatory check.";
 			owner_lazy = () -> TradeStatusCode.mmObject();
@@ -227,7 +229,7 @@ public class TradeStatusCode {
 	 */
 	public static final MMCode mmInvalid = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Invalid";
 			definition = "Trade is invalid.";
 			owner_lazy = () -> TradeStatusCode.mmObject();
@@ -257,7 +259,7 @@ public class TradeStatusCode {
 	 */
 	public static final MMCode mmSettlementRejected = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementRejected";
 			definition = "Trade settlement is rejected.";
 			owner_lazy = () -> TradeStatusCode.mmObject();
@@ -287,7 +289,7 @@ public class TradeStatusCode {
 	 */
 	public static final MMCode mmRegulatorySuspended = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RegulatorySuspended";
 			definition = "Trade is suspended for regulatory reasons.";
 			owner_lazy = () -> TradeStatusCode.mmObject();
@@ -317,7 +319,7 @@ public class TradeStatusCode {
 	 */
 	public static final MMCode mmUnmatched = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unmatched";
 			definition = "Trade is unmatched.";
 			owner_lazy = () -> TradeStatusCode.mmObject();
@@ -347,7 +349,7 @@ public class TradeStatusCode {
 	 */
 	public static final MMCode mmMatched = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Matched";
 			definition = "Trade is matched.";
 			owner_lazy = () -> TradeStatusCode.mmObject();
@@ -377,7 +379,7 @@ public class TradeStatusCode {
 	 */
 	public static final MMCode mmRescinded = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rescinded";
 			definition = "Trade is rescinded.";
 			owner_lazy = () -> TradeStatusCode.mmObject();
@@ -407,7 +409,7 @@ public class TradeStatusCode {
 	 */
 	public static final MMCode mmSettled = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Settled";
 			definition = "Settlement is complete.";
 			owner_lazy = () -> TradeStatusCode.mmObject();
@@ -440,7 +442,7 @@ public class TradeStatusCode {
 	 */
 	public static final MMCode mmPartiallySettled = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartiallySettled";
 			definition = "Part, but not all, of a Trade's value has settled, and no further elements of the Trade's value are expected to be settled.";
 			owner_lazy = () -> TradeStatusCode.mmObject();
@@ -473,7 +475,7 @@ public class TradeStatusCode {
 	 */
 	public static final MMCode mmMatchedValued = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MatchedValued";
 			definition = "Both the Opening and the Valuation details of an NDF trade have been matched with corresponding details of a counterparty's NDF trade.";
 			owner_lazy = () -> TradeStatusCode.mmObject();
@@ -503,7 +505,7 @@ public class TradeStatusCode {
 	 */
 	public static final MMCode mmRejected = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rejected";
 			definition = "Trade is rejected.";
 			owner_lazy = () -> TradeStatusCode.mmObject();
@@ -533,7 +535,7 @@ public class TradeStatusCode {
 	 */
 	public static final MMCode mmOptionMature = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionMature";
 			definition = "Option has matured.";
 			owner_lazy = () -> TradeStatusCode.mmObject();
@@ -565,7 +567,7 @@ public class TradeStatusCode {
 	 */
 	public static final MMCode mmSettlementMemberAuthorised = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementMemberAuthorised";
 			definition = "Trade has been authorised by the settlement member guaranteeing payment.";
 			owner_lazy = () -> TradeStatusCode.mmObject();
@@ -598,7 +600,7 @@ public class TradeStatusCode {
 	 */
 	public static final MMCode mmSettlementMemberNotAuthorised = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementMemberNotAuthorised";
 			definition = "Trade has not been authorised by the settlement member guaranteeing payment.";
 			owner_lazy = () -> TradeStatusCode.mmObject();
@@ -628,7 +630,7 @@ public class TradeStatusCode {
 	 */
 	public static final MMCode mmSettlementMature = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementMature";
 			definition = "Trade has been selected for settlement.";
 			owner_lazy = () -> TradeStatusCode.mmObject();
@@ -659,7 +661,7 @@ public class TradeStatusCode {
 	 */
 	public static final MMCode mmSplit = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Split";
 			definition = "Trade has been split into subtrades for settlement efficiency.";
 			owner_lazy = () -> TradeStatusCode.mmObject();
@@ -689,7 +691,7 @@ public class TradeStatusCode {
 	 */
 	public static final MMCode mmSuspended = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Suspended";
 			definition = "Trade has been marked not ready for settlement.";
 			owner_lazy = () -> TradeStatusCode.mmObject();
@@ -719,7 +721,7 @@ public class TradeStatusCode {
 	 */
 	public static final MMCode mmNotAuthorised = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotAuthorised";
 			definition = "Trade is not authorised.";
 			owner_lazy = () -> TradeStatusCode.mmObject();
@@ -749,7 +751,7 @@ public class TradeStatusCode {
 	 */
 	public static final MMCode mmAmended = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amended";
 			definition = "Trade is amended.";
 			owner_lazy = () -> TradeStatusCode.mmObject();
@@ -779,7 +781,7 @@ public class TradeStatusCode {
 	 */
 	public static final MMCode mmSettlementMaturePending = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementMaturePending";
 			definition = "Trade has been selected for settlement and is pending.";
 			owner_lazy = () -> TradeStatusCode.mmObject();
@@ -809,7 +811,7 @@ public class TradeStatusCode {
 	 */
 	public static final MMCode mmNetted = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Netted";
 			definition = "Trade has been netted by the central system.";
 			owner_lazy = () -> TradeStatusCode.mmObject();
@@ -842,7 +844,7 @@ public class TradeStatusCode {
 	 */
 	public static final MMCode mmOpenMatched = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OpenMatched";
 			definition = "For NDF trades, the trade is marked as open match when both open confirmations from both parties match.";
 			owner_lazy = () -> TradeStatusCode.mmObject();
@@ -876,7 +878,7 @@ public class TradeStatusCode {
 	 */
 	public static final MMCode mmFixUnmatched = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FixUnmatched";
 			definition = "For NDF instructions, if a party has submitted both the open and fix confirmations and the counterparty is yet to submit the open and fix confirmation the instruction is updated to ‘Fix Unmatched’ Status";
 			owner_lazy = () -> TradeStatusCode.mmObject();
@@ -909,7 +911,7 @@ public class TradeStatusCode {
 	 */
 	public static final MMCode mmPartialFix = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartialFix";
 			definition = "For NDF instructions, open confirmations are matched and the Fix confirmations are not matched.";
 			owner_lazy = () -> TradeStatusCode.mmObject();
@@ -920,20 +922,16 @@ public class TradeStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("VALI");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TradeStatusCode";
 				definition = "Specifies the status of a trade in a central matching and settlement system.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TradeStatusCode.mmValidated, com.tools20022.repository.codeset.TradeStatusCode.mmRegulatoryChecked,
-						com.tools20022.repository.codeset.TradeStatusCode.mmInvalid, com.tools20022.repository.codeset.TradeStatusCode.mmSettlementRejected, com.tools20022.repository.codeset.TradeStatusCode.mmRegulatorySuspended,
-						com.tools20022.repository.codeset.TradeStatusCode.mmUnmatched, com.tools20022.repository.codeset.TradeStatusCode.mmMatched, com.tools20022.repository.codeset.TradeStatusCode.mmRescinded,
-						com.tools20022.repository.codeset.TradeStatusCode.mmSettled, com.tools20022.repository.codeset.TradeStatusCode.mmPartiallySettled, com.tools20022.repository.codeset.TradeStatusCode.mmMatchedValued,
-						com.tools20022.repository.codeset.TradeStatusCode.mmRejected, com.tools20022.repository.codeset.TradeStatusCode.mmOptionMature, com.tools20022.repository.codeset.TradeStatusCode.mmSettlementMemberAuthorised,
-						com.tools20022.repository.codeset.TradeStatusCode.mmSettlementMemberNotAuthorised, com.tools20022.repository.codeset.TradeStatusCode.mmSettlementMature, com.tools20022.repository.codeset.TradeStatusCode.mmSplit,
-						com.tools20022.repository.codeset.TradeStatusCode.mmSuspended, com.tools20022.repository.codeset.TradeStatusCode.mmNotAuthorised, com.tools20022.repository.codeset.TradeStatusCode.mmAmended,
-						com.tools20022.repository.codeset.TradeStatusCode.mmSettlementMaturePending, com.tools20022.repository.codeset.TradeStatusCode.mmNetted, com.tools20022.repository.codeset.TradeStatusCode.mmOpenMatched,
-						com.tools20022.repository.codeset.TradeStatusCode.mmFixUnmatched, com.tools20022.repository.codeset.TradeStatusCode.mmPartialFix);
+				code_lazy = () -> Arrays.asList(TradeStatusCode.mmValidated, TradeStatusCode.mmRegulatoryChecked, TradeStatusCode.mmInvalid, TradeStatusCode.mmSettlementRejected, TradeStatusCode.mmRegulatorySuspended,
+						TradeStatusCode.mmUnmatched, TradeStatusCode.mmMatched, TradeStatusCode.mmRescinded, TradeStatusCode.mmSettled, TradeStatusCode.mmPartiallySettled, TradeStatusCode.mmMatchedValued, TradeStatusCode.mmRejected,
+						TradeStatusCode.mmOptionMature, TradeStatusCode.mmSettlementMemberAuthorised, TradeStatusCode.mmSettlementMemberNotAuthorised, TradeStatusCode.mmSettlementMature, TradeStatusCode.mmSplit,
+						TradeStatusCode.mmSuspended, TradeStatusCode.mmNotAuthorised, TradeStatusCode.mmAmended, TradeStatusCode.mmSettlementMaturePending, TradeStatusCode.mmNetted, TradeStatusCode.mmOpenMatched,
+						TradeStatusCode.mmFixUnmatched, TradeStatusCode.mmPartialFix);
 				derivation_lazy = () -> Arrays.asList(TradeStatus1Code.mmObject(), TradeStatus3Code.mmObject(), TradeStatus5Code.mmObject(), TradeStatus2Code.mmObject(), TradeStatus4Code.mmObject(), TradeStatus6Code.mmObject(),
 						TradeStatus7Code.mmObject());
 			}

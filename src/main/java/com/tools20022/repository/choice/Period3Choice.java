@@ -20,8 +20,10 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.DateType8Code;
 import com.tools20022.repository.entity.DateTimePeriod;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.Period4;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -100,7 +102,7 @@ public class Period3Choice {
 			componentContext_lazy = () -> Period3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Period";
 			definition = "Time span defined by a start date and time, and an end date and time.";
 			maxOccurs = 1;
@@ -143,7 +145,7 @@ public class Period3Choice {
 			componentContext_lazy = () -> Period3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "PrdCd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PeriodCode";
 			definition = "Standard code to specify the type of period.";
 			maxOccurs = 1;
@@ -155,10 +157,10 @@ public class Period3Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Period3Choice.mmPeriod, com.tools20022.repository.choice.Period3Choice.mmPeriodCode);
+				messageElement_lazy = () -> Arrays.asList(Period3Choice.mmPeriod, Period3Choice.mmPeriodCode);
 				trace_lazy = () -> DateTimePeriod.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Period3Choice";
 				definition = "Choice between a period or a period code.";
 			}

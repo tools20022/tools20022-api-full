@@ -19,6 +19,8 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.KEK3;
 import com.tools20022.repository.msg.KEKIdentifier1;
 import com.tools20022.repository.msg.KeyTransport3;
@@ -119,11 +121,11 @@ public class Recipient3Choice {
 			componentContext_lazy = () -> Recipient3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "KeyTrnsprt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "KeyTransport";
 			definition = "Encryption key using previously distributed asymmetric public key.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Recipient4Choice.mmKeyTransport);
-			previousVersion_lazy = () -> com.tools20022.repository.choice.Recipient2Choice.mmKeyTransport;
+			nextVersions_lazy = () -> Arrays.asList(Recipient4Choice.mmKeyTransport);
+			previousVersion_lazy = () -> Recipient2Choice.mmKeyTransport;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -174,11 +176,11 @@ public class Recipient3Choice {
 			componentContext_lazy = () -> Recipient3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "KEK";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "KEK";
 			definition = "Encryption key using previously distributed symmetric key.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Recipient4Choice.mmKEK);
-			previousVersion_lazy = () -> com.tools20022.repository.choice.Recipient2Choice.mmKEK;
+			nextVersions_lazy = () -> Arrays.asList(Recipient4Choice.mmKEK);
+			previousVersion_lazy = () -> Recipient2Choice.mmKEK;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -228,10 +230,10 @@ public class Recipient3Choice {
 			componentContext_lazy = () -> Recipient3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "KeyIdr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "KeyIdentifier";
 			definition = "Identification of a cryptographic symetric key, previously exchanged between the initiator and the recipient.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Recipient4Choice.mmKeyIdentifier);
+			nextVersions_lazy = () -> Arrays.asList(Recipient4Choice.mmKeyIdentifier);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -242,10 +244,9 @@ public class Recipient3Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Recipient3Choice.mmKeyTransport, com.tools20022.repository.choice.Recipient3Choice.mmKEK,
-						com.tools20022.repository.choice.Recipient3Choice.mmKeyIdentifier);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(Recipient3Choice.mmKeyTransport, Recipient3Choice.mmKEK, Recipient3Choice.mmKeyIdentifier);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Recipient3Choice";
 				definition = "Transport key or key encryption key (KEK) for the recipient.";
 				nextVersions_lazy = () -> Arrays.asList(Recipient4Choice.mmObject());

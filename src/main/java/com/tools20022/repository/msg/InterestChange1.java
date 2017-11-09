@@ -19,10 +19,14 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CurrencyCode;
 import com.tools20022.repository.codeset.Frequency1Code;
 import com.tools20022.repository.datatype.*;
+import com.tools20022.repository.entity.Index;
+import com.tools20022.repository.entity.Spread;
 import com.tools20022.repository.entity.VariableInterest;
+import com.tools20022.repository.GeneratedRepository;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -129,11 +133,11 @@ public class InterestChange1 {
 	 */
 	public static final MMMessageAttribute mmFixingDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.VariableInterest.mmFixingDate;
+			businessElementTrace_lazy = () -> VariableInterest.mmFixingDate;
 			componentContext_lazy = () -> InterestChange1.mmObject();
 			isDerived = false;
 			xmlTag = "FxgDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FixingDate";
 			definition = "Date/time at which the rate determination is made, also called determination date.";
 			maxOccurs = 1;
@@ -177,11 +181,11 @@ public class InterestChange1 {
 	 */
 	public static final MMMessageAttribute mmReportingDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.VariableInterest.mmReportingDate;
+			businessElementTrace_lazy = () -> VariableInterest.mmReportingDate;
 			componentContext_lazy = () -> InterestChange1.mmObject();
 			isDerived = false;
 			xmlTag = "RptgDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportingDate";
 			definition = "Last date the new interest rate must be reported to the market.";
 			maxOccurs = 1;
@@ -227,11 +231,11 @@ public class InterestChange1 {
 	 */
 	public static final MMMessageAttribute mmResetDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.VariableInterest.mmResetDate;
+			businessElementTrace_lazy = () -> VariableInterest.mmResetDate;
 			componentContext_lazy = () -> InterestChange1.mmObject();
 			isDerived = false;
 			xmlTag = "RstDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ResetDate";
 			definition = "Date/time at which the interest rate of an interest bearing security will be calculated and reset, according to the terms of the issue.";
 			maxOccurs = 1;
@@ -278,11 +282,11 @@ public class InterestChange1 {
 	 */
 	public static final MMMessageAttribute mmSpreadRate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Spread.mmSpreadRate;
+			businessElementTrace_lazy = () -> Spread.mmSpreadRate;
 			componentContext_lazy = () -> InterestChange1.mmObject();
 			isDerived = false;
 			xmlTag = "SprdRate";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SpreadRate";
 			definition = "Margin over or under an index which determines the interest rate of an interest bearing security.";
 			maxOccurs = 1;
@@ -329,11 +333,11 @@ public class InterestChange1 {
 	 */
 	public static final MMMessageAttribute mmVariableRateChangeFrequency = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.VariableInterest.mmVariableRateChangeFrequency;
+			businessElementTrace_lazy = () -> VariableInterest.mmVariableRateChangeFrequency;
 			componentContext_lazy = () -> InterestChange1.mmObject();
 			isDerived = false;
 			xmlTag = "VarblRateChngFrqcy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VariableRateChangeFrequency";
 			definition = "Specifies the frequency of change to the variable rate of an interest bearing instrument.";
 			maxOccurs = 1;
@@ -379,11 +383,11 @@ public class InterestChange1 {
 	 */
 	public static final MMMessageAttribute mmRateResetSource = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Index.mmReferenceSource;
+			businessElementTrace_lazy = () -> Index.mmReferenceSource;
 			componentContext_lazy = () -> InterestChange1.mmObject();
 			isDerived = false;
 			xmlTag = "RateRstSrc";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RateResetSource";
 			definition = "Identifies the reference source for benchmark interest rates. The source can be the fixing agent or a system.";
 			maxOccurs = 1;
@@ -429,11 +433,11 @@ public class InterestChange1 {
 	 */
 	public static final MMMessageAttribute mmArriers = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.VariableInterest.mmArrears;
+			businessElementTrace_lazy = () -> VariableInterest.mmArrears;
 			componentContext_lazy = () -> InterestChange1.mmObject();
 			isDerived = false;
 			xmlTag = "Arrs";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Arriers";
 			definition = "Indicates that the rate reset will occur at the end of the payment period (True case)";
 			maxOccurs = 1;
@@ -480,11 +484,11 @@ public class InterestChange1 {
 	 */
 	public static final MMMessageAttribute mmIndexRateBasis = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Index.mmIndexRateBasis;
+			businessElementTrace_lazy = () -> Index.mmIndexRateBasis;
 			componentContext_lazy = () -> InterestChange1.mmObject();
 			isDerived = false;
 			xmlTag = "IndxRateBsis";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IndexRateBasis";
 			definition = "Specifies the reference rate for fixed income instruments where the \nprice of the instrument is indexed to the price of an underlying benchmark.";
 			maxOccurs = 1;
@@ -531,11 +535,11 @@ public class InterestChange1 {
 	 */
 	public static final MMMessageAttribute mmIndexRateCurrency = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Index.mmIndexRateCurrency;
+			businessElementTrace_lazy = () -> Index.mmIndexRateCurrency;
 			componentContext_lazy = () -> InterestChange1.mmObject();
 			isDerived = false;
 			xmlTag = "IndxRateCcy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IndexRateCurrency";
 			definition = "Specifies the currency of the reference rate for fixed income instruments where the price of the instrument is indexed to the price of an underlying benchmark.";
 			maxOccurs = 1;
@@ -579,11 +583,11 @@ public class InterestChange1 {
 	 */
 	public static final MMMessageAttribute mmIndexRateFrequency = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Index.mmIndexRateFrequency;
+			businessElementTrace_lazy = () -> Index.mmIndexRateFrequency;
 			componentContext_lazy = () -> InterestChange1.mmObject();
 			isDerived = false;
 			xmlTag = "IndxRateFrqcy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IndexRateFrequency";
 			definition = "Frequency at which the variable rate changes.";
 			maxOccurs = 1;
@@ -627,11 +631,11 @@ public class InterestChange1 {
 	 */
 	public static final MMMessageAttribute mmIndexRateMultiplier = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Index.mmIndexRateMultiplier;
+			businessElementTrace_lazy = () -> Index.mmIndexRateMultiplier;
 			componentContext_lazy = () -> InterestChange1.mmObject();
 			isDerived = false;
 			xmlTag = "IndxRateMltplr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IndexRateMultiplier";
 			definition = "Multiplier for the variable rate.";
 			maxOccurs = 1;
@@ -643,13 +647,11 @@ public class InterestChange1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InterestChange1.mmFixingDate, com.tools20022.repository.msg.InterestChange1.mmReportingDate, com.tools20022.repository.msg.InterestChange1.mmResetDate,
-						com.tools20022.repository.msg.InterestChange1.mmSpreadRate, com.tools20022.repository.msg.InterestChange1.mmVariableRateChangeFrequency, com.tools20022.repository.msg.InterestChange1.mmRateResetSource,
-						com.tools20022.repository.msg.InterestChange1.mmArriers, com.tools20022.repository.msg.InterestChange1.mmIndexRateBasis, com.tools20022.repository.msg.InterestChange1.mmIndexRateCurrency,
-						com.tools20022.repository.msg.InterestChange1.mmIndexRateFrequency, com.tools20022.repository.msg.InterestChange1.mmIndexRateMultiplier);
+				messageElement_lazy = () -> Arrays.asList(InterestChange1.mmFixingDate, InterestChange1.mmReportingDate, InterestChange1.mmResetDate, InterestChange1.mmSpreadRate, InterestChange1.mmVariableRateChangeFrequency,
+						InterestChange1.mmRateResetSource, InterestChange1.mmArriers, InterestChange1.mmIndexRateBasis, InterestChange1.mmIndexRateCurrency, InterestChange1.mmIndexRateFrequency, InterestChange1.mmIndexRateMultiplier);
 				trace_lazy = () -> VariableInterest.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
 						return DateFormat.getDateInstance(java.text.DateFormat.LONG).parse("September 9, 2016");

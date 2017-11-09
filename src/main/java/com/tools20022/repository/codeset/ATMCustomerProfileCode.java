@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -28,6 +30,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.ATMCustomerProfile1Code
+ * ATMCustomerProfile1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -39,13 +48,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.ATMCustomerProfileCode#mmOtherRequest
  * ATMCustomerProfileCode.mmOtherRequest}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.ATMCustomerProfile1Code
- * ATMCustomerProfile1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -94,7 +96,7 @@ public class ATMCustomerProfileCode {
 	 */
 	public static final MMCode mmCardInformation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CardInformation";
 			definition = "Customer profile is deduced from the card data and the local configuration.";
 			owner_lazy = () -> ATMCustomerProfileCode.mmObject();
@@ -125,7 +127,7 @@ public class ATMCustomerProfileCode {
 	 */
 	public static final MMCode mmProfileRequest = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProfileRequest";
 			definition = "Customer profile is built via a specific profile message exchange.";
 			owner_lazy = () -> ATMCustomerProfileCode.mmObject();
@@ -156,7 +158,7 @@ public class ATMCustomerProfileCode {
 	 */
 	public static final MMCode mmOtherRequest = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherRequest";
 			definition = "Customer profile is sent via an account enquiry selecting an account.";
 			owner_lazy = () -> ATMCustomerProfileCode.mmObject();
@@ -167,12 +169,11 @@ public class ATMCustomerProfileCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ATMCustomerProfileCode";
 				definition = "Describes the main way customer information was collected to build up the customer menu and the withdrawal request.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ATMCustomerProfileCode.mmCardInformation, com.tools20022.repository.codeset.ATMCustomerProfileCode.mmProfileRequest,
-						com.tools20022.repository.codeset.ATMCustomerProfileCode.mmOtherRequest);
+				code_lazy = () -> Arrays.asList(ATMCustomerProfileCode.mmCardInformation, ATMCustomerProfileCode.mmProfileRequest, ATMCustomerProfileCode.mmOtherRequest);
 				derivation_lazy = () -> Arrays.asList(ATMCustomerProfile1Code.mmObject());
 			}
 		});

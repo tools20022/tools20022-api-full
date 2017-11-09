@@ -19,11 +19,18 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.trea.AmendNonDeliverableForwardValuationV02;
+import com.tools20022.repository.area.trea.CancelNonDeliverableForwardValuationV02;
+import com.tools20022.repository.area.trea.CreateNonDeliverableForwardValuationV02;
 import com.tools20022.repository.choice.PartyIdentification8Choice;
 import com.tools20022.repository.codeset.ActiveOrHistoricCurrencyCode;
 import com.tools20022.repository.datatype.Max140Text;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.FixingCondition;
+import com.tools20022.repository.entity.NonDeliverableTrade;
+import com.tools20022.repository.entity.Party;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -122,7 +129,7 @@ public class ValuationData2 {
 			componentContext_lazy = () -> ValuationData2.mmObject();
 			isDerived = false;
 			xmlTag = "ValtnRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValuationReference";
 			definition = "Reference to the latest trade identification of the NDF opening trade.";
 			maxOccurs = 1;
@@ -168,11 +175,11 @@ public class ValuationData2 {
 	 */
 	public static final MMMessageAttribute mmSettlementCurrency = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.NonDeliverableTrade.mmSettlementCurrency;
+			businessElementTrace_lazy = () -> NonDeliverableTrade.mmSettlementCurrency;
 			componentContext_lazy = () -> ValuationData2.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmCcy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementCurrency";
 			definition = "Specifies the currency in which the non deliverable trade has to be settled ie the deliverable currency.";
 			maxOccurs = 1;
@@ -215,7 +222,7 @@ public class ValuationData2 {
 			componentContext_lazy = () -> ValuationData2.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlValtnInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalValuationInformation";
 			definition = "Free format text that may contain information on the valuation such as the currency, the place, the time or the source of the rate.";
 			maxOccurs = 1;
@@ -261,11 +268,11 @@ public class ValuationData2 {
 	 */
 	public static final MMMessageAttribute mmSettlementParty = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> ValuationData2.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmPty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementParty";
 			definition = "Party through which the settlement will take place. It may contain the BIC of a central settlement system eg CLSBUS33.";
 			maxOccurs = 1;
@@ -277,13 +284,12 @@ public class ValuationData2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ValuationData2.mmValuationReference, com.tools20022.repository.msg.ValuationData2.mmSettlementCurrency,
-						com.tools20022.repository.msg.ValuationData2.mmAdditionalValuationInformation, com.tools20022.repository.msg.ValuationData2.mmSettlementParty);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.trea.CreateNonDeliverableForwardValuationV02.mmValuationInformation,
-						com.tools20022.repository.area.trea.AmendNonDeliverableForwardValuationV02.mmValuationInformation, com.tools20022.repository.area.trea.CancelNonDeliverableForwardValuationV02.mmValuationInformation);
+				messageElement_lazy = () -> Arrays.asList(ValuationData2.mmValuationReference, ValuationData2.mmSettlementCurrency, ValuationData2.mmAdditionalValuationInformation, ValuationData2.mmSettlementParty);
+				messageBuildingBlock_lazy = () -> Arrays.asList(CreateNonDeliverableForwardValuationV02.mmValuationInformation, AmendNonDeliverableForwardValuationV02.mmValuationInformation,
+						CancelNonDeliverableForwardValuationV02.mmValuationInformation);
 				trace_lazy = () -> FixingCondition.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ValuationData2";
 				definition = "Set of data which contains the link to the opening of the non deliverable trade and supplementary information on its valuation.";
 			}

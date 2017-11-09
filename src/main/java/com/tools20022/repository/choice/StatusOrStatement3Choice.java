@@ -19,6 +19,9 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.sese.SecuritiesStatusOrStatementQueryStatusAdviceV02;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.DocumentNumber1;
 import com.tools20022.repository.msg.DocumentNumber6;
 import java.text.DateFormat;
@@ -116,7 +119,7 @@ public class StatusOrStatement3Choice {
 			componentContext_lazy = () -> StatusOrStatement3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "StsAdvc";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusAdvice";
 			definition = "Identify the status advice and the transaction for which the status advice was requested.";
 			maxOccurs = 1;
@@ -157,7 +160,7 @@ public class StatusOrStatement3Choice {
 			componentContext_lazy = () -> StatusOrStatement3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Stmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Statement";
 			definition = "Identify the statement/report that was requested.";
 			maxOccurs = 1;
@@ -170,10 +173,10 @@ public class StatusOrStatement3Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.StatusOrStatement3Choice.mmStatusAdvice, com.tools20022.repository.choice.StatusOrStatement3Choice.mmStatement);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesStatusOrStatementQueryStatusAdviceV02.mmStatusOrStatementRequested);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+				messageElement_lazy = () -> Arrays.asList(StatusOrStatement3Choice.mmStatusAdvice, StatusOrStatement3Choice.mmStatement);
+				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesStatusOrStatementQueryStatusAdviceV02.mmStatusOrStatementRequested);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
 						return DateFormat.getDateInstance(java.text.DateFormat.LONG).parse("September 9, 2016");

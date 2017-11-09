@@ -20,9 +20,12 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.RejectedReason4Choice;
 import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.entity.AccountStatus;
+import com.tools20022.repository.entity.StatusReason;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -124,15 +127,15 @@ public class RejectionReason16 {
 	 */
 	public static final MMMessageAssociationEnd mmReason = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmRejectedStatusReason;
+			businessElementTrace_lazy = () -> StatusReason.mmRejectedStatusReason;
 			componentContext_lazy = () -> RejectionReason16.mmObject();
 			isDerived = false;
 			xmlTag = "Rsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reason";
 			definition = "Reason for the rejected status.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RejectionReason33.mmReason, com.tools20022.repository.msg.RejectionReason31.mmReason);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.RejectionReason6.mmCode;
+			nextVersions_lazy = () -> Arrays.asList(RejectionReason33.mmReason, RejectionReason31.mmReason);
+			previousVersion_lazy = () -> RejectionReason6.mmCode;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -190,15 +193,15 @@ public class RejectionReason16 {
 	 */
 	public static final MMMessageAttribute mmAdditionalReasonInformation = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmReason;
+			businessElementTrace_lazy = () -> StatusReason.mmReason;
 			componentContext_lazy = () -> RejectionReason16.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlRsnInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalReasonInformation";
 			definition = "Additional information about the rejected status reason.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RejectionReason33.mmAdditionalReasonInformation, com.tools20022.repository.msg.RejectionReason31.mmAdditionalReasonInformation);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.RejectionReason6.mmAdditionalReasonInformation;
+			nextVersions_lazy = () -> Arrays.asList(RejectionReason33.mmAdditionalReasonInformation, RejectionReason31.mmAdditionalReasonInformation);
+			previousVersion_lazy = () -> RejectionReason6.mmAdditionalReasonInformation;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
@@ -208,10 +211,10 @@ public class RejectionReason16 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RejectionReason16.mmReason, com.tools20022.repository.msg.RejectionReason16.mmAdditionalReasonInformation);
+				messageElement_lazy = () -> Arrays.asList(RejectionReason16.mmReason, RejectionReason16.mmAdditionalReasonInformation);
 				trace_lazy = () -> AccountStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RejectionReason16";
 				definition = "Information about a rejected status.";
 				nextVersions_lazy = () -> Arrays.asList(RejectionReason33.mmObject(), RejectionReason31.mmObject());

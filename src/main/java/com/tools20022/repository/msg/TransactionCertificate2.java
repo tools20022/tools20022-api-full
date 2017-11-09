@@ -20,12 +20,15 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
 import com.tools20022.repository.datatype.Exact1NumericText;
 import com.tools20022.repository.datatype.Exact5NumericText;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.entity.IndividualPayment;
+import com.tools20022.repository.entity.ObligationFulfilment;
 import com.tools20022.repository.entity.Payment;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -117,7 +120,7 @@ public class TransactionCertificate2 {
 			componentContext_lazy = () -> TransactionCertificate2.mmObject();
 			isDerived = false;
 			xmlTag = "RfrdDoc";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReferredDocument";
 			definition = "Reference of the transaction, that is the underlying payment instruction or statement entry.";
 			maxOccurs = 1;
@@ -161,11 +164,11 @@ public class TransactionCertificate2 {
 	 */
 	public static final MMMessageAttribute mmTransactionDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ObligationFulfilment.mmDate;
+			businessElementTrace_lazy = () -> ObligationFulfilment.mmDate;
 			componentContext_lazy = () -> TransactionCertificate2.mmObject();
 			isDerived = false;
 			xmlTag = "TxDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionDate";
 			definition = "Date of the underlying transaction.";
 			maxOccurs = 1;
@@ -209,11 +212,11 @@ public class TransactionCertificate2 {
 	 */
 	public static final MMMessageAttribute mmTransactionType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.mmPaymentInstrument;
+			businessElementTrace_lazy = () -> Payment.mmPaymentInstrument;
 			componentContext_lazy = () -> TransactionCertificate2.mmObject();
 			isDerived = false;
 			xmlTag = "TxTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionType";
 			definition = "Type of the transaction.";
 			maxOccurs = 1;
@@ -262,11 +265,11 @@ public class TransactionCertificate2 {
 	 */
 	public static final MMMessageAttribute mmLocalInstrument = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.mmPaymentInstrument;
+			businessElementTrace_lazy = () -> Payment.mmPaymentInstrument;
 			componentContext_lazy = () -> TransactionCertificate2.mmObject();
 			isDerived = false;
 			xmlTag = "LclInstrm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LocalInstrument";
 			definition = "User community specific instrument.\r\n\r\nUsage: This element is used to specify a local transaction type to further qualify the transaction type.";
 			maxOccurs = 1;
@@ -312,11 +315,11 @@ public class TransactionCertificate2 {
 	 */
 	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.mmAmount;
+			businessElementTrace_lazy = () -> Payment.mmAmount;
 			componentContext_lazy = () -> TransactionCertificate2.mmObject();
 			isDerived = false;
 			xmlTag = "Amt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Amount as provided in the transaction to be recorded under the contract.";
 			maxOccurs = 1;
@@ -328,11 +331,11 @@ public class TransactionCertificate2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionCertificate2.mmReferredDocument, com.tools20022.repository.msg.TransactionCertificate2.mmTransactionDate,
-						com.tools20022.repository.msg.TransactionCertificate2.mmTransactionType, com.tools20022.repository.msg.TransactionCertificate2.mmLocalInstrument, com.tools20022.repository.msg.TransactionCertificate2.mmAmount);
+				messageElement_lazy = () -> Arrays.asList(TransactionCertificate2.mmReferredDocument, TransactionCertificate2.mmTransactionDate, TransactionCertificate2.mmTransactionType, TransactionCertificate2.mmLocalInstrument,
+						TransactionCertificate2.mmAmount);
 				trace_lazy = () -> Payment.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TransactionCertificate2";
 				definition = "Certificate in which all currency control transactions are registered.";
 			}

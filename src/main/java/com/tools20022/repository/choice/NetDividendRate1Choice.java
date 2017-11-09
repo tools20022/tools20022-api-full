@@ -19,8 +19,10 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
 import com.tools20022.repository.entity.Dividend;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.NetDividendRate2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -100,7 +102,7 @@ public class NetDividendRate1Choice {
 			componentContext_lazy = () -> NetDividendRate1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "NotSpcfdRate";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotSpecifiedRate";
 			definition = "The value of the rate is not specified, eg, the rate is unknown.";
 			maxOccurs = 1;
@@ -144,11 +146,11 @@ public class NetDividendRate1Choice {
 	 */
 	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Dividend.mmNetDividend;
+			businessElementTrace_lazy = () -> Dividend.mmNetDividend;
 			componentContext_lazy = () -> NetDividendRate1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Amt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Value expressed as an amount.";
 			maxOccurs = 1;
@@ -198,7 +200,7 @@ public class NetDividendRate1Choice {
 			componentContext_lazy = () -> NetDividendRate1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "RateTpAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RateTypeAmount";
 			definition = "Value is expressed as an amount related to an underlying securities, eg, underlying security for which an interest is paid.";
 			maxOccurs = 1;
@@ -210,11 +212,10 @@ public class NetDividendRate1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.NetDividendRate1Choice.mmNotSpecifiedRate, com.tools20022.repository.choice.NetDividendRate1Choice.mmAmount,
-						com.tools20022.repository.choice.NetDividendRate1Choice.mmRateTypeAmount);
+				messageElement_lazy = () -> Arrays.asList(NetDividendRate1Choice.mmNotSpecifiedRate, NetDividendRate1Choice.mmAmount, NetDividendRate1Choice.mmRateTypeAmount);
 				trace_lazy = () -> Dividend.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "NetDividendRate1Choice";
 				definition = "Choice of format to express a net dividend.";
 			}

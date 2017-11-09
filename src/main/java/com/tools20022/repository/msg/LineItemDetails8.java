@@ -20,12 +20,14 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.ProductCategory1Choice;
 import com.tools20022.repository.choice.ProductCharacteristics1Choice;
 import com.tools20022.repository.choice.ProductIdentifier2Choice;
 import com.tools20022.repository.datatype.CurrencyAndAmount;
 import com.tools20022.repository.datatype.Max70Text;
-import com.tools20022.repository.entity.LineItem;
+import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -158,14 +160,14 @@ public class LineItemDetails8 {
 	 */
 	public static final MMMessageAttribute mmLineItemIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.LineItem.mmIdentification;
+			businessElementTrace_lazy = () -> LineItem.mmIdentification;
 			componentContext_lazy = () -> LineItemDetails8.mmObject();
 			isDerived = false;
 			xmlTag = "LineItmId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LineItemIdentification";
 			definition = "Sequential number assigned to a line item.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LineItemDetails12.mmLineItemIdentification);
+			nextVersions_lazy = () -> Arrays.asList(LineItemDetails12.mmLineItemIdentification);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max70Text.mmObject();
@@ -215,14 +217,14 @@ public class LineItemDetails8 {
 	 */
 	public static final MMMessageAttribute mmProductName = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Product.mmName;
+			businessElementTrace_lazy = () -> Product.mmName;
 			componentContext_lazy = () -> LineItemDetails8.mmObject();
 			isDerived = false;
 			xmlTag = "PdctNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProductName";
 			definition = "Name of the product detailed in the corresponding line item.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LineItemDetails12.mmProductName);
+			nextVersions_lazy = () -> Arrays.asList(LineItemDetails12.mmProductName);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max70Text.mmObject();
@@ -271,14 +273,14 @@ public class LineItemDetails8 {
 	 */
 	public static final MMMessageAssociationEnd mmProductIdentifier = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Product.mmProductIdentification;
+			businessElementTrace_lazy = () -> Product.mmProductIdentification;
 			componentContext_lazy = () -> LineItemDetails8.mmObject();
 			isDerived = false;
 			xmlTag = "PdctIdr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProductIdentifier";
 			definition = "Identifies the product of the corresponding line item.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LineItemDetails12.mmProductIdentifier);
+			nextVersions_lazy = () -> Arrays.asList(LineItemDetails12.mmProductIdentifier);
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> ProductIdentifier2Choice.mmObject();
@@ -327,14 +329,14 @@ public class LineItemDetails8 {
 	 */
 	public static final MMMessageAssociationEnd mmProductCharacteristics = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Product.mmCharacteristics;
+			businessElementTrace_lazy = () -> Product.mmCharacteristics;
 			componentContext_lazy = () -> LineItemDetails8.mmObject();
 			isDerived = false;
 			xmlTag = "PdctChrtcs";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProductCharacteristics";
 			definition = "Identifies the characteristic of a product.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LineItemDetails12.mmProductCharacteristics);
+			nextVersions_lazy = () -> Arrays.asList(LineItemDetails12.mmProductCharacteristics);
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> ProductCharacteristics1Choice.mmObject();
@@ -383,14 +385,14 @@ public class LineItemDetails8 {
 	 */
 	public static final MMMessageAssociationEnd mmProductCategory = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Product.mmProductCategory;
+			businessElementTrace_lazy = () -> Product.mmProductCategory;
 			componentContext_lazy = () -> LineItemDetails8.mmObject();
 			isDerived = false;
 			xmlTag = "PdctCtgy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProductCategory";
 			definition = "Identifies the category of product.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LineItemDetails12.mmProductCategory);
+			nextVersions_lazy = () -> Arrays.asList(LineItemDetails12.mmProductCategory);
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> ProductCategory1Choice.mmObject();
@@ -438,14 +440,14 @@ public class LineItemDetails8 {
 	 */
 	public static final MMMessageAssociationEnd mmOrderedQuantity = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Product.mmQuantity;
+			businessElementTrace_lazy = () -> Product.mmQuantity;
 			componentContext_lazy = () -> LineItemDetails8.mmObject();
 			isDerived = false;
 			xmlTag = "OrdrdQty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrderedQuantity";
 			definition = "Quantity ordered for a line as indicated in the baseline.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LineItemDetails12.mmOrderedQuantity);
+			nextVersions_lazy = () -> Arrays.asList(LineItemDetails12.mmOrderedQuantity);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -491,10 +493,10 @@ public class LineItemDetails8 {
 			componentContext_lazy = () -> LineItemDetails8.mmObject();
 			isDerived = false;
 			xmlTag = "AccptdQty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcceptedQuantity";
 			definition = "Quantity accepted by data set submission.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LineItemDetails12.mmAcceptedQuantity);
+			nextVersions_lazy = () -> Arrays.asList(LineItemDetails12.mmAcceptedQuantity);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -541,10 +543,10 @@ public class LineItemDetails8 {
 			componentContext_lazy = () -> LineItemDetails8.mmObject();
 			isDerived = false;
 			xmlTag = "OutsdngQty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OutstandingQuantity";
 			definition = "Difference between the ordered quantity and the accepted one.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LineItemDetails12.mmOutstandingQuantity);
+			nextVersions_lazy = () -> Arrays.asList(LineItemDetails12.mmOutstandingQuantity);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -593,10 +595,10 @@ public class LineItemDetails8 {
 			componentContext_lazy = () -> LineItemDetails8.mmObject();
 			isDerived = false;
 			xmlTag = "PdgQty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingQuantity";
 			definition = "Quantity of a product for which a mismatched data set has been submitted and has not yet been accepted or rejected..";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LineItemDetails12.mmPendingQuantity);
+			nextVersions_lazy = () -> Arrays.asList(LineItemDetails12.mmPendingQuantity);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -645,14 +647,14 @@ public class LineItemDetails8 {
 	 */
 	public static final MMMessageAssociationEnd mmQuantityTolerance = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ProductQuantity.mmQuantityTolerance;
+			businessElementTrace_lazy = () -> ProductQuantity.mmQuantityTolerance;
 			componentContext_lazy = () -> LineItemDetails8.mmObject();
 			isDerived = false;
 			xmlTag = "QtyTlrnce";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuantityTolerance";
 			definition = "Variance allowed on the quantity of goods.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LineItemDetails12.mmQuantityTolerance);
+			nextVersions_lazy = () -> Arrays.asList(LineItemDetails12.mmQuantityTolerance);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -706,14 +708,14 @@ public class LineItemDetails8 {
 	 */
 	public static final MMMessageAttribute mmOrderedAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PurchaseOrder.mmTotalAmount;
+			businessElementTrace_lazy = () -> PurchaseOrder.mmTotalAmount;
 			componentContext_lazy = () -> LineItemDetails8.mmObject();
 			isDerived = false;
 			xmlTag = "OrdrdAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrderedAmount";
 			definition = "Price multiplied by the ordered quantity for a line as indicated in the baseline.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LineItemDetails12.mmOrderedAmount);
+			nextVersions_lazy = () -> Arrays.asList(LineItemDetails12.mmOrderedAmount);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
@@ -761,10 +763,10 @@ public class LineItemDetails8 {
 			componentContext_lazy = () -> LineItemDetails8.mmObject();
 			isDerived = false;
 			xmlTag = "AccptdAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcceptedAmount";
 			definition = "Price multiplied by the accepted quantity for a line.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LineItemDetails12.mmAcceptedAmount);
+			nextVersions_lazy = () -> Arrays.asList(LineItemDetails12.mmAcceptedAmount);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
@@ -812,10 +814,10 @@ public class LineItemDetails8 {
 			componentContext_lazy = () -> LineItemDetails8.mmObject();
 			isDerived = false;
 			xmlTag = "OutsdngAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OutstandingAmount";
 			definition = "Price multiplied by the outstanding quantity for a line.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LineItemDetails12.mmOutstandingAmount);
+			nextVersions_lazy = () -> Arrays.asList(LineItemDetails12.mmOutstandingAmount);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
@@ -863,10 +865,10 @@ public class LineItemDetails8 {
 			componentContext_lazy = () -> LineItemDetails8.mmObject();
 			isDerived = false;
 			xmlTag = "PdgAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingAmount";
 			definition = "Price multiplied by the pending quantity for a line.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LineItemDetails12.mmPendingAmount);
+			nextVersions_lazy = () -> Arrays.asList(LineItemDetails12.mmPendingAmount);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
@@ -914,14 +916,14 @@ public class LineItemDetails8 {
 	 */
 	public static final MMMessageAssociationEnd mmPriceTolerance = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Price.mmPriceTolerance;
+			businessElementTrace_lazy = () -> Price.mmPriceTolerance;
 			componentContext_lazy = () -> LineItemDetails8.mmObject();
 			isDerived = false;
 			xmlTag = "PricTlrnce";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PriceTolerance";
 			definition = "Variance on price for the goods.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LineItemDetails12.mmPriceTolerance);
+			nextVersions_lazy = () -> Arrays.asList(LineItemDetails12.mmPriceTolerance);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -932,15 +934,12 @@ public class LineItemDetails8 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LineItemDetails8.mmLineItemIdentification, com.tools20022.repository.msg.LineItemDetails8.mmProductName,
-						com.tools20022.repository.msg.LineItemDetails8.mmProductIdentifier, com.tools20022.repository.msg.LineItemDetails8.mmProductCharacteristics, com.tools20022.repository.msg.LineItemDetails8.mmProductCategory,
-						com.tools20022.repository.msg.LineItemDetails8.mmOrderedQuantity, com.tools20022.repository.msg.LineItemDetails8.mmAcceptedQuantity, com.tools20022.repository.msg.LineItemDetails8.mmOutstandingQuantity,
-						com.tools20022.repository.msg.LineItemDetails8.mmPendingQuantity, com.tools20022.repository.msg.LineItemDetails8.mmQuantityTolerance, com.tools20022.repository.msg.LineItemDetails8.mmOrderedAmount,
-						com.tools20022.repository.msg.LineItemDetails8.mmAcceptedAmount, com.tools20022.repository.msg.LineItemDetails8.mmOutstandingAmount, com.tools20022.repository.msg.LineItemDetails8.mmPendingAmount,
-						com.tools20022.repository.msg.LineItemDetails8.mmPriceTolerance);
+				messageElement_lazy = () -> Arrays.asList(LineItemDetails8.mmLineItemIdentification, LineItemDetails8.mmProductName, LineItemDetails8.mmProductIdentifier, LineItemDetails8.mmProductCharacteristics,
+						LineItemDetails8.mmProductCategory, LineItemDetails8.mmOrderedQuantity, LineItemDetails8.mmAcceptedQuantity, LineItemDetails8.mmOutstandingQuantity, LineItemDetails8.mmPendingQuantity,
+						LineItemDetails8.mmQuantityTolerance, LineItemDetails8.mmOrderedAmount, LineItemDetails8.mmAcceptedAmount, LineItemDetails8.mmOutstandingAmount, LineItemDetails8.mmPendingAmount, LineItemDetails8.mmPriceTolerance);
 				trace_lazy = () -> LineItem.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "LineItemDetails8";
 				definition = "Calculation of the current situation of a line item as a result of the submission of a commercial dataset.";
 				nextVersions_lazy = () -> Arrays.asList(LineItemDetails12.mmObject());

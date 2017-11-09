@@ -20,13 +20,14 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.Purpose1Choice;
 import com.tools20022.repository.choice.SecurityIdentification4Choice;
 import com.tools20022.repository.choice.TransactionPrice1Choice;
 import com.tools20022.repository.choice.TransactionQuantities1Choice;
 import com.tools20022.repository.datatype.Max500Text;
-import com.tools20022.repository.entity.CashEntry;
-import com.tools20022.repository.entity.Entry;
+import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -156,11 +157,11 @@ public class EntryTransaction1 {
 	 */
 	public static final MMMessageAssociationEnd mmReferences = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Entry.mmIdentification;
+			businessElementTrace_lazy = () -> Entry.mmIdentification;
 			componentContext_lazy = () -> EntryTransaction1.mmObject();
 			isDerived = false;
 			xmlTag = "Refs";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "References";
 			definition = "Set of elements providing the identification of the underlying transaction.";
 			maxOccurs = 1;
@@ -214,7 +215,7 @@ public class EntryTransaction1 {
 			componentContext_lazy = () -> EntryTransaction1.mmObject();
 			isDerived = false;
 			xmlTag = "AmtDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmountDetails";
 			definition = "Set of elements providing details information on the original amount.\n\nUsage: This component (on transaction level) should be used in case booking is for a single transaction and the original amount is different from the entry amount.  It can also be used in case individual original amounts are provided in case of a batch or aggregate booking.";
 			maxOccurs = 1;
@@ -267,11 +268,11 @@ public class EntryTransaction1 {
 	 */
 	public static final MMMessageAssociationEnd mmAvailability = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashEntry.mmAvailability;
+			businessElementTrace_lazy = () -> CashEntry.mmAvailability;
 			componentContext_lazy = () -> EntryTransaction1.mmObject();
 			isDerived = false;
 			xmlTag = "Avlbty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Availability";
 			definition = "Set of elements used to indicate when the booked funds will become available, ie can be accessed and start generating interest. \n\nUsage : this type of info is eg used in US, and is linked to particular instruments, such as cheques.\nExample : When a cheque is deposited, it will be booked on the deposit day, but the funds will only be accessible as of the indicated availability day (according to national banking regulations).";
 			minOccurs = 0;
@@ -317,11 +318,11 @@ public class EntryTransaction1 {
 	 */
 	public static final MMMessageAssociationEnd mmBankTransactionCode = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Entry.mmBankTransactionCode;
+			businessElementTrace_lazy = () -> Entry.mmBankTransactionCode;
 			componentContext_lazy = () -> EntryTransaction1.mmObject();
 			isDerived = false;
 			xmlTag = "BkTxCd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BankTransactionCode";
 			definition = "Set of elements to fully identify the type of underlying transaction resulting in an entry.";
 			maxOccurs = 1;
@@ -372,11 +373,11 @@ public class EntryTransaction1 {
 	 */
 	public static final MMMessageAssociationEnd mmCharges = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashEntry.mmCharges;
+			businessElementTrace_lazy = () -> CashEntry.mmCharges;
 			componentContext_lazy = () -> EntryTransaction1.mmObject();
 			isDerived = false;
 			xmlTag = "Chrgs";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Charges";
 			definition = "Provides information on the charges included in the entry amount.\n\nUsage : This component (on transaction level) can be used in case the booking is for a single transaction, and charges are included in the entry amount.  It can also be used in case individual charge amounts are applied to individual transactions in case of a batch or aggregate amount booking.";
 			minOccurs = 0;
@@ -427,11 +428,11 @@ public class EntryTransaction1 {
 	 */
 	public static final MMMessageAssociationEnd mmInterest = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Interest.mmInterestCalculation;
+			businessElementTrace_lazy = () -> Interest.mmInterestCalculation;
 			componentContext_lazy = () -> EntryTransaction1.mmObject();
 			isDerived = false;
 			xmlTag = "Intrst";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Interest";
 			definition = "Set of elements providing details on the interest amount included in the entry amount.\n\nUsage : This component (on transaction level) can be used in case the booking is for a single transaction, and interest amount is included in the entry amount.  It can also be used in case individual interest amounts are applied to individual transactions in case of a batch or aggregate amount booking.";
 			minOccurs = 0;
@@ -476,11 +477,11 @@ public class EntryTransaction1 {
 	 */
 	public static final MMMessageAssociationEnd mmRelatedParties = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.mmPartyRole;
+			businessElementTrace_lazy = () -> Payment.mmPartyRole;
 			componentContext_lazy = () -> EntryTransaction1.mmObject();
 			isDerived = false;
 			xmlTag = "RltdPties";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedParties";
 			definition = "Set of elements identifying the parties related to the underlying transaction.";
 			maxOccurs = 1;
@@ -526,11 +527,11 @@ public class EntryTransaction1 {
 	 */
 	public static final MMMessageAssociationEnd mmRelatedAgents = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.mmPartyRole;
+			businessElementTrace_lazy = () -> Payment.mmPartyRole;
 			componentContext_lazy = () -> EntryTransaction1.mmObject();
 			isDerived = false;
 			xmlTag = "RltdAgts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedAgents";
 			definition = "Set of elements identifying the agents related to the underlying transaction.";
 			maxOccurs = 1;
@@ -582,11 +583,11 @@ public class EntryTransaction1 {
 	 */
 	public static final MMMessageAssociationEnd mmPurpose = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentObligation.mmPurpose;
+			businessElementTrace_lazy = () -> PaymentObligation.mmPurpose;
 			componentContext_lazy = () -> EntryTransaction1.mmObject();
 			isDerived = false;
 			xmlTag = "Purp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Purpose";
 			definition = "Underlying reason for the payment transaction, eg, a charity payment, or a commercial agreement between the creditor and the debtor.  \n\nUsage: purpose is used by the end-customers, ie originating party, initiating party, debtor, creditor, final party, to provide information concerning the nature of the payment transaction. Purpose is a content element, which is not used for processing by any of the agents involved in the payment chain.";
 			maxOccurs = 1;
@@ -632,11 +633,11 @@ public class EntryTransaction1 {
 	 */
 	public static final MMMessageAssociationEnd mmRelatedRemittanceInformation = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Document.mmPlaceOfStorage;
+			businessElementTrace_lazy = () -> Document.mmPlaceOfStorage;
 			componentContext_lazy = () -> EntryTransaction1.mmObject();
 			isDerived = false;
 			xmlTag = "RltdRmtInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedRemittanceInformation";
 			definition = "Information related to the handling of the remittance information by any of the agents in the transaction processing chain.";
 			maxOccurs = 10;
@@ -683,11 +684,11 @@ public class EntryTransaction1 {
 	 */
 	public static final MMMessageAssociationEnd mmRemittanceInformation = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentObligation.mmAssociatedDocument;
+			businessElementTrace_lazy = () -> PaymentObligation.mmAssociatedDocument;
 			componentContext_lazy = () -> EntryTransaction1.mmObject();
 			isDerived = false;
 			xmlTag = "RmtInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RemittanceInformation";
 			definition = "Information that enables the matching, ie, reconciliation, of a payment with the items that the payment is intended to settle, eg, commercial invoices in an account receivable system.";
 			maxOccurs = 1;
@@ -733,11 +734,11 @@ public class EntryTransaction1 {
 	 */
 	public static final MMMessageAssociationEnd mmRelatedDates = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.mmPaymentExecution;
+			businessElementTrace_lazy = () -> Payment.mmPaymentExecution;
 			componentContext_lazy = () -> EntryTransaction1.mmObject();
 			isDerived = false;
 			xmlTag = "RltdDts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedDates";
 			definition = "Set of elements identifying the dates related to the underlying transactions.";
 			maxOccurs = 1;
@@ -784,11 +785,11 @@ public class EntryTransaction1 {
 	 */
 	public static final MMMessageAssociationEnd mmRelatedPrice = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeExecution.mmDealPrice;
+			businessElementTrace_lazy = () -> SecuritiesTradeExecution.mmDealPrice;
 			componentContext_lazy = () -> EntryTransaction1.mmObject();
 			isDerived = false;
 			xmlTag = "RltdPric";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedPrice";
 			definition = "Set of elements identifying the price information related to the underlying transaction.";
 			maxOccurs = 1;
@@ -835,11 +836,11 @@ public class EntryTransaction1 {
 	 */
 	public static final MMMessageAssociationEnd mmRelatedQuantities = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesEntry.mmFinancialInstrumentQuantity;
+			businessElementTrace_lazy = () -> SecuritiesEntry.mmFinancialInstrumentQuantity;
 			componentContext_lazy = () -> EntryTransaction1.mmObject();
 			isDerived = false;
 			xmlTag = "RltdQties";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedQuantities";
 			definition = "Identifies related quantities (eg of securities) in the underlying transaction.";
 			minOccurs = 0;
@@ -885,11 +886,11 @@ public class EntryTransaction1 {
 	 */
 	public static final MMMessageAssociationEnd mmFinancialInstrumentIdentification = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmIdentification;
+			businessElementTrace_lazy = () -> Security.mmIdentification;
 			componentContext_lazy = () -> EntryTransaction1.mmObject();
 			isDerived = false;
 			xmlTag = "FinInstrmId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentIdentification";
 			definition = "Identification of a security, as assigned under a formal or proprietary identification scheme.";
 			maxOccurs = 1;
@@ -935,11 +936,11 @@ public class EntryTransaction1 {
 	 */
 	public static final MMMessageAssociationEnd mmTax = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.mmTaxOnPayment;
+			businessElementTrace_lazy = () -> Payment.mmTaxOnPayment;
 			componentContext_lazy = () -> EntryTransaction1.mmObject();
 			isDerived = false;
 			xmlTag = "Tax";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Tax";
 			definition = "Amount of money due to the government or tax authority, according to various pre-defined parameters such as thresholds or income.";
 			maxOccurs = 1;
@@ -983,11 +984,11 @@ public class EntryTransaction1 {
 	 */
 	public static final MMMessageAssociationEnd mmReturnInformation = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.mmPaymentStatus;
+			businessElementTrace_lazy = () -> Payment.mmPaymentStatus;
 			componentContext_lazy = () -> EntryTransaction1.mmObject();
 			isDerived = false;
 			xmlTag = "RtrInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReturnInformation";
 			definition = "Set of elements specifying the return information.";
 			maxOccurs = 1;
@@ -1031,11 +1032,11 @@ public class EntryTransaction1 {
 	 */
 	public static final MMMessageAssociationEnd mmCorporateAction = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmCorporateEvent;
+			businessElementTrace_lazy = () -> Security.mmCorporateEvent;
 			componentContext_lazy = () -> EntryTransaction1.mmObject();
 			isDerived = false;
 			xmlTag = "CorpActn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorporateAction";
 			definition = "Set of elements identifying the underlying corporate action.";
 			maxOccurs = 1;
@@ -1084,11 +1085,11 @@ public class EntryTransaction1 {
 	 */
 	public static final MMMessageAssociationEnd mmSafekeepingAccount = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashEntry.mmCashAccount;
+			businessElementTrace_lazy = () -> CashEntry.mmCashAccount;
 			componentContext_lazy = () -> EntryTransaction1.mmObject();
 			isDerived = false;
 			xmlTag = "SfkpgAcct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingAccount";
 			definition = "Safekeeping or investment account. A safekeeping account is an account on which a securities entry is made. An investment account is an account between an investor(s) and a fund manager or a fund. The account can contain holdings in any investment fund or investment fund class managed (or distributed) by the fund manager, within the same fund family.";
 			maxOccurs = 1;
@@ -1130,7 +1131,7 @@ public class EntryTransaction1 {
 			componentContext_lazy = () -> EntryTransaction1.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlTxInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalTransactionInformation";
 			definition = "Further details on the transaction details.";
 			maxOccurs = 1;
@@ -1142,17 +1143,13 @@ public class EntryTransaction1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.EntryTransaction1.mmReferences, com.tools20022.repository.msg.EntryTransaction1.mmAmountDetails,
-						com.tools20022.repository.msg.EntryTransaction1.mmAvailability, com.tools20022.repository.msg.EntryTransaction1.mmBankTransactionCode, com.tools20022.repository.msg.EntryTransaction1.mmCharges,
-						com.tools20022.repository.msg.EntryTransaction1.mmInterest, com.tools20022.repository.msg.EntryTransaction1.mmRelatedParties, com.tools20022.repository.msg.EntryTransaction1.mmRelatedAgents,
-						com.tools20022.repository.msg.EntryTransaction1.mmPurpose, com.tools20022.repository.msg.EntryTransaction1.mmRelatedRemittanceInformation, com.tools20022.repository.msg.EntryTransaction1.mmRemittanceInformation,
-						com.tools20022.repository.msg.EntryTransaction1.mmRelatedDates, com.tools20022.repository.msg.EntryTransaction1.mmRelatedPrice, com.tools20022.repository.msg.EntryTransaction1.mmRelatedQuantities,
-						com.tools20022.repository.msg.EntryTransaction1.mmFinancialInstrumentIdentification, com.tools20022.repository.msg.EntryTransaction1.mmTax, com.tools20022.repository.msg.EntryTransaction1.mmReturnInformation,
-						com.tools20022.repository.msg.EntryTransaction1.mmCorporateAction, com.tools20022.repository.msg.EntryTransaction1.mmSafekeepingAccount,
-						com.tools20022.repository.msg.EntryTransaction1.mmAdditionalTransactionInformation);
+				messageElement_lazy = () -> Arrays.asList(EntryTransaction1.mmReferences, EntryTransaction1.mmAmountDetails, EntryTransaction1.mmAvailability, EntryTransaction1.mmBankTransactionCode, EntryTransaction1.mmCharges,
+						EntryTransaction1.mmInterest, EntryTransaction1.mmRelatedParties, EntryTransaction1.mmRelatedAgents, EntryTransaction1.mmPurpose, EntryTransaction1.mmRelatedRemittanceInformation,
+						EntryTransaction1.mmRemittanceInformation, EntryTransaction1.mmRelatedDates, EntryTransaction1.mmRelatedPrice, EntryTransaction1.mmRelatedQuantities, EntryTransaction1.mmFinancialInstrumentIdentification,
+						EntryTransaction1.mmTax, EntryTransaction1.mmReturnInformation, EntryTransaction1.mmCorporateAction, EntryTransaction1.mmSafekeepingAccount, EntryTransaction1.mmAdditionalTransactionInformation);
 				trace_lazy = () -> Entry.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "EntryTransaction1";
 				definition = "Posting to an account that results in an increase or decrease to a balance.";
 			}

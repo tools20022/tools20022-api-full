@@ -19,10 +19,12 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.DocumentNumber5Choice;
 import com.tools20022.repository.choice.PartyIdentification92Choice;
 import com.tools20022.repository.choice.ProcessingPosition8Choice;
 import com.tools20022.repository.choice.References46Choice;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -106,10 +108,10 @@ public class Linkages39 {
 			componentContext_lazy = () -> Linkages39.mmObject();
 			isDerived = false;
 			xmlTag = "PrcgPos";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProcessingPosition";
 			definition = "When the transaction is to be executed relative to a linked transaction.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Linkages27.mmProcessingPosition;
+			previousVersion_lazy = () -> Linkages27.mmProcessingPosition;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -156,10 +158,10 @@ public class Linkages39 {
 			componentContext_lazy = () -> Linkages39.mmObject();
 			isDerived = false;
 			xmlTag = "MsgNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageNumber";
 			definition = "Message type number/message identifier of the message referenced in the linkage sequence.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Linkages27.mmMessageNumber;
+			previousVersion_lazy = () -> Linkages27.mmMessageNumber;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -202,10 +204,10 @@ public class Linkages39 {
 			componentContext_lazy = () -> Linkages39.mmObject();
 			isDerived = false;
 			xmlTag = "Ref";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reference";
 			definition = "Reference to the linked transaction.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Linkages27.mmReference;
+			previousVersion_lazy = () -> Linkages27.mmReference;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -249,10 +251,10 @@ public class Linkages39 {
 			componentContext_lazy = () -> Linkages39.mmObject();
 			isDerived = false;
 			xmlTag = "RefOwnr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReferenceOwner";
 			definition = "Party that generates the reference.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Linkages27.mmReferenceOwner;
+			previousVersion_lazy = () -> Linkages27.mmReferenceOwner;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -263,10 +265,9 @@ public class Linkages39 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Linkages39.mmProcessingPosition, com.tools20022.repository.msg.Linkages39.mmMessageNumber, com.tools20022.repository.msg.Linkages39.mmReference,
-						com.tools20022.repository.msg.Linkages39.mmReferenceOwner);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(Linkages39.mmProcessingPosition, Linkages39.mmMessageNumber, Linkages39.mmReference, Linkages39.mmReferenceOwner);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Linkages39";
 				definition = "Information related to a linked transaction.";
 				previousVersion_lazy = () -> Linkages27.mmObject();

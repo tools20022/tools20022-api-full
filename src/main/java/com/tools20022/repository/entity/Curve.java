@@ -17,12 +17,12 @@
 
 package com.tools20022.repository.entity;
 
-import com.tools20022.metamodel.MMBusinessAssociationEnd;
-import com.tools20022.metamodel.MMBusinessAttribute;
-import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.*;
+import com.tools20022.repository.choice.*;
 import com.tools20022.repository.codeset.BenchmarkCurveNameCode;
 import com.tools20022.repository.codeset.CurrencyCode;
 import com.tools20022.repository.datatype.Max256Text;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.BenchmarkCurve1;
 import com.tools20022.repository.msg.BenchmarkCurve2;
 import java.util.Arrays;
@@ -37,16 +37,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Curve#mmCurrency
- * Curve.mmCurrency}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Curve#mmName Curve.mmName}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Curve#mmPoint Curve.mmPoint}
- * </li>
- * <li>{@linkplain com.tools20022.repository.entity.Curve#mmSpread
- * Curve.mmSpread}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.BenchmarkCurve2
+ * BenchmarkCurve2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.BenchmarkCurve1
+ * BenchmarkCurve1}</li>
  * </ul>
  * </li>
  * <li>
@@ -57,14 +55,16 @@ import java.util.concurrent.atomic.AtomicReference;
  * Spread.mmBenchmarkCurve}</li>
  * </ul>
  * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.BenchmarkCurve2
- * BenchmarkCurve2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.BenchmarkCurve1
- * BenchmarkCurve1}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Curve#mmCurrency
+ * Curve.mmCurrency}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Curve#mmName Curve.mmName}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Curve#mmPoint Curve.mmPoint}
+ * </li>
+ * <li>{@linkplain com.tools20022.repository.entity.Curve#mmSpread
+ * Curve.mmSpread}</li>
  * </ul>
  * </li>
  * <li>
@@ -123,10 +123,10 @@ public class Curve {
 	 */
 	public static final MMBusinessAttribute mmCurrency = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BenchmarkCurve2.mmBenchmarkCurveCurrency, com.tools20022.repository.msg.BenchmarkCurve1.mmBenchmarkCurveCurrency);
+			derivation_lazy = () -> Arrays.asList(BenchmarkCurve2.mmBenchmarkCurveCurrency, BenchmarkCurve1.mmBenchmarkCurveCurrency);
 			elementContext_lazy = () -> Curve.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Currency";
 			definition = "Identifies the currency used for the benchmark curve.";
 			maxOccurs = 1;
@@ -200,13 +200,11 @@ public class Curve {
 	 */
 	public static final MMBusinessAttribute mmName = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.BenchmarkCurveName2Choice.mmCode, com.tools20022.repository.choice.BenchmarkCurveName2Choice.mmProprietary,
-					com.tools20022.repository.msg.BenchmarkCurve2.mmBenchmarkCurveName, com.tools20022.repository.msg.BenchmarkCurve1.mmBenchmarkCurveName, com.tools20022.repository.choice.InflationIndex1Choice.mmName,
-					com.tools20022.repository.choice.BenchmarkCurveName4Choice.mmIndex, com.tools20022.repository.choice.BenchmarkCurveName4Choice.mmName, com.tools20022.repository.choice.BenchmarkCurveName5Choice.mmIndex,
-					com.tools20022.repository.choice.BenchmarkCurveName5Choice.mmName, com.tools20022.repository.choice.BenchmarkCurveName6Choice.mmIndex, com.tools20022.repository.choice.BenchmarkCurveName6Choice.mmName);
+			derivation_lazy = () -> Arrays.asList(BenchmarkCurveName2Choice.mmCode, BenchmarkCurveName2Choice.mmProprietary, BenchmarkCurve2.mmBenchmarkCurveName, BenchmarkCurve1.mmBenchmarkCurveName, InflationIndex1Choice.mmName,
+					BenchmarkCurveName4Choice.mmIndex, BenchmarkCurveName4Choice.mmName, BenchmarkCurveName5Choice.mmIndex, BenchmarkCurveName5Choice.mmName, BenchmarkCurveName6Choice.mmIndex, BenchmarkCurveName6Choice.mmName);
 			elementContext_lazy = () -> Curve.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Name";
 			definition = "Identifies the name of the benchmark curve.";
 			maxOccurs = 1;
@@ -255,10 +253,10 @@ public class Curve {
 	 */
 	public static final MMBusinessAttribute mmPoint = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BenchmarkCurve2.mmBenchmarkCurvePoint, com.tools20022.repository.msg.BenchmarkCurve1.mmBenchmarkCurvePoint);
+			derivation_lazy = () -> Arrays.asList(BenchmarkCurve2.mmBenchmarkCurvePoint, BenchmarkCurve1.mmBenchmarkCurvePoint);
 			elementContext_lazy = () -> Curve.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Point";
 			definition = "Identifies a point on a benchmark curve. The point can be stated via a combination of maturity month/year and coupon.";
 			maxOccurs = 1;
@@ -309,16 +307,16 @@ public class Curve {
 	 */
 	public static final MMBusinessAssociationEnd mmSpread = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BenchmarkCurve2.mmSpread, com.tools20022.repository.msg.BenchmarkCurve1.mmSpread);
+			derivation_lazy = () -> Arrays.asList(BenchmarkCurve2.mmSpread, BenchmarkCurve1.mmSpread);
 			elementContext_lazy = () -> Curve.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Spread";
 			definition = "Spread for which a benchmark curve is specified.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.Spread.mmBenchmarkCurve;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Spread.mmObject();
 		}
 	};
@@ -326,13 +324,12 @@ public class Curve {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Curve";
 				definition = "Describes a benchmark curve.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Spread.mmBenchmarkCurve);
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Curve.mmCurrency, com.tools20022.repository.entity.Curve.mmName, com.tools20022.repository.entity.Curve.mmPoint,
-						com.tools20022.repository.entity.Curve.mmSpread);
+				element_lazy = () -> Arrays.asList(Curve.mmCurrency, Curve.mmName, Curve.mmPoint, Curve.mmSpread);
 				derivationComponent_lazy = () -> Arrays.asList(BenchmarkCurve2.mmObject(), BenchmarkCurve1.mmObject());
 			}
 		});

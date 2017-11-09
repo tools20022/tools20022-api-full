@@ -19,8 +19,12 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.acmt.AccountMandateMaintenanceAmendmentRequestV02;
+import com.tools20022.repository.area.acmt.AccountMandateMaintenanceRequestV02;
 import com.tools20022.repository.codeset.Modification1Code;
 import com.tools20022.repository.datatype.Max4AlphaNumericText;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -106,7 +110,7 @@ public class Group2 {
 			componentContext_lazy = () -> Group2.mmObject();
 			isDerived = false;
 			xmlTag = "ModCd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ModificationCode";
 			definition = "Specifies the type of change.";
 			maxOccurs = 1;
@@ -147,7 +151,7 @@ public class Group2 {
 			componentContext_lazy = () -> Group2.mmObject();
 			isDerived = false;
 			xmlTag = "GrpId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GroupIdentification";
 			definition = "Specifies the identification of the group.";
 			maxOccurs = 1;
@@ -188,7 +192,7 @@ public class Group2 {
 			componentContext_lazy = () -> Group2.mmObject();
 			isDerived = false;
 			xmlTag = "Pty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Party";
 			definition = "Specifies a party and related certificate.";
 			minOccurs = 1;
@@ -199,10 +203,10 @@ public class Group2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Group2.mmModificationCode, com.tools20022.repository.msg.Group2.mmGroupIdentification, com.tools20022.repository.msg.Group2.mmParty);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountMandateMaintenanceAmendmentRequestV02.mmGroup, com.tools20022.repository.area.acmt.AccountMandateMaintenanceRequestV02.mmGroup);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(Group2.mmModificationCode, Group2.mmGroupIdentification, Group2.mmParty);
+				messageBuildingBlock_lazy = () -> Arrays.asList(AccountMandateMaintenanceAmendmentRequestV02.mmGroup, AccountMandateMaintenanceRequestV02.mmGroup);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Group2";
 				definition = "Group of parties with their related security certificate.";
 				previousVersion_lazy = () -> Group1.mmObject();

@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -28,6 +30,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.TerminalManagementAdditionalProcess1Code
+ * TerminalManagementAdditionalProcess1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -39,14 +49,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.TerminalManagementAdditionalProcessCode#mmRestartSystem
  * TerminalManagementAdditionalProcessCode.mmRestartSystem}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.TerminalManagementAdditionalProcess1Code
- * TerminalManagementAdditionalProcess1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -101,7 +103,7 @@ public class TerminalManagementAdditionalProcessCode {
 	 */
 	public static final MMCode mmManualConfirmation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ManualConfirmation";
 			definition = "Manual confirmation of the merchant before the terminal management action.";
 			owner_lazy = () -> TerminalManagementAdditionalProcessCode.mmObject();
@@ -134,7 +136,7 @@ public class TerminalManagementAdditionalProcessCode {
 	 */
 	public static final MMCode mmReconciliation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Reconciliation";
 			definition = "Acquirer reconciliation to be performed before the terminal management action.";
 			owner_lazy = () -> TerminalManagementAdditionalProcessCode.mmObject();
@@ -165,7 +167,7 @@ public class TerminalManagementAdditionalProcessCode {
 	 */
 	public static final MMCode mmRestartSystem = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RestartSystem";
 			definition = "Restart the system after performing the terminal management action.";
 			owner_lazy = () -> TerminalManagementAdditionalProcessCode.mmObject();
@@ -176,13 +178,12 @@ public class TerminalManagementAdditionalProcessCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("MANC");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TerminalManagementAdditionalProcessCode";
 				definition = "Additional process to perform before starting or after completing a terminal management action.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TerminalManagementAdditionalProcessCode.mmManualConfirmation, com.tools20022.repository.codeset.TerminalManagementAdditionalProcessCode.mmReconciliation,
-						com.tools20022.repository.codeset.TerminalManagementAdditionalProcessCode.mmRestartSystem);
+				code_lazy = () -> Arrays.asList(TerminalManagementAdditionalProcessCode.mmManualConfirmation, TerminalManagementAdditionalProcessCode.mmReconciliation, TerminalManagementAdditionalProcessCode.mmRestartSystem);
 				derivation_lazy = () -> Arrays.asList(TerminalManagementAdditionalProcess1Code.mmObject());
 			}
 		});

@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.InvestigatedPartiesCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -83,7 +85,7 @@ public class InvestigatedParties1Code extends InvestigatedPartiesCode {
 	 */
 	public static final MMCode mmAllParties = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AllParties";
 			owner_lazy = () -> InvestigatedParties1Code.mmObject();
 		}
@@ -106,7 +108,7 @@ public class InvestigatedParties1Code extends InvestigatedPartiesCode {
 	 */
 	public static final MMCode mmOwner = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Owner";
 			owner_lazy = () -> InvestigatedParties1Code.mmObject();
 		}
@@ -115,12 +117,12 @@ public class InvestigatedParties1Code extends InvestigatedPartiesCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ALLP");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InvestigatedParties1Code";
 				definition = "Specifies the investigated parties.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.InvestigatedParties1Code.mmAllParties, com.tools20022.repository.codeset.InvestigatedParties1Code.mmOwner);
+				code_lazy = () -> Arrays.asList(InvestigatedParties1Code.mmAllParties, InvestigatedParties1Code.mmOwner);
 				trace_lazy = () -> InvestigatedPartiesCode.mmObject();
 			}
 		});

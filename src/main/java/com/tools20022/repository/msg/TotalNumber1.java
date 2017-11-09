@@ -19,7 +19,9 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Exact3NumericText;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -94,7 +96,7 @@ public class TotalNumber1 {
 			componentContext_lazy = () -> TotalNumber1.mmObject();
 			isDerived = false;
 			xmlTag = "CurInstrNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrentInstructionNumber";
 			definition = "Sequential number of the instruction in a range of linked settlement instructions.";
 			maxOccurs = 1;
@@ -136,7 +138,7 @@ public class TotalNumber1 {
 			componentContext_lazy = () -> TotalNumber1.mmObject();
 			isDerived = false;
 			xmlTag = "TtlOfLkdInstrs";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalOfLinkedInstructions";
 			definition = "Total number of settlement instructions that are linked together.";
 			maxOccurs = 1;
@@ -148,9 +150,9 @@ public class TotalNumber1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TotalNumber1.mmCurrentInstructionNumber, com.tools20022.repository.msg.TotalNumber1.mmTotalOfLinkedInstructions);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(TotalNumber1.mmCurrentInstructionNumber, TotalNumber1.mmTotalOfLinkedInstructions);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TotalNumber1";
 				definition = "Settlement transaction numbering information";
 			}

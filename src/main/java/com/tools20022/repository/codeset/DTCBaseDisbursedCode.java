@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -28,6 +30,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.DTCBaseDisbursed1Code
+ * DTCBaseDisbursed1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -36,13 +45,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.DTCBaseDisbursedCode#mmDisbursed
  * DTCBaseDisbursedCode.mmDisbursed}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.DTCBaseDisbursed1Code
- * DTCBaseDisbursed1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -94,7 +96,7 @@ public class DTCBaseDisbursedCode {
 	 */
 	public static final MMCode mmBase = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Base";
 			definition = "Based on base security.";
 			owner_lazy = () -> DTCBaseDisbursedCode.mmObject();
@@ -124,7 +126,7 @@ public class DTCBaseDisbursedCode {
 	 */
 	public static final MMCode mmDisbursed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Disbursed";
 			definition = "Based on disbursed security.";
 			owner_lazy = () -> DTCBaseDisbursedCode.mmObject();
@@ -135,12 +137,12 @@ public class DTCBaseDisbursedCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("BASE");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DTCBaseDisbursedCode";
 				definition = "Specifies whether the calculation basis is on base (original) or disbursed (distributed) security.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DTCBaseDisbursedCode.mmBase, com.tools20022.repository.codeset.DTCBaseDisbursedCode.mmDisbursed);
+				code_lazy = () -> Arrays.asList(DTCBaseDisbursedCode.mmBase, DTCBaseDisbursedCode.mmDisbursed);
 				derivation_lazy = () -> Arrays.asList(DTCBaseDisbursed1Code.mmObject());
 			}
 		});

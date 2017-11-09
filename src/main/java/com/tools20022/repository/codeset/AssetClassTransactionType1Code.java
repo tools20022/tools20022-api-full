@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.AssetClassTransactionTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -102,7 +104,7 @@ public class AssetClassTransactionType1Code extends AssetClassTransactionTypeCod
 	 */
 	public static final MMCode mmCrack = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Crack";
 			owner_lazy = () -> AssetClassTransactionType1Code.mmObject();
 		}
@@ -125,7 +127,7 @@ public class AssetClassTransactionType1Code extends AssetClassTransactionTypeCod
 	 */
 	public static final MMCode mmDifferential = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Differential";
 			owner_lazy = () -> AssetClassTransactionType1Code.mmObject();
 		}
@@ -148,7 +150,7 @@ public class AssetClassTransactionType1Code extends AssetClassTransactionTypeCod
 	 */
 	public static final MMCode mmFutures = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Futures";
 			owner_lazy = () -> AssetClassTransactionType1Code.mmObject();
 		}
@@ -171,7 +173,7 @@ public class AssetClassTransactionType1Code extends AssetClassTransactionTypeCod
 	 */
 	public static final MMCode mmMinis = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Minis";
 			owner_lazy = () -> AssetClassTransactionType1Code.mmObject();
 		}
@@ -194,7 +196,7 @@ public class AssetClassTransactionType1Code extends AssetClassTransactionTypeCod
 	 */
 	public static final MMCode mmOptions = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Options";
 			owner_lazy = () -> AssetClassTransactionType1Code.mmObject();
 		}
@@ -217,7 +219,7 @@ public class AssetClassTransactionType1Code extends AssetClassTransactionTypeCod
 	 */
 	public static final MMCode mmOTC = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OTC";
 			owner_lazy = () -> AssetClassTransactionType1Code.mmObject();
 		}
@@ -240,7 +242,7 @@ public class AssetClassTransactionType1Code extends AssetClassTransactionTypeCod
 	 */
 	public static final MMCode mmOutright = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Outright";
 			owner_lazy = () -> AssetClassTransactionType1Code.mmObject();
 		}
@@ -263,7 +265,7 @@ public class AssetClassTransactionType1Code extends AssetClassTransactionTypeCod
 	 */
 	public static final MMCode mmSwaps = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Swaps";
 			owner_lazy = () -> AssetClassTransactionType1Code.mmObject();
 		}
@@ -286,7 +288,7 @@ public class AssetClassTransactionType1Code extends AssetClassTransactionTypeCod
 	 */
 	public static final MMCode mmTAPOS = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TAPOS";
 			owner_lazy = () -> AssetClassTransactionType1Code.mmObject();
 		}
@@ -309,7 +311,7 @@ public class AssetClassTransactionType1Code extends AssetClassTransactionTypeCod
 	 */
 	public static final MMCode mmOther = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
 			owner_lazy = () -> AssetClassTransactionType1Code.mmObject();
 		}
@@ -318,15 +320,13 @@ public class AssetClassTransactionType1Code extends AssetClassTransactionTypeCod
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AssetClassTransactionType1Code";
 				definition = "Code list of transaction type as specified by the trading venue.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AssetClassTransactionType1Code.mmCrack, com.tools20022.repository.codeset.AssetClassTransactionType1Code.mmDifferential,
-						com.tools20022.repository.codeset.AssetClassTransactionType1Code.mmFutures, com.tools20022.repository.codeset.AssetClassTransactionType1Code.mmMinis,
-						com.tools20022.repository.codeset.AssetClassTransactionType1Code.mmOptions, com.tools20022.repository.codeset.AssetClassTransactionType1Code.mmOTC,
-						com.tools20022.repository.codeset.AssetClassTransactionType1Code.mmOutright, com.tools20022.repository.codeset.AssetClassTransactionType1Code.mmSwaps,
-						com.tools20022.repository.codeset.AssetClassTransactionType1Code.mmTAPOS, com.tools20022.repository.codeset.AssetClassTransactionType1Code.mmOther);
+				code_lazy = () -> Arrays.asList(AssetClassTransactionType1Code.mmCrack, AssetClassTransactionType1Code.mmDifferential, AssetClassTransactionType1Code.mmFutures, AssetClassTransactionType1Code.mmMinis,
+						AssetClassTransactionType1Code.mmOptions, AssetClassTransactionType1Code.mmOTC, AssetClassTransactionType1Code.mmOutright, AssetClassTransactionType1Code.mmSwaps, AssetClassTransactionType1Code.mmTAPOS,
+						AssetClassTransactionType1Code.mmOther);
 				trace_lazy = () -> AssetClassTransactionTypeCode.mmObject();
 			}
 		});

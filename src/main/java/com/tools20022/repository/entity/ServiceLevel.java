@@ -17,13 +17,13 @@
 
 package com.tools20022.repository.entity;
 
-import com.tools20022.metamodel.MMBusinessAssociationEnd;
-import com.tools20022.metamodel.MMBusinessAttribute;
-import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.*;
 import com.tools20022.repository.choice.*;
 import com.tools20022.repository.codeset.ServiceLevelCode;
 import com.tools20022.repository.codeset.SWIFTServiceLevelCode;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.RequestedModification;
 import com.tools20022.repository.msg.ServiceLevel4;
 import com.tools20022.repository.msg.ServiceLevel5;
 import com.tools20022.repository.msg.ServiceLevel6;
@@ -40,18 +40,25 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.ServiceLevel#mmPaymentProcessing
- * ServiceLevel.mmPaymentProcessing}</li>
- * <li>{@linkplain com.tools20022.repository.entity.ServiceLevel#mmCode
- * ServiceLevel.mmCode}</li>
- * <li>{@linkplain com.tools20022.repository.entity.ServiceLevel#mmOther
- * ServiceLevel.mmOther}</li>
- * <li>{@linkplain com.tools20022.repository.entity.ServiceLevel#mmBilateral
- * ServiceLevel.mmBilateral}</li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.choice.ServiceLevel2Choice
+ * ServiceLevel2Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.ServiceLevel8Choice
+ * ServiceLevel8Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.ServiceLevel3Choice
+ * ServiceLevel3Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.RestrictedProprietaryChoice
+ * RestrictedProprietaryChoice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ServiceLevel4 ServiceLevel4}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.ServiceLevel6Choice
+ * ServiceLevel6Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ServiceLevel6 ServiceLevel6}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ServiceLevel5 ServiceLevel5}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.ServiceLevel7Choice
+ * ServiceLevel7Choice}</li>
  * </ul>
  * </li>
  * <li>
@@ -84,25 +91,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * ServiceLevel7Choice.mmProprietary}</li>
  * </ul>
  * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.choice.ServiceLevel2Choice
- * ServiceLevel2Choice}</li>
- * <li>{@linkplain com.tools20022.repository.choice.ServiceLevel8Choice
- * ServiceLevel8Choice}</li>
- * <li>{@linkplain com.tools20022.repository.choice.ServiceLevel3Choice
- * ServiceLevel3Choice}</li>
- * <li>{@linkplain com.tools20022.repository.choice.RestrictedProprietaryChoice
- * RestrictedProprietaryChoice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ServiceLevel4 ServiceLevel4}</li>
- * <li>{@linkplain com.tools20022.repository.choice.ServiceLevel6Choice
- * ServiceLevel6Choice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ServiceLevel6 ServiceLevel6}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ServiceLevel5 ServiceLevel5}</li>
- * <li>{@linkplain com.tools20022.repository.choice.ServiceLevel7Choice
- * ServiceLevel7Choice}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ServiceLevel#mmPaymentProcessing
+ * ServiceLevel.mmPaymentProcessing}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.ServiceLevel#mmCode
+ * ServiceLevel.mmCode}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.ServiceLevel#mmOther
+ * ServiceLevel.mmOther}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.ServiceLevel#mmBilateral
+ * ServiceLevel.mmBilateral}</li>
  * </ul>
  * </li>
  * <li>
@@ -162,13 +162,13 @@ public class ServiceLevel {
 		{
 			elementContext_lazy = () -> ServiceLevel.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PaymentProcessing";
 			definition = "Payment process for which a service level is specified.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.PaymentProcessing.mmServiceLevel;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.PaymentProcessing.mmObject();
 		}
 	};
@@ -229,12 +229,11 @@ public class ServiceLevel {
 	 */
 	public static final MMBusinessAttribute mmCode = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ServiceLevel2Choice.mmCode, com.tools20022.repository.choice.ServiceLevel8Choice.mmCode, com.tools20022.repository.choice.ServiceLevel3Choice.mmCode,
-					com.tools20022.repository.msg.ServiceLevel4.mmCode, com.tools20022.repository.choice.ServiceLevel6Choice.mmCode, com.tools20022.repository.msg.ServiceLevel6.mmCode, com.tools20022.repository.msg.ServiceLevel5.mmCode,
-					com.tools20022.repository.choice.ServiceLevel7Choice.mmCode);
+			derivation_lazy = () -> Arrays.asList(ServiceLevel2Choice.mmCode, ServiceLevel8Choice.mmCode, ServiceLevel3Choice.mmCode, ServiceLevel4.mmCode, ServiceLevel6Choice.mmCode, ServiceLevel6.mmCode, ServiceLevel5.mmCode,
+					ServiceLevel7Choice.mmCode);
 			elementContext_lazy = () -> ServiceLevel.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Code";
 			definition = "Identification of a pre-agreed level of service between the parties in a coded form.";
 			maxOccurs = 1;
@@ -279,10 +278,10 @@ public class ServiceLevel {
 	 */
 	public static final MMBusinessAttribute mmOther = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RequestedModification.mmBankOperationCode);
+			derivation_lazy = () -> Arrays.asList(RequestedModification.mmBankOperationCode);
 			elementContext_lazy = () -> ServiceLevel.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Other";
 			definition = "SWIFT defined service level applies to the payment instruction.";
 			maxOccurs = 1;
@@ -322,7 +321,7 @@ public class ServiceLevel {
 		{
 			elementContext_lazy = () -> ServiceLevel.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Bilateral";
 			definition = "Unambiguous identification of a pre-agreed level of service between the parties.";
 			maxOccurs = 1;
@@ -334,15 +333,13 @@ public class ServiceLevel {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ServiceLevel";
 				definition = "Agreement under which or rules under which the transaction should be processed.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.PaymentProcessing.mmServiceLevel);
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ServiceLevel2Choice.mmProprietary, com.tools20022.repository.choice.ServiceLevel8Choice.mmProprietary,
-						com.tools20022.repository.choice.ServiceLevel3Choice.mmProprietary, com.tools20022.repository.choice.ServiceLevel6Choice.mmProprietary, com.tools20022.repository.choice.ServiceLevel7Choice.mmProprietary);
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.ServiceLevel.mmPaymentProcessing, com.tools20022.repository.entity.ServiceLevel.mmCode, com.tools20022.repository.entity.ServiceLevel.mmOther,
-						com.tools20022.repository.entity.ServiceLevel.mmBilateral);
+				derivationElement_lazy = () -> Arrays.asList(ServiceLevel2Choice.mmProprietary, ServiceLevel8Choice.mmProprietary, ServiceLevel3Choice.mmProprietary, ServiceLevel6Choice.mmProprietary, ServiceLevel7Choice.mmProprietary);
+				element_lazy = () -> Arrays.asList(ServiceLevel.mmPaymentProcessing, ServiceLevel.mmCode, ServiceLevel.mmOther, ServiceLevel.mmBilateral);
 				derivationComponent_lazy = () -> Arrays.asList(ServiceLevel2Choice.mmObject(), ServiceLevel8Choice.mmObject(), ServiceLevel3Choice.mmObject(), RestrictedProprietaryChoice.mmObject(), ServiceLevel4.mmObject(),
 						ServiceLevel6Choice.mmObject(), ServiceLevel6.mmObject(), ServiceLevel5.mmObject(), ServiceLevel7Choice.mmObject());
 			}

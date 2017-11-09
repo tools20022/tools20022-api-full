@@ -19,9 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.TrueFalseIndicator;
 import com.tools20022.repository.datatype.YesNoIndicator;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -102,7 +104,7 @@ public class Statement36 {
 			componentContext_lazy = () -> Statement36.mmObject();
 			isDerived = false;
 			xmlTag = "QryRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QueryReference";
 			definition = "Identification of the SecuritiesStatementQuery message sent to request this statement.";
 			maxOccurs = 1;
@@ -142,7 +144,7 @@ public class Statement36 {
 			componentContext_lazy = () -> Statement36.mmObject();
 			isDerived = false;
 			xmlTag = "StmtId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportIdentification";
 			definition = "Reference common to all pages of a report.";
 			maxOccurs = 1;
@@ -186,7 +188,7 @@ public class Statement36 {
 			componentContext_lazy = () -> Statement36.mmObject();
 			isDerived = false;
 			xmlTag = "HistrcData";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HistoricData";
 			definition = "Specifies whether the data is either historical (true) or current (false).";
 			maxOccurs = 1;
@@ -230,7 +232,7 @@ public class Statement36 {
 			componentContext_lazy = () -> Statement36.mmObject();
 			isDerived = false;
 			xmlTag = "ActvtyInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ActivityIndicator";
 			definition = "Indicates whether there is activity or information update reported in the statement.";
 			maxOccurs = 1;
@@ -274,7 +276,7 @@ public class Statement36 {
 			componentContext_lazy = () -> Statement36.mmObject();
 			isDerived = false;
 			xmlTag = "SubAcctInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubAccountIndicator";
 			definition = "Indicates whether the statement reports holdings at subsafekeeping account level.";
 			maxOccurs = 1;
@@ -286,10 +288,9 @@ public class Statement36 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Statement36.mmQueryReference, com.tools20022.repository.msg.Statement36.mmReportIdentification,
-						com.tools20022.repository.msg.Statement36.mmHistoricData, com.tools20022.repository.msg.Statement36.mmActivityIndicator, com.tools20022.repository.msg.Statement36.mmSubAccountIndicator);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(Statement36.mmQueryReference, Statement36.mmReportIdentification, Statement36.mmHistoricData, Statement36.mmActivityIndicator, Statement36.mmSubAccountIndicator);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Statement36";
 				definition = "Characteristics of the report.";
 			}

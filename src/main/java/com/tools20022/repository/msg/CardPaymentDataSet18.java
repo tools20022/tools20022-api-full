@@ -20,7 +20,9 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.TrueFalseIndicator;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -113,10 +115,10 @@ public class CardPaymentDataSet18 {
 			componentContext_lazy = () -> CardPaymentDataSet18.mmObject();
 			isDerived = false;
 			xmlTag = "DataSetId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DataSetIdentification";
 			definition = "Identification of the data set.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CardPaymentDataSet14.mmDataSetIdentification;
+			previousVersion_lazy = () -> CardPaymentDataSet14.mmDataSetIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -160,10 +162,10 @@ public class CardPaymentDataSet18 {
 			componentContext_lazy = () -> CardPaymentDataSet18.mmObject();
 			isDerived = false;
 			xmlTag = "DataSetRslt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DataSetResult";
 			definition = "Result of the data set capture.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CardPaymentDataSet14.mmDataSetResult;
+			previousVersion_lazy = () -> CardPaymentDataSet14.mmDataSetResult;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -212,10 +214,10 @@ public class CardPaymentDataSet18 {
 			componentContext_lazy = () -> CardPaymentDataSet18.mmObject();
 			isDerived = false;
 			xmlTag = "RmvDataSet";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RemoveDataSet";
 			definition = "Indicates if the data set must be removed from the POI (Point Of Interaction).";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CardPaymentDataSet14.mmRemoveDataSet;
+			previousVersion_lazy = () -> CardPaymentDataSet14.mmRemoveDataSet;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
@@ -259,10 +261,10 @@ public class CardPaymentDataSet18 {
 			componentContext_lazy = () -> CardPaymentDataSet18.mmObject();
 			isDerived = false;
 			xmlTag = "DataSetInitr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DataSetInitiator";
 			definition = "Initiator of the data set.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CardPaymentDataSet14.mmDataSetInitiator;
+			previousVersion_lazy = () -> CardPaymentDataSet14.mmDataSetInitiator;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -306,10 +308,10 @@ public class CardPaymentDataSet18 {
 			componentContext_lazy = () -> CardPaymentDataSet18.mmObject();
 			isDerived = false;
 			xmlTag = "TxTtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionTotals";
 			definition = "Transaction totals of the batch.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CardPaymentDataSet14.mmTransactionTotals;
+			previousVersion_lazy = () -> CardPaymentDataSet14.mmTransactionTotals;
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.TransactionTotals7.mmObject();
@@ -353,10 +355,10 @@ public class CardPaymentDataSet18 {
 			componentContext_lazy = () -> CardPaymentDataSet18.mmObject();
 			isDerived = false;
 			xmlTag = "RjctdTx";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RejectedTransaction";
 			definition = "Transaction in the batch, whose capture has been rejected.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CardPaymentDataSet14.mmRejectedTransaction;
+			previousVersion_lazy = () -> CardPaymentDataSet14.mmRejectedTransaction;
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.CardPaymentDataSet17.mmObject();
@@ -366,11 +368,10 @@ public class CardPaymentDataSet18 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardPaymentDataSet18.mmDataSetIdentification, com.tools20022.repository.msg.CardPaymentDataSet18.mmDataSetResult,
-						com.tools20022.repository.msg.CardPaymentDataSet18.mmRemoveDataSet, com.tools20022.repository.msg.CardPaymentDataSet18.mmDataSetInitiator, com.tools20022.repository.msg.CardPaymentDataSet18.mmTransactionTotals,
-						com.tools20022.repository.msg.CardPaymentDataSet18.mmRejectedTransaction);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(CardPaymentDataSet18.mmDataSetIdentification, CardPaymentDataSet18.mmDataSetResult, CardPaymentDataSet18.mmRemoveDataSet, CardPaymentDataSet18.mmDataSetInitiator,
+						CardPaymentDataSet18.mmTransactionTotals, CardPaymentDataSet18.mmRejectedTransaction);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CardPaymentDataSet18";
 				definition = "Result of the captured set of transactions.";
 				previousVersion_lazy = () -> CardPaymentDataSet14.mmObject();

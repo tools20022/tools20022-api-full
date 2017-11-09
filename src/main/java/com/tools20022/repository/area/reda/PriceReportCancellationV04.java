@@ -20,6 +20,7 @@ package com.tools20022.repository.area.reda;
 import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.ReferenceDataLatestVersion;
 import com.tools20022.repository.choice.DateAndDateTime1Choice;
 import com.tools20022.repository.datatype.Max350Text;
@@ -52,6 +53,9 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code reda.002.001.04}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.ReferenceDataLatestVersion
@@ -111,9 +115,6 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code reda.002.001.04}</li>
- * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -162,7 +163,7 @@ public class PriceReportCancellationV04 {
 	public static final MMMessageBuildingBlock mmMessageIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "MsgId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageIdentification";
 			definition = "Reference that uniquely identifies a message from a business application standpoint. ";
 			maxOccurs = 1;
@@ -197,7 +198,7 @@ public class PriceReportCancellationV04 {
 	public static final MMMessageBuildingBlock mmPoolReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "PoolRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PoolReference";
 			definition = "Collective reference identifying a set of messages.";
 			maxOccurs = 1;
@@ -232,7 +233,7 @@ public class PriceReportCancellationV04 {
 	public static final MMMessageBuildingBlock mmPreviousReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "PrvsRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousReference";
 			definition = "Reference to a linked message that was previously sent.";
 			maxOccurs = 1;
@@ -266,7 +267,7 @@ public class PriceReportCancellationV04 {
 	public static final MMMessageBuildingBlock mmMessagePagination = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "MsgPgntn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessagePagination";
 			definition = "Pagination of the message.";
 			maxOccurs = 1;
@@ -303,7 +304,7 @@ public class PriceReportCancellationV04 {
 	public static final MMMessageBuildingBlock mmPriceReportIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "PricRptId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PriceReportIdentification";
 			definition = "Unique and unambiguous identifier for the price report, as assigned by the reporting party.";
 			maxOccurs = 1;
@@ -340,7 +341,7 @@ public class PriceReportCancellationV04 {
 	public static final MMMessageBuildingBlock mmCancellationIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CxlId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationIdentification";
 			definition = "Unique and unambiguous identifier for the cancellation of the previous price report, as assigned by the reporting party.";
 			maxOccurs = 1;
@@ -374,7 +375,7 @@ public class PriceReportCancellationV04 {
 	public static final MMMessageBuildingBlock mmCancellationReason = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CxlRsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationReason";
 			definition = "Reason for the cancellation.";
 			maxOccurs = 1;
@@ -409,7 +410,7 @@ public class PriceReportCancellationV04 {
 	public static final MMMessageBuildingBlock mmExpectedPriceCorrectionDate = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "XpctdPricCrrctnDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExpectedPriceCorrectionDate";
 			definition = "Date or date and time the price will be corrected.";
 			maxOccurs = 1;
@@ -447,7 +448,7 @@ public class PriceReportCancellationV04 {
 	public static final MMMessageBuildingBlock mmCompletePriceCancellation = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CmpltPricCxl";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CompletePriceCancellation";
 			definition = "Indicates whether or not all the prices of the referenced price report are cancelled.";
 			maxOccurs = 1;
@@ -481,7 +482,7 @@ public class PriceReportCancellationV04 {
 	public static final MMMessageBuildingBlock mmCancelledPriceValuationDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CancPricValtnDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancelledPriceValuationDetails";
 			definition = "Details of prices to be cancelled.";
 			minOccurs = 0;
@@ -517,7 +518,7 @@ public class PriceReportCancellationV04 {
 	public static final MMMessageBuildingBlock mmExtension = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Xtnsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Extension";
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
 			minOccurs = 0;
@@ -528,7 +529,7 @@ public class PriceReportCancellationV04 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PriceReportCancellationV04";
 				definition = "SCOPE\r\nA report provider, for example, a transfer agent, fund accountant or market data provider, sends the PriceReportCancellation message to the report recipient, for example, a fund management company, transfer agent, market data provider, regulator or any other interested party to cancel previously sent prices.\n\r\nUSAGE\r\nThe PriceReportCancellation message is used to either:\n- cancel an entire PriceReport that was previously sent (by quoting the business reference of the original price report in the PriceReportIdentification element), or,\n- cancel one or more individual prices from a previously sent price report (by using the PriceDetailsToBeCancelled sequence).\nTechnically, it is possible to cancel all the prices individually by using the PriceDetailsToBeCancelled sequence, but this is not recommended.\nThe cancellation should not contain the cancellation of prices for more than one NAV date. \r\n\r\n";
 				previousVersion_lazy = () -> PriceReportCancellationV03.mmObject();
@@ -536,12 +537,9 @@ public class PriceReportCancellationV04 {
 				rootElement = "Document";
 				xmlTag = "PricRptCxl";
 				businessArea_lazy = () -> ReferenceDataLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.reda.PriceReportCancellationV04.mmMessageIdentification, com.tools20022.repository.area.reda.PriceReportCancellationV04.mmPoolReference,
-						com.tools20022.repository.area.reda.PriceReportCancellationV04.mmPreviousReference, com.tools20022.repository.area.reda.PriceReportCancellationV04.mmMessagePagination,
-						com.tools20022.repository.area.reda.PriceReportCancellationV04.mmPriceReportIdentification, com.tools20022.repository.area.reda.PriceReportCancellationV04.mmCancellationIdentification,
-						com.tools20022.repository.area.reda.PriceReportCancellationV04.mmCancellationReason, com.tools20022.repository.area.reda.PriceReportCancellationV04.mmExpectedPriceCorrectionDate,
-						com.tools20022.repository.area.reda.PriceReportCancellationV04.mmCompletePriceCancellation, com.tools20022.repository.area.reda.PriceReportCancellationV04.mmCancelledPriceValuationDetails,
-						com.tools20022.repository.area.reda.PriceReportCancellationV04.mmExtension);
+				messageBuildingBlock_lazy = () -> Arrays.asList(PriceReportCancellationV04.mmMessageIdentification, PriceReportCancellationV04.mmPoolReference, PriceReportCancellationV04.mmPreviousReference,
+						PriceReportCancellationV04.mmMessagePagination, PriceReportCancellationV04.mmPriceReportIdentification, PriceReportCancellationV04.mmCancellationIdentification, PriceReportCancellationV04.mmCancellationReason,
+						PriceReportCancellationV04.mmExpectedPriceCorrectionDate, PriceReportCancellationV04.mmCompletePriceCancellation, PriceReportCancellationV04.mmCancelledPriceValuationDetails, PriceReportCancellationV04.mmExtension);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "reda";

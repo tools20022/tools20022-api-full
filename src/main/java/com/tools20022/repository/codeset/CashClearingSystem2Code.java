@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CashClearingSystemCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -89,7 +91,7 @@ public class CashClearingSystem2Code extends CashClearingSystemCode {
 	 */
 	public static final MMCode mmRTGS = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RTGS";
 			owner_lazy = () -> CashClearingSystem2Code.mmObject();
 		}
@@ -112,7 +114,7 @@ public class CashClearingSystem2Code extends CashClearingSystemCode {
 	 */
 	public static final MMCode mmACH = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ACH";
 			owner_lazy = () -> CashClearingSystem2Code.mmObject();
 		}
@@ -135,7 +137,7 @@ public class CashClearingSystem2Code extends CashClearingSystemCode {
 	 */
 	public static final MMCode mmUSChips = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "USChips";
 			owner_lazy = () -> CashClearingSystem2Code.mmObject();
 		}
@@ -158,7 +160,7 @@ public class CashClearingSystem2Code extends CashClearingSystemCode {
 	 */
 	public static final MMCode mmFedNet = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FedNet";
 			owner_lazy = () -> CashClearingSystem2Code.mmObject();
 		}
@@ -167,13 +169,12 @@ public class CashClearingSystem2Code extends CashClearingSystemCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("RTG");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CashClearingSystem2Code";
 				definition = "Specifies a type of payment system.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CashClearingSystem2Code.mmRTGS, com.tools20022.repository.codeset.CashClearingSystem2Code.mmACH,
-						com.tools20022.repository.codeset.CashClearingSystem2Code.mmUSChips, com.tools20022.repository.codeset.CashClearingSystem2Code.mmFedNet);
+				code_lazy = () -> Arrays.asList(CashClearingSystem2Code.mmRTGS, CashClearingSystem2Code.mmACH, CashClearingSystem2Code.mmUSChips, CashClearingSystem2Code.mmFedNet);
 				trace_lazy = () -> CashClearingSystemCode.mmObject();
 			}
 		});

@@ -19,6 +19,8 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.ErrorHandling3;
 import com.tools20022.repository.msg.SystemParty3;
 import java.util.Arrays;
@@ -92,7 +94,7 @@ public class PartyOrBusinessError1Choice {
 			componentContext_lazy = () -> PartyOrBusinessError1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "BizErr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BusinessError";
 			definition = "Business error resulting from a rejection.";
 			minOccurs = 1;
@@ -132,7 +134,7 @@ public class PartyOrBusinessError1Choice {
 			componentContext_lazy = () -> PartyOrBusinessError1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "SysPty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SystemParty";
 			definition = "Specifications of a party defined within a system.";
 			maxOccurs = 1;
@@ -145,9 +147,9 @@ public class PartyOrBusinessError1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PartyOrBusinessError1Choice.mmBusinessError, com.tools20022.repository.choice.PartyOrBusinessError1Choice.mmSystemParty);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(PartyOrBusinessError1Choice.mmBusinessError, PartyOrBusinessError1Choice.mmSystemParty);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "PartyOrBusinessError1Choice";
 				definition = "Report between the party reference data or a business error.";
 			}

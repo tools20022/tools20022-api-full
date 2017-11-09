@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,18 +29,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.OptionNumberCode#mmUnsolicited
- * OptionNumberCode.mmUnsolicited}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
  * =
  * <ul>
  * <li>{@linkplain com.tools20022.repository.codeset.OptionNumber1Code
  * OptionNumber1Code}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.OptionNumberCode#mmUnsolicited
+ * OptionNumberCode.mmUnsolicited}</li>
  * </ul>
  * </li>
  * <li>
@@ -91,7 +93,7 @@ public class OptionNumberCode {
 	 */
 	public static final MMCode mmUnsolicited = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Unsolicited";
 			definition = "The CorporateActionInstruction is unsolicited, ie, the instruction has not been preceded by an CorporateActionNotification.";
 			owner_lazy = () -> OptionNumberCode.mmObject();
@@ -102,12 +104,12 @@ public class OptionNumberCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("UNSO");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OptionNumberCode";
 				definition = "Code identifying special corporate action option numbers.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OptionNumberCode.mmUnsolicited);
+				code_lazy = () -> Arrays.asList(OptionNumberCode.mmUnsolicited);
 				derivation_lazy = () -> Arrays.asList(OptionNumber1Code.mmObject());
 			}
 		});

@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.PartyTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -110,9 +112,9 @@ public class PartyType3Code extends PartyTypeCode {
 	 */
 	public static final MMCode mmOriginatingPOI = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginatingPOI";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PartyType14Code.mmOriginatingPOI);
+			nextVersions_lazy = () -> Arrays.asList(PartyType14Code.mmOriginatingPOI);
 			owner_lazy = () -> PartyType3Code.mmObject();
 		}
 	};
@@ -142,9 +144,9 @@ public class PartyType3Code extends PartyTypeCode {
 	 */
 	public static final MMCode mmMerchant = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Merchant";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PartyType14Code.mmMerchant);
+			nextVersions_lazy = () -> Arrays.asList(PartyType14Code.mmMerchant);
 			owner_lazy = () -> PartyType3Code.mmObject();
 		}
 	};
@@ -174,9 +176,9 @@ public class PartyType3Code extends PartyTypeCode {
 	 */
 	public static final MMCode mmAcceptor = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Acceptor";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PartyType14Code.mmAcceptor);
+			nextVersions_lazy = () -> Arrays.asList(PartyType14Code.mmAcceptor);
 			owner_lazy = () -> PartyType3Code.mmObject();
 		}
 	};
@@ -206,9 +208,9 @@ public class PartyType3Code extends PartyTypeCode {
 	 */
 	public static final MMCode mmIntermediaryAgent = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IntermediaryAgent";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PartyType14Code.mmIntermediaryAgent);
+			nextVersions_lazy = () -> Arrays.asList(PartyType14Code.mmIntermediaryAgent);
 			owner_lazy = () -> PartyType3Code.mmObject();
 		}
 	};
@@ -238,9 +240,9 @@ public class PartyType3Code extends PartyTypeCode {
 	 */
 	public static final MMCode mmAcquirer = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Acquirer";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PartyType14Code.mmAcquirer);
+			nextVersions_lazy = () -> Arrays.asList(PartyType14Code.mmAcquirer);
 			owner_lazy = () -> PartyType3Code.mmObject();
 		}
 	};
@@ -270,9 +272,9 @@ public class PartyType3Code extends PartyTypeCode {
 	 */
 	public static final MMCode mmCardIssuer = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CardIssuer";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PartyType14Code.mmCardIssuer);
+			nextVersions_lazy = () -> Arrays.asList(PartyType14Code.mmCardIssuer);
 			owner_lazy = () -> PartyType3Code.mmObject();
 		}
 	};
@@ -302,9 +304,9 @@ public class PartyType3Code extends PartyTypeCode {
 	 */
 	public static final MMCode mmDelegateIssuer = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DelegateIssuer";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PartyType14Code.mmDelegateIssuer);
+			nextVersions_lazy = () -> Arrays.asList(PartyType14Code.mmDelegateIssuer);
 			owner_lazy = () -> PartyType3Code.mmObject();
 		}
 	};
@@ -312,15 +314,14 @@ public class PartyType3Code extends PartyTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("OPOI");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PartyType3Code";
 				definition = "Identification of the type of entity involved in a transaction.";
 				nextVersions_lazy = () -> Arrays.asList(PartyType14Code.mmObject());
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PartyType3Code.mmOriginatingPOI, com.tools20022.repository.codeset.PartyType3Code.mmMerchant, com.tools20022.repository.codeset.PartyType3Code.mmAcceptor,
-						com.tools20022.repository.codeset.PartyType3Code.mmIntermediaryAgent, com.tools20022.repository.codeset.PartyType3Code.mmAcquirer, com.tools20022.repository.codeset.PartyType3Code.mmCardIssuer,
-						com.tools20022.repository.codeset.PartyType3Code.mmDelegateIssuer);
+				code_lazy = () -> Arrays.asList(PartyType3Code.mmOriginatingPOI, PartyType3Code.mmMerchant, PartyType3Code.mmAcceptor, PartyType3Code.mmIntermediaryAgent, PartyType3Code.mmAcquirer, PartyType3Code.mmCardIssuer,
+						PartyType3Code.mmDelegateIssuer);
 				trace_lazy = () -> PartyTypeCode.mmObject();
 			}
 		});

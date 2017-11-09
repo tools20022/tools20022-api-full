@@ -20,6 +20,8 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.reda.PriceReportV02;
 import com.tools20022.repository.choice.DateAndDateTimeChoice;
 import com.tools20022.repository.codeset.ValuationTiming1Code;
 import com.tools20022.repository.datatype.ActiveOrHistoricCurrencyAndAmount;
@@ -28,6 +30,8 @@ import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.InvestmentFund;
 import com.tools20022.repository.entity.NetAssetValueCalculation;
 import com.tools20022.repository.entity.Price;
+import com.tools20022.repository.entity.Trade;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -145,7 +149,7 @@ public class PriceValuation2 {
 			componentContext_lazy = () -> PriceValuation2.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Unique technical identifier for an instance of a price valuation within a price report, as assigned by the issuer of the report.";
 			maxOccurs = 1;
@@ -191,11 +195,11 @@ public class PriceValuation2 {
 	 */
 	public static final MMMessageAttribute mmValuationDateTime = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.NetAssetValueCalculation.mmValuationDateTime;
+			businessElementTrace_lazy = () -> NetAssetValueCalculation.mmValuationDateTime;
 			componentContext_lazy = () -> PriceValuation2.mmObject();
 			isDerived = false;
 			xmlTag = "ValtnDtTm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValuationDateTime";
 			definition = "Date and time of the price valuation for the investment fund/fund class.";
 			maxOccurs = 1;
@@ -242,11 +246,11 @@ public class PriceValuation2 {
 	 */
 	public static final MMMessageAttribute mmTradeDateTime = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Trade.mmTradeDateTime;
+			businessElementTrace_lazy = () -> Trade.mmTradeDateTime;
 			componentContext_lazy = () -> PriceValuation2.mmObject();
 			isDerived = false;
 			xmlTag = "TradDtTm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeDateTime";
 			definition = "Date and time at which a price is applied, according to the terms stated in the prospectus.";
 			maxOccurs = 1;
@@ -293,7 +297,7 @@ public class PriceValuation2 {
 			componentContext_lazy = () -> PriceValuation2.mmObject();
 			isDerived = false;
 			xmlTag = "FinInstrmDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentDetails";
 			definition = "Investment fund class for which the net asset value is calculated.";
 			maxOccurs = 1;
@@ -341,11 +345,11 @@ public class PriceValuation2 {
 	 */
 	public static final MMMessageAttribute mmTotalNAV = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.NetAssetValueCalculation.mmNetAssetValue;
+			businessElementTrace_lazy = () -> NetAssetValueCalculation.mmNetAssetValue;
 			componentContext_lazy = () -> PriceValuation2.mmObject();
 			isDerived = false;
 			xmlTag = "TtlNAV";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalNAV";
 			definition = "Value of all the holdings, less the fund's liabilities, attributable to a specific investment fund class.";
 			minOccurs = 0;
@@ -389,11 +393,11 @@ public class PriceValuation2 {
 	 */
 	public static final MMMessageAttribute mmTotalUnitsNumber = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.NetAssetValueCalculation.mmRelatedFund;
+			businessElementTrace_lazy = () -> NetAssetValueCalculation.mmRelatedFund;
 			componentContext_lazy = () -> PriceValuation2.mmObject();
 			isDerived = false;
 			xmlTag = "TtlUnitsNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalUnitsNumber";
 			definition = "Total number of investment fund class units that have been issued.";
 			maxOccurs = 1;
@@ -440,11 +444,11 @@ public class PriceValuation2 {
 	 */
 	public static final MMMessageAttribute mmNextValuationDateTime = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.NetAssetValueCalculation.mmValuationDateTime;
+			businessElementTrace_lazy = () -> NetAssetValueCalculation.mmValuationDateTime;
 			componentContext_lazy = () -> PriceValuation2.mmObject();
 			isDerived = false;
 			xmlTag = "NxtValtnDtTm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NextValuationDateTime";
 			definition = "Date and time of the next price valuation for the investment fund/fund class.";
 			maxOccurs = 1;
@@ -491,11 +495,11 @@ public class PriceValuation2 {
 	 */
 	public static final MMMessageAttribute mmPreviousValuationDateTime = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.NetAssetValueCalculation.mmValuationDateTime;
+			businessElementTrace_lazy = () -> NetAssetValueCalculation.mmValuationDateTime;
 			componentContext_lazy = () -> PriceValuation2.mmObject();
 			isDerived = false;
 			xmlTag = "PrvsValtnDtTm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousValuationDateTime";
 			definition = "Date and time of the previous price valuation for the investment fund/fund class.";
 			maxOccurs = 1;
@@ -542,11 +546,11 @@ public class PriceValuation2 {
 	 */
 	public static final MMMessageAttribute mmValuationCycle = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.NetAssetValueCalculation.mmValuationType;
+			businessElementTrace_lazy = () -> NetAssetValueCalculation.mmValuationType;
 			componentContext_lazy = () -> PriceValuation2.mmObject();
 			isDerived = false;
 			xmlTag = "ValtnCycl";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValuationCycle";
 			definition = "Specifies how the valuation is done, based on the schedule stated in the prospectus.";
 			maxOccurs = 1;
@@ -593,11 +597,11 @@ public class PriceValuation2 {
 	 */
 	public static final MMMessageAttribute mmSuspendedIndicator = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.NetAssetValueCalculation.mmSuspendedIndicator;
+			businessElementTrace_lazy = () -> NetAssetValueCalculation.mmSuspendedIndicator;
 			componentContext_lazy = () -> PriceValuation2.mmObject();
 			isDerived = false;
 			xmlTag = "SspdInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SuspendedIndicator";
 			definition = "Indicates whether the valuation of the investment fund class is suspended.";
 			maxOccurs = 1;
@@ -643,7 +647,7 @@ public class PriceValuation2 {
 			componentContext_lazy = () -> PriceValuation2.mmObject();
 			isDerived = false;
 			xmlTag = "PricDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PriceDetails";
 			definition = "Amount of money for which goods or services are offered, sold, or bought.";
 			minOccurs = 0;
@@ -685,7 +689,7 @@ public class PriceValuation2 {
 			componentContext_lazy = () -> PriceValuation2.mmObject();
 			isDerived = false;
 			xmlTag = "ValtnSttstcs";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValuationStatistics";
 			definition = "Information related to the price variations of an investment fund class.";
 			minOccurs = 0;
@@ -697,15 +701,13 @@ public class PriceValuation2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PriceValuation2.mmIdentification, com.tools20022.repository.msg.PriceValuation2.mmValuationDateTime,
-						com.tools20022.repository.msg.PriceValuation2.mmTradeDateTime, com.tools20022.repository.msg.PriceValuation2.mmFinancialInstrumentDetails, com.tools20022.repository.msg.PriceValuation2.mmTotalNAV,
-						com.tools20022.repository.msg.PriceValuation2.mmTotalUnitsNumber, com.tools20022.repository.msg.PriceValuation2.mmNextValuationDateTime, com.tools20022.repository.msg.PriceValuation2.mmPreviousValuationDateTime,
-						com.tools20022.repository.msg.PriceValuation2.mmValuationCycle, com.tools20022.repository.msg.PriceValuation2.mmSuspendedIndicator, com.tools20022.repository.msg.PriceValuation2.mmPriceDetails,
-						com.tools20022.repository.msg.PriceValuation2.mmValuationStatistics);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.reda.PriceReportV02.mmPriceValuationDetails);
+				messageElement_lazy = () -> Arrays.asList(PriceValuation2.mmIdentification, PriceValuation2.mmValuationDateTime, PriceValuation2.mmTradeDateTime, PriceValuation2.mmFinancialInstrumentDetails, PriceValuation2.mmTotalNAV,
+						PriceValuation2.mmTotalUnitsNumber, PriceValuation2.mmNextValuationDateTime, PriceValuation2.mmPreviousValuationDateTime, PriceValuation2.mmValuationCycle, PriceValuation2.mmSuspendedIndicator,
+						PriceValuation2.mmPriceDetails, PriceValuation2.mmValuationStatistics);
+				messageBuildingBlock_lazy = () -> Arrays.asList(PriceReportV02.mmPriceValuationDetails);
 				trace_lazy = () -> NetAssetValueCalculation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PriceValuation2";
 				definition = "Calculation of the net asset value for an investment fund/fund class.";
 			}

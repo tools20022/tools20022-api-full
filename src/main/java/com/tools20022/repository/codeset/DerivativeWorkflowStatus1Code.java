@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.DerivativeWorkflowStatusCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -93,7 +95,7 @@ public class DerivativeWorkflowStatus1Code extends DerivativeWorkflowStatusCode 
 	 */
 	public static final MMCode mmPreliminary = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Preliminary";
 			owner_lazy = () -> DerivativeWorkflowStatus1Code.mmObject();
 		}
@@ -116,7 +118,7 @@ public class DerivativeWorkflowStatus1Code extends DerivativeWorkflowStatusCode 
 	 */
 	public static final MMCode mmAdjustment = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Adjustment";
 			owner_lazy = () -> DerivativeWorkflowStatus1Code.mmObject();
 		}
@@ -139,7 +141,7 @@ public class DerivativeWorkflowStatus1Code extends DerivativeWorkflowStatusCode 
 	 */
 	public static final MMCode mmNoAction = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoAction";
 			owner_lazy = () -> DerivativeWorkflowStatus1Code.mmObject();
 		}
@@ -162,7 +164,7 @@ public class DerivativeWorkflowStatus1Code extends DerivativeWorkflowStatusCode 
 	 */
 	public static final MMCode mmUnconfirmed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unconfirmed";
 			owner_lazy = () -> DerivativeWorkflowStatus1Code.mmObject();
 		}
@@ -185,7 +187,7 @@ public class DerivativeWorkflowStatus1Code extends DerivativeWorkflowStatusCode 
 	 */
 	public static final MMCode mmDeleted = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Deleted";
 			owner_lazy = () -> DerivativeWorkflowStatus1Code.mmObject();
 		}
@@ -194,14 +196,13 @@ public class DerivativeWorkflowStatus1Code extends DerivativeWorkflowStatusCode 
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("PREL");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DerivativeWorkflowStatus1Code";
 				definition = "Specifies the status of exchange's notice of change on a derivative.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DerivativeWorkflowStatus1Code.mmPreliminary, com.tools20022.repository.codeset.DerivativeWorkflowStatus1Code.mmAdjustment,
-						com.tools20022.repository.codeset.DerivativeWorkflowStatus1Code.mmNoAction, com.tools20022.repository.codeset.DerivativeWorkflowStatus1Code.mmUnconfirmed,
-						com.tools20022.repository.codeset.DerivativeWorkflowStatus1Code.mmDeleted);
+				code_lazy = () -> Arrays.asList(DerivativeWorkflowStatus1Code.mmPreliminary, DerivativeWorkflowStatus1Code.mmAdjustment, DerivativeWorkflowStatus1Code.mmNoAction, DerivativeWorkflowStatus1Code.mmUnconfirmed,
+						DerivativeWorkflowStatus1Code.mmDeleted);
 				trace_lazy = () -> DerivativeWorkflowStatusCode.mmObject();
 			}
 		});

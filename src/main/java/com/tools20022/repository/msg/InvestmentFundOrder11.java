@@ -20,9 +20,12 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.setr.*;
 import com.tools20022.repository.choice.CancellationReason31Choice;
 import com.tools20022.repository.datatype.Max35Text;
-import com.tools20022.repository.entity.InvestmentFundOrder;
+import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -144,14 +147,14 @@ public class InvestmentFundOrder11 {
 	 */
 	public static final MMMessageAttribute mmOrderReference = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmIdentification;
+			businessElementTrace_lazy = () -> SecuritiesOrder.mmIdentification;
 			componentContext_lazy = () -> InvestmentFundOrder11.mmObject();
 			isDerived = false;
 			xmlTag = "OrdrRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrderReference";
 			definition = "Unique and unambiguous identifier for the order, as assigned by the instructing party.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.InvestmentFundOrder9.mmOrderReference;
+			previousVersion_lazy = () -> InvestmentFundOrder9.mmOrderReference;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -201,14 +204,14 @@ public class InvestmentFundOrder11 {
 	 */
 	public static final MMMessageAttribute mmClientReference = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundTransaction.mmClientReference;
+			businessElementTrace_lazy = () -> InvestmentFundTransaction.mmClientReference;
 			componentContext_lazy = () -> InvestmentFundOrder11.mmObject();
 			isDerived = false;
 			xmlTag = "ClntRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClientReference";
 			definition = "Unique and unambiguous investor's identification of the order. This reference can typically be used in a hub scenario to give the reference of the order as assigned by the underlying client.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.InvestmentFundOrder9.mmClientReference;
+			previousVersion_lazy = () -> InvestmentFundOrder9.mmClientReference;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -252,11 +255,11 @@ public class InvestmentFundOrder11 {
 	 */
 	public static final MMMessageAttribute mmDealReference = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrderExecution.mmDealIdentification;
+			businessElementTrace_lazy = () -> InvestmentFundOrderExecution.mmDealIdentification;
 			componentContext_lazy = () -> InvestmentFundOrder11.mmObject();
 			isDerived = false;
 			xmlTag = "DealRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DealReference";
 			definition = "Unique and unambiguous identifier for the order execution, as assigned by the confirming party.";
 			maxOccurs = 1;
@@ -307,14 +310,14 @@ public class InvestmentFundOrder11 {
 	 */
 	public static final MMMessageAttribute mmCancellationReference = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeIdentification.mmCancellationRequestIdentification;
+			businessElementTrace_lazy = () -> SecuritiesTradeIdentification.mmCancellationRequestIdentification;
 			componentContext_lazy = () -> InvestmentFundOrder11.mmObject();
 			isDerived = false;
 			xmlTag = "CxlRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationReference";
 			definition = "Unique and unambiguous identifier for the order confirmation cancellation, as assigned by the confirming party.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.InvestmentFundOrder9.mmCancellationReference;
+			previousVersion_lazy = () -> InvestmentFundOrder9.mmCancellationReference;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -358,10 +361,10 @@ public class InvestmentFundOrder11 {
 			componentContext_lazy = () -> InvestmentFundOrder11.mmObject();
 			isDerived = false;
 			xmlTag = "CxlRsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationReason";
 			definition = "Reason for the cancellation of the confirmation.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.InvestmentFundOrder9.mmCancellationReason;
+			previousVersion_lazy = () -> InvestmentFundOrder9.mmCancellationReason;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -372,17 +375,14 @@ public class InvestmentFundOrder11 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentFundOrder11.mmOrderReference, com.tools20022.repository.msg.InvestmentFundOrder11.mmClientReference,
-						com.tools20022.repository.msg.InvestmentFundOrder11.mmDealReference, com.tools20022.repository.msg.InvestmentFundOrder11.mmCancellationReference,
-						com.tools20022.repository.msg.InvestmentFundOrder11.mmCancellationReason);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.RedemptionBulkOrderConfirmationCancellationInstructionV02.mmOrderReferences,
-						com.tools20022.repository.area.setr.SubscriptionOrderConfirmationCancellationInstructionV02.mmOrderReferences,
-						com.tools20022.repository.area.setr.RedemptionOrderConfirmationCancellationInstructionV02.mmOrderReferences,
-						com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationCancellationInstructionV02.mmOrderReferences,
-						com.tools20022.repository.area.setr.SwitchOrderConfirmationCancellationInstructionV02.mmOrderReferences);
+				messageElement_lazy = () -> Arrays.asList(InvestmentFundOrder11.mmOrderReference, InvestmentFundOrder11.mmClientReference, InvestmentFundOrder11.mmDealReference, InvestmentFundOrder11.mmCancellationReference,
+						InvestmentFundOrder11.mmCancellationReason);
+				messageBuildingBlock_lazy = () -> Arrays.asList(RedemptionBulkOrderConfirmationCancellationInstructionV02.mmOrderReferences, SubscriptionOrderConfirmationCancellationInstructionV02.mmOrderReferences,
+						RedemptionOrderConfirmationCancellationInstructionV02.mmOrderReferences, SubscriptionBulkOrderConfirmationCancellationInstructionV02.mmOrderReferences,
+						SwitchOrderConfirmationCancellationInstructionV02.mmOrderReferences);
 				trace_lazy = () -> InvestmentFundOrder.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InvestmentFundOrder11";
 				definition = "References of an order confirmation and an order confirmation cancellation.";
 				previousVersion_lazy = () -> InvestmentFundOrder9.mmObject();

@@ -20,9 +20,11 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.PartyType15Code;
 import com.tools20022.repository.datatype.Max9NumericText;
 import com.tools20022.repository.entity.AcceptorConfiguration;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -117,10 +119,10 @@ public class TerminalManagementDataSet20 {
 			componentContext_lazy = () -> TerminalManagementDataSet20.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Identification of the data set transferred.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TerminalManagementDataSet19.mmIdentification;
+			previousVersion_lazy = () -> TerminalManagementDataSet19.mmIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -167,10 +169,10 @@ public class TerminalManagementDataSet20 {
 			componentContext_lazy = () -> TerminalManagementDataSet20.mmObject();
 			isDerived = false;
 			xmlTag = "SeqCntr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SequenceCounter";
 			definition = "Counter to identify a single data set within the whole transfer.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TerminalManagementDataSet19.mmSequenceCounter;
+			previousVersion_lazy = () -> TerminalManagementDataSet19.mmSequenceCounter;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max9NumericText.mmObject();
@@ -217,10 +219,10 @@ public class TerminalManagementDataSet20 {
 			componentContext_lazy = () -> TerminalManagementDataSet20.mmObject();
 			isDerived = false;
 			xmlTag = "POIId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "POIIdentification";
 			definition = "Identification of the point of interactions involved by the configuration data set.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TerminalManagementDataSet19.mmPOIIdentification;
+			previousVersion_lazy = () -> TerminalManagementDataSet19.mmPOIIdentification;
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification71.mmObject();
@@ -265,10 +267,10 @@ public class TerminalManagementDataSet20 {
 			componentContext_lazy = () -> TerminalManagementDataSet20.mmObject();
 			isDerived = false;
 			xmlTag = "CfgtnScp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConfigurationScope";
 			definition = "Scope of the configuration contained in the data set.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TerminalManagementDataSet19.mmConfigurationScope;
+			previousVersion_lazy = () -> TerminalManagementDataSet19.mmConfigurationScope;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PartyType15Code.mmObject();
@@ -312,10 +314,10 @@ public class TerminalManagementDataSet20 {
 			componentContext_lazy = () -> TerminalManagementDataSet20.mmObject();
 			isDerived = false;
 			xmlTag = "Cntt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Content";
 			definition = "Content of the acceptor parameters.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TerminalManagementDataSet19.mmContent;
+			previousVersion_lazy = () -> TerminalManagementDataSet19.mmContent;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -326,12 +328,11 @@ public class TerminalManagementDataSet20 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TerminalManagementDataSet20.mmIdentification, com.tools20022.repository.msg.TerminalManagementDataSet20.mmSequenceCounter,
-						com.tools20022.repository.msg.TerminalManagementDataSet20.mmPOIIdentification, com.tools20022.repository.msg.TerminalManagementDataSet20.mmConfigurationScope,
-						com.tools20022.repository.msg.TerminalManagementDataSet20.mmContent);
+				messageElement_lazy = () -> Arrays.asList(TerminalManagementDataSet20.mmIdentification, TerminalManagementDataSet20.mmSequenceCounter, TerminalManagementDataSet20.mmPOIIdentification,
+						TerminalManagementDataSet20.mmConfigurationScope, TerminalManagementDataSet20.mmContent);
 				trace_lazy = () -> AcceptorConfiguration.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TerminalManagementDataSet20";
 				definition = "Data set containing the acceptor parameters of a point of interaction (POI).";
 				previousVersion_lazy = () -> TerminalManagementDataSet19.mmObject();

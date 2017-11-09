@@ -19,8 +19,10 @@ package com.tools20022.repository.entity;
 
 import com.tools20022.metamodel.MMBusinessAttribute;
 import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.PrePaymentSpeedCode;
 import com.tools20022.repository.datatype.PercentageRate;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.PrePaymentSpeed1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -35,6 +37,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.PrePaymentSpeed1
+ * PrePaymentSpeed1}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -42,14 +52,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * PrePaymentSpeed.mmType}</li>
  * <li>{@linkplain com.tools20022.repository.entity.PrePaymentSpeed#mmRate
  * PrePaymentSpeed.mmRate}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.PrePaymentSpeed1
- * PrePaymentSpeed1}</li>
  * </ul>
  * </li>
  * <li>
@@ -111,10 +113,10 @@ public class PrePaymentSpeed {
 	 */
 	public static final MMBusinessAttribute mmType = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PrePaymentSpeed1.mmType);
+			derivation_lazy = () -> Arrays.asList(PrePaymentSpeed1.mmType);
 			elementContext_lazy = () -> PrePaymentSpeed.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Type";
 			definition = "Specifies the type of prepayment speed of the fixed income instrument in coded form.";
 			maxOccurs = 1;
@@ -158,10 +160,10 @@ public class PrePaymentSpeed {
 	 */
 	public static final MMBusinessAttribute mmRate = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PrePaymentSpeed1.mmRate);
+			derivation_lazy = () -> Arrays.asList(PrePaymentSpeed1.mmRate);
 			elementContext_lazy = () -> PrePaymentSpeed.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Rate";
 			definition = "Rate of prepayment speed of the fixed income instrument.";
 			maxOccurs = 1;
@@ -173,11 +175,11 @@ public class PrePaymentSpeed {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PrePaymentSpeed";
 				definition = "Specifies the type and rate of prepayment speed of the fixed income instrument.";
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.PrePaymentSpeed.mmType, com.tools20022.repository.entity.PrePaymentSpeed.mmRate);
+				element_lazy = () -> Arrays.asList(PrePaymentSpeed.mmType, PrePaymentSpeed.mmRate);
 				derivationComponent_lazy = () -> Arrays.asList(PrePaymentSpeed1.mmObject());
 			}
 		});

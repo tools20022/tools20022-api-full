@@ -17,12 +17,14 @@
 
 package com.tools20022.repository.msg;
 
-import com.tools20022.metamodel.MMMessageAssociationEnd;
-import com.tools20022.metamodel.MMMessageAttribute;
-import com.tools20022.metamodel.MMMessageComponent;
-import com.tools20022.metamodel.MMXor;
+import com.tools20022.metamodel.*;
+import com.tools20022.repository.area.tsmt.ForwardIntentToPayNotificationV01;
+import com.tools20022.repository.area.tsmt.IntentToPayNotificationV01;
 import com.tools20022.repository.datatype.ISODate;
+import com.tools20022.repository.entity.ObligationFulfilment;
 import com.tools20022.repository.entity.Payment;
+import com.tools20022.repository.entity.PaymentInstruction;
+import com.tools20022.repository.GeneratedRepository;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -130,7 +132,7 @@ public class IntentToPay1 {
 			componentContext_lazy = () -> IntentToPay1.mmObject();
 			isDerived = false;
 			xmlTag = "ByPurchsOrdr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ByPurchaseOrder";
 			definition = "The intention to pay is based on a purchase order.";
 			maxOccurs = 1;
@@ -170,7 +172,7 @@ public class IntentToPay1 {
 			componentContext_lazy = () -> IntentToPay1.mmObject();
 			isDerived = false;
 			xmlTag = "ByComrclInvc";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ByCommercialInvoice";
 			definition = "The intention to pay is based on a commercial invoice.";
 			maxOccurs = 1;
@@ -221,14 +223,14 @@ public class IntentToPay1 {
 	 */
 	public static final MMMessageAttribute mmExpectedPaymentDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ObligationFulfilment.mmDate;
+			businessElementTrace_lazy = () -> ObligationFulfilment.mmDate;
 			componentContext_lazy = () -> IntentToPay1.mmObject();
 			isDerived = false;
 			xmlTag = "XpctdPmtDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExpectedPaymentDate";
 			definition = "Date at which the payment would be effected.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IntentToPay2.mmExpectedPaymentDate);
+			nextVersions_lazy = () -> Arrays.asList(IntentToPay2.mmExpectedPaymentDate);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
@@ -275,14 +277,14 @@ public class IntentToPay1 {
 	 */
 	public static final MMMessageAssociationEnd mmSettlementTerms = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentInstruction.mmSettlementInstruction;
+			businessElementTrace_lazy = () -> PaymentInstruction.mmSettlementInstruction;
 			componentContext_lazy = () -> IntentToPay1.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmTerms";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementTerms";
 			definition = "Specifies the beneficiary's account information.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IntentToPay2.mmSettlementTerms);
+			nextVersions_lazy = () -> Arrays.asList(IntentToPay2.mmSettlementTerms);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -294,6 +296,9 @@ public class IntentToPay1 {
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
+	 * messageComponent} =
+	 * {@linkplain com.tools20022.repository.msg.IntentToPay1 IntentToPay1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getImpactedElements
 	 * impactedElements} =
 	 * <ul>
@@ -305,9 +310,6 @@ public class IntentToPay1 {
 	 * IntentToPay1.mmByCommercialInvoice}</li>
 	 * </ul>
 	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
-	 * messageComponent} =
-	 * {@linkplain com.tools20022.repository.msg.IntentToPay1 IntentToPay1}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -318,22 +320,21 @@ public class IntentToPay1 {
 	 */
 	public static final MMXor mmByPurchaseOrderOrByCommercialInvoiceRule = new MMXor() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ByPurchaseOrderOrByCommercialInvoiceRule";
 			messageComponent_lazy = () -> IntentToPay1.mmObject();
-			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IntentToPay1.mmByPurchaseOrder, com.tools20022.repository.msg.IntentToPay1.mmByCommercialInvoice);
+			impactedElements_lazy = () -> Arrays.asList(IntentToPay1.mmByPurchaseOrder, IntentToPay1.mmByCommercialInvoice);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IntentToPay1.mmByPurchaseOrder, com.tools20022.repository.msg.IntentToPay1.mmByCommercialInvoice,
-						com.tools20022.repository.msg.IntentToPay1.mmExpectedPaymentDate, com.tools20022.repository.msg.IntentToPay1.mmSettlementTerms);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.IntentToPayNotificationV01.mmIntentToPay, com.tools20022.repository.area.tsmt.ForwardIntentToPayNotificationV01.mmIntentToPay);
+				messageElement_lazy = () -> Arrays.asList(IntentToPay1.mmByPurchaseOrder, IntentToPay1.mmByCommercialInvoice, IntentToPay1.mmExpectedPaymentDate, IntentToPay1.mmSettlementTerms);
+				messageBuildingBlock_lazy = () -> Arrays.asList(IntentToPayNotificationV01.mmIntentToPay, ForwardIntentToPayNotificationV01.mmIntentToPay);
 				trace_lazy = () -> Payment.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
 						return DateFormat.getDateInstance(java.text.DateFormat.LONG).parse("September 9, 2016");
@@ -344,7 +345,7 @@ public class IntentToPay1 {
 				name = "IntentToPay1";
 				definition = "Specifies the details of an intention to pay based on purchase orders or commercial invoice.";
 				nextVersions_lazy = () -> Arrays.asList(IntentToPay2.mmObject());
-				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IntentToPay1.mmByPurchaseOrderOrByCommercialInvoiceRule);
+				xors_lazy = () -> Arrays.asList(IntentToPay1.mmByPurchaseOrderOrByCommercialInvoiceRule);
 			}
 		});
 		return mmObject_lazy.get();

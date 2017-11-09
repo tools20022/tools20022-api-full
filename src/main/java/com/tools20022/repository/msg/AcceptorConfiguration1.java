@@ -19,7 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.catm.AcceptorConfigurationUpdateV01;
 import com.tools20022.repository.entity.AcceptorConfiguration;
+import com.tools20022.repository.entity.System;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -119,11 +123,11 @@ public class AcceptorConfiguration1 {
 	 */
 	public static final MMMessageAssociationEnd mmPOIIdentification = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.System.mmSystemIdentification;
+			businessElementTrace_lazy = () -> System.mmSystemIdentification;
 			componentContext_lazy = () -> AcceptorConfiguration1.mmObject();
 			isDerived = false;
 			xmlTag = "POIId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "POIIdentification";
 			definition = "Identification of the point of interaction for terminal management.";
 			maxOccurs = 1;
@@ -170,11 +174,11 @@ public class AcceptorConfiguration1 {
 	 */
 	public static final MMMessageAssociationEnd mmTerminalManagerIdentification = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.System.mmSystemIdentification;
+			businessElementTrace_lazy = () -> System.mmSystemIdentification;
 			componentContext_lazy = () -> AcceptorConfiguration1.mmObject();
 			isDerived = false;
 			xmlTag = "TermnlMgrId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TerminalManagerIdentification";
 			definition = "Identification of the terminal management system (TMS) sending the acceptor parameters.";
 			maxOccurs = 1;
@@ -225,7 +229,7 @@ public class AcceptorConfiguration1 {
 			componentContext_lazy = () -> AcceptorConfiguration1.mmObject();
 			isDerived = false;
 			xmlTag = "DataSet";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DataSet";
 			definition = "Data set containing the acceptor parameters of a point of interaction (POI).";
 			minOccurs = 1;
@@ -237,12 +241,11 @@ public class AcceptorConfiguration1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcceptorConfiguration1.mmPOIIdentification, com.tools20022.repository.msg.AcceptorConfiguration1.mmTerminalManagerIdentification,
-						com.tools20022.repository.msg.AcceptorConfiguration1.mmDataSet);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.catm.AcceptorConfigurationUpdateV01.mmAcceptorConfiguration);
+				messageElement_lazy = () -> Arrays.asList(AcceptorConfiguration1.mmPOIIdentification, AcceptorConfiguration1.mmTerminalManagerIdentification, AcceptorConfiguration1.mmDataSet);
+				messageBuildingBlock_lazy = () -> Arrays.asList(AcceptorConfigurationUpdateV01.mmAcceptorConfiguration);
 				trace_lazy = () -> AcceptorConfiguration.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AcceptorConfiguration1";
 				definition = "Acceptor configuration to be downloaded from the terminal management system.";
 				nextVersions_lazy = () -> Arrays.asList(AcceptorConfiguration2.mmObject());

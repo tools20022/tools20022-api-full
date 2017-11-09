@@ -20,6 +20,7 @@ package com.tools20022.repository.area.tsmt;
 import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.TradeServicesManagementLatestVersion;
 import com.tools20022.repository.msg.MessageIdentification1;
 import com.tools20022.repository.msg.Reason2;
@@ -46,6 +47,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code tsmt.026.001.02}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.TradeServicesManagementLatestVersion
@@ -86,9 +90,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * StatusChangeRequestV02.mmRequestReason}</li>
  * </ul>
  * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code tsmt.026.001.02}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -131,7 +132,7 @@ public class StatusChangeRequestV02 {
 	public static final MMMessageBuildingBlock mmRequestIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "ReqId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestIdentification";
 			definition = "Identifies the request message.";
 			maxOccurs = 1;
@@ -170,7 +171,7 @@ public class StatusChangeRequestV02 {
 	public static final MMMessageBuildingBlock mmTransactionIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "TxId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionIdentification";
 			definition = "Unique identification assigned by the matching application to the transaction.\nThis identification is to be used in any communication between the parties.";
 			maxOccurs = 1;
@@ -206,7 +207,7 @@ public class StatusChangeRequestV02 {
 	public static final MMMessageBuildingBlock mmSubmitterTransactionReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SubmitrTxRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubmitterTransactionReference";
 			definition = "Reference to the transaction for the requesting financial institution.";
 			maxOccurs = 1;
@@ -244,7 +245,7 @@ public class StatusChangeRequestV02 {
 	public static final MMMessageBuildingBlock mmRequestedStatus = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "ReqdSts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestedStatus";
 			definition = "Specifies the baseline status requested by the submitter by means of a code. ";
 			maxOccurs = 1;
@@ -278,7 +279,7 @@ public class StatusChangeRequestV02 {
 	public static final MMMessageBuildingBlock mmRequestReason = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "ReqRsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestReason";
 			definition = "Specifies the reason for the request to change status.";
 			maxOccurs = 1;
@@ -290,16 +291,15 @@ public class StatusChangeRequestV02 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "StatusChangeRequestV02";
 				definition = "Scope\r\nThe StatusChangeRequest message is sent by a party involved in a transaction to the matching application.\r\nThis message is used to request a change in the status of a transaction.\r\nUsage\r\nThe StatusChangeRequest message can be sent by either party involved in a transaction to the matching application to request a change in the status of a transaction.\r\nThe matching application will pass on the request by sending a StatusChangeRequestNotification message to the counterparty which can accept or reject the request by sending a SatausChangeRequestAcceptance or StatusChangeRequestRejection message.";
 				messageSet_lazy = () -> Arrays.asList(TradeServicesManagementISOPreviousversion.mmObject(), TradeServicesManagementISOLatestversion.mmObject());
 				rootElement = "Document";
 				xmlTag = "StsChngReq";
 				businessArea_lazy = () -> TradeServicesManagementLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.StatusChangeRequestV02.mmRequestIdentification, com.tools20022.repository.area.tsmt.StatusChangeRequestV02.mmTransactionIdentification,
-						com.tools20022.repository.area.tsmt.StatusChangeRequestV02.mmSubmitterTransactionReference, com.tools20022.repository.area.tsmt.StatusChangeRequestV02.mmRequestedStatus,
-						com.tools20022.repository.area.tsmt.StatusChangeRequestV02.mmRequestReason);
+				messageBuildingBlock_lazy = () -> Arrays.asList(StatusChangeRequestV02.mmRequestIdentification, StatusChangeRequestV02.mmTransactionIdentification, StatusChangeRequestV02.mmSubmitterTransactionReference,
+						StatusChangeRequestV02.mmRequestedStatus, StatusChangeRequestV02.mmRequestReason);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "tsmt";

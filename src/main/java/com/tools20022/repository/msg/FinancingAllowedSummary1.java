@@ -20,11 +20,14 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
 import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.datatype.PercentageRate;
 import com.tools20022.repository.entity.BookEntry;
 import com.tools20022.repository.entity.InvoiceFinancingAgreement;
+import com.tools20022.repository.entity.InvoiceFinancingPartyRole;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -115,7 +118,7 @@ public class FinancingAllowedSummary1 {
 			componentContext_lazy = () -> FinancingAllowedSummary1.mmObject();
 			isDerived = false;
 			xmlTag = "FincdItmNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancedItemNumber";
 			definition = "Number of invoices/instalments financed.";
 			maxOccurs = 1;
@@ -159,7 +162,7 @@ public class FinancingAllowedSummary1 {
 			componentContext_lazy = () -> FinancingAllowedSummary1.mmObject();
 			isDerived = false;
 			xmlTag = "TtlAccptdItmsAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalAcceptedItemsAmount";
 			definition = "Sum of the original total amounts of the invoices accepted for financing.";
 			maxOccurs = 1;
@@ -209,11 +212,11 @@ public class FinancingAllowedSummary1 {
 	 */
 	public static final MMMessageAttribute mmAppliedPercentage = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvoiceFinancingAgreement.mmAppliedPercentage;
+			businessElementTrace_lazy = () -> InvoiceFinancingAgreement.mmAppliedPercentage;
 			componentContext_lazy = () -> FinancingAllowedSummary1.mmObject();
 			isDerived = false;
 			xmlTag = "ApldPctg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AppliedPercentage";
 			definition = "Percentage rate applied to calculate the total amount financed related to the total amounts of the invoices accepted for financing. It represents the average percentage rate applied to all single invoice requests financed. It can be calculated as result of \"TotalFinancedAmount\" divided by \"TotalAcceptedItemsAmount\".";
 			maxOccurs = 1;
@@ -260,11 +263,11 @@ public class FinancingAllowedSummary1 {
 	 */
 	public static final MMMessageAttribute mmTotalFinancedAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvoiceFinancingAgreement.mmFinancedAmount;
+			businessElementTrace_lazy = () -> InvoiceFinancingAgreement.mmFinancedAmount;
 			componentContext_lazy = () -> FinancingAllowedSummary1.mmObject();
 			isDerived = false;
 			xmlTag = "TtlFincdAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalFinancedAmount";
 			definition = "Total amount financed, defined as the entire financed amount of the  requests.";
 			maxOccurs = 1;
@@ -312,7 +315,7 @@ public class FinancingAllowedSummary1 {
 			componentContext_lazy = () -> FinancingAllowedSummary1.mmObject();
 			isDerived = false;
 			xmlTag = "FincgDtDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancingDateDetails";
 			definition = "Set of dates (eg book date, credit date) related to the crediting of the financed amount.";
 			maxOccurs = 1;
@@ -358,11 +361,11 @@ public class FinancingAllowedSummary1 {
 	 */
 	public static final MMMessageAssociationEnd mmCreditAccount = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvoiceFinancingPartyRole.mmCashAccount;
+			businessElementTrace_lazy = () -> InvoiceFinancingPartyRole.mmCashAccount;
 			componentContext_lazy = () -> FinancingAllowedSummary1.mmObject();
 			isDerived = false;
 			xmlTag = "CdtAcct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditAccount";
 			definition = "Unambiguous identification of the account, held by Financing Requestor, actually used for crediting the amount financed.";
 			maxOccurs = 1;
@@ -408,11 +411,11 @@ public class FinancingAllowedSummary1 {
 	 */
 	public static final MMMessageAssociationEnd mmFinancingAccount = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvoiceFinancingPartyRole.mmCashAccount;
+			businessElementTrace_lazy = () -> InvoiceFinancingPartyRole.mmCashAccount;
 			componentContext_lazy = () -> FinancingAllowedSummary1.mmObject();
 			isDerived = false;
 			xmlTag = "FincgAcct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancingAccount";
 			definition = "Unambiguous identification of the internal bank account actually used by First Agent to manage the line of credit granted to Financing Requestor.";
 			maxOccurs = 1;
@@ -425,13 +428,11 @@ public class FinancingAllowedSummary1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancingAllowedSummary1.mmFinancedItemNumber, com.tools20022.repository.msg.FinancingAllowedSummary1.mmTotalAcceptedItemsAmount,
-						com.tools20022.repository.msg.FinancingAllowedSummary1.mmAppliedPercentage, com.tools20022.repository.msg.FinancingAllowedSummary1.mmTotalFinancedAmount,
-						com.tools20022.repository.msg.FinancingAllowedSummary1.mmFinancingDateDetails, com.tools20022.repository.msg.FinancingAllowedSummary1.mmCreditAccount,
-						com.tools20022.repository.msg.FinancingAllowedSummary1.mmFinancingAccount);
+				messageElement_lazy = () -> Arrays.asList(FinancingAllowedSummary1.mmFinancedItemNumber, FinancingAllowedSummary1.mmTotalAcceptedItemsAmount, FinancingAllowedSummary1.mmAppliedPercentage,
+						FinancingAllowedSummary1.mmTotalFinancedAmount, FinancingAllowedSummary1.mmFinancingDateDetails, FinancingAllowedSummary1.mmCreditAccount, FinancingAllowedSummary1.mmFinancingAccount);
 				trace_lazy = () -> InvoiceFinancingAgreement.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FinancingAllowedSummary1";
 				definition = "Summary information about amount financed.";
 			}

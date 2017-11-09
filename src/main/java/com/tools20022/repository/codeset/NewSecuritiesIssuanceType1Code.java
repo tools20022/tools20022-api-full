@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.NewSecuritiesIssuanceTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -89,7 +91,7 @@ public class NewSecuritiesIssuanceType1Code extends NewSecuritiesIssuanceTypeCod
 	 */
 	public static final MMCode mmExistingIssue = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExistingIssue";
 			owner_lazy = () -> NewSecuritiesIssuanceType1Code.mmObject();
 		}
@@ -112,7 +114,7 @@ public class NewSecuritiesIssuanceType1Code extends NewSecuritiesIssuanceTypeCod
 	 */
 	public static final MMCode mmNewIssue = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewIssue";
 			owner_lazy = () -> NewSecuritiesIssuanceType1Code.mmObject();
 		}
@@ -135,7 +137,7 @@ public class NewSecuritiesIssuanceType1Code extends NewSecuritiesIssuanceTypeCod
 	 */
 	public static final MMCode mmUnknown = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unknown";
 			owner_lazy = () -> NewSecuritiesIssuanceType1Code.mmObject();
 		}
@@ -144,13 +146,12 @@ public class NewSecuritiesIssuanceType1Code extends NewSecuritiesIssuanceTypeCod
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("EXIS");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "NewSecuritiesIssuanceType1Code";
 				definition = "Specifies the type of securities proceeds; whether they are newly issued or not.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.NewSecuritiesIssuanceType1Code.mmExistingIssue, com.tools20022.repository.codeset.NewSecuritiesIssuanceType1Code.mmNewIssue,
-						com.tools20022.repository.codeset.NewSecuritiesIssuanceType1Code.mmUnknown);
+				code_lazy = () -> Arrays.asList(NewSecuritiesIssuanceType1Code.mmExistingIssue, NewSecuritiesIssuanceType1Code.mmNewIssue, NewSecuritiesIssuanceType1Code.mmUnknown);
 				trace_lazy = () -> NewSecuritiesIssuanceTypeCode.mmObject();
 			}
 		});

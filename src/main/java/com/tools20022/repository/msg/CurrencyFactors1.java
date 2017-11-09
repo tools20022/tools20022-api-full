@@ -19,10 +19,13 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CurrencyCode;
 import com.tools20022.repository.datatype.ImpliedCurrencyAndAmount;
 import com.tools20022.repository.datatype.PercentageRate;
+import com.tools20022.repository.entity.Limit;
 import com.tools20022.repository.entity.LiquidityManagementLimit;
+import com.tools20022.repository.GeneratedRepository;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -114,11 +117,11 @@ public class CurrencyFactors1 {
 	 */
 	public static final MMMessageAttribute mmCurrency = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Limit.mmCurrency;
+			businessElementTrace_lazy = () -> Limit.mmCurrency;
 			componentContext_lazy = () -> CurrencyFactors1.mmObject();
 			isDerived = false;
 			xmlTag = "Ccy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Currency";
 			definition = "Currency of the underlying currency specific amounts and ratios used in the pay-in schedule calculation.";
 			maxOccurs = 1;
@@ -163,11 +166,11 @@ public class CurrencyFactors1 {
 	 */
 	public static final MMMessageAttribute mmShortPositionLimit = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Limit.mmAmount;
+			businessElementTrace_lazy = () -> Limit.mmAmount;
 			componentContext_lazy = () -> CurrencyFactors1.mmObject();
 			isDerived = false;
 			xmlTag = "ShrtPosLmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ShortPositionLimit";
 			definition = "Maximum allowed short position in the currency during settlement.";
 			maxOccurs = 1;
@@ -212,7 +215,7 @@ public class CurrencyFactors1 {
 			componentContext_lazy = () -> CurrencyFactors1.mmObject();
 			isDerived = false;
 			xmlTag = "MinPayInAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MinimumPayInAmount";
 			definition = "Minimum amount paid in one payment unless the short position is less than the minimum.";
 			maxOccurs = 1;
@@ -259,11 +262,11 @@ public class CurrencyFactors1 {
 	 */
 	public static final MMMessageAttribute mmVolatilityMargin = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.LiquidityManagementLimit.mmVolatilityMargin;
+			businessElementTrace_lazy = () -> LiquidityManagementLimit.mmVolatilityMargin;
 			componentContext_lazy = () -> CurrencyFactors1.mmObject();
 			isDerived = false;
 			xmlTag = "VoltlyMrgn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VolatilityMargin";
 			definition = "Margin used to decrease long positions and increase short positions during the risk calculation.";
 			maxOccurs = 1;
@@ -307,11 +310,11 @@ public class CurrencyFactors1 {
 	 */
 	public static final MMMessageAttribute mmRate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.LiquidityManagementLimit.mmCurrencyExchange;
+			businessElementTrace_lazy = () -> LiquidityManagementLimit.mmCurrencyExchange;
 			componentContext_lazy = () -> CurrencyFactors1.mmObject();
 			isDerived = false;
 			xmlTag = "Rate";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rate";
 			definition = "Exchange rate used in the calculation of the pay-in schedule.";
 			maxOccurs = 1;
@@ -323,11 +326,10 @@ public class CurrencyFactors1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CurrencyFactors1.mmCurrency, com.tools20022.repository.msg.CurrencyFactors1.mmShortPositionLimit,
-						com.tools20022.repository.msg.CurrencyFactors1.mmMinimumPayInAmount, com.tools20022.repository.msg.CurrencyFactors1.mmVolatilityMargin, com.tools20022.repository.msg.CurrencyFactors1.mmRate);
+				messageElement_lazy = () -> Arrays.asList(CurrencyFactors1.mmCurrency, CurrencyFactors1.mmShortPositionLimit, CurrencyFactors1.mmMinimumPayInAmount, CurrencyFactors1.mmVolatilityMargin, CurrencyFactors1.mmRate);
 				trace_lazy = () -> LiquidityManagementLimit.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
 						return DateFormat.getDateInstance(java.text.DateFormat.LONG).parse("September 9, 2016");

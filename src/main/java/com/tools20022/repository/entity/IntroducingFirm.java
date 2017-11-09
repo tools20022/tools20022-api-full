@@ -18,7 +18,11 @@
 package com.tools20022.repository.entity;
 
 import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.SecuritiesOrderPartyRole;
+import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.ConfirmationParties2;
+import com.tools20022.repository.msg.ConfirmationParties4;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -73,11 +77,11 @@ public class IntroducingFirm extends SecuritiesOrderPartyRole {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "IntroducingFirm";
 				definition = "Party (broker or other intermediary) that owns the relationship with the investor. It can relay an order directly to the trading floor, or give clients direct access to the floor.";
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ConfirmationParties4.mmIntroducingFirm, com.tools20022.repository.msg.ConfirmationParties2.mmIntroducingFirm);
+				derivationElement_lazy = () -> Arrays.asList(ConfirmationParties4.mmIntroducingFirm, ConfirmationParties2.mmIntroducingFirm);
 				superType_lazy = () -> SecuritiesOrderPartyRole.mmObject();
 			}
 		});

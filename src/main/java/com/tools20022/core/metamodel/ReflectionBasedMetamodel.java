@@ -20,7 +20,6 @@ import java.util.NoSuchElementException;
 import java.util.Optional;
 import java.util.Set;
 import java.util.function.Consumer;
-import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 import com.tools20022.core.metamodel.ISODoc.Basis;
@@ -289,25 +288,16 @@ public class ReflectionBasedMetamodel implements Metamodel {
 		}
 
 		void initMembersClass() throws Exception {
-			Class<?> structClass;			
-			try {
-				String className = beanClass.getPackage().getName() + ".struct.";
-				className += beanClass.getSimpleName() + "_";
-				structClass = beanClass.getClassLoader().loadClass( className );
-			} catch( Exception e ) {
-				return;
-			}
-			
-			if (structClass == null)
-				return;
-			for (Field f : structClass.getDeclaredFields()) {
-				if (f.isSynthetic())
+			for (Field f : beanClass.getDeclaredFields()) {
+				if (f.isSynthetic() || !Modifier.isStatic( f.getModifiers() ) || !Modifier.isFinal(f.getModifiers() ))
+					continue;
+				if ( ! f.getName().endsWith("Attribute"))
 					continue;
 				Object wrapper = f.get(null);
 				if (wrapper instanceof AttrWrapper) {
 					@SuppressWarnings("unchecked")
 					AttrWrapper<B, ?> attrWrapper = (AttrWrapper<B, ?>) wrapper;
-					MMAttributeImpl<B, ?> mmAttr = attrsByName.get(f.getName());
+					MMAttributeImpl<B, ?> mmAttr = attrsByName.get(f.getName().substring(0, f.getName().length() - "Attribute".length()));
 					attrWrapper.setImpl((MetamodelAttribute<B, ?>) mmAttr);
 				} else if (wrapper instanceof ConstrWrapper) {
 					// TODO

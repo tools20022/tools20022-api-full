@@ -20,9 +20,12 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.setr.OrderConfirmationStatusReportV02;
 import com.tools20022.repository.choice.ConfirmationStatus1Choice;
 import com.tools20022.repository.datatype.Max35Text;
-import com.tools20022.repository.entity.InvestmentFundOrder;
+import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -141,14 +144,14 @@ public class IndividualOrderConfirmationStatusAndReason2 {
 	 */
 	public static final MMMessageAttribute mmMasterReference = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Order.mmMasterIdentification;
+			businessElementTrace_lazy = () -> Order.mmMasterIdentification;
 			componentContext_lazy = () -> IndividualOrderConfirmationStatusAndReason2.mmObject();
 			isDerived = false;
 			xmlTag = "MstrRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MasterReference";
 			definition = "Reference assigned to a set of orders or trades in order to link them together.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.IndividualOrderConfirmationStatusAndReason1.mmMasterReference;
+			previousVersion_lazy = () -> IndividualOrderConfirmationStatusAndReason1.mmMasterReference;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -197,14 +200,14 @@ public class IndividualOrderConfirmationStatusAndReason2 {
 	 */
 	public static final MMMessageAttribute mmOrderReference = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmIdentification;
+			businessElementTrace_lazy = () -> SecuritiesOrder.mmIdentification;
 			componentContext_lazy = () -> IndividualOrderConfirmationStatusAndReason2.mmObject();
 			isDerived = false;
 			xmlTag = "OrdrRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrderReference";
 			definition = "Unique and unambiguous identifier for the order, as assigned by the instructing party.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.IndividualOrderConfirmationStatusAndReason1.mmOrderReference;
+			previousVersion_lazy = () -> IndividualOrderConfirmationStatusAndReason1.mmOrderReference;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -245,11 +248,11 @@ public class IndividualOrderConfirmationStatusAndReason2 {
 	 */
 	public static final MMMessageAssociationEnd mmConfirmation = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmStatus;
+			businessElementTrace_lazy = () -> SecuritiesOrder.mmStatus;
 			componentContext_lazy = () -> IndividualOrderConfirmationStatusAndReason2.mmObject();
 			isDerived = false;
 			xmlTag = "Conf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Confirmation";
 			definition = "Status of the order confirmation cancellation.";
 			maxOccurs = 1;
@@ -302,14 +305,14 @@ public class IndividualOrderConfirmationStatusAndReason2 {
 	 */
 	public static final MMMessageAttribute mmClientReference = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmClientOrderIdentification;
+			businessElementTrace_lazy = () -> SecuritiesOrder.mmClientOrderIdentification;
 			componentContext_lazy = () -> IndividualOrderConfirmationStatusAndReason2.mmObject();
 			isDerived = false;
 			xmlTag = "ClntRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClientReference";
 			definition = "Unique and unambiguous investor's identification of an order. This reference can typically be used in a hub scenario to give the reference of the order as assigned by the underlying client.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.IndividualOrderConfirmationStatusAndReason1.mmClientReference;
+			previousVersion_lazy = () -> IndividualOrderConfirmationStatusAndReason1.mmClientReference;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -358,14 +361,14 @@ public class IndividualOrderConfirmationStatusAndReason2 {
 	 */
 	public static final MMMessageAttribute mmDealReference = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradeIdentification.mmIdentification;
+			businessElementTrace_lazy = () -> TradeIdentification.mmIdentification;
 			componentContext_lazy = () -> IndividualOrderConfirmationStatusAndReason2.mmObject();
 			isDerived = false;
 			xmlTag = "DealRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DealReference";
 			definition = "Unique and unambiguous identifier for the order execution, as assigned by the confirming party.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.IndividualOrderConfirmationStatusAndReason1.mmDealReference;
+			previousVersion_lazy = () -> IndividualOrderConfirmationStatusAndReason1.mmDealReference;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -411,14 +414,14 @@ public class IndividualOrderConfirmationStatusAndReason2 {
 	 */
 	public static final MMMessageAssociationEnd mmStatusInitiator = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> IndividualOrderConfirmationStatusAndReason2.mmObject();
 			isDerived = false;
 			xmlTag = "StsInitr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusInitiator";
 			definition = "Party that initiates the status of the order confirmation.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.IndividualOrderConfirmationStatusAndReason1.mmStatusInitiator;
+			previousVersion_lazy = () -> IndividualOrderConfirmationStatusAndReason1.mmStatusInitiator;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -467,14 +470,14 @@ public class IndividualOrderConfirmationStatusAndReason2 {
 	 */
 	public static final MMMessageAssociationEnd mmInvestmentAccountDetails = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundTransaction.mmInvestmentAccount;
+			businessElementTrace_lazy = () -> InvestmentFundTransaction.mmInvestmentAccount;
 			componentContext_lazy = () -> IndividualOrderConfirmationStatusAndReason2.mmObject();
 			isDerived = false;
 			xmlTag = "InvstmtAcctDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestmentAccountDetails";
 			definition = "Account information of the individual order confirmation for which the status is given.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.IndividualOrderConfirmationStatusAndReason1.mmInvestmentAccountDetails;
+			previousVersion_lazy = () -> IndividualOrderConfirmationStatusAndReason1.mmInvestmentAccountDetails;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -524,14 +527,14 @@ public class IndividualOrderConfirmationStatusAndReason2 {
 	 */
 	public static final MMMessageAssociationEnd mmFinancialInstrumentDetails = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundTransaction.mmInvestmentFundClass;
+			businessElementTrace_lazy = () -> InvestmentFundTransaction.mmInvestmentFundClass;
 			componentContext_lazy = () -> IndividualOrderConfirmationStatusAndReason2.mmObject();
 			isDerived = false;
 			xmlTag = "FinInstrmDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentDetails";
 			definition = "Financial instrument information of the individual order confirmation for which the status is given.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.IndividualOrderConfirmationStatusAndReason1.mmFinancialInstrumentDetails;
+			previousVersion_lazy = () -> IndividualOrderConfirmationStatusAndReason1.mmFinancialInstrumentDetails;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -542,15 +545,13 @@ public class IndividualOrderConfirmationStatusAndReason2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IndividualOrderConfirmationStatusAndReason2.mmMasterReference,
-						com.tools20022.repository.msg.IndividualOrderConfirmationStatusAndReason2.mmOrderReference, com.tools20022.repository.msg.IndividualOrderConfirmationStatusAndReason2.mmConfirmation,
-						com.tools20022.repository.msg.IndividualOrderConfirmationStatusAndReason2.mmClientReference, com.tools20022.repository.msg.IndividualOrderConfirmationStatusAndReason2.mmDealReference,
-						com.tools20022.repository.msg.IndividualOrderConfirmationStatusAndReason2.mmStatusInitiator, com.tools20022.repository.msg.IndividualOrderConfirmationStatusAndReason2.mmInvestmentAccountDetails,
-						com.tools20022.repository.msg.IndividualOrderConfirmationStatusAndReason2.mmFinancialInstrumentDetails);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.OrderConfirmationStatusReportV02.mmIndividualOrderConfirmationDetailsReport);
+				messageElement_lazy = () -> Arrays.asList(IndividualOrderConfirmationStatusAndReason2.mmMasterReference, IndividualOrderConfirmationStatusAndReason2.mmOrderReference,
+						IndividualOrderConfirmationStatusAndReason2.mmConfirmation, IndividualOrderConfirmationStatusAndReason2.mmClientReference, IndividualOrderConfirmationStatusAndReason2.mmDealReference,
+						IndividualOrderConfirmationStatusAndReason2.mmStatusInitiator, IndividualOrderConfirmationStatusAndReason2.mmInvestmentAccountDetails, IndividualOrderConfirmationStatusAndReason2.mmFinancialInstrumentDetails);
+				messageBuildingBlock_lazy = () -> Arrays.asList(OrderConfirmationStatusReportV02.mmIndividualOrderConfirmationDetailsReport);
 				trace_lazy = () -> InvestmentFundOrder.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "IndividualOrderConfirmationStatusAndReason2";
 				definition = "Status report of the individual orders confirmation that was previously received.";
 				previousVersion_lazy = () -> IndividualOrderConfirmationStatusAndReason1.mmObject();

@@ -19,10 +19,12 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.DateFormat34Choice;
 import com.tools20022.repository.choice.PartyIdentification103Choice;
 import com.tools20022.repository.entity.CorporateActionDeadline;
 import com.tools20022.repository.entity.CorporateActionPartyRole;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -102,11 +104,11 @@ public class BorrowerLendingDeadline2 {
 	 */
 	public static final MMMessageAssociationEnd mmStockLendingDeadline = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionDeadline.mmStockLendingDeadline;
+			businessElementTrace_lazy = () -> CorporateActionDeadline.mmStockLendingDeadline;
 			componentContext_lazy = () -> BorrowerLendingDeadline2.mmObject();
 			isDerived = false;
 			xmlTag = "StockLndgDdln";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StockLendingDeadline";
 			definition = "Date/time set as the deadline to respond, with instructions, to an outstanding event, for which the underlying security is out on loan.";
 			maxOccurs = 1;
@@ -154,7 +156,7 @@ public class BorrowerLendingDeadline2 {
 			componentContext_lazy = () -> BorrowerLendingDeadline2.mmObject();
 			isDerived = false;
 			xmlTag = "Brrwr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Borrower";
 			definition = "Party who has borrowed stocks on loan.";
 			maxOccurs = 1;
@@ -167,10 +169,10 @@ public class BorrowerLendingDeadline2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BorrowerLendingDeadline2.mmStockLendingDeadline, com.tools20022.repository.msg.BorrowerLendingDeadline2.mmBorrower);
+				messageElement_lazy = () -> Arrays.asList(BorrowerLendingDeadline2.mmStockLendingDeadline, BorrowerLendingDeadline2.mmBorrower);
 				trace_lazy = () -> CorporateActionDeadline.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "BorrowerLendingDeadline2";
 				definition = "Stock lending deadline assigned to a borrower of the stock.";
 			}

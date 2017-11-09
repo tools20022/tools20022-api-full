@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.TaxRecordCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -96,7 +98,7 @@ public class TaxRecord1Code extends TaxRecordCode {
 	 */
 	public static final MMCode mmWithholdingTax = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WithholdingTax";
 			owner_lazy = () -> TaxRecord1Code.mmObject();
 		}
@@ -119,7 +121,7 @@ public class TaxRecord1Code extends TaxRecordCode {
 	 */
 	public static final MMCode mmValueAddedTax = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValueAddedTax";
 			owner_lazy = () -> TaxRecord1Code.mmObject();
 		}
@@ -142,7 +144,7 @@ public class TaxRecord1Code extends TaxRecordCode {
 	 */
 	public static final MMCode mmIncomePaymentDetails = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncomePaymentDetails";
 			owner_lazy = () -> TaxRecord1Code.mmObject();
 		}
@@ -165,7 +167,7 @@ public class TaxRecord1Code extends TaxRecordCode {
 	 */
 	public static final MMCode mmTotalAmountForIncomePayments = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalAmountForIncomePayments";
 			owner_lazy = () -> TaxRecord1Code.mmObject();
 		}
@@ -188,7 +190,7 @@ public class TaxRecord1Code extends TaxRecordCode {
 	 */
 	public static final MMCode mmMoneyPaymentDetails = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MoneyPaymentDetails";
 			owner_lazy = () -> TaxRecord1Code.mmObject();
 		}
@@ -211,7 +213,7 @@ public class TaxRecord1Code extends TaxRecordCode {
 	 */
 	public static final MMCode mmTotalAmountForMoneyPayments = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalAmountForMoneyPayments";
 			owner_lazy = () -> TaxRecord1Code.mmObject();
 		}
@@ -234,7 +236,7 @@ public class TaxRecord1Code extends TaxRecordCode {
 	 */
 	public static final MMCode mmOther = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
 			owner_lazy = () -> TaxRecord1Code.mmObject();
 		}
@@ -243,14 +245,13 @@ public class TaxRecord1Code extends TaxRecordCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("WHTX");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TaxRecord1Code";
 				definition = "Specifies the type of tax details.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TaxRecord1Code.mmWithholdingTax, com.tools20022.repository.codeset.TaxRecord1Code.mmValueAddedTax,
-						com.tools20022.repository.codeset.TaxRecord1Code.mmIncomePaymentDetails, com.tools20022.repository.codeset.TaxRecord1Code.mmTotalAmountForIncomePayments,
-						com.tools20022.repository.codeset.TaxRecord1Code.mmMoneyPaymentDetails, com.tools20022.repository.codeset.TaxRecord1Code.mmTotalAmountForMoneyPayments, com.tools20022.repository.codeset.TaxRecord1Code.mmOther);
+				code_lazy = () -> Arrays.asList(TaxRecord1Code.mmWithholdingTax, TaxRecord1Code.mmValueAddedTax, TaxRecord1Code.mmIncomePaymentDetails, TaxRecord1Code.mmTotalAmountForIncomePayments, TaxRecord1Code.mmMoneyPaymentDetails,
+						TaxRecord1Code.mmTotalAmountForMoneyPayments, TaxRecord1Code.mmOther);
 				trace_lazy = () -> TaxRecordCode.mmObject();
 			}
 		});

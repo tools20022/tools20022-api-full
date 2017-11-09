@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ConfirmationCancellationReasonCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -137,7 +139,7 @@ public class ConfirmationCancellationReason1Code extends ConfirmationCancellatio
 	 */
 	public static final MMCode mmCashNotReceived = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashNotReceived";
 			owner_lazy = () -> ConfirmationCancellationReason1Code.mmObject();
 		}
@@ -160,7 +162,7 @@ public class ConfirmationCancellationReason1Code extends ConfirmationCancellatio
 	 */
 	public static final MMCode mmConfirmationReplacement = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConfirmationReplacement";
 			owner_lazy = () -> ConfirmationCancellationReason1Code.mmObject();
 		}
@@ -183,7 +185,7 @@ public class ConfirmationCancellationReason1Code extends ConfirmationCancellatio
 	 */
 	public static final MMCode mmIncorrectBackEndLoadAmount = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncorrectBackEndLoadAmount";
 			owner_lazy = () -> ConfirmationCancellationReason1Code.mmObject();
 		}
@@ -206,7 +208,7 @@ public class ConfirmationCancellationReason1Code extends ConfirmationCancellatio
 	 */
 	public static final MMCode mmIncorrectCashAmount = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncorrectCashAmount";
 			owner_lazy = () -> ConfirmationCancellationReason1Code.mmObject();
 		}
@@ -229,7 +231,7 @@ public class ConfirmationCancellationReason1Code extends ConfirmationCancellatio
 	 */
 	public static final MMCode mmIncorrectDiscountAmount = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncorrectDiscountAmount";
 			owner_lazy = () -> ConfirmationCancellationReason1Code.mmObject();
 		}
@@ -252,7 +254,7 @@ public class ConfirmationCancellationReason1Code extends ConfirmationCancellatio
 	 */
 	public static final MMCode mmIncorrectDiscountAmountCurrency = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncorrectDiscountAmountCurrency";
 			owner_lazy = () -> ConfirmationCancellationReason1Code.mmObject();
 		}
@@ -275,7 +277,7 @@ public class ConfirmationCancellationReason1Code extends ConfirmationCancellatio
 	 */
 	public static final MMCode mmIncorrectExchangeRate = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncorrectExchangeRate";
 			owner_lazy = () -> ConfirmationCancellationReason1Code.mmObject();
 		}
@@ -298,7 +300,7 @@ public class ConfirmationCancellationReason1Code extends ConfirmationCancellatio
 	 */
 	public static final MMCode mmIncorrectFeeOrCommission = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncorrectFeeOrCommission";
 			owner_lazy = () -> ConfirmationCancellationReason1Code.mmObject();
 		}
@@ -321,7 +323,7 @@ public class ConfirmationCancellationReason1Code extends ConfirmationCancellatio
 	 */
 	public static final MMCode mmIncorrectFinancialInstrumentQuantity = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncorrectFinancialInstrumentQuantity";
 			owner_lazy = () -> ConfirmationCancellationReason1Code.mmObject();
 		}
@@ -344,7 +346,7 @@ public class ConfirmationCancellationReason1Code extends ConfirmationCancellatio
 	 */
 	public static final MMCode mmIncorrectFrontEndLoadAmount = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncorrectFrontEndLoadAmount";
 			owner_lazy = () -> ConfirmationCancellationReason1Code.mmObject();
 		}
@@ -367,7 +369,7 @@ public class ConfirmationCancellationReason1Code extends ConfirmationCancellatio
 	 */
 	public static final MMCode mmIncorrectGrossAmount = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncorrectGrossAmount";
 			owner_lazy = () -> ConfirmationCancellationReason1Code.mmObject();
 		}
@@ -390,7 +392,7 @@ public class ConfirmationCancellationReason1Code extends ConfirmationCancellatio
 	 */
 	public static final MMCode mmIncorrectGrossAmountCurrency = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncorrectGrossAmountCurrency";
 			owner_lazy = () -> ConfirmationCancellationReason1Code.mmObject();
 		}
@@ -413,7 +415,7 @@ public class ConfirmationCancellationReason1Code extends ConfirmationCancellatio
 	 */
 	public static final MMCode mmIncorrectNetAmount = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncorrectNetAmount";
 			owner_lazy = () -> ConfirmationCancellationReason1Code.mmObject();
 		}
@@ -436,7 +438,7 @@ public class ConfirmationCancellationReason1Code extends ConfirmationCancellatio
 	 */
 	public static final MMCode mmIncorrectNetAmountCurrency = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncorrectNetAmountCurrency";
 			owner_lazy = () -> ConfirmationCancellationReason1Code.mmObject();
 		}
@@ -459,7 +461,7 @@ public class ConfirmationCancellationReason1Code extends ConfirmationCancellatio
 	 */
 	public static final MMCode mmIncorrectOperation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncorrectOperation";
 			owner_lazy = () -> ConfirmationCancellationReason1Code.mmObject();
 		}
@@ -482,7 +484,7 @@ public class ConfirmationCancellationReason1Code extends ConfirmationCancellatio
 	 */
 	public static final MMCode mmIncorrectQuantityUnitsOrCash = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncorrectQuantityUnitsOrCash";
 			owner_lazy = () -> ConfirmationCancellationReason1Code.mmObject();
 		}
@@ -505,7 +507,7 @@ public class ConfirmationCancellationReason1Code extends ConfirmationCancellatio
 	 */
 	public static final MMCode mmIncorrectSettlementAmount = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncorrectSettlementAmount";
 			owner_lazy = () -> ConfirmationCancellationReason1Code.mmObject();
 		}
@@ -528,7 +530,7 @@ public class ConfirmationCancellationReason1Code extends ConfirmationCancellatio
 	 */
 	public static final MMCode mmIncorrectSettlementAmountCurrency = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncorrectSettlementAmountCurrency";
 			owner_lazy = () -> ConfirmationCancellationReason1Code.mmObject();
 		}
@@ -551,7 +553,7 @@ public class ConfirmationCancellationReason1Code extends ConfirmationCancellatio
 	 */
 	public static final MMCode mmIncorrectSettlementDate = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncorrectSettlementDate";
 			owner_lazy = () -> ConfirmationCancellationReason1Code.mmObject();
 		}
@@ -574,7 +576,7 @@ public class ConfirmationCancellationReason1Code extends ConfirmationCancellatio
 	 */
 	public static final MMCode mmIncorrectSettlementMethod = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncorrectSettlementMethod";
 			owner_lazy = () -> ConfirmationCancellationReason1Code.mmObject();
 		}
@@ -597,7 +599,7 @@ public class ConfirmationCancellationReason1Code extends ConfirmationCancellatio
 	 */
 	public static final MMCode mmIncorrectTradeDate = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncorrectTradeDate";
 			owner_lazy = () -> ConfirmationCancellationReason1Code.mmObject();
 		}
@@ -620,7 +622,7 @@ public class ConfirmationCancellationReason1Code extends ConfirmationCancellatio
 	 */
 	public static final MMCode mmInvalidReference = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvalidReference";
 			owner_lazy = () -> ConfirmationCancellationReason1Code.mmObject();
 		}
@@ -629,21 +631,18 @@ public class ConfirmationCancellationReason1Code extends ConfirmationCancellatio
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ConfirmationCancellationReason1Code";
 				definition = "Specifies the reason why a confirmation is cancelled.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ConfirmationCancellationReason1Code.mmCashNotReceived, com.tools20022.repository.codeset.ConfirmationCancellationReason1Code.mmConfirmationReplacement,
-						com.tools20022.repository.codeset.ConfirmationCancellationReason1Code.mmIncorrectBackEndLoadAmount, com.tools20022.repository.codeset.ConfirmationCancellationReason1Code.mmIncorrectCashAmount,
-						com.tools20022.repository.codeset.ConfirmationCancellationReason1Code.mmIncorrectDiscountAmount, com.tools20022.repository.codeset.ConfirmationCancellationReason1Code.mmIncorrectDiscountAmountCurrency,
-						com.tools20022.repository.codeset.ConfirmationCancellationReason1Code.mmIncorrectExchangeRate, com.tools20022.repository.codeset.ConfirmationCancellationReason1Code.mmIncorrectFeeOrCommission,
-						com.tools20022.repository.codeset.ConfirmationCancellationReason1Code.mmIncorrectFinancialInstrumentQuantity, com.tools20022.repository.codeset.ConfirmationCancellationReason1Code.mmIncorrectFrontEndLoadAmount,
-						com.tools20022.repository.codeset.ConfirmationCancellationReason1Code.mmIncorrectGrossAmount, com.tools20022.repository.codeset.ConfirmationCancellationReason1Code.mmIncorrectGrossAmountCurrency,
-						com.tools20022.repository.codeset.ConfirmationCancellationReason1Code.mmIncorrectNetAmount, com.tools20022.repository.codeset.ConfirmationCancellationReason1Code.mmIncorrectNetAmountCurrency,
-						com.tools20022.repository.codeset.ConfirmationCancellationReason1Code.mmIncorrectOperation, com.tools20022.repository.codeset.ConfirmationCancellationReason1Code.mmIncorrectQuantityUnitsOrCash,
-						com.tools20022.repository.codeset.ConfirmationCancellationReason1Code.mmIncorrectSettlementAmount, com.tools20022.repository.codeset.ConfirmationCancellationReason1Code.mmIncorrectSettlementAmountCurrency,
-						com.tools20022.repository.codeset.ConfirmationCancellationReason1Code.mmIncorrectSettlementDate, com.tools20022.repository.codeset.ConfirmationCancellationReason1Code.mmIncorrectSettlementMethod,
-						com.tools20022.repository.codeset.ConfirmationCancellationReason1Code.mmIncorrectTradeDate, com.tools20022.repository.codeset.ConfirmationCancellationReason1Code.mmInvalidReference);
+				code_lazy = () -> Arrays.asList(ConfirmationCancellationReason1Code.mmCashNotReceived, ConfirmationCancellationReason1Code.mmConfirmationReplacement, ConfirmationCancellationReason1Code.mmIncorrectBackEndLoadAmount,
+						ConfirmationCancellationReason1Code.mmIncorrectCashAmount, ConfirmationCancellationReason1Code.mmIncorrectDiscountAmount, ConfirmationCancellationReason1Code.mmIncorrectDiscountAmountCurrency,
+						ConfirmationCancellationReason1Code.mmIncorrectExchangeRate, ConfirmationCancellationReason1Code.mmIncorrectFeeOrCommission, ConfirmationCancellationReason1Code.mmIncorrectFinancialInstrumentQuantity,
+						ConfirmationCancellationReason1Code.mmIncorrectFrontEndLoadAmount, ConfirmationCancellationReason1Code.mmIncorrectGrossAmount, ConfirmationCancellationReason1Code.mmIncorrectGrossAmountCurrency,
+						ConfirmationCancellationReason1Code.mmIncorrectNetAmount, ConfirmationCancellationReason1Code.mmIncorrectNetAmountCurrency, ConfirmationCancellationReason1Code.mmIncorrectOperation,
+						ConfirmationCancellationReason1Code.mmIncorrectQuantityUnitsOrCash, ConfirmationCancellationReason1Code.mmIncorrectSettlementAmount, ConfirmationCancellationReason1Code.mmIncorrectSettlementAmountCurrency,
+						ConfirmationCancellationReason1Code.mmIncorrectSettlementDate, ConfirmationCancellationReason1Code.mmIncorrectSettlementMethod, ConfirmationCancellationReason1Code.mmIncorrectTradeDate,
+						ConfirmationCancellationReason1Code.mmInvalidReference);
 				trace_lazy = () -> ConfirmationCancellationReasonCode.mmObject();
 			}
 		});

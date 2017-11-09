@@ -17,14 +17,13 @@
 
 package com.tools20022.repository.entity;
 
-import com.tools20022.metamodel.MMBusinessAssociationEnd;
-import com.tools20022.metamodel.MMBusinessAttribute;
-import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.*;
 import com.tools20022.repository.choice.ISAPortfolio1Choice;
 import com.tools20022.repository.choice.ISAPortfolio2Choice;
 import com.tools20022.repository.choice.ISAPortfolio3Choice;
 import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.Portfolio1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -40,28 +39,17 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Portfolio#mmValuation
- * Portfolio.mmValuation}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Portfolio#mmTransfer
- * Portfolio.mmTransfer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.Portfolio#mmAssetDescription
- * Portfolio.mmAssetDescription}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Portfolio#mmName
- * Portfolio.mmName}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Portfolio#mmIdentification
- * Portfolio.mmIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Portfolio#mmStrategy
- * Portfolio.mmStrategy}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Portfolio#mmBenchmark
- * Portfolio.mmBenchmark}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Portfolio#mmInvestmentPlan
- * Portfolio.mmInvestmentPlan}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Portfolio#mmAccount
- * Portfolio.mmAccount}</li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.Portfolio1 Portfolio1}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.ISAPortfolio1Choice
+ * ISAPortfolio1Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.ISAPortfolio2Choice
+ * ISAPortfolio2Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.ISAPortfolio3Choice
+ * ISAPortfolio3Choice}</li>
  * </ul>
  * </li>
  * <li>
@@ -107,17 +95,28 @@ import java.util.List;
  * ISAPortfolio3Choice.mmPortfolio}</li>
  * </ul>
  * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Portfolio1 Portfolio1}</li>
- * <li>{@linkplain com.tools20022.repository.choice.ISAPortfolio1Choice
- * ISAPortfolio1Choice}</li>
- * <li>{@linkplain com.tools20022.repository.choice.ISAPortfolio2Choice
- * ISAPortfolio2Choice}</li>
- * <li>{@linkplain com.tools20022.repository.choice.ISAPortfolio3Choice
- * ISAPortfolio3Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Portfolio#mmValuation
+ * Portfolio.mmValuation}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Portfolio#mmTransfer
+ * Portfolio.mmTransfer}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Portfolio#mmAssetDescription
+ * Portfolio.mmAssetDescription}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Portfolio#mmName
+ * Portfolio.mmName}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Portfolio#mmIdentification
+ * Portfolio.mmIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Portfolio#mmStrategy
+ * Portfolio.mmStrategy}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Portfolio#mmBenchmark
+ * Portfolio.mmBenchmark}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Portfolio#mmInvestmentPlan
+ * Portfolio.mmInvestmentPlan}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Portfolio#mmAccount
+ * Portfolio.mmAccount}</li>
  * </ul>
  * </li>
  * <li>
@@ -177,13 +176,13 @@ public class Portfolio {
 		{
 			elementContext_lazy = () -> Portfolio.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Valuation";
 			definition = "Valuation process for the portfolio.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.PortfolioValuation.mmPortfolio;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.PortfolioValuation.mmObject();
 		}
 	};
@@ -236,16 +235,16 @@ public class Portfolio {
 	 */
 	public static final MMBusinessAssociationEnd mmTransfer = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ISAPortfolio1Choice.mmISA, com.tools20022.repository.choice.ISAPortfolio2Choice.mmISA, com.tools20022.repository.choice.ISAPortfolio3Choice.mmISA);
+			derivation_lazy = () -> Arrays.asList(ISAPortfolio1Choice.mmISA, ISAPortfolio2Choice.mmISA, ISAPortfolio3Choice.mmISA);
 			elementContext_lazy = () -> Portfolio.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Transfer";
 			definition = "Transfer information related to a portfolio.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.PortfolioTransfer.mmTransferredPortfolio;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.PortfolioTransfer.mmObject();
 		}
 	};
@@ -287,12 +286,12 @@ public class Portfolio {
 		{
 			elementContext_lazy = () -> Portfolio.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AssetDescription";
 			definition = "Specifies the assets included in the portfolio together with their value.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.Asset.mmPortfolio;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Asset.mmObject();
 		}
 	};
@@ -325,7 +324,7 @@ public class Portfolio {
 		{
 			elementContext_lazy = () -> Portfolio.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Name";
 			definition = "Name of the portfolio.";
 			maxOccurs = 1;
@@ -362,7 +361,7 @@ public class Portfolio {
 		{
 			elementContext_lazy = () -> Portfolio.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Identification";
 			definition = "Identification of the portfolio.";
 			maxOccurs = 1;
@@ -407,12 +406,12 @@ public class Portfolio {
 		{
 			elementContext_lazy = () -> Portfolio.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Strategy";
 			definition = "Strategy set for the portfolio.";
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.PortfolioStrategy.mmPortfolio;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.PortfolioStrategy.mmObject();
 		}
 	};
@@ -453,12 +452,12 @@ public class Portfolio {
 		{
 			elementContext_lazy = () -> Portfolio.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Benchmark";
 			definition = "Information on the benchmark set for the portfolio.";
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.PortfolioBenchmark.mmPortfolio;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.PortfolioBenchmark.mmObject();
 		}
 	};
@@ -499,13 +498,13 @@ public class Portfolio {
 		{
 			elementContext_lazy = () -> Portfolio.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InvestmentPlan";
 			definition = "Investment plan associated with a portfolio.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.InvestmentPlan.mmPortfolio;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.InvestmentPlan.mmObject();
 		}
 	};
@@ -546,13 +545,13 @@ public class Portfolio {
 		{
 			elementContext_lazy = () -> Portfolio.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Account";
 			definition = "Account on which the portfolio is held.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.InvestmentAccount.mmPortfolio;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.InvestmentAccount.mmObject();
 		}
 	};
@@ -560,18 +559,16 @@ public class Portfolio {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Portfolio";
 				definition = "Wrapper for a specific product or a specific sub-product owned by a set of beneficial owners.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Asset.mmPortfolio, com.tools20022.repository.entity.InvestmentAccount.mmPortfolio, com.tools20022.repository.entity.InvestmentPlan.mmPortfolio,
 						com.tools20022.repository.entity.PortfolioTransfer.mmTransferredPortfolio, com.tools20022.repository.entity.PortfolioValuation.mmPortfolio, com.tools20022.repository.entity.PortfolioStrategy.mmPortfolio,
 						com.tools20022.repository.entity.PortfolioBenchmark.mmPortfolio);
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Portfolio1.mmPortfolioInformation, com.tools20022.repository.choice.ISAPortfolio1Choice.mmPortfolio,
-						com.tools20022.repository.choice.ISAPortfolio2Choice.mmPortfolio, com.tools20022.repository.choice.ISAPortfolio3Choice.mmPortfolio);
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Portfolio.mmValuation, com.tools20022.repository.entity.Portfolio.mmTransfer, com.tools20022.repository.entity.Portfolio.mmAssetDescription,
-						com.tools20022.repository.entity.Portfolio.mmName, com.tools20022.repository.entity.Portfolio.mmIdentification, com.tools20022.repository.entity.Portfolio.mmStrategy,
-						com.tools20022.repository.entity.Portfolio.mmBenchmark, com.tools20022.repository.entity.Portfolio.mmInvestmentPlan, com.tools20022.repository.entity.Portfolio.mmAccount);
+				derivationElement_lazy = () -> Arrays.asList(Portfolio1.mmPortfolioInformation, ISAPortfolio1Choice.mmPortfolio, ISAPortfolio2Choice.mmPortfolio, ISAPortfolio3Choice.mmPortfolio);
+				element_lazy = () -> Arrays.asList(Portfolio.mmValuation, Portfolio.mmTransfer, Portfolio.mmAssetDescription, Portfolio.mmName, Portfolio.mmIdentification, Portfolio.mmStrategy, Portfolio.mmBenchmark,
+						Portfolio.mmInvestmentPlan, Portfolio.mmAccount);
 				derivationComponent_lazy = () -> Arrays.asList(Portfolio1.mmObject(), ISAPortfolio1Choice.mmObject(), ISAPortfolio2Choice.mmObject(), ISAPortfolio3Choice.mmObject());
 			}
 		});

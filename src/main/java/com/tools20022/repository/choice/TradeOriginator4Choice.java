@@ -19,8 +19,10 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.OriginatorRole2Code;
 import com.tools20022.repository.entity.TradeOriginatorRole;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification47;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -99,11 +101,11 @@ public class TradeOriginator4Choice {
 	 */
 	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradeOriginatorRole.mmOriginatorRole;
+			businessElementTrace_lazy = () -> TradeOriginatorRole.mmOriginatorRole;
 			componentContext_lazy = () -> TradeOriginator4Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Cd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Trading party capacity expressed as an ISO 20022 code.";
 			maxOccurs = 1;
@@ -147,11 +149,11 @@ public class TradeOriginator4Choice {
 	 */
 	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradeOriginatorRole.mmOriginatorRole;
+			businessElementTrace_lazy = () -> TradeOriginatorRole.mmOriginatorRole;
 			componentContext_lazy = () -> TradeOriginator4Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Trading party capacity expressed as a proprietary code.";
 			maxOccurs = 1;
@@ -163,10 +165,10 @@ public class TradeOriginator4Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.TradeOriginator4Choice.mmCode, com.tools20022.repository.choice.TradeOriginator4Choice.mmProprietary);
+				messageElement_lazy = () -> Arrays.asList(TradeOriginator4Choice.mmCode, TradeOriginator4Choice.mmProprietary);
 				trace_lazy = () -> TradeOriginatorRole.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TradeOriginator4Choice";
 				definition = "Choice of format for the trading capacity of the party.";
 			}

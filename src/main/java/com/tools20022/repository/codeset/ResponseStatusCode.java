@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -29,6 +31,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.ResponseStatus1Code
+ * ResponseStatus1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -43,13 +52,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.ResponseStatusCode#mmSubstitutionAccepted
  * ResponseStatusCode.mmSubstitutionAccepted}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.ResponseStatus1Code
- * ResponseStatus1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -101,7 +103,7 @@ public class ResponseStatusCode {
 	 */
 	public static final MMCode mmPartlyAccepted = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartlyAccepted";
 			definition = "Part of the collateral is accepted, a part rejected.";
 			owner_lazy = () -> ResponseStatusCode.mmObject();
@@ -131,7 +133,7 @@ public class ResponseStatusCode {
 	 */
 	public static final MMCode mmAccepted = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Accepted";
 			definition = "Claim, substitution, proposal is fully accepted.";
 			owner_lazy = () -> ResponseStatusCode.mmObject();
@@ -161,7 +163,7 @@ public class ResponseStatusCode {
 	 */
 	public static final MMCode mmRejected = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rejected";
 			definition = "Claim, substitution, proposal is fully rejected.";
 			owner_lazy = () -> ResponseStatusCode.mmObject();
@@ -194,7 +196,7 @@ public class ResponseStatusCode {
 	 */
 	public static final MMCode mmSubstitutionAccepted = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubstitutionAccepted";
 			definition = "Party A agrees with the return part of the substitution and accepts to wait for the proposal of the new collateral.";
 			owner_lazy = () -> ResponseStatusCode.mmObject();
@@ -205,13 +207,12 @@ public class ResponseStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ACCP");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ResponseStatusCode";
 				definition = "Specifies the status of the received collateral message (collateral claim, a collateral proposal or a proposal/request for collateral substitution) from a collateral management perspective.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ResponseStatusCode.mmPartlyAccepted, com.tools20022.repository.codeset.ResponseStatusCode.mmAccepted,
-						com.tools20022.repository.codeset.ResponseStatusCode.mmRejected, com.tools20022.repository.codeset.ResponseStatusCode.mmSubstitutionAccepted);
+				code_lazy = () -> Arrays.asList(ResponseStatusCode.mmPartlyAccepted, ResponseStatusCode.mmAccepted, ResponseStatusCode.mmRejected, ResponseStatusCode.mmSubstitutionAccepted);
 				derivation_lazy = () -> Arrays.asList(ResponseStatus1Code.mmObject());
 			}
 		});

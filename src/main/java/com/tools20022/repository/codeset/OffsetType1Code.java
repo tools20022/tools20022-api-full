@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.OffsetTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -89,7 +91,7 @@ public class OffsetType1Code extends OffsetTypeCode {
 	 */
 	public static final MMCode mmPrice = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Price";
 			owner_lazy = () -> OffsetType1Code.mmObject();
 		}
@@ -112,7 +114,7 @@ public class OffsetType1Code extends OffsetTypeCode {
 	 */
 	public static final MMCode mmBasisPoint = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BasisPoint";
 			owner_lazy = () -> OffsetType1Code.mmObject();
 		}
@@ -135,7 +137,7 @@ public class OffsetType1Code extends OffsetTypeCode {
 	 */
 	public static final MMCode mmTick = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Tick";
 			owner_lazy = () -> OffsetType1Code.mmObject();
 		}
@@ -158,7 +160,7 @@ public class OffsetType1Code extends OffsetTypeCode {
 	 */
 	public static final MMCode mmPriceTierLevel = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PriceTierLevel";
 			owner_lazy = () -> OffsetType1Code.mmObject();
 		}
@@ -167,13 +169,12 @@ public class OffsetType1Code extends OffsetTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("PRIC");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OffsetType1Code";
 				definition = "Type of peg offset or type of discretion offset (e.g. price offset, tick offset etc).";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OffsetType1Code.mmPrice, com.tools20022.repository.codeset.OffsetType1Code.mmBasisPoint, com.tools20022.repository.codeset.OffsetType1Code.mmTick,
-						com.tools20022.repository.codeset.OffsetType1Code.mmPriceTierLevel);
+				code_lazy = () -> Arrays.asList(OffsetType1Code.mmPrice, OffsetType1Code.mmBasisPoint, OffsetType1Code.mmTick, OffsetType1Code.mmPriceTierLevel);
 				trace_lazy = () -> OffsetTypeCode.mmObject();
 			}
 		});

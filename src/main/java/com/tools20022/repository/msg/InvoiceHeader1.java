@@ -20,6 +20,8 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.tsin.FinancialInvoiceV01;
 import com.tools20022.repository.codeset.ExternalDocumentPurpose1Code;
 import com.tools20022.repository.codeset.ExternalDocumentType1Code;
 import com.tools20022.repository.codeset.LanguageCode;
@@ -28,6 +30,8 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.Document;
 import com.tools20022.repository.entity.DocumentIssuer;
+import com.tools20022.repository.entity.GenericIdentification;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -143,14 +147,14 @@ public class InvoiceHeader1 {
 	 */
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmIdentification;
+			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> InvoiceHeader1.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Unique identification of this invoice document.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvoiceHeader2.mmIdentification);
+			nextVersions_lazy = () -> Arrays.asList(InvoiceHeader2.mmIdentification);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -199,14 +203,14 @@ public class InvoiceHeader1 {
 	 */
 	public static final MMMessageAttribute mmTypeCode = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Document.mmType;
+			businessElementTrace_lazy = () -> Document.mmType;
 			componentContext_lazy = () -> InvoiceHeader1.mmObject();
 			isDerived = false;
 			xmlTag = "TpCd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TypeCode";
 			definition = "Specifies the type of the document, for example commercial invoice.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvoiceHeader2.mmTypeCode);
+			nextVersions_lazy = () -> Arrays.asList(InvoiceHeader2.mmTypeCode);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ExternalDocumentType1Code.mmObject();
@@ -254,14 +258,14 @@ public class InvoiceHeader1 {
 	 */
 	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Document.mmDocumentIdentification;
+			businessElementTrace_lazy = () -> Document.mmDocumentIdentification;
 			componentContext_lazy = () -> InvoiceHeader1.mmObject();
 			isDerived = false;
 			xmlTag = "Nm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Name";
 			definition = "Name of invoice document or transaction, for example, tax invoice.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvoiceHeader2.mmName);
+			nextVersions_lazy = () -> Arrays.asList(InvoiceHeader2.mmName);
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
@@ -308,14 +312,14 @@ public class InvoiceHeader1 {
 	 */
 	public static final MMMessageAttribute mmIssueDateTime = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Document.mmIssueDate;
+			businessElementTrace_lazy = () -> Document.mmIssueDate;
 			componentContext_lazy = () -> InvoiceHeader1.mmObject();
 			isDerived = false;
 			xmlTag = "IsseDtTm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssueDateTime";
 			definition = "Issue date of the document.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvoiceHeader2.mmIssueDateTime);
+			nextVersions_lazy = () -> Arrays.asList(InvoiceHeader2.mmIssueDateTime);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
@@ -365,10 +369,10 @@ public class InvoiceHeader1 {
 			componentContext_lazy = () -> InvoiceHeader1.mmObject();
 			isDerived = false;
 			xmlTag = "Issr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Issuer";
 			definition = "Party that issued this invoice document.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvoiceHeader2.mmIssuer);
+			nextVersions_lazy = () -> Arrays.asList(InvoiceHeader2.mmIssuer);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -418,14 +422,14 @@ public class InvoiceHeader1 {
 	 */
 	public static final MMMessageAttribute mmLanguageCode = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Document.mmLanguage;
+			businessElementTrace_lazy = () -> Document.mmLanguage;
 			componentContext_lazy = () -> InvoiceHeader1.mmObject();
 			isDerived = false;
 			xmlTag = "LangCd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LanguageCode";
 			definition = "Unique identifier for a language used in this invoice document.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvoiceHeader2.mmLanguageCode);
+			nextVersions_lazy = () -> Arrays.asList(InvoiceHeader2.mmLanguageCode);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> LanguageCode.mmObject();
@@ -473,10 +477,10 @@ public class InvoiceHeader1 {
 			componentContext_lazy = () -> InvoiceHeader1.mmObject();
 			isDerived = false;
 			xmlTag = "CpyInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CopyIndicator";
 			definition = "Indicator that the document is a copy of the\noriginal document.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvoiceHeader2.mmCopyIndicator);
+			nextVersions_lazy = () -> Arrays.asList(InvoiceHeader2.mmCopyIndicator);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
@@ -525,14 +529,14 @@ public class InvoiceHeader1 {
 	 */
 	public static final MMMessageAttribute mmDocumentPurpose = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Document.mmPurpose;
+			businessElementTrace_lazy = () -> Document.mmPurpose;
 			componentContext_lazy = () -> InvoiceHeader1.mmObject();
 			isDerived = false;
 			xmlTag = "DocPurp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DocumentPurpose";
 			definition = "Specifies the function of the document.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvoiceHeader2.mmDocumentPurpose);
+			nextVersions_lazy = () -> Arrays.asList(InvoiceHeader2.mmDocumentPurpose);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ExternalDocumentPurpose1Code.mmObject();
@@ -579,10 +583,10 @@ public class InvoiceHeader1 {
 			componentContext_lazy = () -> InvoiceHeader1.mmObject();
 			isDerived = false;
 			xmlTag = "InclNote";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncludedNote";
 			definition = "Note included in this invoice document.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvoiceHeader2.mmIncludedNote);
+			nextVersions_lazy = () -> Arrays.asList(InvoiceHeader2.mmIncludedNote);
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.AdditionalInformation6.mmObject();
 		}
@@ -591,13 +595,12 @@ public class InvoiceHeader1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvoiceHeader1.mmIdentification, com.tools20022.repository.msg.InvoiceHeader1.mmTypeCode, com.tools20022.repository.msg.InvoiceHeader1.mmName,
-						com.tools20022.repository.msg.InvoiceHeader1.mmIssueDateTime, com.tools20022.repository.msg.InvoiceHeader1.mmIssuer, com.tools20022.repository.msg.InvoiceHeader1.mmLanguageCode,
-						com.tools20022.repository.msg.InvoiceHeader1.mmCopyIndicator, com.tools20022.repository.msg.InvoiceHeader1.mmDocumentPurpose, com.tools20022.repository.msg.InvoiceHeader1.mmIncludedNote);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsin.FinancialInvoiceV01.mmInvoiceHeader);
+				messageElement_lazy = () -> Arrays.asList(InvoiceHeader1.mmIdentification, InvoiceHeader1.mmTypeCode, InvoiceHeader1.mmName, InvoiceHeader1.mmIssueDateTime, InvoiceHeader1.mmIssuer, InvoiceHeader1.mmLanguageCode,
+						InvoiceHeader1.mmCopyIndicator, InvoiceHeader1.mmDocumentPurpose, InvoiceHeader1.mmIncludedNote);
+				messageBuildingBlock_lazy = () -> Arrays.asList(FinancialInvoiceV01.mmInvoiceHeader);
 				trace_lazy = () -> Document.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InvoiceHeader1";
 				definition = "Collection of data for that is exchanged between two or more parties in written, printed or electronic form.";
 				nextVersions_lazy = () -> Arrays.asList(InvoiceHeader2.mmObject());

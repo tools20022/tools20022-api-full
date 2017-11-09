@@ -20,10 +20,13 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.supl.InformationResponseSD1V01;
 import com.tools20022.repository.datatype.Max256Text;
 import com.tools20022.repository.entity.AccountOwnerRole;
 import com.tools20022.repository.entity.AccountPartyRole;
 import com.tools20022.repository.entity.CashAccount;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -114,7 +117,7 @@ public class AccountAndParties2 {
 			componentContext_lazy = () -> AccountAndParties2.mmObject();
 			isDerived = false;
 			xmlTag = "Acct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Account";
 			definition = "Description of the account.";
 			maxOccurs = 1;
@@ -161,7 +164,7 @@ public class AccountAndParties2 {
 			componentContext_lazy = () -> AccountAndParties2.mmObject();
 			isDerived = false;
 			xmlTag = "Role";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Role";
 			definition = "Specifies the role related to the account.";
 			minOccurs = 1;
@@ -202,7 +205,7 @@ public class AccountAndParties2 {
 			componentContext_lazy = () -> AccountAndParties2.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInformation";
 			definition = "Additional information.";
 			minOccurs = 0;
@@ -213,12 +216,11 @@ public class AccountAndParties2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountAndParties2.mmAccount, com.tools20022.repository.msg.AccountAndParties2.mmRole,
-						com.tools20022.repository.msg.AccountAndParties2.mmAdditionalInformation);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.supl.InformationResponseSD1V01.mmAccountAndParties);
+				messageElement_lazy = () -> Arrays.asList(AccountAndParties2.mmAccount, AccountAndParties2.mmRole, AccountAndParties2.mmAdditionalInformation);
+				messageBuildingBlock_lazy = () -> Arrays.asList(InformationResponseSD1V01.mmAccountAndParties);
 				trace_lazy = () -> AccountPartyRole.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AccountAndParties2";
 				definition = "Specifies the details of the account and the role of the party.";
 			}

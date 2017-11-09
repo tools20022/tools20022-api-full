@@ -20,9 +20,12 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CountryCode;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.Country;
+import com.tools20022.repository.entity.PaymentIdentification;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -126,11 +129,11 @@ public class ReportSpecification3 {
 	 */
 	public static final MMMessageAttribute mmTransactionIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentIdentification.mmEndToEndIdentification;
+			businessElementTrace_lazy = () -> PaymentIdentification.mmEndToEndIdentification;
 			componentContext_lazy = () -> ReportSpecification3.mmObject();
 			isDerived = false;
 			xmlTag = "TxId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionIdentification";
 			definition = "Unique identification assigned by the TSU to a transaction, for which the TSU must generate a report.";
 			minOccurs = 0;
@@ -170,7 +173,7 @@ public class ReportSpecification3 {
 			componentContext_lazy = () -> ReportSpecification3.mmObject();
 			isDerived = false;
 			xmlTag = "TxSts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionStatus";
 			definition = "Identifies the status of the transaction by means of a code.";
 			minOccurs = 0;
@@ -214,7 +217,7 @@ public class ReportSpecification3 {
 			componentContext_lazy = () -> ReportSpecification3.mmObject();
 			isDerived = false;
 			xmlTag = "SubmitrTxRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubmitterTransactionReference";
 			definition = "Reference to the identification of a transaction of a user, for which the TSU must generate a report.";
 			minOccurs = 0;
@@ -254,7 +257,7 @@ public class ReportSpecification3 {
 			componentContext_lazy = () -> ReportSpecification3.mmObject();
 			isDerived = false;
 			xmlTag = "NttiesToBeRptd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EntitiesToBeReported";
 			definition = "Specifies a list of entities for which the TSU must generate a report.";
 			minOccurs = 0;
@@ -296,7 +299,7 @@ public class ReportSpecification3 {
 			componentContext_lazy = () -> ReportSpecification3.mmObject();
 			isDerived = false;
 			xmlTag = "Crspdt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Correspondent";
 			definition = "Financial institution that is the counterparty to the trade transaction.";
 			minOccurs = 0;
@@ -337,7 +340,7 @@ public class ReportSpecification3 {
 			componentContext_lazy = () -> ReportSpecification3.mmObject();
 			isDerived = false;
 			xmlTag = "Buyr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Buyer";
 			definition = "Party that buys goods or services, or a financial instrument.";
 			minOccurs = 0;
@@ -378,7 +381,7 @@ public class ReportSpecification3 {
 			componentContext_lazy = () -> ReportSpecification3.mmObject();
 			isDerived = false;
 			xmlTag = "Sellr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Seller";
 			definition = "Party that sells goods or services, or a financial instrument.";
 			minOccurs = 0;
@@ -419,7 +422,7 @@ public class ReportSpecification3 {
 			componentContext_lazy = () -> ReportSpecification3.mmObject();
 			isDerived = false;
 			xmlTag = "BuyrCtry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BuyerCountry";
 			definition = "Country of the buyer.";
 			minOccurs = 0;
@@ -459,7 +462,7 @@ public class ReportSpecification3 {
 			componentContext_lazy = () -> ReportSpecification3.mmObject();
 			isDerived = false;
 			xmlTag = "SellrCtry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SellerCountry";
 			definition = "Country of the seller.";
 			minOccurs = 0;
@@ -507,7 +510,7 @@ public class ReportSpecification3 {
 			componentContext_lazy = () -> ReportSpecification3.mmObject();
 			isDerived = false;
 			xmlTag = "CrspdtCtry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorrespondentCountry";
 			definition = "Country of the financial institution which is the other party to the trade.";
 			minOccurs = 0;
@@ -549,7 +552,7 @@ public class ReportSpecification3 {
 			componentContext_lazy = () -> ReportSpecification3.mmObject();
 			isDerived = false;
 			xmlTag = "PdgReqForActn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingRequestForAction";
 			definition = "Specifies a pending request for action for which the TSU must generate a report.";
 			minOccurs = 0;
@@ -561,13 +564,11 @@ public class ReportSpecification3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReportSpecification3.mmTransactionIdentification, com.tools20022.repository.msg.ReportSpecification3.mmTransactionStatus,
-						com.tools20022.repository.msg.ReportSpecification3.mmSubmitterTransactionReference, com.tools20022.repository.msg.ReportSpecification3.mmEntitiesToBeReported,
-						com.tools20022.repository.msg.ReportSpecification3.mmCorrespondent, com.tools20022.repository.msg.ReportSpecification3.mmBuyer, com.tools20022.repository.msg.ReportSpecification3.mmSeller,
-						com.tools20022.repository.msg.ReportSpecification3.mmBuyerCountry, com.tools20022.repository.msg.ReportSpecification3.mmSellerCountry, com.tools20022.repository.msg.ReportSpecification3.mmCorrespondentCountry,
-						com.tools20022.repository.msg.ReportSpecification3.mmPendingRequestForAction);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(ReportSpecification3.mmTransactionIdentification, ReportSpecification3.mmTransactionStatus, ReportSpecification3.mmSubmitterTransactionReference,
+						ReportSpecification3.mmEntitiesToBeReported, ReportSpecification3.mmCorrespondent, ReportSpecification3.mmBuyer, ReportSpecification3.mmSeller, ReportSpecification3.mmBuyerCountry,
+						ReportSpecification3.mmSellerCountry, ReportSpecification3.mmCorrespondentCountry, ReportSpecification3.mmPendingRequestForAction);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ReportSpecification3";
 				definition = "Specifies the parameters for which a transaction report must be generated.";
 			}

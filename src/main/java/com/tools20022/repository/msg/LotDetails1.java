@@ -20,10 +20,14 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.entity.InvestmentFundOrderExecution;
 import com.tools20022.repository.entity.LotBreakdown;
+import com.tools20022.repository.entity.SecuritiesOrder;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -104,11 +108,11 @@ public class LotDetails1 {
 	 */
 	public static final MMMessageAttribute mmLotDescription = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.LotBreakdown.mmLotIdentifier;
+			businessElementTrace_lazy = () -> LotBreakdown.mmLotIdentifier;
 			componentContext_lazy = () -> LotDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "LotDesc";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LotDescription";
 			definition = "Description of the lot.";
 			maxOccurs = 1;
@@ -150,11 +154,11 @@ public class LotDetails1 {
 	 */
 	public static final MMMessageAttribute mmTradeDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.LotBreakdown.mmLotDateTime;
+			businessElementTrace_lazy = () -> LotBreakdown.mmLotDateTime;
 			componentContext_lazy = () -> LotDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "TradDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeDate";
 			definition = "Date the units were created.";
 			maxOccurs = 1;
@@ -199,11 +203,11 @@ public class LotDetails1 {
 	 */
 	public static final MMMessageAttribute mmOrderReference = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmIdentification;
+			businessElementTrace_lazy = () -> SecuritiesOrder.mmIdentification;
 			componentContext_lazy = () -> LotDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "OrdrRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrderReference";
 			definition = "Unique and unambiguous identifier of the original order that resulted in the lot.";
 			maxOccurs = 1;
@@ -248,11 +252,11 @@ public class LotDetails1 {
 	 */
 	public static final MMMessageAttribute mmDealReference = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrderExecution.mmDealIdentification;
+			businessElementTrace_lazy = () -> InvestmentFundOrderExecution.mmDealIdentification;
 			componentContext_lazy = () -> LotDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "DealRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DealReference";
 			definition = "Deal reference of the original subscription execution that resulted in the lot.";
 			maxOccurs = 1;
@@ -294,11 +298,11 @@ public class LotDetails1 {
 	 */
 	public static final MMMessageAssociationEnd mmLotQuantityAndAmount = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.LotBreakdown.mmSecuritiesQuantity;
+			businessElementTrace_lazy = () -> LotBreakdown.mmSecuritiesQuantity;
 			componentContext_lazy = () -> LotDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "LotQtyAndAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LotQuantityAndAmount";
 			definition = "Quantity of the lot.";
 			maxOccurs = 1;
@@ -311,11 +315,10 @@ public class LotDetails1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LotDetails1.mmLotDescription, com.tools20022.repository.msg.LotDetails1.mmTradeDate, com.tools20022.repository.msg.LotDetails1.mmOrderReference,
-						com.tools20022.repository.msg.LotDetails1.mmDealReference, com.tools20022.repository.msg.LotDetails1.mmLotQuantityAndAmount);
+				messageElement_lazy = () -> Arrays.asList(LotDetails1.mmLotDescription, LotDetails1.mmTradeDate, LotDetails1.mmOrderReference, LotDetails1.mmDealReference, LotDetails1.mmLotQuantityAndAmount);
 				trace_lazy = () -> LotBreakdown.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "LotDetails1";
 				definition = "Facilitates the redemption of one or more lots.";
 			}

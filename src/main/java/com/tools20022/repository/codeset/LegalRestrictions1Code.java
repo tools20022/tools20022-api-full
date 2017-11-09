@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -91,7 +93,7 @@ public class LegalRestrictions1Code {
 	 */
 	public static final MMCode mmUSLegal144A = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "USLegal144A";
 			definition = "Ownership or transfer of an unregistered security issued, pursuant to US legal restrictions 144A.";
 			owner_lazy = () -> LegalRestrictions1Code.mmObject();
@@ -123,7 +125,7 @@ public class LegalRestrictions1Code {
 	 */
 	public static final MMCode mmNoRestrictions = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NoRestrictions";
 			definition = "Ownership or transfer of a security that is not subject to restrictions.";
 			owner_lazy = () -> LegalRestrictions1Code.mmObject();
@@ -156,7 +158,7 @@ public class LegalRestrictions1Code {
 	 */
 	public static final MMCode mmRestrictions = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Restrictions";
 			definition = "Ownership or transfer of a security that is subject to restrictions, and not pursuant to 144A.";
 			owner_lazy = () -> LegalRestrictions1Code.mmObject();
@@ -167,13 +169,12 @@ public class LegalRestrictions1Code {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("USLE");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "LegalRestrictions1Code";
 				definition = "Specifies the regulatory restrictions applicable to a security.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.LegalRestrictions1Code.mmUSLegal144A, com.tools20022.repository.codeset.LegalRestrictions1Code.mmNoRestrictions,
-						com.tools20022.repository.codeset.LegalRestrictions1Code.mmRestrictions);
+				code_lazy = () -> Arrays.asList(LegalRestrictions1Code.mmUSLegal144A, LegalRestrictions1Code.mmNoRestrictions, LegalRestrictions1Code.mmRestrictions);
 			}
 		});
 		return mmObject_lazy.get();

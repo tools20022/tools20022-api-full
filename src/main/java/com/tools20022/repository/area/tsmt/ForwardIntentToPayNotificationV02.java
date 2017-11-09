@@ -20,6 +20,7 @@ package com.tools20022.repository.area.tsmt;
 import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.TradeServicesManagementLatestVersion;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.TradeServicesManagementISOLatestversion;
@@ -42,6 +43,9 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code tsmt.045.001.02}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.TradeServicesManagementLatestVersion
@@ -91,9 +95,6 @@ import java.util.List;
  * ForwardIntentToPayNotificationV02.mmRequestForAction}</li>
  * </ul>
  * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code tsmt.045.001.02}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -145,10 +146,10 @@ public class ForwardIntentToPayNotificationV02 {
 	public static final MMMessageBuildingBlock mmNotificationIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "NtfctnId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotificationIdentification";
 			definition = "Identifies the notification message.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.tsmt.ForwardIntentToPayNotificationV01.mmNotificationIdentification;
+			previousVersion_lazy = () -> ForwardIntentToPayNotificationV01.mmNotificationIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
@@ -190,10 +191,10 @@ public class ForwardIntentToPayNotificationV02 {
 	public static final MMMessageBuildingBlock mmTransactionIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "TxId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionIdentification";
 			definition = "Unique identification assigned by the matching application to the transaction.\nThis identification is to be used in any communication between the parties.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.tsmt.ForwardIntentToPayNotificationV01.mmTransactionIdentification;
+			previousVersion_lazy = () -> ForwardIntentToPayNotificationV01.mmTransactionIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> SimpleIdentificationInformation.mmObject();
@@ -234,10 +235,10 @@ public class ForwardIntentToPayNotificationV02 {
 	public static final MMMessageBuildingBlock mmEstablishedBaselineIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "EstblishdBaselnId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EstablishedBaselineIdentification";
 			definition = "Unique identification assigned by the matching application to the baseline when it is established. ";
-			previousVersion_lazy = () -> com.tools20022.repository.area.tsmt.ForwardIntentToPayNotificationV01.mmEstablishedBaselineIdentification;
+			previousVersion_lazy = () -> ForwardIntentToPayNotificationV01.mmEstablishedBaselineIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> DocumentIdentification3.mmObject();
@@ -276,10 +277,10 @@ public class ForwardIntentToPayNotificationV02 {
 	public static final MMMessageBuildingBlock mmTransactionStatus = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "TxSts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionStatus";
 			definition = "Identifies the status of the transaction by means of a code.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.tsmt.ForwardIntentToPayNotificationV01.mmTransactionStatus;
+			previousVersion_lazy = () -> ForwardIntentToPayNotificationV01.mmTransactionStatus;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> TransactionStatus4.mmObject();
@@ -320,10 +321,10 @@ public class ForwardIntentToPayNotificationV02 {
 	public static final MMMessageBuildingBlock mmUserTransactionReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "UsrTxRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UserTransactionReference";
 			definition = "Reference to the transaction for the financial institutions involved in this transaction.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.tsmt.ForwardIntentToPayNotificationV01.mmUserTransactionReference;
+			previousVersion_lazy = () -> ForwardIntentToPayNotificationV01.mmUserTransactionReference;
 			maxOccurs = 2;
 			minOccurs = 0;
 			complexType_lazy = () -> DocumentIdentification5.mmObject();
@@ -363,10 +364,10 @@ public class ForwardIntentToPayNotificationV02 {
 	public static final MMMessageBuildingBlock mmBuyerBank = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "BuyrBk";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BuyerBank";
 			definition = "The financial institution of the buyer, uniquely identified by its BIC. ";
-			previousVersion_lazy = () -> com.tools20022.repository.area.tsmt.ForwardIntentToPayNotificationV01.mmBuyerBank;
+			previousVersion_lazy = () -> ForwardIntentToPayNotificationV01.mmBuyerBank;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> BICIdentification1.mmObject();
@@ -406,10 +407,10 @@ public class ForwardIntentToPayNotificationV02 {
 	public static final MMMessageBuildingBlock mmSellerBank = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SellrBk";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SellerBank";
 			definition = "The financial institution of the seller, uniquely identified by its BIC. ";
-			previousVersion_lazy = () -> com.tools20022.repository.area.tsmt.ForwardIntentToPayNotificationV01.mmSellerBank;
+			previousVersion_lazy = () -> ForwardIntentToPayNotificationV01.mmSellerBank;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> BICIdentification1.mmObject();
@@ -446,10 +447,10 @@ public class ForwardIntentToPayNotificationV02 {
 	public static final MMMessageBuildingBlock mmIntentToPay = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "InttToPay";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IntentToPay";
 			definition = "Provides the details of the intention to pay.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.tsmt.ForwardIntentToPayNotificationV01.mmIntentToPay;
+			previousVersion_lazy = () -> ForwardIntentToPayNotificationV01.mmIntentToPay;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> IntentToPay2.mmObject();
@@ -487,10 +488,10 @@ public class ForwardIntentToPayNotificationV02 {
 	public static final MMMessageBuildingBlock mmRequestForAction = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "ReqForActn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestForAction";
 			definition = "Next processing step required.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.tsmt.ForwardIntentToPayNotificationV01.mmRequestForAction;
+			previousVersion_lazy = () -> ForwardIntentToPayNotificationV01.mmRequestForAction;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> PendingActivity2.mmObject();
@@ -500,7 +501,7 @@ public class ForwardIntentToPayNotificationV02 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ForwardIntentToPayNotificationV02";
 				definition = "Scope\r\nThe ForwardIntentToPayNotification message is forwarded by the matching application from one primary bank to the other primary bank in order to provide details about a future payment.\r\nThis message contains details about an intention to pay a certain amount, on a certain date, in relation to one or several transactions known to the matching application.\r\nUsage\r\nThe ForwardIntentToPayNotification message is a copy of the IntentToPayNotification message received by the matching application and forwarded to the other primary bank for information. No response is expected.";
 				previousVersion_lazy = () -> ForwardIntentToPayNotificationV01.mmObject();
@@ -508,11 +509,9 @@ public class ForwardIntentToPayNotificationV02 {
 				rootElement = "Document";
 				xmlTag = "FwdInttToPayNtfctn";
 				businessArea_lazy = () -> TradeServicesManagementLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.ForwardIntentToPayNotificationV02.mmNotificationIdentification,
-						com.tools20022.repository.area.tsmt.ForwardIntentToPayNotificationV02.mmTransactionIdentification, com.tools20022.repository.area.tsmt.ForwardIntentToPayNotificationV02.mmEstablishedBaselineIdentification,
-						com.tools20022.repository.area.tsmt.ForwardIntentToPayNotificationV02.mmTransactionStatus, com.tools20022.repository.area.tsmt.ForwardIntentToPayNotificationV02.mmUserTransactionReference,
-						com.tools20022.repository.area.tsmt.ForwardIntentToPayNotificationV02.mmBuyerBank, com.tools20022.repository.area.tsmt.ForwardIntentToPayNotificationV02.mmSellerBank,
-						com.tools20022.repository.area.tsmt.ForwardIntentToPayNotificationV02.mmIntentToPay, com.tools20022.repository.area.tsmt.ForwardIntentToPayNotificationV02.mmRequestForAction);
+				messageBuildingBlock_lazy = () -> Arrays.asList(ForwardIntentToPayNotificationV02.mmNotificationIdentification, ForwardIntentToPayNotificationV02.mmTransactionIdentification,
+						ForwardIntentToPayNotificationV02.mmEstablishedBaselineIdentification, ForwardIntentToPayNotificationV02.mmTransactionStatus, ForwardIntentToPayNotificationV02.mmUserTransactionReference,
+						ForwardIntentToPayNotificationV02.mmBuyerBank, ForwardIntentToPayNotificationV02.mmSellerBank, ForwardIntentToPayNotificationV02.mmIntentToPay, ForwardIntentToPayNotificationV02.mmRequestForAction);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "tsmt";

@@ -20,9 +20,13 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.acmt.AccountModificationInstructionV06;
+import com.tools20022.repository.area.acmt.AccountModificationInstructionV07;
 import com.tools20022.repository.codeset.DataModification2Code;
 import com.tools20022.repository.entity.CashAccount;
 import com.tools20022.repository.entity.Payment;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -121,10 +125,10 @@ public class CashSettlement2 {
 			componentContext_lazy = () -> CashSettlement2.mmObject();
 			isDerived = false;
 			xmlTag = "ModScpIndctn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ModificationScopeIndication";
 			definition = "Specifies the type of modification to be applied.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.InvestmentFundCashSettlementInformation8.mmModificationScopeIndication;
+			previousVersion_lazy = () -> InvestmentFundCashSettlementInformation8.mmModificationScopeIndication;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DataModification2Code.mmObject();
@@ -176,7 +180,7 @@ public class CashSettlement2 {
 			componentContext_lazy = () -> CashSettlement2.mmObject();
 			isDerived = false;
 			xmlTag = "CshAcctDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashAccountDetails";
 			definition = "Account to credit or debit. When this is an account to debit, this is for the payment of a subscription to an investment fund, a savings plan payment, the purchase of securities or the payment of charges. When this is an account to credit,  this is for the payment of an amount as a result of a redemption of investment fund units, the sale of securities, interest and dividend payments. A single account may be specified for all cash movements on the account or cash accounts may be specified for specific types of transactions on the account.";
 			minOccurs = 0;
@@ -221,7 +225,7 @@ public class CashSettlement2 {
 			componentContext_lazy = () -> CashSettlement2.mmObject();
 			isDerived = false;
 			xmlTag = "OthrCshSttlmDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherCashSettlementDetails";
 			definition = "Method of payment other than a cash account.";
 			minOccurs = 0;
@@ -233,13 +237,11 @@ public class CashSettlement2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashSettlement2.mmModificationScopeIndication, com.tools20022.repository.msg.CashSettlement2.mmCashAccountDetails,
-						com.tools20022.repository.msg.CashSettlement2.mmOtherCashSettlementDetails);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountModificationInstructionV06.mmModifiedCashSettlement,
-						com.tools20022.repository.area.acmt.AccountModificationInstructionV07.mmModifiedCashSettlement);
+				messageElement_lazy = () -> Arrays.asList(CashSettlement2.mmModificationScopeIndication, CashSettlement2.mmCashAccountDetails, CashSettlement2.mmOtherCashSettlementDetails);
+				messageBuildingBlock_lazy = () -> Arrays.asList(AccountModificationInstructionV06.mmModifiedCashSettlement, AccountModificationInstructionV07.mmModifiedCashSettlement);
 				trace_lazy = () -> Payment.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CashSettlement2";
 				definition = "Cash settlement parties and accounts.";
 				previousVersion_lazy = () -> CashSettlement1.mmObject();

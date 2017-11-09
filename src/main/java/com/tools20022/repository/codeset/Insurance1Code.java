@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.InsuranceCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -82,7 +84,7 @@ public class Insurance1Code extends InsuranceCode {
 	 */
 	public static final MMCode mmLifeInsurance = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LifeInsurance";
 			owner_lazy = () -> Insurance1Code.mmObject();
 		}
@@ -105,7 +107,7 @@ public class Insurance1Code extends InsuranceCode {
 	 */
 	public static final MMCode mmPermanentDisabilityInsurance = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PermanentDisabilityInsurance";
 			owner_lazy = () -> Insurance1Code.mmObject();
 		}
@@ -114,12 +116,12 @@ public class Insurance1Code extends InsuranceCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("LIFE");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Insurance1Code";
 				definition = "Specifies the type of insurance.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Insurance1Code.mmLifeInsurance, com.tools20022.repository.codeset.Insurance1Code.mmPermanentDisabilityInsurance);
+				code_lazy = () -> Arrays.asList(Insurance1Code.mmLifeInsurance, Insurance1Code.mmPermanentDisabilityInsurance);
 				trace_lazy = () -> InsuranceCode.mmObject();
 			}
 		});

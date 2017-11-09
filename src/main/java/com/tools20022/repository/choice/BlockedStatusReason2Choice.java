@@ -20,7 +20,9 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.NoReasonCode;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.BlockedStatusReason2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -96,7 +98,7 @@ public class BlockedStatusReason2Choice {
 			componentContext_lazy = () -> BlockedStatusReason2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "NoSpcfdRsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoSpecifiedReason";
 			definition = "There is no reason available or to report for the closed account status.";
 			maxOccurs = 1;
@@ -139,7 +141,7 @@ public class BlockedStatusReason2Choice {
 			componentContext_lazy = () -> BlockedStatusReason2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Rsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reason";
 			definition = "Transaction type for which the account is blocked and the underlying reason.";
 			minOccurs = 1;
@@ -151,9 +153,9 @@ public class BlockedStatusReason2Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.BlockedStatusReason2Choice.mmNoSpecifiedReason, com.tools20022.repository.choice.BlockedStatusReason2Choice.mmReason);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(BlockedStatusReason2Choice.mmNoSpecifiedReason, BlockedStatusReason2Choice.mmReason);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "BlockedStatusReason2Choice";
 				definition = "Choice of formats for a blocked status reason.";
 			}

@@ -20,6 +20,7 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.MoveType1Code;
 import com.tools20022.repository.codeset.OffsetType1Code;
 import com.tools20022.repository.codeset.PegType1Code;
@@ -28,6 +29,8 @@ import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.PlusOrMinusIndicator;
 import com.tools20022.repository.entity.SecuritiesPegOrderInstruction;
+import com.tools20022.repository.entity.Security;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -126,11 +129,11 @@ public class PegOrderInstructions1 {
 	 */
 	public static final MMMessageAttribute mmOffset = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPegOrderInstruction.mmOffset;
+			businessElementTrace_lazy = () -> SecuritiesPegOrderInstruction.mmOffset;
 			componentContext_lazy = () -> PegOrderInstructions1.mmObject();
 			isDerived = false;
 			xmlTag = "Offset";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Offset";
 			definition = "Amount added to the peg for a pegged order.";
 			maxOccurs = 1;
@@ -173,11 +176,11 @@ public class PegOrderInstructions1 {
 	 */
 	public static final MMMessageAttribute mmRelatedPriceType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPegOrderInstruction.mmPriceType;
+			businessElementTrace_lazy = () -> SecuritiesPegOrderInstruction.mmPriceType;
 			componentContext_lazy = () -> PegOrderInstructions1.mmObject();
 			isDerived = false;
 			xmlTag = "RltdPricTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedPriceType";
 			definition = "Defines the type of peg.";
 			maxOccurs = 1;
@@ -221,11 +224,11 @@ public class PegOrderInstructions1 {
 	 */
 	public static final MMMessageAttribute mmMoveType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPegOrderInstruction.mmMoveType;
+			businessElementTrace_lazy = () -> SecuritiesPegOrderInstruction.mmMoveType;
 			componentContext_lazy = () -> PegOrderInstructions1.mmObject();
 			isDerived = false;
 			xmlTag = "MvTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MoveType";
 			definition = "Describes whether peg is static/fixed or floats.";
 			maxOccurs = 1;
@@ -269,11 +272,11 @@ public class PegOrderInstructions1 {
 	 */
 	public static final MMMessageAttribute mmOffsetType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPegOrderInstruction.mmOffsetType;
+			businessElementTrace_lazy = () -> SecuritiesPegOrderInstruction.mmOffsetType;
 			componentContext_lazy = () -> PegOrderInstructions1.mmObject();
 			isDerived = false;
 			xmlTag = "OffsetTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OffsetType";
 			definition = "Type of Peg Offset.";
 			maxOccurs = 1;
@@ -319,11 +322,11 @@ public class PegOrderInstructions1 {
 	 */
 	public static final MMMessageAttribute mmLimitType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPegOrderInstruction.mmLimitType;
+			businessElementTrace_lazy = () -> SecuritiesPegOrderInstruction.mmLimitType;
 			componentContext_lazy = () -> PegOrderInstructions1.mmObject();
 			isDerived = false;
 			xmlTag = "LmtTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LimitType";
 			definition = "Specifies nature of resulting pegged price (e.g. or better limit, strict limit etc).";
 			maxOccurs = 1;
@@ -369,11 +372,11 @@ public class PegOrderInstructions1 {
 	 */
 	public static final MMMessageAttribute mmRoundDirection = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPegOrderInstruction.mmRoundDirection;
+			businessElementTrace_lazy = () -> SecuritiesPegOrderInstruction.mmRoundDirection;
 			componentContext_lazy = () -> PegOrderInstructions1.mmObject();
 			isDerived = false;
 			xmlTag = "RndDrctn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RoundDirection";
 			definition = "If the calculated peg price is not a valid tick price, specifies how to round the price (e.g. be more or less aggressive)";
 			maxOccurs = 1;
@@ -420,11 +423,11 @@ public class PegOrderInstructions1 {
 	 */
 	public static final MMMessageAttribute mmScope = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPegOrderInstruction.mmScope;
+			businessElementTrace_lazy = () -> SecuritiesPegOrderInstruction.mmScope;
 			componentContext_lazy = () -> PegOrderInstructions1.mmObject();
 			isDerived = false;
 			xmlTag = "Scp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Scope";
 			definition = "The scope of \"related to\" price of the peg (for example, local, global etc).";
 			maxOccurs = 1;
@@ -471,11 +474,11 @@ public class PegOrderInstructions1 {
 	 */
 	public static final MMMessageAttribute mmOffsetSign = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPegOrderInstruction.mmOffsetSign;
+			businessElementTrace_lazy = () -> SecuritiesPegOrderInstruction.mmOffsetSign;
 			componentContext_lazy = () -> PegOrderInstructions1.mmObject();
 			isDerived = false;
 			xmlTag = "OffsetSgn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OffsetSign";
 			definition = "Indicates whether the offset should be added or subtracted from the related price.";
 			maxOccurs = 1;
@@ -521,11 +524,11 @@ public class PegOrderInstructions1 {
 	 */
 	public static final MMMessageAssociationEnd mmPegSecurityDetails = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmIdentification;
+			businessElementTrace_lazy = () -> Security.mmIdentification;
 			componentContext_lazy = () -> PegOrderInstructions1.mmObject();
 			isDerived = false;
 			xmlTag = "PegSctyDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PegSecurityDetails";
 			definition = "Provides details about the the security off whose prices the order will peg.";
 			maxOccurs = 1;
@@ -538,13 +541,11 @@ public class PegOrderInstructions1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PegOrderInstructions1.mmOffset, com.tools20022.repository.msg.PegOrderInstructions1.mmRelatedPriceType,
-						com.tools20022.repository.msg.PegOrderInstructions1.mmMoveType, com.tools20022.repository.msg.PegOrderInstructions1.mmOffsetType, com.tools20022.repository.msg.PegOrderInstructions1.mmLimitType,
-						com.tools20022.repository.msg.PegOrderInstructions1.mmRoundDirection, com.tools20022.repository.msg.PegOrderInstructions1.mmScope, com.tools20022.repository.msg.PegOrderInstructions1.mmOffsetSign,
-						com.tools20022.repository.msg.PegOrderInstructions1.mmPegSecurityDetails);
+				messageElement_lazy = () -> Arrays.asList(PegOrderInstructions1.mmOffset, PegOrderInstructions1.mmRelatedPriceType, PegOrderInstructions1.mmMoveType, PegOrderInstructions1.mmOffsetType, PegOrderInstructions1.mmLimitType,
+						PegOrderInstructions1.mmRoundDirection, PegOrderInstructions1.mmScope, PegOrderInstructions1.mmOffsetSign, PegOrderInstructions1.mmPegSecurityDetails);
 				trace_lazy = () -> SecuritiesPegOrderInstruction.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "PegOrderInstructions1";
 				definition = "Provides details about instructions specific to pegged orders.";
 			}

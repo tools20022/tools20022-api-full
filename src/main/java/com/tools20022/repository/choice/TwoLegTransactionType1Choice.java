@@ -19,8 +19,11 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.entity.Asset;
 import com.tools20022.repository.entity.SecuritiesFinancing;
 import com.tools20022.repository.entity.SecuritiesTrade;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.FutureOrOptionDetails1;
 import com.tools20022.repository.msg.SecuritiesFinancing10;
 import java.util.Arrays;
@@ -104,11 +107,11 @@ public class TwoLegTransactionType1Choice {
 	 */
 	public static final MMMessageAssociationEnd mmFutureOrOptionDetails = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Asset.mmDerivative;
+			businessElementTrace_lazy = () -> Asset.mmDerivative;
 			componentContext_lazy = () -> TwoLegTransactionType1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "FutrOrOptnDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FutureOrOptionDetails";
 			definition = "Parameters for contracts which obligate the buyer to receive and the seller to deliver in the future the assets specified at an agreed price or contracts which grant to the holder either the privilege to purchase or the privilege to sell the assets specified at a predetermined price or formula at or within a time in the future.";
 			maxOccurs = 1;
@@ -155,7 +158,7 @@ public class TwoLegTransactionType1Choice {
 			componentContext_lazy = () -> TwoLegTransactionType1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "SctiesFincgDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesFinancingDetails";
 			definition = "Provides details about the two leg transaction.";
 			maxOccurs = 1;
@@ -168,10 +171,10 @@ public class TwoLegTransactionType1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.TwoLegTransactionType1Choice.mmFutureOrOptionDetails, com.tools20022.repository.choice.TwoLegTransactionType1Choice.mmSecuritiesFinancingDetails);
+				messageElement_lazy = () -> Arrays.asList(TwoLegTransactionType1Choice.mmFutureOrOptionDetails, TwoLegTransactionType1Choice.mmSecuritiesFinancingDetails);
 				trace_lazy = () -> SecuritiesTrade.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TwoLegTransactionType1Choice";
 				definition = "Specifies the choice of the two leg transaction type.";
 			}

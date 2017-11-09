@@ -17,13 +17,12 @@
 
 package com.tools20022.repository.entity;
 
-import com.tools20022.metamodel.MMBusinessAssociationEnd;
-import com.tools20022.metamodel.MMBusinessAttribute;
-import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.*;
 import com.tools20022.repository.choice.*;
 import com.tools20022.repository.codeset.ClearingAccountTypeCode;
 import com.tools20022.repository.codeset.SecuritiesAccountPurposeTypeCode;
 import com.tools20022.repository.entity.Account;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -38,69 +37,248 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
  * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesAccount#mmSecuritiesAccountType
- * SecuritiesAccount.mmSecuritiesAccountType}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesAccount#mmRelatedInvestmentAccount
- * SecuritiesAccount.mmRelatedInvestmentAccount}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesAccount#mmRelatedTransfer
- * SecuritiesAccount.mmRelatedTransfer}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesAccount#mmSecuritiesPartyRole
- * SecuritiesAccount.mmSecuritiesPartyRole}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesAccount#mmSecurity
- * SecuritiesAccount.mmSecurity}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesAccount#mmRelatedRegistrar
- * SecuritiesAccount.mmRelatedRegistrar}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesAccount#mmSafekeepingPlace
- * SecuritiesAccount.mmSafekeepingPlace}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesAccount#mmSecuritiesBalance
- * SecuritiesAccount.mmSecuritiesBalance}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesAccount#mmCorporateActionServicing
- * SecuritiesAccount.mmCorporateActionServicing}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesAccount#mmRelatedAllocation
- * SecuritiesAccount.mmRelatedAllocation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesAccount#mmSecuritiesEntry
- * SecuritiesAccount.mmSecuritiesEntry}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesAccount#mmClearingAccountOwner
- * SecuritiesAccount.mmClearingAccountOwner}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesAccount#mmMarginAccountOwner
- * SecuritiesAccount.mmMarginAccountOwner}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesAccount#mmDeliveryAccountOwner
- * SecuritiesAccount.mmDeliveryAccountOwner}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesAccount#mmRelatedPowerOfAttorney
- * SecuritiesAccount.mmRelatedPowerOfAttorney}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesAccount#mmRelatedMeetingInstruction
- * SecuritiesAccount.mmRelatedMeetingInstruction}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesAccount#mmClearingAccountType
- * SecuritiesAccount.mmClearingAccountType}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesAccount#mmRelatedOrder
- * SecuritiesAccount.mmRelatedOrder}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesAccount#mmDisclosedListTrading
- * SecuritiesAccount.mmDisclosedListTrading}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesAccount#mmAccountLink
- * SecuritiesAccount.mmAccountLink}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount1
+ * SecuritiesAccount1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount4
+ * SecuritiesAccount4}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount13
+ * SecuritiesAccount13}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount17
+ * SecuritiesAccount17}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountAndBalance2
+ * AccountAndBalance2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountAndBalance5
+ * AccountAndBalance5}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountAndBalance10
+ * AccountAndBalance10}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountAndBalance12
+ * AccountAndBalance12}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountAndBalance17
+ * AccountAndBalance17}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountAndBalance20
+ * AccountAndBalance20}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountAndBalance3
+ * AccountAndBalance3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountAndBalance6
+ * AccountAndBalance6}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountAndBalance11
+ * AccountAndBalance11}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountAndBalance13
+ * AccountAndBalance13}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountAndBalance16
+ * AccountAndBalance16}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountAndBalance19
+ * AccountAndBalance19}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountAndBalance22
+ * AccountAndBalance22}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountAndBalance23
+ * AccountAndBalance23}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountAndBalance1
+ * AccountAndBalance1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountAndBalance7
+ * AccountAndBalance7}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountAndBalance9
+ * AccountAndBalance9}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountAndBalance14
+ * AccountAndBalance14}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountAndBalance15
+ * AccountAndBalance15}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountAndBalance18
+ * AccountAndBalance18}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountAndBalance21
+ * AccountAndBalance21}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountAndBalance24
+ * AccountAndBalance24}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountAndBalance4
+ * AccountAndBalance4}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountAndBalance8
+ * AccountAndBalance8}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.PurposeCode1Choice
+ * PurposeCode1Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount11
+ * SecuritiesAccount11}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount2
+ * SecuritiesAccount2}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.PurposeCode2Choice
+ * PurposeCode2Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount14
+ * SecuritiesAccount14}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.PurposeCode3Choice
+ * PurposeCode3Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount15
+ * SecuritiesAccount15}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.PurposeCode4Choice
+ * PurposeCode4Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount16
+ * SecuritiesAccount16}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SafekeepingAccount1
+ * SafekeepingAccount1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SafekeepingAccount2
+ * SafekeepingAccount2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SubAccountIdentification29
+ * SubAccountIdentification29}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SubAccountIdentification31
+ * SubAccountIdentification31}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SubAccountIdentification28
+ * SubAccountIdentification28}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SubAccountIdentification32
+ * SubAccountIdentification32}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SubAccountIdentification30
+ * SubAccountIdentification30}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SubAccountIdentification33
+ * SubAccountIdentification33}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount20
+ * SecuritiesAccount20}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.PurposeCode5Choice
+ * PurposeCode5Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount3
+ * SecuritiesAccount3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SafekeepingAccount3
+ * SafekeepingAccount3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SafekeepingAccount4
+ * SafekeepingAccount4}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount7
+ * SecuritiesAccount7}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount9
+ * SecuritiesAccount9}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount12
+ * SecuritiesAccount12}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount8
+ * SecuritiesAccount8}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount10
+ * SecuritiesAccount10}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.IncludedAccount1
+ * IncludedAccount1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount6
+ * SecuritiesAccount6}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount21
+ * SecuritiesAccount21}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount19
+ * SecuritiesAccount19}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount18
+ * SecuritiesAccount18}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount5
+ * SecuritiesAccount5}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.SecuritiesAccount1Choice
+ * SecuritiesAccount1Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SubAccountIdentification34
+ * SubAccountIdentification34}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountAndBalance26
+ * AccountAndBalance26}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountAndBalance25
+ * AccountAndBalance25}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount22
+ * SecuritiesAccount22}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountAndBalance32
+ * AccountAndBalance32}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountAndBalance29
+ * AccountAndBalance29}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SubAccountIdentification35
+ * SubAccountIdentification35}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SafekeepingAccount5
+ * SafekeepingAccount5}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountSubLevel1
+ * AccountSubLevel1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountSubLevel4
+ * AccountSubLevel4}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountSubLevel5
+ * AccountSubLevel5}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountSubLevel2
+ * AccountSubLevel2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountSubLevel3
+ * AccountSubLevel3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountSubLevel6
+ * AccountSubLevel6}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountSubLevel7
+ * AccountSubLevel7}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountSubLevel8
+ * AccountSubLevel8}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountSubLevel9
+ * AccountSubLevel9}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SubAccountIdentification38
+ * SubAccountIdentification38}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SubAccountIdentification37
+ * SubAccountIdentification37}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SafekeepingAccount6
+ * SafekeepingAccount6}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SubAccountIdentification40
+ * SubAccountIdentification40}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SubAccountIdentification39
+ * SubAccountIdentification39}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount24
+ * SecuritiesAccount24}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SubAccountIdentification42
+ * SubAccountIdentification42}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SubAccountIdentification44
+ * SubAccountIdentification44}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SubAccountIdentification43
+ * SubAccountIdentification43}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount26
+ * SecuritiesAccount26}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount25
+ * SecuritiesAccount25}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.PurposeCode7Choice
+ * PurposeCode7Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountAndBalance34
+ * AccountAndBalance34}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountAndBalance35
+ * AccountAndBalance35}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountAndBalance36
+ * AccountAndBalance36}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountAndBalance33
+ * AccountAndBalance33}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountAndBalance40
+ * AccountAndBalance40}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountAndBalance38
+ * AccountAndBalance38}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountAndBalance37
+ * AccountAndBalance37}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountAndBalance39
+ * AccountAndBalance39}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SubAccountIdentification47
+ * SubAccountIdentification47}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount33
+ * SecuritiesAccount33}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SubAccountIdentification45
+ * SubAccountIdentification45}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SubAccountIdentification46
+ * SubAccountIdentification46}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount27
+ * SecuritiesAccount27}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.PurposeCode8Choice
+ * PurposeCode8Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount30
+ * SecuritiesAccount30}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount34
+ * SecuritiesAccount34}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SafekeepingAccount7
+ * SafekeepingAccount7}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountSubLevel15
+ * AccountSubLevel15}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountSubLevel16
+ * AccountSubLevel16}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountSubLevel18
+ * AccountSubLevel18}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountSubLevel19
+ * AccountSubLevel19}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountSubLevel11
+ * AccountSubLevel11}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountSubLevel12
+ * AccountSubLevel12}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountSubLevel17
+ * AccountSubLevel17}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountSubLevel13
+ * AccountSubLevel13}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountSubLevel14
+ * AccountSubLevel14}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SubAccountIdentification49
+ * SubAccountIdentification49}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SubAccountIdentification50
+ * SubAccountIdentification50}</li>
  * </ul>
  * </li>
  * <li>
@@ -982,248 +1160,69 @@ import java.util.List;
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
  * superType} = {@linkplain com.tools20022.repository.entity.Account Account}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount1
- * SecuritiesAccount1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount4
- * SecuritiesAccount4}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount13
- * SecuritiesAccount13}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount17
- * SecuritiesAccount17}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountAndBalance2
- * AccountAndBalance2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountAndBalance5
- * AccountAndBalance5}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountAndBalance10
- * AccountAndBalance10}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountAndBalance12
- * AccountAndBalance12}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountAndBalance17
- * AccountAndBalance17}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountAndBalance20
- * AccountAndBalance20}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountAndBalance3
- * AccountAndBalance3}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountAndBalance6
- * AccountAndBalance6}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountAndBalance11
- * AccountAndBalance11}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountAndBalance13
- * AccountAndBalance13}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountAndBalance16
- * AccountAndBalance16}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountAndBalance19
- * AccountAndBalance19}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountAndBalance22
- * AccountAndBalance22}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountAndBalance23
- * AccountAndBalance23}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountAndBalance1
- * AccountAndBalance1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountAndBalance7
- * AccountAndBalance7}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountAndBalance9
- * AccountAndBalance9}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountAndBalance14
- * AccountAndBalance14}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountAndBalance15
- * AccountAndBalance15}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountAndBalance18
- * AccountAndBalance18}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountAndBalance21
- * AccountAndBalance21}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountAndBalance24
- * AccountAndBalance24}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountAndBalance4
- * AccountAndBalance4}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountAndBalance8
- * AccountAndBalance8}</li>
- * <li>{@linkplain com.tools20022.repository.choice.PurposeCode1Choice
- * PurposeCode1Choice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount11
- * SecuritiesAccount11}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount2
- * SecuritiesAccount2}</li>
- * <li>{@linkplain com.tools20022.repository.choice.PurposeCode2Choice
- * PurposeCode2Choice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount14
- * SecuritiesAccount14}</li>
- * <li>{@linkplain com.tools20022.repository.choice.PurposeCode3Choice
- * PurposeCode3Choice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount15
- * SecuritiesAccount15}</li>
- * <li>{@linkplain com.tools20022.repository.choice.PurposeCode4Choice
- * PurposeCode4Choice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount16
- * SecuritiesAccount16}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SafekeepingAccount1
- * SafekeepingAccount1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SafekeepingAccount2
- * SafekeepingAccount2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SubAccountIdentification29
- * SubAccountIdentification29}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SubAccountIdentification31
- * SubAccountIdentification31}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SubAccountIdentification28
- * SubAccountIdentification28}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SubAccountIdentification32
- * SubAccountIdentification32}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SubAccountIdentification30
- * SubAccountIdentification30}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SubAccountIdentification33
- * SubAccountIdentification33}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount20
- * SecuritiesAccount20}</li>
- * <li>{@linkplain com.tools20022.repository.choice.PurposeCode5Choice
- * PurposeCode5Choice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount3
- * SecuritiesAccount3}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SafekeepingAccount3
- * SafekeepingAccount3}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SafekeepingAccount4
- * SafekeepingAccount4}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount7
- * SecuritiesAccount7}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount9
- * SecuritiesAccount9}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount12
- * SecuritiesAccount12}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount8
- * SecuritiesAccount8}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount10
- * SecuritiesAccount10}</li>
- * <li>{@linkplain com.tools20022.repository.msg.IncludedAccount1
- * IncludedAccount1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount6
- * SecuritiesAccount6}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount21
- * SecuritiesAccount21}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount19
- * SecuritiesAccount19}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount18
- * SecuritiesAccount18}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount5
- * SecuritiesAccount5}</li>
- * <li>{@linkplain com.tools20022.repository.choice.SecuritiesAccount1Choice
- * SecuritiesAccount1Choice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SubAccountIdentification34
- * SubAccountIdentification34}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountAndBalance26
- * AccountAndBalance26}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountAndBalance25
- * AccountAndBalance25}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount22
- * SecuritiesAccount22}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountAndBalance32
- * AccountAndBalance32}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountAndBalance29
- * AccountAndBalance29}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SubAccountIdentification35
- * SubAccountIdentification35}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SafekeepingAccount5
- * SafekeepingAccount5}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountSubLevel1
- * AccountSubLevel1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountSubLevel4
- * AccountSubLevel4}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountSubLevel5
- * AccountSubLevel5}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountSubLevel2
- * AccountSubLevel2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountSubLevel3
- * AccountSubLevel3}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountSubLevel6
- * AccountSubLevel6}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountSubLevel7
- * AccountSubLevel7}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountSubLevel8
- * AccountSubLevel8}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountSubLevel9
- * AccountSubLevel9}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SubAccountIdentification38
- * SubAccountIdentification38}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SubAccountIdentification37
- * SubAccountIdentification37}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SafekeepingAccount6
- * SafekeepingAccount6}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SubAccountIdentification40
- * SubAccountIdentification40}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SubAccountIdentification39
- * SubAccountIdentification39}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount24
- * SecuritiesAccount24}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SubAccountIdentification42
- * SubAccountIdentification42}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SubAccountIdentification44
- * SubAccountIdentification44}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SubAccountIdentification43
- * SubAccountIdentification43}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount26
- * SecuritiesAccount26}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount25
- * SecuritiesAccount25}</li>
- * <li>{@linkplain com.tools20022.repository.choice.PurposeCode7Choice
- * PurposeCode7Choice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountAndBalance34
- * AccountAndBalance34}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountAndBalance35
- * AccountAndBalance35}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountAndBalance36
- * AccountAndBalance36}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountAndBalance33
- * AccountAndBalance33}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountAndBalance40
- * AccountAndBalance40}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountAndBalance38
- * AccountAndBalance38}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountAndBalance37
- * AccountAndBalance37}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountAndBalance39
- * AccountAndBalance39}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SubAccountIdentification47
- * SubAccountIdentification47}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount33
- * SecuritiesAccount33}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SubAccountIdentification45
- * SubAccountIdentification45}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SubAccountIdentification46
- * SubAccountIdentification46}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount27
- * SecuritiesAccount27}</li>
- * <li>{@linkplain com.tools20022.repository.choice.PurposeCode8Choice
- * PurposeCode8Choice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount30
- * SecuritiesAccount30}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount34
- * SecuritiesAccount34}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SafekeepingAccount7
- * SafekeepingAccount7}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountSubLevel15
- * AccountSubLevel15}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountSubLevel16
- * AccountSubLevel16}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountSubLevel18
- * AccountSubLevel18}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountSubLevel19
- * AccountSubLevel19}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountSubLevel11
- * AccountSubLevel11}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountSubLevel12
- * AccountSubLevel12}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountSubLevel17
- * AccountSubLevel17}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountSubLevel13
- * AccountSubLevel13}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountSubLevel14
- * AccountSubLevel14}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SubAccountIdentification49
- * SubAccountIdentification49}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SubAccountIdentification50
- * SubAccountIdentification50}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesAccount#mmSecuritiesAccountType
+ * SecuritiesAccount.mmSecuritiesAccountType}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesAccount#mmRelatedInvestmentAccount
+ * SecuritiesAccount.mmRelatedInvestmentAccount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesAccount#mmRelatedTransfer
+ * SecuritiesAccount.mmRelatedTransfer}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesAccount#mmSecuritiesPartyRole
+ * SecuritiesAccount.mmSecuritiesPartyRole}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesAccount#mmSecurity
+ * SecuritiesAccount.mmSecurity}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesAccount#mmRelatedRegistrar
+ * SecuritiesAccount.mmRelatedRegistrar}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesAccount#mmSafekeepingPlace
+ * SecuritiesAccount.mmSafekeepingPlace}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesAccount#mmSecuritiesBalance
+ * SecuritiesAccount.mmSecuritiesBalance}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesAccount#mmCorporateActionServicing
+ * SecuritiesAccount.mmCorporateActionServicing}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesAccount#mmRelatedAllocation
+ * SecuritiesAccount.mmRelatedAllocation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesAccount#mmSecuritiesEntry
+ * SecuritiesAccount.mmSecuritiesEntry}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesAccount#mmClearingAccountOwner
+ * SecuritiesAccount.mmClearingAccountOwner}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesAccount#mmMarginAccountOwner
+ * SecuritiesAccount.mmMarginAccountOwner}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesAccount#mmDeliveryAccountOwner
+ * SecuritiesAccount.mmDeliveryAccountOwner}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesAccount#mmRelatedPowerOfAttorney
+ * SecuritiesAccount.mmRelatedPowerOfAttorney}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesAccount#mmRelatedMeetingInstruction
+ * SecuritiesAccount.mmRelatedMeetingInstruction}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesAccount#mmClearingAccountType
+ * SecuritiesAccount.mmClearingAccountType}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesAccount#mmRelatedOrder
+ * SecuritiesAccount.mmRelatedOrder}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesAccount#mmDisclosedListTrading
+ * SecuritiesAccount.mmDisclosedListTrading}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesAccount#mmAccountLink
+ * SecuritiesAccount.mmAccountLink}</li>
  * </ul>
  * </li>
  * <li>
@@ -1361,21 +1360,14 @@ public class SecuritiesAccount extends Account {
 	 */
 	public static final MMBusinessAttribute mmSecuritiesAccountType = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountIdentificationAndPurpose.mmPurpose, com.tools20022.repository.msg.SecuritiesAccount13.mmType, com.tools20022.repository.msg.SecuritiesAccount17.mmType,
-					com.tools20022.repository.choice.PurposeCode1Choice.mmCode, com.tools20022.repository.choice.PurposeCode1Choice.mmProprietary, com.tools20022.repository.msg.SecuritiesAccount11.mmType,
-					com.tools20022.repository.msg.SecuritiesAccount2.mmType, com.tools20022.repository.choice.PurposeCode2Choice.mmCode, com.tools20022.repository.choice.PurposeCode2Choice.mmProprietary,
-					com.tools20022.repository.msg.SecuritiesAccount14.mmType, com.tools20022.repository.choice.PurposeCode3Choice.mmCode, com.tools20022.repository.choice.PurposeCode3Choice.mmProprietary,
-					com.tools20022.repository.msg.SecuritiesAccount15.mmType, com.tools20022.repository.choice.PurposeCode4Choice.mmCode, com.tools20022.repository.choice.PurposeCode4Choice.mmProprietary,
-					com.tools20022.repository.msg.SecuritiesAccount16.mmType, com.tools20022.repository.msg.SecuritiesAccount20.mmType, com.tools20022.repository.choice.PurposeCode5Choice.mmCode,
-					com.tools20022.repository.choice.PurposeCode5Choice.mmProprietary, com.tools20022.repository.msg.SecuritiesAccount3.mmType, com.tools20022.repository.msg.SecuritiesAccount19.mmType,
-					com.tools20022.repository.msg.SecuritiesAccount18.mmType, com.tools20022.repository.msg.SecuritiesAccount22.mmType, com.tools20022.repository.msg.SecuritiesAccount24.mmType,
-					com.tools20022.repository.msg.SecuritiesAccount26.mmType, com.tools20022.repository.msg.SecuritiesAccount25.mmType, com.tools20022.repository.choice.PurposeCode7Choice.mmCode,
-					com.tools20022.repository.choice.PurposeCode7Choice.mmProprietary, com.tools20022.repository.msg.SecuritiesAccount33.mmType, com.tools20022.repository.msg.SecuritiesAccount27.mmType,
-					com.tools20022.repository.choice.PurposeCode8Choice.mmCode, com.tools20022.repository.choice.PurposeCode8Choice.mmProprietary, com.tools20022.repository.msg.SecuritiesAccount30.mmType,
-					com.tools20022.repository.msg.SecuritiesAccount34.mmType);
+			derivation_lazy = () -> Arrays.asList(AccountIdentificationAndPurpose.mmPurpose, SecuritiesAccount13.mmType, SecuritiesAccount17.mmType, PurposeCode1Choice.mmCode, PurposeCode1Choice.mmProprietary, SecuritiesAccount11.mmType,
+					SecuritiesAccount2.mmType, PurposeCode2Choice.mmCode, PurposeCode2Choice.mmProprietary, SecuritiesAccount14.mmType, PurposeCode3Choice.mmCode, PurposeCode3Choice.mmProprietary, SecuritiesAccount15.mmType,
+					PurposeCode4Choice.mmCode, PurposeCode4Choice.mmProprietary, SecuritiesAccount16.mmType, SecuritiesAccount20.mmType, PurposeCode5Choice.mmCode, PurposeCode5Choice.mmProprietary, SecuritiesAccount3.mmType,
+					SecuritiesAccount19.mmType, SecuritiesAccount18.mmType, SecuritiesAccount22.mmType, SecuritiesAccount24.mmType, SecuritiesAccount26.mmType, SecuritiesAccount25.mmType, PurposeCode7Choice.mmCode,
+					PurposeCode7Choice.mmProprietary, SecuritiesAccount33.mmType, SecuritiesAccount27.mmType, PurposeCode8Choice.mmCode, PurposeCode8Choice.mmProprietary, SecuritiesAccount30.mmType, SecuritiesAccount34.mmType);
 			elementContext_lazy = () -> SecuritiesAccount.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SecuritiesAccountType";
 			definition = "Specifies the type of securities account.";
 			maxOccurs = 1;
@@ -1424,13 +1416,13 @@ public class SecuritiesAccount extends Account {
 		{
 			elementContext_lazy = () -> SecuritiesAccount.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedInvestmentAccount";
 			definition = "Investment account which contains a securities account to make securities movements.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.InvestmentAccount.mmSecuritiesAccount;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.InvestmentAccount.mmObject();
 		}
 	};
@@ -1475,12 +1467,12 @@ public class SecuritiesAccount extends Account {
 		{
 			elementContext_lazy = () -> SecuritiesAccount.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedTransfer";
 			definition = "Specifies the process which moves securities out of an account to another one.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesTransfer.mmAccount;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SecuritiesTransfer.mmObject();
 		}
 	};
@@ -1522,13 +1514,13 @@ public class SecuritiesAccount extends Account {
 		{
 			elementContext_lazy = () -> SecuritiesAccount.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SecuritiesPartyRole";
 			definition = "Specifies the role which uses a securities account.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesPartyRole.mmSecuritiesAccount;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SecuritiesPartyRole.mmObject();
 		}
 	};
@@ -1614,21 +1606,19 @@ public class SecuritiesAccount extends Account {
 	 */
 	public static final MMBusinessAssociationEnd mmSecurity = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SubAccountIdentification9.mmFinancialInstrumentDetails, com.tools20022.repository.msg.SubAccountIdentification14.mmFinancialInstrumentDetails,
-					com.tools20022.repository.msg.SubAccountIdentification15.mmFinancialInstrumentDetails, com.tools20022.repository.msg.SubAccountIdentification18.mmFinancialInstrumentDetails,
-					com.tools20022.repository.msg.SubAccountIdentification21.mmFinancialInstrumentDetails, com.tools20022.repository.msg.SubAccountIdentification24.mmFinancialInstrumentDetails,
-					com.tools20022.repository.msg.SubAccountIdentification30.mmFinancialInstrumentDetails, com.tools20022.repository.msg.SubAccountIdentification33.mmFinancialInstrumentDetails,
-					com.tools20022.repository.msg.SubAccountIdentification34.mmFinancialInstrumentDetails, com.tools20022.repository.msg.SubAccountIdentification35.mmFinancialInstrumentDetails,
-					com.tools20022.repository.msg.SubAccountIdentification44.mmFinancialInstrumentDetails, com.tools20022.repository.msg.SubAccountIdentification47.mmFinancialInstrumentDetails,
-					com.tools20022.repository.msg.SubAccountIdentification49.mmFinancialInstrumentDetails, com.tools20022.repository.msg.SubAccountIdentification50.mmFinancialInstrumentDetails);
+			derivation_lazy = () -> Arrays.asList(SubAccountIdentification9.mmFinancialInstrumentDetails, SubAccountIdentification14.mmFinancialInstrumentDetails, SubAccountIdentification15.mmFinancialInstrumentDetails,
+					SubAccountIdentification18.mmFinancialInstrumentDetails, SubAccountIdentification21.mmFinancialInstrumentDetails, SubAccountIdentification24.mmFinancialInstrumentDetails,
+					SubAccountIdentification30.mmFinancialInstrumentDetails, SubAccountIdentification33.mmFinancialInstrumentDetails, SubAccountIdentification34.mmFinancialInstrumentDetails,
+					SubAccountIdentification35.mmFinancialInstrumentDetails, SubAccountIdentification44.mmFinancialInstrumentDetails, SubAccountIdentification47.mmFinancialInstrumentDetails,
+					SubAccountIdentification49.mmFinancialInstrumentDetails, SubAccountIdentification50.mmFinancialInstrumentDetails);
 			elementContext_lazy = () -> SecuritiesAccount.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Security";
 			definition = "Security which is held on the securities account.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.Security.mmSecuritiesAccount;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 		}
 	};
@@ -1671,13 +1661,13 @@ public class SecuritiesAccount extends Account {
 		{
 			elementContext_lazy = () -> SecuritiesAccount.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedRegistrar";
 			definition = "Specifies where the financial instruments are registered.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.RegistrarRole.mmRegistrarAccount;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.RegistrarRole.mmObject();
 		}
 	};
@@ -1809,27 +1799,20 @@ public class SecuritiesAccount extends Account {
 	 */
 	public static final MMBusinessAssociationEnd mmSafekeepingPlace = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountIdentification9.mmSafekeepingPlace, com.tools20022.repository.msg.AccountIdentification14.mmSafekeepingPlace,
-					com.tools20022.repository.msg.AccountIdentification15.mmSafekeepingPlace, com.tools20022.repository.msg.AccountIdentification21.mmSafekeepingPlace,
-					com.tools20022.repository.msg.AccountIdentification8.mmSafekeepingPlace, com.tools20022.repository.msg.AccountIdentification17.mmSafekeepingPlace,
-					com.tools20022.repository.msg.AccountIdentification19.mmSafekeepingPlace, com.tools20022.repository.msg.AccountIdentification6.mmSafekeepingPlace,
-					com.tools20022.repository.msg.AccountIdentification12.mmSafekeepingPlace, com.tools20022.repository.msg.AccountIdentification16.mmSafekeepingPlace,
-					com.tools20022.repository.msg.AccountIdentification22.mmSafekeepingPlace, com.tools20022.repository.msg.AccountIdentification23.mmSafekeepingPlace,
-					com.tools20022.repository.msg.AccountIdentification24.mmSafekeepingPlace, com.tools20022.repository.msg.AccountIdentification7.mmSafekeepingPlace,
-					com.tools20022.repository.msg.AccountIdentification13.mmSafekeepingPlace, com.tools20022.repository.msg.AccountIdentification18.mmSafekeepingPlace,
-					com.tools20022.repository.msg.AccountIdentification20.mmSafekeepingPlace, com.tools20022.repository.msg.AccountIdentification11.mmSafekeepingPlace, com.tools20022.repository.msg.TradeLeg8.mmSafekeepingPlace,
-					com.tools20022.repository.msg.SettlementObligation7.mmSafekeepingPlace, com.tools20022.repository.msg.TradeLeg10.mmSafekeepingPlace, com.tools20022.repository.msg.TradeLeg9.mmSafekeepingPlace,
-					com.tools20022.repository.msg.SettlementObligation8.mmSafekeepingPlace, com.tools20022.repository.msg.AccountIdentification31.mmSafekeepingPlace, com.tools20022.repository.msg.AccountIdentification32.mmSafekeepingPlace,
-					com.tools20022.repository.msg.AccountIdentification34.mmSafekeepingPlace, com.tools20022.repository.msg.AccountIdentification37.mmSafekeepingPlace,
-					com.tools20022.repository.msg.AccountIdentification39.mmSafekeepingPlace, com.tools20022.repository.msg.AccountIdentification42.mmSafekeepingPlace);
+			derivation_lazy = () -> Arrays.asList(AccountIdentification9.mmSafekeepingPlace, AccountIdentification14.mmSafekeepingPlace, AccountIdentification15.mmSafekeepingPlace, AccountIdentification21.mmSafekeepingPlace,
+					AccountIdentification8.mmSafekeepingPlace, AccountIdentification17.mmSafekeepingPlace, AccountIdentification19.mmSafekeepingPlace, AccountIdentification6.mmSafekeepingPlace, AccountIdentification12.mmSafekeepingPlace,
+					AccountIdentification16.mmSafekeepingPlace, AccountIdentification22.mmSafekeepingPlace, AccountIdentification23.mmSafekeepingPlace, AccountIdentification24.mmSafekeepingPlace, AccountIdentification7.mmSafekeepingPlace,
+					AccountIdentification13.mmSafekeepingPlace, AccountIdentification18.mmSafekeepingPlace, AccountIdentification20.mmSafekeepingPlace, AccountIdentification11.mmSafekeepingPlace, TradeLeg8.mmSafekeepingPlace,
+					SettlementObligation7.mmSafekeepingPlace, TradeLeg10.mmSafekeepingPlace, TradeLeg9.mmSafekeepingPlace, SettlementObligation8.mmSafekeepingPlace, AccountIdentification31.mmSafekeepingPlace,
+					AccountIdentification32.mmSafekeepingPlace, AccountIdentification34.mmSafekeepingPlace, AccountIdentification37.mmSafekeepingPlace, AccountIdentification39.mmSafekeepingPlace, AccountIdentification42.mmSafekeepingPlace);
 			elementContext_lazy = () -> SecuritiesAccount.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SafekeepingPlace";
 			definition = "Location where the financial instruments are safekept.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.SafekeepingPlace.mmRelatedSecuritiesAccount;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SafekeepingPlace.mmObject();
 		}
 	};
@@ -2054,36 +2037,25 @@ public class SecuritiesAccount extends Account {
 	 */
 	public static final MMBusinessAssociationEnd mmSecuritiesBalance = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountAndBalance2.mmBalance, com.tools20022.repository.msg.AccountAndBalance5.mmBalance, com.tools20022.repository.msg.AccountAndBalance10.mmBalance,
-					com.tools20022.repository.msg.AccountAndBalance12.mmBalance, com.tools20022.repository.msg.AccountAndBalance17.mmBalance, com.tools20022.repository.msg.AccountAndBalance20.mmBalance,
-					com.tools20022.repository.msg.AccountAndBalance3.mmBalance, com.tools20022.repository.msg.AccountAndBalance6.mmBalance, com.tools20022.repository.msg.AccountAndBalance11.mmBalance,
-					com.tools20022.repository.msg.AccountAndBalance13.mmBalance, com.tools20022.repository.msg.AccountAndBalance16.mmBalance, com.tools20022.repository.msg.AccountAndBalance19.mmBalance,
-					com.tools20022.repository.msg.AccountAndBalance22.mmBalance, com.tools20022.repository.msg.AccountAndBalance23.mmBalance, com.tools20022.repository.msg.AccountAndBalance1.mmBalance,
-					com.tools20022.repository.msg.AccountAndBalance7.mmBalance, com.tools20022.repository.msg.AccountAndBalance9.mmBalance, com.tools20022.repository.msg.AccountAndBalance14.mmBalance,
-					com.tools20022.repository.msg.AccountAndBalance15.mmBalance, com.tools20022.repository.msg.AccountAndBalance18.mmBalance, com.tools20022.repository.msg.AccountAndBalance21.mmBalance,
-					com.tools20022.repository.msg.AccountAndBalance24.mmBalance, com.tools20022.repository.msg.AccountAndBalance4.mmConfirmedBalance, com.tools20022.repository.msg.AccountAndBalance8.mmConfirmedBalance,
-					com.tools20022.repository.msg.SubAccountIdentification29.mmBalanceForSubAccount, com.tools20022.repository.msg.SubAccountIdentification31.mmBalanceForSubAccount,
-					com.tools20022.repository.msg.SubAccountIdentification28.mmBalanceForSubAccount, com.tools20022.repository.msg.SubAccountIdentification32.mmBalanceForSubAccount,
-					com.tools20022.repository.msg.SecurityPosition2.mmPosition, com.tools20022.repository.msg.SecurityPosition1.mmPosition, com.tools20022.repository.msg.SafekeepingAccount3.mmInstructedBalance,
-					com.tools20022.repository.msg.SafekeepingAccount4.mmInstructedBalance, com.tools20022.repository.msg.AccountIdentification7.mmConfirmedBalance, com.tools20022.repository.msg.AccountIdentification13.mmConfirmedBalance,
-					com.tools20022.repository.msg.AccountIdentification18.mmConfirmedBalance, com.tools20022.repository.msg.AccountIdentification20.mmConfirmedBalance, com.tools20022.repository.msg.AccountAndBalance26.mmBalance,
-					com.tools20022.repository.msg.AccountAndBalance25.mmBalance, com.tools20022.repository.msg.AccountAndBalance32.mmBalance, com.tools20022.repository.msg.AccountAndBalance29.mmBalance,
-					com.tools20022.repository.msg.SubAccountIdentification38.mmBalanceForSubAccount, com.tools20022.repository.msg.SubAccountIdentification37.mmBalanceForSubAccount,
-					com.tools20022.repository.msg.SafekeepingAccount6.mmInstructedBalance, com.tools20022.repository.msg.SubAccountIdentification40.mmBalanceForSubAccount,
-					com.tools20022.repository.msg.SubAccountIdentification39.mmBalanceForSubAccount, com.tools20022.repository.msg.SubAccountIdentification42.mmBalanceForSubAccount,
-					com.tools20022.repository.msg.SubAccountIdentification43.mmBalanceForSubAccount, com.tools20022.repository.msg.AccountAndBalance34.mmBalance, com.tools20022.repository.msg.AccountAndBalance35.mmBalance,
-					com.tools20022.repository.msg.AccountAndBalance36.mmConfirmedBalance, com.tools20022.repository.msg.AccountAndBalance33.mmBalance, com.tools20022.repository.msg.AccountIdentification32.mmConfirmedBalance,
-					com.tools20022.repository.msg.AccountAndBalance40.mmConfirmedBalance, com.tools20022.repository.msg.AccountAndBalance38.mmBalance, com.tools20022.repository.msg.AccountAndBalance37.mmBalance,
-					com.tools20022.repository.msg.AccountIdentification37.mmConfirmedBalance, com.tools20022.repository.msg.AccountAndBalance39.mmBalance, com.tools20022.repository.msg.SubAccountIdentification45.mmBalanceForSubAccount,
-					com.tools20022.repository.msg.SubAccountIdentification46.mmBalanceForSubAccount);
+			derivation_lazy = () -> Arrays.asList(AccountAndBalance2.mmBalance, AccountAndBalance5.mmBalance, AccountAndBalance10.mmBalance, AccountAndBalance12.mmBalance, AccountAndBalance17.mmBalance, AccountAndBalance20.mmBalance,
+					AccountAndBalance3.mmBalance, AccountAndBalance6.mmBalance, AccountAndBalance11.mmBalance, AccountAndBalance13.mmBalance, AccountAndBalance16.mmBalance, AccountAndBalance19.mmBalance, AccountAndBalance22.mmBalance,
+					AccountAndBalance23.mmBalance, AccountAndBalance1.mmBalance, AccountAndBalance7.mmBalance, AccountAndBalance9.mmBalance, AccountAndBalance14.mmBalance, AccountAndBalance15.mmBalance, AccountAndBalance18.mmBalance,
+					AccountAndBalance21.mmBalance, AccountAndBalance24.mmBalance, AccountAndBalance4.mmConfirmedBalance, AccountAndBalance8.mmConfirmedBalance, SubAccountIdentification29.mmBalanceForSubAccount,
+					SubAccountIdentification31.mmBalanceForSubAccount, SubAccountIdentification28.mmBalanceForSubAccount, SubAccountIdentification32.mmBalanceForSubAccount, SecurityPosition2.mmPosition, SecurityPosition1.mmPosition,
+					SafekeepingAccount3.mmInstructedBalance, SafekeepingAccount4.mmInstructedBalance, AccountIdentification7.mmConfirmedBalance, AccountIdentification13.mmConfirmedBalance, AccountIdentification18.mmConfirmedBalance,
+					AccountIdentification20.mmConfirmedBalance, AccountAndBalance26.mmBalance, AccountAndBalance25.mmBalance, AccountAndBalance32.mmBalance, AccountAndBalance29.mmBalance, SubAccountIdentification38.mmBalanceForSubAccount,
+					SubAccountIdentification37.mmBalanceForSubAccount, SafekeepingAccount6.mmInstructedBalance, SubAccountIdentification40.mmBalanceForSubAccount, SubAccountIdentification39.mmBalanceForSubAccount,
+					SubAccountIdentification42.mmBalanceForSubAccount, SubAccountIdentification43.mmBalanceForSubAccount, AccountAndBalance34.mmBalance, AccountAndBalance35.mmBalance, AccountAndBalance36.mmConfirmedBalance,
+					AccountAndBalance33.mmBalance, AccountIdentification32.mmConfirmedBalance, AccountAndBalance40.mmConfirmedBalance, AccountAndBalance38.mmBalance, AccountAndBalance37.mmBalance,
+					AccountIdentification37.mmConfirmedBalance, AccountAndBalance39.mmBalance, SubAccountIdentification45.mmBalanceForSubAccount, SubAccountIdentification46.mmBalanceForSubAccount);
 			elementContext_lazy = () -> SecuritiesAccount.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SecuritiesBalance";
 			definition = "Value of financial assets held by a person or an organisation. It is derived from the association between Account and Balance.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesBalance.mmSecuritiesAccount;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SecuritiesBalance.mmObject();
 		}
 	};
@@ -2129,12 +2101,12 @@ public class SecuritiesAccount extends Account {
 		{
 			elementContext_lazy = () -> SecuritiesAccount.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CorporateActionServicing";
 			definition = "Actions taken in relation with the securities account in the context of the corporate action.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.CorporateActionServicing.mmSecuritiesAccount;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.CorporateActionServicing.mmObject();
 		}
 	};
@@ -2176,13 +2148,13 @@ public class SecuritiesAccount extends Account {
 		{
 			elementContext_lazy = () -> SecuritiesAccount.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedAllocation";
 			definition = "Allocation process for which an account is specified.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.Allocation.mmAllocationAccount;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Allocation.mmObject();
 		}
 	};
@@ -2224,12 +2196,12 @@ public class SecuritiesAccount extends Account {
 		{
 			elementContext_lazy = () -> SecuritiesAccount.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SecuritiesEntry";
 			definition = "Record of the movements into or out of an account.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesEntry.mmSecuritiesAccount;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SecuritiesEntry.mmObject();
 		}
 	};
@@ -2271,13 +2243,13 @@ public class SecuritiesAccount extends Account {
 		{
 			elementContext_lazy = () -> SecuritiesAccount.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ClearingAccountOwner";
 			definition = "Clearing member which holds a clearing account at a CCP.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.ClearingMemberRole.mmClearingAccount;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.ClearingMemberRole.mmObject();
 		}
 	};
@@ -2319,13 +2291,13 @@ public class SecuritiesAccount extends Account {
 		{
 			elementContext_lazy = () -> SecuritiesAccount.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MarginAccountOwner";
 			definition = "Clearing member which holds a margin account at a CCP.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.ClearingMemberRole.mmMarginAccount;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.ClearingMemberRole.mmObject();
 		}
 	};
@@ -2367,13 +2339,13 @@ public class SecuritiesAccount extends Account {
 		{
 			elementContext_lazy = () -> SecuritiesAccount.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DeliveryAccountOwner";
 			definition = "Clearing member which holds a delivery account at a CCP.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.ClearingMemberRole.mmDeliveryAccount;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.ClearingMemberRole.mmObject();
 		}
 	};
@@ -2415,13 +2387,13 @@ public class SecuritiesAccount extends Account {
 		{
 			elementContext_lazy = () -> SecuritiesAccount.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedPowerOfAttorney";
 			definition = "Power of attorney related to the securities account.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.PowerOfAttorney.mmAuthorisedAccount;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.PowerOfAttorney.mmObject();
 		}
 	};
@@ -2464,13 +2436,13 @@ public class SecuritiesAccount extends Account {
 		{
 			elementContext_lazy = () -> SecuritiesAccount.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedMeetingInstruction";
 			definition = "Meeting instruction which specifies an account.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.InstructionForMeeting.mmSafekeepingAccount;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.InstructionForMeeting.mmObject();
 		}
 	};
@@ -2514,10 +2486,10 @@ public class SecuritiesAccount extends Account {
 	 */
 	public static final MMBusinessAttribute mmClearingAccountType = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SettlementObligation4.mmClearingAccountType, com.tools20022.repository.msg.SettlementObligation8.mmClearingAccountType);
+			derivation_lazy = () -> Arrays.asList(SettlementObligation4.mmClearingAccountType, SettlementObligation8.mmClearingAccountType);
 			elementContext_lazy = () -> SecuritiesAccount.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ClearingAccountType";
 			definition = "Specifies the clearing account type.";
 			maxOccurs = 1;
@@ -2564,13 +2536,13 @@ public class SecuritiesAccount extends Account {
 		{
 			elementContext_lazy = () -> SecuritiesAccount.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedOrder";
 			definition = "Order process for which an ordering account is specified.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmOrderingAccount;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmObject();
 		}
 	};
@@ -2615,13 +2587,13 @@ public class SecuritiesAccount extends Account {
 		{
 			elementContext_lazy = () -> SecuritiesAccount.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DisclosedListTrading";
 			definition = "Disclosed list trading process for which a trading account is specified.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.DisclosedListTrading.mmDisclosedListTradingAccount;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.DisclosedListTrading.mmObject();
 		}
 	};
@@ -2664,13 +2636,13 @@ public class SecuritiesAccount extends Account {
 		{
 			elementContext_lazy = () -> SecuritiesAccount.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AccountLink";
 			definition = "Defines the link between a cash account and a securities account.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.AccountLink.mmSecuritiesAccount;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.AccountLink.mmObject();
 		}
 	};
@@ -2678,8 +2650,8 @@ public class SecuritiesAccount extends Account {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesAccount";
 				definition = "Account to or from which a securities entry is made.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Security.mmSecuritiesAccount, com.tools20022.repository.entity.InvestmentAccount.mmSecuritiesAccount,
@@ -2689,147 +2661,79 @@ public class SecuritiesAccount extends Account {
 						com.tools20022.repository.entity.RegistrarRole.mmRegistrarAccount, com.tools20022.repository.entity.CorporateActionServicing.mmSecuritiesAccount, com.tools20022.repository.entity.SecuritiesOrder.mmOrderingAccount,
 						com.tools20022.repository.entity.Allocation.mmAllocationAccount, com.tools20022.repository.entity.InstructionForMeeting.mmSafekeepingAccount, com.tools20022.repository.entity.PowerOfAttorney.mmAuthorisedAccount,
 						com.tools20022.repository.entity.AccountLink.mmSecuritiesAccount, com.tools20022.repository.entity.DisclosedListTrading.mmDisclosedListTradingAccount);
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyIdentificationAndAccount16.mmSafekeepingAccount, com.tools20022.repository.msg.PartyIdentificationAndAccount44.mmSafekeepingAccount,
-						com.tools20022.repository.msg.PartyIdentificationAndAccount1.mmSafekeepingAccount, com.tools20022.repository.msg.PartyIdentificationAndAccount42.mmSafekeepingAccount,
-						com.tools20022.repository.msg.PartyIdentificationAndAccount19.mmSafekeepingAccount, com.tools20022.repository.msg.PartyIdentificationAndAccount21.mmSafekeepingAccount,
-						com.tools20022.repository.msg.PartyIdentificationAndAccount40.mmSafekeepingAccount, com.tools20022.repository.msg.PartyIdentificationAndAccount41.mmSafekeepingAccount,
-						com.tools20022.repository.msg.PartyIdentificationAndAccount81.mmSafekeepingAccount, com.tools20022.repository.msg.QuantityAndAccount30.mmSafekeepingAccount,
-						com.tools20022.repository.msg.PartyIdentificationAndAccount43.mmSafekeepingAccount, com.tools20022.repository.msg.PartyIdentificationAndAccount68.mmSafekeepingAccount,
-						com.tools20022.repository.msg.PartyIdentificationAndAccount75.mmSafekeepingAccount, com.tools20022.repository.msg.PartyIdentificationAndAccount63.mmSafekeepingAccount,
-						com.tools20022.repository.msg.PartyIdentificationAndAccount88.mmSafekeepingAccount, com.tools20022.repository.msg.PartyIdentificationAndAccount66.mmSafekeepingAccount,
-						com.tools20022.repository.msg.QuantityAndAccount33.mmSafekeepingAccount, com.tools20022.repository.msg.AccountIdentification9.mmSafekeepingAccount,
-						com.tools20022.repository.msg.AccountIdentification14.mmSafekeepingAccount, com.tools20022.repository.msg.AccountIdentification15.mmSafekeepingAccount,
-						com.tools20022.repository.msg.AccountIdentification21.mmSafekeepingAccount, com.tools20022.repository.msg.AccountAndBalance2.mmSafekeepingAccount,
-						com.tools20022.repository.msg.AccountAndBalance5.mmSafekeepingAccount, com.tools20022.repository.msg.AccountAndBalance10.mmSafekeepingAccount, com.tools20022.repository.msg.AccountAndBalance12.mmSafekeepingAccount,
-						com.tools20022.repository.msg.AccountAndBalance17.mmSafekeepingAccount, com.tools20022.repository.msg.AccountAndBalance20.mmSafekeepingAccount,
-						com.tools20022.repository.msg.AccountIdentification8.mmSafekeepingAccount, com.tools20022.repository.msg.AccountIdentification17.mmSafekeepingAccount,
-						com.tools20022.repository.msg.AccountIdentification19.mmSafekeepingAccount, com.tools20022.repository.msg.AccountIdentification6.mmSafekeepingAccount,
-						com.tools20022.repository.msg.AccountIdentification12.mmSafekeepingAccount, com.tools20022.repository.msg.AccountIdentification16.mmSafekeepingAccount,
-						com.tools20022.repository.msg.AccountIdentification22.mmSafekeepingAccount, com.tools20022.repository.msg.AccountIdentification23.mmSafekeepingAccount,
-						com.tools20022.repository.msg.AccountIdentification24.mmSafekeepingAccount, com.tools20022.repository.msg.AccountIdentification25.mmSafekeepingAccount,
-						com.tools20022.repository.msg.AccountIdentification29.mmSafekeepingAccount, com.tools20022.repository.msg.AccountAndBalance3.mmSafekeepingAccount,
-						com.tools20022.repository.msg.PartyIdentificationAndAccount14.mmSafekeepingAccount, com.tools20022.repository.msg.AccountAndBalance6.mmSafekeepingAccount,
-						com.tools20022.repository.msg.PartyIdentificationAndAccount22.mmSafekeepingAccount, com.tools20022.repository.msg.AccountAndBalance11.mmSafekeepingAccount,
-						com.tools20022.repository.msg.PartyIdentificationAndAccount51.mmSafekeepingAccount, com.tools20022.repository.msg.AccountAndBalance13.mmSafekeepingAccount,
-						com.tools20022.repository.msg.PartyIdentificationAndAccount56.mmSafekeepingAccount, com.tools20022.repository.msg.AccountAndBalance16.mmSafekeepingAccount,
-						com.tools20022.repository.msg.AccountAndBalance19.mmSafekeepingAccount, com.tools20022.repository.msg.AccountAndBalance22.mmSafekeepingAccount, com.tools20022.repository.msg.AccountAndBalance23.mmSafekeepingAccount,
-						com.tools20022.repository.msg.AccountAndBalance1.mmSafekeepingAccount, com.tools20022.repository.choice.AccountIdentification7Choice.mmAccountsListAndBalanceDetails,
-						com.tools20022.repository.msg.AccountAndBalance7.mmSafekeepingAccount, com.tools20022.repository.choice.AccountIdentification8Choice.mmAccountsListAndBalanceDetails,
-						com.tools20022.repository.msg.AccountAndBalance9.mmSafekeepingAccount, com.tools20022.repository.choice.AccountIdentification12Choice.mmAccountsListAndBalanceDetails,
-						com.tools20022.repository.msg.AccountAndBalance14.mmSafekeepingAccount, com.tools20022.repository.choice.AccountIdentification15Choice.mmAccountsListAndBalanceDetails,
-						com.tools20022.repository.msg.AccountAndBalance15.mmSafekeepingAccount, com.tools20022.repository.choice.AccountIdentification18Choice.mmAccountsListAndBalanceDetails,
-						com.tools20022.repository.msg.AccountAndBalance18.mmSafekeepingAccount, com.tools20022.repository.choice.AccountIdentification19Choice.mmAccountsListAndBalanceDetails,
-						com.tools20022.repository.msg.AccountAndBalance21.mmSafekeepingAccount, com.tools20022.repository.choice.AccountIdentification21Choice.mmAccountsListAndBalanceDetails,
-						com.tools20022.repository.msg.AccountAndBalance24.mmSafekeepingAccount, com.tools20022.repository.choice.AccountIdentification22Choice.mmAccountsListAndBalanceDetails,
-						com.tools20022.repository.msg.AccountAndBalance4.mmSafekeepingAccount, com.tools20022.repository.msg.AccountAndBalance8.mmSafekeepingAccount,
-						com.tools20022.repository.msg.SubAccountIdentification10.mmSafekeepingAccount, com.tools20022.repository.msg.SubAccountIdentification13.mmSafekeepingAccount,
-						com.tools20022.repository.msg.SubAccountIdentification16.mmSafekeepingAccount, com.tools20022.repository.msg.SubAccountIdentification20.mmSafekeepingAccount,
-						com.tools20022.repository.msg.SubAccountIdentification23.mmSafekeepingAccount, com.tools20022.repository.msg.SubAccountIdentification26.mmSafekeepingAccount,
-						com.tools20022.repository.msg.SubAccountIdentification29.mmSafekeepingAccount, com.tools20022.repository.msg.SubAccountIdentification31.mmSafekeepingAccount,
-						com.tools20022.repository.msg.SubAccountIdentification11.mmSafekeepingAccount, com.tools20022.repository.msg.SubAccountIdentification12.mmSafekeepingAccount,
-						com.tools20022.repository.msg.SubAccountIdentification17.mmSafekeepingAccount, com.tools20022.repository.msg.SubAccountIdentification19.mmSafekeepingAccount,
-						com.tools20022.repository.msg.SubAccountIdentification22.mmSafekeepingAccount, com.tools20022.repository.msg.SubAccountIdentification25.mmSafekeepingAccount,
-						com.tools20022.repository.msg.SubAccountIdentification28.mmSafekeepingAccount, com.tools20022.repository.msg.SubAccountIdentification32.mmSafekeepingAccount,
-						com.tools20022.repository.msg.QuantityAndAccount6.mmSafekeepingAccount, com.tools20022.repository.msg.QuantityAndAccount11.mmSafekeepingAccount,
-						com.tools20022.repository.msg.PartyIdentificationAndAccount26.mmSafekeepingAccount, com.tools20022.repository.msg.PartyIdentificationAndAccount28.mmSafekeepingAccount,
-						com.tools20022.repository.msg.PartyIdentificationAndAccount30.mmSafekeepingAccount, com.tools20022.repository.msg.QuantityAndAccount18.mmSafekeepingAccount,
-						com.tools20022.repository.msg.PartyIdentificationAndAccount35.mmSafekeepingAccount, com.tools20022.repository.msg.PartyIdentificationAndAccount36.mmSafekeepingAccount,
-						com.tools20022.repository.msg.PartyIdentificationAndAccount37.mmSafekeepingAccount, com.tools20022.repository.msg.QuantityAndAccount19.mmSafekeepingAccount,
-						com.tools20022.repository.msg.PartyIdentificationAndAccount49.mmSafekeepingAccount, com.tools20022.repository.msg.PartyIdentificationAndAccount61.mmSafekeepingAccount,
-						com.tools20022.repository.msg.PartyIdentificationAndAccount62.mmSafekeepingAccount, com.tools20022.repository.msg.QuantityAndAccount1.mmSafekeepingAccount,
-						com.tools20022.repository.msg.QuantityAndAccount5.mmSafekeepingAccount, com.tools20022.repository.msg.QuantityAndAccount17.mmSafekeepingAccount,
-						com.tools20022.repository.msg.QuantityAndAccount24.mmSafekeepingAccount, com.tools20022.repository.msg.QuantityAndAccount25.mmSafekeepingAccount,
-						com.tools20022.repository.msg.QuantityAndAccount34.mmSafekeepingAccount, com.tools20022.repository.msg.PartyIdentificationAndAccount25.mmSafekeepingAccount,
-						com.tools20022.repository.msg.QuantityAndAccount2.mmSafekeepingAccount, com.tools20022.repository.msg.QuantityAndAccount12.mmSafekeepingAccount,
-						com.tools20022.repository.msg.QuantityAndAccount15.mmSafekeepingAccount, com.tools20022.repository.msg.QuantityAndAccount20.mmSafekeepingAccount,
-						com.tools20022.repository.msg.PartyIdentificationAndAccount65.mmSafekeepingAccount, com.tools20022.repository.msg.PartyIdentificationAndAccount67.mmSafekeepingAccount,
-						com.tools20022.repository.msg.QuantityAndAccount28.mmSafekeepingAccount, com.tools20022.repository.msg.QuantityAndAccount37.mmSafekeepingAccount,
-						com.tools20022.repository.msg.SubAccountIdentification9.mmSafekeepingAccount, com.tools20022.repository.msg.SubAccountIdentification14.mmSafekeepingAccount,
-						com.tools20022.repository.msg.SubAccountIdentification15.mmSafekeepingAccount, com.tools20022.repository.msg.SubAccountIdentification18.mmSafekeepingAccount,
-						com.tools20022.repository.msg.SubAccountIdentification21.mmSafekeepingAccount, com.tools20022.repository.msg.SubAccountIdentification24.mmSafekeepingAccount,
-						com.tools20022.repository.msg.SubAccountIdentification30.mmSafekeepingAccount, com.tools20022.repository.msg.SubAccountIdentification33.mmSafekeepingAccount,
-						com.tools20022.repository.msg.PartyIdentificationAndAccount9.mmSafekeepingAccount, com.tools20022.repository.msg.PartyIdentificationAndAccount79.mmSafekeepingAccount,
-						com.tools20022.repository.msg.PartyIdentificationAndAccount83.mmSafekeepingAccount, com.tools20022.repository.msg.PartyIdentificationAndAccount77.mmSafekeepingAccount,
-						com.tools20022.repository.msg.ConfirmationPartyDetails4.mmSafekeepingAccount, com.tools20022.repository.msg.Intermediary14.mmSafekeepingDetails,
-						com.tools20022.repository.msg.ConfirmationPartyDetails3.mmSafekeepingAccount, com.tools20022.repository.msg.PartyIdentificationAndAccount10.mmSafekeepingAccount,
-						com.tools20022.repository.msg.PartyIdentificationAndAccount8.mmSafekeepingAccount, com.tools20022.repository.msg.ConfirmationPartyDetails6.mmSafekeepingAccount,
-						com.tools20022.repository.msg.PartyIdentificationAndAccount34.mmSafekeepingAccount, com.tools20022.repository.msg.SecurityMovement1.mmAccountDetails,
-						com.tools20022.repository.msg.SecuritiesProceeds1.mmAccountDetails, com.tools20022.repository.msg.CorporateActionStandingInstructionGeneralInformation1.mmAccountDetails,
-						com.tools20022.repository.msg.CorporateActionStandingInstruction1.mmSecuritiesDistributionDetails, com.tools20022.repository.msg.QuantityAndAccount7.mmSafekeepingAccount,
-						com.tools20022.repository.msg.QuantityAndAccount16.mmSafekeepingAccount, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails2.mmSafekeepingAccount,
-						com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails8.mmSafekeepingAccount, com.tools20022.repository.msg.QuantityAndAccount3.mmSafekeepingAccount,
-						com.tools20022.repository.msg.QuantityAndAccount13.mmSafekeepingAccount, com.tools20022.repository.msg.PartyIdentificationAndAccount45.mmSafekeepingAccount,
-						com.tools20022.repository.msg.PartyIdentificationAndAccount46.mmSafekeepingAccount, com.tools20022.repository.msg.PartyIdentificationAndAccount47.mmSafekeepingAccount,
-						com.tools20022.repository.msg.AccountIdentification7.mmSafekeepingAccount, com.tools20022.repository.msg.AccountIdentification13.mmSafekeepingAccount,
-						com.tools20022.repository.msg.AccountIdentification18.mmSafekeepingAccount, com.tools20022.repository.msg.AccountIdentification20.mmSafekeepingAccount,
-						com.tools20022.repository.msg.QuantityAndAccount10.mmSafekeepingAccount, com.tools20022.repository.msg.QuantityAndAccount21.mmSafekeepingAccount,
-						com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails6.mmSafekeepingAccount, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails10.mmSafekeepingAccount,
-						com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails17.mmSafekeepingAccount, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails18.mmSafekeepingAccount,
-						com.tools20022.repository.msg.QuantityAndAccount4.mmSafekeepingAccount, com.tools20022.repository.msg.QuantityAndAccount22.mmSafekeepingAccount,
-						com.tools20022.repository.msg.QuantityAndAccount27.mmSafekeepingAccount, com.tools20022.repository.msg.QuantityAndAccount36.mmSafekeepingAccount,
-						com.tools20022.repository.msg.PartyIdentificationAndAccount71.mmSafekeepingAccount, com.tools20022.repository.msg.PartyIdentificationAndAccount73.mmSafekeepingAccount,
-						com.tools20022.repository.msg.PartyIdentificationAndAccount74.mmSafekeepingAccount, com.tools20022.repository.msg.PartyIdentificationAndAccount76.mmSafekeepingAccount,
-						com.tools20022.repository.msg.SecuritiesAccount21.mmSubAccount, com.tools20022.repository.msg.MarginReport1.mmMarginAccount, com.tools20022.repository.msg.MarginReport2.mmMarginAccount,
-						com.tools20022.repository.msg.AccountIdentification11.mmSafekeepingAccount, com.tools20022.repository.choice.SecuritiesAccount1Choice.mmAccount,
-						com.tools20022.repository.msg.SubAccountIdentification27.mmSafekeepingAccount, com.tools20022.repository.msg.SubaccountIdentification7.mmSafekeepingAccount,
-						com.tools20022.repository.msg.SubaccountIdentification8.mmSafekeepingAccount, com.tools20022.repository.choice.AccountIdentification20Choice.mmSecuritiesAccountIdentification,
-						com.tools20022.repository.msg.SubAccountIdentification34.mmSafekeepingAccount, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails21.mmSafekeepingAccount,
-						com.tools20022.repository.choice.AccountIdentification23Choice.mmAccountsListAndBalanceDetails, com.tools20022.repository.msg.AccountAndBalance26.mmSafekeepingAccount,
-						com.tools20022.repository.msg.AccountAndBalance25.mmSafekeepingAccount, com.tools20022.repository.msg.PartyIdentificationAndAccount95.mmAccountIdentification,
-						com.tools20022.repository.msg.AccountAndBalance32.mmSafekeepingAccount, com.tools20022.repository.choice.AccountIdentification26Choice.mmAccountsListAndBalanceDetails,
-						com.tools20022.repository.msg.AccountAndBalance29.mmSafekeepingAccount, com.tools20022.repository.msg.SubAccountIdentification35.mmSafekeepingAccount,
-						com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails22.mmSafekeepingAccount, com.tools20022.repository.msg.SafekeepingAccount5.mmAccountIdentification,
-						com.tools20022.repository.msg.SafekeepingAccount5.mmAccountSubLevel1, com.tools20022.repository.msg.AccountSubLevel1.mmAccountSubLevel2, com.tools20022.repository.msg.AccountSubLevel4.mmAccountSubLevel5,
-						com.tools20022.repository.msg.AccountSubLevel5.mmAccountSubLevel6, com.tools20022.repository.msg.AccountSubLevel2.mmAccountSubLevel3, com.tools20022.repository.msg.AccountSubLevel3.mmAccountSubLevel4,
-						com.tools20022.repository.msg.AccountSubLevel6.mmAccountSubLevel7, com.tools20022.repository.msg.AccountSubLevel7.mmAccountSubLevel8, com.tools20022.repository.msg.AccountSubLevel8.mmAccountSubLevel9,
-						com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails24.mmSafekeepingAccount, com.tools20022.repository.msg.SubAccountIdentification38.mmSafekeepingAccount,
-						com.tools20022.repository.msg.SubAccountIdentification37.mmSafekeepingAccount, com.tools20022.repository.msg.PartyIdentificationAndAccount100.mmSafekeepingAccount,
-						com.tools20022.repository.msg.ReportItem1.mmAccountIdentification, com.tools20022.repository.msg.SubAccountIdentification40.mmSafekeepingAccount,
-						com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails25.mmSafekeepingAccount, com.tools20022.repository.msg.SubAccountIdentification39.mmSafekeepingAccount,
-						com.tools20022.repository.msg.QuantityAndAccount39.mmSafekeepingAccount, com.tools20022.repository.msg.SubAccountIdentification42.mmSafekeepingAccount,
-						com.tools20022.repository.msg.QuantityAndAccount41.mmSafekeepingAccount, com.tools20022.repository.msg.SubAccountIdentification44.mmSafekeepingAccount,
-						com.tools20022.repository.msg.QuantityAndAccount40.mmSafekeepingAccount, com.tools20022.repository.msg.QuantityAndAccount42.mmSafekeepingAccount,
-						com.tools20022.repository.msg.QuantityAndAccount38.mmSafekeepingAccount, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails26.mmSafekeepingAccount,
-						com.tools20022.repository.msg.SubAccountIdentification43.mmSafekeepingAccount, com.tools20022.repository.msg.PartyIdentificationAndAccount106.mmSafekeepingAccount,
-						com.tools20022.repository.msg.QuantityAndAccount43.mmSafekeepingAccount, com.tools20022.repository.msg.PartyIdentificationAndAccount117.mmSafekeepingAccount,
-						com.tools20022.repository.msg.PartyIdentificationAndAccount108.mmSafekeepingAccount, com.tools20022.repository.msg.PartyIdentificationAndAccount107.mmSafekeepingAccount,
-						com.tools20022.repository.msg.AccountAndBalance34.mmSafekeepingAccount, com.tools20022.repository.msg.AccountAndBalance35.mmSafekeepingAccount, com.tools20022.repository.msg.AccountAndBalance36.mmSafekeepingAccount,
-						com.tools20022.repository.msg.AccountIdentification33.mmSafekeepingAccount, com.tools20022.repository.choice.AccountIdentification32Choice.mmAccountsListAndBalanceDetails,
-						com.tools20022.repository.msg.AccountIdentification31.mmSafekeepingAccount, com.tools20022.repository.msg.PartyIdentificationAndAccount122.mmSafekeepingAccount,
-						com.tools20022.repository.msg.AccountAndBalance33.mmSafekeepingAccount, com.tools20022.repository.msg.AccountIdentification32.mmSafekeepingAccount,
-						com.tools20022.repository.msg.PartyIdentificationAndAccount127.mmSafekeepingAccount, com.tools20022.repository.msg.AccountAndBalance40.mmSafekeepingAccount,
-						com.tools20022.repository.msg.AccountAndBalance38.mmSafekeepingAccount, com.tools20022.repository.choice.AccountIdentification36Choice.mmAccountsListAndBalanceDetails,
-						com.tools20022.repository.msg.AccountIdentification35.mmSafekeepingAccount, com.tools20022.repository.msg.AccountAndBalance37.mmSafekeepingAccount,
-						com.tools20022.repository.msg.AccountIdentification34.mmSafekeepingAccount, com.tools20022.repository.msg.AccountIdentification37.mmSafekeepingAccount,
-						com.tools20022.repository.msg.AccountAndBalance39.mmSafekeepingAccount, com.tools20022.repository.msg.PartyIdentificationAndAccount128.mmSafekeepingAccount,
-						com.tools20022.repository.msg.SubAccountIdentification47.mmSafekeepingAccount, com.tools20022.repository.msg.QuantityAndAccount47.mmSafekeepingAccount,
-						com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails33.mmSafekeepingAccount, com.tools20022.repository.msg.SubAccountIdentification45.mmSafekeepingAccount,
-						com.tools20022.repository.msg.QuantityAndAccount48.mmSafekeepingAccount, com.tools20022.repository.msg.QuantityAndAccount46.mmSafekeepingAccount,
-						com.tools20022.repository.msg.SubAccountIdentification46.mmSafekeepingAccount, com.tools20022.repository.msg.QuantityAndAccount51.mmSafekeepingAccount,
-						com.tools20022.repository.msg.QuantityAndAccount49.mmSafekeepingAccount, com.tools20022.repository.msg.PartyIdentificationAndAccount131.mmSafekeepingAccount,
-						com.tools20022.repository.msg.PartyIdentificationAndAccount146.mmSafekeepingAccount, com.tools20022.repository.msg.PartyIdentificationAndAccount135.mmSafekeepingAccount,
-						com.tools20022.repository.msg.PartyIdentificationAndAccount136.mmSafekeepingAccount, com.tools20022.repository.msg.QuantityAndAccount55.mmSafekeepingAccount,
-						com.tools20022.repository.msg.AccountIdentification39.mmSafekeepingAccount, com.tools20022.repository.msg.SafekeepingAccount7.mmAccountIdentification,
-						com.tools20022.repository.msg.SafekeepingAccount7.mmAccountSubLevel1, com.tools20022.repository.msg.AccountSubLevel15.mmAccountSubLevel6, com.tools20022.repository.msg.AccountSubLevel16.mmAccountSubLevel7,
-						com.tools20022.repository.msg.AccountSubLevel18.mmAccountSubLevel9, com.tools20022.repository.msg.AccountSubLevel11.mmAccountSubLevel2, com.tools20022.repository.msg.AccountSubLevel12.mmAccountSubLevel3,
-						com.tools20022.repository.msg.AccountSubLevel17.mmAccountSubLevel8, com.tools20022.repository.msg.AccountSubLevel13.mmAccountSubLevel4, com.tools20022.repository.msg.AccountSubLevel14.mmAccountSubLevel5,
-						com.tools20022.repository.msg.AccountIdentification40.mmSafekeepingAccount, com.tools20022.repository.msg.SubAccountIdentification49.mmSafekeepingAccount,
-						com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails35.mmSafekeepingAccount, com.tools20022.repository.msg.SubAccountIdentification50.mmSafekeepingAccount,
-						com.tools20022.repository.msg.AccountIdentification41.mmSafekeepingAccount, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails36.mmSafekeepingAccount,
-						com.tools20022.repository.msg.QuantityAndAccount57.mmSafekeepingAccount, com.tools20022.repository.msg.QuantityAndAccount58.mmSafekeepingAccount,
-						com.tools20022.repository.msg.QuantityAndAccount56.mmSafekeepingAccount, com.tools20022.repository.msg.QuantityAndAccount61.mmSafekeepingAccount,
-						com.tools20022.repository.msg.QuantityAndAccount62.mmSafekeepingAccount, com.tools20022.repository.msg.QuantityAndAccount60.mmSafekeepingAccount,
-						com.tools20022.repository.msg.AccountIdentification42.mmSafekeepingAccount);
+				derivationElement_lazy = () -> Arrays.asList(PartyIdentificationAndAccount16.mmSafekeepingAccount, PartyIdentificationAndAccount44.mmSafekeepingAccount, PartyIdentificationAndAccount1.mmSafekeepingAccount,
+						PartyIdentificationAndAccount42.mmSafekeepingAccount, PartyIdentificationAndAccount19.mmSafekeepingAccount, PartyIdentificationAndAccount21.mmSafekeepingAccount, PartyIdentificationAndAccount40.mmSafekeepingAccount,
+						PartyIdentificationAndAccount41.mmSafekeepingAccount, PartyIdentificationAndAccount81.mmSafekeepingAccount, QuantityAndAccount30.mmSafekeepingAccount, PartyIdentificationAndAccount43.mmSafekeepingAccount,
+						PartyIdentificationAndAccount68.mmSafekeepingAccount, PartyIdentificationAndAccount75.mmSafekeepingAccount, PartyIdentificationAndAccount63.mmSafekeepingAccount, PartyIdentificationAndAccount88.mmSafekeepingAccount,
+						PartyIdentificationAndAccount66.mmSafekeepingAccount, QuantityAndAccount33.mmSafekeepingAccount, AccountIdentification9.mmSafekeepingAccount, AccountIdentification14.mmSafekeepingAccount,
+						AccountIdentification15.mmSafekeepingAccount, AccountIdentification21.mmSafekeepingAccount, AccountAndBalance2.mmSafekeepingAccount, AccountAndBalance5.mmSafekeepingAccount, AccountAndBalance10.mmSafekeepingAccount,
+						AccountAndBalance12.mmSafekeepingAccount, AccountAndBalance17.mmSafekeepingAccount, AccountAndBalance20.mmSafekeepingAccount, AccountIdentification8.mmSafekeepingAccount,
+						AccountIdentification17.mmSafekeepingAccount, AccountIdentification19.mmSafekeepingAccount, AccountIdentification6.mmSafekeepingAccount, AccountIdentification12.mmSafekeepingAccount,
+						AccountIdentification16.mmSafekeepingAccount, AccountIdentification22.mmSafekeepingAccount, AccountIdentification23.mmSafekeepingAccount, AccountIdentification24.mmSafekeepingAccount,
+						AccountIdentification25.mmSafekeepingAccount, AccountIdentification29.mmSafekeepingAccount, AccountAndBalance3.mmSafekeepingAccount, PartyIdentificationAndAccount14.mmSafekeepingAccount,
+						AccountAndBalance6.mmSafekeepingAccount, PartyIdentificationAndAccount22.mmSafekeepingAccount, AccountAndBalance11.mmSafekeepingAccount, PartyIdentificationAndAccount51.mmSafekeepingAccount,
+						AccountAndBalance13.mmSafekeepingAccount, PartyIdentificationAndAccount56.mmSafekeepingAccount, AccountAndBalance16.mmSafekeepingAccount, AccountAndBalance19.mmSafekeepingAccount,
+						AccountAndBalance22.mmSafekeepingAccount, AccountAndBalance23.mmSafekeepingAccount, AccountAndBalance1.mmSafekeepingAccount, AccountIdentification7Choice.mmAccountsListAndBalanceDetails,
+						AccountAndBalance7.mmSafekeepingAccount, AccountIdentification8Choice.mmAccountsListAndBalanceDetails, AccountAndBalance9.mmSafekeepingAccount, AccountIdentification12Choice.mmAccountsListAndBalanceDetails,
+						AccountAndBalance14.mmSafekeepingAccount, AccountIdentification15Choice.mmAccountsListAndBalanceDetails, AccountAndBalance15.mmSafekeepingAccount, AccountIdentification18Choice.mmAccountsListAndBalanceDetails,
+						AccountAndBalance18.mmSafekeepingAccount, AccountIdentification19Choice.mmAccountsListAndBalanceDetails, AccountAndBalance21.mmSafekeepingAccount, AccountIdentification21Choice.mmAccountsListAndBalanceDetails,
+						AccountAndBalance24.mmSafekeepingAccount, AccountIdentification22Choice.mmAccountsListAndBalanceDetails, AccountAndBalance4.mmSafekeepingAccount, AccountAndBalance8.mmSafekeepingAccount,
+						SubAccountIdentification10.mmSafekeepingAccount, SubAccountIdentification13.mmSafekeepingAccount, SubAccountIdentification16.mmSafekeepingAccount, SubAccountIdentification20.mmSafekeepingAccount,
+						SubAccountIdentification23.mmSafekeepingAccount, SubAccountIdentification26.mmSafekeepingAccount, SubAccountIdentification29.mmSafekeepingAccount, SubAccountIdentification31.mmSafekeepingAccount,
+						SubAccountIdentification11.mmSafekeepingAccount, SubAccountIdentification12.mmSafekeepingAccount, SubAccountIdentification17.mmSafekeepingAccount, SubAccountIdentification19.mmSafekeepingAccount,
+						SubAccountIdentification22.mmSafekeepingAccount, SubAccountIdentification25.mmSafekeepingAccount, SubAccountIdentification28.mmSafekeepingAccount, SubAccountIdentification32.mmSafekeepingAccount,
+						QuantityAndAccount6.mmSafekeepingAccount, QuantityAndAccount11.mmSafekeepingAccount, PartyIdentificationAndAccount26.mmSafekeepingAccount, PartyIdentificationAndAccount28.mmSafekeepingAccount,
+						PartyIdentificationAndAccount30.mmSafekeepingAccount, QuantityAndAccount18.mmSafekeepingAccount, PartyIdentificationAndAccount35.mmSafekeepingAccount, PartyIdentificationAndAccount36.mmSafekeepingAccount,
+						PartyIdentificationAndAccount37.mmSafekeepingAccount, QuantityAndAccount19.mmSafekeepingAccount, PartyIdentificationAndAccount49.mmSafekeepingAccount, PartyIdentificationAndAccount61.mmSafekeepingAccount,
+						PartyIdentificationAndAccount62.mmSafekeepingAccount, QuantityAndAccount1.mmSafekeepingAccount, QuantityAndAccount5.mmSafekeepingAccount, QuantityAndAccount17.mmSafekeepingAccount,
+						QuantityAndAccount24.mmSafekeepingAccount, QuantityAndAccount25.mmSafekeepingAccount, QuantityAndAccount34.mmSafekeepingAccount, PartyIdentificationAndAccount25.mmSafekeepingAccount,
+						QuantityAndAccount2.mmSafekeepingAccount, QuantityAndAccount12.mmSafekeepingAccount, QuantityAndAccount15.mmSafekeepingAccount, QuantityAndAccount20.mmSafekeepingAccount,
+						PartyIdentificationAndAccount65.mmSafekeepingAccount, PartyIdentificationAndAccount67.mmSafekeepingAccount, QuantityAndAccount28.mmSafekeepingAccount, QuantityAndAccount37.mmSafekeepingAccount,
+						SubAccountIdentification9.mmSafekeepingAccount, SubAccountIdentification14.mmSafekeepingAccount, SubAccountIdentification15.mmSafekeepingAccount, SubAccountIdentification18.mmSafekeepingAccount,
+						SubAccountIdentification21.mmSafekeepingAccount, SubAccountIdentification24.mmSafekeepingAccount, SubAccountIdentification30.mmSafekeepingAccount, SubAccountIdentification33.mmSafekeepingAccount,
+						PartyIdentificationAndAccount9.mmSafekeepingAccount, PartyIdentificationAndAccount79.mmSafekeepingAccount, PartyIdentificationAndAccount83.mmSafekeepingAccount, PartyIdentificationAndAccount77.mmSafekeepingAccount,
+						ConfirmationPartyDetails4.mmSafekeepingAccount, Intermediary14.mmSafekeepingDetails, ConfirmationPartyDetails3.mmSafekeepingAccount, PartyIdentificationAndAccount10.mmSafekeepingAccount,
+						PartyIdentificationAndAccount8.mmSafekeepingAccount, ConfirmationPartyDetails6.mmSafekeepingAccount, PartyIdentificationAndAccount34.mmSafekeepingAccount, SecurityMovement1.mmAccountDetails,
+						SecuritiesProceeds1.mmAccountDetails, CorporateActionStandingInstructionGeneralInformation1.mmAccountDetails, CorporateActionStandingInstruction1.mmSecuritiesDistributionDetails,
+						QuantityAndAccount7.mmSafekeepingAccount, QuantityAndAccount16.mmSafekeepingAccount, SecuritiesFinancingTransactionDetails2.mmSafekeepingAccount, SecuritiesFinancingTransactionDetails8.mmSafekeepingAccount,
+						QuantityAndAccount3.mmSafekeepingAccount, QuantityAndAccount13.mmSafekeepingAccount, PartyIdentificationAndAccount45.mmSafekeepingAccount, PartyIdentificationAndAccount46.mmSafekeepingAccount,
+						PartyIdentificationAndAccount47.mmSafekeepingAccount, AccountIdentification7.mmSafekeepingAccount, AccountIdentification13.mmSafekeepingAccount, AccountIdentification18.mmSafekeepingAccount,
+						AccountIdentification20.mmSafekeepingAccount, QuantityAndAccount10.mmSafekeepingAccount, QuantityAndAccount21.mmSafekeepingAccount, SecuritiesFinancingTransactionDetails6.mmSafekeepingAccount,
+						SecuritiesFinancingTransactionDetails10.mmSafekeepingAccount, SecuritiesFinancingTransactionDetails17.mmSafekeepingAccount, SecuritiesFinancingTransactionDetails18.mmSafekeepingAccount,
+						QuantityAndAccount4.mmSafekeepingAccount, QuantityAndAccount22.mmSafekeepingAccount, QuantityAndAccount27.mmSafekeepingAccount, QuantityAndAccount36.mmSafekeepingAccount,
+						PartyIdentificationAndAccount71.mmSafekeepingAccount, PartyIdentificationAndAccount73.mmSafekeepingAccount, PartyIdentificationAndAccount74.mmSafekeepingAccount, PartyIdentificationAndAccount76.mmSafekeepingAccount,
+						SecuritiesAccount21.mmSubAccount, MarginReport1.mmMarginAccount, MarginReport2.mmMarginAccount, AccountIdentification11.mmSafekeepingAccount, SecuritiesAccount1Choice.mmAccount,
+						SubAccountIdentification27.mmSafekeepingAccount, SubaccountIdentification7.mmSafekeepingAccount, SubaccountIdentification8.mmSafekeepingAccount, AccountIdentification20Choice.mmSecuritiesAccountIdentification,
+						SubAccountIdentification34.mmSafekeepingAccount, SecuritiesFinancingTransactionDetails21.mmSafekeepingAccount, AccountIdentification23Choice.mmAccountsListAndBalanceDetails, AccountAndBalance26.mmSafekeepingAccount,
+						AccountAndBalance25.mmSafekeepingAccount, PartyIdentificationAndAccount95.mmAccountIdentification, AccountAndBalance32.mmSafekeepingAccount, AccountIdentification26Choice.mmAccountsListAndBalanceDetails,
+						AccountAndBalance29.mmSafekeepingAccount, SubAccountIdentification35.mmSafekeepingAccount, SecuritiesFinancingTransactionDetails22.mmSafekeepingAccount, SafekeepingAccount5.mmAccountIdentification,
+						SafekeepingAccount5.mmAccountSubLevel1, AccountSubLevel1.mmAccountSubLevel2, AccountSubLevel4.mmAccountSubLevel5, AccountSubLevel5.mmAccountSubLevel6, AccountSubLevel2.mmAccountSubLevel3,
+						AccountSubLevel3.mmAccountSubLevel4, AccountSubLevel6.mmAccountSubLevel7, AccountSubLevel7.mmAccountSubLevel8, AccountSubLevel8.mmAccountSubLevel9, SecuritiesFinancingTransactionDetails24.mmSafekeepingAccount,
+						SubAccountIdentification38.mmSafekeepingAccount, SubAccountIdentification37.mmSafekeepingAccount, PartyIdentificationAndAccount100.mmSafekeepingAccount, ReportItem1.mmAccountIdentification,
+						SubAccountIdentification40.mmSafekeepingAccount, SecuritiesFinancingTransactionDetails25.mmSafekeepingAccount, SubAccountIdentification39.mmSafekeepingAccount, QuantityAndAccount39.mmSafekeepingAccount,
+						SubAccountIdentification42.mmSafekeepingAccount, QuantityAndAccount41.mmSafekeepingAccount, SubAccountIdentification44.mmSafekeepingAccount, QuantityAndAccount40.mmSafekeepingAccount,
+						QuantityAndAccount42.mmSafekeepingAccount, QuantityAndAccount38.mmSafekeepingAccount, SecuritiesFinancingTransactionDetails26.mmSafekeepingAccount, SubAccountIdentification43.mmSafekeepingAccount,
+						PartyIdentificationAndAccount106.mmSafekeepingAccount, QuantityAndAccount43.mmSafekeepingAccount, PartyIdentificationAndAccount117.mmSafekeepingAccount, PartyIdentificationAndAccount108.mmSafekeepingAccount,
+						PartyIdentificationAndAccount107.mmSafekeepingAccount, AccountAndBalance34.mmSafekeepingAccount, AccountAndBalance35.mmSafekeepingAccount, AccountAndBalance36.mmSafekeepingAccount,
+						AccountIdentification33.mmSafekeepingAccount, AccountIdentification32Choice.mmAccountsListAndBalanceDetails, AccountIdentification31.mmSafekeepingAccount, PartyIdentificationAndAccount122.mmSafekeepingAccount,
+						AccountAndBalance33.mmSafekeepingAccount, AccountIdentification32.mmSafekeepingAccount, PartyIdentificationAndAccount127.mmSafekeepingAccount, AccountAndBalance40.mmSafekeepingAccount,
+						AccountAndBalance38.mmSafekeepingAccount, AccountIdentification36Choice.mmAccountsListAndBalanceDetails, AccountIdentification35.mmSafekeepingAccount, AccountAndBalance37.mmSafekeepingAccount,
+						AccountIdentification34.mmSafekeepingAccount, AccountIdentification37.mmSafekeepingAccount, AccountAndBalance39.mmSafekeepingAccount, PartyIdentificationAndAccount128.mmSafekeepingAccount,
+						SubAccountIdentification47.mmSafekeepingAccount, QuantityAndAccount47.mmSafekeepingAccount, SecuritiesFinancingTransactionDetails33.mmSafekeepingAccount, SubAccountIdentification45.mmSafekeepingAccount,
+						QuantityAndAccount48.mmSafekeepingAccount, QuantityAndAccount46.mmSafekeepingAccount, SubAccountIdentification46.mmSafekeepingAccount, QuantityAndAccount51.mmSafekeepingAccount,
+						QuantityAndAccount49.mmSafekeepingAccount, PartyIdentificationAndAccount131.mmSafekeepingAccount, PartyIdentificationAndAccount146.mmSafekeepingAccount, PartyIdentificationAndAccount135.mmSafekeepingAccount,
+						PartyIdentificationAndAccount136.mmSafekeepingAccount, QuantityAndAccount55.mmSafekeepingAccount, AccountIdentification39.mmSafekeepingAccount, SafekeepingAccount7.mmAccountIdentification,
+						SafekeepingAccount7.mmAccountSubLevel1, AccountSubLevel15.mmAccountSubLevel6, AccountSubLevel16.mmAccountSubLevel7, AccountSubLevel18.mmAccountSubLevel9, AccountSubLevel11.mmAccountSubLevel2,
+						AccountSubLevel12.mmAccountSubLevel3, AccountSubLevel17.mmAccountSubLevel8, AccountSubLevel13.mmAccountSubLevel4, AccountSubLevel14.mmAccountSubLevel5, AccountIdentification40.mmSafekeepingAccount,
+						SubAccountIdentification49.mmSafekeepingAccount, SecuritiesFinancingTransactionDetails35.mmSafekeepingAccount, SubAccountIdentification50.mmSafekeepingAccount, AccountIdentification41.mmSafekeepingAccount,
+						SecuritiesFinancingTransactionDetails36.mmSafekeepingAccount, QuantityAndAccount57.mmSafekeepingAccount, QuantityAndAccount58.mmSafekeepingAccount, QuantityAndAccount56.mmSafekeepingAccount,
+						QuantityAndAccount61.mmSafekeepingAccount, QuantityAndAccount62.mmSafekeepingAccount, QuantityAndAccount60.mmSafekeepingAccount, AccountIdentification42.mmSafekeepingAccount);
 				superType_lazy = () -> Account.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesAccount.mmSecuritiesAccountType, com.tools20022.repository.entity.SecuritiesAccount.mmRelatedInvestmentAccount,
-						com.tools20022.repository.entity.SecuritiesAccount.mmRelatedTransfer, com.tools20022.repository.entity.SecuritiesAccount.mmSecuritiesPartyRole, com.tools20022.repository.entity.SecuritiesAccount.mmSecurity,
-						com.tools20022.repository.entity.SecuritiesAccount.mmRelatedRegistrar, com.tools20022.repository.entity.SecuritiesAccount.mmSafekeepingPlace, com.tools20022.repository.entity.SecuritiesAccount.mmSecuritiesBalance,
-						com.tools20022.repository.entity.SecuritiesAccount.mmCorporateActionServicing, com.tools20022.repository.entity.SecuritiesAccount.mmRelatedAllocation,
-						com.tools20022.repository.entity.SecuritiesAccount.mmSecuritiesEntry, com.tools20022.repository.entity.SecuritiesAccount.mmClearingAccountOwner,
-						com.tools20022.repository.entity.SecuritiesAccount.mmMarginAccountOwner, com.tools20022.repository.entity.SecuritiesAccount.mmDeliveryAccountOwner,
-						com.tools20022.repository.entity.SecuritiesAccount.mmRelatedPowerOfAttorney, com.tools20022.repository.entity.SecuritiesAccount.mmRelatedMeetingInstruction,
-						com.tools20022.repository.entity.SecuritiesAccount.mmClearingAccountType, com.tools20022.repository.entity.SecuritiesAccount.mmRelatedOrder, com.tools20022.repository.entity.SecuritiesAccount.mmDisclosedListTrading,
-						com.tools20022.repository.entity.SecuritiesAccount.mmAccountLink);
+				element_lazy = () -> Arrays.asList(SecuritiesAccount.mmSecuritiesAccountType, SecuritiesAccount.mmRelatedInvestmentAccount, SecuritiesAccount.mmRelatedTransfer, SecuritiesAccount.mmSecuritiesPartyRole,
+						SecuritiesAccount.mmSecurity, SecuritiesAccount.mmRelatedRegistrar, SecuritiesAccount.mmSafekeepingPlace, SecuritiesAccount.mmSecuritiesBalance, SecuritiesAccount.mmCorporateActionServicing,
+						SecuritiesAccount.mmRelatedAllocation, SecuritiesAccount.mmSecuritiesEntry, SecuritiesAccount.mmClearingAccountOwner, SecuritiesAccount.mmMarginAccountOwner, SecuritiesAccount.mmDeliveryAccountOwner,
+						SecuritiesAccount.mmRelatedPowerOfAttorney, SecuritiesAccount.mmRelatedMeetingInstruction, SecuritiesAccount.mmClearingAccountType, SecuritiesAccount.mmRelatedOrder, SecuritiesAccount.mmDisclosedListTrading,
+						SecuritiesAccount.mmAccountLink);
 				derivationComponent_lazy = () -> Arrays.asList(SecuritiesAccount1.mmObject(), SecuritiesAccount4.mmObject(), SecuritiesAccount13.mmObject(), SecuritiesAccount17.mmObject(), AccountAndBalance2.mmObject(),
 						AccountAndBalance5.mmObject(), AccountAndBalance10.mmObject(), AccountAndBalance12.mmObject(), AccountAndBalance17.mmObject(), AccountAndBalance20.mmObject(), AccountAndBalance3.mmObject(),
 						AccountAndBalance6.mmObject(), AccountAndBalance11.mmObject(), AccountAndBalance13.mmObject(), AccountAndBalance16.mmObject(), AccountAndBalance19.mmObject(), AccountAndBalance22.mmObject(),

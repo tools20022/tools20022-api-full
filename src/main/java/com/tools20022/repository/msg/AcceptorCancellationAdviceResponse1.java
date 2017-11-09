@@ -19,7 +19,12 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.caaa.AcceptorCancellationAdviceResponseV01;
 import com.tools20022.repository.entity.CardPayment;
+import com.tools20022.repository.entity.CardPaymentAcquiring;
+import com.tools20022.repository.entity.CardPaymentValidation;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -119,7 +124,7 @@ public class AcceptorCancellationAdviceResponse1 {
 			componentContext_lazy = () -> AcceptorCancellationAdviceResponse1.mmObject();
 			isDerived = false;
 			xmlTag = "Envt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Environment";
 			definition = "Environment of the transaction.";
 			maxOccurs = 1;
@@ -164,11 +169,11 @@ public class AcceptorCancellationAdviceResponse1 {
 	 */
 	public static final MMMessageAssociationEnd mmTransaction = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPaymentValidation.mmResponse;
+			businessElementTrace_lazy = () -> CardPaymentValidation.mmResponse;
 			componentContext_lazy = () -> AcceptorCancellationAdviceResponse1.mmObject();
 			isDerived = false;
 			xmlTag = "Tx";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Transaction";
 			definition = "Cancellation transaction from an acceptor to the acquirer.";
 			maxOccurs = 1;
@@ -212,11 +217,11 @@ public class AcceptorCancellationAdviceResponse1 {
 	 */
 	public static final MMMessageAssociationEnd mmTMSTrigger = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.mmTMSTrigger;
+			businessElementTrace_lazy = () -> CardPaymentAcquiring.mmTMSTrigger;
 			componentContext_lazy = () -> AcceptorCancellationAdviceResponse1.mmObject();
 			isDerived = false;
 			xmlTag = "TMSTrggr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TMSTrigger";
 			definition = "Instructions for contacting the terminal management host.";
 			maxOccurs = 1;
@@ -229,12 +234,11 @@ public class AcceptorCancellationAdviceResponse1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcceptorCancellationAdviceResponse1.mmEnvironment, com.tools20022.repository.msg.AcceptorCancellationAdviceResponse1.mmTransaction,
-						com.tools20022.repository.msg.AcceptorCancellationAdviceResponse1.mmTMSTrigger);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.caaa.AcceptorCancellationAdviceResponseV01.mmAcceptorCancellationAdviceResponse);
+				messageElement_lazy = () -> Arrays.asList(AcceptorCancellationAdviceResponse1.mmEnvironment, AcceptorCancellationAdviceResponse1.mmTransaction, AcceptorCancellationAdviceResponse1.mmTMSTrigger);
+				messageBuildingBlock_lazy = () -> Arrays.asList(AcceptorCancellationAdviceResponseV01.mmAcceptorCancellationAdviceResponse);
 				trace_lazy = () -> CardPayment.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AcceptorCancellationAdviceResponse1";
 				definition = "Cancellation advice response from the acquirer.";
 				nextVersions_lazy = () -> Arrays.asList(AcceptorCancellationAdviceResponse2.mmObject());

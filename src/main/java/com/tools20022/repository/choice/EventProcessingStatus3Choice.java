@@ -19,7 +19,12 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.seev.CorporateActionEventProcessingStatusAdviceV05;
+import com.tools20022.repository.area.seev.CorporateActionEventProcessingStatusAdviceV06;
 import com.tools20022.repository.entity.CorporateActionStatus;
+import com.tools20022.repository.entity.StatusReason;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.NoSpecifiedReason1;
 import com.tools20022.repository.msg.ProprietaryStatusAndReason6;
 import java.util.Arrays;
@@ -132,10 +137,10 @@ public class EventProcessingStatus3Choice {
 			componentContext_lazy = () -> EventProcessingStatus3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Cmplt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Complete";
 			definition = "Specifies that a corporate action event processing has been completed.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.EventProcessingStatus1Choice.mmComplete;
+			previousVersion_lazy = () -> EventProcessingStatus1Choice.mmComplete;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -189,10 +194,10 @@ public class EventProcessingStatus3Choice {
 			componentContext_lazy = () -> EventProcessingStatus3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Rcncld";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reconciled";
 			definition = "Corporate action event processing specifying that the funds paid have been reconciled with the funds received from the agent (meaning that there is no more risk of payment to be reversed).";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.EventProcessingStatus1Choice.mmReconciled;
+			previousVersion_lazy = () -> EventProcessingStatus1Choice.mmReconciled;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -242,14 +247,14 @@ public class EventProcessingStatus3Choice {
 	 */
 	public static final MMMessageAssociationEnd mmPending = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmPendingReason;
+			businessElementTrace_lazy = () -> StatusReason.mmPendingReason;
 			componentContext_lazy = () -> EventProcessingStatus3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Pdg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Pending";
 			definition = "Specifies that a corporate action event processing has not been fully completed and is therefore pending.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.EventProcessingStatus1Choice.mmPending;
+			previousVersion_lazy = () -> EventProcessingStatus1Choice.mmPending;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -294,10 +299,10 @@ public class EventProcessingStatus3Choice {
 			componentContext_lazy = () -> EventProcessingStatus3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "PrtrySts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProprietaryStatus";
 			definition = "Proprietary status related to the event processing.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.EventProcessingStatus1Choice.mmProprietaryStatus;
+			previousVersion_lazy = () -> EventProcessingStatus1Choice.mmProprietaryStatus;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -308,13 +313,11 @@ public class EventProcessingStatus3Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.EventProcessingStatus3Choice.mmComplete, com.tools20022.repository.choice.EventProcessingStatus3Choice.mmReconciled,
-						com.tools20022.repository.choice.EventProcessingStatus3Choice.mmPending, com.tools20022.repository.choice.EventProcessingStatus3Choice.mmProprietaryStatus);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.CorporateActionEventProcessingStatusAdviceV05.mmEventProcessingStatus,
-						com.tools20022.repository.area.seev.CorporateActionEventProcessingStatusAdviceV06.mmEventProcessingStatus);
+				messageElement_lazy = () -> Arrays.asList(EventProcessingStatus3Choice.mmComplete, EventProcessingStatus3Choice.mmReconciled, EventProcessingStatus3Choice.mmPending, EventProcessingStatus3Choice.mmProprietaryStatus);
+				messageBuildingBlock_lazy = () -> Arrays.asList(CorporateActionEventProcessingStatusAdviceV05.mmEventProcessingStatus, CorporateActionEventProcessingStatusAdviceV06.mmEventProcessingStatus);
 				trace_lazy = () -> CorporateActionStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "EventProcessingStatus3Choice";
 				definition = "Provides information about the status of a corporate action or the status of a payment.";
 				previousVersion_lazy = () -> EventProcessingStatus1Choice.mmObject();

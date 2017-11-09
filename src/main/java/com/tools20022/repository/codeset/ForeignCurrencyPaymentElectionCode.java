@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.ForeignCurrencyPaymentElection1Code
+ * ForeignCurrencyPaymentElection1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -38,14 +48,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.ForeignCurrencyPaymentElectionCode#mmMandatory
  * ForeignCurrencyPaymentElectionCode.mmMandatory}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.ForeignCurrencyPaymentElection1Code
- * ForeignCurrencyPaymentElection1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -95,7 +97,7 @@ public class ForeignCurrencyPaymentElectionCode {
 	 */
 	public static final MMCode mmOffered = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Offered";
 			definition = "Foreign currency payment is offered.";
 			owner_lazy = () -> ForeignCurrencyPaymentElectionCode.mmObject();
@@ -125,7 +127,7 @@ public class ForeignCurrencyPaymentElectionCode {
 	 */
 	public static final MMCode mmNotOffered = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotOffered";
 			definition = "Foreign currency payment is not offered.";
 			owner_lazy = () -> ForeignCurrencyPaymentElectionCode.mmObject();
@@ -155,7 +157,7 @@ public class ForeignCurrencyPaymentElectionCode {
 	 */
 	public static final MMCode mmMandatory = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Mandatory";
 			definition = "Foreign currency payment is mandatory.";
 			owner_lazy = () -> ForeignCurrencyPaymentElectionCode.mmObject();
@@ -166,13 +168,12 @@ public class ForeignCurrencyPaymentElectionCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("OFFD");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ForeignCurrencyPaymentElectionCode";
 				definition = "Specifies whether the foreign currency payment is offered.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ForeignCurrencyPaymentElectionCode.mmOffered, com.tools20022.repository.codeset.ForeignCurrencyPaymentElectionCode.mmNotOffered,
-						com.tools20022.repository.codeset.ForeignCurrencyPaymentElectionCode.mmMandatory);
+				code_lazy = () -> Arrays.asList(ForeignCurrencyPaymentElectionCode.mmOffered, ForeignCurrencyPaymentElectionCode.mmNotOffered, ForeignCurrencyPaymentElectionCode.mmMandatory);
 				derivation_lazy = () -> Arrays.asList(ForeignCurrencyPaymentElection1Code.mmObject());
 			}
 		});

@@ -20,9 +20,11 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.entity.Presentation;
 import com.tools20022.repository.entity.UndertakingPresenter;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -100,7 +102,7 @@ public class Presentation2 {
 			componentContext_lazy = () -> Presentation2.mmObject();
 			isDerived = false;
 			xmlTag = "Presntr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Presenter";
 			definition = "Party, other than beneficiary, forwarding the documents.";
 			maxOccurs = 1;
@@ -143,11 +145,11 @@ public class Presentation2 {
 	 */
 	public static final MMMessageAttribute mmBeneficiaryPresentationDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Presentation.mmPresentationDate;
+			businessElementTrace_lazy = () -> Presentation.mmPresentationDate;
 			componentContext_lazy = () -> Presentation2.mmObject();
 			isDerived = false;
 			xmlTag = "BnfcryPresntnDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BeneficiaryPresentationDate";
 			definition = "Date on which the beneficiary presented the demand.";
 			maxOccurs = 1;
@@ -159,10 +161,10 @@ public class Presentation2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Presentation2.mmPresenter, com.tools20022.repository.msg.Presentation2.mmBeneficiaryPresentationDate);
+				messageElement_lazy = () -> Arrays.asList(Presentation2.mmPresenter, Presentation2.mmBeneficiaryPresentationDate);
 				trace_lazy = () -> Presentation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Presentation2";
 				definition = "Information for the presentation of documents.";
 			}

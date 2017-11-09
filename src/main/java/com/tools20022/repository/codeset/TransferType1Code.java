@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.TransferTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -84,7 +86,7 @@ public class TransferType1Code extends TransferTypeCode {
 	 */
 	public static final MMCode mmAsset = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Asset";
 			owner_lazy = () -> TransferType1Code.mmObject();
 		}
@@ -107,7 +109,7 @@ public class TransferType1Code extends TransferTypeCode {
 	 */
 	public static final MMCode mmCash = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cash";
 			owner_lazy = () -> TransferType1Code.mmObject();
 		}
@@ -116,12 +118,12 @@ public class TransferType1Code extends TransferTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("SECU");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TransferType1Code";
 				definition = "Specifies whether the financial instrument is transferred as an asset or as cash.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TransferType1Code.mmAsset, com.tools20022.repository.codeset.TransferType1Code.mmCash);
+				code_lazy = () -> Arrays.asList(TransferType1Code.mmAsset, TransferType1Code.mmCash);
 				trace_lazy = () -> TransferTypeCode.mmObject();
 			}
 		});

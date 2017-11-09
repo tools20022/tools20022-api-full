@@ -19,10 +19,13 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.POIComponentAssessment1Code;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.Assessment;
+import com.tools20022.repository.entity.GenericIdentification;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -109,11 +112,11 @@ public class PointOfInteractionComponentAssessment1 {
 	 */
 	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Assessment.mmAssessmentType;
+			businessElementTrace_lazy = () -> Assessment.mmAssessmentType;
 			componentContext_lazy = () -> PointOfInteractionComponentAssessment1.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Type of assessment of the component.";
 			maxOccurs = 1;
@@ -156,11 +159,11 @@ public class PointOfInteractionComponentAssessment1 {
 	 */
 	public static final MMMessageAttribute mmAssigner = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmIdentification;
+			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> PointOfInteractionComponentAssessment1.mmObject();
 			isDerived = false;
 			xmlTag = "Assgnr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Assigner";
 			definition = "Body which has delivered the assessment.";
 			minOccurs = 1;
@@ -202,11 +205,11 @@ public class PointOfInteractionComponentAssessment1 {
 	 */
 	public static final MMMessageAttribute mmDeliveryDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Assessment.mmDeliveryDate;
+			businessElementTrace_lazy = () -> Assessment.mmDeliveryDate;
 			componentContext_lazy = () -> PointOfInteractionComponentAssessment1.mmObject();
 			isDerived = false;
 			xmlTag = "DlvryDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeliveryDate";
 			definition = "Date when the assessment has been delivered.";
 			maxOccurs = 1;
@@ -249,11 +252,11 @@ public class PointOfInteractionComponentAssessment1 {
 	 */
 	public static final MMMessageAttribute mmExpirationDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Assessment.mmExpiryDate;
+			businessElementTrace_lazy = () -> Assessment.mmExpiryDate;
 			componentContext_lazy = () -> PointOfInteractionComponentAssessment1.mmObject();
 			isDerived = false;
 			xmlTag = "XprtnDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExpirationDate";
 			definition = "Date when the assessment will expire.";
 			maxOccurs = 1;
@@ -294,7 +297,7 @@ public class PointOfInteractionComponentAssessment1 {
 			componentContext_lazy = () -> PointOfInteractionComponentAssessment1.mmObject();
 			isDerived = false;
 			xmlTag = "Nb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Number";
 			definition = "Unique assessment number for the component.";
 			maxOccurs = 1;
@@ -306,12 +309,11 @@ public class PointOfInteractionComponentAssessment1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PointOfInteractionComponentAssessment1.mmType, com.tools20022.repository.msg.PointOfInteractionComponentAssessment1.mmAssigner,
-						com.tools20022.repository.msg.PointOfInteractionComponentAssessment1.mmDeliveryDate, com.tools20022.repository.msg.PointOfInteractionComponentAssessment1.mmExpirationDate,
-						com.tools20022.repository.msg.PointOfInteractionComponentAssessment1.mmNumber);
+				messageElement_lazy = () -> Arrays.asList(PointOfInteractionComponentAssessment1.mmType, PointOfInteractionComponentAssessment1.mmAssigner, PointOfInteractionComponentAssessment1.mmDeliveryDate,
+						PointOfInteractionComponentAssessment1.mmExpirationDate, PointOfInteractionComponentAssessment1.mmNumber);
 				trace_lazy = () -> Assessment.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PointOfInteractionComponentAssessment1";
 				definition = "Assessments for the component of the point of interaction.";
 			}

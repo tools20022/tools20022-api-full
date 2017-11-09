@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.MessageFunctionCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -125,9 +127,9 @@ public class MessageFunction12Code extends MessageFunctionCode {
 	 */
 	public static final MMCode mmFinancialAuthorisationRequest = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialAuthorisationRequest";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.MessageFunction5Code.mmFinancialAuthorisationRequest;
+			previousVersion_lazy = () -> MessageFunction5Code.mmFinancialAuthorisationRequest;
 			owner_lazy = () -> MessageFunction12Code.mmObject();
 		}
 	};
@@ -154,9 +156,9 @@ public class MessageFunction12Code extends MessageFunctionCode {
 	 */
 	public static final MMCode mmCancellationRequest = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationRequest";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.MessageFunction5Code.mmCancellationRequest;
+			previousVersion_lazy = () -> MessageFunction5Code.mmCancellationRequest;
 			owner_lazy = () -> MessageFunction12Code.mmObject();
 		}
 	};
@@ -183,9 +185,9 @@ public class MessageFunction12Code extends MessageFunctionCode {
 	 */
 	public static final MMCode mmCompletionAdvice = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CompletionAdvice";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.MessageFunction5Code.mmCompletionAdvice;
+			previousVersion_lazy = () -> MessageFunction5Code.mmCompletionAdvice;
 			owner_lazy = () -> MessageFunction12Code.mmObject();
 		}
 	};
@@ -212,9 +214,9 @@ public class MessageFunction12Code extends MessageFunctionCode {
 	 */
 	public static final MMCode mmDiagnosticRequest = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DiagnosticRequest";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.MessageFunction5Code.mmDiagnosticRequest;
+			previousVersion_lazy = () -> MessageFunction5Code.mmDiagnosticRequest;
 			owner_lazy = () -> MessageFunction12Code.mmObject();
 		}
 	};
@@ -241,9 +243,9 @@ public class MessageFunction12Code extends MessageFunctionCode {
 	 */
 	public static final MMCode mmReconciliationRequest = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReconciliationRequest";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.MessageFunction5Code.mmReconciliationRequest;
+			previousVersion_lazy = () -> MessageFunction5Code.mmReconciliationRequest;
 			owner_lazy = () -> MessageFunction12Code.mmObject();
 		}
 	};
@@ -270,9 +272,9 @@ public class MessageFunction12Code extends MessageFunctionCode {
 	 */
 	public static final MMCode mmCancellationAdvice = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationAdvice";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.MessageFunction5Code.mmCancellationAdvice;
+			previousVersion_lazy = () -> MessageFunction5Code.mmCancellationAdvice;
 			owner_lazy = () -> MessageFunction12Code.mmObject();
 		}
 	};
@@ -299,9 +301,9 @@ public class MessageFunction12Code extends MessageFunctionCode {
 	 */
 	public static final MMCode mmBatchTransfer = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BatchTransfer";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.MessageFunction5Code.mmBatchTransfer;
+			previousVersion_lazy = () -> MessageFunction5Code.mmBatchTransfer;
 			owner_lazy = () -> MessageFunction12Code.mmObject();
 		}
 	};
@@ -328,9 +330,9 @@ public class MessageFunction12Code extends MessageFunctionCode {
 	 */
 	public static final MMCode mmFinancialReversalAdvice = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialReversalAdvice";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.MessageFunction5Code.mmFinancialReversalAdvice;
+			previousVersion_lazy = () -> MessageFunction5Code.mmFinancialReversalAdvice;
 			owner_lazy = () -> MessageFunction12Code.mmObject();
 		}
 	};
@@ -357,9 +359,9 @@ public class MessageFunction12Code extends MessageFunctionCode {
 	 */
 	public static final MMCode mmAuthorisationRequest = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AuthorisationRequest";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.MessageFunction5Code.mmAuthorisationRequest;
+			previousVersion_lazy = () -> MessageFunction5Code.mmAuthorisationRequest;
 			owner_lazy = () -> MessageFunction12Code.mmObject();
 		}
 	};
@@ -386,9 +388,9 @@ public class MessageFunction12Code extends MessageFunctionCode {
 	 */
 	public static final MMCode mmFinancialCompletionAdvice = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialCompletionAdvice";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.MessageFunction5Code.mmFinancialCompletionAdvice;
+			previousVersion_lazy = () -> MessageFunction5Code.mmFinancialCompletionAdvice;
 			owner_lazy = () -> MessageFunction12Code.mmObject();
 		}
 	};
@@ -415,9 +417,9 @@ public class MessageFunction12Code extends MessageFunctionCode {
 	 */
 	public static final MMCode mmCurrencyConversionRequest = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrencyConversionRequest";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.MessageFunction5Code.mmCurrencyConversionRequest;
+			previousVersion_lazy = () -> MessageFunction5Code.mmCurrencyConversionRequest;
 			owner_lazy = () -> MessageFunction12Code.mmObject();
 		}
 	};
@@ -439,7 +441,7 @@ public class MessageFunction12Code extends MessageFunctionCode {
 	 */
 	public static final MMCode mmReversalAdvice = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReversalAdvice";
 			owner_lazy = () -> MessageFunction12Code.mmObject();
 		}
@@ -462,7 +464,7 @@ public class MessageFunction12Code extends MessageFunctionCode {
 	 */
 	public static final MMCode mmCurrencyConversionAdviceResponse = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrencyConversionAdviceResponse";
 			owner_lazy = () -> MessageFunction12Code.mmObject();
 		}
@@ -471,19 +473,16 @@ public class MessageFunction12Code extends MessageFunctionCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("FAUQ");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MessageFunction12Code";
 				definition = "Type of message supporting a service.";
 				previousVersion_lazy = () -> MessageFunction5Code.mmObject();
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MessageFunction12Code.mmFinancialAuthorisationRequest, com.tools20022.repository.codeset.MessageFunction12Code.mmCancellationRequest,
-						com.tools20022.repository.codeset.MessageFunction12Code.mmCompletionAdvice, com.tools20022.repository.codeset.MessageFunction12Code.mmDiagnosticRequest,
-						com.tools20022.repository.codeset.MessageFunction12Code.mmReconciliationRequest, com.tools20022.repository.codeset.MessageFunction12Code.mmCancellationAdvice,
-						com.tools20022.repository.codeset.MessageFunction12Code.mmBatchTransfer, com.tools20022.repository.codeset.MessageFunction12Code.mmFinancialReversalAdvice,
-						com.tools20022.repository.codeset.MessageFunction12Code.mmAuthorisationRequest, com.tools20022.repository.codeset.MessageFunction12Code.mmFinancialCompletionAdvice,
-						com.tools20022.repository.codeset.MessageFunction12Code.mmCurrencyConversionRequest, com.tools20022.repository.codeset.MessageFunction12Code.mmReversalAdvice,
-						com.tools20022.repository.codeset.MessageFunction12Code.mmCurrencyConversionAdviceResponse);
+				code_lazy = () -> Arrays.asList(MessageFunction12Code.mmFinancialAuthorisationRequest, MessageFunction12Code.mmCancellationRequest, MessageFunction12Code.mmCompletionAdvice, MessageFunction12Code.mmDiagnosticRequest,
+						MessageFunction12Code.mmReconciliationRequest, MessageFunction12Code.mmCancellationAdvice, MessageFunction12Code.mmBatchTransfer, MessageFunction12Code.mmFinancialReversalAdvice,
+						MessageFunction12Code.mmAuthorisationRequest, MessageFunction12Code.mmFinancialCompletionAdvice, MessageFunction12Code.mmCurrencyConversionRequest, MessageFunction12Code.mmReversalAdvice,
+						MessageFunction12Code.mmCurrencyConversionAdviceResponse);
 				trace_lazy = () -> MessageFunctionCode.mmObject();
 			}
 		});

@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.BalanceStatusCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -83,7 +85,7 @@ public class BalanceStatus1Code extends BalanceStatusCode {
 	 */
 	public static final MMCode mmPending = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Pending";
 			owner_lazy = () -> BalanceStatus1Code.mmObject();
 		}
@@ -106,7 +108,7 @@ public class BalanceStatus1Code extends BalanceStatusCode {
 	 */
 	public static final MMCode mmSettled = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Settled";
 			owner_lazy = () -> BalanceStatus1Code.mmObject();
 		}
@@ -115,12 +117,12 @@ public class BalanceStatus1Code extends BalanceStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("PDNG");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "BalanceStatus1Code";
 				definition = "Specifies the balance of transactions with a certain status.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.BalanceStatus1Code.mmPending, com.tools20022.repository.codeset.BalanceStatus1Code.mmSettled);
+				code_lazy = () -> Arrays.asList(BalanceStatus1Code.mmPending, BalanceStatus1Code.mmSettled);
 				trace_lazy = () -> BalanceStatusCode.mmObject();
 			}
 		});

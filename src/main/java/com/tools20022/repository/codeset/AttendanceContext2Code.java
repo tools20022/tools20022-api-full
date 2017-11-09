@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.AttendanceContextCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -86,7 +88,7 @@ public class AttendanceContext2Code extends AttendanceContextCode {
 	 */
 	public static final MMCode mmAttendantDelivery = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AttendantDelivery";
 			owner_lazy = () -> AttendanceContext2Code.mmObject();
 		}
@@ -109,7 +111,7 @@ public class AttendanceContext2Code extends AttendanceContextCode {
 	 */
 	public static final MMCode mmCarrierDelivery = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CarrierDelivery";
 			owner_lazy = () -> AttendanceContext2Code.mmObject();
 		}
@@ -132,7 +134,7 @@ public class AttendanceContext2Code extends AttendanceContextCode {
 	 */
 	public static final MMCode mmCustomerDelivery = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CustomerDelivery";
 			owner_lazy = () -> AttendanceContext2Code.mmObject();
 		}
@@ -155,7 +157,7 @@ public class AttendanceContext2Code extends AttendanceContextCode {
 	 */
 	public static final MMCode mmFullServe = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FullServe";
 			owner_lazy = () -> AttendanceContext2Code.mmObject();
 		}
@@ -178,7 +180,7 @@ public class AttendanceContext2Code extends AttendanceContextCode {
 	 */
 	public static final MMCode mmSelfServe = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SelfServe";
 			owner_lazy = () -> AttendanceContext2Code.mmObject();
 		}
@@ -187,14 +189,12 @@ public class AttendanceContext2Code extends AttendanceContextCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AttendanceContext2Code";
 				definition = "Identify the method of delivery or distribution.";
-				code_lazy = () -> Arrays
-						.asList(com.tools20022.repository.codeset.AttendanceContext2Code.mmAttendantDelivery, com.tools20022.repository.codeset.AttendanceContext2Code.mmCarrierDelivery,
-								com.tools20022.repository.codeset.AttendanceContext2Code.mmCustomerDelivery, com.tools20022.repository.codeset.AttendanceContext2Code.mmFullServe,
-								com.tools20022.repository.codeset.AttendanceContext2Code.mmSelfServe);
+				code_lazy = () -> Arrays.asList(AttendanceContext2Code.mmAttendantDelivery, AttendanceContext2Code.mmCarrierDelivery, AttendanceContext2Code.mmCustomerDelivery, AttendanceContext2Code.mmFullServe,
+						AttendanceContext2Code.mmSelfServe);
 				trace_lazy = () -> AttendanceContextCode.mmObject();
 			}
 		});

@@ -19,8 +19,10 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.Insurance1Code;
 import com.tools20022.repository.entity.InsuranceCertificate;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification41;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -114,14 +116,14 @@ public class InsuranceType1Choice {
 	 */
 	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InsuranceCertificate.mmInsuranceType;
+			businessElementTrace_lazy = () -> InsuranceCertificate.mmInsuranceType;
 			componentContext_lazy = () -> InsuranceType1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Cd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Type of insurance contract expressed as a code.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.InsuranceType2Choice.mmCode);
+			nextVersions_lazy = () -> Arrays.asList(InsuranceType2Choice.mmCode);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Insurance1Code.mmObject();
@@ -172,14 +174,14 @@ public class InsuranceType1Choice {
 	 */
 	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InsuranceCertificate.mmInsuranceType;
+			businessElementTrace_lazy = () -> InsuranceCertificate.mmInsuranceType;
 			componentContext_lazy = () -> InsuranceType1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Type of insurance contract expressed as a proprietary code.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.InsuranceType2Choice.mmProprietary);
+			nextVersions_lazy = () -> Arrays.asList(InsuranceType2Choice.mmProprietary);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification41.mmObject();
@@ -189,10 +191,10 @@ public class InsuranceType1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.InsuranceType1Choice.mmCode, com.tools20022.repository.choice.InsuranceType1Choice.mmProprietary);
+				messageElement_lazy = () -> Arrays.asList(InsuranceType1Choice.mmCode, InsuranceType1Choice.mmProprietary);
 				trace_lazy = () -> InsuranceCertificate.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InsuranceType1Choice";
 				definition = "Choice of formats for the specification of the type  of insurance.";
 				nextVersions_lazy = () -> Arrays.asList(InsuranceType2Choice.mmObject());
